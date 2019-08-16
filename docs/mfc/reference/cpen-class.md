@@ -1,5 +1,5 @@
 ---
-title: Cpen — klasa
+title: Klasa CPen
 ms.date: 11/04/2016
 f1_keywords:
 - CPen
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - CPen [MFC], GetExtLogPen
 - CPen [MFC], GetLogPen
 ms.assetid: 93175a3a-d46c-4768-be8d-863254f97a5f
-ms.openlocfilehash: 8510c29571e6a370c7948ebe49e53b2c22dbfb9c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 952d270acd47b5834a06b731f7875ea2efdd4695
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372923"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502948"
 ---
-# <a name="cpen-class"></a>Cpen — klasa
+# <a name="cpen-class"></a>Klasa CPen
 
-Hermetyzuje pióro Windows grafiki urządzenia interface (GDI).
+Hermetyzuje pióro interfejsu urządzenia graficznego (GDI) systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -41,27 +41,27 @@ class CPen : public CGdiObject
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CPen::CPen](#cpen)|Konstruuje `CPen` obiektu.|
+|[CPen::CPen](#cpen)|Konstruuje `CPen` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CPen::CreatePen](#createpen)|Tworzy logiczną pióra kosmetycznych lub geometryczne przy użyciu stylu określonego, szerokość i atrybuty pędzla i dołącza go do `CPen` obiektu.|
-|[CPen::CreatePenIndirect](#createpenindirect)|Tworzy pióra przy użyciu stylu, szerokość i kolor w [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) struktury i dołącza go do `CPen` obiektu.|
-|[CPen::FromHandle](#fromhandle)|Zwraca wskaźnik do `CPen` obiektu, gdy hpen — Windows.|
-|[CPen::GetExtLogPen](#getextlogpen)|Pobiera [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen) struktury.|
-|[CPen::GetLogPen](#getlogpen)|Pobiera [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) struktury.|
+|[CPen::CreatePen](#createpen)|Tworzy logiczne i geometryczne pióro, z określonym stylem, szerokością i pędzlem, a następnie dołącza je do `CPen` obiektu.|
+|[CPen::CreatePenIndirect](#createpenindirect)|Tworzy pióro z stylem, szerokością i kolorem podanym w strukturze [LOGPEN](/windows/win32/api/wingdi/ns-wingdi-logpen) i dołącza je do `CPen` obiektu.|
+|[CPen::FromHandle](#fromhandle)|Zwraca wskaźnik do `CPen` obiektu, w którym znajduje się HPEN systemu Windows.|
+|[CPen::GetExtLogPen](#getextlogpen)|Pobiera podstawową strukturę [EXTLOGPEN](/windows/win32/api/wingdi/ns-wingdi-extlogpen) .|
+|[CPen::GetLogPen](#getlogpen)|Pobiera podstawową strukturę [LOGPEN](/windows/win32/api/wingdi/ns-wingdi-logpen) .|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CPen::operator hpen —](#operator_hpen)|Zwraca uchwyt Windows dołączonych do `CPen` obiektu.|
+|[CPen:: operator HPEN](#operator_hpen)|Zwraca dojście systemu Windows dołączone do `CPen` obiektu.|
 
 ## <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji na temat korzystania z `CPen`, zobacz [obiektów graficznych](../../mfc/graphic-objects.md).
+Aby uzyskać więcej informacji o `CPen`używaniu programu, zobacz [grafika Objects](../../mfc/graphic-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -73,11 +73,11 @@ Aby uzyskać więcej informacji na temat korzystania z `CPen`, zobacz [obiektów
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxwin.h
+**Nagłówek:** afxwin. h
 
-##  <a name="cpen"></a>  CPen::CPen
+##  <a name="cpen"></a>CPen::CPen
 
-Konstruuje `CPen` obiektu.
+Konstruuje `CPen` obiekt.
 
 ```
 CPen();
@@ -98,82 +98,82 @@ CPen(
 ### <a name="parameters"></a>Parametry
 
 *nPenStyle*<br/>
-Określa styl pióra. Ten parametr w pierwszej wersji Konstruktor może być jedną z następujących wartości:
+Określa styl pióra. Ten parametr w pierwszej wersji konstruktora może mieć jedną z następujących wartości:
 
-- PS_SOLID tworzy pełny pióra.
+- PS_SOLID tworzy pełne pióro.
 
-- PS_DASH tworzy kreskowane pióra. Prawidłowe tylko wtedy, gdy szerokość pióra jednostek 1 lub mniej, w urządzeniu.
+- PS_DASH tworzy pióro kreskowane. Prawidłowy tylko wtedy, gdy szerokość pióra wynosi 1 lub mniej, w jednostkach urządzeń.
 
-- PS_DOT tworzy kropkowana pióra. Prawidłowe tylko wtedy, gdy szerokość pióra jednostek 1 lub mniej, w urządzeniu.
+- PS_DOT tworzy pióro kropkowane. Prawidłowy tylko wtedy, gdy szerokość pióra wynosi 1 lub mniej, w jednostkach urządzeń.
 
-- Tworzy PS_DASHDOT pióra ze zmieniającymi się kreski oraz kropki. Prawidłowe tylko wtedy, gdy szerokość pióra jednostek 1 lub mniej, w urządzeniu.
+- PS_DASHDOT tworzy pióro z przemiennymi kreskami i kropkami. Prawidłowy tylko wtedy, gdy szerokość pióra wynosi 1 lub mniej, w jednostkach urządzeń.
 
-- Tworzy PS_DASHDOTDOT a pióra ze zmieniającymi się łączniki i kropki double. Prawidłowe tylko wtedy, gdy szerokość pióra jednostek 1 lub mniej, w urządzeniu.
+- PS_DASHDOTDOT tworzy pióro z przemiennymi kreskami i kropkami. Prawidłowy tylko wtedy, gdy szerokość pióra wynosi 1 lub mniej, w jednostkach urządzeń.
 
-- PS_NULL tworzy pióra o wartości null.
+- PS_NULL tworzy pióro o wartości null.
 
-- PS_INSIDEFRAME tworzy produkowane przez Pióro, który rysuje wewnątrz ramki kształty zamknięte przez Windows GDI dane wyjściowe funkcji, które określają prostokąt otaczający (na przykład `Ellipse`, `Rectangle`, `RoundRect`, `Pie`i `Chord`funkcji elementów członkowskich). Gdy ten styl jest używany z Windows GDI dane wyjściowe funkcji, które nie określaj prostokąt otaczający (na przykład `LineTo` składowa), obszaru rysowania pióra nie jest ograniczone przez ramkę.
+- PS_INSIDEFRAME tworzy pióro, które rysuje linię wewnątrz ramki kształtów zamkniętych utworzonych przez funkcje wyjściowe GDI systemu Windows, które określają prostokąt `Ellipse`ograniczający (na przykład `Rectangle` `RoundRect` `Pie`,,,, i `Chord`funkcje składowe). Gdy ten styl jest używany z funkcjami danych wyjściowych GDI systemu Windows, które nie określają ograniczenia prostokąta (na przykład `LineTo` funkcja członkowska), obszar rysowania pióra nie jest ograniczony przez ramkę.
 
-Druga wersja `CPen` Konstruktor określa kombinację typu, stylu, zakończenie i atrybuty sprzężenia. Wartości z każdej kategorii powinny być one łączone przy użyciu bitowego operatora OR (&#124;). Typ pióra może być jedną z następujących wartości:
+Druga wersja `CPen` konstruktora określa kombinację atrybutów typu, stylu, zakończenia i sprzężenia. Wartości z każdej kategorii należy łączyć przy użyciu operatora bitowego or (&#124;). Typ pióra może mieć jedną z następujących wartości:
 
-- PS_GEOMETRIC tworzy geometrycznych pióra.
+- PS_GEOMETRIC tworzy pióro geometryczne.
 
-- PS_COSMETIC tworzy kosmetycznych pióra.
+- PS_COSMETIC tworzy pióro kosmetyczne.
 
-   Druga wersja `CPen` Konstruktor dodaje następujące style pióra *nPenStyle*:
+   Druga wersja `CPen` konstruktora dodaje następujące style pióra dla *nPenStyle*:
 
-- PS_ALTERNATE tworzy pióra, która ustawia co drugi piksel. (Ten styl jest tylko w przypadku kosmetycznych pióra).
+- PS_ALTERNATE tworzy pióro, które ustawia co drugi piksel. (Ten styl dotyczy tylko pisaków kosmetycznych).
 
-- Tworzy PS_USERSTYLE pióra, który używa tablicy stylu podane przez użytkownika.
+- PS_USERSTYLE tworzy pióro, które używa tablicy stylów dostarczonej przez użytkownika.
 
-   Zakończenie końca może być jednym z następujących wartości:
+   Zakończenie może być jedną z następujących wartości:
 
-- PS_ENDCAP_ROUND zakończenia są Rundy.
+- PS_ENDCAP_ROUND zakończenia są okrągłe.
 
 - PS_ENDCAP_SQUARE zakończenia są kwadratowe.
 
-- PS_ENDCAP_FLAT zakończenia są prostego.
+- PS_ENDCAP_FLAT zakończenia są płaskie.
 
-   Sprzężenia może być jednym z następujących wartości:
+   Sprzężenie może być jedną z następujących wartości:
 
-- Dołącza PS_JOIN_BEVEL są ukośne.
+- Sprzężenia PS_JOIN_BEVEL są fazowane.
 
-- Dołącza PS_JOIN_MITER są połączenia znajdujących się w bieżącym określonym przez [SetMiterLimit](/windows/desktop/api/wingdi/nf-wingdi-setmiterlimit) funkcji. Jeśli sprzężenia przekracza ten limit, jest ukośne.
+- PS_JOIN_MITER Join są mitered, gdy znajdują się w bieżącym limicie ustawionym przez funkcję [SetMiterLimit](/windows/win32/api/wingdi/nf-wingdi-setmiterlimit) . Jeśli sprzężenie przekracza ten limit, zostanie on skośny.
 
-- Dołącza PS_JOIN_ROUND są Rundy.
+- Sprzężenia PS_JOIN_ROUND są zaokrąglane.
 
 *nWidth*<br/>
-Określa grubość pióra.
+Określa szerokość pióra.
 
-- Pierwsza wersja konstruktora Jeśli ta wartość wynosi 0, szerokość w jednostkach urządzenia jest zawsze 1 piksela, niezależnie od tego trybu mapowania.
+- W przypadku pierwszej wersji konstruktora, jeśli ta wartość jest równa 0, Szerokość w jednostkach urządzenia ma zawsze 1 piksel, niezależnie od trybu mapowania.
 
-- Dla drugiego wersja konstruktora Jeśli *nPenStyle* jest PS_GEOMETRIC, szerokość znajduje się w jednostkach logicznych. Jeśli *nPenStyle* jest PS_COSMETIC, szerokość musi być równa 1.
+- W przypadku drugiej wersji konstruktora, jeśli *nPenStyle* jest PS_GEOMETRIC, Szerokość jest podawana w jednostkach logicznych. Jeśli *nPenStyle* jest PS_COSMETIC, Szerokość musi być ustawiona na 1.
 
 *crColor*<br/>
-Zawiera kolor RGB pióra.
+Zawiera kolor RGB dla pióra.
 
 *pLogBrush*<br/>
-Wskazuje `LOGBRUSH` struktury. Jeśli *nPenStyle* jest PS_COSMETIC, *lbColor* członkiem `LOGBRUSH` struktury Określa kolor pióra i *lbStyle* członkiem `LOGBRUSH` Struktura musi być równa BS_SOLID. Jeśli *nPenStyle* jest PS_GEOMETRIC, wszystkie elementy Członkowskie może służyć do określania atrybutów pędzla pióra.
+`LOGBRUSH` Wskazuje strukturę. Jeśli *nPenStyle* jest PS_COSMETIC, `LOGBRUSH` element członkowski *lbColor* struktury określa kolor pióra, `LOGBRUSH` a element członkowski *lbStyle* musi być ustawiony na BS_SOLID. Jeśli *nPenStyle* jest PS_GEOMETRIC, wszystkie elementy członkowskie muszą być używane do określania atrybutów pędzla pióra.
 
 *nStyleCount*<br/>
-Określa długość w jednostkach bitowego *lpStyle* tablicy. Ta wartość musi być zero, jeśli *nPenStyle* nie jest PS_USERSTYLE.
+Określa długość w jednostkach DoubleWord tablicy *lpStyle* . Ta wartość musi być równa zero, jeśli *nPenStyle* nie jest PS_USERSTYLE.
 
 *lpStyle*<br/>
-Wskazuje na tablicę wartości bitowego. Pierwsza wartość określa długość kreski pierwszy w stylu zdefiniowanych przez użytkownika, druga wartość Określa pierwszą przestrzeń i tak dalej. This, wskaźnik musi mieć wartość NULL, jeśli *nPenStyle* nie jest PS_USERSTYLE.
+Wskazuje tablicę wartości DoubleWord. Pierwsza wartość określa długość pierwszej kreski w stylu zdefiniowanym przez użytkownika, drugą wartość określa długość pierwszego miejsca i tak dalej. Ten wskaźnik musi mieć wartość NULL, jeśli *nPenStyle* nie jest PS_USERSTYLE.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli korzystasz z konstruktora bez argumentów, należy zainicjować wynikowy `CPen` obiekt z `CreatePen`, `CreatePenIndirect`, lub `CreateStockObject` funkcji elementów członkowskich.
+Jeśli używasz konstruktora bez argumentów, musisz zainicjować `CPen` otrzymany obiekt `CreatePen`za pomocą funkcji, `CreatePenIndirect`lub `CreateStockObject` .
 
-Jeśli korzystasz z konstruktora, który przyjmuje argumenty, nie dalsze inicjowania jest konieczne. Konstruktor z argumentami może zgłosić wyjątek, jeśli zostaną napotkane błędy, gdy konstruktor bez argumentów zawsze powiedzie się.
+Jeśli używasz konstruktora, który przyjmuje argumenty, to dalsze inicjowanie nie jest konieczne. Konstruktor z argumentami może zgłosić wyjątek w przypadku napotkania błędów, podczas gdy Konstruktor bez argumentów zawsze zakończy się powodzeniem.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#99](../../mfc/codesnippet/cpp/cpen-class_1.cpp)]
 
-##  <a name="createpen"></a>  CPen::CreatePen
+##  <a name="createpen"></a>CPen::CreatePen
 
-Tworzy logiczną pióra kosmetycznych lub geometryczne przy użyciu stylu określonego, szerokość i atrybuty pędzla i dołącza go do `CPen` obiektu.
+Tworzy logiczne i geometryczne pióro, z określonym stylem, szerokością i pędzlem, a następnie dołącza je do `CPen` obiektu.
 
 ```
 BOOL CreatePen(
@@ -192,56 +192,56 @@ BOOL CreatePen(
 ### <a name="parameters"></a>Parametry
 
 *nPenStyle*<br/>
-Określa styl pióra. Aby uzyskać listę możliwych wartości, zobacz *nPenStyle* parametru w [CPen](#cpen) konstruktora.
+Określa styl pióra. Aby uzyskać listę możliwych wartości, zobacz parametr *nPenStyle* w konstruktorze [CPen](#cpen) .
 
 *nWidth*<br/>
-Określa grubość pióra.
+Określa szerokość pióra.
 
-- W pierwszej wersji programu `CreatePen`, jeśli ta wartość wynosi 0, szerokość w jednostkach urządzenia jest zawsze 1 piksela, niezależnie od tego trybu mapowania.
+- W przypadku pierwszej wersji `CreatePen`, jeśli wartość jest równa 0, Szerokość w jednostkach urządzenia jest zawsze 1 piksel, niezależnie od trybu mapowania.
 
-- Druga wersja dla `CreatePen`, jeśli *nPenStyle* jest PS_GEOMETRIC, szerokość znajduje się w jednostkach logicznych. Jeśli *nPenStyle* jest PS_COSMETIC, szerokość musi być równa 1.
+- W przypadku drugiej wersji programu `CreatePen`, jeśli *nPenStyle* jest PS_GEOMETRIC, Szerokość jest podawana w jednostkach logicznych. Jeśli *nPenStyle* jest PS_COSMETIC, Szerokość musi być ustawiona na 1.
 
 *crColor*<br/>
-Zawiera kolor RGB pióra.
+Zawiera kolor RGB dla pióra.
 
 *pLogBrush*<br/>
-Wskazuje [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) struktury. Jeśli *nPenStyle* jest PS_COSMETIC, `lbColor` członkiem `LOGBRUSH` struktury Określa kolor pióra i *lbStyle* członkiem `LOGBRUSH` struktury musi być równa BS_ STAŁE. Jeśli nPenStyle PS_GEOMETRIC, wszystkie elementy Członkowskie musi służyć do określania atrybutów pędzla pióra.
+Wskazuje na strukturę [LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush) . Jeśli *nPenStyle* jest PS_COSMETIC `lbColor` , element `LOGBRUSH` członkowski struktury określa kolor `LOGBRUSH` pióra, a element członkowski *lbStyle* struktury musi być ustawiony na BS_SOLID. Jeśli nPenStyle jest PS_GEOMETRIC, wszystkie elementy członkowskie muszą być używane do określania atrybutów pędzla pióra.
 
 *nStyleCount*<br/>
-Określa długość w jednostkach bitowego *lpStyle* tablicy. Ta wartość musi być zero, jeśli *nPenStyle* nie jest PS_USERSTYLE.
+Określa długość w jednostkach DoubleWord tablicy *lpStyle* . Ta wartość musi być równa zero, jeśli *nPenStyle* nie jest PS_USERSTYLE.
 
 *lpStyle*<br/>
-Wskazuje na tablicę wartości bitowego. Pierwsza wartość określa długość kreski pierwszy w stylu zdefiniowanych przez użytkownika, druga wartość Określa pierwszą przestrzeń i tak dalej. This, wskaźnik musi mieć wartość NULL, jeśli *nPenStyle* nie jest PS_USERSTYLE.
+Wskazuje tablicę wartości DoubleWord. Pierwsza wartość określa długość pierwszej kreski w stylu zdefiniowanym przez użytkownika, drugą wartość określa długość pierwszego miejsca i tak dalej. Ten wskaźnik musi mieć wartość NULL, jeśli *nPenStyle* nie jest PS_USERSTYLE.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli kończy się pomyślnie, lub zero, jeśli metoda nie powiedzie się.
+Wartość różna od zera, jeśli kończy się pomyślnie, lub zero, jeśli metoda się nie powiedzie.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza wersja `CreatePen` inicjuje przy użyciu stylu określonego, szerokość i kolor pióra. Jako bieżącego pióra we wszystkich kontekstach urządzenia można następnie wybrać pióra.
+Pierwsza wersja `CreatePen` inicjuje pióro z określonym stylem, szerokością i kolorem. Pióro można następnie wybrać jako bieżące pióro dla dowolnego kontekstu urządzenia.
 
-Pióra, które mają szerokość większą niż 1 piksel powinny zawsze występować PS_NULL, PS_SOLID lub PS_INSIDEFRAME stylu.
+Pióra o szerokości większej niż 1 piksel powinna zawsze mieć styl PS_NULL, PS_SOLID lub PS_INSIDEFRAME.
 
-Jeśli styl PS_INSIDEFRAME i kolor, który nie pasuje do koloru w tabeli kolorów logiczne pióra, pióro jest rysowana szarych kolorem. Styl pióra PS_SOLID, nie może służyć do tworzenia pióra szarych kolorem. Styl PS_INSIDEFRAME jest taka sama jak PS_SOLID, jeśli szerokość pióra jest mniejsza niż lub równa 1.
+Jeśli pióro ma styl PS_INSIDEFRAME i kolor, który nie pasuje do koloru w logicznej tabeli kolorów, pióro jest rysowane kolorem. Nie można użyć stylu pióra PS_SOLID, aby utworzyć pióro z kolorem. Styl PS_INSIDEFRAME jest identyczny z PS_SOLID, jeśli szerokość pióra jest mniejsza lub równa 1.
 
-Druga wersja `CreatePen` inicjuje logiczne pióra kosmetycznych lub geometryczne, określonym stylu i szerokości i odświeżyć atrybutów. Szerokość kosmetycznych pióro ma zawsze numer 1; szerokość geometrycznych pióra jest zawsze określona w jednostkach. Po utworzeniu aplikacji logicznej pióra, jego można wybrać tego pióra do kontekstu urządzenia przez wywołanie metody [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) funkcji. Po wybraniu pióra do kontekstu urządzenia może służyć do rysowania linii i krzywych.
+Druga wersja `CreatePen` inicjująca logiczne lub geometryczne pióro, które ma określony styl, Szerokość i atrybuty pędzla. Szerokość pióra kosmetycznego jest zawsze 1. Szerokość pióra geometrycznego jest zawsze określona w jednostkach świata. Po utworzeniu przez aplikację piórem logicznym można wybrać ten pióro w kontekście urządzenia, wywołując funkcję przepustek [:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) . Po wybraniu pióra w kontekście urządzenia może służyć do rysowania linii i krzywych.
 
-- Jeśli *nPenStyle* PS_COSMETIC i PS_USERSTYLE, wpisów w *lpStyle* tablicy określ długość i miejsca do magazynowania w jednostkach stylu. Jednostka styl jest zdefiniowany przez urządzenie, w którym pióra jest używany, aby narysować linię.
+- Jeśli *nPenStyle* jest PS_COSMETIC i PS_USERSTYLE, wpisy w tablicy *lpStyle* określają długości kresek i spacji w jednostkach stylu. Jednostka stylu jest definiowana przez urządzenie, w którym pióro jest używane do rysowania linii.
 
-- Jeśli *nPenStyle* PS_GEOMETRIC i PS_USERSTYLE, wpisów w *lpStyle* tablicy określ długość i miejsca do magazynowania w jednostkach logicznych.
+- Jeśli *nPenStyle* jest PS_GEOMETRIC i PS_USERSTYLE, wpisy w tablicy *lpStyle* określają długości kresek i spacji w jednostkach logicznych.
 
-- Jeśli *nPenStyle* PS_ALTERNATE, jednostki stylu jest ignorowana, a co drugi piksel jest ustawiana.
+- Jeśli *nPenStyle* jest PS_ALTERNATE, jednostka stylu jest ignorowana, a każdy inny piksel jest ustawiony.
 
-Gdy aplikacja nie wymaga już danego pióra, powinny wywoływać [CGdiObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) element członkowski funkcji lub zniszczenia `CPen` obiektu, zasób nie jest już używana. Aplikacja nie należy usuwać pióra, gdy pióro jest zaznaczona w kontekście urządzenia.
+Gdy aplikacja nie wymaga już danego pióra, powinien wywołać funkcję członkowską [CGdiObject::D eleteobject](../../mfc/reference/cgdiobject-class.md#deleteobject) lub zniszczyć `CPen` obiekt, aby zasób nie był już używany. Aplikacja nie powinna usuwać pióra, gdy pióro jest zaznaczone w kontekście urządzenia.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#100](../../mfc/codesnippet/cpp/cpen-class_2.cpp)]
 
-##  <a name="createpenindirect"></a>  CPen::CreatePenIndirect
+##  <a name="createpenindirect"></a>CPen::CreatePenIndirect
 
-Inicjuje Pióro, które ma styl, szerokość i kolor w strukturze wskazywany przez *lpLogPen*.
+Inicjuje pióro z stylem, szerokością i kolorem podanym w strukturze wskazywanym przez *lpLogPen*.
 
 ```
 BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
@@ -250,7 +250,7 @@ BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
 ### <a name="parameters"></a>Parametry
 
 *lpLogPen*<br/>
-Wskazuje Windows [LOGPEN](/windows/desktop/api/Wingdi/ns-wingdi-taglogpen) strukturę, która zawiera informacje o pióra.
+Wskazuje strukturę [LOGPEN](/windows/win32/api/Wingdi/ns-wingdi-logpen) systemu Windows, która zawiera informacje o piórie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -258,17 +258,17 @@ Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie
 
 ### <a name="remarks"></a>Uwagi
 
-Pióra, które mają szerokość większą niż 1 piksel powinny zawsze występować PS_NULL, PS_SOLID lub PS_INSIDEFRAME stylu.
+Pióra o szerokości większej niż 1 piksel powinna zawsze mieć styl PS_NULL, PS_SOLID lub PS_INSIDEFRAME.
 
-Jeśli styl PS_INSIDEFRAME i kolor, który nie pasuje do koloru w tabeli kolorów logiczne pióra, pióro jest rysowana szarych kolorem. Styl PS_INSIDEFRAME jest taka sama jak PS_SOLID, jeśli szerokość pióra jest mniejsza niż lub równa 1.
+Jeśli pióro ma styl PS_INSIDEFRAME i kolor, który nie pasuje do koloru w logicznej tabeli kolorów, pióro jest rysowane kolorem. Styl PS_INSIDEFRAME jest identyczny z PS_SOLID, jeśli szerokość pióra jest mniejsza lub równa 1.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#101](../../mfc/codesnippet/cpp/cpen-class_3.cpp)]
 
-##  <a name="fromhandle"></a>  CPen::FromHandle
+##  <a name="fromhandle"></a>CPen::FromHandle
 
-Zwraca wskaźnik do `CPen` obiektów nadana uchwyt obiekt pen Windows GDI.
+Zwraca wskaźnik do `CPen` obiektu, który ma uchwyt do obiektu pióra GDI systemu Windows.
 
 ```
 static CPen* PASCAL FromHandle(HPEN hPen);
@@ -277,23 +277,23 @@ static CPen* PASCAL FromHandle(HPEN hPen);
 ### <a name="parameters"></a>Parametry
 
 *hPen*<br/>
-`HPEN` Obsługa pióro Windows GDI.
+`HPEN`uchwyt do pióra GDI systemu Windows.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do `CPen` obiektu, jeśli operacja się powiedzie; w przeciwnym razie wartość NULL.
+Wskaźnik do `CPen` obiektu, jeśli się powiedzie; w przeciwnym razie wartość null.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli `CPen` obiektu nie jest dołączony do uchwyt tymczasowego `CPen` obiekt zostanie utworzony i dołączony. Ten tymczasowy `CPen` obiekt jest prawidłowy tylko do momentu przy następnym aplikacji ma czas bezczynności, po jego pętlę zdarzeń, w której czas wszystkich tymczasowych grafiki obiekty zostaną usunięte. Innymi słowy tymczasowy obiekt jest prawidłowy tylko podczas przetwarzania komunikatu w jednym oknie.
+Jeśli obiekt nie jest dołączony do dojścia, tworzony jest obiekt `CPen` tymczasowy i jest on dołączony. `CPen` Ten obiekt `CPen` tymczasowy jest prawidłowy tylko do następnego czasu, gdy aplikacja ma czas bezczynności w pętli zdarzeń, podczas gdy wszystkie tymczasowe obiekty graficzne są usuwane. Innymi słowy, obiekt tymczasowy jest prawidłowy tylko podczas przetwarzania jednego komunikatu w oknie.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#105](../../mfc/codesnippet/cpp/cpen-class_4.cpp)]
 
-##  <a name="getextlogpen"></a>  CPen::GetExtLogPen
+##  <a name="getextlogpen"></a>CPen::GetExtLogPen
 
-Pobiera `EXTLOGPEN` struktury.
+`EXTLOGPEN` Pobiera podstawową strukturę.
 
 ```
 int GetExtLogPen(EXTLOGPEN* pLogPen);
@@ -302,35 +302,35 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
 ### <a name="parameters"></a>Parametry
 
 *pLogPen*<br/>
-Wskazuje [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen) strukturę, która zawiera informacje o pióra.
+Wskazuje strukturę [EXTLOGPEN](/windows/win32/api/wingdi/ns-wingdi-extlogpen) , która zawiera informacje o piórie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-`EXTLOGPEN` Definiuje struktury, style, szerokość i atrybuty pędzla pióra. Na przykład wywołać `GetExtLogPen` pasujące do konkretnego stylu pióra.
+`EXTLOGPEN` Struktura definiuje styl, Szerokość i atrybuty pędzla pióra. Na przykład, wywołaj `GetExtLogPen` , aby dopasować określony styl pióra.
 
-Zobacz następujące tematy w zestawie Windows SDK dla informacji o atrybutach pióra:
+Zapoznaj się z następującymi tematami w Windows SDK, aby uzyskać informacje o atrybutach pióra:
 
-- [GetObject](/windows/desktop/api/wingdi/nf-wingdi-getobject)
+- [GetObject](/windows/win32/api/wingdi/nf-wingdi-getobject)
 
-- [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen)
+- [EXTLOGPEN](/windows/win32/api/wingdi/ns-wingdi-extlogpen)
 
-- [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)
+- [LOGPEN](/windows/win32/api/wingdi/ns-wingdi-logpen)
 
-- [ExtCreatePen](/windows/desktop/api/wingdi/nf-wingdi-extcreatepen)
+- [ExtCreatePen](/windows/win32/api/wingdi/nf-wingdi-extcreatepen)
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład kodu demonstruje wywołanie `GetExtLogPen` można pobrać atrybutów pióra, a następnie utwórz nowe, kosmetycznych pióra przy użyciu tego samego koloru.
+Poniższy przykład kodu demonstruje wywołanie `GetExtLogPen` , aby pobrać atrybuty pióra, a następnie utworzyć nowe, kosmetyczne pióro z tym samym kolorem.
 
 [!code-cpp[NVC_MFCDocView#102](../../mfc/codesnippet/cpp/cpen-class_5.cpp)]
 
-##  <a name="getlogpen"></a>  CPen::GetLogPen
+##  <a name="getlogpen"></a>CPen::GetLogPen
 
-Pobiera `LOGPEN` struktury.
+`LOGPEN` Pobiera podstawową strukturę.
 
 ```
 int GetLogPen(LOGPEN* pLogPen);
@@ -339,33 +339,33 @@ int GetLogPen(LOGPEN* pLogPen);
 ### <a name="parameters"></a>Parametry
 
 *pLogPen*<br/>
-Wskazuje [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) struktury zawierają informacje na temat pióra.
+Wskazuje strukturę [LOGPEN](/windows/win32/api/wingdi/ns-wingdi-logpen) , aby zawierała informacje o piórie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-`LOGPEN` Definiuje struktury, style, kolor i wzorzec pióra.
+`LOGPEN` Struktura definiuje styl, kolor i deseń pióra.
 
-Na przykład wywołać `GetLogPen` pasujące do konkretnego stylu pióra.
+Na przykład, wywołaj `GetLogPen` , aby dopasować określony styl pióra.
 
-Zobacz następujące tematy w zestawie Windows SDK dla informacji o atrybutach pióra:
+Zapoznaj się z następującymi tematami w Windows SDK, aby uzyskać informacje o atrybutach pióra:
 
-- [GetObject](/windows/desktop/api/wingdi/nf-wingdi-getobject)
+- [GetObject](/windows/win32/api/wingdi/nf-wingdi-getobject)
 
-- [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)
+- [LOGPEN](/windows/win32/api/wingdi/ns-wingdi-logpen)
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład kodu demonstruje wywołanie `GetLogPen` można pobrać znaku pióra, a następnie utwórz nowe, pełne pióra przy użyciu tego samego koloru.
+Poniższy przykład kodu demonstruje wywołanie `GetLogPen` w celu pobrania znaku pióra, a następnie utworzenie nowego, pełnego pióra z tym samym kolorem.
 
 [!code-cpp[NVC_MFCDocView#103](../../mfc/codesnippet/cpp/cpen-class_6.cpp)]
 
-##  <a name="operator_hpen"></a>  CPen::operator hpen —
+##  <a name="operator_hpen"></a>CPen:: operator HPEN
 
-Pobiera uchwyt Windows GDI dołączonych `CPen` obiektu.
+Pobiera dołączone dojście `CPen` GDI systemu Windows obiektu.
 
 ```
 operator HPEN() const;
@@ -373,13 +373,13 @@ operator HPEN() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli operacja się powiedzie, dojścia do obiektu Windows GDI reprezentowany przez `CPen` obiektu; w przeciwnym razie wartość NULL.
+Jeśli to się powiedzie, dojście do obiektu GDI systemu Windows `CPen` reprezentowane przez obiekt; w przeciwnym razie wartość null.
 
 ### <a name="remarks"></a>Uwagi
 
-Ten operator jest operatora rzutowania, który obsługuje bezpośredniego użycia obiektu hpen —.
+Ten operator jest operatorem rzutowania, który obsługuje bezpośrednie użycie obiektu HPEN.
 
-Aby uzyskać więcej informacji o korzystaniu z obiektów graficznych, zobacz artykuł [obiektów grafiki](/windows/desktop/gdi/graphic-objects) w zestawie Windows SDK.
+Aby uzyskać więcej informacji na temat używania obiektów graficznych, zobacz artykuł [obiekty graficzne](/windows/win32/gdi/graphic-objects) w Windows SDK.
 
 ### <a name="example"></a>Przykład
 

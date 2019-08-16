@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: a258773633f503dc0638d76509953b3410dafbd8
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: a9161764f6c8646766a73add01c25cce5619ad19
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375760"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506584"
 ---
 # <a name="cfile-class"></a>Klasa CFile
 
@@ -166,7 +166,7 @@ virtual void Abort();
 
 Jeśli plik nie został zamknięty przed zniszczeniem obiektu, destruktor zamknie go.
 
-Obsługa wyjątków `CFile::Abort` różni się od `CFile::Close` na dwa sposoby. Najpierw funkcja nie zgłosi wyjątku w przypadku błędów, ponieważ błędy są ignorowane przez `Abort`. `Abort` **Jeśli plik** nie został otwarty lub został wcześniej zamknięty, niezostaniezaakceptowany.`Abort`
+Obsługa wyjątków `CFile::Abort` różni się od `CFile::Close` na dwa sposoby. Najpierw funkcja nie zgłosi wyjątku w przypadku błędów, ponieważ błędy są ignorowane przez `Abort`. `Abort` Jeśli plik nie został otwarty lub został wcześniej zamknięty, niezostaniezaakceptowany.`Abort`
 
 Jeśli użyto **nowej** do przydzielenia `CFile` obiektu na stercie, należy usunąć go po zamknięciu pliku. `Abort`ustawia `m_hFile` jako `CFile::hFileNull`.
 
@@ -382,7 +382,7 @@ Tytuł pliku źródłowego.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wywołuje [GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea) , aby pobrać tytuł pliku. Jeśli to się powiedzie, metoda zwraca ciąg używany przez system do wyświetlania nazwy pliku użytkownikowi. W przeciwnym razie metoda wywołuje [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) , aby pobrać nazwę pliku (łącznie z rozszerzeniem pliku) pliku źródłowego. Oznacza to, że rozszerzenie pliku nie jest zawsze uwzględniane w ciągu tytułu zwróconego pliku. Aby uzyskać więcej informacji, zobacz [GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea) i [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) w Windows SDK.
+Ta metoda wywołuje [GetFileTitle](/windows/win32/api/commdlg/nf-commdlg-getfiletitlew) , aby pobrać tytuł pliku. Jeśli to się powiedzie, metoda zwraca ciąg używany przez system do wyświetlania nazwy pliku użytkownikowi. W przeciwnym razie metoda wywołuje [PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew) , aby pobrać nazwę pliku (łącznie z rozszerzeniem pliku) pliku źródłowego. Oznacza to, że rozszerzenie pliku nie jest zawsze uwzględniane w ciągu tytułu zwróconego pliku. Aby uzyskać więcej informacji, zobacz [GetFileTitle](/windows/win32/api/commdlg/nf-commdlg-getfiletitlew) i [PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew) w Windows SDK.
 
 Aby zwrócić całą ścieżkę pliku, w tym nazwę, wywołaj metodę [GetFilePath](#getfilepath). Aby zwrócić tylko nazwę pliku, wywołaj GetFileName. [](#getfilename)
 
@@ -466,7 +466,7 @@ Ma wartość TRUE, jeśli informacje o stanie określonego pliku zostaną pomyś
 
 Niestatyczna wersja programu `GetStatus` pobiera informacje o stanie otwartego pliku skojarzone z danym `CFile` obiektem.  Wersja statyczna programu `GetStatus` uzyskuje stan pliku z danej ścieżki pliku bez faktycznego otwierania pliku. Ta wersja jest przydatna do testowania praw dostępu do pliku.
 
-`m_attribute` Element członkowski`CFileStatus` struktury odwołuje się do zestawu atrybutów pliku. Klasa zawiera typ wyliczeniowy atrybutu, więc atrybuty pliku można określić symbolicznie:  `CFile`
+`m_attribute` Element członkowski`CFileStatus` struktury odwołuje się do zestawu atrybutów pliku. Klasa zawiera typ wyliczeniowy atrybutu, więc atrybuty pliku można określić symbolicznie: `CFile`
 
 ```
 enum Attribute {
@@ -602,7 +602,7 @@ W poniższej tabeli opisano możliwe wyniki działania programu `Open`.
 |--------------|------------------------|------------------|----------------------------|
 |NULL|Nie|OZNACZA|n/d|
 |PTR na`CFileException`|Nie|OZNACZA|bez zmian|
-|NULL|Yes|FAŁSZ|n/d|
+|NULL|Tak|FAŁSZ|n/d|
 |PTR na`CFileException`|Tak|FAŁSZ|zainicjowany do opisywania błędu|
 
 ### <a name="example"></a>Przykład
@@ -613,7 +613,7 @@ W poniższej tabeli opisano możliwe wyniki działania programu `Open`.
 
 ##  <a name="operator_handle"></a>CFile:: uchwyt operatora
 
-Użyj tego operatora, aby przekazać dojście do `CFile` obiektu do funkcji, takich jak [ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) i [GetFileTime](/windows/desktop/api/fileapi/nf-fileapi-getfiletime) , które `HANDLE`oczekują.
+Użyj tego operatora, aby przekazać dojście do `CFile` obiektu do funkcji, takich jak [ReadFileEx](/windows/win32/api/fileapi/nf-fileapi-readfileex) i [GetFileTime](/windows/win32/api/fileapi/nf-fileapi-getfiletime) , które `HANDLE`oczekują.
 
 ```
 operator HANDLE() const;

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 436c9c47d7e08176860144ce62cc874919351029
-ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
+ms.openlocfilehash: 57414bd56c72b951d3f1948e658243e9036f0179
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68313447"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498123"
 ---
 # <a name="set-compiler-and-build-properties"></a>Ustawianie właściwości kompilatora i Build
 
@@ -39,7 +39,7 @@ Na poniższej ilustracji przedstawiono tę samą stronę właściwości projektu
 
 ## <a name="target-platforms"></a>Platformy docelowe
 
-*Platforma* docelowa odnosi się do rodzaju urządzenia i/lub systemu operacyjnego, na którym będzie uruchamiany plik wykonywalny. Można skompilować projekt dla więcej niż jednej platformy. Dostępne platformy docelowe dla C++ projektów zależą od rodzaju projektu; obejmują one, ale nie są ograniczone do Win32, x64, ARM, Android i iOS.     Platforma docelowa **x86** , która może być widoczna w **Configuration Manager** jest taka sama jak C++ **Win32** w projektach natywnych. Win32 oznacza 32-bitowe systemy Windows i **x64** oznaczają 64-bitowe okna. Aby uzyskać więcej informacji na temat tych dwóch platform, zobacz [Uruchamianie aplikacji 32-bitowych](/windows/desktop/WinProg64/running-32-bit-applications).
+*Platforma* docelowa odnosi się do rodzaju urządzenia i/lub systemu operacyjnego, na którym będzie uruchamiany plik wykonywalny. Można skompilować projekt dla więcej niż jednej platformy. Dostępne platformy docelowe dla C++ projektów zależą od rodzaju projektu; obejmują one, ale nie są ograniczone do Win32, x64, ARM, Android i iOS.     Platforma docelowa **x86** , która może być widoczna w **Configuration Manager** jest taka sama jak C++ **Win32** w projektach natywnych. Win32 oznacza 32-bitowe systemy Windows i **x64** oznaczają 64-bitowe okna. Aby uzyskać więcej informacji na temat tych dwóch platform, zobacz [Uruchamianie aplikacji 32-bitowych](/windows/win32/WinProg64/running-32-bit-applications).
 
 Dowolna wartość platformy docelowej **procesora CPU** , która może być widoczna w **Configuration Manager** nie ma wpływu C++ na natywne projekty; jest to istotne dla C++/CLI i innych typów projektów .NET. Aby uzyskać więcej informacji, zobacz [/CLRIMAGETYPE (Określ typ obrazu CLR)](reference/clrimagetype-specify-type-of-clr-image.md).
 
@@ -60,7 +60,7 @@ Okno dialogowe **strony właściwości** pokazuje tylko strony właściwości, k
 
 MSBuild obsługuje użycie stałych czasu kompilacji o nazwie "MACROS" dla niektórych wartości ciągów, takich jak katalogi i ścieżki. Są one widoczne na stronach właściwości, w których można odwoływać się do i modyfikować przy użyciu [edytora właściwości](#property_editor). 
 
-Poniższa ilustracja przedstawia strony właściwości dla projektu programu Visual Studio C++ . W lewym okienku jest zaznaczona reguła **katalogów VC + +**  , a w prawym okienku zostaną wyświetlone właściwości skojarzone z tą regułą. Wartości są nazywane makrami.  `$(...)` *Makro* jest stałą czasu kompilacji, która może odwoływać się do wartości zdefiniowanej przez program Visual Studio lub system MSBuild lub do wartości zdefiniowanej przez użytkownika. Za pomocą makr zamiast zakodowanych wartości, takich jak ścieżki katalogów, można łatwo udostępniać ustawienia właściwości między komputerami i między wersjami programu Visual Studio, a także lepiej upewnić się, że ustawienia projektu poprawnie uczestniczą w [właściwości Dziedziczenie](project-property-inheritance.md). 
+Poniższa ilustracja przedstawia strony właściwości dla projektu programu Visual Studio C++ . W lewym okienku jest zaznaczona reguła **katalogów VC + +** , a w prawym okienku zostaną wyświetlone właściwości skojarzone z tą regułą. Wartości są nazywane makrami. `$(...)` *Makro* jest stałą czasu kompilacji, która może odwoływać się do wartości zdefiniowanej przez program Visual Studio lub system MSBuild lub do wartości zdefiniowanej przez użytkownika. Za pomocą makr zamiast zakodowanych wartości, takich jak ścieżki katalogów, można łatwo udostępniać ustawienia właściwości między komputerami i między wersjami programu Visual Studio, a także lepiej upewnić się, że ustawienia projektu poprawnie uczestniczą w [właściwości Dziedziczenie](project-property-inheritance.md). 
 
 ![Strony właściwości projektu](media/project_property_pages_vc.png "Project_Property_Pages_VC")
 

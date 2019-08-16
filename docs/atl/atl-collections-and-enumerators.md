@@ -7,41 +7,41 @@ helpviewer_keywords:
 - enumerators, ATL classes
 - collection interfaces
 ms.assetid: b2d37119-3ab2-4e0a-b65b-f377f07e4098
-ms.openlocfilehash: ebf7be8b2c80a714a27567ce0334475519a69454
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 502bedb1773dc2a6edbd6679d50e9c5946228283
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252373"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491902"
 ---
 # <a name="atl-collections-and-enumerators"></a>Kolekcje i wyliczenia ALT
 
-Element `collection` jest obiektem COM, który udostępnia interfejs, który umożliwia dostęp do jednej grupy elementów danych (nieprzetworzone dane lub innych obiektów). Interfejs, który następuje standardy dla zapewnienia dostępu do grupy obiektów jest znany jako *kolekcji interfejs*.
+A `collection` jest obiektem com, który udostępnia interfejs, który umożliwia dostęp do grupy elementów danych (nieprzetworzone dane lub inne obiekty). Interfejs, który następuje po standardach zapewniających dostęp do grupy obiektów jest znany jako *interfejs kolekcji*.
 
-Jako minimum, należy podać interfejsów kolekcji `Count` właściwość, która zwraca liczbę elementów w kolekcji, `Item` właściwość, która zwraca element z kolekcji, w oparciu o indeks, a `_NewEnum` właściwość, która zwraca Moduł wyliczający dla kolekcji. Opcjonalnie można podać interfejsów kolekcji `Add` i `Remove` metody umożliwiające elementy, które mają być wstawiane do lub usuwane z kolekcji, a `Clear` metodę, aby usunąć wszystkie elementy.
+Co najmniej interfejsy kolekcji muszą dostarczać `Count` Właściwość zwracającą liczbę elementów w kolekcji `Item` , właściwość zwracająca element z kolekcji na podstawie indeksu i `_NewEnum` Właściwość zwracająca moduł wyliczający dla kolekcji. Opcjonalnie interfejsy kolekcji mogą zapewnić `Add` i `Remove` metody zezwalające na wstawianie elementów do kolekcji lub usuwanie `Clear` ich z niej oraz metodę usuwania wszystkich elementów.
 
-`enumerator` Jest obiektem COM, który udostępnia interfejs dla iteracji elementów w kolekcji. Interfejsy modułu wyliczającego zapewniają dostęp szeregowy do elementów kolekcji za pomocą czterech metod wymagane: `Next`, `Skip`, `Reset`, i `Clone`.
+`enumerator` Jest obiektem com, który zapewnia interfejs do iterowania za pomocą elementów w kolekcji. Interfejsy modułu wyliczającego zapewniają dostęp szeregowy do elementów kolekcji za pomocą czterech wymaganych `Next`metod `Skip`: `Reset`,, `Clone`, i.
 
-Dowiedz się więcej na temat interfejsy modułu wyliczającego, zapoznając się odwoływać się do zawartości takie jak [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) interfejsu.
+Więcej informacji na temat interfejsów modułu wyliczającego można uzyskać, odczytując zawartość referencyjną, taką jak interfejs [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) .
 
 ## <a name="in-this-section"></a>W tej sekcji
 
 [Klasy kolekcji i wyliczeń ATL](../atl/atl-collection-and-enumerator-classes.md)<br/>
-Krótko opisano i udostępnia łącza do klas ATL, które pomoże Ci zaimplementować kolekcje i wyliczenia.
+Krótko opisuje i oferuje linki do klas ATL, które ułatwią implementowanie kolekcji i modułów wyliczających.
 
 [Zasady projektowania interfejsów kolekcji i wyliczeń](../atl/design-principles-for-collection-and-enumerator-interfaces.md)<br/>
-W tym artykule omówiono zasady projektowania za każdy typ interfejsu.
+Omawia różne zasady projektowania za każdym typem interfejsu.
 
 [Implementowanie kolekcji opartej na standardowej bibliotece C++](../atl/implementing-an-stl-based-collection.md)<br/>
-Przykładem rozszerzonego przeprowadzi Cię przez implementację kolekcję na podstawie standardowej biblioteki języka C++.
+Rozszerzony przykład, który przeprowadzi Cię przez implementację C++ standardowej kolekcji opartej na bibliotece.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
-Zawiera łącza do tematów pojęciowych dotyczące programowania przy użyciu biblioteki Active Template Library.
+Zawiera łącza do tematów koncepcyjnych dotyczących sposobu programowania przy użyciu Active Template Library.
 
-[ATLCollections Sample](../overview/visual-cpp-samples.md)<br/>
-Przykład demonstruje użycie `ICollectionOnSTLImpl` i `CComEnumOnSTL`i wykonania kopii niestandardowych zasad klas.
+[Przykład ATLCollections](../overview/visual-cpp-samples.md)<br/>
+Przykład demonstrujący używanie `ICollectionOnSTLImpl` i `CComEnumOnSTL`i implementacji niestandardowych klas zasad kopiowania.
 
 ## <a name="see-also"></a>Zobacz także
 

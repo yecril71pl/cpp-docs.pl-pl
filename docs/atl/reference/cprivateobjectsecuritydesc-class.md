@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: c1ac15d4d8254107a66e577321edb3c40578f240
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 97ea2b8411b404caf9f833ad85f226d18aea1e73
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915805"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496581"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>Klasa CPrivateObjectSecurityDesc
 
@@ -57,7 +57,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 
 Ta klasa, pochodna od [CSecurityDesc](../../atl/reference/csecuritydesc-class.md), zapewnia metody tworzenia deskryptora zabezpieczeń obiektu prywatnego i zarządzania nim.
 
-Aby zapoznać się z wprowadzeniem do modelu kontroli dostępu w systemie Windows, zobacz [Access Control](/windows/desktop/SecAuthZ/access-control) w Windows SDK.
+Aby zapoznać się z wprowadzeniem do modelu kontroli dostępu w systemie Windows, zobacz [Access Control](/windows/win32/SecAuthZ/access-control) w Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -93,7 +93,7 @@ Wskaźnik do `GUID` struktury, która identyfikuje typ obiektu skojarzonego z bi
 Określa, czy nowy obiekt może zawierać inne obiekty. Wartość true wskazuje, że nowy obiekt jest kontenerem. Wartość false wskazuje, że nowy obiekt nie jest kontenerem.
 
 *GenericMapping*<br/>
-Wskaźnik na strukturę [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-generic_mapping) , która określa mapowanie od poszczególnych rodzajów prawa do określonych praw dla obiektu.
+Wskaźnik na strukturę [GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping) , która określa mapowanie od poszczególnych rodzajów prawa do określonych praw dla obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -101,7 +101,7 @@ Zwraca wartość true w przypadku powodzenia; wartość false w razie niepowodze
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda próbuje określić, czy asy na poufnej liście kontroli dostępu (DACL) i systemowej listy kontroli dostępu (SACL) obecnego deskryptora zabezpieczeń były dziedziczone z nadrzędnego deskryptora zabezpieczeń. Wywołuje funkcję [ConvertToAutoInheritPrivateObjectSecurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-converttoautoinheritprivateobjectsecurity) .
+Ta metoda próbuje określić, czy asy na poufnej liście kontroli dostępu (DACL) i systemowej listy kontroli dostępu (SACL) obecnego deskryptora zabezpieczeń były dziedziczone z nadrzędnego deskryptora zabezpieczeń. Wywołuje funkcję [ConvertToAutoInheritPrivateObjectSecurity](/windows/win32/api/securitybaseapi/nf-securitybaseapi-converttoautoinheritprivateobjectsecurity) .
 
 ##  <a name="cprivateobjectsecuritydesc"></a>CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc
 
@@ -164,7 +164,7 @@ Określa, czy nowy obiekt może zawierać inne obiekty. Wartość true wskazuje,
 Odwołanie do obiektu [CAccessToken](../../atl/reference/caccesstoken-class.md) dla procesu klienta, na którym tworzony jest obiekt.
 
 *GenericMapping*<br/>
-Wskaźnik na strukturę [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-generic_mapping) , która określa mapowanie od poszczególnych rodzajów prawa do określonych praw dla obiektu.
+Wskaźnik na strukturę [GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping) , która określa mapowanie od poszczególnych rodzajów prawa do określonych praw dla obiektu.
 
 *ObjectType*<br/>
 Wskaźnik do `GUID` struktury, która identyfikuje typ obiektu skojarzonego z bieżącym obiektem. Jeśli obiekt nie ma identyfikatora GUID, należy ustawić dla elementu *ObjectType* wartość null.
@@ -173,7 +173,7 @@ Wskaźnik do `GUID` struktury, która identyfikuje typ obiektu skojarzonego z bi
 Określa, czy nowy obiekt może zawierać inne obiekty. Wartość true wskazuje, że nowy obiekt jest kontenerem. Wartość false wskazuje, że nowy obiekt nie jest kontenerem.
 
 *AutoInheritFlags*<br/>
-Zestaw flag bitowych kontrolujących sposób, w jaki wpisy kontroli dostępu (ACE) są dziedziczone z *pParent*. Aby uzyskać więcej informacji, zobacz [CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) .
+Zestaw flag bitowych kontrolujących sposób, w jaki wpisy kontroli dostępu (ACE) są dziedziczone z *pParent*. Aby uzyskać więcej informacji, zobacz [CreatePrivateObjectSecurityEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) .
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -181,7 +181,7 @@ Zwraca wartość true w przypadku powodzenia; wartość false w razie niepowodze
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wywołuje [CreatePrivateObjectSercurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity) lub [CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex).
+Ta metoda wywołuje [CreatePrivateObjectSercurity](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity) lub [CreatePrivateObjectSecurityEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex).
 
 Druga metoda pozwala określić identyfikator GUID obiektu nowego obiektu lub kontrolować sposób dziedziczenia ACE.
 
@@ -201,7 +201,7 @@ bool Get(
 ### <a name="parameters"></a>Parametry
 
 *si*<br/>
-Zestaw flag bitowych wskazujących części deskryptora zabezpieczeń do pobrania. Ta wartość może być kombinacją [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) bitowej flagi.
+Zestaw flag bitowych wskazujących części deskryptora zabezpieczeń do pobrania. Ta wartość może być kombinacją [SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information) bitowej flagi.
 
 *pResult*<br/>
 Wskaźnik do obiektu [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) , który otrzymuje kopię żądanych informacji z określonego deskryptora zabezpieczeń.
@@ -253,19 +253,19 @@ bool Set(
 ### <a name="parameters"></a>Parametry
 
 *si*<br/>
-Zestaw flag bitowych wskazujących części deskryptora zabezpieczeń, które mają zostać ustawione. Ta wartość może być kombinacją [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) bitowej flagi.
+Zestaw flag bitowych wskazujących części deskryptora zabezpieczeń, które mają zostać ustawione. Ta wartość może być kombinacją [SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information) bitowej flagi.
 
 *Modyfikacji*<br/>
 Wskaźnik do obiektu [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) . Części tego deskryptora zabezpieczeń wskazywane przez parametr *si* są stosowane do deskryptora zabezpieczeń obiektu.
 
 *GenericMapping*<br/>
-Wskaźnik na strukturę [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-generic_mapping) , która określa mapowanie od poszczególnych rodzajów prawa do określonych praw dla obiektu.
+Wskaźnik na strukturę [GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping) , która określa mapowanie od poszczególnych rodzajów prawa do określonych praw dla obiektu.
 
 *Klucza*<br/>
 Odwołanie do obiektu [CAccessToken](../../atl/reference/caccesstoken-class.md) dla procesu klienta, na którym tworzony jest obiekt.
 
 *AutoInheritFlags*<br/>
-Zestaw flag bitowych kontrolujących sposób, w jaki wpisy kontroli dostępu (ACE) są dziedziczone z *pParent*. Aby uzyskać więcej informacji, zobacz [CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) .
+Zestaw flag bitowych kontrolujących sposób, w jaki wpisy kontroli dostępu (ACE) są dziedziczone z *pParent*. Aby uzyskać więcej informacji, zobacz [CreatePrivateObjectSecurityEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) .
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -277,7 +277,7 @@ Druga metoda pozwala określić typ obiektu GUID obiektu lub kontrolować sposó
 
 ## <a name="see-also"></a>Zobacz także
 
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
+[SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [Przegląd klas](../../atl/atl-class-overview.md)<br/>
 [Funkcje globalne zabezpieczeń](../../atl/reference/security-global-functions.md)<br/>
 [Klasa CSecurityDesc](../../atl/reference/csecuritydesc-class.md)

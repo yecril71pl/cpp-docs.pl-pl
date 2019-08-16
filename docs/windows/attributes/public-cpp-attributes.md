@@ -1,21 +1,21 @@
 ---
-title: public (atrybuty C++) (C++ COM atrybut)
+title: Public (C++ atrybuty) (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.public
 helpviewer_keywords:
 - public attribute
 ms.assetid: c42e1fd5-6cb1-48fe-8a03-95f2a2e0137c
-ms.openlocfilehash: a12ab0905064a72057dffac03340b667f07b3ae5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 274af011f2d61521885e93d4ce1eddad149748ad
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407552"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514167"
 ---
 # <a name="public-c-attributes"></a>public (Atrybuty C++)
 
-Zapewnia, że typedef zostaną umieszczone w biblioteki typów, nawet wtedy, gdy go nie odwołuje się w pliku .idl.
+Zapewnia, że element typedef przejdzie do biblioteki typów, nawet jeśli nie jest przywoływany w pliku. idl.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,11 +25,11 @@ Zapewnia, że typedef zostaną umieszczone w biblioteki typów, nawet wtedy, gdy
 
 ## <a name="remarks"></a>Uwagi
 
-**Publicznych** atrybut C++ ma taką samą funkcjonalność jak [publicznych](/windows/desktop/Midl/public) atrybutów w MIDL.
+Atrybut **publiczny** C++ ma takie same funkcje jak [publiczny](/windows/win32/Midl/public) atrybut MIDL.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod przedstawia sposób użycia **publicznych** atrybutu:
+Poniższy kod pokazuje, jak używać atrybutu **Public** :
 
 ```cpp
 // cpp_attr_ref_public.cpp
@@ -51,12 +51,12 @@ __interface IFireTabCtrl : IDispatch
 
 |||
 |-|-|
-|**Dotyczy**|**typedef**|
+|**Dotyczy**|**własne**|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

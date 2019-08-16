@@ -6,16 +6,16 @@ helpviewer_keywords:
 - maps, property
 - property maps
 ms.assetid: 44abde56-90ad-4612-854e-d2fa5426fa80
-ms.openlocfilehash: 9df98dc85c9242693319542cea0730341d87a052
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79a65290c24ab016d9f81b54b9b7720d5c4ff352
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284036"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501289"
 ---
 # <a name="property-maps"></a>Mapy właściwości
 
-Polecenie opcjonalne obiektu sesji, wierszy i każdy dostawca obsługuje co najmniej jednej właściwości. Te właściwości są definiowane w mapy właściwości przechowywane w plikach nagłówkowych, utworzone przez **OLE DB Provider kreatora**. Każdy plik nagłówka zawiera mapę do właściwości w grupie właściwości OLE DB, które są zdefiniowane dla obiektu lub obiektów zdefiniowanych w tym pliku. Plik nagłówka, który zawiera obiekt źródła danych zawiera także map właściwości dla [właściwości DataSource](https://msdn.microsoft.com/library/ms724188). `Session.h` zawiera map właściwości dla [właściwości sesji](/previous-versions/windows/desktop/ms714221(v=vs.85)). Obiekt zestawu wierszy i polecenia są w pliku nagłówka jednego o nazwie *projectname*RS.h. Te właściwości są elementami członkowskimi [właściwości zestawu wierszy](/previous-versions/windows/desktop/ms711252(v=vs.85)) grupy.
+Przy użyciu sesji, zestawu wierszy i opcjonalnego obiektu polecenia każdy dostawca obsługuje jedną lub więcej właściwości. Te właściwości są zdefiniowane w mapach właściwości przechowywanych w plikach nagłówkowych utworzonych przez **Kreatora dostawcy OLE DB**. Każdy plik nagłówkowy zawiera mapę właściwości w OLE DB grupy właściwości zdefiniowane dla obiektu lub obiektów zdefiniowanych w tym pliku. Plik nagłówkowy, który zawiera obiekt źródła danych, zawiera również mapę właściwości [Właściwości DataSource](/previous-versions/windows/desktop/ms724188(v=vs.85)). `Session.h`zawiera mapę właściwości dla [właściwości sesji](/previous-versions/windows/desktop/ms714221(v=vs.85)). Zestaw wierszy i obiekty poleceń znajdują się w jednym pliku nagłówkowym o nazwie *ProjectName*RS. h. Te właściwości są elementami członkowskimi grupy [Właściwości zestawu wierszy](/previous-versions/windows/desktop/ms711252(v=vs.85)) .
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -13,28 +13,28 @@ helpviewer_keywords:
 - software exceptions [C++]
 - formats [C++], exception codes
 ms.assetid: be1376c3-c46a-4f52-ad1d-c2362840746a
-ms.openlocfilehash: 49ee800bafff017c29b73c5f6fd64318009a140a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65e011f74868a77781b03f475d45e2a5d636d460
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403467"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498583"
 ---
 # <a name="raising-software-exceptions"></a>Występowanie wyjątków programowych
 
 Niektóre z najczęstszych źródeł błędów programu nie są oflagowane jako wyjątki przez system. Na przykład, jeśli użytkownik spróbuje przydzielić blok pamięci, ale ilość pamięci jest niewystarczająca, czas wykonywania lub funkcja interfejsu API nie zgłosi wyjątku, ale zwróci kod błędu.
 
-Jednak można traktować dowolny warunek jako wyjątek przez wykrycie tego warunku w kodzie i zgłoszenie go przez wywołanie [RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552) funkcji. Flagowanie błędów w ten sposób może przynieść korzyści obsługi wyjątków strukturalnych do wszelkiego rodzaju błędów w czasie wykonywania.
+Można jednak traktować dowolny warunek jako wyjątek, wykrywając ten warunek w kodzie, a następnie zgłaszając go przez wywołanie funkcjiexception. [](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) Flagowanie błędów w ten sposób może przynieść korzyści obsługi wyjątków strukturalnych do wszelkiego rodzaju błędów w czasie wykonywania.
 
 Aby użyć obsługi wyjątków strukturalnych z błędami:
 
 - Zdefiniuj własny kod wyjątku dla zdarzenia.
 
-- Wywołaj `RaiseException` gdy problem zostanie wykryty.
+- Wywoływanie `RaiseException` po wykryciu problemu.
 
 - Użyj filtrów obsługi wyjątków, aby przetestować zdefiniowany kod wyjątku.
 
-\<Winerror.h > plik pokazuje format kodów wyjątków. Aby upewnić się, że nie zostanie zdefiniowany kod, który powoduje konflikt z istniejącym kodem wyjątku, należy ustawić trzeci najbardziej znaczący bit na 1. Cztery najbardziej znaczące bity powinny być ustawione, jak pokazano w poniższej tabeli.
+Plik \<Winerror. h > pokazuje format kodów wyjątków. Aby upewnić się, że nie zostanie zdefiniowany kod, który powoduje konflikt z istniejącym kodem wyjątku, należy ustawić trzeci najbardziej znaczący bit na 1. Cztery najbardziej znaczące bity powinny być ustawione, jak pokazano w poniższej tabeli.
 
 |Bity|Zalecane ustawienie binarne|Opis|
 |----------|--------------------------------|-----------------|
@@ -44,14 +44,14 @@ Aby użyć obsługi wyjątków strukturalnych z błędami:
 
 Można ustawić pierwsze dwa bity na ustawienie inne niż 11 binarnie, mimo że ustawienie „błąd” jest odpowiednie dla większości wyjątków. Należy pamiętać o ustawieniu bitów 29 i 28, jak pokazano w poprzedniej tabeli.
 
-Wynikowy kod błędu powinien zatem mieć najwyższe cztery bity ustawione na szesnastkowe E. Na przykład następujące definicje definiują kody wyjątków, które nie wchodzą w konflikt z dowolnym kody wyjątków Windows. (Jednak trzeba sprawdzić kody, które są używane przez biblioteki DLL innych firm).
+W związku z tym kod błędu powinien mieć co najwyżej cztery bity ustawione na szesnastkową cyfrę E. Na przykład następujące definicje definiują kody wyjątków, które nie powodują konfliktu z żadnymi kodami wyjątków systemu Windows. (Jednak trzeba sprawdzić kody, które są używane przez biblioteki DLL innych firm).
 
 ```cpp
 #define STATUS_INSUFFICIENT_MEM       0xE0000001
 #define STATUS_FILE_BAD_FORMAT        0xE0000002
 ```
 
-Po zdefiniowaniu kodu wyjątku można go użyć, aby zgłosić wyjątek. Na przykład, poniższy kod generuje `STATUS_INSUFFICIENT_MEM` wyjątek w odpowiedzi na problem z alokacją pamięci:
+Po zdefiniowaniu kodu wyjątku można go użyć, aby zgłosić wyjątek. Na przykład poniższy kod wywołuje `STATUS_INSUFFICIENT_MEM` wyjątek w odpowiedzi na problem z alokacją pamięci:
 
 ```cpp
 lpstr = _malloc( nBufferSize );
@@ -59,7 +59,7 @@ if (lpstr == NULL)
     RaiseException( STATUS_INSUFFICIENT_MEM, 0, 0, 0);
 ```
 
-Jeżeli wystarczy tylko zgłosić wyjątek, ostatnie trzy parametry można ustawić na 0. Trzy ostatnie parametry są przydatne do przekazywania informacji dodatkowych i ustawiania flagi, która uniemożliwia kontynuowanie wykonywania programów obsługi. Zobacz [RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552) funkcji w zestawie Windows SDK, aby uzyskać więcej informacji.
+Jeżeli wystarczy tylko zgłosić wyjątek, ostatnie trzy parametry można ustawić na 0. Trzy ostatnie parametry są przydatne do przekazywania informacji dodatkowych i ustawiania flagi, która uniemożliwia kontynuowanie wykonywania programów obsługi. Aby uzyskać [](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) więcej informacji, zobacz funkcję zgłośexception w Windows SDK.
 
 W filtrach obsługi wyjątków można przetestować zdefiniowane kody. Na przykład:
 

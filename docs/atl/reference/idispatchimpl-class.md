@@ -14,19 +14,19 @@ helpviewer_keywords:
 - IDispatchImpl class
 - IDispatch class support in ATL
 ms.assetid: 8108eb36-1228-4127-a203-3ab5ba488892
-ms.openlocfilehash: bf6b416337c58f5e9b8a62dda841615412573666
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e9cb903742cdc31c1d9bba2c4aabbb0472407c1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275350"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495951"
 ---
 # <a name="idispatchimpl-class"></a>Klasa IDispatchImpl
 
-Udostępnia domyślną implementację dla `IDispatch` wchodzi w skład podwójnego interfejsu.
+Zapewnia implementację domyślną dla `IDispatch` części podwójnego interfejsu.
 
 > [!IMPORTANT]
->  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+>  Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,22 +43,22 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-[in] Podwójnego interfejsu.
+podczas Interfejs podwójny.
 
 *piid*<br/>
-[in] Wskaźnik do identyfikatora IID z *T*.
+podczas Wskaźnik do IID elementu *T*.
 
 *plibid*<br/>
-[in] Wskaźnik do identyfikatora LIBID biblioteki typów, który zawiera informacje o interfejsie. Domyślnie jest przekazywany biblioteki typów na poziomie serwera.
+podczas Wskaźnik do identyfikatora LIBID biblioteki typów, który zawiera informacje o interfejsie. Domyślnie jest przenoszona biblioteka typów na poziomie serwera.
 
 *wMajor*<br/>
-[in] Wersja główna biblioteki typów. Domyślna wartość to 1.
+podczas Główna wersja biblioteki typów. Wartość domyślna to 1.
 
 *wMinor*<br/>
-[in] Wersja pomocnicza biblioteki typów. Domyślna wartość wynosi 0.
+podczas Wersja pomocnicza biblioteki typów. Wartość domyślna to 0.
 
 *tihclass*<br/>
-[in] Klasa używana do zarządzania informacji o typie *T*. Domyślna wartość to `CComTypeInfoHolder`.
+podczas Klasa używana do zarządzania informacjami o typie dla *T*. Wartością domyślną jest `CComTypeInfoHolder`.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -66,28 +66,28 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[IDispatchImpl::IDispatchImpl](#idispatchimpl)|Konstruktor. Wywołania `AddRef` na zmiennej chroniony element członkowski, który zarządza informacji o typie dla podwójnego interfejsu. Wywołania destruktora `Release`.|
+|[IDispatchImpl::IDispatchImpl](#idispatchimpl)|Konstruktor. Wywołuje `AddRef` dla zmiennej chronionej składowej, która zarządza informacjami o typie dla podwójnego interfejsu. Destruktor wywołuje `Release`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[IDispatchImpl::GetIDsOfNames](#getidsofnames)|Zestaw nazw jest mapowany na odpowiedni zestaw identyfikatorów wysyłania.|
-|[IDispatchImpl::GetTypeInfo](#gettypeinfo)|Pobiera informacje o typie dla podwójnego interfejsu.|
-|[IDispatchImpl::GetTypeInfoCount](#gettypeinfocount)|Określa, czy jest informacji o typie podwójnego interfejsu.|
-|[IDispatchImpl::Invoke](#invoke)|Zapewnia dostęp do metod i właściwości udostępniane przez podwójnego interfejsu.|
+|[IDispatchImpl:: GetIDsOfNames](#getidsofnames)|Zestaw nazw jest mapowany na odpowiedni zestaw identyfikatorów wysyłania.|
+|[IDispatchImpl::](#gettypeinfo)|Pobiera informacje o typie dla podwójnego interfejsu.|
+|[IDispatchImpl::GetTypeInfoCount](#gettypeinfocount)|Określa, czy dostępne są informacje o typie dla podwójnego interfejsu.|
+|[IDispatchImpl:: Invoke](#invoke)|Zapewnia dostęp do metod i właściwości udostępnianych przez podwójny interfejs.|
 
 ## <a name="remarks"></a>Uwagi
 
-`IDispatchImpl` udostępnia domyślną implementację dla `IDispatch` wchodzi w skład dowolnej podwójnego interfejsu w obiekcie. Pochodzi od klasy podwójnego interfejsu `IDispatch` i używa tylko typy automatyzacji. Podobnie jak dispinterface podwójnego interfejsu obsługuje wczesnego i późnego wiązania; podwójnego interfejsu obsługuje również powiązania vtable.
+`IDispatchImpl`udostępnia implementację domyślną dla `IDispatch` części każdego podwójnego interfejsu w obiekcie. Podwójny interfejs pochodzi z `IDispatch` i używa tylko typów zgodnych z automatyzacją. Podobnie jak w przypadku dispinterface, podwójny interfejs obsługuje wczesne powiązania i późne wiązanie. jednak podwójny interfejs obsługuje również powiązanie tablic wirtualnych.
 
-W poniższym przykładzie pokazano Typowa implementacja metody `IDispatchImpl`.
+W poniższym przykładzie przedstawiono typową implementację `IDispatchImpl`programu.
 
 [!code-cpp[NVC_ATL_COM#47](../../atl/codesnippet/cpp/idispatchimpl-class_1.h)]
 
-Domyślnie `IDispatchImpl` klasy odwołuje się do informacji o typie *T* w rejestrze. Aby zaimplementować interfejs wyrejestrowany, można użyć `IDispatchImpl` klasy bez dostępu do rejestru przy użyciu numeru wersji wstępnie zdefiniowane. Jeśli tworzysz `IDispatchImpl` obiekt, który ma 0xFFFF jako wartość pozycji *wMajor* i 0xFFFF jako wartość pozycji *wMinor*, `IDispatchImpl` klasy pobranie biblioteki typów z pliku .dll zamiast rejestr.
+Domyślnie `IDispatchImpl` Klasa wyszukuje informacje o typie dla *T* w rejestrze. Aby zaimplementować niezarejestrowany interfejs, można użyć `IDispatchImpl` klasy bez uzyskiwania dostępu do rejestru przy użyciu wstępnie zdefiniowanego numeru wersji. Jeśli utworzysz `IDispatchImpl` obiekt, który ma 0xFFFF jako wartość dla *wMajor* i 0xFFFF jako wartość `IDispatchImpl` dla *wMinor*, Klasa pobiera bibliotekę typów z pliku dll zamiast z rejestru.
 
-`IDispatchImpl` zawiera statyczny element członkowski typu `CComTypeInfoHolder` który zarządza informacji o typie dla podwójnego interfejsu. Jeśli masz wiele obiektów, które implementują takie same podwójnego interfejsu, tylko jedno wystąpienie `CComTypeInfoHolder` jest używany.
+`IDispatchImpl`zawiera statyczną składową typu `CComTypeInfoHolder` , która zarządza informacjami o typie dla podwójnego interfejsu. Jeśli masz wiele obiektów, które implementują ten sam podwójny interfejs, używane `CComTypeInfoHolder` jest tylko jedno wystąpienie.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -97,9 +97,9 @@ Domyślnie `IDispatchImpl` klasy odwołuje się do informacji o typie *T* w reje
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcom.h
+**Nagłówek:** atlcom. h
 
-##  <a name="getidsofnames"></a>  IDispatchImpl::GetIDsOfNames
+##  <a name="getidsofnames"></a>IDispatchImpl:: GetIDsOfNames
 
 Zestaw nazw jest mapowany na odpowiedni zestaw identyfikatorów wysyłania.
 
@@ -114,9 +114,9 @@ STDMETHOD(GetIDsOfNames)(
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IDispatch::GetIDsOfNames](/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) w Windows SDK.
+Zobacz [IDispatch:: GetIDsOfNames](/windows/win32/api/oaidl/nf-oaidl-idispatch-getidsofnames) w Windows SDK.
 
-##  <a name="gettypeinfo"></a>  IDispatchImpl::GetTypeInfo
+##  <a name="gettypeinfo"></a>IDispatchImpl::
 
 Pobiera informacje o typie dla podwójnego interfejsu.
 
@@ -129,11 +129,11 @@ STDMETHOD(GetTypeInfo)(
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IDispatch::GetTypeInfo](/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfo) w Windows SDK.
+Zobacz [IDispatch::](/windows/win32/api/oaidl/nf-oaidl-idispatch-gettypeinfo) w Windows SDK.
 
-##  <a name="gettypeinfocount"></a>  IDispatchImpl::GetTypeInfoCount
+##  <a name="gettypeinfocount"></a>IDispatchImpl::GetTypeInfoCount
 
-Określa, czy jest informacji o typie podwójnego interfejsu.
+Określa, czy dostępne są informacje o typie dla podwójnego interfejsu.
 
 ```
 STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
@@ -143,17 +143,17 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 
 Zobacz `IDispatch::GetTypeInfoCount` w Windows SDK.
 
-##  <a name="idispatchimpl"></a>  IDispatchImpl::IDispatchImpl
+##  <a name="idispatchimpl"></a>IDispatchImpl::IDispatchImpl
 
-Konstruktor. Wywołania `AddRef` na zmiennej chroniony element członkowski, który zarządza informacji o typie dla podwójnego interfejsu. Wywołania destruktora `Release`.
+Konstruktor. Wywołuje `AddRef` dla zmiennej chronionej składowej, która zarządza informacjami o typie dla podwójnego interfejsu. Destruktor wywołuje `Release`.
 
 ```
 IDispatchImpl();
 ```
 
-##  <a name="invoke"></a>  IDispatchImpl::Invoke
+##  <a name="invoke"></a>IDispatchImpl:: Invoke
 
-Zapewnia dostęp do metod i właściwości udostępniane przez podwójnego interfejsu.
+Zapewnia dostęp do metod i właściwości udostępnianych przez podwójny interfejs.
 
 ```
 STDMETHOD(Invoke)(
@@ -169,8 +169,8 @@ STDMETHOD(Invoke)(
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [uwzględniając](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) w Windows SDK.
+Zobacz [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) w Windows SDK.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

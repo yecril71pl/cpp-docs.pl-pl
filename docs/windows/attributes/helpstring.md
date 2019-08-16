@@ -1,21 +1,21 @@
 ---
-title: HelpString — (atrybut COM C++)
+title: HelpString (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstring
 helpviewer_keywords:
 - helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
-ms.openlocfilehash: 623b2c7fb4ce7c3e5de87d21f012d008720fdee2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47a07ee94ad774bde46dce00ea46612fae3a4eca
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409593"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490875"
 ---
 # <a name="helpstring"></a>helpstring
 
-Określa ciąg znaków, który jest używany do opisania elementu, do której jest stosowany.
+Określa ciąg znaków, który jest używany do opisania elementu, do którego ma zastosowanie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,15 +26,15 @@ Określa ciąg znaków, który jest używany do opisania elementu, do której je
 ### <a name="parameters"></a>Parametry
 
 *string*<br/>
-Tekst Ciąg pomocy.
+Tekst ciągu pomocy.
 
 ## <a name="remarks"></a>Uwagi
 
-**HelpString —** atrybut C++ ma taką samą funkcjonalność jak [HelpString —](/windows/desktop/Midl/helpstring) atrybutów w MIDL.
+Atrybut **HelpString** C++ ma takie same funkcje jak atrybut [HelpString](/windows/win32/Midl/helpstring) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [defaultvalue](defaultvalue.md) przykład sposobu użycia **HelpString —**.
+Zobacz przykład dla elementu [DefaultValue](defaultvalue.md) , aby zapoznać się z przykładem korzystania z **HelpString**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -42,12 +42,12 @@ Zobacz przykład [defaultvalue](defaultvalue.md) przykład sposobu użycia **Hel
 
 |||
 |-|-|
-|**Dotyczy**|**interfejs**, **typedef**, **klasy**, metody, właściwości|
+|**Dotyczy**|**interfejs**, **typedef**, **Klasa**, metoda, właściwość|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

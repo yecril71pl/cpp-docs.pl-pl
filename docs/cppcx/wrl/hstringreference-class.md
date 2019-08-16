@@ -22,16 +22,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HStringReference::operator!= operator
 - Microsoft::WRL::Wrappers::HStringReference::operator< operator
 ms.assetid: 9bf823b1-17eb-4ac4-8c5d-27d27c7a4150
-ms.openlocfilehash: 9c17a9df8fcc7d849bbbd4f613bf5dce6dae8983
-ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
+ms.openlocfilehash: 591af0d66c9c209ba56310a0bd5cf5cd74e34929
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894394"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498353"
 ---
 # <a name="hstringreference-class"></a>HStringReference — Klasa
 
-Reprezentuje HSTRING, utworzony na podstawie istniejącego ciągu.
+Reprezentuje element HSTRING, który jest tworzony na podstawie istniejącego ciągu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -41,7 +41,7 @@ class HStringReference;
 
 ## <a name="remarks"></a>Uwagi
 
-Okres istnienia buforu zapasowego w nowym obiekcie HSTRING nie jest zarządzane przez środowisko wykonawcze Windows. Obiekt wywołujący przydziela ciąg źródłowy ramce stosu, aby uniknąć alokacji stosu i wyeliminować ryzyko przecieku pamięci. Ponadto wywołujący musi zapewnić, że ciąg źródłowy pozostaje niezmieniony w czasie użytkowania dołączonego HSTRING. Aby uzyskać więcej informacji, zobacz [funkcja WindowsCreateStringReference](/windows/desktop/api/winstring/nf-winstring-windowscreatestringreference).
+Okres istnienia buforu zapasowego w nowym HSTRING nie jest zarządzany przez środowisko wykonawcze systemu Windows. Obiekt wywołujący przydziela ciąg źródłowy w ramce stosu, aby uniknąć alokacji sterty i wyeliminować ryzyko przecieku pamięci. Ponadto obiekt wywołujący musi upewnić się, że ciąg źródłowy pozostanie niezmieniony w czasie trwania dołączonego HSTRING. Aby uzyskać więcej informacji, zobacz [Funkcja WindowsCreateStringReference](/windows/win32/api/winstring/nf-winstring-windowscreatestringreference).
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -49,24 +49,24 @@ Okres istnienia buforu zapasowego w nowym obiekcie HSTRING nie jest zarządzane 
 
 Nazwa                                                    | Opis
 ------------------------------------------------------- | -----------------------------------------------------------
-[HStringReference::HStringReference](#hstringreference) | Inicjuje nowe wystąpienie klasy `HStringReference` klasy.
+[HStringReference:: HStringReference](#hstringreference) | Inicjuje nowe wystąpienie klasy `HStringReference` klasy.
 
 ### <a name="public-methods"></a>Metody publiczne
 
 Element członkowski                              | Opis
 ----------------------------------- | ------------------------------------------------------------------
-[HStringReference::CopyTo](#copyto) | Kopiuje bieżący `HStringReference` obiektu do obiektu HSTRING.
-[HStringReference::Get](#get)       | Pobiera wartość podstawowego dojścia HSTRING.
-[HStringReference::GetRawBuffer](#getrawbuffer) | Pobiera wskaźnik do danych bazowych ciągu.
+[HStringReference:: CopyTo](#copyto) | Kopiuje bieżący `HStringReference` obiekt do obiektu HSTRING.
+[HStringReference:: Get](#get)       | Pobiera wartość bazowego uchwytu HSTRING.
+[HStringReference:: GetRawBuffer](#getrawbuffer) | Pobiera wskaźnik do danych ciągu bazowego.
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 Nazwa                                                  | Opis
 ----------------------------------------------------- | ----------------------------------------------------------------------------------------------
-[HStringReference::operator =](#operator-assign)       | Przenosi wartość innego `HStringReference` obiekt do bieżącego `HStringReference` obiektu.
-[HStringReference::operator ==](#operator-equality)    | Wskazuje, czy dwa parametry są równe.
-[HStringReference::operator! =](#operator-inequality)  | Wskazuje, czy dwa parametry nie są równe.
-[HStringReference::operator&lt;](#operator-less-than) | Wskazuje, czy pierwszy parametr jest mniejszy od drugiego parametru.
+[HStringReference:: operator =](#operator-assign)       | Przenosi wartość innego `HStringReference` obiektu do bieżącego `HStringReference` obiektu.
+[HStringReference:: operator = =](#operator-equality)    | Wskazuje, czy dwa parametry są równe.
+[HStringReference:: operator! =](#operator-inequality)  | Wskazuje, czy dwa parametry nie są równe.
+[HStringReference:: operator&lt;](#operator-less-than) | Wskazuje, czy pierwszy parametr jest mniejszy niż drugi parametr.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -74,13 +74,13 @@ Nazwa                                                  | Opis
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** corewrappers.h
+**Nagłówek:** corewrappers. h
 
-**Namespace:** Microsoft::wrl:: wrappers
+**Obszaru** Microsoft:: WRL:: otoki
 
-## <a name="copyto"></a>HStringReference::CopyTo
+## <a name="copyto"></a>HStringReference:: CopyTo
 
-Kopiuje bieżący `HStringReference` obiektu do obiektu HSTRING.
+Kopiuje bieżący `HStringReference` obiekt do obiektu HSTRING.
 
 ```cpp
 HRESULT CopyTo(
@@ -95,11 +95,11 @@ HSTRING, który otrzymuje kopię.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wywołuje [WindowsDuplicateString](/windows/desktop/api/winstring/nf-winstring-windowsduplicatestring) funkcji.
+Ta metoda wywołuje funkcję [WindowsDuplicateString](/windows/win32/api/winstring/nf-winstring-windowsduplicatestring) .
 
-## <a name="get"></a>HStringReference::Get
+## <a name="get"></a>HStringReference:: Get
 
-Pobiera wartość podstawowego dojścia HSTRING.
+Pobiera wartość bazowego uchwytu HSTRING.
 
 ```cpp
 HSTRING Get() const throw()
@@ -107,24 +107,24 @@ HSTRING Get() const throw()
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość podstawowego dojścia HSTRING.
+Wartość bazowego uchwytu HSTRING.
 
-## <a name="getrawbuffer"></a>HStringReference::GetRawBuffer
+## <a name="getrawbuffer"></a>HStringReference:: GetRawBuffer
 
-Pobiera wskaźnik do danych bazowych ciągu.
+Pobiera wskaźnik do danych ciągu bazowego.
 
 ```cpp
 const wchar_t* GetRawBuffer(unsigned int* length) const;
 ```
 ### <a name="parameters"></a>Parametry
 
-*długość* wskaźnik do **int** zmienna, która odbiera długość danych.
+*Długość* Wskaźnik do zmiennej **int** , która otrzymuje długość danych.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A **const** wskaźnik do danych bazowych ciągu.
+Stały wskaźnik do danych ciągu bazowego.
 
-## <a name="hstringreference"></a>HStringReference::HStringReference
+## <a name="hstringreference"></a>HStringReference:: HStringReference
 
 Inicjuje nowe wystąpienie klasy `HStringReference` klasy.
 
@@ -142,28 +142,28 @@ HStringReference(HStringReference&& other) throw();
 ### <a name="parameters"></a>Parametry
 
 *sizeDest*<br/>
-Parametr szablonu, który określa rozmiar docelowy `HStringReference` buforu.
+Parametr szablonu, który określa rozmiar buforu docelowego `HStringReference` .
 
 *str*<br/>
 Odwołanie do ciągu znaków dwubajtowych.
 
-*len*<br/>
-Maksymalna długość *str* bufora parametru w tej operacji. Jeśli *len* parametr nie jest określony, całą *str* parametr jest używany. Jeśli *len* jest większa niż *sizeDest*, *len* ustawiono *sizeDest*-1.
+*Funkcja*<br/>
+Maksymalna długość buforu parametrów *str* , która ma być używana w tej operacji. Jeśli parametr *len* nie jest określony, zostanie użyty cały parametr *str* . Jeśli wartość *len* jest większaniż wartość, *len* jest ustawiony na1.
 
 *other*<br/>
-Inny `HStringReference` obiektu.
+Inny `HStringReference` obiekt.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor inicjuje nową `HStringReference` obiekt, który jest taki sam rozmiar jak parametr *str*.
+Pierwszy Konstruktor inicjuje nowy `HStringReference` obiekt, który ma taki sam rozmiar jak parametr *str*.
 
-Inicjuje nowe wystąpienie drugi Konstruktor `HStringReference` obiekt specifeid rozmiaru za pomocą parametru *len*.
+Drugi Konstruktor inicjuje nowy `HStringReference` obiekt, którego rozmiar specifeid przez parametr *len*.
 
-Trzeci Konstruktor inicjuje nowe `HStringReference` obiektu do wartości *innych* parametru, a następnie niszczy *innych* parametru.
+Trzeci Konstruktor inicjuje nowy `HStringReference` obiekt do wartości *innego* parametru, a następnie niszczy *inny* parametr.
 
-## <a name="operator-assign"></a>HStringReference::operator =
+## <a name="operator-assign"></a>HStringReference:: operator =
 
-Przenosi wartość innego `HStringReference` obiekt do bieżącego `HStringReference` obiektu.
+Przenosi wartość innego `HStringReference` obiektu do bieżącego `HStringReference` obiektu.
 
 ```cpp
 HStringReference& operator=(HStringReference&& other) throw()
@@ -172,13 +172,13 @@ HStringReference& operator=(HStringReference&& other) throw()
 ### <a name="parameters"></a>Parametry
 
 *other*<br/>
-Istniejące `HStringReference` obiektu.
+Istniejący `HStringReference` obiekt.
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość istniejącego *innych* obiekt jest kopiowany do bieżącego `HStringReference` obiektu, a następnie *innych* niszczony jest obiekt.
+Wartość istniejącego *innego* obiektu jest kopiowana do bieżącego `HStringReference` obiektu, a następnie *drugi* obiekt zostanie zniszczony.
 
-## <a name="operator-equality"></a>HStringReference::operator ==
+## <a name="operator-equality"></a>HStringReference:: operator = =
 
 Wskazuje, czy dwa parametry są równe.
 
@@ -198,17 +198,17 @@ inline bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*Lewa strona reguły przepisywania*<br/>
-Pierwszy parametr do porównania. *Lewa strona reguły przepisywania* może być `HStringReference` obiektu lub dojścia HSTRING.
+*LHS*<br/>
+Pierwszy parametr do porównania. *LHS* może być `HStringReference` obiektem lub dojściem HSTRING.
 
 *RHS*<br/>
-Drugi parametr do porównania.  *RHS* może być `HStringReference` obiektu lub dojścia HSTRING.
+Drugi parametr do porównania.  *RHS* może być `HStringReference` obiektem lub uchwytem HSTRING.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli *lhs* i *rhs* parametry są równe; w przeciwnym razie **false**.
+**prawda** , jeśli parametry *LHS* i *RHS* są równe; w przeciwnym razie **false**.
 
-## <a name="operator-inequality"></a>HStringReference::operator! =
+## <a name="operator-inequality"></a>HStringReference:: operator! =
 
 Wskazuje, czy dwa parametry nie są równe.
 
@@ -228,19 +228,19 @@ inline bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*Lewa strona reguły przepisywania*<br/>
-Pierwszy parametr do porównania. *Lewa strona reguły przepisywania* może być `HStringReference` obiektu lub dojścia HSTRING.
+*LHS*<br/>
+Pierwszy parametr do porównania. *LHS* może być `HStringReference` obiektem lub dojściem HSTRING.
 
 *RHS*<br/>
-Drugi parametr do porównania.  *RHS* może być `HStringReference` obiektu lub dojścia HSTRING.
+Drugi parametr do porównania.  *RHS* może być `HStringReference` obiektem lub uchwytem HSTRING.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli *lhs* i *rhs* parametry nie są równe; w przeciwnym razie **false**.
+**prawda** , jeśli parametry *LHS* i *RHS* nie są równe; w przeciwnym razie **false**.
 
-## <a name="operator-less-than"></a>HStringReference::operator&lt;
+## <a name="operator-less-than"></a>HStringReference:: operator&lt;
 
-Wskazuje, czy pierwszy parametr jest mniejszy od drugiego parametru.
+Wskazuje, czy pierwszy parametr jest mniejszy niż drugi parametr.
 
 ```cpp
 inline bool operator<(
@@ -250,12 +250,12 @@ inline bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*Lewa strona reguły przepisywania*<br/>
-Pierwszy parametr do porównania. *Lewa strona reguły przepisywania* może być odwołaniem do `HStringReference`.
+*LHS*<br/>
+Pierwszy parametr do porównania. *LHS* może być odwołaniem do `HStringReference`.
 
 *RHS*<br/>
 Drugi parametr do porównania.  *RHS* może być odwołaniem do `HStringReference`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli *lhs* parametr jest mniejsza niż *rhs* parametru; w przeciwnym razie **false**.
+**ma wartość true** , jeśli parametr *LHS* jest mniejszy niż parametr *RHS* ; w przeciwnym razie **false**.

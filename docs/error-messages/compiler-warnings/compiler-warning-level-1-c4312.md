@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4312
+title: Ostrzeżenie kompilatora (poziom 1) C4312
 ms.date: 11/04/2016
 f1_keywords:
 - C4312
 helpviewer_keywords:
 - C4312
 ms.assetid: 541906ed-4f62-4bcb-947f-cf9ae7411bcb
-ms.openlocfilehash: 666df7904a7aac88983af40d31a67271beaa0b1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1983d7b89688568b8152372328216c2a814f7bc0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408319"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510082"
 ---
-# <a name="compiler-warning-level-1-c4312"></a>Kompilator ostrzeżenie (poziom 1) C4312
+# <a name="compiler-warning-level-1-c4312"></a>Ostrzeżenie kompilatora (poziom 1) C4312
 
 'operacja' : konwersja z 'typ1' na 'typ2' o większym rozmiarze
 
-To ostrzeżenie wykrywa Próba przypisania wartości 32-bitowego do typu wskaźnika 64-bitowego, na przykład rzutowanie z 32-bitowym `int` lub `long` na wskaźnik 64-bitowych.
+To ostrzeżenie wykrywa próbę przypisania wartości 32-bitowej do typu wskaźnika 64-bitowego, na przykład rzutowania 32 bitowego `int` lub `long` do wskaźnika 64-bitowego.
 
-Może to być niebezpieczna konwersja, nawet w przypadku wartości wskaźnika, które mieszczą się w 32-bitowy, gdy wystąpi rozszerzenia znaku. Jeśli ujemna liczba całkowita 32-bitowy jest przypisany do typu wskaźnika 64-bitowym, rozszerzenia znaku powoduje, że wartość wskaźnika odwołać się do adresu pamięci różni się od wartości liczby całkowitej.
+Może to być niebezpieczna konwersja nawet w przypadku wartości wskaźnika, które mieszczą się w 32 bitach, gdy występuje rozszerzenie podpisywania. Jeśli ujemna 32-bitowa liczba całkowita jest przypisana do typu wskaźnika 64-bitowego, rozszerzenie znaku powoduje, że wartość wskaźnika odwołuje się do adresu pamięci innego niż wartość całkowita.
 
-To ostrzeżenie zostanie wyświetlone tylko w 64-bitowych kompilacji obiektów docelowych. Aby uzyskać więcej informacji, zobacz [zasady za pomocą wskaźników](/windows/desktop/WinProg64/rules-for-using-pointers).
+To ostrzeżenie jest wydawane wyłącznie dla 64-bitowych kompilacji elementów docelowych. Aby uzyskać więcej informacji, zobacz [reguły dotyczące korzystania ze wskaźników](/windows/win32/WinProg64/rules-for-using-pointers).
 
-Poniższy kod generuje C4312, gdy jest ona skompilowana dla celów 64-bitowych:
+Poniższy przykład kodu generuje C4312 podczas kompilowania dla elementów docelowych 64-bitowych:
 
 ```
 // C4312.cpp

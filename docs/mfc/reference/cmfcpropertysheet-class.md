@@ -40,16 +40,16 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-ms.openlocfilehash: 7e5b553e6a10bee0e5b05bb32b9af3069269ca91
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f7c9d2b472a443d8bf556d0b12dfe202ea8607a1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344232"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505048"
 ---
 # <a name="cmfcpropertysheet-class"></a>Klasa CMFCPropertySheet
 
-`CMFCPropertySheet` Klasy obsługuje arkusz właściwości, gdzie każda Strona właściwości jest określona przez kartę strony, przycisk paska narzędzi, węzeł formantu drzewa lub element listy.
+`CMFCPropertySheet` Klasa obsługuje arkusz właściwości, gdzie każda Strona właściwości jest oznaczona za pomocą karty strony, przycisku paska narzędzi, węzła kontrolki drzewa lub elementu listy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -63,64 +63,64 @@ class CMFCPropertySheet : public CPropertySheet
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCPropertySheet::CMFCPropertySheet](#cmfcpropertysheet)|Konstruuje `CMFCPropertySheet` obiektu.|
+|[CMFCPropertySheet::CMFCPropertySheet](#cmfcpropertysheet)|Konstruuje `CMFCPropertySheet` obiekt.|
 |`CMFCPropertySheet::~CMFCPropertySheet`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCPropertySheet::AddPage](#addpage)|Dodaje strony do arkusza właściwości.|
+|[CMFCPropertySheet::AddPage](#addpage)|Dodaje stronę do arkusza właściwości.|
 |[CMFCPropertySheet::AddPageToTree](#addpagetotree)|Dodaje nową stronę właściwości do kontrolki drzewa.|
-|[CMFCPropertySheet::AddTreeCategory](#addtreecategory)|Dodaje nowy węzeł w drzewie.|
-|[CMFCPropertySheet::EnablePageHeader](#enablepageheader)|Rezerwuje miejsce u góry każdej strony, aby narysować niestandardowego nagłówka.|
+|[CMFCPropertySheet::AddTreeCategory](#addtreecategory)|Dodaje nowy węzeł do kontrolki drzewa.|
+|[CMFCPropertySheet::EnablePageHeader](#enablepageheader)|Rezerwuje miejsce w górnej części każdej strony, aby narysować niestandardowy nagłówek.|
 |[CMFCPropertySheet::GetHeaderHeight](#getheaderheight)|Pobiera wysokość bieżącego nagłówka.|
-|[CMFCPropertySheet::GetLook](#getlook)|Pobiera wartość wyliczenia, który określa wygląd bieżącego arkusza właściwości.|
-|[CMFCPropertySheet::GetNavBarWidth](#getnavbarwidth)|Ponawia próbę szerokości paska nawigacji w pikselach.|
-|[CMFCPropertySheet::GetTab](#gettab)|Pobiera obiekt kontroli wewnętrznej karty, który obsługuje bieżącego formantu arkusza właściwości.|
-|`CMFCPropertySheet::GetThisClass`|Używane przez architekturę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tym typem klasy.|
-|[CMFCPropertySheet::InitNavigationControl](#initnavigationcontrol)|Inicjuje wyglądu formantu bieżącego arkusza właściwości.|
-|[CMFCPropertySheet::OnActivatePage](#onactivatepage)|Wywoływane przez platformę, gdy strona właściwości jest włączona.|
-|[CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader)|Metoda wywoływana przez platformę, by narysować nagłówek strony właściwości niestandardowej.|
-|`CMFCPropertySheet::OnInitDialog`|Obsługuje [/ / Złap](/windows/desktop/dlgbox/wm-initdialog) wiadomości. (Przesłania [CPropertySheet::OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|
-|[CMFCPropertySheet::OnRemoveTreePage](#onremovetreepage)|Metoda wywoływana przez platformę, by usunąć stronę właściwości z kontrolką drzewa.|
-|`CMFCPropertySheet::PreTranslateMessage`|Wykonuje translację komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkcje Windows. (Przesłania `CPropertySheet::PreTranslateMessage`).|
-|[CMFCPropertySheet::RemoveCategory](#removecategory)|Usunięcie węzła z formantu drzewa.|
+|[CMFCPropertySheet:: getwyglądu](#getlook)|Pobiera wartość wyliczenia, która określa wygląd bieżącego arkusza właściwości.|
+|[CMFCPropertySheet::GetNavBarWidth](#getnavbarwidth)|Ponawia próbę szerokości paska nawigacyjnego (w pikselach).|
+|[CMFCPropertySheet::GetTab](#gettab)|Pobiera wewnętrzny obiekt formantu karty, który obsługuje bieżącą kontrolkę arkusza właściwości.|
+|`CMFCPropertySheet::GetThisClass`|Używane przez platformę do uzyskania wskaźnika do obiektu [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) , który jest skojarzony z tym typem klasy.|
+|[CMFCPropertySheet::InitNavigationControl](#initnavigationcontrol)|Inicjuje wygląd bieżącej kontrolki arkusza właściwości.|
+|[CMFCPropertySheet::OnActivatePage](#onactivatepage)|Wywoływane przez platformę, gdy jest włączona Strona właściwości.|
+|[CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader)|Wywoływane przez platformę, by narysować niestandardowy nagłówek strony właściwości.|
+|`CMFCPropertySheet::OnInitDialog`|Obsługuje komunikat [WM_INITDIALOG](/windows/win32/dlgbox/wm-initdialog) . (Przesłania [CPropertySheet:: OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|
+|[CMFCPropertySheet::OnRemoveTreePage](#onremovetreepage)|Wywoływane przez platformę, aby usunąć stronę właściwości z kontrolki drzewa.|
+|`CMFCPropertySheet::PreTranslateMessage`|Tłumaczy komunikaty okna przed ich wysłaniem do funkcji systemu Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . (Przesłania `CPropertySheet::PreTranslateMessage`).|
+|[CMFCPropertySheet::RemoveCategory](#removecategory)|Usuwa węzeł z kontrolki drzewa.|
 |[CMFCPropertySheet::RemovePage](#removepage)|Usuwa stronę właściwości z arkusza właściwości.|
-|[CMFCPropertySheet::SetIconsList](#seticonslist)|Określa listę obrazów, które są używane w formancie nawigacji w okienku programu Outlook.|
+|[CMFCPropertySheet::SetIconsList](#seticonslist)|Określa listę obrazów używanych w formancie nawigacji okienka programu Outlook.|
 |[CMFCPropertySheet::SetLook](#setlook)|Określa wygląd arkusza właściwości.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CMFCPropertySheet` Klasa reprezentuje arkuszy właściwości, znane również jako zakładki okna dialogowego. `CMFCPropertySheet` Klasy można wyświetlić strony właściwości w na różne sposoby.
+`CMFCPropertySheet` Klasa reprezentuje arkusze właściwości, znane również jako okna dialogowe kart. `CMFCPropertySheet` Klasa może wyświetlać stronę właściwości na różne sposoby.
 
-Wykonaj poniższe kroki, aby użyć `CMFCPropertySheet` klasy w aplikacji:
+Wykonaj następujące kroki, aby użyć `CMFCPropertySheet` klasy w aplikacji:
 
-1. Wyprowadzić klasę z `CMFCPropertySheet` klasy i nazwy klasy, na przykład CMyPropertySheet.
+1. Utwórz klasę z `CMFCPropertySheet` klasy i nadaj jej nazwę, na przykład CMyPropertySheet.
 
-1. Konstruowania [CMFCPropertyPage](../../mfc/reference/cmfcpropertypage-class.md) obiektu dla każdej strony właściwości.
+1. Utwórz obiekt [CMFCPropertyPage](../../mfc/reference/cmfcpropertypage-class.md) dla każdej strony właściwości.
 
-1. Wywołaj [CMFCPropertySheet::SetLook](#setlook) metody w Konstruktorze CMyPropertySheet. Parametr metody Określa, czy strony właściwości są wyświetlane jako karty wzdłuż górnej lub lewej krawędzi arkusza właściwości; karty w stylu arkusz właściwości programu Microsoft OneNote; przycisków w formancie paska narzędzi programu Microsoft Outlook; węzły w drzewie; lub jako listę elementów po lewej stronie arkusza właściwości.
+1. Wywołaj metodę [CMFCPropertySheet:: setwyglądu](#setlook) w konstruktorze CMyPropertySheet. Parametr tej metody Określa, że strony właściwości są wyświetlane jako karty w górnej lub lewej części arkusza właściwości. karty w stylu arkusza właściwości programu Microsoft OneNote; przyciski na kontrolce Microsoft Outlook Toolbar; węzły w kontrolce drzewa; lub jako lista elementów po lewej stronie arkusza właściwości.
 
-1. Jeśli tworzysz arkusz właściwości w stylu narzędzi programu Microsoft Outlook, wywołaj [CMFCPropertySheet::SetIconsList](#seticonslist) do kojarzenia listy obrazów oraz na stronach właściwości.
+1. Jeśli utworzysz arkusz właściwości w stylu paska narzędzi programu Microsoft Outlook, wywołaj metodę [CMFCPropertySheet:: SetIconsList](#seticonslist) , aby skojarzyć listę obrazów ze stronami właściwości.
 
-1. Wywołaj [CMFCPropertySheet::AddPage](#addpage) metody dla każdej strony właściwości.
+1. Wywołaj metodę [CMFCPropertySheet:: AddPage](#addpage) dla każdej strony właściwości.
 
-1. Tworzenie `CMFCPropertySheet` kontroli i wywołać jej `DoModal` metody.
+1. Utwórz kontrolkę i Wywołaj `DoModal` jej metodę. `CMFCPropertySheet`
 
 ## <a name="illustrations"></a>Ilustracje
 
-Poniższa ilustracja przedstawia arkusza właściwości, który jest w stylu osadzonym pasku narzędzi programu Microsoft Outlook. Narzędzi programu Outlook pojawia się po lewej stronie arkusza właściwości.
+Na poniższej ilustracji przedstawiono arkusz właściwości, który znajduje się w stylu osadzonego paska narzędzi programu Microsoft Outlook. Pasek narzędzi programu Outlook pojawia się po lewej stronie arkusza właściwości.
 
-![Formanty kolor CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_color.png "CMFCPropertySheet kolor kontrolki")
+![Kontrolki koloru CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_color.png "Kontrolki koloru CMFCPropertySheet")
 
-Poniższa ilustracja przedstawia arkusza właściwości, która zawiera [klasa CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md) obiektu. Ten obiekt jest w stylu standardowego wspólnego arkusza właściwości kontrolki arkusza właściwości.
+Na poniższej ilustracji przedstawiono arkusz właściwości, który zawiera obiekt [klasy CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md) . Ten obiekt jest arkuszem właściwości w stylu standardowego wspólnego formantu arkusza właściwości.
 
-![Kontrolki listy i właściwości CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_list.png "CMFCPropertySheet listy i właściwości kontrolek")
+![CMFCPropertySheet listy i kontrolki właściwości](../../mfc/reference/media/cmfcpropertysheet_list.png "CMFCPropertySheet listy i kontrolki właściwości")
 
-Poniższa ilustracja przedstawia w stylu formantu drzewa arkusza właściwości.
+Na poniższej ilustracji przedstawiono arkusz właściwości, który znajduje się w stylu kontrolki drzewa.
 
-![Właściwość drzewa](../../mfc/reference/media/proptree.png "drzewa właściwości")
+![Drzewo właściwości](../../mfc/reference/media/proptree.png "Drzewo właściwości")
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -136,11 +136,11 @@ Poniższa ilustracja przedstawia w stylu formantu drzewa arkusza właściwości.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxpropertysheet.h
+**Nagłówek:** afxpropertysheet. h
 
-##  <a name="addpage"></a>  CMFCPropertySheet::AddPage
+##  <a name="addpage"></a>CMFCPropertySheet:: addPage
 
-Dodaje strony do arkusza właściwości.
+Dodaje stronę do arkusza właściwości.
 
 ```
 void AddPage(CPropertyPage* pPage);
@@ -149,15 +149,15 @@ void AddPage(CPropertyPage* pPage);
 ### <a name="parameters"></a>Parametry
 
 *pPage*<br/>
-[in] Wskaźnik do obiektu strony. Ten parametr nie może mieć wartości NULL.
+podczas Wskaźnik do obiektu strony. Ten parametr nie może mieć wartości NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Metoda ta umożliwia dodanie strony określonej właściwości jako kartę po prawej stronie w arkuszu właściwości. W związku z tym, ta metoda umożliwia dodawanie stron w kolejności od lewej do prawej.
+Ta metoda dodaje określoną stronę właściwości jako kartę z prawej strony w arkuszu właściwości. W związku z tym Użyj tej metody, aby dodać strony w kolejności od lewej do prawej.
 
-W przypadku arkusza właściwości w stylu programu Microsoft Outlook, struktura Wyświetla listę przycisków nawigacji po lewej stronie arkusza właściwości. Po tej metody dodaje strony właściwości, dodaje odpowiedni przycisk do listy. Aby wyświetlić stronę właściwości, kliknij jego odpowiedni przycisk. Aby uzyskać więcej informacji o stylach arkuszy właściwości, zobacz [CMFCPropertySheet::SetLook](#setlook).
+Jeśli arkusz właściwości jest stylem programu Microsoft Outlook, struktura wyświetla listę przycisków nawigacji po lewej stronie arkusza właściwości. Po dodaniu przez tę metodę strony właściwości zostanie dodany odpowiedni przycisk do listy. Aby wyświetlić stronę właściwości, kliknij odpowiedni przycisk. Aby uzyskać więcej informacji na temat stylów arkuszy właściwości, zobacz [CMFCPropertySheet:: setwyglądu](#setlook).
 
-##  <a name="addpagetotree"></a>  CMFCPropertySheet::AddPageToTree
+##  <a name="addpagetotree"></a>CMFCPropertySheet::AddPageToTree
 
 Dodaje nową stronę właściwości do kontrolki drzewa.
 
@@ -172,24 +172,24 @@ void AddPageToTree(
 ### <a name="parameters"></a>Parametry
 
 *pCategory*<br/>
-[in] Wskaźnik do węzła nadrzędnego w drzewie lub wartość NULL, aby skojarzyć określonej strony z węzła najwyższego poziomu. Wywołaj [CMFCPropertySheet::AddTreeCategory](#addtreecategory) metodę, aby uzyskać ten wskaźnik.
+podczas Wskaźnik na nadrzędny węzeł drzewa lub wartość NULL, aby skojarzyć określoną stronę z węzłem najwyższego poziomu. Wywołaj metodę [CMFCPropertySheet:: AddTreeCategory](#addtreecategory) , aby uzyskać ten wskaźnik.
 
 *pPage*<br/>
-[in] Wskaźnik do obiektu strony właściwości.
+podczas Wskaźnik do obiektu strony właściwości.
 
 *nIconNum*<br/>
-[in] Liczony od zera indeks ikony lub -1, jeśli ikona nie jest używana. Ikona jest wyświetlana obok na stronie właściwości formantu drzewa, gdy strona nie jest zaznaczona. Wartość domyślna to -1.
+podczas Indeks ikony (liczony od zera) lub-1, jeśli nie jest używana żadna ikona. Ikona jest wyświetlana obok strony właściwości kontrolki drzewa, gdy strona nie jest zaznaczona. Wartość domyślna to-1.
 
 *nSelIconNum*<br/>
-[in] Liczony od zera indeks ikony lub -1, jeśli ikona nie jest używana. Ikona jest wyświetlana obok na stronie właściwości kontrolki drzewa, po stronie jest zaznaczona. Wartość domyślna to -1.
+podczas Indeks ikony (liczony od zera) lub-1, jeśli nie jest używana żadna ikona. Ikona jest wyświetlana obok strony właściwości kontrolki drzewa, gdy strona jest zaznaczona. Wartość domyślna to-1.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda dodaje strony właściwości jako liścia formantu drzewa. Aby dodać stronę właściwości, Utwórz `CMFCPropertySheet` obiektu, wywołaj [CMFCPropertySheet::SetLook](#setlook) metody z *Szukaj* parametr `CMFCPropertySheet::PropSheetLook_Tree`, a następnie użyć tej metody, aby dodać stronę właściwości .
+Ta metoda dodaje stronę właściwości jako liścia kontrolki drzewa. Aby dodać `CMFCPropertySheet` stronę właściwości, Utwórz obiekt, wywołaj metodę [CMFCPropertySheet:: setwyglądu](#setlook) z parametrem *wyglądu* ustawionym na `CMFCPropertySheet::PropSheetLook_Tree`, a następnie użyj tej metody, aby dodać stronę właściwości.
 
-##  <a name="addtreecategory"></a>  CMFCPropertySheet::AddTreeCategory
+##  <a name="addtreecategory"></a>CMFCPropertySheet::AddTreeCategory
 
-Dodaje nowy węzeł w drzewie.
+Dodaje nowy węzeł do kontrolki drzewa.
 
 ```
 CMFCPropertySheetCategoryInfo* AddTreeCategory(
@@ -202,30 +202,30 @@ CMFCPropertySheetCategoryInfo* AddTreeCategory(
 ### <a name="parameters"></a>Parametry
 
 *lpszLabel*<br/>
-[in] Nazwa węzła.
+podczas Nazwa węzła.
 
 *nIconNum*<br/>
-[in] Liczony od zera indeks ikony lub -1, jeśli ikona nie jest używana. Ikona jest wyświetlana obok na stronie właściwości formantu drzewa, gdy strona nie jest zaznaczona. Wartość domyślna to -1.
+podczas Indeks ikony (liczony od zera) lub-1, jeśli nie jest używana żadna ikona. Ikona jest wyświetlana obok strony właściwości kontrolki drzewa, gdy strona nie jest zaznaczona. Wartość domyślna to-1.
 
 *nSelectedIconNum*<br/>
-[in] Liczony od zera indeks ikony lub -1, jeśli ikona nie jest używana. Ikona jest wyświetlana obok na stronie właściwości kontrolki drzewa, po stronie jest zaznaczona. Wartość domyślna to -1.
+podczas Indeks ikony (liczony od zera) lub-1, jeśli nie jest używana żadna ikona. Ikona jest wyświetlana obok strony właściwości kontrolki drzewa, gdy strona jest zaznaczona. Wartość domyślna to-1.
 
 *pParentCategory*<br/>
-[in] Wskaźnik do węzła nadrzędnego w drzewie lub wartość NULL, aby skojarzyć określonej strony z węzła najwyższego poziomu. Ustaw ten parametr z [CMFCPropertySheet::AddTreeCategory](#addtreecategory) metody.
+podczas Wskaźnik na nadrzędny węzeł drzewa lub wartość NULL, aby skojarzyć określoną stronę z węzłem najwyższego poziomu. Ustaw ten parametr za pomocą metody [CMFCPropertySheet:: AddTreeCategory](#addtreecategory) .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do nowego węzła w drzewie.
+Wskaźnik do nowego węzła w kontrolce drzewa.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda umożliwia dodawanie nowego węzła, który jest również określany jako kategoria, do formantu drzewa. Aby dodać węzeł, Utwórz `CMFCPropertySheet` obiektu, wywołaj [CMFCPropertySheet::SetLook](#setlook) metody z *Szukaj* parametr `CMFCPropertySheet::PropSheetLook_Tree`, a następnie użyć tej metody, aby dodać węzeł.
+Użyj tej metody, aby dodać nowy węzeł, który jest również określany jako kategoria, do kontrolki drzewa. Aby `CMFCPropertySheet` dodać węzeł, Utwórz obiekt, wywołaj metodę [CMFCPropertySheet:: setwyglądu](#setlook) z parametrem *wyglądu* ustawionym na `CMFCPropertySheet::PropSheetLook_Tree`, a następnie użyj tej metody do dodania węzła.
 
-Użyj wartości zwracanej przez tę metodę w kolejnych wywołaniach [CMFCPropertySheet::AddPageToTree](#addpagetotree) i [CMFCPropertySheet::AddTreeCategory](#addtreecategory).
+Użyj wartości zwracanej przez tę metodę w kolejnych wywołaniach [CMFCPropertySheet:: AddPageToTree](#addpagetotree) i [CMFCPropertySheet:: AddTreeCategory](#addtreecategory).
 
-##  <a name="cmfcpropertysheet"></a>  CMFCPropertySheet::CMFCPropertySheet
+##  <a name="cmfcpropertysheet"></a>CMFCPropertySheet::CMFCPropertySheet
 
-Konstruuje `CMFCPropertySheet` obiektu.
+Konstruuje `CMFCPropertySheet` obiekt.
 
 ```
 CMFCPropertySheet(
@@ -242,24 +242,24 @@ CMFCPropertySheet(
 ### <a name="parameters"></a>Parametry
 
 *pszCaption*<br/>
-[in] Ciąg, który zawiera podpis arkusza właściwości. Nie może mieć wartości NULL.
+podczas Ciąg, który zawiera podpis arkusza właściwości. Nie może mieć wartości NULL.
 
 *nIDCaption*<br/>
-[in] Identyfikator zasobu, który zawiera podpis arkusza właściwości.
+podczas Identyfikator zasobu, który zawiera podpis arkusza właściwości.
 
 *pParentWnd*<br/>
-[in] Wskaźnik do nadrzędnego okna arkusza właściwości, lub wartość NULL, jeśli okno nadrzędne jest głównego okna aplikacji. Wartością domyślną jest NULL.
+podczas Wskaźnik do okna nadrzędnego arkusza właściwości lub wartość NULL, jeśli okno nadrzędne jest głównym oknem aplikacji. Wartość domyślna to NULL.
 
 *iSelectPage*<br/>
-[in] Liczony od zera indeks strony najważniejsze właściwości. Wartość domyślna to 0.
+podczas Indeks (liczony od zera) górnej strony właściwości. Wartość domyślna to 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz parametry [CPropertySheet::CPropertySheet](../../mfc/reference/cpropertysheet-class.md#cpropertysheet) konstruktora.
+Aby uzyskać więcej informacji, zobacz parametry dla konstruktora [CPropertySheet:: CPropertySheet](../../mfc/reference/cpropertysheet-class.md#cpropertysheet) .
 
-##  <a name="enablepageheader"></a>  CMFCPropertySheet::EnablePageHeader
+##  <a name="enablepageheader"></a>CMFCPropertySheet::EnablePageHeader
 
-Rezerwuje miejsce u góry każdej strony, aby narysować niestandardowego nagłówka.
+Rezerwuje miejsce w górnej części każdej strony, aby narysować niestandardowy nagłówek.
 
 ```
 void EnablePageHeader(int nHeaderHeight);
@@ -268,13 +268,13 @@ void EnablePageHeader(int nHeaderHeight);
 ### <a name="parameters"></a>Parametry
 
 *nHeaderHeight*<br/>
-[in] Wysokość nagłówka, w pikselach.
+podczas Wysokość nagłówka (w pikselach).
 
 ### <a name="remarks"></a>Uwagi
 
-Aby użyć wartości *nHeaderHeight* zastąpienie parametru, aby narysować niestandardowy nagłówek [CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader) metody.
+Aby użyć wartości parametru *nHeaderHeight* w celu narysowania niestandardowego nagłówka, Zastąp metodę [CMFCPropertySheet:: OnDrawPageHeader](#ondrawpageheader) .
 
-##  <a name="getheaderheight"></a>  CMFCPropertySheet::GetHeaderHeight
+##  <a name="getheaderheight"></a>CMFCPropertySheet::GetHeaderHeight
 
 Pobiera wysokość bieżącego nagłówka.
 
@@ -284,15 +284,15 @@ int GetHeaderHeight() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wysokość nagłówka, w pikselach.
+Wysokość nagłówka (w pikselach).
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj [CMFCPropertySheet::EnablePageHeader](#enablepageheader) metoda przed wywołaniem tej metody.
+Przed wywołaniem tej metody Wywołaj metodę [CMFCPropertySheet:: EnablePageHeader](#enablepageheader) .
 
-##  <a name="getlook"></a>  CMFCPropertySheet::GetLook
+##  <a name="getlook"></a>CMFCPropertySheet:: getwyglądu
 
-Pobiera wartość wyliczenia, który określa wygląd bieżącego arkusza właściwości.
+Pobiera wartość wyliczenia, która określa wygląd bieżącego arkusza właściwości.
 
 ```
 PropSheetLook GetLook() const;
@@ -300,9 +300,9 @@ PropSheetLook GetLook() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jedna z wartości wyliczenia, które określa wygląd arkusza właściwości. Aby uzyskać listę możliwych wartości, zobacz tabelę wyliczenia w sekcji uwag [CMFCPropertySheet::SetLook](#setlook).
+Jedna z wartości wyliczenia, która określa wygląd arkusza właściwości. Listę możliwych wartości można znaleźć w tabeli Wyliczenie w sekcji uwagi [CMFCPropertySheet:: setwyglądu](#setlook).
 
-##  <a name="getnavbarwidth"></a>  CMFCPropertySheet::GetNavBarWidth
+##  <a name="getnavbarwidth"></a>CMFCPropertySheet::GetNavBarWidth
 
 Pobiera szerokość paska nawigacyjnego.
 
@@ -312,11 +312,11 @@ int GetNavBarWidth() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Szerokość paska nawigacji w pikselach.
+Szerokość paska nawigacyjnego w pikselach.
 
-##  <a name="gettab"></a>  CMFCPropertySheet::GetTab
+##  <a name="gettab"></a>CMFCPropertySheet::GetTab
 
-Pobiera obiekt kontroli wewnętrznej karty, który obsługuje bieżącego formantu arkusza właściwości.
+Pobiera wewnętrzny obiekt formantu karty, który obsługuje bieżącą kontrolkę arkusza właściwości.
 
 ```
 CMFCTabCtrl& GetTab() const;
@@ -324,19 +324,19 @@ CMFCTabCtrl& GetTab() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Obiekt kontroli wewnętrznej karty.
+Obiekt wewnętrznego formantu karty.
 
 ### <a name="remarks"></a>Uwagi
 
-Arkusz właściwości można ustawić tak, aby było wyświetlane w różnych stylów, takie jak formant drzewa listę przycisków nawigacji lub zestaw stron z kartami.
+Arkusz właściwości można ustawić tak, aby był wyświetlany w różnych stylach, takich jak kontrolka drzewa, lista przycisków nawigacji lub zestaw stron z kartami.
 
-Przed wywołaniem tej metody należy wywołać [CMFCPropertySheet::SetLook](#setlook) metodę, aby ustawić wygląd formantu arkusza właściwości. Następnie wywołaj [CMFCPropertySheet::InitNavigationControl](#initnavigationcontrol) metodę, aby zainicjować obiekt formantu wewnętrznej karty. Ta metoda umożliwia pobieranie obiekt formantu karty, a następnie użyj tego obiektu do pracy z kartami w arkuszu właściwości.
+Przed wywołaniem tej metody Wywołaj metodę [CMFCPropertySheet:: setwyglądu](#setlook) , aby ustawić wygląd kontrolki arkusza właściwości. Następnie Wywołaj metodę [CMFCPropertySheet:: InitNavigationControl](#initnavigationcontrol) , aby zainicjować obiekt wewnętrznego formantu karty. Użyj tej metody, aby pobrać obiekt formantu karty, a następnie użyć tego obiektu do pracy z kartami w arkuszu właściwości.
 
-Ta metoda potwierdza w trybie debugowania, jeśli nie ustawiono właściwości kontrolki arkusza pojawią się w stylu programu Microsoft OneNote.
+Ta metoda jest potwierdzona w trybie debugowania, jeśli formant arkusza właściwości nie jest ustawiony do wyświetlania w stylu programu Microsoft OneNote.
 
-##  <a name="initnavigationcontrol"></a>  CMFCPropertySheet::InitNavigationControl
+##  <a name="initnavigationcontrol"></a>CMFCPropertySheet::InitNavigationControl
 
-Inicjuje wyglądu formantu bieżącego arkusza właściwości.
+Inicjuje wygląd bieżącej kontrolki arkusza właściwości.
 
 ```
 virtual CWnd* InitNavigationControl();
@@ -344,15 +344,15 @@ virtual CWnd* InitNavigationControl();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do okna formantu arkusza właściwości.
+Wskaźnik do okna kontrolki arkusza właściwości.
 
 ### <a name="remarks"></a>Uwagi
 
-Formant arkusz właściwości może znajdować się w różnych formularzach, takiego jak zestaw strony z kartami, formant drzewa lub Podaj listę przycisków nawigacji. Użyj [CMFCPropertySheet::SetLook](#setlook) metodę, aby określić wygląd formantu arkusza właściwości.
+Kontrolka arkusza właściwości może być wyświetlana w kilku różnych formularzach, takich jak zestaw stron z kartami, kontrolka drzewa lub lista przycisków nawigacji. Użyj metody [CMFCPropertySheet:: Setwyglądu](#setlook) , aby określić wygląd kontrolki arkusza właściwości.
 
-##  <a name="onactivatepage"></a>  CMFCPropertySheet::OnActivatePage
+##  <a name="onactivatepage"></a>CMFCPropertySheet::OnActivatePage
 
-Wywoływane przez platformę, gdy strona właściwości jest włączona.
+Wywoływane przez platformę, gdy jest włączona Strona właściwości.
 
 ```
 virtual void OnActivatePage(CPropertyPage* pPage);
@@ -361,15 +361,15 @@ virtual void OnActivatePage(CPropertyPage* pPage);
 ### <a name="parameters"></a>Parametry
 
 *pPage*<br/>
-[in] Wskaźnik do obiektu strony właściwości, który reprezentuje stronę dla właściwości włączone.
+podczas Wskaźnik do obiektu strony właściwości, który reprezentuje stronę właściwości włączony.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie ta metoda zapewnia, że strony dla właściwości włączone jest przewijane do widoku. Styl bieżący arkusz właściwości zawiera okienku programu Microsoft Outlook, ta metoda ustawia odpowiedni przycisk Outlook zaznaczony stan.
+Domyślnie ta metoda zapewnia, że aktywna strona właściwości jest przewijana do widoku. Jeśli styl bieżącego arkusza właściwości zawiera okienko programu Microsoft Outlook, ta metoda ustawia odpowiedni przycisk programu Outlook do stanu zaznaczenia.
 
-##  <a name="ondrawpageheader"></a>  CMFCPropertySheet::OnDrawPageHeader
+##  <a name="ondrawpageheader"></a>CMFCPropertySheet::OnDrawPageHeader
 
-Metoda wywoływana przez platformę, by narysować nagłówek dla niestandardowej strony właściwości.
+Wywoływane przez platformę, by narysować nagłówek dla niestandardowej strony właściwości.
 
 ```
 virtual void OnDrawPageHeader(
@@ -381,21 +381,21 @@ virtual void OnDrawPageHeader(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Wskaźnik do kontekstu urządzenia.
+podczas Wskaźnik do kontekstu urządzenia.
 
 *nPage*<br/>
-[in] Numer strony właściwości liczony od zera.
+podczas Numer strony właściwości o wartości zero.
 
 *rectHeader*<br/>
-[in] Prostokąt otaczający, który określa, gdzie można narysować nagłówka.
+podczas Prostokąt ograniczający, który określa miejsce rysowania nagłówka.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie ta metoda nie działa. Jeśli zastąpisz tę metodę należy wywołać [CMFCPropertySheet::EnablePageHeader](#enablepageheader) metoda przed struktura wywołuje tę metodę.
+Domyślnie ta metoda nie wykonuje żadnych operacji. Jeśli zastąpisz tę metodę, wywołaj metodę [CMFCPropertySheet:: EnablePageHeader](#enablepageheader) przed wywołaniem tej metody przez platformę.
 
-##  <a name="onremovetreepage"></a>  CMFCPropertySheet::OnRemoveTreePage
+##  <a name="onremovetreepage"></a>CMFCPropertySheet::OnRemoveTreePage
 
-Metoda wywoływana przez platformę, by usunąć stronę właściwości z kontrolką drzewa.
+Wywoływane przez platformę, aby usunąć stronę właściwości z kontrolki drzewa.
 
 ```
 virtual BOOL OnRemoveTreePage(CPropertyPage* pPage);
@@ -404,15 +404,15 @@ virtual BOOL OnRemoveTreePage(CPropertyPage* pPage);
 ### <a name="parameters"></a>Parametry
 
 *pPage*<br/>
-[in] Wskaźnik do obiektu strony właściwości, który reprezentuje stronę właściwości do usunięcia.
+podczas Wskaźnik do obiektu strony właściwości, który reprezentuje stronę właściwości do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
-##  <a name="removecategory"></a>  CMFCPropertySheet::RemoveCategory
+##  <a name="removecategory"></a>CMFCPropertySheet::RemoveCategory
 
-Usunięcie węzła z formantu drzewa.
+Usuwa węzeł z kontrolki drzewa.
 
 ```
 void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
@@ -421,13 +421,13 @@ void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 ### <a name="parameters"></a>Parametry
 
 *pCategory*<br/>
-[in] Wskaźnik do kategorii (node) do usunięcia.
+podczas Wskaźnik do kategorii (węzeł) do usunięcia.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tej metody można usunąć węzła, który jest również nazywany kategorii z kontrolką drzewa. Użyj [CMFCPropertySheet::AddTreeCategory](#addtreecategory) metodę, aby dodać węzeł do formantu drzewa.
+Użyj tej metody, aby usunąć węzeł, który jest również określany jako kategoria, z kontrolki drzewa. Użyj metody [CMFCPropertySheet:: AddTreeCategory](#addtreecategory) , aby dodać węzeł do kontrolki drzewa.
 
-##  <a name="removepage"></a>  CMFCPropertySheet::RemovePage
+##  <a name="removepage"></a>CMFCPropertySheet:: Wywołaj RemovePage
 
 Usuwa stronę właściwości z arkusza właściwości.
 
@@ -439,18 +439,18 @@ void RemovePage(int nPage);
 ### <a name="parameters"></a>Parametry
 
 *pPage*<br/>
-[in] Wskaźnik do obiektu strony właściwości, który reprezentuje stronę właściwości do usunięcia. Nie może mieć wartości NULL.
+podczas Wskaźnik do obiektu strony właściwości, który reprezentuje stronę właściwości do usunięcia. Nie może mieć wartości NULL.
 
 *nPage*<br/>
-[in] Liczony od zera indeks strony do usunięcia.
+podczas Indeks (liczony od zera) strony do usunięcia.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda usuwa stronę określonej właściwości i niszczy okno skojarzone. Na stronie właściwości obiektu, który *Strona_fizyczna* parametr określa, nie jest niszczony, dopóki [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) okno zostanie zamknięte.
+Ta metoda usuwa określoną stronę właściwości i niszczy skojarzone z nią okno. Obiekt strony właściwości określany przez parametr *ppage* nie jest niszczony, dopóki okno [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) nie zostanie zamknięte.
 
-##  <a name="seticonslist"></a>  CMFCPropertySheet::SetIconsList
+##  <a name="seticonslist"></a>CMFCPropertySheet::SetIconsList
 
-Określa listę obrazów, które są używane w formancie nawigacji w okienku programu Outlook.
+Określa listę obrazów używanych w formancie nawigacji okienka programu Outlook.
 
 ```
 BOOL SetIconsList(
@@ -463,28 +463,28 @@ void SetIconsList(HIMAGELIST hIcons);
 ### <a name="parameters"></a>Parametry
 
 *uiImageListResID*<br/>
-[in] Identyfikator zasobu z listy obrazów.
+podczas Identyfikator zasobu listy obrazów.
 
 *cx*<br/>
-[in] Szerokość w pikselach, ikony na liście obrazów.
+podczas Szerokość ikon na liście obrazów (w pikselach).
 
 *clrTransparent*<br/>
-[in] Kolor przezroczysty obraz. Części obrazu, które są ten kolor ma być przezroczysty. Wartość domyślna to amarantowy kolorów, RGB(255,0,255).
+podczas Kolor przezroczystego obrazu. Części obrazu, które są tym kolorem, będą przezroczyste. Wartość domyślna to kolor amarantowy, RGB (255, 0255).
 
 *hIcons*<br/>
-[in] Dojście do istniejącej listy obrazów.
+podczas Dojście do istniejącej listy obrazów.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-W przypadku pierwszej metody przeciążenia składni, wartość TRUE jeśli ta metoda się powiedzie; w przeciwnym razie wartość FALSE.
+W pierwszej składni przeciążenia metody wartość TRUE, jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-W przypadku arkusza właściwości w stylu programu Microsoft Outlook, struktura Wyświetla listę przycisków nawigacji, o nazwie kontrolki okienka programu Outlook, po lewej stronie arkusza właściwości. Użyj tej metody do ustawiania listy obrazów do użycia przez kontrolki okienka programu Outlook.
+Jeśli arkusz właściwości jest stylem programu Microsoft Outlook, w strukturze zostanie wyświetlona lista przycisków nawigacji o nazwie kontrolka okienka programu Outlook znajdująca się po lewej stronie arkusza właściwości. Użyj tej metody, aby ustawić listę obrazów, która będzie używana przez formant okienka programu Outlook.
 
-Aby uzyskać więcej informacji na temat metody, które obsługują tę metodę, zobacz [CImageList::Create](../../mfc/reference/cimagelist-class.md#create) i [CImageList::Add](../../mfc/reference/cimagelist-class.md#add). Aby uzyskać więcej informacji na temat ustawiania styl arkusza właściwości, zobacz [CMFCPropertySheet::SetLook](#setlook).
+Aby uzyskać więcej informacji na temat metod, które obsługują tę metodę, zobacz [Korzystanie CImageList:: Create](../../mfc/reference/cimagelist-class.md#create) i [Korzystanie CImageList:: Add](../../mfc/reference/cimagelist-class.md#add). Aby uzyskać więcej informacji na temat sposobu ustawiania stylu arkusza właściwości, zobacz [CMFCPropertySheet:: setwyglądu](#setlook).
 
-##  <a name="setlook"></a>  CMFCPropertySheet::SetLook
+##  <a name="setlook"></a>CMFCPropertySheet:: setwyglądu
 
 Określa wygląd arkusza właściwości.
 
@@ -496,25 +496,25 @@ void SetLook(
 
 ### <a name="parameters"></a>Parametry
 
-*look*<br/>
-[in] Jedna z wartości wyliczenia, które określa wygląd arkusza właściwości. Jest to styl domyślny dla arkusza właściwości `CMFCPropertySheet::PropSheetLook_Tabs`. Aby uzyskać więcej informacji zobacz tabelę w sekcji uwag w tym temacie.
+*polu*<br/>
+podczas Jedna z wartości wyliczenia, która określa wygląd arkusza właściwości. Domyślny styl arkusza właściwości to `CMFCPropertySheet::PropSheetLook_Tabs`. Więcej informacji znajduje się w tabeli w sekcji uwagi tego tematu.
 
 *nNavControlWidth*<br/>
-[in] Szerokość Nawigacja kontrolki, w pikselach. Wartość domyślna to 100.
+podczas Szerokość kontrolki nawigacji (w pikselach). Wartość domyślna to 100.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby wyświetlić arkusz właściwości stylu inną niż domyślna, tę metodę należy wywołać przed utworzeniem okna arkusza właściwości.
+Aby wyświetlić arkusz właściwości w stylu innym niż domyślny, Wywołaj tę metodę przed utworzeniem okna arkusza właściwości.
 
-W poniższej tabeli wymieniono wartości wyliczenia, które można określić w *Szukaj* parametru.
+Poniższa tabela zawiera listę wartości wyliczenia, które można określić w parametrze *wyglądu* .
 
 |Wartość|Opis|
 |-----------|-----------------|
-|`CMFCPropertySheet::PropSheetLook_Tabs`|(Ustawienie domyślne) Wyświetla kartę dla każdej strony właściwości. Karty są wyświetlane w górnej części arkusza właściwości i są ułożone w przypadku więcej kart niż mieści się w jednym wierszu.|
-|`CMFCPropertySheet::PropSheetLook_OutlookBar`|Wyświetla listę przycisków nawigacji w stylu na pasku programu Microsoft Outlook po lewej stronie arkusza właściwości. Każdy przycisk na liście odnosi się do strony właściwości. Struktura wyświetla strzałki przewijania, jeśli istnieje więcej przycisków, niż mieści się w obszarze widoczna lista.|
-|`CMFCPropertySheet::PropSheetLook_Tree`|Wyświetla formant drzewa po lewej stronie arkusza właściwości. Na każdym węźle nadrzędnych i podrzędnych kontrolki drzewa odnosi się do strony właściwości. Struktura wyświetla strzałki przewijania, jeśli istnieje więcej węzłów niż mieści się w obszarze widoczne kontrolki drzewa.|
-|`CMFCPropertySheet::PropSheetLook_OneNoteTabs`|Wyświetla kartę w stylu programu Microsoft OneNote dla każdej strony właściwości. Struktura wyświetla karty w górnej części arkusza właściwości i strzałki przewijania w przypadku więcej kart niż mieści się w jednym wierszu.|
-|`CMFCPropertySheet::PropSheetLook_List`|Wyświetla listę po lewej stronie arkusza właściwości. Każdy element tej listy odnosi się do strony właściwości. Struktura wyświetla strzałki przewijania, jeśli istnieje więcej elementów listy, niż mieści się w obszarze widoczne listy.|
+|`CMFCPropertySheet::PropSheetLook_Tabs`|Wartooć Wyświetla kartę dla każdej strony właściwości. Karty są wyświetlane u góry arkusza właściwości i są ułożone w stosie, jeśli istnieje więcej kart, niż mieści się w pojedynczym wierszu.|
+|`CMFCPropertySheet::PropSheetLook_OutlookBar`|Wyświetla listę przycisków nawigacji w stylu paska programu Microsoft Outlook, po lewej stronie arkusza właściwości. Każdy przycisk na liście odpowiada stronie właściwości. W strukturze są wyświetlane strzałki przewijania, jeśli jest więcej przycisków niż mieści się w widocznym obszarze listy.|
+|`CMFCPropertySheet::PropSheetLook_Tree`|Wyświetla kontrolkę drzewa po lewej stronie arkusza właściwości. Każdy węzeł nadrzędny lub podrzędny kontrolki drzewa odpowiada stronie właściwości. Struktura wyświetla strzałki przewijania, jeśli istnieje więcej węzłów niż mieści się w widocznym obszarze formantu drzewa.|
+|`CMFCPropertySheet::PropSheetLook_OneNoteTabs`|Wyświetla kartę w stylu programu Microsoft OneNote dla każdej strony właściwości. Struktura wyświetla karty w górnej części arkusza właściwości i strzałki przewijania, jeśli istnieje więcej kart, niż mieści się w pojedynczym wierszu.|
+|`CMFCPropertySheet::PropSheetLook_List`|Wyświetla listę znajdującą się po lewej stronie arkusza właściwości. Każdy element listy odpowiada stronie właściwości. Struktura wyświetla strzałki przewijania, jeśli istnieje więcej elementów listy niż mieści się w widocznym obszarze listy.|
 
 ## <a name="see-also"></a>Zobacz także
 

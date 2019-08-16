@@ -1,37 +1,37 @@
 ---
-title: Dostosowywanie elementu nagłówka&#39;wygląd
+title: Dostosowywanie wyglądu elementu&#39;nagłówka
 ms.date: 11/04/2016
 helpviewer_keywords:
 - header controls [MFC], customization of items
 - CHeaderCtrl class [MFC], customizing the items
 - HDS_ styles
 ms.assetid: b1e1e326-ec7d-4dbd-a46f-96a3e2055618
-ms.openlocfilehash: 081260bd5c1cf6335d398a4fd773c9590dbc8030
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ce676695d717fcc5d418fe4ed5df91b4f9bca95
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241590"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508718"
 ---
-# <a name="customizing-the-header-item39s-appearance"></a>Dostosowywanie elementu nagłówka&#39;wygląd
+# <a name="customizing-the-header-item39s-appearance"></a>Dostosowywanie wyglądu elementu&#39;nagłówka
 
-Ustawiając *dwStyle* parametru podczas pierwszego tworzenia formantu nagłówka ([CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create)), można zdefiniować wygląd i zachowanie nagłówka elementów lub nagłówka samej kontrolki.
+Ustawiając parametr *dwStyle* podczas pierwszego tworzenia kontrolki nagłówka ([CHeaderCtrl:: Create](../mfc/reference/cheaderctrl-class.md#create)), można zdefiniować wygląd i zachowanie elementów nagłówka lub samego formantu nagłówka.
 
-Poniżej przedstawiono niektóre spośród style, które można ustawić, a ich celem:
+Poniżej znajduje się próbkowanie stylów, które można ustawić, i ich przeznaczenie:
 
-- Aby element nagłówka wyglądać tak, jak przycisk, użyj **HDS_BUTTONS** stylu.
+- Aby element nagłówka wyglądał jak przycisk, użyj stylu **HDS_BUTTONS** .
 
-   Użyj tego stylu, jeśli chcesz do wykonywania akcji w odpowiedzi na kliknięcia myszy na elemencie nagłówka, takich jak sortowanie danych według określonej kolumny, jak to zrobić w programie Microsoft Outlook.
+   Użyj tego stylu, jeśli chcesz wykonać akcje w odpowiedzi na kliknięcia myszą w elemencie nagłówka, takim jak sortowanie danych według określonej kolumny, tak jak w programie Microsoft Outlook.
 
-- Aby nadać elementy nagłówka wygląd "aktywne śledzenie", gdy kursor myszy przesuwa się nad nimi, należy użyć **HDS_HOTTRACK** stylu.
+- Aby nadać elementom nagłówka "śledzenie gorąca", gdy kursor myszy przesuwa się nad nimi, użyj stylu **HDS_HOTTRACK** .
 
-   Aktywne śledzenie wyświetla 3D konspektu przesuwany wskaźnik myszy nad elementem, w przeciwnym razie prostego paska.
+   Śledzenie gorąca wyświetla konspekt 3D, gdy wskaźnik przechodzi nad elementem na płaskim pasku w przeciwnym przypadku.
 
-- Aby wskazać, kontrolki nagłówka powinien być ukryty, należy użyć **HDS_HIDDEN** stylu.
+- Aby wskazać, że formant nagłówka powinien być ukryty, użyj stylu **HDS_HIDDEN** .
 
-   **HDS_HIDDEN** styl wskazuje, że kontrolki nagłówka jest przeznaczony do użycia jako kontener danych i Wizualna kontrola. Ten styl nie automatycznie ukrywać kontrolki, ale zamiast tego ma wpływ na zachowanie `CHeaderCtrl::Layout`. Wartość zwracana w *cy* członkiem `WINDOWPOS` struktury będą równe zeru wskazujący, że kontrolka nie powinny być widoczne dla użytkownika.
+   Styl **HDS_HIDDEN** wskazuje, że formant nagłówka jest przeznaczony do użycia jako kontener danych, a nie do kontrolki wizualnej. Ten styl nie ukrywa automatycznie formantu, ale zamiast tego wpływa na zachowanie `CHeaderCtrl::Layout`. Wartość zwrócona przez element członkowski `WINDOWPOS` cy struktury będzie równa zero, co oznacza, że formant nie powinien być widoczny dla użytkownika.
 
-Aby uzyskać więcej informacji o tych właściwościach, zobacz [elementów](/windows/desktop/Controls/header-controls) w zestawie Windows SDK. Aby dowiedzieć się, jak dodawanie elementów do formantu nagłówka, zobacz [Dodawanie elementów do formantu nagłówka](../mfc/adding-items-to-the-header-control.md).
+Aby uzyskać więcej informacji o tych właściwościach, zobacz [elementy](/windows/win32/Controls/header-controls) w Windows SDK. Aby uzyskać informacje o dodawaniu elementów do kontrolki nagłówka, zobacz [Dodawanie elementów do formantu nagłówka](../mfc/adding-items-to-the-header-control.md).
 
 ## <a name="see-also"></a>Zobacz także
 

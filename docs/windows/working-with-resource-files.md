@@ -6,46 +6,46 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 09a85231f871ef1a21b2f2adb309d94bb4a29e1a
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: d9f6c6b9798bc708bb5334eafc0585471f25c059
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504507"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513591"
 ---
 # <a name="working-with-resource-files"></a>Praca z plikami zasobów
 
 > [!WARNING]
-> Ta sekcja dotyczy Windows aplikacji klasycznych w języku C++.
+> Ta sekcja dotyczy aplikacji klasycznych systemu Windows utworzonych C++w systemie.
 >
-> Aby uzyskać informacje dotyczące zasobów w aplikacjach platformy uniwersalnej Windows napisanych w C++, zobacz [Definiowanie zasobów aplikacji](/windows/uwp/app-resources/), lub na temat dodawania zasobów do C++/see projektów interfejsu wiersza polecenia (zarządzane) [zasoby w aplikacjach pulpitu](/dotnet/framework/resources/index) w przewodniku dewelopera .NET Framework.
+> Aby uzyskać informacje o zasobach w platforma uniwersalna systemu Windows aplikacjach C++pisanych w systemie, zobacz [Definiowanie zasobów aplikacji](/windows/uwp/app-resources/)lub Dodawanie zasobów C++do projektów/CLI (zarządzanych), zobacz artykuł [zasoby w aplikacjach klasycznych](/dotnet/framework/resources/index) w programie .NET Framework Developer Prowadzą.
 
-Zasobów może składać się z szerokiej gamy elementów, takich jak:
+Zasoby mogą składać się z szerokiego zakresu elementów, takich jak:
 
-- Elementy interfejsu, które zawierają informacje użytkownika, takie jak mapy bitowej, ikona lub kursor.
-- Zasoby niestandardowe, które zawierają dane i aplikacja potrzebuje.
+- Elementy interfejsu, które dostarczają informacje dla użytkownika, takie jak mapa bitowa, ikona lub kursor.
+- Zasoby niestandardowe, które zawierają wymagania dotyczące danych i aplikacji.
 - Zasoby wersji, które są używane przez Instalatora interfejsów API.
-- Menu i okien dialogowych zasoby wewnętrzne.
+- Zasoby menu i okna dialogowego.
 
-Można dodać nowe zasoby do projektu i zmodyfikować te zasoby za pomocą edytora odpowiedni zasób. Większość kreatorów Visual C++ automatycznie wygeneruje plik .rc w projekcie.
+Do projektu można dodawać nowe zasoby i modyfikować je za pomocą odpowiedniego edytora zasobów. Większość kreatorów wizualizacji C++ automatycznie generuje plik. RC dla projektu.
 
 > [!NOTE]
-> **Edytory zasobów** i **widok zasobów** nie są dostępne w wersji Express.
+> **Edytory zasobów** i **Widok zasobów** nie są dostępne w wersjach Express.
 
-Aby ręcznie dodać pliki zasobów do projektów zarządzanych, zobacz [Creating Resource Files dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Ten artykuł zawiera instrukcje uzyskiwać dostęp do zasobów, wyświetlania statycznych zasobów i przypisywania ciągów zasobów do właściwości.
+Aby ręcznie dodać pliki zasobów do projektów zarządzanych, zobacz [Tworzenie plików zasobów dla aplikacji klasycznych](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). W tym artykule opisano sposób uzyskiwania dostępu do zasobów, wyświetlania zasobów statycznych i przypisywania ciągów zasobów do właściwości.
 
-Aby sprzedawać i lokalizowania zasobów w aplikacjach zarządzanych, zobacz [Globalizing i lokalizowanie aplikacji programu .NET Framework](/dotnet/standard/globalization-localization/index).
+Aby przeprowadzić globalizację i lokalizowanie zasobów w zarządzanych aplikacjach, zobacz [globalizacja i lokalizowanie aplikacji .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="in-this-section"></a>W tej sekcji
 
 [Pliki zasobów](../windows/resource-files-visual-studio.md)<br/>
-Opisuje pliki zasobów i sposoby ich używania w aplikacjach pulpitu Windows. Zawiera również łącza do artykułów opisujących sposób korzystania z plików zasobów.
+Opisuje pliki zasobów i sposób ich używania w aplikacjach klasycznych systemu Windows. Zawiera również linki do artykułów opisujących sposób używania plików zasobów.
 
 [Identyfikatory zasobów (symbole)](../windows/symbols-resource-identifiers.md)<br/>
-Opisuje symboli i zawiera informacje na temat korzystania z **symboli zasobów** okno dialogowe, aby zarządzać symbole w swoich projektach.
+Zawiera opis symboli i zawiera informacje na temat używania okna dialogowego **symbole zasobów** do zarządzania symbolami w projektach.
 
 [Edytory zasobów](../windows/resource-editors.md)<br/>
-W tym artykule opisano edytory zasobów dostępnych w programie Visual Studio i typów zasobów, które można modyfikować za pomocą każdego edytora. Również zawiera łącza do szczegółowych informacji na temat korzystania z każdym edytorem.
+Opisuje edytory zasobów dostępne w programie Visual Studio oraz typy zasobów, które można modyfikować za pomocą każdego edytora. Oferuje także linki do szczegółowych informacji na temat korzystania z poszczególnych edytorów.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
@@ -53,9 +53,9 @@ W tym artykule opisano edytory zasobów dostępnych w programie Visual Studio i 
 Oferuje łącza do dokumentacji języka Visual C++.
 
 [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)<br/>
-Zawiera łącza do informacji na temat używania zestawu dokumentacji, kontaktując się z pomocą techniczną i wykorzystujących funkcje ułatwień dostępu.
+Zawiera łącza do informacji na temat korzystania z zestawu dokumentacji, kontaktowania się z pomocą techniczną i używania funkcji ułatwień dostępu.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Aplikacje pulpitu Windows](../windows/windows-desktop-applications-cpp.md)<br/>
-[Menu i inne zasoby](/windows/desktop/menurc/resources)
+[Aplikacje klasyczne systemu Windows](../windows/windows-desktop-applications-cpp.md)<br/>
+[Menu i inne zasoby](/windows/win32/menurc/resources)

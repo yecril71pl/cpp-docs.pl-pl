@@ -8,30 +8,30 @@ helpviewer_keywords:
 - wWinMain function
 - wmain function
 ms.assetid: 41213c41-668c-40a4-8a1e-77d9eded720d
-ms.openlocfilehash: f4705e65551b57e3e52c0c8f060032a93280f67d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4af389c00f6065df631f891dadcb0b2f350f984d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410541"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491198"
 ---
 # <a name="support-for-using-wmain"></a>Obsługa używania funkcji wmain
 
-Visual C++ obsługuje definiowanie **wmain** funkcji i przekazanie argumentów do znaków dwubajtowych do aplikacji Unicode. Możesz deklarować Parametry formalne dla **wmain**, za pomocą format podobny do `main`. Możesz następnie przekazać argumenty znaków dwubajtowych i, opcjonalnie, wskaźnik znaku dwubajtowego środowiska do programu. `argv` i `envp` parametry **wmain** typu `wchar_t*`. Na przykład:
+Wizualizacja C++ obsługuje definiowanie funkcji **wmain** i przekazywanie argumentów szerokich znaków do aplikacji Unicode. Można zadeklarować formalne parametry do **wmain**przy użyciu formatu podobnego do `main`. Następnie można przekazywać argumenty o szerokim znaku oraz, opcjonalnie, wskaźnik środowiska do programu. Parametry `argv` i `envp` do **wmain** są typu `wchar_t*`. Na przykład:
 
 ```cpp
 wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )
 ```
 
 > [!NOTE]
-> Użyj aplikacji nieobsługujących kodu Unicode w MFC `wWinMain` jako punkt wejścia. W tym przypadku `CWinApp::m_lpCmdLine` jest ciąg Unicode. Pamiętaj ustawić `wWinMainCRTStartup` z [/Entry](../build/reference/entry-entry-point-symbol.md) — opcja konsolidatora.
+> Aplikacje w formacie Unicode `wWinMain` MFC używają jako punktu wejścia. W tym przypadku `CWinApp::m_lpCmdLine` jest to ciąg Unicode. Upewnij się, że `wWinMainCRTStartup` ustawiono przy użyciu opcji konsolidatora [/entry](../build/reference/entry-entry-point-symbol.md) .
 
-Jeśli program używa **głównego** funkcji środowiska znak wielobajtowy jest tworzony przez biblioteki wykonawczej w momencie uruchamiania programu. Tworzona jest kopia znaków dwubajtowych, środowiska, tylko wtedy, gdy jest to wymagane (na przykład przez wywołanie `_wgetenv` lub `_wputenv` funkcji). W pierwszym wywołaniu `_wputenv`, lub na pierwszym wywołaniu `_wgetenv` Jeśli środowisko MBCS już istnieje, zostanie utworzony odpowiedniego środowiska ciąg znaków dwubajtowych. Środowisko jest następnie wskazywany przez `_wenviron` zmienna globalna, która jest wersją znaków dwubajtowych z `_environ` zmiennej globalnej. W tym momencie dwie kopie środowiska (MBCS i Unicode) mogły współistnieć i są obsługiwane przez system środowiska wykonawczego w całym cyklu życia programu.
+Jeśli program używa funkcji **Main** , środowisko znaków wielobajtowych jest tworzone przez bibliotekę wykonawczą podczas uruchamiania programu. Dwubajtowa kopia środowiska jest tworzona tylko wtedy, gdy jest to konieczne (na przykład przez wywołanie `_wgetenv` funkcji lub `_wputenv` ). Podczas pierwszego wywołania do `_wputenv`lub pierwszego `_wgetenv` wywołania, jeśli środowisko MBCS już istnieje, jest tworzony odpowiadające mu środowisko ciągu znaków. Środowisko jest wskazywane przez `_wenviron` zmienną globalną, która jest wersją `_environ` znaków dwubajtowych zmiennej globalnej. W tym momencie dwie kopie środowiska (MBCS i Unicode) istnieją jednocześnie i są obsługiwane przez system czasu wykonywania przez cały czas trwania programu.
 
-Podobnie jeśli program używa **wmain** funkcji, jest tworzony w momencie uruchamiania programu środowiska szerokich znaków i jest wskazywany przez `_wenviron` zmiennej globalnej. Środowisko MBCS (ASCII) jest tworzona przy pierwszym wywołaniu do `_putenv` lub `getenv` i jest wskazywany przez `_environ` zmiennej globalnej.
+Podobnie, jeśli program używa funkcji **wmain** , środowisko o szerokim znaku jest tworzone przy uruchamianiu programu i jest wskazywane przez `_wenviron` zmienną globalną. Środowisko MBCS (ASCII) jest tworzone podczas pierwszego wywołania do `_putenv` lub `getenv` i `_environ` jest wskazywane przez zmienną globalną.
 
 ## <a name="see-also"></a>Zobacz także
 
 [Obsługa formatu Unicode](../text/support-for-unicode.md)<br/>
 [Podsumowanie programowania Unicode](../text/unicode-programming-summary.md)<br/>
-[Funkcja WinMain](/windows/desktop/api/winbase/nf-winbase-winmain)
+[WinMain, funkcja](/windows/win32/api/winbase/nf-winbase-winmain)

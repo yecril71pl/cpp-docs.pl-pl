@@ -1,5 +1,5 @@
 ---
-title: Podstawowe informacje na temat obiektów COM ATL
+title: Podstawowe informacje o obiektach COM ATL
 ms.date: 11/19/2018
 helpviewer_keywords:
 - COM, and ATL
@@ -7,71 +7,71 @@ helpviewer_keywords:
 - ATL COM objects
 - COM objects, ATL
 ms.assetid: 0f9c9d98-cc28-45da-89ac-dc94cee422fe
-ms.openlocfilehash: cba26ede01b69e4a077f1e842982adc8c2127331
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec83539b2d7101c534bbc1df33577df422e76152
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198929"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492366"
 ---
-# <a name="fundamentals-of-atl-com-objects"></a>Podstawowe informacje na temat obiektów COM ATL
+# <a name="fundamentals-of-atl-com-objects"></a>Podstawowe informacje o obiektach COM ATL
 
-Poniższa ilustracja przedstawia relacje między klasy i interfejsy, które są używane do zdefiniowania obiektu ATL COM.
+Poniższa ilustracja przedstawia relację między klasami i interfejsami, które są używane do definiowania obiektu ATL COM.
 
-![Struktura ATL](../atl/media/vc307y1.gif "struktury ATL")
+![Struktura ATL](../atl/media/vc307y1.gif "Struktura ATL")
 
 > [!NOTE]
->  Ten diagram pokazuje, że `CComObject` jest tworzony na podstawie `CYourClass` natomiast `CComAggObject` i `CComPolyObject` obejmują `CYourClass` jako zmienną składową.
+>  Ten diagram pokazuje, `CComObject` że jest on `CYourClass` pochodną `CComPolyObject` `CComAggObject` i `CYourClass` zawiera jako zmienną członkowską.
 
-Istnieją trzy sposoby, aby zdefiniować obiekt ATL COM. Standardowa opcją jest użycie `CComObject` klasę, która jest pochodną `CYourClass`. Drugą opcją jest tworzenie obiektu zagregowanego za pomocą `CComAggObject` klasy. Trzecia opcja jest użycie `CComPolyObject` klasy. `CComPolyObject` działa jako hybrydowego: może działać jako `CComObject` klasy lub jako `CComAggObject` klasy, w zależności od tego, jak jej pierwszego tworzenia. Aby uzyskać więcej informacji o sposobie używania `CComPolyObject` klasy, zobacz [klasa CComPolyObject](../atl/reference/ccompolyobject-class.md).
+Istnieją trzy sposoby definiowania obiektu ATL COM. Standardową opcją jest użycie `CComObject` klasy `CYourClass`pochodnej. Druga opcja polega na utworzeniu zagregowanego obiektu za pomocą `CComAggObject` klasy. Trzecią opcją jest użycie `CComPolyObject` klasy. `CComPolyObject`działa jako hybrydowe: może działać jako `CComObject` Klasa lub `CComAggObject` jako Klasa, w zależności od sposobu jej pierwszego utworzenia. Aby uzyskać więcej informacji o sposobach używania `CComPolyObject` klasy, zobacz [CComPolyObject class](../atl/reference/ccompolyobject-class.md).
 
-Użycie opcji standard ATL COM, użyj dwóch obiektów: Obiekt wewnętrzny i zewnętrzny obiektu. Klienci zewnętrzni uzyskać dostęp do funkcji wewnętrznego obiektu za pomocą funkcji otoki, które są zdefiniowane w obiekcie zewnętrznym. Typ obiektu zewnętrznego to `CComObject`.
+W przypadku korzystania z standardowej biblioteki ATL COM, należy użyć dwóch obiektów: obiektu zewnętrznego i obiektu wewnętrznego. Klienci zewnętrzni uzyskują dostęp do funkcji obiektu wewnętrznego za pomocą funkcji otoki, które są zdefiniowane w obiekcie zewnętrznym. Obiekt zewnętrzny jest typu `CComObject`.
 
-Korzystając z obiektu zagregowanego obiektu zewnętrznego nie zapewnia otoki dla funkcji obiektu wewnętrznego. Zamiast tego obiektu zewnętrznego zapewnia wskaźnika, który jest bezpośrednio dostępny dla klientów zewnętrznych. W tym scenariuszu obiektu zewnętrznego jest typu `CComAggObject`. Obiekt wewnętrzny jest zmienną elementu członkowskiego obiektu zewnętrznego i jest typu `CYourClass`.
+Gdy używasz obiektu zagregowanego, obiekt zewnętrzny nie zapewnia otoki dla funkcjonalności obiektu wewnętrznego. Zamiast tego obiekt zewnętrzny zawiera wskaźnik, do którego uzyskuje dostęp bezpośrednio przez klientów zewnętrznych. W tym scenariuszu obiektem zewnętrznym jest typ `CComAggObject`. Obiekt wewnętrzny jest zmienną członkowską obiektu zewnętrznego i jest typem `CYourClass`.
 
-Ponieważ klient nie ma za pośrednictwem obiektu zewnętrznego do interakcji z obiekt wewnętrzny, zagregowane obiekty są zwykle bardziej wydajne. Ponadto obiektu zewnętrznego nie ma znać funkcje obiektu zagregowane, biorąc pod uwagę, że interfejs obiektu zagregowanego jest dostępne bezpośrednio do klienta. Jednak nie wszystkie obiekty mogą być agregowane. Dla obiektu agregowania musi ona być zaprojektowane tak, za pomocą agregacji, należy pamiętać.
+Ponieważ klient nie musi przechodzić przez zewnętrzny obiekt w celu współdziałania z obiektem wewnętrznym, zagregowane obiekty są zwykle bardziej wydajne. Ponadto obiekt zewnętrzny nie musi znać funkcjonalności obiektu zagregowanego, ponieważ interfejs zagregowanego obiektu jest bezpośrednio dostępny dla klienta. Jednak nie wszystkie obiekty mogą być agregowane. W przypadku obiektu, który ma zostać zagregowany, musi zostać zaprojektowany z uwzględnieniem agregacji.
 
-Implementuje ATL [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) w dwóch fazach:
+ATL implementuje [interfejs IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) w dwóch fazach:
 
-- [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), lub [CComPolyObject](../atl/reference/ccompolyobject-class.md) implementuje `IUnknown` metody.
+- [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md)lub [CComPolyObject](../atl/reference/ccompolyobject-class.md) implementuje `IUnknown` metody.
 
-- [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) zarządza licznika odwołań i zewnętrznych wskaźników `IUnknown`.
+- [Klasy CComObjectRoot](../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) zarządza licznikiem odwołań i `IUnknown`zewnętrznymi wskaźnikami.
 
-Inne aspekty obiekt ATL COM są obsługiwane przez inne klasy:
+Inne aspekty obiektu COM ATL są obsługiwane przez inne klasy:
 
-- [Klasy CComCoClass](../atl/reference/ccomcoclass-class.md) definiuje obiektu domyślnej klasy fabryki i agregację modelu.
+- [CComCoClass](../atl/reference/ccomcoclass-class.md) definiuje domyślną fabrykę klas i model agregacji obiektu.
 
-- [IDispatchImpl](../atl/reference/idispatchimpl-class.md) udostępnia domyślną implementację elementu `IDispatch Interface` część wszelkie dwa interfejsy do obiektu.
+- [IDispatchImpl](../atl/reference/idispatchimpl-class.md) zapewnia domyślną implementację `IDispatch Interface` części każdego podwójnego interfejsu w obiekcie.
 
-- [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) implementuje `ISupportErrorInfo` interfejsu, która zapewnia informacje o błędzie mogą być przekazywane łańcuch wywołań poprawnie.
+- [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) implementuje `ISupportErrorInfo` interfejs, który zapewnia, że informacje o błędzie mogą być prawidłowo propagowane w łańcuchu wywołań.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
 [Implementowanie klasy CComObjectRootEx](../atl/implementing-ccomobjectrootex.md)<br/>
-Pokaż przykład wpisy mapy modelu COM do implementowania `CComObjectRootEx`.
+Pokaż przykładowe wpisy mapy COM do wdrożenia `CComObjectRootEx`.
 
 [Implementowanie klas CComObject, CComAggObject i CComPolyObject](../atl/implementing-ccomobject-ccomaggobject-and-ccompolyobject.md)<br/>
-W tym artykule omówiono sposób, w jaki **DECLARE_\*_AGGREGATABLE** makra wpływa na użycie `CComObject`, `CComAggObject`, i `CComPolyObject`.
+Omawia, w jaki sposób makra **DECLARE_\*_AGGREGATABLE** wpływają na `CComObject`korzystanie `CComAggObject`z, `CComPolyObject`i.
 
 [Obsługa interfejsów IDispatch i IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md)<br/>
-Wyświetla listę klas ATL wdrażania służące do obsługi `IDispatch` i `IErrorInfo` interfejsów.
+Wyświetla listę klas implementacji ATL, które mają być używane `IDispatch` do `IErrorInfo` obsługi interfejsów i.
 
 [Obsługa interfejsu IDispEventImpl](../atl/supporting-idispeventimpl.md)<br/>
-W tym artykule omówiono kroki, aby wdrożyć punkt połączenia dla swojej klasy.
+W tym artykule omówiono procedurę implementowania punktu połączenia dla klasy.
 
 [Zmienianie domyślnej fabryki klas i modelu agregacji](../atl/changing-the-default-class-factory-and-aggregation-model.md)<br/>
-Pokaż makra, jakie można użyć, aby zmienić model fabryki i agregację klasy domyślne.
+Pokaż, które makra użyć do zmiany domyślnego fabryki klas i modelu agregacji.
 
 [Tworzenie obiektu zagregowanego](../atl/creating-an-aggregated-object.md)<br/>
-Lista czynności prowadzących do tworzenie obiektu zagregowanego.
+Wyświetla listę kroków tworzenia zagregowanego obiektu.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
 [Tworzenie projektu ATL](../atl/reference/creating-an-atl-project.md)<br/>
-Zawiera informacje dotyczące tworzenia obiektu ATL COM.
+Zawiera informacje na temat tworzenia obiektu ATL COM.
 
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
-Zawiera łącza do tematów pojęciowych dotyczące programowania przy użyciu biblioteki Active Template Library.
+Zawiera łącza do tematów koncepcyjnych dotyczących sposobu programowania przy użyciu Active Template Library.
 
 ## <a name="see-also"></a>Zobacz także
 

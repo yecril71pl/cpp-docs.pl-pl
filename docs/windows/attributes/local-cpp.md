@@ -1,21 +1,21 @@
 ---
-title: lokalne (atrybut COM C++)
+title: Local (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.local
 helpviewer_keywords:
 - local attribute
 ms.assetid: 35cdd668-bd8e-492a-b7b8-263e7b662437
-ms.openlocfilehash: 678968bb7b0f2e7af94124bea5b0967df27e43f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 853331ce191f8fe41d5967d2d625a3dac8543a4d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409229"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514417"
 ---
 # <a name="local-c"></a>local (C++)
 
-W przypadku użycia w nagłówku interfejsu, umożliwia kompilatorowi MIDL jako generator nagłówka. W przypadku użycia w poszczególnych funkcji, wyznacza lokalnej procedury, dla którego są generowane nie wycinki.
+W przypadku użycia w nagłówku interfejsu, umożliwia użycie kompilatora MIDL jako generatora nagłówka. W przypadku użycia w pojedynczej funkcji określa procedurę lokalną, dla której nie są generowane żadne wycinki.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,11 +25,11 @@ W przypadku użycia w nagłówku interfejsu, umożliwia kompilatorowi MIDL jako 
 
 ## <a name="remarks"></a>Uwagi
 
-**Lokalnego** atrybut C++ ma taką samą funkcjonalność jak [lokalnego](/windows/desktop/Midl/local) atrybutów w MIDL.
+Atrybut **lokalny** C++ ma takie same funkcje jak [lokalny](/windows/win32/Midl/local) atrybut MIDL.
 
 ## <a name="example"></a>Przykład
 
-Zobacz [call_as](call-as.md) przykład sposobu użycia **lokalnego**.
+Zobacz [call_as](call-as.md) , aby zapoznać się z przykładem użycia **lokalnego**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -37,12 +37,12 @@ Zobacz [call_as](call-as.md) przykład sposobu użycia **lokalnego**.
 
 |||
 |-|-|
-|**Dotyczy**|**interfejs**, interfejs — metoda|
+|**Dotyczy**|**interfejs**, metoda interfejsu|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|`dispinterface`|
 
-Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

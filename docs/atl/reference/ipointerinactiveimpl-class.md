@@ -1,5 +1,5 @@
 ---
-title: IPointerInactiveImpl Class
+title: Klasa IPointerInactiveImpl
 ms.date: 11/04/2016
 f1_keywords:
 - IPointerInactiveImpl
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - inactive objects
 - IPointerInactiveImpl class
 ms.assetid: e1fe9ea6-d38a-4527-9112-eb344771e0b7
-ms.openlocfilehash: d7d9f048fceb3a569b024d7fe2b87f30a828b68e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6fb5d9f2bcbdeda61f32947bf339d134c4924b72
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274831"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495657"
 ---
-# <a name="ipointerinactiveimpl-class"></a>IPointerInactiveImpl Class
+# <a name="ipointerinactiveimpl-class"></a>Klasa IPointerInactiveImpl
 
-Ta klasa implementuje `IUnknown` i [IPointerInactive](/windows/desktop/api/ocidl/nn-ocidl-ipointerinactive) metody interfejsu.
+Ta klasa implementuje `IUnknown` metody interfejsu [IPointerInactive](/windows/win32/api/ocidl/nn-ocidl-ipointerinactive) .
 
 > [!IMPORTANT]
->  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+>  Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,7 +36,7 @@ class IPointerInactiveImpl
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Z klasą pochodną `IPointerInactiveImpl`.
+Klasa, która pochodzi od `IPointerInactiveImpl`.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -44,19 +44,19 @@ Z klasą pochodną `IPointerInactiveImpl`.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[IPointerInactiveImpl::GetActivationPolicy](#getactivationpolicy)|Pobiera bieżące zasady aktywacji dla obiektu. Implementacja biblioteki ATL zwraca E_NOTIMPL.|
-|[IPointerInactiveImpl::OnInactiveMouseMove](#oninactivemousemove)|Powiadamia obiekt, który wskaźnik myszy zostanie przesunięty nad, wskazujące obiekt może wyzwalać zdarzeń myszy. Implementacja biblioteki ATL zwraca E_NOTIMPL.|
-|[IPointerInactiveImpl::OnInactiveSetCursor](#oninactivesetcursor)|Ustawia kursor nieaktywnym obiektem. Implementacja biblioteki ATL zwraca E_NOTIMPL.|
+|[IPointerInactiveImpl::GetActivationPolicy](#getactivationpolicy)|Pobiera bieżące zasady aktywacji dla obiektu. Implementacja ATL zwraca E_NOTIMPL.|
+|[IPointerInactiveImpl::OnInactiveMouseMove](#oninactivemousemove)|Powiadamia obiekt o przesunięciu wskaźnika myszy nad nim, wskazując, że obiekt może wyzwalać zdarzenia myszy. Implementacja ATL zwraca E_NOTIMPL.|
+|[IPointerInactiveImpl::OnInactiveSetCursor](#oninactivesetcursor)|Ustawia wskaźnik myszy dla nieaktywnego obiektu. Implementacja ATL zwraca E_NOTIMPL.|
 
 ## <a name="remarks"></a>Uwagi
 
-Nieaktywne obiekt jest taki, który jest po prostu załadowane lub nie działa. W przeciwieństwie do aktywnego obiektu nieaktywnym obiektem nie może odbierać komunikaty myszy i klawiatury Windows. Dlatego obiektów nieaktywnych wykorzystuje mniej zasobów i są zwykle bardziej wydajne.
+Obiekt nieaktywny to ten, który jest po prostu ładowany lub uruchomiony. W przeciwieństwie do aktywnego obiektu nieaktywny obiekt nie może odbierać komunikatów myszy i klawiatury systemu Windows. W ten sposób obiekty nieaktywne używają mniejszej ilości zasobów i są zwykle bardziej wydajne.
 
-[IPointerInactive](/windows/desktop/api/ocidl/nn-ocidl-ipointerinactive) interfejs umożliwia obiektu do obsługi minimalny poziom interakcji z myszą przy pozostałe nieaktywne. Ta funkcja jest szczególnie użyteczna w przypadku kontrolek.
+Interfejs [IPointerInactive](/windows/win32/api/ocidl/nn-ocidl-ipointerinactive) umożliwia obiektowi obsługę minimalnego poziomu interakcji myszy, podczas gdy pozostaje nieaktywna. Ta funkcja jest szczególnie przydatna w przypadku formantów.
 
-Klasa `IPointerInactiveImpl` implementuje `IPointerInactive` metody powracając po prostu E_NOTIMPL. Jednak implementuje `IUnknown` , wysyłając informacje o do zrzutu kompilacji urządzenia podczas debugowania.
+`IPointerInactiveImpl` Klasa`IPointerInactive` implementuje metody przez po prostu zwrócenie E_NOTIMPL. Jest to jednak implementowane `IUnknown` przez wysyłanie informacji do urządzenia zrzutu w kompilacjach debugowania.
 
-**Powiązane artykuły** [ALT — samouczek](../../atl/active-template-library-atl-tutorial.md), [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)
+**Powiązane artykuły** [Samouczek ATL](../../atl/active-template-library-atl-tutorial.md), [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -66,9 +66,9 @@ Klasa `IPointerInactiveImpl` implementuje `IPointerInactive` metody powracając 
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlctl.h
+**Nagłówek:** atlctl. h
 
-##  <a name="getactivationpolicy"></a>  IPointerInactiveImpl::GetActivationPolicy
+##  <a name="getactivationpolicy"></a>IPointerInactiveImpl::GetActivationPolicy
 
 Pobiera bieżące zasady aktywacji dla obiektu.
 
@@ -78,15 +78,15 @@ HRESULT GetActivationPolicy(DWORD* pdwPolicy);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Returns E_NOTIMPL.
+Zwraca E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IPointerInactive::GetActivationPolicy](/windows/desktop/api/ocidl/nf-ocidl-ipointerinactive-getactivationpolicy) w Windows SDK.
+Zobacz [IPointerInactive:: GetActivationPolicy](/windows/win32/api/ocidl/nf-ocidl-ipointerinactive-getactivationpolicy) w Windows SDK.
 
-##  <a name="oninactivemousemove"></a>  IPointerInactiveImpl::OnInactiveMouseMove
+##  <a name="oninactivemousemove"></a>IPointerInactiveImpl::OnInactiveMouseMove
 
-Powiadamia obiekt, który wskaźnik myszy zostanie przesunięty nad, wskazujące obiekt może wyzwalać zdarzeń myszy.
+Powiadamia obiekt o przesunięciu wskaźnika myszy nad nim, wskazując, że obiekt może wyzwalać zdarzenia myszy.
 
 ```
 HRESULT OnInactiveMouseMove(
@@ -98,15 +98,15 @@ HRESULT OnInactiveMouseMove(
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Returns E_NOTIMPL.
+Zwraca E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IPointerInactive::OnInactiveMouseMove](/windows/desktop/api/ocidl/nf-ocidl-ipointerinactive-oninactivemousemove) w Windows SDK.
+Zobacz [IPointerInactive:: OnInactiveMouseMove](/windows/win32/api/ocidl/nf-ocidl-ipointerinactive-oninactivemousemove) w Windows SDK.
 
-##  <a name="oninactivesetcursor"></a>  IPointerInactiveImpl::OnInactiveSetCursor
+##  <a name="oninactivesetcursor"></a>IPointerInactiveImpl::OnInactiveSetCursor
 
-Ustawia kursor nieaktywnym obiektem.
+Ustawia wskaźnik myszy dla nieaktywnego obiektu.
 
 ```
 HRESULT OnInactiveSetCursor(
@@ -119,12 +119,12 @@ HRESULT OnInactiveSetCursor(
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Returns E_NOTIMPL.
+Zwraca E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IPointerInactive::OnInactiveSetCursor](/windows/desktop/api/ocidl/nf-ocidl-ipointerinactive-oninactivesetcursor) w Windows SDK.
+Zobacz [IPointerInactive:: OnInactiveSetCursor](/windows/win32/api/ocidl/nf-ocidl-ipointerinactive-oninactivesetcursor) w Windows SDK.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

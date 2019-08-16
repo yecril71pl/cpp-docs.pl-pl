@@ -11,18 +11,18 @@ helpviewer_keywords:
 - CListCtrl class [MFC], sorting
 - CListCtrl class [MFC], arranging the list
 ms.assetid: dcc51e4c-0ca8-4319-bec5-6994cc8ac9e5
-ms.openlocfilehash: 7826b7d08869f8df01f8dad2c4da3c24c468d1be
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 76cff3e5b972c41d395ccec671f95c921005f1b9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504265"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511268"
 ---
 # <a name="scrolling-arranging-sorting-and-finding-in-list-controls"></a>Przewijanie, porządkowanie, sortowanie i znajdowanie w formantach listy
 
-Kontrolki listy ([CListCtrl](../mfc/reference/clistctrl-class.md)) są przewijany domyślnie. Aby uzyskać więcej informacji, zobacz [położenie przewijania](/windows/desktop/Controls/using-list-view-controls) w zestawie Windows SDK i [przewijania](../mfc/reference/clistctrl-class.md#scroll) funkcja elementu członkowskiego.
+Kontrolki listy ([CListCtrl](../mfc/reference/clistctrl-class.md)) są domyślnie przewijane. Aby uzyskać więcej informacji, zobacz [położenie przewijania](/windows/win32/Controls/using-list-view-controls) w Windows SDK i [przewiń](../mfc/reference/clistctrl-class.md#scroll) funkcję elementu członkowskiego.
 
-Możesz wywołać `CListCtrl` funkcji elementów członkowskich do Rozmieść elementy listy w kontrolce sortowania elementów i wyszukiwania określonych elementów. Aby uzyskać więcej informacji, zobacz [za pomocą kontrolki ListView](/windows/desktop/Controls/using-list-view-controls) w zestawie Windows SDK i [CListCtrl](../mfc/reference/clistctrl-class.md) członków [Rozmieść](../mfc/reference/clistctrl-class.md#arrange), [SortItems](../mfc/reference/clistctrl-class.md#sortitems), i [FindItem](../mfc/reference/clistctrl-class.md#finditem).
+Można wywołać `CListCtrl` funkcje członkowskie, aby rozmieścić elementy listy w kontrolce, sortować elementy i znaleźć określone elementy. Aby uzyskać więcej informacji, zobacz [Używanie kontrolek ListView](/windows/win32/Controls/using-list-view-controls) w Windows SDK i elementów członkowskich [CListCtrl](../mfc/reference/clistctrl-class.md) [porządkowanie](../mfc/reference/clistctrl-class.md#arrange), [SortItems](../mfc/reference/clistctrl-class.md#sortitems)i [FindItem](../mfc/reference/clistctrl-class.md#finditem).
 
 ## <a name="see-also"></a>Zobacz także
 

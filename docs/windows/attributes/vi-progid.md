@@ -1,21 +1,21 @@
 ---
-title: vi_progid — (C++ atrybutów COM)
+title: vi_progid (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.vi_progid
 helpviewer_keywords:
 - vi_progid attribute
 ms.assetid: a52449be-b93e-4111-b883-44bb8da53261
-ms.openlocfilehash: 7050543c9acf3801a99d3e32e119325900bdb050
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fbf5ab2bc4263356a1cfcf789865a3f7e286ccd7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404770"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514871"
 ---
-# <a name="viprogid"></a>vi_progid
+# <a name="vi_progid"></a>vi_progid
 
-Określa formularza niezależny od wersji identyfikatora ProgID.
+Określa niezależną od wersji identyfikator ProgID.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,24 +25,24 @@ Określa formularza niezależny od wersji identyfikatora ProgID.
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwa*<br/>
-Identyfikator ProgID niezależny od wersji reprezentujący obiekt.
+*name*<br/>
+Niezależny od wersji identyfikator ProgID reprezentujący obiekt.
 
-ProgID przedstawiają czytelny dla człowieka wersję identyfikator klasy (CLSID) używany do identyfikowania obiektów COM/ActiveX.
+Identyfikatory ProgID składają się na czytelną dla człowieka wersję identyfikatora klasy (CLSID) służącą do identyfikowania obiektów COM/ActiveX.
 
 ## <a name="remarks"></a>Uwagi
 
-**Vi_progid —** C++ atrybut pozwala określić identyfikator ProgID niezależny od wersji dla obiektu COM. Identyfikator ProgID ma formę *name1.name2.version*. Identyfikator ProgID niezależny od wersji nie ma *wersji*. Można określić zarówno `progid` i **vi_progid —** atrybuty na `coclass`. Jeśli nie określisz **vi_progid —**, niezależnie od wersji ProgID jest wartość określoną przez [progid](progid.md) atrybutu.
+Atrybut **vi_progid** C++ umożliwia określenie identyfikatora ProgID niezależnego od wersji dla obiektu com. Identyfikator ProgID ma postać *Name1. NAME2. Version*. Niezależny od wersji ProgID nie ma *wersji*. Można określić zarówno `progid` atrybuty `coclass` **vi_progid** , jak i. Jeśli nie określisz **vi_progid**, program ProgID niezależny od wersji jest wartością określoną przez atrybut [ProgID](progid.md) .
 
-**vi_progid —** oznacza `coclass` atrybutu, oznacza to, jeśli określisz **vi_progid —**, jest tak samo jak określanie `coclass` i **vi_progid —** atrybutów.
+**vi_progid** implikuje `coclass` atrybut, oznacza to, że jeśli określisz **vi_progid**, jest to takie samo, jak określenie `coclass` atrybutów i **vi_progid** .
 
-**Vi_progid —** atrybutu powoduje, że klasy do zarejestrowania się automatycznie w ramach określonej nazwy. Pliku .idl wygenerowanego identyfikatora ProgID wartości nie są wyświetlane.
+Atrybut **vi_progid** powoduje, że Klasa jest automatycznie rejestrowana pod określoną nazwą. Wygenerowany plik IDL nie będzie wyświetlał wartości ProgID.
 
-W projektach ATL Jeśli [coclass](coclass.md) atrybut również występuje, określony identyfikator ProgID jest używany przez `GetVersionIndependentProgID` — funkcja (wstawione przez `coclass` atrybutu).
+W projektach ATL, jeśli atrybut [klasy coclass](coclass.md) jest również obecny, określony ProgID jest używany przez `GetVersionIndependentProgID` funkcję `coclass` (wstawioną przez atrybut).
 
 ## <a name="example"></a>Przykład
 
-Zobacz [coclass](coclass.md) przykład użycie próbki **vi_progid —**.
+Zapoznaj się z przykładem [klasy coclass](coclass.md) dla przykładowego użycia **vi_progid**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -50,16 +50,16 @@ Zobacz [coclass](coclass.md) przykład użycie próbki **vi_progid —**.
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **— struktura**|
+|**Dotyczy**|**Klasa**, **Struktura**|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>
-[Klucz identyfikatora progID](/windows/desktop/com/-progid--key)
+[Klucz ProgID](/windows/win32/com/-progid--key)

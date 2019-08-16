@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 066494f4ba0119f4576e0c8e3c06d87ff736aea3
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 732bdf980240b1f496c1aca56c8a89b6a7f52d27
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916729"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502179"
 ---
 # <a name="cwinapp-class"></a>Klasa CWinApp
 
@@ -260,7 +260,7 @@ class CWinApp : public CWinThread
 |[CWinApp::OnIdle](#onidle)|Przesłoń, aby przetwarzać czas bezczynności specyficzny dla aplikacji.|
 |[CWinApp::OpenDocumentFile](#opendocumentfile)|Wywoływane przez platformę, by otworzyć dokument z pliku.|
 |[CWinApp::ParseCommandLine](#parsecommandline)|Analizuje poszczególne parametry i flagi w wierszu polecenia.|
-|[CWinApp::PreTranslateMessage](#pretranslatemessage)|Filtruje komunikaty przed ich wysłaniem do funkcji systemu Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).|
+|[CWinApp::PreTranslateMessage](#pretranslatemessage)|Filtruje komunikaty przed ich wysłaniem do funkcji systemu Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage).|
 |[CWinApp::ProcessMessageFilter](#processmessagefilter)|Przechwytuje niektóre komunikaty przed osiągnięciem aplikacji.|
 |[CWinApp::ProcessShellCommand](#processshellcommand)|Obsługuje argumenty wiersza polecenia i flagi.|
 |[CWinApp::ProcessWndProcException](#processwndprocexception)|Przechwytuje wszystkie Nieobsłużone wyjątki zgłoszone przez komunikaty i procedury obsługi poleceń aplikacji.|
@@ -850,7 +850,7 @@ BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 ### <a name="parameters"></a>Parametry
 
 *pPrintDlg*<br/>
-Wskaźnik do struktury [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) .
+Wskaźnik do struktury [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) .
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -902,7 +902,7 @@ Ta funkcja członkowska nie uwzględnia wielkości liter, dlatego ciągi w param
 > `GetProfileBinary`przydziela bufor i zwraca jego adres w \* *ppData*. Obiekt wywołujący jest odpowiedzialny za zwolnienie buforu przy użyciu polecenia **delete []** .
 
 > [!IMPORTANT]
-> Dane zwrócone przez tę funkcję nie muszą mieć wartości NULL, a obiekt wywołujący musi przeprowadzić walidację. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Dane zwrócone przez tę funkcję nie muszą mieć wartości NULL, a obiekt wywołujący musi przeprowadzić walidację. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="example"></a>Przykład
 
@@ -943,7 +943,7 @@ Ta funkcja członkowska obsługuje notację szesnastkową dla wartości w. Plik 
 Ta funkcja członkowska nie uwzględnia wielkości liter, dlatego ciągi w parametrach *lpszSection* i *lpszEntry* mogą się różnić w przypadku.
 
 > [!IMPORTANT]
-> Dane zwrócone przez tę funkcję nie muszą mieć wartości NULL, a obiekt wywołujący musi przeprowadzić walidację. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Dane zwrócone przez tę funkcję nie muszą mieć wartości NULL, a obiekt wywołujący musi przeprowadzić walidację. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="example"></a>Przykład
 
@@ -980,7 +980,7 @@ Wartość zwracana jest ciągiem z aplikacji. Plik INI lub *lpszDefault* , jeśl
 ### <a name="remarks"></a>Uwagi
 
 > [!IMPORTANT]
-> Dane zwrócone przez tę funkcję nie muszą mieć wartości NULL, a obiekt wywołujący musi przeprowadzić walidację. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Dane zwrócone przez tę funkcję nie muszą mieć wartości NULL, a obiekt wywołujący musi przeprowadzić walidację. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="example"></a>Przykład
 
@@ -1036,7 +1036,7 @@ virtual void HtmlHelp(
 Określa dodatkowe dane. Używana wartość zależy od wartości parametru *nCmd* . Wartość domyślna `0x000F` to [HH_HELP_CONTEXT](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command).
 
 *nCmd*<br/>
-Określa typ żądanej pomocy. Aby zapoznać się z listą możliwych wartości i wpływem na parametr *dwData* , zobacz parametr *uCommand* opisany w funkcjach interfejsu API [HtmlHelpW](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpw) lub [HtmlHelpA](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpa) w Windows SDK.  
+Określa typ żądanej pomocy. Aby zapoznać się z listą możliwych wartości i wpływem na parametr *dwData* , zobacz parametr *uCommand* opisany w funkcjach interfejsu API [HtmlHelpW](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpw) lub [HtmlHelpA](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpa) w Windows SDK.  
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1063,7 +1063,7 @@ Inicjalizacja aplikacji jest koncepcyjnie dzielona na dwie sekcje: jednorazowe i
 Przesłoń `InitInstance` , aby zainicjować każde nowe wystąpienie aplikacji uruchomionej w systemie Windows. Zwykle przesłonisz `InitInstance` Konstruowanie obiektu głównego okna i `CWinThread::m_pMainWnd` ustawisz element członkowski danych w taki sposób, aby wskazywał to okno. Aby uzyskać więcej informacji na temat przesłaniania tej funkcji [elementu członkowskiego, zobacz CWinApp: Klasa](../../mfc/cwinapp-the-application-class.md)aplikacji.
 
 > [!NOTE]
-> Aplikacje MFC muszą być zainicjowane jako Apartament jednowątkowy (STA). Jeśli wywołasz [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) w `InitInstance` przesłonięciu, określ COINIT_APARTMENTTHREADED (zamiast COINIT_MULTITHREADED).
+> Aplikacje MFC muszą być zainicjowane jako Apartament jednowątkowy (STA). Jeśli wywołasz [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) w `InitInstance` przesłonięciu, określ COINIT_APARTMENTTHREADED (zamiast COINIT_MULTITHREADED).
 
 ### <a name="example"></a>Przykład
 
@@ -1099,7 +1099,7 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
 Wskazuje ciąg zakończony znakiem null, który zawiera nazwę zasobu kursora. `CString` Dla tego argumentu można użyć.
 
 *nIDResource*<br/>
-Identyfikator zasobu kursora. Aby uzyskać listę zasobów, zobacz [LoadCursor](/windows/desktop/api/winuser/nf-winuser-loadcursora) w Windows SDK.
+Identyfikator zasobu kursora. Aby uzyskać listę zasobów, zobacz [LoadCursor](/windows/win32/api/winuser/nf-winuser-loadcursorw) w Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1142,7 +1142,7 @@ Dojście do ikony, jeśli się powiedzie; w przeciwnym razie wartość NULL.
 Aby uzyskać dostęp do wstępnie zdefiniowanych ikon systemu Windows, można użyć funkcji składowej [LoadStandardIcon](#loadstandardicon) lub [LoadOEMIcon](#loadoemicon) .
 
 > [!NOTE]
-> Ta funkcja członkowska wywołuje funkcję Win32 API [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona), która może ładować ikonę, której rozmiar jest zgodny z wartościami metryk systemu SM_CXICON i SM_CYICON.
+> Ta funkcja członkowska wywołuje funkcję Win32 API [LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw), która może ładować ikonę, której rozmiar jest zgodny z wartościami metryk systemu SM_CXICON i SM_CYICON.
 
 ##  <a name="loadoemcursor"></a>CWinApp:: LoadOEMCursor
 
@@ -1252,7 +1252,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 ### <a name="parameters"></a>Parametry
 
 *lpszIconName*<br/>
-Stały identyfikator manifestu, który określa wstępnie zdefiniowaną ikonę systemu Windows. Te identyfikatory są zdefiniowane w systemie WINDOWS. C. Aby zapoznać się z listą możliwych wstępnie zdefiniowanych wartości i ich opisów, zobacz parametr *lpIconName* w [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona) w Windows SDK.
+Stały identyfikator manifestu, który określa wstępnie zdefiniowaną ikonę systemu Windows. Te identyfikatory są zdefiniowane w systemie WINDOWS. C. Aby zapoznać się z listą możliwych wstępnie zdefiniowanych wartości i ich opisów, zobacz parametr *lpIconName* w [LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw) w Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1437,7 +1437,7 @@ Nazwa aplikacji może pochodzić z parametru przesłanego do konstruktora [CWinA
 Zwrócone przez funkcję globalną [AfxGetAppName](application-information-and-management.md#afxgetappname). `m_pszAppName`jest publiczną zmienną typu **const char**<strong>\*</strong>.
 
 > [!NOTE]
-> Jeśli przypiszesz wartość do `m_pszAppName`, musi ona być przydzielana dynamicznie na stercie. Destruktor wywołuje Free () z tym wskaźnikiem. `CWinApp` Wiele chce użyć `_tcsdup`funkcji biblioteki wykonawczej () w celu wykonania przydziału. Ponadto zwolnij pamięć skojarzoną z bieżącym wskaźnikiem przed przypisaniem nowej wartości. Przykład:
+> Jeśli przypiszesz wartość do `m_pszAppName`, musi ona być przydzielana dynamicznie na stercie. Destruktor wywołuje Free () z tym wskaźnikiem. `CWinApp` Wiele chce użyć `_tcsdup`funkcji biblioteki wykonawczej () w celu wykonania przydziału. Ponadto zwolnij pamięć skojarzoną z bieżącym wskaźnikiem przed przypisaniem nowej wartości. Na przykład:
 
 [!code-cpp[NVC_MFCWindowing#57](../../mfc/reference/codesnippet/cpp/cwinapp-class_18.cpp)]
 
@@ -1784,7 +1784,7 @@ Aby uzyskać opis flag wiersza polecenia, zobacz [CCommandLineInfo:: m_nShellCom
 
 ##  <a name="pretranslatemessage"></a>CWinApp::P reTranslateMessage
 
-Przesłoń tę funkcję w celu filtrowania komunikatów okna przed wysłaniem ich do funkcji systemu Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) domyślną implementację Wykonuje translację klawiszy akceleratora, dlatego należy wywołać `CWinApp::PreTranslateMessage`funkcja członkowska w zastąpionej wersji.
+Przesłoń tę funkcję w celu filtrowania komunikatów okna przed wysłaniem ich do funkcji systemu Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) domyślną implementację Wykonuje translację klawiszy akceleratora, dlatego należy wywołać `CWinApp::PreTranslateMessage`funkcja członkowska w zastąpionej wersji.
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1793,7 +1793,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Parametry
 
 *pMsg*<br/>
-Wskaźnik do struktury [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) , która zawiera komunikat do przetworzenia.
+Wskaźnik do struktury [MSG](/windows/win32/api/winuser/ns-winuser-tagmsg) , która zawiera komunikat do przetworzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1815,7 +1815,7 @@ virtual BOOL ProcessMessageFilter(
 Określa kod punktu zaczepienia. Ta funkcja członkowska używa kodu do określenia sposobu przetwarzania *lpMsg.*
 
 *lpMsg*<br/>
-Wskaźnik do struktury [komunikatów](/windows/desktop/api/winuser/ns-winuser-tagmsg) systemu Windows.
+Wskaźnik do trukturę Windows [MSG](/windows/win32/api/winuser/ns-winuser-msg).
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1886,7 +1886,7 @@ virtual LRESULT ProcessWndProcException(
 Wskaźnik do nieprzechwyconego wyjątku.
 
 *pMsg*<br/>
-Struktura [komunikatów](/windows/desktop/api/winuser/ns-winuser-tagmsg) , która zawiera informacje o komunikacie systemu Windows, który spowodował wygenerowanie wyjątku przez strukturę.
+Komunikat [](/windows/win32/api/winuser/ns-winuser-msg)trukturę, który zawiera informacje o komunikacie systemu Windows, który spowodował wygenerowanie wyjątku przez strukturę.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2118,7 +2118,7 @@ void SelectPrinter(
 ### <a name="parameters"></a>Parametry
 
 *hDevNames*<br/>
-Dojście do struktury [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) , która identyfikuje sterownik, urządzenie i nazwy portów wyjściowych określonej drukarki.
+Dojście do [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)trukturę, które identyfikuje sterownik, urządzenie i nazwy portów wyjściowych określonej drukarki.
 
 *hDevMode*<br/>
 Dojście do struktury [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) , które określa informacje o inicjacji i środowisku drukarki.
@@ -2260,7 +2260,7 @@ virtual void WinHelp(
 Określa dodatkowe dane. Używana wartość zależy od wartości parametru *nCmd* .
 
 *nCmd*<br/>
-Określa typ żądanej pomocy. Aby zapoznać się z listą możliwych wartości i wpływem na parametr *dwData* , zobacz Funkcja [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) systemu Windows.
+Określa typ żądanej pomocy. Aby zapoznać się z listą możliwych wartości i wpływem na parametr *dwData* , zobacz Funkcja [WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw) systemu Windows.
 
 ### <a name="remarks"></a>Uwagi
 

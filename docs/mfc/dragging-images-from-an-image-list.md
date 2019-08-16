@@ -7,28 +7,28 @@ helpviewer_keywords:
 - image lists [MFC], dragging images from
 - images [MFC], dragging from image lists
 ms.assetid: af691db8-e4f0-4046-b7b9-9acc68d3713d
-ms.openlocfilehash: ba56a38cfc5ccf808c7d95f24666fff0313ecc43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3035e6f21d38568b364fce02358c3baed4870bc3
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262622"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508652"
 ---
 # <a name="dragging-images-from-an-image-list"></a>Przeciąganie obrazów z listy obrazów
 
-[CImageList](../mfc/reference/cimagelist-class.md) obejmuje funkcje przeznaczone dla przeciąganie obrazu na ekranie. Funkcje przeciągania przenoszenie obrazu sprawnie, kolor i bez żadnych migania kursora. Zarówno w przypadku maskowana, jak i usunąć ich maskowanie obrazy mogą być przeciągnięte.
+[Korzystanie CImageList](../mfc/reference/cimagelist-class.md) zawiera funkcje do przeciągnięcia obrazu na ekranie. Funkcja przeciągania bezproblemowo przenosi obraz, w kolorze i bez migotania kursora. Można przeciągać zarówno obrazy maskowane, jak i niemaskowane.
 
-[BeginDrag](../mfc/reference/cimagelist-class.md#begindrag) funkcja elementu członkowskiego zaczyna się operacja przeciągania. Parametry zawierają indeks obrazu, aby przeciągnąć i lokalizacja punktu aktywnego w obrazie. Punkt aktywny jest piksela, która przeciągania funkcji jest rozpoznawana jako lokalizacja ekranu dokładnego obrazu. Zazwyczaj aplikacja ustawia punkt aktywny tak, aby go pokrywa się z aktywnego punktu kursora myszy. [DragMove](../mfc/reference/cimagelist-class.md#dragmove) funkcja elementu członkowskiego przenosi obrazu do nowej lokalizacji.
+Funkcja członkowska [BeginDrag](../mfc/reference/cimagelist-class.md#begindrag) rozpoczyna operację przeciągania. Parametry obejmują indeks obrazu do przeciągnięcia i lokalizację punktu aktywnego w obrazie. Gorąca plamka to jeden piksel, który funkcja przeciągania rozpoznaje jako dokładną lokalizację ekranu obrazu. Zazwyczaj aplikacja ustawia punkt aktywny, tak aby był zgodny z gorącą plamą kursora myszy. Funkcja członkowska [DragMove](../mfc/reference/cimagelist-class.md#dragmove) przenosi obraz do nowej lokalizacji.
 
-[DragEnter](../mfc/reference/cimagelist-class.md#dragenter) funkcja elementu członkowskiego Ustawia położenie początkowe elementu przeciągnij obraz w ramach okna i rysuje obraz w położeniu. Parametry to wskaźnik do okna, w którym do rysowania obrazu i punkt, który określa współrzędne początkowe położenie w oknie. Współrzędne są względne wobec oknie w lewym górnym rogu, nie obszaru klienta. Dotyczy to wszystkich obrazów, przeciągając funkcje, których współrzędne jako parametry. Oznacza to, że należy kompensuje szerokości okna elementów, takich jak obramowania paska tytułu i pasek menu, określając współrzędne. Jeśli określisz **NULL** uchwyt okna podczas wywoływania `DragEnter`funkcji przeciągania narysuj obraz w kontekście urządzenia skojarzone z okna pulpitu i współrzędne są podawane względem lewego górnego rogu ekranu.
+Funkcja członkowska [DragEnter](../mfc/reference/cimagelist-class.md#dragenter) ustawia początkową pozycję przeciąganego obrazu w oknie i rysuje obraz na pozycji. Parametry obejmują wskaźnik do okna, w którym narysujesz obraz, i punkt, który określa współrzędne początkowej pozycji w oknie. Współrzędne są względem lewego górnego rogu okna, a nie obszaru klienckiego. To samo jest prawdziwe dla wszystkich funkcji przeciągania obrazu, które przyjmują współrzędne jako parametry. Oznacza to, że należy wyrównać szerokość elementów okna, takich jak obramowanie, pasek tytułu i pasek menu, podczas określania współrzędnych. Jeśli określisz uchwyt okna o **wartości null** podczas `DragEnter`wywoływania, funkcja przeciągania rysuje obraz w kontekście urządzenia skojarzonym z oknem pulpitu, a współrzędne są względne w lewym górnym rogu ekranu.
 
-`DragEnter` blokuje wszystkie inne aktualizacje do danego okna podczas operacji przeciągania. Jeśli musisz wykonać dowolnego rysunku podczas operacji przeciągania, takich jak wyróżnianie obiekt docelowy operacji przeciągania i upuszczania, można tymczasowo ukryć przeciąganego obrazu za pomocą [DragLeave](../mfc/reference/cimagelist-class.md#dragleave) funkcja elementu członkowskiego. Można również użyć [DragShowNoLock](../mfc/reference/cimagelist-class.md#dragshownolock) funkcja elementu członkowskiego.
+`DragEnter`blokuje wszystkie pozostałe aktualizacje danego okna podczas operacji przeciągania. Jeśli musisz wykonać dowolny rysunek podczas operacji przeciągania, na przykład podświetlić obiekt docelowy operacji przeciągania i upuszczania, możesz tymczasowo ukryć przeciągany obraz przy użyciu funkcji składowej [zdarzenie DragLeave](../mfc/reference/cimagelist-class.md#dragleave) . Można również użyć funkcji składowej [DragShowNoLock](../mfc/reference/cimagelist-class.md#dragshownolock) .
 
-Wywołaj [EndDrag](../mfc/reference/cimagelist-class.md#enddrag) po zakończeniu przeciągnięcie obrazu.
+Wywołaj [endDrag](../mfc/reference/cimagelist-class.md#enddrag) , gdy skończysz przeciąganie obrazu.
 
-[SetDragCursorImage](../mfc/reference/cimagelist-class.md#setdragcursorimage) funkcja elementu członkowskiego tworzy nowy obraz przeciągania, łącząc danego obrazu (zazwyczaj obraz kursora myszy) z bieżącego obrazu przeciągania. Ponieważ funkcje przeciągania korzystała z nowego obrazu w czasie trwania operacji przeciągania, należy używać Windows [wartość](/windows/desktop/api/winuser/nf-winuser-showcursor) funkcję, aby ukryć rzeczywiste kursor po wywołaniu `SetDragCursorImage`. W przeciwnym razie system może być w dwóch kursory myszy na czas trwania operacji przeciągania.
+Funkcja członkowska [SetDragCursorImage](../mfc/reference/cimagelist-class.md#setdragcursorimage) tworzy nowy obraz przeciągany przez połączenie danego obrazu (zazwyczaj obraz kursora myszy) z bieżącym przeciąganym obrazem. Ponieważ funkcje przeciągania używają nowego obrazu podczas operacji przeciągania, należy użyć funkcji [ShowCursor](/windows/win32/api/winuser/nf-winuser-showcursor) systemu Windows, aby ukryć rzeczywisty wskaźnik myszy po wywołaniu `SetDragCursorImage`. W przeciwnym razie system może wydawać dwa kursory myszy na czas trwania operacji przeciągania.
 
-Kiedy aplikacja wywołuje `BeginDrag`, system tworzy listę obrazu tymczasowego, wewnętrzne i kopiuje określony przeciągnij obraz do wewnętrznej listy. Wskaźnik do listy obrazów tymczasowe przeciągania można pobrać za pomocą [GetDragImage](../mfc/reference/cimagelist-class.md#getdragimage) funkcja elementu członkowskiego. Funkcja pobiera również bieżącej pozycji przeciągania i przesunięcie przeciągnij obraz względem pozycji przeciągania.
+Gdy aplikacja wywołuje `BeginDrag`program, system tworzy tymczasową, wewnętrzną listę obrazów i kopiuje określony obraz przeciągnij do listy wewnętrznej. Możesz pobrać wskaźnik do listy tymczasowych przeciąganych obrazów przy użyciu funkcji składowej [GetDragImage](../mfc/reference/cimagelist-class.md#getdragimage) . Funkcja pobiera również bieżącą pozycję przeciągania i Przesunięcie obrazu przeciągnij względem pozycji przeciągania.
 
 ## <a name="see-also"></a>Zobacz także
 

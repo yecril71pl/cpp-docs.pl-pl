@@ -1,21 +1,21 @@
 ---
-title: usesgetlasterror — (atrybut COM C++)
+title: usesgetlasterror (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.usesgetlasterror
 helpviewer_keywords:
 - usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
-ms.openlocfilehash: 9f050bbf69edf1ab8327a283299cb5e687ce5380
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b14316bd929f4b41b13a76c41e94b31b7534e9d8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407071"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513895"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 
-Informuje obiekt wywołujący, że jeśli występuje błąd podczas wywoływania tej funkcji, następnie element wywołujący może wywoływać `GetLastError` można pobrać kod błędu.
+Informuje obiekt wywołujący, że jeśli wystąpi błąd podczas wywoływania tej funkcji, wywołujący może następnie wywołać `GetLastError` , aby pobrać kod błędu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,11 +25,11 @@ Informuje obiekt wywołujący, że jeśli występuje błąd podczas wywoływania
 
 ## <a name="remarks"></a>Uwagi
 
-**Usesgetlasterror —** atrybut C++ ma taką samą funkcjonalność jak [usesgetlasterror —](/windows/desktop/Midl/usesgetlasterror) atrybutów w MIDL.
+Atrybut **usesgetlasterror** C++ ma takie same funkcje jak atrybut [usesgetlasterror](/windows/win32/Midl/usesgetlasterror) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Zobacz [idl_module](idl-module.md) przykład przykład sposobu użycia **usesgetlasterror —**.
+Zobacz przykład [idl_module](idl-module.md) , aby uzyskać przykład korzystania z **usesgetlasterror**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -37,12 +37,12 @@ Zobacz [idl_module](idl-module.md) przykład przykład sposobu użycia **usesget
 
 |||
 |-|-|
-|**Dotyczy**|**Moduł** atrybutu|
+|**Dotyczy**|atrybut **modułu**|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

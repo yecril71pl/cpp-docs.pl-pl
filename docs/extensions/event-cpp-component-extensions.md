@@ -1,5 +1,5 @@
 ---
-title: zdarzenia (C++sposób niezamierzony i C++/CX)
+title: zdarzenie (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-ms.openlocfilehash: 26bfc3bb9892486353f55a71cfd86a17f2de98b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b34a4f146cc7961ee1176580def6319185693e9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380333"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509760"
 ---
-# <a name="event--ccli-and-ccx"></a>zdarzenia (C++sposób niezamierzony i C++/CX)
+# <a name="event--ccli-and-ccx"></a>zdarzenie (C++/CLI i C++/CX)
 
-**Zdarzeń** deklaruje — słowo kluczowe *zdarzeń*, czyli powiadomienia do subskrybentów zarejestrowany (*procedury obsługi zdarzeń*) która jest przeprowadzana w stanie się coś istotnego.
+Słowo kluczowe **zdarzenia** deklaruje *zdarzenie*, które jest powiadomieniem do zarejestrowanych subskrybentów (*programy obsługi zdarzeń*), które miały coś interesu.
 
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze
 
-C++/CX obsługuje deklarowania *składowej zdarzenia* lub *bloku zdarzeń*. Element członkowski zdarzenia jest skrótem do deklarowania bloku zdarzeń. Domyślnie deklaruje element członkowski zdarzenia `add()`, `remove()`, i `raise()` funkcje, które są jawnie zadeklarowane w bloku zdarzeń. Aby dostosować funkcje w element członkowski zdarzenia, zamiast deklarowania bloku zdarzeń, a następnie zastąpić funkcje, których potrzebujesz.
+C++/CX obsługuje deklarowanie *elementu członkowskiego zdarzenia* lub *bloku zdarzeń*. Element członkowski zdarzenia jest skrótem do deklarowania bloku zdarzeń. Domyślnie członek zdarzenia deklaruje `add()`funkcje, `remove()`i `raise()` , które są zadeklarowane jawnie w bloku zdarzenia. Aby dostosować funkcje w składowej zdarzenia, zadeklaruj blok zdarzenia zamiast tego, a następnie zastąp wymagane funkcje.
 
 ### <a name="syntax"></a>Składnia
 
@@ -40,52 +40,52 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parametry
 
-*modifier*<br/>
-Modyfikatory, które mogą być używane w zgłoszeniu zdarzenia lub metody dostępu zdarzeń.  Możliwe wartości to **statyczne** i **wirtualnego**.
+*modyfikator*<br/>
+Modyfikator, który może być używany w deklaracji zdarzenia lub metodzie dostępu do zdarzeń.  Możliwe wartości są **statyczne** i **wirtualne**.
 
 *delegate*<br/>
-[Delegować](delegate-cpp-component-extensions.md), którego podpis programu obsługi zdarzeń muszą być zgodne.
+[Delegat](delegate-cpp-component-extensions.md), którego sygnatura musi być zgodna z programem obsługi zdarzeń.
 
-*nazwa_zdarzenia*<br/>
+*event_name*<br/>
 Nazwa zdarzenia.
 
 *return_value*<br/>
-Wartość zwracaną metody dostępu zdarzeń.  Jako możliwe do zweryfikowania, zwracanym typem musi być **void**.
+Wartość zwracana metody dostępu do zdarzenia.  Aby można było zweryfikować, zwracany typ musi być typem **void**.
 
 *parameters*<br/>
-(opcjonalnie) Parametry `raise` metody, która pasuje do podpisu z *delegować* parametru.
+obowiązkowe Parametry metody, które pasują do sygnatury parametru delegata. `raise`
 
 ### <a name="remarks"></a>Uwagi
 
-Zdarzenie jest skojarzenie między delegata, a funkcja członkowska (program obsługi zdarzeń), która odpowiada wyzwolenie zdarzenia i umożliwia klientom z dowolnej klasy do zarejestrowania metod, które są zgodne z podpis i zwracany typ delegata bazowego.
+Zdarzenie jest skojarzeniem między delegatem a funkcją członkowską (procedura obsługi zdarzeń), która reaguje na Wyzwalanie zdarzenia i umożliwia klientom z dowolnej klasy rejestrowanie metod, które są zgodne z sygnaturą i zwracanym typem źródłowego delegata.
 
-Istnieją dwa rodzaje zdarzeń deklaracje:
+Istnieją dwa rodzaje deklaracji zdarzeń:
 
-*element członkowski danych zdarzeń*<br/>
-Kompilator automatycznie tworzy magazynu dla zdarzenia w postaci elementu członkowskiego typu delegata i tworzy wewnętrzny `add()`, `remove()`, i `raise()` funkcji elementów członkowskich. Element członkowski danych zdarzenia muszą być zadeklarowane wewnątrz klasy. Zwracany typ zwracany typ obiektu delegowanego musi odpowiadać zwracanym typem obsługi zdarzeń.
+*element członkowski danych zdarzenia*<br/>
+Kompilator automatycznie tworzy magazyn dla zdarzenia w postaci elementu członkowskiego typu delegata i tworzy funkcje wewnętrzne `add()`, `remove()`i i `raise()` składowe. Składowa danych zdarzenia musi być zadeklarowana wewnątrz klasy. Zwracany typ typu zwracanego delegata musi być zgodny z typem zwracanym programu obsługi zdarzeń.
 
-*bloku zdarzeń*<br/>
-Blok zdarzeń umożliwia jawnie zadeklarować i dostosowywanie zachowania `add()`, `remove()`, i `raise()` metody.
+*blok zdarzeń*<br/>
+Blok zdarzeń pozwala jawnie zadeklarować i dostosować zachowanie `add()`metod, `remove()`, i `raise()` .
 
-Możesz użyć **+= operatory** i **operator-=** do dodawania i usuwania zdarzenia obsługi lub wywołanie `add()` i `remove()` metody jawnie.
+**Operatory + =** i **operator-=** umożliwiają dodawanie i usuwanie programu obsługi zdarzeń, `add()` a także wywoływanie metod i. `remove()`
 
-**Zdarzenie** jest kontekstowe słowo kluczowe; zobacz [Context-Sensitive Keywords](context-sensitive-keywords-cpp-component-extensions.md) Aby uzyskać więcej informacji.
+**zdarzenie** jest kontekstowego słowa kluczowego; Aby uzyskać więcej informacji, zobacz [kontekstowe słowa kluczowe](context-sensitive-keywords-cpp-component-extensions.md) .
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [zdarzenia (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755799.aspx).
+Aby uzyskać więcej informacji, zobacz [EventsC++(/CX)](../cppcx/events-c-cx.md).
 
-Jeśli zamierzasz dodać, a następnie usuń procedurę obsługi zdarzeń, musisz najpierw zapisać struktury EventRegistrationToken, który jest zwracany przez operacji dodawania. Następnie w operacji usuwania, należy użyć zapisanych struktury EventRegistrationToken do identyfikowania programu obsługi zdarzeń do usunięcia.
+Jeśli zamierzasz dodać, a następnie usunąć procedurę obsługi zdarzeń, musisz zapisać strukturę EventRegistrationToken, która jest zwracana przez operację dodawania. Następnie w operacji usuwania należy użyć zapisanej struktury EventRegistrationToken, aby zidentyfikować procedurę obsługi zdarzeń, która ma zostać usunięta.
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/ZW`
+Opcja kompilatora:`/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
-**Zdarzeń** — słowo kluczowe pozwala zadeklarować zdarzenia. Zdarzenie jest się dzieje w sposób, aby klasa zapewniała powiadomienia, gdy coś w zainteresowania.
+Słowo kluczowe **zdarzenia** umożliwia zadeklarowanie zdarzenia. Zdarzenie to sposób, w jaki Klasa dostarcza powiadomienia, gdy wystąpi coś zainteresowania.
 
 ### <a name="syntax"></a>Składnia
 
@@ -104,74 +104,74 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parametry
 
-*modifier*<br/>
-Modyfikatory, które mogą być używane w zgłoszeniu zdarzenia lub metody dostępu zdarzeń.  Możliwe wartości to **statyczne** i **wirtualnego**.
+*modyfikator*<br/>
+Modyfikator, który może być używany w deklaracji zdarzenia lub metodzie dostępu do zdarzeń.  Możliwe wartości są **statyczne** i **wirtualne**.
 
 *delegate*<br/>
-[Delegować](delegate-cpp-component-extensions.md), którego podpis programu obsługi zdarzeń muszą być zgodne.
+[Delegat](delegate-cpp-component-extensions.md), którego sygnatura musi być zgodna z programem obsługi zdarzeń.
 
-*nazwa_zdarzenia*<br/>
+*event_name*<br/>
 Nazwa zdarzenia.
 
 *return_value*<br/>
-Wartość zwracaną metody dostępu zdarzeń.  Jako możliwe do zweryfikowania, zwracanym typem musi być **void**.
+Wartość zwracana metody dostępu do zdarzenia.  Aby można było zweryfikować, zwracany typ musi być typem **void**.
 
 *parameters*<br/>
-(opcjonalnie) Parametry `raise` metody, która pasuje do podpisu z *delegować* parametru.
+obowiązkowe Parametry metody, które pasują do sygnatury parametru delegata. `raise`
 
 ### <a name="remarks"></a>Uwagi
 
-Zdarzenie jest skojarzenie między delegata, a funkcja członkowska (program obsługi zdarzeń), która odpowiada wyzwolenie zdarzenia i umożliwia klientom z dowolnej klasy do zarejestrowania metod, które są zgodne z podpis i zwracany typ delegata bazowego.
+Zdarzenie jest skojarzeniem między delegatem a funkcją członkowską (procedura obsługi zdarzeń), która reaguje na Wyzwalanie zdarzenia i umożliwia klientom z dowolnej klasy rejestrowanie metod, które są zgodne z sygnaturą i zwracanym typem źródłowego delegata.
 
-Delegat może mieć co najmniej jeden skojarzone metody, które będzie wywoływany, gdy kod wskazuje, że wystąpiło zdarzenie. Zdarzenia w jednym programie mogą być udostępniane do innych programów, których platformą docelową .NET Framework środowisko uruchomieniowe języka wspólnego.
+Delegat może mieć jedną lub więcej skojarzonych metod, które będą wywoływane, gdy kod wskazuje, że zdarzenie wystąpiło. Zdarzenie w jednym programie można udostępnić innym programom przeznaczonym dla .NET Framework środowiska uruchomieniowego języka wspólnego.
 
-Istnieją dwa rodzaje zdarzeń deklaracje:
+Istnieją dwa rodzaje deklaracji zdarzeń:
 
-*elementy członkowskie danych zdarzeń*<br/>
-Magazyn dla zdarzenia w formularzu elementu członkowskiego typu delegata jest tworzony przez kompilator dla zdarzenia element członkowski danych.  Element członkowski danych zdarzenia muszą być zadeklarowane wewnątrz klasy. To jest także znana jako zdarzenie proste (zobacz poniższy przykład kodu).
+*elementy członkowskie danych zdarzenia*<br/>
+Magazyn dla zdarzenia w formie elementu członkowskiego typu delegata jest tworzony przez kompilator dla zdarzeń elementu członkowskiego danych.  Składowa danych zdarzenia musi być zadeklarowana wewnątrz klasy. Jest to również znane jako zdarzenie proste (Zobacz przykład kodu poniżej).
 
 *bloki zdarzeń*<br/>
-Bloki zdarzeń pozwalają dostosować zachowanie, Dodaj, Usuń i metod Zgłoś poprzez implementację, Dodaj, Usuń i zgłoś metod. Podpis metody Zgłoś Dodaj, Usuń i musi odpowiadać podpisowi delegata.  Blok zdarzeń nie są elementy członkowskie danych, a każde użycie jako element członkowski danych spowoduje wygenerowanie błędu kompilatora.
+Bloki zdarzeń pozwalają dostosować zachowanie metod dodawania, usuwania i wywoływania, implementując metody dodawania, usuwania i wywoływania. Sygnatura metod dodawania, usuwania i wywoływania musi być zgodna z podpisem delegata.  Zdarzenia bloku zdarzeń nie są elementami członkowskimi danych, a żadne użycie jako element członkowski danych spowoduje wygenerowanie błędu kompilatora.
 
-Zwracany typ procedury obsługi zdarzeń musi odpowiadać zwracany typ delegata.
+Zwracany typ procedury obsługi zdarzeń musi być zgodny z typem zwracanym delegata.
 
-W .NET Framework, można traktować element członkowski danych, tak jakby sama metoda (czyli `Invoke` metoda jego odpowiedniego delegata). Do deklarowania element członkowski danych zdarzenie zarządzane, należy wstępnie typ delegata. Z kolei metoda zdarzenie zarządzane niejawnie definiuje odpowiedniego zarządzanego obiektu delegowanego, jeśli nie jest już zdefiniowany.  Zobacz przykładowy kod na końcu tego tematu, na przykład.
+W .NET Framework można traktować składową danych tak, jakby była to sama metoda (czyli `Invoke` Metoda odpowiedniego delegata). Należy wstępnie zdefiniować typ delegata do deklarowania elementu członkowskiego danych zdarzenia zarządzanego. W przeciwieństwie do zarządzanej metody zdarzenia niejawnie definiuje odpowiadającą zarządzaną delegata, jeśli nie jest jeszcze zdefiniowana.  Przykład zawiera przykładowy kod na końcu tego tematu.
 
-Podczas deklarowania zdarzenie zarządzane, można określić dostępu, które będą wywoływane podczas obsługi zdarzeń są dodawane lub usuwane add i remove przy użyciu operatorów += i-=. Dodaj, Usuń i zgłoś metody może być wywoływana jawnie.
+Podczas deklarowania zdarzenia zarządzanego można określić metody dostępu Add i Remove, które będą wywoływane, gdy programy obsługi zdarzeń zostaną dodane lub usunięte przy użyciu operatorów + = i-=. Metody dodawania, usuwania i wywoływania mogą być wywoływane jawnie.
 
-Poniższe kroki należy podjąć w celu tworzenia i używania zdarzenia w programie Visual C++:
+Aby można było tworzyć i używać zdarzeń w wizualizacji C++, należy wykonać następujące czynności:
 
-1. Tworzenie lub identyfikowanie delegata. Jeśli zamierzasz zdefiniować własne zdarzenia, również upewnij się, że istnieje obiekt delegowany do za pomocą **zdarzeń** — słowo kluczowe. Jeśli wstępnie zdefiniowane zdarzenia w .NET Framework na przykład, następnie odbiorcy zdarzenia muszą jedynie znać nazwę delegata.
+1. Utwórz lub Zidentyfikuj delegata. W przypadku definiowania własnego zdarzenia należy również upewnić się, że istnieje delegat do użycia ze słowem kluczowym **zdarzenia** . Jeśli zdarzenie jest wstępnie zdefiniowane, w .NET Framework na przykład, odbiorcy zdarzenia muszą znać nazwę delegata.
 
-2. Utwórz klasę, która zawiera:
+2. Utwórz klasę zawierającą:
 
-   - Zdarzenie utworzone na podstawie obiektu delegowanego.
+   - Zdarzenie utworzone na podstawie delegata.
 
-   - (Opcjonalnie) Metoda, która sprawdza, czy wystąpienie delegata jest zadeklarowana za pomocą **zdarzeń** istnieje — słowo kluczowe. W przeciwnym razie ta logika muszą być umieszczone w kodzie, który wyzwala zdarzenie.
+   - Obowiązkowe Metoda, która sprawdza, czy wystąpienie delegata zadeklarowane za pomocą słowa kluczowego **zdarzenia** istnieje. W przeciwnym razie logika musi być umieszczona w kodzie, który uruchamia zdarzenie.
 
-   - Metody, które wywołują zdarzenia. Te metody mogą być zastąpienia niektóre funkcje klasy bazowej.
+   - Metody wywołujące zdarzenie. Metody te można zastępować w niektórych funkcjach klasy podstawowej.
 
-   Ta klasa definiuje zdarzenia.
+   Ta klasa definiuje zdarzenie.
 
-3. Należy zdefiniować co najmniej jedną klasę, łączących się zdarzenie z metod. Każda z tych klas zostanie skojarzony co najmniej jednej metody z zdarzenia w klasie bazowej.
+3. Zdefiniuj co najmniej jedną klasę, która łączy metody ze zdarzeniem. Każda z tych klas spowoduje skojarzenie jednej lub więcej metod ze zdarzeniem w klasie bazowej.
 
 4. Użyj zdarzenia:
 
-   - Utwórz obiekt klasy, który zawiera deklarację zdarzeń.
+   - Utwórz obiekt klasy, która zawiera deklarację zdarzenia.
 
-   - Utwórz obiekt klasy, która zawiera definicji zdarzeń.
+   - Utwórz obiekt klasy, która zawiera definicję zdarzenia.
 
-Aby uzyskać więcej informacji na temat C++/zdarzenia interfejsu wiersza polecenia, zobacz
+Aby uzyskać więcej informacji C++o zdarzeniach/CLI, zobacz
 
 - [Zdarzenia w interfejsie](../dotnet/how-to-use-events-in-cpp-cli.md)
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/clr`
+Opcja kompilatora:`/clr`
 
 ### <a name="examples"></a>Przykłady
 
-Poniższy przykład kodu demonstruje deklarującego pary delegatów, zdarzenia i procedury obsługi zdarzeń; Subskrypcja (dodanie) procedury obsługi zdarzeń; wywoływanie programów obsługi zdarzeń; a następnie anulowania subskrypcji (usunięcie) procedury obsługi zdarzeń.
+Poniższy przykład kodu ilustruje deklarowanie par delegatów, zdarzeń i obsługi zdarzeń; Subskrybowanie (Dodawanie) obsługi zdarzeń; Wywoływanie programów obsługi zdarzeń; a następnie Anuluj subskrypcję (usuwając) programów obsługi zdarzeń.
 
 ```cpp
 // mcppv2_events.cpp
@@ -230,7 +230,7 @@ OnClick: 7, 3.14159
 OnDblClick: Hello
 ```
 
-Poniższy przykład kodu demonstruje przez logikę używaną do generowania `raise` metoda trivial zdarzeń: Jeśli zdarzenie ma co najmniej jeden subskrybentów, wywołanie `raise` metoda jawnie lub niejawnie wywołuje delegata. Jeśli delegat zwracany typ nie jest **void** i jeśli zero subskrybentów zdarzeń `raise` metoda zwraca wartość domyślna dla typu delegata. W przypadku subskrybentów zdarzeń podczas wywoływania `raise` metoda po prostu zwraca i jest zgłaszany żaden wyjątek. Jeśli delegat zwracany typ jest **void**, jest zwracany typ delegata.
+Poniższy przykład kodu demonstruje logikę używaną do generowania `raise` metody prostego zdarzenia: Jeśli zdarzenie ma jednego lub więcej subskrybentów, wywoływanie `raise` metody niejawnie lub jawnie wywołuje delegata. Jeśli typ zwracany delegata nie jest typem **void** i jeśli nie istnieją Subskrybenci zdarzeń, `raise` Metoda zwraca wartość domyślną dla typu delegata. Jeśli nie ma subskrybentów zdarzeń, wywołanie `raise` metody po prostu zwraca i żaden wyjątek nie zostanie zgłoszony. Jeśli typ zwracany delegata nie jest typem **void**, zwracany jest typ delegata.
 
 ```cpp
 // trivial_events.cpp

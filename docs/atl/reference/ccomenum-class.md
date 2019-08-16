@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnum class
 ms.assetid: bff7dd7b-eb6e-4d6e-96ed-2706e66c8b3b
-ms.openlocfilehash: 4d83b06f37c132c0d2325304e2cc155ccb490690
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7252eb2fa5d34618a1c38484a2506bae27a1106a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246398"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497219"
 ---
 # <a name="ccomenum-class"></a>Klasa CComEnum
 
-Ta klasa definiuje obiekt modułu wyliczającego COM, na podstawie tablicy.
+Ta klasa definiuje obiekt modułu wyliczającego COM w oparciu o tablicę.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,36 +31,36 @@ public CComObjectRootEx<ThreadModel>
 
 #### <a name="parameters"></a>Parametry
 
-*Base*<br/>
-Moduł wyliczający interfejsu COM. Zobacz [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) przykład.
+*Opiera*<br/>
+Interfejs modułu wyliczającego COM. Zapoznaj się z przykładem [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) .
 
 *piid*<br/>
-Wskaźnik do Identyfikatora interfejsu interfejsu modułu wyliczającego.
+Wskaźnik do identyfikatora interfejsu w interfejsie modułu wyliczającego.
 
 *T*<br/>
-Typ elementu udostępnianych przez interfejs modułu wyliczającego.
+Typ elementu uwidocznionego przez interfejs modułu wyliczającego.
 
 *Kopiuj*<br/>
-Jednorodnej [kopiowania klasy zasad](../../atl/atl-copy-policy-classes.md).
+Jednorodna [Klasa zasad kopiowania](../../atl/atl-copy-policy-classes.md).
 
 *ThreadModel*<br/>
-Model wątkowości klasy. Ten parametr używany w projekcie modelu wątku obiektów globalnych.
+Model wątkowości klasy. Ten parametr domyślnie jest modelem wątku obiektu globalnego używanym w projekcie.
 
 ## <a name="remarks"></a>Uwagi
 
-`CComEnum` Definiuje obiekt modułu wyliczającego COM, na podstawie tablicy. Ta klasa jest odpowiednikiem [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) który implementuje moduł wyliczający oparta na kontenerze standardowej biblioteki języka C++. Typowe kroki dotyczące korzystania z tej klasy są przedstawione poniżej. Aby uzyskać więcej informacji, zobacz [kolekcje i wyliczenia ATL](../../atl/atl-collections-and-enumerators.md).
+`CComEnum`definiuje obiekt modułu wyliczającego COM na podstawie tablicy. Ta klasa jest analogiczna do [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) , która implementuje moduł wyliczający C++ oparty na kontenerze biblioteki standardowej. Typowe kroki dotyczące korzystania z tej klasy przedstawiono poniżej. Aby uzyskać więcej informacji, zobacz [zestawy ATL i moduły wyliczające](../../atl/atl-collections-and-enumerators.md).
 
 ## <a name="to-use-this-class"></a>Aby użyć tej klasy:
 
-- **Element TypeDef** specjalizacji tej klasy.
+- **element typedef** jest specjalizacją tej klasy.
 
-- Użyj **typedef** jako argument szablonu w specjalizacji `CComObject`.
+- Użyj `CComObject`elementu **typedef** jako argumentu szablonu w specjalizacji.
 
-- Utwórz wystąpienie obiektu `CComObject` specjalizacji.
+- Utwórz wystąpienie `CComObject` specjalizacji.
 
-- Inicjują obiekt modułu wyliczającego, wywołując [CComEnumImpl::Init](../../atl/reference/ccomenumimpl-class.md#init).
+- Zainicjuj obiekt Enumerator przez wywołanie [CComEnumImpl:: init](../../atl/reference/ccomenumimpl-class.md#init).
 
-- Zwraca interfejs modułu wyliczającego do klienta.
+- Zwróć interfejs modułu wyliczającego do klienta.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -76,23 +76,23 @@ Model wątkowości klasy. Ten parametr używany w projekcie modelu wątku obiekt
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcom.h
+**Nagłówek:** atlcom. h
 
 ## <a name="example"></a>Przykład
 
-Kodu pokazany poniżej zawiera funkcję wielokrotnego użytku, do tworzenia i inicjowania obiekt modułu wyliczającego.
+Kod przedstawiony poniżej udostępnia funkcję wielokrotnego użytku do tworzenia i inicjowania obiektu modułu wyliczającego.
 
 [!code-cpp[NVC_ATL_COM#32](../../atl/codesnippet/cpp/ccomenum-class_1.h)]
 
-Ta funkcja szablonu może służyć do implementowania `_NewEnum` właściwość interfejsu kolekcji, jak pokazano poniżej:
+Ta funkcja szablonu może służyć do implementowania `_NewEnum` właściwości interfejsu kolekcji, jak pokazano poniżej:
 
 [!code-cpp[NVC_ATL_COM#33](../../atl/codesnippet/cpp/ccomenum-class_2.h)]
 
-Ten kod tworzy **typedef** dla `CComEnum` który uwidacznia wektor wariantów za pośrednictwem `IEnumVariant` interfejsu. `CVariantArrayCollection` Klasy po prostu specjalizuje się `CreateEnumerator` do pracy z obiektami modułu wyliczającego tego typu i przekazuje wymagane argumenty.
+Ten kod tworzy **element typedef** dla `CComEnum` , który uwidacznia wektor wariantów za pomocą `IEnumVariant` interfejsu. Klasa `CVariantArrayCollection` jest po prostu `CreateEnumerator` wyspecjalizowana do pracy z obiektami modułu wyliczającego tego typu i przekazuje wymagane argumenty.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
+[Przegląd klas](../../atl/atl-class-overview.md)<br/>
 [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)<br/>
 [Klasa CComEnumImpl](../../atl/reference/ccomenumimpl-class.md)<br/>
 [Klasa CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)

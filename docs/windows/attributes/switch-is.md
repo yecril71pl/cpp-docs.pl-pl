@@ -1,21 +1,21 @@
 ---
-title: switch_is — (C++ atrybutów COM)
+title: switch_is (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.switch_is
 helpviewer_keywords:
 - switch_is attribute
 ms.assetid: f1fffe5d-12d2-4e0f-8803-ccb715177d2d
-ms.openlocfilehash: ccac405480e415df17b42f02dce74759f578d025
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b72052f4cbd7f94b170ea58b8f7b284b85d7ab00
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407253"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513983"
 ---
-# <a name="switchis"></a>switch_is
+# <a name="switch_is"></a>switch_is
 
-Określa wyrażenie lub identyfikator działający jako discriminant Unii, który wybiera składowa typu Unii.
+Określa wyrażenie lub identyfikator działający jako discriminant Unii, który wybiera element członkowski Union.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,11 +25,11 @@ Określa wyrażenie lub identyfikator działający jako discriminant Unii, któr
 
 ## <a name="remarks"></a>Uwagi
 
-**Switch_is —** C++ atrybut ma taką samą funkcjonalność jak [switch_is —](/windows/desktop/Midl/switch-is) atrybutów w MIDL.
+Atrybut **switch_is** C++ ma takie same funkcje jak atrybut [switch_is](/windows/win32/Midl/switch-is) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Zobacz [przypadek](case-cpp.md) przykład użycie próbki **switch_is —**.
+Zobacz przykład [przypadku](case-cpp.md) przykładowego zastosowania **switch_is**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -37,12 +37,12 @@ Zobacz [przypadek](case-cpp.md) przykład użycie próbki **switch_is —**.
 
 |||
 |-|-|
-|**Dotyczy**|**typedef**|
+|**Dotyczy**|**własne**|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

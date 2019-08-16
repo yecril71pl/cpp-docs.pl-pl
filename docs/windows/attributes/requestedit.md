@@ -1,21 +1,21 @@
 ---
-title: requestedit — (atrybut COM C++)
+title: requestedit (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.requestedit
 helpviewer_keywords:
 - requestedit attribute
 ms.assetid: b3c24790-3c4a-4646-8722-03d7b51172ee
-ms.openlocfilehash: 30b0c5ec807865280c8e538ea701c3d1a5c4ef9c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e90506619d4f13d4e5627f9c06b997d7034b5f49
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407383"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514093"
 ---
 # <a name="requestedit"></a>requestedit
 
-Wskazuje, że właściwość obsługuje `OnRequestEdit` powiadomień.
+Wskazuje, że właściwość obsługuje `OnRequestEdit` powiadomienie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,11 +25,11 @@ Wskazuje, że właściwość obsługuje `OnRequestEdit` powiadomień.
 
 ## <a name="remarks"></a>Uwagi
 
-**Requestedit —** atrybut C++ ma taką samą funkcjonalność jak [requestedit —](/windows/desktop/Midl/requestedit) atrybutów w MIDL.
+Atrybut **requestedit** C++ ma takie same funkcje jak atrybut [requestedit](/windows/win32/Midl/requestedit) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [możliwej do wiązania](bindable.md) do użytku przykładowe **requestedit —**.
+Zobacz przykład dla [powiązania](bindable.md) z przykładowym wykorzystaniem **requestedit**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -37,12 +37,12 @@ Zobacz przykład [możliwej do wiązania](bindable.md) do użytku przykładowe *
 
 |||
 |-|-|
-|**Dotyczy**|Metody interfejsu|
+|**Dotyczy**|Interface — Metoda|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

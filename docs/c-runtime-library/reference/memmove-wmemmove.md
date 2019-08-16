@@ -25,16 +25,16 @@ helpviewer_keywords:
 - wmemmove function
 - memmove function
 ms.assetid: 3a906114-9cf3-40d7-bd99-ee452004f218
-ms.openlocfilehash: 988af1c2678e20ea40ce4dfe331a3b6c49db0547
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27811f56f1956bcaaea4ec589f7e6c71afaca380
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156567"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499617"
 ---
 # <a name="memmove-wmemmove"></a>memmove, wmemmove
 
-Przenosi buforu na inny. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [memmove_s —, wmemmove_s —](memmove-s-wmemmove-s.md).
+Przenosi jeden bufor do innego. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [memmove_s, wmemmove_s](memmove-s-wmemmove-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -56,23 +56,23 @@ wchar_t *wmemmove(
 *dest*<br/>
 Obiekt docelowy.
 
-*src*<br/>
+*SRC*<br/>
 Obiekt źródłowy.
 
-*Liczba*<br/>
-Liczba bajtów (**memmove**) ani znaków (**wmemmove —**) do skopiowania.
+*liczbą*<br/>
+Liczba bajtów (**memmove**) lub znaków (**wmemmove**) do skopiowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość *dest*.
+Wartość miejsca *docelowego*.
 
 ## <a name="remarks"></a>Uwagi
 
-Kopiuje *liczba* bajtów (**memmove**) ani znaków (**wmemmove —**) z *src* do *dest*. Niektóre regiony obszaru źródłowy i docelowy zachodziły na siebie, obie funkcje upewnij się, że oryginalne źródło bajty nakładających się są kopiowane przed zastąpieniem.
+Kopiuje *liczbę* bajtów (**memmove**) lub znaków (**wmemmove**) z *src* do miejsca *docelowego*. Jeśli niektóre regiony obszaru źródłowego i miejsca docelowego nakładają się na siebie, obie funkcje zapewniają, że pierwotne bajty źródłowe w nakładanym regionie są kopiowane przed zastąpieniem.
 
-**Uwaga dotycząca zabezpieczeń** upewnij się, że bufor docelowy jest taki sam lub większy rozmiar niż bufor źródłowy. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Uwaga dotycząca zabezpieczeń** Upewnij się, że bufor docelowy ma ten sam rozmiar lub większy niż bufor źródłowy. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-**Memmove** i **wmemmove —** funkcje zostaną wycofane tylko, jeśli stała **_CRT_SECURE_DEPRECATE_MEMORY** zdefiniowano przed instrukcji dołączania, aby funkcji, które mają być przestarzałe, tak jak w poniższym przykładzie:
+Funkcje **memmove** i **wmemmove** będą przestarzałe, jeśli stała **_CRT_SECURE_DEPRECATE_MEMORY** jest zdefiniowana przed instrukcją dołączenia, aby funkcje były przestarzałe, na przykład w poniższym przykładzie:
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY
@@ -91,9 +91,9 @@ lub
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**memmove**|\<string.h>|
-|**wmemmove**|\<wchar.h>|
+|**wmemmove**|\<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

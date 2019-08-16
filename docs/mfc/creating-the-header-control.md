@@ -5,40 +5,40 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], creating
 - header controls [MFC], creating
 ms.assetid: 7864d9d2-4a2c-4622-b58b-7b110a1e28d2
-ms.openlocfilehash: 669b13cf566f24bfcd5a29ae41af1cdb90513f73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 99269214666c324214422ad989dbbd8bff6fc345
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242318"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508811"
 ---
 # <a name="creating-the-header-control"></a>Tworzenie formantu nagłówka
 
-Kontrolki nagłówka nie jest dostępne bezpośrednio w edytorze okien dialogowych (mimo że można dodać kontrolkę listy, która zawiera kontrolki nagłówka o).
+Kontrolka nagłówka nie jest bezpośrednio dostępna w edytorze okien dialogowych (chociaż można dodać kontrolkę listy, która zawiera kontrolkę nagłówka).
 
-### <a name="to-put-a-header-control-in-a-dialog-box"></a>Umieszczenie kontrolki nagłówka w oknie dialogowym
+### <a name="to-put-a-header-control-in-a-dialog-box"></a>Aby umieścić kontrolkę nagłówka w oknie dialogowym
 
-1. Ręczne osadzania zmienną składową typu [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md) w klasy okien dialogowych.
+1. Ręcznie Osadź zmienną członkowską typu [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md) w klasie okna dialogowego.
 
-1. W [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), tworzenie i ustawianie stylów dla `CHeaderCtrl`, umieść ją i wyświetlenia go.
+1. W [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)Utwórz i ustaw style dla `CHeaderCtrl`, umieść je i Wyświetl.
 
-1. Dodawanie elementów do formantu nagłówka.
+1. Dodaj elementy do kontrolki nagłówek.
 
-1. Użyj okna właściwości do mapowania funkcji obsługi w klasy okien dialogowych dla wszystkich powiadomień kontrolki nagłówka wiadomości, które musi obsłużyć (zobacz [mapowanie komunikatów do funkcji](../mfc/reference/mapping-messages-to-functions.md)).
+1. Użyj okno Właściwości do mapowania funkcji obsługi w klasie okna dialogowego dla wszelkich komunikatów powiadomień o formancie nagłówka, które należy obsłużyć (zobacz [Mapowanie komunikatów do funkcji](../mfc/reference/mapping-messages-to-functions.md)).
 
-### <a name="to-put-a-header-control-in-a-view-not-a-clistview"></a>Umieszczenie kontrolki nagłówka w widoku (nie CListView)
+### <a name="to-put-a-header-control-in-a-view-not-a-clistview"></a>Aby umieścić kontrolkę nagłówka w widoku (nie CListView)
 
-1. Osadzanie [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md) obiektów w klasie widoku.
+1. Osadź obiekt [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md) w klasie widoku.
 
-1. Styl, umieść i wyświetlić okno kontrolki nagłówka w widoku [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) funkcja elementu członkowskiego.
+1. Styl, położenie i wyświetlanie okna kontrolki nagłówka w funkcji składowej [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) widoku.
 
-1. Dodawanie elementów do formantu nagłówka.
+1. Dodaj elementy do kontrolki nagłówek.
 
-1. Użyj okna właściwości do mapowania funkcji obsługi w klasie widoku dla wszystkich powiadomień kontrolki nagłówka wiadomości, które musi obsłużyć (zobacz [mapowanie komunikatów do funkcji](../mfc/reference/mapping-messages-to-functions.md)).
+1. Użyj okno Właściwości do mapowania funkcji obsługi w klasie widoku dla wszelkich komunikatów powiadomień o formancie nagłówka, które należy obsłużyć (zobacz [Mapowanie komunikatów do funkcji](../mfc/reference/mapping-messages-to-functions.md)).
 
-W obu przypadkach formantu osadzonego obiektu jest tworzony podczas tworzenia obiektu widoku lub w oknie dialogowym. Należy wywołać [CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create) można utworzyć okna kontrolki. Położenie formantu, należy wywołać [CHeaderCtrl::Layout](../mfc/reference/cheaderctrl-class.md#layout) ustalenie, początkowy rozmiar i położenie kontrolki i [SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos) można ustawić odpowiednie miejsce. Następnie dodaj elementy, zgodnie z opisem w [Dodawanie elementów do formantu nagłówka](../mfc/adding-items-to-the-header-control.md).
+W obu przypadkach osadzony obiekt sterowania jest tworzony podczas tworzenia obiektu widoku lub okna dialogowego. Następnie należy wywołać [CHeaderCtrl:: Create](../mfc/reference/cheaderctrl-class.md#create) , aby utworzyć okno sterowania. Aby ustawić położenie kontrolki, wywołaj [CHeaderCtrl:: układ](../mfc/reference/cheaderctrl-class.md#layout) , aby określić początkowy rozmiar i położenie kontrolki oraz [SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos) w celu ustawienia żądanego położenia. Następnie Dodaj elementy zgodnie z opisem w temacie [Dodawanie elementów do formantu nagłówka](../mfc/adding-items-to-the-header-control.md).
 
-Aby uzyskać więcej informacji, zobacz [Tworzenie formantu nagłówka](/windows/desktop/Controls/header-controls) w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [Tworzenie kontrolki nagłówka](/windows/win32/Controls/header-controls) w Windows SDK.
 
 ## <a name="see-also"></a>Zobacz także
 

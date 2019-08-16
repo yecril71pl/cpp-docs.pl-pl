@@ -12,16 +12,16 @@ helpviewer_keywords:
 - COleIPFrameWnd [MFC], OnCreateControlBars
 - COleIPFrameWnd [MFC], RepositionFrame
 ms.assetid: 24abb2cb-826c-4dda-a287-d8a8900a5763
-ms.openlocfilehash: 34388e635ba89d732ae3993074a2c8268e2289a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 483998529b83d9b28c6ab1b219c4f5288dbd8ec7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224559"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503832"
 ---
 # <a name="coleipframewnd-class"></a>Klasa COleIPFrameWnd
 
-Baza dla okna edycji w miejscu aplikacji.
+Podstawa okna edycji w miejscu aplikacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,20 +35,20 @@ class COleIPFrameWnd : public CFrameWnd
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[COleIPFrameWnd::COleIPFrameWnd](#coleipframewnd)|Konstruuje `COleIPFrameWnd` obiektu.|
+|[COleIPFrameWnd:: COleIPFrameWnd](#coleipframewnd)|Konstruuje `COleIPFrameWnd` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[COleIPFrameWnd::OnCreateControlBars](#oncreatecontrolbars)|Wywoływane przez platformę, gdy element jest aktywowany do edycji w miejscu.|
-|[COleIPFrameWnd::RepositionFrame](#repositionframe)|Metoda wywoływana przez platformę, by zmienić położenie okna edycji w miejscu.|
+|[COleIPFrameWnd:: funkcja OnCreateControlBars](#oncreatecontrolbars)|Wywoływane przez platformę, gdy element jest aktywowany do edycji w miejscu.|
+|[COleIPFrameWnd:: RepositionFrame](#repositionframe)|Wywoływane przez platformę, aby zmienić położenie okna edycji w miejscu.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa tworzy i stanowisk sterowania paski w oknie dokumentu aplikacji kontenera. Obsługuje także powiadomienia generowane przez osadzony [COleResizeBar](../../mfc/reference/coleresizebar-class.md) obiektu, kiedy użytkownik zmienia rozmiar okna edycji w miejscu.
+Ta klasa tworzy i ustawia paski kontrolne w oknie dokumentu aplikacji kontenera. Obsługuje również powiadomienia generowane przez osadzony obiekt [COleResizeBar](../../mfc/reference/coleresizebar-class.md) , gdy użytkownik zmienia rozmiar okna edycji w miejscu.
 
-Aby uzyskać więcej informacji na temat korzystania z `COleIPFrameWnd`, zapoznaj się z artykułem [aktywacji](../../mfc/activation-cpp.md).
+Aby uzyskać więcej informacji na `COleIPFrameWnd`temat korzystania z programu, zobacz [Aktywacja](../../mfc/activation-cpp.md)artykułu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -58,17 +58,17 @@ Aby uzyskać więcej informacji na temat korzystania z `COleIPFrameWnd`, zapozna
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[CFrameWnd](../../mfc/reference/cframewnd-class.md)
+[Obiektu CFrameWnd](../../mfc/reference/cframewnd-class.md)
 
 `COleIPFrameWnd`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxole.h
+**Nagłówek:** Afxole. h
 
-##  <a name="coleipframewnd"></a>  COleIPFrameWnd::COleIPFrameWnd
+##  <a name="coleipframewnd"></a>COleIPFrameWnd:: COleIPFrameWnd
 
-Konstruuje `COleIPFrameWnd` obiektu i inicjuje jego informacje o stanie w miejscu, który jest przechowywany w strukturze typu OLEINPLACEFRAMEINFO.
+Konstruuje `COleIPFrameWnd` obiekt i inicjuje informacje o stanie w miejscu, które są przechowywane w strukturze typu OLEINPLACEFRAMEINFO.
 
 ```
 COleIPFrameWnd();
@@ -76,11 +76,11 @@ COleIPFrameWnd();
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [OLEINPLACEFRAMEINFO](/windows/desktop/api/oleidl/ns-oleidl-tagoifi) w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [OLEINPLACEFRAMEINFO](/windows/win32/api/oleidl/ns-oleidl-oifi) w Windows SDK.
 
-##  <a name="oncreatecontrolbars"></a>  COleIPFrameWnd::OnCreateControlBars
+##  <a name="oncreatecontrolbars"></a>COleIPFrameWnd:: funkcja OnCreateControlBars
 
-Struktura wywołuje `OnCreateControlBars` działa, gdy element jest aktywowany do edycji w miejscu.
+Struktura wywołuje funkcję, `OnCreateControlBars` gdy element jest aktywowany do edycji w miejscu.
 
 ```
 virtual BOOL OnCreateControlBars(
@@ -95,22 +95,22 @@ virtual BOOL OnCreateControlBars(
 ### <a name="parameters"></a>Parametry
 
 *pWndFrame*<br/>
-Wskaźnik do okno ramowe aplikacji kontenera.
+Wskaźnik do okna ramki aplikacji kontenera.
 
 *pWndDoc*<br/>
-Wskaźnik do okna dokumentu na poziomie kontenera. Może mieć wartości NULL, jeśli kontener jest aplikacją SDI.
+Wskaźnik do okna poziomu dokumentu kontenera. Może mieć wartość NULL, jeśli kontener jest aplikacją SDI.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera w przypadku powodzenia; w przeciwnym razie 0.
+Niezerowe po powodzeniu; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja nic nie robi. Należy przesłonić tę funkcję, aby wykonywać żadnego specjalnego przetwarzania, wymagane do utworzenia pasków sterowania.
+Domyślna implementacja nie robi nic. Zastąp tę funkcję, aby wykonać wszelkie specjalne przetwarzanie wymagane podczas tworzenia pasków sterowania.
 
-##  <a name="repositionframe"></a>  COleIPFrameWnd::RepositionFrame
+##  <a name="repositionframe"></a>COleIPFrameWnd:: RepositionFrame
 
-Struktura wywołuje `RepositionFrame` funkcja elementu członkowskiego do układania paski sterowania i zmienić położenie okna edycji w miejscu, dzięki czemu wszystkie jest widoczna.
+Struktura wywołuje `RepositionFrame` funkcję członkowską, aby ułożyć paski kontroli i zmienić położenie okna edycji w miejscu, tak aby wszystkie były widoczne.
 
 ```
 virtual void RepositionFrame(
@@ -121,18 +121,18 @@ virtual void RepositionFrame(
 ### <a name="parameters"></a>Parametry
 
 *lpPosRect*<br/>
-Wskaźnik do `RECT` struktury lub `CRect` obiekt zawierający w miejscu ramki okna bieżące współrzędne, w pikselach, względem pola klienta.
+Wskaźnik do `RECT` struktury `CRect` lub obiektu zawierającego bieżące Współrzędne położenia okna ramki w pikselach względem obszaru klienckiego.
 
 *lpClipRect*<br/>
-Wskaźnik do `RECT` struktury lub `CRect` obiekt zawierający w miejscu ramki okna bieżącego prostokątnego wycinka współrzędne, w pikselach, względem pola klienta.
+Wskaźnik do `RECT` struktury `CRect` lub obiektu zawierającego bieżące współrzędne prostokąta wycinka okna ramki w pikselach względem obszaru klienckiego.
 
 ### <a name="remarks"></a>Uwagi
 
-Układ pasków sterowania w oknie kontenera, który różni się od, wykonywane przez okno ramowe / OLE. Okno ramowe / OLE oblicza pozycji paski sterowania i innych obiektów z danego okno ramowe rozmiaru, tak jak wywołanie [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout). Obszar klienta to, co jeszcze pozostało po odjęciu to miejsce, paskami sterowania i innych obiektów. A `COleIPFrameWnd` okna, z drugiej strony, umieszcza pasków narzędzi zgodnie z obszaru danego klienta. Innymi słowy `CFrameWnd::RecalcLayout` działa "z zewnątrz,", natomiast `COleIPFrameWnd::RepositionFrame` działa "od środka na zewnątrz."
+Układ pasków sterowania w oknie kontenera różni się od tego, który jest wykonywany przez okno ramki inne niż OLE. Okno ramki inne niż OLE oblicza pozycje pasków sterowania i innych obiektów z danego rozmiaru okna ramki, jak w wywołaniu [obiektu CFrameWnd:: RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout). Obszar klienta to to, co pozostanie, gdy zostanie odjęte miejsce dla pasków sterowania i innych obiektów. `COleIPFrameWnd` Okno z drugiej strony umieszcza paski narzędzi zgodnie z danym obszarem klienta. Innymi słowy, `CFrameWnd::RecalcLayout` działa "z zewnątrz w `COleIPFrameWnd::RepositionFrame` ", "działa" od wewnątrz ".
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[Przykład HIERSVR MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CFrameWnd](../../mfc/reference/cframewnd-class.md)

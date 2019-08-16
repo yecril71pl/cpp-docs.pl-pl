@@ -1,21 +1,21 @@
 ---
-title: helpstringcontext — (atrybut COM C++)
+title: helpstringcontext (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstringcontext
 helpviewer_keywords:
 - helpstringcontext attribute [C++]
 ms.assetid: d4cd135e-d91c-4aa3-9353-8aeb096f52cf
-ms.openlocfilehash: a6df5b63291fbc54d6c12a116fccd8372e8ced9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae48c6216b1f1d987b33eff50acf9d82dc551400
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409580"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501487"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
-Określa identyfikator tematu pomocy w pliku hlp lub chm.
+Określa identyfikator tematu pomocy w pliku HLP lub chm.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,12 +25,12 @@ Określa identyfikator tematu pomocy w pliku hlp lub chm.
 
 ### <a name="parameters"></a>Parametry
 
-*Identyfikator kontekstu*<br/>
-Identyfikator kontekstu pomocy w 32-bitowych w **pomocy** pliku.
+*Identyfikator ContextId*<br/>
+32-bitowy identyfikator kontekstu pomocy w pliku **pomocy** .
 
 ## <a name="remarks"></a>Uwagi
 
-**Helpstringcontext —** atrybut C++ ma taką samą funkcjonalność jak [helpstringcontext —](/windows/desktop/Midl/helpstringcontext) odl — atrybut.
+Atrybut **helpstringcontext** C++ ma takie same funkcje jak atrybut [helpstringcontext](/windows/win32/Midl/helpstringcontext) odl.
 
 ## <a name="example"></a>Przykład
 
@@ -54,12 +54,12 @@ __interface IMyI
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **interfejsu**, interfejs — metoda|
+|**Dotyczy**|**Klasa**, **interfejs**, metoda interfejsu|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

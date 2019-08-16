@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: db2dcf7c60d164f9d04eb98f8eaac79ae14e3e73
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: 442860b1751591c5763a768f9bd9b6ba59f33fa5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821251"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504886"
 ---
 # <a name="cmfctabctrl-class"></a>Klasa CMFCTabCtrl
 
@@ -177,7 +177,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::OnDragEnter](#ondragenter)|Wywoływane przez platformę po pierwszym przeciągnięciu kursora do okna kontrolki karta.|
 |[CMFCTabCtrl::OnDragOver](#ondragover)|Wywoływane przez platformę w trakcie operacji przeciągania, gdy wskaźnik myszy zostanie przesunięty nad oknem elementu docelowego upuszczania. (Przesłania [CMFCBaseTabCtrl:: OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover).)|
 |[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|Wyświetla menu podręczne okna z kartami, czeka, aż użytkownik wybierze kartę, i wybierze kartę aktywne.|
-|`CMFCTabCtrl::PreTranslateMessage`|Tłumaczy komunikaty okna przed ich wysłaniem do funkcji systemu Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) . (Przesłania [CMFCBaseTabCtrl::P retranslatemessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|
+|`CMFCTabCtrl::PreTranslateMessage`|Tłumaczy komunikaty okna przed ich wysłaniem do funkcji systemu Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . (Przesłania [CMFCBaseTabCtrl::P retranslatemessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|
 |`CMFCTabCtrl::RecalcLayout`|Ponownie oblicza układ wewnętrzny kontrolki karta. (Przesłania [CMFCBaseTabCtrl:: RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|
 |[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|Ustawia bieżącą kartę kontrolki karta jako aktywną kartę w grupie karta interfejs wielu dokumentów.|
 |[CMFCTabCtrl::SetActiveTab](#setactivetab)|Aktywuje kartę. (Przesłania [CMFCBaseTabCtrl:: SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|
@@ -874,7 +874,7 @@ virtual DROPEFFECT OnDragEnter(
 podczas Wskazuje obiekt danych, który zawiera dane przeciągane przez użytkownika.
 
 *dwKeyState*<br/>
-podczas Zawiera stan klawiszy modyfikujących. Ten parametr jest kombinacją bitową (lub) następujących wartości: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON i MK_RBUTTON. Aby uzyskać więcej informacji, zobacz sekcję **Parametry komunikatu** [o danych wejściowych myszy](/windows/desktop/inputdev/about-mouse-input).
+podczas Zawiera stan klawiszy modyfikujących. Ten parametr jest kombinacją bitową (lub) następujących wartości: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON i MK_RBUTTON. Aby uzyskać więcej informacji, zobacz sekcję **Parametry komunikatu** [o danych wejściowych myszy](/windows/win32/inputdev/about-mouse-input).
 
 *moment*<br/>
 podczas Zawiera bieżącą lokalizację kursora we współrzędnych klienta.
@@ -906,7 +906,7 @@ virtual DROPEFFECT OnDragOver(
 podczas Wskaźnik do obiektu [COleDataObject](../../mfc/reference/coledataobject-class.md) , który jest przeciągany nad elementem docelowym upuszczania.
 
 *dwKeyState*<br/>
-podczas Stan klawiszy modyfikujących jest kombinacją bitową (lub) MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON i MK_RBUTTON. Aby uzyskać więcej informacji, zobacz "parametry komunikatu" w temacie [Informacje o danych wejściowych myszy](/windows/desktop/inputdev/about-mouse-input).
+podczas Stan klawiszy modyfikujących jest kombinacją bitową (lub) MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON i MK_RBUTTON. Aby uzyskać więcej informacji, zobacz "parametry komunikatu" w temacie [Informacje o danych wejściowych myszy](/windows/win32/inputdev/about-mouse-input).
 
 *moment*<br/>
 podczas Bieżąca pozycja myszy.

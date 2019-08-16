@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4242
+title: Ostrzeżenie kompilatora (poziom 4) C4242
 ms.date: 11/04/2016
 f1_keywords:
 - C4242
 helpviewer_keywords:
 - C4242
 ms.assetid: 8df742e1-fbf1-42f3-8e93-c0e1c222dc7e
-ms.openlocfilehash: e0582f3dfdd223b4571e361dc69fae1990aeea1c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed145444d6eec583c448a3a49167ca1f82644f0b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401010"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510009"
 ---
-# <a name="compiler-warning-level-4-c4242"></a>Kompilator ostrzeżenie (poziom 4) C4242
+# <a name="compiler-warning-level-4-c4242"></a>Ostrzeżenie kompilatora (poziom 4) C4242
 
-'Identyfikator': konwersja z 'Typ1' na 'Typ2', możliwa utrata danych
+"Identyfikator": konwersja z "type1" na "type2", możliwa utrata danych
 
-Typy są różne. Konwersja typu może spowodować utratę danych. Kompilator sprawia, że konwersja typu.
+Typy są różne. Konwersja typu może spowodować utratę danych. Kompilator wykonuje konwersję typu.
 
-To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+To ostrzeżenie jest domyślnie wyłączone. Aby uzyskać więcej informacji [, zobacz ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
-Aby uzyskać dodatkowe informacje na temat C4242, zobacz [typowe błędy kompilatora](/windows/desktop/WinProg64/common-compiler-errors).
+Aby uzyskać dodatkowe informacje na temat C4242, zobacz [typowe błędy kompilatora](/windows/win32/WinProg64/common-compiler-errors).
 
-Poniższy przykład spowoduje wygenerowanie C4242:
+Poniższy przykład generuje C4242:
 
 ```
 // C4242.cpp

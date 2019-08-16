@@ -1,5 +1,5 @@
 ---
-title: strlen — wcslen —, _mbslen —, _mbslen_l —, _mbstrlen —, _mbstrlen_l —
+title: strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 ms.date: 11/04/2016
 apiname:
 - _mbslen
@@ -49,19 +49,19 @@ helpviewer_keywords:
 - strlen function
 - _mbslen function
 ms.assetid: 16462f2a-1e0f-4eb3-be55-bf1c83f374c2
-ms.openlocfilehash: 4a12c87f1cff14582e21fbb7d617100fc2853dab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7736e1e7889642c41a5e3853ac13221ab22f6d03
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362286"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500921"
 ---
-# <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen — wcslen —, _mbslen —, _mbslen_l —, _mbstrlen —, _mbstrlen_l —
+# <a name="strlen-wcslen-_mbslen-_mbslen_l-_mbstrlen-_mbstrlen_l"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 
-Pobiera długość ciągu, przy użyciu bieżących ustawień regionalnych lub określonych ustawień regionalnych. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [strnlen —, strnlen_s —, wcsnlen —, wcsnlen_s —, _mbsnlen —, _mbsnlen_l —, _mbstrnlen —, _mbstrnlen_l —](strnlen-strnlen-s.md)
+Pobiera długość ciągu przy użyciu bieżących ustawień regionalnych lub określonych ustawień regionalnych. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l](strnlen-strnlen-s.md)
 
 > [!IMPORTANT]
-> **_mbslen —**, **_mbslen_l —**, **_mbstrlen —**, i **_mbstrlen_l —** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbslen**, **_mbslen_l**, **_mbstrlen**i **_mbstrlen_l** nie mogą być używane w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -91,43 +91,43 @@ size_t _mbstrlen_l(
 ### <a name="parameters"></a>Parametry
 
 *str*<br/>
-Ciąg zakończony wartością null.
+Ciąg zakończony znakiem null.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca liczbę znaków w *str*, z wyłączeniem terminalu o wartości null. Zwraca żadnej wartości zarezerwowanej, aby wskazać błąd, z wyjątkiem **_mbstrlen —** i **_mbstrlen_l —**, które zwrócenia `((size_t)(-1))` Jeśli ciąg zawiera nieprawidłowy znak wielobajtowy.
+Każda z tych funkcji zwraca liczbę znaków w *str*, z wyłączeniem terminalu o wartości null. Żadna wartość zwracana nie jest zarezerwowana do wskazania błędu, z wyjątkiem **_mbstrlen** i **_mbstrlen_l**, które `((size_t)(-1))` zwracają, jeśli ciąg zawiera nieprawidłowy znak wielobajtowy.
 
 ## <a name="remarks"></a>Uwagi
 
-**strlen —** interpretuje ciąg jako ciąg znaków jednobajtowych, dzięki czemu jej wartość zwracana jest zawsze równa liczbie bajtów, nawet wtedy, gdy ciąg zawiera znaki wielobajtowe. **wcslen —** to wersja znaku dwubajtowego **strlen —**; argument **wcslen —** jest ciągiem znaku dwubajtowego, a liczba znaków wynosi znaków dwubajtowych (dwubajtowy). **wcslen —** i **strlen —** zachowują się identycznie.
+**strlen** interpretuje ciąg jako jednobajtowy ciąg znaków, więc jego wartość zwracana jest zawsze równa liczbie bajtów, nawet jeśli ciąg zawiera znaki wielobajtowe. **wcslen** to dwubajtowa wersja **strlen**; argumentem **wcslen** jest ciąg znaków dwubajtowych, a liczba znaków jest w szerokim (2-cyfrowym) znakami. **wcslen** i **strlen** zachowują się identycznie w inny sposób.
 
-**Uwaga dotycząca zabezpieczeń** te funkcje pociągnąć za sobą potencjalnym zagrożeniem spowodowanym ulepszonym problem przepełnienia buforu. Problemy z przepełnieniem buforu są częstą metodą ataku systemu, co nieuzasadnione podniesienie poziomu uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Uwaga dotycząca zabezpieczeń** Te funkcje powodują potencjalne zagrożenie spowodowane przez problem z przepełnieniem buforu. Problemy związane z przepełnieniem buforu są częstą metodą ataku systemu, powodując nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcslen**|**strlen**|**strlen**|**wcslen**|
 |**_tcsclen**|**strlen**|**_mbslen**|**wcslen**|
 |**_tcsclen_l**|**strlen**|**_mbslen_l**|**wcslen**|
 
-**_mbslen —** i **_mbslen_l —** zwracają liczbę znaków wielobajtowych w ciągu znaków wielobajtowych, ale nie należy testować poprawność znaków wielobajtowych. **_mbstrlen —** i **_mbstrlen_l —** sprawdzić ważność znaków wielobajtowych i rozpoznaje sekwencje znaków wielobajtowych. Jeśli ciąg przekazany do **_mbstrlen —** lub **_mbstrlen_l —** zawiera nieprawidłowy znak wielobajtowy dla strony kodowej, funkcja zwraca wartość -1 i ustawia **errno** do **EILSEQ**.
+**_mbslen** i **_mbslen_l** zwracają liczbę znaków wielobajtowych w ciągu znaków wielobajtowych, ale nie są sprawdzane pod kątem ważności znaku wielobajtowego. **_mbstrlen** i **_mbstrlen_l** test dla ważności znaku wielobajtowego i rozpoznaje sekwencje znaków wielobajtowych. Jeśli ciąg przesłany do **_mbstrlen** lub **_mbstrlen_l** zawiera nieprawidłowy znak wielobajtowy dla strony kodowej, funkcja zwróci wartość-1 i ustawia **errno** na **EILSEQ**.
 
-Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji, bez **_l** sufiks używają bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych; wersje **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych w zamian przekazanych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawień regionalnych; Aby [](setlocale-wsetlocale.md) uzyskać więcej informacji, zobacz setlocals. Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. wersje z sufiksem **_l** są identyczne, z tą różnicą, że w zamian korzystają z przekazaną parametrem ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**strlen**|\<string.h>|
-|**wcslen**|\<Włącz String.h > lub \<wchar.h >|
+|**wcslen**|\<ciąg. h > lub \<WCHAR. h >|
 |**_mbslen**, **_mbslen_l**|\<mbstring.h>|
 |**_mbstrlen**, **_mbstrlen_l**|\<stdlib.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

@@ -43,19 +43,19 @@ helpviewer_keywords:
 - vtcprintf_s function
 - formatted text [C++]
 ms.assetid: 5a46d45a-30db-45df-9850-455cbdac5636
-ms.openlocfilehash: e27018d02c8fb77b0e2a1c02164d3b6d112448ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ccd346141db9f4974ee5f9300792260bf2a8ec72
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365354"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499326"
 ---
-# <a name="vcprintfs-vcprintfsl-vcwprintfs-vcwprintfsl"></a>_vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l
+# <a name="_vcprintf_s-_vcprintf_s_l-_vcwprintf_s-_vcwprintf_s_l"></a>_vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l
 
-Pisze sformatowane dane wyjściowe do konsoli, za pomocą wskaźnika do listy argumentów. Te wersje [_vcprintf —, _vcprintf_l —, _vcwprintf —, _vcwprintf_l —](vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md) mają wzmocnienia zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Zapisuje sformatowane dane wyjściowe do konsoli za pomocą wskaźnika do listy argumentów. Te wersje [_vcprintf, _vcprintf_l, _vcwprintf, _vcwprintf_l](vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md) mają ulepszenia zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -82,35 +82,35 @@ int _vcwprintf_s_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Format*<br/>
+*format*<br/>
 Specyfikacja formatu.
 
 *argptr*<br/>
-Wskaźnik do listy argumentów.
+Wskaźnik na listę argumentów.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
-Aby uzyskać więcej informacji, zobacz [składnia specyfikacji formatu: funkcje printf i wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Aby uzyskać więcej informacji, zobacz [składnia specyfikacji formatowania: printf i wprintf Functions](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Liczba znaków zapisanych, lub wartość ujemną, jeśli wystąpi błąd danych wyjściowych.
+Liczba znaków pisanych lub wartość ujemna, jeśli wystąpi błąd danych wyjściowych.
 
-Takich jak mniej bezpieczne wersje tych funkcji, o ile *format* jest pustym wskaźnikiem, wywoływany nieprawidłowy parametr uchwytu, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Ponadto, w przeciwieństwie do mniej bezpieczne wersje tych funkcji Jeśli *format* nie określa prawidłowego formatu, generowany jest wyjątek nieprawidłowego parametru. Jeśli wykonanie może być kontynuowane, te funkcje zwracają kod błędu i ustawiają **errno** do tego kodu błędu. Domyślny kod błędu to **EINVAL** Jeśli bardziej określona wartość nie ma zastosowania.
+Podobnie jak mniej bezpieczne wersje tych funkcji, jeśli *Format* jest wskaźnikiem typu null, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Ponadto, w przeciwieństwie do mniej bezpiecznych wersji tych funkcji, jeśli *Format* nie określa prawidłowego formatu, generowany jest nieprawidłowy wyjątek parametru. Jeśli wykonanie może być kontynuowane, te funkcje zwracają kod błędu i ustawiają **errno** na tym kodzie błędu. Domyślny kod błędu to **EINVAL** , jeśli bardziej konkretna wartość nie ma zastosowania.
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji pobiera wskaźnik do listy argumentów, a następnie formatuje i zapisuje dostarczone dane do konsoli. **_vcwprintf_s —** jest wersją znaków dwubajtowych **_vcprintf_s —**. Pobiera ciąg znaków dwubajtowych jako argument.
+Każda z tych funkcji Pobiera wskaźnik do listy argumentów, a następnie formatuje i zapisuje dane w konsoli. **_vcwprintf_s** to dwubajtowa wersja **_vcprintf_s**. Ciąg znaków dwubajtowych przyjmuje jako argument.
 
-Wersje tych funkcji, które mają **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych, który jest przekazywany zamiast bieżących ustawień regionalnych.
+Wersje tych funkcji, które mają sufiks **_l** są identyczne, z tą różnicą, że korzystają z parametru ustawień regionalnych, który został przesłany zamiast bieżących ustawień regionalnych.
 
 > [!IMPORTANT]
-> Upewnij się, że *format* nie jest ciągiem zdefiniowanym przez użytkownika. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Upewnij się, że *Format* nie jest ciągiem zdefiniowanym przez użytkownika. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vtcprintf_s**|**_vcprintf_s**|**_vcprintf_s**|**_vcwprintf_s**|
 |**_vtcprintf_s_l**|**_vcprintf_s_l**|**_vcprintf_s_l**|**_vcwprintf_s_l**|
@@ -119,12 +119,12 @@ Wersje tych funkcji, które mają **_l** sufiksem są identyczne, z tą różnic
 
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
 |-------------|---------------------|----------------------|
-|**_vcprintf_s**, **_vcprintf_s_l**|\<conio.h > i \<stdarg.h >|\<varargs.h>*|
-|**_vcwprintf_s**, **_vcwprintf_s_l**|\<conio.h > lub \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|
+|**_vcprintf_s**, **_vcprintf_s_l**|\<CONIO. h > i \<STDARG. h >|\<varargs.h>*|
+|**_vcwprintf_s**, **_vcwprintf_s_l**|\<CONIO. h > lub \<WCHAR. h > i \<STDARG. h >|\<varargs.h>*|
 
-\* Wymagane dla zgodności systemu UNIX V.
+\*Wymagane w przypadku zgodności z systemem UNIX V.
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -159,7 +159,7 @@ int main()
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [vprintf, funkcje](../../c-runtime-library/vprintf-functions.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>

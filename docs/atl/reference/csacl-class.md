@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-ms.openlocfilehash: b75dc4110b785f0ab1f55ba5c31df7d3fc6fbd37
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: c4bbdfccb2d6d8b167c537b7ae4df57c89438479
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915756"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496514"
 ---
 # <a name="csacl-class"></a>Klasa CSacl
 
@@ -64,7 +64,7 @@ Aby ustawić lub pobrać listę SACL w deskryptorze zabezpieczeń obiektu, nale�
 
 Użyj metod klasy dostarczonych do dodawania, usuwania, tworzenia i usuwania ACE z `SACL` obiektu. Zobacz również [AtlGetSacl](security-global-functions.md#atlgetsacl) i [AtlSetSacl](security-global-functions.md#atlsetsacl).
 
-Aby zapoznać się z wprowadzeniem do modelu kontroli dostępu w systemie Windows, zobacz [Access Control](/windows/desktop/SecAuthZ/access-control) w Windows SDK.
+Aby zapoznać się z wprowadzeniem do modelu kontroli dostępu w systemie Windows, zobacz [Access Control](/windows/win32/SecAuthZ/access-control) w Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -129,7 +129,7 @@ Zwraca wartość true, jeśli do `CSacl` obiektu zostanie dodany wpis ACE, warto
 
 `CSacl` Obiekt zawiera wpisy kontroli dostępu (ACE), które określają typy prób dostępu, które generują rekordy inspekcji w dzienniku zdarzeń zabezpieczeń. Ta metoda dodaje takie ACE do `CSacl` obiektu.
 
-Zobacz [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) , aby uzyskać opis różnych flag, które można ustawić w parametrze *AceFlags* .
+Zobacz [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) , aby uzyskać opis różnych flag, które można ustawić w parametrze *AceFlags* .
 
 ##  <a name="csacl"></a>CSacl::CSacl
 
@@ -222,7 +222,7 @@ Usuwa każdą `ACE` strukturę (jeśli istnieje) `CSacl` w obiekcie.
 ## <a name="see-also"></a>Zobacz także
 
 [Klasa CAcl](../../atl/reference/cacl-class.md)<br/>
-[ACL](/windows/desktop/SecAuthZ/access-control-lists)<br/>
-[Kontrola](/windows/desktop/SecAuthZ/access-control-entries)<br/>
+[ACL](/windows/win32/SecAuthZ/access-control-lists)<br/>
+[Kontrola](/windows/win32/SecAuthZ/access-control-entries)<br/>
 [Przegląd klas](../../atl/atl-class-overview.md)<br/>
 [Funkcje globalne zabezpieczeń](../../atl/reference/security-global-functions.md)

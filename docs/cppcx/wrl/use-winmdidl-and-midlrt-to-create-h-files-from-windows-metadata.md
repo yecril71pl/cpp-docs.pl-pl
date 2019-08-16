@@ -1,78 +1,78 @@
 ---
-title: 'Instrukcje: Użyj winmdidl.exe i midlrt.exe, aby utworzyć pliki .h z metadanych systemu windows'
+title: 'Instrukcje: Użycie winmdidl.exe i midlrt.exe w celu utworzenia plików .h z metadanych systemu Windows'
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-ms.openlocfilehash: b9016f05b82e3eb04474d370bd069e8008de5278
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8288fc11fd53fdef423a57d0faefbaa7c06326aa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398111"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500429"
 ---
-# <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Instrukcje: Użyj winmdidl.exe i midlrt.exe, aby utworzyć pliki .h z metadanych systemu windows
+# <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Instrukcje: Użycie winmdidl.exe i midlrt.exe w celu utworzenia plików .h z metadanych systemu Windows
 
-Winmdidl.exe i midlrt.exe włączyć współdziałanie COM poziom macierzystego kodu C++ i składników środowiska wykonawczego Windows. Winmdidl.exe przyjmuje jako dane wejściowe plik .winmd, który zawiera metadane dla składnika wykonawczego Windows, a następnie generuje pliku IDL. Midlrt.exe konwertuje ten plik IDL pliki nagłówkowe, używające kodu C++. Oba narzędzia Uruchom w wierszu polecenia.
+Winmdidl. exe i midlrt. exe umożliwiają interakcję na poziomie COM między C++ kodem natywnym i składnikami środowisko wykonawcze systemu Windows. Winmdidl. exe przyjmuje jako wejściowy plik. winmd zawierający metadane dla składnika środowisko wykonawcze systemu Windows i wyprowadza plik IDL. Midlrt. exe konwertuje ten plik IDL do plików nagłówkowych, C++ które może zużywać kod. Oba narzędzia działają w wierszu polecenia.
 
-Można użyć tych narzędzi w dwa główne scenariusze:
+Te narzędzia są używane w dwóch głównych scenariuszach:
 
-- Tworzenie niestandardowych IDL i pliki nagłówkowe, tak, aby napisane przy użyciu biblioteki szablonów środowiska uruchomieniowego Windows (WRL) aplikacji w języku C++ mogą wykorzystywać niestandardowych składników Windows Runtime.
+- Tworzenie niestandardowych plików IDL i nagłówków w C++ taki sposób, aby aplikacja utworzona przy użyciu biblioteki szablonów środowisko wykonawcze systemu Windows (WRL) mogła korzystać z niestandardowego składnika Środowisko wykonawcze systemu Windows.
 
-- Generowanie plików serwera proxy i klas zastępczych dla typów zdarzeń zdefiniowanych przez użytkownika w składnika środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [niestandardowe zdarzenia i metody dostępu zdarzeń w składnikach środowiska wykonawczego Windows](/windows/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components).
+- Generowanie plików proxy i szczątków dla typów zdarzeń zdefiniowanych przez użytkownika w składniku środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [zdarzenia niestandardowe i metody dostępu do zdarzeń w składnikach środowisko wykonawcze systemu Windows](/windows/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components).
 
-Te narzędzia są wymagane tylko w przypadku analizowania plików winmd niestandardowych. Plików .idl i .h składników systemu operacyjnego Windows już są generowane dla Ciebie. Domyślnie w Windows 8.1 znajdują się one w \Program pliki (x86) \Windows Kits\8.1\Include\winrt\\.
+Te narzędzia są wymagane tylko do analizowania niestandardowych plików WinMD. Pliki. idl i. h dla składników systemu operacyjnego Windows zostały już wygenerowane. Domyślnie w Windows 8.1 znajdują się one w folderze \Program Files (x86) \Windows Kits\8.1\Include\winrt\\.
 
 ## <a name="location-of-the-tools"></a>Lokalizacja narzędzi
 
-Domyślnie w [Windows 8.1, winmdidl.exe i midlrt.exe, które znajdują się w \Windows Kits\8.1 C:\Program Files (x86)\\. Wersja narzędzia są dostępne również w folderach \bin\x86\ i \bin\x64\.
+Domyślnie w [Windows 8.1, winmdidl. exe i midlrt. exe znajdują się w folderze C:\Program Files (x86) \Windows\\Kits\8.1. Wersje narzędzi są również dostępne w folderach \bin\x86\ i \bin\x64\.
 
-## <a name="winmdidl-command-line-arguments"></a>Argumenty wiersza polecenia Winmdidl
+## <a name="winmdidl-command-line-arguments"></a>Winmdidl argumenty wiersza polecenia
 
 ```
 Winmdidl.exe [/nologo] [/suppressversioncheck] [/time] [/outdir:dir] [/banner:file] [/utf8] Winmdfile
 ```
 
 **/nologo**<br/>
-Uniemożliwia wyświetlanie konsoli winmdidl komunikat o prawach autorskich oraz numeru wersji.
+Zapobiega wyświetlaniu przez konsolę komunikatu o prawach autorskich winmdidl i numer wersji.
 
 **/suppressversioncheck**<br/>
 Nie używany.
 
-**/ Godzina**<br/>
-Przedstawia całkowity czas wykonywania w danych wyjściowych konsoli.
+**/Time**<br/>
+Wyświetla łączny czas wykonywania w danych wyjściowych konsoli.
 
-**do pliku klucza:**<em>dir</em><br/>
-Określa katalog danych wyjściowych. Jeśli ścieżka zawiera spacje, użyj znaków cudzysłowu. Domyślny katalog danych wyjściowych jest  *\<dysku >*: \Users\\*\<username >* \AppData\Local\VirtualStore\Program Files (x86) \Microsoft Visual Studio 12.0\\.
+**/OutDir:** <em>katalog</em><br/>
+Określa katalog wyjściowy. Jeśli ścieżka zawiera spacje, użyj cudzysłowów. Domyślny katalog wyjściowy to  *\<dysk >* : \Users\\ *\<username >* \AppData\Local\VirtualStore\Program Files (x86) \Microsoft Visual Studio 12,0\\.
 
-**/ Baner:**<em>pliku</em><br/>
-Określa plik, który zawiera niestandardowy tekst być dołączana do domyślny komunikat o prawach autorskich oraz winmdidl numer wersji w górnej części pliku .idl wygenerowany. Jeśli ścieżka zawiera spacje, użyj znaków cudzysłowu.
+**/banner:** <em>plik</em><br/>
+Określa plik, który zawiera niestandardowy tekst do dołączania do domyślnego komunikatu o prawach autorskich i numer wersji winmdidl w górnej części wygenerowanego pliku IDL. Jeśli ścieżka zawiera spacje, użyj cudzysłowów.
 
-**/UTF8**<br/>
-Powoduje, że plik aby być w formacie UTF-8.
+**/utf8**<br/>
+Powoduje, że plik jest sformatowany jako UTF-8.
 
 *Winmdfile*<br/>
-Nazwa pliku winmd, które można przeanalizować. Jeśli ścieżka zawiera spacje, użyj znaków cudzysłowu.
+Nazwa pliku winmd do przeanalizowania. Jeśli ścieżka zawiera spacje, użyj cudzysłowów.
 
-## <a name="midlrt-command-line-arguments"></a>Argumenty wiersza polecenia Midlrt
+## <a name="midlrt-command-line-arguments"></a>Midlrt argumenty wiersza polecenia
 
-Zobacz [MIDLRT i środowiska wykonawczego Windows składników](/windows/desktop/Midl/midlrt-and-windows-runtime-components).
+Zobacz [midlrt i składniki Środowisko wykonawcze systemu Windows](/windows/win32/Midl/midlrt-and-windows-runtime-components).
 
 ## <a name="examples"></a>Przykłady
 
-Poniższy przykład pokazuje winmdidl polecenie w wierszu polecenia programu Visual Studio x86. Określa katalog wyjściowy, a plik, który zawiera tekst transparentu specjalne do dodania do pliku .idl wygenerowany.
+Poniższy przykład przedstawia polecenie winmdidl w wierszu polecenia programu Visual Studio x86. Określa katalog wyjściowy, a plik zawierający specjalny tekst transparentu do dodania do wygenerowanego pliku IDL.
 
 `C:\Program Files (x86)\Microsoft Visual Studio 12.0>winmdidl /nologo /outdir:c:\users\giraffe\documents\ /banner:c:\users\giraffe\documents\banner.txt "C:\Users\giraffe\Documents\Visual Studio 2013\Projects\Test_for_winmdidl\Debug\Test_for_winmdidl\test_for_winmdidl.winmd"`
 
-W kolejnym przykładzie pokazano wyświetlania konsoli z winmdidl, która wskazuje, że operacja zakończyła się pomyślnie.
+W następnym przykładzie przedstawiono wyświetlanie konsoli z winmdidl, która wskazuje, że operacja zakończyła się pomyślnie.
 
-**Generating c:\users\giraffe\documents\\\Test_for_winmdidl.idl**
+**Generowanie c:\users\giraffe\documents\\\Test_for_winmdidl.idl**
 
-Następnie midlrt jest uruchamiane w wygenerowanym pliku IDL. Należy zauważyć, że **metadata_dir** argument zostanie określony po nazwie pliku .idl. Wymagana jest ścieżka \WinMetadata\ — jest ona lokalizacją windows.winmd.
+Następnie midlrt jest uruchamiany w wygenerowanym pliku IDL. Zwróć uwagę, że argument **metadata_dir** jest określony po nazwie pliku IDL. Ścieżka \WinMetadata\ jest wymagana — jest to lokalizacja dla systemu Windows. winmd.
 
 `C:\Program Files (x86)\Microsoft Visual Studio 12.0> midlrt "c:\users\mblome\documents\test_for_winmdidl.idl" /metadata_dir "C:\Windows\System32\WinMetadata"`
 
 ## <a name="remarks"></a>Uwagi
 
-Plik wyjściowy z operacją winmdidl ma taką samą nazwę jak plik wejściowy, ale ma rozszerzenie nazwy pliku .idl.
+Plik wyjściowy z operacji winmdidl ma taką samą nazwę jak plik wejściowy, ale ma rozszerzenie nazwy pliku IDL.
 
-Jeśli tworzysz składnik środowiska wykonawczego Windows, który uzyskuje się dostęp z WRL można określić winmdidl.exe i midlrt.exe, aby uruchomić jako kroków wykonywanych po kompilacji, tak, aby plików .idl i .h są generowane dla każdej kompilacji. Aby uzyskać przykład, zobacz [Raising Events w składnikach środowiska wykonawczego Windows](/windows/uwp/winrt-components/raising-events-in-windows-runtime-components).
+Jeśli tworzysz składnik środowisko wykonawcze systemu Windows, do którego będzie uzyskiwany dostęp z WRL, możesz określić winmdidl. exe i midlrt. exe do uruchamiania jako kroki po kompilacji, aby pliki. idl i. h były generowane dla każdej kompilacji. Aby zapoznać się z przykładem, zobacz Wywoływanie [zdarzeń w składnikach środowisko wykonawcze systemu Windows](/windows/uwp/winrt-components/raising-events-in-windows-runtime-components).

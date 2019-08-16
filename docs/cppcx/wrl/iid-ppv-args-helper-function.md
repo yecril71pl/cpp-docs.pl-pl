@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - IID_PPV_ARGS_Helper function
 ms.assetid: afee9b23-8df1-4575-903f-e9ba748418f0
-ms.openlocfilehash: 5ef4dd6c9db2d19e0c8a4143c5b4ed3f0ac75f6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7733ae6084b64c20dff5a2c35d7a31c614d6e44
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398267"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500506"
 ---
-# <a name="iidppvargshelper-function"></a>IID_PPV_ARGS_Helper — Funkcja
+# <a name="iid_ppv_args_helper-function"></a>IID_PPV_ARGS_Helper — Funkcja
 
-Sprawdza, czy typ określony argument jest pochodną `IUnknown` interfejsu.
+Sprawdza, czy typ określonego argumentu pochodzi z `IUnknown` interfejsu.
 
 > [!IMPORTANT]
-> Ta specjalizacja szablonu obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie. Użyj [IID_PPV_ARGS](/windows/desktop/api/combaseapi/nf-combaseapi-iid_ppv_args) zamiast tego.
+> Ta specjalizacja szablonu obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie. Zamiast tego użyj [IID_PPV_ARGS](/windows/win32/api/combaseapi/nf-combaseapi-iid_ppv_args) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,20 +33,20 @@ void** IID_PPV_ARGS_Helper(
 ### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Typ argumentu *pp*.
+Typ argumentu *PP*.
 
-*strony*<br/>
-Wskaźnik podwójnie pośrednich.
+*miesięcznie*<br/>
+Wskaźnik pośrednika.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Argument *pp* rzutowany na wskaźnik do a-wskaźnik do **void**.
+Argument *PP* rzutowania na wskaźnik do wskaźnika do typu **void**.
 
 ## <a name="remarks"></a>Uwagi
 
-Błąd kompilacji jest generowany, gdy wartość parametru szablonu *T* nie pochodzi od `IUnknown`.
+Generowany jest błąd czasu kompilacji, jeśli parametr szablonu *T* nie pochodzi od `IUnknown`.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** client.h
+**Nagłówek:** Client. h
 

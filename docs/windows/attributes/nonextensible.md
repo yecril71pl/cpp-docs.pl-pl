@@ -1,21 +1,21 @@
 ---
-title: (C++ COM atrybut nonextensible)
+title: nierozszerzalnyC++ (atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.nonextensible
 helpviewer_keywords:
 - nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-ms.openlocfilehash: ed396b3d55e16cf195949c713ab574812b796a1a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2947e223d068ea6cc92a41abe19cb7f920112b2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407578"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514400"
 ---
 # <a name="nonextensible"></a>nonextensible
 
-Określa, że `IDispatch` wdrożenia zawiera tylko właściwości i metod wymienionych w opisie interfejsu i nie można rozszerzyć za pomocą dodatkowe elementy członkowskie w czasie wykonywania.
+Określa, że `IDispatch` implementacja zawiera tylko właściwości i metody wymienione w opisie interfejsu i nie można go rozszerzyć z dodatkowymi elementami członkowskimi w czasie wykonywania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,13 +25,13 @@ Określa, że `IDispatch` wdrożenia zawiera tylko właściwości i metod wymien
 
 ## <a name="remarks"></a>Uwagi
 
-**Nonextensible** atrybut C++ ma taką samą funkcjonalność jak [nonextensible](/windows/desktop/Midl/nonextensible) atrybutów w MIDL.
+Atrybut C++ nierozszerzalny ma taką samą funkcjonalność jak atrybut [](/windows/win32/Midl/nonextensible) nierozszerzalny MIDL.
 
-Korzystanie z **nonextensible** wymaga również [oleautomation —](oleautomation.md) atrybutu.
+Użycie nierozszerzalne wymaga również atrybutu [OleAutomation](oleautomation.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod demonstruje jedno użycie **nonextensible** atrybutu:
+Poniższy kod pokazuje jedno użycie atrybutu nierozszerzalny:
 
 ```cpp
 // cpp_attr_ref_nonextensible.cpp
@@ -56,10 +56,10 @@ __interface IFireTabCtrl
 |-|-|
 |**Dotyczy**|**interface**|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|`dual` i `oleautomation`, lub `dispinterface`|
+|**Wymagane atrybuty**|`dual`i `oleautomation`lub`dispinterface`|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

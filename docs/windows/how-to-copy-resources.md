@@ -30,97 +30,97 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 28678b560387fa6b111d60a7487ed44f9244a821
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 56cff04d64f2f0a64fc216fbd418954b4c11b0f2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449059"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514741"
 ---
 # <a name="how-to-manage-resources-c"></a>Instrukcje: Zarządzanie zasobami (C++)
 
-## <a name="copy-and-edit-resources"></a>Kopiuj i edytowanie zasobów
+## <a name="copy-and-edit-resources"></a>Kopiowanie i edytowanie zasobów
 
-Możesz skopiować zasoby z jednego pliku do innego bez ich zmieniania lub zmiana języka lub warunku zasobu podczas kopiowania go.
+Można kopiować zasoby z jednego pliku do innego bez zmieniania ich lub zmiany języka lub warunku zasobu podczas jego kopiowania.
 
-Można go łatwo skopiować zasoby z istniejącego zasobu lub plik wykonywalny do bieżącego pliku zasobów. Aby umożliwić kopiowanie zasobów, możesz otworzyć oba pliki zawierające zasoby w tym samym czasie i przeciągnij elementy z jednego pliku lub skopiuj i Wklej między dwoma plikami. Ta metoda działa dla plików skryptu (.rc) zasobów i plików szablonów (.rct) zasobu, a także jako pliki wykonywalne (.exe).
+Można łatwo kopiować zasoby z istniejącego zasobu lub pliku wykonywalnego do bieżącego pliku zasobów. Aby skopiować zasoby, należy otworzyć oba pliki zawierające zasoby w tym samym czasie i przeciągnąć elementy z jednego pliku do innego lub skopiować i wkleić między dwoma plikami. Ta metoda działa w przypadku plików skryptów zasobów (. RC) i plików szablonów zasobów (. rct) oraz plików wykonywalnych (exe).
 
 > [!NOTE]
-> Visual C++ zawiera przykładowe pliki zasobów, które można użyć w swojej aplikacji. Aby uzyskać więcej informacji, zobacz [CLIPART: Wspólnych zasobów](https://github.com/Microsoft/VCSamples).
+> Wizualizacja C++ zawiera przykładowe pliki zasobów, których można użyć we własnej aplikacji. Aby uzyskać więcej informacji, [Zobacz clipart: Wspólne zasoby](https://github.com/Microsoft/VCSamples).
 
-Użytkownik nie przeciągnij i upuść, kopiowanie, wycinanie lub wklejanie danych między plikami zasobów w projekcie (**widok zasobów**) i otwieranie plików .rc autonomicznego w oknach dokumentów. Można to zrobić w poprzednich wersjach produktu. Tylko metodą przeciągania i upuszczania między plikami .rc, które są otwarte poza projektem.
+Nie można przeciągać i upuszczać, kopiować, wycinać ani wklejać plików zasobów w projekcie (**Widok zasobów**) i autonomicznych plikach. RC otwartych w oknach dokumentów. Można to zrobić w poprzednich wersjach produktu. Należy używać metody przeciągania i upuszczania między plikami. RC, które są otwarte poza projektem.
 
-### <a name="to-copy-resources"></a>Aby umożliwić kopiowanie zasobów
+### <a name="to-copy-resources"></a>Aby skopiować zasoby
 
-1. Otwórz zarówno autonomiczne pliki zasobów. (Zobacz [używać plików skryptów zasobów](how-to-create-a-resource-script-file.md#use-resource-script-files)). Na przykład otworzyć *Source1.rc* i *Source2.rc*.
+1. Otwórz oba pliki zasobów autonomicznie. (Zobacz [Używanie plików skryptów zasobów](how-to-create-a-resource-script-file.md#use-resource-script-files)). Na przykład Otwórz *Source1. RC* i *SOURCE2. RC*.
 
-1. Wewnątrz pierwszy plik .rc, albo:
+1. W pierwszym pliku. rc:
 
-   - Użyj metody przeciągania i upuszczania
+   - Korzystanie z metody przeciągania i upuszczania
 
-      1. Wybierz zasób, który chcesz skopiować. Na przykład w *Source1.rc*, wybierz opcję **IDD_DIALOG1**.
+      1. Wybierz zasób, który chcesz skopiować. Na przykład w *Source1. RC*wybierz pozycję **IDD_DIALOG1**.
 
-      1. Naciśnij i przytrzymaj **Ctrl** klucza i przeciągnij go do drugiego pliku .rc. Na przykład przeciągać **IDD_DIALOG1** z *Source1.rc* do *Source2.rc*.
+      1. Przytrzymaj wciśnięty klawisz **Ctrl** i przeciągnij zasób do drugiego pliku. rc. Na przykład przeciągnij **IDD_DIALOG1** z *Source1. RC* do *SOURCE2. RC*.
 
          > [!TIP]
-         > Przeciąganie zasób bez przytrzymywania **Ctrl** klucz przenosi zasobu, a nie skopiować go.
+         > Przeciąganie zasobu bez przytrzymywania wciśniętego klawisza **Ctrl** przenosi zasób zamiast go kopiować.
 
-   - Użyj kopiowania i wklejania — metoda
+   - Użycie metody copy i past
 
-      1. Kliknij prawym przyciskiem myszy zasób z do kopiowania (na przykład *Source1.rc*) i wybierz polecenie **kopiowania**.
+      1. Kliknij prawym przyciskiem myszy zasób, który chcesz skopiować (na przykład *Source1. RC*), a następnie wybierz polecenie **Kopiuj**.
 
-      1. Kliknij prawym przyciskiem myszy plik zasobów, do którego chcesz wkleić zasobu (na przykład *Source2.rc*) i wybierz polecenie **Wklej**.
+      1. Kliknij prawym przyciskiem myszy plik zasobów, do którego chcesz wkleić zasób (na przykład *SOURCE2. RC*), a następnie wybierz polecenie **Wklej**.
 
 > [!NOTE]
-> Aby uniknąć konfliktów z nazwami symboli lub wartości z istniejącego pliku, Visual C++ może ulec zmianie wartości symboli zasobu przeniesionych lub nazwy symbolu i wartości po skopiuj go do nowego pliku.
+> Aby uniknąć konfliktów z nazwami symboli lub wartościami w istniejącym pliku, C++ Wizualizacja może zmienić wartość symbolu lub nazwę symbolu oraz wartość w czasie kopiowania do nowego pliku.
 
-Podczas kopiowania w zasobach, można zmienić jego właściwość języka i/lub właściwości warunku.
+Podczas kopiowania w ramach zasobu można zmienić jego właściwość języka lub Właściwość Condition albo oba te elementy.
 
-- Język zasobu określa język używany przez [FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea) ułatwia zidentyfikowanie zasobów, dla których potrzebujesz. Zasoby mogą znajdować się różnic dla każdego z języków, które nie są związane z tekstu, na przykład tworzy akceleratorów, które może działać wyłącznie względem klawiatury japońskiej lub mapy bitowej, który tylko jest odpowiednia dla języka chińskiego zlokalizowane.
+- Język zasobu określa język używany przez program [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcew) w celu ułatwienia zidentyfikowania zasobu, którego szukasz. Zasoby mogą mieć różnice dla każdego języka, które nie są związane z tekstem, na przykład akceleratory, które mogą działać tylko na klawiaturze japońskiej lub mapie bitowej, które byłyby odpowiednie tylko w przypadku kompilacji zlokalizowanych w języku chińskim.
 
-- Stan zasobu jest zdefiniowany symbol, który określa warunek, w ramach której ma zostać użyty określonej kopii zasobu.
+- Warunek zasobu jest zdefiniowanym symbolem, który identyfikuje warunek, pod którym ta konkretna kopia zasobu ma być używana.
 
-Język i warunku zasobu są wyświetlane w nawiasie po nazwie zasobu w **obszaru roboczego** okna. W tym miejscu zasobu o nazwie `IDD_AboutBox` używa `Finnish` jako języka i jego stan jest `XX33`:
+Język i warunek zasobu są wyświetlane w nawiasach po nazwie zasobu w oknie **obszaru roboczego** . W tym miejscu zasób `IDD_AboutBox` o nazwie `Finnish` jest używany jako `XX33`język i jego warunek:
 
 ```cpp
 IDD_AboutBox (Finnish - XX33)
 ```
 
-### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Aby skopiować istniejący zasób i zmień jego języka lub warunku
+### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Aby skopiować istniejący zasób i zmienić jego język lub warunek
 
-W *.rc* pliku lub [widok zasobów](how-to-create-a-resource-script-file.md#create-resources) okna, kliknij prawym przyciskiem myszy zasób, o których chcesz skopiować, a następnie wybierz **Wstaw kopiowania**. Następnie określ następujące ustawienia:
+W pliku *. RC* lub w oknie [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources) kliknij prawym przyciskiem myszy zasób, który chcesz skopiować, a następnie wybierz polecenie **Wstaw kopię**. Następnie ustaw następujące ustawienia:
 
-- Aby uzyskać **języka** pola listy, wybierz język.
+- W polu Lista **Język** wybierz język.
 
-- W **warunek** wpisz warunek.
+- W polu **warunek** wpisz warunek.
 
-### <a name="to-edit-resources"></a>Edytowanie zasobów
+### <a name="to-edit-resources"></a>Aby edytować zasoby
 
-Zarządzanych zasobów (.resx) są plikami XML. Po dodaniu plik zasobu zarządzanego projektu z **Dodaj nowy element** okno dialogowe **Edytor zasobów zarządzanych** domyślnie otwierany.
+Pliki zasobów zarządzanych (. resx) to pliki XML. Po dodaniu zarządzanego pliku zasobów do projektu z okna dialogowego **Dodaj nowy element** domyślnie zostanie otwarty **Edytor zarządzanych zasobów** .
 
 ## <a name="import-and-export-resources"></a>Importowanie i eksportowanie zasobów
 
-Możesz zaimportować zasobów graficznych (map bitowych, ikon, kursorów i pasków narzędzi), pliki HTML i zasobów niestandardowych do użytku w programie Visual C++. Te same typy plików można eksportować z programu Visual Studio C++ projektu do oddzielnych plików, które mogą być używane poza środowiskiem programowania.
+Możesz importować zasoby graficzne (mapy bitowe, ikony, kursory i paski narzędzi), pliki HTML i zasoby niestandardowe do użycia w wizualizacji C++. Można eksportować te same typy plików z projektu programu Visual Studio C++ do oddzielnych plików, które mogą być używane poza środowiskiem programistycznym.
 
 > [!NOTE]
-> Typy zasobów, takich jak akceleratorów, okna dialogowe i tabele ciągów nie można zaimportować lub wyeksportować, ponieważ nie zostało to jeszcze typów plików autonomicznych.
+> Typów zasobów, takich jak akceleratory, okna dialogowe i tabele ciągów nie można importować ani eksportować, ponieważ nie są to typy plików autonomicznych.
 
-### <a name="to-import-a-resource-into-the-resource-script-file"></a>Aby importować zasób do pliku skryptu zasobu
+### <a name="to-import-a-resource-into-the-resource-script-file"></a>Aby zaimportować zasób do pliku skryptu zasobu
 
-1. W [widok zasobów](how-to-create-a-resource-script-file.md#create-resources) kliknij prawym przyciskiem myszy węzeł pliku skryptu (.rc) zasobu, do którego chcesz dodać zasób, a następnie wybierz pozycję **importu**.
+1. W [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources) kliknij prawym przyciskiem myszy węzeł pliku skryptu zasobu (. RC), do którego chcesz dodać zasób, a następnie wybierz pozycję **Importuj**.
 
-1. Znajdź i wybierz nazwę pliku mapy bitowej (bmp), ikony (.ico), kursora (.cur), plik html (.htm) lub inny plik do zaimportowania.
+1. Znajdź i wybierz nazwę pliku mapy bitowej (. bmp), ikonę (. ico), kursor (. CUR), plik HTML (. htm) lub inny plik do zaimportowania.
 
-1. Wybierz **OK** można dodać zasobu do pliku skryptu zasobów.
+1. Wybierz **przycisk OK** , aby dodać zasób do pliku skryptu zasobu.
 
 > [!NOTE]
-> Proces importowania działa tak samo niezależnie od tego, typ zasobu, który wybrano. Zaimportowane zasobów jest automatycznie dodawany do poprawny węzeł tego typu zasobu.
+> Proces importowania działa tak samo niezależnie od wybranego typu zasobu. Zaimportowany zasób jest automatycznie dodawany do poprawnego węzła tego typu zasobu.
 
-### <a name="to-export-a-resource-for-use-outside-of-visual-c"></a>Aby wyeksportować zasób do użycia poza programem Visual C++
+### <a name="to-export-a-resource-for-use-outside-of-visual-c"></a>Aby wyeksportować zasób do użycia poza wizualizacjąC++
 
-1. W [widok zasobów](how-to-create-a-resource-script-file.md#create-resources), kliknij prawym przyciskiem myszy zasób, chcesz wyeksportować, a następnie wybierz pozycję **wyeksportować**. Można zaakceptować bieżącej nazwy pliku lub wpisać nową.
+1. W [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources)kliknij prawym przyciskiem myszy zasób, który chcesz wyeksportować, a następnie wybierz pozycję **Eksportuj**. Możesz zaakceptować bieżącą nazwę pliku lub wpisać nową.
 
-1. Przejdź do folderu, w którym chcesz zapisać plik i wybierz **wyeksportować**.
+1. Przejdź do folderu, w którym chcesz zapisać plik, a następnie wybierz pozycję **Eksportuj**.
 
 ## <a name="requirements"></a>Wymagania
 

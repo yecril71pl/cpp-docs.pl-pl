@@ -1,35 +1,35 @@
 ---
-title: Implementacja elementu niestandardowego Menedżera ciągów (Metoda podstawowa)
+title: Implementacja niestandardowego menedżera ciągów (metoda podstawowa)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: eac5d13e-cbb4-4e82-b01e-f5f2dbcb962a
-ms.openlocfilehash: c30c08217a09f600f8801bec9f50c4341e983a6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92c1c46f5251980f9cefb55e052e9aff395e0e60
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62235904"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491315"
 ---
-# <a name="implementation-of-a-custom-string-manager-basic-method"></a>Implementacja elementu niestandardowego Menedżera ciągów (Metoda podstawowa)
+# <a name="implementation-of-a-custom-string-manager-basic-method"></a>Implementacja niestandardowego menedżera ciągów (metoda podstawowa)
 
-Najprostszym sposobem dostosować schematu alokacji pamięci dla danych string jest użycie ATL — pod warunkiem `CAtlStringMgr` klasy, ale Podaj pamięci własnych procedur alokacji. Konstruktor `CAtlStringMgr` przyjmuje jeden parametr: wskaźnik do `IAtlMemMgr` obiektu. `IAtlMemMgr` jest abstrakcyjna klasa bazowa, który zapewnia interfejs ogólny do sterty. Za pomocą `IAtlMemMgr` interfejsu `CAtlStringMgr` przydziela, przydzieli i zwalnia pamięć używana do przechowywania danych ciągu. Możesz albo Implementowanie `IAtlMemMgr` interfejs samodzielnie lub użyj jednego z pięciu klasy ATL — pod warunkiem pamięci w Menedżerze. Menedżerów zarządzania pamięcią ATL — pod warunkiem opakować po prostu istniejących urządzeń alokacji pamięci:
+Najprostszym sposobem dostosowania schematu alokacji pamięci dla danych ciągu jest użycie klasy dostarczonej `CAtlStringMgr` ATL, ale udostępnienie własnych procedur alokacji pamięci. Konstruktor dla `CAtlStringMgr` przyjmuje jeden parametr: wskaźnik `IAtlMemMgr` do obiektu. `IAtlMemMgr`jest abstrakcyjną klasą bazową, która udostępnia interfejs ogólny do sterty. Za pomocą `CAtlStringMgr` interfejsu, przydzielenia, przydzielania i zwalniania pamięci używanej do przechowywania danych ciągu. `IAtlMemMgr` Można zaimplementować `IAtlMemMgr` interfejs samodzielnie lub użyć jednej z pięciu klas Menedżera pamięci dostarczonych przez ATL. Menedżery pamięci udostępnionej przez ATL po prostu zawijają istniejące obiekty alokacji pamięci:
 
-- [CCRTHeap](../atl/reference/ccrtheap-class.md) Opakowuje standardowego stosu CRT ([— funkcja malloc](../c-runtime-library/reference/malloc.md), [bezpłatne](../c-runtime-library/reference/free.md), i [realloc](../c-runtime-library/reference/realloc.md))
+- [CCRTHeap](../atl/reference/ccrtheap-class.md) Zawija standardowe funkcje sterty CRT ([malloc](../c-runtime-library/reference/malloc.md), [bezpłatna](../c-runtime-library/reference/free.md)i realloc [](../c-runtime-library/reference/realloc.md))
 
-- [CWin32Heap](../atl/reference/cwin32heap-class.md) zawija uchwyt stosu Win32, za pomocą [HeapAlloc](/windows/desktop/api/heapapi/nf-heapapi-heapalloc), [HeapFree](/windows/desktop/api/heapapi/nf-heapapi-heapfree), i [HeapRealloc](/windows/desktop/api/heapapi/nf-heapapi-heaprealloc)
+- [CWin32Heap](../atl/reference/cwin32heap-class.md) Zawija dojście sterty Win32 przy użyciu [HeapAlloc](/windows/win32/api/heapapi/nf-heapapi-heapalloc), [HeapFree](/windows/win32/api/heapapi/nf-heapapi-heapfree)i [HeapRealloc](/windows/win32/api/heapapi/nf-heapapi-heaprealloc)
 
-- [CLocalHeap](../atl/reference/clocalheap-class.md) Opakowuje interfejsów API systemu Win32: [Funkcja LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc), [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree), i [LocalRealloc](/windows/desktop/api/winbase/nf-winbase-localrealloc)
+- [CLocalHeap](../atl/reference/clocalheap-class.md) Zawija interfejsy API Win32: [LocalAlloc](/windows/win32/api/winbase/nf-winbase-localalloc), [LocalFree](/windows/win32/api/winbase/nf-winbase-localfree)i [LocalRealloc](/windows/win32/api/winbase/nf-winbase-localrealloc)
 
-- [CGlobalHeap](../atl/reference/cglobalheap-class.md) Opakowuje interfejsów API systemu Win32: [Działanie funkcji GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc), [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree), i [GlobalRealloc](/windows/desktop/api/winbase/nf-winbase-globalrealloc).
+- [CGlobalHeap](../atl/reference/cglobalheap-class.md) Zawija interfejsy API Win32: [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc), [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree)i [GlobalRealloc](/windows/win32/api/winbase/nf-winbase-globalrealloc).
 
-- [CComHeap](../atl/reference/ccomheap-class.md) Opakowuje interfejsów API programu przydzielania zadań COM: [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc), [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree), and [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc)
+- [CComHeap](../atl/reference/ccomheap-class.md) Zawija interfejsy API programu przydzielania zadań COM: [CoTaskMemAlloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemalloc), [CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree)i [CoTaskMemRealloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemrealloc)
 
-Na potrzeby zarządzania pamięcią ciąg, jest najbardziej użyteczne klasy `CWin32Heap` , ponieważ pozwala na tworzenie wielu niezależnych stosów. Na przykład jeśli chcesz korzystać z oddzielnym stosie do ciągów, można wykonaj następujące czynności:
+Na potrzeby zarządzania pamięcią ciągów najbardziej przydatną klasą jest `CWin32Heap` , ponieważ umożliwia tworzenie wielu niezależnych stert. Jeśli na przykład chcesz użyć oddzielnego sterty tylko dla ciągów, możesz wykonać następujące czynności:
 
 [!code-cpp[NVC_ATLMFC_Utilities#180](../atl-mfc-shared/codesnippet/cpp/implementation-of-a-custom-string-manager-basic-method_1.cpp)]
 
-Na potrzeby zarządzania pamięci dla tego menedżera ciągów prywatnej `CString` zmienną i przekazać wskaźnik do Menedżera jako parametr do `CString` Konstruktor zmiennej:
+Aby użyć tego prywatnego Menedżera ciągów do zarządzania pamięcią dla `CString` zmiennej, Przekaż wskaźnik do Menedżera jako parametr `CString` do konstruktora zmiennej:
 
 [!code-cpp[NVC_ATLMFC_Utilities#181](../atl-mfc-shared/codesnippet/cpp/implementation-of-a-custom-string-manager-basic-method_2.cpp)]
 

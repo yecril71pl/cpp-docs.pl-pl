@@ -1,21 +1,21 @@
 ---
-title: wire_marshal — (C++ atrybutów COM)
+title: wire_marshal (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.wire_marshal
 helpviewer_keywords:
 - wire_marshal attribute
 ms.assetid: 244f9d72-776d-4ebd-b60a-cee600a126b5
-ms.openlocfilehash: d1d18336a20644338a50ab66c7fcb06959e5760a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1067b74191dcde98dd9c85a246db2acd26eff9c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407019"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514850"
 ---
-# <a name="wiremarshal"></a>wire_marshal
+# <a name="wire_marshal"></a>wire_marshal
 
-Określa typ danych, który będzie używany do przekazywania zamiast typu danych specyficznych dla aplikacji.
+Określa typ danych, który będzie używany do przesyłania zamiast typu danych specyficznego dla aplikacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,11 +25,11 @@ Określa typ danych, który będzie używany do przekazywania zamiast typu danyc
 
 ## <a name="remarks"></a>Uwagi
 
-**Wire_marshal —** C++ atrybut ma taką samą funkcjonalność jak [wire_marshal —](/windows/desktop/Midl/wire-marshal) atrybutów w MIDL.
+Atrybut **wire_marshal** C++ ma takie same funkcje jak atrybut [wire_marshal](/windows/win32/Midl/wire-marshal) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod pokazuje wykorzystanie **wire_marshal —**:
+Poniższy kod przedstawia użycie **wire_marshal**:
 
 ```cpp
 // cpp_attr_ref_wire_marshal.cpp
@@ -53,12 +53,12 @@ Poniższy kod pokazuje wykorzystanie **wire_marshal —**:
 
 |||
 |-|-|
-|**Dotyczy**|**typedef**|
+|**Dotyczy**|**własne**|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

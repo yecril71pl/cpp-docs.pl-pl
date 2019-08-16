@@ -7,29 +7,29 @@ helpviewer_keywords:
 - CListCtrl class [MFC], image lists
 - list items [MFC], image lists
 ms.assetid: 317d095f-f978-47da-acb6-7bfe7dd3bc69
-ms.openlocfilehash: 1679b5c59c6dd55ca47c70ea7c880493304ebf4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77dd2f6a056ca74ff3334878a9cf1ef51c773335
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365276"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508359"
 ---
 # <a name="list-items-and-image-lists"></a>Elementy listy, listy obrazów
 
-"Element" w kontrolce listy ([CListCtrl](../mfc/reference/clistctrl-class.md)) składa się z ikony, etykietę i ewentualnie inne informacje (w "podelementy").
+Element "Item" w kontrolce listy ([CListCtrl](../mfc/reference/clistctrl-class.md)) składa się z ikony, etykiety i prawdopodobnie innych informacji (w "podelementach").
 
-Ikony dla elementów kontrolki listy znajdują się na listach obrazów. Jeden listy obrazów zawiera pełny ikony używane w widoku ikon. Listy obrazów w drugim, opcjonalnie, zawiera mniejsze wersje tego samego ikon do użytku w innych widokach formantu. Trzeci opcjonalna lista zawiera obrazy "stan", takie jak pola wyboru, do wyświetlenia przed małych ikon w niektórych widokach. Czwarty opcjonalna lista zawiera obrazy, które są wyświetlane w nagłówku poszczególnych elementów formantu listy.
+Ikony elementów formantów list są zawarte na listach obrazów. Jedna lista obrazów zawiera ikony o pełnym rozmiarze używane w widoku ikon. Druga, opcjonalna, lista obrazów zawiera mniejsze wersje tych samych ikon do użycia w innych widokach formantu. Trzecia lista opcjonalna zawiera obrazy stanu, takie jak pola wyboru, aby wyświetlić je przed małymi ikonami w niektórych widokach. Czwarta lista opcjonalna zawiera obrazy, które są wyświetlane w poszczególnych elementach nagłówka kontrolki listy.
 
 > [!NOTE]
->  Jeśli kontrolka widoku listy jest tworzona przy użyciu stylu LVS_SHAREIMAGELISTS, ponosisz odpowiedzialność za zniszczenie list obrazów, gdy są one już używane. Określ ten styl, w przypadku przypisania tego samego obrazu, który zawiera listę do wielu formantów widoku listy; w przeciwnym razie więcej niż jeden formant może próbować zniszczyć tej samej listy obrazów.
+>  Jeśli kontrolka widok listy jest tworzona przy użyciu stylu LVS_SHAREIMAGELISTS, użytkownik jest odpowiedzialny za niszczenie list obrazów, gdy nie są one już używane. Określ ten styl, jeśli te same listy obrazów są przypisywane do wielu kontrolek widoku listy. w przeciwnym razie więcej niż jeden formant może próbować zniszczyć tę samą listę obrazów.
 
-Aby uzyskać więcej informacji na temat elementów listy, zobacz [listy obrazów widok listy](/windows/desktop/Controls/using-list-view-controls) i [elementów i podelementów](/windows/desktop/Controls/using-list-view-controls) w zestawie Windows SDK. Zobacz też klasy [CImageList](../mfc/reference/cimagelist-class.md) w *odwołanie MFC* i [korzystanie z CImageList](../mfc/using-cimagelist.md) w tej rodzinie artykułów.
+Aby uzyskać więcej informacji na temat elementów listy, zobacz [Wyświetlanie listy obrazów](/windows/win32/Controls/using-list-view-controls) i [elementów oraz](/windows/win32/Controls/using-list-view-controls) elementów podelementowych w Windows SDK. Zobacz też klasy [Korzystanie CImageList](../mfc/reference/cimagelist-class.md) w *dokumentacji MFC* i [Używanie korzystanie CImageList](../mfc/using-cimagelist.md) w tej rodzinie artykułów.
 
-Aby utworzyć kontrolkę listy, należy podać listy obrazów do użycia podczas wstawiania nowych elementów do listy. W poniższym przykładzie pokazano tej procedury, gdzie *m_pImagelist* jest wskaźnikiem typu `CImageList` i *m_listctrl* jest `CListCtrl` element członkowski danych.
+Aby utworzyć formant listy, należy podać listy obrazów, które będą używane podczas wstawiania nowych elementów do listy. Poniższy przykład ilustruje tę procedurę, gdzie *m_pImagelist* jest wskaźnikiem typu `CImageList` `CListCtrl` , a *m_listctrl* jest składową danych.
 
 [!code-cpp[NVC_MFCControlLadenDialog#19](../mfc/codesnippet/cpp/list-items-and-image-lists_1.cpp)]
 
-Jednak jeśli nie zamierzasz wyświetlać ikony w widoku listy lub kontrolka listy, nie potrzebujesz list obrazów.
+Jeśli jednak nie planujesz wyświetlania ikon w widoku listy lub kontrolce listy, nie potrzebujesz list obrazów.
 
 ## <a name="see-also"></a>Zobacz także
 

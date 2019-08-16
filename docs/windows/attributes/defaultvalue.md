@@ -1,21 +1,21 @@
 ---
-title: DefaultValue (atrybut COM C++)
+title: DefaultValueC++ (atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvalue
 helpviewer_keywords:
 - defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-ms.openlocfilehash: ff6924db6f4805bb5f2dbab69076a86020b2a075
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2057658b5881efd0c3ff095d51e5ee88c9c533e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62147967"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490923"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
-Umożliwia określenie wartości domyślnej dla typizowany parametr opcjonalny.
+Umożliwia określenie wartości domyślnej dla wpisanego parametru opcjonalnego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,11 +30,11 @@ Wartość domyślna parametru.
 
 ## <a name="remarks"></a>Uwagi
 
-**Defaultvalue** atrybut C++ ma taką samą funkcjonalność jak [defaultvalue](/windows/desktop/Midl/defaultvalue) atrybutów w MIDL.
+Atrybut **DefaultValue** C++ ma taką samą funkcjonalność jak atrybut [](/windows/win32/Midl/defaultvalue) MIDLvalue.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod przedstawia metodę interfejsu przy użyciu **defaultvalue** atrybutu:
+Poniższy kod przedstawia metodę interfejsu przy użyciu atrybutu **DefaultValue** :
 
 ```cpp
 // cpp_attr_ref_defaultvalue.cpp
@@ -62,10 +62,10 @@ __interface IFireTabCtrl : IDispatch {
 |-|-|
 |**Dotyczy**|Parametr interfejsu|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

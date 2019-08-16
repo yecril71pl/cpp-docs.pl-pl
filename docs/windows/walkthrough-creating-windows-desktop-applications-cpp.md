@@ -1,136 +1,136 @@
 ---
-title: 'Przewodnik: Tworzenie tradycyjnych aplikacji Windows Desktop (C++)'
+title: 'Przewodnik: Tworzenie tradycyjnej aplikacji klasycznej systemu WindowsC++()'
 ms.custom: get-started-article
 ms.date: 04/23/2019
 helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 2cf9928d56c564edc0e3bda1935eb11004000985
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: f33365fffc9a4addb0f22a90b87f8a03fdf2c1a9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861116"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513739"
 ---
-# <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Przewodnik: Tworzenie tradycyjnych aplikacji Windows Desktop (C++)
+# <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Przewodnik: Tworzenie tradycyjnej aplikacji klasycznej systemu WindowsC++()
 
-W tym instruktażu przedstawiono sposób tworzenia tradycyjnych aplikacji pulpitu Windows w programie Visual Studio. Przykładowa aplikacja, którą utworzysz użyto interfejsu API Windows, aby wyświetlić "Hello, pulpitu Windows!" w oknie. Można użyć kodu, który tworzysz w tym przewodniku jako wzorca do tworzenia innych aplikacji pulpitu Windows.
+W tym instruktażu pokazano, jak utworzyć tradycyjną aplikację klasyczną systemu Windows w programie Visual Studio. Przykładowa aplikacja, którą utworzysz, używa interfejsu API systemu Windows do wyświetlania "Hello, Windows Desktop!" w oknie. Kod, który tworzysz w tym instruktażu, można użyć jako wzorca, aby utworzyć inne aplikacje klasyczne systemu Windows.
 
-Interfejs API Windows (znany także jako interfejsu API systemu Win32, Windows Desktop z interfejsu API i klasycznego interfejsu API Windows) jest opartych na języku C architektura służąca do tworzenia aplikacji Windows. Ona znajdowała się na istnienie od lat 1980 i został użyty do tworzenia aplikacji Windows używana od dziesięcioleci. Bardziej zaawansowane i łatwiejsze w programie struktur utworzone na podstawie interfejsu API Windows, takie jak MFC, ATL i platformy .NET. Nawet najbardziej nowoczesnego kodu dla aplikacji platformy uniwersalnej systemu Windows i Store napisanych w C++/WinRT za pomocą interfejsu Windows API poniżej. Aby uzyskać więcej informacji na temat interfejsu API Windows, zobacz [indeks interfejsów API Windows](/windows/desktop/apiindex/windows-api-list). Istnieje wiele sposobów, aby tworzyć aplikacje Windows, ale z powyższej procedury wdrożyła jako pierwsza.
+Interfejs API systemu Windows (znany również jako Win32 API, Windows Desktop API i Windows klasyczny interfejs API) to struktura oparta na języku C do tworzenia aplikacji systemu Windows. Jest ona istniena od 1980s i została użyta do tworzenia aplikacji systemu Windows dla dekad. Bardziej zaawansowane i prostsze struktury zostały utworzone na podstawie interfejsu API systemu Windows, takiego jak MFC, ATL i .NET Framework. Nawet najbardziej nowoczesny kod dla platformy UWP i aplikacji ze sklepu, który C++został zapisany w/WinRT korzysta z interfejsu API systemu Windows poniżej. Aby uzyskać więcej informacji na temat interfejsu API systemu Windows, zobacz [indeks interfejsu API systemu Windows](/windows/win32/apiindex/windows-api-list). Istnieje wiele sposobów tworzenia aplikacji systemu Windows, ale powyższy proces jest pierwszy.
 
 > [!IMPORTANT]
-> W celu skrócenia programu niektóre instrukcje kodu zostały pominięte w tekście. [Skompilować kod](#build-the-code) sekcji na końcu tego dokumentu zawiera kompletny kod.
+> W celu zwięzłości niektóre instrukcje kodu są pomijane w tekście. Sekcja [Build kodu](#build-the-code) na końcu tego dokumentu pokazuje kompletny kod.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- Komputer z systemem Microsoft Windows 7 lub nowszy. Zalecamy systemu Windows 10 dla najlepszego komfortu programowania.
+- Komputer z systemem Microsoft Windows 7 lub nowszym. Zalecamy użycie systemu Windows 10 w celu uzyskania najlepszego środowiska programistycznego.
 
-- Kopię programu Visual Studio. Aby uzyskać informacje na temat sposobu pobierania i instalowania programu Visual Studio, zobacz [Zainstaluj program Visual Studio](/visualstudio/install/install-visual-studio). Po uruchomieniu Instalatora, upewnij się, że **programowanie aplikacji klasycznych w języku C++** zaznaczono obciążenia. Nie martw się, jeśli nie zainstalował tego obciążenia podczas instalowania programu Visual Studio. Można ponownie uruchom Instalatora i zainstaluj go teraz.
+- Kopia programu Visual Studio. Aby uzyskać informacje na temat pobierania i instalowania programu Visual Studio, zobacz [Instalowanie programu Visual Studio](/visualstudio/install/install-visual-studio). Po uruchomieniu Instalatora upewnij się, że jest zaznaczone pole **programowanie opracowywania C++ aplikacji klasycznych** . Nie martw się, jeśli to obciążenie nie zostało zainstalowane podczas instalacji programu Visual Studio. Możesz ponownie uruchomić Instalatora i zainstalować go teraz.
 
-   ![Programowanie aplikacji klasycznych w języku C++](../build/media/desktop-development-with-cpp.png "programowanie aplikacji klasycznych w języku C++")
+   ![Programowanie aplikacji C++ klasycznych](../build/media/desktop-development-with-cpp.png "Programowanie aplikacji C++ klasycznych")
 
-- Zrozumienie podstaw przy użyciu programu Visual Studio IDE. Jeśli używano aplikacje komputerowe Windows przed prawdopodobnie można zachować. Aby zapoznać się z wprowadzeniem, zobacz [Przewodnik po funkcjach programu Visual Studio IDE](/visualstudio/ide/visual-studio-ide).
+- Zrozumienie podstaw korzystania ze środowiska IDE programu Visual Studio. Jeśli wcześniej używasz aplikacji klasycznych systemu Windows, prawdopodobnie Zadbaj o to. Aby zapoznać się z wprowadzeniem, zobacz [Przewodnik po funkcji środowiska IDE programu Visual Studio](/visualstudio/ide/visual-studio-ide).
 
-- Po zrozumieniu wystarczającą ilość podstawy języka C++ z nich skorzystać. Nie martw się — firma Microsoft nie robią niczego zbyt skomplikowana.
+- Zrozumienie wystarczającej podstawy C++ języka do wykonania. Nie martw się, nie wykonujemy żadnych zbyt skomplikowane.
 
-## <a name="create-a-windows-desktop-project"></a>Utwórz projekt Windows desktop
+## <a name="create-a-windows-desktop-project"></a>Tworzenie projektu pulpitu systemu Windows
 
-Wykonaj następujące kroki, aby utworzyć swój pierwszy projekt pulpitu Windows, a następnie wprowadź kod dla działającej aplikacji pulpitu Windows. Upewnij się, że selektor wersji, w lewym górnym rogu tej strony jest ustawiona na poprawną wersję programu Visual Studio, którego używasz.
+Wykonaj następujące kroki, aby utworzyć pierwszy projekt pulpitu systemu Windows i wprowadzić kod dla działającej aplikacji klasycznej systemu Windows. Upewnij się, że selektor wersji w lewym górnym rogu tej strony jest ustawiony na poprawną wersję programu Visual Studio, której używasz.
 
 ::: moniker range="vs-2019"
 
-### <a name="to-create-a-windows-desktop-project-in-visual-studio-2019"></a>Aby utworzyć projekt pulpitu Windows w programie Visual Studio 2019 r.
+### <a name="to-create-a-windows-desktop-project-in-visual-studio-2019"></a>Aby utworzyć projekt pulpitu systemu Windows w programie Visual Studio 2019
 
-1. W menu głównym wybierz **pliku** > **New** > **projektu** otworzyć **Utwórz nowy projekt** okna dialogowego pole.
+1. Z menu głównego wybierz pozycję **plik** > **Nowy** > **projekt** , aby otworzyć okno dialogowe **Tworzenie nowego projektu** .
 
-1. W górnej części okna dialogowego, ustaw **języka** do **C++** ustaw **platformy** do **Windows**i ustaw **Typprojektu** do **pulpitu**. 
+1. W górnej części okna dialogowego Ustaw **Język** na **C++** , ustaw platformę na **system Windows**i ustaw **Typ projektu** na **Desktop**. 
 
-1. Wybierz z listy filtrowanej typów projektów, **kreatora pulpitu Windows** wybierz **dalej**. Na następnej stronie podaj nazwę dla projektu, a następnie określ lokalizację projektu, w razie potrzeby.
+1. Z listy filtrowane typy projektów wybierz pozycję **Kreator pulpitu systemu Windows** , a następnie wybierz przycisk **dalej**. Na następnej stronie Wprowadź nazwę projektu i określ lokalizację projektu w razie potrzeby.
 
-1. Wybierz **Utwórz** przycisk, aby utworzyć projekt.
+1. Wybierz przycisk **Utwórz** , aby utworzyć projekt.
 
-1. **Projektu pulpitu Windows** pojawi się okno dialogowe. W obszarze **typ aplikacji**, wybierz opcję **aplikacja Windows (.exe)** . W obszarze **dodatkowe opcje**, wybierz opcję **pusty projekt**. Wybierz **OK** do tworzenia projektu.
+1. Zostanie wyświetlone okno dialogowe **projekt pulpitu systemu Windows** . W obszarze **Typ aplikacji**wybierz pozycję **aplikacja systemu Windows (exe)** . W obszarze **Opcje dodatkowe**wybierz pozycję **pusty projekt**. Wybierz **przycisk OK** , aby utworzyć projekt.
 
-1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **DesktopApp** projektu, wybierz **Dodaj**, a następnie wybierz **nowy element**.
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **DesktopApp** , wybierz polecenie **Dodaj**, a następnie wybierz polecenie **nowy element**.
 
    ![Dodaj nowy element do projektu DesktopApp](../build/media/desktop-app-project-add-new-item-153.gif "Dodaj nowy element do projektu DesktopApp")
 
-1. W **Dodaj nowy element** okno dialogowe, wybierz opcję **plik C++ (.cpp)** . W **nazwa** wpisz nazwę pliku, na przykład *HelloWindowsDesktop.cpp*. Wybierz **Dodaj**.
+1. W oknie dialogowym **Dodaj nowy element** wybierz pozycję  **C++ plik (. cpp)** . W polu **Nazwa** wpisz nazwę pliku, na przykład *HelloWindowsDesktop. cpp*. Wybierz **Dodaj**.
 
-   ![Dodaj plik .cpp do projektu DesktopApp](../build/media/desktop-app-add-cpp-file-153.png "Dodaj plik .cpp do DesktopApp projektu")
+   ![Dodaj plik CPP do projektu DesktopApp](../build/media/desktop-app-add-cpp-file-153.png "Dodaj plik CPP do projektu DesktopApp")
 
-Projekt został utworzony i pliku źródłowego jest otwarty w edytorze. Aby kontynuować, przejdź do sekcji [utworzyć kod](#create-the-code).
+Projekt jest teraz tworzony i plik źródłowy zostanie otwarty w edytorze. Aby kontynuować, przejdź do, aby [utworzyć kod](#create-the-code).
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-### <a name="to-create-a-windows-desktop-project-in-visual-studio-2017"></a>Aby utworzyć projekt pulpitu Windows w programie Visual Studio 2017
+### <a name="to-create-a-windows-desktop-project-in-visual-studio-2017"></a>Aby utworzyć projekt pulpitu systemu Windows w programie Visual Studio 2017
 
 1. Na **pliku** menu, wybierz **New** , a następnie wybierz **projektu**.
 
-1. W **nowy projekt** rozwiń w lewym okienku w oknie dialogowym **zainstalowane** > **Visual C++** , a następnie wybierz **pulpitu Windows**. W środkowym okienku wybierz **kreatora pulpitu Windows**.
+1. W oknie dialogowym **Nowy projekt** w lewym okienku rozwiń pozycję zainstalowana > **Wizualizacja C++** , a następnie wybierz pozycję **Windows Desktop**. W środkowym okienku wybierz pozycję **Kreator pulpitu systemu Windows**.
 
-   W **nazwa** wpisz nazwę projektu, na przykład *DesktopApp*. Wybierz **OK**.
+   W polu **Nazwa** wpisz nazwę projektu, na przykład *DesktopApp*. Wybierz **OK**.
 
-   ![Nazwij projekt DesktopApp](../build/media/desktop-app-new-project-name-153.png "nazwij projekt DesktopApp")
+   ![Nazwij projekt DesktopApp](../build/media/desktop-app-new-project-name-153.png "Nazwij projekt DesktopApp")
 
-1. W **projektu pulpitu Windows** okna dialogowego, w obszarze **typ aplikacji**, wybierz opcję **aplikacja Windows (.exe)** . W obszarze **dodatkowe opcje**, wybierz opcję **pusty projekt**. Wybierz **OK** do tworzenia projektu.
+1. W oknie dialogowym **projekt pulpitu systemu Windows** w obszarze **Typ aplikacji**wybierz pozycję **aplikacja systemu Windows (exe)** . W obszarze **Opcje dodatkowe**wybierz pozycję **pusty projekt**. Wybierz **przycisk OK** , aby utworzyć projekt.
 
-   ![Utwórz DesktopApp w Kreatorze projektu pulpitu Windows](../build/media/desktop-app-new-project-wizard-153.png "tworzenie DesktopApp w Kreatorze projektu pulpitu Windows")
+   ![Tworzenie DesktopApp w Kreatorze projektu klasycznego systemu Windows](../build/media/desktop-app-new-project-wizard-153.png "Tworzenie DesktopApp w Kreatorze projektu klasycznego systemu Windows")
 
-1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **DesktopApp** projektu, wybierz **Dodaj**, a następnie wybierz **nowy element**.
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **DesktopApp** , wybierz polecenie **Dodaj**, a następnie wybierz polecenie **nowy element**.
 
    ![Dodaj nowy element do projektu DesktopApp](../build/media/desktop-app-project-add-new-item-153.gif "Dodaj nowy element do projektu DesktopApp")
 
-1. W **Dodaj nowy element** okno dialogowe, wybierz opcję **plik C++ (.cpp)** . W **nazwa** wpisz nazwę pliku, na przykład *HelloWindowsDesktop.cpp*. Wybierz **Dodaj**.
+1. W oknie dialogowym **Dodaj nowy element** wybierz pozycję  **C++ plik (. cpp)** . W polu **Nazwa** wpisz nazwę pliku, na przykład *HelloWindowsDesktop. cpp*. Wybierz **Dodaj**.
 
-   ![Dodaj plik .cpp do projektu DesktopApp](../build/media/desktop-app-add-cpp-file-153.png "Dodaj plik .cpp do DesktopApp projektu")
+   ![Dodaj plik CPP do projektu DesktopApp](../build/media/desktop-app-add-cpp-file-153.png "Dodaj plik CPP do projektu DesktopApp")
 
-Projekt został utworzony i pliku źródłowego jest otwarty w edytorze. Aby kontynuować, przejdź do sekcji [utworzyć kod](#create-the-code).
+Projekt jest teraz tworzony i plik źródłowy zostanie otwarty w edytorze. Aby kontynuować, przejdź do, aby [utworzyć kod](#create-the-code).
 
 ::: moniker-end
 
 ::: moniker range="vs-2015"
 
-### <a name="to-create-a-windows-desktop-project-in-visual-studio-2015"></a>Aby utworzyć projekt pulpitu Windows w programie Visual Studio 2015
+### <a name="to-create-a-windows-desktop-project-in-visual-studio-2015"></a>Aby utworzyć projekt pulpitu systemu Windows w programie Visual Studio 2015
 
 1. Na **pliku** menu, wybierz **New** , a następnie wybierz **projektu**.
 
-1. W **nowy projekt** rozwiń w lewym okienku w oknie dialogowym **zainstalowane** > **szablony** > **Visual C++** , a następnie wybierz pozycję **Win32**. W środkowym okienku wybierz **projekt systemu Win32**.
+1. W oknie dialogowym **Nowy projekt** w lewym okienku rozwiń węzeł **zainstalowane** > **Szablony** > **C++wizualizacji**, a następnie wybierz opcję **Win32**. W środkowym okienku wybierz pozycję **projekt Win32**.
 
-   W **nazwa** wpisz nazwę projektu, na przykład *DesktopApp*. Wybierz **OK**.
+   W polu **Nazwa** wpisz nazwę projektu, na przykład *DesktopApp*. Wybierz **OK**.
 
-   ![Nazwij projekt DesktopApp](../build/media/desktop-app-new-project-name-150.png "nazwij projekt DesktopApp")
+   ![Nazwij projekt DesktopApp](../build/media/desktop-app-new-project-name-150.png "Nazwij projekt DesktopApp")
 
-1. Na **Przegląd** strony **Kreatora aplikacji Win32**, wybierz **dalej**.
+1. Na stronie **Przegląd** **Kreatora aplikacji Win32**wybierz pozycję **dalej**.
 
-   ![Tworzenie DesktopApp w Omówienie Kreatora aplikacji Win32](../build/media/desktop-app-win32-wizard-overview-150.png "tworzenie DesktopApp w Omówienie Kreatora aplikacji Win32")
+   ![Tworzenie DesktopApp w Kreatorze aplikacji Win32 — Omówienie](../build/media/desktop-app-win32-wizard-overview-150.png "Tworzenie DesktopApp w Kreatorze aplikacji Win32 — Omówienie")
 
-1. Na **ustawienia aplikacji** w obszarze **typ aplikacji**, wybierz opcję **aplikacji Windows**. W obszarze **dodatkowe opcje**, wybierz opcję **pusty projekt**. Wybierz **Zakończ** do tworzenia projektu.
+1. Na stronie **Ustawienia aplikacji** w obszarze **Typ aplikacji**wybierz pozycję **aplikacja systemu Windows**. W obszarze **Opcje dodatkowe**wybierz pozycję **pusty projekt**. Wybierz pozycję **Zakończ** , aby utworzyć projekt.
 
-   ![Utwórz DesktopApp ustawienia kreatora aplikacji Win32](../build/media/desktop-app-win32-wizard-settings-150.png "tworzenie DesktopApp ustawienia kreatora aplikacji Win32")
+   ![Tworzenie DesktopApp w ustawieniach Kreatora aplikacji Win32](../build/media/desktop-app-win32-wizard-settings-150.png "Tworzenie DesktopApp w ustawieniach Kreatora aplikacji Win32")
 
-1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt DesktopApp, wybierz pozycję **Dodaj**, a następnie wybierz **nowy element**.
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt DesktopApp, wybierz polecenie **Dodaj**, a następnie wybierz polecenie **nowy element**.
 
    ![Dodaj nowy element do projektu DesktopApp](../build/media/desktop-app-project-add-new-item-150.gif "Dodaj nowy element do projektu DesktopApp")
 
-1. W **Dodaj nowy element** okno dialogowe, wybierz opcję **plik C++ (.cpp)** . W **nazwa** wpisz nazwę pliku, na przykład *HelloWindowsDesktop.cpp*. Wybierz **Dodaj**.
+1. W oknie dialogowym **Dodaj nowy element** wybierz pozycję  **C++ plik (. cpp)** . W polu **Nazwa** wpisz nazwę pliku, na przykład *HelloWindowsDesktop. cpp*. Wybierz **Dodaj**.
 
-   ![Dodaj plik .cpp do projektu DesktopApp](../build/media/desktop-app-add-cpp-file-150.png "Dodaj plik .cpp do DesktopApp projektu")
+   ![Dodaj plik CPP do projektu DesktopApp](../build/media/desktop-app-add-cpp-file-150.png "Dodaj plik CPP do projektu DesktopApp")
 
-Projekt został utworzony i pliku źródłowego jest otwarty w edytorze.
+Projekt jest teraz tworzony i plik źródłowy zostanie otwarty w edytorze.
 
 ::: moniker-end
 
-## <a name="create-the-code"></a>Tworzenie kodu
+## <a name="create-the-code"></a>Utwórz kod
 
-Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych Windows w programie Visual Studio.
+Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych systemu Windows w programie Visual Studio.
 
-### <a name="to-start-a-windows-desktop-application"></a>Aby uruchomić aplikację pulpitu Windows
+### <a name="to-start-a-windows-desktop-application"></a>Aby uruchomić aplikację klasyczną systemu Windows
 
-1. Podobnie jak każdy C aplikacji i aplikacja C++ muszą mieć `main` działać jako punkt początkowy, Windows, co aplikacja komputerowa musi mieć `WinMain` funkcji. `WinMain` ma następującą składnię.
+1. Tak jak w przypadku każdej aplikacji C++ i aplikacji C musi `main` istnieć funkcja jako punkt początkowy, każda `WinMain` aplikacja klasyczna systemu Windows musi mieć funkcję. `WinMain`ma następującą składnię.
 
    ```cpp
    int CALLBACK WinMain(
@@ -141,19 +141,19 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych Windows w p
    );
    ```
 
-   Aby uzyskać informacje dotyczące parametrów i wartość zwracana przez tę funkcję, zobacz [punktu wejścia WinMain](/windows/desktop/api/winbase/nf-winbase-winmain).
+   Aby uzyskać informacje na temat parametrów i wartości zwracanej przez tę funkcję, zobacz [WinMain Entry Point](/windows/win32/api/winbase/nf-winbase-winmain).
 
    > [!NOTE]
-   > Co to są wszystkich tych dodatkowych słów, takich jak `CALLBACK`, lub `HINSTANCE`, lub `_In_`? Tradycyjne interfejsu Windows API używa definicji typów i makra preprocesora często przeniesienia na poziom abstrakcji natychmiast niektórych szczegółów typów i specyficzne dla platformy kodu, np. Konwencje wywoływania, **__declspec** deklaracje i pragmy kompilatora. W programie Visual Studio, można użyć funkcji IntelliSense [Quick Info](/visualstudio/ide/using-intellisense#quick-info) funkcję, aby sprawdzić, co zdefiniować definicji typów i makra. Umieść kursor nad wyraz zainteresowania, lub wybierz ją i naciśnij klawisz **Ctrl**+**K**, **Ctrl**+**I** dla niewielkie okno podręczne, który zawiera definicję. Aby uzyskać więcej informacji, zobacz [za pomocą funkcji IntelliSense](/visualstudio/ide/using-intellisense). Parametry i zwracane typy często używają *adnotacji SAL* ułatwiające catch błędy programowania. Aby uzyskać więcej informacji, zobacz [przy użyciu adnotacji SAL w celu zmniejszenia defektów kodu C/C++](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
+   > Jakie dodatkowe słowa są takie same, jak `CALLBACK`, lub? `HINSTANCE` `_In_` Tradycyjny interfejs API systemu Windows używa często zawartych w nich elementów typedef i preprocesora, aby uzyskać bardziej szczegółowe informacje o typach i kodzie specyficznym dla platformy, takich jak Konwencje wywoływania, deklaracje **__declspec** i dyrektywy pragma kompilatora. W programie Visual Studio można użyć funkcji IntelliSense [Quick info](/visualstudio/ide/using-intellisense#quick-info) , aby zobaczyć, co definiuje te definicje typów i makr. Umieść wskaźnik myszy nad wyrazem zainteresowania lub wybierz go, a następnie naciśnij klawisze **Ctrl**+**K**, **Ctrl**+**i** dla małego okna podręcznego, które zawiera definicję. Aby uzyskać więcej informacji, zobacz [za pomocą funkcji IntelliSense](/visualstudio/ide/using-intellisense). Parametry i typy zwracane często używają *adnotacji sal* , aby ułatwić przechwytywanie błędów programistycznych. Aby uzyskać więcej informacji, zobacz [Używanie adnotacji sal w celuC++ zmniejszenia wad języka C/Code](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
 
-1. Programy pulpitu Windows wymagają &lt;windows.h >. &lt;tchar.h > definiuje `TCHAR` makra, która jest rozpoznawana jako ostatecznie do **wchar_t** Jeśli symboli UNICODE jest zdefiniowany w projekcie, w przeciwnym razie jest on rozpoznawany jako **char**.  Zawsze w przypadku tworzenia z użyciem standardu UNICODE włączone, nie potrzebujesz tchar — i może po prostu użyj **wchar_t** bezpośrednio.
+1. Programy klasyczne systemu Windows &lt;wymagają systemu Windows. h >. &lt;Używanie TCHAR. h > definiuje `TCHAR` makro, które w końcu jest rozpoznawane jako **wchar_t** , jeśli symbol Unicode jest zdefiniowany w projekcie, w przeciwnym razie jest rozpoznawany jako **char**.  Jeśli zawsze kompilujesz przy użyciu standardu UNICODE, nie potrzebujesz używanie TCHAR i możesz tylko bezpośrednio korzystać z **wchar_t** .
 
    ```cpp
    #include <windows.h>
    #include <tchar.h>
    ```
 
-1. Oprócz `WinMain` funkcji, co aplikacja pulpitu Windows również musi mieć funkcję procedury okna. Ta funkcja jest typowo nazwana `WndProc` , ale można określić nazwę wedle uznania. `WndProc` ma następującą składnię.
+1. Oprócz `WinMain` funkcji, każda aplikacja klasyczna systemu Windows musi mieć również funkcję okna. Ta funkcja jest zazwyczaj nazwana `WndProc` , ale można ją nazwać w dowolny sposób. `WndProc`ma następującą składnię.
 
    ```cpp
    LRESULT CALLBACK WndProc(
@@ -164,13 +164,13 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych Windows w p
    );
    ```
 
-   W tej funkcji możesz pisać kod obsługujący *wiadomości* które aplikacja otrzyma od Windows po *zdarzenia* wystąpić. Na przykład, jeśli użytkownik wybierze przycisk OK w aplikacji, Windows wyśle do Ciebie wiadomość i można napisać kod wewnątrz swojej `WndProc` funkcję, która nie jest pracę. Jest on nazywany *obsługi* zdarzenie. Można obsługiwać zdarzenia, które są istotne dla twojej aplikacji.
+   W tej funkcji napiszesz kod obsługujący *komunikaty* odbierane przez aplikację od systemu Windows, gdy wystąpią *zdarzenia* . Na przykład, jeśli użytkownik wybierze przycisk OK w aplikacji, system Windows wyśle do Ciebie komunikat i będzie można napisać kod wewnątrz `WndProc` funkcji, która jest odpowiednia dla każdej pracy. Nazywa się to *obsługą* zdarzenia. Obsługiwane są tylko zdarzenia odpowiednie dla aplikacji.
 
-   Aby uzyskać więcej informacji, zobacz [procedury okna](/windows/desktop/winmsg/window-procedures).
+   Aby uzyskać więcej informacji, zobacz sekcję [procedury okna](/windows/win32/winmsg/window-procedures).
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>Aby dodać funkcje do funkcji WinMain
 
-1. W `WinMain` funkcji, możesz wypełnić struktury typu [WNDCLASSEX](/windows/desktop/api/winuser/ns-winuser-tagwndclassexa). Struktura zawiera informacje dotyczące okna, przykładowo, ikony aplikacji, koloru tła okna, nazwę aby wyświetlić na pasku tytułu, a co ważniejsze, wskaźnik funkcji do odpowiedniej procedury okna. W poniższym przykładzie przedstawiono typowe `WNDCLASSEX` struktury.
+1. W funkcji należy wypełnić strukturę typu [WNDCLASSEX.](/windows/win32/api/winuser/ns-winuser-wndclassexw) `WinMain` Struktura zawiera informacje na temat okna, na przykład ikony aplikacji, kolor tła okna, nazwę wyświetlaną na pasku tytułu, a ważne, wskaźnik funkcji do procedury okna. W poniższym przykładzie przedstawiono typową `WNDCLASSEX` strukturę.
 
    ```cpp
    WNDCLASSEX wcex;
@@ -189,9 +189,9 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych Windows w p
    wcex.hIconSm        = LoadIcon(wcex.hInstance, IDI_APPLICATION);
    ```
 
-   Aby uzyskać informacje o polach powyżej struktury, zobacz [WNDCLASSEX](/windows/desktop/api/winuser/ns-winuser-tagwndclassexa).
+   Aby uzyskać informacje o polach struktury powyżej, zobacz [WNDCLASSEX](/windows/win32/api/winuser/ns-winuser-wndclassexw).
 
-1. Zarejestruj `WNDCLASSEX` przy użyciu Windows, tak że zna okna i sposobie wysyłania komunikatów do niego. Użyj [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa) działać, a następnie przekazać strukturę klasy okna jako argument. `_T` Makro jest używane, ponieważ używamy `TCHAR` typu.
+1. Zarejestruj się `WNDCLASSEX` w systemie Windows, aby wiedzieć o Twoim oknie i sposobach wysyłania do niego komunikatów. Użyj funkcji [RegisterClassEx](/windows/win32/api/winuser/nf-winuser-registerclassexw) i przekaż strukturę klasy okna jako argument. Makro jest używane, ponieważ korzystamy z `TCHAR` tego typu. `_T`
 
    ```cpp
    if (!RegisterClassEx(&wcex))
@@ -205,7 +205,7 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych Windows w p
    }
    ```
 
-1. Teraz można utworzyć okna. Użyj [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) funkcji.
+1. Teraz można utworzyć okno. Użyj funkcji [onwindow](/windows/win32/api/winuser/nf-winuser-createwindoww) .
 
    ```cpp
    static TCHAR szWindowClass[] = _T("DesktopApp");
@@ -243,9 +243,9 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych Windows w p
    }
    ```
 
-   Ta funkcja zwraca `HWND`, który jest uchwytem do okna. Dojście jest nieco jak wskaźnik, który Windows jest używane do śledzenia otwarte okna. Aby uzyskać więcej informacji, zobacz [typy danych Windows](/windows/desktop/WinProg/windows-data-types).
+   Ta funkcja zwraca `HWND`, który jest dojściem do okna. Dojście jest nieco podobne do wskaźnika używanego przez system Windows do śledzenia otwartych okien. Aby uzyskać więcej informacji, zobacz [typy danych systemu Windows](/windows/win32/WinProg/windows-data-types).
 
-1. W tym momencie okna została utworzona, ale nadal należy przekazać do Windows, aby była widoczna. To znaczy, co robi ten kod:
+1. W tym momencie okno zostało utworzone, ale nadal musimy poinformować system Windows, aby był widoczny. Ten kod wykonuje następujące czynności:
 
    ```cpp
    // The parameters to ShowWindow explained:
@@ -256,9 +256,9 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych Windows w p
    UpdateWindow(hWnd);
    ```
 
-   Otwarte okno nie ma dużo zawartości, ponieważ jeszcze nie została jeszcze zaimplementowana `WndProc` funkcji. Innymi słowy aplikacja nie jest jeszcze obsługi wiadomości, które Windows jest teraz wysyłanie do niej.
+   Wyświetlane okno nie ma dużo zawartości, ponieważ `WndProc` funkcja nie została jeszcze zaimplementowana. Innymi słowy, aplikacja nie obsługuje jeszcze komunikatów wysyłanych przez system Windows.
 
-1. Do obsługi wiadomości, możemy najpierw Dodaj pętlę komunikatów do nasłuchiwania wiadomości, które wysyła Windows. Kiedy aplikacja otrzymuje komunikat, ta pętla wysyła go do Twojego `WndProc` funkcji, które mają być obsługiwane. Pętli komunikatów przypomina poniższy kod.
+1. Aby obsłużyć komunikaty, najpierw dodamy pętlę komunikatów w celu nasłuchiwania komunikatów wysyłanych przez system Windows. Gdy aplikacja odbiera komunikat, ta pętla wysyła ją do `WndProc` funkcji, która ma być obsługiwana. Pętla komunikatów jest podobna do poniższego kodu.
 
    ```cpp
    MSG msg;
@@ -271,9 +271,9 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych Windows w p
    return (int) msg.wParam;
    ```
 
-   Aby uzyskać więcej informacji dotyczących struktur i funkcji w pętli komunikatów, zobacz [MSG](/windows/desktop/api/winuser/ns-winuser-msg), [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage), i [DispatchMessage ](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
+   Aby uzyskać więcej informacji na temat struktur i funkcji w pętli komunikatów, zobacz [MSG](/windows/win32/api/winuser/ns-winuser-msg), [GetMessage](/windows/win32/api/winuser/nf-winuser-getmessage), [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)i [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage).
 
-   W tym momencie `WinMain` funkcja powinna przypominać następujący kod.
+   W tym momencie `WinMain` funkcja powinna wyglądać podobnie do poniższego kodu.
 
    ```cpp
    int WINAPI WinMain(HINSTANCE hInstance,
@@ -362,11 +362,11 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych Windows w p
 
 ### <a name="to-add-functionality-to-the-wndproc-function"></a>Aby dodać funkcje do funkcji WndProc
 
-1. Aby włączyć `WndProc` funkcji obsługi wiadomości otrzymywanych przez aplikację, Wdróż instrukcję przełącznika.
+1. Aby włączyć `WndProc` funkcję do obsługi komunikatów odbieranych przez aplikację, zaimplementuj instrukcję Switch.
 
-   Co ważne komunikat do obsłużenia to [WM_PAINT](/windows/desktop/gdi/wm-paint) wiadomości. Aplikacja otrzymuje `WM_PAINT` wiadomości, gdy jest to część jej wyświetlanego okna musi zostać zaktualizowany. Zdarzenie może wystąpić, gdy użytkownik przesuwa okno przed okna, a następnie przenosi ją natychmiast ponownie, a aplikacja nie wiadomo, kiedy te zdarzenia występują. Tylko Windows zna, więc powiadomi użytkownika o `WM_PAINT`. Po wyświetleniu okna należy zaktualizować wszystkie.
+   Jednym z ważnych komunikatów do obsługi jest komunikat [WM_PAINT](/windows/win32/gdi/wm-paint) . Aplikacja otrzymuje komunikat, `WM_PAINT` gdy należy zaktualizować część wyświetlonego okna. Zdarzenie może wystąpić, gdy użytkownik przenosi okno przed oknem, a następnie przenosi je ponownie, a aplikacja nie wie, kiedy te zdarzenia wystąpią. Tylko system Windows wie, że powiadamia użytkownika `WM_PAINT`. Po pierwszym wyświetleniu okna należy zaktualizować jego wszystkie.
 
-   Aby obsłużyć `WM_PAINT` komunikatu, pierwsze wywołanie [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint), a następnie obsłuż całą logikę układu tekstu, przycisków i innych kontrolek w oknie, a następnie wywołaj [EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint). Dla aplikacji logika między wywołaniem rozpoczęcia z zakończenia jest wyświetlić napis "Hello, pulpitu Windows!" w oknie. W poniższym kodzie Zauważ, że [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta) funkcja służy do wyświetlenia ciągu.
+   Aby obsłużyć `WM_PAINT` komunikat, najpierw Wywołaj [BeginPaint](/windows/win32/api/winuser/nf-winuser-beginpaint), a następnie obsłuż całą logikę w celu określenia układu tekstu, przycisków i innych kontrolek w oknie, a następnie Wywołaj [EndPaint](/windows/win32/api/winuser/nf-winuser-endpaint). W przypadku aplikacji logika między początkową wywołaniem a końcowym wywołaniem to Wyświetl ciąg "Hello, Windows Desktop!" w oknie. W poniższym kodzie należy zauważyć, że funkcja [TextOut](/windows/win32/api/wingdi/nf-wingdi-textoutw) jest używana do wyświetlania ciągu.
 
    ```cpp
    PAINTSTRUCT ps;
@@ -391,9 +391,9 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych Windows w p
    }
    ```
 
-   `HDC` w kodzie jest uchwytem do kontekstu urządzenia, która jest strukturą danych, której Windows używa, aby umożliwić aplikacji do komunikowania się z podsystem grafiki. `BeginPaint` i `EndPaint` funkcje zachowują się jak jest "pełnoprawnym" w dobrej aplikacji i nie używa kontekstu urządzenia przez dłuższy czas, nie należy go. Funkcje pomocy wykonującego podsystem grafiki jest dostępny do użytku przez inne aplikacje.
+   `HDC`kod jest dojściem do kontekstu urządzenia, który jest strukturą danych używaną przez system Windows, aby umożliwić aplikacji komunikację z podsystemem grafiki. Funkcje `BeginPaint` i`EndPaint` sprawiają, że aplikacja zachowuje się jak dobry obywatel i nie używa kontekstu urządzenia dłużej niż jest to potrzebne. Funkcje ułatwiają dostęp do podsystemu grafiki do użytku przez inne aplikacje.
 
-1. Aplikacja zazwyczaj obsługuje wiele innych wiadomości, na przykład [WM_CREATE](/windows/desktop/winmsg/wm-create) podczas okna i [WM_DESTROY](/windows/desktop/winmsg/wm-destroy) po zamknięciu okna. Poniższy kod przedstawia podstawowe lecz ukończenia `WndProc` funkcji.
+1. Aplikacja zwykle obsługuje wiele innych komunikatów, na przykład [WM_CREATE](/windows/win32/winmsg/wm-create) podczas pierwszego tworzenia okna i [WM_DESTROY](/windows/win32/winmsg/wm-destroy) po zamknięciu okna. Poniższy kod przedstawia podstawową funkcję, ale kompletną `WndProc` .
 
    ```cpp
    LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
@@ -429,13 +429,13 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych Windows w p
    }
    ```
 
-## <a name="build-the-code"></a>Skompiluj kod
+## <a name="build-the-code"></a>Kompilowanie kodu
 
-Rzeczywiście, Oto kompletny kod dla działającą aplikację.
+Zgodnie z oczekiwaniami, Oto pełen kod dla aplikacji działającej.
 
 ### <a name="to-build-this-example"></a>Aby skompilować ten przykład
 
-1. Usunięcie wszelkiego kodu, które zostały wprowadzone w *HelloWindowsDesktop.cpp* w edytorze. Skopiuj ten przykładowy kod i wklej go do *HelloWindowsDesktop.cpp*:
+1. Usuń kod wprowadzony w *HelloWindowsDesktop. cpp* w edytorze. Skopiuj ten przykładowy kod, a następnie wklej go do *HelloWindowsDesktop. cpp*:
 
    ```cpp
    // HelloWindowsDesktop.cpp
@@ -583,16 +583,16 @@ Rzeczywiście, Oto kompletny kod dla działającą aplikację.
    }
    ```
 
-1. Na **kompilacji** menu, wybierz **Kompiluj rozwiązanie**. Wyniki kompilacji powinien pojawić się w **dane wyjściowe** okna w programie Visual Studio.
+1. W menu **kompilacja** wybierz polecenie **Kompiluj rozwiązanie**. Wyniki kompilacji powinny pojawić się w oknie **danych wyjściowych** w programie Visual Studio.
 
-   ![Skompiluj projekt DesktopApp](../build/media/desktop-app-project-build-150.gif "kompilowania projektu DesktopApp")
+   ![Kompilowanie projektu DesktopApp](../build/media/desktop-app-project-build-150.gif "Kompilowanie projektu DesktopApp")
 
-1. Aby uruchomić aplikację, naciśnij klawisz **F5**. Okno zawierające tekst "Hello, pulpitu Windows!" powinien pojawić się w lewym górnym rogu ekranu.
+1. Aby uruchomić aplikację, naciśnij klawisz **F5**. Okno zawierające tekst "Hello, Windows Desktop!" powinien pojawić się w lewym górnym rogu ekranu.
 
-   ![Uruchom projekt DesktopApp](../build/media/desktop-app-project-run-157.PNG "Uruchom projekt DesktopApp")
+   ![Uruchamianie projektu DesktopApp](../build/media/desktop-app-project-run-157.PNG "Uruchamianie projektu DesktopApp")
 
-Gratulacje! W tym przewodniku zakończeniu i wbudowane tradycyjnych aplikacji pulpitu Windows.
+Gratulacje! Ten Instruktaż został ukończony i opracowano tradycyjną aplikację klasyczną systemu Windows.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Aplikacje pulpitu Windows](../windows/windows-desktop-applications-cpp.md)
+[Aplikacje klasyczne systemu Windows](../windows/windows-desktop-applications-cpp.md)

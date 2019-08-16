@@ -1,39 +1,39 @@
 ---
-title: 'Instrukcje: Tworzenie i używanie CComPtr i CComQIPtr wystąpień'
+title: 'Instrukcje: Tworzenie i używanie wystąpień CComPtr i CComQIPtr'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b0356cfb-12cc-4ee8-b988-8311ed1ab5e0
-ms.openlocfilehash: 2bcabfe80185939b899c84fc44f71b98608fc3c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8dd7aa903eefd533b1dd2688f3cee46ab3787e60
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154064"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498595"
 ---
-# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Instrukcje: Tworzenie i używanie CComPtr i CComQIPtr wystąpień
+# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Instrukcje: Tworzenie i używanie wystąpień CComPtr i CComQIPtr
 
-W klasycznym programowaniu Windows, bibliotek są często implementowane jako obiekty COM (lub dokładniej, jako serwery COM). Wiele składników systemu operacyjnego Windows są implementowane jako serwerów COM, a wiele współautorzy podają bibliotek w tym formularzu. Aby uzyskać informacje dotyczące podstawowych informacji o modelu COM, zobacz [składnik modelu COM](/windows/desktop/com/component-object-model--com--portal).
+W klasycznym programowaniu systemu Windows biblioteki są często implementowane jako obiekty COM (lub dokładniej, jako serwery COM). Wiele składników systemu operacyjnego Windows jest implementowanych jako serwery COM, a wiele współautorów udostępnia biblioteki w tym formularzu. Aby uzyskać informacje dotyczące podstawowych informacji o modelu COM, zobacz [składnik modelu COM](/windows/win32/com/component-object-model--com--portal).
 
-Podczas tworzenia wystąpienia obiektu Component Object Model (COM) przechowywania wskaźnik interfejsu w modelu COM inteligentny wskaźnik, który wykonuje liczenia odwołań przy użyciu wywołania `AddRef` i `Release` w destruktorze. Jeśli używasz Active Template Library (ATL) lub biblioteki Microsoft Foundation Class (MFC), należy użyć `CComPtr` inteligentnego wskaźnika. Jeśli nie używasz biblioteki ATL lub MFC, należy użyć `_com_ptr_t`. Ponieważ COM nie jest odpowiednikiem `std::unique_ptr`, używaj tych inteligentnych wskaźników dla scenariuszy z jednego właściciela i wielu właściciela. Zarówno `CComPtr` i `ComQIPtr` obsługę przenoszenia operacji, które mają odwołania rvalue.
+Podczas tworzenia wystąpienia obiektu Component Object Model (com) należy przechowywać wskaźnik interfejsu w inteligentnym wskaźniku com, który wykonuje zliczanie odwołań przy użyciu wywołań do `AddRef` i `Release` w destruktorze. Jeśli używasz Active Template Library (ATL) lub biblioteka MFC (MFC), użyj `CComPtr` inteligentnego wskaźnika. Jeśli nie używasz biblioteki ATL ani MFC, użyj polecenia `_com_ptr_t`. Ze względu na `std::unique_ptr`to, że model com nie jest odpowiednikiem, Użyj tych inteligentnych wskaźników zarówno dla scenariuszy z jednym właścicielem, jak i wieloma właścicielami. Obie `CComPtr` i`ComQIPtr` obsługują operacje przenoszenia, które mają odwołania rvalue.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak używać `CComPtr` do tworzenia wystąpienia obiektu COM i uzyskać wskaźniki do jego interfejsów. Należy zauważyć, że `CComPtr::CoCreateInstance` funkcja członkowska jest używany do tworzenia obiektu COM, zamiast funkcji Win32, który ma taką samą nazwę.
+Poniższy przykład pokazuje, jak używać `CComPtr` do tworzenia wystąpienia obiektu com i uzyskiwania wskaźników do interfejsów. Należy zauważyć, `CComPtr::CoCreateInstance` że funkcja członkowska jest używana do tworzenia obiektu com zamiast funkcji Win32, która ma taką samą nazwę.
 
 [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]
 
-`CComPtr` i jego odmian są częścią ATL i są definiowane w \<atlcomcli.h >. `_com_ptr_t` jest zadeklarowana w \<comip.h >. Kompilator tworzy specjalizacje `_com_ptr_t` podczas generowania klasy otoki dla biblioteki typów.
+`CComPtr`a jego względne elementy są częścią ATL i są zdefiniowane w \<atlcomcli. h >. `_com_ptr_t`jest zadeklarowany \<w comip. h >. Kompilator tworzy specjalizacje, `_com_ptr_t` gdy generuje klasy otoki dla bibliotek typów.
 
 ## <a name="example"></a>Przykład
 
-ATL udostępnia również `CComQIPtr`, mającym prostsze składni zapytań obiekt COM, można pobrać dodatkowe interfejsu. Firma Microsoft zaleca jednak `CComPtr` ponieważ robi wszystko, co który `CComQIPtr` zrobić i semantycznie bardziej spójny z surowe wskaźniki interfejsu COM. Jeśli używasz `CComPtr` kwerendy dla interfejsu, nowy wskaźnik interfejsu, jest umieszczany w parametrze wyjściowym. Jeśli wywołanie zakończy się niepowodzeniem, zwracana jest wartość HRESULT, który jest typowy wzorzec COM. Za pomocą `CComQIPtr`, zwracana jest wartość wskaźnika, sama i jeśli wywołanie zakończy się niepowodzeniem, wewnętrzne zwracanej wartości HRESULT nie są dostępne. Następujące dwa wiersze nie są wyświetlane jak błąd mechanizmów obsługi `CComPtr` i `CComQIPtr` różnią się.
+Ponadto program ATL `CComQIPtr`oferuje prostsze składnie służące do wykonywania zapytań względem obiektu com w celu pobrania dodatkowego interfejsu. Zaleca `CComPtr` się jednak, aby wszystko, co `CComQIPtr` można zrobić, i jest semantycznie bardziej spójne ze wskaźnikami interfejsu com RAW. W przypadku użycia `CComPtr` zapytania do interfejsu, Nowy wskaźnik interfejsu jest umieszczany w parametrze out. Jeśli wywołanie nie powiedzie się, zwracany jest wynik HRESULT, który jest typowym wzorcem modelu COM. W `CComQIPtr`przypadku, wartość zwracana jest wskaźnikiem, a jeśli wywołanie nie powiedzie się, nie można uzyskać dostępu do wewnętrznej wartości zwracanej HRESULT. W poniższych dwóch wierszach przedstawiono sposób obsługi błędów w programie `CComPtr` i `CComQIPtr` różnią się.
 
 [!code-cpp[COM_smart_pointers#02](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_2.cpp)]
 
 ## <a name="example"></a>Przykład
 
-`CComPtr` zapewnia specjalizacji IDispatch, która umożliwia przechowywanie wskaźniki do składników automatyzacji COM i wywołania metody w interfejsie przy użyciu późne powiązania. `CComDispatchDriver` element typedef dla jest `CComQIPtr<IDispatch, &IIDIDispatch>`, który jest niejawnie konwertowany na `CComPtr<IDispatch>`. W związku z tym, gdy dowolne z tych trzech nazw pojawi się w kodzie, jest to równoważne `CComPtr<IDispatch>`. Poniższy przykład pokazuje, jak uzyskać wskaźnik do modelu obiektów programu Microsoft Word przy użyciu `CComPtr<IDispatch>`.
+`CComPtr`zapewnia specjalizację dla elementu IDispatch, który umożliwia przechowywanie wskaźników do składników automatyzacji modelu COM i wywoływanie metod w interfejsie przy użyciu późnego wiązania. `CComDispatchDriver`jest elementem TypeDef dla `CComQIPtr<IDispatch, &IIDIDispatch>`, który jest niejawnie konwertowany `CComPtr<IDispatch>`na. W związku z tym, gdy dowolne z tych trzech nazw pojawia się w kodzie, `CComPtr<IDispatch>`jest równoważne. Poniższy przykład pokazuje, jak uzyskać wskaźnik do modelu obiektów programu Microsoft Word przy użyciu `CComPtr<IDispatch>`.
 
 [!code-cpp[COM_smart_pointers#03](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_3.cpp)]
 

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - controls [MFC], tool tips
 - handler functions [MFC], tool tips
 ms.assetid: cad5ef0f-02e3-4151-ad0d-3d42e6932b0e
-ms.openlocfilehash: 3d44f2c503b689360f040e6804d319c331d5c0ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f68fb62335219ea498163e6124c8e91e49f2938
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168027"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511023"
 ---
 # <a name="tool-tips-in-windows-not-derived-from-cframewnd"></a>Etykietki narzędzi w systemie Windows niepochodzące od obiektu CFrameWnd
 
-Rodzina tego artykułu opisano włączanie etykietek narzędzi dla formantów znajdujących się w oknie, który nie pochodzi od [CFrameWnd](../mfc/reference/cframewnd-class.md). Artykuł [etykietek narzędzi pasków narzędzi](../mfc/toolbar-tool-tips.md) informacje na temat etykietek narzędzi dla formantów w `CFrameWnd`.
+W tym artykule opisano Włączanie etykietek narzędzi dla kontrolek znajdujących się w oknie, które nie pochodzi od [obiektu CFrameWnd](../mfc/reference/cframewnd-class.md). Etykietki [narzędzi](../mfc/toolbar-tool-tips.md) artykułów zawierają informacje o etykietach narzędzi dla formantów w `CFrameWnd`.
 
-Tematy omówione w tej rodzinie artykułu obejmują:
+Tematy omówione w tej rodzinie artykułów obejmują:
 
 - [Włączanie etykietek narzędzi](../mfc/enabling-tool-tips.md)
 
@@ -28,11 +28,11 @@ Tematy omówione w tej rodzinie artykułu obejmują:
 
 - [Struktura TOOLTIPTEXT](../mfc/tooltiptext-structure.md)
 
-Etykietki narzędzi są automatycznie wyświetlane w przypadku przycisków i innych kontrolek znajdujących się w oknie nadrzędnym pochodną `CFrameWnd`. Jest to spowodowane `CFrameWnd` ma domyślny program obsługi dla [TTN_GETDISPINFO](/windows/desktop/Controls/ttn-getdispinfo) powiadomienie, które obsługuje **TTN_NEEDTEXT** powiadomienia za pomocą narzędzia Porada formanty powiązane z kontrolkami.
+Etykietki narzędzi są automatycznie wyświetlane dla przycisków i innych kontrolek zawartych w oknie nadrzędnym `CFrameWnd`pochodnym. Dzieje się tak `CFrameWnd` , ponieważ ma domyślną procedurę obsługi dla powiadomienia [TTN_GETDISPINFO](/windows/win32/Controls/ttn-getdispinfo) , która obsługuje powiadomienia **TTN_NEEDTEXT** z kontrolek etykietek narzędzi skojarzonych z kontrolkami.
 
-Jednak to domyślny program obsługi nie jest wywoływana, gdy **TTN_NEEDTEXT** powiadomienie jest wysyłane z formantem etykietki narzędzia, powiązany z kontrolką w oknie, który nie jest `CFrameWnd`, takie jak formant w okno dialogowe lub widok formularza. Dlatego jest niezbędne do zapewnienia funkcji obsługi, aby uzyskać **TTN_NEEDTEXT** komunikatu powiadomienia w celu wyświetlenia etykietki narzędzi dla formantów podrzędnych.
+Jednak ta domyślna procedura obsługi nie jest wywoływana, gdy powiadomienia **TTN_NEEDTEXT** są wysyłane z kontrolki etykietki narzędzia skojarzonej z kontrolką w oknie `CFrameWnd`, które nie jest, takie jak kontrolka w oknie dialogowym lub widok formularza. W związku z tym, niezbędne jest udostępnienie funkcji obsługi komunikatu powiadomienia **TTN_NEEDTEXT** w celu wyświetlenia etykietek narzędzi dla formantów podrzędnych.
 
-Domyślnej etykietki narzędzia, podany dla aplikacji dla systemu windows przez [CWnd::EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips) nie zawierają tekstu skojarzonych z nimi. Aby pobrać tekst etykietki narzędzia wyświetlić, **TTN_NEEDTEXT** powiadomienie jest wysyłane do okna nadrzędnego formantem etykietki narzędzia, po prostu, przed wyświetleniem okna narzędzia porada. Jeśli nie istnieje żadna procedura obsługi dla tego komunikatu przypisać jakąś wartość, aby *pszText* członkiem **TOOLTIPTEXT** struktury, nie będzie żadnych tekst wyświetlany dla etykietki narzędzia.
+Domyślne wskazówki dotyczące narzędzi podane dla systemu Windows przez [CWnd:: EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips) nie mają skojarzonych z nimi tekstu. Aby pobrać tekst etykietki narzędzia do wyświetlenia, powiadomienie **TTN_NEEDTEXT** jest wysyłane do okna nadrzędnego kontrolki etykietki narzędzia tuż przed wyświetleniem okna etykietki narzędzia. Jeśli nie ma programu obsługi dla tej wiadomości, aby przypisać pewną wartość do elementu członkowskiego *pszText* struktury **ToolTipText** , nie będzie wyświetlany tekst etykietki narzędzia.
 
 ## <a name="see-also"></a>Zobacz także
 

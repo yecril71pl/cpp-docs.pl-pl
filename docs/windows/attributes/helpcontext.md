@@ -1,21 +1,21 @@
 ---
-title: helpcontext — (atrybut COM C++)
+title: atrybut HelpContext (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpcontext
 helpviewer_keywords:
 - helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
-ms.openlocfilehash: 22023b4087c67b62d540d021fa06fd3582c7e4e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ec13d785ae491a4082d0bbdc908448cb1b8a49c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409671"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490910"
 ---
 # <a name="helpcontext"></a>helpcontext
 
-Określa identyfikator kontekstu, który pozwala użytkownikowi oglądać informacje o tym elemencie w **pomocy** pliku.
+Określa identyfikator kontekstu, który umożliwia użytkownikowi wyświetlanie informacji o tym elemencie w pliku **pomocy** .
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,15 +26,15 @@ Określa identyfikator kontekstu, który pozwala użytkownikowi oglądać inform
 ### <a name="parameters"></a>Parametry
 
 *id*<br/>
-Identyfikator kontekstu tematu Pomocy. Zobacz [Pomoc HTML: Pomoc kontekstowa do programów Your](../../mfc/html-help-context-sensitive-help-for-your-programs.md) więcej informacji na temat kontekstu identyfikatorów.
+Identyfikator kontekstu tematu pomocy. Zobacz [Pomoc HTML: Pomoc kontekstowa dla programów](../../mfc/html-help-context-sensitive-help-for-your-programs.md) , aby uzyskać więcej informacji na temat identyfikatorów kontekstu.
 
 ## <a name="remarks"></a>Uwagi
 
-**Helpcontext —** atrybut C++ ma taką samą funkcjonalność jak [helpcontext —](/windows/desktop/Midl/helpcontext) atrybutów w MIDL.
+Atrybut **atrybut HelpContext** C++ ma takie same funkcje jak atrybut [atrybut HelpContext](/windows/win32/Midl/helpcontext) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [defaultvalue](defaultvalue.md) przykład sposobu użycia **helpcontext —**.
+Zobacz przykład dla elementu [DefaultValue](defaultvalue.md) , aby zapoznać się z przykładem korzystania z **atrybut HelpContext**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -42,12 +42,12 @@ Zobacz przykład [defaultvalue](defaultvalue.md) przykład sposobu użycia **hel
 
 |||
 |-|-|
-|**Dotyczy**|**interfejs**, **typedef**, **klasy**, metody, właściwości|
+|**Dotyczy**|**interfejs**, **typedef**, **Klasa**, metoda, właściwość|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

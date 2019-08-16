@@ -6,92 +6,92 @@ f1_keywords:
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-ms.openlocfilehash: 143f06a0cf22265734d6d77f8fca4efd5ac3031b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9e6eaa65516b5b49022526f24e220dec83b2c26
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62343163"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500073"
 ---
 # <a name="language-strings"></a>Ciągi języka
 
-[Setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) i [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) funkcji można użyć języków Windows API NLS obsługiwanych systemach operacyjnych, które nie korzystają z strony kodowej Unicode. Aby uzyskać listę obsługiwanych języków przez wersję systemu operacyjnego, zobacz [dodatek A: Zachowanie produktu](https://msdn.microsoft.com/library/cc233982.aspx) w [MS-LCID]: Dokumentacja identyfikator (LCID) Windows języka kodu. Ciąg języka może być dowolną z wartości w **języka** i **tagu języka** kolumn listę obsługiwanych języków. Na przykład kod, który wylicza dostępnych nazw ustawień regionalnych i powiązane wartości zobacz [NLS: Na podstawie nazwy przykładowe interfejsów API](/windows/desktop/intl/nls--name-based-apis-sample).
+Funkcje [](../c-runtime-library/reference/setlocale-wsetlocale.md) setlocale i [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) mogą używać obsługiwanych języków NLS API systemu Windows w systemach operacyjnych, które nie korzystają ze strony kodowej Unicode. Aby uzyskać listę obsługiwanych języków według wersji systemu operacyjnego, zobacz [dodatek a: Zachowanie](https://msdn.microsoft.com/library/cc233982.aspx) produktu w [MS-LCID]: Dokumentacja identyfikatora kodu języka (LCID) systemu Windows. Ciąg języka może być dowolną wartością w kolumnach **Język** i **Język** listy obsługiwanych języków. Przykład kodu, który wylicza dostępne nazwy ustawień regionalnych i powiązane wartości, można znaleźć w [temacie NLS: Przykład](/windows/win32/intl/nls--name-based-apis-sample)interfejsów API opartych na nazwach.
 
-## <a name="additional-supported-language-strings"></a>Dodatkowe obsługiwanych ciągów języka
+## <a name="additional-supported-language-strings"></a>Dodatkowe obsługiwane ciągi języka
 
-Implementacja biblioteki wykonawczej C firmy Microsoft obsługuje również następujące ciągi języka:
+Implementacja biblioteki wykonawczej Microsoft C obsługuje również następujące ciągi języka:
 
-|Ciąg języka|Nazwy ustawień regionalnych równoważne|
+|Ciąg języka|Równoważna Nazwa ustawień regionalnych|
 |---------------------|----------------------------|
-|American|en-US|
-|angielski|en-US|
-|— angielski|en-US|
-|australijskie|EN-AU|
+|Samoa|en-US|
+|angielski (amerykański)|en-US|
+|amerykański (angielski)|en-US|
+|służb|EN-AU|
 |Belgii|nl-BE|
-|kanadyjski|EN-CA|
-|CHH|zh-HK|
-|chi|zh-SG|
-|Chiński|nazwy zh|
-|chiński — hongkong|zh-HK|
-|chiński uproszczony|zh-CN|
-|chiński — Singapur|zh-SG|
-|chiński tradycyjny|zh-TW|
-|Holenderski — Belgia|nl-BE|
-|angielskiego amerykańskiego|en-US|
-|jednostki alokacji na angielski|EN-AU|
-|angielski — belize|en-BZ|
+|Ustawa|EN-CA|
+|chh|zh-HK|
+|rozkład Chi|zh-SG|
+|Chiński|zh|
+|Chiński — Hongkong|zh-HK|
+|Chiński (uproszczony)|zh-CN|
+|Chiński (Singapur)|zh-SG|
+|Chiński (tradycyjny)|zh-TW|
+|holenderski — belgijski|nl-BE|
+|angielski (amerykański)|en-US|
+|angielski (Australia)|EN-AU|
+|angielski — Belize|en-BZ|
 |angielski — może|EN-CA|
-|Angielski — Karaiby|en-029|
+|angielski — Karaiby|en-029|
 |angielski — wygasnąć|EN-IE|
-|Angielski — Jamajka|en-JM|
-|angielski — nz|EN NZ|
-|angielski — Republika Południowej Afryki|en-ZA|
-|Angielski — Trynidad y tobago|en-TT|
+|Angielski — Jamajka|pl-JM|
+|angielski — NZ|EN NZ|
+|angielski (Republika Południowej Afryki)|pl-za|
+|angielski — Trynidad y Tobago|pl-TT|
 |angielski — Zjednoczone Królestwo|en-GB|
-|angielski — us|en-US|
-|Angielski — Stany Zjednoczone|en-US|
-|Francuski — Belgia|fr-BE|
-|French-Canadian|fr-CA|
-|Francuski (Luksemburg)|fr-LU|
-|Francuski swiss|FR-CH|
-|german-austrian|de-AT|
-|german-lichtenstein|de-LI|
-|Niemiecki — Luksemburg|de-LU|
-|Niemiecki — Szwajcaria|de-CH|
-|irlandzki — angielski|EN-IE|
-|Włoski — Szwajcaria|it-CH|
-|Norweski|Brak|
-|Norweski bokmal|nb-NO|
-|norwegian-nynorsk|nn-NO|
-|Portugalski — Brazylia|pt-BR|
-|Argentyna hiszpański|ES AR|
-|Boliwia hiszpański|es-BO|
-|Hiszpański — chile|ES-CL|
-|Hiszpański — Kolumbia|ES CO|
-|Hiszpański — Kostaryka|ES CR|
-|Republika Dominikańska hiszpański|es-DO|
-|Ekwador hiszpański|es-EC|
-|Hiszpański Salwador|es-SV|
+|angielski — Stany Zjednoczone|en-US|
+|angielski (USA)|en-US|
+|francuski — belgijski|fr-BE|
+|francuski — Kanada|fr-CA|
+|Francuski — Luksemburg|fr — LU|
+|francuski — szwajcarski|FR-CH|
+|niemiecki — austriacki|de-AT|
+|niemiecki — Lichtenstein|de-LI|
+|niemiecki — Luksemburg|de-LU|
+|niemiecki (Szwajcaria)|de-CH|
+|Irlandzki — angielski|EN-IE|
+|włoski (szwajcarski)|IT-CH|
+|Norweski|znaleziono|
+|norweski (Bokmal)|nb-NO|
+|norweski — nynorsk|NN-NO|
+|portugalski (Brazylia)|pt-BR|
+|hiszpański (Argentyna)|ES-AR|
+|Hiszpański — Boliwia|ES — BO|
+|hiszpański — Chile|ES — CL|
+|hiszpański — Kolumbia|ES — CO|
+|hiszpański — Kostaryka|ES — CR|
+|hiszpański — Dominikana|ES-DO|
+|hiszpański (Ekwador)|ES — we|
+|hiszpański — Salwador|ES — SV|
 |Hiszpański — Gwatemala|es-GT|
-|Hiszpański honduras|ES HN|
-|Hiszpański Meksykańskich|es-MX|
-|Nowoczesny hiszpański|es-ES|
-|Hiszpański — Nikaragua|es-NI|
-|Hiszpański panama|es-PA|
-|Paragwaj hiszpański|es-PY|
-|Hiszpański — peru|es-PE|
-|Hiszpański Portoryko|es-PR|
-|Urugwaj hiszpański|ES UY|
-|Wenezuela hiszpański|es-VE|
-|szwedzki — Finlandia|sv-FI|
-|Szwajcaria|de-CH|
+|hiszpański — Honduras|ES — HN|
+|hiszpański (Meksyk)|es-MX|
+|hiszpański — nowoczesny|es-ES|
+|hiszpański — Nikaragua|ES — NI|
+|hiszpański — Panama|ES — PA|
+|Hiszpański — Paragwaj|ES — PR|
+|Hiszpański — Peru|es-PE|
+|hiszpański — Portoryko|ES — PR|
+|hiszpański — Urugwaj|ES — UY|
+|hiszpański — Wenezuela|ES — VE|
+|szwedzki — Finlandia|OHR-FI|
+|przewoźnik|de-CH|
 |Zjednoczone Królestwo|en-GB|
-|us|en-US|
-|usa|en-US|
+|Prześlij|en-US|
+|poniżej|en-US|
 
 ## <a name="see-also"></a>Zobacz także
 
-[Nazwy lokalne, języki i ciągi Kraj/Region](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
-[Ciągi Kraj/Region](../c-runtime-library/country-region-strings.md)<br/>
+[Nazwy lokalne, Języki i ciągi kraj/region](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+[Ciągi kraju/regionu](../c-runtime-library/country-region-strings.md)<br/>
 [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
 [_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)

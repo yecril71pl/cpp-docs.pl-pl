@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CFileFind [MFC], CloseContext
 - CFileFind [MFC], m_pTM
 ms.assetid: 9990068c-b023-4114-9580-a50182d15240
-ms.openlocfilehash: f2dfd3421d2154b4894b62b71d7993c483a77c53
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 2ec8c50a317a09e97a212e8cd7b9be1b58272af9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916123"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506568"
 ---
 # <a name="cfilefind-class"></a>Klasa CFileFind
 
@@ -212,7 +212,7 @@ Zarezerwowane do `FindFile` udostępniania polimorficznych klas pochodnych. Musi
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie 0. Aby uzyskać rozszerzone informacje o błędzie, wywołaj [wartość GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)funkcji Win32.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0. Aby uzyskać rozszerzone informacje o błędzie, wywołaj [wartość GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)funkcji Win32.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -270,7 +270,7 @@ virtual BOOL FindNextFile();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli istnieje więcej plików; zero, jeśli znaleziony plik jest ostatnim z nich w katalogu lub wystąpił błąd. Aby uzyskać rozszerzone informacje o błędzie, wywołaj [wartość GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)funkcji Win32. Jeśli znaleziony plik to ostatni plik w katalogu lub nie można znaleźć pasujących plików, `GetLastError` funkcja zwraca ERROR_NO_MORE_FILES.
+Niezerowe, jeśli istnieje więcej plików; zero, jeśli znaleziony plik jest ostatnim z nich w katalogu lub wystąpił błąd. Aby uzyskać rozszerzone informacje o błędzie, wywołaj [wartość GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)funkcji Win32. Jeśli znaleziony plik to ostatni plik w katalogu lub nie można znaleźć pasujących plików, `GetLastError` funkcja zwraca ERROR_NO_MORE_FILES.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -314,7 +314,7 @@ Musisz wywołać `FindNextFile` co najmniej raz przed wywołaniem dowolnej z nas
 
 - [MatchesMask](#matchesmask)
 
-`FindNextFile`Zawija funkcję Win32 [FindNextFile](/windows/desktop/api/fileapi/nf-fileapi-findnextfilea).
+`FindNextFile`Zawija funkcję Win32 [FindNextFile](/windows/win32/api/fileapi/nf-fileapi-findnextfilew).
 
 ### <a name="example"></a>Przykład
 
@@ -332,7 +332,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parametry
 
 *pTimeStamp*<br/>
-Wskaźnik do struktury [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) zawierającej czas utworzenia pliku.
+Wskaźnik do struktury [FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime) zawierającej czas utworzenia pliku.
 
 *refTime*<br/>
 Odwołanie do obiektu [CTime](../../atl-mfc-shared/reference/ctime-class.md) .
@@ -346,7 +346,7 @@ Niezerowe, jeśli pomyślne; 0, jeśli nie powiodło się. `GetCreationTime`Zwra
 Musisz wywołać [FindNextFile](#findnextfile) co najmniej raz przed wywołaniem `GetCreationTime`metody.
 
 > [!NOTE]
->  Nie wszystkie systemy plików używają tej samej semantyki do implementowania sygnatury czasowej zwracanej przez tę funkcję. Ta funkcja może zwracać tę samą wartość zwracaną przez inne funkcje sygnatur czasowych, jeśli podstawowy system plików lub serwer nie obsługuje zachowywania atrybutu czasu. Zapoznaj się ze strukturą [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) , aby uzyskać informacje na temat formatów czasu. W niektórych systemach operacyjnych zwrócony czas jest w strefie czasowej lokalnej dla komputera, w którym znajduje się plik. Aby uzyskać więcej informacji, zobacz Interfejs API Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) .
+>  Nie wszystkie systemy plików używają tej samej semantyki do implementowania sygnatury czasowej zwracanej przez tę funkcję. Ta funkcja może zwracać tę samą wartość zwracaną przez inne funkcje sygnatur czasowych, jeśli podstawowy system plików lub serwer nie obsługuje zachowywania atrybutu czasu. Zapoznaj się ze strukturą [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) , aby uzyskać informacje na temat formatów czasu. W niektórych systemach operacyjnych zwrócony czas jest w strefie czasowej lokalnej dla komputera, w którym znajduje się plik. Aby uzyskać więcej informacji, zobacz Interfejs API Win32 [FileTimeToLocalFileTime](/windows/win32/api/fileapi/nf-fileapi-filetimetolocalfiletime) .
 
 ### <a name="example"></a>Przykład
 
@@ -473,7 +473,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 Odwołanie do obiektu [CTime](../../atl-mfc-shared/reference/ctime-class.md) .
 
 *pTimeStamp*<br/>
-Wskaźnik do struktury [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) zawierający czas ostatniego dostępu do pliku.
+Wskaźnik do struktury [FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime) zawierający czas ostatniego dostępu do pliku.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -484,7 +484,7 @@ Niezerowe, jeśli pomyślne; 0, jeśli nie powiodło się. `GetLastAccessTime`Zw
 Musisz wywołać [FindNextFile](#findnextfile) co najmniej raz przed wywołaniem `GetLastAccessTime`metody.
 
 > [!NOTE]
->  Nie wszystkie systemy plików używają tej samej semantyki do implementowania sygnatury czasowej zwracanej przez tę funkcję. Ta funkcja może zwracać tę samą wartość zwracaną przez inne funkcje sygnatur czasowych, jeśli podstawowy system plików lub serwer nie obsługuje zachowywania atrybutu czasu. Zapoznaj się ze strukturą [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) , aby uzyskać informacje na temat formatów czasu. W niektórych systemach operacyjnych zwrócony czas jest w strefie czasowej lokalnej dla komputera, w którym znajduje się plik. Aby uzyskać więcej informacji, zobacz Interfejs API Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) .
+>  Nie wszystkie systemy plików używają tej samej semantyki do implementowania sygnatury czasowej zwracanej przez tę funkcję. Ta funkcja może zwracać tę samą wartość zwracaną przez inne funkcje sygnatur czasowych, jeśli podstawowy system plików lub serwer nie obsługuje zachowywania atrybutu czasu. Zapoznaj się ze strukturą [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) , aby uzyskać informacje na temat formatów czasu. W niektórych systemach operacyjnych zwrócony czas jest w strefie czasowej lokalnej dla komputera, w którym znajduje się plik. Aby uzyskać więcej informacji, zobacz Interfejs API Win32 [FileTimeToLocalFileTime](/windows/win32/api/fileapi/nf-fileapi-filetimetolocalfiletime) .
 
 ### <a name="example"></a>Przykład
 
@@ -502,7 +502,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parametry
 
 *pTimeStamp*<br/>
-Wskaźnik do struktury [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) zawierającej godzinę ostatniego zapisania pliku.
+Wskaźnik do struktury [FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime) zawierającej godzinę ostatniego zapisania pliku.
 
 *refTime*<br/>
 Odwołanie do obiektu [CTime](../../atl-mfc-shared/reference/ctime-class.md) .
@@ -516,7 +516,7 @@ Niezerowe, jeśli pomyślne; 0, jeśli nie powiodło się. `GetLastWriteTime`Zwr
 Musisz wywołać [FindNextFile](#findnextfile) co najmniej raz przed wywołaniem `GetLastWriteTime`metody.
 
 > [!NOTE]
->  Nie wszystkie systemy plików używają tej samej semantyki do implementowania sygnatury czasowej zwracanej przez tę funkcję. Ta funkcja może zwracać tę samą wartość zwracaną przez inne funkcje sygnatur czasowych, jeśli podstawowy system plików lub serwer nie obsługuje zachowywania atrybutu czasu. Zapoznaj się ze strukturą [Win32_Find_Data](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) , aby uzyskać informacje na temat formatów czasu. W niektórych systemach operacyjnych zwrócony czas jest w strefie czasowej lokalnej dla komputera, w którym znajduje się plik. Aby uzyskać więcej informacji, zobacz Interfejs API Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) .
+>  Nie wszystkie systemy plików używają tej samej semantyki do implementowania sygnatury czasowej zwracanej przez tę funkcję. Ta funkcja może zwracać tę samą wartość zwracaną przez inne funkcje sygnatur czasowych, jeśli podstawowy system plików lub serwer nie obsługuje zachowywania atrybutu czasu. Zapoznaj się ze strukturą [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) , aby uzyskać informacje na temat formatów czasu. W niektórych systemach operacyjnych zwrócony czas jest w strefie czasowej lokalnej dla komputera, w którym znajduje się plik. Aby uzyskać więcej informacji, zobacz Interfejs API Win32 [FileTimeToLocalFileTime](/windows/win32/api/fileapi/nf-fileapi-filetimetolocalfiletime) .
 
 ### <a name="example"></a>Przykład
 
@@ -538,7 +538,7 @@ Długość znalezionego pliku w bajtach.
 
 Musisz wywołać [FindNextFile](#findnextfile) co najmniej raz przed wywołaniem `GetLength`metody.
 
-`GetLength`używa struktury Win32 [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) , aby uzyskać i zwrócić wartość rozmiaru pliku w bajtach.
+`GetLength`używa struktury Win32 [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) , aby uzyskać i zwrócić wartość rozmiaru pliku w bajtach.
 
 > [!NOTE]
 >  Począwszy od MFC 7,0, `GetLength` obsługuje 64-bitowe liczby całkowite. Wcześniej istniejący kod utworzony przy użyciu tej nowszej wersji biblioteki może spowodować ostrzeżenia obcinania.
@@ -583,7 +583,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Aplikacje oznaczają plik archiwum, którego kopia zapasowa ma zostać utworzona lub usunięta, przy użyciu FILE_ATTRIBUTE_ARCHIVE, atrybutu pliku identyfikowanego w strukturze [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) .
+Aplikacje oznaczają plik archiwum, którego kopia zapasowa ma zostać utworzona lub usunięta, przy użyciu FILE_ATTRIBUTE_ARCHIVE, atrybutu pliku identyfikowanego w strukturze [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) .
 
 Musisz wywołać [FindNextFile](#findnextfile) co najmniej raz przed wywołaniem `IsArchived`metody.
 
@@ -607,7 +607,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Skompresowany plik jest oznaczony przy użyciu FILE_ATTRIBUTE_COMPRESSED, atrybutu pliku identyfikowanego w strukturze [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) . W przypadku pliku ten atrybut wskazuje, że wszystkie dane w pliku są skompresowane. W przypadku katalogu ten atrybut wskazuje, że kompresja jest wartością domyślną dla nowo utworzonych plików i podkatalogów.
+Skompresowany plik jest oznaczony przy użyciu FILE_ATTRIBUTE_COMPRESSED, atrybutu pliku identyfikowanego w strukturze [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) . W przypadku pliku ten atrybut wskazuje, że wszystkie dane w pliku są skompresowane. W przypadku katalogu ten atrybut wskazuje, że kompresja jest wartością domyślną dla nowo utworzonych plików i podkatalogów.
 
 Musisz wywołać [FindNextFile](#findnextfile) co najmniej raz przed wywołaniem `IsCompressed`metody.
 
@@ -631,7 +631,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Plik, który jest katalogiem, jest oznaczony przy użyciu FILE_ATTRIBUTE_DIRECTORY atrybutu pliku identyfikowanego w strukturze [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) .
+Plik, który jest katalogiem, jest oznaczony przy użyciu FILE_ATTRIBUTE_DIRECTORY atrybutu pliku identyfikowanego w strukturze [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) .
 
 Musisz wywołać [FindNextFile](#findnextfile) co najmniej raz przed wywołaniem `IsDirectory`metody.
 
@@ -677,7 +677,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Pliki ukryte, które są oznaczone FILE_ATTRIBUTE_HIDDEN, atrybut pliku identyfikowany w strukturze [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) . Plik ukryty nie jest uwzględniony w zwykłej liście katalogów.
+Pliki ukryte, które są oznaczone FILE_ATTRIBUTE_HIDDEN, atrybut pliku identyfikowany w strukturze [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) . Plik ukryty nie jest uwzględniony w zwykłej liście katalogów.
 
 Musisz wywołać [FindNextFile](#findnextfile) co najmniej raz przed wywołaniem `IsHidden`metody.
 
@@ -701,7 +701,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Pliki oznaczone przy użyciu FILE_ATTRIBUTE_NORMAL, atrybut pliku identyfikowany w strukturze [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) . Normalny plik nie ma ustawionych atrybutów. Wszystkie inne atrybuty pliku przesłaniają ten atrybut.
+Pliki oznaczone przy użyciu FILE_ATTRIBUTE_NORMAL, atrybut pliku identyfikowany w strukturze [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) . Normalny plik nie ma ustawionych atrybutów. Wszystkie inne atrybuty pliku przesłaniają ten atrybut.
 
 Musisz wywołać [FindNextFile](#findnextfile) co najmniej raz przed wywołaniem `IsNormal`metody.
 
@@ -725,7 +725,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Plik tylko do odczytu jest oznaczony przy użyciu FILE_ATTRIBUTE_READONLY, atrybutu pliku identyfikowanego w strukturze [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) . Aplikacje mogą odczytywać takie pliki, ale nie mogą ich zapisywać ani usuwać.
+Plik tylko do odczytu jest oznaczony przy użyciu FILE_ATTRIBUTE_READONLY, atrybutu pliku identyfikowanego w strukturze [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) . Aplikacje mogą odczytywać takie pliki, ale nie mogą ich zapisywać ani usuwać.
 
 Musisz wywołać [FindNextFile](#findnextfile) co najmniej raz przed wywołaniem `IsReadOnly`metody.
 
@@ -749,7 +749,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Plik systemowy jest oznaczony przy użyciu FILE_ATTRIBUTE_SYSTEM, a atrybut pliku identyfikowany w strukturze [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) . Plik systemowy jest częścią lub jest używany wyłącznie przez system operacyjny.
+Plik systemowy jest oznaczony przy użyciu FILE_ATTRIBUTE_SYSTEM, a atrybut pliku identyfikowany w strukturze [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) . Plik systemowy jest częścią lub jest używany wyłącznie przez system operacyjny.
 
 Musisz wywołać [FindNextFile](#findnextfile) co najmniej raz przed wywołaniem `IsSystem`metody.
 
@@ -773,7 +773,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Plik tymczasowy jest oznaczony przy użyciu FILE_ATTRIBUTE_TEMPORARY, atrybutu pliku identyfikowanego w strukturze [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) . Plik tymczasowy jest używany na potrzeby magazynu tymczasowego. Aplikacje powinny zapisywać do pliku tylko wtedy, gdy jest to absolutnie konieczne. Większość danych pliku pozostaje w pamięci bez opróżniania na nośnik, ponieważ plik zostanie wkrótce usunięty.
+Plik tymczasowy jest oznaczony przy użyciu FILE_ATTRIBUTE_TEMPORARY, atrybutu pliku identyfikowanego w strukturze [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) . Plik tymczasowy jest używany na potrzeby magazynu tymczasowego. Aplikacje powinny zapisywać do pliku tylko wtedy, gdy jest to absolutnie konieczne. Większość danych pliku pozostaje w pamięci bez opróżniania na nośnik, ponieważ plik zostanie wkrótce usunięty.
 
 Musisz wywołać [FindNextFile](#findnextfile) co najmniej raz przed wywołaniem `IsTemporary`metody.
 
@@ -804,7 +804,7 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
 ### <a name="parameters"></a>Parametry
 
 *dwMask*<br/>
-Określa co najmniej jeden atrybut pliku identyfikowany w strukturze [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) dla znalezionego pliku. Aby wyszukać wiele atrybutów, użyj operatora bitowego OR&#124;(). Dopuszczalna jest dowolna kombinacja następujących atrybutów:
+Określa co najmniej jeden atrybut pliku identyfikowany w strukturze [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) dla znalezionego pliku. Aby wyszukać wiele atrybutów, użyj operatora bitowego OR&#124;(). Dopuszczalna jest dowolna kombinacja następujących atrybutów:
 
 - FILE_ATTRIBUTE_ARCHIVE plik jest plikiem archiwum. Aplikacje używają tego atrybutu do oznaczania plików do utworzenia kopii zapasowej lub usunięcia.
 
@@ -824,7 +824,7 @@ Określa co najmniej jeden atrybut pliku identyfikowany w strukturze [WIN32_FIND
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie 0. Aby uzyskać rozszerzone informacje o błędzie, wywołaj [wartość GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)funkcji Win32.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0. Aby uzyskać rozszerzone informacje o błędzie, wywołaj [wartość GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)funkcji Win32.
 
 ### <a name="remarks"></a>Uwagi
 

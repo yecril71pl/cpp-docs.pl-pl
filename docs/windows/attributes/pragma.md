@@ -1,21 +1,21 @@
 ---
-title: dyrektywy (C++ COM atrybut)
+title: pragmaC++ (atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.pragma
 helpviewer_keywords:
 - pragma attribute
 ms.assetid: 3f90d023-b8b5-4007-8311-008bb72cbea1
-ms.openlocfilehash: 159e1570c2bde07bb4df8fa904a519e8e0018a6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5c3ee0d3f99bd27ca41d68b11c11522e92c8d40a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407461"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514279"
 ---
 # <a name="pragma"></a>pragma
 
-Emituje określonego ciągu w pliku .idl wygenerowany bez znaków cudzysłowu.
+Emituje określony ciąg do wygenerowanego pliku IDL bez użycia znaków cudzysłowu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,11 +26,11 @@ Emituje określonego ciągu w pliku .idl wygenerowany bez znaków cudzysłowu.
 ### <a name="parameters"></a>Parametry
 
 *pragma_statement*<br/>
-Pragmę, której chcesz przejść do pliku .idl wygenerowany.
+Pragma, którą chcesz umieścić w wygenerowanym pliku IDL.
 
 ## <a name="remarks"></a>Uwagi
 
-**Pragma** atrybut C++ ma taką samą funkcjonalność jak [pragma](/windows/desktop/Midl/pragma) atrybutów w MIDL.
+Atrybut **pragma** C++ ma takie same funkcje jak atrybut [dyrektywy pragma](/windows/win32/Midl/pragma) MIDL.
 
 ## <a name="example"></a>Przykład
 
@@ -54,12 +54,12 @@ __interface A
 
 |||
 |-|-|
-|**Dotyczy**|Dowolne miejsce|
+|**Dotyczy**|Dowolnym miejscu|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

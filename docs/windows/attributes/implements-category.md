@@ -1,21 +1,21 @@
 ---
-title: implements_category — (C++ atrybutów COM)
+title: implements_category (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.implements_category
 helpviewer_keywords:
 - implements_category attribute
 ms.assetid: fb162df3-1ebe-43dc-a084-668d7ef8c03f
-ms.openlocfilehash: bbd859018210d3c972ae9d4b0e9f659d96d95aab
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 6e0036b7008b67a1e21bcbe64977f4703bbdf3be
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504215"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514633"
 ---
-# <a name="implementscategory"></a>implements_category
+# <a name="implements_category"></a>implements_category
 
-Określa kategorii składników implementowane przez klasy docelowej.
+Określa kategorie składników zaimplementowane przez klasę docelową.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,17 +26,17 @@ Określa kategorii składników implementowane przez klasy docelowej.
 ### <a name="parameters"></a>Parametry
 
 *implements_category*<br/>
-Identyfikator kategorii zaimplementowane.
+Identyfikator zaimplementowanej kategorii.
 
 ## <a name="remarks"></a>Uwagi
 
-**Implements_category —** C++ atrybut określa kategorii składników implementowane przez klasy docelowej. Odbywa się przez utworzenie mapy kategorii i dodawanie oddzielne wpisy określone przez **implements_category —** atrybutu. Aby uzyskać więcej informacji, zobacz [kategorii składników i jak one działają](/windows/desktop/com/component-categories-and-how-they-work).
+Atrybut **implements_category** C++ określa kategorie składników zaimplementowane przez klasę docelową. Jest to realizowane przez utworzenie mapy kategorii i dodanie oddzielnych wpisów określonych przez atrybut **implements_category** . Aby uzyskać więcej informacji, zobacz [kategorie składników i jak działają](/windows/win32/com/component-categories-and-how-they-work).
 
-Ten atrybut wymaga, aby [coclass](coclass.md), [progid](progid.md), lub [vi_progid —](vi-progid.md) atrybutów (lub innego atrybutu, który oznacza jeden z nich) również będą stosowane do tego samego elementu. Jeśli dowolny pojedynczy atrybut jest używany, pozostałe dwa są automatycznie stosowane. Na przykład jeśli `progid` zastosowaniu `vi_progid` i `coclass` są również stosowane.
+Ten atrybut wymaga, aby atrybut [coclass](coclass.md), [ProgID](progid.md)lub [vi_progid](vi-progid.md) (lub inny atrybut, który implikuje jeden z tych) został również zastosowany do tego samego elementu. W przypadku użycia dowolnego pojedynczego atrybutu zostaną automatycznie zastosowane pozostałe dwa. Na przykład, jeśli `progid` jest stosowany, `vi_progid` i `coclass` są również stosowane.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod określa, że następujący obiekt implementuje `Control` kategorii.
+Poniższy kod określa, że poniższy obiekt implementuje `Control` kategorię.
 
 ```cpp
 // cpp_attr_ref_implements_category.cpp
@@ -57,12 +57,12 @@ class CMyClass {};
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **— struktura**|
+|**Dotyczy**|**Klasa**, **Struktura**|
 |**Powtarzalne**|Tak|
-|**Wymaganych atrybutów**|Jedną z następujących: `coclass`, `progid`, lub `vi_progid`|
+|**Wymagane atrybuty**|Jeden z następujących: `coclass`, `progid`, lub`vi_progid`|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

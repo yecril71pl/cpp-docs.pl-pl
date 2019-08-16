@@ -156,16 +156,16 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: b24afd943f2168657c6b4437fed65b0a45689b52
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7973cf89eaa2090a8f1548f38a728f1100d5cbec
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164088"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505535"
 ---
 # <a name="cmdiframewndex-class"></a>Klasa CMDIFrameWndEx
 
-Rozszerza funkcjonalność [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md), okno ramowe interfejsu Windows wielu dokumentów (MDI).
+Rozszerza funkcjonalność [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md), okna ramki interfejsu wielu dokumentów systemu Windows (MDI).
 
 ## <a name="syntax"></a>Składnia
 
@@ -179,98 +179,98 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMDIFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|Ponownie oblicza układ aktywnego elementu.|
+|[CMDIFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|Ponownie oblicza układ elementu aktywnego.|
 |`CMDIFrameWndEx::AddDockSite`|Ta metoda nie jest używana.|
-|[CMDIFrameWndEx::AddPane](#addpane)|Rejestruje okienko dokowania menedżera.|
-|[CMDIFrameWndEx::AdjustClientArea](#adjustclientarea)|Pozwala ograniczyć obszar klienta, aby umożliwić obramowanie.|
-|[CMDIFrameWndEx::AdjustDockingLayout](#adjustdockinglayout)|Ponownie oblicza układ wszystkie zadokowanego okienka.|
-|[CMDIFrameWndEx::AreMDITabs](#aremditabs)|Określa, czy jest włączona funkcja kart MDI lub funkcji grup kart MDI.|
-|[CMDIFrameWndEx::CanCovertControlBarToMDIChild](#cancovertcontrolbartomdichild)|Metoda wywoływana przez platformę, aby określić, czy okno ramowe można przekonwertować na dokumenty z kartami tafli dokowania.|
-|[CMDIFrameWndEx::ControlBarToTabbedDocument](#controlbartotabbeddocument)|Konwertuje określony okienka dokowania dokumentu z zakładkami.|
-|[CMDIFrameWndEx::CreateDocumentWindow](#createdocumentwindow)|Tworzy okno podrzędne dokumentu.|
-|[CMDIFrameWndEx::CreateNewWindow](#createnewwindow)|Metoda wywoływana przez strukturę w celu utworzenia nowego okna.|
-|`CMDIFrameWndEx::CreateObject`|Używane przez platformę do tworzenia dynamicznych wystąpienia tego typu klasy.|
-|[CMDIFrameWndEx::DockPane](#dockpane)|Dokowane okienka określonego okna ramki.|
-|[CMDIFrameWndEx::DockPaneLeftOf](#dockpaneleftof)|Doków jedno okienko po lewej stronie okienka innego.|
-|[CMDIFrameWndEx::EnableAutoHidePanes](#enableautohidepanes)|Umożliwia automatyczne ukrywanie tryb dla okienka zadokowany w określonej strony ramki głównego okna.|
-|[CMDIFrameWndEx::EnableDocking](#enabledocking)|Włącza dokowania okienek, które należą do okna ramki MDI.|
-|[CMDIFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu)|Pokazuje lub ukrywa menu głównego w trybie pełnoekranowym.|
-|[CMDIFrameWndEx::EnableFullScreenMode](#enablefullscreenmode)|Włącza tryb pełnoekranowy dla ramki okna.|
-|[CMDIFrameWndEx::EnableLoadDockState](#enableloaddockstate)|Włącza lub wyłącza ładowanie stanie dokowania.|
-|[CMDIFrameWndEx::EnableMDITabbedGroups](#enablemditabbedgroups)|Włącza lub wyłącza funkcję grup kart MDI.|
-|[CMDIFrameWndEx::EnableMDITabs](#enablemditabs)|Włącza lub wyłącza funkcję kart MDI. Po włączeniu okno ramowe Wyświetla kartę dla każdego okna podrzędnego MDI.|
-|[CMDIFrameWndEx::EnableMDITabsLastActiveActivation](#enablemditabslastactiveactivation)|Określa, czy ostatni aktywnej karcie należy aktywować po użytkownik zamknie bieżącej karty.|
-|[CMDIFrameWndEx::EnablePaneMenu](#enablepanemenu)|Włącza lub wyłącza automatyczne tworzenie i zarządzanie menu wyskakujące okienko, które wyświetla listę aplikacji okienka.  .|
-|[CMDIFrameWndEx::EnableWindowsDialog](#enablewindowsdialog)|Wstawia element menu, którego identyfikator polecenia wywołuje [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) okno dialogowe.|
-|[CMDIFrameWndEx::GetActivePopup](#getactivepopup)|Zwraca wskaźnik do menu podręczne aktualnie wyświetlany.|
-|[CMDIFrameWndEx::GetPane](#getpane)|Zwraca wskaźnik do okienko w którym ma identyfikator określonego formantu.|
-|[CMDIFrameWndEx::GetDefaultResId](#getdefaultresid)|Zwraca identyfikator udostępnione zasoby oknem ramki aplikacji MDI.|
-|[CMDIFrameWndEx::GetMDITabGroups](#getmditabgroups)|Zwraca listę MDI z kartami systemu windows.|
-|[CMDIFrameWndEx::GetMDITabs](#getmditabs)|Zwraca odwołanie do okna z kartami podkreślony.|
-|[CMDIFrameWndEx::GetMDITabsContextMenuAllowedItems](#getmditabscontextmenualloweditems)|Zwraca kombinacja flag, która określa, jakie elementy menu kontekstowego są prawidłowe w przypadku, gdy jest włączona funkcja grup kart MDI.|
-|[CMDIFrameWndEx::GetMenuBar](#getmenubar)|Zwraca wskaźnik do obiektu paska menu, dołączone do ramki okna.|
-|[CMDIFrameWndEx::GetRibbonBar](#getribbonbar)|Pobiera formantu paska wstążki ramki.|
-|[CMDIFrameWndEx::GetTearOffBars](#gettearoffbars)|Zwraca listę [CPane](../../mfc/reference/cpane-class.md)-pochodnych obiekty, które są w stanie odrywania.|
-|`CMDIFrameWndEx::GetThisClass`|Wywoływane przez platformę, by uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tym typem klasy.|
-|[CMDIFrameWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|Wywoływane przez platformę, gdy aplikacja wyświetli etykietkę narzędzia dla przycisku paska narzędzi.|
-|[CMDIFrameWndEx::InsertPane](#insertpane)|Rejestruje określony okienka dokowania menedżera.|
-|[CMDIFrameWndEx::IsFullScreen](#isfullscreen)|Określa, czy okno ramki jest w trybie pełnoekranowym.|
-|[CMDIFrameWndEx::IsMDITabbedGroup](#ismditabbedgroup)|Określa, czy jest włączona funkcja grup kart MDI.|
-|[CMDIFrameWndEx::IsMemberOfMDITabGroup](#ismemberofmditabgroup)|Określa, czy określone okno z kartami na liście systemu windows, które znajdują się w grupach z kartami MDI.|
-|[CMDIFrameWndEx::IsMenuBarAvailable](#ismenubaravailable)|Określa, czy okno ramowe ma paska menu.|
-|[CMDIFrameWndEx::IsPointNearDockSite](#ispointneardocksite)|Określa, czy określony punkt znajduje się w pobliżu witryny dokowania.|
+|[CMDIFrameWndEx:: Add— okienko](#addpane)|Rejestruje okienko przy użyciu Menedżera dokowania.|
+|[CMDIFrameWndEx::AdjustClientArea](#adjustclientarea)|Zmniejsza obszar klienta, aby umożliwić obramowanie.|
+|[CMDIFrameWndEx::AdjustDockingLayout](#adjustdockinglayout)|Ponownie oblicza układ wszystkich zadokowanych okienek.|
+|[CMDIFrameWndEx::AreMDITabs](#aremditabs)|Określa, czy funkcja kart MDI lub grup z kartami MDI jest włączona.|
+|[CMDIFrameWndEx::CanCovertControlBarToMDIChild](#cancovertcontrolbartomdichild)|Wywoływane przez platformę, aby określić, czy okno ramki może skonwertować okienka dokowania na dokumenty z kartami.|
+|[CMDIFrameWndEx::ControlBarToTabbedDocument](#controlbartotabbeddocument)|Konwertuje określone okienko dokowania na dokument z kartami.|
+|[CMDIFrameWndEx::CreateDocumentWindow](#createdocumentwindow)|Tworzy okno dokumentu podrzędnego.|
+|[CMDIFrameWndEx::CreateNewWindow](#createnewwindow)|Wywoływane przez platformę, by utworzyć nowe okno.|
+|`CMDIFrameWndEx::CreateObject`|Używane przez platformę do tworzenia wystąpienia dynamicznego tego typu klasy.|
+|[CMDIFrameWndEx::D ockPane](#dockpane)|Dokowanie określonego okienka do okna ramki.|
+|[CMDIFrameWndEx::D ockPaneLeftOf](#dockpaneleftof)|Dokowanie jednego okienka z lewej strony w innym okienku.|
+|[CMDIFrameWndEx::EnableAutoHidePanes](#enableautohidepanes)|Włącza tryb autoukrywania dla okienek, gdy są zadokowane na określonych stronach okna głównego ramki.|
+|[CMDIFrameWndEx::EnableDocking](#enabledocking)|Włącza dokowanie okienek, które należą do okna ramka MDI.|
+|[CMDIFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu)|Pokazuje lub ukrywa menu główne w trybie pełnoekranowym.|
+|[CMDIFrameWndEx::EnableFullScreenMode](#enablefullscreenmode)|Włącza tryb pełnoekranowy dla okna ramki.|
+|[CMDIFrameWndEx::EnableLoadDockState](#enableloaddockstate)|Włącza lub wyłącza ładowanie stanu dokowania.|
+|[CMDIFrameWndEx::EnableMDITabbedGroups](#enablemditabbedgroups)|Włącza lub wyłącza funkcję grup z kartami MDI.|
+|[CMDIFrameWndEx::EnableMDITabs](#enablemditabs)|Włącza lub wyłącza funkcję kart MDI. Gdy ta funkcja jest włączona, w oknie ramka zostanie wyświetlona karta dla każdego podrzędnego okna MDI.|
+|[CMDIFrameWndEx::EnableMDITabsLastActiveActivation](#enablemditabslastactiveactivation)|Określa, czy Ostatnia aktywna karta powinna zostać aktywowana, gdy użytkownik zamknie bieżącą kartę.|
+|[CMDIFrameWndEx::EnablePaneMenu](#enablepanemenu)|Włącza lub wyłącza automatyczne tworzenie menu okienka podręcznego, w którym jest wyświetlana lista okienek aplikacji.  .|
+|[CMDIFrameWndEx::EnableWindowsDialog](#enablewindowsdialog)|Wstawia element menu, którego identyfikator polecenia wywołuje okno dialogowe [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) .|
+|[CMDIFrameWndEx::GetActivePopup](#getactivepopup)|Zwraca wskaźnik do aktualnie wyświetlonego menu podręcznego.|
+|[CMDIFrameWndEx:: getokienk](#getpane)|Zwraca wskaźnik do okienka, które ma określony identyfikator kontrolki.|
+|[CMDIFrameWndEx::GetDefaultResId](#getdefaultresid)|Zwraca identyfikator zasobów udostępnionych okna ramki MDI.|
+|[CMDIFrameWndEx::GetMDITabGroups](#getmditabgroups)|Zwraca listę okien z kartami MDI.|
+|[CMDIFrameWndEx::GetMDITabs](#getmditabs)|Zwraca odwołanie do podkreślenia okna z zakładkami.|
+|[CMDIFrameWndEx::GetMDITabsContextMenuAllowedItems](#getmditabscontextmenualloweditems)|Zwraca kombinację flag, które określają, jakie elementy menu kontekstowego są prawidłowe, gdy włączono funkcję grup z kartami MDI.|
+|[CMDIFrameWndEx:: getmenubar](#getmenubar)|Zwraca wskaźnik do obiektu paska menu dołączonego do okna ramki.|
+|[CMDIFrameWndEx::GetRibbonBar](#getribbonbar)|Pobiera kontrolkę pasek wstążki dla ramki.|
+|[CMDIFrameWndEx::GetTearOffBars](#gettearoffbars)|Zwraca listę obiektów pochodnych [CPane](../../mfc/reference/cpane-class.md), które są w stanie odrywania.|
+|`CMDIFrameWndEx::GetThisClass`|Wywoływane przez platformę, aby uzyskać wskaźnik do obiektu [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) , który jest skojarzony z tym typem klasy.|
+|[CMDIFrameWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|Wywoływane przez platformę, gdy aplikacja wyświetla etykietkę narzędzia dla przycisku paska narzędzi.|
+|[CMDIFrameWndEx::InsertPane](#insertpane)|Rejestruje określone okienko przy użyciu Menedżera dokowania.|
+|[CMDIFrameWndEx:: ispełnoekranowym](#isfullscreen)|Określa, czy okno ramki jest w trybie pełnoekranowym.|
+|[CMDIFrameWndEx::IsMDITabbedGroup](#ismditabbedgroup)|Określa, czy funkcja grup z kartami MDI jest włączona.|
+|[CMDIFrameWndEx::IsMemberOfMDITabGroup](#ismemberofmditabgroup)|Określa, czy określone okno z kartami znajduje się na liście okien, które znajdują się w grupach z kartami MDI.|
+|[CMDIFrameWndEx::IsMenuBarAvailable](#ismenubaravailable)|Określa, czy okno ramki ma pasek menu.|
+|[CMDIFrameWndEx::IsPointNearDockSite](#ispointneardocksite)|Określa, czy określony punkt znajduje się blisko lokacji dokowania.|
 |[CMDIFrameWndEx::IsPrintPreview](#isprintpreview)|Określa, czy okno ramki jest w trybie podglądu wydruku.|
-|[CMDIFrameWndEx::LoadFrame](#loadframe)|Tworzy okno ramowe na podstawie informacji o zasobie. (Przesłania `CMDIFrameWnd::LoadFrame`).|
-|[CMDIFrameWndEx::LoadMDIState](#loadmdistate)|Ładuje określony układ grup z kartami MDI oraz listy wcześniej otwartych dokumentów.|
-|[CMDIFrameWndEx::MDITabMoveToNextGroup](#mditabmovetonextgroup)|Przenosi aktywną kartę z aktualnie aktywne okno z kartami do następnej lub poprzedniej grupy z kartami.|
-|[CMDIFrameWndEx::MDITabNewGroup](#mditabnewgroup)|Tworzy nowe grupy z kartami, która ma jednego okna.|
-|[CMDIFrameWndEx::NegotiateBorderSpace](#negotiateborderspace)|Negocjuje obramowania miejsce w oknie ramowym podczas aktywacji w miejscu OLE.|
-|[CMDIFrameWndEx::OnCloseDockingPane](#onclosedockingpane)|Wywoływane przez platformę, gdy użytkownik kliknie **Zamknij** przycisk w okienku dokowalnych.|
-|[CMDIFrameWndEx::OnCloseMiniFrame](#oncloseminiframe)|Wywoływane przez platformę, gdy użytkownik kliknie **Zamknij** przycisk na przestawne okno mini ramki.|
+|[CMDIFrameWndEx::LoadFrame](#loadframe)|Tworzy okno ramowe na podstawie informacji o zasobach. (Przesłania `CMDIFrameWnd::LoadFrame`).|
+|[CMDIFrameWndEx::LoadMDIState](#loadmdistate)|Ładuje określony układ grup z kartami MDI i listę wcześniej otwartych dokumentów.|
+|[CMDIFrameWndEx::MDITabMoveToNextGroup](#mditabmovetonextgroup)|Przenosi aktywną kartę z aktualnie aktywnego okna z kartami do następnej lub poprzedniej grupy z kartami.|
+|[CMDIFrameWndEx::MDITabNewGroup](#mditabnewgroup)|Tworzy nową grupę z kartami, która ma pojedyncze okno.|
+|[CMDIFrameWndEx::NegotiateBorderSpace](#negotiateborderspace)|Negocjuje miejsce obramowania w oknie ramki podczas aktywacji w miejscu OLE.|
+|[CMDIFrameWndEx::OnCloseDockingPane](#onclosedockingpane)|Wywoływane przez platformę, gdy użytkownik kliknie przycisk **Zamknij** w okienku było dokować.|
+|[CMDIFrameWndEx::OnCloseMiniFrame](#oncloseminiframe)|Wywoływane przez platformę, gdy użytkownik kliknie przycisk **Zamknij** w ruchomej ramce mini.|
 |[CMDIFrameWndEx::OnClosePopupMenu](#onclosepopupmenu)|Wywoływane przez platformę, gdy aktywne menu podręczne przetwarza komunikat WM_DESTROY.|
-|[CMDIFrameWndEx::OnCmdMsg](#oncmdmsg)|Wywoływane przez platformę, by kierować i wysyłać komunikaty poleceń i aktualizowanie obiektów interfejsu użytkownika poleceń.|
-|[CMDIFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|Wywoływane przez platformę podczas rysowania obrazu skojarzonego z elementem menu.|
-|[CMDIFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|Wywoływane przez platformę, gdy [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)przetwarza komunikat WM_PAINT.|
-|[CMDIFrameWndEx::OnEraseMDIClientBackground](#onerasemdiclientbackground)|Wywoływane przez platformę, gdy okno ramek MDI przetwarza komunikat WM_ERASEBKGND.|
-|[CMDIFrameWndEx::OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|Wywoływane przez platformę, gdy [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)obiektu przetwarza komunikat WM_NCHITTEST.|
-|[CMDIFrameWndEx::OnMoveMiniFrame](#onmoveminiframe)|Metoda wywoływana przez platformę, aby przenieść okno mini ramki.|
-|[CMDIFrameWndEx::OnSetPreviewMode](#onsetpreviewmode)|Ustawia tryb podglądu wydruku okna ramki głównej aplikacji. (Przesłania [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode).)|
-|[CMDIFrameWndEx::OnShowCustomizePane](#onshowcustomizepane)|Wywoływane przez platformę, po aktywowaniu okienko szybkie dostosowywanie.|
-|[CMDIFrameWndEx::OnShowMDITabContextMenu](#onshowmditabcontextmenu)|Wywoływane przez platformę, gdy menu kontekstowe powinno być wyświetlone na jednej z kart. (Nieprawidłowy dla grupy z kartami MDI tylko).|
-|[CMDIFrameWndEx::OnShowPanes](#onshowpanes)|Metoda wywoływana przez platformę, by pokazać lub ukryć okienka.|
-|[CMDIFrameWndEx::OnShowPopupMenu](#onshowpopupmenu)|Wywoływane przez platformę, gdy menu podręczne jest aktywowane.|
-|[CMDIFrameWndEx::OnSizeMDIClient](#onsizemdiclient)|Wywoływane przez platformę, zmieniając rozmiar okna MDI klienta.|
-|[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Wywoływane przez platformę, gdy menu z paskiem oderwania jest aktywowane.|
-|[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Metoda wywoływana przez platformę, by aktualizowanie menu ramki. (Przesłania `CMDIFrameWnd::OnUpdateFrameMenu`).|
-|[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|Zwraca okienko dokowania, który zawiera określony punkt.|
-|`CMDIFrameWndEx::PreTranslateMessage`|Używane przez klasę [CWinApp](../../mfc/reference/cwinapp-class.md) do translacji komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkcje Windows.  (Przesłania `CMDIFrameWnd::PreTranslateMessage`).|
-|[CMDIFrameWndEx::RecalcLayout](#recalclayout)|Metoda wywoływana przez platformę, by ponownie Oblicz układ ramki okna. (Przesłania [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|
-|[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Wyrejestrowuje okienko i usuwa go z Menedżera dokowania.|
+|[CMDIFrameWndEx:: OnCmdMsg](#oncmdmsg)|Wywoływane przez platformę do rozsyłania i wysyłania komunikatów poleceń oraz do aktualizacji obiektów interfejsu użytkownika polecenia.|
+|[CMDIFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|Wywoływane przez platformę, gdy zostanie narysowany obraz skojarzony z elementem menu.|
+|[CMDIFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|Wywoływane przez platformę, gdy [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)PRZETWARZA komunikat WM_PAINT.|
+|[CMDIFrameWndEx::OnEraseMDIClientBackground](#onerasemdiclientbackground)|Wywoływane przez platformę, gdy okno ramka MDI przetwarza komunikat WM_ERASEBKGND.|
+|[CMDIFrameWndEx::OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|Wywoływane przez platformę, gdy obiekt [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)PRZETWARZA komunikat WM_NCHITTEST.|
+|[CMDIFrameWndEx::OnMoveMiniFrame](#onmoveminiframe)|Wywoływane przez platformę, by przenieść okno mini-frame.|
+|[CMDIFrameWndEx::OnSetPreviewMode](#onsetpreviewmode)|Ustawia tryb podglądu wydruku głównego okna ramki aplikacji. (Przesłania [obiektu CFrameWnd:: OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode).)|
+|[CMDIFrameWndEx::OnShowCustomizePane](#onshowcustomizepane)|Wywoływane przez platformę po aktywowaniu okienka szybkie dostosowywanie.|
+|[CMDIFrameWndEx::OnShowMDITabContextMenu](#onshowmditabcontextmenu)|Wywoływane przez platformę, gdy menu kontekstowe powinno być wyświetlane na jednej z kart. (Prawidłowe tylko dla grup z kartami MDI).|
+|[CMDIFrameWndEx::OnShowPanes](#onshowpanes)|Wywoływane przez platformę, by pokazać lub ukryć okienka.|
+|[CMDIFrameWndEx::OnShowPopupMenu](#onshowpopupmenu)|Wywoływane przez platformę, gdy zostanie uaktywnione menu podręczne.|
+|[CMDIFrameWndEx::OnSizeMDIClient](#onsizemdiclient)|Wywoływane przez platformę, gdy rozmiar okna MDI klienta jest zmieniany.|
+|[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Wywoływane przez platformę, gdy zostanie uaktywnione menu z paskiem odrywania.|
+|[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Wywoływane przez platformę, by zaktualizować menu ramek. (Przesłania `CMDIFrameWnd::OnUpdateFrameMenu`).|
+|[CMDIFrameWndEx::P aneFromPoint](#panefrompoint)|Zwraca okienko dokowania, które zawiera określony punkt.|
+|`CMDIFrameWndEx::PreTranslateMessage`|Używane przez klasę [CWinApp](../../mfc/reference/cwinapp-class.md) do translacji komunikatów okna przed ich wysłaniem do funkcji [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) systemu Windows.  (Przesłania `CMDIFrameWnd::PreTranslateMessage`).|
+|[CMDIFrameWndEx::RecalcLayout](#recalclayout)|Wywoływane przez platformę, by ponownie obliczyć układ okna ramki. (Przesłania [obiektu CFrameWnd:: RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|
+|[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Wyrejestrowanie okienka i usunięcie go z Menedżera dokowania.|
 |[CMDIFrameWndEx::SaveMDIState](#savemdistate)|Zapisuje bieżący układ grup z kartami MDI oraz listy wcześniej otwartych dokumentów.|
-|[CMDIFrameWndEx::SetPrintPreviewFrame](#setprintpreviewframe)|Ustawia okno ramowe podglądu wydruku.|
-|[CMDIFrameWndEx::SetupToolbarMenu](#setuptoolbarmenu)|Modyfikuje obiekt paska narzędzi przez wyszukiwanie elementów fikcyjnego i zastępowała je przy użyciu określonych elementów zdefiniowanych przez użytkownika.|
-|[CMDIFrameWndEx::ShowFullScreen](#showfullscreen)|Przełącza ramce głównej z trybem standardowym do trybu pełnoekranowego.|
-|[CMDIFrameWndEx::ShowPane](#showpane)|Pokazuje lub ukrywa okienko określony.|
-|[CMDIFrameWndEx::ShowWindowsDialog](#showwindowsdialog)|Tworzy [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) polu i otwiera go.|
-|[CMDIFrameWndEx::TabbedDocumentToControlBar](#tabbeddocumenttocontrolbar)|Konwertuje określony dokument z kartami do okienka dokowania.|
-|[CMDIFrameWndEx::UpdateCaption](#updatecaption)|Metoda wywoływana przez platformę, aby zaktualizować tytuł ramki okna.|
-|[CMDIFrameWndEx::UpdateMDITabbedBarsIcons](#updatemditabbedbarsicons)|Ustawia ikonę każde okienko z kartami MDI.|
-|[CMDIFrameWndEx::WinHelp](#winhelp)|Metoda wywoływana przez platformę, by zainicjować WinHelp aplikacji lub kontekstu pomocy. (Przesłania [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp).)|
+|[CMDIFrameWndEx::SetPrintPreviewFrame](#setprintpreviewframe)|Ustawia okno ramki podglądu wydruku.|
+|[CMDIFrameWndEx::SetupToolbarMenu](#setuptoolbarmenu)|Modyfikuje obiekt Toolbar, wyszukując elementy fikcyjne i zastępując je określonymi elementami zdefiniowanymi przez użytkownika.|
+|[CMDIFrameWndEx::ShowFullScreen](#showfullscreen)|Przełącza ramkę główną z trybu regularnego na tryb pełnoekranowy.|
+|[CMDIFrameWndEx::ShowPane](#showpane)|Pokazuje lub ukrywa określone okienko.|
+|[CMDIFrameWndEx::ShowWindowsDialog](#showwindowsdialog)|Tworzy pole [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) i otwiera je.|
+|[CMDIFrameWndEx::TabbedDocumentToControlBar](#tabbeddocumenttocontrolbar)|Konwertuje określony dokument z kartami na okienko dokowania.|
+|[CMDIFrameWndEx::UpdateCaption](#updatecaption)|Wywoływane przez platformę, by zaktualizować podpis ramki okna.|
+|[CMDIFrameWndEx::UpdateMDITabbedBarsIcons](#updatemditabbedbarsicons)|Ustawia ikonę dla każdego okienka z kartami MDI.|
+|[CMDIFrameWndEx:: WinHelp](#winhelp)|Wywoływane przez platformę, aby zainicjować aplikację programu WinHelp lub pomoc kontekstową. (Przesłania [CWnd:: WinHelp](../../mfc/reference/cwnd-class.md#winhelp))|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild)|Określa, czy można przekonwertować tafli dokowania oknami podrzędnymi MDI.|
-|[CMDIFrameWndEx::m_bDisableSetRedraw](#m_bdisablesetredraw)|Włącza lub wyłącza optymalizację ponownego wystawienia dla okien podrzędnych MDI.|
+|[CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild)|Określa, czy okienka dokujące mogą być konwertowane do okien podrzędnych MDI.|
+|[CMDIFrameWndEx::m_bDisableSetRedraw](#m_bdisablesetredraw)|Włącza lub wyłącza optymalizację ponownego rysowania dla okien podrzędnych MDI.|
 
 ## <a name="remarks"></a>Uwagi
 
-Aby móc korzystać z funkcji dostosowywania rozszerzonego w aplikacji MDI, pochodną klasy okna ramki MDI w aplikacji z `CMDIFrameWndEx` zamiast `CMDIFrameWnd`.
+Aby korzystać z rozszerzonych funkcji dostosowywania w aplikacji MDI, należy utworzyć klasę okna ramki MDI aplikacji od `CMDIFrameWndEx` `CMDIFrameWnd`zamiast.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pochodzi z klasy `CMDIFrameWndEx`. Ten fragment kodu pochodzą z [DrawClient próbki: Aplikacji rysowania obiektu OLE na podstawie wstążki MFC](../../overview/visual-cpp-samples.md).
+Poniższy przykład dziedziczy klasy z `CMDIFrameWndEx`. Ten fragment kodu pochodzi z [przykładu DrawClient: Aplikacja](../../overview/visual-cpp-samples.md)do rysowania obiektów OLE opartych na Wstążce MFC.
 
 [!code-cpp[NVC_MFC_DrawClient#1](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_1.h)]
 
@@ -282,7 +282,7 @@ Poniższy przykład pochodzi z klasy `CMDIFrameWndEx`. Ten fragment kodu pochodz
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[CFrameWnd](../../mfc/reference/cframewnd-class.md)
+[Obiektu CFrameWnd](../../mfc/reference/cframewnd-class.md)
 
 [CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md)
 
@@ -290,19 +290,19 @@ Poniższy przykład pochodzi z klasy `CMDIFrameWndEx`. Ten fragment kodu pochodz
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxMDIFrameWndEx.h
+**Nagłówek:** afxMDIFrameWndEx. h
 
-##  <a name="activeitemrecalclayout"></a>  CMDIFrameWndEx::ActiveItemRecalcLayout
+##  <a name="activeitemrecalclayout"></a>CMDIFrameWndEx::ActiveItemRecalcLayout
 
-Ponownie oblicza układ aktywnego elementu.
+Ponownie oblicza układ elementu aktywnego.
 
 ```
 void ActiveItemRecalcLayout();
 ```
 
-##  <a name="addpane"></a>  CMDIFrameWndEx::AddPane
+##  <a name="addpane"></a>CMDIFrameWndEx:: Add— okienko
 
-Rejestruje okienko dokowania menedżera.
+Rejestruje okienko przy użyciu Menedżera dokowania.
 
 ```
 BOOL AddPane(
@@ -313,30 +313,30 @@ BOOL AddPane(
 ### <a name="parameters"></a>Parametry
 
 *pControlBar*<br/>
-[in] Wskaźnik do okienka, aby zarejestrować.
+podczas Wskaźnik do okienka do zarejestrowania.
 
 *bTail*<br/>
-[in] Określa, czy należy dodać w tym okienku na końcu listy.
+podczas Określa, czy dodać to okienko na końcu listy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość niezerową, jeśli okienko zostanie pomyślnie zarejestrowane. Zwraca wartość 0, jeśli okienka dokowania manager jest już zarejestrowany.
+Zwraca wartość różną od zera, jeśli okienko zostało pomyślnie zarejestrowane. Zwraca wartość 0, jeśli okienko jest już zarejestrowane w Menedżerze dokowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Każde okienko muszą być zarejestrowane w usłudze [klasa CDockingManager](../../mfc/reference/cdockingmanager-class.md) przed jej mogą brać udział w układ dokowania. Ta metoda powiadamia menedżera dokowania chcesz zadokować danym okienkiem. Po zarejestrowaniu okienko dokowania Menedżera wyrównuje go na podstawie jego ustawienie wyrównania i pozycji na liście okienek utrzymywane przez Menedżera dokowania.
+Każde okienko musi być zarejestrowane przy użyciu [klasy CDockingManager](../../mfc/reference/cdockingmanager-class.md) , zanim będzie mogła zostać częścią układu dokowania. Użyj tej metody do powiadomienia Menedżera dokowania, który ma zostać zadokowany w konkretnym okienku. Po zarejestrowaniu tego okienka Menedżer dokowania wyrównuje go na podstawie jego ustawienia wyrównania i pozycji na liście okienek obsługiwanych przez Menedżera dokowania.
 
-##  <a name="adjustclientarea"></a>  CMDIFrameWndEx::AdjustClientArea
+##  <a name="adjustclientarea"></a>CMDIFrameWndEx::AdjustClientArea
 
-Pozwala ograniczyć obszar klienta, aby umożliwić obramowanie.
+Zmniejsza obszar klienta, aby umożliwić obramowanie.
 
 ```
 virtual void AdjustClientArea();
 ```
 
-##  <a name="adjustdockinglayout"></a>  CMDIFrameWndEx::AdjustDockingLayout
+##  <a name="adjustdockinglayout"></a>CMDIFrameWndEx::AdjustDockingLayout
 
-Ponownie oblicza układ wszystkie zadokowanego okienka.
+Ponownie oblicza układ wszystkich zadokowanych okienek.
 
 ```
 virtual void AdjustDockingLayout(HDWP hdwp=NULL);
@@ -345,15 +345,15 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ### <a name="parameters"></a>Parametry
 
 *hdwp*<br/>
-[in] Określa strukturę wiele okien pozycji. Tę wartość można uzyskać wywołując `BeginDeferWindowPos`.
+podczas Identyfikuje strukturę wielu okien. Tę wartość można uzyskać, wywołując `BeginDeferWindowPos`metodę.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję elementu członkowskiego, aby ponownie Oblicz układ wszystkich okienek zadokowany do ramki okna.
+Wywołaj tę funkcję elementu członkowskiego, aby ponownie obliczyć układ wszystkich okienek zadokowanych do okna ramki.
 
-##  <a name="aremditabs"></a>  CMDIFrameWndEx::AreMDITabs
+##  <a name="aremditabs"></a>CMDIFrameWndEx::AreMDITabs
 
-Określa, czy jest włączona funkcja kart MDI lub funkcji grup z kartami MDI.
+Określa, czy funkcja kart MDI lub grup z kartami MDI jest włączona.
 
 ```
 BOOL AreMDITabs(int* pnMDITabsType=NULL) const;
@@ -362,29 +362,29 @@ BOOL AreMDITabs(int* pnMDITabsType=NULL) const;
 ### <a name="parameters"></a>Parametry
 
 *pnMDITabsType*<br/>
-[out] Wskaźnik do zmiennej całkowitej, która wskazuje, które funkcje są włączone:
+określoną Wskaźnik do zmiennej całkowitej wskazującej, które funkcje są włączone:
 
 - 0: Wszystkie funkcje są wyłączone.
 
-- 1: Włączono kart MDI.
+- 1: Karty MDI są włączone.
 
-- 2: Grupy z kartami MDI jest włączona.
+- 2: Grupy z kartami MDI są włączone.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE jeśli grupy z kartami MDI tabulatory lub MDI jest włączona.
+Zwraca wartość TRUE, jeśli włączono karty MDI lub grupy z kartami MDI.
 
-Zwraca wartość FALSE, jeśli żaden z powyższych funkcje jest włączona.
+Zwraca wartość FALSE, jeśli żadna z powyższych funkcji nie jest włączona.
 
 ### <a name="remarks"></a>Uwagi
 
-Na użytek włączenia tej funkcji, aby ustalić, czy kart MDI lub MDI grupy z kartami ramki okna. Użyj [CMDIFrameWndEx::EnableMDITabs](#enablemditabs) do włączania lub wyłączania funkcji kart MDI.
+Użyj tej funkcji, aby określić, czy karty MDI lub grupy z kartami MDI są włączone dla okna ramki. Użyj [CMDIFrameWndEx:: EnableMDITabs](#enablemditabs) , aby włączyć lub wyłączyć funkcję kart MDI.
 
-Użyj [CMDIFrameWndEx::EnableMDITabbedGroups](#enablemditabbedgroups) Aby włączyć lub wyłączyć funkcję grupy z kartami MDI.
+Użyj [CMDIFrameWndEx:: EnableMDITabbedGroups](#enablemditabbedgroups) , aby włączyć lub wyłączyć funkcję grup z kartami MDI.
 
-##  <a name="cancovertcontrolbartomdichild"></a>  CMDIFrameWndEx::CanCovertControlBarToMDIChild
+##  <a name="cancovertcontrolbartomdichild"></a>CMDIFrameWndEx::CanCovertControlBarToMDIChild
 
-Wywoływane przez platformę, aby określić, czy okno ramowe można przekonwertować tafli dokowania dokumenty z kartami
+Wywoływane przez platformę, aby określić, czy okno ramki może skonwertować okienka dokowania na dokumenty z kartami
 
 ```
 virtual BOOL CanCovertControlBarToMDIChild();
@@ -392,15 +392,15 @@ virtual BOOL CanCovertControlBarToMDIChild();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli okno ramowe można przekonwertować tafli dokowania z kartami dokumentów; w przeciwnym razie zwraca wartość FALSE.
+Zwraca wartość PRAWDA, jeśli okno ramki może skonwertować okienka dokowania na dokumenty z kartami. w przeciwnym razie zwraca wartość FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy przesłonić tę metodę w klasie pochodnej i zwraca wartość TRUE, aby umożliwić konwersję dokujące okienka na dokumenty z kartami. Alternatywnie, można ustawić [CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild) na wartość TRUE.
+Zastąp tę metodę w klasie pochodnej i zwróć wartość TRUE, aby włączyć konwersję okienek dokujących na dokumenty z kartami. Alternatywnie możesz ustawić [CMDIFrameWndEx:: m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild) na true.
 
-##  <a name="controlbartotabbeddocument"></a>  CMDIFrameWndEx::ControlBarToTabbedDocument
+##  <a name="controlbartotabbeddocument"></a>CMDIFrameWndEx::ControlBarToTabbedDocument
 
-Konwertuje określony okienka dokowania dokumentu z zakładkami.
+Konwertuje określone okienko dokowania na dokument z kartami.
 
 ```
 virtual CMDIChildWndEx* ControlBarToTabbedDocument(CDockablePane* pBar);
@@ -409,19 +409,19 @@ virtual CMDIChildWndEx* ControlBarToTabbedDocument(CDockablePane* pBar);
 ### <a name="parameters"></a>Parametry
 
 *pBar*<br/>
-Wskaźnik do okienka dokowania, aby przekonwertować.
+Wskaźnik do okienka dokowania do przekonwertowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do nowe podrzędne okno MDI zawierający okienka dokowania.
+Zwraca wskaźnik do nowego okna podrzędnego MDI zawierającego okienko dokowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda Konwertuje dokument z kartami okienka dokowania. Jeśli chcesz wywołać tę metodę, szablon tworzy [klasa CMDIChildWndEx](../../mfc/reference/cmdichildwndex-class.md) obiektu, usuwa okienka dokowania z Menedżera dokowania i dodaje nowe podrzędne okno MDI okienka dokowania. Okno podrzędne MDI zmienia rozmiar okienka dokowania dla pokrycia całego obszaru klienta
+Ta metoda służy do konwertowania okienka dokującego na dokument z kartami. Po wywołaniu tej metody struktura tworzy obiekt [klasy CMDIChildWndEx](../../mfc/reference/cmdichildwndex-class.md) , usuwa okienko dokowania z Menedżera dokowania i dodaje okienko dokowania do nowego okna podrzędnego MDI. Okno podrzędne MDI zmienia rozmiar okienka dokującego, aby pokryć cały obszar klienta
 
-##  <a name="createdocumentwindow"></a>  CMDIFrameWndEx::CreateDocumentWindow
+##  <a name="createdocumentwindow"></a>CMDIFrameWndEx::CreateDocumentWindow
 
-Tworzy okno podrzędne dokumentu.
+Tworzy okno dokumentu podrzędnego.
 
 ```
 virtual CMDIChildWndEx* CreateDocumentWindow(
@@ -432,10 +432,10 @@ virtual CMDIChildWndEx* CreateDocumentWindow(
 ### <a name="parameters"></a>Parametry
 
 *lpcszDocName*<br/>
-[in] Ciąg tekstowy, który zawiera identyfikator dokumentu. Zazwyczaj jest pełna ścieżka pliku dokumentu.
+podczas Ciąg tekstowy, który zawiera identyfikator dokumentu. Zwykle jest to pełna ścieżka pliku dokumentu.
 
 *pObj*<br/>
-[in] Wskaźnik do obiektu użytkownika. Na przykład deweloper można utworzyć struktury danych specyficznych dla aplikacji, zawierająca opis dokumentu i informuje, jak dokument powinien zostać zainicjowany przy uruchamianiu.
+podczas Wskaźnik do obiektu zdefiniowanego przez użytkownika. Na przykład deweloper może utworzyć strukturę danych specyficzną dla aplikacji opisującą dokument i informującą, jak dokument powinien być zainicjowany podczas uruchamiania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -445,19 +445,19 @@ Wskaźnik do `CMDIChildWndEx`.
 
 Struktura wywołuje tę metodę podczas ładowania listy dokumentów wcześniej zapisanych w rejestrze.
 
-Zastępuje tę metodę, aby można było utworzyć dokumenty, gdy są ładowane z rejestru.
+Zastąp tę metodę, aby utworzyć dokumenty, gdy są ładowane z rejestru.
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie przedstawiono sposób `CreateDocumentWindow` jest używany w [VisualStudioDemo próbki: Aplikacja programu Visual Studio MFC](../../overview/visual-cpp-samples.md).
+Poniższy przykład pokazuje, `CreateDocumentWindow` [w jaki sposób jest używany w próbce VisualStudioDemo: Aplikacja](../../overview/visual-cpp-samples.md)MFC programu Visual Studio.
 
-W tym przykładzie `g_strStartViewName` może mieć nazwy "dokument wirtualny" (na przykład "Stronę startową"), który faktycznie nie został załadowany z pliku na dysku. W związku z tym potrzebujemy specjalnego przetwarzania, aby obsłużyć tego przypadku.
+W tym przykładzie `g_strStartViewName` może to być nazwa "dokumentu wirtualnego" (na przykład "Strona początkowa"), która nie jest faktycznie ładowana z pliku dyskowego. W związku z tym potrzebujemy specjalnego przetwarzania do obsługi tego przypadku.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#13](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]
 
-##  <a name="createnewwindow"></a>  CMDIFrameWndEx::CreateNewWindow
+##  <a name="createnewwindow"></a>CMDIFrameWndEx::CreateNewWindow
 
-Metoda wywoływana przez strukturę w celu utworzenia nowego okna.
+Wywoływane przez platformę, by utworzyć nowe okno.
 
 ```
 virtual CMDIChildWndEx* CreateNewWindow(
@@ -468,18 +468,18 @@ virtual CMDIChildWndEx* CreateNewWindow(
 ### <a name="parameters"></a>Parametry
 
 *lpcszDocName*<br/>
-[in] Nazwa dokumentu.
+podczas Nazwa dokumentu.
 
 *pObj*<br/>
-[in] Zarezerwowane do użytku w przyszłości.
+podczas Zarezerwowane do użytku w przyszłości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Wskaźnik do nowego okna.
 
-##  <a name="dockpane"></a>  CMDIFrameWndEx::DockPane
+##  <a name="dockpane"></a>CMDIFrameWndEx::D ockPane
 
-Dokowane okienka określonego okna ramki.
+Dokowanie określonego okienka do okna ramki.
 
 ```
 void DockPane(
@@ -491,27 +491,27 @@ void DockPane(
 ### <a name="parameters"></a>Parametry
 
 *pBar*<br/>
-[in] Wskaźnik do okienka, aby zadokować.
+podczas Wskaźnik do okienka, które ma zostać zadokowane.
 
 *nDockBarID*<br/>
-[in] Określa, które strony okna ramki, aby zadokować.
+podczas Określa, do których boków okna ramki ma zostać zadokowany.
 
 *lpRect*<br/>
-[in] Nie jest używany.
+podczas Nieużywane.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest dokowane określonego okienka do jednej strony okna ramki, który został określony, gdy [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) i [CMDIFrameWndEx::EnableDocking](#enabledocking) były wywoływane.
+Ta metoda służy do dokowania określonego okienka do jednej z boków okna ramki, który został określony podczas wywołania [CBasePane:: EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) i [CMDIFrameWndEx:: EnableDocking](#enabledocking) .
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano użycie `DockPane` metody. Ten fragment kodu pochodzą z [VisualStudioDemo próbki: Aplikacja programu Visual Studio MFC](../../overview/visual-cpp-samples.md).
+Poniższy przykład demonstruje użycie `DockPane` metody. Ten fragment kodu pochodzi z [przykładu VisualStudioDemo: Aplikacja](../../overview/visual-cpp-samples.md)MFC programu Visual Studio.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#4](../../mfc/codesnippet/cpp/cmdiframewndex-class_3.cpp)]
 
-##  <a name="dockpaneleftof"></a>  CMDIFrameWndEx::DockPaneLeftOf
+##  <a name="dockpaneleftof"></a>CMDIFrameWndEx::D ockPaneLeftOf
 
-Doków jedno okienko po lewej stronie okienka innego.
+Dokowanie jednego okienka z lewej strony w innym okienku.
 
 ```
 BOOL DockPaneLeftOf(
@@ -522,28 +522,28 @@ BOOL DockPaneLeftOf(
 ### <a name="parameters"></a>Parametry
 
 *pBar*<br/>
-[in] Wskaźnik do okienka dokowania.
+podczas Wskaźnik do okienka dokowania.
 
 *pLeftOf*<br/>
-[in] Wskaźnik do okienka, która służy jako witryny dokowania. .
+podczas Wskaźnik do okienka, które służy jako witryna Docker. .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli operacja się powiedzie. W przeciwnym razie zwraca wartość FALSE.
+Zwraca wartość TRUE, jeśli operacja zakończyła się pomyślnie. W przeciwnym razie zwraca wartość FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę, aby zadokować kilka obiektów okienko w preferowanej kolejności. Ta metoda jest dokowane okienka określony przez *pBar* po lewej stronie okienka określony przez *pLeftOf*.
+Wywołaj tę metodę, aby zadokować kilka obiektów okienka we wstępnie zdefiniowanej kolejności. Ta metoda służy do dokowania okienka określonego przez *pBar* z lewej strony okienka określonego przez *pLeftOf*.
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano sposób, w jaki `DockPaneLeftOf` metoda jest używana w [VisualStudioDemo próbki: Aplikacja programu Visual Studio MFC](../../overview/visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak `DockPaneLeftOf` Metoda jest używana [w próbce VisualStudioDemo: Aplikacja](../../overview/visual-cpp-samples.md)MFC programu Visual Studio.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#5](../../mfc/codesnippet/cpp/cmdiframewndex-class_4.cpp)]
 
-##  <a name="enableautohidepanes"></a>  CMDIFrameWndEx::EnableAutoHidePanes
+##  <a name="enableautohidepanes"></a>CMDIFrameWndEx::EnableAutoHidePanes
 
-Umożliwia automatyczne ukrywanie tryb dla okienka zadokowany w określonej strony ramki głównego okna.
+Włącza tryb autoukrywania dla okienek, gdy są zadokowane na określonych stronach okna ramki głównej.
 
 ```
 BOOL EnableAutoHidePanes(DWORD dwDockStyle);
@@ -552,7 +552,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ### <a name="parameters"></a>Parametry
 
 *dwDockStyle*<br/>
-[in] Określa strony ramki głównego okna, które zostaną włączone. Użyj co najmniej jeden z następujących flag.
+podczas Określa boki okna głównego ramki, które zostanie włączone. Użyj co najmniej jednej z następujących flag.
 
 - CBRS_ALIGN_LEFT
 
@@ -564,19 +564,19 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wywołaj tę funkcję, aby włączyć tryb automatyczne ukrywanie okienka zadokowany w określonej strony ramki głównego okna.
+Wywołaj tę funkcję, aby włączyć tryb autoukrywania dla okienek, gdy są zadokowane na określonych stronach okna ramki głównej.
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano sposób, w jaki `EnableAutoHidePanes` metoda jest używana w [VisualStudioDemo próbki: Aplikacja programu Visual Studio MFC](../../overview/visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak `EnableAutoHidePanes` Metoda jest używana [w próbce VisualStudioDemo: Aplikacja](../../overview/visual-cpp-samples.md)MFC programu Visual Studio.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#6](../../mfc/codesnippet/cpp/cmdiframewndex-class_5.cpp)]
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="enabledocking"></a>  CMDIFrameWndEx::EnableDocking
+##  <a name="enabledocking"></a>CMDIFrameWndEx::EnableDocking
 
-Włącza dokowania okienek, które należą do okna ramki MDI.
+Włącza dokowanie okienek, które należą do okna ramka MDI.
 
 ```
 BOOL EnableDocking(DWORD dwDockStyle);
@@ -585,23 +585,23 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ### <a name="parameters"></a>Parametry
 
 *dwDockStyle*<br/>
-[in] Określa styl dokowania, który chcesz zastosować.
+podczas Określa styl dokowania, który ma zostać zastosowany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję, aby umożliwić dokowanie okienek, które należą do `CMDIFrameWndEx` obiektu.
+Wywołaj tę funkcję, aby włączyć dokowanie okienek, które należą `CMDIFrameWndEx` do obiektu.
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano sposób, w jaki `EnableDocking` metoda jest używana w [VisualStudioDemo próbki: Aplikacja programu Visual Studio MFC](../../overview/visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak `EnableDocking` Metoda jest używana [w próbce VisualStudioDemo: Aplikacja](../../overview/visual-cpp-samples.md)MFC programu Visual Studio.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#7](../../mfc/codesnippet/cpp/cmdiframewndex-class_6.cpp)]
 
-##  <a name="enablefullscreenmainmenu"></a>  CMDIFrameWndEx::EnableFullScreenMainMenu
+##  <a name="enablefullscreenmainmenu"></a>CMDIFrameWndEx::EnableFullScreenMainMenu
 
-Pokazuje lub ukrywa menu głównego w trybie pełnoekranowym.
+Pokazuje lub ukrywa menu główne w trybie pełnoekranowym.
 
 ```
 void EnableFullScreenMainMenu(BOOL bEnableMenu);
@@ -610,13 +610,13 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ### <a name="parameters"></a>Parametry
 
 *bEnableMenu*<br/>
-[in] Wartość TRUE, aby wyświetlić menu głównego w trybie pełnego ekranu lub wartość FALSE, aby je ukryć.
+podczas TRUE, aby pokazać menu główne w trybie pełnoekranowym, lub wartość FAŁSZ, aby je ukryć.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="enablefullscreenmode"></a>  CMDIFrameWndEx::EnableFullScreenMode
+##  <a name="enablefullscreenmode"></a>CMDIFrameWndEx::EnableFullScreenMode
 
-Włącza tryb pełnoekranowy dla ramki okna.
+Włącza tryb pełnoekranowy dla okna ramki.
 
 ```
 void EnableFullScreenMode(UINT uiFullScreenCmd);
@@ -625,15 +625,15 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 ### <a name="parameters"></a>Parametry
 
 *uiFullScreenCmd*<br/>
-[in] Identyfikator polecenia, która włącza lub wyłącza tryb pełnoekranowy.
+podczas Identyfikator polecenia, które włącza lub wyłącza tryb pełnoekranowy.
 
 ### <a name="remarks"></a>Uwagi
 
-W trybie pełnoekranowym dokowania pasków kontrolki, paski narzędzi i menu są ukryte, a bieżącym widokiem rozmiar będzie zajmować pełnego ekranu. Po włączeniu trybu pełnego ekranu, należy określić identyfikator polecenia, które włącza lub wyłącza je. Możesz wywołać `EnableFullScreenMode` z głównej ramki `OnCreate` funkcji. Gdy okno ramowe jest przełączany do trybu pełnoekranowego, szablon tworzy swobodny pasek narzędzi przy użyciu jednego przycisku, który ma identyfikator określonego polecenia. Jeśli chcesz zachować menu głównego na ekranie, należy wywołać [CMDIFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu).
+W trybie pełnoekranowym wszystkie zadokowane paski sterowania, paski narzędzi i menu są ukryte, a aktywny widok zostanie zmieniony w celu zapełnienia całego ekranu. Po włączeniu trybu pełnoekranowego należy określić identyfikator polecenia, które włącza lub wyłącza. Możesz wywołać `EnableFullScreenMode` z `OnCreate` funkcji ramki głównej. Gdy okno ramki jest przełączane do trybu pełnoekranowego, struktura tworzy swobodny pasek narzędzi z jednym przyciskiem o określonym IDENTYFIKATORze polecenia. Jeśli chcesz zachować menu główne na ekranie, wywołaj [CMDIFrameWndEx:: EnableFullScreenMainMenu](#enablefullscreenmainmenu).
 
-##  <a name="enableloaddockstate"></a>  CMDIFrameWndEx::EnableLoadDockState
+##  <a name="enableloaddockstate"></a>CMDIFrameWndEx::EnableLoadDockState
 
-Włącza lub wyłącza ładowanie stanie dokowania.
+Włącza lub wyłącza ładowanie stanu dokowania.
 
 ```
 void EnableLoadDockState(BOOL bEnable = TRUE);
@@ -641,14 +641,14 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bWłączenie*<br/>
-[in] Wartość TRUE, aby umożliwić ładowanie stan dokowania FALSE można wyłączyć ładowania stanu dokowania.
+*bEnable*<br/>
+podczas Wartość TRUE powoduje włączenie ładowania stanu dokowania, FAŁSZ w celu wyłączenia ładowania stanu dokowania.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="enablemditabbedgroups"></a>  CMDIFrameWndEx::EnableMDITabbedGroups
+##  <a name="enablemditabbedgroups"></a>CMDIFrameWndEx::EnableMDITabbedGroups
 
-Włącza lub wyłącza funkcję grupy z kartami MDI ramki okna.
+Włącza lub wyłącza funkcję grup z kartami MDI dla okna ramki.
 
 ```
 void EnableMDITabbedGroups(
@@ -658,41 +658,41 @@ void EnableMDITabbedGroups(
 
 ### <a name="parameters"></a>Parametry
 
-*bWłączenie*<br/>
-[in] W przypadku opcji TRUE funkcja grupy z kartami MDI jest włączona; w przypadku wartości FAŁSZ funkcja grupy z kartami MDI jest wyłączona.
+*bEnable*<br/>
+podczas W przypadku opcji TRUE Funkcja grup z kartami MDI jest włączona; w przypadku opcji FALSE Funkcja grup z kartami MDI jest wyłączona.
 
 *params*<br/>
-[in] Określa parametry, których dotyczy struktura okien podrzędnych, które są tworzone w obszarze klienta MDI.
+podczas Określa parametry, które są stosowane przez platformę dla okien podrzędnych, które są tworzone w obszarze klienta MDI.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tej metody, aby włączyć lub wyłączyć funkcję grupy z kartami MDI. Ta funkcja umożliwia aplikacji MDI wyświetlić okna podrzędne jako okien z zakładkami, które są wyrównane w pionie lub w poziomie w obrębie obszaru klienckiego MDI. Grupy z kartami systemu Windows są oddzielone rozdzielaczy. Użytkownika można zmienić rozmiar grupy z kartami za pomocą rozdzielacza.
+Użyj tej metody, aby włączyć lub wyłączyć funkcję grup z kartami MDI. Ta funkcja umożliwia aplikacjom MDI wyświetlanie okien podrzędnych jako okien z kartami, które są wyrównane w pionie lub w poziomie w obszarze klienta MDI. Grupy okien z kartami są rozdzielone rozdzielaczami. Użytkownik może zmieniać rozmiar grup z kartami przy użyciu rozdzielacza.
 
 - Użytkownik może:
 
-- Przeciągnij poszczególnych kart między grupami.
+- Przeciągnij poszczególne karty między grupami.
 
-- Przeciągnij krawędź okna, aby tworzyć nowe grupy poszczególnych kart.
+- Przeciągnij poszczególne karty do krawędzi okna, aby utworzyć nowe grupy.
 
-- Przenoszenie karty lub tworzyć nowe grupy za pomocą menu skrótów.
+- Przenieś karty lub Utwórz nowe grupy przy użyciu menu skrótów.
 
-- Aplikację można zapisać bieżący układ okien z kartami i listę aktualnie otwartych dokumentów.
+- Aplikacja może zapisać bieżący układ okien z kartami i listę aktualnie otwartych dokumentów.
 
-Jeśli wywołanie tej metody za pomocą *bWłączenie* wartość FALSE, *params* jest ignorowana.
+W przypadku wywołania tej metody z *bEnable* ustawiona na false, *params* jest ignorowana.
 
-Nawet jeśli grup z kartami MDI jest już włączony, chcesz wywołać tę metodę, ponownie, aby zmodyfikować ustawienia dla okien podrzędnych. Wywołaj metodę z *bWłączenie* ustawiona na wartość TRUE i modyfikowanie elementów członkowskich `CMDITabInfo` obiektów, które są określone przez *params* parametru.
+Nawet jeśli grupy z kartami MDI są już włączone, można wywołać tę metodę ponownie, aby zmodyfikować ustawienia dla okien podrzędnych. Wywołaj metodę z opcją *bEnable* ustawioną na wartość true i zmodyfikuj elementy `CMDITabInfo` Członkowskie obiektu, które są określone przez *Parametry params* .
 
-Aby uzyskać więcej informacji o sposobie używania MDI grupy z kartami, zobacz [grupy z kartami MDI](../../mfc/mdi-tabbed-groups.md).
+Aby uzyskać więcej informacji na temat używania grup z kartami MDI, zobacz [grupy z kartami MDI](../../mfc/mdi-tabbed-groups.md).
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie przedstawiono sposób `EnableMDITabbedGroups` jest używany w [VisualStudioDemo próbki: Aplikacja programu Visual Studio MFC](../../overview/visual-cpp-samples.md).
+Poniższy przykład pokazuje, `EnableMDITabbedGroups` [w jaki sposób jest używany w próbce VisualStudioDemo: Aplikacja](../../overview/visual-cpp-samples.md)MFC programu Visual Studio.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#8](../../mfc/codesnippet/cpp/cmdiframewndex-class_7.cpp)]
 
-##  <a name="enablemditabs"></a>  CMDIFrameWndEx::EnableMDITabs
+##  <a name="enablemditabs"></a>CMDIFrameWndEx::EnableMDITabs
 
-Włącza lub wyłącza funkcję kart MDI okna ramki MDI. Po włączeniu okno ramowe Wyświetla kartę dla każdego okna podrzędnego MDI.
+Włącza lub wyłącza funkcję kart MDI dla okna ramki MDI. Gdy ta funkcja jest włączona, w oknie ramka zostanie wyświetlona karta dla każdego podrzędnego okna MDI.
 
 ```
 void EnableMDITabs(
@@ -707,44 +707,44 @@ void EnableMDITabs(
 
 ### <a name="parameters"></a>Parametry
 
-*bWłączenie*<br/>
-Określa, czy włączono karty.
+*bEnable*<br/>
+Określa, czy karty są włączone.
 
-*bIcons*<br/>
-Określa, czy ikony powinny być wyświetlane na kartach.
+*Oba wady*<br/>
+Określa, czy ikony mają być wyświetlane na kartach.
 
 *tabLocation*<br/>
-Określa położenie etykiet kartę.
+Określa lokalizację etykiet tabulatorów.
 
 *bTabCloseButton*<br/>
-Określa, czy mają być wyświetlane przyciski Zamknij kartę.
+Określa, czy mają być wyświetlane przyciski zamykania karty.
 
-*style*<br/>
-Określa styl karty. Na użytek STYLE_3D_SCROLLED zwykłe karty lub STYLE_3D_ONENOTE dla programu Microsoft OneNote kart.
+*stylów*<br/>
+Określa styl kart. Użyj STYLE_3D_SCROLLED na potrzeby zwykłych kart lub STYLE_3D_ONENOTE dla kart Microsoft OneNote.
 
 *bTabCustomTooltips*<br/>
-Określa, czy włączono niestandardowe etykietki narzędzi.
+Określa, czy są włączone niestandardowe etykietki narzędzi.
 
 *bActiveTabCloseButton*<br/>
-W przypadku opcji TRUE **Zamknij** przycisk będzie wyświetlana na karcie aktywne, a nie w prawym rogu obszaru karty.
+W przypadku wartości TRUE przycisk **Zamknij** będzie wyświetlany na aktywnej karcie, a nie w prawym górnym rogu obszaru kart.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę, aby włączyć lub wyłączyć funkcję kart MDI okna ramki MDI. Po włączeniu wszystkich okien podrzędnych są wyświetlane jako karty.
+Wywołaj tę metodę, aby włączyć lub wyłączyć funkcję kart MDI dla okna ramki MDI. Gdy ta funkcja jest włączona, wszystkie okna podrzędne są wyświetlane jako karty.
 
-Etykiety kart może znajdować się u góry lub u dołu okna ramki, w zależności od ustawienia parametru *tabLocation*. Można określić albo `CMFCTabCtrl::LOCATION_BOTTOM` (ustawienie domyślne) lub `CMFCTabCtrl::LOCATION_TOP`.
+Etykiety kart mogą znajdować się u góry lub u dołu ramki, w zależności od ustawienia parametru *tabLocation*. Można określić albo `CMFCTabCtrl::LOCATION_BOTTOM` (ustawienie domyślne), albo `CMFCTabCtrl::LOCATION_TOP`.
 
-Jeśli *bTabCustomTooltips* ma wartość TRUE, wiadomość AFX_WM_ON_GET_TAB_TOOLTIP będą wysyłane do głównej ramki okna. Twój kod może obsłużyć ten komunikat i udostępniać platformę niestandardowe etykietki narzędzi dla kart MDI.
+Jeśli *bTabCustomTooltips* ma wartość true, komunikat AFX_WM_ON_GET_TAB_TOOLTIP zostanie wysłany do głównego okna ramki. Kod może obsłużyć ten komunikat i zapewnić strukturę z niestandardowymi etykietami narzędzi dla kart MDI.
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie przedstawiono sposób `EnableMDITabs` jest używany w [MDITabsDemo próbki: MFC z kartami MDI aplikacji](../../overview/visual-cpp-samples.md).
+Poniższy przykład pokazuje, `EnableMDITabs` [w jaki sposób jest używany w próbce MDITabsDemo: Aplikacja](../../overview/visual-cpp-samples.md)MDI z kartami MFC.
 
 [!code-cpp[NVC_MFC_MDITabsDemo#3](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_8.cpp)]
 
-##  <a name="enablemditabslastactiveactivation"></a>  CMDIFrameWndEx::EnableMDITabsLastActiveActivation
+##  <a name="enablemditabslastactiveactivation"></a>CMDIFrameWndEx::EnableMDITabsLastActiveActivation
 
-Określa, czy ostatni aktywną kartę powinien zostać otwarty po użytkownik zamknie bieżącej karty.
+Określa, czy Ostatnia aktywna karta powinna być otwierana, gdy użytkownik zamknie bieżącą kartę.
 
 ```
 void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
@@ -753,23 +753,23 @@ void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bLastActiveTab*<br/>
-[in] W przypadku opcji TRUE włączyć aktywacji ostatniego aktywną kartę. W przypadku wartości FAŁSZ wyłączanie aktywacji ostatniego aktywną kartę.
+podczas W przypadku wartości TRUE Włącz aktywację ostatniej aktywnej karty. W przypadku wartości FALSE Wyłącz aktywację ostatniej aktywnej karty.
 
 ### <a name="remarks"></a>Uwagi
 
-Istnieją dwa sposoby, aby otworzyć kartę po zamknięciu karty aktywne:
+Istnieją dwa sposoby otwierania karty po zamknięciu karty aktywne:
 
-- Aktywuj następnej karty.
+- Aktywuj następną kartę.
 
 - Aktywuj wcześniej aktywną kartę.
 
-Domyślna implementacja używa pierwszy sposób.
+Domyślna implementacja używa w pierwszej kolejności.
 
-Użyj `EnableMDITabsLastActiveActivation` umożliwiające druga metoda aktywacji kartę. Emuluje on sposób Windows otwiera oknami podrzędnymi MDI.
+Użyj `EnableMDITabsLastActiveActivation` , aby włączyć drugi sposób uaktywniania karty. Emuluje sposób, w jaki system Windows otwiera okna podrzędne interfejsu MDI.
 
-##  <a name="enablepanemenu"></a>  CMDIFrameWndEx::EnablePaneMenu
+##  <a name="enablepanemenu"></a>CMDIFrameWndEx::EnablePaneMenu
 
-Włącza lub wyłącza automatyczne tworzenie i zarządzanie menu wyskakujące okienko, które wyświetla listę aplikacji okienka.
+Włącza lub wyłącza automatyczne tworzenie menu okienka podręcznego, w którym jest wyświetlana lista okienek aplikacji.
 
 ```
 void EnablePaneMenu(
@@ -783,37 +783,37 @@ void EnablePaneMenu(
 
 ### <a name="parameters"></a>Parametry
 
-*bWłączenie*<br/>
-[in] W przypadku opcji TRUE włączono automatyczną obsługę menu okienka; w przypadku wartości FAŁSZ automatyczną obsługę jest wyłączona.
+*bEnable*<br/>
+podczas Jeśli wartość jest równa TRUE, Automatyczna obsługa menu okienka jest włączona; w przypadku wartości FALSE obsługa automatyczna jest wyłączona.
 
 *uiCustomizeCmd*<br/>
-[in] Identyfikator polecenia **Dostosuj** elementu menu. Ten element menu jest zwykle dodawane na końcu listy okienka.
+podczas Identyfikator polecenia elementu menu **dostosowywania** . Ten element menu jest zazwyczaj dodawany na końcu listy okienek.
 
 *strCustomizeLabel*<br/>
-[in] Tekst, który ma być wyświetlany dla **Dostosuj** elementu menu (dla lokalizacji).
+podczas Tekst, który będzie wyświetlany dla elementu menu **Dostosuj** (dla lokalizacji).
 
 *uiViewToolbarsMenuEntryID*<br/>
-[in] Określa identyfikator element menu paska narzędzi, który powoduje otwarcie menu okienka. Zazwyczaj jest to **pasków narzędzi** podmenu **widoku** menu.
+podczas Określa identyfikator elementu menu paska narzędzi, który otwiera menu okienka. Zwykle jest to podmenu **pasków narzędzi** menu **Widok** .
 
 *bContextMenuShowsToolbarsOnly*<br/>
-[in] W przypadku opcji TRUE menu okienko wyświetla tylko lista pasków narzędzi. W przypadku wartości FAŁSZ menu wyświetla listę pasków narzędzi i dokowania pasków.
+podczas W przypadku wartości TRUE menu Panel wyświetla tylko listę pasków narzędzi. W przypadku wartości FALSE menu wyświetla listę pasków narzędzi i dokowania słupków.
 
 *bViewMenuShowsToolbarsOnly*<br/>
-[in] W przypadku opcji TRUE menu okienko wyświetla tylko lista pasków narzędzi. W przypadku wartości FAŁSZ menu wyświetla listę pasków narzędzi i dokowania pasków.
+podczas W przypadku wartości TRUE menu Panel wyświetla tylko listę pasków narzędzi. W przypadku wartości FALSE menu wyświetla listę pasków narzędzi i dokowania słupków.
 
 ### <a name="remarks"></a>Uwagi
 
-Menu wyskakujące okienko Wyświetla listę aplikacji okienka i umożliwia użytkownikowi wyświetlanie lub ukrywanie poszczególnych okienek.
+Menu okienka podręcznego wyświetla listę okienek aplikacji i umożliwia użytkownikowi wyświetlanie lub ukrywanie poszczególnych okienek.
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie przedstawiono sposób `EnablePaneMenu` jest używany w [VisualStudioDemo próbki: Aplikacja programu Visual Studio MFC](../../overview/visual-cpp-samples.md).
+Poniższy przykład pokazuje, `EnablePaneMenu` [w jaki sposób jest używany w próbce VisualStudioDemo: Aplikacja](../../overview/visual-cpp-samples.md)MFC programu Visual Studio.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#9](../../mfc/codesnippet/cpp/cmdiframewndex-class_9.cpp)]
 
-##  <a name="enablewindowsdialog"></a>  CMDIFrameWndEx::EnableWindowsDialog
+##  <a name="enablewindowsdialog"></a>CMDIFrameWndEx::EnableWindowsDialog
 
-Wstawia element menu, którego identyfikator polecenia wywołuje [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) okno dialogowe.
+Wstawia element menu, którego identyfikator polecenia wywołuje okno dialogowe [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) .
 
 ```
 void EnableWindowsDialog(
@@ -832,30 +832,30 @@ void EnableWindowsDialog(
 ### <a name="parameters"></a>Parametry
 
 *uiMenuId*<br/>
-[in] Określa identyfikator zasobu menu.
+podczas Określa identyfikator zasobu menu.
 
 *lpszMenuText*<br/>
-[in] Określa tekst elementu.
+podczas Określa tekst elementu.
 
 *bShowHelpButton*<br/>
-[in] Określa, czy mają być wyświetlane **pomocy** przycisk w oknie dialogowym Zarządzanie systemem windows.
+podczas Określa, czy ma być wyświetlany przycisk **Pomoc** w oknie dialogowym Zarządzanie systemem Windows.
 
 *uiMenuTextResId*<br/>
-[in] Identyfikator zasobu ciągu zawiera ciąg tekstu elementu.
+podczas Identyfikator zasobu ciągu, który zawiera ciąg tekstowy elementu.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tej metody, aby wstawić element menu, którego polecenia wywołuje okno dialogowe Zarządzanie okno podrzędne MDI ( [klasa CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)). Nowy element jest wstawiany do menu, określony przez *uiMenuId*. Wywołaj `EnableWindowsDialog` podczas przetwarzania komunikatu WM_CREATE.
+Użyj tej metody, aby wstawić element menu, którego polecenie wywołuje okno dialogowe Zarządzanie oknem podrzędnym MDI ( [Klasa CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)). Nowy element zostanie wstawiony do menu określonego przez *uiMenuId*. Wywoływanie `EnableWindowsDialog` podczas przetwarzania komunikatu WM_CREATE.
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie przedstawiono sposób `EnableWindowsDialog` jest używany w [VisualStudioDemo próbki: Aplikacja programu Visual Studio MFC](../../overview/visual-cpp-samples.md).
+Poniższy przykład pokazuje, `EnableWindowsDialog` [w jaki sposób jest używany w próbce VisualStudioDemo: Aplikacja](../../overview/visual-cpp-samples.md)MFC programu Visual Studio.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#10](../../mfc/codesnippet/cpp/cmdiframewndex-class_10.cpp)]
 
-##  <a name="getactivepopup"></a>  CMDIFrameWndEx::GetActivePopup
+##  <a name="getactivepopup"></a>CMDIFrameWndEx::GetActivePopup
 
-Zwraca wskaźnik do menu podręczne aktualnie wyświetlany.
+Zwraca wskaźnik do aktualnie wyświetlonego menu podręcznego.
 
 ```
 CMFCPopupMenu* GetActivePopup() const;
@@ -863,15 +863,15 @@ CMFCPopupMenu* GetActivePopup() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do aktywne menu podręczne; Wartość NULL, jeśli nie menu podręczne jest aktywny.
+Wskaźnik do aktywnego menu podręcznego; Wartość NULL, jeśli menu podręczne nie jest aktywne.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja ta umożliwia uzyskiwanie wskaźnika do [klasa CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) obiekt, który jest aktualnie wyświetlany.
+Użyj tej funkcji, aby uzyskać wskaźnik do obiektu [klasy CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) , który jest aktualnie wyświetlany.
 
-##  <a name="getdefaultresid"></a>  CMDIFrameWndEx::GetDefaultResId
+##  <a name="getdefaultresid"></a>CMDIFrameWndEx::GetDefaultResId
 
-Zwraca identyfikator udostępnione zasoby oknem ramki aplikacji MDI.
+Zwraca identyfikator zasobów udostępnionych okna ramki MDI.
 
 ```
 UINT GetDefaultResId() const;
@@ -879,15 +879,15 @@ UINT GetDefaultResId() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość Identyfikatora zasobu. 0, jeśli okno ramowe nie ma paska menu.
+Wartość identyfikatora zasobu. 0, jeśli okno ramki nie ma paska menu.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda zwraca identyfikator zasobu, który został określony podczas okna ramki MDI został załadowany przez [CFrameWnd::LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe).
+Ta metoda zwraca identyfikator zasobu, który został określony podczas ładowania okna ramki MDI przez [obiektu CFrameWnd:: LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe).
 
-##  <a name="getmditabgroups"></a>  CMDIFrameWndEx::GetMDITabGroups
+##  <a name="getmditabgroups"></a>CMDIFrameWndEx::GetMDITabGroups
 
-Zwraca listę MDI z kartami systemu windows.
+Zwraca listę okien z kartami MDI.
 
 ```
 const CObList& GetMDITabGroups() const;
@@ -895,15 +895,15 @@ const CObList& GetMDITabGroups() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do [klasa CObList](../../mfc/reference/coblist-class.md) obiektu, który zawiera listę okien z zakładkami. Nie przechowywania lub zmodyfikować tę listę.
+Odwołanie do obiektu [klasy CObList](../../mfc/reference/coblist-class.md) , który zawiera listę okien z kartami. Nie należy przechowywać ani modyfikować listy.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda umożliwia dostępu do listy okien z zakładkami. Może być przydatne, jeśli chcesz zmienić lub zbadać niektóre parametry poszczególnych okien z zakładkami.
+Użyj tej metody, aby uzyskać dostęp do listy okien z kartami. Może być przydatne, jeśli chcesz zmienić lub zbadać niektóre parametry poszczególnych okien z kartami.
 
-##  <a name="getmditabs"></a>  CMDIFrameWndEx::GetMDITabs
+##  <a name="getmditabs"></a>CMDIFrameWndEx::GetMDITabs
 
-Zwraca odwołanie do okna z kartami podkreślony.
+Zwraca odwołanie do podkreślenia okna z zakładkami.
 
 ```
 CMFCTabCtrl& GetMDITabs();
@@ -911,11 +911,11 @@ CMFCTabCtrl& GetMDITabs();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do okna z kartami podkreślony.
+Odwołanie do podkreślenia okna z kartami.
 
-##  <a name="getmditabscontextmenualloweditems"></a>  CMDIFrameWndEx::GetMDITabsContextMenuAllowedItems
+##  <a name="getmditabscontextmenualloweditems"></a>CMDIFrameWndEx::GetMDITabsContextMenuAllowedItems
 
-Zwraca kombinacja flag, która określa, jakie operacje są prawidłowe w przypadku, gdy jest włączona funkcja grup kart MDI.
+Zwraca kombinację flag, które określają, jakie operacje są prawidłowe, gdy funkcja grup z kartami MDI jest włączona.
 
 ```
 DWORD GetMDITabsContextMenuAllowedItems();
@@ -923,31 +923,31 @@ DWORD GetMDITabsContextMenuAllowedItems();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bitowe OR kombinacji następujących flag:
+Koniunkcja bitowa lub kombinacja następujących flag:
 
-- BCGP_MDI_CREATE_VERT_GROUP — można utworzyć grupę tabulator pionowy.
+- BCGP_MDI_CREATE_VERT_GROUP — można utworzyć pionową grupę kart.
 
-- BCGP_MDI_CREATE_HORZ_GROUP — można utworzyć grupę tabulacji poziomej.
+- BCGP_MDI_CREATE_HORZ_GROUP — można utworzyć poziomą grupę kart.
 
-- BCGP_MDI_CAN_MOVE_PREV — można przenieść kartę do grupy poprzedniej karty.
+- BCGP_MDI_CAN_MOVE_PREV — można przenieść kartę do poprzedniej grupy kart.
 
-- BCGP_MDI_CAN_MOVE_NEXT — można przenieść karty do następnej grupy kart.
+- BCGP_MDI_CAN_MOVE_NEXT — można przenieść kartę do następnej grupy kart.
 
 ### <a name="remarks"></a>Uwagi
 
-Po włączeniu funkcji grup kart MDI, musisz wiedzieć, jakie operacje są dozwolone na kartach określonego okna. Metoda ta analizuje bieżący układ okien z zakładkami i zwraca kombinacja flag, które mogą być używane do tworzenia, na przykład menu skrótów.
+Po włączeniu funkcji grup z kartami MDI należy wiedzieć, jakie operacje są dozwolone na kartach określonego okna. Ta metoda analizuje bieżący układ okien z kartami i zwraca kombinację flag, które mogą być używane do kompilowania, na przykład menu skrótów.
 
-Można utworzyć nową grupę tabulator pionowy, gdy wszystkich okien z kartami są wyrównane w pionie lub w przypadku, gdy istnieje tylko jedno okno z kartami.
+Można utworzyć nową pionową grupę kart, gdy wszystkie okna z kartami są wyrównane pionowo lub w przypadku, gdy jest tylko jedno okno z kartami.
 
-Można utworzyć nową grupę tabulator poziomy, gdy wszystkich okien z kartami są wyrównane w poziomie lub w przypadku, gdy istnieje tylko jedno okno z kartami.
+Można utworzyć nową grupę kart w poziomie, gdy wszystkie okna z kartami są wyrównane w poziomie lub w przypadku tylko jednego okna z kartami.
 
-Kartę można przenieść do poprzedniej grupy, tylko wtedy, gdy istnieje więcej niż jednej karty w oknie z kartami.
+Możesz przenieść kartę do poprzedniej grupy tylko wtedy, gdy w oknie z kartami znajduje się więcej niż jedna karta.
 
-Karta przejściem do następnej grupy tylko wtedy, gdy istnieje więcej niż jednej karty w oknie z kartami.
+Możesz przenieść kartę do następnej grupy tylko wtedy, gdy w oknie z kartami znajduje się więcej niż jedna karta.
 
-##  <a name="getmenubar"></a>  CMDIFrameWndEx::GetMenuBar
+##  <a name="getmenubar"></a>CMDIFrameWndEx:: getmenubar
 
-Zwraca wskaźnik do obiektu paska menu, dołączone do ramki okna.
+Zwraca wskaźnik do obiektu paska menu dołączonego do okna ramki.
 
 ```
 const CMFCMenuBar* GetMenuBar() const;
@@ -957,9 +957,9 @@ const CMFCMenuBar* GetMenuBar() const;
 
 Wskaźnik do obiektu paska menu.
 
-##  <a name="getpane"></a>  CMDIFrameWndEx::GetPane
+##  <a name="getpane"></a>CMDIFrameWndEx:: getokienk
 
-Zwraca wskaźnik do okienko w którym ma identyfikator określonego formantu.
+Zwraca wskaźnik do okienka, które ma określony identyfikator kontrolki.
 
 ```
 CBasePane* GetPane(UINT nID);
@@ -968,15 +968,15 @@ CBasePane* GetPane(UINT nID);
 ### <a name="parameters"></a>Parametry
 
 *nID*<br/>
-[in] Identyfikator kontrolki.
+podczas Identyfikator formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do okienka, który ma identyfikator określonego formantu, jeśli istnieje. W przeciwnym razie wartość NULL.
+Wskaźnik do okienka o określonym IDENTYFIKATORze kontrolki, jeśli istnieje. W przeciwnym razie wartość NULL.
 
-##  <a name="getribbonbar"></a>  CMDIFrameWndEx::GetRibbonBar
+##  <a name="getribbonbar"></a>CMDIFrameWndEx::GetRibbonBar
 
-Pobiera formantu paska wstążki ramki.
+Pobiera kontrolkę pasek wstążki dla ramki.
 
 ```
 CMFCRibbonBar* GetRibbonBar();
@@ -984,13 +984,13 @@ CMFCRibbonBar* GetRibbonBar();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do [klasa CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) ramki.
+Wskaźnik do [klasy CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) dla ramki.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="gettearoffbars"></a>  CMDIFrameWndEx::GetTearOffBars
+##  <a name="gettearoffbars"></a>CMDIFrameWndEx::GetTearOffBars
 
-Zwraca listę menu odrywania.
+Zwraca listę odrywanych menu.
 
 ```
 const CObList& GetTearOffBars() const;
@@ -998,15 +998,15 @@ const CObList& GetTearOffBars() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do [klasa CObList](../../mfc/reference/coblist-class.md) obiekt, który zawiera zbiór wskaźniki do `CPane`-pochodnych obiekty, które są w stanie odrywania.
+Odwołanie do obiektu [klasy CObList](../../mfc/reference/coblist-class.md) , który zawiera kolekcję wskaźników do `CPane`obiektów pochodnych, które są w stanie odrywania.
 
 ### <a name="remarks"></a>Uwagi
 
-`CMDIFrameWndEx` przechowuje kolekcję menu odrywania. Użyj tej metody można pobrać odwołania do tej listy.
+`CMDIFrameWndEx`zachowuje kolekcję menu odrywania. Użyj tej metody, aby pobrać odwołanie do tej listy.
 
-##  <a name="gettoolbarbuttontooltiptext"></a>  CMDIFrameWndEx::GetToolbarButtonToolTipText
+##  <a name="gettoolbarbuttontooltiptext"></a>CMDIFrameWndEx::GetToolbarButtonToolTipText
 
-Wywoływane przez platformę, gdy aplikacja wyświetli etykietkę narzędzia dla przycisku paska narzędzi.
+Wywoływane przez platformę, gdy aplikacja wyświetla etykietkę narzędzia dla przycisku paska narzędzi.
 
 ```
 virtual BOOL GetToolbarButtonToolTipText(
@@ -1017,20 +1017,20 @@ virtual BOOL GetToolbarButtonToolTipText(
 ### <a name="parameters"></a>Parametry
 
 *pButton*<br/>
-[in] Wskaźnik na przycisku paska narzędzi.
+podczas Wskaźnik do przycisku paska narzędzi.
 
 *strTTText*<br/>
-[in] Tekst etykietki narzędzia dla przycisku.
+podczas Tekst etykietki narzędzia, który będzie wyświetlany dla przycisku.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli została wyświetlona etykietka narzędzia. Wartość FALSE w przeciwnym razie.
+Ma wartość TRUE, jeśli etykietka narzędzia została wyświetlona. W przeciwnym razie zwraca wartość FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="insertpane"></a>  CMDIFrameWndEx::InsertPane
+##  <a name="insertpane"></a>CMDIFrameWndEx::InsertPane
 
-Rejestruje określony okienka dokowania menedżera.
+Rejestruje określone okienko przy użyciu Menedżera dokowania.
 
 ```
 BOOL InsertPane(
@@ -1042,23 +1042,23 @@ BOOL InsertPane(
 ### <a name="parameters"></a>Parametry
 
 *pControlBar*<br/>
-[in] Wskaźnik do okienka do wstawienia.
+podczas Wskaźnik do okienka, które ma zostać wstawione.
 
 *pTarget*<br/>
-[in] Wskaźnik do okienka przed lub po upływie którego do wstawienia w okienku.
+podczas Wskaźnik do okienka przed lub po wstawieniu okienka.
 
-*bPo*<br/>
-[in] W przypadku opcji TRUE *pControlBar* po *pTarget*. W przypadku wartości FAŁSZ *pControlBar* jest wstawiany przed *pTarget*.
+*bAfter*<br/>
+podczas W przypadku wartości TRUE *pControlBar* jest wstawiany po *pTarget*. W przypadku wartości FALSE *pControlBar* jest wstawiany przed *pTarget*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli metoda pomyślnie rejestruje okienku FALSE Jeśli okienka dokowania manager został już zarejestrowany.
+PRAWDA, jeśli metoda pomyślnie rejestruje okienko, FAŁSZ, jeśli okienko zostało już zarejestrowane za pomocą Menedżera dokowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda umożliwia Przedstaw Menedżera dokujące okienko określony przez *pControlBar*. Menedżer dokowania dopasowanie to okienko, zgodnie z okienka wyrównania i pozycja na liście wewnętrznych Menedżera dokowania.
+Użyj tej metody, aby poinformować Menedżera dokowania o okienku określonym przez *pControlBar*. Menedżer dokowania wyświetli to okienko zgodnie z wyrównaniem i pozycją okienka na wewnętrznej liście Menedżera dokowania.
 
-##  <a name="isfullscreen"></a>  CMDIFrameWndEx::IsFullScreen
+##  <a name="isfullscreen"></a>CMDIFrameWndEx:: ispełnoekranowym
 
 Określa, czy okno ramki jest w trybie pełnoekranowym.
 
@@ -1068,15 +1068,15 @@ BOOL IsFullScreen() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli okno ramki jest w trybie pełnoekranowym; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli okno ramki jest w trybie pełnoekranowym; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Można ustawić trybu pełnoekranowego, wywołując [CMDIFrameWndEx::EnableFullScreenMode](#enablefullscreenmode) metody.
+Tryb pełnoekranowy można ustawić, wywołując metodę [CMDIFrameWndEx:: EnableFullScreenMode](#enablefullscreenmode) .
 
-##  <a name="ismditabbedgroup"></a>  CMDIFrameWndEx::IsMDITabbedGroup
+##  <a name="ismditabbedgroup"></a>CMDIFrameWndEx::IsMDITabbedGroup
 
-Określa, czy jest włączona funkcja grup kart MDI.
+Określa, czy funkcja grup z kartami MDI jest włączona.
 
 ```
 BOOL IsMDITabbedGroup() const;
@@ -1084,15 +1084,15 @@ BOOL IsMDITabbedGroup() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli jest włączona funkcja grup kart MDI; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli funkcja grup z kartami MDI jest włączona. w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby określić, czy włączono regularne kart MDI lub funkcji grup kart MDI, użyj [CMDIFrameWndEx::AreMDITabs](#aremditabs).
+Aby określić, czy jest włączona zwykła karta MDI lub funkcja grup z kartami MDI, użyj [CMDIFrameWndEx:: AreMDITabs](#aremditabs).
 
-##  <a name="ismemberofmditabgroup"></a>  CMDIFrameWndEx::IsMemberOfMDITabGroup
+##  <a name="ismemberofmditabgroup"></a>CMDIFrameWndEx::IsMemberOfMDITabGroup
 
-Określa, czy określone okno z kartami na liście systemu windows, które znajdują się w grupach z kartami MDI.
+Określa, czy określone okno z kartami znajduje się na liście okien, które znajdują się w grupach z kartami MDI.
 
 ```
 BOOL IsMemberOfMDITabGroup(CWnd* pWnd);
@@ -1101,15 +1101,15 @@ BOOL IsMemberOfMDITabGroup(CWnd* pWnd);
 ### <a name="parameters"></a>Parametry
 
 *pWnd*<br/>
-[in] Wskaźnik do okna z kartami.
+podczas Wskaźnik do okna z kartami.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli określone okno z kartami znajduje się na liście okien z zakładkami, które tworzą grupy z kartami MDI. W przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli określone okno z kartami znajduje się na liście okien z kartami, które tworzą grupy z kartami MDI. W przeciwnym razie FALSE.
 
-##  <a name="ismenubaravailable"></a>  CMDIFrameWndEx::IsMenuBarAvailable
+##  <a name="ismenubaravailable"></a>CMDIFrameWndEx::IsMenuBarAvailable
 
-Określa, czy okno ramowe ma paska menu.
+Określa, czy okno ramki ma pasek menu.
 
 ```
 BOOL IsMenuBarAvailable() const;
@@ -1117,11 +1117,11 @@ BOOL IsMenuBarAvailable() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli nie jest równa NULL; wskaźnik do obiektu paska menu w przeciwnym razie wartość FALSE.
+TRUE, jeśli wskaźnik do obiektu paska menu nie ma wartości NULL; w przeciwnym razie FALSE.
 
-##  <a name="ispointneardocksite"></a>  CMDIFrameWndEx::IsPointNearDockSite
+##  <a name="ispointneardocksite"></a>CMDIFrameWndEx::IsPointNearDockSite
 
-Określa, czy określony punkt znajduje się w pobliżu witryny dokowania.
+Określa, czy określony punkt znajduje się blisko lokacji dokowania.
 
 ```
 BOOL IsPointNearDockSite(
@@ -1132,24 +1132,24 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parametry
 
-*Punkt*<br/>
-[in] Określony punkt współrzędne ekranu.
+*moment*<br/>
+podczas Określony punkt we współrzędnych ekranu.
 
 *dwBarAlignment*<br/>
-[in] Określa, które krawędzi punkt znajduje się w pobliżu. Możliwe wartości to CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP i CBRS_ALIGN_BOTTOM
+podczas Określa, która krawędź punktu jest bliska. Możliwe wartości to CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP i CBRS_ALIGN_BOTTOM
 
 *bOuterEdge*<br/>
-[in] Wartość TRUE, jeśli punkt znajduje się w pobliżu zewnętrznymi krawędziami witryny dokowania; Wartość FALSE w przeciwnym razie.
+podczas Ma wartość TRUE, jeśli punkt znajduje się blisko zewnętrznego obramowania witryny Docker; W przeciwnym razie zwraca wartość FALSE.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli punkt znajduje się w pobliżu witryny dokowania; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli punkt znajduje się blisko witryny Docker; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Punkt znajduje się w pobliżu witryny dokowania, gdy znajduje się w czułości w Menedżerze dokowania. Czułość domyślną jest 15 pikseli.
+Punkt znajduje się blisko lokacji dokowania, gdy znajduje się ona w zestawie czułym w Menedżerze dokowania. Domyślna czułość to 15 pikseli.
 
-##  <a name="isprintpreview"></a>  CMDIFrameWndEx::IsPrintPreview
+##  <a name="isprintpreview"></a>CMDIFrameWndEx::IsPrintPreview
 
 Określa, czy okno ramki jest w trybie podglądu wydruku.
 
@@ -1159,13 +1159,13 @@ BOOL IsPrintPreview();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli w oknie ramki jest w trybie podglądu wydruku w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli okno ramki jest w trybie podglądu wydruku; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="loadframe"></a>  CMDIFrameWndEx::LoadFrame
+##  <a name="loadframe"></a>CMDIFrameWndEx::LoadFrame
 
-Tworzy okno ramowe na podstawie informacji o zasobie.
+Tworzy okno ramowe na podstawie informacji o zasobach.
 
 ```
 virtual BOOL LoadFrame(
@@ -1178,24 +1178,24 @@ virtual BOOL LoadFrame(
 ### <a name="parameters"></a>Parametry
 
 *nIDResource*<br/>
-[in] Identyfikator zasobu udostępnionego skojarzony z oknem ramki.
+podczas Identyfikator zasobu udostępnionego skojarzonego z oknem ramki.
 
 *dwDefaultStyle*<br/>
-[in] Styl ramki okna.
+podczas Styl okna ramki.
 
 *pParentWnd*<br/>
-[in] Wskaźnik do ramki nadrzędnej.
+podczas Wskaźnik do elementu nadrzędnego ramki.
 
 *pContext*<br/>
-[in] Wskaźnik do [struktura CCreateContext](../../mfc/reference/ccreatecontext-structure.md). Ten parametr może mieć wartości NULL.
+podczas Wskaźnik do [struktury CCreateContext](../../mfc/reference/ccreatecontext-structure.md). Ten parametr może mieć wartość NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli metoda się powiedzie, w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli metoda się powiedzie, w przeciwnym razie FALSE.
 
-##  <a name="loadmdistate"></a>  CMDIFrameWndEx::LoadMDIState
+##  <a name="loadmdistate"></a>CMDIFrameWndEx::LoadMDIState
 
-Ładuje określony układ grup z kartami MDI oraz listy wcześniej otwartych dokumentów.
+Ładuje określony układ grup z kartami MDI i listę wcześniej otwartych dokumentów.
 
 ```
 virtual BOOL LoadMDIState(LPCTSTR lpszProfileName);
@@ -1204,33 +1204,33 @@ virtual BOOL LoadMDIState(LPCTSTR lpszProfileName);
 ### <a name="parameters"></a>Parametry
 
 *lpszProfileName*<br/>
-[in] Określa nazwę profilu.
+podczas Określa nazwę profilu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli obciążenie zakończyło się pomyślnie; Wartość FALSE, jeśli ładowanie nie powiodło się lub nie ma żadnych danych do załadowania.
+Ma wartość TRUE, jeśli ładowanie zakończyło się pomyślnie; Wartość FALSE, jeśli ładowanie nie powiodło się lub nie ma danych do załadowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Do załadowania lub zapisania stanu kart MDI i grup i listy otwartych dokumentów, wykonaj następujące czynności:
+Aby załadować lub zapisać stan kart i grup MDI oraz listę otwartych dokumentów, wykonaj następujące czynności:
 
-- Wywołaj [CMDIFrameWndEx::SaveMDIState](#savemdistate) po zamknięciu głównej ramki
+- Wywołanie [CMDIFrameWndEx:: SaveMDIState](#savemdistate) podczas zamykania ramki głównej
 
-- Wywołaj [CMDIFrameWndEx::LoadMDIState](#loadmdistate) podczas tworzenia głównej ramki. Zalecane miejsce dla tego wywołania jest przed wyświetleniem głównej ramki po raz pierwszy. Dodaj `CWinAppEx::EnableLoadWindowPlacement` `(FALSE);` przed `pMainFrame->LoadFrame (IDR_MAINFRAME);.` Dodaj `CBCGPWorkspace::ReloadWindowPlacement` `(pMainFrame);` po wywołaniu `LoadMDIState` do wyświetlenia głównej ramki w położeniu, które są przechowywane w rejestrze.
+- Wywołanie [CMDIFrameWndEx:: LoadMDIState](#loadmdistate) , gdy tworzona jest ramka główna. Zalecane miejsce dla tego wywołania jest przed wyświetleniem ramki głównej po raz pierwszy. Dodaj `CWinAppEx::EnableLoadWindowPlacement` przed`(FALSE);` dodaniem`CBCGPWorkspace::ReloadWindowPlacement` po wywołaniu do,abywyświetlićgłównąramkęwpozycjiprzechowywanejwrejestrze.`LoadMDIState` `(pMainFrame);` `pMainFrame->LoadFrame (IDR_MAINFRAME);.`
 
-- Zastąp `GetDocumentName` w `CMDIChildWndEx`-klasy pochodnej, jeśli aplikacja wyświetla dokumenty, które nie są przechowywane jako pliki. Zwracany ciąg zostaną zapisane w rejestrze jako identyfikator dokumentu. Implementację podstawową [CMDIChildWndEx::GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname) zwraca wartość uzyskany z [CDocument::GetPathName](../../mfc/reference/cdocument-class.md#getpathname).
+- Przesłoń `GetDocumentName` w `CMDIChildWndEx`klasie pochodnej, jeśli aplikacja wyświetla dokumenty, które nie są przechowywane jako pliki. Zwrócony ciąg zostanie zapisany w rejestrze jako identyfikator dokumentu. Podstawowa implementacja elementu [CMDIChildWndEx::](../../mfc/reference/cmdichildwndex-class.md#getdocumentname) GetDocumentName zwraca wartość uzyskaną z [CDocument::](../../mfc/reference/cdocument-class.md#getpathname)getPathname.
 
-- Zastąp [CMDIFrameWndEx::CreateDocumentWindow](#createdocumentwindow) poprawnie tworzenie dokumentów, gdy są ładowane z rejestru. Pierwszy parametr jest ciągiem, `GetDocumentName` zwracane.
+- Przesłoń [CMDIFrameWndEx:: CreateDocumentWindow](#createdocumentwindow) , aby poprawnie tworzyć dokumenty, gdy są ładowane z rejestru. Pierwszy parametr jest `GetDocumentName` zwracanym ciągiem.
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie przedstawiono sposób `LoadMDIState` jest używany w [VisualStudioDemo próbki: Aplikacja programu Visual Studio MFC](../../overview/visual-cpp-samples.md).
+Poniższy przykład pokazuje, `LoadMDIState` [w jaki sposób jest używany w próbce VisualStudioDemo: Aplikacja](../../overview/visual-cpp-samples.md)MFC programu Visual Studio.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#11](../../mfc/codesnippet/cpp/cmdiframewndex-class_11.cpp)]
 
-##  <a name="mditabmovetonextgroup"></a>  CMDIFrameWndEx::MDITabMoveToNextGroup
+##  <a name="mditabmovetonextgroup"></a>CMDIFrameWndEx::MDITabMoveToNextGroup
 
-Przenosi aktywną kartę z aktualnie aktywne okno z kartami do następnej lub poprzedniej grupy z kartami.
+Przenosi aktywną kartę z aktualnie aktywnego okna z kartami do następnej lub poprzedniej grupy z kartami.
 
 ```
 void MDITabMoveToNextGroup(BOOL bNext=TRUE);
@@ -1238,12 +1238,12 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bDalej*<br/>
-[in] W przypadku opcji TRUE przenosi kartę do następnej grupy z kartami. Jeśli jest to wartość FAŁSZ, przenieś go do poprzedniej grupy z kartami.
+*bNext*<br/>
+podczas W przypadku wartości TRUE należy przenieść kartę do następnej grupy z kartami. W przypadku wartości FALSE przenieś ją do poprzedniej grupy z kartami.
 
-##  <a name="mditabnewgroup"></a>  CMDIFrameWndEx::MDITabNewGroup
+##  <a name="mditabnewgroup"></a>CMDIFrameWndEx::MDITabNewGroup
 
-Tworzy nowe grupy z kartami, która ma jednego okna.
+Tworzy nową grupę z kartami, która ma pojedyncze okno.
 
 ```
 void MDITabNewGroup(BOOL bVert=TRUE);
@@ -1252,21 +1252,21 @@ void MDITabNewGroup(BOOL bVert=TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bVert*<br/>
-[in] Określa wyrównanie nowej grupy. W przypadku opcji TRUE nowej grupy są wyrównane w pionie. W przypadku wartości FAŁSZ nowej grupy są wyrównane w poziomie.
+podczas Określa wyrównanie nowej grupy. W przypadku wartości TRUE Nowa grupa jest wyrównana w pionie. W przypadku wartości FALSE Nowa grupa jest wyrównana w poziomie.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja służy do tworzenia nowego z zakładkami w oknie (Nowa grupa z kartami) i Dodaj pierwszej karcie do niego.
+Ta funkcja umożliwia utworzenie nowego okna z kartami (nowej grupy z kartami) i dodanie do niego pierwszej karty.
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie przedstawiono sposób `MDITabNewGroup` jest używany w [VisualStudioDemo próbki: Aplikacja programu Visual Studio MFC](../../overview/visual-cpp-samples.md).
+Poniższy przykład pokazuje, `MDITabNewGroup` [w jaki sposób jest używany w próbce VisualStudioDemo: Aplikacja](../../overview/visual-cpp-samples.md)MFC programu Visual Studio.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#12](../../mfc/codesnippet/cpp/cmdiframewndex-class_12.cpp)]
 
-##  <a name="m_bcancovertcontrolbartomdichild"></a>  CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild
+##  <a name="m_bcancovertcontrolbartomdichild"></a>CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild
 
-Określa, czy można przekonwertować tafli dokowania oknami podrzędnymi MDI.
+Określa, czy okienka dokujące mogą być konwertowane do okien podrzędnych MDI.
 
 ```
 BOOL m_bCanCovertControlBarToMDIChild;
@@ -1274,19 +1274,19 @@ BOOL m_bCanCovertControlBarToMDIChild;
 
 ### <a name="remarks"></a>Uwagi
 
-Wskazuje, czy można przekonwertować dokowania pasków kontrolki podrzędne MDI. Jeśli ta flaga ma wartość TRUE, struktura obsługuje konwersję automatycznie po użytkownik wybierze **dokumentu z zakładkami** polecenia. Flaga jest chroniony i należy jawnie włączyć tę opcję, albo ustawiając `m_bCanCovertControlBarToMDIChild` w Konstruktorze z `CMDIFrameWndEx`-klasy pochodnej lub przez zastąpienie `CanConvertControlBarToMDIChild`.
+Wskazuje, czy zadokowane paski sterowania mogą być konwertowane do okien podrzędnych MDI. Jeśli ta flaga ma wartość TRUE, struktura obsługuje konwersję automatycznie, gdy użytkownik wybierze polecenie **dokumentu** z kartami. Flaga jest chroniona i należy jawnie włączyć tę opcję przez ustawienie `m_bCanCovertControlBarToMDIChild` w konstruktorze `CMDIFrameWndEx`klasy pochodnej lub przez zastąpienie `CanConvertControlBarToMDIChild`.
 
 Wartość domyślna to `FALSE`.
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie przedstawiono sposób `m_bCanCovertControlBarToMDIChild` jest używany w [VisualStudioDemo próbki: Aplikacja programu Visual Studio MFC](../../overview/visual-cpp-samples.md).
+Poniższy przykład pokazuje, `m_bCanCovertControlBarToMDIChild` [w jaki sposób jest używany w próbce VisualStudioDemo: Aplikacja](../../overview/visual-cpp-samples.md)MFC programu Visual Studio.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#13](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]
 
-##  <a name="m_bdisablesetredraw"></a>  CMDIFrameWndEx::m_bDisableSetRedraw
+##  <a name="m_bdisablesetredraw"></a>CMDIFrameWndEx::m_bDisableSetRedraw
 
-Włącza lub wyłącza optymalizację ponownego wystawienia dla okien podrzędnych MDI.
+Włącza lub wyłącza optymalizację ponownego rysowania dla okien podrzędnych MDI.
 
 ```
 AFX_IMPORT_DATA static BOOL m_bDisableSetRedraw;
@@ -1296,13 +1296,13 @@ AFX_IMPORT_DATA static BOOL m_bDisableSetRedraw;
 
 Wartość domyślna to TRUE.
 
-Ustaw tej flagi na wartość FALSE, jeśli chcesz zoptymalizować rendering elementy podrzędne MDI. W tym przypadku będzie wywoływać ramach `SetRedraw (FALSE)` dla głównej ramki, gdy aplikacja ulegnie zmianie aktywną kartę.
+Ustaw tę flagę na FALSE, jeśli chcesz zoptymalizować rerysowanie elementów podrzędnych MDI. W takim przypadku platforma będzie wywoływała `SetRedraw (FALSE)` dla ramki głównej, gdy aplikacja zmienia aktywną kartę.
 
-Ta flaga może spowodować niepożądane skutki (np. aplikacji w tle, które stają się widoczne). Dlatego zaleca się zmienić domyślną tylko wtedy, gdy wystąpią zauważalne migotanie podczas aktywacji karcie MDI.
+Ta flaga może spowodować niepożądane skutki (takie jak aplikacje w tle, które staną się widoczne). W związku z tym zalecamy zmianę ustawienia domyślnego tylko w przypadku, gdy podczas aktywacji karty MDI wystąpi zauważalne migotanie.
 
-##  <a name="negotiateborderspace"></a>  CMDIFrameWndEx::NegotiateBorderSpace
+##  <a name="negotiateborderspace"></a>CMDIFrameWndEx::NegotiateBorderSpace
 
-Negocjuje obramowania miejsce w oknie ramowym podczas aktywacji w miejscu OLE.
+Negocjuje miejsce obramowania w oknie ramki podczas aktywacji w miejscu OLE.
 
 ```
 virtual BOOL NegotiateBorderSpace(
@@ -1313,7 +1313,7 @@ virtual BOOL NegotiateBorderSpace(
 ### <a name="parameters"></a>Parametry
 
 *nBorderCmd*<br/>
-[in] Zawiera jedną z następujących wartości z wyliczenia `CFrameWnd::BorderCmd`:
+podczas Zawiera jedną z następujących wartości z wyliczenia `CFrameWnd::BorderCmd`:
 
 - `borderGet` = 1
 
@@ -1322,19 +1322,19 @@ virtual BOOL NegotiateBorderSpace(
 - `borderSet` = 3
 
 *lpRectBorder*<br/>
-[out w] Wskaźnik do [struktura RECT](/windows/desktop/api/windef/ns-windef-tagrect) lub [CRect, klasa](../../atl-mfc-shared/reference/crect-class.md) obiektu, który określa współrzędne obramowania.
+[in. out] Wskaźnik do [struktury Rect](/windows/win32/api/windef/ns-windef-rect) lub obiektu [klasy CRect](../../atl-mfc-shared/reference/crect-class.md) , który określa współrzędne obramowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie 0.
+Niezerowe, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest implementacją negocjacji miejsca obramowania OLE.
+Ta metoda jest implementacją negocjacji przestrzeni obramowania OLE.
 
-##  <a name="onclosedockingpane"></a>  CMDIFrameWndEx::OnCloseDockingPane
+##  <a name="onclosedockingpane"></a>CMDIFrameWndEx::OnCloseDockingPane
 
-Wywoływane przez platformę, gdy użytkownik kliknie **Zamknij** przycisk w okienku dokowalnych.
+Wywoływane przez platformę, gdy użytkownik kliknie przycisk **Zamknij** w okienku było dokować.
 
 ```
 virtual BOOL OnCloseDockingPane(CDockablePane* pWnd);
@@ -1343,21 +1343,21 @@ virtual BOOL OnCloseDockingPane(CDockablePane* pWnd);
 ### <a name="parameters"></a>Parametry
 
 *pWnd*<br/>
-[in] Wskaźnik do okienka zamykane.
+podczas Wskaźnik do zamkniętego okienka.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli okienko dokowania, może zostać zamknięty. W przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli okienko dokowania można zamknąć. W przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastępuje tę metodę, aby obsłużyć ukrywania okienka dokowania. Zwraca wartość FALSE, jeśli chcesz uniemożliwić ukrywane okienka dokowania.
+Zastąp tę metodę, aby obsłużyć ukrywanie okienek dokowania. Zwróć wartość FALSE, jeśli chcesz zapobiec ukrywaniu okienka dokowania.
 
-Domyślna implementacja nic nie robi i zwraca wartość TRUE.
+Implementacja domyślna nie robi niczego i zwraca wartość TRUE.
 
-##  <a name="oncloseminiframe"></a>  CMDIFrameWndEx::OnCloseMiniFrame
+##  <a name="oncloseminiframe"></a>CMDIFrameWndEx::OnCloseMiniFrame
 
-Wywoływane przez platformę, gdy użytkownik kliknie **Zamknij** przycisk na przestawne okno mini ramki.
+Wywoływane przez platformę, gdy użytkownik kliknie przycisk **Zamknij** w swobodnym oknie mini-frame.
 
 ```
 virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
@@ -1366,19 +1366,19 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 ### <a name="parameters"></a>Parametry
 
 *pWnd*<br/>
-[in] Wskaźnik do zamykania okna mini ramki.
+podczas Wskaźnik do zamkniętego okna mini-frame.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli przestawne okno mini ramki, może zostać zamknięty. W przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli ruchome okno mini-frame może być zamknięte. W przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastępuje tę metodę, aby obsłużyć ukrywania mini ramki okna przestawne. Zwraca wartość FALSE, jeśli chcesz uniemożliwić ukrywane przestawne okno mini ramki.
+Zastąp tę metodę, aby obsłużyć ukrywanie zmiennoprzecinkowych okienek. Zwróć wartość FALSE, jeśli chcesz zapobiec ukrywaniu przepływającego okna mini-frame.
 
-Domyślna implementacja nic nie robi i zwraca wartość TRUE.
+Implementacja domyślna nie robi niczego i zwraca wartość TRUE.
 
-##  <a name="onclosepopupmenu"></a>  CMDIFrameWndEx::OnClosePopupMenu
+##  <a name="onclosepopupmenu"></a>CMDIFrameWndEx::OnClosePopupMenu
 
 Wywoływane przez platformę, gdy aktywne menu podręczne przetwarza komunikat WM_DESTROY.
 
@@ -1389,15 +1389,15 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ### <a name="parameters"></a>Parametry
 
 *pMenuPopup*<br/>
-[in] Wskaźnik do menu podręcznego.
+podczas Wskaźnik do menu podręcznego.
 
 ### <a name="remarks"></a>Uwagi
 
-Przesłonić tę metodę, aby przetworzyć powiadomień z [klasa CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) obiektów, które należą do okna ramki MDI, gdy te obiekty, przetwarzać komunikaty z WM_DESTROY.
+Zastąp tę metodę, jeśli chcesz przetwarzać powiadomienia z obiektów [klasy CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) , które należą do okna ramka MDI, gdy te obiekty przetwarzają komunikaty WM_DESTROY.
 
-##  <a name="oncmdmsg"></a>  CMDIFrameWndEx::OnCmdMsg
+##  <a name="oncmdmsg"></a>CMDIFrameWndEx:: OnCmdMsg
 
-Wywoływane przez platformę, by kierować i wysyłać komunikaty poleceń i aktualizowanie obiektów interfejsu użytkownika poleceń.
+Wywoływane przez platformę do rozsyłania i wysyłania komunikatów poleceń oraz do aktualizacji obiektów interfejsu użytkownika polecenia.
 
 ```
 virtual BOOL OnCmdMsg(
@@ -1410,24 +1410,24 @@ virtual BOOL OnCmdMsg(
 ### <a name="parameters"></a>Parametry
 
 *nID*<br/>
-[in] Identyfikator polecenia.
+podczas Identyfikator polecenia.
 
 *nCode*<br/>
-[in] Określa kod powiadomień polecenia. Zobacz [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) Aby uzyskać więcej informacji na temat wartości *nCode*.
+podczas Identyfikuje kod powiadomienia polecenia. Aby uzyskać więcej informacji na temat wartości dla *nCode*, zobacz [CCmdTarget:: OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) .
 
 *pExtra*<br/>
-[in] Używane zgodnie z wartością *nCode*. Zobacz [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) Aby uzyskać więcej informacji na temat *pExtra*.
+podczas Używane zgodnie z wartością *nCode*. Aby uzyskać więcej informacji na temat *pExtra*, zobacz [CCmdTarget:: OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) .
 
 *pHandlerInfo*<br/>
-[out w] Zazwyczaj ten parametr powinien mieć wartości NULL. Jeśli nie ma wartość NULL, `OnCmdMsg` wypełnia `pTarget` i `pmf` członkowie *pHandlerInfo* struktury zamiast wysyłania polecenia.
+[in. out] Zazwyczaj ten parametr powinien mieć wartość NULL. Jeśli nie ma wartości `OnCmdMsg` null, wypełnia `pTarget` i `pmf` składowe struktury *pHandlerInfo* zamiast wysyłania polecenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli komunikat jest obsługiwany; w przeciwnym razie 0.
+Niezerowe, jeśli komunikat jest obsługiwany; w przeciwnym razie 0.
 
-##  <a name="ondrawmenuimage"></a>  CMDIFrameWndEx::OnDrawMenuImage
+##  <a name="ondrawmenuimage"></a>CMDIFrameWndEx::OnDrawMenuImage
 
-Wywoływane przez platformę podczas rysowania obrazu skojarzonego z elementem menu.
+Wywoływane przez platformę, gdy zostanie narysowany obraz skojarzony z elementem menu.
 
 ```
 virtual BOOL OnDrawMenuImage(
@@ -1439,25 +1439,25 @@ virtual BOOL OnDrawMenuImage(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Wskaźnik do kontekstu urządzenia.
+podczas Wskaźnik do kontekstu urządzenia.
 
 *pMenuButton*<br/>
-[in] Wskaźnik na przycisku menu.
+podczas Wskaźnik na przycisk menu.
 
 *rectImage*<br/>
-[in] Prostokąt otaczający obrazu.
+podczas Prostokąt obwiedni obrazu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli metoda Rysuje obraz. Domyślna implementacja zwraca wartość FALSE.
+TRUE, jeśli metoda rysuje obraz. Domyślna implementacja zwraca wartość FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Przesłonić tę metodę, jeśli chcesz dostosować renderowania obrazów dla elementów menu, które należą do paska menu własnością `CMDIFrameWndEx`-pochodnych obiektu. Domyślna implementacja nic nie robi.
+Zastąp tę metodę, jeśli chcesz dostosować renderowanie obrazu dla elementów menu, które należą do paska menu należącego `CMDIFrameWndEx`do obiektu pochodnego. Domyślna implementacja nie robi nic.
 
-##  <a name="ondrawmenulogo"></a>  CMDIFrameWndEx::OnDrawMenuLogo
+##  <a name="ondrawmenulogo"></a>CMDIFrameWndEx::OnDrawMenuLogo
 
-Wywoływane przez platformę, gdy [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)przetwarza komunikat WM_PAINT.
+Wywoływane przez platformę, gdy [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)PRZETWARZA komunikat WM_PAINT.
 
 ```
 virtual void OnDrawMenuLogo(
@@ -1468,11 +1468,11 @@ virtual void OnDrawMenuLogo(
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę funkcję, aby wyświetlić logo w menu podręcznym należącą do paska menu należące do `CMDIFrameWndEx`-pochodnych obiektu. Domyślna implementacja nic nie robi.
+Zastąp tę funkcję, aby wyświetlić logo w menu podręcznym, które należy do paska menu należącego `CMDIFrameWndEx`do obiektu pochodnego. Domyślna implementacja nie robi nic.
 
-##  <a name="onerasemdiclientbackground"></a>  CMDIFrameWndEx::OnEraseMDIClientBackground
+##  <a name="onerasemdiclientbackground"></a>CMDIFrameWndEx::OnEraseMDIClientBackground
 
-Wywoływane przez platformę, gdy okno ramek MDI przetwarza komunikat WM_ERASEBKGND.
+Wywoływane przez platformę, gdy okno ramka MDI przetwarza komunikat WM_ERASEBKGND.
 
 ```
 virtual BOOL OnEraseMDIClientBackground(CDC*);
@@ -1480,15 +1480,15 @@ virtual BOOL OnEraseMDIClientBackground(CDC*);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli aplikacja przetwarza komunikat i usuwa w tle.
+Ma wartość TRUE, jeśli aplikacja przetwarza komunikat i kasuje tło.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąpienie tej funkcji elementu członkowskiego, aby przetworzyć komunikatu WM_ERASEBKGND w `CMDIFrameWndEx`-klasy pochodnej.
+Przesłoń tę funkcję elementu członkowskiego, jeśli chcesz przetworzyć komunikat `CMDIFrameWndEx`WM_ERASEBKGND w klasie pochodnej.
 
-##  <a name="onmenubuttontoolhittest"></a>  CMDIFrameWndEx::OnMenuButtonToolHitTest
+##  <a name="onmenubuttontoolhittest"></a>CMDIFrameWndEx::OnMenuButtonToolHitTest
 
-Wywoływane przez platformę, gdy [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)obiektu przetwarza komunikat WM_NCHITTEST.
+Wywoływane przez platformę, gdy obiekt [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)PRZETWARZA komunikat WM_NCHITTEST.
 
 ```
 virtual BOOL OnMenuButtonToolHitTest(
@@ -1499,22 +1499,22 @@ virtual BOOL OnMenuButtonToolHitTest(
 ### <a name="parameters"></a>Parametry
 
 *pButton*<br/>
-[in] Przycisk paska narzędzi.
+podczas Przycisk paska narzędzi.
 
 *pTI*<br/>
-[out] Wskaźnik do [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) struktury.
+określoną Wskaźnik do struktury [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli aplikacja wypełnia *pTI* parametru. Domyślna implementacja zwraca wartość FALSE.
+Wartość TRUE, jeśli aplikacja wypełnia parametr *PTI* . Domyślna implementacja zwraca wartość FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Przesłania tę metodę, jeśli chcesz udostępnić informacje dotyczące określonego menu elementów do etykietki narzędzia. Domyślna implementacja nic nie robi.
+Zastąp tę metodę, jeśli chcesz podać informacje o określonych elementach menu w etykietce narzędzia. Domyślna implementacja nie robi nic.
 
-##  <a name="onmoveminiframe"></a>  CMDIFrameWndEx::OnMoveMiniFrame
+##  <a name="onmoveminiframe"></a>CMDIFrameWndEx::OnMoveMiniFrame
 
-Metoda wywoływana przez platformę, aby przenieść okno mini ramki.
+Wywoływane przez platformę, by przenieść okno mini-frame.
 
 ```
 virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
@@ -1523,15 +1523,15 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ### <a name="parameters"></a>Parametry
 
 *pFrame*<br/>
-[in] Wskaźnik do okna mini ramki.
+podczas Wskaźnik do okna mini-frame.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli metoda się powiedzie, w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli metoda się powiedzie, w przeciwnym razie FALSE.
 
-##  <a name="onsetpreviewmode"></a>  CMDIFrameWndEx::OnSetPreviewMode
+##  <a name="onsetpreviewmode"></a>CMDIFrameWndEx::OnSetPreviewMode
 
-Ustawia tryb podglądu wydruku okna ramki głównej aplikacji.
+Ustawia tryb podglądu wydruku głównego okna ramki aplikacji.
 
 ```
 virtual void OnSetPreviewMode(
@@ -1542,18 +1542,18 @@ virtual void OnSetPreviewMode(
 ### <a name="parameters"></a>Parametry
 
 *bPreview*<br/>
-[in] W przypadku opcji TRUE Ustawia tryb podglądu wydruku. W przypadku wartości FAŁSZ anuluje podgląd trybu.
+podczas W przypadku wartości TRUE ustawia tryb podglądu wydruku. W przypadku wartości FALSE anuluje tryb podglądu.
 
-*stanu wydajności*<br/>
-[in] Wskaźnik do `CPrintPreviewState` struktury.
+*pState*<br/>
+podczas Wskaźnik do `CPrintPreviewState` struktury.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda zastępuje [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode).
+Ta metoda przesłania [obiektu CFrameWnd:: OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode).
 
-##  <a name="onshowcustomizepane"></a>  CMDIFrameWndEx::OnShowCustomizePane
+##  <a name="onshowcustomizepane"></a>CMDIFrameWndEx::OnShowCustomizePane
 
-Wywoływane przez platformę, po aktywowaniu okienko szybkie dostosowywanie.
+Wywoływane przez platformę po aktywowaniu okienka szybkie dostosowywanie.
 
 ```
 virtual BOOL OnShowCustomizePane(
@@ -1564,10 +1564,10 @@ virtual BOOL OnShowCustomizePane(
 ### <a name="parameters"></a>Parametry
 
 *pMenuPane*<br/>
-[in] Wskaźnik do szybkiego dostosowywania okienka.
+podczas Wskaźnik do okienka szybkie dostosowywanie.
 
 *uiToolbarID*<br/>
-[in] Identyfikator formantu paska narzędzi do dostosowywania.
+podczas Identyfikator kontrolki paska narzędzi, który ma zostać dostosowany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1575,13 +1575,13 @@ Ta metoda zawsze zwraca wartość TRUE.
 
 ### <a name="remarks"></a>Uwagi
 
-Okienko Szybkie dostosowywanie jest otwierana, gdy użytkownik kliknie przycisk menu **Dostosuj** na pasku narzędzi.
+Okienko szybkie dostosowywanie to menu, które jest otwierane, gdy użytkownik kliknie przycisk **Dostosuj** na pasku narzędzi.
 
-Należy przesłonić tę metodę w klasie pochodnej, aby wprowadzić zmiany w okienku szybkie dostosowywanie.
+Zastąp tę metodę w klasie pochodnej, aby wprowadzić zmiany w okienku Szybkie dostosowywanie.
 
-##  <a name="onshowmditabcontextmenu"></a>  CMDIFrameWndEx::OnShowMDITabContextMenu
+##  <a name="onshowmditabcontextmenu"></a>CMDIFrameWndEx::OnShowMDITabContextMenu
 
-Wywoływane przez platformę, przed wyświetleniem menu skrótów dla jednej z kart. Prawidłowe dla grupy z kartami MDI tylko.
+Wywoływane przez platformę przed wyświetleniem menu skrótów na jednej z kart. Prawidłowy tylko dla grup z kartami MDI.
 
 ```
 virtual BOOL OnShowMDITabContextMenu(
@@ -1592,42 +1592,42 @@ virtual BOOL OnShowMDITabContextMenu(
 
 ### <a name="parameters"></a>Parametry
 
-*Punkt*<br/>
-[in] Lokalizacja menu na współrzędne ekranu.
+*moment*<br/>
+podczas Położenie menu we współrzędnych ekranu.
 
 *dwAllowedItems*<br/>
-[in] Bitowe OR kombinacji flagi wskazującą, jakie działania są dozwolone dla bieżącej karty:
+podczas Bitowa lub kombinacja flag wskazujących, jakie akcje są dozwolone dla bieżącej karty:
 
-- BCGP_MDI_CREATE_VERT_GROUP — można utworzyć grupę tabulator pionowy.
+- BCGP_MDI_CREATE_VERT_GROUP — można utworzyć pionową grupę kart.
 
-- BCGP_MDI_CREATE_HORZ_GROUP — można utworzyć grupę tabulacji poziomej.
+- BCGP_MDI_CREATE_HORZ_GROUP — można utworzyć poziomą grupę kart.
 
-- BCGP_MDI_CAN_MOVE_PREV — można przenieść kartę do grupy poprzedniej karty.
+- BCGP_MDI_CAN_MOVE_PREV — można przenieść kartę do poprzedniej grupy kart.
 
-- BCGP_MDI_CAN_MOVE_NEXT — można przenieść karty do następnej grupy kart.
+- BCGP_MDI_CAN_MOVE_NEXT — można przenieść kartę do następnej grupy kart.
 
-- BCGP_MDI_CAN_BE_DOCKED — Przełącz dokument z kartami zadokowany stanu (istotne tylko w przypadku kartach dokumentów).
+- BCGP_MDI_CAN_BE_DOCKED — Przełącz dokument z kartami do stanu zadokowanego (dotyczy tylko dokumentów z kartami).
 
 *bTabDrop*<br/>
-[in] Wartość TRUE, aby wyświetlić menu wyniku przeciąganie karty na innej grupy z kartami. Wartość FALSE, aby wyświetlić menu jako menu skrótów, na karcie aktualnie aktywne.
+podczas TRUE, aby wyświetlić menu w wyniku przeciągnięcia karty na inną grupę z kartami. Wartość FALSE, aby wyświetlić menu jako menu skrótów na aktualnie aktywnej karcie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Należy przesłonić tę metodę w [CBCGPMDIFrameWnd](../../mfc/reference/cmdiframewndex-class.md)-klasy pochodnej.
+Zastąp tę metodę w klasie pochodnej [CBCGPMDIFrameWnd](../../mfc/reference/cmdiframewndex-class.md).
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli nie Przetwarzaj `OnShowMDITabContextMenu`, nie będą wyświetlane w menu skrótów. Ta funkcja jest generowana przez **Kreator aplikacji MFC** po włączeniu funkcji grup kart MDI.
+Jeśli nie przetworzysz `OnShowMDITabContextMenu`, menu skrótów nie zostanie wyświetlone. Ta funkcja jest generowana przez **Kreatora aplikacji MFC** po włączeniu funkcji grup z kartami MDI.
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie przedstawiono sposób `OnShowMDITabContextMenu` jest używany w [VisualStudioDemo próbki: Aplikacja programu Visual Studio MFC](../../overview/visual-cpp-samples.md).
+Poniższy przykład pokazuje, `OnShowMDITabContextMenu` [w jaki sposób jest używany w próbce VisualStudioDemo: Aplikacja](../../overview/visual-cpp-samples.md)MFC programu Visual Studio.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#14](../../mfc/codesnippet/cpp/cmdiframewndex-class_13.cpp)]
 
-##  <a name="onshowpanes"></a>  CMDIFrameWndEx::OnShowPanes
+##  <a name="onshowpanes"></a>CMDIFrameWndEx::OnShowPanes
 
-Metoda wywoływana przez platformę, by pokazać lub ukryć okienka.
+Wywoływane przez platformę, by pokazać lub ukryć okienka.
 
 ```
 virtual BOOL OnShowPanes(BOOL bShow);
@@ -1636,21 +1636,21 @@ virtual BOOL OnShowPanes(BOOL bShow);
 ### <a name="parameters"></a>Parametry
 
 *bShow*<br/>
-[in] Wartość TRUE, aby pokazać okienka, wartość FALSE, aby ukryć okienka.
+podczas Wartość TRUE, aby pokazać okienka, wartość FALSE powoduje ukrycie okienek.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli zmieni się stan okienka wyniku wywołanie tej metody, wartość FALSE, jeśli okienka znajdują się już w stanie określony przez *bShow*. Na przykład, jeśli są ukryte okienka i *bShow* ma wartość FALSE, zwracana jest wartość FALSE.
+PRAWDA, jeśli stan okienek zmienia się w wyniku wywołania tej metody, FAŁSZ, jeśli okienka są już w stanie określonym przez *bShow*. Na przykład jeśli okienka są ukryte i *bShow* ma wartość false, wartość zwracana to false.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja usuwa pasek narzędzi z okno ramek najwyższego poziomu.
+Implementacja domyślna usuwa pasek narzędzi z okna ramki najwyższego poziomu.
 
-Jeśli [CDockingManager::m_bHideDockingBarsInContainerMode](../../mfc/reference/cdockingmanager-class.md#m_bhidedockingbarsincontainermode) jest wartość TRUE (ustawienie domyślne), będą ukryte wszystkich okienek dokowania.
+Jeśli [CDockingManager:: m_bHideDockingBarsInContainerMode](../../mfc/reference/cdockingmanager-class.md#m_bhidedockingbarsincontainermode) ma wartość true (domyślnie), wszystkie okienka dokowania zostaną ukryte.
 
-##  <a name="onshowpopupmenu"></a>  CMDIFrameWndEx::OnShowPopupMenu
+##  <a name="onshowpopupmenu"></a>CMDIFrameWndEx::OnShowPopupMenu
 
-Wywoływane przez platformę, po otwarciu menu podręcznego.
+Wywoływane przez platformę, gdy otwiera menu podręczne.
 
 ```
 virtual BOOL OnShowPopupMenu(CMFCPopupMenu*);
@@ -1658,17 +1658,17 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu*);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli ma być wyświetlana w menu podręcznym. W przeciwnym razie wartość FALSE. Domyślna implementacja zwraca wartość PRAWDA.
+Ma wartość TRUE, jeśli menu podręczne ma być wyświetlane. W przeciwnym razie FALSE. Domyślna implementacja zwraca wartość TRUE.
 
 ### <a name="remarks"></a>Uwagi
 
-Przesłania tę metodę, jeśli chcesz zaimplementować specjalnego przetwarzania po aktywacji menu podręcznego. Na przykład jeśli chcesz zmienić kolor przycisków menu elementów menu regularnych, skonfiguruj odrywania paski i tak dalej.
+Zastąp tę metodę, jeśli chcesz zaimplementować przetwarzanie specjalne podczas aktywacji menu podręcznego. Na przykład, jeśli chcesz zmienić normalne elementy menu na przyciski menu kolor, skonfiguruj paski odrywania i tak dalej.
 
-Domyślna implementacja nic nie robi.
+Domyślna implementacja nie robi nic.
 
-##  <a name="onsizemdiclient"></a>  CMDIFrameWndEx::OnSizeMDIClient
+##  <a name="onsizemdiclient"></a>CMDIFrameWndEx::OnSizeMDIClient
 
-Wywoływane przez platformę, zmieniając rozmiar okna MDI klienta.
+Wywoływane przez platformę, gdy rozmiar okna MDI klienta jest zmieniany.
 
 ```
 virtual void OnSizeMDIClient(
@@ -1679,16 +1679,16 @@ virtual void OnSizeMDIClient(
 ### <a name="parameters"></a>Parametry
 
 *rectOld*<br/>
-[in] Bieżący rozmiar okno klienckie MDI.
+podczas Bieżący rozmiar okna klienta MDI.
 
 *rectNew*<br/>
-[in] Nowy rozmiar okno klienckie MDI.
+podczas Nowy rozmiar okna klienta MDI.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ontearoffmenu"></a>  CMDIFrameWndEx::OnTearOffMenu
+##  <a name="ontearoffmenu"></a>CMDIFrameWndEx::OnTearOffMenu
 
-Wywoływane przez platformę, gdy menu z paskiem oderwania jest aktywowane.
+Wywoływane przez platformę, gdy zostanie uaktywnione menu z paskiem odrywania.
 
 ```
 virtual BOOL OnTearOffMenu(
@@ -1699,22 +1699,22 @@ virtual BOOL OnTearOffMenu(
 ### <a name="parameters"></a>Parametry
 
 *pMenuPopup*<br/>
-[in] Wskaźnik do menu podręcznego.
+podczas Wskaźnik do menu podręcznego.
 
 *pBar*<br/>
-[in] Wskaźnik do paskiem oderwania.
+podczas Wskaźnik do paska odrywania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, aby zezwolić na wyskakujące menu z paskiem oderwania należy aktywować; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.
+Wartość TRUE, aby zezwolić na uaktywnienie menu podręcznego z paskiem odrywania; w przeciwnym razie FALSE. Wartość domyślna to TRUE.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy przesłonić tę funkcję, gdy użytkownik chce zaimplementować specjalnej konfiguracji dla paskiem oderwania. Domyślna implementacja nic nie robi.
+Zastąp tę funkcję, jeśli chcesz zaimplementować specjalną konfigurację dla paska odrywania. Domyślna implementacja nie robi nic.
 
-##  <a name="onupdateframemenu"></a>  CMDIFrameWndEx::OnUpdateFrameMenu
+##  <a name="onupdateframemenu"></a>CMDIFrameWndEx::OnUpdateFrameMenu
 
-Metoda wywoływana przez platformę, by aktualizowanie menu ramki.
+Wywoływane przez platformę, by zaktualizować menu ramek.
 
 ```
 virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
@@ -1723,11 +1723,11 @@ virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
 ### <a name="parameters"></a>Parametry
 
 *hMenuAlt*<br/>
-[in] Dojście do menu.
+podczas Uchwyt do menu.
 
-##  <a name="panefrompoint"></a>  CMDIFrameWndEx::PaneFromPoint
+##  <a name="panefrompoint"></a>CMDIFrameWndEx::P aneFromPoint
 
-Zwraca okienko dokowania, który zawiera określony punkt.
+Zwraca okienko dokowania, które zawiera określony punkt.
 
 ```
 CBasePane* PaneFromPoint(
@@ -1745,32 +1745,32 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parametry
 
-*Punkt*<br/>
-[in] Punkt (we współrzędnych ekranu).
+*moment*<br/>
+podczas Punkt (we współrzędnych ekranu).
 
 *nSensitivity*<br/>
-[in] Prostokąt okna każde okienko zaznaczenia powiększenia we wszystkich kierunkach przez tę wartość.
+podczas Prostokąt okna każdego z zaznaczonych okien zostanie powiększony we wszystkich kierunkach według tej wartości.
 
 *bExactBar*<br/>
-[in] W przypadku opcji TRUE *nSensitivity* parametr jest ignorowany.
+podczas W przypadku wartości TRUE parametr *nSensitivity* jest ignorowany.
 
 *pRTCBarType*<br/>
-[in] Jeśli innych niż NULL, metoda iteruje tylko okienka określonego typu.
+podczas Jeśli wartość jest inna niż NULL, Metoda wykonuje iterację tylko dla okienek określonego typu.
 
 *dwAlignment*<br/>
-[out] Jeśli okienko zostanie znaleziony, ten parametr określa, które strony panelu jest najbardziej zbliżony do określonego punktu.
+określoną Jeśli okienko zostanie znalezione, ten parametr określi, która strona okienka znajduje się najbliżej określonego punktu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do okienka dokowania lub wartość NULL, jeśli formant nie zawiera punktu określonego przez *punktu*.
+Wskaźnik do okienka dokującego lub wartość NULL, jeśli żadna kontrolka nie zawiera punktu określonego przez *punkt*.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołanie jest przekierowywane do [klasa CDockingManager](../../mfc/reference/cdockingmanager-class.md). Zobacz [CDockingManager::ControlBarFromPoint](../../mfc/reference/cdockingmanager-class.md#panefrompoint) Aby uzyskać więcej informacji.
+Wywołanie jest przekierowywane do [klasy CDockingManager](../../mfc/reference/cdockingmanager-class.md). Aby uzyskać więcej informacji, zobacz [CDockingManager:: ControlBarFromPoint](../../mfc/reference/cdockingmanager-class.md#panefrompoint) .
 
-##  <a name="recalclayout"></a>  CMDIFrameWndEx::RecalcLayout
+##  <a name="recalclayout"></a>CMDIFrameWndEx::RecalcLayout
 
-Metoda wywoływana przez platformę, by ponownie Oblicz układ ramki okna.
+Wywoływane przez platformę, by ponownie obliczyć układ okna ramki.
 
 ```
 virtual void RecalcLayout(BOOL bNotify = TRUE);
@@ -1779,15 +1779,15 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bNotify*<br/>
-[in] Określa, czy aktywny element w miejscu dla ramki okna odbiera powiadomienie o zmianie układu. W przypadku opcji TRUE element jest powiadamiany o; w przeciwnym razie wartość FALSE.
+podczas Określa, czy aktywny element w miejscu okna ramki otrzymuje powiadomienie o zmianie układu. Jeśli wartość jest równa TRUE, element zostanie powiadomiony; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda zastępuje [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).
+Ta metoda przesłania [obiektu CFrameWnd:: RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).
 
-##  <a name="removepanefromdockmanager"></a>  CMDIFrameWndEx::RemovePaneFromDockManager
+##  <a name="removepanefromdockmanager"></a>CMDIFrameWndEx::RemovePaneFromDockManager
 
-Wyrejestrowuje okienko i usuwa go z Menedżera dokowania.
+Wyrejestrowanie okienka i usunięcie go z Menedżera dokowania.
 
 ```
 void RemovePaneFromDockManager(
@@ -1801,27 +1801,27 @@ void RemovePaneFromDockManager(
 ### <a name="parameters"></a>Parametry
 
 *pControlBar*<br/>
-[in] Wskaźnik do okienka do usunięcia.
+podczas Wskaźnik do okienka, które ma zostać usunięte.
 
 *bDestroy*<br/>
-[in] Wartość TRUE, aby zniszczyć okienka usunięte. Wartość FALSE niszczy go.
+podczas Wartość TRUE powoduje zniszczenie usuniętego okienka. Wartość FALSE, aby nie zniszczyć.
 
 *bAdjustLayout*<br/>
-[in] Wartość TRUE, aby dostosować układ dokowania natychmiast. W przypadku wartości FAŁSZ dopasowanie nastąpi, tylko gdy ponownego wystawienia wystąpi zdarzenie z innych powodów (użytkownik zmienia rozmiar okna, przeciągnie głównej ramki itp.).
+podczas Wartość TRUE, aby natychmiast dostosować układ dokowania. W przypadku wartości FALSE, korekta nastąpi tylko wtedy, gdy zdarzenie ponownego rysowania wystąpi z innych powodów (użytkownik zmieni rozmiar okna, przeciągnie ramkę główną itp.).
 
 *bAutoHide*<br/>
-[in] Wartość TRUE, aby usunąć okienka z listy opcji autoukrywania okienek. Wartość FAŁSZ, aby usunąć okienka z listy regularne okienek.
+podczas Wartość TRUE powoduje usunięcie okienka z listy Autoukrywanie okienek. Wartość FALSE powoduje usunięcie okienka z listy zwykłych okienek.
 
 *pBarReplacement*<br/>
-[in] Wskaźnik do okienka w którym zastępuje okienka usunięte.
+podczas Wskaźnik do okienka, które zastępuje usunięte okienko.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy zarejestrować każde okienko dokowania Menedżera do wzięcia udziału w układ dokowania. Użyj [CMDIFrameWndEx::AddPane](#addpane) lub [CMDIFrameWndEx::InsertPane](#insertpane) zarejestrować okienka.
+Należy zarejestrować każde okienko z menedżerem dokowania, aby wziąć udział w układzie dokowania. Użyj [CMDIFrameWndEx:: addokienk](#addpane) lub [CMDIFrameWndEx:: InsertPane](#insertpane) , aby zarejestrować okienka.
 
-Ta metoda okienko nie jest już częścią układu dokowania ramki okna.
+Tej metody należy użyć, gdy okienko nie jest już częścią układu dokowania okna ramki.
 
-##  <a name="savemdistate"></a>  CMDIFrameWndEx::SaveMDIState
+##  <a name="savemdistate"></a>CMDIFrameWndEx::SaveMDIState
 
 Zapisuje bieżący układ grup z kartami MDI oraz listy wcześniej otwartych dokumentów.
 
@@ -1832,37 +1832,37 @@ virtual BOOL SaveMDIState(LPCTSTR lpszProfileName);
 ### <a name="parameters"></a>Parametry
 
 *lpszProfileName*<br/>
-[in] Określa nazwę profilu.
+podczas Określa nazwę profilu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli zapisywania zakończyła się pomyślnie; Wartość FALSE, jeśli nie można zapisać.
+Ma wartość TRUE, jeśli zapis zakończył się pomyślnie; Wartość FALSE, jeśli zapisywanie nie powiodło się.
 
 ### <a name="remarks"></a>Uwagi
 
-Do załadowania lub zapisania stanu kart MDI i grup i listy otwartych dokumentów, wykonaj następujące czynności:
+Aby załadować lub zapisać stan kart i grup MDI oraz listę otwartych dokumentów, wykonaj następujące czynności:
 
-- Wywołaj `SaveMDIState` po zamknięciu głównej ramki
+- Wywołaj `SaveMDIState` , gdy ramka główna jest zamykana
 
-- Wywołaj [CMDIFrameWndEx::LoadMDIState](#loadmdistate) podczas tworzenia głównej ramki. Lokalizacja zalecana dla tego wywołania jest przed wyświetleniem głównej ramki po raz pierwszy.
+- Wywołanie [CMDIFrameWndEx:: LoadMDIState](#loadmdistate) , gdy tworzona jest ramka główna. Zalecana lokalizacja tego wywołania to przed wyświetleniem ramki głównej po raz pierwszy.
 
-- Wywołaj `CWinAppEx::EnableLoadWindowPlacement(FALSE);` przed `pMainFrame->LoadFrame (IDR_MAINFRAME);`
+- Wywołaj `CWinAppEx::EnableLoadWindowPlacement(FALSE);` przed`pMainFrame->LoadFrame (IDR_MAINFRAME);`
 
-- Wywołaj `CWinAppEx::ReloadWindowPlacement(pMainFrame)` po `LoadMDIState` do wyświetlenia głównej ramki w położeniu, które są przechowywane w rejestrze.
+- `CWinAppEx::ReloadWindowPlacement(pMainFrame)` Wywołaj `LoadMDIState` po, aby wyświetlić główną ramkę w pozycji przechowywanej w rejestrze.
 
-- Zastąp `GetDocumentName` w `CMDIChildWndEx`-klasy pochodnej, jeśli aplikacja wyświetla dokumenty, które nie są przechowywane jako pliki. Zwracany ciąg zostaną zapisane w rejestrze jako identyfikator dokumentu. Aby uzyskać więcej informacji, zobacz [CMDIChildWndEx::GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname).
+- Przesłoń `GetDocumentName` w `CMDIChildWndEx`klasie pochodnej, jeśli aplikacja wyświetla dokumenty, które nie są przechowywane jako pliki. Zwrócony ciąg zostanie zapisany w rejestrze jako identyfikator dokumentu. Aby uzyskać więcej informacji, zobacz [CMDIChildWndEx::](../../mfc/reference/cmdichildwndex-class.md#getdocumentname)GetDocumentName.
 
-- Zastąp [CMDIFrameWndEx::CreateDocumentWindow](#createdocumentwindow) poprawnie tworzenie dokumentów, gdy są one załadowane z rejestru. Parametr `CreateDocumentWindow` jest ciąg, który `GetDocumentName` zwracane wcześniej.
+- Przesłoń [CMDIFrameWndEx:: CreateDocumentWindow](#createdocumentwindow) , aby poprawnie tworzyć dokumenty po ich załadowaniu z rejestru. Parametr `CreateDocumentWindow` jest`GetDocumentName` ciągiem zwracanym wcześniej.
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie przedstawiono sposób `SaveMDIState` jest używany w [VisualStudioDemo próbki: Aplikacja programu Visual Studio MFC](../../overview/visual-cpp-samples.md).
+Poniższy przykład pokazuje, `SaveMDIState` [w jaki sposób jest używany w próbce VisualStudioDemo: Aplikacja](../../overview/visual-cpp-samples.md)MFC programu Visual Studio.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#15](../../mfc/codesnippet/cpp/cmdiframewndex-class_14.cpp)]
 
-##  <a name="setprintpreviewframe"></a>  CMDIFrameWndEx::SetPrintPreviewFrame
+##  <a name="setprintpreviewframe"></a>CMDIFrameWndEx::SetPrintPreviewFrame
 
-Ustawia okno ramowe podglądu wydruku.
+Ustawia okno ramki podglądu wydruku.
 
 ```
 void SetPrintPreviewFrame(CFrameWnd* pWnd);
@@ -1871,13 +1871,13 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ### <a name="parameters"></a>Parametry
 
 *pWnd*<br/>
-[in] Wskaźnik do ramki okna podglądu wydruku.
+podczas Wskaźnik do okna ramki podglądu wydruku.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setuptoolbarmenu"></a>  CMDIFrameWndEx::SetupToolbarMenu
+##  <a name="setuptoolbarmenu"></a>CMDIFrameWndEx::SetupToolbarMenu
 
-Modyfikuje obiekt paska narzędzi, zastępując elementy fikcyjnego elementów zdefiniowanych przez użytkownika.
+Modyfikuje obiekt Toolbar, zastępując elementy fikcyjne elementami zdefiniowanymi przez użytkownika.
 
 ```
 void SetupToolbarMenu(
@@ -1888,18 +1888,18 @@ void SetupToolbarMenu(
 
 ### <a name="parameters"></a>Parametry
 
-*Menu*<br/>
-[in] Odwołanie do [klasa CMenu](../../mfc/reference/cmenu-class.md) obiekt do zmodyfikowania.
+*DodajMenu*<br/>
+podczas Odwołanie do obiektu [klasy CMenu](../../mfc/reference/cmenu-class.md) , który ma zostać zmodyfikowany.
 
 *uiViewUserToolbarCmdFirst*<br/>
-[in] Określa pierwsze polecenie zdefiniowane przez użytkownika.
+podczas Określa pierwsze polecenie zdefiniowane przez użytkownika.
 
 *uiViewUserToolbarCmdLast*<br/>
-[in] Określa ostatnie polecenie zdefiniowane przez użytkownika.
+podczas Określa ostatnie polecenie zdefiniowane przez użytkownika.
 
-##  <a name="showfullscreen"></a>  CMDIFrameWndEx::ShowFullScreen
+##  <a name="showfullscreen"></a>CMDIFrameWndEx::ShowFullScreen
 
-Przełącza ramce głównej z trybem standardowym do trybu pełnoekranowego.
+Przełącza ramkę główną z trybu regularnego na tryb pełnoekranowy.
 
 ```
 void ShowFullScreen();
@@ -1907,9 +1907,9 @@ void ShowFullScreen();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="showpane"></a>  CMDIFrameWndEx::ShowPane
+##  <a name="showpane"></a>CMDIFrameWndEx::ShowPane
 
-Pokazuje lub ukrywa okienko określony.
+Pokazuje lub ukrywa określone okienko.
 
 ```
 void ShowPane(
@@ -1922,30 +1922,30 @@ void ShowPane(
 ### <a name="parameters"></a>Parametry
 
 *pBar*<br/>
-[in] Wskaźnik do okienka, które mają być wyświetlane lub ukryte.
+podczas Wskaźnik do okienka, które ma być wyświetlane lub ukryte.
 
 *bShow*<br/>
-[in] Wartość TRUE, aby wyświetlić okienko. Wartość FALSE, aby ukryć okienko.
+podczas Wartość TRUE, aby wyświetlić okienko. Wartość FALSE, aby ukryć okienko.
 
 *bDelay*<br/>
-[in] Wartość true, opóźnienie ponownego obliczania układ dokowania. Wartość FAŁSZ, aby natychmiast ponownie Oblicz układ dokowania.
+podczas Wartość TRUE powoduje opóźnienie ponownego obliczenia układu dokowania. Wartość FALSE, aby natychmiast ponownie obliczyć układ dokowania.
 
 *bActivate*<br/>
-[in] Wartość true, Pokaż okienko powinna jako aktywne. Wartość FALSE, aby wyświetlić okienko jako nieaktywne.
+podczas Wartość TRUE, aby wyświetlić okienko powinno być jako aktywne. Wartość FALSE, aby wyświetlić okienko jako nieaktywne.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę, aby pokazać lub ukryć okienka. Nie używaj `ShowWindow` dla okienka dokowania.
+Wywołaj tę metodę, aby pokazać lub ukryć okienko. Nie należy używać `ShowWindow` na potrzeby dokowania okienek.
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie przedstawiono sposób `ShowPane` jest używany w [VisualStudioDemo próbki: Aplikacja programu Visual Studio MFC](../../overview/visual-cpp-samples.md).
+Poniższy przykład pokazuje, `ShowPane` [w jaki sposób jest używany w próbce VisualStudioDemo: Aplikacja](../../overview/visual-cpp-samples.md)MFC programu Visual Studio.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#16](../../mfc/codesnippet/cpp/cmdiframewndex-class_15.cpp)]
 
-##  <a name="showwindowsdialog"></a>  CMDIFrameWndEx::ShowWindowsDialog
+##  <a name="showwindowsdialog"></a>CMDIFrameWndEx::ShowWindowsDialog
 
-Tworzy [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) polu i otwiera go.
+Tworzy pole [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) i otwiera je.
 
 ```
 void ShowWindowsDialog();
@@ -1953,13 +1953,13 @@ void ShowWindowsDialog();
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie przedstawiono sposób `ShowWindowsDialog` jest używany w [VisualStudioDemo próbki: Aplikacja programu Visual Studio MFC](../../overview/visual-cpp-samples.md).
+Poniższy przykład pokazuje, `ShowWindowsDialog` [w jaki sposób jest używany w próbce VisualStudioDemo: Aplikacja](../../overview/visual-cpp-samples.md)MFC programu Visual Studio.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#18](../../mfc/codesnippet/cpp/cmdiframewndex-class_16.cpp)]
 
-##  <a name="tabbeddocumenttocontrolbar"></a>  CMDIFrameWndEx::TabbedDocumentToControlBar
+##  <a name="tabbeddocumenttocontrolbar"></a>CMDIFrameWndEx::TabbedDocumentToControlBar
 
-Konwertuje określony dokument z kartami do okienka dokowania.
+Konwertuje określony dokument z kartami na okienko dokowania.
 
 ```
 virtual BOOL TabbedDocumentToControlBar(CMDIChildWndEx* pMDIChildWnd);
@@ -1968,25 +1968,25 @@ virtual BOOL TabbedDocumentToControlBar(CMDIChildWndEx* pMDIChildWnd);
 ### <a name="parameters"></a>Parametry
 
 *pMDIChildWnd*<br/>
-Wskaźnik do okna podrzędnego MDI, który zawiera okienka dokowania.
+Wskaźnik do podrzędnego okna MDI zawierającego okienko dokowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli metoda zakończyła się pomyślnie, wartość FALSE w przypadku niepowodzenia.
+Ma wartość TRUE, jeśli metoda zakończyła się pomyślnie, FALSE w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda umożliwia konwertowanie dokumentu z zakładkami do okienka dokowania. Dokument z kartami musi zostać utworzony przy użyciu [CMDIFrameWndEx::ControlBarToTabbedDocument](#controlbartotabbeddocument).
+Użyj tej metody, aby przekonwertować dokument z kartami na okienko dokowania. Dokument z kartami musiał zostać utworzony za pomocą [CMDIFrameWndEx:: ControlBarToTabbedDocument](#controlbartotabbeddocument).
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie przedstawiono sposób `TabbedDocumentToControlBar` jest używany w [VisualStudioDemo próbki: Aplikacja programu Visual Studio MFC](../../overview/visual-cpp-samples.md).
+Poniższy przykład pokazuje, `TabbedDocumentToControlBar` [w jaki sposób jest używany w próbce VisualStudioDemo: Aplikacja](../../overview/visual-cpp-samples.md)MFC programu Visual Studio.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#19](../../mfc/codesnippet/cpp/cmdiframewndex-class_17.cpp)]
 
-##  <a name="updatecaption"></a>  CMDIFrameWndEx::UpdateCaption
+##  <a name="updatecaption"></a>CMDIFrameWndEx::UpdateCaption
 
-Metoda wywoływana przez platformę, aby zaktualizować tytuł ramki okna.
+Wywoływane przez platformę, by zaktualizować podpis ramki okna.
 
 ```
 void UpdateCaption();
@@ -1994,17 +1994,17 @@ void UpdateCaption();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="updatemditabbedbarsicons"></a>  CMDIFrameWndEx::UpdateMDITabbedBarsIcons
+##  <a name="updatemditabbedbarsicons"></a>CMDIFrameWndEx::UpdateMDITabbedBarsIcons
 
-Ustawia ikonę każde okienko z kartami MDI.
+Ustawia ikonę dla każdego okienka z kartami MDI.
 
 ```
 void UpdateMDITabbedBarsIcons();
 ```
 
-##  <a name="winhelp"></a>  CMDIFrameWndEx::WinHelp
+##  <a name="winhelp"></a>CMDIFrameWndEx:: WinHelp
 
-Metoda wywoływana przez platformę, by zainicjować WinHelp aplikacji lub kontekstu pomocy.
+Wywoływane przez platformę, aby zainicjować aplikację programu WinHelp lub pomoc kontekstową.
 
 ```
 virtual void WinHelp(
@@ -2015,14 +2015,14 @@ virtual void WinHelp(
 ### <a name="parameters"></a>Parametry
 
 *dwData*<br/>
-[in] Określa dane zgodnie z wymaganiami dla typu określonego przez Pomoc *nCmd*.
+podczas Określa dane wymagane dla typu pomocy określonej przez *nCmd*.
 
 *nCmd*<br/>
-[in] Określa typ żądanego pomocy. Aby uzyskać listę możliwych wartości i ich wpływ *dwData* parametrów, zobacz [funkcję WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) w zestawie Windows SDK.
+podczas Określa typ żądanej pomocy. Aby uzyskać listę możliwych wartości i ich wpływ na parametr *dwData* , zobacz [funkcja WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw) w Windows SDK.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda zastępuje [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp).
+Ta metoda przesłania [CWnd:: WinHelp](../../mfc/reference/cwnd-class.md#winhelp).
 
 ## <a name="see-also"></a>Zobacz także
 

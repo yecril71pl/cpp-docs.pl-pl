@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: 337fe03ab09a6ed3da283f45dd4eb58aaaad5bc5
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: d33da7a9bc81f9733df840a87fbbbeca1e02cc04
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957498"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502559"
 ---
 # <a name="exception-processing"></a>Przetwarzanie wyjątków
 
@@ -380,7 +380,7 @@ void AfxThrowMemoryException();
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję, jeśli wywołania alokacji podstawowych pamięci systemowej (takie jak **malloc** i funkcja [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) systemu Windows) kończą się niepowodzeniem. Nie jest konieczne wywoływanie go dla **nowego** , ponieważ **Nowy** generuje wyjątek pamięci automatycznie, jeśli alokacja pamięci nie powiedzie się.
+Wywołaj tę funkcję, jeśli wywołania alokacji podstawowych pamięci systemowej (takie jak **malloc** i funkcja [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) systemu Windows) kończą się niepowodzeniem. Nie jest konieczne wywoływanie go dla **nowego** , ponieważ **Nowy** generuje wyjątek pamięci automatycznie, jeśli alokacja pamięci nie powiedzie się.
 
 ### <a name="requirements"></a>Wymagania
 
@@ -491,7 +491,7 @@ Dojście do kodu wyniku, który wskazuje przyczynę wyjątku.
 
 ### <a name="remarks"></a>Uwagi
 
-Wersja, która przyjmuje wynik HRESULT jako argument konwertuje ten kod wyniku na odpowiedni SCODE. Aby uzyskać więcej informacji na temat HRESULT i SCODE, zobacz [struktury kodów błędów modelu COM](/windows/desktop/com/structure-of-com-error-codes) w Windows SDK.
+Wersja, która przyjmuje wynik HRESULT jako argument konwertuje ten kod wyniku na odpowiedni SCODE. Aby uzyskać więcej informacji na temat HRESULT i SCODE, zobacz [struktury kodów błędów modelu COM](/windows/win32/com/structure-of-com-error-codes) w Windows SDK.
 
 ### <a name="requirements"></a>Wymagania
 

@@ -1,5 +1,5 @@
 ---
-title: CBasePane Class
+title: Klasa CBasePane
 ms.date: 11/06/2018
 f1_keywords:
 - CBasePane
@@ -166,14 +166,14 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: e0d6b844ba4a5c373dd69c0435bbb9972db3b49b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59291516c14ea6ff8b1d2fe515d121dd6f910cba
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164169"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507457"
 ---
-# <a name="cbasepane-class"></a>CBasePane Class
+# <a name="cbasepane-class"></a>Klasa CBasePane
 
 Klasa bazowa dla wszystkich okienek w MFC.
 
@@ -189,116 +189,116 @@ class CBasePane : public CWnd
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`CBasePane::CBasePane`|Domyślny konstruktor.|
+|`CBasePane::CBasePane`|Konstruktor domyślny.|
 |`CBasePane::~CBasePane`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`CBasePane::accHitTest`|Metoda wywoływana przez platformę, by pobrać element podrzędny lub obiekt podrzędny w danym momencie na ekranie. (Przesłania [CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|
-|`CBasePane::accLocation`|Metoda wywoływana przez platformę, by pobrać bieżącą lokalizację ekranu dla określonego obiektu. (Przesłania [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|
-|[CBasePane::AccNotifyObjectFocusEvent](#accnotifyobjectfocusevent)|`CBasePane` Używaj tej metody.|
-|`CBasePane::accSelect`|Metoda wywoływana przez platformę, by zmodyfikować zaznaczenie lub zmienić fokus klawiatury określonego obiektu. (Przesłania [CWnd::accSelect](../../mfc/reference/cwnd-class.md#accselect).)|
-|[CBasePane::AddPane](#addpane)|Dodaje okienko dokowania menedżera.|
-|[CBasePane::AdjustDockingLayout](#adjustdockinglayout)|Przekierowuje wywołanie do Menedżera dokowania dostosować układ dokowania.|
-|[CBasePane::AdjustLayout](#adjustlayout)|Wywoływane przez platformę, gdy okienku powinien dostosować jego wewnętrznych układu.|
+|`CBasePane::accHitTest`|Wywoływane przez platformę, by pobrać element podrzędny lub obiekt podrzędny w danym punkcie na ekranie. (Przesłania [CWnd:: accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|
+|`CBasePane::accLocation`|Wywoływane przez platformę, by pobrać bieżącą lokalizację ekranu dla określonego obiektu. (Przesłania [CWnd:: accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|
+|[CBasePane::AccNotifyObjectFocusEvent](#accnotifyobjectfocusevent)|`CBasePane`Ta metoda nie jest używana.|
+|`CBasePane::accSelect`|Wywoływane przez platformę, by zmodyfikować zaznaczenie lub przenieść fokus klawiatury określonego obiektu. (Przesłania [CWnd:: accSelect](../../mfc/reference/cwnd-class.md#accselect).)|
+|[CBasePane:: Add— okienko](#addpane)|Dodaje okienko do Menedżera dokowania.|
+|[CBasePane::AdjustDockingLayout](#adjustdockinglayout)|Przekierowuje wywołanie do Menedżera dokowania, aby dostosować układ dokowania.|
+|[CBasePane::AdjustLayout](#adjustlayout)|Wywoływane przez platformę, gdy okienko powinno dostosować jego układ wewnętrzny.|
 |[CBasePane::CalcFixedLayout](#calcfixedlayout)|Oblicza rozmiar poziomy paska sterowania.|
-|[CBasePane::CanAcceptPane](#canacceptpane)|Określa, czy innego okienka może być zadokowane do okienka.|
-|[CBasePane::CanAutoHide](#canautohide)|Określa, czy okienka obsługuje trybie autoukrywania.|
-|[CBasePane::CanBeAttached](#canbeattached)|Określa, czy okienka może być zadokowane do innego okienka.|
-|[CBasePane::CanBeClosed](#canbeclosed)|Określa, czy można zamknąć okienko.|
-|[CBasePane::CanBeDocked](#canbedocked)|Określa, czy okienka może być zadokowane do innego okienka.|
+|[CBasePane::CanAcceptPane](#canacceptpane)|Określa, czy można zadokować inne okienko w okienku.|
+|[CBasePane:: Autoukrywanie](#canautohide)|Określa, czy okienko obsługuje tryb autoukrywania.|
+|[CBasePane::CanBeAttached](#canbeattached)|Określa, czy okienko można zadokować w innym okienku.|
+|[CBasePane::CanBeClosed](#canbeclosed)|Określa, czy okienko może być zamknięte.|
+|[CBasePane::CanBeDocked](#canbedocked)|Określa, czy okienko można zadokować w innym okienku.|
 |[CBasePane::CanBeResized](#canberesized)|Określa, czy można zmienić rozmiar okienka.|
-|[CBasePane::CanBeTabbedDocument](#canbetabbeddocument)|Określa, czy okienku można przekonwertować na dokument z kartami MDI.|
-|[CBasePane::CanFloat](#canfloat)|Określa, czy można przestawić okienka.|
-|[CBasePane::CanFocus](#canfocus)|Określa, czy w okienku może odebrać fokus.|
-|[CBasePane::CopyState](#copystate)|Kopiuje stanu danego okienka.|
-|[CBasePane::CreateDefaultMiniframe](#createdefaultminiframe)|Jeśli okienko można float, tworzy okno mini ramki.|
-|[CBasePane::CreateEx](#createex)|Tworzy formant okienka.|
-|[CBasePane::DockPane](#dockpane)|Okienko jest dokowane do innego okienka lub do okna ramki.|
-|[CBasePane::DockPaneUsingRTTI](#dockpaneusingrtti)|Stacje dokujące okienka przy użyciu informacje typu run-time.|
-|[CBasePane::DockToFrameWindow](#docktoframewindow)|Dokowane dokowalne okienka w ramce.|
-|[CBasePane::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Określa, czy innego okienka mogą być dynamicznie między to okienko i dodaje nadrzędnej ramki.|
-|[CBasePane::EnableDocking](#enabledocking)|Umożliwia zadokowanie okienka w ramce głównej.|
-|[CBasePane::EnableGripper](#enablegripper)|Włącza lub wyłącza uchwytu. Jeśli uchwytu jest włączony, użytkownik można przeciągnąć go, aby zmienić położenie okienka.|
+|[CBasePane::CanBeTabbedDocument](#canbetabbeddocument)|Określa, czy okienko można przekonwertować na dokument z kartami MDI.|
+|[CBasePane:: onfloat](#canfloat)|Określa, czy okienko może być zmiennoprzecinkowe.|
+|[CBasePane:: Przenieś fokus](#canfocus)|Określa, czy okienko może odbierać fokus.|
+|[CBasePane::CopyState](#copystate)|Kopiuje stan danego okienka.|
+|[CBasePane::CreateDefaultMiniframe](#createdefaultminiframe)|Jeśli okienko może być zmiennoprzecinkowe, program tworzy okno mini-frame.|
+|[CBasePane::CreateEx](#createex)|Tworzy kontrolkę okienka.|
+|[CBasePane::DockPane](#dockpane)|Dokowanie okienka do innego okienka lub okna ramowego.|
+|[CBasePane::DockPaneUsingRTTI](#dockpaneusingrtti)|Dokowanie okienka przy użyciu informacji o typie czasu wykonywania.|
+|[CBasePane::DockToFrameWindow](#docktoframewindow)|Dokowanie okienka było dokować do ramki.|
+|[CBasePane::D oesAllowDynInsertBefore](#doesallowdyninsertbefore)|Określa, czy można dynamicznie wstawiać inne okienka między tym okienkiem i ramką nadrzędną.|
+|[CBasePane::EnableDocking](#enabledocking)|Włącza Dokowanie okienka do ramki głównej.|
+|[CBasePane::EnableGripper](#enablegripper)|Włącza lub wyłącza uchwyt. Jeśli uchwyt jest włączony, użytkownik może przeciągnąć go w celu zmiany położenia okienka.|
 |`CBasePane::FillWindowRect`|Używane wewnętrznie.|
-|[CBasePane::FloatPane](#floatpane)|Liczby zmiennoprzecinkowe okienka.|
-|`CBasePane::get_accChild`|Wywoływane przez platformę, by pobrać adres `IDispatch` interfejs dla określonego elementu podrzędnego. (Przesłania [CWnd::get_accChild](../../mfc/reference/cwnd-class.md#get_accchild).)|
-|`CBasePane::get_accChildCount`|Metoda wywoływana przez platformę, by pobrać liczbę elementów podrzędnych, które należą do tego obiektu. (Przesłania [CWnd::get_accChildCount](../../mfc/reference/cwnd-class.md#get_accchildcount).)|
-|`CBasePane::get_accDefaultAction`|Metoda wywoływana przez platformę, by pobrać ciąg opisujący domyślną akcję dla obiektu. (Przesłania [CWnd::get_accDefaultAction](../../mfc/reference/cwnd-class.md#get_accdefaultaction).)|
-|`CBasePane::get_accDescription`|Metoda wywoływana przez platformę, by pobrać ciąg opisujący wygląd określonego obiektu. (Przesłania [CWnd::get_accDescription](../../mfc/reference/cwnd-class.md#get_accdescription).)|
-|`CBasePane::get_accFocus`|Metoda wywoływana przez platformę, by pobrać obiekt, który ma fokus klawiatury. (Przesłania [CWnd::get_accFocus](../../mfc/reference/cwnd-class.md#get_accfocus).)|
-|`CBasePane::get_accHelp`|Metoda wywoływana przez platformę, by pobrać ciąg właściwości Pomoc dla tego obiektu. (Przesłania [CWnd::get_accHelp](../../mfc/reference/cwnd-class.md#get_acchelp).)|
-|[CBasePane::get_accHelpTopic](#get_acchelptopic)|Metoda wywoływana przez platformę, by pobrać pełną ścieżkę pliku WinHelp, który jest skojarzony z określonym obiektem oraz identyfikator odpowiedniego tematu w tym pliku. (Przesłania [CWnd::get_accHelpTopic](../../mfc/reference/cwnd-class.md#get_acchelptopic).)|
-|`CBasePane::get_accKeyboardShortcut`|Metoda wywoływana przez platformę, by pobrać klawisza skrótu określony dla obiektu. (Przesłania [CWnd::get_accKeyboardShortcut](../../mfc/reference/cwnd-class.md#get_acckeyboardshortcut).)|
-|`CBasePane::get_accName`|Metoda wywoływana przez platformę, by pobrać nazwę określonego obiektu. (Przesłania [CWnd::get_accName](../../mfc/reference/cwnd-class.md#get_accname).)|
-|`CBasePane::get_accParent`|Wywoływane przez platformę, by pobrać `IDispatch` interfejs służący do jego obiekt nadrzędny. (Przesłania [CWnd::get_accParent](../../mfc/reference/cwnd-class.md#get_accparent).)|
-|`CBasePane::get_accRole`|Metoda wywoływana przez platformę, by pobrać dane opisujące rolę określonego obiektu. (Przesłania [CWnd::get_accRole](../../mfc/reference/cwnd-class.md#get_accrole).)|
-|[CBasePane::get_accSelection](#get_accselection)|Metoda wywoływana przez platformę, by pobrać zaznaczony element podrzędny tego obiektu. (Przesłania [CWnd::get_accSelection](../../mfc/reference/cwnd-class.md#get_accselection).)|
-|`CBasePane::get_accState`|Metoda wywoływana przez platformę, by pobrać bieżący stan określonego obiektu. (Przesłania [CWnd::get_accState](../../mfc/reference/cwnd-class.md#get_accstate).)|
-|`CBasePane::get_accValue`|Metoda wywoływana przez platformę, by pobrać wartość określonego obiektu. (Przesłania [CWnd::get_accValue](../../mfc/reference/cwnd-class.md#get_accvalue).)|
-|[CBasePane::GetCaptionHeight](#getcaptionheight)|Zwraca wysokość podpis.|
-|[CBasePane::GetControlBarStyle](#getcontrolbarstyle)|Zwraca wartość stylu paska sterowania.|
-|[CBasePane::GetCurrentAlignment](#getcurrentalignment)|Zwraca bieżący wyrównanie okienka.|
-|[CBasePane::GetDockingMode](#getdockingmode)|Zwraca bieżący tryb dokujące okienka.|
-|[CBasePane::GetDockSiteFrameWnd](#getdocksiteframewnd)|Zwraca wskaźnik do okna, które jest witryny dokowania dla tego okienka.|
-|[CBasePane::GetEnabledAlignment](#getenabledalignment)|Zwraca CBRS_ALIGN_ style, które są stosowane do okienka.|
-|[CBasePane::GetMFCStyle](#getmfcstyle)|Zwraca określone style okienko z MFC.|
-|[CBasePane::GetPaneIcon](#getpaneicon)|Zwraca uchwyt do ikony okienka.|
+|[CBasePane::FloatPane](#floatpane)|Przepływa z okienka.|
+|`CBasePane::get_accChild`|Wywoływane przez platformę, by pobrać adres `IDispatch` interfejsu dla określonego elementu podrzędnego. (Przesłania [CWnd:: get_accChild](../../mfc/reference/cwnd-class.md#get_accchild).)|
+|`CBasePane::get_accChildCount`|Wywoływane przez platformę, by pobrać liczbę elementów podrzędnych należących do tego obiektu. (Przesłania [CWnd:: get_accChildCount](../../mfc/reference/cwnd-class.md#get_accchildcount).)|
+|`CBasePane::get_accDefaultAction`|Wywoływane przez platformę, by pobrać ciąg opisujący domyślną akcję dla obiektu. (Przesłania [CWnd:: get_accDefaultAction](../../mfc/reference/cwnd-class.md#get_accdefaultaction).)|
+|`CBasePane::get_accDescription`|Wywoływane przez platformę, by pobrać ciąg opisujący wygląd określonego obiektu. (Przesłania [CWnd:: get_accDescription](../../mfc/reference/cwnd-class.md#get_accdescription).)|
+|`CBasePane::get_accFocus`|Wywoływane przez platformę, by pobrać obiekt, który ma fokus klawiatury. (Przesłania [CWnd:: get_accFocus](../../mfc/reference/cwnd-class.md#get_accfocus).)|
+|`CBasePane::get_accHelp`|Wywoływane przez platformę, by pobrać ciąg właściwości pomocy dla obiektu. (Przesłania [CWnd:: get_accHelp](../../mfc/reference/cwnd-class.md#get_acchelp).)|
+|[CBasePane::get_accHelpTopic](#get_acchelptopic)|Wywoływane przez platformę, by pobrać pełną ścieżkę pliku WinHelp, który jest skojarzony z określonym obiektem oraz identyfikator odpowiedniego tematu w tym pliku. (Przesłania [CWnd:: get_accHelpTopic](../../mfc/reference/cwnd-class.md#get_acchelptopic).)|
+|`CBasePane::get_accKeyboardShortcut`|Wywoływane przez platformę w celu pobrania określonego klawisza skrótu dla obiektu. (Przesłania [CWnd:: get_accKeyboardShortcut](../../mfc/reference/cwnd-class.md#get_acckeyboardshortcut).)|
+|`CBasePane::get_accName`|Wywoływane przez platformę, by pobrać nazwę określonego obiektu. (Przesłania [CWnd:: get_accName](../../mfc/reference/cwnd-class.md#get_accname).)|
+|`CBasePane::get_accParent`|Wywoływane przez platformę, by pobrać `IDispatch` interfejs dla elementu nadrzędnego obiektu. (Przesłania [CWnd:: get_accParent](../../mfc/reference/cwnd-class.md#get_accparent).)|
+|`CBasePane::get_accRole`|Wywoływane przez platformę, by pobrać informacje opisujące rolę określonego obiektu. (Przesłania [CWnd:: get_accRole](../../mfc/reference/cwnd-class.md#get_accrole).)|
+|[CBasePane::get_accSelection](#get_accselection)|Wywoływane przez platformę, by pobrać wybrane elementy podrzędne tego obiektu. (Przesłania [CWnd:: get_accSelection](../../mfc/reference/cwnd-class.md#get_accselection).)|
+|`CBasePane::get_accState`|Wywoływane przez platformę, by pobrać bieżący stan określonego obiektu. (Przesłania [CWnd:: get_accState](../../mfc/reference/cwnd-class.md#get_accstate).)|
+|`CBasePane::get_accValue`|Wywoływane przez platformę, by pobrać wartość określonego obiektu. (Przesłania [CWnd:: get_accValue](../../mfc/reference/cwnd-class.md#get_accvalue).)|
+|[CBasePane::GetCaptionHeight](#getcaptionheight)|Zwraca wysokość napisu.|
+|[CBasePane::GetControlBarStyle](#getcontrolbarstyle)|Zwraca styl paska sterowania.|
+|[CBasePane::GetCurrentAlignment](#getcurrentalignment)|Zwraca bieżące wyrównanie okienka.|
+|[CBasePane::GetDockingMode](#getdockingmode)|Zwraca bieżący tryb dokowania dla okienka.|
+|[CBasePane::GetDockSiteFrameWnd](#getdocksiteframewnd)|Zwraca wskaźnik do okna, które jest lokacją dokowania dla okienka.|
+|[CBasePane::GetEnabledAlignment](#getenabledalignment)|Zwraca Style CBRS_ALIGN_, które są stosowane do okienka.|
+|[CBasePane::GetMFCStyle](#getmfcstyle)|Zwraca Style okienka specyficzne dla MFC.|
+|[CBasePane::GetPaneIcon](#getpaneicon)|Zwraca dojście do ikony okienka.|
 |`CBasePane::GetPaneRect`|Używane wewnętrznie.|
-|[CBasePane::GetPaneRow](#getpanerow)|Zwraca wskaźnik do [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)obiektu, w której jest zadokowany okienka.|
-|[CBasePane::GetPaneStyle](#getpanestyle)|Zwraca wartość stylu okienka.|
-|[CBasePane::GetParentDockSite](#getparentdocksite)|Zwraca wskaźnik do lokacji nadrzędnej w obszarze docka.|
-|[CBasePane::GetParentMiniFrame](#getparentminiframe)|Zwraca wskaźnik do nadrzędnego okna mini ramki.|
-|[CBasePane::GetParentTabbedPane](#getparenttabbedpane)|Zwraca wskaźnik do okienka z zakładkami nadrzędnej.|
-|[CBasePane::GetParentTabWnd](#getparenttabwnd)|Zwraca wskaźnik do okna nadrzędnego, który znajduje się wewnątrz karty.|
-|[CBasePane::GetRecentVisibleState](#getrecentvisiblestate)|Struktura wywołuje tę metodę, gdy okienko jest przywracany z archiwum.|
-|[CBasePane::HideInPrintPreviewMode](#hideinprintpreviewmode)|Określa, czy panel jest ukryty w podglądzie wydruku.|
-|[CBasePane::InsertPane](#insertpane)|Rejestruje określony okienka dokowania menedżera.|
-|[CBasePane::IsAccessibilityCompatible](#isaccessibilitycompatible)|Określa, czy okienka obsługuje Active Accessibility.|
-|[CBasePane::IsAutoHideMode](#isautohidemode)|Określa, czy okienko znajduje się w trybie autoukrywania.|
-|[CBasePane::IsDialogControl](#isdialogcontrol)|Określa, czy okienka formantu w oknie dialogowym.|
-|[CBasePane::IsDocked](#isdocked)|Określa, czy panel jest zadokowany.|
-|[CBasePane::IsFloating](#isfloating)|Określa, czy jest liczb zmiennoprzecinkowych okienka.|
-|[CBasePane::IsHorizontal](#ishorizontal)|Określa, czy panel jest zadokowany poziomo.|
-|[CBasePane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|Określa, czy okienka w oknie ramowym wielu okienka.|
-|[CBasePane::IsMDITabbed](#ismditabbed)|Określa, czy okienka zostały dodane do okna podrzędnego MDI jako dokument z kartami.|
-|[CBasePane::IsPaneVisible](#ispanevisible)|Określa, czy ustawiono flagę WS_VISIBLE, dla tego okienka.|
-|[CBasePane::IsPointNearDockSite](#ispointneardocksite)|Określa, czy określony punkt znajduje się w pobliżu witryny dokowania.|
+|[CBasePane::GetPaneRow](#getpanerow)|Zwraca wskaźnik do obiektu [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md), w którym okienko jest zadokowane.|
+|[CBasePane:: getokienks](#getpanestyle)|Zwraca styl okienka.|
+|[CBasePane::GetParentDockSite](#getparentdocksite)|Zwraca wskaźnik do nadrzędnej lokacji dokowania.|
+|[CBasePane::GetParentMiniFrame](#getparentminiframe)|Zwraca wskaźnik do okna nadrzędnego ramki.|
+|[CBasePane::GetParentTabbedPane](#getparenttabbedpane)|Zwraca wskaźnik do okienka nadrzędnego z kartami.|
+|[CBasePane::GetParentTabWnd](#getparenttabwnd)|Zwraca wskaźnik do okna nadrzędnego znajdującego się wewnątrz karty.|
+|[CBasePane::GetRecentVisibleState](#getrecentvisiblestate)|Struktura wywołuje tę metodę po przywróceniu okienka z archiwum.|
+|[CBasePane::HideInPrintPreviewMode](#hideinprintpreviewmode)|Określa, czy okienko jest ukryte w podglądzie wydruku.|
+|[CBasePane::InsertPane](#insertpane)|Rejestruje określone okienko przy użyciu Menedżera dokowania.|
+|[CBasePane::IsAccessibilityCompatible](#isaccessibilitycompatible)|Określa, czy okienko obsługuje funkcję Active Accessibility.|
+|[CBasePane:: autoukrywaniemode](#isautohidemode)|Określa, czy okienko jest w trybie autoukrywania.|
+|[CBasePane::IsDialogControl](#isdialogcontrol)|Określa, czy okienko jest kontrolką okna dialogowego.|
+|[CBasePane::IsDocked](#isdocked)|Określa, czy okienko jest zadokowane.|
+|[CBasePane:: isfloating](#isfloating)|Określa, czy okienko jest przestawne.|
+|[CBasePane:: ispoziome](#ishorizontal)|Określa, czy okienko jest zadokowane w poziomie.|
+|[CBasePane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|Określa, czy okienko znajduje się w wielookienkowym oknie ramek.|
+|[CBasePane::IsMDITabbed](#ismditabbed)|Określa, czy okienko zostało dodane do podrzędnego okna MDI jako dokument z kartami.|
+|[CBasePane::IsPaneVisible](#ispanevisible)|Określa, czy flaga WS_VISIBLE jest ustawiona dla okienka.|
+|[CBasePane::IsPointNearDockSite](#ispointneardocksite)|Określa, czy określony punkt znajduje się blisko lokacji dokowania.|
 |[CBasePane::IsResizable](#isresizable)|Określa, czy można zmienić rozmiar okienka.|
-|[CBasePane::IsRestoredFromRegistry](#isrestoredfromregistry)|Określa, czy okienko jest przywracany z rejestru.|
-|[CBasePane::IsTabbed](#istabbed)|Określa, czy kontrolka karty okna z kartami włożono okienka.|
+|[CBasePane::IsRestoredFromRegistry](#isrestoredfromregistry)|Określa, czy okienko jest przywracane z rejestru.|
+|[CBasePane::IsTabbed](#istabbed)|Określa, czy okienko zostało wstawione do kontrolki Karta okna z kartami.|
 |`CBasePane::IsTooltipTopmost`|Używane wewnętrznie.|
-|[CBasePane::IsVisible](#isvisible)|Określa, czy w okienku jest widoczna.|
-|[CBasePane::LoadState](#loadstate)|Ładuje stan okienka z rejestru.|
-|[CBasePane::MoveWindow](#movewindow)|Przeniesienie okienka.|
-|[CBasePane::OnAfterChangeParent](#onafterchangeparent)|Wywoływane przez platformę, po zmianie okienko nadrzędnej.|
-|[CBasePane::OnBeforeChangeParent](#onbeforechangeparent)|Wywoływane przez platformę, tuż przed, w okienku zmienia okna nadrzędnego.|
-|[CBasePane::OnDrawCaption](#ondrawcaption)|Struktura wywołuje tę metodę podczas rysowania podpis.|
+|[CBasePane:: IsVisible](#isvisible)|Określa, czy okienko jest widoczne.|
+|[CBasePane:: LoadState](#loadstate)|Ładuje stan okienka z rejestru.|
+|[CBasePane::MoveWindow](#movewindow)|Przenosi okienko.|
+|[CBasePane::OnAfterChangeParent](#onafterchangeparent)|Wywoływane przez platformę, gdy element nadrzędny okienka został zmieniony.|
+|[CBasePane::OnBeforeChangeParent](#onbeforechangeparent)|Wywoływane przez platformę tuż przed zmianą okna nadrzędnego w okienku.|
+|[CBasePane::OnDrawCaption](#ondrawcaption)|Struktura wywołuje tę metodę po narysowaniu podpisu.|
 |[CBasePane::OnMovePaneDivider](#onmovepanedivider)|Ta metoda nie jest obecnie używana.|
-|[CBasePane::OnPaneContextMenu](#onpanecontextmenu)|Wywoływane przez platformę, podczas tworzenia menu, który zawiera listę okienka.|
-|[CBasePane::OnRemoveFromMiniFrame](#onremovefromminiframe)|Wywoływane przez platformę, gdy okienko zostanie usunięty z jej nadrzędnej mini ramki okna.|
-|[CBasePane::OnSetAccData](#onsetaccdata)|`CBasePane` Używaj tej metody.|
+|[CBasePane::OnPaneContextMenu](#onpanecontextmenu)|Wywoływane przez platformę, gdy kompiluje menu, które ma listę okienek.|
+|[CBasePane::OnRemoveFromMiniFrame](#onremovefromminiframe)|Wywoływane przez platformę, gdy okienko zostanie usunięte z nadrzędnego okna z ramką mini.|
+|[CBasePane::OnSetAccData](#onsetaccdata)|`CBasePane`Ta metoda nie jest używana.|
 |`CBasePane::OnUpdateCmdUI`|Używane wewnętrznie.|
-|[CBasePane::PaneFromPoint](#panefrompoint)|Zwraca okienko, który zawiera danego punktu.|
-|`CBasePane::PreTranslateMessage`|Używane przez klasę [CWinApp](../../mfc/reference/cwinapp-class.md) do translacji komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkcje Windows. (Przesłania [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
-|[CBasePane::RecalcLayout](#recalclayout)|`CBasePane` Używaj tej metody.|
-|[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|Wyrejestrowuje okienko i usuwa go z listy w Menedżerze dokowania.|
-|[CBasePane::SaveState](#savestate)|Zapisuje stan w okienku w rejestrze.|
-|[CBasePane::SelectDefaultFont](#selectdefaultfont)|Wybiera czcionkę domyślną kontekście danego urządzenia.|
-|`CBasePane::Serialize`|Odczytuje lub zapisuje ten obiekt z lub do archiwum. (Przesłania [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|
+|[CBasePane::P aneFromPoint](#panefrompoint)|Zwraca okienko zawierające dany punkt.|
+|`CBasePane::PreTranslateMessage`|Używane przez klasę [CWinApp](../../mfc/reference/cwinapp-class.md) do translacji komunikatów okna przed ich wysłaniem do funkcji [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) systemu Windows. (Przesłania [CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
+|[CBasePane::RecalcLayout](#recalclayout)|`CBasePane`Ta metoda nie jest używana.|
+|[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|Wyrejestrowanie okienka i usunięcie go z listy w Menedżerze dokowania.|
+|[CBasePane:: SaveState](#savestate)|Zapisuje stan okienka w rejestrze.|
+|[CBasePane::SelectDefaultFont](#selectdefaultfont)|Wybiera domyślną czcionkę dla danego kontekstu urządzenia.|
+|`CBasePane::Serialize`|Odczytuje lub zapisuje ten obiekt z lub do archiwum. (Przesłania [CObject:: serializować](../../mfc/reference/cobject-class.md#serialize)).|
 |[CBasePane::SetControlBarStyle](#setcontrolbarstyle)|Ustawia styl paska sterowania.|
-|[CBasePane::SetDockingMode](#setdockingmode)|Ustawia tryb dokujące okienka.|
+|[CBasePane::SetDockingMode](#setdockingmode)|Ustawia tryb dokowania dla okienka.|
 |`CBasePane::SetMDITabbed`|Używane wewnętrznie.|
-|[CBasePane::SetPaneAlignment](#setpanealignment)|Ustawia wyrównanie dla tego okienka.|
+|[CBasePane::SetPaneAlignment](#setpanealignment)|Ustawia wyrównanie okienka.|
 |`CBasePane::SetPaneRect`|Używane wewnętrznie.|
 |[CBasePane::SetPaneStyle](#setpanestyle)|Ustawia styl okienka.|
 |`CBasePane::SetRestoredFromRegistry`|Używane wewnętrznie.|
-|[CBasePane::SetWindowPos](#setwindowpos)|Zmienia rozmiar, położenie i kolejności Z okienka.|
+|[CBasePane::SetWindowPos](#setwindowpos)|Zmienia rozmiar, położenie i porządek osi Z okienka.|
 |[CBasePane::ShowPane](#showpane)|Pokazuje lub ukrywa okienko.|
-|[CBasePane::StretchPane](#stretchpane)|Rozciąga okienko w pionie lub poziomie.|
-|[CBasePane::UndockPane](#undockpane)|Usuwa okienka z witryny dokowania, suwak domyślne lub okna mini ramki, w którym aktualnie jest zadokowany.|
+|[CBasePane::StretchPane](#stretchpane)|Rozciąga okienko w pionie lub w poziomie.|
+|[CBasePane::UndockPane](#undockpane)|Usuwa okienko z witryny Docker, domyślnego suwaka lub okna mini-frame, w którym jest obecnie zadokowane.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
@@ -308,41 +308,41 @@ class CBasePane : public CWnd
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli chcesz utworzyć klasę okienko, która obsługuje rozszerzone funkcje dokowania dostępne w MFC, musi pochodzić z `CBasePane` lub [klasa CPane](../../mfc/reference/cpane-class.md).
+Jeśli chcesz utworzyć klasę okienka, która obsługuje rozszerzone funkcje dokowania dostępne w MFC, należy uzyskać ją z `CBasePane` lub z [klasy CPane](../../mfc/reference/cpane-class.md).
 
-## <a name="customization-tips"></a>Porady dotyczące dostosowywania
+## <a name="customization-tips"></a>Wskazówki dotyczące dostosowywania
 
-Poniższe porady dotyczące dostosowywania odnoszą się do `CBasePane Class` i wszystkie klasy, które dziedziczą po niej:
+Poniższe porady dotyczące dostosowywania dotyczą `CBasePane Class` wszystkich klas, które dziedziczą z niej:
 
-- Kiedy tworzysz okienko, należy zastosować kilka nowych stylów:
+- Podczas tworzenia okienka można zastosować kilka nowych stylów:
 
-  - AFX_CBRS_FLOAT sprawia, że wartość zmiennoprzecinkowa okienka.
+  - AFX_CBRS_FLOAT powoduje przepływanie okienka.
 
-  - AFX_CBRS_AUTOHIDE Włącza tryb automatycznego ukrywania.
+  - AFX_CBRS_AUTOHIDE włącza tryb autoukrywania.
 
-  - AFX_CBRS_CLOSE umożliwia okienko zostanie zamknięty (ukryta).
+  - AFX_CBRS_CLOSE umożliwia zamknięcie okienka (ukryte).
 
-  Są to flagi, które można połączyć za pomocą operacji bitowej OR.
+  Są to flagi, które można połączyć z operacją bitową lub.
 
-`CBasePane` implementuje następujące metody logiczna wirtualnego, aby odzwierciedlić te flagi: [CBasePane::CanBeClosed](#canbeclosed), [CBasePane::CanAutoHide](#canautohide), [CBasePane::CanFloat](#canfloat). Można je zastąpić w klasach pochodnych, aby dostosować jego zachowanie.
+`CBasePane`implementuje następujące wirtualne metody logiczne, aby odzwierciedlały te flagi: [CBasePane:: CanBeClosed](#canbeclosed), [CBasePane::](#canautohide)unukrywanie, [CBasePane:: onfloat](#canfloat). Można zastąpić je w klasach pochodnych, aby dostosować ich zachowanie.
 
-- Można dostosować zachowanie dokowania przez zastąpienie [CBasePane::CanAcceptPane](#canacceptpane). Mieć okienku zwraca wartość FALSE z tej metody, aby uniemożliwić innego okienka dokowania do niego.
+- Zachowanie dokowania można dostosować, zastępując [CBasePane:: CanAcceptPane](#canacceptpane). W przypadku tej metody okienko zwraca wartość FALSE, aby zapobiec zadokowaniu innego okienka.
 
-- Jeśli chcesz utworzyć statyczne okienko nie, float i który uniemożliwia dokowanie przed nią przez inne okienka (podobne do paska Outlook w przykładzie OutlookDemo), utwórz go jako niezmienny i zastąpić [CBasePane::DoesAllowDynInsertBefore](#doesallowdyninsertbefore) do zwraca wartość FALSE. Domyślna implementacja zwraca wartość FALSE, jeśli zawartość okienka została utworzona bez styl AFX_CBRS_FLOAT.
+- Jeśli chcesz utworzyć statyczne okienko, które nie może być zmiennoprzecinkowe i uniemożliwia każde inne okienko zadokowane przed nim (podobnie jak w przypadku paska Outlook w przykładzie OutlookDemo), utwórz je jako nieprzestawne i Przesłoń [CBasePane::D oesallowdyninsertbefore](#doesallowdyninsertbefore) do zwrócenia FALSE. Domyślna implementacja zwraca wartość FALSE, jeśli okienko jest tworzone bez stylu AFX_CBRS_FLOAT.
 
-- Tworzenie wszystkich okienek z identyfikatorami od-1.
+- Utwórz wszystkie okienka o identyfikatorach innych niż-1.
 
-- Aby ustalić widoczność okienka, należy użyć [CBasePane::IsVisible](#isvisible). Poprawnie obsługuje stan widoczności w kartach i Autoukrywanie tryby.
+- Aby określić widoczność okienka, użyj [CBasePane:: IsVisible](#isvisible). Prawidłowo obsługuje stan widoczności w trybach z kartami i Autoukrywanie.
 
-- Jeśli chcesz utworzyć niezmienny okienko o zmiennym rozmiarze, należy go utworzyć bez AFX_CBRS_FLOAT styl i wywołania [CFrameWnd::DockControlBar](../../mfc/reference/cframewnd-class.md#dockcontrolbar).
+- Jeśli chcesz utworzyć nieprzestawne okienko o zmiennym rozmiarze, utwórz je bez stylu AFX_CBRS_FLOAT i Wywołaj [obiektu CFrameWnd::D ockcontrolbar](../../mfc/reference/cframewnd-class.md#dockcontrolbar).
 
-- Wywołania do wykluczenia w okienku z układu dokowania lub usunąć pasek narzędzi z jego pasek dokowania [CBasePane::UndockPane](#undockpane). Ta metoda zostanie wywołana dla okienka w trybie autoukrywania lub okienek, które znajdują się na kartach okien z zakładkami.
+- Aby wykluczyć okienko z układu dokowania lub usunąć pasek narzędzi z jego paska dokowania, wywołaj [CBasePane:: UndockPane](#undockpane). Nie wywołuj tej metody dla okienek w trybie Autoukrywanie lub dla okienek, które znajdują się na kartach okienek z kartami.
 
-- Jeśli mają być wyświetlane jako przestawne lub oddokować okienko, w którym znajduje się w trybie autoukrywania, należy wywołać [CDockablePane::SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode) o wartości FAŁSZ jako pierwszy argument przed wywołaniem [CBasePane::FloatPane](#floatpane) lub [ CBasePane::UndockPane](#undockpane).
+- Jeśli chcesz przestawić lub oddokować okienko, które jest w trybie Autoukrywanie, musisz wywołać [CDockablePane::](../../mfc/reference/cdockablepane-class.md#setautohidemode) autoukrywaniemode z wartością false jako pierwszy argument przed wywołaniem [CBasePane:: FloatPane](#floatpane) lub [CBasePane:: UndockPane](#undockpane).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak korzystać z różnych metod w `CBasePane` klasy. W przykładzie pokazano, jak pobrać okienko od `CFrameWndEx` klasy i jak ustawić tryb dokowania, wyrównanie okienka i stylu okienka. Kod pochodzi z [przykład konsola programu Word](../../overview/visual-cpp-samples.md).
+Poniższy przykład ilustruje sposób użycia różnych metod w `CBasePane` klasie. Przykład ilustruje sposób pobierania okienka z `CFrameWndEx` klasy i sposobu ustawiania trybu dokowania, wyrównania okienka i stylu okienka. Kod pochodzi z przykładu z [konsoli programu Word](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#2](../../mfc/reference/codesnippet/cpp/cbasepane-class_1.cpp)]
 
@@ -358,11 +358,11 @@ Poniższy przykład pokazuje, jak korzystać z różnych metod w `CBasePane` kla
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxbasepane.h
+**Nagłówek:** afxbasepane. h
 
-##  <a name="accnotifyobjectfocusevent"></a>  CBasePane::AccNotifyObjectFocusEvent
+##  <a name="accnotifyobjectfocusevent"></a>CBasePane::AccNotifyObjectFocusEvent
 
-`CBasePane` Używaj tej metody.
+`CBasePane`Ta metoda nie jest używana.
 
 ```
 virtual void AccNotifyObjectFocusEvent(int);
@@ -371,11 +371,11 @@ virtual void AccNotifyObjectFocusEvent(int);
 ### <a name="parameters"></a>Parametry
 
 *int*<br/>
-[in] Nie jest używany.
+podczas Nieużywane.
 
-##  <a name="addpane"></a>  CBasePane::AddPane
+##  <a name="addpane"></a>CBasePane:: Add— okienko
 
-Dodaje okienko dokowania menedżera.
+Dodaje okienko do Menedżera dokowania.
 
 ```
 void AddPane(CBasePane* pBar);
@@ -384,17 +384,17 @@ void AddPane(CBasePane* pBar);
 ### <a name="parameters"></a>Parametry
 
 *pBar*<br/>
-[in] Wskaźnik do okienka do dodania.
+podczas Wskaźnik do okienka do dodania.
 
 ### <a name="remarks"></a>Uwagi
 
-Jest to wygodna metoda, która dodaje okienko dokowania menedżera. Za pomocą tej metody, nie trzeba napisać kod, który analizuje rodzaj ramki nadrzędnej.
+Jest to wygodna metoda, która dodaje okienko do Menedżera dokowania. Korzystając z tej metody, nie trzeba pisać kodu, który analizuje typ ramki nadrzędnej.
 
-Aby uzyskać więcej informacji, zobacz [klasa CDockingManager](../../mfc/reference/cdockingmanager-class.md) i [CMDIFrameWndEx::AddPane](../../mfc/reference/cmdiframewndex-class.md#addpane).
+Aby uzyskać więcej informacji, zobacz [CDockingManager Class](../../mfc/reference/cdockingmanager-class.md) and [CMDIFrameWndEx:: addokienk](../../mfc/reference/cmdiframewndex-class.md#addpane).
 
-##  <a name="adjustdockinglayout"></a>  CBasePane::AdjustDockingLayout
+##  <a name="adjustdockinglayout"></a>CBasePane::AdjustDockingLayout
 
-Przekierowuje wywołanie do Menedżera dokowania dostosować układ dokowania.
+Przekierowuje wywołanie do Menedżera dokowania, aby dostosować układ dokowania.
 
 ```
 virtual void AdjustDockingLayout(HDWP hdwp=NULL);
@@ -403,17 +403,17 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ### <a name="parameters"></a>Parametry
 
 *hdwp*<br/>
-[out] Dojście do struktury zawierającej wiele położenia okna.
+określoną Dojście do struktury zawierającej wiele pozycji okna.
 
 ### <a name="remarks"></a>Uwagi
 
-Jest to wygodna metoda, która dostosowuje układ dokowania. Za pomocą tej metody, nie trzeba napisać kod, który analizuje rodzaj ramki nadrzędnej.
+Jest to wygodna metoda, która dostosowuje układ dokowania. Korzystając z tej metody, nie trzeba pisać kodu, który analizuje typ ramki nadrzędnej.
 
-Aby uzyskać więcej informacji, zobacz [CDockingManager::AdjustDockingLayout](../../mfc/reference/cdockingmanager-class.md#adjustdockinglayout)
+Aby uzyskać więcej informacji, zobacz [CDockingManager:: AdjustDockingLayout](../../mfc/reference/cdockingmanager-class.md#adjustdockinglayout)
 
-##  <a name="adjustlayout"></a>  CBasePane::AdjustLayout
+##  <a name="adjustlayout"></a>CBasePane::AdjustLayout
 
-Metoda wywoływana przez platformę, by dostosować wewnętrznego układ w okienku.
+Wywoływane przez platformę, by dostosować układ wewnętrzny okienka.
 
 ```
 virtual void AdjustLayout();
@@ -421,9 +421,9 @@ virtual void AdjustLayout();
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura wywołuje tę metodę, gdy okienko zawiera dostosowania jego wewnętrznych układu. Podstawowa implementacja nic nie robi.
+Struktura wywołuje tę metodę, gdy okienko musi dostosować jego układ wewnętrzny. Implementacja podstawowa nie wykonuje żadnych operacji.
 
-##  <a name="calcfixedlayout"></a>  CBasePane::CalcFixedLayout
+##  <a name="calcfixedlayout"></a>CBasePane::CalcFixedLayout
 
 Oblicza rozmiar poziomy paska sterowania.
 
@@ -436,22 +436,22 @@ virtual CSize CalcFixedLayout(
 ### <a name="parameters"></a>Parametry
 
 *bStretch*<br/>
-[in] Wskazuje, czy pasek powinien być rozciągnięty do rozmiaru ramki. *BStretch* parametru jest różna od zera, gdy pasek pasek dokowania (niedostępne dla dokowanie) nie jest to 0, gdy jest zadokowany lub przestawny (dostępne dla dokowanie).
+podczas Wskazuje, czy pasek ma być rozciągany do rozmiaru ramki. Parametr *bStretch* ma wartość różną od zera, gdy pasek nie jest paskiem dokującym (niedostępnym do dokowania) i ma wartość 0, gdy jest zadokowany lub przestawny (dostępny do dokowania).
 
 *bHorz*<br/>
-[in] Wskazuje, czy pasek jest zorientowany poziomo czy pionowo. *BHorz* parametr ma wartość różną od zera, jeśli pasek jest w orientacji poziomej i wynosi 0, jeśli jest w orientacji pionowej.
+podczas Wskazuje, że pasek jest poziomy lub pionowo. Parametr *bHorz* jest różny od zera, jeśli pasek jest zorientowany w poziomie i ma wartość 0, jeśli jest zorientowana w pionie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pasek sterowania rozmiar, w pikselach, o `CSize` obiektu.
+Rozmiar paska sterowania (w pikselach `CSize` ) obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz uwagi w temacie [CControlBar::CalcFixedLayout](../../mfc/reference/ccontrolbar-class.md#calcfixedlayout)
+Zobacz sekcję Uwagi w [CControlBar:: CalcFixedLayout](../../mfc/reference/ccontrolbar-class.md#calcfixedlayout)
 
-##  <a name="canacceptpane"></a>  CBasePane::CanAcceptPane
+##  <a name="canacceptpane"></a>CBasePane::CanAcceptPane
 
-Określa, czy innego okienka może być zadokowane do okienka.
+Określa, czy można zadokować inne okienko w okienku.
 
 ```
 virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
@@ -460,23 +460,23 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ### <a name="parameters"></a>Parametry
 
 *pBar*<br/>
-[in] Wskaźnik do okienka, aby zadokować.
+podczas Wskaźnik do okienka, które ma zostać zadokowane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli w kolejnym okienku można zaakceptować; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli można zaakceptować inne okienko; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Platforma wywołuje tę metodę, zanim ją dokowane okienka określony przez *pBar* do bieżącego okienka.
+Struktura wywołuje tę metodę przed zadokowaniem okienka określonego przez *pBar* do bieżącego okienka.
 
-Użyj tej metody, a [CBasePane::CanBeDocked](#canbedocked) metodę, aby kontrolować sposób okienka zadokować inne okienka w aplikacji.
+Użyj tej metody i metody [CBasePane:: CanBeDocked](#canbedocked) , aby kontrolować sposób dokowania okienek do innych okienek w aplikacji.
 
 Domyślna implementacja zwraca wartość FALSE.
 
-##  <a name="canautohide"></a>  CBasePane::CanAutoHide
+##  <a name="canautohide"></a>CBasePane:: Autoukrywanie
 
-Określa, czy okienka obsługuje trybie autoukrywania.
+Określa, czy okienko obsługuje tryb autoukrywania.
 
 ```
 virtual BOOL CanAutoHide() const;
@@ -484,19 +484,19 @@ virtual BOOL CanAutoHide() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli w tym okienku obsługuje tryb autoukrywania; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli to okienko obsługuje tryb Autoukrywanie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura wywołuje tę funkcję, aby sprawdzić, czy okienka obsługuje trybie autoukrywania.
+Struktura wywołuje tę funkcję, aby określić, czy okienko obsługuje tryb autoukrywania.
 
-Podczas konstruowania, można ustawić tę możliwość przez przekazanie flagi AFX_CBRS_AUTOHIDE [CBasePane::CreateEx](#createex).
+Podczas konstruowania można ustawić tę możliwość, przekazując flagę AFX_CBRS_AUTOHIDE do [CBasePane:: CreateEx](#createex).
 
-Domyślna implementacja sprawdza, czy flaga AFX_CBRS_AUTOHIDE. Należy przesłonić tę metodę w klasie pochodnej, aby dostosować to zachowanie.
+Domyślny test implementacji flagi AFX_CBRS_AUTOHIDE. Zastąp tę metodę w klasie pochodnej, aby dostosować to zachowanie.
 
-##  <a name="canbeattached"></a>  CBasePane::CanBeAttached
+##  <a name="canbeattached"></a>CBasePane::CanBeAttached
 
-Określa, czy okienka może być zadokowane do innego okienka lub ramki okna.
+Określa, czy okienko może być zadokowane do innego okienka lub okna ramki.
 
 ```
 virtual BOOL CanBeAttached() const;
@@ -504,15 +504,15 @@ virtual BOOL CanBeAttached() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli zawartość okienka może być zadokowane do innego okienka lub ramki okna; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli okienko może być zadokowane do innego okienka lub okna ramki; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja zwraca wartość FALSE. Należy przesłonić tę metodę w klasie pochodnej, aby włączyć lub wyłączyć możliwość zadokować bez wywoływania [CBasePane::EnableDocking](#enabledocking).
+Domyślna implementacja zwraca wartość FALSE. Zastąp tę metodę w klasie pochodnej, aby włączyć lub wyłączyć możliwość dokowania bez wywoływania [CBasePane:: EnableDocking](#enabledocking).
 
-##  <a name="canbeclosed"></a>  CBasePane::CanBeClosed
+##  <a name="canbeclosed"></a>CBasePane::CanBeClosed
 
-Określa, czy można zamknąć okienko.
+Określa, czy okienko może być zamknięte.
 
 ```
 virtual BOOL CanBeClosed() const;
@@ -520,19 +520,19 @@ virtual BOOL CanBeClosed() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli może zostać zamknięty okienka; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli okienko może być zamknięte; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura wywołuje tę metodę w celu określenia, czy okienku może zostać zamknięty. Jeśli metoda zwraca wartość TRUE, **Zamknij** zostanie dodany do okienka paska tytułu lub, jeśli okienko jest liczb zmiennoprzecinkowych, na pasku tytułu okienka pływające mini okno.
+Struktura wywołuje tę metodę, aby określić, czy okienko może być zamknięte. Jeśli metoda zwraca wartość TRUE, przycisk **Close** jest dodawany do paska tytułu okienka lub, jeśli okienko jest przestawne, do paska tytułu okna mini okienka.
 
-Podczas konstruowania, można ustawić tę możliwość przez przekazanie flagi AFX_CBRS_CLOSE [CBasePane::CreateEx](#createex).
+Podczas konstruowania można ustawić tę możliwość, przekazując flagę AFX_CBRS_CLOSE do [CBasePane:: CreateEx](#createex).
 
-Domyślna implementacja sprawdza, czy flaga AFX_CBRS_CLOSE.
+Domyślny test implementacji flagi AFX_CBRS_CLOSE.
 
 ##  <a name="canbedocked"></a>  CBasePane::CanBeDocked
 
-Określa, czy okienka może być zadokowane do innego okienka.
+Określa, czy okienko można zadokować w innym okienku.
 
 ```
 virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
@@ -541,21 +541,21 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
 ### <a name="parameters"></a>Parametry
 
 *pDockBar*<br/>
-[in] Wskaźnik do innego okienka.
+podczas Wskaźnik do innego okienka.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli w tym okienku może być zadokowane do innego panelu. w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli to okienko można zadokować w innym okienku; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Platforma wywołuje tę metodę, zanim ją dokowane okienka określony przez *pDockBar* do bieżącego okienka.
+Struktura wywołuje tę metodę przed zadokowaniem okienka określonego przez *pDockBar* do bieżącego okienka.
 
-Użyj tej metody, a [CBasePane::CanAcceptPane](#canacceptpane) metodę, aby kontrolować sposób okienka zadokować inne okienka w aplikacji.
+Użyj tej metody i metody [CBasePane:: CanAcceptPane](#canacceptpane) , aby kontrolować sposób dokowania okienek do innych okienek w aplikacji.
 
 Domyślna implementacja zwraca wartość FALSE.
 
-##  <a name="canberesized"></a>  CBasePane::CanBeResized
+##  <a name="canberesized"></a>CBasePane::CanBeResized
 
 Określa, czy można zmienić rozmiar okienka.
 
@@ -565,15 +565,15 @@ virtual BOOL CanBeResized() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli można zmienić rozmiar okienka; w przeciwnym razie wartość FALSE.
+Wartość TRUE, jeśli można zmienić rozmiar okienka; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda sprawdza, czy flaga AFX_CBRS_RESIZE, który jest określony, domyślnie `CBasePane::OnCreate`. Jeśli ta flaga nie zostanie określony, Menedżer dokowania flagi wewnętrznie jako nieruchome, zamiast dokowanie panelu.
+Ta metoda sprawdza, czy flaga AFX_CBRS_RESIZE jest określona domyślnie w `CBasePane::OnCreate`. Jeśli ta flaga nie zostanie określona, Menedżer dokowania domyślnie oznaczy to okienko jako nieruchome, a nie zadokowane.
 
 ##  <a name="canbetabbeddocument"></a>  CBasePane::CanBeTabbedDocument
 
-Określa, czy okienku można przekonwertować na dokument z kartami MDI.
+Określa, czy okienko można przekonwertować na dokument z kartami MDI.
 
 ```
 virtual BOOL CanBeTabbedDocument() const;
@@ -581,15 +581,15 @@ virtual BOOL CanBeTabbedDocument() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli zawartość okienka mogą być konwertowane do dokumentu z kartami. w przeciwnym razie wartość FALSE. `CBasePane::CanBeTabbedDocument` Zawsze zwraca wartość FALSE.
+Ma wartość TRUE, jeśli okienko można przekonwertować na dokument z kartami. w przeciwnym razie FALSE. `CBasePane::CanBeTabbedDocument`zawsze zwraca wartość FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Tylko obiekty niektórych `CBasePane`-pochodne typy, takie jak [klasa CDockablePane](../../mfc/reference/cdockablepane-class.md), mogą być konwertowane na dokumenty z kartami.
+Tylko obiekty niektórych `CBasePane`typów pochodnych, takich jak [Klasa CDockablePane](../../mfc/reference/cdockablepane-class.md), mogą być konwertowane na dokumenty z kartami.
 
-##  <a name="canfloat"></a>  CBasePane::CanFloat
+##  <a name="canfloat"></a>CBasePane:: onfloat
 
-Określa, czy można przestawić okienka.
+Określa, czy okienko może być zmiennoprzecinkowe.
 
 ```
 virtual BOOL CanFloat() const;
@@ -597,22 +597,22 @@ virtual BOOL CanFloat() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli można przestawić okienka; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli okienko może być zmiennoprzecinkowe; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura wywołuje tę metodę w celu określenia, czy można przestawić okienka.
+Struktura wywołuje tę metodę, aby określić, czy okienko może być zmiennoprzecinkowe.
 
-Podczas konstruowania, można ustawić tę możliwość przez przekazanie flagi AFX_CBRS_FLOAT [CBasePane::CreateEx](#createex).
+Podczas konstruowania można ustawić tę możliwość, przekazując flagę AFX_CBRS_FLOAT do [CBasePane:: CreateEx](#createex).
 
 > [!NOTE]
->  Struktura przyjęto założenie, że okienka niezmienny są statyczne i że nie można zmienić ich stan dokowania. W związku z tym w ramach nie są zapisywane stanu niezmienny okienka dokowania.
+>  W strukturze założono, że nieprzestawne okienka są statyczne i nie można zmienić ich stanu dokowania. W związku z tym struktura nie zapisuje stanu dokowania nieruchomych okienek.
 
-Domyślna implementacja sprawdza, czy styl AFX_CBRS_FLOAT.
+Domyślna implementacja dla stylu AFX_CBRS_FLOAT.
 
-##  <a name="canfocus"></a>  CBasePane::CanFocus
+##  <a name="canfocus"></a>CBasePane:: Przenieś fokus
 
-Określa, czy w okienku może odebrać fokus.
+Określa, czy okienko może odbierać fokus.
 
 ```
 virtual BOOL CanFocus() const;
@@ -620,17 +620,17 @@ virtual BOOL CanFocus() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli zawartość okienka może odebrać fokus; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli okienko może odbierać fokus; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy przesłonić tę metodę w klasie pochodnej, aby kontrolować fokus. Na przykład ponieważ pasków narzędzi nie może otrzymać ostrości, ta metoda zwraca wartość FALSE, wywołanego w obiektach paska narzędzi.
+Przesłoń tę metodę w klasie pochodnej, aby sterować fokusem. Na przykład ponieważ paski narzędzi nie mogą odbierać fokusu, Metoda ta zwraca wartość FALSE, gdy jest wywoływana na obiektach paska narzędzi.
 
-Struktura próbuje ustawić fokus wprowadzania, gdy okienko jest zadokowany lub przestawione.
+Struktura próbuje ustawić fokus wprowadzania, gdy okienko jest zadokowane lub przepływa.
 
-##  <a name="copystate"></a>  CBasePane::CopyState
+##  <a name="copystate"></a>CBasePane::CopyState
 
-Kopiuje stanu danego okienka.
+Kopiuje stan danego okienka.
 
 ```
 virtual void CopyState(CBasePane* pOrgBar);
@@ -639,15 +639,15 @@ virtual void CopyState(CBasePane* pOrgBar);
 ### <a name="parameters"></a>Parametry
 
 *pOrgBar*<br/>
-[in] Wskaźnik do innego okienka.
+podczas Wskaźnik do innego okienka.
 
 ### <a name="remarks"></a>Uwagi
 
 Ta metoda kopiuje stan z *pOrgBar* do tego okienka.
 
-##  <a name="createdefaultminiframe"></a>  CBasePane::CreateDefaultMiniframe
+##  <a name="createdefaultminiframe"></a>CBasePane::CreateDefaultMiniframe
 
-Jeśli okienko można float, ta metoda tworzy okno mini ramki dla niego.
+Jeśli okienko może być zmiennoprzecinkowe, ta metoda tworzy dla niego okno mini-frame.
 
 ```
 virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
@@ -656,21 +656,21 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ### <a name="parameters"></a>Parametry
 
 *rectInitial*<br/>
-[in] Określa współrzędne początkowe okno mini ramki.
+podczas Określa początkowe współrzędne okna mini frame.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do nowego okna mini ramki lub wartość NULL, jeśli nie można utworzyć.
+Wskaźnik do nowego okna mini-frame lub wartość NULL, jeśli Tworzenie nie powiodło się.
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura wywołuje tę metodę, gdy okienko przełącza się do stanu zmiennoprzecinkowego. Metoda tworzy okno mini ramki i dołącza okienka do tego okna.
+Struktura wywołuje tę metodę, gdy okienko przechodzi do stanu zmiennoprzecinkowego. Metoda tworzy okno mini-frame i dołącza okienko do tego okna.
 
 Domyślna implementacja zwraca wartość NULL.
 
-##  <a name="createex"></a>  CBasePane::CreateEx
+##  <a name="createex"></a>CBasePane::CreateEx
 
-Tworzy formant okienka.
+Tworzy kontrolkę okienka.
 
 ```
 virtual BOOL CreateEx(
@@ -688,59 +688,59 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parametry
 
 *dwStyleEx*<br/>
-[in] Rozszerzone style (zobacz [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) Aby uzyskać więcej informacji).
+podczas Style rozszerzone (zobacz [CWnd:: CreateEx](../../mfc/reference/cwnd-class.md#createex) , aby uzyskać więcej informacji).
 
 *lpszClassName*<br/>
-[in] Nazwa klasy okna.
+podczas Nazwa klasy okna.
 
 *lpszWindowName*<br/>
-[in] Nazwa okna.
+podczas Nazwa okna.
 
 *dwStyle*<br/>
-[in] Style okna (zobacz [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)).
+podczas Styl okna (zobacz [CWnd:: CreateEx](../../mfc/reference/cwnd-class.md#createex)).
 
-*Rect*<br/>
-[in] Początkowa prostokąt.
+*cinania*<br/>
+podczas Początkowy prostokąt.
 
 *pParentWnd*<br/>
-[in] Wskaźnik do okna nadrzędnego.
+podczas Wskaźnik do okna nadrzędnego.
 
 *nID*<br/>
-[in] Określa identyfikator okienka. Musi być unikatowa.
+podczas Określa identyfikator okienka. Musi być unikatowa.
 
 *dwControlBarStyle*<br/>
-[in] Styl flagi dla okienka.
+podczas Flagi stylu dla okienek.
 
 *pContext*<br/>
-[in] Wskaźnik do `CcreateContext`
+podczas Wskaźnik do`CcreateContext`
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli zawartość okienka został utworzony pomyślnie; w przeciwnym razie wartość FALSE.
+Wartość TRUE, jeśli okienko zostało utworzone pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Tworzy okno klasy `lpszClassName`. Jeśli określisz WS_CAPTION, ta metoda usuwa styl WS_CAPTION bit i ustawia `CBasePane::m_bHasCaption` na wartość TRUE, ponieważ biblioteki nie obsługuje okienek z napisami.
+Tworzy okno klasy `lpszClassName`. Jeśli określisz WS_CAPTION, ta metoda czyści bit stylu WS_CAPTION i ustawia `CBasePane::m_bHasCaption` wartość true, ponieważ biblioteka nie obsługuje okienek z napisami.
 
-Można użyć dowolnej kombinacji Style okna podrzędne i kontrolka MFC paska style (CBRS_).
+Można użyć dowolnej kombinacji stylów okna podrzędnego i stylów paska sterowania MFC (CBRS_).
 
 Biblioteka dodaje kilka nowych stylów dla okienek. W poniższej tabeli opisano nowe style:
 
 |Styl|Opis|
 |-----------|-----------------|
-|AFX_CBRS_FLOAT|Okienko można float.|
-|AFX_CBRS_AUTOHIDE|Okienka obsługuje tryb autoukrywanie|
-|AFX_CBRS_RESIZE|Można zmienić rozmiar okienka. **Ważne:**  Ten styl nie jest zaimplementowana.|
+|AFX_CBRS_FLOAT|Okienko może być zmiennoprzecinkowe.|
+|AFX_CBRS_AUTOHIDE|Okienko obsługuje tryb Autoukrywanie|
+|AFX_CBRS_RESIZE|Można zmienić rozmiar okienka. **Ważne:**  Ten styl nie jest zaimplementowany.|
 |AFX_CBRS_CLOSE|Okienko można zamknąć.|
-|AFX_CBRS_AUTO_ROLLUP|Okienko można rzutowana, gdy jest ona wyświetlana.|
-|AFX_CBRS_REGULAR_TABS|Gdy jedno okienko dokowane do innego okienka, który ma ten styl, zostanie utworzony regularne okien z kartami. (Aby uzyskać więcej informacji, zobacz [klasa CTabbedPane](../../mfc/reference/ctabbedpane-class.md).)|
-|AFX_CBRS_OUTLOOK_TABS|Gdy jedno okienko dokowane do innego okienka, który ma ten styl, okien z kartami stylu dla programu Outlook zostanie utworzony. (Aby uzyskać więcej informacji, zobacz [klasa CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md).)|
+|AFX_CBRS_AUTO_ROLLUP|Okienko można rzutowane, gdy zostanie ono przepływane.|
+|AFX_CBRS_REGULAR_TABS|Gdy jedno okienko zostanie zadokowane do innego okienka, które ma ten styl, tworzone jest zwykłe okno z kartami. (Aby uzyskać więcej informacji, zobacz [Klasa CTabbedPane](../../mfc/reference/ctabbedpane-class.md)).|
+|AFX_CBRS_OUTLOOK_TABS|Gdy jedno okienko zostanie zadokowane do innego okienka, które ma ten styl, zostanie utworzone okno z kartami w stylu programu Outlook. (Aby uzyskać więcej informacji, zobacz [Klasa CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)).|
 
 Aby użyć nowych stylów, określ je w *dwControlBarStyle*.
 
 ##  <a name="dockpane"></a>  CBasePane::DockPane
 
-Okienko jest dokowane do innego okienka lub do okna ramki.
+Dokowanie okienka do innego okienka lub okna ramowego.
 
 ```
 virtual BOOL DockPane(
@@ -752,27 +752,27 @@ virtual BOOL DockPane(
 ### <a name="parameters"></a>Parametry
 
 *pDockBar*<br/>
-[in] Wskaźnik do innego okienka.
+podczas Wskaźnik do innego okienka.
 
 *lpRect*<br/>
-[in] Określa prostokąta docelowego.
+podczas Określa prostokąt docelowy.
 
 *dockMethod*<br/>
-[in] Określa metodę dokowania.
+podczas Określa metodę dokowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli pasek sterowania był zadokowany pomyślnie; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli pasek sterowania został pomyślnie zadokowany; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję, aby zadokować okienko do innego okienka lub na pasku dokowania ( [klasa CDockSite](../../mfc/reference/cdocksite-class.md)) określonej przez *pDockBar*, lub do głównej ramki Jeśli *pDockBar* ma wartość NULL.
+Wywołaj tę funkcję, aby zadokować okienko w innym okienku lub na pasku dokowania ( [Klasa CDockSite](../../mfc/reference/cdocksite-class.md)), które jest określone przez *pDockBar*, lub do ramki głównej, jeśli *pDockBar* ma wartość null.
 
-*dockMethod* Określa, jak jest zadokowany okienka. Zobacz [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) listę możliwych wartości.
+*dockMethod* określa, w jaki sposób okienko jest zadokowane. Listę możliwych wartości można znaleźć w temacie [CPane::D ockpane](../../mfc/reference/cpane-class.md#dockpane) .
 
-##  <a name="dockpaneusingrtti"></a>  CBasePane::DockPaneUsingRTTI
+##  <a name="dockpaneusingrtti"></a>CBasePane::D ockPaneUsingRTTI
 
-Stacje dokujące okienka przy użyciu informacje typu run-time.
+Dokowanie okienka przy użyciu informacji o typie czasu wykonywania.
 
 ```
 void DockPaneUsingRTTI(BOOL bUseDockSite);
@@ -781,11 +781,11 @@ void DockPaneUsingRTTI(BOOL bUseDockSite);
 ### <a name="parameters"></a>Parametry
 
 *bUseDockSite*<br/>
-[in] W przypadku opcji TRUE zadokować się do witryny dokowania. W przypadku wartości FAŁSZ zadokować do nadrzędnej ramki.
+podczas Jeśli wartość jest równa TRUE, Zadokuj do lokacji dokowania. W przypadku wartości FALSE Zadokuj do ramki nadrzędnej.
 
-##  <a name="docktoframewindow"></a>  CBasePane::DockToFrameWindow
+##  <a name="docktoframewindow"></a>CBasePane::D ockToFrameWindow
 
-Dokowane dokowalne okienka w ramce.
+Dokowanie okienka było dokować do ramki.
 
 ```
 virtual BOOL DockToFrameWindow(
@@ -800,34 +800,34 @@ virtual BOOL DockToFrameWindow(
 ### <a name="parameters"></a>Parametry
 
 *dwAlignment*<br/>
-[in] Po stronie nadrzędnej ramki, który chcesz zadokować okienka, aby.
+podczas Strona ramki nadrzędnej, do której ma zostać zadokowane okienko.
 
 *lpRect*<br/>
-[in] Żądany rozmiar.
+podczas Żądany rozmiar.
 
 *dwDockFlags*<br/>
-[in] Ignorowane.
+podczas Ignoruj.
 
 *pRelativeBar*<br/>
-[in] Ignorowane.
+podczas Ignoruj.
 
 *nRelativeIndex*<br/>
-[in] Ignorowane.
+podczas Ignoruj.
 
 *bOuterEdge*<br/>
-[in] Jeśli wartość PRAWDA, a są inne dokowalne okienka po stronie określony przez *dwAlignment*, okienka jest zadokowany poza inne okienka bliżej krawędzią nadrzędnej ramki. W przypadku wartości FAŁSZ okienka jest zadokowany bliżej do środka obszaru klienta.
+podczas Jeśli wartość jest równa TRUE i istnieją inne okienka było dokować określone przez *dwAlignment*, okienko jest zadokowane poza innymi okienkami bliżej krawędzi ramki nadrzędnej. W przypadku wartości FALSE okienko jest zadokowane bliżej środka obszaru klienckiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli metoda zakończyła się pomyślnie. w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda kończy się niepowodzeniem, jeśli rozdzielacz okienka ( [klasa CPaneDivider](../../mfc/reference/cpanedivider-class.md)) nie można utworzyć. W przeciwnym razie zawsze zwraca wartość TRUE.
+Ta metoda kończy się niepowodzeniem, jeśli nie można utworzyć rozdzielacza okienka ( [Klasa CPaneDivider](../../mfc/reference/cpanedivider-class.md)). W przeciwnym razie zawsze zwraca wartość TRUE.
 
-##  <a name="doesallowdyninsertbefore"></a>  CBasePane::DoesAllowDynInsertBefore
+##  <a name="doesallowdyninsertbefore"></a>CBasePane::D oesAllowDynInsertBefore
 
-Określa, czy innego okienka mogą być dynamicznie między to okienko i dodaje nadrzędnej ramki.
+Określa, czy można dynamicznie wstawiać inne okienka między tym okienkiem i ramką nadrzędną.
 
 ```
 virtual BOOL DoesAllowDynInsertBefore() const;
@@ -835,19 +835,19 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli użytkownika można wstawić innego panelu. w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli użytkownik może wstawić inne okienko; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura wywołuje tę metodę w celu określenia, czy użytkownik może dynamicznie wstawiać okienko przed to okienko.
+Struktura wywołuje tę metodę, aby określić, czy użytkownik może dynamicznie wstawić okienko przed tym okienkiem.
 
-Na przykład załóżmy, że aplikacja tworzy okienko zadokowane po lewej stronie ramki (np. paska Outlook). Aby uniemożliwić użytkownikowi korzystanie z innego okienko dokowania pierwszego okienka po lewej stronie, należy przesłonić tę metodę i zwraca wartość FALSE.
+Załóżmy na przykład, że aplikacja tworzy okienko zadokowane po lewej stronie ramki (na przykład na pasku Outlook). Aby uniemożliwić użytkownikowi dokowanie innego okienka z lewej strony pierwszego okienka, Przesłoń tę metodę i zwróć wartość FALSE.
 
-Zalecamy, aby przesłonić tę metodę i zwraca wartość FALSE dla okienka niezmienny pochodną [klasa CDockablePane](../../mfc/reference/cdockablepane-class.md).
+Zalecamy przesłonięcie tej metody i zwrócenie wartości FALSE dla nieruchomych okienek pochodnych z [klasy CDockablePane](../../mfc/reference/cdockablepane-class.md).
 
-Domyślna implementacja zwraca wartość PRAWDA.
+Domyślna implementacja zwraca wartość TRUE.
 
-##  <a name="dopaint"></a>  CBasePane::DoPaint
+##  <a name="dopaint"></a>CBasePane::D oPaint
 
 Wypełnia tło okienka.
 
@@ -858,15 +858,15 @@ virtual void DoPaint(CDC* pDC);
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Wskaźnik do kontekstu urządzenia.
+podczas Wskaźnik do kontekstu urządzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja wywołanie bieżącego Menedżera visual w celu wypełnienia tła ( [CMFCVisualManager::OnFillBarBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillbarbackground)).
+Domyślna implementacja wywołuje bieżący program Visual Manager do wypełnienia tła ( [CMFCVisualManager:: OnFillBarBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillbarbackground)).
 
-##  <a name="enabledocking"></a>  CBasePane::EnableDocking
+##  <a name="enabledocking"></a>CBasePane::EnableDocking
 
-Umożliwia zadokowanie okienka w ramce głównej.
+Włącza Dokowanie okienka do ramki głównej.
 
 ```
 virtual void EnableDocking(DWORD dwAlignment);
@@ -875,19 +875,19 @@ virtual void EnableDocking(DWORD dwAlignment);
 ### <a name="parameters"></a>Parametry
 
 *dwAlignment*<br/>
-[in] Określa wyrównanie dokowania, aby włączyć.
+podczas Określa wyrównanie dokowania do włączenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę, aby umożliwić wyrównywanie dokowania do głównej ramki. Można przekazać kombinacja flag CBRS_ALIGN_ (Aby uzyskać więcej informacji, zobacz [CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)).
+Wywołaj tę metodę, aby włączyć wyrównanie dokowania do ramki głównej. Można przekazać kombinację flag CBRS_ALIGN_ (Aby uzyskać więcej informacji, zobacz [CControlBar:: EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)).
 
-`EnableDocking` Ustawia flagi wewnętrznej `CBasePane::m_dwEnabledAlignment` i platformę sprawdza tej flagi, gdy jest zadokowany w okienku.
+`EnableDocking`ustawia flagę `CBasePane::m_dwEnabledAlignment` wewnętrzną, a struktura sprawdza tę flagę, gdy okienko jest zadokowane.
 
-Wywołaj [CBasePane::GetEnabledAlignment](#getenabledalignment) Aby określić wyrównanie dokowania panelu.
+Wywołaj [CBasePane:: GetEnabledAlignment](#getenabledalignment) , aby określić wyrównanie dokowania dla okienka.
 
-##  <a name="enablegripper"></a>  CBasePane::EnableGripper
+##  <a name="enablegripper"></a>CBasePane::EnableGripper
 
-Włącza lub wyłącza uchwytu. Jeśli uchwytu jest włączony, użytkownik można przeciągnąć go, aby zmienić położenie okienka.
+Włącza lub wyłącza uchwyt. Jeśli uchwyt jest włączony, użytkownik może przeciągnąć go w celu zmiany położenia okienka.
 
 ```
 virtual void EnableGripper(BOOL bEnable);
@@ -895,16 +895,16 @@ virtual void EnableGripper(BOOL bEnable);
 
 ### <a name="parameters"></a>Parametry
 
-*bWłączenie*<br/>
-[in] Wartość TRUE powoduje włączenie uchwytu; Wartość FALSE, aby je wyłączyć.
+*bEnable*<br/>
+podczas PRAWDA, aby włączyć uchwyt; Wartość FALSE, aby ją wyłączyć.
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura używa tej metody, aby umożliwić uchwytu zamiast przy użyciu stylu WS_CAPTION.
+Struktura używa tej metody do włączania uchwytu zamiast stylu WS_CAPTION.
 
-##  <a name="floatpane"></a>  CBasePane::FloatPane
+##  <a name="floatpane"></a>CBasePane::FloatPane
 
-Liczby zmiennoprzecinkowe okienka.
+Przepływa z okienka.
 
 ```
 virtual BOOL FloatPane(
@@ -916,25 +916,25 @@ virtual BOOL FloatPane(
 ### <a name="parameters"></a>Parametry
 
 *rectFloat*<br/>
-[in] Określa współrzędne ekranu, w którym pojawia się okienko przestawne.
+podczas Określa współrzędne ekranu, w którym pojawia się okienko przestawne.
 
 *dockMethod*<br/>
-[in] Określa metodę dock za pomocą liczb zmiennoprzecinkowych okienka.
+podczas Określa metodę dokowania, która ma być używana do przesunięcia okienka.
 
 *bShow*<br/>
-[in] Określa, czy okienko przestawne jest widoczny (PRAWDA) lub ukryte (FALSE).
+podczas Określa, czy okienko przestawne jest widoczne (TRUE) czy ukryte (FALSE).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli okienka został pomyślnie; przestawione. w przeciwnym razie wartość FALSE.
+Wartość TRUE, jeśli okienko zostało pomyślnie przepływające; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę, float okienko pozycja ekranu, określony przez *rectFloat*.
+Wywołaj tę metodę, aby wystawić okienko w pozycji ekranu określonej przez *rectFloat*.
 
 ##  <a name="get_acchelptopic"></a>  CBasePane::get_accHelpTopic
 
-Struktura wywołuje tę metodę, aby pobrać pełną ścieżkę **WinHelp** pliku, który jest skojarzony z określonym obiektem oraz identyfikator odpowiedniego tematu w tym pliku.
+Struktura wywołuje tę metodę, aby pobrać pełną ścieżkę pliku **WinHelp** , który jest skojarzony z określonym obiektem oraz identyfikator odpowiedniego tematu w tym pliku.
 
 ```
 virtual HRESULT get_accHelpTopic(
@@ -946,25 +946,25 @@ virtual HRESULT get_accHelpTopic(
 ### <a name="parameters"></a>Parametry
 
 *pszHelpFile*<br/>
-[in] Adres BSTR, który odbiera pełną ścieżkę **WinHelp** pliku, który jest skojarzony z określonym obiektem, jeśli istnieje.
+podczas Adres typu BSTR, który otrzymuje pełną ścieżkę pliku **WinHelp** , który jest skojarzony z określonym obiektem, jeśli istnieje.
 
 *varChild*<br/>
-[in] Określa, czy tematu pomocy, które mają zostać pobrane z jednego z elementów podrzędnych obiektu lub obiektu. Ten parametr może być CHILDID_SELF (w celu uzyskania tematu pomocy dla obiektu) lub identyfikator elementu podrzędnego (w celu uzyskania tematu pomocy dla jednego elementu podrzędnego elementów obiektu).
+podczas Określa, czy temat pomocy ma być pobierany, czy obiekt lub jeden z elementów podrzędnych obiektu. Ten parametr może być CHILDID_SELF (w celu uzyskania tematu pomocy dla obiektu) lub identyfikatora podrzędnego (w celu uzyskania tematu pomocy dla jednego z elementów podrzędnych obiektu).
 
 *pidTopic*<br/>
-[in] Identyfikuje **pomocy** temat pliku, który jest skojarzony z określonym obiektem.
+podczas Identyfikuje temat pliku **pomocy** , który jest skojarzony z określonym obiektem.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`CBasePane` nie implementuje tej metody. W związku z tym `CBasePane::get_accHelpTopic` zawsze zwraca wartość S_FALSE.
+`CBasePane`nie implementuje tej metody. W związku `CBasePane::get_accHelpTopic` z tym zawsze zwraca S_FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest częścią obsługa Active Accessibility w MFC. Przesłonić tę funkcję w klasie pochodnej, aby podać informacje o obiekcie.
+Ta funkcja jest częścią aktywnej obsługi ułatwień dostępu w MFC. Przesłoń tę funkcję w klasie pochodnej, aby podać informacje pomocy dotyczące obiektu.
 
-##  <a name="get_accselection"></a>  CBasePane::get_accSelection
+##  <a name="get_accselection"></a>CBasePane::get_accSelection
 
-Struktura wywołuje tę metodę, aby pobrać zaznaczony element podrzędny tego obiektu.
+Struktura wywołuje tę metodę, aby pobrać wybrane elementy podrzędne tego obiektu.
 
 ```
 virtual HRESULT get_accSelection(VARIANT* pvarChildren);
@@ -973,19 +973,19 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ### <a name="parameters"></a>Parametry
 
 *pvarChildren*<br/>
-[in] Otrzymuje informacje umożliwiające identyfikację zaznaczony element podrzędny.
+podczas Odbiera informacje identyfikujące wybrane elementy podrzędne.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`CBasePane` nie implementuje tej metody. Jeśli *pvarChildren* ma wartość NULL, Metoda ta zwraca E_INVALIDARG. W przeciwnym razie metoda ta zwraca DISP_E_MEMBERNOTFOUND.
+`CBasePane`nie implementuje tej metody. Jeśli *pvarChildren* ma wartość null, metoda zwraca E_INVALIDARG. W przeciwnym razie metoda zwraca DISP_E_MEMBERNOTFOUND.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest częścią obsługa Active Accessibility w MFC. Należy przesłonić tę funkcję, w klasie pochodnej, jeśli masz elementy interfejsu użytkownika nie okienkowym niż niepowiązanej z oknami formantów ActiveX.
+Ta funkcja jest częścią aktywnej obsługi ułatwień dostępu w MFC. Zastąp tę funkcję w klasie pochodnej, jeśli masz nieokienkowe elementy interfejsu użytkownika inne niż kontrolki ActiveX bez okien.
 
-##  <a name="getcaptionheight"></a>  CBasePane::GetCaptionHeight
+##  <a name="getcaptionheight"></a>CBasePane::GetCaptionHeight
 
-Zwraca wysokość podpis.
+Zwraca wysokość napisu.
 
 ```
 virtual int GetCaptionHeight() const;
@@ -993,11 +993,11 @@ virtual int GetCaptionHeight() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wysokość podpis.
+Wysokość napisu.
 
-##  <a name="getcontrolbarstyle"></a>  CBasePane::GetControlBarStyle
+##  <a name="getcontrolbarstyle"></a>CBasePane::GetControlBarStyle
 
-Zwraca wartość stylu paska sterowania.
+Zwraca styl paska sterowania.
 
 ```
 virtual DWORD GetControlBarStyle() const
@@ -1005,7 +1005,7 @@ virtual DWORD GetControlBarStyle() const
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bitowe OR kombinacja flag AFX_CBRS_.
+Koniunkcja bitowa lub kombinacja flag AFX_CBRS_.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1013,14 +1013,14 @@ Wartość zwracana jest kombinacją następujących możliwych wartości.
 
 |Styl|Opis|
 |-----------|-----------------|
-|AFX_CBRS_FLOAT|Sprawia, że wartość zmiennoprzecinkowa paska sterowania.|
-|AFX_CBRS_AUTOHIDE|Umożliwia automatyczne ukrywanie trybu.|
-|AFX_CBRS_RESIZE|Umożliwia zmianę rozmiaru paska sterowania. Gdy ta flaga jest ustawiona, pasek sterowania można umieścić w okienku dokowalnych.|
+|AFX_CBRS_FLOAT|Sprawia, że pasek sterowania jest zmiennoprzecinkowy.|
+|AFX_CBRS_AUTOHIDE|Włącza tryb autoukrywania.|
+|AFX_CBRS_RESIZE|Włącza zmianę rozmiarów paska sterowania. Gdy ta flaga jest ustawiona, pasek sterowania można umieścić w okienku było dokować.|
 |AFX_CBRS_CLOSE|Umożliwia ukrycie paska sterowania.|
 
-##  <a name="getcurrentalignment"></a>  CBasePane::GetCurrentAlignment
+##  <a name="getcurrentalignment"></a>CBasePane::GetCurrentAlignment
 
-Zwraca bieżący wyrównanie okienka.
+Zwraca bieżące wyrównanie okienka.
 
 ```
 virtual DWORD GetCurrentAlignment() const;
@@ -1028,18 +1028,18 @@ virtual DWORD GetCurrentAlignment() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bieżący Wyrównanie paska sterowania. W poniższej tabeli przedstawiono możliwe wartości:
+Bieżące wyrównanie paska sterowania. W poniższej tabeli przedstawiono możliwe wartości:
 
 |Wartość|Wyrównanie|
 |-----------|---------------|
 |CBRS_ALIGN_LEFT|Wyrównanie do lewej.|
 |CBRS_ALIGN_RIGHT|Wyrównanie do prawej.|
-|CBRS_ALIGN_TOP|Wyrównanie do góry.|
+|CBRS_ALIGN_TOP|Pierwsze wyrównanie.|
 |CBRS_ALIGN_BOTTOM|Wyrównanie do dołu.|
 
-##  <a name="getdockingmode"></a>  CBasePane::GetDockingMode
+##  <a name="getdockingmode"></a>CBasePane::GetDockingMode
 
-Zwraca bieżący tryb dokujące okienka.
+Zwraca bieżący tryb dokowania dla okienka.
 
 ```
 virtual AFX_DOCK_TYPE GetDockingMode() const;
@@ -1047,19 +1047,19 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-DT_STANDARD Jeśli przeciąganie okienka przeciągnij prostokąt wskazuje na ekranie. DT_IMMEDIATE, jeśli zawartość okienka przeciągania.
+DT_STANDARD, jeśli przeciągając okienko na ekranie przy użyciu prostokąta przeciągania. DT_IMMEDIATE, jeśli zawartość okienka zostanie przeciągnięta.
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura wywołuje tę metodę, aby określić bieżący tryb dokujące okienka.
+Struktura wywołuje tę metodę w celu określenia bieżącego trybu dokowania okienka.
 
-Jeśli `CBasePane::m_dockMode` jest niezdefiniowana (DT_UNDEFINED), a następnie dokowania tryb jest pobierana z globalnego tryb dokowania (`AFX_GLOBAL_DATA::m_dockModeGlobal`).
+Jeśli `CBasePane::m_dockMode` jest niezdefiniowany (DT_UNDEFINED), tryb dokowania jest pobierany z globalnego trybu dokowania (`AFX_GLOBAL_DATA::m_dockModeGlobal`).
 
-Ustawiając *m_dockMode* lub zastępowanie `GetDockingMode` można kontrolować tryb każde okienko dokowania.
+Ustawiając *m_dockMode* lub zastępując `GetDockingMode` , można kontrolować tryb dokowania dla każdego okienka.
 
-##  <a name="getdocksiteframewnd"></a>  CBasePane::GetDockSiteFrameWnd
+##  <a name="getdocksiteframewnd"></a>CBasePane::GetDockSiteFrameWnd
 
-Zwraca wskaźnik do [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)obiektu, w której jest zadokowany okienka.
+Zwraca wskaźnik do obiektu [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md), w którym okienko jest zadokowane.
 
 ```
 virtual CWnd* GetDockSiteFrameWnd() const;
@@ -1067,15 +1067,15 @@ virtual CWnd* GetDockSiteFrameWnd() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do witryny dokowania okienka.
+Wskaźnik do lokacji dokowania okienka.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę, aby pobrać wskaźnika do witryny dokowania okienka. Witryny dokowania może być ramką głównego okna, jeśli panel jest zadokowany do głównej ramki lub okna mini ramki, jeśli okienko jest liczb zmiennoprzecinkowych.
+Wywołaj tę metodę, aby pobrać wskaźnik do lokacji Dock w okienku. Witryna Dock może być głównym oknem ramek, jeśli okienko jest zadokowane do ramki głównej, lub okno mini-frame, jeśli okienko jest przestawne.
 
-##  <a name="getenabledalignment"></a>  CBasePane::GetEnabledAlignment
+##  <a name="getenabledalignment"></a>CBasePane::GetEnabledAlignment
 
-Zwraca CBRS_ALIGN_ style, które są stosowane do okienka.
+Zwraca Style CBRS_ALIGN_, które są stosowane do okienka.
 
 ```
 virtual DWORD GetEnabledAlignment() const;
@@ -1083,25 +1083,25 @@ virtual DWORD GetEnabledAlignment() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Kombinacja CBRS_ALIGN_ style. W poniższej tabeli przedstawiono możliwe style:
+Kombinacja stylów CBRS_ALIGN_. W poniższej tabeli przedstawiono możliwe style:
 
-|Flaga|Wyrównanie włączone|
+|Flaga|Włączone wyrównanie|
 |----------|-----------------------|
-|CBRS_ALIGN_LEFT|Po lewej stronie.|
-|CBRS_ALIGN_RIGHT|Po prawej stronie.|
-|CBRS_ALIGN_TOP|Top.|
-|CBRS_ALIGN_BOTTOM|Do dołu.|
-|CBRS_ALIGN_ANY|Kombinacja flag.|
+|CBRS_ALIGN_LEFT|Lewym.|
+|CBRS_ALIGN_RIGHT|Kliknij.|
+|CBRS_ALIGN_TOP|Do góry.|
+|CBRS_ALIGN_BOTTOM|Stop.|
+|CBRS_ALIGN_ANY|Kombinacja wszystkich flag.|
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę, aby określić wyrównanie włączone dla tego okienka. Wyrównanie włączone oznacza strony ramki głównego okna, który może być zadokowane okienko do.
+Wywołaj tę metodę, aby określić wyrównanie włączone dla okienka. Wyrównanie włączone oznacza boki okna głównego ramki, do którego można zadokować okienko.
 
-Włącz dokowania wyrównanie przy użyciu [CBasePane::EnableDocking](#enabledocking).
+Włącz wyrównania dokowania przy użyciu [CBasePane:: EnableDocking](#enabledocking).
 
-##  <a name="getmfcstyle"></a>  CBasePane::GetMFCStyle
+##  <a name="getmfcstyle"></a>CBasePane::GetMFCStyle
 
-Zwraca style okienko, które są specyficzne dla MFC.
+Zwraca Style okienka, które są specyficzne dla MFC.
 
 ```
 virtual DWORD GetMFCStyle() const;
@@ -1109,11 +1109,11 @@ virtual DWORD GetMFCStyle() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Kombinacja specyficzne dla biblioteki (AFX_CBRS_) w okienku style.
+Kombinacja stylów okienka specyficznego dla biblioteki (AFX_CBRS_).
 
-##  <a name="getpaneicon"></a>  CBasePane::GetPaneIcon
+##  <a name="getpaneicon"></a>CBasePane::GetPaneIcon
 
-Zwraca uchwyt do ikony okienka.
+Zwraca dojście do ikony okienka.
 
 ```
 virtual HICON GetPaneIcon(BOOL bBigIcon);
@@ -1122,19 +1122,19 @@ virtual HICON GetPaneIcon(BOOL bBigIcon);
 ### <a name="parameters"></a>Parametry
 
 *bBigIcon*<br/>
-[in] Określa 32 piksele ikoną pikseli 32 w przypadku opcji TRUE; Określa 16 pikseli, 16 ikona pikseli, jeśli wartość to FALSE.
+podczas Określa ikonę 32 pikseli o 32 pikseli w przypadku wartości TRUE; Określa ikonę 16 pikseli o 16 pikseli w przypadku wartości FALSE.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Dojście do ikony okienka. W przypadku niepowodzenia zwraca wartość NULL.
+Uchwyt ikony okienka. Jeśli nie powiedzie się, zwraca wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja wywołuje [CWnd::GetIcon](../../mfc/reference/cwnd-class.md#geticon).
+Domyślne wywołania implementacji [CWnd:: GetIcon](../../mfc/reference/cwnd-class.md#geticon).
 
-##  <a name="getpanerow"></a>  CBasePane::GetPaneRow
+##  <a name="getpanerow"></a>CBasePane::GetPaneRow
 
-Zwraca wskaźnik do [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)obiektu, w której jest zadokowany okienka.
+Zwraca wskaźnik do obiektu [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md), w którym okienko jest zadokowane.
 
 ```
 CDockingPanesRow* GetPaneRow();
@@ -1142,15 +1142,15 @@ CDockingPanesRow* GetPaneRow();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do `CDockingPanesRow` Jeśli okienko jest zadokowany lub wartość NULL, jeśli jest liczb zmiennoprzecinkowych.
+Wskaźnik do `CDockingPanesRow` , jeśli okienko jest zadokowane lub ma wartość null, jeśli jest zmiennoprzecinkowe.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę w celu dostępu do wiersza, w której jest zadokowany w okienku. Na przykład aby rozmieścić okienka w określonym wierszu, należy wywołać `GetPaneRow` , a następnie wywołać [CDockingPanesRow::ArrangePanes](../../mfc/reference/cdockingpanesrow-class.md#arrangepanes).
+Wywołaj tę metodę, aby uzyskać dostęp do wiersza, w którym okienko jest zadokowane. Na przykład, aby rozmieścić okienka w określonym wierszu, wywołać `GetPaneRow` , a następnie wywołać [CDockingPanesRow:: ArrangePanes](../../mfc/reference/cdockingpanesrow-class.md#arrangepanes).
 
-##  <a name="getpanestyle"></a>  CBasePane::GetPaneStyle
+##  <a name="getpanestyle"></a>CBasePane:: getokienks
 
-Zwraca wartość stylu okienka.
+Zwraca styl okienka.
 
 ```
 virtual DWORD GetPaneStyle() const;
@@ -1158,11 +1158,11 @@ virtual DWORD GetPaneStyle() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Połączenie paska sterowania stylów (w tym style CBRS_), które zostały ustawione przez [CBasePane::SetPaneStyle](#setpanestyle) metody w czasie jego tworzenia.
+Kombinacja stylów paska sterowania (w tym stylów CBRS_) ustawionych przy użyciu metody [CBasePane::](#setpanestyle) setpropans w czasie tworzenia.
 
-##  <a name="getparentdocksite"></a>  CBasePane::GetParentDockSite
+##  <a name="getparentdocksite"></a>CBasePane::GetParentDockSite
 
-Zwraca wskaźnik do lokacji nadrzędnej w obszarze docka.
+Zwraca wskaźnik do nadrzędnej lokacji dokowania.
 
 ```
 virtual CDockSite* GetParentDockSite() const;
@@ -1170,11 +1170,11 @@ virtual CDockSite* GetParentDockSite() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zadokuj lokacji nadrzędnej.
+Nadrzędna lokacja Dock.
 
-##  <a name="getparentminiframe"></a>  CBasePane::GetParentMiniFrame
+##  <a name="getparentminiframe"></a>CBasePane::GetParentMiniFrame
 
-Zwraca wskaźnik do nadrzędnego okna mini ramki.
+Zwraca wskaźnik do okna nadrzędnego ramki.
 
 ```
 virtual CPaneFrameWnd* GetParentMiniFrame(BOOL bNoAssert=FALSE) const;
@@ -1183,21 +1183,21 @@ virtual CPaneFrameWnd* GetParentMiniFrame(BOOL bNoAssert=FALSE) const;
 ### <a name="parameters"></a>Parametry
 
 *bNoAssert*<br/>
-[in] W przypadku opcji TRUE, ta metoda nie sprawdza wskaźniki nie jest ważna. Jeśli ta metoda jest wywoływana, gdy aplikacja zakończy działanie, należy ustawić ten parametr na wartość TRUE.
+podczas Jeśli wartość jest równa TRUE, ta metoda nie sprawdza, czy wskaźniki nie są prawidłowe. Jeśli ta metoda zostanie wywołana po zakończeniu działania aplikacji, należy ustawić dla tego parametru wartość TRUE.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nieprawidłowy wskaźnik do nadrzędnego okna mini ramki, jeśli okienko jest liczb zmiennoprzecinkowych; w przeciwnym razie wartość NULL.
+Prawidłowy wskaźnik do nadrzędnego okna z ramkami, jeśli okienko jest przestawne; w przeciwnym razie wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję, aby pobrać wskaźnika do nadrzędnego okna mini ramki. Ta metoda wykonuje iterację przez wszystkie elementy nadrzędne i sprawdza, czy obiekt jest pochodną [klasa CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).
+Wywołaj tę funkcję, aby pobrać wskaźnik do okna nadrzędnego typu mini-frame. Ta metoda iteruje przez wszystkie elementy nadrzędne i sprawdza dla obiektu pochodnego od [klasy CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).
 
-Użyj `GetParentMiniFrame` do określenia, czy okienko jest liczb zmiennoprzecinkowych.
+Użyj `GetParentMiniFrame` , aby określić, czy okienko jest przestawne.
 
-##  <a name="getparenttabbedpane"></a>  CBasePane::GetParentTabbedPane
+##  <a name="getparenttabbedpane"></a>CBasePane::GetParentTabbedPane
 
-Zwraca wskaźnik do okienka z zakładkami nadrzędnej.
+Zwraca wskaźnik do okienka nadrzędnego z kartami.
 
 ```
 CBaseTabbedPane* GetParentTabbedPane() const;
@@ -1205,11 +1205,11 @@ CBaseTabbedPane* GetParentTabbedPane() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do okienka z zakładkami nadrzędnego, jeśli istnieje; w przeciwnym razie wartość NULL.
+Wskaźnik do nadrzędnego okienka z kartami, jeśli istnieje; w przeciwnym razie wartość NULL.
 
-##  <a name="getparenttabwnd"></a>  CBasePane::GetParentTabWnd
+##  <a name="getparenttabwnd"></a>CBasePane::GetParentTabWnd
 
-Zwraca wskaźnik do okna nadrzędnego, który znajduje się wewnątrz karty.
+Zwraca wskaźnik do okna nadrzędnego znajdującego się wewnątrz karty.
 
 ```
 CMFCBaseTabCtrl* GetParentTabWnd(HWND& hWndTab) const;
@@ -1218,19 +1218,19 @@ CMFCBaseTabCtrl* GetParentTabWnd(HWND& hWndTab) const;
 ### <a name="parameters"></a>Parametry
 
 *hWndTab*<br/>
-[out] Jeśli wartość zwracana nie jest NULL, ten parametr zawiera dojście do nadrzędnego okna z kartami.
+określoną Jeśli zwracana wartość nie jest RÓWNa NULL, ten parametr zawiera uchwyt do okna nadrzędnego z kartami.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nieprawidłowy wskaźnik do elementu nadrzędnego z kartami, okno lub wartość NULL.
+Prawidłowy wskaźnik do okna nadrzędnego z kartami lub wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja służy do pobierania wskaźnik do nadrzędnego okna z kartami. Czasami nie wystarcza do wywołania `GetParent`, ponieważ okienko może znajdować się wewnątrz dokowania otoki ( [klasa CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)) lub wewnątrz karty w okienku ( [klasa CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)). Za pomocą `GetParentTabWnd` będzie można pobrać prawidłowego wskaźnika w tych przypadkach (przy założeniu, że element nadrzędny jest oknem z kartami).
+Użyj tej funkcji, aby pobrać wskaźnik do okna nadrzędnego z kartami. Czasami nie jest wystarczające do wywołania `GetParent`, ponieważ okienko może znajdować się wewnątrz otoki dokującej ( [Klasa CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)) lub wewnątrz karty okienka ( [Klasa CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)). Za pomocą `GetParentTabWnd` tego polecenia będzie można pobrać prawidłowy wskaźnik w tych przypadkach (przy założeniu, że element nadrzędny jest oknem z kartami).
 
-##  <a name="getrecentvisiblestate"></a>  CBasePane::GetRecentVisibleState
+##  <a name="getrecentvisiblestate"></a>CBasePane::GetRecentVisibleState
 
-Struktura wywołuje tę metodę, gdy okienko jest przywracany z archiwum.
+Struktura wywołuje tę metodę po przywróceniu okienka z archiwum.
 
 ```
 virtual BOOL GetRecentVisibleState() const;
@@ -1238,11 +1238,11 @@ virtual BOOL GetRecentVisibleState() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość logiczna określająca ostatnie widoczności. W przypadku opcji TRUE okienka było widoczne, gdy serializowany i powinny być widoczne po przywróceniu. W przypadku wartości FAŁSZ okienka został ukryty podczas serializacji i powinna być ukryta, po przywróceniu.
+Wartość logiczna, która określa ostatni widoczny stan. Jeśli wartość jest równa TRUE, okienko było widoczne podczas serializacji i powinno być widoczne po przywróceniu. W przypadku wartości FALSE okienko było ukrywane podczas serializacji i powinny być ukryte po przywróceniu.
 
-##  <a name="hideinprintpreviewmode"></a>  CBasePane::HideInPrintPreviewMode
+##  <a name="hideinprintpreviewmode"></a>CBasePane::HideInPrintPreviewMode
 
-Określa, czy panel jest ukryty w podglądzie wydruku.
+Określa, czy okienko jest ukryte w podglądzie wydruku.
 
 ```
 virtual BOOL HideInPrintPreviewMode() const;
@@ -1250,15 +1250,15 @@ virtual BOOL HideInPrintPreviewMode() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli okienko nie jest wyświetlany w podglądzie wydruku; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli okienko nie jest wyświetlane w podglądzie wydruku. w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Podstawowy okienka nie są wyświetlane w podglądzie wydruku. W związku z tym ta metoda zawsze zwraca wartość TRUE.
+Okienka podstawowe nie są wyświetlane w podglądzie wydruku. W związku z tym ta metoda zawsze zwraca wartość TRUE.
 
-##  <a name="insertpane"></a>  CBasePane::InsertPane
+##  <a name="insertpane"></a>CBasePane::InsertPane
 
-Rejestruje określony okienka dokowania menedżera.
+Rejestruje określone okienko przy użyciu Menedżera dokowania.
 
 ```
 BOOL InsertPane(
@@ -1270,21 +1270,21 @@ BOOL InsertPane(
 ### <a name="parameters"></a>Parametry
 
 *pControlBar*<br/>
-[in] Wskaźnik do okienka do wstawienia.
+podczas Wskaźnik do okienka do wstawienia.
 
 *pTarget*<br/>
-[in] Wskaźnik do sąsiadujących okienka.
+podczas Wskaźnik do sąsiadującego okienka.
 
-*bPo*<br/>
-[in] W przypadku opcji TRUE *pControlBar* po *pTarget*. W przypadku wartości FAŁSZ *pControlBar* jest wstawiany przed *pTarget*.
+*bAfter*<br/>
+podczas W przypadku wartości TRUE *pControlBar* jest wstawiany po *pTarget*. W przypadku wartości FALSE *pControlBar* jest wstawiany przed *pTarget*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli metoda się powiedzie, wartość FALSE w przeciwnym razie.
+Ma wartość TRUE, jeśli metoda się powiedzie, w przeciwnym razie FALSE.
 
-##  <a name="isaccessibilitycompatible"></a>  CBasePane::IsAccessibilityCompatible
+##  <a name="isaccessibilitycompatible"></a>CBasePane::IsAccessibilityCompatible
 
-Określa, czy okienka obsługuje Active Accessibility.
+Określa, czy okienko obsługuje funkcję Active Accessibility.
 
 ```
 virtual BOOL IsAccessibilityCompatible();
@@ -1292,11 +1292,11 @@ virtual BOOL IsAccessibilityCompatible();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli zawartość okienka obsługuje Active Accessibility; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli okienko obsługuje funkcję Active Accessibility; w przeciwnym razie FALSE.
 
-##  <a name="isautohidemode"></a>  CBasePane::IsAutoHideMode
+##  <a name="isautohidemode"></a>CBasePane:: autoukrywaniemode
 
-Określa, czy okienko znajduje się w trybie autoukrywania.
+Określa, czy okienko jest w trybie autoukrywania.
 
 ```
 virtual BOOL IsAutoHideMode() const;
@@ -1304,15 +1304,15 @@ virtual BOOL IsAutoHideMode() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli okienko jest w trybie autoukrywania; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli okienko jest w trybie Autoukrywanie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Podstawowy okienka nie automatycznego ukrywania. Ta metoda zawsze zwraca wartość FALSE.
+Okienka podstawowe nie mogą być ukrywane Autoukrywanie. Ta metoda zawsze zwraca wartość FALSE.
 
-##  <a name="isdialogcontrol"></a>  CBasePane::IsDialogControl
+##  <a name="isdialogcontrol"></a>CBasePane::IsDialogControl
 
-Określa, czy okienka kontrolka okna dialogowego.
+Określa, czy okienko jest kontrolką okna dialogowego.
 
 ```
 BOOL IsDialogControl() const;
@@ -1320,15 +1320,15 @@ BOOL IsDialogControl() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli kontrolka okna dialogowego; jest okienko w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli okienko jest kontrolką okna dialogowego; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura używa tej metody, aby zapewnić spójność układu dla wszystkich okienek.
+Struktura używa tej metody do zapewnienia spójności układu dla wszystkich okienek.
 
 ##  <a name="isdocked"></a>  CBasePane::IsDocked
 
-Określa, czy panel jest zadokowany.
+Określa, czy okienko jest zadokowane.
 
 ```
 virtual BOOL IsDocked() const;
@@ -1336,11 +1336,11 @@ virtual BOOL IsDocked() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli nie jest elementem nadrzędnym okienka mini ramki lub okienku jest pojawi się w mini ramki za pomocą innego panelu. w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli element nadrzędny okienka nie jest ramką mini lub jeśli okienko jest przenoszone w postaci minimalnej ramki z innym okienkiem; w przeciwnym razie FALSE.
 
-##  <a name="isfloating"></a>  CBasePane::IsFloating
+##  <a name="isfloating"></a>CBasePane:: isfloating
 
-Określa, czy jest liczb zmiennoprzecinkowych okienka.
+Określa, czy okienko jest przestawne.
 
 ```
 virtual BOOL IsFloating() const;
@@ -1348,15 +1348,15 @@ virtual BOOL IsFloating() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli jest zmiennoprzecinkowych okienka; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli okienko jest przestawne; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda zwraca przeciwną wartość [CBasePane::IsDocked](#isdocked).
+Ta metoda zwraca wartość przeciwną elementu [CBasePane::](#isdocked)isdocked.
 
-##  <a name="ishorizontal"></a>  CBasePane::IsHorizontal
+##  <a name="ishorizontal"></a>CBasePane:: ispoziome
 
-Określa, czy panel jest zadokowany poziomo.
+Określa, czy okienko jest zadokowane w poziomie.
 
 ```
 virtual BOOL IsHorizontal() const;
@@ -1364,15 +1364,15 @@ virtual BOOL IsHorizontal() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli panel jest zadokowany poziomo; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli okienko jest zadokowane w poziomie. w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja sprawdza, czy bieżący wyrównanie dokowania CBRS_ORIENT_HORZ.
+Domyślna implementacja sprawdza bieżące wyrównania dokowania dla CBRS_ORIENT_HORZ.
 
-##  <a name="isinfloatingmultipaneframewnd"></a>  CBasePane::IsInFloatingMultiPaneFrameWnd
+##  <a name="isinfloatingmultipaneframewnd"></a>CBasePane::IsInFloatingMultiPaneFrameWnd
 
-Określa, czy okienka w oknie ramowym okienko wielu ( [klasa CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md)).
+Określa, czy okienko znajduje się w wielookienkowym oknie ramek ( [Klasa CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md)).
 
 ```
 virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
@@ -1380,15 +1380,15 @@ virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli okienka znajduje się w oknie ramce okienka wielu; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli okienko znajduje się w wielookienkowym oknie ramek; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Tylko okienek dokowalnych poruszać się w oknie ramowym wielu okienka. W związku z tym `CBasePane::IsInFloatingMultiPaneFrameWnd` zawsze zwraca wartość FALSE.
+Tylko okienka było dokować mogą być zmiennoprzecinkowe w wielookienkowym oknie ramek. W związku `CBasePane::IsInFloatingMultiPaneFrameWnd` z tym zawsze zwraca wartość false.
 
-##  <a name="ismditabbed"></a>  CBasePane::IsMDITabbed
+##  <a name="ismditabbed"></a>CBasePane::IsMDITabbed
 
-Określa, czy okienka zostały dodane do okna podrzędnego MDI jako dokument z kartami.
+Określa, czy okienko zostało dodane do podrzędnego okna MDI jako dokument z kartami.
 
 ```
 virtual BOOL IsMDITabbed() const;
@@ -1396,11 +1396,11 @@ virtual BOOL IsMDITabbed() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli okienka została dodana do jako dokument z kartami; okno podrzędne MDI w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli okienko zostało dodane do podrzędnego okna MDI jako dokument z kartami. w przeciwnym razie FALSE.
 
-##  <a name="ispanevisible"></a>  CBasePane::IsPaneVisible
+##  <a name="ispanevisible"></a>CBasePane::IsPaneVisible
 
-Określa, czy ustawiono flagę WS_VISIBLE, dla tego okienka.
+Określa, czy flaga WS_VISIBLE jest ustawiona dla okienka.
 
 ```
 BOOL IsPaneVisible() const;
@@ -1408,15 +1408,15 @@ BOOL IsPaneVisible() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli ustawiono WS_VISIBLE; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli ustawiono WS_VISIBLE; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj [CBasePane::IsVisible](#isvisible) Aby ustalić widoczność okienka.
+Użyj [CBasePane:: IsVisible](#isvisible) , aby określić widoczność okienka.
 
-##  <a name="ispointneardocksite"></a>  CBasePane::IsPointNearDockSite
+##  <a name="ispointneardocksite"></a>CBasePane::IsPointNearDockSite
 
-Określa, czy określony punkt znajduje się w pobliżu witryny dokowania.
+Określa, czy określony punkt znajduje się blisko lokacji dokowania.
 
 ```
 BOOL IsPointNearDockSite(
@@ -1427,24 +1427,24 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parametry
 
-*Punkt*<br/>
-[in] Określony punkt.
+*moment*<br/>
+podczas Określony punkt.
 
 *dwBarAlignment*<br/>
-[out] Określa, które krawędzi punkt znajduje się w pobliżu. Możliwe wartości to CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP i CBRS_ALIGN_BOTTOM
+określoną Określa, która krawędź punktu jest bliska. Możliwe wartości to CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP i CBRS_ALIGN_BOTTOM
 
 *bOuterEdge*<br/>
-[out] Wartość TRUE, jeśli punkt znajduje się w pobliżu zewnętrznymi krawędziami witryny dokowania; Wartość FALSE w przeciwnym razie.
+określoną Ma wartość TRUE, jeśli punkt znajduje się blisko zewnętrznego obramowania witryny Docker; W przeciwnym razie zwraca wartość FALSE.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli punkt znajduje się w pobliżu witryny dokowania; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli punkt znajduje się blisko witryny Docker; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Punkt znajduje się w pobliżu witryny dokowania, gdy znajduje się w czułości w Menedżerze dokowania. Czułość domyślną jest 15 pikseli.
+Punkt znajduje się blisko lokacji dokowania, gdy znajduje się ona w zestawie czułym w Menedżerze dokowania. Domyślna czułość to 15 pikseli.
 
-##  <a name="isresizable"></a>  CBasePane::IsResizable
+##  <a name="isresizable"></a>CBasePane::IsResizable
 
 Określa, czy można zmienić rozmiar okienka.
 
@@ -1454,17 +1454,17 @@ virtual BOOL IsResizable() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli można zmienić rozmiar okienka przez użytkownika; w przeciwnym razie wartość FALSE.
+Wartość TRUE, jeśli można zmienić rozmiar okienka przez użytkownika; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Okienka [klasa CDockablePane](../../mfc/reference/cdockablepane-class.md) rozmiar można zmieniać.
+Można zmienić rozmiar okienek [klasy CDockablePane](../../mfc/reference/cdockablepane-class.md) .
 
-Na pasku stanu ( [klasa CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)) i na pasku dokowania ( [klasa CDockSite](../../mfc/reference/cdocksite-class.md)) nie można zmienić rozmiaru.
+Nie można zmienić rozmiaru paska stanu ( [Klasa CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)) i paska dokowania ( [Klasa CDockSite](../../mfc/reference/cdocksite-class.md)).
 
-##  <a name="isrestoredfromregistry"></a>  CBasePane::IsRestoredFromRegistry
+##  <a name="isrestoredfromregistry"></a>CBasePane::IsRestoredFromRegistry
 
-Określa, czy okienko jest przywracany z rejestru.
+Określa, czy okienko jest przywracane z rejestru.
 
 ```
 virtual BOOL IsRestoredFromRegistry() const;
@@ -1472,11 +1472,11 @@ virtual BOOL IsRestoredFromRegistry() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli zawartość okienka jest przywracany z rejestru; w przeciwnym razie wartość FALSE.
+Wartość TRUE, jeśli okienko zostanie przywrócone z rejestru; w przeciwnym razie FALSE.
 
-##  <a name="istabbed"></a>  CBasePane::IsTabbed
+##  <a name="istabbed"></a>CBasePane:: istab
 
-Określa, czy kontrolka karty okna z kartami włożono okienka.
+Określa, czy okienko zostało wstawione do kontrolki Karta okna z kartami.
 
 ```
 virtual BOOL IsTabbed() const;
@@ -1484,15 +1484,15 @@ virtual BOOL IsTabbed() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli pasek sterowania jest wstawiana w karcie okna z kartami; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli pasek sterowania zostanie wstawiony na karcie okna z kartami; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda pobiera wskaźnik do bezpośredni obiekt nadrzędny i określa, czy klasy środowiska uruchomieniowego nadrzędnego [klasa CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md).
+Ta metoda pobiera wskaźnik do bezpośredniego elementu nadrzędnego i określa, czy Klasa środowiska uruchomieniowego elementu nadrzędnego jest [klasą CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md).
 
-##  <a name="isvisible"></a>  CBasePane::IsVisible
+##  <a name="isvisible"></a>CBasePane:: IsVisible
 
-Określa, czy w okienku jest widoczna.
+Określa, czy okienko jest widoczne.
 
 ```
 virtual BOOL IsVisible() const;
@@ -1500,15 +1500,15 @@ virtual BOOL IsVisible() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli okienko jest widoczne; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli okienko jest widoczne; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby ustalić widoczność okienka, należy użyć tej metody. Nie używaj `::IsWindowVisible`.
+Użyj tej metody, aby określić widoczność okienka. Nie należy używać `::IsWindowVisible`.
 
-Jeśli okienko nie jest z kartami (zobacz [CBasePane::IsTabbed](#istabbed)), ta metoda sprawdza, czy styl WS_VISIBLE. Jeśli okienko jest z zakładkami, ta metoda sprawdza widoczność okna nadrzędnego z kartami. Jeśli okno nadrzędne jest widoczny, funkcja sprawdza, czy widoczność okienka kartę za pomocą [CMFCBaseTabCtrl::IsTabVisible](../../mfc/reference/cmfcbasetabctrl-class.md#istabvisible).
+Jeśli okienko nie jest z zakładkami (zobacz [CBasePane::](#istabbed)istabd), ta metoda sprawdza styl WS_VISIBLE. Jeśli okienko jest z zakładkami, ta metoda sprawdza widoczność nadrzędnego okna z kartami. Jeśli okno nadrzędne jest widoczne, funkcja sprawdza widoczność karty okienka przy użyciu [CMFCBaseTabCtrl:: IsTabVisible](../../mfc/reference/cmfcbasetabctrl-class.md#istabvisible).
 
-##  <a name="loadstate"></a>  CBasePane::LoadState
+##  <a name="loadstate"></a>CBasePane:: LoadState
 
 Ładuje stan okienka z rejestru.
 
@@ -1522,25 +1522,25 @@ virtual BOOL LoadState(
 ### <a name="parameters"></a>Parametry
 
 *lpszProfileName*<br/>
-[in] Nazwa profilu.
+podczas Nazwa profilu.
 
 *nIndex*<br/>
-[in] Indeks profilu.
+podczas Indeks profilu.
 
 *uiID*<br/>
-[in] Identyfikator okienka.
+podczas Identyfikator okienka.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli stan okienka został załadowany pomyślnie; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli stan okienka został pomyślnie załadowany; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura wywołuje tę metodę, aby załadować stan okienka z rejestru. Jej zastąpienie w klasie pochodnej, aby załadować dodatkowe informacje zapisane przez [CBasePane::SaveState](#savestate).
+Struktura wywołuje tę metodę, aby załadować stan okienka z rejestru. Zastąp go w klasie pochodnej w celu załadowania dodatkowych informacji zapisanych przez [CBasePane:: SaveState](#savestate).
 
-##  <a name="movewindow"></a>  CBasePane::MoveWindow
+##  <a name="movewindow"></a>CBasePane::MoveWindow
 
-Przeniesienie okienka.
+Przenosi okienko.
 
 ```
 virtual HDWP MoveWindow(
@@ -1551,26 +1551,26 @@ virtual HDWP MoveWindow(
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
-[in] Prostokąt, określając nową lokalizację i rozmiar okienka.
+*cinania*<br/>
+podczas Prostokąt określający nową lokalizację i rozmiar okienka.
 
 *bRepaint*<br/>
-[in] W przypadku opcji TRUE jest odświeżana okienka. W przypadku wartości FAŁSZ okienka nie jest odświeżana.
+podczas W przypadku wartości TRUE okienko jest odświeżane. W przypadku wartości FALSE okienko nie jest odświeżane.
 
 *hdwp*<br/>
-[in] Dojście do struktury położenie okna odroczone.
+podczas Dojście do rozłożonej struktury położenia okna.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Dojście do struktury położenie okna odroczonego lub wartość NULL.
+Dojście do rozłożonej struktury położenia okna lub wartości NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-W przypadku przekazania wartości NULL jako *hdwp* parametru tej metody zwykle przesuwa okno. Jeśli przekażesz uchwyt, ta metoda przeprowadza przejście odroczonego okna. Dojście można uzyskać wywołując [BeginDeferWindowPos](/windows/desktop/api/winuser/nf-winuser-begindeferwindowpos) lub umieszczając wartość zwracaną przez poprzednie wywołanie tej metody.
+Jeśli wartość NULL zostanie przekazana jako parametr *hdwp* , ta metoda przeniesie normalne okno. W przypadku przekazania dojścia ta metoda wykonuje odroczone przeniesienie okna. Możesz uzyskać uchwyt poprzez wywołanie [BeginDeferWindowPos](/windows/win32/api/winuser/nf-winuser-begindeferwindowpos) lub przez zapisanie wartości zwracanej przez poprzednie wywołanie tej metody.
 
-##  <a name="onafterchangeparent"></a>  CBasePane::OnAfterChangeParent
+##  <a name="onafterchangeparent"></a>CBasePane::OnAfterChangeParent
 
-Wywoływane przez platformę, po wprowadzeniu zmian nadrzędnego tego okienka.
+Wywoływane przez platformę po zmianach elementu nadrzędnego okienka.
 
 ```
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
@@ -1579,17 +1579,17 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ### <a name="parameters"></a>Parametry
 
 *pWndOldParent*<br/>
-[in] Wskaźnik do poprzedniego elementu nadrzędnego.
+podczas Wskaźnik do poprzedniego elementu nadrzędnego.
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura wywołuje tę metodę po nadrzędnej okienko zmian zwykle z powodu operacji dokowania lub zmiennoprzecinkową.
+Struktura wywołuje tę metodę po zmianach elementu nadrzędnego okienka, zazwyczaj z powodu operacji dokowania lub zmiennoprzecinkowej.
 
-Domyślna implementacja nic nie robi.
+Domyślna implementacja nie robi nic.
 
-##  <a name="onbeforechangeparent"></a>  CBasePane::OnBeforeChangeParent
+##  <a name="onbeforechangeparent"></a>CBasePane::OnBeforeChangeParent
 
-Wywoływane przez platformę, tuż przed, w okienku zmienia okna nadrzędnego.
+Wywoływane przez platformę tuż przed zmianą okna nadrzędnego w okienku.
 
 ```
 virtual void OnBeforeChangeParent(
@@ -1600,20 +1600,20 @@ virtual void OnBeforeChangeParent(
 ### <a name="parameters"></a>Parametry
 
 *pWndNewParent*<br/>
-[in] Wskaźnik do nowego okna nadrzędnego.
+podczas Wskaźnik do nowego okna nadrzędnego.
 
 *bDelay*<br/>
-[in] Określa, czy opóźnienia dostosowania układu.
+podczas Określa, czy regulacje układu muszą być opóźnione.
 
 ### <a name="remarks"></a>Uwagi
 
-Platforma wywołuje tę metodę, tuż przed okienka nadrzędnego zmienia znajdujący się zwykle z powodu dokowania, zmiennoprzecinkowego lub automatycznego ukrywania operacji.
+Struktura wywołuje tę metodę tuż przed zmianami nadrzędnymi okienka, zazwyczaj z powodu operacji dokowania, przepływającej lub Autoukrywanie.
 
-Domyślna implementacja nic nie robi.
+Domyślna implementacja nie robi nic.
 
-##  <a name="ondrawcaption"></a>  CBasePane::OnDrawCaption
+##  <a name="ondrawcaption"></a>CBasePane::OnDrawCaption
 
-Struktura wywołuje tę metodę podczas rysowania podpis.
+Struktura wywołuje tę metodę po narysowaniu podpisu.
 
 ```
 virtual void OnDrawCaption();
@@ -1621,9 +1621,9 @@ virtual void OnDrawCaption();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda nie ma żadnych funkcji `CBasePane` klasy.
+Ta metoda nie ma funkcji dla `CBasePane` klasy.
 
-##  <a name="onmovepanedivider"></a>  CBasePane::OnMovePaneDivider
+##  <a name="onmovepanedivider"></a>CBasePane::OnMovePaneDivider
 
 Ta metoda nie jest obecnie używana.
 
@@ -1633,12 +1633,12 @@ virtual void OnMovePaneDivider(CPaneDivider* /* unused */);
 
 ### <a name="parameters"></a>Parametry
 
-*Nieużywane*<br/>
-[in] Nie jest używany.
+*Przestrzeń*<br/>
+podczas Nieużywane.
 
-##  <a name="onpanecontextmenu"></a>  CBasePane::OnPaneContextMenu
+##  <a name="onpanecontextmenu"></a>CBasePane::OnPaneContextMenu
 
-Wywoływane przez platformę, podczas tworzenia menu, który zawiera listę okienka.
+Wywoływane przez platformę, gdy kompiluje menu, które ma listę okienek.
 
 ```
 virtual void OnPaneContextMenu(
@@ -1649,20 +1649,20 @@ virtual void OnPaneContextMenu(
 ### <a name="parameters"></a>Parametry
 
 *pParentFrame*<br/>
-[in] Wskaźnik do ramki nadrzędnej.
+podczas Wskaźnik do ramki nadrzędnej.
 
-*Punkt*<br/>
-[in] Określa lokalizację, w menu skrótów.
+*moment*<br/>
+podczas Określa lokalizację menu skrótów.
 
 ### <a name="remarks"></a>Uwagi
 
-`OnPaneContextMenu` wywołuje Menedżera dokowania, który przechowuje listę okienek, które należą do bieżącego okna ramki. Ta metoda dodaje nazwy okienka do menu skrótów i wyświetla je. Polecenia menu pokazać lub ukryć poszczególne okienka.
+`OnPaneContextMenu`wywołuje Menedżera dokowania, który zachowuje listę okienek, które należą do bieżącego okna ramki. Ta metoda dodaje nazwy okienek do menu skrótów i wyświetla je. Polecenia w menu pokazują lub ukrywają poszczególne okienka.
 
-Zastępuje tę metodę, aby dostosować to zachowanie.
+Zastąp tę metodę, aby dostosować to zachowanie.
 
-##  <a name="onremovefromminiframe"></a>  CBasePane::OnRemoveFromMiniFrame
+##  <a name="onremovefromminiframe"></a>CBasePane::OnRemoveFromMiniFrame
 
-Wywoływane przez platformę, gdy okienko zostanie usunięty z jej nadrzędnej mini ramki okna.
+Wywoływane przez platformę, gdy okienko zostanie usunięte z nadrzędnego okna z ramką mini.
 
 ```
 virtual void OnRemoveFromMiniFrame(CPaneFrameWnd* pMiniFrame);
@@ -1671,17 +1671,17 @@ virtual void OnRemoveFromMiniFrame(CPaneFrameWnd* pMiniFrame);
 ### <a name="parameters"></a>Parametry
 
 *pMiniFrame*<br/>
-[in] Wskaźnik do okna mini ramki, z którego okienku zostanie usunięty.
+podczas Wskaźnik do okna mini-frame, z którego usunięto okienko.
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura wywołuje tę metodę, gdy okienko zostanie usunięty z okna mini ramki nadrzędnego (w wyniku dokowania, na przykład).
+Struktura wywołuje tę metodę, gdy okienko zostanie usunięte z nadrzędnego okna z ramką mini (na przykład w wyniku dokowania).
 
-Domyślna implementacja nic nie robi.
+Domyślna implementacja nie robi nic.
 
-##  <a name="onsetaccdata"></a>  CBasePane::OnSetAccData
+##  <a name="onsetaccdata"></a>CBasePane::OnSetAccData
 
-`CBasePane` Używaj tej metody.
+`CBasePane`Ta metoda nie jest używana.
 
 ```
 virtual BOOL OnSetAccData(long lVal);
@@ -1690,7 +1690,7 @@ virtual BOOL OnSetAccData(long lVal);
 ### <a name="parameters"></a>Parametry
 
 *lVal*<br/>
-[in] Nie jest używany.
+podczas Nieużywane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1698,9 +1698,9 @@ Ta metoda zawsze zwraca wartość TRUE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="panefrompoint"></a>  CBasePane::PaneFromPoint
+##  <a name="panefrompoint"></a>CBasePane::P aneFromPoint
 
-Zwraca okienko, który zawiera danego punktu.
+Zwraca okienko zawierające dany punkt.
 
 ```
 CBasePane* PaneFromPoint(
@@ -1712,33 +1712,33 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parametry
 
-*Punkt*<br/>
-[in] Określa punkt, w układzie współrzędnych ekranu, aby sprawdzić.
+*moment*<br/>
+podczas Określa, że w obszarze Współrzędne ekranu chcesz sprawdzić.
 
 *nSensitivity*<br/>
-[in] Zwiększanie obszaru search tę kwotę. Okienko zostanie spełniają kryteria wyszukiwania, jeśli dany punkt mieści się w obszarze zwiększone.
+podczas Zwiększ obszar wyszukiwania według tej kwoty. Okienko będzie spełniało kryteria wyszukiwania, jeśli dany punkt znajduje się w większym obszarze.
 
 *bExactBar*<br/>
-[in] Wartość TRUE, aby zignorować *nSensitivity* parametru; w przeciwnym razie wartość FALSE.
+podczas TRUE, aby zignorować parametr *nSensitivity* ; w przeciwnym razie FALSE.
 
 *pRTCBarType*<br/>
-[in] Jeśli nie ma wartość NULL, metoda szuka tylko okienka określonego typu.
+podczas Jeśli wartość nie jest równa NULL, Metoda przeszukuje tylko okienka określonego typu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`CBasePane`-Pochodnych obiekt, który zawiera dany punkt, lub wartość NULL, jeśli okienko nie został znaleziony.
+`CBasePane`Obiekt pochodny, który zawiera dany punkt lub wartość null, jeśli nie znaleziono żadnego okienka.
 
-##  <a name="recalclayout"></a>  CBasePane::RecalcLayout
+##  <a name="recalclayout"></a>CBasePane::RecalcLayout
 
-`CBasePane` Używaj tej metody.
+`CBasePane`Ta metoda nie jest używana.
 
 ```
 virtual void RecalcLayout();
 ```
 
-##  <a name="removepanefromdockmanager"></a>  CBasePane::RemovePaneFromDockManager
+##  <a name="removepanefromdockmanager"></a>CBasePane::RemovePaneFromDockManager
 
-Wyrejestrowuje okienko i usuwa go z listy w Menedżerze dokowania.
+Wyrejestrowanie okienka i usunięcie go z listy w Menedżerze dokowania.
 
 ```
 void RemovePaneFromDockManager(
@@ -1752,23 +1752,23 @@ void RemovePaneFromDockManager(
 ### <a name="parameters"></a>Parametry
 
 *pBar*<br/>
-[in] Wskaźnik do okienka do usunięcia.
+podczas Wskaźnik do okienka, które ma zostać usunięte.
 
 *bDestroy*<br/>
-[in] W przypadku opcji TRUE usunięto okienko zostanie zniszczony.
+podczas W przypadku wartości TRUE usunięte okienko jest niszczone.
 
 *bAdjustLayout*<br/>
-[in] W przypadku opcji TRUE natychmiast dostosować układ dokowania.
+podczas W przypadku wartości TRUE należy natychmiast dostosować układ dokowania.
 
 *bAutoHide*<br/>
-[in] W przypadku opcji TRUE układ dokowania jest powiązana z listy paski Autoukrywanie. W przypadku wartości FAŁSZ układ dokowania jest powiązana z listy regularne okienka.
+podczas W przypadku opcji TRUE układ dokowania jest powiązany z listą pasków autoukrywania. W przypadku wartości FALSE układ dokowania jest powiązany z listą zwykłych okienek.
 
 *pBarReplacement*<br/>
-[in] Wskaźnik do okienka w którym zastępuje okienka usunięte.
+podczas Wskaźnik do okienka, które zastępuje usunięte okienko.
 
-##  <a name="savestate"></a>  CBasePane::SaveState
+##  <a name="savestate"></a>CBasePane:: SaveState
 
-Zapisuje stan w okienku w rejestrze.
+Zapisuje stan okienka w rejestrze.
 
 ```
 virtual BOOL SaveState(
@@ -1780,25 +1780,25 @@ virtual BOOL SaveState(
 ### <a name="parameters"></a>Parametry
 
 *lpszProfileName*<br/>
-[in] Nazwa profilu.
+podczas Nazwa profilu.
 
 *nIndex*<br/>
-[in] Indeks profilu.
+podczas Indeks profilu.
 
 *uiID*<br/>
-[in] Identyfikator okienka.
+podczas Identyfikator okienka.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli stan został zapisany pomyślnie; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli stan został pomyślnie zapisany; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura wywołuje tę metodę podczas zapisywania w okienku stanu w rejestrze. Zastąp `SaveState` w klasie pochodnej do przechowywania dodatkowych informacji.
+Struktura wywołuje tę metodę, gdy zapisuje stan okienka w rejestrze. Przesłoń `SaveState` w klasie pochodnej w celu przechowywania dodatkowych informacji.
 
-##  <a name="selectdefaultfont"></a>  CBasePane::SelectDefaultFont
+##  <a name="selectdefaultfont"></a>CBasePane::SelectDefaultFont
 
-Wybiera czcionkę domyślną kontekście danego urządzenia.
+Wybiera domyślną czcionkę dla danego kontekstu urządzenia.
 
 ```
 CFont* SelectDefaultFont(CDC* pDC);
@@ -1807,13 +1807,13 @@ CFont* SelectDefaultFont(CDC* pDC);
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Kontekst urządzenia.
+podczas Kontekst urządzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do domyślnego [klasa CFont](../../mfc/reference/cfont-class.md) obiektu.
+Wskaźnik do domyślnego obiektu [klasy CFont](../../mfc/reference/cfont-class.md) .
 
-##  <a name="setcontrolbarstyle"></a>  CBasePane::SetControlBarStyle
+##  <a name="setcontrolbarstyle"></a>CBasePane::SetControlBarStyle
 
 Ustawia styl paska sterowania.
 
@@ -1824,18 +1824,18 @@ virtual void SetControlBarStyle(DWORD dwNewStyle);
 ### <a name="parameters"></a>Parametry
 
 *dwNewStyle*<br/>
-[in] Bitowe OR kombinacji następujących możliwych wartości.
+podczas Bitowe lub kombinacje następujących możliwych wartości.
 
 |Styl|Opis|
 |-----------|-----------------|
-|AFX_CBRS_FLOAT|Sprawia, że wartość zmiennoprzecinkowa paska sterowania.|
-|AFX_CBRS_AUTOHIDE|Umożliwia automatyczne ukrywanie trybu.|
-|AFX_CBRS_RESIZE|Umożliwia zmianę rozmiaru paska sterowania. Gdy ta flaga jest ustawiona, pasek sterowania można umieścić w okienku dokowalnych.|
+|AFX_CBRS_FLOAT|Sprawia, że pasek sterowania jest zmiennoprzecinkowy.|
+|AFX_CBRS_AUTOHIDE|Włącza tryb autoukrywania.|
+|AFX_CBRS_RESIZE|Włącza zmianę rozmiarów paska sterowania. Gdy ta flaga jest ustawiona, pasek sterowania można umieścić w okienku było dokować.|
 |AFX_CBRS_CLOSE|Umożliwia ukrycie paska sterowania.|
 
-##  <a name="setdockingmode"></a>  CBasePane::SetDockingMode
+##  <a name="setdockingmode"></a>CBasePane::SetDockingMode
 
-Ustawia tryb dokujące okienka.
+Ustawia tryb dokowania dla okienka.
 
 ```
 void SetDockingMode(AFX_DOCK_TYPE dockModeNew);
@@ -1844,19 +1844,19 @@ void SetDockingMode(AFX_DOCK_TYPE dockModeNew);
 ### <a name="parameters"></a>Parametry
 
 *dockModeNew*<br/>
-[in] Określa nowy tryb dokujące okienka.
+podczas Określa nowy tryb dokowania okienka.
 
 ### <a name="remarks"></a>Uwagi
 
-Platforma obsługuje dwa tryby dokowania: standardowa i bezpośrednie.
+Platforma obsługuje dwa tryby dokowania: standardowe i natychmiastowe.
 
-W trybie standardowym dokujące okienka i okna mini ramki są przenoszone wokół przy użyciu przeciągnij prostokąt. W trybie natychmiastowym dokowania paskami sterowania i Mini ramki okna są przenoszone od razu razem ze swoimi kontekstami.
+W standardowym trybie dokowania okienka i okna z minimalnymi ramkami są przesuwane wokół przy użyciu prostokąta przeciągania. W trybie natychmiastowego dokowania paski kontroli i okna z ramkami mini są natychmiast przenoszone wraz z ich kontekstem.
 
-Początkowo dokowania tryb zdefiniowano globalnie przez [CDockingManager::m_dockModeGlobal](../../mfc/reference/cdockingmanager-class.md#m_dockmodeglobal). Można ustawić trybu dokowania każde okienko oddzielnie przy użyciu `SetDockingMode` metody.
+Początkowo tryb dokowania został zdefiniowany globalnie przez [CDockingManager:: m_dockModeGlobal](../../mfc/reference/cdockingmanager-class.md#m_dockmodeglobal). Tryb dokowania można ustawić dla każdego okienka indywidualnie przy użyciu `SetDockingMode` metody.
 
-##  <a name="setpanealignment"></a>  CBasePane::SetPaneAlignment
+##  <a name="setpanealignment"></a>CBasePane::SetPaneAlignment
 
-Ustawia wyrównanie dla tego okienka.
+Ustawia wyrównanie okienka.
 
 ```
 virtual void SetPaneAlignment(DWORD dwAlignment);
@@ -1865,22 +1865,22 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 ### <a name="parameters"></a>Parametry
 
 *dwAlignment*<br/>
-[in] Określa wyrównanie nowe.
+podczas Określa nowe wyrównanie.
 
 ### <a name="remarks"></a>Uwagi
 
-Zazwyczaj platforma wywołuje tę metodę, gdy okienko jest zadokowany z jednej strony ramki głównego do innego.
+Zazwyczaj struktura wywołuje tę metodę, gdy okienko jest zadokowane z jednej strony głównej ramki do innej.
 
-W poniższej tabeli przedstawiono możliwe wartości *dwAlignment*:
+W poniższej tabeli przedstawiono możliwe wartości dla *dwAlignment*:
 
 |Wartość|Wyrównanie|
 |-----------|---------------|
 |CBRS_ALIGN_LEFT|Wyrównanie do lewej.|
 |CBRS_ALIGN_RIGHT|Wyrównanie do prawej.|
-|CBRS_ALIGN_TOP|Wyrównanie do góry.|
+|CBRS_ALIGN_TOP|Pierwsze wyrównanie.|
 |CBRS_ALIGN_BOTTOM|Wyrównanie do dołu.|
 
-##  <a name="setpanestyle"></a>  CBasePane::SetPaneStyle
+##  <a name="setpanestyle"></a>CBasePane:: setokienks
 
 Ustawia styl okienka.
 
@@ -1891,17 +1891,17 @@ virtual void SetPaneStyle(DWORD dwNewStyle);
 ### <a name="parameters"></a>Parametry
 
 *dwNewStyle*<br/>
-[in] Określa nowy styl do ustawienia.
+podczas Określa nowy styl do ustawienia.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda może służyć do skonfigurowania któregokolwiek CBRS_ style, które są zdefiniowane w afxres.h. Okienko styl i wyrównanie okienko są przechowywane razem, należy ustawić nowy styl, łącząc ją z wyrównaniem bieżącego w następujący sposób.
+Ta metoda może służyć do ustawiania dowolnych stylów CBRS_, które są zdefiniowane w plik AFXRES. h. Ponieważ styl okienka i wyrównanie okienka są przechowywane razem, Ustaw nowy styl, łącząc go z bieżącym wyrównaniem w następujący sposób.
 
 `pPane->SetPaneStyle (pPane->GetCurrentAlignment() | CBRS_TOOLTIPS);`
 
-##  <a name="setwindowpos"></a>  CBasePane::SetWindowPos
+##  <a name="setwindowpos"></a>CBasePane::SetWindowPos
 
-Zmienia rozmiar, położenie i kolejności Z okienka.
+Zmienia rozmiar, położenie i porządek osi Z okienka.
 
 ```
 virtual HDWP SetWindowPos(
@@ -1917,35 +1917,35 @@ virtual HDWP SetWindowPos(
 ### <a name="parameters"></a>Parametry
 
 *pWndInsertAfter*<br/>
-[in] Identyfikuje `CWnd` obiekt, który znajduje się przed tym `CWnd` obiekt w porządku osi Z. Aby uzyskać więcej informacji, zobacz [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).
+podczas Identyfikuje obiekt, który jest dostarczany przed `CWnd` tym obiektem w kolejności z. `CWnd` Aby uzyskać więcej informacji, zobacz [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).
 
 *x*<br/>
-[in] Określa położenie po lewej stronie okna.
+podczas Określa pozycję lewej strony okna.
 
 *y*<br/>
-[in] Określa położenie górnej części okna.
+podczas Określa pozycję górnej części okna.
 
 *cx*<br/>
-[in] Określa szerokość okna.
+podczas Określa szerokość okna.
 
 *cy*<br/>
-[in] Określa wysokość okna.
+podczas Określa wysokość okna.
 
 *nFlags*<br/>
-[in] Określa opcje rozmiaru i położenia. Aby uzyskać więcej informacji, zobacz [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).
+podczas Określa opcje rozmiaru i pozycji. Aby uzyskać więcej informacji, zobacz [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).
 
 *hdwp*<br/>
-[in] Obsługa do struktury, która zawiera informacje dotyczące jednego lub kilku okien rozmiaru i pozycji.
+podczas Dojście do struktury zawierającej informacje o rozmiarze i pozycji dla jednego lub kilku okien.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Dojście do struktury pozycji uaktualnionego odroczonego okna lub wartość NULL.
+Dojście do zaktualizowanej struktury położenia przełożonego okna lub wartości NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli *pWndInsertAfter* ma wartość NULL, ta metoda wywołuje [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos). Jeśli *pWndInsertAfter* jest różna od NULL, ta metoda wywołuje `DeferWindowPos`.
+Jeśli *pWndInsertAfter* ma wartość null, ta metoda wywołuje [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos). Jeśli *pWndInsertAfter* ma wartość różną od null, ta metoda `DeferWindowPos`wywołuje metodę.
 
-##  <a name="showpane"></a>  CBasePane::ShowPane
+##  <a name="showpane"></a>CBasePane::ShowPane
 
 Pokazuje lub ukrywa okienko.
 
@@ -1959,23 +1959,23 @@ virtual void ShowPane(
 ### <a name="parameters"></a>Parametry
 
 *bShow*<br/>
-[in] Określa, czy pokazać (PRAWDA) lub ukryć (FALSE) okienko.
+podczas Określa, czy wyświetlać (TRUE) czy ukrywać (FAŁSZ) okienka.
 
 *bDelay*<br/>
-[in] Obliczanie układu dokowania opóźniony w przypadku opcji TRUE.
+podczas W przypadku wartości TRUE ponowne obliczenie układu dokowania jest opóźnione.
 
 *bActivate*<br/>
-[in] W przypadku opcji TRUE okienka jest aktywny, gdy wyświetlana.
+podczas Jeśli wartość jest równa TRUE, okienko jest aktywne, gdy jest wyświetlana.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda pokazuje lub ukrywa okienko. Użyj tej metody, zamiast `ShowWindow` , ponieważ ta metoda powiadamia odpowiednie menedżerów dokowania o zmianach wprowadzonych w okienku widoczności.
+Ta metoda pokazuje lub ukrywa okienko. Użyj tej metody zamiast tego `ShowWindow` , ponieważ ta metoda powiadamia odpowiednich menedżerów dokowania o zmianach w widoczności okienka.
 
-Użyj [CBasePane::IsVisible](#isvisible) Aby ustalić widoczność bieżącego okienka.
+Użyj [CBasePane:: IsVisible](#isvisible) , aby określić bieżącą widoczność okienka.
 
-##  <a name="stretchpane"></a>  CBasePane::StretchPane
+##  <a name="stretchpane"></a>CBasePane::StretchPane
 
-Rozciąga okienko w pionie lub poziomie.
+Rozciąga okienko w pionie lub w poziomie.
 
 ```
 virtual CSize StretchPane(
@@ -1986,18 +1986,18 @@ virtual CSize StretchPane(
 ### <a name="parameters"></a>Parametry
 
 *nLength*<br/>
-[in] Długość za pomocą którego do rozciągania okienka.
+podczas Długość do rozciągnięcia okienka.
 
 *bVert*<br/>
-[in] W przypadku opcji TRUE rozciąganie okienko w pionie. W przypadku wartości FAŁSZ rozciąganie okienko poziomo.
+podczas W przypadku wartości TRUE przeciągnij okienko w pionie. W przypadku wartości FALSE przeciągnij okienko w poziomie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Rozmiar okienka rozproszonym.
+Rozmiar rozciąganego okienka.
 
-##  <a name="undockpane"></a>  CBasePane::UndockPane
+##  <a name="undockpane"></a>CBasePane::UndockPane
 
-Usuwa okienka z witryny dokowania, suwak domyślne lub okna mini ramki, w którym aktualnie jest zadokowany.
+Usuwa okienko z witryny Docker, domyślnego suwaka lub okna mini-frame, w którym jest obecnie zadokowane.
 
 ```
 virtual void UndockPane(BOOL bDelay=FALSE);
@@ -2006,13 +2006,13 @@ virtual void UndockPane(BOOL bDelay=FALSE);
 ### <a name="parameters"></a>Parametry
 
 *bDelay*<br/>
-W przypadku opcji TRUE układ dokowania nie jest obliczany od razu.
+W przypadku wartości TRUE układ dokowania nie jest ponownie obliczany natychmiast.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołanie tej metody do manipulowania stan okienka lub wykluczyć okienka z układu dokowania.
+Wywołaj tę metodę, aby manipulować stanem okienka lub wykluczyć okienko z układu dokowania.
 
-Jeśli chcesz nadal używać w tym okienku, wywołaj albo [CBasePane::DockPane](#dockpane) lub [CBasePane::FloatPane](#floatpane) przed wywołaniem tej metody.
+Aby nadal korzystać z tego okienka, należy wywołać [CBasePane::D ockpane](#dockpane) lub [CBasePane:: FloatPane](#floatpane) przed wywołaniem tej metody.
 
 ## <a name="see-also"></a>Zobacz także
 

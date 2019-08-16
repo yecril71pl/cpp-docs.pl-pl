@@ -8,20 +8,20 @@ helpviewer_keywords:
 - item labels, tree controls
 - item labels
 ms.assetid: fe834107-1a25-4280-aced-774c11565805
-ms.openlocfilehash: c945556ff9236db1ca61b15f1072efdc2f49541f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1f7fb8b558ff4726f7787cbf355a059fbcce8b5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371954"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513382"
 ---
 # <a name="tree-control-item-labels"></a>Etykiety elementów formantu drzewa
 
-Zwykle określasz tekst etykiety elementu podczas dodawania elementu do kontrolki drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)). `InsertItem` Można przekazać funkcję członkowską [TVITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtvitema) strukturę, która definiuje właściwości elementów, w tym ciąg zawierający tekst etykiety. `InsertItem` ma kilka przeciążeń, które mogą być wywoływane przy użyciu różnych kombinacji parametrów.
+Zwykle określasz tekst etykiety elementu podczas dodawania elementu do kontrolki drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)). Funkcja członkowska może przekazać strukturę TVITEM, która definiuje właściwości elementu, w tym ciąg zawierający tekst etykiety. [](/windows/win32/api/commctrl/ns-commctrl-tvitemw) `InsertItem` `InsertItem`ma kilka przeciążeń, które można wywoływać przy użyciu różnych kombinacji parametrów.
 
-Kontrolka drzewa przydziela pamięć do przechowywania każdego elementu; tekst etykiety elementu zajmuje znaczną część tej pamięci. Jeśli aplikacja przechowuje kopię ciągów w drzewie, można zmniejszyć wymagania dotyczące pamięci formantu, określając **LPSTR_TEXTCALLBACK** wartość w *pszText* członkiem `TV_ITEM` lub *lpszItem* parametru zamiast przekazywać parametry rzeczywiste do formantu drzewa. Za pomocą **LPSTR_TEXTCALLBACK** powoduje, że formant drzewa, aby pobrać tekst etykiety elementu z aplikacji zawsze wtedy, gdy element musi być narysowany ponownie. Aby pobrać tekst, formant drzewa wysyła [TVN_GETDISPINFO](/windows/desktop/Controls/tvn-getdispinfo) komunikat powiadomienia zawiera adres [NMTVDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtvdispinfoa) struktury. Musisz odpowiedzieć, ustawiając odpowiednich elementów członkowskich struktury uwzględnione.
+Kontrolka drzewa przydziela pamięć do przechowywania każdego elementu; tekst etykiet elementów przyjmuje znaczną część tej pamięci. Jeśli aplikacja zachowuje kopię ciągów w kontrolce drzewa, można zmniejszyć wymagania dotyczące pamięci formantu, określając wartość **LPSTR_TEXTCALLBACK** w elemencie członkowskim `TV_ITEM` *pszText* lub *lpszItem* parametr zamiast przekazywania rzeczywistych ciągów do kontrolki drzewa. Użycie **LPSTR_TEXTCALLBACK** powoduje, że formant drzewa Pobiera tekst etykiety elementu z aplikacji za każdym razem, gdy element wymaga odrysowania. Aby pobrać tekst, formant drzewa wysyła komunikat powiadomienia [TVN_GETDISPINFO](/windows/win32/Controls/tvn-getdispinfo) , który zawiera adres struktury [NMTVDISPINFO](/windows/win32/api/commctrl/ns-commctrl-tvdispinfow) . Musisz odpowiedzieć przez ustawienie odpowiednich członków zawartej struktury.
 
-Kontrolka drzewa używa pamięci zaalokowanej z sterty procesu, który tworzy formant drzewa. Maksymalna liczba elementów kontrolki drzewa zależy od ilości dostępnej pamięci na stosie. Każdy element ma 64 bajtów.
+Kontrolka drzewa używa pamięci przydzieloną z sterty procesu, który tworzy formant drzewa. Maksymalna liczba elementów w kontrolce drzewa zależy od ilości dostępnej pamięci w stercie. Każdy element pobiera 64 bajtów.
 
 ## <a name="see-also"></a>Zobacz także
 

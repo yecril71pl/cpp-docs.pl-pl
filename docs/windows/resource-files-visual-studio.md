@@ -24,73 +24,73 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: 45db6d0139cfa3aa8a2eaa8fe6d18158cb6646ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b66a207766962856cc4d7181607868c2a48ebe84
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387919"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513658"
 ---
 # <a name="resource-files-c"></a>Pliki zasobów (C++)
 
 > [!NOTE]
-> Ponieważ projekty w językach programowania .NET należy używać plików skryptu zasobu, należy otworzyć swoich zasobów przed **Eksploratora rozwiązań**. Użyj [edytora obrazów](../windows/image-editor-for-icons.md) i [edytorze binarnym](binary-editor.md) do pracy z plikami zasobów w projektach zarządzanych.
+> Ponieważ projekty w językach programowania .NET nie używają plików skryptów zasobów, należy otworzyć zasoby z **Eksplorator rozwiązań**. Użyj [edytora obrazów](../windows/image-editor-for-icons.md) i [edytora binarnego](binary-editor.md) do pracy z plikami zasobów w projektach zarządzanych.
 >
 > Wszelkie zarządzane zasoby, które chcesz edytować, muszą być powiązanymi zasobami. Edytory zasobów programu Visual Studio nie obsługują edycji zasobów osadzonych.
 
-Termin *pliku zasobów* mogą odwoływać się do wielu typów plików, takie jak:
+Termin *plik zasobów* może odwoływać się do wielu typów plików, takich jak:
 
-- Plik skryptu (.rc) zasobów programu.
+- Plik skryptu zasobu (. RC) programu.
 
-- Plik szablonu (.rct) zasobów.
+- Plik szablonu zasobu (. rct).
 
-- Pojedynczy zasób istniejące jako autonomiczny plik. Ten typ zawiera plik mapy bitowej, ikona lub kursor jest określane w pliku .rc.
+- Pojedynczy zasób istniejący jako plik autonomiczny. Ten typ zawiera mapę bitową, ikonę lub plik kursora, do którego odwołuje się plik. rc.
 
-- Plik nagłówka, generowane przez środowisko programistyczne. Ten typ obejmuje `Resource.h`, jest to określane w pliku .rc.
+- Plik nagłówka generowany przez środowisko deweloperskie. Ten typ obejmuje `Resource.h`, który jest określany na podstawie pliku. rc.
 
-Znaleziono zasobów w przypadku innych typów plików, takich jak pliki .exe i .dll, .res są określane jako *zasobów*.
+Zasoby znajdujące się w innych typach plików, takich jak pliki exe, DLL i. res, są określane jako *zasoby*.
 
-Możesz pracować z *pliki zasobów* i *zasobów* z w obrębie projektu. Możesz także pracować z tymi, które nie są częścią bieżącego projektu lub zostały utworzone poza środowiskiem projektowania programu Visual Studio. Możesz na przykład:
+Z poziomu projektu można korzystać z *plików zasobów* i *zasobów* . Można również korzystać z tych, które nie są częścią bieżącego projektu lub zostały utworzone poza środowiskiem programistycznym programu Visual Studio. Możesz na przykład:
 
-- Praca z plikami zasobów zagnieżdżone i dołączane warunkowo.
+- Pracuj z zagnieżdżonymi i warunkowo plikami zasobów.
 
-- Aktualizowanie istniejących zasobów lub też przekonwertować je do programu Visual C++.
+- Zaktualizuj istniejące zasoby lub Przekonwertuj je na C++wizualizację.
 
-- Importowanie lub eksportowanie zasobów graficznych do lub z bieżącego pliku zasobów.
+- Importuj lub Eksportuj zasoby graficzne do lub z bieżącego pliku zasobów.
 
-- Obejmują udostępnione lub tylko do odczytu identyfikatorów (symbolom), których nie można zmodyfikować przez środowisko programistyczne.
+- Uwzględnij identyfikatory udostępnione lub tylko do odczytu (symbole), które nie mogą być modyfikowane przez środowisko programistyczne.
 
-- W pliku wykonywalnym (.exe), które nie wymagają do edycji (lub nie powinny być edytowane), takie jak zasobów udostępnionych między kilka projektów zostaną umieszczone zasoby.
+- Uwzględnij zasoby w pliku wykonywalnym (exe), które nie wymagają edytowania (lub nie powinny być edytowane), takie jak zasoby udostępnione między kilkoma projektami.
 
-- Obejmują typy zasobów, które nie są obsługiwane przez środowisko programistyczne.
+- Uwzględnij typy zasobów nieobsługiwane przez środowisko programistyczne.
 
-Aby uzyskać więcej informacji na temat zasobów, zobacz instrukcje [tworzenie zasobów](../windows/how-to-create-a-resource-script-file.md), [zarządzanie zasobami](../windows/how-to-copy-resources.md), i [obejmujące zasoby w czasie kompilowania](../windows/how-to-include-resources-at-compile-time.md).
+Aby uzyskać więcej informacji o zasobach, zobacz How to [Create](../windows/how-to-create-a-resource-script-file.md)Resources, [Manage](../windows/how-to-copy-resources.md)Resources i include Resources [w czasie kompilacji](../windows/how-to-include-resources-at-compile-time.md).
 
-## <a name="editable-resources"></a>Można edytować zasoby.
+## <a name="editable-resources"></a>Zasoby edytowalne
 
-Następujące typy plików można otworzyć do edycji zasobów, które zawierają:
+Aby edytować zawarte w nich zasoby, można otworzyć następujące typy plików:
 
 | Nazwa pliku | Opis |
 |---|---|
-| .rc | Pliki skryptów zasobów |
-| .rct | Pliki szablonów zasobów |
-| .res | Pliki zasobów |
-| .resx | Zarządzanych plików zasobów |
-| .exe | Pliki wykonywalne |
+| . RC | Pliki skryptów zasobów |
+| . RCT | Pliki szablonów zasobów |
+| . res | Pliki zasobów |
+| .resx | Zarządzane pliki zasobów |
+| . exe | Pliki wykonywalne |
 | .dll | Pliki bibliotek dołączanych dynamicznie |
-| .bmp .ico, .dib, .cur | Pliki map bitowych, ikony, narzędzi i kursora |
+| . bmp,. ico,. DIB,. CUR | Pliki map bitowych, ikon, pasków narzędzi i kursorów |
 
-Podczas edytowania zasobów, w środowisku Visual Studio współpracuje z i ma wpływ na następujące pliki:
+Podczas edytowania zasobów środowisko programu Visual Studio współpracuje z programem i ma wpływ na następujące pliki:
 
 | Nazwa pliku | Opis |
 |---|---|
-| Resource.h | Plik nagłówkowy generowane przez środowisko programistyczne, która zawiera definicje symbolu.<br/><br/>Uwzględnij ten plik w kontroli źródła. |
-| Filename.APS | Binarna wersja bieżącego pliku skryptu zasobów używany do szybkiego ładowania.<br /><br /> Edytory zasobów nie bezpośrednio odczytywać pliki .rc lub resource.h. Kompilator zasobów kompiluje je na pliki .aps, które są używane przez edytory zasobów. Ten plik jest to krok kompilacji i tylko przechowuje dane symboliczne.<br/><br/>Jak zwykłym skompilować procesu, informacje, które nie jest symboliczne, takie jak dodawanie komentarza, zostanie usunięty podczas procesu kompilacji.<br/><br/>Zawsze wtedy, gdy plik .aps synchronizację z pliku .rc, wygenerowania pliku .rc. Na przykład, gdy użytkownik **Zapisz**, Edytor zasobów zastępuje plik .rc i pliku resource.h. Zmiany wprowadzone w zasobach pozostaną dołączone w pliku .rc, ale komentarze zostać utracone po plik .rc jest zastępowany. Aby uzyskać informacje na temat sposobu zachowanie komentarzy, wyświetlić [obejmujące zasoby w czasie kompilowania](../windows/how-to-include-resources-at-compile-time.md).<br/><br/>Zazwyczaj nie powinna zawierać plik .aps w kontroli źródła. |
-| .rc | Plik skryptu zasobu, który zawiera skrypt dla zasobów w bieżącym projekcie. Ten plik jest nadpisywany przez plik .aps przy każdym zapisywaniu.<br/><br/>Uwzględnij ten plik w kontroli źródła. |
+| Resource.h | Plik nagłówkowy wygenerowany przez środowisko programistyczne, które zawiera definicje symboli.<br/><br/>Uwzględnij ten plik w kontroli źródła. |
+| Filename. APS | Wersja binarna bieżącego pliku skryptu zasobów używanego do szybkiego ładowania.<br /><br /> Edytory zasobów nie odczytują bezpośrednio plików. RC lub Resource. h. Kompilator zasobów kompiluje je do plików APS, które są używane przez edytory zasobów. Ten plik jest krokiem kompilacji i przechowuje tylko dane symboliczne.<br/><br/>Podobnie jak w przypadku normalnego procesu kompilowania, informacje, które nie są symboliczne, takie jak komentowanie, są odrzucane podczas procesu kompilacji.<br/><br/>Za każdym razem, gdy plik APS nie jest zsynchronizowany z plikiem. RC, plik. RC zostanie wygenerowany ponownie. Na przykład podczas **zapisywania**Edytor zasobów zastępuje plik. RC i plik Resource. h. Wszelkie zmiany zasobów pozostają zawarte w pliku. RC, ale komentarze są zawsze tracone po nadpisaniu pliku. rc. Aby uzyskać informacje na temat sposobu zachowywania komentarzy, zobacz temat [uwzględnianie zasobów w czasie kompilacji](../windows/how-to-include-resources-at-compile-time.md).<br/><br/>Zazwyczaj nie należy umieszczać pliku APS w kontroli źródła. |
+| . RC | Plik skryptu zasobu, który zawiera skrypt dla zasobów w bieżącym projekcie. Ten plik jest zastępowany przez plik APS przy każdym zapisywaniu.<br/><br/>Uwzględnij ten plik w kontroli źródła. |
 
 ## <a name="manifest-resources"></a>Zasoby manifestu
 
-W projektach pulpitu C++ manifestu zasoby są plikami XML, które opisują zależności, których używa aplikacja. Na przykład w programie Visual Studio to MFC generowane przez kreatora plik manifestu definiuje, która wersja programu Windows uruchamiający biblioteki dll, aplikacja powinna używać:
+W C++ projektach klasycznych zasoby manifestu są plikami XML, które opisują zależności używane przez aplikację. Na przykład w programie Visual Studio ten plik manifestu generowany przez kreatora MFC definiuje, która wersja bibliotek DLL wspólnych systemu Windows ma być używana przez aplikację:
 
 ```xml
 <description>Your app description here</description>
@@ -108,22 +108,22 @@ W projektach pulpitu C++ manifestu zasoby są plikami XML, które opisują zale�
 </dependency>
 ```
 
-Dla aplikacji Windows XP lub Windows Vista zasobu manifestu, należy określić najbardziej aktualnej wersji wspólnych formantów Windows dla aplikacji do użycia. W powyższym przykładzie korzysta z wersji `6.0.0.0`, który obsługuje [kontroli Syslink](/windows/desktop/Controls/syslink-overview).
+W przypadku aplikacji systemu Windows XP lub Windows Vista zasób manifestu powinien określać najbardziej aktualną wersję formantów wspólnych systemu Windows, które mają być używane przez aplikację. W powyższym przykładzie `6.0.0.0`używa się wersji, która obsługuje [formant Syslink](/windows/win32/Controls/syslink-overview).
 
 > [!NOTE]
-> Może mieć tylko jeden zasób manifestu dla modułu.
+> Dla każdego modułu można mieć tylko jeden zasób manifestu.
 
-Aby wyświetlić wersję i typ informacji zawartych w zasobu manifestu, otwórz plik w podglądzie XML lub Edytor tekstu Visual Studio. Jeśli otwarcie zasobu manifestu z [widok zasobów](../windows/resource-view-window.md), zasób zostanie otwarty w formacie binarnym.
+Aby wyświetlić informacje o wersji i typie zawarte w zasobie manifestu, Otwórz plik w przeglądarce XML lub edytorze tekstu programu Visual Studio. Jeśli otworzysz zasób manifestu z [Widok zasobów](../windows/resource-view-window.md), zasób zostanie otwarty w formacie binarnym.
 
-### <a name="to-open-a-manifest-resource"></a>Aby otworzyć zasobu manifestu
+### <a name="to-open-a-manifest-resource"></a>Aby otworzyć zasób manifestu
 
-1. Otwórz projekt w programie Visual Studio i przejdź do **Eksploratora rozwiązań**.
+1. Otwórz projekt w programie Visual Studio i przejdź do **Eksplorator rozwiązań**.
 
-1. Rozwiń **pliki zasobów** folder, a następnie:
+1. Rozwiń folder **pliki zasobów** , a następnie:
 
-   - Aby otworzyć w edytorze tekstów, kliknij dwukrotnie *.manifest* pliku.
+   - Aby otworzyć program w edytorze tekstów, kliknij dwukrotnie plik *. manifest* .
 
-   - Aby otworzyć program w innym edytorze, kliknij prawym przyciskiem myszy *.manifest* plik i wybierz **Otwórz za pomocą**. Określ w edytorze i wybierz **Otwórz**.
+   - Aby otworzyć w innym edytorze, kliknij prawym przyciskiem myszy plik *. manifest* i wybierz polecenie **Otwórz za pomocą**. Określ Edytor, który ma być używany, a następnie wybierz pozycję **Otwórz**.
 
 ## <a name="requirements"></a>Wymagania
 

@@ -14,34 +14,34 @@ helpviewer_keywords:
 - DTN_FORMAT notification [MFC]
 - DateTimePicker control [MFC]
 ms.assetid: ffbe29ab-ff80-4609-89f7-260b404439c4
-ms.openlocfilehash: ce84863744629d30248f94b94448d776177f9841
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: fead5643299aee4beace55abde0b6a6c801a324f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64339564"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507876"
 ---
 # <a name="processing-notification-messages-in-date-and-time-picker-controls"></a>Przetwarzanie komunikatów powiadomień w formantach selektora dat i godzin
 
-Jak użytkownicy wchodzić w interakcje z datą i formant selektora czasu, kontrolka (`CDateTimeCtrl`) wysyła powiadomienia do okna nadrzędnego, zazwyczaj obiekt widoku lub w oknie dialogowym. Obsługiwać te komunikaty, jeśli chcesz zrobić coś w odpowiedzi. Na przykład gdy użytkownik otworzy selektora daty i godziny, aby wyświetlić formant kalendarza miesięcznego osadzony, dtn_dropdown — powiadomienie jest wysyłane.
+Gdy użytkownicy współpracują z kontrolką selektora daty i godziny,`CDateTimeCtrl`formant () wysyła komunikaty powiadomień do okna nadrzędnego, zwykle widok lub obiekt okna dialogowego. Obsługuj te komunikaty, jeśli chcesz zrobić coś w odpowiedzi. Na przykład po otwarciu przez użytkownika selektora daty i godziny w celu wyświetlenia formantu kalendarza z osadzonym miesiącem zostanie wysłane powiadomienie DTN_DROPDOWN.
 
-Okno właściwości do dodania obsługi powiadomień do klasy nadrzędnej dla tych wiadomości, które chcesz wdrożyć.
+Użyj okno Właściwości, aby dodać procedury obsługi powiadomień do klasy nadrzędnej dla tych komunikatów, które chcesz zaimplementować.
 
-Poniższa lista zawiera opis różnych powiadomień wysyłany przez kontrolkę selektora daty i godziny.
+Na poniższej liście opisano różne powiadomienia wysyłane przez kontrolkę selektora daty i godziny.
 
-- Dtn_dropdown — powiadamia użytkownika, który ma być wyświetlany obiektu nadrzędnego, który miesiąca osadzonego formantu kalendarza. To powiadomienie jest wysyłane tylko wtedy, gdy styl DTS_UPDOWN nie została ustawiona. Aby uzyskać więcej informacji na temat tego powiadomienia, zobacz [uzyskiwania dostępu do osadzonego formantu kalendarza miesięcznego](../mfc/accessing-the-embedded-month-calendar-control.md).
+- DTN_DROPDOWN powiadamia element nadrzędny o tym, że kontrolka kalendarza osadzonego miesiąca ma zostać wyświetlona. To powiadomienie jest wysyłane tylko wtedy, gdy nie ustawiono stylu DTS_UPDOWN. Aby uzyskać więcej informacji na temat tego powiadomienia, zobacz [dostęp do kontrolki kalendarza osadzonego miesiąca](../mfc/accessing-the-embedded-month-calendar-control.md).
 
-- Dtn_closeup — powiadamia obiektu nadrzędnego, który miesiąca osadzonego formantu kalendarza zostanie zamknięte. To powiadomienie jest wysyłane tylko wtedy, gdy styl DTS_UPDOWN nie została ustawiona.
+- DTN_CLOSEUP powiadamia element nadrzędny o tym, że formant kalendarza z osadzonym miesiącem ma zostać zamknięty. To powiadomienie jest wysyłane tylko wtedy, gdy nie ustawiono stylu DTS_UPDOWN.
 
-- Dtn_datetimechange — Notifies obiektu nadrzędnego, który nastąpiła zmiana w formancie.
+- DTN_DATETIMECHANGE powiadamia element nadrzędny o wystąpieniu zmiany w kontrolce.
 
-- Powiadamia DTN_FORMAT obiektu nadrzędnego, który tekst jest wymagane do wyświetlenia w polu. Aby uzyskać więcej informacji na temat tego powiadomienia i pól wywołania zwrotnego, zobacz [przy użyciu pól wywołania zwrotnego, daty i czasu kontrolkę selektora](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md).
+- DTN_FORMAT powiadamia element nadrzędny o tym, że tekst musi być wyświetlany w polu wywołania zwrotnego. Aby uzyskać więcej informacji na temat tego powiadomienia i pól wywołania zwrotnego, zobacz [Używanie pól wywołania zwrotnego w kontrolce selektora dat i godzin](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md).
 
-- Dtn_formatquery — żądań, nadrzędnego do dostarczania maksymalny dozwolony rozmiar ciągu, która będzie wyświetlana w polu. Obsługa to powiadomienie pozwala formant aby prawidłowo dane wyjściowe cały czas celi zmniejszenia migotania w ramach wyświetlania kontrolki. Aby uzyskać więcej informacji na temat tego powiadomienia, zobacz [przy użyciu pól wywołania zwrotnego, daty i czasu kontrolkę selektora](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md).
+- DTN_FORMATQUERY żąda elementu nadrzędnego w celu dostarczenia maksymalnego dozwolonego rozmiaru ciągu, który będzie wyświetlany w polu wywołania zwrotnego. Obsługa tego powiadomienia pozwala formantowi prawidłowo wyświetlać dane wyjściowe przez cały czas, skracając migotanie w obrębie ekranu kontrolki. Aby uzyskać więcej informacji na temat tego powiadomienia, zobacz [Używanie pól wywołania zwrotnego w kontrolce selektora dat i godzin](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md).
 
-- DTN_USERSTRING powiadamia element nadrzędny, że użytkownik zakończył edycję zawartości selektora daty i godziny jest kontrolować. To powiadomienie jest wysyłane tylko wtedy, gdy styl DTS_APPCANPARSE została ustawiona.
+- DTN_USERSTRING powiadamia element nadrzędny o zakończeniu edycji zawartości kontrolki selektora daty i godziny. To powiadomienie jest wysyłane tylko wtedy, gdy ustawiono styl DTS_APPCANPARSE.
 
-- DTN_WMKEYDOWN powiadamia element nadrzędny, gdy użytkownik wpisuje w polu. Obsługuj to powiadomienie, aby emulować tę samą odpowiedź klawiatury obsługiwany w przypadku pól bez wywołania zwrotnego w kontrolce selektora daty i godziny. Aby uzyskać więcej informacji na temat tego powiadomienia, zobacz [obsługi pól wywołania zwrotnego w kontrolce DTP](/windows/desktop/Controls/date-and-time-picker-controls) w zestawie Windows SDK.
+- DTN_WMKEYDOWN powiadamia element nadrzędny, gdy użytkownik wpisze pole w polu wywołania zwrotnego. Obsłuż to powiadomienie, aby emulować tę samą odpowiedź klawiatury, która jest obsługiwana dla pól bez wywołania zwrotnego w kontrolce selektora dat i godzin. Aby uzyskać więcej informacji na temat tego powiadomienia, zobacz temat [Obsługa pól wywołania zwrotnego w kontrolce DTP](/windows/win32/Controls/date-and-time-picker-controls) w Windows SDK.
 
 ## <a name="see-also"></a>Zobacz także
 

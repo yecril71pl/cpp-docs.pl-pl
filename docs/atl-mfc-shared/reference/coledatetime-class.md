@@ -1,5 +1,5 @@
 ---
-title: COleDateTime, klasa
+title: Klasa COleDateTime
 ms.date: 03/27/2019
 f1_keywords:
 - COleDateTime
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 63c2971f5d55cb5198925650bcf90b2f1a8b0958
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: a254019d1efe916365799affa3d2c5271883bafb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503228"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491259"
 ---
-# <a name="coledatetime-class"></a>COleDateTime, klasa
+# <a name="coledatetime-class"></a>Klasa COleDateTime
 
-Hermetyzuje `DATE` typu danych, który jest używany w automatyzacji OLE.
+Hermetyzuje typ `DATE` danych, który jest używany w automatyzacji OLE.
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,90 +57,90 @@ class COleDateTime
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[COleDateTime::COleDateTime](#coledatetime)|Konstruuje `COleDateTime` obiektu.|
+|[COleDateTime::COleDateTime](#coledatetime)|Konstruuje `COleDateTime` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[COleDateTime::Format](#format)|Generuje reprezentację ciągu sformatowaną `COleDateTime` obiektu.|
-|[COleDateTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|Wywołaj tę metodę w celu uzyskania czas w `COleDateTime` obiektu jako `DBTIMESTAMP` strukturę danych.|
-|[COleDateTime::GetAsSystemTime](#getassystemtime)|Wywołaj tę metodę w celu uzyskania czas w `COleDateTime` obiektu jako [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) strukturę danych.|
-|[COleDateTime::GetAsUDATE](#getasudate)|Wywołaj tę metodę w celu uzyskania czas w `COleDateTime` jako `UDATE` strukturę danych.|
-|[COleDateTime::GetCurrentTime](#getcurrenttime)|Tworzy `COleDateTime` obiekt, który reprezentuje bieżący czas (statyczny element członkowski funkcji).|
-|[COleDateTime::GetDay](#getday)|Zwraca dzień to `COleDateTime` obiekt reprezentuje (1-31).|
-|[COleDateTime::GetDayOfWeek](#getdayofweek)|Zwraca dzień tygodnia, w tym `COleDateTime` obiekt reprezentuje (niedziela = 1).|
-|[COleDateTime::GetDayOfYear](#getdayofyear)|Zwraca dzień roku, to `COleDateTime` obiekt reprezentuje (1 stycznia = 1).|
-|[COleDateTime::GetHour](#gethour)|Zwraca godzinę, to `COleDateTime` obiekt reprezentuje (0 - 23).|
-|[COleDateTime::GetMinute](#getminute)|Zwraca minuty, to `COleDateTime` obiekt reprezentuje (0 - 59).|
-|[COleDateTime::GetMonth](#getmonth)|Zwraca miesiąc, to `COleDateTime` obiekt reprezentuje (1-12).|
-|[COleDateTime::GetSecond](#getsecond)|Zwraca sekundy, to `COleDateTime` obiekt reprezentuje (0 - 59).|
-|[COleDateTime::GetStatus](#getstatus)|Pobiera stan (ważność) to `COleDateTime` obiektu.|
-|[COleDateTime::GetYear](#getyear)|Zwraca rok, to `COleDateTime` obiekt reprezentuje.|
-|[COleDateTime::ParseDateTime](#parsedatetime)|Odczytuje wartość daty/godziny z ciągu i ustawia wartość `COleDateTime`.|
-|[COleDateTime::SetDate](#setdate)|Ustawia wartość to `COleDateTime` obiekt z podaną wartością w trybie tylko do daty.|
-|[COleDateTime::SetDateTime](#setdatetime)|Ustawia wartość tego `COleDateTime` obiektu do wartości określonej daty/godziny.|
-|[COleDateTime::SetStatus](#setstatus)|Ustawia stan (ważność) to `COleDateTime` obiektu.|
-|[COleDateTime::SetTime](#settime)|Ustawia wartość to `COleDateTime` obiekt z podaną wartością w trybie tylko do czasu.|
+|[COleDateTime:: format](#format)|Generuje sformatowaną reprezentację `COleDateTime` obiektu w postaci ciągu.|
+|[COleDateTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|Wywołaj tę metodę `DBTIMESTAMP` , aby uzyskać godzinę w `COleDateTime` obiekcie jako strukturę danych.|
+|[COleDateTime::GetAsSystemTime](#getassystemtime)|Wywołaj tę metodę, aby uzyskać godzinę w `COleDateTime` obiekcie jako strukturę danych [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) .|
+|[COleDateTime::GetAsUDATE](#getasudate)|Wywołaj tę metodę, aby uzyskać godzinę w `COleDateTime` `UDATE` postaci jako struktury danych.|
+|[COleDateTime::GetCurrentTime](#getcurrenttime)|`COleDateTime` Tworzy obiekt, który reprezentuje bieżący czas (statyczną funkcję członkowską).|
+|[COleDateTime:: GetDay](#getday)|Zwraca dzień reprezentowany przez `COleDateTime` ten obiekt (1-31).|
+|[COleDateTime::GetDayOfWeek](#getdayofweek)|Zwraca dzień tygodnia, jaki reprezentuje ten `COleDateTime` obiekt (niedziela = 1).|
+|[COleDateTime::GetDayOfYear](#getdayofyear)|Zwraca dzień roku reprezentowanego przez ten `COleDateTime` obiekt (1 stycznia = 1).|
+|[COleDateTime:: GetHour](#gethour)|Zwraca godzinę reprezentowane przez `COleDateTime` ten obiekt (0-23).|
+|[COleDateTime:: GetMinute](#getminute)|Zwraca minutę, którą `COleDateTime` ten obiekt reprezentuje (0-59).|
+|[COleDateTime:: GetMonth](#getmonth)|Zwraca miesiąc reprezentowany przez `COleDateTime` ten obiekt (1-12).|
+|[COleDateTime::GetSecond](#getsecond)|Zwraca sekundę, gdy `COleDateTime` ten obiekt reprezentuje (0-59).|
+|[COleDateTime:: GetStatus](#getstatus)|Pobiera stan (ważność) tego `COleDateTime` obiektu.|
+|[COleDateTime:: GetYear](#getyear)|Zwraca rok reprezentowany przez `COleDateTime` ten obiekt.|
+|[COleDateTime::P arseDateTime](#parsedatetime)|Odczytuje wartość daty/godziny z ciągu i ustawia wartość `COleDateTime`.|
+|[COleDateTime:: SetDate](#setdate)|Ustawia wartość tego `COleDateTime` obiektu na określoną wartość daty.|
+|[COleDateTime:: SetDateTime](#setdatetime)|Ustawia wartość tego `COleDateTime` obiektu na określoną wartość daty/godziny.|
+|[COleDateTime:: SetStatus](#setstatus)|Ustawia stan (ważność) tego `COleDateTime` obiektu.|
+|[COleDateTime:: SetTime](#settime)|Ustawia wartość tego `COleDateTime` obiektu na określoną wartość tylko czasu.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[COleDateTime::operator == COleDateTime::operator < itp.](#coledatetime_relational_operators)|Porównanie dwóch `COleDateTime` wartości.|
-|[COleDateTime::operator + COleDateTime::operator-](#operator_add_-)|Dodawanie i odejmowanie `COleDateTime` wartości.|
-|[COleDateTime::operator +=, COleDateTime::operator-=](#operator_add_eq_-_eq)|Dodawanie i odejmowanie `COleDateTime` wartości z tego `COleDateTime` obiektu.|
-|[COleDateTime::operator =](#operator_eq)|Kopiuje `COleDateTime` wartość.|
-|[COleDateTime::operator DATE, Date COleDateTime::operator *](#operator_date)|Konwertuje `COleDateTime` wartością do `DATE` lub `DATE*`.|
+|[COleDateTime:: operator = =, COleDateTime:: operator < itd.](#coledatetime_relational_operators)|Porównaj dwie `COleDateTime` wartości.|
+|[COleDateTime:: operator +, COleDateTime:: operator-](#operator_add_-)|Dodawanie i odejmowanie `COleDateTime` wartości.|
+|[COleDateTime:: operator + =, COleDateTime:: operator-=](#operator_add_eq_-_eq)|Dodaj i Odejmij `COleDateTime` wartość z tego `COleDateTime` obiektu.|
+|[COleDateTime:: operator =](#operator_eq)|`COleDateTime` Kopiuje wartość.|
+|[COleDateTime:: operator — Data, COleDateTime:: operator — Data *](#operator_date)|`COleDateTime` Konwertuje wartość`DATE` na lub `DATE*`.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[COleDateTime::m_dt](#m_dt)|Zawiera podstawowe `DATE` tego `COleDateTime` obiektu.|
-|[COleDateTime::m_status](#m_status)|Zawiera informacje o stanie tego `COleDateTime` obiektu.|
+|[COleDateTime::m_dt](#m_dt)|Zawiera podstawową `DATE` dla tego `COleDateTime` obiektu.|
+|[COleDateTime::m_status](#m_status)|Zawiera stan tego `COleDateTime` obiektu.|
 
 ## <a name="remarks"></a>Uwagi
 
-`COleDateTime` nie ma klasy bazowej.
+`COleDateTime`nie ma klasy bazowej.
 
-Jest jednym z możliwych typów dla [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) typ danych w automatyzacji OLE. A `COleDateTime` wartość reprezentuje bezwzględną wartość daty i godziny.
+Jest to jeden z możliwych typów dla typu danych [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) automatyzacji OLE. `COleDateTime` Wartość reprezentuje bezwzględną wartość daty i godziny.
 
-`DATE` Typ jest zaimplementowany jako wartość zmiennoprzecinkowa. Dni jest mierzony od 30 grudnia 1899 o północy. W poniższej tabeli przedstawiono niektóre dat i ich skojarzone wartości:
+`DATE` Typ jest zaimplementowany jako wartość zmiennoprzecinkowa. Dni są mierzone od 30 grudnia 1899, o północy. W poniższej tabeli przedstawiono niektóre daty i ich skojarzone wartości:
 
 |Data|Wartość|
 |----------|-----------|
-|29 grudnia 1899 północy|-1.0|
-|29 grudnia 1899, przedpołudnie 6|-1.25|
-|30 grudnia 1899 północy|0.0|
-|Do 31 grudnia 1899 północy|1.0|
-|1 stycznia 1900, godziny 6: 00|2.25|
+|29 grudnia 1899, północy|-1.0|
+|29 grudnia 1899, 6 A M|-1.25|
+|30 grudnia 1899, północy|0.0|
+|31 grudnia 1899, północy|1.0|
+|1 stycznia 1900, rano|2.25|
 
 > [!CAUTION]
-> W powyższej tabeli chociaż wartości dni ujemna wcześniejszą niż północ na 30 grudnia 1899 wartości pory dnia nie są. Na przykład 6:00 AM zawsze jest reprezentowany przez wartość ułamkowa 0,25 niezależnie od tego, czy liczbę całkowitą przedstawiającą dzień jest dodatnia (po 30 grudnia 1899) lub ujemna (przed 30 grudnia 1899). Oznacza to, że błędnie posortuj proste zmiennoprzecinkowy porównania punktu `COleDateTime` reprezentujący 6:00 AM 12/29/1899 **później** niż jeden reprezentujący 7:00:00 w dniu.
+> W powyższej tabeli, chociaż wartości dni stają się ujemne przed północy w dniu 30 grudnia 1899, wartości pory dnia nie są. Na przykład 6:00 AM jest zawsze reprezentowana przez wartość ułamkową 0,25 niezależnie od tego, czy liczba całkowita reprezentująca dzień jest dodatnia (po 30 grudnia 1899) czy ujemna (przed 30 grudnia 1899). Oznacza to, że proste porównanie liczb zmiennoprzecinkowych błędnie sortuje `COleDateTime` reprezentującą 6:00 am na 7:00 12/29/1899.
 
-`COleDateTime` Klasa obsługuje daty od 1 stycznia 100 r. do 31 grudnia 9999 r. `COleDateTime` Klasa korzysta z kalendarza gregoriańskiego; nie obsługuje daty juliańskim. `COleDateTime` ignoruje czasu letniego. (Zobacz [daty i godziny: Obsługa automatyzacji](../../atl-mfc-shared/date-and-time-automation-support.md).)
+`COleDateTime` Klasa obsługuje daty od 1 stycznia 100 do 31 grudnia 9999. `COleDateTime` Klasa używa kalendarza gregoriańskiego; nie obsługuje dat juliańskim. `COleDateTime`ignoruje czas letni. (Zobacz [datę i godzinę: Obsługa](../../atl-mfc-shared/date-and-time-automation-support.md)automatyzacji.)
 
 > [!NOTE]
-> Możesz użyć `%y` formatu w celu pobrania dwucyfrowy rok tylko w przypadku daty od 1900. Jeśli używasz `%y` format na datę wcześniejszą 1900 kod generuje błąd ASERCJI.
+> Możesz użyć `%y` formatu, aby pobrać dwucyfrowy rok tylko dla dat, rozpoczynając od 1900. Jeśli używasz `%y` formatu w dniu przed 1900, kod generuje błąd potwierdzenia.
 
-Ten typ jest również używany do reprezentowania wartości daty lub godziny. Zgodnie z Konwencją Data 0 (30 grudnia 1899) jest używana dla wartości tylko do czasu i godziny 00:00 (północ) jest używana dla wartości daty.
+Ten typ jest również używany do reprezentowania wartości tylko daty lub godziny. Zgodnie z Konwencją Data 0 (30 grudnia 1899) jest używana jako wartość tylko czasu, a godzina 00:00 (północ) jest używana tylko dla wartości typu Date.
 
-Jeśli tworzysz `COleDateTime` obiektu za pomocą daty mniej niż 100 Data jest akceptowane, ale kolejne wywołania `GetYear`, `GetMonth`, `GetDay`, `GetHour`, `GetMinute`, i `GetSecond` zakończyć się niepowodzeniem i zwracają wartość -1. Wcześniej można użyć dwóch cyfr daty, ale daty muszą być 100 lub większej w MFC 4.2 lub nowszy.
+Jeśli utworzysz `COleDateTime` Obiekt przy użyciu daty mniejszej niż 100, data zostanie zaakceptowana, ale kolejne `GetHour` `GetYear`wywołania `GetMonth`, `GetDay`,, `GetMinute`,, i `GetSecond` Return-1. Wcześniej można użyć dwóch cyfr, ale daty muszą być 100 lub większe w MFC 4,2 i nowszych.
 
-Aby uniknąć problemów, należy określić datę czterech cyfr. Na przykład:
+Aby uniknąć problemów, określ datę z czterema cyframi. Przykład:
 
 [!code-cpp[NVC_ATLMFC_Utilities#1](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_1.cpp)]
 
-Podstawowe operacje arytmetyczne na `COleDateTime` wartości należy użyć klasy Pomocnika [COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md). `COleDateTimeSpan` wartości zdefiniować interwał czasu. Relacja między tymi klasami jest podobny do przedstawionego między [CTime](../../atl-mfc-shared/reference/ctime-class.md) i [CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md).
+Podstawowe operacje arytmetyczne dla `COleDateTime` wartości używają klasy pomocnika [COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md). `COleDateTimeSpan`wartości definiują przedział czasu. Relacja między tymi klasami jest podobna do między [CTime](../../atl-mfc-shared/reference/ctime-class.md) i [CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md).
 
-Aby uzyskać więcej informacji na temat `COleDateTime` i `COleDateTimeSpan` klas, zapoznaj się z artykułem [daty i godziny: Obsługa automatyzacji](../../atl-mfc-shared/date-and-time-automation-support.md).
+Aby uzyskać więcej informacji na `COleDateTime` temat `COleDateTimeSpan` klas i, zobacz Data [i godzina artykułu: Obsługa](../../atl-mfc-shared/date-and-time-automation-support.md)automatyzacji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** ATLComTime.h
+**Nagłówki** ATLComTime.h
 
-##  <a name="coledatetime_relational_operators"></a>  COleDateTime, operatory relacyjne
+##  <a name="coledatetime_relational_operators"></a>Operatory relacyjne COleDateTime
 
 Operatory porównania.
 
@@ -155,13 +155,13 @@ bool operator>=(const COleDateTime& date) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Data*<br/>
-`COleDateTime` Obiekt do porównania.
+*dniu*<br/>
+Obiekt `COleDateTime` , który ma zostać porównany.
 
 ### <a name="remarks"></a>Uwagi
 
 > [!NOTE]
->  ATLASSERT wystąpi jedno z dwóch argumentów operacji jest nieprawidłowy.
+>  ATLASSERT pojawi się, jeśli jeden z dwóch operandów jest nieprawidłowy.
 
 ### <a name="example"></a>Przykład
 
@@ -169,13 +169,13 @@ bool operator>=(const COleDateTime& date) const throw();
 
 ### <a name="example"></a>Przykład
 
-Operatory **>=** , **\< =** , **>** , i **<** , będzie potwierdzenia, jeśli `COleDateTime` obiekt jest ustawiony na wartość null.
+Operatory **>=** , **\<, ,i=** **,>spowodują**, że`COleDateTime` obiekt jest ustawiony na wartość null. **<**
 
 [!code-cpp[NVC_ATLMFC_Utilities#170](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_3.cpp)]
 
-##  <a name="coledatetime"></a>  COleDateTime::COleDateTime
+##  <a name="coledatetime"></a>COleDateTime::COleDateTime
 
-Konstruuje `COleDateTime` obiektu.
+Konstruuje `COleDateTime` obiekt.
 
 ```
 COleDateTime() throw();
@@ -201,83 +201,83 @@ COleDateTime(const DBTIMESTAMP& timeStamp) throw();
 ### <a name="parameters"></a>Parametry
 
 *dateSrc*<br/>
-Istniejące `COleDateTime` obiektu do skopiowania w nowe `COleDateTime` obiektu.
+Istniejący `COleDateTime` obiekt do skopiowania do nowego `COleDateTime` obiektu.
 
 *varSrc*<br/>
-Istniejące `VARIANT` struktury danych (prawdopodobnie `COleVariant` obiektu) można przekonwertować na wartość daty/godziny (VT_DATE) i skopiowane do nowego `COleDateTime` obiektu.
+Istniejąca `VARIANT` struktura danych ( `COleVariant` prawdopodobnie obiekt) do przekonwertowania na wartość daty/godziny (VT_DATE) i skopiowana do nowego `COleDateTime` obiektu.
 
 *dtSrc*<br/>
-Data/Godzina (`DATE`) wartość do skopiowania w nowe `COleDateTime` obiektu.
+Wartość daty/godziny (`DATE`) do skopiowania do nowego `COleDateTime` obiektu.
 
 *timeSrc*<br/>
-A `time_t` lub `__time64_t` wartość może zostać przekonwertowana na wartość daty/godziny i skopiowane do nowego `COleDateTime` obiektu.
+Wartość `time_t` `COleDateTime` lub `__time64_t` , która ma zostać przekonwertowana na wartość daty/godziny i skopiowana do nowego obiektu.
 
 *systimeSrc*<br/>
-A `SYSTEMTIME` struktura może zostać przekonwertowana na wartość daty/godziny i skopiowane do nowego `COleDateTime` obiektu.
+Struktura, która ma zostać przekonwertowana na wartość daty/godziny i skopiowana do `COleDateTime` nowego obiektu. `SYSTEMTIME`
 
 *filetimeSrc*<br/>
-A `FILETIME` struktura może zostać przekonwertowana na wartość daty/godziny i skopiowane do nowego `COleDateTime` obiektu. A `FILETIME` korzysta z uniwersalnego czasu koordynowanego (UTC), więc jeśli przekażesz czasu lokalnego w strukturze będą niepoprawne wyniki. Zobacz [czasy](/windows/desktop/SysInfo/file-times) w zestawie Windows SDK, aby uzyskać więcej informacji.
+Struktura, która ma zostać przekonwertowana na wartość daty/godziny i skopiowana do `COleDateTime` nowego obiektu. `FILETIME` `FILETIME` Przy użyciu uniwersalnego czasu koordynowanego (UTC), dlatego w przypadku przekazania czasu lokalnego do struktury wyniki będą nieprawidłowe. Aby uzyskać więcej informacji, zobacz [czasy plików](/windows/win32/SysInfo/file-times) w Windows SDK.
 
-*nYear*, *nMonth*, *nbłędny dzień*, *Ngodzina*, *nMin*, *nSec*<br/>
-Wskazuje wartości daty i godziny do skopiowania w nowe `COleDateTime` obiektu.
+*nYear*, *nMonth*, *nbłędny dzień*, *ngodzina*, *Nmin*, *NSEC*<br/>
+Wskaż wartości daty i godziny, które mają zostać skopiowane do `COleDateTime` nowego obiektu.
 
 *wDosDate*, *wDosTime*<br/>
-Wartości daty i godziny może zostać przekonwertowana na wartość daty/godziny i skopiowane do nowego systemu MS-DOS `COleDateTime` obiektu.
+Wartości daty i godziny systemu MS-DOS do przekonwertowania na wartość daty/godziny i skopiowane do nowego `COleDateTime` obiektu.
 
 *timeStamp*<br/>
-Odwołanie do [Odcisk czasowy](/dotnet/api/system.data.oledb.oledbtype) struktury zawierającej bieżący czas lokalny.
+Odwołanie do struktury [DBTIMESTAMP](/dotnet/api/system.data.oledb.oledbtype) zawierającego bieżący czas lokalny.
 
 ### <a name="remarks"></a>Uwagi
 
-Te konstruktory tworzenia nowych `COleDateTime` obiektów inicjowane z podaną wartością. W poniższej tabeli przedstawiono prawidłowe zakresy dla każdego składnika daty i godziny:
+Wszystkie te konstruktory tworzą `COleDateTime` nowe obiekty zainicjowane do określonej wartości. W poniższej tabeli przedstawiono prawidłowe zakresy dla każdego składnika daty i godziny:
 
 |Składnik daty/godziny|Prawidłowy zakres|
 |--------------------------|-----------------|
 |rok|100 - 9999|
 |miesiąc|0 - 12|
 |dzień|0 - 31|
-|Godzina|0 - 23|
-|Minuta|0 - 59|
-|Sekundy|0 - 59|
+|wydajność|0 - 23|
+|minutę|0 - 59|
+|drugi|0 - 59|
 
-Należy zauważyć, że różni się w rzeczywistych górną granicę składnik dnia na podstawie części miesiąca i roku. Aby uzyskać więcej informacji, zobacz `SetDate` lub `SetDateTime` funkcji elementów członkowskich.
+Należy zauważyć, że rzeczywiste górne ograniczenie składnika Day różni się w zależności od składników miesiąca i roku. Aby uzyskać szczegółowe informacje, `SetDate` zobacz `SetDateTime` lub funkcje członkowskie.
 
-Poniżej przedstawiono krótki opis każdego Konstruktor:
+Poniżej znajduje się krótki opis każdego konstruktora:
 
-- `COleDateTime(` **)** Tworzy `COleDateTime` obiektu inicjowane na wartość 0 (o północy, 30 grudnia 1899).
+- `COleDateTime(` **)** Konstruuje `COleDateTime` obiekt zainicjowany do wartości 0 (północ, 30 grudnia 1899).
 
-- `COleDateTime(` `dateSrc` **)** Tworzy `COleDateTime` obiektu z istniejącego `COleDateTime` obiektu.
+- `COleDateTime(`) Konstruuje `COleDateTime` obiekt z istniejącego `COleDateTime` obiektu. `dateSrc`
 
-- `COleDateTime(` *varSrc* **)** tworzy `COleDateTime` obiektu. Stara się przekonwertować `VARIANT` struktury lub [COleVariant](../../mfc/reference/colevariant-class.md) obiekt do daty/godziny ( `VT_DATE`) wartość. Jeśli ta konwersja zakończy się pomyślnie, przekonwertowana wartości jest kopiowana do nowej `COleDateTime` obiektu. Jeśli nie, to wartość `COleDateTime` obiekt jest ustawiony na 0 (o północy, 30 grudnia 1899) i jej stanie się nieprawidłowy.
+- `COleDateTime(`*varSrc* **)** Konstruuje `COleDateTime` obiekt. Próbuje skonwertować `VARIANT` strukturę lub obiekt [COleVariant](../../mfc/reference/colevariant-class.md) na wartość daty/godziny ( `VT_DATE`). Jeśli ta konwersja zakończyła się pomyślnie, przekonwertowana wartość jest kopiowana do nowego `COleDateTime` obiektu. Jeśli tak nie jest, wartość `COleDateTime` obiektu jest ustawiona na 0 (północ, 30 grudnia 1899) i jego stan jest nieprawidłowy.
 
-- `COleDateTime(` `dtSrc` **)** Tworzy `COleDateTime` obiektu z `DATE` wartości.
+- `COleDateTime(``dtSrc` **)** Konstruuje `COleDateTime` obiekt z`DATE` wartości.
 
-- `COleDateTime(` `timeSrc` **)** Tworzy `COleDateTime` obiektu z `time_t` wartości.
+- `COleDateTime(``timeSrc` **)** Konstruuje `COleDateTime` obiekt z`time_t` wartości.
 
-- `COleDateTime(` *systimeSrc* **)** tworzy `COleDateTime` obiektu z `SYSTEMTIME` wartości.
+- `COleDateTime(`*systimeSrc* **)** Konstruuje `COleDateTime` obiekt z `SYSTEMTIME` wartości.
 
-- `COleDateTime(` `filetimeSrc` **)** Tworzy `COleDateTime` obiektu z `FILETIME` wartości. . A `FILETIME` korzysta z uniwersalnego czasu koordynowanego (UTC), więc jeśli przekażesz czasu lokalnego w strukturze będą niepoprawne wyniki. Aby uzyskać więcej informacji, zobacz [czasy](/windows/desktop/SysInfo/file-times) w zestawie Windows SDK.
+- `COleDateTime(``filetimeSrc` **)** Konstruuje `COleDateTime` obiekt z`FILETIME` wartości. . `FILETIME` Przy użyciu uniwersalnego czasu koordynowanego (UTC), dlatego w przypadku przekazania czasu lokalnego do struktury wyniki będą nieprawidłowe. Aby uzyskać więcej informacji, zobacz [czasy plików](/windows/win32/SysInfo/file-times) w Windows SDK.
 
-- `COleDateTime(` `nYear``nMonth`, `nDay`, `nHour`, `nMin`, `nSec` **)** Tworzy `COleDateTime` obiektu z określonej wartości liczbowe.
+- `COleDateTime(``nYear`, ,`nMonth` ,,`nSec`,) Konstruuje obiekt`COleDateTime` z określonych wartości liczbowych. `nDay` `nHour` `nMin`
 
-- `COleDateTime(` `wDosDate``wDosTime` **)** Tworzy `COleDateTime` obiektu z określonej wartości daty i godziny systemu MS-DOS.
+- `COleDateTime(``wDosDate`, )`wDosTime` Konstruuje obiekt`COleDateTime` z określonych wartości daty i godziny systemu MS-DOS.
 
-Aby uzyskać więcej informacji na temat `time_t` typ danych, zobacz [czasu](../../c-runtime-library/reference/time-time32-time64.md) działa w programach *odwołanie do biblioteki wykonawczej*.
+Aby uzyskać więcej informacji na `time_t` temat typu danych, zobacz [Time](../../c-runtime-library/reference/time-time32-time64.md) function in the *Run-Time Library Reference*.
 
-Aby uzyskać więcej informacji, zobacz [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) i [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struktur w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz struktury [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) i [FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime) w Windows SDK.
 
-Aby uzyskać więcej informacji na temat granice dla `COleDateTime` wartości, zobacz artykuł [daty i godziny: Obsługa automatyzacji](../../atl-mfc-shared/date-and-time-automation-support.md).
+Aby uzyskać więcej informacji na temat granic dla `COleDateTime` wartości, zobacz Data i [godzina artykułu: Obsługa](../../atl-mfc-shared/date-and-time-automation-support.md)automatyzacji.
 
 > [!NOTE]
-> Za pomocą konstruktora `DBTIMESTAMP` parametr jest dostępna tylko, gdy OLEDB.h jest dołączony.
+> Konstruktor używający `DBTIMESTAMP` parametru jest dostępny tylko wtedy, gdy jest dołączony OLEDB. h.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#2](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_4.cpp)]
 
-##  <a name="format"></a>  COleDateTime::Format
+##  <a name="format"></a>COleDateTime:: format
 
-Tworzy reprezentację sformatowaną wartość daty/godziny.
+Tworzy sformatowaną reprezentację wartości daty/godziny.
 
 ```
 CString Format(DWORD dwFlags = 0,  LCID lcid = LANG_USER_DEFAULT) const;
@@ -287,58 +287,58 @@ CString Format(UINT nFormatID) const;
 
 ### <a name="parameters"></a>Parametry
 
-*dwFlags*<br/>
-Wskazuje, jedną z następujących flag ustawień regionalnych:
+*flagiDW*<br/>
+Wskazuje jedną z następujących flag ustawień regionalnych:
 
-- LOCALE_NOUSEROVERRIDE użyć systemu domyślne ustawienia regionalne, zamiast niestandardowych ustawień użytkownika.
+- LOCALE_NOUSEROVERRIDE Użyj domyślnych ustawień regionalnych systemu zamiast niestandardowych ustawień użytkownika.
 
-- Ignoruj VAR_TIMEVALUEONLY część dotycząca daty podczas analizowania.
+- VAR_TIMEVALUEONLY ignoruje część daty podczas analizowania.
 
-- Ignoruj VAR_DATEVALUEONLY część godzinowa podczas analizowania.
+- VAR_DATEVALUEONLY ignoruje część czasu podczas analizowania.
 
 *lcid*<br/>
-Określa identyfikator ustawień regionalnych na potrzeby konwersji. Aby uzyskać więcej informacji na temat identyfikatorów języka, zobacz [identyfikatorów języka](/windows/desktop/Intl/language-identifiers).
+Wskazuje identyfikator ustawień regionalnych do użycia podczas konwersji. Aby uzyskać więcej informacji o identyfikatorach języka, zobacz [identyfikatory języków](/windows/win32/Intl/language-identifiers).
 
 *lpszFormat*<br/>
-Formatowanie ciągów podobne do `printf` ciąg formatowania. Każdy formatowanie kodu, poprzedzony procent ( `%`) Zaloguj się, jest zastępowany przez odpowiednie `COleDateTime` składnika. Inne znaki do ciągu formatowania są kopiowane bez zmian do zwracanego ciągu. Aby uzyskać więcej informacji, zobacz opis funkcji wykonawczej [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md). Wartość i znaczenie kody formatowania `Format` są:
+Ciąg formatowania podobny do `printf` ciągu formatowania. Każdy kod formatowania, poprzedzony znakiem procentu `%`(), jest zastępowany przez odpowiedni `COleDateTime` składnik. Inne znaki w ciągu formatowania są kopiowane bez zmian do zwracanego ciągu. Aby uzyskać więcej informacji, zobacz Funkcja Run-Time [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md). Wartość i znaczenie kodów formatowania dla `Format` są następujące:
 
-- `%H` Godz. w bieżącym dniu
+- `%H`Godz. w bieżącym dniu
 
-- `%M` Minuty w bieżącej godziny
+- `%M`Minuty w bieżącej godzinie
 
-- `%S` Liczba sekund w ciągu bieżącej minuty
+- `%S`Sekundy w bieżącej minucie
 
-- `%%` Znak procentu
+- `%%`Znak procentu
 
 *nFormatID*<br/>
-Identyfikator zasobu ciąg formantu formatu.
+Identyfikator zasobu dla ciągu sterującego formatu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Element `CString` zawierający wartości daty/godziny sformatowane.
+A `CString` , który zawiera sformatowaną wartość daty/godziny.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli stan to `COleDateTime` obiekt ma wartość null, wartość zwracana jest ciągiem pustym. Jeśli stan jest nieprawidłowa, zwracanego ciągu jest określany przez zasób ciągu ATL_IDS_DATETIME_INVALID.
+Jeśli stan tego `COleDateTime` obiektu ma wartość null, zwracana wartość jest ciągiem pustym. Jeśli stan jest nieprawidłowy, zwracany ciąg jest określany przez ATL_IDS_DATETIME_INVALID zasobu ciągu.
 
-Krótki opis trzy formy dla tej funkcji są następujące:
+Poniżej znajduje się krótki opis trzech formularzy dla tej funkcji:
 
-`Format`( *dwFlags*, *lcid*)<br/>
-Ten formularz, formatuje wartość przy użyciu specyfikacji języka (identyfikatory ustawień regionalnych) dla daty i godziny. Przy użyciu parametrów domyślnych, ten formularz drukują datę i godzinę, o ile część godzinowa to 0 (północ), w którym to przypadku składała się tylko datę lub część dotycząca daty jest 0 (30 grudnia 1899), w takiej sytuacji zostanie wydrukowany tylko czas. Jeśli wartości daty/godziny to 0 (30 grudnia 1899, północy), ten formularz z parametrami domyślnymi będą drukowane północy.
+`Format`( *flagiDW*, *LCID*)<br/>
+Ten formularz służy do formatowania wartości przy użyciu specyfikacji języka (identyfikatorów ustawień regionalnych) dla daty i godziny. Przy użyciu parametrów domyślnych ten formularz drukuje datę i godzinę, chyba że część czasu jest równa 0 (północ), w tym przypadku zostanie wydrukowany tylko data lub część daty równa 0 (30 grudnia 1899), w tym przypadku zostanie wydrukowany tylko czas. Jeśli wartość daty/godziny jest równa 0 (30 grudnia 1899, północy), ten formularz z domyślnymi parametrami będzie drukować o północy.
 
 `Format`( *lpszFormat*)<br/>
-Ten formularz, formatuje wartość przy użyciu ciągu formatu, który zawiera specjalne kody formatowania, które są poprzedzone znakiem procentu (%), podobnie jak w `printf`. Ciąg formatowania jest przekazywany jako parametr do funkcji. Aby uzyskać więcej informacji na temat kodów formatowania, zobacz [strftime, wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) w odwołaniu biblioteki wykonawczej.
+Ten formularz służy do formatowania wartości przy użyciu ciągu formatu, który zawiera specjalne kody formatowania, poprzedzone znakiem procentu (%), jak w `printf`. Ciąg formatowania jest przenoszona jako parametr do funkcji. Aby uzyskać więcej informacji na temat kodów formatowania, zobacz [strftime, wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) w dokumentacji dotyczącej biblioteki wykonawczej.
 
 `Format`( *nFormatID*)<br/>
-Ten formularz, formatuje wartość przy użyciu ciągu formatu, który zawiera specjalne kody formatowania, które są poprzedzone znakiem procentu (%), podobnie jak w `printf`. Ciąg formatowania jest zasobem. Identyfikator zasobu ciągu jest przekazywany jako parametr. Aby uzyskać więcej informacji na temat kodów formatowania, zobacz [strftime, wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) w *odwołanie do biblioteki wykonawczej*.
+Ten formularz służy do formatowania wartości przy użyciu ciągu formatu, który zawiera specjalne kody formatowania, poprzedzone znakiem procentu (%), jak w `printf`. Ciąg formatowania jest zasobem. Identyfikator tego zasobu ciągu jest przekazaniem jako parametr. Aby uzyskać więcej informacji na temat kodów formatowania, zobacz [strftime, wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) w *dokumentacji dotyczącej biblioteki wykonawczej*.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#3](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_5.cpp)]
 
-##  <a name="getasdbtimestamp"></a>  COleDateTime::GetAsDBTIMESTAMP
+##  <a name="getasdbtimestamp"></a>COleDateTime::GetAsDBTIMESTAMP
 
-Wywołaj tę metodę w celu uzyskania czas w `COleDateTime` obiektu jako `DBTIMESTAMP` strukturę danych.
+Wywołaj tę metodę `DBTIMESTAMP` , aby uzyskać godzinę w `COleDateTime` obiekcie jako strukturę danych.
 
 ```
 bool GetAsDBTIMESTAMP(DBTIMESTAMP& timeStamp) const throw();
@@ -347,23 +347,23 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& timeStamp) const throw();
 ### <a name="parameters"></a>Parametry
 
 *timeStamp*<br/>
-Odwołanie do [Odcisk czasowy](/dotnet/api/system.data.oledb.oledbtype) struktury.
+Odwołanie do struktury [DBTIMESTAMP](/dotnet/api/system.data.oledb.oledbtype) .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Zapisuje wynikowy czas w występujących w odwołaniu *sygnatura czasowa* struktury. `DBTIMESTAMP` Struktury danych, które inicjowane przez tę funkcję będzie miał jego `fraction` element członkowski należy ustawić na zero.
+Zapisuje wyniki w strukturze *sygnatur czasowych* , do których się odwołuje. Struktura danych zainicjowana przez tę funkcję będzie mieć `fraction` swój element członkowski ustawiony na wartość zero. `DBTIMESTAMP`
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#4](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_6.cpp)]
 
-##  <a name="getassystemtime"></a>  COleDateTime::GetAsSystemTime
+##  <a name="getassystemtime"></a>COleDateTime::GetAsSystemTime
 
-Wywołaj tę metodę w celu uzyskania czas w `COleDateTime` obiektu jako `SYSTEMTIME` strukturę danych.
+Wywołaj tę metodę `SYSTEMTIME` , aby uzyskać godzinę w `COleDateTime` obiekcie jako strukturę danych.
 
 ```
 bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
@@ -371,22 +371,22 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*sysTime*<br/>
-Odwołanie do [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktury, aby otrzymać wartość przekonwertowanego daty/godziny z `COleDateTime` obiektu.
+*SysTime —*<br/>
+Odwołanie do struktury [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) , aby otrzymać przekonwertowaną wartość daty/godziny z `COleDateTime` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE, jeśli to się powiedzie; Wartość FALSE, jeśli konwersja nie powiedzie się lub jeśli `COleDateTime` obiektu ma wartość NULL lub nieprawidłowa.
+Zwraca wartość PRAWDA, jeśli powodzenie; FAŁSZ, jeśli konwersja nie powiedzie się lub `COleDateTime` Jeśli obiekt ma wartość null lub jest nieprawidłowy.
 
 ### <a name="remarks"></a>Uwagi
 
-`GetAsSystemTime` zapisuje wynikowy czas w występujących w odwołaniu *systime —* obiektu. `SYSTEMTIME` Struktury danych, które inicjowane przez tę funkcję będzie miał jego `wMilliseconds` element członkowski należy ustawić na zero.
+`GetAsSystemTime`Zapisuje czas, który powstaje w przywoływanym obiekcie *SysTime —* . Struktura danych zainicjowana przez tę funkcję będzie mieć `wMilliseconds` swój element członkowski ustawiony na wartość zero. `SYSTEMTIME`
 
-Aby więcej informacji na temat informacje o stanie przechowywanych w `COleDateTime` obiektu, zobacz [GetStatus](#getstatus).
+Aby uzyskać więcej informacji na temat informacji o stanie przechowywanych `COleDateTime` w obiekcie, zobacz GetStatus. [](#getstatus)
 
-##  <a name="getasudate"></a>  COleDateTime::GetAsUDATE
+##  <a name="getasudate"></a>COleDateTime::GetAsUDATE
 
-Wywołaj tę metodę w celu uzyskania czas w `COleDateTime` obiektu jako `UDATE` strukturę danych.
+Wywołaj tę metodę `UDATE` , aby uzyskać godzinę w `COleDateTime` obiekcie jako strukturę danych.
 
 ```
 bool GetAsUDATE(UDATE& uDate) const throw();
@@ -395,19 +395,19 @@ bool GetAsUDATE(UDATE& uDate) const throw();
 ### <a name="parameters"></a>Parametry
 
 *uDate*<br/>
-Odwołanie do `UDATE` struktury, aby otrzymać wartość przekonwertowanego daty/godziny z `COleDateTime` obiektu.
+Odwołanie do `UDATE` struktury, która ma otrzymać przekonwertowaną wartość daty/godziny `COleDateTime` z obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE, jeśli to się powiedzie; Wartość FALSE, jeśli konwersja nie powiedzie się lub jeśli `COleDateTime` obiektu ma wartość NULL lub nieprawidłowa.
+Zwraca wartość PRAWDA, jeśli powodzenie; FAŁSZ, jeśli konwersja nie powiedzie się lub `COleDateTime` Jeśli obiekt ma wartość null lub jest nieprawidłowy.
 
 ### <a name="remarks"></a>Uwagi
 
-A `UDATE` struktury reprezentuje datę "nierozpakowane".
+`UDATE` Struktura reprezentuje datę unpackd.
 
-##  <a name="getcurrenttime"></a>  COleDateTime::GetCurrentTime
+##  <a name="getcurrenttime"></a>COleDateTime::GetCurrentTime
 
-Wywołaj tę funkcję statycznego elementu członkowskiego w celu zwrócenia wartości bieżącej daty/godziny.
+Wywołaj tę statyczną funkcję członkowską, aby zwrócić bieżącą wartość daty/godziny.
 
 ```
 static COleDateTime WINAPI GetCurrentTime() throw();
@@ -417,9 +417,9 @@ static COleDateTime WINAPI GetCurrentTime() throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#5](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_7.cpp)]
 
-##  <a name="getday"></a>  COleDateTime::GetDay
+##  <a name="getday"></a>COleDateTime:: GetDay
 
-Pobiera dzień miesiąca, reprezentowane przez tę wartość daty/godziny.
+Pobiera dzień miesiąca reprezentowanego przez tę wartość daty/godziny.
 
 ```
 int GetDay() const throw();
@@ -427,13 +427,13 @@ int GetDay() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Dzień miesiąca, reprezentowany przez wartość tego `COleDateTime` obiektu lub `COleDateTime::error` Jeśli nie można uzyskać dnia.
+Dzień miesiąca reprezentowanego przez wartość tego `COleDateTime` obiektu lub `COleDateTime::error` Jeśli nie można uzyskać dnia.
 
 ### <a name="remarks"></a>Uwagi
 
-Prawidłowe wartości zwracanej zakres od 1 do 31.
+Prawidłowe wartości zwracane mieszczą się w zakresie od 1 do 31.
 
-Instrukcje dotyczące innych funkcji Członkowskich, które tworzą zapytania dotyczące wartość tego `COleDateTime` obiektu, zobacz następujące funkcje elementów członkowskich:
+Aby uzyskać informacje na temat innych funkcji Członkowskich, które wysyłają `COleDateTime` zapytania do wartości tego obiektu, zobacz następujące funkcje Członkowskie:
 
 - [GetMonth](#getmonth)
 
@@ -441,7 +441,7 @@ Instrukcje dotyczące innych funkcji Członkowskich, które tworzą zapytania do
 
 - [GetHour](#gethour)
 
-- [GetMinute](#getminute)
+- [Getminuta](#getminute)
 
 - [GetSecond](#getsecond)
 
@@ -453,9 +453,9 @@ Instrukcje dotyczące innych funkcji Członkowskich, które tworzą zapytania do
 
 [!code-cpp[NVC_ATLMFC_Utilities#6](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_8.cpp)]
 
-##  <a name="getdayofweek"></a>  COleDateTime::GetDayOfWeek
+##  <a name="getdayofweek"></a>COleDateTime::GetDayOfWeek
 
-Pobiera dzień miesiąca, reprezentowane przez tę wartość daty/godziny.
+Pobiera dzień miesiąca reprezentowanego przez tę wartość daty/godziny.
 
 ```
 int GetDayOfWeek() const throw();
@@ -463,13 +463,13 @@ int GetDayOfWeek() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Dzień tygodnia, reprezentowany przez wartość tego `COleDateTime` obiektu lub `COleDateTime::error` Jeśli nie można uzyskać dzień tygodnia.
+Dzień tygodnia reprezentowany przez wartość tego `COleDateTime` obiektu lub `COleDateTime::error` Jeśli nie można uzyskać dnia tygodnia.
 
 ### <a name="remarks"></a>Uwagi
 
-Nieprawidłowy zwracany wartości zakresu od 1 do 7, gdzie 1 = niedziela, 2 = poniedziałek i tak dalej.
+Prawidłowe wartości zwracane mieszczą się w zakresie od 1 do 7, gdzie 1 = niedziela, 2 = poniedziałek itd.
 
-Instrukcje dotyczące innych funkcji Członkowskich, które tworzą zapytania dotyczące wartość tego `COleDateTime` obiektu, zobacz następujące funkcje elementów członkowskich:
+Aby uzyskać informacje na temat innych funkcji Członkowskich, które wysyłają `COleDateTime` zapytania do wartości tego obiektu, zobacz następujące funkcje Członkowskie:
 
 - [GetDay](#getday)
 
@@ -479,7 +479,7 @@ Instrukcje dotyczące innych funkcji Członkowskich, które tworzą zapytania do
 
 - [GetHour](#gethour)
 
-- [GetMinute](#getminute)
+- [Getminuta](#getminute)
 
 - [GetSecond](#getsecond)
 
@@ -489,9 +489,9 @@ Instrukcje dotyczące innych funkcji Członkowskich, które tworzą zapytania do
 
 [!code-cpp[NVC_ATLMFC_Utilities#7](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_9.cpp)]
 
-##  <a name="getdayofyear"></a>  COleDateTime::GetDayOfYear
+##  <a name="getdayofyear"></a>COleDateTime::GetDayOfYear
 
-Pobiera dzień roku, reprezentowane przez tę wartość daty/godziny.
+Pobiera dzień roku reprezentowanego przez tę wartość daty/godziny.
 
 ```
 int GetDayOfYear() const throw();
@@ -499,13 +499,13 @@ int GetDayOfYear() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Dzień roku, reprezentowany przez wartość tego `COleDateTime` obiektu lub `COleDateTime::error` Jeśli nie można uzyskać dzień roku.
+Dzień roku reprezentowanego przez wartość tego `COleDateTime` obiektu lub `COleDateTime::error` w przypadku, gdy nie można uzyskać dnia roku.
 
 ### <a name="remarks"></a>Uwagi
 
-Nieprawidłowy zwracany wartości z zakresu od 1 do 366, gdzie 1 stycznia = 1.
+Prawidłowe wartości zwracane mieszczą się w zakresie od 1 do 366, gdzie 1 stycznia = 1.
 
-Instrukcje dotyczące innych funkcji Członkowskich, które tworzą zapytania dotyczące wartość tego `COleDateTime` obiektu, zobacz następujące funkcje elementów członkowskich:
+Aby uzyskać informacje na temat innych funkcji Członkowskich, które wysyłają `COleDateTime` zapytania do wartości tego obiektu, zobacz następujące funkcje Członkowskie:
 
 - [GetDay](#getday)
 
@@ -515,7 +515,7 @@ Instrukcje dotyczące innych funkcji Członkowskich, które tworzą zapytania do
 
 - [GetHour](#gethour)
 
-- [GetMinute](#getminute)
+- [Getminuta](#getminute)
 
 - [GetSecond](#getsecond)
 
@@ -525,9 +525,9 @@ Instrukcje dotyczące innych funkcji Członkowskich, które tworzą zapytania do
 
 [!code-cpp[NVC_ATLMFC_Utilities#8](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_10.cpp)]
 
-##  <a name="gethour"></a>  COleDateTime::GetHour
+##  <a name="gethour"></a>COleDateTime:: GetHour
 
-Pobiera godzinę, reprezentowane przez tę wartość daty/godziny.
+Pobiera godzinę reprezentowaną przez tę wartość daty/godziny.
 
 ```
 int GetHour() const throw();
@@ -535,13 +535,13 @@ int GetHour() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Godzina reprezentowana przez wartość tego `COleDateTime` obiektu lub `COleDateTime::error` Jeśli nie można uzyskać pełnej godzinie.
+Godzina reprezentowana przez wartość tego `COleDateTime` obiektu lub `COleDateTime::error` Jeśli nie można uzyskać godziny.
 
 ### <a name="remarks"></a>Uwagi
 
-Prawidłowe wartości zwracanej zakres od 0 do 23.
+Prawidłowe wartości zwracane mieszczą się w zakresie od 0 do 23.
 
-Instrukcje dotyczące innych funkcji Członkowskich, które tworzą zapytania dotyczące wartość tego `COleDateTime` obiektu, zobacz następujące funkcje elementów członkowskich:
+Aby uzyskać informacje na temat innych funkcji Członkowskich, które wysyłają `COleDateTime` zapytania do wartości tego obiektu, zobacz następujące funkcje Członkowskie:
 
 - [GetDay](#getday)
 
@@ -549,7 +549,7 @@ Instrukcje dotyczące innych funkcji Członkowskich, które tworzą zapytania do
 
 - [GetYear](#getyear)
 
-- [GetMinute](#getminute)
+- [Getminuta](#getminute)
 
 - [GetSecond](#getsecond)
 
@@ -561,9 +561,9 @@ Instrukcje dotyczące innych funkcji Członkowskich, które tworzą zapytania do
 
 [!code-cpp[NVC_ATLMFC_Utilities#9](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_11.cpp)]
 
-##  <a name="getminute"></a>  COleDateTime::GetMinute
+##  <a name="getminute"></a>COleDateTime:: GetMinute
 
-Pobiera minutę, reprezentowane przez tę wartość daty/godziny.
+Pobiera minutę reprezentowane przez tę wartość daty/godziny.
 
 ```
 int GetMinute() const throw();
@@ -571,13 +571,13 @@ int GetMinute() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Minuty reprezentowany przez wartość tego `COleDateTime` obiektu lub `COleDateTime::error` Jeśli nie można uzyskać liczby minut.
+Minuta reprezentowana przez wartość tego `COleDateTime` obiektu lub `COleDateTime::error` Jeśli nie można uzyskać minuty.
 
 ### <a name="remarks"></a>Uwagi
 
-Prawidłowe wartości zwracanej zakres od 0 do 59.
+Prawidłowe wartości zwracane mieszczą się w zakresie od 0 do 59.
 
-Instrukcje dotyczące innych funkcji Członkowskich, które tworzą zapytania dotyczące wartość tego `COleDateTime` obiektu, zobacz następujące funkcje elementów członkowskich:
+Aby uzyskać informacje na temat innych funkcji Członkowskich, które wysyłają `COleDateTime` zapytania do wartości tego obiektu, zobacz następujące funkcje Członkowskie:
 
 - [GetDay](#getday)
 
@@ -595,11 +595,11 @@ Instrukcje dotyczące innych funkcji Członkowskich, które tworzą zapytania do
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [GetHour](#gethour).
+Zobacz przykład dla elementu [GetHour](#gethour).
 
-##  <a name="getmonth"></a>  COleDateTime::GetMonth
+##  <a name="getmonth"></a>COleDateTime:: GetMonth
 
-Pobiera miesiąca, reprezentowane przez tę wartość daty/godziny.
+Pobiera miesiąc reprezentowany przez tę wartość daty/godziny.
 
 ```
 int GetMonth() const throw();
@@ -607,13 +607,13 @@ int GetMonth() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Miesiąc, reprezentowany przez wartość tego `COleDateTime` obiektu lub `COleDateTime::error` Jeśli nie można uzyskać miesiąca.
+Miesiąc reprezentowany przez wartość tego `COleDateTime` obiektu lub `COleDateTime::error` w przypadku, gdy nie można uzyskać miesiąca.
 
 ### <a name="remarks"></a>Uwagi
 
-Nieprawidłowy zwracany wartości z zakresu od 1 do 12.
+Prawidłowe wartości zwracane mieszczą się w zakresie od 1 do 12.
 
-Instrukcje dotyczące innych funkcji Członkowskich, które tworzą zapytania dotyczące wartość tego `COleDateTime` obiektu, zobacz następujące funkcje elementów członkowskich:
+Aby uzyskać informacje na temat innych funkcji Członkowskich, które wysyłają `COleDateTime` zapytania do wartości tego obiektu, zobacz następujące funkcje Członkowskie:
 
 - [GetDay](#getday)
 
@@ -621,7 +621,7 @@ Instrukcje dotyczące innych funkcji Członkowskich, które tworzą zapytania do
 
 - [GetHour](#gethour)
 
-- [GetMinute](#getminute)
+- [Getminuta](#getminute)
 
 - [GetSecond](#getsecond)
 
@@ -631,11 +631,11 @@ Instrukcje dotyczące innych funkcji Członkowskich, które tworzą zapytania do
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [GetDay](#getday).
+Zobacz przykład dla [getDay](#getday).
 
-##  <a name="getsecond"></a>  COleDateTime::GetSecond
+##  <a name="getsecond"></a>COleDateTime:: GetSecond
 
-Pobiera drugi, reprezentowane przez tę wartość daty/godziny.
+Pobiera sekundę reprezentowane przez tę wartość daty/godziny.
 
 ```
 int GetSecond() const throw();
@@ -643,18 +643,18 @@ int GetSecond() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Drugi reprezentowany przez wartość tego `COleDateTime` obiektu lub `COleDateTime::error` Jeśli drugi jest niemożliwe.
+Druga reprezentowana przez wartość tego `COleDateTime` obiektu lub `COleDateTime::error` Jeśli druga nie można uzyskać.
 
 ### <a name="remarks"></a>Uwagi
 
-Prawidłowe wartości zwracanej zakres od 0 do 59.
+Prawidłowe wartości zwracane mieszczą się w zakresie od 0 do 59.
 
 > [!NOTE]
->  `COleDateTime` Klasa nie obsługuje przestępnym sekund.
+>  `COleDateTime` Klasa nie obsługuje sekund przestępnych.
 
-Aby uzyskać więcej informacji na temat wdrażania `COleDateTime`, zapoznaj się z artykułem [daty i godziny: Obsługa automatyzacji](../../atl-mfc-shared/date-and-time-automation-support.md).
+Aby uzyskać więcej informacji na temat implementacji `COleDateTime`programu, zobacz Data [i godzina artykułu: Obsługa](../../atl-mfc-shared/date-and-time-automation-support.md)automatyzacji.
 
-Instrukcje dotyczące innych funkcji Członkowskich, które tworzą zapytania dotyczące wartość tego `COleDateTime` obiektu, zobacz następujące funkcje elementów członkowskich:
+Aby uzyskać informacje na temat innych funkcji Członkowskich, które wysyłają `COleDateTime` zapytania do wartości tego obiektu, zobacz następujące funkcje Członkowskie:
 
 - [GetDay](#getday)
 
@@ -664,7 +664,7 @@ Instrukcje dotyczące innych funkcji Członkowskich, które tworzą zapytania do
 
 - [GetHour](#gethour)
 
-- [GetMinute](#getminute)
+- [Getminuta](#getminute)
 
 - [GetDayOfWeek](#getdayofweek)
 
@@ -672,9 +672,9 @@ Instrukcje dotyczące innych funkcji Członkowskich, które tworzą zapytania do
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [GetHour](#gethour).
+Zobacz przykład dla elementu [GetHour](#gethour).
 
-##  <a name="getstatus"></a>  COleDateTime::GetStatus
+##  <a name="getstatus"></a>COleDateTime:: GetStatus
 
 Pobiera stan (ważność) danego `COleDateTime` obiektu.
 
@@ -684,11 +684,11 @@ DateTimeStatus GetStatus() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca stan to `COleDateTime` wartość. Jeśli wywołasz `GetStatus` na `COleDateTime` obiekt jest konstruowany przy użyciu domyślnego, to zostanie zwrócona nieprawidłowa. Jeśli wywołasz `GetStatus` na `COleDateTime` obiekt został zainicjowany z konstruktora o wartości null, `GetStatus` będzie zwracać wartość null.
+Zwraca stan tej `COleDateTime` wartości. Jeśli wywołasz `GetStatus` `COleDateTime` obiekt skonstruowany przy użyciu domyślnego, zostanie zwrócony prawidłowy. Jeśli wywołasz `GetStatus` `COleDateTime` obiekt zainicjowany z konstruktorem ustawionym na wartość null, `GetStatus` zwróci wartość null.
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość zwracana jest definiowany przez `DateTimeStatus` wyliczany typ, który jest zdefiniowany w obrębie `COleDateTime` klasy.
+Wartość zwracana jest definiowana przez `DateTimeStatus` typ wyliczeniowy, który jest zdefiniowany `COleDateTime` w klasie.
 
 ```
 enum DateTimeStatus
@@ -700,49 +700,49 @@ enum DateTimeStatus
 };
 ```
 
-Aby uzyskać krótki opis tych wartości stanu przejrzyj następującą listę:
+Aby uzyskać krótki opis tych wartości stanu, zobacz następującą listę:
 
-- `COleDateTime::error` Wskazuje, że wystąpił błąd podczas próby uzyskania część wartości daty/godziny.
+- `COleDateTime::error`Wskazuje, że wystąpił błąd podczas próby uzyskania części wartości daty/godziny.
 
-- `COleDateTime::valid` Wskazuje, że `COleDateTime` obiekt jest prawidłowy.
+- `COleDateTime::valid`Wskazuje, że `COleDateTime` ten obiekt jest prawidłowy.
 
-- `COleDateTime::invalid` Wskazuje, że `COleDateTime` obiektu jest nieprawidłowy; oznacza to, że jego wartość może być nieprawidłowa.
+- `COleDateTime::invalid`Wskazuje, że `COleDateTime` ten obiekt jest nieprawidłowy; oznacza to, że jego wartość może być niepoprawna.
 
-- `COleDateTime::null` Wskazuje, że `COleDateTime` obiekt ma wartość null, oznacza to, że wartość nie została podana dla tego obiektu. (To jest "null" w sensie bazy danych o"Brak wartości" w przeciwieństwie do języka C++ o wartości NULL).
+- `COleDateTime::null`Wskazuje, że `COleDateTime` ten obiekt ma wartość null, to oznacza, że nie podano wartości dla tego obiektu. (Jest to wartość "null" w sensie bazy danych "bez żadnej wartości", w przeciwieństwie do C++ wartości null).
 
-Stan `COleDateTime` obiekt jest nieprawidłowy w następujących przypadkach:
+Stan `COleDateTime` obiektu jest nieprawidłowy w następujących przypadkach:
 
-- Jeśli wartość zostanie ustawiona z `VARIANT` lub `COleVariant` wartość, która nie może być konwertowana na wartość daty/godziny.
+- Jeśli wartość jest ustawiona z `VARIANT` lub `COleVariant` wartości, której nie można przekonwertować na wartość daty/godziny.
 
-- Jeśli wartość zostanie ustawiona z `time_t`, `SYSTEMTIME`, lub `FILETIME` wartość, która nie można przekonwertować na wartość prawidłowe daty/godziny.
+- Jeśli wartość jest ustawiona z `time_t`, `SYSTEMTIME`lub `FILETIME` wartość, która nie może zostać przekonwertowana na prawidłową wartość daty/godziny.
 
-- Jeśli wartość zostanie ustawiona `SetDateTime` przy użyciu wartości parametru.
+- Jeśli wartość jest ustawiona przez `SetDateTime` przy użyciu nieprawidłowych wartości parametrów.
 
-- Ten obiekt ma spowodować przepełnienie lub niedopełnienie podczas operacji arytmetycznych przypisania, a mianowicie `+=` lub `-=`.
+- Jeśli ten obiekt napotkał przepełnienie lub niedomiar podczas operacji przypisywania arytmetycznego `+=` , `-=`mianowicie lub.
 
-- Jeśli wartość jest nieprawidłowa został przypisany do tego obiektu.
+- Jeśli nieprawidłowa wartość została przypisana do tego obiektu.
 
-- Jeśli stan tego obiektu jawnie ustawiono nieprawidłowy przy użyciu `SetStatus`.
+- Jeśli stan tego obiektu został jawnie ustawiony na nieprawidłowy przy użyciu `SetStatus`.
 
-Aby uzyskać więcej informacji na temat operacji, które mogą ustawić stan nieprawidłowy, zobacz następujące funkcje elementów członkowskich:
+Aby uzyskać więcej informacji o operacjach, które mogą ustawić stan na nieprawidłowe, zobacz następujące funkcje Członkowskie:
 
 - [COleDateTime](#coledatetime)
 
 - [SetDateTime](#setdatetime)
 
-- [operator +, -](#operator_add_-)
+- [operator +,-](#operator_add_-)
 
-- [operator +=-=](#operator_add_eq_-_eq)
+- [operator + =,-=](#operator_add_eq_-_eq)
 
-Aby uzyskać więcej informacji na temat granice dla `COleDateTime` wartości, zobacz artykuł [daty i godziny: Obsługa automatyzacji](../../atl-mfc-shared/date-and-time-automation-support.md).
+Aby uzyskać więcej informacji na temat granic dla `COleDateTime` wartości, zobacz Data i [godzina artykułu: Obsługa](../../atl-mfc-shared/date-and-time-automation-support.md)automatyzacji.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#10](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_12.cpp)]
 
-##  <a name="getyear"></a>  COleDateTime::GetYear
+##  <a name="getyear"></a>COleDateTime:: GetYear
 
-Pobiera roku, reprezentowane przez tę wartość daty/godziny.
+Pobiera rok reprezentowany przez tę wartość daty/godziny.
 
 ```
 int GetYear() const throw();
@@ -750,13 +750,13 @@ int GetYear() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Rok, reprezentowany przez wartość tego `COleDateTime` obiektu lub `COleDateTime::error` Jeśli nie można uzyskać roku.
+Rok reprezentowany przez wartość tego `COleDateTime` obiektu lub `COleDateTime::error` Jeśli nie można uzyskać roku.
 
 ### <a name="remarks"></a>Uwagi
 
-Nieprawidłowy zwracany wartości z zakresu od 100 do 9999 zawierającą wieku.
+Prawidłowe wartości zwracane mieszczą się w zakresie od 100 do 9999, który obejmuje Century.
 
-Instrukcje dotyczące innych funkcji Członkowskich, które tworzą zapytania dotyczące wartość tego `COleDateTime` obiektu, zobacz następujące funkcje elementów członkowskich:
+Aby uzyskać informacje na temat innych funkcji Członkowskich, które wysyłają `COleDateTime` zapytania do wartości tego obiektu, zobacz następujące funkcje Członkowskie:
 
 - [GetDay](#getday)
 
@@ -764,7 +764,7 @@ Instrukcje dotyczące innych funkcji Członkowskich, które tworzą zapytania do
 
 - [GetHour](#gethour)
 
-- [GetMinute](#getminute)
+- [Getminuta](#getminute)
 
 - [GetSecond](#getsecond)
 
@@ -772,15 +772,15 @@ Instrukcje dotyczące innych funkcji Członkowskich, które tworzą zapytania do
 
 - [GetDayOfYear](#getdayofyear)
 
-Aby uzyskać więcej informacji na temat granice dla `COleDateTime` wartości, zobacz artykuł [daty i godziny: Obsługa automatyzacji](../../atl-mfc-shared/date-and-time-automation-support.md).
+Aby uzyskać więcej informacji na temat granic dla `COleDateTime` wartości, zobacz Data i [godzina artykułu: Obsługa](../../atl-mfc-shared/date-and-time-automation-support.md)automatyzacji.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [GetDay](#getday).
+Zobacz przykład dla [getDay](#getday).
 
-##  <a name="m_dt"></a>  COleDateTime::m_dt
+##  <a name="m_dt"></a>COleDateTime::m_dt
 
-Podstawowe `DATE` struktury, w tym `COleDateTime` obiektu.
+Bazowa `DATE` struktura dla tego `COleDateTime` obiektu.
 
 ```
 DATE m_dt;
@@ -789,13 +789,13 @@ DATE m_dt;
 ### <a name="remarks"></a>Uwagi
 
 > [!CAUTION]
->  Zmiana wartości w `DATE` obiektu uzyskiwał dostęp do wskaźnika zwrócona przez tę funkcję zmieni wartość tego `COleDateTime` obiektu. Nie zmienia się jego stan to `COleDateTime` obiektu.
+>  Zmiana wartości w `DATE` obiekcie, do którego uzyskuje dostęp wskaźnik zwracany przez tę funkcję, spowoduje zmianę wartości tego `COleDateTime` obiektu. Nie powoduje zmiany stanu tego `COleDateTime` obiektu.
 
-Aby uzyskać więcej informacji o implementacji `DATE` obiektu, zapoznaj się z artykułem [daty i godziny: Obsługa automatyzacji](../../atl-mfc-shared/date-and-time-automation-support.md).
+Aby uzyskać więcej informacji na temat implementacji `DATE` obiektu, zobacz Data i godzina artykułu: [ Obsługa](../../atl-mfc-shared/date-and-time-automation-support.md)automatyzacji.
 
-##  <a name="m_status"></a>  COleDateTime::m_status
+##  <a name="m_status"></a>COleDateTime::m_status
 
-Zawiera informacje o stanie tego `COleDateTime` obiektu.
+Zawiera stan tego `COleDateTime` obiektu.
 
 ```
 DateTimeStatus m_status;
@@ -803,14 +803,14 @@ DateTimeStatus m_status;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ ten element członkowski danych jest Typ wyliczany `DateTimeStatus`, który jest zdefiniowany w obrębie `COleDateTime` klasy. Aby uzyskać więcej informacji, zobacz [COleDateTime::GetStatus](#getstatus).
+Typ tego elementu członkowskiego danych jest typem `DateTimeStatus`wyliczanym, który jest zdefiniowany `COleDateTime` w klasie. Aby uzyskać więcej informacji, zobacz [COleDateTime:: GetStatus](#getstatus).
 
 > [!CAUTION]
->  Ten element członkowski danych dotyczy zaawansowane sytuacjach programistycznych. Skorzystaj z wbudowanych funkcji elementów członkowskich [GetStatus](#getstatus) i [SetStatus](#setstatus). Zobacz `SetStatus` dla dalszych ostrzeżenia dotyczące jawne ustawienie ten element członkowski danych.
+>  Ten element członkowski danych ma na celu zaawansowaną sytuację programistyczną. Należy użyć wbudowanej funkcji składowej [GetStatus](#getstatus) i [SetStatus](#setstatus). Zobacz `SetStatus` , aby uzyskać dalsze ostrzeżenie dotyczące jawnego ustawiania tego elementu członkowskiego danych.
 
-##  <a name="operator_eq"></a>  COleDateTime::operator =
+##  <a name="operator_eq"></a>COleDateTime:: operator =
 
-Kopiuje `COleDateTime` wartość.
+`COleDateTime` Kopiuje wartość.
 
 ```
 COleDateTime& operator=(const VARIANT& varSrc) throw();
@@ -824,31 +824,31 @@ COleDateTime& operator=(const UDATE& uDate) throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Te operatory przeciążone przypisania kopiowania wartości daty/godziny źródła do tego `COleDateTime` obiektu. Krótki opis każdego z tych przeciążone operatory przypisania w następujący sposób:
+Te przeciążone operatory przypisania kopiują źródłową wartość daty/godziny `COleDateTime` do tego obiektu. Poniżej znajduje się krótki opis każdego z następujących przeciążonych operatorów przypisania:
 
-- **Operator = (** `dateSrc` **)** wartości i stanu operand są kopiowane do tego `COleDateTime` obiektu.
+- **operator = (** `dateSrc` **)** wartość i stan operandu są kopiowane do tego `COleDateTime` obiektu.
 
-- **Operator = (** *varSrc* **)** Jeśli konwersja [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) wartość (lub [COleVariant](../../mfc/reference/colevariant-class.md) obiektu) do daty/godziny (VT_ Data) zakończy się pomyślnie, przekonwertowana wartości zostanie skopiowany do tego `COleDateTime` obiekt i jego stan jest ustawiony na prawidłowy. Jeśli konwersja się nie powiedzie, wartość tego obiektu jest równa zero (30 grudnia 1899, północ) i jej stanie się nieprawidłowy.
+- **operator = (** *varSrc* **)** Jeśli konwersja wartości wariantu [](/windows/win32/api/oaidl/ns-oaidl-variant) (lub obiektu [COleVariant](../../mfc/reference/colevariant-class.md) ) na datę/godzinę (VT_DATE) powiedzie się, przekonwertowana wartość jest kopiowana do tego `COleDateTime` obiektu, a jego stan jest ustawiony na prawidłowy. Jeśli konwersja nie powiedzie się, wartość tego obiektu jest równa zero (30 grudnia 1899, północy) i jego stan jest nieprawidłowy.
 
-- **Operator = (** `dtSrc` **)** `DATE` jest kopiowana do to `COleDateTime` obiekt i jego stan jest ustawiony na prawidłowy.
+- **operator = (** `dtSrc` `COleDateTime` )`DATE` wartość jest kopiowana do tego obiektu, a jego stan jest ustawiony na wartość prawidłowy.
 
-- **Operator = (** `timeSrc` **)** `time_t` lub `__time64_t` wartość jest konwertowany i skopiowany do tego `COleDateTime` obiektu. Jeśli konwersja się pomyślnie, stan tego obiektu jest ustawiony na prawidłowy; Jeśli nie powiedzie, zostanie ustawiona na nieprawidłową.
+- **operator = (** `timeSrc` `COleDateTime` **)** `time_t` wartość lub`__time64_t` jest konwertowana i kopiowana do tego obiektu. Jeśli konwersja zakończy się pomyślnie, stan tego obiektu jest ustawiony na wartość prawidłowy; Jeśli to się nie powiedzie, jest ono ustawione na nieprawidłowe.
 
-- **Operator = (** *systimeSrc* **)** [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) wartość jest konwertowany i skopiowany do tego `COleDateTime` obiektu. Jeśli konwersja się pomyślnie, stan tego obiektu jest ustawiony na prawidłowy; Jeśli nie powiedzie, zostanie ustawiona na nieprawidłową.
+- **operator = (** *systimeSrc* **)** Wartość [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) jest konwertowana i kopiowana do tego `COleDateTime` obiektu. Jeśli konwersja zakończy się pomyślnie, stan tego obiektu jest ustawiony na wartość prawidłowy; Jeśli to się nie powiedzie, jest ono ustawione na nieprawidłowe.
 
-- **Operator = (** `uDate` **)** `UDATE` wartość jest konwertowany i skopiowany do tego `COleDateTime` obiektu. Jeśli konwersja się pomyślnie, stan tego obiektu jest ustawiony na prawidłowy; Jeśli nie powiedzie, zostanie ustawiona na nieprawidłową. A `UDATE` struktury reprezentuje datę "nierozpakowane". Aby uzyskać więcej informacji, zobacz opis funkcji [VarDateFromUdate](/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate).
+- **operator = (** `uDate` `COleDateTime` )`UDATE` wartość jest konwertowana i kopiowana do tego obiektu. Jeśli konwersja zakończy się pomyślnie, stan tego obiektu jest ustawiony na wartość prawidłowy; Jeśli to się nie powiedzie, jest ono ustawione na nieprawidłowe. `UDATE` Struktura reprezentuje datę unpackd. Aby uzyskać więcej informacji, zobacz Funkcja [VarDateFromUdate](/windows/win32/api/oleauto/nf-oleauto-vardatefromudate).
 
-- **Operator = (** `filetimeSrc` **)** [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) wartość jest konwertowany i skopiowany do tego `COleDateTime` obiektu. Jeśli konwersja się pomyślnie, stan tego obiektu jest ustawiony na prawidłowy; w przeciwnym razie jest ustawiona na nieprawidłową. `FILETIME` używa skoordynowany czas uniwersalny (UTC), jeśli przekażesz czasu UTC w strukturze wyniki zostanie przekonwertowana z czasu UTC na czas lokalny i będą przechowywane jako wariant czasu. To zachowanie jest takie same jak Visual C++ 6.0 i Visual C++ .NET 2003 z dodatkiem SP2. Aby uzyskać więcej informacji, zobacz [czasy](/windows/desktop/SysInfo/file-times) w zestawie Windows SDK.
+- **operator = (** `filetimeSrc` **)** wartość [FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime) jest konwertowana i kopiowana do tego `COleDateTime` obiektu. Jeśli konwersja zakończy się pomyślnie, stan tego obiektu jest ustawiony na wartość prawidłowy; w przeciwnym razie jest ustawiony na nieprawidłowy. `FILETIME`używa uniwersalnego czasu koordynowanego (UTC), więc jeśli upłynie czas UTC w strukturze, wyniki zostaną przekonwertowane z czasu UTC na czas lokalny i będą przechowywane w postaci czasu wariantu. Takie zachowanie jest takie samo jak w przypadku C++ programów Visual 6,0 C++i Visual .NET 2003 SP2. Aby uzyskać więcej informacji, zobacz [czasy plików](/windows/win32/SysInfo/file-times) w Windows SDK.
 
-Aby uzyskać więcej informacji, zobacz [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) wejścia w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz wpis [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) w Windows SDK.
 
-Aby uzyskać więcej informacji na temat `time_t` typ danych, zobacz [czasu](../../c-runtime-library/reference/time-time32-time64.md) działa w programach *odwołanie do biblioteki wykonawczej*.
+Aby uzyskać więcej informacji na `time_t` temat typu danych, zobacz [Time](../../c-runtime-library/reference/time-time32-time64.md) function in the *Run-Time Library Reference*.
 
-Aby uzyskać więcej informacji, zobacz [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) i [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struktur w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz struktury [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) i [FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime) w Windows SDK.
 
-Aby uzyskać więcej informacji na temat granice dla `COleDateTime` wartości, zobacz artykuł [daty i godziny: Obsługa automatyzacji](../../atl-mfc-shared/date-and-time-automation-support.md).
+Aby uzyskać więcej informacji na temat granic dla `COleDateTime` wartości, zobacz Data i [godzina artykułu: Obsługa](../../atl-mfc-shared/date-and-time-automation-support.md)automatyzacji.
 
-##  <a name="operator_add_-"></a>  COleDateTime::operator +, -
+##  <a name="operator_add_-"></a>COleDateTime:: operator +,-
 
 Dodawanie i odejmowanie `ColeDateTime` wartości.
 
@@ -860,27 +860,27 @@ COleDateTimeSpan operator-(const COleDateTime& date) const throw();
 
 ### <a name="remarks"></a>Uwagi
 
-`COleDateTime` obiekty reprezentują godziny bezwzględne. [COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md) obiekty reprezentują godziny względne. Pierwsze dwa operatory pozwalają na dodawanie i odejmowanie `COleDateTimeSpan` wartość z `COleDateTime` wartości. Trzeci operator pozwala na potrzeby odejmowania jeden `COleDateTime` wartości z innej umożliwiające uzyskanie `COleDateTimeSpan` wartość.
+`COleDateTime`obiekty reprezentują czasy bezwzględne. Obiekty [COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md) reprezentują względne czasy. Pierwsze dwa operatory umożliwiają dodawanie i odejmowanie `COleDateTimeSpan` wartości `COleDateTime` z wartości. Trzeci operator pozwala odjąć jedną `COleDateTime` wartość od drugiej do `COleDateTimeSpan` wartości.
 
-Jeśli jeden z operandów jest null, stan wynikowy `COleDateTime` ma wartość null.
+Jeśli jeden z operandów ma wartość null, stan wartości wyników `COleDateTime` jest równy null.
 
-Jeśli wynikowe `COleDateTime` wartość znajduje się poza zakresem wartości dozwolonych, stan, który `COleDateTime` wartość jest nieprawidłowa.
+Jeśli wartość wynikowa `COleDateTime` znajduje się poza granicami akceptowalnych wartości, stan tej `COleDateTime` wartości jest nieprawidłowy.
 
-Jeśli jeden z operandów jest nieprawidłowa, a druga nie ma wartość null, stan wynikowy `COleDateTime` wartość jest nieprawidłowa.
+Jeśli jeden z operandów jest nieprawidłowy, a drugi nie ma wartości null, stan wartości uzyskanej `COleDateTime` jest nieprawidłowy.
 
-**+** i **-** operatory będzie potwierdzenia, jeśli `COleDateTime` obiekt jest ustawiony na wartość null. Zobacz [operatory relacyjne COleDateTime](#coledatetime_relational_operators) przykład.
+Operatory i **będą-** zatwierdzać, czy obiektjestustawionynawartośćnull.`COleDateTime` **+** Zobacz [Operatory relacyjne COleDateTime](#coledatetime_relational_operators) na przykład.
 
-Aby uzyskać więcej informacji na podstawie wartości w stan prawidłowy, nieprawidłowy i wartość null, zobacz [m_status](#m_status) zmiennej składowej.
+Aby uzyskać więcej informacji na temat prawidłowych i nieprawidłowych wartości stanu, zobacz zmienną członkowską [m_status](#m_status) .
 
-Aby uzyskać więcej informacji na temat granice dla `COleDateTime` wartości, zobacz artykuł [daty i godziny: Obsługa automatyzacji](../../atl-mfc-shared/date-and-time-automation-support.md).
+Aby uzyskać więcej informacji na temat granic dla `COleDateTime` wartości, zobacz Data i [godzina artykułu: Obsługa](../../atl-mfc-shared/date-and-time-automation-support.md)automatyzacji.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#12](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_13.cpp)]
 
-##  <a name="operator_add_eq_-_eq"></a>  COleDateTime::operator +=-=
+##  <a name="operator_add_eq_-_eq"></a>COleDateTime:: operator + =,-=
 
-Dodawanie i odejmowanie `ColeDateTime` wartości z tego `COleDateTime` obiektu.
+Dodaj i Odejmij `ColeDateTime` wartość z tego `COleDateTime` obiektu.
 
 ```
 COleDateTime& operator+=(COleDateTimeSpan dateSpan) throw();
@@ -889,21 +889,21 @@ COleDateTime& operator-=(COleDateTimeSpan dateSpan) throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Te operatory pozwalają na dodawanie i odejmowanie `COleDateTimeSpan` wartości do i z tego `COleDateTime`. Jeśli jeden z operandów jest null, stan wynikowy `COleDateTime` ma wartość null.
+Te operatory umożliwiają dodawanie i odejmowanie wartości do i `COleDateTimeSpan` z tego `COleDateTime`typu. Jeśli jeden z operandów ma wartość null, stan wartości wyników `COleDateTime` jest równy null.
 
-Jeśli wynikowy `COleDateTime` wartość znajduje się poza zakresem wartości dozwolonych, stan tego `COleDateTime` wartość jest ustawiana na nieprawidłowy.
+Jeśli wartość wynikowa `COleDateTime` znajduje się poza granicami akceptowalnych wartości, stan tej `COleDateTime` wartości jest ustawiony na nieprawidłowy.
 
-Jeśli jeden z operandów jest nieprawidłowa, a inne nie ma wartość null, stan wynikowy `COleDateTime` wartość jest nieprawidłowa.
+Jeśli jeden z operandów jest nieprawidłowy i inne nie ma wartości null, stan wartości wyniki `COleDateTime` jest nieprawidłowy.
 
-Aby uzyskać więcej informacji na podstawie wartości w stan prawidłowy, nieprawidłowy i wartość null, zobacz [m_status](#m_status) zmiennej składowej.
+Aby uzyskać więcej informacji na temat prawidłowych i nieprawidłowych wartości stanu, zobacz zmienną członkowską [m_status](#m_status) .
 
-**+=** i **-=** operatory będzie potwierdzenia, jeśli `COleDateTime` obiekt jest ustawiony na wartość null. Zobacz [operatory relacyjne COleDateTime](#coledatetime_relational_operators) przykład.
+Operatory i **będą-=** zatwierdzać, czy obiektjestustawionynawartośćnull.`COleDateTime` **+=** Zobacz [Operatory relacyjne COleDateTime](#coledatetime_relational_operators) na przykład.
 
-Aby uzyskać więcej informacji na temat granice dla `COleDateTime` wartości, zobacz artykuł [daty i godziny: Obsługa automatyzacji](../../atl-mfc-shared/date-and-time-automation-support.md).
+Aby uzyskać więcej informacji na temat granic dla `COleDateTime` wartości, zobacz Data i [godzina artykułu: Obsługa](../../atl-mfc-shared/date-and-time-automation-support.md)automatyzacji.
 
-##  <a name="operator_date"></a>  COleDateTime::operator daty
+##  <a name="operator_date"></a>COleDateTime:: operator — Data
 
-Konwertuje `ColeDateTime` wartością do `DATE`.
+`ColeDateTime` Konwertuje wartość`DATE`na.
 
 ```
 operator DATE() const throw();
@@ -911,13 +911,13 @@ operator DATE() const throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Ten operator zwraca `DATE` obiektu, którego wartość jest kopiowany z tym `COleDateTime` obiektu. Aby uzyskać więcej informacji o implementacji `DATE` obiektu, zapoznaj się z artykułem [daty i godziny: Obsługa automatyzacji](../../atl-mfc-shared/date-and-time-automation-support.md).
+Ten operator zwraca obiekt `DATE` , którego wartość jest kopiowana z `COleDateTime` tego obiektu. Aby uzyskać więcej informacji na temat implementacji `DATE` obiektu, zobacz Data i godzina artykułu: [ Obsługa](../../atl-mfc-shared/date-and-time-automation-support.md)automatyzacji.
 
-`DATE` Operator będzie potwierdzenia, jeśli `COleDateTime` obiekt jest ustawiony na wartość null. Zobacz [operatory relacyjne COleDateTime](#coledatetime_relational_operators) przykład.
+Operator zostanie poproszony, `COleDateTime` Jeśli obiekt jest ustawiony na wartość null. `DATE` Zobacz [Operatory relacyjne COleDateTime](#coledatetime_relational_operators) na przykład.
 
-##  <a name="parsedatetime"></a>  COleDateTime::ParseDateTime
+##  <a name="parsedatetime"></a>COleDateTime::P arseDateTime
 
-Analizuje ciąg, który ma zostać odczytana wartość daty/godziny.
+Analizuje ciąg w celu odczytania wartości daty/godziny.
 
 ```
 bool ParseDateTime(
@@ -929,32 +929,32 @@ bool ParseDateTime(
 ### <a name="parameters"></a>Parametry
 
 *lpszDate*<br/>
-Wskaźnik na ciąg zakończony znakiem null, które ma być analizowana. Aby uzyskać więcej informacji zobacz uwagi.
+Wskaźnik do ciągu zakończonego wartością null, który ma zostać przeanalizowany. Aby uzyskać szczegółowe informacje, zobacz uwagi.
 
-*dwFlags*<br/>
-Określa flagi dla ustawień regionalnych i analizowanie. Co najmniej jedną z następujących flag:
+*flagiDW*<br/>
+Wskazuje flagi dla ustawień regionalnych i analizy. Co najmniej jedna z następujących flag:
 
-- LOCALE_NOUSEROVERRIDE używane domyślne ustawienia regionalne systemu, a nie niestandardowych ustawień użytkownika.
+- LOCALE_NOUSEROVERRIDE Użyj domyślnych ustawień regionalnych systemu zamiast niestandardowych ustawień użytkownika.
 
-- Ignoruj VAR_TIMEVALUEONLY część dotycząca daty podczas analizowania.
+- VAR_TIMEVALUEONLY ignoruje część daty podczas analizowania.
 
-- Ignoruj VAR_DATEVALUEONLY część godzinowa podczas analizowania.
+- VAR_DATEVALUEONLY ignoruje część czasu podczas analizowania.
 
 *lcid*<br/>
-Określa identyfikator ustawień regionalnych na potrzeby konwersji.
+Wskazuje identyfikator ustawień regionalnych do użycia podczas konwersji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE, jeśli ciąg został pomyślnie przekonwertowany na wartość daty/godziny, w przeciwnym razie wartość FALSE.
+Zwraca wartość TRUE, jeśli ciąg został pomyślnie przekonwertowany na wartość daty/godziny, w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli ten ciąg został pomyślnie przekonwertowany daty/godziny wartość, wartość to `COleDateTime` obiekt jest ustawiony na tę wartość i jego stan prawidłowy.
+Jeśli ciąg został pomyślnie przekonwertowany na wartość daty/godziny, wartość tego `COleDateTime` obiektu jest ustawiana na tę wartość, a jego stan jest prawidłowy.
 
 > [!NOTE]
->  Wartości roku musi znajdować się od 100 do 9999 (włącznie).
+>  Wartości roku muszą należeć do zakresu od 100 do 9999 włącznie.
 
-*LpszDate* parametr może przybierać różne formaty. Na przykład następujące ciągi zawierają formaty dopuszczalne daty/godziny:
+Parametr *lpszDate* może przyjmować różne formaty. Na przykład następujące ciągi zawierają akceptowalne formaty daty i godziny:
 
 `"25 January 1996"`
 
@@ -968,17 +968,17 @@ Jeśli ten ciąg został pomyślnie przekonwertowany daty/godziny wartość, war
 
 `"1/25/1996 8:30:00"  // always specify the full year, even in a 'short date' format`
 
-Identyfikator ustawień regionalnych wpłynie również na to, czy format ciągu jest możliwa do konwersji na wartość daty/godziny.
+Identyfikator ustawień regionalnych ma także wpływ na to, czy format ciągu jest akceptowalny do konwersji na wartość daty/godziny.
 
-W przypadku VAR_DATEVALUEONLY wartość czasu jest równa czasu 0 lub północy. W przypadku VAR_TIMEVALUEONLY Data 0, co oznacza 30 grudnia 1899 ustawiono wartość daty.
+W przypadku VAR_DATEVALUEONLY wartość czasu jest ustawiana na czas 0 lub północ. W przypadku VAR_TIMEVALUEONLY wartość daty jest równa dacie 0, co oznacza 30 grudnia 1899.
 
-Jeśli nie można przekonwertować ciągu na wartość daty/godziny lub, jeśli wystąpiło przepełnienie liczbowe, stan tego `COleDateTime` obiekt jest nieprawidłowy.
+Jeśli nie można przekonwertować ciągu na wartość daty/godziny lub w przypadku przepełnienia liczbowego, stan tego `COleDateTime` obiektu jest nieprawidłowy.
 
-Aby uzyskać więcej informacji na temat granice i implementację `COleDateTime` wartości, zobacz artykuł [daty i godziny: Obsługa automatyzacji](../../atl-mfc-shared/date-and-time-automation-support.md).
+Aby uzyskać więcej informacji na temat granic i implementacji `COleDateTime` wartości, zobacz artykuł [Data i godzina: Obsługa](../../atl-mfc-shared/date-and-time-automation-support.md)automatyzacji.
 
-##  <a name="setdate"></a>  COleDateTime::SetDate
+##  <a name="setdate"></a>COleDateTime:: SetDate
 
-Ustawia datę to `COleDateTime` obiektu.
+Ustawia datę tego `COleDateTime` obiektu.
 
 ```
 int SetDate(
@@ -990,40 +990,40 @@ int SetDate(
 ### <a name="parameters"></a>Parametry
 
 *nYear*, *nMonth*, *nbłędny dzień*<br/>
-Wskazać składniki daty, który ma być skopiowany do tego `COleDateTime` obiektu.
+Wskaż składniki daty, które mają być skopiowane `COleDateTime` do tego obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli wartość to `COleDateTime` obiektu została ustawiona pomyślnie; w przeciwnym razie wartość 1. Ta wartość zwracana, opiera się na `DateTimeStatus` Typ wyliczany. Aby uzyskać więcej informacji, zobacz [SetStatus](#setstatus) funkcja elementu członkowskiego.
+Zero, jeśli wartość tego `COleDateTime` obiektu została ustawiona pomyślnie; w przeciwnym razie 1. Ta wartość zwracana jest oparta na `DateTimeStatus` typie wyliczeniowym. Aby uzyskać więcej informacji, zobacz [](#setstatus) funkcja SetStatus elementu członkowskiego.
 
 ### <a name="remarks"></a>Uwagi
 
-Data jest równa określonej wartości. Godzina jest ustawiana na czas 0, o północy.
+Data jest ustawiona na określone wartości. Czas jest ustawiany na czas 0, północy.
 
-Zobacz w tabeli poniżej granic o wprowadzenie wartości parametrów:
+Zapoznaj się z poniższą tabelą dotyczącą wartości parametrów:
 
 |Parametr|Granice|
 |---------------|------------|
 |*nYear*|100 - 9999|
 |*nMonth*|1 - 12|
-|*nDay*|0 - 31|
+|*Nbłędny dzień*|0 - 31|
 
-Jeśli zachodzi dzień miesiąca, jest konwertowany na poprawne dnia następnego miesiąca i miesiąca i/lub rok jest zwiększany, odpowiednio. Dzień wartość zero wskazuje ostatni dzień poprzedniego miesiąca. To zachowanie jest taka sama jak `SystemTimeToVariantTime`.
+Jeśli dzień miesiąca przepełnił się, zostanie on przekonwertowany na poprawny dzień następnego miesiąca, a miesiąc i/lub rok są odpowiednio zwiększane. Wartość dnia zero wskazuje ostatni dzień poprzedniego miesiąca. Zachowanie jest takie samo jak w `SystemTimeToVariantTime`przypadku programu.
 
-Jeśli wartość daty, określona przez parametry nie jest prawidłowy, stan tego obiektu jest ustawiony na `COleDateTime::invalid`. Należy używać [GetStatus](#getstatus) do sprawdzania poprawności `DATE` wartości i nie należy zakładać, że wartość [m_dt](#m_dt) nie zostaną zmodyfikowane.
+Jeśli wartość daty określona przez parametry jest nieprawidłowa, stan tego obiektu jest ustawiony na `COleDateTime::invalid`. Należy użyć [GetStatus](#getstatus) , aby sprawdzić poprawność `DATE` wartości i nie należy zakładać, że wartość [m_dt](#m_dt) pozostanie niezmodyfikowana.
 
-Poniżej przedstawiono kilka przykładów wartości dat:
+Poniżej przedstawiono kilka przykładów wartości daty:
 
-|*nYear*|*nMonth*|*nDay*|Wartość|
+|*nYear*|*nMonth*|*Nbłędny dzień*|Wartość|
 |-------------|--------------|------------|-----------|
 |2000|2|29|29 lutego 2000|
 |1776|7|4|4 lipca 1776|
-|1925|4|35|35 1925 kwietnia (Nieprawidłowa data)|
-|10 000|1|1|1 stycznia 10000 (Nieprawidłowa data)|
+|1925|4|35|35 kwietnia 1925 (nieprawidłowa data)|
+|10 000|1|1|1 stycznia 10000 (nieprawidłowa data)|
 
-Aby ustawić daty i godziny, zobacz [COleDateTime::SetDateTime](#setdatetime).
+Aby ustawić datę i godzinę, zobacz [COleDateTime:: SetDateTime](#setdatetime).
 
-Informacje na temat funkcji elementu członkowskiego, które wartość tego zapytania `COleDateTime` obiektu, zobacz następujące funkcje elementów członkowskich:
+Aby uzyskać informacje na temat funkcji Członkowskich, które wysyłają `COleDateTime` zapytania do wartości tego obiektu, zobacz następujące funkcje Członkowskie:
 
 - [GetDay](#getday)
 
@@ -1033,7 +1033,7 @@ Informacje na temat funkcji elementu członkowskiego, które wartość tego zapy
 
 - [GetHour](#gethour)
 
-- [GetMinute](#getminute)
+- [Getminuta](#getminute)
 
 - [GetSecond](#getsecond)
 
@@ -1041,15 +1041,15 @@ Informacje na temat funkcji elementu członkowskiego, które wartość tego zapy
 
 - [GetDayOfYear](#getdayofyear)
 
-Aby uzyskać więcej informacji na temat granice dla `COleDateTime` wartości, zobacz artykuł [daty i godziny: Obsługa automatyzacji](../../atl-mfc-shared/date-and-time-automation-support.md).
+Aby uzyskać więcej informacji na temat granic dla `COleDateTime` wartości, zobacz Data i [godzina artykułu: Obsługa](../../atl-mfc-shared/date-and-time-automation-support.md)automatyzacji.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#11](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_14.cpp)]
 
-##  <a name="setdatetime"></a>  COleDateTime::SetDateTime
+##  <a name="setdatetime"></a>COleDateTime:: SetDateTime
 
-Ustawia datę i godzinę, to `COleDateTime` obiektu.
+Ustawia datę i godzinę tego `COleDateTime` obiektu.
 
 ```
 int SetDateTime(
@@ -1063,51 +1063,51 @@ int SetDateTime(
 
 ### <a name="parameters"></a>Parametry
 
-*nYear*, *nMonth*, *nbłędny dzień*, *Ngodzina*, *nMin*, *nSec*<br/>
-Wskazać składniki daty i godziny do skopiowania do tego `COleDateTime` obiektu.
+*nYear*, *nMonth*, *nbłędny dzień*, *ngodzina*, *Nmin*, *NSEC*<br/>
+Wskaż składniki daty i godziny, które mają być skopiowane `COleDateTime` do tego obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli wartość to `COleDateTime` obiektu została ustawiona pomyślnie; w przeciwnym razie wartość 1. Ta wartość zwracana, opiera się na `DateTimeStatus` Typ wyliczany. Aby uzyskać więcej informacji, zobacz [SetStatus](#setstatus) funkcja elementu członkowskiego.
+Zero, jeśli wartość tego `COleDateTime` obiektu została ustawiona pomyślnie; w przeciwnym razie 1. Ta wartość zwracana jest oparta na `DateTimeStatus` typie wyliczeniowym. Aby uzyskać więcej informacji, zobacz [](#setstatus) funkcja SetStatus elementu członkowskiego.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz w tabeli poniżej granic o wprowadzenie wartości parametrów:
+Zapoznaj się z poniższą tabelą dotyczącą wartości parametrów:
 
 |Parametr|Granice|
 |---------------|------------|
 |*nYear*|100 - 9999|
 |*nMonth*|1 - 12|
-|*nDay*|0 - 31|
-|*nHour*|0 - 23|
+|*Nbłędny dzień*|0 - 31|
+|*Ngodzina*|0 - 23|
 |*nMin*|0 - 59|
 |*nSec*|0 - 59|
 
-Jeśli zachodzi dzień miesiąca, jest konwertowany na poprawne dnia następnego miesiąca i miesiąca i/lub rok jest zwiększany, odpowiednio. Dzień wartość zero wskazuje ostatni dzień poprzedniego miesiąca. To zachowanie jest taka sama jak [SystemTimeToVariantTime](/windows/desktop/api/oleauto/nf-oleauto-systemtimetovarianttime).
+Jeśli dzień miesiąca przepełnił się, zostanie on przekonwertowany na poprawny dzień następnego miesiąca, a miesiąc i/lub rok są odpowiednio zwiększane. Wartość dnia zero wskazuje ostatni dzień poprzedniego miesiąca. Zachowanie jest takie samo jak [SystemTimeToVariantTime](/windows/win32/api/oleauto/nf-oleauto-systemtimetovarianttime).
 
-Jeśli wartość daty lub godziny, określona przez parametry nie jest prawidłowy, stan tego obiektu jest ustawiony na nieprawidłowy i wartość tego obiektu jest zmieniany.
+Jeśli wartość daty lub godziny określona przez parametry jest nieprawidłowa, stan tego obiektu jest ustawiony na nieprawidłowy i wartość tego obiektu nie jest zmieniana.
 
-Poniżej przedstawiono kilka przykładów wartości czasu:
+Oto kilka przykładów wartości czasu:
 
-|*nHour*|*nMin*|*nSec*|Wartość|
+|*Ngodzina*|*nMin*|*nSec*|Wartość|
 |-------------|------------|------------|-----------|
 |1|3|3|01:03:03|
 |23|45|0|23:45:00|
 |25|30|0|Nieprawidłowy|
 |9|60|0|Nieprawidłowy|
 
-Poniżej przedstawiono kilka przykładów wartości dat:
+Poniżej przedstawiono kilka przykładów wartości daty:
 
-|*nYear*|*nMonth*|*nDay*|Wartość|
+|*nYear*|*nMonth*|*Nbłędny dzień*|Wartość|
 |-------------|--------------|------------|-----------|
-|1995|4|15|15 kwietnia 1995 r.|
+|1995|4|15|15 kwietnia 1995|
 |1789|7|14|17 lipca 1789|
 |1925|2|30|Nieprawidłowy|
 |10 000|1|1|Nieprawidłowy|
 
-Aby ustawić tylko data, zobacz [COleDateTime::SetDate](#setdate). Aby ustawić tylko raz, zobacz [COleDateTime::SetTime](#settime).
+Aby ustawić tylko datę, zobacz [COleDateTime:: SetDate](#setdate). Aby ustawić tylko czas, zobacz [COleDateTime:: SetTime](#settime).
 
-Informacje na temat funkcji elementu członkowskiego, które wartość tego zapytania `COleDateTime` obiektu, zobacz następujące funkcje elementów członkowskich:
+Aby uzyskać informacje na temat funkcji Członkowskich, które wysyłają `COleDateTime` zapytania do wartości tego obiektu, zobacz następujące funkcje Członkowskie:
 
 - [GetDay](#getday)
 
@@ -1117,7 +1117,7 @@ Informacje na temat funkcji elementu członkowskiego, które wartość tego zapy
 
 - [GetHour](#gethour)
 
-- [GetMinute](#getminute)
+- [Getminuta](#getminute)
 
 - [GetSecond](#getsecond)
 
@@ -1125,13 +1125,13 @@ Informacje na temat funkcji elementu członkowskiego, które wartość tego zapy
 
 - [GetDayOfYear](#getdayofyear)
 
-Aby uzyskać więcej informacji na temat granice dla `COleDateTime` wartości, zobacz artykuł [daty i godziny: Obsługa automatyzacji](../../atl-mfc-shared/date-and-time-automation-support.md).
+Aby uzyskać więcej informacji na temat granic dla `COleDateTime` wartości, zobacz Data i [godzina artykułu: Obsługa](../../atl-mfc-shared/date-and-time-automation-support.md)automatyzacji.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [GetStatus](#getstatus).
+Zobacz przykład dla elementu [GetStatus](#getstatus).
 
-##  <a name="setstatus"></a>  COleDateTime::SetStatus
+##  <a name="setstatus"></a>COleDateTime:: SetStatus
 
 Ustawia stan tego `COleDateTime` obiektu.
 
@@ -1142,22 +1142,22 @@ void SetStatus(DateTimeStatus status) throw();
 ### <a name="parameters"></a>Parametry
 
 *status*<br/>
-Nowa wartość stanu w tym `COleDateTime` obiektu.
+Nowa wartość stanu dla tego `COleDateTime` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-*Stan* wartość parametru jest definiowana przez `DateTimeStatus` wyliczany typ, który jest zdefiniowany w obrębie `COleDateTime` klasy. Zobacz [COleDateTime::GetStatus](#getstatus) Aby uzyskać szczegółowe informacje.
+Wartość parametru *status* jest definiowana przez `DateTimeStatus` typ wyliczeniowy, który `COleDateTime` jest zdefiniowany w klasie. Aby uzyskać szczegółowe informacje, zobacz [COleDateTime:: GetStatus](#getstatus) .
 
 > [!CAUTION]
->  Ta funkcja jest zaawansowane sytuacjach programistycznych. Ta funkcja nie zmienia danych w tym obiekcie. W większości przypadków posłuży do ustawiania stanu **null** lub **nieprawidłowy**. Operator przypisania ([operator =](#operator_eq)) i [SetDateTime](#setdatetime) ustawić stan obiektu, w oparciu o wartości źródła.
+>  Ta funkcja jest dla zaawansowanych sytuacji programistycznych. Ta funkcja nie zmienia danych w tym obiekcie. Będzie najczęściej używany do ustawienia stanu na **wartość null** lub **nieprawidłowy**. Operator przypisania ([operator =](#operator_eq)) i SetDateTime ustawia stan obiektu na podstawie wartości źródłowych. [](#setdatetime)
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [GetStatus](#getstatus).
+Zobacz przykład dla elementu [GetStatus](#getstatus).
 
-##  <a name="settime"></a>  COleDateTime::SetTime
+##  <a name="settime"></a>COleDateTime:: SetTime
 
-Ustawia czas tego `COleDateTime` obiektu.
+Ustawia godzinę tego `COleDateTime` obiektu.
 
 ```
 int SetTime(
@@ -1168,39 +1168,39 @@ int SetTime(
 
 ### <a name="parameters"></a>Parametry
 
-*nHour*, *nMin*, *nSec*<br/>
-Wskazać składniki czasu, który ma być skopiowany do tego `COleDateTime` obiektu.
+*ngodzina*, *Nmin*, *NSEC*<br/>
+Wskaż składniki czasu, które mają być skopiowane `COleDateTime` do tego obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli wartość to `COleDateTime` obiektu została ustawiona pomyślnie; w przeciwnym razie wartość 1. Ta wartość zwracana, opiera się na `DateTimeStatus` Typ wyliczany. Aby uzyskać więcej informacji, zobacz [SetStatus](#setstatus) funkcja elementu członkowskiego.
+Zero, jeśli wartość tego `COleDateTime` obiektu została ustawiona pomyślnie; w przeciwnym razie 1. Ta wartość zwracana jest oparta na `DateTimeStatus` typie wyliczeniowym. Aby uzyskać więcej informacji, zobacz [](#setstatus) funkcja SetStatus elementu członkowskiego.
 
 ### <a name="remarks"></a>Uwagi
 
-Czas jest równa określonej wartości. Data jest ustawiona na Data 0, co oznacza 30 grudnia 1899.
+Czas jest ustawiany na określone wartości. Data jest ustawiona na datę 0, co oznacza 30 grudnia 1899.
 
-Zobacz w tabeli poniżej granic o wprowadzenie wartości parametrów:
+Zapoznaj się z poniższą tabelą dotyczącą wartości parametrów:
 
 |Parametr|Granice|
 |---------------|------------|
-|*nHour*|0 - 23|
+|*Ngodzina*|0 - 23|
 |*nMin*|0 - 59|
 |*nSec*|0 - 59|
 
-Jeśli wartość określoną przez parametry nie jest prawidłowy, czas stanu tego obiektu jest równa invalid i wartość tego obiektu nie jest zmieniany.
+Jeśli wartość czasu określona przez parametry jest nieprawidłowa, stan tego obiektu jest ustawiony na nieprawidłowy i wartość tego obiektu nie jest zmieniana.
 
-Poniżej przedstawiono kilka przykładów wartości czasu:
+Oto kilka przykładów wartości czasu:
 
-|*nHour*|*nMin*|*nSec*|Wartość|
+|*Ngodzina*|*nMin*|*nSec*|Wartość|
 |-------------|------------|------------|-----------|
 |1|3|3|01:03:03|
 |23|45|0|23:45:00|
 |25|30|0|Nieprawidłowy|
 |9|60|0|Nieprawidłowy|
 
-Aby ustawić daty i godziny, zobacz [COleDateTime::SetDateTime](#setdatetime).
+Aby ustawić datę i godzinę, zobacz [COleDateTime:: SetDateTime](#setdatetime).
 
-Informacje na temat funkcji elementu członkowskiego, które wartość tego zapytania `COleDateTime` obiektu, zobacz następujące funkcje elementów członkowskich:
+Aby uzyskać informacje na temat funkcji Członkowskich, które wysyłają `COleDateTime` zapytania do wartości tego obiektu, zobacz następujące funkcje Członkowskie:
 
 - [GetDay](#getday)
 
@@ -1210,7 +1210,7 @@ Informacje na temat funkcji elementu członkowskiego, które wartość tego zapy
 
 - [GetHour](#gethour)
 
-- [GetMinute](#getminute)
+- [Getminuta](#getminute)
 
 - [GetSecond](#getsecond)
 
@@ -1218,11 +1218,11 @@ Informacje na temat funkcji elementu członkowskiego, które wartość tego zapy
 
 - [GetDayOfYear](#getdayofyear)
 
-Aby uzyskać więcej informacji na temat granice dla `COleDateTime` wartości, zobacz artykuł [daty i godziny: Obsługa automatyzacji](../../atl-mfc-shared/date-and-time-automation-support.md).
+Aby uzyskać więcej informacji na temat granic dla `COleDateTime` wartości, zobacz Data i [godzina artykułu: Obsługa](../../atl-mfc-shared/date-and-time-automation-support.md)automatyzacji.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [SetDate](#setdate).
+Zobacz przykład dla elementu [SetDate](#setdate).
 
 ## <a name="see-also"></a>Zobacz także
 
@@ -1230,4 +1230,4 @@ Zobacz przykład [SetDate](#setdate).
 [CTime, klasa](../../atl-mfc-shared/reference/ctime-class.md)<br/>
 [CTimeSpan, klasa](../../atl-mfc-shared/reference/ctimespan-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[Klasy współdzielone ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
+[Klasy udostępnione ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

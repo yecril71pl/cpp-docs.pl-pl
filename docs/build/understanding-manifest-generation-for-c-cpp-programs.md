@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: a1f24221-5b09-4824-be48-92eae5644b53
-ms.openlocfilehash: ff8d9f214b4fe4d004691c54474dcdabf2c0af85
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16d5efc5c5f7ce81b4b60269b0c666fd5d24266e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314744"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492525"
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>Ogólne informacje o tworzeniu manifestu dla programów C/C++
 
-A [manifestu](/windows/desktop/sbscs/manifests) jest dokument XML, który może być plik XML lub zasób osadzony w aplikacji lub zestawu. Manifest [izolowany aplikacji](/windows/desktop/SbsCs/isolated-applications) służy do zarządzania nazwami i wersjami współużytkowanych zestawów side-by-side, w których aplikacja powinna być związana w czasie wykonywania. Manifest zestawu side-by-side określa jego zależności na nazwy, wersji, zasoby i innych zestawów.
+[Manifest](/windows/win32/sbscs/manifests) to dokument XML, który może być zewnętrznym plikiem XML lub zasobem osadzonym wewnątrz aplikacji lub zestawu. Manifest [izolowanej aplikacji](/windows/win32/SbsCs/isolated-applications) służy do zarządzania nazwami i wersjami wspólnych zestawów równoległych, do których aplikacja powinna powiązać w czasie wykonywania. Manifest zestawu równoległego określa jego zależności od nazw, wersji, zasobów i innych zestawów.
 
-Istnieją dwa sposoby tworzenia manifestu aplikacji izolowanej lub zestawów side-by-side. Po pierwsze autor zestawu można ręcznie utworzyć plik manifestu, zgodnie z zasadami i wymaganiami w zakresie nazewnictwa. Alternatywnie Jeśli program zależy tylko zestawy języka Visual C++, takie jak CRT, MFC, ATL i inne, następnie manifestu może zostać wygenerowany automatycznie przez konsolidator.
+Istnieją dwa sposoby tworzenia manifestu dla izolowanej aplikacji lub zestawu side-by-side. Po pierwsze autor zestawu może ręcznie utworzyć plik manifestu, wykonując reguły i wymagania dotyczące nazewnictwa. Alternatywnie, jeśli program zależy tylko od zestawów wizualizacji C++ , takich jak CRT, MFC, ATL lub innych, można automatycznie wygenerować manifest przez konsolidator.
 
-Nagłówki bibliotek języka Visual C++ zawierają informacje o zestawie, a w przypadku bibliotek są zawarte w kodzie aplikacji, informacji o zestawie będzie używana przez konsolidator w celu utworzenia manifestu końcowym pliku binarnym. Konsolidator nie można osadzić pliku manifestu wewnątrz pliku binarnego i może generować jedynie manifestu jako zewnętrznego pliku. Posiadanie manifestu jako zewnętrznego pliku mogą nie działać w przypadku wszystkich scenariuszy. Na przykład zalecane jest, że zestawy prywatne osadzania manifestów. W kompilacji z wiersza polecenia takich jak implementacje używające nmake do kompilowania kodu można osadzić manifest za pomocą narzędzia manifestu; Aby uzyskać więcej informacji, zobacz [Generowanie manifestu w wierszu polecenia](manifest-generation-at-the-command-line.md). Podczas kompilowania w programie Visual Studio, ustawiając właściwość dla narzędzia manifestu mogą być osadzone manifestu **właściwości projektu** okna dialogowego; zobacz [Manifest Generation w programie Visual Studio](manifest-generation-in-visual-studio.md).
+Nagłówki bibliotek wizualnych C++ zawierają informacje o zestawie i gdy biblioteki są zawarte w kodzie aplikacji, to informacje o zestawie są używane przez konsolidatora do tworzenia manifestu dla końcowego pliku binarnego. Konsolidator nie osadza pliku manifestu wewnątrz danych binarnych i może generować tylko manifest jako plik zewnętrzny. Posiadanie manifestu jako pliku zewnętrznego może nie zadziałało dla wszystkich scenariuszy. Na przykład zaleca się, aby zestawy prywatne miały osadzone manifesty. W przypadku kompilacji wiersza polecenia, takich jak te, które używają NMAKE do kompilowania kodu, manifest może być osadzony przy użyciu narzędzia manifestu; Aby uzyskać więcej informacji, zobacz [generowanie manifestu w wierszu polecenia](manifest-generation-at-the-command-line.md). Podczas kompilowania w programie Visual Studio manifest może być osadzony przez ustawienie właściwości narzędzia manifestu w oknie dialogowym **właściwości projektu** ; Zobacz [generowanie manifestu w programie Visual Studio](manifest-generation-in-visual-studio.md).
 
 ## <a name="see-also"></a>Zobacz także
 

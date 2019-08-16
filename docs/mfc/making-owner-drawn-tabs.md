@@ -7,16 +7,16 @@ helpviewer_keywords:
 - CTabCtrl class [MFC], owner-drawn tabs
 - drawing [MFC], tabs
 ms.assetid: 11af2926-41d7-47e3-9eec-c595283f6371
-ms.openlocfilehash: 8c52bb325764f0edfff315edf21128f117c1a67b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ade5cd6b7d9bcb3dc398993c1758c7849fdc1f20
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391403"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508290"
 ---
 # <a name="making-owner-drawn-tabs"></a>Tworzenie kart rysowanych przez właściciela
 
-Można zdefiniować pojedynczych elementów formantu karty ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) jako elementy rysowanych przez właściciela. Aby uzyskać więcej informacji, zobacz [karty Owner-Drawn](/windows/desktop/Controls/tab-controls) w zestawie Windows SDK.
+Można definiować poszczególne elementy formantu karty ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) jako elementy rysowane przez właściciela. Aby uzyskać więcej informacji, zobacz [karty rysowane przez właściciela](/windows/win32/Controls/tab-controls) w Windows SDK.
 
 ## <a name="see-also"></a>Zobacz także
 

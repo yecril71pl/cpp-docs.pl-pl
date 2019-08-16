@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-ms.openlocfilehash: 07fd470a6aeab0575f2733d72650bd695b8e2752
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: f0b732efdce5cf04349f468363b8d86621d90204
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915685"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496305"
 ---
 # <a name="cthreadpool-class"></a>Klasa CThreadPool
 
@@ -78,7 +78,7 @@ Wątki w puli są tworzone i niszczone po zainicjowaniu puli, zmianie rozmiaru l
 
 Natychmiast po utworzeniu wątku *proces roboczy*::`Initialize` zostanie wywołany dla obiektu skojarzonego z tym wątkiem. Bezpośrednio przed zniszczeniem wątku *proces roboczy*::`Terminate` zostanie wywołany. Obie metody muszą akceptować argument **void** <strong>\*</strong> . Wartość tego argumentu jest przenoszona do puli wątków za pomocą parametru *PvWorkerParam* [CThreadPool:: Initialize](#initialize).
 
-Gdy istnieją elementy robocze w kolejce i wątki robocze dostępne do pracy, wątek roboczy spowoduje wyciągnięcie elementu z kolejki i wywołanie `Execute` metody obiektu *Worker* dla tego wątku. Trzy elementy są następnie przenoszone do metody: element z kolejki, taki sam `pvWorkerParam` , jak *proces roboczy*:: `Initialize` i *proces roboczy*:: `Terminate`, oraz wskaźnik do [pokrywającej](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped) się struktury używanej dla kolejki portu ukończenia we/wy .
+Gdy istnieją elementy robocze w kolejce i wątki robocze dostępne do pracy, wątek roboczy spowoduje wyciągnięcie elementu z kolejki i wywołanie `Execute` metody obiektu *Worker* dla tego wątku. Trzy elementy są następnie przenoszone do metody: element z kolejki, taki sam `pvWorkerParam` , jak *proces roboczy*:: `Initialize` i *proces roboczy*:: `Terminate`, oraz wskaźnik do [pokrywającej](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) się struktury używanej dla kolejki portu ukończenia we/wy .
 
 Klasa *Worker* deklaruje typ elementów, które zostaną dodane do kolejki w puli wątków, dostarczając element typedef, *Worker*:: `RequestType`. Ten typ musi być w stanie rzutować do i z ULONG_PTR.
 
@@ -344,7 +344,7 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wysyła żądanie zamknięcia do wszystkich wątków w puli. Jeśli limit czasu wygaśnie, ta metoda wywoła [TerminateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread) na dowolnym wątku, który nie został zakończony. Ta metoda jest wywoływana automatycznie z destruktora klasy.
+Ta metoda wysyła żądanie zamknięcia do wszystkich wątków w puli. Jeśli limit czasu wygaśnie, ta metoda wywoła [TerminateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-terminatethread) na dowolnym wątku, który nie został zakończony. Ta metoda jest wywoływana automatycznie z destruktora klasy.
 
 ## <a name="see-also"></a>Zobacz także
 

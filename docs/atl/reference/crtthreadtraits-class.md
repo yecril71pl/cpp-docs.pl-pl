@@ -10,19 +10,19 @@ helpviewer_keywords:
 - threading [ATL], creation functions
 - threading [ATL], CRT threads
 ms.assetid: eb6e20b0-c2aa-4170-8e34-aaeeacc86343
-ms.openlocfilehash: b5fa9273e3d24f5c912ebe30fab93baa6c9ff5c1
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 9e12e64041e38b8fa014815870132a75885014bf
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503156"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496564"
 ---
 # <a name="crtthreadtraits-class"></a>Klasa CRTThreadTraits
 
-Ta klasa udostępnia funkcję tworzenia wątku CRT. Jeśli wątek będzie używać funkcji CRT, należy użyć tej klasy.
+Ta klasa udostępnia funkcję tworzenia dla wątku CRT. Użyj tej klasy, jeśli wątek będzie używać funkcji CRT.
 
 > [!IMPORTANT]
->  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+>  Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,11 +36,11 @@ class CRTThreadTraits
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CRTThreadTraits::CreateThread](#createthread)|(Statyczny) Wywołaj tę funkcję, aby utworzyć wątek, można użyć funkcji CRT.|
+|[CRTThreadTraits:: onthread](#createthread)|Ruchom Wywołaj tę funkcję, aby utworzyć wątek, który może korzystać z funkcji CRT.|
 
 ## <a name="remarks"></a>Uwagi
 
-Klasy, które zapewniają funkcję tworzenia dla określonego typu wątku z nich są cechami wątku. Funkcja tworzenia ma ten sam podpis i semantyka jako Windows [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) funkcji.
+Cechy wątku są klasami, które udostępniają funkcję tworzenia dla określonego typu wątku. Funkcja tworzenia ma ten sam podpis i semantykę co funkcja Windows myFunction [Thread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) .
 
 Cechy wątku są używane przez następujące klasy:
 
@@ -48,15 +48,15 @@ Cechy wątku są używane przez następujące klasy:
 
 - [CWorkerThread](../../atl/reference/cworkerthread-class.md)
 
-Jeśli wątek nie będzie korzystać z funkcji CRT, użyj [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md) zamiast tego.
+Jeśli wątek nie będzie używać funkcji CRT, zamiast tego należy użyć [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md) .
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlbase.h
+**Nagłówek:** atlbase. h
 
-##  <a name="createthread"></a>  CRTThreadTraits::CreateThread
+##  <a name="createthread"></a>CRTThreadTraits:: onthread
 
-Wywołaj tę funkcję, aby utworzyć wątek, można użyć funkcji CRT.
+Wywołaj tę funkcję, aby utworzyć wątek, który może korzystać z funkcji CRT.
 
 ```
 static HANDLE CreateThread(
@@ -80,24 +80,24 @@ Rozmiar stosu dla nowego wątku.
 Procedura wątku nowego wątku.
 
 *pvParam*<br/>
-Parametr, który zostanie przekazany do procedury wątku.
+Parametr, który ma zostać przesłany do procedury wątku.
 
 *dwCreationFlags*<br/>
-Tworzenie flagi (0 lub CREATE_SUSPENDED).
+Flagi tworzenia (0 lub CREATE_SUSPENDED).
 
 *pdwThreadId*<br/>
-[out] Adres zmiennej typu DWORD, że w przypadku powodzenia odbiera identyfikator wątku dla nowo utworzonego wątku.
+określoną Adres zmiennej typu DWORD, która po powodzeniu odbiera identyfikator wątku nowo utworzonego wątku.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca uchwyt do nowo utworzonego wątku lub wartość NULL w przypadku niepowodzenia. Wywołaj [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) Aby uzyskać rozszerzone informacje o błędzie.
+Zwraca dojście do nowo utworzonego wątku lub wartości NULL w przypadku niepowodzenia. Wywołaj funkcję [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) , aby uzyskać rozszerzone informacje o błędzie.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) więcej informacji na temat parametrów dotyczących wyłącznie tej funkcji.
+Aby [](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) uzyskać więcej informacji na temat parametrów tej funkcji, zobacz myFunction.
 
-Ta funkcja wywołuje [_beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md) można utworzyć wątku.
+Ta funkcja wywołuje [_beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md) do utworzenia wątku.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

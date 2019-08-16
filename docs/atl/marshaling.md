@@ -1,26 +1,26 @@
 ---
-title: marshaling
+title: Marshaling
 ms.date: 11/04/2016
 helpviewer_keywords:
 - marshaling, COM interop
 - marshaling
 - COM interfaces, marshaling
 ms.assetid: 40644b0a-1106-4fc8-9dfb-9bee9915d825
-ms.openlocfilehash: 0661a4cdde0a3a875cf27221e884f6c65b9fea55
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9963e261f26daa57cb58e30ffc404b431d781bfa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262401"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492042"
 ---
-# <a name="marshaling"></a>marshaling
+# <a name="marshaling"></a>Marshaling
 
-Technika COM marshalingu umożliwia interfejsów udostępnianych przez obiekt w jednym procesie ma być używany w innym procesie. Organizowanie, COM zawiera kod (lub korzysta z kodu dostarczane przez obiekt implementujący interfejs) zarówno pakiet parametrów metody do formatu, który można przenosić między procesami (a także, faktycznie dla procesów uruchomionych na innych komputerach), jak i rozpakowania tych parametrów na końcu. Podobnie COM, należy wykonać te same kroki na powrót z wywołania.
+Technika COM kierująca umożliwia interfejsy uwidocznione przez obiekt w jednym procesie, który ma być używany w innym procesie. W obszarze kierowanie modelu COM udostępnia kod (lub używa kodu dostarczonego przez implementujący interfejs) zarówno do pakowania parametrów metody do formatu, który może być przenoszony między procesami (a także w sieci do procesów uruchomionych na innych maszynach) i rozpakowywania tych parametrów na drugim końcu. Analogicznie, COM musi wykonać te same kroki na zwracaniu z wywołania.
 
 > [!NOTE]
->  Marshaling zwykle nie jest konieczne po interfejsie udostępnianym przez obiekt jest używany w tym samym procesie co obiekt. Jednak przekazywanie może być potrzebny między wątkami.
+>  Kierowanie nie jest zwykle konieczne, gdy interfejs dostarczony przez obiekt jest używany w tym samym procesie co obiekt. Jednak może być wymagana kierowanie między wątkami.
 
 ## <a name="see-also"></a>Zobacz także
 
 [Wprowadzenie do modelu COM](../atl/introduction-to-com.md)<br/>
-[Organizowanie informacji](/windows/desktop/com/marshaling-details)
+[Szczegóły organizowania](/windows/win32/com/marshaling-details)

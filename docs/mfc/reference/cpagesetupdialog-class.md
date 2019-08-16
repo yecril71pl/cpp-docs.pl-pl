@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: a9009c4ea08771949cea2c44e4f6265783ced35a
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 18b17d0f40aaab6ba2a018a568950549eda23016
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916932"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503012"
 ---
 # <a name="cpagesetupdialog-class"></a>Klasa CPageSetupDialog
 
@@ -142,7 +142,7 @@ Jedna lub więcej flag, których można użyć, aby dostosować ustawienia okna 
 
 - PSD_DISABLEORIENTATION wyłącza formant okna dialogowego orientacja strony.
 
-- PSD_RETURNDEFAULT powoduje `CPageSetupDialog` zwrócenie struktur [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) i [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) , które są inicjowane dla domyślnej drukarki systemowej bez wyświetlania okna dialogowego. Przyjęto założenie, że `hDevNames` oba `hDevMode` i są równe null; w przeciwnym razie funkcja zwraca błąd. Jeśli domyślna drukarka systemowa jest obsługiwana przez stary sterownik drukarki (starsza niż wersja 3,0), zwracany jest `hDevNames` tylko system Windows. `hDevMode` ma wartość null.
+- PSD_RETURNDEFAULT powoduje `CPageSetupDialog` zwrócenie struktur [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) i [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames) , które są inicjowane dla domyślnej drukarki systemowej bez wyświetlania okna dialogowego. Przyjęto założenie, że `hDevNames` oba `hDevMode` i są równe null; w przeciwnym razie funkcja zwraca błąd. Jeśli domyślna drukarka systemowa jest obsługiwana przez stary sterownik drukarki (starsza niż wersja 3,0), zwracany jest `hDevNames` tylko system Windows. `hDevMode` ma wartość null.
 
 - PSD_DISABLEPAPER wyłącza kontrolkę wyboru papieru.
 
@@ -171,7 +171,7 @@ Użyj funkcji [DoModal](../../mfc/reference/cdialog-class.md#domodal) , aby wyś
 
 ##  <a name="createprinterdc"></a>CPageSetupDialog::CreatePrinterDC
 
-Tworzy kontekst urządzenia drukarki na podstawie struktur [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) i [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) .
+Tworzy kontekst urządzenia drukarki na podstawie struktur [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) i [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames) .
 
 ```
 HDC CreatePrinterDC();
@@ -191,7 +191,7 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-IDOK lub IDCANCEL. Jeśli IDCANCEL jest zwracany, wywołaj funkcję Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) , aby określić, czy wystąpił błąd.
+IDOK lub IDCANCEL. Jeśli IDCANCEL jest zwracany, wywołaj funkcję Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) , aby określić, czy wystąpił błąd.
 
 IDOK i IDCANCEL są stałymi, które wskazują, czy użytkownik zaznaczył przycisk OK lub Anuluj.
 
@@ -231,7 +231,7 @@ LPDEVMODE GetDevMode() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Struktura danych [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) , która zawiera informacje o inicjalizacji i środowisku urządzenia sterownika drukarki. Należy odblokować pamięć wykonywaną przez tę strukturę przy użyciu funkcji [GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock) systemu Windows, która jest opisana w Windows SDK.
+Struktura danych [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) , która zawiera informacje o inicjalizacji i środowisku urządzenia sterownika drukarki. Należy odblokować pamięć wykonywaną przez tę strukturę przy użyciu funkcji [GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock) systemu Windows, która jest opisana w Windows SDK.
 
 ##  <a name="getdrivername"></a>CPageSetupDialog:: GetDriverName
 
@@ -262,7 +262,7 @@ void GetMargins(
 ### <a name="parameters"></a>Parametry
 
 *lpRectMargins*<br/>
-Wskaźnik do struktury [Rect](/windows/desktop/api/windef/ns-windef-tagrect) lub obiektu [CRect](../../atl-mfc-shared/reference/crect-class.md) , który opisuje (w 1/1000 cala lub 1/100 mm) marginesy wydruku dla aktualnie wybranej drukarki. Przekaż wartość NULL dla tego parametru, jeśli nie jesteś zainteresowanym tym prostokątem.
+Wskaźnik do struktury [Rect](/windows/win32/api/windef/ns-windef-rect) lub obiektu [CRect](../../atl-mfc-shared/reference/crect-class.md) , który opisuje (w 1/1000 cala lub 1/100 mm) marginesy wydruku dla aktualnie wybranej drukarki. Przekaż wartość NULL dla tego parametru, jeśli nie jesteś zainteresowanym tym prostokątem.
 
 *lpRectMinMargins*<br/>
 Wskaźnik do `RECT` struktury lub `CRect` obiektu, który opisuje (w 1/1000 cala lub 1/100 mm) minimalne marginesy wydruku dla aktualnie wybranej drukarki. Przekaż wartość NULL dla tego parametru, jeśli nie jesteś zainteresowanym tym prostokątem.
@@ -305,7 +305,7 @@ Po skonstruowaniu `CPageSetupDialog` obiektu można użyć `m_psd` , aby ustawi�
 
 W `m_psd` przypadku zmodyfikowania elementu członkowskiego danych należy zmienić zachowanie domyślne.
 
-Aby uzyskać więcej informacji na temat struktury [PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda) , zobacz Windows SDK.
+Aby uzyskać więcej informacji na temat struktury [PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-psdw) , zobacz Windows SDK.
 
 Zobacz przykład dla [CPageSetupDialog:: CPageSetupDialog](#cpagesetupdialog).
 
@@ -341,7 +341,7 @@ Określa komunikat wskazujący obszar aktualnie rysowanej strony. Może to być 
 - Obszar WM_PSD_YAFULLPAGERECT dla reprezentacji adresu zwrotnego. Ten obszar rozciąga się na krawędzie przykładowego obszaru strony.
 
 *lpRect*<br/>
-Wskaźnik do obiektu [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [Rect](/windows/desktop/api/windef/ns-windef-tagrect) zawierającego współrzędne obszaru rysowania.
+Wskaźnik do obiektu [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [Rect](/windows/win32/api/windef/ns-windef-rect) zawierającego współrzędne obszaru rysowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -393,7 +393,7 @@ Określa orientację papieru lub koperty oraz określa, czy drukarka jest urząd
 - Koperta 0x01f w trybie pionowym (Matrix)
 
 *pPSD*<br/>
-Wskaźnik do `PAGESETUPDLG` struktury. Aby uzyskać więcej informacji na temat [PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda), zobacz Windows SDK.
+Wskaźnik do `PAGESETUPDLG` struktury. Aby uzyskać więcej informacji na temat [PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-psdw), zobacz Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
 

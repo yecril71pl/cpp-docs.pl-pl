@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - IOleControlImpl class
 ms.assetid: 5a4255ad-ede4-49ca-ba9a-07c2e919fa85
-ms.openlocfilehash: 50119d21b041f37f03ca416a9a56ca9e29ae3344
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3bdb501d8210c98ce982719358564c4937991e12
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276799"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495826"
 ---
 # <a name="iolecontrolimpl-class"></a>Klasa IOleControlImpl
 
-Ta klasa udostępnia domyślną implementację elementu `IOleControl` interfejsu i implementuje `IUnknown`.
+Ta klasa zapewnia domyślną implementację `IOleControl` interfejsu i implementuje. `IUnknown`
 
 > [!IMPORTANT]
->  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+>  Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,7 +35,7 @@ class IOleControlImpl
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Z klasą pochodną `IOleControlImpl`.
+Klasa, która pochodzi od `IOleControlImpl`.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -43,16 +43,16 @@ Z klasą pochodną `IOleControlImpl`.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[IOleControlImpl::FreezeEvents](#freezeevents)|Wskazuje, czy kontener ignoruje lub akceptuje zdarzeń formantu.|
-|[IOleControlImpl::GetControlInfo](#getcontrolinfo)|Kopiuje informacje o zachowanie klawiatury formantu. Implementacja biblioteki ATL zwraca E_NOTIMPL.|
-|[IOleControlImpl::OnAmbientPropertyChange](#onambientpropertychange)|Informuje o kontrolce przynajmniej jedna z właściwości otoczenia kontenera został zmieniony. Implementacja biblioteki ATL, zwraca wartość S_OK.|
-|[IOleControlImpl::OnMnemonic](#onmnemonic)|Informuje o kontrolki użytkownik naciśnie określony naciśnięcia klawisza. Implementacja biblioteki ATL zwraca E_NOTIMPL.|
+|[IOleControlImpl:: FreezeEvents](#freezeevents)|Wskazuje, czy kontener ignoruje lub akceptuje zdarzenia z formantu.|
+|[IOleControlImpl::GetControlInfo](#getcontrolinfo)|Wypełnia informacje o zachowaniu klawiatury formantu. Implementacja ATL zwraca E_NOTIMPL.|
+|[IOleControlImpl::OnAmbientPropertyChange](#onambientpropertychange)|Informuje formant, że co najmniej jedna z właściwości otoczenia kontenera zmieniła się. Implementacja ATL zwraca S_OK.|
+|[IOleControlImpl::](#onmnemonic)|Informuje kontrolkę, że użytkownik naciśnie określone naciśnięcie klawisza. Implementacja ATL zwraca E_NOTIMPL.|
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa `IOleControlImpl` udostępnia domyślną implementację elementu [IOleControl](/windows/desktop/api/ocidl/nn-ocidl-iolecontrol) interfejsu i implementuje `IUnknown` , wysyłając informacje o do zrzutu kompilacji urządzenia podczas debugowania.
+Klasa `IOleControlImpl` udostępnia domyślną implementację interfejsu [IOleControl](/windows/win32/api/ocidl/nn-ocidl-iolecontrol) i implementuje `IUnknown` ją przez wysyłanie informacji do urządzenia zrzutu w kompilacjach debugowania.
 
-**Powiązane artykuły** [ALT — samouczek](../../atl/active-template-library-atl-tutorial.md), [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)
+**Powiązane artykuły** [Samouczek ATL](../../atl/active-template-library-atl-tutorial.md), [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -62,11 +62,11 @@ Klasa `IOleControlImpl` udostępnia domyślną implementację elementu [IOleCont
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlctl.h
+**Nagłówek:** atlctl. h
 
-##  <a name="freezeevents"></a>  IOleControlImpl::FreezeEvents
+##  <a name="freezeevents"></a>IOleControlImpl:: FreezeEvents
 
-W implementacji ATL `FreezeEvents` zwiększa Twojej klasy kontrolki `m_nFreezeEvents` element członkowski danych Jeśli `bFreeze` jest PRAWDA, a także zmniejsza `m_nFreezeEvents` Jeśli `bFreeze` ma wartość FALSE.
+W implementacji `FreezeEvents` ATL, zwiększa element członkowski `m_nFreezeEvents` danych klasy kontrolki, jeśli `bFreeze` ma wartość true, i zmniejsza `m_nFreezeEvents` , jeśli `bFreeze` ma wartość false.
 
 ```
 HRESULT FreezeEvents(BOOL bFreeze);
@@ -74,13 +74,13 @@ HRESULT FreezeEvents(BOOL bFreeze);
 
 ### <a name="remarks"></a>Uwagi
 
-`FreezeEvents` następnie zwraca wartość S_OK.
+`FreezeEvents`następnie zwraca S_OK.
 
-Zobacz [IOleControl::FreezeEvents](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-freezeevents) w Windows SDK.
+Zobacz [IOleControl:: FreezeEvents](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-freezeevents) w Windows SDK.
 
-##  <a name="getcontrolinfo"></a>  IOleControlImpl::GetControlInfo
+##  <a name="getcontrolinfo"></a>IOleControlImpl::GetControlInfo
 
-Kopiuje informacje o zachowanie klawiatury formantu.
+Wypełnia informacje o zachowaniu klawiatury formantu.
 
 ```
 HRESULT GetControlInfo(LPCONTROLINFO pCI);
@@ -88,15 +88,15 @@ HRESULT GetControlInfo(LPCONTROLINFO pCI);
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IOleControl:GetControlInfo](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-getcontrolinfo) w Windows SDK.
+Zobacz [IOleControl: GetControlInfo](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-getcontrolinfo) w Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Returns E_NOTIMPL.
+Zwraca E_NOTIMPL.
 
-##  <a name="onambientpropertychange"></a>  IOleControlImpl::OnAmbientPropertyChange
+##  <a name="onambientpropertychange"></a>IOleControlImpl::OnAmbientPropertyChange
 
-Informuje o kontrolce przynajmniej jedna z właściwości otoczenia kontenera został zmieniony.
+Informuje formant, że co najmniej jedna z właściwości otoczenia kontenera zmieniła się.
 
 ```
 HRESULT OnAmbientPropertyChange(DISPID dispid);
@@ -104,15 +104,15 @@ HRESULT OnAmbientPropertyChange(DISPID dispid);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK.
+Zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IOleControl::OnAmbientPropertyChange](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-onambientpropertychange) w Windows SDK.
+Zobacz [IOleControl:: OnAmbientPropertyChange](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-onambientpropertychange) w Windows SDK.
 
-##  <a name="onmnemonic"></a>  IOleControlImpl::OnMnemonic
+##  <a name="onmnemonic"></a>IOleControlImpl::
 
-Informuje o kontrolki użytkownik naciśnie określony naciśnięcia klawisza.
+Informuje kontrolkę, że użytkownik naciśnie określone naciśnięcie klawisza.
 
 ```
 HRESULT OnMnemonic(LPMSG pMsg);
@@ -120,14 +120,14 @@ HRESULT OnMnemonic(LPMSG pMsg);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Returns E_NOTIMPL.
+Zwraca E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IOleControl::OnMnemonic](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-onmnemonic) w Windows SDK.
+Zobacz [IOleControl::](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-onmnemonic) w Windows SDK.
 
 ## <a name="see-also"></a>Zobacz także
 
 [Klasa IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md)<br/>
-[Interfejsy kontrolki ActiveX](/windows/desktop/com/activex-controls-interfaces)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Interfejsy formantów ActiveX](/windows/win32/com/activex-controls-interfaces)<br/>
+[Przegląd klas](../../atl/atl-class-overview.md)

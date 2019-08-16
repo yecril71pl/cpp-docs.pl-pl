@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], Create
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
-ms.openlocfilehash: 70f090e2d9830ccfdd98640b54ff07440064d542
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45b4698cc70487a6c3fe1470fe27f7b5c4f95402
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337820"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504602"
 ---
 # <a name="cminiframewnd-class"></a>Klasa CMiniFrameWnd
 
-Przedstawia okna ramki w połowie wysokości zwykle widoczne wokół przestawnych pasków narzędzi.
+Przedstawia okno ramki o połowie wysokości zwykle widoczne wokół przestawnych pasków narzędzi.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,22 +35,22 @@ class CMiniFrameWnd : public CFrameWnd
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMiniFrameWnd::CMiniFrameWnd](#cminiframewnd)|Konstruuje `CMiniFrameWnd` obiektu.|
+|[CMiniFrameWnd::CMiniFrameWnd](#cminiframewnd)|Konstruuje `CMiniFrameWnd` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMiniFrameWnd::Create](#create)|Tworzy `CMiniFrameWnd` obiektu po konstrukcji.|
-|[CMiniFrameWnd::CreateEx](#createex)|Tworzy `CMiniFrameWnd` obiektu (z dodatkowymi opcjami) po konstrukcji.|
+|[CMiniFrameWnd:: Create](#create)|`CMiniFrameWnd` Tworzy obiekt po konstrukcji.|
+|[CMiniFrameWnd::CreateEx](#createex)|`CMiniFrameWnd` Tworzy obiekt (z dodatkowymi opcjami) po konstrukcji.|
 
 ## <a name="remarks"></a>Uwagi
 
-Te okna mini ramki zachowują się jak normalne ramki okien, z tą różnicą, że nie masz Maksymalizuj/Minimalizuj przycisków lub menu i muszą tylko jednym kliknięciem w menu systemu, aby je odrzucić.
+Te okna ze minią ramką zachowują się jak normalne okna ramowe, z tą różnicą, że nie mają przycisków minimalizowania/maksymalizowania lub menu i wystarczy tylko jednokrotne kliknięcie menu systemowego, aby je zamknąć.
 
-Aby użyć `CMiniFrameWnd` obiektu, należy najpierw zdefiniować obiekt. Następnie wywołaj [Utwórz](#create) funkcja elementu członkowskiego, aby wyświetlić okno mini ramki.
+Aby użyć `CMiniFrameWnd` obiektu, najpierw Zdefiniuj obiekt. Następnie wywołaj funkcję [Utwórz](#create) element członkowski, aby wyświetlić okno mini-frame.
 
-Aby uzyskać więcej informacji na temat sposobu użycia `CMiniFrameWnd` obiektów, zobacz artykuł [dokowanie i przestawne paski narzędzi](../../mfc/docking-and-floating-toolbars.md).
+Aby uzyskać więcej informacji na temat używania `CMiniFrameWnd` obiektów, zobacz artykuł [dokowanie i przestawne paski narzędzi](../../mfc/docking-and-floating-toolbars.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -60,17 +60,17 @@ Aby uzyskać więcej informacji na temat sposobu użycia `CMiniFrameWnd` obiekt�
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[CFrameWnd](../../mfc/reference/cframewnd-class.md)
+[Obiektu CFrameWnd](../../mfc/reference/cframewnd-class.md)
 
 `CMiniFrameWnd`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxwin.h
+**Nagłówek:** afxwin. h
 
-##  <a name="cminiframewnd"></a>  CMiniFrameWnd::CMiniFrameWnd
+##  <a name="cminiframewnd"></a>CMiniFrameWnd::CMiniFrameWnd
 
-Konstruuje `CMiniFrameWnd` obiektu, ale nie tworzy okno.
+Konstruuje `CMiniFrameWnd` obiekt, ale nie tworzy okna.
 
 ```
 CMiniFrameWnd();
@@ -78,11 +78,11 @@ CMiniFrameWnd();
 
 ### <a name="remarks"></a>Uwagi
 
-Aby utworzyć okno, wywołaj [CMiniFrameWnd::Create](#create).
+Aby utworzyć okno, wywołaj [CMiniFrameWnd:: Create](#create).
 
-##  <a name="create"></a>  CMiniFrameWnd::Create
+##  <a name="create"></a>CMiniFrameWnd:: Create
 
-Tworzy okno mini ramki Windows i dołącza je do `CMiniFrameWnd` obiektu.
+Tworzy okno Windows mini frame i dołącza je do `CMiniFrameWnd` obiektu.
 
 ```
 virtual BOOL Create(
@@ -97,58 +97,58 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *lpClassName*<br/>
-Wskazuje ciąg znaków zakończony znakiem null, że nazwy klas Windows. Nazwa klasy może być dowolna nazwa, zarejestrowany w globalnej [afxregisterwndclass —](application-information-and-management.md#afxregisterwndclass) funkcji. Jeśli ma wartość NULL, zostanie zarejestrowana klasy okna dla Ciebie przez platformę. MFC udostępnia domyślną klasę następujące stylów i atrybuty:
+Wskazuje ciąg znaków zakończony znakiem null, który nazywa klasę systemu Windows. Nazwa klasy może być dowolną nazwą zarejestrowana w globalnej funkcji [AfxRegisterWndClass —](application-information-and-management.md#afxregisterwndclass) . Jeśli wartość jest równa NULL, Klasa okna zostanie zarejestrowana przez strukturę. MFC przypisuje klasie domyślnej następujące style i atrybuty:
 
-- Ustawia styl bit CS_DBLCLKS, które wysyła kliknij dwukrotnie wiadomości do procedury okna, gdy użytkownik kliknie dwukrotnie myszy.
+- Ustawia wartość Style bit CS_DBLCLKS, która wysyła wiadomości dwukrotnego kliknięcia do procedury okna, gdy użytkownik kliknie dwukrotnie mysz.
 
-- Ustawia styl bitów CS_HREDRAW i CS_VREDRAW, które nakazują zawartość obszaru klienta, który ma zostać narysowany ponownie podczas okna zmienia rozmiar.
+- Ustawia bity w stylu CS_HREDRAW i CS_VREDRAW, który kieruje zawartość obszaru klienta do odrysowania, gdy zmienia się rozmiar okna.
 
-- Ustawia kursor klasy IDC_ARROW standardowa Windows.
+- Ustawia kursor klasy w standardowym IDC_ARROW systemu Windows.
 
-- Ustawia pędzel tła klasy na wartość NULL, więc okna nie spowoduje to wymazanie tłem.
+- Ustawia Pędzel tła klasy na wartość NULL, więc okno nie wymazuje jego tła.
 
-- Ikona logo Windows standard, którzy wymachują flagi ustawia ikonę klasy.
+- Ustawia ikonę klasy na ikonę standardowego, Waving flagi logo systemu Windows.
 
-- Ustawia domyślny rozmiar i położenie okna, wskazane przez Windows.
+- Ustawia domyślny rozmiar i położenie okna, jak wskazano w systemie Windows.
 
 *lpWindowName*<br/>
 Wskazuje ciąg znaków zakończony znakiem null, który zawiera nazwę okna.
 
 *dwStyle*<br/>
-Określa atrybuty stylu okna. Obejmują one style standardowego okna i co najmniej jeden z następujących stylów specjalne:
+Określa atrybuty stylu okna. Mogą to być standardowe style okna i co najmniej jeden z następujących stylów specjalnych:
 
-- MFS_MOVEFRAME umożliwia okna mini ramki, który ma zostać przeniesiona przez kliknięcie dowolnej krawędzi okna, a nie tylko podpis.
+- MFS_MOVEFRAME umożliwia przenoszenie okna mini-frame przez kliknięcie dowolnej krawędzi okna, a nie tylko podpisu.
 
-- Wyłącza MFS_4THICKFRAME zmiany rozmiaru okna mini ramki.
+- MFS_4THICKFRAME wyłącza zmianę rozmiarów okna mini-frame.
 
-- MFS_SYNCACTIVE synchronizuje aktywacji okna mini ramki aktywacji okna nadrzędnego.
+- MFS_SYNCACTIVE synchronizuje aktywację okna mini-frame do aktywacji okna nadrzędnego.
 
-- Umożliwia MFS_THICKFRAME Zezwalaj na rozmiar można zmieniać tak małej, jak zawartość obszaru klienckiego okna mini ramki.
+- MFS_THICKFRAME umożliwia rozmiar okna mini-frame jako niewielkich, ponieważ zawartość obszaru klienckiego jest dozwolona.
 
-- Wyłącza MFS_BLOCKSYSMENU dostęp do menu systemowego i menu kontroli i konwertuje je na część podpisu (paska tytułu).
+- MFS_BLOCKSYSMENU wyłącza dostęp do menu systemowego i menu sterowania i konwertuje je na część podpisu (pasek tytułu).
 
-Zobacz [CWnd::Create](../../mfc/reference/cwnd-class.md#create) opis okna możliwych wartości stylu. Typowe połączenie używane dla systemu windows mini ramki jest WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU.
+Aby uzyskać opis możliwych wartości stylu okna, zobacz [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) . Typową kombinacją dla okien mini-frame jest WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU.
 
-*Rect*<br/>
-A `RECT` struktury, określając żądane wymiary okna.
+*cinania*<br/>
+`RECT` Struktura określająca żądane wymiary okna.
 
 *pParentWnd*<br/>
-Wskazuje okna nadrzędnego. Użyj wartości NULL dla okien najwyższego poziomu.
+Wskazuje okno nadrzędne. Użyj wartości NULL dla okien najwyższego poziomu.
 
 *nID*<br/>
-Jeśli okno mini ramki jest tworzony jako okna podrzędnego, jest to identyfikator kontrolki podrzędnej; w przeciwnym razie 0.
+Jeśli okno mini-frame jest tworzone jako okno podrzędne, jest to identyfikator kontrolki podrzędnej. w przeciwnym razie 0.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-`Create` Inicjuje nazwy klasy okna i okna, a następnie rejestruje wartości domyślne dla jego stylu i element nadrzędny.
+`Create`Inicjuje nazwę klasy okna i nazwę okna i rejestruje wartości domyślne dla jego stylu i elementu nadrzędnego.
 
-##  <a name="createex"></a>  CMiniFrameWnd::CreateEx
+##  <a name="createex"></a>CMiniFrameWnd::CreateEx
 
-Tworzy `CMiniFrameWnd` obiektu.
+`CMiniFrameWnd` Tworzy obiekt.
 
 ```
 virtual BOOL CreateEx(
@@ -164,45 +164,45 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parametry
 
 *dwExStyle*<br/>
-Określa styl rozszerzonej `CMiniFrameWnd` tworzona. Zastosowania któregokolwiek z [rozszerzone Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) do okna.
+Określa rozszerzony styl tworzonego elementu `CMiniFrameWnd` . Zastosuj dowolny z [rozszerzonych stylów okna](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) do okna.
 
 *lpClassName*<br/>
-Wskazuje ciąg znaków zakończony znakiem null, że nazwy klas Windows ( [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) struktury). Nazwa klasy może być dowolna nazwa, zarejestrowany w globalnej [afxregisterwndclass —](application-information-and-management.md#afxregisterwndclass) funkcji lub żadnej z nazw wstępnie zdefiniowanych klasy kontrolki. Nie może być równa NULL.
+Wskazuje ciąg znaków zakończony znakiem null, który nazywa klasę systemu Windows (struktura [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) ). Nazwa klasy może być dowolną nazwą zarejestrowanej przy użyciu globalnej funkcji [AfxRegisterWndClass —](application-information-and-management.md#afxregisterwndclass) lub dowolnych wstępnie zdefiniowanych nazw klas kontrolek. Nie może mieć wartości NULL.
 
 *lpWindowName*<br/>
 Wskazuje ciąg znaków zakończony znakiem null, który zawiera nazwę okna.
 
 *dwStyle*<br/>
-Określa atrybuty stylu okna. Zobacz [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles) i [CWnd::Create](../../mfc/reference/cwnd-class.md#create) opis możliwych wartości.
+Określa atrybuty stylu okna. Zobacz [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles) i [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) , aby uzyskać opis możliwych wartości.
 
-*Rect*<br/>
-Rozmiar i położenie okna w współrzędne klienta *pParentWnd*.
+*cinania*<br/>
+Rozmiar i położenie okna we współrzędnych klienta *pParentWnd*.
 
 *pParentWnd*<br/>
-Wskazuje obiekt okna nadrzędnego.
+Wskazuje obiekt nadrzędny okna.
 
 *nID*<br/>
 Identyfikator okna podrzędnego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-`CreateEx` Parametry określają WNDCLASS, styl okna i (opcjonalnie) początkowe położenie i rozmiar okna. `CreateEx` Określa również okna nadrzędnego (jeśli istnieje) i identyfikator.
+`CreateEx` Parametry określają WNDCLASS, styl okna i (opcjonalnie) początkową pozycję i rozmiar okna. `CreateEx`określa również element nadrzędny (jeśli istnieje) okna i identyfikator.
 
-Gdy `CreateEx` wykonuje Windows wysyła [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo), [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), i [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate) Komunikaty wyjściowe do okna.
+Gdy `CreateEx` jest wykonywane, system Windows wysyła do okna komunikaty [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo), [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)i [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate) .
 
-Aby rozszerzyć domyślnej obsługi komunikatów, należy wyprowadzić klasę z `CMiniFrameWnd`, Dodaj mapy komunikatów do nowej klasy i zapewnić funkcji elementów członkowskich dla powyższych wiadomości. Zastąp `OnCreate`, na przykład do przeprowadzenia wymaganych inicjowania dla nowej klasy.
+Aby zwiększyć domyślną obsługę komunikatów, należy utworzyć klasę z `CMiniFrameWnd`, dodać do nowej klasy mapę komunikatów i udostępnić funkcje elementów członkowskich dla powyższych komunikatów. Przesłoń `OnCreate`, na przykład, aby wykonać wymaganą inicjalizację dla nowej klasy.
 
-Zastąp dalsze `On` *komunikat* komunikatu obsługi będzie dodawał kolejne funkcje do klasy pochodnej.
+Przesłoń `On`dalsze procedury obsługi komunikatów *komunikatów* , aby dodać dalsze funkcje do klasy pochodnej.
 
-Jeśli zostanie określony styl WS_VISIBLE, Windows wysyła okna wszystkie komunikaty, które są wymagane do aktywowania i wyświetlenie okna. Jeśli styl okna określa pasek tytułu, tytuł okna wskazywany przez *lpszWindowName* parametru jest wyświetlana na pasku tytułu.
+Jeśli podano styl WS_VISIBLE, system Windows wysyła wszystkie komunikaty wymagane do aktywowania i wyświetlenia okna. Jeśli styl okna określa pasek tytułu, na pasku tytułu zostanie wyświetlony tytuł okna wskazywany przez parametr *lpszWindowName* .
 
-*DwStyle* parametr może być dowolną kombinacją [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+Parametr *dwStyle* może być dowolną kombinacją [stylów okna](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-Okna przybornika palety stary styl nie są już obsługiwane. Stary styl nie miał przycisk "X" Zamknij, było obsługiwane, podczas uruchamiania aplikacji MFC w poprzednich wersjach systemu Windows, ale nie jest już obsługiwana w programie Visual C++ .NET. Obsługiwana jest tylko nowy styl WS_EX_TOOLWINDOW; Aby uzyskać opis ten styl, zobacz [rozszerzone Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).
+Okna przybornika palety stylów starego stylu nie są już obsługiwane. Stary styl, który nie ma przycisku zamknięcia "X", był obsługiwany podczas uruchamiania aplikacji MFC w poprzednich wersjach systemu Windows, ale nie jest już obsługiwany w programie Visual C++.NET. Obsługiwany jest tylko nowy styl WS_EX_TOOLWINDOW; Opis tego stylu można znaleźć w sekcji [Style okna rozszerzonego](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,21 +1,21 @@
 ---
-title: zakres (atrybut COM C++)
+title: Range (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.range
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: 9ce941fe95f2bbef3895c039984db1e1d2985ae1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1221192eb1813d759f293fe5555d7aaa5b367ab
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407487"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514141"
 ---
 # <a name="range-c"></a>range (C++)
 
-Określa zakres dopuszczalnych wartości dla argumentów lub pól, których wartości są ustawione w czasie wykonywania.
+Określa zakres dozwolonych wartości dla argumentów lub pól, których wartości są ustawiane w czasie wykonywania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,15 +25,15 @@ Określa zakres dopuszczalnych wartości dla argumentów lub pól, których wart
 
 ### <a name="parameters"></a>Parametry
 
-*Niska*<br/>
-Wartość zakresu niski.
+*małą*<br/>
+Wartość dolnego zakresu.
 
 *high*<br/>
-Wartość zakresu wysoka.
+Wartość wysokiego zakresu.
 
 ## <a name="remarks"></a>Uwagi
 
-**Zakres** atrybut C++ ma taką samą funkcjonalność jak [zakres](/windows/desktop/Midl/range) atrybutów w MIDL.
+Atrybut **Range** C++ ma taką samą funkcjonalność jak atrybut [Range](/windows/win32/Midl/range) MIDL.
 
 ## <a name="example"></a>Przykład
 
@@ -57,12 +57,12 @@ __interface ICustom {
 
 |||
 |-|-|
-|**Dotyczy**|Metody interfejsu, parametr interfejsu|
+|**Dotyczy**|Interface — Metoda, parametr interfejsu|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

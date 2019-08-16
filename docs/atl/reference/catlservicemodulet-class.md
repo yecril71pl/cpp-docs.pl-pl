@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: 095d909fefe0053b742368f260cf61937c2f5426
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 2854d0902700b268383eca094bed35843ea73272
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915871"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497734"
 ---
 # <a name="catlservicemodulet-class"></a>Klasa Funkcja CAtlServiceModuleT
 
@@ -244,7 +244,7 @@ Opcjonalne dodatkowe ciągi do zapisania w dzienniku zdarzeń.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda zapisuje szczegóły w dzienniku zdarzeń przy użyciu funkcji [ReportEvent](/windows/desktop/api/winbase/nf-winbase-reporteventa). Jeśli żadna usługa nie jest uruchomiona, ciąg jest wysyłany do konsoli.
+Ta metoda zapisuje szczegóły w dzienniku zdarzeń przy użyciu funkcji [ReportEvent](/windows/win32/api/winbase/nf-winbase-reporteventw). Jeśli żadna usługa nie jest uruchomiona, ciąg jest wysyłany do konsoli.
 
 ##  <a name="m_bservice"></a>Funkcja CAtlServiceModuleT:: m_bService
 
@@ -280,7 +280,7 @@ SERVICE_STATUS_HANDLE m_hServiceStatus;
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura [SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-service_status) zawiera informacje o usłudze.
+Struktura [SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status) zawiera informacje o usłudze.
 
 ##  <a name="m_status"></a>Funkcja CAtlServiceModuleT:: m_status
 
@@ -292,7 +292,7 @@ SERVICE_STATUS m_status;
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura [SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-service_status) zawiera informacje o usłudze.
+Struktura [SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status) zawiera informacje o usłudze.
 
 ##  <a name="m_szservicename"></a>  CAtlServiceModuleT::m_szServiceName
 
@@ -432,7 +432,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>Parametry
 
 *nShowCmd*<br/>
-Określa sposób wyświetlania okna. Ten parametr może być jedną z wartości omówionych w sekcji [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) . Wartość domyślna to SW_HIDE.
+Określa sposób wyświetlania okna. Ten parametr może być jedną z wartości omówionych w sekcji [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) . Wartość domyślna to SW_HIDE.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -475,7 +475,7 @@ void SetServiceStatus(DWORD dwState) throw();
 ### <a name="parameters"></a>Parametry
 
 *dwState*<br/>
-Nowy stan. Zobacz [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) , aby uzyskać możliwe wartości.
+Nowy stan. Zobacz [SetServiceStatus](/windows/win32/api/winsvc/nf-winsvc-setservicestatus) , aby uzyskać możliwe wartości.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -492,7 +492,7 @@ HRESULT Start(int nShowCmd) throw();
 ### <a name="parameters"></a>Parametry
 
 *nShowCmd*<br/>
-Określa sposób wyświetlania okna. Ten parametr może być jedną z wartości omówionych w sekcji [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) .
+Określa sposób wyświetlania okna. Ten parametr może być jedną z wartości omówionych w sekcji [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) .
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -553,7 +553,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>Parametry
 
 *nShowCmd*<br/>
-Określa sposób wyświetlania okna. Ten parametr może być jedną z wartości omówionych w sekcji [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) .
+Określa sposób wyświetlania okna. Ten parametr może być jedną z wartości omówionych w sekcji [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) .
 
 ### <a name="return-value"></a>Wartość zwracana
 

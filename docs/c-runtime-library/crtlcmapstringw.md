@@ -17,16 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - __crtLCMapStringW
 ms.assetid: 45b4ac0e-438c-4fa3-b4d1-34195f4467d9
-ms.openlocfilehash: 0c3752baba05e18903c32919505d702081d09dca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e79ac5d4072595ef1034a0483b9edc8eada916d8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344502"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500214"
 ---
-# <a name="crtlcmapstringw"></a>__crtLCMapStringW
+# <a name="__crtlcmapstringw"></a>__crtLCMapStringW
 
-Mapuje jeden ciąg znaków do innego, wykonując określone przekształcenie zależne od ustawień regionalnych. Tej funkcji można również wygenerować klucz sortowania dla ciągu wejściowego.
+Mapuje jeden ciąg znaków na inny, wykonując określoną transformację zależną od ustawień regionalnych. Ta funkcja może również służyć do generowania klucza sortowania dla ciągu wejściowego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,39 +43,39 @@ int __crtLCMapStringW(
 #### <a name="parameters"></a>Parametry
 
 *Wersja regionalna*<br/>
-Identyfikator ustawień regionalnych. Ustawienia regionalne dostarcza kontekst dla mapowania ciągu lub generowania klucza sortowania. Aplikacja może użyć `MAKELCID` makra, aby utworzyć identyfikator ustawień regionalnych.
+Identyfikator ustawień regionalnych. Ustawienia regionalne zapewniają kontekst mapowania ciągów lub generowania klucza sortowania. Aplikacja może użyć `MAKELCID` makra do utworzenia identyfikatora ustawień regionalnych.
 
 *dwMapFlags*<br/>
-Typ przekształcenia, które będą używane w ciągu mapowania lub Sortuj generowania klucza.
+Typ transformacji, która ma być używana podczas mapowania ciągu lub generowania klucza sortowania.
 
 *lpSrcStr*<br/>
-Wskaźnik do ciągu źródłowym, funkcja mapuje lub używa do generowania klucza sortowania. Ten parametr będzie traktowana jako ciąg Unicode.
+Wskaźnik do ciągu źródłowego, który funkcja mapuje lub używa do generowania klucza sortowania. Przyjęto, że ten parametr jest ciągiem Unicode.
 
 *cchSrc*<br/>
-Rozmiar, w postaci ciągu, wskazywana przez `lpSrcStr` parametru. Ten licznik można uwzględnić terminator o wartości null lub nie ma.
+Rozmiar ciągu wskazywanego przez `lpSrcStr` parametr w znakach. Ta liczba może zawierać terminator o wartości null lub nie zawierać go.
 
-A `cchSrc` wartość -1, określa ciąg wskazywany przez `lpSrcStr` jest zakończony znakiem null. Jeśli jest to możliwe, a ta funkcja jest używany w trybie mapowania ciągów, funkcja oblicza długość ciągu, sama i wartość null kończy ciąg zamapowany, przechowywane w `*lpDestStr`.
+Wartość-1 określa, że ciąg wskazywany przez `lpSrcStr` jest zakończony znakiem null. `cchSrc` W takim przypadku, gdy ta funkcja jest używana w trybie mapowania ciągów, funkcja oblicza samą długość ciągu, a wartość null kończy zamapowanego ciągu przechowywanego w `*lpDestStr`.
 
 *lpDestStr*<br/>
-Długie wskaźnik do buforu, w którym funkcja przechowuje zamapowanego klucza ciągu lub sortowania.
+Długi wskaźnik do buforu, do którego funkcja przechowuje zamapowany ciąg lub klucz sortowania.
 
 *cchDest*<br/>
-Rozmiar w znakach bufor wskazywany przez `lpDestStr`.
+Rozmiar (w znakach) buforu wskazywanego przez `lpDestStr`.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli wartość `cchDest` jest różna od zera, liczba znaków, lub liczbę bajtów Jeśli `LCMAP_SORTKEY` jest określić, zapisywane w buforze oznacza sukces. Licznik ten uwzględnia również miejsce dla terminator o wartości null.
+Jeśli wartość `cchDest` jest różna od zera, liczba znaków lub bajty, jeśli `LCMAP_SORTKEY` jest określona, zapisywana w buforze wskazuje na powodzenie. Ta liczba obejmuje pomieszczenie dla terminatora o wartości null.
 
-Jeśli wartość `cchDest` jest zero, rozmiaru buforu znaków lub liczbę bajtów Jeżeli `LCMAP_SORTKEY` jest określona, wymagane do odbierania przetłumaczonego ciągu lub Sortuj klucza oznacza sukces. Ten rozmiar obejmuje miejsce dla terminator o wartości null.
+Jeśli wartość `cchDest` jest równa zero, rozmiar buforu w znakach lub bajty, jeśli `LCMAP_SORTKEY` jest określony, wymagane do odebrania przetłumaczonego ciągu lub klucza sortowania wskazuje na powodzenie. Ten rozmiar obejmuje pomieszczenie dla terminatora o wartości null.
 
-Wartość zero wskazuje błąd. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać `GetLastError` funkcji.
+Zero wskazuje na błąd. Aby uzyskać rozszerzone informacje o błędzie, wywołaj `GetLastError` funkcję.
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli `cchSrc` jest większa od zera i `lpSrcStr` jest ciąg zakończony znakiem null `__crtLCMapStringW` ustawia `cchSrc` do długości ciągu. Następnie `__crtLCMapStringW` wywołuje szerokiego ciągu (Unicode) wersję `LCMapString` funkcji z określonymi parametrami. Aby uzyskać więcej informacji na temat parametrów i wartość zwracana przez tę funkcję, zobacz [LCMapString](/windows/desktop/api/winnls/nf-winnls-lcmapstringa).
+Jeśli `cchSrc` jest większa od zera i `lpSrcStr` jest ciągiem zakończonym wartością null, `__crtLCMapStringW` ustawia `cchSrc` długość ciągu. Następnie `__crtLCMapStringW` wywołuje `LCMapString` funkcję szerokiego ciągu (Unicode) funkcji z określonymi parametrami. Aby uzyskać więcej informacji na temat parametrów i wartości zwracanej przez tę funkcję, zobacz [LCMapString](/windows/win32/api/winnls/nf-winnls-lcmapstringw).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|__crtLCMapStringW|awint.h|
+|__crtLCMapStringW|awint. h|

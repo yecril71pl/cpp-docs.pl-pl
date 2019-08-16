@@ -13,19 +13,19 @@ helpviewer_keywords:
 - IQuickActivateImpl class
 - IQuickActivate ATL implementation
 ms.assetid: aa80c056-1041-494e-b21d-2acca7dc27ea
-ms.openlocfilehash: 2a2b11746249b6ee4f6ddd578717aacc374d53bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2169686ebbf756c5caf9232f5031532c62ac8265
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198152"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495510"
 ---
 # <a name="iquickactivateimpl-class"></a>Klasa IQuickActivateImpl
 
-Ta klasa łączy inicjowania kontroli kontenery w jednym wywołaniu.
+Ta klasa łączy inicjalizację kontenera kontenerów z pojedynczym wywołaniem.
 
 > [!IMPORTANT]
->  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+>  Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,7 +37,7 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Z klasą pochodną `IQuickActivateImpl`.
+Klasa, która pochodzi od `IQuickActivateImpl`.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -45,15 +45,15 @@ Z klasą pochodną `IQuickActivateImpl`.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[IQuickActivateImpl::GetContentExtent](#getcontentextent)|Pobiera bieżący rozmiar wyświetlania kontrolki uruchomione.|
-|[IQuickActivateImpl::QuickActivate](#quickactivate)|Wykonuje szybkie inicjowanie kontrolki ładowany.|
-|[IQuickActivateImpl::SetContentExtent](#setcontentextent)|Informuje o kontroli ilości wykorzystanego miejsca wyświetlania kontener został przypisany do niego.|
+|[IQuickActivateImpl::GetContentExtent](#getcontentextent)|Pobiera bieżący rozmiar ekranu dla działającej kontrolki.|
+|[IQuickActivateImpl::QuickActivate](#quickactivate)|Wykonuje szybkie inicjowanie załadowanej kontroli.|
+|[IQuickActivateImpl::SetContentExtent](#setcontentextent)|Informuje o tym, ile miejsca wyświetlania kontener przypisano do niego.|
 
 ## <a name="remarks"></a>Uwagi
 
-[IQuickActivate](/windows/desktop/api/ocidl/nn-ocidl-iquickactivate) interfejsu pomaga uniknąć opóźnień, podczas ładowania formantów, łącząc inicjowania w pojedynczym wywołaniu kontenerów. `QuickActivate` Metoda umożliwia kontener, aby przekazać wskaźnik do [QACONTAINER](/windows/desktop/api/ocidl/ns-ocidl-tagqacontainer) musi strukturę, która przechowuje wskaźniki do wszystkich interfejsów kontrolki. Przy powrocie, kontrola przechodzi wstecz wskaźnik do [QACONTROL](/windows/desktop/api/ocidl/ns-ocidl-tagqacontrol) strukturę, która przechowuje wskaźniki do jego własnej interfejsów, które są używane przez kontener. Klasa `IQuickActivateImpl` udostępnia domyślną implementację elementu `IQuickActivate` i implementuje `IUnknown` , wysyłając informacje o do zrzutu kompilacji urządzenia podczas debugowania.
+Interfejs [IQuickActivate](/windows/win32/api/ocidl/nn-ocidl-iquickactivate) ułatwia kontenery, unikając opóźnień podczas ładowania formantów przez połączenie inicjalizacji w pojedynczym wywołaniu. Metoda umożliwia kontenerowi przekazanie wskaźnika do struktury QACONTAINER, która zawiera wskaźniki do wszystkich interfejsów, których wymaga kontrola. [](/windows/win32/api/ocidl/ns-ocidl-qacontainer) `QuickActivate` Po powrocie formant przekazuje wskaźnik do struktury [QACONTROL](/windows/win32/api/ocidl/ns-ocidl-qacontrol) , która zawiera wskaźniki do własnych interfejsów, które są używane przez kontener. Klasa `IQuickActivateImpl` udostępnia domyślną `IQuickActivate` implementację i implementuje `IUnknown` przez wysyłanie informacji do urządzenia zrzutu w kompilacjach debugowania.
 
-**Powiązane artykuły** [ALT — samouczek](../../atl/active-template-library-atl-tutorial.md), [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)
+**Powiązane artykuły** [Samouczek ATL](../../atl/active-template-library-atl-tutorial.md), [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -63,11 +63,11 @@ Z klasą pochodną `IQuickActivateImpl`.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlctl.h
+**Nagłówek:** atlctl. h
 
-##  <a name="getcontentextent"></a>  IQuickActivateImpl::GetContentExtent
+##  <a name="getcontentextent"></a>IQuickActivateImpl::GetContentExtent
 
-Pobiera bieżący rozmiar wyświetlania kontrolki uruchomione.
+Pobiera bieżący rozmiar ekranu dla działającej kontrolki.
 
 ```
 STDMETHOD(GetContentExtent)(LPSIZEL pSize);
@@ -75,13 +75,13 @@ STDMETHOD(GetContentExtent)(LPSIZEL pSize);
 
 ### <a name="remarks"></a>Uwagi
 
-Rozmiar jest pełna renderowanie formantu i jest określony w jednostkach HIMETRIC.
+Rozmiar służy do pełnego renderowania kontrolki i jest określony w jednostkach HIMETRIC.
 
-Zobacz [IQuickActivate::GetContentExtent](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-getcontentextent) w Windows SDK.
+Zobacz [IQuickActivate:: GetContentExtent](/windows/win32/api/ocidl/nf-ocidl-iquickactivate-getcontentextent) w Windows SDK.
 
-##  <a name="quickactivate"></a>  IQuickActivateImpl::QuickActivate
+##  <a name="quickactivate"></a>IQuickActivateImpl::QuickActivate
 
-Wykonuje szybkie inicjowanie kontrolki ładowany.
+Wykonuje szybkie inicjowanie załadowanej kontroli.
 
 ```
 STDMETHOD(QuickActivate)(
@@ -91,13 +91,13 @@ STDMETHOD(QuickActivate)(
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura zawiera wskaźniki do interfejsów, które wymagają kontroli i wartości niektórych właściwości otoczenia. Po powrocie, kontrola przechodzi wskaźnik do [QACONTROL](/windows/desktop/api/ocidl/ns-ocidl-tagqacontrol) strukturę, która zawiera wskaźniki do własnej interfejsy, które wymaga kontenera i informacje o stanie dodatkowe.
+Struktura zawiera wskaźniki do interfejsów wymaganych przez formant oraz wartości niektórych właściwości otoczenia. Po powrocie formant przekazuje wskaźnik do struktury [QACONTROL](/windows/win32/api/ocidl/ns-ocidl-qacontrol) , która zawiera wskaźniki do własnych interfejsów wymaganych przez kontener, oraz dodatkowe informacje o stanie.
 
-Zobacz [IQuickActivate::QuickActivate](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-quickactivate) w Windows SDK.
+Zobacz [IQuickActivate:: QuickActivate](/windows/win32/api/ocidl/nf-ocidl-iquickactivate-quickactivate) w Windows SDK.
 
-##  <a name="setcontentextent"></a>  IQuickActivateImpl::SetContentExtent
+##  <a name="setcontentextent"></a>IQuickActivateImpl::SetContentExtent
 
-Informuje o kontroli ilości wykorzystanego miejsca wyświetlania kontener został przypisany do niego.
+Informuje o tym, ile miejsca wyświetlania kontener przypisano do niego.
 
 ```
 STDMETHOD(SetContentExtent)(LPSIZEL pSize);
@@ -105,11 +105,11 @@ STDMETHOD(SetContentExtent)(LPSIZEL pSize);
 
 ### <a name="remarks"></a>Uwagi
 
-Rozmiar określa się w jednostkach HIMETRIC.
+Rozmiar jest określony w jednostkach HIMETRIC.
 
-Zobacz [IQuickActivate::SetContentExtent](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-setcontentextent) w Windows SDK.
+Zobacz [IQuickActivate:: SetContentExtent](/windows/win32/api/ocidl/nf-ocidl-iquickactivate-setcontentextent) w Windows SDK.
 
 ## <a name="see-also"></a>Zobacz także
 
 [Klasa CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

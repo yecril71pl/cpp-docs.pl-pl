@@ -1,72 +1,72 @@
 ---
-title: 'Instrukcje: Uaktywnianie składnika środowiska wykonawczego Windows, za pomocą biblioteki WRL i korzystanie'
+title: 'Instrukcje: Aktywowanie i używanie składnika środowisko wykonawcze systemu Windows przy użyciu WRL'
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-ms.openlocfilehash: 8c0bed825f76fdf0f2c5cc1fa095e54f08bb8a67
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e15886e9045f15adb929678ba45023ce80fb084
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398358"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498392"
 ---
-# <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Instrukcje: Uaktywnianie składnika środowiska wykonawczego Windows, za pomocą biblioteki WRL i korzystanie
+# <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Instrukcje: Aktywowanie i używanie składnika środowisko wykonawcze systemu Windows przy użyciu WRL
 
-Ten dokument zawiera, jak użyć Windows środowiska uruchomieniowego C++ szablon biblioteki (WRL), aby zainicjować środowisko wykonawcze Windows oraz sposobu aktywacji i używania składnika wykonawczego Windows.
+W tym dokumencie pokazano, jak za pomocą C++ biblioteki szablonów środowisko wykonawcze systemu Windows (WRL) zainicjować środowisko wykonawcze systemu Windows i jak aktywować składnik środowisko wykonawcze systemu Windows i korzystać z niego.
 
-Aby użyć składnika, należy uzyskać wskaźnik interfejsu do typu, który jest implementowany przez składnik. A ponieważ podstawową używaną technologią środowiska uruchomieniowego Windows Component Object Model (COM), należy przestrzegać reguł modelu COM, aby zachować wystąpienia tego typu. Na przykład, musisz utrzymywać *odwoływać się do liczby* określający, gdy typ jest usuwane z pamięci.
+Aby użyć składnika, należy uzyskać wskaźnik interfejsu do typu, który jest implementowany przez składnik. Ponieważ podstawową technologią środowisko wykonawcze systemu Windows jest Component Object Model (COM), należy przestrzegać reguł COM, aby zachować wystąpienie typu. Na przykład należy zachować *liczbę odwołań* , która określa, kiedy typ jest usuwany z pamięci.
 
-Aby uprościć używanie środowiska wykonawczego Windows, Biblioteka szablonów C++ środowiska wykonawczego Windows oferuje szablon inteligentnego wskaźnika, [ComPtr\<T >](comptr-class.md), który automatycznie wykonuje zliczanie odwołań. Kiedy Deklarujesz zmienną, określ `ComPtr<` *nazwę interfejsu* `>` *identyfikator*. Aby uzyskać dostęp do składowej interfejsu, operator dostępu do elementu członkowskiego strzałkę zastosować (`->`) z identyfikatorem.
-
-> [!IMPORTANT]
-> Po wywołaniu funkcji interfejsu, należy zawsze przetestować zwracanej wartości HRESULT.
-
-## <a name="activating-and-using-a-windows-runtime-component"></a>Uaktywniania i używania składnika środowiska wykonawczego Windows
-
-Następujące kroki użycia `Windows::Foundation::IUriRuntimeClass` interfejs pokazują, jak utworzyć fabrykę aktywacji dla składnika wykonawczego Windows, Utwórz wystąpienie tego składnika i pobrać wartości właściwości. Pokazują one również, jak zainicjować środowisko wykonawcze Windows. Pełny przykład poniżej.
+Aby uprościć korzystanie z środowisko wykonawcze systemu Windows, środowisko wykonawcze systemu Windows C++ Biblioteka szablonów zawiera szablon inteligentnego wskaźnika, [ComPtr\<T >](comptr-class.md), który automatycznie wykonuje zliczanie odwołań. Podczas `ComPtr<`deklarowania zmiennej Określ *Identyfikator* *nazwy* `>` interfejsu. Aby uzyskać dostęp do elementu członkowskiego interfejsu, Zastosuj do identyfikatora operator dostępu`->`do elementu członkowskiego ().
 
 > [!IMPORTANT]
-> Mimo że zazwyczaj używa się Biblioteka szablonów C++ środowiska wykonawczego Windows, w aplikacji platformy uniwersalnej Windows (UWP), w tym przykładzie użyto aplikacji konsoli do celów informacyjnych. Funkcje takie jak `wprintf_s` nie są dostępne w aplikacji platformy uniwersalnej systemu Windows. Aby uzyskać więcej informacji na temat typów i funkcji, które można użyć w aplikacji platformy uniwersalnej systemu Windows, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) i [Win32 i COM dla aplikacji platformy UWP](/uwp/win32-and-com/win32-and-com-for-uwp-apps).
+> Po wywołaniu funkcji interfejsu zawsze Przetestuj zwracaną wartość HRESULT.
 
-#### <a name="to-activate-and-use-a-windows-runtime-component"></a>Aby aktywować i używać składnika wykonawczego Windows
+## <a name="activating-and-using-a-windows-runtime-component"></a>Aktywowanie i używanie składnika środowisko wykonawcze systemu Windows
 
-1. Obejmują (`#include`) wszystkie wymagane środowiska wykonawczego Windows, Biblioteka szablonów C++ środowiska wykonawczego Windows lub nagłówki standardowej biblioteki języka C++.
+Poniższe kroki używają `Windows::Foundation::IUriRuntimeClass` interfejsu, aby zademonstrować, jak utworzyć fabrykę aktywacji dla składnika Środowisko wykonawcze systemu Windows, utworzyć wystąpienie tego składnika i pobrać wartość właściwości. Pokazuje również, jak zainicjować środowisko wykonawcze systemu Windows. Kompletny przykład.
+
+> [!IMPORTANT]
+> Chociaż zwykle używasz biblioteki szablonów środowisko wykonawcze systemu Windows C++ w aplikacji platforma uniwersalna systemu Windows (platformy UWP), w tym przykładzie użyto aplikacji konsolowej na potrzeby ilustracji. Funkcje takie jak `wprintf_s` nie są dostępne w aplikacji platformy UWP. Aby uzyskać więcej informacji na temat typów i funkcji, których można użyć w aplikacji platformy UWP, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) oraz [Win32 i com for platformy UWP Apps](/uwp/win32-and-com/win32-and-com-for-uwp-apps).
+
+#### <a name="to-activate-and-use-a-windows-runtime-component"></a>Aby uaktywnić składnik środowisko wykonawcze systemu Windows i korzystać z niego
+
+1. Dołącz (`#include`) wszystkie wymagane środowisko wykonawcze systemu Windows, środowisko wykonawcze systemu Windows C++ biblioteki szablonów lub C++ biblioteki standardowej.
 
    [!code-cpp[wrl-consume-component#2](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_1.cpp)]
 
-   Firma Microsoft zaleca używanie `using namespace` dyrektywy w pliku .cpp, aby zwiększyć czytelność kodu.
+   Zalecamy użycie `using namespace` dyrektywy w pliku CPP, aby kod był bardziej czytelny.
 
-2. Zainicjuj wątku, w którym aplikacja wykonuje. Każda aplikacja musi zostać zainicjowany jego wątku i modelu wątkowości. W tym przykładzie użyto [Microsoft::WRL::Wrappers::RoInitializeWrapper](roinitializewrapper-class.md) klasy można zainicjować aparatu plików wykonywalnych Windows i określa [RO_INIT_MULTITHREADED](/windows/desktop/api/roapi/ne-roapi-ro_init_type) jako modelu wątkowości. `RoInitializeWrapper` Klasy wywołania `Windows::Foundation::Initialize` w konstrukcji, i `Windows::Foundation::Uninitialize` kiedy zostanie zniszczony.
+2. Zainicjuj wątek, w którym jest wykonywana aplikacja. Każda aplikacja musi zainicjować swój wątek i model wątkowości. W tym przykładzie zastosowano klasę [Microsoft:: WRL:: otoki:: RoInitializeWrapper](roinitializewrapper-class.md) , aby zainicjować środowisko wykonawcze systemu Windows i określić [RO_INIT_MULTITHREADED](/windows/win32/api/roapi/ne-roapi-ro_init_type) jako model wątkowości. Klasa wywołuje `Windows::Foundation::Initialize` podczas konstruowania i `Windows::Foundation::Uninitialize` gdy zostanie zniszczona. `RoInitializeWrapper`
 
    [!code-cpp[wrl-consume-component#3](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_2.cpp)]
 
-   W drugiej instrukcji [RoInitializeWrapper::HRESULT](roinitializewrapper-class.md#hresult) operator zwraca `HRESULT` z wywołania `Windows::Foundation::Initialize`.
+   W drugiej instrukcji operator [RoInitializeWrapper:: HRESULT](roinitializewrapper-class.md#hresult) zwraca `HRESULT` wartość z wywołania do `Windows::Foundation::Initialize`.
 
-3. Tworzenie *fabryką aktywacji* dla `ABI::Windows::Foundation::IUriRuntimeClassFactory` interfejsu.
+3. Utwórz *fabrykę aktywacji* dla `ABI::Windows::Foundation::IUriRuntimeClassFactory` interfejsu.
 
    [!code-cpp[wrl-consume-component#4](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_3.cpp)]
 
-   Środowisko wykonawcze Windows używana w pełni kwalifikowanych nazw typów. `RuntimeClass_Windows_Foundation_Uri` Parametru jest ciąg, który jest dostarczany przez środowisko wykonawcze Windows i zawiera nazwę klasy wymaganego środowiska uruchomieniowego.
+   Środowisko wykonawcze systemu Windows używa w pełni kwalifikowanych nazw do identyfikowania typów. `RuntimeClass_Windows_Foundation_Uri` Parametr jest ciągiem dostarczonym przez środowisko wykonawcze systemu Windows i zawiera wymaganą nazwę klasy środowiska uruchomieniowego.
 
-4. Inicjowanie [Microsoft::WRL::Wrappers::HString](hstring-class.md) zmienna, która reprezentuje identyfikator URI `"http://www.microsoft.com"`.
+4. Zainicjuj zmienną [Microsoft:: WRL:: otoki:: HString](hstring-class.md) , która reprezentuje identyfikator `"http://www.microsoft.com"`URI.
 
    [!code-cpp[wrl-consume-component#6](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_4.cpp)]
 
-   Ze środowiska wykonawczego Windows nie przydzielaj pamięci ciągu używanego przez środowisko wykonawcze Windows. Zamiast tego środowiska uruchomieniowego Windows tworzy kopię ciągu w buforze, czy go przechowuje i używa dla operacji, a następnie zwraca dojście do buforu on utworzony.
+   W środowisko wykonawcze systemu Windows nie przydzielasz pamięci dla ciągu, który będzie używany przez środowisko wykonawcze systemu Windows. Zamiast tego środowisko wykonawcze systemu Windows tworzy kopię ciągu w buforze, który przechowuje i używa do operacji, a następnie zwraca dojście do tworzonego buforu.
 
-5. Użyj `IUriRuntimeClassFactory::CreateUri` metoda fabryki umożliwiająca utworzenie `ABI::Windows::Foundation::IUriRuntimeClass` obiektu.
+5. Użyj metody `IUriRuntimeClassFactory::CreateUri` Factory, aby `ABI::Windows::Foundation::IUriRuntimeClass` utworzyć obiekt.
 
    [!code-cpp[wrl-consume-component#7](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_5.cpp)]
 
-6. Wywołaj `IUriRuntimeClass::get_Domain` metodę, aby pobrać wartość `Domain` właściwości.
+6. Wywołaj `Domain` metodę, aby pobrać wartość właściwości. `IUriRuntimeClass::get_Domain`
 
    [!code-cpp[wrl-consume-component#8](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_6.cpp)]
 
-7. Drukuj nazwy domeny do konsoli i zwracają. Wszystkie `ComPtr` i obiektów RAII pozostaw zakresu są zwalniane, automatycznie.
+7. Wydrukuj nazwę domeny w konsoli i wróć. Wszystkie `ComPtr` i RAII obiekty pozostawiają zakres i są automatycznie udostępniane.
 
    [!code-cpp[wrl-consume-component#9](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_7.cpp)]
 
-   [WindowsGetStringRawBuffer](/windows/desktop/api/winstring/nf-winstring-windowsgetstringrawbuffer) funkcja pobiera podstawowej postaci Unicode ciąg identyfikatora URI.
+   Funkcja [WindowsGetStringRawBuffer](/windows/win32/api/winstring/nf-winstring-windowsgetstringrawbuffer) pobiera podstawową postać Unicode ciągu identyfikatora URI.
 
 Oto kompletny przykład:
 
@@ -74,7 +74,7 @@ Oto kompletny przykład:
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
-Aby skompilować ten kod, skopiuj go a następnie wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `wrl-consume-component.cpp` , a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
+Aby skompilować kod, skopiuj go, a następnie wklej w projekcie programu Visual Studio lub wklej go w pliku o nazwie `wrl-consume-component.cpp` , a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
 
 `cl.exe wrl-consume-component.cpp runtimeobject.lib`
 

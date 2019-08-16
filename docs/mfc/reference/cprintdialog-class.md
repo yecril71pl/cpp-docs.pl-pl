@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-ms.openlocfilehash: ab194b1c289f8347243b36354f4f314b7450a7aa
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 1f4a4dbec9a1c79ac1e0cec925156ae7db4c293e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916911"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502900"
 ---
 # <a name="cprintdialog-class"></a>Klasa CPrintDialog
 
@@ -104,7 +104,7 @@ Możesz polegać na architekturze do obsługi wielu aspektów procesu drukowania
 
 Jeśli chcesz, aby aplikacja obsługiwała drukowanie bez zaangażowania platformy, możesz użyć `CPrintDialog` klasy "AS IS" z dostarczonym konstruktorem lub można utworzyć własną klasę dialogową z `CPrintDialog` i napisać konstruktora zgodnie z potrzebami. W obu przypadkach te okna dialogowe będą zachowywać się jak standardowe okna dialogowe MFC, ponieważ pochodzą z klasy `CCommonDialog`.
 
-Aby użyć `CPrintDialog` obiektu, należy najpierw utworzyć obiekt `CPrintDialog` przy użyciu konstruktora. Po skonstruowaniu okna dialogowego można ustawić lub zmodyfikować wszystkie wartości w strukturze [m_pd](#m_pd) , aby zainicjować wartości kontrolek okna dialogowego. Struktura jest typu PRINTDLG. [](/windows/desktop/api/commdlg/ns-commdlg-tagpda) `m_pd` Aby uzyskać więcej informacji na temat tej struktury, zobacz Windows SDK.
+Aby użyć `CPrintDialog` obiektu, należy najpierw utworzyć obiekt `CPrintDialog` przy użyciu konstruktora. Po skonstruowaniu okna dialogowego można ustawić lub zmodyfikować wszystkie wartości w strukturze [m_pd](#m_pd) , aby zainicjować wartości kontrolek okna dialogowego. Struktura jest typu PRINTDLG. [](/windows/win32/api/commdlg/ns-commdlg-pdw) `m_pd` Aby uzyskać więcej informacji na temat tej struktury, zobacz Windows SDK.
 
 Jeśli nie podasz `m_pd` własnych uchwytów `hDevMode` dla elementów i `hDevNames` , pamiętaj, aby wywołać funkcję `GlobalFree` systemu Windows dla tych dojść po zakończeniu pracy z oknem dialogowym. W przypadku korzystania z implementacji konfiguracji wydruku struktury dostarczonej `CWinApp::OnFilePrintSetup`przez program nie trzeba zwalniać tych dojść. Uchwyty są obsługiwane przez `CWinApp` program i są zwalniane z `CWinApp`destruktora. Jest to konieczne tylko w przypadku korzystania `CPrintDialog` z autonomicznej usługi.
 
@@ -159,7 +159,7 @@ CPrintDialog(
 Określa, czy wyświetlane jest standardowe okno dialogowe drukowania systemu Windows lub ustawienia wydruku. Ustaw ten parametr na wartość TRUE, aby wyświetlić okno dialogowe Standardowa konfiguracja drukowania systemu Windows. Ustaw na wartość FALSE, aby wyświetlić okno dialogowe drukowania systemu Windows. Jeśli *bPrintSetupOnly* ma wartość false, przycisk opcji konfiguracji drukowania jest nadal wyświetlany w oknie dialogowym drukowania.
 
 *flagiDW*<br/>
-Jedna lub więcej flag, których można użyć, aby dostosować ustawienia okna dialogowego połączone przy użyciu operatora bitowego or. Na przykład flaga PD_ALLPAGES ustawia domyślny zakres drukowania na wszystkie strony dokumentu. Zapoznaj się ze strukturą [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) w Windows SDK, aby uzyskać więcej informacji na temat tych flag.
+Jedna lub więcej flag, których można użyć, aby dostosować ustawienia okna dialogowego połączone przy użyciu operatora bitowego or. Na przykład flaga PD_ALLPAGES ustawia domyślny zakres drukowania na wszystkie strony dokumentu. Zapoznaj się ze strukturą [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) w Windows SDK, aby uzyskać więcej informacji na temat tych flag.
 
 *pParentWnd*<br/>
 Wskaźnik do okna dialogowego nadrzędnego lub właściciela.
@@ -168,7 +168,7 @@ Wskaźnik do okna dialogowego nadrzędnego lub właściciela.
 
 Ta funkcja członkowska tylko konstruuje obiekt. Użyj funkcji `DoModal` członkowskiej, aby wyświetlić okno dialogowe.
 
-Należy pamiętać, że po wywołaniu konstruktora z *bPrintSetupOnly* ustawionym na false, flaga PD_RETURNDC jest używana automatycznie. Po wywołaniu `DoModal`, `GetDefaults`lub `GetPrinterDC`, w programie `m_pd.hDC`zostanie zwrócony kontroler domeny. Ten kontroler domeny musi zostać zwolniony z wywołaniem [DeleteDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc) przez obiekt wywołujący `CPrintDialog`.
+Należy pamiętać, że po wywołaniu konstruktora z *bPrintSetupOnly* ustawionym na false, flaga PD_RETURNDC jest używana automatycznie. Po wywołaniu `DoModal`, `GetDefaults`lub `GetPrinterDC`, w programie `m_pd.hDC`zostanie zwrócony kontroler domeny. Ten kontroler domeny musi zostać zwolniony z wywołaniem [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc) przez obiekt wywołujący `CPrintDialog`.
 
 ### <a name="example"></a>Przykład
 
@@ -176,7 +176,7 @@ Należy pamiętać, że po wywołaniu konstruktora z *bPrintSetupOnly* ustawiony
 
 ##  <a name="createprinterdc"></a>CPrintDialog::CreatePrinterDC
 
-Tworzy kontekst urządzenia drukarki (DC) dla struktury [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) i [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) .
+Tworzy kontekst urządzenia drukarki (DC) dla struktury [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) i [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames) .
 
 ```
 HDC CreatePrinterDC();
@@ -204,7 +204,7 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-IDOK lub IDCANCEL. Jeśli IDCANCEL jest zwracany, wywołaj funkcję Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) , aby określić, czy wystąpił błąd.
+IDOK lub IDCANCEL. Jeśli IDCANCEL jest zwracany, wywołaj funkcję Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) , aby określić, czy wystąpił błąd.
 
 IDOK i IDCANCEL są stałymi, które wskazują, czy użytkownik zaznaczył przycisk OK lub Anuluj.
 
@@ -214,7 +214,7 @@ Jeśli chcesz zainicjować różne opcje okna dialogowego drukowania przez ustaw
 
 Po wywołaniu `DoModal`można wywołać inne funkcje członkowskie, aby pobrać ustawienia lub dane wejściowe użytkownika w oknie dialogowym.
 
-Należy pamiętać, że po wywołaniu konstruktora z *bPrintSetupOnly* ustawionym na false, flaga PD_RETURNDC jest używana automatycznie. Po wywołaniu `DoModal`, `GetDefaults`lub `GetPrinterDC`, w programie `m_pd.hDC`zostanie zwrócony kontroler domeny. Ten kontroler domeny musi zostać zwolniony z wywołaniem [DeleteDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc) przez obiekt wywołujący `CPrintDialog`.
+Należy pamiętać, że po wywołaniu konstruktora z *bPrintSetupOnly* ustawionym na false, flaga PD_RETURNDC jest używana automatycznie. Po wywołaniu `DoModal`, `GetDefaults`lub `GetPrinterDC`, w programie `m_pd.hDC`zostanie zwrócony kontroler domeny. Ten kontroler domeny musi zostać zwolniony z wywołaniem [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc) przez obiekt wywołujący `CPrintDialog`.
 
 ### <a name="example"></a>Przykład
 
@@ -258,7 +258,7 @@ Pobrane wartości są umieszczane w `m_pd` strukturze.
 
 W niektórych przypadkach wywołanie tej funkcji wywoła [Konstruktor](#cprintdialog) dla elementu `CPrintDialog` with *bPrintSetupOnly* o wartości false. W takich przypadkach jest automatycznie przypisywany kontroler `hDevNames` domeny `hDevMode` i i ( `m_pd` dwa uchwyty znajdujące się w składowej danych).
 
-Jeśli Konstruktor `CPrintDialog` dla został wywołany atrybutem *bPrintSetupOnly* o wartości false, ta funkcja nie tylko zwróci `hDevNames` i `hDevMode` znajduje się `m_pd.hDevNames` w `m_pd.hDevMode`i) do obiektu wywołującego, ale zwróci również kontroler domeny drukarki w `m_pd.hDC`. Obiekt wywołujący jest odpowiedzialny za usunięcie kontrolera domeny drukarki i wywołanie funkcji [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree) systemu Windows na uchwytach po zakończeniu pracy z `CPrintDialog` obiektem.
+Jeśli Konstruktor `CPrintDialog` dla został wywołany atrybutem *bPrintSetupOnly* o wartości false, ta funkcja nie tylko zwróci `hDevNames` i `hDevMode` znajduje się `m_pd.hDevNames` w `m_pd.hDevMode`i) do obiektu wywołującego, ale zwróci również kontroler domeny drukarki w `m_pd.hDC`. Obiekt wywołujący jest odpowiedzialny za usunięcie kontrolera domeny drukarki i wywołanie funkcji [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree) systemu Windows na uchwytach po zakończeniu pracy z `CPrintDialog` obiektem.
 
 ### <a name="example"></a>Przykład
 
@@ -298,7 +298,7 @@ LPDEVMODE GetDevMode() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Struktura danych [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) , która zawiera informacje o inicjalizacji i środowisku urządzenia sterownika drukarki. Należy odblokować pamięć wykonywaną przez tę strukturę przy użyciu funkcji [GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock) systemu Windows, która jest opisana w Windows SDK.
+Struktura danych [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) , która zawiera informacje o inicjalizacji i środowisku urządzenia sterownika drukarki. Należy odblokować pamięć wykonywaną przez tę strukturę przy użyciu funkcji [GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock) systemu Windows, która jest opisana w Windows SDK.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -382,7 +382,7 @@ Dojście do kontekstu urządzenia drukarki, jeśli powodzenie; w przeciwnym razi
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli `CPrintDialog` parametr *bPrintSetupOnly* konstruktora miał wartość false (wskazuje, że `GetPrinterDC` wyświetlane jest okno dialogowe drukowania), zwraca uchwyt do kontekstu urządzenia drukarki. Należy wywołać funkcję [DeleteDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc) systemu Windows, aby usunąć kontekst urządzenia po jego zakończeniu.
+Jeśli `CPrintDialog` parametr *bPrintSetupOnly* konstruktora miał wartość false (wskazuje, że `GetPrinterDC` wyświetlane jest okno dialogowe drukowania), zwraca uchwyt do kontekstu urządzenia drukarki. Należy wywołać funkcję [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc) systemu Windows, aby usunąć kontekst urządzenia po jego zakończeniu.
 
 ### <a name="example"></a>Przykład
 
@@ -418,7 +418,7 @@ PRINTDLG& m_pd;
 
 ### <a name="remarks"></a>Uwagi
 
-Po skonstruowaniu `CPrintDialog` obiektu można użyć `m_pd` , aby ustawić różne aspekty okna dialogowego przed wywołaniem funkcji składowej [DoModal](#domodal) . Aby uzyskać więcej informacji na `m_pd` temat struktury, zobacz [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) w Windows SDK.
+Po skonstruowaniu `CPrintDialog` obiektu można użyć `m_pd` , aby ustawić różne aspekty okna dialogowego przed wywołaniem funkcji składowej [DoModal](#domodal) . Aby uzyskać więcej informacji na `m_pd` temat struktury, zobacz [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) w Windows SDK.
 
 W `m_pd` przypadku zmodyfikowania elementu członkowskiego danych należy zmienić zachowanie domyślne.
 

@@ -1,21 +1,21 @@
 ---
-title: PTR (atrybut COM C++)
+title: PTR (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ptr
 helpviewer_keywords:
 - ptr attribute
 ms.assetid: 95eaea57-a5be-45f6-a612-ba2c9bc4645a
-ms.openlocfilehash: 2c712a2d9c85e0fe8fd8c4dbad5c7f48812ab1a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5f2d694f3525f27e4a8371f04efa28940f21bba
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407396"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514158"
 ---
 # <a name="ptr"></a>ptr
 
-Określa wskaźnik jako pełna wskaźnika.
+Wyznacza wskaźnik jako pełny wskaźnik.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,11 +25,11 @@ Określa wskaźnik jako pełna wskaźnika.
 
 ## <a name="remarks"></a>Uwagi
 
-**Ptr** atrybut C++ ma taką samą funkcjonalność jak [ptr](/windows/desktop/Midl/ptr) atrybutów w MIDL.
+Atrybut **PTR** C++ ma takie same funkcje jak atrybut [PTR](/windows/win32/Midl/ptr) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [defaultvalue](defaultvalue.md) do użytku przykładowe **ptr**.
+Zobacz przykład dla elementu [DefaultValue](defaultvalue.md) dla przykładowego zastosowania **PTR**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -37,12 +37,12 @@ Zobacz przykład [defaultvalue](defaultvalue.md) do użytku przykładowe **ptr**
 
 |||
 |-|-|
-|**Dotyczy**|Parametr interfejsu, metoda interfejsu **— typedef**|
+|**Dotyczy**|Parametr interfejsu, metoda interfejsu, **typedef**|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

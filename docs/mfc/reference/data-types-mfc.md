@@ -24,26 +24,26 @@ helpviewer_keywords:
 - LPARAM data type [MFC]
 - LPCSTR [MFC]
 ms.assetid: 8954848b-2c01-4a4f-abf5-ee55f6a05eeb
-ms.openlocfilehash: dfafe7c3c7c7cd43dd2ac194f5ed96fa8ea265ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37dd9b9d3f3905a923cd9c51856c1c39819cb162
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323206"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502126"
 ---
 # <a name="data-types-mfc"></a>Typy danych (MFC)
 
-Ten temat zawiera listę typów danych najczęściej używane w bibliotece klas Microsoft Foundation. Większość typów danych są takie same jak w platformie Software Development Kit (SDK), a inne są unikatowe dla MFC.
+Ten temat zawiera listę typów danych najczęściej używanych w biblioteka MFC. Większość typów danych jest taka sama jak w programie Platform Software Development Kit (SDK), a inne są unikatowe dla MFC.
 
-Aby uzyskać informacje o typach danych używane w Windows SDK i MFC, zobacz [typy danych Windows](/windows/desktop/WinProg/windows-data-types).
+Aby uzyskać informacje o typach danych używanych w Windows SDK i MFC, zobacz [typy danych systemu Windows](/windows/win32/WinProg/windows-data-types).
 
-Następujące typy danych są unikatowe dla biblioteki klas Microsoft Foundation:
+Typy danych unikatowe dla biblioteka MFC są następujące:
 
-- Ustaw wartość używana do określenia położenie elementu w kolekcji; używane przez klasy kolekcji MFC.
+- Umieść wartość służącą do określenia pozycji elementu w kolekcji; używane przez klasy kolekcji MFC.
 
-- Lpcrect — wskaźnik 32-bitowego na stałą (niemodyfikowalnymi) `RECT` struktury.
+- LPCRECT wskaźnik 32-bitowy do stałej (niemodyfikowalnej) `RECT` struktury.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Klasa — Przegląd](../../mfc/class-library-overview.md)<br/>
-[Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)
+[Przegląd klas](../../mfc/class-library-overview.md)<br/>
+[Makra i Globals](../../mfc/reference/mfc-macros-and-globals.md)

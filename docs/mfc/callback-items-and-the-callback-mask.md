@@ -5,34 +5,34 @@ helpviewer_keywords:
 - callback items in CListCtrl class [MFC]
 - CListCtrl class [MFC], callback item and callback mask
 ms.assetid: 67c1f76f-6144-453e-9376-6712f89430ae
-ms.openlocfilehash: 35967f128c6cc59bc9cea90da559b32c51fb38d1
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 5c326d8498ea297936254a8650f666103ea3c772
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344283"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509138"
 ---
 # <a name="callback-items-and-the-callback-mask"></a>Elementy wywołania zwrotnego i maska wywołania zwrotnego
 
-Dla każdego z jego elementów kontrolka widoku listy zazwyczaj przechowuje tekst etykiety, indeks listy obrazu ikony elementu i zestaw bit flagi stanu elementu. Poszczególne elementy można zdefiniować jako elementy wywołania zwrotnego, które są przydatne, jeśli aplikacja już zapisuje niektóre informacje dla elementu.
+Dla każdego elementu, kontrolka widoku listy zazwyczaj przechowuje tekst etykiety, indeks listy obrazów ikon elementu oraz zestaw flag bitowych dla stanu elementu. Można definiować poszczególne elementy jako elementy wywołania zwrotnego, które są przydatne, jeśli aplikacja przechowuje już niektóre informacje dla elementu.
 
-Zdefiniuj element jako element wywołania zwrotnego, określając odpowiednie wartości dla `pszText` i `iImage` członkowie **LV_ITEM** struktury (zobacz [CListCtrl::GetItem](../mfc/reference/clistctrl-class.md#getitem)). Jeśli aplikacja przechowuje tekst elementu lub podelementu firmy, należy określić **LPSTR_TEXTCALLBACK** wartość `pszText` elementu członkowskiego. Jeśli aplikacja przechowuje informacje o ikonę elementu, należy określić **I_IMAGECALLBACK** wartość `iImage` elementu członkowskiego.
+Element można zdefiniować jako element `pszText` wywołania zwrotnego, określając odpowiednie wartości dla i `iImage` elementów członkowskich `LVITEM` struktury (zobacz [CListCtrl:: GetItem](../mfc/reference/clistctrl-class.md#getitem)). Jeśli aplikacja zachowuje tekst elementu lub podelementu, określ wartość **LPSTR_TEXTCALLBACK** dla `pszText` elementu członkowskiego. Jeśli aplikacja śledzi ikonę elementu, określ wartość `iImage` **I_IMAGECALLBACK** elementu członkowskiego.
 
-Oprócz definiowania elementy wywołania zwrotnego, można również zmodyfikować formantu maska wywołania zwrotnego. Tę maskę ustawiono flagi bitowe, które określają stany elementów, dla których aplikacji, a nie dla kontrolki, zapisuje bieżące dane. Maska wywołania zwrotnego ma zastosowanie do wszystkich elementów formantu, w przeciwieństwie do oznaczenia element wywołania zwrotnego, która odnosi się do określonego elementu. Maska wywołania zwrotnego wynosi zero, domyślnie, co oznacza, że kontrolka śledzi wszystkie stany elementów. Aby zmienić to zachowanie domyślne, należy zainicjować maski do dowolnej kombinacji następujących wartości:
+Oprócz definiowania elementów wywołania zwrotnego można także zmodyfikować maskę wywołania zwrotnego kontrolki. Ta maska jest zestawem flag bitowych, które określają Stany elementów, dla których aplikacja, a nie kontrolka, przechowuje bieżące dane. Maska wywołania zwrotnego ma zastosowanie do wszystkich elementów kontrolki, w przeciwieństwie do oznaczenia elementu wywołania zwrotnego, który ma zastosowanie do określonego elementu. Domyślnie Maska wywołania zwrotnego jest równa zero, co oznacza, że kontrolka śledzi wszystkie Stany elementów. Aby zmienić to zachowanie domyślne, zainicjuj maskę do dowolnej kombinacji następujących wartości:
 
-- **LVIS_CUT** element jest oznaczony dla operacji kopiowania i wklejania.
+- **LVIS_CUT** Element jest oznaczony dla operacji wycinania i wklejania.
 
-- **LVIS_DROPHILITED** element zostanie wyróżniony jako element docelowy przeciągania i upuszczania.
+- **LVIS_DROPHILITED** Element zostanie wyróżniony jako element docelowy typu "przeciągnij i upuść".
 
-- **LVIS_FOCUSED** element ma fokus.
+- **LVIS_FOCUSED** Element ma fokus.
 
-- **LVIS_SELECTED** element jest zaznaczony.
+- **LVIS_SELECTED** Wybrano element.
 
-- **LVIS_OVERLAYMASK** aplikacja przechowuje indeks listy obrazu bieżącego obrazu nakładki dla każdego elementu.
+- **LVIS_OVERLAYMASK** Aplikacja przechowuje indeks listy obrazów dla bieżącego obrazu nakładki dla każdego elementu.
 
-- **LVIS_STATEIMAGEMASK** aplikacja przechowuje indeks listy obrazu bieżącego obrazu stanu dla każdego elementu.
+- **LVIS_STATEIMAGEMASK** Aplikacja przechowuje indeks listy obrazów bieżącego stanu dla każdego elementu.
 
-Aby uzyskać więcej informacji na temat pobierania i ustawiania tę maskę zobacz [CListCtrl::GetCallbackMask](../mfc/reference/clistctrl-class.md#getcallbackmask) i [CListCtrl::SetCallbackMask](../mfc/reference/clistctrl-class.md#setcallbackmask).
+Aby uzyskać więcej informacji na temat pobierania i ustawiania tej maski, zobacz [CListCtrl:: GetCallbackMask](../mfc/reference/clistctrl-class.md#getcallbackmask) i [CListCtrl:: SetCallbackMask](../mfc/reference/clistctrl-class.md#setcallbackmask).
 
 ## <a name="see-also"></a>Zobacz także
 

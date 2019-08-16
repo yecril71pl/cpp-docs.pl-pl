@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - GetActiveObject method [C++]
 ms.assetid: 2fa94853-0410-4620-91f2-136dae923f9f
-ms.openlocfilehash: 84e43de9c40baa3c596c68ed7739471c059cbac7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f13a42878392f63096cdfcb405f3f91cc0efe451
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154854"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498894"
 ---
-# <a name="comptrtgetactiveobject"></a>_com_ptr_t::GetActiveObject
+# <a name="_com_ptr_tgetactiveobject"></a>_com_ptr_t::GetActiveObject
 
 **Microsoft Specific**
 
-Dołącza do istniejącego wystąpienia danego obiektu `CLSID` lub `ProgID`.
+Dołącza do istniejącego wystąpienia obiektu danego a `CLSID` lub. `ProgID`
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,22 +39,22 @@ HRESULT GetActiveObject(
 `CLSID` Obiektu.
 
 *clsidString*<br/>
-Ciąg Unicode, który zawiera jedną `CLSID` (począwszy od "**{**") lub `ProgID`.
+Ciąg Unicode, który zawiera `CLSID` (Zaczynając od " **{** `ProgID`") lub.
 
 *clsidStringA*<br/>
-Wielobajtowy ciąg przy użyciu stronę kodową ANSI, który zawiera jedną `CLSID` (począwszy od "**{**") lub `ProgID`.
+Ciąg wielobajtowy przy użyciu strony kodowej ANSI, która zawiera `CLSID` (Zaczynając od " **{** `ProgID`") lub.
 
 ## <a name="remarks"></a>Uwagi
 
-Wywołania tych funkcji elementów członkowskich **getactiveobject —** pobrać wskaźnika do uruchomionego obiektu, który został zarejestrowany przy użyciu OLE i następnie typ interfejsu zapytania dotyczące tej inteligentnego wskaźnika. Wskaźnik wynikowy następnie są hermetyzowane w ramach tej `_com_ptr_t` obiektu. `Release` jest wywoływana, aby zmniejszyć licznikiem odwołań do wcześniej zhermetyzowanego wskaźnika. Ta procedura zwraca wartość HRESULT do wskazania powodzenia lub niepowodzenia.
+Te funkcje członkowskie wywołują metodę GetActiveObject, aby pobrać wskaźnik do uruchomionego obiektu, który został zarejestrowany za pomocą OLE, a następnie wysyła zapytanie dla tego typu interfejsu wskaźnika inteligentnego. Wskaźnik wyników jest następnie hermetyzowany w obrębie tego `_com_ptr_t` obiektu. `Release`jest wywoływana, aby zmniejszyć liczbę odwołań dla poprzednio hermetyzowanego wskaźnika. Ta procedura zwraca wynik HRESULT wskazujący powodzenie lub niepowodzenie.
 
-- **Getactiveobject — (**`rclsid`**)** dołącza do istniejącego wystąpienia danego obiektu `CLSID`.
+- **GetActiveObject (** `rclsid` **)** dołącza do istniejącego wystąpienia obiektu danego a `CLSID`.
 
-- **Getactiveobject — (**`clsidString`**)** dołącza do istniejącego wystąpienia obiektu, który został podany ciąg Unicode, który zawiera jedną `CLSID` (począwszy od "**{**") lub `ProgID`.
+- **GetActiveObject (** `clsidString` **)** dołącza do istniejącego wystąpienia obiektu, w którym znajduje się `CLSID` ciąg Unicode, który zawiera ( `ProgID`Zaczynając od " **{** ") lub.
 
-- **Getactiveobject — (**`clsidStringA`**)** dołącza do istniejącego wystąpienia obiektu, który został podany ciąg znaku wielobajtowego, który zawiera jedną `CLSID` (począwszy od "**{**") lub `ProgID`. Wywołania [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar), która zakłada, że ten ciąg jest w stronę kodową ANSI zamiast stronę kodową OEM.
+- **GetActiveObject (** `clsidStringA` **)** dołącza do istniejącego wystąpienia obiektu, w którym znajduje się `CLSID` ciąg znaków wielobajtowych, który zawiera ( `ProgID`Zaczynając od " **{** ") lub. Wywołuje [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar), w którym zakłada się, że ciąg znajduje się na stronie kodowej ANSI, a nie na stronie kodowej OEM.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

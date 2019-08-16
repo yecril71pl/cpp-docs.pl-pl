@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - istream/std::operator&gt;&gt;
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
-ms.openlocfilehash: c10692194c80051b10ecbe776c7d23a03860d508
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f5da7c6805d10e919255ce301dae5618ef58e76d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447783"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501913"
 ---
 # <a name="ltistreamgt-operators"></a>&lt;Operatory&gt; IStream
 
@@ -86,7 +86,7 @@ basic_istream<Elem, Tr>& operator>>(
 
 wyodrębnia do *N* -1 elementów i zapisuje je w tablicy, zaczynając od _ *str*. If `Istr`. [Szerokość](../standard-library/ios-base-class.md#width) jest większa od zera, *N* jest `Istr`. **Szerokość**; w przeciwnym razie jest to rozmiar największej tablicy `Elem` , która może być zadeklarowana. Funkcja zawsze przechowuje wartość `Elem()` po wszystkich wyodrębnionych elementach, które przechowuje. Ekstrakcja kończy się wczesnie na końcu pliku, na znaku o wartości **elem**(0) (który nie jest wyodrębniony) ani w żadnym elemencie (który nie został wyodrębniony), który zostałby odrzucony przez [usługę WS](../standard-library/istream-functions.md#ws). Jeśli funkcja nie wyodrębni żadnych elementów, wywołuje `Istr`. [setstate](../standard-library/basic-ios-class.md#setstate) (**failbit**). W każdym przypadku wywołuje `Istr`. **Szerokość** (0) i zwraca *ISTR*.
 
-**Uwaga dotycząca zabezpieczeń** Ciąg zakończony znakiem null, który jest wyodrębniany ze strumienia wejściowego, nie może przekraczać rozmiaru docelowego *str*. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Uwaga dotycząca zabezpieczeń** Ciąg zakończony znakiem null, który jest wyodrębniany ze strumienia wejściowego, nie może przekraczać rozmiaru docelowego *str*. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 Funkcja szablonu:
 

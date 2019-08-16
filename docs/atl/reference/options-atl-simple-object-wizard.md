@@ -1,56 +1,56 @@
 ---
-title: Opcje, Kreator prostych obiektów ATL
+title: Opcje, Kreator prostego obiektu ATL
 ms.date: 11/04/2016
 f1_keywords:
 - vc.codewiz.class.atl.simple.options
 helpviewer_keywords:
 - ATL Simple Object Wizard, options
 ms.assetid: 125fe179-942d-4181-8b82-33e92e1fd779
-ms.openlocfilehash: 327c78b00cbe69fcce4f055b0ae63c4dc2e5a7d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e92f4909907645fc317590fbcc3601887346c642
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197307"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495157"
 ---
-# <a name="options-atl-simple-object-wizard"></a>Opcje, Kreator prostych obiektów ATL
+# <a name="options-atl-simple-object-wizard"></a>Opcje, Kreator prostego obiektu ATL
 
-Użyj tej strony Kreator prostego obiektu ATL projektować pod kątem zwiększenia wydajności i obsługi błędów dla tego obiektu.
+Użyj tej strony Kreatora prostych obiektów ATL, aby zaprojektować w celu zwiększenia wydajności i obsługi błędów dla obiektu.
 
-Aby uzyskać więcej informacji na temat projektów ATL i klasy ATL COM, zobacz [ATL COM pulpitu składniki](../../atl/atl-com-desktop-components.md).
+Aby uzyskać więcej informacji na temat projektów ATL i klas COM ATL, zobacz [składniki komputerów stacjonarnych ATL com](../../atl/atl-com-desktop-components.md).
 
 - **Model wątkowości**
 
-   Wskazuje metodę zarządzania wątków. Domyślnie używa projektu **apartamentu** wątków.
+   Wskazuje metodę zarządzania wątkami. Domyślnie projekt używa wątków apartamentu .
 
-   Zobacz [określanie modelu wątkowości projektu](../../atl/specifying-the-threading-model-for-a-project-atl.md) Aby uzyskać więcej informacji.
+   Aby uzyskać więcej informacji [, zobacz Określanie modelu wątkowości projektu](../../atl/specifying-the-threading-model-for-a-project-atl.md) .
 
    |Opcja|Opis|
    |------------|-----------------|
-   |**Single**|Określa, czy obiekt jest zawsze uruchamiany w podstawowym wątku com. Zobacz [Apartamentach Single-Threaded](/windows/desktop/com/single-threaded-apartments) i [InprocServer32](/windows/desktop/com/inprocserver32) Aby uzyskać więcej informacji.|
-   |**Apartamentu**|Określa, że obiekt używa wątkowości typu apartment. Komórka równoważne z jednego wątku. Każdy obiekt jako składnik typu apartment przypisano Lokal do wątku, przez cały okres istnienia obiektu. Jednak wiele wątków może służyć do wielu obiektów. Każda komórka jest powiązany z określonym wątku i ma pompy komunikatów Windows (ustawienie domyślne).<br /><br /> Zobacz [Apartamentach Single-Threaded](/windows/desktop/com/single-threaded-apartments) Aby uzyskać więcej informacji.|
-   |**Oba**|Określa, czy obiekt może używać apartamentu lub wolnych wątków w zależności od jakich wątek jest tworzony.|
-   |**Bezpłatna**|Określa, że obiekt używa wolnych wątków. Wolnych wątków jest równoważna z modelem apartamentu wielowątkowych. Zobacz [wielowątkowy Apartamentach](/windows/desktop/com/multithreaded-apartments) Aby uzyskać więcej informacji.|
-   |**Neutral**|Określa, że obiekt następujące wytyczne dotyczące wielowątkowy apartamentach, ale można wykonywać na dowolny rodzaj wątku.|
+   |**Single**|Określa, że obiekt jest zawsze uruchamiany w podstawowym wątku COM. Aby uzyskać więcej informacji, zobacz apartamentach i [InprocServer32](/windows/win32/com/inprocserver32) o [pojedynczym wątku](/windows/win32/com/single-threaded-apartments) .|
+   |**Apartamentu**|Określa, że obiekt używa wątka Apartment. Równoważne z pojedynczym apartamentem wątku. Każdy obiekt składnika Apartment jest przypisany do wątku, dla którego jest przeznaczony dla tego obiektu; Jednak wiele wątków może być używanych dla wielu obiektów. Każda komórka jest powiązana z określonym wątkiem i ma pompę komunikatów systemu Windows (domyślnie).<br /><br /> Aby uzyskać więcej informacji, zobacz [apartamentach pojedyncze wątki](/windows/win32/com/single-threaded-apartments) .|
+   |**Jedn**|Określa, że obiekt może używać Apartment lub Free Threading, w zależności od tego, jaki typ wątku jest tworzony.|
+   |**Bezpłatna**|Określa, że obiekt używa wolnych wątków. Bezpłatna wątkowość jest równoważna z modelem apartamentu wielowątkowej. Aby uzyskać więcej informacji, zobacz [wielowątkowy apartamentach](/windows/win32/com/multithreaded-apartments) .|
+   |**Zerowy**|Określa, że obiekt jest zgodny z wytycznymi dla wielowątkowych apartamentach, ale można go wykonać na dowolnym rodzaju wątku.|
 
 - **Agregacja**
 
-   Wskazuje, czy obiekt używa [agregacji](/windows/desktop/com/aggregation). Wybiera obiektu agregacji, które interfejsy do udostępnienia klientom i interfejsy są dostępne, tak jakby obiekt agregacji, zaimplementować je. Klienci z obiektu agregacji komunikują się tylko za pomocą obiektu agregacji.
+   Wskazuje, czy obiekt używa [agregacji](/windows/win32/com/aggregation). Obiekt zagregowany wybiera interfejsy, które należy uwidocznić klientom, a interfejsy są ujawniane tak, jakby obiekt agregacji zaimplementował je. Klienci obiektu zagregowanego komunikują się tylko z obiektem Aggregate.
 
    |Opcja|Opis|
    |------------|-----------------|
-   |**Tak**|Określa, czy obiekt może być agregowany. Domyślnie.|
-   |**Brak**|Określa, że obiekt nie jest agregowany.|
-   |**Only**|Określa, czy obiekt musi być agregowana.|
+   |**Tak**|Określa, że obiekt może być zagregowany. Domyślnie.|
+   |**Znaleziono**|Określa, że obiekt nie jest agregowany.|
+   |**Only**|Określa, że obiekt musi być zagregowany.|
 
 - **Interface**
 
-   Wskazuje typ interfejsu, który obsługuje obiektu. Domyślnie obiekt obsługuje podwójnego interfejsu.
+   Wskazuje typ interfejsu obsługiwanego przez obiekt. Domyślnie obiekt obsługuje interfejs podwójny.
 
    |Opcja|Opis|
    |------------|-----------------|
-   |**Dual**|Określa, że obiekt obsługuje interfejs podwójny (jego vtable ma niestandardowy interfejs funkcji oraz późne powiązania `IDispatch` metody). Umożliwia obaj klienci COM i [kontrolery automatyzacji](../../mfc/automation-clients.md) dostępu do obiektu. Domyślnie.|
-   |**Custom**|Określa, że obiekt obsługuje interfejs niestandardowy (jego vtable ma niestandardowy interfejs funkcji). Niestandardowy interfejs może być szybsza niż podwójnego interfejsu, szczególnie w granicach procesu.<br /><br /> - **Automatyzacja zgodne** kontrolery automatyzacji umożliwia dostępu do obiektu, który obsługuje niestandardowy interfejs.|
+   |**Dual**|Określa, że obiekt obsługuje podwójny interfejs (jego tablicę zawierającą niestandardowe funkcje interfejsu i metody późnego wiązania `IDispatch` ). Zezwala na dostęp do obiektu zarówno klientom COM, jak i [kontrolerom automatyzacji](../../mfc/automation-clients.md) . Domyślnie.|
+   |**Custom**|Określa, że obiekt obsługuje interfejs niestandardowy (jego tablicę zawierającą niestandardowe funkcje interfejsu). Niestandardowy interfejs może być szybszy niż podwójny interfejs, szczególnie w granicach procesu.<br /><br /> - **Zgodne** z automatyzacją Umożliwia kontrolerom automatyzacji dostęp do obiektu, który ma obsługę interfejsu niestandardowego.|
 
 - **Pomoc techniczna**
 
@@ -58,13 +58,13 @@ Aby uzyskać więcej informacji na temat projektów ATL i klasy ATL COM, zobacz 
 
    |Opcja|Opis|
    |------------|-----------------|
-   |**Interfejs ISupportErrorInfo**|Tworzy obsługę [Interfejs ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) interfejsu, obiekt może zwrócić informacje o błędzie do klienta.|
-   |**Punkty połączenia**|Włącza punkty połączenia dla obiektu, wprowadzając nazwę obiektu klasy pochodzi od [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md).|
-   |**Bezwątkowego**|Tworzy obiekt bezwątkowego na przeprowadzanie marshalingu wskaźników interfejsu efektywnie między wątkami w tym samym procesie. Dostępne do określania obiektu **zarówno** jako modelu wątkowości.|
-   |**IObjectWithSite** (Obsługa obiektów programu Internet Explorer)|Implementuje [IObjectWithSiteImpl](../../atl/reference/iobjectwithsiteimpl-class.md), który zapewnia prosty sposób obsługi komunikacji między obiektem i jego witryny w kontenerze.|
+   |**ISupportErrorInfo**|Tworzy obsługę interfejsu [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) , aby obiekt mógł zwrócić do klienta informacje o błędzie.|
+   |**Punkty połączenia**|Włącza punkty połączenia dla obiektu przez uczynienie klasy obiektu pochodną od [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md).|
+   |**Organizator wolnych wątków**|Tworzy obiekt organizatora wolnych wątków do wydajnego organizowania wskaźników interfejsów między wątkami w tym samym procesie. Dostępne dla obiektu określającego **zarówno** jako model wątkowości.|
+   |**IObjectWithSite** (Obsługa obiektów IE)|Implementuje [IObjectWithSiteImpl](../../atl/reference/iobjectwithsiteimpl-class.md), która zapewnia prosty sposób obsługi komunikacji między obiektem a jego lokacją w kontenerze.|
 
 ## <a name="see-also"></a>Zobacz także
 
 [Kreator prostych obiektów ATL](../../atl/reference/atl-simple-object-wizard.md)<br/>
 [Prosty obiekt ATL](../../atl/reference/adding-an-atl-simple-object.md)<br/>
-[Problemy wielowątkowości dotyczące serwera przetwarzania](/windows/desktop/com/in-process-server-threading-issues)
+[Problemy wątkowości serwera w procesie](/windows/win32/com/in-process-server-threading-issues)

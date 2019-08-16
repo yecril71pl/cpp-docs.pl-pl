@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleStreamFile [MFC], GetStream
 - COleStreamFile [MFC], OpenStream
 ms.assetid: e4f93698-e17c-4a18-a7c0-4b4df8eb4d93
-ms.openlocfilehash: 2bc943c74f456302b13db77bf28b6e4b21a5524b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 96e8fee71f02ea750fd8b33f41fd2fd517e9081e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373517"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503685"
 ---
 # <a name="colestreamfile-class"></a>Klasa COleStreamFile
 
@@ -43,28 +43,28 @@ class COleStreamFile : public CFile
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[COleStreamFile::COleStreamFile](#colestreamfile)|Konstruuje `COleStreamFile` obiektu.|
+|[COleStreamFile::COleStreamFile](#colestreamfile)|Konstruuje `COleStreamFile` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[COleStreamFile::Attach](#attach)|Kojarzy strumienia z obiektem.|
-|[COleStreamFile::CreateMemoryStream](#creatememorystream)|Tworzy strumień z globalnej pamięci i kojarzy ją z obiektem.|
-|[COleStreamFile::CreateStream](#createstream)|Tworzy strumień i kojarzy ją z obiektem.|
-|[COleStreamFile::Detach](#detach)|Powoduje usunięcie strumienia z obiektu.|
+|[COleStreamFile::Attach](#attach)|Kojarzy strumień z obiektem.|
+|[COleStreamFile::CreateMemoryStream](#creatememorystream)|Tworzy strumień z pamięci globalnej i kojarzy go z obiektem.|
+|[COleStreamFile::CreateStream](#createstream)|Tworzy strumień i kojarzy go z obiektem.|
+|[COleStreamFile::Detach](#detach)|Usuwa strumień z obiektu.|
 |[COleStreamFile::GetStream](#getstream)|Zwraca bieżący strumień.|
-|[COleStreamFile::OpenStream](#openstream)|Bezpiecznie otwiera strumienia i kojarzy ją z obiektem.|
+|[COleStreamFile::OpenStream](#openstream)|Bezpiecznie otwiera strumień i kojarzy go z obiektem.|
 
 ## <a name="remarks"></a>Uwagi
 
-`IStorage` Obiektu, musi istnieć strumienia można otworzyć lub utworzyć, chyba że jest to strumień pamięci.
+`IStorage` Obiekt musi istnieć, aby można było otworzyć lub utworzyć strumień, chyba że jest to strumień pamięci.
 
-`COleStreamFile` obiekty są dokładnie takie jak zmieniane [CFile](../../mfc/reference/cfile-class.md) obiektów.
+`COleStreamFile`obiekty są manipulowane dokładnie tak, jak obiekty [CFile](../../mfc/reference/cfile-class.md) .
 
-Aby uzyskać więcej informacji na temat manipulowanie strumieni i magazynów, zobacz artykuł [kontenerów: Pliki złożone](../../mfc/containers-compound-files.md)...
+Aby uzyskać więcej informacji na temat manipulowania strumieniami i magazynami, [Zobacz kontenery artykułów: Pliki](../../mfc/containers-compound-files.md)złożone...
 
-Aby uzyskać więcej informacji, zobacz [IStream](/windows/desktop/api/objidl/nn-objidl-istream) i [IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [IStream](/windows/win32/api/objidl/nn-objidl-istream) i [Metoda IStorage](/windows/win32/api/objidl/nn-objidl-istorage) w Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -76,11 +76,11 @@ Aby uzyskać więcej informacji, zobacz [IStream](/windows/desktop/api/objidl/nn
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxole.h
+**Nagłówek:** Afxole. h
 
-##  <a name="attach"></a>  COleStreamFile::Attach
+##  <a name="attach"></a>COleStreamFile:: Attach
 
-Kojarzy podany strumienia OLE przy użyciu `COleStreamFile` obiektu.
+Kojarzy dostarczony strumień OLE z `COleStreamFile` obiektem.
 
 ```
 void Attach(LPSTREAM lpStream);
@@ -89,17 +89,17 @@ void Attach(LPSTREAM lpStream);
 ### <a name="parameters"></a>Parametry
 
 *lpStream*<br/>
-Wskazuje strumienia OLE (`IStream`) ma zostać skojarzony z obiektem. Nie może mieć wartości NULL.
+Wskazuje strumień OLE (`IStream`), który ma być skojarzony z obiektem. Nie może mieć wartości NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekt nie może już być skojarzone z strumień OLE.
+Obiekt nie może już być skojarzony ze strumieniem OLE.
 
-Aby uzyskać więcej informacji, zobacz [IStream](/windows/desktop/api/objidl/nn-objidl-istream) w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [IStream](/windows/win32/api/objidl/nn-objidl-istream) w Windows SDK.
 
-##  <a name="colestreamfile"></a>  COleStreamFile::COleStreamFile
+##  <a name="colestreamfile"></a>COleStreamFile::COleStreamFile
 
-Tworzy `COleStreamFile` obiektu.
+`COleStreamFile` Tworzy obiekt.
 
 ```
 COleStreamFile(LPSTREAM lpStream = NULL);
@@ -112,13 +112,13 @@ Wskaźnik do strumienia OLE, który ma zostać skojarzony z obiektem.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli *lpStream* ma wartość NULL, obiekt nie jest skojarzony z usługą stream OLE, w przeciwnym razie, obiekt jest skojarzony z podanej strumienia OLE.
+Jeśli *LPSTREAM* ma wartość null, obiekt nie jest skojarzony ze strumieniem OLE, w przeciwnym razie obiekt jest skojarzony z dostarczonym strumieniem OLE.
 
-Aby uzyskać więcej informacji, zobacz [IStream](/windows/desktop/api/objidl/nn-objidl-istream) w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [IStream](/windows/win32/api/objidl/nn-objidl-istream) w Windows SDK.
 
-##  <a name="creatememorystream"></a>  COleStreamFile::CreateMemoryStream
+##  <a name="creatememorystream"></a>COleStreamFile::CreateMemoryStream
 
-Bezpiecznie tworzy nowy strumień za mało pamięci globalnej, udostępniony, gdzie błędu jest to normalne, oczekiwane.
+Bezpiecznie tworzy nowy strumień poza globalną, udostępnioną pamięcią, w której wystąpił błąd normalny, oczekiwany warunek.
 
 ```
 BOOL CreateMemoryStream(CFileException* pError = NULL);
@@ -127,21 +127,21 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
 ### <a name="parameters"></a>Parametry
 
 *pError*<br/>
-Wskazuje [CFileException](../../mfc/reference/cfileexception-class.md) obiekt lub wartość NULL, która wskazuje stan ukończenia operacji tworzenia. Należy podać ten parametr, jeśli chcesz monitorować możliwych wyjątków generowanych przez próby utworzenia strumienia.
+Wskazuje obiekt [CFileException](../../mfc/reference/cfileexception-class.md) lub wartość null, który wskazuje na stan ukończenia operacji tworzenia. Podaj ten parametr, jeśli chcesz monitorować możliwe wyjątki wygenerowane przez próbę utworzenia strumienia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli strumień został utworzony pomyślnie; w przeciwnym razie 0.
+Niezerowe, jeśli strumień został utworzony pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Pamięć została przydzielona przez podsystem OLE.
+Pamięć jest przydzielone przez podsystem OLE.
 
-Aby uzyskać więcej informacji, zobacz [CreateStreamOnHGlobal](/windows/desktop/api/combaseapi/nf-combaseapi-createstreamonhglobal) w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [CreateStreamOnHGlobal](/windows/win32/api/combaseapi/nf-combaseapi-createstreamonhglobal) w Windows SDK.
 
-##  <a name="createstream"></a>  COleStreamFile::CreateStream
+##  <a name="createstream"></a>COleStreamFile:: isstream
 
-Obiekt dostarczony magazynu, w której błędu jest to normalne, oczekiwane bezpiecznie tworzy nowy strumień.
+Bezpiecznie tworzy nowy strumień w podanym obiekcie magazynu, w którym wystąpił błąd normalny, oczekiwany warunek.
 
 ```
 BOOL CreateStream(
@@ -154,30 +154,30 @@ BOOL CreateStream(
 ### <a name="parameters"></a>Parametry
 
 *lpStorage*<br/>
-Wskazuje obiekt magazynu OLE, który zawiera strumienia, który ma zostać utworzony. Nie może mieć wartości NULL.
+Wskazuje obiekt magazynu OLE, który zawiera strumień, który ma zostać utworzony. Nie może mieć wartości NULL.
 
 *lpszStreamName*<br/>
 Nazwa strumienia, który ma zostać utworzony. Nie może mieć wartości NULL.
 
 *nOpenFlags*<br/>
-Tryb dostępu do użycia podczas otwierania w strumieniu. Wyłączne, odczytu/zapisu i Utwórz tryby domyślnie są używane. Aby uzyskać pełną listę dostępnych trybów, zobacz [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).
+Tryb dostępu do użycia podczas otwierania strumienia. Domyślnie używane są tryb wyłączny, odczyt/zapis i tworzenie. Aby uzyskać pełną listę dostępnych trybów, zobacz [CFile:: CFile](../../mfc/reference/cfile-class.md#cfile).
 
 *pError*<br/>
-Wskazuje [CFileException](../../mfc/reference/cfileexception-class.md) obiekt lub wartość NULL. Należy podać ten parametr, jeśli chcesz monitorować możliwych wyjątków generowanych przez próby utworzenia strumienia.
+Wskazuje obiekt [CFileException](../../mfc/reference/cfileexception-class.md) lub wartość null. Podaj ten parametr, jeśli chcesz monitorować możliwe wyjątki wygenerowane przez próbę utworzenia strumienia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli strumień został utworzony pomyślnie; w przeciwnym razie 0.
+Niezerowe, jeśli strumień został utworzony pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Wyjątek plików zostanie zgłoszony, jeśli Otwórz kończy się niepowodzeniem i *pError* nie ma wartości NULL.
+Wyjątek pliku zostanie wygenerowany, jeśli otwarcie nie powiedzie się, a *pError* nie ma wartości null.
 
-Aby uzyskać więcej informacji, zobacz [IStorage::CreateStream](/windows/desktop/api/objidl/nf-objidl-istorage-createstream) w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [Metoda IStorage:: isstream](/windows/win32/api/objidl/nf-objidl-istorage-createstream) w Windows SDK.
 
-##  <a name="detach"></a>  COleStreamFile::Detach
+##  <a name="detach"></a>COleStreamFile::D etach
 
-Powoduje usunięcie strumienia z obiektu bez zamykania w strumieniu.
+Usuwa strumień z obiektu bez zamykania strumienia.
 
 ```
 LPSTREAM Detach();
@@ -185,15 +185,15 @@ LPSTREAM Detach();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do strumienia (`IStream`) skojarzony z obiektem.
+Wskaźnik do strumienia (`IStream`), który został skojarzony z obiektem.
 
 ### <a name="remarks"></a>Uwagi
 
-Strumień musi być zamknięty w dowolny sposób innych, zanim program zakończy.
+Strumień musi być zamknięty w inny sposób przed zakończeniem działania programu.
 
-Aby uzyskać więcej informacji, zobacz [IStream](/windows/desktop/api/objidl/nn-objidl-istream) w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [IStream](/windows/win32/api/objidl/nn-objidl-istream) w Windows SDK.
 
-##  <a name="getstream"></a>  COleStreamFile::GetStream
+##  <a name="getstream"></a>COleStreamFile::GetStream
 
 Wywołaj tę funkcję, aby zwrócić wskaźnik do bieżącego strumienia.
 
@@ -203,11 +203,11 @@ IStream* GetStream() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do bieżącego interfejsu strumienia ( [IStream](/windows/desktop/api/objidl/nn-objidl-istream)).
+Wskaźnik do bieżącego interfejsu strumienia ( [IStream](/windows/win32/api/objidl/nn-objidl-istream)).
 
-##  <a name="openstream"></a>  COleStreamFile::OpenStream
+##  <a name="openstream"></a>COleStreamFile::OpenStream
 
-Zostanie otwarty istniejącego strumienia.
+Otwiera istniejący strumień.
 
 ```
 BOOL OpenStream(
@@ -220,26 +220,26 @@ BOOL OpenStream(
 ### <a name="parameters"></a>Parametry
 
 *lpStorage*<br/>
-Wskazuje obiekt magazynu OLE, który zawiera strumienia do otwarcia. Nie może mieć wartości NULL.
+Wskazuje obiekt magazynu OLE, który zawiera strumień, który ma zostać otwarty. Nie może mieć wartości NULL.
 
 *lpszStreamName*<br/>
 Nazwa strumienia do otwarcia. Nie może mieć wartości NULL.
 
 *nOpenFlags*<br/>
-Tryb dostępu do użycia podczas otwierania w strumieniu. Wyłączne/zapisu i odczytu trybów używanych domyślnie. Aby uzyskać pełną listę dostępnych trybów, zobacz [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).
+Tryb dostępu do użycia podczas otwierania strumienia. Domyślnie są używane tryby wyłącznego i do odczytu i zapisu. Aby uzyskać pełną listę dostępnych trybów, zobacz [CFile:: CFile](../../mfc/reference/cfile-class.md#cfile).
 
 *pError*<br/>
-Wskazuje [CFileException](../../mfc/reference/cfileexception-class.md) obiekt lub wartość NULL. Należy podać ten parametr, jeśli chcesz monitorować możliwych wyjątków generowanych przez próby otwarcia w strumieniu.
+Wskazuje obiekt [CFileException](../../mfc/reference/cfileexception-class.md) lub wartość null. Podaj ten parametr, jeśli chcesz monitorować możliwe wyjątki wygenerowane przez próbę otwarcia strumienia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeżeli strumień jest otwarty pomyślnie; w przeciwnym razie 0.
+Niezerowe, jeśli strumień został otwarty pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Wyjątek plików zostanie zgłoszony, jeśli Otwórz kończy się niepowodzeniem i *pError* nie ma wartości NULL.
+Wyjątek pliku zostanie wygenerowany, jeśli otwarcie nie powiedzie się, a *pError* nie ma wartości null.
 
-Aby uzyskać więcej informacji, zobacz [IStorage::OpenStream](/windows/desktop/api/objidl/nf-objidl-istorage-openstream) w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [Metoda IStorage:: OpenStream](/windows/win32/api/objidl/nf-objidl-istorage-openstream) w Windows SDK.
 
 ## <a name="see-also"></a>Zobacz także
 

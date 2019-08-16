@@ -13,16 +13,16 @@ helpviewer_keywords:
 - IProvideClassInfo2 ATL implementation
 - class information, ATL
 ms.assetid: d74956e8-9c69-4cba-b99d-ca1ac031bb9d
-ms.openlocfilehash: 41a0756250e749a07d48ad4f090c2f1c322aa558
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0ff3607002d32b4e21f7fc2199cc5da3662af8b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276045"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495544"
 ---
 # <a name="iprovideclassinfo2impl-class"></a>Klasa IProvideClassInfo2Impl
 
-Ta klasa udostępnia domyślną implementację elementu [IProvideClassInfo](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo) i [IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2) metody.
+Ta klasa zawiera domyślną implementację metod [IProvideClassInfo](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo) i [IProvideClassInfo2](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo2) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,16 +38,16 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 #### <a name="parameters"></a>Parametry
 
 *pcoclsid*<br/>
-Wskaźnik do klasy coclass identyfikator.
+Wskaźnik do identyfikatora klasy coclass.
 
 *psrcid*<br/>
-Wskaźnik na identyfikator dla domyślnej klasy coclass wychodzące dispinterface.
+Wskaźnik do identyfikatora dla domyślnego dispinterface wychodzącego klasy coclass.
 
 *plibid*<br/>
-Wskaźnik do identyfikatora LIBID biblioteki typów, który zawiera informacje o interfejsie. Domyślnie jest przekazywany biblioteki typów na poziomie serwera.
+Wskaźnik do identyfikatora LIBID biblioteki typów, który zawiera informacje o interfejsie. Domyślnie jest przenoszona biblioteka typów na poziomie serwera.
 
 *wMajor*<br/>
-Wersja główna biblioteki typów. Wartość domyślna to 1.
+Główna wersja biblioteki typów. Wartość domyślna to 1.
 
 *wMinor*<br/>
 Wersja pomocnicza biblioteki typów. Wartość domyślna to 0.
@@ -67,20 +67,20 @@ Klasa używana do zarządzania informacjami o typie klasy coclass. Wartość dom
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[IProvideClassInfo2Impl::GetClassInfo](#getclassinfo)|Pobiera `ITypeInfo` wskaźnik do informacji o typie klasy coclass.|
-|[IProvideClassInfo2Impl::GetGUID](#getguid)|Pobiera identyfikator GUID obiektu dispinterface wychodzących.|
+|[IProvideClassInfo2Impl::GetClassInfo](#getclassinfo)|`ITypeInfo` Pobiera wskaźnik do informacji o typie klasy coclass.|
+|[IProvideClassInfo2Impl:: GetGuid](#getguid)|Pobiera identyfikator GUID dispinterface wychodzącego obiektu.|
 
 ### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[IProvideClassInfo2Impl::_tih](#_tih)|Zarządza informacji o typie dla klasy coclass.|
+|[IProvideClassInfo2Impl::_tih](#_tih)|Zarządza informacjami o typie dla klasy coclass.|
 
 ## <a name="remarks"></a>Uwagi
 
-[IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2) interfejs rozszerza [IProvideClassInfo](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo) , dodając `GetGUID` metody. Ta metoda umożliwia klientowi można pobrać obiektu wychodzącego identyfikatora IID interfejsu dla jego domyślny zestaw zdarzeń. Klasa `IProvideClassInfo2Impl` udostępnia domyślną implementację elementu `IProvideClassInfo` i `IProvideClassInfo2` metody.
+Interfejs [IProvideClassInfo2](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo2) rozszerza [IProvideClassInfo](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo) `GetGUID` przez dodanie metody. Ta metoda umożliwia klientowi pobranie identyfikatora IID interfejsu wychodzącego obiektu dla jego domyślnego zestawu zdarzeń. Klasa `IProvideClassInfo2Impl` zawiera domyślną implementację `IProvideClassInfo` metod i `IProvideClassInfo2` .
 
-`IProvideClassInfo2Impl` zawiera statyczny element członkowski typu `CComTypeInfoHolder` który zarządza informacji o typie dla klasy coclass.
+`IProvideClassInfo2Impl`zawiera statyczną składową typu `CComTypeInfoHolder` , która zarządza informacjami o typie dla klasy coclass.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -90,11 +90,11 @@ Klasa używana do zarządzania informacjami o typie klasy coclass. Wartość dom
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcom.h
+**Nagłówek:** atlcom. h
 
-##  <a name="getclassinfo"></a>  IProvideClassInfo2Impl::GetClassInfo
+##  <a name="getclassinfo"></a>IProvideClassInfo2Impl::GetClassInfo
 
-Pobiera `ITypeInfo` wskaźnik do informacji o typie klasy coclass.
+`ITypeInfo` Pobiera wskaźnik do informacji o typie klasy coclass.
 
 ```
 STDMETHOD(GetClassInfo)(ITypeInfo** pptinfo);
@@ -102,11 +102,11 @@ STDMETHOD(GetClassInfo)(ITypeInfo** pptinfo);
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IProvideClassInfo::GetClassInfo](/windows/desktop/api/ocidl/nf-ocidl-iprovideclassinfo-getclassinfo) w Windows SDK.
+Zobacz [IProvideClassInfo:: GetClassInfo](/windows/win32/api/ocidl/nf-ocidl-iprovideclassinfo-getclassinfo) w Windows SDK.
 
-##  <a name="getguid"></a>  IProvideClassInfo2Impl::GetGUID
+##  <a name="getguid"></a>IProvideClassInfo2Impl:: GetGuid
 
-Pobiera identyfikator GUID obiektu dispinterface wychodzących.
+Pobiera identyfikator GUID dispinterface wychodzącego obiektu.
 
 ```
 STDMETHOD(GetGUID)(
@@ -116,9 +116,9 @@ STDMETHOD(GetGUID)(
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IProvideClassInfo2::GetGUID](/windows/desktop/api/ocidl/nf-ocidl-iprovideclassinfo2-getguid) w Windows SDK.
+Zobacz [IProvideClassInfo2:: GetGuid](/windows/win32/api/ocidl/nf-ocidl-iprovideclassinfo2-getguid) w Windows SDK.
 
-##  <a name="iprovideclassinfo2impl"></a>  IProvideClassInfo2Impl::IProvideClassInfo2Impl
+##  <a name="iprovideclassinfo2impl"></a>IProvideClassInfo2Impl::IProvideClassInfo2Impl
 
 Konstruktor.
 
@@ -128,11 +128,11 @@ IProvideClassInfo2Impl();
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania `AddRef` na [_tih](#_tih) elementu członkowskiego. Wywołania destruktora `Release`.
+Wywołania `AddRef` elementu członkowskiego [_tih](#_tih) . Destruktor wywołuje `Release`.
 
-##  <a name="_tih"></a>  IProvideClassInfo2Impl::_tih
+##  <a name="_tih"></a>IProvideClassInfo2Impl::_tih
 
-Ten element członkowski danych statycznych jest wystąpieniem typu parametru szablonu klasy, *tihclass*, która domyślnie wynosi `CComTypeInfoHolder`.
+Ten statyczny element członkowski danych jest wystąpieniem parametru szablonu klasy *tihclass*, który domyślnie jest `CComTypeInfoHolder`.
 
 ```
 static  tihclass
@@ -141,8 +141,8 @@ static  tihclass
 
 ### <a name="remarks"></a>Uwagi
 
-`_tih` Zarządza informacji o typie dla klasy coclass.
+`_tih`zarządza informacjami o typie dla klasy coclass.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

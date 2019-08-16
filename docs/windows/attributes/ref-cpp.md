@@ -1,21 +1,21 @@
 ---
-title: REF (atrybut COM C++)
+title: ref (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ref
 helpviewer_keywords:
 - ref attribute
 ms.assetid: 67e82d3e-07d9-4ef8-bf2b-0a4491d12557
-ms.openlocfilehash: f051fe577087d81515ddf0b44dfb15ad0fb2c616
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7dd927f385b039f1909a4bdf1998ea5a0b39264
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407422"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514115"
 ---
 # <a name="ref-c"></a>ref (C++)
 
-Określa odwołanie do wskaźnika.
+Identyfikuje wskaźnik odwołania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,11 +25,11 @@ Określa odwołanie do wskaźnika.
 
 ## <a name="remarks"></a>Uwagi
 
-**Ref** atrybut C++ ma taką samą funkcjonalność jak [ref](/windows/desktop/Midl/ref) atrybutów w MIDL.
+Atrybut **ref** C++ ma takie same funkcje jak atrybut [ref](/windows/win32/Midl/ref) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod przedstawia sposób użycia **ref** atrybutu:
+Poniższy kod pokazuje, jak używać atrybutu **ref** :
 
 ```cpp
 // cpp_attr_ref_ref.cpp
@@ -49,12 +49,12 @@ __interface IFireTabCtrl
 
 |||
 |-|-|
-|**Dotyczy**|**Element TypeDef**, interfejs parametrów, metody interfejsu|
+|**Dotyczy**|**typedef**, parametr interfejsu, metoda interfejsu|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

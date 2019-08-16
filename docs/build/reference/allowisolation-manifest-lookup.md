@@ -8,16 +8,16 @@ helpviewer_keywords:
 - -ALLOWISOLATION linker option
 - /ALLOWISOLATION linker option
 ms.assetid: 6d41851e-b3c1-4bdf-beaa-031773089d6f
-ms.openlocfilehash: fe76e0d40a2a19a002136a7e095875ad2903d434
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 7c799f3d44428643bccc2869255ffa4e9d194d70
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341079"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493136"
 ---
 # <a name="allowisolation-manifest-lookup"></a>/ALLOWISOLATION (Przeszukiwanie manifestu)
 
-Określa zachowanie wyszukiwania plików manifestu.
+Określa zachowanie wyszukiwania manifestu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,23 +27,23 @@ Określa zachowanie wyszukiwania plików manifestu.
 
 ## <a name="remarks"></a>Uwagi
 
-**/ALLOWISOLATION:No** wskazuje bibliotek DLL ładowanych tak, jakby nie było żadnych manifestu i powoduje, że konsolidator ustawia `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit w opcjonalnym nagłówku `DllCharacteristics` pola.
+**/ALLOWISOLATION: nie** wskazuje, że biblioteki DLL są załadowane tak, jakby nie było żadnego manifestu i powodują `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` , że konsolidator ustawi bit w `DllCharacteristics` polu opcjonalnego nagłówka.
 
-**/ ALLOWISOLATION** powoduje, że system operacyjny do manifestu, wyszukiwania i obciążeniami.
+**/ALLOWISOLATION** powoduje, że system operacyjny przeszukiwanie i ładowanie manifestu.
 
-**/ ALLOWISOLATION** jest ustawieniem domyślnym.
+Wartość domyślna to **/ALLOWISOLATION** .
 
-Po wyłączeniu izolacji dla pliku wykonywalnego modułu ładującego Windows nie będzie próbował znaleźć manifest aplikacji do nowo utworzonego procesu. Nowy proces nie będzie domyślny kontekst aktywacji, nawet jeśli dostępny jest manifestu wewnątrz pliku wykonywalnego lub umieszczone w tym samym katalogu co plik wykonywalny o nazwie <em>nazwę pliku wykonywalnego</em>**. exe.manifest**.
+Gdy izolacja jest wyłączona dla pliku wykonywalnego, moduł ładujący systemu Windows nie będzie podejmować próby znalezienia manifestu aplikacji dla nowo utworzonego procesu. Nowy proces nie będzie miał domyślnego kontekstu aktywacji, nawet jeśli w pliku wykonywalnym lub umieszczonym w tym samym katalogu, w którym znajduje się plik wykonywalny o nazwie <em>Executable-Name</em> **. exe. manifest**.
 
-Aby uzyskać więcej informacji, zobacz [odwołania plików manifestu](/windows/desktop/SbsCs/manifest-files-reference).
+Aby uzyskać więcej informacji, zobacz [Dokumentacja plików manifestu](/windows/win32/SbsCs/manifest-files-reference).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **pliku manifestu** stronę właściwości.
+1. Wybierz pozycję **Właściwości** > konfiguracji Strona właściwości**pliku manifestu** **konsolidatora** > .
 
-1. Modyfikowanie **Zezwalaj na izolację** właściwości.
+1. Zmodyfikuj właściwość **Zezwalaj na izolację** .
 
 ## <a name="see-also"></a>Zobacz także
 

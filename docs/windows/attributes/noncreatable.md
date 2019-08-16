@@ -1,21 +1,21 @@
 ---
-title: noncreatable — (atrybut COM C++)
+title: niemożliwy do utworzeniaC++ (atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.noncreatable
 helpviewer_keywords:
 - noncreatable attribute
 ms.assetid: 4d17937b-0bff-41af-ba57-53e18b7ab5a9
-ms.openlocfilehash: a10d93650c0ae564019a09b34c3a604d12327998
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e855497cb6f619ecdaa6aedf16a04f045a60faa7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305323"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514564"
 ---
 # <a name="noncreatable"></a>noncreatable
 
-Definiuje obiekt, który nie może być utworzone samodzielnie.
+Definiuje obiekt, którego nie można utworzyć na podstawie samego siebie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,9 +25,9 @@ Definiuje obiekt, który nie może być utworzone samodzielnie.
 
 ## <a name="remarks"></a>Uwagi
 
-**Noncreatable —** atrybut C++ ma taką samą funkcjonalność jak [noncreatable —](/windows/desktop/Midl/noncreatable) atrybutów w MIDL i jest automatycznie przekazywana do wygenerowany. Plik IDL przez kompilator.
+Atrybut niemożliwy do utworzenia ma taką samą funkcjonalność jak atrybut [](/windows/win32/Midl/noncreatable) MIDL, którego nie można uzyskać, i jest automatycznie przenoszona do wygenerowanego. C++ Plik IDL przez kompilator.
 
-Jeśli ten atrybut jest używany w projekcie, który korzysta z biblioteki ATL, zachowanie zmiany atrybutów. Oprócz powyższych zachowanie wprowadza również atrybut [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) makra. To makro wskazuje ATL, że obiekt nie może zostać utworzona zewnętrznie.
+Gdy ten atrybut jest używany w projekcie, który korzysta z ATL, zachowanie atrybutu zostanie zmienione. Oprócz powyższych zachowań atrybut również wprowadza makro [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) . To makro wskazuje na ATL, że nie można utworzyć obiektu zewnętrznie.
 
 ## <a name="example"></a>Przykład
 
@@ -55,12 +55,12 @@ class CMyClass : public A
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **— struktura**|
+|**Dotyczy**|**Klasa**, **Struktura**|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|**coclass**|
+|**Wymagane atrybuty**|**coclass**|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CComClassFactorySingleton class
 ms.assetid: debb983c-382b-487b-8d42-7ea26dc158b8
-ms.openlocfilehash: c415da15341f7800a706379d991cb753f5991170
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 71705d02140f0392a9ce023c64e7b4125c14443f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221174"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497367"
 ---
 # <a name="ccomclassfactorysingleton-class"></a>CComClassFactorySingleton Class
 
-Ta klasa jest pochodną [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) i używa [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) skonstruowanie pojedynczego obiektu.
+Ta klasa pochodzi z [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) i używa [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) do konstruowania pojedynczego obiektu.
 
 > [!IMPORTANT]
->  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+>  Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,7 +35,7 @@ class CComClassFactorySingleton : public CComClassFactory
 *T*<br/>
 Klasa.
 
-`CComClassFactorySingleton` pochodzi od klasy [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) i używa [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) skonstruowanie pojedynczego obiektu. Każde wywołanie `CreateInstance` metoda po prostu wysyła zapytanie dotyczące wskaźnika interfejsu tego obiektu.
+`CComClassFactorySingleton`pochodzi z [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) i używa [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) do konstruowania pojedynczego obiektu. Każde wywołanie `CreateInstance` metody po prostu wysyła zapytanie do tego obiektu dla wskaźnika interfejsu.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -43,17 +43,17 @@ Klasa.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CComClassFactorySingleton::CreateInstance](#createinstance)|Zapytania `m_spObj` dla wskaźnika interfejsu.|
+|[CComClassFactorySingleton:: CreateInstance](#createinstance)|Zapytania `m_spObj` dotyczące wskaźnika interfejsu.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CComClassFactorySingleton::m_spObj](#m_spobj)|[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) obiekt zbudowany przez `CComClassFactorySingleton`.|
+|[CComClassFactorySingleton::m_spObj](#m_spobj)|Obiekt [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) skonstruowany przez `CComClassFactorySingleton`.|
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekty ATL zwykle uzyskać fabryki klas, wynikające z [CComCoClass](../../atl/reference/ccomcoclass-class.md). Ta klasa zawiera makra [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), która deklaruje `CComClassFactory` jako domyślnej fabryki klas. Aby użyć `CComClassFactorySingleton`, określ [DECLARE_CLASSFACTORY_SINGLETON](aggregation-and-class-factory-macros.md#declare_classfactory_singleton) makra w definicji klasy do obiektu. Na przykład:
+Obiekty ATL zwykle uzyskują fabrykę klasy poprzez wyprowadzanie z [CComCoClass](../../atl/reference/ccomcoclass-class.md). Ta klasa zawiera [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)makro, które deklaruje `CComClassFactory` jako domyślną fabrykę klas. Aby użyć `CComClassFactorySingleton`, określ makro [DECLARE_CLASSFACTORY_SINGLETON](aggregation-and-class-factory-macros.md#declare_classfactory_singleton) w definicji klasy obiektu. Na przykład:
 
 [!code-cpp[NVC_ATL_COM#10](../../atl/codesnippet/cpp/ccomclassfactorysingleton-class_1.h)]
 
@@ -71,11 +71,11 @@ Obiekty ATL zwykle uzyskać fabryki klas, wynikające z [CComCoClass](../../atl/
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcom.h
+**Nagłówek:** atlcom. h
 
-##  <a name="createinstance"></a>  CComClassFactorySingleton::CreateInstance
+##  <a name="createinstance"></a>CComClassFactorySingleton:: CreateInstance
 
-Wywołania `QueryInterface` za pośrednictwem [m_spObj](#m_spobj) do pobrania wskaźnika interfejsu.
+Wywołuje `QueryInterface` za [m_spObj](#m_spobj) , aby pobrać wskaźnik interfejsu.
 
 ```
 STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
@@ -84,21 +84,21 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="parameters"></a>Parametry
 
 *pUnkOuter*<br/>
-[in] Jeśli obiekt jest tworzony jako część agregacji, następnie *pUnkOuter* musi być zewnętrzny nieznany. W przeciwnym razie *pUnkOuter* musi mieć wartość NULL.
+podczas Jeśli obiekt jest tworzony w ramach agregacji, *pUnkOuter* musi być nieznane zewnętrzne. W przeciwnym razie *pUnkOuter* musi mieć wartość null.
 
-*Parametr riid*<br/>
-[in] Identyfikator IID żądanego interfejsu. Jeśli *pUnkOuter* jest różna od NULL, *riid* musi być `IID_IUnknown`.
+*riid*<br/>
+podczas Identyfikator IID żądanego interfejsu. Jeśli *pUnkOuter* ma wartość różną od null, *riid* musi `IID_IUnknown`być.
 
 *ppvObj*<br/>
-[out] Wskaźnik do wskaźnika interfejsu identyfikowane przez *riid*. Jeśli obiekt nie obsługuje ten interfejs *ppvObj* ma wartość NULL.
+określoną Wskaźnik do wskaźnika interfejsu identyfikowanego przez *riid*. Jeśli obiekt nie obsługuje tego interfejsu, *ppvObj* ma wartość null.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
-##  <a name="m_spobj"></a>  CComClassFactorySingleton::m_spObj
+##  <a name="m_spobj"></a>CComClassFactorySingleton::m_spObj
 
-[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) obiekt zbudowany przez `CComClassFactorySingleton`.
+Obiekt [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) skonstruowany przez `CComClassFactorySingleton`.
 
 ```
 CComPtr<IUnknown> m_spObj;
@@ -106,15 +106,15 @@ CComPtr<IUnknown> m_spObj;
 
 ### <a name="remarks"></a>Uwagi
 
-Każde wywołanie [CreateInstance —](#createinstance) metoda po prostu wysyła zapytanie dotyczące wskaźnika interfejsu tego obiektu.
+Każde wywołanie metody [CreateInstance](#createinstance) po prostu wysyła zapytanie do tego obiektu dla wskaźnika interfejsu.
 
-Należy pamiętać, że formularzu bieżącego `m_spObj` przedstawia istotną zmianę w sposobie, w który `CComClassFactorySingleton` w poprzednich wersjach ATL. W poprzednich wersjach `CComClassFactorySingleton` został utworzony obiekt, w tym samym czasie jako fabryki klas podczas inicjowania serwera. W elemencie wizualnym C++.NET 2003 lub nowszy, obiekt jest tworzony opóźnieniem, pierwsze żądanie. Ta zmiana może spowodować błędy w programach, które opierają się na początku inicjowania.
+Należy zauważyć, że bieżąca forma `m_spObj` przedstawia nieprzerwaną zmianę od sposobu, `CComClassFactorySingleton` w którym działały poprzednie wersje ATL. W poprzednich wersjach `CComClassFactorySingleton` obiekt został utworzony w tym samym czasie co fabryka klas podczas inicjowania serwera. W programie C++Visual .NET 2003 i nowszych obiekt jest tworzony opóźnieniem podczas pierwszego żądania. Ta zmiana może spowodować błędy w programach, które opierają się na wczesnej inicjacji.
 
 ## <a name="see-also"></a>Zobacz także
 
-[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)<br/>
+[Elementu IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory)<br/>
 [Klasa CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)<br/>
 [Klasa CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)<br/>
 [Klasa CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

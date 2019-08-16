@@ -26,16 +26,16 @@ helpviewer_keywords:
 - wmemset function
 - memset function
 ms.assetid: e7ceb01b-df69-49c2-b294-a39358ad4699
-ms.openlocfilehash: d517c5565ef07a834d7ef864e495a4bb33351007
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d7b57292f582491a7750b4e12a8072112eac4dd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285155"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501012"
 ---
 # <a name="memset-wmemset"></a>memset, wmemset
 
-Ustawia buforów do określonego znaku.
+Ustawia bufory do określonego znaku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -58,33 +58,33 @@ wchar_t *wmemset(
 Wskaźnik do miejsca docelowego.
 
 *c*<br/>
-Znak do zestawu.
+Znak do ustawienia.
 
-*Liczba*<br/>
+*liczbą*<br/>
 Liczba znaków.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość *dest*.
+Wartość miejsca *docelowego*.
 
 ## <a name="remarks"></a>Uwagi
 
-Ustawia pierwszy *liczba* znaków *dest* znaku *c*.
+Ustawia pierwszą *liczbę* znaków miejsca *docelowego* na znak *c*.
 
-**Uwaga dotycząca zabezpieczeń** upewnij się, że bufor docelowy ma wystarczającą ilość miejsca na co najmniej *liczba* znaków. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Uwaga dotycząca zabezpieczeń** Upewnij się, że bufor docelowy ma wystarczającą ilość miejsca dla co najmniej *liczby* znaków. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**memset**|\<Memory.h > lub \<string.h >|
-|**wmemset —**|\<wchar.h>|
+|**memset**|\<> pamięci. h > \<lub String. h|
+|**wmemset**|\<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
@@ -114,7 +114,7 @@ Before: This is a test of the memset function
 After:  **** is a test of the memset function
 ```
 
-Poniżej przedstawiono przykład użycia wmemset —:
+Oto przykład użycia wmemset:
 
 ```C
 // crt_wmemset.c

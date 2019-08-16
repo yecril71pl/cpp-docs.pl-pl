@@ -33,19 +33,19 @@ helpviewer_keywords:
 - wpopen function
 - _wpopen function
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
-ms.openlocfilehash: 5284685f56a73c4c7e48fce981745220651399a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03eb36573abe8e26c47e6dd38c009e5819e60f8f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156164"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499598"
 ---
-# <a name="popen-wpopen"></a>_popen, _wpopen
+# <a name="_popen-_wpopen"></a>_popen, _wpopen
 
 Tworzy potok i wykonuje polecenie.
 
 > [!IMPORTANT]
-> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -62,33 +62,33 @@ FILE *_wpopen(
 
 ### <a name="parameters"></a>Parametry
 
-*Polecenie*<br/>
+*dotyczące*<br/>
 Polecenie do wykonania.
 
-*Tryb*<br/>
-Tryb zwróconym strumieniu.
+*wyst*<br/>
+Tryb zwróconego strumienia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca strumień, który został skojarzony z jednym końcu utworzonego potoku. Drugim końcu potoku jest skojarzony z polecenia zduplikowanych standardowego wejścia lub wyjścia standardowego. Te funkcje zwracają **NULL** w przypadku błędu. Jeśli błąd jest nieprawidłowy parametr, na przykład w przypadku *polecenia* lub *tryb* jest wskaźnikiem wartości null lub *tryb* nie jest prawidłowym trybem **errno** jest równa **EINVAL**. Zobacz sekcję Spostrzeżenia, aby prawidłowe tryby.
+Zwraca strumień skojarzony z jednym końcem utworzonego potoku. Drugi koniec potoku jest skojarzony ze zduplikowanym wyjściem polecenia lub standardowym danymi wyjściowymi. Funkcje zwracają **wartość null** w przypadku błędu. Jeśli błąd jest nieprawidłowym parametrem, na przykład jeśli *polecenie* lub *tryb* jest wskaźnikiem typu null, lub *tryb* nie jest prawidłowym trybem, **errno** jest ustawiona na **EINVAL**. Zobacz sekcję Uwagi, aby uzyskać prawidłowe tryby.
 
-Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje o tych i innych kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_Popen —** funkcja tworzy potok i asynchronicznie wykonuje kopię zduplikowanych procesora poleceń przy użyciu określonego ciągu *polecenia*. Ciąg znaków *tryb* określa rodzaj dostępu, w następujący sposób.
+Funkcja **_popen** tworzy potok i asynchronicznie wykonuje zduplikowaną kopię procesora poleceń z określonym *poleceniem*String. *Tryb* ciągu znaków określa typ żądanego dostępu w następujący sposób.
 
 |Tryb dostępu|Opis|
 |-|-|
-|**"r"**|Proces wywołujący może odczytywać standardowe dane wyjściowe polecenia zduplikowanych przy użyciu zwróconym strumieniu.|
-|**"w"**|Proces wywołujący może zapisywać standardowe dane wejściowe polecenia zduplikowanych przy użyciu zwróconym strumieniu.|
+|**®**|Proces wywołujący może odczytać standardowe dane wyjściowe polecenia zduplikowanego przy użyciu zwróconego strumienia.|
+|**k**|Proces wywołujący może zapisywać do standardowych danych wejściowych polecenia, używając zwróconego strumienia.|
 |**"b"**|Otwórz w trybie binarnym.|
-|**"t"**|Otwórz w trybie tekstowym.|
+|**&**|Otwórz w trybie tekstowym.|
 
 > [!NOTE]
-> Jeśli używane w programie Windows **_popen —** funkcja zwraca wskaźnik nieprawidłowy plik, który powoduje, że program przestanie odpowiadać na czas nieokreślony. **_popen —** działa poprawnie, w aplikacji konsoli. Aby utworzyć aplikację Windows, który przekierowuje dane wejściowe i wyjściowe, zobacz [tworzenia procesu podrzędnego z przekierowanie danych wejściowych i wyjściowych](/windows/desktop/ProcThread/creating-a-child-process-with-redirected-input-and-output) w zestawie Windows SDK.
+> Jeśli jest używany w programie systemu Windows, funkcja **_popen** zwraca nieprawidłowy wskaźnik pliku, który powoduje, że program przestaje odpowiadać przez czas nieokreślony. **_popen** działa prawidłowo w aplikacji konsolowej. Aby utworzyć aplikację systemu Windows, która przekierowuje dane wejściowe i wyjściowe, zobacz [Tworzenie procesu podrzędnego z przekierowanymi danymi wejściowymi i wyjściowymi](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output) w Windows SDK.
 
-**_wpopen —** to wersja znaku dwubajtowego **_popen —**; *ścieżki* argument **_wpopen —** jest ciągiem znaku dwubajtowego. **_wpopen —** i **_popen —** zachowują się identycznie.
+**_wpopen** to dwubajtowa wersja **_popen**; argument *Path* **_wpopen** jest ciągiem znaków dwubajtowych. **_wpopen** i **_popen** zachowują się identycznie w inny sposób.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -101,13 +101,13 @@ Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [_doserrno
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_popen**|\<stdio.h>|
-|**_wpopen**|\<stdio.h > lub \<wchar.h >|
+|**_wpopen**|\<stdio. h > lub \<WCHAR. h >|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
@@ -155,7 +155,7 @@ int main( void )
 
 ### <a name="sample-output"></a>Przykładowe dane wyjściowe
 
-Te dane wyjściowe przyjęto założenie, że istnieje tylko jeden plik w bieżącym katalogu z rozszerzeniem nazwy pliku .c.
+W danych wyjściowych przyjęto założenie, że w bieżącym katalogu istnieje tylko jeden plik z rozszerzeniem nazwy pliku c.
 
 ```Output
 Volume in drive C is CDRIVE

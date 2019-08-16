@@ -8,44 +8,44 @@ helpviewer_keywords:
 - notifications [MFC], tool tips
 - tool tips [MFC], notifications
 ms.assetid: d0370a65-21ba-4676-bcc5-8cf851bbb15c
-ms.openlocfilehash: 97db98322cd7c0d14e46f54a055bbc646c90d785
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a63154f3da539676f31709899568b6486dc6017e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62240392"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508528"
 ---
-# <a name="handling-ttnneedtext-notification-for-tool-tips"></a>Obsługa powiadomienia TTN_NEEDTEXT w przypadku etykietek narzędzi
+# <a name="handling-ttn_needtext-notification-for-tool-tips"></a>Obsługa powiadomienia TTN_NEEDTEXT w przypadku etykietek narzędzi
 
-Jako część [Włączanie etykietek narzędzi](../mfc/enabling-tool-tips.md), które ułatwią obsługę **TTN_NEEDTEXT** wiadomości, dodając następujący wpis do okna właściciela mapy komunikatów:
+W ramach [włączania etykietek narzędzi](../mfc/enabling-tool-tips.md)można obsługiwać komunikat **TTN_NEEDTEXT** , dodając następujący wpis do mapy komunikatów Twojego okna właściciela:
 
 [!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_1.cpp)]
 
 *memberFxn*<br/>
-Funkcja elementu członkowskiego, wywoływana, gdy tekst jest wymagany w przypadku tego przycisku.
+Funkcja członkowska, która ma być wywoływana, gdy dla tego przycisku jest wymagany tekst.
 
-Należy zauważyć, że identyfikator etykietki narzędzia jest zawsze 0.
+Należy pamiętać, że identyfikator etykietki narzędzia ma zawsze wartość 0.
 
-Deklarowanie funkcji obsługi w definicji klasy w następujący sposób:
+Zadeklaruj funkcję programu obsługi w definicji klasy w następujący sposób:
 
 [!code-cpp[NVC_MFCControlLadenDialog#53](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_2.h)]
 
-gdzie kursywą parametry są następujące:
+gdzie są pisane kursywnie parametry:
 
 *id*<br/>
-Identyfikator formantu wysyłającego powiadomienia. Nie używany. Identyfikator formantu jest pobierana z **NMHDR** struktury.
+Identyfikator kontrolki, która wysłała powiadomienie. Nie używany. Identyfikator kontrolki jest pobierany ze struktury **NMHDR** .
 
 *pNMHDR*<br/>
-Wskaźnik do [NMTTDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagnmttdispinfoa) struktury. Ta struktura jest również omówione w dalszych [struktura TOOLTIPTEXT](../mfc/tooltiptext-structure.md).
+Wskaźnik do struktury [NMTTDISPINFO](/windows/win32/api/commctrl/ns-commctrl-nmttdispinfow) . Ta struktura jest również omówiona dokładniej w [strukturze ToolTipText](../mfc/tooltiptext-structure.md).
 
 *pResult*<br/>
-Wskaźnik do kodu wyniku można ustawić przed zwróceniem. **TTN_NEEDTEXT** obsługi można zignorować *pResult* parametru.
+Wskaźnik do kodu wyniku, który można ustawić przed zwróceniem. Procedury obsługi **TTN_NEEDTEXT** mogą ignorować parametr *pResult* .
 
-Na przykład obsługi powiadomień widoku formularza:
+Przykładem programu obsługi powiadomień w widoku formularza:
 
 [!code-cpp[NVC_MFCControlLadenDialog#54](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_3.cpp)]
 
-Wywołaj `EnableToolTips` (ten fragment z `OnInitDialog`):
+Wywołanie `EnableToolTips` (ten fragment został pobrany `OnInitDialog`z):
 
 [!code-cpp[NVC_MFCControlLadenDialog#55](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_4.cpp)]
 

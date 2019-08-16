@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCReBar [MFC], OnUpdateCmdUI
 - CMFCReBar [MFC], SetPaneAlignment
 ms.assetid: 02a60e29-6224-49c1-9e74-e0a7d9f8d023
-ms.openlocfilehash: ccd500547bdcf65e922f7b5e5ca8d30e0423933d
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: d348cf7aac57ce213e4d3f602501d12cee8e20d8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866185"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505439"
 ---
 # <a name="cmfcrebar-class"></a>Klasa CMFCReBar
 
@@ -120,7 +120,7 @@ podczas Określa tekst, który ma być wyświetlany w paska pomocniczego. Tekst 
 [in. out] Określa mapę bitową, która ma być wyświetlana w tle paska pomocniczego.
 
 *dwStyle*<br/>
-podczas Zawiera styl, który ma zostać zastosowany do pasma. Aby zapoznać się z pełną listą stylów pasma, zobacz `fStyle` opis struktury [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) w dokumentacji Windows SDK.
+podczas Zawiera styl, który ma zostać zastosowany do pasma. Aby zapoznać się z pełną listą stylów pasma, zobacz `fStyle` opis struktury [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) w dokumentacji Windows SDK.
 
 *clrFore*<br/>
 podczas Przedstawia kolor pierwszego planu paska pomocniczego.
@@ -150,7 +150,7 @@ BOOL Create(
 [in. out] Wskaźnik do okna nadrzędnego tej kontrolki paska pomocniczego.
 
 *dwCtrlStyle*<br/>
-podczas Określa styl dla kontrolki paska pomocniczego. Wartość stylu domyślnego to **RBS_BANDBORDERS**, która wyświetla wąskie linie w celu oddzielenia sąsiednich pasm w kontrolce paska pomocniczego. Aby uzyskać listę prawidłowych stylów, zobacz [Style formantu paska pomocniczego](/windows/desktop/Controls/rebar-control-styles) w dokumentacji Windows SDK.
+podczas Określa styl dla kontrolki paska pomocniczego. Wartość stylu domyślnego to **RBS_BANDBORDERS**, która wyświetla wąskie linie w celu oddzielenia sąsiednich pasm w kontrolce paska pomocniczego. Aby uzyskać listę prawidłowych stylów, zobacz [Style formantu paska pomocniczego](/windows/win32/Controls/rebar-control-styles) w dokumentacji Windows SDK.
 
 *dwStyle*<br/>
 podczas Styl okna kontrolki paska pomocniczego. Aby uzyskać listę prawidłowych stylów, zobacz [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles).

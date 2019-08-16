@@ -1,21 +1,21 @@
 ---
-title: v1_enum — (C++ atrybutów COM)
+title: v1_enum (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.v1_enum
 helpviewer_keywords:
 - v1_enum attribute
 ms.assetid: 2fe92d92-81b9-4a1c-b6ce-437d0eb770ca
-ms.openlocfilehash: 08654eed7ad467dc22d2cbbf811c9169e5292f16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c67f6303e73da42db5efd006bd6cdf3ded5bb8cf
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407149"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513859"
 ---
-# <a name="v1enum"></a>v1_enum
+# <a name="v1_enum"></a>v1_enum
 
-Określa, że przekazywane określonego typu wyliczenia jako jednostki 32-bitowych, a nie domyślnej 16-bitowych.
+Określa, że określony typ wyliczeniowy ma być przekazywany jako jednostka 32-bitowa, a nie wartość domyślna 16-bitowa.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,11 +25,11 @@ Określa, że przekazywane określonego typu wyliczenia jako jednostki 32-bitowy
 
 ## <a name="remarks"></a>Uwagi
 
-**V1_enum —** C++ atrybut ma taką samą funkcjonalność jak [v1_enum —](/windows/desktop/Midl/v1-enum) atrybutów w MIDL.
+Atrybut **v1_enum** C++ ma takie same funkcje jak atrybut [v1_enum](/windows/win32/Midl/v1-enum) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod pokazuje wykorzystanie **v1_enum —**:
+Poniższy kod przedstawia użycie **v1_enum**:
 
 ```cpp
 // cpp_attr_ref_v1_enum.cpp
@@ -48,12 +48,12 @@ enum eList {
 
 |||
 |-|-|
-|**Dotyczy**|Typy wyliczeniowe|
+|**Dotyczy**|Typ wyliczeniowy|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

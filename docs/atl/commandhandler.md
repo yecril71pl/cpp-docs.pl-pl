@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - CommandHandler function
 ms.assetid: 662bc7bf-4a10-42b3-986d-d8bae4f63551
-ms.openlocfilehash: 743be3e0bc9cc96fc6b22d0806d399ab5e160a3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 99a95228f6036e5f391395be367cdef39ca3dc3b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62235067"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492455"
 ---
 # <a name="commandhandler"></a>CommandHandler
 
-`CommandHandler` czy funkcja jest identyfikowana przez trzeci parametr makra COMMAND_HANDLER na mapie komunikatów.
+`CommandHandler`jest funkcją identyfikowaną przez trzeci parametr makra COMMAND_HANDLER w mapie wiadomości.
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,24 +32,24 @@ LRESULT CommandHandler(
 Kod powiadomienia.
 
 *wID*<br/>
-Identyfikator elementu menu, formant lub klawiszy skrótów.
+Identyfikator elementu menu, kontrolki lub akceleratora.
 
 *hWndCtl*<br/>
-Dojście do kontrolki okna.
+Uchwyt do kontrolki okna.
 
 *bHandled*<br/>
-Ustawia mapy wiadomości *bHandled* na wartość TRUE, przed `CommandHandler` jest wywoływana. Jeśli `CommandHandler` nie obsługuje w pełni komunikat, należy ją ustawić *bHandled* na wartość FAŁSZ, aby wiadomość wymaga dalszego przetwarzania.
+Mapa komunikatów ustawia *bHandled* na wartość true przed `CommandHandler` wywołaniem. Jeśli `CommandHandler` komunikat nie jest w pełni obsługiwany, należy ustawić *bHandled* na wartość false, aby wskazać, że komunikat musi zostać przetworzony.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wynik przetwarzania wiadomości. 0, jeśli kończy się pomyślnie.
+Wynik przetwarzania komunikatów. 0 w przypadku powodzenia.
 
 ## <a name="remarks"></a>Uwagi
 
-Aby uzyskać przykład korzystania z tej obsługi wiadomości w mapie komunikatów, zobacz [COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler).
+Przykład użycia tego programu obsługi komunikatów w mapie komunikatów można znaleźć w temacie [COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler).
 
 ## <a name="see-also"></a>Zobacz także
 
 [Implementowanie okna](../atl/implementing-a-window.md)<br/>
 [Mapy komunikatów](../atl/message-maps-atl.md)<br/>
-[WM_NOTIFY](/windows/desktop/controls/wm-notify)
+[WM_NOTIFY](/windows/win32/controls/wm-notify)

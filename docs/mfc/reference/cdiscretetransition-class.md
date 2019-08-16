@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CDiscreteTransition [MFC], m_delay
 - CDiscreteTransition [MFC], m_hold
 ms.assetid: b4d84fb3-ccaa-451c-a69b-6b50dcb9b9c8
-ms.openlocfilehash: dc2311f7dae71f7c3848b7825b297ec5c9747859
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7087dfa13972737f0a1244d2cc9a7088b23dc184
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168014"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506853"
 ---
 # <a name="cdiscretetransition-class"></a>Klasa CDiscreteTransition
 
-Hermetyzuje dyskretne przejścia.
+Hermetyzuje dyskretne przejście.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,25 +39,25 @@ class CDiscreteTransition : public CBaseTransition;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDiscreteTransition::CDiscreteTransition](#cdiscretetransition)|Tworzy obiekt dyskretne przejścia i inicjuje jego parametrów.|
+|[CDiscreteTransition::CDiscreteTransition](#cdiscretetransition)|Konstruuje dyskretny obiekt przejścia i inicjuje jego parametry.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDiscreteTransition::Create](#create)|Wywołania biblioteki przejścia do utworzenia obiektu zhermetyzowany przejścia COM. (Przesłania [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CDiscreteTransition:: Create](#create)|Wywołuje bibliotekę przejściową w celu utworzenia hermetyzowanego obiektu COM przejścia. (Przesłania [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDiscreteTransition::m_dblFinalValue](#m_dblfinalvalue)|Wartość zmiennej animacji z końcem przejścia.|
-|[CDiscreteTransition::m_delay](#m_delay)|Ilość czasu za pomocą którego natychmiastowe przełączenie końcowa wartość opóźnienia.|
-|[CDiscreteTransition::m_hold](#m_hold)|Ilość czasu za pomocą którego do przechowania zmiennej w końcowej wartości.|
+|[CDiscreteTransition::m_dblFinalValue](#m_dblfinalvalue)|Wartość zmiennej animacji na końcu przejścia.|
+|[CDiscreteTransition::m_delay](#m_delay)|Czas, przez który należy opóźnić natychmiastowe przełączenie do wartości końcowej.|
+|[CDiscreteTransition::m_hold](#m_hold)|Czas przechowywania zmiennej w wartości końcowej.|
 
 ## <a name="remarks"></a>Uwagi
 
-Podczas dyskretne przejścia zmiennej animacji pozostaje na poziomie wartość początkową przez określony okres czasu, a następnie przełącza natychmiast do określonej wartości końcowej i pozostają w tej wartości czasu wstrzymania danego. Ponieważ wszystkie przejścia są automatycznie czyszczone, zaleca się ich przydzielone za pomocą nowego operatora. Zhermetyzowanego obiektu IUIAnimationTransition COM przy utworzono CAnimationController::AnimateGroup, aż do, a następnie ma wartość NULL. Zmienianie zmiennych składowych, po tworzenie ten obiekt COM nie ma wpływu.
+Podczas przejścia dyskretnego zmienna animacji pozostaje w początkowej wartości przez określony czas opóźnienia, a następnie natychmiast przełącza się do określonej wartości końcowej i pozostaje w tej wartości dla danego czasu wstrzymania. Ponieważ wszystkie przejścia są automatycznie wyczyszczone, zaleca się ich przydzielenie przy użyciu operatora new. Obiekt hermetyzowanych IUIAnimationTransition COM jest tworzony przez CAnimationController:: Animuj, do momentu, aż będzie miał wartość NULL. Zmiana zmiennych Członkowskich po utworzeniu tego obiektu COM nie ma żadnego skutku.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -69,11 +69,11 @@ Podczas dyskretne przejścia zmiennej animacji pozostaje na poziomie wartość p
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxanimationcontroller.h
+**Nagłówek:** afxanimationcontroller. h
 
-##  <a name="cdiscretetransition"></a>  CDiscreteTransition::CDiscreteTransition
+##  <a name="cdiscretetransition"></a>CDiscreteTransition::CDiscreteTransition
 
-Tworzy obiekt dyskretne przejścia i inicjuje jego parametrów.
+Konstruuje dyskretny obiekt przejścia i inicjuje jego parametry.
 
 ```
 CDiscreteTransition(
@@ -85,17 +85,17 @@ CDiscreteTransition(
 ### <a name="parameters"></a>Parametry
 
 *delay*<br/>
-Ilość czasu za pomocą którego natychmiastowe przełączenie końcowa wartość opóźnienia.
+Czas, przez który należy opóźnić natychmiastowe przełączenie do wartości końcowej.
 
 *dblFinalValue*<br/>
-Wartość zmiennej animacji z końcem przejścia.
+Wartość zmiennej animacji na końcu przejścia.
 
-*przytrzymaj klawisz*<br/>
-Ilość czasu za pomocą którego do przechowania zmiennej w końcowej wartości.
+*i*<br/>
+Czas przechowywania zmiennej w wartości końcowej.
 
-##  <a name="create"></a>  CDiscreteTransition::Create
+##  <a name="create"></a>CDiscreteTransition:: Create
 
-Wywołania biblioteki przejścia do utworzenia obiektu zhermetyzowany przejścia COM.
+Wywołuje bibliotekę przejściową w celu utworzenia hermetyzowanego obiektu COM przejścia.
 
 ```
 virtual BOOL Create(
@@ -104,31 +104,31 @@ virtual BOOL Create(
 ```
 
 *pLibrary*<br/>
-Wskaźnik do [interfejsu IUIAnimationTransitionLibrary](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), który definiuje bibliotekę przejścia standardowe.
+Wskaźnik do [interfejsu IUIAnimationTransitionLibrary](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), który definiuje bibliotekę przejść standardowych.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli przejście został utworzony pomyślnie; w przeciwnym razie wartość FALSE.
+Wartość TRUE, jeśli przejście zostało utworzone pomyślnie; w przeciwnym razie FALSE.
 
-##  <a name="m_dblfinalvalue"></a>  CDiscreteTransition::m_dblFinalValue
+##  <a name="m_dblfinalvalue"></a>CDiscreteTransition::m_dblFinalValue
 
-Wartość zmiennej animacji z końcem przejścia.
+Wartość zmiennej animacji na końcu przejścia.
 
 ```
 DOUBLE m_dblFinalValue;
 ```
 
-##  <a name="m_delay"></a>  CDiscreteTransition::m_delay
+##  <a name="m_delay"></a>CDiscreteTransition::m_delay
 
-Ilość czasu za pomocą którego natychmiastowe przełączenie końcowa wartość opóźnienia.
+Czas, przez który należy opóźnić natychmiastowe przełączenie do wartości końcowej.
 
 ```
 UI_ANIMATION_SECONDS m_delay;
 ```
 
-##  <a name="m_hold"></a>  CDiscreteTransition::m_hold
+##  <a name="m_hold"></a>CDiscreteTransition::m_hold
 
-Ilość czasu za pomocą którego do przechowania zmiennej w końcowej wartości.
+Czas przechowywania zmiennej w wartości końcowej.
 
 ```
 UI_ANIMATION_SECONDS m_hold;

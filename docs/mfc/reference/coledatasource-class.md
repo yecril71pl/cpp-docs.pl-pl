@@ -1,5 +1,5 @@
 ---
-title: Klasa COleDataSource
+title: Klasa by uzyskać COleDataSource
 ms.date: 11/04/2016
 f1_keywords:
 - COleDataSource
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-ms.openlocfilehash: 37de6fd74f1e9210dcd9b9a356719436814c0c7f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e6b49edfedc8e7311e9ecc21ca065ad99c15c62
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224944"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504131"
 ---
-# <a name="coledatasource-class"></a>Klasa COleDataSource
+# <a name="coledatasource-class"></a>Klasa by uzyskać COleDataSource
 
-Działa jako bufor, w której aplikacja umieszcza dane, które będzie oferować podczas danych transferu operacji, takich jak Schowek lub operacji przeciągania i upuszczania.
+Działa jako pamięć podręczna, w której aplikacja umieszcza dane, które będą oferowane podczas operacji transferu danych, takich jak schowek lub operacje przeciągania i upuszczania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -59,34 +59,34 @@ class COleDataSource : public CCmdTarget
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[COleDataSource::COleDataSource](#coledatasource)|Konstruuje `COleDataSource` obiektu.|
+|[By uzyskać COleDataSource:: by uzyskać COleDataSource](#coledatasource)|Konstruuje `COleDataSource` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[COleDataSource::CacheData](#cachedata)|Udostępnia dane w określonym formacie przy użyciu `STGMEDIUM` struktury.|
-|[COleDataSource::CacheGlobalData](#cacheglobaldata)|Udostępnia dane w określonym formacie przy użyciu wartości HGLOBAL.|
-|[COleDataSource::DelayRenderData](#delayrenderdata)|Udostępnia dane w określonym formacie za pomocą opóźnione renderowanie.|
-|[COleDataSource::DelayRenderFileData](#delayrenderfiledata)|Udostępnia dane w określonym formacie w `CFile` wskaźnika.|
-|[COleDataSource::DelaySetData](#delaysetdata)|Wywoływana dla każdego formatu, który jest obsługiwany w `OnSetData`.|
-|[COleDataSource::DoDragDrop](#dodragdrop)|Wykonuje operacje przeciągania i upuszczania ze źródłem danych.|
-|[COleDataSource::Empty](#empty)|Opróżnia `COleDataSource` obiektu danych.|
-|[COleDataSource::FlushClipboard](#flushclipboard)|Wyświetla wszystkie dane do Schowka.|
-|[COleDataSource::GetClipboardOwner](#getclipboardowner)|Weryfikuje, czy dane w Schowku znajduje nadal istnieje.|
-|[COleDataSource::OnRenderData](#onrenderdata)|Pobiera dane jako część opóźnione renderowanie.|
-|[COleDataSource::OnRenderFileData](#onrenderfiledata)|Pobiera dane do `CFile` jako część opóźnione renderowanie.|
-|[COleDataSource::OnRenderGlobalData](#onrenderglobaldata)|Pobiera dane do wartości HGLOBAL jako część opóźnione renderowanie.|
-|[COleDataSource::OnSetData](#onsetdata)|Wywołuje się, by podmienić dane w `COleDataSource` obiektu.|
-|[COleDataSource::SetClipboard](#setclipboard)|Umieszcza `COleDataSource` obiektu do Schowka.|
+|[By uzyskać COleDataSource:: CacheData](#cachedata)|Oferuje dane w określonym formacie przy użyciu `STGMEDIUM` struktury.|
+|[By uzyskać COleDataSource:: CacheGlobalData](#cacheglobaldata)|Oferuje dane w określonym formacie za pomocą HGLOBAL.|
+|[By uzyskać COleDataSource::D elayRenderData](#delayrenderdata)|Oferuje dane w określonym formacie za pomocą opóźnionego renderowania.|
+|[COleDataSource::DelayRenderFileData](#delayrenderfiledata)|Oferuje dane w określonym formacie we `CFile` wskaźniku.|
+|[By uzyskać COleDataSource::D elaySetData](#delaysetdata)|Wywoływana dla każdego formatu obsługiwanego w programie `OnSetData`.|
+|[By uzyskać COleDataSource::D oDragDrop](#dodragdrop)|Wykonuje operacje przeciągania i upuszczania ze źródłem danych.|
+|[By uzyskać COleDataSource:: Empty](#empty)|`COleDataSource` Opróżnia obiekt danych.|
+|[By uzyskać COleDataSource:: FlushClipboard](#flushclipboard)|Renderuje wszystkie dane do Schowka.|
+|[By uzyskać COleDataSource:: GetClipboardOwner](#getclipboardowner)|Sprawdza, czy w tym miejscu znajdują się dane umieszczone w Schowku.|
+|[By uzyskać COleDataSource:: OnRenderData](#onrenderdata)|Pobiera dane w ramach opóźnionego renderowania.|
+|[By uzyskać COleDataSource:: OnRenderFileData](#onrenderfiledata)|Pobiera dane do elementu `CFile` jako część opóźnionego renderowania.|
+|[By uzyskać COleDataSource:: OnRenderGlobalData](#onrenderglobaldata)|Pobiera dane do HGLOBAL w ramach opóźnionego renderowania.|
+|[By uzyskać COleDataSource:: OnSetData](#onsetdata)|Wywołuje się, by zastąpić dane w `COleDataSource` obiekcie.|
+|[By uzyskać COleDataSource:: setClipboard](#setclipboard)|`COleDataSource` Umieszcza obiekt w Schowku.|
 
 ## <a name="remarks"></a>Uwagi
 
-Można utworzyć źródła danych OLE bezpośrednio. Alternatywnie [COleClientItem](../../mfc/reference/coleclientitem-class.md) i [COleServerItem](../../mfc/reference/coleserveritem-class.md) klasy tworzenia źródeł danych OLE w odpowiedzi na swoje `CopyToClipboard` i `DoDragDrop` funkcji elementów członkowskich. Zobacz [COleServerItem::CopyToClipboard](../../mfc/reference/coleserveritem-class.md#copytoclipboard) krótki opis. Zastąp `OnGetClipboardData` funkcji składowej klasy klienta element lub serwera elementu Dodawanie dodatkowych formaty Schowka do danych ze źródła danych OLE są tworzone dla `CopyToClipboard` lub `DoDragDrop` funkcja elementu członkowskiego.
+Źródła danych OLE można tworzyć bezpośrednio. Alternatywnie klasy [COleClientItem](../../mfc/reference/coleclientitem-class.md) i [COleServerItem](../../mfc/reference/coleserveritem-class.md) tworzą źródła danych OLE w odpowiedzi na ich `CopyToClipboard` funkcje i `DoDragDrop` elementy członkowskie. Aby uzyskać krótki opis, zobacz [COleServerItem:: CopyToClipboard](../../mfc/reference/coleserveritem-class.md#copytoclipboard) . Przesłoń funkcję `CopyToClipboard` `DoDragDrop` członkowską elementu klienta lub klasy elementu serwera, aby dodać do danych dodatkowe formaty schowka, które zostały utworzone dla lub funkcji członkowskiej. `OnGetClipboardData`
 
-Zawsze, gdy chcesz przygotować dane transferu, należy utworzyć obiekt tej klasy i wypełnić ją z danymi przy użyciu metody najbardziej odpowiednie dla Twoich danych. Ten sposób jest wstawiany do źródła danych bezpośrednio jest zależna od tego, czy dane są dostarczane bezpośrednio (natychmiastowego renderowania) lub na żądanie (opóźnione renderowanie). Dla każdego format Schowka są dostarczania danych, przekazując format schowka do użycia (i opcjonalnie [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktury), wywołaj [DelayRenderData](#delayrenderdata).
+Za każdym razem, gdy chcesz przygotować dane do przeniesienia, należy utworzyć obiekt tej klasy i wypełnić go danymi przy użyciu najbardziej odpowiedniej metody dla danych. Sposób, w jaki jest wstawiany do źródła danych, jest bezpośrednio narażony na to, czy dane są dostarczane natychmiast (bezpośrednie renderowanie) czy na żądanie (opóźnione renderowanie). Dla każdego formatu Schowka, w którym dane są przekazywane, przekazując format schowka do użycia (i opcjonalną strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) ), wywołaj [DelayRenderData](#delayrenderdata).
 
-Aby uzyskać więcej informacji na temat źródeł danych i transfer danych, zobacz artykuł [obiekty danych i źródeł danych (OLE)](../../mfc/data-objects-and-data-sources-ole.md). Ponadto, artykuł [tematy Schowka](../../mfc/clipboard.md) opisuje z mechanizmu Schowka OLE.
+Aby uzyskać więcej informacji o źródłach danych i transferze danych, zobacz temat [obiekty danych artykułu i źródła danych (OLE)](../../mfc/data-objects-and-data-sources-ole.md). Ponadto w artykule [schowek](../../mfc/clipboard.md) artykułu opisano mechanizm Schowka OLE.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -98,11 +98,11 @@ Aby uzyskać więcej informacji na temat źródeł danych i transfer danych, zob
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxole.h
+**Nagłówek:** Afxole. h
 
-##  <a name="cachedata"></a>  COleDataSource::CacheData
+##  <a name="cachedata"></a>By uzyskać COleDataSource:: CacheData
 
-Wywołaj tę funkcję, aby określić format, w którym dane są oferowane w trakcie danych operacji transferu.
+Wywołaj tę funkcję, aby określić format, w którym dane są oferowane podczas operacji transferu danych.
 
 ```
 void CacheData(
@@ -114,31 +114,31 @@ void CacheData(
 ### <a name="parameters"></a>Parametry
 
 *cfFormat*<br/>
-Format Schowka, w którym ma być oferowane danych. Ten parametr może być jednym z wstępnie zdefiniowane formaty Schowka lub wartość zwrócona przez obiekt natywny Windows [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) funkcji.
+Format schowka, w którym mają być oferowane dane. Ten parametr może być jednym ze wstępnie zdefiniowanych formatów Schowka lub wartością zwracaną przez natywną funkcję [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) systemu Windows.
 
 *lpStgMedium*<br/>
-Wskazuje [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) zawierające dane w formacie określonym struktury.
+Wskazuje strukturę [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) zawierającą dane w określonym formacie.
 
 *lpFormatEtc*<br/>
-Wskazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) opisujący format, w której dane mają być oferowane struktury. Podaj wartość dla tego parametru, jeśli chcesz określić informacji o formacie dodatkowe poza określonym przez format schowka *cfFormat*. Jeśli ma wartość NULL, wartości domyślne są używane dla innych pól w `FORMATETC` struktury.
+Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) opisującą format, w którym mają być oferowane dane. Podaj wartość tego parametru, jeśli chcesz określić dodatkowe informacje o formacie spoza formatu Schowka określonego przez *cfFormat*. Jeśli ma wartość null, są używane wartości domyślne dla innych pól `FORMATETC` struktury.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy podać dane, ponieważ ta funkcja udostępnia je za pomocą natychmiastowej renderowania. Dane są buforowane, dopóki nie jest wymagane.
+Należy podać dane, ponieważ ta funkcja udostępnia je za pomocą natychmiastowego renderowania. Dane są zapisywane w pamięci podręcznej, dopóki nie będzie trzeba.
 
-Podaj dane za pomocą [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) struktury. Można również użyć `CacheGlobalData` funkcja elementu członkowskiego, jeśli dostarczenie ilość danych jest wystarczająco mała, należy dokonać wydajnie za pomocą wartości HGLOBAL.
+Podaj dane przy użyciu struktury [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) . Możesz również użyć funkcji członkowskiej, `CacheGlobalData` Jeśli ilość danych, które dostarczasz, jest wystarczająco mała, aby można było ją efektywnie przenieść przy użyciu HGLOBAL.
 
-Po wywołaniu `CacheData` `ptd` członkiem `lpFormatEtc` i zawartość *lpStgMedium* należą do obiektu danych, nie przez obiekt wywołujący.
+`CacheData` Po wywołaniu `ptd` elementu członkowskiego `lpFormatEtc` i treści *lpStgMedium* są własnością obiektu danych, a nie przez wywołującego.
 
-Aby użyć opóźnione renderowanie, należy wywołać [DelayRenderData](#delayrenderdata) lub [DelayRenderFileData](#delayrenderfiledata) funkcja elementu członkowskiego. Aby uzyskać więcej informacji na temat opóźnionego renderowania jako obsłużony przez MFC, zobacz artykuł [obiekty danych i źródeł danych: Manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
+Aby użyć renderowania opóźnionego, wywołaj funkcję członkowską [DelayRenderData](#delayrenderdata) lub [DelayRenderFileData](#delayrenderfiledata) . Aby uzyskać więcej informacji na temat opóźnionego renderowania jako obsługiwanego przez MFC [, zapoznaj się z tematem obiekty danych artykułu i źródła danych: Manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
 
-Aby uzyskać więcej informacji, zobacz [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) i [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktur w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz struktury [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) i [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) w Windows SDK.
 
-Aby uzyskać więcej informacji, zobacz [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) w Windows SDK.
 
-##  <a name="cacheglobaldata"></a>  COleDataSource::CacheGlobalData
+##  <a name="cacheglobaldata"></a>By uzyskać COleDataSource:: CacheGlobalData
 
-Wywołaj tę funkcję, aby określić format, w którym dane są oferowane w trakcie danych operacji transferu.
+Wywołaj tę funkcję, aby określić format, w którym dane są oferowane podczas operacji transferu danych.
 
 ```
 void CacheGlobalData(
@@ -150,35 +150,35 @@ void CacheGlobalData(
 ### <a name="parameters"></a>Parametry
 
 *cfFormat*<br/>
-Format Schowka, w którym ma być oferowane danych. Ten parametr może być jednym z wstępnie zdefiniowane formaty Schowka lub wartość zwrócona przez obiekt natywny Windows [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) funkcji.
+Format schowka, w którym mają być oferowane dane. Ten parametr może być jednym ze wstępnie zdefiniowanych formatów Schowka lub wartością zwracaną przez natywną funkcję [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) systemu Windows.
 
 *hGlobal*<br/>
-Dojście do bloku pamięci globalnej, zawierające dane w formacie określonym.
+Dojście do bloku pamięci globalnej zawierające dane w określonym formacie.
 
 *lpFormatEtc*<br/>
-Wskazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) opisujący format, w której dane mają być oferowane struktury. Podaj wartość dla tego parametru, jeśli chcesz określić informacji o formacie dodatkowe poza określonym przez format schowka *cfFormat*. Jeśli ma wartość NULL, wartości domyślne są używane dla innych pól w `FORMATETC` struktury.
+Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) opisującą format, w którym mają być oferowane dane. Podaj wartość tego parametru, jeśli chcesz określić dodatkowe informacje o formacie spoza formatu Schowka określonego przez *cfFormat*. Jeśli ma wartość null, są używane wartości domyślne dla innych pól `FORMATETC` struktury.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja udostępnia dane za pomocą natychmiastowej renderowania, dzięki czemu dane należy podać podczas wywoływania funkcji; dane są buforowane, dopóki nie jest wymagane. Użyj `CacheData` funkcja elementu członkowskiego, jeśli są podawania dużej ilości danych lub jeśli potrzebujesz nośnika magazynowania ze strukturą.
+Ta funkcja udostępnia dane za pomocą bezpośredniego renderowania, dlatego należy podać dane podczas wywoływania funkcji; dane są zapisywane w pamięci podręcznej, dopóki nie będzie trzeba. Użyj funkcji `CacheData` członkowskiej, jeśli dostarczasz dużą ilość danych lub potrzebujesz strukturalnego nośnika magazynu.
 
-Aby użyć opóźnione renderowanie, należy wywołać [DelayRenderData](#delayrenderdata) lub [DelayRenderFileData](#delayrenderfiledata) funkcja elementu członkowskiego. Aby uzyskać więcej informacji na temat opóźnionego renderowania jako obsłużony przez MFC, zobacz artykuł [obiekty danych i źródeł danych: Manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
+Aby użyć renderowania opóźnionego, wywołaj funkcję członkowską [DelayRenderData](#delayrenderdata) lub [DelayRenderFileData](#delayrenderfiledata) . Aby uzyskać więcej informacji na temat opóźnionego renderowania jako obsługiwanego przez MFC [, zapoznaj się z tematem obiekty danych artykułu i źródła danych: Manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
 
-Aby uzyskać więcej informacji, zobacz [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktury w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zapoznaj się ze strukturą [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) w Windows SDK.
 
-Aby uzyskać więcej informacji, zobacz [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) w Windows SDK.
 
-##  <a name="coledatasource"></a>  COleDataSource::COleDataSource
+##  <a name="coledatasource"></a>By uzyskać COleDataSource:: by uzyskać COleDataSource
 
-Konstruuje `COleDataSource` obiektu.
+Konstruuje `COleDataSource` obiekt.
 
 ```
 COleDataSource();
 ```
 
-##  <a name="delayrenderdata"></a>  COleDataSource::DelayRenderData
+##  <a name="delayrenderdata"></a>By uzyskać COleDataSource::D elayRenderData
 
-Wywołaj tę funkcję, aby określić format, w którym dane są oferowane w trakcie danych operacji transferu.
+Wywołaj tę funkcję, aby określić format, w którym dane są oferowane podczas operacji transferu danych.
 
 ```
 void DelayRenderData(
@@ -189,26 +189,26 @@ void DelayRenderData(
 ### <a name="parameters"></a>Parametry
 
 *cfFormat*<br/>
-Format Schowka, w którym ma być oferowane danych. Ten parametr może być jednym z wstępnie zdefiniowane formaty Schowka lub wartość zwrócona przez obiekt natywny Windows [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) funkcji.
+Format schowka, w którym mają być oferowane dane. Ten parametr może być jednym ze wstępnie zdefiniowanych formatów Schowka lub wartością zwracaną przez natywną funkcję [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) systemu Windows.
 
 *lpFormatEtc*<br/>
-Wskazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) opisujący format, w której dane mają być oferowane struktury. Podaj wartość dla tego parametru, jeśli chcesz określić informacji o formacie dodatkowe poza określonym przez format schowka *cfFormat*. Jeśli ma wartość NULL, wartości domyślne są używane dla innych pól w `FORMATETC` struktury.
+Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) opisującą format, w którym mają być oferowane dane. Podaj wartość tego parametru, jeśli chcesz określić dodatkowe informacje o formacie spoza formatu Schowka określonego przez *cfFormat*. Jeśli ma wartość null, są używane wartości domyślne dla innych pól `FORMATETC` struktury.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja udostępnia dane za pomocą opóźnione renderowanie, dzięki czemu dane nie są dostarczane bezpośrednio. [OnRenderData](#onrenderdata) lub [OnRenderGlobalData](#onrenderglobaldata) funkcja członkowska jest wywoływana w celu żądania danych.
+Ta funkcja udostępnia dane przy użyciu opóźnionego renderowania, więc dane nie są dostarczane od razu. Funkcja członkowska [OnRenderData](#onrenderdata) lub [OnRenderGlobalData](#onrenderglobaldata) jest wywoływana w celu zażądania danych.
 
-Użyj tej funkcji, jeśli nie chcesz podać dane za pomocą `CFile` obiektu. Jeśli źródło danych za pośrednictwem `CFile` obiektu, wywołaj [DelayRenderFileData](#delayrenderfiledata) funkcja elementu członkowskiego. Aby uzyskać więcej informacji na temat opóźnionego renderowania jako obsłużony przez MFC, zobacz artykuł [obiekty danych i źródeł danych: Manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
+Użyj tej funkcji, jeśli nie chcesz podawać danych za pośrednictwem `CFile` obiektu. Jeśli chcesz dostarczyć dane za pośrednictwem `CFile` obiektu, wywołaj funkcję elementu członkowskiego [DelayRenderFileData](#delayrenderfiledata) . Aby uzyskać więcej informacji na temat opóźnionego renderowania jako obsługiwanego przez MFC [, zapoznaj się z tematem obiekty danych artykułu i źródła danych: Manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
 
-Umożliwia renderowanie bezpośredniego, należy wywołać [CacheData](#cachedata) lub [CacheGlobalData](#cacheglobaldata) funkcja elementu członkowskiego.
+Aby użyć bezpośredniego renderowania, wywołaj funkcję członkowską [CacheData](#cachedata) lub [CacheGlobalData](#cacheglobaldata) .
 
-Aby uzyskać więcej informacji, zobacz [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktury w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zapoznaj się ze strukturą [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) w Windows SDK.
 
-Aby uzyskać więcej informacji, zobacz [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) w Windows SDK.
 
-##  <a name="delayrenderfiledata"></a>  COleDataSource::DelayRenderFileData
+##  <a name="delayrenderfiledata"></a>By uzyskać COleDataSource::D elayRenderFileData
 
-Wywołaj tę funkcję, aby określić format, w którym dane są oferowane w trakcie danych operacji transferu.
+Wywołaj tę funkcję, aby określić format, w którym dane są oferowane podczas operacji transferu danych.
 
 ```
 void DelayRenderFileData(
@@ -219,26 +219,26 @@ void DelayRenderFileData(
 ### <a name="parameters"></a>Parametry
 
 *cfFormat*<br/>
-Format Schowka, w którym ma być oferowane danych. Ten parametr może być jednym z wstępnie zdefiniowane formaty Schowka lub wartość zwrócona przez obiekt natywny Windows [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) funkcji.
+Format schowka, w którym mają być oferowane dane. Ten parametr może być jednym ze wstępnie zdefiniowanych formatów Schowka lub wartością zwracaną przez natywną funkcję [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) systemu Windows.
 
 *lpFormatEtc*<br/>
-Wskazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) opisujący format, w której dane mają być oferowane struktury. Podaj wartość dla tego parametru, jeśli chcesz określić informacji o formacie dodatkowe poza określonym przez format schowka *cfFormat*. Jeśli ma wartość NULL, wartości domyślne są używane dla innych pól w `FORMATETC` struktury.
+Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) opisującą format, w którym mają być oferowane dane. Podaj wartość tego parametru, jeśli chcesz określić dodatkowe informacje o formacie spoza formatu Schowka określonego przez *cfFormat*. Jeśli ma wartość null, są używane wartości domyślne dla innych pól `FORMATETC` struktury.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja udostępnia dane za pomocą opóźnione renderowanie, dzięki czemu dane nie są dostarczane bezpośrednio. [OnRenderFileData](#onrenderfiledata) funkcja członkowska jest wywoływana w celu żądania danych.
+Ta funkcja udostępnia dane przy użyciu opóźnionego renderowania, więc dane nie są dostarczane od razu. Funkcja członkowska [OnRenderFileData](#onrenderfiledata) jest wywoływana w celu zażądania danych.
 
-Użyj tej funkcji, jeśli zamierzasz używać `CFile` obiektu jako źródło danych. Jeśli nie zamierzasz używać `CFile` obiektu, wywołaj [DelayRenderData](#delayrenderdata) funkcja elementu członkowskiego. Aby uzyskać więcej informacji na temat opóźnionego renderowania jako obsłużony przez MFC, zobacz artykuł [obiekty danych i źródeł danych: Manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
+Użyj tej funkcji, jeśli zamierzasz użyć `CFile` obiektu do dostarczenia danych. Jeśli nie zamierzasz używać `CFile` obiektu, wywołaj funkcję elementu członkowskiego [DelayRenderData](#delayrenderdata) . Aby uzyskać więcej informacji na temat opóźnionego renderowania jako obsługiwanego przez MFC [, zapoznaj się z tematem obiekty danych artykułu i źródła danych: Manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
 
-Umożliwia renderowanie bezpośredniego, należy wywołać [CacheData](#cachedata) lub [CacheGlobalData](#cacheglobaldata) funkcja elementu członkowskiego.
+Aby użyć bezpośredniego renderowania, wywołaj funkcję członkowską [CacheData](#cachedata) lub [CacheGlobalData](#cacheglobaldata) .
 
-Aby uzyskać więcej informacji, zobacz [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktury w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zapoznaj się ze strukturą [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) w Windows SDK.
 
-Aby uzyskać więcej informacji, zobacz [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) w Windows SDK.
 
-##  <a name="delaysetdata"></a>  COleDataSource::DelaySetData
+##  <a name="delaysetdata"></a>By uzyskać COleDataSource::D elaySetData
 
-Wywołaj tę funkcję, aby obsługiwać zmiany zawartości źródła danych.
+Wywołaj tę funkcję, aby obsłużyć zmianę zawartości źródła danych.
 
 ```
 void DelaySetData(
@@ -249,22 +249,22 @@ void DelaySetData(
 ### <a name="parameters"></a>Parametry
 
 *cfFormat*<br/>
-Format Schowka, w którym ma być przełączony danych. Ten parametr może być jednym z wstępnie zdefiniowane formaty Schowka lub wartość zwrócona przez obiekt natywny Windows [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) funkcji.
+Format schowka, w którym mają zostać umieszczone dane. Ten parametr może być jednym ze wstępnie zdefiniowanych formatów Schowka lub wartością zwracaną przez natywną funkcję [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) systemu Windows.
 
 *lpFormatEtc*<br/>
-Wskazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktury opisujący format danych ma zostać zastąpiony. Podaj wartość dla tego parametru, jeśli chcesz określić informacji o formacie dodatkowe poza określonym przez format schowka *cfFormat*. Jeśli ma wartość NULL, wartości domyślne są używane dla innych pól w `FORMATETC` struktury.
+Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) opisującą format, w którym mają zostać zamienione dane. Podaj wartość tego parametru, jeśli chcesz określić dodatkowe informacje o formacie spoza formatu Schowka określonego przez *cfFormat*. Jeśli ma wartość null, są używane wartości domyślne dla innych pól `FORMATETC` struktury.
 
 ### <a name="remarks"></a>Uwagi
 
-[OnSetData](#onsetdata) wywoływane przez platformę w takiej sytuacji. Jest ona używana tylko, gdy struktura zwraca źródła danych z [COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). Jeśli `DelaySetData` nie jest wywoływana z `OnSetData` funkcja nigdy nie zostanie wywołana. `DelaySetData` powinna być wywoływana dla każdego Schowka lub `FORMATETC` formatu, które obsługujesz.
+[](#onsetdata) Wywołanie OnSetData zostanie wywołane przez platformę, gdy wystąpi taka sytuacja. Jest on używany tylko wtedy, gdy struktura zwraca źródło danych z [COleServerItem:: GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). Jeśli `DelaySetData` nie jest wywoływana `OnSetData` , funkcja nigdy nie będzie wywoływana. `DelaySetData`należy wywołać dla każdego obsługiwanego schowka `FORMATETC` lub formatu.
 
-Aby uzyskać więcej informacji, zobacz [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktury w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zapoznaj się ze strukturą [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) w Windows SDK.
 
-Aby uzyskać więcej informacji, zobacz [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) w Windows SDK.
 
-##  <a name="dodragdrop"></a>  COleDataSource::DoDragDrop
+##  <a name="dodragdrop"></a>By uzyskać COleDataSource::D oDragDrop
 
-Wywołaj `DoDragDrop` funkcja elementu członkowskiego do wykonywania operacji przeciągania i upuszczania dla tego źródła danych, zazwyczaj w [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown) programu obsługi.
+Wywołaj funkcję [](../../mfc/reference/cwnd-class.md#onlbuttondown) elementuczłonkowskiego,abywykonaćoperacjęprzeciąganiaiupuszczaniadlategoźródładanych,zwyklewprogramieobsługiCWnd::`DoDragDrop` OnLButtonDown.
 
 ```
 DROPEFFECT DoDragDrop(
@@ -276,45 +276,45 @@ DROPEFFECT DoDragDrop(
 ### <a name="parameters"></a>Parametry
 
 *dwEffects*<br/>
-Przeciągnij i upuść operacje, które są dozwolone w tym źródle danych. Może być co najmniej jeden z następujących czynności:
+Operacje przeciągania i upuszczania, które są dozwolone w tym źródle danych. Może to być jeden lub więcej z następujących elementów:
 
-- DROPEFFECT_COPY, które można wykonać operacji kopiowania.
+- DROPEFFECT_COPY można wykonać operacji kopiowania.
 
-- DROPEFFECT_MOVE, które można wykonać operacji przenoszenia.
+- DROPEFFECT_MOVE można wykonać operacji przenoszenia.
 
-- Można było ustalić DROPEFFECT_LINK link pocztą e-mail od elementów usuniętych danych oryginalnych danych.
+- DROPEFFECT_LINK łącze z usuniętych danych do oryginalnych danych.
 
-- DROPEFFECT_SCROLL wskazuje, że operacji przeciągania przewijania mogą wystąpić.
+- DROPEFFECT_SCROLL wskazuje, że może wystąpić przeciąganie operacji przewijania.
 
 *lpRectStartDrag*<br/>
-Wskaźnik do prostokąt, który definiuje, w którym faktycznie zacznie przeciągania. Aby uzyskać więcej informacji zobacz następujące sekcji uwag.
+Wskaźnik do prostokąta, który definiuje, gdzie w rzeczywistości zostanie rozpoczęte przeciąganie. Aby uzyskać więcej informacji zobacz następujące sekcji uwag.
 
 *pDropSource*<br/>
-Wskazuje źródło porzucenia. Jeśli wartość NULL, następnie domyślną implementację elementu [COleDropSource](../../mfc/reference/coledropsource-class.md) będą używane.
+Wskazuje na źródło upuszczania. Jeśli wartość jest równa NULL, zostanie użyta domyślna implementacja [COleDropSource](../../mfc/reference/coledropsource-class.md) .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Efekt generowane przez operację przeciągania i upuszczania; w przeciwnym razie DROPEFFECT_NONE Jeśli nigdy nie rozpocznie się wykonywanie operacji, ponieważ użytkownik wydane przycisku myszy przed opuszczeniem podany prostokąt.
+Efekt upuszczania wygenerowany przez operację przeciągania i upuszczania; w przeciwnym razie DROPEFFECT_NONE, jeśli operacja nie rozpocznie się, ponieważ użytkownik wydał przycisk myszy przed opuszczeniem dostarczonego prostokąta.
 
 ### <a name="remarks"></a>Uwagi
 
-Operacja przeciągania i upuszczania nie rozpoczyna się natychmiast. Czeka, aż kursor myszy opuszcza prostokąt określony przez *lpRectStartDrag* lub dopóki nie przeszły przez określoną liczbę milisekund. Jeśli *lpRectStartDrag* ma wartość NULL, rozmiar prostokąta wynosi jeden piksel.
+Operacja przeciągania i upuszczania nie rozpocznie się natychmiast. Czeka, aż kursor myszy opuści prostokąt określony przez *lpRectStartDrag* lub dopóki nie upłynie określona liczba milisekund. Jeśli *lpRectStartDrag* ma wartość null, rozmiar prostokąta wynosi jeden piksel.
 
-Czas opóźnienia jest określona przez ustawienie klucza rejestru. Możesz zmienić czas opóźnienia, wywołując [CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) lub [CWinApp::WriteProfileInt](../../mfc/reference/cwinapp-class.md#writeprofileint). Jeśli nie określisz czas opóźnienia, jest używana domyślna wartość 200 ms. Przeciągnij opóźnienia są przechowywane w następujący sposób:
+Czas opóźnienia jest określany przez ustawienie klucza rejestru. Można zmienić czas opóźnienia przez wywołanie [CWinApp:: WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) lub [CWinApp:: WriteProfileInt](../../mfc/reference/cwinapp-class.md#writeprofileint). Jeśli czas opóźnienia nie zostanie określony, zostanie użyta wartość domyślna 200 milisekund. Czas opóźnienia przeciągania jest przechowywany w następujący sposób:
 
-- Czas opóźnienia przeciągania Windows NT jest przechowywany w HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\NT\CurrentVersion\IniFileMapping\win.ini\Windows\DragDelay.
+- Czas opóźnienia przeciągania systemu Windows NT jest przechowywany w HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\NT\CurrentVersion\IniFileMapping\win.ini\Windows\DragDelay.
 
-- Czas opóźnienia przeciągania 3.x Windows są przechowywane w ZWYCIĘSTWA. Plik INI, w sekcji [Windows}.
+- Czas opóźnienia przeciągania systemu Windows 3. x jest przechowywany w WIN. Plik INI, w sekcji [Windows}.
 
-- Przeciągnij Windows 95/98 opóźnienia są przechowywane w pamięci podręcznej wersji systemu Windows. PLIKU INI.
+- Czas opóźnienia przeciągania systemu Windows 95/98 jest przechowywany w pamięci podręcznej w wersji zakupionej. Nośnika.
 
-Dla przeciągnij więcej informacji o tym, jak opóźnienie informacje są przechowywane w rejestrze albo lub. Plik INI, zobacz [WriteProfileString](/windows/desktop/api/winbase/nf-winbase-writeprofilestringa) w zestawie Windows SDK.
+Aby uzyskać więcej informacji na temat sposobu przechowywania informacji o opóźnieniu przeciągania w rejestrze lub. Plik INI, zobacz [WriteProfileString](/windows/win32/api/winbase/nf-winbase-writeprofilestringw) w Windows SDK.
 
-Aby uzyskać więcej informacji, zobacz artykuł [przeciąganie i upuszczanie: Implementowanie miejsca źródłowego](../../mfc/drag-and-drop-implementing-a-drop-source.md).
+Aby uzyskać więcej informacji, zobacz artykuł [przeciąganie i upuszczanie: Implementowanie źródła](../../mfc/drag-and-drop-implementing-a-drop-source.md)upuszczania.
 
-##  <a name="empty"></a>  COleDataSource::Empty
+##  <a name="empty"></a>By uzyskać COleDataSource:: Empty
 
-Wywołaj tę funkcję na pusty `COleDataSource` obiektu danych.
+Wywołaj tę funkcję, aby `COleDataSource` opróżnić obiekt danych.
 
 ```
 void Empty();
@@ -322,13 +322,13 @@ void Empty();
 
 ### <a name="remarks"></a>Uwagi
 
-Zarówno w pamięci podręcznej i formatów renderowania opóźnienia są opróżnienia, dzięki czemu mogą być ponownie używane.
+Buforowane i opóźnione formaty renderowania są opróżniane, aby mogły być ponownie używane.
 
-Aby uzyskać więcej informacji, zobacz [ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium) w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) w Windows SDK.
 
-##  <a name="flushclipboard"></a>  COleDataSource::FlushClipboard
+##  <a name="flushclipboard"></a>By uzyskać COleDataSource:: FlushClipboard
 
-Renderuje dane do Schowka, a następnie umożliwia wklejenie danych ze Schowka, po zamknięciu aplikacji.
+Renderuje dane znajdujące się w schowku, a następnie umożliwia wklejanie danych ze schowka po zamknięciu aplikacji.
 
 ```
 static void PASCAL FlushClipboard();
@@ -336,11 +336,11 @@ static void PASCAL FlushClipboard();
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj [Funkcja SetClipboard](#setclipboard) umieszczanie danych w Schowku.
+Użyj [setClipboard](#setclipboard) , aby umieścić dane w Schowku.
 
-##  <a name="getclipboardowner"></a>  COleDataSource::GetClipboardOwner
+##  <a name="getclipboardowner"></a>By uzyskać COleDataSource:: GetClipboardOwner
 
-Określa, czy dane w Schowku zmienił się od [Funkcja SetClipboard](#setclipboard) ostatnio została wywołana i jeśli tak, określa bieżący właściciel.
+Określa, czy dane ze schowka uległy zmianie od [](#setclipboard) czasu ostatniego wywołania programu setClipboard i, jeśli tak, identyfikują bieżącego właściciela.
 
 ```
 static COleDataSource* PASCAL GetClipboardOwner();
@@ -348,11 +348,11 @@ static COleDataSource* PASCAL GetClipboardOwner();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Dane źródła aktualnie w Schowku lub wartość NULL, jeśli nie ma nic w Schowku lub Schowka nie jest własnością aplikacji wywołującej.
+Źródło danych znajdujące się obecnie w schowku lub ma wartość NULL, jeśli nie ma niczego w schowku lub jeśli Schowek nie należy do aplikacji wywołującej.
 
-##  <a name="onrenderdata"></a>  COleDataSource::OnRenderData
+##  <a name="onrenderdata"></a>By uzyskać COleDataSource:: OnRenderData
 
-Metoda wywoływana przez platformę, by pobrać dane w określonym formacie.
+Wywoływane przez platformę, by pobrać dane w określonym formacie.
 
 ```
 virtual BOOL OnRenderData(
@@ -363,28 +363,28 @@ virtual BOOL OnRenderData(
 ### <a name="parameters"></a>Parametry
 
 *lpFormatEtc*<br/>
-Wskazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Struktura określająca format, w którym wymagane informacje.
+Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) , określając format, w którym informacje są żądane.
 
 *lpStgMedium*<br/>
-Wskazuje [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) struktury, w którym ma zostać zwrócone dane.
+Wskazuje strukturę [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) , w której mają zostać zwrócone dane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Podany format jest jednym wcześniej umieszczone w `COleDataSource` przy użyciu [DelayRenderData](#delayrenderdata) lub [DelayRenderFileData](#delayrenderfiledata) funkcję członkowską opóźnione renderowanie. Domyślna implementacja tej funkcji będzie wywoływać [OnRenderFileData](#onrenderfiledata) lub [OnRenderGlobalData](#onrenderglobaldata) przypadku nośnik dostarczony plik lub pamięć, odpowiednio. Jeśli żadna z tych formatów jest podany, domyślna implementacja będzie zwracają 0 i nic nie rób. Aby uzyskać więcej informacji na temat opóźnionego renderowania jako obsłużony przez MFC, zobacz artykuł [obiekty danych i źródeł danych: Manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
+Określony format jest jednym wcześniej umieszczonym w `COleDataSource` obiekcie przy użyciu funkcji składowej [DelayRenderData](#delayrenderdata) lub [DelayRenderFileData](#delayrenderfiledata) na potrzeby opóźnionego renderowania. Domyślna implementacja tej funkcji wywoła [OnRenderFileData](#onrenderfiledata) lub [OnRenderGlobalData](#onrenderglobaldata) , jeśli dostarczony nośnik magazynu jest odpowiednio plikiem lub pamięcią. Jeśli żaden z tych formatów nie zostanie podany, domyślna implementacja zwróci wartość 0 i nic nie rób. Aby uzyskać więcej informacji na temat opóźnionego renderowania jako obsługiwanego przez MFC [, zapoznaj się z tematem obiekty danych artykułu i źródła danych: Manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
 
-Jeśli *lpStgMedium*-> *tymed* jest TYMED_NULL, `STGMEDIUM` powinny być przydzielny i wypełnione określony przez *lpFormatEtc -> tymed*. Jeśli nie jest TYMED_NULL, `STGMEDIUM` powinno być wypełnione w miejscu z danymi.
+Jeśli *lpStgMedium*-> *TYMED jest* TYMED_NULL, powinnobyćprzydzieloneiwypełnianejakookreśloneprzezlpFormatEtc->TYMED.`STGMEDIUM` Jeśli nie jest to TYMED_NULL, `STGMEDIUM` należy wypełnić dane.
 
-Jest to zaawansowany możliwym do zastąpienia. Zastąp tę funkcję, aby podać dane w żądany format i średnia. W zależności od danych można zastąpić jedną z innych wersji tej funkcji, zamiast tego. W przypadku małych i stały rozmiar danych zastąpić `OnRenderGlobalData`. Jeśli Twoje dane znajduje się w pliku, lub o zmiennym rozmiarze, zastąpić `OnRenderFileData`.
+Jest to zaawansowany możliwy do zaawansowania. Zastąp tę funkcję, aby dostarczyć dane w żądanym formacie i średnim. W zależności od danych warto zamiast tego zastąpić jedną z innych wersji tej funkcji. Jeśli dane są małe i stały się w rozmiarze, Przesłoń `OnRenderGlobalData`. Jeśli dane są w pliku lub mają zmienny rozmiar, Przesłoń `OnRenderFileData`.
 
-Aby uzyskać więcej informacji, zobacz [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) i [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktur, [TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed) typ wyliczeniowy i [Metoda IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz struktury [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) i [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) , typ wyliczenia [TYMED](/windows/win32/api/objidl/ne-objidl-tymed) i [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) w Windows SDK.
 
-##  <a name="onrenderfiledata"></a>  COleDataSource::OnRenderFileData
+##  <a name="onrenderfiledata"></a>By uzyskać COleDataSource:: OnRenderFileData
 
-Metoda wywoływana przez platformę, by pobrać dane w określonym formacie po nośnika magazynowania określonego pliku.
+Wywoływane przez platformę, by pobrać dane w określonym formacie, gdy określony nośnik magazynu jest plikiem.
 
 ```
 virtual BOOL OnRenderFileData(
@@ -395,26 +395,26 @@ virtual BOOL OnRenderFileData(
 ### <a name="parameters"></a>Parametry
 
 *lpFormatEtc*<br/>
-Wskazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Struktura określająca format, w którym wymagane informacje.
+Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) , określając format, w którym informacje są żądane.
 
 *pFile*<br/>
-Wskazuje [CFile](../../mfc/reference/cfile-class.md) obiekt danych ma być renderowany.
+Wskazuje obiekt [CFile](../../mfc/reference/cfile-class.md) , w którym mają być renderowane dane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Podany format jest jednym wcześniej umieszczone w `COleDataSource` przy użyciu [DelayRenderData](#delayrenderdata) funkcję członkowską opóźnione renderowanie. Domyślna implementacja tej funkcji, po prostu zwraca wartość FALSE.
+Określony format jest jednym wcześniej umieszczonym w `COleDataSource` obiekcie przy użyciu funkcji składowej [DelayRenderData](#delayrenderdata) do opóźnionego renderowania. Domyślna implementacja tej funkcji po prostu zwraca wartość FALSE.
 
-Jest to zaawansowany możliwym do zastąpienia. Zastąp tę funkcję, aby podać dane w żądany format i średnia. W zależności od danych można zastąpić jedną z innych wersji tej funkcji, zamiast tego. Jeśli chcesz obsługiwać wiele nośników, zastępują [OnRenderData](#onrenderdata). Jeśli Twoje dane znajduje się w pliku, lub o zmiennym rozmiarze, zastąpić `OnRenderFileData`. Aby uzyskać więcej informacji na temat opóźnionego renderowania jako obsłużony przez MFC, zobacz artykuł [obiekty danych i źródeł danych: Manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
+Jest to zaawansowany możliwy do zaawansowania. Zastąp tę funkcję, aby dostarczyć dane w żądanym formacie i średnim. W zależności od danych warto zamiast tego zastąpić jedną z innych wersji tej funkcji. Jeśli chcesz obsłużyć wiele nośników magazynu, Przesłoń [OnRenderData](#onrenderdata). Jeśli dane są w pliku lub mają zmienny rozmiar, Przesłoń `OnRenderFileData`. Aby uzyskać więcej informacji na temat opóźnionego renderowania jako obsługiwanego przez MFC [, zapoznaj się z tematem obiekty danych artykułu i źródła danych: Manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
 
-Aby uzyskać więcej informacji, zobacz [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktury i [Metoda IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) i [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) w Windows SDK.
 
-##  <a name="onrenderglobaldata"></a>  COleDataSource::OnRenderGlobalData
+##  <a name="onrenderglobaldata"></a>By uzyskać COleDataSource:: OnRenderGlobalData
 
-Metoda wywoływana przez platformę, by pobrać dane w określonym formacie po określonym nośniku pamięci globalnej.
+Wywoływane przez platformę, aby pobrać dane w określonym formacie, gdy określony nośnik magazynu ma pamięć globalną.
 
 ```
 virtual BOOL OnRenderGlobalData(
@@ -425,28 +425,28 @@ virtual BOOL OnRenderGlobalData(
 ### <a name="parameters"></a>Parametry
 
 *lpFormatEtc*<br/>
-Wskazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Struktura określająca format, w którym wymagane informacje.
+Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) , określając format, w którym informacje są żądane.
 
 *phGlobal*<br/>
-Wskazuje dojścia do pamięci globalnej, w którym ma zostać zwrócone dane. Jeśli jeden nie jeszcze przydzielone, ten parametr może być równa NULL.
+Wskazuje dojście do pamięci globalnej, w której mają zostać zwrócone dane. Jeśli jeden z nich nie został jeszcze przydzielony, ten parametr może mieć wartość NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Podany format jest jednym wcześniej umieszczone w `COleDataSource` przy użyciu [DelayRenderData](#delayrenderdata) funkcję członkowską opóźnione renderowanie. Domyślna implementacja tej funkcji, po prostu zwraca wartość FALSE.
+Określony format jest jednym wcześniej umieszczonym w `COleDataSource` obiekcie przy użyciu funkcji składowej [DelayRenderData](#delayrenderdata) do opóźnionego renderowania. Domyślna implementacja tej funkcji po prostu zwraca wartość FALSE.
 
-Jeśli *phGlobal* ma wartość NULL, a następnie nowe wartości HGLOBAL powinien być przydzielony i zwracane w *phGlobal*. W przeciwnym razie wartości HGLOBAL określony przez *phGlobal* powinno być wypełnione przy użyciu danych. Ilość danych, umieszczone w wartości HGLOBAL nie może przekraczać bieżący rozmiar bloku pamięci. Ponadto nie można ponownie przydzielane bloku, na większy rozmiar.
+Jeśli *phGlobal* ma wartość null, należy alokować i zwrócić nową HGLOBAL w *phGlobal*. W przeciwnym razie HGLOBAL określona przez *phGlobal* powinna być wypełniony danymi. Ilość danych umieszczonych w HGLOBAL nie może przekraczać bieżącego rozmiaru bloku pamięci. Ponadto nie można zmienić przydziału bloku na większy rozmiar.
 
-Jest to zaawansowany możliwym do zastąpienia. Zastąp tę funkcję, aby podać dane w żądany format i średnia. W zależności od danych można zastąpić jedną z innych wersji tej funkcji, zamiast tego. Jeśli chcesz obsługiwać wiele nośników, zastępują [OnRenderData](#onrenderdata). Jeśli Twoje dane znajduje się w pliku, lub o zmiennym rozmiarze, zastąpić [OnRenderFileData](#onrenderfiledata). Aby uzyskać więcej informacji na temat opóźnionego renderowania jako obsłużony przez MFC, zobacz artykuł [obiekty danych i źródeł danych: Manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
+Jest to zaawansowany możliwy do zaawansowania. Zastąp tę funkcję, aby dostarczyć dane w żądanym formacie i średnim. W zależności od danych warto zamiast tego zastąpić jedną z innych wersji tej funkcji. Jeśli chcesz obsłużyć wiele nośników magazynu, Przesłoń [OnRenderData](#onrenderdata). Jeśli dane są w pliku lub mają zmienny rozmiar, Przesłoń [OnRenderFileData](#onrenderfiledata). Aby uzyskać więcej informacji na temat opóźnionego renderowania jako obsługiwanego przez MFC [, zapoznaj się z tematem obiekty danych artykułu i źródła danych: Manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
 
-Aby uzyskać więcej informacji, zobacz [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktury i [Metoda IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) w zestawie Windows SDK.
+Aby uzyskać więcej informacji, zobacz strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) i [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) w Windows SDK.
 
-##  <a name="onsetdata"></a>  COleDataSource::OnSetData
+##  <a name="onsetdata"></a>By uzyskać COleDataSource:: OnSetData
 
-Wywoływane przez platformę, by ustawić lub podmienić dane w `COleDataSource` obiektu w określonym formacie.
+Wywoływane przez platformę w celu ustawienia lub zastąpienia danych w `COleDataSource` obiekcie w określonym formacie.
 
 ```
 virtual BOOL OnSetData(
@@ -458,29 +458,29 @@ virtual BOOL OnSetData(
 ### <a name="parameters"></a>Parametry
 
 *lpFormatEtc*<br/>
-Wskazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktury, określając format, w którym dane są zastępowane.
+Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) , określając format, w którym są zastępowane dane.
 
 *lpStgMedium*<br/>
-Wskazuje [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) struktury zawierającej dane, które zastąpi bieżącą zawartość `COleDataSource` obiektu.
+Wskazuje strukturę [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) zawierającą dane, które zastąpią bieżącą zawartość `COleDataSource` obiektu.
 
 *bRelease*<br/>
-Wskazuje, kto jest właścicielem nośnika magazynowania po wykonaniu wywołania funkcji. Obiekt wywołujący decyduje o tym, kto jest odpowiedzialny za przy zwalnianiu zasobów przydzielonych w imieniu nośnika magazynowania. Obiekt wywołujący robi to poprzez ustawienie *bRelease*. Jeśli *bRelease* jest różna od zera, źródła danych przejmuje, zwalniając nośnik, po zakończeniu korzystania z niego. Gdy *bRelease* jest 0, obiekt wywołujący zachowuje własność i źródła danych przy użyciu nośnika magazynowania tylko na czas trwania wywołania.
+Wskazuje, kto ma własność nośnika magazynu po zakończeniu wywołania funkcji. Obiekt wywołujący decyduje, kto jest odpowiedzialny za wydanie zasobów przyznanych w imieniu nośnika magazynu. Obiekt wywołujący robi to przez ustawienie *bRelease*. Jeśli *bRelease* ma wartość różną od zera, źródłem danych jest własność, zwalniając nośnik po zakończeniu jego używania. Gdy *bRelease* jest równa 0, wywołujący zachowuje własność, a źródło danych może używać nośnika magazynu tylko dla czasu trwania wywołania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Źródło danych dopiero właściciela danych został pomyślnie uzyskał go. Oznacza to, go nie przejęcie na własność Jeśli `OnSetData` zwraca wartość 0. Jeśli źródło danych przejmuje na własność, zwalnia nośnika magazynowania, wywołując [ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium) funkcji.
+Źródło danych nie przejmuje własności danych do momentu jego pomyślnego uzyskania. Oznacza to, że nie przyjmuje własności, jeśli `OnSetData` zwraca wartość 0. Jeśli źródło danych przejmuje własność, zwalnia nośnik magazynu przez wywołanie funkcji [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) .
 
-Domyślna implementacja nic nie robi. Należy przesłonić tę funkcję, aby zamienić dane w określonym formacie. Jest to zaawansowany możliwym do zastąpienia.
+Domyślna implementacja nie robi nic. Zastąp tę funkcję, aby zastąpić dane w określonym formacie. Jest to zaawansowany możliwy do zaawansowania.
 
-Aby uzyskać więcej informacji, zobacz [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) i [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktury i [ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium) i [Metoda IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) Funkcje zestawu Windows SDK.
+Aby uzyskać więcej informacji, zobacz struktury [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) i [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) oraz [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) i [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) w Windows SDK.
 
-##  <a name="setclipboard"></a>  COleDataSource::SetClipboard
+##  <a name="setclipboard"></a>By uzyskać COleDataSource:: setClipboard
 
-Umieszcza dane zawarte w `COleDataSource` obiektu w Schowku po wywołaniu jednej z następujących funkcji: [CacheData](#cachedata), [CacheGlobalData](#cacheglobaldata), [DelayRenderData](#delayrenderdata), lub [DelayRenderFileData](#delayrenderfiledata).
+Umieszcza dane zawarte w `COleDataSource` obiekcie w Schowku po wywołaniu jednej z następujących funkcji: [CacheData](#cachedata), [CacheGlobalData](#cacheglobaldata), [DelayRenderData](#delayrenderdata)lub [DelayRenderFileData](#delayrenderfiledata).
 
 ```
 void SetClipboard();
@@ -488,8 +488,8 @@ void SetClipboard();
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
-[Próbki MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
+[Przykład HIERSVR MFC](../../overview/visual-cpp-samples.md)<br/>
+[Przykład OCLIENT MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa COleDataObject](../../mfc/reference/coledataobject-class.md)

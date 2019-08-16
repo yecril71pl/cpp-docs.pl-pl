@@ -1,21 +1,21 @@
 ---
-title: defaultvtable (atrybut COM C++)
+title: defaultvtable (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvtable
 helpviewer_keywords:
 - defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
-ms.openlocfilehash: 813fb9dd4edf2f6e522e7310ba1e8bfcd55ed2b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ab37af4deab516dc01f55f986811668737cf18c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62147954"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501644"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
-Definiuje interfejs jako domyślnym interfejsem obiektu COM vtable.
+Definiuje interfejs jako domyślny interfejs tablicy metod dla obiektu COM.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,15 +26,15 @@ Definiuje interfejs jako domyślnym interfejsem obiektu COM vtable.
 ### <a name="parameters"></a>Parametry
 
 *interface*<br/>
-Wyznaczonym interfejsu, który ma być vtable domyślnego dla obiektu COM.
+Wyznaczono interfejs, który ma być domyślną tablicą metod wirtualnych dla obiektu COM.
 
 ## <a name="remarks"></a>Uwagi
 
-**Defaultvtable** atrybut C++ ma taką samą funkcjonalność jak [defaultvtable](/windows/desktop/Midl/defaultvtable) atrybutów w MIDL.
+Atrybut **defaultvtable** C++ ma takie same funkcje jak atrybut [defaultvtable](/windows/win32/Midl/defaultvtable) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod pokazuje atrybuty dla klasy, która będzie używać **defaultvtable** do określenia domyślnego interfejsu:
+Poniższy kod przedstawia atrybuty klasy, która używa **defaultvtable** do określenia domyślnego interfejsu:
 
 ```cpp
 // cpp_attr_ref_defaultvtable.cpp
@@ -68,12 +68,12 @@ class CMyC3 : public IMyI3 {};
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **— struktura**|
+|**Dotyczy**|**Klasa**, **Struktura**|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|**coclass**|
+|**Wymagane atrybuty**|**coclass**|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

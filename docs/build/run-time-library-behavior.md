@@ -1,5 +1,5 @@
 ---
-title: Biblioteki dll i zachowanie biblioteki wykonawczej języka Visual C++
+title: Biblioteki DLL i C++ zachowanie biblioteki w czasie wykonywania wizualizacji
 ms.date: 05/06/2019
 f1_keywords:
 - _DllMainCRTStartup
@@ -15,35 +15,35 @@ helpviewer_keywords:
 - run-time [C++], DLL startup sequence
 - DLLs [C++], startup sequence
 ms.assetid: e06f24ab-6ca5-44ef-9857-aed0c6f049f2
-ms.openlocfilehash: d3f3197b6b7b01e7f69767b72286d6d21470cb0e
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: d44f3bf7a8b06f567b1af221e17085d589e56aca
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217752"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492617"
 ---
-# <a name="dlls-and-visual-c-run-time-library-behavior"></a>Biblioteki dll i zachowanie biblioteki wykonawczej języka Visual C++
+# <a name="dlls-and-visual-c-run-time-library-behavior"></a>Biblioteki DLL i C++ zachowanie biblioteki w czasie wykonywania wizualizacji
 
-Gdy tworzysz biblioteki dołączane dynamicznie (DLL) przy użyciu programu Visual Studio domyślnie konsolidator obejmuje wizualizacji C++ biblioteki wykonawczej (VCRuntime). VCRuntime zawiera kod wymagany do rozpoczęcia i zakończenia wykonywalne języka C/C++. Jeśli połączone do biblioteki DLL, kod VCRuntime zawiera wewnętrzny funkcję punktu wejścia biblioteki DLL o nazwie `_DllMainCRTStartup` obsługująca komunikaty systemu operacyjnego Windows, plik dll, który umożliwia dołączanie do lub odłączyć od procesu i wątku. `_DllMainCRTStartup` Funkcja wykonuje podstawowe zadania, takie jak konfigurowanie C biblioteki wykonawczej (CRT) inicjowanie i kończenie działania zabezpieczeń bufora stosu i wywołuje konstruktory i destruktory dla obiektów globalnych i statycznych. `_DllMainCRTStartup` Ponadto wywołuje funkcje punktów zaczepienia dla innych bibliotek, takich jak WinRT, MFC i ATL, aby wykonać swoje własne inicjowanie i kończenie działania. Bez ten proces inicjowania, CRT i inne biblioteki, a także zmiennych statycznych pozostanie w stanie niezainicjowanym. Ten sam inicjowania wewnętrznego VCRuntime i zakończenie procedury są nazywane czy biblioteka DLL będzie używać CRT połączone statycznie lub dynamicznie połączone DLL CRT.
+Podczas tworzenia biblioteki dołączanej dynamicznie (DLL) za pomocą programu Visual Studio, konsolidator obejmuje bibliotekę wykonawczą (VCRuntime) C++ wizualizacji. VCRuntime zawiera kod wymagany do zainicjowania i zakończenia pliku wykonywalnegoC++ C/. W przypadku połączenia z biblioteką DLL kod VCRuntime zawiera wewnętrzną funkcję `_DllMainCRTStartup` punktu wejścia biblioteki DLL, która obsługuje komunikaty systemu operacyjnego Windows w bibliotece DLL w celu dołączenia lub odłączenia od procesu lub wątku. `_DllMainCRTStartup` Funkcja wykonuje podstawowe zadania, takie jak Konfiguracja zabezpieczeń buforu stosu, inicjowanie i kończenie biblioteki uruchomieniowej języka C (CRT) oraz wywołania konstruktorów i destruktorów dla obiektów statycznych i globalnych. `_DllMainCRTStartup`Program wywołuje również funkcje haka dla innych bibliotek, takich jak WinRT, MFC i ATL, do wykonywania własnych operacji inicjowania i kończenia. Bez tego inicjalizacji CRT i inne biblioteki, a także zmienne statyczne, zostałyby pozostawione w stanie niezainicjowanym. Te same VCRuntime wewnętrzne procedury inicjowania i zakończenia są wywoływane, czy biblioteka DLL korzysta ze statycznie połączonej CRT czy dynamicznie połączonej biblioteki DLL.
 
-## <a name="default-dll-entry-point-dllmaincrtstartup"></a>Domyślne _DllMainCRTStartup punkt wejścia biblioteki DLL
+## <a name="default-dll-entry-point-_dllmaincrtstartup"></a>Domyślna _DllMainCRTStartup punktu wejścia biblioteki DLL
 
-W Windows, wszystkie biblioteki dll mogą zawierać funkcji opcjonalnych punktu wejścia, zwykle nazywane `DllMain`, która jest wywołana dla inicjowania i zakończenia. Daje to możliwość alokacji lub zwolnienia dodatkowych zasobów, zgodnie z potrzebami. Windows wywołuje funkcję punktu wejścia w czterech sytuacjach: załączanie procesu, odłączanie procesu, załączanie wątku i odłączanie wątku. Podczas ładowania biblioteki DLL do przestrzeni adresowej procesu po załadowaniu aplikacji, która używa lub gdy aplikacja żąda biblioteki DLL w czasie wykonywania, system operacyjny tworzy oddzielną kopię danych biblioteki DLL. Jest to nazywane *załączanie procesu*. *Załączanie wątku* występuje, gdy proces biblioteki DLL jest ładowany w tworzy nowy wątek. *Odłączanie wątku* występuje, gdy wątek się kończy, i *odłączanie procesu* biblioteki DLL nie jest już wymagane i jest wydane przez aplikację. System operacyjny wywołuje oddzielny punkt wejścia biblioteki DLL dla każdego z tych zdarzeń, przekazując *Przyczyna* argument dla każdego typu zdarzenia. Na przykład system operacyjny wysyła `DLL_PROCESS_ATTACH` jako *Przyczyna* argumentu w celu sygnalizowania, że proces dołączania.
+W systemie Windows wszystkie biblioteki DLL mogą zawierać opcjonalną funkcję punktu wejścia, zazwyczaj wywoływaną `DllMain`, która jest wywoływana dla inicjalizacji i zakończenia. Pozwala to na przydzielenie lub zwolnienie dodatkowych zasobów zgodnie z wymaganiami. System Windows wywołuje funkcję punktu wejścia w czterech sytuacjach: dołączanie procesu, odłączanie procesu, dołączanie wątku i odłączanie wątku. Podczas ładowania biblioteki DLL do przestrzeni adresowej procesu, gdy aplikacja, która korzysta z niej jest załadowana, lub gdy aplikacja żąda biblioteki DLL w czasie wykonywania, system operacyjny tworzy oddzielną kopię danych biblioteki DLL. Jest to tzw. *proces Attach*. Dołączanie do *wątku* występuje, gdy proces, w którym załadowano plik dll, tworzy nowy wątek. *Odłączanie wątku* występuje po zakończeniu wątku, a *odłączenie procesu* polega na tym, że biblioteka DLL nie jest już wymagana i jest dostarczana przez aplikację. System operacyjny wykonuje oddzielne wywołanie do punktu wejścia biblioteki DLL dla każdego z tych zdarzeń, przekazując argument *przyczyny* dla każdego typu zdarzenia. Na przykład, system operacyjny wysyła `DLL_PROCESS_ATTACH` jako argument *przyczyny* do dołączania do procesu sygnału.
 
-Biblioteka VCRuntime udostępnia funkcję punktu wejścia o nazwie `_DllMainCRTStartup` na obsługę operacji inicjowanie i kończenie działania domyślne. Na temat procesu dołączania, `_DllMainCRTStartup` funkcja konfiguruje sprawdzenia zabezpieczeń buforu, inicjuje CRT i inne biblioteki, inicjuje informacje typu run-time, inicjuje i wywołuje konstruktory danych statycznych i inną niż lokalna, inicjuje lokalny magazyn wątków , zwiększa Licznik wewnętrzny statyczny dla każdego dołączenia, a następnie wywołuje, dostarczone przez użytkownika lub biblioteki- `DllMain`. W procesie odłączania, funkcja przechodzi przez te kroki w odwrotnej kolejności. Wywołuje `DllMain`zmniejsza wewnętrznego licznika wywołuj destruktory, zakończenie wywołania CRT, funkcje i zarejestrowany `atexit` funkcje i powiadamia innych bibliotek, zakończenia. Gdy licznik załącznika zbliża się do zera, funkcja zwraca `FALSE` do wskazania Windows, czy można zwolnić bibliotekę DLL. `_DllMainCRTStartup` Funkcja jest również nazywany podczas wątku Dołączanie i odłączanie wątku. W takich przypadkach nie żadne dodatkowe inicjowania lub zakończenia na swój własny kod VCRuntime i po prostu wywołuje funkcję `DllMain` do przekazywania wiadomości wzdłuż. Jeśli `DllMain` zwraca `FALSE` z procesu dołączania, sygnalizujących niepowodzenie, `_DllMainCRTStartup` wywołania `DllMain` ponownie i przekazuje `DLL_PROCESS_DETACH` jako *Przyczyna* argumentów, następnie przechodzi przez pozostałą część Zakończenie procesu.
+Biblioteka VCRuntime zapewnia funkcję punktu wejścia o nazwie `_DllMainCRTStartup` do obsługi domyślnych operacji inicjowania i kończenia. W przypadku dołączania `_DllMainCRTStartup` do procesu funkcja konfiguruje sprawdzanie zabezpieczeń buforów, inicjuje środowisko CRT i inne biblioteki, inicjuje informacje o typie w czasie wykonywania, inicjuje i wywołuje konstruktory dla danych statycznych i nielokalnych, inicjuje lokalne magazyny wątków , zwiększa wewnętrzny licznik statyczny dla każdego dołączania, a następnie wywołuje dostarczone `DllMain`przez użytkownika lub biblioteki. Po odłączeniu do procesu funkcja przechodzi przez te kroki wstecz. Wywołuje `DllMain`, zmniejsza wewnętrzny licznik, wywołuje destruktory, wywołuje funkcje zakończenia CRT i zarejestrowane `atexit` funkcje i powiadamia wszystkie inne biblioteki o zakończeniu. Gdy licznik załączników przechodzi do zera, funkcja zwraca `FALSE` do systemu Windows, że biblioteka DLL może zostać zwolniona. `_DllMainCRTStartup` Funkcja jest również wywoływana podczas dołączania wątku i odłączania wątku. W takich przypadkach kod VCRuntime nie ma żadnych dodatkowych inicjalizacji ani nie kończy się samodzielnie, a jedynie wywołuje `DllMain` do przekazywania wiadomości. Jeśli `DllMain` zwraca `DllMain` `_DllMainCRTStartup` `DLL_PROCESS_DETACH` z dołączania procesu, sygnalizujący awarię, wywołania ponownie i przechodzą jako argument przyczyny, przechodzi przez resztę procesu zakończenia. `FALSE`
 
-Podczas tworzenia biblioteki dll w programie Visual Studio, domyślny punkt wejścia `_DllMainCRTStartup` dostarczonych przez VCRuntime jest automatycznie konsolidowana. Nie należy określić funkcję punktu wejścia dla biblioteki DLL przy użyciu [/Entry (symbol punktu wejścia)](reference/entry-entry-point-symbol.md) — opcja konsolidatora.
+Podczas kompilowania bibliotek DLL w programie Visual Studio domyślny punkt `_DllMainCRTStartup` wejścia dostarczony przez VCRuntime jest automatycznie łączony. Nie trzeba określać funkcji punktu wejścia dla biblioteki DLL przy użyciu opcji konsolidatora [/entry (symbol punktu wejścia)](reference/entry-entry-point-symbol.md) .
 
 > [!NOTE]
-> Choć jest możliwe określić inną funkcję punktu wejścia dla biblioteki DLL przy użyciu / Entry: — opcja konsolidatora, nie jest zalecane, ponieważ funkcja punktu wejścia będzie już potrzeby duplikowania wszystko, co który `_DllMainCRTStartup` jest w tej samej kolejności. VCRuntime udostępnia funkcje, które pozwalają na zduplikowane jego zachowanie. Na przykład, można wywołać [__security_init_cookie](../c-runtime-library/reference/security-init-cookie.md) natychmiast na temat procesu dołączania do obsługi [/GS (Sprawdzanie zabezpieczeń bufora)](reference/gs-buffer-security-check.md) buforu opcję sprawdzania. Możesz wywołać `_CRT_INIT` funkcję, przekazując te same parametry jako funkcję punktu wejścia do wykonania pozostałej części funkcji DLL inicjowania lub zakończenia.
+> Chociaż istnieje możliwość określenia innej funkcji punktu wejścia dla biblioteki DLL przy użyciu opcji/entry: konsolidatora, firma Microsoft nie zaleca tego, ponieważ funkcja punktu wejścia musiałaby zduplikować wszystkie elementy, które `_DllMainCRTStartup` w tej samej kolejności. VCRuntime udostępnia funkcje, które umożliwiają duplikowanie zachowania. Można na przykład wywołać [__security_init_cookie](../c-runtime-library/reference/security-init-cookie.md) natychmiast po dołączeniu do procesu, aby obsługiwał opcję sprawdzania bufora [(sprawdzanie zabezpieczeń bufora)](reference/gs-buffer-security-check.md) . Można wywołać `_CRT_INIT` funkcję, przekazując te same parametry co funkcja punktu wejścia, aby wykonać pozostałe funkcje inicjacji lub zakończenia biblioteki DLL.
 
 <a name="initializing-a-dll"></a>
 
-## <a name="initialize-a-dll"></a>Zainicjuj bibliotekę DLL
+## <a name="initialize-a-dll"></a>Inicjowanie biblioteki DLL
 
-Biblioteka DLL może być kod inicjujący, który musi być wykonany kiedy DLL się ładuje. Aby wykonać swoje własne inicjowanie i kończenie działania funkcji DLL `_DllMainCRTStartup` wywołuje funkcję o nazwie `DllMain` który można udostępnić. Twoje `DllMain` musi mieć podpis wymagane dla punktu wejścia biblioteki DLL. Funkcja punktu wejścia domyślne `_DllMainCRTStartup` wywołania `DllMain` z tymi samymi parametrami przekazywane przez Windows. Domyślnie, jeśli nie podasz `DllMain` funkcja, dostępna w Visual Studio i łączy je w tak, aby `_DllMainCRTStartup` zawsze ma coś do wywołania. Oznacza to, że jeśli nie musisz zainicjować bibliotekę DLL, nie ma specjalne, należy wykonać podczas kompilowania biblioteki DLL.
+Biblioteka DLL może mieć kod inicjujący, który musi zostać wykonany w przypadku załadowania biblioteki DLL. Aby można było wykonywać własne funkcje inicjowania i kończenia biblioteki DLL, program `_DllMainCRTStartup` wywołuje funkcję o nazwie `DllMain` , którą można podać. `DllMain` Wymagany jest podpis dla punktu wejścia biblioteki DLL. Domyślne wywołania `_DllMainCRTStartup` `DllMain` funkcji punktu wejścia przy użyciu tych samych parametrów, które są przesyłane przez system Windows. Domyślnie, jeśli nie podasz `DllMain` funkcji, program Visual Studio udostępnia ją dla Ciebie i łączy ją w `_DllMainCRTStartup` taki sposób, aby zawsze miał coś do wywołania. Oznacza to, że jeśli nie trzeba inicjować biblioteki DLL, nie ma żadnych specjalnych, które należy wykonać podczas kompilowania biblioteki DLL.
 
-To jest podpis używany dla `DllMain`:
+Sygnatura użyta dla `DllMain`:
 
 ```cpp
 #include <windows.h>
@@ -54,16 +54,16 @@ extern "C" BOOL WINAPI DllMain (
     LPVOID    const reserved); // reserved
 ```
 
-OPAKOWYWANIE niektóre biblioteki `DllMain` funkcji dla Ciebie. Na przykład w regularnej biblioteki DLL MFC, należy zaimplementować `CWinApp` obiektu `InitInstance` i `ExitInstance` elementów członkowskich do wykonania, inicjowanie i kończenie działania wymagane przez bibliotekę DLL. Aby uzyskać więcej informacji, zobacz [zainicjować zwykłe biblioteki DLL MFC](#initializing-regular-dlls) sekcji.
+Niektóre biblioteki zawijają `DllMain` tę funkcję. Na przykład w zwykłej bibliotece MFC DLL należy zaimplementować `CWinApp` funkcje `InitInstance` obiektu i `ExitInstance` elementu członkowskiego, aby wykonać inicjalizację i zakończenie wymagane przez bibliotekę DLL. Aby uzyskać więcej informacji, zobacz sekcję [Inicjowanie zwykłych BIBLIOTEK MFC DLL](#initializing-regular-dlls) .
 
 > [!WARNING]
-> Istnieją limity znaczące bezpiecznie jak w punkcie wejścia biblioteki DLL. Zobacz [— najlepsze praktyki ogólne](/windows/desktop/Dlls/dynamic-link-library-best-practices) dla określonych niebezpieczne wywołania interfejsów API w Windows `DllMain`. Jeśli potrzebujesz wszystko, ale następnie najprostszym inicjowania to zrobić w funkcji inicjowania biblioteki dll. Możesz wymagać od aplikacji, aby wywołać funkcję inicjowania po `DllMain` ma uruchamiania i przed ich wywołania innych funkcji w bibliotece DLL.
+> Istnieją znaczne ograniczenia dotyczące tego, co można bezpiecznie zrobić w punkcie wejścia biblioteki DLL. Zobacz [Ogólne najlepsze rozwiązania](/windows/win32/Dlls/dynamic-link-library-best-practices) dotyczące konkretnych interfejsów API systemu Windows, które nie są `DllMain`bezpieczne do wywołania w programie. Jeśli potrzebujesz wszystkiego, ale najprostsza Inicjalizacja, zrób to w funkcji inicjacji biblioteki DLL. Można wymagać, aby aplikacje wywoływały funkcję inicjującą `DllMain` po uruchomieniu i przed wywołaniem innych funkcji w bibliotece DLL.
 
 <a name="initializing-non-mfc-dlls"></a>
 
-### <a name="initialize-ordinary-non-mfc-dlls"></a>Zainicjuj bibliotekę DLL zwykłych (inne niż MFC)
+### <a name="initialize-ordinary-non-mfc-dlls"></a>Inicjowanie zwykłych bibliotek DLL (innych niż MFC)
 
-Do wykonywania własnych inicjowania w bibliotekach DLL zwykłych (inne niż MFC), korzystających z dostarczanego VCRuntime `_DllMainCRTStartup` punktu wejścia kodu źródłowego DLL musi zawierać funkcję o nazwie `DllMain`. Poniższy kod przedstawia podstawowy szkielet, jakie definicję Pokazywanie `DllMain` może wyglądać jak:
+Aby wykonać własne inicjalizacje w zwykłych bibliotekach DLL (innych niż MFC), które używają punktu `_DllMainCRTStartup` wejścia dostarczonego przez VCRuntime, kod źródłowy biblioteki DLL musi zawierać `DllMain`funkcję o nazwie. Poniższy kod przedstawia podstawowy szkielet pokazujący, jak wygląda definicja `DllMain` może wyglądać następująco:
 
 ```cpp
 #include <windows.h>
@@ -98,31 +98,31 @@ extern "C" BOOL WINAPI DllMain (
 ```
 
 > [!NOTE]
-> Ze starszą dokumentacją. zestaw Windows SDK mówi, że rzeczywista nazwa funkcję punktu wejścia biblioteki DLL muszą określać na wiersza polecenia z opcją/Entry konsolidatora. Za pomocą programu Visual Studio, nie trzeba korzystać z opcji/Entry, jeśli nazwa funkcji punktu wejścia jest `DllMain`. W rzeczywistości użycie opcji/Entry i nazwę punktu wejścia funkcji coś innego niż `DllMain`, CRT nie uzyskać prawidłowo zainicjowana, chyba że funkcję punktu wejścia dzięki tego samego wywołania inicjowania `_DllMainCRTStartup` sprawia, że.
+> W starszej dokumentacji Windows SDK należy określić rzeczywistą nazwę funkcji punktu wejścia biblioteki DLL w wierszu polecenia konsolidatora z opcją/ENTRY. W programie Visual Studio nie trzeba używać opcji/ENTRY, jeśli nazwa funkcji punktu wejścia to `DllMain`. W rzeczywistości, jeśli używasz opcji/entry i nazwij funkcję punktu wejścia inną niż `DllMain`, CRT nie zostanie prawidłowo zainicjowany, chyba że funkcja punktu wejścia wykonuje te same `_DllMainCRTStartup` wywołania inicjacji.
 
 <a name="initializing-regular-dlls"></a>
 
-### <a name="initialize-regular-mfc-dlls"></a>Zainicjuj regularną bibliotekę DLL MFC
+### <a name="initialize-regular-mfc-dlls"></a>Inicjowanie zwykłych bibliotek DLL MFC
 
-Ponieważ ma zwykłych bibliotekach MFC dll `CWinApp` obiektu powinien wykonują swoje zadania inicjowanie i kończenie działania w tej samej lokalizacji co aplikację MFC: w `InitInstance` i `ExitInstance` funkcji elementów członkowskich, które biblioteki dll `CWinApp`-pochodne Klasa. Ponieważ biblioteka MFC zawiera `DllMain` funkcja, która jest wywoływana przez `_DllMainCRTStartup` dla `DLL_PROCESS_ATTACH` i `DLL_PROCESS_DETACH`, nie należy napisać własny `DllMain` funkcji. MFC — pod warunkiem `DllMain` wywołaniach funkcji `InitInstance` Jeśli biblioteka DLL jest ładowany i wywołuje `ExitInstance` przed biblioteki DLL jest zwalniana.
+Ze `CWinApp` względu na to, że regularne biblioteki MFC DLL mają obiekt, powinny wykonywać zadania inicjowania i kończenia w tej samej lokalizacji co aplikacja MFC `InitInstance` : `ExitInstance` w programie i funkcji członkowskich klasy `CWinApp`pochodnej biblioteki DLL określonej. Ponieważ `DllMain` MFC udostępnia funkcję, która jest wywoływana przez `_DllMainCRTStartup` dla `DLL_PROCESS_ATTACH` i `DLL_PROCESS_DETACH`, nie należy pisać własnej `DllMain` funkcji. Funkcja udostępniona `DllMain` przez MFC jest wywoływana `InitInstance` podczas ładowania biblioteki DLL i wywołuje `ExitInstance` ją przed wyładowaniem biblioteki DLL.
 
-Zwykłej biblioteki MFC DLL można zachować informacje o wielu wątków, wywołując [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc) i [TlsGetValue](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue) w jego `InitInstance` funkcji. Te funkcje umożliwiają biblioteki DLL do śledzenia danych specyficznych wątku.
+Zwykła Biblioteka MFC DLL może śledzić wiele wątków, wywołując [Funkcja TlsAlloc](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsalloc) i [TlsGetValue](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue) w `InitInstance` funkcji. Te funkcje umożliwiają bibliotece DLL śledzenie danych specyficznych dla wątku.
 
-Regularne biblioteki DLL MFC, która łączy dynamicznie MFC, jeśli używasz dowolnego MFC OLE, baza danych MFC (lub DAO) lub obsługują MFC gniazd, odpowiednio, debugowania rozszerzenia MFC biblioteki DLL MFCO*wersji*D.dll, MFCD*wersji*D.dll i MFCN*wersji*D.dll (gdzie *wersji* jest numer wersji) jest automatycznie konsolidowana. Musi wywołać jedną z następujących funkcji inicjowania wstępnie zdefiniowane dla każdego z tych bibliotek DLL, których używasz w swojej zwykłej biblioteki MFC DLL w `CWinApp::InitInstance`.
+W zwykłej bibliotece MFC DLL, która dynamicznie łączy się z MFC, jeśli używasz dowolnej biblioteki MFC OLE, MFC Database (lub DAO) lub MFC Sockets support odpowiednio, debugowanie MFC Extension dll MFCO*wersja*d. dll, MFCD*wersja*d. dll i MFCN*wersja*d. dll ( gdzie *wersja* jest numerem wersji) jest automatycznie łączona. Musisz wywołać jedną z następujących wstępnie zdefiniowanych funkcji inicjujących dla każdej z tych bibliotek DLL, które są używane w zwykłych bibliotekach DLL `CWinApp::InitInstance`MFC.
 
-|Typ obsługi MFC|Funkcja inicjowania do wywołania|
+|Typ obsługi MFC|Funkcja inicjacji do wywołania|
 |-------------------------|-------------------------------------|
-|MFC OLE (MFCO*wersji*D.dll)|`AfxOleInitModule`|
-|Baza danych MFC (MFCD*wersji*D.dll)|`AfxDbInitModule`|
-|MFC gniazd (MFCN*wersji*D.dll)|`AfxNetInitModule`|
+|MFC OLE (MFCO*wersja*D. dll)|`AfxOleInitModule`|
+|Baza danych MFC (MFCD*wersja*D. dll)|`AfxDbInitModule`|
+|Gniazda MFC (MFCN*wersja*D. dll)|`AfxNetInitModule`|
 
 <a name="initializing-extension-dlls"></a>
 
-### <a name="initialize-mfc-extension-dlls"></a>Inicjowanie biblioteki DLL rozszerzeń MFC
+### <a name="initialize-mfc-extension-dlls"></a>Inicjuj biblioteki DLL rozszerzenia MFC
 
-Ponieważ rozszerzenia MFC biblioteki DLL nie mają `CWinApp`-pochodnych obiektu (podobnie jak zwykłych bibliotekach MFC dll), należy dodać swój kod, inicjowanie i kończenie działania, aby `DllMain` funkcja, która generuje kreatora MFC DLL.
+Ponieważ biblioteki DLL rozszerzenia MFC nie mają `CWinApp`obiektu pochodnego (jako zwykłych bibliotek DLL MFC), należy dodać kod inicjalizacji i zakończenia `DllMain` do funkcji generowanej przez kreatora MFC DLL.
 
-Kreator udostępnia następujący kod do biblioteki DLL rozszerzeń MFC. W kodzie `PROJNAME` jest symbolem zastępczym dla nazwy projektu.
+Kreator udostępnia Poniższy kod dla bibliotek DLL rozszerzeń MFC. W kodzie, `PROJNAME` jest symbolem zastępczym dla nazwy projektu.
 
 ```cpp
 #include "stdafx.h"
@@ -157,29 +157,29 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 }
 ```
 
-Tworzenie nowego `CDynLinkLibrary` obiekt podczas inicjowania umożliwia rozszerzenia MFC biblioteki DLL, aby wyeksportować `CRuntimeClass` obiektów lub zasobów do aplikacji klienckiej.
+Utworzenie nowego `CDynLinkLibrary` obiektu podczas inicjowania pozwala na eksportowanie `CRuntimeClass` obiektów lub zasobów do aplikacji klienckiej biblioteki DLL rozszerzenia MFC.
 
-Jeśli zamierzasz używać rozszerzenia MFC biblioteki DLL z co najmniej jeden zwykłych bibliotekach MFC dll, należy wyeksportować funkcję inicjowania, która tworzy `CDynLinkLibrary` obiektu. Ta funkcja musi zostać wywołany z każdej zwykłych bibliotekach MFC dll, który za pomocą rozszerzenia MFC biblioteki DLL. Znajduje się w odpowiednim miejscu, aby wywołać tę funkcję inicjowania `InitInstance` funkcji składowej typu MFC DLL regularne `CWinApp`-pochodzi obiekt przed rozpoczęciem korzystania z dowolnego z wyeksportowanej klasy lub funkcje MFC DLL rozszerzenia.
+Jeśli biblioteka DLL rozszerzenia MFC ma być używana z co najmniej jednej zwykłej biblioteki DLL MFC, należy wyeksportować funkcję inicjującą, która tworzy `CDynLinkLibrary` obiekt. Ta funkcja musi być wywołana z każdej zwykłej biblioteki DLL MFC, która używa biblioteki MFC DLL. Odpowiednie miejsce do wywołania tej funkcji inicjującej znajduje się w `InitInstance` funkcji członkowskiej regularnego obiektu pochodnego `CWinApp`biblioteki MFC DLL przed użyciem dowolnej z wyeksportowanych klas lub funkcji biblioteki DLL rozszerzenia MFC.
 
-W `DllMain` , generuje kreatora MFC DLL, wywołanie `AfxInitExtensionModule` przechwytuje klasy czasu wykonywania modułu (`CRuntimeClass` struktury) oraz jego fabryk obiektu (`COleObjectFactory` obiektów) do użycia podczas `CDynLinkLibrary` obiekt zostanie utworzony. Należy sprawdzić wartość zwracaną przez `AfxInitExtensionModule`; Jeśli zwracana jest wartość zero z `AfxInitExtensionModule`, zwracają wartość zero z Twojej `DllMain` funkcji.
+`CRuntimeClass` `AfxInitExtensionModule` `CDynLinkLibrary` `COleObjectFactory` W wyniku wygenerowania kreatora biblioteki MFC DLL wywołanie przechwytuje klasy uruchomieniowe modułu (struktury), a także jego fabryki obiektów do użycia podczas tworzenia obiektu. `DllMain` Należy sprawdzić wartość zwracaną przez `AfxInitExtensionModule`; Jeśli zwracana jest wartość zerowa z `AfxInitExtensionModule` `DllMain` , zwraca zero z funkcji.
 
-Jeśli biblioteka DLL rozszerzenia MFC zostanie jawnie połączony plik wykonywalny (co oznacza wykonywalny wywołuje `AfxLoadLibrary` połączyć z biblioteki DLL), należy dodać wywołanie `AfxTermExtensionModule` na `DLL_PROCESS_DETACH`. Dzięki tej funkcji MFC, aby wyczyścić rozszerzenia MFC biblioteki DLL, gdy każdy proces odłączy się od rozszerzenia MFC biblioteki DLL (której się dzieje, gdy kończy proces lub zwalnianie biblioteki DLL na `AfxFreeLibrary` wywołania). Jeśli biblioteka DLL rozszerzenia MFC zostaną połączone niejawnie aplikacji wywołanie `AfxTermExtensionModule` nie jest konieczne.
+Jeśli biblioteka DLL rozszerzenia MFC zostanie jawnie połączona z plikiem wykonywalnym (oznacza to, `AfxLoadLibrary` że pliki wykonywalne są wywoływane w celu połączenia z biblioteką DLL `AfxTermExtensionModule` ) `DLL_PROCESS_DETACH`, należy dodać wywołanie do usługi. Ta funkcja umożliwia MFC Oczyszczanie biblioteki DLL rozszerzenia MFC, gdy każdy proces odłącza się od biblioteki DLL rozszerzenia MFC (co się stanie w przypadku zakończenia procesu lub gdy biblioteka DLL zostanie zwolniona w wyniku `AfxFreeLibrary` wywołania). Jeśli biblioteka DLL rozszerzenia MFC będzie niejawnie łączona z aplikacją, wywołanie `AfxTermExtensionModule` nie jest konieczne.
 
-Aplikacje, które jawnie wywołać łącze do biblioteki DLL rozszerzeń MFC `AfxTermExtensionModule` podczas zwalnianie biblioteki DLL. Należy również użyć `AfxLoadLibrary` i `AfxFreeLibrary` (zamiast funkcji Win32 `LoadLibrary` i `FreeLibrary`) Jeśli aplikacja korzysta z wielu wątków. Za pomocą `AfxLoadLibrary` i `AfxFreeLibrary` zapewnia, że kod uruchamiania i zamykania, który wykonuje, gdy rozszerzenia MFC biblioteki DLL jest ładowany i zwolnione nie doprowadzić do uszkodzenia globalne MFC.
+Aplikacje, które jawnie łączą się z bibliotekami `AfxTermExtensionModule` DLL rozszerzenia MFC, muszą być wywoływane podczas zwalniania biblioteki DLL. Należy także używać `AfxLoadLibrary` i `AfxFreeLibrary` (zamiast funkcji `LoadLibrary` Win32 i `FreeLibrary`), jeśli aplikacja używa wielu wątków. Przy `AfxLoadLibrary` użyciu `AfxFreeLibrary` i zapewnia, że kod uruchamiania i zamykania, który jest wykonywany, gdy biblioteka DLL rozszerzenia MFC jest załadowana i zwolniona, nie powoduje uszkodzenia globalnego stanu MFC.
 
-Ponieważ MFCx0.dll jest w pełni zainicjowany przez czas `DllMain` jest wywoływana, można przydzielić pamięci i wywoływać funkcje MFC w ramach `DllMain` (w przeciwieństwie do 16-bitową wersję MFC).
+Ponieważ MFCx0. dll jest w pełni inicjowany przez czas `DllMain` , można przydzielić pamięć i wywoływać funkcje MFC w ramach `DllMain` (w przeciwieństwie do 16-bitowej wersji MFC).
 
-Biblioteki DLL rozszerzeń zająć się wielowątkowość obsługi `DLL_THREAD_ATTACH` i `DLL_THREAD_DETACH` przypadki, w `DllMain` funkcji. Te przypadki są przekazywane do `DllMain` po wątków Dołączanie i odłączanie od biblioteki DLL. Wywoływanie [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc) podczas dołączania się biblioteki DLL umożliwia biblioteki DLL zachować wątku (TLS) w magazynie lokalnym indeksów dla każdego wątku, dołączone do biblioteki DLL.
+Biblioteki DLL rozszerzeń mogą wymagać wielowątkowości przez obsługę `DLL_THREAD_ATTACH` przypadków i `DLL_THREAD_DETACH` w `DllMain` funkcji. Te przypadki są przesyłane do `DllMain` momentu dołączenia wątków i odłączenia ich od biblioteki DLL. Wywołanie [Funkcja TlsAlloc](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsalloc) , gdy biblioteka DLL jest dołączana, umożliwia biblioteki DLL obsługę indeksów lokalnego magazynu wątków (TLS) dla każdego wątku dołączonego do biblioteki DLL.
 
-Należy pamiętać, że plik nagłówkowy Afxdllx.h zawiera specjalne definicje struktury używanych w bibliotek DLL rozszerzeń MFC, takich jak definicja `AFX_EXTENSION_MODULE` i `CDynLinkLibrary`. Tego pliku nagłówkowego należy uwzględnić w Biblioteka DLL rozszerzenia MFC.
+Należy zauważyć, że plik nagłówka AFXDLLX. h zawiera specjalne definicje struktur używanych w bibliotekach DLL rozszerzenia MFC, takich jak definicja `AFX_EXTENSION_MODULE` dla `CDynLinkLibrary`i. Należy dołączyć ten plik nagłówka do biblioteki DLL rozszerzenia MFC.
 
 > [!NOTE]
->  Jest ważne, że możesz zdefiniować ani Usuń definicje, żadnego z `_AFX_NO_XXX` makr w pliku Stdafx.h. Te makra istnieje wyłącznie na potrzeby sprawdzania, czy platforma dany element docelowy obsługuje tę funkcję. Można napisać program, aby sprawdzić te makra (na przykład `#ifndef _AFX_NO_OLE_SUPPORT`), ale program nigdy nie należy zdefiniować lub Usuń definicje makr.
+>  Ważne jest, aby nie definiować ani nie definiować żadnych `_AFX_NO_XXX` makr w stdafx. h. Te makra istnieją tylko w celu sprawdzenia, czy konkretna platforma docelowa obsługuje tę funkcję. Można napisać program, aby sprawdzić te makra (na przykład `#ifndef _AFX_NO_OLE_SUPPORT`), ale program nigdy nie definiuje ani nie definiuje tych makr.
 
-Funkcja inicjowania próbki, która obsługuje wielowątkowość znajduje się w [za pomocą wątku lokalnego magazynu w bibliotece dll](/windows/desktop/Dlls/using-thread-local-storage-in-a-dynamic-link-library) w zestawie Windows SDK. Należy pamiętać, że przykład zawiera funkcję punktu wejścia o nazwie `LibMain`, ale należy nazwać tę funkcję, `DllMain` , która działa z biblioteki wykonawczej MFC i C.
+Przykładowa funkcja inicjująca, która obsługuje wielowątkowość, jest dołączana do [użycia lokalnego magazynu wątków w bibliotece dołączanej dynamicznie](/windows/win32/Dlls/using-thread-local-storage-in-a-dynamic-link-library) w Windows SDK. Należy zauważyć, że przykład zawiera funkcję punktu wejścia o nazwie `LibMain`, ale należy nazwać tę funkcję `DllMain` , aby działała z bibliotekami wykonawczymi MFC i C.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Tworzenie bibliotek DLL języka C/C++ w programie Visual Studio](dlls-in-visual-cpp.md)<br/>
-[Punkt wejścia funkcji DllMain](/windows/desktop/Dlls/dllmain)<br/>
-[Biblioteka dołączana dynamicznie najlepszych rozwiązań](/windows/desktop/Dlls/dynamic-link-library-best-practices)
+[Tworzenie C/C++ dll w Visual Studio](dlls-in-visual-cpp.md)<br/>
+[Punkt wejścia DllMain](/windows/win32/Dlls/dllmain)<br/>
+[Najlepsze rozwiązania dotyczące biblioteki dołączanej dynamicznie](/windows/win32/Dlls/dynamic-link-library-best-practices)

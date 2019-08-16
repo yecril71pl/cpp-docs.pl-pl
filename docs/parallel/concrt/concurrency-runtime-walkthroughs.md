@@ -5,50 +5,50 @@ helpviewer_keywords:
 - walkthroughs [Concurrency Runtime]
 - Concurrency Runtime, walkthroughs
 ms.assetid: 7374c5e9-54eb-44bf-9ed9-5e190cfd290b
-ms.openlocfilehash: d176049bb3b03ae0f55170e45e20e7c2c0e322ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c5973f8010d7c428406a8a3f69574eab20edf82
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296497"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69512826"
 ---
 # <a name="concurrency-runtime-walkthroughs"></a>Współbieżność środowiska wykonawczego — Wskazówki
 
-Oparte na scenariuszach tematy w tej sekcji pokazano, jak używać wielu funkcji środowiska uruchomieniowego współbieżności.
+W tematach w tej sekcji opisano, jak używać wielu funkcji środowisko uruchomieniowe współbieżności.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
 [Przewodnik: łączenie za pomocą zadań i żądań XML HTTP](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
-Ilustruje sposób używania [IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) i [IXMLHTTPRequest2Callback](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) interfejsów oraz zadań wysyłać żądania HTTP GET i POST do usługi sieci web w aplikacji platformy uniwersalnej Windows (UWP).
+Pokazuje, w jaki sposób używać interfejsów [IXMLHTTPRequest2](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2) i [IXMLHTTPRequest2Callback](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2callback) wraz z zadaniami do wysyłania żądań HTTP GET i post do usługi sieci Web w aplikacji platforma uniwersalna systemu Windows (platformy UWP).
 
 [Przewodnik: tworzenie aplikacji opartej o agentów](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br/>
-W tym artykule opisano sposób tworzenia podstawowych aplikacji opartej o agentów.
+Opisuje sposób tworzenia podstawowej aplikacji opartej na agencie.
 
 [Przewodnik: tworzenie agenta przepływu danych](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
-Pokazuje, jak tworzyć aplikacje oparte na agentach, oparte na przepływ danych, a nie na przepływ sterowania.
+Pokazuje, jak tworzyć aplikacje oparte na agentach, które są oparte na przepływu danych, a nie na przepływie sterowania.
 
 [Przewodnik: tworzenie sieci przetwarzania obrazów](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
-Pokazuje, jak utworzyć sieć bloki komunikatów asynchronicznych, wykonujących przetwarzanie obrazu.
+Pokazuje, jak utworzyć sieć asynchronicznych bloków komunikatów, które wykonują przetwarzanie obrazu.
 
 [Przewodnik: wdrażanie przyszłych operacji](../../parallel/concrt/walkthrough-implementing-futures.md)<br/>
-Pokazuje, jak asynchroniczne obliczenia wartości do późniejszego użycia.
+Pokazuje, jak asynchronicznie obliczać wartości do późniejszego użycia.
 
 [Przewodnik: korzystanie ze złączy w celu zapobiegania zakleszczeniom](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)<br/>
-Używa problem ucztujących filozofów, aby zilustrować, jak używać [concurrency::join](../../parallel/concrt/reference/join-class.md) klasy w celu uniknięcia zakleszczenia w aplikacji.
+Używa problemu rekomendowanych lokali ucztujących, aby zilustrować, jak używać klasy [concurrency:: join](../../parallel/concrt/reference/join-class.md) w celu zapobiegania zakleszczeniom w aplikacji.
 
 [Przewodnik: usuwanie pracy z wątku interfejs użytkownika](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)<br/>
-Pokazuje, jak poprawić wydajność aplikacji MFC, który rysuje fraktalowy Mandelbrot.
+Pokazuje, jak zwiększyć wydajność aplikacji MFC, która rysuje Mandelbrot Fractal.
 
 [Przewodnik: korzystanie ze środowiska uruchomieniowego współbieżności w aplikacji z możliwością korzystania z COM](../../parallel/concrt/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application.md)<br/>
-Pokazuje sposób korzystania ze współbieżności środowiska wykonawczego w aplikacji, która używa Component Object Model (COM).
+Pokazuje, jak używać środowisko uruchomieniowe współbieżności w aplikacji, która używa Component Object Model (COM).
 
 [Przewodnik: adaptacja istniejącego kodu do potrzeb zadań lekkich](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)<br/>
-Pokazuje, jak dostosować istniejący kod, który używa interfejsu API Windows do tworzenia i wykonywanie wątku w celu użycia lekkiego zadania.
+Pokazuje, w jaki sposób dostosować istniejący kod, który używa interfejsu API systemu Windows do tworzenia i wykonywania wątku do korzystania z uproszczonego zadania.
 
 [Przewodnik: tworzenie niestandardowego bloku komunikatów](../../parallel/concrt/walkthrough-creating-a-custom-message-block.md)<br/>
-W tym artykule opisano sposób tworzenia komunikatów niestandardowy typ bloku, które porządkuje przychodzące wiadomości według priorytetu.
+Opisuje sposób tworzenia niestandardowego typu bloku komunikatów, który porządkuje komunikaty przychodzące według priorytetu.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
 [Środowisko uruchomieniowe współbieżności](../../parallel/concrt/concurrency-runtime.md)<br/>
-Wprowadza platformy programowania współbieżnego dla języka Visual C++.
+Wprowadza współbieżne środowisko programistyczne dla C++wizualizacji.

@@ -8,30 +8,30 @@ helpviewer_keywords:
 - argv argument
 - argc argument
 ms.assetid: 91c2cbe3-9aca-4277-afa1-6137eb8fb704
-ms.openlocfilehash: 71301bd5eedf2806e97b8d24d95beaf2843427ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88d477c874d62800c47bb03220246cb3f0999724
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313527"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492506"
 ---
 # <a name="argument-description"></a>Opis argumentu
 
-`argc` Parametru w **głównego** i **wmain** funkcji jest liczbą całkowitą, określając, ile argumentów są przekazywane do programu z poziomu wiersza polecenia. Ponieważ nazwa programu jest uznawany za argument, a wartość `argc` co najmniej jeden.
+Parametr w funkcjach **Main** i wmain jest liczbą całkowitą określającą liczbę argumentów, które są przekazane do programu z wiersza polecenia. `argc` Ponieważ nazwa programu jest traktowana jako argument, wartość `argc` jest równa co najmniej jednej.
 
 ## <a name="remarks"></a>Uwagi
 
-`argv` Parametr jest tablicą wskaźników do ciągów znaków zakończony znakiem null, reprezentujący argumenty programu. Każdy element punktów tablicy na ciąg reprezentujący argument przekazany do **głównego** (lub **wmain**). (Aby uzyskać informacje na temat tablic, zobacz [deklaracje tablicy](../c-language/array-declarations.md).) `argv` Parametru może być zadeklarowana jako tablica wskaźników do typu `char` (`char *argv[]`) lub jako wskaźnik do wskaźników do typu `char` (`char **argv`). Aby uzyskać **wmain**, `argv` parametru może być zadeklarowana jako tablica wskaźników do typu `wchar_t` (`wchar_t *argv[]`) lub jako wskaźnik do wskaźników do typu `wchar_t` (`wchar_t **argv`).
+`argv` Parametr jest tablicą wskaźników do ciągów zakończonych znakiem null reprezentujących argumenty programu. Każdy element tablicy wskazuje reprezentację argumentu przekazaną do **Main** (lub **wmain**). (Aby uzyskać informacje na temat tablic [](../c-language/array-declarations.md), zobacz Deklaracje tablicowe). `char *argv[]` `char` `char **argv` `char` Parametr może być zadeklarowany jako tablica wskaźników do typu () lub jako wskaźnik do wskaźników do typu (). `argv` Dla **wmain** `argv` parametr może być zadeklarowany jako tablica wskaźników do typu `wchar_t` (`wchar_t *argv[]`) lub jako wskaźnik do wskaźników do typu `wchar_t` (`wchar_t **argv`).
 
-Zgodnie z Konwencją `argv` **[0]** jest poleceniem, z którym wywoływany jest program.  Jednak jest możliwe, aby utworzyć proces przy użyciu [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) i jeśli korzystasz z pierwszego i drugiego argumentu (`lpApplicationName` i `lpCommandLine`), `argv` **[0]** może nie być Nazwa pliku wykonywalnego; Użyj [Funkcja GetModuleFileName](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea) można pobrać nazwy pliku wykonywalnego.
+Zgodnie z Konwencją, `argv` **[0]** jest poleceniem, z którym wywoływany jest program.  Istnieje jednak możliwość duplikowania procesu przy użyciu metody [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw) , a jeśli używasz zarówno pierwszego, jak i`lpApplicationName` drugiego argumentu (i `lpCommandLine`), `argv` **[0]** nie może być nazwą pliku wykonywalnego; Użyj [Funkcja GetModuleFileName](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew) do Pobierz nazwę pliku wykonywalnego.
 
-Ostatnie wskaźnika (`argv[argc]`) jest **NULL**. (Zobacz [getenv](../c-runtime-library/reference/getenv-wgetenv.md) w *odwołanie do biblioteki wykonawczej* dla alternatywną metodę w celu uzyskania informacji o zmiennej środowiska.)
+Ostatni wskaźnik (`argv[argc]`) ma **wartość null**. (Zobacz [getenv](../c-runtime-library/reference/getenv-wgetenv.md) w *dokumentacji* środowiska wykonawczego, aby uzyskać alternatywną metodę uzyskiwania informacji o zmiennych środowiskowych).
 
 **Microsoft Specific**
 
-`envp` Parametr jest wskaźnikiem do tablicy zakończony znakiem null ciągi znaków reprezentujące wartości zmiennych środowiskowych użytkownika. `envp` Parametru mogą być deklarowane jako tablicę wskaźników do `char` (`char *envp[]`) lub jako wskaźnik do wskaźników do `char` (`char **envp`). W **wmain** funkcji `envp` parametru mogą być deklarowane jako tablicę wskaźników do `wchar_t` (`wchar_t *envp[]`) lub jako wskaźnik do wskaźników do `wchar_t` (`wchar_t **envp`). Końca tablicy jest wskazywana przez **NULL** \*wskaźnika. Należy zauważyć, że blok środowiska przekazany do **głównego** lub **wmain** jest "zamrożoną" kopią bieżącego środowiska. Jeśli następnie zmienisz środowisko przez wywołanie _**putenv** lub `_wputenv`, bieżące środowisko (zwrócone przez `getenv` / `_wgetenv` i `_environ` lub `_wenviron` zmienne) ulegnie zmianie, ale blok wskazywany przez `envp` nie ulegnie zmianie. `envp` Parametr jest zgodny w języku C, ale nie w języku C++ ze standardem ANSI.
+`envp` Parametr jest wskaźnikiem do tablicy ciągów zakończonych wartością null, które reprezentują wartości ustawione w zmiennych środowiskowych użytkownika. `char *envp[]` `char` `char **envp` `char` Parametr może być zadeklarowany jako tablica wskaźników do () lub jako wskaźnik do wskaźników (). `envp` W funkcji `envp` wmain parametr może być zadeklarowany jako tablica wskaźników do `wchar_t` (`wchar_t *envp[]`) lub jako wskaźnik do wskaźników `wchar_t` (`wchar_t **envp`). Koniec tablicy jest wskazywany przez wskaźnik o **wartości null** \*. Należy zauważyć, że blok środowiska przeszedł do **Main** lub **wmain** jest kopią "zamrożoną" bieżącego środowiska. Jeśli następnie zmienisz środowisko za pośrednictwem wywołania do _**putenv** lub `_wputenv`, bieżące środowisko ( `_environ` zwracane przez `_wgetenv` `getenv` / i zmienne or `_wenviron` ) ulegnie zmianie, ale blok wskazywany przez `envp` nie zmieni się. Parametr jest zgodny ze standardem ANSI w języku C, ale nie w C++ `envp`
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

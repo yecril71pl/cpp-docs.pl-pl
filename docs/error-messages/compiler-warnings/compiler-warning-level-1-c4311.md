@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4311
+title: Ostrzeżenie kompilatora (poziom 1) C4311
 ms.date: 11/04/2016
 f1_keywords:
 - C4311
 helpviewer_keywords:
 - C4311
 ms.assetid: ddc579d0-d051-47bc-915d-71ffb32323c9
-ms.openlocfilehash: 5f9b8ce710879913fdad1be5c0f22f8e3f4ed9d7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e44dafb6675882a1a62fba5144f85120378421d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408332"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510058"
 ---
-# <a name="compiler-warning-level-1-c4311"></a>Kompilator ostrzeżenie (poziom 1) C4311
+# <a name="compiler-warning-level-1-c4311"></a>Ostrzeżenie kompilatora (poziom 1) C4311
 
 'zmienna' : obcinanie wskaźnika z 'typ do 'typ'
 
-To ostrzeżenie wykrywa problemy obcięcie wskaźnika 64-bitowego. Na przykład, jeśli kod jest kompilowany dla architektury 64-bitowych, wartość wskaźnika (64-bitowy) zostanie obcięta Jeśli zostanie przypisany do `int` (32-bitowy). Aby uzyskać więcej informacji, zobacz [zasady za pomocą wskaźników](/windows/desktop/WinProg64/rules-for-using-pointers).
+To ostrzeżenie wykrywa problemy z obcinaniem wskaźnika 64-bitowego. Na przykład jeśli kod jest kompilowany dla architektury 64-bitowej, wartość wskaźnika (64 bitów) zostanie obcięta, jeśli zostanie przypisana do `int` (32 bitów). Aby uzyskać więcej informacji, zobacz [reguły dotyczące korzystania ze wskaźników](/windows/win32/WinProg64/rules-for-using-pointers).
 
-Aby uzyskać dodatkowe informacje na temat typowych przyczyn ostrzeżenie C4311, zobacz [typowe błędy kompilatora](/windows/desktop/WinProg64/common-compiler-errors).
+Aby uzyskać dodatkowe informacje na temat typowych przyczyn C4311 ostrzeżeń, zobacz [typowe błędy kompilatora](/windows/win32/WinProg64/common-compiler-errors).
 
-Poniższy kod generuje C4311 podczas kompilowania elementu docelowego 64-bitowego i pokazuje, jak go naprawić:
+Poniższy przykład kodu generuje C4311 podczas kompilowania dla elementu docelowego 64-bitowego, a następnie pokazuje, jak go naprawić:
 
 ```
 // C4311.cpp

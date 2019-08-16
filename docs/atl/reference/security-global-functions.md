@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ACL object global functions
 - security IDs [C++]
 ms.assetid: 6a584bfe-16b7-47f4-8439-9c789c41567a
-ms.openlocfilehash: 435ab4756808a530749e110302b73d16a31c38c6
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 5f3c0464b239f4500d416b80ae4fdf06c2dc386f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915522"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495175"
 ---
 # <a name="security-global-functions"></a>Funkcje globalne zabezpieczeń
 
@@ -66,7 +66,7 @@ inline bool AtlGetDacl(
 Dojście do obiektu, dla którego mają zostać pobrane informacje o zabezpieczeniach.
 
 *ObjectType*<br/>
-Określa wartość z wyliczenia [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , która wskazuje typ obiektu identyfikowanego przez parametr *hObject* .
+Określa wartość z wyliczenia [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) , która wskazuje typ obiektu identyfikowanego przez parametr *hObject* .
 
 *pDacl*<br/>
 Wskaźnik do obiektu DACL, który będzie zawierać pobrane informacje o zabezpieczeniach.
@@ -100,7 +100,7 @@ inline bool AtlSetDacl(
 Dojście do obiektu, dla którego chcesz ustawić informacje o zabezpieczeniach.
 
 *ObjectType*<br/>
-Określa wartość z wyliczenia [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , która wskazuje typ obiektu identyfikowanego przez parametr *hObject* .
+Określa wartość z wyliczenia [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) , która wskazuje typ obiektu identyfikowanego przez parametr *hObject* .
 
 *rDacl*<br/>
 Lista DACL zawierająca nowe informacje o zabezpieczeniach.
@@ -139,7 +139,7 @@ inline bool AtlGetGroupSid(
 Dojście do obiektu, z którego mają zostać pobrane informacje o zabezpieczeniach.
 
 *ObjectType*<br/>
-Określa wartość z wyliczenia [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , która wskazuje typ obiektu identyfikowanego przez parametr *hObject* .
+Określa wartość z wyliczenia [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) , która wskazuje typ obiektu identyfikowanego przez parametr *hObject* .
 
 *Pusty PSID*<br/>
 Wskaźnik do `CSid` obiektu, który będzie zawierać nowe informacje o zabezpieczeniach.
@@ -172,7 +172,7 @@ inline bool AtlSetGroupSid(
 Dojście do obiektu, dla którego chcesz ustawić informacje o zabezpieczeniach.
 
 *ObjectType*<br/>
-Określa wartość z wyliczenia [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , która wskazuje typ obiektu identyfikowanego przez parametr *hObject* .
+Określa wartość z wyliczenia [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) , która wskazuje typ obiektu identyfikowanego przez parametr *hObject* .
 
 *rSid*<br/>
 `CSid` Obiekt zawierający nowe informacje o zabezpieczeniach.
@@ -205,7 +205,7 @@ inline bool AtlGetOwnerSid(
 Dojście do obiektu, z którego mają zostać pobrane informacje o zabezpieczeniach.
 
 *ObjectType*<br/>
-Określa wartość z wyliczenia [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , która wskazuje typ obiektu identyfikowanego przez parametr *hObject* .
+Określa wartość z wyliczenia [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) , która wskazuje typ obiektu identyfikowanego przez parametr *hObject* .
 
 *Pusty PSID*<br/>
 Wskaźnik do `CSid` obiektu, który będzie zawierać nowe informacje o zabezpieczeniach.
@@ -238,7 +238,7 @@ inline bool AtlSetOwnerSid(
 Dojście do obiektu, dla którego chcesz ustawić informacje o zabezpieczeniach.
 
 *ObjectType*<br/>
-Określa wartość z wyliczenia [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , która wskazuje typ obiektu identyfikowanego przez parametr *hObject* .
+Określa wartość z wyliczenia [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) , która wskazuje typ obiektu identyfikowanego przez parametr *hObject* .
 
 *rSid*<br/>
 `CSid` Obiekt zawierający nowe informacje o zabezpieczeniach.
@@ -272,7 +272,7 @@ inline bool AtlGetSacl(
 Dojście do obiektu, z którego mają zostać pobrane informacje o zabezpieczeniach.
 
 *ObjectType*<br/>
-Określa wartość z wyliczenia [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , która wskazuje typ obiektu identyfikowanego przez parametr *hObject* .
+Określa wartość z wyliczenia [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) , która wskazuje typ obiektu identyfikowanego przez parametr *hObject* .
 
 *pSacl*<br/>
 Wskaźnik do obiektu SACL, który będzie zawierać pobrane informacje o zabezpieczeniach.
@@ -314,7 +314,7 @@ inline bool AtlSetSacl(
 Dojście do obiektu, dla którego chcesz ustawić informacje o zabezpieczeniach.
 
 *ObjectType*<br/>
-Określa wartość z wyliczenia [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , która wskazuje typ obiektu identyfikowanego przez parametr *hObject* .
+Określa wartość z wyliczenia [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) , która wskazuje typ obiektu identyfikowanego przez parametr *hObject* .
 
 *rSacl*<br/>
 Lista SACL zawierająca nowe informacje o zabezpieczeniach.
@@ -363,13 +363,13 @@ bool bRequestNeededPrivileges = true) throw(...);
 Wskaźnik na ciąg zakończony znakiem null, który określa nazwę obiektu, z którego mają zostać pobrane informacje o zabezpieczeniach.
 
 *ObjectType*<br/>
-Określa wartość z wyliczenia [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , która wskazuje typ obiektu identyfikowanego przez parametr *pszObjectName* .
+Określa wartość z wyliczenia [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) , która wskazuje typ obiektu identyfikowanego przez parametr *pszObjectName* .
 
 *pSecurityDescriptor*<br/>
 Obiekt, który odbiera żądany deskryptor zabezpieczeń.
 
 *requestedInfo*<br/>
-Zestaw flag [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) bit, które wskazują typ informacji o zabezpieczeniach do pobrania. Ten parametr może być kombinacją następujących wartości.
+Zestaw flag [SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information) bit, które wskazują typ informacji o zabezpieczeniach do pobrania. Ten parametr może być kombinacją następujących wartości.
 
 *bRequestNeededPrivileges*<br/>
 W przypadku wartości true funkcja podejmie próbę włączenia uprawnienia SE_SECURITY_NAME i przywrócenia jej po zakończeniu.

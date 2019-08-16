@@ -40,19 +40,19 @@ helpviewer_keywords:
 - wcsdec function
 - _mbsdec function
 ms.assetid: ae37c223-800f-48a9-ae8e-38c8d20af2dd
-ms.openlocfilehash: 7e88bcf5bf7ffc5eba6feecd545cda8f7950829c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a937f8fcd18dd62bb7c63cf60c250cf7986b69b7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353894"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500905"
 ---
-# <a name="strdec-wcsdec-mbsdec-mbsdecl"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
+# <a name="_strdec-_wcsdec-_mbsdec-_mbsdec_l"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
 
-Przenosi wskaźnik ciąg wstecz o jeden znak.
+Przenosi wskaźnik ciągu z powrotem o jeden znak.
 
 > [!IMPORTANT]
-> **mbsdec** i **mbsdec_l** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbsdec** i **mbsdec_l** nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -79,28 +79,28 @@ unsigned char *_mbsdec_l(
 ### <a name="parameters"></a>Parametry
 
 *start*<br/>
-Wskaźnik na dowolny znak (lub **_mbsdec** i **_mbsdec_l**, pierwszy bajt jakiegokolwiek znaku wielobajtowego) w ciągu źródłowym; *start* musi poprzedzać *bieżącego* w ciągu źródłowego.
+Wskaźnik na dowolny znak (lub dla **_mbsdec** i **_mbsdec_l**, pierwszy bajt dowolnego znaku wielobajtowego) w ciągu źródłowym; *początek* musi poprzedzać *bieżącą* wartość w ciągu źródłowym.
 
-*bieżący*<br/>
-Wskaźnik na dowolny znak (lub **_mbsdec** i **_mbsdec_l**, pierwszy bajt jakiegokolwiek znaku wielobajtowego) w ciągu źródłowym; *bieżącego* należy wykonać *start* w ciągu źródłowego.
+*obecne*<br/>
+Wskaźnik na dowolny znak (lub dla **_mbsdec** i **_mbsdec_l**, pierwszy bajt dowolnego znaku wielobajtowego) w ciągu źródłowym; *Bieżąca* wartość musi następować po rozpoczęciu w ciągu źródłowym.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_mbsdec**, **_mbsdec_l**, **_strdec**, i **_wcsdec** każdy zwraca wskaźnik znaku, który bezpośrednio poprzedza *bieżącego*; **_mbsdec** zwraca **NULL** Jeśli wartość *start* jest większa niż lub równa *bieżącego*. **_tcsdec** mapuje do jednej z tych funkcji i jej wartość zwracana jest zależna od mapowania.
+**_mbsdec**, **_mbsdec_l**, **_strdec**i **_wcsdec** zwracają wskaźnik do znaku, który bezpośrednio poprzedza *bieżące*; **_mbsdec** zwraca **wartość null** , jeśli wartość parametru *Start* jest większa lub równa wartości *bieżącej*. **_tcsdec** mapuje do jednej z tych funkcji, a jej wartość zwracana zależy od mapowania.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Mbsdec** i **_mbsdec_l** funkcje zwracają wskaźnik do pierwszego bajtu znaków wielobajtowego, znajdującego się bezpośrednio przed *bieżącego* w ciąg, który zawiera *start*.
+Funkcje **_mbsdec** i **_mbsdec_l** zwracają wskaźnik do pierwszego bajtu znaku wielobajtowego, który bezpośrednio poprzedza *bieżącą* wartość w ciągu, który zawiera *początek*.
 
-Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych; zobacz [setlocale, _wsetlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji.  **_mbsdec** rozpoznaje sekwencje znaków wielobajtowych według ustawień regionalnych, który jest aktualnie używany, gdy **_mbsdec_l** jest identyczna, z tą różnicą, że zamiast tego używa przekazanego parametru ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawień regionalnych; Zobacz [setlocaling, _wsetlocale,](setlocale-wsetlocale.md) Aby uzyskać więcej informacji.  **_mbsdec** rozpoznaje sekwencje znaków wielobajtowych zgodnie z aktualnie używanymi ustawieniami regionalnymi, podczas gdy **_mbsdec_l** jest identyczny, z tą różnicą, że zamiast tego używa parametru ustawień regionalnych, który został przesłany. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-Jeśli *start* lub *bieżącego* jest **NULL**, wywołany nieprawidłowy parametr uchwytu, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **EINVAL** i ustawia **errno** do **EINVAL**.
+Jeśli parametr *Start* lub *Current* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **EINVAL** i ustawia **errno** na **EINVAL**.
 
 > [!IMPORTANT]
-> Funkcje te mogą być podatne na zagrożenia przepełnienia buforu. Przepełnienia buforu może służyć do ataków systemu, ponieważ mogą one spowodować nieuzasadnione podniesienie poziomu uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Te funkcje mogą być narażone na zagrożenia przepełnienia buforu. Przepełnienia buforu mogą służyć do ataków systemu, ponieważ mogą one spowodować nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -108,24 +108,24 @@ Jeśli *start* lub *bieżącego* jest **NULL**, wywołany nieprawidłowy paramet
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsdec**|**_strdec**|**_mbsdec**|**_wcsdec**|
 
-**_strdec** i **_wcsdec** są wersjami pojedynczych bajtów znaków i znaków dwubajtowych **_mbsdec** i **_mbsdec_l**. **_strdec** i **_wcsdec** są dostarczane tylko dla tego mapowania i nie powinny być używane w inny sposób.
+**_strdec** i **_wcsdec** są wersjami znaków dwubajtowych i znaków większości **_mbsdec** i **_mbsdec_l**. **_strdec** i **_wcsdec** są dostępne tylko dla tego mapowania i nie powinny być używane w inny sposób.
 
-Aby uzyskać więcej informacji, zobacz [przy użyciu mapowania typ ogólny-tekst](../../c-runtime-library/using-generic-text-mappings.md) i [mapowania typ ogólny-tekst](../../c-runtime-library/generic-text-mappings.md).
+Aby uzyskać więcej informacji, zobacz [Korzystanie z mapowań tekstu ogólnego](../../c-runtime-library/using-generic-text-mappings.md) i [mapowań tekstu ogólnego](../../c-runtime-library/generic-text-mappings.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
+|Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
 |**_mbsdec**|\<mbstring.h>|\<mbctype.h>|
 |**_mbsdec_l**|\<mbstring.h>|\<mbctype.h>|
-|**_strdec**|\<tchar.h>||
-|**_wcsdec**|\<tchar.h>||
+|**_strdec**|\<Używanie TCHAR. h >||
+|**_wcsdec**|\<Używanie TCHAR. h >||
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje wykorzystanie **_tcsdec**.
+W poniższym przykładzie pokazano użycie **_tcsdec**.
 
 ```cpp
 // crt_tcsdec.cpp
@@ -151,7 +151,7 @@ int main()
 }
 ```
 
-Poniższy przykład pokazuje wykorzystanie **_mbsdec**.
+W poniższym przykładzie pokazano użycie **_mbsdec**.
 
 ```cpp
 // crt_mbsdec.cpp

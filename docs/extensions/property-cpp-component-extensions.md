@@ -1,5 +1,5 @@
 ---
-title: właściwości (C++sposób niezamierzony i C++/CX)
+title: Właściwość (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -8,35 +8,35 @@ f1_keywords:
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-ms.openlocfilehash: 8ec76db37cffb1b3d15447165300bedf1a8771c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a05f9cf8cbec9644254d14873a3259f12b33aed
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374202"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509714"
 ---
-# <a name="property--ccli-and-ccx"></a>właściwości (C++sposób niezamierzony i C++/CX)
+# <a name="property--ccli-and-ccx"></a>Właściwość (C++/CLI i C++/CX)
 
-Deklaruje *właściwość*, która jest funkcją składową, który zachowuje się i jest dostępny, takich jak element członkowski danych lub element tablicy.
+Deklaruje *Właściwość*, która jest funkcją składową, która zachowuje się i jest dostępna, jak element członkowski danych lub element tablicy.
 
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze
 
-Można zadeklarować jedną z następujących typów właściwości.
+Można zadeklarować jeden z następujących typów właściwości.
 
-*właściwości prostej*<br/>
-Domyślnie tworzy *ustawiająca metoda dostępu* , przypisuje wartość właściwości *pobierająca* , który pobiera wartość właściwości oraz element członkowski danych prywatnych generowanych przez kompilator, który zawiera wartość właściwości.
+*Właściwość prosta*<br/>
+Domyślnie program tworzy *metodę dostępu set* , która przypisuje wartość właściwości, *metodę dostępu get* , która pobiera wartość właściwości, oraz prywatny element członkowski danych wygenerowany przez kompilator zawierający wartość właściwości.
 
-*Blok właściwości*<br/>
-Umożliwia tworzenie get zdefiniowanych przez użytkownika i/lub ustaw metody dostępu. Właściwość jest odczytu/zapisu, jeśli obie opcje pobierania i metody dostępu set są zdefiniowane, tylko do odczytu, jeśli tylko zdefiniowano metody dostępu get i tylko do zapisu czy tylko metody dostępu set jest zdefiniowana.
+*blok właściwości*<br/>
+Służy do tworzenia zdefiniowanych przez użytkownika metod dostępu get i/lub Set. Właściwość jest odczytywana/zapisu, jeśli są zdefiniowane zarówno Akcesory Get, jak i Set, tylko do odczytu, jeśli jest zdefiniowana tylko metoda dostępu get i tylko do zapisu, jeśli jest zdefiniowana tylko metoda dostępu set.
 
-Należy jawnie deklarować element członkowski danych zawiera wartość właściwości.
+Należy jawnie zadeklarować składową danych, aby zawierała wartość właściwości.
 
 *Właściwość indeksowana*<br/>
-Blok właściwości, który służy do pobierania i ustawiania wartości właściwości, która jest określona przez jednego lub kilku indeksów.
+Blok właściwości, którego można użyć, aby pobrać i ustawić wartość właściwości, która jest określona przez jeden lub więcej indeksów.
 
-Właściwość indeksowana, który ma uprawnienia można utworzyć nazwy właściwości zdefiniowanych przez użytkownika lub *domyślne* nazwy właściwości. Nazwa domyślnej właściwości indeksu jest nazwa klasy, w którym właściwość jest zdefiniowana. Aby zadeklarować właściwość domyślną, określić **domyślne** słowa kluczowego zamiast nazwy właściwości.
+Można utworzyć indeksowaną właściwość, która ma zdefiniowaną przez użytkownika nazwę właściwości lub *domyślną* nazwę właściwości. Nazwa domyślnej właściwości indeksu jest nazwą klasy, w której właściwość jest zdefiniowana. Aby zadeklarować właściwość domyślną, określ słowo kluczowe **default** zamiast nazwy właściwości.
 
-Należy jawnie deklarować element członkowski danych zawiera wartość właściwości. Właściwości indeksowane element członkowski danych jest zazwyczaj tablicy lub kolekcji.
+Należy jawnie zadeklarować składową danych, aby zawierała wartość właściwości. Dla właściwości indeksowanej element członkowski danych jest zwykle tablicą lub kolekcją.
 
 ### <a name="syntax"></a>Składnia
 
@@ -62,35 +62,35 @@ property type default[index_list] {
 ### <a name="parameters"></a>Parametry
 
 *type*<br/>
-Typ danych wartości właściwości i samej właściwości.
+Typ danych wartości właściwości i w związku z tym właściwością.
 
 *property_name*<br/>
 Nazwa właściwości.
 
-*access-modifier*<br/>
-Kwalifikator dostępu. Prawidłowy kwalifikatory to **statyczne** i **wirtualnego**.
+*Modyfikator dostępu*<br/>
+Kwalifikator dostępu. Prawidłowe kwalifikatory są **statyczne** i **wirtualne**.
 
-Get lub metody dostępu set nie muszą uzgodnić **wirtualnego** kwalifikator, ale musisz wyrazić zgodę na **statyczne** kwalifikator.
+Metody dostępu get lub set nie muszą zgadzać się z kwalifikatorem wirtualnym, ale muszą wyrazić zgodę na kwalifikator **statyczny** .
 
 *inheritance-modifier*<br/>
-Kwalifikator dziedziczenia. Prawidłowy kwalifikatory to **abstrakcyjne** i **zapieczętowanego**.
+Kwalifikator dziedziczenia. Prawidłowe kwalifikatory są **abstrakcyjne** i **zapieczętowane**.
 
 *index_list*<br/>
-Rozdzielana przecinkami lista jednego lub kilku indeksów. Każdy indeks zawiera typ indeksu i opcjonalny identyfikator, który może służyć w treści metody właściwości.
+Rozdzielana przecinkami lista co najmniej jednego indeksu. Każdy indeks składa się z typu indeksu i opcjonalnego identyfikatora, który może być używany w treści metody właściwości.
 
 *value*<br/>
-Wartość do przypisania do właściwości w operacji zestawu, lub pobrać w ramach operacji get.
+Wartość, która ma zostać przypisana do właściwości w operacji zestawu lub pobierana w operacji pobierania.
 
 *property_body*<br/>
-Właściwości treści metody dostępu set lub get. *Property_body* służy *index_list* dostęp podstawowego elementu danych właściwości do lub jako parametry podczas przetwarzania zdefiniowanych przez użytkownika.
+Treść metody właściwości zestawu lub get. *Property_body* może używać *index_list* do uzyskiwania dostępu do elementu członkowskiego danych właściwości bazowej lub jako parametrów w przetwarzaniu zdefiniowanym przez użytkownika.
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
-Aby uzyskać więcej informacji, zobacz [właściwości (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755807.aspx).
+Aby uzyskać więcej informacji, zobacz [właściwościC++(/CX)](../cppcx/properties-c-cx.md).
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/ZW`
+Opcja kompilatora:`/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
@@ -113,63 +113,63 @@ modifier property type default[index];
 
 ### <a name="parameters"></a>Parametry
 
-*modifier*<br/>
-Modyfikatory, które mogą być używane w deklaracji właściwości lub metody dostępu get/set. Możliwe wartości to **statyczne** i **wirtualnego**.
+*modyfikator*<br/>
+Modyfikator, który może być używany w deklaracji właściwości lub metodzie dostępu get/set. Możliwe wartości są **statyczne** i **wirtualne**.
 
 *type*<br/>
-Typ wartości, który jest reprezentowany przez właściwość.
+Typ wartości reprezentowanej przez właściwość.
 
 *property_name*<br/>
-Parametry metody Zgłoś; musi odpowiadać podpisowi delegata.
+Parametry dla metody podniesienia; musi być zgodna z podpisem delegata.
 
 *index_list*<br/>
-Rozdzielana przecinkami lista jednego lub kilku indeksów, określone w nawiasach kwadratowych (operator indeksu dolnego, ([])). Dla każdego indeksu należy określić typ i opcjonalnie identyfikator, który może służyć w treści metody właściwości.
+Rozdzielana przecinkami lista co najmniej jednego indeksu, określona w nawiasach kwadratowych (Operator indeksu dolnego ([])). Dla każdego indeksu należy określić typ i opcjonalnie identyfikator, który może być używany w treści metody właściwości.
 
 ### <a name="remarks"></a>Uwagi
 
-W pierwszym przykładzie pokazano składnię *właściwości prostej*, która niejawnie deklaruje zarówno `set` i `get` metody. Kompilator automatycznie tworzy prywatnego pola do przechowywania wartości właściwości.
+Pierwszy przykład składni pokazuje prostą *Właściwość*, która niejawnie deklaruje zarówno `set` metodę `get` , jak i. Kompilator automatycznie tworzy pole prywatne do przechowywania wartości właściwości.
 
-W drugim przykładzie pokazano składni *blok właściwości*, która deklaruje jawnie zarówno `set` i `get` metody.
+Druga Przykładowa składnia przedstawia *blok właściwości*, który jawnie deklaruje zarówno `set` metodę, jak i. `get`
 
-Trzeci przykład składni pokazuje, zdefiniowaną przez użytkownika *index — właściwość*. Właściwości indeksu przyjmuje parametry oprócz wartość można ustawić lub pobrać. Należy określić nazwę właściwości. W odróżnieniu od właściwości prostej `set` i/lub `get` metody, właściwości indeksu musi być jawnie zdefiniowany. Ponadto należy określić nazwę właściwości.
+Trzecia Przykładowa składnia przedstawia zdefiniowaną przez klienta *Właściwość indeksu*. Właściwość index przyjmuje parametry oprócz wartości, która ma być ustawiona lub pobrana. Należy określić nazwę właściwości. W `set` przeciwieństwie do prostej właściwości, metody i `get` /lub właściwości indeksu muszą być jawnie zdefiniowane i należy określić nazwę dla właściwości.
 
-W przykładzie pokazano składnię czwarty *domyślne* właściwość, która zapewnia dostęp tablicy do wystąpienia tego typu. Słowo kluczowe **domyślne**, służy tylko do określenia właściwości domyślnej. Nazwa właściwości domyślnej jest nazwa typu, w którym właściwość jest zdefiniowana.
+Czwarta składnia przykładu przedstawia Właściwość *domyślną* , która zapewnia podobny do tablicy dostęp do wystąpienia typu. Słowo kluczowe, **default**, służy tylko do określenia właściwości domyślnej. Nazwa właściwości domyślnej jest nazwą typu, w którym właściwość jest zdefiniowana.
 
-**Właściwość** — słowo kluczowe może występować w klasą, interfejsem lub typu wartości. Właściwość może mieć funkcję get (tylko do odczytu), funkcja set (tylko do zapisu) lub obu (odczyt zapis).
+Słowo kluczowe **Property** może występować w klasie, interfejsie lub typie wartości. Właściwość może mieć funkcję get (tylko do odczytu), funkcję Set (tylko do zapisu) lub obie (odczyt i zapis).
 
-Nazwa właściwości nie może odpowiadać nazwie klasy zarządzanej, która go zawiera. Zwracany typ funkcji pobierającej musi odpowiadać typowi ostatniego parametru funkcji odpowiedniej metody ustawiającej.
+Nazwa właściwości nie może być zgodna z nazwą klasy zarządzanej, która ją zawiera. Zwracany typ funkcji pobierającej musi być zgodny z typem ostatniego parametru odpowiadającej funkcji setter.
 
-Dla kodu klienta właściwość wygląd element członkowski danych zwykłe i można można zapisane lub odczytywać przy użyciu tej samej składni jak element członkowski danych.
+Do kodu klienta właściwość ma wygląd zwykłego elementu członkowskiego danych i może być zapisywana lub odczytywana przy użyciu tej samej składni co element członkowski danych.
 
-Get i metody set nie muszą uzgodnić **wirtualnego** modyfikator.
+Metody get i set nie muszą zgadzać się z modyfikatorem wirtualnym.
 
-Dostępność metody get i set, metoda może się różnić.
+Dostępność metody get i set może się różnić.
 
-Definicja metody właściwości mogą być wyświetlane poza treścią klasy, podobnie jak zwykłej metody.
+Definicja metody właściwości może występować poza treścią klasy, podobnie jak zwykła Metoda.
 
-Get i metody set dla właściwości uzgadniają **statyczne** modyfikator.
+Metoda get i Set dla właściwości wyraża zgodę na modyfikator statyczny .
 
-Właściwość jest skalarna jeśli jego get i zestaw metod dopasowania następujący opis:
+Właściwość jest skalarna, jeśli jej metody get i Set pasują do następującego opisu:
 
-- Metoda get nie ma parametrów, a ma typ zwracany `T`.
+- Metoda get nie ma parametrów i ma zwracany typ `T`.
 
-- Metoda set ma parametr typu `T`, a zwracany typ **void**.
+- Metoda Set ma parametr typu `T`, a zwracany typ **void**.
 
-Powinna istnieć tylko jedna właściwość skalarną zadeklarowana w zakresie za pomocą tego samego identyfikatora. Właściwości skalarne nie mogą być przeciążone.
+Zakres o takim samym identyfikatorze powinien zawierać tylko jedną właściwość skalarną. Właściwości skalarne nie mogą być przeciążone.
 
-Gdy element członkowski danych właściwości jest zadeklarowany, kompilator wprowadza element członkowski danych — czasami określane jako "magazyn zapasowy" — w klasie. Nazwa elementu członkowskiego danych jest jednak formularza tak, aby tak, jakby był to element członkowski danych rzeczywistych zawierającego klasy nie może odwoływać się elementu członkowskiego w źródle. Użyj ildasm.exe, aby wyświetlić metadane dla danego typu i sprawdzić nazwę właściwości zapasowy magazyn generowanych przez kompilator.
+Gdy element członkowski danych właściwości jest zadeklarowany, kompilator wprowadza element członkowski danych — czasami określany jako "magazyn zapasowy" — w klasie. Jednak nazwa elementu członkowskiego danych jest w postaci, w której nie można odwołać się do elementu członkowskiego w źródle, tak jakby był to rzeczywisty element członkowski danych klasy zawierającej. Użyj Ildasm. exe, aby wyświetlić metadane dla danego typu i zobaczyć nazwę wygenerowaną przez kompilator dla magazynu zapasowego właściwości.
 
-Różnej dostępności jest dozwolony dla metod dostępu w bloku właściwości.  Oznacza to, że metoda zestawu może być publiczny i metody get może być prywatny.  Jednak występuje błąd dla metody dostępu w celu mieć mniej restrykcyjny dostępność niż w deklaracji samej właściwości.
+Różne ułatwienia dostępu są dozwolone dla metod dostępu w bloku właściwości.  Oznacza to, że Metoda set może być publiczna, a metoda Get może być prywatna.  Jednak jest to błąd metody dostępu, aby mieć mniej restrykcyjny dostęp niż to, co znajduje się w deklaracji samej właściwości.
 
-**Właściwość** jest kontekstowej słowem kluczowym.  Aby uzyskać więcej informacji, zobacz [Context-Sensitive Keywords](context-sensitive-keywords-cpp-component-extensions.md).
+**Właściwość** to kontekstowe słowo kluczowe.  Aby uzyskać więcej informacji, zobacz [kontekstowe słowa kluczowe](context-sensitive-keywords-cpp-component-extensions.md).
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/clr`
+Opcja kompilatora:`/clr`
 
 ### <a name="examples"></a>Przykłady
 
-Poniższy przykład przedstawia deklarację i korzystanie z właściwości składowej danych i w bloku właściwości.  Pokazuje również, że metoda dostępu do właściwości mogą być definiowane poza klasy.
+W poniższym przykładzie pokazano deklarację i użycie elementu członkowskiego danych właściwości i bloku właściwości.  Pokazuje również, że metoda dostępu do właściwości może być zdefiniowana poza klasą.
 
 ```cpp
 // mcppv2_property.cpp

@@ -1,21 +1,21 @@
 ---
-title: uidefault — (atrybut COM C++)
+title: uidefault (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.uidefault
 helpviewer_keywords:
 - uidefault attribute
 ms.assetid: 200de0e0-2e34-40a2-bae4-8d485a62264d
-ms.openlocfilehash: a5bb8d3ad869d9ee60b2ab04743f5a926a10dd2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4090011aade4ebab2f5c07a8e56e91253cc7c49
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407097"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513901"
 ---
 # <a name="uidefault"></a>uidefault
 
-Wskazuje, że składowa informacji typu jest domyślny element członkowski do wyświetlania w interfejsie użytkownika.
+Wskazuje, że element członkowski informacji o typie jest domyślnym elementem członkowskim do wyświetlania w interfejsie użytkownika.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,11 +25,11 @@ Wskazuje, że składowa informacji typu jest domyślny element członkowski do w
 
 ## <a name="remarks"></a>Uwagi
 
-**Uidefault —** atrybut C++ ma taką samą funkcjonalność jak [uidefault —](/windows/desktop/Midl/uidefault) atrybutów w MIDL.
+Atrybut **uidefault** C++ ma takie same funkcje jak atrybut [uidefault](/windows/win32/Midl/uidefault) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod przedstawia przykład **uidefault —**:
+Poniższy kod przedstawia przykład **uidefault**:
 
 ```cpp
 // cpp_attr_ref_uidefault.cpp
@@ -54,12 +54,12 @@ __interface ICustom{
 
 |||
 |-|-|
-|**Dotyczy**|Metody interfejsu|
+|**Dotyczy**|Interface — Metoda|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

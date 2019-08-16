@@ -5,32 +5,32 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - COM
 ms.assetid: 120735d9-db71-4ad3-a730-ce576ea2354e
-ms.openlocfilehash: 7631ba98b0e2cb00310400206b0b442ab7a23dd7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e29f761e0380357bc999af82cc4bde8bfbaf4d6e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262375"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492358"
 ---
 # <a name="introduction-to-com"></a>Wprowadzenie do modelu COM
 
-COM jest podstawowy "model obiektu", na które kontrolki ActiveX i OLE są tworzone. COM umożliwia obiektu do udostępnienia jej funkcjonalność do innych składników oraz obsługi aplikacji. Definiuje, jak obiekt udostępnia sam i działania to narażenie na różnych procesów i w całej sieci. COM definiuje również obiektu cyklu życia.
+COM to podstawowy "model obiektów", na którym są zbudowane kontrolki ActiveX i OLE. Model COM umożliwia obiektowi uwidocznienie jego funkcjonalności innym składnikom i hostowanie aplikacji. Definiuje zarówno sposób ujawniania obiektu, jak i sposób działania tego narażenia między procesami i sieciami. Model COM definiuje również cykl życia obiektu.
 
-Podstawowe znaczenie dla modelu COM są te pojęcia:
+Podstawowe dla modelu COM są następujące pojęcia:
 
-- [Interfejsy](../atl/interfaces-atl.md) — mechanizm, za pomocą którego obiekt udostępnia funkcję.
+- [Interfejsy](../atl/interfaces-atl.md) — mechanizm, za pomocą którego obiekt uwidacznia jego funkcjonalność.
 
-- [IUnknown](../atl/iunknown.md) — podstawowy interfejs pozostałe oparte. Implementuje zliczaniu odwołań i interfejs zapytań mechanizmów uruchomiony za pomocą modelu COM.
+- [IUnknown](../atl/iunknown.md) — podstawowy interfejs, na którym bazują wszystkie inne. Implementuje zliczanie odwołań i mechanizmy zapytań interfejsu uruchomione za pomocą COM.
 
-- [Zliczanie odwołań](../atl/reference-counting.md) — technika, za pomocą którego obiektu (lub ściśle, interfejs) decyduje, gdy jest już używany i w związku z tym jest bezpłatna, można usunąć samego.
+- [Zliczanie odwołań](../atl/reference-counting.md) — technika, za pomocą której obiekt (lub, ściśle, interfejs) decyduje, gdy nie jest już używany, i dlatego jest bezpłatny do samodzielnego usuwania.
 
-- [QueryInterface](../atl/queryinterface.md) — metoda umożliwia tworzenie zapytań dotyczących obiektu dla danego interfejsu.
+- [QueryInterface](../atl/queryinterface.md) — Metoda używana do wykonywania zapytań względem obiektu dla danego interfejsu.
 
-- [Marshaling](../atl/marshaling.md) — mechanizm, który umożliwia użycie w wątku, procesy i granice sieci, co zapewnia niezależność od lokalizacji obiektów.
+- [Kierowanie](../atl/marshaling.md) — mechanizm, który umożliwia obiekty, które mają być używane w granicach wątków, procesów i sieci, co zapewnia niezależność lokalizacji.
 
-- [Agregacja](../atl/aggregation.md) — użycie innego sposobu, w którym można zmienić jeden obiekt.
+- [Agregacja](../atl/aggregation.md) — sposób, w jaki jeden obiekt może korzystać z innego.
 
 ## <a name="see-also"></a>Zobacz także
 
 [Wprowadzenie do modelu COM i ATL](../atl/introduction-to-com-and-atl.md)<br/>
-[Model Component Object Model](/windows/desktop/com/the-component-object-model)
+[Component Object Model](/windows/win32/com/the-component-object-model)

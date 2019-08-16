@@ -6,36 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, appearance
 ms.assetid: cc16d7ff-74d7-4c15-9ebd-4b19201ff457
-ms.openlocfilehash: 4d3b0519951636fad4175dc35261ba35b3694ffa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e07dc017241848f1a670c17b12c2254de6d1b8e1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62248956"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492190"
 ---
 # <a name="appearance-atl-control-wizard"></a>Wygląd, Kreator kontrolki ATL
 
-Ta strona kreatora umożliwia zidentyfikowanie dodatkowego użytkownika elementu Opcje dla formantu. Ta strona jest dostępna dla kontrolki zidentyfikowane jako **standardowych kontrolek** w obszarze **kontrolowanie typu** na [opcji, Kreator kontrolki ATL](../../atl/reference/options-atl-control-wizard.md) strony.
+Ta strona kreatora służy do identyfikowania dodatkowych opcji elementów użytkownika dla kontrolki. Ta strona jest dostępna dla kontrolek zidentyfikowanych jako **standardowe kontrolki** w obszarze **Typ formantu** na stronie [Kreatora sterowania ATL](../../atl/reference/options-atl-control-wizard.md) .
 
 ## <a name="uielement-list"></a>Lista elementów UI
 
 - **Wyświetl stan**
 
-   Ustawia wyglądu formantu w kontenerze.
+   Ustawia wygląd formantu w kontenerze.
 
-   - **Nieprzezroczysty**: Ustawia VIEWSTATUS_OPAQUE bit w [stan](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus) wyliczenie i rysuje prostokąt całego kontroli przekazany do [CComControlBase::OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw) metody. Ten formant jest widoczny całkowicie nieprzezroczysty, a żaden z kontenera pokazuje poza granice formantu.
+   - Nieprzezroczysty: Ustawia bit VIEWSTATUS_OPAQUE w wyliczeniu [podwójne](/windows/win32/api/ocidl/ne-ocidl-viewstatus) i rysuje cały prostokąt kontrolki przekazaną do metody [CComControlBase:: OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw) . Formant jest wyświetlany całkowicie nieprzezroczysty, a żaden z nich nie jest widoczny w tle.
 
-      To ustawienie pozwala kontenera narysuj kontrolkę szybciej. Jeśli ta opcja nie jest zaznaczone, formant może zawierać części przezroczysty.
+      To ustawienie ułatwia kontenerowi szybkie narysowanie formantu. Jeśli ta opcja nie jest zaznaczona, formant może zawierać elementy przezroczyste.
 
-      Tylko kontrolkę nieprzezroczyste może mieć jednolite tło.
+      Tylko formant nieprzezroczysty może mieć pełne tło.
 
-   - **Pełne tło**: Ustawia VIEWSTATUS_SOLIDBKGND bit w wyliczeniu stan. Tła formantu pojawia się jako jednolitego koloru nie wzorca.
+   - **Pełne tło**: Ustawia bit VIEWSTATUS_SOLIDBKGND w wyliczeniu podwójne. Tło formantu pojawia się jako pełny kolor bez wzorca.
 
-      Ta opcja jest dostępna tylko wtedy, gdy **nieprzezroczyste** jest również opcja.
+      Ta opcja jest dostępna tylko wtedy, gdy wybrano również opcję nieprzezroczystość.
 
-- **Dodaj kontrolkę na podstawie**
+- **Dodaj kontrolkę opartą na**
 
-   Formant opierać się na typ kontrolki Windows, dodając [CContainedWindow](ccontainedwindowt-class.md) element członkowski danych do klasy Implementowanie formantu. Dodaje także mapy komunikatów i funkcji obsługi komunikatów do obsługi komunikatów Windows dla formantu. Wybierz z listy Typ kontrolki Windows, który chcesz utworzyć, jeśli istnieje.
+   Ustawia kontrolkę, która ma być oparta na typie kontrolki systemu Windows przez dodanie elementu członkowskiego danych [CContainedWindow](ccontainedwindowt-class.md) do klasy implementującej formant. Dodaje również mapę komunikatów i funkcje obsługi komunikatów do obsługi komunikatów systemu Windows dla kontrolki. Wybierz z listy Typ formantu systemu Windows, który ma zostać utworzony (jeśli istnieje).
 
    - **Przycisk**
 
@@ -69,27 +69,27 @@ Ta strona kreatora umożliwia zidentyfikowanie dodatkowego użytkownika elementu
 
    - **SysTreeView32**
 
-- **Stan różne**
+- **Różne Stany**
 
-   Określa dodatkowe opcje wygląd i zachowanie dla formantu.
+   Ustawia dodatkowe opcje wyglądu i zachowania dla kontrolki.
 
-   - **Niewidoczne w czasie wykonywania**: Ustawienie kontroli ma być niewidoczna w czasie wykonywania. Niewidoczne formantów służy do wykonywania operacji w tle, takie jak wyzwalanie zdarzeń w określonych interwałach.
+   - **Niewidoczny w czasie wykonywania**: Ustawia, że formant ma być niewidoczny w czasie wykonywania. Możesz użyć niewidocznych formantów do wykonywania operacji w tle, takich jak Wyzwalanie zdarzeń w interwałach czasowych.
 
-   - **Zachowuje się jak przycisk**: Ustawia OLEMISC_ACTSLIKEBUTTON bit w [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) wyliczeniu, aby włączyć kontrolę do działania, takie jak przycisk. Jeśli kontener został oznaczony formantu lokacji klienta jako przycisk domyślny, wybranie tej opcji umożliwia kontrolki przycisku do wyświetlenia sama jako przycisk domyślny za pomocą rysowania sam grubszy ramki. Zobacz [CComControlBase::GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault) Aby uzyskać więcej informacji.
+   - **Działa jak przycisk**: Ustawia bit OLEMISC_ACTSLIKEBUTTON w wyliczeniu [OLEMISC](/windows/win32/api/oleidl/ne-oleidl-olemisc) , aby umożliwić kontrolce działanie jako przycisk. Jeśli kontener oznaczył lokację kliencką kontrolki jako przycisk domyślny, wybranie tej opcji umożliwia wyświetlenie kontrolki przycisku jako przycisku domyślnego przez rysowanie z grubszą ramką. Aby uzyskać więcej informacji, zobacz [CComControlBase:: GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault) .
 
-   - **Zachowuje się jak etykiety**: Ustawia OLEMISC_ACTSLIKELABEL bit w wyliczeniu OLEMISC, aby włączyć kontrolę zamiast kontenera natywne etykiety. Kontener Określa, co należy zrobić z tą flagą Jeśli niczego.
+   - **Działa jak etykieta**: Ustawia bit OLEMISC_ACTSLIKELABEL w wyliczeniu OLEMISC, aby umożliwić kontrolce zamienienie etykiety natywnej kontenera. Kontener określa, co zrobić z tą flagą.
 
 - **Inne**
 
-   Ustawia zachowanie dodatkowe opcje dla formantu.
+   Ustawia dodatkowe opcje zachowania dla kontrolki.
 
-   - **Znormalizowane DC**: Ustawienie dla formantu do utworzenia znormalizowany kontekst urządzenia, gdy jest wywoływana, aby narysować sam. Ta akcja standaryzuje wygląd formantu, ale to sprawia, że rysowania mniej wydajne rozwiązanie.
+   - **Znormalizowany kontroler domeny**: Ustawia formant do tworzenia znormalizowanego kontekstu urządzenia, gdy jest wywoływana w celu narysowania siebie. Ta akcja umożliwia standaryzację wyglądu kontrolki, ale sprawia, że rysowanie jest mniej wydajne.
 
-   - **Tylko okna**: Określa, że formant nie może być bez okien. Jeśli nie zaznaczysz tej opcji, formant jest automatycznie bez okien w kontenerach, które obsługują obiekty niepowiązanej z oknami, i jest automatycznie okna w kontenerach, które nie obsługują obiektów bez okien. Wybranie tej opcji wymusza kontroli nad się okna, nawet w przypadku kontenerów, które obsługują obiekty bez okien.
+   - **Tylko okno**: Określa, że kontrolka nie może być bez okien. Jeśli ta opcja nie zostanie wybrana, formant zostanie automatycznie wyłączany w kontenerach, które obsługują obiekty bez okien i są automatycznie oknem w kontenerach, które nie obsługują obiektów bez okien. Wybranie tej opcji wymusza przeokienkowanie formantu, nawet w kontenerach, które obsługują obiekty bez okien.
 
-   - **Wstawianie**: Wybierz tę opcję, aby mieć formantu są wyświetlane w **Wstawianie obiektu** okna dialogowego aplikacji, takich jak Word i Excel. Następnie można wstawiać formantu przez dowolną aplikację, który obsługuje obiekty osadzone, za pomocą tego okna dialogowego.
+   - Do **wstawienia**: Zaznacz tę opcję, aby formant pojawił się w oknie dialogowym **Wstawianie obiektu** w aplikacjach, takich jak Word i Excel. Formant może następnie zostać wstawiony przez dowolną aplikację, która obsługuje obiekty osadzone za pomocą tego okna dialogowego.
 
 ## <a name="see-also"></a>Zobacz także
 
 [Kreator kontrolki ATL](../../atl/reference/atl-control-wizard.md)<br/>
-[SUBEDIT próbki: Superklas kontrolki Windows Standard](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit)
+[Przykład SUBEDIT: Superklasa standardową kontrolkę systemu Windows](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit)

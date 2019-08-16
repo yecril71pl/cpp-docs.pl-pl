@@ -1,21 +1,21 @@
 ---
-title: pointer_default — (C++ atrybutów COM)
+title: pointer_default (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.pointer_default
 helpviewer_keywords:
 - pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
-ms.openlocfilehash: 37bd2b16fb7a7c1c186f59897898e08cc73fffae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c70c372e5f1c3a9c2f620a1fa3505fb9d0436e79
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407513"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514258"
 ---
-# <a name="pointerdefault"></a>pointer_default
+# <a name="pointer_default"></a>pointer_default
 
-Określa domyślny atrybut wskaźnik dla wszystkich wskaźników, z wyjątkiem wskaźniki najwyższego poziomu, które pojawiają się listami parametrów.
+Określa domyślny atrybut wskaźnika dla wszystkich wskaźników, z wyjątkiem wskaźników najwyższego poziomu, które pojawiają się na listach parametrów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,15 +26,15 @@ Określa domyślny atrybut wskaźnik dla wszystkich wskaźników, z wyjątkiem w
 ### <a name="parameters"></a>Parametry
 
 *value*<br/>
-Wartość, która opisuje typ wskaźnika: **ptr**, **ref**, lub **unikatowy**.
+Wartość opisująca typ wskaźnika: **PTR**, **ref**lub **Unique**.
 
 ## <a name="remarks"></a>Uwagi
 
-**Pointer_default —** C++ atrybut ma taką samą funkcjonalność jak [pointer_default —](/windows/desktop/Midl/pointer-default) atrybutów w MIDL.
+Atrybut **pointer_default** C++ ma takie same funkcje jak atrybut [pointer_default](/windows/win32/Midl/pointer-default) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [defaultvalue](defaultvalue.md) do użytku przykładowe **pointer_default —**.
+Zobacz przykład dla elementu [DefaultValue](defaultvalue.md) dla przykładowego zastosowania **pointer_default**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -44,10 +44,10 @@ Zobacz przykład [defaultvalue](defaultvalue.md) do użytku przykładowe **point
 |-|-|
 |**Dotyczy**|**interface**|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

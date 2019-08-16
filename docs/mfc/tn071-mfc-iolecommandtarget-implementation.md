@@ -1,5 +1,5 @@
 ---
-title: 'TN071: Implementacja interfejsu MFC IOleCommandTarget'
+title: 'TN071: Implementacja MFC IOleCommandTarget'
 ms.date: 06/28/2018
 f1_keywords:
 - IOleCommandTarget
@@ -7,85 +7,85 @@ helpviewer_keywords:
 - TN071 [MFC]
 - IOleCommandTarget interface [MFC]
 ms.assetid: 3eef571e-6357-444d-adbb-6f734a0c3161
-ms.openlocfilehash: dca1183a17fe8f3022f517d1ad0c3932ea272417
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7077211396c68750d47b91c7b2bb113370990f62
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168001"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511101"
 ---
-# <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071: Implementacja interfejsu MFC IOleCommandTarget
+# <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071: Implementacja MFC IOleCommandTarget
 
 > [!NOTE]
-> Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
+> Następująca Uwaga techniczna nie została zaktualizowana, ponieważ została najpierw uwzględniona w dokumentacji online. W związku z tym niektóre procedury i tematy mogą być nieaktualne lub nieprawidłowe. Aby uzyskać najnowsze informacje, zalecamy wyszukiwanie tematu zainteresowania w indeksie dokumentacji online.
 
-`IOleCommandTarget` Interfejs umożliwia obiektów i kontenerów, ich do wysyłania poleceń do siebie nawzajem. Na przykład obiekt pasków narzędzi może zawierać przyciski dla poleceń takich jak `Print`, `Print Preview`, `Save`, `New`, i `Zoom`. Jeśli taki obiekt zostały osadzone w kontenerze, który obsługuje `IOleCommandTarget`, umożliwiające jej przyciski i przekazywać poleceń do kontenera do przetwarzania, gdy użytkownik kliknął ich obiektu. Jeśli kontener chce osadzonego obiektu, aby wydrukował sam siebie, można przesłać to żądanie, wysyłając polecenie za pośrednictwem `IOleCommandTarget` interfejsu osadzonego obiektu.
+`IOleCommandTarget` Interfejs umożliwia obiektom i ich kontenerom Wysyłanie poleceń do siebie nawzajem. Na przykład paski narzędzi obiektu mogą zawierać przyciski poleceń takich jak `Print`, `Print Preview`, `Save`, `New`i `Zoom`. Jeśli taki obiekt został osadzony w kontenerze, który `IOleCommandTarget`obsługuje, obiekt może włączyć jego przyciski i przekazywać polecenia do kontenera w celu przetworzenia, gdy użytkownik je kliknął. Jeśli kontener chciał na wydrukowanie samego obiektu osadzonego, może on wykonać to żądanie przez wysłanie polecenia za pomocą `IOleCommandTarget` interfejsu osadzonego obiektu.
 
-`IOleCommandTarget` jest interfejsem podobne do automatyzacji, w tym, że jest używany przez klienta do wywołania metody na serwerze. Jednak przy użyciu `IOleCommandTarget` zapisuje narzut na wykonywanie wywołań za pośrednictwem interfejsów automatyzacji, ponieważ programiści nie ma potrzeby używania zazwyczaj kosztowne `Invoke` metody `IDispatch`.
+`IOleCommandTarget`jest interfejsem podobnym do automatyzacji, który jest używany przez klienta do wywoływania metod na serwerze. Jednak użycie `IOleCommandTarget` oszczędza obciążenie związane z wykonywaniem wywołań za pośrednictwem interfejsów automatyzacji, `IDispatch`ponieważ programiści nie muszą korzystać z `Invoke` zazwyczaj kosztownej metody.
 
-W MFC `IOleCommandTarget` interfejs jest używany przez serwery dokumentów aktywnych w celu umożliwienia kontenery dokumentów aktywnych wysyłanie poleceń do serwera. Klasa serwera aktywnego dokumentu, `CDocObjectServerItem`, przy użyciu map interfejsu MFC (zobacz [TN038: Implementacja interfejsu IUnknown MFC/OLE](../mfc/tn038-mfc-ole-iunknown-implementation.md)) do zaimplementowania `IOleCommandTarget` interfejsu.
+W MFC `IOleCommandTarget` interfejs jest używany przez serwery dokumentów aktywnych do zezwalania kontenerów dokumentów do wysyłania poleceń na serwer. Klasa `CDocObjectServerItem`aktywnego dokumentu,, używa map interfejsu MFC (zobacz [TN038: Implementacja](../mfc/tn038-mfc-ole-iunknown-implementation.md)MFC/OLE IUnknown, `IOleCommandTarget` aby zaimplementować interfejs.
 
-`IOleCommandTarget` jest również implementowana w `COleFrameHook` klasy. `COleFrameHook` jest nieudokumentowane klasy MFC, który implementuje funkcje ramki okna kontenerów edycji w miejscu. `COleFrameHook` mapy interfejsów biblioteki MFC używa również zaimplementować `IOleCommandTarget` interfejsu. `COleFrameHook`w implementacji `IOleCommandTarget` przekazuje polecenia OLE, aby `COleDocObjectItem`-pochodnych kontenery dokumentów aktywnych. Dzięki temu wszystkie MFC aktywny kontener dokumentu odbierać komunikaty z serwery dokumentów aktywnych zawarte.
+`IOleCommandTarget`jest również zaimplementowany w `COleFrameHook` klasie. `COleFrameHook`jest niezaudokumentowaną klasą MFC, która implementuje funkcje okna ramki w kontenerach edytowania w miejscu. `COleFrameHook`używa również map interfejsu MFC do zaimplementowania `IOleCommandTarget` interfejsu. `COleFrameHook`Implementacja `IOleCommandTarget` poleceń OLE przesyłania dalej do `COleDocObjectItem`pochodnych kontenerów dokumentów aktywnych. Dzięki temu wszystkie kontenery aktywnego dokumentu MFC mogą odbierać komunikaty z zawartych w nich aktywnych serwerów dokumentów.
 
 ## <a name="mfc-ole-command-maps"></a>Mapy poleceń OLE MFC
 
-MFC, deweloperzy mogą korzystać z `IOleCommandTarget` przy użyciu MFC OLE polecenia mapy. Mapy poleceń OLE są takie jak mapy wiadomości, ponieważ może służyć do mapowania polecenia OLE do składowych klasy, która zawiera mapę polecenia. Aby działało, umieść makra w mapie polecenie, aby określić grupę polecenia OLE, polecenia, które ma obsługiwać, polecenia OLE i identyfikator polecenia [WM_COMMAND](/windows/desktop/menurc/wm-command) komunikat, który zostanie wysłany, po odebraniu polecenia OLE. MFC udostępnia szereg wstępnie zdefiniowanych makr dla standardowych poleceń OLE. Lista OLE standardowych poleceń, które zostały pierwotnie zaprojektowane dla za pomocą aplikacji Microsoft Office, zobacz wyliczenie OLECMDID, która jest zdefiniowana w docobj.h.
+Deweloperzy MFC mogą korzystać z `IOleCommandTarget` zalet przy użyciu map poleceń OLE MFC. Mapy poleceń OLE są podobne do map komunikatów, ponieważ mogą służyć do mapowania poleceń OLE do funkcji składowych klasy, która zawiera mapę poleceń. Aby wykonać to działanie, umieść makra na mapie poleceń, aby określić grupę poleceń OLE polecenia, które chcesz obsłużyć, polecenie OLE i identyfikator polecenia komunikatu [WM_COMMAND](/windows/win32/menurc/wm-command) , który zostanie wysłany po odebraniu polecenia OLE. MFC udostępnia również wiele wstępnie zdefiniowanych makr dla standardowych poleceń OLE. Aby zapoznać się z listą standardowych poleceń OLE, które zostały pierwotnie zaprojektowane do użytku z aplikacjami Microsoft Office, zobacz Wyliczenie OLECMDID zdefiniowane w docobj. h.
 
-Po odebraniu przez aplikację MFC, która zawiera mapę polecenia OLE polecenia OLE MFC próbuje znaleźć identyfikator polecenia i grupy poleceń dla żądanego polecenia w mapie polecenia OLE w aplikacji. Jeśli zostanie znalezione dopasowanie, komunikatów WM_COMMAND jest wywoływane z aplikacją zawierającą mapy polecenia o identyfikatorze żądane polecenie. (Zobacz opis `ON_OLECMD` poniżej.) W ten sposób OLE polecenia wysyłane do aplikacji są przekształcane w wm_command — komunikaty przez MFC. Wm_command — komunikaty są następnie wysyłane za pośrednictwem aplikacji mapy komunikatów przy użyciu standardu MFC [routing poleceń](../mfc/command-routing.md) architektury.
+Gdy polecenie OLE jest odbierane przez aplikację MFC, która zawiera mapę poleceń OLE, MFC próbuje znaleźć identyfikator polecenia i grupę poleceń dla żądanego polecenia na mapie poleceń OLE aplikacji. W przypadku znalezienia dopasowania komunikat WM_COMMAND jest wysyłany do aplikacji zawierającej mapę poleceń z IDENTYFIKATORem żądanego polecenia. (Zobacz Opis `ON_OLECMD` poniżej). W ten sposób polecenia OLE wysyłane do aplikacji są włączane do komunikatów WM_COMMAND przez MFC. Komunikaty WM_COMMAND są następnie kierowane przez mapy komunikatów aplikacji przy użyciu standardowej architektury [ROUTINGU](../mfc/command-routing.md) MFC.
 
-W przeciwieństwie do mapy komunikatów mapy poleceń MFC OLE nie są obsługiwane przez ClassWizard. Deweloperzy MFC należy dodać ręcznie Obsługa mapy polecenia OLE i wpisy mapy polecenia OLE. Polecenia OLE, które mapy mogą być dodawane do biblioteki MFC aktywnych serwerów dokumentu w każdej klasy, która jest w łańcuchu routing komunikatów WM_COMMAND w chwili aktywny dokument jest aktywny w miejscu w kontenerze. Tych klas obejmują klasy pochodne klasy aplikacji [CWinApp](../mfc/reference/cwinapp-class.md), [CView](../mfc/reference/cview-class.md), [CDocument](../mfc/reference/cdocument-class.md), i [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md). Kontenery dokumentów aktywnych mapy poleceń OLE może być dodana tylko do [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)-klasy pochodnej. Ponadto w kontenerach dokumentów aktywnych wm_command — komunikaty zostanie tylko skierowane do mapy wiadomości w `COleDocObjectItem`-klasy pochodnej.
+W przeciwieństwie do map komunikatów mapy poleceń OLE MFC nie są obsługiwane przez ClassWizard. Deweloperzy MFC muszą ręcznie dodać obsługę map poleceń OLE i poleceń OLE. Mapy poleceń OLE można dodać do serwerów dokumentów Active Document MFC w dowolnej klasie, która znajduje się w łańcuchu routingu komunikatów WM_COMMAND w chwili, gdy aktywny dokument jest aktywny w kontenerze. Te klasy obejmują klasy aplikacji pochodne od [CWinApp](../mfc/reference/cwinapp-class.md), [CView](../mfc/reference/cview-class.md), [CDocument](../mfc/reference/cdocument-class.md)i [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md). W kontenerach dokumentów aktywnych mapy poleceń OLE można dodawać tylko do klasy pochodnej [metody COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md). Ponadto w kontenerach dokumentów aktywnych komunikaty WM_COMMAND są wysyłane tylko do mapy komunikatów w `COleDocObjectItem`klasie pochodnej.
 
-## <a name="ole-command-map-macros"></a>Makra mapy polecenia OLE
+## <a name="ole-command-map-macros"></a>Makra mapy poleceń OLE
 
-Aby dodać funkcje mapy polecenia do klasy, użyj następujących makr:
+Aby dodać funkcję mapowania poleceń do klasy, użyj następujących makr:
 
 ```cpp
 DECLARE_OLECMD_MAP ()
 ```
 
-To makro jest przesyłany w deklaracji klasy (zwykle znajduje się w pliku nagłówka), klasy, która zawiera mapę polecenia.
+To makro znajduje się w deklaracji klasy (zwykle w pliku nagłówkowym) klasy, która zawiera mapę poleceń.
 
 ```cpp
 BEGIN_OLECMD_MAP(theClass, baseClass)
 ```
 
 *theClass*<br/>
-Nazwa klasy, która zawiera mapę polecenia.
+Nazwa klasy, która zawiera mapę poleceń.
 
 *baseClass*<br/>
-Nazwa klasy podstawowej klasy, która zawiera mapę polecenia.
+Nazwa klasy podstawowej klasy, która zawiera mapę poleceń.
 
-To makro oznacza początek mapy polecenia. Użyj tego makra w pliku implementacji dla klasy, która zawiera mapę polecenia.
+To makro oznacza początek mapy poleceń. Użyj tego makra w pliku implementacji dla klasy, która zawiera mapę poleceń.
 
 ```
 END_OLECMD_MAP()
 ```
 
-To makro oznacza koniec mapy polecenia. Użyj tego makra w pliku implementacji dla klasy, która zawiera mapę polecenia. To makro, zawsze należy wykonać makro BEGIN_OLECMD_MAP.
+To makro oznacza koniec mapy poleceń. Użyj tego makra w pliku implementacji dla klasy, która zawiera mapę poleceń. Makro musi być zawsze zgodne z makrem BEGIN_OLECMD_MAP.
 
 ```
 ON_OLECMD(pguid, olecmdid, id)
 ```
 
 *pguid*<br/>
-Wskaźnik na identyfikator GUID grupy poleceń polecenia OLE. Ten parametr jest **NULL** grupy standardowe polecenia OLE.
+Wskaźnik na identyfikator GUID grupy poleceń polecenia OLE. Ten parametr ma **wartość null** dla standardowej grupy poleceń OLE.
 
 *olecmdid*<br/>
-Identyfikator polecenia OLE polecenie do wywołania.
+Identyfikator polecenia OLE polecenia do wywołania.
 
 *id*<br/>
-Identyfikator komunikatu WM_COMMAND do wysłania do aplikacji zawierającej mapy polecenia podczas wywoływania tego polecenia OLE.
+Identyfikator komunikatu WM_COMMAND do wysłania do aplikacji zawierającej mapę poleceń, gdy zostanie wywołane to polecenie OLE.
 
-Użyj ON_OLECMD — makro w mapie polecenie, aby dodać wpisy dla polecenia OLE, którą chcesz obsługiwać. Po odebraniu polecenia OLE, będzie można przekonwertować na określony komunikat WM_COMMAND i przesyłane za pośrednictwem aplikacji mapy komunikatów przy użyciu architektury standardowego routingu poleceń MFC.
+Za pomocą makra ON_OLECMD na mapie poleceń Dodaj wpisy dla poleceń OLE, które chcesz obsłużyć. Po odebraniu poleceń OLE zostaną one przekonwertowane do określonego komunikatu WM_COMMAND i kierowane przez mapę komunikatów aplikacji przy użyciu standardowej architektury routingu polecenia MFC.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak dodać funkcję obsługi polecenia OLE do serwer MFC aktywnego dokumentu do obsługi [OLECMDID_PRINT](/windows/desktop/api/docobj/ne-docobj-olecmdid) polecenia OLE. W tym przykładzie przyjęto założenie, używany przez kreatora AppWizard do generowania aplikacji MFC, który jest serwerem aktywnym dokumencie.
+Poniższy przykład pokazuje, jak dodać funkcję obsługi poleceń OLE do serwera aktywnego dokumentu MFC, aby obsłużyć polecenie OLE [OLECMDID_PRINT](/windows/win32/api/docobj/ne-docobj-olecmdid) . W tym przykładzie przyjęto założenie, że użyto AppWizard do wygenerowania aplikacji MFC, która jest aktywnym serwerem dokumentów.
 
-1. W swojej `CView`-pochodne klasy nagłówka pliku, Dodaj makro DECLARE_OLECMD_MAP do deklaracji klasy.
+1. `CView`W pliku nagłówkowym klasy pochodnej Dodaj makro DECLARE_OLECMD_MAP do deklaracji klasy.
 
     > [!NOTE]
-    > Użyj `CView`-klasy pochodnej, ponieważ jest to jeden z klas w serwera aktywnego dokumentu, który znajduje się w łańcuchu routing komunikatów WM_COMMAND.
+    > Użyj klasy `CView`pochodnej, ponieważ jest ona jedną z klas na aktywnym serwerze dokumentów, która znajduje się w łańcuchu routingu komunikatów WM_COMMAND.
 
     ```cpp
     class CMyServerView : public CView
@@ -98,7 +98,7 @@ Poniższy przykład pokazuje, jak dodać funkcję obsługi polecenia OLE do serw
     };
     ```
 
-2. W pliku implementacji dla `CView`-klasy, Dodaj BEGIN_OLECMD_MAP i END_OLECMD_MAP makra:
+2. W pliku `CView`implementacji klasy pochodnej Dodaj makra BEGIN_OLECMD_MAP i END_OLECMD_MAP:
 
     ```cpp
     BEGIN_OLECMD_MAP(CMyServerView, CView)
@@ -106,7 +106,7 @@ Poniższy przykład pokazuje, jak dodać funkcję obsługi polecenia OLE do serw
     END_OLECMD_MAP()
     ```
 
-3. Aby obsłużyć standardowe polecenia drukowania OLE, należy dodać [ON_OLECMD](reference/message-map-macros-mfc.md#on_olecmd) makra do mapy polecenie, podając identyfikator polecenia OLE standardowe polecenia drukowania i **ID_FILE_PRINT** dla identyfikatora WM_COMMAND. **ID_FILE_PRINT** to standard identyfikator polecenia drukowania używane przez aplikacje wygenerowane przez kreatora biblioteki MFC:
+3. Aby obsłużyć standardowe polecenie OLE do drukowania, Dodaj makro [ON_OLECMD](reference/message-map-macros-mfc.md#on_olecmd) do mapy poleceń, określając identyfikator polecenia OLE dla standardowego polecenia Print i **ID_FILE_PRINT** dla identyfikatora WM_COMMAND. **ID_FILE_PRINT** jest STANDARDowym identyfikatorem polecenia drukowania używanym przez generowane przez APPWIZARD aplikacje MFC:
 
     ```
     BEGIN_OLECMD_MAP(CMyServerView, CView)
@@ -114,9 +114,9 @@ Poniższy przykład pokazuje, jak dodać funkcję obsługi polecenia OLE do serw
     END_OLECMD_MAP()
     ```
 
-Należy pamiętać, że jeden standardowy makra poleceń OLE zdefiniowane w afxdocob.h, może zostać wykorzystana zamiast ON_OLECMD — makro ponieważ **OLECMDID_PRINT** jest standardowy identyfikator polecenia OLE. ON_OLECMD_PRINT — makro spowoduje wykonanie tych samych zadań ON_OLECMD — makro przedstawionych powyżej.
+Należy zauważyć, że jedno ze standardowych makr poleceń OLE, zdefiniowane w afxdocob. h, może być używane zamiast makra ON_OLECMD, ponieważ **OLECMDID_PRINT** jest STANDARDowym identyfikatorem polecenia OLE. Makro ON_OLECMD_PRINT wykona takie samo zadanie jak makro ON_OLECMD pokazane powyżej.
 
-Gdy aplikacja kontenera wysyła ten serwer **OLECMDID_PRINT** polecenia przez ten serwer `IOleCommandTarget` interfejsu, MFC, drukowanie procedury obsługi polecenia zostanie wywołana na serwerze, powodując serwera wydrukować aplikacji. Kontener dokumentów aktywnych kodu w celu wywołania polecenia drukowania, dodane w powyższych krokach będzie wyglądać mniej więcej tak:
+Gdy aplikacja kontenera wysyła ten serwer polecenia **OLECMDID_PRINT** za pomocą `IOleCommandTarget` interfejsu serwera, procedura obsługi poleceń drukowania MFC zostanie wywołana na serwerze, co spowoduje, że serwer drukuje aplikację. Kod kontenera dokumentu aktywnego do wywołania polecenia Print, które zostało dodane w powyższych krokach będzie wyglądać następująco:
 
 ```cpp
 void CContainerCntrItem::DoOleCmd()

@@ -10,16 +10,16 @@ helpviewer_keywords:
 - -GA compiler option [C++]
 - Optimize for Windows compiler options
 ms.assetid: be97323e-15a0-4836-862c-95980b51926a
-ms.openlocfilehash: a5eb6a10f3c4833ecc3e9d9c8451894788ebd938
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85efa03a3f3d267580cbb0442839afb18ac6c313
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292318"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492865"
 ---
 # <a name="ga-optimize-for-windows-application"></a>/GA (Optymalizuj dla aplikacji systemu Windows)
 
-Wyniki w kodzie bardziej wydajne dla pliku .exe do uzyskiwania dostępu do zmiennych lokalny magazyn wątków (TLS).
+Wynikiem jest bardziej wydajny kod pliku. exe na potrzeby uzyskiwania dostępu do zmiennych magazynu wątków (TLS).
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,19 +29,19 @@ Wyniki w kodzie bardziej wydajne dla pliku .exe do uzyskiwania dostępu do zmien
 
 ## <a name="remarks"></a>Uwagi
 
-**/GA** szybkość dostępu do danych zadeklarowane za pomocą [__declspec(thread)](../../cpp/declspec.md) w programie systemu Windows. Gdy ta opcja jest ustawiona, [__tls_index](/windows/desktop/ProcThread/thread-local-storage) — makro jest domyślnie przyjmuje wartość 0.
+**/Ga** przyspiesza dostęp do danych zadeklarowanych za pomocą [__declspec (thread)](../../cpp/declspec.md) w programie opartym na systemie Windows. Gdy ta opcja jest ustawiona, zakłada się, że makro [__tls_index](/windows/win32/ProcThread/thread-local-storage) ma wartość 0.
 
-Za pomocą **/GA** dla biblioteki DLL może spowodować wygenerowanie złego kodu.
+Użycie **/ga** dla biblioteki dll może spowodować nieprawidłowe generowanie kodu.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
-1. Kliknij przycisk **C/C++** folderu.
+1. Kliknij folder **C/C++**  .
 
-1. Kliknij przycisk **wiersza polecenia** stronę właściwości.
+1. Kliknij stronę właściwości **wiersza polecenia** .
 
-1. Wpisz opcje kompilatora w **dodatkowe opcje** pole.
+1. Wpisz opcję kompilatora w polu **dodatkowe opcje** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 

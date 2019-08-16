@@ -62,19 +62,19 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: 04ca1f0b689e68008b3b5a57d01e626ee92a60b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fac7e052c5c1d5525946bdbc599404ac56d47f5a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209751"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499454"
 ---
-# <a name="strncpy-strncpyl-wcsncpy-wcsncpyl-mbsncpy-mbsncpyl"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
+# <a name="strncpy-_strncpy_l-wcsncpy-_wcsncpy_l-_mbsncpy-_mbsncpy_l"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 
-Kopiowanie znaków jednego ciągu do innego. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [strncpy_s —, _strncpy_s_l —, wcsncpy_s —, _wcsncpy_s_l —, _mbsncpy_s, _mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md).
+Kopiuj znaki jednego ciągu do innego. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md).
 
 > [!IMPORTANT]
-> **_mbsncpy —** i **_mbsncpy_l —** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncpy** i **_mbsncpy_l** nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -161,54 +161,54 @@ Ciąg docelowy.
 *strSource*<br/>
 Ciąg źródłowy.
 
-*Liczba*<br/>
-Liczba znaków do skopiowania.
+*liczbą*<br/>
+Liczba znaków, które mają zostać skopiowane.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca *strDest*. Zwraca żadnej wartości zarezerwowanej, aby wskazać błąd.
+Zwraca *strDest*. Żadna wartość zwracana nie jest zarezerwowana do wskazania błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-**Strncpy —** funkcja kopiuje początkowej *liczba* znaków *strSource* do *strDest* i zwraca *strDest* . Jeśli *liczba* jest mniejsza niż długość *strSource*, znak null nie jest automatycznie dołączany do ciągu skopiowany. Jeśli *liczba* jest większa niż długość *strSource*, ciąg docelowy jest uzupełniana ze znakami null do długości *liczba*. Zachowanie **strncpy —** jest niezdefiniowane, jeżeli ciągi źródłowe i docelowe nakładają się.
+Funkcja **strncpy** kopiuje początkową *liczbę* znaków *StrSource* do *strDest* i zwraca *strDest*. Jeśli *Liczba* jest mniejsza lub równa długości *strSource*, znak null nie jest automatycznie dołączany do skopiowanego ciągu. Jeśli *Liczba* jest większa niż długość *strSource*, ciąg docelowy jest uzupełniony znakami o wartości null do *liczby*długości. Zachowanie **strncpy** jest niezdefiniowane, jeśli parametry źródłowe i docelowe nakładają się na siebie.
 
 > [!IMPORTANT]
-> **strncpy —** nie sprawdza wystarczająco dużo miejsca w *strDest*; dzięki temu potencjalną przyczyną przekroczenia buforu. *Liczba* argument ogranicza liczbę znaków skopiowane; nie jest objęta limitem rozmiaru *strDest*. Zobacz poniższy przykład. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> **strncpy** nie sprawdza wystarczającej ilości miejsca w *strDest*; stanowi to potencjalną przyczynę przekroczenia buforu. Argument *Count* ogranicza liczbę znaków skopiowanych; nie jest to limit rozmiaru *strDest*. Zobacz Poniższy przykład. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Jeśli *strDest* lub *strSource* jest **o wartości NULL** wskaźnika, lub jeśli *liczba* jest mniejszy niż lub równy zero, zostanie wywołany nieprawidłowy parametr uchwytu, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość -1 i ustaw **errno** do **EINVAL**.
+Jeśli *strDest* lub *strSource* jest wskaźnikiem o **wartości null** lub jeśli *Liczba* jest mniejsza lub równa zero, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość-1 i ustawiają **errno** na **EINVAL**.
 
-**wcsncpy —** i **_mbsncpy —** są wersjami znaków dwubajtowych i znaków wielobajtowych **strncpy —**. Argumenty i wartość zwracana przez **wcsncpy —** i **_mbsncpy —** różnią się odpowiednio. Te funkcje sześć zachowują się identycznie.
+**wcsncpy** i **_mbsncpy** są wersjami znaków dwubajtowych i znakami wieloznacznymi **strncpy**. Argumenty i wartość zwrócona przez **wcsncpy** i **_mbsncpy** różnią się odpowiednio. Te sześć funkcji zachowuje się identycznie w inny sposób.
 
-Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają one ustawień regionalnych przekazanych w zamiast bieżących ustawień regionalnych dla swoich zachowań zależnych od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że używają ustawień regionalnych przewidzianych zamiast bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-W języku C++ funkcje te mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+W C++programie te funkcje mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsncpy —**|**strncpy**|**_mbsnbcpy**|**wcsncpy —**|
+|**_tcsncpy**|**strncpy**|**_mbsnbcpy**|**wcsncpy**|
 |**_tcsncpy_l**|**_strncpy_l**|**_mbsnbcpy_l**|**_wcsncpy_l**|
 
 > [!NOTE]
-> **_strncpy_l —** i **_wcsncpy_l —** ma zależność od nie ustawień regionalnych; są one udostępniane wyłącznie dla **_tcsncpy_l —** i nie są przeznaczone do bezpośredniego wywoływania.
+> **_strncpy_l** i **_wcsncpy_l** nie są zależne od ustawień regionalnych; są one dostępne tylko dla **_tcsncpy_l** i nie są przeznaczone do bezpośredniego wywoływania.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**strncpy**|\<string.h>|
-|**wcsncpy —**|\<Włącz String.h > lub \<wchar.h >|
+|**wcsncpy**|\<ciąg. h > lub \<WCHAR. h >|
 |**_mbsncpy**, **_mbsncpy_l**|\<mbstring.h>|
 
-Platforma dodatkowe informacje o zgodności – zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności platformy, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano użycie **strncpy —** i jak precyzyjnego aby spowodować, że program usterki i problemy z zabezpieczeniami. Kompilator generuje ostrzeżenia dla każdego wywołania **strncpy —** podobne do **crt_strncpy_x86.c(15): ostrzeżenie C4996: "strncpy —": Ta funkcja lub zmienna może być niebezpieczne. Strncpy_s — zamiast tego Rozważ użycie. Aby wyłączyć wycofywania, należy użyć _CRT_SECURE_NO_WARNINGS. Zobacz Pomoc online, aby uzyskać szczegółowe informacje.**
+Poniższy przykład demonstruje użycie **strncpy** i sposób jego niewłaściwego użycia w celu wypróbowania błędów programu i problemów z zabezpieczeniami. Kompilator generuje ostrzeżenie dla każdego wywołania **strncpy** podobnego do **crt_strncpy_x86. c (15): Warning C4996: ' strncpy ': Ta funkcja lub zmienna może być niebezpieczna. Zamiast tego Rozważ użycie strncpy_s. Aby wyłączyć przestarzałość, użyj _CRT_SECURE_NO_WARNINGS. Szczegóły można znaleźć w pomocy online.**
 
 ```C
 // crt_strncpy_x86.c
@@ -273,7 +273,7 @@ dogs like to chase cars.
 Buffer overrun: s = 'ars.' (should be 'test')
 ```
 
-Układ zmiennych automatycznych i odpowiedniego poziomu ochrony wykrywania i kod błędu mogą się różnić z ustawienia kompilatora zmienione. W tym przykładzie mogą mieć różne wyniki podczas kompilowania w innych środowiskach kompilacji lub w innych opcjach kompilatora.
+Układ automatycznych zmiennych i poziom wykrywania błędów oraz ochrony kodu mogą się różnić w zależności od zmienionych ustawień kompilatora. Ten przykład może mieć różne wyniki w przypadku skompilowania w innych środowiskach kompilacji lub z innymi opcjami kompilatora.
 
 ## <a name="see-also"></a>Zobacz także
 

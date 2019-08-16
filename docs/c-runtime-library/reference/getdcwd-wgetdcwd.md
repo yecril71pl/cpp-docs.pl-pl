@@ -34,14 +34,14 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-ms.openlocfilehash: 464a254775d9a1d2488247d6dafb4b85cd763f10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f6ae99ae74bb21c9462abcb37e466d63b86f8af
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331834"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501031"
 ---
-# <a name="getdcwd-wgetdcwd"></a>_getdcwd, _wgetdcwd
+# <a name="_getdcwd-_wgetdcwd"></a>_getdcwd, _wgetdcwd
 
 Pobiera pełną ścieżkę bieżącego katalogu roboczego na określonym dysku.
 
@@ -62,38 +62,38 @@ wchar_t *_wgetdcwd(
 
 ### <a name="parameters"></a>Parametry
 
-*drive*<br/>
-Nieujemna liczba całkowita, określająca dysk (0 = dysk domyślny, 1 = A, 2 = B i tak dalej).
+*litera*<br/>
+Nieujemna liczba całkowita określająca dysk (0 = dysk domyślny, 1 = A, 2 = B itd.).
 
-Jeśli określony dysk nie jest dostępny, lub rodzaju dysku (na przykład, wymienny, stały, CD-ROM, dysk RAM lub dysk sieciowy) nie można ustalić, zostanie wywołany nieprawidłowy parametr uchwytu. Aby uzyskać więcej informacji, zobacz [Parameter Validation](../../c-runtime-library/parameter-validation.md).
+Jeśli określony dysk nie jest dostępny lub nie można ustalić rodzaju dysku (na przykład wymienny, stały, CD-ROM, dysku pamięci RAM lub dysku sieciowego), zostanie wywołana procedura obsługi nieprawidłowego parametru. Aby uzyskać więcej informacji, zobacz [Walidacja parametrów](../../c-runtime-library/parameter-validation.md).
 
 *buffer*<br/>
-Lokalizacja magazynu dla ścieżki, lub **NULL**.
+Lokalizacja przechowywania dla ścieżki lub **wartość null**.
 
-Jeśli **NULL** jest określona, ta funkcja przydziela bufor o co najmniej *maxlen* rozmiar przy użyciu **— funkcja malloc**i wartość zwracana przez **_getdcwd —** jest wskaźnikiem do przydzielonego buforu. Bufor może zostać uwolniony przez wywołanie metody **bezpłatne** i przekazywania jemu wskaźnika.
+Jeśli określono **wartość null** , ta funkcja przydziela bufor o rozmiarze co najmniej *MaxLen* przy użyciu opcji **malloc**, a wartość zwracana przez **_getdcwd** jest wskaźnikiem do przydzielonego buforu. Bufor może zostać zwolniony przez wywołanie bezpłatnej i przekazanie jej wskaźnika.
 
 *maxlen*<br/>
-Wartość różną od zera dodatnia liczba całkowita, określająca maksymalną długość ścieżki w znakach: **char** dla **_getdcwd —** i **wchar_t** dla **_wgetdcwd —**.
+Niezerowy dodatnia liczba całkowita, która określa maksymalną długość ścieżki, w znakach: **char** dla **_getdcwd** i **wchar_t** dla **_wgetdcwd**.
 
-Jeśli *maxlen* jest mniejszy niż lub równy zero, obsługi parametru zostanie wywołana. Aby uzyskać więcej informacji, zobacz [Parameter Validation](../../c-runtime-library/parameter-validation.md).
+Jeśli *MaxLen* jest mniejsza lub równa zero, zostanie wywołana procedura obsługi nieprawidłowego parametru. Aby uzyskać więcej informacji, zobacz [Walidacja parametrów](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do ciągu, który reprezentuje pełną ścieżkę bieżącego katalogu roboczego na określonym dysku lub **NULL**, który wskazuje na błąd.
+Wskaźnik na ciąg, który reprezentuje pełną ścieżkę bieżącego katalogu roboczego na określonym dysku lub **wartość null**, co wskazuje na błąd.
 
-Jeśli *buforu* jest określony jako **NULL** i ma za mało pamięci do przydzielenia *maxlen* znaków, wystąpi błąd i **errno** jest Ustaw **ENOMEM**. Jeśli długość ścieżki, w tym kończącego znaku null przekroczy *maxlen*, wystąpi błąd, i **errno** ustawiono **ERANGE**. Aby uzyskać więcej informacji na temat tych kodów błędu, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Jeśli *bufor* jest określony jako **null** , a za mało pamięci do przydzielenia znaków *MaxLen* , wystąpi błąd i **errno** jest ustawiony na **ENOMEM**. Jeśli długość ścieżki włącznie z końcowym znakiem null przekracza *MaxLen*, wystąpi błąd, a **errno** jest ustawiona na **ERANGE**. Aby uzyskać więcej informacji o tych kodach błędów, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_Getdcwd —** funkcja pobiera pełną ścieżkę bieżącego katalogu roboczego na określonym dysku i zapisuje go w *buforu*. Jeśli bieżący katalog roboczy jest ustawiony na katalog główny, ciąg kończy się znakiem kreski ułamkowej odwróconej (\\). Jeśli bieżący katalog roboczy jest ustawiony na katalog inny niż katalog główny, ciąg kończy się nazwą katalogu, a nie znakiem kreski ułamkowej odwróconej.
+Funkcja **_getdcwd** pobiera pełną ścieżkę bieżącego katalogu roboczego na określonym dysku i zapisuje ją w *buforze*. Jeśli bieżący katalog roboczy jest ustawiony na katalog główny, ciąg kończący się ukośnikiem odwrotnym (\\). Jeśli bieżący katalog roboczy jest ustawiony na katalog inny niż główny, ciąg zostanie zakończony nazwą katalogu, a nie ukośnikiem odwrotnym.
 
-**_wgetdcwd —** to wersja znaku dwubajtowego **_getdcwd —**, a jego *buforu* parametru i wartości zwracane to ciągi znaków dwubajtowych. W przeciwnym razie **_wgetdcwd —** i **_getdcwd —** zachowują się identycznie.
+**_wgetdcwd** to wersja **_getdcwd**o szerokim znaku, a jej parametr *buforu* i wartość zwracana są ciągami znaków dwubajtowych. W przeciwnym razie **_wgetdcwd** i **_getdcwd** zachowują się identycznie.
 
-Ta funkcja jest bezpieczna dla wątków, mimo że jest to uzależnione od **GetFullPathName**, które jest nie metodą o bezpiecznych wątkach. Jednakże można naruszyć bezpieczeństwo wątków, jeśli wielowątkowa aplikacja wywoła tę funkcję i [GetFullPathNameA](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).
+Ta funkcja jest bezpieczna wątkowo, chociaż zależy od **GetFullPathName**, która sama nie jest bezpieczna wątkowo. Można jednak naruszyć bezpieczeństwo wątku, jeśli aplikacja wielowątkowa wywoła tę funkcję i [GetFullPathName](/windows/win32/api/fileapi/nf-fileapi-getfullpathnamew).
 
-Wersja tej funkcji, która ma **_nolock** sufiks działa identycznie do tej funkcji z tą różnicą, że nie jest metodą o bezpiecznych wątkach i nie jest chronione przed ingerencją przez inne wątki. Aby uzyskać więcej informacji, zobacz [_getdcwd_nolock —, _wgetdcwd_nolock —](getdcwd-nolock-wgetdcwd-nolock.md).
+Wersja tej funkcji, która ma sufiks **_nolock** zachowuje się identycznie z tą funkcją, z tą różnicą, że nie jest bezpieczna wątkowo i nie jest chroniona przed ingerencją przez inne wątki. Aby uzyskać więcej informacji, zobacz [_getdcwd_nolock, _wgetdcwd_nolock](getdcwd-nolock-wgetdcwd-nolock.md).
 
-Gdy **_DEBUG** i **_CRTDBG_MAP_ALLOC** są zdefiniowane, wzywa do **_getdcwd —** i **_wgetdcwd —** są zastępowane przez wywołania **_getdcwd_dbg —** i **_wgetdcwd_dbg —** tak, aby umożliwić debugowanie alokacji pamięci. Aby uzyskać więcej informacji, zobacz[_getdcwd_dbg —, _wgetdcwd_dbg —](getdcwd-dbg-wgetdcwd-dbg.md).
+Jeśli **_DEBUG** i **_CRTDBG_MAP_ALLOC** są zdefiniowane, wywołania do **_getdcwd** i **_wgetdcwd** są zastępowane wywołaniami **_getdcwd_dbg** i **_wgetdcwd_dbg** , aby można było debugować alokacje pamięci. Aby uzyskać więcej informacji, zobacz[_getdcwd_dbg, _wgetdcwd_dbg](getdcwd-dbg-wgetdcwd-dbg.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -106,13 +106,13 @@ Gdy **_DEBUG** i **_CRTDBG_MAP_ALLOC** są zdefiniowane, wzywa do **_getdcwd —
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_getdcwd**|\<direct.h>|
-|**_wgetdcwd**|\<Direct.h > lub \<wchar.h >|
+|**_wgetdcwd**|\<Direct. h > lub \<WCHAR. h >|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład w [_getdrive —](getdrive.md).
+Zobacz przykład w [_getdrive](getdrive.md).
 
 ## <a name="see-also"></a>Zobacz także
 

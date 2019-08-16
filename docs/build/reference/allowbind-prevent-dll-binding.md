@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -ALLOWBIND linker option
 - DLLs [C++], preventing binding
 ms.assetid: 30e37e24-12e4-407e-988a-39d357403598
-ms.openlocfilehash: bd9976e434441d2480386ee6fa3d0315fd8d2ef5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d963a7145ab2e8c8872dc21c485bdc8f877b0b76
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295154"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493142"
 ---
 # <a name="allowbind-prevent-dll-binding"></a>/ALLOWBIND (Zapobiegaj powiązaniu biblioteki DLL)
 
@@ -27,17 +27,17 @@ ms.locfileid: "62295154"
 
 ## <a name="remarks"></a>Uwagi
 
-/ALLOWBIND:no Ustawia bit w nagłówku biblioteki DLL, która wskazuje Bind.exe, że obraz nie może być powiązana. Nie ma Biblioteka DLL była związana, jeśli jego została podpisana cyfrowo (powiązanie unieważnia podpis).
+/ALLOWBIND: NO ustawia bit w nagłówku DLL, który wskazuje na powiązanie. exe, że obraz nie może być powiązany. Nie ma potrzeby powiązania DLL, jeśli został podpisany cyfrowo (powiązanie unieważnia sygnaturę).
 
-Można edytować istniejącej biblioteki DLL dla funkcjonalność /ALLOWBIND [/ALLOWBIND](allowbind.md) — opcja polecenia EDITBIN narzędzia.
+Istniejącą bibliotekę DLL dla funkcji/ALLOWBIND można edytować za pomocą opcji [/ALLOWBIND](allowbind.md) narzędzia polecenia EDITBIN.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
-1. Rozwiń **właściwości konfiguracji**, **konsolidatora**i wybierz **wiersza polecenia**.
+1. Rozwiń węzeł **Właściwości konfiguracji**, **konsolidator**, a następnie wybierz pozycję **wiersz polecenia**.
 
-1. Wprowadź `/ALLOWBIND:NO` do **dodatkowe opcje**.
+1. Wprowadź `/ALLOWBIND:NO` **dodatkowe opcje**.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
@@ -47,5 +47,5 @@ Można edytować istniejącej biblioteki DLL dla funkcjonalność /ALLOWBIND [/A
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)<br/>
-[BindImage — funkcja](/windows/desktop/api/imagehlp/nf-imagehlp-bindimage)<br/>
-[BindImageEx — funkcja](/windows/desktop/api/imagehlp/nf-imagehlp-bindimageex)
+[BindImage, funkcja](/windows/win32/api/imagehlp/nf-imagehlp-bindimage)<br/>
+[BindImageEx, funkcja](/windows/win32/api/imagehlp/nf-imagehlp-bindimageex)

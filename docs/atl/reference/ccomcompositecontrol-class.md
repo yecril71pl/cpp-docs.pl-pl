@@ -1,5 +1,5 @@
 ---
-title: CComCompositeControl Class
+title: Klasa CComCompositeControl
 ms.date: 11/04/2016
 f1_keywords:
 - CComCompositeControl
@@ -16,19 +16,19 @@ helpviewer_keywords:
 - CComCompositeControl class
 - composite controls, CComCompositeControl class
 ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
-ms.openlocfilehash: f1a9a2d0628b3683f047ce9858d809040438db03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b57eaf105bfca1a49d53b5e5e99969b0fa2fc82f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260243"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497335"
 ---
-# <a name="ccomcompositecontrol-class"></a>CComCompositeControl Class
+# <a name="ccomcompositecontrol-class"></a>Klasa CComCompositeControl
 
-Ta klasa dostarcza metody, o których trzeba do zaimplementowania kontrolek złożonych.
+Ta klasa dostarcza metody wymagane do zaimplementowania formantu złożonego.
 
 > [!IMPORTANT]
->  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+>  Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,7 +40,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Z klasą pochodną [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak również od innych interfejsów, które chcesz obsługiwać złożonej kontrolki.
+Klasa, pochodząca z [klasy CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), a także z innych interfejsów, które mają być obsługiwane dla formantu złożonego.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -55,34 +55,34 @@ Z klasą pochodną [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CComCompositeControl::AdviseSinkMap](#advisesinkmap)|Wywołaj tę metodę, aby przeprowadzić operację advise lub unadvise wszystkich kontrolek pracujących złożonego formantu.|
-|[CComCompositeControl::CalcExtent](#calcextent)|Wywołaj tę metodę w celu obliczania rozmiaru w jednostkach HIMETRIC zasobu okna dialogowego używane do hostowania kontrolek złożonych.|
-|[CComCompositeControl::Create](#create)|Ta metoda jest wywoływana, aby utworzyć okno kontrolki złożonej kontrolki.|
-|[CComCompositeControl::CreateControlWindow](#createcontrolwindow)|Wywołaj tę metodę, aby utworzyć okno Kontrola i doradztwa dowolnego obsługiwanego formantu.|
-|[CComCompositeControl::SetBackgroundColorFromAmbient](#setbackgroundcolorfromambient)|Wywołaj tę metodę, aby ustawić kolor tła kontrolki złożonej za pomocą koloru tła kontenera.|
+|[CComCompositeControl::AdviseSinkMap](#advisesinkmap)|Wywołaj tę metodę, aby zalecić lub wycofać wszystkie kontrolki hostowane przez formant złożony.|
+|[CComCompositeControl::CalcExtent](#calcextent)|Wywołaj tę metodę, aby obliczyć rozmiar w jednostkach HIMETRIC zasobu okna dialogowego używanego do hostowania złożonego formantu.|
+|[CComCompositeControl:: Create](#create)|Ta metoda jest wywoływana w celu utworzenia okna kontroli dla formantu złożonego.|
+|[CComCompositeControl::CreateControlWindow](#createcontrolwindow)|Wywołaj tę metodę, aby utworzyć okno kontroli i zalecić kontrolkę hostowaną.|
+|[CComCompositeControl::SetBackgroundColorFromAmbient](#setbackgroundcolorfromambient)|Wywołaj tę metodę, aby ustawić kolor tła kontrolki złożonej przy użyciu koloru tła kontenera.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CComCompositeControl::m_hbrBackground](#m_hbrbackground)|Pędzel tła.|
-|[CComCompositeControl::m_hWndFocus](#m_hwndfocus)|Uchwyt okna, który aktualnie ma fokus.|
+|[CComCompositeControl::m_hbrBackground](#m_hbrbackground)|Pędzel w tle.|
+|[CComCompositeControl::m_hWndFocus](#m_hwndfocus)|Uchwyt okna, które aktualnie ma fokus.|
 
 ## <a name="remarks"></a>Uwagi
 
-Klasy pochodne klasy `CComCompositeControl` dziedziczą funkcje złożonego formantu ActiveX. Kontrolki ActiveX pochodną `CComCompositeControl` są hostowane przez standardowe okno dialogowe. Te rodzaje formantów są nazywane formanty złożone, ponieważ są w stanie hostują inne kontrolki (natywne kontrolki Windows i formantów ActiveX).
+Klasy pochodne klasy `CComCompositeControl` dziedziczą funkcje kontrolki złożonej ActiveX. Formanty ActiveX pochodne z `CComCompositeControl` są hostowane przez standardowe okno dialogowe. Te typy kontrolek są nazywane kontrolkami złożonymi, ponieważ mogą hostować inne kontrolki (natywne formanty systemu Windows i kontrolki ActiveX).
 
-`CComCompositeControl` Umożliwia określenie zasobu okna dialogowego do użycia w celu utworzenia złożonego formantu, wyszukując element członkowski danych wyliczany klasy podrzędnej. Element członkowski IDD tej klasy podrzędnej jest ustawiony na identyfikator zasobu dla zasobu okna dialogowego, która będzie służyć jako okno formantu. Oto przykład składowej danych, która jest pochodną klasy `CComCompositeControl` może zawierać do identyfikacji zasobu okna dialogowego, które ma być używany dla formantu okna:
+`CComCompositeControl`identyfikuje zasób okna dialogowego do użycia podczas tworzenia kontrolki złożonej przez wyszukanie wyliczanej składowej danych w klasie podrzędnej. Element członkowski IDD tej klasy podrzędnej jest ustawiany na identyfikator zasobu okna dialogowego, który będzie używany jako okno kontrolki. Poniżej znajduje się przykład elementu członkowskiego danych, który Klasa pochodna `CComCompositeControl` powinna zawierać, aby zidentyfikować zasób okna dialogowego, który ma być używany dla okna kontrolki:
 
 [!code-cpp[NVC_ATL_COM#13](../../atl/codesnippet/cpp/ccomcompositecontrol-class_1.h)]
 
 > [!NOTE]
->  Formanty złożone są zawsze okna kontrolki, mimo że zawierają one od kontrolek bez okien.
+>  Kontrolki złożone są zawsze kontrolkami okienkowymi, chociaż mogą zawierać kontrolki bez okien.
 
-Formant implementowany przez `CComCompositeControl`— Klasa pochodna zawiera tabulacji wbudowane zachowanie domyślne. Gdy formant uzyskuje fokus, jest tabulatorem zawierającego aplikację, kolejno naciśnięcie klawisza TAB spowoduje, że fokus na jest cyklom za pośrednictwem wszystkich kontrolek złożonych zawartych w nim formantów, a następnie poza złożonej kontrolki i do następnego elementu w kolejność tabulacji kontenera. Kolejność tabulacji kontrolek hostowana zależy od zasobu okna dialogowego i określa kolejność, w której tabulacji wystąpi.
+Kontrolka zaimplementowana `CComCompositeControl`przez klasę pochodną ma wbudowane domyślne zachowanie tabulacji. Gdy kontrolka odbierze fokus przy użyciu tabulacji w aplikacji zawierającej, naciśnięcie klawisza TAB spowoduje, że fokus będzie przełączany przez wszystkie kontrolki zawarte w kontrolce złożonej, a następnie poza formant złożony i do następnego elementu w kolejność tabulacji w kontenerze. Kolejność tabulacji formantów hostowanych jest określana przez zasób okna dialogowego i określa kolejność, w której nastąpi tabulacja.
 
 > [!NOTE]
->  Aby akceleratorów działać prawidłowo z `CComCompositeControl`, należy go załadować tabeli akceleratora, jak formant zostanie utworzony, Przekaż dojścia i liczba akceleratorów do [IOleControlImpl::GetControlInfo](../../atl/reference/iolecontrolimpl-class.md#getcontrolinfo), i na koniec należy zniszczyć tabeli, po zwolnieniu formantu.
+>  Aby akceleratory działały prawidłowo z `CComCompositeControl`programem, należy załadować tabelę akceleratora w miarę tworzenia kontrolki, przekazać uchwyt i liczbę akceleratorów z powrotem do [IOleControlImpl:: GetControlInfo](../../atl/reference/iolecontrolimpl-class.md#getcontrolinfo), a następnie zniszczyć tabelę po wydaniu formantu.
 
 ## <a name="example"></a>Przykład
 
@@ -100,11 +100,11 @@ Formant implementowany przez `CComCompositeControl`— Klasa pochodna zawiera ta
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlctl.h
+**Nagłówek:** atlctl. h
 
-##  <a name="advisesinkmap"></a>  CComCompositeControl::AdviseSinkMap
+##  <a name="advisesinkmap"></a>CComCompositeControl::AdviseSinkMap
 
-Wywołaj tę metodę, aby przeprowadzić operację advise lub unadvise wszystkich kontrolek pracujących złożonego formantu.
+Wywołaj tę metodę, aby zalecić lub wycofać wszystkie kontrolki hostowane przez formant złożony.
 
 ```
 HRESULT AdviseSinkMap(bool bAdvise);
@@ -113,26 +113,26 @@ HRESULT AdviseSinkMap(bool bAdvise);
 ### <a name="parameters"></a>Parametry
 
 *bAdvise*<br/>
-Wartość true, jeśli wszystkie formanty, które mają zaleceniem; w przeciwnym razie wartość false.
+Prawda, jeśli wszystkie kontrolki mają być zalecane; w przeciwnym razie false.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 |||
 |-|-|
-|S_OK  |Wszystkie kontrolki w przypadku ujścia mapy zostały połączone lub pomyślnie Rozłączono z ich źródła zdarzeń.|
-|E_FAIL  |Nie wszystkie kontrolki w przypadku ujścia mapy, które mogą zostać połączone lub pomyślnie Rozłączono z ich źródła zdarzeń.|
-|E_POINTER  |Błąd ten zwykle wskazuje problem z wpisem na mapie obiektu sink zdarzenia formantu lub problem z argumentem szablonu, używanym w `IDispEventImpl` lub `IDispEventSimpleImpl` klasy bazowej.|
-|CONNECT_E_ADVISELIMIT  |Punkt połączenia jest już osiągnął limit liczby połączeń i nie akceptuje żadnych innych.|
-|CONNECT_E_CANNOTCONNECT  |Obiekt sink nie obsługuje interfejsu wymaganego przez ten punkt połączenia.|
-|CONNECT_E_NOCONNECTION  |Wartość pliku cookie nie reprezentują prawidłowego połączenia. Błąd ten zwykle wskazuje problem z wpisem na mapie obiektu sink zdarzenia formantu lub problem z argumentem szablonu, używanym w `IDispEventImpl` lub `IDispEventSimpleImpl` klasy bazowej.|
+|S_OK  |Wszystkie kontrolki w mapie ujścia zdarzeń zostały połączone lub odłączone pomyślnie ze źródłem zdarzenia.|
+|E_FAIL  |Nie wszystkie formanty w mapie ujścia zdarzeń mogą być połączone lub odłączone pomyślnie od źródła zdarzenia.|
+|E_POINTER  |Ten błąd zazwyczaj wskazuje na problem z wpisem w mapie ujścia zdarzeń kontrolki lub problemem z argumentem szablonu używanym w `IDispEventImpl` klasie lub `IDispEventSimpleImpl` klasy bazowej.|
+|CONNECT_E_ADVISELIMIT  |Punkt połączenia osiągnął już limit połączeń i nie może zaakceptować więcej.|
+|CONNECT_E_CANNOTCONNECT  |Obiekt ujścia nie obsługuje interfejsu wymaganego przez ten punkt połączenia.|
+|CONNECT_E_NOCONNECTION  |Wartość pliku cookie nie reprezentuje prawidłowego połączenia. Ten błąd zazwyczaj wskazuje na problem z wpisem w mapie ujścia zdarzeń kontrolki lub problemem z argumentem szablonu używanym w `IDispEventImpl` klasie lub `IDispEventSimpleImpl` klasy bazowej.|
 
 ### <a name="remarks"></a>Uwagi
 
-Podstawowa implementacja tej metody przeszukuje wpisy w zdarzeniu mapy ujścia. Następnie z informacją o tym lub unadvises punkty połączeń do obiektów COM, opisanego przez wpisy ujścia mapy obiektu sink zdarzenia. Ta metoda elementu członkowskiego opiera się również na fakt, że klasa pochodna dziedziczy z jednego wystąpienia `IDispEventImpl` dla każdej kontrolki w mapie ujścia, który ma być zalecany lub unadvised.
+Podstawowa implementacja tej metody przeszukuje wpisy na mapie ujścia zdarzeń. Następnie doradza lub odradza punkty połączenia z obiektami COM opisanymi przez wpisy ujścia mapy ujścia zdarzeń. Ta metoda członkowska również polega na tym, że Klasa pochodna dziedziczy z jednego wystąpienia `IDispEventImpl` dla każdej kontrolki w mapie ujścia, która ma być zalecana lub niezalecana.
 
 ##  <a name="calcextent"></a>  CComCompositeControl::CalcExtent
 
-Wywołaj tę metodę w celu obliczania rozmiaru w jednostkach HIMETRIC zasobu okna dialogowego używane do hostowania kontrolek złożonych.
+Wywołaj tę metodę, aby obliczyć rozmiar w jednostkach HIMETRIC zasobu okna dialogowego używanego do hostowania złożonego formantu.
 
 ```
 BOOL CalcExtent(SIZE& size);
@@ -140,20 +140,20 @@ BOOL CalcExtent(SIZE& size);
 
 ### <a name="parameters"></a>Parametry
 
-*Rozmiar*<br/>
-Odwołanie do `SIZE` struktury do wypełnienia przez tę metodę.
+*zmienia*<br/>
+Odwołanie do `SIZE` struktury, która ma zostać wypełniona przez tę metodę.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli kontrolka jest hostowana przez okno dialogowe; w przeciwnym razie wartość FALSE.
+TRUE, Jeśli kontrolka jest hostowana przez okno dialogowe; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Rozmiar jest zwracany w *rozmiar* parametru.
+Rozmiar jest zwracany w parametrze *size* .
 
-##  <a name="create"></a>  CComCompositeControl::Create
+##  <a name="create"></a>CComCompositeControl:: Create
 
-Ta metoda jest wywoływana, aby utworzyć okno kontrolki złożonej kontrolki.
+Ta metoda jest wywoływana w celu utworzenia okna kontroli dla formantu złożonego.
 
 ```
 HWND Create(
@@ -165,23 +165,23 @@ HWND Create(
 ### <a name="parameters"></a>Parametry
 
 *hWndParent*<br/>
-Dojście do nadrzędnego okna kontrolki.
+Uchwyt do okna nadrzędnego formantu.
 
 *rcPos*<br/>
-Zastrzeżone.
+Rezerwacj.
 
 *dwInitParam*<br/>
-Dane mają być przekazane do formantu podczas tworzenia kontrolki. Dane przekazywane jako *dwInitParam* będzie wyświetlany jako wartość parametru LPARAM [/ / Złap](/windows/desktop/dlgbox/wm-initdialog) wiadomości, które zostanie wysłane do kontrolek złożonych, gdy powstaje.
+Dane, które mają zostać przesłane do kontrolki podczas tworzenia kontrolki. Dane przekazywane jako *dwInitParam* będą wyświetlane jako parametr lParam komunikatu [WM_INITDIALOG](/windows/win32/dlgbox/wm-initdialog) , który zostanie wysłany do kontrolki złożonej, gdy zostanie utworzony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Uchwyt do nowo utworzonego złożonej kontrolki okna dialogowego.
+Uchwyt do nowo utworzonego okna dialogowego formantu złożonego.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest zazwyczaj wywoływana podczas aktywacji w miejscu formantu.
+Ta metoda jest zwykle wywoływana podczas aktywacji w miejscu formantu.
 
-##  <a name="ccomcompositecontrol"></a>  CComCompositeControl::CComCompositeControl
+##  <a name="ccomcompositecontrol"></a>CComCompositeControl::CComCompositeControl
 
 Konstruktor.
 
@@ -191,7 +191,7 @@ CComCompositeControl();
 
 ### <a name="remarks"></a>Uwagi
 
-Inicjuje [CComCompositeControl::m_hbrBackground](#m_hbrbackground) i [CComCompositeControl::m_hWndFocus](#m_hwndfocus) elementów członkowskich danych o wartości NULL.
+Inicjuje element członkowski danych [CComCompositeControl:: m_hbrBackground](#m_hbrbackground) i [CComCompositeControl:: m_hWndFocus](#m_hwndfocus) do wartości null.
 
 ##  <a name="dtor"></a>  CComCompositeControl::~CComCompositeControl
 
@@ -203,11 +203,11 @@ Destruktor.
 
 ### <a name="remarks"></a>Uwagi
 
-Usuwa obiekt tła, jeśli taki istnieje.
+Usuwa obiekt tła (jeśli istnieje).
 
-##  <a name="createcontrolwindow"></a>  CComCompositeControl::CreateControlWindow
+##  <a name="createcontrolwindow"></a>CComCompositeControl::CreateControlWindow
 
-Wywołaj tę metodę, aby utworzyć okno Kontrola i doradztwa kontrolkami hostowanej.
+Wywołaj tę metodę, aby utworzyć okno kontroli i zalecić kontrolki hostowane.
 
 ```
 virtual HWND CreateControlWindow(
@@ -218,22 +218,22 @@ virtual HWND CreateControlWindow(
 ### <a name="parameters"></a>Parametry
 
 *hWndParent*<br/>
-Dojście do nadrzędnego okna kontrolki.
+Uchwyt do okna nadrzędnego formantu.
 
 *rcPos*<br/>
-Pozycja prostokąta złożonego formantu w kliencie koordynuje względem *hWndParent*.
+Prostokąt położenia kontrolki złożonej w współrzędnej klienta względem *hWndParent*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca uchwyt do nowo utworzonego złożonej kontrolki okna dialogowego.
+Zwraca uchwyt do nowo utworzonego okna dialogowego formantu złożonego.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wywołuje [CComCompositeControl::Create](#create) i [CComCompositeControl::AdviseSinkMap](#advisesinkmap).
+Ta metoda wywołuje [CComCompositeControl:: Create](#create) i [CComCompositeControl:: AdviseSinkMap](#advisesinkmap).
 
 ##  <a name="m_hbrbackground"></a>  CComCompositeControl::m_hbrBackground
 
-Pędzel tła.
+Pędzel w tle.
 
 ```
 HBRUSH m_hbrBackground;
@@ -241,7 +241,7 @@ HBRUSH m_hbrBackground;
 
 ##  <a name="m_hwndfocus"></a>  CComCompositeControl::m_hWndFocus
 
-Uchwyt okna, który aktualnie ma fokus.
+Uchwyt okna, które aktualnie ma fokus.
 
 ```
 HWND m_hWndFocus;
@@ -249,7 +249,7 @@ HWND m_hWndFocus;
 
 ##  <a name="setbackgroundcolorfromambient"></a>  CComCompositeControl::SetBackgroundColorFromAmbient
 
-Wywołaj tę metodę, aby ustawić kolor tła kontrolki złożonej za pomocą koloru tła kontenera.
+Wywołaj tę metodę, aby ustawić kolor tła kontrolki złożonej przy użyciu koloru tła kontenera.
 
 ```
 HRESULT SetBackgroundColorFromAmbient();
@@ -257,10 +257,10 @@ HRESULT SetBackgroundColorFromAmbient();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ## <a name="see-also"></a>Zobacz także
 
 [Klasa CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
-[Podstawy złożonych kontrolek](../../atl/atl-composite-control-fundamentals.md)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Podstawy kontroli złożonej](../../atl/atl-composite-control-fundamentals.md)<br/>
+[Przegląd klas](../../atl/atl-class-overview.md)

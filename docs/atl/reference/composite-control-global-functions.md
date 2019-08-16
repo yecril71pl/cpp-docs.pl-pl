@@ -1,5 +1,5 @@
 ---
-title: Funkcje globalne kontrolek złożonych
+title: Funkcje globalne kontrolki złożonej
 ms.date: 11/04/2016
 f1_keywords:
 - atlhost/ATL::AtlAxDialogBox
@@ -18,41 +18,41 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: fb41134de21cc030ae4e96360cad67222026ce4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58c7fed2d6e95967101e98589a13c114fe2e9a8a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278413"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496641"
 ---
-# <a name="composite-control-global-functions"></a>Funkcje globalne kontrolek złożonych
+# <a name="composite-control-global-functions"></a>Funkcje globalne kontrolki złożonej
 
-Te funkcje zapewniają obsługę do utworzenia okien dialogowych i tworzenie, hostowanie i licencjonowanie kontrolek ActiveX.
+Te funkcje zapewniają obsługę tworzenia okien dialogowych oraz do tworzenia, hostingu i licencjonowania formantów ActiveX.
 
 > [!IMPORTANT]
->  Funkcje wymienione w poniższej tabeli nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+>  Funkcje wymienione w poniższej tabeli nie mogą być używane w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
 |||
 |-|-|
-|[AtlAxDialogBox](#atlaxdialogbox)|Tworzy modalne okno dialogowe z szablonu okna dialogowego dostarczonego przez użytkownika. Okno dialogowe wynikowy może zawierać kontrolki ActiveX.|
-|[AtlAxCreateDialog](#atlaxcreatedialog)|Tworzy niemodalne okno dialogowe z szablonu okna dialogowego dostarczonego przez użytkownika. Okno dialogowe wynikowy może zawierać kontrolki ActiveX.|
+|[AtlAxDialogBox](#atlaxdialogbox)|Tworzy modalne okno dialogowe z szablonu okna dialogowego dostarczonego przez użytkownika. Wyniki okna dialogowego mogą zawierać kontrolki ActiveX.|
+|[AtlAxCreateDialog](#atlaxcreatedialog)|Tworzy niemodalne okno dialogowe z szablonu okna dialogowego dostarczonego przez użytkownika. Wyniki okna dialogowego mogą zawierać kontrolki ActiveX.|
 |[AtlAxCreateControl](#atlaxcreatecontrol)|Tworzy formant ActiveX, inicjuje go i umieszcza w określonym oknie.|
-|[AtlAxCreateControlEx](#atlaxcreatecontrolex)|Tworzy formant ActiveX, inicjuje go i umieszcza w określonym oknie oraz pobiera wskaźnika interfejsu (lub wskaźniki) z formantu.|
+|[AtlAxCreateControlEx](#atlaxcreatecontrolex)|Tworzy formant ActiveX, inicjuje go, hostuje w określonym oknie i Pobiera wskaźnik interfejsu (lub wskaźniki) z formantu.|
 |[AtlAxCreateControlLic](#atlaxcreatecontrollic)|Tworzy licencjonowany formant ActiveX, inicjuje go i umieszcza w określonym oknie.|
-|[AtlAxCreateControlLicEx](#atlaxcreatecontrollicex)|Tworzy licencjonowany formant ActiveX, inicjuje go i umieszcza w określonym oknie oraz pobiera wskaźnika interfejsu (lub wskaźniki) z formantu.|
+|[AtlAxCreateControlLicEx](#atlaxcreatecontrollicex)|Tworzy licencjonowany formant ActiveX, inicjuje go, hostuje w określonym oknie i Pobiera wskaźnik interfejsu (lub wskaźniki) z formantu.|
 |[AtlAxAttachControl](#atlaxattachcontrol)|Dołącza wcześniej utworzony formant do określonego okna.|
-|[AtlAxGetHost](#atlaxgethost)|Używany do uzyskiwania bezpośredni wskaźnik interfejsu do kontenera dla określonego okna (jeśli istnieje), biorąc pod uwagę jego uchwyt.|
-|[AtlAxGetControl](#atlaxgetcontrol)|Używany do uzyskiwania bezpośredni wskaźnik interfejsu do formantu zawartego wewnątrz określonego okna (jeśli istnieje), biorąc pod uwagę jego uchwyt.|
-|[AtlSetChildSite](#atlsetchildsite)|Inicjuje `IUnknown` lokacji podrzędnych.|
-|[AtlAxWinInit](#atlaxwininit)|Inicjuje kod hostingu AxWin obiektów.|
-|[AtlAxWinTerm](#atlaxwinterm)|Deinicjuje kod hostingu AxWin obiektów.|
-|[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|Zwraca informacje o domyślnym interfejsie źródła obiektu.|
+|[AtlAxGetHost](#atlaxgethost)|Służy do uzyskania bezpośredniego wskaźnika interfejsu do kontenera dla określonego okna (jeśli istnieje), z uwzględnieniem jego uchwytu.|
+|[AtlAxGetControl](#atlaxgetcontrol)|Służy do uzyskania bezpośredniego wskaźnika interfejsu do kontrolki zawartej w określonym oknie (jeśli istnieje), z uwzględnieniem uchwytu.|
+|[AtlSetChildSite](#atlsetchildsite)|`IUnknown` Inicjuje lokację podrzędną.|
+|[AtlAxWinInit](#atlaxwininit)|Inicjuje kod hostingu dla obiektów AxWin.|
+|[AtlAxWinTerm](#atlaxwinterm)|Odinicjalizuje kod hostingu dla obiektów AxWin.|
+|[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|Zwraca informacje o domyślnym interfejsie źródłowym obiektu.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlhost.h
+**Nagłówek:** atlhost. h
 
-##  <a name="atlaxdialogbox"></a>  AtlAxDialogBox
+##  <a name="atlaxdialogbox"></a>AtlAxDialogBox
 
 Tworzy modalne okno dialogowe z szablonu okna dialogowego dostarczonego przez użytkownika.
 
@@ -68,36 +68,36 @@ ATLAPI_(int) AtlAxDialogBox(
 ### <a name="parameters"></a>Parametry
 
 *hInstance*<br/>
-[in] Identyfikuje wystąpienia modułu, którego pliku wykonywalnego zawiera szablonu okna dialogowego.
+podczas Identyfikuje wystąpienie modułu, którego plik wykonywalny zawiera szablon okna dialogowego.
 
 *lpTemplateName*<br/>
-[in] Identyfikuje szablonu okna dialogowego. Ten parametr jest wskaźnik do ciągu zakończonego znakiem null, który określa nazwę szablonu okna dialogowego lub wartość całkowitą, która określa identyfikator zasobu szablonu okna dialogowego. Jeśli parametr określa identyfikator zasobu, jego word wyższego rzędu musi mieć wartość zero, a jego word niskiego rzędu musi zawierać identyfikator. Możesz użyć [MAKEINTRESOURCE](/windows/desktop/api/winuser/nf-winuser-makeintresourcea) makra w celu utworzenia tej wartości.
+podczas Identyfikuje szablon okna dialogowego. Ten parametr jest wskaźnikiem do ciągu znaków, który jest zakończony znakiem null, który określa nazwę szablonu okna dialogowego lub wartość całkowitą określającą identyfikator zasobu szablonu okna dialogowego. Jeśli parametr określa identyfikator zasobu, jego słowo o wysokim porządku musi mieć wartość zero, a jego słowo w niskim porządku musi zawierać identyfikator. Aby utworzyć tę wartość, można użyć makra [MAKEINTRESOURCE](/windows/win32/api/winuser/nf-winuser-makeintresourcew) .
 
 *hWndParent*<br/>
-[in] Identyfikuje okna, który jest właścicielem okno dialogowe.
+podczas Identyfikuje okno, które jest właścicielem okna dialogowego.
 
 *lpDialogProc*<br/>
-[in] Wskazuje procedury okno dialogowe. Aby uzyskać więcej informacji na temat procedury okno dialogowe, zobacz [DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc).
+podczas Wskazuje procedurę okna dialogowego. Aby uzyskać więcej informacji na temat procedury okna dialogowego, zobacz [DialogProc](/windows/win32/api/winuser/nc-winuser-dlgproc).
 
 *dwInitParam*<br/>
-[in] Określa wartość do przekazania do okna dialogowego w *lParam* parametr / / Złap wiadomości.
+podczas Określa wartość, która ma zostać przekazana do okna dialogowego w parametrze *lParam* komunikatu WM_INITDIALOG.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jedna z wartości HRESULT standardowych.
+Jedna ze standardowych wartości HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Do użycia `AtlAxDialogBox` z szablonu okna dialogowego, który zawiera formant ActiveX, Określ prawidłowy ciąg identyfikatora CLSID, APPID lub adresu URL jako *tekstu* pole **kontroli** części zasobu okna dialogowego wraz z " AtlAxWin80 "jako *Nazwa klasy* pola w ramach tej samej sekcji. Następujące pokazuje, jakie prawidłową **kontroli** sekcja może wyglądać tak jak:
+Aby użyć `AtlAxDialogBox` z szablonem okna dialogowego zawierającym formant ActiveX, określ prawidłowy identyfikator CLSID, identyfikator appid lub ciąg adresu URL jako pole *tekstowe* sekcji **kontrolki** zasobu okna dialogowego wraz z "AtlAxWin80" jako pole *nazwy klasy* w tej samej sekcji. Poniżej pokazano, jak może wyglądać prawidłowa sekcja kontrolki:
 
 ```
 CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
-Aby uzyskać więcej informacji na temat edytowania skryptów zasobów, zobacz [jak: Otwieranie pliku skryptu zasobu w formacie tekstowym](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Aby uzyskać więcej informacji na temat instrukcji definicji zasobu kontroli, zobacz [wspólne parametry sterujące](/windows/desktop/menurc/common-control-parameters) w ramach zestawu Windows SDK: SDK Tools.
+Aby uzyskać więcej informacji na temat edytowania skryptów zasobów [, zobacz How to: Otwórz plik skryptu zasobu w formacie](../../windows/how-to-open-a-resource-script-file-in-text-format.md)tekstowym. Aby uzyskać więcej informacji na temat sterowania instrukcjami definicji zasobów, zobacz [Parametry formantów wspólnych](/windows/win32/menurc/common-control-parameters) w obszarze Windows SDK: SDK Tools.
 
-Aby uzyskać więcej informacji o oknach dialogowych, ogólnie rzecz biorąc, zobacz [DialogBox](/windows/desktop/api/winuser/nf-winuser-dialogboxa) i [CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) w zestawie Windows SDK.
+Aby uzyskać więcej informacji na temat ogólnych okien dialogowych, zobacz [DialogBox](/windows/win32/api/winuser/nf-winuser-dialogboxw) i [CreateDialogParam](/windows/win32/api/winuser/nf-winuser-createdialogparamw) w Windows SDK.
 
 ##  <a name="atlaxcreatedialog"></a>  AtlAxCreateDialog
 
@@ -115,29 +115,29 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 ### <a name="parameters"></a>Parametry
 
 *hInstance*<br/>
-[in] Identyfikuje wystąpienia modułu, którego pliku wykonywalnego zawiera szablonu okna dialogowego.
+podczas Identyfikuje wystąpienie modułu, którego plik wykonywalny zawiera szablon okna dialogowego.
 
 *lpTemplateName*<br/>
-[in] Identyfikuje szablonu okna dialogowego. Ten parametr jest wskaźnik do ciągu zakończonego znakiem null, który określa nazwę szablonu okna dialogowego lub wartość całkowitą, która określa identyfikator zasobu szablonu okna dialogowego. Jeśli parametr określa identyfikator zasobu, jego word wyższego rzędu musi mieć wartość zero, a jego word niskiego rzędu musi zawierać identyfikator. Możesz użyć [MAKEINTRESOURCE](/windows/desktop/api/winuser/nf-winuser-makeintresourcea) makra w celu utworzenia tej wartości.
+podczas Identyfikuje szablon okna dialogowego. Ten parametr jest wskaźnikiem do ciągu znaków, który jest zakończony znakiem null, który określa nazwę szablonu okna dialogowego lub wartość całkowitą określającą identyfikator zasobu szablonu okna dialogowego. Jeśli parametr określa identyfikator zasobu, jego słowo o wysokim porządku musi mieć wartość zero, a jego słowo w niskim porządku musi zawierać identyfikator. Aby utworzyć tę wartość, można użyć makra [MAKEINTRESOURCE](/windows/win32/api/winuser/nf-winuser-makeintresourcew) .
 
 *hWndParent*<br/>
-[in] Identyfikuje okna, który jest właścicielem okno dialogowe.
+podczas Identyfikuje okno, które jest właścicielem okna dialogowego.
 
 *lpDialogProc*<br/>
-[in] Wskazuje procedury okno dialogowe. Aby uzyskać więcej informacji na temat procedury okno dialogowe, zobacz [DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc).
+podczas Wskazuje procedurę okna dialogowego. Aby uzyskać więcej informacji na temat procedury okna dialogowego, zobacz [DialogProc](/windows/win32/api/winuser/nc-winuser-dlgproc).
 
 *dwInitParam*<br/>
-[in] Określa wartość do przekazania do okna dialogowego w *lParam* parametr / / Złap wiadomości.
+podczas Określa wartość, która ma zostać przekazana do okna dialogowego w parametrze *lParam* komunikatu WM_INITDIALOG.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jedna z wartości HRESULT standardowych.
+Jedna ze standardowych wartości HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Okno dialogowe wynikowy może zawierać kontrolki ActiveX.
+Wyniki okna dialogowego mogą zawierać kontrolki ActiveX.
 
-Zobacz [CreateDialog](/windows/desktop/api/winuser/nf-winuser-createdialoga) i [CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) w Windows SDK.
+Zobacz [okno dialogowe](/windows/win32/api/winuser/nf-winuser-createdialogw) i [CreateDialogParam](/windows/win32/api/winuser/nf-winuser-createdialogparamw) w Windows SDK.
 
 ##  <a name="atlaxcreatecontrol"></a>  AtlAxCreateControl
 
@@ -154,37 +154,37 @@ ATLAPI AtlAxCreateControl(
 ### <a name="parameters"></a>Parametry
 
 *lpszName*<br/>
-Wskaźnik do ciągu do przekazania do formantu. Musi być sformatowany w jednym z następujących sposobów:
+Wskaźnik do ciągu, który ma zostać przesłany do kontrolki. Muszą być sformatowane w jeden z następujących sposobów:
 
-- Identyfikator ProgID takich jak "MSCAL. Calendar.7 "
+- Identyfikator ProgID, taki jak "MSCAL. Calendar. 7
 
-- CLSID, takie jak "{8E27C92B-1264-101C-8A2F-040224009C02}"
+- Identyfikator CLSID, taki jak "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Adres URL, takich jak "<http://www.microsoft.com>"
+- Adres URL, taki jak<http://www.microsoft.com>""
 
-- Odwołanie do aktywnego dokumentu, takie jak "file://\\\Documents\MyDoc.doc"
+- Odwołanie do aktywnego dokumentu, na przykład "File://\\\Documents\MyDoc.doc"
 
-- Fragment kodu HTML, takich jak "MSHTML:\<HTML >\<treści > jest to wiersz tekstu\</BODY >\<polecenia >"
+- Fragment kodu HTML, taki jak "MSHTML:\<HTML >\<Body > to jest wierszem tekstu\</Body >\</HTML >"
 
    > [!NOTE]
-   > "MSHTML:" musi poprzedzać fragment kodu HTML, dzięki czemu jest wyznaczony jako strumień MSHTML.
+   > "MSHTML:" musi poprzedzać fragment kodu HTML, tak aby był wyznaczono jako strumień MSHTML.
 
-*hWnd*<br/>
-[in] Obsługa do kontrolki zostanie dołączony do okna.
+*Właściwość*<br/>
+podczas Dojście do okna, do którego zostanie dołączona kontrolka.
 
 *pStream*<br/>
-[in] Wskaźnik do strumienia, który służy do inicjowania właściwości formantu. Może mieć wartości NULL.
+podczas Wskaźnik do strumienia, który jest używany do inicjowania właściwości formantu. Może mieć wartość NULL.
 
 *ppUnkContainer*<br/>
-[out] Adres wskaźnika, który będzie otrzymywał `IUnknown` kontenera. Może mieć wartości NULL.
+określoną Adres wskaźnika, który będzie otrzymywał `IUnknown` kontener. Może mieć wartość NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jedna z wartości HRESULT standardowych.
+Jedna ze standardowych wartości HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja globalna daje ten sam wynik co wywołanie metody [AtlAxCreateControlEx](#atlaxcreatecontrolex)(*lpszName*, *hWnd*, *pStream*, NULL, NULL, WARTOŚĆ NULL, NULL);.
+Ta funkcja globalna daje ten sam wynik jak wywołanie [AtlAxCreateControlEx](#atlaxcreatecontrolex)(*lpszName*, *HWND*, *pStream*, null, null, null, null);.
 
 Aby utworzyć licencjonowany formant ActiveX, zobacz [AtlAxCreateControlLic](#atlaxcreatecontrollic).
 
@@ -206,46 +206,46 @@ ATLAPI AtlAxCreateControlEx(
 ### <a name="parameters"></a>Parametry
 
 *lpszName*<br/>
-Wskaźnik do ciągu do przekazania do formantu. Musi być sformatowany w jednym z następujących sposobów:
+Wskaźnik do ciągu, który ma zostać przesłany do kontrolki. Muszą być sformatowane w jeden z następujących sposobów:
 
-- Identyfikator ProgID takich jak "MSCAL. Calendar.7 "
+- Identyfikator ProgID, taki jak "MSCAL. Calendar. 7
 
-- CLSID, takie jak "{8E27C92B-1264-101C-8A2F-040224009C02}"
+- Identyfikator CLSID, taki jak "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Adres URL, takich jak "<http://www.microsoft.com>"
+- Adres URL, taki jak<http://www.microsoft.com>""
 
-- Odwołanie do aktywnego dokumentu, takie jak "file://\\\Documents\MyDoc.doc"
+- Odwołanie do aktywnego dokumentu, na przykład "File://\\\Documents\MyDoc.doc"
 
-- Fragment kodu HTML, takich jak "MSHTML:\<HTML >\<treści > jest to wiersz tekstu\</BODY >\<polecenia >"
+- Fragment kodu HTML, taki jak "MSHTML:\<HTML >\<Body > to jest wierszem tekstu\</Body >\</HTML >"
 
    > [!NOTE]
-   > "MSHTML:" musi poprzedzać fragment kodu HTML, dzięki czemu jest wyznaczony jako strumień MSHTML.
+   > "MSHTML:" musi poprzedzać fragment kodu HTML, tak aby był wyznaczono jako strumień MSHTML.
 
-*hWnd*<br/>
-[in] Obsługa do kontrolki zostanie dołączony do okna.
+*Właściwość*<br/>
+podczas Dojście do okna, do którego zostanie dołączona kontrolka.
 
 *pStream*<br/>
-[in] Wskaźnik do strumienia, który służy do inicjowania właściwości formantu. Może mieć wartości NULL.
+podczas Wskaźnik do strumienia, który jest używany do inicjowania właściwości formantu. Może mieć wartość NULL.
 
 *ppUnkContainer*<br/>
-[out] Adres wskaźnika, który będzie otrzymywał `IUnknown` kontenera. Może mieć wartości NULL.
+określoną Adres wskaźnika, który będzie otrzymywał `IUnknown` kontener. Może mieć wartość NULL.
 
 *ppUnkControl*<br/>
-[out] Adres wskaźnika, który będzie otrzymywał `IUnknown` utworzonego formantu. Może mieć wartości NULL.
+określoną Adres wskaźnika, który będzie otrzymywał `IUnknown` utworzony formant. Może mieć wartość NULL.
 
 *iidSink*<br/>
-Identyfikator interfejsu interfejsu wychodzącego w zawartego w nim obiektu.
+Identyfikator interfejsu interfejsu wychodzącego na zawartym obiekcie.
 
 *punkSink*<br/>
-Wskaźnik do `IUnknown` interfejs obiektu sink do podłączenia do punktu połączenia z określonym przez *iidSink* zamkniętego obiektu po pomyślnym utworzeniu zawartego w nim obiektu.
+Wskaźnik do `IUnknown` interfejsu obiektu ujścia, który ma być połączony z punktem połączenia określonym przez *iidSink* na zawartym obiekcie po pomyślnym utworzeniu zawartego obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jedna z wartości HRESULT standardowych.
+Jedna ze standardowych wartości HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-`AtlAxCreateControlEx` jest podobny do [AtlAxCreateControl](#atlaxcreatecontrol) , ale pozwala również na wyświetlony wskaźnik interfejsu do nowo utworzonego formantu i skonfigurować obiekt sink zdarzenia, aby odbierać zdarzenia wywoływane przez formant.
+`AtlAxCreateControlEx`jest podobny do [AtlAxCreateControl](#atlaxcreatecontrol) , ale umożliwia również otrzymywanie wskaźnika interfejsu do nowo utworzonej kontrolki i skonfigurowanie ujścia zdarzeń do odbierania zdarzeń wyzwalanych przez formant.
 
 Aby utworzyć licencjonowany formant ActiveX, zobacz [AtlAxCreateControlLicEx](#atlaxcreatecontrollicex).
 
@@ -265,40 +265,40 @@ ATLAPI AtlAxCreateControlLic(
 ### <a name="parameters"></a>Parametry
 
 *lpszName*<br/>
-Wskaźnik do ciągu do przekazania do formantu. Musi być sformatowany w jednym z następujących sposobów:
+Wskaźnik do ciągu, który ma zostać przesłany do kontrolki. Muszą być sformatowane w jeden z następujących sposobów:
 
-- Identyfikator ProgID takich jak "MSCAL. Calendar.7 "
+- Identyfikator ProgID, taki jak "MSCAL. Calendar. 7
 
-- CLSID, takie jak "{8E27C92B-1264-101C-8A2F-040224009C02}"
+- Identyfikator CLSID, taki jak "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Adres URL, takich jak "<http://www.microsoft.com>"
+- Adres URL, taki jak<http://www.microsoft.com>""
 
-- Odwołanie do aktywnego dokumentu, takie jak "file://\\\Documents\MyDoc.doc"
+- Odwołanie do aktywnego dokumentu, na przykład "File://\\\Documents\MyDoc.doc"
 
-- Fragment kodu HTML, takich jak "MSHTML:\<HTML >\<treści > jest to wiersz tekstu\</BODY >\<polecenia >"
+- Fragment kodu HTML, taki jak "MSHTML:\<HTML >\<Body > to jest wierszem tekstu\</Body >\</HTML >"
 
    > [!NOTE]
-   > "MSHTML:" musi poprzedzać fragment kodu HTML, dzięki czemu jest wyznaczony jako strumień MSHTML.
+   > "MSHTML:" musi poprzedzać fragment kodu HTML, tak aby był wyznaczono jako strumień MSHTML.
 
-*hWnd*<br/>
-Obsługa do kontrolki zostanie dołączony do okna.
+*Właściwość*<br/>
+Dojście do okna, do którego zostanie dołączona kontrolka.
 
 *pStream*<br/>
-Wskaźnik do strumienia, który służy do inicjowania właściwości formantu. Może mieć wartości NULL.
+Wskaźnik do strumienia, który jest używany do inicjowania właściwości formantu. Może mieć wartość NULL.
 
 *ppUnkContainer*<br/>
-Adres wskaźnika, który będzie otrzymywał `IUnknown` kontenera. Może mieć wartości NULL.
+Adres wskaźnika, który będzie otrzymywał `IUnknown` kontener. Może mieć wartość NULL.
 
 *bstrLic*<br/>
-BSTR, zawierający licencji dla formantu.
+BSTR zawierający licencję dla kontrolki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jedna z wartości HRESULT standardowych.
+Jedna ze standardowych wartości HRESULT.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [hostingu ActiveX kontrolek przy użyciu ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) przykład sposobu użycia `AtlAxCreateControlLic`.
+Zobacz [hostowanie formantów ActiveX przy użyciu biblioteki ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) , aby uzyskać przykład `AtlAxCreateControlLic`użycia.
 
 ##  <a name="atlaxcreatecontrollicex"></a>  AtlAxCreateControlLicEx
 
@@ -319,53 +319,53 @@ ATLAPI AtlAxCreateControlLicEx(
 ### <a name="parameters"></a>Parametry
 
 *lpszName*<br/>
-Wskaźnik do ciągu do przekazania do formantu. Musi być sformatowany w jednym z następujących sposobów:
+Wskaźnik do ciągu, który ma zostać przesłany do kontrolki. Muszą być sformatowane w jeden z następujących sposobów:
 
-- Identyfikator ProgID takich jak "MSCAL. Calendar.7 "
+- Identyfikator ProgID, taki jak "MSCAL. Calendar. 7
 
-- CLSID, takie jak "{8E27C92B-1264-101C-8A2F-040224009C02}"
+- Identyfikator CLSID, taki jak "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Adres URL, takich jak "<http://www.microsoft.com>"
+- Adres URL, taki jak<http://www.microsoft.com>""
 
-- Odwołanie do aktywnego dokumentu, takie jak "file://\\\Documents\MyDoc.doc"
+- Odwołanie do aktywnego dokumentu, na przykład "File://\\\Documents\MyDoc.doc"
 
-- Fragment kodu HTML, takich jak "MSHTML:\<HTML >\<treści > jest to wiersz tekstu\</BODY >\<polecenia >"
+- Fragment kodu HTML, taki jak "MSHTML:\<HTML >\<Body > to jest wierszem tekstu\</Body >\</HTML >"
 
    > [!NOTE]
-   > "MSHTML:" musi poprzedzać fragment kodu HTML, dzięki czemu jest wyznaczony jako strumień MSHTML.
+   > "MSHTML:" musi poprzedzać fragment kodu HTML, tak aby był wyznaczono jako strumień MSHTML.
 
-*hWnd*<br/>
-Obsługa do kontrolki zostanie dołączony do okna.
+*Właściwość*<br/>
+Dojście do okna, do którego zostanie dołączona kontrolka.
 
 *pStream*<br/>
-Wskaźnik do strumienia, który służy do inicjowania właściwości formantu. Może mieć wartości NULL.
+Wskaźnik do strumienia, który jest używany do inicjowania właściwości formantu. Może mieć wartość NULL.
 
 *ppUnkContainer*<br/>
-Adres wskaźnika, który będzie otrzymywał `IUnknown` kontenera. Może mieć wartości NULL.
+Adres wskaźnika, który będzie otrzymywał `IUnknown` kontener. Może mieć wartość NULL.
 
 *ppUnkControl*<br/>
-[out] Adres wskaźnika, który będzie otrzymywał `IUnknown` utworzonego formantu. Może mieć wartości NULL.
+określoną Adres wskaźnika, który będzie otrzymywał `IUnknown` utworzony formant. Może mieć wartość NULL.
 
 *iidSink*<br/>
-Identyfikator interfejsu interfejsu wychodzącego w zawartego w nim obiektu.
+Identyfikator interfejsu interfejsu wychodzącego na zawartym obiekcie.
 
 *punkSink*<br/>
-Wskaźnik do `IUnknown` interfejs obiektu sink do podłączenia do punktu połączenia z określonym przez *iidSink* zamkniętego obiektu po pomyślnym utworzeniu zawartego w nim obiektu.
+Wskaźnik do `IUnknown` interfejsu obiektu ujścia, który ma być połączony z punktem połączenia określonym przez *iidSink* na zawartym obiekcie po pomyślnym utworzeniu zawartego obiektu.
 
 *bstrLic*<br/>
-BSTR, zawierający licencji dla formantu.
+BSTR zawierający licencję dla kontrolki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jedna z wartości HRESULT standardowych.
+Jedna ze standardowych wartości HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-`AtlAxCreateControlLicEx` jest podobny do [AtlAxCreateControlLic](#atlaxcreatecontrollic) , ale pozwala również na wyświetlony wskaźnik interfejsu do nowo utworzonego formantu i skonfigurować obiekt sink zdarzenia, aby odbierać zdarzenia wywoływane przez formant.
+`AtlAxCreateControlLicEx`jest podobny do [AtlAxCreateControlLic](#atlaxcreatecontrollic) , ale umożliwia również otrzymywanie wskaźnika interfejsu do nowo utworzonej kontrolki i skonfigurowanie ujścia zdarzeń do odbierania zdarzeń wyzwalanych przez formant.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [hostingu ActiveX kontrolek przy użyciu ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) przykład sposobu użycia `AtlAxCreateControlLicEx`.
+Zobacz [hostowanie formantów ActiveX przy użyciu biblioteki ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) , aby uzyskać przykład `AtlAxCreateControlLicEx`użycia.
 
 ##  <a name="atlaxattachcontrol"></a>  AtlAxAttachControl
 
@@ -381,24 +381,24 @@ ATLAPI AtlAxAttachControl(
 ### <a name="parameters"></a>Parametry
 
 *pControl*<br/>
-[in] Wskaźnik do `IUnknown` formantu.
+podczas Wskaźnik do `IUnknown` kontrolki.
 
-*hWnd*<br/>
-[in] Dojście do okna, które będą obsługiwać formant.
+*Właściwość*<br/>
+podczas Dojście do okna, które będzie hostować formant.
 
 *ppUnkContainer*<br/>
-[out] Wskaźnik do wskaźnika do `IUnknown` obiektu kontenera.
+określoną Wskaźnik do wskaźnika do `IUnknown` obiektu kontenera.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jedna z wartości HRESULT standardowych.
+Jedna ze standardowych wartości HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj [AtlAxCreateControlEx](#atlaxcreatecontrolex) i [AtlAxCreateControl](#atlaxcreatecontrol) Aby jednocześnie utworzyć i dołączyć kontrolki.
+Aby jednocześnie utworzyć i dołączyć kontrolkę, użyj [AtlAxCreateControlEx](#atlaxcreatecontrolex) i [AtlAxCreateControl](#atlaxcreatecontrol) .
 
 > [!NOTE]
->  Dołączany obiekt kontrolki musi zostać prawidłowo zainicjowany przed wywołaniem `AtlAxAttachControl`.
+>  Dołączenie obiektu sterującego musi być poprawnie zainicjowane przed `AtlAxAttachControl`wywołaniem metody.
 
 ##  <a name="atlaxgethost"></a>  AtlAxGetHost
 
@@ -411,14 +411,14 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 ### <a name="parameters"></a>Parametry
 
 *h*<br/>
-[in] Dojście do okna, który jest hostem formantu.
+podczas Uchwyt do okna, w którym znajduje się kontrolka.
 
-*strony*<br/>
-[out] `IUnknown` Kontenera kontrolki.
+*miesięcznie*<br/>
+określoną `IUnknown` Kontener formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jedna z wartości HRESULT standardowych.
+Jedna ze standardowych wartości HRESULT.
 
 ##  <a name="atlaxgetcontrol"></a>  AtlAxGetControl
 
@@ -431,18 +431,18 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 ### <a name="parameters"></a>Parametry
 
 *h*<br/>
-[in] Dojście do okna, który jest hostem formantu.
+podczas Uchwyt do okna, w którym znajduje się kontrolka.
 
-*strony*<br/>
-[out] `IUnknown` Kontrolki hostowany.
+*miesięcznie*<br/>
+określoną Kontrolka, która `IUnknown` jest hostowana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jedna z wartości HRESULT standardowych.
+Jedna ze standardowych wartości HRESULT.
 
 ##  <a name="atlsetchildsite"></a>  AtlSetChildSite
 
-Wywołaj tę funkcję, aby ustawić lokalizację obiektu podrzędnego do `IUnknown` obiektu nadrzędnego.
+Wywołaj tę funkcję, aby ustawić lokację obiektu `IUnknown` podrzędnego z obiektem nadrzędnym.
 
 ```
 HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
@@ -451,18 +451,18 @@ HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
 ### <a name="parameters"></a>Parametry
 
 *punkChild*<br/>
-[in] Wskaźnik do `IUnknown` interfejsu elementu podrzędnego.
+podczas Wskaźnik do `IUnknown` interfejsu podrzędnego.
 
 *punkParent*<br/>
-[in] Wskaźnik do `IUnknown` interfejsu elementu nadrzędnego.
+podczas Wskaźnik do `IUnknown` interfejsu elementu nadrzędnego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ##  <a name="atlaxwininit"></a>  AtlAxWinInit
 
-Ta funkcja inicjuje kod hostingu, rejestrując formantu ATL **"AtlAxWin80"** i **"AtlAxWinLic80"** klasy okien, oraz kilka niestandardowych komunikatów okien.
+Ta funkcja inicjuje kod hostingu formantu ATL przez zarejestrowanie klas okien **"AtlAxWin80"** i **"AtlAxWinLic80"** oraz kilka niestandardowych komunikatów okien.
 
 ```
 ATLAPI_(BOOL) AtlAxWinInit();
@@ -470,15 +470,15 @@ ATLAPI_(BOOL) AtlAxWinInit();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli inicjowanie kod hostingu formantu powiodła się. w przeciwnym razie wartość FALSE.
+Niezerowe, jeśli Inicjalizacja kodu hostingu formantu zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja musi być wywołana przed rozpoczęciem korzystania z formantu ATL, hostowanie interfejsu API. Po wywołaniu tej funkcji **"AtlAxWin"** klasy okna może służyć w wywołaniach [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) lub [elementu CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa), zgodnie z opisem w zestawie Windows SDK.
+Ta funkcja musi zostać wywołana przed użyciem interfejsu API hostingu kontrolki ATL. Po wywołaniu tej funkcji Klasa okna **"AtlAxWin"** może być używana w wywołaniach do lub [](/windows/win32/api/winuser/nf-winuser-createwindoww) [elementu CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw), zgodnie z opisem w Windows SDK.
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm
 
-Ta funkcja deinicjuje kod hostingu wyrejestrowując formantu ATL **"AtlAxWin80"** i **"AtlAxWinLic80"** klasy okna.
+Ta funkcja umożliwia odinicjowanie kodu hostingu formantu ATL przez Wyrejestrowanie klas okien **"AtlAxWin80"** i **"AtlAxWinLic80"** .
 
 ```
 inline BOOL AtlAxWinTerm();
@@ -486,13 +486,13 @@ inline BOOL AtlAxWinTerm();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zawsze zwraca wartość PRAWDA.
+Zawsze zwraca wartość TRUE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja po prostu wywołuje widok [UnregisterClass](/windows/desktop/api/winuser/nf-winuser-unregisterclassa) zgodnie z opisem w zestawie Windows SDK.
+Ta funkcja po prostu wywołuje [UnregisterClass](/windows/win32/api/winuser/nf-winuser-unregisterclassw) zgodnie z opisem w Windows SDK.
 
-Wywołaj tę funkcję, aby wyczyścić po zniszczeniu wszystkich istniejących okien hosta, jeśli wywołano [klasy AtlAxWinInit](#atlaxwininit) nie są potrzebne do utworzenia hosta systemu windows. Jeśli nie chcesz wywołać tę funkcję, klasę okna będzie można wyrejestrować automatycznie, gdy proces zakończy się.
+Wywołaj tę funkcję, aby wyczyścić po usunięciu wszystkich istniejących okien hosta, jeśli wywołano [AtlAxWinInit](#atlaxwininit) , i nie musisz już tworzyć okien hosta. Jeśli ta funkcja nie zostanie wywołana, Klasa Window zostanie wyrejestrowana automatycznie po zakończeniu procesu.
 
 ##  <a name="atlgetobjectsourceinterface"></a>  AtlGetObjectSourceInterface
 
@@ -510,34 +510,34 @@ ATLAPI AtlGetObjectSourceInterface(
 ### <a name="parameters"></a>Parametry
 
 *punkObj*<br/>
-[in] Wskaźnik do obiektu, dla którego ma zostać zwrócone informacje.
+podczas Wskaźnik do obiektu, dla którego ma zostać zwrócona informacja.
 
 *plibid*<br/>
-[out] Wskaźnik do identyfikatora LIBID biblioteki typów z definicją interfejs źródłowy.
+określoną Wskaźnik do identyfikatora LIBID biblioteki typów zawierającej definicję interfejsu źródłowego.
 
 *piid*<br/>
-[out] Wskaźnik do interfejsu identyfikator obiektu domyślnym interfejsie źródła.
+określoną Wskaźnik do identyfikatora interfejsu domyślnego interfejsu źródłowego obiektu.
 
 *pdwMajor*<br/>
-[out] Wskaźnik do główny numer wersji biblioteki typów z definicją interfejs źródłowy.
+określoną Wskaźnik do głównego numeru wersji biblioteki typów zawierającej definicję interfejsu źródłowego.
 
 *pdwMinor*<br/>
-[out] Wskaźnik do pomocniczy numer wersji biblioteki typów z definicją interfejs źródłowy.
+określoną Wskaźnik do pomocniczego numeru wersji biblioteki typów zawierającej definicję interfejsu źródłowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-`AtlGetObjectSourceInterface` można udostępnić z Identyfikatorem domyślnym interfejsie źródła, wraz z LIBID i główne i pomocnicze numery wersji biblioteki typów, opisujący tego interfejsu.
+`AtlGetObjectSourceInterface`może podać identyfikator interfejsu domyślnego interfejsu źródłowego oraz identyfikatora LIBID i główne i pomocnicze numery wersji biblioteki typów opisującej ten interfejs.
 
 > [!NOTE]
->  Dla tej funkcji można pomyślnie pobrać żądanych informacji obiekt reprezentowany przez *punkObj* musi implementować `IDispatch` (i zwracają informacje o typie za pośrednictwem `IDispatch::GetTypeInfo`) oraz musi implementować też albo `IProvideClassInfo2` lub `IPersist`. Informacje o typie dla interfejs źródłowy musi należeć do tej samej biblioteki typów jako informacji o typie `IDispatch`.
+>  Aby ta funkcja pomyślnie pobiera żądane informacje, obiekt reprezentowany przez *punkObj* musi implementować `IDispatch` (i zwracać informacje o typie za pomocą `IDispatch::GetTypeInfo`elementu), a także musi implementować albo `IProvideClassInfo2` `IPersist`. Informacje o typie dla interfejsu źródłowego muszą znajdować się w tej samej bibliotece typów co informacje o `IDispatch`typie.
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak można zdefiniować klasę obiektu sink zdarzenia `CEasySink`, która zmniejsza liczbę argumentów szablonu, które można przekazać do `IDispEventImpl` do podstawy systemu od zera. `EasyAdvise` i `EasyUnadvise` użyj `AtlGetObjectSourceInterface` zainicjować [IDispEventImpl](../../atl/reference/idispeventimpl-class.md) członków przed wywołaniem [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) lub [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise).
+W poniższym przykładzie pokazano, jak można zdefiniować klasę ujścia zdarzeń, `CEasySink`która zmniejsza liczbę argumentów szablonu, które można `IDispEventImpl` przekazać do systemu operacyjnego. `EasyAdvise`i `EasyUnadvise` Użyj [](../../atl/reference/idispeventimpl-class.md) [](idispeventsimpleimpl-class.md#dispeventadvise) [](idispeventsimpleimpl-class.md#dispeventunadvise), aby zainicjować członków IDispEventImpl przed wywołaniem DispEventAdvise lub DispEventUnadvise. `AtlGetObjectSourceInterface`
 
 [!code-cpp[NVC_ATL_Windowing#93](../../atl/codesnippet/cpp/composite-control-global-functions_1.h)]
 

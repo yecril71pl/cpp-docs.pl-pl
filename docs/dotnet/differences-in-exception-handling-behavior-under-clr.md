@@ -1,24 +1,24 @@
 ---
-title: Różnice w zachowaniu obsługi wyjątków w / CLR
+title: Różnice w zachowaniu obsługi wyjątków w środowisku CLR
 ms.date: 11/04/2016
 helpviewer_keywords:
 - EXCEPTION_CONTINUE_EXECUTION macro
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
-ms.openlocfilehash: ae745cfb96f4efe1ede7e3fc762842f9e4d63323
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b84c51bc6adbb4fd879aadbca2856887e51fc401
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400581"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501238"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>Różnice w zachowaniu obsługi wyjątków w przypadku użycia opcji /CLR
 
-[Podstawowe pojęcia związane z przy użyciu zarządzane wyjątki](../dotnet/basic-concepts-in-using-managed-exceptions.md) w tym artykule omówiono obsługę wyjątków w aplikacjach zarządzanych. W tym temacie opisano szczegółowo różnice w stosunku do standardowego zachowania obsługi wyjątków i pewne ograniczenia. Aby uzyskać więcej informacji, zobacz [_set_se_translator — funkcja](../c-runtime-library/reference/set-se-translator.md).
+[Podstawowe pojęcia związane z używaniem wyjątków zarządzanych](../dotnet/basic-concepts-in-using-managed-exceptions.md) omawiają obsługę wyjątków w zarządzanych aplikacjach. W tym temacie różnice między standardowym zachowaniem obsługi wyjątków i niektóre ograniczenia zostały omówione szczegółowo. Aby uzyskać więcej informacji, zobacz [Funkcja _set_se_translator](../c-runtime-library/reference/set-se-translator.md).
 
-##  <a name="vcconjumpingoutofafinallyblock"></a> Skok na zewnątrz bloku Finally
+##  <a name="vcconjumpingoutofafinallyblock"></a>Wyskocz z bloku finally
 
-W macierzystym języku C /C++ kodu, skok poza __**na koniec** bloku przy użyciu obsługi wyjątków strukturalnych (SEH) jest dozwolone, mimo że generuje ostrzeżenie.  W obszarze [/CLR](../build/reference/clr-common-language-runtime-compilation.md), skok na zewnątrz **na koniec** bloku powoduje błąd:
+W natywnej CC++ /kodzie, przeskoczenie z jednoczęściowego bloku**finally** przy użyciu obsługi wyjątków strukturalnych (SEH) jest dozwolone, chociaż generuje ostrzeżenie.  W obszarze [/CLR](../build/reference/clr-common-language-runtime-compilation.md)przechodzenie z bloku **finally** powoduje błąd:
 
 ```cpp
 // clr_exception_handling_4.cpp
@@ -31,11 +31,11 @@ int main() {
 }   // C3276
 ```
 
-##  <a name="vcconraisingexceptionswithinanexceptionfilter"></a> Występowanie wyjątków w ramach filtra wyjątku
+##  <a name="vcconraisingexceptionswithinanexceptionfilter"></a>Wywoływanie wyjątków w filtrze wyjątków
 
-Gdy tworzony jest wyjątek podczas przetwarzania [filtra wyjątku](../cpp/writing-an-exception-filter.md) w kodzie zarządzanym wyjątek zgłoszony i traktowany tak, jakby filtr zwraca wartość 0.
+Gdy wyjątek jest wywoływany podczas przetwarzania [filtru wyjątków](../cpp/writing-an-exception-filter.md) w kodzie zarządzanym, wyjątek jest przechwytywany i traktowany jak Jeśli filtr zwróci wartość 0.
 
-Jest to w przeciwieństwie do zachowania w kodzie natywnym, w którym jest zgłoszony wyjątek zagnieżdżony, **ExceptionRecord** pole **EXCEPTION_RECORD** struktury (zwrócone przez [ GetExceptionInformation](/windows/desktop/Debug/getexceptioninformation)) jest ustawiona i **ExceptionFlags** pola ustawia 0x10 bit. Poniższy przykład ilustruje ten różnice w zachowaniu:
+Jest to w przeciwieństwie do zachowania w kodzie natywnym, w którym wywoływany jest wyjątek zagnieżdżony, pole **ExceptionRecord** w strukturze **EXCEPTION_RECORD** (jako zwrócone przez [GetExceptionInformation](/windows/win32/Debug/getexceptioninformation)) jest ustawione, a **ExceptionFlags** pole ustawia bit 0x10. Poniższy przykład ilustruje tę różnicę w zachowaniu:
 
 ```cpp
 // clr_exception_handling_5.cpp
@@ -95,11 +95,11 @@ Caught a nested exception
 We should execute this handler if compiled to native
 ```
 
-##  <a name="vccondisassociatedrethrows"></a> Ponownie zgłasza których skojarzenie usunięto
+##  <a name="vccondisassociatedrethrows"></a>Nieskojarzone ponowne zgłoszenia
 
-**/ CLR** nie obsługuje ponowne generowanie wyjątku poza obsługi catch (nazywanych, których skojarzenie usunięto Zgłoś ponownie). Wyjątki tego typu są traktowane jako standard C++ Zgłoś ponownie. Jeśli których skojarzenie usunięto Zgłoś ponownie po active zarządzanych wyjątek, wyjątek jest opakowane w wyjątek C++ i następnie zgłaszany ponownie. Wyjątki tego typu można stosować wyłącznie jako wyjątek typu <xref:System.Runtime.InteropServices.SEHException>.
+**/CLR** nie obsługuje ponownego zgłoszenia wyjątku poza obsługą catch (tzw. ponowne zgłoszenie). Wyjątki tego typu są traktowane jako standardowe C++ ponowne zgłoszenie. Jeśli nieskojarzone ponowne zgłoszenie zostanie wykryte w przypadku wystąpienia aktywnego wyjątku zarządzanego, wyjątek jest opakowany jako C++ wyjątek, a następnie ponownie wygenerowany. Wyjątki tego typu można przechwycić tylko jako wyjątek typu <xref:System.Runtime.InteropServices.SEHException>.
 
-Poniższy przykład ilustruje wyjątków zarządzanych zgłaszany ponownie jako wyjątków C++:
+Poniższy przykład demonstruje wyjątek zarządzany ponownie zgłoszony jako C++ wyjątek:
 
 ```cpp
 // clr_exception_handling_6.cpp
@@ -147,11 +147,11 @@ int main() {
 caught an SEH Exception
 ```
 
-##  <a name="vcconexceptionfiltersandexception_continue_execution"></a> Filtry wyjątków i EXCEPTION_CONTINUE_EXECUTION
+##  <a name="vcconexceptionfiltersandexception_continue_execution"></a>Filtry wyjątków i EXCEPTION_CONTINUE_EXECUTION
 
-Jeśli filtr zwróci `EXCEPTION_CONTINUE_EXECUTION` w zarządzanej aplikacji, jest ona traktowana jak gdyby filtr zwrócił `EXCEPTION_CONTINUE_SEARCH`. Aby uzyskać więcej informacji na temat tych stałych, zobacz [spróbuj-except, instrukcja](../cpp/try-except-statement.md).
+Jeśli filtr zwraca `EXCEPTION_CONTINUE_EXECUTION` w aplikacji zarządzanej, jest traktowany jak w przypadku zwrócenia `EXCEPTION_CONTINUE_SEARCH`filtru. Aby uzyskać więcej informacji na temat tych stałych, zobacz [Instrukcja try-except](../cpp/try-except-statement.md).
 
-Poniższy przykład ilustruje różnicę:
+Poniższy przykład ilustruje tę różnicę:
 
 ```cpp
 // clr_exception_handling_7.cpp
@@ -190,7 +190,7 @@ Counter=-3
 
 ##  <a name="vcconthe_set_se_translatorfunction"></a> The _set_se_translator Function
 
-Ustaw funkcję tłumacza, przez wywołanie `_set_se_translator`, dotyczy tylko pamięci w niezarządzanym kodzie. W poniższym przykładzie pokazano tego ograniczenia:
+Funkcja translator, ustawiana przez wywołanie `_set_se_translator`, wpływa tylko na catchs w kodzie niezarządzanym. Poniższy przykład ilustruje to ograniczenie:
 
 ```cpp
 // clr_exception_handling_8.cpp

@@ -9,27 +9,27 @@ helpviewer_keywords:
 - spin button control
 - CSpinButtonCtrl class [MFC], using
 ms.assetid: a91db36b-e11e-42ef-8e89-51915cc486d2
-ms.openlocfilehash: 6bb663b6ff9b9b039bd774f6e607c7acdb1c4b11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2a12672f0e70248e135bdd177b76589b6197c75
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411724"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513464"
 ---
 # <a name="using-cspinbuttonctrl"></a>Korzystanie z CSpinButtonCtrl
 
-*Przycisku pokrętła* kontroli (znany także jako *góra dół* kontroli) zawiera parę strzałki, które użytkownik może kliknąć, aby dopasować wartość. Ta wartość jest znana jako *bieżącej pozycji*. Pozycja nie wyjdzie poza zakres przycisku pokrętła. Gdy użytkownik kliknie strzałkę w górę, pozycja jest przesuwany maksymalną; a gdy użytkownik kliknie strzałkę w dół, pozycja jest przesuwany minimum.
+Kontrolka *przycisku pokrętła* (nazywana również kontrolką *w górę* ) zawiera parę strzałek, które użytkownik może kliknąć, aby dostosować wartość. Ta wartość jest określana jako *Bieżąca pozycja*. Pozycja pozostaje poza zakresem przycisku pokrętła. Gdy użytkownik kliknie strzałkę w górę, pozycja przesuwa się w kierunku maksimum; gdy użytkownik kliknie strzałkę w dół, pozycja przesuwa się w kierunku minimum.
 
-Kontrolka przycisku pokrętła jest reprezentowana w MFC, [CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md) klasy.
+Kontrolka przycisku pokrętła jest reprezentowana w MFC przez klasę [Korzystanie CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md) .
 
 > [!NOTE]
->  Domyślnie zakres dla przycisku pokrętła ma maksymalną wartość zero (0) i co najmniej równa 100. Ponieważ wartość maksymalna jest mniejsza niż wartość minimalna, klikając strzałkę w górę zmniejsza pozycję i klikając strzałkę w dół jej zwiększenie. Użyj [CSpinButtonCtrl::SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) dostosować te wartości.
+>  Domyślnie zakres dla przycisku pokrętła ma ustawioną wartość równą zero (0) i minimalną ustawioną na 100. Ponieważ wartość maksymalna jest mniejsza niż wartość minimalna, kliknięcie strzałki w górę zmniejsza pozycję i klika strzałkę w dół. Użyj [Korzystanie CSpinButtonCtrl:: SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) , aby dostosować te wartości.
 
-Zazwyczaj bieżące położenie jest wyświetlany w kontrolce pomocnika. Kontrolka pomocnika jest znany jako *okno cyklu*. Ilustracja kontrolkę przycisku pokrętła znajduje się [o Up-Down — formanty](/windows/desktop/Controls/up-down-controls) w zestawie Windows SDK.
+Zazwyczaj bieżąca pozycja jest wyświetlana w formancie pomocnika. Formant pomocnika jest znany jako *okno partnera*. Ilustracja kontrolki przycisku pokrętła znajduje się w temacie [Informacje o kontrolkach w dół](/windows/win32/Controls/up-down-controls) w Windows SDK.
 
-Aby utworzyć kontrolki pokrętła i okno cyklu kontrolki edycji w programie Visual Studio, przeciągnij formant edycji do okna dialogowego lub okna, a następnie przeciągnij kontrolki pokrętła. Wybierz kontrolki pokrętła i ustaw jego **automatyczne Zaprzyjaźnianie** i **Ustaw Buddy Integer** właściwości **True**. Również ustawić **wyrównanie** właściwości **Wyrównaj do prawej** najbardziej typowy. Przy użyciu tych ustawień jest ustawiony jako okno cyklu kontrolki edycji, ponieważ bezpośrednio poprzedza kontrolki edycji w kolejności tabulacji. Kontrolka edycji wyświetli liczb całkowitych i kontrolki pokrętła jest osadzony w prawej części kontrolki edycji. Opcjonalnie, należy określić prawidłowy zakres kontrolki pokrętła przy użyciu [CSpinButtonCtrl::SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) metody. Nie obsługi zdarzeń są wymagane do komunikacji między kontrolki pokrętła i okno cyklu, ponieważ ich wymiany danych bezpośrednio. Jeśli używasz kontrolki pokrętła do niektórych innych celów, na przykład stronie przez system windows lub w oknach dialogowych, następnie Dodaj program obsługi komunikatów UDN_DELTAPOS i wykonywania akcji niestandardowej.
+Aby utworzyć kontrolkę pokrętła i okno dialogowe Edytowanie formantu kolega, w programie Visual Studio, najpierw przeciągnij kontrolkę Edycja do okna dialogowego lub okno, a następnie przeciągnij kontrolkę pokrętła. Wybierz kontrolkę pokrętła i ustaw jej właściwości autozaprzyjaźnione i **Ustaw opcję kolega Integer** na **wartość true**. Ustaw również właściwość **wyrównania** . **Wyrównanie do prawej** jest najbardziej typowe. Przy użyciu tych ustawień kontrolka edycji jest ustawiana jako okno kolega, ponieważ bezpośrednio poprzedza kontrolkę Edycja w kolejności tabulacji. Kontrolka edycji wyświetla liczby całkowite, a kontrolka pokrętła jest osadzona po prawej stronie kontrolki edycji. Opcjonalnie można ustawić prawidłowy zakres kontrolki pokrętła przy użyciu metody [Korzystanie CSpinButtonCtrl:: SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) . Do komunikacji między kontrolką i oknem kolega nie są wymagane programy obsługi zdarzeń, ponieważ wymieniają one bezpośrednio dane. Jeśli używasz kontrolki pokrętła do innych celów, na przykład do strony za pomocą sekwencji okien dialogowych lub okna dialogowego, Dodaj procedurę obsługi dla komunikatu UDN_DELTAPOS i wykonaj w niej akcję niestandardową.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
 - [Style przycisku pokrętła](../mfc/spin-button-styles.md)
 

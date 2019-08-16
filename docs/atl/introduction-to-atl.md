@@ -6,24 +6,24 @@ helpviewer_keywords:
 - COM objects, creating in ATL
 - ATL
 ms.assetid: 77f565e8-c4ec-4a80-af4b-7278fcfe5c98
-ms.openlocfilehash: 8c2dcab962cd9863acf0f8e7070727f3b18117d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5eba816bc87eeebea2c41489a5d15c48645739e8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261920"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492110"
 ---
 # <a name="introduction-to-atl"></a>Wprowadzenie do ATL
 
-ATL jest biblioteki Active Template Library, zestaw oparty na szablonie C++ klasy przy użyciu której możesz łatwo tworzyć małe, szybkie obiektów Component Object Model (COM). Ma specjalne pomocy technicznej w przypadku kluczowych funkcji COM, w tym: podstawowy implementacje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown), [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory), [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2), i `IDispatch`; podwójne interfejsów; standardowe interfejsy modułu wyliczającego COM; punkty połączenia; interfejsy odrywania; i formantów ActiveX.
+ATL to Active Template Library, zestaw klas opartych na C++ szablonach, za pomocą których można łatwo tworzyć małe, szybkie Component Object Model obiekty (com). Ma ona specjalne wsparcie dla kluczowych funkcji com, takich jak: implementacje giełdowe [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown), [elementu IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory), `IDispatch` [IClassFactory2](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2)i; podwójne interfejsy; standardowe interfejsy modułu wyliczającego com; punkty połączeń; wycofywanie interfejsów i kontrolki ActiveX.
 
-Kod ATL może być używany do tworzenia jednowątkowych obiektów, obiekty modelu typu apartment, bezwątkowy modelu obiektów lub obiekty bezwątkowy i modelu typu apartment.
+Kod ATL może służyć do tworzenia obiektów jednowątkowych, obiektów typu Apartment, obiektów modelu dowolnego wątkowego lub obiektów typu "Free-threaded" i modelu Apartment.
 
 Tematy omówione w tej sekcji obejmują:
 
 - Jak [Biblioteka szablonów](../atl/using-a-template-library.md) różni się od biblioteki standardowej.
 
-- Tym, co [można i nie będzie możliwe ATL](../atl/scope-of-atl.md).
+- Co możesz [zrobić i nie można wykonać z ATL](../atl/scope-of-atl.md).
 
 - [Zalecenia dotyczące wybierania między ATL i MFC](../atl/recommendations-for-choosing-between-atl-and-mfc.md).
 

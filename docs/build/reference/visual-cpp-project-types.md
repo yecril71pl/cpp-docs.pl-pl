@@ -1,6 +1,6 @@
 ---
 title: Typy projektów Visual C++
-ms.date: 07/02/2019
+ms.date: 08/13/2019
 helpviewer_keywords:
 - programs [C++], projects
 - project templates [Visual Studio], C++
@@ -10,84 +10,84 @@ helpviewer_keywords:
 - applications [C++], projects
 - C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: 98f8ea11cce61ca91fbdc8f8afb900a7ba5b42c9
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: f234f9a05a871fe474b783a68f644cb4f2b1c2e7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552216"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498442"
 ---
 # <a name="c-project-templates"></a>Szablony projektów w języku C++
 
-Szablony projektu Visual Studio generować pliki kodu źródłowego, opcje kompilatora, menu, paski narzędzi, ikony, odwołania i `#include` instrukcji, które są odpowiednie dla rodzaju projektu, w której chcesz utworzyć. Program Visual Studio zawiera kilka rodzajów z C++ szablony projektów i zapewnia kreatory dla wielu z nich, dzięki czemu można dostosować swoje projekty, jak można je utworzyć. Bezpośrednio po utworzeniu projektu, można ją skompilować i uruchomić aplikację; jest dobrą praktyką, aby tworzyć sporadycznie podczas opracowywania aplikacji.
+Szablony projektu programu Visual Studio generują pliki kodu źródłowego, opcje kompilatora, menu, paski narzędzi, ikony, `#include` odwołania i instrukcje, które są odpowiednie dla rodzaju projektu, który chcesz utworzyć. Program Visual Studio zawiera kilka rodzajów C++ szablonów projektów i udostępnia kreatorów dla wielu z nich, aby można było dostosować projekty podczas ich tworzenia. Natychmiast po utworzeniu projektu można skompilować i uruchomić aplikację. dobrym sposobem jest utworzenie nieprzerwanie podczas opracowywania aplikacji.
 
 > [!NOTE]
-> Można utworzyć projektu języka C przy użyciu szablonów projektów języka C++. W wygenerowanego projektu Zlokalizuj pliki .cpp, rozszerzenie nazwy pliku i zmień go na. c. Następnie na **właściwości projektu** strony dla projektu (a nie dla rozwiązania), a następnie rozwiń **właściwości konfiguracji**, **C/C++** i wybierz **zaawansowane**. Zmiana **kompilacji jako** ustawienie **skompiluj jako kod języka C (/ TC)** .
+> Projekt języka C można utworzyć przy użyciu C++ szablonów projektu. W wygenerowanym projekcie zlokalizuj pliki o rozszerzeniu nazwy pliku. cpp i zmień je na. c. Następnie na stronie **właściwości projektu** dla projektu (nie dla rozwiązania) rozwiń węzeł **Właściwości konfiguracji**, **C++ C/** i wybierz pozycję **Zaawansowane**. Zmień ustawienie **Kompiluj jako** na **Kompiluj jako kod C (/TC)** .
 
 ## <a name="project-templates"></a>Szablony projektów
 
-Szablony projektów zawarte w Visual Studio zależy od tego, wersja produktu i obciążeń, które zostały zainstalowane. Jeśli po zainstalowaniu programowanie aplikacji klasycznych w języku C++ obciążenie, program Visual Studio zawiera te C++ szablony projektów.
+Szablony projektu zawarte w programie Visual Studio zależą od wersji produktu i zainstalowanych obciążeń. Jeśli zainstalowano Tworzenie aplikacji klasycznych C++ przy użyciu obciążenia, program Visual C++ Studio ma te szablony projektów.
 
-### <a name="windows-desktop"></a>Windows Desktop
+### <a name="windows-desktop"></a>Pulpit systemu Windows
 
 |Szablon projektu|Opis|
 |----------------------|-----------------------------|
-|[Aplikacja Konsolowa Windows](../../windows/creating-a-console-application.md)|Projekt służący do tworzenia aplikacji konsolowej Windows.|
-|[Windows aplikacji klasycznych](../../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|Projekt służący do tworzenia aplikacji pulpitu (Win32) Windows.|
-|[Biblioteka dołączana dynamicznie](../walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)|Projekt służący do tworzenia biblioteki dołączanej (dynamicznie DLL).|
+|[Aplikacja konsolowa systemu Windows](../../windows/creating-a-console-application.md)|Projekt służący do tworzenia aplikacji konsolowej systemu Windows.|
+|[Aplikacja klasyczna systemu Windows](../../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|Projekt służący do tworzenia aplikacji klasycznej systemu Windows (Win32).|
+|[Biblioteka dołączana dynamicznie](../walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)|Projekt służący do tworzenia biblioteki dołączanej dynamicznie (DLL).|
 |[Biblioteka statyczna](../../windows/walkthrough-creating-and-using-a-static-library-cpp.md)|Projekt służący do tworzenia biblioteki statycznej (LIB).|
-|Kreator aplikacji klasycznej Windows|Kreator do tworzenia aplikacji klasycznych Windows i biblioteki za pomocą dodatkowych opcji.|
+|[Kreator aplikacji klasycznej systemu Windows](../../windows/windows-desktop-wizard.md)|Kreator do tworzenia aplikacji klasycznych i bibliotek systemu Windows z dodatkowymi opcjami.|
 
 ### <a name="general"></a>Ogólne
 
 |Szablon projektu|Opis|
 |----------------------|-----------------------------|
-|Pusty projekt|Pusty projekt do tworzenia aplikacji, biblioteki lub bibliotekę DLL. Należy dodać żaden kod lub wymaganych zasobów.|
-|[Projekt pliku reguł programu make](creating-a-makefile-project.md)|Projekt, który otacza Windows pliku reguł programu make w projekcie programu Visual Studio. (Aby otworzyć pliku reguł programu make — w programie Visual Studio, użyj [Otwórz Folder](../open-folder-projects-cpp.md).|
-|Projekt elementów udostępnionych|Projekt używany do udostępniania plików kodu lub zasobów między wieloma projektami. Ten typ projektu nie generuje plik wykonywalny.|
+|Pusty projekt|Pusty projekt służący do tworzenia aplikacji, biblioteki lub biblioteki DLL. Należy dodać wymagany kod lub zasoby.|
+|[Projekt pliku reguł programu make](creating-a-makefile-project.md)|Projekt, który otacza plik reguł programu make systemu Windows w projekcie programu Visual Studio. (Aby otworzyć plik reguł programu make w programie Visual Studio, użyj [apletu Otwórz folder](../open-folder-projects-cpp.md).|
+|Projekt elementów udostępnionych|Projekt używany do udostępniania plików kodu lub plików zasobów między wieloma projektami. Ten typ projektu nie tworzy pliku wykonywalnego.|
 
 ### <a name="atl"></a>ATL
 
 |Szablon projektu|Opis|
 |----------------------|-----------------------------|
-|[ATL Project](../../atl/reference/creating-an-atl-project.md)|Projekt, który korzysta z biblioteki Active Template Library.|
+|[Projekt ATL](../../atl/reference/creating-an-atl-project.md)|Projekt, który używa Active Template Library.|
 
 ### <a name="test"></a>Test
 
 |Szablon projektu|Opis|
 |----------------------|-----------------------------|
-|[Native Unit Test Project](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)|Projekt zawierający testy jednostkowe w usłudze natywnego języka C++.|
+|[Natywny projekt testów jednostkowych](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)|Projekt, który zawiera natywne C++ testy jednostkowe.|
 
 ### <a name="mfc"></a>MFC
 
-Jeśli dodasz obsługę MFC i ATL składników do instalacji programu Visual Studio, te szablony projektów są dodawane do programu Visual Studio.
+Jeśli dodasz składnik obsługi MFC i ATL do instalacji programu Visual Studio, te szablony projektu zostaną dodane do programu Visual Studio.
 
 |Szablon projektu|Opis|
 |----------------------|-----------------------------|
-|[Aplikacja MFC](../../mfc/reference/creating-an-mfc-application.md)|Projekt służący do tworzenia aplikacji, która używa biblioteki Microsoft Foundation Class (MFC).|
-|[Kontrolki ActiveX MFC](../../mfc/reference/creating-an-mfc-activex-control.md)|Projekt służący do tworzenia formantu ActiveX, który korzysta z biblioteki MFC.|
-|[BIBLIOTEKI MFC DLL](../../mfc/reference/creating-an-mfc-dll-project.md)|Projekt służący do tworzenia biblioteki dll, która używa biblioteki MFC.|
+|[Aplikacja MFC](../../mfc/reference/creating-an-mfc-application.md)|Projekt służący do tworzenia aplikacji, która korzysta z biblioteki Microsoft Foundation Class (MFC).|
+|[Kontrolka ActiveX MFC](../../mfc/reference/creating-an-mfc-activex-control.md)|Projekt do tworzenia kontrolki ActiveX korzystającej z biblioteki MFC.|
+|[BIBLIOTEKA DLL MFC](../../mfc/reference/creating-an-mfc-dll-project.md)|Projekt służący do tworzenia biblioteki dołączanej dynamicznie, która używa biblioteki MFC.|
 
-### <a name="windows-universal-apps"></a>Windows Universal Apps
+### <a name="windows-universal-apps"></a>Aplikacje uniwersalne systemu Windows
 
-Jeśli dodasz składnik narzędzia platformy uniwersalnej dla Windows C++ do instalacji programu Visual Studio tych szablonów projektu zostaną dodane do programu Visual Studio.
+W przypadku dodania składnika C++ narzędzia platformy uniwersalnej systemu Windows do instalacji programu Visual Studio te szablony projektu zostaną dodane do programu Visual Studio.
 
-Omówienie Windows Universal apps w języku C++, zobacz [Universal Windows Apps (C++)](../../cppcx/universal-windows-apps-cpp.md).
+Aby zapoznać się z omówieniem uniwersalnych aplikacji C++systemu Windows w programie, zobacz [aplikacje uniwersalne systemu WindowsC++()](../../cppcx/universal-windows-apps-cpp.md).
 
 |Szablon projektu|Opis|
 |----------------------|-----------------------------|
-|Pusta aplikacja|Projekt jednostronicowej aplikacji uniwersalnej platformy Windows (UWP), który nie ma wstępnie zdefiniowanych kontrolek ani układu.|
-|Aplikacja DirectX 11|Projekt aplikacji uniwersalnej platformy Windows, który używa programu DirectX 11.|
-|DirectX 12 App|Projekt aplikacji uniwersalnej platformy Windows, który używa programu DirectX 12.|
-|DirectX 11 i XAML aplikacji|Projekt dla aplikacji Universal Windows Platform, który używa programu DirectX 11 i XAML.|
-|Aplikacja testów jednostkowych|Projekt służący do tworzenia aplikacji testów jednostkowych dla aplikacji uniwersalnych platformy Windows (UWP).|
-|DLL|Projekt natywnej biblioteki dołączanej (dynamicznie DLL) używany przez platformę Windows uniwersalną aplikację lub składnik środowiska uruchomieniowego.|
-|Biblioteka statyczna|Projekt macierzystej biblioteki dołączanej (statycznie LIB) używany przez platformę Windows uniwersalną aplikację lub składnik środowiska uruchomieniowego.|
-|Składnik środowiska wykonawczego systemu Windows|Projekt składnika środowiska wykonawczego Windows, który może być używany przez aplikację Universal Windows Platform, niezależnie od języka programowania, w którym napisano aplikację.|
-|Projekt pakietu aplikacji Windows|Projekt, który tworzy pakiet platformy uniwersalnej systemu Windows, który umożliwia aplikacji klasycznej ładowanych lub rozproszonego przy użyciu Microsoft Store.|
+|Pusta aplikacja|Projekt dla jednostronicowej aplikacji platforma uniwersalna systemu Windows (platformy UWP), która nie ma wstępnie zdefiniowanych kontrolek ani układu.|
+|Aplikacja DirectX 11|Projekt aplikacji platforma uniwersalna systemu Windowsej, który używa programu DirectX 11.|
+|Aplikacja DirectX 12|Projekt aplikacji platforma uniwersalna systemu Windows, który używa programu DirectX 12.|
+|Aplikacja DirectX 11 i XAML|Projekt aplikacji platforma uniwersalna systemu Windows, który używa programu DirectX 11 i języka XAML.|
+|Aplikacja testów jednostkowych|Projekt służący do tworzenia aplikacji testów jednostkowych dla aplikacji platforma uniwersalna systemu Windows (platformy UWP).|
+|DLL|Projekt natywnej biblioteki dołączanej dynamicznie (DLL), która może być używana przez aplikację platforma uniwersalna systemu Windows lub składnik środowiska uruchomieniowego.|
+|Biblioteka statyczna|Projekt natywnej biblioteki dołączanej statycznie (LIB), która może być używana przez aplikację platforma uniwersalna systemu Windows lub składnik środowiska uruchomieniowego.|
+|Składnik środowiska wykonawczego systemu Windows|Projekt składnika środowisko wykonawcze systemu Windows, który może być używany przez aplikację platforma uniwersalna systemu Windows, niezależnie od języka programowania, w którym napisano aplikację.|
+|Projekt pakietu aplikacji systemu Windows|Projekt tworzący pakiet platformy UWP, który umożliwia aplikacjom klasycznym ładowanie lub dystrybuowanie za pośrednictwem Microsoft Store.|
 
-## <a name="todo-comments"></a>Komentarze TODO
+## <a name="todo-comments"></a>Komentarze do zrobienia
 
-Wiele plików wygenerowanych przez szablon projektu zawiera komentarze TODO, aby pomóc w zidentyfikowaniu, w którym można podać kod źródłowy. Aby uzyskać więcej informacji na temat dodawania kodu, zobacz [Dodawanie funkcji z kreatorami kodów](../../ide/adding-functionality-with-code-wizards-cpp.md) i [Praca z plikami zasobów](../../windows/working-with-resource-files.md).
+Wiele plików generowanych przez szablon projektu zawiera komentarze do zrobienia, które ułatwiają określenie, gdzie można podać własny kod źródłowy. Aby uzyskać więcej informacji na temat dodawania kodu, zobacz [Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md) i [Praca z plikami zasobów](../../windows/working-with-resource-files.md).
 
 

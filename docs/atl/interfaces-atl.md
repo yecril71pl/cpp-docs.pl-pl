@@ -6,20 +6,20 @@ helpviewer_keywords:
 - COM interfaces
 - interfaces, COM
 ms.assetid: de6c8b12-6230-4fdc-af66-a28b91d5ee55
-ms.openlocfilehash: 5416fb8a99420f0f6c84318753ee3399ccf5db2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2373351330982623ffa602fd81bec61d0bc257b2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250317"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492137"
 ---
 # <a name="interfaces-atl"></a>Interfejsy (ATL)
 
-Interfejs jest sposób, w którym obiekt udostępnia funkcję na zewnątrz. W modelu COM interfejs jest tabela wskaźników (na przykład C++ vtable), funkcje implementowane przez obiekt. Tabela reprezentuje interfejs, a funkcje, które wskazuje są metody tego interfejsu. Obiekt można udostępnić dowolną liczbę interfejsów, jak go wybierze.
+Interfejs to sposób, w jaki obiekt uwidacznia swoją funkcjonalność na świecie zewnętrznym. W modelu COM interfejs jest tabelą wskaźników (na C++ przykład tablicą metod wirtualnych) do funkcji implementowanych przez obiekt. Tabela reprezentuje interfejs, a funkcje, do których wskazuje, są metodami tego interfejsu. Obiekt może uwidaczniać dowolną liczbę interfejsów.
 
-Każdy interfejs jest oparty na podstawowe interfejsu COM [IUnknown](../atl/iunknown.md). Metody `IUnknown` Zezwalaj nawigacji do innych interfejsów udostępnianych przez obiekt.
+Każdy interfejs jest oparty na podstawowym interfejsie COM, [IUnknown](../atl/iunknown.md). Metody `IUnknown` zezwalania na nawigację do innych interfejsów uwidocznionych przez obiekt.
 
-Ponadto każdy interfejs otrzymuje interfejsem Unikatowy identyfikator (IID). Unikatowość tej sprawia, że łatwo jest obsługiwać wersji interfejsu. Po prostu nowy interfejs, za pomocą nowego identyfikatora IID jest nowa wersja interfejsu.
+Ponadto każdy interfejs ma unikatowy identyfikator interfejsu (IID). Ta unikatowość ułatwia obsługę wersji interfejsu. Nowa wersja interfejsu jest po prostu nowym interfejsem z nowym identyfikatorem IID.
 
 > [!NOTE]
 >  IID dla standardowych interfejsów COM i OLE są wstępnie zdefiniowane.
@@ -27,4 +27,4 @@ Ponadto każdy interfejs otrzymuje interfejsem Unikatowy identyfikator (IID). Un
 ## <a name="see-also"></a>Zobacz także
 
 [Wprowadzenie do modelu COM](../atl/introduction-to-com.md)<br/>
-[Obiekty COM i interfejsy](/windows/desktop/com/com-objects-and-interfaces)
+[Obiekty COM i interfejsy](/windows/win32/com/com-objects-and-interfaces)

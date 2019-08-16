@@ -14,12 +14,12 @@ helpviewer_keywords:
 - literal strings [C++]
 - string literals [C++]
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-ms.openlocfilehash: df690bea81b9799b30ae91313ce7157400ef8413
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: e7f0d4291aeb2e3d8dc1eac4dd08ef3e961468ff
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866091"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498533"
 ---
 # <a name="string-and-character-literals-c"></a>Literały ciągów i znaków (C++)
 
@@ -169,7 +169,7 @@ char c1 = '\100';   // '@'
 char c2 = '\1000';  // C4305, C4309, truncates to '0'
 ```
 
-Sekwencje unikowe, które wyglądają, aby zawierały znaki inne niż ósemkowe, są oceniane jako liczba ósemkowa w górę do ostatniego znaku ósemkowego, a następnie pozostałe znaki w literale wieloznakowym. Ostrzeżenie C4125 jest generowane, jeśli pierwszy znak inny niż ósemkowy jest cyfrą dziesiętną. Przykład:
+Sekwencje unikowe, które wyglądają, aby zawierały znaki inne niż ósemkowe, są oceniane jako liczba ósemkowa w górę do ostatniego znaku ósemkowego, a następnie pozostałe znaki w literale wieloznakowym. Ostrzeżenie C4125 jest generowane, jeśli pierwszy znak inny niż ósemkowy jest cyfrą dziesiętną. Na przykład:
 
 ```cpp
 char c3 = '\009';   // '9'
@@ -216,7 +216,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
 
 Uniwersalne nazwy znaków nie mogą kodować wartości w zakresie punktu kodu zastępczego D800-DFFF. W przypadku par surogatów Unicode Określ nazwę uniwersalnego znaku przy `\UNNNNNNNN`użyciu, gdzie nnnnnnnn jest 8-cyfrowym punktem kodu dla znaku. Kompilator generuje parę zastępczą w razie potrzeby.
 
-W języku C++ 03 język dozwolony jest tylko podzbiór znaków, które mają być reprezentowane przez ich uniwersalne nazwy znaków, i dozwolone są niektóre uniwersalne nazwy znaków, które w rzeczywistości nie reprezentują żadnych prawidłowych znaków Unicode. Ten błąd został rozwiązany w standardzie C++ 11. W języku C++ 11 zarówno literały znakowe, jak i ciągi oraz identyfikatory mogą używać uniwersalnych nazw znaków.  Aby uzyskać więcej informacji na temat uniwersalnych nazw znaków, zobacz [zestawy znaków](../cpp/character-sets.md). Aby uzyskać więcej informacji na temat standardu Unicode, zobacz [Unicode](https://msdn.microsoft.com/library/dd374081). Aby uzyskać więcej informacji na temat par zastępczych, zobacz [pary zastępcze i znaki dodatkowe](/windows/desktop/Intl/surrogates-and-supplementary-characters).
+W języku C++ 03 język dozwolony jest tylko podzbiór znaków, które mają być reprezentowane przez ich uniwersalne nazwy znaków, i dozwolone są niektóre uniwersalne nazwy znaków, które w rzeczywistości nie reprezentują żadnych prawidłowych znaków Unicode. Ten błąd został rozwiązany w standardzie C++ 11. W języku C++ 11 zarówno literały znakowe, jak i ciągi oraz identyfikatory mogą używać uniwersalnych nazw znaków.  Aby uzyskać więcej informacji na temat uniwersalnych nazw znaków, zobacz [zestawy znaków](../cpp/character-sets.md). Aby uzyskać więcej informacji na temat standardu Unicode, zobacz [Unicode](/windows/win32/intl/unicode). Aby uzyskać więcej informacji na temat par zastępczych, zobacz [pary zastępcze i znaki dodatkowe](/windows/win32/Intl/surrogates-and-supplementary-characters).
 
 ## <a name="string-literals"></a>Literały ciągu
 

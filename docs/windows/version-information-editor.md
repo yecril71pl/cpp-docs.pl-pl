@@ -1,5 +1,5 @@
 ---
-title: Edytor informacji o wersji (C++)
+title: Edytor informacji o wersjiC++()
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.version.F1
@@ -23,62 +23,62 @@ helpviewer_keywords:
 - GetFileVersionInfo
 - version information
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
-ms.openlocfilehash: a17539d0a9fb94c440d65275e9d032182088ae6e
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: e68e1480d2cd9a8d8a4d862252e6eb4384a5cd68
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504484"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513643"
 ---
-# <a name="version-information-editor-c"></a>Edytor informacji o wersji (C++)
+# <a name="version-information-editor-c"></a>Edytor informacji o wersjiC++()
 
-Informacje o wersji składa się z firmy i identyfikacji produktu, numer wersji produktu i praw autorskich i znak towarowy powiadomień. Za pomocą **Edytor informacji o wersji**, tworzenia i przechowywania tych danych, który jest przechowywany w zasobach informacji o wersji. Zasobach informacji o wersji nie jest wymagane przez aplikację, ale jest użytecznym miejscem, aby zebrać informacje identyfikujące aplikację. Informacje o wersji jest również używany przez Instalatora interfejsów API.
-
-> [!NOTE]
-> Standardowa Windows jest tylko jedna wersja zasobu o nazwie VS_VERSION_INFO.
-
-Zasobach informacji o wersji ma blokiem górnej i jeden lub więcej bloków niższe: jeden blok informacji stałej u góry i jeden lub więcej bloków informacyjnych wersji u dołu (w przypadku innych języków i/lub zestawów znaków). Blokuj najważniejsze ma edytowalnych pól liczbowych i list rozwijanych można wybrać. Niższe bloki zawierają tylko edytowalnymi polami tekstowymi.
+Informacje o wersji obejmują tożsamość firmy i produktu, numer wydania produktu oraz powiadomienia o prawach autorskich i znakach towarowych. Za pomocą **edytora informacji o wersji**można tworzyć i obsługiwać te dane, które są przechowywane w zasobie informacji o wersji. Zasób informacji o wersji nie jest wymagany przez aplikację, ale jest przydatny do zbierania informacji identyfikujących aplikację. Informacje o wersji są również używane przez interfejsy API Instalatora.
 
 > [!NOTE]
-> Podczas korzystania z **Edytor informacji o wersji**, w wielu przypadkach możesz kliknąć prawym przyciskiem myszy, aby wyświetlić menu skrótów poleceń specyficznych dla zasobów. Na przykład jeśli wybierzesz podczas wskazujący wpis nagłówka bloku pokazuje menu skrótów **nowe informacje o bloku wersji** i **usuwanie bloku informacji o wersji** poleceń.
+> Standard systemu Windows ma mieć tylko jeden zasób wersji o nazwie VS_VERSION_INFO.
+
+Zasób informacji o wersji ma górny blok i co najmniej jeden niższy blok: pojedynczy blok informacji o ustalonym rozmiarze w górnej części i co najmniej jeden blok informacji o wersji na dole (dla innych języków i/lub zestawów znaków). Górny blok ma zarówno edytowalne pola liczbowe, jak i listę rozwijaną z możliwością wyboru. Dolne bloki mają tylko edytowalne pola tekstowe.
+
+> [!NOTE]
+> Korzystając z **edytora informacji o wersji**, w wielu wystąpieniach można kliknąć prawym przyciskiem myszy, aby wyświetlić menu skrótów poleceń dotyczących zasobów. Na przykład jeśli wybierzesz pozycję podczas wskazywania wpisu nagłówka bloku, menu skrótów wyświetli **nowe informacje o bloku wersji** i **Usuń wersję bloku informacji** .
 
 ## <a name="how-to"></a>Instrukcje
 
 **Edytor informacji o wersji** umożliwia:
 
-### <a name="to-edit-a-string-in-a-version-information-resource"></a>Edytowanie ciągu w zasobach informacji o wersji
+### <a name="to-edit-a-string-in-a-version-information-resource"></a>Aby edytować ciąg w zasobie informacji o wersji
 
-Wybierz element raz, aby następnie ponownie wybierz go, aby rozpocząć jego edycji. Wprowadź zmiany bezpośrednio w **informacje o wersji** tabeli lub [okno właściwości](/visualstudio/ide/reference/properties-window). Wprowadzone zmiany zostaną odzwierciedlone w obu miejscach.
+Wybierz element raz, aby go wybrać, a następnie ponownie, aby rozpocząć jego edytowanie. Wprowadzanie zmian bezpośrednio w tabeli **informacji o wersji** lub w [okno właściwości](/visualstudio/ide/reference/properties-window). Wprowadzone zmiany zostaną odzwierciedlone w obu miejscach.
 
-Podczas edytowania `FILEFLAGS` w **Edytor informacji o wersji**, zwróć uwagę, nie można ustawić **debugowania**, **kompilacja prywatna**, lub **specjalne kompilacji**  właściwości w **właściwości** okna dla plików .rc:
+Podczas edytowania `FILEFLAGS` klucza w **Edytorze informacji o wersji**należy zauważyć, że nie można ustawić **właściwości debugowania**, **prywatnej kompilacji**ani **specjalnej kompilacji** w oknie **Właściwości** dla plików. rc:
 
-   - **Edytor informacji o wersji** ustawia **debugowania** właściwość o `#ifdef` w skrypcie zasobów na podstawie `_DEBUG` kompilacji flagi.
+   - **Edytor informacji o wersji** ustawia `#ifdef` Właściwość **Debug** z w skrypcie `_DEBUG` zasobu na podstawie flagi Build.
 
-  - Jeśli `Private Build` kluczu **wartość** w **informacje o wersji** tabeli, odpowiedni **kompilacja prywatna** właściwość **właściwości**  okno `FILEFLAGS` klucz będzie **True**. Jeśli **wartość** jest pusta, właściwość będzie **False**. Podobnie **kompilacji specjalnych** w **informacje o wersji** tabela jest powiązana z **kompilacji specjalnych** właściwość `FILEFLAGS` klucza.
+  - `FILEFLAGS` Jeśli klucz ma ustawioną wartość w tabeli informacji o wersji, odpowiadająca jej Właściwość prywatnej kompilacji w oknie właściwości klucza będzie mieć wartość true. `Private Build` Jeśli **wartość** jest pusta, właściwość będzie mieć **wartość false**. Analogicznie, **specjalny klucz kompilacji** w tabeli **informacji o wersji** jest powiązany z specjalną właściwością `FILEFLAGS` **kompilacji** klucza.
 
-Sekwencja informacji blok ciągu można sortować, wybierając opcję **klucz** lub **wartość** nagłówki kolumn. Te nagłówki automatyczne rozmieszczanie informacji w wybranej sekwencji.
+Można sortować sekwencję informacji bloku ciągu, wybierając pozycję **klucz** lub nagłówki kolumn **wartości** . Te nagłówki automatycznie przestawiają informacje na wybraną sekwencję.
 
-### <a name="to-add-version-information-for-another-language-new-version-info-block"></a>Aby dodać informacje o wersji dla innego języka (nowej wersję bloku informacyjnego)
+### <a name="to-add-version-information-for-another-language-new-version-info-block"></a>Aby dodać informacje o wersji dla innego języka (blok informacji o nowej wersji)
 
-1. Otwórz zasób informacje o wersji, klikając go dwukrotnie [widok zasobów](how-to-create-a-resource-script-file.md#create-resources).
+1. Otwórz zasób informacji o wersji, klikając go dwukrotnie w [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Kliknij prawym przyciskiem myszy w tabeli zawierającej informacje o wersji, a następnie wybierz **nowej wersję bloku informacyjnego**.
+1. Kliknij prawym przyciskiem myszy w tabeli informacji o wersji i wybierz pozycję **nowy blok informacji o wersji**.
 
-   To polecenie dodaje do bieżącej zasobach informacji o wersji blok dodatkowe informacje i zostanie otwarty jego odpowiednie właściwości w [okno właściwości](/visualstudio/ide/reference/properties-window).
+   To polecenie dodaje dodatkowy blok informacji do zasobu informacji o bieżącej wersji i otwiera odpowiednie właściwości w [okno właściwości](/visualstudio/ide/reference/properties-window).
 
-1. W **właściwości** okna, wybierz odpowiedni język i zestaw nowego bloku znaków.
+1. W oknie **Właściwości** wybierz odpowiedni język i zestaw znaków dla nowego bloku.
 
 ### <a name="to-delete-a-version-information-block"></a>Aby usunąć blok informacji o wersji
 
-1. Otwórz w zasobach informacji o wersji, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](how-to-create-a-resource-script-file.md#create-resources).
+1. Otwórz zasób informacji o wersji, klikając dwukrotnie jego ikonę w [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Kliknij prawym przyciskiem myszy nagłówek bloku chcesz usunąć, a następnie wybierz **Usuń wersję bloku informacyjnego**.
+1. Kliknij prawym przyciskiem myszy nagłówek bloku, który chcesz usunąć, i wybierz pozycję **Usuń wersję bloku informacji**.
 
-   To polecenie usuwa wybrany nagłówek i pozostawia pozostałe informacje o wersji bez zmian. Nie można cofnąć akcję.
+   To polecenie powoduje usunięcie wybranego nagłówka i pozostawienie reszty informacji o wersji bez zmian. Nie można cofnąć akcji.
 
-### <a name="to-access-version-information-from-within-your-program"></a>Aby uzyskać dostęp do informacji o wersji z Twojego programu
+### <a name="to-access-version-information-from-within-your-program"></a>Aby uzyskać dostęp do informacji o wersji z poziomu programu
 
-Aby uzyskać dostęp do informacji o wersji z Twojego programu, należy użyć [GetFileVersionInfo](/windows/desktop/api/winver/nf-winver-getfileversioninfoa) funkcji i [VerQueryValue](/windows/desktop/api/winver/nf-winver-verqueryvaluea) funkcji.
+Jeśli chcesz uzyskać dostęp do informacji o wersji z poziomu programu, użyj funkcji [GetFileVersionInfo](/windows/win32/api/winver/nf-winver-getfileversioninfow) i funkcji [VerQueryValue](/windows/win32/api/winver/nf-winver-verqueryvaluew) .
 
 ## <a name="requirements"></a>Wymagania
 
@@ -87,5 +87,5 @@ Win32
 ## <a name="see-also"></a>Zobacz także
 
 [Edytory zasobów](../windows/resource-editors.md)<br/>
-[Menu i inne zasoby](/windows/desktop/menurc/resources)<br/>
-[Informacje o wersji (Windows)](/windows/desktop/menurc/version-information)
+[Menu i inne zasoby](/windows/win32/menurc/resources)<br/>
+[Informacje o wersji (Windows)](/windows/win32/menurc/version-information)

@@ -1,21 +1,21 @@
 ---
-title: retval (atrybut COM C++)
+title: retval (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.retval
 helpviewer_keywords:
 - retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
-ms.openlocfilehash: 9f5ad86a289f8904278a58636e66809ae0edd55b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a2865c1eda229f1a2fcd457c22119b2908c1caa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407409"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514050"
 ---
 # <a name="retval"></a>retval
 
-Określa parametr, który otrzymuje wartość zwrotną z elementu członkowskiego.
+Określa parametr, który odbiera wartość zwracaną przez element członkowski.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,13 +25,13 @@ Określa parametr, który otrzymuje wartość zwrotną z elementu członkowskieg
 
 ## <a name="remarks"></a>Uwagi
 
-**Retval** atrybut C++ ma taką samą funkcjonalność jak [retval](/windows/desktop/Midl/retval) atrybutów w MIDL.
+Atrybut **retval** C++ ma takie same funkcje jak MIDL. [](/windows/win32/Midl/retval)
 
-**retval** musi znajdować się jako ostatni argument w deklaracji funkcji.
+element **retval** musi znajdować się na ostatnim argumencie w deklaracji funkcji.
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [możliwej do wiązania](bindable.md) do użytku przykładowe **retval**.
+Zapoznaj się z przykładem [powiązania](bindable.md) dla przykładowego użycia programu **retval**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -39,12 +39,12 @@ Zobacz przykład [możliwej do wiązania](bindable.md) do użytku przykładowe *
 
 |||
 |-|-|
-|**Dotyczy**|Interfejs parametru metody interfejsu|
+|**Dotyczy**|Parametr interfejsu, metoda interfejsu|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|**out**|
+|**Wymagane atrybuty**|**out**|
 |**Nieprawidłowe atrybuty**|**in**|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COlePropertiesDialog [MFC], m_psh
 - COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
-ms.openlocfilehash: bdae64ff4a7bcfef761eaf3dd70a85a54efc28b7
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: b819bc430868717a2df01a086b482dfe6d56cc0f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916960"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504162"
 ---
 # <a name="colepropertiesdialog-class"></a>Klasa COlePropertiesDialog
 
@@ -152,11 +152,11 @@ virtual INT_PTR DoModal();
 
 IDOK lub IDCANCEL, jeśli się to powiedzie; w przeciwnym razie 0. IDOK i IDCANCEL są stałymi, które wskazują, czy użytkownik zaznaczył przycisk OK lub Anuluj.
 
-Jeśli IDCANCEL jest zwracany, można wywołać funkcję Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) , aby określić, czy wystąpił błąd.
+Jeśli IDCANCEL jest zwracany, można wywołać funkcję Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) , aby określić, czy wystąpił błąd.
 
 ##  <a name="m_gp"></a>COlePropertiesDialog::m_gp
 
-Struktura typu [OLEUIGNRLPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuignrlpropsa)używana do inicjowania strony Ogólne w oknie dialogowym właściwości obiektu OLE.
+Struktura typu [OLEUIGNRLPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuignrlpropsw)używana do inicjowania strony Ogólne w oknie dialogowym właściwości obiektu OLE.
 
 ```
 OLEUIGNRLPROPS m_gp;
@@ -170,7 +170,7 @@ Aby uzyskać więcej informacji na `OLEUIGNRLPROPS` temat struktury, zobacz Wind
 
 ##  <a name="m_lp"></a>COlePropertiesDialog::m_lp
 
-Struktura typu [OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa)użyta do zainicjowania strony łącza okna dialogowego właściwości obiektu OLE.
+Struktura typu [OLEUILINKPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuilinkpropsw)użyta do zainicjowania strony łącza okna dialogowego właściwości obiektu OLE.
 
 ```
 OLEUILINKPROPS m_lp;
@@ -184,7 +184,7 @@ Aby uzyskać więcej informacji na `OLEUILINKPROPS` temat struktury, zobacz Wind
 
 ##  <a name="m_op"></a>COlePropertiesDialog::m_op
 
-Struktura typu [OLEUIOBJECTPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiobjectpropsa)użyta do zainicjowania typowego okna dialogowego właściwości obiektu OLE.
+Struktura typu [OLEUIOBJECTPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuiobjectpropsw)użyta do zainicjowania typowego okna dialogowego właściwości obiektu OLE.
 
 ```
 OLEUIOBJECTPROPS m_op;
@@ -194,11 +194,11 @@ OLEUIOBJECTPROPS m_op;
 
 Ta struktura zawiera elementy członkowskie używane do inicjowania stron ogólnych, linków i widoku.
 
-Aby uzyskać więcej informacji, zobacz struktury OLEUIOBJECTPROPS i [OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz struktury OLEUIOBJECTPROPS i [OLEUILINKPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuilinkpropsw) w Windows SDK.
 
 ##  <a name="m_psh"></a>COlePropertiesDialog::m_psh
 
-Struktura typu [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-propsheetheadera_v2), której członkowie przechowują cechy obiektu okna dialogowego.
+Struktura typu [PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2), której członkowie przechowują cechy obiektu okna dialogowego.
 
 ```
 PROPSHEETHEADER m_psh;
@@ -214,7 +214,7 @@ Aby uzyskać więcej informacji na `PROPSHEETHEADER` temat struktury, zobacz Win
 
 ##  <a name="m_vp"></a>COlePropertiesDialog::m_vp
 
-Struktura typu [OLEUIVIEWPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiviewpropsa)używana do inicjowania strony widoku okna dialogowego właściwości obiektu OLE.
+Struktura typu [OLEUIVIEWPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuiviewpropsw)używana do inicjowania strony widoku okna dialogowego właściwości obiektu OLE.
 
 ```
 OLEUIVIEWPROPS m_vp;

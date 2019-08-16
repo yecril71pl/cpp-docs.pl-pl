@@ -8,28 +8,28 @@ helpviewer_keywords:
 - columns [MFC], adding to CListCtrl
 - CListCtrl class [MFC], report view
 ms.assetid: 7392c0d7-f8a5-4e7b-9ae7-b53dc9dd80ae
-ms.openlocfilehash: d414c5f597628576916c5091fa63a4bf673c8c44
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9321a582f223269ee998dccd01721f47d90eb7fe
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394834"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509342"
 ---
 # <a name="adding-columns-to-the-control-report-view"></a>Dodawanie kolumn do formantu (widok raportu)
 
 > [!NOTE]
->  Poniższa procedura ma zastosowanie do każdego [CListView](../mfc/reference/clistview-class.md) lub [CListCtrl](../mfc/reference/clistctrl-class.md) obiektu.
+>  Poniższa procedura dotyczy obiektu [CListView](../mfc/reference/clistview-class.md) lub [CListCtrl](../mfc/reference/clistctrl-class.md) .
 
-Gdy kontrolka listy znajduje się w widoku raportu, kolumny są wyświetlane, zapewniając metody organizowania różne elementy podrzędne elementu każdy element tej listy kontroli. Ta organizacja jest implementowane za pomocą relację między kolumną w formancie listy i podelement skojarzonego elementu kontrolki listy. Aby uzyskać więcej informacji na temat podrzędnych, zobacz [Dodawanie elementów do formantu](../mfc/adding-items-to-the-control.md). Przykład formantu listy, w widoku raportu znajduje się w widoku szczegółów w Windows 95 i Windows 98 Explorer. Pierwsza kolumna zawiera folder, plik ikony i etykiety. Rozmiar pliku, typu pliku, Data ostatniej modyfikacji i tak dalej, Wyświetl listę innych kolumn.
+Gdy kontrolka listy znajduje się w widoku raportu, są wyświetlane kolumny, co zapewnia metodę organizowania różnych podelementów każdego elementu formantu listy. Ta organizacja jest zaimplementowana z zastosowaniem jednej do jednego między kolumną w kontrolce list i skojarzoną podpozycją elementu formantu listy. Aby uzyskać więcej informacji na temat elementów SubItems, zobacz [Dodawanie elementów do kontrolki](../mfc/adding-items-to-the-control.md). Przykład kontrolki listy w widoku Raport jest dostępny w widoku szczegółów w Eksploratorze Windows 95 i Windows 98. Pierwsza kolumna zawiera listę folderów, ikon plików i etykiet. Inne kolumny rozmiar pliku listy, typ pliku, Data ostatniej modyfikacji i tak dalej.
 
-Mimo że kolumny można dodać formant listy w dowolnym momencie, kolumny są widoczne tylko wtedy, gdy kontrolka ma `LVS_REPORT` bit stylu włączona.
+Mimo że kolumny można dodać do kontrolki listy w dowolnym momencie, kolumny są widoczne tylko wtedy, gdy kontrolka ma `LVS_REPORT` włączony bit stylu.
 
-Każda kolumna ma element skojarzony nagłówek (zobacz [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) obiektu etykiet kolumny, która umożliwia użytkownikom zmiany rozmiaru kolumny.
+Każda kolumna ma skojarzony element nagłówka (See [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) Object, który oznacza kolumnę i umożliwia użytkownikom zmianę rozmiaru kolumny.
 
-Kontrolki listy obsługuje widoku raportu, należy dodać kolumnę dla każdej podpozycji możliwe w element formantu listy. Dodawanie kolumny za przygotowywanie [LV_COLUMN](/windows/desktop/api/commctrl/ns-commctrl-taglvcolumna) struktury, a następnie wywołuje element [InsertColumn](../mfc/reference/clistctrl-class.md#insertcolumn). Po dodaniu niezbędne kolumny (czasami określane jako elementy nagłówka), można zmieniać kolejność ich przy użyciu funkcji elementów członkowskich i style należących do formantu osadzonego nagłówka. Aby uzyskać więcej informacji, zobacz [kolejność elementów w formancie nagłówka](../mfc/ordering-items-in-the-header-control.md).
+Jeśli formant listy obsługuje widok raportu, należy dodać kolumnę dla każdego możliwego elementu podrzędnego w elemencie kontrolki listy. Dodaj kolumnę, przygotowując strukturę [LVCOLUMN](/windows/win32/api/commctrl/ns-commctrl-lvcolumnw) , a następnie wywołując do [InsertColumn](../mfc/reference/clistctrl-class.md#insertcolumn). Po dodaniu niezbędnych kolumn (czasami nazywanych elementami nagłówka) można zmienić ich kolejność przy użyciu funkcji składowych i stylów należących do osadzonego formantu nagłówka. Aby uzyskać więcej informacji, zobacz [porządkowanie elementów w formancie nagłówka](../mfc/ordering-items-in-the-header-control.md).
 
 > [!NOTE]
->  Jeśli kontrolka listy jest tworzona przy użyciu **LVS_NOCOLUMNHEADER** stylu, wszelkie próby, aby wstawić kolumny zostaną zignorowane.
+>  Jeśli formant listy jest tworzony przy użyciu stylu **LVS_NOCOLUMNHEADER** , każda próba wstawienia kolumn zostanie zignorowana.
 
 ## <a name="see-also"></a>Zobacz także
 

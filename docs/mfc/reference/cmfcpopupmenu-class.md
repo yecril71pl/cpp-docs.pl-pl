@@ -160,17 +160,17 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: bd6629df4274af8a4f450024f0bad6da45ae3683
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f61c5aea825d85043ad273c640c4aabd38ebbb5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388335"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505128"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu Class
 
-Implementuje funkcje menu podręcznego Windows i rozszerza je, dodając funkcje, takie jak zrywanie menu i etykietek narzędzi.
-Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.
+Implementuje funkcje menu podręcznego systemu Windows i rozszerza je, dodając funkcje, takie jak menu odrywające i etykietki narzędzi.
+Aby uzyskać więcej szczegółów, zobacz kod źródłowy znajdujący się w folderze **VC\\atlmfc\\src\\MFC** instalacji programu Visual Studio.
 
 ## <a name="syntax"></a>Składnia
 
@@ -184,101 +184,101 @@ class CMFCPopupMenu : public CMiniFrameWnd
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCPopupMenu::CMFCPopupMenu](#cmfcpopupmenu)|Konstruuje `CMFCPopupMenu` obiektu.|
+|[CMFCPopupMenu::CMFCPopupMenu](#cmfcpopupmenu)|Konstruuje `CMFCPopupMenu` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
 |[CMFCPopupMenu::ActivatePopupMenu](#activatepopupmenu)||
-|[CMFCPopupMenu::AlwaysShowEmptyToolsEntry](#alwaysshowemptytoolsentry)|Określa, czy menu podręczne jest włączona, aby wyświetlić pusty wpisy dla narzędzia zdefiniowane przez użytkownika.|
-|[CMFCPopupMenu::AreAllCommandsShown](#areallcommandsshown)||
-|[CMFCPopupMenu::CheckArea](#checkarea)|Określa położenie punktu względem menu podręcznego.|
+|[CMFCPopupMenu::AlwaysShowEmptyToolsEntry](#alwaysshowemptytoolsentry)|Określa, czy menu podręczne jest włączone, aby pokazać puste wpisy dla narzędzi zdefiniowanych przez użytkownika.|
+|[CMFCPopupMenu:: AreAllCommandsShown](#areallcommandsshown)||
+|[CMFCPopupMenu:: CheckArea](#checkarea)|Określa lokalizację punktu względem menu podręcznego.|
 |[CMFCPopupMenu::CloseMenu](#closemenu)||
-|[CMFCPopupMenu::Create](#create)|Tworzy menu podręczne i dołącza je do `CMFCPopupMenu` obiektu.|
+|[CMFCPopupMenu:: Create](#create)|Tworzy menu podręczne i dołącza je do `CMFCPopupMenu` obiektu.|
 |[CMFCPopupMenu::DefaultMouseClickOnClose](#defaultmouseclickonclose)||
-|[CMFCPopupMenu::EnableMenuLogo](#enablemenulogo)|Inicjuje logo w menu podręcznym.|
-|[CMFCPopupMenu::EnableMenuSound](#enablemenusound)|Włącza się dźwięk menu.|
-|[CMFCPopupMenu::EnableResize](#enableresize)||
+|[CMFCPopupMenu:: EnableMenuLogo](#enablemenulogo)|Inicjuje logo dla menu podręcznego.|
+|[CMFCPopupMenu:: EnableMenuSound](#enablemenusound)|Włącza dźwięk menu.|
+|[CMFCPopupMenu:: EnableResize](#enableresize)||
 |[CMFCPopupMenu::EnableScrolling](#enablescrolling)||
-|[CMFCPopupMenu::EnableVertResize](#enablevertresize)||
+|[CMFCPopupMenu:: EnableVertResize](#enablevertresize)||
 |[CMFCPopupMenu::FindSubItemByCommand](#findsubitembycommand)||
-|[CMFCPopupMenu::GetActiveMenu](#getactivemenu)|Zwraca aktualnie aktywny menu.|
-|[CMFCPopupMenu::GetAnimationSpeed](#getanimationspeed)|Zwraca szybkość animacji w menu podręcznym.|
-|[CMFCPopupMenu::GetAnimationType](#getanimationtype)|Zwraca bieżący typ animacji menu podręcznego.|
-|[CMFCPopupMenu::GetDropDirection](#getdropdirection)||
-|[CMFCPopupMenu::GetForceMenuFocus](#getforcemenufocus)|Wskazuje, czy fokus, jest zwracana do menu pasek po menu podręczne jest wyświetlany.|
-|[CMFCPopupMenu::GetForceShadow](#getforceshadow)||
-|[CMFCPopupMenu::GetHMenu](#gethmenu)|Zwraca uchwyt do zasobów dołączonych menu.|
-|[CMFCPopupMenu::GetMenuBar](#getmenubar)|Zwraca [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) osadzone wewnątrz menu podręcznego.|
-|[CMFCPopupMenu::GetMenuItem](#getmenuitem)|Zwraca wskaźnik do elementu menu pod określonym indeksem.|
-|[CMFCPopupMenu::GetMenuItemCount](#getmenuitemcount)|Zwraca liczbę elementów w menu podręcznego.|
-|[CMFCPopupMenu::GetMessageWnd](#getmessagewnd)|Zwraca wskaźnik do okna, gdy struktura kieruje komunikaty menu podręcznego.|
-|[CMFCPopupMenu::GetParentArea](#getparentarea)||
-|[CMFCPopupMenu::GetParentButton](#getparentbutton)|Zwraca wskaźnik do nadrzędnego przycisku paska narzędzi.|
-|[CMFCPopupMenu::GetParentPopupMenu](#getparentpopupmenu)|Zwraca wskaźnik do menu podręcznego nadrzędnej.|
-|[CMFCPopupMenu::GetParentRibbonElement](#getparentribbonelement)||
-|[CMFCPopupMenu::GetParentToolBar](#getparenttoolbar)|Zwraca wskaźnik do paska narzędzi nadrzędnej.|
-|[CMFCPopupMenu::GetQuickCustomizeType](#getquickcustomizetype)||
-|[CMFCPopupMenu::GetSelItem](#getselitem)|Zwraca wskaźnik do polecenia menu zaznaczony.|
+|[CMFCPopupMenu:: GetActiveMenu](#getactivemenu)|Zwraca aktualnie aktywne menu.|
+|[CMFCPopupMenu:: GetAnimationSpeed](#getanimationspeed)|Zwraca szybkość animacji dla menu podręcznych.|
+|[CMFCPopupMenu:: getanimationtype](#getanimationtype)|Zwraca bieżący typ animacji wysuwanego menu.|
+|[CMFCPopupMenu:: GetDropDirection](#getdropdirection)||
+|[CMFCPopupMenu:: GetForceMenuFocus](#getforcemenufocus)|Wskazuje, czy fokus jest zwracany do paska menu po wyświetleniu menu podręcznego.|
+|[CMFCPopupMenu:: GetForceShadow](#getforceshadow)||
+|[CMFCPopupMenu::GetHMenu](#gethmenu)|Zwraca uchwyt do dołączonego zasobu menu.|
+|[CMFCPopupMenu:: getmenubar](#getmenubar)|Zwraca [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) osadzony wewnątrz menu podręcznego.|
+|[CMFCPopupMenu:: getmenuitem](#getmenuitem)|Zwraca wskaźnik do elementu menu o określonym indeksie.|
+|[CMFCPopupMenu::GetMenuItemCount](#getmenuitemcount)|Zwraca liczbę elementów w menu podręcznym.|
+|[CMFCPopupMenu:: GetMessageWnd](#getmessagewnd)|Zwraca wskaźnik do okna, w którym struktura kieruje komunikaty menu podręcznego.|
+|[CMFCPopupMenu:: GetParentArea](#getparentarea)||
+|[CMFCPopupMenu:: GetParentButton](#getparentbutton)|Zwraca wskaźnik do nadrzędnego przycisku paska narzędzi.|
+|[CMFCPopupMenu:: GetParentPopupMenu](#getparentpopupmenu)|Zwraca wskaźnik do menu rozwijanego nadrzędnego.|
+|[CMFCPopupMenu:: GetParentRibbonElement](#getparentribbonelement)||
+|[CMFCPopupMenu:: GetParentToolBar](#getparenttoolbar)|Zwraca wskaźnik do nadrzędnego paska narzędzi.|
+|[CMFCPopupMenu:: GetQuickCustomizeType](#getquickcustomizetype)||
+|[CMFCPopupMenu::GetSelItem](#getselitem)|Zwraca wskaźnik do aktualnie wybranego polecenia menu.|
 |[CMFCPopupMenu::HasBeenResized](#hasbeenresized)||
-|[CMFCPopupMenu::HideRarelyUsedCommands](#hiderarelyusedcommands)|Wskazuje, czy w menu podręcznym można ukryć rzadko używanych poleceń.|
-|[CMFCPopupMenu::InCommand](#incommand)||
-|[CMFCPopupMenu::InsertItem](#insertitem)|Wstawia nowy element do menu podręcznego w określonej lokalizacji.|
-|[CMFCPopupMenu::InsertSeparator](#insertseparator)|Wstawia separatorem w menu podręcznym w określonej lokalizacji.|
+|[CMFCPopupMenu::HideRarelyUsedCommands](#hiderarelyusedcommands)|Wskazuje, czy menu rozwijane może ukrywać rzadko używane polecenia.|
+|[CMFCPopupMenu:: incommand](#incommand)||
+|[CMFCPopupMenu:: InsertItem](#insertitem)|Wstawia nowy element do menu podręcznego w określonej lokalizacji.|
+|[CMFCPopupMenu::InsertSeparator](#insertseparator)|Wstawia separator do menu podręcznego w określonej lokalizacji.|
 |[CMFCPopupMenu::IsAlwaysClose](#isalwaysclose)||
 |[CMFCPopupMenu::IsAlwaysShowEmptyToolsEntry](#isalwaysshowemptytoolsentry)||
-|[CMFCPopupMenu::IsCustomizePane](#iscustomizepane)|Wskazuje, czy menu podręcznego nie działa jako **QuickCustomizePane**.|
+|[CMFCPopupMenu:: IsCustomizePane](#iscustomizepane)|Wskazuje, czy menu podręczne działa jako **QuickCustomizePane**.|
 |[CMFCPopupMenu::IsEscClose](#isescclose)||
-|[CMFCPopupMenu::IsIdle](#isidle)|Wskazuje, czy menu podręczne jest obecnie w stanie bezczynności.|
-|[CMFCPopupMenu::IsMenuSound](#ismenusound)||
-|[CMFCPopupMenu::IsQuickCustomize](#isquickcustomize)|Określa, czy skojarzony [klasa CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) jest w trybie QuickCustomize.|
+|[CMFCPopupMenu::IsIdle](#isidle)|Wskazuje, czy menu podręczne jest aktualnie bezczynne.|
+|[CMFCPopupMenu:: IsMenuSound](#ismenusound)||
+|[CMFCPopupMenu:: IsQuickCustomize](#isquickcustomize)|Określa, czy skojarzona [Klasa CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) jest w trybie QuickCustomize.|
 |[CMFCPopupMenu::IsResizeble](#isresizeble)||
-|[CMFCPopupMenu::IsRightAlign](#isrightalign)|Wskazuje, czy menu jest wyrównany do prawej czy wyrównane do lewej.|
+|[CMFCPopupMenu:: IsRightAlign](#isrightalign)|Wskazuje, czy menu jest wyrównane do prawej czy wyrównane do lewej.|
 |[CMFCPopupMenu::IsScrollable](#isscrollable)||
-|[CMFCPopupMenu::IsSendMenuSelectMsg](#issendmenuselectmsg)|Wskazuje, czy ramach powiadamia nadrzędnej ramki, gdy użytkownik wybierze polecenie w menu podręcznym.|
-|[CMFCPopupMenu::IsShown](#isshown)|Wskazuje, czy menu podręczne jest aktualnie widoczne.|
-|[CMFCPopupMenu::MoveTo](#moveto)||
+|[CMFCPopupMenu::IsSendMenuSelectMsg](#issendmenuselectmsg)|Wskazuje, czy struktura powiadamia ramkę nadrzędną, gdy użytkownik wybierze polecenie z menu podręcznego.|
+|[CMFCPopupMenu::IsShown](#isshown)|Wskazuje, czy menu podręczne jest obecnie widoczne.|
+|[CMFCPopupMenu:: MoveTo](#moveto)||
 |[CMFCPopupMenu::OnCmdMsg](#oncmdmsg)|(Przesłania `CFrameWnd::OnCmdMsg`).|
-|[CMFCPopupMenu::PostCommand](#postcommand)||
+|[CMFCPopupMenu::P ostCommand](#postcommand)||
 |[CMFCPopupMenu::PreTranslateMessage](#pretranslatemessage)|(Przesłania `CFrameWnd::PreTranslateMessage`).|
-|[CMFCPopupMenu::RecalcLayout](#recalclayout)|Wywoływane przez platformę, gdy standardowe paski kontrolki są włączane lub wyłączane lub gdy zmieniany jest rozmiar ramki okna. (Przesłania [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|
-|[CMFCPopupMenu::RemoveAllItems](#removeallitems)|Usuwa wszystkie elementy z menu podręcznego.|
+|[CMFCPopupMenu::RecalcLayout](#recalclayout)|Wywoływane przez platformę, gdy standardowe paski kontrolki są włączane lub wyłączane lub gdy zmieniany jest rozmiar okna ramki. (Przesłania [obiektu CFrameWnd:: RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|
+|[CMFCPopupMenu::RemoveAllItems](#removeallitems)|Czyści wszystkie elementy z menu podręcznego.|
 |[CMFCPopupMenu::RemoveItem](#removeitem)|Usuwa określony element z menu podręcznego.|
-|[CMFCPopupMenu::SaveState](#savestate)||
-|[CMFCPopupMenu::SetAnimationSpeed](#setanimationspeed)|Ustawia szybkość animacji w menu podręcznym.|
-|[CMFCPopupMenu::SetAnimationType](#setanimationtype)|Ustawia typ animacji menu podręcznego.|
+|[CMFCPopupMenu:: SaveState](#savestate)||
+|[CMFCPopupMenu::SetAnimationSpeed](#setanimationspeed)|Ustawia szybkość animacji dla menu podręcznych.|
+|[CMFCPopupMenu::SetAnimationType](#setanimationtype)|Ustawia typ animacji dla menu podręcznego.|
 |[CMFCPopupMenu::SetAutoDestroy](#setautodestroy)||
-|[CMFCPopupMenu::SetDefaultItem](#setdefaultitem)|Ustawia domyślnego polecenia menu podręcznego.|
-|[CMFCPopupMenu::SetForceMenuFocus](#setforcemenufocus)|Wymusza fokus wprowadzania, aby wrócić do menu pasek po menu podręczne jest wyświetlany.|
-|[CMFCPopupMenu::SetForceShadow](#setforceshadow)|Wymusza platformę, by narysować cieni menu, gdy menu podręczne pojawiają się poza głównej ramki.|
-|[CMFCPopupMenu::SetMaxWidth](#setmaxwidth)|Ustaw maksymalną szerokość wyskakujących menu.|
+|[CMFCPopupMenu::SetDefaultItem](#setdefaultitem)|Ustawia domyślne polecenie dla menu podręcznego.|
+|[CMFCPopupMenu::SetForceMenuFocus](#setforcemenufocus)|Wymusza powrót fokusu wejścia do paska menu po wyświetleniu menu podręcznego.|
+|[CMFCPopupMenu::SetForceShadow](#setforceshadow)|Wymusza na platformie rysowanie cieni menu, gdy menu podręczne pojawia się poza ramką główną.|
+|[CMFCPopupMenu:: SetMaxWidth](#setmaxwidth)|Ustaw maksymalną szerokość menu podręcznego.|
 |[CMFCPopupMenu::SetMessageWnd](#setmessagewnd)||
 |[CMFCPopupMenu::SetParentRibbonElement](#setparentribbonelement)||
 |[CMFCPopupMenu::SetQuickCustomizeType](#setquickcustomizetype)||
 |[CMFCPopupMenu::SetQuickMode](#setquickmode)||
-|[CMFCPopupMenu::SetRightAlign](#setrightalign)|Ustawia wyrównanie menu wyskakujących menu.|
-|[CMFCPopupMenu::SetSendMenuSelectMsg](#setsendmenuselectmsg)|Ustawia flagę, która kontroluje, czy menu podręcznym powiadamia jej nadrzędnej ramki, gdy użytkownik wybierze polecenie.|
-|[CMFCPopupMenu::ShowAllCommands](#showallcommands)|Wymusza wyskakujących menu, aby wyświetlić wszystkie polecenia.|
+|[CMFCPopupMenu:: SetRightAlign](#setrightalign)|Ustawia wyrównanie menu dla menu podręcznych.|
+|[CMFCPopupMenu::SetSendMenuSelectMsg](#setsendmenuselectmsg)|Ustawia flagę, która kontroluje, czy menu podręczne powiadamia jego ramkę nadrzędną, gdy użytkownik wybierze polecenie.|
+|[CMFCPopupMenu:: ShowAllCommands](#showallcommands)|Wymusza wyskakujące menu, aby wyświetlić wszystkie polecenia.|
 |[CMFCPopupMenu::TriggerResize](#triggerresize)||
-|[CMFCPopupMenu::UpdateAllShadows](#updateallshadows)|Aktualizuje cieni wszystkich otwarte menu podręcznego.|
-|[CMFCPopupMenu::UpdateShadow](#updateshadow)|Aktualizacje w tle dla menu podręcznego.|
+|[CMFCPopupMenu::UpdateAllShadows](#updateallshadows)|Aktualizuje cienie dla wszystkich otwartych menu podręcznych.|
+|[CMFCPopupMenu:: UpdateShadow](#updateshadow)|Aktualizuje cień dla menu podręcznego.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCPopupMenu::CreateTearOffBar](#createtearoffbar)||
+|[CMFCPopupMenu:: CreateTearOffBar](#createtearoffbar)||
 |[CMFCPopupMenu::OnChangeHot](#onchangehot)||
 |[CMFCPopupMenu::OnChooseItem](#onchooseitem)||
 
 ### <a name="remarks"></a>Uwagi
 
-Zwykle MFC wyskakujących menu automatycznie tworzy. Jeśli chcesz tworzyć `CMFCPopupMenu` obiektu ręcznie Przydziel jeden na stosie, a następnie wywołać [CMFCPopupMenu::Create](#create).
+Zazwyczaj MFC automatycznie tworzy menu wyskakujące. Jeśli chcesz utworzyć `CMFCPopupMenu` obiekt ręcznie, Przydziel go na stercie, a następnie Wywołaj [CMFCPopupMenu:: Create](#create).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak skonfigurować obiekt menu podręcznego. W przykładzie pokazano, jak ustawić logo i dźwięk menu podręcznego, Ustaw typ i szybkość animacji, rysowania cieni menu, gdy poza głównej ramki pojawi się podręczne menu, ustawia maksymalną szerokość i ustawić wyrównanie prawym menu w menu podręcznym. Ten fragment kodu jest częścią [przykładowe niestandardowych stron](../../overview/visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak skonfigurować obiekt menu podręcznego. W przykładzie pokazano, jak ustawić logo i dźwięk z menu podręcznego, ustawić szybkość animacji i typ, Rysuj cienie menu, gdy menu podręczne jest wyświetlane poza ramką główną, ustaw maksymalną szerokość i ustaw wyrównanie menu wyskakującego menu. Ten fragment kodu jest częścią [przykładu stron niestandardowych](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#2](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_1.cpp)]
 
@@ -290,7 +290,7 @@ Poniższy przykład pokazuje, jak skonfigurować obiekt menu podręcznego. W prz
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[CFrameWnd](../../mfc/reference/cframewnd-class.md)
+[Obiektu CFrameWnd](../../mfc/reference/cframewnd-class.md)
 
 [CMiniFrameWnd](../../mfc/reference/cminiframewnd-class.md)
 
@@ -298,7 +298,7 @@ Poniższy przykład pokazuje, jak skonfigurować obiekt menu podręcznego. W prz
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxpopupmenu.h
+**Nagłówek:** afxpopupmenu. h
 
 ##  <a name="activatepopupmenu"></a>  CMFCPopupMenu::ActivatePopupMenu
 
@@ -310,16 +310,16 @@ static BOOL __stdcall ActivatePopupMenu(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pTopFrame*<br/>
-[in] *pPopupMenu*<br/>
+podczas *pTopFrame*<br/>
+podczas *pPopupMenu*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="alwaysshowemptytoolsentry"></a>  CMFCPopupMenu::AlwaysShowEmptyToolsEntry
+##  <a name="alwaysshowemptytoolsentry"></a>CMFCPopupMenu:: AlwaysShowEmptyToolsEntry
 
-Określa, czy menu podręczne jest włączona, aby wyświetlić pusty wpisy dla narzędzia zdefiniowane przez użytkownika.
+Określa, czy menu podręczne jest włączone, aby pokazać puste wpisy dla narzędzi zdefiniowanych przez użytkownika.
 
 ```
 static void AlwaysShowEmptyToolsEntry(BOOL bShow = TRUE);
@@ -328,9 +328,9 @@ static void AlwaysShowEmptyToolsEntry(BOOL bShow = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bShow*<br/>
-[in] Wartość TRUE, jeśli w menu podręcznym można wyświetlić wpisy puste. Wartość FALSE w przeciwnym razie.
+podczas PRAWDA, jeśli menu podręczne może wyświetlać puste wpisy; W przeciwnym razie zwraca wartość FALSE.
 
-##  <a name="areallcommandsshown"></a>  CMFCPopupMenu::AreAllCommandsShown
+##  <a name="areallcommandsshown"></a>CMFCPopupMenu:: AreAllCommandsShown
 
 ```
 BOOL AreAllCommandsShown() const;
@@ -340,9 +340,9 @@ BOOL AreAllCommandsShown() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="checkarea"></a>  CMFCPopupMenu::CheckArea
+##  <a name="checkarea"></a>CMFCPopupMenu:: CheckArea
 
-Określa położenie punktu względem menu podręcznego.
+Określa lokalizację punktu względem menu podręcznego.
 
 ```
 MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
@@ -351,29 +351,29 @@ MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
 ### <a name="parameters"></a>Parametry
 
 *ptScreen*<br/>
-[in] Punkt, w współrzędne ekranu.
+podczas Punkt, we współrzędnych ekranu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Parametr MENUAREA_TYPE, która wskazuje, gdzie punkt jest określana względem menu podręcznego.
+Parametr MENUAREA_TYPE wskazujący, gdzie punkt jest względem menu podręcznego.
 
 ### <a name="remarks"></a>Uwagi
 
-Parametr MENUAREA_TYPE może mieć jeden z następujących wartości.
+Parametr MENUAREA_TYPE może mieć jedną z następujących wartości.
 
-- POZA - *ptScreen* znajduje się poza menu podręcznego.
+- POZA- *ptScreen* znajduje się poza menu podręcznym.
 
 - LOGO — *ptScreen* znajduje się nad obszarem logo.
 
-- TEAROFF_CAPTION - *ptScreen* znajduje się nad podpis odrywania.
+- TEAROFF_CAPTION- *ptScreen* znajduje się na oddzielnym podpisie.
 
-- SHADOW_BOTTOM - *ptScreen* znajduje się nad kopii w tle dołu menu podręcznego.
+- SHADOW_BOTTOM- *ptScreen* znajduje się w dolnym tle menu podręcznego.
 
-- SHADOW_RIGHT - *ptScreen* znajduje się nad prawym cień menu podręcznego.
+- SHADOW_RIGHT- *ptScreen* znajduje się w prawym tle menu podręcznego.
 
-- MENU — *ptScreen* znajduje się nad polecenia.
+- MENU — *ptScreen* jest za pośrednictwem polecenia.
 
-##  <a name="closemenu"></a>  CMFCPopupMenu::CloseMenu
+##  <a name="closemenu"></a>CMFCPopupMenu:: CloseMenu
 
 ```
 void CloseMenu(BOOL bSetFocusToBar = FALSE);
@@ -381,13 +381,13 @@ void CloseMenu(BOOL bSetFocusToBar = FALSE);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bSetFocusToBar*<br/>
+podczas *bSetFocusToBar*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="cmfcpopupmenu"></a>  CMFCPopupMenu::CMFCPopupMenu
+##  <a name="cmfcpopupmenu"></a>CMFCPopupMenu:: CMFCPopupMenu
 
-Konstruuje [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) obiektu.
+Konstruuje obiekt [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) .
 
 ```
 CMFCPopupMenu(
@@ -398,18 +398,18 @@ CMFCPopupMenu(
 ### <a name="parameters"></a>Parametry
 
 *pCustPage*<br/>
-[in] Wskaźnik do dostosowania strony.
+podczas Wskaźnik do strony dostosowywania.
 
 *lpszTitle*<br/>
-[in] Ciąg, który zawiera podpis menu.
+podczas Ciąg, który zawiera podpis menu.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda przydziela zasoby dla `CMFCPopupMenu`. Aby utworzyć element menu podręcznego, należy wywołać [CMFCPopupMenu::Create](#create).
+Ta metoda przydziela zasoby dla `CMFCPopupMenu`. Aby utworzyć element menu podręcznego, wywołaj [CMFCPopupMenu:: Create](#create).
 
-##  <a name="create"></a>  CMFCPopupMenu::Create
+##  <a name="create"></a>CMFCPopupMenu:: Create
 
-Tworzy menu podręczne i dołącza je do [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) obiektu.
+Tworzy menu podręczne i dołącza je do obiektu [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) .
 
 ```
 virtual BOOL Create(
@@ -424,38 +424,38 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *pWndParent*<br/>
-[in] W oknie nadrzędnym `CMFCPopupMenu`.
+podczas Okno nadrzędne dla `CMFCPopupMenu`.
 
 *x*<br/>
-[in] Współrzędna pozioma ekranu dla lokalizacji menu podręcznego
+podczas Pozioma Współrzędna ekranu dla lokalizacji menu podręcznego
 
 *y*<br/>
-[in] Współrzędna pionowa ekranu do lokalizacji pop menu.
+podczas Współrzędne ekranu pionowego dla lokalizacji menu podręcznego.
 
 *hMenu*<br/>
-[in] Dojście do zasobu menu.
+podczas Uchwyt do zasobu menu.
 
-*bLocked*<br/>
-[in] Parametr logiczny, który wskazuje, czy jest możliwe do dostosowania. Wartość FALSE wskazuje, że menu podręczne jest możliwe do dostosowania.
+*Blokada*<br/>
+podczas Parametr logiczny, który wskazuje, czy menu można dostosować. Wartość FALSE oznacza, że menu podręczne jest dostosowywane.
 
 *bOwnMessage*<br/>
-[in] Parametr logiczny, który wskazuje kierowanie komunikatów menu w ramach. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.
+podczas Parametr logiczny, który wskazuje, jak struktura kieruje komunikaty menu. Zobacz sekcję Uwagi, aby uzyskać więcej szczegółów.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli metoda się powiedzie; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli metoda zakończy się pomyślnie. w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli *bOwnMessage* jest wartość TRUE, trasy framework komunikaty menu do *pWndParent*. *pWndParent* nie musi mieć wartość NULL, jeśli *bOwnMessage* ma wartość TRUE. Jeśli *bOwnMessage* to FALSE, trasy framework komunikaty menu do menu podręcznego nadrzędnej.
+Jeśli *bOwnMessage* ma wartość true, struktura kieruje wszystkie komunikaty menu do *pWndParent*. *pWndParent* nie może mieć wartości null, jeśli *bOwnMessage* ma wartość true. Jeśli *bOwnMessage* ma wartość false, struktura kieruje komunikaty menu do nadrzędnego menu podręcznego.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia `Create` metody `CMFCPopuMenu` klasy. Ten fragment kodu jest częścią [przykładowe niestandardowych stron](../../overview/visual-cpp-samples.md).
+Poniższy przykład ilustruje sposób użycia `Create` metody `CMFCPopuMenu` klasy. Ten fragment kodu jest częścią [przykładu stron niestandardowych](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#1](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_2.cpp)]
 
-##  <a name="createtearoffbar"></a>  CMFCPopupMenu::CreateTearOffBar
+##  <a name="createtearoffbar"></a>CMFCPopupMenu:: CreateTearOffBar
 
 ```
 virtual CPane* CreateTearOffBar(
@@ -466,9 +466,9 @@ virtual CPane* CreateTearOffBar(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pWndMain*<br/>
-[in] *uiID*<br/>
-[in] *lpszName*<br/>
+podczas *pWndMain*<br/>
+podczas *uiID*<br/>
+podczas *lpszName*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -484,9 +484,9 @@ virtual BOOL DefaultMouseClickOnClose() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="enablemenulogo"></a>  CMFCPopupMenu::EnableMenuLogo
+##  <a name="enablemenulogo"></a>CMFCPopupMenu:: EnableMenuLogo
 
-Inicjuje logo w menu podręcznym.
+Inicjuje logo dla menu podręcznego.
 
 ```
 void EnableMenuLogo(
@@ -497,20 +497,20 @@ void EnableMenuLogo(
 ### <a name="parameters"></a>Parametry
 
 *iLogoSize*<br/>
-[in] Rozmiar logo, w pikselach.
+podczas Rozmiar logo (w pikselach).
 
 *nLogoLocation*<br/>
-[in] Typ wyliczany danych, który wskazuje lokalizację logo.
+podczas Wyliczany typ danych wskazujący lokalizację logo.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby wyświetlić logo, należy zaimplementować metodę [CFrameWndEx::OnDrawMenuLogo](../../mfc/reference/cframewndex-class.md#ondrawmenulogo) w oknie głównym ramki.
+Aby wyświetlić logo, Zaimplementuj metodę [CFrameWndEx:: OnDrawMenuLogo](../../mfc/reference/cframewndex-class.md#ondrawmenulogo) w oknie głównym ramki.
 
-Możliwe wartości parametru *nLogoLocation* MENU_LOGO_LEFT, MENU_LOGO_RIGHT, MENU_LOGO_TOP i MENU_LOGO_BOTTOM.
+Możliwe wartości dla *nLogoLocation* to MENU_LOGO_LEFT, MENU_LOGO_RIGHT, MENU_LOGO_TOP i MENU_LOGO_BOTTOM.
 
-##  <a name="enablemenusound"></a>  CMFCPopupMenu::EnableMenuSound
+##  <a name="enablemenusound"></a>CMFCPopupMenu:: EnableMenuSound
 
-Włącza się dźwięk menu.
+Włącza dźwięk menu.
 
 ```
 static void EnableMenuSound(BOOL bEnable = TRUE);
@@ -518,14 +518,14 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bWłączenie*<br/>
-[in] Wartość TRUE, aby włączyć dźwięk, wartość FALSE w przeciwnym razie.
+*bEnable*<br/>
+podczas Wartość TRUE, aby włączyć dźwięk, w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli włączysz dźwięk, struktura wywołuje [PlaySound](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iusernotification-playsound) metody, gdy użytkownik otwiera menu rozwijane lub wybierze polecenie menu. Ta funkcja jest domyślnie włączona.
+Jeśli włączysz dźwięk, struktura wywołuje metodę [PLAYSOUND](/windows/win32/api/shobjidl_core/nf-shobjidl_core-iusernotification-playsound) , gdy użytkownik otworzy menu podręczne lub wybierze polecenie menu. Domyślnie ta funkcja jest włączona.
 
-##  <a name="enableresize"></a>  CMFCPopupMenu::EnableResize
+##  <a name="enableresize"></a>CMFCPopupMenu:: EnableResize
 
 ```
 void EnableResize(CSize sizeMinResize);
@@ -533,11 +533,11 @@ void EnableResize(CSize sizeMinResize);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *sizeMinResize*<br/>
+podczas *sizeMinResize*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="enablescrolling"></a>  CMFCPopupMenu::EnableScrolling
+##  <a name="enablescrolling"></a>CMFCPopupMenu:: EnableScrolling
 
 ```
 void EnableScrolling(BOOL = TRUE);
@@ -545,11 +545,11 @@ void EnableScrolling(BOOL = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *BOOL*<br/>
+podczas Wartość *logiczna*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="enablevertresize"></a>  CMFCPopupMenu::EnableVertResize
+##  <a name="enablevertresize"></a>CMFCPopupMenu:: EnableVertResize
 
 ```
 void EnableVertResize(int nMinResize);
@@ -557,11 +557,11 @@ void EnableVertResize(int nMinResize);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nMinResize*<br/>
+podczas *nMinResize*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="findsubitembycommand"></a>  CMFCPopupMenu::FindSubItemByCommand
+##  <a name="findsubitembycommand"></a>CMFCPopupMenu:: FindSubItemByCommand
 
 ```
 CMFCToolBarMenuButton* FindSubItemByCommand(UINT uiCmd) const;
@@ -569,15 +569,15 @@ CMFCToolBarMenuButton* FindSubItemByCommand(UINT uiCmd) const;
 
 ### <a name="parameters"></a>Parametry
 
-[in] *uiCmd*<br/>
+podczas *uiCmd*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getactivemenu"></a>  CMFCPopupMenu::GetActiveMenu
+##  <a name="getactivemenu"></a>CMFCPopupMenu:: GetActiveMenu
 
-Zwraca aktualnie aktywny menu.
+Zwraca aktualnie aktywne menu.
 
 ```
 static CMFCPopupMenu* GetActiveMenu();
@@ -585,15 +585,15 @@ static CMFCPopupMenu* GetActiveMenu();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do aktywne menu podręczne, lub wartość NULL, jeśli nie menu podręczne jest obecnie aktywna.
+Wskaźnik do aktywnego menu podręcznego lub wartość NULL, jeśli nie jest aktywne menu podręczne.
 
 ### <a name="remarks"></a>Uwagi
 
-Każda aplikacja może mieć co najwyżej jeden aktywne menu podręczne.
+Każda aplikacja może mieć co najwyżej jedno aktywne menu podręczne.
 
-##  <a name="getanimationspeed"></a>  CMFCPopupMenu::GetAnimationSpeed
+##  <a name="getanimationspeed"></a>CMFCPopupMenu:: GetAnimationSpeed
 
-Zwraca szybkość animacji w menu podręcznym.
+Zwraca szybkość animacji dla menu podręcznych.
 
 ```
 static UINT GetAnimationSpeed();
@@ -601,15 +601,15 @@ static UINT GetAnimationSpeed();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba całkowita, która wskazuje czas w milisekundach animacji menu podręcznego potrzebny na zakończenie.
+Liczba całkowita określająca czas trwania animacji menu podręcznego w milisekundach.
 
 ### <a name="remarks"></a>Uwagi
 
-Szybkość animacji jest wartości globalnej. Użyj [CMFCPopupMenu::SetAnimationSpeed](#setanimationspeed) Aby zmienić szybkość animacji w menu podręcznym.
+Szybkość animacji jest wartością globalną. Użyj [CMFCPopupMenu:: SetAnimationSpeed](#setanimationspeed) , aby zmienić szybkość animacji dla menu podręcznych.
 
-##  <a name="getanimationtype"></a>  CMFCPopupMenu::GetAnimationType
+##  <a name="getanimationtype"></a>CMFCPopupMenu:: getanimationtype
 
-Zwraca bieżący typ wyskakującego animacji.
+Zwraca bieżący typ animacji wyskakującej.
 
 ```
 static CMFCPopupMenu::ANIMATION_TYPE GetAnimationType(BOOL bNoSystem = FALSE);
@@ -618,26 +618,26 @@ static CMFCPopupMenu::ANIMATION_TYPE GetAnimationType(BOOL bNoSystem = FALSE);
 ### <a name="parameters"></a>Parametry
 
 *bNoSystem*<br/>
-[in] Parametrów logiczny, który wskazuje, czy ta metoda sprawdza wartości globalnej. Wartość FALSE, jeśli chcesz, aby tę metodę, aby zwrócić styl animacji dla tego wystąpienia [klasa CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md).
+podczas Parametr logiczny, który wskazuje, czy ta metoda sprawdza wartość globalną. Wartość FALSE, jeśli chcesz, aby ta metoda zwracała styl animacji dla tego wystąpienia [klasy CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość wyliczana, który opisuje typ animacji.
+Wartość wyliczana opisująca typ animacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Styl animacji menu podręczne jest globalne dla aplikacji. Użyj [CMFCPopupMenu::SetAnimationType](#setanimationtype) można ustawić styl animacji.
+Styl animacji dla menu wyskakującego jest globalny dla aplikacji. Użyj [CMFCPopupMenu::](#setanimationtype) SetAnimationType, aby ustawić styl animacji.
 
-Poniższa tabela zawiera listę typów możliwych animacji.
+W poniższej tabeli wymieniono możliwe typy animacji.
 
 |||
 |-|-|
-|NO_ANIMATION|Menu podręcznego nie jest animowany i pojawia się natychmiast.  |
-|UNFOLD|Struktura ujawnia wyskakujących menu w lewym górnym rogu, aby prawym dolnym rogu.  |
-|SLAJD|Menu podręczne Przenosi od góry do dołu.  |
-|ZANIKANIE|Menu podręczne po raz pierwszy występuje przejrzyste i stopniowo ekstrakt.  |
+|NO_ANIMATION|Menu podręczne nie jest animowane i pojawia się od razu.  |
+|UNFOLD|Środowisko pokazuje menu rozwijane w lewym górnym rogu do prawego dolnego rogu.  |
+|ODTWARZANIE|Menu podręczne przesuwa się od góry do dołu.  |
+|ZNIK|Menu podręczne jest najpierw widoczne jako przezroczyste i stopniowo solidifies.  |
 
-##  <a name="getdropdirection"></a>  CMFCPopupMenu::GetDropDirection
+##  <a name="getdropdirection"></a>CMFCPopupMenu:: GetDropDirection
 
 ```
 DROP_DIRECTION GetDropDirection() const;
@@ -647,9 +647,9 @@ DROP_DIRECTION GetDropDirection() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getforcemenufocus"></a>  CMFCPopupMenu::GetForceMenuFocus
+##  <a name="getforcemenufocus"></a>CMFCPopupMenu:: GetForceMenuFocus
 
-Wskazuje, czy fokus, jest zwracana do menu pasek po menu podręczne jest wyświetlany.
+Wskazuje, czy fokus jest zwracany do paska menu po wyświetleniu menu podręcznego.
 
 ```
 static BOOL GetForceMenuFocus();
@@ -657,13 +657,13 @@ static BOOL GetForceMenuFocus();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli fokus wprowadzania są zwracane do paska menu, po wyświetleniu menu podręcznego; Wartość FALSE, jeśli w menu podręcznym zachowuje fokus.
+Ma wartość TRUE, jeśli fokus wprowadzania jest zwracany do paska menu po wyświetleniu menu podręcznego. Wartość FALSE, jeśli menu podręczne zachowuje fokus.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie aplikacja nie zwraca fokusu na pasku menu. Aby zmienić to ustawienie, należy użyć [CMFCPopupMenu::SetForceMenuFocus](#setforcemenufocus).
+Domyślnie aplikacja nie zwraca fokusu do paska menu. Aby zmienić to ustawienie, użyj [CMFCPopupMenu:: SetForceMenuFocus](#setforcemenufocus).
 
-##  <a name="getforceshadow"></a>  CMFCPopupMenu::GetForceShadow
+##  <a name="getforceshadow"></a>CMFCPopupMenu:: GetForceShadow
 
 ```
 static BOOL __stdcall GetForceShadow();
@@ -673,17 +673,17 @@ static BOOL __stdcall GetForceShadow();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="gethmenu"></a>  CMFCPopupMenu::GetHMenu
+##  <a name="gethmenu"></a>CMFCPopupMenu:: GetHMenu
 
-Zwraca uchwyt do zasobów dołączonych menu.
+Zwraca uchwyt do dołączonego zasobu menu.
 
 ```
 HMENU GetHMenu();
 ```
 
-##  <a name="getmenubar"></a>  CMFCPopupMenu::GetMenuBar
+##  <a name="getmenubar"></a>CMFCPopupMenu:: getmenubar
 
-Zwraca [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) osadzone wewnątrz menu podręcznego.
+Zwraca [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) osadzony wewnątrz menu podręcznego.
 
 ```
 virtual CMFCPopupMenuBar* GetMenuBar();
@@ -691,15 +691,15 @@ virtual CMFCPopupMenuBar* GetMenuBar();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do osadzonego `CMFCPopupMenuBar`.
+Wskaźnik do osadzonej `CMFCPopupMenuBar`.
 
 ### <a name="remarks"></a>Uwagi
 
-Menu podręczne zawiera osadzony `CMFCPopupMenuBar` obiektu. Należy przesłonić tę metodę w klasie pochodnej, jeśli używasz innej klasie osadzonej.
+Menu podręczne ma osadzony `CMFCPopupMenuBar` obiekt. Należy przesłonić tę metodę w klasie pochodnej, jeśli używasz innej klasy osadzonej.
 
-##  <a name="getmenuitem"></a>  CMFCPopupMenu::GetMenuItem
+##  <a name="getmenuitem"></a>CMFCPopupMenu:: getmenuitem
 
-Zwraca wskaźnik do elementu menu pod określonym indeksem.
+Zwraca wskaźnik do elementu menu o określonym indeksie.
 
 ```
 CMFCToolBarMenuButton* GetMenuItem(int iIndex) const;
@@ -708,17 +708,17 @@ CMFCToolBarMenuButton* GetMenuItem(int iIndex) const;
 ### <a name="parameters"></a>Parametry
 
 *iIndex*<br/>
-[in] Liczony od zera indeks elementu menu.
+podczas Indeks (liczony od zera) elementu menu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do elementu menu. Wartość NULL, jeśli ten indeks jest nieprawidłowy.
+Wskaźnik do elementu menu. Wartość NULL, jeśli indeks jest nieprawidłowy.
 
 ### <a name="remarks"></a>Uwagi
 
-Elementy menu są reprezentowane przez [klasa CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md). Gdy ta metoda jest wywoływana, zwraca wskaźnik do odpowiedniego `CMFCToolBarMenuButton`.
+Elementy menu są reprezentowane przez [klasę CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md). Po wywołaniu tej metody zwraca wskaźnik do odpowiedniej `CMFCToolBarMenuButton`.
 
-##  <a name="getmenuitemcount"></a>  CMFCPopupMenu::GetMenuItemCount
+##  <a name="getmenuitemcount"></a>CMFCPopupMenu:: GetMenuItemCount
 
 Zwraca liczbę elementów w menu podręcznym.
 
@@ -730,9 +730,9 @@ int GetMenuItemCount() const;
 
 Liczba elementów w menu.
 
-##  <a name="getmessagewnd"></a>  CMFCPopupMenu::GetMessageWnd
+##  <a name="getmessagewnd"></a>CMFCPopupMenu:: GetMessageWnd
 
-Zwraca wskaźnik do okna, gdy struktura kieruje komunikaty menu podręcznego.
+Zwraca wskaźnik do okna, w którym struktura kieruje komunikaty menu podręcznego.
 
 ```
 CWnd* GetMessageWnd() const;
@@ -740,13 +740,13 @@ CWnd* GetMessageWnd() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do okna, które odbiera wiadomości menu podręcznego. Wartość NULL, jeśli żadnego okna.
+Wskaźnik do okna, które odbiera komunikaty menu podręcznego. Wartość NULL, jeśli nie ma okna.
 
 ### <a name="remarks"></a>Uwagi
 
-Kiedy używasz metody [CMFCPopupMenu::Create](#create) Aby utworzyć menu rozwijane, należy określić, w jakim oknie odbiera komunikaty menu.
+W przypadku korzystania z metody [CMFCPopupMenu:: Create](#create) w celu utworzenia menu podręcznego należy określić, które okno otrzymuje komunikaty menu.
 
-##  <a name="getparentarea"></a>  CMFCPopupMenu::GetParentArea
+##  <a name="getparentarea"></a>CMFCPopupMenu:: GetParentArea
 
 ```
 virtual CWnd* GetParentArea(CRect& rectParentBtn);
@@ -754,13 +754,13 @@ virtual CWnd* GetParentArea(CRect& rectParentBtn);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *rectParentBtn*<br/>
+podczas *rectParentBtn*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getparentbutton"></a>  CMFCPopupMenu::GetParentButton
+##  <a name="getparentbutton"></a>CMFCPopupMenu:: GetParentButton
 
 Zwraca wskaźnik do nadrzędnego przycisku paska narzędzi.
 
@@ -770,17 +770,17 @@ CMFCToolBarMenuButton* GetParentButton() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do nadrzędnego przycisku paska narzędzi. Wartość NULL, jeśli w menu podręcznym ma przycisk paska narzędzi nie nadrzędnej.
+Wskaźnik do nadrzędnego przycisku paska narzędzi. Wartość NULL, jeśli menu podręczne nie ma przycisku nadrzędnego paska narzędzi.
 
 ### <a name="remarks"></a>Uwagi
 
-Element `CMFCPopupMenu` może być skojarzony z przycisku menu. W tym scenariuszu gdy użytkownik wybierze przycisk na pasku narzędzi nadrzędnego pojawi się podręczne menu.
+`CMFCPopupMenu` Można skojarzyć z przyciskiem w menu. W tym scenariuszu menu podręczne pojawia się, gdy użytkownik wybierze przycisk nadrzędny pasek narzędzi.
 
-Jeśli menu podręcznym menu skrótów, będzie miał nie nadrzędnego przycisku paska narzędzi.
+Jeśli menu podręczne jest menu skrótów, nie będzie ono miało przycisku nadrzędnego paska narzędzi.
 
-##  <a name="getparentpopupmenu"></a>  CMFCPopupMenu::GetParentPopupMenu
+##  <a name="getparentpopupmenu"></a>CMFCPopupMenu:: GetParentPopupMenu
 
-Zwraca wskaźnik do menu podręcznego nadrzędnej.
+Zwraca wskaźnik do menu rozwijanego nadrzędnego.
 
 ```
 CMFCPopupMenu* GetParentPopupMenu() const;
@@ -788,13 +788,13 @@ CMFCPopupMenu* GetParentPopupMenu() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do elementu nadrzędnego `CMFCPopupMenu` obiektu; Wartość NULL, jeśli nie nadrzędnego menu podręcznego.
+Wskaźnik do obiektu nadrzędnego `CMFCPopupMenu` ; Wartość NULL, jeśli nie ma nadrzędnego menu podręcznego.
 
 ### <a name="remarks"></a>Uwagi
 
-Menu rozwijane ma element nadrzędny `CMFCPopupMenu` obiektu tylko, jeśli jest podmenu.
+Menu podręczne ma obiekt nadrzędny `CMFCPopupMenu` tylko wtedy, gdy jest podmenu.
 
-##  <a name="getparentribbonelement"></a>  CMFCPopupMenu::GetParentRibbonElement
+##  <a name="getparentribbonelement"></a>CMFCPopupMenu:: GetParentRibbonElement
 
 ```
 CMFCRibbonBaseElement* GetParentRibbonElement() const;
@@ -804,9 +804,9 @@ CMFCRibbonBaseElement* GetParentRibbonElement() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getparenttoolbar"></a>  CMFCPopupMenu::GetParentToolBar
+##  <a name="getparenttoolbar"></a>CMFCPopupMenu:: GetParentToolBar
 
-Zwraca wskaźnik do paska narzędzi nadrzędnej.
+Zwraca wskaźnik do nadrzędnego paska narzędzi.
 
 ```
 CMFCToolBar* GetParentToolBar() const;
@@ -814,13 +814,13 @@ CMFCToolBar* GetParentToolBar() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do paska narzędzi nadrzędnej. Wartość NULL, jeśli z menu podręcznego nie ma żadnych narzędzi nadrzędnej.
+Wskaźnik do nadrzędnego paska narzędzi. Wartość NULL, jeśli menu podręczne nie ma nadrzędnego paska narzędzi.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli `CMFCPopupMenu` jest menu skrótów, wówczas nie nadrzędne paska narzędzi.
+`CMFCPopupMenu` Jeśli jest menu skrótów, nie ma on nadrzędnego paska narzędzi.
 
-##  <a name="getquickcustomizetype"></a>  CMFCPopupMenu::GetQuickCustomizeType
+##  <a name="getquickcustomizetype"></a>CMFCPopupMenu:: GetQuickCustomizeType
 
 ```
 QUICK_CUSTOMIZE_TYPE GetQuickCustomizeType() const;
@@ -830,9 +830,9 @@ QUICK_CUSTOMIZE_TYPE GetQuickCustomizeType() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getselitem"></a>  CMFCPopupMenu::GetSelItem
+##  <a name="getselitem"></a>CMFCPopupMenu:: GetSelItem
 
-Zwraca wskaźnik do polecenia menu zaznaczony.
+Zwraca wskaźnik do aktualnie wybranego polecenia menu.
 
 ```
 CMFCToolBarMenuButton* GetSelItem();
@@ -840,13 +840,13 @@ CMFCToolBarMenuButton* GetSelItem();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do aktualnie wybranego polecenie; Wartość NULL, jeśli nie wybrano elementu.
+Wskaźnik do aktualnie wybranego polecenia menu; Wartość NULL, jeśli nie wybrano żadnego elementu.
 
 ### <a name="remarks"></a>Uwagi
 
-Polecenia menu w menu podręcznym są reprezentowane przez [klasa CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md), lub klasą pochodną `CMFCToolBarMenuButton`.
+Polecenia menu w menu podręcznym są reprezentowane przez [klasę CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md)lub klasę pochodną `CMFCToolBarMenuButton`.
 
-##  <a name="hasbeenresized"></a>  CMFCPopupMenu::HasBeenResized
+##  <a name="hasbeenresized"></a>CMFCPopupMenu:: HasBeenResized
 
 ```
 BOOL HasBeenResized() const;
@@ -856,9 +856,9 @@ BOOL HasBeenResized() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="hiderarelyusedcommands"></a>  CMFCPopupMenu::HideRarelyUsedCommands
+##  <a name="hiderarelyusedcommands"></a>CMFCPopupMenu:: HideRarelyUsedCommands
 
-Wskazuje, czy w menu podręcznym można ukryć rzadko używanych poleceń.
+Wskazuje, czy menu rozwijane może ukrywać rzadko używane polecenia.
 
 ```
 BOOL HideRarelyUsedCommands() const;
@@ -866,13 +866,13 @@ BOOL HideRarelyUsedCommands() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli w menu podręcznym można ukryć rzadko używanych poleceń; w przeciwnym razie wartość FALSE.
+Wartość TRUE, jeśli menu rozwijane może ukrywać rzadko używane polecenia; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda określa, że tylko, czy w menu podręcznym można ukryć rzadko używane polecenia, nie wtedy, gdy jest włączona w tej konfiguracji. Menu podręcznym można ukryć rzadko używanych poleceń, jeśli ma przycisk nadrzędną, a okno nadrzędne jest tworzony na podstawie [klasa CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md). Użyj [CMFCMenuBar::SetRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#setrecentlyusedmenus) Aby włączyć tę funkcję i [CMFCMenuBar::IsRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#isrecentlyusedmenus) ustalenie, jeśli ta funkcja jest obecnie włączona. Obie te metody należy wywołać dla okna nadrzędnego.
+Ta metoda określa tylko, czy menu rozwijane może ukrywać rzadko używane polecenia, nie jeśli taka konfiguracja jest włączona. Menu rozwijane może ukrywać rzadko używane polecenia, jeśli ma przycisk nadrzędny, a okno nadrzędne pochodzi od [klasy CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md). Użyj [CMFCMenuBar:: SetRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#setrecentlyusedmenus) , aby włączyć tę funkcję i [CMFCMenuBar:: IsRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#isrecentlyusedmenus) , aby określić, czy ta funkcja jest obecnie włączona. Należy wywołać obie te metody dla okna nadrzędnego.
 
-##  <a name="incommand"></a>  CMFCPopupMenu::InCommand
+##  <a name="incommand"></a>CMFCPopupMenu:: incommand
 
 ```
 virtual BOOL InCommand();
@@ -882,7 +882,7 @@ virtual BOOL InCommand();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="insertitem"></a>  CMFCPopupMenu::InsertItem
+##  <a name="insertitem"></a>CMFCPopupMenu:: InsertItem
 
 Wstawia nowy element do menu podręcznego w określonej lokalizacji.
 
@@ -895,22 +895,22 @@ int InsertItem(
 ### <a name="parameters"></a>Parametry
 
 *button*<br/>
-[in] Odwołanie do elementu menu, aby dodać.
+podczas Odwołanie do elementu menu do dodania.
 
 *iInsertAt*<br/>
-[in] Liczony od zera indeks dla nowego elementu. Jeśli *iInsertAt* wynosi -1, element jest dodawany na końcu elementu menu.
+podczas Indeks (liczony od zera) dla nowego elementu. Jeśli *iInsertAt* ma wartość-1, element zostanie dodany na końcu menu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczony od zera indeks pozycji, gdzie został wstawiony element. -1, jeśli metoda nie powiedzie się.
+Indeks (liczony od zera) miejsca, w którym wstawiono element. -1, jeśli metoda zakończy się niepowodzeniem.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda zakończy się niepowodzeniem, jeśli podano nieprawidłową wartość dla *iInsertAt*, takie jak liczba całkowita większa niż liczba elementów, które obecnie z menu podręcznego.
+Ta metoda zakończy się niepowodzeniem, jeśli podano nieprawidłową wartość dla *iInsertAt*, na przykład liczbę całkowitą większą niż liczba elementów w menu podręcznym.
 
-##  <a name="insertseparator"></a>  CMFCPopupMenu::InsertSeparator
+##  <a name="insertseparator"></a>CMFCPopupMenu:: InsertSeparator
 
-Wstawia separatorem w menu podręcznym w określonej lokalizacji.
+Wstawia separator do menu podręcznego w określonej lokalizacji.
 
 ```
 int InsertSeparator(int iInsertAt = -1);
@@ -919,19 +919,19 @@ int InsertSeparator(int iInsertAt = -1);
 ### <a name="parameters"></a>Parametry
 
 *iInsertAt*<br/>
-[in] Liczony od zera indeks sytuację, w której ta metoda powoduje wstawienie separatora.
+podczas Indeks (liczony od zera) pozycji, w której ta metoda będzie wstawiać separator.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczony od zera indeks pozycji, gdzie został wstawiony separatora. -1, jeśli ta metoda nie powiedzie się.
+Indeks (liczony od zera) miejsca, w którym został wstawiony separator. -1, jeśli ta metoda nie powiedzie się.
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość -1 dla *iInsertAt* oznacza, że ta metoda doda separatora na końcu elementu menu podręcznego.
+Wartość-1 dla *iInsertAt* oznacza, że ta metoda doda separator do końca menu podręcznego.
 
 Ta metoda kończy się niepowodzeniem, jeśli *iInsertAt* jest nieprawidłową wartością.
 
-##  <a name="isalwaysclose"></a>  CMFCPopupMenu::IsAlwaysClose
+##  <a name="isalwaysclose"></a>CMFCPopupMenu:: IsAlwaysClose
 
 ```
 virtual BOOL IsAlwaysClose() const;
@@ -941,7 +941,7 @@ virtual BOOL IsAlwaysClose() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isalwaysshowemptytoolsentry"></a>  CMFCPopupMenu::IsAlwaysShowEmptyToolsEntry
+##  <a name="isalwaysshowemptytoolsentry"></a>CMFCPopupMenu:: IsAlwaysShowEmptyToolsEntry
 
 ```
 static BOOL __stdcall IsAlwaysShowEmptyToolsEntry();
@@ -951,9 +951,9 @@ static BOOL __stdcall IsAlwaysShowEmptyToolsEntry();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="iscustomizepane"></a>  CMFCPopupMenu::IsCustomizePane
+##  <a name="iscustomizepane"></a>CMFCPopupMenu:: IsCustomizePane
 
-Wskazuje, czy menu podręcznego nie działa jako **QuickCustomizePane**.
+Wskazuje, czy menu podręczne działa jako **QuickCustomizePane**.
 
 ```
 BOOL IsCustomizePane();
@@ -961,15 +961,15 @@ BOOL IsCustomizePane();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli jest w oknie podręcznym **QuckCustomizePane**; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli wyskakujące okienko jest **QuckCustomizePane**; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj **QuickCustomizePane** umożliwiające użytkownikowi bezpośrednio Dostosowywanie menu podręcznego. **QuickCustomizePane** jest `CMFCPopupMenu` , jest wyświetlany, gdy użytkownik kliknie przycisk paska narzędzi do bezpośredniej edycji.
+Użyj **QuickCustomizePane** , aby umożliwić użytkownikowi bezpośrednie Dostosowywanie menu podręcznego. **QuickCustomizePane** jest `CMFCPopupMenu` wyświetlany, gdy użytkownik kliknie przycisk paska narzędzi, aby edytować go bezpośrednio.
 
-Aplikacja powinna wywołać tę metodę podczas [CMDIFrameWndEx::OnShowCustomizePane](../../mfc/reference/cmdiframewndex-class.md#onshowcustomizepane).
+Aplikacja powinna wywołać tę metodę w trakcie [CMDIFrameWndEx:: OnShowCustomizePane](../../mfc/reference/cmdiframewndex-class.md#onshowcustomizepane).
 
-##  <a name="isescclose"></a>  CMFCPopupMenu::IsEscClose
+##  <a name="isescclose"></a>CMFCPopupMenu:: IsEscClose
 
 ```
 BOOL IsEscClose();
@@ -979,9 +979,9 @@ BOOL IsEscClose();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isidle"></a>  CMFCPopupMenu::IsIdle
+##  <a name="isidle"></a>CMFCPopupMenu:: IsIdle
 
-Wskazuje, czy menu podręczne jest obecnie w stanie bezczynności.
+Wskazuje, czy menu podręczne jest aktualnie bezczynne.
 
 ```
 virtual BOOL IsIdle() const;
@@ -989,13 +989,13 @@ virtual BOOL IsIdle() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli menu podręczne jest w trybie bezczynności w przeciwnym razie wartość FALSE.
+Wartość TRUE, jeśli menu podręczne jest w trybie bezczynności; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie menu rozwijane jest w trybie bezczynności Jeśli wyświetlana animacja została ukończona, a użytkownik nie jest przewijanie w menu podręcznym.
+Domyślnie menu podręczne jest w trybie bezczynności, jeśli animacja wyświetlania zostanie zakończona, a użytkownik nie Przewija menu podręcznego.
 
-##  <a name="ismenusound"></a>  CMFCPopupMenu::IsMenuSound
+##  <a name="ismenusound"></a>CMFCPopupMenu:: IsMenuSound
 
 ```
 static UINT __stdcall IsMenuSound();
@@ -1005,9 +1005,9 @@ static UINT __stdcall IsMenuSound();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isquickcustomize"></a>  CMFCPopupMenu::IsQuickCustomize
+##  <a name="isquickcustomize"></a>CMFCPopupMenu:: IsQuickCustomize
 
-Określa, czy skojarzony [klasa CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) jest w trybie QuickCustomize.
+Określa, czy skojarzona [Klasa CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) jest w trybie QuickCustomize.
 
 ```
 BOOL IsQuickCustomize();
@@ -1015,13 +1015,13 @@ BOOL IsQuickCustomize();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli przycisk menu skojarzone jest w trybie QuickCustomize; w przeciwnym razie wartość FALSE. Ta metoda również zwraca wartość FALSE, jeśli nie jest skojarzony z menu podręcznego `CMFCToolBarMenuButton`.
+Ma wartość TRUE, jeśli skojarzony przycisk menu jest w trybie QuickCustomize; w przeciwnym razie FALSE. Ta metoda zwróci również wartość FALSE, jeśli menu podręczne nie jest skojarzone z `CMFCToolBarMenuButton`.
 
 ### <a name="remarks"></a>Uwagi
 
-W QuickCustomize tryb użytkownik wybiera przycisk na pasku narzędzi, aby bezpośrednio Dostosowywanie przycisku.
+W trybie QuickCustomize użytkownik wybiera przycisk na pasku narzędzi, aby dostosować przycisk bezpośrednio.
 
-##  <a name="isresizeble"></a>  CMFCPopupMenu::IsResizeble
+##  <a name="isresizeble"></a>CMFCPopupMenu:: IsResizeble
 
 ```
 BOOL IsResizeble() const;
@@ -1031,9 +1031,9 @@ BOOL IsResizeble() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isrightalign"></a>  CMFCPopupMenu::IsRightAlign
+##  <a name="isrightalign"></a>CMFCPopupMenu:: IsRightAlign
 
-Wskazuje, czy menu jest wyrównany do prawej czy wyrównane do lewej.
+Wskazuje, czy menu jest wyrównane do prawej czy wyrównane do lewej.
 
 ```
 BOOL IsRightAlign() const;
@@ -1041,15 +1041,15 @@ BOOL IsRightAlign() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli menu jest wyrównany do prawej; Wartość FALSE, jeśli menu wyrównane do lewej.
+PRAWDA, jeśli menu jest wyrównane do prawej; FAŁSZ, jeśli menu jest wyrównane do lewej.
 
 ### <a name="remarks"></a>Uwagi
 
-Możesz użyć [CMFCPopupMenu::SetRightAlign](#setrightalign) można ustawić wyrównanie menu. Domyślnie wyskakujących menu Użyj wyrównanie po lewej stronie.
+Aby ustawić wyrównanie menu, można użyć [CMFCPopupMenu:: SetRightAlign](#setrightalign) . Domyślnie wyskakujące menu używają wyrównania do lewej.
 
-Wyrównanie menu nie jest ustawienie globalne i może wynosić od wyskakujących menu.
+Wyrównanie menu nie jest ustawieniem globalnym i może się różnić między menu wyskakujące.
 
-##  <a name="isscrollable"></a>  CMFCPopupMenu::IsScrollable
+##  <a name="isscrollable"></a>CMFCPopupMenu:: isscrolled
 
 ```
 BOOL IsScrollable() const;
@@ -1059,9 +1059,9 @@ BOOL IsScrollable() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="issendmenuselectmsg"></a>  CMFCPopupMenu::IsSendMenuSelectMsg
+##  <a name="issendmenuselectmsg"></a>CMFCPopupMenu:: IsSendMenuSelectMsg
 
-Wskazuje, czy ramach powiadamia nadrzędnej ramki, gdy użytkownik wybierze polecenie w menu podręcznym.
+Wskazuje, czy struktura powiadamia ramkę nadrzędną, gdy użytkownik wybierze polecenie z menu podręcznego.
 
 ```
 static BOOL IsSendMenuSelectMsg();
@@ -1069,15 +1069,15 @@ static BOOL IsSendMenuSelectMsg();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli w ramach powiadamia nadrzędnej ramki; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli struktura powiadamia ramkę nadrzędną; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura powiadamia nadrzędnej ramki, wysyłając wiadomość WM_MENUSELECT po używane z wybraniu polecenia menu.
+Struktura powiadamia ramkę nadrzędną, wysyłając do niej komunikat WM_MENUSELECT, gdy zostanie użyta wybrana polecenie menu.
 
-##  <a name="isshown"></a>  CMFCPopupMenu::IsShown
+##  <a name="isshown"></a>CMFCPopupMenu:: ispokazywany
 
-Wskazuje, czy menu podręczne jest aktualnie widoczne.
+Wskazuje, czy menu podręczne jest obecnie widoczne.
 
 ```
 BOOL IsShown() const;
@@ -1085,9 +1085,9 @@ BOOL IsShown() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli menu podręczne jest widoczny; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli menu podręczne jest widoczne; w przeciwnym razie FALSE.
 
-##  <a name="moveto"></a>  CMFCPopupMenu::MoveTo
+##  <a name="moveto"></a>CMFCPopupMenu:: MoveTo
 
 ```
 void MoveTo(const CPoint& pt);
@@ -1095,11 +1095,11 @@ void MoveTo(const CPoint& pt);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *(czas pacyficzny)*<br/>
+podczas *pt*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onchangehot"></a>  CMFCPopupMenu::OnChangeHot
+##  <a name="onchangehot"></a>CMFCPopupMenu:: OnChangeHot
 
 ```
 virtual void OnChangeHot(int nHot);
@@ -1107,11 +1107,11 @@ virtual void OnChangeHot(int nHot);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nHot*<br/>
+podczas *nHot*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onchooseitem"></a>  CMFCPopupMenu::OnChooseItem
+##  <a name="onchooseitem"></a>CMFCPopupMenu:: OnChooseItem
 
 ```
 virtual void OnChooseItem(UINT uidCmdID);
@@ -1119,11 +1119,11 @@ virtual void OnChooseItem(UINT uidCmdID);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *uidCmdID*<br/>
+podczas *uidCmdID*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="oncmdmsg"></a>  CMFCPopupMenu::OnCmdMsg
+##  <a name="oncmdmsg"></a>CMFCPopupMenu:: OnCmdMsg
 
 ```
 virtual BOOL OnCmdMsg(
@@ -1135,16 +1135,16 @@ virtual BOOL OnCmdMsg(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nID*<br/>
-[in] *nCode*<br/>
-[in] *pExtra*<br/>
-[in] *pHandlerInfo*<br/>
+podczas *NID*<br/>
+podczas *nCode*<br/>
+podczas *pExtra*<br/>
+podczas *pHandlerInfo*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="postcommand"></a>  CMFCPopupMenu::PostCommand
+##  <a name="postcommand"></a>CMFCPopupMenu::P ostCommand
 
 ```
 BOOL PostCommand(UINT uiCommandID);
@@ -1152,13 +1152,13 @@ BOOL PostCommand(UINT uiCommandID);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *uiCommandID*<br/>
+podczas *uiCommandID*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="pretranslatemessage"></a>  CMFCPopupMenu::PreTranslateMessage
+##  <a name="pretranslatemessage"></a>CMFCPopupMenu::P reTranslateMessage
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1166,13 +1166,13 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pMsg*<br/>
+podczas *pMsg*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="recalclayout"></a>  CMFCPopupMenu::RecalcLayout
+##  <a name="recalclayout"></a>CMFCPopupMenu:: RecalcLayout
 
 ```
 virtual void RecalcLayout(BOOL bNotify = TRUE);
@@ -1180,19 +1180,19 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bNotify*<br/>
+podczas *bNotify*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="removeallitems"></a>  CMFCPopupMenu::RemoveAllItems
+##  <a name="removeallitems"></a>CMFCPopupMenu:: RemoveAllItems
 
-Usuwa wszystkie elementy z menu podręcznego.
+Czyści wszystkie elementy z menu podręcznego.
 
 ```
 void RemoveAllItems();
 ```
 
-##  <a name="removeitem"></a>  CMFCPopupMenu::RemoveItem
+##  <a name="removeitem"></a>CMFCPopupMenu:: RemoveItem
 
 Usuwa określony element z menu podręcznego.
 
@@ -1203,17 +1203,17 @@ BOOL RemoveItem(int iIndex);
 ### <a name="parameters"></a>Parametry
 
 *iIndex*<br/>
-[in] Liczony od zera indeks elementu do usunięcia.
+podczas Indeks (liczony od zera) elementu do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli metoda się powiedzie; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli metoda zakończy się pomyślnie. w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda automatycznie rozmieszcza żadnych separatorów, których dotyczy przez operację usunięcia elementu. Aby uzyskać więcej informacji na temat jak Reorganizuje separatorów w ramach zobacz [CMFCToolBar::RemoveButton](../../mfc/reference/cmfctoolbar-class.md#removebutton).
+Ta metoda automatycznie Rozmieszcza wszystkie separatory, na które ma wpływ usunięcie elementu. Aby uzyskać więcej informacji o tym, jak struktura zmienia rozmieszczenie separatorów, zobacz [CMFCToolBar:: RemoveButton](../../mfc/reference/cmfctoolbar-class.md#removebutton).
 
-##  <a name="savestate"></a>  CMFCPopupMenu::SaveState
+##  <a name="savestate"></a>CMFCPopupMenu:: SaveState
 
 ```
 virtual void SaveState();
@@ -1221,9 +1221,9 @@ virtual void SaveState();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setanimationspeed"></a>  CMFCPopupMenu::SetAnimationSpeed
+##  <a name="setanimationspeed"></a>CMFCPopupMenu:: SetAnimationSpeed
 
-Ustawia szybkość animacji w menu podręcznym.
+Ustawia szybkość animacji dla menu podręcznych.
 
 ```
 static void SetAnimationSpeed(UINT nElapse);
@@ -1232,17 +1232,17 @@ static void SetAnimationSpeed(UINT nElapse);
 ### <a name="parameters"></a>Parametry
 
 *nElapse*<br/>
-[in] Nowe szybkość animacji, w milisekundach.
+podczas Nowa szybkość animacji (w milisekundach).
 
 ### <a name="remarks"></a>Uwagi
 
-Szybkość animacji jest wartością globalny i ma wpływ na wszystkie wyskakujących menu w aplikacji. Ta wartość określa, jak długo trwa podczas tworzenia animacji wyskakujące menu zakończyć.
+Szybkość animacji jest wartością globalną i ma wpływ na wszystkie menu podręczne w aplikacji. Ta wartość określa, jak długo trwa dla animacji menu podręcznego.
 
-Domyślnie ten parametr jest równa 30 milisekund. Zakres prawidłowych wartości dla *nElapse* jest z zakresu od 0 do 200.
+Domyślnie ten parametr jest ustawiony na 30 milisekund. Zakres prawidłowych wartości dla *nElapse* ma wartość od 0 do 200.
 
-##  <a name="setanimationtype"></a>  CMFCPopupMenu::SetAnimationType
+##  <a name="setanimationtype"></a>CMFCPopupMenu:: SetAnimationType
 
-Ustawia typ animacji do tego menu podręcznego.
+Ustawia typ animacji dla tego menu podręcznego.
 
 ```
 static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
@@ -1251,13 +1251,13 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ### <a name="parameters"></a>Parametry
 
 *type*<br/>
-[in] Typ wyliczany danych, który określa typ animacji.
+podczas Typ danych wyliczanych, który określa typ animacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [CMFCPopupMenu::GetAnimationType](#getanimationtype) listę prawidłowych wartości dla *typu*.
+Aby uzyskać listę prawidłowych wartości dla *typu*, zobacz [CMFCPopupMenu::](#getanimationtype) getanimationtype.
 
-##  <a name="setautodestroy"></a>  CMFCPopupMenu::SetAutoDestroy
+##  <a name="setautodestroy"></a>CMFCPopupMenu:: SetAutoDestroy
 
 ```
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
@@ -1265,13 +1265,13 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bAutoDestroy*<br/>
+podczas *bAutoDestroy*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setdefaultitem"></a>  CMFCPopupMenu::SetDefaultItem
+##  <a name="setdefaultitem"></a>CMFCPopupMenu:: SetDefaultItem
 
-Ustawia domyślnego polecenia menu podręcznego.
+Ustawia domyślne polecenie dla menu podręcznego.
 
 ```
 void SetDefaultItem(UINT uiCmd);
@@ -1280,15 +1280,15 @@ void SetDefaultItem(UINT uiCmd);
 ### <a name="parameters"></a>Parametry
 
 *uiCmd*<br/>
-[in] Identyfikator polecenia menu Nowy domyślnego polecenia.
+podczas Identyfikator polecenia menu nowego polecenia domyślnego.
 
 ### <a name="remarks"></a>Uwagi
 
-Polecenie domyślne, w menu podręcznym to polecenie, które zostaje wybrany, gdy pojawi się podręczne menu.
+Polecenie domyślne w menu podręcznym jest poleceniem wybranym podczas wyświetlania menu podręcznego.
 
-##  <a name="setforcemenufocus"></a>  CMFCPopupMenu::SetForceMenuFocus
+##  <a name="setforcemenufocus"></a>CMFCPopupMenu:: SetForceMenuFocus
 
-Wymusza fokus wprowadzania, aby wrócić do menu pasek po menu podręczne jest wyświetlany.
+Wymusza powrót fokusu wejścia do paska menu po wyświetleniu menu podręcznego.
 
 ```
 static void SetForceMenuFocus(BOOL bValue);
@@ -1296,16 +1296,16 @@ static void SetForceMenuFocus(BOOL bValue);
 
 ### <a name="parameters"></a>Parametry
 
-*bDane wartości*<br/>
-[in] Wartość TRUE jeśli chcesz, aby platformę, aby wymusić fokus wprowadzania na pasku menu, gdy menu podręczne jest wyświetlany. Wartość FALSE, jeśli chcesz, aby wyskakujących menu, aby utrzymać fokus.
+*bValue*<br/>
+podczas Ma wartość TRUE, jeśli chcesz, aby struktura wymusił fokus wprowadzania na pasku menu po wyświetleniu menu podręcznego. Wartość FALSE, jeśli chcesz, aby menu podręczne zachowywać fokus.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda ustawia flagę, która jest globalne dla wszystkich menu podręczne w aplikacji. Ta funkcja nie jest włączona domyślnie.
+Ta metoda ustawia flagę globalną dla wszystkich menu podręcznych w aplikacji. Domyślnie ta funkcja nie jest włączona.
 
-##  <a name="setforceshadow"></a>  CMFCPopupMenu::SetForceShadow
+##  <a name="setforceshadow"></a>CMFCPopupMenu:: SetForceShadow
 
-Wymusza platformę, by narysować cieni menu, gdy menu podręczne pojawiają się poza głównej ramki.
+Wymusza na platformie rysowanie cieni menu, gdy menu podręczne pojawia się poza ramką główną.
 
 ```
 static void SetForceShadow(BOOL bValue);
@@ -1313,16 +1313,16 @@ static void SetForceShadow(BOOL bValue);
 
 ### <a name="parameters"></a>Parametry
 
-*bDane wartości*<br/>
-[in] Wartość TRUE, jeśli chcesz, aby platformę, by narysować cieni menu FALSE w przeciwnym razie.
+*bValue*<br/>
+podczas Ma wartość TRUE, jeśli chcesz, aby struktura mogła rysować cienie menu, w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli chcesz wywołać tę metodę, ustawia flagę globalną w aplikacji. Ta flaga ma wpływ na wszystkie wyskakujących menu w aplikacji.
+Po wywołaniu tej metody ustawia ona flagę globalną w aplikacji. Ta flaga ma wpływ na wszystkie menu podręczne w aplikacji.
 
-##  <a name="setmaxwidth"></a>  CMFCPopupMenu::SetMaxWidth
+##  <a name="setmaxwidth"></a>CMFCPopupMenu:: SetMaxWidth
 
-Ustaw maksymalną szerokość wyskakujących menu.
+Ustaw maksymalną szerokość menu podręcznego.
 
 ```
 void SetMaxWidth(int iMaxWidth);
@@ -1331,13 +1331,13 @@ void SetMaxWidth(int iMaxWidth);
 ### <a name="parameters"></a>Parametry
 
 *iMaxWidth*<br/>
-[in] Maksymalna szerokość wyskakujące menu, w pikselach.
+podczas Maksymalna szerokość menu podręcznego (w pikselach).
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli tekst skojarzony z polecenia menu nie zmieści się w maksymalną szerokość, zostanie obcięta i części, który nie mieści się zostaje zastąpiona przez trzy kropki.
+Jeśli tekst skojarzony z poleceniem menu nie mieści się w maksymalnej szerokości, zostanie obcięty i część, która nie pasuje, zostanie zastąpiona przez trzy kropki.
 
-##  <a name="setmessagewnd"></a>  CMFCPopupMenu::SetMessageWnd
+##  <a name="setmessagewnd"></a>CMFCPopupMenu:: SetMessageWnd
 
 ```
 void SetMessageWnd(CWnd* pMsgWnd);
@@ -1345,11 +1345,11 @@ void SetMessageWnd(CWnd* pMsgWnd);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pMsgWnd*<br/>
+podczas *pMsgWnd*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setparentribbonelement"></a>  CMFCPopupMenu::SetParentRibbonElement
+##  <a name="setparentribbonelement"></a>CMFCPopupMenu:: SetParentRibbonElement
 
 ```
 void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
@@ -1357,11 +1357,11 @@ void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pElem*<br/>
+podczas *pElem*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setquickcustomizetype"></a>  CMFCPopupMenu::SetQuickCustomizeType
+##  <a name="setquickcustomizetype"></a>CMFCPopupMenu:: SetQuickCustomizeType
 
 ```
 void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
@@ -1369,11 +1369,11 @@ void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *Typu*<br/>
+podczas *Typ*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setquickmode"></a>  CMFCPopupMenu::SetQuickMode
+##  <a name="setquickmode"></a>CMFCPopupMenu:: setquickmode
 
 ```
 void SetQuickMode();
@@ -1381,9 +1381,9 @@ void SetQuickMode();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setrightalign"></a>  CMFCPopupMenu::SetRightAlign
+##  <a name="setrightalign"></a>CMFCPopupMenu:: SetRightAlign
 
-Ustawia wyrównanie menu wyskakujących menu.
+Ustawia wyrównanie menu dla menu podręcznych.
 
 ```
 void SetRightAlign(BOOL bRightAlign = TRUE);
@@ -1392,15 +1392,15 @@ void SetRightAlign(BOOL bRightAlign = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bRightAlign*<br/>
-[in] Wartość logiczna wskazującą wyrównanie menu. Wartość TRUE wskazuje, wyrównanie do prawej, wartość FALSE wskazuje, wyrównanie do lewej.
+podczas Wartość logiczna wskazująca wyrównanie menu. Wartość TRUE oznacza wyrównanie do prawej, FAŁSZ oznacza wyrównanie do lewej.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie wszystkie wyskakujących menu są wyrównane do lewej.
+Domyślnie wszystkie menu podręczne są wyrównane do lewej.
 
-##  <a name="setsendmenuselectmsg"></a>  CMFCPopupMenu::SetSendMenuSelectMsg
+##  <a name="setsendmenuselectmsg"></a>CMFCPopupMenu:: SetSendMenuSelectMsg
 
-Ustawia flagę, która kontroluje, czy menu podręcznym powiadamia jej nadrzędnej ramki, gdy użytkownik wybierze polecenie.
+Ustawia flagę, która kontroluje, czy menu podręczne powiadamia jego ramkę nadrzędną, gdy użytkownik wybierze polecenie.
 
 ```
 static void SetSendMenuSelectMsg(BOOL bSet = TRUE);
@@ -1408,16 +1408,16 @@ static void SetSendMenuSelectMsg(BOOL bSet = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bUstawienie*<br/>
-[in] Wartość TRUE, jeśli w menu podręcznym powiadamia nadrzędnej ramki, wartość FALSE w przeciwnym razie.
+*bSet*<br/>
+podczas PRAWDA, jeśli menu podręczne powiadamia jego ramkę nadrzędną, w przeciwnym razie zwraca wartość FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Jest to globalne rozwiązanie dla wyskakujących menu w aplikacji. Jeśli jest włączone, wyskakujących menu wyśle wiadomość WM_MENUSELECT do ramki nadrzędnej, gdy użytkownik wybierze polecenie.
+Jest to opcja globalna dla wszystkich menu podręcznych w aplikacji. Jeśli jest włączona, menu podręczne wyślą komunikat WM_MENUSELECT do ramki nadrzędnej, gdy użytkownik wybierze polecenie.
 
-##  <a name="showallcommands"></a>  CMFCPopupMenu::ShowAllCommands
+##  <a name="showallcommands"></a>CMFCPopupMenu:: ShowAllCommands
 
-Wymusza wyskakujących menu, aby wyświetlić wszystkie polecenia.
+Wymusza wyskakujące menu, aby wyświetlić wszystkie polecenia.
 
 ```
 void ShowAllCommands();
@@ -1425,9 +1425,9 @@ void ShowAllCommands();
 
 ### <a name="remarks"></a>Uwagi
 
-To jest ustawienie globalne i dotyczy tylko bieżącego menu podręcznego.
+To nie jest ustawienie globalne i dotyczy tylko bieżącego menu podręcznego.
 
-##  <a name="triggerresize"></a>  CMFCPopupMenu::TriggerResize
+##  <a name="triggerresize"></a>CMFCPopupMenu:: TriggerResize
 
 ```
 void TriggerResize();
@@ -1435,9 +1435,9 @@ void TriggerResize();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="updateallshadows"></a>  CMFCPopupMenu::UpdateAllShadows
+##  <a name="updateallshadows"></a>CMFCPopupMenu:: UpdateAllShadows
 
-Aktualizuje cieni wszystkich otwarte menu podręcznego.
+Aktualizuje cienie dla wszystkich otwartych menu podręcznych.
 
 ```
 static void UpdateAllShadows(LPRECT lprectScreen = NULL);
@@ -1446,15 +1446,15 @@ static void UpdateAllShadows(LPRECT lprectScreen = NULL);
 ### <a name="parameters"></a>Parametry
 
 *lprectScreen*<br/>
-[in] Prostokąt, który określa region, aby zaktualizować, współrzędne ekranu.
+podczas Prostokąt określający region do zaktualizowania we współrzędnych ekranu.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest przydatna, gdy wyskakujących menu są wyświetlane nad animowany kontrolkę lub inne okna, które mają zawartość dynamiczną.
+Ta metoda jest przydatna podczas wyświetlania menu podręcznych w kontrolkach animowanych lub w innych oknach z zawartością dynamiczną.
 
-##  <a name="updateshadow"></a>  CMFCPopupMenu::UpdateShadow
+##  <a name="updateshadow"></a>CMFCPopupMenu:: UpdateShadow
 
-Aktualizacje w tle dla menu podręcznego.
+Aktualizuje cień dla menu podręcznego.
 
 ```
 void UpdateShadow(LPRECT lprectScreen = NULL);
@@ -1463,11 +1463,11 @@ void UpdateShadow(LPRECT lprectScreen = NULL);
 ### <a name="parameters"></a>Parametry
 
 *lprectScreen*<br/>
-[in] Prostokąt, we współrzędnych ekranu, który określa granice region, aby zaktualizować.
+podczas Prostokąt w obszarze Współrzędne ekranu, który określa granice regionu do zaktualizowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę, gdy menu podręczne, które ma cień nakłada animowany obraz.
+Wywołaj tę metodę, gdy menu podręczne, które ma cień nakłada się na animowany obraz.
 
 ## <a name="see-also"></a>Zobacz także
 

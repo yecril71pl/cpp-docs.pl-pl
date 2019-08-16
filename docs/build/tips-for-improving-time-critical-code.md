@@ -30,132 +30,132 @@ helpviewer_keywords:
 - _lfind function
 - heap allocation, time-critical code performance
 ms.assetid: 3e95a8cc-6239-48d1-9d6d-feb701eccb54
-ms.openlocfilehash: 97a9a54be1b322edfe8cfeca84e03f9a6766b8fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 828a0c49440b4fd2e1f3ae10514ffb86b2315ebd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314718"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498110"
 ---
 # <a name="tips-for-improving-time-critical-code"></a>Wskazówki dotyczące poprawiania kodu wrażliwego na czas
 
-Pisanie kodu szybkiego wymaga zrozumienia wszystkich aspektów aplikacji i sposób jej interakcji z systemu. W tym temacie sugeruje alternatywy dla niektórych bardziej oczywisty technik kodowania, które pomagają zagwarantować pomyślnie wykonać czas ma istotne znaczenie fragmenty kodu.
+Szybkie pisanie kodu wymaga poznania wszystkich aspektów aplikacji oraz sposobu, w jaki współdziała z systemem. W tym temacie przedstawiono alternatywy dla niektórych bardziej oczywistych technik kodowania, które ułatwiają zapewnienie, że krytyczne fragmenty kodu działają prawidłowo.
 
-Aby podsumować, poprawiania kodu wrażliwego na czas wymaga, aby użytkownik:
+Aby podsumować, poprawić kod krytyczny czasu wymaga:
 
-- Znać części programu, które muszą być szybko.
+- Sprawdź, które części programu muszą być szybkie.
 
-- Wiadomo, rozmiar i prędkość kodu.
+- Poznaj rozmiar i szybkość kodu.
 
-- Wiadomo, koszt nowych funkcji.
+- Poznaj koszt nowych funkcji.
 
-- Wiadomo, minimalna pracy wymaganej do wykonania zadania.
+- Zapoznaj się z minimalną ilością pracy wymaganej do wykonania zadania.
 
-Aby zebrać informacje na temat wydajności kodu, można użyć Monitora wydajności (perfmon.exe).
+Aby zebrać informacje o wydajności kodu, można użyć Monitora wydajności (Perfmon. exe).
 
 ## <a name="sections-in-this-article"></a>Sekcje w tym artykule
 
-- [Chybienia w pamięci podręcznej i błędów stron](#_core_cache_hits_and_page_faults)
+- [Chybienia w pamięci podręcznej i błędy stron](#_core_cache_hits_and_page_faults)
 
 - [Sortowanie i wyszukiwanie](#_core_sorting_and_searching)
 
-- [MFC i bibliotek klas](#_core_mfc_and_class_libraries)
+- [MFC i biblioteki klas](#_core_mfc_and_class_libraries)
 
 - [Biblioteki udostępnione](#vcovrsharedlibraries)
 
-- [Stert](#_core_heaps)
+- [Sterty](#_core_heaps)
 
 - [Wątki](#_core_threads)
 
-- [Rozmiar zestawu roboczego małych](#_core_small_working_set)
+- [Mały zestaw roboczy](#_core_small_working_set)
 
-##  <a name="_core_cache_hits_and_page_faults"></a> Chybienia w pamięci podręcznej i błędów stron
+##  <a name="_core_cache_hits_and_page_faults"></a>Chybienia w pamięci podręcznej i błędy stron
 
-Pominięte trafień w pamięci podręcznej, w obu wewnętrznych i zewnętrznych pamięci podręcznej, a także błędów strony (zgodnie z ruchem do magazynu pomocniczego dla danych i instrukcje programu) spowolnienie działania programu.
+Nieodebrane trafienia pamięci podręcznej, zarówno wewnętrzna, jak i zewnętrzna pamięć podręczna, a także błędy stron (przechodzenie do magazynu pomocniczego w celu uzyskania instrukcji i danych programu) spowalniają wydajność programu.
 
-Trafienie w pamięci podręcznej Procesora mogą kosztować program 10-20 cykli zegara. Trafienie w pamięci podręcznej zewnętrznych mogą kosztować cykle zegara 20 – 40. Błąd strony mogą kosztować cykle zegara jeden milion (zakładając, że procesora, który obsługuje 500 milionów instrukcje na sekundę i czas 2 milisekund błąd strony). Dlatego jest w najlepszym interesie wykonywania programu, aby napisać kod, który spowoduje zmniejszenie liczby trafień w pamięci podręcznej brakujących i błędów stron.
+Trafienie pamięci podręcznej procesora CPU może obsłużyć cykl zegara programu w programie 10-20. Trafienie zewnętrznej pamięci podręcznej może mieć koszt 20-40 cykli zegara. Błąd strony może mieć koszt 1 000 000 cykli zegara (przy założeniu, że procesor obsługuje 500 000 000 instrukcje/sekundę i czas 2 milisekundy dla błędu strony). W związku z tym najlepszym rozwiązaniem jest wykonanie programu w celu napisania kodu, który zmniejszy liczbę nieodebranych trafień pamięci podręcznej i błędów stron.
 
-Jednym z powodów powolne programów jest wykonać więcej błędów stron lub przeoczyć pamięci podręcznej częściej niż to konieczne. Aby tego uniknąć, należy używać struktury danych z dobrą miejscowości odwołania, co oznacza, że elementy powiązane ze sobą. Czasami struktury danych, która wygląda bardzo okaże się horrible ze względu na słabe miejscowość odwołania, a następnie czasem odwrotna ma wartość true. Poniżej przedstawiono dwa przykłady:
+Jedną z przyczyn wolnych programów jest to, że przestają one więcej błędów stron lub nie trafią pamięci podręcznej częściej niż to konieczne. Aby tego uniknąć, ważne jest używanie struktur danych z dobrą cechą referencyjną, co oznacza, że są one powiązane ze sobą. Czasami struktura danych, która wygląda doskonale, Horrible z powodu słabej lokalizacji odniesienia i czasami odwrócenia jest prawdziwa. Poniżej przedstawiono dwa przykłady:
 
-- Przydzielany dynamicznie połączonej listy może zmniejszyć wydajność programu, ponieważ podczas wyszukiwania elementu lub przechodzenie przez listę do końca, każde łącze pominięto można pamięci podręcznej pominąć lub spowodować błąd strony. Implementacja list, oparte na macierzach proste faktycznie może być znacznie szybciej ze względu na lepsze buforowania i mniej błędów stron nawet — zezwalanie na fakt, że tablicy byłoby trudniejsze rozwoju, nadal może być szybsze.
+- Dynamicznie przydzielane listy połączone mogą zmniejszyć wydajność programu, ponieważ podczas wyszukiwania elementu lub przechodzenia na listę na końcu każde pominięte łącze może pominąć pamięć podręczną lub spowodować błąd strony. Implementacja listy oparta na prostych tablicach może być rzeczywiście znacznie szybsza ze względu na lepszą buforowanie i mniejszą liczbę błędów stron, co pozwala na fakt, że rozmiar tablicy będzie trudniejszy do poszerzenia, wciąż może być szybszy.
 
-- Tabel skrótów, które używają przydzielany dynamicznie połączonej listy mogą obniżyć wydajność. Przy użyciu rozszerzenia, tabele zbędnych danych, korzystające z dynamicznie przydzielonego połączonej listy do przechowywania ich zawartość mogą wykonywać znacznie niższa. W rzeczywistości w ostatecznym rozrachunku prostego wyszukiwania liniowego tablicy może mieć w rzeczywistości szybciej (w zależności od sytuacji). Tabele na podstawie tablicy skrótów (tak zwane "zamknięte wyznaczania wartości skrótu") jest często pomijane wdrożenia, który często ma doskonałą wydajność.
+- Tabele skrótów korzystające z dynamicznie przyznanych list połączonych mogą obniżyć wydajność. Dzięki rozszerzeniu tabele skrótów korzystające z dynamicznie przydzielonej listy połączonej do przechowywania ich zawartości mogą działać znacząco gorsze. W rzeczywistości w ostatniej analizie proste wyszukiwanie liniowe za pomocą tablicy może być w praktyce szybsze (w zależności od okoliczności). Tablice skrótów oparte na tablicach (tak zwane "zamknięte mieszanie") to często powtarzające się implementacje, które często mają wyższą wydajność.
 
-##  <a name="_core_sorting_and_searching"></a> Sortowanie i wyszukiwanie
+##  <a name="_core_sorting_and_searching"></a>Sortowanie i wyszukiwanie
 
-Sortowanie jest natury dużo czasu w porównaniu do wielu typowych operacji. Najlepszym sposobem uniknięcia spowolnienia niepotrzebne jest uniknąć sortowania przez czas krytycznych. Może mieć możliwość:
+Sortowanie jest nieodłącznie czasochłonne w porównaniu z wieloma typowymi operacjami. Najlepszym sposobem uniknięcia niepotrzebnego spowolnienia jest uniknięcie sortowania w przypadku krytycznych czasów. Możliwe jest:
 
-- Odrocz sortowanie do czasu niekrytyczne — wydajność.
+- Odłóż sortowanie do czasu niekrytycznego dla wydajności.
 
-- Sortowanie danych w momencie wcześniej, niż newralgicznym dla wydajności.
+- Posortuj dane na wcześniejszym czas niekrytyczny dla wydajności.
 
-- Sortowanie tylko część danych, które naprawdę potrzebuje sortowania.
+- Sortuj tylko część danych, które naprawdę wymagają sortowania.
 
-Czasami możesz utworzyć listę w kolejności posortowanej. Ostrożność, ponieważ jeśli potrzebujesz wstawić dane w kolejności posortowanej, mogą wymagać bardziej złożone struktury danych z niską miejscowość odniesienia, co prowadzi do chybień pamięci podręcznej i błędów stron. Nie istnieje żadne podejście, które działa we wszystkich przypadkach. Wypróbuj różne podejścia i mierzyć różnice.
+Czasami można utworzyć listę w kolejności sortowania. Należy zachować ostrożność, ponieważ jeśli chcesz wstawić dane w sortowanej kolejności, możesz wymagać bardziej skomplikowanej struktury danych z niską ilością odwołania, co prowadzi do chybień w pamięci podręcznej i błędów stron. Nie ma podejścia, które działa we wszystkich przypadkach. Wypróbuj kilka metod i zmierz różnice.
 
-Poniżej przedstawiono pewne ogólne porady dotyczące sortowania:
+Poniżej przedstawiono niektóre ogólne porady dotyczące sortowania:
 
-- Użyj standardowych sortowania, aby zminimalizować błędy.
+- Użyj sortowania giełdowego, aby zminimalizować błędy.
 
-- Wszelkie prace, które można wykonać wcześniej uproszczeniu sortowania jest cenna. Jeśli jednorazowe — dostęp próbny danych upraszcza porównania i zmniejsza sortowanie od O (n log n), aby O(n), należy prawie na pewno pojawią wyprzedzeniem.
+- Każda z zadań, które można wcześniej wykonać, aby zmniejszyć złożoność sortowania, to wartościowa. Jeśli jednorazowe przekazywanie danych upraszcza porównania i zmniejsza sortowanie od O (n log n) do O (n), niemal zostanie to przeprowadzone.
 
-- Pomyśl o miejscowość odwołania do algorytmu sortowania i danych, jego uruchomienie na oczekiwane.
+- Zastanów się na miejscowość odwołania do algorytmu sortowania oraz dane, które oczekują na jego uruchomienie.
 
-Istnieją mniej alternatyw wyszukuje niż sortowanie. W przypadku wrażliwego na czas wyszukiwania binarnego wyszukiwania tabeli wyszukiwania lub skrót prawie zawsze najlepiej jest, ale podobnie jak w przypadku sortowania, miejscowość muszą należy pamiętać. Wykonywanie wyszukiwania liniowego za pośrednictwem małą tablicę mogą być szybciej niż binarny przeszukiwania struktury danych z dużą wskaźników, która powoduje występowanie błędów stron lub liczba chybień pamięci podręcznej.
+Wyszukiwanie jest mniejsze niż w przypadku wyszukiwania. Jeśli wyszukiwanie ma krytyczne znaczenie dla czasu, wyszukiwanie binarne lub wyszukiwanie w tabeli skrótów jest niemal zawsze najlepsze, ale podobnie jak w przypadku sortowania, należy pamiętać o lokalizacji lokalnej. Wyszukiwanie liniowe przez małą tablicę może być szybsze niż wyszukiwanie binarne przez strukturę danych z dużą ilością wskaźników, które powodują błędy stron lub Chybienia w pamięci podręcznej.
 
-##  <a name="_core_mfc_and_class_libraries"></a> MFC i bibliotek klas
+##  <a name="_core_mfc_and_class_libraries"></a>MFC i biblioteki klas
 
-Microsoft Foundation Classes (MFC) znacznie ułatwia pisanie kodu. Podczas pisania kodu wrażliwego na czas, należy pamiętać o obciążenie związane z niektórych klas. Sprawdź kod MFC, który używa kodu wrażliwego na czas, aby sprawdzić, czy spełnia ono wymagań dotyczących wydajności. Poniższa lista zawiera klasy MFC i funkcje, których należy wiedzieć:
+Microsoft Foundation Classes (MFC) może znacznie uprościć pisanie kodu. Podczas pisania kodu o kluczowym znaczeniu należy zwrócić uwagę na obciążenie związane z niektórymi z klas. Sprawdź kod MFC używany przez kod krytyczny czasu, aby sprawdzić, czy spełnia on wymagania dotyczące wydajności. Poniższa lista zawiera klasy MFC i funkcje, z którymi należy się zapoznać:
 
-- `CString` MFC wywołuje bibliotekę wykonawczą C można przydzielić pamięci dla [CString](../atl-mfc-shared/reference/cstringt-class.md) dynamicznie. Ogólnie rzecz biorąc `CString` jest wydajne niż inny ciąg przydzielany dynamicznie. Podobnie jak w przypadku dowolnego dynamicznie przydzielonej ciągu ma obciążenie dynamicznej alokacji i wydania. Często prostego `char` tablicy na stosie może obsługiwać ten sam cel i jest szybsze. Nie używaj `CString` do przechowywania stałym ciągiem. Zamiast nich należy używać słów kluczowych `const char *`. Wszelkie operacje, możesz wykonać za pomocą `CString` obiekt ma pewne nadmiarowe obciążenie. Za pomocą biblioteki wykonawczej [ciągów funkcji](../c-runtime-library/string-manipulation-crt.md) może przebiegać szybciej.
+- `CString`MFC wywołuje bibliotekę wykonawczą C w celu dynamicznego przydzielania pamięci dla [CString](../atl-mfc-shared/reference/cstringt-class.md) . Ogólnie mówiąc, `CString` jest tak wydajny jak każdy inny dynamicznie przydzielony ciąg. Podobnie jak w przypadku dowolnego dynamicznego przydzielonego ciągu, ma to narzuty dynamiczne przydzielanie i wydanie. Często prosta `char` tablica na stosie może służyć do tego samego celu i jest szybsza. Nie należy używać `CString` do przechowywania stałej postaci ciągu. Zamiast nich należy używać słów kluczowych `const char *`. Każda operacja wykonywana z `CString` obiektem ma pewne narzuty. Korzystanie z [funkcji ciągu](../c-runtime-library/string-manipulation-crt.md) biblioteki wykonawczej może być szybsze.
 
-- `CArray` A [CArray](../mfc/reference/carray-class.md) zapewnia elastyczność nie regularne tablicy, że program nie może być potrzebna. Jeśli znasz określone limity dla tablicy, możesz zamiast tego użyj globalnej tablicy stały. Jeśli używasz `CArray`, użyj `CArray::SetSize` jej rozmiaru i określ liczbę elementów, według których rośnie, gdy konieczne jest ponowne przydzielenie. W przeciwnym razie dodanie elementów może spowodować macierz często ponownie przydzielane i skopiowana, który jest nieefektywne i może fragmentu pamięci. Należy także zauważyć, że jeśli Wstawianie elementu do tablicy, `CArray` przenosi kolejnych elementów w pamięci i może być konieczne zwiększenie tablicy. Te akcje może spowodować Chybienia pamięci podręcznej i błędów stron. Podczas przeglądania przez kod, który używa MFC, może zostać wyświetlony, można napisać bardziej szczegółowa do danego scenariusza, aby zwiększyć wydajność. Ponieważ `CArray` jest szablonem, na przykład można określić `CArray` specjalizacje dla określonych typów.
+- `CArray`[CArray](../mfc/reference/carray-class.md) zapewnia elastyczność, że zwykła tablica nie jest, ale program może nie potrzebować tego. Jeśli znasz określone limity dla tablicy, możesz zamiast tego użyć globalnej stałej tablicy. Jeśli używasz `CArray::SetSize` , użyj, aby ustalić jego rozmiar i określić liczbę elementów, o których rośnie, gdy konieczne jest ponowne przypisanie. `CArray` W przeciwnym razie Dodawanie elementów może spowodować, że tablica jest często ponownie przydzielna i kopiowana, co jest niewydajne i może stanowić fragment pamięci. Należy również pamiętać, że w przypadku wstawienia elementu do tablicy program `CArray` przenosi kolejne elementy w pamięci i może wymagać powiększania tablicy. Te akcje mogą spowodować Chybienia w pamięci podręcznej i błędy stron. Jeśli szukasz kodu, który jest używany przez MFC, może się okazać, że można napisać coś bardziej specyficznego dla danego scenariusza, aby zwiększyć wydajność. Ponieważ `CArray` jest to szablon, można na przykład podać `CArray` specjalizacje dla konkretnych typów.
 
-- `CList` [CList](../mfc/reference/clist-class.md) jest podwójnie połączoną listą, więc szybko na czele, wstawianie elementu uchwyt, a pozycja znanych (`POSITION`) na liście. Trwa wyszukiwanie elementu według wartości lub indeksu wymaga sekwencyjne wyszukiwania, jednak może być powolne, jeśli lista jest długa. Jeśli Twój kod nie wymaga podwójnie połączoną listą warto powierzeniem `CList`. Za pomocą pojedynczo połączoną listą zapisuje obciążenie aktualizowania dodatkowe wskaźnik dla wszystkich operacji, a także pamięci dla tego wskaźnika. Dodatkowa pamięć nie jest doskonały, ale jest inny możliwość Chybienia pamięci podręcznej lub błędów stron.
+- `CList`[CList](../mfc/reference/clist-class.md) jest połączoną podwójną listą, więc wstawienie elementu jest szybkie na początku, na końcu i na znanej pozycji (`POSITION`) na liście. Wyszukiwanie elementu według wartości lub indeksu wymaga przeszukiwania sekwencyjnego, ale może być wolne, jeśli lista jest długa. Jeśli kod nie wymaga pozostałej listy połączonej, możesz ponownie rozważyć użycie `CList`. Użycie listy połączonej pojedynczo pozwala zaoszczędzić obciążenie związane z aktualizowaniem dodatkowego wskaźnika dla wszystkich operacji, a także pamięci dla danego wskaźnika. Dodatkowa pamięć nie jest świetna, ale jest kolejną okazją dla chybień w pamięci podręcznej lub błędów stron.
 
-- `IsKindOf` Ta funkcja może wygenerować wiele wywołań i dostęp do dużej ilości pamięci w obszarach danych, co prowadzi do miejscowość nieprawidłowe odwołania. Jest przydatne w przypadku kompilacji debugowania (w wywołaniu POTWIERDZEŃ, na przykład), ale Staraj się unikać korzystania z niego w kompilacji wydania.
+- `IsKindOf`Ta funkcja może generować wiele wywołań i uzyskiwać dostęp do dużej ilości pamięci w różnych obszarach danych, co prowadzi do nieprawidłowej lokalizacji referencyjnej. Jest to przydatne w przypadku kompilacji debugowania (na przykład w wywołaniu potwierdzenia), ale spróbuj uniknąć używania jej w kompilacji wydania.
 
-- `PreTranslateMessage` Użyj `PreTranslateMessage` podczas określonego drzewa systemu windows wymaga różnych klawiszy skrótów lub należy wstawić obsługi wiadomości do "pompy komunikatów". `PreTranslateMessage` Zmienia MFC wysyłania wiadomości. Jeśli zastąpisz `PreTranslateMessage`, więc tylko na poziomie potrzebne. Na przykład nie jest konieczne zastąpić `CMainFrame::PreTranslateMessage` Jeśli interesuje Cię tylko komunikaty przechodzące z określonym widokiem elementami podrzędnymi. Zastąp `PreTranslateMessage` widoku klasy zamiast tego.
+- `PreTranslateMessage`Należy `PreTranslateMessage` używać, gdy określone drzewo systemu Windows wymaga różnych akceleratorów klawiatury lub gdy należy wstawić obsługę komunikatów do pompy komunikatów. `PreTranslateMessage`zmienia komunikaty wysyłania MFC. Jeśli przesłonisz `PreTranslateMessage`, zrób to tylko na żądanym poziomie. Na przykład nie jest konieczne przesłonięcie `CMainFrame::PreTranslateMessage` , Jeśli interesuje się tylko komunikaty przechodzą do elementów podrzędnych określonego widoku. Zamiast `PreTranslateMessage` tego Przesłoń klasę widoku.
 
-   Obchodzi ścieżki normalne wysyłania za pomocą `PreTranslateMessage` każdy komunikat wysyłany do dowolnego okna obsługi. Użyj [procedury okna](../mfc/registering-window-classes.md) i mapy wiadomości MFC do tego celu.
+   Nie należy omijać normalnej ścieżki wysyłania przy użyciu `PreTranslateMessage` programu w celu obsługi komunikatów wysyłanych do dowolnego okna. Użyj w tym celu [procedur okien](../mfc/registering-window-classes.md) i map komunikatów MFC.
 
-- `OnIdle` Zdarzenia bezczynności może wystąpić w czasie nie będzie, takie jak między `WM_KEYDOWN` i `WM_KEYUP` zdarzenia. Czasomierze może być bardziej efektywne sposobem wyzwalać Twój kod. Nie wymuszaj `OnIdle` wywoływany wielokrotnie, generując fałszywe komunikaty lub zawsze zwracając `TRUE` z zastąpieniem `OnIdle`, co umożliwiłoby wątek w stan uśpienia. Ponownie czasomierz lub w oddzielnym wątku może być bardziej odpowiednie.
+- `OnIdle`Zdarzenia bezczynne mogą wystąpić w godzinach nieoczekiwanych, takich jak `WM_KEYDOWN` między `WM_KEYUP` i zdarzenia. Czasomierze mogą być wydajniejszym sposobem wyzwalania kodu. Nie należy wymuszać `OnIdle` wielokrotnego wywoływania przez generowanie fałszywych komunikatów lub przez zawsze `TRUE` powrót z przesłonięcia `OnIdle`, co nigdy nie zezwoli na wątek do uśpienia. Ponownie czasomierz lub osobny wątek mogą być bardziej odpowiednie.
 
-##  <a name="vcovrsharedlibraries"></a> Biblioteki udostępnione
+##  <a name="vcovrsharedlibraries"></a>Biblioteki udostępnione
 
-Ponowne wykorzystanie kodu jest pożądane. Jednak jeśli zamierzasz użyć kodu innej osoby, powinien upewnij się, że wiesz, że dokładnie co robi w przypadkach, gdzie wydajność ma kluczowe znaczenie, do Ciebie. Najlepszym sposobem zrozumienia to jest poprzez krokowe wykonywanie kodu źródłowego lub przez dokonywanie pomiarów przy użyciu narzędzi, takich jak PView lub monitora wydajności.
+Wymagane jest ponowne użycie kodu. Jeśli jednak chcesz korzystać z kodu innej osoby, upewnij się, że wiesz dokładnie, co robi w tym przypadku, gdy wydajność ma krytyczne znaczenie dla użytkownika. Najlepszym sposobem na zrozumienie tego jest przechodzenie przez kod źródłowy lub pomiar przy użyciu narzędzi, takich jak PView lub Monitor wydajności.
 
-##  <a name="_core_heaps"></a> Stert
+##  <a name="_core_heaps"></a>Sterty
 
-Za pomocą wielu sterty na własne ryzyko. Dodatkowe stosów utworzonych za pomocą `HeapCreate` i `HeapAlloc` umożliwiają zarządzanie, a następnie usunąć powiązany zestaw alokacji. Nie należy zatwierdzić zbyt dużej ilości pamięci. Jeśli używasz wielu sterty, należy zwrócić szczególną uwagę na ilość pamięci, która jest początkowo zatwierdzone.
+Używaj wielu stert z opcją uznania. Dodatkowe sterty utworzone w `HeapCreate` programie `HeapAlloc` i umożliwiają zarządzanie, a następnie Usuwanie powiązanego zestawu alokacji. Nie Zatwierdź zbyt dużej ilości pamięci. W przypadku korzystania z wielu stert należy zwrócić szczególną uwagę na ilość pamięci, która jest początkowo zatwierdzona.
 
-Zamiast kilku stert można użyć funkcji pomocnika interfejsu między kodu i domyślnej sterty. Funkcje pomocnicze ułatwienia strategii alokacji niestandardowych, które może poprawić wydajność aplikacji. Na przykład jeśli alokacje małych często wykonywane, może być do zlokalizowania tych środków do jednej części stosu domyślnego. Można przydzielić dużych bloków pamięci, a następnie użyj funkcji pomocnika do podrzędnej z tego bloku. Jeśli to zrobisz, nie będziesz mieć dodatkowe stert za pomocą nieużywanej pamięci, ponieważ alokacja wystawała z domyślnej sterty.
+Zamiast wielu stert, można używać funkcji pomocnika do interfejsów między kodem i stertą domyślną. Funkcje pomocnika ułatwiają niestandardowe strategie alokacji, które mogą zwiększyć wydajność aplikacji. Jeśli na przykład często wykonujesz małe alokacje, możesz chcieć zlokalizować te przydziały w jednej części sterty domyślnej. Możesz przydzielić duży blok pamięci, a następnie użyć funkcji pomocnika do alokacji z tego bloku. Jeśli to zrobisz, nie będziesz mieć dodatkowych stert z nieużywaną pamięcią, ponieważ alokacja jest wychodząca z sterty domyślnej.
 
-W niektórych przypadkach jednak przy użyciu domyślnej sterty można zmniejszyć miejscowość odwołania. Użyj podglądu procesu, narzędzie Spy ++ lub monitora wydajności do mierzenia wpływ przenoszenia obiektów sterty sterty.
+W niektórych przypadkach jednak użycie sterty domyślnej może zmniejszyć liczbę miejsc odwołania. Użyj podglądu procesów, programu Spy + + lub monitora wydajności, aby zmierzyć efekty przeniesienia obiektów ze sterty do sterty.
 
-Zmierz swojej sterty, więc konta na potrzeby każdej alokacji, na stosie. Użyj środowiska wykonawczego języka C [procedury stosu debugowania](/visualstudio/debugger/crt-debug-heap-details) do punktu kontrolnego i zrzutu swojej sterty. Może odczytywać dane wyjściowe do arkusza kalkulacyjnego programu, np. Microsoft Excel i użyj tabele przestawne, aby wyświetlić wyniki. Należy pamiętać, łączna liczba, rozmiar i dystrybucji alokacji. Porównaj je z rozmiarem zestawów roboczych. Również Sprawdź klastra o rozmiarze powiązanych obiektów.
+Zmierz sterty, aby można było uwzględnić każde alokacje na stercie. Użyj [procedur sterty debugowania](/visualstudio/debugger/crt-debug-heap-details) w czasie wykonywania C, aby wypróbować i zrzucić stos. Dane wyjściowe można odczytać do programu arkusza kalkulacyjnego, takiego jak program Microsoft Excel, i użyć tabel przestawnych, aby wyświetlić wyniki. Zwróć uwagę na łączną liczbę, rozmiar i rozkład alokacji. Porównaj je z rozmiarem zestawów roboczych. Zapoznaj się również z klastrowaniem obiektów o powiązanym rozmiarze.
 
-Liczniki wydajności można również użyć do monitorowania wykorzystania pamięci.
+Liczników wydajności można również użyć do monitorowania użycia pamięci.
 
-##  <a name="_core_threads"></a> Wątki
+##  <a name="_core_threads"></a>Wątk
 
-Zadania w tle skutecznego bezczynności obsługi zdarzeń może być szybsza niż przy użyciu wątków. Jest to łatwiejsze do zrozumienia miejscowość odwołania w programie apartamentem.
+W przypadku zadań w tle skuteczna bezczynna obsługa zdarzeń może być szybsza niż przy użyciu wątków. Łatwiej jest zrozumieć zakres odwołań w programie jednowątkowym.
 
-Regułą jest użycie wątku, tylko wtedy, gdy wiadomość z powiadomieniem systemu operacyjnego, który możesz zablokować na głównym pracę w tle. Wątki są najlepszym rozwiązaniem w takiej sytuacji, ponieważ jest to niepraktyczne blokowania wątku głównego na zdarzenie.
+Dobrym warunkiem jest użycie wątku tylko wtedy, gdy powiadomienie systemu operacyjnego, które jest blokowane, znajduje się w katalogu głównym pracy w tle. Wątki są najlepszym rozwiązaniem w takich przypadkach, ponieważ nie ma praktycznego blokowania głównego wątku w zdarzeniu.
 
-Wątki także prezentować problemy z komunikacją. Można zarządzać łącza komunikacyjnego między wątki, za pomocą listy komunikatów lub przydzielając i używanie udostępnionej pamięci. Zarządzanie łącza komunikacyjnego, zwykle wymaga synchronizacji, aby uniknąć wyścigu i zakleszczenie problemów. Tę złożoność można łatwo przekształcić usterki i problemy z wydajnością.
+Wątki również powodują problemy z komunikacją. Należy zarządzać łączem komunikacyjnym między wątkami, z listą komunikatów lub przez przydzieleniem i użyciem pamięci współdzielonej. Zarządzanie łączem komunikacyjnym zwykle wymaga synchronizacji, aby uniknąć sytuacji wyścigu i problemów z zakleszczeniem. Ta złożoność może łatwo zamienić błędy i problemy z wydajnością.
 
 Aby uzyskać więcej informacji, zobacz [przetwarzanie pętli bezczynności](../mfc/idle-loop-processing.md) i [wielowątkowość](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
-##  <a name="_core_small_working_set"></a> Rozmiar zestawu roboczego małych
+##  <a name="_core_small_working_set"></a>Mały zestaw roboczy
 
-Mniejszych zestawów roboczych oznacza miejscowość lepsze odwołania, mniejszą liczbę błędów stron i więcej trafień w pamięci podręcznej. Zestaw roboczy procesu to najbliższy metryki, udostępnia systemu operacyjnego bezpośrednio do pomiaru miejscowość odwołania.
+Mniejsze zestawy robocze oznaczają lepszą miejscowość odwołania, mniejsze błędy stron i więcej trafień w pamięci podręcznej. Zestaw roboczy procesu jest najbliższą metryką, którą system operacyjny zapewnia bezpośrednio do mierzenia lokalizacji odniesienia.
 
-- Aby ustawić górny i dolny limit zestawu roboczego, użyj [SetProcessWorkingSetSize](/windows/desktop/api/winbase/nf-winbase-getprocessworkingsetsize).
+- Aby ustawić górny i dolny limit zestawu roboczego, użyj [SetProcessWorkingSetSize](/windows/win32/api/winbase/nf-winbase-getprocessworkingsetsize).
 
-- Aby uzyskać górny i dolny limit zestawu roboczego, użyj [GetProcessWorkingSetSize](/windows/desktop/api/winbase/nf-winbase-setprocessworkingsetsize).
+- Aby uzyskać górny i dolny limit zestawu roboczego, użyj [GetProcessWorkingSetSize](/windows/win32/api/winbase/nf-winbase-setprocessworkingsetsize).
 
-- Aby wyświetlić rozmiar zestawu roboczego, użyj programu Spy ++.
+- Aby wyświetlić rozmiar zestawu roboczego, użyj programu Spy + +.
 
 ## <a name="see-also"></a>Zobacz także
 

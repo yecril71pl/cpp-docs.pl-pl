@@ -7,12 +7,12 @@ helpviewer_keywords:
 - image lists [MFC], drawing images from
 - images [MFC], drawing
 ms.assetid: 2f6063fb-1c28-45f8-a333-008c064db11c
-ms.openlocfilehash: e4e60f0e6e4ee22712e4bbce344fd6437cf3db7e
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: fb307d5557c0e136c1c44c29f08af6062bb1c19d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916408"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508613"
 ---
 # <a name="drawing-images-from-an-image-list"></a>Rysowanie obrazów z poziomu listy obrazów
 
@@ -28,7 +28,7 @@ Style **ILD_BLEND25** i **ILD_BLEND50** są symulowane dla obrazu za pomocą kol
 
 Obraz niemaskowany jest kopiowany do kontekstu urządzenia docelowego przy użyciu `SRCCOPY` operacji rastrowej. Kolory obrazu są wyświetlane w taki sam sposób, niezależnie od koloru tła kontekstu urządzenia. Style rysowania określone w programie `Draw` również nie mają wpływu na wygląd obrazu niemaskowanego.
 
-Oprócz funkcji rysowania elementu członkowskiego, inna funkcja, [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), rozszerza możliwość renderowania obrazu. `DrawIndirect`przyjmuje jako parametr [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams) strukturę. Ta struktura może służyć do dostosowywania renderowania bieżącego obrazu, łącznie z użyciem kodów operacji rastrowych (ROP). Aby uzyskać więcej informacji na temat kodów ROP, zobacz sekcję [operacje rastrowe](/windows/desktop/gdi/raster-operation-codes) i [mapy bitowe jako pędzle](/windows/desktop/gdi/bitmaps-as-brushes) w Windows SDK.
+Oprócz funkcji rysowania elementu członkowskiego, inna funkcja, [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), rozszerza możliwość renderowania obrazu. `DrawIndirect`przyjmuje jako parametr [IMAGELISTDRAWPARAMS](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams) strukturę. Ta struktura może służyć do dostosowywania renderowania bieżącego obrazu, łącznie z użyciem kodów operacji rastrowych (ROP). Aby uzyskać więcej informacji na temat kodów ROP, zobacz sekcję [operacje rastrowe](/windows/win32/gdi/raster-operation-codes) i [mapy bitowe jako pędzle](/windows/win32/gdi/bitmaps-as-brushes) w Windows SDK.
 
 ## <a name="see-also"></a>Zobacz także
 

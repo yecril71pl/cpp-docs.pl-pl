@@ -24,19 +24,19 @@ helpviewer_keywords:
 - stack, recovering
 - _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
-ms.openlocfilehash: ad8c9b470c33a4c84f46ac7758d368917e7938e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc8a625e767daeb964f838c91f74732c9bd337a4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357541"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499496"
 ---
-# <a name="resetstkoflw"></a>_resetstkoflw
+# <a name="_resetstkoflw"></a>_resetstkoflw
 
-Odzyskuje z przepełnienia stosu.
+Odzyskiwanie z przepełnienia stosu.
 
 > [!IMPORTANT]
-> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,55 +46,55 @@ int _resetstkoflw( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Różna od zera, jeśli funkcja się powiedzie, zero, jeśli zakończy się niepowodzeniem.
+Niezerowe, jeśli funkcja się powiedzie, zero, jeśli zakończy się niepowodzeniem.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Resetstkoflw** funkcji odzyskiwania sprawności stanu przepełnienia stosu, pozwalając programowi na kontynuowanie zamiast zwracając błąd wyjątku krytycznego. Jeśli **_resetstkoflw** funkcja nie jest wywoływana, istnieją żadnych stron zabezpieczenia po poprzednim wyjątku. Przepełnienie podczas następnego to stosu, w ogóle nie ma żadnych wyjątków, a proces zakończy się bez ostrzeżenia.
+Funkcja **_resetstkoflw** przywraca ze stanu przepełnienia stosu, umożliwiając programowi kontynuowanie zamiast niepowodzenia z powodu błędu krytycznego wyjątku. Jeśli funkcja **_resetstkoflw** nie jest wywoływana, nie ma żadnych stron ochrony po poprzednim wyjątku. Przy następnym przepełnieniu stosu nie ma żadnych wyjątków w ogóle i proces kończy się bez ostrzeżenia.
 
-Jeśli wątek w aplikacji powoduje, że **EXCEPTION_STACK_OVERFLOW** wyjątku, wątek opuścił stos w stanie uszkodzonym. Jest to w przeciwieństwie do innych wyjątków takich jak **EXCEPTION_ACCESS_VIOLATION** lub **EXCEPTION_INT_DIVIDE_BY_ZERO**, gdy stos nie jest uszkodzony. Stos jest ustawiony na arbitralnie małej wartości, gdy program jest ładowany. Stos następnie rośnie na żądanie do potrzeb wątku. To jest zaimplementowane przez umieszczenie strony z dostępem do PAGE_GUARD na końcu bieżącego stosu. Aby uzyskać więcej informacji, zobacz [tworzenie stron ochrony](/windows/desktop/Memory/creating-guard-pages).
+Jeśli wątek w aplikacji powoduje wyjątek **EXCEPTION_STACK_OVERFLOW** , wątek opuścił stos w stanie uszkodzenia. Jest to w przeciwieństwie do innych wyjątków, takich jak **EXCEPTION_ACCESS_VIOLATION** lub **EXCEPTION_INT_DIVIDE_BY_ZERO**, w których stos nie jest uszkodzony. Podczas pierwszego ładowania programu stos jest ustawiany na niewielką wartość. Stos zostanie następnie powiększony na żądanie, aby spełniał wymagania wątku. Jest to implementowane przez umieszczenie strony z dostępem PAGE_GUARD na końcu bieżącego stosu. Aby uzyskać więcej informacji, zobacz [Tworzenie stron ochrony](/windows/win32/Memory/creating-guard-pages).
 
-Gdy kod powoduje, że wskaźnik stosu wskazuje adres na tej stronie, wystąpi wyjątek, a system wykonuje następujące czynności:
+Gdy kod powoduje, że wskaźnik stosu wskazuje na adres na tej stronie, wystąpi wyjątek, a system wykonuje następujące trzy rzeczy:
 
-- Usuwa ochronę PAGE_GUARD na stronie ochrony, tak aby wątek mógł czytać i zapisywać dane do pamięci.
+- Usuwa ochronę PAGE_GUARD na stronie Ochrona, aby wątek mógł odczytywać i zapisywać dane w pamięci.
 
-- Przydziela nowego strażnika stronie oznacza to znajduje się jedną stronę poniżej ostatniej z nich.
+- Przypisuje nową stronę ochrony, która znajduje się na jednej stronie poniżej ostatniej.
 
-- Umożliwia ponowne wykonanie instrukcji, która wywołała wyjątek.
+- Ponownie uruchamia instrukcję, która wywołała wyjątek.
 
-W ten sposób system może automatycznie zwiększyć rozmiar stosu dla wątku. Każdy wątek w procesie ma rozmiar maksymalny stosu. Rozmiar stosu jest ustawiony w czasie kompilacji przez [/STACK (twórz stos z alokacji)](../../build/reference/stack-stack-allocations.md), lub [STACKSIZE](../../build/reference/stacksize.md) instrukcja w pliku o rozszerzeniu def dla projektu.
+W ten sposób system może automatycznie zwiększyć rozmiar stosu dla wątku. Każdy wątek w procesie ma maksymalny rozmiar stosu. Rozmiar stosu jest ustawiany w czasie kompilacji przez [/Stack (alokacje stosu)](../../build/reference/stack-stack-allocations.md)lub instrukcję [STACKSIZE](../../build/reference/stacksize.md) w pliku. def dla projektu.
 
-Po przekroczeniu tej wielkości maksymalnej stosu, system wykonuje następujące czynności:
+Po przekroczeniu maksymalnego rozmiaru stosu system wykonuje następujące trzy czynności:
 
-- Usuwa ochronę PAGE_GUARD na stronie, jak opisano wcześniej.
+- Usuwa ochronę PAGE_GUARD na stronie Ochrona, jak opisano wcześniej.
 
-- Próbuje przydzielić nowe strony strażnika poniżej ostatniej z nich. Jednak to nie działa, ponieważ przekroczono maksymalny rozmiar stosu.
+- Próbuje przydzielić nową stronę ochrony poniżej ostatniej. Jednak to nie powiedzie się z powodu przekroczenia maksymalnego rozmiaru stosu.
 
-- Zgłasza wyjątek, tak aby wątek mógł go obsłużyć w bloku wyjątków.
+- Wywołuje wyjątek, aby wątek mógł obsłużyć go w bloku wyjątków.
 
-Należy pamiętać, że w tym momencie stos nie ma już strony ochronnej. Następnym razem, gdy program rozwija stos aż do końca, gdzie powinna być strona ochrona, program zapisuje poza końcem stosu i powoduje naruszenie zasad dostępu.
+Należy pamiętać, że w tym momencie stos nie ma już strony ochrony. Przy następnym powiększeniu stosu przez program do końca, gdzie powinna być stroną ochrony, program zapisuje się poza końcem stosu i powoduje naruszenie zasad dostępu.
 
-Wywołaj **_resetstkoflw** Aby przywrócić stronę ochronną przy każdym odzyskiwaniu po wyjątku przepełnienia stosu. Ta funkcja może zostać wywołana z wnętrza głównego tekstu z **__except** bloku lub poza **__except** bloku. Istnieją jednak pewne ograniczenia dotyczące kiedy należy użyć. **_resetstkoflw** nigdy nie powinna być wywoływana z:
+Wywołaj **_resetstkoflw** , aby przywrócić stronę ochrony, gdy odzyskiwanie odbywa się po wystąpieniu wyjątku przepełnienia stosu. Tę funkcję można wywołać z wewnątrz głównej treści bloku **__except** lub poza blokiem **__except** . Istnieją jednak pewne ograniczenia dotyczące sytuacji, w których należy korzystać z programu. **_resetstkoflw** nigdy nie powinna być wywoływana z:
 
 - Wyrażenie filtru.
 
-- Funkcja filtrowania.
+- Funkcja filtru.
 
-- Funkcja wywoływana z funkcji filtru.
+- Funkcja wywołana z funkcji filtrowania.
 
-- A **catch** bloku.
+- Blok **catch** .
 
-- A **__finally** bloku.
+- Blok **__finally** .
 
-W tych punktach stos nie jest jeszcze wystarczająco rozwinięty.
+W tych punktach stos nie jest jeszcze wystarczająco rozrany.
 
-Wyjątki przepełnienia stosu są generowane jako wyjątki strukturalne, nie C++ wyjątki, więc **_resetstkoflw** nie jest użyteczny w zwykłej **catch** bloku, ponieważ nie będzie przechwytywać przepełnienie stosu wyjątek. Jednak jeśli [_set_se_translator](set-se-translator.md) jest używany do implementowania translatora złożonego wyjątku, który zgłasza C++ wyjątków (jak w drugim przykładzie), powoduje wyjątek przepełnienia stosu C++ wyjątek, który może zostać obsłużony przez C++ blok catch.
+Wyjątki przepełnienia stosu są generowane jako wyjątki strukturalne, nie C++ wyjątki, więc **_resetstkoflw** nie jest przydatne w przypadku zwykłego bloku **catch** , ponieważ nie będzie przechwytywać wyjątku przepełnienia stosu. Jeśli jednak [_set_se_translator](set-se-translator.md) jest używany do implementowania translatora wyjątków strukturalnych, który C++ zgłasza wyjątki (jak w drugim przykładzie), wyjątek przepełnienia stosu powoduje C++ wyjątek, który może być obsługiwany przez blok C++ catch .
 
-Nie jest bezpieczne wywołanie **_resetstkoflw** w C++ bloku catch, który zostanie osiągnięty z wyjątku wyrzuconego przez strukturalną funkcję tłumacza wyjątków. W tym przypadku przestrzeń stosu nie jest zwalniana, a wskaźnik stosu nie jest resetowana do momentu poza blok catch, choć destruktory zostały wywołane do wszelkich obiektów zniszczalnych przed blokiem catch. Ta funkcja nie powinna być wywoływana, dopóki nie zostanie zwolnione miejsca na stosie i wskaźnik stosu zostało zresetowane. W związku z tym powinien zostać wywołany tylko po wyjściu bloku catch. Małego obszar stosu, jak to możliwe należy użyć w bloku catch, ponieważ przepełnienie stosu, który występuje w bloku catch, który jest elementem próby odzyskania z poprzednim przepełnieniu stosu nie jest możliwe do odzyskania i może spowodować, że program przestanie odpowiadać jako przeciążenia blok catch wyjątku, który sam jest obsługiwany przez ten sam w wyzwalaczach bloku catch.
+Nie jest bezpieczne wywoływanie **_resetstkoflw** w bloku C++ catch, który został osiągnięty od wyjątku zgłoszonego przez funkcję translatora wyjątków strukturalnych. W takim przypadku przestrzeń stosu nie jest zwalniana, a wskaźnik stosu nie jest resetowany do zewnątrz bloku catch, chociaż destruktory zostały wywołane dla wszystkich obiektów zniszczalnych przed blokiem catch. Ta funkcja nie powinna być wywoływana do momentu zwolnienia przestrzeni stosu i zresetowania wskaźnika stosu. W związku z tym należy ją wywołać tylko po opuszczeniu bloku catch. W bloku catch należy używać możliwie najmniejszej ilości miejsca w stosie, ponieważ przepełnienie stosu, który występuje w bloku catch, który jest samo próba odzyskania z poprzedniego przepełnienia stosu, nie jest możliwe do odzyskania i może spowodować, że program przestanie odpowiadać jako przepełnienie w bloku catch wyzwala wyjątek, który jest obsługiwany przez ten sam blok catch.
 
-Istnieją sytuacje, gdzie **_resetstkoflw** może zakończyć się niepowodzeniem, nawet jeśli używane w poprawnej lokalizacji, na przykład w ramach **__except** bloku. Jeśli nawet po odwinięciu stosu, wciąż Brak wystarczającej ilości miejsca stosu do wykonania **_resetstkoflw** bez pisania na ostatniej stronie stosu, **_resetstkoflw** nie będzie mogła zresetować ostatniej strony stosu jako strony ochronnej i zwraca wartość 0, wskazując niepowodzenie. W związku z tym bezpieczne korzystanie z tej funkcji powinno obejmować sprawdzenie wartości zwracanej, a, przy założeniu, że stos jest bezpieczny w użyciu.
+Istnieją sytuacje, w których **_resetstkoflw** może się nie powieść, nawet jeśli są używane w poprawnej lokalizacji, na przykład w bloku **__except** . Jeśli nawet po rozmieszczeniu stosu nadal nie ma wystarczającej ilości miejsca na stosie, aby wykonać **_resetstkoflw** bez zapisywania na ostatniej stronie stosu, **_resetstkoflw** nie może zresetować ostatniej strony stosu jako strony ochrony i zwróci wartość 0. Oznaczanie błędu. W związku z tym bezpieczne użycie tej funkcji powinno obejmować sprawdzenie wartości zwracanej zamiast zagwarantowania, że stos jest bezpieczny do użycia.
 
-Obsługa wyjątków strukturalnych nie będzie przechwytywać **STATUS_STACK_OVERFLOW** wyjątek podczas kompilowania aplikacji za pomocą **/CLR** (zobacz [kompilacji/CLR (Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)).
+Strukturalna obsługa wyjątków nie przechwytuje wyjątku **STATUS_STACK_OVERFLOW** podczas kompilowania aplikacji z **/CLR** (zobacz [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md)).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -102,13 +102,13 @@ Obsługa wyjątków strukturalnych nie będzie przechwytywać **STATUS_STACK_OVE
 |-------------|---------------------|
 |**_resetstkoflw**|\<malloc.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-**Biblioteki:** Wszystkie wersje [funkcje biblioteki CRT](../../c-runtime-library/crt-library-features.md).
+**Bibliotece** Wszystkie wersje [funkcji biblioteki CRT](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje rekomendowane użycie funkcji **_resetstkoflw** funkcji.
+W poniższym przykładzie pokazano zalecane użycie funkcji **_resetstkoflw** .
 
 ```C
 // crt_resetstkoflw.c
@@ -183,9 +183,9 @@ Przykładowe dane wyjściowe bez argumentów programu:
 loop #1
 ```
 
-Program przestaje odpowiadać bez dalszego wykonywania iteracji.
+Program przestaje odpowiadać bez wykonywania dalszych iteracji.
 
-Bez argumentów programu:
+Z argumentami programu:
 
 ```Output
 loop #1
@@ -212,7 +212,7 @@ resetting stack overflow
 
 ### <a name="description"></a>Opis
 
-Poniższy kod przedstawia zalecane użycie **_resetstkoflw** w programie, gdzie strukturalne wyjątki są konwertowane na C++ wyjątków.
+W poniższym przykładzie przedstawiono zalecane użycie **_resetstkoflw** w programie, w którym strukturalne wyjątki są konwertowane na C++ wyjątki.
 
 ### <a name="code"></a>Kod
 

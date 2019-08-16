@@ -33,16 +33,16 @@ helpviewer_keywords:
 - _wmakepath function
 - tmakepath function
 ms.assetid: 5930b197-a7b8-46eb-8519-2841a58cd026
-ms.openlocfilehash: 073f8aba6936aa33dafcef7ed47f5286802a4948
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fab53d70df1c5361bc56bc0df16d0d2171f07a94
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285702"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499914"
 ---
-# <a name="makepath-wmakepath"></a>_makepath, _wmakepath
+# <a name="_makepath-_wmakepath"></a>_makepath, _wmakepath
 
-Utwórz nazwę ścieżki ze składników. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [_makepath_s —, _wmakepath_s —](makepath-s-wmakepath-s.md).
+Utwórz nazwę ścieżki ze składników. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [_makepath_s, _wmakepath_s](makepath-s-wmakepath-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -66,25 +66,25 @@ void _wmakepath(
 ### <a name="parameters"></a>Parametry
 
 *Ścieżka*<br/>
-Buforu pełnej ścieżki.
+Bufor pełnej ścieżki.
 
-*drive*<br/>
-Zawiera litery (A, B i tak dalej) odpowiadający żądany dysk i opcjonalny dwukropek końcowe. **_makepath —** wstawia dwukropkiem w ścieżce złożonego przypadku jej braku. Jeśli *dysku* jest **NULL** lub punktów na pusty ciąg, litera nie zostanie wyświetlony w złożonego *ścieżki* ciągu.
+*litera*<br/>
+Zawiera literę (A, B i tak dalej) odpowiadającą żądanym dyskowi i opcjonalnym dwukropkiem. **_makepath** automatycznie wstawia dwukropek w ścieżce złożonej, jeśli nie istnieje. Jeśli *dysk* ma **wartość null** lub wskazuje pusty ciąg, w ciągu *ścieżki* złożonej nie zostanie wyświetlona litera dysku.
 
-*dir*<br/>
-Zawiera ścieżkę katalogów, nie wliczając oznaczenie dysku lub rzeczywiste nazwy plików. Końcowy ukośnik jest opcjonalna i ukośnika (/) lub ukośnika odwrotnego (\\) lub obu z nich mogą być używane w ramach pojedynczej *dir* argumentu. Jeśli nie ukośnika (/ lub \\) jest określona, jest wstawiany automatycznie. Jeśli *dir* jest **NULL** lub wskazuje na pusty ciąg, nie ścieżka katalogu jest wstawiana w złożonego *ścieżki* ciągu.
+*katalogów*<br/>
+Zawiera ścieżkę katalogów, w tym oznaczenie dysku lub rzeczywistą nazwę pliku. Końcowy ukośnik jest opcjonalny, a ukośnik (/) lub ukośnik odwrotny (\\) mogą być używane w pojedynczym argumencie *dir* . Jeśli nie zostanie określony końcowy ukośnik (/ \\lub), zostanie on wstawiony automatycznie. Jeśli *dir* ma **wartość null** lub wskazuje na pusty ciąg, w ciągu *ścieżki* złożonej nie zostanie wstawiona ścieżka katalogu.
 
 *fname*<br/>
-Zawiera nazwę pliku podstawowego bez żadnych rozszerzeń nazw plików. Jeśli *fname* jest **NULL** lub wskazuje na pusty ciąg, a nazwa pliku nie jest wstawiana w złożonego *ścieżki* ciągu.
+Zawiera podstawową nazwę pliku bez rozszerzeń nazw plików. Jeśli *fname* ma **wartość null** lub wskazuje na pusty ciąg, w ciągu *ścieżki* złożonej nie zostanie wstawiona nazwa pliku.
 
-*ext*<br/>
-Zawiera rozszerzenie nazwy pliku, z lub bez poprzedzającej go kropki (.). **_makepath —** wstawia okresu automatycznie, jeżeli nie ma w *ext*. Jeśli *ext* jest **NULL** lub wskazuje na pusty ciąg, bez rozszerzenia jest wstawiana w złożonego *ścieżki* ciągu.
+*EXT*<br/>
+Zawiera rzeczywiste rozszerzenie nazwy pliku z lub bez kropki wiodącej (.). **_makepath** wstawia okres automatycznie, jeśli nie jest wyświetlany w *EXT*. Jeśli parametr *EXT* ma **wartość null** lub wskazuje pusty ciąg, w ciągu *ścieżki* złożonej nie zostanie wstawiony żaden rozszerzenie.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Makepath —** funkcja tworzy ciąg ścieżki złożonej z poszczególnych składników, przechowywanie wyników w *ścieżki*. *Ścieżki* może zawierać literę dysku, ścieżka do katalogu, nazwę pliku i rozszerzenie nazwy pliku. **_wmakepath —** to wersja znaku dwubajtowego **_makepath —**; argumenty **_wmakepath —** są ciągami znaków dwubajtowych. **_wmakepath —** i **_makepath —** zachowują się identycznie.
+Funkcja **_makepath** tworzy ciąg ścieżki złożonej z poszczególnych składników, przechowując wynik w *ścieżce*. *Ścieżka* może zawierać literę dysku, ścieżkę katalogu, nazwę pliku i rozszerzenie nazwy pliku. **_wmakepath** to dwubajtowa wersja **_makepath**; argumenty **_wmakepath** są ciągami znaków dwubajtowych. **_wmakepath** i **_makepath** zachowują się identycznie w inny sposób.
 
-**Uwaga dotycząca zabezpieczeń** Użyj ciąg zakończony znakiem null. Aby uniknąć przepełnienia buforu, ciąg zakończony znakiem null nie może przekraczać rozmiaru *ścieżki* buforu. **_makepath —** zapewnić, że długość ciągu złożonego ścieżki przekracza **_MAX_PATH**. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Uwaga dotycząca zabezpieczeń** Użyj ciągu zakończenia o wartości null. Aby uniknąć przepełnienia buforu, ciąg zakończony znakiem null nie może przekraczać rozmiaru buforu *ścieżki* . **_makepath** nie gwarantuje, że długość ciągu ścieżki złożonej nie przekracza **_MAX_PATH**. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -92,18 +92,18 @@ Zawiera rozszerzenie nazwy pliku, z lub bez poprzedzającej go kropki (.). **_ma
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmakepath**|**_makepath**|**_makepath**|**_wmakepath**|
 
-*Ścieżki* argumentu musi wskazywać na pusty bufor wystarczająco duży, aby pomieścić pełną ścieżkę. Złożonego *ścieżki* nie może być większa niż **_MAX_PATH** stałą, zdefiniowane w Stdlib.h.
+Argument *Path* musi wskazywać na pusty bufor wystarczająco duży, aby pomieścić pełną ścieżkę. *Ścieżka* złożona nie może być większa niż stała **_MAX_PATH** określona w STDLIB. h.
 
-Jeśli ścieżka jest **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Ponadto **errno** ustawiono **EINVAL**. **Wartość NULL** wartości są dozwolone w przypadku wszystkich innych parametrów.
+Jeśli ścieżka ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Ponadto **errno** jest ustawiony na **EINVAL**. Wartości **null** są dozwolone dla wszystkich innych parametrów.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_makepath**|\<stdlib.h>|
-|**_wmakepath**|\<stdlib.h> or \<wchar.h>|
+|**_wmakepath**|\<STDLIB. h > lub \<WCHAR. h >|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

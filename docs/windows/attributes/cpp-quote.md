@@ -1,21 +1,21 @@
 ---
-title: cpp_quote — (C++ atrybutów COM)
+title: cpp_quote (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.cpp_quote
 helpviewer_keywords:
 - cpp_quote attribute
 ms.assetid: f75327ff-42bd-498b-9177-7ffa25427e1f
-ms.openlocfilehash: 378435ced5a541785b7b32bc9d2f408034d5a2d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 905c9fc41b1b42dffe9c7b39fae0b096cdc24950
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148240"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501768"
 ---
-# <a name="cppquote"></a>cpp_quote
+# <a name="cpp_quote"></a>cpp_quote
 
-Generuje określony ciąg bez znaków cudzysłowu do pliku .idl wygenerowany.
+Emituje określony ciąg bez znaków cudzysłowu do wygenerowanego pliku IDL.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,20 +25,20 @@ Generuje określony ciąg bez znaków cudzysłowu do pliku .idl wygenerowany.
 
 ### <a name="parameters"></a>Parametry
 
-*Instrukcja*<br/>
+*Merge*<br/>
 Instrukcja języka C.
 
 ## <a name="remarks"></a>Uwagi
 
-**Cpp_quote —** C++ atrybut jest przydatna, jeśli chcesz umieścić dyrektywy preprocesora w pliku .idl.
+Atrybut **cpp_quote** C++ jest przydatny, jeśli chcesz umieścić dyrektywę preprocesora w pliku. idl.
 
-Można również użyć **cpp_quote —** i Wygeneruj plik .h jako część kompilacji MIDL. Na przykład jeśli masz plik nagłówka C++, który używa atrybuty C++ IDL, ale nie można użyć tego pliku dla niektórych zadań, następnie będzie można kompilować go, aby utworzyć plik MIDL generowane .h, powinno być możliwe do użycia.
+Można również użyć **cpp_quote** i wygenerować plik h jako część kompilacji MIDL. Na przykład, jeśli masz plik C++ nagłówka, który używa C++ atrybutów IDL, ale nie można użyć tego pliku do pewnego zadania, można skompilować go w celu utworzenia pliku MIDL. h, który powinien być w stanie używać.
 
-**Cpp_quote —** atrybut ma taką samą funkcjonalność jak [cpp_quote —](/windows/desktop/Midl/cpp-quote) atrybutów w MIDL.
+**Cpp_quote —** atrybut ma taką samą funkcjonalność jak [cpp_quote —](/windows/win32/Midl/cpp-quote) atrybutów w MIDL.
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [podwójną](dual.md) na przykład użyć sposób używania **cpp_quote —** .
+Zobacz przykład dla [podwójnego](dual.md) przykładu użycia **cpp_quote**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -46,12 +46,12 @@ Zobacz przykład [podwójną](dual.md) na przykład użyć sposób używania **c
 
 |||
 |-|-|
-|**Dotyczy**|Dowolne miejsce|
+|**Dotyczy**|Dowolnym miejscu|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -6,26 +6,26 @@ helpviewer_keywords:
 - tree controls [MFC], image lists
 - CTreeCtrl class [MFC], image lists
 ms.assetid: f560c4f2-20d2-4d28-ac33-4017e65fb0a6
-ms.openlocfilehash: f4dc4f0d7b2cfb78b07b23802054f119da9cbbc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f9e323244657ea6a7cc132deab6deedfcd1a167
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389401"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513361"
 ---
 # <a name="tree-control-image-lists"></a>Listy obrazów kontrolki drzewa
 
-Każdego elementu kontrolki drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) może mieć parę bitowymi obrazów skojarzonych z nim. Obrazy są wyświetlane po lewej stronie etykiety elementu. Jeden obraz jest wyświetlany, gdy element jest zaznaczony, a drugi jest wyświetlana, jeśli element nie zostanie wybrane. Na przykład element może wyświetlić Otwórz folder, gdy zostanie wybrane i folder zamknięty, gdy nie jest zaznaczona.
+Każdy element w kontrolce drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) może mieć skojarzoną parę obrazów mapy bitowej. Obrazy są wyświetlane po lewej stronie etykiety elementu. Po wybraniu elementu jest wyświetlany jeden obraz, a drugi jest wyświetlany, gdy element nie jest zaznaczony. Na przykład element może wyświetlić otwarty folder, gdy jest zaznaczony, i folder zamknięty, gdy nie jest zaznaczony.
 
-Aby używać obrazów elementów, należy utworzyć listy obrazów, tworząc [CImageList](../mfc/reference/cimagelist-class.md) obiektu i przy użyciu [CImageList::Create](../mfc/reference/cimagelist-class.md#create) funkcję, aby utworzyć listę powiązanego obrazu. Następnie dodaj żądaną bitmap do listy i skojarzenia listy z formantem drzewa za pomocą [SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist) funkcja elementu członkowskiego. Domyślnie wszystkie elementy wyświetlane pierwsze obraz z listy obrazów dla wybranego i nonselected stanów. Domyślne zachowanie dla określonego elementu można zmienić, określając indeksy wybranego i nonselected obrazów, podczas dodawania elementu za pomocą formantu drzewa [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) funkcja elementu członkowskiego. Indeksy można zmienić po dodaniu elementu za pomocą [SetItemImage](../mfc/reference/ctreectrl-class.md#setitemimage) funkcja elementu członkowskiego.
+Aby można było używać obrazów elementów, należy utworzyć listę obrazów przez utworzenie obiektu [Korzystanie CImageList](../mfc/reference/cimagelist-class.md) i użycie funkcji [Korzystanie CImageList:: Create](../mfc/reference/cimagelist-class.md#create) w celu utworzenia listy skojarzonych obrazów. Następnie Dodaj odpowiednie mapy bitowe do listy, a następnie skojarz listę z kontrolką drzewa przy użyciu funkcji elementu członkowskiego [SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist) . Domyślnie wszystkie elementy wyświetlają pierwszy obraz na liście obrazów dla Stanów wybranych i niezaznaczonych. Można zmienić zachowanie domyślne dla danego elementu przez określenie indeksów wybranych i niezaznaczonych obrazów podczas dodawania elementu do formantu drzewa przy użyciu funkcji składowej [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) . Indeksy można zmienić po dodaniu elementu przy użyciu funkcji składowej [SetItemImage](../mfc/reference/ctreectrl-class.md#setitemimage) .
 
-Listy obrazów kontrolki drzewa może również zawierać nakładki obrazów, które mają być nałożoną na obrazach elementu. Określa indeksu liczonego od jednego obrazu nakładki, wartość różną od zera w bitach 8 – 11 stan elementu kontrolki drzewa (0 oznacza brak obrazu nakładki). Ponieważ indeksu 4-bitowego, liczonego od jednego są używane, nakładki obrazów musi być między pierwszych 15 obrazów na listach obrazów. Aby uzyskać więcej informacji na temat stanów elementu kontrolki drzewa, zobacz [przegląd stanów elementu kontrolki drzewa](../mfc/tree-control-item-states-overview.md) we wcześniejszej części tego tematu.
+Listy obrazów kontrolki drzewa mogą również zawierać obrazy nakładane, które są przeznaczone do nakładania się na obrazy elementów. Wartość różna od zera w bitach od 8 do 11 stanu elementu kontrolki drzewa Określa indeks jednego z nich (0 oznacza brak obrazu nakładki). Ze względu na to, że używany jest 4-bitowy indeks, obrazy nakładane muszą pochodzić z pierwszych 15 obrazów na listach obrazów. Aby uzyskać więcej informacji na temat stanów elementów kontrolki drzewa, zobacz [Omówienie Stanów elementu kontrolki drzewa](../mfc/tree-control-item-states-overview.md) wcześniej w tym temacie.
 
-Jeśli listy obrazów stan zostanie określony, formant drzewa rezerwuje miejsce na lewo od każdego elementu ikona obrazu stanu. Aplikacja może użyć obrazy stanu, takie jak pola wyboru zaznaczone i wyczyszczone, aby wskazać stany elementów zdefiniowanych przez aplikację. Wartość różną od zera w bitach 12 – 15 określa indeksu liczonego od jednego obrazu stanu systemu (0 oznacza brak obrazu stanu).
+Jeśli określono listę obrazu stanu, formant drzewa rezerwuje miejsce na lewo od ikony każdego elementu obrazu stanu. Aplikacja może używać obrazów stanu, takich jak zaznaczone i wyczyszczone pola wyboru, aby wskazać Stany elementów zdefiniowane przez aplikację. Wartość różna od zera w bitach od 12 do 15 określa jeden indeks obrazu stanu (0 oznacza brak obrazu stanu).
 
-Określając **I_IMAGECALLBACK** wartości zamiast indeksu obrazu, można opóźnić określania obrazu wybranego lub nonselected, dopóki element ma być narysowany ponownie. **I_IMAGECALLBACK** kieruje formant drzewa, aby zbadać wniosek o indeks, wysyłając [TVN_GETDISPINFO](/windows/desktop/Controls/tvn-getdispinfo) wiadomość z powiadomieniem.
+Określając wartość **I_IMAGECALLBACK** zamiast indeksu obrazu, można opóźnić Określanie zaznaczonego lub niewybranego obrazu do momentu odrysowania elementu. **I_IMAGECALLBACK** kieruje formant drzewa do wysyłania zapytań do aplikacji dla indeksu przez wysłanie wiadomości powiadomienia [TVN_GETDISPINFO](/windows/win32/Controls/tvn-getdispinfo) .
 
-[GetImageList](../mfc/reference/ctreectrl-class.md#getimagelist) element członkowski funkcja pobiera uchwyt listy obrazów kontrolki drzewa. Funkcja ta jest przydatna, jeśli potrzebujesz dodać więcej obrazów do listy. Aby uzyskać więcej informacji na temat list obrazów, zobacz [korzystanie z CImageList](../mfc/using-cimagelist.md), [CImageList](../mfc/reference/cimagelist-class.md) w *odwołanie MFC*, i [listy obrazów](/windows/desktop/controls/image-lists) w Windows SDK.
+Funkcja [](../mfc/reference/ctreectrl-class.md#getimagelist) elementu członkowskiego GetImageList pobiera uchwyt listy obrazów kontrolki drzewa. Ta funkcja jest przydatna, jeśli trzeba dodać więcej obrazów do listy. Aby uzyskać więcej informacji na temat list obrazów, zobacz [Używanie korzystanie CImageList](../mfc/using-cimagelist.md), [Korzystanie CImageList](../mfc/reference/cimagelist-class.md) w *Kompendium MFC*oraz [list obrazów](/windows/win32/controls/image-lists) w Windows SDK.
 
 ## <a name="see-also"></a>Zobacz także
 

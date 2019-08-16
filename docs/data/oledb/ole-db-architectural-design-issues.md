@@ -4,41 +4,41 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
-ms.openlocfilehash: ef2837ea80c61f074cf567ee1fe61fa2cfa0ae73
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: b481d9948d3055247bd284ca794a0fa65905e21b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525315"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501346"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Kwestie projektowania architektonicznego OLE DB
 
 > [!NOTE]
-> Kreator OLE DB konsumenta ATL nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach. Można nadal ręcznie dodawać funkcje. Aby uzyskać więcej informacji, zobacz [tworzenie konsumenta bez przy użyciu kreatora](creating-a-consumer-without-using-a-wizard.md).
+> Kreator użytkownika ATL OLE DB nie jest dostępny w programie Visual Studio 2019 i nowszych. Można nadal ręcznie dodawać funkcje. Aby uzyskać więcej informacji, zobacz [Tworzenie klienta bez korzystania z Kreatora](creating-a-consumer-without-using-a-wizard.md).
 
-Przed uruchomieniem aplikacji OLE DB, należy wziąć pod uwagę następujące kwestie:
+Przed uruchomieniem aplikacji OLE DB należy wziąć pod uwagę następujące problemy:
 
-## <a name="what-programming-implementation-will-you-use-to-write-your-ole-db-application"></a>Jakie programowania implementacja będzie używać do pisania aplikacji OLE DB?
+## <a name="what-programming-implementation-will-you-use-to-write-your-ole-db-application"></a>Jakiej implementacji programowania będziesz używać do pisania aplikacji OLE DB?
 
-Firma Microsoft oferuje kilka bibliotek, aby wykonać to zadanie: Biblioteka szablonów OLE DB, atrybuty OLE DB i raw interfejsy OLE DB OLE DB zestawu SDK. Ponadto istnieją kreatorów ułatwiające pisanie programu. Te implementacje są opisane w [szablony OLE DB i atrybuty oraz inne implementacje](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md).
+Firma Microsoft oferuje kilka bibliotek do wykonania tego zadania: biblioteki szablonów OLE DB, atrybutów OLE DB i nieprzetworzonych interfejsów OLE DB w OLE DB SDK. Ponadto istnieją kreatory, które pomagają napisać program. Te implementacje są opisane w [OLE DB szablony, atrybuty i inne implementacje](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md).
 
-## <a name="do-you-need-to-write-your-own-provider"></a>Czy trzeba zapisać własnego dostawcę?
+## <a name="do-you-need-to-write-your-own-provider"></a>Czy musisz napisać własnego dostawcę?
 
-Większość programistów nie trzeba napisać własne dostawcy. Firma Microsoft udostępnia kilku dostawców. Zawsze, gdy tworzysz połączenie danych (na przykład po dodaniu konsumenta do projektu przy użyciu **OLE DB Kreator konsumenta ATL**), **właściwości Linku danych** okno dialogowe wyświetla listę wszystkich dostępnych dostawców zarejestrowane w systemie. Jeśli jeden z dostawców jest odpowiedni dla swojej aplikacji dostęp do danych, jak magazyn i dane, użyj jednej z tych jest najłatwiejszym. Jednakże jeśli magazyn danych nie mieści się jednej z tych kategorii, należy utworzyć własnego dostawcę. Aby dowiedzieć się, jak tworzenie dostawców, zobacz [szablony OLE DB Provider](../../data/oledb/ole-db-provider-templates-cpp.md).
+Większość deweloperów nie musi pisać własnego dostawcy. Firma Microsoft udostępnia kilku dostawcom. Za każdym razem, gdy tworzone jest połączenie danych (na przykład podczas dodawania odbiorcy do projektu za pomocą **kreatora ATL OLE DB Consumer**), okno dialogowe **Właściwości łącza danych** zawiera listę wszystkich dostępnych dostawców zarejestrowanych w systemie. Jeśli jeden z dostawców jest odpowiedni dla własnego magazynu danych i aplikacji do uzyskiwania dostępu do danych, najłatwiejszym rozwiązaniem jest użycie jednego z nich. Jeśli jednak magazyn danych nie pasuje do jednej z tych kategorii, należy utworzyć własnego dostawcę. Aby uzyskać informacje na temat tworzenia dostawców, zobacz [OLE DB szablonów dostawców](../../data/oledb/ole-db-provider-templates-cpp.md).
 
-## <a name="what-level-of-support-do-you-need-for-your-consumer"></a>Jaki poziom pomocy technicznej potrzebnych dla konsumentów?
+## <a name="what-level-of-support-do-you-need-for-your-consumer"></a>Jakiego poziomu pomocy technicznej potrzebujesz dla konsumenta?
 
-Niektóre konsumentów mogą być basic. podczas gdy inne mogą być skomplikowane. Funkcje obiektów OLE DB jest określany przez właściwości. Kiedy używać **OLE DB Kreator konsumenta ATL** utworzyć odbiorcę lub **kreatora dostawcy bazy danych** do utworzenia dostawcy, ustawia właściwości odpowiedniego obiektu umożliwiają standardowy zestaw funkcje. Jednak jeśli klasy generowane przez kreatora konsumenta lub dostawca nie obsługuje wszystko, czego potrzebujesz, jest to, należy do odwoływania się do interfejsów dla tych klas w [OLE DB szablony Biblioteka](../../data/oledb/ole-db-templates.md). Te interfejsy opakować pierwotne interfejsy OLE DB, zapewniając dodatkowe implementacji, aby ułatwić korzystanie z nich należy.
+Niektórzy klienci mogą być podstawową. inne mogą być złożone. Funkcja obiektów OLE DB jest określana przez właściwości. W przypadku utworzenia dostawcy za pomocą **kreatora ATL OLE DB klienta** programu lub **Kreatora dostawcy bazy danych** ustawia on odpowiednie właściwości obiektu, aby zapewnić standardowy zestaw funkcji. Jeśli jednak klasy klienta lub dostawcy generowane przez kreatora nie obsługują wszystkiego, czego potrzebujesz, należy odwołać się do interfejsów dla tych klas w [bibliotece szablonów OLE DB](../../data/oledb/ole-db-templates.md). Te interfejsy zawijają nieprzetworzone interfejsy OLE DB, zapewniając dodatkową implementację, aby ułatwić korzystanie z nich.
 
-Na przykład, jeśli chcesz zaktualizować dane w zestawie wierszy, ale nie pamiętam określić, to podczas tworzenia odbiorcy za pomocą kreatora, możesz można określić funkcji w późniejszym czasie, ustawiając `DBPROP_IRowsetChange` i `DBPROP_UPDATABILITY` właściwości w obiekcie command. Następnie, po utworzeniu zestawu wierszy ma `IRowsetChange` interfejsu.
+Na przykład jeśli chcesz zaktualizować dane w zestawie wierszy, ale nie chcesz go określić podczas tworzenia konsumenta przy użyciu kreatora, możesz określić funkcje po tym fakcie, ustawiając `DBPROP_IRowsetChange` właściwości i `DBPROP_UPDATABILITY` w obiekcie Command. Następnie, gdy zestaw wierszy zostanie utworzony, ma `IRowsetChange` interfejs.
 
-## <a name="do-you-have-older-code-using-another-data-access-technology-ado-odbc-or-dao"></a>Czy masz starszego kodu przy użyciu innej technologii dostępu do danych (ADO ODBC i DAO)?
+## <a name="do-you-have-older-code-using-another-data-access-technology-ado-odbc-or-dao"></a>Czy masz starszy kod korzystający z innej technologii dostępu do danych (ADO, ODBC lub DAO)?
 
-Biorąc pod uwagę możliwe kombinacje technologii (na przykład ze składnikami OLE DB przy użyciu składników ADO i migracja kodu ODBC do OLE DB), obejmujące wszystkich sytuacjach wykracza poza zakres z dokumentacji języka Visual C++. Wiele artykułów obejmujących różne scenariusze są jednak dostępne w następujących witrynach sieci web firmy Microsoft:
+Uwzględniając możliwe kombinacje technologii (takich jak używanie składników ADO ze składnikami OLE DB i migrowanie kodu ODBC do OLE DB), obejmując wszystkie sytuacje, wykraczając poza zakres C++ dokumentacji wizualnej. Wiele artykułów obejmujących różne scenariusze jest jednak dostępnych w następujących witrynach sieci Web firmy Microsoft:
 
 - [Pomoc i obsługa techniczna firmy Microsoft](https://support.microsoft.com/)
 
-- [Omówienie artykuły techniczne dotyczące dostępu do danych firmy Microsoft](https://msdn.microsoft.com/library/ms810811.aspx)
+- [Artykuły techniczne dotyczące dostępu do danych firmy Microsoft — Omówienie](/previous-versions/ms810811(v=msdn.10))
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,5 +1,5 @@
 ---
-title: Platformy, domyślna i cli przestrzenie nazw (C++sposób niezamierzony i C++/CX)
+title: Przestrzenie nazw platform, Default i CLIC++(/CLI C++i/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -9,28 +9,28 @@ helpviewer_keywords:
 - lang namespace
 - cli namespace
 ms.assetid: 9d38bd1e-dc78-47d1-a84b-9b4683e52c9c
-ms.openlocfilehash: a7599e2987d27626e6f5c9d049d9a3bd4509c3ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db6c73d6c52bf97aea5d0fbeeeebdeef87f692cc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374205"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509763"
 ---
-# <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>Platformy, domyślna i cli przestrzenie nazw (C++sposób niezamierzony i C++/CX)
+# <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>Przestrzenie nazw platform, Default i CLIC++(/CLI C++i/CX)
 
-Przestrzeń nazw kwalifikuje nazwy elementów języka, tak aby nazwy nie były sprzeczne z identycznymi nazwami zdefiniowanymi w innych miejscach w kodzie źródłowym. Na przykład kolizja nazwy może uniemożliwić kompilatorowi rozpoznawaniu [Context-Sensitive Keywords](context-sensitive-keywords-cpp-component-extensions.md). Przestrzenie nazw są używane przez kompilator, ale nie są zachowywane w skompilowanym zestawie.
+Przestrzeń nazw kwalifikuje nazwy elementów języka, tak aby nazwy nie były sprzeczne z identycznymi nazwami zdefiniowanymi w innych miejscach w kodzie źródłowym. Na przykład kolizja nazw może uniemożliwić kompilatorowi rozpoznanie [słów kluczowych kontekstowych](context-sensitive-keywords-cpp-component-extensions.md). Przestrzenie nazw są używane przez kompilator, ale nie są zachowywane w skompilowanym zestawie.
 
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze
 
-Visual Studio zawiera domyślny obszar nazw dla projektu podczas tworzenia projektu. Można ręcznie zmienić nazwę przestrzeni nazw, chociaż w C++/CX nazwa pliku winmd musi odpowiadać nazwie głównej przestrzeni nazw.
+Program Visual Studio udostępnia domyślną przestrzeń nazw dla projektu podczas tworzenia projektu. Można ręcznie zmienić nazwę przestrzeni nazw, chociaż w C++/CX nazwa pliku winmd musi być zgodna z nazwą głównej przestrzeni nazw.
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
-Aby uzyskać więcej informacji, zobacz [przestrzenie nazw i typ widoczności (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh969551.aspx).
+Aby uzyskać więcej informacji, zobacz [przestrzenie nazw iC++widoczność typu (/CX)](../cppcx/namespaces-and-type-visibility-c-cx.md).
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/ZW`
+Opcja kompilatora:`/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
@@ -42,9 +42,9 @@ using namespace cli;
 
 ### <a name="remarks"></a>Uwagi
 
-C++/Interfejs wiersza polecenia obsługuje **interfejsu wiersza polecenia** przestrzeni nazw. Podczas kompilowania za pomocą `/clr`, **przy użyciu** jest implikowane instrukcji w sekcji składni.
+C++/CLI obsługuje przestrzeń nazw **interfejsu wiersza polecenia** . W przypadku kompilowania przy użyciu `/clr`instrukcji **using** w sekcji składnia jest implikowana.
 
-Następujące funkcje języka znajdują się w **interfejsu wiersza polecenia** przestrzeni nazw:
+W przestrzeni nazw **interfejsu wiersza polecenia** znajdują się następujące funkcje języka:
 
 - [Tablice](arrays-cpp-component-extensions.md)
 
@@ -56,11 +56,11 @@ Następujące funkcje języka znajdują się w **interfejsu wiersza polecenia** 
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/clr`
+Opcja kompilatora:`/clr`
 
 ### <a name="examples"></a>Przykłady
 
-Poniższy przykład kodu demonstruje, że istnieje możliwość używania symbolu w **interfejsu wiersza polecenia** przestrzeni nazw jako symbol w kodzie użytkownika.  Jednak po zostało to zrobione, będzie konieczne jawne lub niejawne określenie odwołań do **interfejsu wiersza polecenia** element języka o takiej samej nazwie.
+Poniższy przykład kodu pokazuje, że można użyć symbolu w przestrzeni nazw **CLI** jako symbolu zdefiniowanego przez użytkownika w kodzie.  Jednak po wykonaniu tej czynności konieczne będzie jawne lub niejawne kwalifikowanie odwołań do elementu języka **interfejsu wiersza polecenia** o tej samej nazwie.
 
 ```cpp
 // cli_namespace.cpp

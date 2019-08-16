@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: 779fd1008f6763f4b5ca95938018a5129e89aa1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a3923ee488771e807600069855299fc240b3212
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154880"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498709"
 ---
-# <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
+# <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
 **Microsoft Specific**
 
-Konstruuje **_com_ptr_t** obiektu.
+Konstruuje obiekt **_com_ptr_t** .
 
 ## <a name="syntax"></a>Składnia
 
@@ -136,31 +136,31 @@ explicit _com_ptr_t(
 #### <a name="parameters"></a>Parametry
 
 *pInterface*<br/>
-Surowego wskaźnika interfejsu.
+Pierwotny wskaźnik interfejsu.
 
 *fAddRef*<br/>
-W przypadku opcji TRUE `AddRef` jest wywoływana, aby zwiększyć licznik odwołań interfejsu zhermetyzowanego wskaźnika.
+Jeśli wartość jest `AddRef` równa true, jest wywoływana, aby zwiększyć liczbę odwołań wskaźnika interfejsu hermetyzowanego.
 
-*cp*<br/>
-A **_com_ptr_t** obiektu.
+*CP*<br/>
+Obiekt **_com_ptr_t** .
 
 *p*<br/>
-Surowego wskaźnika interfejsu, jego typ jest inny niż typ inteligentnego wskaźnika **_com_ptr_t** obiektu.
+Wskaźnik interfejsu RAW, jego typ różni się od typu inteligentnego wskaźnika tego obiektu **_com_ptr_t** .
 
 *varSrc*<br/>
 Element `_variant_t` obiektu.
 
-*Identyfikator klasy*<br/>
+*Identyfikator*<br/>
 `CLSID` Klasy coclass.
 
 *dwClsContext*<br/>
 Kontekst do uruchamiania kodu wykonywalnego.
 
 *lpcStr*<br/>
-Wielobajtowy ciąg, który zawiera jedną `CLSID` (począwszy od "**{**") lub `ProgID`.
+Ciąg wielobajtowy, który zawiera `CLSID` (Zaczynając od " **{** `ProgID`") lub.
 
 *pOuter*<br/>
-Zewnętrzne nieznany dla [agregacji](/windows/desktop/com/aggregation).
+Nieznana zewnętrzna do [agregacji](/windows/win32/com/aggregation).
 
 ## <a name="see-also"></a>Zobacz także
 

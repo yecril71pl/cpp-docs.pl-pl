@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComCriticalSection class
 ms.assetid: 44e1edd2-90be-4bfe-9739-58e8b419e7d1
-ms.openlocfilehash: f3a4b50f8dd9bc460a209c47497e720529c40e58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee4ce32ed4ae04bc3b390af5cf104b8a0af599f8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246647"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497280"
 ---
 # <a name="ccomcriticalsection-class"></a>Klasa CComCriticalSection
 
-Ta klasa dostarcza metody do uzyskania i zwalniania własności obiektu sekcję krytyczną.
+Ta klasa zapewnia metody uzyskiwania i zwalniania własności obiektu sekcji krytycznej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,10 +42,10 @@ class CComCriticalSection
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CComCriticalSection::Init](#init)|Tworzy i inicjuje obiekt sekcję krytyczną.|
-|[CComCriticalSection::Lock](#lock)|Uzyskuje własność obiektu sekcję krytyczną.|
-|[CComCriticalSection::Term](#term)|Zwalnia zasoby systemowe używane przez obiekt sekcję krytyczną.|
-|[CComCriticalSection::Unlock](#unlock)|Zwalnia własność obiektu sekcję krytyczną.|
+|[CComCriticalSection:: init](#init)|Tworzy i inicjuje obiekt sekcji krytycznej.|
+|[CComCriticalSection::Lock](#lock)|Uzyskuje własność obiektu sekcji krytycznej.|
+|[CComCriticalSection:: Term](#term)|Zwalnia zasoby systemowe używane przez obiekt sekcji krytycznej.|
+|[CComCriticalSection:: Unlock](#unlock)|Zwalnia własność obiektu sekcji krytycznej.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
@@ -55,17 +55,17 @@ class CComCriticalSection
 
 ## <a name="remarks"></a>Uwagi
 
-`CComCriticalSection` jest podobna do klasy [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md), z tą różnicą, że musisz jawnie zainicjować i zwolnij sekcję krytyczną.
+`CComCriticalSection`jest podobna do klasy [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md), z tą różnicą, że należy jawnie zainicjować i zwolnić sekcję krytyczną.
 
-Zazwyczaj można użyć `CComCriticalSection` za pośrednictwem **typedef** nazwa [CriticalSection](ccommultithreadmodel-class.md#criticalsection). Ta nazwa odwołuje się do `CComCriticalSection` podczas [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) jest używana.
+Zwykle używany `CComCriticalSection` przez **element typedef** Name [CriticalSection](ccommultithreadmodel-class.md#criticalsection). Ta nazwa odwołuje `CComCriticalSection` się, gdy jest używana [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) .
 
-Zobacz [klasa CComCritSecLock](../../atl/reference/ccomcritseclock-class.md) dla bezpieczniejszy sposób użyć tej klasy niż wywoływania `Lock` i `Unlock` bezpośrednio.
+Zobacz [CComCritSecLock klasy](../../atl/reference/ccomcritseclock-class.md) , aby bezpiecznie używać tej klasy niż wywoływanie `Lock` i `Unlock` bezpośrednio.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcore.h
+**Nagłówek:** atlcore. h
 
-##  <a name="ccomcriticalsection"></a>  CComCriticalSection::CComCriticalSection
+##  <a name="ccomcriticalsection"></a>CComCriticalSection::CComCriticalSection
 
 Konstruktor.
 
@@ -75,11 +75,11 @@ CComCriticalSection() throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Zestawy [m_sec](#m_sec) element członkowski danych na wartość NULL.
+Ustawia element członkowski danych [m_sec](#m_sec) na wartość null.
 
-##  <a name="init"></a>  CComCriticalSection::Init
+##  <a name="init"></a>CComCriticalSection:: init
 
-Wywołuje funkcję Win32 [InitializeCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsection), która inicjuje obiekt sekcję krytyczną, znajdujący się w [m_sec](#m_sec) element członkowski danych.
+Wywołuje funkcję Win32 [InitializeCriticalSection](/windows/win32/api/synchapi/nf-synchapi-initializecriticalsection), która inicjuje obiekt sekcji krytycznej zawarty w elemencie członkowskim danych [m_sec](#m_sec) .
 
 ```
 HRESULT Init() throw();
@@ -87,11 +87,11 @@ HRESULT Init() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK w przypadku powodzenia E_OUTOFMEMORY lub E_FAIL w przypadku niepowodzenia.
+Zwraca S_OK w przypadku powodzenia, E_OUTOFMEMORY lub E_FAIL w przypadku niepowodzenia.
 
-##  <a name="lock"></a>  CComCriticalSection::Lock
+##  <a name="lock"></a>CComCriticalSection:: Lock
 
-Wywołuje funkcję Win32 [EnterCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-entercriticalsection), która czeka, aż wątek może zająć własności obiektu sekcję krytyczną, zawarte w [m_sec](#m_sec) element członkowski danych.
+Wywołuje funkcję Win32 [EnterCriticalSection](/windows/win32/api/synchapi/nf-synchapi-entercriticalsection), która czeka, aż wątek może przejąć własność obiektu sekcji krytycznej zawartego w składowej danych [m_sec](#m_sec) .
 
 ```
 HRESULT Lock() throw();
@@ -99,23 +99,23 @@ HRESULT Lock() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK w przypadku powodzenia E_OUTOFMEMORY lub E_FAIL w przypadku niepowodzenia.
+Zwraca S_OK w przypadku powodzenia, E_OUTOFMEMORY lub E_FAIL w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekt sekcję krytyczną, najpierw musi zostać zainicjowany z wywołaniem [Init](#init) metody. Gdy chroniony kod zakończenia, wątek musi wywołać [Unlock](#unlock) zwolnić własności sekcję krytyczną.
+Należy najpierw zainicjować obiekt sekcji krytycznej przy użyciu wywołania metody [init](#init) . Gdy chroniony kod zakończył wykonywanie, wątek musi wywołać metodę [Unlock](#unlock) , aby zwolnić własność sekcji krytycznej.
 
-##  <a name="m_sec"></a>  CComCriticalSection::m_sec
+##  <a name="m_sec"></a>CComCriticalSection::m_sec
 
-Zawiera obiekt sekcję krytyczną, który jest używany przez wszystkie `CComCriticalSection` metody.
+Zawiera obiekt sekcji krytycznej, który jest używany przez `CComCriticalSection` wszystkie metody.
 
 ```
 CRITICAL_SECTION m_sec;
 ```
 
-##  <a name="term"></a>  CComCriticalSection::Term
+##  <a name="term"></a>CComCriticalSection:: Term
 
-Wywołuje funkcję Win32 [DeleteCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-deletecriticalsection), które zwalnia wszystkie zasoby używane przez obiekt sekcję krytyczną, zawarte w [m_sec](#m_sec) element członkowski danych.
+Wywołuje funkcję Win32 [DeleteCriticalSection](/windows/win32/api/synchapi/nf-synchapi-deletecriticalsection), która zwalnia wszystkie zasoby używane przez obiekt sekcji krytycznej zawarty w elemencie członkowskim danych [m_sec](#m_sec) .
 
 ```
 HRESULT Term() throw();
@@ -123,15 +123,15 @@ HRESULT Term() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK.
+Zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Raz `Term` została wywołana, krytycznej sekcji nie będzie można użyć do synchronizacji.
+Po `Term` wywołaniu nie można już użyć sekcji krytycznej do synchronizacji.
 
-##  <a name="unlock"></a>  CComCriticalSection::Unlock
+##  <a name="unlock"></a>CComCriticalSection:: Unlock
 
-Wywołuje funkcję Win32 [LeaveCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-leavecriticalsection), która uwalnia własność obiektu sekcję krytyczną, zawarte w [m_sec](#m_sec) element członkowski danych.
+Wywołuje funkcję Win32 [LeaveCriticalSection](/windows/win32/api/synchapi/nf-synchapi-leavecriticalsection), która zwalnia własność obiektu sekcji krytycznej zawartego w składowej danych [m_sec](#m_sec) .
 
 ```
 HRESULT Unlock() throw();
@@ -139,14 +139,14 @@ HRESULT Unlock() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK.
+Zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Najpierw uzyskać własności, wątek musi wywołać [blokady](#lock) metody. Każde wywołanie `Lock` wymaga odpowiedniego wywołania `Unlock` zwolnić własności sekcję krytyczną.
+Aby najpierw uzyskać własność, wątek musi wywołać metodę [Lock](#lock) . Każde wywołanie `Lock` wymaga odpowiedniego `Unlock` wywołania, aby zwolnić własność sekcji krytycznej.
 
 ## <a name="see-also"></a>Zobacz także
 
 [Klasa CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
+[Przegląd klas](../../atl/atl-class-overview.md)<br/>
 [Klasa CComCritSecLock](../../atl/reference/ccomcritseclock-class.md)

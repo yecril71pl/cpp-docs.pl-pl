@@ -7,35 +7,35 @@ helpviewer_keywords:
 - user accounts [C++]
 - User Account Control [C++]
 ms.assetid: 0d001870-253e-4989-b689-f78035953799
-ms.openlocfilehash: 3818b0ff7d4e4c551c41726dd44935beb5d32842
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 8c283e86a71092bb510892b6361f3d0fddc2abb6
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448475"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510143"
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>Jak kontrola konta użytkownika (UAC) wpływa na aplikację?
 
-Kontrola konta użytkownika (UAC) jest funkcją systemu Windows Vista, w którym użytkownik konta ma ograniczone uprawnienia. Można znaleźć szczegółowe informacje na temat funkcji Kontrola konta użytkownika w tych lokacjach:
+Kontrola konta użytkownika (UAC) to funkcja systemu Windows Vista, w której konta użytkowników mają ograniczone uprawnienia. Szczegółowe informacje na temat funkcji Kontrola konta użytkownika można znaleźć w następujących lokacjach:
 
-- [Najlepsze rozwiązania dla deweloperów i wytyczne dotyczące aplikacji w środowisku o najniższych uprawnieniach](/windows/desktop/uxguide/winenv-uac)
+- [Najlepsze rozwiązania i wskazówki dla deweloperów dotyczące aplikacji w środowisku najmniej uprzywilejowanym](/windows/win32/uxguide/winenv-uac)
 
 ## <a name="building-projects-after-enabling-uac"></a>Kompilowanie projektów po włączeniu funkcji Kontrola konta użytkownika
 
-W przypadku tworzenia programu Visual Studio C++ projektu w programie Windows Vista z funkcji kontroli konta użytkownika jest wyłączona i później włączyć funkcji Kontrola konta użytkownika, należy wyczyścić i ponownie skompiluj projekt, aby mogła działać prawidłowo.
+W przypadku tworzenia projektu programu Visual C++ Studio w systemie Windows Vista z wyłączeniem funkcji Kontrola konta użytkownika i włączeniu funkcji Kontrola konta użytkownika należy wyczyścić i ponownie skompilować projekt, aby działał poprawnie.
 
-## <a name="applications-that-require-administrative-privileges"></a>Aplikacje, które wymagają uprawnień administratora
+## <a name="applications-that-require-administrative-privileges"></a>Aplikacje wymagające uprawnień administracyjnych
 
-Domyślnie konsolidator Visual C++ osadza fragmentu funkcji Kontrola konta użytkownika do manifestu aplikacji z poziomem wykonywania `asInvoker`. Jeśli aplikacja wymaga uprawnień administracyjnych do poprawnego działania (na przykład w przypadku, gdy modyfikuje węzłem HKLM rejestru lub zapisuje w chronionych obszarach dysku, takie jak katalog Windows), należy zmodyfikować aplikację.
+Domyślnie konsolidator wizualny C++ osadza fragment kontroli konta użytkownika w manifeście aplikacji z poziomem `asInvoker`wykonania. Jeśli aplikacja wymaga uprawnień administracyjnych do prawidłowego działania (na przykład jeśli modyfikuje węzeł HKLM rejestru lub zapisuje je w chronionych obszarach dysku, takich jak katalog systemu Windows), należy zmodyfikować aplikację.
 
-Pierwsza opcja jest zmodyfikowanie fragmentu UAC manifestu, aby zmienić poziom wykonywania *requireAdministrator*. Aplikacja następnie będzie monitować użytkownika o poświadczenia administracyjne, zanim zostanie ona uruchomiona. Aby dowiedzieć się, jak to zrobić, zobacz [/MANIFESTUAC (osadza informacje UAC w manifeście)](../build/reference/manifestuac-embeds-uac-information-in-manifest.md).
+Pierwsza opcja polega na zmodyfikowaniu fragmentu UAC manifestu w celu zmiany poziomu wykonywania na *wymaga administratora*. Następnie aplikacja będzie monitować użytkownika o poświadczenia administracyjne przed jego uruchomieniem. Aby uzyskać informacje o tym, jak to zrobić, zobacz [/MANIFESTUAC (osadza informacje UAC w manifeście)](../build/reference/manifestuac-embeds-uac-information-in-manifest.md).
 
-Drugą opcją jest osadzaj fragmentu funkcji Kontrola konta użytkownika do manifestu, określając `/MANIFESTUAC:NO` — opcja konsolidatora. W takim przypadku aplikacja jest uruchamiana zwirtualizowanych. Wszelkie zmiany wprowadzone do rejestru lub systemu plików zostanie usunięte podczas instalacji aplikacji została zakończona.
+Druga opcja polega na tym, że nie można osadzić fragmentu UAC w manifeście przez `/MANIFESTUAC:NO` określenie opcji konsolidatora. W takim przypadku aplikacja zostanie uruchomiona Zwirtualizowana. Wszelkie zmiany wprowadzone w rejestrze lub w systemie plików nie będą zachowywane po zakończeniu Twojej aplikacji.
 
-Następujące schemat blokowy opisano, jak aplikacja jest uruchamiana w zależności od tego, czy jest włączona funkcja Kontrola konta użytkownika i tego, czy aplikacja ma manifestu kontroli konta użytkownika:
+Poniższy schemat blokowy opisuje sposób działania aplikacji w zależności od tego, czy funkcja Kontrola konta użytkownika jest włączona, oraz czy aplikacja ma manifest UAC:
 
-![Zachowanie modułu ładującego Windows](media/uacflowchart.png "zachowanie modułu ładującego Windows")
+![Zachowanie modułu ładującego systemu Windows](media/uacflowchart.png "Zachowanie modułu ładującego systemu Windows")
 
 ## <a name="see-also"></a>Zobacz także
 
-[Najlepsze rozwiązania dotyczące zabezpieczeń](security-best-practices-for-cpp.md)
+[Najlepsze rozwiązania w zakresie zabezpieczeń](security-best-practices-for-cpp.md)

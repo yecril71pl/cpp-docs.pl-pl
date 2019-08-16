@@ -1,21 +1,21 @@
 ---
-title: kontrolki (atrybut COM C++)
+title: Control (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.control
 helpviewer_keywords:
 - Control attribute
 ms.assetid: 3d046bb2-4afe-4cb8-a762-233b296e1975
-ms.openlocfilehash: 223acf774d1cc90d84aed2d0d0c8cb59fc778fa1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 12cf98b49b43b7a67834ea5401994ecdc749aa3b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148279"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501780"
 ---
-# <a name="control"></a> — formant
+# <a name="control"></a>— formant
 
-Określa, że typ zdefiniowany przez użytkownika kontrolki.
+Określa, że typem zdefiniowanym przez użytkownika jest kontrolka.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,7 +25,7 @@ Określa, że typ zdefiniowany przez użytkownika kontrolki.
 
 ## <a name="remarks"></a>Uwagi
 
-**Kontroli** atrybut oznacza [coclass](coclass.md) atrybutu. **Kontroli** atrybut C++ ma taką samą funkcjonalność jak [kontroli](/windows/desktop/Midl/control) atrybutów w MIDL.
+Atrybut **Control** oznacza atrybut [klasy coclass](coclass.md) . Atrybut **Control** C++ ma takie same funkcje jak atrybut MIDL [formantu](/windows/win32/Midl/control) .
 
 ## <a name="example"></a>Przykład
 
@@ -50,12 +50,12 @@ class CTest : public ICustom {};
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **— struktura**|
+|**Dotyczy**|**Klasa**, **Struktura**|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

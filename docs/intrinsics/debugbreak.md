@@ -8,18 +8,18 @@ helpviewer_keywords:
 - breakpoints, __debugbreak intrinsic
 - __debugbreak intrinsic
 ms.assetid: 1d1e1c0c-891a-4613-ae4b-d790094ba830
-ms.openlocfilehash: 97932dfe0e187a13b72ae5fe70d761224721c3ff
-ms.sourcegitcommit: 1acb6755e11379026a96f63facac4d33f4dc47ae
+ms.openlocfilehash: ed75b94e8bf0aca9369c56f23e8ff00ea6953642
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314256"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509496"
 ---
-# <a name="debugbreak"></a>__debugbreak
+# <a name="__debugbreak"></a>__debugbreak
 
 **Microsoft Specific**
 
-Powoduje, że punkt przerwania w kodzie, gdzie użytkownik jest monitowany o uruchomienia debugera.
+Powoduje, że punkt przerwania w kodzie, w którym użytkownik zostanie poproszony o uruchomienie debugera.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,16 +29,16 @@ void __debugbreak();
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|nagłówek|
+|Wewnętrznej|Architektura|nagłówek|
 |---------------|------------------|------------|
 |`__debugbreak`|x86, x64, ARM, ARM64|\<intrin.h>|
 
 ## <a name="remarks"></a>Uwagi
 
-`__debugbreak` Kompilatora wewnętrzne, podobnie jak [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297.aspx), jest przenośny sposób Win32 i spowodować, że punkt przerwania.
+Wewnętrzny kompilator, podobny do DebugBreak, jest przenośnym sposobem na działanie punktu przerwania. [](/windows/win32/api/debugapi/nf-debugapi-debugbreak) `__debugbreak`
 
 > [!NOTE]
->  Podczas kompilowania za pomocą **/CLR**, funkcja nadrzędnym `__debugbreak` zostaną skompilowane do MSIL. `asm int 3` powoduje, że funkcja jest kompilowana do natywnego. Aby uzyskać więcej informacji, zobacz [__asm](../assembler/inline/asm.md).
+>  Podczas kompilowania z **/CLR**, funkcja zawierająca `__debugbreak` zostanie skompilowana do MSIL. `asm int 3`powoduje, że funkcja jest skompilowana do kodu natywnego. Aby uzyskać więcej informacji, zobacz [__asm](../assembler/inline/asm.md).
 
 Na przykład:
 
@@ -58,13 +58,13 @@ main() {
 }
 ```
 
-na x86 komputera.
+na komputerze z procesorem x86.
 
-Dla procesorów ARM64 `__debugbreak` wewnętrzne jest skompilowany w instrukcji `brk #0xF000`.
+W programie arm64 `__debugbreak` wewnętrznie jest kompilowane do instrukcji `brk #0xF000`.
 
-Ta procedura jest dostępna wyłącznie jako wewnętrzna.
+Ta procedura jest dostępna tylko jako wewnętrzna.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

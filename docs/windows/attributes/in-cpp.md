@@ -1,21 +1,21 @@
 ---
-title: w (atrybut COM C++)
+title: in (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.in
 helpviewer_keywords:
 - in attribute
 ms.assetid: 7b450cc4-4d2e-4910-a195-7487c6b7c373
-ms.openlocfilehash: 06d78552ef2ebb878ed630eb377e6249ba60cad4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e97008d0399764beeca73dbbc5914e4b891df748
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409346"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514593"
 ---
 # <a name="in-c"></a>in (C++)
 
-Wskazuje, że parametr zostanie przekazany z procedury wywołującej do procedury wywoływanej.
+Wskazuje, że parametr ma być przekazywać z procedury wywołującej do procedury wywoływanej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,11 +25,11 @@ Wskazuje, że parametr zostanie przekazany z procedury wywołującej do procedur
 
 ## <a name="remarks"></a>Uwagi
 
-**w** atrybut C++ ma taką samą funkcjonalność jak [w](/windows/desktop/Midl/in) atrybutów w MIDL.
+Atrybut **in** C++ ma takie same funkcje jak atrybut [in](/windows/win32/Midl/in) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Zobacz [możliwej do wiązania](bindable.md) przykład sposobu użycia **w**.
+Zobacz [powiązanie](bindable.md) z przykładem użycia **w programie**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -37,12 +37,12 @@ Zobacz [możliwej do wiązania](bindable.md) przykład sposobu użycia **w**.
 
 |||
 |-|-|
-|**Dotyczy**|Interfejs parametru metody interfejsu|
+|**Dotyczy**|Parametr interfejsu, metoda interfejsu|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|**retval**|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

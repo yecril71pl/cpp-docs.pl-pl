@@ -29,16 +29,16 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 4a543f0e-5516-4d81-8ff2-3c5206f02ed5
-ms.openlocfilehash: df0abdd644027f9bab8cd177dfd4d0af4c98df35
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6902ff925e49d894f70b0d7083b99388d5271d1d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188548"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500745"
 ---
-# <a name="wctomb-wctombl"></a>wctomb, _wctomb_l
+# <a name="wctomb-_wctomb_l"></a>wctomb, _wctomb_l
 
-Konwertuj znaków dwubajtowych do odpowiedniego znaku wielobajtowego. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [wctomb_s —, _wctomb_s_l —](wctomb-s-wctomb-s-l.md).
+Konwertuj znak dwubajtowy na odpowiedni znak wieloznaczny. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,32 +57,32 @@ int _wctomb_l(
 ### <a name="parameters"></a>Parametry
 
 *mbchar*<br/>
-Adres znaków wielobajtowych.
+Adres znaku wielobajtowego.
 
-*WChar*<br/>
-Znakiem dwubajtowym.
+*WCHAR*<br/>
+Znak dwubajtowy.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli **wctomb —** konwertuje znak dwubajtowy znak wielobajtowy, zwraca liczbę bajtów (która nigdy nie jest większa niż **MB_CUR_MAX**) w szerokich znaków. Jeśli *wchar* jest znakiem null szerokich znaków (L '\0'), **wctomb —** zwraca wartość 1. Jeśli wskaźnik docelowej *mbchar* jest **NULL**, **wctomb —** zwraca wartość 0. Jeśli konwersja nie jest możliwe przy bieżących ustawieniach regionalnych **wctomb —** zwraca wartość -1 i **errno** ustawiono **EILSEQ**.
+Jeśli **wctomb** konwertuje znak szeroki do znaku wielobajtowego, zwraca liczbę bajtów (która nigdy nie jest większa niż **MB_CUR_MAX**) w znaku szerokiej. Jeśli *WCHAR* jest znakiem dwubajtowym znaku null (L ' \ 0 '), **wctomb** zwraca 1. Jeśli docelowy wskaźnik *mbchar* ma **wartość null**, **wctomb** zwraca wartość 0. Jeśli konwersja nie jest możliwa w bieżących ustawieniach regionalnych, **wctomb** zwraca wartość-1, a **errno** jest ustawiona na **EILSEQ**.
 
 ## <a name="remarks"></a>Uwagi
 
-**Wctomb —** funkcji konwertuje jej *wchar* argument do odpowiedniego znaku wielobajtowego i zapisuje wynik w *mbchar*. Funkcję można wywołać z dowolnego punktu w dowolnym programie. **wctomb —** używa bieżących ustawień regionalnych dla wszelkich zachowań zależnych od ustawień regionalnych; **_wctomb_l —** jest taka sama jak **wctomb —** z tą różnicą, że używa ustawień regionalnych przekazanych w zamian. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Funkcja **wctomb** konwertuje swój argument *WCHAR* do odpowiedniego znaku wielobajtowego i zapisuje wynik w *mbchar*. Można wywołać funkcję z dowolnego punktu w dowolnym programie. **wctomb** używa bieżących ustawień regionalnych dla wszelkich zachowań zależnych od ustawień regionalnych; **_wctomb_l** jest taka sama jak **wctomb** , z tą różnicą, że w zamian korzysta z przekazaną ustawieniami regionalnymi. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-**wctomb —** sprawdza poprawność parametrów. Jeśli *mbchar* jest **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL** a funkcja zwraca wartość -1.
+**wctomb** sprawdza poprawność swoich parametrów. Jeśli *mbchar* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcja zwraca wartość-1.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**wctomb —**|\<stdlib.h>|
+|**wctomb**|\<stdlib.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Ten program ilustruje zachowanie wctomb — funkcja.
+Ten program ilustruje zachowanie funkcji wctomb.
 
 ```cpp
 // crt_wctomb.cpp
@@ -118,4 +118,4 @@ Convert a wide character:
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
-[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>
+[WideCharToMultiByte](/windows/win32/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

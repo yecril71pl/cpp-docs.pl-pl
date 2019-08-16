@@ -10,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComAllocator class
 ms.assetid: 0cd706fd-0c7b-42d3-9054-febe2966fc8e
-ms.openlocfilehash: 9f1c005262d25b1ff5e900377c229afe1573e6d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de302c7a58bf1b15e63e7cd391621ed9558e5a70
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259706"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497596"
 ---
 # <a name="ccomallocator-class"></a>Klasa CComAllocator
 
-Ta klasa dostarcza metody do zarządzania ilości pamięci za pomocą procedury pamięci COM.
+Ta klasa udostępnia metody zarządzania pamięcią za pomocą procedur pamięci COM.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,21 +33,21 @@ class CComAllocator
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CComAllocator::Allocate](#allocate)|Wywołanie tej metody statyczne, można przydzielić pamięci.|
-|[CComAllocator::Free](#free)|Wywołanie tej metody statycznej, aby zwolnić alokacji pamięci.|
-|[CComAllocator::Reallocate](#reallocate)|Wywołanie tej metody statyczne do ponownego przydzielenia pamięci.|
+|[CComAllocator:: Allocate](#allocate)|Wywołaj tę metodę statyczną, aby przydzielić pamięć.|
+|[CComAllocator::Free](#free)|Wywołaj tę metodę statyczną, aby zwolnić przydzieloną pamięć.|
+|[CComAllocator:: Reallocate](#reallocate)|Wywołaj tę metodę statyczną, aby ponownie przydzielić pamięć.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa jest używana przez [CComHeapPtr](../../atl/reference/ccomheapptr-class.md) do dostarczenia pamięci COM procedur alokacji. Klasa odpowiednika [CCRTAllocator](../../atl/reference/ccrtallocator-class.md), oferuje te same metody, przy użyciu procedur CRT.
+Ta klasa jest używana przez [CComHeapPtr](../../atl/reference/ccomheapptr-class.md) do udostępniania procedur alokacji pamięci com. Odpowiednik klasy, [CCRTAllocator](../../atl/reference/ccrtallocator-class.md), zapewnia te same metody przy użyciu procedur CRT.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlbase.h
+**Nagłówek:** atlbase. h
 
-##  <a name="allocate"></a>  CComAllocator::Allocate
+##  <a name="allocate"></a>CComAllocator:: Allocate
 
-Wywołaj tę funkcję statyczne można przydzielić pamięci.
+Wywołaj tę funkcję statyczną w celu przydzielenia pamięci.
 
 ```
 static void* Allocate(size_t nBytes) throw();
@@ -60,15 +60,15 @@ Liczba bajtów do przydzielenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca pusty wskaźnik do przydzielonego miejsca lub wartość NULL, jeśli ma za mało pamięci.
+Zwraca wskaźnik void do przydzieloną miejsce lub wartość NULL, jeśli jest za mało dostępnej pamięci.
 
 ### <a name="remarks"></a>Uwagi
 
-Przydziela pamięć. Zobacz [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) Aby uzyskać więcej informacji.
+Przydziela pamięć. Aby uzyskać więcej informacji, zobacz [CoTaskMemAlloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemalloc) .
 
-##  <a name="free"></a>  CComAllocator::Free
+##  <a name="free"></a>CComAllocator:: Free
 
-Wywołaj tę funkcję statycznej, aby zwolnić alokacji pamięci.
+Wywołaj tę funkcję statyczną, aby zwolnić przydzieloną pamięć.
 
 ```
 static void Free(void* p) throw();
@@ -77,15 +77,15 @@ static void Free(void* p) throw();
 ### <a name="parameters"></a>Parametry
 
 *p*<br/>
-Wskaźnik do alokacji pamięci.
+Wskaźnik do przydzieloną pamięć.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwalnia ilość przydzielonej pamięci. Zobacz [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) Aby uzyskać więcej informacji.
+Zwalnia przydzieloną pamięć. Aby uzyskać więcej informacji, zobacz [CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree) .
 
-##  <a name="reallocate"></a>  CComAllocator::Reallocate
+##  <a name="reallocate"></a>CComAllocator:: Reallocate
 
-Wywołaj tę funkcję statycznych w celu ponownego przydzielenia pamięci.
+Wywołaj tę funkcję statyczną, aby ponownie przydzielić pamięć.
 
 ```
 static void* Reallocate(void* p, size_t nBytes) throw();
@@ -94,21 +94,21 @@ static void* Reallocate(void* p, size_t nBytes) throw();
 ### <a name="parameters"></a>Parametry
 
 *p*<br/>
-Wskaźnik do alokacji pamięci.
+Wskaźnik do przydzieloną pamięć.
 
 *nBytes*<br/>
-Liczba bajtów w celu ponownego przydzielenia.
+Liczba bajtów do ponownego przydzielenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca pusty wskaźnik do przydzielonego miejsca lub wartość NULL, jeśli jest za mało pamięci
+Zwraca wskaźnik void do przydzieloną miejsce lub wartość NULL, jeśli jest za mało pamięci
 
 ### <a name="remarks"></a>Uwagi
 
-Zmienia rozmiar ilość ilość przydzielonej pamięci. Zobacz [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc) Aby uzyskać więcej informacji.
+Zmienia rozmiar przydzieloną pamięci. Aby uzyskać więcej informacji, zobacz [CoTaskMemRealloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemrealloc) .
 
 ## <a name="see-also"></a>Zobacz także
 
 [Klasa CComHeapPtr](../../atl/reference/ccomheapptr-class.md)<br/>
 [Klasa CCRTAllocator](../../atl/reference/ccrtallocator-class.md)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

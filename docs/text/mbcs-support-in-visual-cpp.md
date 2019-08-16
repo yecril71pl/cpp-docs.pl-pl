@@ -20,44 +20,44 @@ helpviewer_keywords:
 - Input Method Editor [C++]
 - MBCS [C++], enabling
 ms.assetid: 6179f6b7-bc61-4a48-9267-fb7951223e38
-ms.openlocfilehash: 3f57e9feac7f129b3fb8653c7b1a2eacb021bf29
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5f2b6dd56d3a755ee73058c024152e12157a6bd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410606"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501945"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Obsługa MBCS w programie Visual C++
 
-Po uruchomieniu na Windows w wersji dla systemów z obsługą MBCS, systemie programistycznym Visual C++ (w tym kodu źródłowego zintegrowane narzędzia edytora, debugera i wiersza polecenia) jest MBCS włączone, z wyjątkiem okna pamięci.
+W przypadku uruchamiania w systemie Windows z włączoną obsługą MBCS, system C++ programistyczny (w tym Edytor kodu zintegrowanego, debuger i narzędzia wiersza polecenia) jest włączony MBCS, z wyjątkiem okna pamięci.
 
-Okno pamięci nie interpretuje bajtów danych znaków MBCS, mimo że można interpretował je jako znaki ANSI lub Unicode. Znaki ANSI, są zawsze 1 bajt, rozmiar i znaki Unicode są rozmiar 2 bajtów. Za pomocą MBCS znaki mogą być 1 lub 2 bajtów i ich interpretację zależy od tego, stronę kodową, która jest używana. W związku z tym trudno jest niezawodne wyświetlenia znaków MBCS w oknie pamięci. Okno pamięci nie wiedzieć, które bajt jest początku znak. Deweloper można wyświetlić wartości bajtów w oknie pamięci i sprawdzać wartości w tabelach w celu określenia reprezentacji znaków. Jest to możliwe, ponieważ wie, deweloper adres początkowy ciągu na podstawie kodu źródłowego.
+Okno pamięci nie interpretuje bajtów danych jako znaków MBCS, nawet jeśli można je zinterpretować jako znaki ANSI lub Unicode. Znaki ANSI mają zawsze 1 bajt w rozmiarze, a znaki Unicode mają rozmiar 2 bajtów. W przypadku MBCS znaki mogą mieć rozmiar 1 lub 2 bajtów, a ich interpretacja zależy od tego, która strona kodowa jest używana. W związku z tym trudno jest w oknie pamięci, aby niezawodnie wyświetlać znaki MBCS. Okno pamięci nie może wiedzieć, który bajt jest początkiem znaku. Deweloper może wyświetlić wartości bajtów w oknie pamięci i wyszukać wartość w tabelach, aby określić reprezentację znaku. Jest to możliwe, ponieważ deweloper wie o adresie początkowym ciągu w oparciu o kod źródłowy.
 
-Visual C++ akceptuje znaków dwubajtowych, wszędzie tam, gdzie jest to zrobić. W tym nazwy ścieżek i nazwy plików w oknach dialogowych i wpisów tekstowych w Edytor zasobów Visual C++ (na przykład statyczny tekst w edytorze okien dialogowych) i wpisy statyczny tekst w edytorze ikon. Ponadto, preprocesor rozpoznaje niektórych dyrektyw znaków dwubajtowych — na przykład plik nazwy w `#include` instrukcji i jako argumenty do `code_seg` i `data_seg` pragmy. W edytorze kodu źródłowego znaków dwubajtowych w komentarzach i literały ciągów są akceptowane, ale nie w elementy języka C/C++ (np. nazwy zmiennych).
+Wizualizacja C++ akceptuje znaki dwubajtowe, wszędzie tam, gdzie jest to odpowiednie. Obejmuje to nazwy ścieżek i nazwy plików w oknach dialogowych i wpisów tekstowych w edytorze C++ zasobów wizualnych (na przykład tekst statyczny w edytorze okien dialogowych i statyczne wpisy tekstowe w edytorze ikon). Ponadto Preprocesor rozpoznaje kilka dyrektyw dwubajtowych — na przykład nazwy plików w `#include` instrukcjach i jako argumenty `code_seg` do dyrektywy i `data_seg` . W edytorze kodu źródłowego znaki dwubajtowe w komentarzach i literałach ciągów są akceptowane, ale nie w elementachC++ języka C (takich jak nazwy zmiennych).
 
-##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a> Obsługa dla edytora metody wprowadzania (IME)
+##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a>Obsługa edytora Input Method Editor (IME)
 
-Aplikacje napisane z myślą o wschodnioazjatyckich rynków, na których zazwyczaj używają MBCS (na przykład, Japonia) obsługuje Windows IME do wprowadzania zarówno pojedynczego i znaków dwubajtowych znaków. Środowisko projektowe Visual C++ zawiera pełne wsparcie dla edytora IME.
+Aplikacje przeznaczone dla rynków wschodnioazjatyckich, które używają MBCS (na przykład Japonia), zwykle obsługują Edytor IME systemu Windows do wprowadzania znaków pojedynczej i dwubajtowej. Środowisko programistyczne Visual C++ Environment zawiera pełną obsługę edytora IME.
 
-Klawiatury japońskiej nie obsługują bezpośrednio znaków Kanji. Edytora IME konwertuje ciąg fonetycznych wprowadzane w jednej z innych alfabety japoński (Romaji, Katakana lub znaków Hiragana) do jego możliwe reprezentacje Kanji. W przypadku niejednoznaczności, możesz wybrać kilka rozwiązań alternatywnych. Po wybraniu zamierzony znaków Kanji edytora IME przekazuje dwa `WM_CHAR` wiadomości do kontrolowania aplikacji.
+Klawiatury japońskie nie obsługują bezpośrednio znaków kanji. Edytor IME konwertuje ciąg fonetyczny wprowadzony w jednym z pozostałych alfabetów japońskich (Romaji, katakana lub Hiragana) na możliwe reprezentacje kanji. Jeśli występuje niejednoznaczność, można wybrać jedną z kilku alternatyw. Po wybraniu zamierzonego znaku kanji, Edytor IME przekazuje dwa `WM_CHAR` komunikaty do aplikacji kontrolującej.
 
-Edytora IME aktywowany przez ALT +\` kombinacji klawiszy, jest wyświetlana jako zestaw przycisków (wskaźnik) i okno konwersji. Aplikacja umieszcza okno w punkcie wstawiania tekstu. Aplikacja musi obsłużyć `WM_MOVE` i `WM_SIZE` wiadomości według położenia okna konwersji do nowej lokalizacji i rozmiaru okna docelowego.
+Edytor IME, aktywowany przez kombinację klawiszy\` Alt +, pojawia się jako zestaw przycisków (wskaźnik) i okna konwersji. Aplikacja umieszcza okno w punkcie wstawiania tekstu. Aplikacja musi obsługiwać `WM_MOVE` i `WM_SIZE` komunikatów przez zmianę położenia okna konwersji, aby była zgodna z nową lokalizacją lub rozmiarem okna docelowego.
 
-Jeśli chcesz, aby użytkownicy twojej aplikacji, aby mieć możliwość wprowadzania znaków Kanji, aplikacja musi obsługiwać komunikaty Windows edytora IME. Aby uzyskać więcej informacji na temat programowania w edytorze IME zobacz [Menedżera metody wprowadzania](/windows/desktop/intl/input-method-manager).
+Jeśli chcesz, aby użytkownicy aplikacji mogli wprowadzać znaki kanji, aplikacja musi obsługiwać komunikaty edytora IME systemu Windows. Aby uzyskać więcej informacji na temat programowania edytora IME, zobacz [Input Method Manager](/windows/win32/intl/input-method-manager).
 
-## <a name="visual-c-debugger"></a>Visual C++ Debugger
+## <a name="visual-c-debugger"></a>Debuger C++ wizualizacji
 
-Debuger Visual C++ umożliwia ustawianie punktów przerwania w edytorze IME komunikaty w protokole. Ponadto znaki dwubajtowe można wyświetlić w oknie pamięci.
+Debuger wizualizacji C++ umożliwia ustawianie punktów przerwania w komunikatach edytora IME. Ponadto w oknie pamięci można wyświetlić znaki dwubajtowe.
 
 ## <a name="command-line-tools"></a>Narzędzia wiersza polecenia
 
-Narzędzia wiersza polecenia języka Visual C++, w tym kompilator, NMAKE i kompilator zasobów (RC. Z rozszerzeniem EXE), mają włączoną MBCS. /C — opcja kompilatora zasobów można użyć, aby zmienić domyślną stronę kodową, podczas kompilowania zasobów aplikacji.
+Narzędzia wiersza C++ polecenia wizualne, w tym KOMPILATOR, NMAKE i kompilator zasobów (RC. EXE) jest włączony MBCS. Można użyć/c opcji kompilatora zasobów, aby zmienić domyślną stronę kodową podczas kompilowania zasobów aplikacji.
 
-Aby zmienić domyślne ustawienia regionalne w czasie kompilacji kodu źródłowego, należy użyć [#pragma setlocale](../preprocessor/setlocale.md).
+Aby zmienić domyślne ustawienia regionalne w czasie kompilacji kodu źródłowego, użyj [#pragma](../preprocessor/setlocale.md)setlocale.
 
 ## <a name="graphical-tools"></a>Narzędzia graficzne
 
-Narzędzia oparte na Visual C++ Windows, takich jak narzędzie Spy ++ i zasobów, narzędzia, do edycji w pełni obsługiwać ciągi znaków edytora IME.
+Narzędzia oparte C++ na systemie Windows, takie jak Spy + + i narzędzia do edycji zasobów, w pełni obsługują ciągi IME.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,37 +1,37 @@
 ---
-title: Punkty połączenia klasy (ATL)
+title: Klasy punktów połączenia (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - classes [C++], connection points
 - connection points classes
 ms.assetid: 076365fa-299a-4dce-84c3-a5dff0e0da1f
-ms.openlocfilehash: 8e1ee67f75af1fa38693f7ddb487580ab733cc58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0dba06b072e1e9ca545ccbea196fcfe371b02157
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250817"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492446"
 ---
 # <a name="connection-points-classes"></a>Klasy punktów połączenia
 
-Następujące klasy obsługi punkty połączeń:
+Następujące klasy zapewniają obsługę punktów połączenia:
 
-- [IConnectionPointContainerImpl](../atl/reference/iconnectionpointcontainerimpl-class.md) implementuje kontener punktu połączenia.
+- [IConnectionPointContainerImpl](../atl/reference/iconnectionpointcontainerimpl-class.md) Implementuje kontener punktu połączenia.
 
-- [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) implementuje punkt połączenia.
+- [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) Implementuje punkt połączenia.
 
-- [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md) implementuje reprezentujący punkt połączenia [ipropertynotifysink —](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) interfejsu.
+- [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md) Implementuje punkt połączenia reprezentujący Interfejs [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) .
 
-- [CComDynamicUnkArray](../atl/reference/ccomdynamicunkarray-class.md) zarządza nieograniczone połączenia między punktem połączenia i jego ujścia.
+- [CComDynamicUnkArray](../atl/reference/ccomdynamicunkarray-class.md) Zarządza nieograniczoną liczbą połączeń między punktem połączenia a jego ujściam.
 
-- [CComUnkArray](../atl/reference/ccomunkarray-class.md) zarządza stałą liczbą połączeń między punktem połączenia i jego ujścia.
+- [CComUnkArray](../atl/reference/ccomunkarray-class.md) Zarządza stałą liczbą połączeń między punktem połączenia a jego ujściam.
 
-- [CFirePropNotifyEvent](../atl/reference/cfirepropnotifyevent-class.md) powiadamia zbiornikiem klienta, który do właściwości obiektu został zmieniony lub zostanie zmienione.
+- [CFirePropNotifyEvent](../atl/reference/cfirepropnotifyevent-class.md) Powiadamia ujścia klienta o zmianie właściwości obiektu lub o zmianie.
 
-- [IDispEventImpl](../atl/reference/idispeventimpl-class.md) zapewnia obsługę punkty połączenia dla obiektu ATL COM. Punkty połączenia są mapowane z mapą obiekt sink zdarzenia są dostarczane przez obiekt COM.
+- [IDispEventImpl](../atl/reference/idispeventimpl-class.md) Zapewnia obsługę punktów połączenia dla obiektu ATL COM. Te punkty połączenia są mapowane na mapę ujścia zdarzeń, która jest dostarczana przez obiekt COM.
 
-- [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) działa w połączeniu z obiektu sink zdarzenia mapy w swojej klasie w celu kierowanie zdarzeń do funkcji odpowiedni program obsługi.
+- [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) Działa w połączeniu z mapą ujścia zdarzeń w klasie w celu kierowania zdarzeń do odpowiedniej funkcji obsługi.
 
 ## <a name="related-articles"></a>Powiązane artykuły
 
@@ -41,6 +41,6 @@ Następujące klasy obsługi punkty połączeń:
 
 ## <a name="see-also"></a>Zobacz także
 
-[Klasa — Przegląd](../atl/atl-class-overview.md)<br/>
+[Przegląd klas](../atl/atl-class-overview.md)<br/>
 [Makra punktów połączenia](../atl/reference/connection-point-macros.md)<br/>
 [Funkcje globalne punktu połączenia](../atl/reference/connection-point-global-functions.md)

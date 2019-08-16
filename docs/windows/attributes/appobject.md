@@ -1,21 +1,21 @@
 ---
-title: appobject — (atrybut COM C++)
+title: appobject (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.appobject
 helpviewer_keywords:
 - appobject attribute
 ms.assetid: 8ce30b73-e945-403e-a755-6bc78078a695
-ms.openlocfilehash: 8219c8fdd1b1df93f92fc6c1d0324a2475d3384b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e02cedff70ac32f7edfdb92b240269c34befee7e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409710"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490933"
 ---
 # <a name="appobject"></a>appobject
 
-Identyfikuje coclass jako obiekt aplikacji, który jest skojarzony z aplikacją pełną .exe i wskazuje, że funkcje i właściwości z koklas, globalnie dostępną w tym [biblioteki typów](../../mfc/automation-clients-using-type-libraries.md).
+Identyfikuje klasy coclass jako obiekt aplikacji, który jest skojarzony z pełną aplikacją. exe i wskazuje, że funkcje i właściwości klasy coclass są dostępne globalnie w tej [bibliotece typów](../../mfc/automation-clients-using-type-libraries.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,11 +25,11 @@ Identyfikuje coclass jako obiekt aplikacji, który jest skojarzony z aplikacją 
 
 ## <a name="remarks"></a>Uwagi
 
-**Appobject —** atrybut C++ ma taką samą funkcjonalność jak [appobject —](/windows/desktop/Midl/appobject) atrybutów w MIDL.
+Atrybut **appobject** C++ ma takie same funkcje jak atrybut [appobject](/windows/win32/Midl/appobject) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod przedstawia definicję klasy prosty, poprzedzony przez blok atrybutu, który zawiera **appobject —**:
+Poniższy kod pokazuje prostą definicję klasy poprzedzoną blokiem atrybutu, który zawiera **appobject**:
 
 ```cpp
 // cpp_attr_ref_appobject.cpp
@@ -52,12 +52,12 @@ class A : public ICustom {
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **— struktura**|
+|**Dotyczy**|**Klasa**, **Struktura**|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|`coclass`|
+|**Wymagane atrybuty**|`coclass`|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

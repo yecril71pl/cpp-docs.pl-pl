@@ -24,16 +24,16 @@ f1_keywords:
 - VC.Project.VCManifestTool.UpdateFileHashesSearchPath
 - vc.project.AdditionalOptionsPage
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-ms.openlocfilehash: adc821370201eeb83b6c6b4b875e5e62b0fa523f
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: c8413a28024361db82ca74858453202393987e60
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606444"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492688"
 ---
 # <a name="manifest-tool-property-pages"></a>Strony właściwości narzędzia manifestu
 
-Te strony służą do określania opcji ogólnych dla programu [Mt. exe](https://msdn.microsoft.com/library/aa375649). Te strony znajdują się w obszarze właściwości**konfiguracji** > właściwości **projektu** >  > **narzędzie manifestu**.
+Te strony służą do określania opcji ogólnych dla programu [Mt. exe](/windows/win32/sbscs/mt-exe). Te strony znajdują się w obszarze właściwości**konfiguracji** > właściwości **projektu** >  > **narzędzie manifestu**.
 
 ## <a name="general-property-page"></a>Ogólna strona właściwości
 
@@ -105,7 +105,7 @@ Określa, czy aplikacja obsługuje DPI. Domyślnie ustawienie ma **wartość tak
 
 ## <a name="isolated-com-property-page"></a>Strona właściwości izolowanego modelu COM
 
-Aby uzyskać więcej informacji na temat izolowanego modelu COM, [zobacz [izolowane aplikacje](/windows/desktop/SbsCs/isolated-applications) i instrukcje: Twórz izolowane aplikacje do korzystania ze](../how-to-build-isolated-applications-to-consume-com-components.md)składników com.
+Aby uzyskać więcej informacji na temat izolowanego modelu COM, [zobacz [izolowane aplikacje](/windows/win32/SbsCs/isolated-applications) i instrukcje: Twórz izolowane aplikacje do korzystania ze](../how-to-build-isolated-applications-to-consume-com-components.md)składników com.
 
 ###  <a name="type-library-file"></a>Plik biblioteki typów
 

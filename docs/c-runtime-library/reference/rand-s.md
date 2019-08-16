@@ -27,16 +27,16 @@ helpviewer_keywords:
 - cryptographically secure random numbers
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: d196a6f5d7483deb9a7e1b8d7fa929532b6197db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a2c57713d4b455971f24b64dc124862749e927a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358128"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499562"
 ---
-# <a name="rands"></a>rand_s
+# <a name="rand_s"></a>rand_s
 
-Generuje numer pseudolosowych. Jest to bardziej bezpieczna wersja funkcji [rand](rand.md), ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Generuje numer pseudolosowych. Jest to bezpieczniejsza wersja funkcji [Rand](rand.md)z ulepszeniami zabezpieczeń opisanymi w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,24 +47,24 @@ errno_t rand_s(unsigned int* randomValue);
 ### <a name="parameters"></a>Parametry
 
 *randomValue*<br/>
-Wskaźnik na liczbę całkowitą zawierającą wygenerowaną wartość.
+Wskaźnik do liczby całkowitej, która przechowuje wygenerowaną wartość.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli operacja się powiedzie, w przeciwnym razie, kod błędu. Jeśli wskaźnik danych wejściowych _randomValue_ jest pustym wskaźnikiem, funkcja wywołuje program obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **EINVAL** i ustawia **errno** do **EINVAL**. Jeśli funkcja nie powiedzie się z jakiegokolwiek powodu, *_randomValue_ jest równa 0.
+Zero, jeśli to się powiedzie, w przeciwnym razie, kod błędu. Jeśli wskaźnik wejściowy _randomValue_ jest wskaźnikiem o wartości null, funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **EINVAL** i ustawia **errno** na **EINVAL**. Jeśli funkcja nie powiedzie się z innego powodu, *_randomValue_ jest ustawiona na 0.
 
 ## <a name="remarks"></a>Uwagi
 
-**Rand_s —** funkcja zapisuje pseudolosowych liczbą całkowitą z zakresu od 0 do **UINT_MAX** na wskaźnik danych wejściowych. **Rand_s —** funkcja używa systemu operacyjnego do generowania liczb losowych kryptograficznie bezpieczne. Używaj inicjatora generowane przez [srand —](srand.md) funkcji, ani nie ogranicza losową sekwencję liczb, używane przez [rand](rand.md).
+Funkcja **rand_s** zapisuje liczbę całkowitą pseudolosowych z zakresu od 0 do **UINT_MAX** na wskaźnik wejściowy. Funkcja **rand_s** używa systemu operacyjnego do generowania kryptograficznie zabezpieczonych liczb losowych. Nie używa inicjatora wygenerowanego przez funkcję [srand](srand.md) ani nie ma wpływu na losową sekwencję liczbową używaną przez [Rand](rand.md).
 
-**Rand_s —** funkcja wymaga, aby stała tym **_CRT_RAND_S** można zdefiniować przed instrukcji dołączania dla funkcji, które mają zostać zadeklarowane, jak w poniższym przykładzie:
+Funkcja **rand_s** wymaga, aby stała **_CRT_RAND_S** była zdefiniowana przed instrukcją dołączenia dla funkcji, która ma zostać zadeklarowana, tak jak w poniższym przykładzie:
 
 ```C
 #define _CRT_RAND_S
 #include <stdlib.h>
 ```
 
-**rand_s —** zależy od [RtlGenRandom](/windows/desktop/api/ntsecapi/nf-ntsecapi-rtlgenrandom) interfejsu API, który jest tylko dostępne w Windows XP i nowszych wersjach.
+**rand_s** zależy od interfejsu API [RtlGenRandom](/windows/win32/api/ntsecapi/nf-ntsecapi-rtlgenrandom) , który jest dostępny tylko w systemie Windows XP i nowszych.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -72,7 +72,7 @@ Zero, jeśli operacja się powiedzie, w przeciwnym razie, kod błędu. Jeśli ws
 |-------------|---------------------|
 |**rand_s**|\<stdlib.h>|
 
-Aby uzyskać więcej informacji, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

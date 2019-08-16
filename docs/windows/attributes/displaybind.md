@@ -1,21 +1,21 @@
 ---
-title: displaybind — (atrybut COM C++)
+title: displaybind (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.displaybind
 helpviewer_keywords:
 - displaybind attribute
 ms.assetid: b3d70396-78e4-43d9-9583-16ddb8c9bb1f
-ms.openlocfilehash: b16e809781170d0c5dfe301e6dd73e6a27046835
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 168db224e7b15656308259f9507e1079744f1a73
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409697"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490886"
 ---
 # <a name="displaybind"></a>displaybind
 
-Wskazuje właściwość, która powinna być wyświetlana użytkownikowi jak możliwa do powiązania.
+Wskazuje właściwość, która powinna być wyświetlana użytkownikowi jako możliwy do powiązania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,11 +25,11 @@ Wskazuje właściwość, która powinna być wyświetlana użytkownikowi jak mo�
 
 ## <a name="remarks"></a>Uwagi
 
-**Displaybind —** atrybut C++ ma taką samą funkcjonalność jak [displaybind —](/windows/desktop/Midl/displaybind) atrybutów w MIDL.
+Atrybut **displaybind** C++ ma takie same funkcje jak atrybut [displaybind](/windows/win32/Midl/displaybind) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [możliwej do wiązania](bindable.md) przykład sposobu użycia **displaybind —**.
+Zapoznaj się z przykładem dla [powiązania](bindable.md) z przykładem użycia **displaybind**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -37,12 +37,12 @@ Zobacz przykład [możliwej do wiązania](bindable.md) przykład sposobu użycia
 
 |||
 |-|-|
-|**Dotyczy**|Metody interfejsu|
+|**Dotyczy**|Interface — Metoda|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

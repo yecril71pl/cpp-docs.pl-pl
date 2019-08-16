@@ -31,16 +31,16 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: 87ac912ab47483929b3afc2357331f8d97264b31
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37c5760eb5231d17a8b17fe5d21f1459a865c067
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341707"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500018"
 ---
-# <a name="access-waccess"></a>_access, _waccess
+# <a name="_access-_waccess"></a>_access, _waccess
 
-Określa, czy plik jest tylko do odczytu, czy nie. Bardziej bezpieczne wersje są dostępne; zobacz [_access_s —, _waccess_s —](access-s-waccess-s.md).
+Określa, czy plik jest tylko do odczytu, czy nie. Dostępne są bardziej bezpieczne wersje; Zobacz [_access_s, _waccess_s](access-s-waccess-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -60,37 +60,37 @@ int _waccess(
 *Ścieżka*<br/>
 Ścieżka pliku lub katalogu.
 
-*Tryb*<br/>
+*wyst*<br/>
 Atrybut odczytu/zapisu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda funkcja zwraca 0, jeśli plik ma w danym trybie. Funkcja zwraca wartość -1, jeśli plik o nazwie nie istnieje lub nie ma podanego trybu; w tym przypadku `errno` jest ustawiona, jak pokazano w poniższej tabeli.
+Każda funkcja zwraca wartość 0, jeśli plik ma określony tryb. Funkcja zwraca wartość-1, jeśli nazwany plik nie istnieje lub nie ma podanego trybu; w tym przypadku jest `errno` ustawiony tak, jak pokazano w poniższej tabeli.
 
 |||
 |-|-|
-`EACCES`|Odmowa dostępu: ustawienie uprawnienia pliku zezwalają na dostęp określonym.
-`ENOENT`|Nazwa pliku lub nie można odnaleźć ścieżki.
+`EACCES`|Odmowa dostępu: ustawienie uprawnienia pliku nie zezwala na określony dostęp.
+`ENOENT`|Nie odnaleziono nazwy pliku lub ścieżki.
 `EINVAL`|Nieprawidłowy parametr.
 
-Aby uzyskać więcej informacji na temat tych i innych kodach powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tych i innych kodów powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy jest używana z plikami, **_access** funkcja określa, czy określony plik lub katalog istnieje i ma atrybuty określone przez wartość *tryb*. Gdy jest używana z katalogami, **_access** określa jedynie, czy podany katalog istnieje; w Windows 2000 i nowszych systemów operacyjnych, wszystkie katalogi ma uprawnienia odczytu i zapisu.
+Gdy jest używany z plikami, funkcja **_access** określa, czy określony plik lub katalog istnieje i ma atrybuty określone przez wartość *trybu*. Gdy jest używany z katalogami, **_access** określa tylko, czy określony katalog istnieje; w systemach operacyjnych Windows 2000 i nowszych wszystkie katalogi mają dostęp do odczytu i zapisu.
 
-|*tryb* wartość|Plik kontroli|
+|wartość *trybu*|Sprawdza plik dla|
 |------------------|---------------------|
-|00|Istnienie tylko|
+|00|Tylko istnienie|
 |02|Tylko do zapisu|
-|04|tylko do odczytu|
+|04|Tylko do odczytu|
 |06|Odczyt i zapis|
 
-Ta funkcja sprawdza tylko, czy plików i katalogów są tylko do odczytu lub nie, nie sprawdza ustawienia zabezpieczeń systemu plików. W tym należy tokenu dostępu. Aby uzyskać więcej informacji na temat zabezpieczeń systemu plików, zobacz [tokenów dostępu](/windows/desktop/SecAuthZ/access-tokens). Klasy ATL istnieje w celu zapewnienia tej funkcji; zobacz [klasa CAccessToken](../../atl/reference/caccesstoken-class.md).
+Ta funkcja sprawdza tylko, czy plik i katalog są tylko do odczytu, czy nie, nie sprawdza ustawień zabezpieczeń systemu plików. Dla tego wymaga tokenu dostępu. Aby uzyskać więcej informacji na temat zabezpieczeń systemu plików, zobacz [tokeny dostępu](/windows/win32/SecAuthZ/access-tokens). Klasa ATL istnieje, aby zapewnić tę funkcję; Zobacz [Klasa CAccessToken](../../atl/reference/caccesstoken-class.md).
 
-**_waccess —** to wersja znaku dwubajtowego **_access**; *ścieżki* argument **_waccess —** jest ciągiem znaku dwubajtowego. **_waccess —** i **_access** zachowują się identycznie.
+**_waccess** to dwubajtowa wersja **_access**; argument *Path* **_waccess** jest ciągiem znaków dwubajtowych. **_waccess** i **_access** zachowują się identycznie w inny sposób.
 
-Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *ścieżki* ma wartość NULL lub *tryb* nie określa prawidłowego trybu wywołany nieprawidłowy parametr uchwytu, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ustawia `errno` do `EINVAL` i zwraca wartość -1.
+Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *ścieżka* ma wartość null lub w *trybie* nie określono prawidłowego trybu, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ustawia `errno` jako `EINVAL` i zwraca wartość-1.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -103,11 +103,11 @@ Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *ścieżki* ma warto
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
 |-------------|---------------------|----------------------|
 |**_access**|\<io.h>|\<errno.h>|
-|**_waccess**|\<WChar.h > lub \<io.h >|\<errno.h>|
+|**_waccess**|\<WCHAR. h > lub \<IO. h >|\<errno.h>|
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie użyto **_access** można znaleźć w pliku o nazwie crt_ACCESS. C, aby zobaczyć, czy istnieje i czy jest dozwolone zapisywanie.
+Poniższy przykład używa **_access** do sprawdzenia pliku o nazwie crt_ACCESS. C, aby sprawdzić, czy istnieje, i czy zapis jest dozwolony.
 
 ```C
 // crt_access.c
@@ -145,4 +145,4 @@ File crt_ACCESS.C does not have write permission.
 [_chmod, _wchmod](chmod-wchmod.md)<br/>
 [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>
-[_stat, _wstat — funkcje](stat-functions.md)
+[_stat, _wstat Functions](stat-functions.md)

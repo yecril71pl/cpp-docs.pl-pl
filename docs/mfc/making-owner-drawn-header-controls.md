@@ -8,16 +8,16 @@ helpviewer_keywords:
 - controls [MFC], header
 - owner-drawn header controls [MFC]
 ms.assetid: 455c113b-e8d0-400c-8690-dbb92cba0d05
-ms.openlocfilehash: 145134a4c3a0518d5248d72c098927ed4ee5042a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9147708f672a5aec26f58a3c81ed7a5dfcf8cad
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310854"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508324"
 ---
 # <a name="making-owner-drawn-header-controls"></a>Tworzenie formantów nagłówka rysowanych przez właściciela
 
-Można zdefiniować poszczególne elementy kontrolki nagłówka ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) jako elementy rysowanych przez właściciela. Aby uzyskać więcej informacji, zobacz [kontrolki nagłówka Owner-Drawn](/windows/desktop/Controls/header-controls) w zestawie Windows SDK.
+Można zdefiniować poszczególne elementy kontrolki nagłówka ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) jako elementy rysowane przez właściciela. Aby uzyskać więcej informacji, zobacz [kontrolki nagłówka rysowane przez właściciela](/windows/win32/Controls/header-controls) w Windows SDK.
 
 ## <a name="see-also"></a>Zobacz także
 

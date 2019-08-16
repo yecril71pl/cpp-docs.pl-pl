@@ -1,19 +1,19 @@
 ---
-title: idl_module (C++ atrybutów COM)
+title: idl_module (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_module
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-ms.openlocfilehash: 80e4909a61b5b53ecde19471f2c838dd4c425874
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8838a833552ae7066dbcf17b4f676d6626c069f8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409463"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514677"
 ---
-# <a name="idlmodule"></a>idl_module
+# <a name="idl_module"></a>idl_module
 
 Określa punkt wejścia w pliku dll.
 
@@ -26,46 +26,46 @@ function declaration
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwa*<br/>
-Zdefiniowana przez użytkownika nazwa dla bloku kodu, który będzie wyświetlany w pliku .idl.
+*name*<br/>
+Zdefiniowana przez użytkownika nazwa bloku kodu, który będzie wyświetlany w pliku IDL.
 
 *dllname*<br/>
-(Opcjonalnie) Plik .dll, który zawiera eksportu.
+Obowiązkowe Plik. dll, który zawiera eksport.
 
 *uuid*<br/>
-(Opcjonalnie) Unikatowy identyfikator.
+Obowiązkowe Unikatowy identyfikator.
 
 *helpstring*<br/>
-(Opcjonalnie) Ciąg znaków używany do opisania biblioteki typów.
+Obowiązkowe Ciąg znaków używany do opisywania biblioteki typów.
 
 *helpstringcontext*<br/>
-(Opcjonalnie) Identyfikator tematu pomocy w pliku hlp lub chm.
+Obowiązkowe Identyfikator tematu pomocy w pliku HLP lub chm.
 
 *helpcontext*<br/>
-(Opcjonalnie) Identyfikator pomocy dla tego typu biblioteki.
+Obowiązkowe Identyfikator pomocy dla tej biblioteki typów.
 
 *hidden*<br/>
-(Opcjonalnie) Parametr, który zapobiega wyświetlaniu w bibliotece. Zobacz [ukryte](/windows/desktop/Midl/hidden) atrybutu MIDL, aby uzyskać więcej informacji.
+Obowiązkowe Parametr, który uniemożliwia wyświetlenie biblioteki. Aby uzyskać więcej informacji, zobacz [ukryty](/windows/win32/Midl/hidden) atrybut MIDL.
 
 *restricted*<br/>
-(Opcjonalnie) Elementy członkowskie biblioteki nie można wywołać arbitralnie. Zobacz [ograniczeniami](/windows/desktop/Midl/restricted) atrybutu MIDL, aby uzyskać więcej informacji.
+Obowiązkowe Nie można arbitralnie wywołać elementów członkowskich biblioteki. Aby uzyskać [](/windows/win32/Midl/restricted) więcej informacji, zobacz atrybut MIDL z ograniczeniami.
 
 *Deklaracja funkcji*<br/>
-Funkcja, która będą definiować.
+Funkcja, która zostanie zdefiniowana.
 
 ## <a name="remarks"></a>Uwagi
 
-**Idl_module** C++ atrybut umożliwia określenie punktu wejścia w pliku .dll, dzięki czemu można zaimportować z pliku dll.
+Atrybut **idl_module** C++ umożliwia określenie punktu wejścia w pliku dll, który umożliwia importowanie z pliku dll.
 
-**Idl_module** atrybut ma funkcje podobne do [modułu](/windows/desktop/Midl/module) atrybutów w MIDL.
+Atrybut **idl_module** ma funkcje podobne do atrybutu MIDL [modułu](/windows/win32/Midl/module) .
 
-Możesz wyeksportować nic z obiektu COM, który można eksportować z pliku .dll, umieszczając punkt wejścia biblioteki DLL w bloku biblioteki pliku .idl.
+Można eksportować elementy z obiektu COM, który można wyeksportować z pliku DLL przez umieszczenie punktu wejścia biblioteki DLL w bloku biblioteki pliku. idl.
 
-Usługi muszą używać **idl_module** w dwóch krokach. Najpierw należy zdefiniować pary nazwa/DLL. Następnie, kiedy używasz **idl_module** do określonego punktu wejścia, określ nazwę oraz wszelkie dodatkowe atrybuty.
+Musisz użyć **idl_module** w dwóch krokach. Najpierw należy zdefiniować parę nazwa/Biblioteka DLL. Następnie, gdy używasz **idl_module** do określenia punktu wejścia, określ nazwę i wszelkie dodatkowe atrybuty.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod przedstawia sposób użycia **idl_module** atrybutu:
+Poniższy kod pokazuje, jak używać atrybutu **idl_module** :
 
 ```cpp
 // cpp_attr_ref_idl_module.cpp
@@ -82,12 +82,12 @@ void FuncName(int i);
 
 |||
 |-|-|
-|**Dotyczy**|Dowolne miejsce|
+|**Dotyczy**|Dowolnym miejscu|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

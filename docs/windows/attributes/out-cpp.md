@@ -1,21 +1,21 @@
 ---
-title: out (atrybut COM C++)
+title: out (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.out
 helpviewer_keywords:
 - out attribute
 ms.assetid: 5051b1bf-4949-4bf1-b82f-35e14f0f244b
-ms.openlocfilehash: 7020bd6cfcf8bcdbfb773908e693c6364a29e343
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11c8e4473f0b849fab7846a825b90da3ed9f036f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407604"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514288"
 ---
 # <a name="out-c"></a>out (C++)
 
-Określa parametry wskaźnika, które zostaną zwrócone z procedury wywoływanej do procedury wywołującej (z serwera do klienta).
+Identyfikuje parametry wskaźnika, które są zwracane z wywoływanej procedury do procedury wywołującej (z serwera do klienta).
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,11 +25,11 @@ Określa parametry wskaźnika, które zostaną zwrócone z procedury wywoływane
 
 ## <a name="remarks"></a>Uwagi
 
-**Się** atrybut C++ ma taką samą funkcjonalność jak [się](/windows/desktop/Midl/out-idl) atrybutów w MIDL.
+Atrybut **out** C++ ma taką samą funkcjonalność, jak atrybut [out](/windows/win32/Midl/out-idl) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [możliwej do wiązania](bindable.md) do użytku przykładowe **się**.
+Zapoznaj się z przykładem [powiązania](bindable.md) dla przykładowego użycia.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -39,10 +39,10 @@ Zobacz przykład [możliwej do wiązania](bindable.md) do użytku przykładowe *
 |-|-|
 |**Dotyczy**|Parametr interfejsu|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

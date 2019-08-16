@@ -1,5 +1,5 @@
 ---
-title: / Execution-Charset (Ustaw zestaw znaków wykonywania)
+title: /Execution-charset (Ustaw zestaw znaków wykonywania)
 ms.date: 02/06/2019
 f1_keywords:
 - execution-charset
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - /execution-charset compiler option
 - -execution-charset compiler option
 ms.assetid: 0e02f487-2236-45bc-95f3-5760933a8f96
-ms.openlocfilehash: 0a140bf438a44df152b1578f4569a087a604061c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44e83524867bc8a914706e1f5b45b61bc4a48087
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271440"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492918"
 ---
-# <a name="execution-charset-set-execution-character-set"></a>/ Execution-Charset (Ustaw zestaw znaków wykonywania)
+# <a name="execution-charset-set-execution-character-set"></a>/Execution-charset (Ustaw zestaw znaków wykonywania)
 
-Umożliwia określenie zestawu dla Twojego pliku wykonywalnego znaków wykonania.
+Umożliwia określenie zestawu znaków wykonywania dla pliku wykonywalnego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,28 +28,28 @@ Umożliwia określenie zestawu dla Twojego pliku wykonywalnego znaków wykonania
 ## <a name="arguments"></a>Argumenty
 
 *IANA_name*<br/>
-Nazwa zestawu znaków zdefiniowanych przez organizację IANA.
+Nazwa zestawu znaków zdefiniowanego przez organizację IANA.
 
 *CPID*<br/>
-Identyfikator strony kodu.
+Identyfikator strony kodowej.
 
 ## <a name="remarks"></a>Uwagi
 
-Możesz użyć **/Execution-Charset** opcję, aby określić zestaw znaków wykonania. Zestaw znaków wykonania jest kodowanie używane do tekstu programu, która jest wprowadzana do fazy kompilacji po wszystkich przetwarzania wstępnego kroki. Zestaw znaków jest używany do wewnętrznej reprezentacji dowolnego ciąg lub znak literałów w skompilowanym kodzie. Ustaw tę opcję, aby określić wykonania rozszerzonego zestawu znaków do użycia podczas plików źródłowych zawierają znaki, które nie są reprezentowanych w zestaw znaków wykonania podstawowego. Możesz użyć albo organizację IANA nazwy zestawu znaków ISO lub pojedynczego znaku kropki (.), a następnie przez identyfikator 3 – 5 cyfr kodu dziesiętnego strony, aby określić używany zestaw znaków. Aby uzyskać listę obsługiwanych identyfikatorami stronę kodu i nazwy zestawu znaków, zobacz [kodu strony identyfikatory](/windows/desktop/Intl/code-page-identifiers).
+Aby określić zestaw znaków wykonania, można użyć opcji **/Execution-charset** . Zestaw znaków wykonywania jest kodowaniem używanym dla tekstu programu, który jest danymi wejściowymi fazy kompilacji po wszystkich krokach przetwarzania wstępnego. Ten zestaw znaków jest używany do wewnętrznej reprezentacji dowolnego ciągu lub literału znakowego w skompilowanym kodzie. Ustaw tę opcję, aby określić zestaw znaków wykonania rozszerzonego, który ma być używany, gdy pliki źródłowe zawierają znaki, które nie są reprezentowane w podstawowym zestawie znaków wykonania. Aby określić zestaw znaków, który ma być używany, można użyć nazwy zestawu znaków IANA lub ISO albo kropki (.), a następnie cyfry od 3 do 5 cyfr dziesiętnego identyfikatora strony kodowej. Aby uzyskać listę obsługiwanych identyfikatorów stron kodowych i nazw zestawów znaków, zobacz [identyfikatory stron kodowych](/windows/win32/Intl/code-page-identifiers).
 
-Domyślnie program Visual Studio wykrywa znacznika kolejności bajtów, aby określić, czy plik źródłowy jest w formacie zakodowanym Unicode, na przykład, UTF-16 lub UTF-8. Jeśli zostanie znaleziony Brak znacznika kolejności bajtów, zakłada się pliku źródłowego jest zakodowane przy użyciu bieżącej stronie kodowej użytkownika, chyba że określono nazwę lub kod strony zbiór znaków za pomocą **/Source-Charset** opcji lub **/UTF-8** opcji. Program Visual Studio umożliwia zapisywanie kodu źródłowego języka C++ za pomocą jednej z kilku kodowania znaków. Aby uzyskać informacji na temat zestawów znaków źródła i wykonania, zobacz [zestawy znaków](../../cpp/character-sets.md) w dokumentacji języka.
+Domyślnie program Visual Studio wykrywa znacznik kolejności bajtów, aby określić, czy plik źródłowy jest w zakodowanym formacie Unicode, na przykład UTF-16 lub UTF-8. Jeśli nie zostanie znaleziony znacznik kolejności bajtów, zakłada, że plik źródłowy jest zakodowany przy użyciu bieżącej strony kodowej użytkownika, o ile nie określono nazwy zestawu znaków lub strony kodowej za pomocą opcji **określono element/source-charset** lub **/UTF-8** . Program Visual Studio umożliwia zapisanie kodu C++ źródłowego przy użyciu dowolnego z kilku kodowań znaków. Aby uzyskać informacje o zestawach znaków źródła i wykonania, zobacz [zestawy znaków](../../cpp/character-sets.md) w dokumentacji języka.
 
-Jeśli chcesz ustawić zestaw znaków źródła i wykonania zestawu znaków na UTF-8, możesz użyć **/UTF-8** — opcja kompilatora jako skrót. Jest równoznaczne z użyciem **/source-charset:utf-8 /execution-charset:utf-8** w wierszu polecenia. Żadnego z tych opcji również włącza **/Validate-Charset** opcja domyślnie.
+Jeśli chcesz ustawić zestaw znaków źródła i zestaw znaków wykonania na UTF-8, możesz użyć opcji kompilatora **/UTF-8** jako skrótu. Jest równoważne określeniu **określono element/source-charset: UTF-8/Execution-charset: UTF-8** w wierszu polecenia. Każda z tych opcji domyślnie włącza opcję **/Validate-charset** .
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać więcej informacji, [Zobacz C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
-1. Rozwiń **właściwości konfiguracji**, **C/C++**, **wiersza polecenia** folderu.
+1. Rozwiń węzeł **Właściwości konfiguracji**, **C/C++** , **wiersz polecenia** .
 
-1. W **dodatkowe opcje**, Dodaj **/Execution-Charset** opcji, a następnie określ preferowany kodowania.
+1. W obszarze **Opcje dodatkowe**Dodaj opcję **/Execution-charset** i określ preferowane kodowanie.
 
-1. Wybierz **OK** Aby zapisać zmiany.
+1. Wybierz **przycisk OK** , aby zapisać zmiany.
 
 ## <a name="see-also"></a>Zobacz także
 

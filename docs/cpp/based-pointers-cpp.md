@@ -10,18 +10,18 @@ helpviewer_keywords:
 - based pointers
 - pointers, based
 ms.assetid: 1e5f2e96-c52e-4738-8e14-87278681205e
-ms.openlocfilehash: 771d3ee132e4cd63499fec886ef9f7cd06ec0260
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a0435aa89e4cf744a5bc3c6dc72a715ed55f954
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393964"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498787"
 ---
 # <a name="based-pointers-c"></a>Wskaźniki bazowe (C++)
 
 **Microsoft Specific**
 
-**__Based** — słowo kluczowe służy do deklarowania wskaźników oparte na wskaźnikach (wskaźników, które są przesunięcia od istniejących wskaźniki).
+Słowo kluczowe **__based** umożliwia deklarowanie wskaźników na podstawie wskaźników (wskaźników, które są przesunięciami z istniejących wskaźników).
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,9 +32,9 @@ type __based( base ) declarator
 
 ## <a name="remarks"></a>Uwagi
 
-Wskaźniki oparte wskaźnikiem adresów są jedynymi **__based** — słowo kluczowe prawidłowy w kompilacjach kodu 32-bitową lub 64-bitowych. Dla kompilatora Microsoft 32-bitowa C/C++ wskaźnik bazowy jest 32-bitowego przesunięcia z podstawowego wskaźnika 32-bitowych. Podobnych ograniczeń przechowywane dla 64-bitowego środowiska, gdy wskaźnik bazowy przesunięcie 64-bitowych, od base 64-bitowych.
+Wskaźniki oparte na adresach wskaźnika są jedyną formą słowa kluczowego **__based** , które są prawidłowe w kompilacjach 32-bitowych lub 64-bitowych. Dla Microsoft 32-bitowego języka C/C++ kompilator wskaźnik oparty jest 32-bitowym przesunięciem w bazie wskaźnika 32-bitowego. Podobne ograniczenie jest przechowywane w środowiskach 64-bitowych, gdzie wskaźnik oparty jest 64-bitowym przesunięciem od 64-bitowego bazy.
 
-Jednym z zastosowań wskaźniki oparte na wskaźnikach jest trwały identyfikatorów, które zawierają wskaźniki. Połączonej listy, która składa się z wskaźniki oparte na wskaźnik może można zapisywany na dysku, a następnie ponownie załadowany do innego miejsca w pamięci, za pomocą wskaźników pozostałe prawidłowe. Na przykład:
+Jednym z nich użycia dla wskaźników opartych na wskaźnikach jest dla trwałych identyfikatorów, które zawierają wskaźniki. Lista połączona, która składa się ze wskaźników opartych na wskaźniku, może zostać zapisana na dysku, a następnie ponownie załadowana do innego miejsca w pamięci, przy czym pozostałe wskaźniki są prawidłowe. Przykład:
 
 ```cpp
 // based_pointers1.cpp
@@ -46,18 +46,18 @@ struct llist_t {
 };
 ```
 
-Wskaźnik `vpBuffer` ma przypisany adres pamięci przydzielonej w pewnym momencie później w programie. Połączonej listy jest przenoszony z uwzględnieniem wartości `vpBuffer`.
+Do wskaźnika `vpBuffer` przypisano adres pamięci przydzielonej w późniejszym czasie w programie. Połączona lista zostanie przeniesiona względem wartości `vpBuffer`.
 
 > [!NOTE]
->  Utrwalanie identyfikatory zawierające wskaźniki może być również wykonywane przy użyciu [pliki mapowane w pamięci](/windows/desktop/Memory/file-mapping).
+>  Identyfikatory utrwalane zawierające wskaźniki można także wykonać przy użyciu [plików mapowanych na pamięć](/windows/win32/Memory/file-mapping).
 
-Gdy wyłuskaniem wskaźnika zależności, base musi być albo określone jawnie lub niejawnie znany za pośrednictwem deklaracji.
+W przypadku wyłuskania wskaźnika bazowego należy jawnie określić lub niejawnie znany przez deklarację.
 
-W celu zgodności z poprzednimi wersjami **_oparte** jest synonimem dla **__based** chyba że — opcja kompilatora [/Za \(Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md) jest określona.
+Aby zapewnić zgodność z poprzednimi wersjami, **_based** jest synonimem dla **__based** , chyba że jest określona opcja kompilatora [/za \(Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład demonstruje zmiana wskaźnik bazowy, zmieniając jej podstawy.
+Poniższy kod demonstruje zmianę wskaźnika bazowego, zmieniając jego podstawę.
 
 ```cpp
 // based_pointers2.cpp

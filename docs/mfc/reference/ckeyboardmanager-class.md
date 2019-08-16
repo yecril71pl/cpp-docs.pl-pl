@@ -30,16 +30,16 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: 3360a28d50f64546837cc5ef35dcfc761b4fb0f5
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e4f8f678e76113b5d012242f474ff0ab8b0628dd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341503"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505779"
 ---
 # <a name="ckeyboardmanager-class"></a>Klasa CKeyboardManager
 
-Zarządza tabelami klawiszy skrótów dla głównej ramki okna i okien ramek podrzędnych.
+Zarządza tabelami klawiszy skrótów dla okna głównego ramki i podrzędnych okien ramowych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,34 +54,34 @@ class CKeyboardManager : public CObject
 |||
 |-|-|
 |Nazwa|Opis|
-|[CKeyboardManager::CKeyboardManager](#ckeyboardmanager)|Konstruuje `CKeyboardManager` obiektu.|
+|[CKeyboardManager::CKeyboardManager](#ckeyboardmanager)|Konstruuje `CKeyboardManager` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |||
 |-|-|
 |Nazwa|Opis|
-|[CKeyboardManager::CleanUp](#cleanup)|Czyści tabelami klawiszy skrótów.|
-|[CKeyboardManager::FindDefaultAccelerator](#finddefaultaccelerator)|Pobiera domyślny klucz skrótu dla określonego polecenia i okna.|
-|[CKeyboardManager::IsKeyHandled](#iskeyhandled)|Określa, czy klucz jest obsługiwany przez tabeli klawiszy skrótu.|
-|[CKeyboardManager::IsKeyPrintable](#iskeyprintable)|Wskazuje, czy znak drukowalny.|
-|[CKeyboardManager::IsShowAllAccelerators](#isshowallaccelerators)|Wskazuje, czy menu pokazywania wszystkich klawiszy skrótów dla polecenia lub klawisza skrótu domyślne.|
-|[CKeyboardManager::LoadState](#loadstate)|Ładuje tabelami klawiszy skrótów z rejestru Windows.|
-|[CKeyboardManager::ResetAll](#resetall)|Ponownie ładuje tabelami klawiszy skrótów z zasobu aplikacji.|
-|[CKeyboardManager::SaveState](#savestate)|Zapisuje skrót tabel kluczy rejestru Windows.|
-|[CKeyboardManager::ShowAllAccelerators](#showallaccelerators)|Określa, czy ramach Wyświetla wszystkie klawisze skrótów dla wszystkich poleceń, z jednym klawiszem skrótu dla każdego polecenia. Ta metoda nie ma wpływu na polecenia, które mają tylko jeden klucz skojarzony skrótów.|
-|[CKeyboardManager::TranslateCharToUpper](#translatechartoupper)|Konwertuje znak do jego górnej rejestru.|
-|[CKeyboardManager::UpdateAccelTable](#updateacceltable)|Aktualizuje tabelę klawiszy skrótów przy użyciu nowej tabeli klawiszy skrótu.|
+|[CKeyboardManager:: CleanUp](#cleanup)|Czyści tabele klawiszy skrótów.|
+|[CKeyboardManager::FindDefaultAccelerator](#finddefaultaccelerator)|Pobiera domyślny klawisz skrótu dla określonego polecenia i okna.|
+|[CKeyboardManager::IsKeyHandled](#iskeyhandled)|Określa, czy klucz jest obsługiwany przez tabelę akceleratora.|
+|[CKeyboardManager::IsKeyPrintable](#iskeyprintable)|Wskazuje, czy znak jest drukowany.|
+|[CKeyboardManager::IsShowAllAccelerators](#isshowallaccelerators)|Wskazuje, czy menu pokaże wszystkie klawisze skrótów dla polecenia, czy tylko domyślnego klawisza skrótu.|
+|[CKeyboardManager:: LoadState](#loadstate)|Ładuje tabele klawiszy skrótów z rejestru systemu Windows.|
+|[CKeyboardManager::ResetAll](#resetall)|Ponownie ładuje tabele klawiszy skrótów z zasobu aplikacji.|
+|[CKeyboardManager:: SaveState](#savestate)|Zapisuje tabele klawiszy skrótów do rejestru systemu Windows.|
+|[CKeyboardManager::ShowAllAccelerators](#showallaccelerators)|Określa, czy w strukturze są wyświetlane wszystkie klawisze skrótów dla wszystkich poleceń, czy jeden klawisz skrótu dla każdego polecenia. Ta metoda nie ma wpływu na polecenia z tylko jednym skojarzonym klawiszem skrótu.|
+|[CKeyboardManager::TranslateCharToUpper](#translatechartoupper)|Konwertuje znak na jego górny rejestr.|
+|[CKeyboardManager::UpdateAccelTable](#updateacceltable)|Aktualizuje tablicę klawiszy skrótów za pomocą nowej tabeli klawiszy skrótów.|
 
 ## <a name="remarks"></a>Uwagi
 
-Elementy członkowskie tej klasy umożliwiają zapisywanie i ładowanie tabelami klawiszy skrótów do rejestru Windows, zaktualizować tabelami klawiszy skrótów przy użyciu szablonu i Znajdź domyślne klawisz skrótu polecenia w oknie ramki. Ponadto `CKeyboardManager` obiekt umożliwia kontrolowanie sposobu wyświetlania klawiszy skrótów do użytkownika.
+Elementy członkowskie tej klasy umożliwiają zapisywanie i załadowanie tabel skrótów do rejestru systemu Windows, używanie szablonu do aktualizowania krótkich tabel z wyciętym kluczem i znajdowanie domyślnego klawisza skrótu dla polecenia w oknie ramki. Ponadto `CKeyboardManager` obiekt umożliwia kontrolowanie sposobu wyświetlania przez użytkownika klawiszy skrótów.
 
-Nie należy tworzyć `CKeyboardManager` obiektu ręcznie. Zostanie on utworzony automatycznie przez strukturę aplikacji. Jednakże, należy wywołać [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager) podczas procesu inicjowania aplikacji. Aby uzyskać wskaźnik do Menedżera klawiatury dla aplikacji, należy wywołać [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager).
+Nie należy tworzyć `CKeyboardManager` obiektu ręcznie. Zostanie ona utworzona automatycznie przez strukturę aplikacji. Należy jednak wywołać [CWinAppEx:: InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager) podczas procesu inicjowania aplikacji. Aby uzyskać wskaźnik do Menedżera klawiatury dla aplikacji, wywołaj [CWinAppEx::](../../mfc/reference/cwinappex-class.md#getkeyboardmanager)GetKeyboardManager.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak pobrać wskaźnika do `CKeyboardManager` obiektu z `CWinAppEx` klasy i sposób wyświetlania wszystkich klawiszy skrótów, skojarzone z poleceń menu. Ten fragment kodu jest częścią [przykładowe niestandardowych stron](../../overview/visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak pobrać wskaźnik do `CKeyboardManager` obiektu `CWinAppEx` z klasy i jak pokazać wszystkie klawisze skrótów skojarzone z poleceniami menu. Ten fragment kodu jest częścią [przykładu stron niestandardowych](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#5](../../mfc/reference/codesnippet/cpp/ckeyboardmanager-class_1.cpp)]
 
@@ -93,11 +93,11 @@ Poniższy przykład pokazuje, jak pobrać wskaźnika do `CKeyboardManager` obiek
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxkeyboardmanager.h
+**Nagłówek:** afxkeyboardmanager. h
 
-##  <a name="ckeyboardmanager"></a>  CKeyboardManager::CKeyboardManager
+##  <a name="ckeyboardmanager"></a>CKeyboardManager::CKeyboardManager
 
-Konstruuje `CKeyboardManager` obiektu.
+Konstruuje `CKeyboardManager` obiekt.
 
 ```
 CKeyboardManager();
@@ -105,11 +105,11 @@ CKeyboardManager();
 
 ### <a name="remarks"></a>Uwagi
 
-W większości przypadków nie trzeba tworzyć `CKeyboardManager` bezpośrednio. Domyślnie struktura utworzy go dla Ciebie. Aby uzyskać wskaźnik do `CKeyboardManager`, wywołaj [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager). Jeśli możesz utworzyć ręcznie, należy go zainicjować za pomocą metody [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager).
+W większości przypadków nie trzeba tworzyć `CKeyboardManager` bezpośredniego. Domyślnie struktura tworzy jedną dla siebie. Aby uzyskać wskaźnik do `CKeyboardManager`, wywołaj [CWinAppEx:: GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager). Jeśli utworzysz je ręcznie, musisz ją zainicjować przy użyciu metody [CWinAppEx:: InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager).
 
-##  <a name="cleanup"></a>  CKeyboardManager::CleanUp
+##  <a name="cleanup"></a>CKeyboardManager:: CleanUp
 
-Zwalnia `CKeyboardManager` zasobów i czyści wszystkie mapowania klawiszy skrótów.
+`CKeyboardManager` Zwalnia zasoby i czyści wszystkie mapowania klawiszy skrótów.
 
 ```
 static void CleanUp();
@@ -119,11 +119,11 @@ static void CleanUp();
 
 Aby uzyskać więcej informacji na temat klawiszy skrótów, zobacz [Dostosowywanie klawiatury i myszy](../../mfc/keyboard-and-mouse-customization.md).
 
-Nie trzeba wywołać tę funkcję, gdy aplikacja zakończy działanie, ponieważ struktura wywołuje on automatycznie podczas zamknięcie aplikacji.
+Nie musisz wywoływać tej funkcji, gdy aplikacja zostanie zakończona, ponieważ struktura wywołuje ją automatycznie podczas kończenia aplikacji.
 
-##  <a name="finddefaultaccelerator"></a>  CKeyboardManager::FindDefaultAccelerator
+##  <a name="finddefaultaccelerator"></a>CKeyboardManager::FindDefaultAccelerator
 
-Pobiera domyślny klucz skrótu dla określonego polecenia i okna.
+Pobiera domyślny klawisz skrótu dla określonego polecenia i okna.
 
 ```
 static BOOL FindDefaultAccelerator(
@@ -136,28 +136,28 @@ static BOOL FindDefaultAccelerator(
 ### <a name="parameters"></a>Parametry
 
 *uiCmd*<br/>
-[in] Identyfikator polecenia.
+podczas Identyfikator polecenia.
 
 *str*<br/>
-[out] Odwołanie do `CString` obiektu.
+określoną Odwołanie do `CString` obiektu.
 
 *pWndFrame*<br/>
-[in] Wskaźnik do ramki okna.
+podczas Wskaźnik do okna ramki.
 
 *bIsDefaultFrame*<br/>
-[in] Określa, czy okno ramowe domyślnego ramki okna.
+podczas Określa, czy okno ramki jest domyślnym oknem ramek.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli skrót zostanie odnaleziony; w przeciwnym razie 0.
+Niezerowe, jeśli zostanie znaleziony skrót; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Metoda ta wyszukuje polecenie określone przez *uiCmd* i pobiera domyślny klawisza skrótu. Następnie metoda przyjmuje ciągu skojarzonego z tym klawisz skrótu i zapisuje wartość *str* parametru.
+Ta metoda wyszukuje polecenie określone przez *uiCmd* i Pobiera domyślny klawisz skrótu. Następnie metoda przyjmuje ciąg skojarzony z tym klawiszem skrótu i zapisuje wartość w parametrze *str* .
 
-##  <a name="iskeyhandled"></a>  CKeyboardManager::IsKeyHandled
+##  <a name="iskeyhandled"></a>CKeyboardManager::IsKeyHandled
 
-Określa, czy określony klucz jest obsługiwany przez [klasa CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md).
+Określa, czy określony klucz jest obsługiwany przez [klasę CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md).
 
 ```
 static BOOL __stdcall IsKeyHandled(
@@ -172,22 +172,22 @@ static BOOL __stdcall IsKeyHandled(
 |||
 |-|-|
 |Parametr|Opis|
-|*nKey*|[in] Klucz do sprawdzenia.|
-|*fVirt*|[in] Określa zachowanie klawisza skrótu. Aby uzyskać listę możliwych wartości, zobacz [struktury AKCELERACJA](/windows/desktop/api/winuser/ns-winuser-tagaccel).|
-|*pWndFrame*|[in] Okno ramki. Ta metoda określa, czy klawisz skrótu jest obsługiwana w tej ramce.|
-|*bIsDefaultFrame*|[in] Parametr logiczny, który wskazuje, czy *element pWndFrame* domyślny okna ramki.|
+|*nKey*|podczas Klucz do sprawdzenia.|
+|*fVirt*|podczas Określa zachowanie klawisza skrótu. Aby uzyskać listę możliwych wartości, zobacz [akceleracja Structure](/windows/win32/api/winuser/ns-winuser-accel).|
+|*pWndFrame*|podczas Okno ramek. Ta metoda określa, czy klawisz skrótu jest obsługiwany w tej ramce.|
+|*bIsDefaultFrame*|podczas Parametr logiczny, który wskazuje, czy *pWndFrame* jest domyślnym oknem ramek.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli klawisz skrótu jest obsługiwany. Wartość FALSE, jeśli klucz nie jest obsługiwany lub *element pWndFrame* ma wartość NULL.
+Wartość TRUE, jeśli klawisz skrótu jest obsługiwany. Wartość FALSE, jeśli klucz nie jest obsługiwany lub jeśli *pWndFrame* ma wartość null.
 
 ### <a name="remarks"></a>Uwagi
 
-Parametry wejściowe muszą być zgodne wpisu tabeli akceleratora zarówno dla *nKey* i *fVirt* do określenia, czy klawisz skrótu jest obsługiwana w *element pWndFrame*.
+Parametry wejściowe muszą być zgodne z wpisem w tabeli akceleratorów dla *nKey* i *fVirt* , aby określić, czy klawisz skrótu jest obsługiwany w *pWndFrame*.
 
-##  <a name="iskeyprintable"></a>  CKeyboardManager::IsKeyPrintable
+##  <a name="iskeyprintable"></a>CKeyboardManager::IsKeyPrintable
 
-Wskazuje, czy znak drukowalny.
+Wskazuje, czy znak jest drukowany.
 
 ```
 static BOOL __stdcall IsKeyPrintable(const UINT nChar);
@@ -198,19 +198,19 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 |||
 |-|-|
 |Parametr|Opis|
-|*nChar*|[in] Znak, który sprawdza, czy ta metoda.|
+|*nChar*|podczas Znak, który jest sprawdzany przez tę metodę.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli znak jest druku, zero, jeśli nie jest.
+Różna od zera, jeśli znak jest drukowany, zero, jeśli nie jest.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda kończy się niepowodzeniem, jeśli wywołanie [GetKeyboardState](/windows/desktop/api/winuser/nf-winuser-getkeyboardstate) zakończy się niepowodzeniem.
+Ta metoda kończy się niepowodzeniem, jeśli wywołanie [GetKeyboardState](/windows/win32/api/winuser/nf-winuser-getkeyboardstate) zakończy się niepowodzeniem.
 
-##  <a name="isshowallaccelerators"></a>  CKeyboardManager::IsShowAllAccelerators
+##  <a name="isshowallaccelerators"></a>CKeyboardManager::IsShowAllAccelerators
 
-Wskazuje, czy menu Pokazywanie wszystkich klawiszy skrótów, skojarzone z poleceń menu lub klawiszy skrótów domyślne.
+Wskazuje, czy menu pokazują wszystkie klawisze skrótów skojarzone z poleceniami menu, czy tylko domyślne klawisze skrótów.
 
 ```
 static BOOL IsShowAllAccelerators();
@@ -218,15 +218,15 @@ static BOOL IsShowAllAccelerators();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli aplikacja wyświetla listę wszystkich klawiszy skrótów do poleceń menu; 0, jeśli aplikacja wyświetla tylko domyślne klawiszy skrótów.
+Niezerowe, jeśli aplikacja wyświetla wszystkie klawisze skrótów dla poleceń menu; 0, jeśli aplikacja wyświetla tylko domyślne klawisze skrótów.
 
 ### <a name="remarks"></a>Uwagi
 
-Aplikacja wyświetla klawiszy skrótów do poleceń menu na pasku menu. Użyj funkcji [CKeyboardManager::ShowAllAccelerators](#showallaccelerators) do kontrolowania tego, czy aplikacja wyświetla listę wszystkich klawiszy skrótów albo po prostu domyślne klawisze.
+Aplikacja wyświetla listę klawiszy skrótów dla poleceń menu na pasku menu. Użyj funkcji [CKeyboardManager:: ShowAllAccelerators](#showallaccelerators) , aby określić, czy aplikacja wyświetla wszystkie skróty klawiaturowe, czy tylko domyślne klawisze skrótów.
 
-##  <a name="loadstate"></a>  CKeyboardManager::LoadState
+##  <a name="loadstate"></a>CKeyboardManager:: LoadState
 
-Ładuje tabelami klawiszy skrótów z rejestru Windows.
+Ładuje tabele klawiszy skrótów z rejestru systemu Windows.
 
 ```
 BOOL LoadState(
@@ -237,24 +237,24 @@ BOOL LoadState(
 ### <a name="parameters"></a>Parametry
 
 *lpszProfileName*<br/>
-[in] Ścieżka rejestru gdzie `CKeyboardManager` są zapisywane dane.
+podczas Ścieżka rejestru, w `CKeyboardManager` której zapisywane są dane.
 
 *pDefaultFrame*<br/>
-[in] Wskaźnik do ramki okna do użycia jako domyślnego okna.
+podczas Wskaźnik do okna ramki, który ma być używany jako okno domyślne.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Różna od zera, jeśli stan został pomyślnie załadowany lub równa 0 w przeciwnym razie.
+Niezerowe, jeśli stan został pomyślnie załadowany lub 0 w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli *lpszProfileName* parametr ma wartość NULL, ta metoda sprawdza domyślnej lokalizacji rejestru `CKeyboardManager` danych. Domyślna lokalizacja w rejestrze jest określona przez [klasa CWinAppEx](../../mfc/reference/cwinappex-class.md). Dane muszą być wcześniej napisane przy użyciu metody [CKeyboardManager::SaveState](#savestate).
+Jeśli parametr *lpszProfileName* ma wartość null, ta metoda sprawdza domyślną lokalizację rejestru dla `CKeyboardManager` danych. Domyślna lokalizacja rejestru jest określana przez [klasę CWinAppEx](../../mfc/reference/cwinappex-class.md). Dane muszą być wcześniej zapisywane przy użyciu metody [CKeyboardManager:: SaveState](#savestate).
 
-Jeśli okno domyślnego nie jest określony, będą używane ramką głównego okna aplikacji.
+Jeśli nie określisz okna domyślnego, zostanie użyte okno głównej ramki aplikacji.
 
-##  <a name="resetall"></a>  CKeyboardManager::ResetAll
+##  <a name="resetall"></a>CKeyboardManager::ResetAll
 
-Ponownie ładuje tabelami klawiszy skrótów z zasobu aplikacji.
+Ponownie ładuje tabele klawiszy skrótów z zasobu aplikacji.
 
 ```
 void ResetAll();
@@ -262,11 +262,11 @@ void ResetAll();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja usuwa skróty przechowywane w `CKeyboardManager` wystąpienia. Następnie będzie ponownie załadować stanu Menedżera klawiatury z zasobu aplikacji.
+Ta funkcja czyści skróty przechowywane w `CKeyboardManager` wystąpieniu. Spowoduje to ponowne załadowanie stanu Menedżera klawiatury z zasobu aplikacji.
 
-##  <a name="savestate"></a>  CKeyboardManager::SaveState
+##  <a name="savestate"></a>CKeyboardManager:: SaveState
 
-Zapisuje skrót tabel kluczy rejestru Windows.
+Zapisuje tabele klawiszy skrótów do rejestru systemu Windows.
 
 ```
 BOOL SaveState(
@@ -277,24 +277,24 @@ BOOL SaveState(
 ### <a name="parameters"></a>Parametry
 
 *lpszProfileName*<br/>
-[in] Ścieżka rejestru do zapisywania `CKeyboardManager` stanu.
+podczas Ścieżka rejestru służąca do zapisywania `CKeyboardManager` stanu.
 
 *pDefaultFrame*<br/>
-[in] Wskaźnik do ramki okna, które staje się oknem domyślne.
+podczas Wskaźnik do okna ramki, które jest oknem domyślnym.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli stan Menedżera klawiatury została zapisana pomyślnie, lub w przeciwnym razie 0.
+Różne od zera, jeśli stan Menedżera klawiatury został pomyślnie zapisany lub 0 w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli *lpszProfileName* parametr ma wartość NULL, ta metoda będzie zapisywać `CKeyboardManager` do domyślnej lokalizacji podanej przez stanu [klasa CWinAppEx](../../mfc/reference/cwinappex-class.md). Jeśli określisz lokalizacji, można załadować danych później za pomocą metody [CKeyboardManager::LoadState](#loadstate).
+Jeśli parametr *lpszProfileName* ma wartość null, Metoda zapisze `CKeyboardManager` stan w domyślnej lokalizacji określonej przez [klasę CWinAppEx](../../mfc/reference/cwinappex-class.md). Jeśli określisz lokalizację, możesz załadować dane później przy użyciu metody [CKeyboardManager:: LoadState](#loadstate).
 
-Jeśli nie określisz w oknie domyślnej, ramką głównego okna będzie służyć jako domyślnego okna.
+Jeśli nie określisz okna domyślnego, okno głównej ramki będzie używane jako okno domyślne.
 
-##  <a name="showallaccelerators"></a>  CKeyboardManager::ShowAllAccelerators
+##  <a name="showallaccelerators"></a>CKeyboardManager::ShowAllAccelerators
 
-Przedstawia wszystkie klawisze skrótów skojarzone z poleceń menu.
+Pokazuje wszystkie klawisze skrótów skojarzone z poleceniami menu.
 
 ```
 static void ShowAllAccelerators(
@@ -305,20 +305,20 @@ static void ShowAllAccelerators(
 ### <a name="parameters"></a>Parametry
 
 *bShowAll*<br/>
-[in] W przypadku opcji TRUE będą wyświetlane wszystkie klawisze skrótów. Jeśli ma wartość FAŁSZ, zostanie wyświetlony tylko pierwszy klawisza skrótu.
+podczas W przypadku wartości TRUE zostaną wyświetlone wszystkie klawisze skrótów. W przypadku wartości FALSE zostanie wyświetlony tylko pierwszy klawisz skrótu.
 
 *lpszDelimiter*<br/>
-[in] Ciąg, które zostanie wstawione między klawiszy skrótów. To ogranicznik nie obowiązuje, jeśli tylko jeden klawisz skrótu jest wyświetlana.
+podczas Ciąg do wstawienia między klawiszami skrótów. Ten ogranicznik nie ma wpływu, jeśli jest wyświetlany tylko jeden klawisz skrótu.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie jeśli polecenie ma więcej niż jeden klawisz skrótu skojarzony z nim, tylko pierwszy klawisz skrótu będą wyświetlane. Ta funkcja umożliwia listę wszystkich klawiszy skrótów, skojarzone z wszystkich poleceń.
+Domyślnie, jeśli polecenie zawiera więcej niż jeden przypisany do niego klucz skrótu, zostanie wyświetlony tylko pierwszy klawisz skrótu. Ta funkcja umożliwia wyświetlenie listy wszystkich klawiszy skrótów skojarzonych ze wszystkimi poleceniami.
 
-Klawisze skrótów będzie wyświetlane obok polecenia na pasku menu. Jeśli nie są wyświetlane wszystkie klawisze skrótów, ciąg udostępniane przez *lpszDelimiter* będzie oddzielić klawiszy skrótów.
+Skróty klawiaturowe będą wyświetlane obok polecenia na pasku menu. Jeśli wszystkie klawisze skrótów są wyświetlane, ciąg dostarczony przez *lpszDelimiter* będzie oddzielał poszczególne klawisze skrótów.
 
-##  <a name="translatechartoupper"></a>  CKeyboardManager::TranslateCharToUpper
+##  <a name="translatechartoupper"></a>CKeyboardManager::TranslateCharToUpper
 
-Konwertuje znak do jego górnej rejestru.
+Konwertuje znak na jego górny rejestr.
 
 ```
 static UINT TranslateCharToUpper(const UINT nChar);
@@ -327,15 +327,15 @@ static UINT TranslateCharToUpper(const UINT nChar);
 ### <a name="parameters"></a>Parametry
 
 *nChar*<br/>
-[in] Znak, który ma zostać przekształcony.
+podczas Znak do przekonwertowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Znak, który jest górny rejestru parametr wejściowy.
+Znak, który jest górnym rejestrem parametru wejściowego.
 
-##  <a name="updateacceltable"></a>  CKeyboardManager::UpdateAccelTable
+##  <a name="updateacceltable"></a>CKeyboardManager::UpdateAccelTable
 
-Aktualizuje tabelę klawiszy skrótów przy użyciu nowej tabeli klawiszy skrótu.
+Aktualizuje tablicę klawiszy skrótów za pomocą nowej tabeli klawiszy skrótów.
 
 ```
 BOOL UpdateAccelTable(
@@ -353,27 +353,27 @@ BOOL UpdateAccelTable(
 ### <a name="parameters"></a>Parametry
 
 *pTemplate*<br/>
-[in] Wskaźnik do szablonu dokumentu.
+podczas Wskaźnik do szablonu dokumentu.
 
 *lpAccel*<br/>
-[in] Wskaźnik do nowego klawisza skrótu.
+podczas Wskaźnik do nowego klawisza skrótu.
 
 *nSize*<br/>
-[in] Rozmiar nowa tabela skrótów.
+podczas Rozmiar nowej tabeli skrótów.
 
 *pDefaultFrame*<br/>
-[in] Wskaźnik do domyślnego ramki okna.
+podczas Wskaźnik do domyślnego okna ramki.
 
 *hAccelNew*<br/>
-[in] Dojście do nowej tabeli skrótów.
+podczas Dojście do nowej tabeli skrótów.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli metoda się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli metoda zakończy się pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja ta jest przydatna w celu zastąpienia istniejącej tabeli skrótów za pomocą nowych kluczy skrótów dla wielu obiektów okna ramki. Funkcja odbiera szablon dokumentu, jako parametr w celu uzyskania dostępu do wszystkich obiektów okna ramki podłączone do danego dokumentu szablonu.
+Użyj tej funkcji, aby zastąpić istniejącą tabelę skrótów nowymi klawiszami skrótów dla kilku obiektów okien ramowych. Funkcja otrzymuje szablon dokumentu jako parametr w celu uzyskania dostępu do wszystkich obiektów okien ramowych połączonych z danym szablonem dokumentu.
 
 ## <a name="see-also"></a>Zobacz także
 

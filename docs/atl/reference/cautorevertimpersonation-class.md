@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoRevertImpersonation class
 ms.assetid: 43732849-1940-4bd4-9d52-7a5698bb8838
-ms.openlocfilehash: 78488fba080e397b06eb67ebe8039fb3e8d5e035
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1941bfcd7689ab9d22f5094af0eb833a84dab6b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259940"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497685"
 ---
 # <a name="cautorevertimpersonation-class"></a>Klasa CAutoRevertImpersonation
 
-Ta klasa zostanie przywrócona [CAccessToken](../../atl/reference/caccesstoken-class.md) obiektów nonimpersonating stanu, gdy jej wykracza poza zakres.
+Ta klasa przywraca niepersonifikowanie obiektów [CAccessToken](../../atl/reference/caccesstoken-class.md) , gdy wykracza poza zakres.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,32 +34,32 @@ class CAutoRevertImpersonation
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAutoRevertImpersonation::CAutoRevertImpersonation](#cautorevertimpersonation)|Konstruuje `CAutoRevertImpersonation` obiektu|
-|[CAutoRevertImpersonation:: ~ CAutoRevertImpersonation](#dtor)|Niszczy obiekt i przywraca personifikacji tokenu dostępu.|
+|[CAutoRevertImpersonation::CAutoRevertImpersonation](#cautorevertimpersonation)|Konstruuje `CAutoRevertImpersonation` obiekt|
+|[CAutoRevertImpersonation:: ~ CAutoRevertImpersonation](#dtor)|Niszczy obiekt i przywraca personifikację tokenu dostępu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAutoRevertImpersonation::Attach](#attach)|Automatyzuje operacja cofania personifikacji tokenu dostępu.|
-|[CAutoRevertImpersonation::Detach](#detach)|Anuluje operacja cofania automatyczne personifikacji.|
-|[CAutoRevertImpersonation::GetAccessToken](#getaccesstoken)|Pobiera bieżący token dostępu skojarzone z tym obiektem.|
+|[CAutoRevertImpersonation:: Attach](#attach)|Automatyzuje rewersję tokenu dostępu do personifikacji.|
+|[CAutoRevertImpersonation::Detach](#detach)|Anuluje rewersję automatycznej personifikacji.|
+|[CAutoRevertImpersonation::GetAccessToken](#getaccesstoken)|Pobiera token dostępu bieżący skojarzony z tym obiektem.|
 
 ## <a name="remarks"></a>Uwagi
 
-[Token dostępu](/windows/desktop/SecAuthZ/access-tokens) jest obiektem, w tym artykule opisano proces lub wątek kontekstu zabezpieczeń, która jest przydzielona do każdego użytkownika zalogowanego systemu Windows NT lub Windows 2000. Te tokeny dostępu mogą być reprezentowane za pomocą `CAccessToken` klasy.
+[Token dostępu](/windows/win32/SecAuthZ/access-tokens) jest obiektem opisującym kontekst zabezpieczeń procesu lub wątku i jest przypisywany do każdego użytkownika zalogowanego na komputerze z systemem Windows NT lub Windows 2000. Te tokeny dostępu mogą być reprezentowane z `CAccessToken` klasą.
 
-Czasami jest konieczne personifikacji tokenów dostępu. Ta klasa jest dostarczana jako udogodnienie, ale nie wykonuje personifikacji tokenów dostępu. wykonuje tylko automatyczna operacja cofania nonimpersonated stanu. Jest to spowodowane personifikacji tokenów dostępu mogą być wykonywane na kilka różnych sposobów.
+Czasami konieczne jest personifikowanie tokenów dostępu. Ta klasa jest udostępniana jako wygoda, ale nie wykonuje personifikacji tokenów dostępu. wykonuje tylko automatyczną rewersję do stanu niepersonifikowanego. Wynika to z faktu, że personifikacja dostępu do tokenu może być wykonywana na kilka różnych sposobów.
 
-Wprowadzenie do modelu kontroli dostępu w Windows, zobacz [kontroli dostępu](/windows/desktop/SecAuthZ/access-control) w zestawie Windows SDK.
+Aby zapoznać się z wprowadzeniem do modelu kontroli dostępu w systemie Windows, zobacz [Access Control](/windows/win32/SecAuthZ/access-control) w Windows SDK.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlsecurity.h
+**Nagłówek:** atlsecurity. h
 
-##  <a name="attach"></a>  CAutoRevertImpersonation::Attach
+##  <a name="attach"></a>CAutoRevertImpersonation:: Attach
 
-Automatyzuje operacja cofania personifikacji tokenu dostępu.
+Automatyzuje rewersję tokenu dostępu do personifikacji.
 
 ```
 void Attach(const CAccessToken* pAT) throw();
@@ -68,15 +68,15 @@ void Attach(const CAccessToken* pAT) throw();
 ### <a name="parameters"></a>Parametry
 
 *pAT*<br/>
-Adres [CAccessToken](../../atl/reference/caccesstoken-class.md) obiektu, należy przywrócić automatycznie
+Adres obiektu [CAccessToken](../../atl/reference/caccesstoken-class.md) , który ma zostać przywrócony automatycznie
 
 ### <a name="remarks"></a>Uwagi
 
-Tej metody należy używać tylko, jeśli [CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) obiekt został utworzony przy użyciu wartości NULL `CAccessToken` wskaźnika, lub jeśli [Odłącz](#detach) został wcześniej wywołany. W prostych przypadkach nie jest konieczne użycie tej metody.
+Ta metoda powinna być używana tylko wtedy, gdy obiekt [CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) został utworzony za pomocą `CAccessToken` wskaźnika o wartości null [](#detach) lub jeśli odłączenie zostało wcześniej wywołane. W przypadku prostych przypadków nie trzeba używać tej metody.
 
-##  <a name="cautorevertimpersonation"></a>  CAutoRevertImpersonation::CAutoRevertImpersonation
+##  <a name="cautorevertimpersonation"></a>CAutoRevertImpersonation::CAutoRevertImpersonation
 
-Konstruuje `CAutoRevertImpersonation` obiektu.
+Konstruuje `CAutoRevertImpersonation` obiekt.
 
 ```
 CAutoRevertImpersonation(const CAccessToken* pAT) throw();
@@ -85,15 +85,15 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 ### <a name="parameters"></a>Parametry
 
 *pAT*<br/>
-Adres [CAccessToken](../../atl/reference/caccesstoken-class.md) obiektu, należy przywrócić automatycznie.
+Adres obiektu [CAccessToken](../../atl/reference/caccesstoken-class.md) , który ma zostać przywrócony automatycznie.
 
 ### <a name="remarks"></a>Uwagi
 
-Rzeczywiste personifikacji tokenu dostępu należy przeprowadzić oddzielnie z, a najlepiej przed tworzenie `CAutoRevertImpersonation` obiektu. Ten personifikację zostanie przywrócona automatycznie po `CAutoRevertImpersonation` obiekt wykracza poza zakres.
+Rzeczywista personifikacja tokenu dostępu powinna być wykonywana niezależnie od i najlepiej przed `CAutoRevertImpersonation` utworzeniem obiektu. Ta personifikacja zostanie przywrócona automatycznie, `CAutoRevertImpersonation` gdy obiekt wykracza poza zakres.
 
-##  <a name="dtor"></a>  CAutoRevertImpersonation:: ~ CAutoRevertImpersonation
+##  <a name="dtor"></a>CAutoRevertImpersonation:: ~ CAutoRevertImpersonation
 
-Niszczy obiekt i przywraca personifikacji tokenu dostępu.
+Niszczy obiekt i przywraca personifikację tokenu dostępu.
 
 ```
 ~CAutoRevertImpersonation() throw();
@@ -101,11 +101,11 @@ Niszczy obiekt i przywraca personifikacji tokenu dostępu.
 
 ### <a name="remarks"></a>Uwagi
 
-Przywraca wszystkie personifikacji obecnie obowiązuje [CAccessToken](../../atl/reference/caccesstoken-class.md) obiekt udostępniany w konstrukcji lub za pomocą [Dołącz](#attach) metody. Jeśli nie `CAccessToken` jest związany, destruktor nie ma wpływu.
+Przywraca wszystkie personifikacje, które są obecnie stosowane dla obiektu [CAccessToken](../../atl/reference/caccesstoken-class.md) w konstrukcji lub za pomocą metody [Attach](#attach) . Jeśli nie `CAccessToken` jest skojarzona, destruktor nie ma wpływu.
 
-##  <a name="detach"></a>  CAutoRevertImpersonation::Detach
+##  <a name="detach"></a>CAutoRevertImpersonation::D etach
 
-Anuluje operacja cofania automatyczne personifikacji.
+Anuluje rewersję automatycznej personifikacji.
 
 ```
 const CAccessToken* Detach() throw();
@@ -113,15 +113,15 @@ const CAccessToken* Detach() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Adres wcześniej skojarzony [CAccessToken](../../atl/reference/caccesstoken-class.md), lub wartość NULL, jeśli istniały żadne skojarzenia.
+Adres poprzednio skojarzonego [CAccessToken](../../atl/reference/caccesstoken-class.md)lub wartość null, jeśli nie istniały żadne skojarzenie.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywoływanie **Odłącz** zapobiega `CAutoRevertImpersonation` obiekt z Przywracanie wszelkich personifikacji obecnie obowiązuje [CAccessToken](../../atl/reference/caccesstoken-class.md) obiekt skojarzony z tym obiektem. `CAutoRevertImpersonation` następnie można zniszczeniu za pomocą żadnego efektu lub ponownie kojarzyć do tej samej lub innej `CAccessToken` przy użyciu [Dołącz](#attach).
+Wywołanie odłączenia `CAutoRevertImpersonation` uniemożliwia obiektowi odwracanie wszelkich personifikacji obecnie obowiązujących dla obiektu [CAccessToken](../../atl/reference/caccesstoken-class.md) skojarzonego z tym obiektem. `CAutoRevertImpersonation`można następnie zniszczyć bez efektu ani ponownie skojarzyć z tym samym lub innym `CAccessToken` obiektem przy użyciu dołączania. [](#attach)
 
-##  <a name="getaccesstoken"></a>  CAutoRevertImpersonation::GetAccessToken
+##  <a name="getaccesstoken"></a>CAutoRevertImpersonation::GetAccessToken
 
-Pobiera bieżący token dostępu skojarzone z tym obiektem.
+Pobiera token dostępu bieżący skojarzony z tym obiektem.
 
 ```
 const CAccessToken* GetAccessToken() throw();
@@ -129,14 +129,14 @@ const CAccessToken* GetAccessToken() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Adres wcześniej skojarzony [CAccessToken](../../atl/reference/caccesstoken-class.md), lub wartość NULL, jeśli istniały żadne skojarzenia.
+Adres poprzednio skojarzonego [CAccessToken](../../atl/reference/caccesstoken-class.md)lub wartość null, jeśli nie istniały żadne skojarzenie.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli ta metoda jest wywoływana dla celów, które zawierają operacja cofania personifikacji z `CAccessToken` obiektu [Odłącz](#detach) metoda powinna być używana zamiast tego.
+Jeśli ta metoda jest wywoływana dla celów, które obejmują rewersję personifikacji `CAccessToken` obiektu, należy zamiast tego użyć metody odłączania. [](#detach)
 
 ## <a name="see-also"></a>Zobacz także
 
-[Przykładowe ATLSecurity](../../overview/visual-cpp-samples.md)<br/>
-[Tokeny dostępu](/windows/desktop/SecAuthZ/access-tokens)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przykład ATLSecurity](../../overview/visual-cpp-samples.md)<br/>
+[Tokeny dostępu](/windows/win32/SecAuthZ/access-tokens)<br/>
+[Przegląd klas](../../atl/atl-class-overview.md)

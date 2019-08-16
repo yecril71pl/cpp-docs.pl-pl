@@ -33,16 +33,16 @@ helpviewer_keywords:
 - path names
 - _tsplitpath function
 ms.assetid: 32bd76b5-1385-4ee8-a64c-abcb541cd2e4
-ms.openlocfilehash: d079bd17912c0711a4e1fbadadf12430520f2c96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d5aab68524c0833bff0e09927587c0362c5194f9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355006"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501004"
 ---
-# <a name="splitpath-wsplitpath"></a>_splitpath, _wsplitpath
+# <a name="_splitpath-_wsplitpath"></a>_splitpath, _wsplitpath
 
-Nazwa ścieżki przerwać działanie składników. Dostępne są bardziej bezpieczne wersje tych funkcji, zobacz [_splitpath_s —, _wsplitpath_s —](splitpath-s-wsplitpath-s.md).
+Przerwij nazwę ścieżki w składnikach. Bardziej bezpieczne wersje tych funkcji są dostępne, zobacz [_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -68,35 +68,35 @@ void _wsplitpath(
 *Ścieżka*<br/>
 Pełna ścieżka.
 
-*drive*<br/>
-Litera, następuje dwukropek (**:**). Możesz przekazać **NULL** dla tego parametru, jeśli nie potrzebujesz literę dysku.
+*litera*<br/>
+Litera dysku, po którym następuje dwukropek ( **:** ). Jeśli nie potrzebujesz litery dysku, możesz przekazać **wartość null** dla tego parametru.
 
-*dir*<br/>
-Ścieżka katalogu, w tym ukośnika. Kreski ułamkowe ( **/** ), ukośniki odwrotne ( **\\** ), lub obie mogą być używane. Możesz przekazać **NULL** dla tego parametru, jeśli nie potrzebujesz ścieżki katalogu.
+*katalogów*<br/>
+Ścieżka katalogu, włącznie z końcowym ukośnikiem. Można używać ukośników **/** (), ukośników odwrotnych ( **\\** ) lub obu tych wartości. Jeśli ścieżka katalogu nie jest potrzebna, można przekazać **wartość null** dla tego parametru.
 
 *fname*<br/>
-Podstawowa nazwa pliku (bez rozszerzenia). Możesz przekazać **NULL** dla tego parametru, jeśli nazwa pliku nie jest potrzebna.
+Podstawowa nazwa pliku (bez rozszerzenia). Jeśli nazwa pliku nie jest potrzebna, można przekazać **wartość null** dla tego parametru.
 
-*ext*<br/>
-Rozszerzenie nazwy pliku, w tym wiodące w okresie (**.**). Możesz przekazać **NULL** dla tego parametru, jeśli nie potrzebujesz rozszerzenie nazwy pliku.
+*EXT*<br/>
+Rozszerzenie nazwy pliku, włącznie z kropką wiodącą ( **.** ). Jeśli rozszerzenie nazwy pliku nie jest potrzebne, można przekazać **wartość null** dla tego parametru.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Splitpath —** funkcja dzieli ścieżkę na jej cztery składniki. **_splitpath —** automatycznie obsługuje argumenty ciągu znaków wielobajtowych zgodnie z potrzebami, rozpoznawaniu sekwencje znaków wielobajtowych zgodnie z aktualnie używaną stroną kodową wielobajtowe. **_wsplitpath —** to wersja znaku dwubajtowego **_splitpath —**; argumenty **_wsplitpath —** są ciągami znaków dwubajtowych. Funkcje te zachowują się identycznie.
+Funkcja **_splitpath** dzieli ścieżkę na cztery składniki. **_splitpath** automatycznie obsługuje argumenty ciągu znaków wielobajtowych, aby rozpoznać sekwencje znaków wielobajtowych zgodnie z aktualnie używaną stroną kodową. **_wsplitpath** to dwubajtowa wersja **_splitpath**; argumenty **_wsplitpath** są ciągami znaków dwubajtowych. Funkcje te zachowują się identycznie w inny sposób.
 
-**Uwaga dotycząca zabezpieczeń** te funkcje pociągnąć za sobą potencjalnym zagrożeniem spowodowanym ulepszonym problem przepełnienia buforu. Problemy z przepełnieniem buforu są częstą metodą ataku systemu, co nieuzasadnione podniesienie poziomu uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns). Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [_splitpath_s —, _wsplitpath_s —](splitpath-s-wsplitpath-s.md).
+**Uwaga dotycząca zabezpieczeń** Te funkcje powodują potencjalne zagrożenie spowodowane przez problem z przepełnieniem buforu. Problemy związane z przepełnieniem buforu są częstą metodą ataku systemu, powodując nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns). Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsplitpath**|**_splitpath**|**_splitpath**|**_wsplitpath**|
 
-Każdy składnik Pełna ścieżka jest przechowywany w oddzielnych buforu; stałe manifestu **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**, i **_MAX_EXT** (zdefiniowany w STDLIB. H) określ maksymalny rozmiar każdego pliku składnika. Składniki pliku, które są większe niż odpowiednie stałych manifestu doprowadzić do uszkodzenia sterty.
+Każdy składnik pełnej ścieżki jest przechowywany w osobnym buforze; stałe manifestu **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**i **_MAX_EXT** (zdefiniowane w STDLIB. H) Określ maksymalny rozmiar każdego składnika plików. Składniki plików, które są większe niż odpowiednie stałe manifestu powodują uszkodzenie sterty.
 
-Każdy bufor musi być tak duże jak jego odpowiedniego stała manifestu, aby uniknąć potencjalnych przepełnienia buforu.
+Każdy bufor musi być tak duży, jak odpowiadający mu stała manifestu, aby uniknąć potencjalnego przepełnienia buforu.
 
-W poniższej tabeli wymieniono wartości stałe manifestu.
+Poniższa tabela zawiera listę wartości stałych manifestu.
 
 |Nazwa|Wartość|
 |----------|-----------|
@@ -105,24 +105,24 @@ W poniższej tabeli wymieniono wartości stałe manifestu.
 |**_MAX_FNAME**|256|
 |**_MAX_EXT**|256|
 
-Jeśli pełna ścieżka nie zawiera składników (na przykład, nazwa_pliku), **_splitpath —** przypisuje puste ciągi znaków do odpowiedniego buforów.
+Jeśli pełna ścieżka nie zawiera składnika (na przykład filename), **_splitpath** przypisze puste ciągi do odpowiednich buforów.
 
-Można przekazać **NULL** do **_splitpath —** dla każdego parametru, inne niż *ścieżki* , nie potrzebujesz.
+Można przekazać **wartość null** do **_splitpath** dla dowolnego parametru innego niż niepotrzebna *ścieżka* .
 
-Jeśli *ścieżki* jest **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL** a funkcja zwraca **EINVAL**.
+Jeśli *ścieżka* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcja zwraca **EINVAL**.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_splitpath**|\<stdlib.h>|
-|**_wsplitpath**|\<stdlib.h> or \<wchar.h>|
+|**_wsplitpath**|\<STDLIB. h > lub \<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [_makepath —](makepath-wmakepath.md).
+Zobacz przykład dla [_makepath](makepath-wmakepath.md).
 
 ## <a name="see-also"></a>Zobacz także
 

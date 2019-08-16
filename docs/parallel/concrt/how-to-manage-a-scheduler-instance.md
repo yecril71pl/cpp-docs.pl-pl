@@ -5,46 +5,46 @@ helpviewer_keywords:
 - managing a scheduler instance [Concurrency Runtime]
 - scheduler instances, managing [Concurrency Runtime]
 ms.assetid: 2cc804f0-5ff3-498b-97f1-a9f67a005448
-ms.openlocfilehash: bc7adfaeb4c96245488bbcb5cd70cdae9daf9e26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f402e82a18f7b804f2c25ebf0a4392d19694d25c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413882"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510525"
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>Instrukcje: Zarządzanie wystąpieniem harmonogramu
 
-Wystąpienia harmonogramu umożliwiają kojarzenie określone zasady planowania z różnego rodzaju obciążeń. Ten temat zawiera dwa przykłady pokazujące, jak utworzyć i Zarządzanie wystąpieniem harmonogramu.
+Wystąpienia usługi Scheduler umożliwiają kojarzenie określonych zasad planowania z różnymi rodzajami obciążeń. Ten temat zawiera dwa podstawowe przykłady, które pokazują, jak utworzyć wystąpienie harmonogramu i zarządzać nim.
 
-Przykłady tworzenia harmonogramów, używające domyślnych zasad harmonogramu. Aby uzyskać przykład tworzenia harmonogramu, który korzysta z zasad niestandardowych, zobacz [jak: Określanie specjalnych zasad harmonogramu](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md).
+Przykłady tworzą harmonogramy korzystające z domyślnych zasad usługi Scheduler. Przykład tworzenia harmonogramu korzystającego z zasad niestandardowych można znaleźć w temacie [How to: Określ określone zasady](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)usługi Scheduler.
 
 ### <a name="to-manage-a-scheduler-instance-in-your-application"></a>Aby zarządzać przypadkiem planisty w aplikacji
 
-1. Tworzenie [concurrency::SchedulerPolicy](../../parallel/concrt/reference/schedulerpolicy-class.md) wartości obiektu, który zawiera zasady harmonogramu do użycia.
+1. Utwórz obiekt [concurrency:: SchedulerPolicy](../../parallel/concrt/reference/schedulerpolicy-class.md) , który zawiera wartości zasad dla harmonogramu do użycia.
 
-1. Wywołaj [concurrency::CurrentScheduler::Create](reference/currentscheduler-class.md#create) metody lub [concurrency::Scheduler::Create](reference/scheduler-class.md#create) metodę w celu utworzenia wystąpienia harmonogramu.
+1. Wywołaj metodę [concurrency:: CurrentScheduler:: Create](reference/currentscheduler-class.md#create) lub [concurrency:: Scheduler:: Create](reference/scheduler-class.md#create) , aby utworzyć wystąpienie usługi Scheduler.
 
-   Jeśli używasz `Scheduler::Create` metody, wywołanie [concurrency::Scheduler::Attach](reference/scheduler-class.md#attach) metody, gdy należy skojarzyć harmonogramu przy użyciu bieżącego kontekstu.
+   Jeśli używasz `Scheduler::Create` metody, wywołaj metodę [concurrency:: Scheduler:: Attach](reference/scheduler-class.md#attach) , gdy zachodzi potrzeba skojarzenia harmonogramu z bieżącym kontekstem.
 
-1. Wywołaj [CreateEvent](/windows/desktop/api/synchapi/nf-synchapi-createeventa) funkcji, aby utworzyć uchwytu do obiektu zasygnalizowane resetowaniem automatycznym zdarzeń.
+1. Wywołaj funkcję [CreateEvent](/windows/win32/api/synchapi/nf-synchapi-createeventw) , aby utworzyć dojście do niesygnalizowanego obiektu zdarzenia autoresetowania.
 
-1. Przekaż uchwytu do obiektu zdarzenia, który został utworzony do [concurrency::CurrentScheduler::RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent) metody lub [concurrency::Scheduler::RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent) metody. Rejestruje to zdarzenie można ustawić, kiedy niszczony jest harmonogram.
+1. Przekaż dojście do obiektu zdarzenia, który właśnie został utworzony, do metody [concurrency:: CurrentScheduler:: RegisterShutdownEvent —](reference/currentscheduler-class.md#registershutdownevent) lub [concurrency:: Scheduler:: RegisterShutdownEvent —](reference/scheduler-class.md#registershutdownevent) . Spowoduje to zarejestrowanie zdarzenia do ustawienia podczas zniszczenia harmonogramu.
 
-1. Wykonaj zadania, które mają bieżącego harmonogramu do zaplanowania.
+1. Wykonaj zadania, które mają być zaplanowane przez bieżący harmonogram.
 
-1. Wywołaj [concurrency::CurrentScheduler::Detach](reference/currentscheduler-class.md#detach) metodę, aby odłączyć bieżącego harmonogramu i przywrócić poprzednich harmonogram jako bieżący.
+1. Wywołaj metodę [concurrency:: CurrentScheduler::D etach](reference/currentscheduler-class.md#detach) , aby odłączyć bieżący harmonogram i przywrócić poprzedni harmonogram jako bieżący.
 
-   Jeśli używasz `Scheduler::Create` metody, wywołanie [concurrency::Scheduler::Release](reference/scheduler-class.md#release) metodę, aby zmniejszyć liczbę odwołań `Scheduler` obiektu.
+   Jeśli używasz `Scheduler::Create` metody, wywołaj metodę [concurrency:: Scheduler:: Release](reference/scheduler-class.md#release) , aby zmniejszyć liczbę `Scheduler` odwołań do obiektu.
 
-1. Przekaż dojście do zdarzenia w celu [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) funkcję, aby czekać na harmonogram zamknąć.
+1. Przekaż dojście do zdarzenia do funkcji [WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject) , aby zaczekać, aż harmonogram zostanie zamknięty.
 
-1. Wywołaj [funkcja CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) funkcję, aby zamknąć dojście do obiektu zdarzenia.
+1. Wywołaj funkcję [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) , aby zamknąć uchwyt do obiektu zdarzenia.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod przedstawia dwa sposoby Zarządzanie wystąpieniem harmonogramu. Każdy przykład najpierw używa domyślnego harmonogramu do wykonania zadania, który wyświetla unikatowy identyfikator bieżącego harmonogramu. Każdy przykład następnie używa wystąpienia harmonogramu, przeprowadzić to samo zadanie. Na koniec każdego przykład przywraca domyślnego harmonogramu jak aktualny plan i wykonuje to zadanie jeszcze raz.
+Poniższy kod przedstawia dwa sposoby zarządzania wystąpieniem usługi Scheduler. Każdy przykład najpierw używa domyślnego harmonogramu do wykonywania zadania, które drukuje unikatowy identyfikator bieżącego harmonogramu. Każdy przykład używa wystąpienia harmonogramu do wykonania tego samego zadania ponownie. Na koniec każdy przykład przywraca domyślny harmonogram jako bieżący i wykonuje zadanie jeszcze raz.
 
-W pierwszym przykładzie użyto [concurrency::CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) klasy, aby utworzyć wystąpienie harmonogramu i skojarzyć ją z bieżącego kontekstu. W drugim przykładzie użyto [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) klasy w celu wykonania tego samego zadania. Zazwyczaj `CurrentScheduler` klasa jest używana do pracy z bieżącego harmonogramu. Drugi przykład, który używa `Scheduler` klasy, jest przydatne, gdy użytkownik chce kontrolować kiedy harmonogram jest skojarzony z bieżącym kontekście lub gdy chcesz skojarzyć określonych harmonogramów z określonych zadań.
+Pierwszy przykład używa klasy [concurrency:: CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) do tworzenia wystąpienia harmonogramu i kojarzenia go z bieżącym kontekstem. Drugi przykład używa klasy [concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) , aby wykonać to samo zadanie. `CurrentScheduler` Zazwyczaj Klasa jest używana do pracy z bieżącym harmonogramem. Drugi przykład, który używa `Scheduler` klasy, jest przydatne, gdy chcesz kontrolować, kiedy harmonogram jest skojarzony z bieżącym kontekstem lub jeśli chcesz skojarzyć określone harmonogramy z określonymi zadaniami.
 
 [!code-cpp[concrt-scheduler-instance#1](../../parallel/concrt/codesnippet/cpp/how-to-manage-a-scheduler-instance_1.cpp)]
 
@@ -71,9 +71,9 @@ Current scheduler id: 0
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
-Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `scheduler-instance.cpp` , a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
+Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `scheduler-instance.cpp` , a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
 
-**Usługa scheduler-instance.cpp dla cl.exe/ehsc**
+**CL. exe/EHsc Scheduler-instance. cpp**
 
 ## <a name="see-also"></a>Zobacz także
 

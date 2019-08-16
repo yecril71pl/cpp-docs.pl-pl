@@ -10,27 +10,27 @@ helpviewer_keywords:
 - LoadLibrary method
 - explicit linking [C++]
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
-ms.openlocfilehash: 661d7742fb0fedae45bc063ba3821193d6c5438e
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: c7700dd865e320686a2ad8bd036f207b9ecee6ac
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220611"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493209"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary i AfxLoadLibrary
 
-Przetwarza wywołanie [LoadLibraryExA](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) lub [LoadLibraryExW](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexw)(lub [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) Aby jawnie utworzyć łącze do biblioteki DLL. Jeśli funkcja się powiedzie, mapuje daną bibliotekę DLL do przestrzeni adresowej procesu wywołującego i zwraca uchwyt do biblioteki DLL, która może być używany z innymi funkcjami jawnego łączenia — na przykład `GetProcAddress` i `FreeLibrary`.
+Przetwarza wywołanie [LoadLibraryExA](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexa) lub [LoadLibraryExW](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) (lub [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) w celu jawnego łączenia z biblioteką DLL. Jeśli funkcja się powiedzie, mapuje określoną bibliotekę DLL do przestrzeni adresowej procesu wywołującego i zwraca dojście do biblioteki DLL, która może być używana z innymi funkcjami w przypadku jawnego łączenia — na `GetProcAddress` przykład `FreeLibrary`i.
 
-`LoadLibrary` próbuje zlokalizować bibliotekę DLL przy użyciu tej samej kolejności wyszukiwania, która jest używana w przypadku łączenia niejawnego. Jeśli system nie może odnaleźć biblioteki DLL lub jeśli funkcja punktu wejścia zwraca wartość FALSE, `LoadLibrary` zwraca wartość NULL. Jeśli wywołanie `LoadLibrary` Określa moduł DLL, który jest już zmapowany do przestrzeni adresowej procesu wywołującego, funkcja zwraca uchwyt DLL i zwiększa odczyt licznika odwołań modułu.
+`LoadLibrary`próbuje zlokalizować bibliotekę DLL przy użyciu tej samej sekwencji wyszukiwania, która jest używana do niejawnego łączenia. Jeśli system nie może odnaleźć biblioteki DLL lub jeśli funkcja punktu wejścia zwróci wartość false, `LoadLibrary` zwraca wartość null. Jeśli wywołanie `LoadLibrary` określa moduł dll, który jest już mapowany do przestrzeni adresowej procesu wywołującego, funkcja zwraca dojście biblioteki DLL i zwiększa liczbę odwołań modułu.
 
-Jeśli biblioteka DLL pełni funkcję punktu wejścia, system operacyjny wywołuje funkcję w kontekście wątku, który wywołał `LoadLibrary`. Funkcja punktu wejścia nie jest wywoływana, jeśli biblioteka DLL jest już dołączony do procesu ze względu na poprzednie wywołanie `LoadLibrary` , nie ma odpowiedniego wywołania do `FreeLibrary` funkcji.
+Jeśli biblioteka DLL ma funkcję punktu wejścia, system operacyjny wywołuje funkcję w kontekście wątku, który wywołał `LoadLibrary`. Funkcja punktu wejścia nie jest wywoływana, jeśli biblioteka DLL jest już dołączona do procesu ze względu na poprzednie wywołanie `LoadLibrary` , które nie ma odpowiedniego wywołania `FreeLibrary` funkcji.
 
-Dla aplikacji MFC, które ładują biblioteki DLL rozszerzeń MFC, firma Microsoft zaleca użycie `AfxLoadLibrary` zamiast `LoadLibrary`. `AfxLoadLibrary` obsługuje synchronizację wątków, zanim wywołasz `LoadLibrary`. Interfejs (prototyp funkcji) do `AfxLoadLibrary` jest taka sama jak `LoadLibrary`.
+W przypadku aplikacji MFC, które ładują biblioteki DLL rozszerzenia MFC, zalecamy `AfxLoadLibrary` użycie `LoadLibrary`zamiast. `AfxLoadLibrary`obsługuje synchronizację wątków przed wywołaniem `LoadLibrary`. Interfejs (prototyp funkcji) `AfxLoadLibrary` jest taki sam jak. `LoadLibrary`
 
-Jeśli Windows nie może załadować biblioteki DLL, proces może próbować odzyskać sprawność po błędzie. Na przykład ten proces może powiadomić użytkownika o błędzie i poprosić użytkownika, aby określić inną ścieżkę do pliku DLL.
+Jeśli system Windows nie może załadować biblioteki DLL, proces może próbować odzyskać sprawność po błędzie. Na przykład proces może powiadomić użytkownika o błędzie i polecić użytkownikowi określenie innej ścieżki do biblioteki DLL.
 
 > [!IMPORTANT]
-> Upewnij się określić pełną ścieżkę do każdej biblioteki dll. Bieżący katalog jest przeszukiwany w pierwszej kolejności gdy pliki są ładowane. Jeśli nie kwalifikuje się ścieżkę pliku, może załadować pliku, który nie jest to zamierzone. Innym sposobem, aby zapobiec takiej sytuacji jest za pomocą [/DEPENDENTLOADFLAG](reference/dependentloadflag.md) — opcja konsolidatora.
+> Upewnij się, że określono pełną ścieżkę do wszystkich bibliotek DLL. Bieżący katalog jest przeszukiwany w pierwszej kolejności podczas ładowania plików. Jeśli nie kwalifikujesz się do ścieżki pliku, może zostać załadowany plik, który nie jest zamierzonym. Innym sposobem na uniknięcie tego jest użycie opcji konsolidatora [/DEPENDENTLOADFLAG](reference/dependentloadflag.md) .
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 
@@ -38,9 +38,9 @@ Jeśli Windows nie może załadować biblioteki DLL, proces może próbować odz
 
 - [Łączenie pliku wykonywalnego z biblioteką DLL](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
+## <a name="what-do-you-want-to-know-more-about"></a>Jak chcesz dowiedzieć się więcej?
 
-- [Kolejności przeszukiwania bibliotek dołączanych dynamicznie](/windows/desktop/Dlls/dynamic-link-library-search-order)
+- [Kolejność wyszukiwania biblioteki dołączanej dynamicznie](/windows/win32/Dlls/dynamic-link-library-search-order)
 
 - [FreeLibrary i AfxFreeLibrary](freelibrary-and-afxfreelibrary.md)
 
@@ -48,4 +48,4 @@ Jeśli Windows nie może załadować biblioteki DLL, proces może próbować odz
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Tworzenie bibliotek DLL języka C/C++ w programie Visual Studio](dlls-in-visual-cpp.md)
+- [Tworzenie C/C++ dll w Visual Studio](dlls-in-visual-cpp.md)

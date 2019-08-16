@@ -1,17 +1,17 @@
 ---
-title: może być powiązana (atrybut COM C++)
+title: możliwe do powiązaniaC++ (atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.bindable
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 07f446b946d6703c4a8b9ae59ae0edd8172c6879
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a74531a40bcacdae4ef98c292884e7a43fa82fe
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148396"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501824"
 ---
 # <a name="bindable"></a>bindable
 
@@ -25,19 +25,19 @@ Wskazuje, że właściwość obsługuje powiązanie danych.
 
 ## <a name="remarks"></a>Uwagi
 
-**Możliwej do wiązania** atrybut C++ ma taką samą funkcjonalność jak [możliwej do wiązania](/windows/desktop/Midl/bindable) atrybutów w MIDL. Służy zdefiniowane za pomocą właściwości [propget](propget.md), [propput](propput.md), lub [propputref](propputref.md) atrybutów lub można ręcznie zdefiniować metodę możliwej do wiązania.
+Atrybut możliwy do **powiązania** ma taką samą funkcjonalność, jak atrybut MIDL do [powiązania.](/windows/win32/Midl/bindable) C++ Można jej użyć na właściwościach zdefiniowanych przy użyciu atrybutów [propget](propget.md), [propput](propput.md)lub [propputref](propputref.md) lub można ręcznie zdefiniować metodę powiązania.
 
-Poniższe przykłady MFC pokazują użycie **możliwej do wiązania**:
+Następujące przykłady MFC przedstawiają użycie elementu możliwego do **powiązania**:
 
-- [Przykłady formantów: Kontrolki ActiveX oparty na bibliotece MFC](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Przykłady kontrolek: Kontrolki ActiveX oparte na MFC](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [Przykład OK: ActiveX Control](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Przykład z CYKLem: Kontrolka ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [Przykład TESTHELP: Kontrolki ActiveX z etykietek narzędzi i pomocy](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Przykład TESTHELP: Kontrolka ActiveX z etykietami narzędzi i pomocą](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod pokazuje, jak można użyć **możliwej do wiązania** we właściwości:
+Poniższy kod pokazuje, jak można użyć **powiązania** dla właściwości:
 
 ```cpp
 // cpp_attr_ref_bindable.cpp
@@ -64,12 +64,12 @@ __interface IPropDemo : IDispatch {
 
 |||
 |-|-|
-|**Dotyczy**|Metody interfejsu|
+|**Dotyczy**|Interface — Metoda|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

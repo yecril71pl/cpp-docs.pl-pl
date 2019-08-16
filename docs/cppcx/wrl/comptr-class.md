@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 889b722c91fd56613c5902eb4ce6439763a49bd9
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: 1e20a991c8f32027aeea6a17df0534aa6e1c2c43
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606490"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498410"
 ---
 # <a name="comptr-class"></a>ComPtr — Klasa
 
@@ -84,7 +84,7 @@ Klasa, do której jest obecny `ComPtr` obiekt zaprzyjaźniony. (Szablon, który 
 
 `ComPtr<>`deklaruje typ, który reprezentuje wskaźnik podstawowego interfejsu. Użyj `ComPtr<>` , aby zadeklarować zmienną, a następnie użyć operatora dostępu do elementu członkowskiego (`->`) ze strzałką, aby uzyskać dostęp do funkcji składowej interfejsu.
 
-Aby uzyskać więcej informacji o inteligentnych wskaźnikach, zobacz podsekcję "inteligentne wskaźniki COM" w temacie [wskazówki dotyczące kodowania com](/windows/desktop/LearnWin32/com-coding-practices) w bibliotece MSDN.
+Aby uzyskać więcej informacji o inteligentnych wskaźnikach, zobacz podsekcję "inteligentne wskaźniki COM" w temacie [wskazówki dotyczące kodowania com](/windows/win32/LearnWin32/com-coding-practices) w bibliotece MSDN.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -185,7 +185,7 @@ Obiekt, który reprezentuje interfejs określony przez parametr *U.* `ComPtr` Pa
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy szablon jest formularzem, którego należy użyć w kodzie. Drugi szablon jest wewnętrzną specjalizacją pomocnika, która obsługuje C++ funkcje językowe, takie jak słowo kluczowe potrącenie [typu](../../cpp/auto-cpp.md) autoodejmowanie.
+Pierwszy szablon jest formularzem, którego należy użyć w kodzie. Drugi szablon jest wewnętrzną specjalizacją pomocnika, która obsługuje C++ funkcje językowe, takie jak [](../../cpp/auto-cpp.md) słowo kluczowe potrącenie typu autoodejmowanie.
 
 ### <a name="return-value"></a>Wartość zwracana
 

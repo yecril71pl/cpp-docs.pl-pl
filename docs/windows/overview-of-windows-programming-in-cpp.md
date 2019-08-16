@@ -2,12 +2,12 @@
 title: Omówienie programowania w systemie Windows w języku C++
 ms.date: 07/28/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: f72e6320493027728a85741ba6d87025454c3b9e
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: 10ef9698e27099d5856c1ed5f8ed2f21cea72c24
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68607518"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514796"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Omówienie programowania w systemie Windows w języku C++
 
@@ -21,9 +21,9 @@ C++aplikacje konsolowe są uruchamiane z wiersza polecenia w oknie konsoli i mog
 
 ## <a name="native-desktop-client-applications"></a>Natywne aplikacje klienckie dla komputerów stacjonarnych
 
-*Natywna aplikacja kliencka* jest aplikacją C lub C++ okienkową, która używa oryginalnych interfejsów api [Windows C lub Component Object Model (com)](/windows/desktop/apiindex/windows-api-list) do uzyskania dostępu do systemu operacyjnego. Te interfejsy API są napisywane głównie w języku C. Istnieje więcej niż jeden sposób tworzenia natywnej aplikacji klasycznej: Możesz bezpośrednio używać interfejsów API Win32 przy użyciu pętli komunikatów w stylu języka C, która przetwarza zdarzenia systemu operacyjnego. Lub można programować za pomocą *Microsoft Foundation Classes* (MFC), dobrze zorientowanego obiektowo C++ biblioteki, która otacza Win32. Żadna metoda nie jest uważana za "nowoczesny" w porównaniu do platforma uniwersalna systemu Windows (platformy UWP), ale obie są nadal w pełni obsługiwane i mają miliony wierszy kodu uruchomionego na świecie już dziś. Aplikacja Win32 uruchamiana w oknie wymaga, aby deweloper działał jawnie z komunikatami systemu Windows w ramach funkcji procedury systemu Windows. Pomimo nazwy, aplikacja Win32 może być skompilowana jako plik binarny 32-bitowy (x86) lub 64-bitowy (x64). W środowisku IDE programu Visual Studio warunki x86 i Win32 są synonimami.
+*Natywna aplikacja kliencka* jest aplikacją C lub C++ okienkową, która używa oryginalnych interfejsów api [Windows C lub Component Object Model (com)](/windows/win32/apiindex/windows-api-list) do uzyskania dostępu do systemu operacyjnego. Te interfejsy API są napisywane głównie w języku C. Istnieje więcej niż jeden sposób tworzenia natywnej aplikacji klasycznej: Możesz bezpośrednio używać interfejsów API Win32 przy użyciu pętli komunikatów w stylu języka C, która przetwarza zdarzenia systemu operacyjnego. Lub można programować za pomocą *Microsoft Foundation Classes* (MFC), dobrze zorientowanego obiektowo C++ biblioteki, która otacza Win32. Żadna metoda nie jest uważana za "nowoczesny" w porównaniu do platforma uniwersalna systemu Windows (platformy UWP), ale obie są nadal w pełni obsługiwane i mają miliony wierszy kodu uruchomionego na świecie już dziś. Aplikacja Win32 uruchamiana w oknie wymaga, aby deweloper działał jawnie z komunikatami systemu Windows w ramach funkcji procedury systemu Windows. Pomimo nazwy, aplikacja Win32 może być skompilowana jako plik binarny 32-bitowy (x86) lub 64-bitowy (x64). W środowisku IDE programu Visual Studio warunki x86 i Win32 są synonimami.
 
-Aby rozpocząć pracę z tradycyjnym C++ programowaniem systemu Windows, zobacz Wprowadzenie [do C++systemu Win32 i ](/windows/desktop/LearnWin32/learn-to-program-for-windows). Po uzyskaniu pewnych informacji dotyczących systemu Win32 będzie łatwiej poznać [aplikacje klasyczne MFC](../mfc/mfc-desktop-applications.md). Aby zapoznać się z przykładem C++ tradycyjnej aplikacji klasycznej, która używa zaawansowanej grafiki, zobacz [Hilo: Tworzenie C++ aplikacji dla systemu](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)Windows.
+Aby rozpocząć pracę z tradycyjnym C++ programowaniem systemu Windows, zobacz Wprowadzenie [do C++systemu Win32 i ](/windows/win32/LearnWin32/learn-to-program-for-windows). Po uzyskaniu pewnych informacji dotyczących systemu Win32 będzie łatwiej poznać [aplikacje klasyczne MFC](../mfc/mfc-desktop-applications.md). Aby zapoznać się z przykładem C++ tradycyjnej aplikacji klasycznej, która używa zaawansowanej grafiki, zobacz [Hilo: Tworzenie C++ aplikacji dla systemu](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)Windows.
 
 ### <a name="c-or-net"></a>C++Czy .NET?
 
@@ -39,7 +39,7 @@ Istnieje również możliwość łączenia mocy i wydajności C++ z programowani
 
 ## <a name="com-components"></a>Składniki COM
 
-[Component Object Model (com)](/windows/desktop/com/the-component-object-model) to specyfikacja, która umożliwia programom w różnych językach komunikowanie się ze sobą. Wiele składników systemu Windows jest implementowanych jako obiekty COM i są zgodne ze standardowymi regułami COM na potrzeby tworzenia obiektów, odnajdywania interfejsów i niszczenia obiektów.  Używanie obiektów COM z C++ aplikacji klasycznych jest stosunkowo proste, ale pisanie własnego obiektu com jest bardziej zaawansowane. [Active Template Library (ATL)](../atl/atl-com-desktop-components.md) zawiera makra i funkcje pomocnika, które upraszczają programowanie com. Aby uzyskać więcej informacji, zobacz [składniki komputera ATL com](../atl/atl-com-desktop-components.md).
+[Component Object Model (com)](/windows/win32/com/the-component-object-model) to specyfikacja, która umożliwia programom w różnych językach komunikowanie się ze sobą. Wiele składników systemu Windows jest implementowanych jako obiekty COM i są zgodne ze standardowymi regułami COM na potrzeby tworzenia obiektów, odnajdywania interfejsów i niszczenia obiektów.  Używanie obiektów COM z C++ aplikacji klasycznych jest stosunkowo proste, ale pisanie własnego obiektu com jest bardziej zaawansowane. [Active Template Library (ATL)](../atl/atl-com-desktop-components.md) zawiera makra i funkcje pomocnika, które upraszczają programowanie com. Aby uzyskać więcej informacji, zobacz [składniki komputera ATL com](../atl/atl-com-desktop-components.md).
 
 ## <a name="universal-windows-platform-apps"></a>Windows Universal apps platformy
 
@@ -55,7 +55,7 @@ Program Visual Studio 2017 w wersji 15,4 i nowszej umożliwia utworzenie projekt
 
 ## <a name="games"></a>Zainstalowane
 
-Gry DirectX można uruchamiać na komputerze lub w konsoli Xbox. Aby uzyskać więcej informacji, zobacz [grafika i gry DirectX](/windows/desktop/directx).
+Gry DirectX można uruchamiać na komputerze lub w konsoli Xbox. Aby uzyskać więcej informacji, zobacz [grafika i gry DirectX](/windows/win32/directx).
 
 ## <a name="sql-server-database-clients"></a>Klienci bazy danych SQL Server
 
@@ -67,7 +67,7 @@ Sterowniki to składniki niskiego poziomu, które tworzą dane z urządzeń sprz
 
 ## <a name="windows-services"></a>usługi systemu Windows
 
-*Usługa* systemu Windows to program, który można uruchomić w tle z małą lub bez interakcji z użytkownikiem. Te programy są nazywane *demonami* w systemach UNIX. Aby uzyskać więcej informacji, zobacz [usługi](/windows/desktop/services/services).
+*Usługa* systemu Windows to program, który można uruchomić w tle z małą lub bez interakcji z użytkownikiem. Te programy są nazywane *demonami* w systemach UNIX. Aby uzyskać więcej informacji, zobacz [usługi](/windows/win32/services/services).
 
 ## <a name="sdks-libraries-and-header-files"></a>Zestawy SDK, biblioteki i pliki nagłówkowe
 

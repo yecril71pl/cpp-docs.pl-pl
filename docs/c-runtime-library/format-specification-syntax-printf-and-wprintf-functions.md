@@ -9,12 +9,12 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: 3ba4f91c86727986762b3431c093ee7304a3a83f
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: db144703a89fe1a6a76ed15f1cf77395c4565fab
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915492"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500090"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Składnia specyfikacji formatu: funkcje printf i wprintf
 
@@ -62,19 +62,19 @@ Typy całkowite, takie `short`jak `int`, `long`, `long long`, i ich `unsigned` w
 |**u**|Liczba całkowita|Liczba całkowita dziesiętna bez znaku.|
 |**x**|Liczba całkowita|Szesnastkowa liczba całkowita bez znaku; używa "abcdef".|
 |**X**|Liczba całkowita|Szesnastkowa liczba całkowita bez znaku; używa "ABCDEF".|
-|**e**|Liczba zmiennoprzecinkowa|Wartość ze znakiem, która ma postać [-]*d. dddd* __*DD*\[*d*], gdzie *d* jest jedną cyfrą dziesiętną, *dddd* ma jedną lub więcej cyfr dziesiętnych w zależności od określonej precyzji lub sześć domyślnie i *DD* d] ma dwie lub trzy cyfry dziesiętne w zależności od [formatu danych wyjściowych](../c-runtime-library/set-output-format.md) i rozmiaru wykładnika. \[|
+|**e**|Liczba zmiennoprzecinkowa|Wartość ze znakiem, która ma postać [-]*d. dddd*__e ±__*DD*\[*d*], gdzie *d* jest jedną cyfrą dziesiętną, *dddd* ma jedną lub więcej cyfr dziesiętnych w zależności od określonej precyzji lub sześć domyślnie i *DD* d] ma dwie lub trzy cyfry dziesiętne w zależności od [formatu danych wyjściowych](../c-runtime-library/set-output-format.md) i rozmiaru wykładnika. \[|
 |**E**|Liczba zmiennoprzecinkowa|Identyczny z formatem **e** , z tą różnicą, że **e** zamiast **e** wprowadza wykładnik.|
 |**f**|Liczba zmiennoprzecinkowa|Wartość ze znakiem, która ma postać [-]*dddd* __.__ *dddd*, gdzie *dddd* to co najmniej jedna cyfra dziesiętna. Liczba cyfr przed punktem dziesiętnym zależy od wielkości liczby, a liczba cyfr po przecinku jest zależna od wymaganej precyzji lub sześciu domyślnie.|
 |**F**|Liczba zmiennoprzecinkowa|Identyczny z formatem **f** , z wyjątkiem tego, że nieskończoność i Nan dane wyjściowe są pisane wielkimi literami.|
 |**g**|Liczba zmiennoprzecinkowa|Wartości podpisane są wyświetlane w formacie **f** lub **e** , w zależności od tego, który jest bardziej zwarty dla danej wartości i dokładności. Format **e** jest używany tylko wtedy, gdy wykładnik wartości jest mniejszy niż-4 lub większy lub równy argumentowi precyzji. Końcowe zera są obcinane, a punkt dziesiętny pojawia się tylko wtedy, gdy jedna lub więcej cyfr należy do niego.|
 |**G**|Liczba zmiennoprzecinkowa|Identyczny z formatem **g** , z tą różnicą, że **e**, zamiast **e**, wprowadza wykładnik (tam, gdzie to konieczne).|
-|**a**|Liczba zmiennoprzecinkowa|Podpisana szesnastkowa wartość zmiennoprzecinkowa o podwójnej precyzji, która ma postać [-] 0x*h. hhhh* __*DD*, gdzie *h. hhhh* to cyfry szesnastkowe (przy użyciu małych liter) mantysy, a *DD* to jedna lub więcej cyfr dla zapis. Precyzja określa liczbę cyfr po punkcie.|
-|**A**|Liczba zmiennoprzecinkowa|Podpisana szesnastkowa wartość zmiennoprzecinkowa o podwójnej precyzji, która ma postać [-] 0X*h. hhhh* __*DD*, gdzie *h. hhhh* to cyfry szesnastkowe (przy użyciu wielkich liter) mantysy, a *DD* to jedna lub więcej cyfr dla wykładnika . Precyzja określa liczbę cyfr po punkcie.|
+|**a**|Liczba zmiennoprzecinkowa|Podpisana szesnastkowa wartość zmiennoprzecinkowa o podwójnej precyzji, która ma postać [-] 0x*h. hhhh*__p ±__*DD*, gdzie *h. hhhh* to cyfry szesnastkowe (przy użyciu małych liter) mantysy, a *DD* to jedna lub więcej cyfr dla zapis. Precyzja określa liczbę cyfr po punkcie.|
+|**A**|Liczba zmiennoprzecinkowa|Podpisana szesnastkowa wartość zmiennoprzecinkowa o podwójnej precyzji, która ma postać [-] 0X*h. hhhh*__P ±__*DD*, gdzie *h. hhhh* to cyfry szesnastkowe (przy użyciu wielkich liter) mantysy, a *DD* to jedna lub więcej cyfr dla wykładnika . Precyzja określa liczbę cyfr po punkcie.|
 |**n**|Wskaźnik na liczbę całkowitą|Liczba znaków, które zostały pomyślnie wpisane do strumienia lub buforu. Ta wartość jest przechowywana w postaci liczby całkowitej, której adres jest podawany jako argument. Rozmiar liczby całkowitej wskazywanej w można kontrolować przy użyciu prefiksu specyfikacji rozmiaru argumentu. Specyfikator **n** jest domyślnie wyłączony; Aby uzyskać więcej informacji, zobacz ważne uwagi dotyczące zabezpieczeń.|
 |**p**|Typ wskaźnika|Wyświetla argument jako adres w cyfrach szesnastkowych.|
 |**s**|String|Gdy jest używany `printf` z funkcjami, określa dwubajtowy lub wielobajtowy ciąg znaków; gdy jest używany `wprintf` z funkcjami, określa ciąg znaków szerokich. Znaki są wyświetlane do pierwszego znaku null lub do czasu osiągnięcia wartości *precyzji* .|
 |**S**|String|Gdy jest używany `printf` z funkcjami, określa ciąg znaków dwubajtowych; gdy jest `wprintf` używany z funkcjami, określa ciąg znaków o pojedynczym bajcie lub wielobajtowym. Znaki są wyświetlane do pierwszego znaku null lub do czasu osiągnięcia wartości *precyzji* .|
-|**Z**|`ANSI_STRING`lub `UNICODE_STRING` struktura|Gdy do argumentu jest przenoszona adres struktury [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-string) lub [UNICODE_STRING](/windows/win32/api/ntdef/ns-ntdef-_unicode_string) , program wyświetla ciąg zawarty w buforze wskazywanym przez `Buffer` pole struktury. Użyj prefiksu modyfikatora rozmiaru **w** `UNICODE_STRING` , aby określić argument — na przykład. `%wZ` W `Length` polu struktury musi być ustawiona Długość (w bajtach) ciągu. W `MaximumLength` polu struktury musi być ustawiona Długość (w bajtach) buforu.<br /><br /> Zazwyczaj znak **z typu z** jest używany tylko w funkcjach debugowania sterowników, które używają specyfikacji konwersji, takich jak `dbgPrint` i `kdPrint`.|
+|**Z**|`ANSI_STRING`lub `UNICODE_STRING` struktura|Gdy do argumentu jest przenoszona adres struktury [ANSI_STRING](/windows/win32/api/ntdef/ns-ntdef-string) lub [UNICODE_STRING](/windows/win32/api/ntdef/ns-ntdef-_unicode_string) , program wyświetla ciąg zawarty w buforze wskazywanym przez `Buffer` pole struktury. Użyj prefiksu modyfikatora rozmiaru **w** `UNICODE_STRING` , aby określić argument — na przykład. `%wZ` W `Length` polu struktury musi być ustawiona Długość (w bajtach) ciągu. W `MaximumLength` polu struktury musi być ustawiona Długość (w bajtach) buforu.<br /><br /> Zazwyczaj znak **z typu z** jest używany tylko w funkcjach debugowania sterowników, które używają specyfikacji konwersji, takich jak `dbgPrint` i `kdPrint`.|
 
 W programie Visual Studio 2015, jeśli argument, który odpowiada specyfikatorowi konwersji liczb zmiennoprzecinkowych (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) jest nieskończone nieokreślony, lub NaN, sformatowane wyniki zgodne ze standardem C99. W tej tabeli wymieniono sformatowane dane wyjściowe:
 

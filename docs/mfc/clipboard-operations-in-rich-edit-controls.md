@@ -10,24 +10,24 @@ helpviewer_keywords:
 - Clipboard, operations in CRichEditCtrl
 - rich edit controls [MFC], Clipboard operations
 ms.assetid: 15ce66bc-2636-4a35-a2ae-d52285dc1af6
-ms.openlocfilehash: 882c589d0d25b54650affa7fd41f916ecf6097d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e232010b443ace245844f1c28649477cccc8e9e4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327109"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508969"
 ---
 # <a name="clipboard-operations-in-rich-edit-controls"></a>Operacje schowka w formantach edycji wzbogaconej
 
-Aplikację można wkleić zawartość Schowka do kontrolki edycji wzbogaconej ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) przy użyciu najlepszych dostępnych format Schowka lub w określonym formacie Schowka. Można również określić, czy kontrolki edycji wzbogaconej jest w stanie wklejanie format Schowka.
+Aplikacja może wkleić zawartość schowka do kontrolki edycji wzbogaconej ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) przy użyciu najlepszego dostępnego formatu Schowka lub określonego formatu Schowka. Można również określić, czy wzbogacona kontrolka edycji umożliwia wklejenie formatu Schowka.
 
-Można skopiować lub wyciąć zawartość bieżącego zaznaczenia przy użyciu [kopiowania](../mfc/reference/cricheditctrl-class.md#copy) lub [Wytnij](../mfc/reference/cricheditctrl-class.md#cut) funkcja elementu członkowskiego. Podobnie, Wklej zawartość Schowka w formantach edycji wzbogaconej przy użyciu [Wklej](../mfc/reference/cricheditctrl-class.md#paste) funkcja elementu członkowskiego. Kontrolka wkleja pierwszy dostępny formacie, który rozpoznaje, który prawdopodobnie jest format najbardziej opisowy.
+Możesz skopiować lub wyciąć zawartość bieżącego zaznaczenia przy użyciu funkcji [kopiowania](../mfc/reference/cricheditctrl-class.md#copy) lub wycinania elementu [](../mfc/reference/cricheditctrl-class.md#cut) Członkowskiego. Podobnie można wkleić zawartość schowka do kontrolki edycji wzbogaconej przy użyciu funkcji [Wklej](../mfc/reference/cricheditctrl-class.md#paste) element członkowski. Formant wkleja pierwszy dostępny format, który jest rozpoznawany, który najprawdopodobniej jest najbardziej opisowym formatem.
 
-Aby wkleić w określonym formacie Schowka, możesz użyć [PasteSpecial](../mfc/reference/cricheditctrl-class.md#pastespecial) funkcja elementu członkowskiego. Ta funkcja jest przydatne w przypadku aplikacji za pomocą polecenia Wklej specjalne, który umożliwia użytkownikowi wybranie format Schowka. Możesz użyć [CanPaste](../mfc/reference/cricheditctrl-class.md#canpaste) funkcja elementu członkowskiego, aby ustalić, czy dany format jest rozpoznawany przez formant.
+Aby wkleić określony format schowka, można użyć funkcji składowej [PasteSpecial](../mfc/reference/cricheditctrl-class.md#pastespecial) . Ta funkcja jest przydatna w przypadku aplikacji z poleceniem Wklej specjalnie, które umożliwia użytkownikowi wybranie formatu Schowka. Można użyć funkcji elementu [](../mfc/reference/cricheditctrl-class.md#canpaste) Członkowskiego, aby określić, czy dany format jest rozpoznawany przez formant.
 
-Można również użyć `CanPaste` do określenia, czy wszystkie dostępne format Schowka jest rozpoznawany przez kontrolki edycji wzbogaconej. Funkcja ta jest przydatna w `OnInitMenuPopup` programu obsługi. Aplikacja może włączyć lub szary polecenia Wklej w zależności od tego, czy kontrolka można wkleić dostępnych formatów.
+Można również użyć `CanPaste` , aby określić, czy dowolny dostępny format Schowka jest rozpoznawany przez kontrolkę edycji wzbogaconej. Ta funkcja jest przydatna w programie `OnInitMenuPopup` obsługi. Aplikacja może włączyć lub szaro polecenie wklejenia w zależności od tego, czy kontrolka może wkleić dowolny dostępny format.
 
-Bogatej edycji kontrolki rejestru dwa formaty Schowka: format tekstu sformatowanego i format nazywany RichEdit tekstu i obiektów. Aplikację można zarejestrować te formaty za pomocą [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) funkcji, określając **CF_RTF** i **CF_RETEXTOBJ** wartości.
+Kontrolki edycji wzbogaconej rejestrują dwa formaty schowka: format tekstu sformatowanego i format o nazwie RichEdit tekst i obiekty. Aplikacja może zarejestrować te formaty przy użyciu funkcji [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) , określając wartości **CF_RTF** i **CF_RETEXTOBJ** .
 
 ## <a name="see-also"></a>Zobacz także
 

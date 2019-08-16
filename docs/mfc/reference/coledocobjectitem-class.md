@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-ms.openlocfilehash: 454be491fe5875b1b1ac9b2b85fdebe2f1663ebc
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: c6e00bf42cf20b46c949c218efe1820cc7ce0f9b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916975"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504009"
 ---
 # <a name="coledocobjectitem-class"></a>Klasa metody COleDocObjectItem
 
@@ -142,7 +142,7 @@ HRESULT ExecCommand(
 Identyfikator polecenia do wykonania. Musi znajdować się w grupie identyfikowanej przez *pguidCmdGroup*.
 
 *nCmdExecOpt*<br/>
-Określa opcje wykonywania polecenia. Domyślnie Ustaw, aby wykonać polecenie bez monitowania użytkownika. Zobacz [OLECMDEXECOPT](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt) , aby uzyskać listę wartości.
+Określa opcje wykonywania polecenia. Domyślnie Ustaw, aby wykonać polecenie bez monitowania użytkownika. Zobacz [OLECMDEXECOPT](/windows/win32/api/docobj/ne-docobj-olecmdexecopt) , aby uzyskać listę wartości.
 
 *pguidCmdGroup*<br/>
 Unikatowy identyfikator grupy poleceń. Domyślnie wartość NULL, która określa grupę Standard. Polecenie przesłane w *nCmdID* musi należeć do grupy.
@@ -176,7 +176,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do interfejsu [IOleDocumentView](/windows/desktop/api/docobj/nn-docobj-ioledocumentview) aktualnie aktywnego widoku. Jeśli nie ma bieżącego widoku, zwraca wartość NULL.
+Wskaźnik do interfejsu [IOleDocumentView](/windows/win32/api/docobj/nn-docobj-ioledocumentview) aktualnie aktywnego widoku. Jeśli nie ma bieżącego widoku, zwraca wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -270,21 +270,21 @@ HRESULT QueryCommand(
 Identyfikator polecenia, dla którego jest wykonywane zapytanie.
 
 *pdwStatus*<br/>
-Wskaźnik do flag zwracanych w wyniku zapytania. Aby uzyskać listę możliwych wartości, zobacz [OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf).
+Wskaźnik do flag zwracanych w wyniku zapytania. Aby uzyskać listę możliwych wartości, zobacz [OLECMDF](/windows/win32/api/docobj/ne-docobj-olecmdf).
 
 *pCmdText*<br/>
-Wskaźnik do struktury [OLECMDTEXT](/windows/desktop/api/docobj/ns-docobj-olecmdtext) , w której mają zostać zwrócone informacje o nazwie i stanie dla jednego polecenia. Może mieć wartość NULL, aby wskazać, że obiekt wywołujący nie potrzebuje tych informacji.
+Wskaźnik do struktury [OLECMDTEXT](/windows/win32/api/docobj/ns-docobj-olecmdtext) , w której mają zostać zwrócone informacje o nazwie i stanie dla jednego polecenia. Może mieć wartość NULL, aby wskazać, że obiekt wywołujący nie potrzebuje tych informacji.
 
 *pguidCmdGroup*<br/>
 Unikatowy identyfikator grupy poleceń; może mieć wartość NULL, aby określić grupę standardową.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Aby uzyskać pełną listę zwracanych wartości, zobacz [IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) w Windows SDK.
+Aby uzyskać pełną listę zwracanych wartości, zobacz [IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) w Windows SDK.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska emuluje funkcjonalność metody [IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) , zgodnie z opisem w Windows SDK.
+Ta funkcja członkowska emuluje funkcjonalność metody [IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) , zgodnie z opisem w Windows SDK.
 
 ##  <a name="release"></a>Metody COleDocObjectItem:: Release
 

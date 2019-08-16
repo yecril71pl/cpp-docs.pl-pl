@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MANIFEST linker option
 - MANIFEST linker option
 ms.assetid: 98c52e1e-712c-4f49-b149-4d0a3501b600
-ms.openlocfilehash: 9a3ca3980a9cdff4e67885b2ad47ffa2385b0774
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea58b43accdd854665fad3b70d7aecbc9eaa0f9e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321647"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492779"
 ---
 # <a name="manifest-create-side-by-side-assembly-manifest"></a>/MANIFEST (Tworzenie manifestu dla aplikacji wykonywanych jednocześnie)
 
@@ -23,35 +23,35 @@ ms.locfileid: "62321647"
 
 ## <a name="remarks"></a>Uwagi
 
-/ MANIFEST Określa, że konsolidator powinien utworzyć plik manifestu side-by-side. Aby uzyskać więcej informacji na temat plików manifestu, zobacz [odwołania plików manifestu](/windows/desktop/SbsCs/manifest-files-reference).
+/MANIFEST określa, że konsolidator powinien utworzyć plik manifestu obok siebie. Aby uzyskać więcej informacji na temat plików manifestu, zobacz [Dokumentacja plików manifestu](/windows/win32/SbsCs/manifest-files-reference).
 
-Wartość domyślna to /MANIFEST.
+Wartość domyślna to/MANIFEST.
 
-/MANIFEST: OSADZANIE opcja określa konsolidator należy osadzić pliku manifestu na obrazie, jako zasobu typu RT_MANIFEST. Opcjonalny `ID` parametr jest identyfikator zasobu do użycia dla manifestu. Użyj wartości 1 dla pliku wykonywalnego. Umożliwiają wartość 2 dla bibliotek DLL z nim do określania prywatnych zależności. Jeśli `ID` parametr nie jest określony, wartość domyślna to 2, jeśli ustawiono opcję/dll; w przeciwnym razie wartość domyślna to 1.
+Opcja/MANIFEST: EMBED określa, że konsolidator powinien osadzić plik manifestu w obrazie jako zasób typu RT_MANIFEST. Opcjonalny `ID` parametr jest identyfikatorem zasobu, który ma być używany dla manifestu. Użyj wartości 1 dla pliku wykonywalnego. Użyj wartości 2 dla biblioteki DLL, aby umożliwić jej Określanie zależności prywatnych. `ID` Jeśli parametr nie jest określony, wartość domyślna to 2, jeśli ustawiona jest opcja/dll; w przeciwnym razie wartość domyślna to 1.
 
-Począwszy od programu Visual Studio 2008 plików manifestu dla plików wykonywalnych zawiera sekcja, która określa informacje kontroli konta użytkownika (UAC). Jeśli określono /MANIFEST, ale nie określono [/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md) ani [/dll](dll-build-a-dll.md), fragment funkcji Kontrola konta użytkownika domyślnego, który ma ustawiony poziom kontroli konta użytkownika do *asInvoker* zostaną wstawione do manifestu. Aby uzyskać więcej informacji na temat poziomów funkcji Kontrola konta użytkownika, zobacz [/MANIFESTUAC (osadza informacje UAC w manifeście)](manifestuac-embeds-uac-information-in-manifest.md).
+Począwszy od programu Visual Studio 2008 pliki manifestu dla plików wykonywalnych zawierają sekcję, która określa informacje o kontroli konta użytkownika (UAC). Jeśli określisz/MANIFEST, ale nie określisz ani [/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md) ani [/dll](dll-build-a-dll.md), domyślny fragment UAC, który ma ustawiony na *jako źródło* poziom kontroli konta użytkownika, zostanie wstawiony do manifestu. Aby uzyskać więcej informacji na temat poziomów kontroli konta użytkownika, zobacz [/MANIFESTUAC (osadza informacje kontroli konta użytkownika w manifeście)](manifestuac-embeds-uac-information-in-manifest.md).
 
-Aby zmienić domyślne zachowanie dla funkcji Kontrola konta użytkownika, wykonaj jeden z nich:
+Aby zmienić domyślne zachowanie funkcji Kontrola konta użytkownika, wykonaj jedną z następujących czynności:
 
-- Wybierz opcję /MANIFESTUAC, a także Ustaw poziom funkcji Kontrola konta użytkownika na żądaną wartość.
+- Określ opcję/MANIFESTUAC i ustaw poziom kontroli konta użytkownika na żądaną wartość.
 
-- Lub wybierz opcję: No, jeśli nie chcesz wygenerować fragmentu UAC w manifeście.
+- Lub określ/MANIFESTUAC: NO, jeśli nie chcesz generować fragmentów kontroli konta użytkownika w manifeście.
 
-Jeśli nie określono /MANIFEST, ale określono [/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md) komentarze, tworzony jest plik manifestu. Nie jest tworzony plik manifestu, jeśli określisz /MANIFEST:NO.
+Jeśli nie określisz/MANIFEST, ale nie określisz komentarzy [/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md) , tworzony jest plik manifestu. Plik manifestu nie jest tworzony w przypadku określenia/MANIFEST: NO.
 
-Jeśli określisz /MANIFEST, nazwa pliku manifestu jest taka sama jak nazwa pliku wyjściowego, ale manifest dodanym na końcu nazwy pliku. Na przykład jeśli nazwa pliku wyjściowego jest MyFile.exe, nazwa pliku manifestu jest MyFile.exe.manifest.  Jeśli określisz /MANIFESTFILE:*nazwa*, nazwa manifestu to określić w *nazwa*.
+Jeśli określisz/MANIFEST, nazwa pliku manifestu jest taka sama jak nazwa pliku wyjściowego, ale z. manifest dołączany do nazwy pliku. Na przykład, jeśli nazwa pliku wyjściowego to plik. exe, nazwa pliku manifestu to plik. exe. manifest.  W przypadku określenia/MANIFESTFILE:*name*Nazwa manifestu jest określana w polu *Nazwa*.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
-1. Rozwiń **właściwości konfiguracji** węzła.
+1. Rozwiń węzeł **Właściwości konfiguracji** .
 
-1. Rozwiń **konsolidatora** węzła.
+1. Rozwiń węzeł **konsolidatora** .
 
-1. Wybierz **pliku manifestu** stronę właściwości.
+1. Wybierz stronę właściwości **plik manifestu** .
 
-1. Modyfikowanie **Generuj Manifest** właściwości.
+1. Zmodyfikuj właściwość **Generuj manifest** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 

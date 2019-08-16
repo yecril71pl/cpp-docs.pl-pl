@@ -1,21 +1,21 @@
 ---
-title: call_as (C++ atrybutów COM)
+title: call_as (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.call_as
 helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-ms.openlocfilehash: a0051cdca6673800b37d5733c0b849da24010fcb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f36cf8d1be589cc614a6def583b00af00aabdb61
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148357"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501804"
 ---
-# <a name="callas"></a>call_as
+# <a name="call_as"></a>call_as
 
-Włącza [lokalnego](local-cpp.md) funkcji, które mają być mapowane na funkcję zdalną, więc, że po wywołaniu funkcji zdalnego jest wywoływana funkcja lokalna.
+Umożliwia zamapowanie funkcji [lokalnej](local-cpp.md) na funkcję zdalną, dzięki czemu po wywołaniu funkcji zdalnej funkcja lokalna jest wywoływana.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,16 +25,16 @@ Włącza [lokalnego](local-cpp.md) funkcji, które mają być mapowane na funkcj
 
 ### <a name="parameters"></a>Parametry
 
-*— Funkcja*<br/>
-Funkcja lokalna, który ma być wywoływana, gdy zostanie wywołana funkcja zdalnego.
+*funkcyjn*<br/>
+Funkcja lokalna, która ma być wywoływana, gdy wywoływana jest funkcja zdalna.
 
 ## <a name="remarks"></a>Uwagi
 
-**Call_as** C++ atrybut ma taką samą funkcjonalność jak [call_as](/windows/desktop/Midl/call-as) atrybutów w MIDL.
+Atrybut **call_as** C++ ma takie same funkcje jak atrybut [call_as](/windows/win32/Midl/call-as) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod pokazuje, jak można użyć **call_as** na mapowanie funkcji nonremotable (`f1`) do funkcji może być zastosowana zdalnie (`Remf1`):
+Poniższy kod pokazuje, jak można użyć **call_as** do mapowania funkcji niezdalnych (`f1`) na funkcję zdalną (`Remf1`):
 
 ```cpp
 // cpp_attr_ref_call_as.cpp
@@ -54,12 +54,12 @@ __interface IMInterface {
 
 |||
 |-|-|
-|**Dotyczy**|Metody interfejsu|
+|**Dotyczy**|Interface — Metoda|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

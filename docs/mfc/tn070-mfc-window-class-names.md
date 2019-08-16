@@ -5,32 +5,32 @@ helpviewer_keywords:
 - window class names [MFC]
 - TN070 [MFC]
 ms.assetid: 90617912-dd58-4a7c-9082-ced71736d7cd
-ms.openlocfilehash: e2818104c59a94b0e1239abc614a83dea8c3de08
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 1d9b5de07bcc2545df6294557d1ac9f9d29e856c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611214"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513355"
 ---
 # <a name="tn070-mfc-window-class-names"></a>TN070: Nazwy klas okien MFC
 
 > [!NOTE]
->  Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
+>  Następująca Uwaga techniczna nie została zaktualizowana, ponieważ została najpierw uwzględniona w dokumentacji online. W związku z tym niektóre procedury i tematy mogą być nieaktualne lub nieprawidłowe. Aby uzyskać najnowsze informacje, zalecamy wyszukiwanie tematu zainteresowania w indeksie dokumentacji online.
 
-MFC windows, użyj nazwy klasy utworzony dynamicznie, która odzwierciedla funkcje okna. MFC generuje nazw klas dynamicznie okien ramowych, widoków i okna wyskakujące generowany przez aplikację. Okien dialogowych i formantów, generowane przez aplikację MFC mają nazwę klasy okna w danym dostarczonych przez Windows.
+Windows MFC używa dynamicznie utworzonej nazwy klasy, która odzwierciedla funkcje okna. MFC generuje nazwy klas dynamicznie dla okien ramowych, widoków i okien podręcznych tworzonych przez aplikację. Okna dialogowe i kontrolki tworzone przez aplikację MFC mają nazwę dostarczoną przez system Windows dla danej klasy okna.
 
-Możesz zastąpić nazwę klasy dynamicznie podana przez rejestrowanie klasy okna i korzystania z niego w zastąpieniu obiektu [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow). Nazwy klas dostarczonych przez MFC Dopasuj jeden z dwóch następujących form:
+Można zastąpić dynamiczną nazwę klasy przez zarejestrowanie własnej klasy okna i użycie jej w przesłonięciu [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow). Nazwy klas dostarczone przez MFC pasują do jednej z dwóch następujących form:
 
 ```
 Afx:%x:%x
 Afx:%x:%x:%x:%x:%x
 ```
 
-Cyfr szesnastkowych, które zastępują `%x` znaki są wypełniane dane z [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) struktury. MFC używa tej techniki, aby wiele klas C++ wymagające identyczne **WNDCLASS** struktury można udostępnić tej samej klasy okna zarejestrowane. W przeciwieństwie do większości prostych aplikacji Win32, aplikacji MFC mieć tylko jedną **WNDPROC**, dzięki czemu można łatwo udostępniać **WNDCLASS** struktur, aby oszczędzić czas i pamięci. Wymienne wartości `%x` znaków przedstawione powyżej są następujące:
+Cyfry szesnastkowe, które zastępują `%x` znaki, są wypełniane danymi ze struktury [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) . MFC korzysta z tej techniki, dzięki C++ czemu wiele klas wymagających identycznych struktur **WNDCLASS** może współużytkować tę samą zarejestrowanej klasy okna. W przeciwieństwie do większości prostych aplikacji Win32, aplikacje MFC mają tylko jeden **WndProc**, więc można łatwo udostępniać struktury **WNDCLASS** , aby zaoszczędzić czas i pamięć. Wartości do przemieszczenia dla `%x` przedstawionych powyżej znaków są następujące:
 
-- **WNDCLASS.hInstance**
+- **WNDCLASS. hInstance**
 
-- **WNDCLASS.style**
+- **WNDCLASS. Style**
 
 - **WNDCLASS.hCursor**
 
@@ -38,7 +38,7 @@ Cyfr szesnastkowych, które zastępują `%x` znaki są wypełniane dane z [WNDCL
 
 - **WNDCLASS.hIcon**
 
-Pierwszy formularz (`Afx:%x:%x`) jest używany podczas **hCursor**, **hbrBackground**, i **hIcon** wyświetlane są wszystkie **NULL**.
+Pierwszy`Afx:%x:%x`formularz () jest używany, gdy **hCursor**, **hbrBackground**i **HICON** mają **wartość null**.
 
 ## <a name="see-also"></a>Zobacz także
 

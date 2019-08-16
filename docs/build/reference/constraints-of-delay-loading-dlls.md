@@ -6,38 +6,38 @@ helpviewer_keywords:
 - delayed loading of DLLs, constraints
 - DLLs [C++], constraints
 ms.assetid: 0097ff65-550f-4a4e-8ac3-39bf6404f926
-ms.openlocfilehash: e37890fcd757a52ddeff0ccd79289bbc0c35e042
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: be5e5eb360f80e0b2ea9682f38f6787044cd3c63
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344164"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493073"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>Ograniczenia bibliotek DLL ładowanych z opóźnieniem
 
-Istnieją ograniczenia dotyczące ładowania opóźnienie importów.
+Istnieją ograniczenia dotyczące opóźnień ładowania importów.
 
-- Nie można obsłużyć importuje dane. Obejście tego problemu jest jawnie obsługiwać importu danych przy użyciu polecenia `LoadLibrary` (lub `GetModuleHandle` po określeniu pomocnika opóźnionego ładowania została załadowana biblioteka DLL) i `GetProcAddress`.
+- Importowanie danych nie jest obsługiwane. Obejście polega na jawnym obsłudze importu danych przy `LoadLibrary` użyciu ( `GetModuleHandle` lub po poznaniu pomocnika ładowania opóźnienia załadował bibliotekę DLL) `GetProcAddress`i.
 
-- Opóźniaj ładowanie Kernel32.dll nie jest obsługiwane. Ta biblioteka DLL jest niezbędne dla procedur pomocnika opóźnionego ładowania przeprowadzić Opóźniaj ładowanie.
+- Opóźnienie ładowania pliku Kernel32. dll nie jest obsługiwane. Ta biblioteka DLL jest niezbędna do procedury pomocnika ładowania opóźnień w celu wykonania ładowania opóźnienia.
 
-- [Powiązanie](binding-imports.md) wpisu punkty, które są przekazywane nie jest obsługiwana.
+- [Powiązanie](binding-imports.md) punktów wejścia, które są przekazywane, nie jest obsługiwane.
 
-- Opóźnienie załadowanie biblioteki DLL nie może spowodować takie samo zachowanie proces w przypadku inicjowania procesu, występujących w punkcie wejścia biblioteki DLL ładowanych z opóźnieniem. Inne przypadki obejmują statyczne TLS (lokalny magazyn wątków), zadeklarowane za pomocą [__declspec(thread)](../../cpp/thread.md), który nie jest obsługiwany podczas ładowania biblioteki DLL za pomocą `LoadLibrary`. Dynamiczne TLS, za pomocą `TlsAlloc`, `TlsFree`, `TlsGetValue`, i `TlsSetValue`, jest nadal dostępny do użytku w statycznych lub ładowanych z opóźnieniem bibliotek DLL.
+- Opóźnienie ładowania biblioteki DLL może nie skutkować tym samym zachowaniem procesu, jeśli istnieją inicjalizacje poszczególnych procesów w punkcie wejścia biblioteki DLL załadowanej z opóźnieniem. Inne przypadki obejmują statyczny protokół TLS (lokalny magazyn wątków) zadeklarowany przy użyciu [__declspec (wątek)](../../cpp/thread.md), który nie jest obsługiwany podczas ładowania biblioteki `LoadLibrary`dll za pośrednictwem. Dynamiczny protokół TLS, `TlsAlloc`przy `TlsFree`użyciu `TlsGetValue`,, `TlsSetValue`, i, jest nadal dostępny do użycia w bibliotekach DLL statycznych lub załadowane z opóźnieniem.
 
-- Wskaźniki funkcji statycznej (globalna) powinien należy ponownie zainicjować importowanych funkcji po pierwszym wywołanie do funkcji. Jest to spowodowane wskaże pierwszym użyciu wskaźnik funkcji do osadzenia.
+- Statyczne (globalne) wskaźniki funkcji należy ponownie zainicjować dla zaimportowanych funkcji po pierwszym wywołaniu funkcji. Wynika to z faktu, że pierwsze użycie wskaźnika funkcji wskaże thunk.
 
-- Nie ma możliwości obecnie w celu opóźnienia ładowania tylko określonych procedur z biblioteki DLL podczas korzystania z mechanizmu normalne importu.
+- Obecnie nie ma możliwości opóźnienia ładowania tylko określonych procedur z biblioteki DLL przy użyciu standardowego mechanizmu importu.
 
-- Konwencje wywoływania niestandardowego (np. przy użyciu kodów stanu na x86 architektury) nie są obsługiwane. Ponadto rejestrów zmiennoprzecinkowych nie są zapisywane na dowolnej platformie. Użycie usługi niestandardowego elementu pomocniczego procedury lub procedury punktu zaczepienia typów zmiennoprzecinkowych, muszą całkowicie Zapisz i przywrócić stan zapisu zmiennoprzecinkowego na maszynach z rejestrem konwencje parametrami zmiennoprzecinkowych wywoływania. Należy zachować ostrożność podczas ładowania biblioteki DLL CRT, jeśli wywołanie funkcji CRT, które przyjmują parametry zmiennoprzecinkowych na stosie przetwarzający dane liczbowe (NDP) w funkcji pomocy opóźnienia.
+- Niestandardowe Konwencje wywoływania (takie jak używanie kodów warunków w architekturze x86) nie są obsługiwane. Ponadto rejestry zmiennoprzecinkowe nie są zapisywane na żadnej platformie. Jeśli niestandardowa procedura pomocnicza lub procedury podłączania używają typów zmiennoprzecinkowych, muszą one całkowicie zapisywać i przywracać stan zmiennoprzecinkowy na maszynach przy użyciu konwencji wywoływania parametrów zmiennoprzecinkowych. Należy zachować ostrożność podczas ładowania biblioteki DLL CRT, jeśli wywołujesz funkcje CRT, które pobierają parametry zmiennoprzecinkowe na stosie danych liczbowych (NDP) w funkcji pomocy.
 
 ## <a name="see-also"></a>Zobacz także
 
 [Obsługa konsolidatora dla bibliotek DLL załadowanych z opóźnieniem](linker-support-for-delay-loaded-dlls.md)<br/>
-[LoadLibrary — funkcja](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)<br/>
-[GetModuleHandle — funkcja](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea)<br/>
-[GetProcAddress — funkcja](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)<br/>
-[Funkcja TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)<br/>
-[Funkcja TlsFree — funkcja](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsfree)<br/>
-[TlsGetValue — funkcja](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)<br/>
-[TlsSetValue — funkcja](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlssetvalue)
+[Funkcja LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw)<br/>
+[GetModuleHandle, funkcja](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulehandlew)<br/>
+[Funkcja GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)<br/>
+[Funkcja TlsAlloc, funkcja](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsalloc)<br/>
+[Funkcja TlsFree, funkcja](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsfree)<br/>
+[TlsGetValue, funkcja](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)<br/>
+[TlsSetValue, funkcja](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlssetvalue)

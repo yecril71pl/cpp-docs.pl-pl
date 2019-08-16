@@ -1,5 +1,5 @@
 ---
-title: Cmdichildwnd — klasa
+title: Klasa CMDIChildWnd
 ms.date: 11/04/2016
 f1_keywords:
 - CMDIChildWnd
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: 13f027e68184a4869e88883ff8b8d3b123b94e3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09a9846cc3d242ef7d812cb31b4dcdd515d5f6ef
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403935"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506079"
 ---
-# <a name="cmdichildwnd-class"></a>Cmdichildwnd — klasa
+# <a name="cmdichildwnd-class"></a>Klasa CMDIChildWnd
 
-Oferuje funkcje Windows okna interfejsu wielu dokumentów (MDI) podrzędne, wraz z elementami członkowskimi do zarządzania oknem.
+Oferuje funkcje okna podrzędnego interfejsu wielu dokumentów (MDI) systemu Windows wraz z elementami członkowskimi do zarządzania oknem.
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,53 +45,53 @@ class CMDIChildWnd : public CFrameWnd
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMDIChildWnd::CMDIChildWnd](#cmdichildwnd)|Konstruuje `CMDIChildWnd` obiektu.|
+|[CMDIChildWnd:: CMDIChildWnd](#cmdichildwnd)|Konstruuje `CMDIChildWnd` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMDIChildWnd::Create](#create)|Tworzy okno podrzędne Windows MDI, które są skojarzone z `CMDIChildWnd` obiektu.|
-|[CMDIChildWnd::GetMDIFrame](#getmdiframe)|Zwraca element nadrzędny MDI ramki okna MDI klienta.|
-|[CMDIChildWnd::MDIActivate](#mdiactivate)|Aktywuje to okno podrzędne MDI.|
-|[CMDIChildWnd::MDIDestroy](#mdidestroy)|Niszczy to okno podrzędne MDI.|
-|[CMDIChildWnd::MDIMaximize](#mdimaximize)|Zapewnia to okno podrzędne MDI.|
-|[CMDIChildWnd::MDIRestore](#mdirestore)|Przywraca to okno podrzędne MDI na podstawie rozmiaru w trybie zmaksymalizowanym lub w trybie zminimalizowanym.|
-|[CMDIChildWnd::SetHandles](#sethandles)|Ustawia uchwytów dla zasobów menu i akcelerator.|
+|[CMDIChildWnd:: Create](#create)|Tworzy okno podrzędne MDI systemu Windows skojarzone z `CMDIChildWnd` obiektem.|
+|[CMDIChildWnd:: GetMDIFrame](#getmdiframe)|Zwraca nadrzędną ramkę MDI okna klienta MDI.|
+|[CMDIChildWnd:: MDIActivate](#mdiactivate)|Aktywuje to okno podrzędne MDI.|
+|[CMDIChildWnd:: MDIDestroy](#mdidestroy)|Niszczy to okno podrzędne MDI.|
+|[CMDIChildWnd:: MDIMaximize](#mdimaximize)|Maksymalizuje to okno podrzędne MDI.|
+|[CMDIChildWnd:: MDIRestore](#mdirestore)|Przywraca to okno podrzędne MDI z rozmiaru zmaksymalizowanego lub zminimalizowanego.|
+|[CMDIChildWnd:: sethandles](#sethandles)|Ustawia uchwyty dla zasobów menu i akceleratora.|
 
 ## <a name="remarks"></a>Uwagi
 
-Okno podrzędne MDI wygląda podobnie jak okno typowej ramki, z tą różnicą, że wewnątrz okna ramki MDI zamiast na pulpicie pojawi się okno podrzędne MDI. Okno podrzędne MDI nie ma własnego paska menu, ale zamiast tego udostępnia menu okna ramki MDI. Struktura automatycznie zmieni menu ramki MDI do reprezentowania aktualnie aktywne okno podrzędne MDI.
+Okno podrzędne MDI wygląda podobnie do typowego okna ramowego, z tą różnicą, że okno potomne MDI pojawia się wewnątrz okna ramki MDI, a nie na pulpicie. Okno podrzędne MDI nie ma własnego paska menu, ale zamiast tego udostępnia menu w oknie ramka MDI. Struktura automatycznie zmienia menu ramki MDI, aby reprezentować aktualnie aktywne okno podrzędne MDI.
 
-Aby utworzyć użyteczne okno podrzędne MDI w aplikacji, należy wyprowadzić klasę z `CMDIChildWnd`. Dodaj zmienne do klasy pochodnej w celu przechowywania danych specyficznych dla aplikacji. Implementowanie obsługi wiadomości elementów członkowskich, a także wiadomość, mapowania w klasie pochodnej, aby określić, co się stanie, gdy komunikaty są kierowane do okna.
+Aby utworzyć przydatne okno podrzędne MDI dla aplikacji, Utwórz klasę z `CMDIChildWnd`. Dodaj Zmienne Członkowskie do klasy pochodnej, aby przechowywać dane specyficzne dla aplikacji. Implementuj funkcje składowe programu obsługi komunikatów i mapę komunikatów w klasie pochodnej, aby określić, co się dzieje w przypadku kierowania komunikatów do okna.
 
-Istnieją trzy sposoby, aby utworzyć okno podrzędne MDI:
+Istnieją trzy sposoby konstruowania podrzędnego okna MDI:
 
-- Bezpośrednio utworzenia go za pomocą `Create`.
+- Bezpośrednie konstruowanie przy `Create`użyciu.
 
-- Bezpośrednio utworzenia go za pomocą `LoadFrame`.
+- Bezpośrednie konstruowanie przy `LoadFrame`użyciu.
 
-- Pośrednio jego konstruowania przy użyciu szablonu dokumentu.
+- Pośrednie konstruowanie go za pomocą szablonu dokumentu.
 
-Przed wywołaniem `Create` lub `LoadFrame`, należy utworzyć obiekt okno ramek na stosie przy użyciu języka C++ **nowe** operatora. Przed wywołaniem `Create` można zarejestrować klasy okna za pomocą [afxregisterwndclass —](application-information-and-management.md#afxregisterwndclass) funkcja globalna, aby ustawić ikonę i klasa style ramki.
+Przed wywołaniem `Create` lub `LoadFrame`należy skonstruować obiekt okna ramki na stercie przy użyciu C++ operatora **New** . Przed wywołaniem `Create` można również zarejestrować klasę okna przy użyciu funkcji globalnej [AfxRegisterWndClass —](application-information-and-management.md#afxregisterwndclass) , aby ustawić style ikon i klas dla ramki.
 
-Użyj `Create` funkcja elementu członkowskiego do przekazania parametrów tworzenia ramki natychmiastowego jako argumenty.
+Użyj funkcji `Create` członkowskiej, aby przekazać parametry tworzenia ramki jako natychmiastowe argumenty.
 
-`LoadFrame` wymaga mniej argumentów niż `Create`i zamiast tego pobiera najbardziej jej wartości domyślnej z zasobów, w tym podpis ramki, ikony, tabeli akceleratora i menu. Dostępne przez `LoadFrame`, te zasoby musi mieć ten sam identyfikator zasobów (na przykład IDR_MAINFRAME).
+`LoadFrame`wymaga mniej argumentów niż `Create`, a zamiast tego pobiera większość wartości domyślnych z zasobów, w tym podpis ramki, ikonę, tabelę akceleratorów i menu. Aby można było uzyskać `LoadFrame`dostęp do programu, wszystkie te zasoby muszą mieć ten sam identyfikator zasobu (na przykład IDR_MAINFRAME).
 
-Gdy `CMDIChildWnd` obiekt zawiera widoki i dokumentów, są tworzone bezpośrednio przez platformę, a nie bezpośrednio przez programistę. `CDocTemplate` Obiektu organizuje tworzenia ramki, tworzenie widoków zawierających i połączenie widoków do odpowiedniego dokumentu. Parametry `CDocTemplate` Określ Konstruktor `CRuntimeClass` trzy klasy zaangażowana (dokument, ramki i widoku). A `CRuntimeClass` obiekt jest używany przez platformę do dynamicznego tworzenia nowych ramek, gdy określony przez użytkownika (na przykład przy użyciu polecenia nowy plik lub nowego okna MDI polecenia).
+`CMDIChildWnd` Gdy obiekt zawiera widoki i dokumenty, są one tworzone pośrednio przez platformę, a nie bezpośrednio przez programistę. `CDocTemplate` Obiekt organizuje Tworzenie ramki, Tworzenie widoków zawierających i łączenie widoków z odpowiednim dokumentem. Parametry `CDocTemplate` konstruktora`CRuntimeClass` określają spośród trzech należących do siebie klas (dokumentu, ramki i widoku). `CRuntimeClass` Obiekt jest używany przez platformę do dynamicznego tworzenia nowych ramek, gdy jest określony przez użytkownika (na przykład przy użyciu polecenia nowy plik lub w oknie MDI nowe polecenie).
 
-Pochodne klasy okien ramowych `CMDIChildWnd` musi być zadeklarowany z DECLARE_DYNCREATE w kolejności dla powyższych mechanizmu RUNTIME_CLASS działała prawidłowo.
+Klasa okien ramowych pochodna from `CMDIChildWnd` musi być zadeklarowana przy użyciu elementu DECLARE_DYNCREATE, aby powyższy mechanizm RUNTIME_CLASS działał poprawnie.
 
-`CMDIChildWnd` Klasa dziedziczy większość jego domyślna implementacja z `CFrameWnd`. Aby uzyskać szczegółową listę z tych funkcji, zapoznaj się [CFrameWnd](../../mfc/reference/cframewnd-class.md) klasy opis. `CMDIChildWnd` Klasa ma następujące dodatkowe funkcje:
+Klasa dziedziczy większość implementacji domyślnej z `CFrameWnd`. `CMDIChildWnd` Aby uzyskać szczegółową listę tych funkcji, zapoznaj się z opisem klasy [obiektu CFrameWnd](../../mfc/reference/cframewnd-class.md) . `CMDIChildWnd` Klasa ma następujące dodatkowe funkcje:
 
-- W połączeniu z `CMultiDocTemplate` klasy, wiele `CMDIChildWnd` obiektów z tego samego szablonu dokumentu udostępnianie tego samego menu, zapisywanie zasobów systemu Windows.
+- W połączeniu z `CMultiDocTemplate` klasą, wiele `CMDIChildWnd` obiektów z tego samego szablonu dokumentu współużytkuje to samo menu, co oszczędza zasoby systemu Windows.
 
-- Aktualnie aktywne menu okno podrzędne MDI całkowicie zastępuje menu okna ramki MDI i podpis aktualnie aktywne okno podrzędne MDI jest dodawany do tytuł okna ramki MDI. Dalsze przykłady funkcje okna podrzędnego MDI, które są implementowane w połączeniu z okna ramki MDI, zobacz `CMDIFrameWnd` klasy opis.
+- Obecnie aktywne menu okna podrzędnego MDI zastępuje menu okna ramki MDI, a podpis okna podrzędnego aktualnie aktywnego MDI jest dodawany do podpisu okna ramki MDI. Aby uzyskać więcej przykładów funkcji okna podrzędnego MDI, które są zaimplementowane w połączeniu z oknem ramki MDI, zobacz `CMDIFrameWnd` opis klasy.
 
-Nie należy używać języka C++ **Usuń** operator można zniszczyć okna ramki. Zamiast nich należy używać słów kluczowych `CWnd::DestroyWindow`. `CFrameWnd` Implementacji `PostNcDestroy` spowoduje usunięcie obiektu języka C++, kiedy niszczony jest okna. Gdy użytkownik zamknie okno ramowe domyślnie `OnClose` wywoła procedurę obsługi `DestroyWindow`.
+Nie używaj C++ operatora **delete** do niszczenia okna ramki. Zamiast nich należy używać słów kluczowych `CWnd::DestroyWindow`. Implementacja programu `PostNcDestroy` spowoduje usunięcie C++ obiektu, gdy okno zostanie zniszczone. `CFrameWnd` Gdy użytkownik zamknie okno ramki, domyślnie `OnClose` zostanie wywołana `DestroyWindow`procedura obsługi.
 
-Aby uzyskać więcej informacji na temat `CMDIChildWnd`, zobacz [Windows ramki](../../mfc/frame-windows.md).
+Aby uzyskać więcej informacji `CMDIChildWnd`na temat, zobacz [okna ramek](../../mfc/frame-windows.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -101,17 +101,17 @@ Aby uzyskać więcej informacji na temat `CMDIChildWnd`, zobacz [Windows ramki](
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[CFrameWnd](../../mfc/reference/cframewnd-class.md)
+[Obiektu CFrameWnd](../../mfc/reference/cframewnd-class.md)
 
 `CMDIChildWnd`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxwin.h
+**Nagłówek:** afxwin. h
 
-##  <a name="cmdichildwnd"></a>  CMDIChildWnd::CMDIChildWnd
+##  <a name="cmdichildwnd"></a>CMDIChildWnd:: CMDIChildWnd
 
-Wywołania do konstruowania `CMDIChildWnd` obiektu.
+Wywołanie metody konstruowania `CMDIChildWnd` obiektu.
 
 ```
 CMDIChildWnd();
@@ -119,15 +119,15 @@ CMDIChildWnd();
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj `Create` można utworzyć okna widoczne.
+Wywołaj `Create` , aby utworzyć widoczne okno.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CMDIChildWnd::Create](#create).
+  Zobacz przykład dla [CMDIChildWnd:: Create](#create).
 
-##  <a name="create"></a>  CMDIChildWnd::Create
+##  <a name="create"></a>CMDIChildWnd:: Create
 
-Wywołaj tę funkcję elementu członkowskiego, aby utworzyć okno podrzędne Windows MDI i dołączyć go do `CMDIChildWnd` obiektu.
+Wywołaj tę funkcję elementu członkowskiego, aby utworzyć okno podrzędne MDI systemu Windows i `CMDIChildWnd` dołączyć je do obiektu.
 
 ```
 virtual BOOL Create(
@@ -142,32 +142,32 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *lpszClassName*<br/>
-Wskazuje ciąg znaków zakończony znakiem null, że nazwy klas Windows ( [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) struktury). Nazwa klasy może być dowolna nazwa, zarejestrowane w usłudze [afxregisterwndclass —](application-information-and-management.md#afxregisterwndclass) funkcja globalna. Powinna być równa NULL dla standardowego `CMDIChildWnd`.
+Wskazuje ciąg znaków zakończony znakiem null, który nazywa klasę systemu Windows (struktura [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) ). Nazwą klasy może być dowolna nazwa zarejestrowana w funkcji globalnej [AfxRegisterWndClass —](application-information-and-management.md#afxregisterwndclass) . Dla warstwy Standardowa `CMDIChildWnd`powinna mieć wartość null.
 
 *lpszWindowName*<br/>
-Wskazuje ciąg znaków zakończony znakiem null, który reprezentuje nazwę okna. Używane jako tekst, na pasku tytułu.
+Wskazuje ciąg znaków zakończony znakiem null, który reprezentuje nazwę okna. Używany jako tekst paska tytułu.
 
 *dwStyle*<br/>
-Określa okna [styl](../../mfc/reference/styles-used-by-mfc.md#window-styles) atrybutów. Styl WS_CHILD jest wymagana.
+Określa atrybuty [stylu](../../mfc/reference/styles-used-by-mfc.md#window-styles) okna. Styl WS_CHILD jest wymagany.
 
-*Rect*<br/>
-Zawiera rozmiar i położenie okna. `rectDefault` Zezwala na wartość Windows określić rozmiar i położenie nowej `CMDIChildWnd`.
+*cinania*<br/>
+Zawiera rozmiar i położenie okna. Wartość umożliwia systemowi Windows określenie rozmiaru i położenia nowego `CMDIChildWnd`. `rectDefault`
 
 *pParentWnd*<br/>
-Określa okna nadrzędnego. Jeśli ma wartość NULL, jest używany w głównym oknie aplikacji.
+Określa element nadrzędny okna. Jeśli wartość jest równa NULL, używane jest główne okno aplikacji.
 
 *pContext*<br/>
-Określa [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) struktury. Ten parametr może mieć wartości NULL.
+Określa strukturę [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) . Ten parametr może mieć wartość NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Aktualnie aktywnego oknem ramki podrzędnego MDI można określić napis nadrzędnej ramki okna. Ta funkcja jest wyłączona, wyłączając bitu stylu FWS_ADDTOTITLE ramki okna podrzędnego.
+Aktywne okno ramki podrzędnej MDI może określić podpis okna ramki nadrzędnej. Ta funkcja jest wyłączona, włączając bit stylu FWS_ADDTOTITLE w oknie ramki podrzędnej.
 
-Struktura wywołuje tej funkcji elementu członkowskiego w odpowiedzi na polecenie użytkownika, można utworzyć okna podrzędnego, a środowisko wykorzystuje *pContext* parametru, aby prawidłowo nawiązania okna podrzędnego aplikacją. Gdy wywołujesz `Create`, *pContext* może mieć wartości NULL.
+Struktura wywołuje tę funkcję elementu członkowskiego w odpowiedzi na polecenie użytkownika w celu utworzenia okna podrzędnego, a struktura używa parametru *pContext* w celu prawidłowego połączenia okna podrzędnego z aplikacją. Po wywołaniu `Create` *pContext* może mieć wartość null.
 
 ### <a name="example"></a>Przykład
 
@@ -183,9 +183,9 @@ Przykład 2:
 
 [!code-cpp[NVC_MFCWindowing#9](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_3.cpp)]
 
-##  <a name="getmdiframe"></a>  CMDIChildWnd::GetMDIFrame
+##  <a name="getmdiframe"></a>CMDIChildWnd:: GetMDIFrame
 
-Wywołaj tę funkcję, aby zwrócić nadrzędnej ramki MDI.
+Wywołaj tę funkcję, aby zwrócić ramkę nadrzędną MDI.
 
 ```
 CMDIFrameWnd* GetMDIFrame();
@@ -193,19 +193,19 @@ CMDIFrameWnd* GetMDIFrame();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do nadrzędnego okna MDI ramki.
+Wskaźnik do okna ramki nadrzędnej MDI.
 
 ### <a name="remarks"></a>Uwagi
 
-Ramki, zwracany jest dwóch elementów nadrzędnych usunięte z `CMDIChildWnd` a jest nadrzędne względem okna typu MDICLIENT, która zarządza `CMDIChildWnd` obiektu. Wywołaj [getparent —](../../mfc/reference/cwnd-class.md#getparent) funkcja elementu członkowskiego zwraca `CMDIChildWnd` natychmiastowego MDICLIENT elementu nadrzędnego obiektu jako tymczasowy `CWnd` wskaźnika.
+Zwrócona ramka to dwie elementy nadrzędne usunięte `CMDIChildWnd` z i jest elementem nadrzędnym okna typu MDICLIENT, który `CMDIChildWnd` zarządza obiektem. Wywołaj [](../../mfc/reference/cwnd-class.md#getparent) funkcję elementu członkowskiego GetParent, `CMDIChildWnd` aby zwracała natychmiastowy element nadrzędny MDICLIENT `CWnd` obiektu jako wskaźnik tymczasowy.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CMDIFrameWnd::MDISetMenu](../../mfc/reference/cmdiframewnd-class.md#mdisetmenu).
+  Zobacz przykład dla [CMDIFrameWnd:: MDISetMenu](../../mfc/reference/cmdiframewnd-class.md#mdisetmenu).
 
-##  <a name="mdiactivate"></a>  CMDIChildWnd::MDIActivate
+##  <a name="mdiactivate"></a>CMDIChildWnd:: MDIActivate
 
-Wywołaj tę funkcję elementu członkowskiego, aby aktywować okno podrzędne MDI niezależnie od oknem ramki aplikacji MDI.
+Wywołaj tę funkcję elementu członkowskiego, aby aktywować okno potomne MDI niezależnie od okna ramki MDI.
 
 ```
 void MDIActivate();
@@ -213,15 +213,15 @@ void MDIActivate();
 
 ### <a name="remarks"></a>Uwagi
 
-Podczas uaktywniania ramki okna podrzędnego, który został ostatnio aktywowany zostanie również aktywowane.
+Gdy ramka zostanie uaktywniona, uaktywnia się okno podrzędne, które zostało ostatnio aktywowane.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CMDIFrameWnd::GetWindowMenuPopup](../../mfc/reference/cmdiframewnd-class.md#getwindowmenupopup).
+  Zobacz przykład dla [CMDIFrameWnd:: GetWindowMenuPopup](../../mfc/reference/cmdiframewnd-class.md#getwindowmenupopup).
 
-##  <a name="mdidestroy"></a>  CMDIChildWnd::MDIDestroy
+##  <a name="mdidestroy"></a>CMDIChildWnd:: MDIDestroy
 
-Wywołaj tę funkcję elementu członkowskiego, aby zniszczyć okno podrzędne MDI.
+Wywołaj tę funkcję elementu członkowskiego, aby zniszczyć okno potomne MDI.
 
 ```
 void MDIDestroy();
@@ -229,13 +229,13 @@ void MDIDestroy();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego usuwa tytuł okna podrzędnego z oknem ramki i dezaktywuje okna podrzędnego.
+Funkcja członkowska usuwa tytuł okna podrzędnego z okna ramki i dezaktywuje okno podrzędne.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCWindowing#10](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_4.cpp)]
 
-##  <a name="mdimaximize"></a>  CMDIChildWnd::MDIMaximize
+##  <a name="mdimaximize"></a>CMDIChildWnd:: MDIMaximize
 
 Wywołaj tę funkcję elementu członkowskiego, aby zmaksymalizować okno podrzędne MDI.
 
@@ -245,15 +245,15 @@ void MDIMaximize();
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli okno podrzędne jest zmaksymalizowane, zmienia rozmiar Windows, aby wypełnił obszar klienta okna ramki obszaru klienckiego. Windows umieszcza okno podrzędne formant menu na pasku menu ramki tak, aby użytkownik może przywrócić lub zamknąć okno podrzędne i dodaje tytuł okna podrzędnego do tytułu ramki okna.
+Gdy okno podrzędne jest zmaksymalizowane, system Windows zmienia jego rozmiar, aby obszar klienta wypełniał obszar klienta okna ramki. System Windows umieści menu sterowania okna podrzędnego na pasku menu ramki, dzięki czemu użytkownik może przywrócić lub zamknąć okno podrzędne i dodaje tytuł okna podrzędnego do tytułu okna ramki.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCWindowing#11](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_5.cpp)]
 
-##  <a name="mdirestore"></a>  CMDIChildWnd::MDIRestore
+##  <a name="mdirestore"></a>CMDIChildWnd:: MDIRestore
 
-Wywołaj tę funkcję elementu członkowskiego, aby przywrócić okno podrzędne MDI od rozmiaru w trybie zmaksymalizowanym lub w trybie zminimalizowanym.
+Wywołaj tę funkcję elementu członkowskiego, aby przywrócić okno podrzędne MDI z rozmiaru zmaksymalizowanego lub zminimalizowanego.
 
 ```
 void MDIRestore();
@@ -263,9 +263,9 @@ void MDIRestore();
 
 [!code-cpp[NVC_MFCWindowing#12](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_6.cpp)]
 
-##  <a name="sethandles"></a>  CMDIChildWnd::SetHandles
+##  <a name="sethandles"></a>CMDIChildWnd:: sethandles
 
-Ustawia uchwytów dla zasobów menu i akcelerator.
+Ustawia uchwyty dla zasobów menu i akceleratora.
 
 ```
 void SetHandles(
@@ -279,17 +279,17 @@ void SetHandles(
 Uchwyt zasobu menu.
 
 *hAccel*<br/>
-Uchwyt zasób akceleratora.
+Uchwyt zasobu akceleratora.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję, aby ustawić menu i akcelerator zasoby używane przez obiekt okna podrzędnego MDI.
+Wywołaj tę funkcję, aby ustawić zasoby menu i akceleratora używane przez obiekt podrzędnego okna MDI.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC MDI](../../overview/visual-cpp-samples.md)<br/>
-[Próbki MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
-[Próbki MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
+[Przykładowy interfejs MDI MFC](../../overview/visual-cpp-samples.md)<br/>
+[Przykład MDIDOCVW MFC](../../overview/visual-cpp-samples.md)<br/>
+[Przykład SNAPVW MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>

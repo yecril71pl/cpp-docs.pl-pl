@@ -1,5 +1,5 @@
 ---
-title: Zliczanie (ATL)
+title: Zliczanie odwołań (ATL)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - AddRef method [C++], reference counting
@@ -8,31 +8,31 @@ helpviewer_keywords:
 - reference counts
 - references, counting
 ms.assetid: b1fd4514-6de6-429f-9e60-2777c0d07a3d
-ms.openlocfilehash: fa160cb40af632321e1b14fd3ca88a4dd578b972
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 565b74956280d4e80c41376ead4249e69980a80e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62249655"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492221"
 ---
 # <a name="reference-counting"></a>Zliczanie odwołań
 
-COM, sama nie automatycznie próbuje usunąć obiekt z pamięci, jeśli uważa, że obiekt jest już używany. Zamiast tego programisty obiektu, należy usunąć nieużywane obiektu. Programistę Określa, czy obiekt można usunąć zależności od liczby odwołań.
+Sam COM nie próbuje automatycznie usunąć obiektu z pamięci, gdy uzna, że obiekt nie jest już używany. Zamiast tego programista obiektu musi usunąć nieużywany obiekt. Programista określa, czy obiekt może zostać usunięty na podstawie liczby odwołań.
 
-COM używa `IUnknown` metod [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) i [wersji](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release), aby zarządzać licznikiem odwołań interfejsów na obiekcie. Ogólne zasady wywoływanie tych metod są:
+COM używa `IUnknown` metod, [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) i [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release), aby zarządzać liczbą odwołań interfejsów w obiekcie. Ogólne reguły wywołania tych metod są następujące:
 
-- Zawsze, gdy klient odbierze wskaźnika interfejsu `AddRef` musi zostać wywołana w interfejsie.
+- Za każdym razem, gdy klient otrzymuje wskaźnik `AddRef` interfejsu, musi zostać wywołany w interfejsie.
 
-- Zawsze, gdy klient zakończy się za pomocą wskaźnika interfejsu, należy wywołać `Release`.
+- Za każdym razem, gdy klient zakończył korzystanie z wskaźnika interfejsu `Release`, musi wywołać.
 
-W prostych implementacji każdy `AddRef` wywołać przyrosty, a każdy `Release` wywołać zmniejsza zmienną licznika wewnątrz obiektu. Gdy liczba zwraca zero, interfejs nie jest już zawiera wszystkich użytkowników i jest bezpłatna usunąć samego z pamięci.
+W prostej implementacji każda `AddRef` wartość przyrostu wywołań i każde `Release` wywołanie zmniejsza zmienną licznika wewnątrz obiektu. Gdy liczba zwraca wartość zero, interfejs nie ma już żadnych użytkowników i jest bezpłatny do usuwania z pamięci.
 
-Zliczanie odwołań może też być implementowany tak, aby każde odwołanie do obiektu (nie do poszczególnych interfejsu) jest liczony. W takim przypadku każdy `AddRef` i `Release` wywoływać delegatów centralnej implementacji dla obiektu i `Release` zwalnia całego obiektu, gdy jego licznik odwołań osiągnie zero.
+Zliczanie odwołań można również zaimplementować, tak aby wszystkie odwołania do obiektu (nie do poszczególnych interfejsów) były zliczane. W tym przypadku każdy `AddRef` i `Release` Wywołaj delegatów do centralnej implementacji na obiekcie i `Release` zwolni cały obiekt, gdy jego licznik odwołań osiągnie wartość zero.
 
 > [!NOTE]
->  Gdy `CComObject`— pochodnej obiekt jest tworzony przy użyciu **nowe** operatora, licznik odwołań to 0. W związku z tym, wywołanie `AddRef` musi nastąpić po pomyślnym utworzeniu `CComObject`-pochodnych obiektu.
+>  Gdy obiekt pochodny jest konstruowany przy użyciu operatora new, liczba odwołań wynosi 0. `CComObject` W związku z `AddRef` tym, wywołanie musi zostać wykonane po pomyślnym `CComObject`utworzeniu obiektu pochodnego.
 
 ## <a name="see-also"></a>Zobacz także
 
 [Wprowadzenie do modelu COM](../atl/introduction-to-com.md)<br/>
-[Zarządzanie czasów istnienia obiektów za pomocą zliczanie odwołań](/windows/desktop/com/managing-object-lifetimes-through-reference-counting)
+[Zarządzanie okresami istnienia obiektów poprzez zliczanie odwołań](/windows/win32/com/managing-object-lifetimes-through-reference-counting)

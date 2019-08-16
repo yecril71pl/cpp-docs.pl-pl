@@ -1,21 +1,21 @@
 ---
-title: źródło (atrybut COM C++)
+title: Source (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.source
 helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-ms.openlocfilehash: 699ea64de49a4383bc8fb62b2f3b2133d7c496c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79614a345e6c07b03df351da93a847fe12e4b110
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407188"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514020"
 ---
 # <a name="source-c"></a>source (C++)
 
-W klasie określa interfejsy źródła obiektu COM dla punktów połączenia. W właściwości lub metody oznacza, że elementu członkowskiego zwraca obiekt lub wariant, który jest źródłem zdarzeń.
+Na klasie Określa interfejsy źródłowe obiektu COM dla punktów połączenia. Na właściwości lub metodzie wskazuje, że element członkowski zwraca obiekt lub wariant, który jest źródłem zdarzeń.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,13 +26,13 @@ W klasie określa interfejsy źródła obiektu COM dla punktów połączenia. W 
 ### <a name="parameters"></a>Parametry
 
 *interfaces*<br/>
-Jeden lub więcej interfejsów, określ, po zastosowaniu źródła atrybutów do klasy. Ten parametr nie jest używany, gdy źródło jest stosowany do właściwości lub metody.
+Co najmniej jeden interfejs, który jest określany podczas stosowania atrybutu źródłowego do klasy. Ten parametr nie jest używany, gdy źródło jest stosowane do właściwości lub metody.
 
 ## <a name="remarks"></a>Uwagi
 
-**Źródła** atrybut C++ ma taką samą funkcjonalność jak [źródła](/windows/desktop/Midl/source) atrybutów w MIDL.
+Atrybut **Source** C++ ma taką samą funkcjonalność jak [źródłowy](/windows/win32/Midl/source) atrybut MIDL.
 
-Możesz użyć [domyślne](default-cpp.md) atrybutu, aby określić domyślnym interfejsie źródła obiektu.
+Możesz użyć atrybutu [domyślnego](default-cpp.md) , aby określić domyślny interfejs źródłowy dla obiektu.
 
 ## <a name="example"></a>Przykład
 
@@ -74,12 +74,12 @@ class NN : public b
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **struktury**, **interfejsu**|
+|**Dotyczy**|**Klasa**, **Struktura**, **interfejs**|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|`coclass` (w przypadku zastosowania do klasy lub struktury)|
+|**Wymagane atrybuty**|`coclass`(w przypadku zastosowania do klasy lub struktury)|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

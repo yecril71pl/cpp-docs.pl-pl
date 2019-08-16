@@ -1,21 +1,21 @@
 ---
-title: Eksportuj (atrybut COM C++)
+title: Export (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.export
 helpviewer_keywords:
 - export attribute
 ms.assetid: 70b3e848-fad6-4e09-8c72-be60ca72a4df
-ms.openlocfilehash: 5ffa4283b8a2b265809d06b72be96e217cf8bf9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 771bfdfe4eab2acf31e97a606795066e8938a8a1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409619"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501603"
 ---
 # <a name="export"></a>export
 
-Powoduje to struktura danych, należy umieścić w pliku .idl.
+Powoduje, że struktura danych zostanie umieszczona w pliku IDL.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,17 +25,17 @@ Powoduje to struktura danych, należy umieścić w pliku .idl.
 
 ## <a name="remarks"></a>Uwagi
 
-**Wyeksportować** C++ atrybutu powoduje, że struktury danych, można umieścić w pliku .idl i następnie być dostępne w bibliotece typów w formacie zgodnym z pliku binarnego, który sprawia, że dostępne w dowolnym języku.
+Atrybut **Export** C++ powoduje, że struktura danych zostanie umieszczona w pliku. idl, a następnie dostępna w bibliotece typów w formacie zgodnym z binarnym, dzięki czemu można go używać z dowolnym językiem.
 
-Nie można zastosować **wyeksportować** atrybutów do klasy, nawet wtedy, gdy klasa ma tylko publiczne elementy członkowskie (odpowiednik **struktury**).
+Nie można zastosować atrybutu **Export** do klasy, nawet jeśli klasa ma tylko publiczne elementy członkowskie (odpowiednik **struktury**).
 
-Jeśli eksportujesz nienazwane **wyliczenia** lub **struktury**, otrzymuje nazwę, która rozpoczyna się od **__unnamed**<em>x</em>, gdzie *x* jest to numer kolejny.
+Jeśli eksportujesz nienazwane **Wyliczenie** lub **strukturę**, otrzymujesz nazwę rozpoczynającą się od **__unnamed**<em>x</em>, gdzie *x* jest numerem sekwencyjnym.
 
-Definicje typów prawidłowe eksportu są typy podstawowe, struktury, złożenia, wyliczenia lub wpisz identyfikatory.  Zobacz [typedef](/windows/desktop/Midl/typedef) Aby uzyskać więcej informacji.
+Elementy typedef są prawidłowe dla eksportu są typami podstawowymi, strukturami, związkami, wyliczeniami lub identyfikatorami typów.  Aby uzyskać więcej informacji, zobacz [element typedef](/windows/win32/Midl/typedef) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod przedstawia sposób użycia **wyeksportować** atrybutu:
+Poniższy kod pokazuje, jak używać atrybutu **Export** :
 
 ```cpp
 // cpp_attr_ref_export.cpp
@@ -54,12 +54,12 @@ struct MyStruct {
 
 |||
 |-|-|
-|**Dotyczy**|**Unia**, **typedef**, **wyliczenia**, **struktury**, lub **interfejsu**|
+|**Dotyczy**|**Union**, **typedef**, **enum**, **struct**lub **Interface**|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

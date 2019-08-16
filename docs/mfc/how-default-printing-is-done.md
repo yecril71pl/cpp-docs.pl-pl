@@ -6,26 +6,26 @@ helpviewer_keywords:
 - printing [MFC], default
 - defaults, printing
 ms.assetid: 0f698459-0fc9-4d43-97da-29cf0f65daa2
-ms.openlocfilehash: 5f7971b48c9050e315b2fd57d2f3449517afa07e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5019bcad769c4b7cdb699facef145a21d9b5e11c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254325"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508421"
 ---
 # <a name="how-default-printing-is-done"></a>Jak jest wykonywane drukowanie domyślne
 
-W tym artykule opisano domyślne proces drukowania w Windows pod kątem programu MFC framework.
+W tym artykule wyjaśniono domyślny proces drukowania w systemie Windows pod kątem platformy MFC.
 
-W aplikacjach MFC widok klasy posiada funkcję członkowską, o nazwie `OnDraw` zawierający kod rysowania. `OnDraw` pobiera wskaźnik do [CDC](../mfc/reference/cdc-class.md) obiektu jako parametr. Czy `CDC` obiekt reprezentuje kontekst urządzenia do odbierania obraz produkowane przez `OnDraw`. Po odebraniu okna wyświetlania dokumentu [WM_PAINT](/windows/desktop/gdi/wm-paint) komunikatu struktura wywołuje `OnDraw` i przekazuje je kontekst urządzenia dla ekranu ( [CPaintDC](../mfc/reference/cpaintdc-class.md) obiektu można określić). W związku z tym `OnDraw`danych wyjściowych zbliża się do ekranu.
+W aplikacjach MFC Klasa widoku ma funkcję członkowską o nazwie `OnDraw` , która zawiera cały kod rysowania. `OnDraw`Pobiera wskaźnik do obiektu [przechwytywania](../mfc/reference/cdc-class.md) jako parametr. Ten `CDC` obiekt reprezentuje kontekst urządzenia do odbierania obrazu utworzonego przez `OnDraw`program. Gdy okno wyświetlania dokumentu otrzymuje komunikat [WM_PAINT](/windows/win32/gdi/wm-paint) , struktura wywołuje `OnDraw` i przekazuje do niego kontekst urządzenia dla ekranu (obiekt [CPaintDC](../mfc/reference/cpaintdc-class.md) , aby był określony). `OnDraw`W związku z tym dane wyjściowe trafiają do ekranu.
 
-W programowaniu dla Windows wysyłający dane wyjściowe do drukarki jest bardzo podobny do wysyłania danych wyjściowych na ekranie. Jest to spowodowane Windows graficzny interfejs urządzenia (GDI) jest zależne od sprzętu. Te same funkcje GDI można użyć do wyświetlania na ekranie lub drukowania, po prostu, używając kontekstu odpowiednie urządzenie. Jeśli `CDC` obiekt `OnDraw` odbiera reprezentuje drukarki, `OnDraw`danych wyjściowych zbliża się do drukarki.
+W programowaniu dla systemu Windows wysyłanie danych wyjściowych do drukarki jest bardzo podobne do wysyłania danych wyjściowych do ekranu. Wynika to z faktu, że interfejs urządzenia graficznego (GDI) systemu Windows jest niezależny od sprzętu. Możesz użyć tych samych funkcji GDI do wyświetlania ekranu lub do drukowania po prostu przy użyciu odpowiedniego kontekstu urządzenia. `CDC` Jeśli otrzymany`OnDraw` obiekt reprezentuje drukarkę, `OnDraw`dane wyjściowe trafiają do drukarki.
 
-W tej sekcji wyjaśniono, jak aplikacje MFC mogą wykonywać proste drukowanie bez konieczności dodatkowego wysiłku niewiele większego. Szablon dba wyświetlania okna dialogowego drukowania i tworzenie kontekstu urządzenia dla drukarki. Gdy użytkownik wybierze polecenie Drukuj w menu Plik, widok przekazuje kontekst urządzenia `OnDraw`, który rysuje na drukarce dokumentu.
+W tym artykule wyjaśniono, jak aplikacje MFC mogą wykonywać proste drukowanie, bez konieczności dodatkowego wysiłku. Struktura zajmuje się wyświetleniem okna dialogowego drukowanie i utworzeniem kontekstu urządzenia dla drukarki. Gdy użytkownik wybierze polecenie Drukuj z menu plik, widok przekaże ten kontekst urządzenia do programu, `OnDraw`co spowoduje narysowanie dokumentu na drukarce.
 
-Istnieją jednak pewne istotne różnice między drukowania i wyświetlanie na ekranie. Podczas drukowania, należy podzielić dokument na różnych stron i wyświetl je pojedynczo, zamiast wyświetlania dowolną część jest widoczna w oknie. Jako następstwem musisz wiedzieć o rozmiar papieru (czy jest rozmiar letter, rozmiar prawnych lub kopertę). Można wydrukować w różnych orientacji, takie jak tryb pozioma lub pionowa. Bibliotekę Microsoft Foundation Class nie można przewidzieć, jak aplikacja poradzi sobie te problemy, dzięki czemu zapewnia protokół można dodać te funkcje.
+Istnieją jednak pewne znaczące różnice między drukowaniem i wyświetlaniem ekranu. Podczas drukowania należy podzielić dokument na osobne strony i wyświetlić je pojedynczo, zamiast wyświetlać część, która jest widoczna w oknie. Jako współrzuty trzeba mieć świadomość rozmiaru papieru (rozmiaru litery, rozmiaru prawnego lub koperty)... Możesz chcieć drukować w różnych orientacjach, takich jak orientacja pozioma lub pionowa. Biblioteka MFC nie może przewidzieć, w jaki sposób aplikacja będzie obsługiwać te problemy, dzięki czemu umożliwia dodanie tych funkcji.
 
-Czy protokół został opisany w artykule [dokumentów szablonie wielostronicowym](../mfc/multipage-documents.md).
+Ten protokół jest opisany w [dokumentacji](../mfc/multipage-documents.md)wielostronicowej artykułu.
 
 ## <a name="see-also"></a>Zobacz także
 

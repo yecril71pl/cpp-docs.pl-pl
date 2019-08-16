@@ -11,39 +11,39 @@ helpviewer_keywords:
 - MIDL linker option
 - MIDL, command line options
 ms.assetid: 22dc259e-b34c-4ed3-a380-4beb734482c1
-ms.openlocfilehash: 584958ac51bdc491ad1bdd16117ecaad6e000ec7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca172428943d2446490eeb10741966f5e8c9ea85
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321075"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492720"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Określ opcje wiersza polecenia MIDL)
 
-Określa plik odpowiedzi opcji wiersza polecenia MIDL
+Określa plik odpowiedzi dla opcji wiersza polecenia MIDL
 
 ## <a name="syntax"></a>Składnia
 
-> **/MIDL:\@**<em>file</em>
+> **/MIDL:\@** <em>plik</em>
 
 ## <a name="arguments"></a>Argumenty
 
-*Plik*<br/>
-Nazwa pliku, który zawiera [opcje wiersza polecenia MIDL](/windows/desktop/Midl/general-midl-command-line-syntax).
+*rozszerzeniem*<br/>
+Nazwa pliku, który zawiera [Opcje wiersza polecenia MIDL](/windows/win32/Midl/general-midl-command-line-syntax).
 
 ## <a name="remarks"></a>Uwagi
 
-Wszystkie opcje konwersji w pliku IDL z plikiem TLB musi być podany w *pliku*; Nie można określić opcje wiersza polecenia MIDL w wierszu polecenia konsolidatora. Jeśli /MIDL nie zostanie określony, kompilator MIDL zostanie wywołany za pomocą tylko nazwę pliku IDL i inne opcje.
+Wszystkie opcje konwersji pliku IDL do pliku TLB muszą zostać umieszczone w *pliku*; Opcji wiersza polecenia MIDL nie można określić w wierszu polecenia konsolidatora. Jeśli/MIDL nie zostanie określony, kompilator MIDL będzie wywoływany tylko z nazwą pliku IDL i nie ma żadnych innych opcji.
 
-Ten plik powinien zawierać jedną opcję wiersza polecenia MIDL na wiersz.
+Plik powinien zawierać jedną opcję wiersza polecenia MIDL na wiersz.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **osadzone IDL** stronę właściwości.
+1. Wybierz stronę właściwości **Konfiguracja** > **konsolidator** > **osadzony** właściwości.
 
-1. Modyfikowanie **polecenia MIDL** właściwości.
+1. Zmodyfikuj właściwość **MIDL Commands** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 

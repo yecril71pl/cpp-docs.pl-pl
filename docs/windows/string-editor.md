@@ -1,5 +1,5 @@
 ---
-title: Edytor ciągów znaków (C++)
+title: Edytor ciągów (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.string.F1
@@ -32,137 +32,137 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: e596aa475f0fb08609a0772ecc3f8a302e849275
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 996e5f132e5cfa33c39c4cc3ddbeb692f41925bc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504806"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514712"
 ---
-# <a name="string-editor-c"></a>Edytor ciągów znaków (C++)
+# <a name="string-editor-c"></a>Edytor ciągów (C++)
 
-Tabela ciągów jest zasobem Windows, który zawiera listę identyfikatorów, wartości i podpisy dla wszystkich ciągów aplikacji. Na przykład monity pasek stanu znajdują się w tabeli ciągów.
+Tabela ciągów jest zasobem systemu Windows, który zawiera listę identyfikatorów, wartości i podpisów dla wszystkich ciągów aplikacji. Na przykład monity paska stanu znajdują się w tabeli ciągów.
 
-Podczas tworzenia aplikacji, może mieć kilka tabel ciągów — jeden dla każdego języka lub warunku. Jednak modułowi wykonywalnemu ma tylko jedną tabelę ciągów. Uruchomionej aplikacji można odwoływać kilka tabel ciągów, jeżeli umieścisz tabel do różnych bibliotek DLL.
+Podczas tworzenia aplikacji można mieć kilka tabel ciągów — jeden dla każdego języka lub warunku. Jednak moduł wykonywalny ma tylko jedną tabelę ciągów. Działająca aplikacja może odwoływać się do kilku tabel ciągów, jeśli tabele są umieszczane w różnych bibliotekach DLL.
 
-Tabele ciągów należy ułatwia lokalizowanie aplikacji w różnych językach. Jeśli wszystkie ciągi znajdują się w tabeli ciągów, można lokalizować aplikacji dzięki translacji ciągi (i inne zasoby) bez konieczności zmieniania kodu źródłowego. Ta sytuacja jest bardziej pożądane niż ręcznie Znajdowanie i zastępowanie różnych ciągów w plikach źródłowych.
+Tabele ciągów ułatwiają lokalizowanie aplikacji w różnych językach. Jeśli wszystkie ciągi znajdują się w tabeli ciągów, można zlokalizować aplikację przez przetłumaczenie ciągów (i innych zasobów) bez zmiany kodu źródłowego. Ta sytuacja jest bardziej pożądana niż ręczne Znajdowanie i zamienianie różnych ciągów w plikach źródłowych.
 
 > [!NOTE]
-> Windows nie zezwala na tworzenie tabel pusty ciąg. Jeśli utworzysz tabeli ciągów z żadnych wpisów, zostanie usunięta automatycznie podczas zapisywania pliku zasobów.
+> System Windows nie zezwala na tworzenie pustych tabel ciągów. Jeśli utworzysz tabelę ciągów bez wpisów, zostanie ona automatycznie usunięta podczas zapisywania pliku zasobów.
 
 ## <a name="how-to"></a>Instrukcje
 
 **Edytor ciągów** umożliwia:
 
-### <a name="to-find-a-string-resource-in-the-string-table"></a>Aby znaleźć zasobu ciągu w tabeli ciągów
+### <a name="to-find-a-string-resource-in-the-string-table"></a>Aby znaleźć zasób ciągu w tabeli ciągów
 
-1. Otwórz tabeli ciągów, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](how-to-create-a-resource-script-file.md#create-resources).
+1. Otwórz tabelę ciągów przez dwukrotne kliknięcie jej ikony w [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Przejdź do menu **Edytuj** > **Znajdź i Zamień** i wybierz polecenie **znaleźć**.
+1. Przejdź do menu **Edycja** > **Znajdź i Zamień** i wybierz **Znajdź**.
 
-1. W **Znajdź** pole, wybierz poprzedni ciąg wyszukiwania z listy rozwijanej lub wpisz podpis tekst lub identyfikator zasobu ciągu ma zostać odnaleziona.
+1. W polu **Znajdź** , wybierz poprzedni ciąg wyszukiwania z listy rozwijanej lub wpisz tekst podpisu lub identyfikator zasobu ciągu, który ma zostać znaleziony.
 
-1. Wybierz dowolny z **znaleźć** opcje, a następnie wybierz **Znajdź następny**.
+1. Wybierz dowolną z opcji **Znajdź** i wybierz pozycję **Znajdź dalej**.
 
 > [!TIP]
-> Aby użyć [wyrażeń regularnych](/visualstudio/ide/using-regular-expressions-in-visual-studio) podczas wyszukiwania plików, użyj **Znajdź w plikach** polecenia w pliku **Edytuj** menu.
+> Aby używać [wyrażeń regularnych](/visualstudio/ide/using-regular-expressions-in-visual-studio) podczas wyszukiwania plików, użyj polecenia **Znajdź w plikach** w menu **Edycja** .
 >
-> Typ wyrażenia regularnego pasują do wzorca, lub wybierz przycisk z prawej strony **Znajdź** pole, aby wyświetlić listę wyrażeń regularnych wyszukiwania. Po wybraniu wyrażenia z tej listy, zostanie zastąpiony jako wyszukiwany tekst w **Znajdź** pole.
+> Wpisz wyrażenie regularne zgodne ze wzorcem lub wybierz przycisk z prawej strony pola **Znajdź** , aby wyświetlić listę zwykłych wyrażeń wyszukiwania. Po wybraniu wyrażenia z tej listy zostanie on zastąpiony jako tekst wyszukiwania w polu **Znajdź** .
 >
-> Upewnij się, jeśli używasz wyrażeń regularnych, **użyć: Wyrażenia regularne** pole wyboru jest zaznaczone.
+> Jeśli używasz wyrażeń regularnych, upewnij się, że **używasz: Pole wyboru** wyrażenia regularne jest zaznaczone.
 
-### <a name="to-add-or-delete-a-string-resource"></a>Aby dodać lub usunąć zasób w postaci ciągu
+### <a name="to-add-or-delete-a-string-resource"></a>Aby dodać lub usunąć zasób ciągu
 
-Można szybko wstawiania lub usuwania wpisów do tabeli ciągów przy użyciu **edytor ciągów**. Nowych ciągów są umieszczane na końcu tabeli i podano następny dostępny identyfikator. Możesz edytować **identyfikator**, **wartość**, lub **podpis** właściwości w [okno właściwości](/visualstudio/ide/reference/properties-window) zgodnie z potrzebami.
+Można szybko wstawiać i usuwać wpisy w tabeli ciągów przy użyciu **edytora ciągów**. Nowe ciągi są umieszczane na końcu tabeli i otrzymują następny dostępny identyfikator. W razie konieczności można edytować właściwości **identyfikatora**, **wartości**lub **podpisu** w [okno właściwości](/visualstudio/ide/reference/properties-window) .
 
-**Edytor ciągów** upewnia się, nie używaj Identyfikatora, który jest już używana. Wybranie Identyfikatora już w użyciu **edytor ciągów** o, a następnie przypisz ogólny Unikatowy identyfikator, na przykład `IDS_STRING58113`.
+**Edytor ciągów** gwarantuje, że nie używasz identyfikatora, który jest już używany. Jeśli wybierzesz identyfikator, który jest już używany, **Edytor ciągów** wyświetli powiadomienie, a następnie przypisze ogólny unikatowy identyfikator, na `IDS_STRING58113`przykład.
 
 #### <a name="to-add-a-string-table-entry"></a>Aby dodać wpis tabeli ciągów
 
-1. Otwórz tabeli ciągów, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](how-to-create-a-resource-script-file.md#create-resources).
+1. Otwórz tabelę ciągów przez dwukrotne kliknięcie jej ikony w [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Kliknij prawym przyciskiem myszy w tabeli ciągów, a następnie wybierz **nowy ciąg**.
+1. Kliknij prawym przyciskiem myszy w tabeli ciągów i wybierz polecenie **Nowy ciąg**.
 
-1. W **edytor ciągów**, wybierz opcję **identyfikator** z **identyfikator** listy rozwijanej lub wpisz *identyfikator* bezpośrednio w miejscu.
+1. W **Edytorze ciągów**wybierz **Identyfikator** z listy rozwijanej **ID** lub wpisz *Identyfikator* bezpośrednio na miejscu.
 
-1. Edytuj **wartość**, jeśli to konieczne.
+1. W razie potrzeby edytuj **wartość**.
 
-1. Wpisz wpis dla **podpis**.
+1. Wpisz wpis dla **podpisu**.
 
    > [!NOTE]
-   > Ciągów o wartości null nie są dozwolone w tabelach ciągów Windows. Jeśli utworzysz wpis w tabeli ciągów, który jest pusty ciąg, otrzymasz komunikat z prośbą o **wprowadź ciąg dla tego wpisu w tabeli**.
+   > Ciągi o wartości null nie są dozwolone w tabelach ciągów systemu Windows. Jeśli utworzysz wpis w tabeli ciągów, który jest ciągiem o wartości null, zostanie wyświetlony komunikat z prośbą o **wprowadzenie ciągu dla tego wpisu w tabeli**.
 
 #### <a name="to-delete-a-string-table-entry"></a>Aby usunąć wpis tabeli ciągów
 
-Wybierz wpis, który chcesz usunąć, a następnie wykonaj jedną z następujących czynności:
+Wybierz wpis, który chcesz usunąć, i wykonaj jedną z następujących czynności:
 
-- Przejdź do menu **Edytuj** > **Usuń**.
+- Przejdź do menu **Edycja** > **Usuń**.
 
-- Kliknij prawym przyciskiem myszy ciąg do usunięcia i wybierz **Usuń**.
+- Kliknij prawym przyciskiem myszy ciąg, który chcesz usunąć, a następnie wybierz polecenie **Usuń**.
 
-- Naciśnij klawisz **Usuń** klucza.
+- Naciśnij klawisz **delete** .
 
-### <a name="to-move-a-string-from-one-resource-script-file-to-another"></a>Aby przenieść pliku skryptu zasobu w jeden ciąg
+### <a name="to-move-a-string-from-one-resource-script-file-to-another"></a>Aby przenieść ciąg z jednego pliku skryptu zasobu do innego
 
-1. [Otwieranie tabel ciągów w obu plikach .rc](../windows/how-to-create-a-resource-script-file.md).
+1. [Otwórz tabele ciągów w obu plikach. RC](../windows/how-to-create-a-resource-script-file.md).
 
-1. Kliknij prawym przyciskiem myszy ciągu i wybierz polecenie **Wytnij**.
+1. Kliknij prawym przyciskiem myszy ciąg, który chceszprzenieść, a następnie wybierz polecenie Wytnij.
 
-1. Umieść kursor w miejscu docelowym **edytor ciągów** okna.
+1. Umieść kursor w oknie **edytora ciągu** docelowego.
 
-1. W *.rc* pliku, do której chcesz przenieść ciągu, kliknij prawym przyciskiem myszy i wybierz **Wklej**.
+1. W pliku *. RC* , do którego chcesz przenieść ciąg, kliknij prawym przyciskiem myszy i wybierz polecenie **Wklej**.
 
 > [!NOTE]
-> Jeśli **identyfikator** lub **wartość** konfliktów ciągu przeniesione z istniejącym **identyfikator** lub **wartość** w pliku docelowym, albo że **Identyfikator** lub **wartość** zmian przeniesionych ciągu.
+> Jeśli **Identyfikator** lub **wartość** przenoszonego ciągu koliduje z istniejącym **identyfikatorem** lub **wartością** w pliku docelowym, to **Identyfikator** lub **wartość** przenoszonego ciągu zmienia się.
 
 ### <a name="to-change-the-properties-of-a-string-resource"></a>Aby zmienić właściwości zasobu ciągu
 
-Umożliwia edycję w miejscu zmienić **identyfikator**, **wartość**, i **podpis** właściwości.
+Aby zmienić właściwości **identyfikatora**, **wartości**i **podpisu** , można użyć edycji w miejscu.
 
 > [!NOTE]
->  Można również edytować właściwości ciągu w [okno właściwości](/visualstudio/ide/reference/properties-window).
+>  Możesz również edytować właściwości ciągu w [okno właściwości](/visualstudio/ide/reference/properties-window).
 
-#### <a name="to-change-a-string-or-its-identifier"></a>Aby zmienić ciąg lub jego identyfikator.
+#### <a name="to-change-a-string-or-its-identifier"></a>Aby zmienić ciąg lub jego identyfikator
 
-1. Otwórz tabeli ciągów, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](how-to-create-a-resource-script-file.md#create-resources).
+1. Otwórz tabelę ciągów przez dwukrotne kliknięcie jej ikony w [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Wybierz parametry chcesz edytować, a następnie kliknij dwukrotnie ikonę **identyfikator**, **wartość**, lub **podpis** kolumny, a następnie użytkownik może:
+1. Wybierz ciąg, który chcesz edytować, a następnie kliknij dwukrotnie kolumnę **ID**, **Value**lub **Caption** . można:
 
-   - Wybierz **identyfikator** z **identyfikator** listy rozwijanej lub wpisz *identyfikator* bezpośrednio w miejscu.
+   - Wybierz **Identyfikator** z listy rozwijanej **ID** lub wpisz *Identyfikator* bezpośrednio na miejscu.
 
-   - Wpisz inny numer w **wartość** kolumny.
+   - Wpisz inną liczbę w kolumnie **wartość** .
 
-   - Typ zmiany w **podpis** kolumny.
+   - Wpisz zmiany w kolumnie **Caption** .
 
-#### <a name="to-change-the-caption-property-of-multiple-string-resources"></a>Aby zmienić właściwości podpisu lub wielu zasobów ciągów
+#### <a name="to-change-the-caption-property-of-multiple-string-resources"></a>Aby zmienić właściwość Caption dla wielu zasobów ciągów
 
-1. Otwórz tabeli ciągów, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](how-to-create-a-resource-script-file.md#create-resources).
+1. Otwórz tabelę ciągów przez dwukrotne kliknięcie jej ikony w [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Wybierz parametry, aby zmienić, przytrzymując **Ctrl** klucza, zgodnie z wybraniu każdej z nich.
+1. Wybierz ciągi, które chcesz zmienić, przytrzymując wciśnięty klawisz **Ctrl** podczas zaznaczania każdego z nich.
 
-1. W [okno właściwości](/visualstudio/ide/reference/properties-window), wpisz nową wartość dla właściwości, aby zmienić.
+1. W [oknie właściwości](/visualstudio/ide/reference/properties-window)wpisz nową wartość właściwości, którą chcesz zmienić.
 
 1. Naciśnij klawisz **wprowadź**.
 
-### <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>Aby dodać znaków specjalnych ani formatowania do zasobu ciągu
+### <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>Aby dodać formatowanie lub znaki specjalne do zasobu ciągu
 
-1. Otwórz tabeli ciągów, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](how-to-create-a-resource-script-file.md#create-resources).
+1. Otwórz tabelę ciągów przez dwukrotne kliknięcie jej ikony w [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Wybierz ciąg, który chcesz zmodyfikować.
 
-1. W [okno właściwości](/visualstudio/ide/reference/properties-window), Dodaj dowolne sekwencje unikowe standardowych wymienionych poniżej, aby tekst w **podpis** pole i naciśnij klawisz **Enter**.
+1. W [oknie właściwości](/visualstudio/ide/reference/properties-window)Dodaj dowolne standardowe sekwencje ucieczki wymienione poniżej do tekstu w polu **podpis** i naciśnij klawisz **Enter**.
 
-   |Aby uzyskać dostęp do tej...|Wpisz to...|
+   |Aby to zrobić...|Wpisz to...|
    |-----------------|---------------|
    | Nowy wiersz | \\n |
-   | Powrót karetki | \\r |
+   | Znak powrotu karetki | \\® |
    | Tab | \\t |
-   | Ukośnik odwrotny (\\) | \\\\ |
-   | Znak ASCII | \\ddd (Zapis ósemkowy) |
-   | alert (dzwonek) | \\a |
+   | Ukośnik odwrotny\\() | \\\\ |
+   | Znak ASCII | \\DDD (notacja ósemkowa) |
+   | Alert (dzwonek) | \\a |
 
    > [!NOTE]
-   > **Edytor ciągów** nie obsługuje ona pełnego zestawu znaki ucieczki przestają być ASCI. Można używać tylko wymienione powyżej.
+   > **Edytor ciągów** nie obsługuje pełnego zestawu ucieczki ASCI znaków. Można korzystać tylko z wymienionych powyżej.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -170,7 +170,7 @@ Win32
 
 ## <a name="see-also"></a>Zobacz także
 
-[Resource Editors](../windows/resource-editors.md)
-[Strings](/windows/desktop/menurc/strings)<br/>
-[Ciągi — informacje](/windows/desktop/menurc/about-strings)<br/>
+[](../windows/resource-editors.md)
+[Ciągi](/windows/win32/menurc/strings) edytorów zasobów<br/>
+[Ciągi — informacje](/windows/win32/menurc/about-strings)<br/>
 [Dostosowywanie układów okien](/visualstudio/ide/customizing-window-layouts-in-visual-studio)

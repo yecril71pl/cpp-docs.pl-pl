@@ -1,21 +1,21 @@
 ---
-title: zapis (atrybut COM C++)
+title: entry (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.entry
 helpviewer_keywords:
 - entry attribute
 ms.assetid: ba4843e3-d7ad-4b86-9a15-0b4192f0f698
-ms.openlocfilehash: 703a55ee7c56b64a5b168016770508508bab09e0
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 71abf4f183255fa137b43ac9cabd88d15c3fc85d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346134"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490902"
 ---
 # <a name="entry"></a>entry
 
-Określa eksportowanych funkcji lub stałą w module, określając punkt wejścia w DLL.
+Określa wyeksportowaną funkcję lub stałą w module, identyfikując punkt wejścia w bibliotece DLL.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,11 +30,11 @@ Identyfikator punktu wejścia.
 
 ## <a name="remarks"></a>Uwagi
 
-**Wpis** atrybut C++ ma taką samą funkcjonalność jak [wpis](/windows/desktop/Midl/entry) atrybutów w MIDL.
+Atrybut **entry** C++ ma takie same funkcje jak atrybut MIDL [wpisu](/windows/win32/Midl/entry) .
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [idl_module](idl-module.md) dla przykładowe **wpis**.
+Zapoznaj się z przykładem dla [idl_module](idl-module.md) , aby zapoznać się z przykładem zastosowania **wpisów**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -42,12 +42,12 @@ Zobacz przykład [idl_module](idl-module.md) dla przykładowe **wpis**.
 
 |||
 |-|-|
-|**Dotyczy**|`idl_module` Atrybut|
+|**Dotyczy**|`idl_module`przypisane|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

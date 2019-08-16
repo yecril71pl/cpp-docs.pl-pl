@@ -1,21 +1,21 @@
 ---
-title: helpstringdll — (atrybut COM C++)
+title: helpstringdll (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstringdll
 helpviewer_keywords:
 - helpstringdll attribute [C++]
 ms.assetid: 121271fa-f061-492b-b87f-bbfcf4b02e7b
-ms.openlocfilehash: 72f5926018e3ac7ec4770f83d7a2c3438b67d861
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d6dddef666f074a57f54b8c9447847ff56d26fd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409541"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501480"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 
-Określa nazwę biblioteki DLL, aby wykonać wyszukiwanie ciągu dokumentu (lokalizacja).
+Określa nazwę biblioteki DLL, która ma być używana do przeszukiwania ciągu dokumentu (lokalizacja).
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,11 +26,11 @@ Określa nazwę biblioteki DLL, aby wykonać wyszukiwanie ciągu dokumentu (loka
 ### <a name="parameters"></a>Parametry
 
 *string*<br/>
-Biblioteki DLL, użyj, aby wykonać wyszukiwanie ciągu dokumentu.
+Biblioteka DLL do użycia w celu przeprowadzenia wyszukiwania ciągów dokumentu.
 
 ## <a name="remarks"></a>Uwagi
 
-**Helpstringdll —** atrybut C++ ma taką samą funkcjonalność jak [helpstringdll —](/windows/desktop/Midl/helpstringdll) atrybutów w MIDL.
+Atrybut **helpstringdll** C++ ma takie same funkcje jak atrybut [helpstringdll](/windows/win32/Midl/helpstringdll) MIDL.
 
 ## <a name="example"></a>Przykład
 
@@ -53,12 +53,12 @@ __interface IMyI
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **interfejsu**, interfejs — metoda|
+|**Dotyczy**|**Klasa**, **interfejs**, metoda interfejsu|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

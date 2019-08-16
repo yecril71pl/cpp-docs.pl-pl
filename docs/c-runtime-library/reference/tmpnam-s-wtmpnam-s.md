@@ -30,16 +30,16 @@ helpviewer_keywords:
 - file names [C++], temporary
 - wtmpnam_s function
 ms.assetid: e70d76dc-49f5-4aee-bfa2-f1baa2bcd29f
-ms.openlocfilehash: 9bf994d16362ef461d8d25d72466721ba9a5890f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8cdd3feb177ef44c5dad32563d09a0bb8c820b22
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155540"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500754"
 ---
-# <a name="tmpnams-wtmpnams"></a>tmpnam_s, _wtmpnam_s
+# <a name="tmpnam_s-_wtmpnam_s"></a>tmpnam_s, _wtmpnam_s
 
-Generowanie nazwy, których można użyć, aby utworzyć pliki tymczasowe. Są to wersje [tmpnam — i _wtmpnam —](tempnam-wtempnam-tmpnam-wtmpnam.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Generuj nazwy, których można użyć do tworzenia plików tymczasowych. Są to wersje systemów [tmpnam i _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) z ulepszeniami zabezpieczeń opisanymi w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -72,31 +72,31 @@ Rozmiar buforu w znakach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Obie te funkcje zwracają 0, jeśli kończy się pomyślnie lub numer błędu w przypadku niepowodzenia.
+Obie te funkcje zwracają wartość 0, jeśli powodzenie lub wystąpił błąd w przypadku niepowodzenia.
 
 ### <a name="error-conditions"></a>Warunki błędów
 
 |||||
 |-|-|-|-|
-|*str*|*sizeInChars*|**Wartość zwracana**|**Zawartość***str*|
-|**NULL**|Wszystkie|**EINVAL**|Nie zmodyfikowano|
-|Nie **NULL** (wskazuje prawidłowy pamięci)|zbyt krótki|**ERANGE**|Nie zmodyfikowano|
+|*str*|*sizeInChars*|**Wartość zwracana**|**Zawartość** *str*|
+|**NULL**|ile|**EINVAL**|nie zmodyfikowano|
+|nie **ma wartości null** (wskazuje na prawidłową pamięć)|zbyt krótki|**ERANGE**|nie zmodyfikowano|
 
-Jeśli *str* jest **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** do **EINVAL** i zwracają **EINVAL**.
+Jeśli *str* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i zwracają **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji zwraca nazwę pliku, który obecnie nie istnieje. **tmpnam_s —** zwraca nazwę na unikatowy w wyznaczonym katalogu tymczasowym Windows zwracane przez [GetTempPathW](/windows/desktop/api/fileapi/nf-fileapi-gettemppathw). Należy zauważyć, że jeśli nazwa pliku jest pre oczekującego ukośnik odwrotny i żadnych informacji o ścieżce, takie jak \fname21, oznacza to, że nazwa jest nieprawidłowa dla bieżącego katalogu roboczego.
+Każda z tych funkcji zwraca nazwę pliku, który obecnie nie istnieje. **tmpnam_s** zwraca nazwę unikatową w wydzielonym katalogu tymczasowym systemu Windows zwróconym przez [GetTempPathW](/windows/win32/api/fileapi/nf-fileapi-gettemppathw). Zwróć uwagę, że nazwa pliku jest wstępnie zainstalowana z ukośnikiem odwrotnym i bez informacji o ścieżce, takich jak \fname21, oznacza to, że nazwa jest prawidłowa dla bieżącego katalogu roboczego.
 
-Aby uzyskać **tmpnam_s —**, możesz zapisać tę nazwę wygenerowanego pliku w *str*. Maksymalna długość ciągu zwróconego przez **tmpnam_s —** jest **L_tmpnam_s**zdefiniowaną w stdio —. H. Jeśli *str* jest **NULL**, następnie **tmpnam_s —** pozostawia wynik w statycznych buforu wewnętrznego. Ten sposób kolejnych wywołań zniszczyć tę wartość. Nazwa wygenerowana przez **tmpnam_s —** zawiera nazwę pliku wygenerowanego przez program, a po pierwszym wywołaniu **tmpnam_s —**, rozszerzenie pliku numerów sekwencyjnych w podstawowej 32 (.1 .1vvvvvu, gdy **TMP _MAX_S** w stdio —. H jest **INT_MAX**).
+W przypadku **tmpnam_s**można zapisać tę wygenerowaną nazwę pliku w *str*. Maksymalna długość ciągu zwracanego przez **tmpnam_s** to **L_tmpnam_s**, zdefiniowany w stdio. C. Jeśli *str* ma **wartość null**, **tmpnam_s** pozostawia wynik w wewnętrznym buforze statycznym. W ten sposób wszystkie kolejne wywołania powodują zniszczenie tej wartości. Nazwa wygenerowana przez **tmpnam_s** składa się z nazwy pliku generowanej przez program i, po pierwszym wywołaniu do **tmpnam_s**, rozszerzenie pliku numerów sekwencyjnych w podstawowej 32 (. 1-. 1vvvvvu, gdy **TMP_MAX_S** w stdio. H to **INT_MAX**).
 
-**tmpnam_s —** obsługi znaków wielobajtowych argumenty typu string zgodnie z potrzebami, rozpoznawaniu sekwencje znaków wielobajtowych według stronę kodową OEM uzyskiwane automatycznie z systemu operacyjnego. **_wtmpnam_s —** to wersja znaku dwubajtowego **tmpnam_s —**; argument i wartość zwracana przez **_wtmpnam_s —** są ciągami znaków dwubajtowych. **_wtmpnam_s —** i **tmpnam_s —** zachowują się identycznie, chyba że **_wtmpnam_s —** nie obsługuje ciągi znaków wielobajtowych.
+**tmpnam_s** automatycznie obsługuje argumenty ciągu znaków wielobajtowych, aby rozpoznawać sekwencje znaków wielobajtowych zgodnie ze stroną kodową OEM uzyskaną od systemu operacyjnego. **_wtmpnam_s** to dwubajtowa wersja **tmpnam_s**; argument i wartość zwracana przez **_wtmpnam_s** są ciągami znaków dwubajtowych. **_wtmpnam_s** i **tmpnam_s** zachowują się identycznie, z tą różnicą, że **_wtmpnam_s** nie obsługują ciągów znaków wielobajtowych.
 
-W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążania szablonu; przeciążenia mogą automatycznie wywnioskować długość buforu, eliminując konieczność określenia argumentu rozmiaru. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu, eliminując konieczność określenia argumentu rozmiaru. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_ttmpnam_s**|**tmpnam_s**|**tmpnam_s**|**_wtmpnam_s**|
 
@@ -105,9 +105,9 @@ W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążania s
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**tmpnam_s**|\<stdio.h>|
-|**_wtmpnam_s**|\<stdio.h > lub \<wchar.h >|
+|**_wtmpnam_s**|\<stdio. h > lub \<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -162,7 +162,7 @@ C:\Users\LocalUser\AppData\Local\Temp\u19q8.e is safe to use as a temporary file
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [_getmbcp](getmbcp.md)<br/>
 [malloc](malloc.md)<br/>
 [_setmbcp](setmbcp.md)<br/>

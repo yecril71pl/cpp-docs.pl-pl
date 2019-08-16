@@ -1,17 +1,17 @@
 ---
-title: VARARG (C++ COM atrybut)
+title: vararg (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.vararg
 helpviewer_keywords:
 - vararg attribute
 ms.assetid: 20fc3244-18e9-411c-990e-d5b4fa29a570
-ms.openlocfilehash: a433522b78424c48c4afe754f7b8337e3952dc8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1c6b1a4e049bccfcf3e16bae4b5f9b285d11192
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407214"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514887"
 ---
 # <a name="vararg"></a>vararg
 
@@ -25,11 +25,11 @@ Określa, że funkcja przyjmuje zmienną liczbę argumentów.
 
 ## <a name="remarks"></a>Uwagi
 
-**Vararg** atrybut C++ ma taką samą funkcjonalność jak [vararg](/windows/desktop/Midl/vararg) atrybutów w MIDL.
+Atrybut **vararg** C++ ma takie same funkcje, jak atrybut [vararg](/windows/win32/Midl/vararg) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod pokazuje wykorzystanie **vararg**:
+Poniższy kod przedstawia użycie **vararg**:
 
 ```cpp
 // cpp_attr_ref_vararg.cpp
@@ -51,12 +51,12 @@ __interface X : public IUnknown
 
 |||
 |-|-|
-|**Dotyczy**|Metody interfejsu|
+|**Dotyczy**|Interface — Metoda|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

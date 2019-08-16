@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CDocObjectServerItem [MFC], OnHide
 - CDocObjectServerItem [MFC], OnShow
 ms.assetid: 530f7156-50c8-4806-9328-602c9133f622
-ms.openlocfilehash: 66ff2326cd3d08b3f6c8399d7e948d6aab5074c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d44791415626f1a94500b9c3885581d67e8fe42
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391156"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506819"
 ---
 # <a name="cdocobjectserveritem-class"></a>Klasa CDocObjectServerItem
 
-Implementuje zlecenia serwera OLE specjalnie dla serwerów DocObject.
+Implementuje zlecenia serwera OLE przeznaczone dla serwerów DocObject.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,29 +39,29 @@ class CDocObjectServerItem : public COleServerItem
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDocObjectServerItem::CDocObjectServerItem](#cdocobjectserveritem)|Konstruuje `CDocObjectServerItem` obiektu.|
+|[CDocObjectServerItem::CDocObjectServerItem](#cdocobjectserveritem)|Konstruuje `CDocObjectServerItem` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDocObjectServerItem::GetDocument](#getdocument)|Pobiera wskaźnik do dokumentu, który zawiera element.|
+|[CDocObjectServerItem:: GetDocument](#getdocument)|Pobiera wskaźnik do dokumentu zawierającego element.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDocObjectServerItem::OnDoVerb](#ondoverb)|Wywołuje się, by wykonać zlecenia.|
-|[CDocObjectServerItem::OnHide](#onhide)|Zgłasza wyjątek, jeśli struktura próbuje ukryć element DocObject.|
-|[CDocObjectServerItem::OnShow](#onshow)|Wywoływane przez platformę, aby element DocObject elementu w miejscu active. Jeśli element nie jest obiekt DocObject, wywołuje metodę [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow).|
+|[CDocObjectServerItem::OnDoVerb](#ondoverb)|Wywołuje się, by wykonać czasownik.|
+|[CDocObjectServerItem:: OnHide](#onhide)|Zgłasza wyjątek, jeśli struktura podejmie próbę ukrycia elementu DocObject.|
+|[CDocObjectServerItem:: OnShow](#onshow)|Wywoływane przez platformę, aby element DocObject był aktywny. Jeśli element nie jest DocObject, wywołuje [COleServerItem:: OnShow](../../mfc/reference/coleserveritem-class.md#onshow).|
 
 ## <a name="remarks"></a>Uwagi
 
-`CDocObjectServerItem` Definiuje funkcje Członkowskie z możliwością zastąpienia: [OnHide](#onhide), [OnDoVerb](#ondoverb), i [metodzie OnShow](#onshow).
+`CDocObjectServerItem`definiuje funkcje składowe, które są możliwe do zastąpienia: [OnHide](#onhide), [OnDoVerb](#ondoverb)i OnShow. [](#onshow)
 
-Aby użyć `CDocObjectServerItem`, zapewnić, że [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) zastąpić w usługi `COleServerDoc`— klasie pochodnej zwraca nowy `CDocObjectServerItem` obiektu. Jeśli musisz zmienić żadnych funkcji Twojego elementu, można utworzyć nowe wystąpienie klasy własne `CDocObjectServerItem`-klasy pochodnej.
+Aby użyć `CDocObjectServerItem`, należy się upewnić, że przesłonięcie [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) w `COleServerDoc`klasie pochodnej `CDocObjectServerItem` zwraca nowy obiekt. Jeśli trzeba zmienić dowolne funkcje w elemencie, można utworzyć nowe wystąpienie `CDocObjectServerItem`klasy pochodnej.
 
-Aby uzyskać więcej informacji na temat DocObjects zobacz [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) i [COleCmdUI](../../mfc/reference/colecmdui-class.md) w *odwołanie MFC*.
+Aby uzyskać więcej informacji na temat DocObjects, zobacz [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) i [COleCmdUI](../../mfc/reference/colecmdui-class.md) w *dokumentacji MFC*.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -77,11 +77,11 @@ Aby uzyskać więcej informacji na temat DocObjects zobacz [CDocObjectServer](..
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdocob.h
+**Nagłówek:** afxdocob. h
 
-##  <a name="cdocobjectserveritem"></a>  CDocObjectServerItem::CDocObjectServerItem
+##  <a name="cdocobjectserveritem"></a>CDocObjectServerItem::CDocObjectServerItem
 
-Konstruuje `CDocObjectServerItem` obiektu.
+Konstruuje `CDocObjectServerItem` obiekt.
 
 ```
 CDocObjectServerItem(COleServerDoc* pServerDoc, BOOL bAutoDelete);
@@ -93,11 +93,11 @@ CDocObjectServerItem(COleServerDoc* pServerDoc, BOOL bAutoDelete);
 Wskaźnik do dokumentu, który będzie zawierać nowy element DocObject.
 
 *bAutoDelete*<br/>
-Wskazuje, czy obiekt może zostać usunięty po udostępnieniu do niej łącza. Argument ma wartość FAŁSZ Jeśli `CDocObjectServerItem` obiekt jest integralną częścią danych dokumentu. Ustaw ją na wartość TRUE, jeśli obiekt jest struktura dodatkowych, używany do identyfikowania zakres danych dokumentu, który może zostać usunięta przez platformę.
+Wskazuje, czy obiekt może zostać usunięty po wydaniu linku do niego. Dla argumentu ustaw wartość false, jeśli `CDocObjectServerItem` obiekt jest integralną częścią danych dokumentu. Ustaw wartość na TRUE, jeśli obiekt jest strukturą pomocniczą służącą do identyfikowania zakresu w danych dokumentu, który może zostać usunięty przez platformę.
 
-##  <a name="getdocument"></a>  CDocObjectServerItem::GetDocument
+##  <a name="getdocument"></a>CDocObjectServerItem:: GetDocument
 
-Pobiera wskaźnik do dokumentu, który zawiera element.
+Pobiera wskaźnik do dokumentu zawierającego element.
 
 ```
 COleServerDoc* GetDocument() const;
@@ -105,15 +105,15 @@ COleServerDoc* GetDocument() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do dokumentu, który zawiera element; Wartość NULL, jeśli element nie jest częścią dokumentu.
+Wskaźnik do dokumentu zawierającego element; Wartość NULL, jeśli element nie jest częścią dokumentu.
 
 ### <a name="remarks"></a>Uwagi
 
-Dzięki temu dostęp do dokumentu serwera, który jest przekazywany jako argument do [CDocObjectServerItem](#cdocobjectserveritem) konstruktora.
+Pozwala to na dostęp do dokumentu serwera, który został przesłany jako argument do konstruktora [CDocObjectServerItem](#cdocobjectserveritem) .
 
-##  <a name="ondoverb"></a>  CDocObjectServerItem::OnDoVerb
+##  <a name="ondoverb"></a>CDocObjectServerItem::OnDoVerb
 
-Metoda wywoływana przez platformę, by wykonać określone zlecenie.
+Wywoływane przez platformę, by wykonać określone zlecenie.
 
 ```
 virtual void OnDoVerb(LONG iVerb);
@@ -122,15 +122,15 @@ virtual void OnDoVerb(LONG iVerb);
 ### <a name="parameters"></a>Parametry
 
 *iVerb*<br/>
-Określa polecenie do wykonania. Możliwe wartości, zobacz [IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) w zestawie Windows SDK.
+Określa zlecenie do wykonania. Aby uzyskać możliwe wartości, zobacz [IOleObject::D overb](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb) w Windows SDK.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja wywołuje [metodzie OnShow](#onshow) funkcja elementu członkowskiego, jeśli element znajduje się obiekt DocObject i OLEIVERB_INPLACEACTIVATE lub OLEIVERB_SHOW jest określony. Jeśli element nie jest obiekt DocObject lub inny zlecenie jest określony, domyślna implementacja wywołuje [COleServerItem::OnDoVerb](../../mfc/reference/coleserveritem-class.md#ondoverb).
+Domyślna implementacja wywołuje funkcję elementu [](#onshow) Członkowskiego OnShow, jeśli element jest elementem DocObject i określono wartość OLEIVERB_INPLACEACTIVATE lub OLEIVERB_SHOW. Jeśli element nie jest DocObject lub określono inne zlecenie, domyślne wywołania implementacji [COleServerItem:: OnDoVerb](../../mfc/reference/coleserveritem-class.md#ondoverb).
 
-##  <a name="onhide"></a>  CDocObjectServerItem::OnHide
+##  <a name="onhide"></a>CDocObjectServerItem:: OnHide
 
-Metoda wywoływana przez platformę, by ukryć element.
+Wywoływane przez platformę w celu ukrycia elementu.
 
 ```
 virtual void OnHide();
@@ -138,11 +138,11 @@ virtual void OnHide();
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja zgłasza wyjątek, jeśli element znajduje się obiekt DocObject. Nie można ukryć aktywny element DocObject, ponieważ trwa całego widoku. Należy zdezaktywować element DocObject, aby zniknął. Jeśli element nie jest obiekt DocObject, domyślna implementacja wywołuje [COleServerItem::OnHide](../../mfc/reference/coleserveritem-class.md#onhide).
+Implementacja domyślna zgłasza wyjątek, jeśli element jest obiektem DocObject. Nie można ukryć aktywnego elementu DocObject, ponieważ pobiera on cały widok. Aby to zrobić, musisz dezaktywować element DocObject. Jeśli element nie jest DocObject, domyślne wywołania implementacji [COleServerItem:: OnHide](../../mfc/reference/coleserveritem-class.md#onhide).
 
-##  <a name="onshow"></a>  CDocObjectServerItem::OnShow
+##  <a name="onshow"></a>CDocObjectServerItem:: OnShow
 
-Metoda wywoływana przez platformę w celu poinstruowania aplikacji serwera, aby element DocObject elementu w miejscu active.
+Wywoływane przez platformę, by nakazać aplikacji serwerowej DocObject element w miejscu.
 
 ```
 virtual void OnShow();
@@ -150,7 +150,7 @@ virtual void OnShow();
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli element nie jest obiekt DocObject, domyślna implementacja wywołuje [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onopen). Należy przesłonić tę funkcję, jeśli chcesz wykonać specjalnego przetwarzania podczas otwierania elementu DocObject.
+Jeśli element nie jest DocObject, domyślne wywołania implementacji [COleServerItem:: OnShow](../../mfc/reference/coleserveritem-class.md#onopen). Przesłoń tę funkcję, jeśli chcesz przeprowadzić przetwarzanie specjalne podczas otwierania elementu DocObject.
 
 ## <a name="see-also"></a>Zobacz także
 

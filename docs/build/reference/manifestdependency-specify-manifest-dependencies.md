@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MANIFESTDEPENDENCY linker option
 - -MANIFESTDEPENDENCY linker option
 ms.assetid: e4b68313-33a2-4c3e-908e-ac2b9f7d6a73
-ms.openlocfilehash: 676059b8d398fd108d8f8fc163c85a3da3c657b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43239efe70cc555d1a7e03c5d67e99e40ccd480e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321595"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492708"
 ---
 # <a name="manifestdependency-specify-manifest-dependencies"></a>/MANIFESTDEPENDENCY (Określ zależności manifestu)
 
@@ -23,25 +23,25 @@ ms.locfileid: "62321595"
 
 ## <a name="remarks"></a>Uwagi
 
-/ MANIFESTDEPENDENCY pozwala określić atrybuty, które zostaną umieszczone w \<zależności > sekcji w pliku manifestu.
+/MANIFESTDEPENDENCY umożliwia określenie atrybutów, które zostaną umieszczone w \<sekcji zależności > pliku manifestu.
 
-Zobacz [/MANIFEST (Side-by-Side tworzenie manifestu dla aplikacji)](manifest-create-side-by-side-assembly-manifest.md) informacji na temat tworzenia pliku manifestu.
+Aby uzyskać informacje na temat sposobu tworzenia pliku manifestu, zobacz [/manifest (Tworzenie manifestu zestawu side-by-Side)](manifest-create-side-by-side-assembly-manifest.md) .
 
-Aby uzyskać więcej informacji na temat \<zależności > sekcji pliku manifestu, zobacz [pliki konfiguracyjne wydawcy](/windows/desktop/SbsCs/publisher-configuration-files).
+Aby uzyskać więcej informacji na \<temat zależności > w pliku manifestu, zobacz [pliki konfiguracji wydawcy](/windows/win32/SbsCs/publisher-configuration-files).
 
-/ MANIFESTDEPENDENCY informacje mogą być przekazywane do konsolidatora w jeden z dwóch sposobów:
+Informacje/MANIFESTDEPENDENCY można przesłać do konsolidatora na jeden z dwóch sposobów:
 
-- Bezpośrednio w wierszu polecenia (lub w pliku odpowiedzi) przy użyciu /MANIFESTDEPENDENCY.
+- Bezpośrednio w wierszu polecenia (lub w pliku odpowiedzi) z/MANIFESTDEPENDENCY.
 
-- Za pomocą [komentarz](../../preprocessor/comment-c-cpp.md) pragmy.
+- Za pomocą [](../../preprocessor/comment-c-cpp.md) dyrektywy pragma komentarza.
 
-W poniższym przykładzie przedstawiono komentarz /MANIFESTDEPENDENCY przekazywane przez dyrektywę,
+Poniższy przykład pokazuje komentarz/MANIFESTDEPENDENCY przekazana za pośrednictwem dyrektywy pragma.
 
 ```cpp
 #pragma comment(linker, "\"/manifestdependency:type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*'\"")
 ```
 
-które powoduje następujący wpis w pliku manifestu:
+co spowoduje, że w pliku manifestu zostanie umieszczony następujący wpis:
 
 ```xml
 <dependency>
@@ -51,21 +51,21 @@ które powoduje następujący wpis w pliku manifestu:
 </dependency>
 ```
 
-Tym samym komentarze /MANIFESTDEPENDENCY mogą być przekazywane w wierszu polecenia w następujący sposób:
+Te same Komentarze/MANIFESTDEPENDENCY można przesłać w wierszu polecenia w następujący sposób:
 
 ```cmd
 "/manifestdependency:type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*'\"
 ```
 
-Konsolidator zbierania /MANIFESTDEPENDENCY komentarzy, wyeliminować zduplikowane wpisy i następnie dodać wynikowy ciąg XML do pliku manifestu.  Jeśli konsolidator wykryje wpisy powodujące konflikt, plik manifestu zostanie uszkodzona, a aplikacja zakończy się niepowodzeniem (wpis mogą być dodawane do dziennika zdarzeń, wskazujący źródła błędów).
+Konsolidator będzie zbierać Komentarze/MANIFESTDEPENDENCY, eliminować zduplikowane wpisy, a następnie dodać otrzymany ciąg XML do pliku manifestu.  Jeśli konsolidator znajdzie wpisy powodujące konflikt, plik manifestu zostanie uszkodzony i aplikacja nie zostanie uruchomiona (można dodać wpis do dziennika zdarzeń, wskazując Źródło błędu).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **pliku manifestu** stronę właściwości.
+1. Wybierz pozycję **Właściwości** > konfiguracji Strona właściwości**pliku manifestu** **konsolidatora** > .
 
-1. Modyfikowanie **dodatkowe zależności manifestu** właściwości.
+1. Zmodyfikuj **dodatkową właściwość zależności manifestu** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 

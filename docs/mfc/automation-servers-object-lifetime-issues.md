@@ -1,5 +1,5 @@
 ---
-title: 'Automation Servers: Kwestie okresu istnienia obiektu'
+title: 'Serwery automatyzacji: Kwestie dotyczące okresu istnienia obiektu'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - objects [MFC], lifetime
@@ -7,26 +7,26 @@ helpviewer_keywords:
 - Automation servers, object lifetime
 - servers, lifetime of Automation
 ms.assetid: 342baacf-4015-4a0e-be2f-321424f1cb43
-ms.openlocfilehash: f9dbc6e4f321ba10fdffa013c158d53b84331e30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74b4bf87b512d35c99942f4aa36174a8673079c5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392898"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509188"
 ---
-# <a name="automation-servers-object-lifetime-issues"></a>Automation Servers: Kwestie okresu istnienia obiektu
+# <a name="automation-servers-object-lifetime-issues"></a>Serwery automatyzacji: Kwestie dotyczące okresu istnienia obiektu
 
-Klienta automatyzacji tworzy lub uaktywnia element OLE, serwer przekazuje klienta wskaźnikiem tego obiektu. Odwołanie do obiektu przez wywołanie funkcji OLE nawiązaniu przez klienta [IUnknown::AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref). Ta dokumentacja jest włączona do momentu wywołania klienta [IUnknown::Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release). (Aplikacje klienckie pisane przy użyciu klasy OLE bibliotekę Microsoft Foundation Class nie musi wprowadzać te wywołania; wykonuje tę platformę). OLE system i sam serwer może utworzyć odwołania do obiektu. Serwer powinien niszczy obiekt tak długo, jak obowiązywały odwołania zewnętrzne do obiektu.
+Gdy klient automatyzacji tworzy lub aktywuje element OLE, serwer przekazuje klientowi wskaźnik do tego obiektu. Klient tworzy odwołanie do obiektu za pośrednictwem wywołania funkcji OLE [IUnknown:: AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref). To odwołanie obowiązuje do momentu wywołania przez klienta elementu [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release). (Aplikacje klienckie zapisywane z klasami OLE biblioteka MFC nie potrzebują tych wywołań; struktura robi to.) System OLE i sam serwer mogą nawiązywać odwołania do obiektu. Serwer nie powinien zniszczyć obiektu, o ile odwołania zewnętrzne do obiektu pozostają w mocy.
 
-Struktura przechowuje wewnętrzny liczba Liczba odwołań do dowolnego obiektu serwera pochodzącego z [CCmdTarget](../mfc/reference/ccmdtarget-class.md). Ten licznik jest aktualizowany, gdy klient usługi Automation lub inny organ dodaje lub zwalnia odwołanie do obiektu.
+Struktura zachowuje wewnętrzną liczbę odwołań do dowolnego obiektu serwera pochodnego od [CCmdTarget](../mfc/reference/ccmdtarget-class.md). Ta liczba jest aktualizowana, gdy klient usługi Automation lub inna jednostka dodaje lub zwalnia odwołanie do obiektu.
 
-Gdy licznik odwołań staje się 0, struktura wywołuje funkcję wirtualną [CCmdTarget::OnFinalRelease](../mfc/reference/ccmdtarget-class.md#onfinalrelease). Domyślna implementacja ta funkcja wywołuje **Usuń** operator, aby usunąć ten obiekt.
+Gdy liczba odwołań zmieni się na 0, struktura wywołuje funkcję wirtualną [CCmdTarget:: OnFinalRelease](../mfc/reference/ccmdtarget-class.md#onfinalrelease). Domyślna implementacja tej funkcji wywołuje operator **delete** , aby usunąć ten obiekt.
 
-Bibliotekę Microsoft Foundation Class udostępnia dodatkowe funkcje służące do kontrolowania zachowania aplikacji, gdy odwołania do obiektów w aplikacji dla klientów zewnętrznych. Oprócz obsługi liczba odwołań do każdego obiektu, serwery Obsługa globalnego liczba obiektów usługi active. Funkcje globalne [AfxOleLockApp](../mfc/reference/application-control.md#afxolelockapp) i [AfxOleUnlockApp](../mfc/reference/application-control.md#afxoleunlockapp) aktualizacji aplikacji liczba aktywnych obiektów. Jeśli ta liczba jest różna od zera, aplikacja nie kończy się po użytkownik wybierze zamknięcia z menu systemowego lub Zakończ w menu Plik. Zamiast tego okna głównego aplikacji jest ukryty (ale nie są niszczone) dopóki wszystkie oczekujące klienta, które zostały ukończone żądania. Zazwyczaj `AfxOleLockApp` i `AfxOleUnlockApp` są wywoływane w konstruktory i destruktory, odpowiednio, klas, które obsługują automatyzacji.
+Biblioteka MFC zapewnia dodatkowe możliwości kontrolowania zachowania aplikacji, gdy klienci zewnętrzni odwołują się do obiektów aplikacji. Oprócz utrzymywania liczby odwołań do poszczególnych obiektów serwery zachowują globalną liczbę aktywnych obiektów. Funkcje globalne [metodę AfxOleLockApp](../mfc/reference/application-control.md#afxolelockapp) i [funkcję AfxOleUnlockApp](../mfc/reference/application-control.md#afxoleunlockapp) aktualizują liczbę aktywnych obiektów aplikacji. Jeśli ta liczba jest różna od zera, aplikacja nie zostanie zakończona, gdy użytkownik wybierze opcję Zamknij z menu systemowego lub zakończy pracę z menu plik. Zamiast tego okno główne aplikacji jest ukryte (ale nie zniszczone), dopóki nie zostaną ukończone wszystkie oczekujące żądania klienta. `AfxOleLockApp` Zwykle i `AfxOleUnlockApp` są wywoływane odpowiednio w konstruktorach i destruktorach klas, które obsługują automatyzację.
 
-Czasami okoliczności wymusić zakończenie, gdy klient nadal ma odwołania do obiektu. Na przykład zasobów, od którego zależy serwera mogą stać się niedostępne, powodując server do wystąpienia błędu. Użytkownik może też zamknąć dokument serwera, który zawiera obiekty, do których odwołują się inne aplikacje.
+Czasami okoliczności wymuszają przerwanie działania serwera, gdy klient nadal ma odwołanie do obiektu. Na przykład zasób, od którego zależy serwer, może stać się niedostępny, powodując wystąpienie błędu na serwerze. Użytkownik może również zamknąć dokument serwera zawierający obiekty, do których odwołują się inne aplikacje.
 
-W zestawie Windows SDK, zobacz `IUnknown::AddRef` i `IUnknown::Release`.
+W Windows SDK, zobacz `IUnknown::AddRef` i. `IUnknown::Release`
 
 ## <a name="see-also"></a>Zobacz także
 

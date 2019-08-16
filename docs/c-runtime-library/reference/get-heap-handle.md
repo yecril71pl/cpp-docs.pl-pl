@@ -25,16 +25,16 @@ helpviewer_keywords:
 - _get_heap_handle function
 - get_heap_handle function
 ms.assetid: a4d05049-8528-494a-8281-a470d1e1115c
-ms.openlocfilehash: 82ea108a41bec1d0276e2c952b3f509f36bab8ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e82686c4b33dc11f02f387a97966d3ff5a47085
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332120"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499924"
 ---
-# <a name="getheaphandle"></a>_get_heap_handle
+# <a name="_get_heap_handle"></a>_get_heap_handle
 
-Zwraca uchwyt sterty, który jest używany przez C działającego systemu.
+Zwraca uchwyt sterty, który jest używany przez system uruchomieniowy języka C.
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,11 +44,11 @@ intptr_t _get_heap_handle( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca uchwyt stosu Win32, używany przez C działającego systemu.
+Zwraca uchwyt do sterty Win32 używanej przez system środowiska uruchomieniowego języka C.
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj tej funkcji, jeśli chcesz wywołać [HeapSetInformation](/windows/desktop/api/heapapi/nf-heapapi-heapsetinformation) i włączyć niską fragmentację sterty na stercie CRT.
+Użyj tej funkcji, jeśli chcesz wywołać [HeapSetInformation](/windows/win32/api/heapapi/nf-heapapi-heapsetinformation) i włączyć stertę niskiej fragmentacji na stercie CRT.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -56,7 +56,7 @@ Użyj tej funkcji, jeśli chcesz wywołać [HeapSetInformation](/windows/desktop
 |-------------|---------------------|
 |**_get_heap_handle**|\<malloc.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="sample"></a>Przykład
 

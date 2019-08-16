@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CEvent [MFC], SetEvent
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
-ms.openlocfilehash: 54501e5ff690b855ca65652e76d45b9c6cfb6259
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: fbf2d834163199107aae44bd5723ceff79e36f91
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503718"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506689"
 ---
 # <a name="cevent-class"></a>Klasa CEvent
 
-Przedstawia zdarzenie, które jest obiektem synchronizacji umożliwiającym jednemu wątkowi na powiadomienie drugiego o zdarzeniu.
+Reprezentuje zdarzenie, które jest obiektem synchronizacji umożliwiającym jednemu wątkowi powiadamianie innego o wystąpieniu zdarzenia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,34 +39,34 @@ class CEvent : public CSyncObject
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CEvent::CEvent](#cevent)|Konstruuje `CEvent` obiektu.|
+|[CEvent::CEvent](#cevent)|Konstruuje `CEvent` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CEvent::PulseEvent](#pulseevent)|Zestawy zdarzenia w celu dostępne (sygnalizowane) zwalnia wątków oczekujących i ustawia zdarzenie niedostępne (nonsignaled).|
-|[CEvent::ResetEvent](#resetevent)|Ustawia zdarzenie niedostępne (nonsignaled).|
-|[CEvent::SetEvent](#setevent)|Ustawia zdarzenia dostępne (sygnałowego) i zwalnia żadnych wątków oczekujących.|
-|[CEvent::Unlock](#unlock)|Zwalnia z obiektem zdarzenia.|
+|[CEvent::P ulseEvent](#pulseevent)|Ustawia dostępne zdarzenie (sygnalizowane), zwalnia oczekujące wątki i ustawia zdarzenie jako niedostępne (Niesygnalizowane).|
+|[CEvent::ResetEvent](#resetevent)|Ustawia zdarzenie jako niedostępne (Niesygnalizowane).|
+|[CEvent:: SetEvent](#setevent)|Ustawia dostępne dla zdarzenia (sygnalizowane) i zwalnia wszystkie oczekujące wątki.|
+|[CEvent:: Unlock](#unlock)|Zwalnia obiekt zdarzenia.|
 
 ## <a name="remarks"></a>Uwagi
 
-Zdarzenia są przydatne, gdy wątek musi wiedzieć, kiedy trzeba wykonać swoje zadania. Na przykład wątku, który kopiuje dane do archiwum danych musi być powiadomiony, gdy nowe dane są dostępne. Za pomocą `CEvent` obiektowi powiadomić wątku Kopiuj, jeśli nowe dane są dostępne, wątek zadanie można wykonać jego tak szybko, jak to możliwe.
+Zdarzenia są przydatne, gdy wątek musi wiedzieć, kiedy należy wykonać jego zadanie. Na przykład wątek, który kopiuje dane do archiwum danych, musi zostać powiadomiony, gdy dostępne są nowe dane. Za pomocą `CEvent` obiektu do powiadomienia wątku kopiowania, gdy nowe dane są dostępne, wątek może wykonać zadanie tak szybko, jak to możliwe.
 
-`CEvent` obiekty mają dwa typy: ręczne i automatyczne.
+`CEvent`obiekty mają dwa typy: ręczne i automatyczne.
 
-Automatyczne `CEvent` obiektu automatycznie powróci do stanu (niedostępna) zasygnalizowane po wydaniu co najmniej jeden wątek. Domyślnie `CEvent` obiekt jest automatycznie, chyba że przyjmie `TRUE` dla *bManualReset* parametru podczas konstruowania.
+Automatyczny `CEvent` obiekt automatycznie powraca do stanu niesygnalizowanego (niedostępny) po wydaniu co najmniej jednego wątku. Domyślnie `CEvent` obiekt jest automatycznie, o ile nie zostanie przekazany `TRUE` parametr *bManualReset* podczas konstruowania.
 
-Podręcznik `CEvent` obiektu pozostaje w stanie ustawione przez [SetEvent](#setevent) lub [ResetEvent](#resetevent) do momentu wywołania innych funkcji. Do ręcznego utworzenia `CEvent` obiektu, przekazać `TRUE` dla `bManualReset` parametru podczas konstruowania.
+Obiekt ręczny `CEvent` pozostaje w stanie ustawionym przez [SetEvent](#setevent) lub [ResetEvent](#resetevent) do momentu wywołania innej funkcji. Aby utworzyć obiekt ręczny `CEvent` , należy przekazać `TRUE` `bManualReset` parametr podczas konstruowania.
 
-Aby użyć `CEvent` obiektów, konstruowania `CEvent` obiektu, gdy jest to wymagane. Określ nazwę zdarzenia, które chcesz czekać na, a także określić aplikacji należy go początkowo właścicielem. Mogą uzyskiwać dostęp do zdarzeń, gdy Konstruktor zwraca. Wywołanie [SetEvent](#setevent) sygnału (udostępnianie) obiektu zdarzenia i następnie wywołaniu [Unlock](#unlock) po zakończeniu dostęp do zasobu kontrolowany.
+Aby użyć `CEvent` obiektu, `CEvent` Konstruuj obiekt, gdy jest to wymagane. Określ nazwę zdarzenia, na które chcesz czekać, a także określ, że Twoja aplikacja powinna początkowo być jej własnością. Następnie można uzyskać dostęp do zdarzenia, gdy Konstruktor zwróci wartość. Wywołaj metodę [SetEvent](#setevent) do Signal (Udostępnij) obiekt zdarzenia, a następnie Wywołaj metodę [Unlock](#unlock) po zakończeniu uzyskiwania dostępu do kontrolowanego zasobu.
 
-Alternatywna metoda przy użyciu `CEvent` obiektów jest dodanie do zmiennej typu `CEvent` jako element członkowski danych do tej klasy, które użytkownik chce kontrolować. Podczas konstruowania obiektu kontrolowanego, należy wywołać konstruktora `CEvent` element członkowski danych i określ, czy zdarzenie jest sygnalizowane początkowo oraz specifythe typ obiektu zdarzenia, należy nazwę zdarzenia (Jeśli zostanie on użyty w całym procesie granice) oraz wszelkie atrybuty zabezpieczeń, które chcesz.
+Alternatywną metodą używania `CEvent` obiektów jest dodanie zmiennej typu `CEvent` jako elementu członkowskiego danych do klasy, którą chcesz kontrolować. Podczas konstruowania kontrolowanego obiektu Wywołaj konstruktora `CEvent` elementu członkowskiego danych i określ, czy zdarzenie jest początkowo sygnalizowane, a także specifythe typ obiektu zdarzenia, nazwę zdarzenia (jeśli będzie używana między procesami granice) i wszystkie atrybuty zabezpieczeń, które chcesz.
 
-Do uzyskania dostępu do zasobu w wartości clientauthtrustmode `CEvent` obiektu w ten sposób, najpierw Utwórz zmienną typu albo [CSingleLock](../../mfc/reference/csinglelock-class.md) lub typ [CMultiLock](../../mfc/reference/cmultilock-class.md) w metodzie dostępu do zasobu. Następnie wywołaj `Lock` metody obiektu blokady (na przykład [CMultiLock::Lock](../../mfc/reference/cmultilock-class.md#lock)). W tym momencie wątek będzie albo uzyskania dostępu do zasobów, zaczekaj, aż zasób zwolnione i uzyskać dostęp lub poczekaj, aż zasobów, które mogą być wprowadzane, limit czasu i nie można uzyskać dostęp do zasobu. W każdym przypadku zasobu uzyskano dostęp w sposób bezpieczny dla wątków. Do zwolnienia zasobu, należy wywołać `SetEvent` zasygnalizowania obiektu zdarzenia, a następnie użyć `Unlock` metody obiektu blokady (na przykład [CMultiLock::Unlock](../../mfc/reference/cmultilock-class.md#unlock)), lub pozwól, aby zablokować obiektu wykraczać poza zakres.
+Aby uzyskać dostęp do zasobu kontrolowanego `CEvent` przez obiekt w ten sposób, należy najpierw utworzyć zmienną typu [CSingleLock](../../mfc/reference/csinglelock-class.md) lub [CMultiLock](../../mfc/reference/cmultilock-class.md) w metodzie dostępu do zasobu. Następnie Wywołaj `Lock` metodę obiektu Lock (na przykład [CMultiLock:: Lock](../../mfc/reference/cmultilock-class.md#lock)). W tym momencie wątek uzyska dostęp do zasobu, poczeka na zwolnienie zasobu i uzyskanie dostępu albo poczeka na zwolnienie zasobu, przekroczenie limitu czasu i uzyskanie dostępu do zasobu. W każdym przypadku do zasobu uzyskano dostęp w sposób bezpieczny dla wątków. Aby zwolnić zasób, wywołaj `SetEvent` polecenie sygnalizujące obiekt zdarzenia, a następnie `Unlock` Użyj metody obiektu Lock (na przykład [CMultiLock:: Unlock](../../mfc/reference/cmultilock-class.md#unlock)) lub pozwól, że obiekt blokady wykracza poza zakres.
 
-Aby uzyskać więcej informacji o sposobie używania `CEvent` obiekty, zobacz [wielowątkowość: Jak używać klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Aby uzyskać więcej informacji o sposobach `CEvent` korzystania z obiektów [, zobacz wielowątkowość: Jak używać klas](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)synchronizacji.
 
 ## <a name="example"></a>Przykład
 
@@ -84,11 +84,11 @@ Aby uzyskać więcej informacji o sposobie używania `CEvent` obiekty, zobacz [w
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxmt.h
+**Nagłówek:** afxmt. h
 
-##  <a name="cevent"></a>  CEvent::CEvent
+##  <a name="cevent"></a>CEvent::CEvent
 
-Konstruuje nazwane i nienazwane `CEvent` obiektu.
+Konstruuje `CEvent` obiekt nazwany lub nienazwany.
 
 ```
 CEvent(
@@ -101,29 +101,29 @@ CEvent(
 ### <a name="parameters"></a>Parametry
 
 *bInitiallyOwn*<br/>
-W przypadku opcji TRUE wątku dla `CMultilock` lub `CSingleLock` obiektu jest włączona. W przeciwnym razie oczekiwania przez wszystkie wątki, które chcą uzyskać dostęp do zasobu.
+W przypadku wartości true wątek dla `CMultilock` obiektu lub `CSingleLock` jest włączony. W przeciwnym razie wszystkie wątki, do których chce uzyskać dostęp do zasobu, muszą czekać.
 
 *bManualReset*<br/>
-W przypadku opcji TRUE Określa, czy obiekt zdarzenia jest zdarzenie ręczne, w przeciwnym razie z obiektem zdarzenia to zdarzenie automatycznej.
+Jeśli wartość jest równa TRUE, określa, że obiekt zdarzenia jest zdarzeniem ręcznym, w przeciwnym razie obiekt zdarzenia jest zdarzeniem automatycznym.
 
 *lpszName*<br/>
-Nazwa `CEvent` obiektu. Należy podać, jeśli obiekt ma być używany przez granice procesu. Jeśli nazwa pasuje do istniejącego zdarzenia, Konstruktor tworzy nową `CEvent` obiektu, który odwołuje się zdarzenie o takiej nazwie. Jeśli nazwa jest zgodna z istniejącym obiektem synchronizacji nie jest zdarzeniem, konstrukcja nie powiedzie się. Jeśli ma wartość NULL, nazwa będzie mieć wartości null.
+`CEvent` Nazwa obiektu. Należy podać, jeśli obiekt będzie używany między granicami procesu. Jeśli nazwa jest zgodna z istniejącym zdarzeniem, Konstruktor kompiluje `CEvent` nowy obiekt, który odwołuje się do zdarzenia o tej nazwie. Jeśli nazwa jest zgodna z istniejącym obiektem synchronizacji, który nie jest zdarzeniem, konstrukcja zakończy się niepowodzeniem. Jeśli wartość jest równa NULL, nazwa będzie równa null.
 
 *lpsaAttribute*<br/>
-Atrybuty zabezpieczeń dla obiektu zdarzenia. Aby uzyskać pełny opis tej struktury, zobacz [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) w zestawie Windows SDK.
+Atrybuty zabezpieczeń dla obiektu zdarzenia. Aby uzyskać pełny opis tej struktury, zobacz [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) w Windows SDK.
 
 ### <a name="remarks"></a>Uwagi
 
-Dostęp i zwalniania `CEvent` obiektu, Utwórz [CMultiLock](../../mfc/reference/cmultilock-class.md) lub [CSingleLock](../../mfc/reference/csinglelock-class.md) obiektu, a następnie wywołać jej [blokady](../../mfc/reference/csinglelock-class.md#lock) i [Unlock](../../mfc/reference/csinglelock-class.md#unlock) Funkcje Członkowskie.
+Aby `CEvent` uzyskać dostęp do obiektu, Utwórz obiekt [CMultiLock](../../mfc/reference/cmultilock-class.md) lub [CSingleLock](../../mfc/reference/csinglelock-class.md) , a następnie Wywołaj funkcje [blokady](../../mfc/reference/csinglelock-class.md#lock) i [odblokowywania](../../mfc/reference/csinglelock-class.md#unlock) elementów członkowskich.
 
-Aby zmienić stan `CEvent` obiektu sygnalizowane (wątków musi czekać), wywołania [SetEvent](#setevent) lub [PulseEvent](#pulseevent). Można ustawić stanu `CEvent` obiektu nonsignaled (wątków musi czekać), wywołaj [ResetEvent](#resetevent).
+Aby zmienić stan `CEvent` obiektu na zasygnalizowanie (wątki nie muszą czekać), wywołaj metodę setevents lub [PulseEvent](#pulseevent). [](#setevent) Aby ustawić stan `CEvent` obiektu na Niesygnalizowane (wątki muszą oczekiwać), wywołaj [ResetEvent](#resetevent).
 
 > [!IMPORTANT]
->  Po utworzeniu `CEvent` obiektu, należy użyć [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) aby upewnić się, że element mutex nie istnieje. Jeśli element mutex istniał nieoczekiwanie, może to oznaczać, nieautoryzowany proces zajmowanie i może zamierza użyć obiektu mutex złośliwie. W tym przypadku zalecaną procedurą zabezpieczenia jest zamknąć dojścia i kontynuować tak, jakby wystąpił błąd podczas tworzenia obiektu.
+>  Po utworzeniu `CEvent` obiektu Użyj [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) , aby upewnić się, że mutex nie istnieje. Jeśli obiekt mutex wystąpił nieoczekiwanie, może to oznaczać, że nieautoryzowany proces jest squatting i może zależeć od złośliwego użycia obiektu mutex. W takim przypadku zalecaną procedurę świadomego zabezpieczenia jest zamknięcie uchwytu i kontynuowanie tak, jakby Wystąpił błąd podczas tworzenia obiektu.
 
-##  <a name="pulseevent"></a>  CEvent::PulseEvent
+##  <a name="pulseevent"></a>CEvent::P ulseEvent
 
-Ustawia stan zdarzenia w celu sygnalizowane (dostępne), zwalnia żadnych wątków oczekujących i resetuje ją do nonsignaled (niedostępna) automatycznie.
+Ustawia stan zdarzenia do sygnalizowania (dostępny), zwalnia wszystkie oczekujące wątki i resetuje go do niesygnalizowanego (niedostępne).
 
 ```
 BOOL PulseEvent();
@@ -131,19 +131,19 @@ BOOL PulseEvent();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
+Niezerowe, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli zdarzenie dotyczy ręcznej, wszystkie wątki oczekiwania są zwalniane, zdarzenie jest ustawione na nonsignaled i `PulseEvent` zwraca. Jeśli zdarzenie jest automatyczne, pojedynczy wątek jest zwalniany, zdarzenie jest ustawione na nonsignaled i `PulseEvent` zwraca.
+Jeśli zdarzenie jest ręczne, wszystkie oczekujące wątki są wydane, zdarzenie jest ustawione na Niesygnalizowane i `PulseEvent` zwraca. Jeśli zdarzenie jest automatyczne, zostanie wydane pojedyncze wątku, zdarzenie jest ustawione na Niesygnalizowane i `PulseEvent` zwraca wartość.
 
-Jeśli żadne wątki oczekują lub żadne wątki nie może być zwolnione natychmiast, `PulseEvent` ustawia stan zdarzenia w celu nonsignaled i zwraca.
+Jeśli żadne wątki nie oczekują lub nie można zwolnić wątków natychmiast, `PulseEvent` ustawia stan zdarzenia na Niesygnalizowane i zwraca wartość.
 
-`PulseEvent` używa podstawowej Win32 `PulseEvent` funkcji, która może chwilowo usunięte ze stanu oczekiwania przez wywołanie asynchroniczne procedury trybu jądra. W związku z tym `PulseEvent` jest zawodne i nie powinny być używane przez nowych aplikacji. Aby uzyskać więcej informacji, zobacz [funkcja PulseEvent](/windows/desktop/api/winbase/nf-winbase-pulseevent).
+`PulseEvent`używa podstawowej funkcji Win32 `PulseEvent` , która może zostać chwilowo usunięta ze stanu oczekiwania przez asynchroniczne wywołanie procedury w trybie jądra. W `PulseEvent` związku z tym jest zawodny i nie powinien być używany przez nowe aplikacje. Aby uzyskać więcej informacji, zobacz [Funkcja PulseEvent](/windows/win32/api/winbase/nf-winbase-pulseevent).
 
-##  <a name="resetevent"></a>  CEvent::ResetEvent
+##  <a name="resetevent"></a>CEvent::ResetEvent
 
-Ustawia stan zdarzenia w celu, nonsignaled do momentu, jawnie ustawione do sygnalizowanego przez [SetEvent](#setevent) funkcja elementu członkowskiego.
+Ustawia stan zdarzenia na Niesygnalizowane, dopóki nie zostanie jawnie ustawiony do sygnalizowania przez funkcję elementu [](#setevent) Członkowskiego seteven.
 
 ```
 BOOL ResetEvent();
@@ -151,17 +151,17 @@ BOOL ResetEvent();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
+Niezerowe, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-To powoduje, że wszystkie wątki, które chcą dostęp do tego zdarzenia oczekiwania.
+Powoduje to, że wszystkie wątki, które chcą uzyskać dostęp do tego zdarzenia, oczekują.
 
-Ta funkcja elementu członkowskiego nie jest używany przez automatyczne zdarzenia.
+Ta funkcja członkowska nie jest używana przez zdarzenia automatyczne.
 
-##  <a name="setevent"></a>  CEvent::SetEvent
+##  <a name="setevent"></a>CEvent:: SetEvent
 
-Ustawia stan zdarzenia w celu sygnalizowane, zwalniając żadnych wątków oczekujących.
+Ustawia stan zdarzenia do sygnalizowania, zwalniając wszystkie oczekujące wątki.
 
 ```
 BOOL SetEvent();
@@ -169,15 +169,15 @@ BOOL SetEvent();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli funkcja zakończyła się pomyślnie, w przeciwnym razie 0.
+Niezerowe, jeśli funkcja zakończyła się powodzeniem, w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli zdarzenie jest ręczne, zdarzenia będą nadal sygnałowego aż do [ResetEvent](#resetevent) jest wywoływana. W takim przypadku może być zwolnione więcej niż jeden wątek. Jeśli zdarzenie jest automatyczne, zdarzenia będą nadal sygnałowego aż zwolnieniu jednego wątku. System będzie następnie ustaw stan zdarzenia nonsignaled. Żadne wątki oczekujące, stan pozostaje sygnałowego aż do chwili zwolnienia jest jeden wątek.
+Jeśli zdarzenie jest ręczne, zdarzenie pozostanie sygnalizowane do momentu wywołania [ResetEvent](#resetevent) . W tym przypadku można wydać więcej niż jeden wątek. Jeśli wydarzenie jest automatyczne, zdarzenie pozostanie sygnalizowane do momentu zwolnienia pojedynczego wątku. System ustawi następnie stan zdarzenia na Niesygnalizowane. Jeśli żadne wątki nie oczekują, stan pozostaje zasygnalizowani do momentu wydania jednego wątku.
 
-##  <a name="unlock"></a>  CEvent::Unlock
+##  <a name="unlock"></a>CEvent:: Unlock
 
-Zwalnia z obiektem zdarzenia.
+Zwalnia obiekt zdarzenia.
 
 ```
 BOOL Unlock();
@@ -185,11 +185,11 @@ BOOL Unlock();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli wątek należące do obiektu zdarzenia i zdarzenia to zdarzenie automatyczne; w przeciwnym razie 0.
+Różne od zera, jeśli wątek należący do obiektu zdarzenia i zdarzenie jest zdarzeniem automatycznym; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska jest wywoływana przez wątki, które obecnie właścicielem zdarzenie automatyczne zwolnienie go po są wykonywane tylko, jeśli ich blokady obiektu ma być ponownie używane. Jeśli obiekt blokady nie będzie można użyć ponownie, ta funkcja zostanie wywołana przez destruktora obiektu blokady.
+Ta funkcja członkowska jest wywoływana przez wątki, które obecnie są własnością automatyczne, aby zwolnić je po zakończeniu, jeśli ich obiekt blokady jest ponownie używany. Jeśli obiekt blokady nie zostanie ponownie użyty, ta funkcja zostanie wywołana przez destruktor obiektu blokady.
 
 ## <a name="see-also"></a>Zobacz także
 

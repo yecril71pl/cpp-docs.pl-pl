@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CFontHolder [MFC], SetFont
 - CFontHolder [MFC], m_pFont
 ms.assetid: 728ab472-0c97-440d-889f-1324c6e1b6b8
-ms.openlocfilehash: 623ce5da46716e3f9a562862fc0375fb8704bb21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04de8141469f82bdd1fbb6adc1bae94d6026324c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182215"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506445"
 ---
 # <a name="cfontholder-class"></a>Klasa CFontHolder
 
-Implementuje właściwości czcionki zasobów i hermetyzuje funkcjonalność obiektu czcionki Windows i `IFont` interfejsu.
+Implementuje właściwość "podstawowe czcionki" i hermetyzuje funkcjonalność obiektu czcionki systemu Windows i `IFont` interfejsu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,32 +49,32 @@ class CFontHolder
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CFontHolder::CFontHolder](#cfontholder)|Konstruuje `CFontHolder` obiektu.|
+|[CFontHolder::CFontHolder](#cfontholder)|Konstruuje `CFontHolder` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
 |[CFontHolder::GetDisplayString](#getdisplaystring)|Pobiera ciąg wyświetlany w przeglądarce właściwości kontenera.|
-|[CFontHolder::GetFontDispatch](#getfontdispatch)|Zwraca czcionki `IDispatch` interfejsu.|
-|[CFontHolder::GetFontHandle](#getfonthandle)|Zwraca uchwyt do czcionki Windows.|
-|[CFontHolder::InitializeFont](#initializefont)|Inicjuje `CFontHolder` obiektu.|
-|[CFontHolder::QueryTextMetrics](#querytextmetrics)|Pobiera informacje o powiązanych czcionki.|
-|[CFontHolder::ReleaseFont](#releasefont)|Odłącza `CFontHolder` obiektu z `IFont` i `IFontNotification` interfejsów.|
-|[CFontHolder::Select](#select)|Wybiera zasobów czcionki do kontekstu urządzenia.|
-|[CFontHolder::SetFont](#setfont)|Łączy `CFontHolder` obiekt `IFont` interfejsu.|
+|[CFontHolder::GetFontDispatch](#getfontdispatch)|Zwraca `IDispatch` interfejs czcionki.|
+|[CFontHolder::GetFontHandle](#getfonthandle)|Zwraca dojście do czcionki systemu Windows.|
+|[CFontHolder::InitializeFont](#initializefont)|`CFontHolder` Inicjuje obiekt.|
+|[CFontHolder::QueryTextMetrics](#querytextmetrics)|Pobiera informacje dotyczące powiązanej czcionki.|
+|[CFontHolder::ReleaseFont](#releasefont)|Rozłącza `CFontHolder` obiekt `IFontNotification` od interfejsów i. `IFont`|
+|[CFontHolder::Select](#select)|Wybiera zasób czcionki w kontekście urządzenia.|
+|[CFontHolder::SetFont](#setfont)|`CFontHolder` Łączy obiekt `IFont` z interfejsem.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CFontHolder::m_pFont](#m_pfont)|Wskaźnik do `CFontHolder` obiektu `IFont` interfejsu.|
+|[CFontHolder::m_pFont](#m_pfont)|Wskaźnik do `CFontHolder` `IFont` interfejsu obiektu.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CFontHolder` nie ma klasy bazowej.
+`CFontHolder`nie ma klasy bazowej.
 
-Ta klasa umożliwia Implementowanie właściwości niestandardowej czcionki dla kontrolki. Aby uzyskać informacje na temat tworzenia takich właściwości, zobacz artykuł [kontrolek ActiveX: Używanie czcionek](../../mfc/mfc-activex-controls-using-fonts.md).
+Użyj tej klasy, aby zaimplementować niestandardowe właściwości czcionki dla kontrolki. Aby uzyskać informacje na temat tworzenia takich właściwości, zobacz [artykuł formanty ActiveX: Używanie czcionek](../../mfc/mfc-activex-controls-using-fonts.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -82,11 +82,11 @@ Ta klasa umożliwia Implementowanie właściwości niestandardowej czcionki dla 
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxctl.h
+**Nagłówek:** 'afxctl. h
 
-##  <a name="cfontholder"></a>  CFontHolder::CFontHolder
+##  <a name="cfontholder"></a>CFontHolder::CFontHolder
 
-Konstruuje `CFontHolder` obiektu.
+Konstruuje `CFontHolder` obiekt.
 
 ```
 explicit CFontHolder(LPPROPERTYNOTIFYSINK pNotify);
@@ -95,13 +95,13 @@ explicit CFontHolder(LPPROPERTYNOTIFYSINK pNotify);
 ### <a name="parameters"></a>Parametry
 
 *pNotify*<br/>
-Wskaźnik na czcionkę `IPropertyNotifySink` interfejsu.
+Wskaźnik do `IPropertyNotifySink` interfejsu czcionki.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy wywołać `InitializeFont` zainicjować wynikowy obiekt przed jego użyciem.
+Musisz wywołać `InitializeFont` , aby zainicjować obiekt otrzymany przed użyciem.
 
-##  <a name="getdisplaystring"></a>  CFontHolder::GetDisplayString
+##  <a name="getdisplaystring"></a>CFontHolder::GetDisplayString
 
 Pobiera ciąg, który może być wyświetlany w przeglądarce właściwości kontenera.
 
@@ -112,15 +112,15 @@ BOOL GetDisplayString(CString& strValue);
 ### <a name="parameters"></a>Parametry
 
 *strValue*<br/>
-Odwołanie do [CString](../../atl-mfc-shared/reference/cstringt-class.md) jest do przechowywania ciągu wyświetlanego.
+Odwołanie do [CString](../../atl-mfc-shared/reference/cstringt-class.md) , która ma przechowywać ciąg wyświetlania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli ciąg jest pomyślnie pobrane; w przeciwnym razie 0.
+Niezerowe, jeśli ciąg został pomyślnie pobrany; w przeciwnym razie 0.
 
-##  <a name="getfontdispatch"></a>  CFontHolder::GetFontDispatch
+##  <a name="getfontdispatch"></a>CFontHolder::GetFontDispatch
 
-Wywołaj tę funkcję, aby pobrać wskaźnika do interfejs ekspedycji czcionki.
+Wywołaj tę funkcję, aby pobrać wskaźnik do interfejsu wysyłania czcionki.
 
 ```
 LPFONTDISP GetFontDispatch();
@@ -128,15 +128,15 @@ LPFONTDISP GetFontDispatch();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do `CFontHolder` obiektu `IFontDisp` interfejsu. Należy pamiętać, że funkcja wywołująca `GetFontDispatch` musi wywołać `IUnknown::Release` na ten wskaźnik interfejsu, gdy z nią zrobić.
+Wskaźnik do `CFontHolder` `IFontDisp` interfejsu obiektu. Należy zauważyć, że funkcja wywołująca `GetFontDispatch` musi wywołać `IUnknown::Release` ten wskaźnik interfejsu po zakończeniu z nim.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj `InitializeFont` przed wywołaniem `GetFontDispatch`.
+Wywołaj `InitializeFont` przed `GetFontDispatch`wywołaniem metody.
 
-##  <a name="getfonthandle"></a>  CFontHolder::GetFontHandle
+##  <a name="getfonthandle"></a>CFontHolder::GetFontHandle
 
-Wywołaj tę funkcję można pobrać uchwytu na czcionkę Windows.
+Wywołaj tę funkcję, aby uzyskać uchwyt do czcionki systemu Windows.
 
 ```
 HFONT GetFontHandle();
@@ -149,26 +149,26 @@ HFONT GetFontHandle(
 ### <a name="parameters"></a>Parametry
 
 *cyLogical*<br/>
-Wysokość w jednostkach logicznych prostokąt, w którym jest rysowana formantu.
+Wysokość (w jednostkach logicznych) prostokąta, w którym jest rysowany formant.
 
 *cyHimetric*<br/>
-Wysokość w jednostkach MM_HIMETRIC formantu.
+Wysokość formantu w jednostkach MM_HIMETRIC.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Dojście do obiektu czcionki. w przeciwnym razie wartość NULL.
+Uchwyt do obiektu Font; w przeciwnym razie wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Stosunek *cyLogical* i *cyHimetric* jest używane do obliczania rozmiaru wyświetlania właściwe, w jednostkach logicznych, aby uzyskać rozmiar czcionki w punktach wyrażona w jednostkach MM_HIMETRIC:
+Stosunek *cyLogical* i *cyHimetric* jest używany do obliczania odpowiedniego rozmiaru wyświetlania w jednostkach logicznych dla rozmiaru punktu czcionki wyrażonego w jednostkach MM_HIMETRIC:
 
-Rozmiar ekranu = ( *cyLogical* / *cyHimetric*) X rozmiar czcionki
+Display size = ( *cyLogical* / *cyHimetric*) X rozmiar czcionki
 
-Wersja bez parametrów, która zwraca uchwyt na czcionkę, rozmiar ekranu.
+Wersja bez parametrów zwraca dojście do rozmiaru czcionki poprawnie dla ekranu.
 
-##  <a name="initializefont"></a>  CFontHolder::InitializeFont
+##  <a name="initializefont"></a>CFontHolder::InitializeFont
 
-Inicjuje `CFontHolder` obiektu.
+`CFontHolder` Inicjuje obiekt.
 
 ```
 void InitializeFont(
@@ -179,30 +179,30 @@ void InitializeFont(
 ### <a name="parameters"></a>Parametry
 
 *pFontDesc*<br/>
-Wskaźnik do struktury opis czcionek ( [FONTDESC](/windows/desktop/api/olectl/ns-olectl-tagfontdesc)), który określa właściwości czcionki.
+Wskaźnik do struktury opisu czcionki ( [FONTDESC](/windows/win32/api/olectl/ns-olectl-fontdesc)), która określa charakterystykę czcionki.
 
 *pFontDispAmbient*<br/>
-Wskaźnik do otoczenia właściwość czcionki kontenera.
+Wskaźnik na właściwość Font otaczający kontenera.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli *pFontDispAmbient* nie ma wartości NULL, `CFontHolder` połączony jest obiekt klonu `IFont` interfejs używany przez właściwości czcionki kontenera.
+Jeśli *pFontDispAmbient* nie ma wartości null, `CFontHolder` obiekt jest połączony z klonem `IFont` interfejsu używanego przez właściwość otaczającej czcionki kontenera.
 
-Jeśli *pFontDispAmbient* jest wartość NULL, nowe czcionka obiektu jest utworzona na podstawie opisu czcionki wskazywany przez *pFontDesc* lub, jeśli *pFontDesc* ma wartość NULL, wartości domyślnej Opis.
+Jeśli *pFontDispAmbient* ma wartość null, zostanie utworzony nowy obiekt Font z opisu czcionki wskazywanym przez *pFontDesc* lub, jeśli *pFontDesc* ma wartość null, z domyślnego opisu.
 
-Wywołaj tę funkcję po konstruowanie `CFontHolder` obiektu.
+Wywołaj tę funkcję po utworzeniu `CFontHolder` obiektu.
 
 ##  <a name="m_pfont"></a>  CFontHolder::m_pFont
 
-Wskaźnik do `CFontHolder` obiektu `IFont` interfejsu.
+Wskaźnik do `CFontHolder` `IFont` interfejsu obiektu.
 
 ```
 LPFONT m_pFont;
 ```
 
-##  <a name="querytextmetrics"></a>  CFontHolder::QueryTextMetrics
+##  <a name="querytextmetrics"></a>CFontHolder::QueryTextMetrics
 
-Pobiera informacje o fizycznej czcionki, reprezentowane przez `CFontHolder` obiektu.
+Pobiera informacje o czcionce fizycznej reprezentowanej przez `CFontHolder` obiekt.
 
 ```
 void QueryTextMetrics(LPTEXTMETRIC lptm);
@@ -211,19 +211,19 @@ void QueryTextMetrics(LPTEXTMETRIC lptm);
 ### <a name="parameters"></a>Parametry
 
 *lptm*<br/>
-Wskaźnik do [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) struktury, który będzie otrzymywać informacje.
+Wskaźnik do struktury [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) , która będzie odbierać informacje.
 
-##  <a name="releasefont"></a>  CFontHolder::ReleaseFont
+##  <a name="releasefont"></a>CFontHolder::ReleaseFont
 
-Ta funkcja odłącza `CFontHolder` obiekt z jego `IFont` interfejsu.
+Ta funkcja rozłącza `CFontHolder` obiekt od jego `IFont` interfejsu.
 
 ```
 void ReleaseFont();
 ```
 
-##  <a name="select"></a>  CFontHolder::Select
+##  <a name="select"></a>CFontHolder:: SELECT
 
-Wywołaj tę funkcję, aby wybrać czcionkę kontroli nad w kontekście określonego urządzenia.
+Wywołaj tę funkcję, aby wybrać czcionkę kontrolki w określonym kontekście urządzenia.
 
 ```
 CFont* Select(
@@ -235,25 +235,25 @@ CFont* Select(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-Kontekst urządzenia, do którego wybrano czcionki.
+Kontekst urządzenia, do którego wybrana jest czcionka.
 
 *cyLogical*<br/>
-Wysokość w jednostkach logicznych prostokąt, w którym jest rysowana formantu.
+Wysokość (w jednostkach logicznych) prostokąta, w którym jest rysowany formant.
 
 *cyHimetric*<br/>
-Wysokość w jednostkach MM_HIMETRIC formantu.
+Wysokość formantu w jednostkach MM_HIMETRIC.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do czcionki, który jest zastępowany.
+Wskaźnik do czcionki, która jest zastępowana.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [GetFontHandle](#getfonthandle) dyskusję na temat *cyLogical* i *cyHimetric* parametrów.
+Zobacz [GetFontHandle](#getfonthandle) , aby zapoznać się z omówieniem parametrów *cyLogical* i *cyHimetric* .
 
-##  <a name="setfont"></a>  CFontHolder::SetFont
+##  <a name="setfont"></a>CFontHolder:: SetFont
 
-Zwalnia wszelkie istniejące czcionki i łączy `CFontHolder` obiekt `IFont` interfejsu.
+Zwalnia istniejącą czcionkę i łączy `CFontHolder` obiekt `IFont` z interfejsem.
 
 ```
 void SetFont(LPFONT pNewFont);

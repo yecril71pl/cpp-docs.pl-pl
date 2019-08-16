@@ -8,16 +8,16 @@ helpviewer_keywords:
 - /bigobj compiler option [C++]
 - bigobj compiler option [C++]
 ms.assetid: ba94d602-4015-4a8d-86ec-49241ab74c12
-ms.openlocfilehash: 46399dc0c1ff552b4fc963b686ac6aa6df8b6f71
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30c02c72496e3bb91da3b39e1870f1dc5a2c040a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272978"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493114"
 ---
 # <a name="bigobj-increase-number-of-sections-in-obj-file"></a>/bigobj (Zwiększ ilość sekcji w pliku .Obj)
 
-**/ bigobj** zwiększa liczbę sekcji mogących zawierać pliku obiektu.
+**/bigobj** zwiększa liczbę sekcji, które może zawierać plik obiektu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,19 +25,19 @@ ms.locfileid: "62272978"
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie plik obiektu może zawierać maksymalnie 65,279 (prawie 2 ^ 16) adresowalnych sekcji. Ten limit dotyczy, niezależnie od tego, która Docelowa platforma jest określona. **/ bigobj** powoduje zwiększenie pojemności adresu do 4 294 967 296 (2 ^ 32).
+Domyślnie plik obiektu może zawierać maksymalnie 65 279 (prawie 2 ^ 16) sekcji adresowane. Ten limit obowiązuje niezależnie od tego, która platforma docelowa została określona. **/bigobj** zwiększa pojemność adresu do 4 294 967 296 (2 ^ 32).
 
-Większość modułów nigdy nie Generowanie pliku .obj, który zawiera więcej niż 65,279 sekcje. Jednak generowany sprzętowo kod lub kod, który sprawia, że intensywne użycie bibliotek szablonu może wymagać plików .obj, które mogą pomieścić więcej sekcji. **/ bigobj** jest włączona domyślnie w projektach platformy uniwersalnej Windows (UWP), ponieważ generowany sprzętowo kod XAML zawiera dużą liczbę nagłówków. Jeśli wyłączysz tę opcję na projekt aplikacji platformy uniwersalnej systemu Windows, Twój kod może wygenerować błąd kompilatora C1128.
+Większość modułów nigdy nie generuje pliku. obj, który zawiera więcej niż 65 279 sekcji. Jednak kod wygenerowany przez maszynę lub kod, który sprawia, że są duże użycie bibliotek szablonów, mogą wymagać plików. obj, które mogą zawierać więcej sekcji. **/bigobj** jest domyślnie włączona w projektach platforma uniwersalna systemu Windows (platformy UWP), ponieważ kod XAML wygenerowany przez maszynę zawiera dużą liczbę nagłówków. Jeśli wyłączysz tę opcję w projekcie aplikacji platformy UWP, kod może generować błąd kompilatora C1128.
 
-Aby uzyskać informacje na format plików obiektu PE COFF, zobacz [formatu PE](/windows/desktop/debug/pe-format) w dokumentacji programu Windows.
+Aby uzyskać informacje na temat formatu pliku. PE-COFF, zobacz [Format PE](/windows/win32/debug/pe-format) w dokumentacji systemu Windows.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** stronę właściwości.
+1. Wybierz stronę właściwości **Konfiguracja** > **C/C++**  > **wiersz polecenia** .
 
-1. Wprowadź **/bigobj** w — opcja kompilatora **dodatkowe opcje** pole.
+1. Wprowadź opcję kompilatora **/bigobj** w polu **dodatkowe opcje** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 

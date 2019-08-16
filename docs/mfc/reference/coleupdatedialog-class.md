@@ -10,16 +10,16 @@ helpviewer_keywords:
 - COleUpdateDialog [MFC], COleUpdateDialog
 - COleUpdateDialog [MFC], DoModal
 ms.assetid: 699ca980-52b1-4cf8-9ab1-ac6767ad5b0e
-ms.openlocfilehash: b8e580130b025f07b8f85a624b7f5a224a00e49e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 150e78b7880a61343db21c3c787ffdd1f0b734a5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373599"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503169"
 ---
 # <a name="coleupdatedialog-class"></a>Klasa COleUpdateDialog
 
-Stosowane w wyjątkowym przypadku okna dialogowego OLE Edytuj łącza, który powinien być używany gdy musisz zaktualizować jedynie istniejące połączone lub obiekty osadzone w dokumencie.
+Używane w specjalnym przypadku okna dialogowego Edytowanie linków OLE, które ma być używane, gdy trzeba zaktualizować tylko istniejące obiekty połączone lub osadzone w dokumencie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,17 +33,17 @@ class COleUpdateDialog : public COleLinksDialog
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[COleUpdateDialog::COleUpdateDialog](#coleupdatedialog)|Konstruuje `COleUpdateDialog` obiektu.|
+|[COleUpdateDialog::COleUpdateDialog](#coleupdatedialog)|Konstruuje `COleUpdateDialog` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[COleUpdateDialog::DoModal](#domodal)|Wyświetla **Edytuj linki** okno dialogowe w trybie aktualizacji.|
+|[COleUpdateDialog::D oModal](#domodal)|Wyświetla okno dialogowe **Edytowanie linków** w trybie aktualizacji.|
 
 ## <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji dotyczących okien dialogowych OLE specyficzne, zobacz artykuł [okna dialogowe w OLE](../../mfc/dialog-boxes-in-ole.md).
+Aby uzyskać więcej informacji dotyczących okien dialogowych specyficznych dla OLE, zobacz [okna dialogowe artykułu w OLE](../../mfc/dialog-boxes-in-ole.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -65,11 +65,11 @@ Aby uzyskać więcej informacji dotyczących okien dialogowych OLE specyficzne, 
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxodlgs.h
+**Nagłówek:** afxodlgs. h
 
-##  <a name="coleupdatedialog"></a>  COleUpdateDialog::COleUpdateDialog
+##  <a name="coleupdatedialog"></a>COleUpdateDialog::COleUpdateDialog
 
-Konstruuje `COleUpdateDialog` obiektu.
+Konstruuje `COleUpdateDialog` obiekt.
 
 ```
 explicit COleUpdateDialog(
@@ -85,21 +85,21 @@ explicit COleUpdateDialog(
 Wskazuje dokument zawierający linki, które mogą wymagać aktualizacji.
 
 *bUpdateLinks*<br/>
-Flaga określająca, czy połączone obiekty mają zostać uaktualnione.
+Flaga określająca, czy obiekty połączone mają być aktualizowane.
 
 *bUpdateEmbeddings*<br/>
-Flaga określająca, czy mają zostać uaktualnione osadzonych obiektów.
+Flaga określająca, czy obiekty osadzone mają być aktualizowane.
 
 *pParentWnd*<br/>
-Wskazuje na obiekt okna nadrzędnego lub właściciela (typu `CWnd`) do którego należy obiekt okna dialogowego. Jeśli ma wartość NULL, okno nadrzędne, okno dialogowe zostanie ustawiona do okna głównego aplikacji.
+Wskazuje obiekt nadrzędny lub właściciel (typu `CWnd`), do którego należy obiekt okna dialogowego. Jeśli ma wartość NULL, okno dialogowe nadrzędne okna dialogowego zostanie ustawione na główne okno aplikacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja tworzy tylko `COleUpdateDialog` obiektu. Aby wyświetlić okno dialogowe, należy wywołać [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal). Ta klasa powinna być używana zamiast `COleLinksDialog` kiedy chcesz zaktualizować jedynie istniejące powiązane lub osadzonych elementów.
+Ta funkcja tworzy tylko `COleUpdateDialog` obiekt. Aby wyświetlić okno dialogowe, wywołaj [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal). Ta klasa powinna być używana zamiast, `COleLinksDialog` gdy chcesz zaktualizować tylko istniejące elementy połączone lub osadzone.
 
-##  <a name="domodal"></a>  COleUpdateDialog::DoModal
+##  <a name="domodal"></a>COleUpdateDialog::D oModal
 
-Wyświetla okno dialogowe Edytuj linki w tryb aktualizacji.
+Wyświetla okno dialogowe Edytowanie linków w trybie aktualizacji.
 
 ```
 virtual INT_PTR DoModal();
@@ -107,21 +107,21 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Stan ukończenia dla okna dialogowego. Jeden z następujących wartości:
+Stan ukończenia dla okna dialogowego. Jedna z następujących wartości:
 
-- IDOK, jeśli okno dialogowe zwrócona pomyślnie.
+- IDOK, jeśli okno dialogowe zostało pomyślnie zwrócone.
 
-- IDCANCEL, jeśli żaden z elementów osadzony lub połączony w bieżącym dokumencie wymagają aktualizacji.
+- IDCANCEL, jeśli żaden z elementów połączonych lub osadzonych w bieżącym dokumencie nie wymaga aktualizacji.
 
-- IDABORT, jeśli wystąpił błąd. Jeśli zwracana jest IDABORT, wywołaj [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) funkcja elementu członkowskiego, aby uzyskać więcej informacji o typie błędu, który wystąpił. Aby uzyskać listę możliwych błędów, zobacz [OleUIEditLinks](/windows/desktop/api/oledlg/nf-oledlg-oleuieditlinksa) funkcji w zestawie Windows SDK.
+- IDABORT, jeśli wystąpił błąd. Jeśli IDABORT jest zwracany, wywołaj funkcję członkowską [COleDialog:: GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) , aby uzyskać więcej informacji na temat typu błędu, który wystąpił. Listę możliwych błędów można znaleźć w funkcji [OLEUIEDITLINKS](/windows/win32/api/oledlg/nf-oledlg-oleuieditlinksw) w Windows SDK.
 
 ### <a name="remarks"></a>Uwagi
 
-Wszystkie łącza i/lub osadzenia są aktualizowane, chyba że użytkownik wybierze przycisk Anuluj.
+Wszystkie linki i/lub osadzenia są aktualizowane, chyba że użytkownik wybierze przycisk Anuluj.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
+[Przykład OCLIENT MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)

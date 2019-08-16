@@ -6,20 +6,20 @@ helpviewer_keywords:
 - access keys [MFC], hot keys
 - CHotKeyCtrl class [MFC], setting hot key
 ms.assetid: 6f3bc141-e346-4dce-9ca7-3e6b2c453f3f
-ms.openlocfilehash: a77aad4881acd04c6dabb6dce90acc01be2cfbc8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b49f24039b130f74693e7567f5287476126f225
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307786"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511218"
 ---
 # <a name="setting-a-hot-key"></a>Ustawianie klawisza dostępu
 
-Aplikacja może użyć informacji dostarczonych przez klawisza dostępu ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) kontrolki w jeden z dwóch sposobów:
+Aplikacja może korzystać z informacji dostarczonych przez kontrolkę klawisza dostępu ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) na jeden z dwóch sposobów:
 
-- Konfigurowanie globalny klawisz dostępu do aktywacji okna nonchild, wysyłając [WM_SETHOTKEY](/windows/desktop/inputdev/wm-sethotkey) komunikat w oknie zostanie uaktywniony.
+- Skonfiguruj globalny klawisz dostępu w celu aktywowania okna niepodrzędnego, wysyłając do okna komunikat [WM_SETHOTKEY](/windows/win32/inputdev/wm-sethotkey) , który ma zostać aktywowany.
 
-- Ustawianie klawisza dostępu właściwe dla wątków, wywołując funkcję Windows [RegisterHotKey](/windows/desktop/api/winuser/nf-winuser-registerhotkey).
+- Skonfiguruj odpowiedni dla wątku klawisz dostępu, wywołując funkcję systemu Windows [funkcję RegisterHotKey](/windows/win32/api/winuser/nf-winuser-registerhotkey).
 
 ## <a name="see-also"></a>Zobacz także
 

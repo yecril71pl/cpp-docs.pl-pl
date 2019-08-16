@@ -8,24 +8,24 @@ helpviewer_keywords:
 - marshaling [C++], calling native DLLs
 - data marshaling [C++], calling native DLLs
 ms.assetid: 3273eb4b-38d1-4619-92a6-71bda542be72
-ms.openlocfilehash: e51e094cc013250fc254a09e279745f1f9c108ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b36496690c4d83837a6dff1752f3f0db514869eb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222814"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501236"
 ---
 # <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>Instrukcje: Wywoływanie natywnych bibliotek DLL z kodu zarządzanego za pomocą funkcji PInvoke
 
-Funkcje, które są implementowane w niezarządzanych bibliotek DLL może być wywołana z kodu zarządzanego za pomocą funkcji wywołania platformy (P/Invoke). Jeśli kod źródłowy dla biblioteki DLL nie jest dostępna, P/Invoke jest jedyną opcją dla współpracy. Jednak w przeciwieństwie do innych języków .NET, Visual C++ stanowi alternatywę dla metody P/Invoke. Aby uzyskać więcej informacji, zobacz [za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
+Funkcje zaimplementowane w niezarządzanych bibliotekach DLL mogą być wywoływane z kodu zarządzanego za pomocą funkcji wywołania platformy (P/Invoke). Jeśli kod źródłowy biblioteki DLL nie jest dostępny, Metoda P/Invoke jest jedyną opcją dla współdziałania. Jednak, w przeciwieństwie do innych języków .NET C++ , Wizualizacja stanowi alternatywę dla P/Invoke. Aby uzyskać więcej informacji, [Zobacz C++ using Interop (niejawny PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład kodu używa Win32 [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) funkcję, aby pobrać aktualna rozdzielczość ekranu w pikselach.
+Poniższy przykład kodu używa funkcji Win32 [GetSystemMetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics) , aby pobrać bieżącą rozdzielczość ekranu w pikselach.
 
-Dla funkcji, które używają tylko typy wewnętrzne jako argumenty i zwracać wartości nie dodatkowej pracy jest wymagana. Inne typy danych, takich jak wskaźniki funkcji, tablic i struktur, wymagają dodatkowe atrybuty, aby upewnić się, organizowanie odpowiednie dane.
+W przypadku funkcji używających tylko typów wewnętrznych jako argumentów i wartości zwracanych nie jest wymagana żadna dodatkowa liczba zadań. Inne typy danych, takie jak wskaźniki funkcji, tablice i struktury, wymagają dodatkowych atrybutów, aby zapewnić prawidłowe kierowanie danych.
 
-Chociaż nie jest wymagane, jest dobrą praktyką, aby powiększyć P/Invoke deklaracje statyczne elementy członkowskie klasy wartości, dzięki czemu nie istnieją w globalnej przestrzeni nazw, jak pokazano w tym przykładzie.
+Chociaż nie jest to wymagane, dobrym sposobem jest wykonywanie deklaracji P/Invoke statycznych elementów członkowskich klasy wartości, tak aby nie istniały w globalnej przestrzeni nazw, jak pokazano w tym przykładzie.
 
 ```
 // pinvoke_basic.cpp

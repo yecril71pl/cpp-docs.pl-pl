@@ -1,5 +1,5 @@
 ---
-title: Wersja (atrybut COM C++)
+title: wersja (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.version
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - version attribute
 - version information, version attribute
 ms.assetid: db6ce5d8-82c2-4329-b1a8-8ca2f67342cb
-ms.openlocfilehash: fe1df9e12b9adbf9ce55978fd3479f7e740ddc96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a432267632b1f2a716a833a485b182cd93a27e2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407162"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514875"
 ---
 # <a name="version-c"></a>version (C++)
 
-Identyfikuje określoną wersję spośród wielu wersji klasy.
+Identyfikuje konkretną wersję w wielu wersjach klasy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,15 +27,15 @@ Identyfikuje określoną wersję spośród wielu wersji klasy.
 ### <a name="parameters"></a>Parametry
 
 *version*<br/>
-Numer wersji `coclass`. Jeśli nie zostanie określony, 1.0 zostanie umieszczona w pliku .idl.
+Numer `coclass`wersji. Jeśli nie zostanie określony, 1,0 zostanie umieszczony w pliku. idl.
 
 ## <a name="remarks"></a>Uwagi
 
-**Wersji** atrybut C++ ma taką samą funkcjonalność jak [wersji](/windows/desktop/Midl/version) atrybutów w MIDL i jest przekazywana do pliku .idl wygenerowany.
+Atrybut **Version** C++ ma taką samą funkcjonalność jak atrybut MIDL [wersji](/windows/win32/Midl/version) i jest przesyłany do wygenerowanego pliku IDL.
 
 ## <a name="example"></a>Przykład
 
-Zobacz [możliwej do wiązania](bindable.md) przykład użycie próbki **wersji**.
+Zobacz przykład [powiązania](bindable.md) dla przykładowego użycia **wersji**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -43,12 +43,12 @@ Zobacz [możliwej do wiązania](bindable.md) przykład użycie próbki **wersji*
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **— struktura**|
+|**Dotyczy**|**Klasa**, **Struktura**|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|**coclass**|
+|**Wymagane atrybuty**|**coclass**|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

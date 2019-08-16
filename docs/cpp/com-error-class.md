@@ -6,71 +6,71 @@ f1_keywords:
 helpviewer_keywords:
 - _com_error class
 ms.assetid: 70dafa69-b1fb-4a5c-9249-e857e0793d42
-ms.openlocfilehash: 8ed1521cbf768e5b473281e5f9b7c6597cdc4692
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 828a1ec68fef631700d5b64e6aeeec6660acf9a8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155205"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498747"
 ---
-# <a name="comerror-class"></a>_com_error — Klasa
+# <a name="_com_error-class"></a>_com_error — Klasa
 
 **Microsoft Specific**
 
-A **_com_error** obiektu przedstawia warunek wyjątku, wykrywany przez funkcje otoki obsługi błędów w plikach nagłówkowych wygenerowane z biblioteki typów lub za pomocą jednej z klas obsługi COM. **_Com_error** klasa hermetyzuje kod błędu HRESULT i wszelkie powiązane `IErrorInfo Interface` obiektu.
+Obiekt **_com_error** reprezentuje warunek wyjątku wykrywany przez funkcje otoki obsługi błędów w plikach nagłówkowych wygenerowanych z biblioteki typów lub przez jedną z klas obsługi com. Klasa **_com_error** hermetyzuje kod błędu HRESULT i dowolny skojarzony `IErrorInfo Interface` obiekt.
 
-### <a name="construction"></a>Konstrukcja
+### <a name="construction"></a>Zrekonstruowan
 
 |||
 |-|-|
-|[_com_error](../cpp/com-error-com-error.md)|Konstruuje **_com_error** obiektu.|
+|[_com_error](../cpp/com-error-com-error.md)|Konstruuje obiekt **_com_error** .|
 
 ### <a name="operators"></a>Operatory
 
 |||
 |-|-|
-|[operator =](../cpp/com-error-operator-equal.md)|Przypisuje istniejące **_com_error** obiektu do drugiego.|
+|[operator =](../cpp/com-error-operator-equal.md)|Przypisuje istniejący obiekt **_com_error** do innego.|
 
-### <a name="extractor-functions"></a>Ekstraktor funkcji
+### <a name="extractor-functions"></a>Funkcje wyodrębniania
 
 |||
 |-|-|
-|[Error](../cpp/com-error-error.md)|Pobiera wartość HRESULT przekazany do konstruktora.|
-|[ErrorInfo](../cpp/com-error-errorinfo.md)|Pobiera `IErrorInfo` obiekt przekazany do konstruktora.|
-|[WCode](../cpp/com-error-wcode.md)|Pobiera kod błędu 16-bitowych zmapowany do zhermetyzowanego HRESULT.|
+|[Error](../cpp/com-error-error.md)|Pobiera wartość HRESULT przekazaną do konstruktora.|
+|[ErrorInfo](../cpp/com-error-errorinfo.md)|`IErrorInfo` Pobiera obiekt przesłany do konstruktora.|
+|[WCode](../cpp/com-error-wcode.md)|Pobiera 16-bitowy kod błędu mapowany na hermetyzowaną wartość HRESULT.|
 
 ### <a name="ierrorinfo-functions"></a>Funkcje IErrorInfo
 
 |||
 |-|-|
-|[Opis](../cpp/com-error-description.md)|Wywołania `IErrorInfo::GetDescription` funkcji.|
-|[HelpContext](../cpp/com-error-helpcontext.md)|Wywołania `IErrorInfo::GetHelpContext` funkcji.|
-|[HelpFile](../cpp/com-error-helpfile.md)|Wywołania `IErrorInfo::GetHelpFile` — funkcja|
-|[Element źródłowy](../cpp/com-error-source.md)|Wywołania `IErrorInfo::GetSource` funkcji.|
-|[GUID](../cpp/com-error-guid.md)|Wywołania `IErrorInfo::GetGUID` funkcji.|
+|[Opis](../cpp/com-error-description.md)|Wywołuje `IErrorInfo::GetDescription` funkcję.|
+|[HelpContext](../cpp/com-error-helpcontext.md)|Wywołuje `IErrorInfo::GetHelpContext` funkcję.|
+|[HelpFile](../cpp/com-error-helpfile.md)|Calls `IErrorInfo::GetHelpFile` — funkcja|
+|[Element źródłowy](../cpp/com-error-source.md)|Wywołuje `IErrorInfo::GetSource` funkcję.|
+|[IDENT](../cpp/com-error-guid.md)|Wywołuje `IErrorInfo::GetGUID` funkcję.|
 
-### <a name="format-message-extractor"></a>Format komunikatu ekstraktory
-
-|||
-|-|-|
-|[Komunikat o błędzie](../cpp/com-error-errormessage.md)|Pobiera ciąg komunikatu dla przechowywanych we właściwości HRESULT **_com_error** obiektu.|
-
-### <a name="exepinfowcode-to-hresult-mappers"></a>ExepInfo.wCode do liczby Maperów HRESULT
+### <a name="format-message-extractor"></a>Wyodrębnianie formatu komunikatów
 
 |||
 |-|-|
-|[HRESULTToWCode](../cpp/com-error-hresulttowcode.md)|Mapuje HRESULT 32-bitowego do 16-bitowych `wCode`.|
-|[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|Mapuje 16-bitowych `wCode` HRESULT 32-bitowych.|
+|[ErrorMessage](../cpp/com-error-errormessage.md)|Pobiera komunikat ciągu dla HRESULT przechowywanego w obiekcie **_com_error** .|
 
-**END specyficzny dla Microsoft**
+### <a name="exepinfowcode-to-hresult-mappers"></a>ExepInfo. Kodostrzeżenia do mapera HRESULT
+
+|||
+|-|-|
+|[HRESULTToWCode](../cpp/com-error-hresulttowcode.md)|Maps 32-bit HRESULT do 16-bitowego `wCode`.|
+|[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|Mapuje 16- `wCode` bitowe do 32-bitowej HRESULT.|
+
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<comdef.h >
+**Nagłówek:** \<comdef. h >
 
-`Lib:` comsuppw.lib lub comsuppwd.lib (zobacz [/Zc: wchar_t (wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Aby uzyskać więcej informacji)
+`Lib:`comsuppw. lib lub comsuppwd. lib (patrz [/Zc: wchar_t (Wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) , aby uzyskać więcej informacji.
 
 ## <a name="see-also"></a>Zobacz także
 
 [Kompilator klas obsługi COM](../cpp/compiler-com-support-classes.md)<br/>
-[Interfejs IErrorInfo](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)
+[IErrorInfo, interfejs](/windows/win32/api/oaidl/nn-oaidl-ierrorinfo)

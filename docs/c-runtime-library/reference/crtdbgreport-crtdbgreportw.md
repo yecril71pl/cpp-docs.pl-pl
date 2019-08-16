@@ -28,16 +28,16 @@ helpviewer_keywords:
 - CrtDbgReportW function
 - _CrtDbgReportW function
 ms.assetid: 6e581fb6-f7fb-4716-9432-f0145d639ecc
-ms.openlocfilehash: f12dafc62e302d90e5cffa04ee93e662b78295be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5579a8996950c5f3e923f67ed2a5e667bb566fa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339484"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500001"
 ---
-# <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
+# <a name="_crtdbgreport-_crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 
-Generuje raport z komunikatem debugowania i wysyła raport do trzech możliwych miejsc docelowych (tylko wersja debugowania).
+Generuje raport z komunikatem debugowania i wysyła raport do trzech możliwych miejsc docelowych (tylko wersja do debugowania).
 
 ## <a name="syntax"></a>Składnia
 
@@ -63,50 +63,50 @@ int _CrtDbgReportW(
 ### <a name="parameters"></a>Parametry
 
 *reportType*<br/>
-Typ raportu: **_CRT_WARN**, **_CRT_ERROR**, i **_CRT_ASSERT**.
+Typ raportu: **_CRT_WARN**, **_CRT_ERROR**i **_CRT_ASSERT**.
 
 *Nazwa pliku*<br/>
-Wskaźnik na nazwę pliku źródłowego, w którym wystąpił wystąpiło zapewnienie/raport lub **NULL**.
+Wskaźnik na nazwę pliku źródłowego, w którym wystąpiło potwierdzenie/raport lub **wartość null**.
 
-*numer wiersza*<br/>
-Numer wiersza w pliku źródłowym, gdzie wystąpiło wystąpiło zapewnienie/raport lub **NULL**.
+*LineNumber*<br/>
+Numer wiersza w pliku źródłowym, w którym wystąpiło potwierdzenie/raport lub **wartość null**.
 
 *moduleName*<br/>
-Wskaźnik na nazwę modułu (.exe lub .dll) gdzie wystąpiło zapewnienie lub raport.
+Wskaźnik na nazwę modułu (. exe lub. dll), w którym wystąpiło potwierdzenie lub raport.
 
-*Format*<br/>
-Wskaźnik na sterowania formatem ciągu używany do tworzenia wiadomości użytkownika.
+*format*<br/>
+Wskaźnik do formatu — ciąg kontrolny użyty do utworzenia komunikatu użytkownika.
 
 *argument*<br/>
-Argumenty opcjonalne podstawiania używane przez *format*.
+Opcjonalne argumenty podstawienia używane przez *Format*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Dla wszystkich miejsc docelowych raportów **_CrtDbgReport** i **_crtdbgreportw —** zwraca -1, jeśli wystąpi błąd i 0, jeśli zostaną napotkane żadne błędy. Jednakże, gdy miejscem docelowym raportu jest okno komunikatu debugowania i użytkownik klika **ponów** przycisku, funkcje te zwracają 1. Jeśli użytkownik kliknie **przerwać** przycisku w oknie komunikatów debugowania, funkcje te natychmiast przerwać i nie zwraca wartości.
+Dla wszystkich miejsc docelowych raportów, **_CrtDbgReport** i **_CrtDbgReportW** Zwróć-1, jeśli wystąpi błąd i 0, jeśli nie zostaną napotkane żadne błędy. Jeśli jednak miejsce docelowe raportu jest oknem komunikatu debugowania, a użytkownik kliknie przycisk **Ponów próbę** , te funkcje zwracają wartość 1. Jeśli użytkownik kliknie przycisk **Przerwij** w oknie komunikatu debugowania, te funkcje natychmiast Przerwij i nie zwracają wartości.
 
-[_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) Debuguj wywołania makr **_CrtDbgReport** do generowania ich debugowania raportów. Wersjami szerokich znaków tych makr oraz [_ASSERT, _asserte —](assert-asserte-assert-expr-macros.md), [_RPTW](rpt-rptf-rptw-rptfw-macros.md) i [_rptfw —](rpt-rptf-rptw-rptfw-macros.md), użyj **_crtdbgreportw —** do generować ich raporty debugowania. Gdy **_CrtDbgReport** lub **_crtdbgreportw —** zwraca 1, te makra uruchamiają debugera, pod warunkiem, że włączone jest debugowanie just-in-time (JIT).
+Makra debugowania [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) wywołania **_CrtDbgReport** w celu wygenerowania ich raportów debugowania. Wersje o szerokim znaku tych makr, a także [_ASSERT, _ASSERTE](assert-asserte-assert-expr-macros.md), [_RPTW](rpt-rptf-rptw-rptfw-macros.md) i [_RPTFW](rpt-rptf-rptw-rptfw-macros.md), używają **_CrtDbgReportW** do generowania raportów debugowania. Gdy **_CrtDbgReport** lub **_CrtDbgReportW** zwracają 1, te makra uruchamiają debuger, pod warunkiem że włączone jest debugowanie just-in-Time (JIT).
 
 ## <a name="remarks"></a>Uwagi
 
-**_CrtDbgReport** i **_crtdbgreportw —** wysłać raport debugowania do trzech różnych miejsc docelowych: pliku raportu debugowania, monitora debugowania (debugera programu Visual Studio) lub okna komunikatów debugowania. Dwie funkcje konfiguracji [_CrtSetReportMode](crtsetreportmode.md) i [_CrtSetReportFile](crtsetreportfile.md), są używane do określania miejsca przeznaczenia lub miejsca docelowe dla każdego typu raportu. Funkcje te zezwalają na raportowania miejsca przeznaczenia lub miejsca docelowe dla każdego typu raportu można sterować oddzielnie. Na przykład, istnieje możliwość określić, że *reportType* z **_CRT_WARN** składać się wyłącznie wysłanych do monitora debugowania, podczas gdy *reportType* z **_CRT_ASSERT** wysyłane do okna komunikatów debugowania i plik raportu zdefiniowany przez użytkownika.
+**_CrtDbgReport** i **_CrtDbgReportW** mogą wysyłać raport debugowania do trzech różnych miejsc docelowych: plik raportu debugowania, Monitor debugowania (debuger programu Visual Studio) lub okno komunikatu debugowania. Dwie funkcje konfiguracji, [_CrtSetReportMode](crtsetreportmode.md) i [_CrtSetReportFile](crtsetreportfile.md), służą do określania miejsca docelowego i miejsc docelowych dla każdego typu raportu. Te funkcje umożliwiają niezależne sterowanie miejscem docelowym raportowania lub miejsc docelowych dla każdego typu raportu. Można na przykład określić, że element reportType elementu **_CRT_WARN** ma być wysyłany tylko do monitora debugowania, podczas gdy *raport* typu **_CRT_ASSERT** jest wysyłany do okna komunikatu debugowania i pliku raportu zdefiniowanego przez użytkownika.
 
-**_Crtdbgreportw —** jest wersją znaków dwubajtowych **_CrtDbgReport**. Wszystkie jego dane wyjściowe i parametry ciągu są w ciągach znaków dwubajtowych; w przeciwnym razie jest identyczna z wersją znaków jednobajtowych.
+**_CrtDbgReportW** to dwubajtowa wersja **_CrtDbgReport**. Wszystkie parametry danych wyjściowych i ciągów są ciągami znaków dwubajtowych; w przeciwnym razie jest taka sama jak wersja znaku jednobajtowego.
 
-**_CrtDbgReport** i **_crtdbgreportw —** tworzą wiadomość użytkownika do raportu debugowania zastępując *argument*[**n**] argumenty do *format* ciąg znaków, przy użyciu tych samych zasad zdefiniowanych przez **printf** lub **wprintf** funkcji. Funkcje te następnie generują raport debugowania i określają miejsca przeznaczenia lub miejsca, w oparciu o bieżące tryby raportów i plik zdefiniowany dla *reportType*. Gdy raport jest wysyłany do okna komunikatów debugowania, *filename*, **lineNumber**, i *moduleName* znajdują się w informacjach wyświetlanych w oknie.
+**_CrtDbgReport** i **_CrtDbgReportW** Utwórz komunikat użytkownika dla raportu debugowania, zastępując argumenty *argumentu*[**n**] do ciągu *formatu* , używając tych samych reguł zdefiniowanych przez **printf** lub  **funkcje wprintf** . Te funkcje następnie generują raport debugowania i określają miejsce docelowe lub docelowe w oparciu o bieżące tryby raportu i plik zdefiniowany dla elementu *reportType*. Gdy raport jest wysyłany do okna komunikatu debugowania, *nazwy pliku*, **LineNumber**i ModuleName są zawarte w informacjach wyświetlanych w oknie.
 
-W poniższej tabeli przedstawiono dostępne opcje trybu raportu lub trybów i plików i wynikowe zachowania funkcji **_CrtDbgReport** i **_crtdbgreportw —**. Te opcje są zdefiniowane jako flaga bitowych w \<crtdbg.h >.
+Poniższa tabela zawiera listę dostępnych opcji trybu lub trybów raportów oraz pliku oraz zachowanie wyników **_CrtDbgReport** i **_CrtDbgReportW**. Te opcje są zdefiniowane jako flagi bitowe w \<CRTDBG. h >.
 
-|Tryb raportu|Plik raportu|**_CrtDbgReport**, **_CrtDbgReportW** behavior|
+|Tryb raportu|Plik raportu|**_CrtDbgReport**, zachowanie **_CrtDbgReportW**|
 |-----------------|-----------------|------------------------------------------------|
-|**_CRTDBG_MODE_DEBUG**|Nie dotyczy|Zapisuje komunikat przy użyciu Windows [OutputDebugString](https://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) interfejsu API.|
-|**_CRTDBG_MODE_WNDW**|Nie dotyczy|Wywołuje Windows [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) interfejsu API w celu tworzenia okna komunikatu, aby wyświetlić wiadomość wraz z **przerwać**, **ponów**, i **Ignoruj** przycisków. Jeśli użytkownik kliknie **przerwać**, **_CrtDbgReport** lub **_CrtDbgReport** niezwłocznie przerywa. Jeśli użytkownik kliknie **ponów**, zwraca wartość 1. Jeśli użytkownik kliknie **Ignoruj**, wykonywanie jest kontynuowane i **_CrtDbgReport** i **_crtdbgreportw —** zwracają 0. Należy pamiętać, że kliknięcie **Ignoruj** kiedy warunek błędu istnieje często powoduje "nieokreślone zachowanie".|
-|**_CRTDBG_MODE_FILE**|**__HFILE**|Wpisuje wiadomość do dostarczone przez użytkownika **obsługi**, przy użyciu Windows [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) API i nie sprawdza poprawności dojścia do pliku; aplikacja jest odpowiedzialna za otwarcie pliku raportu i przekazywanie pliku dojście.|
-|**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDERR**|Wpisuje wiadomość do **stderr**.|
-|**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDOUT**|Wpisuje wiadomość do **stdout**.|
+|**_CRTDBG_MODE_DEBUG**|Nie dotyczy|Zapisuje komunikat przy użyciu interfejsu API [Funkcja OutputDebugString](/windows/win32/api/debugapi/nf-debugapi-outputdebugstringw) systemu Windows.|
+|**_CRTDBG_MODE_WNDW**|Nie dotyczy|Wywołuje interfejs API [MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox) systemu Windows w celu utworzenia okna komunikatu, aby wyświetlić komunikat wraz z przyciskami **przerywania**, **ponawiania**i **ignorowania** . Jeśli użytkownik kliknie przycisk **Przerwij**, **_CrtDbgReport** lub **_CrtDbgReport** natychmiast przerywa. Jeśli użytkownik kliknie przycisk **Ponów próbę**, zwraca wartość 1. Jeśli użytkownik kliknie przycisk **Ignoruj**, wykonywanie jest kontynuowane, a **_CrtDbgReport** i **_CrtDbgReportW** zwracają 0. Należy pamiętać, że kliknięcie przycisku **Ignoruj** , gdy istnieje warunek błędu często powoduje "niezdefiniowane zachowanie".|
+|**_CRTDBG_MODE_FILE**|**__HFILE**|Zapisuje komunikat do **dojścia**dostarczonego przez użytkownika przy użyciu interfejsu API [WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile) systemu Windows i nie weryfikuje ważności dojścia do pliku; Aplikacja jest odpowiedzialna za otwarcie pliku raportu i przekazanie prawidłowego dojścia do pliku.|
+|**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDERR**|Zapisuje komunikat do **stderr**.|
+|**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDOUT**|Zapisuje komunikat w strumieniu **stdout**.|
 
-Raport może być wysyłany do jednego, dwóch lub trzech miejsc docelowych lub nie miejsca docelowego w ogóle. Aby uzyskać więcej informacji na temat określania trybu raportu lub trybów i plików raportu, zobacz [_CrtSetReportMode](crtsetreportmode.md) i [_CrtSetReportFile](crtsetreportfile.md) funkcji. Aby uzyskać więcej informacji na temat korzystania z makr debugowania i funkcji raportowania, zobacz [makra dla raportowania](/visualstudio/debugger/macros-for-reporting).
+Raport może być wysyłany do jednego, dwóch lub trzech miejsc docelowych lub nie do miejsca docelowego. Aby uzyskać więcej informacji na temat określania trybu raportu lub trybów i pliku raportu, zobacz funkcje [_CrtSetReportMode](crtsetreportmode.md) i [_CrtSetReportFile](crtsetreportfile.md) . Aby uzyskać więcej informacji na temat korzystania z makr debugowania i funkcji raportowania, zobacz [MACROS for Reporting](/visualstudio/debugger/macros-for-reporting).
 
-Jeśli aplikacja wymaga większej elastyczności niż ta dostarczona przez **_CrtDbgReport** i **_crtdbgreportw —**, można napisać własną funkcję raportowania i podłączyć ją do raportowania biblioteki wykonawczej języka C mechanizm, za pomocą [_CrtSetReportHook](crtsetreporthook.md) funkcji.
+Jeśli aplikacja wymaga większej elastyczności niż zapewniana przez **_CrtDbgReport** i **_CrtDbgReportW**, można napisać własną funkcję raportowania i podłączyć ją do mechanizmu raportowania biblioteki wykonawczej C przy użyciu [_CrtSetReportHook](crtsetreporthook.md) funkcyjn.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -115,11 +115,11 @@ Jeśli aplikacja wymaga większej elastyczności niż ta dostarczona przez **_Cr
 |**_CrtDbgReport**|\<crtdbg.h>|
 |**_CrtDbgReportW**|\<crtdbg.h>|
 
-**_CrtDbgReport** i **_crtdbgreportw —** są rozszerzeniami Microsoft. Aby uzyskać więcej informacji, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+**_CrtDbgReport** i **_CrtDbgReportW** są rozszerzeniami firmy Microsoft. Aby uzyskać więcej informacji, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Debuguj wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md) tylko.
+Debuguj wersje wyłącznie [bibliotek uruchomieniowych C](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="example"></a>Przykład
 
@@ -134,7 +134,7 @@ int main(int argc, char *argv[]) {
 }
 ```
 
-Zobacz [crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2) przykład sposób zmiany funkcji raportu.
+Zobacz [crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2) , aby zapoznać się z przykładem sposobu zmiany funkcji raportu.
 
 ## <a name="see-also"></a>Zobacz także
 

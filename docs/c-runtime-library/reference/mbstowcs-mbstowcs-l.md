@@ -26,16 +26,16 @@ helpviewer_keywords:
 - mbstowcs_l function
 - mbstowcs function
 ms.assetid: 96696b27-e068-4eeb-8006-3f7a0546ae6d
-ms.openlocfilehash: b9178f64dd698ff517ea5b376ed19e97981c511d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cae1034d0bcb9789f5cb709399d4992de44cae9d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156658"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499780"
 ---
-# <a name="mbstowcs-mbstowcsl"></a>mbstowcs, _mbstowcs_l
+# <a name="mbstowcs-_mbstowcs_l"></a>mbstowcs, _mbstowcs_l
 
-Konwertuje sekwencję znaków wielobajtowych do odpowiedniej sekwencji znaków dwubajtowych. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [mbstowcs_s —, _mbstowcs_s_l —](mbstowcs-s-mbstowcs-s-l.md).
+Konwertuje sekwencję znaków wielobajtowych na odpowiadającą sekwencję szerokich znaków. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [mbstowcs_s, _mbstowcs_s_l](mbstowcs-s-mbstowcs-s-l.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -72,32 +72,32 @@ size_t _mbstowcs_l(
 Adres sekwencji znaków dwubajtowych.
 
 *mbstr*<br/>
-Adres sekwencji null zakończone znaków wielobajtowych.
+Adres sekwencji znaków wielobajtowych zakończony wartością null.
 
-*Liczba*<br/>
+*liczbą*<br/>
 Maksymalna liczba znaków wielobajtowych do przekonwertowania.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli **mbstowcs** pomyślnie konwertuje ciąg źródłowy zwraca liczbę znaków wielobajtowych przekonwertowana. Jeśli *wcstr* argument jest **NULL**, funkcja zwraca wymagany rozmiar (w znaki dwubajtowe) ciągu docelowego. Jeśli **mbstowcs** napotka nieprawidłowy znak wielobajtowy, zwraca -1. Jeśli wartość zwracana jest *liczba*, ciąg znaków dwubajtowych nie jest zakończony znakiem null.
+Jeśli **mbstowcs** pomyślnie konwertuje ciąg źródłowy, zwraca liczbę przekonwertowanych znaków wielobajtowych. Jeśli argument *wcstr* ma **wartość null**, funkcja zwraca wymagany rozmiar (w postaci szerokich znaków) ciągu docelowego. Jeśli **mbstowcs** napotka nieprawidłowy znak wielobajtowy, zwraca-1. Jeśli zwracana wartość to *Count*, ciąg znaków dwubajtowych nie jest zakończony znakiem null.
 
 > [!IMPORTANT]
-> Upewnij się, że *wcstr* i *mbstr* nie zachodziły na siebie oraz że *liczba* poprawnie odzwierciedla liczbę znaków wielobajtowych do przekonwertowania.
+> Upewnij się, że *wcstr* i *mbstr* nie nakładają się na siebie, i że *licznik* poprawnie odzwierciedla liczbę znaków wielobajtowych do przekonwertowania.
 
 ## <a name="remarks"></a>Uwagi
 
-**Mbstowcs** funkcja konwertuje aż maksymalnej liczby *liczba* znaki wielobajtowe wskazywany przez *mbstr* ciąg odpowiedniego szerokich znaków, które są ustalany na podstawie bieżących ustawień regionalnych. Przechowuje wynikowy ciąg znaków dwubajtowych pod adresem reprezentowany przez *wcstr*. Wynik jest podobny do serii wywołań [mbtowc](mbtowc-mbtowc-l.md). Jeśli **mbstowcs** napotka jednobajtowego znaku null (\0) przed lub po *liczba* problem wystąpi, konwertuje znak null do znaku null szerokich znaków (L '\0') i zatrzymuje. W związku z tym ciągiem znaku dwubajtowego *wcstr* jest zakończony znakiem null tylko wtedy, gdy występuje znak null podczas konwersji. Jeśli sekwencji wskazywany przez *wcstr* i *mbstr* nakładają się na siebie, zachowanie jest niezdefiniowane.
+Funkcja **mbstowcs** konwertuje do maksymalnej liczby znaków wielobajtowych wskazywanych przez *mbstr* do ciągu znaków, które są określone przez bieżące ustawienia regionalne. Przechowuje on ciąg znaków dwubajtowych pod adresem reprezentowanym przez *wcstr*. Wynik jest podobny do serii wywołań [mbtowc](mbtowc-mbtowc-l.md). Jeśli **mbstowcs** napotkała jednobajtowy znak null (' \ 0 ') albo przed lub w czasie występowania, konwertuje znak null na znak o szerokim znaku null (L ' \ 0 ') i zostaje zatrzymany. W ten sposób ciąg znaków dwubajtowych w *wcstr* jest zakończony znakiem null tylko w przypadku, gdy podczas konwersji zostanie napotkany błąd o wartości null. Jeśli sekwencje wskazywane przez *wcstr* i *mbstr* nakładają się na siebie, zachowanie jest niezdefiniowane.
 
-Jeśli *wcstr* argument jest **NULL**, **mbstowcs** zwraca liczbę znaków dwubajtowych, wynikających z konwersji, nie wliczając terminator o wartości null. Ciąg źródłowy musi być zakończony zerem do poprawnej wartości, które mają zostać zwrócone. Jeśli potrzebujesz wynikowy ciąg znaków dwubajtowych jako zakończony znakiem null, dodaj je do zwróconej wartości.
+Jeśli argument *wcstr* ma **wartość null**, funkcja **mbstowcs** zwraca liczbę znaków dwubajtowych, które byłyby wynikiem konwersji, nie uwzględniając terminatora o wartości null. Ciąg źródłowy musi być zakończony znakiem null, aby można było zwrócić poprawną wartość. Jeśli chcesz, aby wynikowy ciąg znaków był zakończony wartością null, Dodaj go do zwracanej wartości.
 
-Jeśli *mbstr* argument jest **NULL**, lub jeśli *liczba* jest > **INT_MAX**, wywołany nieprawidłowy parametr uchwytu, zgodnie z opisem w [ Walidacja parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, numer błędu jest ustawiony na **EINVAL** a funkcja zwraca wartość -1.
+Jeśli argument *mbstr* ma **wartość null**lub jeśli *licznik* jest > **INT_MAX**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, errno jest ustawiona na **EINVAL** , a funkcja zwraca wartość-1.
 
-**mbstowcs** używa bieżących ustawień regionalnych dla wszelkich zachowań zależnych od ustawień regionalnych; **_mbstowcs_l —** jest identyczna, z tą różnicą, że używa ustawień regionalnych przekazanych w zamian. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+**mbstowcs** używa bieżących ustawień regionalnych dla wszelkich zachowań zależnych od ustawień regionalnych; **_mbstowcs_l** jest identyczny, z tą różnicą, że w zamian korzysta z przekazaną ustawieniami regionalnymi. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-W języku C++ funkcje te mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+W C++programie te funkcje mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -106,7 +106,7 @@ W języku C++ funkcje te mają przeciążenia szablonu, które wywołują nowsze
 |**mbstowcs**|\<stdlib.h>|
 |**_mbstowcs_l**|\<stdlib.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -212,4 +212,4 @@ Convert back to wide-character string:
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
-[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
+[MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CRichEditDoc [MFC], GetView
 - CRichEditDoc [MFC], m_bRTF
 ms.assetid: c936ec18-d516-49d4-b7fb-c9aa0229eddc
-ms.openlocfilehash: d296185fe2ea2216f4abe17b191f71b6fa36e1f9
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: def0c55ff1faf12729226aa445c9614119c546c4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916710"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502672"
 ---
 # <a name="cricheditdoc-class"></a>Klasa CRichEditDoc
 
@@ -88,7 +88,7 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
 ### <a name="parameters"></a>Parametry
 
 *preo*<br/>
-Wskaźnik na strukturę [](/windows/desktop/api/richole/ns-richole-reobject) odobiektową opisującą element OLE. Nowy `CRichEditCntrItem` obiekt jest zbudowany wokół tego elementu OLE. Jeśli *PREO* ma wartość null, nowy element klienta jest pusty.
+Wskaźnik na strukturę [](/windows/win32/api/richole/ns-richole-reobject) odobiektową opisującą element OLE. Nowy `CRichEditCntrItem` obiekt jest zbudowany wokół tego elementu OLE. Jeśli *PREO* ma wartość null, nowy element klienta jest pusty.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -98,7 +98,7 @@ Wskaźnik do nowego obiektu [CRichEditCntrItem](../../mfc/reference/cricheditcnt
 
 Ta funkcja nie wykonuje żadnych inicjalizacji OLE.
 
-Aby uzyskać więcej informacji, zobacz strukturę [obiektów](/windows/desktop/api/richole/ns-richole-reobject) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz strukturę [obiektów](/windows/win32/api/richole/ns-richole-reobject) w Windows SDK.
 
 ##  <a name="getstreamformat"></a>  CRichEditDoc::GetStreamFormat
 

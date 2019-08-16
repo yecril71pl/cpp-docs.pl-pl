@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC4214
 ms.assetid: 79a8bf0d-8cc7-4159-a6a2-d0e543749069
-ms.openlocfilehash: 925e7268bcf087961fcefb67898e5705a4ec6bb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd0ae8603d896a77e984ab97a019dd39689b1536
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346911"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509851"
 ---
 # <a name="resource-compiler-warning-rc4214"></a>Ostrzeżenie RC4214 kompilatora zasobów
 
-Strona kodowa jest nieprawidłowa: ignorowane
+Nieprawidłowa strona kodowa: zignorowano
 
-Plik .rc zawarte w nim argumentu stronę kodową i określona strona kodowa jest nieprawidłowa. Zobacz [IsValidCodePage](/windows/desktop/api/winnls/nf-winnls-isvalidcodepage) Aby uzyskać więcej informacji.
+Plik. RC zawiera argument codepage, a określona strona kodowa jest nieprawidłowa. Aby uzyskać więcej informacji, zobacz [IsValidCodePage](/windows/win32/api/winnls/nf-winnls-isvalidcodepage) .

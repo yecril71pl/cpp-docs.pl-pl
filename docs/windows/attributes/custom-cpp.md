@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: 227e67696e679452a9c6c0e18c04e3d918f7a93f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19f28963a18abf42c6f629ac0f6491628387aa6d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148182"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490997"
 ---
 # <a name="custom-c"></a>custom (C++)
 
-Definiuje metadanych dla obiektu w bibliotece typów.
+Definiuje metadane dla obiektu w bibliotece typów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,13 +32,13 @@ Definiuje metadanych dla obiektu w bibliotece typów.
 Unikatowy identyfikator.
 
 *value*<br/>
-Wartość, które można umieścić w wariant.
+Wartość, która może zostać wprowadzona do wariantu.
 
 ## <a name="remarks"></a>Uwagi
 
-**Niestandardowe** atrybut C++ spowoduje, że informacje, aby zostać umieszczone w bibliotece typów. Należy to narzędzie, które odczytuje wartość niestandardowej z biblioteki typów.
+Atrybut **niestandardowy** C++ spowoduje umieszczenie informacji w bibliotece typów. Wymagane jest narzędzie, które odczytuje wartość niestandardową z biblioteki typów.
 
-**Niestandardowe** atrybut ma taką samą funkcjonalność jak [niestandardowe](/windows/desktop/Midl/custom) atrybutów w MIDL.
+Atrybut **niestandardowy** ma taką samą funkcjonalność jak [niestandardowy](/windows/win32/Midl/custom) atrybut MIDL.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -46,12 +46,12 @@ Wartość, które można umieścić w wariant.
 
 |||
 |-|-|
-|**Dotyczy**|COM bez **interfejsu**, **klasy**, **wyliczenia**s, `idl_module` metod, składowych interfejsu i parametry interfejsu **typedef**s, **Unii**s, **struktury**s|
+|**Dotyczy**|**Interfejs**niebędący modelem COM, **Klasa**, `idl_module` **Wyliczenie**s, metody, składowe interfejsu, parametry interfejsu, **typedef**s, **Union**s, **struct**s|
 |**Powtarzalne**|Tak|
-|**Wymaganych atrybutów**|**Klasa coclass** (jeśli jest używany w klasie)|
+|**Wymagane atrybuty**|**Klasa coclass** (używany w klasie)|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

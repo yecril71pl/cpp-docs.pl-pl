@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - ErrorMessage method [C++]
 ms.assetid: e47335b6-01af-4975-a841-121597479eb7
-ms.openlocfilehash: b1c1b5a79cdf5ee2a4a17d969d23ce0d0d85ab54
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44fc9755cd69050ea82145636f01614258943794
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155185"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500578"
 ---
-# <a name="comerrorerrormessage"></a>_com_error::ErrorMessage
+# <a name="_com_errorerrormessage"></a>_com_error::ErrorMessage
 
 **Microsoft Specific**
 
-Pobiera ciąg komunikatu dla przechowywanych we właściwości HRESULT `_com_error` obiektu.
+Pobiera komunikat ciągu dla HRESULT przechowywanego w `_com_error` obiekcie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,13 +27,13 @@ const TCHAR * ErrorMessage( ) const throw( );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca ciąg komunikatu dla HRESULT rejestrować się w ramach `_com_error` obiektu. Jeśli HRESULT jest zamapowany 16-bitowych [wcode —](../cpp/com-error-wcode.md), następnie zostanie wyświetlony komunikat ogólny "`IDispatch error #<wCode>`" jest zwracany. Jeśli żaden komunikat nie zostanie znaleziony następnie zostanie wyświetlony komunikat ogólny "`Unknown error #<hresult>`" jest zwracany. Unicode lub wielobajtowego ciągu, w zależności od stanu — makro _UNICODE jest zwracanego ciągu.
+Zwraca komunikat ciągu dla HRESULT zarejestrowanego w `_com_error` obiekcie. Jeśli HRESULT jest mapowanym 16-bitowym [kodostrzeżenia](../cpp/com-error-wcode.md), zwracany jest komunikat generyczny`IDispatch error #<wCode>`"". Jeśli wiadomość nie zostanie znaleziona, zostanie zwrócony komunikat generyczny "`Unknown error #<hresult>`". Zwrócony ciąg jest ciągiem Unicode lub wielobajtowym, w zależności od stanu makra _UNICODE.
 
 ## <a name="remarks"></a>Uwagi
 
-Pobiera odpowiedni system tekst komunikatu dla HRESULT rejestrować się w ramach `_com_error` obiektu. Tekst komunikatu systemu są uzyskiwane poprzez wywołanie Win32 [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) funkcji. Ciąg zwracany jest przydzielany przez `FormatMessage` interfejsu API, a po wydaniu `_com_error` niszczony jest obiekt.
+Pobiera odpowiedni tekst komunikatu systemowego dla HRESULT zarejestrowanego `_com_error` w obiekcie. Tekst komunikatu systemowego jest uzyskiwany przez wywołanie funkcji Win32 [FormatMessage](/windows/win32/api/winbase/nf-winbase-formatmessage) . Zwracany ciąg jest przypisywany przez `FormatMessage` interfejs API i jest wydawany, `_com_error` gdy obiekt zostanie zniszczony.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

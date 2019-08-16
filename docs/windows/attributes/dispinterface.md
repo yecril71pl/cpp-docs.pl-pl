@@ -1,21 +1,21 @@
 ---
-title: dispinterface (atrybut COM C++)
+title: dispinterface (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dispinterface
 helpviewer_keywords:
 - dispinterface attribute
 ms.assetid: 61c5a4a1-ae92-47e9-8ee4-f847be90172b
-ms.openlocfilehash: 6fd5010dc20d03c518206d81919e3beafbcaa9a9
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 6360c5e97eae19d7b2d74b3b43d4feae07d4b091
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346301"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501624"
 ---
 # <a name="dispinterface"></a>dispinterface
 
-Przełącza interfejsu w pliku .idl, jako interfejs ekspedycji.
+Umieszcza interfejs w pliku. idl jako interfejs wysyłania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,22 +25,22 @@ Przełącza interfejsu w pliku .idl, jako interfejs ekspedycji.
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy **dispinterface** atrybut C++ poprzedza interfejs, sprawia, że interfejs, który ma być umieszczony wewnątrz bloku biblioteki w pliku .idl wygenerowany.
+Gdy atrybut **dispinterface** C++ poprzedza interfejs, powoduje, że interfejs należy umieścić wewnątrz bloku biblioteki w wygenerowanym pliku IDL.
 
-O ile nie określono klasy bazowej, interfejs ekspedycji, z której pochodzą z `IDispatch`. Należy określić [identyfikator](id.md) dla członków interfejs ekspedycji.
+Chyba że określisz klasę bazową, będzie on pochodzić od `IDispatch`. Należy określić [Identyfikator](id.md) dla elementów członkowskich interfejsu wysyłania.
 
-Przykład użycia [dispinterface](/windows/desktop/Midl/dispinterface) w dokumentacji MIDL:
+Przykład użycia [dispinterface](/windows/win32/Midl/dispinterface) w dokumentacji MIDL:
 
 ```cpp
 dispinterface helloPro
    { interface hello; };
 ```
 
-nie jest prawidłowa dla **dispinterface** atrybutu.
+nie jest prawidłowy dla atrybutu **dispinterface** .
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [możliwej do wiązania](bindable.md) przykład sposobu użycia **dispinterface**.
+Zapoznaj się z przykładem dla [powiązania](bindable.md) z przykładem użycia **dispinterface**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -50,10 +50,10 @@ Zobacz przykład [możliwej do wiązania](bindable.md) przykład sposobu użycia
 |-|-|
 |**Dotyczy**|**interface**|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|
 
-Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

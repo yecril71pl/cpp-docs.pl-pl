@@ -9,30 +9,30 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: a12c2bd2c1c1963630a1bd74b56f2c832573cc94
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 71abf84e4c2afd75b0da88c261c78aa04ae08309
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450513"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69512936"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Przewodnik: Aktualizowanie aplikacji bazgrołów MFC (część 1)
 
-W tym instruktażu pokazano, jak zmodyfikować istniejącą aplikację MFC przy użyciu interfejsu użytkownika wstążki. Program Visual Studio obsługuje zarówno wstążki pakietu Office 2007, jak i Windows 7 scen wstążki. Aby uzyskać więcej informacji na temat interfejsu użytkownika wstążki, zobacz [wstążek](/windows/desktop/uxguide/cmd-ribbons).
+W tym instruktażu przedstawiono sposób modyfikowania istniejącej aplikacji MFC do korzystania z interfejsu użytkownika wstążki. Program Visual Studio obsługuje zarówno wstążkę pakietu Office 2007, jak i Wstążkę Scenic systemu Windows 7. Aby uzyskać więcej informacji na temat interfejsu użytkownika wstążki, zobacz [wstążki](/windows/win32/uxguide/cmd-ribbons).
 
-W tym przewodniku modyfikuje klasyczny przykład klasa Scribble MFC 1.0, który pozwala tworzyć rysunki wiersza za pomocą myszy. Tej części instruktażu pokazano, jak zmodyfikować próbki Bazgroły, tak, aby wyświetlał paska wstążki. [Część 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md) dodaje więcej przycisków do paska wstążki.
+W tym instruktażu jest modyfikowany przykład klasycznego programu Bazgroły 1,0 MFC, który umożliwia tworzenie rysunków liniowych za pomocą myszy. W tej części przewodnika pokazano, jak zmodyfikować przykład Bazgroły, aby wyświetlał pasek wstążki. [Część 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md) dodaje do paska wstążki więcej przycisków.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-[Próbki Bazgroły MFC 1.0](https://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Aby uzyskać pomoc dotyczącą konwersji do programu Visual Studio 2017 lub nowszego, zobacz [przewodnik przenoszenia: Aplikacja Scribble MFC](../porting/porting-guide-mfc-scribble.md).
+Przykład programu Bazgroły dla [MFC 1,0](https://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Aby uzyskać pomoc dotyczącą konwersji do programu Visual Studio 2017 lub [nowszego, zobacz Przewodnik dotyczący przenoszenia: , Bazgroły](../porting/porting-guide-mfc-scribble.md)MFC.
 
-##  <a name="top"></a> Sekcje
+##  <a name="top"></a>Poszczególne
 
 Ta część przewodnika zawiera następujące sekcje:
 
-- [Zastąpienie klas bazowych](#replaceclass)
+- [Zamienianie klas bazowych](#replaceclass)
 
-- [Dodawanie bitmap do projektu](#addbitmap)
+- [Dodawanie map bitowych do projektu](#addbitmap)
 
 - [Dodawanie zasobu wstążki do projektu](#addribbon)
 
@@ -40,60 +40,60 @@ Ta część przewodnika zawiera następujące sekcje:
 
 - [Dodawanie kategorii wstążki](#addcategory)
 
-- [Ustawienie wygląd aplikacji](#setlook)
+- [Ustawianie wyglądu aplikacji](#setlook)
 
-##  <a name="replaceclass"></a> Zastąpienie klas bazowych
+##  <a name="replaceclass"></a>Zamienianie klas bazowych
 
-Aby przekonwertować aplikacji, która obsługuje menu do aplikacji, która obsługuje wstążki, musi pochodzić klasy narzędzi aplikacji, ramki okna i zaktualizowano klas podstawowych. (Zaleca się czy nie modyfikują oryginalnej próbki Bazgroły. Zamiast tego należy wyczyścić projektu Bazgroły, skopiuj go do innego katalogu, a następnie zmodyfikuj kopii.)
+Aby skonwertować aplikację, która obsługuje menu w aplikacji, która obsługuje Wstążkę, należy uzyskać pochodną klasy aplikacji, ramki i narzędzi z zaktualizowanych klas bazowych. (Sugerujemy, aby nie modyfikować oryginalnego przykładu bazgrołów. Zamiast tego Wyczyść projekt Bazgroły, skopiuj go do innego katalogu, a następnie zmodyfikuj kopię.
 
-### <a name="to-replace-the-base-classes-in-the-scribble-application"></a>Zastąpienie klas bazowych w aplikacji bazgrołów
+### <a name="to-replace-the-base-classes-in-the-scribble-application"></a>Aby zastąpić klasy bazowe w aplikacji Bazgroły
 
-1. W scribble.cpp, upewnij się, że `CScribbleApp::InitInstance` zawiera wywołanie [afxoleinit —](../mfc/reference/ole-initialization.md#afxoleinit).
+1. W oknie Bazgroły. cpp Sprawdź `CScribbleApp::InitInstance` , czy zawiera wywołanie [AfxOleInit](../mfc/reference/ole-initialization.md#afxoleinit).
 
-1. Dodaj następujący kod do pliku stdafx.h.
+1. Dodaj następujący kod do pliku stdafx. h.
 
     ```cpp
     #include <afxcontrolbars.h>
     ```
 
-1. W scribble.h, należy zmodyfikować definicję dla `CScribbleApp` klasy tak, aby go jest tworzony na podstawie [klasa CWinAppEx](../mfc/reference/cwinappex-class.md).
+1. W oknie Bazgroły. h zmodyfikuj definicję `CScribbleApp` klasy, tak aby była ona pochodną [klasy CWinAppEx](../mfc/reference/cwinappex-class.md).
 
     ```cpp
     class CScribbleApp: public CWinAppEx
     ```
 
-1. Bazgrołów 1.0 zostały zapisane, gdy aplikacje systemu Windows używane plik inicjujący (.ini) w celu zapisywania danych preferencji użytkownika. Zamiast pliku inicjującego zmodyfikować bazgrołów do przechowywania preferencji użytkownika w rejestrze. Aby ustawić klucz rejestru i podstawowa, wpisz następujący kod w `CScribbleApp::InitInstance` po `LoadStdProfileSettings()` instrukcji.
+1. Bazgrołów 1.0 zostały zapisane, gdy aplikacje systemu Windows używane plik inicjujący (.ini) w celu zapisywania danych preferencji użytkownika. Zamiast pliku inicjującego należy zmodyfikować Bazgroły, aby zachować preferencje użytkownika w rejestrze. Aby ustawić klucz rejestru i bazę, wpisz poniższy kod w `CScribbleApp::InitInstance` `LoadStdProfileSettings()` instrukcji After.
 
     ```cpp
     SetRegistryKey(_T("MFCNext\\Samples\\Scribble2"));
     SetRegistryBase(_T("Settings"));
     ```
 
-1. Ramy głównej dla wielu aplikacji interfejsu (MDI) dokumentu nie jest już jest tworzony na podstawie `CMDIFrameWnd` klasy. Zamiast tego jest pochodną [CMDIFrameWndEx](../mfc/reference/cmdiframewndex-class.md) klasy.
+1. Ramka główna dla aplikacji interfejsu wielu dokumentów (MDI) nie jest już wyprowadzana z `CMDIFrameWnd` klasy. Zamiast tego jest on pochodny klasy [CMDIFrameWndEx](../mfc/reference/cmdiframewndex-class.md) .
 
-    W plikach mainfrm.h i mainfrm.cpp, Zastąp wszystkie odwołania do `CMDIFrameWnd` z `CMDIFrameWndEx`.
+    W plikach MainFrm. h i MainFrm. cpp Zastąp wszystkie odwołania do `CMDIFrameWnd`. `CMDIFrameWndEx`
 
-1. W plikach childfrm.h i childfrm.cpp, Zastąp `CMDIChildWnd` z `CMDIChildWndEx`.
+1. W plikach childfrm. h i childfrm. cpp Zastąp `CMDIChildWnd` `CMDIChildWndEx`ciąg.
 
-    W childfrm. Plik h, Zastąp `CSplitterWnd` z `CSplitterWndEx`.
+    W childfrm. h plik, Zamień `CSplitterWnd` na `CSplitterWndEx`.
 
-1. Zmodyfikuj paski narzędzi i stanu używać nowych klas MFC.
+1. Modyfikuj paski narzędzi i paski stanu, aby użyć nowych klas MFC.
 
-    W pliku mainfrm.h:
+    W pliku mainfrm. h:
 
-    1. Zastąp `CToolBar` z `CMFCToolBar`.
+    1. Zamień `CToolBar` na `CMFCToolBar`.
 
-    1. Zastąp `CStatusBar` z `CMFCStatusBar`.
+    1. Zamień `CStatusBar` na `CMFCStatusBar`.
 
-1. W pliku mainfrm.cpp:
+1. W pliku mainfrm. cpp:
 
-    1. Zastąp `m_wndToolBar.SetBarStyle` z `m_wndToolBar.SetPaneStyle`
+    1. Zamień `m_wndToolBar.SetBarStyle` na`m_wndToolBar.SetPaneStyle`
 
-    1. Zastąp `m_wndToolBar.GetBarStyle` z `m_wndToolBar.GetPaneStyle`
+    1. Zamień `m_wndToolBar.GetBarStyle` na`m_wndToolBar.GetPaneStyle`
 
-    1. Zastąp `DockControlBar(&m_wndToolBar)` z `DockPane(&m_wndToolBar)`
+    1. Zamień `DockControlBar(&m_wndToolBar)` na`DockPane(&m_wndToolBar)`
 
-1. W pliku ipframe.cpp komentarz następujące trzy wiersze kodu.
+1. W pliku ipframe. cpp Skomentuj następujące trzy wiersze kodu.
 
     ```cpp
     m_wndToolBar.EnableDocking(CBRS_ALIGN_ANY);
@@ -101,124 +101,124 @@ Aby przekonwertować aplikacji, która obsługuje menu do aplikacji, która obs�
     pWndFrame->DockPane(&m_wndToolBar);
     ```
 
-1. Zapisz zmiany, a następnie tworzenie i uruchamianie aplikacji.
+1. Zapisz zmiany, a następnie Skompiluj i uruchom aplikację.
 
-##  <a name="addbitmap"></a> Dodawanie bitmap do projektu
+##  <a name="addbitmap"></a>Dodawanie map bitowych do projektu
 
-Czterech kolejnych krokach w tym przewodniku wymaga zasobów mapy bitowej. Możesz uzyskać odpowiednie map bitowych na różne sposoby:
+Kolejne cztery kroki tego instruktażu wymagają zasobów map bitowych. Odpowiednie mapy bitowe można uzyskać na różne sposoby:
 
-- Użyj [edytory zasobów](../windows/resource-editors.md) wymyślaniem własne map bitowych. Lub użyj edytory zasobów, aby złożyć mapy bitowej przy użyciu obrazów graphics (PNG) sieci przenośnych, które są dołączone do programu Visual Studio i można go pobrać ze [Biblioteka obrazów programu Visual Studio](https://docs.microsoft.com/visualstudio/designers/the-visual-studio-image-library).
+- Użyj [edytorów zasobów](../windows/resource-editors.md) , aby wyrównać własne mapy bitowe. Lub użyj edytorów zasobów, aby utworzyć mapy bitowe z obrazów Portable Network Graphics (PNG), które są dołączone do programu Visual Studio i można pobrać z [biblioteki obrazów programu Visual Studio](https://docs.microsoft.com/visualstudio/designers/the-visual-studio-image-library).
 
-    Jednak **wstążki** interfejsu użytkownika wymaga, że niektóre mapy bitowe obsługują obrazy przezroczyste. Bitmapy przezroczyste użyć 32-bitowych pikseli, gdzie 24 bity Określ składników czerwonego, zielonego i niebieskiego koloru i zdefiniuj 8 bitów *kanał alfa* , który określa Przezroczystość koloru. Bieżący edytory zasobów można wyświetlić, ale nie modyfikować bitmapy z 32-bitowych pikseli. W związku z tym użyj edytora zewnętrznego zamiast edytory zasobów do manipulowania mapy bitowe przezroczysty.
+    Jednak interfejs użytkownika **wstążki** wymaga, aby niektóre mapy bitowe obsługiwały przezroczyste obrazy. Przezroczyste mapy bitowe używają 32-bitowych pikseli, gdzie 24 bity określają składniki czerwonego, zielonego i niebieskiego koloru, a 8 bitów definiuje *kanał alfa* , który określa przezroczystość koloru. Bieżące edytory zasobów mogą wyświetlać, ale nie modyfikować Bitmap z 32-bitowymi pikselami. W związku z tym Użyj zewnętrznego edytora obrazów zamiast edytorów zasobów, aby manipulować przezroczystymi mapami bitowych.
 
-- Skopiuj plik odpowiedni zasób z innej aplikacji do projektu, a następnie zaimportuj map bitowych z tego pliku.
+- Skopiuj odpowiedni plik zasobów z innej aplikacji do projektu, a następnie zaimportuj mapy bitowe z tego pliku.
 
-W tym przewodniku kopiuje pliki zasobów z przykładu, utworzone w [instruktażu: Tworzenie aplikacji wstążki za pomocą MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
+W tym instruktażu są kopiowane pliki zasobów z przykładu utworzonego w [przewodniku: Tworzenie aplikacji wstążki za pomocą MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
 
-### <a name="to-add-bitmaps-to-the-project"></a>Dodawanie bitmap do projektu
+### <a name="to-add-bitmaps-to-the-project"></a>Aby dodać mapy bitowe do projektu
 
-1. Skopiuj następujące pliki .bmp z katalogu zasobów za pomocą Eksploratora plików (`res`) przykładu wstążki do katalogu zasobów (`res`) bazgrołów projektu:
+1. Za pomocą Eksploratora plików Skopiuj następujące pliki BMP z katalogu zasobów (`res`) przykładowej wstążki do katalogu zasobów (`res`) projektu bazgrołowego:
 
-   1. Skopiuj main.bmp bazgrołów projektu.
+   1. Skopiuj Main. bmp do projektu Bazgrołowego.
 
-   1. Skopiuj filesmall.bmp i filelarge.bmp do projektu bazgrołów.
+   1. Skopiuj filesmall. bmp i filelarge. bmp do projektu Bazgroły.
 
-   1. Utwórz nowe kopie plików filelarge.bmp i filesmall.bmp, ale zapisywać kopie w przykładzie wstążki. Zmień nazwę kopii homesmall.bmp i homelarge.bmp, a następnie przenieść kopie bazgrołów projektu.
+   1. Utwórz nowe kopie plików filelarge. bmp i filesmall. bmp, ale Zapisz kopie na przykładzie wstążki. Zmień nazwy kopii homesmall. bmp i homelarge. bmp, a następnie przenieś kopie do projektu Bazgroły.
 
-   1. Utwórz kopię pliku toolbar.bmp, ale zapisać kopię w przykładzie wstążki. Zmień nazwę panelicons.bmp kopiowania, a następnie przenieś kopiowania do projektu bazgrołów.
+   1. Utwórz kopię pliku Toolbar. bmp, ale Zapisz kopię na Wstążce przykład. Zmień nazwę pliku Copy panelicons. bmp, a następnie Przenieś kopię do projektu Bazgrołowego.
 
-1. Importuj mapy bitowej dla aplikacji MFC. W **widok zasobów**, kliknij dwukrotnie **scribble.rc** węzła, kliknij dwukrotnie **mapy bitowej** węzłem, a następnie kliknij przycisk **Dodaj zasób**. W oknie dialogowym kliknij **importu**. Przejdź do `res` katalogu, wybierz plik main.bmp, a następnie kliknij przycisk **Otwórz**.
+1. Zaimportuj mapę bitową dla aplikacji MFC. W **Widok zasobów**kliknij dwukrotnie węzeł Bazgroły **. RC** , kliknij dwukrotnie węzeł **Mapa bitowa** , a następnie kliknij pozycję **Dodaj zasób**. W wyświetlonym oknie dialogowym kliknij przycisk **Importuj**. Przejdź do `res` katalogu, wybierz główny plik BMP, a następnie kliknij przycisk **Otwórz**.
 
-   Mapa bitowa main.bmp zawiera obraz 26 x 26. Zmień identyfikator mapy bitowej do `IDB_RIBBON_MAIN`.
+   Mapa bitowa Main. bmp zawiera obraz 26x26. Zmień identyfikator mapy bitowej na `IDB_RIBBON_MAIN`.
 
-1. Importowanie bitmap do menu Plik, który jest dołączony do **aplikacji** przycisku.
+1. Zaimportuj mapy bitowe dla menu plik, które jest dołączone do przycisku **aplikacji** .
 
-   1. Importowanie pliku filesmall.bmp, który zawiera jedenaście 16 x 16 (16 x 176) obrazów. Zmień identyfikator mapy bitowej do `IDB_RIBBON_FILESMALL`.
-
-   > [!NOTE]
-   > Ponieważ potrzebujemy tylko obrazy pierwszych osiem 16 x 16 (16 x 128), może opcjonalnie przyciąć szerokość po prawej stronie tę mapę bitową z 176 do 128.
-
-   1. Importowanie filelarge.bmp, który zawiera dziewięć 32 x 32 (32 x 288) obrazów. Zmień identyfikator mapy bitowej do `IDB_RIBBON_FILELARGE`.
-
-1. Importuj mapy bitowe dla kategorii Wstążkę i panele. Każda karta w pasku wstążki jest kategorii i składa się z etykiety tekstu oraz opcjonalny obraz.
-
-   1. Importuj bitową homesmall.bmp, która zawiera jedenaście 16 x 16 obrazy mapy bitowe małego przycisku. Zmień identyfikator mapy bitowej do `IDB_RIBBON_HOMESMALL`.
-
-   1. Importuj bitową homelarge.bmp, która zawiera dziewięć 32 x 32 obrazy mapy bitowe dużych przycisków. Zmień identyfikator mapy bitowej do `IDB_RIBBON_HOMELARGE`.
-
-1. Importuj bitmap do paneli wstążki o zmienionym rozmiarze. Te mapy bitowe lub ikony panelu są używane po operacji zmiany rozmiaru, jeśli Wstążka jest zbyt mała, aby wyświetlić całą panel.
-
-   1. Importuj panelicons.bmp mapy bitowej, który zawiera osiem 16 x 16 obrazów. W **właściwości** okna **edytora mapy bitowej**, szerokość mapy bitowej do 64 (16 x 64). Zmień identyfikator mapy bitowej do `IDB_PANEL_ICONS`.
+   1. Zaimportuj plik filesmall. bmp zawierający jedenaście obrazów 16x16 (16x176). Zmień identyfikator mapy bitowej na `IDB_RIBBON_FILESMALL`.
 
    > [!NOTE]
-   > Ponieważ potrzebujemy tylko obrazy pierwsze cztery 16 x 16 (16 x 64), może opcjonalnie przyciąć szerokość po prawej stronie tej mapy bitowej od 128-64.
+   > Ponieważ potrzebujemy tylko pierwszych ośmiu obrazów 16x16 (16x128), możesz opcjonalnie przyciąć prawą szerokość tej mapy bitowej z 176 do 128.
 
-##  <a name="addribbon"></a> Dodawanie zasobu wstążki do projektu
+   1. Zaimportuj filelarge. bmp, który zawiera dziewięć obrazów 32x32 (32x288). Zmień identyfikator mapy bitowej na `IDB_RIBBON_FILELARGE`.
 
-Podczas konwersji aplikacji korzystającej z menu aplikacji korzystającej z wstążki, nie trzeba usunąć lub wyłączyć istniejące menu. Po prostu utwórz zasób wstążki, Dodaj przyciski wstążki, a następnie skojarzyć nowe przyciski z istniejących elementów menu. Mimo że menu nie są już widoczne, komunikaty z paska wstążki są przesyłane za pośrednictwem menu i menu skrótów w dalszym ciągu działać.
+1. Zaimportuj mapy bitowe dla kategorii i paneli wstążki. Każda karta na pasku wstążki jest kategorią i składa się z etykiety tekstowej i opcjonalnego obrazu.
 
-Wstążka składa się z **aplikacji** przycisku, który jest duży przycisk w lewym górnym rogu Wstążki i co najmniej jednej karty kategorii. Każda karta kategoria zawiera jeden lub więcej paneli, które działają jak kontenery dla przycisków Wstążki i kontrolek. Poniższa procedura pokazuje, jak utworzyć zasób wstążki, a następnie dostosować **aplikacji** przycisku.
+   1. Zaimportuj mapę bitową homesmall. bmp, która zawiera jedenaście obrazów 16x16 dla małych map bitowych przycisków. Zmień identyfikator mapy bitowej na `IDB_RIBBON_HOMESMALL`.
 
-### <a name="to-add-a-ribbon-resource-to-the-project"></a>Do dodawania zasobów wstążki do projektu
+   1. Zaimportuj mapę bitową homelarge. bmp, która zawiera dziewięć obrazów 32x32 dla map bitowych dużych przycisków. Zmień identyfikator mapy bitowej na `IDB_RIBBON_HOMELARGE`.
 
-1. Za pomocą projektu bazgrołów wybranego w **Eksploratora rozwiązań**w **projektu** menu, kliknij przycisk **Dodaj zasób**.
+1. Importuj mapy bitowe dla paneli wstążki o zmienionym rozmiarze. Te mapy bitowe lub ikony panelu są używane po operacji zmiany rozmiaru, jeśli wstążka jest zbyt mała, aby wyświetlić cały panel.
 
-1. W **Dodaj zasób** okno dialogowe, wybierz opcję **wstążki** a następnie kliknij przycisk **New**.
+   1. Zaimportuj mapę bitową panelicons. bmp, która zawiera osiem obrazów 16x16. W oknie **Właściwości** **edytora mapy bitowej**Dostosuj szerokość mapy bitowej do 64 (16x64). Zmień identyfikator mapy bitowej na `IDB_PANEL_ICONS`.
 
-   Visual Studio tworzy zasób Wstążki i otwiera go w widoku Projekt. Identyfikator zasobu wstążki jest `IDR_RIBBON1`, która jest wyświetlana w **widok zasobów**. Wstążka zawiera jedną kategorię i jeden panel.
+   > [!NOTE]
+   > Ponieważ potrzebujemy tylko czterech pierwszych obrazów (16x64), możesz opcjonalnie przyciąć prawą szerokość tej mapy bitowej z 128 do 64.
 
-1. Można dostosować **aplikacji** przycisku, modyfikując jego właściwości. Identyfikatory komunikatów, które są używane w tym kodzie są już zdefiniowane w menu Bazgroły 1.0.
+##  <a name="addribbon"></a>Dodawanie zasobu wstążki do projektu
 
-1. W widoku Projekt, kliknij przycisk **aplikacji** przycisk, aby wyświetlić jego właściwości. Zmień wartości właściwości w następujący sposób: **Obraz** do `IDB_RIBBON_MAIN`, **monitu** do `File`, **klucze** do `f`, **duże obrazy** do `IDB_RIBBON_FILELARGE`i **Małe obrazy** do `IDB_RIBBON_FILESMALL`.
+Podczas konwertowania aplikacji, która używa menu do aplikacji, która używa wstążki, nie trzeba usuwać ani wyłączać istniejących menu. Po prostu utwórz zasób wstążki, Dodaj przyciski wstążki, a następnie skojarz nowe przyciski z istniejącymi elementami menu. Mimo że menu nie są już widoczne, komunikaty z paska wstążki są kierowane w menu i skróty do menu nadal działają.
 
-1. Wprowadzenie następujących modyfikacji utworzyć menu, który jest wyświetlany, gdy użytkownik kliknie **aplikacji** przycisku. Kliknij przycisk wielokropka ( **...** ) obok pozycji **elementy główne** otworzyć **Edytor elementów**.
+Wstążka składa się z przycisku **aplikacji** , który jest dużym przyciskiem w lewej górnej części wstążki oraz co najmniej jedną kartę kategorii. Każda karta kategorii zawiera jeden lub więcej paneli, które działają jako kontenery dla przycisków wstążki i kontrolek. Poniższa procedura pokazuje, jak utworzyć zasób wstążki, a następnie dostosować przycisk **aplikacji** .
 
-   1. Za pomocą **elementu** typu **przycisk** zaznaczone, kliknij przycisk **Dodaj** w celu dodania przycisku. Zmiana **podpis** do `&New`, **identyfikator** do `ID_FILE_NEW`, **obraz** do `0`, **duży obraz** do `0`.
+### <a name="to-add-a-ribbon-resource-to-the-project"></a>Aby dodać zasób wstążki do projektu
 
-   1. Kliknij przycisk **Dodaj** w celu dodania przycisku. Zmiana **podpis** do `&Save`, **identyfikator** do `ID_FILE_SAVE`, **obraz** do `2`, i **duży obraz** do `2`.
+1. Z projektem bazgrołów wybranym w **Eksplorator rozwiązań**w menu **projekt** kliknij polecenie **Dodaj zasób**.
 
-   1. Kliknij przycisk **Dodaj** w celu dodania przycisku. Zmiana **podpis** do `Save &As`, **identyfikator** do `ID_FILE_SAVE_AS`, **obraz** do `3`, i **duży obraz** do `3`.
+1. W oknie dialogowym **Dodawanie zasobu** wybierz Wstążkę , a następnie kliknij przycisk **Nowy**.
 
-   1. Kliknij przycisk **Dodaj** w celu dodania przycisku. Zmiana **podpis** do `&Print`, **identyfikator** do `ID_FILE_PRINT`, **obraz** do `4`, i **duży obraz** do `4`.
+   Program Visual Studio tworzy zasób wstążki i otwiera go w widoku projektu. Identyfikator zasobu wstążki to `IDR_RIBBON1`, który jest wyświetlany w **Widok zasobów**. Wstążka zawiera jedną kategorię i jeden panel.
 
-   1. Zmiana **elementu** typ **Separator** a następnie kliknij przycisk **Dodaj**.
+1. Przycisk **aplikacji** można dostosować, modyfikując jego właściwości. Identyfikatory komunikatów, które są używane w tym kodzie, są już zdefiniowane w menu dla bazgrołów 1,0.
 
-   1. Zmiana **elementu** typ **przycisk**. Kliknij przycisk **Dodaj** do piątego przycisk Dodaj. Zmiana **podpis** do `&Close`, **identyfikator** do `ID_FILE_CLOSE`, **obraz** do `5`, i **duży obraz** do `5`.
+1. W widoku Projekt kliknij przycisk **aplikacja** , aby wyświetlić jego właściwości. Zmień wartości właściwości w następujący sposób: **Obraz** do `IDB_RIBBON_MAIN`, monitować `File`o **klucze** do `f`, **duże obrazy** do `IDB_RIBBON_FILELARGE`i **małe obrazy** `IDB_RIBBON_FILESMALL`.
 
-1. Wprowadzenie następujących modyfikacji utworzyć podmenu w obszarze **drukowania** przycisk, który został utworzony w poprzednim kroku.
+1. Poniższe modyfikacje tworzą menu, które pojawiają się, gdy użytkownik kliknie przycisk **aplikacji** . Kliknij przycisk wielokropka ( **...** ) obok **pozycji główne elementy** , aby otworzyć **Edytor elementów**.
 
-   1. Kliknij przycisk **drukowania** przycisk, zmień **elementu** typ **etykiety**, a następnie kliknij przycisk **Wstaw**. Zmiana **podpis** do `Preview and print the document`.
+   1. Po wybraniu **przycisku** typ **elementu** kliknij przycisk **Dodaj** , aby dodać przycisk. Zmień **napis** na `&New`, **Identyfikator** na `ID_FILE_NEW`, **obraz** do `0`, **duży** `0`obraz.
 
-   1. Kliknij przycisk **drukowania** przycisk, zmień **elementu** typ **przycisk**i kliknij przycisk **Wstaw**. Zmiana **podpis** do `&Print`, **identyfikator** do `ID_FILE_PRINT`, **obraz** do `4`, i **duży obraz** do `4`.
+   1. Kliknij przycisk **Dodaj** , aby dodać przycisk. Zmień **napis** na `&Save`, **Identyfikator** na `ID_FILE_SAVE`, **obraz** do `2`i **obraz duże** do `2`.
 
-   1. Kliknij przycisk **drukowania** przycisk, a następnie kliknij przycisk **Wstaw** w celu dodania przycisku. Zmiana **podpis** do `&Quick Print`, **identyfikator** do `ID_FILE_PRINT_DIRECT`, **obraz** do `7`, i **duży obraz** do `7`.
+   1. Kliknij przycisk **Dodaj** , aby dodać przycisk. Zmień **napis** na `Save &As`, **Identyfikator** na `ID_FILE_SAVE_AS`, **obraz** do `3`i **obraz duże** do `3`.
 
-   1. Kliknij przycisk **drukowania** przycisk, a następnie kliknij przycisk **Wstaw** Aby dodać inny przycisk. Zmiana **podpis** do `Print Pre&view`, **identyfikator** do `ID_FILE_PRINT_PREVIEW`, **obraz** do `6`, i **duży obraz** do `6`.
+   1. Kliknij przycisk **Dodaj** , aby dodać przycisk. Zmień **napis** na `&Print`, **Identyfikator** na `ID_FILE_PRINT`, **obraz** do `4`i **obraz duże** do `4`.
 
-   1. Teraz został zmodyfikowany **elementy główne**. Kliknij przycisk **Zamknij** aby zakończyć działanie **Edytor elementów**.
+   1. Zmień typ **elementu** na **separator** , a następnie kliknij przycisk **Dodaj**.
 
-1. Po dokonaniu zmiany tworzy przycisk Zakończ, który pojawia się w dolnej części **aplikacji** przycisku menu.
+   1. Zmień typ **elementu** na **przycisk**. Kliknij przycisk **Dodaj** , aby dodać piąty przycisk. Zmień **napis** na `&Close`, **Identyfikator** na `ID_FILE_CLOSE`, **obraz** do `5`i **obraz duże** do `5`.
 
-   1. W **właściwości** okna, kliknij przycisk wielokropka ( **...** ) obok pozycji **przycisk** otworzyć **Edytor elementów**.
+1. Poniższe modyfikacje tworzą podmenu w ramach przycisku **Drukuj** utworzonego w poprzednim kroku.
 
-   1. Za pomocą **elementu** typu **przycisk** zaznaczone, kliknij przycisk **Dodaj** w celu dodania przycisku. Zmiana **podpis** do `E&xit`, **identyfikator** do `ID_APP_EXIT`, **obraz** do `8`.
+   1. Kliknij przycisk **Drukuj** , Zmień typ **elementu** na **etykieta**, a następnie kliknij przycisk **Wstaw**. Zmień **napis** na `Preview and print the document`.
 
-   1. Zmodyfikowano **przyciski**. Kliknij przycisk **Zamknij** aby zakończyć działanie **Edytor elementów**.
+   1. Kliknij przycisk **Drukuj** , Zmień typ **elementu** na **przycisk**, a następnie kliknij przycisk **Wstaw**. Zmień **napis** na `&Print`, **Identyfikator** na `ID_FILE_PRINT`, **obraz** do `4`i **obraz duże** do `4`.
 
-##  <a name="createinstance"></a> Tworzenie wystąpienia paska wstążki
+   1. Kliknij przycisk **Drukuj** , a następnie kliknij przycisk **Wstaw** , aby dodać przycisk. Zmień **napis** na `&Quick Print`, **Identyfikator** na `ID_FILE_PRINT_DIRECT`, **obraz** do `7`i **obraz duże** do `7`.
 
-Poniższe kroki pokazują jak utworzyć wystąpienie paska wstążki, podczas uruchamiania aplikacji. Aby dodać pasek wstążki do aplikacji, należy zadeklarować na Wstążce w pliku mainfrm.h. Następnie w pliku mainfrm.cpp, należy napisać kod ładowanie zasobu wstążki.
+   1. Kliknij przycisk **Drukuj** , a następnie kliknij przycisk **Wstaw** , aby dodać inny przycisk. Zmień **napis** na `Print Pre&view`, **Identyfikator** na `ID_FILE_PRINT_PREVIEW`, **obraz** do `6`i **obraz duże** do `6`.
+
+   1. **Elementy główne**zostały już zmodyfikowane. Kliknij przycisk **Zamknij** , aby wyjść z **edytora elementów**.
+
+1. Poniższe modyfikacje tworzą przycisk zakończenia, który pojawia się w dolnej części menu przycisku **aplikacji** .
+
+   1. W oknie **Właściwości** kliknij przycisk wielokropka ( **...** ) obok **przycisku** , aby otworzyć **Edytor elementów**.
+
+   1. Po wybraniu **przycisku** typ **elementu** kliknij przycisk **Dodaj** , aby dodać przycisk. Zmień **napis** na `E&xit`, **Identyfikator** na `ID_APP_EXIT`, **obraz** do `8`.
+
+   1. Zmodyfikowano **przyciski**. Kliknij przycisk **Zamknij** , aby wyjść z **edytora elementów**.
+
+##  <a name="createinstance"></a>Tworzenie wystąpienia paska wstążki
+
+Poniższe kroki pokazują, jak utworzyć wystąpienie paska wstążki podczas uruchamiania aplikacji. Aby dodać pasek wstążki do aplikacji, zadeklaruj pasek wstążki w pliku mainfrm. h. Następnie w pliku mainfrm. cpp Napisz kod w celu załadowania zasobu wstążki.
 
 ### <a name="to-create-an-instance-of-the-ribbon-bar"></a>Aby utworzyć wystąpienie paska wstążki
 
-1. W pliku mainfrm.h, Dodaj element członkowski danych do sekcji chronionych `CMainFrame`, definicji klasy dla głównej ramki. Ten element członkowski jest na Wstążce.
+1. W pliku mainfrm. h Dodaj element członkowski danych do chronionej sekcji `CMainFrame`, definicję klasy dla ramki głównej. Ten element członkowski jest przeznaczony dla paska wstążki.
 
     ```cpp
     // Ribbon bar for the application
     CMFCRibbonBar m_wndRibbonBar;
     ```
 
-2. W pliku mainfrm.cpp, Dodaj następujący kod przed końcowym znakiem `return` instrukcji na końcu `CMainFrame::OnCreate` funkcji. Tworzy wystąpienie paska wstążki.
+2. W pliku mainfrm. cpp Dodaj następujący kod przed instrukcją końcową `return` na końcu `CMainFrame::OnCreate` funkcji. Tworzy wystąpienie paska wstążki.
 
     ```cpp
     // Create the ribbon bar
@@ -229,30 +229,30 @@ Poniższe kroki pokazują jak utworzyć wystąpienie paska wstążki, podczas ur
     m_wndRibbonBar.LoadFromResource(IDR_RIBBON1);
     ```
 
-##  <a name="addcategory"></a> Dostosowywanie zasób wstążki
+##  <a name="addcategory"></a>Dostosowywanie zasobu wstążki
 
-Teraz, po utworzeniu **aplikacji** przycisku, można dodać elementów do wstążki.
+Po utworzeniu przycisku **aplikacji** możesz dodać elementy do wstążki.
 
 > [!NOTE]
-> W tym instruktażu wykorzystano ta sama ikona Panelu dla wszystkich paneli. Jednak można użyć innych indeksów listy obrazów do wyświetlania innymi ikonami.
+> W tym instruktażu zostanie użyta ta sama ikona panelu dla wszystkich paneli. Można jednak użyć innych indeksów listy obrazów, aby wyświetlić inne ikony.
 
-### <a name="to-add-a-home-category-and-edit-panel"></a>Aby dodać kategorię głównej i edytować panelu
+### <a name="to-add-a-home-category-and-edit-panel"></a>Aby dodać kategorię główną i panel edycji
 
-1. Program bazgrołów wymaga tylko jedną kategorię. W widoku Projekt w **przybornika**, kliknij dwukrotnie **kategorii** aby ją dodać i wyświetlić jego właściwości. Zmień wartości właściwości w następujący sposób: **Podpis** do `&Home`, **duże obrazy** do `IDB_RIBBON_HOMELARGE`, **małe obrazy** do `IDB_RIBBON_HOMESMALL`.
+1. Program Bazgroły wymaga tylko jednej kategorii. W widoku Projekt w przyborniku kliknijdwukrotnie **kategorię Kategoria** , aby dodać ją i wyświetlić jej właściwości. Zmień wartości właściwości w następujący sposób: **Podpis** do `&Home` **, duże obrazy** ,`IDB_RIBBON_HOMESMALL`do. `IDB_RIBBON_HOMELARGE`
 
-1. Każda kategoria wstążki jest podzielony na nazwanej paneli. Każdy panel zawiera zestaw kontrolek tego pełną powiązanych operacji. Ta kategoria zawiera jeden panel. Kliknij przycisk **panelu**, a następnie zmień **podpis** do `Edit`.
+1. Każda kategoria wstążki jest zorganizowana w nazwane panele. Każdy panel zawiera zestaw kontrolek, które ukończą powiązane operacje. Ta kategoria ma jeden panel. Kliknij **panel**, a następnie zmień **napis** na `Edit`.
 
-1. Aby **Edytuj** panelu, Dodaj przycisk odpowiedzialny za czyszczenie zawartości dokumentu. Identyfikator komunikatu dla tego przycisku został już zdefiniowany w `IDR_SCRIBBTYPE` zasobu menu. Określ `Clear All` jako tekst przycisku i indeks mapy bitowej, która rozszerza przycisku. Otwórz **przybornika**, a następnie przeciągnij **przycisk** do **Edytuj** panelu. Kliknij przycisk, a następnie zmień **podpis** do `Clear All`, **identyfikator** do `ID_EDIT_CLEAR_ALL`, **indeks obrazu** do `0`, **duży indeks obrazu**  do `0`.
+1. Do panelu **Edycja** Dodaj przycisk odpowiedzialny za wyczyszczenie zawartości dokumentu. Identyfikator komunikatu dla tego przycisku został już zdefiniowany w `IDR_SCRIBBTYPE` menu zasób. Określ `Clear All` jako tekst przycisku i indeks mapy bitowej, która zdobi przycisk. Otwórz **Przybornik**, a następnie przeciągnij **przycisk** do panelu **Edycja** . Kliknij przycisk, a następnie zmień **podpis** na `Clear All`, **Identyfikator** do `ID_EDIT_CLEAR_ALL`, **indeks** `0`obrazu, na który ma być `0` **indeks dużego obrazu** .
 
-1. Zapisz zmiany i następnie, skompiluj i uruchom aplikację. Powinien zostać wyświetlony aplikacji bazgrołów, a powinien mieć paska wstążki w górnej części okna, a nie paska menu. Na Wstążce powinna mieć jedną kategorię **Home**, i **Home** powinien mieć jeden panel **Edytuj**. Przyciski wstążki, które dodano powinna być skojarzona z istniejących programów obsługi zdarzeń i **Otwórz**, **Zamknij**, **Zapisz**, **drukowania**, i **Wyczyść wszystko** przyciski powinny działać zgodnie z oczekiwaniami.
+1. Zapisz zmiany, a następnie Skompiluj i uruchom aplikację. Aplikacja bazgrołów powinna być wyświetlana, a w górnej części okna powinna znajdować się pasek wstążki, a nie pasek menu. Pasek wstążki powinien mieć jedną kategorię, **Home**i **Home** powinien mieć jeden panel, **Edytuj**. Dodane przyciski wstążki powinny być skojarzone z istniejącymi programami obsługi zdarzeń, a przyciski **Otwórz**, **Zamknij**, **Zapisz**, **Drukuj**i **Wyczyść wszystkie** powinny działać zgodnie z oczekiwaniami.
 
-##  <a name="setlook"></a> Ustawienie wygląd aplikacji
+##  <a name="setlook"></a>Ustawianie wyglądu aplikacji
 
-A *visual Menedżera* jest obiekt globalny, który kontroluje wszystkie rysunku dla aplikacji. Ponieważ oryginalnej aplikacji bazgrołów używa styl interfejsu użytkownika pakietu Office 2000, aplikacja może wyglądać stosowane. Możesz zresetować aplikacji tak, aby wyglądała jak aplikacja pakietu Office 2007 za pomocą Menedżera visual Office 2007.
+*Program Visual Manager* jest obiektem globalnym, który kontroluje cały rysunek dla aplikacji. Ponieważ oryginalna aplikacja bazgrołów używa stylu interfejsu użytkownika (UI) pakietu Office 2000, aplikacja może wyglądać w stary sposób. Możesz zresetować aplikację tak, aby korzystała z programu Microsoft Visual 2007e Manager, tak aby była podobna do aplikacji pakietu Office 2007.
 
 ### <a name="to-set-the-look-of-the-application"></a>Aby ustawić wygląd aplikacji
 
-1. W `CMainFrame::OnCreate` funkcji, wpisz następujący kod przed `return 0;` instrukcję, aby zmienić domyślnego menedżera wizualnych i styl.
+1. W funkcji wpisz poniższy kod `return 0;` przed instrukcją zmiany domyślnego menedżera i stylu wizualnego. `CMainFrame::OnCreate`
 
     ```cpp
     // Set the default manager to Office 2007
@@ -260,11 +260,11 @@ A *visual Menedżera* jest obiekt globalny, który kontroluje wszystkie rysunku 
     CMFCVisualManagerOffice2007::SetStyle(CMFCVisualManagerOffice2007::Office2007_LunaBlue);
     ```
 
-1. Zapisz zmiany i następnie, skompiluj i uruchom aplikację. Aplikacja interfejsu użytkownika powinna być podobna interfejsu użytkownika pakietu Office 2007.
+1. Zapisz zmiany, a następnie Skompiluj i uruchom aplikację. Interfejs użytkownika aplikacji powinien wyglądać podobnie do interfejsu użytkownika pakietu Office 2007.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Zmodyfikowano klasycznego próbki Bazgroły MFC 1.0 do użycia **projektanta wstążki**. Teraz przejdź do [część 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md).
+Zmodyfikowano przykład klasycznego bazgrołów 1,0 MFC, aby użyć **projektanta wstążki**. Teraz przejdź do [części 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md).
 
 ## <a name="see-also"></a>Zobacz także
 

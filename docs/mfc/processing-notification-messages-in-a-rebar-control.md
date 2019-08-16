@@ -7,38 +7,38 @@ helpviewer_keywords:
 - RBN_ notification messages [MFC]
 - notifications [MFC], CReBarCtrl
 ms.assetid: 40f43a60-0c18-4d8d-8fab-213a095624f9
-ms.openlocfilehash: 8ac225802bd1d0a0a4b0f30e017fa677f1072fd3
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 948990c8597c2ccdcec496252c6801c02a78cbf5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64339630"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507957"
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>Przetwarzanie komunikatów powiadomień w formancie paska pomocniczego
 
-W klasie nadrzędnej formantu paska pomocniczego, Utwórz `OnChildNotify` funkcji obsługi za pomocą instrukcji switch dla każdego formantu paska pomocniczego (`CReBarCtrl`) komunikaty powiadomień, które mają być obsługiwane. Powiadomienia są wysyłane do okna nadrzędnego, gdy użytkownik przeciągnie obiektów nad kontrolką paska pomocniczego, zmiany układu paskami usuwa paskami w formancie paska pomocniczego i tak dalej.
+W klasie nadrzędnej formantu paska pomocniczego Utwórz `OnChildNotify` funkcję programu obsługi z instrukcją Switch dla wszystkich komunikatów powiadomień paska pomocniczego-Control (`CReBarCtrl`), które chcesz obsłużyć. Powiadomienia są wysyłane do okna nadrzędnego, gdy użytkownik przeciągnie obiekty przez formant paska pomocniczego, zmieni układ przedziałów paska pomocniczego, usunie grupy z formantu paska pomocniczego i tak dalej.
 
-Następujące powiadomienia mogą być wysyłane przez obiekt formantu paska pomocniczego:
+Obiekt sterowania paska pomocniczego może wysyłać następujące komunikaty powiadomień:
 
-- Wysyłany przez kontrolkę paska pomocniczego (utworzonej przy użyciu stylu RBS_AUTOSIZE), RBN_AUTOSIZE po paska pomocniczego automatycznie zmienia rozmiar samego.
+- RBN_AUTOSIZE wysyłany przez formant paska pomocniczego (utworzony przy użyciu stylu RBS_AUTOSIZE), gdy paska pomocniczego automatycznie zmienia rozmiar siebie.
 
-- RBN_BEGINDRAG wysyłany przez kontrolkę paska pomocniczego, gdy użytkownik rozpoczyna, przeciągając obiekt band.
+- RBN_BEGINDRAG wysyłany przez kontrolkę paska pomocniczego, gdy użytkownik rozpoczyna przeciąganie pasma.
 
 - RBN_CHILDSIZE wysyłany przez kontrolkę paska pomocniczego, gdy zmieniany jest rozmiar okna podrzędnego pasma.
 
-- RBN_DELETEDBAND wysyłany przez kontrolkę paska pomocniczego, po usunięciu poza pasmem.
+- RBN_DELETEDBAND wysyłany przez kontrolkę paska pomocniczego po usunięciu pasma.
 
-- RBN_DELETINGBAND wysyłany przez kontrolkę paska pomocniczego, gdy ma zostać usunięty poza pasmem.
+- RBN_DELETINGBAND wysyłany przez kontrolkę paska pomocniczego, gdy pasmo ma zostać usunięte.
 
-- RBN_ENDDRAG wysyłany przez kontrolkę paska pomocniczego, gdy użytkownik zatrzymuje, przeciągając obiekt band.
+- RBN_ENDDRAG wysyłany przez kontrolkę paska pomocniczego, gdy użytkownik zatrzyma przeciąganie pasma.
 
-- RBN_GETOBJECT wysyłany przez kontrolkę paska pomocniczego (utworzonej przy użyciu stylu RBS_REGISTERDROP), gdy obiekt jest przeciągany nad pasma w formancie.
+- RBN_GETOBJECT wysyłany przez formant paska pomocniczego (utworzony przy użyciu stylu RBS_REGISTERDROP), gdy obiekt jest przeciągany nad pasmem w kontrolce.
 
-- RBN_HEIGHTCHANGE wysyłany przez kontrolkę paska pomocniczego, gdy zmieniono jego wysokość.
+- RBN_HEIGHTCHANGE wysyłany przez kontrolkę paska pomocniczego, gdy jej wysokość zmieniła się.
 
-- RBN_LAYOUTCHANGED wysyłany przez kontrolkę paska pomocniczego, gdy użytkownik zmienia układ pasm kontrolki.
+- RBN_LAYOUTCHANGED wysyłany przez kontrolkę paska pomocniczego, gdy użytkownik zmienia układ pasm formantu.
 
-Aby uzyskać więcej informacji na temat tych powiadomień, zobacz [odwołanie do formantu paska pomocniczego](/windows/desktop/controls/rebar-control-reference) w zestawie Windows SDK.
+Aby uzyskać więcej informacji na temat tych powiadomień, zobacz [paska pomocniczego Control Reference](/windows/win32/controls/rebar-control-reference) w Windows SDK.
 
 ## <a name="see-also"></a>Zobacz także
 

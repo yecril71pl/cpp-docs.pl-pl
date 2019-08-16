@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComGITPtr class
 ms.assetid: af895acb-525a-4555-bb67-b241b7df515b
-ms.openlocfilehash: bf509d027833610e4251c009d4e444dad3fdd5ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 00265cc445191a5a539ab21d6f64b255849495e9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246476"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497267"
 ---
 # <a name="ccomgitptr-class"></a>CComGITPtr Class
 
-Ta klasa dostarcza metody radzenia sobie z wskaźniki interfejsu i tabeli interfejsu globalnego (GIT).
+Ta klasa dostarcza metody do pracy z wskaźnikami interfejsu i globalną tabelą interfejsów (GIT).
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,7 +35,7 @@ class CComGITPtr
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Typ wskaźnika interfejsu, które mają być przechowywane w usłudze GIT.
+Typ wskaźnika interfejsu, który ma być przechowywany w usłudze GIT.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -50,17 +50,17 @@ Typ wskaźnika interfejsu, które mają być przechowywane w usłudze GIT.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CComGITPtr::Attach](#attach)|Wywołaj tę metodę, aby zarejestrować wskaźnik interfejsu w tabeli interfejsu globalnego (GIT).|
-|[CComGITPtr::CopyTo](#copyto)|Wywołaj tę metodę, aby skopiować interfejs z tabeli interfejsu globalnego (GIT) do przekazanych wskaźnika.|
-|[CComGITPtr::Detach](#detach)|Wywołaj tę metodę, aby usunąć skojarzenie interfejsu z `CComGITPtr` obiektu.|
-|[CComGITPtr::GetCookie](#getcookie)|Wywołaj tę metodę, aby przywrócić plik cookie z `CComGITPtr` obiektu.|
-|[CComGITPtr::Revoke](#revoke)|Wywołaj tę metodę, aby usunąć interfejs z tabeli interfejsu globalnego (GIT).|
+|[CComGITPtr::Attach](#attach)|Wywołaj tę metodę, aby zarejestrować wskaźnik interfejsu w globalnej tabeli interfejsów (GIT).|
+|[CComGITPtr::CopyTo](#copyto)|Wywołaj tę metodę, aby skopiować interfejs z tabeli interfejsu globalnego (GIT) do porzuconego wskaźnika.|
+|[CComGITPtr::Detach](#detach)|Wywołaj tę metodę, aby usunąć skojarzenie `CComGITPtr` interfejsu z obiektu.|
+|[CComGITPtr::GetCookie](#getcookie)|Wywołaj tę metodę, aby zwrócić plik cookie `CComGITPtr` z obiektu.|
+|[CComGITPtr::Revoke](#revoke)|Wywołaj tę metodę, aby usunąć interfejs z globalnej tabeli interfejsu (GIT).|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CComGITPtr::operator DWORD](#operator_dword)|Zwraca plik cookie z `CComGITPtr` obiektu.|
+|[CComGITPtr:: operator DWORD](#operator_dword)|Zwraca plik cookie z `CComGITPtr` obiektu.|
 |[CComGITPtr::operator =](#operator_eq)|Operator przypisania.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
@@ -71,18 +71,18 @@ Typ wskaźnika interfejsu, które mają być przechowywane w usłudze GIT.
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekty, które agregacji marshaler trybu i muszą korzystać wskaźniki interfejsu uzyskane z innych obiektów, należy wykonać dodatkowe kroki, aby upewnić się, że interfejsy są organizowane poprawnie. Obejmuje to zwykle przechowywania wskaźniki interfejsu w GIT i uzyskiwanie wskaźnika z GIT każdorazowo, gdy jest używany. Klasa `CComGITPtr` znajduje się przydatne podczas używania wskaźniki interfejsu, przechowywane w usłudze GIT.
+Obiekty, które agregują organizatora wolnego wątku i muszą używać wskaźników interfejsu uzyskanych z innych obiektów, muszą wykonać dodatkowe czynności, aby upewnić się, że interfejsy są prawidłowo organizowane. Zwykle obejmuje to przechowywanie wskaźników interfejsu w narzędziu GIT i pobieranie wskaźnika z narzędzia GIT przy każdym jego użyciu. Klasa `CComGITPtr` jest dostarczana, aby ułatwić korzystanie ze wskaźników interfejsu przechowywanych w usłudze git.
 
 > [!NOTE]
->  Możliwości tabeli interfejsu globalnego jest dostępna tylko na Windows 95, za pomocą modelu DCOM w wersji 1.1 i nowsze, Windows 98, Windows NT 4.0 z dodatkiem Service Pack 3 lub nowszym i Windows 2000.
+>  Globalna tabela interfejsu jest dostępna tylko w systemie Windows 95 z modelem DCOM w wersji 1,1 lub nowszej, Windows 98, Windows NT 4,0 z dodatkiem Service Pack 3 lub nowszym oraz Windows 2000.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlbase.h
+**Nagłówek:** atlbase. h
 
 ##  <a name="attach"></a>  CComGITPtr::Attach
 
-Wywołaj tę metodę, aby zarejestrować wskaźnik interfejsu w tabeli interfejsu globalnego (GIT).
+Wywołaj tę metodę, aby zarejestrować wskaźnik interfejsu w globalnej tabeli interfejsów (GIT).
 
 ```
 HRESULT Attach(T* p) throw();
@@ -96,15 +96,15 @@ HRESULT Attach(DWORD dwCookie) throw();
 Wskaźnik interfejsu, który ma zostać dodany do usługi GIT.
 
 *dwCookie*<br/>
-Plik cookie używany do identyfikowania wskaźnika interfejsu.
+Plik cookie służący do identyfikowania wskaźnika interfejsu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-W kompilacjach debugowania wystąpi błąd potwierdzenia, czy usługa GIT nie jest prawidłowy, czy plik cookie jest równa NULL.
+W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli GIT jest nieprawidłowy lub jeśli plik cookie ma wartość NULL.
 
 ##  <a name="ccomgitptr"></a>  CComGITPtr::CComGITPtr
 
@@ -121,22 +121,22 @@ CComGITPtr(CComGITPtr&& rv);
 ### <a name="parameters"></a>Parametry
 
 *p*<br/>
-[in] Wskaźnik interfejsu do przechowywania w tabeli interfejsu globalnego (GIT).
+podczas Wskaźnik interfejsu, który ma być przechowywany w globalnej tabeli interfejsów (GIT).
 
-*git*<br/>
-[in] Odwołanie do istniejącego `CComGITPtr` obiektu.
+*narzędzia*<br/>
+podczas Odwołanie do istniejącego `CComGITPtr` obiektu.
 
 *dwCookie*<br/>
-[in] Plik cookie używany do identyfikowania wskaźnika interfejsu.
+podczas Plik cookie służący do identyfikowania wskaźnika interfejsu.
 
 *rv*<br/>
-[in] Źródło `CComGITPtr` przeniesienia danych z obiektu.
+podczas Obiekt źródłowy `CComGITPtr` , z którego mają zostać przeniesione dane.
 
 ### <a name="remarks"></a>Uwagi
 
-Tworzy nową `CComGITPtr` obiektu opcjonalnie przy użyciu istniejącego `CComGITPtr` obiektu.
+Tworzy nowy `CComGITPtr` obiekt, opcjonalnie używając istniejącego `CComGITPtr` obiektu.
 
-Przy użyciu konstruktora *rv* jest konstruktora przenoszącego. Dane są przenoszone ze źródła, *rv*, a następnie *rv* jest wyczyszczone.
+Konstruktor wykorzystujący *RV* to Konstruktor przenoszący. Dane są przenoszone ze źródła, *RV*, a następnie *RV* jest wyczyszczone.
 
 ##  <a name="dtor"></a>  CComGITPtr::~CComGITPtr
 
@@ -148,11 +148,11 @@ Destruktor.
 
 ### <a name="remarks"></a>Uwagi
 
-Usuwa interfejs z tabeli interfejsu globalnego (GIT), za pomocą [CComGITPtr::Revoke](#revoke).
+Usuwa interfejs z globalnej tabeli interfejsu (GIT) przy użyciu [CComGITPtr:: Revoke](#revoke).
 
-##  <a name="copyto"></a>  CComGITPtr::CopyTo
+##  <a name="copyto"></a>CComGITPtr:: CopyTo
 
-Wywołaj tę metodę, aby skopiować interfejs z tabeli interfejsu globalnego (GIT) do przekazanych wskaźnika.
+Wywołaj tę metodę, aby skopiować interfejs z tabeli interfejsu globalnego (GIT) do porzuconego wskaźnika.
 
 ```
 HRESULT CopyTo(T** pp) const throw();
@@ -160,20 +160,20 @@ HRESULT CopyTo(T** pp) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*strony*<br/>
-Wskaźnik, która będzie odbierać interfejsu.
+*miesięcznie*<br/>
+Wskaźnik, który ma otrzymać interfejs.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Interfejs z usługi GIT jest kopiowany do przekazanych wskaźnika. Wskaźnik muszą zostać zwolnione przez obiekt wywołujący, gdy nie jest już wymagany.
+Interfejs z GIT jest kopiowany do przenoszonego wskaźnika. Wskaźnik musi zostać wydzierżawiony przez obiekt wywołujący, gdy nie jest już wymagany.
 
 ##  <a name="detach"></a>  CComGITPtr::Detach
 
-Wywołaj tę metodę, aby usunąć skojarzenie interfejsu z `CComGITPtr` obiektu.
+Wywołaj tę metodę, aby usunąć skojarzenie `CComGITPtr` interfejsu z obiektu.
 
 ```
 DWORD Detach() throw();
@@ -185,11 +185,11 @@ Zwraca plik cookie z `CComGITPtr` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-To obiekt wywołujący, aby usunąć interfejs z repozytorium GIT, za pomocą [CComGITPtr::Revoke](#revoke).
+Obiekt wywołujący może usunąć interfejs z usługi GIT przy użyciu [CComGITPtr:: Revoke](#revoke).
 
 ##  <a name="getcookie"></a>  CComGITPtr::GetCookie
 
-Wywołaj tę metodę, aby przywrócić plik cookie z `CComGITPtr` obiektu.
+Wywołaj tę metodę, aby zwrócić plik cookie `CComGITPtr` z obiektu.
 
 ```
 DWORD GetCookie() const;
@@ -197,11 +197,11 @@ DWORD GetCookie() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość pliku cookie.
+Zwraca plik cookie.
 
 ### <a name="remarks"></a>Uwagi
 
-Plik cookie jest zmienną, używany do identyfikowania interfejsu i jego lokalizacji.
+Plik cookie jest zmienną służącą do identyfikowania interfejsu i jego lokalizacji.
 
 ##  <a name="m_dwcookie"></a>  CComGITPtr::m_dwCookie
 
@@ -213,9 +213,9 @@ DWORD m_dwCookie;
 
 ### <a name="remarks"></a>Uwagi
 
-Plik cookie jest zmienną członkowską, używany do identyfikowania interfejsu i jego lokalizacji.
+Plik cookie jest zmienną członkowską używaną do identyfikowania interfejsu i jego lokalizacji.
 
-##  <a name="operator_eq"></a>  CComGITPtr::operator =
+##  <a name="operator_eq"></a>CComGITPtr:: operator =
 
 Operator przypisania.
 
@@ -229,28 +229,28 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 ### <a name="parameters"></a>Parametry
 
 *p*<br/>
-[in] Wskaźnik do interfejsu.
+podczas Wskaźnik do interfejsu.
 
-*git*<br/>
-[in] Odwołanie do `CComGITPtr` obiektu.
+*narzędzia*<br/>
+podczas Odwołanie do `CComGITPtr` obiektu.
 
 *dwCookie*<br/>
-[in] Plik cookie używany do identyfikowania wskaźnika interfejsu.
+podczas Plik cookie służący do identyfikowania wskaźnika interfejsu.
 
 *rv*<br/>
-[in] `CComGITPtr` Do przenoszenia danych z.
+podczas , `CComGITPtr` Aby przenieść dane z.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca zaktualizowany `CComGITPtr` obiektu.
+Zwraca zaktualizowany `CComGITPtr` obiekt.
 
 ### <a name="remarks"></a>Uwagi
 
-Przypisuje nową wartość do `CComGITPtr` obiektu, albo z istniejącego obiektu lub odwołanie do tabeli interfejsu globalnego.
+Przypisuje nową wartość do `CComGITPtr` obiektu, z istniejącego obiektu lub z odwołania do globalnej tabeli interfejsów.
 
-##  <a name="operator_dword"></a>  CComGITPtr::operator typu DWORD.
+##  <a name="operator_dword"></a>CComGITPtr:: operator DWORD
 
-Zwraca wartość pliku cookie skojarzona z `CComGITPtr` obiektu.
+Zwraca plik cookie skojarzony z `CComGITPtr` obiektem.
 
 ```
 operator DWORD() const;
@@ -258,11 +258,11 @@ operator DWORD() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Plik cookie jest zmienną, używany do identyfikowania interfejsu i jego lokalizacji.
+Plik cookie jest zmienną służącą do identyfikowania interfejsu i jego lokalizacji.
 
-##  <a name="revoke"></a>  CComGITPtr::Revoke
+##  <a name="revoke"></a>CComGITPtr:: odwołaj
 
-Wywołaj tę metodę można usunąć bieżącego interfejsu z tabeli interfejsu globalnego (GIT).
+Wywołaj tę metodę, aby usunąć bieżący interfejs z globalnej tabeli interfejsu (GIT).
 
 ```
 HRESULT Revoke() throw();
@@ -270,15 +270,15 @@ HRESULT Revoke() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Usuwa interfejs z narzędzia GIT.
+Usuwa interfejs z usługi GIT.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Marshaler trybu](../../atl/atl-and-the-free-threaded-marshaler.md)<br/>
-[Uzyskiwanie dostępu do interfejsów w Apartamentach](/windows/desktop/com/accessing-interfaces-across-apartments)<br/>
-[Kiedy używać tabeli interfejsu globalnego](/windows/desktop/com/when-to-use-the-global-interface-table)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Organizator trybu wolnych wątków](../../atl/atl-and-the-free-threaded-marshaler.md)<br/>
+[Uzyskiwanie dostępu do interfejsów w apartamentach](/windows/win32/com/accessing-interfaces-across-apartments)<br/>
+[Kiedy używać globalnej tabeli interfejsów](/windows/win32/com/when-to-use-the-global-interface-table)<br/>
+[Przegląd klas](../../atl/atl-class-overview.md)

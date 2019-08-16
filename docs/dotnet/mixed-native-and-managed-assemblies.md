@@ -12,36 +12,36 @@ helpviewer_keywords:
 - mixed assemblies [C++]
 - native code [C++], .NET interoperatibility
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
-ms.openlocfilehash: 043390a2ebefcadac300b7fb0b05ae7f5ed411f3
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 11bdfc98c64b2612129e10c002c68ee243bec7da
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447280"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501141"
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Zestawy mieszane (natywne i zarządzane)
 
-Zestawy mieszane mogą zawierać zarówno niezarządzane instrukcje maszynowe, jak i instrukcje MSIL. Umożliwi to wywołanie i bycie wywoływanym przez składniki .NET, przy zachowaniu zgodności z natywnych bibliotek C++. Używając zestawów mieszanych, deweloperzy mogą tworzyć aplikacje przy użyciu kombinacji kodu .NET i natywnego języka C++.
+Zestawy mieszane mogą zawierać zarówno niezarządzane instrukcje maszynowe, jak i instrukcje MSIL. Umożliwia to wywoływanie i wywoływanie przez składniki platformy .NET, zachowując zgodność z natywnymi C++ bibliotekami. Korzystając z zestawów mieszanych, deweloperzy mogą tworzyć aplikacje przy użyciu kombinacji kodu .NET C++ i natywnego.
 
-Na przykład istniejącej biblioteki składające się wyłącznie z macierzystego kodu C++ może być przeniesiona do platformy .NET przez ponowną kompilację tylko jednego modułu z **/CLR** przełącznika kompilatora. Moduł ten będzie potem w stanie korzystać z funkcji .NET, ale pozostaje zgodny z pozostałą częścią aplikacji. Istnieje nawet możliwość decydowania między zarządzanego i natywnego kompilacji na podstawie funkcji przez funkcję w obrębie tego samego pliku (zobacz [zarządzane, niezarządzane](../preprocessor/managed-unmanaged.md)).
+Na przykład istniejąca Biblioteka składająca się wyłącznie z C++ kodu natywnego może zostać przeprowadzona do platformy .NET przez ponowne skompilowanie tylko jednego modułu z przełącznikiem kompilatora **/CLR** . Moduł ten będzie potem w stanie korzystać z funkcji .NET, ale pozostaje zgodny z pozostałą częścią aplikacji. Istnieje nawet możliwość podejmowania decyzji między kompilacją zarządzaną i natywną w ramach funkcji po funkcji w ramach tego samego pliku (zobacz [zarządzane, niezarządzane](../preprocessor/managed-unmanaged.md)).
 
-Visual C++ obsługuje tylko generowanie zestawów mieszanych zarządzanych przy użyciu **/CLR** — opcja kompilatora. **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017. Jeśli wymagana jest czysty i weryfikowalny zestawów zarządzanych, zalecamy tworzenie przy użyciu języka C#.
+Wizualizacja C++ obsługuje tylko generowanie mieszanych zestawów zarządzanych przy użyciu opcji kompilatora **/CLR** . **/CLR: Pure** i **/CLR:** opcje kompilatora bezpiecznego są przestarzałe w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017. Jeśli wymagane są czyste lub możliwe do zweryfikowania zarządzane zestawy, zalecamy utworzenie ich przy C#użyciu programu.
 
-Wcześniejszych wersjach programu Microsoft C++ zestaw narzędzi kompilatora obsługuje generację trzech różnych typów zestawów zarządzanych: mieszanych, czystych i weryfikowalnych. Te ostatnie dwa są omówione w [czystej i weryfikowalny kod (C++sposób niezamierzony)](../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Wcześniejsze wersje zestawu narzędzi kompilatora C++ firmy Microsoft obsługują generowanie trzech różnych typów zestawów zarządzanych: mieszanych, czystych i możliwych do zweryfikowania. Te ostatnie dwa zostały omówione w [czystym i możliwymC++do zweryfikowaniu kodzie (/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Instrukcje: Migracja do/CLR](../dotnet/how-to-migrate-to-clr.md)<br/>
+[Instrukcje: Migruj do/CLR](../dotnet/how-to-migrate-to-clr.md)<br/>
 W tym artykule opisano zalecane kroki do wprowadzenia lub uaktualnienia funkcjonalności .NET w aplikacji.
 
-[Instrukcje: Skompilować MFC i ATL kodu za pomocą/CLR](../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md)<br/>
+[Instrukcje: Kompiluj kod MFC i ATL za pomocą opcji/CLR](../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md)<br/>
 W tym artykule omówiono sposób kompilowania istniejących programów MFC i ATL do elementu docelowego środowiska uruchomieniowego języka wspólnego.
 
 [Inicjowanie zestawów mieszanych](../dotnet/initialization-of-mixed-assemblies.md)<br/>
 W tym artykule opisano problem „blokady modułu ładującego” i jego rozwiązania.
 
 [Obsługa bibliotek dla zestawów mieszanych](../dotnet/library-support-for-mixed-assemblies.md)<br/>
-W tym artykule omówiono sposób użycia bibliotek natywnych w **/CLR** kompilacje.
+W tym artykule omówiono sposób używania bibliotek natywnych w kompilacjach **/CLR** .
 
 [Zagadnienia dotyczące wydajności](../dotnet/performance-considerations-for-interop-cpp.md)<br/>
 W tym artykule opisano wpływ zestawów mieszanych i przekazywania danych na wydajność.
@@ -49,16 +49,16 @@ W tym artykule opisano wpływ zestawów mieszanych i przekazywania danych na wyd
 [Domeny aplikacji i program Visual C++](../dotnet/application-domains-and-visual-cpp.md)<br/>
 W tym artykule omówiono obsługę języka Visual C++ dla domen aplikacji.
 
-[Podwójna konwersja bitowa](../dotnet/double-thunking-cpp.md)<br/>
+[Podwójny podwójna](../dotnet/double-thunking-cpp.md)<br/>
 W tym artykule omówiono wpływ natywnego punktu wejścia dla funkcji zarządzanych na wydajność.
 
-[Unikanie wyjątków przy CLR zamykania przypadku konsumowania obiektów COM skompilowanych z/CLR](../dotnet/avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr.md)<br/>
-W tym artykule omówiono sposób zapewnienia prawidłowego zamknięcia zarządzanej aplikacji, która przetwarza obiekt COM skompilowany przy użyciu **/CLR**.
+[Unikanie wyjątków przy zamykaniu środowiska CLR podczas używania obiektów COM skompilowanych przy użyciu opcji/CLR](../dotnet/avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr.md)<br/>
+W tym artykule omówiono sposób zapewnienia prawidłowego zamknięcia aplikacji zarządzanej, która korzysta z obiektu COM skompilowanego z **/CLR**.
 
 [Instrukcje: tworzenie aplikacji częściowo zaufanej przez usunięcie zależności od biblioteki DLL środowiska CRT](../dotnet/create-a-partially-trusted-application.md)<br/>
-W tym artykule omówiono sposób tworzenia częściowo zaufanych aplikacji środowiska uruchomieniowego języka wspólnego przy użyciu języka Visual C++ przez usunięcie zależności od msvcm90.dll.
+Omawia, jak utworzyć częściowo zaufaną aplikację środowiska uruchomieniowego języka wspólnego przy C++ użyciu wizualizacji, usuwając zależność od Msvcm90. dll.
 
-Aby uzyskać więcej informacji dotyczących wytycznych kodowania zestawów mieszanych, zobacz artykuł w witrynie MSDN [przegląd z zarządzanego/niezarządzanego kodu współdziałanie](https://msdn.microsoft.com/library/ms973872.aspx).
+Aby uzyskać więcej informacji na temat wytycznych dotyczących kodowania dla zestawów mieszanych, zobacz artykuł MSDN [Omówienie współdziałania kodu zarządzanego/](/previous-versions/dotnet/articles/ms973872(v=msdn.10))niezarządzanego.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: bce5a16dd8d6564b6a0d3fa0344fe5cb2303764f
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 3faf446f74577034a3d0676b90ebe7027ef6da06
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915791"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496535"
 ---
 # <a name="cregkey-class"></a>Klasa CRegKey
 
@@ -124,10 +124,10 @@ class CRegKey
 
 `CRegKey`zapewnia interfejs programowania dla rejestru systemowego dla danego komputera. Na przykład, aby otworzyć określony klucz rejestru, wywołaj `CRegKey::Open`polecenie. Aby pobrać lub zmodyfikować wartość danych, wywołaj `CRegKey::QueryValue` lub `CRegKey::SetValue`, odpowiednio. Aby zamknąć klucz, wywołaj `CRegKey::Close`polecenie.
 
-Po zamknięciu klucza jego dane rejestru są zapisywane (opróżniane) na dysku twardym. Ten proces może potrwać kilka sekund. Jeśli aplikacja musi jawnie zapisywać dane rejestru na dysku twardym, można wywołać funkcję Win32 [podczas operacji RegFlushKey](/windows/desktop/api/winreg/nf-winreg-regflushkey) . Jednak program `RegFlushKey` używa wielu zasobów systemowych i powinien być wywoływany tylko w razie absolutnej konieczności.
+Po zamknięciu klucza jego dane rejestru są zapisywane (opróżniane) na dysku twardym. Ten proces może potrwać kilka sekund. Jeśli aplikacja musi jawnie zapisywać dane rejestru na dysku twardym, można wywołać funkcję Win32 [podczas operacji RegFlushKey](/windows/win32/api/winreg/nf-winreg-regflushkey) . Jednak program `RegFlushKey` używa wielu zasobów systemowych i powinien być wywoływany tylko w razie absolutnej konieczności.
 
 > [!IMPORTANT]
->  Wszelkie metody, które umożliwiają obiektowi wywołującemu określenie lokalizacji w rejestrze, mają możliwość odczytywania danych, które nie mogą być zaufane. Metody, które korzystają z [działanie funkcji RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) należy wziąć pod uwagę, że ta funkcja nie obsługuje jawnie ciągów, które są zakończone wartością null. Kod wywołujący musi być sprawdzony dla obu warunków.
+>  Wszelkie metody, które umożliwiają obiektowi wywołującemu określenie lokalizacji w rejestrze, mają możliwość odczytywania danych, które nie mogą być zaufane. Metody, które korzystają z [działanie funkcji RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) należy wziąć pod uwagę, że ta funkcja nie obsługuje jawnie ciągów, które są zakończone wartością null. Kod wywołujący musi być sprawdzony dla obu warunków.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -189,7 +189,7 @@ Określa nazwę klucza, który ma zostać utworzony lub otwarty. Ta nazwa musi b
 Określa klasę klucza, który ma zostać utworzony lub otwarty. Wartość domyślna to REG_NONE.
 
 *dwOptions*<br/>
-Opcje klucza. Wartość domyślna to REG_OPTION_NON_VOLATILE. Aby uzyskać listę możliwych wartości i opisów, zobacz [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) w Windows SDK.
+Opcje klucza. Wartość domyślna to REG_OPTION_NON_VOLATILE. Aby uzyskać listę możliwych wartości i opisów, zobacz [RegCreateKeyEx](/windows/win32/api/winreg/nf-winreg-regcreatekeyexw) w Windows SDK.
 
 *samDesired*<br/>
 Dostęp zabezpieczeń dla klucza. Wartość domyślna to KEY_READ &#124; KEY_WRITE. Aby uzyskać listę możliwych wartości i opisów, zobacz `RegCreateKeyEx`.
@@ -328,7 +328,7 @@ Jeśli metoda zakończy się pomyślnie, wartość zwracana to ERROR_SUCCESS. Je
 
 ### <a name="remarks"></a>Uwagi
 
-Aby wyliczyć podklucze, `CRegKey::EnumKey` Wywołaj z indeksem równym zero. Zwiększ wartość indeksu i powtórz operację do momentu, aż Metoda zwróci wartość ERROR_NO_MORE_ITEMS. Aby uzyskać więcej informacji, zobacz [RegEnumKeyEx](/windows/desktop/api/winreg/nf-winreg-regenumkeyexa) w Windows SDK.
+Aby wyliczyć podklucze, `CRegKey::EnumKey` Wywołaj z indeksem równym zero. Zwiększ wartość indeksu i powtórz operację do momentu, aż Metoda zwróci wartość ERROR_NO_MORE_ITEMS. Aby uzyskać więcej informacji, zobacz [RegEnumKeyEx](/windows/win32/api/winreg/nf-winreg-regenumkeyexw) w Windows SDK.
 
 ##  <a name="flush"></a>CRegKey:: Flush
 
@@ -344,7 +344,7 @@ Jeśli metoda zakończy się pomyślnie, wartość zwracana to ERROR_SUCCESS. Je
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [RegEnumFlush](/windows/desktop/api/winreg/nf-winreg-regflushkey) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz [RegEnumFlush](/windows/win32/api/winreg/nf-winreg-regflushkey) w Windows SDK.
 
 ##  <a name="getkeysecurity"></a>CRegKey:: GetKeySecurity
 
@@ -360,7 +360,7 @@ LONG GetKeySecurity(
 ### <a name="parameters"></a>Parametry
 
 *si*<br/>
-Wartość [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) , która wskazuje żądane informacje zabezpieczające.
+Wartość [SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information) , która wskazuje żądane informacje zabezpieczające.
 
 *formacie*<br/>
 Wskaźnik do buforu, który otrzymuje kopię żądanego deskryptora zabezpieczeń.
@@ -374,7 +374,7 @@ Jeśli metoda zakończy się pomyślnie, wartość zwracana to ERROR_SUCCESS. Je
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [RegGetKeySecurity](/windows/desktop/api/winreg/nf-winreg-reggetkeysecurity).
+Aby uzyskać więcej informacji, zobacz [RegGetKeySecurity](/windows/win32/api/winreg/nf-winreg-reggetkeysecurity).
 
 ##  <a name="m_hkey"></a>CRegKey:: m_hKey
 
@@ -436,7 +436,7 @@ Jeśli metoda zakończy się pomyślnie, wartość zwracana to ERROR_SUCCESS. Je
 > [!NOTE]
 >  Ta metoda nie powiadamia obiektu wywołującego o usunięciu określonego klucza.
 
-Aby uzyskać więcej szczegółów i przykładowego programu, zobacz [RegNotifyChangeKeyValue](/windows/desktop/api/winreg/nf-winreg-regnotifychangekeyvalue).
+Aby uzyskać więcej szczegółów i przykładowego programu, zobacz [RegNotifyChangeKeyValue](/windows/win32/api/winreg/nf-winreg-regnotifychangekeyvalue).
 
 ##  <a name="open"></a>CRegKey:: Open
 
@@ -458,7 +458,7 @@ Dojście otwartego klucza.
 Określa nazwę klucza, który ma zostać utworzony lub otwarty. Ta nazwa musi być podkluczem *hKeyParent*.
 
 *samDesired*<br/>
-Dostęp zabezpieczeń dla klucza. Wartość domyślna to KEY_ALL_ACCESS. Aby uzyskać listę możliwych wartości i opisów, zobacz [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) w Windows SDK.
+Dostęp zabezpieczeń dla klucza. Wartość domyślna to KEY_ALL_ACCESS. Aby uzyskać listę możliwych wartości i opisów, zobacz [RegCreateKeyEx](/windows/win32/api/winreg/nf-winreg-regcreatekeyexw) w Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -527,10 +527,10 @@ Jeśli metoda zakończy się pomyślnie, zostanie zwrócona wartość ERROR_SUCC
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda korzysta z programu `RegQueryValueEx` i potwierdza, że zwracany jest poprawny typ danych. Aby uzyskać więcej informacji, zobacz [działanie funkcji RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) .
+Ta metoda korzysta z programu `RegQueryValueEx` i potwierdza, że zwracany jest poprawny typ danych. Aby uzyskać więcej informacji, zobacz [działanie funkcji RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) .
 
 > [!IMPORTANT]
->  Ta metoda umożliwia obiektowi wywołującemu określenie dowolnej lokalizacji w rejestrze, co potencjalnie może odczytywać dane, które nie są zaufane. Ponadto funkcja [działanie funkcji RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) używana przez tę metodę nie obsługuje jawnie ciągów, które są zakończone wartością null. Kod wywołujący musi być sprawdzony dla obu warunków.
+>  Ta metoda umożliwia obiektowi wywołującemu określenie dowolnej lokalizacji w rejestrze, co potencjalnie może odczytywać dane, które nie są zaufane. Ponadto funkcja [działanie funkcji RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) używana przez tę metodę nie obsługuje jawnie ciągów, które są zakończone wartością null. Kod wywołujący musi być sprawdzony dla obu warunków.
 
 ##  <a name="querydwordvalue"></a>CRegKey:: QueryDWORDValue
 
@@ -556,10 +556,10 @@ Jeśli metoda zakończy się pomyślnie, zostanie zwrócona wartość ERROR_SUCC
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda korzysta z programu `RegQueryValueEx` i potwierdza, że zwracany jest poprawny typ danych. Aby uzyskać więcej informacji, zobacz [działanie funkcji RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) .
+Ta metoda korzysta z programu `RegQueryValueEx` i potwierdza, że zwracany jest poprawny typ danych. Aby uzyskać więcej informacji, zobacz [działanie funkcji RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) .
 
 > [!IMPORTANT]
->  Ta metoda umożliwia obiektowi wywołującemu określenie dowolnej lokalizacji w rejestrze, co potencjalnie może odczytywać dane, które nie są zaufane. Ponadto funkcja [działanie funkcji RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) używana przez tę metodę nie obsługuje jawnie ciągów, które są zakończone wartością null. Kod wywołujący musi być sprawdzony dla obu warunków.
+>  Ta metoda umożliwia obiektowi wywołującemu określenie dowolnej lokalizacji w rejestrze, co potencjalnie może odczytywać dane, które nie są zaufane. Ponadto funkcja [działanie funkcji RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) używana przez tę metodę nie obsługuje jawnie ciągów, które są zakończone wartością null. Kod wywołujący musi być sprawdzony dla obu warunków.
 
 ##  <a name="queryguidvalue"></a>CRegKey:: QueryGUIDValue
 
@@ -585,7 +585,7 @@ Jeśli metoda zakończy się pomyślnie, zostanie zwrócona wartość ERROR_SUCC
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda korzysta z `CRegKey::QueryStringValue` i konwertuje ciąg na identyfikator GUID przy użyciu [CLSIDFromString](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromstring).
+Ta metoda korzysta z `CRegKey::QueryStringValue` i konwertuje ciąg na identyfikator GUID przy użyciu [CLSIDFromString](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromstring).
 
 > [!IMPORTANT]
 >  Ta metoda umożliwia obiektowi wywołującemu określenie dowolnej lokalizacji w rejestrze, co potencjalnie może odczytywać dane, które nie są zaufane.
@@ -618,10 +618,10 @@ Jeśli metoda zakończy się pomyślnie, zostanie zwrócona wartość ERROR_SUCC
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda korzysta z programu `RegQueryValueEx` i potwierdza, że zwracany jest poprawny typ danych. Aby uzyskać więcej informacji, zobacz [działanie funkcji RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) .
+Ta metoda korzysta z programu `RegQueryValueEx` i potwierdza, że zwracany jest poprawny typ danych. Aby uzyskać więcej informacji, zobacz [działanie funkcji RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) .
 
 > [!IMPORTANT]
->  Ta metoda umożliwia obiektowi wywołującemu określenie dowolnej lokalizacji w rejestrze, co potencjalnie może odczytywać dane, które nie są zaufane. Ponadto funkcja [działanie funkcji RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) używana przez tę metodę nie obsługuje jawnie ciągów, które są zakończone wartością null. Kod wywołujący musi być sprawdzony dla obu warunków.
+>  Ta metoda umożliwia obiektowi wywołującemu określenie dowolnej lokalizacji w rejestrze, co potencjalnie może odczytywać dane, które nie są zaufane. Ponadto funkcja [działanie funkcji RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) używana przez tę metodę nie obsługuje jawnie ciągów, które są zakończone wartością null. Kod wywołujący musi być sprawdzony dla obu warunków.
 
 ##  <a name="queryqwordvalue"></a>CRegKey:: QueryQWORDValue
 
@@ -647,10 +647,10 @@ Jeśli metoda zakończy się pomyślnie, zostanie zwrócona wartość ERROR_SUCC
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda korzysta z programu `RegQueryValueEx` i potwierdza, że zwracany jest poprawny typ danych. Aby uzyskać więcej informacji, zobacz [działanie funkcji RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) .
+Ta metoda korzysta z programu `RegQueryValueEx` i potwierdza, że zwracany jest poprawny typ danych. Aby uzyskać więcej informacji, zobacz [działanie funkcji RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) .
 
 > [!IMPORTANT]
->  Ta metoda umożliwia obiektowi wywołującemu określenie dowolnej lokalizacji w rejestrze, co potencjalnie może odczytywać dane, które nie są zaufane. Ponadto funkcja [działanie funkcji RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) używana przez tę metodę nie obsługuje jawnie ciągów, które są zakończone wartością null. Kod wywołujący musi być sprawdzony dla obu warunków.
+>  Ta metoda umożliwia obiektowi wywołującemu określenie dowolnej lokalizacji w rejestrze, co potencjalnie może odczytywać dane, które nie są zaufane. Ponadto funkcja [działanie funkcji RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) używana przez tę metodę nie obsługuje jawnie ciągów, które są zakończone wartością null. Kod wywołujący musi być sprawdzony dla obu warunków.
 
 ##  <a name="querystringvalue"></a>CRegKey:: QueryStringValue
 
@@ -680,10 +680,10 @@ Jeśli metoda zakończy się pomyślnie, zostanie zwrócona wartość ERROR_SUCC
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda korzysta z programu `RegQueryValueEx` i potwierdza, że zwracany jest poprawny typ danych. Aby uzyskać więcej informacji, zobacz [działanie funkcji RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) .
+Ta metoda korzysta z programu `RegQueryValueEx` i potwierdza, że zwracany jest poprawny typ danych. Aby uzyskać więcej informacji, zobacz [działanie funkcji RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) .
 
 > [!IMPORTANT]
->  Ta metoda umożliwia obiektowi wywołującemu określenie dowolnej lokalizacji w rejestrze, co potencjalnie może odczytywać dane, które nie są zaufane. Ponadto funkcja [działanie funkcji RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) używana przez tę metodę nie obsługuje jawnie ciągów, które są zakończone wartością null. Kod wywołujący musi być sprawdzony dla obu warunków.
+>  Ta metoda umożliwia obiektowi wywołującemu określenie dowolnej lokalizacji w rejestrze, co potencjalnie może odczytywać dane, które nie są zaufane. Ponadto funkcja [działanie funkcji RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) używana przez tę metodę nie obsługuje jawnie ciągów, które są zakończone wartością null. Kod wywołujący musi być sprawdzony dla obu warunków.
 
 ##  <a name="queryvalue"></a>CRegKey:: QueryValue
 
@@ -794,7 +794,7 @@ Jeśli metoda zakończy się pomyślnie, wartość zwracana to ERROR_SUCCESS. Je
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda używa [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) do zapisania wartości w rejestrze.
+Ta metoda używa [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw) do zapisania wartości w rejestrze.
 
 ##  <a name="setdwordvalue"></a>CRegKey:: SetDWORDValue
 
@@ -818,7 +818,7 @@ Jeśli metoda zakończy się pomyślnie, wartość zwracana to ERROR_SUCCESS. Je
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda używa [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) do zapisania wartości w rejestrze.
+Ta metoda używa [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw) do zapisania wartości w rejestrze.
 
 ##  <a name="setguidvalue"></a>CRegKey:: SetGUIDValue
 
@@ -842,7 +842,7 @@ Jeśli metoda zakończy się pomyślnie, wartość zwracana to ERROR_SUCCESS. Je
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda korzysta z `CRegKey::SetStringValue` i konwertuje identyfikator GUID na ciąg za pomocą [StringFromGUID2](/windows/desktop/api/combaseapi/nf-combaseapi-stringfromguid2).
+Ta metoda korzysta z `CRegKey::SetStringValue` i konwertuje identyfikator GUID na ciąg za pomocą [StringFromGUID2](/windows/win32/api/combaseapi/nf-combaseapi-stringfromguid2).
 
 ##  <a name="setkeyvalue"></a>CRegKey:: SetKeyValue
 
@@ -892,10 +892,10 @@ Określa składniki deskryptora zabezpieczeń, które mają zostać ustawione. W
 |DACL_SECURITY_INFORMATION|Ustawia poufną listę kontroli dostępu (DACL) klucza. Klucz musi mieć dostęp WRITE_DAC lub proces wywołujący musi być właścicielem obiektu.|
 |GROUP_SECURITY_INFORMATION|Ustawia podstawowy identyfikator zabezpieczeń (SID) klucza. Klucz musi mieć dostęp WRITE_OWNER lub proces wywołujący musi być właścicielem obiektu.|
 |OWNER_SECURITY_INFORMATION|Ustawia identyfikator SID właściciela klucza. Klucz musi mieć dostęp WRITE_OWNER lub proces wywołujący musi być właścicielem obiektu lub mieć włączone uprawnienie SE_TAKE_OWNERSHIP_NAME.|
-|SACL_SECURITY_INFORMATION|Ustawia listę kontroli dostępu do systemu (SACL) klucza. Klucz musi mieć dostęp ACCESS_SYSTEM_SECURITY. Odpowiednim sposobem uzyskania dostępu jest włączenie [uprawnienia](/windows/desktop/secauthz/privileges) SE_SECURITY_NAME w bieżącym tokenie dostępu obiektu wywołującego, otwarcie dojścia do ACCESS_SYSTEM_SECURITY Access, a następnie wyłączenie tego uprawnienia.|
+|SACL_SECURITY_INFORMATION|Ustawia listę kontroli dostępu do systemu (SACL) klucza. Klucz musi mieć dostęp ACCESS_SYSTEM_SECURITY. Odpowiednim sposobem uzyskania dostępu jest włączenie [uprawnienia](/windows/win32/secauthz/privileges) SE_SECURITY_NAME w bieżącym tokenie dostępu obiektu wywołującego, otwarcie dojścia do ACCESS_SYSTEM_SECURITY Access, a następnie wyłączenie tego uprawnienia.|
 
 *formacie*<br/>
-Wskaźnik na strukturę [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-security_descriptor) , która określa atrybuty zabezpieczeń, które mają zostać ustawione dla określonego klucza.
+Wskaźnik na strukturę [SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor) , która określa atrybuty zabezpieczeń, które mają zostać ustawione dla określonego klucza.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -903,7 +903,7 @@ Jeśli metoda zakończy się pomyślnie, wartość zwracana to ERROR_SUCCESS. Je
 
 ### <a name="remarks"></a>Uwagi
 
-Ustawia atrybuty zabezpieczeń klucza. Aby uzyskać więcej informacji, zobacz [RegSetKeySecurity](/windows/desktop/api/winreg/nf-winreg-regsetkeysecurity) .
+Ustawia atrybuty zabezpieczeń klucza. Aby uzyskać więcej informacji, zobacz [RegSetKeySecurity](/windows/win32/api/winreg/nf-winreg-regsetkeysecurity) .
 
 ##  <a name="setmultistringvalue"></a>CRegKey:: SetMultiStringValue
 
@@ -927,7 +927,7 @@ Jeśli metoda zakończy się pomyślnie, wartość zwracana to ERROR_SUCCESS. Je
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda używa [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) do zapisania wartości w rejestrze.
+Ta metoda używa [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw) do zapisania wartości w rejestrze.
 
 ##  <a name="setqwordvalue"></a>CRegKey:: SetQWORDValue
 
@@ -951,7 +951,7 @@ Jeśli metoda zakończy się pomyślnie, wartość zwracana to ERROR_SUCCESS. Je
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda używa [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) do zapisania wartości w rejestrze.
+Ta metoda używa [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw) do zapisania wartości w rejestrze.
 
 ##  <a name="setstringvalue"></a>CRegKey:: SetStringValue
 
@@ -981,7 +981,7 @@ Jeśli metoda zakończy się pomyślnie, wartość zwracana to ERROR_SUCCESS. Je
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda używa [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) do zapisania wartości w rejestrze.
+Ta metoda używa [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw) do zapisania wartości w rejestrze.
 
 ##  <a name="setvalue"></a>CRegKey:: SetValue
 
@@ -1054,7 +1054,7 @@ Jeśli powiedzie się, zwraca ERROR_SUCCESS; w przeciwnym razie kod błędu ró�
 
 Dwie oryginalne wersje programu `SetValue` są oznaczone jako ATL_DEPRECATED i nie powinny być już używane. Kompilator wyświetli ostrzeżenie, jeśli są używane te formularze.
 
-Trzecia metoda wywołuje [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa).
+Trzecia metoda wywołuje [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,21 +1,21 @@
 ---
-title: tylko do odczytu (atrybut COM C++)
+title: ReadOnly (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.readonly
 helpviewer_keywords:
 - readonly attribute
 ms.assetid: 1246cadd-5304-43a9-beea-51153d12704d
-ms.openlocfilehash: 7eea071b62130c65fbb46ebc8827fc2b428c4c0c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93f7393f76596766e841dfc25f6d12e20e3db618
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407344"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514133"
 ---
 # <a name="readonly-c"></a>readonly (C++)
 
-Zabrania przypisania element członkowski danych.
+Zabrania przypisania do elementu członkowskiego danych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,13 +25,13 @@ Zabrania przypisania element członkowski danych.
 
 ## <a name="remarks"></a>Uwagi
 
-**Tylko do odczytu** atrybut C++ ma taką samą funkcjonalność jak [tylko do odczytu](/windows/desktop/Midl/readonly) atrybutów w MIDL.
+Atrybut **ReadOnly** C++ ma takie same funkcje jak atrybut MIDL [tylko do odczytu](/windows/win32/Midl/readonly) .
 
-Jeśli chcesz uniemożliwiają modyfikację parametru metody, należy użyć [w](in-cpp.md) atrybutu.
+Jeśli chcesz zabronić modyfikacji parametru metody, Użyj atrybutu [in](in-cpp.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod pokazuje wykorzystanie **tylko do odczytu** atrybutu:
+Poniższy kod przedstawia użycie atrybutu **ReadOnly** :
 
 ```cpp
 // cpp_attr_ref_readonly.cpp
@@ -53,12 +53,12 @@ __interface IFireTabCtrl
 
 |||
 |-|-|
-|**Dotyczy**|Metody interfejsu|
+|**Dotyczy**|Interface — Metoda|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

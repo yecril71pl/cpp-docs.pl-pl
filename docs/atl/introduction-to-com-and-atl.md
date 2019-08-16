@@ -7,32 +7,32 @@ helpviewer_keywords:
 - ATL, COM
 - COM objects, ATL
 ms.assetid: 35d6ae9c-abbb-42f0-9344-33f3c19ac3ce
-ms.openlocfilehash: bdfee1969781af5efdfbcdadfbbbce3f64d2dda0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a107fa9feee7b20a81ea4c1613003da1bcb47f60
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250976"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492084"
 ---
 # <a name="introduction-to-com-and-atl"></a>Wprowadzenie do modelu COM i ATL
 
-Ta sekcja zawiera krótkie wprowadzenie do COM i ATL.
+Ta sekcja zawiera krótkie wprowadzenie do modelu COM i ATL.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
 [Wprowadzenie do modelu COM](../atl/introduction-to-com.md)<br/>
-Zawiera omówienie składników obiektu modelu (COM) podstawowe pojęcia, w tym interfejsy, `IUnknown`, zliczanie odwołań, `QueryInterface`, organizowanie i agregacji.
+Zawiera omówienie podstawowych koncepcji Component Object Model (com), w tym interfejsów, `IUnknown`zliczania odwołań, `QueryInterface`, organizowania i agregacji.
 
 [Wprowadzenie do ATL](../atl/introduction-to-atl.md)<br/>
-W tym artykule omówiono, krótko mówiąc, co Active Template Library (ATL) została zaprojektowana dla biblioteki szablonów i numery wersji biblioteki ATL. Zawiera zalecenia dotyczące wybierania między ATL i MFC.
+W tym artykule omówiono sposób, w jaki Active Template Library (ATL) został zaprojektowany dla, biblioteki szablonów i numery wersji ATL. Zawiera zalecenia dotyczące wybierania między ATL a MFC.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[Model Component Object Model](/windows/desktop/com/the-component-object-model)<br/>
-Materiał zestawu Windows SDK w modelu COM.
+[Component Object Model](/windows/win32/com/the-component-object-model)<br/>
+Materiał Windows SDK w modelu COM.
 
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
-Zawiera łącza do tematów pojęciowych dotyczące programowania przy użyciu biblioteki Active Template Library.
+Zawiera łącza do tematów koncepcyjnych dotyczących sposobu programowania przy użyciu Active Template Library.
 
 [Przegląd klas ATL](../atl/atl-class-overview.md)<br/>
-Zawiera informacje i łącza do klas ATL.
+Zawiera informacje referencyjne i linki do klas ATL.

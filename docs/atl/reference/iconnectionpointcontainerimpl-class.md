@@ -11,16 +11,16 @@ helpviewer_keywords:
 - connection points [C++], container
 - IConnectionPointContainerImpl class
 ms.assetid: 10db5a8d-8be9-4d9d-8a82-8ab9ffe3e9d6
-ms.openlocfilehash: 06baa4dac3248d783648b8ce37e51250e0de2498
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 278ca6b1b9aac9539680d90b6fa0b18df22fc2f0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275519"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496025"
 ---
 # <a name="iconnectionpointcontainerimpl-class"></a>Klasa IConnectionPointContainerImpl
 
-Ta klasa implementuje kontener punktu połączenia, aby zarządzać kolekcją [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) obiektów.
+Ta klasa implementuje kontener punktu połączenia w celu zarządzania kolekcją obiektów [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,7 +33,7 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Z klasą pochodną `IConnectionPointContainerImpl`.
+Klasa, która pochodzi od `IConnectionPointContainerImpl`.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -41,18 +41,18 @@ Z klasą pochodną `IConnectionPointContainerImpl`.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[IConnectionPointContainerImpl::EnumConnectionPoints](#enumconnectionpoints)|Tworzy moduł wyliczający do iteracji przez punkty połączenia obsługiwane przez obiekt składnika.|
-|[IConnectionPointContainerImpl::FindConnectionPoint](#findconnectionpoint)|Pobiera wskaźnik do punktu połączenia, który obsługuje określonego identyfikatora IID interfejsu.|
+|[IConnectionPointContainerImpl::EnumConnectionPoints](#enumconnectionpoints)|Tworzy moduł wyliczający do iteracji przez punkty połączenia obsługiwane w obiekcie, który można połączyć.|
+|[IConnectionPointContainerImpl::FindConnectionPoint](#findconnectionpoint)|Pobiera wskaźnik interfejsu do punktu połączenia, który obsługuje określony identyfikator IID.|
 
 ## <a name="remarks"></a>Uwagi
 
-`IConnectionPointContainerImpl` implementuje kontener punktu połączenia, aby zarządzać kolekcją [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) obiektów. `IConnectionPointContainerImpl` udostępnia dwie metody, które klienta można wywołać, aby pobrać więcej informacji o obiekcie składnika:
+`IConnectionPointContainerImpl`implementuje kontener punktu połączenia w celu zarządzania kolekcją obiektów [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) . `IConnectionPointContainerImpl`Program udostępnia dwie metody, które klient może wywołać, aby uzyskać więcej informacji na temat połączonego obiektu:
 
-- `EnumConnectionPoints` umożliwia klientowi określenie, które wychodzące interfejsy obsługuje obiektu.
+- `EnumConnectionPoints`umożliwia klientowi określenie, które interfejsy wychodzące obsługuje obiekt.
 
-- `FindConnectionPoint` umożliwia klientowi określenie, czy obiekt obsługuje określony interfejs wychodzących.
+- `FindConnectionPoint`umożliwia klientowi określenie, czy obiekt obsługuje określony interfejs wychodzący.
 
-Aby dowiedzieć się, jak za pomocą punktów połączenia w ATL, zobacz artykuł [punkty połączenia](../../atl/atl-connection-points.md).
+Informacje o korzystaniu z punktów połączenia w ATL można znaleźć w temacie [punkty połączenia](../../atl/atl-connection-points.md)w artykule.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -62,11 +62,11 @@ Aby dowiedzieć się, jak za pomocą punktów połączenia w ATL, zobacz artyku�
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcom.h
+**Nagłówek:** atlcom. h
 
-##  <a name="enumconnectionpoints"></a>  IConnectionPointContainerImpl::EnumConnectionPoints
+##  <a name="enumconnectionpoints"></a>IConnectionPointContainerImpl::EnumConnectionPoints
 
-Tworzy moduł wyliczający do iteracji przez punkty połączenia obsługiwane przez obiekt składnika.
+Tworzy moduł wyliczający do iteracji przez punkty połączenia obsługiwane w obiekcie, który można połączyć.
 
 ```
 STDMETHOD(EnumConnectionPoints)(IEnumConnectionPoints** ppEnum);
@@ -74,11 +74,11 @@ STDMETHOD(EnumConnectionPoints)(IEnumConnectionPoints** ppEnum);
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IConnectionPointContainer::EnumConnectionPoints](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpointcontainer-enumconnectionpoints) w Windows SDK.
+Zobacz [IConnectionPointContainer:: EnumConnectionPoints](/windows/win32/api/ocidl/nf-ocidl-iconnectionpointcontainer-enumconnectionpoints) w Windows SDK.
 
-##  <a name="findconnectionpoint"></a>  IConnectionPointContainerImpl::FindConnectionPoint
+##  <a name="findconnectionpoint"></a>IConnectionPointContainerImpl::FindConnectionPoint
 
-Pobiera wskaźnik do punktu połączenia, który obsługuje określonego identyfikatora IID interfejsu.
+Pobiera wskaźnik interfejsu do punktu połączenia, który obsługuje określony identyfikator IID.
 
 ```
 STDMETHOD(FindConnectionPoint)(REFIID riid, IConnectionPoint** ppCP);
@@ -86,9 +86,9 @@ STDMETHOD(FindConnectionPoint)(REFIID riid, IConnectionPoint** ppCP);
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IConnectionPointContainer::FindConnectionPoint](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) w Windows SDK.
+Zobacz [IConnectionPointContainer:: FindConnectionPoint](/windows/win32/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) w Windows SDK.
 
 ## <a name="see-also"></a>Zobacz także
 
-[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer)<br/>
+[Przegląd klas](../../atl/atl-class-overview.md)

@@ -238,17 +238,17 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bActivateTabOnRightClick
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
-ms.openlocfilehash: 889bb9c48899691554a22435ffee71d6f68a6409
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a1637c77c326ddcfcb7f4dcb834ab6f6b2c0cf1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403892"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505456"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 
-Implementuje podstawowe funkcje dla okien z zakładkami.
-Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.
+Implementuje podstawowe funkcje okien z kartami.
+Aby uzyskać więcej szczegółów, zobacz kod źródłowy znajdujący się w folderze **VC\\atlmfc\\src\\MFC** instalacji programu Visual Studio.
 
 ## <a name="syntax"></a>Składnia
 
@@ -269,110 +269,110 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::CalcRectEdit](#calcrectedit)||
 |[CMFCBaseTabCtrl::CleanUp](#cleanup)||
 |[CMFCBaseTabCtrl::ClearImageList](#clearimagelist)||
-|[CMFCBaseTabCtrl::DetachTab](#detachtab)|Odłącza kartę z okna z kartami.|
+|[CMFCBaseTabCtrl::DetachTab](#detachtab)|Odłącza kartę od okna z kartami.|
 |[CMFCBaseTabCtrl::EnableActivateLastActive](#enableactivatelastactive)||
-|[CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor)|Włącza lub wyłącza automatyczne kartę kolorowanie.|
-|[CMFCBaseTabCtrl::EnableCustomToolTips](#enablecustomtooltips)|Włącza lub wyłącza niestandardowych etykietek narzędzi dla karty.|
-|[CMFCBaseTabCtrl::EnableInPlaceEdit](#enableinplaceedit)|Włącza lub wyłącza bezpośredniego edytowania etykiet.|
-|[CMFCBaseTabCtrl::EnableTabDetach](#enabletabdetach)|Umożliwia odłączanymi zakładkami.|
-|[CMFCBaseTabCtrl::EnableTabSwap](#enabletabswap)|Włącza lub wyłącza, czy użytkownik może zmienić kolejność tabulacji za pomocą myszy.|
-|[CMFCBaseTabCtrl::EnsureVisible](#ensurevisible)|Do momentu wyświetlenia określonej karty, Przewija kart. Ta metoda nie obowiązuje, jeśli określony karta już jest widoczna.|
+|[CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor)|Włącza lub wyłącza automatyczne Kolorowanie kart.|
+|[CMFCBaseTabCtrl::EnableCustomToolTips](#enablecustomtooltips)|Włącza lub wyłącza niestandardowe etykietki narzędzi dla kart.|
+|[CMFCBaseTabCtrl::EnableInPlaceEdit](#enableinplaceedit)|Włącza lub wyłącza bezpośrednie edytowanie etykiet kart.|
+|[CMFCBaseTabCtrl::EnableTabDetach](#enabletabdetach)|Włącza karty możliwe do odłączenia.|
+|[CMFCBaseTabCtrl::EnableTabSwap](#enabletabswap)|Włącza lub wyłącza, czy użytkownik może zmienić kolejność tabulacji przy użyciu myszy.|
+|[CMFCBaseTabCtrl::EnsureVisible](#ensurevisible)|Przewija karty do momentu wyświetlenia określonej karty. Ta metoda nie działa, jeśli określona karta jest już widoczna.|
 |[CMFCBaseTabCtrl::EnterDragMode](#enterdragmode)||
-|[CMFCBaseTabCtrl::FindTargetWnd](#findtargetwnd)|Zwraca okienko, który zawiera określony punkt.|
+|[CMFCBaseTabCtrl::FindTargetWnd](#findtargetwnd)|Zwraca okienko zawierające określony punkt.|
 |[CMFCBaseTabCtrl::FireChangeActiveTab](#firechangeactivetab)||
 |[CMFCBaseTabCtrl::FireChangingActiveTab](#firechangingactivetab)||
-|[CMFCBaseTabCtrl::GetActiveTab](#getactivetab)|Zwraca indeks aktywną kartę.|
-|[CMFCBaseTabCtrl::GetActiveTabColor](#getactivetabcolor)|Zwraca kolor tła aktywną kartę.|
-|[CMFCBaseTabCtrl::GetActiveTabTextColor](#getactivetabtextcolor)|Zwraca kolor tekstu w aktywnej karcie.|
-|[CMFCBaseTabCtrl::GetActiveWnd](#getactivewnd)|Zwraca wskaźnik aktywnej strony formantu.|
-|[CMFCBaseTabCtrl::GetAutoColors](#getautocolors)|Zwraca odwołanie do tablicy kolorów, które są używane do automatycznego kolorowanie.|
-|[CMFCBaseTabCtrl::GetFirstVisibleTab](#getfirstvisibletab)|Zwraca wskaźnik do pierwszej karcie widoczne.|
+|[CMFCBaseTabCtrl::GetActiveTab](#getactivetab)|Zwraca indeks aktywnej karty.|
+|[CMFCBaseTabCtrl::GetActiveTabColor](#getactivetabcolor)|Zwraca kolor tła aktywnej karty.|
+|[CMFCBaseTabCtrl::GetActiveTabTextColor](#getactivetabtextcolor)|Zwraca kolor tekstu aktywnej karty.|
+|[CMFCBaseTabCtrl::GetActiveWnd](#getactivewnd)|Zwraca wskaźnik do aktywnej strony kontrolki karta.|
+|[CMFCBaseTabCtrl::GetAutoColors](#getautocolors)|Zwraca odwołanie do tablicy kolorów, które są używane do automatycznego kolorowania.|
+|[CMFCBaseTabCtrl::GetFirstVisibleTab](#getfirstvisibletab)|Zwraca wskaźnik do pierwszej widocznej karty.|
 |[CMFCBaseTabCtrl::GetFirstVisibleTabNum](#getfirstvisibletabnum)||
-|[CMFCBaseTabCtrl::GetHighlightedTab](#gethighlightedtab)|Zwraca indeks aktualnie wyróżnionych kartę.|
+|[CMFCBaseTabCtrl::GetHighlightedTab](#gethighlightedtab)|Zwraca indeks aktualnie wyróżnionej karty.|
 |[CMFCBaseTabCtrl::GetImageList](#getimagelist)||
 |[CMFCBaseTabCtrl::GetImageSize](#getimagesize)||
 |[CMFCBaseTabCtrl::GetLastVisibleTab](#getlastvisibletab)||
-|[CMFCBaseTabCtrl::GetLocation](#getlocation)|Zwraca zmienną typu danych lokalizacji, która wskazuje, gdzie względem kontrolki karty znajduje się obszar karty. Na przykład, u góry lub u dołu.|
+|[CMFCBaseTabCtrl::GetLocation](#getlocation)|Zwraca zmienną typu danych lokalizacji, która wskazuje miejsce położenia obszaru karty względem kontrolki karta. Na przykład u góry lub u dołu.|
 |[CMFCBaseTabCtrl::GetMaxWindowSize](#getmaxwindowsize)||
-|[CMFCBaseTabCtrl::GetTabArea](#gettabarea)|Zwraca rozmiar i położenie wartości obszar karty w oknie z kartami. Pozycja wartości obszar karty jest zdefiniowana za pomocą współrzędnych.|
+|[CMFCBaseTabCtrl::GetTabArea](#gettabarea)|Zwraca rozmiar i położenie obszaru karty w oknie z kartami. Pozycja obszaru karty jest definiowana przy użyciu współrzędnych.|
 |[CMFCBaseTabCtrl::GetTabBkColor](#gettabbkcolor)|Zwraca kolor tła określonej karty.|
-|[CMFCBaseTabCtrl::GetTabBorderSize](#gettabbordersize)|Zwraca rozmiar obramowania kart w kontrolce karty.|
-|[CMFCBaseTabCtrl::GetTabByID](#gettabbyid)|Zwraca indeks kartę która jest identyfikowane za pomocą określonego identyfikatora.|
+|[CMFCBaseTabCtrl::GetTabBorderSize](#gettabbordersize)|Zwraca rozmiar obramowania karty w kontrolce karty.|
+|[CMFCBaseTabCtrl::GetTabByID](#gettabbyid)|Zwraca indeks karty, który jest identyfikowany przez określony identyfikator.|
 |[CMFCBaseTabCtrl::GetTabCloseButton](#gettabclosebutton)||
-|[CMFCBaseTabCtrl::GetTabFromHwnd](#gettabfromhwnd)|Zwraca indeks kartę zawierającą określony obiekt HWND.|
-|[CMFCBaseTabCtrl::GetTabFromPoint](#gettabfrompoint)|Zwraca kartę która zawiera określony punkt.|
+|[CMFCBaseTabCtrl::GetTabFromHwnd](#gettabfromhwnd)|Zwraca indeks karty zawierającej określony obiekt HWND.|
+|[CMFCBaseTabCtrl::GetTabFromPoint](#gettabfrompoint)|Zwraca kartę, która zawiera określony punkt.|
 |[CMFCBaseTabCtrl::GetTabFullWidth](#gettabfullwidth)||
-|[CMFCBaseTabCtrl::GetTabHicon](#gettabhicon)|Zwraca ikon skojarzonych z określoną kartą.|
+|[CMFCBaseTabCtrl::GetTabHicon](#gettabhicon)|Zwraca ikonę skojarzoną z określoną kartą.|
 |[CMFCBaseTabCtrl::GetTabID](#gettabid)|Zwraca identyfikator karty przy użyciu indeksu karty.|
 |[CMFCBaseTabCtrl::GetTabIcon](#gettabicon)|Zwraca identyfikator ikony dla określonej karty.|
-|[CMFCBaseTabCtrl::GetTabLabel](#gettablabel)|Zwraca tekst o określonej karty.|
-|[CMFCBaseTabCtrl::GetTabRect](#gettabrect)|Pobiera rozmiar i położenie określonej karty.|
+|[CMFCBaseTabCtrl::GetTabLabel](#gettablabel)|Zwraca tekst określonej karty.|
+|[CMFCBaseTabCtrl::GetTabRect](#gettabrect)|Pobiera rozmiar i pozycję określonej karty.|
 |[CMFCBaseTabCtrl::GetTabsHeight](#gettabsheight)||
 |[CMFCBaseTabCtrl::GetTabsRect](#gettabsrect)||
-|[CMFCBaseTabCtrl::GetTabTextColor](#gettabtextcolor)|Zwraca kolor tekstu w określonej karty.|
-|[CMFCBaseTabCtrl::GetTabWnd](#gettabwnd)|Zwraca wskaźnik do okienka w którym znajduje się w określonej karty.|
-|[CMFCBaseTabCtrl::GetTabWndNoWrapper](#gettabwndnowrapper)|Zwraca bezpośredni wskaźnik do formantu, który znajduje się na określonej karcie, nawet wtedy, gdy kontrolka ma otokę.|
-|[CMFCBaseTabCtrl::GetTabsNum](#gettabsnum)|Zwraca liczbę kart, które są zawarte w kontrolce karty.|
-|[CMFCBaseTabCtrl::GetToolTipCtrl](#gettooltipctrl)|Zwraca odwołanie do formantu etykietki narzędzia skojarzone z `CMFCBaseTabCtrl` obiektu.|
-|[CMFCBaseTabCtrl::GetVisibleTabsNum](#getvisibletabsnum)|Zwraca liczbę kart widocznych.|
+|[CMFCBaseTabCtrl::GetTabTextColor](#gettabtextcolor)|Zwraca kolor tekstu określonej karty.|
+|[CMFCBaseTabCtrl::GetTabWnd](#gettabwnd)|Zwraca wskaźnik do okienka znajdującego się na określonej stronie karty.|
+|[CMFCBaseTabCtrl::GetTabWndNoWrapper](#gettabwndnowrapper)|Zwraca bezpośredni wskaźnik do kontrolki, która znajduje się na określonej stronie karty, nawet jeśli kontrolka ma otokę.|
+|[CMFCBaseTabCtrl::GetTabsNum](#gettabsnum)|Zwraca liczbę kart znajdujących się w kontrolce karty.|
+|[CMFCBaseTabCtrl::GetToolTipCtrl](#gettooltipctrl)|Zwraca odwołanie do kontrolki ToolTip skojarzonej z `CMFCBaseTabCtrl` obiektem.|
+|[CMFCBaseTabCtrl::GetVisibleTabsNum](#getvisibletabsnum)|Zwraca liczbę widocznych kart.|
 |[CMFCBaseTabCtrl::HasImage](#hasimage)||
-|[CMFCBaseTabCtrl::HideSingleTab](#hidesingletab)|Ustawia opcję, która ukrywa karta w oknie, ale tylko wtedy, jeśli tylko jedną kartę widoczny jest wyświetlana w oknie z kartami.|
+|[CMFCBaseTabCtrl::HideSingleTab](#hidesingletab)|Ustawia opcję, która ukrywa kartę okna, ale tylko wtedy, gdy okno z kartami zawiera tylko jedną widoczną kartę.|
 |[CMFCBaseTabCtrl::InsertTab](#inserttab)|Wstawia nową kartę.|
 |[CMFCBaseTabCtrl::InvalidateTab](#invalidatetab)||
 |[CMFCBaseTabCtrl::IsActiveTabCloseButton](#isactivetabclosebutton)||
-|[CMFCBaseTabCtrl::IsAutoColor](#isautocolor)|Zwraca wartość wskazującą, czy z kartami okno jest w trybie automatyczne kolorów.|
+|[CMFCBaseTabCtrl::IsAutoColor](#isautocolor)|Zwraca wartość wskazującą, czy okno z kartami jest w trybie automatycznym kolorem.|
 |[CMFCBaseTabCtrl::IsAutoDestroyWindow](#isautodestroywindow)||
 |[CMFCBaseTabCtrl::IsColored](#iscolored)||
 |[CMFCBaseTabCtrl::IsDialogControl](#isdialogcontrol)||
 |[CMFCBaseTabCtrl::IsDrawNoPrefix](#isdrawnoprefix)||
-|[CMFCBaseTabCtrl::IsFlatFrame](#isflatframe)|Zwraca wartość wskazującą, czy ramki dla wartości obszar karty jest płaski lub 3-wymiarowy.|
+|[CMFCBaseTabCtrl::IsFlatFrame](#isflatframe)|Zwraca wartość wskazującą, czy ramka dla obszaru karty jest płaska, czy 3W.|
 |[CMFCBaseTabCtrl::IsFlatTab](#isflattab)||
-|[CMFCBaseTabCtrl::IsHideSingleTab](#ishidesingletab)|Zwraca wartość wskazującą, czy kontrolka karty są skonfigurowane tak, aby ukryć kartę, ale tylko wtedy, gdy okno z kartami ma tylko jedną kartę widoczne.|
+|[CMFCBaseTabCtrl::IsHideSingleTab](#ishidesingletab)|Zwraca wartość wskazującą, czy formant karty jest skonfigurowany do ukrycia karty, ale tylko wtedy, gdy okno z kartami ma tylko jedną widoczną kartę.|
 |[CMFCBaseTabCtrl::IsIconAdded](#isiconadded)||
-|[CMFCBaseTabCtrl::IsInPlaceEdit](#isinplaceedit)|Wskazuje, czy użytkownicy mogą modyfikować etykiety na karcie.|
+|[CMFCBaseTabCtrl::IsInPlaceEdit](#isinplaceedit)|Wskazuje, czy użytkownicy mogą modyfikować etykietę na karcie.|
 |[CMFCBaseTabCtrl::IsLeftRightRounded](#isleftrightrounded)||
 |[CMFCBaseTabCtrl::IsMDITab](#ismditab)||
-|[CMFCBaseTabCtrl::IsOneNoteStyle](#isonenotestyle)|Wskazuje, czy okno z kartami Wyświetla karty w stylu programu Microsoft OneNote.|
+|[CMFCBaseTabCtrl::IsOneNoteStyle](#isonenotestyle)|Wskazuje, czy okno z kartami zawiera karty w stylu programu Microsoft OneNote.|
 |[CMFCBaseTabCtrl::IsPtInTabArea](#isptintabarea)|Sprawdza, czy określony punkt istnieje w obszarze karty.|
 |[CMFCBaseTabCtrl::IsTabCloseButtonHighlighted](#istabclosebuttonhighlighted)||
 |[CMFCBaseTabCtrl::IsTabCloseButtonPressed](#istabclosebuttonpressed)||
-|[CMFCBaseTabCtrl::IsTabDetachable](#istabdetachable)|Wskazuje, czy karta jest odłączane.|
-|[CMFCBaseTabCtrl::IsTabIconOnly](#istabicononly)|Wskazuje, czy kartach są wyświetlane ikony, ale nie etykiety.|
-|[CMFCBaseTabCtrl::IsTabSwapEnabled](#istabswapenabled)|Wskazuje, czy użytkownik może zmienić położenie karty, przeciągając karty.|
-|[CMFCBaseTabCtrl::IsTabVisible](#istabvisible)|Wskazuje, czy określony karta jest widoczny.|
+|[CMFCBaseTabCtrl::IsTabDetachable](#istabdetachable)|Wskazuje, czy karta jest odłączana.|
+|[CMFCBaseTabCtrl::IsTabIconOnly](#istabicononly)|Wskazuje, czy karty wyświetlają ikony, ale nie etykiety.|
+|[CMFCBaseTabCtrl::IsTabSwapEnabled](#istabswapenabled)|Wskazuje, czy użytkownik może zmieniać pozycje tabulacji, przeciągając karty.|
+|[CMFCBaseTabCtrl::IsTabVisible](#istabvisible)|Wskazuje, czy określona karta jest widoczna.|
 |[CMFCBaseTabCtrl::IsVS2005Style](#isvs2005style)||
 |[CMFCBaseTabCtrl::MoveTab](#movetab)||
-|[CMFCBaseTabCtrl::OnChangeTabs](#onchangetabs)|Wywoływane przez platformę, gdy zmieni się liczba kart.|
+|[CMFCBaseTabCtrl::OnChangeTabs](#onchangetabs)|Wywoływane przez platformę, gdy zostanie zmieniona liczba kart.|
 |[CMFCBaseTabCtrl::OnDragEnter](#ondragenter)||
 |[CMFCBaseTabCtrl::OnDragLeave](#ondragleave)||
 |[CMFCBaseTabCtrl::OnDragOver](#ondragover)||
 |[CMFCBaseTabCtrl::OnDrop](#ondrop)||
 |[CMFCBaseTabCtrl::OnRenameTab](#onrenametab)||
-|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Używane przez klasę [CWinApp](../../mfc/reference/cwinapp-class.md) do translacji komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkcje Windows. (Przesłania [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
-|[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|Ponownie oblicza układ wewnętrznego okien z kartami.|
+|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Używane przez klasę [CWinApp](../../mfc/reference/cwinapp-class.md) do translacji komunikatów okna przed ich wysłaniem do funkcji [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) systemu Windows. (Przesłania [CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
+|[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|Ponownie oblicza układ wewnętrzny okna z kartami.|
 |[CMFCBaseTabCtrl::RemoveAllTabs](#removealltabs)|Usuwa wszystkie karty z okna z kartami.|
-|[CMFCBaseTabCtrl::RemoveTab](#removetab)|Usuwa kartę z oknem z kartami.|
+|[CMFCBaseTabCtrl::RemoveTab](#removetab)|Usuwa kartę z okna z kartami.|
 |[CMFCBaseTabCtrl::RenameTab](#renametab)||
-|[CMFCBaseTabCtrl::ResetImageList](#resetimagelist)|Resetuje listę obrazu który jest dołączony do okna z kartami.|
-|[CMFCBaseTabCtrl::Serialize](#serialize)|Odczytuje lub zapisuje ten obiekt z lub do archiwum. (Przesłania [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|
+|[CMFCBaseTabCtrl::ResetImageList](#resetimagelist)|Resetuje listę obrazów dołączoną do okna z kartami.|
+|[CMFCBaseTabCtrl::Serialize](#serialize)|Odczytuje lub zapisuje ten obiekt z lub do archiwum. (Przesłania [CObject:: serializować](../../mfc/reference/cobject-class.md#serialize)).|
 |[CMFCBaseTabCtrl::SetActiveTab](#setactivetab)|Aktywuje kartę.|
-|[CMFCBaseTabCtrl::SetActiveTabColor](#setactivetabcolor)|Ustawia kolor tła dla aktualnie aktywne karty.|
-|[CMFCBaseTabCtrl::SetActiveTabTextColor](#setactivetabtextcolor)|Określa kolor tekstu dla aktywnych kart.|
-|[CMFCBaseTabCtrl::SetAutoColors](#setautocolors)|Ustawia kartę sterowania kolorów, które są stosowane w trybie kolorowi automatycznemu.|
-|[CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc)|Ustawia klasy otoki, która jest używana dla obiektów, które nie pochodzą z [klasa CDockablePane](../../mfc/reference/cdockablepane-class.md).|
-|[CMFCBaseTabCtrl::SetDrawNoPrefix](#setdrawnoprefix)|Włącza i wyłącza przetwarzanie znaków prefiksu, gdy karta etykiety są rysowane.|
-|[CMFCBaseTabCtrl::SetImageList](#setimagelist)|Ustawia ikonę listy obrazów.|
+|[CMFCBaseTabCtrl::SetActiveTabColor](#setactivetabcolor)|Ustawia kolor tła aktualnie aktywnej karty.|
+|[CMFCBaseTabCtrl::SetActiveTabTextColor](#setactivetabtextcolor)|Ustawia kolor tekstu dla kart aktywnych.|
+|[CMFCBaseTabCtrl::SetAutoColors](#setautocolors)|Ustawia kolory formantu karty, które są stosowane w trybie automatycznym kolory.|
+|[CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc)|Ustawia klasę otoki, która jest używana dla obiektów, które nie są wyprowadzane z [klasy CDockablePane](../../mfc/reference/cdockablepane-class.md).|
+|[CMFCBaseTabCtrl::SetDrawNoPrefix](#setdrawnoprefix)|Włącza i wyłącza przetwarzanie znaków prefiksu po narysowaniu etykiet tabulacji.|
+|[CMFCBaseTabCtrl::SetImageList](#setimagelist)|Ustawia listę obrazów ikon.|
 |[CMFCBaseTabCtrl::SetLocation](#setlocation)||
 |[CMFCBaseTabCtrl::SetTabBkColor](#settabbkcolor)|Ustawia kolor tła dla określonej karty.|
-|[CMFCBaseTabCtrl::SetTabBorderSize](#settabbordersize)|Określa nowy rozmiar obramowanie karty.|
-|[CMFCBaseTabCtrl::SetTabHicon](#settabhicon)|Ustawia ikonę karty.|
-|[CMFCBaseTabCtrl::SetTabIcon](#settabicon)|Ustawia identyfikator ikony karty|
-|[CMFCBaseTabCtrl::SetTabIconOnly](#settabicononly)|Włącza i wyłącza tryb "tylko ikony" dla określonej karty.|
-|[CMFCBaseTabCtrl::SetTabLabel](#settablabel)|Ustawia etykieta karty równej określonej wartości ciągu.|
+|[CMFCBaseTabCtrl::SetTabBorderSize](#settabbordersize)|Ustawia nowy rozmiar obramowania karty.|
+|[CMFCBaseTabCtrl::SetTabHicon](#settabhicon)|Ustawia ikonę tabulacji.|
+|[CMFCBaseTabCtrl::SetTabIcon](#settabicon)|Ustawia identyfikator ikony karty.|
+|[CMFCBaseTabCtrl::SetTabIconOnly](#settabicononly)|Włącza i wyłącza tryb "tylko ikona" dla określonej karty.|
+|[CMFCBaseTabCtrl::SetTabLabel](#settablabel)|Ustawia etykietę karty równą określonej wartości ciągu.|
 |[CMFCBaseTabCtrl::SetTabsHeight](#settabsheight)||
-|[CMFCBaseTabCtrl::SetTabTextColor](#settabtextcolor)|Określa kolor tekstu dla określonej karty.|
-|[CMFCBaseTabCtrl::SetTabsOrder](#settabsorder)|Rozmieszcza kart w określonej kolejności.|
-|[CMFCBaseTabCtrl::ShowTab](#showtab)|Pokazuje lub ukrywa określonej karty.|
+|[CMFCBaseTabCtrl::SetTabTextColor](#settabtextcolor)|Ustawia kolor tekstu dla określonej karty.|
+|[CMFCBaseTabCtrl::SetTabsOrder](#settabsorder)|Rozmieszcza karty w określonej kolejności.|
+|[CMFCBaseTabCtrl::ShowTab](#showtab)|Pokazuje lub ukrywa określoną kartę.|
 |[CMFCBaseTabCtrl::StartRenameTab](#startrenametab)||
 |[CMFCBaseTabCtrl::SwapTabs](#swaptabs)||
 
@@ -380,32 +380,32 @@ class CMFCBaseTabCtrl : public CWnd
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCBaseTabCtrl::CreateWrapper](#createwrapper)|Tworzy otokę dla obiektu pochodną [CWnd](../../mfc/reference/cwnd-class.md) nie pochodzi od `CDockablePane`. Aby zadokować `CMFCBaseTabCtrl` obiektu każdego formantu osadzonego muszą mieć otoki dokowania lub pochodzić od `CDockablePane`.<br /><br /> Należy określić przy użyciu klasy otoki `SetDockingBayWrapperRTC`.|
+|[CMFCBaseTabCtrl::CreateWrapper](#createwrapper)|Tworzy otokę dla obiektu pochodnego od [CWnd](../../mfc/reference/cwnd-class.md) , który nie pochodzi od `CDockablePane`. Aby zadokować `CMFCBaseTabCtrl` obiekt, każdy osadzony formant musi mieć otokę Docker lub pochodzić od `CDockablePane`.<br /><br /> Klasa otoki jest ustawiana za pomocą `SetDockingBayWrapperRTC`.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCBaseTabCtrl::m_bActivateTabOnRightClick](#m_bactivatetabonrightclick)|Określa, czy karty są wybierane przez kliknięcie myszą po lewej stronie, lub kliknij prawym przyciskiem myszy.|
-|[CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow)|Określa, czy okienek, które są zawarte w kartach są niszczone, automatycznie.|
+|[CMFCBaseTabCtrl::m_bActivateTabOnRightClick](#m_bactivatetabonrightclick)|Określa, czy tabulatory są wybierane przy użyciu lewego kliknięcia przycisku myszy, czy kliknięcia prawym przyciskiem myszy.|
+|[CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow)|Określa, czy okienka, które są zawarte na kartach, są niszczone automatycznie.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CMFCBaseTabCtrl` Klasa jest klasą abstrakcyjną. W związku z tym nie może występować. Aby utworzyć okno z kartami, należy wyprowadzić klasę z `CMFCBaseTabCtrl`. Biblioteka MFC zawiera kilka przykładów klasy pochodnej, dwa z nich są [klasa CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md) i [klasa CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md).
+`CMFCBaseTabCtrl` Klasa jest klasą abstrakcyjną. W związku z tym nie można utworzyć wystąpienia. Aby utworzyć okno z kartami, należy wyprowadzić klasę z `CMFCBaseTabCtrl`. Biblioteka MFC zawiera niektóre pochodne przykłady klas, z których dwie są klasy [CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md) i [Klasa CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md).
 
-Począwszy od programu Visual Studio 2015, ta klasa obsługuje Microsoft Active Accessibility.
+Począwszy od programu Visual Studio 2015, ta klasa obsługuje funkcję Microsoft Active Accessibility.
 
-## <a name="customization-tips"></a>Porady dotyczące dostosowywania
+## <a name="customization-tips"></a>Wskazówki dotyczące dostosowywania
 
-Poniższe porady dotyczą `CMFCBaseTabCtrl Class` i wszystkie klasy, które dziedziczą po niej:
+Poniższe porady dotyczą `CMFCBaseTabCtrl Class` i każdej klasy, która dziedziczy z niej:
 
-- Jeśli włączysz odłączanymi zakładkami, przechowuje wskaźniki do okien z zakładkami. Można tworzyć i dynamicznie zniszczone te odłączanymi zakładkami. W związku z tym wskaźniki mogą stać się nieprawidłowe.
+- W przypadku włączenia kart z możliwością odłączenia nie należy pozostawiać wskaźników do okien z kartami. Te karty możliwe do odłączenia mogą być tworzone i niszczone dynamicznie. W związku z tym wskaźniki mogą być nieprawidłowe.
 
-- Kontrolka karty można skonfigurować tak, aby użytkownicy mogą przechodzić karty dynamicznie w formancie karty za pomocą myszy. Ta funkcja jest wbudowana w `CMFCBaseTabCtrl` klasy. Aby ją włączyć, należy wywołać [CMFCBaseTabCtrl::EnableTabSwap](#enabletabswap).
+- Można skonfigurować kontrolkę karta, aby umożliwić użytkownikom dynamiczne przenoszenie kart w kontrolce karta przy użyciu myszy. Ta funkcja jest wbudowana w `CMFCBaseTabCtrl` klasę. Aby ją włączyć, wywołaj [CMFCBaseTabCtrl:: EnableTabSwap](#enabletabswap).
 
-- Domyślnie podczas dodawania ich do kontrolki karty są odłączane karty. Można również dodać-odłączanymi zakładkami za pomocą [CMFCBaseTabCtrl::AddTab](#addtab). Jeśli ustawisz parametr `bDetachable` do `FALSE`, karcie nie będą odłączane. Możesz również zmienić czy karty są rozłączne, wywołując metodę [CMFCBaseTabCtrl::EnableTabDetach](#enabletabdetach).
+- Domyślnie karty są odłączane po dodaniu ich do kontrolki karta. Możesz również dodać karty odłączane za pomocą [CMFCBaseTabCtrl:: AddTab](#addtab). Jeśli ustawisz parametr `bDetachable` na `FALSE`, karta nie zostanie odłączona. Możesz również zmienić, czy karty są odłączane przez wywołanie metody [CMFCBaseTabCtrl:: EnableTabDetach](#enabletabdetach).
 
-- Obiekty, które są uzyskiwane z [klasa CWnd](../../mfc/reference/cwnd-class.md) można umieścić na pasku sterowania dokowalne lub na karcie dokowalnych. Całe formant aby być zadokowane, konieczne będzie dokonanie `CWnd` dokowalne obiektu. Aby to osiągnąć, MFC wykorzystuje klasy otoki. Jest to klasa otoki [klasa CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Wszelkie `CWnd` obiektów, które są dodawane do paska sterowania dokowalne lub dokowalne karta zostanie zawinięta wewnątrz `CDockablePaneAdapter` obiektu. Możesz wyłączyć automatyczne zawijanie przez ustawienie parametru `m_bEnableWrapping` z Twojej `CMFCBaseTablCtrl` obiekt `FALSE`. Możesz również zmienić klasę, która aplikacja będzie używana jako otoka przy użyciu metody [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc).
+- Obiekty, które są wyprowadzane z [klasy CWnd](../../mfc/reference/cwnd-class.md) , można umieścić na pasku sterowania było dokować lub karcie było dokować. Aby można było zadokować cały formant, należy zmienić `CWnd` obiekt było dokować. Aby to osiągnąć, MFC używa klasy otoki. Ta klasa otoki jest [klasą CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Wszystkie `CWnd` obiekty, które są dodawane do paska sterowania było dokować lub karty było dokować, zostaną opakowane `CDockablePaneAdapter` wewnątrz obiektu. Automatyczne zawijanie można wyłączyć, ustawiając parametr `m_bEnableWrapping` `CMFCBaseTablCtrl` obiektu na `FALSE`. Możesz również zmienić klasę, która będzie używana przez aplikację jako otoka przy użyciu metody [CMFCBaseTabCtrl:: SetDockingBarWrapperRTC](#setdockingbarwrapperrtc).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -419,11 +419,11 @@ Poniższe porady dotyczą `CMFCBaseTabCtrl Class` i wszystkie klasy, które dzie
 
 ## <a name="requirements"></a>Wymagania
 
-**Header:** afxbasetabctrl.h
+**Nagłówek:** afxbasetabctrl. h
 
-##  <a name="addicon"></a>  CMFCBaseTabCtrl::AddIcon
+##  <a name="addicon"></a>CMFCBaseTabCtrl:: addicon
 
-Dodaje ikony do listy ikon w chronionym `CMap m_mapAddedIcons` elementu członkowskiego.
+Dodaje ikonę do listy ikon w chronionym `CMap m_mapAddedIcons` elemencie członkowskim.
 
 ```
 void AddIcon(
@@ -434,16 +434,16 @@ void AddIcon(
 ### <a name="parameters"></a>Parametry
 
 *hIcon*<br/>
-[in] Dojście do ikony, które mają zostać dodane.
+podczas Dojście do ikony, która ma zostać dodana.
 
 *iIcon*<br/>
-[in] Liczony od zera indeks ikony w chronionym `CImageList m_Images` elementu członkowskiego.
+podczas Indeks (liczony od zera) ikony w chronionym `CImageList m_Images` elemencie członkowskim.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="addtab"></a>  CMFCBaseTabCtrl::AddTab
+##  <a name="addtab"></a>CMFCBaseTabCtrl::AddTab
 
-Dodaje nową kartę do formantu karty.
+Dodaje nową kartę do kontrolki karta.
 
 ```
 virtual void AddTab(
@@ -462,25 +462,25 @@ virtual void AddTab(
 ### <a name="parameters"></a>Parametry
 
 *pTabWnd*<br/>
-[in] Wskaźnik do okna, reprezentujący przez tę metodę jako nową kartę.
+podczas Wskaźnik do okna, które ta metoda reprezentuje jako nową kartę.
 
 *lpszTabLabel*<br/>
-[in] Ciąg, który zawiera etykietę na nowej karcie.
+podczas Ciąg, który zawiera etykietę nowej karty.
 
 *uiImageId*<br/>
-[in] Identyfikator obrazu z listy obrazów. Kontrolka karty używa tego obrazu jako ikona dla nowej karty.
+podczas Identyfikator obrazu z listy obrazów. Kontrolka karta używa tego obrazu jako ikony nowej karty.
 
 *uiResTabLabel*<br/>
-[in] Identyfikator zasobu dla etykiety.
+podczas Identyfikator zasobu dla etykiety.
 
 *bDetachable*<br/>
-[in] Parametrów logiczny, który określa, czy nowa karta jest odłączane.
+podczas Parametr logiczny, który określa, czy nowa karta jest odłączana.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli *pTabWnd* wskazuje na obiekt, który nie pochodzi od [klasa CDockablePane](../../mfc/reference/cdockablepane-class.md) i, jeśli *bDetachable* ma wartość PRAWDA, szablon automatycznie tworzy otokę dla *pTabWnd* obiektu. Otoka sprawia, że *pTabWnd* odłączane obiektu. Domyślnie otoki jest wystąpieniem [klasa CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Jeśli funkcje oferowane przez domyślną otokę jest nieodpowiednia, należy użyć [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) metodę, aby określić różne otoki.
+Jeśli *pTabWnd* wskazuje na obiekt, który nie pochodzi od [klasy CDockablePane](../../mfc/reference/cdockablepane-class.md) i jeśli *bDetachable* ma wartość true, struktura automatycznie tworzy otokę dla obiektu *pTabWnd* . Otoka sprawia, że obiekt *pTabWnd* jest odłączony. Domyślnie otoka jest wystąpieniem [klasy CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Jeśli funkcje oferowane przez otokę domyślną nie będą akceptowalne, użyj metody [CMFCBaseTabCtrl:: SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) , aby określić inną otokę.
 
-##  <a name="applyrestoredtabinfo"></a>  CMFCBaseTabCtrl::ApplyRestoredTabInfo
+##  <a name="applyrestoredtabinfo"></a>CMFCBaseTabCtrl::ApplyRestoredTabInfo
 
 ```
 virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
@@ -488,7 +488,7 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bUseTabIndexes*<br/>
+podczas *bUseTabIndexes*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
@@ -500,11 +500,11 @@ void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bAutoDestroy*<br/>
+podczas *bAutoDestroy*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="calcrectedit"></a>  CMFCBaseTabCtrl::CalcRectEdit
+##  <a name="calcrectedit"></a>CMFCBaseTabCtrl::CalcRectEdit
 
 ```
 virtual void CalcRectEdit(CRect& rectEdit);
@@ -512,11 +512,11 @@ virtual void CalcRectEdit(CRect& rectEdit);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *rectEdit*<br/>
+podczas *rectEdit*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="cleanup"></a>  CMFCBaseTabCtrl::CleanUp
+##  <a name="cleanup"></a>CMFCBaseTabCtrl:: CleanUp
 
 ```
 virtual void CleanUp();
@@ -524,7 +524,7 @@ virtual void CleanUp();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="clearimagelist"></a>  CMFCBaseTabCtrl::ClearImageList
+##  <a name="clearimagelist"></a>CMFCBaseTabCtrl::ClearImageList
 
 ```
 virtual void ClearImageList();
@@ -532,9 +532,9 @@ virtual void ClearImageList();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="createwrapper"></a>  CMFCBaseTabCtrl::CreateWrapper
+##  <a name="createwrapper"></a>CMFCBaseTabCtrl:: isotoka
 
-Tworzy otokę dla ramki okna, która jest pochodną [klasa CWnd](../../mfc/reference/cwnd-class.md) , ale nie pochodzi od [klasa CDockablePane](../../mfc/reference/cdockablepane-class.md).
+Tworzy otokę dla okna ramki, które jest wyprowadzane z [klasy CWnd](../../mfc/reference/cwnd-class.md) , ale nie pochodzi z [klasy CDockablePane](../../mfc/reference/cdockablepane-class.md).
 
 ```
 virtual CWnd* CreateWrapper(
@@ -546,29 +546,29 @@ virtual CWnd* CreateWrapper(
 ### <a name="parameters"></a>Parametry
 
 *pWndToWrap*<br/>
-[in] Wskaźnik do okna ramki, który jest otoczony.
+podczas Wskaźnik do okna ramki, które jest opakowane.
 
 *lpszTabLabel*<br/>
-[in] Ciąg, który zawiera etykietę dla okna.
+podczas Ciąg, który zawiera etykietę okna.
 
 *bDetachable*<br/>
-[in] Parametr logiczny, który wskazuje, czy okno jest odłączane.
+podczas Parametr logiczny, który wskazuje, czy okno jest odłączane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do otoki pochodną `CDockablePane` klasy, jeśli `CreateWrapper` pomyślnie utworzy klasę otoki dla *pWndToWrap*. Jeśli metoda nie powiedzie się, jego retruns *pWndToWrap*.
+Wskaźnik do otoki pochodnej klasy, `CDockablePane` Jeśli `CreateWrapper` pomyślnie tworzy klasę otoki dla *pWndToWrap*. Jeśli metoda zakończy się niepowodzeniem, retruns *pWndToWrap*.
 
 ### <a name="remarks"></a>Uwagi
 
-Okno z kartami można zadokować dowolnego obiektu pochodzącego z `CWnd`. Jednak w kolejności `CMFCBaseTabCtrl Class` obiekt, aby można było dokować, każdy obiekt na `CMFCBaseTabCtrl` musi być rozłączne. W związku z tym `CMFCBaseTabCtrl` jest automatycznie zawijany, wszystkie obiekty, które nie pochodzą z `CDockablePane`.
+Okno z kartami może zadokować dowolny obiekt pochodzący z `CWnd`. Aby jednak `CMFCBaseTabCtrl` obiekt był było dokować, każdy obiekt w elemencie musi być odłączony. `CMFCBaseTabCtrl Class` W związku `CMFCBaseTabCtrl` z tym program automatycznie otacza wszystkie obiekty, które nie `CDockablePane`są wyprowadzane z.
 
-Domyślnie `CMFCBaseTabCtrl` tworzy wystąpienia [klasa CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Aby zmienić otoki domyślnej klasy, należy wywołać [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc).
+Domyślnie program `CMFCBaseTabCtrl` tworzy wystąpienia [klasy CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Aby zmienić domyślną klasę otoki, wywołaj [CMFCBaseTabCtrl:: SetDockingBarWrapperRTC](#setdockingbarwrapperrtc).
 
-Jeśli *pWndToWrap* jest tworzony na podstawie `CDockablePane`, ta metoda nie tworzy otokę. Zamiast tego będzie się niepowodzeniem i zwróci *pWndToWrap*.
+Jeśli *pWndToWrap* pochodzi od `CDockablePane`, ta metoda nie utworzy otoki. Zamiast tego zakończy się niepowodzeniem i zwróci *pWndToWrap*.
 
 ##  <a name="detachtab"></a>  CMFCBaseTabCtrl::DetachTab
 
-Struktura wywołuje tę metodę, aby odłączyć kartę z kontrolki karty.
+Struktura wywołuje tę metodę, aby odłączyć kartę od kontrolki karta.
 
 ```
 virtual BOOL DetachTab(
@@ -580,23 +580,23 @@ virtual BOOL DetachTab(
 ### <a name="parameters"></a>Parametry
 
 *dockMethod*<br/>
-[in] Wyliczany typ danych dostarczone przez [klasa CBasePane](../../mfc/reference/cbasepane-class.md). Ten typ danych określa metodę, który został użyty do Odłącz kartę.
+podczas Typ danych wyliczanych dostarczonych przez [klasę CBasePane](../../mfc/reference/cbasepane-class.md). Ten typ danych określa metodę, która została użyta w celu odłączenia karty.
 
 *nTabNum*<br/>
-[in] Liczony od zera indeks karty, który ma zostać odłączony.
+podczas Indeks (liczony od zera) karty, który ma zostać odłączony.
 
 *bHide*<br/>
-[in] Parametr logiczny, który wskazuje, czy ramach ukrywał odłączone karty.
+podczas Parametr logiczny, który wskazuje, czy na platformie powinna być ukryta odłączona karta.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli karta określony przez *nTabNum* jest niemożliwe do odłączenia, ta funkcja nie powiedzie się i zwraca wartość FALSE.
+Jeśli karta określona przez *nTabNum* nie jest odłączana, ta funkcja kończy się niepowodzeniem i zwraca wartość false.
 
-##  <a name="enableactivatelastactive"></a>  CMFCBaseTabCtrl::EnableActivateLastActive
+##  <a name="enableactivatelastactive"></a>CMFCBaseTabCtrl::EnableActivateLastActive
 
 ```
 void EnableActivateLastActive(BOOL bLastActive = TRUE);
@@ -604,13 +604,13 @@ void EnableActivateLastActive(BOOL bLastActive = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bLastActive*<br/>
+podczas *bLastActive*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="enableautocolor"></a>  CMFCBaseTabCtrl::EnableAutoColor
+##  <a name="enableautocolor"></a>CMFCBaseTabCtrl::EnableAutoColor
 
-Określa, czy środowisko wykorzystuje kolory tła automatyczne podczas rysowania na karcie.
+Określa, czy struktura używa automatycznych kolorów tła podczas rysowania karty.
 
 ```
 void EnableAutoColor(BOOL bEnable = TRUE);
@@ -618,18 +618,18 @@ void EnableAutoColor(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bWłączenie*<br/>
-[in] Parametrów logiczny, który określa, czy struktura używa automatycznego kolorów.
+*bEnable*<br/>
+podczas Parametr logiczny, który określa, czy struktura używa automatycznych kolorów.
 
 ### <a name="remarks"></a>Uwagi
 
-Kontrolka karty posiada szereg kilka wstępnie zdefiniowanych kolorów. Jeśli struktura używa automatycznego kolorów, każda karta w różnych zakładkach przypisywany następny kolor z tej tablicy.
+Kontrolka karta zawiera tablicę kilku predefiniowanych kolorów. Gdy struktura używa automatycznych kolorów, każda karta w serii kart ma przypisany następny kolor z tej tablicy.
 
-Domyślnie kolory automatycznego są określane przez kolorów zdefiniowanych przez bibliotekę. Możesz podać niestandardowy tablicę kolorów, wywołując [CMFCBaseTabCtrl::SetAutoColors](#setautocolors).
+Domyślnie kolory automatyczne są określane przez zdefiniowane przez bibliotekę kolory. Możesz dostarczyć niestandardową tablicę kolorów, wywołując [CMFCBaseTabCtrl:: SetAutoColors](#setautocolors).
 
-##  <a name="enablecustomtooltips"></a>  CMFCBaseTabCtrl::EnableCustomToolTips
+##  <a name="enablecustomtooltips"></a>CMFCBaseTabCtrl::EnableCustomToolTips
 
-Umożliwia niestandardowych etykietek narzędzi dla formantu karty.
+Włącza niestandardowe etykietki narzędzi dla kontrolki karta.
 
 ```
 BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
@@ -637,20 +637,20 @@ BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bWłączenie*<br/>
-[in] Wartość logiczna określająca, czy używać niestandardowych etykietek narzędzi.
+*bEnable*<br/>
+podczas Wartość logiczna określająca, czy mają być używane niestandardowe etykietki narzędzi.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli to się powiedzie; w przeciwnym razie wartość FALSE.
+Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli włączone są niestandardowe etykietki narzędzi, formant karty wysyła komunikat AFX_WM_ON_GET_TAB_TOOLTIP do głównej ramki. Jeśli chcesz obsługiwać niestandardowe etykietki narzędzi w aplikacji, ramką głównego okna musi obsługiwać tę metodę i Podaj tekst niestandardowa etykietka narzędzia. Aby uzyskać więcej informacji dotyczących tekstu niestandardowa etykietka narzędzia, zobacz [struktura CMFCTabToolTipInfo](../../mfc/reference/cmfctabtooltipinfo-structure.md).
+Jeśli są włączone niestandardowe etykietki narzędzi, formant karty wysyła komunikat AFX_WM_ON_GET_TAB_TOOLTIP do ramki głównej. Jeśli chcesz obsługiwać niestandardowe etykietki narzędzi w aplikacji, okno głównej ramki musi obsługiwać tę metodę i zapewniać tekst niestandardowego etykietki narzędzia. Aby uzyskać więcej informacji na temat zapewniania niestandardowego tekstu etykietki narzędzi, zobacz [CMFCTabToolTipInfo Structure](../../mfc/reference/cmfctabtooltipinfo-structure.md).
 
-##  <a name="enableinplaceedit"></a>  CMFCBaseTabCtrl::EnableInPlaceEdit
+##  <a name="enableinplaceedit"></a>CMFCBaseTabCtrl::EnableInPlaceEdit
 
-Umożliwia bezpośrednie edytowanie etykiet kartę przez użytkownika.
+Umożliwia bezpośrednie edytowanie etykiet kart przez użytkownika.
 
 ```
 virtual void EnableInPlaceEdit(BOOL bEnable) = 0;
@@ -658,20 +658,20 @@ virtual void EnableInPlaceEdit(BOOL bEnable) = 0;
 
 ### <a name="parameters"></a>Parametry
 
-*bWłączenie*<br/>
-[in] Parametr logiczny, który określa, czy włączyć bezpośredniego edytowania etykiet kartę.
+*bEnable*<br/>
+podczas Parametr logiczny określający, czy włączyć bezpośrednie edytowanie etykiet kart.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie bezpośredniego edytowania etykiet karta jest wyłączona dla kontrolki karty.
+Domyślnie bezpośrednie edytowanie etykiet kart jest wyłączone dla kontrolek karta.
 
-Można włączyć bezpośredniego edytowania dla podzbioru na kartach formant karty. Aby to zrobić, należy zastąpić metodę `CMFCBaseTabCtrl::StartRenameTab`. `StartRenameTab` powinna zwrócić wartość różną od zera dla wszystkich kart, które obsługują bezpośredniego edytowania etykiet.
+Możesz włączyć bezpośrednią edycję podzbioru kart w kontrolce karty. Aby to zrobić, Zastąp metodę `CMFCBaseTabCtrl::StartRenameTab`. `StartRenameTab`powinna zwracać wartość różną od zera dla wszystkich kart, które obsługują bezpośrednią edycję etykiet kart.
 
-W `CMFCBaseTabCtrl Class`, ta metoda jest czysta funkcja wirtualna i nie ma implementacji. Jeśli wyprowadzić klasę z `CMFCBaseTabCtrl`, musisz zaimplementować tę funkcję.
+`CMFCBaseTabCtrl Class`W, ta metoda jest czystą funkcją wirtualną i nie ma implementacji. W przypadku wyprowadzania klasy z `CMFCBaseTabCtrl`, należy zaimplementować tę funkcję.
 
-##  <a name="enabletabdetach"></a>  CMFCBaseTabCtrl::EnableTabDetach
+##  <a name="enabletabdetach"></a>CMFCBaseTabCtrl::EnableTabDetach
 
-Umożliwia odłączanymi zakładkami.
+Włącza karty możliwe do odłączenia.
 
 ```
 virtual BOOL EnableTabDetach(
@@ -682,18 +682,18 @@ virtual BOOL EnableTabDetach(
 ### <a name="parameters"></a>Parametry
 
 *iTab*<br/>
-[in] Liczony od zera indeks karty.
+podczas Indeks karty (liczony od zera).
 
-*bWłączenie*<br/>
-[in] Wartość logiczna wskazująca, czy na karcie odłączane.
+*bEnable*<br/>
+podczas Wartość logiczna wskazująca, czy karta ma być odłączana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli to się powiedzie; w przeciwnym razie wartość FALSE.
+Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
-##  <a name="enabletabswap"></a>  CMFCBaseTabCtrl::EnableTabSwap
+##  <a name="enabletabswap"></a>CMFCBaseTabCtrl::EnableTabSwap
 
-Umożliwia użytkownikowi zmianę kolejności tabulacji za pomocą myszy.
+Umożliwia użytkownikowi zmianę kolejności tabulacji przy użyciu myszy.
 
 ```
 void EnableTabSwap(BOOL bEnable);
@@ -701,16 +701,16 @@ void EnableTabSwap(BOOL bEnable);
 
 ### <a name="parameters"></a>Parametry
 
-*bWłączenie*<br/>
-[in] Wartość logiczna wskazująca, czy ma zostać włączona karta zamianę.
+*bEnable*<br/>
+podczas Wartość logiczna wskazująca, czy należy włączyć zamienianie tabulacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Po włączeniu zamianę kartę użytkownik może przeciągnij kartę i zmień jego względne położenie w kontrolce karty.
+Gdy zamienianie tabulatorów jest włączone, użytkownik może przeciągnąć kartę i zmienić jej położenie względne w kontrolce karty.
 
-##  <a name="ensurevisible"></a>  CMFCBaseTabCtrl::EnsureVisible
+##  <a name="ensurevisible"></a>CMFCBaseTabCtrl::EnsureVisible
 
-Do momentu wyświetlenia określonej karty, Przewija kart.
+Przewija karty do momentu wyświetlenia określonej karty.
 
 ```
 virtual BOOL EnsureVisible(int iTab);
@@ -719,19 +719,19 @@ virtual BOOL EnsureVisible(int iTab);
 ### <a name="parameters"></a>Parametry
 
 *iTab*<br/>
-[in] Liczony od zera indeks karty.
+podczas Indeks karty (liczony od zera).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda nie ma wpływu Jeśli karcie wskazywanym przez *iTab* jest już widoczna.
+Ta metoda nie działa, jeśli karta wskazywana przez *ITAB* jest już widoczna.
 
-Domyślnie ta metoda nie jest obsługiwana przez `CMFCBaseTabCtrl Class`. Należy zaimplementować tę funkcję w niestandardowej klasy pochodzącej od `CMFCBaseTabCtrl` Jeśli tej kontrolki niestandardowej karty obsługuje kartę przewijania. Ta metoda jest obsługiwana przez [klasa CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md).
+Domyślnie ta metoda nie jest obsługiwana przez `CMFCBaseTabCtrl Class`program. Ta funkcja powinna zostać zaimplementowana w klasie niestandardowej pochodnej `CMFCBaseTabCtrl` od, jeśli ta kontrolka karty niestandardowej obsługuje przewijanie karty. Ta metoda jest obsługiwana przez [klasę CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md).
 
-##  <a name="enterdragmode"></a>  CMFCBaseTabCtrl::EnterDragMode
+##  <a name="enterdragmode"></a>CMFCBaseTabCtrl::EnterDragMode
 
 ```
 void EnterDragMode();
@@ -739,7 +739,7 @@ void EnterDragMode();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="findtargetwnd"></a>  CMFCBaseTabCtrl::FindTargetWnd
+##  <a name="findtargetwnd"></a>CMFCBaseTabCtrl::FindTargetWnd
 
 Identyfikuje okienko, które zawiera określony punkt.
 
@@ -749,16 +749,16 @@ virtual CWnd* FindTargetWnd(const CPoint& pt) = 0;
 
 ### <a name="parameters"></a>Parametry
 
-*(czas pacyficzny)*<br/>
-[in] Współrzędne punktu, która jest zdefiniowana za pomocą obszaru klienckiego [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) obiektu.
+*zmiennoprzecinkow*<br/>
+podczas Punkt, który jest zdefiniowany za pomocą współrzędnych obszaru klienta obiektu [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiektu, jeśli operacja się powiedzie; w przeciwnym razie wartość NULL.
+Wskaźnik do obiektu [CWnd](../../mfc/reference/cwnd-class.md) , jeśli się to powiedzie; w przeciwnym razie wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-W `CMFCBaseTabCtrl` klasy, ta metoda jest czysta funkcja wirtualna: należy zaimplementować go Jeśli wyprowadzić klasę z `CMFCBaseTabCtrl`.
+W klasie ta metoda jest czystą funkcją wirtualną: należy ją zaimplementować, jeśli pochodna jest `CMFCBaseTabCtrl`Klasa. `CMFCBaseTabCtrl`
 
 ##  <a name="firechangeactivetab"></a>  CMFCBaseTabCtrl::FireChangeActiveTab
 
@@ -768,11 +768,11 @@ virtual void FireChangeActiveTab(int nNewTab);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nNewTab*<br/>
+podczas *nNewTab*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="firechangingactivetab"></a>  CMFCBaseTabCtrl::FireChangingActiveTab
+##  <a name="firechangingactivetab"></a>CMFCBaseTabCtrl::FireChangingActiveTab
 
 ```
 virtual BOOL FireChangingActiveTab(int nNewTab);
@@ -780,13 +780,13 @@ virtual BOOL FireChangingActiveTab(int nNewTab);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nNewTab*<br/>
+podczas *nNewTab*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getactivetab"></a>  CMFCBaseTabCtrl::GetActiveTab
+##  <a name="getactivetab"></a>CMFCBaseTabCtrl::GetActiveTab
 
 Pobiera indeks aktualnie aktywnej karty.
 
@@ -796,9 +796,9 @@ virtual int GetActiveTab() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczony od zera indeks w aktywnej karcie; wartość -1, jeśli nie aktywnej karty.
+Indeks aktywnych kart (liczony od zera); -1, jeśli nie ma aktywnej karty.
 
-##  <a name="getactivetabcolor"></a>  CMFCBaseTabCtrl::GetActiveTabColor
+##  <a name="getactivetabcolor"></a>CMFCBaseTabCtrl::GetActiveTabColor
 
 Pobiera kolor tła aktualnie aktywnej karty.
 
@@ -808,13 +808,13 @@ virtual COLORREF GetActiveTabColor() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A [COLORREF](/windows/desktop/gdi/colorref) wartość, która określa kolor tła aktywną kartę.
+Wartość [COLORREF](/windows/win32/gdi/colorref) , która określa kolor tła aktywnej karty.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie kolor tła w aktywnej karcie jest COLOR_WINDOW. Można zmienić kolor tła dla aktywnej karty przy użyciu metody [CMFCBaseTabCtrl::SetActiveTabColor](#setactivetabcolor).
+Domyślnie kolor tła aktywnej karty to COLOR_WINDOW. Kolor tła dla aktywnej karty można zmienić przy użyciu metody [CMFCBaseTabCtrl:: SetActiveTabColor](#setactivetabcolor).
 
-##  <a name="getactivetabtextcolor"></a>  CMFCBaseTabCtrl::GetActiveTabTextColor
+##  <a name="getactivetabtextcolor"></a>CMFCBaseTabCtrl::GetActiveTabTextColor
 
 Pobiera kolor tekstu dla aktywnej karty.
 
@@ -824,15 +824,15 @@ virtual COLORREF GetActiveTabTextColor() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A [COLORREF](/windows/desktop/gdi/colorref) wartość, która określa kolor tekstu w aktywnej karcie.
+Wartość [COLORREF](/windows/win32/gdi/colorref) , która określa kolor tekstu aktywnej karty.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie kolor tekstu dla aktywnych kart jest COLOR_WINDOWTEXT. Możesz zmienić kolor tekstu przy użyciu metody [CMFCBaseTabCtrl::SetActiveTabTextColor](#setactivetabtextcolor).
+Domyślnie kolor tekstu dla aktywnych kart to COLOR_WINDOWTEXT. Kolor tekstu można zmienić za pomocą metody [CMFCBaseTabCtrl:: SetActiveTabTextColor](#setactivetabtextcolor).
 
-##  <a name="getactivewnd"></a>  CMFCBaseTabCtrl::GetActiveWnd
+##  <a name="getactivewnd"></a>CMFCBaseTabCtrl::GetActiveWnd
 
-Pobiera wskaźnik do okna karty aktualnie aktywne.
+Pobiera wskaźnik do aktywnego okna karty.
 
 ```
 virtual CWnd* GetActiveWnd() const;
@@ -844,7 +844,7 @@ Wskaźnik do okna.
 
 ##  <a name="getautocolors"></a>  CMFCBaseTabCtrl::GetAutoColors
 
-Pobiera tablicę kolorów używanych do kolorowanie automatyczne.
+Pobiera tablicę kolorów używanych do automatycznego kolorowania.
 
 ```
 const CArray<COLORREF,COLORREF>& GetAutoColors() const;
@@ -852,15 +852,15 @@ const CArray<COLORREF,COLORREF>& GetAutoColors() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do tablicy [COLORREF](/windows/desktop/gdi/colorref) wartości [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) kartę automatyczne kolorowanie używa obiektu.
+Odwołanie do tablicy wartości [COLORREF](/windows/win32/gdi/colorref) , które są używane przez obiekt [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) do automatycznego kolorowania kart.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie w ramach inicjuje macierzy kolorów do kolorów zdefiniowanych przez bibliotekę. Możesz podać niestandardowy tablicę kolorów, wywołując metodę [CMFCBaseTabCtrl::SetAutoColors](#setautocolors).
+Domyślnie, struktura Inicjuje tablicę kolorów do kolorów zdefiniowanych przez bibliotekę. Możesz dostarczyć niestandardową tablicę kolorów, wywołując metodę [CMFCBaseTabCtrl:: SetAutoColors](#setautocolors).
 
 ##  <a name="getfirstvisibletab"></a>  CMFCBaseTabCtrl::GetFirstVisibleTab
 
-Pobiera wskaźnik do pierwszej karcie widoczne.
+Pobiera wskaźnik do pierwszej widocznej karty.
 
 ```
 virtual CWnd* GetFirstVisibleTab(int& iTabNum);
@@ -873,22 +873,22 @@ virtual CWnd* GetFirstVisibleTab(
 ### <a name="parameters"></a>Parametry
 
 *iTabNum*<br/>
-[out] Odwołanie do wartości całkowitej. Ta metoda zapisuje liczony od zera indeks pierwszej karcie widoczne dla tego parametru.
+określoną Odwołanie do liczby całkowitej. Ta metoda zapisuje indeks (liczony od zera) pierwszej widocznej karty do tego parametru.
 
 *iStartFrom*<br/>
-[in] Liczony od zera indeks pierwszej karcie, aby sprawdzić.
+podczas Indeks (liczony od zera) pierwszej karty do sprawdzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do pierwszej karcie widoczne w przypadku powodzenia; w przeciwnym razie wartość NULL.
+Wskaźnik do pierwszej widocznej karty, jeśli się powiedzie; w przeciwnym razie wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli ta metoda nie powiedzie się, zapisuje wartość -1 do *iStartFrom*.
+W przypadku niepowodzenia ta metoda zapisuje wartość-1 do *iStartFrom*.
 
-Jeśli *iStartFrom* jest większy niż lub równa liczbie kart kontrolki karty `GetFirstVisibleTab` automatycznie zakończy się niepowodzeniem.
+Jeśli wartość *iStartFrom* jest większa lub równa liczbie kart w kontrolce karta, `GetFirstVisibleTab` automatyczne kończy się niepowodzeniem.
 
-##  <a name="getfirstvisibletabnum"></a>  CMFCBaseTabCtrl::GetFirstVisibleTabNum
+##  <a name="getfirstvisibletabnum"></a>CMFCBaseTabCtrl::GetFirstVisibleTabNum
 
 ```
 virtual int GetFirstVisibleTabNum() const;
@@ -898,9 +898,9 @@ virtual int GetFirstVisibleTabNum() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="gethighlightedtab"></a>  CMFCBaseTabCtrl::GetHighlightedTab
+##  <a name="gethighlightedtab"></a>CMFCBaseTabCtrl::GetHighlightedTab
 
-Pobiera indeks obecnie podświetlony kartę.
+Pobiera indeks aktualnie wyróżnionej karty.
 
 ```
 int GetHighlightedTab() const;
@@ -908,7 +908,7 @@ int GetHighlightedTab() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczony od zera indeks karta wyróżniona.
+Indeks (liczony od zera) wyróżnionej karty.
 
 ##  <a name="getimagelist"></a>  CMFCBaseTabCtrl::GetImageList
 
@@ -930,7 +930,7 @@ virtual CSize GetImageSize() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getlastvisibletab"></a>  CMFCBaseTabCtrl::GetLastVisibleTab
+##  <a name="getlastvisibletab"></a>CMFCBaseTabCtrl::GetLastVisibleTab
 
 ```
 virtual CWnd* GetLastVisibleTab(int& iTabNum);
@@ -938,15 +938,15 @@ virtual CWnd* GetLastVisibleTab(int& iTabNum);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *iTabNum*<br/>
+podczas *iTabNum*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getlocation"></a>  CMFCBaseTabCtrl::GetLocation
+##  <a name="getlocation"></a>CMFCBaseTabCtrl:: GetLocation
 
-Pobiera lokalizację część obszaru karty formantu karty.
+Pobiera lokalizację części obszaru kart kontrolki karta.
 
 ```
 Location GetLocation() const;
@@ -954,13 +954,13 @@ Location GetLocation() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Lokalizacja obszaru karty.
+Lokalizacja obszaru kart.
 
 ### <a name="remarks"></a>Uwagi
 
-Wartości lokalizacji obszaru karty możliwe są LOCATION_BOTTOM i LOCATION_TOP.
+Możliwe wartości lokalizacji obszaru kart to LOCATION_BOTTOM i LOCATION_TOP.
 
-##  <a name="getmaxwindowsize"></a>  CMFCBaseTabCtrl::GetMaxWindowSize
+##  <a name="getmaxwindowsize"></a>CMFCBaseTabCtrl::GetMaxWindowSize
 
 ```
 virtual CSize GetMaxWindowSize() const;
@@ -970,9 +970,9 @@ virtual CSize GetMaxWindowSize() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="gettabarea"></a>  CMFCBaseTabCtrl::GetTabArea
+##  <a name="gettabarea"></a>CMFCBaseTabCtrl::GetTabArea
 
-Pobiera rozmiar i położenie wartości obszar karty formantu karty.
+Pobiera rozmiar i położenie obszaru karty kontrolki karta.
 
 ```
 virtual void GetTabArea(
@@ -983,18 +983,18 @@ virtual void GetTabArea(
 ### <a name="parameters"></a>Parametry
 
 *rectTabAreaTop*<br/>
-[in] Odwołanie do `CRect` obiektu. `GetTabArea` używa tego obiektu do przechowywania, rozmiar i położenie obszaru górnej karty.
+podczas Odwołanie do `CRect` obiektu. `GetTabArea`używa tego obiektu do przechowywania rozmiaru i położenia górnego obszaru kart.
 
 *rectTabAreaBottom*<br/>
-[in] Odwołanie do `CRect` obiektu. `GetTabArea` używa tego obiektu, do przechowywania, rozmiar i położenie wartości obszar karty w dolnej.
+podczas Odwołanie do `CRect` obiektu. `GetTabArea`używa tego obiektu do przechowywania rozmiaru i pozycji dolnego obszaru kart.
 
 ### <a name="remarks"></a>Uwagi
 
-Po `GetTabArea` zwraca, `CRect` parametrów zawiera rozmiar i położenie wartości obszar karty we współrzędnych klienta formantu karty. Jeśli obszar nie karty u góry lub u dołu kontrolki karty `rectTabAreaTop` lub `rectTabAreaBottom` są puste.
+Po `GetTabArea` powrocie `CRect` parametry zawierają rozmiar i położenie obszaru karty w współrzędnej klienta kontrolki karta. Jeśli nie ma obszaru karty w górnej lub dolnej części kontrolki `rectTabAreaTop` karta lub `rectTabAreaBottom` jest pusta.
 
-W `CMFCBaseTabCtrl Class`, ta metoda jest czysta funkcja wirtualna i nie ma implementacji. Jeśli wyprowadzić klasę z `CMFCBaseTabCtrl`, musisz zaimplementować tę funkcję.
+`CMFCBaseTabCtrl Class`W, ta metoda jest czystą funkcją wirtualną i nie ma implementacji. Jeśli klasa pochodzi z `CMFCBaseTabCtrl`, musisz zaimplementować tę funkcję.
 
-##  <a name="gettabbkcolor"></a>  CMFCBaseTabCtrl::GetTabBkColor
+##  <a name="gettabbkcolor"></a>CMFCBaseTabCtrl::GetTabBkColor
 
 Pobiera kolor tła określonej karty.
 
@@ -1005,15 +1005,15 @@ virtual COLORREF GetTabBkColor(int iTab) const;
 ### <a name="parameters"></a>Parametry
 
 *iTab*<br/>
-[in] Liczony od zera indeks karty.
+podczas Indeks karty (liczony od zera).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A [COLORREF](/windows/desktop/gdi/colorref) wartość, która określa kolor tła na określonej karcie; -1 Jeśli *iTab* znajduje się poza zakresem.
+Wartość [COLORREF](/windows/win32/gdi/colorref) , która wskazuje kolor tła określonej karty; -1, jeśli *ITAB* jest poza zakresem.
 
 ##  <a name="gettabbordersize"></a>  CMFCBaseTabCtrl::GetTabBorderSize
 
-Pobiera informacje o rozmiarze obramowania kart w kontrolce karty.
+Pobiera rozmiar obramowania karty w kontrolce karty.
 
 ```
 virtual int GetTabBorderSize() const;
@@ -1021,15 +1021,15 @@ virtual int GetTabBorderSize() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Rozmiar obramowanie karty, w pikselach.
+Rozmiar obramowania karty (w pikselach).
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślny rozmiar obramowanie karty to trzy pikseli. Ten rozmiar obramowania można zmienić za pomocą metody [CMFCBaseTabCtrl::SetTabBorderSize](#settabbordersize).
+Domyślny rozmiar obramowania karty to trzy piksele. Ten rozmiar obramowania można zmienić przy użyciu metody [CMFCBaseTabCtrl:: SetTabBorderSize](#settabbordersize).
 
-##  <a name="gettabbyid"></a>  CMFCBaseTabCtrl::GetTabByID
+##  <a name="gettabbyid"></a>CMFCBaseTabCtrl::GetTabByID
 
-Pobiera indeks karty, w oparciu o identyfikator karty.
+Pobiera indeks karty na podstawie identyfikatora karty.
 
 ```
 virtual int GetTabByID(int id) const;
@@ -1038,17 +1038,17 @@ virtual int GetTabByID(int id) const;
 ### <a name="parameters"></a>Parametry
 
 *id*<br/>
-[in] Identyfikator karty
+podczas Identyfikator karty.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczony od zera indeks karty, jeśli zostanie znaleziony; -1, jeśli nie znaleziono Identyfikatora kartę.
+Indeks (liczony od zera) karty, jeśli zostanie znaleziony; -1, jeśli nie można odnaleźć identyfikatora karty.
 
 ### <a name="remarks"></a>Uwagi
 
-Karta identyfikatory są przypisywane automatycznie po dodaniu kart do formantu karty.
+Identyfikatory kart są przypisywane automatycznie po dodaniu kart do kontrolki karta.
 
-##  <a name="gettabclosebutton"></a>  CMFCBaseTabCtrl::GetTabCloseButton
+##  <a name="gettabclosebutton"></a>CMFCBaseTabCtrl::GetTabCloseButton
 
 ```
 CRect GetTabCloseButton() const;
@@ -1058,9 +1058,9 @@ CRect GetTabCloseButton() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="gettabfromhwnd"></a>  CMFCBaseTabCtrl::GetTabFromHwnd
+##  <a name="gettabfromhwnd"></a>CMFCBaseTabCtrl::GetTabFromHwnd
 
-Pobiera indeks kartę która zawiera określony obiekt HWND.
+Pobiera indeks karty zawierającej określony obiekt HWND.
 
 ```
 virtual int GetTabFromHwnd(HWND hwnd) const;
@@ -1068,16 +1068,16 @@ virtual int GetTabFromHwnd(HWND hwnd) const;
 
 ### <a name="parameters"></a>Parametry
 
-*hwnd*<br/>
-[in] Dojście do okna.
+*Właściwość*<br/>
+podczas Uchwyt do okna.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczony od zera indeks karty, jeśli to się powiedzie; -1, jeśli karta nie zawiera *hwnd*.
+Indeks (liczony od zera) karty, jeśli się powiedzie; -1, jeśli żadna karta nie zawiera parametru *HWND*.
 
-##  <a name="gettabfrompoint"></a>  CMFCBaseTabCtrl::GetTabFromPoint
+##  <a name="gettabfrompoint"></a>CMFCBaseTabCtrl::GetTabFromPoint
 
-Pobiera kartę która zawiera określony punkt.
+Pobiera kartę, która zawiera określony punkt.
 
 ```
 virtual int GetTabFromPoint(CPoint& pt) const;
@@ -1085,14 +1085,14 @@ virtual int GetTabFromPoint(CPoint& pt) const;
 
 ### <a name="parameters"></a>Parametry
 
-*(czas pacyficzny)*<br/>
-[in] Punkt we współrzędnych klienta formant karty.
+*zmiennoprzecinkow*<br/>
+podczas Punkt w współrzędnej klienta kontrolki karta.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks kartę zawierającą *pt*; -1, jeśli karta nie zawiera *pt*.
+Indeks karty zawierającej *pt*; -1, jeśli żadna karta nie zawiera *pt*.
 
-##  <a name="gettabfullwidth"></a>  CMFCBaseTabCtrl::GetTabFullWidth
+##  <a name="gettabfullwidth"></a>CMFCBaseTabCtrl::GetTabFullWidth
 
 ```
 virtual int GetTabFullWidth(int iTab) const;
@@ -1100,15 +1100,15 @@ virtual int GetTabFullWidth(int iTab) const;
 
 ### <a name="parameters"></a>Parametry
 
-[in] *iTab*<br/>
+podczas *ITAB*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="gettabhicon"></a>  CMFCBaseTabCtrl::GetTabHicon
+##  <a name="gettabhicon"></a>CMFCBaseTabCtrl::GetTabHicon
 
-Zwraca HICON skojarzone z określoną kartą.
+Zwraca HICON skojarzoną z określoną kartą.
 
 ```
 virtual HICON GetTabHicon(int iTab) const;
@@ -1117,15 +1117,15 @@ virtual HICON GetTabHicon(int iTab) const;
 ### <a name="parameters"></a>Parametry
 
 *iTab*<br/>
-[in] Liczony od zera indeks dla karty.
+podczas Indeks (liczony od zera) dla karty.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-HICON skojarzone z etykieta karty, jeśli to się powiedzie; Wartość NULL, jeśli nie ma żadnych HICON lub jeśli metoda nie powiedzie się.
+HICON skojarzone z etykietą karty, jeśli się powiedzie; Wartość NULL, jeśli nie ma HICON lub jeśli metoda zakończy się niepowodzeniem.
 
-##  <a name="gettabicon"></a>  CMFCBaseTabCtrl::GetTabIcon
+##  <a name="gettabicon"></a>CMFCBaseTabCtrl::GetTabIcon
 
-Pobiera ikon skojarzonych z określoną kartą.
+Pobiera ikonę skojarzoną z określoną kartą.
 
 ```
 virtual UINT GetTabIcon(int iTab) const;
@@ -1134,19 +1134,19 @@ virtual UINT GetTabIcon(int iTab) const;
 ### <a name="parameters"></a>Parametry
 
 *iTab*<br/>
-[in] Liczony od zera indeks karty.
+podczas Indeks karty (liczony od zera).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Identyfikator ikony dla określonej karty, jeśli to się powiedzie; -1, jeśli ten indeks jest nieprawidłowy.
+Identyfikator ikony dla określonej karty, jeśli się powiedzie; -1, jeśli indeks jest nieprawidłowy.
 
 ### <a name="remarks"></a>Uwagi
 
-[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) obiekt przechowuje ikony wewnętrznego [CImageList](../../mfc/reference/cimagelist-class.md) obiektu.
+Obiekt [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) przechowuje ikony w wewnętrznym obiekcie [Korzystanie CImageList](../../mfc/reference/cimagelist-class.md) .
 
-##  <a name="gettabid"></a>  CMFCBaseTabCtrl::GetTabID
+##  <a name="gettabid"></a>CMFCBaseTabCtrl::GetTabID
 
-Pobiera identyfikator określony przez kolejność tabulacji kartę.
+Pobiera identyfikator karty określonej przez indeks karty.
 
 ```
 int GetTabID(int iTab) const;
@@ -1155,15 +1155,15 @@ int GetTabID(int iTab) const;
 ### <a name="parameters"></a>Parametry
 
 *iTab*<br/>
-[in] Liczony od zera indeks karty.
+podczas Indeks karty (liczony od zera).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Identyfikator karty lub wartość-1, jeśli *iTab* znajduje się poza zakresem.
+Identyfikator karty lub-1, jeśli *ITAB* jest poza zakresem.
 
-##  <a name="gettablabel"></a>  CMFCBaseTabCtrl::GetTabLabel
+##  <a name="gettablabel"></a>CMFCBaseTabCtrl::GetTabLabel
 
-Pobiera tekst etykieta karty.
+Pobiera tekst etykiety karty.
 
 ```
 virtual BOOL GetTabLabel(
@@ -1174,22 +1174,22 @@ virtual BOOL GetTabLabel(
 ### <a name="parameters"></a>Parametry
 
 *iTab*<br/>
-[in] Liczony od zera indeks karty.
+podczas Indeks karty (liczony od zera).
 
 *strLabel*<br/>
-[out] Odwołanie do `CString` obiektu. Ta metoda przechowuje etykietę karty, w tym parametrze.
+określoną Odwołanie do `CString` obiektu. Ta metoda przechowuje etykietę karty w tym parametrze.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli to się powiedzie; Wartość FALSE w przeciwnym razie.
+Wartość TRUE, jeśli powodzenie; W przeciwnym razie zwraca wartość FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda kończy się niepowodzeniem, jeśli indeks *iTab* jest nieprawidłowy.
+Ta metoda kończy się niepowodzeniem, jeśli indeks *ITAB* jest nieprawidłowy.
 
-Ustaw etykietę dla karty, po utworzeniu karty przy użyciu [CMFCBaseTabCtrl::AddTab](#addtab). Etykietę można zmienić po utworzeniu, za pomocą metody [CMFCBaseTabCtrl::SetTabLabel](#settablabel).
+Etykieta dla karty jest ustawiana podczas tworzenia karty przy użyciu [CMFCBaseTabCtrl:: AddTab](#addtab). Możesz również zmienić etykietę po utworzeniu przy użyciu metody [CMFCBaseTabCtrl:: SetTabLabel](#settablabel).
 
-##  <a name="gettabrect"></a>  CMFCBaseTabCtrl::GetTabRect
+##  <a name="gettabrect"></a>CMFCBaseTabCtrl::GetTabRect
 
 Pobiera rozmiar i położenie określonej karty.
 
@@ -1202,16 +1202,16 @@ virtual BOOL GetTabRect(
 ### <a name="parameters"></a>Parametry
 
 *iTab*<br/>
-[in] Liczony od zera indeks karty.
+podczas Indeks karty (liczony od zera).
 
-*Rect*<br/>
-[out] Odwołanie do `CRect` obiektu. Ta metoda przechowuje rozmiar i położenie karty, w tym parametrze.
+*cinania*<br/>
+określoną Odwołanie do `CRect` obiektu. Ta metoda przechowuje rozmiar i położenie karty w tym parametrze.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli to się powiedzie; Wartość FALSE, jeśli kolejność tabulacji jest nieprawidłowa.
+Wartość TRUE, jeśli powodzenie; Wartość FALSE, jeśli indeks karty jest nieprawidłowy.
 
-##  <a name="gettabsheight"></a>  CMFCBaseTabCtrl::GetTabsHeight
+##  <a name="gettabsheight"></a>CMFCBaseTabCtrl::GetTabsHeight
 
 ```
 virtual int GetTabsHeight() const;
@@ -1221,9 +1221,9 @@ virtual int GetTabsHeight() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="gettabsnum"></a>  CMFCBaseTabCtrl::GetTabsNum
+##  <a name="gettabsnum"></a>CMFCBaseTabCtrl::GetTabsNum
 
-Pobiera numer karty w kontrolce karty.
+Pobiera liczbę kart w kontrolce karty.
 
 ```
 virtual int GetTabsNum() const;
@@ -1233,7 +1233,7 @@ virtual int GetTabsNum() const;
 
 Liczba kart w kontrolce karty.
 
-##  <a name="gettabsrect"></a>  CMFCBaseTabCtrl::GetTabsRect
+##  <a name="gettabsrect"></a>CMFCBaseTabCtrl::GetTabsRect
 
 ```
 virtual void GetTabsRect(CRect& rect) const;
@@ -1241,11 +1241,11 @@ virtual void GetTabsRect(CRect& rect) const;
 
 ### <a name="parameters"></a>Parametry
 
-[in] *rect*<br/>
+podczas *prostokąt*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="gettabtextcolor"></a>  CMFCBaseTabCtrl::GetTabTextColor
+##  <a name="gettabtextcolor"></a>CMFCBaseTabCtrl::GetTabTextColor
 
 Pobiera kolor tekstu dla określonej karty.
 
@@ -1256,15 +1256,15 @@ virtual COLORREF GetTabTextColor(int iTab) const;
 ### <a name="parameters"></a>Parametry
 
 *iTab*<br/>
-[in] Liczony od zera indeks karty.
+podczas Indeks karty (liczony od zera).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A [COLORREF](/windows/desktop/gdi/colorref) parametrem, który wskazuje kolor tekstu w określoną kartę; -1 Jeśli *iTab* znajduje się poza zakresem.
+Parametr [COLORREF](/windows/win32/gdi/colorref) wskazujący kolor tekstu określonej karty; -1, jeśli *ITAB* jest poza zakresem.
 
-##  <a name="gettabwnd"></a>  CMFCBaseTabCtrl::GetTabWnd
+##  <a name="gettabwnd"></a>CMFCBaseTabCtrl::GetTabWnd
 
-Zwraca wskaźnik do okienko w którym znajduje się na określonej karcie.
+Zwraca wskaźnik do okienka znajdującego się na określonej karcie.
 
 ```
 virtual CWnd* GetTabWnd(int iTab) const;
@@ -1273,21 +1273,21 @@ virtual CWnd* GetTabWnd(int iTab) const;
 ### <a name="parameters"></a>Parametry
 
 *iTab*<br/>
-[in] Liczony od zera indeks karty.
+podczas Indeks karty (liczony od zera).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który znajduje się na karcie, *iTab* określa. Wartość NULL, jeśli *iTab* jest nieprawidłowy.
+Wskaźnik do obiektu [CWnd](../../mfc/reference/cwnd-class.md) , który znajduje się na karcie, którą określa *ITAB* . Wartość NULL, jeśli *ITAB* jest nieprawidłowy.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwrócony obiekt jest tą, która aplikacja dodawane, gdy wywoływana jest albo [CMFCBaseTabCtrl::AddTab](#addtab) lub [CMFCBaseTabCtrl::InsertTab](#inserttab).
+Zwrócony obiekt jest tym, że aplikacja dodana po wywołaniu elementu [CMFCBaseTabCtrl:: AddTab](#addtab) lub [CMFCBaseTabCtrl:: InsertTab](#inserttab).
 
-Jeśli obiekt na karcie ma otoki, ta metoda zwróci otokę dla obiektu. Aby uzyskać więcej informacji na temat otoki zobacz [CMFCBaseTabCtrl::CreateWrapper](#createwrapper). Jeśli chcesz uzyskać dostęp wskaźnik do obiektu bezpośrednio, bez otoki, użyj metody [CMFCBaseTabCtrl::GetTabWndNoWrapper](#gettabwndnowrapper).
+Jeśli obiekt na karcie ma otokę, ta metoda zwróci otokę dla obiektu. Aby uzyskać więcej informacji na temat otok, zobacz [CMFCBaseTabCtrl::](#createwrapper)setotoka. Jeśli chcesz uzyskać dostęp do wskaźnika do obiektu bezpośredniego bez otoki, użyj metody [CMFCBaseTabCtrl:: GetTabWndNoWrapper](#gettabwndnowrapper).
 
-##  <a name="gettabwndnowrapper"></a>  CMFCBaseTabCtrl::GetTabWndNoWrapper
+##  <a name="gettabwndnowrapper"></a>CMFCBaseTabCtrl::GetTabWndNoWrapper
 
-Zwraca wskaźnik do formantu, który znajduje się na karcie, nawet wtedy, gdy kontrolka ma otokę.
+Zwraca wskaźnik do kontrolki, która znajduje się na karcie, nawet jeśli kontrolka ma otokę.
 
 ```
 virtual CWnd* GetTabWndNoWrapper(int iTab) const;
@@ -1296,19 +1296,19 @@ virtual CWnd* GetTabWndNoWrapper(int iTab) const;
 ### <a name="parameters"></a>Parametry
 
 *iTab*<br/>
-[in] Liczony od zera indeks karty.
+podczas Indeks karty (liczony od zera).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który znajduje się na określonej karcie; Wartość NULL, jeśli *iTab* jest nieprawidłowy.
+Wskaźnik do obiektu [CWnd](../../mfc/reference/cwnd-class.md) , który znajduje się na określonej karcie; Wartość NULL, jeśli *ITAB* jest nieprawidłowy.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda pobiera bezpośredni wskaźnik do `CWnd` obiekt dodany przy użyciu jednej z metod [CMFCBaseTabCtrl::AddTab](#addtab) lub [CMFCBaseTabCtrl::InsertTab](#inserttab). `GetTabWndNoWrapper` pobiera wskaźnik do dodany `CWnd`nawet wtedy, gdy w ramach dodano otokę dla obiektu. Aby uzyskać więcej informacji na temat otoki i [klasa CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md), zobacz [CMFCBaseTabCtrl::CreateWrapper](#createwrapper).
+Ta metoda pobiera bezpośredni wskaźnik do `CWnd` obiektu, który został dodany przy użyciu metody [CMFCBaseTabCtrl:: AddTab](#addtab) lub [CMFCBaseTabCtrl:: InsertTab](#inserttab). `GetTabWndNoWrapper`Pobiera wskaźnik do dodanego `CWnd`elementu, nawet jeśli struktura dodała otokę dla obiektu. Aby uzyskać więcej informacji na temat otok i [klasy CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md), zobacz [CMFCBaseTabCtrl::](#createwrapper)setotoka.
 
-Użyj metody [CMFCBaseTabCtrl::GetTabWnd](#gettabwnd) , jeśli nie chcesz zignorować klasy otoki.
+Użyj metody [CMFCBaseTabCtrl:: GetTabWnd](#gettabwnd) , jeśli nie chcesz ignorować klasy otoki.
 
-##  <a name="gettooltipctrl"></a>  CMFCBaseTabCtrl::GetToolTipCtrl
+##  <a name="gettooltipctrl"></a>CMFCBaseTabCtrl::GetToolTipCtrl
 
 Pobiera odwołanie do contorl etykietki narzędzia.
 
@@ -1318,11 +1318,11 @@ CToolTipCtrl& GetToolTipCtrl() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do kontrolki tooltip.
+Odwołanie do kontrolki ToolTip.
 
-##  <a name="getvisibletabsnum"></a>  CMFCBaseTabCtrl::GetVisibleTabsNum
+##  <a name="getvisibletabsnum"></a>CMFCBaseTabCtrl::GetVisibleTabsNum
 
-Pobiera numer karty aktualnie widoczne.
+Pobiera liczbę aktualnie widocznych kart.
 
 ```
 virtual int GetVisibleTabsNum() const;
@@ -1330,9 +1330,9 @@ virtual int GetVisibleTabsNum() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba kart widocznych.
+Liczba widocznych kart.
 
-##  <a name="hasimage"></a>  CMFCBaseTabCtrl::HasImage
+##  <a name="hasimage"></a>CMFCBaseTabCtrl::HasImage
 
 ```
 virtual BOOL HasImage(int iTab) const;
@@ -1340,15 +1340,15 @@ virtual BOOL HasImage(int iTab) const;
 
 ### <a name="parameters"></a>Parametry
 
-[in] *iTab*<br/>
+podczas *ITAB*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="hidesingletab"></a>  CMFCBaseTabCtrl::HideSingleTab
+##  <a name="hidesingletab"></a>CMFCBaseTabCtrl::HideSingleTab
 
-Ustawia opcję, aby ukryć kart do formantu karty, po jednej karty widoczne.
+Ustawia opcję ukrycia kart dla kontrolki karta, gdy istnieje jedna widoczna karta.
 
 ```
 virtual void HideSingleTab(BOOL bHide = TRUE);
@@ -1357,15 +1357,15 @@ virtual void HideSingleTab(BOOL bHide = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bHide*<br/>
-[in] Wartość logiczna określająca, czy włączyć ukrywanie jednej karty.
+podczas Wartość logiczna określająca, czy należy włączyć ukrywanie pojedynczych kart.
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy aplikacja jest skonfigurowana do ukrywania jednej karty, struktura automatycznie wyświetla karty, gdy druga karta zostanie dodany do formantu karty.
+Gdy aplikacja jest skonfigurowana do ukrywania pojedynczych kart, struktura automatycznie wyświetla karty, gdy druga karta jest dodawana do kontrolki karta.
 
-##  <a name="inserttab"></a>  CMFCBaseTabCtrl::InsertTab
+##  <a name="inserttab"></a>CMFCBaseTabCtrl::InsertTab
 
-Wstawia kartę do formantu karty.
+Wstawia kartę do kontrolki karta.
 
 ```
 Virtual void InsertTab(
@@ -1386,28 +1386,28 @@ virtual void InsertTab(
 ### <a name="parameters"></a>Parametry
 
 *pNewWnd*<br/>
-[in] Wskaźnik do okna, które ta metoda dodaje się jako nowa karta.
+podczas Wskaźnik do okna, które ta metoda dodaje jako nową kartę.
 
 *lpszTabLabel*<br/>
-[in] Ciąg, który zawiera etykietę na nowej karcie.
+podczas Ciąg, który zawiera etykietę nowej karty.
 
 *nInsertAt*<br/>
-[in] Liczony od zera indeks w nowej karcie.
+podczas Indeks (liczony od zera) nowej karty.
 
 *uiImageId*<br/>
-[in] Identyfikator obrazu z listy obrazów. Kontrolka karty używa tego obrazu jako ikona dla nowej karty.
+podczas Identyfikator obrazu z listy obrazów. Kontrolka karta używa tego obrazu jako ikony nowej karty.
 
 *bDetachable*<br/>
-[in] Parametrów logiczny, który określa, czy nowa karta jest odłączane.
+podczas Parametr logiczny, który określa, czy nowa karta jest odłączana.
 
 *uiResTabLabel*<br/>
-[in] Identyfikator zasobu dla etykiety.
+podczas Identyfikator zasobu dla etykiety.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli obiekt wskazywany przez *pNewWnd* nie pochodzi od [klasa CDockablePane](../../mfc/reference/cdockablepane-class.md) i, jeśli *bDetachable* parametr ma wartość PRAWDA, szablon tworzy otokę specjalne dla Nowa karta. Domyślnie otoki jest wystąpieniem [klasa CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Użyj [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) metodę, aby utworzyć klasę otoki różne. Każda klasa otoki niestandardowe musi pochodzić od `CDockablePaneAdapter`.
+Jeśli obiekt wskazany przez *pNewWnd* nie pochodzi od [klasy CDockablePane](../../mfc/reference/cdockablepane-class.md) i jeśli parametr *bDetachable* ma wartość true, struktura tworzy specjalną otokę dla nowej karty. Domyślnie otoka jest wystąpieniem [klasy CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Użyj metody [CMFCBaseTabCtrl:: SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) , aby utworzyć inną klasę otoki. Wszystkie klasy otoki niestandardowej muszą pochodzić z `CDockablePaneAdapter`.
 
-##  <a name="invalidatetab"></a>  CMFCBaseTabCtrl::InvalidateTab
+##  <a name="invalidatetab"></a>CMFCBaseTabCtrl::InvalidateTab
 
 ```
 void InvalidateTab(int iTab);
@@ -1415,11 +1415,11 @@ void InvalidateTab(int iTab);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *iTab*<br/>
+podczas *ITAB*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isactivetabclosebutton"></a>  CMFCBaseTabCtrl::IsActiveTabCloseButton
+##  <a name="isactivetabclosebutton"></a>CMFCBaseTabCtrl::IsActiveTabCloseButton
 
 ```
 virtual BOOL IsActiveTabCloseButton() const;
@@ -1429,9 +1429,9 @@ virtual BOOL IsActiveTabCloseButton() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isautocolor"></a>  CMFCBaseTabCtrl::IsAutoColor
+##  <a name="isautocolor"></a>CMFCBaseTabCtrl::IsAutoColor
 
-Określa, czy kontrolka karty w trybie autocolor.
+Określa, czy kontrolka karty ma tryb Autokolor.
 
 ```
 BOOL IsAutoColor() const;
@@ -1439,11 +1439,11 @@ BOOL IsAutoColor() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli kontrolka karty jest w trybie autocolor; Wartość FALSE w przeciwnym razie.
+Ma wartość TRUE, Jeśli kontrolka karta jest w trybie autokolorach; W przeciwnym razie zwraca wartość FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Można włączyć lub wyłączyć tryb autocolor za pomocą [CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor) metody.
+Tryb Autokolor można włączać lub wyłączać za pomocą metody [CMFCBaseTabCtrl:: EnableAutoColor](#enableautocolor) .
 
 ##  <a name="isautodestroywindow"></a>  CMFCBaseTabCtrl::IsAutoDestroyWindow
 
@@ -1465,7 +1465,7 @@ virtual BOOL IsColored() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isdialogcontrol"></a>  CMFCBaseTabCtrl::IsDialogControl
+##  <a name="isdialogcontrol"></a>CMFCBaseTabCtrl::IsDialogControl
 
 ```
 BOOL IsDialogControl() const;
@@ -1475,7 +1475,7 @@ BOOL IsDialogControl() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isdrawnoprefix"></a>  CMFCBaseTabCtrl::IsDrawNoPrefix
+##  <a name="isdrawnoprefix"></a>CMFCBaseTabCtrl::IsDrawNoPrefix
 
 ```
 BOOL IsDrawNoPrefix() const;
@@ -1485,9 +1485,9 @@ BOOL IsDrawNoPrefix() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isflatframe"></a>  CMFCBaseTabCtrl::IsFlatFrame
+##  <a name="isflatframe"></a>CMFCBaseTabCtrl::IsFlatFrame
 
-Wskazuje, czy ramki formant karty jest renderowany w płaski lub styl 3W.
+Wskazuje, czy ramka kontrolki karta jest renderowana w stylu płaskim, czy w stylu 3W.
 
 ```
 virtual BOOL IsFlatFrame() const;
@@ -1495,13 +1495,13 @@ virtual BOOL IsFlatFrame() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli ramka formant karty jest renderowany w płaski; Wartość FALSE, jeśli ramka jest renderowany w styl 3W.
+PRAWDA, jeśli ramka kontrolki karta jest renderowana w stylu płaskim; FAŁSZ, jeśli ramka jest renderowana w stylu 3W.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj [CMFCTabCtrl::SetFlatFrame](../../mfc/reference/cmfctabctrl-class.md#setflatframe) zmiana stylu ramki formant karty.
+Użyj [CMFCTabCtrl:: SetFlatFrame](../../mfc/reference/cmfctabctrl-class.md#setflatframe) , aby zmienić styl ramki kontrolki karta.
 
-Karta kontrolek, które korzystają z programu Outlook nie może być renderowana styl za pomocą prostego klatek. Obejmuje to [klasa CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md) i wszystkie klasy pochodne od tej klasy.
+Kontrolki tabulacji używające stylu programu Outlook nie mogą być renderowane z ramkami płaskimi. Obejmuje to [klasę CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md) i wszystkie klasy pochodne tej klasy.
 
 ##  <a name="isflattab"></a>  CMFCBaseTabCtrl::IsFlatTab
 
@@ -1513,9 +1513,9 @@ virtual BOOL IsFlatTab() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ishidesingletab"></a>  CMFCBaseTabCtrl::IsHideSingleTab
+##  <a name="ishidesingletab"></a>CMFCBaseTabCtrl::IsHideSingleTab
 
-Określa, czy kontrolka karty ukrywa etykieta karty, jeśli istnieje tylko jedna karta.
+Określa, czy kontrolka karta ukrywa etykietę karty, jeśli istnieje tylko jedna karta.
 
 ```
 virtual BOOL IsHideSingleTab() const;
@@ -1523,13 +1523,13 @@ virtual BOOL IsHideSingleTab() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli kontrolka karty ukrywa etykieta karty, gdy ma jedną kartę; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, Jeśli kontrolka karta ukrywa etykietę karty, gdy ma jedną kartę. w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj metody [CMFCBaseTabCtrl::HideSingleTab](#hidesingletab) umożliwiające ukrywanie etykieta karty, gdy istnieje tylko jedna karta.
+Użyj metody [CMFCBaseTabCtrl:: HideSingleTab](#hidesingletab) , aby włączyć ukrywanie etykiety karty, gdy istnieje tylko jedna karta.
 
-##  <a name="isiconadded"></a>  CMFCBaseTabCtrl::IsIconAdded
+##  <a name="isiconadded"></a>CMFCBaseTabCtrl::IsIconAdded
 
 ```
 BOOL IsIconAdded(
@@ -1539,17 +1539,17 @@ BOOL IsIconAdded(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *hIcon*<br/>
+podczas *HICON*<br/>
 
-[in] *iIcon*<br/>
+podczas *iIcon*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isinplaceedit"></a>  CMFCBaseTabCtrl::IsInPlaceEdit
+##  <a name="isinplaceedit"></a>CMFCBaseTabCtrl::IsInPlaceEdit
 
-Wskazuje, czy kontrolka karty jest skonfigurowane tak, aby umożliwić użytkownikowi modyfikowanie dynamicznie etykiety kart.
+Wskazuje, czy formant karty jest skonfigurowany tak, aby umożliwić użytkownikowi dynamiczne modyfikowanie etykiet kart.
 
 ```
 virtual BOOL IsInPlaceEdit() const;
@@ -1557,13 +1557,13 @@ virtual BOOL IsInPlaceEdit() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Edycja jest włączona wartość różną od zera, jeśli w miejscu; w przeciwnym razie 0.
+Niezerowe, jeśli włączono edytowanie w miejscu; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Można włączyć lub wyłączyć edycji w miejscu, wywołując metodę [CMFCBaseTabCtrl::EnableInPlaceEdit](#enableinplaceedit).
+Edycję w miejscu można włączyć lub wyłączyć, wywołując metodę [CMFCBaseTabCtrl:: EnableInPlaceEdit](#enableinplaceedit).
 
-##  <a name="isleftrightrounded"></a>  CMFCBaseTabCtrl::IsLeftRightRounded
+##  <a name="isleftrightrounded"></a>CMFCBaseTabCtrl::IsLeftRightRounded
 
 ```
 virtual BOOL IsLeftRightRounded() const;
@@ -1573,7 +1573,7 @@ virtual BOOL IsLeftRightRounded() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ismditab"></a>  CMFCBaseTabCtrl::IsMDITab
+##  <a name="ismditab"></a>CMFCBaseTabCtrl::IsMDITab
 
 ```
 BOOL IsMDITab() const;
@@ -1593,17 +1593,17 @@ virtual BOOL IsOneNoteStyle() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli karty są wyświetlane w stylu programu Microsoft OneNote; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli karty są wyświetlane w stylu programu Microsoft OneNote; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj metodę [CMDIFrameWndEx::EnableMDITabs](../../mfc/reference/cmdiframewndex-class.md#enablemditabs) umożliwiające styl programu Microsoft OneNote. Można również włączyć ten styl, podczas tworzenia wystąpienia [klasa CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md): styl STYLE_3D_ONENOTE należy po prostu przekazać do metody [CMFCTabCtrl::Create](../../mfc/reference/cmfctabctrl-class.md#create).
+Wywołaj metodę [CMDIFrameWndEx:: EnableMDITabs](../../mfc/reference/cmdiframewndex-class.md#enablemditabs) , aby włączyć styl programu Microsoft OneNote. Możesz również włączyć ten styl podczas tworzenia wystąpienia [klasy CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md): po prostu Przekaż styl STYLE_3D_ONENOTE do metody [CMFCTabCtrl:: Create](../../mfc/reference/cmfctabctrl-class.md#create).
 
-Domyślnie, styl programu Microsoft OneNote nie jest obsługiwany w niestandardowej klasy pochodzącej od `CMFCBaseTabCtrl Class`. Jednak jest obsługiwana w `CMFCTabCtrl` klasy.
+Domyślnie styl programu Microsoft OneNote nie jest obsługiwany w klasie niestandardowej pochodnej od `CMFCBaseTabCtrl Class`. Jest to jednak obsługiwane w `CMFCTabCtrl` klasie.
 
-##  <a name="isptintabarea"></a>  CMFCBaseTabCtrl::IsPtInTabArea
+##  <a name="isptintabarea"></a>CMFCBaseTabCtrl::IsPtInTabArea
 
-Określa, czy punkt znajduje się wewnątrz obszaru karty.
+Określa, czy punkt znajduje się w obszarze karty.
 
 ```
 virtual BOOL IsPtInTabArea(CPoint point) const = 0;
@@ -1611,18 +1611,18 @@ virtual BOOL IsPtInTabArea(CPoint point) const = 0;
 
 ### <a name="parameters"></a>Parametry
 
-*Punkt*<br/>
-[in] Punkt do testowania.
+*moment*<br/>
+podczas Punkt do przetestowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli punkt znajduje się w obszarze karty; w przeciwnym razie 0.
+Różne od zera, jeśli punkt znajduje się w obszarze kart; 0 w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
 
-W `CMFCBaseTabCtrl Class`, ta metoda jest czysta funkcja wirtualna i nie ma implementacji. Jeśli wyprowadzić klasę z `CMFCBaseTabCtrl`, musisz zaimplementować tę funkcję.
+`CMFCBaseTabCtrl Class`W, ta metoda jest czystą funkcją wirtualną i nie ma implementacji. Jeśli klasa pochodzi z `CMFCBaseTabCtrl`, musisz zaimplementować tę funkcję.
 
-##  <a name="istabclosebuttonhighlighted"></a>  CMFCBaseTabCtrl::IsTabCloseButtonHighlighted
+##  <a name="istabclosebuttonhighlighted"></a>CMFCBaseTabCtrl::IsTabCloseButtonHighlighted
 
 ```
 BOOL IsTabCloseButtonHighlighted() const;
@@ -1632,7 +1632,7 @@ BOOL IsTabCloseButtonHighlighted() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="istabclosebuttonpressed"></a>  CMFCBaseTabCtrl::IsTabCloseButtonPressed
+##  <a name="istabclosebuttonpressed"></a>CMFCBaseTabCtrl::IsTabCloseButtonPressed
 
 ```
 BOOL IsTabCloseButtonPressed() const;
@@ -1644,7 +1644,7 @@ BOOL IsTabCloseButtonPressed() const;
 
 ##  <a name="istabdetachable"></a>  CMFCBaseTabCtrl::IsTabDetachable
 
-Określa, czy karta jest odłączane.
+Określa, czy karta jest odłączana.
 
 ```
 virtual BOOL IsTabDetachable(int iTab) const;
@@ -1653,19 +1653,19 @@ virtual BOOL IsTabDetachable(int iTab) const;
 ### <a name="parameters"></a>Parametry
 
 *iTab*<br/>
-[in] Liczony od zera indeks karty do sprawdzenia.
+podczas Indeks (liczony od zera) zakładki do sprawdzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli karta jest odłączane; Wartość FALSE w przeciwnym razie.
+Ma wartość TRUE, jeśli karta jest odłączana; W przeciwnym razie zwraca wartość FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby wprowadzić na karcie odłączane, należy użyć metody [CMFCBaseTabCtrl::EnableTabDetach](#enabletabdetach).
+Aby można było odłączyć kartę, użyj metody [CMFCBaseTabCtrl:: EnableTabDetach](#enabletabdetach).
 
-##  <a name="istabicononly"></a>  CMFCBaseTabCtrl::IsTabIconOnly
+##  <a name="istabicononly"></a>CMFCBaseTabCtrl::IsTabIconOnly
 
-Określa, czy etykieta karty zawiera tylko ikon i tekstu.
+Określa, czy etykieta karty zawiera tylko ikony i bez tekstu.
 
 ```
 virtual BOOL IsTabIconOnly(int iTab) const;
@@ -1674,19 +1674,19 @@ virtual BOOL IsTabIconOnly(int iTab) const;
 ### <a name="parameters"></a>Parametry
 
 *iTab*<br/>
-[in] Liczony od zera indeks karty.
+podczas Indeks karty (liczony od zera).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli tylko ikony; etykieta karty Wartość FALSE w przeciwnym razie.
+PRAWDA, jeśli etykieta karty ma tylko ikony; W przeciwnym razie zwraca wartość FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby ustawić kart w aplikacji, aby wyświetlić tylko ikony, należy wywołać metodę [CMFCBaseTabCtrl::SetTabIconOnly](#settabicononly).
+Aby ustawić karty w aplikacji tak, aby wyświetlały tylko ikony, wywołaj metodę [CMFCBaseTabCtrl:: SetTabIconOnly](#settabicononly).
 
-##  <a name="istabswapenabled"></a>  CMFCBaseTabCtrl::IsTabSwapEnabled
+##  <a name="istabswapenabled"></a>CMFCBaseTabCtrl::IsTabSwapEnabled
 
-Określa, czy kontrolka karty zezwala użytkownikowi na zmianę pozycji tabulatorów za pomocą myszy.
+Określa, czy kontrolka karty zezwala użytkownikowi na zmianę pozycji tabulacji przy użyciu myszy.
 
 ```
 BOOL IsTabSwapEnabled() const;
@@ -1694,15 +1694,15 @@ BOOL IsTabSwapEnabled() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli pozycji tabulatorów mogą być zmieniane przez użytkownika; w przeciwnym razie 0.
+Niezerowe, jeśli użytkownik może zmienić pozycje tabulacji; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie użytkownicy nie mogą zmieniać kolejność kart w kontrolce karty. Użyj [CMFCBaseTabCtrl::EnableTabSwap](#enabletabswap) metodę, aby włączyć tę funkcję.
+Domyślnie użytkownicy nie mogą zmieniać kolejności kart w kontrolce karty. Aby włączyć tę funkcję, należy użyć metody [CMFCBaseTabCtrl:: EnableTabSwap](#enabletabswap) .
 
-##  <a name="istabvisible"></a>  CMFCBaseTabCtrl::IsTabVisible
+##  <a name="istabvisible"></a>CMFCBaseTabCtrl::IsTabVisible
 
-Wskazuje, czy określony karta jest widoczny.
+Wskazuje, czy określona karta jest widoczna.
 
 ```
 virtual BOOL IsTabVisible(int iTab) const;
@@ -1711,11 +1711,11 @@ virtual BOOL IsTabVisible(int iTab) const;
 ### <a name="parameters"></a>Parametry
 
 *iTab*<br/>
-[in] Liczony od zera indeks karty do sprawdzenia.
+podczas Indeks (liczony od zera) zakładki do sprawdzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli określony karta jest widoczny; w przeciwnym razie 0.
+Różne od zera, jeśli określona karta jest widoczna; w przeciwnym razie 0.
 
 ##  <a name="isvs2005style"></a>  CMFCBaseTabCtrl::IsVS2005Style
 
@@ -1727,9 +1727,9 @@ virtual BOOL IsVS2005Style() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="m_bactivatetabonrightclick"></a>  CMFCBaseTabCtrl::m_bActivateTabOnRightClick
+##  <a name="m_bactivatetabonrightclick"></a>CMFCBaseTabCtrl::m_bActivateTabOnRightClick
 
-`m_bActivateTabOnRightClick` Określa, czy karty są w trybie koncentracji uwagi, gdy użytkownik kliknie etykietę kartę za pomocą prawego przycisku myszy.
+`m_bActivateTabOnRightClick`Określa, czy zakładki są skoncentrowane, gdy użytkownik kliknie etykietę karty przy użyciu prawego przycisku myszy.
 
 ```
 BOOL m_bActivateTabOnRightClick;
@@ -1737,11 +1737,11 @@ BOOL m_bActivateTabOnRightClick;
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość domyślna dla tego elementu członkowskiego danych ma wartość FAŁSZ.
+Wartość domyślna dla tego elementu członkowskiego danych to FALSE.
 
 ##  <a name="m_bautodestroywindow"></a>  CMFCBaseTabCtrl::m_bAutoDestroyWindow
 
-`m_bAutoDestroyWindow` Określa, czy ramach automatycznie niszczy obiekty na kartach, po usunięciu karty.
+`m_bAutoDestroyWindow`Określa, czy struktura automatycznie niszczy obiekty na kartach, gdy karty zostaną usunięte.
 
 ```
 BOOL m_bAutoDestroyWindow;
@@ -1751,7 +1751,7 @@ BOOL m_bAutoDestroyWindow;
 
 Domyślnie ten element członkowski ma wartość FALSE.
 
-##  <a name="movetab"></a>  CMFCBaseTabCtrl::MoveTab
+##  <a name="movetab"></a>CMFCBaseTabCtrl::MoveTab
 
 ```
 virtual void MoveTab(
@@ -1761,15 +1761,15 @@ virtual void MoveTab(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *przekazywanie*<br/>
+podczas *nnazwa*<br/>
 
-[in] *nDest*<br/>
+podczas *nDest*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onchangetabs"></a>  CMFCBaseTabCtrl::OnChangeTabs
+##  <a name="onchangetabs"></a>CMFCBaseTabCtrl::OnChangeTabs
 
-Struktura wywołuje tę metodę, gdy liczba kart na karcie kontrolować zmiany.
+Struktura wywołuje tę metodę, gdy zostanie zmieniona liczba kart w kontrolce karty.
 
 ```
 virtual void OnChangeTabs();
@@ -1777,9 +1777,9 @@ virtual void OnChangeTabs();
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie ta metoda nie działa. Przesłoń tę metodę w celu wykonania niestandardowego kodu, gdy liczba kart na karcie kontrolować zmiany.
+Domyślnie ta metoda nie wykonuje żadnych operacji. Zastąp tę metodę, aby wykonać kod niestandardowy, gdy zostanie zmieniona liczba kart w kontrolce karty.
 
-##  <a name="ondrop"></a>  CMFCBaseTabCtrl::OnDrop
+##  <a name="ondrop"></a>CMFCBaseTabCtrl:: OnDrop
 
 ```
 virtual BOOL OnDrop(
@@ -1790,17 +1790,17 @@ virtual BOOL OnDrop(
 
 ### <a name="parameters"></a>Parametry
 
-[in] _COleDataObject\*_<br/>
+podczas _COleDataObject\*_<br/>
 
-[in] *DROPEFFECT*<br/>
+podczas *DROPEFFECT*<br/>
 
-[in] *CPoint*<br/>
+podczas *CPoint*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondragover"></a>  CMFCBaseTabCtrl::OnDragOver
+##  <a name="ondragover"></a>CMFCBaseTabCtrl::OnDragOver
 
 ```
 virtual DROPEFFECT OnDragOver(
@@ -1811,17 +1811,17 @@ virtual DROPEFFECT OnDragOver(
 
 ### <a name="parameters"></a>Parametry
 
-[in] _COleDataObject\*_<br/>
+podczas _COleDataObject\*_<br/>
 
-[in] *Typu DWORD.*<br/>
+podczas *Wartość DWORD*<br/>
 
-[in] *CPoint*<br/>
+podczas *CPoint*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondragleave"></a>  CMFCBaseTabCtrl::OnDragLeave
+##  <a name="ondragleave"></a>CMFCBaseTabCtrl::OnDragLeave
 
 ```
 virtual void OnDragLeave();
@@ -1829,7 +1829,7 @@ virtual void OnDragLeave();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondragenter"></a>  CMFCBaseTabCtrl::OnDragEnter
+##  <a name="ondragenter"></a>CMFCBaseTabCtrl::OnDragEnter
 
 ```
 virtual DROPEFFECT OnDragEnter(
@@ -1840,17 +1840,17 @@ virtual DROPEFFECT OnDragEnter(
 
 ### <a name="parameters"></a>Parametry
 
-[in] _COleDataObject\*_<br/>
+podczas _COleDataObject\*_<br/>
 
-[in] *Typu DWORD.*<br/>
+podczas *Wartość DWORD*<br/>
 
-[in] *CPoint*<br/>
+podczas *CPoint*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onrenametab"></a>  CMFCBaseTabCtrl::OnRenameTab
+##  <a name="onrenametab"></a>CMFCBaseTabCtrl::OnRenameTab
 
 ```
 virtual BOOL OnRenameTab(int, CString&);
@@ -1858,15 +1858,15 @@ virtual BOOL OnRenameTab(int, CString&);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *int*<br/>
+podczas liczba *całkowita*<br/>
 
-[in] *CString &*<br/>
+podczas *CString &*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="pretranslatemessage"></a>  CMFCBaseTabCtrl::PreTranslateMessage
+##  <a name="pretranslatemessage"></a>CMFCBaseTabCtrl::P reTranslateMessage
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1874,15 +1874,15 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pMsg*<br/>
+podczas *pMsg*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="recalclayout"></a>  CMFCBaseTabCtrl::RecalcLayout
+##  <a name="recalclayout"></a>CMFCBaseTabCtrl::RecalcLayout
 
-Ponownie oblicza układ wewnętrznej kontrolki karty.
+Ponownie oblicza układ wewnętrzny kontrolki karta.
 
 ```
 virtual void RecalcLayout() = 0;
@@ -1890,11 +1890,11 @@ virtual void RecalcLayout() = 0;
 
 ### <a name="remarks"></a>Uwagi
 
-W `CMFCBaseTabCtrl Class`, ta metoda jest czysta funkcja wirtualna. Jeśli wyprowadzić klasę z `CMFCBaseTabCtrl`, musisz zaimplementować tę funkcję.
+`CMFCBaseTabCtrl Class`W, ta metoda jest czystą funkcją wirtualną. Jeśli klasa pochodzi z `CMFCBaseTabCtrl`, musisz zaimplementować tę funkcję.
 
-##  <a name="removealltabs"></a>  CMFCBaseTabCtrl::RemoveAllTabs
+##  <a name="removealltabs"></a>CMFCBaseTabCtrl::RemoveAllTabs
 
-Usuwa wszystkie karty z kontrolki karty.
+Usuwa wszystkie karty z kontrolki karta.
 
 ```
 virtual void RemoveAllTabs();
@@ -1902,11 +1902,11 @@ virtual void RemoveAllTabs();
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli [CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow) ma wartość TRUE, wszystkie usuwa framework [CWnd](../../mfc/reference/cwnd-class.md) obiektów dołączonych do usuniętego karty.
+Jeśli [CMFCBaseTabCtrl:: m_bAutoDestroyWindow](#m_bautodestroywindow) ma wartość true, struktura usuwa wszystkie obiekty [CWnd](../../mfc/reference/cwnd-class.md) dołączone do usuniętych kart.
 
-##  <a name="removetab"></a>  CMFCBaseTabCtrl::RemoveTab
+##  <a name="removetab"></a>CMFCBaseTabCtrl::RemoveTab
 
-Usuwa kartę z kontrolki karty.
+Usuwa kartę z kontrolki karta.
 
 ```
 virtual BOOL RemoveTab(
@@ -1917,20 +1917,20 @@ virtual BOOL RemoveTab(
 ### <a name="parameters"></a>Parametry
 
 *iTab*<br/>
-[in] Liczony od zera indeks karty.
+podczas Indeks karty (liczony od zera).
 
 *bRecalcLayout*<br/>
-[in] Parametr logiczny, który określa, czy należy ponownie Oblicz układ karty.
+podczas Parametr logiczny, który określa, czy należy ponownie obliczyć układ karty.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli metoda usuwa kartę pomyślnie; w przeciwnym razie wartość FALSE.
+TRUE, jeśli metoda pomyślnie usunie kartę; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli [CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow) ma wartość PRAWDA, `RemoveTab` niszczy [CWnd](../../mfc/reference/cwnd-class.md) obiekt skojarzony z określoną kartą.
+Jeśli [CMFCBaseTabCtrl:: m_bAutoDestroyWindow](#m_bautodestroywindow) ma wartość true `RemoveTab` , niszczy obiekt [CWnd](../../mfc/reference/cwnd-class.md) skojarzony z określoną kartą.
 
-##  <a name="renametab"></a>  CMFCBaseTabCtrl::RenameTab
+##  <a name="renametab"></a>CMFCBaseTabCtrl::RenameTab
 
 ```
 virtual BOOL RenameTab();
@@ -1940,15 +1940,15 @@ virtual BOOL RenameTab();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="resetimagelist"></a>  CMFCBaseTabCtrl::ResetImageList
+##  <a name="resetimagelist"></a>CMFCBaseTabCtrl::ResetImageList
 
-Resetuje lista obrazów dla wystąpienia [klasa CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md).
+Resetuje listę obrazów dla wystąpienia [klasy CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md).
 
 ```
 void ResetImageList();
 ```
 
-##  <a name="serialize"></a>  CMFCBaseTabCtrl::Serialize
+##  <a name="serialize"></a>CMFCBaseTabCtrl:: serializować
 
 ```
 virtual void Serialize(CArchive& ar);
@@ -1956,7 +1956,7 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *ar*<br/>
+podczas *AR*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1971,17 +1971,17 @@ virtual BOOL SetActiveTab(int iTab) = 0;
 ### <a name="parameters"></a>Parametry
 
 *iTab*<br/>
-[in] Liczony od zera indeks kartę `SetActiveTab` sprawia, że karty z ten indeks jest aktywny.
+podczas Indeks na karcie `SetActiveTab` liczony od zera. sprawia, że karta z tym indeksem jest aktywna.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli to się powiedzie; w przeciwnym razie wartość FALSE.
+Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-W `CMFCBaseTabCtrl Class`, ta metoda jest czysta funkcja wirtualna. Jeśli wyprowadzić klasę z `CMFCBaseTabCtrl`, musisz zaimplementować tę funkcję.
+`CMFCBaseTabCtrl Class`W, ta metoda jest czystą funkcją wirtualną. Jeśli klasa pochodzi z `CMFCBaseTabCtrl`, musisz zaimplementować tę funkcję.
 
-##  <a name="setactivetabcolor"></a>  CMFCBaseTabCtrl::SetActiveTabColor
+##  <a name="setactivetabcolor"></a>CMFCBaseTabCtrl::SetActiveTabColor
 
 Ustawia kolor tła dla aktywnej karty.
 
@@ -1991,16 +1991,16 @@ virtual void SetActiveTabColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parametry
 
-*clr*<br/>
-[in] Określa nowy kolor tła.
+*CLR*<br/>
+podczas Określa nowy kolor tła.
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura uzyskuje domyślny kolor tła dla aktywnych kart z [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)metody.
+Platforma uzyskuje domyślny kolor tła dla aktywnych kart z metody [GetSysColor](/windows/win32/api/winuser/nf-winuser-getsyscolor).
 
-##  <a name="setactivetabtextcolor"></a>  CMFCBaseTabCtrl::SetActiveTabTextColor
+##  <a name="setactivetabtextcolor"></a>CMFCBaseTabCtrl::SetActiveTabTextColor
 
-Określa kolor tekstu dla aktywnych kart.
+Ustawia kolor tekstu dla kart aktywnych.
 
 ```
 virtual void SetActiveTabTextColor(COLORREF clr);
@@ -2008,16 +2008,16 @@ virtual void SetActiveTabTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parametry
 
-*clr*<br/>
-[in] A [COLORREF](/windows/desktop/gdi/colorref) parametr, który określa nowy kolor tekstu.
+*CLR*<br/>
+podczas Parametr [COLORREF](/windows/win32/gdi/colorref) , który określa nowy kolor tekstu.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie struktura uzyskuje kolor tekstu z [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor). Zastąpić ten kolor domyślny za pomocą `SetActiveTabTextColor` metody.
+Domyślnie struktura uzyskuje kolor tekstu z [GetSysColor](/windows/win32/api/winuser/nf-winuser-getsyscolor). Zastąp ten domyślny kolor przy użyciu `SetActiveTabTextColor` metody.
 
 ##  <a name="setautocolors"></a>  CMFCBaseTabCtrl::SetAutoColors
 
-Ustawia kolory używającej w ramach kontrolki karty w trybie kolorowi automatycznemu.
+Ustawia kolory kontrolki karta, która jest stosowana przez platformę w trybie automatycznym kolory.
 
 ```
 void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
@@ -2026,17 +2026,17 @@ void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
 ### <a name="parameters"></a>Parametry
 
 *arColors*<br/>
-[in] Tablica kolorów RGB.
+podczas Tablica kolorów RGB.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli podasz niestandardowe tablicę kolorów, domyślne tablicę kolorów jest ignorowany. Jeśli parametr *arColors* jest pusta, struktura zostanie przywrócona do domyślnego tablicę kolorów.
+Jeśli podano niestandardową tablicę kolorów, domyślna Tablica kolorów jest ignorowana. Jeśli parametr *arColors* jest pusty, struktura przywraca domyślną tablicę kolorów.
 
-Aby włączyć tryb autocolor, należy użyć [CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor) metody.
+Aby włączyć tryb Autokolor, użyj metody [CMFCBaseTabCtrl:: EnableAutoColor](#enableautocolor) .
 
-##  <a name="setdockingbarwrapperrtc"></a>  CMFCBaseTabCtrl::SetDockingBarWrapperRTC
+##  <a name="setdockingbarwrapperrtc"></a>CMFCBaseTabCtrl::SetDockingBarWrapperRTC
 
-Ustawia klasy otoki, która jest używana dla obiektów, które nie pochodzą z [klasa CDockablePane](../../mfc/reference/cdockablepane-class.md).
+Ustawia klasę otoki, która jest używana dla obiektów, które nie są wyprowadzane z [klasy CDockablePane](../../mfc/reference/cdockablepane-class.md).
 
 ```
 void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
@@ -2045,15 +2045,15 @@ void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
 ### <a name="parameters"></a>Parametry
 
 *pRTC*<br/>
-[in] Informacji o klasie czasu wykonywania dla nowej klasy otoki.
+podczas Informacje o klasie środowiska uruchomieniowego dla nowej klasy otoki.
 
 ### <a name="remarks"></a>Uwagi
 
-Dodawanie kart do formantu karty przy użyciu metod [CMFCBaseTabCtrl::AddTab](#addtab) i [CMFCBaseTabCtrl::InsertTab](#inserttab). Po dodaniu karty, każdej kontrolki na tej karcie musi mieć możliwości dokowania. Wszystkie obiekty, które nie pochodzą z `CDockablePane` muszą być zapakowane. `AddTab` i `InsertTab` tworzy otokę dla tych obiektów. Domyślna klasa otoki jest [klasa CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Metoda `SetDockingBarWrapperRTC` umożliwia zmianę klasy, która jest używana jako klasa otoki. Klasa otoki, które należy podać musi pochodzić od `CDockablePaneAdapter`.
+Do kontrolki karta można dodawać karty przy użyciu metod [CMFCBaseTabCtrl:: AddTab](#addtab) i [CMFCBaseTabCtrl:: InsertTab](#inserttab). Po dodaniu karty każda kontrolka na tej karcie musi być było dokować. Wszystkie obiekty, które nie są wyprowadzane z `CDockablePane` , muszą być opakowane. `AddTab`i `InsertTab` Utwórz otokę dla tych obiektów. Domyślna klasa otoki jest [klasą CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Metoda `SetDockingBarWrapperRTC` umożliwia zmianę klasy, która jest używana jako Klasa otoki. Określona Klasa otoki musi być pochodną `CDockablePaneAdapter`klasy.
 
-##  <a name="setdrawnoprefix"></a>  CMFCBaseTabCtrl::SetDrawNoPrefix
+##  <a name="setdrawnoprefix"></a>CMFCBaseTabCtrl::SetDrawNoPrefix
 
-Włącza i wyłącza przetwarzanie znaków prefiksu w etykiecie kartę.
+Włącza i wyłącza przetwarzanie znaków prefiksu w etykietach kart.
 
 ```
 void SetDrawNoPrefix(
@@ -2064,18 +2064,18 @@ void SetDrawNoPrefix(
 ### <a name="parameters"></a>Parametry
 
 *bNoPrefix*<br/>
-[in] Wartość TRUE, jeśli chce przetwarzać znaków prefiksu. w przeciwnym razie wartość FALSE.
+podczas PRAWDA, jeśli chcesz przetworzyć znaki prefiksu; w przeciwnym razie FALSE.
 
 *bRedraw*<br/>
-[in] Wartość TRUE, jeśli chcesz ponownie narysować okno z kartami; w przeciwnym razie wartość FALSE.
+podczas PRAWDA, jeśli chcesz ponownie narysować okno z kartami; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Znak prefiks jest mnemoników znak, który jest poprzedzony handlowe "i" (&).
+Znak prefiksu jest znakiem znaku, który jest poprzedzony symbolem handlowego "i" (&).
 
 ##  <a name="setimagelist"></a>  CMFCBaseTabCtrl::SetImageList
 
-Ustawia ikonę listy obrazów kontrolki karty.
+Ustawia listę obrazów ikon dla kontrolki karta.
 
 ```
 virtual BOOL SetImageList(
@@ -2089,28 +2089,28 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 ### <a name="parameters"></a>Parametry
 
 *uiID*<br/>
-[in] Identyfikator zasobu mapy bitowej. `SetImageList` ładuje listy obrazów z tego zasobu.
+podczas Identyfikator zasobu mapy bitowej. `SetImageList`ładuje listę obrazów z tego zasobu.
 
 *cx*<br/>
-[in] Szerokość każdego obrazu w pikselach.
+podczas Szerokość każdego obrazu w pikselach.
 
 *clrTransp*<br/>
-[in] A [COLORREF](/windows/desktop/gdi/colorref) parametr, który określa przezroczysty kolor obrazu.
+podczas Parametr [COLORREF](/windows/win32/gdi/colorref) , który wskazuje przezroczysty kolor obrazu.
 
 *hImageList*<br/>
-[in] Dojście do listy wstępnie załadowanych obrazów.
+podczas Uchwyt do listy wstępnie załadowanych obrazów.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie 0.
+Niezerowe, jeśli metoda zakończyła się pomyślnie; 0 w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
 
-Obrazy z listy obrazów ikony są wyświetlane obok etykiety dla karty. Aby wyświetlić ikonę, należy określić jego indeks po wywołaniu [CMFCBaseTabCtrl::AddTab](#addtab).
+Obrazy z listy ikon obrazu są wyświetlane obok etykiet karty. Aby wyświetlić ikonę, należy określić jej indeks podczas wywoływania [CMFCBaseTabCtrl:: AddTab](#addtab).
 
-`SetImageList` zakończy się niepowodzeniem, jeśli kontrolka karty został utworzony za pomocą prostych stylów. Również zakończy się niepowodzeniem, jeśli struktura nie można załadować obrazu wskazywanym przez *uiID*.
+`SetImageList`zakończy się niepowodzeniem, Jeśli kontrolka karta została utworzona z stylem płaskim. Nie powiedzie się również, jeśli struktura nie może załadować obrazu wskazanego przez *uiID*.
 
-Ta metoda ponownie oblicza wysokość karty zgodnie z rozmiarów tekstowych i obrazów.
+Ta metoda ponownie oblicza wysokość karty zgodnie z rozmiarem obrazu i tekstu.
 
 ##  <a name="setlocation"></a>  CMFCBaseTabCtrl::SetLocation
 
@@ -2120,7 +2120,7 @@ virtual void SetLocation(Location location);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *lokalizacji*<br/>
+podczas *Lokalizacja*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2137,18 +2137,18 @@ virtual BOOL SetTabBkColor(
 ### <a name="parameters"></a>Parametry
 
 *iTab*<br/>
-[in] Liczony od zera indeks karty.
+podczas Indeks karty (liczony od zera).
 
 *Kolor*<br/>
-[in] Kolor, aby ustawić.
+podczas Kolor, który ma zostać ustawiony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli to się powiedzie; Wartość FALSE w przeciwnym razie.
+Wartość TRUE, jeśli powodzenie; W przeciwnym razie zwraca wartość FALSE.
 
 ##  <a name="settabbordersize"></a>  CMFCBaseTabCtrl::SetTabBorderSize
 
-Określa nowy rozmiar obramowania formantu karty.
+Ustawia nowy rozmiar obramowania dla kontrolki karta.
 
 ```
 virtual void SetTabBorderSize(
@@ -2159,14 +2159,14 @@ virtual void SetTabBorderSize(
 ### <a name="parameters"></a>Parametry
 
 *nTabBorderSize*<br/>
-[in] Nowy rozmiar obramowania, w pikselach.
+podczas Nowy rozmiar obramowania (w pikselach).
 
 *bRepaint*<br/>
-[in] Parametr logiczny, który wskazuje, czy w ramach ponownie rysuje kontrolkę.
+podczas Parametr logiczny, który wskazuje, czy struktura ponownie Rysuje formant.
 
-##  <a name="settabhicon"></a>  CMFCBaseTabCtrl::SetTabHicon
+##  <a name="settabhicon"></a>CMFCBaseTabCtrl::SetTabHicon
 
-Ustawia ikonę etykieta karty.
+Ustawia ikonę etykiety karty.
 
 ```
 virtual BOOL SetTabHicon(
@@ -2177,18 +2177,18 @@ virtual BOOL SetTabHicon(
 ### <a name="parameters"></a>Parametry
 
 *iTab*<br/>
-[in] Liczony od zera indeks karty. Ta metoda zmienia ikonę na tej karcie.
+podczas Indeks karty (liczony od zera). Ta metoda zmienia ikonę tej karty.
 
 *hIcon*<br/>
-[in] Dojście do ikony.
+podczas Uchwyt do ikony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli to się powiedzie; w przeciwnym razie wartość FALSE.
+Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
-##  <a name="settabicon"></a>  CMFCBaseTabCtrl::SetTabIcon
+##  <a name="settabicon"></a>CMFCBaseTabCtrl::SetTabIcon
 
-Ustawia ikonę karty.
+Ustawia ikonę dla karty.
 
 ```
 virtual BOOL SetTabIcon(
@@ -2199,18 +2199,18 @@ virtual BOOL SetTabIcon(
 ### <a name="parameters"></a>Parametry
 
 *iTab*<br/>
-[in] Liczony od zera indeks karty do zaktualizowania.
+podczas Liczony od zera indeks karty do zaktualizowania.
 
 *uiIcon*<br/>
-[in] Identyfikator ikony ikonę nowego elementu. Ten identyfikator odwołuje się do wewnętrznego [CImageList](../../mfc/reference/cimagelist-class.md) obiektu.
+podczas Identyfikator ikony nowej ikony. Ten identyfikator odwołuje się do wewnętrznego obiektu [Korzystanie CImageList](../../mfc/reference/cimagelist-class.md) .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli to się powiedzie; w przeciwnym razie wartość FALSE.
+Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
-##  <a name="settabicononly"></a>  CMFCBaseTabCtrl::SetTabIconOnly
+##  <a name="settabicononly"></a>CMFCBaseTabCtrl::SetTabIconOnly
 
-Umożliwia wyświetlanie tylko ikony (i etykieta nie tekstu) na określonej karcie.
+Włącza wyświetlanie tylko ikony (i brak etykiety tekstowej) na określonej karcie.
 
 ```
 virtual BOOL SetTabIconOnly(
@@ -2222,25 +2222,25 @@ virtual BOOL SetTabIconOnly(
 ### <a name="parameters"></a>Parametry
 
 *iTab*<br/>
-[in] Liczony od zera indeks kartę, aby zmienić.
+podczas Indeks (liczony od zera) karty, który ma zostać zmieniony.
 
 *bIconOnly*<br/>
-[in] Parametrów logiczny, który określa, czy mają być wyświetlane tylko ikony.
+podczas Parametr logiczny określający, czy mają być wyświetlane tylko ikony.
 
 *bShowTooltipAlways*<br/>
-[in] Parametr logiczny, który określa, czy ramach pokazuje etykietki narzędzi dla etykiety kartę, która wyświetla tylko ikony.
+podczas Parametr logiczny, który określa, czy struktura zawiera etykietki narzędzi dla etykiety karty, która wyświetla tylko ikony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli to się powiedzie; w przeciwnym razie wartość FALSE.
+Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie kontrolka karty wyświetla ikonę i tekst etykiety dla każdej karty.
+Domyślnie kontrolka karta wyświetla ikonę i etykietę tekstową dla każdej karty.
 
 ##  <a name="settablabel"></a>  CMFCBaseTabCtrl::SetTabLabel
 
-Określa tekst etykiety kartę.
+Ustawia tekst etykiety karty.
 
 ```
 virtual BOOL SetTabLabel(
@@ -2251,16 +2251,16 @@ virtual BOOL SetTabLabel(
 ### <a name="parameters"></a>Parametry
 
 *iTab*<br/>
-[in] Liczony od zera indeks karty do zaktualizowania.
+podczas Liczony od zera indeks karty do zaktualizowania.
 
 *strLabel*<br/>
-[in] Odwołanie do ciąg, który zawiera nowy tekst etykiety kartę.
+podczas Odwołanie do ciągu, który zawiera nowy tekst dla etykiety karty.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; 0 w przeciwnym razie.
 
-##  <a name="settabsheight"></a>  CMFCBaseTabCtrl::SetTabsHeight
+##  <a name="settabsheight"></a>CMFCBaseTabCtrl::SetTabsHeight
 
 ```
 virtual void SetTabsHeight();
@@ -2270,7 +2270,7 @@ virtual void SetTabsHeight();
 
 ##  <a name="settabsorder"></a>  CMFCBaseTabCtrl::SetTabsOrder
 
-Rozmieszcza kart w określonej kolejności.
+Rozmieszcza karty w określonej kolejności.
 
 ```
 BOOL SetTabsOrder(const CArray<int,int>& arOrder);
@@ -2279,19 +2279,19 @@ BOOL SetTabsOrder(const CArray<int,int>& arOrder);
 ### <a name="parameters"></a>Parametry
 
 *arOrder*<br/>
-[in] Tablica indeksowania zaczynającego się od zera definiuje nową kolejność.
+podczas Tablica indeksów opartych na zero, która definiuje nową kolejność tabulacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli to się powiedzie; W przeciwnym razie niepowodzenie.
+Wartość TRUE, jeśli powodzenie; Niepowodzenie w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
 
-Rozmiar *arOrder* tablicy musi być równa liczbie kart w kontrolce karty.
+Rozmiar tablicy *arOrder* musi być równy liczbie kart w kontrolce karty.
 
-##  <a name="settabtextcolor"></a>  CMFCBaseTabCtrl::SetTabTextColor
+##  <a name="settabtextcolor"></a>CMFCBaseTabCtrl::SetTabTextColor
 
-Określa kolor tekstu dla określonej karty.
+Ustawia kolor tekstu dla określonej karty.
 
 ```
 virtual BOOL SetTabTextColor(
@@ -2302,18 +2302,18 @@ virtual BOOL SetTabTextColor(
 ### <a name="parameters"></a>Parametry
 
 *iTab*<br/>
-[in] Liczony od zera indeks karty.
+podczas Indeks karty (liczony od zera).
 
 *Kolor*<br/>
-[in] A [COLORREF](/windows/desktop/gdi/colorref) parametrem, który wskazuje na nowy kolor tekstu.
+podczas Parametr [COLORREF](/windows/win32/gdi/colorref) , który wskazuje nowy kolor tekstu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; 0 w przeciwnym razie.
 
-##  <a name="showtab"></a>  CMFCBaseTabCtrl::ShowTab
+##  <a name="showtab"></a>CMFCBaseTabCtrl:: ShowTab
 
-Pokazuje lub ukrywa określonej karty.
+Pokazuje lub ukrywa określoną kartę.
 
 ```
 virtual BOOL ShowTab(
@@ -2326,26 +2326,26 @@ virtual BOOL ShowTab(
 ### <a name="parameters"></a>Parametry
 
 *iTab*<br/>
-[in] Indeks karty, `ShowTab` będzie pokazać lub ukryć.
+podczas Indeks karty, który `ShowTab` będzie wyświetlany lub ukryty.
 
 *bShow*<br/>
-[in] Parametrów logiczny, który wskazuje, czy ma być wyświetlana karta.
+podczas Parametr logiczny, który wskazuje, czy ma być wyświetlana karta.
 
 *bRecalcLayout*<br/>
-[in] Parametrów logiczny, który wskazuje, czy natychmiast ponownie Oblicz układ okna.
+podczas Parametr logiczny, który wskazuje, czy natychmiast ponownie obliczyć układ okna.
 
 *bActivate*<br/>
-[in] Parametrów logiczny, który wskazuje, czy wybierz kartę, określony przez *iTab*.
+podczas Parametr logiczny, który wskazuje, czy ma zostać wybrana karta określona przez *ITAB*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Parametr *bActivate* zastosowanie tylko w przypadku *bShow* ma wartość TRUE. Jeśli *bActivate* ma wartość TRUE jeśli `ShowTab` zakończy się pomyślnie, `ShowTab` wyśle komunikat AFX_WM_CHANGE_ACTIVE_TAB do nadrzędnego okna karty.
+Parametr *bActivate* ma zastosowanie tylko wtedy, gdy *bShow* ma wartość true. Jeśli *bActivate* ma wartość true i `ShowTab` jeśli zakończy `ShowTab` się pomyślnie, wyśle komunikat AFX_WM_CHANGE_ACTIVE_TAB do elementu nadrzędnego okna karty.
 
-##  <a name="startrenametab"></a>  CMFCBaseTabCtrl::StartRenameTab
+##  <a name="startrenametab"></a>CMFCBaseTabCtrl::StartRenameTab
 
 ```
 virtual BOOL StartRenameTab(int iTab);
@@ -2353,13 +2353,13 @@ virtual BOOL StartRenameTab(int iTab);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *iTab*<br/>
+podczas *ITAB*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="swaptabs"></a>  CMFCBaseTabCtrl::SwapTabs
+##  <a name="swaptabs"></a>CMFCBaseTabCtrl::SwapTabs
 
 ```
 virtual void SwapTabs(
@@ -2369,9 +2369,9 @@ virtual void SwapTabs(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nFisrtTabID*<br/>
+podczas *nFisrtTabID*<br/>
 
-[in] *nSecondTabID*<br/>
+podczas *nSecondTabID*<br/>
 
 ### <a name="remarks"></a>Uwagi
 

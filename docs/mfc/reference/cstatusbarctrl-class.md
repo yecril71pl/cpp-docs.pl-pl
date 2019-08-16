@@ -44,16 +44,16 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: 8db2be9b14f9d60f2103ce0b63b772962b079bbe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c33aa4d77eeeeca69e50dc63982ff4d7e8bd505
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323833"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502322"
 ---
 # <a name="cstatusbarctrl-class"></a>Klasa CStatusBarCtrl
 
-Oferuje funkcje formantu Windows typowego paska stanu.
+Oferuje funkcje kontrolki typowego paska stanu systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -67,38 +67,38 @@ class CStatusBarCtrl : public CWnd
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CStatusBarCtrl::CStatusBarCtrl](#cstatusbarctrl)|Konstruuje `CStatusBarCtrl` obiektu.|
+|[CStatusBarCtrl:: CStatusBarCtrl](#cstatusbarctrl)|Konstruuje `CStatusBarCtrl` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CStatusBarCtrl::Create](#create)|Tworzy formant paska stanu i dołącza je do `CStatusBarCtrl` obiektu.|
-|[CStatusBarCtrl::CreateEx](#createex)|Tworzy formant paska stanu z określonego style rozszerzone Windows i dołącza go do `CStatusBarCtrl` obiektu.|
-|[CStatusBarCtrl::DrawItem](#drawitem)|Wywołuje się, gdy zmieni się wizualny aspekt rysowania przez właściciela stanu paska sterowania zmiany.|
-|[CStatusBarCtrl::GetBorders](#getborders)|Pobiera bieżący szerokość obramowań poziome i pionowe formant paska stanu.|
-|[CStatusBarCtrl::GetIcon](#geticon)|Pobiera ikonę dla części (okienko) w bieżącym formantu paska stanu.|
-|[CStatusBarCtrl::GetParts](#getparts)|Pobiera liczbę części w kontrolce paska stanu.|
-|[CStatusBarCtrl::GetRect](#getrect)|Pobiera prostokąt otaczający element w kontrolce paska stanu.|
-|[CStatusBarCtrl::GetText](#gettext)|Pobiera tekst z danej części formant paska stanu.|
-|[CStatusBarCtrl::GetTextLength](#gettextlength)|Pobiera długość w znakach tekstu z danej części formant paska stanu.|
-|[CStatusBarCtrl::GetTipText](#gettiptext)|Pobiera tekst etykietki narzędzia dla okienka na pasku stanu.|
-|[CStatusBarCtrl::IsSimple](#issimple)|Sprawdza, czy formant okna stanu, aby ustalić, czy jest w trybie uproszczonym.|
-|[CStatusBarCtrl::SetBkColor](#setbkcolor)|Ustawia kolor tła na pasku stanu.|
-|[CStatusBarCtrl::SetIcon](#seticon)|Ustawia okienko ikonę na pasku stanu.|
-|[CStatusBarCtrl::SetMinHeight](#setminheight)|Ustawia minimalną wysokość stan powierzchni rysowania kontrolki paska.|
-|[CStatusBarCtrl::SetParts](#setparts)|Ustawia numer części stanu kontroli i współrzędne prawą krawędzią każdej części paska.|
-|[CStatusBarCtrl::SetSimple](#setsimple)|Określa, czy formant paska stanu wyświetla zwykły tekst lub wyświetla wszystkie części kontrolki ustawione przez poprzednie wywołanie `SetParts`.|
-|[CStatusBarCtrl::SetText](#settext)|Ustawia tekst w danej części formant paska stanu.|
-|[CStatusBarCtrl::SetTipText](#settiptext)|Ustawia tekst etykietki narzędzia dla okienka, w pasku stanu.|
+|[CStatusBarCtrl:: Create](#create)|Tworzy formant paska stanu i dołącza go do `CStatusBarCtrl` obiektu.|
+|[CStatusBarCtrl:: CreateEx](#createex)|Tworzy kontrolkę pasek stanu z określonymi stylami rozszerzonymi systemu Windows i dołącza je do `CStatusBarCtrl` obiektu.|
+|[CStatusBarCtrl::D rawItem](#drawitem)|Wywołuje się, gdy wizualny aspekt kontrolki paska stanu rysowania przez właściciela jest zmieniany.|
+|[CStatusBarCtrl:: GetBorders](#getborders)|Pobiera bieżące szerokości obramowania poziomego i pionowego kontrolki paska stanu.|
+|[CStatusBarCtrl:: GetIcon](#geticon)|Pobiera ikonę części (zwanej także okienkiem) w bieżącym formancie paska stanu.|
+|[CStatusBarCtrl:: GetParts](#getparts)|Pobiera liczbę części w kontrolce pasek stanu.|
+|[CStatusBarCtrl:: getRect](#getrect)|Pobiera prostokąt ograniczenia części w kontrolce pasek stanu.|
+|[CStatusBarCtrl:: gettext](#gettext)|Pobiera tekst z danej części kontrolki pasek stanu.|
+|[CStatusBarCtrl:: GetTextLength](#gettextlength)|Pobierz Długość (w znakach) tekstu z danej części kontrolki paska stanu.|
+|[CStatusBarCtrl:: GetTipText](#gettiptext)|Pobiera tekst etykietki narzędzia dla okienka na pasku stanu.|
+|[CStatusBarCtrl:: IsSimple](#issimple)|Sprawdza formant okna stanu, aby określić, czy jest w trybie prostym.|
+|[CStatusBarCtrl:: SetBkColor](#setbkcolor)|Ustawia kolor tła na pasku stanu.|
+|[CStatusBarCtrl:: SetIcon](#seticon)|Ustawia ikonę okienka na pasku stanu.|
+|[CStatusBarCtrl:: SetMinHeight](#setminheight)|Ustawia minimalną wysokość obszaru rysowania kontrolki paska stanu.|
+|[CStatusBarCtrl:: SetParts](#setparts)|Ustawia liczbę części w kontrolce pasek stanu i współrzędne prawej krawędzi każdej części.|
+|[CStatusBarCtrl:: SetSimple](#setsimple)|Określa, czy kontrolka paska stanu wyświetla prosty tekst, czy też wyświetla wszystkie części sterujące ustawione przez poprzednie `SetParts`wywołanie do.|
+|[CStatusBarCtrl:: SetText](#settext)|Ustawia tekst w danej części kontrolki pasek stanu.|
+|[CStatusBarCtrl:: SetTipText](#settiptext)|Ustawia tekst etykietki narzędzia dla okienka na pasku stanu.|
 
 ## <a name="remarks"></a>Uwagi
 
-Formant"paska stanu" jest oknem poziomej, zwykle są wyświetlane w dolnej części okna nadrzędnego, w którym aplikacja może wyświetlać różne rodzaje informacji o stanie. Formantu paska stanu można podzielić na części, aby wyświetlić więcej niż jeden typ danych.
+"Formant paska stanu" to okno poziome, zwykle wyświetlane w dolnej części okna nadrzędnego, w którym aplikacja może wyświetlać różne rodzaje informacji o stanie. Kontrolka pasek stanu może być podzielona na części, aby wyświetlić więcej niż jeden typ informacji.
 
-Ta kontrolka (i w związku z tym `CStatusBarCtrl` klasy) jest dostępna tylko dla programów uruchomionych w wersji Windows 95/98 i Windows NT 3.51 lub nowszej.
+Ten formant (i w związku `CStatusBarCtrl` z tym Klasa) jest dostępny tylko dla programów uruchomionych w systemach Windows 95/98 i Windows NT w wersji 3,51 lub nowszej.
 
-Aby uzyskać więcej informacji na temat korzystania z `CStatusBarCtrl`, zobacz [kontrolki](../../mfc/controls-mfc.md) i [za pomocą formantu CStatusBarCtrl](../../mfc/using-cstatusbarctrl.md).
+Aby uzyskać więcej informacji na `CStatusBarCtrl`temat korzystania z programu, zobacz [kontrolki](../../mfc/controls-mfc.md) i [Używanie CStatusBarCtrl](../../mfc/using-cstatusbarctrl.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -112,11 +112,11 @@ Aby uzyskać więcej informacji na temat korzystania z `CStatusBarCtrl`, zobacz 
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxcmn.h
+**Nagłówek:** afxcmn. h
 
-##  <a name="create"></a>  CStatusBarCtrl::Create
+##  <a name="create"></a>CStatusBarCtrl:: Create
 
-Tworzy formant paska stanu i dołącza je do `CStatusBarCtrl` obiektu.
+Tworzy formant paska stanu i dołącza go do `CStatusBarCtrl` obiektu.
 
 ```
 virtual BOOL Create(
@@ -129,36 +129,36 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *dwStyle*<br/>
-Określa styl formantu paska stanu. Zastosuj dowolną kombinację stanu paska style kontrolki, na liście [najczęściej używane style kontrolki](/windows/desktop/Controls/common-control-styles) w zestawie Windows SDK. Ten parametr musi zawierać styl WS_CHILD. Powinny również obejmować styl WS_VISIBLE.
+Określa styl kontrolki paska stanu. Zastosuj dowolną kombinację stylów kontrolki paska stanu wymienionych w obszarze [Style formantów wspólnych](/windows/win32/Controls/common-control-styles) w Windows SDK. Ten parametr musi zawierać styl WS_CHILD. Powinien również zawierać styl WS_VISIBLE.
 
-*Rect*<br/>
-Określa rozmiar i położenie formantu paska stanu. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury.
+*cinania*<br/>
+Określa rozmiar i położenie kontrolki paska stanu. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub struktura. [](/previous-versions/dd162897\(v=vs.85\))
 
 *pParentWnd*<br/>
-Określa stan paska okno nadrzędne kontrolki, zwykle `CDialog`. Nie może być równa NULL.
+Określa okno nadrzędne kontrolki pasek stanu, zazwyczaj a `CDialog`. Nie może mieć wartości NULL.
 
 *nID*<br/>
-Określa identyfikator formantu paska stanu.
+Określa identyfikator kontrolki paska stanu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartość zero.
+Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruowanie `CStatusBarCtrl` w dwóch krokach. Po pierwsze wywołanie konstruktora, a następnie wywołaj `Create`, która tworzy kontrolkę paska stanu i dołącza go do `CStatusBarCtrl` obiektu.
+`CStatusBarCtrl` Tworzysz dwa kroki. Najpierw Wywołaj konstruktora, a następnie Wywołaj `Create`metodę, która tworzy formant paska stanu i dołącza go `CStatusBarCtrl` do obiektu.
 
-Domyślne położenie okna stanu jest wzdłuż dolnej części okna nadrzędnego, ale można określić styl CCS_TOP, aby był wyświetlany w górnej części obszaru klienckiego okna nadrzędnego. Można określić styl SBARS_SIZEGRIP obejmujący uchwyt zmiany rozmiaru po prawej stronie okna stanu. Łącząc style CCS_TOP i SBARS_SIZEGRIP nie jest zalecane, ponieważ wynikowy uchwyt zmiany rozmiaru nie działa mimo, że system rysuje go w oknie stanu.
+Domyślna pozycja okna stanu znajduje się u dołu okna nadrzędnego, ale można określić styl CCS_TOP, aby był wyświetlany w górnej części obszaru klienckiego okna nadrzędnego. Możesz określić styl SBARS_SIZEGRIP, aby dołączyć uchwyt zmiany wielkości po prawej stronie okna stanu. Nie zaleca się łączenia stylów CCS_TOP i SBARS_SIZEGRIP, ponieważ nie jest on funkcjonalny, mimo że system rysuje go w oknie stanu.
 
-Aby utworzyć pasek stanu przy użyciu rozszerzone Style okna, należy wywołać [CStatusBarCtrl::CreateEx](#createex) zamiast `Create`.
+Aby utworzyć pasek stanu z rozszerzonymi stylami okien, należy wywołać [CStatusBarCtrl:: CreateEx](#createex) zamiast `Create`.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#1](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_1.cpp)]
 
-##  <a name="createex"></a>  CStatusBarCtrl::CreateEx
+##  <a name="createex"></a>CStatusBarCtrl:: CreateEx
 
-Tworzy kontrolkę (okno podrzędne) i kojarzy ją z `CStatusBarCtrl` obiektu.
+Tworzy kontrolkę (okno podrzędne) i kojarzy ją z `CStatusBarCtrl` obiektem.
 
 ```
 virtual BOOL CreateEx(
@@ -172,39 +172,39 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parametry
 
 *dwExStyle*<br/>
-Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) w zestawie Windows SDK.
+Określa rozszerzony styl formantu, który jest tworzony. Aby zapoznać się z listą rozszerzonych stylów systemu Windows, zobacz *dwExStyle* parametru [elementu CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) w Windows SDK.
 
 *dwStyle*<br/>
-Określa styl formantu paska stanu. Zastosuj dowolną kombinację stanu paska style kontrolki, na liście [najczęściej używane style kontrolki](/windows/desktop/Controls/common-control-styles) w zestawie Windows SDK. Ten parametr musi zawierać styl WS_CHILD. Powinny również obejmować styl WS_VISIBLE.
+Określa styl kontrolki paska stanu. Zastosuj dowolną kombinację stylów kontrolki paska stanu wymienionych w obszarze [Style formantów wspólnych](/windows/win32/Controls/common-control-styles) w Windows SDK. Ten parametr musi zawierać styl WS_CHILD. Powinien również zawierać styl WS_VISIBLE.
 
-*Rect*<br/>
-Odwołanie do [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.
+*cinania*<br/>
+Odwołanie do struktury [Rect](/previous-versions/dd162897\(v=vs.85\)) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
 
 *pParentWnd*<br/>
 Wskaźnik do okna, które jest elementem nadrzędnym formantu.
 
 *nID*<br/>
-Identyfikator formantu okna podrzędnego.
+Identyfikator okna podrzędnego kontrolki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj `CreateEx` zamiast [Utwórz](#create) do zastosowania rozszerzone style Windows, określonego przez tekst wstępny rozszerzonego stylu Windows **WS_EX_**.
+Użyj `CreateEx` zamiast [tworzenia](#create) , aby zastosować rozszerzone style systemu Windows, które są określone przez **WS_EX_** styl rozszerzony systemu Windows.
 
-##  <a name="cstatusbarctrl"></a>  CStatusBarCtrl::CStatusBarCtrl
+##  <a name="cstatusbarctrl"></a>CStatusBarCtrl:: CStatusBarCtrl
 
-Konstruuje `CStatusBarCtrl` obiektu.
+Konstruuje `CStatusBarCtrl` obiekt.
 
 ```
 CStatusBarCtrl();
 ```
 
-##  <a name="drawitem"></a>  CStatusBarCtrl::DrawItem
+##  <a name="drawitem"></a>CStatusBarCtrl::D rawItem
 
-Metoda wywoływana przez platformę, gdy zmieni się wizualny aspekt rysowania przez właściciela stanu paska sterowania zmiany.
+Wywoływane przez platformę, gdy wizualny aspekt kontrolki paska stanu rysowania przez właściciela jest zmieniany.
 
 ```
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
@@ -213,19 +213,19 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpDrawItemStruct*<br/>
-Długie wskaźnik do [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) strukturę, która zawiera informacje o typie rysowania wymagane.
+Długi wskaźnik do struktury [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) , który zawiera informacje o wymaganym typie rysunku.
 
 ### <a name="remarks"></a>Uwagi
 
-`itemAction` Członkiem `DRAWITEMSTRUCT` struktury definiuje rysowania akcję, która ma zostać wykonane.
+`itemAction` Element członkowski`DRAWITEMSTRUCT` struktury definiuje akcję rysowania, która ma zostać wykonana.
 
-Domyślnie ta funkcja elementu członkowskiego nic nie robi. Zastąpienie tej funkcji elementu członkowskiego do zaimplementowania rysunku do rysowania przez właściciela `CStatusBarCtrl` obiektu.
+Domyślnie ta funkcja członkowska nic nie robi. Przesłoń tę funkcję elementu członkowskiego, aby zaimplementować rysowanie dla `CStatusBarCtrl` obiektu rysowania przez właściciela.
 
-Aplikacja powinna przywrócenie wszystkich obiektów grafiki urządzenia interface (GDI), wybrany dla kontekstu wyświetlana podana w *lpDrawItemStruct* przed ten element członkowski funkcja kończy.
+Aplikacja powinna przywrócić wszystkie obiekty interfejsu GDI (Graphics Device Interface) wybrane dla kontekstu wyświetlania dostarczonego w *lpDrawItemStruct* przed zakończeniem tej funkcji elementu członkowskiego.
 
-##  <a name="getborders"></a>  CStatusBarCtrl::GetBorders
+##  <a name="getborders"></a>CStatusBarCtrl:: GetBorders
 
-Pobiera formantu paska stanu bieżącego szerokości obramowania poziome i pionowe i odstęp między prostokąty.
+Pobiera bieżące szerokości kontrolki paska stanu w poziomie i w pionie oraz miejsce między prostokątami.
 
 ```
 BOOL GetBorders(int* pBorders) const;
@@ -239,32 +239,32 @@ BOOL GetBorders(
 ### <a name="parameters"></a>Parametry
 
 *pBorders*<br/>
-Adres tablicę liczb całkowitych o trzy elementy. Pierwszy element otrzymuje szerokość obramowania poziome, drugi odbiera szerokość obramowania pionowy, a trzeci otrzymuje szerokość krawędzi między prostokąty.
+Adres tablicy typu Integer z trzema elementami. Pierwszy element otrzymuje szerokość obramowania poziomego, drugi otrzymuje szerokość obramowania pionowego, a trzecia otrzymuje szerokość obramowania między prostokątami.
 
 *nHorz*<br/>
-Odwołanie do liczba całkowita, która odbiera szerokość obramowania poziomej.
+Odwołanie do liczby całkowitej, która otrzymuje szerokość obramowania poziomego.
 
-*nVert*<br/>
-Odwołanie do liczba całkowita, która odbiera szerokość obramowania pionowy.
+*Konweruj*<br/>
+Odwołanie do liczby całkowitej, która otrzymuje szerokość obramowania pionowego.
 
 *nSpacing*<br/>
-Odwołanie do liczba całkowita, która odbiera szerokość krawędzi między prostokąty.
+Odwołanie do liczby całkowitej, która otrzymuje szerokość obramowania między prostokątami.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartość zero.
+Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
 ### <a name="remarks"></a>Uwagi
 
-Te obramowania Określ odstępy między poza krawędzią formantu a prostokątów w kontrolce, które zawierają tekst.
+Te obramowania określają odstępy między zewnętrzną krawędzią kontrolki a prostokątami w kontrolce, które zawierają tekst.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#2](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_2.cpp)]
 
-##  <a name="geticon"></a>  CStatusBarCtrl::GetIcon
+##  <a name="geticon"></a>CStatusBarCtrl:: GetIcon
 
-Pobiera ikonę dla części (okienko) w bieżącym formantu paska stanu.
+Pobiera ikonę części (zwanej także okienkiem) w bieżącym formancie paska stanu.
 
 ```
 HICON GetIcon(int iPart) const;
@@ -274,33 +274,33 @@ HICON GetIcon(int iPart) const;
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*iPart*|[in] Liczony od zera indeks części, który zawiera ikonę, które mają zostać pobrane. Jeśli ten parametr ma wartość -1, na pasku stanu jest zakłada się, że pasek stanu tryb prosty.|
+|*iPart*|podczas Indeks (liczony od zera) części zawierającej ikonę, która ma zostać pobrana. Jeśli ten parametr ma wartość-1, przyjmuje się, że jest to pasek stanu prosty trybu prostego.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Uchwyt ikony Jeśli metoda kończy się pomyślnie; w przeciwnym razie wartość NULL.
+Dojście do ikony, jeśli metoda się powiedzie; w przeciwnym razie wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wysyła [SB_GETICON](/windows/desktop/Controls/sb-geticon) komunikat, który jest opisany w zestawie Windows SDK.
+Ta metoda wysyła komunikat [SB_GETICON](/windows/win32/Controls/sb-geticon) , który jest opisany w Windows SDK.
 
-Formant paska stanu składa się z wiersza tekstu okienka danych wyjściowych, które są również znane jako części. Aby uzyskać więcej informacji na temat paska stanu, zobacz [implementacja paska stanu w MFC](../../mfc/status-bar-implementation-in-mfc.md) i [Ustawianie trybu obiektu CStatusBarCtrl](../../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md).
+Kontrolka pasek stanu składa się z wierszy okienek wyjściowych tekstowych, które są również znane jako części. Aby uzyskać więcej informacji na temat paska stanu, zobacz [implementacja paska stanu w MFC](../../mfc/status-bar-implementation-in-mfc.md) i [Ustawianie trybu obiektu CStatusBarCtrl](../../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md).
 
 ### <a name="example"></a>Przykład
 
-Poniższy kod definiuje zmienną `m_statusBar`, to znaczy umożliwiają dostęp do bieżącego formantu paska stanu. Ta zmienna jest używana w następnym przykładzie.
+Poniższy przykład kodu definiuje zmienną, `m_statusBar`, która jest używana do uzyskiwania dostępu do bieżącej kontrolki paska stanu. Ta zmienna jest używana w następnym przykładzie.
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_3.h)]
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykładowy kod kopiuje ikony dwa okienka bieżącego formantu paska stanu. W wcześniejszej sekcji przykładu kodu możemy utworzony formant paska stanu za pomocą trzy okienka, a następnie dodawany ikony do pierwszego okienka. W tym przykładzie pobiera ikonę z okienka pierwszy, a następnie dodaje go do drugiego i trzeciego okienka.
+Poniższy przykład kodu kopiuje ikonę do dwóch okienek bieżącej kontrolki pasek stanu. W poprzedniej sekcji przykładowego kodu utworzyliśmy kontrolkę pasek stanu z trzema okienkami, a następnie dodaliśmy do pierwszego okienka ikonę. Ten przykład pobiera ikonę z pierwszego okienka, a następnie dodaje ją do drugiego i trzeciego okienka.
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_4.cpp)]
 
-##  <a name="getparts"></a>  CStatusBarCtrl::GetParts
+##  <a name="getparts"></a>CStatusBarCtrl:: GetParts
 
-Pobiera liczbę części w kontrolce paska stanu.
+Pobiera liczbę części w kontrolce pasek stanu.
 
 ```
 int GetParts(
@@ -311,26 +311,26 @@ int GetParts(
 ### <a name="parameters"></a>Parametry
 
 *nParts*<br/>
-Numer części, dla którego mają zostać pobrane współrzędnych. Jeśli ten parametr jest większa niż liczba części w kontrolce, komunikat pobiera współrzędne tylko istniejące składniki.
+Liczba części, dla których mają zostać pobrane współrzędne. Jeśli ten parametr jest większy niż liczba części w kontrolce, komunikat pobiera współrzędne tylko dla istniejących części.
 
 *pParts*<br/>
-Adres tablicę liczb całkowitych, mające taką samą liczbę elementów jak numer części określone przez *nParts*. Każdy element w tablicy odbiera klienta współrzędne prawą krawędzią odpowiedniej części. Jeśli element jest ustawiony na wartość - 1, pozycja prawej krawędzi dla tej części rozszerza na prawej krawędzi paska stanu.
+Adres tablicy liczb całkowitych, która ma taką samą liczbę elementów jak liczba części określona przez *nParts*. Każdy element w tablicy otrzymuje współrzędną klienta prawej krawędzi odpowiedniej części. Jeśli element ma ustawioną wartość-1, pozycja prawej krawędzi tej części rozciąga się do prawej krawędzi paska stanu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Numer części kontrolki w przypadku powodzenia lub wartość zero, w przeciwnym razie.
+Liczba części w kontrolce, jeśli się powiedzie, lub zero w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja elementu członkowskiego pobiera również współrzędne prawą krawędzią podanej liczby części.
+Ta funkcja członkowska również Pobiera współrzędną prawej krawędzi danej liczby części.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#3](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_5.cpp)]
 
-##  <a name="getrect"></a>  CStatusBarCtrl::GetRect
+##  <a name="getrect"></a>CStatusBarCtrl:: getRect
 
-Pobiera prostokąt otaczający element w kontrolce paska stanu.
+Pobiera prostokąt ograniczenia części w kontrolce pasek stanu.
 
 ```
 BOOL GetRect(
@@ -341,22 +341,22 @@ BOOL GetRect(
 ### <a name="parameters"></a>Parametry
 
 *nPane*<br/>
-Liczony od zera indeks części, w których prostokąt otaczający ma zostać pobrane.
+Indeks (liczony od zera) części, której prostokąt powiązania ma zostać pobrany.
 
 *lpRect*<br/>
-Adres [Prostokąt](/previous-versions/dd162897\(v=vs.85\)) strukturę, która odbiera prostokąt otaczający.
+Adres struktury [Rect](/previous-versions/dd162897\(v=vs.85\)) , która otrzymuje prostokąt powiązany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartość zero.
+Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#4](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_6.cpp)]
 
-##  <a name="gettext"></a>  CStatusBarCtrl::GetText
+##  <a name="gettext"></a>CStatusBarCtrl:: gettext
 
-Pobiera tekst z danej części formant paska stanu.
+Pobiera tekst z danej części kontrolki pasek stanu.
 
 ```
 CString GetText(
@@ -372,33 +372,33 @@ int GetText(
 ### <a name="parameters"></a>Parametry
 
 *lpszText*<br/>
-Adres buforu, który odbiera tekst. Ten parametr jest ciąg zakończony znakiem null.
+Adres buforu, który odbiera tekst. Ten parametr jest ciągiem zakończonym wartością null.
 
 *nPane*<br/>
-Liczony od zera indeks części, z którego można pobrać tekstu.
+Indeks (liczony od zera) części, z której ma zostać pobrany tekst.
 
 *pType*<br/>
-Wskaźnik na liczbę całkowitą, która otrzymuje informacje o typie. Typ może być jedną z następujących wartości:
+Wskaźnik na liczbę całkowitą, która odbiera informacje o typie. Typ może być jedną z następujących wartości:
 
-- **0** tekstu jest rysowana z obramowaniem się niższe niż płaszczyzna na pasku stanu.
+- **0** tekst jest rysowany z obramowaniem wyświetlanym poniżej płaszczyzny paska stanu.
 
-- SBT_NOBORDERS tekstu jest rysowana bez granic.
+- SBT_NOBORDERS tekst jest rysowany bez obramowania.
 
-- SBT_POPOUT tekstu jest rysowana z obramowaniem wyświetlane niż płaszczyzna na pasku stanu.
+- SBT_POPOUT tekst jest rysowany z obramowaniem, aby był wyświetlany powyżej płaszczyzny paska stanu.
 
-- SBT_OWNERDRAW czy tekst ma SBT_OWNERDRAW typu, rysunku *pType* odbiera ten komunikat i zwraca 32-bitową wartość skojarzonych z tekstem zamiast typu długości i operacji.
+- SBT_OWNERDRAW Jeśli tekst ma typ rysunku SBT_OWNERDRAW, *pType* odbiera ten komunikat i zwraca wartość 32-bitową skojarzoną z tekstem, a nie długość i typ operacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Długość w znakach tekstu lub [CString](../../atl-mfc-shared/reference/cstringt-class.md) zawierający tekst.
+Długość (w znakach) tekstu lub [CString](../../atl-mfc-shared/reference/cstringt-class.md) zawierającego bieżący tekst.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#5](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_7.cpp)]
 
-##  <a name="gettextlength"></a>  CStatusBarCtrl::GetTextLength
+##  <a name="gettextlength"></a>CStatusBarCtrl:: GetTextLength
 
-Pobiera długość w znakach tekstu z danej części formant paska stanu.
+Pobiera długość (w znakach) tekstu z danej części kontrolki pasek stanu.
 
 ```
 int GetTextLength(
@@ -409,28 +409,28 @@ int GetTextLength(
 ### <a name="parameters"></a>Parametry
 
 *nPane*<br/>
-Liczony od zera indeks części, z którego można pobrać tekstu.
+Indeks (liczony od zera) części, z której ma zostać pobrany tekst.
 
 *pType*<br/>
-Wskaźnik na liczbę całkowitą, która otrzymuje informacje o typie. Typ może być jedną z następujących wartości:
+Wskaźnik na liczbę całkowitą, która odbiera informacje o typie. Typ może być jedną z następujących wartości:
 
-- **0** tekstu jest rysowana z obramowaniem się niższe niż płaszczyzna na pasku stanu.
+- **0** tekst jest rysowany z obramowaniem wyświetlanym poniżej płaszczyzny paska stanu.
 
-- SBT_NOBORDERS tekstu jest rysowana bez granic.
+- SBT_NOBORDERS tekst jest rysowany bez obramowania.
 
-- SBT_OWNERDRAW tekstu jest rysowana przez okno nadrzędne.
+- SBT_OWNERDRAW tekst jest rysowany w oknie nadrzędnym.
 
-- SBT_POPOUT tekstu jest rysowana z obramowaniem wyświetlane niż płaszczyzna na pasku stanu.
+- SBT_POPOUT tekst jest rysowany z obramowaniem, aby był wyświetlany powyżej płaszczyzny paska stanu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Długość w znakach tekstu.
+Długość (w znakach) tekstu.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#6](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_8.cpp)]
 
-##  <a name="gettiptext"></a>  CStatusBarCtrl::GetTipText
+##  <a name="gettiptext"></a>CStatusBarCtrl:: GetTipText
 
 Pobiera tekst etykietki narzędzia dla okienka na pasku stanu.
 
@@ -441,23 +441,23 @@ CString GetTipText(int nPane) const;
 ### <a name="parameters"></a>Parametry
 
 *nPane*<br/>
-Liczony od zera indeks w okienku paska stanu, aby otrzymać tekst etykietki narzędzia.
+Indeks (liczony od zera) okienka paska stanu do odbierania tekstu etykietki narzędzia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A [CString](../../atl-mfc-shared/reference/cstringt-class.md) obiekt zawierający tekst, który ma być używane w etykietce narzędzia.
+Obiekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) zawierający tekst, który ma być używany w etykietce narzędzia.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [SB_GETTIPTEXT](/windows/desktop/Controls/sb-gettiptext), zgodnie z opisem w zestawie Windows SDK.
+Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [SB_GETTIPTEXT](/windows/win32/Controls/sb-gettiptext), zgodnie z opisem w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#7](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_9.cpp)]
 
-##  <a name="issimple"></a>  CStatusBarCtrl::IsSimple
+##  <a name="issimple"></a>CStatusBarCtrl:: IsSimple
 
-Sprawdza, czy formant okna stanu, aby ustalić, czy jest w trybie uproszczonym.
+Sprawdza formant okna stanu, aby określić, czy jest w trybie prostym.
 
 ```
 BOOL IsSimple() const;
@@ -465,13 +465,13 @@ BOOL IsSimple() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli formant okna stanu znajduje się w trybie uproszczonym; w przeciwnym razie wartość zero.
+Różne od zera, jeśli formant okna stanu jest w trybie prostym; w przeciwnym razie zero.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [SB_ISSIMPLE](/windows/desktop/Controls/sb-issimple), zgodnie z opisem w zestawie Windows SDK.
+Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [SB_ISSIMPLE](/windows/win32/Controls/sb-issimple), zgodnie z opisem w Windows SDK.
 
-##  <a name="setbkcolor"></a>  CStatusBarCtrl::SetBkColor
+##  <a name="setbkcolor"></a>CStatusBarCtrl:: SetBkColor
 
 Ustawia kolor tła na pasku stanu.
 
@@ -481,24 +481,24 @@ COLORREF SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parametry
 
-*cr*<br/>
-Wartość COLORREF, która określa nowy kolor tła. Określ wartość CLR_DEFAULT, powodują pasek stanu, aby używać jej domyślny kolor tła.
+*znaki*<br/>
+Wartość COLORREF, która określa nowy kolor tła. Określ wartość CLR_DEFAULT, aby uniemożliwić użycie przez pasek stanu domyślnego koloru tła.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A [COLORREF](/windows/desktop/gdi/colorref) wartość, która reprezentuje poprzedniego domyślny kolor tła.
+Wartość [COLORREF](/windows/win32/gdi/colorref) , która reprezentuje poprzedni domyślny kolor tła.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [SB_SETBKCOLOR](/windows/desktop/Controls/sb-setbkcolor), zgodnie z opisem w zestawie Windows SDK.
+Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [SB_SETBKCOLOR](/windows/win32/Controls/sb-setbkcolor), zgodnie z opisem w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#8](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_10.cpp)]
 
-##  <a name="seticon"></a>  CStatusBarCtrl::SetIcon
+##  <a name="seticon"></a>CStatusBarCtrl:: SetIcon
 
-Ustawia okienko ikonę na pasku stanu.
+Ustawia ikonę okienka na pasku stanu.
 
 ```
 BOOL SetIcon(
@@ -509,26 +509,26 @@ BOOL SetIcon(
 ### <a name="parameters"></a>Parametry
 
 *nPane*<br/>
-Liczony od zera indeks okienko w którym będą otrzymywać ikony. Jeśli ten parametr ma wartość -1, na pasku stanu jest zakłada się, że pasek stanu proste.
+Indeks (liczony od zera) okienka, który będzie otrzymywał ikonę. Jeśli ten parametr ma wartość-1, przyjmuje się, że jest to prosty pasek stanu.
 
 *hIcon*<br/>
-Uchwyt ikony, należy ustawić. Jeśli ta wartość wynosi NULL, ikona jest usuwany z części.
+Dojście do ikony, która ma zostać ustawiona. Jeśli ta wartość jest RÓWNa NULL, ikona zostanie usunięta z części.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartość zero.
+Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [SB_SETICON](/windows/desktop/Controls/sb-seticon), zgodnie z opisem w zestawie Windows SDK.
+Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [SB_SETICON](/windows/win32/Controls/sb-seticon), zgodnie z opisem w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CStatusBarCtrl::SetBkColor](#setbkcolor).
+  Zobacz przykład dla [CStatusBarCtrl:: SetBkColor](#setbkcolor).
 
-##  <a name="setminheight"></a>  CStatusBarCtrl::SetMinHeight
+##  <a name="setminheight"></a>CStatusBarCtrl:: SetMinHeight
 
-Ustawia minimalną wysokość stan powierzchni rysowania kontrolki paska.
+Ustawia minimalną wysokość obszaru rysowania kontrolki paska stanu.
 
 ```
 void SetMinHeight(int nMin);
@@ -537,19 +537,19 @@ void SetMinHeight(int nMin);
 ### <a name="parameters"></a>Parametry
 
 *nMin*<br/>
-Minimalna wysokość w pikselach formantu.
+Minimalna wysokość formantu (w pikselach).
 
 ### <a name="remarks"></a>Uwagi
 
-Minimalna wysokość jest sumą *nMin* i dwa razy szerokość w pikselach, pionowa obramowania formantu paska stanu.
+Minimalna wysokość to suma wartości *Nmin* i podwójnej szerokości (w pikselach) pionowej krawędzi kontrolki pasek stanu.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#9](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_11.cpp)]
 
-##  <a name="setparts"></a>  CStatusBarCtrl::SetParts
+##  <a name="setparts"></a>CStatusBarCtrl:: SetParts
 
-Ustawia numer części stanu kontroli i współrzędne prawą krawędzią każdej części paska.
+Ustawia liczbę części w kontrolce pasek stanu i współrzędne prawej krawędzi każdej części.
 
 ```
 BOOL SetParts(
@@ -560,22 +560,22 @@ BOOL SetParts(
 ### <a name="parameters"></a>Parametry
 
 *nParts*<br/>
-Numer części, aby ustawić. Liczba części nie może być większa niż 255.
+Liczba części do ustawienia. Liczba części nie może być większa niż 255.
 
 *pWidths*<br/>
-Adres tablicę liczb całkowitych, mające taką samą liczbę elementów na części określone przez *nParts*. Każdy element w tablicy Określa położenie prawej krawędzi odpowiedniej części współrzędne klienta. Jeśli element jest - 1, pozycja prawej krawędzi dla tej części rozszerza się na prawą krawędzią kontrolki.
+Adres tablicy liczb całkowitych, która ma taką samą liczbę elementów jak części określone przez *nParts*. Każdy element w tablicy określa położenie, we współrzędnych klienta, prawej krawędzi odpowiedniej części. Jeśli element ma wartość-1, pozycja prawej krawędzi tej części rozciąga się z prawą krawędzią kontrolki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartość zero.
+Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#10](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_12.cpp)]
 
-##  <a name="setsimple"></a>  CStatusBarCtrl::SetSimple
+##  <a name="setsimple"></a>CStatusBarCtrl:: SetSimple
 
-Określa, czy formant paska stanu wyświetla zwykły tekst lub wyświetla wszystkie części kontrolki ustawione przez poprzednie wywołanie [SetParts](#setparts).
+Określa, czy kontrolka paska stanu wyświetla prosty tekst, czy też wyświetla wszystkie części sterujące ustawione przez poprzednie [](#setparts)wywołanie do setpart.
 
 ```
 BOOL SetSimple(BOOL bSimple = TRUE);
@@ -584,7 +584,7 @@ BOOL SetSimple(BOOL bSimple = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bSimple*<br/>
-[in] Flaga typ wyświetlania. Jeśli ten parametr ma wartość TRUE, kontrolka ma wyświetlać prosty tekst; Jeśli jest to wartość FALSE, wyświetla wiele części.
+podczas Flaga typu wyświetlania. Jeśli ten parametr ma wartość TRUE, formant wyświetla prosty tekst; Jeśli ma wartość FALSE, wyświetla wiele części.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -592,11 +592,11 @@ Zawsze zwraca wartość 0.
 
 ### <a name="remarks"></a>Uwagi
 
-W przypadku aplikacji zmiany formantu paska stanu z innym niż prosty, Simple lub na odwrót, system natychmiast odrysowuje formantu.
+Jeśli aplikacja zmieni formant paska stanu z nieproste na proste lub odwrotnie, system natychmiast ponownie narysuje formant.
 
-##  <a name="settext"></a>  CStatusBarCtrl::SetText
+##  <a name="settext"></a>CStatusBarCtrl:: SetText
 
-Ustawia tekst w danej części formant paska stanu.
+Ustawia tekst w danej części kontrolki pasek stanu.
 
 ```
 BOOL SetText(
@@ -608,29 +608,29 @@ BOOL SetText(
 ### <a name="parameters"></a>Parametry
 
 *lpszText*<br/>
-Adres określania tekstu, aby ustawić ciąg zakończony znakiem null. Jeśli *nNie* jest SBT_OWNERDRAW, *lpszText* reprezentuje 32 bity danych.
+Adres ciągu zakończenia o wartości null, określający tekst do ustawienia. Jeśli *npowiadomienia* jest SBT_OWNERDRAW, *lpszText* reprezentuje 32 bitów danych.
 
 *nPane*<br/>
-Liczony od zera indeks części do ustawienia. Jeśli ta wartość wynosi 255, formantu paska stanu będzie traktowana jako prosty formant mających tylko jednej części.
+Indeks (liczony od zera) części do ustawienia. Jeśli wartość jest równa 255, przyjmuje się, że kontrolka pasek stanu jest prostą kontrolką tylko z jedną częścią.
 
-*nType*<br/>
-Typ operacji rysowania. Zobacz [komunikat SB_SETTEXT](/windows/desktop/Controls/sb-settext) listę możliwych wartości.
+*Npowiadomienia*<br/>
+Typ operacji rysowania. Zobacz [komunikat SB_SETTEXT](/windows/win32/Controls/sb-settext) , aby uzyskać listę możliwych wartości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartość zero.
+Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
 ### <a name="remarks"></a>Uwagi
 
-Komunikat unieważnia części kontrolki, które uległy zmianie, powodując go, aby wyświetlić nowy tekst w przypadku, gdy formant uzyskuje następny komunikat WM_PAINT.
+Komunikat unieważnia część kontrolki, która zmieniła się, powodując wyświetlenie nowego tekstu, gdy kontrolka odbierze komunikat WM_PAINT.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#11](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_13.cpp)]
 
-##  <a name="settiptext"></a>  CStatusBarCtrl::SetTipText
+##  <a name="settiptext"></a>CStatusBarCtrl:: SetTipText
 
-Ustawia tekst etykietki narzędzia dla okienka, w pasku stanu.
+Ustawia tekst etykietki narzędzia dla okienka na pasku stanu.
 
 ```
 void SetTipText(
@@ -641,14 +641,14 @@ void SetTipText(
 ### <a name="parameters"></a>Parametry
 
 *nPane*<br/>
-Liczony od zera indeks w okienku paska stanu, aby otrzymać tekst etykietki narzędzia.
+Indeks (liczony od zera) okienka paska stanu do odbierania tekstu etykietki narzędzia.
 
 *pszTipText*<br/>
 Wskaźnik do ciągu zawierającego tekst etykietki narzędzia.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [SB_SETTIPTEXT](/windows/desktop/Controls/sb-settiptext), zgodnie z opisem w zestawie Windows SDK.
+Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [SB_SETTIPTEXT](/windows/win32/Controls/sb-settiptext), zgodnie z opisem w Windows SDK.
 
 ### <a name="example"></a>Przykład
 

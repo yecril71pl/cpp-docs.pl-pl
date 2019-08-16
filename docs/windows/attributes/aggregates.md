@@ -1,5 +1,5 @@
 ---
-title: agregacje (C++ COM atrybut)
+title: Agregaty (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.aggregates
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - aggregate objects [C++], aggregates attribute
 - aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
-ms.openlocfilehash: 12e6af31c2714095cf2ecf51e4f067081789a9e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9e3f84fbc781bd5187ae0c3461a6c8d68a29aa0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262180"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501884"
 ---
 # <a name="aggregates"></a>aggregates
 
-Wskazuje, że obiekt agreguje obiektu określonego przez identyfikator CLSID.
+Wskazuje, że obiekt agreguje obiekt określony przez CLSID.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,27 +28,27 @@ Wskazuje, że obiekt agreguje obiektu określonego przez identyfikator CLSID.
 
 ### <a name="parameters"></a>Parametry
 
-*Identyfikator klasy*<br/>
-Określa identyfikator CLSID obiektu się agregowaniu.
+*Identyfikator*<br/>
+Określa identyfikator CLSID obiektu agregowanego.
 
-*nazwa_zmiennej*<br/>
-Nazwa zmiennej, która ma zostać wstawiony. Ta zmienna uwzględnia `IUnknown` obiektu są agregowane.
+*variable_name*<br/>
+Nazwa zmiennej, która ma zostać wstawiona. Ta zmienna zawiera `IUnknown` obiekt, który jest agregowany.
 
 ## <a name="remarks"></a>Uwagi
 
-Po zastosowaniu do obiektu, **agregacje** atrybut C++ implementuje zewnętrzne otoki dla obiektu agregowana (określony przez `clsid`).
+W przypadku zastosowania do obiektu C++ atrybut `clsid` **Aggregates** implementuje otokę zewnętrzną dla zagregowanego obiektu (określonego przez).
 
-Ten atrybut wymaga, aby [coclass](coclass.md), [progid](progid.md), lub [vi_progid —](vi-progid.md) atrybutów (lub innego atrybutu, który oznacza jeden z nich) również będą stosowane do tego samego elementu. Jeśli dowolny pojedynczy atrybut jest używany, pozostałe dwa są automatycznie stosowane. Na przykład jeśli `progid` zastosowaniu `vi_progid` i `coclass` są również stosowane.
+Ten atrybut wymaga, aby atrybut [coclass](coclass.md), [ProgID](progid.md)lub [vi_progid](vi-progid.md) (lub inny atrybut, który implikuje jeden z tych) został również zastosowany do tego samego elementu. W przypadku użycia dowolnego pojedynczego atrybutu zostaną automatycznie zastosowane pozostałe dwa. Na przykład, jeśli `progid` jest stosowany, `vi_progid` i `coclass` są również stosowane.
 
 ### <a name="atl-projects"></a>Projekty ATL
 
-Jeśli ten atrybut jest używany w projekcie, który korzysta z biblioteki ATL, zachowanie zmiany atrybutów. Po pierwsze następujący wpis zostanie dodany do mapy COM obiektu docelowego:
+Jeśli ten atrybut jest używany w projekcie, który korzysta z ATL, zachowanie zmiany atrybutu. Najpierw do mapy COM obiektu docelowego zostanie dodany następujący wpis:
 
 ```
 COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(_m_spAttrXXX, clsid)
 ```
 
-Drugi [DECLARE_GET_CONTROLLING_UNKNOWN](../../atl/reference/aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) — makro jest także dodawane.
+Po drugie, dodane zostanie również makro [DECLARE_GET_CONTROLLING_UNKNOWN](../../atl/reference/aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) .
 
 ## <a name="example"></a>Przykład
 
@@ -83,18 +83,18 @@ struct CObject : IObject
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **— struktura**|
+|**Dotyczy**|**Klasa**, **Struktura**|
 |**Powtarzalne**|Tak|
-|**Wymaganych atrybutów**|Co najmniej jeden z następujących czynności: `coclass`, `progid`, lub `vi_progid`.|
+|**Wymagane atrybuty**|Co najmniej jeden z następujących elementów: `coclass`, `progid`, lub `vi_progid`.|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 
 [Atrybuty COM](com-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>
 [Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Agregacja](/windows/desktop/com/aggregation)<br/>
-[Aggregatable](/windows/desktop/Midl/aggregatable)<br/>
+[Agregacja](/windows/win32/com/aggregation)<br/>
+[Niepoddający się agregowaniu](/windows/win32/Midl/aggregatable)<br/>
 [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)

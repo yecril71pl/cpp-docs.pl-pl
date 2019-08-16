@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: da247524dae77627bbf041b83bc1534a75c3b073
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: c167745eed45b7081e62a2c3be225a33e7ee0520
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916703"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502443"
 ---
 # <a name="cspinbuttonctrl-class"></a>Klasa korzystanie CSpinButtonCtrl
 
@@ -117,7 +117,7 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *dwStyle*<br/>
-Określa styl kontrolki przycisku pokrętła. Zastosuj dowolną kombinację stylów kontrolki przycisku pokrętła do kontrolki. Te style są opisane w [stylach kontrolek w górę](/windows/desktop/Controls/up-down-control-styles) w Windows SDK.
+Określa styl kontrolki przycisku pokrętła. Zastosuj dowolną kombinację stylów kontrolki przycisku pokrętła do kontrolki. Te style są opisane w [stylach kontrolek w górę](/windows/win32/Controls/up-down-control-styles) w Windows SDK.
 
 *cinania*<br/>
 Określa rozmiar i położenie kontrolki przycisku pokrętła. Może być obiektem [CRect](../../atl-mfc-shared/reference/crect-class.md) lub strukturą [Rect](/previous-versions/dd162897\(v=vs.85\))
@@ -154,10 +154,10 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parametry
 
 *dwExStyle*<br/>
-Określa rozszerzony styl formantu, który jest tworzony. Aby zapoznać się z listą rozszerzonych stylów systemu Windows, zobacz *dwExStyle* parametru [elementu CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) w Windows SDK.
+Określa rozszerzony styl formantu, który jest tworzony. Aby zapoznać się z listą rozszerzonych stylów systemu Windows, zobacz *dwExStyle* parametru [elementu CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) w Windows SDK.
 
 *dwStyle*<br/>
-Określa styl kontrolki przycisku pokrętła. Zastosuj dowolną kombinację stylów kontrolki przycisku pokrętła do kontrolki. Te style są opisane w [stylach kontrolek w górę](/windows/desktop/Controls/up-down-control-styles) w Windows SDK.
+Określa styl kontrolki przycisku pokrętła. Zastosuj dowolną kombinację stylów kontrolki przycisku pokrętła do kontrolki. Te style są opisane w [stylach kontrolek w górę](/windows/win32/Controls/up-down-control-styles) w Windows SDK.
 
 *cinania*<br/>
 Odwołanie do struktury [Rect](/previous-versions/dd162897\(v=vs.85\)) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
@@ -200,7 +200,7 @@ UINT GetAccel(
 Liczba elementów w tablicy określonej przez *pAccel*.
 
 *pAccel*<br/>
-Wskaźnik do tablicy struktur [UDACCEL](/windows/desktop/api/commctrl/ns-commctrl-udaccel) , które odbierają informacje o przyspieszeniu.
+Wskaźnik do tablicy struktur [UDACCEL](/windows/win32/api/commctrl/ns-commctrl-udaccel) , które odbierają informacje o przyspieszeniu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -298,7 +298,7 @@ BOOL SetAccel(
 ### <a name="parameters"></a>Parametry
 
 *nAccel*<br/>
-Liczba struktur [UDACCEL](/windows/desktop/api/commctrl/ns-commctrl-udaccel) określonych przez *pAccel*.
+Liczba struktur [UDACCEL](/windows/win32/api/commctrl/ns-commctrl-udaccel) określonych przez *pAccel*.
 
 *pAccel*<br/>
 Wskaźnik do tablicy struktur UDACCEL, które zawierają informacje o przyspieszeniu. Elementy powinny być sortowane w kolejności rosnącej na podstawie `nSec` elementu członkowskiego.

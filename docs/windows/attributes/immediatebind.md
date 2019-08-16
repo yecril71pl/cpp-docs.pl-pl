@@ -1,21 +1,21 @@
 ---
-title: immediatebind — (atrybut COM C++)
+title: immediatebind (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.immediatebind
 helpviewer_keywords:
 - immediatebind attribute
 ms.assetid: 186d40e6-9166-4d0c-9853-4e7e4d25226f
-ms.openlocfilehash: 1844e72ecd1fe7c0f4255426eb48f5c70471e5f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c659f23d6828616c4a48522b61330336e994cbb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409476"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514652"
 ---
 # <a name="immediatebind"></a>immediatebind
 
-Wskazuje, że baza danych zostanie niezwłocznie powiadomiona o wszystkich zmianach właściwości obiektu powiązanych z danymi.
+Wskazuje, że baza danych zostanie natychmiast powiadomiona o wszystkich zmianach właściwości obiektu powiązanego z danymi.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,11 +25,11 @@ Wskazuje, że baza danych zostanie niezwłocznie powiadomiona o wszystkich zmian
 
 ## <a name="remarks"></a>Uwagi
 
-**Immediatebind —** atrybut C++ ma taką samą funkcjonalność jak [immediatebind —](/windows/desktop/Midl/immediatebind) atrybutów w MIDL.
+Atrybut **immediatebind** C++ ma takie same funkcje jak atrybut [immediatebind](/windows/win32/Midl/immediatebind) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Zobacz [możliwej do wiązania](bindable.md) przykład sposobu użycia **immediatebind —**.
+Zobacz [powiązanie](bindable.md) z przykładem, jak używać **immediatebind**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -37,12 +37,12 @@ Zobacz [możliwej do wiązania](bindable.md) przykład sposobu użycia **immedia
 
 |||
 |-|-|
-|**Dotyczy**|Metody interfejsu|
+|**Dotyczy**|Interface — Metoda|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,21 +1,21 @@
 ---
-title: iid_is — (C++ atrybutów COM)
+title: iid_is (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.iid_is
 helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-ms.openlocfilehash: b91fb7937bb0e20f2500eace9695bc0ddba21b26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8bfa20f55afd85019795fdd40548158c2f49e126
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409528"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514657"
 ---
-# <a name="iidis"></a>iid_is
+# <a name="iid_is"></a>iid_is
 
-Określa identyfikator IID interfejsu COM, wskazywana przez wskaźnik interfejsu.
+Określa identyfikator IID interfejsu COM wskazywanego przez wskaźnik interfejsu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,15 +26,15 @@ Określa identyfikator IID interfejsu COM, wskazywana przez wskaźnik interfejsu
 ### <a name="parameters"></a>Parametry
 
 *expression*<br/>
-Wyrażenie języka C, który określa IID interfejsu COM, wskazywana przez wskaźnik interfejsu.
+Wyrażenie języka C, które określa identyfikator IID interfejsu COM wskazywanego przez wskaźnik interfejsu.
 
 ## <a name="remarks"></a>Uwagi
 
-**Iid_is —** C++ atrybut ma taką samą funkcjonalność jak [iid_is —](/windows/desktop/Midl/iid-is) atrybutów w MIDL.
+Atrybut **iid_is** C++ ma takie same funkcje jak atrybut [iid_is](/windows/win32/Midl/iid-is) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod przedstawia użycie **iid_is —**:
+Poniższy kod przedstawia użycie **iid_is**:
 
 ```cpp
 // cpp_attr_ref_iid_is.cpp
@@ -59,10 +59,10 @@ __interface IFireTabCtrl : IDispatch
 |-|-|
 |**Dotyczy**|Parametr interfejsu, element członkowski danych|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,6 +1,6 @@
 ---
-title: / DEPENDENTLOADFLAG (zestaw domyślne zależne obciążenia flagi)
-description: Opcja /DEPENDENTLOADFLAG ustawia domyślne flagi dla bibliotek DLL załadowane przy użyciu LoadLibrary
+title: /DEPENDENTLOADFLAG (Ustaw domyślne zależne flagi ładowania)
+description: Opcja/DEPENDENTLOADFLAG ustawia domyślne flagi dla bibliotek DLL ładowanych przy użyciu funkcji LoadLibrary
 ms.date: 05/18/2018
 f1_keywords:
 - dependentloadflag
@@ -10,43 +10,43 @@ helpviewer_keywords:
 - linker [C++], DEPENDENTLOADFLAG
 - DEPENDENTLOADFLAG linker option
 - /DEPENDENTLOADFLAG linker option
-ms.openlocfilehash: 94998e06f23a7e70524221d3cb75166b5d3f2c44
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 072fa1103d049c7d5c395ae88d268f3b47e20b4f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272090"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492957"
 ---
-# <a name="dependentloadflag-set-default-dependent-load-flags"></a>/ DEPENDENTLOADFLAG (zestaw domyślne zależne obciążenia flagi)
+# <a name="dependentloadflag-set-default-dependent-load-flags"></a>/DEPENDENTLOADFLAG (Ustaw domyślne zależne flagi ładowania)
 
-Ustawia flagi obciążenia domyślne używane podczas `LoadLibrary` jest używana do ładowania bibliotek DLL.
+Ustawia domyślne flagi ładowania używane podczas `LoadLibrary` ładowania bibliotek DLL.
 
 ## <a name="syntax"></a>Składnia
 
-> **/ DEPENDENTLOADFLAG**[**:**_loadflags_]
+> **/DEPENDENTLOADFLAG** [ **:** _loadflags_]
 
 ### <a name="arguments"></a>Argumenty
 
 *loadflags*<br/>
-Opcjonalna wartość 16-bitową liczbę całkowitą "C" stylu w dziesiętnej, ósemkowej z zerem wiodącym lub szesnastkowe z wiodącym `0x`, określa flagi zależne obciążenia, aby mają zastosowanie do wszystkich [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) wywołania. Wartość domyślna to 0.
+Opcjonalna 16-bitowa liczba całkowita w stylu "C" w liczbie dziesiętnej, ósemkowej z zerem wiodącym lub szesnastkowym z wiodącym `0x`znakiem, który określa zależne flagi obciążenia do zastosowania do wszystkich wywołań funkcji [LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) . Wartość domyślna to 0.
 
 ## <a name="remarks"></a>Uwagi
 
-Ta opcja jest nowa w programie Visual Studio 2017 i ma zastosowanie tylko do aplikacji działających w systemie Windows 10 RS1 lub nowszym. Ta opcja jest ignorowana przez inne systemy operacyjne, które uruchomią aplikację.
+Ta opcja jest nowa w programie Visual Studio 2017 i ma zastosowanie tylko do aplikacji uruchomionych w systemie Windows 10 RS1 i nowszych wersjach. Ta opcja jest ignorowana przez inne systemy operacyjne, na których jest uruchamiana aplikacja.
 
-W obsługiwanych systemach operacyjnych, ta opcja ma efekt zmiany wywołania `LoadLibrary("dependent.dll")` do równowartości `LoadLibraryEx("dependent.dll", 0, loadflags)`. Wywołania [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) nie ma wpływu. Ta opcja nie dotyczy rekursywnie biblioteki DLL ładowane przez aplikację.
+W obsługiwanych systemach operacyjnych ta opcja ma wpływ na zmianę wywołań `LoadLibrary("dependent.dll")` na `LoadLibraryEx("dependent.dll", 0, loadflags)`odpowiednik. Nie dotyczy to wywołań [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) . Ta opcja nie stosuje cyklicznie do bibliotek DLL ładowanych przez aplikację.
 
-Ta flaga może służyć do uniemożliwić DLL sadzenia ataków. Na przykład, jeśli aplikacja używa `LoadLibrary` załadować zależnej biblioteki DLL, osoba atakująca może DLL o takiej samej nazwie w roślin ścieżka wyszukiwania używana przez `LoadLibrary`, takich jak bieżącego katalogu, które można kontrolować przed katalogów systemu, jeśli jest w trybie awaryjnym wyszukiwania biblioteki DLL wyłączone. Tryb awaryjny wyszukiwania biblioteki DLL umieszcza katalogu bieżącego użytkownika w dalszej kolejności wyszukiwania i jest włączona domyślnie w systemie Windows XP z dodatkiem SP2 i nowszych wersjach. Aby uzyskać więcej informacji, zobacz [kolejności przeszukiwania bibliotek dołączanych dynamicznie](/windows/desktop/Dlls/dynamic-link-library-search-order).
+Ta flaga może służyć do zapobiegania atakom z przesadzeniem biblioteki DLL. Na przykład jeśli aplikacja używa `LoadLibrary` do załadowania zależnej biblioteki DLL, osoba atakująca może zakładać bibliotekę DLL o takiej samej nazwie w ścieżce wyszukiwania używanej przez `LoadLibrary`, na przykład w bieżącym katalogu, która może być sprawdzana przed katalogami systemowymi, jeśli tryb wyszukiwania w bezpiecznym formacie dll jest wyłączony. Tryb bezpiecznego wyszukiwania biblioteki DLL umieszcza bieżący katalog użytkownika później w kolejności wyszukiwania i jest domyślnie włączony w systemie Windows XP z dodatkiem SP2 i nowszych wersjach. Aby uzyskać więcej informacji, zobacz [kolejność wyszukiwania biblioteki dołączanej dynamicznie](/windows/win32/Dlls/dynamic-link-library-search-order).
 
-W przypadku określenia opcji link `/DEPENDENTLOADFLAG:0xA00` (wartość flagi połączone `LOAD_LIBRARY_SEARCH_APPLICATION_DIR | LOAD_LIBRARY_SEARCH_SYSTEM32`), wówczas nawet jeśli tryb awaryjny wyszukiwania biblioteki DLL jest wyłączone na komputerze użytkownika, ścieżka wyszukiwania biblioteki DLL jest ograniczona do chronionego katalogi, które są utrudnia osobie atakującej Zmiana. Aby uzyskać informacji na temat flagi, które są dostępne, a ich symboliczne i liczbowe wartości, zobacz *Flagidw* opis parametru w [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa).
+W przypadku określenia opcji `/DEPENDENTLOADFLAG:0xA00` łącze (wartość połączonych flag `LOAD_LIBRARY_SEARCH_APPLICATION_DIR | LOAD_LIBRARY_SEARCH_SYSTEM32`), nawet jeśli tryb wyszukiwania bezpiecznych bibliotek DLL jest wyłączony na komputerze użytkownika, ścieżka wyszukiwania biblioteki DLL jest ograniczona do chronionych katalogów, które są trudniejsze dla osoby atakującej stąp. Aby uzyskać informacje na temat dostępnych flag oraz ich symbolicznych i liczbowych wartości, zobacz opis parametru *flagiDW* w [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw).
 
-### <a name="to-set-the-dependentloadflag-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić opcję konsolidatora DEPENDENTLOADFLAG w środowisku programowania Visual Studio
+### <a name="to-set-the-dependentloadflag-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić opcję konsolidatora DEPENDENTLOADFLAG w środowisku deweloperskim programu Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **wiersza polecenia** stronę właściwości.
+1. Wybierz stronę właściwości **Konfiguracja właściwości** > **wiersza polecenia** **konsolidatora** > .
 
-1. Wpisz opcje w **dodatkowe opcje**.
+1. Wprowadź opcję w opcjach **dodatkowych**.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
@@ -58,5 +58,5 @@ W przypadku określenia opcji link `/DEPENDENTLOADFLAG:0xA00` (wartość flagi p
 - [Opcje konsolidatora MSVC](linker-options.md)
 - [Łączenie pliku wykonywalnego z biblioteką DLL](../linking-an-executable-to-a-dll.md#linking-implicitly)
 - [Łączenie pliku wykonywalnego z biblioteką DLL](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
-- [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)
-- [Kolejności przeszukiwania bibliotek dołączanych dynamicznie](/windows/desktop/Dlls/dynamic-link-library-search-order)
+- [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw)
+- [Kolejność wyszukiwania biblioteki dołączanej dynamicznie](/windows/win32/Dlls/dynamic-link-library-search-order)

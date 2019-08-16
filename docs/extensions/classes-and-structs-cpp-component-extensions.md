@@ -1,5 +1,5 @@
 ---
-title: Klasa ref i ref struct (C++sposób niezamierzony i C++/CX)
+title: ref class i ref struct (C++/CLI i C++/CX)
 ms.date: 05/30/2019
 ms.topic: reference
 f1_keywords:
@@ -13,16 +13,16 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: 7db1683ee153c34b3476c51eb22fb99eae4c6891
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: dd58f32d031068785cd6020549f9eea4b2182786
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450372"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509814"
 ---
-# <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>Klasa ref i ref struct (C++sposób niezamierzony i C++/CX)
+# <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class i ref struct (C++/CLI i C++/CX)
 
-**Klasy referencyjnej** lub **ref struct** rozszerzenia zadeklarować klasy lub struktury którego *okres istnienia obiektu* są zarządzane automatycznie. Gdy obiekt nie jest już dostępny, lub wykracza poza zakres, pamięć jest zwalniana.
+Rozszerzenia **klasy ref** lub **ref struct** deklarują klasę lub strukturę, której *okres istnienia obiektu* jest zarządzany automatycznie. Gdy obiekt nie jest już dostępny lub wykracza poza zakres, pamięć zostanie wydzielona.
 
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze
 
@@ -41,39 +41,39 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 ### <a name="parameters"></a>Parametry
 
 *class_access*<br/>
-(Opcjonalnie) Dostępność klasy lub struktury spoza zestawu. Możliwe wartości to **publicznych** i **prywatnej** (**prywatnej** jest ustawieniem domyślnym). Zagnieżdżone klasy lub struktury nie mogą mieć *class_access* specyfikator.
+Obowiązkowe Dostępność klasy lub struktury poza zestawem. Możliwe wartości to **Public** i **Private** (wartość domyślna to**Private** ). Zagnieżdżone klasy lub struktury nie mogą mieć specyfikatora *class_access* .
 
 *name*<br/>
 Nazwa klasy lub struktury.
 
-*modifier*<br/>
-(Opcjonalnie) [abstrakcyjne](abstract-cpp-component-extensions.md) i [zapieczętowanego](sealed-cpp-component-extensions.md) są prawidłowe modyfikatorów.
+*modyfikator*<br/>
+Obowiązkowe [abstrakcyjne](abstract-cpp-component-extensions.md) i [zapieczętowane](sealed-cpp-component-extensions.md) są prawidłowymi modyfikatorami.
 
 *inherit_access*<br/>
-(Opcjonalnie) Dostępność *base_type*. Tylko dozwolone ułatwień dostępu jest **publicznych** (**publicznych** jest ustawieniem domyślnym).
+Obowiązkowe Dostępność *base_type*. Jedyna dozwolona dostępność jest **publiczna** (wartość domyślna to**Public** ).
 
 *base_type*<br/>
-(Opcjonalnie) Typ podstawowy. Jednak typ wartościowy nie może działać jako typu podstawowego.
+Obowiązkowe Typ podstawowy. Jednak typ wartości nie może działać jako typ podstawowy.
 
-Aby uzyskać więcej informacji zobacz opisy specyficzny dla języka tego parametru w sekcjach środowiska uruchomieniowego Windows i środowisko uruchomieniowe języka wspólnego.
+Aby uzyskać więcej informacji, zobacz opisy dotyczące języka dla tego parametru w sekcjach środowisko wykonawcze systemu Windows i środowiska uruchomieniowego języka wspólnego.
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość domyślna dostępu elementu członkowskiego obiektu zadeklarowane za pomocą **klasy referencyjnej** lub **klasę wartości** jest **prywatnej**. I ułatwienia dostępu członków domyślnego obiektu zadeklarowane za pomocą **ref struct** lub **struktury wartości** jest **publicznych**.
+Domyślną dostępnością elementu członkowskiego obiektu zadeklarowanego za pomocą klasy **ref** lub **klasy wartości** jest **Private**. I domyślna dostępność elementu członkowskiego obiektu zadeklarowanego za pomocą struktury **ref** lub **struktury wartości** jest **publiczna**.
 
-Gdy typ odwołania dziedziczy z innego typu odwołania, funkcje wirtualne w klasie bazowej jawnie musi zostać zastąpiona (przy użyciu [zastąpienia](override-cpp-component-extensions.md)) lub ukryte (przy użyciu [new (nowe gniazdo w vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)). Funkcje klasy pochodnej musi również jawnie oznaczona jako **wirtualnego**.
+Gdy typ referencyjny dziedziczy z innego typu odwołania, funkcje wirtualne w klasie bazowej muszą jawnie zostać zastąpione (z [zastąpieniem](override-cpp-component-extensions.md)) lub ukryty (z [nowym miejscem w tabeli metod wirtualnych)](new-new-slot-in-vtable-cpp-component-extensions.md)). Funkcje klasy pochodnej muszą być również jawnie oznaczone jako **wirtualne**.
 
-Aby wykryć w czasie kompilacji, czy typ jest **klasy referencyjnej** lub **ref struct**, lub **klasę wartości** lub **struktury wartości**, użyj `__is_ref_class (type)`, `__is_value_class (type)`, lub `__is_simple_value_class (type)`. Aby uzyskać więcej informacji, zobacz [Obsługa cech typu w kompilatorze](compiler-support-for-type-traits-cpp-component-extensions.md).
+Aby wykryć w czasie kompilacji, niezależnie od tego, czy typ jest klasą referencyjną, czy **strukturą ref**, czy klasą `__is_value_class (type)` **wartości** lub `__is_simple_value_class (type)` **strukturą wartości**, użyj `__is_ref_class (type)`,, lub. Aby uzyskać więcej informacji, zobacz [Obsługa kompilatora dla cech typu](compiler-support-for-type-traits-cpp-component-extensions.md).
 
-Aby uzyskać więcej informacji na temat klas i struktur zobacz
+Aby uzyskać więcej informacji na temat klas i struktur, zobacz
 
-- [Utworzenie wystąpienia klasy i struktury](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md)
+- [Tworzenie wystąpień klas i struktur](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md)
 
 - [Semantyka stosu języka C++ dla typów odwołań](../dotnet/cpp-stack-semantics-for-reference-types.md)
 
-- [Klas, struktur i Unii](../cpp/classes-and-structs-cpp.md)
+- [Klasy, struktury i związki](../cpp/classes-and-structs-cpp.md)
 
-- [Destruktory i finalizatory w sposób: Definiowanie oraz stosowanie klas i struktur (C++sposób niezamierzony)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
+- [Destruktory i finalizatory, w jaki sposób: Definiowanie i korzystanie z klas i struktur (C++/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
 
 - [Operatory zdefiniowane przez użytkownika (C++/CLI)](../dotnet/user-defined-operators-cpp-cli.md)
 
@@ -87,39 +87,39 @@ Aby uzyskać więcej informacji na temat klas i struktur zobacz
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [klasy i struktury odwołania](../cppcx/ref-classes-and-structs-c-cx.md) i [klasy i struktury wartości](https://msdn.microsoft.com/library/windows/apps/hh699861.aspx).
+Zobacz [klasy referencyjne i struktury](../cppcx/ref-classes-and-structs-c-cx.md) oraz [klasy wartości i struktury](../cppcx/value-classes-and-structs-c-cx.md).
 
 ### <a name="parameters"></a>Parametry
 
 *base_type*<br/>
-(Opcjonalnie) Typ podstawowy. A **klasy referencyjnej** lub **ref struct** może dziedziczyć z zero lub więcej interfejsów i zero lub jeden **ref** typów. A **klasę wartości** lub **struktury wartości** może dziedziczyć tylko z zero lub więcej interfejsów.
+Obowiązkowe Typ podstawowy. **Klasa ref** lub **ref struct** mogą dziedziczyć z zero lub więcej interfejsów i zero lub jeden typ **ref** . **Klasa wartości** lub **Struktura wartości** może dziedziczyć tylko po zero lub większej liczbie interfejsów.
 
-Kiedy Deklarujesz obiektu za pomocą **klasy referencyjnej** lub **ref struct** słów kluczowych, obiekt jest dostępny po dojścia do obiektu, czyli wskaźnik licznika odwołań do obiektu. Gdy zadeklarowana zmienna wykracza poza zakres, kompilator automatycznie usuwa obiekt źródłowy. Gdy obiekt jest używany jako parametr w wywołaniu lub jest przechowywana w zmiennej, dojścia do obiektu jest faktycznie przekazywane lub przechowywane.
+Gdy deklarujesz obiekt za pomocą słowa kluczowego **ref** lub **ref struct** , uzyskuje dostęp do obiektu za pomocą dojścia do obiektu; oznacza to, że wskaźnik licznika odwołania do obiektu. Gdy zadeklarowana zmienna wykracza poza zakres, kompilator automatycznie usuwa obiekt źródłowy. Gdy obiekt jest używany jako parametr w wywołaniu lub jest przechowywany w zmiennej, dojście do obiektu jest faktycznie przekazywanie lub przechowywane.
 
-Kiedy Deklarujesz obiektu za pomocą **klasę wartości** lub **struktury wartości** słów kluczowych, okres istnienia obiektów zadeklarowanych obiektu nie jest nadzorowane. Obiekt jest podobnie jak inne standard C++ klasy lub struktury.
+Podczas deklarowania obiektu za pomocą **klasy wartości** lub słów kluczowych **struktury wartości** , okres istnienia obiektu zadeklarowanego obiektu nie jest nadzorowany. Obiekt jest podobny do żadnej innej klasy C++ standardowej lub struktury.
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/ZW`
+Opcja kompilatora:`/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
 ### <a name="remarks"></a>Uwagi
 
-W poniższej tabeli przedstawiono różnice w składni przedstawionej w **wszystkie środowiska wykonawcze** sekcji, które są specyficzne dla C++sposób niezamierzony.
+W poniższej tabeli wymieniono różnice dotyczące składni pokazanej w sekcji **wszystkie środowiska uruchomieniowe** , które C++są specyficzne dla/CLI.
 
 ### <a name="parameters"></a>Parametry
 
 *base_type*<br/>
-(Opcjonalnie) Typ podstawowy. A **klasy referencyjnej** lub **ref struct** może dziedziczyć od zera lub jednego zarządzanego, interfejsy i zero lub jeden ref typów. A **klasę wartości** lub **struktury wartości** może dziedziczyć tylko z zero lub więcej interfejsów zarządzanych.
+Obowiązkowe Typ podstawowy. **Klasa ref** lub **ref struct** mogą dziedziczyć z zero lub więcej interfejsów zarządzanych i zero lub jeden typ ref. **Klasa wartości** lub **Struktura wartości** może dziedziczyć tylko po zerowym lub większym interfejsie zarządzanym.
 
-**Klasy referencyjnej** i **ref struct** słowa kluczowe poinformować kompilator, który ma zostać przydzielone na stercie klasy lub struktury. Gdy obiekt jest używany jako parametr w wywołaniu lub jest przechowywana w zmiennej, odwołanie do obiektu jest faktycznie przekazywane lub przechowywane.
+Słowa kluczowe **ref** i **ref struct** , które informują kompilator, że Klasa lub struktura są przydzielane na stercie. Gdy obiekt jest używany jako parametr w wywołaniu lub jest przechowywany w zmiennej, odwołanie do obiektu jest faktycznie przekazywanie lub przechowywane.
 
-**Klasę wartości** i **struktury wartości** słowa kluczowe informuje kompilator, że wartość przydzielone klasy lub struktury jest przekazywane do funkcji lub przechowywany w elementów członkowskich.
+Słowa kluczowe **klasy wartości** i **struktury wartości** instruują kompilator, że wartość przydzieloną klasy lub struktury jest przenoszona do funkcji lub przechowywanych w elementach członkowskich.
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/clr`
+Opcja kompilatora:`/clr`
 
 ## <a name="see-also"></a>Zobacz także
 

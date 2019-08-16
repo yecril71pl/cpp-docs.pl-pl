@@ -1,5 +1,5 @@
 ---
-title: 'TN003: Mapowanie Windows uchwytów na obiekty'
+title: 'TN003: Mapowanie dojść systemu Windows do obiektów'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mapping
@@ -9,30 +9,30 @@ helpviewer_keywords:
 - Windows handles to objects [MFC]
 - mappings [MFC], Windows handles to objects
 ms.assetid: fbea9f38-992c-4091-8dbc-f29e288617d6
-ms.openlocfilehash: e7844398ebaf5a8fdf8c56ab18b33d8c7717d1ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45492963e1b686e03eb59c320fdc3d52d1534f7d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306382"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513541"
 ---
-# <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: Mapowanie Windows uchwytów na obiekty
+# <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: Mapowanie dojść systemu Windows do obiektów
 
-Ta uwaga opisuje MFC procedur, które obsługuje mapowania Windows obiektu dojścia do obiektów języka C++.
+Ta Uwaga opisuje procedury MFC, które obsługują mapowanie uchwytów obiektów systemu Windows C++ do obiektów.
 
-## <a name="the-problem"></a>Ten Problem
+## <a name="the-problem"></a>Problem
 
-Obiekty Windows zwykle są reprezentowane przez różne [obsługi](/windows/desktop/WinProg/windows-data-types) obiektów klas MFC opakować Windows uchwytów obiektu z obiektami C++. Uchwyt otaczania funkcji biblioteki klas MFC pozwalają znaleźć obiektu języka C++, do którego jest zawijany obiekt Windows, który ma określoną dojście. Jednak czasami obiekt nie ma obiektu języka C++ i w tych godzinach system tworzy tymczasowy obiekt jako otoki języka C++.
+Obiekty systemu Windows są zwykle reprezentowane przez [](/windows/win32/WinProg/windows-data-types) różne obiekty uchwytu klasy MFC zawijają uchwyty obiektów C++ systemu Windows z obiektami. Funkcja zawijania uchwytów biblioteki klas MFC umożliwia znalezienie C++ obiektu, który otacza obiekt systemu Windows, który ma określony uchwyt. Jednak czasami obiekt nie ma obiektu C++ otoki i w tym momencie system tworzy tymczasowy obiekt do działania jako C++ otoka.
 
-Windows obiektów, które uchwyt mapy są następujące:
+Obiekty systemu Windows korzystające z map obsługi są następujące:
 
-- HWND ([CWnd](../mfc/reference/cwnd-class.md) i `CWnd`-klas pochodnych)
+- HWND ([CWnd](../mfc/reference/cwnd-class.md) i `CWnd`-pochodne klasy)
 
-- Elementu HDC ([CDC](../mfc/reference/cdc-class.md) i `CDC`-klas pochodnych)
+- Używający HDC ([](../mfc/reference/cdc-class.md) wyskakujące i `CDC`pochodne klasy)
 
 - HMENU ([CMenu](../mfc/reference/cmenu-class.md))
 
-- Hpen — ([CGdiObject](../mfc/reference/cgdiobject-class.md))
+- HPEN ([CGdiObject](../mfc/reference/cgdiobject-class.md))
 
 - HBRUSH (`CGdiObject`)
 
@@ -44,44 +44,44 @@ Windows obiektów, które uchwyt mapy są następujące:
 
 - HRGN (`CGdiObject`)
 
-- HIMAGELIST ([CImageList](../mfc/reference/cimagelist-class.md))
+- HIMAGELIST ([Korzystanie CImageList](../mfc/reference/cimagelist-class.md))
 
-- GNIAZDA ([CSocket](../mfc/reference/csocket-class.md))
+- GNIAZDO ([CSocket](../mfc/reference/csocket-class.md))
 
-Podane dojście do jednej z tych obiektów, można znaleźć obiektu MFC, który otacza uchwytu przez wywołanie metody statycznej `FromHandle`. Na przykład, biorąc pod uwagę HWND o nazwie *hWnd*, zwraca wskaźnik do następujący wiersz `CWnd` to opakowuje *hWnd*:
+Uwzględniając dojście do dowolnego z tych obiektów, można znaleźć obiekt MFC, który zawija uchwyt poprzez wywołanie metody `FromHandle`statycznej. Na przykład, mając Właściwość HWND o nazwie *HWND*, poniższy wiersz zwróci wskaźnik do obiektu, który `CWnd` zawija wartość *HWND*:
 
 ```
 CWnd::FromHandle(hWnd)
 ```
 
-Jeśli *hWnd* nie ma określonego obiektu, to tymczasowy `CWnd` zostanie utworzony, aby zawijać *hWnd*. Dzięki temu można uzyskać prawidłowego obiektu języka C++ z dowolnego uchwytu.
+Jeśli *Właściwość HWND* nie ma określonego obiektu otoki, jest tworzona `CWnd` tymczasowa, aby otoczyć *Właściwość HWND*. Dzięki temu można uzyskać prawidłowy C++ obiekt z dowolnego dojścia.
 
-Po utworzeniu obiektu, można pobrać uchwytu ze zmiennej publicznej składowej klasy otoki. W przypadku właściwości `CWnd`, *m_hWnd* zawiera HWND dla tego obiektu.
+Po utworzeniu obiektu otoki można pobrać jego uchwyt z publicznej zmiennej składowej klasy otoki. W przypadku elementu `CWnd`, *m_hWnd* zawiera właściwość HWND dla tego obiektu.
 
-## <a name="attaching-handles-to-mfc-objects"></a>Dołączanie dojścia do obiektów MFC
+## <a name="attaching-handles-to-mfc-objects"></a>Dołączanie dojść do obiektów MFC
 
-Biorąc pod uwagę nowo utworzony dojście-obiektu i jego uchwyt do obiektu Windows, należy skojarzyć dwóch przez wywołanie metody `Attach` działa jak w poniższym przykładzie:
+W przypadku nowo utworzonego obiektu otoki uchwytu i dojścia do obiektu systemu Windows można skojarzyć te dwa, wywołując `Attach` funkcję w tym przykładzie:
 
 ```
 CWnd myWnd;
 myWnd.Attach(hWnd);
 ```
 
-To sprawia, że wpis w kojarzenie stałe mapy *myWnd* i *hWnd*. Wywoływanie `CWnd::FromHandle(hWnd)` teraz zwraca wskaźnik do *myWnd*. Gdy *myWnd* jest usunięte, destruktor automatycznie zniszcz *hWnd* wywołując Windows [destroywindow —](/windows/desktop/api/winuser/nf-winuser-destroywindow) funkcji. Jeśli jest to niepożądane, *hWnd* musi zostać odłączony od *myWnd* przed *myWnd* zostanie zniszczony (zwykle w przypadku, gdy opuszczania zakresu, w którym *myWnd*została zdefiniowana). `Detach` To realizowane przez metodę.
+Oznacza to, że wpis w trwałej mapie kojarzy *myWnd* i *HWND*. Wywołanie `CWnd::FromHandle(hWnd)` zwróci teraz wskaźnik do *myWnd*. Po usunięciu *myWnd* , destruktor automatycznie niszczy *Właściwość HWND* przez wywołanie funkcji [DestroyWindow](/windows/win32/api/winuser/nf-winuser-destroywindow) systemu Windows. Jeśli nie jest to wymagane, *Właściwość HWND* musi być odłączona od *myWnd* przed zniszczeniem *myWnd* (zwykle przy opuszczaniu zakresu, w którym zdefiniowano *myWnd* ). Ta `Detach` Metoda.
 
 ```
 myWnd.Detach();
 ```
 
-## <a name="more-about-temporary-objects"></a>Więcej informacji na temat obiektów tymczasowych.
+## <a name="more-about-temporary-objects"></a>Więcej informacji o obiektach tymczasowych
 
-Obiekty tymczasowe są tworzone po każdym `FromHandle` otrzymuje uchwyt, który nie ma już obiekt otoki. Takie obiekty tymczasowe są odłączone od ich dojścia i usunięte przez `DeleteTempMap` funkcji. Domyślnie [CWinThread::OnIdle](../mfc/reference/cwinthread-class.md#onidle) automatycznie wywołuje `DeleteTempMap` dla każdej klasy, która obsługuje uchwyt tymczasowego mapy. Oznacza to, że możesz nie zakłada, że wskaźnik do obiektów tymczasowych prawidłowe poza punktem wyjścia z funkcji której uzyskano wskaźnika.
+Obiekty tymczasowe są tworzone za `FromHandle` każdym razem, gdy zostanie dostarczone dojście, które nie ma jeszcze obiektu otoki. Te obiekty tymczasowe są odłączone od ich uchwytu i usuwane przez `DeleteTempMap` funkcje. Domyślnie [CWinThread:: OnIdle](../mfc/reference/cwinthread-class.md#onidle) automatycznie wywołuje `DeleteTempMap` dla każdej klasy, która obsługuje mapy uchwytów tymczasowych. Oznacza to, że nie można założyć, że wskaźnik do obiektu tymczasowego będzie prawidłowy poza punktem wyjścia z funkcji, w której uzyskano wskaźnik.
 
-## <a name="wrapper-objects-and-multiple-threads"></a>Otoki obiektów i wiele wątków
+## <a name="wrapper-objects-and-multiple-threads"></a>Obiekty otoki i wiele wątków
 
-Obiekty tymczasowe i stałe są przechowywane na zasadzie na wątek. Oznacza to jeden wątek nie może uzyskać dostęp do obiektów otoki C++ innego wątku, niezależnie od tego, czy jest tymczasowy lub stały.
+Zarówno obiekt tymczasowy, jak i trwały są utrzymywane dla każdego wątku. Oznacza to, że jeden wątek nie może uzyskać dostępu C++ do obiektów otoki innego wątku, niezależnie od tego, czy jest on tymczasowy, czy trwały.
 
-Aby przekazać te obiekty z jednego wątku do innego, zawsze wysyłać je jako ich native `HANDLE` typu. Przekazywanie obiektu języka C++ z jednego wątku do innego często spowodować nieoczekiwane rezultaty.
+Aby przekazać te obiekty z jednego wątku do innego, należy zawsze wysyłać je jako ich `HANDLE` typy natywne. Przekazanie C++ obiektu otoki z jednego wątku do innego często spowoduje nieoczekiwane wyniki.
 
 ## <a name="see-also"></a>Zobacz także
 

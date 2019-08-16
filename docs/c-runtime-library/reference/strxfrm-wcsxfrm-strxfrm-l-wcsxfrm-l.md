@@ -35,14 +35,14 @@ helpviewer_keywords:
 - strings [C++], comparing locale
 - _wcsxfrm_l function
 ms.assetid: 6ba8e1f6-4484-49aa-83b8-bc2373187d9e
-ms.openlocfilehash: 4e4f5bb6639cbeee0f004f94f09177c08394d43e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4dc94d76562daf10544e9b0d09d9608bd83e454
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258718"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500784"
 ---
-# <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
+# <a name="strxfrm-wcsxfrm-_strxfrm_l-_wcsxfrm_l"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 
 Przekształć ciąg w oparciu o informacje specyficzne dla ustawień regionalnych.
 
@@ -81,44 +81,44 @@ Ciąg docelowy.
 *strSource*<br/>
 Ciąg źródłowy.
 
-*Liczba*<br/>
+*liczbą*<br/>
 Maksymalna liczba znaków do umieszczenia w *strDest*.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca długość ciągu przekształcone, nie licząc zamykającego kończącego znaku null. Jeśli wartość zwracana jest większa niż lub równa *liczba*, zawartość *strDest* jest nieprzewidywalne. W przypadku błędu, każda funkcja ustawia **errno** i zwraca **INT_MAX**. Nieprawidłowy znak **errno** ustawiono **EILSEQ**.
+Zwraca długość przekształconego ciągu, który nie zlicza kończącego znaku null. Jeśli wartość zwracana jest większa lub równa liczbie, zawartość *strDest* jest nieprzewidywalne. W przypadku błędu każda funkcja ustawia **errno** i zwraca **INT_MAX**. Dla nieprawidłowego znaku **errno** jest ustawiony na **EILSEQ**.
 
 ## <a name="remarks"></a>Uwagi
 
-**Strxfrm —** funkcja przekształca ciągu wskazywany przez *strSource* w nowym sortowane formularz, która jest przechowywana w *strDest*. Nie więcej niż *liczba* znaków, łącznie ze znakiem zerowym, są przetwarzane i umieszczane w ciągu wynikowym. Transformacja jest wykonywane przy użyciu ustawień regionalnych **LC_COLLATE** ustawienie kategorii. Aby uzyskać więcej informacji na temat **LC_COLLATE**, zobacz [setlocale](setlocale-wsetlocale.md). **strxfrm —** używa bieżących ustawień regionalnych dla wszelkich zachowań; **_strxfrm_l —** jest identyczna, z tą różnicą, że używa ustawień regionalnych przekazanych w zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Funkcja **strxfrm** przekształca ciąg wskazany przez *strSource* do nowego, posortowanego formularza, który jest przechowywany w *strDest*. Nie więcej niż *Liczba* znaków, w tym znak null, są przekształcane i umieszczane w ciągu wynikowym. Przekształcenie jest realizowane przy użyciu ustawienia kategorii **LC_COLLATE** ustawień regionalnych. Aby uzyskać więcej informacji na temat **LC_COLLATE**, zobacz setlocale. [](setlocale-wsetlocale.md) **strxfrm** używa bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych; **_strxfrm_l** jest identyczny, z tą różnicą, że używa ustawień regionalnych przekazaną zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-Po przekształceniu wywołanie **strcmp —** daje wyniki identyczne z tymi wywołanie, za pomocą dwóch ciągów przekształcone **strcoll —** stosowane do oryginalnego dwa ciągi. Podobnie jak w przypadku **strcoll —** i **stricoll —**, **strxfrm —** automatycznie obsługuje ciągi znaków wielobajtowych zgodnie z potrzebami.
+Po przekształceniu wywołanie **strcmp** z dwoma przekształconymi ciągami daje wyniki identyczne z wywołaniami **strcoll —** zastosowanymi do oryginalnych dwóch ciągów. Podobnie jak w przypadku **strcoll —** i **stricoll**, **strxfrm** automatycznie obsługuje ciągi znaków wielobajtowych.
 
-**wcsxfrm —** to wersja znaku dwubajtowego **strxfrm —**; argumenty ciągu **wcsxfrm —** są wskaźnikami znaków dwubajtowych. Dla **wcsxfrm —** po przekształcać ciągu, po wywołaniu **wcscmp —** daje wyniki identyczne z tymi wywołanie, za pomocą dwóch ciągów przekształcone **wcscoll —** stosowane do oryginalny dwa ciągi. **wcsxfrm —** i **strxfrm —** zachowują się identycznie. **wcsxfrm —** używa bieżących ustawień regionalnych dla wszelkich zachowań; **_wcsxfrm_l —** używa ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych.
+**wcsxfrm** to dwubajtowa wersja **strxfrm**; argumenty ciągu **wcsxfrm** są wskaźnikami znaków dwubajtowych. Dla **wcsxfrm**, po przekształceniu ciągu, wywołanie **wcscmp** z dwoma przekształconymi ciągami daje wyniki identyczne z wywołaniami **wcscoll** zastosowanymi do oryginalnych dwóch ciągów. **wcsxfrm** i **strxfrm** zachowują się identycznie w inny sposób. **wcsxfrm** używa bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych; **_wcsxfrm_l** używa ustawień regionalnych przekazaną zamiast bieżących ustawień regionalnych.
 
-Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *strSource* jest wskaźnikiem wartości null lub *strDest* jest **NULL** wskaźnika (chyba że liczba jest równy zero), lub jeśli *liczba* jest większa niż **INT_MAX**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** do **EINVAL** i zwracają **INT_MAX**.
+Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *strSource* jest wskaźnikiem typu null, lub *strDest* jest wskaźnikiem **null** (chyba że licznik ma wartość zero) lub jeśli *licznik* jest większy niż **INT_MAX**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i zwracają **INT_MAX**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsxfrm**|**strxfrm**|**strxfrm**|**wcsxfrm**|
 |**_tcsxfrm_l**|**_strxfrm_l**|**_strxfrm_l**|**_wcsxfrm_l**|
 
-W ustawieniach regionalnych "języka C" kolejność znaków w zestawie znaków (zestaw znaków ASCII) jest taka sama, jak w porządku leksykograficznym znaków. Jednak w innych lokalizacjach, w kolejności znaków w zestawie znaków mogą się różnić z kolejnością znaków leksykograficznych. Na przykład, w niektórych Europejskiego ustawień regionalnych znaków ' "(wartość 0x61) poprzedza znak" &\#x00E4; " (wartość 0xE4) w zestawie znaków, ale znak "ä" poprzedza znak "a" leksykograficznie.
+W ustawieniach regionalnych "C" kolejność znaków w zestawie znaków (zestaw znaków ASCII) jest taka sama jak kolejność leksykograficznych znaków. Jednak w innych ustawieniach regionalnych kolejność znaków w zestawie znaków może różnić się od kolejności znaków leksykograficznych. Na przykład w niektórych europejskich ustawieniach regionalnych znak "a" (wartość 0x61) poprzedza znak "&\#x00E4;". (Value 0xE4) w zestawie znaków, ale znak "ä" poprzedza znak "a" lexicographically.
 
-W lokalizacjach, w których zestaw znaków i kolejnością znaków leksykograficznych różnią się, należy użyć **strxfrm —** dla oryginalnego ciągów i następnie **strcmp —** na wynikowej ciągów w celu utworzenia leksykograficznych ciąg Porównanie zgodnie z bieżących ustawień regionalnych **LC_COLLATE** ustawienie kategorii. W związku z tym, aby porównać dwóch ciągów lexicographically w powyższych ustawień regionalnych, należy użyć **strxfrm —** na oryginalnym ciągów, a następnie **strcmp —** na ciągi wynikowe. Alternatywnie możesz użyć **strcoll —** zamiast **strcmp —** na oryginalnym ciągów.
+W ustawieniach regionalnych, dla których zestaw znaków i kolejność znaków leksykograficznych są różne, użyj **strxfrm** dla oryginalnych ciągów, a następnie **strcmp** na wynikowych ciągach, aby utworzyć porównanie ciągów leksykograficznych zgodnie z bieżącymi ustawieniami regionalnymi. Ustawienie kategorii **LC_COLLATE** . W tym celu należy porównać dwa ciągi lexicographically w powyższych ustawieniach regionalnych, użyć **strxfrm** dla oryginalnych ciągów, a następnie **strcmp** na wynikowych ciągach. Alternatywnie możesz użyć **strcoll —** zamiast **strcmp** w oryginalnych ciągach.
 
-**strxfrm —** jest zasadniczo otokę [LCMapString](/windows/desktop/api/winnls/nf-winnls-lcmapstringa) z **LCMAP_SORTKEY**.
+**strxfrm** jest w zasadzie otoką wokół [LCMapString](/windows/win32/api/winnls/nf-winnls-lcmapstringw) z **LCMAP_SORTKEY**.
 
-Wartość następującego wyrażenia jest rozmiar tablicy potrzebne do przechowywania **strxfrm —** przemian ciąg źródłowy:
+Wartość następującego wyrażenia jest rozmiar tablicy wymaganej do przeprowadzenia transformacji **strxfrm** ciągu źródłowego:
 
 `1 + strxfrm( NULL, string, 0 )`
 
-W ustawieniach "języka C" regionalnych tylko **strxfrm —** jest odpowiednikiem następujących czynności:
+Tylko w ustawieniach regionalnych "C" **strxfrm** jest równoważne z następującymi:
 
 ```C
 strncpy( _string1, _string2, _count );
@@ -130,11 +130,11 @@ return( strlen( _string1 ) );
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**strxfrm**|\<string.h>|
-|**wcsxfrm**|\<Włącz String.h > lub \<wchar.h >|
+|**wcsxfrm**|\<ciąg. h > lub \<WCHAR. h >|
 |**_strxfrm_l**|\<string.h>|
-|**_wcsxfrm_l**|\<Włącz String.h > lub \<wchar.h >|
+|**_wcsxfrm_l**|\<ciąg. h > lub \<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -29,48 +29,48 @@ helpviewer_keywords:
 - single OpenMP directive
 - threadprivate OpenMP directive
 ms.assetid: 0562c263-344c-466d-843e-de830d918940
-ms.openlocfilehash: d644b612c0c326692786c94046d799163dfbce8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 108e23a91b2bd0041d95a2262007ce4f684fc671
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362689"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69512196"
 ---
 # <a name="openmp-directives"></a>OpenMP — Dyrektywy
 
-Zawiera łącza do informacji o dyrektywach używany w interfejsie API OpenMP.
+Zawiera łącza do dyrektyw używanych w interfejsie API OpenMP.
 
-Wizualne C++ obsługuje następujące dyrektywy OpenMP.
+Wizualizacja C++ obsługuje następujące dyrektywy OpenMP.
 
-Dla równoległego podziału pracy:
-
-|— Dyrektywa|Opis|
-|---------|-----------|
-|[parallel](#parallel)|Definiuje równoległego regionu, czyli kodu wykonywanego przez wiele wątków jednocześnie.|
-|[for](#for-openmp)|Powoduje, że prace wykonane w `for` pętli równoległego regionu podzielony między wątkami.|
-|[Sekcje](#sections-openmp)|Identyfikuje sekcje kodu w celu podzielone między wszystkie wątki.|
-|[single](#single)|Pozwala określić, że sekcji kodu powinna zostać wykonana w jednym wątku, niekoniecznie głównego wątku.|
-
-Wzorzec i synchronizacja:
+W przypadku równoległego udostępniania pracy:
 
 |— Dyrektywa|Opis|
 |---------|-----------|
-|[master](#master)|Określa, że główny wątek powinien zostać wykonany części programu.|
-|[critical](#critical)|Określa, czy kod jest wykonywane tylko w jednym wątku w danym momencie.|
-|[barrier](#barrier)|Synchronizuje wszystkie wątki w zespole; wszystkie wątki wstrzymać na barierze, dopóki wszystkie wątki wykonania barierę.|
-|[atomic](#atomic)|Określa, że lokalizacji w pamięci, który będzie aktualizowany niepodzielne.|
-|[flush](#flush-openmp)|Określa, że wszystkie wątki mają tego samego widoku pamięci dla wszystkich obiektów udostępnionych.|
-|[ordered](#ordered-openmp-directives)|Określa, że kod w ramach równoległego `for` pętli ma być wykonany, takich jak pętla Sekwencyjna.|
+|[parallel](#parallel)|Definiuje region równoległy, który jest kodem, który będzie wykonywany równolegle przez wiele wątków.|
+|[for](#for-openmp)|Powoduje, że prace wykonywane w `for` pętli wewnątrz równoległego regionu mają być podzielone między wątki.|
+|[poszczególne](#sections-openmp)|Identyfikuje sekcje kodu, które mają być podzielone między wszystkie wątki.|
+|[single](#single)|Pozwala określić, że sekcja kodu powinna być wykonywana na pojedynczym wątku, niekoniecznie w wątku głównym.|
 
-W przypadku danych środowiska:
+W przypadku serwera głównego i synchronizacji:
 
 |— Dyrektywa|Opis|
 |---------|-----------|
-|[threadprivate](#threadprivate)|Określa, czy zmienna jest prywatnego wątku.|
+|[master](#master)|Określa, że tylko wątek główny ma wykonać sekcję programu.|
+|[critical](#critical)|Określa, że kod jest wykonywany tylko w jednym wątku naraz.|
+|[barrier](#barrier)|Synchronizuje wszystkie wątki w zespole; wszystkie wątki wstrzymują się w granicach, dopóki wszystkie wątki nie wykonują bariery.|
+|[atomic](#atomic)|Określa, że lokalizacja pamięci, która ma zostać zaktualizowana niepodzielnie.|
+|[flush](#flush-openmp)|Określa, że wszystkie wątki mają ten sam widok pamięci dla wszystkich obiektów udostępnionych.|
+|[każe](#ordered-openmp-directives)|Określa, że kod w ramach równoległej `for` pętli powinien być wykonany jak pętla sekwencyjna.|
 
-## <a name="atomic"></a>Atomic
+W przypadku środowiska danych:
 
-Określa, że lokalizacji w pamięci, który będzie aktualizowany niepodzielne.
+|— Dyrektywa|Opis|
+|---------|-----------|
+|[threadprivate](#threadprivate)|Określa, że zmienna jest prywatna do wątku.|
+
+## <a name="atomic"></a>części
+
+Określa, że lokalizacja pamięci, która ma zostać zaktualizowana niepodzielnie.
 
 ```
 #pragma omp atomic
@@ -80,13 +80,13 @@ Określa, że lokalizacji w pamięci, który będzie aktualizowany niepodzielne.
 ### <a name="parameters"></a>Parametry
 
 *expression*<br/>
-Instrukcja, która ma *l-wartości*, którego chcesz chronić przed więcej niż jeden zapis lokalizacji w pamięci.
+Instrukcja, która ma *lvalue*, której lokalizacja pamięci ma być chroniona przed więcej niż jednym zapisem.
 
 ### <a name="remarks"></a>Uwagi
 
-`atomic` Dyrektywy nie obsługuje żadnych klauzul.
+`atomic` Dyrektywa nie obsługuje żadnych klauzul.
 
-Aby uzyskać więcej informacji, zobacz [konstruowania 2.6.4 atomic](../../../parallel/openmp/2-6-4-atomic-construct.md).
+Aby uzyskać więcej informacji, zobacz 2.6.4a niepodzielna [konstrukcja](../../../parallel/openmp/2-6-4-atomic-construct.md).
 
 ### <a name="example"></a>Przykład
 
@@ -113,9 +113,9 @@ int main() {
 Number of threads: 10
 ```
 
-## <a name="barrier"></a>barrier
+## <a name="barrier"></a>barier
 
-Synchronizuje wszystkie wątki w zespole; wszystkie wątki wstrzymać na barierze, dopóki wszystkie wątki wykonania barierę.
+Synchronizuje wszystkie wątki w zespole; wszystkie wątki wstrzymują się w granicach, dopóki wszystkie wątki nie wykonują bariery.
 
 ```
 #pragma omp barrier
@@ -123,17 +123,17 @@ Synchronizuje wszystkie wątki w zespole; wszystkie wątki wstrzymać na barierz
 
 ### <a name="remarks"></a>Uwagi
 
-`barrier` Dyrektywy nie obsługuje żadnych klauzul.
+`barrier` Dyrektywa nie obsługuje żadnych klauzul.
 
-Aby uzyskać więcej informacji, zobacz [2.6.3 dyrektywa barrier](../../../parallel/openmp/2-6-3-barrier-directive.md).
+Aby uzyskać więcej informacji, zobacz [dyrektywa bariery 2.6.3](../../../parallel/openmp/2-6-3-barrier-directive.md).
 
 ### <a name="example"></a>Przykład
 
-Przykład sposobu użycia `barrier`, zobacz [wzorca](#master).
+Przykład użycia `barrier`programu można znaleźć w temacie [Master](#master).
 
-## <a name="critical"></a>Krytyczne
+## <a name="critical"></a>najistotniejsz
 
-Określa, czy kod jest wykonać tylko w jednym wątku w danym momencie.
+Określa, że kod jest wykonywany tylko w jednym wątku naraz.
 
 ```
 #pragma omp critical [(name)]
@@ -144,14 +144,14 @@ Określa, czy kod jest wykonać tylko w jednym wątku w danym momencie.
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwa*<br/>
-(Opcjonalnie) Nazwa do identyfikacji kodu krytycznego. Nazwa musi być ujęte w nawiasy.
+*name*<br/>
+Obowiązkowe Nazwa identyfikująca kod krytyczny. Nazwa musi być ujęta w nawiasy.
 
 ### <a name="remarks"></a>Uwagi
 
-`critical` Dyrektywy nie obsługuje żadnych klauzul.
+`critical` Dyrektywa nie obsługuje żadnych klauzul.
 
-Aby uzyskać więcej informacji, zobacz [konstruowania 2.6.2 krytyczne](../../../parallel/openmp/2-6-2-critical-construct.md).
+Aby uzyskać więcej informacji, zobacz [2.6.2 o krytycznym znaczeniu](../../../parallel/openmp/2-6-2-critical-construct.md).
 
 ### <a name="example"></a>Przykład
 
@@ -211,9 +211,9 @@ int main()
 max = 29358
 ```
 
-## <a name="flush-openmp"></a>Flush
+## <a name="flush-openmp"></a>płukan
 
-Określa, że wszystkie wątki mają tego samego widoku pamięci dla wszystkich obiektów udostępnionych.
+Określa, że wszystkie wątki mają ten sam widok pamięci dla wszystkich obiektów udostępnionych.
 
 ```
 #pragma omp flush [(var)]
@@ -222,13 +222,13 @@ Określa, że wszystkie wątki mają tego samego widoku pamięci dla wszystkich 
 ### <a name="parameters"></a>Parametry
 
 *var*<br/>
-(Opcjonalnie) Rozdzielana przecinkami lista zmiennych, które reprezentują obiekty, które mają być synchronizowane. Jeśli *var* nie jest określona, jest opróżniany całej pamięci.
+Obowiązkowe Rozdzielana przecinkami lista zmiennych reprezentujących obiekty, które mają zostać zsynchronizowane. Jeśli *var* nie jest określona, cała pamięć zostanie opróżniona.
 
 ### <a name="remarks"></a>Uwagi
 
-`flush` Dyrektywy nie obsługuje żadnych klauzul.
+`flush` Dyrektywa nie obsługuje żadnych klauzul.
 
-Aby uzyskać więcej informacji, zobacz [2.6.5 dyrektywa opróżniania](../../../parallel/openmp/2-6-5-flush-directive.md).
+Aby uzyskać więcej informacji, zobacz [2.6.5 Flush — dyrektywa](../../../parallel/openmp/2-6-5-flush-directive.md).
 
 ### <a name="example"></a>Przykład
 
@@ -287,9 +287,9 @@ Thread 1: process data
 data = 2
 ```
 
-## <a name="for-openmp"></a>Aby uzyskać
+## <a name="for-openmp"></a>dla
 
-Powoduje, że prace wykonane w `for` pętli równoległego regionu podzielony między wątkami.
+Powoduje, że prace wykonywane w `for` pętli wewnątrz równoległego regionu mają być podzielone między wątki.
 
 ```
 #pragma omp [parallel] for [clauses]
@@ -298,27 +298,27 @@ Powoduje, że prace wykonane w `for` pętli równoległego regionu podzielony mi
 
 ### <a name="parameters"></a>Parametry
 
-*clauses*<br/>
-(Opcjonalnie) Zero lub więcej klauzul, zobacz **uwagi** sekcji.
+*warunki*<br/>
+Obowiązkowe Zero lub więcej klauzul, zobacz sekcję **uwagi** .
 
 *for_statement*<br/>
-A `for` pętli. Spowoduje niezdefiniowane zachowanie, jeśli kod użytkownika `for` zmienia się zmienna index pętli.
+`for` Pętla. Niezdefiniowane zachowanie spowoduje, że kod użytkownika w `for` pętli zmieni zmienną indeksu.
 
 ### <a name="remarks"></a>Uwagi
 
-`for` Dyrektywy obsługuje następujące klauzule:
+`for` Dyrektywa obsługuje następujące klauzule:
 
 - [private](openmp-clauses.md#private-openmp)
 - [firstprivate](openmp-clauses.md#firstprivate)
 - [lastprivate](openmp-clauses.md#lastprivate)
 - [reduction](openmp-clauses.md#reduction)
-- [ordered](openmp-clauses.md#ordered-openmp-clauses)
+- [każe](openmp-clauses.md#ordered-openmp-clauses)
 - [schedule](openmp-clauses.md#schedule)
 - [nowait](openmp-clauses.md#nowait)
 
-Jeśli `parallel` również jest określony, `clauses` mogą być klauzuli akceptowane przez `parallel` lub `for` dyrektyw, z wyjątkiem `nowait`.
+Jeśli `parallel` jest również określony, `clauses` może być `parallel` dowolną klauzulą zaakceptowaną `for` przez lub dyrektywy `nowait`, z wyjątkiem.
 
-Aby uzyskać więcej informacji, zobacz [2.4.1 konstrukcji](../../../parallel/openmp/2-4-1-for-construct.md).
+Aby uzyskać więcej informacji, zobacz [2.4.1 for konstrukcja](../../../parallel/openmp/2-4-1-for-construct.md).
 
 ### <a name="example"></a>Przykład
 
@@ -384,9 +384,9 @@ int main() {
 The sum of 1 through 10 is 55
 ```
 
-## <a name="master"></a>Wzorzec
+## <a name="master"></a>formantu
 
-Określa, że główny wątek powinien zostać wykonany części programu.
+Określa, że tylko wątek główny ma wykonać sekcję programu.
 
 ```
 #pragma omp master
@@ -397,11 +397,11 @@ Określa, że główny wątek powinien zostać wykonany części programu.
 
 ### <a name="remarks"></a>Uwagi
 
-`master` Dyrektywy nie obsługuje żadnych klauzul.
+`master` Dyrektywa nie obsługuje żadnych klauzul.
 
-[Pojedynczego](#single) dyrektywy pozwala określić, że sekcji kodu powinna zostać wykonana w jednym wątku, niekoniecznie głównego wątku.
+[Pojedyncza](#single) dyrektywa pozwala określić, że sekcja kodu powinna być wykonywana na pojedynczym wątku, niekoniecznie wątku głównego.
 
-Aby uzyskać więcej informacji, zobacz [2.6.1 opanować konstrukcji](../../../parallel/openmp/2-6-1-master-construct.md).
+Aby uzyskać więcej informacji, zobacz [główny konstrukcja](../../../parallel/openmp/2-6-1-master-construct.md).
 
 ### <a name="example"></a>Przykład
 
@@ -446,9 +446,9 @@ a[3] = 9
 a[4] = 16
 ```
 
-## <a name="ordered-openmp-directives"></a>ordered
+## <a name="ordered-openmp-directives"></a>każe
 
-Określa, że kod w ramach równoległego `for` pętli ma być wykonany, takich jak pętla Sekwencyjna.
+Określa, że kod w ramach równoległej `for` pętli powinien być wykonany jak pętla sekwencyjna.
 
 ```
 #pragma omp ordered
@@ -457,11 +457,11 @@ Określa, że kod w ramach równoległego `for` pętli ma być wykonany, takich 
 
 ### <a name="remarks"></a>Uwagi
 
-`ordered` Dyrektywy musi należeć do zakresu dynamicznego [dla](#for-openmp) lub `parallel for` skonstruować przy użyciu `ordered` klauzuli.
+Dyrektywa musi znajdować się w zakresie dynamicznym `ordered` [dla](#for-openmp) lub `parallel for` konstrukcji z klauzulą. `ordered`
 
-`ordered` Dyrektywy nie obsługuje żadnych klauzul.
+`ordered` Dyrektywa nie obsługuje żadnych klauzul.
 
-Aby uzyskać więcej informacji, zobacz [2.6.6 konstrukcja uporządkowana](../../../parallel/openmp/2-6-6-ordered-construct.md).
+Aby uzyskać więcej informacji, zobacz [2.6.6 uporządkowana konstrukcja](../../../parallel/openmp/2-6-6-ordered-construct.md).
 
 ### <a name="example"></a>Przykład
 
@@ -517,9 +517,9 @@ test2() iteration 3
 test2() iteration 4
 ```
 
-## <a name="parallel"></a>parallel
+## <a name="parallel"></a>równoległ
 
-Definiuje równoległego regionu, czyli kodu wykonywanego przez wiele wątków jednocześnie.
+Definiuje region równoległy, który jest kodem, który będzie wykonywany równolegle przez wiele wątków.
 
 ```
 #pragma omp parallel [clauses]
@@ -530,29 +530,29 @@ Definiuje równoległego regionu, czyli kodu wykonywanego przez wiele wątków j
 
 ### <a name="parameters"></a>Parametry
 
-*clauses*<br/>
-(Opcjonalnie) Zero lub więcej klauzul, zobacz **uwagi** sekcji.
+*warunki*<br/>
+Obowiązkowe Zero lub więcej klauzul, zobacz sekcję **uwagi** .
 
 ### <a name="remarks"></a>Uwagi
 
-`parallel` Dyrektywy obsługuje następujące klauzule:
+`parallel` Dyrektywa obsługuje następujące klauzule:
 
 - [if](openmp-clauses.md#if-openmp)
 - [private](openmp-clauses.md#private-openmp)
 - [firstprivate](openmp-clauses.md#firstprivate)
 - [default](openmp-clauses.md#default-openmp)
-- [Udostępnione](openmp-clauses.md#shared-openmp)
+- [udostępniać](openmp-clauses.md#shared-openmp)
 - [copyin](openmp-clauses.md#copyin)
 - [reduction](openmp-clauses.md#reduction)
 - [num_threads](openmp-clauses.md#num-threads)
 
-`parallel` można również za pomocą [dla](#for-openmp) i [sekcje](#sections-openmp) dyrektywy.
+`parallel`można go również używać z dyrektywami [for](#for-openmp) i. [](#sections-openmp)
 
-Aby uzyskać więcej informacji, zobacz [2.3 konstrukcja równoległa](../../../parallel/openmp/2-3-parallel-construct.md).
+Aby uzyskać więcej informacji, zobacz [2,3 równoległa konstrukcja](../../../parallel/openmp/2-3-parallel-construct.md).
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak ustawić liczbę wątków i zdefiniuj równoległego regionu. Liczba wątków jest domyślnie równa liczbie procesorów logicznych na maszynie. Na przykład jeśli masz maszyny z jednego procesora fizycznego, który ma włączoną wielowątkowość, ma dwa procesory logiczne i dwoma wątkami. Kolejność dane wyjściowe mogą być różne na różnych maszynach.
+Poniższy przykład pokazuje, jak ustawić liczbę wątków i zdefiniować region równoległy. Liczba wątków jest równa domyślnie liczbie procesorów logicznych na komputerze. Na przykład jeśli masz maszynę z jednym procesorem fizycznym, który ma włączoną funkcję wielowątkowości, będzie on miał dwa procesory logiczne i dwa wątki. Kolejność danych wyjściowych może się różnić w zależności od różnych maszyn.
 
 ```cpp
 // omp_parallel.cpp
@@ -576,9 +576,9 @@ Hello from thread 2
 Hello from thread 3
 ```
 
-## <a name="sections-openmp"></a>Sekcje
+## <a name="sections-openmp"></a>poszczególne
 
-Identyfikuje sekcje kodu w celu podzielone między wszystkie wątki.
+Identyfikuje sekcje kodu, które mają być podzielone między wszystkie wątki.
 
 ```
 #pragma omp [parallel] sections [clauses]
@@ -592,14 +592,14 @@ Identyfikuje sekcje kodu w celu podzielone między wszystkie wątki.
 
 ### <a name="parameters"></a>Parametry
 
-*clauses*<br/>
-(Opcjonalnie) Zero lub więcej klauzul, zobacz **uwagi** sekcji.
+*warunki*<br/>
+Obowiązkowe Zero lub więcej klauzul, zobacz sekcję **uwagi** .
 
 ### <a name="remarks"></a>Uwagi
 
-`sections` Dyrektywy może zawierać zero lub więcej `section` dyrektywy.
+Dyrektywa może zawierać zero lub więcej `section` dyrektyw. `sections`
 
-`sections` Dyrektywy obsługuje następujące klauzule:
+`sections` Dyrektywa obsługuje następujące klauzule:
 
 - [private](openmp-clauses.md#private-openmp)
 - [firstprivate](openmp-clauses.md#firstprivate)
@@ -607,9 +607,9 @@ Identyfikuje sekcje kodu w celu podzielone między wszystkie wątki.
 - [reduction](openmp-clauses.md#reduction)
 - [nowait](openmp-clauses.md#nowait)
 
-Jeśli `parallel` również jest określony, `clauses` mogą być klauzuli akceptowane przez `parallel` lub `sections` dyrektyw, z wyjątkiem `nowait`.
+Jeśli `parallel` jest również określony, `clauses` może być `parallel` dowolną klauzulą zaakceptowaną `sections` przez lub dyrektywy `nowait`, z wyjątkiem.
 
-Aby uzyskać więcej informacji, zobacz [2.4.2 konstrukcja sections](../../../parallel/openmp/2-4-2-sections-construct.md).
+Aby uzyskać więcej informacji, [](../../../parallel/openmp/2-4-2-sections-construct.md)Zobacz sekcję.
 
 ### <a name="example"></a>Przykład
 
@@ -634,9 +634,9 @@ Hello from thread 0
 Hello from thread 0
 ```
 
-## <a name="single"></a>Pojedynczy
+## <a name="single"></a>wiersz
 
-Pozwala określić, że sekcji kodu powinna zostać wykonana w jednym wątku, niekoniecznie głównego wątku.
+Pozwala określić, że sekcja kodu powinna być wykonywana na pojedynczym wątku, niekoniecznie w wątku głównym.
 
 ```
 #pragma omp single [clauses]
@@ -647,21 +647,21 @@ Pozwala określić, że sekcji kodu powinna zostać wykonana w jednym wątku, ni
 
 ### <a name="parameters"></a>Parametry
 
-*clauses*<br/>
-(Opcjonalnie) Zero lub więcej klauzul, zobacz **uwagi** sekcji.
+*warunki*<br/>
+Obowiązkowe Zero lub więcej klauzul, zobacz sekcję **uwagi** .
 
 ### <a name="remarks"></a>Uwagi
 
-`single` Dyrektywy obsługuje następujące klauzule:
+`single` Dyrektywa obsługuje następujące klauzule:
 
 - [private](openmp-clauses.md#private-openmp)
 - [firstprivate](openmp-clauses.md#firstprivate)
 - [copyprivate](openmp-clauses.md#copyprivate)
 - [nowait](openmp-clauses.md#nowait)
 
-[Wzorca](#master) dyrektywy pozwala określić, że część kodu mają zostać wykonane tylko w wątku głównym.
+Dyrektywa [główna](#master) pozwala określić, że sekcja kodu powinna być wykonywana tylko w wątku głównym.
 
-Aby uzyskać więcej informacji, zobacz [konstruowania 2.4.3 pojedynczego](../../../parallel/openmp/2-4-3-single-construct.md).
+Aby uzyskać więcej informacji, zobacz [2.4.3 Single konstrukcja](../../../parallel/openmp/2-4-3-single-construct.md).
 
 ### <a name="example"></a>Przykład
 
@@ -697,7 +697,7 @@ write output
 
 ## <a name="threadprivate"></a>threadprivate
 
-Określa, czy zmienna jest prywatnego wątku.
+Określa, że zmienna jest prywatna do wątku.
 
 ```
 #pragma omp threadprivate(var)
@@ -706,17 +706,17 @@ Określa, czy zmienna jest prywatnego wątku.
 ### <a name="parameters"></a>Parametry
 
 *var*<br/>
-Rozdzielana przecinkami lista zmiennych, które mają być prywatnego wątku. *var* musi być globalne lub przestrzeń nazw — zmienną o zakresie lub zmiennej lokalnej statycznej.
+Rozdzielana przecinkami lista zmiennych, które mają być prywatne w wątku. wartość *var* musi być zmienną o zakresie globalnym lub przestrzeni nazw lub lokalną zmienną statyczną.
 
 ### <a name="remarks"></a>Uwagi
 
-`threadprivate` Dyrektywy nie obsługuje żadnych klauzul.
+`threadprivate` Dyrektywa nie obsługuje żadnych klauzul.
 
-`threadprivate` Dyrektywy opiera się na [wątku](../../../cpp/thread.md) atrybutu przy użyciu [__declspec](../../../cpp/declspec.md) — słowo kluczowe; limity `__declspec(thread)` dotyczą `threadprivate`. Na przykład `threadprivate` zmienna istnieje w żadnym z wątków pracę w toku, nie tylko te wątki, które są częścią zespołu wątku zduplikowany przez równoległego regionu. Należy pamiętać o tym szczegółowo opisuje implementacja; Należy zauważyć, że konstruktory `threadprivate` typu zdefiniowanego przez użytkownika są nazywane więcej często, a następnie oczekuje.
+[](../../../cpp/declspec.md) `__declspec(thread)` `threadprivate` [](../../../cpp/thread.md) Dyrektywa jest oparta na atrybucie wątku za pomocą słowa kluczowego __declspec; limity zastosowania do. `threadprivate` Na przykład `threadprivate` zmienna będzie istnieć w dowolnym wątku uruchomionym w procesie, a nie tylko te wątki, które są częścią zespołu wątków duplikowane przez region równoległy. Należy pamiętać o tym szczegółach implementacji; można zauważyć, że konstruktory dla `threadprivate` typu zdefiniowanego przez użytkownika są wywoływane częściej niż oczekiwano.
 
-Możesz użyć `threadprivate` jednak biblioteki DLL statycznie ładowane podczas uruchamiania procesu, nie można użyć `threadprivate` w każdej biblioteki DLL, który zostanie załadowany za pośrednictwem [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) takich jak biblioteki dll, które są ładowane z  [ /delayload (opóźnienie Ładowanie import)](../../../build/reference/delayload-delay-load-import.md), która także korzysta `LoadLibrary`.
+Można użyć `threadprivate` w bibliotece DLL, która jest statycznie załadowana podczas uruchamiania procesu, ale nie może `threadprivate` być używana w żadnej bibliotece DLL, która zostanie załadowana za pośrednictwem protokołu [LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw) , takiego jak dll, które są ładowane z [/DELAYLOAD (opóźnione Importowanie ładowania)](../../../build/reference/delayload-delay-load-import.md), które również używa `LoadLibrary`.
 
-A `threadprivate` zmiennej *zniszczalnych* typu nie jest gwarantowana mieć jej wywołania destruktora. Na przykład:
+Zmienna typu zniszczalnych nie gwarantuje, że jego destruktor został wywołany. `threadprivate` Na przykład:
 
 ```
 struct MyType
@@ -733,10 +733,10 @@ int main()
 }
 ```
 
-Użytkownicy mają nie kontrolę tego kiedy spowoduje przerwanie działania wątków stanowiące równoległego regionu. Jeśli te wątki istnieje podczas procesu, wątki nie zostaną powiadomieni o zakończenie procesu i destruktor nie będzie można wywołać dla `threaded_var` dotyczące dowolnego wątku, z wyjątkiem tego, który zamyka (tutaj, wątek główny). Dlatego kod nie powinien liczyć na właściwe zniszczenie `threadprivate` zmiennych.
+Użytkownicy nie mają kontroli, gdy wątki tworzące region równoległy zakończą działanie. Jeśli te wątki istnieją po zakończeniu procesu, wątki nie będą powiadamiane o zakończeniu procesu, a destruktor nie zostanie wywołany dla `threaded_var` każdego wątku z wyjątkiem tego, który zostanie zakończony (w tym miejscu). Dlatego kod nie powinien liczyć przy prawidłowym `threadprivate` zniszczeniu zmiennych.
 
-Aby uzyskać więcej informacji, zobacz [2.7.1 dyrektywa threadprivate](../../../parallel/openmp/2-7-1-threadprivate-directive.md).
+Aby uzyskać więcej informacji, zobacz [2.7.1 threadprivate dyrektywie](../../../parallel/openmp/2-7-1-threadprivate-directive.md).
 
 ### <a name="example"></a>Przykład
 
-Przykład użycia `threadprivate`, zobacz [prywatnej](openmp-clauses.md#private-openmp).
+Aby uzyskać przykład użycia `threadprivate`, zobacz [Private](openmp-clauses.md#private-openmp).

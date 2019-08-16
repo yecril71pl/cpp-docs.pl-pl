@@ -1,5 +1,5 @@
 ---
-title: Obsługa zasad (ATL) zdarzeń
+title: Zasady obsługi zdarzeń (ATL)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - event handling, implementing
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - dual interfaces, event interfaces
 - event handling, dual event interfaces
 ms.assetid: d17ca7cb-54f2-4658-ab8b-b721ac56801d
-ms.openlocfilehash: b882a1d356a431f75be1feb6e7bd997abed41c33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 066c8db60afed31ceba1c9ef6f4a10d5f842e608
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234774"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492140"
 ---
-# <a name="event-handling-principles"></a>Reguły obsługi zdarzeń
+# <a name="event-handling-principles"></a>Zasady obsługi zdarzeń
 
 Istnieją trzy kroki wspólne dla wszystkich obsługi zdarzeń. Konieczne będzie:
 
-- Zaimplementuj interfejs zdarzenia dla obiektu.
+- Zaimplementuj interfejs zdarzenia w obiekcie.
 
-- Aby źródło zdarzenia obiektu chce odbierać zdarzenia.
+- Należy polecić Źródło zdarzenia, że obiekt chce otrzymywać zdarzenia.
 
-- Unadvise źródła zdarzeń, gdy obiekt nie musi już odbierać zdarzenia.
+- Jeśli obiekt nie musi już odbierać zdarzeń, należy wykonać niezalecanie źródła zdarzeń.
 
-Sposób, że będzie implementować interfejs zdarzenia będzie zależeć od jego typu. Interfejs zdarzeń może być vtable, lub dispinterface. To Ty projektanta źródła zdarzeń, aby zdefiniować interfejs; to Ty można zaimplementować ten interfejs.
+Sposób implementacji interfejsu zdarzenia będzie zależeć od jego typu. Interfejsem zdarzenia może być tablica tablicowa, Dual lub dispinterface. Do projektanta źródła zdarzeń można zdefiniować interfejs; jest to implementacja tego interfejsu.
 
 > [!NOTE]
->  Mimo że nie ma żadnych techniczne powodów, które interfejs zdarzeń nie może być podwójna, istnieje wiele możliwych przyczyn dobrego projektowania, aby uniknąć użycia duals. Jest to jednak decyzji przez projektanta/implementujący zdarzenia *źródła*. Ponieważ pracujesz z punktu widzenia zdarzenia `sink`, konieczne jest zezwolenie na możliwość utracić dowolnej, ale aby zaimplementować interfejs dwa zdarzenia. Aby uzyskać więcej informacji na temat dwa interfejsy, zobacz [podwójne interfejsy i ATL](../atl/dual-interfaces-and-atl.md).
+>  Chociaż nie ma żadnych technicznych powodów, dla których interfejs zdarzenia nie może być podwójny, istnieje wiele dobrych przyczyn projektowania, aby uniknąć używania podwójnych. Jest to jednak decyzja podejmowana przez projektanta/realizatora *źródła*zdarzeń. Ze względu na to, że pracujesz z `sink`perspektywy zdarzenia, musisz zezwolić na możliwość, że nie masz żadnego wyboru, ale wdrożyć interfejs podwójnego zdarzenia. Aby uzyskać więcej informacji na temat podwójnych interfejsów, zobacz [podwójne interfejsy i ATL](../atl/dual-interfaces-and-atl.md).
 
-Wniosku źródło zdarzenia można podzielić na trzy kroki:
+Zaleca się, aby Źródło zdarzenia zostało podzielone na trzy kroki:
 
-- Zapytania do obiektu źródłowego [interfejsy IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer).
+- Zbadaj obiekt źródłowy dla [IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer).
 
-- Wywołaj [IConnectionPointContainer::FindConnectionPoint](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) przekazywanie identyfikatora IID interfejsu zdarzenia, który Cię interesuje. Jeśli operacja się powiedzie, spowoduje to zwrócenie [IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint) interfejs dla obiektu punktu połączenia.
+- Call [IConnectionPointContainer:: FindConnectionPoint](/windows/win32/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) PRZEKAZUJĄCY identyfikator IID interfejsu zdarzenia, który Cię interesuje. Jeśli to się powiedzie, spowoduje to zwrócenie interfejsu [IConnectionPoint](/windows/win32/api/ocidl/nn-ocidl-iconnectionpoint) w obiekcie punktu połączenia.
 
-- Wywołaj [IConnectionPoint::Advise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-advise) przekazywanie `IUnknown` obiektu sink zdarzenia. Jeśli operacja się powiedzie, spowoduje to zwrócenie `DWORD` plik cookie reprezentującą połączenie.
+- Call [IConnectionPoint:: Advise](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-advise) przekazanie `IUnknown` ujścia zdarzeń. Jeśli to się `DWORD` powiedzie, zwróci plik cookie reprezentujący połączenie.
 
-Po pomyślnym zarejestrowaniu zainteresowanie odbierania zdarzeń metod na interfejs zdarzenia obiektu będzie miała nazwę zgodnie ze zdarzenia wywoływane przez obiekt źródłowy. Jeśli nie potrzebujesz już do odbierania zdarzeń, można przekazać pliku cookie do punktu połączenia za pośrednictwem [IConnectionPoint::Unadvise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-unadvise). Spowoduje to przerwanie połączenia między źródła i ujścia.
+Po pomyślnym zarejestrowaniu zainteresowania w odniesieniu do zdarzeń, metody interfejsu zdarzenia obiektu będą wywoływane w zależności od zdarzeń wyzwalanych przez obiekt źródłowy. Gdy nie musisz już odbierać zdarzeń, możesz przekazać plik cookie z powrotem do punktu połączenia za pośrednictwem [IConnectionPoint:: Unadvise](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-unadvise). Spowoduje to przerwanie połączenia między źródłem i ujściam.
 
-Uważaj uniknąć odwołania cykli podczas obsługi zdarzeń.
+Należy zachować ostrożność, aby uniknąć cykli referencyjnych podczas obsługi zdarzeń.
 
 ## <a name="see-also"></a>Zobacz także
 

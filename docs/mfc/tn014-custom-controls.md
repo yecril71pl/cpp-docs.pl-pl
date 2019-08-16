@@ -7,51 +7,51 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-ms.openlocfilehash: c68b60f065e69213b3ab32c887bc7af129a70fef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2960c5b8585519adb535e5611315ec4ececcf53e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306223"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511182"
 ---
 # <a name="tn014-custom-controls"></a>TN014: Formanty niestandardowe
 
-Ta uwaga opisuje Obsługa MFC dla formantów niestandardowych i własnym rysowania. Ponadto w tym artykule opisano podklasy dynamiczne i opisuje relację między [CWnd](../mfc/reference/cwnd-class.md) obiektów i `HWND`s.
+Ta Uwaga opisuje obsługę MFC dla kontrolek niestandardowych i samorysowania. Opisuje ona również dynamiczną podklasę i opisuje relację między obiektami [CWnd](../mfc/reference/cwnd-class.md) a `HWND`s.
 
-Przykładowa aplikacja MFC CTRLTEST ilustruje sposób użycia wielu formantów niestandardowych. Zobacz kod źródłowy dla próbki MFC-ogólne [CTRLTEST](../overview/visual-cpp-samples.md) i pomocy online.
+Przykładowa aplikacja MFC CTRLTEST ilustruje, jak używać wielu niestandardowych kontrolek. Zobacz kod źródłowy dla ogólnej przykładowej [CTRLTEST](../overview/visual-cpp-samples.md) i pomocy online dla MFC.
 
-## <a name="owner-draw-controlsmenus"></a>Formanty rysowane przez właściciela/menu
+## <a name="owner-draw-controlsmenus"></a>Formanty/menu rysowania przez właściciela
 
-Windows obsługuje formanty rysowane przez właściciela i menu za pomocą komunikatów Windows. Okno nadrzędne kontrolki lub menu odbiera tych komunikatów i wywołania funkcji w odpowiedzi. Możesz przesłonić te funkcje, aby dostosować wygląd i zachowanie kontrolka rysowana przez właściciela lub menu.
+System Windows zapewnia obsługę formantów i menu rysowania przez właściciela przy użyciu komunikatów systemu Windows. Okno nadrzędne dowolnego formantu lub menu odbiera te komunikaty i wywołuje funkcje w odpowiedzi. Można przesłonić te funkcje, aby dostosować wygląd i zachowanie wizualizacji lub menu rysowania przez właściciela.
 
-Biblioteka MFC obsługuje bezpośrednio przez właściciela z następujących funkcji:
+MFC bezpośrednio obsługuje rysowanie przez właściciela przy użyciu następujących funkcji:
 
-- [CWnd::OnDrawItem](../mfc/reference/cwnd-class.md#ondrawitem)
+- [CWnd:: OnDrawItem](../mfc/reference/cwnd-class.md#ondrawitem)
 
 - [CWnd::OnMeasureItem](../mfc/reference/cwnd-class.md#onmeasureitem)
 
-- [CWnd::OnCompareItem](../mfc/reference/cwnd-class.md#oncompareitem)
+- [CWnd:: OnCompareItem](../mfc/reference/cwnd-class.md#oncompareitem)
 
-- [CWnd::OnDeleteItem](../mfc/reference/cwnd-class.md#ondeleteitem)
+- [CWnd:: OnDeleteItem](../mfc/reference/cwnd-class.md#ondeleteitem)
 
-Możesz zastąpić te funkcje w swojej `CWnd` klasy do zaimplementowania niestandardowego rysowania zachowanie.
+Można zastąpić te funkcje w `CWnd` klasie pochodnej, aby zaimplementować niestandardowe zachowanie rysowania.
 
-To podejście nie prowadzi do kodu wielokrotnego użytku. W przypadku dwóch podobnych kontrolek w dwóch różnych `CWnd` klasy, należy zaimplementować to zachowanie kontrolki niestandardowej w dwóch lokalizacjach. Architektura obsługiwana przez MFC własnym rysowania formantu rozwiązuje ten problem.
+To podejście nie prowadzi do ponownego użycia kodu. Jeśli masz dwie podobne kontrolki w dwóch różnych `CWnd` klasach, musisz zaimplementować zachowanie kontrolki niestandardowej w dwóch lokalizacjach. Architektura kontroli samorysowania obsługiwana przez MFC rozwiązuje ten problem.
 
-## <a name="self-draw-controls-and-menus"></a>Menu i własnym rysowania formantów
+## <a name="self-draw-controls-and-menus"></a>Samodzielne kontrolki i menu
 
-MFC udostępnia domyślną implementację (w `CWnd` i [CMenu](../mfc/reference/cmenu-class.md) klasy) dla wiadomości standardowa rysowania przez właściciela. Ta domyślna implementacja będzie dekodowania parametry rysowania przez właściciela i delegowanie wiadomości rysowania przez właściciela do kontrolki lub menu. Jest to nazywane własnym Rysowanie ponieważ kod rysowania klasy formantu lub menu, a nie w oknie właściciela.
+MFC oferuje domyślną implementację (w `CWnd` klasach i [CMenu](../mfc/reference/cmenu-class.md) ) dla standardowych komunikatów rysowania przez właściciela. Ta domyślna implementacja spowoduje zdekodowanie parametrów rysowania przez właściciela i delegowanie komunikatów rysowania przez właściciela do kontrolek lub menu. Jest to nazywane samorysowaniem, ponieważ kod rysowania znajduje się w klasie kontrolki lub menu, a nie w oknie właściciela.
 
-Przy użyciu własnym rysowania formantów możesz tworzyć klasy kontrolek wielokrotnego użytku, które korzystają bezpośrednio z semantyki rysowania przez właściciela, aby wyświetlić formant. Kod rysowania kontrolki znajduje się w klasie kontrolki nie jego obiektu nadrzędnego. Jest to zorientowane obiektowo podejście do programowania kontrolki niestandardowej. Dodaj poniższą listę funkcji do swoich klas własnym rysowania:
+Za pomocą kontrolek samorysowania można tworzyć klasy kontroli wielokrotnego użytku, które używają semantyki rysowania przez właściciela, aby wyświetlić formant. Kod do rysowania kontrolki znajduje się w klasie kontrolki, a nie w jej obiekcie nadrzędnym. Jest to podejście zorientowane obiektowo do programowania formantów niestandardowych. Dodaj następującą listę funkcji do swoich klas samorysowania:
 
-- Rysowanie własnym przycisków:
+- Dla przycisków samorysowania:
 
     ```cpp
     CButton:DrawItem(LPDRAWITEMSTRUCT);
     // insert code to draw this button
     ```
 
-- Rysowanie własnym menu:
+- W przypadku menu z własnym rysowaniem:
 
     ```cpp
     CMenu:MeasureItem(LPMEASUREITEMSTRUCT);
@@ -60,7 +60,7 @@ Przy użyciu własnym rysowania formantów możesz tworzyć klasy kontrolek wiel
     // insert code to draw an item in this menu
     ```
 
-- Dla pól listy własnym rysowania:
+- Dla pól listy z własnym rysowaniem:
 
     ```cpp
     CListBox:MeasureItem(LPMEASUREITEMSTRUCT);
@@ -74,7 +74,7 @@ Przy użyciu własnym rysowania formantów możesz tworzyć klasy kontrolek wiel
     // insert code to delete an item from this list box
     ```
 
-- Dla pola kombi własnym rysowania:
+- Dla samorysowania pól kombi:
 
     ```cpp
     CComboBox:MeasureItem(LPMEASUREITEMSTRUCT);
@@ -88,49 +88,49 @@ Przy użyciu własnym rysowania formantów możesz tworzyć klasy kontrolek wiel
     // insert code to delete an item from this combo box
     ```
 
-Aby uzyskać szczegółowe informacje na temat struktury rysowania przez właściciela ([DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct), [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct), [COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct), i [DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct)) można znaleźć w dokumentacji MFC `CWnd::OnDrawItem`, `CWnd::OnMeasureItem`, `CWnd::OnCompareItem`, i `CWnd::OnDeleteItem` odpowiednio.
+Aby uzyskać szczegółowe informacje na temat struktur rysowania przez właściciela ([DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct), [MEASUREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-measureitemstruct), [COMPAREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-compareitemstruct)i [DELETEITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-deleteitemstruct)) `CWnd::OnDrawItem`, `CWnd::OnCompareItem`Zobacz dokumentację MFC dla `CWnd::OnMeasureItem`,, i `CWnd::OnDeleteItem` odpowiednio.
 
-## <a name="using-self-draw-controls-and-menus"></a>Przy użyciu własnym rysowania formantów i menu
+## <a name="using-self-draw-controls-and-menus"></a>Używanie kontrolek i menu z własnym rysowaniem
 
-Rysowanie własnym menu, konieczne jest przesłonięcie zarówno `OnMeasureItem` i `OnDrawItem` metody.
+W przypadku menu samorysowania należy zastępować `OnMeasureItem` metody i. `OnDrawItem`
 
-Dla pola własnym Rysowanie listy i pola kombi, konieczne jest przesłonięcie `OnMeasureItem` i `OnDrawItem`. W szablonie okna dialogowego należy określić stylu LBS_OWNERDRAWVARIABLE dla pól listy lub CBS_OWNERDRAWVARIABLE dla pola kombi. Styl OWNERDRAWFIXED nie będzie działać z własnym narysować elementy, ponieważ wysokość elementu stałej jest określana przed własnym rysowania formantów są dołączone do pola listy. (Można użyć metod [CListBox::SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight) i [CComboBox::SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight) to ograniczenie.)
+W przypadku samorysowania pól listy i pól kombi należy przesłonić `OnMeasureItem` i `OnDrawItem`. Należy określić styl LBS_OWNERDRAWVARIABLE dla pól listy lub stylu CBS_OWNERDRAWVARIABLE dla pól kombi w szablonie okna dialogowego. Styl OWNERDRAWFIXED nie będzie działał z elementami samorysowania, ponieważ stała wysokość elementu jest określana przed dołączeniem do pola listy formantów samorysowania. (Można użyć metod [CListBox:: SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight) i [CComboBox:: SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight) do pokonania tego ograniczenia).
 
-Przełączanie stylu OWNERDRAWVARIABLE wymusi systemu, aby zastosować styl NOINTEGRALHEIGHT do formantu. Ponieważ formant nie może obliczyć całkowity wysokość przy użyciu zmiennej wielkości elementów, domyślny styl INTEGRALHEIGHT jest ignorowany i kontrolki zawsze NOINTEGRALHEIGHT. Jeśli elementów są stałe wysokość, uniemożliwi częściowe elementów z możliwością rysowania, określając rozmiar formantu, który ma być mnożnik liczby całkowitej w rozmiarze elementu.
+Przełączenie do stylu OWNERDRAWVARIABLE spowoduje wymuszenie zastosowania przez system stylu NOINTEGRALHEIGHT do kontrolki. Ponieważ kontrolka nie może obliczyć wysokości całkowitej z elementami o zmiennym rozmiarze, domyślny styl INTEGRALHEIGHT jest ignorowany, a formant jest zawsze NOINTEGRALHEIGHT. Jeśli elementy mają stałą wysokość, można zapobiec narysowaniu częściowych elementów przez określenie rozmiaru formantu jako mnożnika liczby całkowitej rozmiaru elementu.
 
-Do celów rysowania własnym pola listy i pola kombi w stylu LBS_SORT lub CBS_SORT, konieczne jest przesłonięcie `OnCompareItem` metody.
+Dla samorysowania pól listy i pól kombi z stylem LBS_SORT lub CBS_SORT należy zastąpić `OnCompareItem` metodę.
 
-Samodzielnie rysowania pola listy i pola kombi, `OnDeleteItem` nie jest zazwyczaj zastępowany. Można zastąpić `OnDeleteItem` Aby wykonywać żadnego specjalnego przetwarzania. Jeden przypadek, gdzie jest to stosowane jest, gdy dodatkowej pamięci lub inne zasoby, które są przechowywane z każdym elementem pola listy, jak pole lub pole kombi.
+Dla samorysowania pól listy i pól `OnDeleteItem` kombi nie są zwykle zastępowane. Można przesłonić `OnDeleteItem` , jeśli chcesz wykonać jakiekolwiek specjalne przetwarzanie. Jeden przypadek, w którym będzie to miało zastosowanie, ma miejsce, gdy dodatkowa pamięć lub inne zasoby są przechowywane przy użyciu każdego pola listy lub elementu pola kombi.
 
-## <a name="examples-of-self-drawing-controls-and-menus"></a>Przykłady samodzielnie rysowania formantów i menu
+## <a name="examples-of-self-drawing-controls-and-menus"></a>Przykłady samorysowania formantów i menu
 
-Próbki MFC-ogólne [CTRLTEST](../overview/visual-cpp-samples.md) zawiera przykłady menu własnym rysowania i pole listy własnym rysowania.
+Ogólna Przykładowa [CTRLTEST](../overview/visual-cpp-samples.md) MFC zawiera przykłady menu i samodzielnego rysowania.
 
-Najbardziej typowym przykładem własnym rysowania przycisk to przycisk mapy bitowej. Przycisk, który zawiera jeden, dwa lub trzy obrazy mapy bitowej w różnych regionach jest przycisk mapy bitowej. Na przykład znajduje się w klasie MFC [CBitmapButton](../mfc/reference/cbitmapbutton-class.md).
+Najbardziej typowym przykładem przycisku z własnym rysowaniem jest przycisk mapy bitowej. Przycisk mapy bitowej to przycisk, który pokazuje jeden, dwa lub trzy obrazy mapy bitowej dla różnych stanów. Przykładem tego jest podano w klasie MFC [CBitmapButton](../mfc/reference/cbitmapbutton-class.md).
 
-## <a name="dynamic-subclassing"></a>Dynamiczne podklasy
+## <a name="dynamic-subclassing"></a>Dynamiczne podklasa
 
-Od czasu do czasu można zmienić funkcjonalność obiektu, który już istnieje. Poprzednie przykłady wymaga dostosować formanty, zanim zostały one utworzone. Dynamiczne podklasy umożliwia dostosowywanie formantu, który został już utworzony.
+Czasami trzeba zmienić funkcjonalność obiektu, który już istnieje. Poprzednie przykłady wymagały dostosowania formantów przed ich utworzeniem. Dynamiczna podklasa umożliwia dostosowanie kontrolki, która została już utworzona.
 
-Podklasy to termin Windows w celu zastąpienia <xref:System.Windows.Forms.Control.WndProc%2A> okna z niestandardową `WndProc` i wywoływania starego `WndProc` dla funkcje domyślne.
+Podklasa to termin systemu Windows służący do zastępowania <xref:System.Windows.Forms.Control.WndProc%2A> okna z dostosowaną `WndProc` i wywołującą starą `WndProc` funkcję domyślną.
 
-To nie należy mylić z pochodnym klasy języka C++. Wyjaśniające, warunki C++ *klasy bazowej* i *klasy pochodnej* są analogiczne do *superklasie* i *podklasy* w Windows model obiektu. C++ Tworzenie wartości pochodnych z podklasy MFC i Windows są podobne, z wyjątkiem C++ nie obsługuje podklasy dynamicznych.
+Nie należy mylić tego typu z C++ klasą pochodną klasy. Aby uzyskać wyjaśnienie, C++ *Klasa bazowa* i *Klasa pochodna* są analogiczne do *superklasy* i *podklas* w modelu obiektów systemu Windows. C++wyprowadzanie z użyciem podklas MFC i Windows jest funkcjonalnie podobne, z C++ wyjątkiem, że nie obsługuje dynamicznego podklasy.
 
-`CWnd` Klasy zapewnia połączenie między obiektu języka C++ (pochodną `CWnd`) i obiekt window Windows (znana jako `HWND`).
+Klasa zapewnia połączenie między C++ obiektem (pochodnym od `CWnd`) i obiektem okna `HWND`systemu Windows (znanym jako). `CWnd`
 
-Istnieją trzy sposoby wspólnego, które odnoszą się one:
+Istnieją trzy typowe metody, które są związane z nimi:
 
-- `CWnd` Tworzy `HWND`. Możesz zmodyfikować zachowanie w klasie pochodnej, tworząc klasę pochodną `CWnd`. `HWND` Jest tworzone, gdy Twoja aplikacja wywołuje [CWnd::Create](../mfc/reference/cwnd-class.md#create).
+- `CWnd``HWND`tworzy. Możesz zmodyfikować zachowanie w klasie pochodnej, tworząc klasę pochodną `CWnd`. Jest `HWND` tworzony, gdy aplikacja wywołuje [CWnd:: Create](../mfc/reference/cwnd-class.md#create).
 
-- Dołącza aplikacji `CWnd` do istniejącego `HWND`. Zachowanie istniejące okno nie jest modyfikowany. Jest przypadkiem delegowania, jest możliwe, wywołując [CWnd::Attach](../mfc/reference/cwnd-class.md#attach) alias istniejący `HWND` do `CWnd` obiektu.
+- Aplikacja dołącza `CWnd` do istniejącej `HWND`. Zachowanie istniejącego okna nie jest modyfikowane. Jest to przypadek delegowania i jest możliwy przez wywołanie [CWnd::](../mfc/reference/cwnd-class.md#attach) dołączanie do aliasu istniejącego `HWND` do `CWnd` obiektu.
 
-- `CWnd` jest dołączony do istniejącego `HWND` i możesz zmodyfikować zachowanie w klasie pochodnej. Jest to nazywane dynamiczne tworzenie podklasy ponieważ Zmieniamy to zachowanie, a zatem klasy do obiektu Windows w czasie wykonywania.
+- `CWnd`jest dołączony do istniejącej `HWND` i można modyfikować zachowanie w klasie pochodnej. Jest to nazywane dynamicznym podklasą, ponieważ Zmieniamy zachowanie, a tym samym klasę obiektu systemu Windows w czasie wykonywania.
 
-Podklasy dynamicznej można osiągnąć za pomocą metody [CWnd::SubclassWindow](../mfc/reference/cwnd-class.md#subclasswindow) i[CWnd::SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem).
+Można osiągnąć dynamiczną podklasę przy użyciu metod [CWnd:: SubclassWindow](../mfc/reference/cwnd-class.md#subclasswindow) i[CWnd:: SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem).
 
-Dołącz oba procedury `CWnd` obiektu do istniejącego `HWND`. `SubclassWindow` Trwa `HWND` bezpośrednio. `SubclassDlgItem` jest funkcja pomocnicza, która przyjmuje identyfikator formantu i okno nadrzędne. `SubclassDlgItem` jest przeznaczona dla dołączanie obiektów C++ do formantów okna dialogowego utworzonego na podstawie szablonu okna dialogowego.
+Obie procedury dołączają `CWnd` obiekt do istniejącego. `HWND` `SubclassWindow``HWND` pobiera bezpośrednio. `SubclassDlgItem`jest funkcją pomocnika, która przyjmuje identyfikator kontrolki i okno nadrzędne. `SubclassDlgItem`służy do dołączania C++ obiektów do kontrolek okna dialogowego utworzonych na podstawie szablonu okna dialogowego.
 
-Zobacz [CTRLTEST](../overview/visual-cpp-samples.md) przykład kilka przykładów zastosowania `SubclassWindow` i `SubclassDlgItem`.
+Zobacz przykład [CTRLTEST](../overview/visual-cpp-samples.md) , aby poznać kilka przykładów użycia `SubclassWindow` i. `SubclassDlgItem`
 
 ## <a name="see-also"></a>Zobacz także
 

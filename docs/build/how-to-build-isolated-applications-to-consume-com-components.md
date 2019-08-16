@@ -1,37 +1,37 @@
 ---
-title: 'Instrukcje: Kompilowanie izolowanych aplikacji korzystających ze składników COM'
+title: 'Instrukcje: Tworzenie izolowanych aplikacji do korzystania ze składników COM'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - isolated applications [C++]
 ms.assetid: 04587547-1174-44ab-bd99-1292358fba20
-ms.openlocfilehash: 01b5c7056bd10a7c1f88df74b5c6b4aa78ff3fde
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ae3c51502267f202cbb85ea7be2a81dc3310410
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273563"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493234"
 ---
-# <a name="how-to-build-isolated-applications-to-consume-com-components"></a>Instrukcje: Kompilowanie izolowanych aplikacji korzystających ze składników COM
+# <a name="how-to-build-isolated-applications-to-consume-com-components"></a>Instrukcje: Tworzenie izolowanych aplikacji do korzystania ze składników COM
 
-Aplikacje izolowane to aplikacje, które mają wbudowane w program manifestów. Można utworzyć izolowanych aplikacji korzystających ze składników COM.
+Aplikacje izolowane to aplikacje, które mają wbudowane manifesty w programie. Można tworzyć izolowane aplikacje do korzystania ze składników COM.
 
-### <a name="to-add-com-references-to-manifests-of-isolated-applications"></a>Aby dodać odwołania COM do manifestów aplikacji izolowanych
+### <a name="to-add-com-references-to-manifests-of-isolated-applications"></a>Aby dodać odwołania COM do manifestów izolowanych aplikacji
 
-1. Otwórz strony właściwości projektu dla aplikacji izolowanych.
+1. Otwórz strony właściwości projektu dla aplikacji izolowanej.
 
-1. Rozwiń **właściwości konfiguracji** węzła, a następnie rozwiń węzeł **narzędziu manifestu** węzła.
+1. Rozwiń węzeł **Właściwości konfiguracji** , a następnie rozwiń węzeł **narzędzie manifestu** .
 
-1. Wybierz **COM izolowany** strony właściwości, a następnie ustaw **nazwa pliku komponentu** właściwość na nazwę składnik COM, który ma izolowane aplikacji używać.
+1. Wybierz stronę właściwości **izolowany model com** , a następnie ustaw właściwość **Nazwa pliku składnika** na nazwę składnika com, który ma być wykorzystywany przez izolowaną aplikację.
 
 1. Kliknij przycisk **OK**.
 
-### <a name="to-build-manifests-into-isolated-applications"></a>Aby skompilować manifesty w aplikacje izolowane
+### <a name="to-build-manifests-into-isolated-applications"></a>Aby utworzyć manifesty w aplikacjach izolowanych
 
-1. Otwórz strony właściwości projektu dla aplikacji izolowanych.
+1. Otwórz strony właściwości projektu dla aplikacji izolowanej.
 
-1. Rozwiń **właściwości konfiguracji** węzła, a następnie rozwiń węzeł **narzędziu manifestu** węzła.
+1. Rozwiń węzeł **Właściwości konfiguracji** , a następnie rozwiń węzeł **narzędzie manifestu** .
 
-1. Wybierz **danych wejściowych i wyjściowych** strony właściwości, a następnie ustaw **osadzanie manifestu** równa właściwości **tak**.
+1. Wybierz stronę właściwości **dane wejściowe i wyjściowe** , a następnie ustaw właściwość **Osadź manifest** równą **tak**.
 
 1. Kliknij przycisk **OK**.
 
@@ -39,5 +39,5 @@ Aplikacje izolowane to aplikacje, które mają wbudowane w program manifestów. 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Aplikacje izolowane](/windows/desktop/SbsCs/isolated-applications)<br/>
-[Informacje o zestawach Side-by-Side](/windows/desktop/SbsCs/about-side-by-side-assemblies-)
+[Aplikacje izolowane](/windows/win32/SbsCs/isolated-applications)<br/>
+[Informacje o zestawach równoległych](/windows/win32/SbsCs/about-side-by-side-assemblies-)

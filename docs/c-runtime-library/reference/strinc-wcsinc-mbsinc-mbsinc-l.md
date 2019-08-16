@@ -40,19 +40,19 @@ helpviewer_keywords:
 - _tcsinc function
 - tcsinc function
 ms.assetid: 54685943-8e2c-45e9-a559-2d94930dc6b4
-ms.openlocfilehash: dae14fc7b66b9be4e1016c5409a93cd172691fed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48bc7caa5dbc2d2e7eec847bfa5135d13bcd83c0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365213"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499470"
 ---
-# <a name="strinc-wcsinc-mbsinc-mbsincl"></a>_strinc, _wcsinc, _mbsinc, _mbsinc_l
+# <a name="_strinc-_wcsinc-_mbsinc-_mbsinc_l"></a>_strinc, _wcsinc, _mbsinc, _mbsinc_l
 
 Przesuwa wskaźnik ciągu o jeden znak.
 
 > [!IMPORTANT]
-> **_mbsinc** i **_mbsinc_l** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsinc** i **_mbsinc_l** nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -76,26 +76,26 @@ unsigned char *_mbsinc_l(
 
 ### <a name="parameters"></a>Parametry
 
-*bieżący*<br/>
-Wskaźnik znaków.
+*obecne*<br/>
+Wskaźnik znaku.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych procedur zwraca wskaźnik do znaku, który poprzedza *bieżącego*.
+Każda z tych procedur zwraca wskaźnik do znaku, który od razu następuje po *bieżącym*.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Mbsinc** funkcja zwraca wskaźnik do pierwszego bajtu znaków wielobajtowego, który poprzedza *bieżącego*. **_mbsinc** rozpoznaje sekwencje znaków wielobajtowych według [wielobajtowa strona kodowa](../../c-runtime-library/code-pages.md) , jest obecnie w użyciu; **_mbsinc_l** jest identyczna, z tą różnicą, że zamiast tego używa przekazanego parametru ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Funkcja **_mbsinc** zwraca wskaźnik do pierwszego bajtu znaku wielobajtowego, który od razu następuje po *bieżącym*. **_mbsinc** rozpoznaje sekwencje znaków wielobajtowych zgodnie ze [stroną kodową](../../c-runtime-library/code-pages.md) wielobajtowego, która jest obecnie używana; **_mbsinc_l** jest identyczny, z tą różnicą, że zamiast tego używa parametru ustawień regionalnych, który został przesłany. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-Funkcja generic tekst **_tcsinc**, zdefiniowana w Tchar.h, mapy i **_mbsinc** Jeśli **_MBCS** została zdefiniowana, lub **_wcsinc** Jeśli **_UNICODE** został zdefiniowany. W przeciwnym razie **_tcsinc** mapuje **_strinc**. **_strinc** i **_wcsinc** są wersjami pojedynczych bajtów znaków i znaków dwubajtowych **_mbsinc**. **_strinc** i **_wcsinc** są dostarczane tylko dla tego mapowania i nie powinny być używane w inny sposób. Aby uzyskać więcej informacji, zobacz [przy użyciu mapowania typ ogólny-tekst](../../c-runtime-library/using-generic-text-mappings.md) i [mapowania typ ogólny-tekst](../../c-runtime-library/generic-text-mappings.md).
+Funkcja generyczna tekstu **_tcsinc**, zdefiniowana w używanie TCHAR. h, mapuje do **_Mbsinc** , jeśli **_MBCS** został zdefiniowany lub do **_wcsinc** , jeśli określono **_UNICODE** . W przeciwnym razie **_tcsinc** mapuje do **_strinc**. **_strinc** i **_wcsinc** są wersjami typu jednobajtowego i szerokim znakiem **_mbsinc**. **_strinc** i **_wcsinc** są dostępne tylko dla tego mapowania i nie powinny być używane w inny sposób. Aby uzyskać więcej informacji, zobacz [Korzystanie z mapowań tekstu ogólnego](../../c-runtime-library/using-generic-text-mappings.md) i [mapowań tekstu ogólnego](../../c-runtime-library/generic-text-mappings.md).
 
-Jeśli *bieżącego* jest **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **EINVAL** i ustawia **errno** do **EINVAL**.
+Jeśli *Current* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **EINVAL** i ustawia **errno** na **EINVAL**.
 
 > [!IMPORTANT]
-> Funkcje te mogą być podatne na zagrożenia przepełnienia buforu. Przepełnienia buforu może służyć do ataków systemu, ponieważ mogą one spowodować nieuzasadnione podniesienie poziomu uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Te funkcje mogą być narażone na zagrożenia przepełnienia buforu. Przepełnienia buforu mogą służyć do ataków systemu, ponieważ mogą one spowodować nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -103,10 +103,10 @@ Jeśli *bieżącego* jest **NULL**, procedura obsługi nieprawidłowego parametr
 |-------------|---------------------|
 |**_mbsinc**|\<mbstring.h>|
 |**_mbsinc_l**|\<mbstring.h>|
-|**_strinc**|\<tchar.h>|
-|**_wcsinc**|\<tchar.h>|
+|**_strinc**|\<Używanie TCHAR. h >|
+|**_wcsinc**|\<Używanie TCHAR. h >|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

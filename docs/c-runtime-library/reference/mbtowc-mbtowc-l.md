@@ -26,16 +26,16 @@ helpviewer_keywords:
 - _mbtowc_l function
 - mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
-ms.openlocfilehash: c02d1a636db75b4a26891a93fa20327b7430443d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13ac8ad139cc12310663fbd23a21a461cd207236
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156619"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499726"
 ---
-# <a name="mbtowc-mbtowcl"></a>mbtowc, _mbtowc_l
+# <a name="mbtowc-_mbtowc_l"></a>mbtowc, _mbtowc_l
 
-Konwertuj znak wielobajtowy do odpowiedniego szerokiego znaku.
+Konwertowanie znaku wielobajtowego na odpowiedni szeroki znak.
 
 ## <a name="syntax"></a>Składnia
 
@@ -55,25 +55,25 @@ int _mbtowc_l(
 
 ### <a name="parameters"></a>Parametry
 
-*WChar*<br/>
-Adres znaków dwubajtowych (typ **wchar_t**).
+*WCHAR*<br/>
+Adres znaku dwubajtowego (typ **wchar_t**).
 
 *mbchar*<br/>
 Adres sekwencji bajtów (znak wielobajtowy).
 
-*Liczba*<br/>
-Liczba bajtów do wyboru.
+*liczbą*<br/>
+Liczba bajtów do sprawdzenia.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli **mbchar** nie jest **NULL** i, jeśli obiekt, *mbchar* wskazuje prawidłowy znak wielobajtowy formularzy **mbtowc** zwraca długość w bajtów znaków wielobajtowych. Jeśli *mbchar* jest **NULL** lub obiekt, który wskazuje na to znak null szerokich znaków (L '\0'), funkcja zwraca 0. Jeśli obiekt, *mbchar* wskazuje nie tworzą prawidłowy znak wielobajtowy w obrębie pierwszych *liczba* znaków, zwraca wartość -1.
+Jeśli **mbchar** nie ma **wartości null** i jeśli obiekt, który *mbchar* wskazuje, że tworzy prawidłowy znak wielobajtowy, **mbtowc** zwraca długość w bajtach znaku wielobajtowego. Jeśli *mbchar* ma **wartość null** lub obiekt, do którego wskazuje, jest znakiem dwubajtowym znaku null (L ' \ 0 '), funkcja zwraca wartość 0. Jeśli obiekt, który *mbchar* wskazuje, nie tworzy prawidłowego znaku wielobajtowego w ciągu pierwszych znaków *Count* , zwraca-1.
 
 ## <a name="remarks"></a>Uwagi
 
-**Mbtowc** funkcji konwertuje *liczba* lub mniejsza liczba bajtów wskazywany przez *mbchar*, jeśli *mbchar* nie **wartościNULL**, do odpowiedniego szerokiego znaku. **mbtowc** zapisuje wynikowy znak dwubajtowy na *wchar,* Jeśli *wchar* nie jest **NULL**. **mbtowc** nie analizuje ponad **MB_CUR_MAX** bajtów. **mbtowc** używa bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych; **_mbtowc_l —** jest identyczna, z tą różnicą, że używa ustawień regionalnych przekazanych w zamian. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Funkcja **mbtowc** konwertuje *liczbę* lub mniejszą liczbę bajtów wskazywanych przez *mbchar*, jeśli *mbchar* nie jest **równa null**, do odpowiadającego znaku dwubajtowego. **mbtowc** przechowuje otrzymany, szeroki znak w *WCHAR,* Jeśli *WCHAR* nie ma **wartości null**. **mbtowc** nie bada więcej niż **MB_CUR_MAX** bajtów. **mbtowc** używa bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych; **_mbtowc_l** jest identyczny, z tą różnicą, że w zamian korzysta z przekazaną ustawieniami regionalnymi. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -82,11 +82,11 @@ Jeśli **mbchar** nie jest **NULL** i, jeśli obiekt, *mbchar* wskazuje prawidł
 |**mbtowc**|\<stdlib.h>|
 |**_mbtowc_l**|\<stdlib.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
@@ -147,7 +147,7 @@ Attempt to convert a NULL pointer to a wide character:
 ## <a name="see-also"></a>Zobacz także
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
-[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
+[MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [Wersja regionalna](../../c-runtime-library/locale.md)<br/>
 [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>

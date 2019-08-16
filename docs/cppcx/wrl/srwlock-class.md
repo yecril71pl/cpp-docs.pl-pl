@@ -21,16 +21,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::SRWLock::TryLockExclusive method
 - Microsoft::WRL::Wrappers::SRWLock::TryLockShared method
 ms.assetid: 4fa250e3-5f29-4b06-ac24-61b6c04ade93
-ms.openlocfilehash: 6d4a504d9465c858af59a88cf0ef611bf88c3fde
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 079f1abe652d8c1610a084f5e1158cc5798d61c4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403094"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498293"
 ---
 # <a name="srwlock-class"></a>SRWLock — Klasa
 
-Reprezentuje kieszeń czytnika/blokadę.
+Przedstawia cienkią blokadę czytnika/składnika zapisywania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,7 +40,7 @@ class SRWLock;
 
 ## <a name="remarks"></a>Uwagi
 
-Cienki czytnika/blokadę służy do synchronizowania dostępu w wątkach do obiektu lub zasobu. Aby uzyskać więcej informacji, zobacz [funkcji synchronizacji](/windows/desktop/Sync/synchronization-functions).
+Slim blokada czytnika/składnika zapisywania jest używana do synchronizowania dostępu między wątkami a obiektem lub zasobem. Aby uzyskać więcej informacji, zobacz [funkcje synchronizacji](/windows/win32/Sync/synchronization-functions).
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -48,30 +48,30 @@ Cienki czytnika/blokadę służy do synchronizowania dostępu w wątkach do obie
 
 Nazwa                | Opis
 ------------------- | -------------------------------------------------------------------
-`SyncLockExclusive` | Synonim dla `SRWLock` obiekt, który jest uzyskiwany w trybie wyłączności.
-`SyncLockShared`    | Synonim dla `SRWLock` obiekt, który jest uzyskiwany w trybie udostępniania.
+`SyncLockExclusive` | Synonim dla `SRWLock` obiektu, który jest uzyskiwany w trybie wyłączności.
+`SyncLockShared`    | Synonim dla `SRWLock` obiektu, który jest uzyskiwany w trybie udostępnionym.
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
 Nazwa                                     | Opis
 ---------------------------------------- | --------------------------------------------------
-[SRWLock::SRWLock](#srwlock-constructor) | Inicjuje nowe wystąpienie klasy `SRWLock` klasy.
-[SRWLock::~SRWLock](#tilde-srwlock)      | Wyłącza wystąpienie `SRWLock` klasy.
+[SRWLock:: SRWLock](#srwlock-constructor) | Inicjuje nowe wystąpienie klasy `SRWLock` klasy.
+[SRWLock:: ~ SRWLock](#tilde-srwlock)      | Umożliwia odinicjowanie wystąpienia `SRWLock` klasy.
 
 ### <a name="public-methods"></a>Metody publiczne
 
 Nazwa                                           | Opis
 ---------------------------------------------- | -------------------------------------------------------------------------------------------------------
-[SRWLock::LockExclusive](#lockexclusive)       | Uzyskuje `SRWLock` obiektu w trybie wyłączności.
-[SRWLock::LockShared](#lockshared)             | Uzyskuje `SRWLock` obiektu w tryb udostępniania.
-[SRWLock::TryLockExclusive](#trylockexclusive) | Próbuje pobrać `SRWLock` obiektu w trybie wyłączności dla bieżącej lub określonej `SRWLock` obiektu.
-[SRWLock::TryLockShared](#trylockshared)       | Próbuje pobrać `SRWLock` obiektu w tryb udostępniania dla bieżącej lub określonej `SRWLock` obiektu.
+[SRWLock:: LockExclusive —](#lockexclusive)       | Uzyskuje `SRWLock` obiekt w trybie wyłączności.
+[SRWLock:: LockShared —](#lockshared)             | Uzyskuje `SRWLock` obiekt w trybie udostępnionym.
+[SRWLock:: TryLockExclusive —](#trylockexclusive) | Próbuje uzyskać `SRWLock` obiekt w trybie wyłączności dla bieżącego lub określonego `SRWLock` obiektu.
+[SRWLock:: TryLockShared —](#trylockshared)       | Próbuje uzyskać `SRWLock` obiekt w trybie udostępnionym dla bieżącego lub określonego `SRWLock` obiektu.
 
-### <a name="protected-data-member"></a>Element członkowski danych chronionych
+### <a name="protected-data-member"></a>Składowa chronionych danych
 
 Nazwa                                      | Opis
 ----------------------------------------- | -----------------------------------------------------------------------
-[SRWLock::SRWLock_](#srwlock-data-member) | Zawiera podstawowe zmienną blokady dla bieżącego `SRWLock` obiektu.
+[SRWLock:: SRWLock_](#srwlock-data-member) | Zawiera podstawową zmienną blokowania dla bieżącego `SRWLock` obiektu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -79,21 +79,21 @@ Nazwa                                      | Opis
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** corewrappers.h
+**Nagłówek:** corewrappers. h
 
-**Namespace:** Microsoft::wrl:: wrappers
+**Obszaru** Microsoft:: WRL:: otoki
 
 ## <a name="tilde-srwlock"></a>SRWLock:: ~ SRWLock
 
-Wyłącza wystąpienie `SRWLock` klasy.
+Umożliwia odinicjowanie wystąpienia `SRWLock` klasy.
 
 ```cpp
 ~SRWLock();
 ```
 
-## <a name="lockexclusive"></a>SRWLock::LockExclusive
+## <a name="lockexclusive"></a>SRWLock:: LockExclusive —
 
-Uzyskuje `SRWLock` obiektu w trybie wyłączności.
+Uzyskuje `SRWLock` obiekt w trybie wyłączności.
 
 ```cpp
 SyncLockExclusive LockExclusive();
@@ -110,11 +110,11 @@ Wskaźnik do `SRWLock` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`SRWLock` Obiektu w trybie wyłączności.
+`SRWLock` Obiekt w trybie wyłączności.
 
-## <a name="lockshared"></a>SRWLock::LockShared
+## <a name="lockshared"></a>SRWLock:: LockShared —
 
-Uzyskuje `SRWLock` obiektu w tryb udostępniania.
+Uzyskuje `SRWLock` obiekt w trybie udostępnionym.
 
 ```cpp
 SyncLockShared LockShared();
@@ -131,9 +131,9 @@ Wskaźnik do `SRWLock` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`SRWLock` Obiektu w tryb udostępniania.
+`SRWLock` Obiekt w trybie udostępnionym.
 
-## <a name="srwlock-constructor"></a>SRWLock::SRWLock
+## <a name="srwlock-constructor"></a>SRWLock:: SRWLock
 
 Inicjuje nowe wystąpienie klasy `SRWLock` klasy.
 
@@ -141,17 +141,17 @@ Inicjuje nowe wystąpienie klasy `SRWLock` klasy.
 SRWLock();
 ```
 
-## <a name="srwlock-data-member"></a>SRWLock::SRWLock_
+## <a name="srwlock-data-member"></a>SRWLock:: SRWLock_
 
-Zawiera podstawowe zmienną blokady dla bieżącego `SRWLock` obiektu.
+Zawiera podstawową zmienną blokowania dla bieżącego `SRWLock` obiektu.
 
 ```cpp
 SRWLOCK SRWLock_;
 ```
 
-## <a name="trylockexclusive"></a>SRWLock::TryLockExclusive
+## <a name="trylockexclusive"></a>SRWLock:: TryLockExclusive —
 
-Próbuje pobrać `SRWLock` obiektu w trybie wyłączności dla bieżącej lub określonej `SRWLock` obiektu. Jeśli wywołanie zakończy się pomyślnie, wątek wywołujący przejmuje na własność blokadę.
+Próbuje uzyskać `SRWLock` obiekt w trybie wyłączności dla bieżącego lub określonego `SRWLock` obiektu. Jeśli wywołanie powiedzie się, wątek wywołujący przejmuje własność blokady.
 
 ```cpp
 SyncLockExclusive TryLockExclusive();
@@ -168,11 +168,11 @@ Wskaźnik do `SRWLock` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-W przypadku powodzenia `SRWLock` obiektu w trybie wyłączności i Wątek wywołujący przejmuje na własność blokadę. W przeciwnym razie `SRWLock` obiektu, którego stan jest nieprawidłowy.
+Jeśli to `SRWLock` się powiedzie, obiekt w trybie wyłączności i wątek wywołujący przejmują prawo własności blokady. W przeciwnym razie `SRWLock` obiekt, którego stan jest nieprawidłowy.
 
-## <a name="trylockshared"></a>SRWLock::TryLockShared
+## <a name="trylockshared"></a>SRWLock:: TryLockShared —
 
-Próbuje pobrać `SRWLock` obiektu w tryb udostępniania dla bieżącej lub określonej `SRWLock` obiektu.
+Próbuje uzyskać `SRWLock` obiekt w trybie udostępnionym dla bieżącego lub określonego `SRWLock` obiektu.
 
 ```cpp
 WRL_NOTHROW SyncLockShared TryLockShared();
@@ -188,4 +188,4 @@ Wskaźnik do `SRWLock` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-W przypadku powodzenia `SRWLock` obiektu w tryb udostępniania i Wątek wywołujący przejmuje na własność blokadę. W przeciwnym razie `SRWLock` obiektu, którego stan jest nieprawidłowy.
+Jeśli to `SRWLock` się powiedzie, obiekt w trybie współdzielonym i wątek wywołujący przejmują prawo własności blokady. W przeciwnym razie `SRWLock` obiekt, którego stan jest nieprawidłowy.

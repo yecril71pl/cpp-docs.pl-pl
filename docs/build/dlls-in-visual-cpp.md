@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++]
 - DLLs [C++], about DLLs
 ms.assetid: 5216bca4-51e2-466b-b221-0e3e776056f0
-ms.openlocfilehash: 9f5b34fda8a429f8e55631e1e0125ed6f79d5bae
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
+ms.openlocfilehash: 33f002143e306c99b4d17b7a01ddd4a9738e38e7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68341069"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493273"
 ---
 # <a name="create-cc-dlls-in-visual-studio"></a>Tworzenie C/C++ dll w Visual Studio
 
@@ -80,15 +80,15 @@ Omawia kod inicjujący DLL, który musi zostać wykonany w przypadku ładowania 
 Opisuje, jak biblioteka uruchomieniowa wykonuje sekwencję uruchamiania biblioteki DLL.
 
 [LoadLibrary i AfxLoadLibrary](loadlibrary-and-afxloadlibrary.md)<br/>
-Omawia użycie  funkcji LoadLibrary `AfxLoadLibrary` i jawne łączenie z biblioteką DLL w czasie wykonywania.
+Omawia użycie funkcji LoadLibrary `AfxLoadLibrary` i jawne łączenie z biblioteką DLL w czasie wykonywania.
 
 [GetProcAddress](getprocaddress.md)<br/>
 W tym artykule omówiono użycie polecenia **GetProcAddress** w celu uzyskania adresu eksportowanej funkcji w bibliotece DLL.
 
 [FreeLibrary i AfxFreeLibrary](freelibrary-and-afxfreelibrary.md)<br/>
-W tym  artykule omówiono `AfxFreeLibrary` użycie FreeLibrary i, gdy moduł dll nie jest już wymagany.
+W tym artykule omówiono `AfxFreeLibrary` użycie FreeLibrary i, gdy moduł dll nie jest już wymagany.
 
-[Kolejność wyszukiwania biblioteki dołączanej dynamicznie](/windows/desktop/Dlls/dynamic-link-library-search-order)<br/>
+[Kolejność wyszukiwania biblioteki dołączanej dynamicznie](/windows/win32/Dlls/dynamic-link-library-search-order)<br/>
 Zawiera opis ścieżki wyszukiwania używanej przez system operacyjny Windows do lokalizowania biblioteki DLL w systemie.
 
 [Stany modułu zwykłej biblioteki MFC DLL łączonej dynamicznie z MFC](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)<br/>

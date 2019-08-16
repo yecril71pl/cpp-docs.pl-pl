@@ -24,16 +24,16 @@ helpviewer_keywords:
 - CBrush [MFC], FromHandle
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
-ms.openlocfilehash: f2a2e385a9f210b3644d7fade00b72c4befa47ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a99d8c8022d23f627320b66c3f376be803c9c839
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388400"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507434"
 ---
 # <a name="cbrush-class"></a>Klasa CBrush
 
-Hermetyzuje pędzel Windows graphics urządzenia interface (GDI).
+Hermetyzuje pędzel interfejsu urządzenia graficznego (GDI) systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,34 +47,34 @@ class CBrush : public CGdiObject
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CBrush::CBrush](#cbrush)|Konstruuje `CBrush` obiektu.|
+|[CBrush:: CBrush](#cbrush)|Konstruuje `CBrush` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CBrush::CreateBrushIndirect](#createbrushindirect)|Inicjuje pędzla, style, kolor i wzorcem określonym w [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) struktury.|
-|[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|Inicjuje pędzla ze wzorcem określonym przez map bitowych niezależnych od urządzenia (DIB).|
-|[CBrush::CreateHatchBrush](#createhatchbrush)|Inicjuje pędzla o określony wzorzec kreskowane i kolorze.|
-|[CBrush::CreatePatternBrush](#createpatternbrush)|Inicjuje pędzla ze wzorcem określonym przez mapę bitową.|
-|[CBrush::CreateSolidBrush](#createsolidbrush)|Inicjuje pędzla przy użyciu określonego jednolitego koloru.|
-|[CBrush::CreateSysColorBrush](#createsyscolorbrush)|Tworzy pędzla, który jest domyślny kolor systemu.|
-|[CBrush::FromHandle](#fromhandle)|Zwraca wskaźnik do `CBrush` obiektu, kiedy podane dojście do Windows `HBRUSH` obiektu.|
-|[CBrush::GetLogBrush](#getlogbrush)|Pobiera [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) struktury.|
+|[CBrush:: CreateBrushIndirect](#createbrushindirect)|Inicjuje pędzel z stylem, kolorem i wzorkiem określonym w strukturze [LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush) .|
+|[CBrush:: CreateDIBPatternBrush](#createdibpatternbrush)|Inicjuje pędzel ze wzorcem określonym przez niezależną od urządzenia mapę bitową (DIB).|
+|[CBrush:: CreateHatchBrush](#createhatchbrush)|Inicjuje pędzel z określonym wzorcem i kolorem.|
+|[CBrush:: CreatePatternBrush](#createpatternbrush)|Inicjuje pędzel ze wzorcem określonym przez mapę bitową.|
+|[CBrush:: CreateSolidBrush](#createsolidbrush)|Inicjuje pędzel o określonym kolorze kryjącym.|
+|[CBrush::CreateSysColorBrush](#createsyscolorbrush)|Tworzy Pędzel, który jest domyślnym kolorem systemu.|
+|[CBrush:: FromHandle](#fromhandle)|Zwraca wskaźnik do `CBrush` obiektu, gdy ma dojść do obiektu systemu Windows `HBRUSH` .|
+|[CBrush:: GetLogBrush](#getlogbrush)|Pobiera strukturę [LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush) .|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[HBRUSH CBrush::operator](#operator_hbrush)|Zwraca uchwyt Windows dołączonych do `CBrush` obiektu.|
+|[CBrush:: operator HBRUSH](#operator_hbrush)|Zwraca dojście systemu Windows dołączone do `CBrush` obiektu.|
 
 ## <a name="remarks"></a>Uwagi
 
-Do użycia `CBrush` obiektów, konstruowania `CBrush` obiektu i przekaż go do dowolnych `CDC` funkcji elementu członkowskiego, która wymaga pędzla.
+Aby użyć `CBrush` obiektu, `CBrush` Konstruuj obiekt i przekaż go do dowolnej `CDC` funkcji składowej, która wymaga pędzla.
 
-Pędzle może być stałe, wyklutych lub deseń.
+Pędzle mogą być pełne, kreskowane lub desenie.
 
-Aby uzyskać więcej informacji na temat `CBrush`, zobacz [obiektów graficznych](../../mfc/graphic-objects.md).
+Aby uzyskać więcej informacji `CBrush`na temat, zobacz [grafika Objects](../../mfc/graphic-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -86,11 +86,11 @@ Aby uzyskać więcej informacji na temat `CBrush`, zobacz [obiektów graficznych
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxwin.h
+**Nagłówek:** afxwin. h
 
-##  <a name="cbrush"></a>  CBrush::CBrush
+##  <a name="cbrush"></a>CBrush:: CBrush
 
-Konstruuje `CBrush` obiektu.
+Konstruuje `CBrush` obiekt.
 
 ```
 CBrush();
@@ -102,45 +102,45 @@ explicit CBrush(CBitmap* pBitmap);
 ### <a name="parameters"></a>Parametry
 
 *crColor*<br/>
-Określa kolor pierwszego planu pędzel jako kolor RGB. Jeśli jest wylęgłych pędzla, ten parametr określa kolor kreskowaniu.
+Określa kolor pierwszego planu pędzla jako kolor RGB. Jeśli pędzel jest zakreskowany, ten parametr określa kolor wylęgu.
 
 *nIndex*<br/>
-Określa styl kreskowania pędzla. Może być jednym z następujących wartości:
+Określa styl kreskowania pędzla. Może to być jedna z następujących wartości:
 
-- Kreskowanie HS_BDIAGONAL dół (od lewej do prawej) na 45 stopni
+- HS_BDIAGONAL w dół (od lewej do prawej) o 45 stopni
 
-- HS_CROSS poziome i pionowe kreskowany
+- HS_CROSS w poziomie i w pionie
 
-- Kreskowanie HS_DIAGCROSS, na 45 stopni
+- HS_DIAGCROSS kreskowany o 45 stopni
 
-- HS_FDIAGONAL stawki rabatowe zwiększone kreskowania (od lewej do prawej) na 45 stopni
+- HS_FDIAGONAL w górę (od lewej do prawej) o 45 stopni
 
-- Kreskowanie poziome HS_HORIZONTAL
+- HS_HORIZONTAL Kreskowanie poziome
 
-- Kreskowanie pionowe HS_VERTICAL
+- HS_VERTICAL Kreskowanie pionowe
 
 *pBitmap*<br/>
-Wskazuje `CBitmap` obiekt, który określa mapę bitową za pomocą którego pędzla do malowania.
+`CBitmap` Wskazuje obiekt, który określa mapę bitową, z którą maluje pędzel.
 
 ### <a name="remarks"></a>Uwagi
 
-`CBrush` ma cztery przeciążone konstruktory. Konstruktor bez argumentów tworzy niezainicjowany `CBrush` obiekt, który musi zostać zainicjowany przed jego użyciem.
+`CBrush`ma cztery przeciążone konstruktory. Konstruktor bez argumentów konstruuje niezainicjowany `CBrush` obiekt, który musi zostać zainicjowany, zanim będzie można go użyć.
 
-Jeśli korzystasz z konstruktora bez argumentów, należy zainicjować wynikowy `CBrush` obiekt z [CreateSolidBrush](#createsolidbrush), [CreateHatchBrush](#createhatchbrush), [CreateBrushIndirect](#createbrushindirect), [CreatePatternBrush](#createpatternbrush), lub [CreateDIBPatternBrush](#createdibpatternbrush). Jeśli używasz jednego z konstruktorów, które przyjmuje argumentów, następnie żadne dodatkowe inicjowania jest konieczne. Konstruktory z argumentami może zgłosić wyjątek, jeśli zostaną napotkane błędy, gdy konstruktor bez argumentów zawsze powiedzie się.
+Jeśli używasz `CBrush` konstruktora bez argumentów, musisz zainicjować obiekt otrzymany z [CreateSolidBrush](#createsolidbrush), [CreateHatchBrush](#createhatchbrush), [CreateBrushIndirect](#createbrushindirect), [CreatePatternBrush](#createpatternbrush)lub [ CreateDIBPatternBrush](#createdibpatternbrush). W przypadku użycia jednego z konstruktorów, które pobierają argumenty, dalsze inicjowanie nie jest konieczne. Konstruktory z argumentami mogą zgłosić wyjątek w przypadku napotkania błędów, natomiast Konstruktor bez argumentów zawsze zakończy się powodzeniem.
 
-Konstruktor za pomocą jednego [COLORREF](/windows/desktop/gdi/colorref) parametru tworzy pędzla przy użyciu określonego koloru. Kolor określa wartość RGB i może zostać utworzony przy użyciu makra RGB w systemie WINDOWS. H.
+Konstruktor z pojedynczym parametrem [COLORREF](/windows/win32/gdi/colorref) konstruuje Pełny pędzel z określonym kolorem. Kolor określa wartość RGB i można ją utworzyć za pomocą makra RGB w systemie WINDOWS. C.
 
-Konstruktor z dwoma parametrami tworzy kreskowania pędzla. *NIndex* parametr określa indeks zakreskowane wzorca. *CrColor* parametr określa kolor.
+Konstruktor z dwoma parametrami konstruuje pędzel kreskowy. Parametr *nIndex* Określa indeks kreskowanego wzorca. Parametr *crColor* określa kolor.
 
-Konstruktor z `CBitmap` parametru tworzy deseniem pędzla. Parametr identyfikuje mapy bitowej. Mapa bitowa założono, że zostały utworzone przy użyciu [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), lub [ CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap). Minimalny rozmiar mapy bitowej do użycia w deseń wypełnienia jest 8 pikseli 8 pikseli.
+Konstruktor z `CBitmap` parametrem konstruuje pędzel z deseniem. Parametr identyfikuje mapę bitową. Mapa bitowa jest założono, że została utworzona przy użyciu [CBitmap::](../../mfc/reference/cbitmap-class.md#createbitmap) [CBitmap:: CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap:: LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)lub [CBitmap:: CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap). Minimalny rozmiar mapy bitowej, która ma być używana w wzorcu wypełnienia, to 8 pikseli na 8 pikseli.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#21](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]
 
-##  <a name="createbrushindirect"></a>  CBrush::CreateBrushIndirect
+##  <a name="createbrushindirect"></a>CBrush:: CreateBrushIndirect
 
-Inicjuje pędzla, style, kolor i wzorcem określonym w [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) struktury.
+Inicjuje pędzel z stylem, kolorem i wzorkiem określonym w strukturze [LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush) .
 
 ```
 BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
@@ -149,7 +149,7 @@ BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
 ### <a name="parameters"></a>Parametry
 
 *lpLogBrush*<br/>
-Wskazuje [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) strukturę, która zawiera informacje o pędzla.
+Wskazuje strukturę [LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush) , która zawiera informacje o pędzlu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -157,17 +157,17 @@ Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie
 
 ### <a name="remarks"></a>Uwagi
 
-Następnie można wybrać pędzel jako aktualny pędzel we wszystkich kontekstach urządzenia.
+Pędzel można następnie wybrać jako bieżący pędzel dla dowolnego kontekstu urządzenia.
 
-Pędzel utworzone za pomocą mapy bitowej monochromatyczny (1 płaszczyzny, 1 bit na piksel) jest rysowany przy użyciu bieżących kolorów tła i tekstu. Piksele, reprezentowane przez nieco ustawione na 0 będą pobierane z bieżącym kolorem tekstu. Piksele, reprezentowane przez nieco ustawiona na 1 będą pobierane z bieżącym kolorem tła.
+Pędzel utworzony przy użyciu czarno-bitowej (1 płaszczyzny, 1 bit na piksel) jest rysowany przy użyciu bieżącego koloru tekstu i tła. Piksele reprezentowane przez bit o wartości 0 będą rysowane z bieżącym kolorem tekstu. Piksele reprezentowane przez bit o wartości 1 będą rysowane z bieżącym kolorem tła.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#22](../../mfc/codesnippet/cpp/cbrush-class_2.cpp)]
 
-##  <a name="createdibpatternbrush"></a>  CBrush::CreateDIBPatternBrush
+##  <a name="createdibpatternbrush"></a>CBrush:: CreateDIBPatternBrush
 
-Inicjuje pędzla ze wzorcem określonym przez map bitowych niezależnych od urządzenia (DIB).
+Inicjuje pędzel ze wzorcem określonym przez niezależną od urządzenia mapę bitową (DIB).
 
 ```
 BOOL CreateDIBPatternBrush(
@@ -182,51 +182,51 @@ BOOL CreateDIBPatternBrush(
 ### <a name="parameters"></a>Parametry
 
 *hPackedDIB*<br/>
-Identyfikuje obiekt pamięci globalnej, zawierający upakowaną map bitowych niezależnych od urządzenia (DIB).
+Identyfikuje Obiekt pamięci globalnej zawierający spakowaną niezależną od urządzenia mapę bitową (DIB).
 
 *nUsage*<br/>
-Określa, czy `bmiColors[]` pola [BITMAPINFO](/windows/desktop/api/wingdi/ns-wingdi-tagbitmapinfo) struktury danych (część "pakowane DIB") zawiera jawne wartości RGB lub indeksów do aktualnie zrealizowane palety logiczne. Parametr musi mieć jedną z następujących wartości:
+Określa, czy `bmiColors[]` pola struktury danych [BITMAPINFO](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) (część "spakowanej DIB") zawierają jawne wartości RGB lub indeksy do obecnie zrealizowanej palety logicznej. Parametr musi mieć jedną z następujących wartości:
 
-- DIB_PAL_COLORS tabeli kolorów składa się z tablicy indeksów 16-bitowych.
+- DIB_PAL_COLORS tabela kolorów składa się z tablicy 16-bitowych indeksów.
 
-- DIB_RGB_COLORS tabeli kolorów zawiera wartości RGB literału.
+- DIB_RGB_COLORS tabela kolorów zawiera literały wartości RGB.
 
 *lpPackedDIB*<br/>
-Wskazuje na upakowaną DIB, składający się z `BITMAPINFO` struktury bezpośrednio następuje tablicę bajtów Definiowanie piksele mapy bitowej.
+Wskazuje spakowaną DIB składającą się ze `BITMAPINFO` struktury bezpośrednio po niej, a następnie tablicę bajtów definiującą piksele mapy bitowej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Następnie można wybrać pędzel we wszystkich kontekstach urządzenia obsługującą rastrowych.
+Pędzel można następnie wybrać dla dowolnego kontekstu urządzenia obsługującego operacje rastrowe.
 
-W ten sposób obsługi DIB różnią się dwie wersje:
+Dwie wersje różnią się w sposób obsługi DIB:
 
-- W pierwszej wersji można uzyskać dojścia do DIB wywołujesz Windows `GlobalAlloc` funkcję, aby przydzielić blok pamięci globalnej, a następnie wprowadź ilość pamięci z upakowaną DIB.
+- W pierwszej wersji, aby uzyskać uchwyt do formatu DIB, należy wywołać funkcję systemu Windows `GlobalAlloc` w celu przydzielenia bloku pamięci globalnej, a następnie wypełnić pamięć zapakowanym DIB.
 
-- W drugiej wersji nie jest konieczne do wywołania `GlobalAlloc` można przydzielić pamięci dla spakowanych DIB.
+- W drugiej wersji nie jest konieczne wywołanie `GlobalAlloc` w celu przydzielenia pamięci dla spakowanej DIB.
 
-Spakowane DIB składa się z `BITMAPINFO` struktury danych bezpośrednio po nim tablica bajtów, która definiuje piksele mapy bitowej. Mapy bitowe używane jako wzorców wypełnienia powinna być 8 pikseli 8 pikseli. W przypadku większych mapę bitową Windows tworzy deseń wypełnienia przy użyciu tylko usługi bits, odpowiadający pierwsze 8 wierszy i kolumn 8 pikseli w lewym górnym rogu mapy bitowej.
+Spakowana DIB składa się `BITMAPINFO` ze struktury danych bezpośrednio po której następuje tablica bajtów, która definiuje piksele mapy bitowej. Mapy bitowe używane jako wzorce wypełnienia powinny mieć 8 pikseli na 8 pikseli. Jeśli mapa bitowa jest większa, system Windows tworzy deseń wypełnienia przy użyciu tylko bitów odpowiadających pierwsze 8 wierszy i 8 kolumn pikseli w lewym górnym rogu mapy bitowej.
 
-Gdy aplikacja wybierze dwóch kolorów DIB pędzla do kontekstu urządzenia monochromatyczny, Windows ignoruje kolorów, określona w DIB i zamiast tego zostanie pędzla wzoru przy użyciu bieżącego kolorów tekstu i tła kontekstu urządzenia. Piksele mapowane na pierwszy kolor DIB (przy przesunięciu 0 w tabeli kolorów DIB) są wyświetlane przy użyciu koloru tekstu. Piksele mapowane na drugi kolor (od przesunięcia 1 w tabeli kolorów) są wyświetlane przy użyciu koloru tła.
+Gdy aplikacja wybierze dwukolorowy pędzel wzorca DIB do kontekstu urządzenia monochromatycznego, system Windows ignoruje kolory określone w formacie DIB, a zamiast tego wyświetla pędzel wzorca przy użyciu bieżących kolorów tekstu i tła kontekstu urządzenia. Piksele zamapowane na pierwszy kolor (przesunięcie 0 w tabeli koloru DIB) dla DIB są wyświetlane przy użyciu koloru tekstu. Piksele mapowane na drugi kolor (przesunięcie 1 w tabeli kolorów) są wyświetlane przy użyciu koloru tła.
 
-Aby dowiedzieć się, jak za pomocą następujących funkcji Windows zobacz zestaw Windows SDK:
+Aby uzyskać informacje o używaniu następujących funkcji systemu Windows, zobacz Windows SDK:
 
-- [CreateDIBPatternBrush](/windows/desktop/api/wingdi/nf-wingdi-createdibpatternbrush) (Ta funkcja jest dostępna tylko dla zgodności z aplikacji napisanych dla wersji systemu Windows starszych niż 3.0; użyj `CreateDIBPatternBrushPt` funkcji.)
+- [CreateDIBPatternBrush](/windows/win32/api/wingdi/nf-wingdi-createdibpatternbrush) (Ta funkcja jest dostarczana tylko w celu zapewnienia zgodności z aplikacjami zapisanymi w wersjach systemu Windows starszych niż `CreateDIBPatternBrushPt` 3,0; użyj funkcji).
 
-- [CreateDIBPatternBrushPt](/windows/desktop/api/wingdi/nf-wingdi-createdibpatternbrushpt) (tej funkcji należy używać dla aplikacji opartych na Win32).
+- [CreateDIBPatternBrushPt](/windows/win32/api/wingdi/nf-wingdi-createdibpatternbrushpt) (Ta funkcja powinna być używana dla aplikacji opartych na Win32).
 
-- [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc)
+- [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc)
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#23](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]
 
-##  <a name="createhatchbrush"></a>  CBrush::CreateHatchBrush
+##  <a name="createhatchbrush"></a>CBrush:: CreateHatchBrush
 
-Inicjuje pędzla o określony wzorzec kreskowane i kolorze.
+Inicjuje pędzel z określonym wzorcem i kolorem.
 
 ```
 BOOL CreateHatchBrush(
@@ -237,38 +237,38 @@ BOOL CreateHatchBrush(
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Określa styl kreskowania pędzla. Może być jednym z następujących wartości:
+Określa styl kreskowania pędzla. Może to być jedna z następujących wartości:
 
-- Kreskowanie HS_BDIAGONAL dół (od lewej do prawej) na 45 stopni
+- HS_BDIAGONAL w dół (od lewej do prawej) o 45 stopni
 
-- HS_CROSS poziome i pionowe kreskowany
+- HS_CROSS w poziomie i w pionie
 
-- Kreskowanie HS_DIAGCROSS, na 45 stopni
+- HS_DIAGCROSS kreskowany o 45 stopni
 
-- HS_FDIAGONAL stawki rabatowe zwiększone kreskowania (od lewej do prawej) na 45 stopni
+- HS_FDIAGONAL w górę (od lewej do prawej) o 45 stopni
 
-- Kreskowanie poziome HS_HORIZONTAL
+- HS_HORIZONTAL Kreskowanie poziome
 
-- Kreskowanie pionowe HS_VERTICAL
+- HS_VERTICAL Kreskowanie pionowe
 
 *crColor*<br/>
-Określa kolor pierwszego planu pędzel jako kolor RGB (kolor kreskowaniu). Zobacz [COLORREF](/windows/desktop/gdi/colorref) w zestawie Windows SDK, aby uzyskać więcej informacji.
+Określa kolor pierwszego planu pędzla jako kolor RGB (kolor kreskowań). Aby uzyskać więcej informacji, zobacz [COLORREF](/windows/win32/gdi/colorref) w Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Następnie można wybrać pędzel jako aktualny pędzel we wszystkich kontekstach urządzenia.
+Pędzel można następnie wybrać jako bieżący pędzel dla dowolnego kontekstu urządzenia.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#24](../../mfc/codesnippet/cpp/cbrush-class_4.cpp)]
 
-##  <a name="createpatternbrush"></a>  CBrush::CreatePatternBrush
+##  <a name="createpatternbrush"></a>CBrush:: CreatePatternBrush
 
-Inicjuje pędzla ze wzorcem określonym przez mapę bitową.
+Inicjuje pędzel ze wzorcem określonym przez mapę bitową.
 
 ```
 BOOL CreatePatternBrush(CBitmap* pBitmap);
@@ -277,31 +277,31 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
 ### <a name="parameters"></a>Parametry
 
 *pBitmap*<br/>
-Identyfikuje mapy bitowej.
+Identyfikuje mapę bitową.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Następnie można wybrać pędzel we wszystkich kontekstach urządzenia obsługującą rastrowych. Mapa bitowa oznaczona *pBitmap* jest zwykle inicjowana przy użyciu [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap:: Loadbitmap —](../../mfc/reference/cbitmap-class.md#loadbitmap), lub [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) funkcji.
+Pędzel można następnie wybrać dla dowolnego kontekstu urządzenia obsługującego operacje rastrowe. Mapa bitowa identyfikowana *przez pBitmap* jest zwykle inicjowana przy [użyciu CBitmap::](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap:: CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap:: LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)lub [CBitmap:: CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) .
 
-Mapy bitowe używane jako wzorców wypełnienia powinna być 8 pikseli 8 pikseli. W przypadku większych mapę bitową Windows będzie używać tylko bity, odpowiadający pierwsze 8 wierszy i kolumn pikseli w lewym górnym rogu mapy bitowej.
+Mapy bitowe używane jako wzorce wypełnienia powinny mieć 8 pikseli na 8 pikseli. Jeśli mapa bitowa jest większa, system Windows będzie używać tylko bitów odpowiadających pierwszych 8 wierszom i kolumnom pikseli w lewym górnym rogu mapy bitowej.
 
-Pędzla wzoru mogą zostać usunięte bez wywierania wpływu na skojarzone mapy bitowej. Oznacza to, że mapa bitowa można utworzyć dowolną liczbę pędzle wzorzec.
+Pędzel wzorca można usunąć bez wpływu na skojarzoną mapę bitową. Oznacza to, że mapa bitowa może służyć do tworzenia dowolnej liczby pędzli wzorcowych.
 
-Pędzel, który został utworzony za pomocą monochromatycznych map bitowych (płaszczyzny kolorów 1, 1 bit na piksel) jest rysowany przy użyciu bieżących kolorów tła i tekstu. Bieżący kolor tekstu są rysowane pikseli, reprezentowane przez nieco ustawione na 0. Piksele, reprezentowane przez nieco ustawiona na 1 są rysowane w bieżącym kolorem tła.
+Pędzel utworzony przy użyciu czarno-białej mapy bitowej (1 płaszczyzna kolorów, 1 bit na piksel) jest rysowany przy użyciu bieżącego koloru tekstu i tła. Piksele reprezentowane przez bit o wartości 0 są rysowane z bieżącym kolorem tekstu. Piksele reprezentowane przez bit mają ustawioną wartość 1 są rysowane z bieżącym kolorem tła.
 
-Aby uzyskać informacje o używaniu [CreatePatternBrush](/windows/desktop/api/wingdi/nf-wingdi-createpatternbrush), Windows funkcji, zobacz dokumentację Windows SDK.
+Aby uzyskać informacje dotyczące używania [CreatePatternBrush](/windows/win32/api/wingdi/nf-wingdi-createpatternbrush), funkcji systemu Windows, zobacz Windows SDK.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#25](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]
 
-##  <a name="createsolidbrush"></a>  CBrush::CreateSolidBrush
+##  <a name="createsolidbrush"></a>CBrush:: CreateSolidBrush
 
-Inicjuje pędzla jednolitym kolorem określony.
+Inicjuje pędzel z określonym pełnym kolorem.
 
 ```
 BOOL CreateSolidBrush(COLORREF crColor);
@@ -310,23 +310,23 @@ BOOL CreateSolidBrush(COLORREF crColor);
 ### <a name="parameters"></a>Parametry
 
 *crColor*<br/>
-A [COLORREF](/windows/desktop/gdi/colorref) strukturę, która określa kolor pędzla. Kolor określa wartość RGB i może zostać utworzony przy użyciu makra RGB w systemie WINDOWS. H.
+Struktura [COLORREF](/windows/win32/gdi/colorref) , która określa kolor pędzla. Kolor określa wartość RGB i można ją utworzyć za pomocą makra RGB w systemie WINDOWS. C.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Następnie można wybrać pędzel jako aktualny pędzel we wszystkich kontekstach urządzenia.
+Pędzel można następnie wybrać jako bieżący pędzel dla dowolnego kontekstu urządzenia.
 
-Gdy aplikacja zakończy pędzla, utworzone przez `CreateSolidBrush`, należy wybrać, pędzla poza kontekstem urządzenia.
+Po zakończeniu działania aplikacji przy użyciu pędzla utworzonego przez `CreateSolidBrush`program powinien wybrać pędzel z kontekstu urządzenia.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CBrush::CBrush](#cbrush).
+  Zobacz przykład dla [CBrush:: CBrush](#cbrush).
 
-##  <a name="createsyscolorbrush"></a>  CBrush::CreateSysColorBrush
+##  <a name="createsyscolorbrush"></a>CBrush:: CreateSysColorBrush
 
 Inicjuje kolor pędzla.
 
@@ -337,25 +337,25 @@ BOOL CreateSysColorBrush(int nIndex);
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Określa indeks koloru. Ta wartość odpowiada kolor używany do rysowania, jeden z elementów 21 okna. Zobacz [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor) w zestawie Windows SDK dla listy wartości.
+Określa indeks koloru. Ta wartość odpowiada kolorowi użytemu do malowania jednego z 21 elementów okna. Aby uzyskać listę wartości, zobacz [GetSysColor](/windows/win32/api/winuser/nf-winuser-getsyscolor) w Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Następnie można wybrać pędzel jako aktualny pędzel we wszystkich kontekstach urządzenia.
+Pędzel można następnie wybrać jako bieżący pędzel dla dowolnego kontekstu urządzenia.
 
-Gdy aplikacja zakończy pędzla, utworzone przez `CreateSysColorBrush`, należy wybrać, pędzla poza kontekstem urządzenia.
+Po zakończeniu działania aplikacji przy użyciu pędzla utworzonego przez `CreateSysColorBrush`program powinien wybrać pędzel z kontekstu urządzenia.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#26](../../mfc/codesnippet/cpp/cbrush-class_6.cpp)]
 
-##  <a name="fromhandle"></a>  CBrush::FromHandle
+##  <a name="fromhandle"></a>CBrush:: FromHandle
 
-Zwraca wskaźnik do `CBrush` obiektu, kiedy podane dojście do Windows [HBRUSH](#operator_hbrush) obiektu.
+Zwraca wskaźnik do `CBrush` obiektu, gdy ma dojść do obiektu [HBRUSH](#operator_hbrush) systemu Windows.
 
 ```
 static CBrush* PASCAL FromHandle(HBRUSH hBrush);
@@ -364,25 +364,25 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ### <a name="parameters"></a>Parametry
 
 *hBrush*<br/>
-DOJŚCIE do pędzel Windows GDI.
+Dojście do pędzla GDI systemu Windows.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do `CBrush` obiektu, jeśli operacja się powiedzie; w przeciwnym razie wartość NULL.
+Wskaźnik do `CBrush` obiektu, jeśli się powiedzie; w przeciwnym razie wartość null.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli `CBrush` obiektu nie jest już dołączony do uchwyt tymczasowego `CBrush` obiekt zostanie utworzony i dołączony. Ten tymczasowy `CBrush` obiekt jest prawidłowy tylko dopóki aplikacja ma czas bezczynności w jego pętlę zdarzeń. W tej chwili wszystkich tymczasowych obiektów graficznych są usuwane. Innymi słowy tymczasowy obiekt jest prawidłowy tylko podczas przetwarzania komunikatu jednego okna.
+Jeśli obiekt nie jest jeszcze dołączony do dojścia, tworzony jest obiekt `CBrush` tymczasowy i jest on dołączony. `CBrush` Ten obiekt `CBrush` tymczasowy jest prawidłowy tylko do następnego czasu bezczynności aplikacji w pętli zdarzeń. W tej chwili wszystkie tymczasowe obiekty graficzne są usuwane. Innymi słowy, obiekt tymczasowy jest prawidłowy tylko podczas przetwarzania jednego komunikatu w oknie.
 
-Aby uzyskać więcej informacji o korzystaniu z obiektów graficznych, zobacz [obiektów grafiki](/windows/desktop/gdi/graphic-objects) w zestawie Windows SDK.
+Aby uzyskać więcej informacji na temat używania obiektów graficznych, zobacz temat [obiekty graficzne](/windows/win32/gdi/graphic-objects) w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CBrush::CBrush](#cbrush).
+  Zobacz przykład dla [CBrush:: CBrush](#cbrush).
 
-##  <a name="getlogbrush"></a>  CBrush::GetLogBrush
+##  <a name="getlogbrush"></a>CBrush:: GetLogBrush
 
-Wywołaj tę funkcję elementu członkowskiego, aby pobrać `LOGBRUSH` struktury.
+Wywołaj tę funkcję elementu członkowskiego `LOGBRUSH` , aby pobrać strukturę.
 
 ```
 int GetLogBrush(LOGBRUSH* pLogBrush);
@@ -391,29 +391,29 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 ### <a name="parameters"></a>Parametry
 
 *pLogBrush*<br/>
-Wskazuje [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) strukturę, która zawiera informacje o pędzla.
+Wskazuje strukturę [LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush) , która zawiera informacje o pędzlu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli funkcja się powiedzie, i *pLogBrush* jest wskaźnikiem prawidłową wartość zwracana jest liczba bajtów przechowywanych w buforze.
+Jeśli funkcja się powiedzie, a *pLogBrush* jest prawidłowym wskaźnikiem, wartość zwracana jest liczbą bajtów przechowywanych w buforze.
 
-Jeśli funkcja się powiedzie, i *pLogBrush* ma wartość NULL, wartość zwracana jest liczba bajtów potrzebnych do przechowywania informacji o funkcji będzie przechowywać w buforze.
+Jeśli funkcja się powiedzie, a *pLogBrush* ma wartość null, wartość zwracana jest liczbą bajtów wymaganą do przechowywania informacji, które funkcja będzie przechowywać w buforze.
 
-Jeśli funkcja zawiedzie, wartość zwracana to 0.
+Jeśli funkcja się nie powiedzie, zwracana wartość wynosi 0.
 
 ### <a name="remarks"></a>Uwagi
 
-`LOGBRUSH` Definiuje struktury, style, kolor i wzoru pędzla.
+`LOGBRUSH` Struktura definiuje styl, kolor i deseń pędzla.
 
-Na przykład wywołać `GetLogBrush` do dopasowania konkretny kolor lub deseń mapy bitowej.
+Na przykład, wywołaj `GetLogBrush` , aby dopasować określony kolor lub wzór mapy bitowej.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#27](../../mfc/codesnippet/cpp/cbrush-class_7.cpp)]
 
-##  <a name="operator_hbrush"></a>  HBRUSH CBrush::operator
+##  <a name="operator_hbrush"></a>CBrush:: operator HBRUSH
 
-Użyj tego operatora, aby uzyskać dojście Windows GDI dołączonych `CBrush` obiektu.
+Użyj tego operatora, aby uzyskać dojście `CBrush` do dołączonego interfejsu GDI systemu Windows.
 
 ```
 operator HBRUSH() const;
@@ -421,13 +421,13 @@ operator HBRUSH() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli operacja się powiedzie, dojścia do obiektu Windows GDI reprezentowany przez `CBrush` obiektu; w przeciwnym razie wartość NULL.
+Jeśli to się powiedzie, dojście do obiektu GDI systemu Windows `CBrush` reprezentowane przez obiekt; w przeciwnym razie wartość null.
 
 ### <a name="remarks"></a>Uwagi
 
-Ten operator jest operatora rzutowania obsługuje bezpośredniego użycia obiektu HBRUSH.
+Ten operator jest operatorem rzutowania, który obsługuje bezpośrednie użycie obiektu HBRUSH.
 
-Aby uzyskać więcej informacji o korzystaniu z obiektów graficznych, zobacz [obiektów grafiki](/windows/desktop/gdi/graphic-objects) w zestawie Windows SDK.
+Aby uzyskać więcej informacji na temat używania obiektów graficznych, zobacz temat [obiekty graficzne](/windows/win32/gdi/graphic-objects) w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
@@ -435,7 +435,7 @@ Aby uzyskać więcej informacji o korzystaniu z obiektów graficznych, zobacz [o
 
 ## <a name="see-also"></a>Zobacz także
 
-[MFC Sample PROPDLG](../../overview/visual-cpp-samples.md)<br/>
+[Przykład PROPDLG MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CGdiObject](../../mfc/reference/cgdiobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CBitmap](../../mfc/reference/cbitmap-class.md)<br/>

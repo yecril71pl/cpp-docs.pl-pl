@@ -1,5 +1,5 @@
 ---
-title: Crebar — klasa
+title: Klasa CReBar
 ms.date: 11/19/2018
 f1_keywords:
 - CReBar
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CReBar [MFC], Create
 - CReBar [MFC], GetReBarCtrl
 ms.assetid: c1ad2720-1d33-4106-8e4e-80aa84f93559
-ms.openlocfilehash: 5a87f70816e9342c7aa203a53d13699659cebb28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 434232e8f99bf914b00379db53d4b4a37d24fe36
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372368"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502795"
 ---
-# <a name="crebar-class"></a>Crebar — klasa
+# <a name="crebar-class"></a>Klasa CReBar
 
-Pasek sterowania, który zawiera układ, trwałość i informacje o stanie dla formantów rebar.
+Pasek sterowania, który zawiera układ, trwałość i informacje o stanie dla formantów paska pomocniczego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,24 +35,24 @@ class CReBar : public CControlBar
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CReBar::AddBar](#addbar)|Dodaje obiekt band do paska pomocniczego.|
-|[CReBar::Create](#create)|Tworzy kontrolkę paska pomocniczego i dołącza je do `CReBar` obiektu.|
-|[CReBar::GetReBarCtrl](#getrebarctrl)|Umożliwia bezpośredni dostęp do podstawowych wspólnej kontroli.|
+|[CReBar:: AddBar](#addbar)|Dodaje bandę do paska pomocniczego.|
+|[CReBar:: Create](#create)|Tworzy formant paska pomocniczego i dołącza go do `CReBar` obiektu.|
+|[CReBar::GetReBarCtrl](#getrebarctrl)|Zezwala na bezpośredni dostęp do podstawowej kontroli wspólnej.|
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekt paska pomocniczego może zawierać wiele okien podrzędnych, zazwyczaj inne kontrolki, w tym pola tekstowe, paski narzędzi i pól listy. Obiekt paska pomocniczego, można wyświetlić jego okien podrzędnych za pośrednictwem określonego mapy bitowej. Aplikacja może automatycznie zmieniać rozmiar paska pomocniczego lub użytkownik może ręcznie zmienić rozmiar paska pomocniczego, klikając lub przeciągnij jej pasek uchwytu.
+Obiekt paska pomocniczego może zawierać różne okna podrzędne, zwykle inne kontrolki, takie jak pola edycji, paski narzędzi i pola listy. Obiekt paska pomocniczego może wyświetlać jego okna podrzędne przez określoną mapę bitową. Aplikacja może automatycznie zmienić rozmiar paska pomocniczego lub można ręcznie zmienić rozmiar paska pomocniczego, klikając lub przeciągając pasek uchwytu.
 
-![Przykład RebarMenu](../../mfc/reference/media/vc4sc61.gif "przykład RebarMenu")
+![Przykład RebarMenu](../../mfc/reference/media/vc4sc61.gif "Przykład RebarMenu")
 
-## <a name="rebar-control"></a>Paska pomocniczego kontrolki
+## <a name="rebar-control"></a>Paska pomocniczego — formant
 
-Obiekt paska pomocniczego działa podobnie jak obiekt paska narzędzi. Paska pomocniczego używa mechanizmu kliknij i przeciągnij, aby zmienić rozmiar jego paski. Kontrolki paska pomocniczego może zawierać jeden lub więcej grup, z każdego pasma o dowolnej kombinacji pasek uchwytu, mapy bitowej, etykietę tekstową i okna podrzędnego. Jednak grupy nie może zawierać więcej niż jedno okno podrzędne.
+Obiekt paska pomocniczego zachowuje się podobnie do obiektu Toolbar. Paska pomocniczego używa mechanizmu klikania i przeciągania, aby zmienić rozmiar jego pasm. Kontrolka paska pomocniczego może zawierać co najmniej jedną grupę, a każdy z nich ma dowolną kombinację paska uchwytu, mapy bitowej, etykiety tekstowej i okna podrzędnego. Jednak pasma nie mogą zawierać więcej niż jednego okna podrzędnego.
 
-`CReBar` używa [z CReBarCtrl](../../mfc/reference/crebarctrl-class.md) klasy, aby zapewnić jego wykonania. Możesz uzyskać dostęp za pomocą kontrolki paska pomocniczego [getrebarctrl —](#getrebarctrl) Aby skorzystać z opcji dostosowywania formantu. Aby uzyskać więcej informacji na temat formantów rebar, zobacz `CReBarCtrl`. Aby uzyskać więcej informacji o używaniu kontrolki paska pomocniczego, zobacz [korzystanie z CReBarCtrl](../../mfc/using-crebarctrl.md).
+`CReBar`używa klasy [Korzystanie CReBarCtrl](../../mfc/reference/crebarctrl-class.md) w celu zapewnienia jej implementacji. Aby skorzystać z opcji dostosowania kontrolki, można uzyskać dostęp do formantu paska pomocniczego za pomocą [GetReBarCtrl](#getrebarctrl) . Aby uzyskać więcej informacji na temat kontrolek `CReBarCtrl`paska pomocniczego, zobacz. Aby uzyskać więcej informacji na temat używania formantów paska pomocniczego, zobacz [using korzystanie CReBarCtrl](../../mfc/using-crebarctrl.md).
 
 > [!CAUTION]
->  Paska pomocniczego i obiekty kontrolki paska pomocniczego nie obsługują kontrolka MFC na pasku dokowania. Jeśli `CRebar::EnableDocking` jest wywoływana, aplikacja będzie potwierdzenia.
+>  Obiekty sterowania paska pomocniczego i paska pomocniczego nie obsługują dokowania paska sterowania MFC. Jeśli `CRebar::EnableDocking` jest wywoływana, aplikacja zostanie zatwierdzona.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -68,11 +68,11 @@ Obiekt paska pomocniczego działa podobnie jak obiekt paska narzędzi. Paska pom
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxext.h
+**Nagłówek:** afxext. h
 
-##  <a name="addbar"></a>  CReBar::AddBar
+##  <a name="addbar"></a>CReBar:: AddBar
 
-Wywołaj tę funkcję elementu członkowskiego, aby dodać grupy do paska pomocniczego.
+Wywołaj tę funkcję elementu członkowskiego, aby dodać pasmo do paska pomocniczego.
 
 ```
 BOOL AddBar(
@@ -92,16 +92,16 @@ BOOL AddBar(
 ### <a name="parameters"></a>Parametry
 
 *pBar*<br/>
-Wskaźnik do `CWnd` obiekt okna podrzędnego, który ma zostać wstawiony do paska pomocniczego. Przywoływany obiekt musi mieć WS_CHILD.
+Wskaźnik do `CWnd` obiektu, który jest oknem podrzędnym, który ma zostać wstawiony do paska pomocniczego. Obiekt, do którego istnieje odwołanie, musi mieć WS_CHILD.
 
 *lpszText*<br/>
-Wskaźnik do ciągu zawierającego tekst do wyświetlenia na paska pomocniczego. Wartość NULL, domyślnie. Tekst zawarty w *lpszText* nie jest częścią okna podrzędnego; nie znajduje się na paska pomocniczego, sam.
+Wskaźnik do ciągu zawierającego tekst, który ma być wyświetlany w paska pomocniczego. Domyślnie wartość NULL. Tekst zawarty w *lpszText* nie jest częścią okna podrzędnego; jest on paska pomocniczego.
 
 *pbmp*<br/>
-Wskaźnik do `CBitmap` obiektu, który będzie wyświetlany w tle paska pomocniczego. Wartość NULL, domyślnie.
+Wskaźnik do `CBitmap` obiektu, który ma być wyświetlany w tle paska pomocniczego. Domyślnie wartość NULL.
 
 *dwStyle*<br/>
-Wartość typu DWORD zawierającą styl do zastosowania do paska pomocniczego. Zobacz `fStyle` funkcja opis w strukturze Win32 [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) pełną listę style poza pasmem.
+Element DWORD zawierający styl, który ma zostać zastosowany do paska pomocniczego. Zobacz opis funkcji w strukturze Win32 REBARBANDINFO, aby uzyskać pełną listę stylów pasma. [](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) `fStyle`
 
 *clrFore*<br/>
 Wartość COLORREF, która reprezentuje kolor pierwszego planu paska pomocniczego.
@@ -111,13 +111,13 @@ Wartość COLORREF, która reprezentuje kolor tła paska pomocniczego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CReBarCtrl#1](../../mfc/reference/codesnippet/cpp/crebar-class_1.cpp)]
 
-##  <a name="create"></a>  CReBar::Create
+##  <a name="create"></a>CReBar:: Create
 
 Wywołaj tę funkcję elementu członkowskiego, aby utworzyć paska pomocniczego.
 
@@ -132,28 +132,28 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *pParentWnd*<br/>
-Wskaźnik do `CWnd` obiekt, którego okno Windows ma element nadrzędny paska stanu. Zwykle okna ramki.
+Wskaźnik do `CWnd` obiektu, którego okno systemu Windows jest elementem nadrzędnym paska stanu. Zwykle okno ramki.
 
 *dwCtrlStyle*<br/>
-Styl kontrolki paska pomocniczego. Domyślnie RBS_BANDBORDERS, zawierające wąskie wierszy w celu rozdzielenia sąsiadujących paskami w formancie paska pomocniczego. Zobacz [style kontrolki paska pomocniczego](/windows/desktop/Controls/rebar-control-styles) w zestawie Windows SDK dla listy stylów.
+Styl formantu paska pomocniczego. Domyślnie RBS_BANDBORDERS, który wyświetla wąskie linie do oddzielania sąsiadujących pasm w kontrolce paska pomocniczego. Zobacz [Style formantów paska pomocniczego](/windows/win32/Controls/rebar-control-styles) w Windows SDK, aby wyświetlić listę stylów.
 
 *dwStyle*<br/>
-Style okna ramowego paska pomocniczego.
+Style okna paska pomocniczego.
 
 *nID*<br/>
-Identyfikator okna podrzędnego paska pomocniczego
+Identyfikator okna podrzędnego paska pomocniczego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CReBar::AddBar](#addbar).
+  Zobacz przykład dla [CReBar:: AddBar](#addbar).
 
-##  <a name="getrebarctrl"></a>  CReBar::GetReBarCtrl
+##  <a name="getrebarctrl"></a>CReBar:: GetReBarCtrl
 
-Ta funkcja elementu członkowskiego umożliwia bezpośredni dostęp do podstawowych wspólnej kontroli.
+Ta funkcja członkowska umożliwia bezpośredni dostęp do zasadniczej kontroli wspólnej.
 
 ```
 CReBarCtrl& GetReBarCtrl() const;
@@ -161,13 +161,13 @@ CReBarCtrl& GetReBarCtrl() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do [z CReBarCtrl](../../mfc/reference/crebarctrl-class.md) obiektu.
+Odwołanie do obiektu [Korzystanie CReBarCtrl](../../mfc/reference/crebarctrl-class.md) .
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję elementu członkowskiego, aby wykorzystać funkcje formantu typowego paska pomocniczego Windows w dostosowywaniu swoje paska pomocniczego. Gdy wywołujesz `GetReBarCtrl`, zwraca obiekt odwołania do `CReBarCtrl` obiektu, aby można było używać któryś zbiór elementów członkowskich.
+Wywołaj tę funkcję elementu członkowskiego, aby skorzystać z funkcji wspólnego formantu paska pomocniczego systemu Windows w dostosowaniu paska pomocniczego. Po wywołaniu `GetReBarCtrl`funkcja zwraca obiekt Reference `CReBarCtrl` do obiektu, aby można było użyć dowolnego zestawu funkcji Członkowskich.
 
-Aby uzyskać więcej informacji o korzystaniu z `CReBarCtrl` Aby dostosować swoje paska pomocniczego, zobacz [korzystanie z CReBarCtrl](../../mfc/using-crebarctrl.md).
+Aby uzyskać więcej informacji na `CReBarCtrl` temat dostosowywania paska pomocniczego, zobacz [using korzystanie CReBarCtrl](../../mfc/using-crebarctrl.md).
 
 ### <a name="example"></a>Przykład
 
@@ -175,6 +175,6 @@ Aby uzyskać więcej informacji o korzystaniu z `CReBarCtrl` Aby dostosować swo
 
 ## <a name="see-also"></a>Zobacz także
 
-[Próbki MFC MFCIE](../../overview/visual-cpp-samples.md)<br/>
+[Przykład MFCIE MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CControlBar](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

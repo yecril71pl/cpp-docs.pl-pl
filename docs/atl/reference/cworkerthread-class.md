@@ -15,19 +15,19 @@ f1_keywords:
 helpviewer_keywords:
 - CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
-ms.openlocfilehash: d4645f4a57ce70c3683972c22e0f99cbce87ca6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1aa76514b98bbf12f8e516d3d54f68e8ef4dd7d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276662"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496115"
 ---
 # <a name="cworkerthread-class"></a>Klasa CWorkerThread
 
-Ta klasa tworzy wątek roboczy lub korzysta z istniejącą grupę, czeka na co najmniej jeden uchwytów obiektu jądra i wykonuje funkcję określonego klienta, gdy jeden z uchwytów, jest sygnalizowane.
+Ta klasa tworzy wątek roboczy lub używa istniejącego obiektu, czeka na co najmniej jeden obiekt jądra, i wykonuje określoną funkcję klienta po zasygnalizowaniu jednego z uchwytów.
 
 > [!IMPORTANT]
-> Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,11 +39,11 @@ class CWorkerThread
 ### <a name="parameters"></a>Parametry
 
 *ThreadTraits*<br/>
-Klasa dostarczanie funkcji tworzenia wątku, takich jak [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) lub [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md).
+Klasa dostarczająca funkcję tworzenia wątku, na przykład [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) lub [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md).
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="protected-structures"></a>Chronione struktury
+### <a name="protected-structures"></a>Struktury chronione
 
 |Nazwa|Opis|
 |----------|-----------------|
@@ -53,20 +53,20 @@ Klasa dostarczanie funkcji tworzenia wątku, takich jak [CRTThreadTraits](../../
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CWorkerThread::CWorkerThread](#cworkerthread)|Konstruktor wątku roboczego.|
-|[CWorkerThread::~CWorkerThread](#dtor)|Destruktor wątku roboczego.|
+|[CWorkerThread::CWorkerThread](#cworkerthread)|Konstruktor dla wątku roboczego.|
+|[CWorkerThread:: ~ CWorkerThread](#dtor)|Destruktor wątku roboczego.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CWorkerThread::AddHandle](#addhandle)|Wywołaj tę metodę, aby dodać obiekt oczekujący uchwyt do listy utrzymywane przez wątek roboczy.|
-|[CWorkerThread::AddTimer](#addtimer)|Wywołaj tę metodę, aby dodać okresowe czasomierz oczekujący na liście prowadzonej przez wątek roboczy.|
-|[CWorkerThread::GetThreadHandle](#getthreadhandle)|Wywołaj tę metodę można pobrać uchwytu wątku wątku roboczego.|
-|[CWorkerThread::GetThreadId](#getthreadid)|Wywołaj tę metodę, aby uzyskać identyfikator wątku w wątku roboczego.|
-|[CWorkerThread::Initialize](#initialize)|Wywołaj tę metodę, aby zainicjować wątku roboczego.|
-|[CWorkerThread::RemoveHandle](#removehandle)|Wywołaj tę metodę, aby usunąć uchwyt z listy obiektów oczekujący.|
-|[CWorkerThread::Shutdown](#shutdown)|Wywołaj tę metodę, aby zamknąć wątku roboczego.|
+|[CWorkerThread:: AddHandle](#addhandle)|Wywołaj tę metodę, aby dodać uchwyt obiektu oczekującego do listy obsługiwanej przez wątek roboczy.|
+|[CWorkerThread:: addtimeer](#addtimer)|Wywołaj tę metodę, aby dodać okresowy czasomierz oczekujący na listę obsługiwaną przez wątek roboczy.|
+|[CWorkerThread::GetThreadHandle](#getthreadhandle)|Wywołaj tę metodę, aby uzyskać uchwyt wątku wątku roboczego.|
+|[CWorkerThread::GetThreadId](#getthreadid)|Wywołaj tę metodę, aby uzyskać identyfikator wątku wątku roboczego.|
+|[CWorkerThread:: Initialize](#initialize)|Wywołaj tę metodę, aby zainicjować wątek roboczy.|
+|[CWorkerThread::RemoveHandle](#removehandle)|Wywołaj tę metodę, aby usunąć dojście z listy obiektów oczekujących.|
+|[CWorkerThread:: Shutdown](#shutdown)|Wywołaj tę metodę, aby zamknąć wątek roboczy.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -74,27 +74,27 @@ Klasa dostarczanie funkcji tworzenia wątku, takich jak [CRTThreadTraits](../../
 
 1. Utwórz wystąpienie tej klasy.
 
-1. Wywołaj [CWorkerThread::Initialize](#initialize).
+1. Wywołanie [CWorkerThread:: Initialize](#initialize).
 
-1. Wywołaj [CWorkerThread::AddHandle](#addhandle) z dojściem obiektu jądra i wskaźnik do implementacji [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).
+1. Wywołaj [CWorkerThread:: AddHandle](#addhandle) z dojściem obiektu jądra i wskaźnikiem do implementacji elementu [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).
 
    \- lub —
 
-   Wywołaj [CWorkerThread::AddTimer](#addtimer) za pomocą wskaźnika do implementacji [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).
+   Wywołaj [CWorkerThread::](#addtimer) addtimeer ze wskaźnikiem do implementacji elementu [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).
 
-1. Implementowanie [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) wykonania określonego działania, gdy zasygnalizowania dojścia lub czasomierza.
+1. Zaimplementuj [IWorkerThreadClient:: Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) , aby wykonać jakąś akcję, gdy dojście lub czasomierz są sygnalizowane.
 
-1. Aby usunąć obiekt z listy obiektów oczekujący, należy wywołać [CWorkerThread::RemoveHandle](#removehandle).
+1. Aby usunąć obiekt z listy obiektów oczekujących, wywołaj [CWorkerThread:: RemoveHandle](#removehandle).
 
-1. Aby zakończyć wątek, wywołaj [CWorkerThread::Shutdown](#shutdown).
+1. Aby zakończyć wątek, wywołaj [CWorkerThread:: Shutdown](#shutdown).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlutil.h
+**Nagłówek:** atlutil. h
 
-##  <a name="addhandle"></a>  CWorkerThread::AddHandle
+##  <a name="addhandle"></a>CWorkerThread:: AddHandle
 
-Wywołaj tę metodę, aby dodać obiekt oczekujący uchwyt do listy utrzymywane przez wątek roboczy.
+Wywołaj tę metodę, aby dodać uchwyt obiektu oczekującego do listy obsługiwanej przez wątek roboczy.
 
 ```
 HRESULT AddHandle(
@@ -106,25 +106,25 @@ HRESULT AddHandle(
 ### <a name="parameters"></a>Parametry
 
 *hObject*<br/>
-Dojście do obiektu oczekujący.
+Uchwyt do obiektu, który można oczekiwać.
 
 *pClient*<br/>
-Wskaźnik do [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md) interfejsu na obiekt wywoływany, gdy jest sygnalizowane uchwytu.
+Wskaźnik do interfejsu [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md) na obiekcie, który ma być wywoływany po zasygnalizowaniu uchwytu.
 
 *dwParam*<br/>
-Parametr do przekazania do [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) po zasygnalizowania uchwytu.
+Parametr, który ma zostać przesłany do [IWorkerThreadClient:: Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) po zasygnalizowaniu uchwytu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-[IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) zostanie wywołana przez *pClient* podczas uchwyt, *hObject*, jest sygnalizowane.
+[IWorkerThreadClient:: Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) zostanie wywołane przez *pClient* , gdy dojście, *hObject*, zostanie zasygnalizowane.
 
-##  <a name="addtimer"></a>  CWorkerThread::AddTimer
+##  <a name="addtimer"></a>CWorkerThread:: addtimeer
 
-Wywołaj tę metodę, aby dodać okresowe czasomierz oczekujący na liście prowadzonej przez wątek roboczy.
+Wywołaj tę metodę, aby dodać okresowy czasomierz oczekujący na listę obsługiwaną przez wątek roboczy.
 
 ```
 HRESULT AddTimer(
@@ -137,28 +137,28 @@ HRESULT AddTimer(
 ### <a name="parameters"></a>Parametry
 
 *dwInterval*<br/>
-Określa okres czasomierza w milisekundach.
+Określa okres czasomierza (w milisekundach).
 
 *pClient*<br/>
-Wskaźnik do [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md) interfejsu na obiekt wywoływany, gdy jest sygnalizowane uchwytu.
+Wskaźnik do interfejsu [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md) na obiekcie, który ma być wywoływany po zasygnalizowaniu uchwytu.
 
 *dwParam*<br/>
-Parametr do przekazania do [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) po zasygnalizowania uchwytu.
+Parametr, który ma zostać przesłany do [IWorkerThreadClient:: Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) po zasygnalizowaniu uchwytu.
 
 *phTimer*<br/>
-[out] Adres dojście do zmiennej, w przypadku powodzenia odbiera uchwyt do nowo utworzonego czasomierza.
+określoną Adres zmiennej dojścia, która po powodzeniu odbiera dojście do nowo utworzonego czasomierza.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-[IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) zostanie wywołana przez *pClient* po zasygnalizowania czasomierza.
+[IWorkerThreadClient:: Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) zostanie wywołane przez *pClient* po zasygnalizowaniu czasomierza.
 
-Przekaż uchwyt czasomierza z *phTimer* do [CWorkerThread::RemoveHandle](#removehandle) zamknąć czasomierza.
+Przekaż uchwyt Timer z *phTimer* do [CWorkerThread:: RemoveHandle](#removehandle) , aby zamknąć czasomierz.
 
-##  <a name="cworkerthread"></a>  CWorkerThread::CWorkerThread
+##  <a name="cworkerthread"></a>CWorkerThread::CWorkerThread
 
 Konstruktor.
 
@@ -166,7 +166,7 @@ Konstruktor.
 CWorkerThread() throw();
 ```
 
-##  <a name="dtor"></a>  CWorkerThread:: ~ CWorkerThread
+##  <a name="dtor"></a>CWorkerThread:: ~ CWorkerThread
 
 Destruktor.
 
@@ -176,11 +176,11 @@ Destruktor.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania [CWorkerThread::Shutdown](#shutdown).
+Wywołania [CWorkerThread:: Shutdown](#shutdown).
 
-##  <a name="getthreadhandle"></a>  CWorkerThread::GetThreadHandle
+##  <a name="getthreadhandle"></a>CWorkerThread::GetThreadHandle
 
-Wywołaj tę metodę można pobrać uchwytu wątku wątku roboczego.
+Wywołaj tę metodę, aby uzyskać uchwyt wątku wątku roboczego.
 
 ```
 HANDLE GetThreadHandle() throw();
@@ -188,11 +188,11 @@ HANDLE GetThreadHandle() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca dojście wątku lub wartość NULL, jeśli wątek roboczy nie został zainicjowany.
+Zwraca dojście do wątku lub wartość NULL, jeśli wątek roboczy nie został zainicjowany.
 
-##  <a name="getthreadid"></a>  CWorkerThread::GetThreadId
+##  <a name="getthreadid"></a>CWorkerThread::GetThreadId
 
-Wywołaj tę metodę, aby uzyskać identyfikator wątku w wątku roboczego.
+Wywołaj tę metodę, aby uzyskać identyfikator wątku wątku roboczego.
 
 ```
 DWORD GetThreadId() throw();
@@ -202,9 +202,9 @@ DWORD GetThreadId() throw();
 
 Zwraca identyfikator wątku lub wartość NULL, jeśli wątek roboczy nie został zainicjowany.
 
-##  <a name="initialize"></a>  CWorkerThread::Initialize
+##  <a name="initialize"></a>CWorkerThread:: Initialize
 
-Wywołaj tę metodę, aby zainicjować wątku roboczego.
+Wywołaj tę metodę, aby zainicjować wątek roboczy.
 
 ```
 HRESULT Initialize() throw();
@@ -215,23 +215,23 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
 ### <a name="parameters"></a>Parametry
 
 *pThread*<br/>
-Istniejącego wątku roboczego.
+Istniejący wątek roboczy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Tę metodę należy wywoływać do inicjalizacji obiektu po utworzeniu lub po wywołaniu [CWorkerThread::Shutdown](#shutdown).
+Ta metoda powinna być wywoływana w celu zainicjowania obiektu po utworzeniu lub po wywołaniu [CWorkerThread:: Shutdown](#shutdown).
 
-Mieć co najmniej dwóch `CWorkerThread` obiekty, użyj tego samego wątku roboczego, inicjować jedno z nich bez żadnych argumentów należy przekazać wskaźnik do obiektu w celu przekazywania `Initialize` innych metod. Obiekty inicjowane za pomocą wskaźnika należy zamknąć przed obiekt używany do ich inicjowania.
+Aby dwa lub więcej `CWorkerThread` obiektów używały tego samego wątku roboczego, zainicjuj jeden z nich bez przekazywania jakichkolwiek argumentów, a następnie Przekaż wskaźnik do tego obiektu `Initialize` do metod innych. Obiekty zainicjowane przy użyciu wskaźnika powinny zostać zamknięte przed obiektem użytym do jego zainicjowania.
 
-Zobacz [CWorkerThread::Shutdown](#shutdown) uzyskać informacji na temat jak zachowanie tej metody zmienia się po zainicjowaniu za pomocą wskaźnika do istniejącego obiektu.
+Zobacz [CWorkerThread:: Shutdown](#shutdown) , aby uzyskać informacje na temat zmiany zachowania tej metody po zainicjowaniu jej przy użyciu wskaźnika do istniejącego obiektu.
 
-##  <a name="removehandle"></a>  CWorkerThread::RemoveHandle
+##  <a name="removehandle"></a>CWorkerThread::RemoveHandle
 
-Wywołaj tę metodę, aby usunąć uchwyt z listy obiektów oczekujący.
+Wywołaj tę metodę, aby usunąć dojście z listy obiektów oczekujących.
 
 ```
 HRESULT RemoveHandle(HANDLE hObject) throw();
@@ -244,15 +244,15 @@ Dojście do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Po usunięciu uchwytu [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) będzie wywoływana dla skojarzonego obiektu, który został przekazany do [AddHandle](#addhandle). Jeśli to wywołanie nie powiedzie się, `CWorkerThread` wywoła Windows [funkcja CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) funkcji na dojście.
+Po usunięciu dojścia [IWorkerThreadClient:: funkcja CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) zostanie wywołana dla skojarzonego obiektu, który został przekazano [](#addhandle)do funkcji AddHandle. Jeśli to wywołanie zakończy `CWorkerThread` się niepowodzeniem, wywoła funkcję [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) systemu Windows w dojściu.
 
-##  <a name="shutdown"></a>  CWorkerThread::Shutdown
+##  <a name="shutdown"></a>CWorkerThread:: Shutdown
 
-Wywołaj tę metodę, aby zamknąć wątku roboczego.
+Wywołaj tę metodę, aby zamknąć wątek roboczy.
 
 ```
 HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
@@ -261,21 +261,21 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 ### <a name="parameters"></a>Parametry
 
 *dwWait*<br/>
-Czas w milisekundach czas oczekiwania, aż wątek procesu roboczego zamknąć. ATL_WORKER_THREAD_WAIT wartość domyślna to 10 sekund. Jeśli to konieczne, można zdefiniować własne wartości dla tego symbolu, przed dołączeniem atlutil.h.
+Czas (w milisekundach) oczekiwania na zamknięcie wątku roboczego. ATL_WORKER_THREAD_WAIT wartość domyślna to 10 sekund. W razie potrzeby można zdefiniować własną wartość tego symbolu przed uwzględnieniem atlutil. h.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK na powodzenie lub błąd HRESULT w przypadku awarii, np. Jeśli wartość limitu czasu *dwWait*, zostanie przekroczony.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia, na przykład w przypadku przekroczenia limitu czasu *dwWait*.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby ponownie użyć obiektu, wywołaj [CWorkerThread::Initialize](#initialize) po wywołaniu tej metody.
+Aby ponownie użyć obiektu, wywołaj [CWorkerThread:: Initialize](#initialize) po wywołaniu tej metody.
 
-Należy pamiętać, że wywołanie `Shutdown` inicjowane za pomocą wskaźnika do innego obiektu `CWorkerThread` obiekt nie ma wpływu i zawsze zwraca wartość S_OK.
+Należy zauważyć, `Shutdown` że wywołanie obiektu zainicjowanego ze wskaźnikiem `CWorkerThread` do innego obiektu nie ma żadnego efektu i zawsze zwraca S_OK.
 
 ## <a name="see-also"></a>Zobacz także
 
 [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
 [Klasy](../../atl/reference/atl-classes.md)<br/>
-[Wielowątkowość: Tworzenie wątków roboczych](../../parallel/multithreading-creating-worker-threads.md)<br/>
+[Wielowątkowość: tworzenie wątków roboczych](../../parallel/multithreading-creating-worker-threads.md)<br/>
 [Interfejs IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)

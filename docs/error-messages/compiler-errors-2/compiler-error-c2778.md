@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2778
 ms.assetid: b24cb732-2914-42cc-8928-e2d87b393428
-ms.openlocfilehash: 56c316ac971d0bdd1a0ca27ef8d4282acbe24779
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 98b5bf0a1315236f3ce96fd4b8c140ce1ab70a9f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227679"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501034"
 ---
 # <a name="compiler-error-c2778"></a>Błąd kompilatora C2778
 
-niewłaściwie uformowane GUID w __declspec(uuid())
+nieprawidłowo sformułowany identyfikator GUID w __declspec (UUID ())
 
-Podano niepoprawny identyfikator GUID do [uuid](../../cpp/uuid-cpp.md) atrybutów rozszerzonych.
+Do rozszerzonego atrybutu [UUID](../../cpp/uuid-cpp.md) jest dostarczany nieprawidłowy identyfikator GUID.
 
 Identyfikator GUID musi być ciągiem liczb szesnastkowych o następującym formacie:
 
@@ -28,9 +28,9 @@ struct __declspec(uuid("00000000-0000-0000-0000-000000000000")) A {};
 struct __declspec(uuid("{00000000-0000-0000-0000-000000000000}")) B{};
 ```
 
-`uuid` Atrybutów rozszerzonych akceptuje ciągi rozpoznawane przez [CLSIDFromString](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromstring), z ogranicznikami lub bez nawiasów.
+Rozszerzony atrybut akceptuje ciągi rozpoznawane przez CLSIDFromString, z ogranicznikami lub bez nich. [](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromstring) `uuid`
 
-Poniższy przykład spowoduje wygenerowanie C2778:
+Poniższy przykład generuje C2778:
 
 ```
 // C2778b.cpp

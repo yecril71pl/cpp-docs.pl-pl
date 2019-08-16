@@ -22,16 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
-ms.openlocfilehash: 87e526a10c9bcd6a52f4544c50344c5145cfa732
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d37cc8e97d29cbedfeb4ba79502d44529485399f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247062"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497845"
 ---
 # <a name="catlexemodulet-class"></a>Klasa CAtlExeModuleT
 
-Ta klasa reprezentuje modułu dla aplikacji.
+Ta klasa reprezentuje moduł aplikacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,7 +43,7 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Klasa jest pochodną `CAtlExeModuleT`.
+Klasa pochodna `CAtlExeModuleT`.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -52,41 +52,41 @@ Klasa jest pochodną `CAtlExeModuleT`.
 |Nazwa|Opis|
 |----------|-----------------|
 |[CAtlExeModuleT::CAtlExeModuleT](#catlexemodulet)|Konstruktor.|
-|[CAtlExeModuleT::~CAtlExeModuleT](#dtor)|Destruktor.|
+|[CAtlExeModuleT:: ~ CAtlExeModuleT](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAtlExeModuleT::InitializeCom](#initializecom)|Inicjuje COM.|
-|[CAtlExeModuleT::ParseCommandLine](#parsecommandline)|Analizuje wiersz polecenia i wykonuje rejestrację, jeśli to konieczne.|
-|[CAtlExeModuleT::PostMessageLoop](#postmessageloop)|Ta metoda jest wywoływana natychmiast po zakończeniu pętli komunikatów.|
-|[CAtlExeModuleT::PreMessageLoop](#premessageloop)|Ta metoda jest wywoływana tuż przed wprowadzania pętli komunikatów.|
+|[CAtlExeModuleT::InitializeCom](#initializecom)|Inicjuje model COM.|
+|[CAtlExeModuleT::P arseCommandLine](#parsecommandline)|Analizuje wiersz polecenia i przeprowadza rejestrację w razie potrzeby.|
+|[CAtlExeModuleT::P ostMessageLoop](#postmessageloop)|Ta metoda jest wywoływana natychmiast po zakończeniu pętli komunikatów.|
+|[CAtlExeModuleT::P reMessageLoop](#premessageloop)|Ta metoda jest wywoływana bezpośrednio przed wprowadzeniem pętli komunikatów.|
 |[CAtlExeModuleT::RegisterClassObjects](#registerclassobjects)|Rejestruje obiekt klasy.|
-|[CAtlExeModuleT::RevokeClassObjects](#revokeclassobjects)|Odwołuje obiektu klasy.|
-|[CAtlExeModuleT::Run](#run)|Ta metoda wykonuje kod w module EXE, aby zainicjować, uruchom pętli komunikatów i wyczyścić.|
-|[CAtlExeModuleT::RunMessageLoop](#runmessageloop)|Ta metoda jest wykonywana pętli komunikatów.|
-|[CAtlExeModuleT::UninitializeCom](#uninitializecom)|Deinicjuje modelu COM.|
-|[CAtlExeModuleT::Unlock](#unlock)|Zmniejsza liczbę blokad modułu.|
-|[CAtlExeModuleT::WinMain](#winmain)|Ta metoda implementuje kodu wymaganego do uruchomienia pliku EXE.|
+|[CAtlExeModuleT::RevokeClassObjects](#revokeclassobjects)|Odwołuje obiekt klasy.|
+|[CAtlExeModuleT:: Run](#run)|Ta metoda wykonuje kod w module EXE, aby inicjować, uruchamiać pętlę komunikatów i czyścić.|
+|[CAtlExeModuleT::RunMessageLoop](#runmessageloop)|Ta metoda wykonuje pętlę komunikatów.|
+|[CAtlExeModuleT::UninitializeCom](#uninitializecom)|Inicjuje model COM.|
+|[CAtlExeModuleT:: Unlock](#unlock)|Zmniejsza liczbę blokad modułu.|
+|[CAtlExeModuleT:: WinMain](#winmain)|Ta metoda implementuje kod wymagany do uruchomienia pliku EXE.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAtlExeModuleT::m_bDelayShutdown](#m_bdelayshutdown)|Flaga wskazująca, czy ma być opóźnienie zamykania modułu.|
-|[CAtlExeModuleT::m_dwPause](#m_dwpause)|Wartość Wstrzymaj używane w celu zapewnienia, że wszystkie obiekty są wydawane przed zamknięciem.|
-|[CAtlExeModuleT::m_dwTimeOut](#m_dwtimeout)|Wartość limitu czasu, które umożliwia opóźnienie zwalnianie modułu.|
+|[CAtlExeModuleT::m_bDelayShutdown](#m_bdelayshutdown)|Flaga wskazująca, że należy zamknąć moduł.|
+|[CAtlExeModuleT::m_dwPause](#m_dwpause)|Wartość wstrzymania używana do upewnienia się, że wszystkie obiekty zostały wydane przed zamknięciem.|
+|[CAtlExeModuleT::m_dwTimeOut](#m_dwtimeout)|Wartość limitu czasu używana do opóźniania zwalniania modułu.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CAtlExeModuleT` reprezentuje moduł dla aplikacji (z rozszerzeniem EXE) i zawiera kod, który obsługuje tworzenie pliku EXE, przetwarzania wiersza polecenia, rejestrowanie obiektów klasy, systemem pętli komunikatów i oczyszczanie przy zamykaniu.
+`CAtlExeModuleT`reprezentuje moduł dla aplikacji (EXE) i zawiera kod, który obsługuje tworzenie pliku EXE, przetwarzanie wiersza polecenia, rejestrowanie obiektów klasy, uruchamianie pętli komunikatów i czyszczenie przy zamykaniu.
 
-Ta klasa jest przeznaczona do zwiększenia wydajności w przypadku obiektów COM w serwerze EXE ciągle są tworzone i niszczone. Po wydaniu ostatni obiekt COM, EXE czeka przez czas określony przez [CAtlExeModuleT::m_dwTimeOut](#m_dwtimeout) element członkowski danych. Jeśli nie ma działania w tym okresie (oznacza to, że żadne obiekty COM są tworzone), jest inicjowane procesu zamykania.
+Ta klasa została zaprojektowana w celu zwiększenia wydajności, gdy obiekty COM na serwerze EXE są ciągle tworzone i niszczone. Po wydaniu ostatniego obiektu COM, plik EXE czeka przez czas określony przez element członkowski danych [CAtlExeModuleT:: m_dwTimeOut](#m_dwtimeout) . Jeśli w tym okresie nie ma żadnych działań (oznacza to, że żadne obiekty COM nie są tworzone), proces zamykania zostanie zainicjowany.
 
-[CAtlExeModuleT::m_bDelayShutdown](#m_bdelayshutdown) element członkowski danych jest używany w celu określenia, w przypadku pliku EXE należy używać mechanizmu zdefiniowanych powyżej. Jeśli ma wartość false, moduł przestanie obowiązywać natychmiast.
+Element członkowski danych [CAtlExeModuleT:: m_bDelayShutdown](#m_bdelayshutdown) jest flagą używaną do ustalenia, czy exe powinien używać mechanizmu zdefiniowanego powyżej. Jeśli wartość jest równa false, moduł zostanie natychmiast zakończony.
 
-Aby uzyskać więcej informacji na temat modułów ATL, zobacz [klasy modułów ATL](../../atl/atl-module-classes.md).
+Aby uzyskać więcej informacji na temat modułów w ATL, zobacz [klasy modułów ATL](../../atl/atl-module-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -100,9 +100,9 @@ Aby uzyskać więcej informacji na temat modułów ATL, zobacz [klasy modułów 
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlbase.h
+**Nagłówek:** atlbase. h
 
-##  <a name="catlexemodulet"></a>  CAtlExeModuleT::CAtlExeModuleT
+##  <a name="catlexemodulet"></a>CAtlExeModuleT::CAtlExeModuleT
 
 Konstruktor.
 
@@ -112,9 +112,9 @@ CAtlExeModuleT() throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli nie można zainicjować modułu EXE, WinMain natychmiast zwróci bez dalszego przetwarzania.
+Jeśli nie można zainicjować modułu EXE, WinMain natychmiast zwróci bez przetwarzania.
 
-##  <a name="dtor"></a>  CAtlExeModuleT:: ~ CAtlExeModuleT
+##  <a name="dtor"></a>CAtlExeModuleT:: ~ CAtlExeModuleT
 
 Destruktor.
 
@@ -124,11 +124,11 @@ Destruktor.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwalnia wszystkie przydzielone zasoby.
+Zwalnia wszystkie przydzieloną zasoby.
 
-##  <a name="initializecom"></a>  CAtlExeModuleT::InitializeCom
+##  <a name="initializecom"></a>CAtlExeModuleT::InitializeCom
 
-Inicjuje COM.
+Inicjuje model COM.
 
 ```
 static HRESULT InitializeCom() throw();
@@ -136,17 +136,17 @@ static HRESULT InitializeCom() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest wywoływana z konstruktora i może zostać zastąpiona w celu zainicjować modelu COM w sposób inny niż domyślna implementacja. Domyślna implementacja albo wywołuje `CoInitializeEx(NULL, COINIT_MULTITHREADED)` lub `CoInitialize(NULL)` w zależności od konfiguracji projektu.
+Ta metoda jest wywoływana z konstruktora i można ją zastąpić, aby zainicjować COM w sposób inny niż domyślna. Domyślna implementacja albo `CoInitializeEx(NULL, COINIT_MULTITHREADED)` `CoInitialize(NULL)` w zależności od konfiguracji projektu.
 
-Zastąpienie tej metody zwykle wymaga zastępowanie [CAtlExeModuleT::UninitializeCom](#uninitializecom).
+Zastąpienie tej metody zwykle wymaga przesłaniania [CAtlExeModuleT:: UninitializeCom](#uninitializecom).
 
 ##  <a name="m_bdelayshutdown"></a>  CAtlExeModuleT::m_bDelayShutdown
 
-Flaga wskazująca, czy ma być opóźnienie zamykania modułu.
+Flaga wskazująca, że należy zamknąć moduł.
 
 ```
 bool m_bDelayShutdown;
@@ -154,11 +154,11 @@ bool m_bDelayShutdown;
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [Przegląd CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) Aby uzyskać szczegółowe informacje.
+Aby uzyskać szczegółowe informacje, zobacz [Omówienie usługi CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) .
 
-##  <a name="m_dwpause"></a>  CAtlExeModuleT::m_dwPause
+##  <a name="m_dwpause"></a>CAtlExeModuleT::m_dwPause
 
-Wartość Wstrzymaj używane w celu zapewnienia, że wszystkie obiekty stała się przed zamknięciem.
+Wartość wstrzymania używana do upewnienia się, że wszystkie obiekty zostały utracone przed zamknięciem.
 
 ```
 DWORD m_dwPause;
@@ -166,11 +166,11 @@ DWORD m_dwPause;
 
 ### <a name="remarks"></a>Uwagi
 
-Zmień tę wartość po wywołaniu [CAtlExeModuleT::InitializeCom](#initializecom) można ustawić liczbę milisekund, używane jako wartość Wstrzymaj do zamykania serwera. Wartość domyślna to 1000 milisekund.
+Zmień tę wartość po wywołaniu [CAtlExeModuleT:: InitializeCom](#initializecom) , aby ustawić liczbę milisekund użytą jako wartość wstrzymania na potrzeby zamykania serwera. Wartość domyślna to 1000 milisekund.
 
-##  <a name="m_dwtimeout"></a>  CAtlExeModuleT::m_dwTimeOut
+##  <a name="m_dwtimeout"></a>CAtlExeModuleT::m_dwTimeOut
 
-Wartość limitu czasu, które umożliwia opóźnienie zwalnianie modułu.
+Wartość limitu czasu używana do opóźniania zwalniania modułu.
 
 ```
 DWORD m_dwTimeOut;
@@ -178,11 +178,11 @@ DWORD m_dwTimeOut;
 
 ### <a name="remarks"></a>Uwagi
 
-Zmień tę wartość po wywołaniu [CAtlExeModuleT::InitializeCom](#initializecom) zdefiniować liczbę milisekund, używane jako wartość limitu czasu dla zamykanie serwera. Wartość domyślna to 5000 ms. Zobacz [Przegląd CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) Aby uzyskać więcej informacji.
+Zmień tę wartość po wywołaniu [CAtlExeModuleT:: InitializeCom](#initializecom) , aby określić liczbę milisekund użytych jako wartość limitu czasu na potrzeby zamykania serwera. Wartość domyślna to 5000 milisekund. Aby uzyskać więcej informacji, zobacz [Omówienie CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) .
 
-##  <a name="parsecommandline"></a>  CAtlExeModuleT::ParseCommandLine
+##  <a name="parsecommandline"></a>CAtlExeModuleT::P arseCommandLine
 
-Analizuje wiersz polecenia i wykonuje rejestrację, jeśli to konieczne.
+Analizuje wiersz polecenia i przeprowadza rejestrację w razie potrzeby.
 
 ```
 bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
@@ -191,20 +191,20 @@ bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
 ### <a name="parameters"></a>Parametry
 
 *lpCmdLine*<br/>
-Wiersza polecenia przekazywane do aplikacji.
+Wiersz polecenia przeszedł do aplikacji.
 
 *pnRetCode*<br/>
-Wartość HRESULT odpowiadający rejestracji (jeśli miało to miejsce).
+WYNIK HRESULT odpowiadający rejestracji (jeśli miało miejsce).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość true, jeśli aplikacja powinny nadal działać, w przeciwnym razie wartość false.
+Zwróć wartość true, jeśli aplikacja powinna nadal działać, w przeciwnym razie false.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest wywoływana z [CAtlExeModuleT::WinMain](#winmain) i może zostać zastąpiona w celu obsługi przełączniki wiersza polecenia. Sprawdza, czy domyślna implementacja **/regserver** i **/Unregserver** argumenty wiersza polecenia i wykonuje rejestrację lub wyrejestrowania.
+Ta metoda jest wywoływana z [CAtlExeModuleT:: WinMain](#winmain) i można ją zastąpić, aby obsługiwała przełączniki wiersza polecenia. Domyślna implementacja dla argumentów wiersza polecenia **/regserver** i **przełącznikiem/unregserver** i przeprowadza rejestrację lub Wyrejestrowanie.
 
-##  <a name="postmessageloop"></a>  CAtlExeModuleT::PostMessageLoop
+##  <a name="postmessageloop"></a>CAtlExeModuleT::P ostMessageLoop
 
 Ta metoda jest wywoływana natychmiast po zakończeniu pętli komunikatów.
 
@@ -214,15 +214,15 @@ HRESULT PostMessageLoop() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastępuje tę metodę do wykonywania oczyszczania aplikacji niestandardowych. Domyślna implementacja wywołuje [CAtlExeModuleT::RevokeClassObjects](#revokeclassobjects).
+Zastąp tę metodę, aby przeprowadzić oczyszczanie aplikacji niestandardowych. Domyślne wywołania implementacji [CAtlExeModuleT:: RevokeClassObjects](#revokeclassobjects).
 
-##  <a name="premessageloop"></a>  CAtlExeModuleT::PreMessageLoop
+##  <a name="premessageloop"></a>CAtlExeModuleT::P reMessageLoop
 
-Ta metoda jest wywoływana tuż przed wprowadzania pętli komunikatów.
+Ta metoda jest wywoływana bezpośrednio przed wprowadzeniem pętli komunikatów.
 
 ```
 HRESULT PreMessageLoop(int nShowCmd) throw();
@@ -231,19 +231,19 @@ HRESULT PreMessageLoop(int nShowCmd) throw();
 ### <a name="parameters"></a>Parametry
 
 *nShowCmd*<br/>
-Wartość przekazana jako *nShowCmd* parametru w WinMain.
+Wartość przeniesiona jako parametr *nShowCmd* w WinMain.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastępuje tę metodę, aby dodać niestandardową inicjalizację kod aplikacji. Domyślna implementacja rejestruje obiektów klasy.
+Zastąp tę metodę, aby dodać niestandardowy kod inicjujący dla aplikacji. Domyślna implementacja rejestruje obiekty klas.
 
-##  <a name="registerclassobjects"></a>  CAtlExeModuleT::RegisterClassObjects
+##  <a name="registerclassobjects"></a>CAtlExeModuleT::RegisterClassObjects
 
-Rejestruje obiektu klasy OLE, dzięki czemu inne aplikacje mogą nawiązać z nim.
+Rejestruje obiekt klasy za pomocą OLE, tak aby inne aplikacje mogły się z nim połączyć.
 
 ```
 HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
@@ -252,18 +252,18 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 ### <a name="parameters"></a>Parametry
 
 *dwClsContext*<br/>
-Określa kontekst, w którym ma być uruchamiane obiektu klasy. Możliwe wartości to CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER lub CLSCTX_LOCAL_SERVER.
+Określa kontekst, w którym obiekt klasy ma być uruchamiany. Możliwe wartości to CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER lub CLSCTX_LOCAL_SERVER.
 
-*dwFlags*<br/>
+*flagiDW*<br/>
 Określa typy połączeń do obiektu klasy. Możliwe wartości to REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE lub REGCLS_MULTI_SEPARATE.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK na sukces, S_FALSE, jeśli nie było żadnych klas, aby zarejestrować lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na powodzeniu, S_FALSE, jeśli nie ma żadnych klas do zarejestrowania, lub błąd HRESULT w przypadku niepowodzenia.
 
-##  <a name="revokeclassobjects"></a>  CAtlExeModuleT::RevokeClassObjects
+##  <a name="revokeclassobjects"></a>CAtlExeModuleT::RevokeClassObjects
 
-Usuwa obiekt klasy.
+Usuwa obiekt Class.
 
 ```
 HRESULT RevokeClassObjects() throw();
@@ -271,11 +271,11 @@ HRESULT RevokeClassObjects() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK na sukces, S_FALSE, jeśli nie było żadnych klas, aby zarejestrować lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na powodzeniu, S_FALSE, jeśli nie ma żadnych klas do zarejestrowania, lub błąd HRESULT w przypadku niepowodzenia.
 
-##  <a name="run"></a>  CAtlExeModuleT::Run
+##  <a name="run"></a>CAtlExeModuleT:: Run
 
-Ta metoda wykonuje kod w module EXE, aby zainicjować, uruchom pętli komunikatów i wyczyścić.
+Ta metoda wykonuje kod w module EXE, aby inicjować, uruchamiać pętlę komunikatów i czyścić.
 
 ```
 HRESULT Run(int nShowCmd = SW_HIDE) throw();
@@ -284,19 +284,19 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>Parametry
 
 *nShowCmd*<br/>
-Określa, jak ma być wyświetlana okna. Ten parametr może być jedną z wartości omówione w [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) sekcji. Wartość domyślna to SW_HIDE.
+Określa sposób wyświetlania okna. Ten parametr może być jedną z wartości omówionych w sekcji [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) . Wartość domyślna to SW_HIDE.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda może zostać zastąpiona. Jednak w praktyce lepiej jest zastąpienie [CAtlExeModuleT::PreMessageLoop](#premessageloop), [CAtlExeModuleT::RunMessageLoop](#runmessageloop), lub [CAtlExeModuleT::PostMessageLoop](#postmessageloop) Zamiast tego.
+Tę metodę można zastąpić. Jednakże w przypadku lepiej przesłonić [CAtlExeModuleT::P remessageloop](#premessageloop), [CAtlExeModuleT:: RunMessageLoop](#runmessageloop)lub [CAtlExeModuleT::P ostmessageloop](#postmessageloop) .
 
-##  <a name="runmessageloop"></a>  CAtlExeModuleT::RunMessageLoop
+##  <a name="runmessageloop"></a>CAtlExeModuleT::RunMessageLoop
 
-Ta metoda jest wykonywana pętli komunikatów.
+Ta metoda wykonuje pętlę komunikatów.
 
 ```
 void RunMessageLoop() throw();
@@ -304,11 +304,11 @@ void RunMessageLoop() throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda może zostać zastąpiona w celu zmiany zachowania pętli komunikatów.
+Tę metodę można zastąpić, aby zmienić zachowanie pętli komunikatów.
 
-##  <a name="uninitializecom"></a>  CAtlExeModuleT::UninitializeCom
+##  <a name="uninitializecom"></a>CAtlExeModuleT::UninitializeCom
 
-Deinicjuje modelu COM.
+Inicjuje model COM.
 
 ```
 static void UninitializeCom() throw();
@@ -316,9 +316,9 @@ static void UninitializeCom() throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie ta metoda wywołuje po prostu [CoUninitialize](/windows/desktop/api/combaseapi/nf-combaseapi-couninitialize) i jest wywoływana z destruktora. Należy przesłonić tę metodę w razie przesłonięcia [CAtlExeModuleT::InitializeCom](#initializecom).
+Domyślnie ta metoda wywołuje [CoUninitialize](/windows/win32/api/combaseapi/nf-combaseapi-couninitialize) i jest wywoływana z destruktora. Zastąp tę metodę, jeśli zastąpisz [CAtlExeModuleT:: InitializeCom](#initializecom).
 
-##  <a name="unlock"></a>  CAtlExeModuleT::Unlock
+##  <a name="unlock"></a>CAtlExeModuleT:: Unlock
 
 Zmniejsza liczbę blokad modułu.
 
@@ -328,11 +328,11 @@ LONG Unlock() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość, która może być użyteczna, diagnostykę lub testowania.
+Zwraca wartość, która może być przydatna w przypadku diagnostyki lub testowania.
 
-##  <a name="winmain"></a>  CAtlExeModuleT::WinMain
+##  <a name="winmain"></a>CAtlExeModuleT:: WinMain
 
-Ta metoda implementuje kodu wymaganego do uruchomienia pliku EXE.
+Ta metoda implementuje kod wymagany do uruchomienia pliku EXE.
 
 ```
 int WinMain(int nShowCmd) throw();
@@ -341,7 +341,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>Parametry
 
 *nShowCmd*<br/>
-Określa, jak ma być wyświetlana okna. Ten parametr może być jedną z wartości omówione w [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) sekcji.
+Określa sposób wyświetlania okna. Ten parametr może być jedną z wartości omówionych w sekcji [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) .
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -349,11 +349,11 @@ Zwraca wartość zwracaną przez plik wykonywalny.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda może zostać zastąpiona. Jeśli zastępują [CAtlExeModuleT::PreMessageLoop](#premessageloop), [CAtlExeModuleT::PostMessageLoop](#postmessageloop), lub [CAtlExeModuleT::RunMessageLoop](#runmessageloop) nie zapewnią dostateczną elastyczność , można zastąpić `WinMain` funkcji przy użyciu tej metody.
+Tę metodę można zastąpić. Jeśli przesłaniasz [CAtlExeModuleT::P remessageloop](#premessageloop), [CAtlExeModuleT::P ostmessageloop](#postmessageloop)lub [CAtlExeModuleT:: RunMessageLoop](#runmessageloop) nie zapewnia wystarczającej elastyczności, można przesłonić `WinMain` funkcję przy użyciu tego Method.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Przykładowe ATLDuck](../../overview/visual-cpp-samples.md)<br/>
+[Przykład ATLDuck](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CAtlModuleT](../../atl/reference/catlmodulet-class.md)<br/>
 [Klasa CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

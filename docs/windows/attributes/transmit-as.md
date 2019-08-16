@@ -1,21 +1,21 @@
 ---
-title: transmit_as — (C++ atrybutów COM)
+title: transmit_as (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.transmit_as
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: e432d1a8f39cbc5e12f192ed7b07c29421bc403e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 939013e43f08aeda788e468c995f1736cf6b6928
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407175"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513912"
 ---
-# <a name="transmitas"></a>transmit_as
+# <a name="transmit_as"></a>transmit_as
 
-Instruuje kompilator, aby skojarzyć prezentowane typ, który manipulowania aplikacje klienckie i serwerowe, typem przesyłane.
+Instruuje kompilator, aby skojarzyć przedstawiony typ, który obsługuje aplikacje klienta i serwera, z przesyłanym typem.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,15 +26,15 @@ Instruuje kompilator, aby skojarzyć prezentowane typ, który manipulowania apli
 ### <a name="parameters"></a>Parametry
 
 *type*<br/>
-Określa typ danych, które są przesyłane między klientem i serwerem.
+Określa typ danych, który jest przesyłany między klientem i serwerem.
 
 ## <a name="remarks"></a>Uwagi
 
-**Transmit_as —** C++ atrybut ma taką samą funkcjonalność jak [transmit_as —](/windows/desktop/Midl/transmit-as) atrybutów w MIDL.
+Atrybut **transmit_as** C++ ma takie same funkcje jak atrybut [transmit_as](/windows/win32/Midl/transmit-as) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod pokazuje wykorzystanie **transmit_as —** atrybutu:
+Poniższy kod przedstawia użycie atrybutu **transmit_as** :
 
 ```cpp
 // cpp_attr_ref_transmit_as.cpp
@@ -70,12 +70,12 @@ struct _TREE_NODE_TYPE * right;
 
 |||
 |-|-|
-|**Dotyczy**|**typedef**|
+|**Dotyczy**|**własne**|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

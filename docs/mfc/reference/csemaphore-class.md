@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSemaphore [MFC], CSemaphore
 ms.assetid: 385fc7e4-8f86-4be2-85e1-d23b38c12f7f
-ms.openlocfilehash: 6c518b6a9ad0fe857b0878bcecd3020ba97174e6
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: d5a0e4187107aaab7cedf4e7a0e2fc47b9f9f305
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504709"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502580"
 ---
 # <a name="csemaphore-class"></a>Klasa CSemaphore
 
-Obiekt klasy `CSemaphore` reprezentuje "semafor" — obiektem synchronizacji umożliwiającym ograniczonej liczbę wątków w jednym lub więcej procesach na utrzymanie dostęp do liczbę wątków, często uzyskują dostęp do określonego zasobu.
+Obiekt klasy `CSemaphore` reprezentuje "Semafor" — obiekt synchronizacji, który umożliwia ograniczoną liczbę wątków w jednym lub wielu procesach, aby uzyskać dostęp do obsługiwanej liczby wątków, która aktualnie uzyskuje dostęp do określonego zasobu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,21 +31,21 @@ class CSemaphore : public CSyncObject
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSemaphore::CSemaphore](#csemaphore)|Konstruuje `CSemaphore` obiektu.|
+|[CSemaphore::CSemaphore](#csemaphore)|Konstruuje `CSemaphore` obiekt.|
 
 ## <a name="remarks"></a>Uwagi
 
-Semaforów są przydatne w kontrolowaniu dostępu do udostępnionego zasobu, który może obsługiwać tylko ograniczoną liczbę użytkowników. Bieżąca liczba `CSemaphore` obiekt jest liczby dodatkowych użytkowników. Jeśli licznik osiągnie zero, wszystkie podejmują próbę użycia zasobów w wartości clientauthtrustmode `CSemaphore` obiekt zostanie wstawiony do kolejki systemu i poczekaj, aż do ich, albo limit czasu lub liczba wzrośnie powyżej 0. Maksymalna liczba użytkowników, którzy mogą uzyskiwać dostęp w tym samym czasie kontrolowanego zasobów jest określana podczas tworzenia `CSemaphore` obiektu.
+Semafory są przydatne do kontrolowania dostępu do udostępnionego zasobu, który może obsługiwać tylko ograniczoną liczbę użytkowników. Bieżąca liczba `CSemaphore` obiektów to liczba dodatkowych użytkowników dozwolonych. Gdy licznik osiągnie wartość zero, wszystkie próby użycia zasobu kontrolowanego przez `CSemaphore` obiekt zostaną wstawione do kolejki systemowej i poczekać, aż przekroczy limit czasu lub licznik wzrośnie powyżej 0. Maksymalna liczba użytkowników, którzy mogą uzyskiwać dostęp do kontrolowanego zasobu w tym samym czasie, jest określona podczas `CSemaphore` konstruowania obiektu.
 
-Aby użyć `CSemaphore` obiektów, konstruowania `CSemaphore` obiektu, kiedy jest to konieczne. Określ nazwę semafora czekać, a aplikacja początkowo powinny odpowiadać. Następnie można uzyskać dostęp semafora zwrócona konstruktora. Wywołaj [CSyncObject::Unlock](../../mfc/reference/csyncobject-class.md#unlock) po zakończeniu dostęp do zasobu kontrolowany.
+Aby użyć `CSemaphore` obiektu, `CSemaphore` Konstruuj obiekt, gdy jest to konieczne. Określ nazwę semafora, w którym ma się odczekać, i że aplikacja powinna początkowo być jego własnością. Następnie można uzyskać dostęp do semafora, gdy Konstruktor zwróci wartość. Wywołanie [CSyncObject:: Unlock](../../mfc/reference/csyncobject-class.md#unlock) po zakończeniu uzyskiwania dostępu do kontrolowanego zasobu.
 
-Alternatywna metoda przy użyciu `CSemaphore` obiektów jest dodanie do zmiennej typu `CSemaphore` jako element członkowski danych do klasy, do kontroli. Podczas konstruowania obiektu kontrolowanego, należy wywołać konstruktora `CSemaphore` element członkowski danych określający początkowej dostępu, count, dostępu maksymalnej liczby, nazwa semafora (Jeśli zostanie on użyty przez granice procesu) i żądane atrybuty zabezpieczeń.
+Alternatywną metodą używania `CSemaphore` obiektów jest dodanie zmiennej typu `CSemaphore` jako elementu członkowskiego danych do klasy, którą chcesz kontrolować. Podczas konstruowania kontrolowanego obiektu Wywołaj konstruktora `CSemaphore` elementu członkowskiego danych, określając początkową liczbę dostępu, maksymalną liczbę dostępów, nazwę semafora (jeśli będzie używana między granicami procesów) i żądane atrybuty zabezpieczeń.
 
-Dostęp do zasobów w wartości clientauthtrustmode `CSemaphore` obiektów w ten sposób, najpierw Utwórz zmienną typu albo [CSingleLock](../../mfc/reference/csinglelock-class.md) lub typ [CMultiLock](../../mfc/reference/cmultilock-class.md) w funkcji składowej dostępu do zasobu. Następnie wywołaj zablokować obiektu `Lock` funkcja elementu członkowskiego (na przykład [CSingleLock::Lock](../../mfc/reference/csinglelock-class.md#lock)). W tym momencie wątek będzie albo uzyskania dostępu do zasobu, poczekaj, aż zasób zwolnione i uzyskać dostęp lub poczekaj, aż zasób, które mogą być wprowadzane i limit czasu, w których nie można uzyskać dostęp do zasobu. W każdym przypadku zasobu uzyskano dostęp w sposób bezpieczny dla wątków. Do zwolnienia zasobu, użyj obiektu blokady `Unlock` funkcja elementu członkowskiego (na przykład [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)), lub zezwalać na obiekt blokady do wykraczać poza zakres.
+Aby uzyskać dostęp do zasobów `CSemaphore` kontrolowanych przez obiekty w ten sposób, należy najpierw utworzyć zmienną typu [CSingleLock](../../mfc/reference/csinglelock-class.md) lub [CMultiLock](../../mfc/reference/cmultilock-class.md) w funkcji członkowskiej dostępu do zasobu. Następnie wywołaj funkcję `Lock` członkowską obiektu blokady (na przykład [CSingleLock:: Lock](../../mfc/reference/csinglelock-class.md#lock)). W tym momencie wątek uzyska dostęp do zasobu, poczeka na zwolnienie zasobu i uzyskanie dostępu albo poczekaj na zwolnienie zasobu i przekroczenie limitu czasu, aby uzyskać dostęp do zasobu. W każdym przypadku do zasobu uzyskano dostęp w sposób bezpieczny dla wątków. Aby zwolnić zasób, użyj funkcji `Unlock` składowej obiektu blokady (na przykład [CSingleLock:: Unlock](../../mfc/reference/csinglelock-class.md#unlock)) lub Zezwól obiektowi Lock poza zakres.
 
-Alternatywnie można utworzyć `CSemaphore` obiektu autonomiczny i do niego dostęp jawnie przed podjęciem próby dostępu do kontrolowanego zasobu. Ta metoda, podczas przejrzyste komuś czytanie kodu źródłowego, jest bardziej podatne na błędy.
+Alternatywnie można utworzyć `CSemaphore` obiekt autonomiczny i uzyskać do niego dostęp jawnie przed podjęciem próby dostępu do kontrolowanego zasobu. Ta metoda, natomiast wyraźniejszy dla kogoś odczytującego kod źródłowy, jest bardziej podatna na błędy.
 
-Aby uzyskać więcej informacji na temat sposobu użycia `CSemaphore` obiektów, zobacz artykuł [wielowątkowość: Jak używać klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Aby uzyskać więcej informacji na temat używania `CSemaphore` obiektów, zobacz wielowątkowość [artykułu: Jak używać klas](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)synchronizacji.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -57,11 +57,11 @@ Aby uzyskać więcej informacji na temat sposobu użycia `CSemaphore` obiektów,
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxmt.h
+**Nagłówek:** afxmt. h
 
-##  <a name="csemaphore"></a>  CSemaphore::CSemaphore
+##  <a name="csemaphore"></a>CSemaphore::CSemaphore
 
-Konstruuje nazwane i nienazwane `CSemaphore` obiektu.
+Konstruuje `CSemaphore` obiekt nazwany lub nienazwany.
 
 ```
 CSemaphore(
@@ -74,23 +74,23 @@ CSemaphore(
 ### <a name="parameters"></a>Parametry
 
 *lInitialCount*<br/>
-Licznik użycia początkowej semaforów. Musi być większa lub równa 0 i mniejsza niż lub równa *lMaxCount*.
+Początkowa liczba wykorzystań semafora. Musi być większa lub równa 0 i mniejsza niż lub równa *lMaxCount*.
 
 *lMaxCount*<br/>
-Liczba maksymalne wykorzystanie semaforów. Musi być większa niż 0.
+Maksymalna liczba obciążeń dla semafora. Musi być większa niż 0.
 
 *pstrName*<br/>
-Nazwa semafora. Należy podać w przypadku semafora będzie dostępna przez granice procesu. Jeśli `NULL`, obiekt zostanie bez nazwy. Jeśli nazwa pasuje do istniejącego semafor, Konstruktor tworzy nową `CSemaphore` obiektu, który odwołuje się semafora o takiej nazwie. Jeśli nazwa pasuje do istniejącego obiektu synchronizacji, który nie jest semafor, konstrukcja nie powiedzie się.
+Nazwa semafora. Należy podać, jeśli semafor zostanie uzyskany między granicami procesu. Jeśli `NULL`obiekt będzie nienazwany. Jeśli nazwa pasuje do istniejącego semafora, Konstruktor kompiluje nowy `CSemaphore` obiekt, który odwołuje się do semafora tej nazwy. Jeśli nazwa jest zgodna z istniejącym obiektem synchronizacji, który nie jest semaforem, konstrukcja zakończy się niepowodzeniem.
 
 *lpsaAttributes*<br/>
-Atrybuty zabezpieczeń dla obiektu semafora. Aby uzyskać pełny opis tej struktury, zobacz [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) w zestawie Windows SDK.
+Atrybuty zabezpieczeń obiektu semafora. Aby uzyskać pełny opis tej struktury, zobacz [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) w Windows SDK.
 
 ### <a name="remarks"></a>Uwagi
 
-Dostęp i zwalniania `CSemaphore` obiektu, Utwórz [CMultiLock](../../mfc/reference/cmultilock-class.md) lub [CSingleLock](../../mfc/reference/csinglelock-class.md) obiektu, a następnie wywołać jej [blokady](../../mfc/reference/csinglelock-class.md#lock) i [Unlock](../../mfc/reference/csinglelock-class.md#unlock) Funkcje Członkowskie.
+Aby `CSemaphore` uzyskać dostęp do obiektu, Utwórz obiekt [CMultiLock](../../mfc/reference/cmultilock-class.md) lub [CSingleLock](../../mfc/reference/csinglelock-class.md) , a następnie Wywołaj funkcje [blokady](../../mfc/reference/csinglelock-class.md#lock) i [odblokowywania](../../mfc/reference/csinglelock-class.md#unlock) elementów członkowskich.
 
 > [!IMPORTANT]
->  Po utworzeniu `CSemaphore` obiektu, należy użyć [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) aby upewnić się, że element mutex już nie istnieje. Jeśli element mutex istniał nieoczekiwanie, może to oznaczać, nieautoryzowany proces zajmowanie i może zamierza użyć obiektu mutex złośliwie. W tym przypadku zalecaną procedurą zabezpieczenia jest zamknąć dojścia i kontynuować tak, jakby wystąpił błąd podczas tworzenia obiektu.
+>  Po utworzeniu `CSemaphore` obiektu Użyj [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) , aby upewnić się, że mutex jeszcze nie istnieje. Jeśli obiekt mutex wystąpił nieoczekiwanie, może to oznaczać, że nieautoryzowany proces jest squatting i może zależeć od złośliwego użycia obiektu mutex. W takim przypadku zalecaną procedurę świadomego zabezpieczenia jest zamknięcie uchwytu i kontynuowanie tak, jakby Wystąpił błąd podczas tworzenia obiektu.
 
 ## <a name="see-also"></a>Zobacz także
 

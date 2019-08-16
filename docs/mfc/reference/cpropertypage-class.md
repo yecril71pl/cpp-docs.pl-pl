@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: f9116306fd2bd6145096b055025bd4dd2075b0c1
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 6a6223708c83f7a5b3e6532a2016660d558f8270
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916879"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502807"
 ---
 # <a name="cpropertypage-class"></a>Klasa CPropertyPage
 
@@ -71,7 +71,7 @@ class CPropertyPage : public CDialog
 |----------|-----------------|
 |[CPropertyPage::CancelToClose](#canceltoclose)|Zmienia przycisk OK na Odczytaj i wyłącza przycisk Anuluj po nieodwracalnej zmianie na stronie modalnego arkusza właściwości.|
 |[CPropertyPage:: konstrukcja](#construct)|Konstruuje `CPropertyPage` obiekt. Użyj `Construct` , jeśli chcesz określić parametry w czasie wykonywania lub w przypadku korzystania z tablic.|
-|[CPropertyPage::GetPSP](#getpsp)|Pobiera strukturę [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v2) systemu Windows skojarzoną z `CPropertyPage` obiektem.|
+|[CPropertyPage::GetPSP](#getpsp)|Pobiera strukturę [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2) systemu Windows skojarzoną z `CPropertyPage` obiektem.|
 |[CPropertyPage:: OnApply](#onapply)|Wywoływane przez platformę, gdy kliknięto przycisk Zastosuj teraz.|
 |[CPropertyPage:: OnCancel](#oncancel)|Wywoływane przez platformę, gdy kliknięto przycisk Anuluj.|
 |[CPropertyPage::OnKillActive](#onkillactive)|Wywoływane przez platformę, gdy bieżąca strona nie jest już aktywną stroną. Tutaj należy wykonać walidację danych.|
@@ -89,7 +89,7 @@ class CPropertyPage : public CDialog
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CPropertyPage::m_psp](#m_psp)|Struktura [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v2) systemu Windows. Zapewnia dostęp do podstawowych parametrów strony właściwości.|
+|[CPropertyPage::m_psp](#m_psp)|Struktura [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2) systemu Windows. Zapewnia dostęp do podstawowych parametrów strony właściwości.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -261,7 +261,7 @@ Jeśli masz wiele parametrów (na przykład jeśli używasz tablicy), użyj [CPr
 
 ##  <a name="getpsp"></a>CPropertyPage::GetPSP
 
-Pobiera strukturę [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v2) systemu Windows skojarzoną z `CPropertyPage` obiektem.
+Pobiera strukturę [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2) systemu Windows skojarzoną z `CPropertyPage` obiektem.
 
 ```
 const PROPSHEETPAGE& GetPSP() const;
@@ -275,7 +275,7 @@ Odwołanie do `PROPSHEETPAGE` struktury.
 
 ##  <a name="m_psp"></a>CPropertyPage::m_psp
 
-`m_psp`jest strukturą, której członkowie przechowują cechy [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v2).
+`m_psp`jest strukturą, której członkowie przechowują cechy [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2).
 
 ```
 PROPSHEETPAGE m_psp;
@@ -311,7 +311,7 @@ Przesłoń tę funkcję elementu członkowskiego, aby określić akcję podejmow
 
 Domyślna implementacja `OnApply` wywołań `OnOK`.
 
-Aby uzyskać więcej informacji na temat komunikatów powiadomień wysyłanych, gdy użytkownik naciśnie przycisk Zastosuj teraz lub OK w arkuszu właściwości, zobacz [PSN_APPLY](/windows/desktop/Controls/psn-apply) w Windows SDK.
+Aby uzyskać więcej informacji na temat komunikatów powiadomień wysyłanych, gdy użytkownik naciśnie przycisk Zastosuj teraz lub OK w arkuszu właściwości, zobacz [PSN_APPLY](/windows/win32/Controls/psn-apply) w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
@@ -367,7 +367,7 @@ virtual void OnOK();
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy użytkownik wybierze przycisk OK lub Zastosuj teraz, struktura odbiera powiadomienie [PSN_APPLY](/windows/desktop/Controls/psn-apply) ze strony właściwości. Wywołanie `OnOK` nie zostanie wykonane, jeśli wywołasz [CPropertySheet::P ressbutton](../../mfc/reference/cpropertysheet-class.md#pressbutton) , ponieważ strona właściwości nie wyśle powiadomienia w tym przypadku.
+Gdy użytkownik wybierze przycisk OK lub Zastosuj teraz, struktura odbiera powiadomienie [PSN_APPLY](/windows/win32/Controls/psn-apply) ze strony właściwości. Wywołanie `OnOK` nie zostanie wykonane, jeśli wywołasz [CPropertySheet::P ressbutton](../../mfc/reference/cpropertysheet-class.md#pressbutton) , ponieważ strona właściwości nie wyśle powiadomienia w tym przypadku.
 
 Przesłoń tę funkcję elementu członkowskiego, aby zaimplementować dodatkowe zachowanie specyficzne dla aktualnie aktywnej strony, gdy użytkownik odrzuci cały arkusz właściwości.
 
@@ -481,7 +481,7 @@ Gdy użytkownik kliknie przycisk **Zakończ** w kreatorze, struktura wywołuje t
 
 Można zastąpić tę funkcję elementu członkowskiego, aby określić akcję, którą użytkownik musi wykonać po naciśnięciu przycisku Zakończ. Podczas zastępowania tej funkcji Zwróć wartość FALSE, aby zapobiec zniszczeniu arkusza właściwości.
 
-Aby uzyskać więcej informacji na temat komunikatów powiadomień wysyłanych po naciśnięciu przycisku Zakończ w arkuszu właściwości kreatora, zobacz [PSN_WIZFINISH](/windows/desktop/Controls/psn-wizfinish) w Windows SDK.
+Aby uzyskać więcej informacji na temat komunikatów powiadomień wysyłanych po naciśnięciu przycisku Zakończ w arkuszu właściwości kreatora, zobacz [PSN_WIZFINISH](/windows/win32/Controls/psn-wizfinish) w Windows SDK.
 
 Aby uzyskać więcej informacji na temat tworzenia arkusza właściwości typu kreatora, zobacz [CPropertySheet::](../../mfc/reference/cpropertysheet-class.md#setwizardmode)SetWizardMode.
 

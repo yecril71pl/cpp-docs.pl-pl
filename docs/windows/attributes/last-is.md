@@ -1,21 +1,21 @@
 ---
-title: last_is — (C++ atrybutów COM)
+title: last_is (C++ atrybut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.last_is
 helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-ms.openlocfilehash: 39b35b218f3402839d956c4da0a00f290fe5d595
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4745d4eb59fd2adb79937b34184081dbbd0814fb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409424"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514517"
 ---
-# <a name="lastis"></a>last_is
+# <a name="last_is"></a>last_is
 
-Określa indeks ostatniego elementu tablicy mają być przekazywane.
+Określa indeks ostatniego elementu tablicy, który ma zostać przesłany.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,15 +26,15 @@ Określa indeks ostatniego elementu tablicy mają być przekazywane.
 ### <a name="parameters"></a>Parametry
 
 *expression*<br/>
-Co najmniej jednego wyrażenia języka C. Pusty argument miejsca są dozwolone.
+Co najmniej jedno wyrażenie języka C. Puste gniazda argumentów są dozwolone.
 
 ## <a name="remarks"></a>Uwagi
 
-**Last_is —** C++ atrybut ma taką samą funkcjonalność jak [last_is —](/windows/desktop/Midl/last-is) atrybutów w MIDL.
+Atrybut **last_is** C++ ma takie same funkcje jak atrybut [last_is](/windows/win32/Midl/last-is) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Zobacz [first_is —](first-is.md) przykład sposobu określania część tablicy.
+Zobacz [first_is](first-is.md) , aby zapoznać się z przykładem, jak określić sekcję tablicy.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -42,12 +42,12 @@ Zobacz [first_is —](first-is.md) przykład sposobu określania część tablic
 
 |||
 |-|-|
-|**Dotyczy**|Pole **struktury** lub **Unii**, interfejs parametrów, metody interfejsu|
+|**Dotyczy**|Pole w **strukturze** lub **Unii**, parametr interfejsu, metoda interfejsu|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

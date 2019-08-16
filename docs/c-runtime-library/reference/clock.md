@@ -25,16 +25,16 @@ helpviewer_keywords:
 - processor time used
 - calculating processor time used
 ms.assetid: 3e1853dd-498f-49ba-b06a-f2315f20904e
-ms.openlocfilehash: 4b58b33b533250447cf964134de9869bddee4498
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2fabd18fb28cb5ea13dfb156ea21e8743c2afd49
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347473"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500264"
 ---
 # <a name="clock"></a>zegar
 
-Oblicza czas zegarowy używany przez proces wywołujący.
+Oblicza Czas zegarowy używany przez proces wywołujący.
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,13 +44,13 @@ clock_t clock( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Czas, jaki upłynął od Inicjalizacja CRT na początku procesu, mierzone w **CLOCKS_PER_SEC** jednostkach na sekundę. Jeśli czas jest niedostępny lub został przekroczony maksymalny czas dodatnią, która może zostać zarejestrowana jako **clock_t** typu, funkcja zwraca wartość `(clock_t)(-1)`.
+Czas, który upłynął od momentu inicjalizacji CRT na początku procesu, mierzony w jednostkach **CLOCKS_PER_SEC** na sekundę. Jeśli czas, który upłynął, jest niedostępny lub przekroczy maksymalny czas pozytywny, który można zarejestrować jako typ **clock_t** , funkcja zwraca wartość `(clock_t)(-1)`.
 
 ## <a name="remarks"></a>Uwagi
 
-**Zegara** funkcja informuje, ile czasu zegarowego minęło od Inicjalizacja CRT podczas uruchamiania procesu. Należy pamiętać, że ta funkcja nie jest ściśle zgodny z C ISO, który określa czas procesora CPU netto jako wartość zwracaną. Aby uzyskać czas procesora CPU, użyj Win32 [GetProcessTimes](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getprocesstimes) funkcji. Aby określić czas w sekundach, Podziel wartość zwrócona przez obiekt **zegara** funkcji przez makro **CLOCKS_PER_SEC**.
+Funkcja **Clock** informuje, ile czasu zegar ściany został zakończony od momentu inicjalizacji CRT podczas uruchamiania procesu. Należy zauważyć, że ta funkcja nie jest ściśle zgodna z normą ISO C, która określa czas procesora CPU jako wartość zwracaną. Aby uzyskać czasy procesora, użyj funkcji Win32 [GetProcessTimes](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesstimes) . Aby określić czas (w sekundach), należy podzielić wartość zwróconą przez funkcję **zegara** przez makro **CLOCKS_PER_SEC**.
 
-Mając wystarczająco dużo czasu, wartość zwracana przez **zegara** może przekroczyć maksymalnej wartości dodatniej **clock_t**. Proces ma uruchamiania, wartość zwracana przez **zegara** jest zawsze `(clock_t)(-1)`, jak określono w normie ISO C99 (7.23.2.1) i standard ISO C11 (7.27.2.1). Firma Microsoft implementuje **clock_t** jako **długie**, całkowita 32-bitowa i **CLOCKS_PER_SEC** — makro jest zdefiniowany jako 1000. Dzięki temu maksymalnie **zegara** funkcji zwracana wartość 2147483.647 sekund lub około 24.8 dni. Nie należy polegać na wartość zwrócona przez obiekt **zegara** w procesach, które zostały uruchomione przez dłużej niż to ilość czasu. Można użyć 64-bitowego [czasu](time-time32-time64.md) funkcji lub Windows [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904) funkcję, aby czas przetwarzania rekordów wielu lat.
+Mając wystarczająco dużo czasu, wartość zwracana przez **zegar** może przekroczyć maksymalną wartość dodatnią **clock_t**. Gdy proces ma więcej czasu, wartość zwracana przez **zegar** jest zawsze `(clock_t)(-1)`określona przez standard ISO C99 Standard (7.23.2.1) i ISO C11 (7.27.2.1). Firma Microsoft implementuje **clock_t** jako **długą**, podpisaną 32-bitową liczbę całkowitą, a makro **CLOCKS_PER_SEC** jest zdefiniowane jako 1000. Dzięki temu maksymalna wartość **zegara** jest zwracana przez 2147483,647 sekund lub około 24,8 dni. Nie należy polegać na wartości zwracanej przez **zegar** w procesach, które są wykonywane dłużej niż ten czas. Można użyć funkcji [czasu](time-time32-time64.md) 64-bitowego lub funkcji [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) systemu Windows, aby nagrać czas, który upłynął przez wiele lat.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -58,7 +58,7 @@ Mając wystarczająco dużo czasu, wartość zwracana przez **zegara** może prz
 |-------------|---------------------|
 |**clock**|\<time.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-ms.openlocfilehash: eae79f9a4d0af6375834c0792c4004f52a16e07e
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: d644f59ac92bf4e39f191c291dd4fef626411c3d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448927"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514952"
 ---
 # <a name="uuid-c-attributes"></a>uuid (Atrybuty C++)
 
-Określa unikatowy identyfikator dla klasy lub interfejsu.
+Określa unikatowy identyfikator klasy lub interfejsu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,21 +28,21 @@ Określa unikatowy identyfikator dla klasy lub interfejsu.
 ### <a name="parameters"></a>Parametry
 
 *uuid*<br/>
-128-bitowego, unikatowy identyfikator.
+128-bitowy, unikatowy identyfikator.
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli nie określono definicji klasy lub interfejsu **uuid** C++ atrybutu, a następnie Microsoft C++ kompilatora zapewni jeden. Po określeniu **uuid**, musi zawierać cudzysłowów.
+Jeśli definicja interfejsu lub klasy nie określa atrybutu **UUID** C++ , zostanie on podany w kompilatorze firmy Microsoft C++ . Po określeniu **identyfikatora UUID**należy uwzględnić cudzysłowy.
 
-Jeśli nie określisz **uuid**, a następnie kompilator wygeneruje tego samego identyfikatora GUID dla interfejsów lub klas o takiej samej nazwie w projektach innego atrybutu na maszynie.
+Jeśli nie określisz **identyfikatora UUID**, kompilator generuje ten sam identyfikator GUID dla interfejsów lub klas o tej samej nazwie w różnych projektach atrybutów na komputerze.
 
-Uuidgen.exe lub Guidgen.exe służy do generowania własnych unikatowych identyfikatorów. (Aby Uruchom dowolne z tych narzędzi, kliknij przycisk **Start** i kliknij przycisk **Uruchom** w menu. Następnie wprowadź nazwę wymagane narzędzia.)
+Aby wygenerować własne unikatowe identyfikatory, można użyć uuidgen. exe lub Guidgen. exe. (Aby uruchomić dowolne z tych narzędzi, kliknij przycisk **Start** , a następnie kliknij pozycję **Uruchom** w menu. Następnie wprowadź nazwę wymaganego narzędzia.
 
-W przypadku użycia w projekcie, który nie używa również biblioteki ATL, określając **uuid** atrybutu jest taki sam jak określanie [uuid](../../cpp/uuid-cpp.md) **__declspec** modyfikator. Aby pobrać **uuid** klasy, można użyć [__uuidof](../../cpp/uuidof-operator.md)
+W przypadku użycia w projekcie, który nie używa także ATL, określenie atrybutu **UUID** jest takie samo jak określenie modyfikatora [UUID](../../cpp/uuid-cpp.md) **__declspec** . Aby pobrać **identyfikator UUID** klasy, można użyć [__uuidof](../../cpp/uuidof-operator.md)
 
 ## <a name="example"></a>Przykład
 
-Zobacz [możliwej do wiązania](bindable.md) przykład użycie próbki **uuid**.
+Zobacz przykład [powiązania](bindable.md) dla przykładowego zastosowania **identyfikatora UUID**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -50,12 +50,12 @@ Zobacz [możliwej do wiązania](bindable.md) przykład użycie próbki **uuid**.
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **struktury**, **interfejsu**, **Unii**, **wyliczenia**|
+|**Dotyczy**|**Class**, **struct**, **Interface**, **Union**, **enum**|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 
@@ -63,4 +63,4 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 [Atrybuty interfejsu](interface-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>
 [Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[uuid](/windows/desktop/Midl/uuid)
+[uuid](/windows/win32/Midl/uuid)

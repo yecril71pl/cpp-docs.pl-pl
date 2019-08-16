@@ -8,33 +8,33 @@ f1_keywords:
 - atlbase/ATL::AtlComModuleRevokeClassObjects
 - atlbase/ATL::AtlComModuleGetClassObject
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
-ms.openlocfilehash: 2088bd938aeac70193165cdbd43bd10203ecc49e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9c3697259e1cee2b1107ded785ca583d730b55e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197461"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495460"
 ---
 # <a name="server-registration-global-functions"></a>Funkcje globalne rejestracji serwera
 
-Te funkcje umożliwiają rejestrowanie i wyrejestrowywanie serwera obiektów na mapie obiektu.
+Te funkcje zapewniają obsługę rejestrowania i wyrejestrowywania obiektów serwera na mapie obiektów.
 
 > [!IMPORTANT]
->  Funkcje wymienione w poniższej tabeli nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+>  Funkcje wymienione w poniższej tabeli nie mogą być używane w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
 |||
 |-|-|
 |[AtlComModuleRegisterServer](#atlcommoduleregisterserver)|Ta funkcja jest wywoływana, aby zarejestrować każdy obiekt na mapie obiektów.|
 |[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)|Ta funkcja jest wywoływana, aby wyrejestrować każdy obiekt na mapie obiektów.|
 |[AtlComModuleRegisterClassObjects](#atlcommoduleregisterclassobjects)|Ta funkcja jest wywoływana, aby zarejestrować obiekty klasy.|
-|[AtlComModuleRevokeClassObjects](#atlcommodulerevokeclassobjects)|Ta funkcja jest wywoływana, aby można było odwołać klasy obiektów z modułem COM.|
-|[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|Ta funkcja jest wywoływana, aby uzyskać obiekt klasy.|
+|[AtlComModuleRevokeClassObjects](#atlcommodulerevokeclassobjects)|Ta funkcja jest wywoływana, aby odwołać obiekty klasy z modułu COM.|
+|[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|Ta funkcja jest wywoływana w celu pobrania obiektu klasy.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlbase.h
+**Nagłówek:** atlbase. h
 
-##  <a name="atlcommoduleregisterserver"></a>  AtlComModuleRegisterServer
+##  <a name="atlcommoduleregisterserver"></a>AtlComModuleRegisterServer
 
 Ta funkcja jest wywoływana, aby zarejestrować każdy obiekt na mapie obiektów.
 
@@ -51,20 +51,20 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
 Wskaźnik do modułu COM.
 
 *bRegTypeLib*<br/>
-Wartość TRUE, jeśli biblioteka typów ma zostać zarejestrowany.
+Ma wartość TRUE, jeśli biblioteka typów ma zostać zarejestrowana.
 
 *pCLSID*<br/>
-Wskazuje identyfikator CLSID obiektu do zarejestrowania. Jeśli ma wartość NULL, będą rejestrowane wszystkie obiekty na mapie obiektu.
+Wskazuje identyfikator CLSID obiektu, który ma zostać zarejestrowany. Jeśli wartość jest równa NULL, wszystkie obiekty w mapie obiektów zostaną zarejestrowane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-`AtlComModuleRegisterServer` przedstawia mapy obiektu ATL wygenerowany automatycznie i rejestruje każdy obiekt na mapie. Jeśli *pCLSID* nie jest równa NULL, a następnie tylko obiekt odwołuje się *pCLSID* jest zarejestrowany; w przeciwnym razie wszystkie obiekty zarejestrowane.
+`AtlComModuleRegisterServer`przegląda mapę obiektu automatycznie wygenerowaną ATL i rejestruje każdy obiekt na mapie. Jeśli *pCLSID* nie ma wartości null, rejestrowany jest tylko obiekt, do którego odwołuje się *pCLSID* ; w przeciwnym razie wszystkie obiekty są zarejestrowane.
 
-Ta funkcja jest wywoływana [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver).
+Ta funkcja jest wywoływana przez [CAtlComModule:: RegisterServer](catlcommodule-class.md#registerserver).
 
 ##  <a name="atlcommoduleunregisterserver"></a>  AtlComModuleUnregisterServer
 
@@ -83,22 +83,22 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
 Wskaźnik do modułu COM.
 
 *bUnRegTypeLib*<br/>
-Wartość TRUE, jeśli biblioteka typów ma zostać zarejestrowany.
+Ma wartość TRUE, jeśli biblioteka typów ma zostać zarejestrowana.
 
 *pCLSID*<br/>
-Wskazuje identyfikator CLSID obiektu do wyrejestrowania. Jeśli ma wartość NULL wszystkich obiektów na mapie obiektu będzie można wyrejestrować.
+Wskazuje identyfikator CLSID obiektu, który ma zostać wyrejestrowany. Jeśli wartość NULL wszystkie obiekty w mapie obiektów zostaną wyrejestrowane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-`AtlComModuleUnregisterServer` przedstawiono na mapie obiektu ATL i wyrejestrowuje każdy obiekt na mapie. Jeśli *pCLSID* nie jest równa NULL, a następnie tylko obiekt odwołuje się *pCLSID* jest niezarejestrowany; w przeciwnym razie wszystkie obiekty są wyrejestrować.
+`AtlComModuleUnregisterServer`przegląda mapowanie obiektu ATL i wyrejestrowuje każdy obiekt na mapie. Jeśli *pCLSID* nie ma wartości null, tylko obiekt, do którego odwołuje się *pCLSID* , zostanie wyrejestrowany. w przeciwnym razie wszystkie obiekty są wyrejestrowani.
 
-Ta funkcja jest wywoływana [CAtlComModule::UnregisterServer](catlcommodule-class.md#unregisterserver).
+Ta funkcja jest wywoływana przez [CAtlComModule:: UnregisterServer](catlcommodule-class.md#unregisterserver).
 
-##  <a name="atlcommoduleregisterclassobjects"></a>  AtlComModuleRegisterClassObjects
+##  <a name="atlcommoduleregisterclassobjects"></a>AtlComModuleRegisterClassObjects
 
 Ta funkcja jest wywoływana, aby zarejestrować obiekty klasy.
 
@@ -115,20 +115,20 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 Wskaźnik do modułu COM.
 
 *dwClsContext*<br/>
-Określa kontekst, w którym ma być uruchamiane obiektu klasy. Możliwe wartości to CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER lub CLSCTX_LOCAL_SERVER. Zobacz [CLSCTX](/windows/desktop/api/wtypesbase/ne-wtypesbase-tagclsctx) Aby uzyskać więcej informacji.
+Określa kontekst, w którym obiekt klasy ma być uruchamiany. Możliwe wartości to CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER lub CLSCTX_LOCAL_SERVER. Aby uzyskać więcej informacji, zobacz [CLSCTX](/windows/win32/api/wtypesbase/ne-wtypesbase-clsctx) .
 
-*dwFlags*<br/>
-Określa typy połączeń do obiektu klasy. Możliwe wartości to REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE lub REGCLS_MULTI_SEPARATE. Zobacz [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) Aby uzyskać więcej informacji.
+*flagiDW*<br/>
+Określa typy połączeń do obiektu klasy. Możliwe wartości to REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE lub REGCLS_MULTI_SEPARATE. Aby uzyskać więcej informacji, zobacz [REGCLS](/windows/win32/api/combaseapi/ne-combaseapi-regcls) .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja pomocnika jest wykorzystywany przez [CComModule::RegisterClassObjects](ccommodule-class.md#registerclassobjects) (przestarzałe w wersji 7.0 ATL) i [CAtlExeModuleT::RegisterClassObjects](catlexemodulet-class.md#registerclassobjects).
+Ta funkcja pomocnika jest wykorzystywana przez [CComModule:: RegisterClassObjects](ccommodule-class.md#registerclassobjects) (przestarzałe w ATL 7,0) i [CAtlExeModuleT:: RegisterClassObjects](catlexemodulet-class.md#registerclassobjects).
 
-##  <a name="atlcommodulerevokeclassobjects"></a>  AtlComModuleRevokeClassObjects
+##  <a name="atlcommodulerevokeclassobjects"></a>AtlComModuleRevokeClassObjects
 
 Ta funkcja jest wywoływana, aby usunąć fabrykę/fabryki klas z tabeli działających obiektów.
 
@@ -143,11 +143,11 @@ Wskaźnik do modułu COM.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja pomocnika jest wykorzystywany przez [CComModule::RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (przestarzałe w wersji 7.0 ATL) i [CAtlExeModuleT::RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects).
+Ta funkcja pomocnika jest wykorzystywana przez [CComModule:: RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (przestarzałe w ATL 7,0) i [CAtlExeModuleT:: RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects).
 
 ##  <a name="atlcommodulegetclassobject"></a>  AtlComModuleGetClassObject
 
@@ -167,21 +167,21 @@ ATLINLINE ATLAPI AtlComModuleGetClassObject(
 Wskaźnik do modułu COM.
 
 *rclsid*<br/>
-Identyfikator CLSID obiektu do utworzenia.
+Identyfikator CLSID obiektu, który ma zostać utworzony.
 
-*Parametr riid*<br/>
+*riid*<br/>
 Identyfikator IID żądanego interfejsu.
 
 *ppv*<br/>
-Wskaźnik do wskaźnika interfejsu identyfikowane przez *riid*. Jeśli obiekt nie obsługuje ten interfejs *ppv* ma wartość NULL.
+Wskaźnik do wskaźnika interfejsu identyfikowanego przez *riid*. Jeśli obiekt nie obsługuje tego interfejsu, *PPV* ma wartość null.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja pomocnika jest wykorzystywany przez [CComModule::GetClassObject](ccommodule-class.md#getclassobject) (przestarzałe w wersji 7.0 ATL) i [CAtlDllModuleT::GetClassObject](catldllmodulet-class.md#getclassobject).
+Ta funkcja pomocnika jest wykorzystywana przez [CComModule::](ccommodule-class.md#getclassobject) GetClassObject (przestarzałe w ATL 7,0) i [CAtlDllModuleT::](catldllmodulet-class.md#getclassobject)GetClassObject.
 
 ## <a name="see-also"></a>Zobacz także
 

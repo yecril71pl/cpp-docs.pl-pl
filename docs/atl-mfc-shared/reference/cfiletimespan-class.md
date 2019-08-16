@@ -1,5 +1,5 @@
 ---
-title: CFileTimeSpan Class
+title: Klasa CFileTimeSpan
 ms.date: 10/18/2018
 f1_keywords:
 - CFileTimeSpan
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - shared classes, CFileTimeSpan
 - CFileTimeSpan class
 ms.assetid: 5856fb39-9c82-4027-8ccf-8760890491ec
-ms.openlocfilehash: 001e6ddc78a41e118949e9b750b78609f3ff9e92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9bb42ba4c142f671a83dcfa7e99cff940fff047
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62235305"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491294"
 ---
-# <a name="cfiletimespan-class"></a>CFileTimeSpan Class
+# <a name="cfiletimespan-class"></a>Klasa CFileTimeSpan
 
-Ta klasa dostarcza metody do zarządzania względne wartości daty i godziny skojarzonych z plikiem.
+Ta klasa zapewnia metody zarządzania względnymi wartościami daty i godziny skojarzonych z plikiem.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,38 +40,38 @@ class CFileTimeSpan
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CFileTimeSpan::GetTimeSpan](#gettimespan)|Wywołaj tę metodę, aby pobrać przedział czasu od `CFileTimeSpan` obiektu.|
-|[CFileTimeSpan::SetTimeSpan](#settimespan)|Wywołaj tę metodę, aby ustawić zakres czasu `CFileTimeSpan` obiektu.|
+|[CFileTimeSpan::GetTimeSpan](#gettimespan)|Wywołaj tę metodę, aby pobrać przedział czasu `CFileTimeSpan` z obiektu.|
+|[CFileTimeSpan::SetTimeSpan](#settimespan)|Wywołaj tę metodę, aby ustawić przedział `CFileTimeSpan` czasu obiektu.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CFileTimeSpan::operator -](#operator_-)|Wykonuje odejmowanie `CFileTimeSpan` obiektu.|
-|[CFileTimeSpan::operator! =](#operator_neq)|Porównuje dwa `CFileTimeSpan` obiekty pod kątem nierówności.|
-|[CFileTimeSpan::operator +](#operator_add)|Wykonuje dodawanie na `CFileTimeSpan` obiektu.|
-|[CFileTimeSpan::operator +=](#operator_add_eq)|Wykonuje dodawanie na `CFileTimeSpan` obiektu i przypisz wynik do bieżącego obiektu.|
-|[CFileTimeSpan::operator &lt;](#operator_lt)|Porównuje dwa `CFileTimeSpan` obiektów, aby określić mniejszy.|
-|[CFileTimeSpan::operator &lt;=](#operator_lt_eq)|Porównuje dwa `CFileTimeSpan` obiektów, aby określić równości lub mniejszy.|
-|[CFileTimeSpan::operator =](#operator_eq)|Operator przypisania.|
-|[CFileTimeSpan::operator-=](#operator_-_eq)|Wykonuje odejmowanie `CFileTimeSpan` obiektu i przypisz wynik do bieżącego obiektu.|
-|[CFileTimeSpan::operator ==](#operator_eq_eq)|Porównuje dwa `CFileTimeSpan` obiekty pod kątem równości.|
-|[CFileTimeSpan::operator &gt;](#operator_gt)|Porównuje dwa `CFileTimeSpan` obiektów, aby określić wyższy.|
-|[CFileTimeSpan::operator &gt;=](#operator_gt_eq)|Porównuje dwa `CFileTimeSpan` obiektów, aby określić równości lub większy.|
+|[CFileTimeSpan:: operator-](#operator_-)|Wykonuje odejmowanie `CFileTimeSpan` obiektu.|
+|[CFileTimeSpan:: operator! =](#operator_neq)|Porównuje `CFileTimeSpan` dwa obiekty pod kątem nierówności.|
+|[CFileTimeSpan:: operator +](#operator_add)|Wykonuje Dodawanie do `CFileTimeSpan` obiektu.|
+|[CFileTimeSpan:: operator + =](#operator_add_eq)|Wykonuje Dodawanie `CFileTimeSpan` do obiektu i przypisuje wynik do bieżącego obiektu.|
+|[CFileTimeSpan:: operator&lt;](#operator_lt)|Porównuje `CFileTimeSpan` dwa obiekty, aby określić, że są one mniejsze.|
+|[CFileTimeSpan:: operator&lt;=](#operator_lt_eq)|Porównuje `CFileTimeSpan` dwa obiekty, aby określić równość lub mniejszą.|
+|[CFileTimeSpan:: operator =](#operator_eq)|Operator przypisania.|
+|[CFileTimeSpan:: operator-=](#operator_-_eq)|Wykonuje odejmowanie `CFileTimeSpan` obiektu i przypisuje wynik do bieżącego obiektu.|
+|[CFileTimeSpan:: operator = =](#operator_eq_eq)|Porównuje `CFileTimeSpan` dwa obiekty pod kątem równości.|
+|[CFileTimeSpan:: operator&gt;](#operator_gt)|Porównuje `CFileTimeSpan` dwa obiekty w celu określenia większego.|
+|[CFileTimeSpan:: operator&gt;=](#operator_gt_eq)|Porównuje `CFileTimeSpan` dwa obiekty, aby określić równość lub większą.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa dostarcza metody zarządzania względne okresy czasu, często napotkano podczas wykonywania operacji dotyczących, kiedy plik został utworzony, ostatnim uzyskaniu dostępu do lub Data ostatniej modyfikacji. Metody tej klasy są często używane w połączeniu z [CFileTime, klasa](../../atl-mfc-shared/reference/cfiletime-class.md) obiektów.
+Ta klasa udostępnia metody zarządzania względnymi okresami czasu, które często występują podczas wykonywania operacji dotyczących momentu utworzenia pliku, ostatniego dostępu lub ostatniej modyfikacji. Metody tej klasy są często używane w połączeniu z obiektami [klasy CFileTime](../../atl-mfc-shared/reference/cfiletime-class.md) .
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [CFileTime::Millisecond](../../atl-mfc-shared/reference/cfiletime-class.md#millisecond).
+Zobacz przykład dla [CFileTime:: milisekund](../../atl-mfc-shared/reference/cfiletime-class.md#millisecond).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atltime.h
+**Nagłówek:** atltime. h
 
-##  <a name="cfiletimespan"></a>  CFileTimeSpan::CFileTimeSpan
+##  <a name="cfiletimespan"></a>CFileTimeSpan::CFileTimeSpan
 
 Konstruktor.
 
@@ -83,19 +83,19 @@ CFileTimeSpan(LONGLONG nSpan) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*zakres*<br/>
-Istniejące `CFileTimeSpan` obiektu.
+*span*<br/>
+Istniejący `CFileTimeSpan` obiekt.
 
 *nSpan*<br/>
-Okres czasu w milisekundach.
+Okres czasu (w milisekundach).
 
 ### <a name="remarks"></a>Uwagi
 
-`CFileTimeSpan` Obiektu można utworzyć przy użyciu istniejącego `CFileTimeSpan` obiektu lub wyrażonej w postaci wartości 64-bitowych. Domyślny konstruktor ustawia przedział czasu na 0.
+Obiekt można utworzyć przy użyciu istniejącego `CFileTimeSpan` obiektu lub wyrażony jako wartość 64-bitowa. `CFileTimeSpan` Domyślny konstruktor ustawia przedział czasu na 0.
 
-##  <a name="gettimespan"></a>  CFileTimeSpan::GetTimeSpan
+##  <a name="gettimespan"></a>CFileTimeSpan:: GetTimeSpan
 
-Wywołaj tę metodę, aby pobrać przedział czasu od `CFileTimeSpan` obiektu.
+Wywołaj tę metodę, aby pobrać przedział czasu `CFileTimeSpan` z obiektu.
 
 ```
 LONGLONG GetTimeSpan() const throw();
@@ -103,9 +103,9 @@ LONGLONG GetTimeSpan() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca przedział czasu w milisekundach.
+Zwraca przedział czasu (w milisekundach).
 
-##  <a name="operator_-"></a>  CFileTimeSpan::operator-
+##  <a name="operator_-"></a>CFileTimeSpan:: operator-
 
 Wykonuje odejmowanie `CFileTimeSpan` obiektu.
 
@@ -115,16 +115,16 @@ CFileTimeSpan operator-(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*zakres*<br/>
+*span*<br/>
 Element `CFileTimeSpan` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca `CFileTimeSpan` obiekt reprezentujący wynik różnicę między dwoma okresów.
+`CFileTimeSpan` Zwraca obiekt reprezentujący wynik różnicy między dwoma przedziałami czasu.
 
-##  <a name="operator_neq"></a>  CFileTimeSpan::operator! =
+##  <a name="operator_neq"></a>CFileTimeSpan:: operator! =
 
-Porównuje dwa `CFileTimeSpan` obiekty pod kątem nierówności.
+Porównuje `CFileTimeSpan` dwa obiekty pod kątem nierówności.
 
 ```
 bool operator!=(CFileTimeSpan span) const throw();
@@ -132,16 +132,16 @@ bool operator!=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*zakres*<br/>
-`CFileTimeSpan` Obiekt do porównania.
+*span*<br/>
+Obiekt `CFileTimeSpan` , który ma zostać porównany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli element, którą jest porównywany nie jest równa `CFileTimeSpan` obiektu; w przeciwnym razie wartość FALSE.
+Zwraca wartość true, jeśli porównywany element nie jest równy `CFileTimeSpan` obiektowi; w przeciwnym razie false.
 
-##  <a name="operator_add"></a>  CFileTimeSpan::operator +
+##  <a name="operator_add"></a>CFileTimeSpan:: operator +
 
-Wykonuje dodawanie na `CFileTimeSpan` obiektu.
+Wykonuje Dodawanie do `CFileTimeSpan` obiektu.
 
 ```
 CFileTimeSpan operator+(CFileTimeSpan span) const throw();
@@ -149,16 +149,16 @@ CFileTimeSpan operator+(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*zakres*<br/>
+*span*<br/>
 Element `CFileTimeSpan` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca `CFileTimeSpan` obiektu zawierającą sumę dwóch czasu obejmuje.
+`CFileTimeSpan` Zwraca obiekt zawierający sumę dwóch przedziałów czasu.
 
-##  <a name="operator_add_eq"></a>  CFileTimeSpan::operator +=
+##  <a name="operator_add_eq"></a>CFileTimeSpan:: operator + =
 
-Wykonuje dodawanie na `CFileTimeSpan` obiektu, a następnie przypisuje wynik, jak bieżący obiekt.
+Wykonuje Dodawanie `CFileTimeSpan` do obiektu i przypisuje wynik do bieżącego obiektu.
 
 ```
 CFileTimeSpan& operator+=(CFileTimeSpan span) throw();
@@ -166,16 +166,16 @@ CFileTimeSpan& operator+=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*zakres*<br/>
+*span*<br/>
 Element `CFileTimeSpan` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca zaktualizowany `CFileTimeSpan` obiektu zawierającą sumę dwóch czasu obejmuje.
+Zwraca zaktualizowany `CFileTimeSpan` obiekt zawierający sumę dwóch przedziałów czasu.
 
-##  <a name="operator_lt"></a>  CFileTimeSpan::operator &lt;
+##  <a name="operator_lt"></a>CFileTimeSpan:: operator&lt;
 
-Porównuje dwa `CFileTimeSpan` obiektów, aby określić mniejszy.
+Porównuje `CFileTimeSpan` dwa obiekty, aby określić, że są one mniejsze.
 
 ```
 bool operator<(CFileTimeSpan span) const throw();
@@ -183,16 +183,16 @@ bool operator<(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*zakres*<br/>
-`CFileTimeSpan` Obiekt do porównania.
+*span*<br/>
+Obiekt `CFileTimeSpan` , który ma zostać porównany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli pierwszy obiekt jest mniejszy (czyli reprezentuje krótszy okres) od drugiej, w przeciwnym razie wartość FALSE.
+Zwraca wartość TRUE, jeśli pierwszy obiekt jest mniejszy (czyli reprezentuje krótszy czas) niż drugi, w przeciwnym razie FALSE.
 
-##  <a name="operator_lt_eq"></a>  CFileTimeSpan::operator &lt;=
+##  <a name="operator_lt_eq"></a>CFileTimeSpan:: operator&lt;=
 
-Porównuje dwa `CFileTimeSpan` obiektów, aby określić równości lub mniejszy.
+Porównuje `CFileTimeSpan` dwa obiekty, aby określić równość lub mniejszą.
 
 ```
 bool operator<=(CFileTimeSpan span) const throw();
@@ -200,14 +200,14 @@ bool operator<=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*zakres*<br/>
-`CFileTimeSpan` Obiekt do porównania.
+*span*<br/>
+Obiekt `CFileTimeSpan` , który ma zostać porównany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli pierwszy obiekt jest mniejszy od (czyli reprezentuje krótszy okres) lub równe drugiemu, w przeciwnym razie wartość FALSE.
+Zwraca wartość TRUE, jeśli pierwszy obiekt jest mniejszy niż (czyli reprezentuje krótszy czas) lub równy drugiemu, w przeciwnym razie FALSE.
 
-##  <a name="operator_eq"></a>  CFileTimeSpan::operator =
+##  <a name="operator_eq"></a>CFileTimeSpan:: operator =
 
 Operator przypisania.
 
@@ -217,16 +217,16 @@ CFileTimeSpan& operator=(const CFileTimeSpan& span) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*zakres*<br/>
+*span*<br/>
 Element `CFileTimeSpan` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca zaktualizowany `CFileTimeSpan` obiektu.
+Zwraca zaktualizowany `CFileTimeSpan` obiekt.
 
-##  <a name="operator_-_eq"></a>  CFileTimeSpan::operator-=
+##  <a name="operator_-_eq"></a>CFileTimeSpan:: operator-=
 
-Wykonuje odejmowanie `CFileTimeSpan` obiektu, a następnie przypisuje wynik, jak bieżący obiekt.
+Wykonuje odejmowanie `CFileTimeSpan` obiektu i przypisuje wynik do bieżącego obiektu.
 
 ```
 CFileTimeSpan& operator-=(CFileTimeSpan span) throw();
@@ -234,16 +234,16 @@ CFileTimeSpan& operator-=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*zakres*<br/>
+*span*<br/>
 Element `CFileTimeSpan` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca zaktualizowany `CFileTimeSpan` obiektu.
+Zwraca zaktualizowany `CFileTimeSpan` obiekt.
 
-##  <a name="operator_eq_eq"></a>  CFileTimeSpan::operator ==
+##  <a name="operator_eq_eq"></a>CFileTimeSpan:: operator = =
 
-Porównuje dwa `CFileTimeSpan` obiekty pod kątem równości.
+Porównuje `CFileTimeSpan` dwa obiekty pod kątem równości.
 
 ```
 bool operator==(CFileTimeSpan span) const throw();
@@ -251,16 +251,16 @@ bool operator==(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*zakres*<br/>
-`CFileTimeSpan` Obiekt do porównania.
+*span*<br/>
+Obiekt `CFileTimeSpan` , który ma zostać porównany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli obiekty są równe, w przeciwnym razie wartość FALSE.
+Zwraca wartość TRUE, jeśli obiekty są równe, w przeciwnym razie FALSE.
 
-##  <a name="operator_gt"></a>  CFileTimeSpan::operator &gt;
+##  <a name="operator_gt"></a>CFileTimeSpan:: operator&gt;
 
-Porównuje dwa `CFileTimeSpan` obiektów, aby określić wyższy.
+Porównuje `CFileTimeSpan` dwa obiekty w celu określenia większego.
 
 ```
 bool operator>(CFileTimeSpan span) const throw();
@@ -268,16 +268,16 @@ bool operator>(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*zakres*<br/>
-`CFileTimeSpan` Obiekt do porównania.
+*span*<br/>
+Obiekt `CFileTimeSpan` , który ma zostać porównany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli pierwszy obiekt jest większy niż (czyli reprezentuje dłuższy okres czasu) od drugiej, w przeciwnym razie wartość FALSE.
+Zwraca wartość TRUE, jeśli pierwszy obiekt jest większy niż (oznacza to, że dłuższy czas) od drugiego, w przeciwnym razie FALSE.
 
-##  <a name="operator_gt_eq"></a>  CFileTimeSpan::operator &gt;=
+##  <a name="operator_gt_eq"></a>CFileTimeSpan:: operator&gt;=
 
-Porównuje dwa `CFileTimeSpan` obiektów, aby określić równości lub większy.
+Porównuje `CFileTimeSpan` dwa obiekty, aby określić równość lub większą.
 
 ```
 bool operator>=(CFileTimeSpan span) const throw();
@@ -285,16 +285,16 @@ bool operator>=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*zakres*<br/>
-`CFileTimeSpan` Obiekt do porównania.
+*span*<br/>
+Obiekt `CFileTimeSpan` , który ma zostać porównany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli pierwszy obiekt jest większy niż (czyli reprezentuje dłuższy okres czasu) lub równe drugiemu, w przeciwnym razie wartość FALSE.
+Zwraca wartość TRUE, jeśli pierwszy obiekt jest większy niż (oznacza to, że dłuższy czas) lub równy drugi, w przeciwnym razie FALSE.
 
-##  <a name="settimespan"></a>  CFileTimeSpan::SetTimeSpan
+##  <a name="settimespan"></a>CFileTimeSpan:: SetTimeSpan
 
-Wywołaj tę metodę, aby ustawić zakres czasu `CFileTimeSpan` obiektu.
+Wywołaj tę metodę, aby ustawić przedział `CFileTimeSpan` czasu obiektu.
 
 ```
 void SetTimeSpan(LONGLONG nSpan) throw();
@@ -303,11 +303,11 @@ void SetTimeSpan(LONGLONG nSpan) throw();
 ### <a name="parameters"></a>Parametry
 
 *nSpan*<br/>
-Nowa wartość dla zakresu czasu w milisekundach.
+Nowa wartość przedziału czasu (w milisekundach).
 
 ## <a name="see-also"></a>Zobacz także
 
-[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)<br/>
+[FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime)<br/>
 [CFileTime, klasa](../../atl-mfc-shared/reference/cfiletime-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[Klasy współdzielone ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
+[Klasy udostępnione ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

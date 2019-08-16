@@ -1,5 +1,5 @@
 ---
-title: CComObjectNoLock Class
+title: Klasa CComObjectNoLock
 ms.date: 11/04/2016
 f1_keywords:
 - CComObjectNoLock
@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectNoLock class
 ms.assetid: 288c6506-7da8-4127-8d58-7f4bd779539a
-ms.openlocfilehash: 50dc4505c1da8df9efc0c9d0028461ef49c0840e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9253c7495f4d13ed6ce609988251d8abd09592ad
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246303"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497034"
 ---
-# <a name="ccomobjectnolock-class"></a>CComObjectNoLock Class
+# <a name="ccomobjectnolock-class"></a>Klasa CComObjectNoLock
 
-Ta klasa implementuje `IUnknown` nieagregowane obiektu, ale ma nie przyrostu liczbę blokad modułu w konstruktorze.
+Ta klasa implementuje `IUnknown` dla niezagregowanego obiektu, ale nie zwiększa liczby blokad modułu w konstruktorze.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,8 +31,8 @@ class CComObjectNoLock : public Base
 
 #### <a name="parameters"></a>Parametry
 
-*Base*<br/>
-Z klasą pochodną [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak również od innych interfejsu mają być obsługiwane w obiekcie.
+*Opiera*<br/>
+Klasa, pochodząca z [klasy CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), a także z dowolnego innego interfejsu, który ma być obsługiwany w obiekcie.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -49,13 +49,13 @@ Z klasą pochodną [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)
 |----------|-----------------|
 |[CComObjectNoLock::AddRef](#addref)|Zwiększa liczbę odwołań do obiektu.|
 |[CComObjectNoLock::QueryInterface](#queryinterface)|Zwraca wskaźnik do żądanego interfejsu.|
-|[CComObjectNoLock::Release](#release)|Dekrementuje liczbę odwołań do obiektu.|
+|[CComObjectNoLock::Release](#release)|Zmniejsza liczbę odwołań do obiektu.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CComObjectNoLock` jest podobny do [CComObject](../../atl/reference/ccomobject-class.md) , implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) nieagregowane obiektu; jednak `CComObjectNoLock` jest przyrost blokady modułu count w konstruktorze.
+`CComObjectNoLock`jest podobna do [CComObject](../../atl/reference/ccomobject-class.md) w tym, że implementuje [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) dla obiektu niezagregowanego; `CComObjectNoLock` jednak nie zwiększa liczby blokad modułu w konstruktorze.
 
-Używa ATL `CComObjectNoLock` wewnętrznie dla fabryki klas. Ogólnie rzecz biorąc nie użyjesz tej klasy bezpośrednio.
+Biblioteki ATL `CComObjectNoLock` używają wewnętrznie dla fabryk klas. Ogólnie rzecz biorąc, ta klasa nie zostanie użyta bezpośrednio.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -65,9 +65,9 @@ Używa ATL `CComObjectNoLock` wewnętrznie dla fabryki klas. Ogólnie rzecz bior
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcom.h
+**Nagłówek:** atlcom. h
 
-##  <a name="addref"></a>  CComObjectNoLock::AddRef
+##  <a name="addref"></a>CComObjectNoLock:: AddRef
 
 Zwiększa liczbę odwołań do obiektu.
 
@@ -77,11 +77,11 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość, która może być użyteczna, diagnostykę lub testowania.
+Wartość, która może być przydatna w przypadku diagnostyki lub testowania.
 
-##  <a name="ccomobjectnolock"></a>  CComObjectNoLock::CComObjectNoLock
+##  <a name="ccomobjectnolock"></a>CComObjectNoLock::CComObjectNoLock
 
-Konstruktor. W odróżnieniu od [CComObject](../../atl/reference/ccomobject-class.md), nie zwiększa liczbę blokad modułu.
+Konstruktor. W przeciwieństwie do [CComObject](../../atl/reference/ccomobject-class.md), nie zwiększa liczby blokad modułu.
 
 ```
 CComObjectNoLock(void* = NULL);
@@ -89,10 +89,10 @@ CComObjectNoLock(void* = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-<em>Void\*</em><br/>
-[in] Ten parametr nienazwany nie jest używany. Istnieje symetrii z innymi `CComXXXObjectXXX` konstruktorów.
+<em>pozycję\*</em><br/>
+podczas Ten parametr bez nazwy nie jest używany. Istnieje dla symetrii z innymi `CComXXXObjectXXX` konstruktorami.
 
-##  <a name="dtor"></a>  CComObjectNoLock::~CComObjectNoLock
+##  <a name="dtor"></a>CComObjectNoLock:: ~ CComObjectNoLock
 
 Destruktor.
 
@@ -102,9 +102,9 @@ Destruktor.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwalnia wszystkie przydzielone zasoby i wywołania [FinalRelease](ccomobjectrootex-class.md#finalrelease).
+Zwalnia wszystkie przydzieloną zasoby i wywołuje [FinalRelease](ccomobjectrootex-class.md#finalrelease).
 
-##  <a name="queryinterface"></a>  CComObjectNoLock::QueryInterface
+##  <a name="queryinterface"></a>CComObjectNoLock:: QueryInterface
 
 Pobiera wskaźnik do żądanego interfejsu.
 
@@ -115,18 +115,18 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="parameters"></a>Parametry
 
 *IID*<br/>
-[in] Identyfikator interfejsu żądanej.
+podczas Identyfikator żądanego interfejsu.
 
 *ppvObject*<br/>
-[out] Wskaźnik do wskaźnika interfejsu identyfikowane przez *iid*. Jeśli obiekt nie obsługuje ten interfejs *ppvObject* ma wartość NULL.
+określoną Wskaźnik do wskaźnika interfejsu identyfikowanego przez *Identyfikator IID*. Jeśli obiekt nie obsługuje tego interfejsu, *ppvObject* ma wartość null.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
-##  <a name="release"></a>  CComObjectNoLock::Release
+##  <a name="release"></a>CComObjectNoLock:: Release
 
-Dekrementuje liczbę odwołań do obiektu.
+Zmniejsza liczbę odwołań do obiektu.
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -134,8 +134,8 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-W kompilacjach do debugowania `Release` zwraca wartość, która może być użyteczna, diagnostykę lub testowania. W kompilacjach nieprzeznaczonych do debugowania `Release` zawsze zwraca wartość 0.
+W kompilacjach `Release` debugowania zwraca wartość, która może być przydatna w przypadku diagnostyki lub testowania. W kompilacjach `Release` niedebugowanych zawsze zwraca wartość 0.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

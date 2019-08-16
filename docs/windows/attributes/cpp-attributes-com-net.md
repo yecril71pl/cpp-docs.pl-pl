@@ -1,40 +1,40 @@
 ---
-title: Atrybuty C++ dla modelu COM i .NET
+title: Atrybuty języka C++ dla modelu COM i platformy .NET
 ms.custom: index-page
 ms.date: 11/19/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: 9b985799849a268010dff63f9f7bc25e474b365e
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 4885edf57988d5f83b56ba6a71da85877354d3ce
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448515"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491059"
 ---
-# <a name="c-attributes-for-com-and-net"></a>Atrybuty C++ dla modelu COM i .NET
+# <a name="c-attributes-for-com-and-net"></a>Atrybuty języka C++ dla modelu COM i platformy .NET
 
-Firma Microsoft definiuje zestaw atrybutów języka C++, które upraszczają programowanie COM i .NET Framework — programowanie środowiska uruchomieniowego języka wspólnego. Gdy atrybuty zostaną umieszczone w plikach źródłowych, kompilator będzie współpracuje z dostawcą biblioteki dll, Wstaw kod lub zmodyfikować kod w plikach obiektowych wygenerowany. Te atrybuty pomocy w przypadku tworzenia plików .idl, interfejsy, bibliotek typów i innych elementów modelu COM. W zintegrowanego środowiska programistycznego (IDE) atrybutów są obsługiwane przez kreatory i okna właściwości.
+Firma Microsoft definiuje zestaw C++ atrybutów, które upraszczają programowanie obiektów COM i .NET Framework opracowywanie środowiska uruchomieniowego języka wspólnego. Po dołączeniu atrybutów do plików źródłowych kompilator współpracuje z bibliotekami DLL dostawcy, aby wstawić kod lub zmodyfikować kod w wygenerowanych plikach obiektów. Te atrybuty ułatwiają tworzenie plików. idl, interfejsów, bibliotek typów i innych elementów COM. W zintegrowanym środowisku programistycznym (IDE) atrybuty są obsługiwane przez kreatorów i okno Właściwości.
 
-Gdy atrybuty wyeliminować niektóre szczegółowe kodowanie, wymagane do zapisywania obiektów COM, potrzebujesz tła w [podstawy COM](/windows/desktop/com/the-component-object-model) najlepiej je wykorzystać.
+Chociaż atrybuty eliminują niektóre ze szczegółowych kodowania potrzebnych do pisania obiektów COM, potrzebujesz tła dla [podstawowych elementów com](/windows/win32/com/the-component-object-model) , aby najlepiej z nich korzystać.
 
 > [!NOTE]
-> Jeśli szukasz atrybuty standard C++, zobacz [atrybuty](../../cpp/attributes.md).
+> Jeśli szukasz C++ standardowych atrybutów, zobacz [atrybuty](../../cpp/attributes.md).
 
 ## <a name="purpose-of-attributes"></a>Cel atrybutów
 
-Atrybuty rozszerzenia C++ w kierunkach nie jest obecnie możliwe bez przerywania klasycznej struktury języka. Atrybuty zezwalać na dostawców (oddzielne biblioteki dll) do rozszerzenia funkcji języka dynamicznie. Podstawowym celem atrybutów jest uproszczenie tworzenia składników modelu COM, oprócz zwiększenie poziomu wydajności dla deweloperów składników. Atrybuty mogą być stosowane do niemal C++ konstrukcji, takich jak klasy, elementy członkowskie danych lub elementów członkowskich. Wyróżnienie korzyści zapewniane przez nowej technologii jest następująca:
+Atrybuty zwiększają C++ się w kierunkach, które nie są obecnie dostępne bez przerywania klasycznej struktury języka. Atrybuty Zezwalaj dostawcom (oddzielnym Bibliotekom DLL) na dynamiczne zwiększanie funkcjonalności języka. Głównym celem atrybutów jest uproszczenie tworzenia składników modelu COM, a także zwiększenie poziomu produktywności dla deweloperów składnika. Atrybuty mogą być stosowane do niemal każdej C++ konstrukcji, takich jak klasy, składowe danych lub funkcje członkowskie. Poniżej przedstawiono wyróżnienie korzyści oferowanych przez tę nową technologię:
 
-- Opisuje dobrze znanych i proste konwencji wywoływania.
+- Ujawnia znaną i prostą konwencję wywoływania.
 
-- Zastosowań wstawiony kod, który w przeciwieństwie do makra, rozpoznawanym przez debuger.
+- Używa wstawionego kodu, który, w przeciwieństwie do makr, jest rozpoznawany przez debuger.
 
-- Umożliwia łatwe tworzenie wartości pochodnych z klas bazowych bez szczegółów implementacji uciążliwe.
+- Umożliwia łatwe wyprowadzanie z klas bazowych bez uciążliwości szczegółów implementacji.
 
-- Zastępuje dużą ilość kodu języka IDL wymagane przez składnik COM za pomocą kilku atrybutów zwięzły.
+- Zastępuje dużą ilość kodu IDL wymaganego przez składnik COM przy użyciu kilku zwięzłych atrybutów.
 
-Na przykład, aby zaimplementować obiekt sink zdarzenia prostego ogólne klasy ATL, należy zastosować [event_receiver](event-receiver.md) atrybutu do określonej klasy, takie jak `CMyReceiver`. `event_receiver` Atrybutu są następnie kompilowane przez firmę Microsoft C++ kompilatora, który wstawia prawidłowego kodu do pliku obiektu.
+Na przykład w celu zaimplementowania prostego ujścia zdarzeń dla generycznej klasy ATL można zastosować atrybut [event_receiver](event-receiver.md) do określonej klasy, takiej jak `CMyReceiver`. Ten `event_receiver` atrybut jest następnie kompilowany przez kompilator firmy C++ Microsoft, który wstawia odpowiedni kod do pliku obiektu.
 
 ```cpp
 [event_receiver(com)]
@@ -45,60 +45,60 @@ class CMyReceiver
 }
 ```
 
-Następnie można skonfigurować `CMyReceiver` metody `handler1` i `handler2` do obsługi zdarzeń (przy użyciu wewnętrznej funkcji [__hook](../../cpp/hook.md)) ze źródła zdarzeń, który można utworzyć przy użyciu [event_source](event-source.md).
+`CMyReceiver` Następnie można skonfigurować metody `handler1` i `handler2` obsłużyć zdarzenia (przy użyciu funkcji wewnętrznej [__hook](../../cpp/hook.md)) ze źródła zdarzeń, które można utworzyć przy użyciu [event_source](event-source.md).
 
 ## <a name="basic-mechanics-of-attributes"></a>Podstawowa mechanika atrybutów
 
-Istnieją trzy sposoby, aby wstawić atrybuty do projektu. Po pierwsze można wstawić je ręcznie w kodzie źródłowym. Po drugie można wstawić je przy użyciu siatki właściwości obiektu w projekcie. Na koniec można wstawić je przy użyciu różnych kreatorów. Aby uzyskać więcej informacji na temat korzystania z **właściwości** okna i różne kreatory, zobacz [projektów programu Visual Studio — C++ ](../../build/creating-and-managing-visual-cpp-projects.md).
+Istnieją trzy sposoby wstawiania atrybutów do projektu. Najpierw można wstawić je ręcznie do kodu źródłowego. Następnie można wstawić je za pomocą siatki właściwości obiektu w projekcie. Na koniec można je wstawić przy użyciu różnych kreatorów. Aby uzyskać więcej informacji na temat korzystania z okna **Właściwości** i różnych kreatorów, zobacz [Visual Studio C++projects- ](../../build/creating-and-managing-visual-cpp-projects.md).
 
-Jako wcześniej, gdy projekt jest kompilowany, w którym kompilator analizuje każdego pliku źródłowego języka C++, tworzenie pliku obiektu. Jednak gdy kompilator napotka atrybutu, jest analizowany i składniowo zweryfikowane. Kompilator dynamicznie wywołuje dostawcę atrybutu Wstaw kod lub wprowadzić inne zmiany w czasie kompilacji. Implementacja dostawcy różni się w zależności od typu atrybutu. Na przykład związane z ATL atrybuty są implementowane przez Atlprov.dll.
+Tak jak wcześniej, podczas kompilowania projektu kompilator analizuje każdy C++ plik źródłowy, generując plik obiektu. Jeśli jednak kompilator napotka atrybut, jest on analizowany i syntaktycznie zweryfikowany. Następnie kompilator dynamicznie wywołuje dostawcę atrybutów, aby wstawić kod lub wprowadzić inne modyfikacje w czasie kompilacji. Implementacja dostawcy różni się w zależności od typu atrybutu. Na przykład atrybuty związane z ATL są implementowane przez Atlprov. dll.
 
-Na poniższym rysunku pokazano relację między kompilatora i dostawcy atrybutu.
+Na poniższej ilustracji przedstawiono relacje między kompilatorem a dostawcą atrybutów.
 
-![Atrybut komunikacji](../media/vccompattrcomm.gif "komunikacji atrybutu")
+![Komunikacja atrybutów składników](../media/vccompattrcomm.gif "Komunikacja atrybutów składników")
 
 > [!NOTE]
-> Użycie atrybutu nie zmienia zawartość pliku źródłowego. Jedyną sytuacją, w których atrybut wygenerowanego kodu jest widoczny jest podczas sesji debugowania. Ponadto dla każdego pliku źródłowego w projekcie można wygenerować plik tekstowy, który wyświetla wyniki podstawienia atrybutu. Aby uzyskać więcej informacji na temat tej procedury, zobacz [/Fx (Scal wprowadzony kod)](../../build/reference/fx-merge-injected-code.md) i [debugowania kodu wprowadzony](/visualstudio/debugger/how-to-debug-injected-code).
+> Użycie atrybutów nie powoduje zmiany zawartości pliku źródłowego. Jedyny wygenerowany kod atrybutu jest widoczny podczas debugowania sesji. Ponadto dla każdego pliku źródłowego w projekcie można wygenerować plik tekstowy, który wyświetla wyniki podstawienia atrybutu. Aby uzyskać więcej informacji na temat tej procedury, zobacz [/FX (Scalanie wstrzykniętego kodu)](../../build/reference/fx-merge-injected-code.md) i [debugowanie wstrzykniętego kodu](/visualstudio/debugger/how-to-debug-injected-code).
 
-Podobnie jak większość konstrukcji języka C++ atrybuty mają zestaw właściwości, który definiuje ich prawidłowego użycia. To jest określany jako kontekst atrybutu i został rozwiązany w tabeli kontekstu atrybutów dla każdego atrybutu odwołanie do tematu. Na przykład [coclass](coclass.md) atrybut tylko można stosować do istniejącej klasy lub struktury, w przeciwieństwie do [cpp_quote —](cpp-quote.md) atrybut, który można wstawić w dowolnym miejscu w obrębie C++ pliku źródłowego.
+Podobnie jak C++ większość konstrukcji, atrybuty mają zestaw cech, który definiuje ich prawidłowe użycie. Jest to nazywane kontekstem atrybutu i jest rozwoływany w tabeli kontekstowej atrybutu dla każdego tematu odwołania do atrybutu. Na przykład atrybut [coclass](coclass.md) może być stosowany tylko do istniejącej klasy lub struktury, w przeciwieństwie do atrybutu [cpp_quote](cpp-quote.md) , który można wstawić w dowolnym miejscu w pliku C++ źródłowym.
 
 ## <a name="building-an-attributed-program"></a>Kompilowanie programu opartego na atrybutach
 
-Po umieszczeniu wizualizacji C++ atrybuty do kodu źródłowego, może być Microsoft C++ kompilator generuje plik biblioteki i .idl typu dla Ciebie. Konsolidator następujące opcje pomagają tworzyć plików .tlb i .idl:
+Po umieszczeniu atrybutów wizualnych C++ w kodzie źródłowym możesz chcieć, aby kompilator firmy Microsoft C++ generował plik biblioteki typów i IDL. Poniższe opcje konsolidatora ułatwiają tworzenie plików TLB i IDL:
 
-- [/ IDLOUT](../../build/reference/idlout-name-midl-output-files.md)
+- [/IDLOUT](../../build/reference/idlout-name-midl-output-files.md)
 
-- [/ IGNOREIDL](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
+- [/IGNOREIDL](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
 
-- [/ MIDL](../../build/reference/midl-specify-midl-command-line-options.md)
+- [/MIDL](../../build/reference/midl-specify-midl-command-line-options.md)
 
-- [/ TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)
+- [/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)
 
-Niektóre projekty zawierają wiele plików .idl niezależne. Są one używane do utworzenia dwóch lub więcej plików .tlb i opcjonalnie powiązać je w bloku zasobów. W tym scenariuszu nie jest obecnie obsługiwane w programie Visual C++.
+Niektóre projekty zawierają wiele niezależnych plików. idl. Są one używane do tworzenia dwóch lub więcej plików. tlb i opcjonalnie powiązania ich z blokiem zasobów. Ten scenariusz nie jest obecnie obsługiwany w programie C++Visual.
 
-Ponadto konsolidator Visual C++ zwróci wszystkie informacje związane z IDL atrybut do jednego pliku MIDL. Będzie sposób generowania dwie biblioteki typów z pojedynczego projektu.
+Ponadto, konsolidator wizualny C++ będzie wyprowadzał wszystkie informacje o atrybutach IDL do pojedynczego pliku MIDL. Nie będzie można generować dwóch bibliotek typów z pojedynczego projektu.
 
-## <a name="contexts"></a> Konteksty atrybutu
+## <a name="contexts"></a>Konteksty atrybutu
 
-Atrybuty C++ można opisać za pomocą cztery pola podstawowe: element docelowy, mogą być stosowane do (**dotyczy**), jeśli są one powtarzalne, czy nie (**Repeatable**), wymagane obecność innych atrybutów ( **Atrybuty wymagane**) i niezgodności z innymi atrybutami (**nieprawidłowe atrybuty**). Te pola są wymienione w towarzyszącej mu tabeli, w artykule dotyczącym każdego atrybutu. Poniżej opisano każde z tych pól.
+C++atrybuty można opisać przy użyciu czterech podstawowych pól: cel, do którego można zastosować (**dotyczy**), jeśli są one powtarzalne lub nie (**powtarzalne**), wymagana obecność innych atrybutów (**wymaganych atrybutów**) i niezgodności z innymi atrybutami (**nieprawidłowe atrybuty**). Te pola są wymienione w tabeli towarzyszącej w temacie odwołania do poszczególnych atrybutów. Każde z tych pól zostało opisane poniżej.
 
 ### <a name="applies-to"></a>Dotyczy:
 
-To pole zawiera opis różnych elementów języka C++, które prawne elementów docelowych dla określonego atrybutu. Na przykład jeśli atrybut "class" Określa **dotyczy** pola, oznacza to, że ten atrybut można dotyczą wyłącznie prawne klasy języka C++. Jeśli ten atrybut jest stosowany do funkcji składowej klasy, spowoduje błąd składni.
+To pole opisuje różne C++ elementy języka, które są dozwolonymi celami dla określonego atrybutu. Na przykład, jeśli atrybut określa "Class" w polu **dotyczy** , oznacza to, że atrybut może być stosowany tylko do klasy prawnej C++ . Jeśli atrybut jest stosowany do funkcji składowej klasy, wynikiem może być błąd składniowy.
 
-Aby uzyskać więcej informacji, zobacz [atrybuty w zależności od użycia](attributes-by-usage.md).
+Aby uzyskać więcej informacji, zobacz [atrybuty według użycia](attributes-by-usage.md).
 
 ### <a name="repeatable"></a>Powtarzalne
 
-To pole określa, czy można wielokrotnie zastosować atrybutu, do tej samej wartości docelowej. Większość atrybutów nie są powtarzalne.
+To pole określa, czy atrybut może być wielokrotnie stosowany do tego samego obiektu docelowego. Większość atrybutów nie jest powtarzana.
 
-### <a name="required-attributes"></a>Wymaganych atrybutów
+### <a name="required-attributes"></a>Wymagane atrybuty
 
-To pole zawiera inne atrybuty, które muszą być obecne (co oznacza, że są stosowane do tej samej wartości docelowej) dla określonego atrybutu działać prawidłowo. Jest nietypowy dla atrybutu powoduje, że wszystkie wpisy dla tego pola.
+To pole zawiera listę innych atrybutów, które muszą być obecne (to jest stosowane do tego samego obiektu docelowego), aby określony atrybut działał prawidłowo. Dla atrybutu nie można mieć żadnych wpisów dla tego pola.
 
 ### <a name="invalid-attributes"></a>Nieprawidłowe atrybuty
 
-To pole zawiera atrybuty, które nie są zgodne z określonego atrybutu. Jest nietypowy dla atrybutu powoduje, że wszystkie wpisy dla tego pola.
+To pole zawiera listę innych atrybutów, które są niezgodne z określonym atrybutem. Dla atrybutu nie można mieć żadnych wpisów dla tego pola.
 
 ## <a name="in-this-section"></a>W tej sekcji
 

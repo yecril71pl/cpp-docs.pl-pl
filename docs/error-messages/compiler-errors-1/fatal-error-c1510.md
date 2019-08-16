@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - C1510
 ms.assetid: 150c827f-9514-41a9-8d7e-82f820749bcb
-ms.openlocfilehash: f05f79ea78958a7d7a64f24bdce2d1151b93cdfb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33c17a3099f4aed99cc26579d0e65c4a350b4268
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208508"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501090"
 ---
 # <a name="fatal-error-c1510"></a>Błąd krytyczny C1510
 
-Nie można otworzyć zasobu językowego clui.dll
+Nie można otworzyć zasobu języka językowego clui. dll.
 
-Kompilator nie może załadować biblioteki DLL zasobów językowych.
+Kompilator nie może załadować biblioteki DLL zasobów języka.
 
-Istnieją dwie typowe przyczyny tego problemu. Korzystając z 32-bitowym kompilatorem i narzędziami, może zostać wyświetlony ten błąd w przypadku dużych projektów, które korzystać z więcej niż 2GB pamięci w czasie łącza. Rozwiązania w 64-bitowych systemach Windows jest użycie natywnego 64-bitowych lub cross kompilator i narzędzia do generowania kodu. To wykorzystuje większy obszar pamięci dostępne dla aplikacji 64-bitowych. Jeśli musisz użyć 32-bitowego kompilatora, ponieważ został uruchomiony w systemie 32-bitowe, w niektórych przypadkach można zwiększyć ilość dostępnej pamięci do konsolidatora do 3GB. Aby uzyskać więcej informacji, zobacz [dostrajania 4 GB: BCDEdit i pliku Boot.ini](https://msdn.microsoft.com/library/vs/alm/bb613473) i [BCDEdit/set increaseuserva](https://msdn.microsoft.com/library/ff542202.aspx) polecenia.
+Istnieją dwie typowe przyczyny tego problemu. W przypadku korzystania z 32-bitowego kompilatora i narzędzi, ten błąd może pojawić się w przypadku dużych projektów, które używają więcej niż 2 GB pamięci podczas łączenia. Możliwym rozwiązaniem w 64-bitowych systemach Windows jest użycie z 64-bitowym kompilatorem natywnym lub krzyżowym oraz narzędzi do generowania kodu. Umożliwia to wykorzystanie większej ilości miejsca dostępnego w pamięci dla aplikacji 64-bitowych. Jeśli musisz użyć 32-bitowego kompilatora, ponieważ Pracujesz w systemie 32-bitowym, w niektórych przypadkach można zwiększyć ilość pamięci dostępnej dla konsolidatora do WŁĄCZONĄ. Aby uzyskać więcej informacji, [Zobacz 4-gigabajtowe dostrajanie: Bcdedit i Boot. ini](/windows/win32/memory/4-gigabyte-tuning) oraz polecenie [bcdedit/set IncreaseUserVa](/windows-hardware/drivers/devtest/bcdedit--set) .
 
-Częstą przyczyną jest uszkodzone lub niekompletność instalacji programu Visual Studio. W takim przypadku uruchom Instalatora ponownie, aby naprawić lub zainstalować ponownie program Visual Studio.
+Inną typową przyczyną jest uszkodzenie lub niepełna instalacja programu Visual Studio. W takim przypadku ponownie uruchom Instalatora, aby naprawić lub ponownie zainstalować program Visual Studio.

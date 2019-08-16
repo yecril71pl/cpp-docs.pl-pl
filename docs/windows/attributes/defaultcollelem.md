@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - defaultcollelem attribute
 ms.assetid: 3dbbd293-8b83-4f70-a36b-64cc1d0b6713
-ms.openlocfilehash: be4ea7097bd811444fca050525338931867998d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8848562c1470198d3f2a1b6f285510bcbb43d7c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148058"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501658"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
 
-Używane do optymalizacji kodu języka Visual Basic.
+Używane do optymalizacji kodu Visual Basic.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,11 +25,11 @@ Używane do optymalizacji kodu języka Visual Basic.
 
 ## <a name="remarks"></a>Uwagi
 
-**Defaultcollelem —** atrybut C++ ma taką samą funkcjonalność jak [defaultcollelem —](/windows/desktop/Midl/defaultcollelem) atrybutów w MIDL.
+Atrybut **defaultcollelem** C++ ma takie same funkcje jak atrybut [defaultcollelem](/windows/win32/Midl/defaultcollelem) MIDL.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod przedstawia metodę interfejsu przy użyciu **defaultcollelem —** atrybutu:
+Poniższy kod przedstawia metodę interfejsu przy użyciu atrybutu **defaultcollelem** :
 
 ```cpp
 // cpp_attr_ref_defaultcollelem.cpp
@@ -50,12 +50,12 @@ __interface IMyForm
 
 |||
 |-|-|
-|**Dotyczy**|Metody interfejsu|
+|**Dotyczy**|Interface — Metoda|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 

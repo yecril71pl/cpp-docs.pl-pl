@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: 14e8da573621f712ae9e27647122d305be54b7b0
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 8151550dafdd1bdf8593d555008af387cf548bc8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916681"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502622"
 ---
 # <a name="cshellmanager-class"></a>Klasa CShellManager
 
@@ -113,7 +113,7 @@ podczas Ciąg, który zawiera folder, który jest wybierany domyślnie po wyświ
 podczas Tytuł okna dialogowego.
 
 *ulFlags*<br/>
-podczas Flagi określające opcje okna dialogowego. Szczegółowy opis można znaleźć w temacie [BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-browseinfoa) .
+podczas Flagi określające opcje okna dialogowego. Szczegółowy opis można znaleźć w temacie [BROWSEINFO](/windows/win32/api/shlobj_core/ns-shlobj_core-browseinfow) .
 
 *piFolderImage*<br/>
 określoną Wskaźnik do wartości całkowitej, w której Metoda zapisuje indeks obrazu wybranego folderu.
@@ -156,7 +156,7 @@ Wskaźnik do listy nowy element, jeśli funkcja się powiedzie, w przeciwnym raz
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda tworzy nowy [ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-itemidlist) wystarczająco duży, aby zawierał zarówno *pidl1* , jak i *pidl2*. Następnie kopiuje *pidl1* i *pidl2* do nowej listy.
+Ta metoda tworzy nowy [ITEMIDLIST](/windows/win32/api/shtypes/ns-shtypes-itemidlist) wystarczająco duży, aby zawierał zarówno *pidl1* , jak i *pidl2*. Następnie kopiuje *pidl1* i *pidl2* do nowej listy.
 
 ##  <a name="copyitem"></a>CShellManager::CopyItem
 

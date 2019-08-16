@@ -53,16 +53,16 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: 72300f754015e54daf14863ca2ae677bde8f7d1a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d31192a25cce86dad6f8e1e8b0258a457d0a5436
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62289692"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500136"
 ---
-# <a name="exec-wexec-functions"></a>_exec, _wexec — Funkcje
+# <a name="_exec-_wexec-functions"></a>_exec, _wexec — Funkcje
 
-Każda funkcja w tej rodzinie ładuje i uruchamia nowy proces:
+Każda funkcja w tej rodzinie ładuje i wykonuje nowy proces:
 
 |||
 |-|-|
@@ -71,18 +71,18 @@ Każda funkcja w tej rodzinie ładuje i uruchamia nowy proces:
 |[_execlp, _wexeclp](../c-runtime-library/reference/execlp-wexeclp.md)|[_execvp, _wexecvp](../c-runtime-library/reference/execvp-wexecvp.md)|
 |[_execlpe, _wexeclpe](../c-runtime-library/reference/execlpe-wexeclpe.md)|[_execvpe, _wexecvpe](../c-runtime-library/reference/execvpe-wexecvpe.md)|
 
-Litery na końcu nazwy funkcji określa odmiany.
+Litera na końcu nazwy funkcji określa odmianę.
 
-|_exec — funkcja sufiks|Opis|
+|sufiks funkcji _exec|Opis|
 |----------------------------|-----------------|
-|`e`|`envp`, tablica wskaźników do ustawienia środowiska, jest przekazywany do nowego procesu.|
-|`l`|Argumenty wiersza polecenia są przekazywane oddzielnie do `_exec` funkcji. Zazwyczaj używany, gdy liczba parametrów do nowego procesu jest znana z wyprzedzeniem.|
-|`p`|`PATH` Zmienna środowiskowa jest używany do znalezienia pliku do wykonania.|
-|`v`|`argv`, tablica wskaźników do argumentów wiersza polecenia, jest przekazywany do `_exec`. Zazwyczaj używany, gdy liczba parametrów do nowego procesu jest zmienna.|
+|`e`|`envp`Tablica wskaźników do ustawień środowiska jest przenoszona do nowego procesu.|
+|`l`|Argumenty wiersza polecenia są przesyłane pojedynczo do `_exec` funkcji. Zwykle używany, gdy liczba parametrów nowego procesu jest znana z wyprzedzeniem.|
+|`p`|`PATH`Zmienna środowiskowa służy do znajdowania pliku do wykonania.|
+|`v`|`argv`Tablica wskaźników do argumentów wiersza polecenia jest przenoszona do `_exec`. Zwykle używany, gdy liczba parametrów nowego procesu jest zmienna.|
 
 ## <a name="remarks"></a>Uwagi
 
-Każdy `_exec` funkcji ładuje i uruchamia nowy proces. Wszystkie `_exec` funkcje używają tej samej funkcji systemu operacyjnego ([CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa)). `_exec` Funkcje automatycznie obsługiwać argumenty ciągu znaków wielobajtowych zgodnie z potrzebami, rozpoznawaniu sekwencje znaków wielobajtowych zgodnie z aktualnie używaną stroną kodową wielobajtowe. `_wexec` Funkcje są wersjami znaków dwubajtowych `_exec` funkcji. `_wexec` Funkcje zachowują się identycznie do ich `_exec` rodziny odpowiedniki z tą różnicą, że mogą nie obsługiwać ciągi znaków wielobajtowych.
+Każda `_exec` funkcja ładuje i wykonuje nowy proces. Wszystkie `_exec` funkcje używają tej samej funkcji systemu operacyjnego ([CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw)). `_exec` Funkcje automatycznie obsługują argumenty ciągu znaków wielobajtowych, aby rozpoznawać sekwencje znaków wielobajtowych zgodnie z aktualnie używaną stroną kodową. Funkcje są wersjami `_exec` znaków dwubajtowych funkcji. `_wexec` Funkcje zachowują się identycznie ze `_exec` swoimi odpowiednikami rodzin, z tą różnicą, że nie obsługują ciągów znaków wielobajtowych. `_wexec`
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -97,29 +97,29 @@ Każdy `_exec` funkcji ładuje i uruchamia nowy proces. Wszystkie `_exec` funkcj
 |`_texecvp`|`_execvp`|`_execvp`|`_wexecvp`|
 |`_texecvpe`|`_execvpe`|`_execvpe`|`_wexecvpe`|
 
-`cmdname` Parametr określa pliku do wykonania jako nowy proces. Można określić pełną ścieżkę (z katalogu głównego), ścieżka częściowa (od bieżącego katalogu roboczego) lub nazwę pliku. Jeśli `cmdname` nie ma rozszerzenie nazwy pliku lub nie kończą się kropką (.), `_exec` funkcji wyszukiwania dla wskazanego pliku. Jeśli wyszukiwanie zakończy się niepowodzeniem, próbuje taką samą nazwę z rozszerzeniem nazwy pliku .com, a następnie .exe, .bat i rozszerzenia nazw plików .cmd. Jeśli `cmdname` ma rozszerzenie nazwy pliku, tylko to rozszerzenie jest używany w wyszukiwaniu. Jeśli `cmdname` kończy się kropką, `_exec` funkcja wyszukuje `cmdname` bez rozszerzenia nazwy pliku. `_execlp`, `_execlpe`, `_execvp`, i `_execvpe` Wyszukaj `cmdname` (przy użyciu tych samych procedur) w katalogi określone przez `PATH` zmiennej środowiskowej. Jeśli `cmdname` zawiera specyfikator dysku ani żadnych ukośników (to znaczy, jeśli jest ścieżką względną), `_exec` wywołanie przeszukuje tylko dla określonego pliku; nie zostanie przeszukana ścieżka.
+`cmdname` Parametr określa plik, który ma być wykonywany jako nowy proces. Można określić pełną ścieżkę (z katalogu głównego), ścieżkę częściową (z bieżącego katalogu roboczego) lub nazwę pliku. Jeśli `cmdname` nazwa pliku nie ma rozszerzenia lub nie kończy się kropką (.) `_exec` , funkcja szuka nazwanego pliku. Jeśli wyszukiwanie nie powiedzie się, próbuje ona tę samą nazwę podstawową z rozszerzeniem nazwy pliku. com, a następnie z rozszerzeniami. exe,. bat i. cmd. Jeśli `cmdname` ma rozszerzenie nazwy pliku, tylko to rozszerzenie jest używane w wyszukiwaniu. Jeśli `cmdname` `cmdname` zostanie `_exec` zakończona kropką, funkcja szuka bez rozszerzenia nazwy pliku. `_execlp`, `_execlpe`, `_execvp`i wyszukiwania(`cmdname` przy użyciu tych samych procedur) w katalogach określonych przez zmienną środowiskową. `PATH` `_execvpe` Jeśli `cmdname` zawiera specyfikator dysku lub dowolne ukośniki (to oznacza, że jeśli jest ścieżką względną) `_exec` , wywołanie przeszukuje tylko określony plik; ścieżka nie jest przeszukiwana.
 
-Parametry są przekazywane do nowy proces, przekazując co najmniej jednego wskaźnika ciągów znaków jako parametry w `_exec` wywołania. Te ciągi znaków formularza listy parametrów dla nowego procesu. Łączna długość ustawień dziedziczonych środowiska i ciągów znaków tworzących lista parametrów dla nowy proces nie może przekraczać 32 kilobajtów. Kończącego znaku null (\0) dla każdego ciągu nie znajduje się w liczbie, ale są zliczane znaków spacji (wstawiany automatycznie do oddzielania parametrów).
+Parametry są przesyłane do nowego procesu przez nadanie co najmniej jednego wskaźnika do ciągów znaków jako parametrów w `_exec` wywołaniu. Te ciągi znaków tworzą listę parametrów dla nowego procesu. Łączna długość dziedziczonych ustawień środowiska i ciągów tworzących listę parametrów dla nowego procesu nie może przekraczać 32 kilobajtów. Kończący znak null (' \ 0 ') dla każdego ciągu nie jest uwzględniony w liczniku, ale zliczane są znaki spacji (wstawiane automatycznie w celu oddzielenia parametrów).
 
 > [!NOTE]
->  Osadzone w ciągach miejsca do magazynowania może spowodować nieoczekiwane zachowanie; na przykład przekazanie `_exec` ciąg `"hi there"` spowoduje w nowym procesie pobierania dwa argumenty `"hi"` i `"there"`. Jeśli celem było zapewnienie nowy proces, otwórz plik o nazwie "Cześć", proces może zakończyć się niepowodzeniem. Można tego uniknąć przez cytowanie ciągu: `"\"hi there\""`.
+>  Spacje osadzone w ciągach mogą spowodować nieoczekiwane zachowanie; na przykład przekazanie `_exec` ciągu `"hi there"` spowoduje powstanie nowego `"hi"` procesu pobierającego dwa argumenty i `"there"`. Jeśli chcesz, aby nowy proces otworzył plik o nazwie "Witaj tam", proces zakończy się niepowodzeniem. Można to uniknąć przez wyrażenie Quote ciągu: `"\"hi there\""`.
 
 > [!IMPORTANT]
->  Nie przekazuj dane wejściowe użytkownika do `_exec` jawnie sprawdzeniem jego zawartości. `_exec` spowoduje wywołanie [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) więc pamiętać o tej ścieżce niekwalifikowanych nazw może prowadzić do potencjalnych luk w zabezpieczeniach.
+>  Nie przekazuj danych wejściowych użytkownika do `_exec` bez jawnego sprawdzania jego zawartości. `_exec`spowoduje wywołanie metody [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw) , dlatego należy pamiętać, że niekwalifikowane nazwy ścieżek mogą prowadzić do potencjalnych luk w zabezpieczeniach.
 
-`_exec` Funkcje sprawdzają poprawność swoich parametrów. Oczekiwano, parametry są wskaźniki o wartości null, puste ciągi, czy argument jest pominięty, `_exec` funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają `errno` do `EINVAL` i zwracają wartość -1. Żaden nowy proces jest wykonywany.
+`_exec` Funkcje sprawdzają poprawność swoich parametrów. Jeśli oczekiwane parametry mają wskaźniki o wartości null, puste ciągi lub pominięte `_exec` , funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają `errno` na `EINVAL` i zwracają wartość-1. Żaden nowy proces nie jest wykonywany.
 
-Wskaźniki argument mogą być przekazywane jako oddzielne parametry (w `_execl`, `_execle`, `_execlp`, i `_execlpe`) lub jako tablicę wskaźników (w `_execv`, `_execve`, `_execvp`, i `_execvpe`). Co najmniej jeden parametr `arg0`, muszą zostać przekazane do nowego procesu; ten parametr jest `argv`[0] nowego procesu. Zazwyczaj ten parametr jest kopią `cmdname`. (Innej wartości nie generuje błędu).
+Wskaźniki argumentów mogą być przesyłane jako osobne parametry (w `_execl` `_execlp`, `_execle`, i `_execvp` `_execlpe`) lub jako tablica wskaźników (w `_execv` `_execve`,, i `_execvpe`). Co najmniej jeden parametr `arg0`,,, musi zostać przesłany do nowego procesu; ten parametr to `argv`[0] nowego procesu. Zazwyczaj ten parametr jest kopią `cmdname`. (Inna wartość nie powoduje błędu).
 
-`_execl`, `_execle`, `_execlp`, I `_execlpe` wywołania są zwykle używane, gdy liczba parametrów jest znana z wyprzedzeniem. Parametr `arg0` jest zazwyczaj wskaźnikiem do `cmdname`. Parametry `arg1` za pośrednictwem `argn` wskaż ciągów znaków tworzących nowe listy parametrów. Wykonaj wskaźnikiem typu null `argn` aby zaznaczyć koniec listy parametrów.
+`_execle` Wywołania,,`_execlp`i są`_execlpe` zwykle używane, gdy liczba parametrów jest znana z wyprzedzeniem. `_execl` Parametr `arg0` jest zwykle wskaźnikiem do `cmdname`. `arg1` Parametry`argn` wskazujące na ciągi znaków tworzące nową listę parametrów. Wskaźnik o wartości null musi `argn` następować po końcu listy parametrów.
 
-`_execv`, `_execve`, `_execvp`, I `_execvpe` wywołania są pomocne, gdy liczba parametrów do nowego procesu jest zmienna. Wskaźników do parametrów są przekazywane jako tablica, `argv`. Parametr `argv`[0] jest zazwyczaj wskaźnikiem do `cmdname`. Parametry `argv`[1] za pomocą `argv`[`n`] wskaż ciągów znaków tworzących nowe listy parametrów. Parametr `argv`[`n`+ 1] musi być **NULL** wskaźnik, aby zaznaczyć koniec listy parametrów.
+`_execve` Wywołania,,`_execvp`i są`_execvpe` przydatne, gdy liczba parametrów nowego procesu jest zmienna. `_execv` Wskaźniki do parametrów są przenoszone jako tablica, `argv`. Parametr `argv`[0] jest zwykle wskaźnikiem do `cmdname`. Parametry `argv`[1] do `argv`[`n`] wskazują ciągi znaków tworzące nową listę parametrów. Parametr `argv`[`n`+ 1] musi być pustym wskaźnikiem, aby można było oznaczyć koniec listy parametrów.
 
-Otwórz pliki, które są, kiedy `_exec` zostanie nawiązane połączenie, pozostają otwarte w nowym procesie. W `_execl`, `_execlp`, `_execv`, i `_execvp` wywołań, nowy proces dziedziczy środowisko procesu wywołującego. `_execle`, `_execlpe`, `_execve`, i `_execvpe` wywołania wpływu na środowisko, nowy proces, przekazując listę ustawień środowiska za pomocą `envp` parametru. `envp` Tablica wskaźników znaków każdego elementu (z wyjątkiem ostatnim elementem) wskazuje na ciąg zakończony znakiem null zdefiniować zmienną środowiskową. Taki ciąg ma zwykle postać `NAME` = `value` gdzie `NAME` to nazwa zmiennej środowiskowej i `value` jest wartość ciągu, do którego ustawiono tę zmienną. (Należy pamiętać, że `value` nie jest ujęty w znaki podwójnego cudzysłowu.) Końcowy element `envp` tablicy powinny być **NULL**. Gdy `envp` jest **NULL**, nowy proces dziedziczy ustawienia środowiska procesu wywołującego.
+Pliki, które są otwarte, `_exec` gdy nastąpi pozostawanie otwarte w nowym procesie. W `_execl`, `_execlp`, ,`_execv` i`_execvp` wywołania, nowy proces dziedziczy środowisko procesu wywołującego. `_execle`, `_execlpe`, `_execve`, `envp` i `_execvpe` wywołuje zmiany środowiska dla nowego procesu przez przekazanie listy ustawień środowiska za pomocą parametru. `envp`jest tablicą wskaźników znakowych, każdy element (z wyjątkiem elementu końcowego) wskazuje na ciąg zakończony znakiem null definiujący zmienną środowiskową. Taki ciąg ma `NAME` zwykle postać = `value` , gdzie `NAME` jest nazwą zmiennej środowiskowej i `value` jest wartością ciągu, do której ta zmienna jest ustawiona. (Należy zauważyć `value` , że nie jest ujęty w znaki podwójnego cudzysłowu). Końcowy element `envp` tablicy powinien mieć **wartość null**. Gdy `envp` sama ma **wartość null**, nowy proces dziedziczy ustawienia środowiska procesu wywołującego.
 
-Program wykonywane przy użyciu jednego z `_exec` tak, jakby pole Maksymalna alokacja w nagłówku pliku .exe programu zostały ustawione na wartość domyślną 0xFFFFH funkcji zawsze jest ładowany do pamięci.
+Program wykonany przy użyciu jednej z `_exec` funkcji jest zawsze ładowany do pamięci, tak jakby pole maksymalnego przydziału w nagłówku pliku exe programu miało ustawioną wartość domyślną 0xFFFFH.
 
-`_exec` Wywołania nie zachowuj tryby tłumaczenia otwartych plików. Jeśli nowy proces, należy użyć plików dziedziczone z procesu wywołującego, użyj [_setmode —](../c-runtime-library/reference/setmode.md) procedury, aby ustawić tryb translacji tych plików do żądanego trybu. Należy jawnie opróżniania (przy użyciu `fflush` lub `_flushall`) lub zamknąć dowolny strumień przed `_exec` wywołania funkcji. Ustawienia sygnału nie są zachowywane w nowych procesów, które są tworzone przez wywołania `_exec` procedury. Ustawienia sygnału są resetowane do wartości domyślnych w nowym procesie.
+`_exec` Wywołania nie zachowują trybów tłumaczenia otwartych plików. Jeśli nowy proces musi używać plików dziedziczonych z procesu wywołującego, użyj procedury [_setmode](../c-runtime-library/reference/setmode.md) , aby ustawić tryb tłumaczenia tych plików na żądany tryb. Musisz jawnie opróżniać (przy `fflush` użyciu `_flushall`lub) lub `_exec` zamknąć wszystkie strumienie przed wywołaniem funkcji. Ustawienia sygnału nie są zachowywane w nowych procesach, które są tworzone `_exec` przez wywołania procedur. Ustawienia sygnału są resetowane do ustawień domyślnych w nowym procesie.
 
 ## <a name="example"></a>Przykład
 
@@ -152,7 +152,7 @@ char **envp )       // Array of environment variable strings
 }
 ```
 
-Uruchom następujący program do wykonania Crt_args.exe:
+Uruchom następujący program, aby wykonać Crt_args. exe:
 
 ```
 // crt_exec.c
@@ -231,7 +231,7 @@ int main( int ac, char* av[] )
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** process.h
+**Nagłówek:** Process. h
 
 ## <a name="see-also"></a>Zobacz także
 

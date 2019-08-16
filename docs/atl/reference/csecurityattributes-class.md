@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-ms.openlocfilehash: 2139c25cb6d941d9debe0655ba91ba458b1f8c09
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: ebffbea120101a77450a5e8da3cdb6e34723e7be
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915726"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496503"
 ---
 # <a name="csecurityattributes-class"></a>Klasa CSecurityAttributes
 
@@ -45,9 +45,9 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 
 ## <a name="remarks"></a>Uwagi
 
-Struktura zawiera deskryptor zabezpieczeń używany do tworzenia obiektu i określa, czy dojście pobrane przez określenie tej struktury jest dziedziczenia. [](/windows/desktop/api/winnt/ns-winnt-security_descriptor) `SECURITY_ATTRIBUTES`
+Struktura zawiera deskryptor zabezpieczeń używany do tworzenia obiektu i określa, czy dojście pobrane przez określenie tej struktury jest dziedziczenia. [](/windows/win32/api/winnt/ns-winnt-security_descriptor) `SECURITY_ATTRIBUTES`
 
-Aby zapoznać się z wprowadzeniem do modelu kontroli dostępu w systemie Windows, zobacz [Access Control](/windows/desktop/SecAuthZ/access-control) w Windows SDK.
+Aby zapoznać się z wprowadzeniem do modelu kontroli dostępu w systemie Windows, zobacz [Access Control](/windows/win32/SecAuthZ/access-control) w Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -100,6 +100,6 @@ Ta metoda jest używana przez konstruktora do inicjowania `CSecurityAttributes` 
 
 [Przykład zabezpieczeń](../../overview/visual-cpp-samples.md)<br/>
 [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))<br/>
-[deskryptor zabezpieczeń](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
+[deskryptor zabezpieczeń](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [Przegląd klas](../../atl/atl-class-overview.md)<br/>
 [Funkcje globalne zabezpieczeń](../../atl/reference/security-global-functions.md)

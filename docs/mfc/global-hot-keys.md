@@ -7,20 +7,20 @@ helpviewer_keywords:
 - access keys [MFC], hot keys
 - global hot keys [MFC]
 ms.assetid: e0b95d14-c571-4c9a-9cd1-e7fc1f0e278d
-ms.openlocfilehash: eedeb0547320c8b421fa72647f51b02f834af300
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59918648ea24fd1e2a86ca786de3081cd6cca2df
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219609"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508566"
 ---
 # <a name="global-hot-keys"></a>Globalne klawisze dostępu
 
-Globalny klawisz dostępu jest skojarzony z oknem nonchild określonej. Umożliwia użytkownikowi Uaktywnij okno z dowolnej części systemu. Aplikacja ustawia globalny klawisz dostępu określonego okna, wysyłając [WM_SETHOTKEY](/windows/desktop/inputdev/wm-sethotkey) komunikat do tego okna. Na przykład jeśli `m_HotKeyCtrl` jest [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) obiektu i `pMainWnd` jest wskaźnikiem do okna, który będzie aktywowany po naciśnięciu klawisza dostępu, można Użyj poniższego kodu, aby skojarzyć klawisz dostępu określonego w kontrolki z Okno wskazywany przez `pMainWnd`.
+Globalny klawisz dostępu jest skojarzony z określonym oknem niepodrzędnym. Umożliwia użytkownikowi aktywowanie okna z dowolnej części systemu. Aplikacja ustawia globalny klawisz dostępu dla określonego okna przez wysłanie komunikatu [WM_SETHOTKEY](/windows/win32/inputdev/wm-sethotkey) do tego okna. Na przykład, jeśli `m_HotKeyCtrl` jest obiektem [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) i `pMainWnd` jest wskaźnikiem do okna, które ma zostać aktywowane po naciśnięciu klawisza skrótu, można użyć poniższego kodu do skojarzenia klawisza dostępu określonego w kontrolce z oknem wskazywanym przez `pMainWnd`.
 
 [!code-cpp[NVC_MFCControlLadenDialog#18](../mfc/codesnippet/cpp/global-hot-keys_1.cpp)]
 
-Zawsze, gdy użytkownik naciśnie globalny klawisz dostępu, określone okno odbiera [WM_SYSCOMMAND](/windows/desktop/menurc/wm-syscommand) komunikat, który określa **SC_HOTKEY** jako typ polecenia. Ten komunikat aktywuje również okno, które otrzymuje go. Ponieważ ten komunikat nie zawiera żadnych informacji na temat dokładnego klucza, który został naciśnięty, przy użyciu tej metody nie zezwala na rozróżniania różne klawisze dostępu, które mogą być dołączone do tego samego okna. Klawisz skrótu pozostanie ważny aż do aplikacji, która wysłała **WM_SETHOTKEY** kończy działanie.
+Za każdym razem, gdy użytkownik naciśnie globalny klawisz dostępu, określone okno odbiera komunikat [WM_SYSCOMMAND](/windows/win32/menurc/wm-syscommand) , który określa **SC_HOTKEY** jako typ polecenia. Ten komunikat powoduje także aktywowanie okna, które je odbiera. Ponieważ ten komunikat nie zawiera żadnych informacji dotyczących dokładnego klawisza, który został naciśnięty, użycie tej metody nie pozwala na rozróżnienie między różnymi klawiszami dostępu, które mogą być dołączone do tego samego okna. Klawisz dostępu pozostaje ważny do momentu, gdy aplikacja, która wysłała **WM_SETHOTKEY** , zakończy działanie.
 
 ## <a name="see-also"></a>Zobacz także
 

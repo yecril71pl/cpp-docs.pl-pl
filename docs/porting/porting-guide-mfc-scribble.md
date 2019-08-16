@@ -1,89 +1,89 @@
 ---
-title: 'Przewodnik przenoszenia: Aplikacja Scribble MFC'
+title: 'Przewodnik przenoszenia: MFC Scribble'
 ms.date: 11/19/2018
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: 0424b5e8c87c0103b4ebee65765244b40e8fa553
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: e808f67b1479653add27a54ddf91f6578c046734
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448959"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511531"
 ---
-# <a name="porting-guide-mfc-scribble"></a>Przewodnik przenoszenia: Aplikacja Scribble MFC
+# <a name="porting-guide-mfc-scribble"></a>Przewodnik przenoszenia: MFC Scribble
 
-W tym temacie jest to pierwszy kilku tematów, które służą jako wprowadzenie do procedury uaktualniania dla programu Visual Studio C++ projektów, które zostały utworzone w starszych wersjach programu Visual Studio do programu Visual Studio 2017. Tych tematach przedstawiono proces uaktualniania według przykładu, rozpoczynając od bardzo prosty projekt i przejście do bardziej złożonych z nich. W tym temacie będziemy działać przeprowadzenie procesu aktualizacji dla określonego projektu, klasa Scribble MFC. Jest on odpowiedni jako wstęp do procesu uaktualniania dla projektów C++.
+Ten temat jest pierwszym z kilku tematów, które wprowadzają do procedury uaktualniania projektów programu Visual Studio C++ , które zostały utworzone we wcześniejszych wersjach programu Visual Studio, do Visual Studio 2017. Te tematy wprowadzają proces uaktualniania na przykład, rozpoczynając od bardzo prostego projektu i przechodzą do nieco bardziej złożonych. W tym temacie opisano proces uaktualniania dla określonego projektu, Bazgroły MFC. Jest to podstawowe wprowadzenie do procesu uaktualniania dla C++ projektów.
 
-Każda wersja programu Visual Studio wprowadza potencjalne niezgodności, które mogą skomplikować przenoszenie kodu ze starszej wersji programu Visual Studio do nowszej. Czasami wymagane zmiany są w kodzie, więc należy ponownie skompilować i zaktualizować swój kod, a czasami są wymagane zmiany w plikach projektu. Po otwarciu projektu, który został utworzony w poprzedniej wersji programu Visual Studio, Visual Studio automatycznie pyta, czy zaktualizować projekt lub rozwiązanie do najnowszej wersji. Te narzędzia zazwyczaj uaktualnić tylko te pliki projektu; nie należy modyfikować kodu źródłowego.
+Każda wersja programu Visual Studio wprowadza możliwe niezgodności, które mogą poskomplikowanić przeniesienie kodu ze starszej wersji programu Visual Studio do nowszej. Czasami wymagane zmiany są w kodzie, dlatego należy ponownie skompilować i zaktualizować kod, a czasami wymagane zmiany są w plikach projektu. Po otwarciu projektu, który został utworzony przy użyciu poprzedniej wersji programu Visual Studio, program Visual Studio automatycznie wyświetli monit z pytaniem, czy zaktualizować projekt lub rozwiązanie do najnowszej wersji. Te narzędzia zwykle uaktualniają tylko pliki projektu; nie modyfikują kodu źródłowego.
 
-## <a name="mfc-scribble"></a>Aplikacja Scribble MFC
+## <a name="mfc-scribble"></a>MFC Scribble
 
-Klasa Scribble MFC jest dobrze znanych próbki, która została uwzględniona w wielu różnych wersjach programu Visual C++. Jest prostej aplikacji rysowania, który pokazano niektóre z podstawowych funkcji MFC. Istnieją różne wersje niedostępnych, w tym zarządzanych i wersje kodu natywnego. W tym przykładzie firma Microsoft znaleziono starą wersję bazgrołów w kodzie natywnym z programu Visual Studio 2005 i otworzyć go w programie Visual Studio 2017.
+Obiekt Bazgroły MFC jest dobrze znanym przykładem, który został uwzględniony w wielu różnych C++wersjach wizualizacji. Jest to prosta aplikacja do rysowania, która ilustruje niektóre podstawowe funkcje MFC. Dostępne są różne wersje, w tym wersje zarządzane i natywne. W tym przykładzie znaleźliśmy starą wersję Bazgroły w kodzie natywnym z programu Visual Studio 2005 i otwarto ją w programie Visual Studio 2017.
 
-Przed rozpoczęciem aktualizacji, upewnij się, że masz zainstalowane obciążenie pulpitu Windows. Otwórz Instalatora programu Visual Studio (vs_installer.exe). Jednym ze sposobów, otwórz Instalator jest wybranie **pliku** > **nowy projekt** i przewiń w dół na liście zainstalowanych szablonów, aż zobaczysz **Otwórz Instalator programu Visual Studio**. Po otwarciu Instalatora zobaczysz wszystkie dostępne obciążeń. Jeśli pole **pulpitu Windows** obciążenia nie jest zaznaczone, a następnie wybierz ją i kliknij przycisk **Modyfikuj** znajdujący się u dołu okna.
+Przed podjęciem próby uaktualnienia upewnij się, że zainstalowano obciążenie pulpitu systemu Windows. Otwórz Instalatora programu Visual Studio (vs_installer. exe). Jednym ze sposobów otwierania Instalatora jest wybranie opcji **plik** > **Nowy projekt** i przewinięcie do dołu listy zainstalowanych szablonów do momentu wyświetlenia **otwartej Instalator programu Visual Studio**. Po otwarciu Instalatora zostaną wyświetlone wszystkie dostępne obciążenia. Jeśli nie wybrano pola dla obciążenia **pulpitu systemu Windows** , wybierz je i kliknij przycisk **Modify** u dołu okna.
 
-Następnie utwórz kopię zapasową całego rozwiązania i całą jego zawartość.
+Następnie wykonaj kopię zapasową całego rozwiązania i całej jego zawartości.
 
-Na koniec potrzebowaliśmy do podejmowania decyzji o określonej metody uaktualniania. Aby uzyskać bardziej złożonych rozwiązań i projektów, które nie zostały uaktualnione przez długi czas należy rozważyć uaktualnienie jednej wersji programu Visual Studio w danym momencie. W ten sposób można zawęzić wersji programu Visual Studio wprowadzone problem. Prosty projekt warto próby otwarcia go w najnowszej wersji programu Visual Studio, dzięki czemu kreatora w celu przekonwertowania projektu. Jeśli to nie zadziała, możesz spróbować uaktualniania jednej wersji w czasie, jeśli masz dostęp do odpowiedniej wersji programu Visual Studio.
+Na koniec konieczne jest podjęcie decyzji dotyczącej konkretnej metody uaktualniania. W przypadku bardziej złożonych rozwiązań i projektów, które nie zostały uaktualnione przez dłuższy czas, należy rozważyć uaktualnienie jednej wersji programu Visual Studio w danym momencie. Dzięki temu możesz zawęzić wersję programu Visual Studio, która wprowadziła problem. W przypadku prostego projektu warto próbować otworzyć go w najnowszej wersji programu Visual Studio i umożliwić kreatorowi konwersję projektu. Jeśli to nie zadziała, możesz spróbować uaktualnić jedną wersję jednocześnie, jeśli masz dostęp do odpowiednich wersji programu Visual Studio.
 
-Należy pamiętać, że można również uruchomić devenv, w wierszu polecenia przy użyciu `/Upgrade` opcji, a nie za pomocą kreatora, aby uaktualnić swoje projekty. Zobacz [/Upgrade (devenv.exe)](/visualstudio/ide/reference/upgrade-devenv-exe). Który może być przydatne w przypadku automatyzacji procesu uaktualniania dużej liczby projektów.
+Należy pamiętać, że można również uruchomić devenv w wierszu polecenia, korzystając z `/Upgrade` opcji, zamiast korzystać z kreatora w celu uaktualnienia projektów. Zobacz [/Upgrade (devenv. exe)](/visualstudio/ide/reference/upgrade-devenv-exe). Może to być przydatne w automatyzowaniu procesu uaktualniania dla dużej liczby projektów.
 
 ### <a name="step-1-converting-the-project-file"></a>Krok 1. Konwertowanie pliku projektu
 
-Po otwarciu stary plik projektu w programie Visual Studio 2017, Visual Studio oferuje przekonwertować plik projektu do najnowszej wersji, firma Microsoft zaakceptowane. Pojawiły się następujące okno dialogowe:
+Gdy otworzysz stary plik projektu w programie Visual Studio 2017, program Visual Studio oferuje możliwość konwersji pliku projektu do najnowszej wersji, która została zaakceptowana. Pojawiło się następujące okno dialogowe:
 
-![Przegląd zmian projektu i rozwiązania](../porting/media/scribbleprojectupgrade.PNG "przegląd zmian projektu i rozwiązania")
+![Przejrzyj zmiany projektu i rozwiązania](../porting/media/scribbleprojectupgrade.PNG "Przejrzyj zmiany projektu i rozwiązania")
 
-Wystąpił błąd powiadamiania nam, że docelowy Itanium nie jest dostępny i nie można przekonwertować.
+Wystąpił błąd podczas powiadamiania nas, że obiekt docelowy Itanium nie jest dostępny i nie zostanie przekonwertowany.
 
 ```Output
 Platform 'Itanium' is missing from this project. All the configurations and their file configuration settings specific to this platform will be ignored. If you want this platform converted, please make sure you have the corresponding platform installed under '%vctargetpath%\platforms\Itanium'.Continue to convert this project without this platform?
 ```
 
-W czasie, utworzony poprzedni projekt Bazgroły Itanium było ważne docelowej platformy. Platforma Windows nie obsługuje już Itanium, więc Wybraliśmy kontynuować bez obsługi platformę Itanium.
+W momencie utworzenia poprzedniego projektu bazgrołów Itanium była ważną platformą docelową. Platforma systemu Windows nie obsługuje już procesorów Itanium, dlatego wybieramy kontynuację bez obsługi platformy Itanium.
 
-Program Visual Studio wyświetlony raport migracji w przypadku wszystkich problemów za pomocą starego pliku projektu.
+Program Visual Studio wyświetli raport dotyczący migracji zawierający listę wszystkich problemów ze starym plikiem projektu.
 
-![Raport o uaktualnieniu](../porting/media/scribblemigrationreport.PNG "raport o uaktualnieniu")
+![Raport] o uaktualnieniu (../porting/media/scribblemigrationreport.PNG "Raport") o uaktualnieniu
 
-W tym przypadku problemy zostały wszystkie ostrzeżenia, a program Visual Studio wprowadził odpowiednie zmiany w pliku projektu. Istotną różnicą chodzi projektu jest to, że narzędzia do kompilowania zmieniła się z program vcbuild do programu msbuild. Ta zmiana została wprowadzona w programie Visual Studio 2010. Inne zmiany obejmują niektóre zmiany w przepisach sekwencję elementów w samym pliku projektu. Brak problemów wymagane dalsze uwagi dla tego prostego projektu.
+W takim przypadku problemy były wszystkie ostrzeżeniami, a program Visual Studio wprowadził odpowiednie zmiany w pliku projektu. Istotną różnicą, o ile chodzi o projekt, jest to, że narzędzie kompilacji zmieniło się z vcbuild na MSBuild. Ta zmiana została wprowadzona po raz pierwszy w programie Visual Studio 2010. Inne zmiany obejmują kilka przemieszczenia sekwencji elementów w pliku projektu. Żaden z problemów nie wymagał dalszej uwagi dla tego prostego projektu.
 
-### <a name="step-2-getting-it-to-build"></a>Krok 2. Wprowadzenie do kompilacji
+### <a name="step-2-getting-it-to-build"></a>Krok 2. Trwa przygotowywanie do kompilacji
 
-Przed kompilacją, możemy sprawdzić zestaw narzędzi platformy, aby było wiadomo, jakiej wersji kompilatora system projektu używa. W oknie dialogowym właściwości projektu w obszarze **właściwości konfiguracji**w **ogólne** kategorii przyjrzeć **zestawu narzędzi platformy** właściwości. Zawiera wersję programu Visual Studio i numeru wersji narzędzi platformy, która w tym przypadku jest w wersji 141 dla Visual Studio 2017 wersja narzędzi. Podczas konwersji projektu, który pierwotnie został skompilowany przy użyciu programu Visual Studio 2010, 2012, 2013 lub 2015 r. zestaw narzędzi nie jest automatycznie aktualizowany na zestaw narzędzi Visual Studio 2017.
+Przed rozpoczęciem kompilowania sprawdzimy zestaw narzędzi platformy, aby poznać, która wersja kompilatora używa systemu projektu. W oknie dialogowym właściwości projektu, w obszarze **Właściwości konfiguracji**, w kategorii **Ogólne** Sprawdź właściwość zestaw **narzędzi platformy** . Zawiera wersję programu Visual Studio i numer wersji narzędzia platformy, która w tym przypadku jest najnowsze 141 dla narzędzia Visual Studio 2017. Podczas konwersji projektu, który został pierwotnie skompilowany przy użyciu programu Visual Studio 2010, 2012, 2013 lub 2015, zestaw narzędzi nie jest automatycznie aktualizowany do zestawu narzędzi programu Visual 2017 Studio.
 
-Aby wprowadzić przełącznika Unicode, otwórz właściwości projektu w obszarze **właściwości konfiguracji**, wybierz **ogólne** sekcji, a następnie zlokalizuj **zestaw znaków** właściwości. Zmień ten program z **zestaw znaków wielobajtowych** do **Użyj kodowania Unicode**. Ta zmiana powoduje to teraz _UNICODE UNICODE makra są zdefiniowane i _MBCS nie jest dostępna, którą można sprawdzić w oknie dialogowym właściwości, w obszarze **C /C++**  kategorii przy **wiersza polecenia** Właściwość.
+Aby przełączyć się na format Unicode, Otwórz właściwości projektu, w obszarze **Właściwości konfiguracji**, wybierz sekcję **Ogólne** i Znajdź właściwość **zestaw znaków** . Zmień tę wartość przy **użyciu zestawu znaków** wielobajtowych, aby **użyć zestawu znaków Unicode**. Efektem tej zmiany jest to, że teraz makra _UNICODE i Unicode są zdefiniowane i _MBCS nie, które można sprawdzić w oknie dialogowym właściwości w obszarze **C/C++**  Category we właściwości **wiersza polecenia** .
 
 ```Output
 /GS /analyze- /W4 /Zc:wchar_t /Zi /Gm- /Od /Fd".\Debug\vc141.pdb" /Zc:inline /fp:precise /D "_AFXDLL" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_UNICODE" /D "UNICODE" /errorReport:prompt /WX /Zc:forScope /Gd /Oy- /MDd /Fa".\Debug\" /EHsc /nologo /Fo".\Debug\" /Fp".\Debug\Scribble.pch" /diagnostics:classic
 ```
 
-Mimo że bazgrołów projekt nie został skonfigurowany do kompilowania ze znakami Unicode, został on już zapisany z TCHAR zamiast char, więc nic faktycznie musi zostać zmienione. Projekt zostanie skompilowany poprawnie przy użyciu zestawu znaków Unicode.
+Mimo że projekt bazgroł nie został skonfigurowany do kompilowania przy użyciu znaków Unicode, został już wpisany przy użyciu używanie TCHAR zamiast char, więc niczego nie trzeba zmieniać. Projekt został pomyślnie skompilowany z zestawem znaków Unicode.
 
-Teraz można tworzyć rozwiązania. W oknie danych wyjściowych kompilatora informuje NAS, że tego _WINNT32_WINNT nie jest zdefiniowany:
+Teraz Skompiluj rozwiązanie. W oknie dane wyjściowe kompilator informuje nas, że _WINNT32_WINNT nie jest zdefiniowany:
 
 ```Output
 _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
 ```
 
-To jest ostrzeżenie, a nie błąd i jest bardzo częsty w przypadku uaktualniania programu Visual Studio C++ projektu. To makro, które określa jakie najniższy wersję Windows działającego na naszej aplikacji. Jeśli firma Microsoft zignorować to ostrzeżenie, firma Microsoft zaakceptuj wartość domyślną, _WIN32_WINNT_MAXVER, co oznacza bieżącą wersję systemu Windows. Dla tabeli możliwych wartości, zobacz [przy użyciu nagłówków Windows](/windows/desktop/WinProg/using-the-windows-headers). Na przykład możemy ustawić jego uruchomienie w dowolnej wersji systemu Vista i nowszych wersjach.
+Jest to ostrzeżenie, a nie błąd i jest bardzo powszechne podczas uaktualniania projektu programu Visual Studio C++ . Jest to makro definiujące najmniejszą wersję systemu Windows, na której będzie działać aplikacja. Jeśli zignorujesz ostrzeżenie, akceptujemy wartość domyślną _WIN32_WINNT_MAXVER, co oznacza bieżącą wersję systemu Windows. Aby zapoznać się z tabelą możliwych wartości, zobacz [Używanie nagłówków systemu Windows](/windows/win32/WinProg/using-the-windows-headers). Można na przykład skonfigurować go do uruchamiania w dowolnej wersji z systemu Vista.
 
 ```cpp
 #define _WIN32_WINNT _WIN32_WINNT_VISTA
 ```
 
-Jeśli kod używa części interfejsu Windows API, które nie są dostępne w wersji systemu Windows, określ za pomocą makra, powinien zostać wyświetlony, jako błąd kompilatora. W przypadku kodu Bazgroły nie ma błędów.
+Jeśli kod używa części interfejsu API systemu Windows, które nie są dostępne w wersji systemu Windows, która jest określona za pomocą tego makra, należy zobaczyć, że jako błąd kompilatora. W przypadku kodu bazgrołów nie ma błędów.
 
 ### <a name="step-3-testing-and-debugging"></a>Krok 3. Testowanie i debugowanie
 
-Ma nie testów, tak właśnie zaczynaliśmy aplikacji, przetestowane jego funkcje ręcznie za pomocą interfejsu użytkownika. Nie zaobserwowano żadnych problemów.
+Nie ma zestawu testów, dlatego właśnie uruchomił aplikację, przetestował jej funkcje ręcznie za pomocą interfejsu użytkownika. Nie zaobserwowano żadnych problemów.
 
-### <a name="step-4-improve-the-code"></a>Krok 4. Do poprawienia kodu
+### <a name="step-4-improve-the-code"></a>Krok 4. Ulepszanie kodu
 
-Teraz, gdy zostały poddane migracji do programu Visual Studio 2017, można wprowadzić pewne zmiany, aby móc korzystać z nowych funkcji języka C++. Bieżącej wersji kompilatora języka C++ jest znacznie większą zgodność C++ wersji standardowa, a następnie poprzedniej, więc w przypadku Pamiętaj się jakiś kod zmienia się na sprawić, że kod bardziej bezpiecznej i bardziej przenośny innych kompilatorach i systemów operacyjnych, należy rozważyć niektóre ulepszenia.
+Po przeprowadzeniu migracji do programu Visual Studio 2017 warto wprowadzić pewne zmiany, aby skorzystać z nowych C++ funkcji. Bieżąca wersja C++ kompilatora jest znacznie bardziej zgodna ze C++ standardowymi i poprzednimi wersjami, więc jeśli chcesz wprowadzić pewne zmiany w kodzie, aby zwiększyć bezpieczeństwo kodu, a inne kompilatory i systemy operacyjne są bardziej przenośne, należy Weź pod uwagę pewne ulepszenia.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Bazgrołów został aplikacji pulpitu Windows małe i proste, a nie był trudny do konwersji. Wiele małych, prostych aplikacji równie łatwo przekonwertować do nowej wersji.  W przypadku bardziej złożonych aplikacji o wiele większą liczbę linii kodu, starsze starszego kodu, który może być maksymalnie nowoczesnych standardów inżynieryjnych, wiele projektów i bibliotek niestandardowych kroków kompilacji lub w przypadku złożonych inicjowanych przez skrypty kompilacji automatycznych zajmie więcej czasu na uaktualnienie. Kontynuuj [kolejny przykład](../porting/porting-guide-com-spy.md), ATL/aplikacji modelu COM wywołuje się, narzędzie Spy modelu COM.
+Bazgroły były małymi i prostymi aplikacjami klasycznymi systemu Windows i nie było trudne do przekonwertowania. Wiele małych, prostych aplikacji, które są konwertowane równie łatwo, jak w przypadku nowej wersji.  W przypadku bardziej złożonych aplikacji z wieloma dodatkowymi wierszami kodu starszy starszy kod, który może nie mieć do nowoczesnych standardów inżynieryjnych, wielu projektów i bibliotek, niestandardowych kroków kompilacji lub złożonych zautomatyzowanych kompilacji inicjowanych przez skrypty, zajmie więcej czasu na uaktualnienie. Przejdź do [następnego przykładu](../porting/porting-guide-com-spy.md)— aplikacji ATL/com o nazwie com Spy.
 
 ## <a name="see-also"></a>Zobacz także
 

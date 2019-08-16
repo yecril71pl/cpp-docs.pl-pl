@@ -13,52 +13,52 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-ms.openlocfilehash: dd11f5db646e172d7ea2c2cc646841249d95ef31
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97a99eb2382c4864f1bd8cc881fab5e32a1e2070
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407734"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511707"
 ---
 # <a name="multithreading-terminating-threads-in-mfc"></a>Wielowątkowość: Przerywanie wątków w MFC
 
-Dwie normalne sytuacje powodują zakończenie wątku: funkcja kontrolowania istnieje lub wątek nie jest dozwolony do zakończenia. Jeśli Edytor tekstu używa wątku do drukowania w tle, funkcja kontrolowania zakończy się normalnie Jeśli drukowanie zostanie ukończone pomyślnie. Jeśli użytkownik chce anulować drukowanie, natomiast wątek drukowanie w tle musi być zakończony przedwcześnie. W tym temacie wyjaśniono, jak implementować każdą sytuację i jak uzyskać kod wyjścia wątku, po jego działania.
+Dwie normalne sytuacje powodują zakończenie wątku: funkcja kontrolująca kończy działanie lub wątek nie może działać do ukończenia. Jeśli procesor programu Word użył wątku do drukowania w tle, funkcja kontrolowania zostanie zakończona normalnie, Jeśli drukowanie zakończyło się pomyślnie. Jeśli użytkownik chce anulować drukowanie, należy przedwcześnie zakończyć wątek drukowania w tle. W tym temacie wyjaśniono, jak zaimplementować każdą sytuację i jak uzyskać kod zakończenia wątku po jego zakończeniu.
 
-- [Zakończenie normalne wątku](#_core_normal_thread_termination)
+- [Normalne zakończenie wątku](#_core_normal_thread_termination)
 
 - [Przedwczesne zakończenie wątku](#_core_premature_thread_termination)
 
-- [Pobieranie kodu wyjścia wątku](#_core_retrieving_the_exit_code_of_a_thread)
+- [Pobieranie kodu zakończenia wątku](#_core_retrieving_the_exit_code_of_a_thread)
 
-##  <a name="_core_normal_thread_termination"></a> Zakończenie normalne wątku
+##  <a name="_core_normal_thread_termination"></a>Normalne zakończenie wątku
 
-Wątku roboczego zakończenie zwykłych wątków jest proste: Zamknij funkcję kontrolującą i zwróć wartość, która oznacza powód zakończenia. Można użyć dowolnego [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) funkcji lub **zwracają** instrukcji. Typowo 0 oznacza pomyślne ukończenie, ale która zależy od użytkownika.
+W przypadku wątku roboczego normalne zakończenie wątku jest proste: Wyjdź z funkcji kontroli i zwracają wartość, która oznacza powód zakończenia. Można użyć funkcji [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) lub instrukcji **Return** . Zazwyczaj 0 oznacza pomyślne zakończenie, ale jest to konieczne.
 
-Dla wątku interfejsu użytkownika, proces jest równie prosty: z wewnątrz wątku interfejsu użytkownika Wywołaj [PostQuitMessage](/windows/desktop/api/winuser/nf-winuser-postquitmessage) w zestawie Windows SDK. Jedynym parametrem, `PostQuitMessage` przyjmuje jest kod wyjścia wątku. Jak w przypadku wątków roboczych 0 zazwyczaj oznacza pomyślne zakończenie.
+W przypadku wątku interfejsu użytkownika proces jest równie prosty: z poziomu wątku interfejsu użytkownika, wywołaj [PostQuitMessage](/windows/win32/api/winuser/nf-winuser-postquitmessage) w Windows SDK. Jedynym parametrem, `PostQuitMessage` który pobiera jest kod zakończenia wątku. Podobnie jak w przypadku wątków roboczych, 0 zazwyczaj oznacza pomyślne zakończenie.
 
-##  <a name="_core_premature_thread_termination"></a> Przedwczesne zakończenie wątku
+##  <a name="_core_premature_thread_termination"></a>Przedwczesne zakończenie wątku
 
-Przedwczesne zakończenie wątku jest prawie tak samo proste: Wywołaj [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) z wewnątrz wątku. Przekaż żądany kod zakończenia jako jedyny parametr. To zatrzymuje wykonanie wątku, powoduje cofnięcie przydziału stosu wątku, odłącza wszystkie biblioteki dll, dołączone do wątku i usuwa obiekt ciągu z pamięci.
+Przedwczesne zakończenie wątku jest niemal proste: Wywołaj [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) z wewnątrz wątku. Przekaż żądany kod zakończenia jako jedyny parametr. Spowoduje to zatrzymanie wykonywania wątku, oddzielenie stosu wątku, odłączenie wszystkich bibliotek DLL dołączonych do wątku i usunięcie obiektu wątku z pamięci.
 
-`AfxEndThread` Musi być wywołana z wewnątrz wątku, który ma zostać zakończony. Jeśli chcesz zakończyć wątek z innego wątku, należy skonfigurować metodę komunikacji pomiędzy dwoma wątkami.
+`AfxEndThread`musi być wywołana z poziomu wątku, aby zakończyć. Jeśli chcesz przerwać wątek z innego wątku, należy skonfigurować metodę komunikacji między dwoma wątkami.
 
-##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a> Pobieranie kodu wyjścia wątku
+##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a>Pobieranie kodu zakończenia wątku
 
-Aby uzyskać kod zakończenia pracownika lub wątku interfejsu użytkownika, wywołaj [GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread) funkcji. Aby uzyskać informacji na temat tej funkcji zobacz zestaw Windows SDK. Ta funkcja pobiera uchwyt do wątku (przechowywany w `m_hThread` element członkowski danych `CWinThread` obiekty) i adres DWORD.
+Aby uzyskać kod zakończenia procesu roboczego lub wątku interfejsu użytkownika, wywołaj funkcję [GetExitCodeThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodethread) . Aby uzyskać informacje na temat tej funkcji, zobacz Windows SDK. Ta funkcja pobiera uchwyt do wątku (przechowywanego w `m_hThread` `CWinThread` elemencie członkowskim danych obiektów) i adres typu DWORD.
 
-Jeśli wątek jest nadal aktywne `GetExitCodeThread` umieszcza STILL_ACTIVE w podany adres DWORD; w przeciwnym razie kod wyjścia jest umieszczany w tym adresie.
+Jeśli wątek jest nadal aktywny, program `GetExitCodeThread` umieści STILL_ACTIVE w podanym adresie DWORD; w przeciwnym razie kod zakończenia zostanie umieszczony w tym adresie.
 
-Trwa pobieranie kodu wyjścia [CWinThread](../mfc/reference/cwinthread-class.md) obiektów wymaga dodatkowego kroku. Domyślnie gdy `CWinThread` wątek kończy działanie, obiekt wątku jest usuwany. Oznacza to, nie masz dostępu do `m_hThread` element członkowski danych ponieważ `CWinThread` obiekt nie istnieje. Aby uniknąć tej sytuacji, wykonaj jedną z następujących czynności:
+Pobieranie kodu zakończenia obiektów [CWinThread](../mfc/reference/cwinthread-class.md) wykonuje dodatkowy krok. Domyślnie, gdy `CWinThread` wątek kończy działanie, obiekt wątku jest usuwany. Oznacza to, że nie można `m_hThread` uzyskać dostępu do elementu `CWinThread` członkowskiego danych, ponieważ obiekt już nie istnieje. Aby uniknąć tej sytuacji, wykonaj jedną z następujących czynności:
 
-- Ustaw `m_bAutoDelete` element członkowski danych na wartość FALSE. Dzięki temu `CWinThread` obiektu przetrwać po wątek został zakończony. Mogą uzyskiwać dostęp do `m_hThread` element członkowski danych po zakończeniu wątku. Jeśli używasz tej techniki, jednak odpowiedzialność za zniszczenie `CWinThread` obiektu, ponieważ struktura nie automatycznie usunie ją dla Ciebie. Jest to preferowana metoda.
+- Ustaw element członkowski danych na wartość false. `m_bAutoDelete` Dzięki `CWinThread` temu obiekt może zostać przeżyje po zakończeniu wątku. Następnie można uzyskać dostęp do `m_hThread` elementu członkowskiego danych po zakończeniu wątku. W przypadku korzystania z tej techniki użytkownik jest odpowiedzialny za zniszczenie `CWinThread` obiektu, ponieważ struktura nie usunie go automatycznie. Jest to preferowana metoda.
 
-- Store uchwyt wątku oddzielnie. Po utworzeniu wątku, należy skopiować jego `m_hThread` element członkowski danych (za pomocą `::DuplicateHandle`) do innej zmiennej i uzyskać do niego dostęp za pośrednictwem tej zmiennej. W ten sposób obiekt jest automatycznie usuwany kiedy następuje koniec i możesz wciąż dowiedzieć się dlaczego wątek się zakończył. Należy zachować ostrożność, że wątek nie skończył się, zanim będzie można zduplikować dojście. Najbezpieczniejszy sposób, w tym celu służy do przekazywania CREATE_SUSPENDED do [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), Przechowaj uchwyt, a następnie Wznów wątek wywołując [ResumeThread](../mfc/reference/cwinthread-class.md#resumethread).
+- Przechowuj dojście wątku osobno. Po utworzeniu wątku skopiuj jego `m_hThread` element członkowski danych (za pomocą polecenia `::DuplicateHandle`) do innej zmiennej i uzyskaj do niego dostęp za pośrednictwem tej zmiennej. W ten sposób obiekt jest automatycznie usuwany po zakończeniu działania i można nadal dowiedzieć się, dlaczego wątek został przerwany. Należy zachować ostrożność, aby wątek nie przerywał działania przed duplikowaniem dojścia. Najbezpieczniejszym sposobem jest przekazanie CREATE_SUSPENDED do [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), przechowanie uchwytu, a następnie wznowienie wątku przez wywołanie [ResumeThread](../mfc/reference/cwinthread-class.md#resumethread).
 
-Każda z tych metod pozwala określić dlaczego `CWinThread` obiekt został zakończony.
+Każda z tych metod pozwala określić, dlaczego `CWinThread` obiekt został przerwany.
 
 ## <a name="see-also"></a>Zobacz także
 
 [Wielowątkowość z C++ i MFC](multithreading-with-cpp-and-mfc.md)<br/>
 [_endthread, _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)<br/>
 [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)<br/>
-[ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread)
+[ExitThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitthread)

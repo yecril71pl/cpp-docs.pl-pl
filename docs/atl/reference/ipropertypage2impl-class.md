@@ -1,5 +1,5 @@
 ---
-title: IPropertyPage2Impl Class
+title: Klasa IPropertyPage2Impl
 ms.date: 11/04/2016
 f1_keywords:
 - IPropertyPage2Impl
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - IPropertyPage2 ATL implementation
 - IPropertyPage2Impl class
 ms.assetid: e89fbe90-203a-47f0-a5de-23616697e1ce
-ms.openlocfilehash: bf76182242f7b76e3a2c18f85b72674e88afa737
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ec6cb2f4fc6931a1bec429068b558bf7ac1906e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274779"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495606"
 ---
-# <a name="ipropertypage2impl-class"></a>IPropertyPage2Impl Class
+# <a name="ipropertypage2impl-class"></a>Klasa IPropertyPage2Impl
 
-Ta klasa implementuje `IUnknown` i dziedziczy domyślna Implementacja klasy [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md).
+Ta klasa implementuje `IUnknown` i dziedziczy domyślną implementację [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md).
 
 > [!IMPORTANT]
->  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+>  Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,7 +34,7 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Z klasą pochodną `IPropertyPage2Impl`.
+Klasa, która pochodzi od `IPropertyPage2Impl`.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -42,17 +42,17 @@ Z klasą pochodną `IPropertyPage2Impl`.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[IPropertyPage2Impl::EditProperty](#editproperty)|Określa, które określają właściwość otrzyma fokus, po aktywowaniu na stronie właściwości. Implementacja biblioteki ATL zwraca E_NOTIMPL.|
+|[IPropertyPage2Impl::EditProperty](#editproperty)|Określa, która kontrolka właściwości będzie otrzymywać fokus po aktywowaniu strony właściwości. Implementacja ATL zwraca E_NOTIMPL.|
 
 ## <a name="remarks"></a>Uwagi
 
-[IPropertyPage2](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage2) interfejs rozszerza [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) , dodając `EditProperty` metody. Ta metoda umożliwia klientowi do wybrania konkretnej właściwości w obiekcie strony właściwości.
+Interfejs [IPropertyPage2](/windows/win32/api/ocidl/nn-ocidl-ipropertypage2) rozszerza [IPropertyPage](/windows/win32/api/ocidl/nn-ocidl-ipropertypage) `EditProperty` przez dodanie metody. Ta metoda umożliwia klientowi wybranie konkretnej właściwości w obiekcie strony właściwości.
 
-Klasa `IPropertyPage2Impl` po prostu zwraca E_NOTIMPL dla `IPropertyPage2::EditProperty`. Jednak dziedziczy domyślna Implementacja klasy [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md) i implementuje `IUnknown` , wysyłając informacje o do zrzutu kompilacji urządzenia podczas debugowania.
+Klasa `IPropertyPage2Impl` po prostu zwraca E_NOTIMPL `IPropertyPage2::EditProperty`dla. Jednak dziedziczy domyślną implementację [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md) i implementuje `IUnknown` przez wysyłanie informacji do urządzenia zrzutu w kompilacjach debugowania.
 
-Po utworzeniu strony właściwości klasy jest zazwyczaj tworzony na podstawie `IPropertyPageImpl`. Aby zapewnić obsługę dodatkowych `IPropertyPage2`, zmodyfikuj swojej definicji klasy i zastąpić `EditProperty` metody.
+Podczas tworzenia strony właściwości Klasa jest zwykle wyprowadzana z `IPropertyPageImpl`. Aby zapewnić dodatkową pomoc techniczną `IPropertyPage2`, zmodyfikuj definicję klasy i `EditProperty` Zastąp metodę.
 
-**Powiązane artykuły** [ALT — samouczek](../../atl/active-template-library-atl-tutorial.md), [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)
+**Powiązane artykuły** [Samouczek ATL](../../atl/active-template-library-atl-tutorial.md), [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -64,11 +64,11 @@ Po utworzeniu strony właściwości klasy jest zazwyczaj tworzony na podstawie `
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlctl.h
+**Nagłówek:** atlctl. h
 
-##  <a name="editproperty"></a>  IPropertyPage2Impl::EditProperty
+##  <a name="editproperty"></a>IPropertyPage2Impl::EditProperty
 
-Określa, które określają właściwość otrzyma fokus, po aktywowaniu na stronie właściwości.
+Określa, która kontrolka właściwości będzie otrzymywać fokus po aktywowaniu strony właściwości.
 
 ```
 HRESULT EditProperty(DISPID dispID);
@@ -76,14 +76,14 @@ HRESULT EditProperty(DISPID dispID);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Returns E_NOTIMPL.
+Zwraca E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IPropertyPage2::EditProperty](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage2-editproperty) w Windows SDK.
+Zobacz [IPropertyPage2:: EditProperty](/windows/win32/api/ocidl/nf-ocidl-ipropertypage2-editproperty) w Windows SDK.
 
 ## <a name="see-also"></a>Zobacz także
 
 [Klasa IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>
 [Klasa ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)
