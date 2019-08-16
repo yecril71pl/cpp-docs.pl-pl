@@ -17,16 +17,16 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComAggObject class
 ms.assetid: 7aa90d69-d399-477b-880d-e2cdf0ef7881
-ms.openlocfilehash: 52cdddb1d922ca21e24122422ca14d9c12d13a83
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b05284104f9d2e5e7704bceaee6f8adf9a33aac
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259927"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497662"
 ---
 # <a name="ccomaggobject-class"></a>Klasa CComAggObject
 
-Ta klasa implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) interfejs dla obiektu zagregowanego. Zgodnie z definicją obiektu zagregowanego jest zawarty w obiekcie zewnętrznym. `CComAggObject` Klasa jest podobna do [klasa CComObject](../../atl/reference/ccomobject-class.md), z tą różnicą, że udostępnia interfejs, który jest bezpośrednio dostępny dla klientów zewnętrznych.
+Ta klasa implementuje interfejs [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) dla obiektu agregowanego. Według definicji, zagregowany obiekt jest zawarty w obiekcie zewnętrznym. Klasa jest podobna do [klasy CComObject](../../atl/reference/ccomobject-class.md), z tą różnicą, że ujawnia interfejs, który jest bezpośrednio dostępny dla klientów zewnętrznych. `CComAggObject`
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,8 +38,8 @@ class CComAggObject : public IUnknown,
 
 #### <a name="parameters"></a>Parametry
 
-*zawiera*<br/>
-Z klasą pochodną [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak również od innych interfejsów, które chcesz obsługiwać obiektu.
+*przechowywany*<br/>
+Klasa, pochodząca z [klasy CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), a także z innych interfejsów, które mają być obsługiwane w obiekcie.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -47,31 +47,31 @@ Z klasą pochodną [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CComAggObject::CComAggObject](#ccomaggobject)|Konstruktor.|
-|[CComAggObject::~CComAggObject](#dtor)|Destruktor.|
+|[CComAggObject:: CComAggObject](#ccomaggobject)|Konstruktor.|
+|[CComAggObject:: ~ CComAggObject](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CComAggObject::AddRef](#addref)|Zwiększa licznik odwołań obiektu zagregowanego.|
-|[CComAggObject::CreateInstance](#createinstance)|Ta funkcja statyczna służy do tworzenia nowego **CComAggObject <** `contained` **>** obiektu bez konieczności [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).|
-|[CComAggObject::FinalConstruct](#finalconstruct)|Wykonuje końcowe inicjowanie `m_contained`.|
-|[CComAggObject::FinalRelease](#finalrelease)|Wykonuje końcowe zniszczenie `m_contained`.|
-|[CComAggObject::QueryInterface](#queryinterface)|Pobiera wskaźnik do żądanego interfejsu.|
-|[CComAggObject::Release](#release)|Dekrementuje liczbę odwołań w obiekcie zagregowane.|
+|[CComAggObject:: AddRef](#addref)|Zwiększa liczbę odwołań do zagregowanego obiektu.|
+|[CComAggObject:: CreateInstance](#createinstance)|Ta funkcja statyczna pozwala utworzyć nowy obiekt **<** `contained` **>** CComAggObject bez narzutu na [wywołanie](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)funkcji.|
+|[CComAggObject::FinalConstruct](#finalconstruct)|Wykonuje ostateczną inicjalizację `m_contained`.|
+|[CComAggObject:: FinalRelease](#finalrelease)|Wykonuje ostateczne zniszczenie `m_contained`.|
+|[CComAggObject:: QueryInterface](#queryinterface)|Pobiera wskaźnik do żądanego interfejsu.|
+|[CComAggObject:: Release](#release)|Zmniejsza liczbę odwołań do zagregowanego obiektu.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CComAggObject::m_contained](#m_contained)|Delegaty `IUnknown` wywołania zewnętrznego nieznany.|
+|[CComAggObject:: m_contained](#m_contained)|Deleguje `IUnknown` wywołania nieznane zewnętrzne.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CComAggObject` implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) dla obiektu zagregowanego. `CComAggObject` ma swój własny `IUnknown` interfejs, niezależnie od obiektu zewnętrznego `IUnknown` interfejs i przechowuje swoje własne licznika odwołań.
+`CComAggObject`implementuje [interfejs IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) dla zagregowanego obiektu. `CComAggObject`ma własny `IUnknown` interfejs, oddziel się od `IUnknown` interfejsu zewnętrznego obiektu i utrzymuje swój własny licznik odwołań.
 
-Aby uzyskać więcej informacji na temat agregacji, zobacz artykuł [podstawy ATL obiektów COM](../../atl/fundamentals-of-atl-com-objects.md).
+Aby uzyskać więcej informacji na temat agregacji, zapoznaj się z artykułem [podstawy obiektów ATL com](../../atl/fundamentals-of-atl-com-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -85,11 +85,11 @@ Aby uzyskać więcej informacji na temat agregacji, zobacz artykuł [podstawy AT
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcom.h
+**Nagłówek:** atlcom. h
 
-##  <a name="addref"></a>  CComAggObject::AddRef
+##  <a name="addref"></a>CComAggObject:: AddRef
 
-Zwiększa licznik odwołań obiektu zagregowanego.
+Zwiększa liczbę odwołań do zagregowanego obiektu.
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -97,9 +97,9 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość, która może być użyteczna, diagnostykę lub testowania.
+Wartość, która może być przydatna w przypadku diagnostyki lub testowania.
 
-##  <a name="ccomaggobject"></a>  CComAggObject::CComAggObject
+##  <a name="ccomaggobject"></a>CComAggObject:: CComAggObject
 
 Konstruktor.
 
@@ -109,16 +109,16 @@ CComAggObject(void* pv);
 
 ### <a name="parameters"></a>Parametry
 
-*Wa*<br/>
-[in] Nieznany zewnętrznego.
+*wa*<br/>
+podczas Nieznana zewnętrzna.
 
 ### <a name="remarks"></a>Uwagi
 
-Inicjuje `CComContainedObject` elementu członkowskiego, [m_contained](#m_contained)i zwiększa liczbę blokad modułu.
+Inicjuje element członkowski, m_contained i zwiększa liczbę blokad modułu. [](#m_contained) `CComContainedObject`
 
-Dekrementuje destruktor liczbę blokad modułu.
+Destruktor zmniejsza liczbę blokad modułu.
 
-##  <a name="dtor"></a>  CComAggObject::~CComAggObject
+##  <a name="dtor"></a>CComAggObject:: ~ CComAggObject
 
 Destruktor.
 
@@ -128,11 +128,11 @@ Destruktor.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwalnia wszystkie przydzielone zasoby, wywołania [FinalRelease](#finalrelease), oraz liczbę blokad modułu zmniejsza.
+Zwalnia wszystkie przydzieloną zasoby, wywołuje [FinalRelease](#finalrelease)i zmniejsza liczbę blokad modułu.
 
-##  <a name="createinstance"></a>  CComAggObject::CreateInstance
+##  <a name="createinstance"></a>CComAggObject:: CreateInstance
 
-Ta funkcja statyczna służy do tworzenia nowego **CComAggObject <** `contained` **>** obiektu bez konieczności [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).
+Ta funkcja statyczna pozwala utworzyć nowy obiekt **<** `contained` **>** CComAggObject bez narzutu na [wywołanie](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)funkcji.
 
 ```
 static HRESULT WINAPI CreateInstance(
@@ -142,22 +142,22 @@ static HRESULT WINAPI CreateInstance(
 
 ### <a name="parameters"></a>Parametry
 
-*strony*<br/>
-[out] Wskaźnik do **CComAggObject\<**<em>zawarte</em> **>** wskaźnika. Jeśli `CreateInstance` zakończy się niepowodzeniem, *pp* ma wartość NULL.
+*miesięcznie*<br/>
+określoną Wskaźnik do **CComAggObject\<** **zawiera>** wskaźnik. Jeśli `CreateInstance` to się nie powiedzie, *PP* ma ustawioną wartość null.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwrócony obiekt ma liczebności referencyjnej równej zero, więc wywołanie `AddRef` natychmiast, następnie użyć `Release` zwolnienie odwołania na wskaźnik do obiektu, gdy wszystko będzie gotowe.
+Zwrócony obiekt ma liczbę odwołań równą zero, więc Wywołaj `AddRef` natychmiast, a następnie `Release` Użyj, aby zwolnić odwołanie na wskaźniku obiektu po zakończeniu.
 
-Jeśli nie potrzebujesz bezpośredni dostęp do obiektu, ale mimo to chcesz utworzyć nowy obiekt bez konieczności `CoCreateInstance`, użyj [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) zamiast tego.
+Jeśli nie potrzebujesz bezpośredniego dostępu do obiektu, ale nadal chcesz utworzyć nowy obiekt bez nakładu pracy `CoCreateInstance`, zamiast tego użyj [CComCoClass:: CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) .
 
-##  <a name="finalconstruct"></a>  CComAggObject::FinalConstruct
+##  <a name="finalconstruct"></a>CComAggObject:: FinalConstruct
 
-Wywołuje się w końcowym etapie konstrukcji obiektu, ta metoda wykonuje końcowe inicjowanie na [m_contained](#m_contained) elementu członkowskiego.
+Wywoływana podczas końcowych etapów konstruowania obiektu, ta metoda wykonuje wszelkie końcowe inicjalizacje elementu członkowskiego [m_contained](#m_contained) .
 
 ```
 HRESULT FinalConstruct();
@@ -165,19 +165,19 @@ HRESULT FinalConstruct();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
-##  <a name="finalrelease"></a>  CComAggObject::FinalRelease
+##  <a name="finalrelease"></a>CComAggObject:: FinalRelease
 
-Wywoływana podczas niszczenia obiektu, ta metoda zwalnia [m_contained](#m_contained) elementu członkowskiego.
+Wywoływana podczas niszczenia obiektu, ta metoda zwalnia element członkowski [m_contained](#m_contained) .
 
 ```
 void FinalRelease();
 ```
 
-##  <a name="m_contained"></a>  CComAggObject::m_contained
+##  <a name="m_contained"></a>CComAggObject:: m_contained
 
-A [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) obiekt pochodzi od klasy.
+Obiekt [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) pochodzący od klasy.
 
 ```
 CComContainedObject<contained> m_contained;
@@ -185,14 +185,14 @@ CComContainedObject<contained> m_contained;
 
 ### <a name="parameters"></a>Parametry
 
-*zawiera*<br/>
-[in] Z klasą pochodną [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak również od innych interfejsów, które chcesz obsługiwać obiektu.
+*przechowywany*<br/>
+podczas Klasa, pochodząca z [klasy CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), a także z innych interfejsów, które mają być obsługiwane w obiekcie.
 
 ### <a name="remarks"></a>Uwagi
 
-Wszystkie `IUnknown` połączenia za pośrednictwem `m_contained` są delegowane do zewnętrznego nieznany.
+Wszystkie `IUnknown` wywołania przez `m_contained` są delegowane do nieznanego zewnętrznego.
 
-##  <a name="queryinterface"></a>  CComAggObject::QueryInterface
+##  <a name="queryinterface"></a>CComAggObject:: QueryInterface
 
 Pobiera wskaźnik do żądanego interfejsu.
 
@@ -205,25 +205,25 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="parameters"></a>Parametry
 
 *IID*<br/>
-[in] Identyfikator interfejsu żądanej.
+podczas Identyfikator żądanego interfejsu.
 
 *ppvObject*<br/>
-[out] Wskaźnik do wskaźnika interfejsu identyfikowane przez *iid*. Jeśli obiekt nie obsługuje ten interfejs *ppvObject* ma wartość NULL.
+określoną Wskaźnik do wskaźnika interfejsu identyfikowanego przez *Identyfikator IID*. Jeśli obiekt nie obsługuje tego interfejsu, *ppvObject* ma wartość null.
 
-*strony*<br/>
-[out] Wskaźnik do wskaźnika interfejsu identyfikowanych według typu `Q`. Jeśli obiekt nie obsługuje ten interfejs *pp* ma wartość NULL.
+*miesięcznie*<br/>
+określoną Wskaźnik do wskaźnika interfejsu identyfikowanego przez typ `Q`. Jeśli obiekt nie obsługuje tego interfejsu, ma ustawioną wartość NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli jest żądany interfejs `IUnknown`, `QueryInterface` zwraca wskaźnik do zagregowanych obiektu własnych `IUnknown` i zwiększa liczbę odwołań. W przeciwnym razie ta metoda wysyła zapytanie o interfejs, za pomocą `CComContainedObject` elementu członkowskiego, [m_contained](#m_contained).
+Jeśli żądany interfejs to `IUnknown`, `QueryInterface` zwraca wskaźnik do własnego `IUnknown` obiektu zagregowanego i zwiększa liczbę odwołań. W przeciwnym razie ta metoda wysyła zapytanie do interfejsu za `CComContainedObject` pomocą elementu członkowskiego [m_contained](#m_contained).
 
-##  <a name="release"></a>  CComAggObject::Release
+##  <a name="release"></a>CComAggObject:: Release
 
-Dekrementuje liczbę odwołań w obiekcie zagregowane.
+Zmniejsza liczbę odwołań do zagregowanego obiektu.
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -231,7 +231,7 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-W kompilacjach do debugowania `Release` zwraca wartość, która może być użyteczna, diagnostykę lub testowania. W kompilacjach nieprzeznaczonych do debugowania `Release` zawsze zwraca wartość 0.
+W kompilacjach `Release` debugowania zwraca wartość, która może być przydatna w przypadku diagnostyki lub testowania. W kompilacjach `Release` niedebugowanych zawsze zwraca wartość 0.
 
 ## <a name="see-also"></a>Zobacz także
 
@@ -240,4 +240,4 @@ W kompilacjach do debugowania `Release` zwraca wartość, która może być uży
 [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)<br/>
 [DECLARE_ONLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_only_aggregatable)<br/>
 [DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)
