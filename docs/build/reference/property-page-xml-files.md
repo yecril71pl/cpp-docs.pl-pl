@@ -1,31 +1,31 @@
 ---
-title: Pliki reguł XML strony właściwości
+title: Pliki reguł XML na stronie właściwości
 ms.date: 05/06/2019
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-ms.openlocfilehash: f23c252604c5b69423b808b3b9f072889e38c816
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 76378dc5ef9d7443045c329579cfa3c410dc262f
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837448"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630741"
 ---
-# <a name="property-page-xml-rule-files"></a>Pliki reguł XML strony właściwości
+# <a name="property-page-xml-rule-files"></a>Pliki reguł XML na stronie właściwości
 
-Strony właściwości projektu w IDE, są konfigurowane przez pliki XML w folderze VCTargets. Dokładnej ścieżki zależy od tego, której wersji programu Visual Studio są instalowane i język produktu. Visual Studio 2019 Enterprise Edition w języku angielskim, ścieżka jest `%ProgramFiles%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets\1033`. Pliki XML opisują nazwy reguły, kategorie, a poszczególne właściwości, typ danych, wartości domyślne i jak są wyświetlane. Gdy właściwość jest ustawiona w IDE, nowa wartość są przechowywane w pliku projektu.
+Strony właściwości projektu w IDE są konfigurowane przy użyciu plików XML w folderze VCTargets. Dokładna ścieżka zależy od tego, które wersje programu Visual Studio są zainstalowane, i języka produktu. W przypadku programu Visual Studio 2019 Enterprise Edition w języku angielskim ścieżka ma `%ProgramFiles%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets\1033`wartość. Pliki XML opisują nazwy reguł, kategorii i poszczególnych właściwości, ich typ danych, wartości domyślne i sposób ich wyświetlania. Po ustawieniu właściwości w IDE, Nowa wartość jest przechowywana w pliku projektu.
 
-Tylko scenariusze, w których należy zrozumieć wewnętrzne działanie tych plików i środowisku IDE programu Visual Studio czy () ma zostać utworzona niestandardowa strona właściwości lub (b) który chcesz dostosować właściwości projektu za pomocą środków innych niż za pomocą programu Visual Studio IDE.
+Jedyne scenariusze, w których należy zrozumieć wewnętrzne działania tych plików i środowisko IDE programu Visual Studio, to (a) chcesz utworzyć niestandardową stronę właściwości lub (b), aby dostosować właściwości projektu za pomocą pewnych metod innych niż za pośrednictwem środowiska IDE programu Visual Studio.
 
-Najpierw Przyjrzyjmy Otwórz strony właściwości projektu (kliknij prawym przyciskiem myszy węzeł projektu w **Eksploratora rozwiązań** i wybierz polecenie Właściwości):
+Najpierw Otwórz strony właściwości dla projektu (kliknij prawym przyciskiem myszy węzeł projektu w **Eksplorator rozwiązań** i wybierz polecenie Właściwości):
 
-![Visual Studio C++ Project Properties](../media/cpp-property-page-2017.png)
+![Właściwości projektu C++ programu Visual Studio](../media/cpp-property-page-2017.png)
 
-Każdy węzeł w węźle **właściwości konfiguracji** nosi nazwę reguły. Reguła reprezentuje czasami jednego narzędzia, takie jak kompilator, ale ogólnie rzecz biorąc termin odnosi się do zasobu, który ma właściwości, który wykonuje i który może generować pewne dane wyjściowe. Każda reguła jest wypełniana z pliku xml w folderze VCTargets. Na przykład reguła C/C++, która jest wyświetlana powyżej jest wypełniana przez "cl.xml".
+Każdy węzeł we **właściwościach konfiguracji** jest nazywany regułą. Reguła czasami reprezentuje pojedyncze narzędzie, takie jak kompilator, ale ogólnie termin odnosi się do elementu, który ma właściwości, które wykonuje i który może generować niektóre dane wyjściowe. Każda reguła jest wypełniana z pliku XML w folderze VCTargets. Na przykład, pokazana powyżejC++ reguła C/jest wypełniona "CL. xml".
 
-Jak wspomniano powyżej, każda reguła ma zestaw właściwości, które są podzielone na kategorie. Każdy węzeł podrzędny w obszarze reguła reprezentuje kategorię. Na przykład węźle Optymalizacja C/C++ zawiera wszystkie powiązane optymalizacji właściwości narzędzia kompilatora. Właściwości i ich wartości są renderowane w postaci siatki w okienku po prawej stronie.
+Jak pokazano powyżej, Każda reguła ma zestaw właściwości, które są pogrupowane w kategorie. Każdy podwęzeł w ramach reguły reprezentuje kategorię. Na przykład węzeł optymalizacji w obszarze C/C++ zawiera wszystkie właściwości związane z optymalizacją narzędzia kompilatora. Właściwości i ich wartości są renderowane w formacie siatki w okienku po prawej stronie.
 
-Możesz otworzyć cl.xml w Notatniku lub w dowolnym edytorze XML (patrz poniżej. Tworzenie migawki). Węzeł główny wywołuje regułę, która ma tej samej listy właściwości zdefiniowane w nim, jak są wyświetlane w interfejsie użytkownika, oraz dodatkowe metadane, zostanie wyświetlony.
+Można otworzyć plik CL. XML w Notatniku lub dowolnym edytorze XML (zobacz migawka poniżej). Zobaczysz węzeł główny o nazwie Rule, który ma tę samą listę właściwości, które są zdefiniowane w interfejsie użytkownika, wraz z dodatkowymi metadanymi.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -47,13 +47,13 @@ Możesz otworzyć cl.xml w Notatniku lub w dowolnym edytorze XML (patrz poniżej
 ...
 ```
 
-Istnieje jeden plik XML odpowiadający każdy węzeł w obszarze właściwości konfiguracji na stronach właściwości interfejsu użytkownika. Można dodać lub usunąć reguły w interfejsie użytkownika, w tym lub usuwając lokalizacje na odpowiadające im pliki XML w projekcie. Na przykład jest to, jak Microsoft.CppBuild.targets (jeden poziom wyżej z folderu 1033) obejmuje cl.xml:
+Istnieje jeden plik XML odpowiadający każdemu węzłowi we właściwościach konfiguracji w interfejsie użytkownika stron właściwości. Możesz dodawać lub usuwać reguły w interfejsie użytkownika, dołączając lub usuwając lokalizacje do odpowiednich plików XML w projekcie. Na przykład jest to sposób, w jaki Microsoft. CppBuild. targets (jeden poziom z folderu 1033) zawiera plik CL. XML:
 
 ```xml
 <PropertyPageSchema Condition="'$(ConfigurationType)' != 'Utility'" Include="$(VCTargetsPath)$(LangID)\cl.xml"/>
 ```
 
-Jeśli możesz oddzielić cl.xml wszystkie dane, możesz ostatecznie następujący szkielet:
+Jeśli połączymy plik CL. XML wszystkich danych, zostanie on zakończony następującym szkieletem:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -71,9 +71,9 @@ Jeśli możesz oddzielić cl.xml wszystkie dane, możesz ostatecznie następują
 </Rule>
 ```
 
-W poniższej sekcji opisano każdej głównych elementów, a niektóre metadanych, który można dołączyć do nich.
+W poniższej sekcji opisano poszczególne główne elementy i niektóre z metadanych, które można do nich dołączyć.
 
-1. **Reguła:**  Reguła jest zazwyczaj węzła głównego w pliku xml. może mieć wiele atrybutów:
+1. **Rule**  Reguła jest ogólnie węzłem głównym w pliku XML; może mieć wiele atrybutów:
 
     ```xml
     <Rule Name="CL" PageTemplate="tool" SwitchPrefix="/" Order="10"
@@ -85,31 +85,31 @@ W poniższej sekcji opisano każdej głównych elementów, a niektóre metadanyc
       </Rule.DisplayName>
     ```
 
-   a. **Nazwa:** Atrybut Name jest identyfikatorem reguły. Musi być unikatowa wśród wszystkich właściwości strony pliki xml dla projektu.
+   a. **Nazwij** Atrybut name jest identyfikatorem reguły. Musi być unikatowa wśród wszystkich plików XML strony właściwości projektu.
 
-   b. **PageTemplate:** Wartość tego atrybutu jest używana przez interfejs użytkownika z kolekcji szablonów interfejsu użytkownika. Szablon "narzędzia" powoduje wyświetlenie właściwości w postaci standardowych siatki. Inne wbudowane wartości dla tego atrybutu to "debugera" i "generic". Zobacz węzła debugowanie i ogólne węzła, odpowiednio do sprawdzenia formatu interfejsu użytkownika, wynikające z określenie tych wartości. W interfejsie użytkownika dla szablonu strony "debugera" używa pole listy rozwijanej, aby przełączać się między właściwości inne debugery, natomiast szablon "generic" przedstawia kategorie inną właściwość wszystko to w przeciwieństwie posiadanie wielu kategorii podrzędne węzły regułę po jednej stronie węzeł. Ten atrybut jest po prostu sugestię w interfejsie użytkownika; plik xml została zaprojektowana jako niezależnie od interfejsu użytkownika. Inny interfejs użytkownika może użyć tego atrybutu do różnych celów.
+   b. **PageTemplate:** Wartość tego atrybutu jest używana przez interfejs użytkownika do wybierania z kolekcji szablonów interfejsu użytkownika. Szablon "Narzędzie" renderuje właściwości w standardowym formacie siatki. Inne wbudowane wartości tego atrybutu to "Debugger" i "Generic". Zobacz odpowiednio węzeł Debugowanie i węzeł ogólny, aby zobaczyć format interfejsu użytkownika wynikający z określenia tych wartości. Interfejs użytkownika dla szablonu strony "debuger" używa pola listy rozwijanej, aby przełączać się między właściwościami różnych debugerów, podczas gdy szablon "ogólny" wyświetla różne kategorie właściwości wszystkie na jednej stronie, w przeciwieństwie do wielu węzłów podrzędnych kategorii w ramach reguły większości. Ten atrybut jest tylko sugestią interfejsu użytkownika; plik XML został zaprojektowany jako niezależny od interfejsu użytkownika. Inny interfejs użytkownika może używać tego atrybutu do różnych celów.
 
-   c. **SwitchPrefix:** Jest to prefiks używany w wierszu polecenia na potrzeby przełączników. Wartość "/" spowodowałoby przełączników, które mają postać/zi, / nologo, / W3, itp.
+   c. **SwitchPrefix:** Jest to prefiks używany w wierszu polecenia dla przełączników. Wartość "/" spowoduje, że przełączniki wyglądają podobnie jak/ZI,/nologo,/W3 itd.
 
-   d. **Kolejność:** Jest to sugestię do potencjalnego klienta interfejsu użytkownika na położenie tej reguły w porównaniu do innych reguł w systemie.
+   d. **Porządek** Jest to sugestia klienta potencjalnego interfejsu użytkownika dla względnej lokalizacji tej reguły w porównaniu z innymi regułami w systemie.
 
-   e. **xmlns:** Jest to standardowy element XAML. Zobaczysz trzy obszary nazw na liście. Odpowiadają one przestrzenie nazw do deserializacji XAML klasy, XAML systemu i schematu przestrzeni nazw, odpowiednio.
+   e. **'xmlns** Jest to standardowy element XAML. Widoczne są trzy obszary nazw. Odpowiadają one przestrzeniom nazw dla klas deserializacji XAML, schematu XAML i systemowej przestrzeni nazw, odpowiednio.
 
-   f. **Właściwość DisplayName:** Jest to nazwa, która jest wyświetlana na stronie właściwości interfejsu użytkownika dla węzła reguły. Ta wartość jest zlokalizowana. Utworzyliśmy DisplayName jako element podrzędny, reguły, a nie jako atrybutu (np. nazwę lub SwitchPrefix) z powodu lokalizacji wewnętrznych wymagań narzędzia. Zarówno z perspektywy firmy XAML są równoważne. Tak możesz po prostu przekształcić ją w atrybutu zbędnych elementów lub pozostaw to pole, ponieważ jest.
+   f. **Nazwa** Jest to nazwa wyświetlana w interfejsie użytkownika strony właściwości węzła reguły. Ta wartość jest zlokalizowana. Utworzyliśmy jako element podrzędny reguły, a nie jako atrybut (na przykład Name lub SwitchPrefix) z powodu wymagań narzędzia lokalizacji wewnętrznej. Z perspektywy języka XAML obie są równoważne. Dzięki temu można po prostu wprowadzić atrybut, aby zmniejszyć jego czytelność lub pozostawić go w taki sam sposób.
 
-   g. **Źródło danych:** Jest to bardzo ważne właściwość, która informuje system projektu, lokalizacji, z której należy wartość właściwości odczytywane i zapisywane do, a jego grupowania (opisana poniżej). Aby uzyskać cl.xml te wartości są:
+   g. **DataSource** Jest to bardzo ważna właściwość, która informuje system projektu o lokalizacji, z której wartość właściwości powinna odczytywać i zapisywać, oraz grupowanie (wyjaśniono poniżej). W przypadku CL. XML te wartości są następujące:
 
       ```xml
       <DataSource Persistence="ProjectFile" ItemType="ClCompile" Label="" HasConfigurationCondition="true" />
       ```
 
-   - `Persistence="ProjectFile` informuje system projektu, że wszystkie właściwości reguły mają być zapisywane w pliku projektu lub pliku arkusza właściwości (w zależności od węzła użyto się na stronach właściwości). Możliwa wartość to "UserFile", która będzie zapisywała wartość w pliku .user.
+   - `Persistence="ProjectFile`informuje system projektu, że wszystkie właściwości reguły powinny być zapisywane do pliku projektu lub pliku arkusza właściwości (w zależności od tego, który węzeł został użyty do duplikowania stron właściwości). Druga możliwa wartość to "UserFile", która pisze wartość do pliku. User.
 
-   - `ItemType="ClCompile"` mówi, że właściwości zostaną zapisane w formie ItemDefinition metadanych lub metadane elementu (ten ostatni tylko wtedy, gdy strony właściwości zostały zduplikowany z węzła pliku w Eksploratorze rozwiązań) tego typu elementu. Jeśli to pole nie jest ustawiona, właściwości są zapisywane jako wspólnej właściwości w PropertyGroup.
+   - `ItemType="ClCompile"`wskazuje, że właściwości będą przechowywane jako metadane ItemDefinition lub metadane elementu (tylko wtedy, gdy strony właściwości zostały zduplikowane z węzła pliku w Eksploratorze rozwiązań) tego typu elementu. Jeśli to pole nie jest ustawione, właściwość jest zapisywana jako wspólna właściwość w liście właściwości.
 
-   - `Label=""` Wskazuje, że po właściwości są zapisywane w postaci `ItemDefinition` metadane, etykieta ItemDefinitionGroup — element nadrzędny będzie pusty (każdego elementu MSBuild może mieć etykietę). Visual Studio 2017 i późniejszego użycia etykietę grupy, aby przejść do pliku projektu .vcxproj. Należy zauważyć, że grup, które zawierają większość właściwości reguły pusty ciąg jako etykiety.
+   - `Label=""`wskazuje, że gdy właściwości są zapisywane jako `ItemDefinition` metadane, etykieta nadrzędnego ItemDefinitionGroup będzie pusta (każdy element MSBuild może mieć etykietę). Program Visual Studio 2017 lub nowszy używa grup oznaczonych jako do nawigowania w pliku projektu. vcxproj. Należy zauważyć, że grupy zawierające większość właściwości reguły mają pusty ciąg jako etykietę.
 
-   - `HasConfigurationCondition="true"` informuje system projektu, aby umieścić warunek konfiguracji na wartość tak, aby działa tylko dla bieżącej konfiguracji projektu (warunek może zostać umieszczona w grupie nadrzędnej lub samą wartość). Na przykład, otwórz strony właściwości węzła projektu i ustaw wartość właściwości **traktowanie ostrzeżeń jako błędów** w obszarze **właściwości konfiguracji > C/C++ General** "Yes". Następujące wartości są zapisywane do pliku projektu. Zwróć uwagę, warunek konfiguracji dołączony do ItemDefinitionGroup — element nadrzędny.
+   - `HasConfigurationCondition="true"`informuje system projektu, aby dołączył warunek konfiguracji do wartości tak, aby obowiązywał tylko dla bieżącej konfiguracji projektu (warunek może być dołączany do grupy nadrzędnej lub sama sama wartość). Na przykład Otwórz strony właściwości poza węzłem projektu i ustaw wartość właściwości **Traktuj ostrzeżenia jako błąd** we **właściwościach konfiguracji > CC++ /ogólne** do "tak". Następująca wartość jest zapisywana w pliku projektu. Zwróć uwagę na warunek konfiguracji dołączony do elementu nadrzędnego ItemDefinitionGroup.
 
       ```xml
       <ItemDefinitionGroup Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">
@@ -119,7 +119,7 @@ W poniższej sekcji opisano każdej głównych elementów, a niektóre metadanyc
       </ItemDefinitionGroup>
       ```
 
-      Jeśli tę wartość ustawiono na stronie właściwości dla określonego pliku, takie jak stdafx.cpp, wartość właściwości powinny być zapisane w obszarze element stdafx.cpp w pliku projektu, jak pokazano poniżej. Zwróć uwagę, jak warunek konfiguracji jest podłączony bezpośrednio do samego metadanych.
+      Jeśli ta wartość została ustawiona na stronie właściwości dla określonego pliku, na przykład stdafx. cpp, wartość właściwości zostanie zapisywana w elemencie *stdafx. cpp* w pliku projektu, jak pokazano poniżej. Zwróć uwagę, jak warunek konfiguracji jest bezpośrednio dołączony do samych metadanych.
 
       ```xml
       <ItemGroup>
@@ -129,15 +129,15 @@ W poniższej sekcji opisano każdej głównych elementów, a niektóre metadanyc
       </ItemGroup>
       ```
 
-   Innym atrybucie **DataSource** niewymienionego powyżej jest **PersistedName**. Ten atrybut służy do reprezentowania właściwości w pliku projektu, używając innej nazwy. Domyślnie ten atrybut jest ustawiony na wartość właściwości **nazwa**.
+   Innym atrybutem **źródła danych** , który niejest wymieniony powyżej, jest persistedname. Ten atrybut służy do reprezentowania właściwości w pliku projektu przy użyciu innej nazwy. Domyślnie ten atrybut jest ustawiony na **nazwę**właściwości.
 
-   Pojedynczej właściwości można zastąpić reguł elementu nadrzędnego źródła danych. W takiej sytuacji lokalizacji dla tej właściwości wartości będzie różnić się od innych właściwości w regule.
+   Poszczególne właściwości mogą przesłonić swoje źródło danych reguły nadrzędnej. W takim przypadku lokalizacja tej właściwości będzie różna od innych właściwości w regule.
 
-   h. Istnieją inne atrybuty reguły, w tym opis i SupportsFileBatching, które nie są wyświetlane w tym miejscu. Pełny zestaw atrybutów, które są stosowane do reguły lub w innym elemencie można uzyskać, przeglądając dokumentację dla tych typów. Alternatywnie można sprawdzić właściwości publiczne dla typów w `Microsoft.Build.Framework.XamlTypes` przestrzeni nazw w `Microsoft.Build.Framework .dll` zestawu.
+   h. Istnieją inne atrybuty reguły, w tym opis i SupportsFileBatching, które nie są tutaj wyświetlane. Pełny zestaw atrybutów dotyczących reguły lub dowolnego innego elementu można uzyskać, przeglądając dokumentację dla tych typów. Alternatywnie można przeanalizować właściwości publiczne dla typów w `Microsoft.Build.Framework.XamlTypes` przestrzeni nazw `Microsoft.Build.Framework .dll` zestawu.
 
-   i. **DisplayName**, **PageTemplate**, i **kolejności** względami są związane z interfejsem użytkownika właściwości, które znajdują się w tym modelu danych niezależnie od interfejsu użytkownika. Te właściwości są prawie pewne, który będzie używany przez wszystkie interfejs użytkownika, który służy do wyświetlania na stronach właściwości. **DisplayName** i **opis** są dwie właściwości, które znajdują się w przypadku niemal wszystkich elementów w pliku xml. A Oto tylko dwie właściwości, które są zlokalizowane (lokalizacja tych ciągów zostaną wyjaśnione w nowszym post).
+   i. **DisplayName**, **PageTemplate**i **Order** są właściwościami związanymi z interfejsem użytkownika, które znajdują się w tym modelu danych niezależnym od interfejsu użytkownika. Te właściwości są prawie określone do użycia przez każdy interfejs użytkownika, który jest używany do wyświetlania stron właściwości. **Nazwa wyświetlana** i **Opis** to dwie właściwości, które znajdują się w prawie wszystkich elementach w pliku XML. Są to jedyne dwie właściwości, które są zlokalizowane (lokalizacja tych ciągów zostanie omówiona w późniejszym wpisie).
 
-1. **Kategoria:** Reguła może mieć wiele kategorii. Kolejność, w jakiej kategorii są wymienione w pliku xml jest sugestię w interfejsie użytkownika do wyświetlania kategorii w tej samej kolejności. Na przykład kolejność kategorii w węźle C/C++, jak pokazano w interfejsie użytkownika — ogólne, optymalizacja, Preprocesor,...  — jest taki sam jak ten w cl.xml. Kategoria przykładowe wygląda następująco:
+1. **Kategorii** Reguła może mieć wiele kategorii. Kolejność, w której kategorie są wymienione w pliku XML jest sugestią interfejsu użytkownika do wyświetlania kategorii w tej samej kolejności. Na przykład kolejność kategorii w węźle C/C++ Node widzianym w interfejsie użytkownika — ogólne, optymalizacja, preprocesor,...  — jest taka sama jak w CL. XML. Przykładowa Kategoria wygląda następująco:
 
     ```xml
     <Category Name="Optimization">
@@ -147,9 +147,9 @@ W poniższej sekcji opisano każdej głównych elementów, a niektóre metadanyc
     </Category>
     ```
 
-   Powyższe fragment kodu przedstawia **nazwa** i **DisplayName** atrybutów, które został opisany wcześniej. Jeszcze raz istnieją inne atrybuty **kategorii** może mieć, które nie są używane powyżej. Możesz sprawdzać ich temat, zapoznając się z dokumentacją i analizując zestawy za pomocą ildasm.exe.
+   Powyższy fragment kodu przedstawia atrybuty **name** i **DisplayName** , które zostały opisane wcześniej. Jeszcze raz istnieją inne atrybuty, których **kategorii** nie można użyć powyżej. Informacje o nich można uzyskać, odczytując dokumentację lub badając zestawy za pomocą Ildasm. exe.
 
-1. **Właściwości:** To jest rodzaje pliku xml i zawiera listę wszystkich właściwości w tej regule. Każda właściwość może być jednego z pięciu typów możliwych pokazano w powyższym szkielet XAML. Oczywiście może mieć tylko kilka z tych typów w pliku. Właściwość ma wiele atrybutów, które zezwalała na graficznie opisane. Wyjaśnię to tylko **StringProperty** tutaj. Pozostałe są bardzo podobne.
+1. **Aœciwoœci** Jest to mięso pliku XML i zawiera listę wszystkich właściwości w tej regule. Każda właściwość może być jednym z pięciu możliwych typów, które przedstawiono w powyższym szkieletzie XAML. Oczywiście w pliku może być tylko kilka z tych typów. Właściwość ma wiele atrybutów, które umożliwiają rozbudowane. Wyjaśnię tylko **StringProperty** tutaj. Pozostałe są bardzo podobne.
 
     ```xml
     <StringProperty Subtype="file" Name="ObjectFileName" Category="Output Files" Switch="Fo">
@@ -162,18 +162,18 @@ W poniższej sekcji opisano każdej głównych elementów, a niektóre metadanyc
     </StringProperty>
     ```
 
-   Zanim zostały opisane większość atrybutów, w tym fragmencie kodu. Te nowe są podtypu, kategorii i przełącznika.
+   Większość atrybutów w fragmencie kodu została opisana przed. Nowe są podtype, Category i switch.
 
-   a. **Podtyp** jest dostępna tylko dla atrybutu **StringProperty** i **StringListProperty**; zapewnia informacje kontekstowe. Na przykład wartość "file" wskazuje, że właściwość reprezentuje ścieżkę do pliku. Takie informacje kontekstowe jest używana do podwyższenia środowisko edytowania, zapewniając Eksploratora Windows jako Edytor właściwości, który umożliwia użytkownikowi wybrać plik wizualnie.
+   a. **Podtyp** jest atrybutem dostępnym tylko dla **StringProperty** i **StringListProperty**; zapewnia informacje kontekstowe. Na przykład wartość "plik" wskazuje, że właściwość reprezentuje ścieżkę pliku. Takie informacje kontekstowe służą do ulepszania środowiska edycji przez udostępnienie Eksploratora Windows jako edytora właściwości, który umożliwia użytkownikowi wizualne Wybieranie pliku.
 
-   b. **Kategoria:** Deklaruje to kategoria, pod którym znajduje się ta właściwość. Spróbuj znaleźć tę właściwość w ramach **pliki wyjściowe** kategorii w interfejsie użytkownika.
+   b. **Kategorii** Deklaruje kategorię, w której znajduje się ta właściwość. Spróbuj znaleźć tę właściwość w kategorii **pliki wyjściowe** w interfejsie użytkownika.
 
-   c. **Przełącznik:** Jeśli reguła reprezentuje narzędzie — takiego jak narzędzie kompilatora w tym przypadku — większość właściwości reguły są przekazywane jako przełączników do narzędzia pliku wykonywalnego w czasie kompilacji. Wartość tego atrybutu wskazuje literału używanego przełącznika. Powyższej właściwości określa, że jego przełącznika powinna być **Fo**. W połączeniu z **SwitchPrefix** atrybutu nadrzędnego reguły, ta właściwość jest przekazywana do pliku wykonywalnego jako **/Fo "debugowanie\"**  (widoczne w wierszu polecenia języka C/c++ w interfejsie użytkownika strony właściwości).
+   c. **Przełącznika** Gdy reguła reprezentuje narzędzie, takie jak narzędzie kompilatora w tym przypadku — większość właściwości reguły jest przenoszona jako przełączniki do pliku wykonywalnego narzędzia podczas kompilacji. Wartość tego atrybutu wskazuje literał przełącznika, który ma być używany. Powyższa Właściwość określa, że jej przełącznik powinien mieć wartość **fo**. W połączeniu z atrybutem **SwitchPrefix** reguły nadrzędnej, ta właściwość jest przenoszona do pliku wykonywalnego jako **/fo\" "Debug** (Visible w wierszu polecenia dla CC++ /w interfejsie użytkownika strony właściwości).
 
    Inne atrybuty właściwości obejmują:
 
-   d. **Widoczny:** Jeśli z jakiegoś powodu nie mają swoje właściwości wyświetlane na stronach właściwości (ale nadal prawdopodobnie jest ona dostępna w czasie kompilacji), ten atrybut jest ustawiony na wartość false.
+   d. **Widać** Jeśli z jakiegoś powodu nie chcesz, aby właściwość była wyświetlana na stronach właściwości (ale prawdopodobnie nadal jest dostępna w czasie kompilacji), ustaw dla tego atrybutu wartość false.
 
-   e. **Tylko do odczytu:** Jeśli chcesz przedstawić widok tylko do odczytu wartości tej właściwości na stronach właściwości, ustaw ten atrybut na wartość true.
+   e. **Trybie** Jeśli chcesz udostępnić widok tylko do odczytu wartości tej właściwości na stronach właściwości, ustaw dla tego atrybutu wartość true.
 
-   f. **IncludeInCommandLine:** Niektóre właściwości nie może być konieczne do przekazania do narzędzia, w czasie kompilacji. Ustawienie tego atrybutu na false uniemożliwi jej przekazywana.
+   f. **IncludeInCommandLine:** Niektóre właściwości mogą nie być przesyłane do narzędzia w czasie kompilacji. Ustawienie tego atrybutu na wartość false uniemożliwi przekazanie go.

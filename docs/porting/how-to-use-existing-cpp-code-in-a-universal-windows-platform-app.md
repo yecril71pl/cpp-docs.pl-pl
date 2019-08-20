@@ -2,12 +2,12 @@
 title: 'Instrukcje: Korzystanie z C++ istniejącego kodu w aplikacji platforma uniwersalna systemu Windows'
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: e587ae88fe8d38a22b351d87ae585efe82acf091
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5050a9773eea55549958195efa624743f44ed031
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510381"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630425"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Instrukcje: Korzystanie z C++ istniejącego kodu w aplikacji platforma uniwersalna systemu Windows
 
@@ -151,7 +151,7 @@ Poniższa procedura dotyczy przypadku, w którym masz natywną bibliotekę DLL, 
 
    **Eksplorator rozwiązań** teraz identyfikuje projekt jako uniwersalny projekt systemu Windows.
 
-5. Upewnij się, że nazwa pliku prekompilowanego nagłówka jest poprawna. W sekcji **prekompilowane nagłówki** Zmień **wstępnie skompilowany plik nagłówkowy** z PCH. h na stdafx. h. Jeśli tego nie zrobisz, zostanie wyświetlony następujący błąd.
+5. Upewnij się, że nazwa pliku prekompilowanego nagłówka jest poprawna. W sekcji **prekompilowane nagłówki** Zmień **wstępnie skompilowany plik nagłówkowy** z *PCH. h* na *stdafx. h*. Jeśli tego nie zrobisz, zostanie wyświetlony następujący błąd.
 
    > błąd C2857: Instrukcja "#include" określona za pomocą/Ycpch.h opcji wiersza polecenia nie została znaleziona w pliku źródłowym
 
@@ -165,7 +165,7 @@ Poniższa procedura dotyczy przypadku, w którym masz natywną bibliotekę DLL, 
 
    W obszarze **projekty** > **rozwiązania**zaznacz pole wyboru obok projektu DLL, a następnie wybierz przycisk **OK** .
 
-8. Uwzględnij pliki nagłówkowe biblioteki w pliku PCH. h aplikacji platformy UWP.
+8. Uwzględnij pliki nagłówkowe biblioteki w pliku *PCH. h* aplikacji platformy UWP.
 
     ```cpp
     #include "..\MyNativeDLL\giraffe.h"
@@ -195,7 +195,7 @@ Można jednak użyć biblioteki statycznej w platformy UWP bez ponownego kompilo
 
 1. We właściwościach projektu dla projektu platformy UWP wybierz pozycję **Właściwości** > konfiguracji**dane wejściowe** **konsolidatora** > w okienku po lewej stronie. W okienku po prawej stronie Dodaj ścieżkę do biblioteki we właściwości **dodatkowe zależności** . Na przykład dla biblioteki w projekcie, która umieszcza dane wyjściowe w *SolutionFolder*\Debug\MyNativeLibrary\MyNativeLibrary.lib, Dodaj ścieżkę `Debug\MyNativeLibrary\MyNativeLibrary.lib`względną.
 
-2. Dodaj instrukcję include, aby odwoływać się do pliku nagłówkowego w pliku PCH. h (jeśli istnieje) lub w dowolnym pliku. cpp w razie potrzeby, a następnie zacznij dodawać kod, który używa biblioteki.
+2. Dodaj instrukcję include, aby odwoływać się do pliku nagłówkowego w pliku *PCH. h* (jeśli istnieje) lub w dowolnym pliku. cpp w razie potrzeby, a następnie zacznij dodawać kod, który używa biblioteki.
 
    ```cpp
    #include "..\MyNativeLibrary\giraffe.h"
@@ -219,7 +219,7 @@ Jeśli chcesz korzystać z natywnych interfejsów API w bibliotece statycznej z 
 
 5. Zaznacz wszystkie pliki, które mają zostać dodane z oryginalnego projektu, a następnie wybierz **przycisk OK**. Powtórz w razie potrzeby dla podfolderów.
 
-6. Może teraz istnieć pewien duplikat kodu. Jeśli masz więcej niż jeden prekompilowany nagłówek (Powiedz stdafx. h i PCH. h), wybierz jedną, która ma zostać zachowana. Skopiuj dowolny wymagany kod, taki jak instrukcje include, do tej, która jest zachowywana. Następnie usuń inne i we właściwościach projektu w obszarze prekompilowane **nagłówki**upewnij się, że nazwa pliku nagłówka jest poprawna.
+6. Może teraz istnieć pewien duplikat kodu. Jeśli masz więcej niż jeden prekompilowany nagłówek (Powiedz *stdafx. h* i *PCH. h*), wybierz jedną, która ma zostać zachowana. Skopiuj dowolny wymagany kod, taki jak instrukcje include, do tej, która jest zachowywana. Następnie usuń inne i we właściwościach projektu w obszarze prekompilowane **nagłówki**upewnij się, że nazwa pliku nagłówka jest poprawna.
 
    Jeśli plik został zmieniony tak, aby używał jako prekompilowanego nagłówka, upewnij się, że opcje prekompilowanego nagłówka są poprawne dla każdego pliku. Zaznacz każdy plik CPP z kolei, otwórz jego okno właściwości i upewnij się, że wszystkie są ustawione na **Użyj (/Yu)** , z wyjątkiem żądanego prekompilowanego nagłówka, który powinien być ustawiony na **Utwórz (/Yc)** .
 

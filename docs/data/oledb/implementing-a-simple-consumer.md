@@ -1,48 +1,48 @@
 ---
 title: Implementowanie prostego konsumenta
-ms.date: 05/09/2019
+ms.date: 08/19/2019
 helpviewer_keywords:
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-ms.openlocfilehash: 67bce55a19a2aaaf3a8cbb62d7db228513e93c91
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 2f290f2a17c51682c75fbc09118757e5fd12c4f7
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707533"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630753"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementowanie prostego konsumenta
 
 ::: moniker range="vs-2019"
 
-Kreator OLE DB konsumenta ATL nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach. Można nadal ręcznie dodawać funkcje. Aby uzyskać więcej informacji, zobacz [tworzenie konsumenta bez przy użyciu kreatora](creating-a-consumer-without-using-a-wizard.md).
+Kreator użytkownika ATL OLE DB nie jest dostępny w programie Visual Studio 2019 i nowszych. Można nadal ręcznie dodawać funkcje. Aby uzyskać więcej informacji, zobacz [Tworzenie klienta bez korzystania z Kreatora](creating-a-consumer-without-using-a-wizard.md).
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-W następujących tematach opisano, jak edytować pliki tworzone przez **Kreator aplikacji MFC** i **OLE DB Kreator konsumenta ATL** na tworzenie prostego konsumenta. W tym przykładzie ma następujące elementy:
+W poniższych tematach przedstawiono sposób edytowania plików utworzonych przez **Kreatora aplikacji MFC** i Kreatora programu **ATL OLE DB użytkownika** w celu utworzenia prostego konsumenta. Ten przykład zawiera następujące części:
 
-- [Trwa pobieranie danych z konsumentem](#retrieve) pokazuje, jak zaimplementować kod u odbiorcy, która odczytuje dane, wiersz po wierszu z tabeli bazy danych.
+- [Pobieranie danych z konsumenta](#retrieve) pokazuje, jak zaimplementować kod w odbiorcy, który odczytuje wszystkie dane, wiersz po wierszu, z tabeli bazy danych.
 
-- [Dodawanie obsługi zakładki do konsumenta](#bookmark) pokazuje, jak dodać obsługę zakładki do konsumenta.
-
-> [!NOTE]
-> Aplikacja konsumenta, opisane w tej sekcji można użyć do testowania `MyProv` i `Provider` przykładowy dostawców.
+- [Dodanie obsługi zakładki do konsumenta](#bookmark) pokazuje, jak dodać obsługę zakładki do konsumenta.
 
 > [!NOTE]
-> Aby skompilować aplikację konsumenta, aby przetestować `MyProv` (tego samego dostawcy opisanego w [udoskonalanie prostego dostawcy tylko do odczytu](../../data/oledb/enhancing-the-simple-read-only-provider.md)), musi zawierać Obsługa zakładek, zgodnie z opisem w [dodawania zakładki Obsługa Konsument](#bookmark).
+> Możesz użyć aplikacji konsumenta opisanej w tej sekcji, aby przetestować `MyProv` przykładowo dostawców i. `Provider`
 
-## <a name="retrieve" ></a> Trwa pobieranie danych z konsumentem
+> [!NOTE]
+> Aby skompilować aplikację konsumenta do testowania `MyProv` (ten sam dostawca opisany w temacie [ulepszanie prostego dostawcy tylko do odczytu](../../data/oledb/enhancing-the-simple-read-only-provider.md)), musisz dołączyć obsługę zakładki zgodnie z opisem w temacie [Dodawanie obsługi zakładki do konsumenta](#bookmark).
 
-### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Aby zmodyfikować aplikację konsolową używać konsumenta OLE DB
+## <a name="retrieve" ></a>Pobieranie danych z konsumenta
 
-1. W `MyCons.cpp`, zmienić głównego kodu, podając pogrubioną czcionką w następujący sposób:
+### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Aby zmodyfikować aplikację konsolową tak, aby korzystała z klienta OLE DB
+
+1. W `MyCons.cpp`programie Zmień kod główny, wstawiając tekst pogrubiony w następujący sposób:
 
     ```cpp
     // MyCons.cpp : Defines the entry point for the console application.
     //
-    #include "stdafx.h"
+    #include "pch.h" // "stdafx.h" in Visual Studio 2017 and earlier
     #include "Products.h"
     ...
     int main(int argc, char* argv[])
@@ -64,32 +64,32 @@ W następujących tematach opisano, jak edytować pliki tworzone przez **Kreator
     }
     ```
 
-## <a name="bookmark" ></a> Dodawanie obsługi zakładki do konsumenta
+## <a name="bookmark" ></a>Dodawanie obsługi zakładki do konsumenta
 
-Zakładka jest kolumna, która unikatowo identyfikuje wierszy w tabeli. Zazwyczaj jest kolumna klucza, ale nie zawsze; jest specyficzny dla dostawcy. W tej sekcji dowiesz się, jak dodać obsługę zakładki. Aby to zrobić, należy wykonać poniższe kroki w klasie rekordu użytkownika:
+Zakładka to kolumna, która jednoznacznie identyfikuje wiersze w tabeli. Zwykle jest to kolumna klucza, ale nie zawsze; jest on specyficzny dla dostawcy. W tej sekcji przedstawiono sposób dodawania obsługi zakładki. W tym celu należy wykonać następujące kroki w klasie rekordu użytkownika:
 
-- Tworzy zakładki. Są to obiekty typu [CBookmark](../../data/oledb/cbookmark-class.md).
+- Tworzenie wystąpienia zakładek. Są to obiekty typu [CBookmark](../../data/oledb/cbookmark-class.md).
 
-- Żądanie kolumnę zakładki z dostawcy, ustawiając `DBPROP_IRowsetLocate` właściwości.
+- Zażądaj kolumny zakładki od dostawcy, ustawiając `DBPROP_IRowsetLocate` właściwość.
 
-- Dodaj wpis zakładki do mapy kolumny przy użyciu [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md) makra.
+- Dodaj wpis zakładki do mapy kolumn za pomocą makra [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md) .
 
-Poprzednie kroki umożliwiają Obsługa zakładek i obiekt zakładki, z którą chcesz pracować. Ten przykład kodu pokazuje zakładki w następujący sposób:
+Poprzednie kroki zapewniają obsługę zakładek i obiekt zakładek, z którymi należy korzystać. Ten przykład kodu demonstruje zakładkę w następujący sposób:
 
 - Otwórz plik do zapisu.
 
-- Zestaw wierszy dane wyjściowe do pliku wiersz po wierszu.
+- Dane wyjściowe zestawu wierszy do wiersza pliku według wiersza.
 
-- Przesunięcie kursora wierszy do zakładki, wywołując [movetobookmark —](../../data/oledb/crowset-movetobookmark.md).
+- Przenieś kursor zestawu wierszy do zakładki, wywołując [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md).
 
-- Dane wyjściowe wiersza zakładką, dołączenie jej do końca pliku.
+- Wyprowadza wiersz z zakładką, dołączając go na końcu pliku.
 
 > [!NOTE]
-> Jeśli test za pomocą tej aplikacji konsumentów `Provider` Przykładowa aplikacja dostawcy, opuszczenie Obsługa zakładek, opisane w tej sekcji.
+> W przypadku korzystania z tej aplikacji konsumenta do testowania `Provider` przykładowej aplikacji dostawcy należy skorzystać z pomocy technicznej zakładki opisanej w tej sekcji.
 
 ### <a name="to-instantiate-the-bookmark"></a>Aby utworzyć wystąpienie zakładki
 
-1. Metody dostępu musi zawierać obiektu typu [CBookmark](../../data/oledb/cbookmark-class.md). *NSize* parametr określa rozmiar buforu zakładki w bajtach (zwykle 4 dla platform 32-bitowe) i 8 na platformach 64-bitowych. Do elementów członkowskich danych kolumny w klasie rekord użytkownika, należy dodać następującą deklarację:
+1. Metoda dostępu musi przechowywać obiekt typu [CBookmark](../../data/oledb/cbookmark-class.md). Parametr *nSize* określa rozmiar buforu zakładki w bajtach (zwykle 4 dla platform 32-bitowych i 8 dla platform 64-bitowych). Dodaj następującą deklarację do elementów członkowskich danych w klasie rekordu użytkownika:
 
     ```cpp
     //////////////////////////////////////////////////////////////////////
@@ -102,9 +102,9 @@ Poprzednie kroki umożliwiają Obsługa zakładek i obiekt zakładki, z którą 
        ...
     ```
 
-### <a name="to-request-a-bookmark-column-from-the-provider"></a>Żądanie kolumnę zakładki z dostawcy
+### <a name="to-request-a-bookmark-column-from-the-provider"></a>Aby zażądać kolumny zakładki od dostawcy
 
-1. Dodaj następujący kod w `GetRowsetProperties` metody w klasie rekordu użytkownika:
+1. Dodaj następujący kod w `GetRowsetProperties` metodzie w klasie rekordu użytkownika:
 
     ```cpp
     // Set the DBPROP_IRowsetLocate property.
@@ -116,9 +116,9 @@ Poprzednie kroki umożliwiają Obsługa zakładek i obiekt zakładki, z którą 
     }
     ```
 
-### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>Aby dodać wpis zakładki do mapy kolumny
+### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>Aby dodać wpis zakładki do mapy kolumn
 
-1. Dodaj następujący wpis do mapy kolumny w klasie rekord użytkownika:
+1. Dodaj następujący wpis do mapy kolumn w klasie rekordu użytkownika:
 
     ```cpp
     // Set a bookmark entry in the column map.
@@ -130,9 +130,9 @@ Poprzednie kroki umożliwiają Obsługa zakładek i obiekt zakładki, z którą 
     END_COLUMN_MAP()
     ```
 
-### <a name="to-use-a-bookmark-in-your-main-code"></a>Aby użyć zakładki w kodzie głównego
+### <a name="to-use-a-bookmark-in-your-main-code"></a>Aby użyć zakładki w kodzie głównym
 
-1. W `MyCons.cpp` plik z aplikacji konsoli, wcześniej utworzone, możesz zmienić głównego kodu do odczytu w następujący sposób. Aby użyć zakładek, trzeba utworzyć swój własny obiektu zakładki głównego kodu (`myBookmark`); jest to zakładki innego niż ten, w metodzie dostępu (`m_bookmark`).
+1. `MyCons.cpp` W pliku z wcześniej utworzonej aplikacji konsolowej Zmień kod główny, tak aby był odczytywany w następujący sposób. Aby można było używać zakładek, główny kod musi utworzyć wystąpienie własnego obiektu zakładki`myBookmark`(); jest to inna zakładka z jednej w metodzie dostępu (`m_bookmark`).
 
     ```cpp
     ///////////////////////////////////////////////////////////////////////
@@ -201,7 +201,7 @@ Poprzednie kroki umożliwiają Obsługa zakładek i obiekt zakładki, z którą 
     }
     ```
 
-Aby uzyskać więcej informacji na temat zakładek, zobacz [przy użyciu zakładki](../../data/oledb/using-bookmarks.md). Przykłady zakładki są także wyświetlane w [aktualizowanie zestawów wierszy](../../data/oledb/updating-rowsets.md).
+Aby uzyskać więcej informacji na temat zakładek, zobacz [using zakładki](../../data/oledb/using-bookmarks.md). Przykłady zakładek są również wyświetlane w temacie [Aktualizowanie zestawów wierszy](../../data/oledb/updating-rowsets.md).
 
 ::: moniker-end
 

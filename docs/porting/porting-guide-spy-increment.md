@@ -2,12 +2,12 @@
 title: 'Przewodnik przenoszenia: Spy++'
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 206698d35239f416d2f13891044aa54fe502500a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 175f3fbba7e18f625dc3425c236162737689f068
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511661"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630448"
 ---
 # <a name="porting-guide-spy"></a>Przewodnik przenoszenia: Spy++
 
@@ -67,7 +67,7 @@ System Windows XP nie jest już obsługiwany przez firmę Microsoft, więc mimo 
 
 Aby usunąć błąd, zdefiniuj polecenie WINVER, aktualizując ustawienie **właściwości projektu** do najmniejszej wersji systemu Windows, która jest obecnie przeznaczona do użycia. W [tym miejscu](/windows/win32/WinProg/using-the-windows-headers)znajdziesz tabelę wartości dla różnych wersji systemu Windows.
 
-Plik stdafx. h zawiera niektóre z tych definicji makr.
+Plik *stdafx. h* zawiera niektóre z tych definicji makr.
 
 ```cpp
 #define WINVER       0x0500  // these defines are set so that we get the
@@ -373,7 +373,7 @@ Duże użycie makr, jak w tym kodzie, sprawia, że kod jest trudniejszy do utrzy
 #define PARM(var, type, src)type var = (type)src
 ```
 
-W związku `lpszBuffer` z tym zmienna jest zadeklarowana dwukrotnie w tej samej funkcji. Nie jest to straightfoward, aby rozwiązać ten problem tak, jak gdyby kod nie używa makr (po prostu usuń deklarację drugiego typu). W takim przypadku mamy możliwość podjęcia decyzji o tym, czy należy ponownie napisać kod makra jako zwykły kod (żmudnym i ewentualnie podatne na błędy zadanie), czy wyłączyć ostrzeżenie.
+W związku `lpszBuffer` z tym zmienna jest zadeklarowana dwukrotnie w tej samej funkcji. Nie jest to proste, aby rozwiązać ten problem tak, jak gdyby kod nie używa makr (po prostu usuń deklarację drugiego typu). W takim przypadku mamy możliwość podjęcia decyzji o tym, czy należy ponownie napisać kod makra jako zwykły kod (żmudnym i ewentualnie podatne na błędy zadanie), czy wyłączyć ostrzeżenie.
 
 W takim przypadku wybieramy ostrzeżenie. Możemy to zrobić przez dodanie dyrektywy pragma w następujący sposób:
 
@@ -502,7 +502,7 @@ Ten problem występuje, gdy zmienna została najpierw zadeklarowana jako **exter
 
 ##  <a name="porting_to_unicode"></a>Krok 11. Przenoszenie z MBCS do Unicode
 
-Należy pamiętać, że w świecie systemu Windows, gdy jesteśmy w formacie Unicode, zwykle jest to UTF-16. W przypadku innych systemów operacyjnych, takich jak Linux, są używane UTF-8, ale system Windows zazwyczaj nie. Wersja MBCS MFC była przestarzała w Visual Studio 2013 i 2015, ale nie jest już przestarzała w programie Visual Studio 2017. Jeśli jest używany Visual Studio 2013 lub 2015, przed przeprowadzeniem kroku do rzeczywistego portu MBCS kod w kodzie Unicode UTF-16, firma Microsoft może chcieć tymczasowo wyeliminować ostrzeżenia, które MBCS są przestarzałe, aby można było wykonać inne zadania lub odroczyć port do dogodnego czasu. Bieżący kod korzysta z MBCS i aby kontynuować, że musimy zainstalować wersję MFC/MBCS w wersji ANSI. Niewielka biblioteka MFC nie jest częścią domyślnego programowania programu Visual Studio **Desktop z C++**  instalacją, dlatego musi być wybrana z opcjonalnych składników w instalatorze. Zobacz [dodatek MFC MBCS dll](../mfc/mfc-mbcs-dll-add-on.md). Po pobraniu i ponownym uruchomieniu programu Visual Studio można kompilować i łączyć się z MBCS wersją MFC, ale aby usunąć ostrzeżenia dotyczące MBCS, jeśli używasz Visual Studio 2013 lub 2015, należy również dodać NO_WARN_MBCS_MFC_DEPRECATION do listy wstępnie zdefiniowanych makra w sekcji **preprocesora** we właściwościach projektu lub na początku pliku nagłówkowego stdafx. h lub innego wspólnego pliku nagłówkowego.
+Należy pamiętać, że w świecie systemu Windows, gdy jesteśmy w formacie Unicode, zwykle jest to UTF-16. W przypadku innych systemów operacyjnych, takich jak Linux, są używane UTF-8, ale system Windows zazwyczaj nie. Wersja MBCS MFC była przestarzała w Visual Studio 2013 i 2015, ale nie jest już przestarzała w programie Visual Studio 2017. Jeśli jest używany Visual Studio 2013 lub 2015, przed przeprowadzeniem kroku do rzeczywistego portu MBCS kod w kodzie Unicode UTF-16, firma Microsoft może chcieć tymczasowo wyeliminować ostrzeżenia, które MBCS są przestarzałe, aby można było wykonać inne zadania lub odroczyć port do dogodnego czasu. Bieżący kod korzysta z MBCS i aby kontynuować, że musimy zainstalować wersję MFC/MBCS w wersji ANSI. Niewielka biblioteka MFC nie jest częścią domyślnego programowania programu Visual Studio **Desktop z C++**  instalacją, dlatego musi być wybrana z opcjonalnych składników w instalatorze. Zobacz [dodatek MFC MBCS dll](../mfc/mfc-mbcs-dll-add-on.md). Po pobraniu i ponownym uruchomieniu programu Visual Studio można kompilować i łączyć się z MBCS wersją MFC, ale aby usunąć ostrzeżenia dotyczące MBCS, jeśli używasz Visual Studio 2013 lub 2015, należy również dodać NO_WARN_MBCS_MFC_DEPRECATION do listy wstępnie zdefiniowanych makra w sekcji **preprocesora** we właściwościach projektu lub na początku pliku nagłówkowego *stdafx. h* lub innego wspólnego pliku nagłówkowego.
 
 Mamy teraz kilka błędów konsolidatora.
 

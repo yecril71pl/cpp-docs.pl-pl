@@ -1,25 +1,25 @@
 ---
 title: Tworzenie projektu (ALT — Samouczek, część 1)
 ms.custom: get-started-article
-ms.date: 05/06/2019
+ms.date: 08/19/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 0df793b23aaec57835774252eeac21b092f8a9e9
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: 9f7f62ec94d5ac6d6076763853aa19297cf310e6
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861019"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630689"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Tworzenie projektu (ALT — Samouczek, część 1)
 
-Ten samouczek zawiera instrukcje dotyczące nonattributed Projekt ATL, który tworzy obiekt ActiveX, który zawiera wielokąt. Obiekt zawiera opcje umożliwiające użytkownikowi, aby zmienić liczbę boków tworzących wielokąta i kod, aby odświeżyć wyświetlaną.
+W tym samouczku przedstawiono krok po kroku przez nieprzypisany Projekt ATL, który tworzy obiekt ActiveX, który wyświetla wielokąt. Obiekt zawiera opcje umożliwiające użytkownikowi zmianę liczby stron, które tworzą Wielokąt, i kodu, aby odświeżyć ekran.
 
 > [!NOTE]
-> ATL i MFC nie są zazwyczaj obsługiwane w wersjach Express programu Visual Studio.
+> Biblioteki ATL i MFC nie są ogólnie obsługiwane w wersjach Express programu Visual Studio.
 
 > [!NOTE]
-> Ten samouczek tworzy ten sam kod źródłowy jako przykładowe wielokąta. Jeśli chcesz uniknąć ręcznego wprowadzania kodu źródłowego, możesz ją pobrać z [wielokąta przykładowy ogólny](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/Polygon). Możesz następnie można się odwoływać do kodu źródłowego wielokąta podczas pracy za pomocą tego samouczka lub używany w celu sprawdzenia błędów w własnego projektu.
-> Aby skompilować, otwórz stdafx.h i Zastąp:
+> W tym samouczku jest tworzony ten sam kod źródłowy, który jest przykładem wielokąta. Jeśli chcesz, aby nie wprowadzać kodu źródłowego ręcznie, możesz pobrać go z [przykładowej abstrakcyjnej próbki wielokąta](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/Polygon). Następnie można odwoływać się do kodu źródłowego Wielokąt podczas pracy w samouczku lub użyć go do sprawdzenia błędów w projekcie.
+> Aby skompilować, Otwórz plik *PCH. h* (*stdafx. h* w programie Visual Studio 2017 i starsze) i Zastąp:
 > ```
 > #ifndef WINVER
 > #define WINVER 0x0400
@@ -32,44 +32,64 @@ Ten samouczek zawiera instrukcje dotyczące nonattributed Projekt ATL, który tw
 > #define _WIN32_WINNT 0x0500
 > #endif
 > ```
-> Kompilator będzie nadal narzekają `regsvr32` nie zamykania poprawnie, ale nadal powinien mieć formantu biblioteki DLL, skompilowane i dostępne do użycia.
+> Kompilator nadal `regsvr32` będzie pokazywać nieprawidłową pracę, ale nadal powinien być utworzony i dostępny dla biblioteki DLL.
 
-### <a name="to-create-the-initial-atl-project-using-the-atl-project-wizard"></a>Aby utworzyć początkową Projekt ATL za pomocą Kreatora projektu ATL
+### <a name="to-create-the-initial-atl-project-using-the-atl-project-wizard"></a>Aby utworzyć początkowy Projekt ATL przy użyciu Kreatora projektu ATL
 
-1. W programie Visual Studio 2017 i starszych wersji: **Plik** > **nowe** > **projektu**. Otwórz **Visual C++**  kartę, a następnie wybierz pozycję **MFC i ATL**. Wybierz **Projekt ATL**.
+1. W programie Visual Studio 2017 i starszych: **Plik** > nowyprojekt > . Otwórz kartę **wizualizację C++**  i wybierz pozycję **MFC/ATL**. Wybierz **Projekt ATL**.
 
-   In Visual Studio 2019: Wybierz **pliku** > **New** > **projektu**, w polu wyszukiwania wpisz "ALT" i wybierz **Projekt ATL**.
+   W programie Visual Studio 2019: Wybierz pozycję **plik** > **Nowy** > **projekt**, wpisz "ATL" w polu wyszukiwania, a następnie wybierz pozycję **Projekt ATL**.
 
-1. Typ *wielokąta* jako nazwę projektu.
+1. Umożliwia wpisanie wielokąta jako nazwy projektu.
 
-    Lokalizację kodu źródłowego zwykle będą domyślnie \Users\\\<username > \source\repos i nowego folderu zostaną utworzone automatycznie.
+    Lokalizacja dla kodu źródłowego zwykle będzie domyślnie używana przez użytkownika \Users\\\<username > \source\repos, a nowy folder zostanie utworzony automatycznie.
 
-1. W programie Visual Studio 2019 r, zaakceptuj wartości domyślne, a następnie kliknij pozycję **OK**. 
-   W programie Visual Studio 2017, kliknij przycisk **OK** otworzyć **Projekt ATL** kreatora. Kliknij przycisk **ustawienia aplikacji** Aby wyświetlić dostępne opcje. Ponieważ ten projekt utworzy formant, a formantu musi być wewnątrz procesowego, pozostaw **typ aplikacji** jako biblioteki DLL. Kliknij przycisk **OK**.
+1. W programie Visual Studio 2019 zaakceptuj wartości domyślne i kliknij przycisk **OK**. 
+   W programie Visual Studio 2017 kliknij przycisk **OK** , aby otworzyć kreatora **Projekt ATL** . Kliknij pozycję **Ustawienia aplikacji** , aby wyświetlić dostępne opcje. Ponieważ ten projekt tworzy formant i formant musi być serwerem działającym w procesie, pozostaw **Typ aplikacji** jako bibliotekę DLL. Kliknij przycisk **OK**.
 
-Visual Studio utworzy projekt przez wygenerowanie kilku plików. Można wyświetlić te pliki w **Eksploratora rozwiązań** , rozwijając `Polygon` obiektu. Pliki są wymienione poniżej.
+Program Visual Studio utworzy projekt, generując kilka plików. Można wyświetlić te pliki w **Eksplorator rozwiązań** przez powiększanie `Polygon` obiektu. Poniżej znajdują się pliki.
+
+::: moniker range="<=vs-2017"
 
 |Plik|Opis|
 |----------|-----------------|
-|Polygon.cpp|Zawiera implementację `DllMain`, `DllCanUnloadNow`, `DllGetClassObject`, `DllRegisterServer`, i `DllUnregisterServer`. Zawiera także na mapie obiektu, który znajduje się lista obiektów ATL w projekcie. To jest początkowo pusta.|
-|Polygon.def|Ten plik definicji modułu zawiera konsolidatora z informacjami o eksporty wymagane przez bibliotekę DLL.|
-|Polygon.IDL|Plik języka definicji interfejsu, opisujący interfejsy specyficzne dla obiektów.|
-|Polygon.rgs|Ten skrypt rejestru zawiera informacje dotyczące rejestrowania biblioteki DLL programu.|
-|Polygon.rc|Plik zasobów początkowo zawiera informacje o wersji i ciąg zawierający nazwę projektu.|
-|Resource.h|Plik nagłówka dla pliku zasobów.|
-|Polygonps.def|Ten plik definicji modułu zawiera program łączący się z informacjami o informacje o operacjach eksportowania wymagane przez serwer proxy i szkieletu kodu, które obsługują wywołania w apartamentach.|
-|stdafx.cpp|Plik który będzie `#include` ATL pliki wdrożenia.|
-|stdafx.h|Plik który będzie `#include` plików nagłówkowych ATL.|
+|Wielokąt. cpp|Zawiera implementację `DllMain`, `DllCanUnloadNow`, `DllGetClassObject` ,`DllRegisterServer`i .`DllUnregisterServer` Zawiera również mapę obiektów, która jest listą obiektów ATL w projekcie. Jest to początkowo puste.|
+|Wielokąt. def|Ten plik definicji modułu zawiera konsolidator z informacjami o eksportach wymaganych przez bibliotekę DLL.|
+|Wielokąt. idl|Plik języka definicji interfejsu, który opisuje interfejsy specyficzne dla obiektów.|
+|Wielokąt. RGS|Ten skrypt rejestru zawiera informacje dotyczące rejestrowania biblioteki DLL programu.|
+|Wielokąt. RC|Plik zasobu, który początkowo zawiera informacje o wersji i ciąg zawierający nazwę projektu.|
+|Resource.h|Plik nagłówkowy pliku zasobów.|
+|Polygonps.def|Ten plik definicji modułu udostępnia konsolidator z informacjami o eksportach wymaganych przez serwer proxy i Kod zastępczy obsługujący wywołania w apartamentach.|
+|stdafx.cpp|Plik, który będzie `#include` *stdafx. h*.|
+|stdafx.h|Plik, który będzie `#include` i prekompilował pliki nagłówkowe ATL.|
 
-1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy `Polygon` projektu.
+::: moniker-end
 
-1. W menu skrótów kliknij **właściwości**.
+::: moniker range=">=vs-2019"
 
-1. Kliknij pozycję **konsolidatora**. Zmiana **na UserRedirection** opcję **tak**.
+|Plik|Opis|
+|----------|-----------------|
+|Wielokąt. cpp|Zawiera implementację `DllMain`, `DllCanUnloadNow`, `DllGetClassObject` ,`DllRegisterServer`i .`DllUnregisterServer` Zawiera również mapę obiektów, która jest listą obiektów ATL w projekcie. Jest to początkowo puste.|
+|Wielokąt. def|Ten plik definicji modułu zawiera konsolidator z informacjami o eksportach wymaganych przez bibliotekę DLL.|
+|Wielokąt. idl|Plik języka definicji interfejsu, który opisuje interfejsy specyficzne dla obiektów.|
+|Wielokąt. RGS|Ten skrypt rejestru zawiera informacje dotyczące rejestrowania biblioteki DLL programu.|
+|Wielokąt. RC|Plik zasobu, który początkowo zawiera informacje o wersji i ciąg zawierający nazwę projektu.|
+|Resource.h|Plik nagłówkowy pliku zasobów.|
+|Polygonps.def|Ten plik definicji modułu udostępnia konsolidator z informacjami o eksportach wymaganych przez serwer proxy i Kod zastępczy obsługujący wywołania w apartamentach.|
+|PCH. cpp|Plik, który będzie `#include` *PCH. h*.|
+|PCH. h|Plik, który będzie `#include` i prekompilował pliki nagłówkowe ATL.|
+
+::: moniker-end
+
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem `Polygon` myszy projekt.
+
+1. W menu skrótów kliknij polecenie **Właściwości**.
+
+1. Kliknij **konsolidator**. Zmień opcję **na-UserRedirection** na **wartość tak**.
 
 1. Kliknij przycisk **OK**.
 
-W następnym kroku dodasz formant do projektu.
+W następnym kroku dodasz kontrolkę do projektu.
 
 [Do kroku 2](../atl/adding-a-control-atl-tutorial-part-2.md)
 

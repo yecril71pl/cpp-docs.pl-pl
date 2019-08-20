@@ -1,6 +1,6 @@
 ---
 title: Klasa CComModule
-ms.date: 11/04/2016
+ms.date: 08/19/2019
 f1_keywords:
 - CComModule
 - ATLBASE/ATL::CComModule
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-ms.openlocfilehash: 53138081a6d712f775a2cc8f1e6905c45d95d34d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 482f29bae28841ab40ca8a8f80ab7f0df42ddc8b
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497106"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630655"
 ---
 # <a name="ccommodule-class"></a>Klasa CComModule
 
@@ -681,7 +681,7 @@ Standardowa wartość HRESULT.
 
 Podobnie jak [](#updateregistryfromresourced) w przypadku `UpdateRegistryFromResourceS` programu UpdateRegistryFromResourceD, z wyjątkiem tworzenia statycznego łącza do składnika rejestru ATL (Rejestrator).
 
-`UpdateRegistryFromResourceS`zostanie wywołany automatycznie podczas przetwarzania mapowania obiektów, pod warunkiem, że `#define _ATL_STATIC_REGISTRY` zostanie on dodany do stdafx. h.
+`UpdateRegistryFromResourceS`zostanie wywołany automatycznie podczas przetwarzania mapowania obiektów, pod warunkiem, że `#define _ATL_STATIC_REGISTRY` zostanie on dodany do *PCH. h* (*stdafx. h* w Visual Studio 2017 i wcześniejszych).
 
 > [!NOTE]
 >  Aby zastąpić wartości zastępcze w czasie wykonywania, nie określaj makra [DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource) ani [DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid) . Zamiast tego należy utworzyć tablicę `_ATL_REGMAP_ENTRIES` struktur, gdzie każdy wpis zawiera zmienną symbol zastępczy sparowany z wartością, aby zastąpić symbol zastępczy w czasie wykonywania. Następnie Wywołaj `UpdateRegistryFromResourceS`, przekazując tablicę do parametru *pMapEntries* . Spowoduje to dodanie wszystkich wartości `_ATL_REGMAP_ENTRIES` zamiennych ze struktur do mapy wymiany rejestratora.

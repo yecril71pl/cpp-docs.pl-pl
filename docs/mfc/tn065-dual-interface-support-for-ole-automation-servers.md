@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ACDUAL sample [MFC]
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
-ms.openlocfilehash: afcbfd643d8b931e61b0f011b66482be5b2bcc82
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1508b5219f7bb7fd2e9c9a56c42c30bb99686804
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511002"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630393"
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065: Obsługa podwójnego interfejsu w przypadku serwerów automatyzacji OLE
 
@@ -55,14 +55,14 @@ interface IDualAClick : IDispatch
     };
 ```
 
-Po umieszczeniu w miejscu instrukcji interfejsu Rozpocznij Dodawanie wpisów dla metod i właściwości. W przypadku podwójnych interfejsów należy ponownie rozmieścić listy parametrów, tak aby metody i metoda dostępu do właściwości w podwójnym interfejsie zwracały **wynik HRESULT** i przekazywać wartości zwracane jako parametry z `[retval,out]`atrybutami. Należy pamiętać, że w przypadku właściwości należy dodać funkcję dostępu Odczyt (`propget`) i zapis (`propput`) z tym samym identyfikatorem. Przykład:
+Po umieszczeniu w miejscu instrukcji interfejsu Rozpocznij Dodawanie wpisów dla metod i właściwości. W przypadku podwójnych interfejsów należy ponownie rozmieścić listy parametrów, tak aby metody i metoda dostępu do właściwości w podwójnym interfejsie zwracały **wynik HRESULT** i przekazywać wartości zwracane jako parametry z `[retval,out]`atrybutami. Należy pamiętać, że w przypadku właściwości należy dodać funkcję dostępu Odczyt (`propget`) i zapis (`propput`) z tym samym identyfikatorem. Na przykład:
 
 ```IDL
 [propput, id(1)] HRESULT text([in] BSTR newText);
 [propget, id(1)] HRESULT text([out, retval] BSTR* retval);
 ```
 
-Po zdefiniowaniu metod i właściwości należy dodać odwołanie do instrukcji Interface w instrukcji coclass. Przykład:
+Po zdefiniowaniu metod i właściwości należy dodać odwołanie do instrukcji Interface w instrukcji coclass. Na przykład:
 
 ```IDL
 [ uuid(4B115281-32F0-11cf-AC85-444553540000) ]
@@ -218,7 +218,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_Position(
 }
 ```
 
-Przed przekazaniem wskaźnika z powrotem za pośrednictwem metody podwójnego interfejsu, może być konieczne przekonwertowanie jej `IDispatch` ze wskaźnika MFC na wskaźnik podwójnego interfejsu. Na przykład:
+Przed przekazaniem wskaźnika z powrotem za pośrednictwem metody podwójnego interfejsu, może być konieczne przekonwertowanie jej `IDispatch` ze wskaźnika MFC na wskaźnik podwójnego interfejsu. Przykład:
 
 ```
 STDMETHODIMP CAutoClickDoc::XDualAClick::get_Position(
@@ -267,7 +267,7 @@ Aby zmodyfikować ustawienia kompilacji projektu, tak aby plik nagłówkowy zawi
 
 Aby dodać definicje **UUID** z MkTypLibego pliku nagłówkowego do projektu:
 
-1. Dołącz plik nagłówka MkTypLib-generaty w standardowym pliku nagłówkowym, STDAFX. C.
+1. Dołącz plik nagłówka MkTypLib-generaty do pliku nagłówkowego w warstwie Standardowa, *stdafx. h*.
 
 2. Utwórz nowy plik INITIIDS. CPP i dodaj go do projektu. W tym pliku Uwzględnij plik nagłówka MkTypLib, po uwzględnieniu OLE2. H i INITGUID. C
 

@@ -1,24 +1,38 @@
 ---
 title: Przykładowy plik projektu
-ms.date: 10/09/2018
+ms.date: 08/19/2019
 helpviewer_keywords:
 - .vcxproj files
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-ms.openlocfilehash: 306b6a7b39db758c3712b1d57460268fc6414726
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 0eb87c3f3ba8bd60f0944ad673d22f9b84e070a5
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217733"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630770"
 ---
 # <a name="project-files"></a>Pliki projektu
 
-A C++ plik projektu w programie Visual Studio jest oparty na składni XML pliku ma rozszerzenie nazwy pliku .vcxproj i zawiera informacje, które jest wymagane do skompilowania C++ projektu. Należy pamiętać, że plik projektu importuje różnych plików projektu, które mają rozszerzenie *.props* lub *.targets*. Te pliki zawierają informacje o dodatkowych kompilacji i może się odnosić się do innych *.props* lub *.targets* plików. Makra w ścieżce do pliku (na przykład `$(VCTargetsPath)`) są zależne od instalacji programu Visual Studio. Aby uzyskać więcej informacji na temat tych makr i *.props* i *.targets* plików, zobacz [VC ++ Directories Property Page](vcpp-directories-property-page.md), [Ustaw kompilator języka C++ i kompilacji właściwości w programie Visual Studio](../working-with-project-properties.md) i [typowe makra dla kompilacji polecenia i właściwości](common-macros-for-build-commands-and-properties.md).
+Plik C++ projektu w programie Visual Studio jest plikiem opartym na języku XML, który ma rozszerzenie nazwy pliku. vcxproj i zawiera informacje wymagane do skompilowania C++ projektu. Należy zauważyć, że plik projektu importuje różne pliki projektu, które mają rozszerzenie ". props" lub ". targets". Te pliki zawierają dodatkowe informacje o kompilacji i mogą odwoływać się do innych plików ". props" lub ". targets". Makra w ścieżce pliku (na przykład `$(VCTargetsPath)`) są zależne od instalacji programu Visual Studio. Aby uzyskać więcej informacji na temat tych makr i plików ". props" i ". targets", zobacz [stronę właściwości katalogów VC + +](vcpp-directories-property-page.md), [Ustaw C++ kompilator i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md) i [typowe makra dla poleceń i właściwości kompilacji](common-macros-for-build-commands-and-properties.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykładowy plik .vcxproj został wyprodukowany przez określenie **Aplikacja konsoli Win32** w **nowy projekt** okno dialogowe. Aby przetwarzać projektu pliku użyć narzędzia msbuild.exe w wierszu polecenia lub **kompilacji** polecenie w IDE. (Nie można przetworzyć tego przykładu, ponieważ nie podano wymaganych źródło i pliki nagłówkowe.) Aby uzyskać więcej informacji o elementach języka XML w pliku projektu, zobacz [odwołanie do schematu pliku projektu](/visualstudio/msbuild/msbuild-project-file-schema-reference).
+::: moniker range=">=vs-2019"
+
+Następujący przykładowy plik. vcxproj został utworzony przez wybranie **Kreatora pulpitu systemu Windows** w oknie dialogowym **Nowy projekt** . Aby przetworzyć plik projektu, użyj narzędzia MSBuild. exe w wierszu polecenia lub polecenia **Build** w środowisku IDE. (Nie można przetworzyć tego przykładu, ponieważ nie podano wymaganych plików źródłowych i nagłówków). Aby uzyskać więcej informacji na temat elementów XML w pliku projektu, zobacz [Dokumentacja schematu pliku projektu](/visualstudio/msbuild/msbuild-project-file-schema-reference).
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+Następujący przykładowy plik. vcxproj został utworzony przez określenie **aplikacji konsolowej Win32** w oknie dialogowym **Nowy projekt** . Aby przetworzyć plik projektu, użyj narzędzia MSBuild. exe w wierszu polecenia lub polecenia **Build** w środowisku IDE. (Nie można przetworzyć tego przykładu, ponieważ nie podano wymaganych plików źródłowych i nagłówków). Aby uzyskać więcej informacji na temat elementów XML w pliku projektu, zobacz [Dokumentacja schematu pliku projektu](/visualstudio/msbuild/msbuild-project-file-schema-reference).
+
+::: moniker-end
+
+
+>[!NOTE]
+> W przypadku projektów w programie Visual Studio 2017 i starszych `pch.h` wersjach `stdafx.h` Zmień `pch.cpp` na `stdafx.cpp`i na.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -102,12 +116,12 @@ Poniższy przykładowy plik .vcxproj został wyprodukowany przez określenie **A
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="pch.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SomeProjName.cpp" />
-    <ClCompile Include="stdafx.cpp">
+    <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>

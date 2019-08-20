@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: 71abf84e4c2afd75b0da88c261c78aa04ae08309
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8211111e3f9e6fff2377a62689e6f8b1e0e40990
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512936"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630423"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Przewodnik: Aktualizowanie aplikacji bazgrołów MFC (część 1)
 
@@ -50,7 +50,7 @@ Aby skonwertować aplikację, która obsługuje menu w aplikacji, która obsług
 
 1. W oknie Bazgroły. cpp Sprawdź `CScribbleApp::InitInstance` , czy zawiera wywołanie [AfxOleInit](../mfc/reference/ole-initialization.md#afxoleinit).
 
-1. Dodaj następujący kod do pliku stdafx. h.
+1. Dodaj następujący kod do pliku *PCH. h* (*stdafx. h* w programie Visual Studio 2017 i jego starszych):
 
     ```cpp
     #include <afxcontrolbars.h>

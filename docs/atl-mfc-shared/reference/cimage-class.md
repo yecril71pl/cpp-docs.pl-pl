@@ -1,6 +1,6 @@
 ---
 title: Klasa funkcji CImage
-ms.date: 02/01/2018
+ms.date: 08/19/2019
 f1_keywords:
 - CImage
 - ATLIMAGE/ATL::CImage
@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 6c651f160fdab582b769cf1764add2cc482745bf
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3b278f37bbcbe2ee879d9c3d2837267fe31e57e2
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491328"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630716"
 ---
 # <a name="cimage-class"></a>Klasa funkcji CImage
 
@@ -193,9 +193,9 @@ Za `CImage`pomocą programu masz dostęp do rzeczywistych bitów sekcji DIB. Mo�
 Można użyć `CImage` z MFC lub ATL.
 
 > [!NOTE]
-> Podczas tworzenia projektu przy użyciu `CImage`, należy zdefiniować `CString` przed dołączeniem `atlimage.h`. Jeśli projekt używa biblioteki ATL bez MFC, Dołącz `atlstr.h` przed dołączeniem. `atlimage.h` Jeśli projekt korzysta z MFC (lub jeśli jest to projekt ATL z obsługą MFC), Dołącz `afxstr.h` przed dołączeniem. `atlimage.h`<br/>
+> Podczas tworzenia projektu przy użyciu `CImage`, należy zdefiniować `CString` przed dołączeniem *atlimage. h*. Jeśli projekt używa biblioteki ATL bez MFC, Dołącz *pliku atlstr. h* przed dołączeniem *atlimage. h*. Jeśli projekt korzysta z MFC (lub jeśli jest to projekt ATL z obsługą MFC), Dołącz *afxstr. h* przed dołączeniem *atlimage. h*.<br/>
 > <br/>
-> Analogicznie, musisz dołączyć `atlimage.h` przed dołączeniem. `atlimpl.cpp` Aby to ułatwić, Dołącz `atlimage.h` do użytkownika. `stdafx.h`
+> Podobnie należy dołączyć *atlimage. h* przed dołączeniem *atlimpl. cpp*. Aby to ułatwić, należy uwzględnić *atlimage. h* w Twoim *PCH. h* (*stdafx. h* w programie Visual Studio 2017 i jego wcześniejszych).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -765,7 +765,7 @@ Parametr *strExporter* ma format:
 
 plik description0&#124;\*. ext0&#124;&#124;filedescription1\*. EXT1&#124;... Opis pliku *n*&#124;\*. ext *n*&#124;&#124;
 
-gdzie "&#124;" jest znakiem separatora określonym `chSeparator`przez. Na przykład:
+gdzie "&#124;" jest znakiem separatora określonym `chSeparator`przez. Przykład:
 
 `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`
 

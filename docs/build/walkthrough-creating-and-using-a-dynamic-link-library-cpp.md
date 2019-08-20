@@ -2,17 +2,17 @@
 title: 'Przewodnik: Tworzenie własnej biblioteki dołączanej dynamicznie (C++) i korzystanie z niej'
 description: Służy C++ do tworzenia biblioteki dołączanej dynamicznie (dll) systemu Windows w programie Visual Studio.
 ms.custom: conceptual
-ms.date: 07/17/2019
+ms.date: 08/19/2019
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: 8ca89471177ba2d1fa98bfaf51b86ed15dcd6d2f
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: 9dffec9d7d974ceb3bf1ca4546a303fab47ee0be
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299829"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630681"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Przewodnik: Tworzenie własnej biblioteki dołączanej dynamicznie (C++) i korzystanie z niej
 
@@ -60,7 +60,7 @@ W tym zestawie zadań można utworzyć projekt dla biblioteki DLL, dodać kod i 
 
    ![Utwórz nowy projekt DLL](media/create-new-dll-project-2019.png "Tworzenie projektu MathLibrary")
 
-1. W górnej części okna dialogowego Ustaw **Język** na **C++** , ustaw platformę  na **system Windows**i ustaw **Typ projektu** na **Biblioteka**. 
+1. W górnej części okna dialogowego Ustaw **Język** na **C++** , ustaw platformę na **system Windows**i ustaw **Typ projektu** na **Biblioteka**. 
 
 1. Z listy filtrowane typy projektów wybierz **bibliotekę dołączaną dynamicznie (dll)** , a następnie wybierz **dalej**. Na następnej stronie wprowadź `MathLibrary` wartość w polu **Nazwa** , aby określić nazwę projektu, i w razie potrzeby określ lokalizację projektu.
 
@@ -93,7 +93,7 @@ W tym zestawie zadań można utworzyć projekt dla biblioteki DLL, dodać kod i 
 >
 >1. Na pasku menu wybierz **Właściwości** **projektu** > .
 >
->1. W lewym okienku okna dialogowego **strony właściwości** wybierz opcję preprocesora w  obszarze **Właściwości** > konfiguracji**CC++/** . Sprawdź zawartość właściwości **Definicje preprocesora** .<br/><br/>![Sprawdź Właściwość Definicje preprocesora](media/mathlibrary-153bug-preprocessor-definitions-check.png "Sprawdź Właściwość Definicje preprocesora")<br/><br/>Jeśli widzisz **eksporty&#95;MATHLIBRARY** na liście **Definicje preprocesora** , nie musisz zmieniać żadnych elementów. Jeśli zamiast tego zobaczysz **eksporty MathLibrary&#95;** , Kontynuuj, wykonując następujące kroki.
+>1. W lewym okienku okna dialogowego **strony właściwości** wybierz opcję preprocesora w obszarze **Właściwości** > konfiguracji**CC++/** . Sprawdź zawartość właściwości **Definicje preprocesora** .<br/><br/>![Sprawdź Właściwość Definicje preprocesora](media/mathlibrary-153bug-preprocessor-definitions-check.png "Sprawdź Właściwość Definicje preprocesora")<br/><br/>Jeśli widzisz **eksporty&#95;MATHLIBRARY** na liście **Definicje preprocesora** , nie musisz zmieniać żadnych elementów. Jeśli zamiast tego zobaczysz **eksporty MathLibrary&#95;** , Kontynuuj, wykonując następujące kroki.
 >
 >1. W górnej części okna dialogowego **strony właściwości** Zmień listę rozwijaną **konfiguracji** na **wszystkie konfiguracje**.
 >
@@ -210,7 +210,7 @@ Po zdefiniowaniu makra **MATHLIBRARY&#95;exports** makro **interfejsu API&#95;MA
 
    ```cpp
    // MathLibrary.cpp : Defines the exported functions for the DLL.
-   #include "stdafx.h" // use pch.h in Visual Studio 2019
+   #include "pch.h" // use stdafx.h in Visual Studio 2017 and earlier
    #include <utility>
    #include <limits.h>
    #include "MathLibrary.h"
@@ -294,7 +294,7 @@ Aby skorzystać z biblioteki DLL, niezależnie od tego, czy posiadana lub zewnę
 
 1. Na pasku menu wybierz pozycję **plik** > **Nowy** > **projekt** , aby otworzyć okno dialogowe **Tworzenie nowego projektu** .
 
-1. W górnej części okna dialogowego Ustaw **Język** na **C++** , ustaw platformę  na **system Windows**i ustaw **Typ projektu** na **Console**. 
+1. W górnej części okna dialogowego Ustaw **Język** na **C++** , ustaw platformę na **system Windows**i ustaw **Typ projektu** na **Console**. 
 
 1. Z listy filtrowane typy projektów wybierz pozycję **Aplikacja konsolowa** , a następnie wybierz przycisk **dalej**. Na następnej stronie wprowadź `MathClient` wartość w polu **Nazwa** , aby określić nazwę projektu, i w razie potrzeby określ lokalizację projektu.
 
