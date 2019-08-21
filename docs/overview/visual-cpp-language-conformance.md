@@ -5,12 +5,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 15226d41991d5a09d104d2edbfb3dbf2f7432b65
-ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
+ms.openlocfilehash: 17ed76551102653e2f05e9731834f4787198db49
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980527"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631642"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Tabela C++ zgodności języka firmy Microsoft
 
@@ -348,7 +348,7 @@ Opcja kompilatora [/Zc: noexceptTypes](../build/reference/zc-noexcepttypes.md) �
 
 <a name="note_C"></a>__C__ obsługa reguł preprocesora C99 przez kompilator jest niekompletna w programie Visual Studio 2017. Obsługiwane są makra wariadyczne, ale istnieje wiele usterek w zachowaniu preprocesora. Przeniesiemy preprocesor, a wkrótce przeprowadzimy te zmiany w trybie [/permissive-](../build/reference/permissive-standards-conformance.md) .
 
-<a name="note_D"></a>__D__ obsługiwane w obszarze [/std: c++ 14](../build/reference/std-specify-language-standard-version.md) z suppressible ostrzeżenie, C4984.
+<a name="note_D"></a>__D__ obsługiwane w obszarze [/std: c++ 14](../build/reference/std-specify-language-standard-version.md) z suppressible ostrzeżenie, [C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md).
 
 <a name="note_E"></a>__E__ jest to zupełnie nowa implementacja niezgodna z poprzednią `std::experimental` wersją, która wymagała obsługi link symboliczny, poprawek błędów i zmian w zachowaniu standardowym. Obecnie w tym \<system plików > udostępnia nowy `std::filesystem` i poprzedni `std::experimental::filesystem`, a w szczególności \<> eksperymentalny/system plików udostępnia tylko starą implementację eksperymentalną. Implementacja eksperymentalna zostanie usunięta w następnej ABIej wersji biblioteki.
 
