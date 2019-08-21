@@ -1,44 +1,44 @@
 ---
 title: Konwertowanie projektów z trybu mieszanego na czysty język bezpośredni
-ms.date: 11/04/2016
+ms.date: 08/19/2019
 helpviewer_keywords:
 - intermediate language, mixed-mode applications
 - mixed-mode applications
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-ms.openlocfilehash: 2f63b6860157e315d44f7c050812a7f0b97f2726
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 05ece23e6d79fc399085099deebcde0aa4a92c64
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448043"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630843"
 ---
-# <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Konwertowanie projektów z trybu mieszanego na czysty język bezpośredni
+# <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Konwertowanie projektów z trybu mieszanego na czysty język pośredni
 
-Wszystkie projekty Visual C++ CLR łącze do biblioteki wykonawczej C domyślnie. W związku z tym te projekty są klasyfikowane jako aplikacji w trybie mieszanym, ponieważ łączą w sobie kod natywny kod, który jest przeznaczony dla środowiska uruchomieniowego języka wspólnego (kod zarządzany). Gdy są one kompilowane, są one kompilowane do języka pośredniego (IL), znany także jako język Microsoft intermediate language (MSIL).
+Wszystkie projekty C++ Visual CLR domyślnie łączą się z bibliotekami wykonawczymi C. W związku z tym projekty te są klasyfikowane jako aplikacje w trybie mieszanym, ponieważ łączą kod natywny z kodem, który jest przeznaczony dla środowiska uruchomieniowego języka wspólnego (kod zarządzany). Po skompilowaniu są one kompilowane w języku pośrednim (IL), znanym również jako język pośredni (MSIL) firmy Microsoft.
 
 > [!IMPORTANT]
-> Przestarzałe w programie Visual Studio 2015 i Visual Studio 2017 już nie obsługuje tworzenia **/CLR: pure** lub **/CLR: Safe** kodu dla aplikacji do środowiska CLR. Jeśli potrzebujesz zestawy czysty lub bezpieczny, zalecamy tłumaczenie aplikacji C#.
+> Program Visual Studio 2015 jest przestarzały i program Visual Studio 2017 nie obsługuje już tworzenia opcji **/CLR: Pure** lub **/CLR: Safe** dla aplikacji CLR. Jeśli potrzebujesz czystych lub bezpiecznych zestawów, zalecamy przetłumaczenie aplikacji na C#.
 
-Jeśli używasz starszej wersji programu Microsoft C++ zestaw narzędzi kompilatora, która obsługuje **/CLR: pure** lub **/CLR: Safe**, można użyć tej procedury, aby przekonwertować kod czysty MSIL:
+Jeśli używasz wcześniejszej wersji zestawu narzędzi kompilatora firmy Microsoft C++ , który obsługuje **/CLR: Pure** lub **/CLR: Safe**, możesz użyć tej procedury, aby skonwertować kod na czysty MSIL:
 
-### <a name="to-convert-your-mixed-mode-application-into-pure-intermediate-language"></a>Aby przekonwertować aplikacji trybu mieszanego na czysty język bezpośredni
+### <a name="to-convert-your-mixed-mode-application-into-pure-intermediate-language"></a>Aby skonwertować aplikację w trybie mieszanym do czystego języka pośredniego
 
-1. Usuń łącza do [biblioteki wykonawczej C](../c-runtime-library/crt-library-features.md) (CRT):
+1. Usuń linki do [bibliotek środowiska uruchomieniowego C](../c-runtime-library/crt-library-features.md) (CRT):
 
-   1. Plik CPP definiujący punkt wejścia aplikacji, Zmień punkt wejścia do `Main()`. Za pomocą `Main()` wskazuje, że projekt nie zawiera linków do CRT.
+   1. W pliku. cpp definiującym punkt wejścia aplikacji Zmień punkt wejścia na `Main()`. Użycie `Main()` wskazuje, że projekt nie łączy się z CRT.
 
-   2. W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz **właściwości** w menu skrótów, można otworzyć strony właściwości dla aplikacji.
+   2. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Właściwości** w menu skrótów, aby otworzyć strony właściwości aplikacji.
 
-   3. W **zaawansowane** strony właściwości projektu dla **konsolidatora**, wybierz opcję **punktu wejścia** , a następnie wprowadź **Main** w tym polu.
+   3. Na stronie właściwości projektu zaawansowanego dla **konsolidatora**wybierz **punkt wejścia** , a następnie wprowadź wartość **Main** w tym polu.
 
-   4. Dla aplikacji konsoli w **systemu** strony właściwości projektu dla **konsolidatora**, wybierz opcję **podsystemu** pola, a następnie zmień ten element, aby **Konsola (/ Subsystem:Console)**.
+   4. W przypadku aplikacji konsolowych na stronie właściwości projektu **systemu** dla **konsolidatora**wybierz pole **podsystem** i Zmień to na **Console (/SUBSYSTEM: Console)** .
 
       > [!NOTE]
-      > Nie masz można ustawić tej właściwości dla aplikacji Windows Forms, ponieważ **podsystemu** pole jest ustawione na **Windows (/ SUBSYSTEM: WINDOWS)** domyślnie.
+      > Nie trzeba ustawiać tej właściwości dla Windows Forms aplikacji, ponieważ pole **podsystem** jest domyślnie ustawione na **system Windows (/SUBSYSTEM: Windows)** .
 
-   5. W pliku stdafx.h komentarz wszystkich `#include` instrukcji. Na przykład w aplikacji konsoli:
+   5. W *stdafx. h*Dodaj komentarz do `#include` wszystkich instrukcji. Na przykład w aplikacjach konsoli programu:
 
       ```cpp
       // #include <iostream>
@@ -56,13 +56,13 @@ Jeśli używasz starszej wersji programu Microsoft C++ zestaw narzędzi kompilat
       // #include <tchar.h>
       ```
 
-   6. Dla aplikacji Windows Forms w Form1.cpp, komentarz `#include` instrukcję, która odwołuje się do windows.h. Na przykład:
+   6. W przypadku aplikacji Windows Forms w formularzu Form1. cpp Dodaj komentarz do `#include` instrukcji odwołującej się do systemu Windows. h. Na przykład:
 
       ```cpp
       // #include <windows.h>
       ```
 
-2. Dodaj następujący kod do pliku stdafx.h:
+2. Dodaj następujący kod do *stdafx. h*:
 
    ```cpp
    #ifndef __FLTUSED__
@@ -71,28 +71,28 @@ Jeśli używasz starszej wersji programu Microsoft C++ zestaw narzędzi kompilat
    #endif
    ```
 
-3. Usuń wszystkie typy niezarządzanwe:
+3. Usuń wszystkie typy niezarządzane:
 
-   Wszędzie, gdzie jest to stosowne, Zamień typy niezarządzanwe odwołania do struktury firmy [systemu](/dotnet/api/system) przestrzeni nazw. Popularne typy zarządzane są wymienione w poniższej tabeli:
+   Wszędzie tam, gdzie to konieczne, Zastąp typy niezarządzane odwołaniami do struktur z przestrzeni nazw [system](/dotnet/api/system) . Typy wspólne zarządzane są wymienione w poniższej tabeli:
 
    |Struktura|Opis|
    |---------------|-----------------|
    |[Boolean](/dotnet/api/system.boolean)|Reprezentuje wartość logiczną.|
-   |[Byte](/dotnet/api/system.byte)|Reprezentuje 8-bitowej nieoznaczonej liczby całkowitej.|
-   |[Char](/dotnet/api/system.char)|Reprezentuje znak Unicode.|
-   |[DateTime](/dotnet/api/system.datetime)|Reprezentuje moment w czasie, zwykle wyrażona jako datę i godzinę.|
+   |[Byte](/dotnet/api/system.byte)|Reprezentuje 8-bitową liczbę całkowitą bez znaku.|
+   |[Delikatn](/dotnet/api/system.char)|Reprezentuje znak Unicode.|
+   |[DateTime](/dotnet/api/system.datetime)|Reprezentuje chwilę w czasie, zwykle wyrażoną jako datę i godzinę dnia.|
    |[Decimal](/dotnet/api/system.decimal)|Reprezentuje liczbę dziesiętną.|
-   |[Double](/dotnet/api/system.double)|Reprezentuje liczbę zmiennoprzecinkową podwójnej precyzji.|
-   |[Identyfikator GUID](/dotnet/api/system.guid)|Reprezentuje unikatowy identyfikator globalny (GUID).|
-   |[Int16](/dotnet/api/system.int16)|Reprezentuje całkowita 16-bitowych.|
-   |[Int32](/dotnet/api/system.int32)|Reprezentuje całkowita 32-bitowych.|
-   |[Int64](/dotnet/api/system.int64)|Reprezentuje całkowita 64-bitowych.|
-   |[IntPtr](/dotnet/api/system.intptr)|Typ specyficzny dla platformy, który jest używany do reprezentowania wskaźnika lub uchwytu.|
-   |[SByte](/dotnet/api/system.byte)|Reprezentuje całkowita 8-bitowych.|
-   |[Single](/dotnet/api/system.single)|Reprezentuje liczbę zmiennoprzecinkową pojedynczej precyzji.|
-   |[TimeSpan](/dotnet/api/system.timespan)|Reprezentuje przedział czasu.|
-   |[UInt16](/dotnet/api/system.uint16)|Reprezentuje 16-bitowa liczba całkowita bez znaku.|
-   |[UInt32](/dotnet/api/system.uint32)|Reprezentuje 32-bitowa liczba całkowita bez znaku.|
-   |[UInt64 —](/dotnet/api/system.uint64)|Reprezentuje 64-bitowej nieoznaczonej liczby całkowitej.|
-   |[UIntPtr](/dotnet/api/system.uintptr)|Typ specyficzny dla platformy, który jest używany do reprezentowania wskaźnika lub uchwytu.|
-   |[Void](/dotnet/api/system.void)|Wskazuje metodę, która nie zwraca wartości; oznacza to, że metoda ma zwracać typ void.|
+   |[Double](/dotnet/api/system.double)|Reprezentuje liczbę zmiennoprzecinkową o podwójnej precyzji.|
+   |[Ident](/dotnet/api/system.guid)|Reprezentuje unikatowy identyfikator globalny (GUID).|
+   |[Int16](/dotnet/api/system.int16)|Reprezentuje 16-bitową liczbę całkowitą ze znakiem.|
+   |[Int32](/dotnet/api/system.int32)|Reprezentuje 32-bitową liczbę całkowitą ze znakiem.|
+   |[Int64](/dotnet/api/system.int64)|Reprezentuje 64-bitową liczbę całkowitą ze znakiem.|
+   |[IntPtr](/dotnet/api/system.intptr)|Typ specyficzny dla platformy, który jest używany do reprezentowania wskaźnika lub dojścia.|
+   |[SByte](/dotnet/api/system.byte)|Reprezentuje 8-bitową liczbę całkowitą ze znakiem.|
+   |[Single](/dotnet/api/system.single)|Reprezentuje liczbę zmiennoprzecinkową o pojedynczej precyzji.|
+   |[TimeSpan](/dotnet/api/system.timespan)|Reprezentuje interwał czasu.|
+   |[UInt16](/dotnet/api/system.uint16)|Reprezentuje 16-bitową liczbę całkowitą bez znaku.|
+   |[Równ](/dotnet/api/system.uint32)|Reprezentuje 32-bitową liczbę całkowitą bez znaku.|
+   |[UInt64](/dotnet/api/system.uint64)|Reprezentuje 64-bitową liczbę całkowitą bez znaku.|
+   |[UIntPtr](/dotnet/api/system.uintptr)|Typ specyficzny dla platformy, który jest używany do reprezentowania wskaźnika lub dojścia.|
+   |[Pozycję](/dotnet/api/system.void)|Wskazuje metodę, która nie zwraca wartości; oznacza to, że metoda ma zwracany typ void.|

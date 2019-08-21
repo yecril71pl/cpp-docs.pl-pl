@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - CMonthCalCtrl class [MFC], about CMonthCalCtrl class
 ms.assetid: 2be0e8c2-ed03-4853-aea1-4461eba18611
-ms.openlocfilehash: f97941bfd8d0a27f640757343cd360a1bec3050c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e21cba7062a21913c5be230d3488d963fb8b769b
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411828"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631683"
 ---
 # <a name="using-cmonthcalctrl"></a>Korzystanie z CMonthCalCtrl
 
-Formant kalendarza miesięcznego ([CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)) implementuje interfejs użytkownika podobne do kalendarza. Dzięki temu użytkownik bardzo intuicyjna i rozpoznawalny metody wprowadzania lub wybierając wartość typu date. Kontrolka także aplikację za pomocą oznacza, że aby uzyskać i ustawić informacje o dacie w kontroli przy użyciu istniejących typów danych. Domyślnie formant kalendarza miesięcznego Wyświetla bieżący dzień i miesiąc. Jednak użytkownik będzie mógł przewiń do poprzedni lub następny miesiąc, a następnie wybierz pozycję danego miesiąca lub roku.
+Formant kalendarza miesięcznego ([CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)) implementuje interfejs użytkownika podobny do kalendarza. Zapewnia to użytkownikowi bardzo intuicyjną i rozpoznawalną metodę wprowadzania lub wybierania daty. Formant zawiera również aplikację z środkiem, aby uzyskać i ustawić informacje o dacie w kontrolce przy użyciu istniejących typów danych. Domyślnie formant kalendarza miesięcznego wyświetla bieżący dzień i miesiąc. Jednak użytkownik może przewijać do poprzednich i następnych miesięcy i wybierać określony miesiąc i/lub rok.
 
 > [!NOTE]
->  Aby użyć `CMonthCalCtrl` klasy w projekcie, należy uwzględnić AFXDTCTL. Godz., zazwyczaj w STDAFX. H.
+>  Aby użyć `CMonthCalCtrl` klasy w projekcie, należy dołączyć AFXDTCTL. H, zazwyczaj w *stdafx. h*.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
 - [Tworzenie kontrolki kalendarza miesięcznego](../mfc/creating-the-month-calendar-control.md)
 

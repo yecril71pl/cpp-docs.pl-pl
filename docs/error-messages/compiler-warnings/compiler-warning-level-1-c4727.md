@@ -1,35 +1,55 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4727
-ms.date: 11/04/2016
+title: Ostrzeżenie kompilatora (poziom 1) C4727
+ms.date: 08/19/2019
 f1_keywords:
 - C4727
 helpviewer_keywords:
 - C4727
 ms.assetid: 991b0087-3a50-40f5-9cdb-cdc367cd472c
-ms.openlocfilehash: be1a248fc2709706e137b543344966735c19064e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1bcc029536d2602d50178d7148332b8371db3c7f
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386437"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630832"
 ---
-# <a name="compiler-warning-level-1-c4727"></a>Kompilator ostrzeżenie (poziom 1) C4727
+# <a name="compiler-warning-level-1-c4727"></a>Ostrzeżenie kompilatora (poziom 1) C4727
 
-"PCH o nazwie pch_file z tą samą sygnaturą czasową w obj_file_1 i obj_file_2.  Za pomocą pierwszego układu PCH.
+"PCH o nazwie pch_file z tą samą sygnaturą czasową znaleziono w obj_file_1 i obj_file_2.  Przy użyciu pierwszego PCH.
 
-C4727 występuje podczas kompilowania wielu compilands z **/Yc**, i gdzie kompilator można było oznaczyć wszystkie pliki .obj, z tą samą sygnaturą czasową .pch.
+> [!NOTE]
+> W programie Visual Studio 2017 i starszych wersjach prekompilowanego nagłówka jest domyślnie wywoływana *stdafx. h* , a w programie Visual Studio 2019 i nowszych jest nazywana domyślnie *PCH. h* .
 
-Aby rozwiązać problem, skompiluj jeden plik źródłowy przy użyciu **/Yc /c** (tworzy pch), i inne oddzielnie kompilacji z **/Yu /c** (używa pch), łączyć je ze sobą.
+C4727 występuje podczas kompilowania wielu compilands z **/YC**i gdzie kompilator mógł oznaczyć wszystkie pliki. obj z tym samym znacznikiem czasu PCH.
 
-Jeśli więc zostały następujące i generuje C4727:
+Aby rozwiązać ten problem, Skompiluj jeden plik źródłowy z **/Yc/c** (tworzy pch), a pozostałe kompiluje z **/Yu/c** (używa pch), a następnie połącz je ze sobą.
 
-**cl /clr /GL a.cpp b.cpp c.cpp /Ycstdafx.h**
+Tak więc, jeśli wykonano następujące czynności i wygeneruje C4727:
 
-Jak w następujących zamiast tego:
+::: moniker range="<=vs-2017"
 
-**cl /clr /GL a.cpp /Ycstdafx.h /c**
+**CL/CLR/GL a. cpp b. cpp c. cpp/Ycstdafx.h**
 
-**cl /clr /GL b.cpp c.cpp /Yustdafx.h /link a.obj**
+Zamiast tego należy wykonać następujące czynności:
+
+**CL/CLR/GL a. cpp/Ycstdafx.h/c**
+
+**CL/CLR/GL b. cpp c. cpp/Yustdafx.h. obj**
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+**CL/CLR/GL a. cpp b. cpp c. cpp/Ycpch.h**
+
+Zamiast tego należy wykonać następujące czynności:
+
+**CL/CLR/GL a. cpp/Ycpch.h/c**
+
+**CL/CLR/GL b. cpp c. cpp/Yupch.h. obj**
+
+::: moniker-end
+
 
 Aby uzyskać więcej informacji, zobacz artykuł
 

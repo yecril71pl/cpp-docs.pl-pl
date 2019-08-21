@@ -11,130 +11,130 @@ helpviewer_keywords:
 - long double
 - real*4 value
 ms.assetid: 537833e8-fe05-49fc-8169-55fd0314b195
-ms.openlocfilehash: 130a79ae6846df27ffabfd6cb6649e0a0de03e4b
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: de132dcf28747cd866229cff8972e2aed271a047
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220620"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630354"
 ---
 # <a name="ieee-floating-point-representation"></a>Odwzorowanie liczby zmiennoprzecinkowej IEEE
 
-Microsoft C++ (MSVC) jest zgodna ze standardami liczbowych IEEE. Standard IEEE 754 opisano formaty zmiennoprzecinkowych, sposobem reprezentowania liczb rzeczywistych sprzętu. Istnieją co najmniej pięć wewnętrznego formaty liczb zmiennoprzecinkowych, które są reprezentowanych w sprzęcie docelowe za pomocą kompilatora MSVC, ale kompilator używa tylko dwa z nich. *Pojedynczej precyzji* (4-bajtową) i *podwójnej precyzji* formatów (8-bajtową) są używane w MSVC. Pojedynczej precyzji jest zadeklarowany za pomocą słowa kluczowego **float**. Podwójnej precyzji jest zadeklarowany za pomocą słowa kluczowego **double**. Określa również standardu IEEE *połowie precyzji* (2-bajtowych) i *poczwórnej precyzji* formatów (16-bajtową), a także *podwójnej extended precyzji* (10-bajtową) Format, który niektóre kompilatory języków C i C++ zaimplementować jako **typu long double** typu danych. W kompilatora MSVC **typu long double** — typ danych jest traktowany jako typ samodzielny, ale typ magazynu mapuje **double**. Jest jednak wewnętrzne i język asemblera obsługę obliczeń przy użyciu innych formatach, w tym formacie (10-bajtową) podwójnej extended precyzji, jeśli są obsługiwane przez sprzęt.
+Firma C++ Microsoft (MSVC) jest zgodna ze standardami cyfr IEEE. Standard IEEE-754 opisuje formaty zmiennoprzecinkowe w sposób przedstawiający rzeczywiste liczby sprzętu. Istnieje co najmniej pięć formatów wewnętrznych dla liczb zmiennoprzecinkowych, które są możliwe do zaprezentowania na sprzęcie przeznaczonym dla kompilatora MSVC, ale kompilator używa tylko dwóch z nich. Formaty o pojedynczej precyzji (4-bajtowe) i *podwójnej precyzji* (8-bajtowe) są używane w MSVC. Pojedyncza precyzja jest zadeklarowana przyużyciu słowa kluczowego zmiennoprzecinkowego. Podwójna precyzja jest zadeklarowana przy użyciu słowa kluczowego **Double**. IEEE standard określa również formaty o *połowie dokładności* (2-bajtowe) i *czterokrotnie Precision* (16-bajtowe), a także format o *podwójnej precyzji* (10-bajtowe), który niektóre języki C i C++ kompilatory implementują jako **Long Double** — typ danych. W kompilatorze MSVC typ danych **Long Double** jest traktowany jako typ odrębny, ale typ magazynu jest mapowany na wartość **Double**. Istnieje jednak obsługa obliczeń w języku wewnętrznym i wielojęzycznym przy użyciu innych formatów, w tym formatu podwójnej precyzji (10-bajtowej), który jest obsługiwany przez sprzęt.
 
 Wartości są przechowywane w następujący sposób:
 
-|Wartość|Przechowywany jako|
+|Wartość|Przechowywane jako|
 |-----------|---------------|
-|pojedynczej precyzji|Zaloguj się bit, wykładnik 8-bitową, mantysa 23-bitowy|
-|podwójnej precyzji|Zaloguj się bit, wykładnik 11-bitowy, mantysa do 52-bitowy|
-|podwójnej extended precyzji|Zaloguj się bit, wykładnik 15-bitowy, mantysa 64-bitowych|
+|Pojedyncza precyzja|bit znaku, 8-bitowy wykładnik, 23-bitowy mantysę|
+|Podwójna precyzja|bit znaku, 11-bitowy wykładnik, 52-bitowy mantysę|
+|podwójnie rozszerzona precyzja|bit znaku, 15-bitowy wykładnik, 64-bitowy mantysę|
 
-W formatach pojedynczej precyzji, jak i podwójną precyzją, w części ułamkowej, wywoływana jest zakładanego 1 wiodących *mantysa* (a czasami określane jako *mantysy*), to znaczy nie są przechowywane w pamięci, dzięki czemu można mantysy rzeczywistości 24 lub 53 bitów, nawet, jeśli są przechowywane tylko 23 lub 52 bitów. Format podwójnej extended precyzji faktycznie przechowuje ten bit.
+W formatach o pojedynczej precyzji i o podwójnej precyzji założono wiodącą 1 część ułamkową, nazywaną *mantysę* (i czasami określaną jako *mantysy*), która nie jest przechowywana w pamięci, więc mantysy to w rzeczywistości 24 lub 53 bity, nawet jeśli są przechowywane tylko 23 lub 52 bitów. Format podwójnej precyzji w rzeczywistości przechowuje ten bit.
 
-Wykładniki są obciążona o połowę ich, możliwej wartości. Oznacza to, że odjąć to odchylenie od przechowywanych wykładnik, aby uzyskać rzeczywiste wykładnik potęgi. Jeśli wykładnik przechowywane jest mniejsza niż różnica, jest faktycznie ujemnego wykładnika.
+Wykładniki są rozdzielone połowami możliwych wartości. Oznacza to odjęcie tego bias od przechowywanego wykładniku w celu uzyskania rzeczywistego wykładnika. Jeśli przechowany wykładnik jest mniejszy niż wartość bias, jest to w rzeczywistości ujemna wykładnik.
 
-Wykładniki obciążona są w następujący sposób:
+Wykładniki są rozłączone w następujący sposób:
 
-|Wykładnik|Obciążona|
+|Zapis|Obciążone przez|
 |--------------|---------------|
-|8-bitowa (pojedynczej precyzji)|127|
-|11-bitowych (podwójnej precyzji)|1023|
-|15-bitowych (podwójnej extended precyzji)|16383|
+|8-bitowa (pojedyncza precyzja)|127|
+|11-bitowa (Podwójna precyzja)|1023|
+|15-bitowa (podwójnie rozszerzona precyzja)|16383|
 
-Nie są te wykładniki potęgi dziesięciu; są one potęgi liczb. Oznacza to 8-bitowej składowaną wykładniki do zakresu od -127 do 127, przechowywane jako 0 do 254. Wartość 2<sup>127</sup> jest w przybliżeniu równa 10<sup>38</sup>, czyli rzeczywisty limit pojedynczej precyzji.
+Te wykładniki nie są potęgami dziesięciu; są one potęgami dwóch. Oznacza to, że 8-bitowe zapisane wykładniki mogą przyjmować od-127 do 127, przechowywane jako 0 do 254. Wartość 2<sup>127</sup> jest w przybliżeniu równa 10<sup>38</sup>, która jest rzeczywistym limitem pojedynczej precyzji.
 
-Mantysy jest przechowywana jako ułamek binarne formularza 1.XXX.... Ta część ma wartość większa niż lub równa 1 i mniej niż 2. Należy pamiętać, że liczb rzeczywistych zawsze są przechowywane w *znormalizowane formularza*; oznacza to mantysa jest przesunięty w lewo taki sposób, że bit wyższego rzędu mantysy ma zawsze numer 1. Ponieważ ten bit jest zawsze 1, zakłada się (nie przechowywanych) w formatach pojedynczej precyzji, jak i podwójną precyzją. Binarny (dziesiętna) punktu zakłada się, że na prawo od wiodących 1.
+Mantysę jest przechowywany jako ułamek binarny formularza 1.XXX... Ten ułamek ma wartość większą lub równą 1 i mniejszą niż 2. Należy zauważyć, że liczby rzeczywiste są zawsze przechowywane w *znormalizowanej postaci*; oznacza to, że mantysęa jest przesunięta w lewo, tak aby bit mantysę o wysokiej kolejności miał wartość zawsze 1. Ponieważ ten bit jest zawsze 1, zakłada się, że nie jest on przechowywany w formatach o pojedynczej precyzji i podwójnej precyzji. Zakłada się, że punkt binarny (nie dziesiętny) jest po prawej stronie wiodącej wartości 1.
 
-Format, a następnie dla różnych rozmiarów jest następująca:
+Format, a następnie dla różnych rozmiarów jest następujący:
 
-|Format|1 bajt|Bajt 2|Bajt 3|4 bajtów|...|n bajtów|
+|Format|bajt 1|bajt 2|bajt 3|bajt 4|...|bajt n|
 |------------|------------|------------|------------|------------|---------|------------|
-|pojedynczej precyzji| `SXXXXXXX`|`XMMMMMMM`|`MMMMMMMM`|`MMMMMMMM`|||
-|podwójnej precyzji|`SXXXXXXX`|`XXXXMMMM`|`MMMMMMMM`|`MMMMMMMM`|...|`MMMMMMMM`|
-|podwójnej extended precyzji|`SXXXXXXX`|`XXXXXXXX`|`1MMMMMMM`|`MMMMMMMM`|...|`MMMMMMMM`|
+|Pojedyncza precyzja| `SXXXXXXX`|`XMMMMMMM`|`MMMMMMMM`|`MMMMMMMM`|||
+|Podwójna precyzja|`SXXXXXXX`|`XXXXMMMM`|`MMMMMMMM`|`MMMMMMMM`|...|`MMMMMMMM`|
+|podwójnie rozszerzona precyzja|`SXXXXXXX`|`XXXXXXXX`|`1MMMMMMM`|`MMMMMMMM`|...|`MMMMMMMM`|
 
-`S` reprezentuje bitu znaku `X`firmy obciążonej wykładnika bitów, a `M`firmy bitów mantysa. Należy pamiętać, zakłada, że w pojedynczej precyzji, jak i podwójną precyzją formatach bitu skrajnie po lewej stronie, ale znajduje się na wartość "1" w bajtach 3 format podwójnej extended precyzji.
+`S`reprezentuje bit znaku, `X`jest to bity wykładnika, `M`a jest to mantysę bity. Należy pamiętać, że bit z lewej strony jest przyjęty w formatach o pojedynczej precyzji i podwójnej precyzji, ale jest obecny jako "1" w bajcie 3 formatu podwójnej precyzji.
 
-Aby przenieść punkt binarne prawidłowo, należy najpierw unbias wykładnik a następnie przenieść punkt binarnych z prawej strony lub left odpowiednią liczbę bitów.
+Aby prawidłowo przesunąć punkt binarny, najpierw należy rozwiązać ten wykładnik, a następnie przenieść punkt binarny w prawo lub w lewo do odpowiedniej liczby bitów.
 
-## <a name="special-values"></a>Specjalnych wartości
+## <a name="special-values"></a>Wartości specjalne
 
-Zmiennoprzecinkowe formaty obejmują niektóre wartości, które są traktowane jako specjalnie.
+Formaty zmiennoprzecinkowe zawierają niektóre wartości, które są traktowane specjalnie.
 
 ### <a name="zero"></a>Zero
 
-Nie można znormalizować zero, co czyni go wyniku w postaci znormalizowane wartości pojedynczej precyzji lub podwójnej precyzji. Wzorzec bitowy specjalne zer reprezentuje 0. Możliwe jest również do reprezentowania - 0 jako zero ze znakiem bit, ale - 0 i 0 zawsze Porównuj jako równe.
+Nie można znormalizować wartości zero, co sprawia, że nie jest to możliwe w znormalizowanym formacie pojedynczej precyzji lub podwójnej precyzji. Specjalny wzorzec bitowy wszystkich zer reprezentuje 0. Możliwe jest również, aby reprezentować-0 jako zero z ustawionym bitem znaku, ale wartość 0 i 0 zawsze są porównywane jako równe.
 
 ### <a name="infinities"></a>Nieskończoności
 
-+ ∞; i −∞ wartości są reprezentowane przez wykładnik samych jedynek i mantysę zer. Pozytywne i negatywne nieskończoności może być reprezentowany za pomocą bitu znaku.
+Wartości + ∞ i − ∞ są reprezentowane przez wykładnik wszystkich i mantysę zer. Nieskończoności dodatnie i ujemne mogą być reprezentowane przy użyciu bitu znaku.
 
-### <a name="subnormals"></a>Subnormals
+### <a name="subnormals"></a>Subnormalne
 
-Istnieje możliwość do reprezentowania liczby mniejsze znaczenie niż najmniejsza liczba znormalizowanych. Numery te są znane jako *subnormal* lub *zdenormalizowany* liczb. Jeśli wykładnik jest zer i mantysy jest różna od zera, niejawne bit wiodących mantysy jest traktowany jako zero, nie jeden. Dokładność liczb subnormal ulegnie awarii jak rośnie liczba zer wiodących w mantysa.
+Istnieje możliwość reprezentowania liczby mniejszych wielkości niż najmniejszy znormalizowany numer. Te liczby są znane jako liczby *normalne* lub *nienormalne* . Jeśli wykładnik ma wartość zero, a mantysę jest różna od zera, to niejawny wiodący bit mantysę jest uznawany za zero, a nie jeden. Precyzja wartości zwykłych jest określana jako liczba zer wiodących w mantysę.
 
 ### <a name="nan---not-a-number"></a>NaN — nie jest liczbą
 
-Istnieje możliwość, do reprezentowania wartości niebędące liczbą rzeczywistą, np. 0 / 0, w formacie zmiennoprzecinkowych IEEE. Wartość tego typu jest nazywana *NaN*. NaN jest reprezentowany przez wykładnik samych jedynek i mantysy różna od zera. Istnieją dwa rodzaje NaNs, *cichy* NaNs lub QNaNs, i *sygnalizacji* NaNs lub SNaNs. NaNs cichy mają wiodących jeden w mantysy i zwykle są propagowane przy użyciu wyrażenia. Reprezentują one wartość nieokreśloną, na przykład w wyniku dzielenia przez nieskończoności lub mnożenia wartości infinity przez zero. NaNs sygnalizacji mają zerem w mantysa. Są one używane dla operacji, które nie są prawidłowe w celu sygnalizowania, że wyjątków zmiennoprzecinkowych sprzętu.
+Istnieje możliwość reprezentowania wartości, które nie są liczbami rzeczywistymi, na przykład 0/0, w formacie zmiennoprzecinkowym IEEE. Wartość tego rodzaju jest nazywana *NaN*. Wartość NaN jest reprezentowana przez wykładnik wszystkich i niezerowych mantysę. Istnieją dwa rodzaje NaNs, *quiet* Nans lub QNaNs oraz sygnalizowanie Nans lub SNaNs . Cicha NaNs zawiera jedną z nich w mantysę i jest ogólnie rozmnożona przez wyrażenie. Reprezentują one wartość nieokreśloną, taką jak wynik dzielenia przez nieskończoność lub mnożenia nieskończoności przez zero. Sygnalizowanie NaNs mają wiodące zero w mantysę. Są one używane w przypadku operacji, które są nieprawidłowe, aby sygnalizować wyjątek sprzętu zmiennoprzecinkowego.
 
 ## <a name="examples"></a>Przykłady
 
-Poniżej przedstawiono kilka przykładów w formacie pojedynczej precyzji:
+Poniżej przedstawiono kilka przykładów w formacie o pojedynczej precyzji:
 
-- Wartość 2 bit znaku ma wartość zero i przechowywanych wykładnik to 128 lub 1000 0000 plików binarnych, czyli 127 powiększoną o 1. Przechowywane mantysę binarnego jest (1). 000 0000 0000 0000 0000 0000, mającej dorozumianych wiodących binarnej i 1 punkt, dlatego mantysę rzeczywisty jest jednym.
+- W przypadku wartości 2 bit znaku jest równy zero, a zapisany wykładnik to 128, lub 1000 0000 w postaci binarnej, która jest 127 plus 1. Przechowywane dane binarne mantysę to (1). 000 0000 0000 0000 0000 0000, który ma implikowany wiodący 1 i punkt binarny, więc rzeczywista mantysę to jeden.
 
    |Wartość|Formuła|Reprezentacja binarna|Wartość szesnastkowa|
    |-|-|-|-|
    |2|1 * 2<sup>1</sup>|0100 0000 0000 0000 0000 0000 0000 0000|0x40000000|
 
-- Wartość -2. Taki sam jak + 2, z tą różnicą, że ustawiono bitu znaku. Ta zasada obowiązuje dla wartości ujemnych wszystkich liczb zmiennoprzecinkowych format IEEE.
+- Wartość-2. Analogicznie jak + 2, z tą różnicą, że jest ustawiony bit znaku. Dotyczy to wartości ujemnych dla wszystkich liczb zmiennoprzecinkowych w formacie IEEE.
 
    |Wartość|Formuła|Reprezentacja binarna|Wartość szesnastkowa|
    |-|-|-|-|
    |-2|-1 * 2<sup>1</sup>|1100 0000 0000 0000 0000 0000 0000 0000|0xC0000000|
 
-- Wartość 4. Ten sam mantysę wykładnik zwiększa się o jeden (obciążonej wartość 129 lub 100 0000 1 w pliku binarnym.
+- Wartość 4. Ten sam mantysę, wykładnik zwiększa się o jeden (wartość bias to 129 lub 100 0000 1 w postaci binarnej.
 
    |Wartość|Formuła|Reprezentacja binarna|Wartość szesnastkowa|
    |-|-|-|-|
    |4|1 * 2<sup>2</sup>|0100 0000 1000 0000 0000 0000 0000 0000|0x40800000|
 
-- Wartość 6. Wykładnik tej samej mantysę jest większa o połowę — jego (1). 100 0000 ... 0000 0000, który, ponieważ jest to ułamek binarnego jest 1 1/2, ponieważ wartości cyfr ułamkowych, jaka jest 1/2, 1/4, 1/8 i tak dalej.
+- Wartość 6. Ten sam wykładnik, mantysę jest większy o połowę — jest to (1). 100 0000 ... 0000 0000, ponieważ jest to ułamek binarny, to 1 1/2, ponieważ wartości ułamkowe cyfr to 1/2, 1/4, 1/8 i tak dalej.
 
    |Wartość|Formuła|Reprezentacja binarna|Wartość szesnastkowa|
    |-|-|-|-|
-   |6|1.5 * 2<sup>2</sup>|0100 0000 1100 0000 0000 0000 0000 0000|0x40C00000|
+   |6|1,5 * 2<sup></sup>|0100 0000 1100 0000 0000 0000 0000 0000|0x40C00000|
 
-- Wartość 1. Tego samego mantysę jako inne potęgi liczby dwa obciążonej wykładnik jest pojedynczo mniej niż dwa 127 lub 011 1111 1 w pliku binarnym.
+- Wartość 1. Takie same mantysę jak inne uprawnienia dwóch, wykładnik, który jest mniejszy niż dwa o 127 lub 011 1111 1 w formacie binarnym.
 
    |Wartość|Formuła|Reprezentacja binarna|Wartość szesnastkowa|
    |-|-|-|-|
    |1|1 * 2<sup>0</sup>|0011 1111 1000 0000 0000 0000 0000 0000|0x3F800000|
 
-- Wartość 0,75. Obciążonej wykładnik jest 126 011 1111 0 w pliku binarnego i mantysy jest (1). 100 0000 ... 0000 0000, która jest 1 1/2.
+- Wartość 0,75. Wykładnik z obciążeniem to 126, 011 1111 0 w postaci binarnej, a mantysę to (1). 100 0000 ... 0000 0000, czyli 1 1/2.
 
    |Wartość|Formuła|Reprezentacja binarna|Wartość szesnastkowa|
    |-|-|-|-|
-   |0.75|1.5 * 2<sup>-1</sup>|0011 1111 0100 0000 0000 0000 0000 0000|0x3F400000|
+   |0.75|1,5 * 2<sup>-1</sup>|0011 1111 0100 0000 0000 0000 0000 0000|0x3F400000|
 
-- Wartość 2.5. Dokładnie tak samo jak dwa poza tym, że bitu, który reprezentuje 1/4 jest ustawiana w mantysa.
-
-   |Wartość|Formuła|Reprezentacja binarna|Wartość szesnastkowa|
-   |-|-|-|-|
-   |2.5|1.25 * 2<sup>1</sup>|0100 0000 0010 0000 0000 0000 0000 0000|0x40200000|
-
-- 1/10 jest ułamek powtarzające się w pliku binarnym. Mantysy jest po prostu shy w wersji 1.6 i wykładnik obciążonej tym, że w wersji 1.6 podzielony przez 16 (jest to 1 1101 011 plików binarnych, czyli 123 w zapisie dziesiętnym). Wartość true, wykładnik jest 123-127 = - 4, co oznacza, że współczynnik mnożenia 2<sup>-4</sup> = 1/16. Należy zauważyć, że przechowywane mantysę jest zaokrąglana w górę w ostatnim bitowej — próba do reprezentowania liczby wyniku, jak to możliwe. (Przyczyna 1/10 do 1/100 są dokładnie reprezentowanych w pliku binarnym jest podobny do przyczyna to nie dokładnie reprezentowanych w zapisie dziesiętnym 1/3.)
+- Wartość 2,5. Dokładnie takie same, jak dwa, z wyjątkiem tego, że bit reprezentujący 1/4 jest ustawiony w mantysę.
 
    |Wartość|Formuła|Reprezentacja binarna|Wartość szesnastkowa|
    |-|-|-|-|
-   |0.1|1.6 * 2<sup>-4</sup>|0011 1101 1100 1100 1100 1100 1100 1101|0x3DCCCCCD|
+   |2.5|1,25 * 2<sup></sup>|0100 0000 0010 0000 0000 0000 0000 0000|0x40200000|
 
-- Zero jest szczególnym przypadkiem używa formuły możliwe stałego dodatnie wartości minimalnej, która jest zer.
+- 1/10 jest powtarzaną częścią binarną. Mantysę jest lubiszem 1,6, a wykładnik z różnicami oznacza, że 1,6 jest podzielona przez 16 (jest 011 1101 1 w postaci binarnej, która jest 123 w postaci dziesiętnej). Prawdziwe wykładnika to 123-127 =-4, co oznacza, że współczynnik, przez który ma być mnożony, wynosi 2<sup>-4</sup> = 1/16. Należy zauważyć, że składowane mantysę jest zaokrąglane w górę ostatniego bitu — próba reprezentowania niereprezentowanego numeru jak dokładnie tak, jak to możliwe. (Przyczyny, że 1/10 i 1/100 nie są dokładnie reprezentowane w postaci binarnej, są podobne do przyczyny, że 1/3 nie można dokładnie przedstawić w postaci dziesiętnej).
 
    |Wartość|Formuła|Reprezentacja binarna|Wartość szesnastkowa|
    |-|-|-|-|
-   |0|1 * 2<sup>-128</sup>|0000 0000 0000 0000 0000 0000 0000 0000|0x00000000|
+   |0.1|1,6 * 2<sup>– 4</sup>|0011 1101 1100 1100 1100 1100 1100 1101|0x3DCCCCCD|
+
+- Zero jest szczególnym przypadkiem, który używa formuły dla minimalnej możliwej reprezentacji wartości dodatniej, która jest równa zero.
+
+   |Wartość|Formuła|Reprezentacja binarna|Wartość szesnastkowa|
+   |-|-|-|-|
+   |0|1 * 2<sup>– 128</sup>|0000 0000 0000 0000 0000 0000 0000 0000|0x00000000|
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,50 +1,50 @@
 ---
 title: Tworzenie projektu aplikacji konsoli w języku C++
-description: Tworzenie aplikacji Hello World konsoli i aplikacja Kalkulator w programie Visual C++
+description: Tworzenie aplikacji konsolowej Hello world i aplikacji Kalkulator w wizualizacjiC++
 ms.custom: mvc
-ms.date: 05/28/2019
+ms.date: 08/19/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 9fc5508b68c8e206e76ead08ddb8015dd5133256
-ms.sourcegitcommit: 18f535a6c4cfe58362ed56599b1a875ee71ff6aa
+ms.openlocfilehash: ff1b5295f9fefd681ea76d09349415b59ceac1f2
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66410760"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631311"
 ---
 # <a name="create-a-c-console-app-project"></a>Tworzenie projektu aplikacji konsoli w języku C++
 
 ::: moniker range=">=vs-2019"
 
-Zwykle początkowy punkt jest programistą języka C++ "Hello, world!" Aplikacja, która jest uruchamiana w wierszu polecenia. To, co utworzysz w programie Visual Studio w tym artykule, a następnie przejdziemy do coś trudniejsze: aplikacja Kalkulator.
+Typowym punktem wyjścia dla C++ programisty jest "Hello, World!" aplikacja uruchamiana w wierszu polecenia. To wszystko, co utworzysz w programie Visual Studio w tym artykule, a następnie przejdziemy do bardziej trudnej: aplikacji Kalkulator.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- Program Visual Studio za pomocą **programowanie aplikacji klasycznych w języku C++** obciążenia zainstalowana i uruchomiona na komputerze. Jeśli nie jest jeszcze zainstalowany, zobacz [Instalowanie obsługi języka C++ w programie Visual Studio](../build/vscpp-step-0-installation.md).
+- Program Visual Studio z programowaniem dla **komputerów C++ stacjonarnych z** zainstalowanym i uruchomionym obciążeniem na komputerze. Jeśli nie jest jeszcze zainstalowana, zobacz [Install C++ Support in Visual Studio](../build/vscpp-step-0-installation.md).
 
-## <a name="create-your-app-project"></a>Utwórz projekt aplikacji
+## <a name="create-your-app-project"></a>Tworzenie projektu aplikacji
 
-Program Visual Studio używa *projektów* organizowania kodu dla aplikacji, a *rozwiązania* do organizowania projektów. Projekt zawiera wszystkie opcje, konfiguracji i reguły używane do tworzenia aplikacji. Umożliwia także zarządzanie relacji między plików wszystkich projektów i plików zewnętrznych. Aby utworzyć aplikację, najpierw należy utworzyć nowy projekt i rozwiązanie.
+Program Visual Studio używa *projektów* organizowania kodu dla aplikacji, a *rozwiązania* do organizowania projektów. Projekt zawiera wszystkie opcje, konfiguracji i reguły używane do tworzenia aplikacji. Umożliwia także zarządzanie relacji między plików wszystkich projektów i plików zewnętrznych. Aby utworzyć aplikację, najpierw utworzysz nowy projekt i rozwiązanie.
 
-1. Jeśli programu Visual Studio właśnie została uruchomiona, zostanie wyświetlone okno dialogowe programu Visual Studio 2019 r. Wybierz **Utwórz nowy projekt** na rozpoczęcie pracy.
+1. Jeśli właśnie uruchomiono program Visual Studio, zobaczysz okno dialogowe programu Visual Studio 2019. Wybierz pozycję **Utwórz nowy projekt** , aby rozpocząć.
 
-   ![Początkowe okno dialogowe programu Visual Studio 2019 r](./media/calc-vs2019-initial-dialog.png "początkowego okna dialogowego 2019 r z programu Visual Studio")
+   ![Początkowe okno dialogowe programu Visual Studio 2019](./media/calc-vs2019-initial-dialog.png "Początkowe okno dialogowe programu Visual Studio 2019")
 
-   W przeciwnym razie na pasku menu w programie Visual Studio wybierz **pliku** > **New** > **projektu**. **Utwórz nowy projekt** zostanie otwarte okno.
+   W przeciwnym razie na pasku menu w programie Visual Studio wybierz pozycję **plik** > **Nowy** > **projekt**. Zostanie otwarte okno **Utwórz nowy projekt** .
 
-1. Na liście szablonów projektu wybierz **aplikacja Konsolowa**, następnie wybierz **dalej**.
+1. Na liście szablonów projektu wybierz pozycję **Aplikacja konsolowa**, a następnie wybierz przycisk **dalej**.
 
-   ![Wybieranie szablonu aplikacji konsoli](./media/calc-vs2019-choose-console-app.png "Wybieranie szablonu aplikacji konsoli")
+   ![Wybieranie szablonu aplikacji konsolowej](./media/calc-vs2019-choose-console-app.png "Wybieranie szablonu aplikacji konsolowej")
 
    > [!Important]
-   > Upewnij się, że wybrano C++ wersję **aplikacja Konsolowa** szablonu. Ma ona **C++** , **Windows**, i **konsoli** tagów, a ikona ma "++" w prawym górnym rogu.
+   > Upewnij się, że wybrano C++ wersję szablonu **aplikacji konsolowej** . Zawiera Tagi **C++** , **okna**i **konsoli** , a ikona ma wartość "+ +" w rogu.
 
-1. W **konfigurowania nowego projektu** okno dialogowe, wybierz opcję **Nazwa projektu** pole edycji, nadaj nazwę nowego projektu *CalculatorTutorial*, następnie wybierz **Create** .
+1. W oknie dialogowym **Konfigurowanie nowego projektu** wybierz pole edycji **Nazwa projektu** , nazwij nowy projekt *CalculatorTutorial*, a następnie wybierz pozycję **Utwórz**.
 
-   ![Nazwij swój projekt w konfiguracji z okna dialogowego Nowy projekt](./media/calc-vs2019-name-your-project.png "nazwę projektu w konfiguracji, okno dialogowe nowego projektu")
+   ![Nazwij projekt w oknie dialogowym Konfigurowanie nowego projektu](./media/calc-vs2019-name-your-project.png "Nazwij projekt w oknie dialogowym Konfigurowanie nowego projektu")
 
-   Zostanie utworzona pusta Aplikacja konsoli Windows w języku C++. Aplikacje konsoli użyj okna konsoli Windows do wyświetlania danych wyjściowych i akceptuje dane wejściowe użytkownika. W programie Visual Studio okno edytora otwiera się i pokazuje wygenerowanego kodu:
+   Zostanie utworzona C++ pusta Aplikacja konsolowa systemu Windows. Aplikacje konsolowe korzystają z okna konsoli systemu Windows w celu wyświetlenia danych wyjściowych i zaakceptowania danych wejściowych użytkownika. W programie Visual Studio zostanie otwarte okno edytora zawierające wygenerowany kod:
 
     ```cpp
     // CalculatorTutorial.cpp : This file contains the 'main' function. Program execution begins and ends there.
@@ -69,29 +69,29 @@ Program Visual Studio używa *projektów* organizowania kodu dla aplikacji, a *r
     //   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
     ```
 
-## <a name="verify-that-your-new-app-builds-and-runs"></a>Sprawdź, czy Twoja nowa aplikacja kompiluje i uruchamia
+## <a name="verify-that-your-new-app-builds-and-runs"></a>Sprawdź, czy nowa aplikacja została skompilowana i uruchomiona
 
-Ten szablon dla nowej aplikacji konsoli Windows tworzy prostą aplikację "Hello World" języka C++. W tym momencie widać, jak Visual Studio kompiluje i uruchamia aplikacje, które można tworzyć bezpośrednio z poziomu środowiska IDE.
+Szablon nowej aplikacji konsolowej systemu Windows tworzy prostą C++ aplikację "Hello World". W tym momencie można zobaczyć, jak program Visual Studio kompiluje i uruchamia utworzone aplikacje bezpośrednio z poziomu środowiska IDE.
 
-1. Aby skompilować projekt, wybierz opcję **Kompiluj rozwiązanie** z **kompilacji** menu. **Dane wyjściowe** okno przedstawia wyniki procesu kompilacji.
+1. Aby skompilować projekt, wybierz opcję **Kompiluj rozwiązanie** z menu **kompilacja** . W oknie **dane wyjściowe** są wyświetlane wyniki procesu kompilacji.
 
-   ![Skompiluj projekt](./media/calc-vs2019-build-your-project.png "kompilacji projektu")
+   ![Kompilowanie projektu](./media/calc-vs2019-build-your-project.png "Kompilowanie projektu")
 
-1. Aby uruchomić kod, na pasku menu, wybierz **debugowania**, **Uruchom bez debugowania**.
+1. Aby uruchomić kod, na pasku menu wybierz **Debuguj**, **Uruchom bez debugowania**.
 
-   ![Rozpocznij projekt](./media/calc-vs2019-hello-world-console.png "Rozpocznij projekt")
+   ![Uruchom projekt](./media/calc-vs2019-hello-world-console.png "Uruchom projekt")
 
-   Okno konsoli zostanie otwarty, a następnie uruchamia aplikację. Po uruchomieniu aplikacji konsoli w programie Visual Studio działa kod, a następnie drukuje "naciśnij dowolny klawisz, aby zamknąć to okno. . ." daje szansę, aby wyświetlić dane wyjściowe. Gratulacje! Utworzono pierwszej "Hello, world!" Aplikacja konsoli w programie Visual Studio!
+   Zostanie otwarte okno konsoli, a następnie zostanie uruchomiona aplikacja. Po uruchomieniu aplikacji konsolowej w programie Visual Studio program uruchamia swój kod, a następnie drukuje polecenie "naciśnij dowolny klawisz, aby zamknąć to okno. . ." , aby dać Ci szansę zobaczyć dane wyjściowe. Gratulacje! Utworzono pierwszy "Hello, World!" Aplikacja konsolowa w programie Visual Studio!
 
-1. Naciśnij dowolny klawisz, aby zamknąć okno konsoli i powrócić do programu Visual Studio.
+1. Naciśnij klawisz, aby odrzucić okno konsoli i powrócić do programu Visual Studio.
 
-Masz teraz narzędzia, aby skompilować i uruchomić aplikację po każdej zmianie, aby sprawdzić, czy kod nadal działa zgodnie z oczekiwaniami. Później pokażemy sposób jej debugowania, w przeciwnym razie.
+Teraz masz narzędzia do kompilowania i uruchamiania aplikacji po każdej zmianie, aby sprawdzić, czy kod nadal działa zgodnie z oczekiwaniami. W dalszej części przedstawiono sposób debugowania, jeśli nie.
 
-## <a name="edit-the-code"></a>Edytowanie kodu
+## <a name="edit-the-code"></a>Edytuj kod
 
-Teraz możemy przekształcając kod w tym szablonie aplikacja Kalkulator.
+Teraz zmień kod w tym szablonie na aplikację Kalkulator.
 
-1. W *CalculatorTutorial.cpp* plik, Edytuj kod w celu dopasowania w tym przykładzie:
+1. W pliku *CalculatorTutorial. cpp* Edytuj kod, aby dopasować go do tego przykładu:
 
     ```cpp
     // CalculatorTutorial.cpp : This file contains the 'main' function. Program execution begins and ends there.
@@ -120,37 +120,37 @@ Teraz możemy przekształcając kod w tym szablonie aplikacja Kalkulator.
     //   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
     ```
 
-   > Znajomość kodu:
+   > Zrozumienie kodu:
    >
-   > - `#include` Instrukcje umożliwiają odwoływać się do kodu w innych plikach. Czasami może zostać wyświetlony nazwa pliku ujęta w nawiasy ( **\<\>** ); w innych sytuacjach jest ujęta w cudzysłowy ( **""** ). Ogólnie rzecz biorąc nawiasy są używane podczas odwoływania się do standardowej biblioteki C++, cudzysłowy są używane dla innych plików.
-   > - `using namespace std;` Wiersza informuje kompilator, aby oczekiwać rzeczy ze standardowej biblioteki C++ ma być używany w tym pliku. Bez tego wiersza, każde słowo kluczowe z biblioteki, musi być poprzedzony znakiem `std::`, aby wskazać jej zakresu. Na przykład, bez tego wiersza każdy odwołanie do `cout` , musi być zapisana jako `std::cout`. `using` Instrukcji jest dodawany do kodu wyglądają przejrzyście więcej.
-   > - `cout` — Słowo kluczowe jest używany do drukowania do wyjścia standardowego języka C++. **\< \<** Operator informuje kompilator, aby wysłać dowolną jest po prawej stronie go do wyjścia standardowego.
-   > - **Endl** — słowo kluczowe przypomina klawisza Enter; zakończenia wiersza i przenosi kursor do następnego wiersza. Lepiej jest umieścić `\n` wewnątrz ciągu (zawarty w ""), aby zrobić to samo, jak `endl` zawsze opróżnia bufor i może obniżyć wydajność programu, ale ponieważ jest to bardzo mała aplikacja `endl` jest używana zamiast tego uzyskać lepszy czytelności.
-   > - Wszystkie instrukcje języka C++ musi kończyć się znakami średnika i wszystkich aplikacji w języku C++ musi zawierać `main()` funkcji. Ta funkcja jest program będzie uruchamiany na początku. Cały kod musi być dostępny z `main()` aby możliwe było użycie.
+   > - `#include` Instrukcje umożliwiają odwoływanie się do kodu znajdującego się w innych plikach. Czasami może zostać wyświetlona nazwa pliku otoczona nawiasami ostrymi ( **\<\>** ); inne godziny są otoczone cudzysłowem ( **""** ). Ogólnie rzecz biorąc, nawiasy ostre są używane podczas C++ odwoływania się do biblioteki standardowej, natomiast cudzysłowy są używane dla innych plików.
+   > - Wiersz instruuje kompilator, aby zaoczekiwał elementów C++ z standardowej biblioteki, która ma być używana w tym pliku. `using namespace std;` Bez tego wiersza każde słowo kluczowe z biblioteki musi być poprzedzone `std::`znakiem, aby zauważyć jego zakres. Na przykład bez tego wiersza każde odwołanie `cout` musi być zapisywane jako. `std::cout` `using` Instrukcja zostanie dodana, aby kod wyglądał bardziej czysty.
+   > - Słowo kluczowe jest używane do drukowania do wyjścia standardowego w C++ `cout` Operator instruuje kompilator, aby wysyłał dane z prawej strony do wyjścia standardowego. **\< \<**
+   > - Słowo kluczowe **endl** jest podobne do klawisza ENTER; zamyka wiersz i przenosi kursor do następnego wiersza. Lepszym rozwiązaniem jest umieszczenie `\n` wewnątrz ciągu (zawartego w ""), aby wykonać to samo, jak `endl` zawsze opróżnia bufor i może obniżyć wydajność programu, ale ponieważ jest to bardzo mała aplikacja, `endl` jest używana zamiast tego w lepszym stanie czytelność.
+   > - Wszystkie C++ instrukcje muszą kończyć się średnikami, a C++ wszystkie aplikacje `main()` muszą zawierać funkcję. Ta funkcja jest uruchamiana na początku. Cały kod musi być dostępny `main()` , aby można było go użyć.
 
-1. Aby zapisać plik, wprowadź **Ctrl + S**, lub wybierz **Zapisz** ikony w górnej części IDE, ikonę dyskietki, na pasku narzędzi poniżej paska menu.
+1. Aby zapisać plik, naciśnij **klawisze CTRL + S**lub wybierz ikonę **Zapisz** znajdującą się w górnej części IDE, ikonę dyskietki na pasku narzędzi pod paskiem menu.
 
-1. Aby uruchomić aplikację, naciśnij klawisz **kombinację klawiszy Ctrl + F5** lub przejdź do **debugowania** menu i wybrać **Rozpocznij bez debugowania**. Powinien zostać wyświetlony pojawiają się okna konsoli wyświetlającego tekst określony w kodzie.
+1. Aby uruchomić aplikację, naciśnij **klawisze CTRL + F5** lub przejdź do menu **Debuguj** i wybierz polecenie **Uruchom bez debugowania**. Powinno zostać wyświetlone okno konsoli zawierające tekst określony w kodzie.
 
-1. Gdy skończysz, zamknij okno konsoli.
+1. Po zakończeniu zamknij okno konsoli.
 
-## <a name="add-code-to-do-some-math"></a>Dodaj kod będzie robił talent matematyczny
+## <a name="add-code-to-do-some-math"></a>Dodaj kod, aby wykonać kilka obliczeń
 
-Nadszedł czas, aby dodać logikę matematyczne.
+Czas na dodanie pewnej logiki matematycznej.
 
-### <a name="to-add-a-calculator-class"></a>Aby dodać klasę Kalkulator
+### <a name="to-add-a-calculator-class"></a>Aby dodać klasę kalkulatora
 
-1. Przejdź do **projektu** menu i wybrać **Dodaj klasę**. W **Nazwa klasy** edytować pole, wprowadź *Kalkulator*. Wybierz **OK**. Poproś o dodanie Cię dwa nowe pliki do projektu. Aby zapisać wszystkie zmienione pliki naraz, naciśnij **Ctrl + Shift + S**. Jest skrót klawiaturowy **pliku** > **Zapisz wszystko**. Dostępna jest również przycisku paska narzędzi dla **Zapisz wszystko**, ikony dwóch dyskietek, znaleziono obok **Zapisz** przycisku. Ogólnie rzecz biorąc, dobrym rozwiązaniem w celu jest **Zapisz wszystko** często, dlatego nie zostały pominięte pliki podczas zapisywania.
+1. Przejdź do menu **projekt** i wybierz polecenie **Dodaj klasę**. W polu edycji **Nazwa klasy** wprowadź *Kalkulator*. Wybierz **OK**. Dwa nowe pliki zostaną dodane do projektu. Aby zapisać wszystkie zmienione pliki jednocześnie, naciśnij **klawisze Ctrl + Shift + S**. Jest to skrót klawiaturowy do**zapisywania wszystkich** **plików** > . Istnieje również przycisk paska narzędzi dla opcji **Zapisz wszystko**— ikona dwóch dyskietek, która znajduje się obok przycisku **Zapisz** . Ogólnie rzecz biorąc, dobrym sposobem jest zaoszczędzenie **wszystkiego** często, więc nie przegap żadnych plików podczas zapisywania.
 
-   ![Utwórz klasę Kalkulator](./media/calc-vs2019-create-calculator-class.png "Utwórz klasę Kalkulator")
+   ![Utwórz klasę kalkulatora](./media/calc-vs2019-create-calculator-class.png "Utwórz klasę kalkulatora")
 
-   Klasa jest podobna do planu dla obiektu, który wykonuje coś. W tym przypadku definiujemy Kalkulator i jak powinny działać. **Dodaj klasę** kreatora zostały użyte powyżej, utworzyć pliki .h i .cpp, które mają taką samą nazwę jak klasa. Można wyświetlić pełną listę plików projektu w **Eksploratora rozwiązań** okna widoczne po stronie IDE. Jeśli okno nie jest widoczny, możesz go otworzyć, na pasku menu: Wybierz **widoku** > **Eksploratora rozwiązań**.
+   Klasa przypomina plan dla obiektu, który robi coś. W tym przypadku definiujemy Kalkulator i sposób jego działania. Kreator **dodawania klasy** użyty powyżej utworzył pliki. h i. cpp, które mają taką samą nazwę jak Klasa. Pełną listę plików projektu można wyświetlić w oknie **Eksplorator rozwiązań** widocznym po stronie IDE. Jeśli okno nie jest widoczne, możesz otworzyć je na pasku menu: wybierz pozycję **Wyświetl** > **Eksplorator rozwiązań**.
 
-   ![Eksplorator rozwiązań](./media/calc-vs2019-solution-explorer.png "Eksploratora rozwiązań")
+   ![Eksplorator rozwiązań](./media/calc-vs2019-solution-explorer.png "Eksplorator rozwiązań")
 
-   Teraz powinny być otwartych w edytorze trzech kart: *CalculatorTutorial.cpp*, *Calculator.h*, i *Calculator.cpp*. Jeśli przypadkowo zamknięty jeden z nich, możesz uruchomić go, klikając go dwukrotnie **Eksploratora rozwiązań** okna.
+   Teraz powinno być otwartych trzy karty w edytorze: *CalculatorTutorial. cpp*, *Kalkulator. h*i *Kalkulator. cpp*. Jeśli przypadkowo zamkniesz jedną z nich, możesz otworzyć ją ponownie, klikając ją dwukrotnie w oknie **Eksplorator rozwiązań** .
 
-1. W **Calculator.h**, Usuń `Calculator();` i `~Calculator();` wierszy, które zostały wygenerowane, ponieważ nie będą potrzebne w tym miejscu. Następnie dodaj następujący wiersz kodu, dzięki czemu pliku wygląda teraz następująco:
+1. W polu **Kalkulator. h**Usuń `Calculator();` wygenerowane `~Calculator();` wiersze i, ponieważ nie będą one potrzebne w tym miejscu. Następnie Dodaj następujący wiersz kodu, aby plik wyglądał teraz następująco:
 
     ```cpp
     #pragma once
@@ -161,24 +161,24 @@ Nadszedł czas, aby dodać logikę matematyczne.
     };
     ```
 
-   > Znajomość kodu
+   > Zrozumienie kodu
    >
-   > - Wiersz został dodany deklaruje nową funkcję o nazwie `Calculate`, które będą używane do uruchamiania operacji matematycznych na dodawanie, odejmowanie, mnożenie i dzielenie.
-   > - Kod języka C++ jest podzielony na *nagłówka* plików (.h) i *źródła* plików (.cpp). Kilka innych rozszerzeń plików są obsługiwane przez różne kompilatory, ale są najważniejsze z nich wiedzieć o. Funkcje i zmienne są zazwyczaj *zadeklarowana*, która jest podanej nazwy i typu, w plikach nagłówkowych i *zaimplementowane*, lub definicję w plikach źródłowych. Aby kod dostępu zdefiniowane w innym pliku, można użyć `#include "filename.h"`, gdzie "filename.h" to nazwa pliku, który deklaruje zmiennych lub funkcji, której chcesz użyć.
-   > - Dwa wiersze, możesz usunąć zadeklarowana *Konstruktor* i *destruktor* dla klasy. Proste klasy podobny do tego kompilator utworzy je, a ich wykorzystania wykraczają poza zakres tego samouczka.
-   > - Jest dobrą praktyką, aby zorganizować kodu w różnych plikach uzależnione od tak jest, więc można łatwo znaleźć kod, który będzie potrzebna później. W naszym przypadku definiujemy `Calculator` klasy oddzielnie od pliku zawierającego `main()` funkcji, ale firma Microsoft planuje odwołania `Calculator` klasy w `main()`.
+   > - Dodana linia deklaruje nową funkcję o nazwie `Calculate`, która będzie używana do uruchamiania operacji matematycznych do dodawania, odejmowania, mnożenia i dzielenia.
+   > - C++kod jest zorganizowany w plikach nagłówkowych (. h) i *źródłowych* (. cpp). Różne kompilatory obsługują kilka innych rozszerzeń plików, ale są one głównymi. Funkcje i zmienne są zwykle *zadeklarowane*, to oznacza, że dana nazwa i typ, w plikach nagłówkowych izaimplementowana lub dana definicja, w plikach źródłowych. Aby uzyskać dostęp do kodu zdefiniowanego w innym pliku, `#include "filename.h"`można użyć, gdzie "filename. h" jest nazwą pliku, który deklaruje zmienne lub funkcje, których chcesz użyć.
+   > - Dwa usunięte wiersze deklarują *Konstruktor* i *destruktor* dla klasy. W przypadku prostej klasy, takiej jak ta, kompilator tworzy je dla Ciebie, a ich zastosowania wykraczają poza zakres tego samouczka.
+   > - Dobrym sposobem jest zorganizowanie kodu w różne pliki w oparciu o to, co robi, dzięki czemu możesz łatwo znaleźć kod, którego potrzebujesz później. W `Calculator` naszym przypadku definiujemy klasy niezależnie od pliku `main()` zawierającego funkcję, ale planujemy odwołanie `Calculator` do klasy w `main()`.
 
-1. Zostanie wyświetlony zielony wężyk, są wyświetlane w obszarze `Calculate`. To, że mamy jeszcze nie zdefiniowano `Calculate` funkcji w pliku .cpp. Umieść kursor nad wyraz, kliknij ikonę żarówki (w tym przypadku śrubokręta), które się pojawi, a następnie wybierz **Tworzenie definicji "Oblicz" w Calculator.cpp**.
+1. Zobaczysz zieloną zygzakę w obszarze `Calculate`. Jest to spowodowane tym `Calculate` , że funkcja nie została zdefiniowana w pliku. cpp. Umieść kursor nad słowem, kliknij żarówki (w tym przypadku śrubokręt), który wystawia, a następnie wybierz pozycję **Utwórz definicję elementu "Oblicz" w programie Kalkulator. cpp**.
 
-   ![Utwórz definicję Calculate](./media/calc-vs2019-create-definition.png "Utwórz definicję Calculate")
+   ![Utwórz definicję obliczeń](./media/calc-vs2019-create-definition.png "Utwórz definicję obliczeń")
 
-   Okno podręczne pojawi się podglądu zmiany kodu, która została wprowadzona w innym pliku. Ten kod został dodany do *Calculator.cpp*.
+   Zostanie wyświetlone wyskakujące okienko umożliwiające wgląd w zmiany kodu, które zostały wprowadzone w innym pliku. Kod został dodany do programu *Kalkulator. cpp*.
 
-   ![Wyskakujące z definicją Calculate](./media/calc-vs2019-pop-up-definition.png "wyskakujących przy użyciu definicji elementu Calculate")
+   ![Wyskakujące okienko z definicją obliczeń](./media/calc-vs2019-pop-up-definition.png "Wyskakujące okienko z definicją obliczeń")
 
-   Obecnie tylko zwraca wartość 0,0. Teraz zmienimy. Naciśnij klawisz **Esc** zamknąć to okno.
+   Obecnie tylko zwraca 0,0. Zmieńmy to. Naciśnij klawisz **ESC** , aby zamknąć okno podręczne.
 
-1. Przełącz się do *Calculator.cpp* pliku w oknie edytora. Usuń `Calculator()` i `~Calculator()` sekcje (tak jak w pliku .h) i Dodaj następujący kod do `Calculate()`:
+1. Przejdź do pliku *Kalkulator. cpp* w oknie edytora. Usuń sekcje `~Calculator()` `Calculate()`i (jak w pliku h) i Dodaj następujący kod do: `Calculator()`
 
     ```cpp
     #include "Calculator.h"
@@ -201,18 +201,18 @@ Nadszedł czas, aby dodać logikę matematyczne.
     }
     ```
 
-   > Znajomość kodu
+   > Zrozumienie kodu
    >
-   > - Funkcja `Calculate` zużywa wiele, operator i drugą liczbę, a następnie wykonuje żądaną operację dla numerów.
-   > - Kontroli instrukcji switch operator, który został podany i tylko wtedy wykonuje przypadek odpowiadający tej operacji. Wartość domyślna: wielkość liter jest rezerwowe w przypadku, gdy użytkownik wpisze operatora, który nie jest akceptowane, dzięki czemu program nie zostanie przerwane. Ogólnie rzecz biorąc zaleca się obsługiwać dane wejściowe użytkownika nieprawidłowe w sposób bardziej elegancki, ale to wykracza poza zakres tego samouczka.
-   > - `double` — Słowo kluczowe wskazuje typ numer, który obsługuje liczbę miejsc dziesiętnych. W ten sposób Kalkulator może obsługiwać zarówno matematyczne dziesiętny, jak i matematyki całkowitoliczbowej. `Calculate` Funkcji jest wymagany, aby zawsze zwracać liczbę ze względu na `double` na samym początku kodu (oznacza typ zwracany przez funkcję), dlatego zostanie zwrócona 0.0 nawet w przypadku domyślnej.
-   > - Plik .h deklaruje funkcję *prototypu*, który informuje kompilator, ponoszonych z góry kosztów wymagane parametry i jakie zwracany typ można oczekiwać od niego. Plik CPP zawiera wszystkie szczegóły dotyczące implementacji funkcji.
+   > - Funkcja `Calculate` używa liczby, operatora i drugiej liczby, a następnie wykonuje żądaną operację dla liczb.
+   > - Instrukcja Switch sprawdza, który operator został dostarczony i wykonuje tylko przypadki odpowiadające tej operacji. Wartość domyślna: przypadek jest rezerwy w przypadku, gdy użytkownik wpisze operator, który nie został zaakceptowany, więc program nie przerywa. Ogólnie rzecz biorąc, najlepiej jest obsługiwać nieprawidłowe dane wprowadzane przez użytkownika w bardziej elegancki sposób, ale wykracza to poza zakres tego samouczka.
+   > - `double` Słowo kluczowe wskazuje typ liczby, która obsługuje miejsca dziesiętne. Dzięki temu Kalkulator może obsłużyć zarówno dziesiętną matematyczną, jak i liczbę całkowitą. Funkcja jest wymagana, aby zawsze zwracała taką liczbę ze względu `double` na bardzo początek kodu (oznacza to, że zwracany typ funkcji), dlatego zwracamy 0,0 nawet w przypadku domyślnego. `Calculate`
+   > - Plik. h deklaruje *prototyp*funkcji, który informuje kompilator, jakie parametry wymagają, i jakie zwraca typ od niego oczekiwane. Plik. cpp zawiera wszystkie szczegóły implementacji funkcji.
 
-Jeśli skompilować i uruchomić ponownie na tym etapie kod, nadal zakończy działanie po zapytaniu do wykonywania kolejnej operacji. Następnie zmodyfikujesz `main` funkcji do wykonywania niektórych obliczeń.
+Jeśli kompilujesz i uruchomisz kod ponownie w tym momencie, nadal będzie on się zamykał po zaproszeniu do wykonania operacji. Następnie zmodyfikujesz `main` funkcję, aby wykonać pewne obliczenia.
 
-### <a name="to-call-the-calculator-class-member-functions"></a>Aby wywoływać funkcje składowe klasy Kalkulator
+### <a name="to-call-the-calculator-class-member-functions"></a>Aby wywołać funkcje elementów członkowskich klasy kalkulatora
 
-1. Teraz zaktualizujmy `main` działa w programach *CalculatorTutorial.cpp*:
+1. Teraz zaktualizujmy `main` funkcję w *CalculatorTutorial. cpp*:
 
     ```cpp
     // CalculatorTutorial.cpp : This file contains the 'main' function. Program execution begins and ends there.
@@ -246,77 +246,77 @@ Jeśli skompilować i uruchomić ponownie na tym etapie kod, nadal zakończy dzi
     }
     ```
 
-   > Znajomość kodu
+   > Zrozumienie kodu
    >
-   > - Ponieważ programy w języku C++ zawsze rozpoczynają się od `main()` funkcji, należy wywołać kodu języka w tym miejscu, więc `#include` instrukcji jest wymagana.
-   > - Niektóre wstępne zmienne `x`, `y`, `oper`, i `result` są uznane za przechowywanie pierwsza liczba, druga liczba, operator i wynik końcowy odpowiednio. Zawsze jest dobrą praktyką, aby dać im niektóre wartości początkowe, aby uniknąć niezdefiniowane zachowanie, czyli o tym, co to jest wykonywane tutaj.
-   > - `Calculator c;` Wiersz deklaruje obiektu o nazwie "c", ponieważ wystąpienie `Calculator` klasy. Ta sama klasa to po prostu plan dla działania kalkulatory; obiekt jest określone Kalkulator, która wykonuje obliczenia.
-   > - `while (true)` Instrukcja jest pętlą. Kod wewnątrz pętli kontynuuje wykonywanie wielokrotnie tak długo, jak warunku wewnątrz `()` prawdziwe. Ponieważ warunek jest po prostu wyświetlane jako `true`, jest zawsze ma wartość true, więc kiedy pętla zostanie uruchomiona w nieskończoność. Aby zamknąć program, użytkownik musi ręcznie zamknąć okno konsoli. W przeciwnym razie program zawsze czeka, aż nowe dane wejściowe.
-   > - `cin` Słowo kluczowe jest używane do przyjmowania danych wejściowych od użytkownika. Ten strumień wejściowy pozostaje inteligentnego przetworzył wiersz z tekstem wprowadzonym w oknie konsoli i umieścić go w każdej zmienne wymienione w kolejności, zakładając, że dopasowania danych wejściowych użytkownika wymaganymi specyfikacjami. Można zmodyfikować tego wiersza, aby zaakceptować różnego rodzaju danych wejściowych, na przykład więcej niż dwie liczby, mimo że `Calculate()` funkcji również musi zostać zaktualizowany do obsługi tego.
-   > - `c.Calculate(x, oper, y);` Wywołań wyrażeń `Calculate` funkcję wcześniej zdefiniowaną i dostarcza wprowadzone wartości wejściowych. Następnie funkcja zwraca liczbę, która zostaje zapisany w `result`.
-   > - Na koniec `result` są drukowane w konsoli, użytkownik zobaczy następujący wynik obliczenia.
+   > - Ze C++ względu na to, `main()` że programy zawsze zaczynają się od funkcji, musimy zadzwonić do naszego `#include` innego kodu z tego miejsca, więc wymagana jest instrukcja.
+   > - Niektóre zmienne `x` `oper`początkowe, `y`, i `result` są zadeklarowane w celu przechowania odpowiednio pierwszej liczby, drugiej liczby, operatora i wyniku końcowego. Zawsze dobrym sposobem jest przyznanie im początkowych wartości, aby uniknąć niezdefiniowanego zachowania, co jest wykonywane w tym miejscu.
+   > - Wiersz deklaruje obiekt o nazwie "c" jako wystąpienie `Calculator` klasy. `Calculator c;` Sama klasa jest tylko planem, w jaki działają Kalkulatory. Obiekt jest określonym kalkulatorem, który wykonuje obliczenia matematyczne.
+   > - `while (true)` Instrukcja jest pętlą. Kod wewnątrz pętli będzie nadal wykonywany przez cały czas i dłużej, o ile warunek wewnątrz `()` ma wartość true. Ponieważ warunek jest po prostu wyświetlany jako `true`, zawsze ma wartość true, więc pętla jest uruchamiana w nieskończoność. Aby zamknąć program, użytkownik musi ręcznie zamknąć okno konsoli. W przeciwnym razie program zawsze czeka na nowe dane wejściowe.
+   > - `cin` Słowo kluczowe jest używane do akceptowania danych wejściowych od użytkownika. Ten strumień wejściowy jest wystarczająco inteligentny, aby przetwarzać wiersz tekstu wprowadzony w oknie konsoli i umieścić go wewnątrz każdej z wymienionych zmiennych w kolejności, przy założeniu, że dane wejściowe użytkownika są zgodne z wymaganą specyfikacją. Możesz zmodyfikować ten wiersz, aby akceptować różne typy danych wejściowych, na przykład więcej niż dwie liczby, chociaż `Calculate()` należy również zaktualizować tę funkcję, aby ją obsłużyć.
+   > - Wyrażenie wywołuje wcześniej zdefiniowaną funkcję i dostarcza wprowadzone wartości wejściowe. `Calculate` `c.Calculate(x, oper, y);` Funkcja zwraca liczbę, która jest przechowywana w `result`.
+   > - Na koniec `result` jest drukowana w konsoli, więc użytkownik zobaczy wynik obliczenia.
 
-### <a name="build-and-test-the-code-again"></a>Tworzenie i testowanie kodu ponownie
+### <a name="build-and-test-the-code-again"></a>Kompiluj i Testuj kod ponownie
 
-Nadszedł czas na przetestowanie program ponownie, aby upewnić się, że wszystko działa prawidłowo.
+Teraz czas na ponowne przetestowanie programu w celu upewnienia się, że wszystko działa prawidłowo.
 
-1. Naciśnij klawisz **kombinację klawiszy Ctrl + F5** Aby ponownie skompilować i uruchomić aplikację.
+1. Naciśnij **kombinację klawiszy CTRL + F5** , aby skompilować i uruchomić aplikację.
 
-1. Wprowadź `5 + 5`i naciśnij klawisz **Enter**. Sprawdź, czy wynik jest 10.
+1. Wprowadź `5 + 5`polecenie i naciśnij klawisz **Enter**. Sprawdź, czy wynik wynosi 10.
 
-   ![Wynik 5 + 5](./media/calc-vs2019-five-plus-five.png "wynik 5 + 5")
+   ![Wynik 5 + 5](./media/calc-vs2019-five-plus-five.png "Wynik 5 + 5")
 
 ## <a name="debug-the-app"></a>Debugowanie aplikacji
 
-Ponieważ użytkownik może wpisać cokolwiek w oknie konsoli, upewnij się, że Kalkulator obsługuje dane wejściowe, zgodnie z oczekiwaniami. Zamiast uruchamiania programu, Przyjrzyjmy debugować go zamiast tego, dzięki czemu można sprawdzić, co wykonywanie operacji szczegółowe instrukcje krok po kroku.
+Ponieważ użytkownik może wpisywać dowolne elementy w oknie konsoli, należy się upewnić, że Kalkulator obsługuje pewne dane wejściowe zgodnie z oczekiwaniami. Zamiast uruchamiania programu, należy debugować go zamiast tego, aby można było sprawdzić, co jest wykonywane szczegółowo, krok po kroku.
 
 ### <a name="to-run-the-app-in-the-debugger"></a>Aby uruchomić aplikację w debugerze
 
-1. Ustaw punkt przerwania na `result = c.Calculate(x, oper, y);` wiersz po użytkownik został poproszony o wprowadzenie danych. Aby ustawić punkt przerwania, kliknij obok wiersza w szarym pionowy pasek wzdłuż lewej krawędzi okna edytora. Pojawi się czerwona kropka.
+1. Ustaw punkt przerwania w `result = c.Calculate(x, oper, y);` wierszu zaraz po poproszeniu użytkownika o dane wejściowe. Aby ustawić punkt przerwania, kliknij pozycję obok linii na szarym pasku pionowym wzdłuż lewej krawędzi okna edytora. Zostanie wyświetlona czerwona kropka.
 
    ![Ustaw punkt przerwania](./media/calc-vs2019-set-breakpoint.png "Ustaw punkt przerwania")
 
-   Teraz gdy mamy zdebugować program, zawsze wstrzymuje wykonywanie w danym wierszu. Mamy już pomysłem przybliżoną, program działa w przypadku prostych przypadkach. Ponieważ nie chcemy zatrzymać wykonywanie każdym razem, gdy, upewnijmy się, punkt przerwania warunkowe.
+   Teraz podczas debugowania programu program zawsze wstrzymuje wykonywanie w tym wierszu. Mamy już pomysł, że program działa w przypadku prostych przypadków. Ponieważ nie chcemy wstrzymywać wykonywania za każdym razem, Przypuśćmy, że punkt przerwania.
 
-1. Kliknij prawym przyciskiem myszy czerwoną kropkę, która reprezentuje punkt przerwania, a następnie wybierz **warunki**. W polu edycji dla warunku, wprowadź `(y == 0) && (oper == '/')`. Wybierz **Zamknij** przycisk po wykonaniu tych czynności. Warunek są zapisywane automatycznie.
+1. Kliknij prawym przyciskiem myszy czerwoną kropkę reprezentującą punkt przerwania, a następnie wybierz pozycję **warunki**. W polu edycji dla warunku wprowadź `(y == 0) && (oper == '/')`. Po zakończeniu wybierz przycisk **Zamknij** . Warunek jest automatycznie zapisywany.
 
-   ![Ustaw warunkowego punktu przerwania](./media/calc-vs2019-conditional-breakpoint.png "Ustaw warunkowego punktu przerwania")
+   ![Ustaw punkt przerwania warunkowego](./media/calc-vs2019-conditional-breakpoint.png "Ustaw punkt przerwania warunkowego")
 
-   Teraz możemy zatrzymać wykonywanie w punkcie przerwania, szczególnie w przypadku, gdy dzielenie przez 0 jest podejmowana próba.
+   Teraz wstrzymamy wykonywanie w punkcie przerwania, w przypadku próby dzielenia przez 0.
 
-1. Aby zdebugować program, naciśnij klawisz **F5**, lub wybierz **lokalny debuger Windows** przycisku paska narzędzi, który zawiera ikonę zieloną strzałkę. W aplikacji konsoli po wprowadzeniu podobny do "5-0" pracował normalnie program jest uruchomiony. Jednakże jeśli wpiszesz "10 / 0", wstrzymuje w punkcie przerwania. Można nawet umieścić dowolną liczbę spacji między operatora i numery: `cin` inteligentny, można przeanalizować danych wejściowych, odpowiednio.
+1. Aby debugować program, naciśnij klawisz **F5**lub wybierz przycisk paska narzędzi **lokalnego debugera systemu Windows** , który ma ikonę zielonej strzałki. W aplikacji konsolowej, jeśli wprowadzisz coś takiego jak "5-0", program zachowuje się normalnie i nadal działa. Jednak jeśli wpiszesz "10/0", zostanie on wstrzymany w punkcie przerwania. Można nawet umieścić dowolną liczbę spacji między operatorem a liczbami: `cin` jest to inteligentna wartość, aby odpowiednio analizować dane wejściowe.
 
-   ![Wstrzymaj na warunkowego punktu przerwania](./media/calc-vs2019-debug-breakpoint.png "wstrzymania na warunkowego punktu przerwania")
+   ![Wstrzymaj w warunkowym punkcie przerwania](./media/calc-vs2019-debug-breakpoint.png "Wstrzymaj w warunkowym punkcie przerwania")
 
-### <a name="useful-windows-in-the-debugger"></a>Przydatne systemu windows w debugerze
+### <a name="useful-windows-in-the-debugger"></a>Przydatne okna w debugerze
 
-Zawsze, gdy debugujesz kod, możesz zauważyć, czy są wyświetlane niektóre z nowych oknach. Okna te mogą pomóc środowisko debugowania. Przyjrzyj się **Autos** okna. **Autos** okno zawiera bieżące wartości zmiennych używane co najmniej trzy wiersze przed, jak i do bieżącego wiersza. Aby wyświetlić wszystkie zmienne z tej funkcji, przełącz się do **lokalne** okna. Faktycznie można zmodyfikować wartości tych zmiennych podczas debugowania, aby zobaczyć, jaki będzie wpływ, jakie miałby on program. W tym przypadku pozostawimy je samodzielnie.
+Za każdym razem, gdy debugujesz kod, możesz zauważyć, że pojawiły się niektóre nowe okna. Te okna mogą pomóc w debugowaniu. Zapoznaj się z oknem **Autokorekty** . W oknie **samochody** są wyświetlane bieżące wartości zmiennych używanych co najmniej trzy wiersze przed i do bieżącego wiersza. Aby wyświetlić wszystkie zmienne z tej funkcji, przełącz się do okna **zmiennych lokalnych** . Można faktycznie zmodyfikować wartości tych zmiennych podczas debugowania, aby zobaczyć, jaki wpływ ma w programie. W takim przypadku pozostawimy je samodzielnie.
 
-   ![Okno zmiennych lokalnych](./media/calc-vs2019-debug-locals.png "okno zmiennych lokalnych")
+   ![Okno zmiennych lokalnych](./media/calc-vs2019-debug-locals.png "Okno zmiennych lokalnych")
 
-Możesz też po prostu umieść kursor nad zmiennych w kodzie, aby zobaczyć ich bieżącymi wartościami, których wykonywania jest obecnie wstrzymana. Upewnij się, że okno edytora jest w trybie koncentracji uwagi, klikając ją najpierw.
+Możesz również po prostu umieścić kursor nad zmiennymi w kodzie, aby zobaczyć ich bieżące wartości, w przypadku których wykonywanie jest obecnie wstrzymane. Upewnij się, że okno edytora jest fokusem, klikając je najpierw.
 
-   ![Po wskazaniu wskaźnikiem, aby wyświetlić bieżące wartości zmiennych](./media/calc-vs2019-hover-tooltip.png "po wskazaniu wskaźnikiem, aby wyświetlić bieżące wartości zmiennych")
+   ![Aktywuj, aby wyświetlić bieżące wartości zmiennych](./media/calc-vs2019-hover-tooltip.png "Aktywuj, aby wyświetlić bieżące wartości zmiennych")
 
 ### <a name="to-continue-debugging"></a>Aby kontynuować debugowanie
 
-1. Żółta linia po lewej stronie pokazuje bieżący punkt wykonania. Bieżące połączenia linii `Calculate`, więc naciśnij **F11** do **Step Into** funkcji. Znajdziesz się w treści `Calculate` funkcji. Należy zachować ostrożność **Step Into**; Jeśli zrobisz to zbyt dużo mogą tracić dużo czasu. Usługa zostanie wprowadzona do żadnego kodu, używanego na wiersz, w którym korzystasz, łącznie z funkcjami biblioteki standardowej.
+1. Żółty wiersz po lewej stronie pokazuje bieżący punkt wykonania. Bieżące wywołania `Calculate`wiersza, dlatego naciśnij klawisz **F11** , aby **przejść** do funkcji. Znajdziesz Cię w treści `Calculate` funkcji. Należy zachować ostrożność **krok po kroku**. w przypadku zbyt dużej ilości czasu może to spowodować marnowanie. Zawiera kod, który jest używany w wierszu, w którym pracujesz, w tym funkcje biblioteki standardowej.
 
-1. Teraz, gdy punkt wykonania jest na początku `Calculate` funkcji, naciśnij klawisz **F10** można przenieść do następnego wiersza, podczas wykonywania programu. **F10** jest także znana jako **Step Over**. Możesz użyć **Step Over** przenieść wiersz po wierszu, bez wcześniejszego zagłębieniem się w szczegóły co się dzieje w każdej części wiersza. Ogólnie rzecz biorąc należy używać **Step Over** zamiast **Step Into**, chyba że chcesz od razu rozpocząć korzystanie w głębiej do kodu, który jest wywoływany z innego miejsca (tak jak nawiązać połączenie treści `Calculate`).
+1. Teraz, gdy punkt wykonywania jest na początku `Calculate` funkcji, naciśnij klawisz **F10** , aby przejść do następnego wiersza w wykonaniu programu. **F10** jest również znany jako **krok powyżej**. Możesz użyć przechodzenia **krok po kroku** , aby przejść od wiersza do wiersza, bez podania do szczegółów co się dzieje w każdej części wiersza. Ogólnie rzecz biorąc, należy użyć przekroczenia **kroku** zamiast **wkroczenia do**, chyba że chcesz szczegółowe bardziej głęboko kod, który jest wywoływany z innego miejsca (jak miało miejsce do `Calculate`uzyskania treści).
 
-1. Nadal korzystać z **F10** do **Step Over** każdym wierszu, aż powrócisz do `main()` działać w innym pliku i zatrzymania na `cout` wiersza.
+1. Kontynuuj używanie klawisza **F10** , aby przekroczyć każdy wiersz do momentu `main()` powrotu do funkcji w innym pliku, i Zatrzymaj `cout` ją w wierszu.
 
-   Prawdopodobnie program robi, oczekiwano: Trwa pierwsza liczba i dzieli go przez drugi. Na `cout` wiersz, umieść kursor nad `result` zmiennej lub Przyjrzyj się `result` w **Autos** okna. Zobaczysz, że jego wartość jest wyświetlana na liście "inf", który jest prawdopodobnie nieprawidłowa, więc go naprawić. `cout` Wiersza po prostu dane wyjściowe, niezależnie od wartości są przechowywane w `result`, dlatego w przypadku wkroczenia do przodu jeszcze jeden wiersz, za pomocą **F10**, w oknie konsoli zostaną wyświetlone:
+   Wygląda na to, że program wykonuje oczekiwane działania: Pobiera pierwszą liczbę i dzieli go przez drugi. W wierszu Umieść wskaźnik myszy `result` nad zmienną `result` lub zapoznaj się z oknem Autokorekty. `cout` Zobaczysz, że wartość zostanie wyświetlona na liście jako "inf", która nie wygląda w prawidłowym stanie, więc naprawimy ją. Wiersz `cout` tylko wyprowadza dane, które są przechowywane w `result`, więc po przekroczeniu kolejnej linii do przodu przy użyciu klawisza **F10**zostanie wyświetlone okno konsoli:
 
-   ![Wynik dzielenia przez zero](./media/calc-vs2019-divide-by-zero-fail.png "wynik dzielenia przez zero")
+   ![Wynik dzielenia przez zero](./media/calc-vs2019-divide-by-zero-fail.png "Wynik dzielenia przez zero")
 
-   Ten wynik wynika z faktu, dzielenie przez zero jest niezdefiniowana, więc nie ma wartości liczbowych odpowiedzi do żądanej operacji.
+   Wynika to z faktu, że dzielenie przez zero jest niezdefiniowane, więc program nie ma numerycznej odpowiedzi na żądaną operację.
 
 ### <a name="to-fix-the-divide-by-zero-error"></a>Aby naprawić błąd "dzielenie przez zero"
 
-Umożliwia dzielenie przez zero bardziej bezpiecznie obsłużyć, dzięki czemu użytkownik może zrozumieć.
+Przyjrzyjmy się dzielenie przez zero, dzięki czemu użytkownik może zrozumieć problem.
 
-1. Wprowadź następujące zmiany w *CalculatorTutorial.cpp*. (Można pozostawić program uruchomiony podczas edycji, dzięki funkcji debugera, o nazwie **Edytuj i Kontynuuj**):
+1. Wprowadź następujące zmiany w *CalculatorTutorial. cpp*. (Można pozostawić program uruchomiony podczas edycji, dzięki funkcji debugera o nazwie **Edytuj i Kontynuuj**):
 
     ```cpp
     // CalculatorTutorial.cpp : This file contains the 'main' function. Program execution begins and ends there.
@@ -357,55 +357,55 @@ Umożliwia dzielenie przez zero bardziej bezpiecznie obsłużyć, dzięki czemu 
     }
     ```
 
-1. Teraz naciśnij **F5** po. Wykonanie programu jest kontynuowane aż, dopóki nie można wstrzymać poprosić o dane wejściowe użytkownika. Wprowadź `10 / 0` ponownie. Teraz bardziej użyteczne komunikat jest drukowany. Użytkownik jest monitowany o więcej danych wejściowych, a program kontynuuje wykonywanie w zwykły sposób.
+1. Teraz naciśnij klawisz **F5** . Wykonanie programu jest kontynuowane aż do momentu zaczekania na podanie danych wejściowych użytkownika. Wprowadź `10 / 0` ponownie. Teraz zostanie wydrukowany bardziej przydatny komunikat. Użytkownik jest monitowany o więcej danych wejściowych, a program kontynuuje wykonywanie normalnie.
 
-   ![Wynik końcowy po wprowadzeniu zmian](./media/calc-vs2019-final-verification.png "ostateczny wynik po wprowadzeniu zmian")
+   ![Wynik końcowy po zmianach](./media/calc-vs2019-final-verification.png "Wynik końcowy po zmianach")
 
    > [!Note]
-   > Podczas edytowania kodu podczas debugowania w trybie się ryzyko kodu stają się nieaktualne. Dzieje się tak, gdy debuger jest nadal uruchomiona stary kod i nie został jeszcze zaktualizowany go z wprowadzonymi zmianami. Debuger pojawi się okno dialogowe informujące o tym, w takim przypadku. Czasami konieczne może być naciśnij **F5** odświeżyć wykonywany kod. W szczególności w przypadku wprowadzenia zmiany wewnątrz funkcji podczas punkt wykonania znajduje się wewnątrz, funkcji, musisz wychodzenie z funkcji, a następnie z powrotem do ją ponownie, aby uzyskać zaktualizowany kod. Jeśli to nie zadziała, przyczyny i zostanie wyświetlony komunikat o błędzie, możesz zatrzymać debugowanie, klikając czerwony kwadrat na pasku menu w górnej części IDE, a następnie rozpocząć debugowanie ponownie, wprowadzając **F5** lub wybierając na zielony wskaźnik " odtwarzania"strzałka obok przycisku Zatrzymaj, na pasku narzędzi.
+   > Gdy edytujesz kod w trybie debugowania, istnieje ryzyko, że kod staje się przestarzały. Dzieje się tak, gdy debuger nadal działa w starym kodzie i nie został jeszcze zaktualizowany ze zmianami. Debuger wyświetli okno dialogowe, aby poinformować użytkownika o tym, kiedy się dzieje. Czasami może być konieczne naciśnięcie klawisza **F5** w celu odświeżenia wykonywanego kodu. W szczególności w przypadku wprowadzenia zmiany wewnątrz funkcji, gdy punkt wykonywania znajduje się wewnątrz tej funkcji, należy wykonać krok poza funkcję, a następnie ponownie w celu uzyskania zaktualizowanego kodu. Jeśli to nie zadziała z jakiegoś powodu i zobaczysz komunikat o błędzie, możesz zatrzymać debugowanie, klikając czerwony kwadrat na pasku narzędzi w menu w górnej części IDE, a następnie ponownie Rozpocznij debugowanie, wprowadzając klawisz **F5** lub wybierając zieloną strzałkę "Odtwórz" obok pozycji s górny przycisk na pasku narzędzi.
 
-   > Opis skrótów uruchamiania i debugowania
+   > Informacje o skrótach uruchamiania i debugowania
    >
-   > - **F5** (lub **debugowania** > **Rozpocznij debugowanie**) rozpoczyna sesję debugowania, jeśli nie jest już aktywne i uruchamia program, dopóki nie zostanie osiągnięty punkt przerwania lub danych wejściowych programu potrzeb użytkownika. Jeśli dane wejściowe użytkownika nie jest wymagana i nie punkt przerwania jest dostępna dla trafień, program zakończy, a następnie w oknie konsoli zamyka się po zakończeniu program. Jeśli masz podobny do programu "Hello World", aby uruchomić, użyj **kombinację klawiszy Ctrl + F5** lub ustaw punkt przerwania, możesz wprowadzić **F5** do nie zamykaj okna.
-   > - **CTRL + F5** (lub **debugowania** > **Rozpocznij bez debugowania**) uruchamia aplikację bez przechodzenia w tryb debugowania. Jest to nieznacznie szybsze niż debugowania, a w oknie konsoli pozostanie otwarte po zakończeniu program, wykonywanie.
-   > - **F10** (nazywane **Step Over**) umożliwia iteracyjne przeglądanie kodu, wiersz po wierszu oraz Wizualizuj działanie kodu i wartości zmiennych są w każdym kroku wykonywania.
-   > - **F11** (nazywane **Step Into**) działa podobnie jak **Step Over**, z wyjątkiem przechodzi do wszelkie funkcje wywołane w wierszu wykonywania. Na przykład, jeśli wykonywanego wiersza wywołuje funkcję, naciskając klawisz **F11** przesuwa wskaźnik myszy w treści funkcji, aby można było wykonywać kod funkcji, które są uruchamiane przed powrotem do wiersza rozpoczęło się o. Naciśnięcie klawisza **F10** kroki za pośrednictwem wywołania funkcji i po prostu przechodzi do następnego wiersza; wywołania funkcji nadal się dzieje, ale program nie wstrzymać WAM, jakie jest zastosowanie.
+   > - **F5** (lub **Debuguj** > **Rozpocznij debugowanie**) uruchamia sesję debugowania, jeśli jedna nie jest już aktywna, i uruchamia program do momentu, gdy punkt przerwania zostanie osiągnięty lub program wymaga danych wejściowych użytkownika. Jeśli żadne dane wejściowe użytkownika nie są konieczne i punkt przerwania nie jest dostępny do trafienia, program zostanie przerwany, a okno konsoli zostanie zamknięte po zakończeniu działania programu. Jeśli masz coś takiego jak program "Hello world" do uruchomienia, użyj **kombinacji klawiszy CTRL + F5** lub ustaw punkt przerwania, aby zachować otwarte okno.
+   > - **Ctrl + F5** (lub **Debuguj** > **Uruchom bez debugowania**) uruchamia aplikację bez przechodzenia do trybu debugowania. Jest to nieco szybsze niż debugowanie, a okno konsoli pozostaje otwarte po zakończeniu wykonywania przez program.
+   > - **F10** (znany jakoprzekroczenie) umożliwia przechodzenie przez kod, wiersz po wierszu i wizualizację sposobu uruchamiania kodu oraz zmienne wartości w każdym kroku wykonywania.
+   > - Klawisz **F11** (znany jako **krok do**) działa podobnie doprzekroczenia, z wyjątkiem kroków przewidzianych w wierszu wykonania. Na przykład, jeśli wykonywany wiersz wywołuje funkcję, naciśnięcie klawisza **F11** przenosi wskaźnik do treści funkcji, dzięki czemu można wykonać kod funkcji uruchamianej przed powrotem do wiersza, który został rozpoczęty. Naciskaj kroki **F10** w wywołaniu funkcji i po prostu przesuniesz się do następnego wiersza. Wywołanie funkcji jest nadal wykonywane, ale program nie jest wstrzymany, aby zobaczyć, co robi.
 
 ### <a name="close-the-app"></a>Zamknij aplikację
 
-- Jeśli jest nadal uruchomione, zamknij okno konsoli aplikacji kalkulatora.
+- Jeśli nadal działa, Zamknij okno konsoli dla aplikacji Kalkulator.
 
-## <a name="the-finished-app"></a>Gotową aplikację
+## <a name="the-finished-app"></a>Gotowa aplikacja
 
-Gratulacje! Ukończysz kodu dla aplikacji Kalkulator i wbudowane i debugować go w programie Visual Studio.
+Gratulacje! Kod aplikacji kalkulatora został ukończony i skompilowany i debugowany w programie Visual Studio.
 
 ## <a name="next-steps"></a>Następne kroki
 
-[Dowiedz się więcej o programie Visual Studio dla języka C++](https://blogs.msdn.microsoft.com/vcblog/2017/04/21/getting-started-with-visual-studio-for-c-and-cpp-development/)
+[Dowiedz się więcej o programie Visual Studio dlaC++](https://blogs.msdn.microsoft.com/vcblog/2017/04/21/getting-started-with-visual-studio-for-c-and-cpp-development/)
 
 ::: moniker-end
 
 ::: moniker range="<vs-2019"
 
-Zwykle początkowy punkt jest programistą języka C++ "Hello, world!" Aplikacja, która jest uruchamiana w wierszu polecenia. To, co utworzysz w programie Visual Studio w tym artykule, a następnie przejdziemy do coś trudniejsze: aplikacja Kalkulator.
+Typowym punktem wyjścia dla C++ programisty jest "Hello, World!" aplikacja uruchamiana w wierszu polecenia. To wszystko, co utworzysz w programie Visual Studio w tym artykule, a następnie przejdziemy do bardziej trudnej: aplikacji Kalkulator.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- Program Visual Studio za pomocą **programowanie aplikacji klasycznych w języku C++** obciążenia zainstalowana i uruchomiona na komputerze. Jeśli nie jest jeszcze zainstalowany, zobacz [Instalowanie obsługi języka C++ w programie Visual Studio](../build/vscpp-step-0-installation.md).
+- Program Visual Studio z programowaniem dla **komputerów C++ stacjonarnych z** zainstalowanym i uruchomionym obciążeniem na komputerze. Jeśli nie jest jeszcze zainstalowana, zobacz [Install C++ Support in Visual Studio](../build/vscpp-step-0-installation.md).
 
-## <a name="create-your-app-project"></a>Utwórz projekt aplikacji
+## <a name="create-your-app-project"></a>Tworzenie projektu aplikacji
 
-Program Visual Studio używa *projektów* organizowania kodu dla aplikacji, a *rozwiązania* do organizowania projektów. Projekt zawiera wszystkie opcje, konfiguracji i reguły używane do tworzenia aplikacji. Umożliwia także zarządzanie relacji między plików wszystkich projektów i plików zewnętrznych. Aby utworzyć aplikację, najpierw należy utworzyć nowy projekt i rozwiązanie.
+Program Visual Studio używa *projektów* organizowania kodu dla aplikacji, a *rozwiązania* do organizowania projektów. Projekt zawiera wszystkie opcje, konfiguracji i reguły używane do tworzenia aplikacji. Umożliwia także zarządzanie relacji między plików wszystkich projektów i plików zewnętrznych. Aby utworzyć aplikację, najpierw utworzysz nowy projekt i rozwiązanie.
 
-1. Na pasku menu w programie Visual Studio wybierz **pliku** > **New** > **projektu**. **Nowy projekt** zostanie otwarte okno.
+1. Na pasku menu programu Visual Studio wybierz pozycję **plik** > **Nowy** > **projekt**. Zostanie otwarte okno **Nowy projekt** .
 
-2. Na lewym pasku bocznym, upewnij się, że **Visual C++** jest zaznaczone. W Centrum, wybierz **aplikacji konsoli Windows**.
+2. Na lewym pasku bocznym upewnij się **, C++**  że wybrano wizualizację. W centrum wybierz pozycję **Aplikacja konsolowa systemu Windows**.
 
-3. W **nazwa** Edytuj pole u dołu, nadaj nazwę nowego projektu *CalculatorTutorial*, następnie wybierz **OK**.
+3. W polu **Nazwa** Edytuj w dolnej części Nadaj nazwę nowemu projektowi *CalculatorTutorial*, a następnie wybierz **przycisk OK**.
 
-   ![Okno dialogowe Nowy projekt](./media/calculator-new-project-dialog.png "okna dialogowego Nowy projekt")
+   ![Okno dialogowe Nowy projekt](./media/calculator-new-project-dialog.png "Okno dialogowe Nowy projekt")
 
-   Zostanie utworzona pusta Aplikacja konsoli Windows w języku C++. Aplikacje konsoli użyj okna konsoli Windows do wyświetlania danych wyjściowych i akceptuje dane wejściowe użytkownika. W programie Visual Studio okno edytora otwiera się i pokazuje wygenerowanego kodu:
+   Zostanie utworzona C++ pusta Aplikacja konsolowa systemu Windows. Aplikacje konsolowe korzystają z okna konsoli systemu Windows w celu wyświetlenia danych wyjściowych i zaakceptowania danych wejściowych użytkownika. W programie Visual Studio zostanie otwarte okno edytora zawierające wygenerowany kod:
 
     ```cpp
     // CalculatorTutorial.cpp : This file contains the 'main' function. Program execution begins and ends there.
@@ -431,29 +431,29 @@ Program Visual Studio używa *projektów* organizowania kodu dla aplikacji, a *r
     //   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
     ```
 
-## <a name="verify-that-your-new-app-builds-and-runs"></a>Sprawdź, czy Twoja nowa aplikacja kompiluje i uruchamia
+## <a name="verify-that-your-new-app-builds-and-runs"></a>Sprawdź, czy nowa aplikacja została skompilowana i uruchomiona
 
-Szablon dla nowej aplikacji konsoli systemu windows umożliwia utworzenie prostego języka C++ aplikacji "Hello World". W tym momencie widać, jak Visual Studio kompiluje i uruchamia aplikacje, które można tworzyć bezpośrednio z poziomu środowiska IDE.
+Szablon nowej aplikacji konsolowej systemu Windows tworzy prostą C++ aplikację "Hello World". W tym momencie można zobaczyć, jak program Visual Studio kompiluje i uruchamia utworzone aplikacje bezpośrednio z poziomu środowiska IDE.
 
-1. Aby skompilować projekt, wybierz opcję **Kompiluj rozwiązanie** z **kompilacji** menu. **Dane wyjściowe** okno przedstawia wyniki procesu kompilacji.
+1. Aby skompilować projekt, wybierz opcję **Kompiluj rozwiązanie** z menu **kompilacja** . W oknie **dane wyjściowe** są wyświetlane wyniki procesu kompilacji.
 
-   ![Skompiluj projekt](./media/calculator-initial-build-output.png "kompilacji projektu")
+   ![Kompilowanie projektu](./media/calculator-initial-build-output.png "Kompilowanie projektu")
 
-1. Aby uruchomić kod, na pasku menu, wybierz **debugowania**, **Uruchom bez debugowania**.
+1. Aby uruchomić kod, na pasku menu wybierz **Debuguj**, **Uruchom bez debugowania**.
 
-   ![Rozpocznij projekt](./media/calculator-hello-world-console.png "Rozpocznij projekt")
+   ![Uruchom projekt](./media/calculator-hello-world-console.png "Uruchom projekt")
 
-   Okno konsoli zostanie otwarty, a następnie uruchamia aplikację. Po uruchomieniu aplikacji konsoli w programie Visual Studio działa kod, a następnie drukuje "naciśnij dowolny klawisz, aby kontynuować. . ." daje szansę, aby wyświetlić dane wyjściowe. Gratulacje! Utworzono pierwszej "Hello, world!" Aplikacja konsoli w programie Visual Studio!
+   Zostanie otwarte okno konsoli, a następnie zostanie uruchomiona aplikacja. Po uruchomieniu aplikacji konsolowej w programie Visual Studio program uruchamia swój kod, a następnie drukuje "naciśnij dowolny klawisz, aby kontynuować. . ." , aby dać Ci szansę zobaczyć dane wyjściowe. Gratulacje! Utworzono pierwszy "Hello, World!" Aplikacja konsolowa w programie Visual Studio!
 
-1. Naciśnij dowolny klawisz, aby zamknąć okno konsoli i powrócić do programu Visual Studio.
+1. Naciśnij klawisz, aby odrzucić okno konsoli i powrócić do programu Visual Studio.
 
-Masz teraz narzędzia, aby skompilować i uruchomić aplikację po każdej zmianie, aby sprawdzić, czy kod nadal działa zgodnie z oczekiwaniami. Później pokażemy sposób jej debugowania, w przeciwnym razie.
+Teraz masz narzędzia do kompilowania i uruchamiania aplikacji po każdej zmianie, aby sprawdzić, czy kod nadal działa zgodnie z oczekiwaniami. W dalszej części przedstawiono sposób debugowania, jeśli nie.
 
-## <a name="edit-the-code"></a>Edytowanie kodu
+## <a name="edit-the-code"></a>Edytuj kod
 
-Teraz możemy przekształcając kod w tym szablonie aplikacja Kalkulator.
+Teraz zmień kod w tym szablonie na aplikację Kalkulator.
 
-1. W *CalculatorTutorial.cpp* plik, Edytuj kod w celu dopasowania w tym przykładzie:
+1. W pliku *CalculatorTutorial. cpp* Edytuj kod, aby dopasować go do tego przykładu:
 
     ```cpp
     // CalculatorTutorial.cpp : This file contains the 'main' function. Program execution begins and ends there.
@@ -483,40 +483,40 @@ Teraz możemy przekształcając kod w tym szablonie aplikacja Kalkulator.
     //   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
     ```
 
-   > Znajomość kodu:
+   > Zrozumienie kodu:
    >
-   > - `#include` Instrukcje umożliwiają odwoływać się do kodu w innych plikach. Czasami może zostać wyświetlony nazwa pliku ujęta w nawiasy ( **\<\>** ); w innych sytuacjach jest ujęta w cudzysłowy ( **""** ). Ogólnie rzecz biorąc nawiasy są używane podczas odwoływania się do standardowej biblioteki C++, cudzysłowy są używane dla innych plików.
-   > - `#include "pch.h"` (Lub w starszych wersjach programu Visual Studio `#include "stdafx.h"`) wiersza odwołuje się coś, co jest znane jako prekompilowanego nagłówka. Te są często używane przez programistów professional do skrócenia czasu kompilacji, ale są one poza zakres tego samouczka.
-   > - `using namespace std;` Wiersza informuje kompilator, aby oczekiwać rzeczy ze standardowej biblioteki C++ ma być używany w tym pliku. Bez tego wiersza, każde słowo kluczowe z biblioteki, musi być poprzedzony znakiem `std::`, aby wskazać jej zakresu. Na przykład, bez tego wiersza każdy odwołanie do `cout` , musi być zapisana jako `std::cout`. `using` Instrukcji jest dodawany do kodu wyglądają przejrzyście więcej.
-   > - `cout` — Słowo kluczowe jest używany do drukowania do wyjścia standardowego języka C++. **\< \<** Operator informuje kompilator, aby wysłać dowolną jest po prawej stronie go do wyjścia standardowego.
-   > - **Endl** — słowo kluczowe przypomina klawisza Enter; zakończenia wiersza i przenosi kursor do następnego wiersza. Lepiej jest umieścić `\n` wewnątrz ciągu (zawarty w ""), aby zrobić to samo, jak `endl` zawsze opróżnia bufor i może obniżyć wydajność programu, ale ponieważ jest to bardzo mała aplikacja `endl` jest używana zamiast tego uzyskać lepszy czytelności.
-   > - Wszystkie instrukcje języka C++ musi kończyć się znakami średnika i wszystkich aplikacji w języku C++ musi zawierać `main()` funkcji. Ta funkcja jest program będzie uruchamiany na początku. Cały kod musi być dostępny z `main()` aby możliwe było użycie.
+   > - `#include` Instrukcje umożliwiają odwoływanie się do kodu znajdującego się w innych plikach. Czasami może zostać wyświetlona nazwa pliku otoczona nawiasami ostrymi ( **\<\>** ); inne godziny są otoczone cudzysłowem ( **""** ). Ogólnie rzecz biorąc, nawiasy ostre są używane podczas C++ odwoływania się do biblioteki standardowej, natomiast cudzysłowy są używane dla innych plików.
+   > - Wiersz (lub w programie Visual Studio 2017 i `#include "stdafx.h"`starszych) odwołuje się do elementu znanego jako prekompilowany nagłówek. `#include "pch.h"` Są one często używane przez profesjonalne programiści, aby skrócić czasy kompilacji, ale wykraczają poza zakres tego samouczka.
+   > - Wiersz instruuje kompilator, aby zaoczekiwał elementów C++ z standardowej biblioteki, która ma być używana w tym pliku. `using namespace std;` Bez tego wiersza każde słowo kluczowe z biblioteki musi być poprzedzone `std::`znakiem, aby zauważyć jego zakres. Na przykład bez tego wiersza każde odwołanie `cout` musi być zapisywane jako. `std::cout` `using` Instrukcja zostanie dodana, aby kod wyglądał bardziej czysty.
+   > - Słowo kluczowe jest używane do drukowania do wyjścia standardowego w C++ `cout` Operator instruuje kompilator, aby wysyłał dane z prawej strony do wyjścia standardowego. **\< \<**
+   > - Słowo kluczowe **endl** jest podobne do klawisza ENTER; zamyka wiersz i przenosi kursor do następnego wiersza. Lepszym rozwiązaniem jest umieszczenie `\n` wewnątrz ciągu (zawartego w ""), aby wykonać to samo, jak `endl` zawsze opróżnia bufor i może obniżyć wydajność programu, ale ponieważ jest to bardzo mała aplikacja, `endl` jest używana zamiast tego w lepszym stanie czytelność.
+   > - Wszystkie C++ instrukcje muszą kończyć się średnikami, a C++ wszystkie aplikacje `main()` muszą zawierać funkcję. Ta funkcja jest uruchamiana na początku. Cały kod musi być dostępny `main()` , aby można było go użyć.
 
-1. Aby zapisać plik, wprowadź **Ctrl + S**, lub wybierz **Zapisz** ikony w górnej części IDE, ikonę dyskietki, na pasku narzędzi poniżej paska menu.
+1. Aby zapisać plik, naciśnij **klawisze CTRL + S**lub wybierz ikonę **Zapisz** znajdującą się w górnej części IDE, ikonę dyskietki na pasku narzędzi pod paskiem menu.
 
-1. Aby uruchomić aplikację, naciśnij klawisz **kombinację klawiszy Ctrl + F5** lub przejdź do **debugowania** menu i wybrać **Rozpocznij bez debugowania**. Jeśli pojawi się okno podręczne, które mówi **ten projekt jest nieaktualny**, można wybrać **nie pokazuj więcej tego okna dialogowego**, a następnie wybierz **tak** do budowania aplikacji. Powinien zostać wyświetlony pojawiają się okna konsoli wyświetlającego tekst określony w kodzie.
+1. Aby uruchomić aplikację, naciśnij **klawisze CTRL + F5** lub przejdź do menu **Debuguj** i wybierz polecenie **Uruchom bez debugowania**. Jeśli zostanie wyświetlone okno podręczne, które informuje, że **ten projekt jest nieaktualny**, możesz wybrać opcję **nie pokazuj ponownie tego okna dialogowego**, a następnie wybrać opcję **tak** , aby skompilować aplikację. Powinno zostać wyświetlone okno konsoli zawierające tekst określony w kodzie.
 
-   ![Skompilować i uruchomić aplikację](./media/calculator-first-launch.gif "skompilować i uruchomić aplikację")
+   ![Kompilowanie i uruchamianie aplikacji](./media/calculator-first-launch.gif "Kompilowanie i uruchamianie aplikacji")
 
-1. Gdy skończysz, zamknij okno konsoli.
+1. Po zakończeniu zamknij okno konsoli.
 
-## <a name="add-code-to-do-some-math"></a>Dodaj kod będzie robił talent matematyczny
+## <a name="add-code-to-do-some-math"></a>Dodaj kod, aby wykonać kilka obliczeń
 
-Nadszedł czas, aby dodać logikę matematyczne.
+Czas na dodanie pewnej logiki matematycznej.
 
-### <a name="to-add-a-calculator-class"></a>Aby dodać klasę Kalkulator
+### <a name="to-add-a-calculator-class"></a>Aby dodać klasę kalkulatora
 
-1. Przejdź do **projektu** menu i wybrać **Dodaj klasę**. W **Nazwa klasy** edytować pole, wprowadź *Kalkulator*. Wybierz **OK**. Poproś o dodanie Cię dwa nowe pliki do projektu. Aby zapisać wszystkie zmienione pliki naraz, naciśnij **Ctrl + Shift + S**. Jest skrót klawiaturowy **pliku** > **Zapisz wszystko**. Dostępna jest również przycisku paska narzędzi dla **Zapisz wszystko**, ikony dwóch dyskietek, znaleziono obok **Zapisz** przycisku. Ogólnie rzecz biorąc, dobrym rozwiązaniem w celu jest **Zapisz wszystko** często, dlatego nie zostały pominięte pliki podczas zapisywania.
+1. Przejdź do menu **projekt** i wybierz polecenie **Dodaj klasę**. W polu edycji **Nazwa klasy** wprowadź *Kalkulator*. Wybierz **OK**. Dwa nowe pliki zostaną dodane do projektu. Aby zapisać wszystkie zmienione pliki jednocześnie, naciśnij **klawisze Ctrl + Shift + S**. Jest to skrót klawiaturowy do**zapisywania wszystkich** **plików** > . Istnieje również przycisk paska narzędzi dla opcji **Zapisz wszystko**— ikona dwóch dyskietek, która znajduje się obok przycisku **Zapisz** . Ogólnie rzecz biorąc, dobrym sposobem jest zaoszczędzenie **wszystkiego** często, więc nie przegap żadnych plików podczas zapisywania.
 
-   ![Utwórz klasę Kalkulator](./media/calculator-create-class.gif "Utwórz klasę Kalkulator")
+   ![Utwórz klasę kalkulatora](./media/calculator-create-class.gif "Utwórz klasę kalkulatora")
 
-   Klasa jest podobna do planu dla obiektu, który wykonuje coś. W tym przypadku definiujemy Kalkulator i jak powinny działać. **Dodaj klasę** kreatora zostały użyte powyżej, utworzyć pliki .h i .cpp, które mają taką samą nazwę jak klasa. Można wyświetlić pełną listę plików projektu w **Eksploratora rozwiązań** okna widoczne po stronie IDE. Jeśli okno nie jest widoczny, możesz go otworzyć, na pasku menu: Wybierz **widoku** > **Eksploratora rozwiązań**.
+   Klasa przypomina plan dla obiektu, który robi coś. W tym przypadku definiujemy Kalkulator i sposób jego działania. Kreator **dodawania klasy** użyty powyżej utworzył pliki. h i. cpp, które mają taką samą nazwę jak Klasa. Pełną listę plików projektu można wyświetlić w oknie **Eksplorator rozwiązań** widocznym po stronie IDE. Jeśli okno nie jest widoczne, możesz otworzyć je na pasku menu: wybierz pozycję **Wyświetl** > **Eksplorator rozwiązań**.
 
-   ![Eksplorator rozwiązań](./media/calculator-solution-explorer.png "Eksploratora rozwiązań")
+   ![Eksplorator rozwiązań](./media/calculator-solution-explorer.png "Eksplorator rozwiązań")
 
-   Teraz powinny być otwartych w edytorze trzech kart: *CalculatorTutorial.cpp*, *Calculator.h*, i *Calculator.cpp*. Jeśli przypadkowo zamknięty jeden z nich, możesz uruchomić go, klikając go dwukrotnie **Eksploratora rozwiązań** okna.
+   Teraz powinno być otwartych trzy karty w edytorze: *CalculatorTutorial. cpp*, *Kalkulator. h*i *Kalkulator. cpp*. Jeśli przypadkowo zamkniesz jedną z nich, możesz otworzyć ją ponownie, klikając ją dwukrotnie w oknie **Eksplorator rozwiązań** .
 
-1. W **Calculator.h**, Usuń `Calculator();` i `~Calculator();` wierszy, które zostały wygenerowane, ponieważ nie będą potrzebne w tym miejscu. Następnie dodaj następujący wiersz kodu, dzięki czemu pliku wygląda teraz następująco:
+1. W polu **Kalkulator. h**Usuń `Calculator();` wygenerowane `~Calculator();` wiersze i, ponieważ nie będą one potrzebne w tym miejscu. Następnie Dodaj następujący wiersz kodu, aby plik wyglądał teraz następująco:
 
     ```cpp
     #pragma once
@@ -527,20 +527,20 @@ Nadszedł czas, aby dodać logikę matematyczne.
     };
     ```
 
-   > Znajomość kodu
+   > Zrozumienie kodu
    >
-   > - Wiersz został dodany deklaruje nową funkcję o nazwie `Calculate`, które będą używane do uruchamiania operacji matematycznych na dodawanie, odejmowanie, mnożenie i dzielenie.
-   > - Kod języka C++ jest podzielony na *nagłówka* plików (.h) i *źródła* plików (.cpp). Kilka innych rozszerzeń plików są obsługiwane przez różne kompilatory, ale są najważniejsze z nich wiedzieć o. Funkcje i zmienne są zazwyczaj *zadeklarowana*, która jest podanej nazwy i typu, w plikach nagłówkowych i *zaimplementowane*, lub definicję w plikach źródłowych. Aby kod dostępu zdefiniowane w innym pliku, można użyć `#include "filename.h"`, gdzie "filename.h" to nazwa pliku, który deklaruje zmiennych lub funkcji, której chcesz użyć.
-   > - Dwa wiersze, możesz usunąć zadeklarowana *Konstruktor* i *destruktor* dla klasy. Proste klasy podobny do tego kompilator utworzy je, a ich wykorzystania wykraczają poza zakres tego samouczka.
-   > - Jest dobrą praktyką, aby zorganizować kodu w różnych plikach uzależnione od tak jest, więc można łatwo znaleźć kod, który będzie potrzebna później. W naszym przypadku definiujemy `Calculator` klasy oddzielnie od pliku zawierającego `main()` funkcji, ale firma Microsoft planuje odwołania `Calculator` klasy w `main()`.
+   > - Dodana linia deklaruje nową funkcję o nazwie `Calculate`, która będzie używana do uruchamiania operacji matematycznych do dodawania, odejmowania, mnożenia i dzielenia.
+   > - C++kod jest zorganizowany w plikach nagłówkowych (. h) i *źródłowych* (. cpp). Różne kompilatory obsługują kilka innych rozszerzeń plików, ale są one głównymi. Funkcje i zmienne są zwykle *zadeklarowane*, to oznacza, że dana nazwa i typ, w plikach nagłówkowych izaimplementowana lub dana definicja, w plikach źródłowych. Aby uzyskać dostęp do kodu zdefiniowanego w innym pliku, `#include "filename.h"`można użyć, gdzie "filename. h" jest nazwą pliku, który deklaruje zmienne lub funkcje, których chcesz użyć.
+   > - Dwa usunięte wiersze deklarują *Konstruktor* i *destruktor* dla klasy. W przypadku prostej klasy, takiej jak ta, kompilator tworzy je dla Ciebie, a ich zastosowania wykraczają poza zakres tego samouczka.
+   > - Dobrym sposobem jest zorganizowanie kodu w różne pliki w oparciu o to, co robi, dzięki czemu możesz łatwo znaleźć kod, którego potrzebujesz później. W `Calculator` naszym przypadku definiujemy klasy niezależnie od pliku `main()` zawierającego funkcję, ale planujemy odwołanie `Calculator` do klasy w `main()`.
 
-1. Zostanie wyświetlony zielony wężyk, są wyświetlane w obszarze `Calculate`. To, że mamy jeszcze nie zdefiniowano `Calculate` funkcji w pliku .cpp. Umieść kursor nad wyraz, kliknij ikonę żarówki, które się pojawi, a następnie wybierz **Tworzenie definicji "Oblicz" w Calculator.cpp**. Okno podręczne pojawi się podglądu zmiany kodu, która została wprowadzona w innym pliku. Ten kod został dodany do *Calculator.cpp*.
+1. Zobaczysz zieloną zygzakę w obszarze `Calculate`. Jest to spowodowane tym `Calculate` , że funkcja nie została zdefiniowana w pliku. cpp. Umieść kursor nad słowem, kliknij żarówki, który wystawia, a następnie wybierz pozycję **Utwórz definicję elementu "Oblicz" w programie Kalkulator. cpp**. Zostanie wyświetlone wyskakujące okienko umożliwiające wgląd w zmiany kodu, które zostały wprowadzone w innym pliku. Kod został dodany do programu *Kalkulator. cpp*.
 
-   ![Utwórz definicję Calculate](./media/calculator-create-definition.gif "Utwórz definicję Calculate")
+   ![Utwórz definicję obliczeń](./media/calculator-create-definition.gif "Utwórz definicję obliczeń")
 
-   Obecnie tylko zwraca wartość 0,0. Teraz zmienimy. Naciśnij klawisz **Esc** zamknąć to okno.
+   Obecnie tylko zwraca 0,0. Zmieńmy to. Naciśnij klawisz **ESC** , aby zamknąć okno podręczne.
 
-1. Przełącz się do *Calculator.cpp* pliku w oknie edytora. Usuń `Calculator()` i `~Calculator()` sekcje (tak jak w pliku .h) i Dodaj następujący kod do `Calculate()`:
+1. Przejdź do pliku *Kalkulator. cpp* w oknie edytora. Usuń sekcje `~Calculator()` `Calculate()`i (jak w pliku h) i Dodaj następujący kod do: `Calculator()`
 
     ```cpp
     #include "pch.h"
@@ -564,18 +564,18 @@ Nadszedł czas, aby dodać logikę matematyczne.
     }
     ```
 
-   > Znajomość kodu
+   > Zrozumienie kodu
    >
-   > - Funkcja `Calculate` zużywa wiele, operator i drugą liczbę, a następnie wykonuje żądaną operację dla numerów.
-   > - Kontroli instrukcji switch operator, który został podany i tylko wtedy wykonuje przypadek odpowiadający tej operacji. Wartość domyślna: wielkość liter jest rezerwowe w przypadku, gdy użytkownik wpisze operatora, który nie jest akceptowane, dzięki czemu program nie zostanie przerwane. Ogólnie rzecz biorąc zaleca się obsługiwać dane wejściowe użytkownika nieprawidłowe w sposób bardziej elegancki, ale to wykracza poza zakres tego samouczka.
-   > - `double` — Słowo kluczowe wskazuje typ numer, który obsługuje liczbę miejsc dziesiętnych. W ten sposób Kalkulator może obsługiwać zarówno matematyczne dziesiętny, jak i matematyki całkowitoliczbowej. `Calculate` Funkcji jest wymagany, aby zawsze zwracać liczbę ze względu na `double` na samym początku kodu (oznacza typ zwracany przez funkcję), dlatego zostanie zwrócona 0.0 nawet w przypadku domyślnej.
-   > - Plik .h deklaruje funkcję *prototypu*, który informuje kompilator, ponoszonych z góry kosztów wymagane parametry i jakie zwracany typ można oczekiwać od niego. Plik CPP zawiera wszystkie szczegóły dotyczące implementacji funkcji.
+   > - Funkcja `Calculate` używa liczby, operatora i drugiej liczby, a następnie wykonuje żądaną operację dla liczb.
+   > - Instrukcja Switch sprawdza, który operator został dostarczony i wykonuje tylko przypadki odpowiadające tej operacji. Wartość domyślna: przypadek jest rezerwy w przypadku, gdy użytkownik wpisze operator, który nie został zaakceptowany, więc program nie przerywa. Ogólnie rzecz biorąc, najlepiej jest obsługiwać nieprawidłowe dane wprowadzane przez użytkownika w bardziej elegancki sposób, ale wykracza to poza zakres tego samouczka.
+   > - `double` Słowo kluczowe wskazuje typ liczby, która obsługuje miejsca dziesiętne. Dzięki temu Kalkulator może obsłużyć zarówno dziesiętną matematyczną, jak i liczbę całkowitą. Funkcja jest wymagana, aby zawsze zwracała taką liczbę ze względu `double` na bardzo początek kodu (oznacza to, że zwracany typ funkcji), dlatego zwracamy 0,0 nawet w przypadku domyślnego. `Calculate`
+   > - Plik. h deklaruje *prototyp*funkcji, który informuje kompilator, jakie parametry wymagają, i jakie zwraca typ od niego oczekiwane. Plik. cpp zawiera wszystkie szczegóły implementacji funkcji.
 
-Jeśli skompilować i uruchomić ponownie na tym etapie kod, nadal zakończy działanie po zapytaniu do wykonywania kolejnej operacji. Następnie zmodyfikujesz `main` funkcji do wykonywania niektórych obliczeń.
+Jeśli kompilujesz i uruchomisz kod ponownie w tym momencie, nadal będzie on się zamykał po zaproszeniu do wykonania operacji. Następnie zmodyfikujesz `main` funkcję, aby wykonać pewne obliczenia.
 
-### <a name="to-call-the-calculator-class-member-functions"></a>Aby wywoływać funkcje składowe klasy Kalkulator
+### <a name="to-call-the-calculator-class-member-functions"></a>Aby wywołać funkcje elementów członkowskich klasy kalkulatora
 
-1. Teraz zaktualizujmy `main` działa w programach *CalculatorTutorial.cpp*:
+1. Teraz zaktualizujmy `main` funkcję w *CalculatorTutorial. cpp*:
 
     ```cpp
     // CalculatorTutorial.cpp : This file contains the 'main' function. Program execution begins and ends there.
@@ -610,83 +610,83 @@ Jeśli skompilować i uruchomić ponownie na tym etapie kod, nadal zakończy dzi
     }
     ```
 
-   > Znajomość kodu
+   > Zrozumienie kodu
    >
-   > - Ponieważ programy w języku C++ zawsze rozpoczynają się od `main()` funkcji, należy wywołać kodu języka w tym miejscu, więc `#include` instrukcji jest wymagana.
-   > - Niektóre wstępne zmienne `x`, `y`, `oper`, i `result` są uznane za przechowywanie pierwsza liczba, druga liczba, operator i wynik końcowy odpowiednio. Zawsze jest dobrą praktyką, aby dać im niektóre wartości początkowe, aby uniknąć niezdefiniowane zachowanie, czyli o tym, co to jest wykonywane tutaj.
-   > - `Calculator c;` Wiersz deklaruje obiektu o nazwie "c", ponieważ wystąpienie `Calculator` klasy. Ta sama klasa to po prostu plan dla działania kalkulatory; obiekt jest określone Kalkulator, która wykonuje obliczenia.
-   > - `while (true)` Instrukcja jest pętlą. Kod wewnątrz pętli kontynuuje wykonywanie wielokrotnie tak długo, jak warunku wewnątrz `()` prawdziwe. Ponieważ warunek jest po prostu wyświetlane jako `true`, jest zawsze ma wartość true, więc kiedy pętla zostanie uruchomiona w nieskończoność. Aby zamknąć program, użytkownik musi ręcznie zamknąć okno konsoli. W przeciwnym razie program zawsze czeka, aż nowe dane wejściowe.
-   > - `cin` Słowo kluczowe jest używane do przyjmowania danych wejściowych od użytkownika. Ten strumień wejściowy pozostaje inteligentnego przetworzył wiersz z tekstem wprowadzonym w oknie konsoli i umieścić go w każdej zmienne wymienione w kolejności, zakładając, że dopasowania danych wejściowych użytkownika wymaganymi specyfikacjami. Można zmodyfikować tego wiersza, aby zaakceptować różnego rodzaju danych wejściowych, na przykład więcej niż dwie liczby, mimo że `Calculate()` funkcji również musi zostać zaktualizowany do obsługi tego.
-   > - `c.Calculate(x, oper, y);` Wywołań wyrażeń `Calculate` funkcję wcześniej zdefiniowaną i dostarcza wprowadzone wartości wejściowych. Następnie funkcja zwraca liczbę, która zostaje zapisany w `result`.
-   > - Na koniec `result` są drukowane w konsoli, użytkownik zobaczy następujący wynik obliczenia.
+   > - Ze C++ względu na to, `main()` że programy zawsze zaczynają się od funkcji, musimy zadzwonić do naszego `#include` innego kodu z tego miejsca, więc wymagana jest instrukcja.
+   > - Niektóre zmienne `x` `oper`początkowe, `y`, i `result` są zadeklarowane w celu przechowania odpowiednio pierwszej liczby, drugiej liczby, operatora i wyniku końcowego. Zawsze dobrym sposobem jest przyznanie im początkowych wartości, aby uniknąć niezdefiniowanego zachowania, co jest wykonywane w tym miejscu.
+   > - Wiersz deklaruje obiekt o nazwie "c" jako wystąpienie `Calculator` klasy. `Calculator c;` Sama klasa jest tylko planem, w jaki działają Kalkulatory. Obiekt jest określonym kalkulatorem, który wykonuje obliczenia matematyczne.
+   > - `while (true)` Instrukcja jest pętlą. Kod wewnątrz pętli będzie nadal wykonywany przez cały czas i dłużej, o ile warunek wewnątrz `()` ma wartość true. Ponieważ warunek jest po prostu wyświetlany jako `true`, zawsze ma wartość true, więc pętla jest uruchamiana w nieskończoność. Aby zamknąć program, użytkownik musi ręcznie zamknąć okno konsoli. W przeciwnym razie program zawsze czeka na nowe dane wejściowe.
+   > - `cin` Słowo kluczowe jest używane do akceptowania danych wejściowych od użytkownika. Ten strumień wejściowy jest wystarczająco inteligentny, aby przetwarzać wiersz tekstu wprowadzony w oknie konsoli i umieścić go wewnątrz każdej z wymienionych zmiennych w kolejności, przy założeniu, że dane wejściowe użytkownika są zgodne z wymaganą specyfikacją. Możesz zmodyfikować ten wiersz, aby akceptować różne typy danych wejściowych, na przykład więcej niż dwie liczby, chociaż `Calculate()` należy również zaktualizować tę funkcję, aby ją obsłużyć.
+   > - Wyrażenie wywołuje wcześniej zdefiniowaną funkcję i dostarcza wprowadzone wartości wejściowe. `Calculate` `c.Calculate(x, oper, y);` Funkcja zwraca liczbę, która jest przechowywana w `result`.
+   > - Na koniec `result` jest drukowana w konsoli, więc użytkownik zobaczy wynik obliczenia.
 
-### <a name="build-and-test-the-code-again"></a>Tworzenie i testowanie kodu ponownie
+### <a name="build-and-test-the-code-again"></a>Kompiluj i Testuj kod ponownie
 
-Nadszedł czas na przetestowanie program ponownie, aby upewnić się, że wszystko działa prawidłowo.
+Teraz czas na ponowne przetestowanie programu w celu upewnienia się, że wszystko działa prawidłowo.
 
-1. Naciśnij klawisz **kombinację klawiszy Ctrl + F5** Aby ponownie skompilować i uruchomić aplikację.
+1. Naciśnij **kombinację klawiszy CTRL + F5** , aby skompilować i uruchomić aplikację.
 
-1. Wprowadź `5 + 5`i naciśnij klawisz **Enter**. Sprawdź, czy wynik jest 10.
+1. Wprowadź `5 + 5`polecenie i naciśnij klawisz **Enter**. Sprawdź, czy wynik wynosi 10.
 
-   ![Wynik 5 + 5](./media/calculator-five-plus-five.png "wynik 5 + 5")
+   ![Wynik 5 + 5](./media/calculator-five-plus-five.png "Wynik 5 + 5")
 
 ## <a name="debug-the-app"></a>Debugowanie aplikacji
 
-Ponieważ użytkownik może wpisać cokolwiek w oknie konsoli, upewnij się, że Kalkulator obsługuje dane wejściowe, zgodnie z oczekiwaniami. Zamiast uruchamiania programu, Przyjrzyjmy debugować go zamiast tego, dzięki czemu można sprawdzić, co wykonywanie operacji szczegółowe instrukcje krok po kroku.
+Ponieważ użytkownik może wpisywać dowolne elementy w oknie konsoli, należy się upewnić, że Kalkulator obsługuje pewne dane wejściowe zgodnie z oczekiwaniami. Zamiast uruchamiania programu, należy debugować go zamiast tego, aby można było sprawdzić, co jest wykonywane szczegółowo, krok po kroku.
 
 ### <a name="to-run-the-app-in-the-debugger"></a>Aby uruchomić aplikację w debugerze
 
-1. Ustaw punkt przerwania na `result = c.Calculate(x, oper, y);` wiersz po użytkownik został poproszony o wprowadzenie danych. Aby ustawić punkt przerwania, kliknij obok wiersza w szarym pionowy pasek wzdłuż lewej krawędzi okna edytora. Pojawi się czerwona kropka.
+1. Ustaw punkt przerwania w `result = c.Calculate(x, oper, y);` wierszu zaraz po poproszeniu użytkownika o dane wejściowe. Aby ustawić punkt przerwania, kliknij pozycję obok linii na szarym pasku pionowym wzdłuż lewej krawędzi okna edytora. Zostanie wyświetlona czerwona kropka.
 
    ![Ustaw punkt przerwania](./media/calculator-set-breakpoint.gif "Ustaw punkt przerwania")
 
-   Teraz gdy mamy zdebugować program, zawsze wstrzymuje wykonywanie w danym wierszu. Mamy już pomysłem przybliżoną, program działa w przypadku prostych przypadkach. Ponieważ nie chcemy zatrzymać wykonywanie każdym razem, gdy, upewnijmy się, punkt przerwania warunkowe.
+   Teraz podczas debugowania programu program zawsze wstrzymuje wykonywanie w tym wierszu. Mamy już pomysł, że program działa w przypadku prostych przypadków. Ponieważ nie chcemy wstrzymywać wykonywania za każdym razem, Przypuśćmy, że punkt przerwania.
 
-1. Kliknij prawym przyciskiem myszy czerwoną kropkę, która reprezentuje punkt przerwania, a następnie wybierz **warunki**. W polu edycji dla warunku, wprowadź `(y == 0) && (oper == '/')`. Wybierz **Zamknij** przycisk po wykonaniu tych czynności. Warunek są zapisywane automatycznie.
+1. Kliknij prawym przyciskiem myszy czerwoną kropkę reprezentującą punkt przerwania, a następnie wybierz pozycję **warunki**. W polu edycji dla warunku wprowadź `(y == 0) && (oper == '/')`. Po zakończeniu wybierz przycisk **Zamknij** . Warunek jest automatycznie zapisywany.
 
-   ![Ustaw warunkowego punktu przerwania](./media/calculator-conditional-breakpoint.gif "Ustaw warunkowego punktu przerwania")
+   ![Ustaw punkt przerwania warunkowego](./media/calculator-conditional-breakpoint.gif "Ustaw punkt przerwania warunkowego")
 
-   Teraz możemy zatrzymać wykonywanie w punkcie przerwania, szczególnie w przypadku, gdy dzielenie przez 0 jest podejmowana próba.
+   Teraz wstrzymamy wykonywanie w punkcie przerwania, w przypadku próby dzielenia przez 0.
 
-1. Aby zdebugować program, naciśnij klawisz **F5**, lub wybierz **lokalny debuger Windows** przycisku paska narzędzi, który zawiera ikonę zieloną strzałkę. W aplikacji konsoli po wprowadzeniu podobny do "5-0" pracował normalnie program jest uruchomiony. Jednakże jeśli wpiszesz "10 / 0", wstrzymuje w punkcie przerwania. Możesz nawet umieścić dowolną liczbę spacji między operatora i liczbami dodatnimi. `cin` inteligentny, można przeanalizować danych wejściowych, odpowiednio.
+1. Aby debugować program, naciśnij klawisz **F5**lub wybierz przycisk paska narzędzi **lokalnego debugera systemu Windows** , który ma ikonę zielonej strzałki. W aplikacji konsolowej, jeśli wprowadzisz coś takiego jak "5-0", program zachowuje się normalnie i nadal działa. Jednak jeśli wpiszesz "10/0", zostanie on wstrzymany w punkcie przerwania. Można nawet umieścić dowolną liczbę spacji między operatorem i liczbami. `cin` jest wystarczająco inteligentny, aby odpowiednio analizować dane wejściowe.
 
-   ![Wstrzymaj na warunkowego punktu przerwania](./media/calculator-debug-conditional.gif "wstrzymania na warunkowego punktu przerwania")
+   ![Wstrzymaj w warunkowym punkcie przerwania](./media/calculator-debug-conditional.gif "Wstrzymaj w warunkowym punkcie przerwania")
 
-### <a name="useful-windows-in-the-debugger"></a>Przydatne systemu windows w debugerze
+### <a name="useful-windows-in-the-debugger"></a>Przydatne okna w debugerze
 
-Zawsze, gdy debugujesz kod, możesz zauważyć, czy są wyświetlane niektóre z nowych oknach. Okna te mogą pomóc środowisko debugowania. Przyjrzyj się **Autos** okna. **Autos** okno zawiera bieżące wartości zmiennych używane co najmniej trzy wiersze przed, jak i do bieżącego wiersza.
+Za każdym razem, gdy debugujesz kod, możesz zauważyć, że pojawiły się niektóre nowe okna. Te okna mogą pomóc w debugowaniu. Zapoznaj się z oknem **Autokorekty** . W oknie **samochody** są wyświetlane bieżące wartości zmiennych używanych co najmniej trzy wiersze przed i do bieżącego wiersza.
 
-   ![Okno zmiennych automatycznych](./media/calculator-autos.png "okno zmiennych automatycznych")
+   ![Okno Autokorekty](./media/calculator-autos.png "Okno Autokorekty")
 
-Aby wyświetlić wszystkie zmienne z tej funkcji, przełącz się do **lokalne** okna. Faktycznie można zmodyfikować wartości tych zmiennych podczas debugowania, aby zobaczyć, jaki będzie wpływ, jakie miałby on program. W tym przypadku pozostawimy je samodzielnie.
+Aby wyświetlić wszystkie zmienne z tej funkcji, przełącz się do okna **zmiennych lokalnych** . Można faktycznie zmodyfikować wartości tych zmiennych podczas debugowania, aby zobaczyć, jaki wpływ ma w programie. W takim przypadku pozostawimy je samodzielnie.
 
-   ![Okno zmiennych lokalnych](./media/calculator-locals.png "okno zmiennych lokalnych")
+   ![Okno zmiennych lokalnych](./media/calculator-locals.png "Okno zmiennych lokalnych")
 
-Możesz też po prostu umieść kursor nad zmiennych w kodzie, aby zobaczyć ich bieżącymi wartościami, których wykonywania jest obecnie wstrzymana. Upewnij się, że okno edytora jest w trybie koncentracji uwagi, klikając ją najpierw.
+Możesz również po prostu umieścić kursor nad zmiennymi w kodzie, aby zobaczyć ich bieżące wartości, w przypadku których wykonywanie jest obecnie wstrzymane. Upewnij się, że okno edytora jest fokusem, klikając je najpierw.
 
-   ![Po wskazaniu wskaźnikiem, aby wyświetlić bieżące wartości zmiennych](./media/calculator-hover-tooltip.gif "po wskazaniu wskaźnikiem, aby wyświetlić bieżące wartości zmiennych")
+   ![Aktywuj, aby wyświetlić bieżące wartości zmiennych](./media/calculator-hover-tooltip.gif "Aktywuj, aby wyświetlić bieżące wartości zmiennych")
 
 ### <a name="to-continue-debugging"></a>Aby kontynuować debugowanie
 
-1. Żółta linia po lewej stronie pokazuje bieżący punkt wykonania. Bieżące połączenia linii `Calculate`, więc naciśnij **F11** do **Step Into** funkcji. Znajdziesz się w treści `Calculate` funkcji. Należy zachować ostrożność **Step Into**; Jeśli zrobisz to zbyt dużo mogą tracić dużo czasu. Usługa zostanie wprowadzona do żadnego kodu, używanego na wiersz, w którym korzystasz, łącznie z funkcjami biblioteki standardowej.
+1. Żółty wiersz po lewej stronie pokazuje bieżący punkt wykonania. Bieżące wywołania `Calculate`wiersza, dlatego naciśnij klawisz **F11** , aby **przejść** do funkcji. Znajdziesz Cię w treści `Calculate` funkcji. Należy zachować ostrożność **krok po kroku**. w przypadku zbyt dużej ilości czasu może to spowodować marnowanie. Zawiera kod, który jest używany w wierszu, w którym pracujesz, w tym funkcje biblioteki standardowej.
 
-1. Teraz, gdy punkt wykonania jest na początku `Calculate` funkcji, naciśnij klawisz **F10** można przenieść do następnego wiersza, podczas wykonywania programu. **F10** jest także znana jako **Step Over**. Możesz użyć **Step Over** przenieść wiersz po wierszu, bez wcześniejszego zagłębieniem się w szczegóły co się dzieje w każdej części wiersza. Ogólnie rzecz biorąc należy używać **Step Over** zamiast **Step Into**, chyba że chcesz od razu rozpocząć korzystanie w głębiej do kodu, który jest wywoływany z innego miejsca (tak jak nawiązać połączenie treści `Calculate`).
+1. Teraz, gdy punkt wykonywania jest na początku `Calculate` funkcji, naciśnij klawisz **F10** , aby przejść do następnego wiersza w wykonaniu programu. **F10** jest również znany jako **krok powyżej**. Możesz użyć przechodzenia **krok po kroku** , aby przejść od wiersza do wiersza, bez podania do szczegółów co się dzieje w każdej części wiersza. Ogólnie rzecz biorąc, należy użyć przekroczenia **kroku** zamiast **wkroczenia do**, chyba że chcesz szczegółowe bardziej głęboko kod, który jest wywoływany z innego miejsca (jak miało miejsce do `Calculate`uzyskania treści).
 
-1. Nadal korzystać z **F10** do **Step Over** każdym wierszu, aż powrócisz do `main()` działać w innym pliku i zatrzymania na `cout` wiersza.
+1. Kontynuuj używanie klawisza **F10** , aby przekroczyć każdy wiersz do momentu `main()` powrotu do funkcji w innym pliku, i Zatrzymaj `cout` ją w wierszu.
 
-   ![Wyjdź z Calculate i sprawdź wynik](./media/calculator-undefined-zero.gif "wychodzenia z Calculate i sprawdź wynik")
+   ![Wyjdź z obliczeń i wyników sprawdzenia](./media/calculator-undefined-zero.gif "Wyjdź z obliczeń i wyników sprawdzenia")
 
-   Prawdopodobnie program robi, oczekiwano: Trwa pierwsza liczba i dzieli go przez drugi. Na `cout` wiersz, umieść kursor nad `result` zmiennej lub Przyjrzyj się `result` w **Autos** okna. Zobaczysz, że jego wartość jest wyświetlana na liście "inf", który jest prawdopodobnie nieprawidłowa, więc go naprawić. `cout` Wiersza po prostu dane wyjściowe, niezależnie od wartości są przechowywane w `result`, dlatego w przypadku wkroczenia do przodu jeszcze jeden wiersz, za pomocą **F10**, w oknie konsoli zostaną wyświetlone:
+   Wygląda na to, że program wykonuje oczekiwane działania: Pobiera pierwszą liczbę i dzieli go przez drugi. W wierszu Umieść wskaźnik myszy `result` nad zmienną `result` lub zapoznaj się z oknem Autokorekty. `cout` Zobaczysz, że wartość zostanie wyświetlona na liście jako "inf", która nie wygląda w prawidłowym stanie, więc naprawimy ją. Wiersz `cout` tylko wyprowadza dane, które są przechowywane w `result`, więc po przekroczeniu kolejnej linii do przodu przy użyciu klawisza **F10**zostanie wyświetlone okno konsoli:
 
-   ![Wynik dzielenia przez zero](./media/calculator-divide-by-zero-fail.png "wynik dzielenia przez zero")
+   ![Wynik dzielenia przez zero](./media/calculator-divide-by-zero-fail.png "Wynik dzielenia przez zero")
 
-   Ten wynik wynika z faktu, dzielenie przez zero jest niezdefiniowana, więc nie ma wartości liczbowych odpowiedzi do żądanej operacji.
+   Wynika to z faktu, że dzielenie przez zero jest niezdefiniowane, więc program nie ma numerycznej odpowiedzi na żądaną operację.
 
 ### <a name="to-fix-the-divide-by-zero-error"></a>Aby naprawić błąd "dzielenie przez zero"
 
-Umożliwia dzielenie przez zero bardziej bezpiecznie obsłużyć, dzięki czemu użytkownik może zrozumieć.
+Przyjrzyjmy się dzielenie przez zero, dzięki czemu użytkownik może zrozumieć problem.
 
-1. Wprowadź następujące zmiany w *CalculatorTutorial.cpp*. (Można pozostawić program uruchomiony podczas edycji, dzięki funkcji debugera, o nazwie **Edytuj i Kontynuuj**):
+1. Wprowadź następujące zmiany w *CalculatorTutorial. cpp*. (Można pozostawić program uruchomiony podczas edycji, dzięki funkcji debugera o nazwie **Edytuj i Kontynuuj**):
 
     ```cpp
     // CalculatorTutorial.cpp : This file contains the 'main' function. Program execution begins and ends there.
@@ -728,30 +728,30 @@ Umożliwia dzielenie przez zero bardziej bezpiecznie obsłużyć, dzięki czemu 
     }
     ```
 
-1. Teraz naciśnij **F5** po. Wykonanie programu jest kontynuowane aż, dopóki nie można wstrzymać poprosić o dane wejściowe użytkownika. Wprowadź `10 / 0` ponownie. Teraz bardziej użyteczne komunikat jest drukowany. Użytkownik jest monitowany o więcej danych wejściowych, a program kontynuuje wykonywanie w zwykły sposób.
+1. Teraz naciśnij klawisz **F5** . Wykonanie programu jest kontynuowane aż do momentu zaczekania na podanie danych wejściowych użytkownika. Wprowadź `10 / 0` ponownie. Teraz zostanie wydrukowany bardziej przydatny komunikat. Użytkownik jest monitowany o więcej danych wejściowych, a program kontynuuje wykonywanie normalnie.
 
-   ![Wynik końcowy po wprowadzeniu zmian](./media/calculator-final-verification.gif "ostateczny wynik po wprowadzeniu zmian")
+   ![Wynik końcowy po zmianach](./media/calculator-final-verification.gif "Wynik końcowy po zmianach")
 
    > [!Note]
-   > Podczas edytowania kodu podczas debugowania w trybie się ryzyko kodu stają się nieaktualne. Dzieje się tak, gdy debuger jest nadal uruchomiona stary kod i nie został jeszcze zaktualizowany go z wprowadzonymi zmianami. Debuger pojawi się okno dialogowe informujące o tym, w takim przypadku. Czasami konieczne może być naciśnij **F5** odświeżyć wykonywany kod. W szczególności w przypadku wprowadzenia zmiany wewnątrz funkcji podczas punkt wykonania znajduje się wewnątrz, funkcji, musisz wychodzenie z funkcji, a następnie z powrotem do ją ponownie, aby uzyskać zaktualizowany kod. Jeśli to nie zadziała, przyczyny i zostanie wyświetlony komunikat o błędzie, możesz zatrzymać debugowanie, klikając czerwony kwadrat na pasku menu w górnej części IDE, a następnie rozpocząć debugowanie ponownie, wprowadzając **F5** lub wybierając na zielony wskaźnik " odtwarzania"strzałka obok przycisku Zatrzymaj, na pasku narzędzi.
+   > Gdy edytujesz kod w trybie debugowania, istnieje ryzyko, że kod staje się przestarzały. Dzieje się tak, gdy debuger nadal działa w starym kodzie i nie został jeszcze zaktualizowany ze zmianami. Debuger wyświetli okno dialogowe, aby poinformować użytkownika o tym, kiedy się dzieje. Czasami może być konieczne naciśnięcie klawisza **F5** w celu odświeżenia wykonywanego kodu. W szczególności w przypadku wprowadzenia zmiany wewnątrz funkcji, gdy punkt wykonywania znajduje się wewnątrz tej funkcji, należy wykonać krok poza funkcję, a następnie ponownie w celu uzyskania zaktualizowanego kodu. Jeśli to nie zadziała z jakiegoś powodu i zobaczysz komunikat o błędzie, możesz zatrzymać debugowanie, klikając czerwony kwadrat na pasku narzędzi w menu w górnej części IDE, a następnie ponownie Rozpocznij debugowanie, wprowadzając klawisz **F5** lub wybierając zieloną strzałkę "Odtwórz" obok pozycji s górny przycisk na pasku narzędzi.
    
-   > Opis skrótów uruchamiania i debugowania
+   > Informacje o skrótach uruchamiania i debugowania
    >
-   > - **F5** (lub **debugowania** > **Rozpocznij debugowanie**) rozpoczyna sesję debugowania, jeśli nie jest już aktywne i uruchamia program, dopóki nie zostanie osiągnięty punkt przerwania lub danych wejściowych programu potrzeb użytkownika. Jeśli dane wejściowe użytkownika nie jest wymagana i nie punkt przerwania jest dostępna dla trafień, program zakończy, a następnie w oknie konsoli zamyka się po zakończeniu program. Jeśli masz podobny do programu "Hello World", aby uruchomić, użyj **kombinację klawiszy Ctrl + F5** lub ustaw punkt przerwania, możesz wprowadzić **F5** do nie zamykaj okna.
-   > - **CTRL + F5** (lub **debugowania** > **Rozpocznij bez debugowania**) uruchamia aplikację bez przechodzenia w tryb debugowania. Jest to nieznacznie szybsze niż debugowania, a w oknie konsoli pozostanie otwarte po zakończeniu program, wykonywanie.
-   > - **F10** (nazywane **Step Over**) umożliwia iteracyjne przeglądanie kodu, wiersz po wierszu oraz Wizualizuj działanie kodu i wartości zmiennych są w każdym kroku wykonywania.
-   > - **F11** (nazywane **Step Into**) działa podobnie jak **Step Over**, z wyjątkiem przechodzi do wszelkie funkcje wywołane w wierszu wykonywania. Na przykład, jeśli wykonywanego wiersza wywołuje funkcję, naciskając klawisz **F11** przesuwa wskaźnik myszy w treści funkcji, aby można było wykonywać kod funkcji, które są uruchamiane przed powrotem do wiersza rozpoczęło się o. Naciśnięcie klawisza **F10** kroki za pośrednictwem wywołania funkcji i po prostu przechodzi do następnego wiersza; wywołania funkcji nadal się dzieje, ale program nie wstrzymać WAM, jakie jest zastosowanie.
+   > - **F5** (lub **Debuguj** > **Rozpocznij debugowanie**) uruchamia sesję debugowania, jeśli jedna nie jest już aktywna, i uruchamia program do momentu, gdy punkt przerwania zostanie osiągnięty lub program wymaga danych wejściowych użytkownika. Jeśli żadne dane wejściowe użytkownika nie są konieczne i punkt przerwania nie jest dostępny do trafienia, program zostanie przerwany, a okno konsoli zostanie zamknięte po zakończeniu działania programu. Jeśli masz coś takiego jak program "Hello world" do uruchomienia, użyj **kombinacji klawiszy CTRL + F5** lub ustaw punkt przerwania, aby zachować otwarte okno.
+   > - **Ctrl + F5** (lub **Debuguj** > **Uruchom bez debugowania**) uruchamia aplikację bez przechodzenia do trybu debugowania. Jest to nieco szybsze niż debugowanie, a okno konsoli pozostaje otwarte po zakończeniu wykonywania przez program.
+   > - **F10** (znany jakoprzekroczenie) umożliwia przechodzenie przez kod, wiersz po wierszu i wizualizację sposobu uruchamiania kodu oraz zmienne wartości w każdym kroku wykonywania.
+   > - Klawisz **F11** (znany jako **krok do**) działa podobnie doprzekroczenia, z wyjątkiem kroków przewidzianych w wierszu wykonania. Na przykład, jeśli wykonywany wiersz wywołuje funkcję, naciśnięcie klawisza **F11** przenosi wskaźnik do treści funkcji, dzięki czemu można wykonać kod funkcji uruchamianej przed powrotem do wiersza, który został rozpoczęty. Naciskaj kroki **F10** w wywołaniu funkcji i po prostu przesuniesz się do następnego wiersza. Wywołanie funkcji jest nadal wykonywane, ale program nie jest wstrzymany, aby zobaczyć, co robi.
 
 ### <a name="close-the-app"></a>Zamknij aplikację
 
-- Jeśli jest nadal uruchomione, zamknij okno konsoli aplikacji kalkulatora.
+- Jeśli nadal działa, Zamknij okno konsoli dla aplikacji Kalkulator.
 
-## <a name="the-finished-app"></a>Gotową aplikację
+## <a name="the-finished-app"></a>Gotowa aplikacja
 
-Gratulacje! Ukończysz kodu dla aplikacji Kalkulator i wbudowane i debugować go w programie Visual Studio.
+Gratulacje! Kod aplikacji kalkulatora został ukończony i skompilowany i debugowany w programie Visual Studio.
 
 ## <a name="next-steps"></a>Następne kroki
 
-[Dowiedz się więcej o programie Visual Studio dla języka C++](https://blogs.msdn.microsoft.com/vcblog/2017/04/21/getting-started-with-visual-studio-for-c-and-cpp-development/)
+[Dowiedz się więcej o programie Visual Studio dlaC++](https://blogs.msdn.microsoft.com/vcblog/2017/04/21/getting-started-with-visual-studio-for-c-and-cpp-development/)
 
 ::: moniker-end

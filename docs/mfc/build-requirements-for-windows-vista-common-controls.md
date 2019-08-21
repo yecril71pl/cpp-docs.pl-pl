@@ -1,44 +1,40 @@
 ---
-title: Wymagania formantów standardowych systemu Windows Vista dotyczące kompilacji
-ms.date: 11/04/2016
+title: Wymagania dotyczące kompilacji dla formantów standardowych systemu Windows
+ms.date: 08/19/2019
 helpviewer_keywords:
-- common controls (MFC), build requirements
-- common controls (MFC)
+- Common Controls (MFC), build requirements
+- Common Controls (MFC)
 ms.assetid: 025f7d55-55a2-4dcd-8f62-02424e3dcc04
-ms.openlocfilehash: 1a2e79d91a41ea178eeb6f74ec7fa7b22588b277
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9ea90f95ba8e704cba5b22c5e7338659f0c5f033
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386255"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630845"
 ---
-# <a name="build-requirements-for-windows-vista-common-controls"></a>Wymagania formantów standardowych systemu Windows Vista dotyczące kompilacji
+# <a name="build-requirements-for-windows-common-controls"></a>Wymagania dotyczące kompilacji dla formantów standardowych systemu Windows
 
-Biblioteka Microsoft Foundation Class (MFC) obsługuje wspólnych formantów Windows w wersji 6.1. Formanty standardowe są uwzględnione w Windows Vista i biblioteki znajduje się w Visual Studio SDK. Biblioteka zawiera nowe metody, które podnoszą istniejących klas i nowe klasy i metody, które obsługują wspólnych formantów Windows Vista. W przypadku tworzenia aplikacji, należy przestrzegać wymagań kompilacji i migracji, które są opisane w poniższych sekcjach.
+Biblioteka Microsoft Foundation Class (MFC) obsługuje [Formanty standardowe systemu Windows](/windows/win32/controls/common-controls-intro). Formanty standardowe są zawarte w systemie Windows, a biblioteka jest uwzględniona w programie Visual Studio. Biblioteka MFC zawiera nowe metody, które rozszerzają istniejące klasy, oraz dodatkowe klasy i metody obsługujące typowe formanty systemu Windows. Podczas kompilowania aplikacji należy postępować zgodnie z wymaganiami dotyczącymi kompilacji i migracji, które zostały opisane w poniższych sekcjach.
 
 ## <a name="compilation-requirements"></a>Wymagania dotyczące kompilacji
 
 ### <a name="supported-versions"></a>Obsługiwane wersje
 
-Niektóre nowe klasy i metody obsługują tylko Windows Vista i później, podczas gdy inne metody obsługują także starszych systemów operacyjnych. Zanotuj w `Requirements` części każdego tematu Metoda określa, kiedy minimalny wymagany system operacyjny to Windows Vista.
+MFC obsługuje wszystkie wersje wspólnych kontrolek. Aby uzyskać informacje o wersjach typowych kontrolek systemu Windows, zobacz [popularne wersje kontroli](/windows/win32/controls/common-control-versions).
 
-Nawet wtedy, gdy komputer nie uruchamia się Windows Vista, można utworzyć aplikację MFC, który będzie uruchomiony na Windows Vista, jeśli masz plikach nagłówkowych MFC w wersji 6.1 na komputerze. Jednak wspólnych formantów, które są przeznaczone specjalnie dla Windows Vista działają tylko w tym systemie i są ignorowane przez starszych systemów operacyjnych.
+### <a name="supported-character-sets"></a>Obsługiwane zestawy znaków
 
-### <a name="supported-character-sets"></a>Obsługiwanych zestawów znaków
-
-Nowe formanty wspólne Windows obsługuje tylko zestaw znaków Unicode, a nie zestawu znaków ANSI. W przypadku tworzenia aplikacji w wierszu polecenia użyj obu następujących zdefiniuj (/ D) opcji kompilatora, aby określić Unicode jako podstawowy zestaw znaków:
+Formanty wspólne systemu Windows obsługują tylko zestaw znaków Unicode, a nie zestaw znaków ANSI. W przypadku kompilowania aplikacji w wierszu polecenia Użyj obu następujących opcji kompilatora Definiuj (/D), aby określić Unicode jako podstawowy zestaw znaków:
 
 ```
 /D_UNICODE /DUNICODE
 ```
 
-Jeśli tworzysz aplikację w programie Visual Studio zintegrowane środowisko programistyczne (IDE), należy określić **zestaw znaków Unicode** opcji **zestaw znaków** właściwość **ogólne**  węzeł we właściwościach projektu.
-
-Wersja ANSI kilka metod MFC są przestarzałe, począwszy od wersji wspólnych formantów Windows 6.1. Aby uzyskać więcej informacji, zobacz [przestarzałe interfejsy API ANSI](../mfc/deprecated-ansi-apis.md).
+W przypadku kompilowania aplikacji w zintegrowanym środowisku programistycznym (IDE) programu Visual Studio określ opcję **zestaw znaków Unicode** właściwości **zestaw znaków** w węźle **Ogólne** właściwości projektu.
 
 ## <a name="migration-requirements"></a>Wymagania dotyczące migracji
 
-Jeśli używasz programu Visual Studio IDE do tworzenia nowych aplikacji MFC, która korzysta z wersji wspólnych formantów Windows 6.1, IDE automatycznie deklaruje manifest odpowiednie. Jednak jeśli migracja istniejącej aplikacji MFC z wcześniejszej wersji programu Visual Studio, którego chcesz użyć nowe formanty wspólne środowisko IDE nie automatycznie zapewnia informacje manifestu, aby uaktualnić aplikację. Zamiast tego należy wstawić ręcznie następujące kodu źródłowego w Twojej **stdafx.h** pliku:
+Jeśli używasz środowiska IDE programu Visual Studio do utworzenia nowej aplikacji MFC, która używa formantów wspólnych systemu Windows, IDE automatycznie deklaruje odpowiedni manifest. Jednak w przypadku migrowania istniejącej aplikacji MFC z programu Visual Studio 2005 lub starszej, a użytkownik chce używać tych standardowych formantów, IDE nie dostarcza automatycznie informacji manifestu w celu uaktualnienia aplikacji. Zamiast tego należy ręcznie wstawić następujący kod źródłowy do prekompilowanego pliku nagłówkowego:
 
 ```
 #ifdef UNICODE

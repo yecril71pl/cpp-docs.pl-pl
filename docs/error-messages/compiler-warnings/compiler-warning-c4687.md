@@ -6,28 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C4687
 ms.assetid: 2f28e0b1-7358-4c88-bd70-aad8f0aa004c
-ms.openlocfilehash: 1978e1a35ba5b5d59b5961a21378d8af6921d145
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 83f5c535f9cf252783110838c181c88c8b0096ee
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311335"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631608"
 ---
 # <a name="compiler-warning-c4687"></a>Ostrzeżenie kompilatora C4687
 
-"class": zapieczętowana klasa abstrakcyjna nie może implementować interfejsu "interface"
+> "*Class*": zapieczętowana Klasa abstrakcyjna nie może implementować interfejsu "*Interface*"
 
-Typu zapieczętowanego "," abstract przydaje się zwykle tylko do przechowywania statyczne funkcje Członkowskie.
+## <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [abstrakcyjne](../../extensions/abstract-cpp-component-extensions.md)i [zapieczętowanego](../../extensions/sealed-cpp-component-extensions.md).
+Zapieczętowany, abstrakcyjny typ jest zwykle przydatny tylko do przechowywania statycznych funkcji Członkowskich.
 
-Domyślnie C4687 jest wystawiana jako błąd. Można pominąć C4687 z [ostrzeżenie](../../preprocessor/warning.md) pragmy. Jeśli chcesz zaimplementować interfejs w typie zapieczętowanym, abstract, można pominąć C4687.
+Aby uzyskać więcej informacji, [](../../extensions/abstract-cpp-component-extensions.md) Zobacz abstrakcyjny i [zapieczętowany](../../extensions/sealed-cpp-component-extensions.md).
+
+C4687 jest domyślnie wystawiany jako błąd. Możesz pominąć C4687 z pragmą [ostrzeżenia](../../preprocessor/warning.md) . Jeśli masz pewność, że chcesz zaimplementować interfejs w zapieczętowanym, abstrakcyjnym typie, możesz pominąć C4687.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4687.
+Poniższy przykład generuje C4687.
 
-```
+```cpp
 // C4687.cpp
 // compile with: /clr /c
 interface class A {};

@@ -1,23 +1,23 @@
 ---
 title: Ostrzeżenie LNK4221 narzędzi konsolidatora
-ms.date: 11/04/2016
+ms.date: 08/19/2019
 f1_keywords:
 - LNK4221
 helpviewer_keywords:
 - LNK4221
 ms.assetid: 8e2eb2de-9532-4b85-908a-8c9ff5c4cccb
-ms.openlocfilehash: baea8643001c550aeb3cb35dc6fe414e4330c0c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 299c3ef76006b347d6770d45ca317ff0eb941ffa
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160383"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630802"
 ---
 # <a name="linker-tools-warning-lnk4221"></a>Ostrzeżenie LNK4221 narzędzi konsolidatora
 
-Ten plik obiektu nie definiuje żadnych wcześniej niezdefiniowanych symboli publicznych, więc nie będzie można używać przez żadną operację konsolidacji, który wykorzystuje tę bibliotekę
+Ten plik obiektu nie definiuje żadnych wcześniej niezdefiniowanych symboli publicznych, dlatego nie będzie używany przez żadną operację konsolidacji korzystającą z tej biblioteki.
 
-Należy wziąć pod uwagę poniższe fragmenty kodu dwa.
+Rozważ następujące dwa fragmenty kodu.
 
 ```
 // a.cpp
@@ -33,10 +33,20 @@ int function()
 }
 ```
 
-Aby skompilować pliki i utworzyć dwa pliki obiektu, należy uruchomić **cl /c a.cpp b.cpp** polecenie w wierszu polecenia. Jeśli możesz połączyć pliki obiektów, uruchamiając **link/lib /out:test.lib a.obj b.obj**, otrzymasz ostrzeżenie LNK4221. Jeśli łączysz się obiekty, uruchamiając **link/lib /out:test.lib b.obj a.obj**, nie zostanie wyświetlone ostrzeżenie.
+Aby skompilować pliki i utworzyć dwa pliki obiektów, uruchom **cl/c a. cpp b. cpp** w wierszu polecenia. W przypadku łączenia plików obiektów przez uruchomienie **linku/lib/out: test. lib a. obj b. obj**zostanie WYŚWIETLONE ostrzeżenie LNK4221 narzędzi konsolidatora. W przypadku łączenia obiektów przez uruchomienie **linku/lib/out: test. lib b. obj a. obj**nie zostanie wyświetlone ostrzeżenie.
 
-Ostrzeżenie nie jest generowane w drugim scenariuszu, ponieważ program łączący działa w sposób ostatni na wejściu (LIFO). W pierwszego scenariusza b.obj jest przetwarzana przed a.obj i a.obj nie ma żadnych nowych symboli do dodania. Przez poinstruowanie konsolidator, aby najpierw przetworzyć a.obj, możesz uniknąć ostrzeżenia.
+W drugim scenariuszu nie jest wyświetlane żadne ostrzeżenie, ponieważ konsolidator działa w sposób pierwszy-out (LIFO). W pierwszym scenariuszu b. obj jest przetwarzana przed obiektem. obj, a obiekt. obj nie ma nowych symboli do dodania. Poinstruując konsolidator, aby najpierw przetworzyć obiekt. obj, możesz uniknąć tego ostrzeżenia.
 
-Typową przyczyną tego błędu jest, gdy dwa pliki źródłowe, określ opcję [/Yc (Utwórz prekompilowany plik nagłówkowy)](../../build/reference/yc-create-precompiled-header-file.md) o tej samej nazwie pliku nagłówka, określone w **wstępnie skompilowany nagłówek** pola. Typową przyczyną tego problemu dotyczy stdafx.h, ponieważ, domyślnie zawiera stdafx.h stdafx.cpp, a nie dodaje żadnych nowych symboli. Jeśli inny plik źródłowy zawiera stdafx.h z **/Yc** i pliku .obj skojarzone jest przetwarzana przed stdafx.obj, konsolidator wygeneruje LNK4221.
+::: moniker range=">=vs-2019"
 
-Jednym sposobem, aby rozwiązać ten problem dotyczy upewnij się, że dla każdego prekompilowanego nagłówka, istnieje tylko jeden plik źródłowy, który obejmuje ją za pomocą **/Yc**. Wszystkie pliki źródłowe, należy użyć wstępnie skompilowanych nagłówków. Aby uzyskać więcej informacji na temat zmienić to ustawienie, zobacz [/Yu (Korzystaj Prekompilowanego pliku nagłówka)](../../build/reference/yu-use-precompiled-header-file.md).
+Typową przyczyną tego błędu jest to, że dwa pliki źródłowe określają opcję [/YC (Utwórz prekompilowany plik nagłówkowy)](../../build/reference/yc-create-precompiled-header-file.md) o tej samej nazwie pliku nagłówkowego określonej w polu prekompilowanego **nagłówka** . Typową przyczyną tego problemu jest usługa *PCH. h* , ponieważ domyślnie *PCH. cpp* zawiera plik *PCH. h* i nie dodaje żadnych nowych symboli. Jeśli inny plik źródłowy zawiera *PCH. h* z **/YC** i skojarzony plik. obj jest przetwarzany przed PCH. obj, konsolidator będzie generować LNK4221 narzędzi konsolidatora.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+Typową przyczyną tego błędu jest to, że dwa pliki źródłowe określają opcję [/YC (Utwórz prekompilowany plik nagłówkowy)](../../build/reference/yc-create-precompiled-header-file.md) o tej samej nazwie pliku nagłówkowego określonej w polu prekompilowanego **nagłówka** . Typową przyczyną tego problemu jest *stdafx. h* , ponieważ domyślnie *stdafx. cpp* zawiera *stdafx. h* i nie dodaje żadnych nowych symboli. Jeśli inny plik źródłowy zawiera *stdafx. h* z **/YC** , a skojarzony plik. obj jest przetwarzany przed stdafx. obj, KONSOLIDATOR będzie zgłaszać LNK4221 narzędzi konsolidatora.
+
+::: moniker-end
+
+Jednym ze sposobów rozwiązania tego problemu jest upewnienie się, że dla każdego prekompilowanego nagłówka istnieje tylko jeden plik źródłowy, który zawiera go z **/YC**. Wszystkie inne pliki źródłowe muszą używać prekompilowanych nagłówków. Aby uzyskać więcej informacji na temat zmiany tego ustawienia, zobacz [/Yu (Użyj prekompilowanego pliku nagłówkowego)](../../build/reference/yu-use-precompiled-header-file.md).
