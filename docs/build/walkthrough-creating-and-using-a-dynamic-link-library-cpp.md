@@ -350,7 +350,7 @@ Następnie, aby wywołać funkcje MathLibrary w kodzie źródłowym, projekt mus
 
 1. W okienku właściwości wybierz kontrolkę listy rozwijanej obok pola **Dodatkowe katalogi** dołączane, a następnie wybierz pozycję **Edytuj**.
 
-   ![Edytuj Właściwość dodatkowe katalogi] dołączane (media/mathclient-additional-include-directories-property.png "Edytuj Właściwość dodatkowe katalogi") dołączane
+   ![Edytuj Właściwość dodatkowe katalogi dołączane](media/mathclient-additional-include-directories-property.png "Edytuj Właściwość dodatkowe katalogi dołączane")
 
 1. Kliknij dwukrotnie w górnym okienku okna dialogowego **Dodatkowe katalogi** dołączane, aby włączyć kontrolkę edycji.
 
@@ -362,7 +362,7 @@ Następnie, aby wywołać funkcje MathLibrary w kodzie źródłowym, projekt mus
 
    Jeśli biblioteka DLL i projekty klienta znajdują się w tym samym rozwiązaniu lub rozwiązania znajdują się w różnych folderach, należy odpowiednio dostosować ścieżkę względną lub inaczej przeglądać w poszukiwaniu folderu, używając opisanej wcześniej metody.
 
-   ![Dodaj lokalizację nagłówka do właściwości dodatkowe katalogi] dołączane (media/mathclient-additional-include-directories.png "Dodaj lokalizację nagłówka do właściwości dodatkowe katalogi") dołączane
+   ![Dodaj lokalizację nagłówka do właściwości dodatkowe katalogi dołączane](media/mathclient-additional-include-directories.png "Dodaj lokalizację nagłówka do właściwości dodatkowe katalogi dołączane")
 
 1. Po wprowadzeniu ścieżki do pliku nagłówkowego w oknie dialogowym **Dodatkowe katalogi** dołączane wybierz przycisk **OK** , aby powrócić do okna dialogowego **strony właściwości** , a następnie wybierz przycisk **OK** , aby zapisać zmiany.
 

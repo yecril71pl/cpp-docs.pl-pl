@@ -31,7 +31,7 @@ Niektóre właściwości, takie jak nazwa aplikacji, mają zastosowanie do wszys
 
 Strony właściwości są zaprojektowane tak, aby zawsze widzieć, i w razie potrzeby zmodyfikować, do której konfiguracji i platformy ma być stosowana wartość właściwości. Poniższa ilustracja przedstawia strony właściwości z informacjami o konfiguracji i platformie w polach listy u góry. Gdy właściwość **optymalizacji** jest ustawiona w tym miejscu, będzie stosowana tylko do debugowania Win32, która stanie się aktywną konfiguracją, jak pokazano na czerwono.
 
-![Strony właściwości&#43; &#43; języka Visual C przedstawiające]aktywne(media/visual-c---property-pages-showing-active-configuration.png " C++ strony właściwości") usługi Active Configuration pokazujące aktywną konfigurację
+![Strony właściwości&#43; &#43; języka Visual C przedstawiające](media/visual-c---property-pages-showing-active-configuration.png " C++ strony właściwości") usługi Active Configuration pokazujące aktywną konfigurację
 
 Na poniższej ilustracji przedstawiono tę samą stronę właściwości projektu, ale konfiguracja została zmieniona na Release. Zwróć uwagę na różne wartości właściwości Optymalizacja. Należy również pamiętać, że aktywna konfiguracja nadal jest debugowana. W tym miejscu możesz ustawić właściwości dla dowolnej konfiguracji; nie musi ona być aktywna.
 

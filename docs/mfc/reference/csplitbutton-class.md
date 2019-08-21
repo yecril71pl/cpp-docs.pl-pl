@@ -58,7 +58,7 @@ Klasa pochodzi od klasy CButton. [](../../mfc/reference/cbutton-class.md) `CSpli
 
 Poniższa ilustracja przedstawia okno dialogowe, które zawiera formant modułu stronicowania i kontrolkę (1) przycisk podziału. Strzałka listy rozwijanej (2) została już kliknięta i zostanie wyświetlone podmenu (3).
 
-![Okno dialogowe z kontrolką SplitButton i] modułem stronicowania. (../../mfc/reference/media/splitbutton_pager.png "Okno dialogowe z kontrolką SplitButton i") modułem stronicowania.
+![Okno dialogowe z kontrolką SplitButton imodułem stronicowania](../../mfc/reference/media/splitbutton_pager.png "Okno dialogowe z kontrolką SplitButton i")
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -188,7 +188,7 @@ Parametr *nMenuId* określa pasek menu, który jest poziomą listą elementów p
 
 Poniższa ilustracja przedstawia okno dialogowe, które zawiera formant modułu stronicowania i kontrolkę (1) przycisk podziału. Strzałka listy rozwijanej (2) została już kliknięta i zostanie wyświetlone podmenu (3).
 
-![Okno dialogowe z kontrolką SplitButton i] modułem stronicowania. (../../mfc/reference/media/splitbutton_pager.png "Okno dialogowe z kontrolką SplitButton i") modułem stronicowania.
+![Okno dialogowe z kontrolką SplitButton imodułem stronicowania](../../mfc/reference/media/splitbutton_pager.png "Okno dialogowe z kontrolką SplitButton i")
 
 ### <a name="example"></a>Przykład
 
