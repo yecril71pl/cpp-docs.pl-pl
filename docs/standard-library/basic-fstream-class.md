@@ -23,7 +23,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68459602"
 ---
-# <a name="basicfstream-class"></a>basic_fstream — Klasa
+# <a name="basic_fstream-class"></a>basic_fstream — Klasa
 
 Opisuje obiekt, który kontroluje Wstawianie i wyodrębnianie elementów i zakodowanych obiektów przy użyciu bufora strumienia [](../standard-library/basic-filebuf-class.md)< klasy basic_filebuf `Tr``Elem`, >, z elementami typu `Elem`, których znak cechy są określane przez klasę `Tr`.
 
