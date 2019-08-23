@@ -86,6 +86,8 @@
           href: build/cppproperties-schema-reference.md
         - name: Dokumentacja schematu pliku Tasks.vs.json (C++)
           href: build/tasks-vs-json-schema-reference-cpp.md
+        - name: Dokumentacja schematu pliku Launch.vs.json (C++)
+          href: build/launch-vs-schema-reference-cpp.md
     - name: Projekty platformy CMake
       expanded: false
       items:
