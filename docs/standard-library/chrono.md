@@ -10,12 +10,12 @@ f1_keywords:
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: f01b00a1469cdf82590a1bdfc742312ec96912c9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b3352110c2074b325ac345c05dbf899c0bdbd0ab
+ms.sourcegitcommit: ace42fa67e704d56d03c03745b0b17d2a5afeba4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459450"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69975903"
 ---
 # <a name="ltchronogt"></a>&lt;Chrono&gt;
 
@@ -76,7 +76,14 @@ Począwszy od programu Visual Studio 2015, implementacja programu `steady_clock`
 
 Aby uzyskać więcej informacji na temat typów współczynników, które są używane w następujących elementach typedef, zobacz [ \<współczynnik >](../standard-library/ratio.md).
 
-||| ||| | `typedef duration<long long, nano> nanoseconds;`| Synonim dla `duration` typu, który ma wartość o długości taktu 1 nanosekund. |`typedef duration<long long, micro> microseconds;`| | Synonim dla `duration` typu, który ma wartość 1 mikrosekundowych.`typedef duration<long long, milli> milliseconds;`| | | Synonim dla `duration` typu, który ma wartość 1 milisekund. | |`typedef duration<long long> seconds;`| Synonim dla `duration` typu, który ma wartość o skali 1 sekundy. | |`typedef duration<int, ratio<60> > minutes;`| Synonim dla `duration` typu, który ma interwał o wartości 1 minuty. | |`typedef duration<int, ratio<3600> > hours;`| Synonim dla `duration` typu, który ma godzinę 1 godziny. |
+|||
+|-|-|
+|`typedef duration<long long, nano> nanoseconds;`|Synonim dla `duration` typu, który ma interwał o wartości 1 nanosekund.|
+|`typedef duration<long long, micro> microseconds;`|Synonim dla `duration` typu, który ma wartość 1 mikrosekundowych.|
+|`typedef duration<long long, milli> milliseconds;`|Synonim dla `duration` typu, który ma wartość 1 milisekund.|
+|`typedef duration<long long> seconds;`|Synonim dla `duration` typu, który ma interwał o wartości 1 sekundy.|
+|`typedef duration<int, ratio<60> > minutes;`|Synonim dla `duration` typu, który ma interwał o wartości 1 minuty.|
+|`typedef duration<int, ratio<3600> > hours;`|Synonim dla `duration` typu, który ma godzinę 1 godziny.|
 
 ### <a name="literals"></a>Literały
 
