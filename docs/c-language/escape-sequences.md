@@ -52,7 +52,7 @@ Należy zauważyć, że znak zapytania poprzedzony ukośnikiem odwrotnym ( **\\?
 |**\a**|Dzwonek (Alert)|
 |**stosuje**|Backspace|
 |**\f**|Kanał informacyjny formularza|
-|**\**|Nowy wiersz|
+|**\n**|Nowy wiersz|
 |**\r**|Znak powrotu karetki|
 |**\t**|Tabulator poziomy|
 |**\v**|Tabulator pionowy|
