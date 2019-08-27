@@ -1,6 +1,6 @@
 ---
 title: Łączenie pliku wykonywalnego z biblioteką DLL
-ms.date: 11/04/2016
+ms.date: 08/22/2019
 helpviewer_keywords:
 - run time [C++], linking
 - dynamic load linking [C++]
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - executable files [C++], linking to DLLs
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
-ms.openlocfilehash: c4f9ea7a3606612189e85401b75a0577896fd90e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: fe0a4fc37291b4ccc904f889a9d38748fc38195c
+ms.sourcegitcommit: ec524d1f87bcce2b26b02e6d297f42c94b3db36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493226"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70026007"
 ---
 # <a name="link-an-executable-to-a-dll"></a>Łączenie pliku wykonywalnego z biblioteką DLL
 
 Plik wykonywalny łączy się z (lub ładuje) do biblioteki DLL na jeden z dwóch sposobów:
 
-- *Niejawne łączenie*, gdzie system operacyjny ładuje bibliotekę DLL, gdy plik wykonywalny, przy użyciu którego jest ładowany. Plik wykonywalny klienta wywołuje eksportowane funkcje biblioteki DLL tak, jakby funkcje były statycznie połączone i zawarte w pliku wykonywalnym. Niejawne łączenie jest czasami określane jako *statyczne ładowanie* lub *dynamiczne łączenie w czasie ładowania*.
+- *Niejawne łączenie*, gdzie system operacyjny ładuje bibliotekę DLL w tym samym czasie, co plik wykonywalny, który go używa. Plik wykonywalny klienta wywołuje wyeksportowane funkcje biblioteki DLL w taki sam sposób jak w przypadku, gdy funkcje zostały statycznie połączone i zawarte w pliku wykonywalnym. Niejawne łączenie jest czasami określane jako *statyczne ładowanie* lub *dynamiczne łączenie w czasie ładowania*.
 
-- *Jawne łączenie*, gdzie system operacyjny ładuje bibliotekę DLL na żądanie w czasie wykonywania. Plik wykonywalny, który korzysta z biblioteki DLL przez jawne łączenie musi wykonywać wywołania funkcji w celu jawnego ładowania i zwalniania biblioteki DLL oraz do uzyskiwania dostępu do funkcji wyeksportowanych przez DLL. W przeciwieństwie do wywołań funkcji w bibliotece połączonej statycznie plik wykonywalny klienta musi wywoływać eksportowane funkcje w bibliotece DLL za pomocą wskaźnika funkcji. Jawne łączenie jest czasami określane jako *dynamiczne ładowanie* lub *dynamiczne łączenie w czasie wykonywania*.
+- *Jawne łączenie*, gdzie system operacyjny ładuje bibliotekę DLL na żądanie w czasie wykonywania. Plik wykonywalny, który korzysta z biblioteki DLL przez jawne łączenie, musi jawnie ładować i zwalniać bibliotekę DLL. Musi również skonfigurować wskaźnik funkcji, aby uzyskać dostęp do każdej funkcji, która używa z biblioteki DLL. W przeciwieństwie do wywołań funkcji w bibliotece połączonej statycznie lub niejawnie połączonej biblioteki DLL, plik wykonywalny klienta musi wywoływać eksportowane funkcje w jawnie połączonej bibliotece DLL za pomocą wskaźników funkcji. Jawne łączenie jest czasami określane jako *dynamiczne ładowanie* lub *dynamiczne łączenie w czasie wykonywania*.
 
-Plik wykonywalny może używać metody łączenia do łączenia z tą samą biblioteką DLL. Ponadto te metody nie wykluczają się wzajemnie. jeden plik wykonywalny może być niejawnie połączony z biblioteką DLL i może być jawnie dołączany do niego.
+Plik wykonywalny może używać metody łączenia do łączenia z tą samą biblioteką DLL. Ponadto te metody nie wykluczają się wzajemnie. jeden plik wykonywalny może być niejawnie połączony z biblioteką DLL, a inny może zostać jawnie dołączony do niego.
 
 <a name="determining-which-linking-method-to-use"></a>
 
-## <a name="link-an-executable-to-a-dll"></a>Łączenie pliku wykonywalnego z biblioteką DLL
+## <a name="determine-which-linking-method-to-use"></a>Określanie, która Metoda łączenia ma być używana
 
 Czy używać niejawnego łączenia lub jawnego łączenia to decyzja architektury, którą należy podjąć w przypadku aplikacji. Każda metoda ma zalety i wady.
 
@@ -40,13 +40,13 @@ Niejawne łączenie występuje, gdy kod aplikacji wywołuje wyeksportowaną funk
 
 Biblioteka importowa zawiera tylko kod do załadowania biblioteki DLL i zaimplementowania wywołań funkcji w bibliotece DLL. Znalezienie zewnętrznej funkcji w bibliotece import informuje konsolidator, że kod tej funkcji znajduje się w bibliotece DLL. Aby rozpoznać odwołania zewnętrzne do bibliotek DLL, konsolidator po prostu dodaje informacje do pliku wykonywalnego, który informuje system, gdzie znaleźć kod biblioteki DLL podczas uruchamiania procesu.
 
-Gdy system uruchamia program, który zawiera dynamicznie połączone odwołania, używa informacji w pliku wykonywalnym programu w celu zlokalizowania wymaganych bibliotek DLL. Jeśli nie można zlokalizować biblioteki DLL, system kończy proces i wyświetla okno dialogowe, które zgłasza błąd. W przeciwnym razie system mapuje moduły DLL na przestrzeń adresową procesu.
+Gdy system uruchamia program, który zawiera dynamicznie połączone odwołania, używa informacji w pliku wykonywalnym programu w celu zlokalizowania wymaganych bibliotek DLL. Jeśli nie można zlokalizować biblioteki DLL, system zakończy proces i wyświetli okno dialogowe, które zgłosi błąd. W przeciwnym razie system mapuje moduły DLL na przestrzeń adresową procesu.
 
 Jeśli dowolna z bibliotek DLL ma funkcję punktu wejścia do inicjacji i zakończenia kodu `DllMain`, np., system operacyjny wywołuje funkcję. Jeden z parametrów przesłanych do funkcji punktu wejścia określa kod, który wskazuje, że biblioteka DLL jest dołączana do procesu. Jeśli funkcja punktu wejścia nie zwraca wartości TRUE, system zakończy proces i zgłosi błąd.
 
 Na koniec system modyfikuje kod wykonywalny procesu, aby zapewnić początkowe adresy dla funkcji DLL.
 
-Podobnie jak w przypadku reszty kodu programu, kod biblioteki DLL jest mapowany do przestrzeni adresowej procesu podczas uruchamiania procesu i jest ładowany do pamięci tylko wtedy, gdy jest to konieczne. W rezultacie `PRELOAD` `LOADONCALL` atrybuty kodu używane przez pliki. def do kontrolowania ładowania w poprzednich wersjach systemu Windows nie mają już znaczenia.
+Podobnie jak w przypadku reszty kodu programu, moduł ładujący mapuje kod DLL do przestrzeni adresowej procesu podczas uruchamiania procesu. System operacyjny ładuje go do pamięci tylko wtedy, gdy jest to konieczne. W rezultacie `PRELOAD` `LOADONCALL` atrybuty kodu używane przez pliki. def do kontrolowania ładowania w poprzednich wersjach systemu Windows nie mają już znaczenia.
 
 ### <a name="explicit-linking"></a>Jawne łączenie
 
@@ -54,37 +54,37 @@ Większość aplikacji używa niejawnego łączenia, ponieważ jest to najprosts
 
 - Aplikacja nie zna nazwy biblioteki DLL ładowanej do czasu wykonywania. Na przykład aplikacja może uzyskać nazwę biblioteki DLL i eksportowane funkcje z pliku konfiguracji podczas uruchamiania.
 
-- Proces, który używa niejawnego łączenia, zostaje zakończony przez system operacyjny, jeśli nie można odnaleźć biblioteki DLL podczas uruchamiania procesu. Proces używający jawnego łączenia nie jest zakończony w tej sytuacji i może próbować odzyskać sprawność po błędzie. Na przykład proces może powiadomić użytkownika o błędzie i określić inną ścieżkę do biblioteki DLL.
+- Proces, który używa niejawnego łączenia, zostaje zakończony przez system operacyjny, jeśli nie można odnaleźć biblioteki DLL podczas uruchamiania procesu. Proces używający jawnego łączenia nie jest zamykany w tej sytuacji i może próbować odzyskać sprawność po błędzie. Na przykład proces może powiadomić użytkownika o błędzie i określić inną ścieżkę do biblioteki DLL.
 
-- Proces, który używa niejawnego łączenia, również zostaje zakończony, jeśli dowolna z bibliotek DLL, `DllMain` z którym jest połączona, zawiera funkcję, która nie powiodła się. Proces używający jawnego łączenia nie jest zakończony w tej sytuacji.
+- Proces, który używa niejawnego łączenia, zostaje również zakończony, jeśli dowolna z bibliotek DLL, `DllMain` z którym jest połączona, zawiera funkcję, która nie powiodła się. Proces używający jawnego łączenia nie jest zamykany w tej sytuacji.
 
-- Aplikacja, która niejawnie łączy się z wieloma bibliotekami DLL, może być wolnie uruchamiana, ponieważ system Windows ładuje wszystkie biblioteki DLL po załadowaniu aplikacji. Aby zwiększyć wydajność uruchamiania, aplikacja może połączyć się niejawnie tylko z tymi bibliotekami DLL, które są wymagane natychmiast po załadowaniu, i poczekaj, aż inne biblioteki DLL są wymagane do jawnego łączenia z nimi.
+- Aplikacja, która niejawnie łączy się z wieloma bibliotekami DLL, może być wolnie uruchamiana, ponieważ system Windows ładuje wszystkie biblioteki DLL po załadowaniu aplikacji. Aby zwiększyć wydajność uruchamiania, aplikacja może używać tylko niejawnego łączenia bibliotek DLL wymaganych natychmiast po załadowaniu. Może używać jawnego łączenia do ładowania innych bibliotek DLL tylko wtedy, gdy są one niezbędne.
 
-- Jawne łączenie eliminuje konieczność łączenia aplikacji za pomocą biblioteki importu. Jeśli zmiany w bibliotece DLL powodują zmianę liczby porządkowej eksportu, aplikacje używające jawnego łączenia nie muszą ponownie łączyć się w przypadku wywołania `GetProcAddress` przy użyciu nazwy funkcji i nie wartości porządkowej, natomiast aplikacje, które używają niejawnego łączenia, muszą ponownie połączyć się z Nowa biblioteka importu.
+- Jawne łączenie eliminuje konieczność łączenia aplikacji za pomocą biblioteki importu. Jeśli zmiany w bibliotece DLL powodują zmianę liczby porządkowej eksportu, aplikacje nie muszą ponownie łączyć się w przypadku wywołania `GetProcAddress` przy użyciu nazwy funkcji, a nie wartości porządkowej. Aplikacje korzystające z niejawnego łączenia muszą nadal ponownie łączyć się z zmienioną biblioteką importu.
 
 Poniżej przedstawiono dwa zagrożenia związane z jawnym łączeniem:
 
-- Jeśli biblioteka DLL ma `DllMain` funkcję punktu wejścia, system operacyjny wywołuje funkcję w kontekście wątku, który wywołał. `LoadLibrary` Funkcja punktu wejścia nie jest wywoływana, jeśli biblioteka DLL jest już dołączona do procesu ze względu na poprzednie wywołanie `LoadLibrary` , które nie miało odpowiadającego wywołania `FreeLibrary` funkcji. Jawne łączenie może spowodować problemy, jeśli biblioteka DLL używa `DllMain` funkcji do wykonania inicjalizacji dla każdego wątku procesu, ponieważ wątki, które już istnieją `LoadLibrary` , gdy `AfxLoadLibrary`(lub) są wywoływane nie są inicjowane.
+- Jeśli biblioteka DLL ma `DllMain` funkcję punktu wejścia, system operacyjny wywołuje funkcję w kontekście wątku, który wywołał. `LoadLibrary` Funkcja punktu wejścia nie jest wywoływana, jeśli biblioteka DLL jest już dołączona do procesu ze względu na poprzednie wywołanie `LoadLibrary` , które nie ma odpowiadającego wywołania `FreeLibrary` funkcji. Jawne łączenie może spowodować problemy, jeśli biblioteka DLL używa `DllMain` funkcji do inicjowania każdego wątku procesu, ponieważ wszystkie wątki, które już istnieją, gdy `LoadLibrary` `AfxLoadLibrary`nie są inicjowane.
 
-- Jeśli biblioteka DLL deklaruje dane z zakresu statycznego jako `__declspec(thread)`, może to spowodować błąd ochrony, jeśli zostanie jawnie połączona. Po załadowaniu pliku DLL przez wywołanie do `LoadLibrary`programu powoduje ono błąd ochrony zawsze wtedy, gdy kod odwołuje się do tych danych. (Dane zakresu statycznego obejmują zarówno globalne, jak i lokalne elementy statyczne). W związku z tym podczas tworzenia biblioteki DLL należy unikać używania lokalnego magazynu wątków lub poinformować użytkowników DLL o potencjalną pułapek dynamicznej ładowania biblioteki DLL. Aby uzyskać więcej informacji, zobacz [Używanie lokalnego magazynu wątków w bibliotece dołączanej dynamicznie (Windows SDK)](/windows/win32/Dlls/using-thread-local-storage-in-a-dynamic-link-library).
+- Jeśli biblioteka DLL deklaruje dane z zakresu statycznego jako `__declspec(thread)`, może to spowodować błąd ochrony, jeśli zostanie jawnie połączona. Po załadowaniu pliku DLL przez wywołanie do `LoadLibrary`programu powoduje ono błąd ochrony zawsze wtedy, gdy kod odwołuje się do tych danych. (Dane zakresu statycznego obejmują zarówno globalne, jak i lokalne elementy statyczne). Dlatego podczas tworzenia biblioteki DLL należy unikać używania magazynu wątków lokalnych. Jeśli nie jest to możliwe, Powiadom użytkowników biblioteki DLL o potencjalną pułapek dynamicznej ładowania biblioteki DLL. Aby uzyskać więcej informacji, zobacz [Używanie lokalnego magazynu wątków w bibliotece dołączanej dynamicznie (Windows SDK)](/windows/win32/Dlls/using-thread-local-storage-in-a-dynamic-link-library).
 
 <a name="linking-implicitly"></a>
 
-## <a name="link-an-executable-to-a-dll"></a>Łączenie pliku wykonywalnego z biblioteką DLL
+## <a name="how-to-use-implicit-linking"></a>Jak używać niejawnego łączenia
 
 Aby skorzystać z biblioteki DLL przez niejawne konsolidacje, pliki wykonywalne klienta muszą uzyskać tych plików od dostawcy biblioteki DLL:
 
-- Jeden lub więcej plików nagłówkowych (plików h), które zawierają deklaracje wyeksportowanych danych, funkcji i/ C++ lub klas w bibliotece DLL. Klasy, funkcje i dane eksportowane przez bibliotekę DLL muszą być oznaczone jako `__declspec(dllimport)` plik nagłówkowy. Aby uzyskać więcej informacji, zobacz [dllexport, dllimport](../cpp/dllexport-dllimport.md).
+- Jeden lub więcej plików nagłówkowych (plików h), które zawierają deklaracje wyeksportowanych danych, funkcji i C++ klas w bibliotece DLL. Klasy, funkcje i dane eksportowane przez bibliotekę DLL muszą być oznaczone jako `__declspec(dllimport)` plik nagłówkowy. Aby uzyskać więcej informacji, zobacz [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
-- Biblioteka importowana do połączenia w pliku wykonywalnym. Konsolidator tworzy bibliotekę importu podczas kompilowania biblioteki DLL. Aby uzyskać więcej informacji, zobacz [. Pliki LIB](reference/dot-lib-files-as-linker-input.md).
+- Biblioteka importowana do połączenia w pliku wykonywalnym. Konsolidator tworzy bibliotekę importu podczas kompilowania biblioteki DLL. Aby uzyskać więcej informacji, zobacz [lib plików jako dane wejściowe konsolidatora](reference/dot-lib-files-as-linker-input.md).
 
 - Rzeczywisty plik DLL.
 
-Aby użyć biblioteki DLL przez niejawne łączenie, plik wykonywalny musi zawierać pliki nagłówkowe, które deklarują dane C++ , funkcje lub klasy eksportowane przez DLL w każdym pliku źródłowym, który zawiera wywołania wyeksportowanych danych, funkcji i klas. Z punktu widzenia kodowania wywołania eksportowanych funkcji są podobne do innych wywołań funkcji.
+Aby użyć danych, funkcji i klas w bibliotece DLL przez niejawne łączenie, każdy plik źródłowy klienta musi zawierać pliki nagłówkowe, które je deklarują. Z punktu widzenia kodowania wywołania eksportowanych funkcji są podobne do innych wywołań funkcji.
 
-Aby skompilować wywołujący plik wykonywalny, należy połączyć się z biblioteką importu. Jeśli używasz zewnętrznego systemu plików reguł programu make lub kompilacji, określ nazwę pliku biblioteki importu, w której będą się łączyć inne pliki lub biblioteki obiektów (. obj).
+Aby skompilować plik wykonywalny klienta, należy połączyć z biblioteką importu biblioteki DLL. W przypadku korzystania z zewnętrznego pliku reguł programu make lub systemu kompilacji należy określić bibliotekę importu wraz z innymi plikami obiektów lub bibliotekami, które są łączone.
 
-System operacyjny musi być w stanie zlokalizować plik DLL podczas ładowania wywołującego pliku wykonywalnego. Oznacza to, że aplikacja musi wdrożyć lub sprawdzić istnienie biblioteki DLL, gdy aplikacja jest zainstalowana.
+System operacyjny musi być w stanie zlokalizować plik DLL podczas ładowania wywołującego pliku wykonywalnego. Oznacza to, że podczas instalowania aplikacji należy wdrożyć lub sprawdzić istnienie biblioteki DLL.
 
 <a name="linking-explicitly"></a>
 
@@ -135,7 +135,7 @@ HRESULT LoadAndCallSomeFunction(DWORD dwParam1, UINT * puParam2)
 }
 ```
 
-W przeciwieństwie do tego przykładu, w większości przypadków należy `LoadLibrary` wywoływać i `FreeLibrary` tylko raz w aplikacji dla danej biblioteki DLL, zwłaszcza jeśli chcesz wielokrotnie wywoływać wiele funkcji w bibliotece DLL lub wywołać funkcje DLL.
+W przeciwieństwie do tego przykładu, w większości przypadków `LoadLibrary` należy `FreeLibrary` wywołać i tylko raz w aplikacji dla danej biblioteki DLL. Jest to szczególnie prawdziwe, jeśli chcesz wywołać wiele funkcji w bibliotece DLL lub wielokrotnie wywoływać funkcje DLL.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Jak chcesz dowiedzieć się więcej?
 
