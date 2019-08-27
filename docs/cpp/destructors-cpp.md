@@ -1,24 +1,24 @@
 ---
 title: Destruktory (C++)
-ms.date: 05/06/2019
+ms.date: 07/20/2019
 helpviewer_keywords:
 - objects [C++], destroying
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
-ms.openlocfilehash: 7bcfbd1ca95d98421fd2d58b595dd3309cdf8011
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 1e1190f49c7ccf5c312172f265d32a4b855bd878
+ms.sourcegitcommit: 2da5c42928739ca8cd683a9002598f28d8ec5f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222443"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70060138"
 ---
 # <a name="destructors-c"></a>Destruktory (C++)
 
-Destruktor jest funkcją składową, która jest wywoływana automatycznie, gdy obiekt wykracza poza zakres lub jest wyraźnie zniszczone przez wywołanie **Usuń**. Destruktor ma taką samą nazwę jak klasa, poprzedzony tyldy (`~`). Na przykład, destruktor klasy `String` jest zadeklarowana: `~String()`.
+Destruktor to funkcja członkowska, która jest wywoływana automatycznie, gdy obiekt wykracza poza zakres lub został jawnie zniszczony przez wywołanie do **usunięcia**. Destruktor ma taką samą nazwę jak Klasa, poprzedzone znakiem tyldy (`~`). Na przykład, destruktor dla klasy `String` jest zadeklarowany:. `~String()`
 
-Jeżeli nie zdefiniujesz destruktora, kompilator zapewnia domyślny; wiele klas jest to wystarczające. Musisz zdefiniować niestandardowe destruktor, jeśli klasa przechowuje dojścia do zasobów systemowych, które muszą zostać zwolnione lub wskaźników, które są właścicielami pamięć wskazują na.
+Jeśli nie zdefiniujesz destruktora, kompilator poda wartość domyślną. dla wielu klas jest to wystarczające. Musisz zdefiniować niestandardowy destruktor, gdy klasa przechowuje uchwyty do zasobów systemowych, które muszą zostać wydane, lub wskaźniki, do których wskazuje pamięć.
 
-Rozważmy następującą deklarację elementu `String` klasy:
+Rozważmy następującą deklarację `String` klasy:
 
 ```cpp
 // spec1_destructors.cpp
@@ -57,21 +57,21 @@ int main() {
 }
 ```
 
-W poprzednim przykładzie, destruktor `String::~String` używa **Usuń** operator można cofnąć alokacji miejsca, przydzielany dynamicznie do przechowywania tekstu.
+W poprzednim przykładzie destruktor `String::~String` używa operatora **delete** do cofnięcia alokacji miejsca przydzieloną dynamicznie na potrzeby przechowywania tekstu.
 
 ## <a name="declaring-destructors"></a>Deklarowanie destruktorów
 
-Destruktory są funkcje z taką samą nazwę jak klasa, ale poprzedzającą tyldy (`~`)
+Destruktory są funkcjami o tej samej nazwie co Klasa, ale poprzedzone znakiem tyldy`~`()
 
-Kilka decydującymi o deklaracji destruktorów. Destruktory:
+Kilka zasad podlega deklaracji destruktorów. Destruktory
 
-- Nie akceptuje argumentów.
+- Nie Akceptuj argumentów.
 
-- Nie zwraca wartości (lub **void**).
+- Nie zwracaj wartości (lub **void**).
 
-- Nie można zadeklarować jako **const**, **volatile**, lub **statyczne**. Jednak ich może być wywołana dla zniszczenie obiektów zadeklarowane jako **const**, **volatile**, lub **statyczne**.
+- Nie można zadeklarować jako **const**, **volatile**lub **static**. Jednak mogą być wywoływane w celu zniszczenia obiektów zadeklarowanych jako **const**, **volatile**lub **static**.
 
-- Mogą być deklarowane jako **wirtualnego**. Używanie destruktorów wirtualnych, nie wiedząc o tym ich typ może zniszczyć obiektów — poprawne destruktor obiektu jest wywoływana przy użyciu mechanizmu funkcję wirtualną. Należy pamiętać, że destruktory mogą być także zadeklarowane jako czystych funkcji wirtualnych dla klasy abstrakcyjnej.
+- Mogą być zadeklarowane jako **wirtualne**. Korzystając z destruktorów wirtualnych, można zniszczyć obiekty bez znajomości ich typu — poprawny destruktor dla obiektu jest wywoływany przy użyciu mechanizmu funkcji wirtualnej. Należy zauważyć, że destruktory mogą być również deklarowane jako czyste funkcje wirtualne dla klas abstrakcyjnych.
 
 ## <a name="using-destructors"></a>Używanie destruktorów
 
@@ -79,7 +79,7 @@ Destruktory są wywoływane, gdy wystąpi jedno z następujących zdarzeń:
 
 - Lokalny (automatyczny) obiekt z zakresu bloku wykracza poza zakres.
 
-- Obiekt przydzielony za pomocą **nowe** operator jest jawnie dealokowany za pomocą **Usuń**.
+- Obiekt przydzielony przy użyciu operatora **New** jest jawnie cofnięty przy użyciu polecenia **delete**.
 
 - Kończy się okres istnienia obiektów tymczasowych.
 
@@ -89,21 +89,21 @@ Destruktory są wywoływane, gdy wystąpi jedno z następujących zdarzeń:
 
 Destruktory mogą swobodnie wywoływać funkcje składowe klasy i uzyskać dostęp do danych składowych klasy.
 
-Istnieją dwa ograniczenia dotyczące stosowania destruktorów:
+Istnieją dwa ograniczenia dotyczące korzystania z destruktorów:
 
-- Nie można przyjąć adresu.
+- Nie można przyjąć swojego adresu.
 
-- Klasy pochodne nie dziedziczą destruktor klasy podstawowej.
+- Klasy pochodne nie dziedziczą destruktora swojej klasy bazowej.
 
-## <a name="order-of-destruction"></a>Kolejność likwidacji
+## <a name="order-of-destruction"></a>Kolejność niszczenia
 
-Gdy obiekt wykracza poza zakres lub został usunięty, sekwencję zdarzeń zachodzących w jego całkowite zniszczenie jest następująca:
+Gdy obiekt wykracza poza zakres lub jest usuwany, sekwencja zdarzeń w odniesieniu do kompletnego zniszczenia jest następująca:
 
-1. Destruktor klasy jest wywoływany i treści funkcji — destruktor jest wykonywany.
+1. Wywoływana jest destruktor klasy i jest wykonywana treść destruktora.
 
-1. Destruktory dla obiektów niestatycznej składowej są wywoływane w odwrotnej kolejności, w jakiej występują w deklaracji klasy. Listy inicjowania opcjonalny element członkowski, które są używane w konstrukcji te elementy członkowskie nie ma wpływu na kolejność utworzenia lub zniszczenia.
+1. Destruktory dla niestatycznych obiektów członkowskich są wywoływane w odwrotnej kolejności, w której pojawiają się w deklaracji klasy. Opcjonalna lista inicjowania składowej użyta w przygotowaniu tych elementów członkowskich nie ma wpływu na kolejność konstruowania ani niszczenia.
 
-1. Destruktory — wirtualne klasy bazowe są wywoływane w odwrotnej kolejności deklaracji.
+1. Destruktory dla niewirtualnych klas bazowych są wywoływane w odwrotnej kolejności deklaracji.
 
 1. Destruktory dla wirtualnych klas bazowych są wywoływane w odwrotnej kolejności deklaracji.
 
@@ -145,12 +145,12 @@ B1 dtor
 
 ### <a name="virtual-base-classes"></a>Wirtualne klasy bazowe
 
-Destruktory dla wirtualnych klas bazowych są wywoływane w odwrotnej kolejności ich występowania w skierowanym grafie acyklicznym (pierwszy głębi, od lewej do prawej, postorder przechodzenia). Poniższa ilustracja przedstawia Wykres dziedziczenia.
+Destruktory dla wirtualnych klas bazowych są wywoływane w odwrotnej kolejności ich wyglądu w bezpośrednim wymiarze acykliczne (głębokość-pierwsza, od lewej do prawej, przechodzenie postorder). Poniższy rysunek przedstawia wykres dziedziczenia.
 
 ![Wykres dziedziczenia, który pokazuje wirtualne klasy bazowe](../cpp/media/vc392j1.gif "Wykres dziedziczenia, który pokazuje wirtualne klasy bazowe") <br/>
 Wykres dziedziczenia, który pokazuje wirtualne klasy bazowe
 
-Poniższa lista zawiera głowic klasy dla klasy pokazano na rysunku.
+Poniżej wymieniono listę głowic klas dla klas przedstawionych na rysunku.
 
 ```cpp
 class A
@@ -160,60 +160,60 @@ class D : virtual public A, virtual public B
 class E : public C, public D, virtual public B
 ```
 
-Aby określić kolejność niszczenia wirtualne klasy bazowe obiektu typu `E`, kompilator tworzy listę, stosując następującego algorytmu:
+Aby określić kolejność niszczenia wirtualnych klas bazowych obiektu typu `E`, kompilator tworzy listę, stosując następujący algorytm:
 
-1. Graf w lewo, począwszy od najniższej punkt na wykresie (w tym przypadku `E`).
+1. Przechodzenie wykresu od lewej, rozpoczynając od głębokiego punktu na wykresie (w tym przypadku `E`).
 
-1. Leftward przejścia należy wykonać, aż wszystkie węzły odwiedzających. Zanotuj nazwę bieżącego węzła.
+1. Wykonaj przechodzenie leftward, dopóki nie zostaną odwiedzone wszystkie węzły. Zanotuj nazwę bieżącego węzła.
 
-1. Ponownie poprzedniego węzła (w dół i w prawo), aby sprawdzić, czy węzeł są zapamiętywane wirtualnej klasy bazowej.
+1. Ponownie odwiedzaj poprzedni węzeł (w dół i w prawo), aby dowiedzieć się, czy zapamiętany węzeł jest wirtualną klasą bazową.
 
-1. Jeśli zapamiętanych węzeł jest wirtualnej klasy bazowej, skanowania na liście, aby zobaczyć, czy jego został już wprowadzony. Jeśli nie jest wirtualną klasę bazową, należy go zignorować.
+1. Jeśli zapamiętany węzeł jest wirtualną klasą bazową, Zeskanuj listę, aby sprawdzić, czy została już wprowadzona. Jeśli nie jest wirtualną klasą bazową, zignoruj ją.
 
-1. Jeśli węzeł zapamiętanych, nie jest jeszcze na liście, należy dodać go do dolnej części listy.
+1. Jeśli zapamiętany węzeł nie znajduje się jeszcze na liście, Dodaj go na końcu listy.
 
-1. Graf w górę i w ścieżce dalej z prawej strony.
+1. Przechodzenie grafu do góry i wzdłuż następnej ścieżki po prawej stronie.
 
 1. Przejdź do kroku 2.
 
-1. Po wyczerpaniu ścieżkę górę ostatni Zanotuj nazwę bieżącego węzła.
+1. Po wyczerpaniu ostatniej ścieżki w górę Zanotuj nazwę bieżącego węzła.
 
 1. Przejdź do kroku 3.
 
-1. Kontynuacja ten proces dla węzła dolnej jest ponownie bieżącego węzła.
+1. Kontynuuj ten proces, dopóki dolny węzeł nie zostanie ponownie bieżącym węzłem.
 
-W związku z tym, dla klasy `E`, kolejność zniszczenia jest:
+W związku z tym `E`, w przypadku klasy, kolejność niszczenia:
 
-1. Wirtualnej klasy bazowej `E`.
+1. Niewirtualna Klasa `E`bazowa.
 
-1. Wirtualnej klasy bazowej `D`.
+1. Niewirtualna Klasa `D`bazowa.
 
-1. Wirtualnej klasy bazowej `C`.
+1. Niewirtualna Klasa `C`bazowa.
 
-1. Wirtualna klasa bazowa `B`.
+1. Wirtualna Klasa `B`bazowa.
 
-1. Wirtualna klasa bazowa `A`.
+1. Wirtualna Klasa `A`bazowa.
 
-Ten proces tworzy uporządkowaną listę unikatowych wpisów. Brak nazwy klasy pojawia się dwukrotnie. Gdy lista jest konstruowany, zostaje przeprowadzony w odwrotnej kolejności i destruktor dla każdej klasy na liście w ciągu ostatnich do pierwszego jest wywoływany.
+Ten proces powoduje utworzenie uporządkowanej listy unikatowych wpisów. Nazwa klasy nie występuje dwa razy. Gdy lista zostanie skonstruowana, jest ona przeszukiwana w kolejności odwrotnej i destruktor dla każdej klasy z listy od ostatniego do pierwszego jest wywoływany.
 
-Kolejność utworzenia lub zniszczenia jest szczególnie ważne w przypadku, gdy konstruktorów i destruktorów na jednych zajęciach zależą od innych składników tworzona pierwszy lub utrwalanie już — na przykład, jeśli destruktor dla `A` opiera się (w ilustracji pokazano powyżej) na `B` nadal jest obecna, gdy jego kod jest wykonywany, lub na odwrót.
+Kolejność konstrukcji lub niszczenia jest przede wszystkim ważna, gdy konstruktory lub destruktory w jednej z klas opierają się na drugim składniku tworzonym w pierwszej lub utrwalaniu dłużej — na przykład `A` , jeśli destruktor dla (na rysunku pokazano powyżej) w `B` dalszym ciągu, gdy wykonywany jest kod lub na odwrót.
 
-Takie współzależności między klasami w programie graph dziedziczenia są założenia niebezpieczne, ponieważ klasy pochodne później można zmienić, czyli ścieżkę skrajnie po lewej stronie, zmieniając kolejność konstrukcje i zniszczenie ruchu.
+Takie współzależności między klasami w grafie dziedziczenia są z natury niebezpieczne, ponieważ klasy pochodne później mogą zmieniać, która jest pierwszą ścieżką, zmieniając kolejność tworzenia i niszczenia.
 
-### <a name="non-virtual-base-classes"></a>Niewirtualne klasy bazowe
+### <a name="non-virtual-base-classes"></a>Niewirtualne klasy podstawowe
 
-Destruktory — wirtualne klasy bazowe są wywoływane w odwrotnej kolejności, w której nazwy klasy bazowej są deklarowane. Rozważmy następującą deklarację klasy:
+Destruktory dla niewirtualnych klas bazowych są wywoływane w odwrotnej kolejności, w której są zadeklarowane nazwy klas bazowych. Rozważmy następującą deklarację klasy:
 
 ```cpp
 class MultInherit : public Base1, public Base2
 ...
 ```
 
-W poprzednim przykładzie, destruktor dla `Base2` jest wywoływana przed destruktor dla `Base1`.
+W poprzednim przykładzie destruktor dla `Base2` jest wywoływany przed destruktorem dla. `Base1`
 
 ## <a name="explicit-destructor-calls"></a>Jawne wywołania destruktora
 
-Jawne wywołania destruktora rzadko jest niezbędne. Jednak może być przydatne do wykonywania oczyszczania obiektów umiejscowiony adresów bezwzględnych. Te obiekty są często są przydzielane przy użyciu zdefiniowanej przez użytkownika **nowe** operator, który przyjmuje argument umieszczania. **Usuń** operator nie cofnięcie przydziału tej pamięci, ponieważ nie jest on przydzielany z wolnym magazynie (Aby uzyskać więcej informacji, zobacz [nowy i delete — operatory](../cpp/new-and-delete-operators.md)). Po wywołaniu destruktora, można jednak wykonać odpowiednie oczyszczania. Aby jawnie wywołać destruktor obiektu `s`, klasy `String`, użyj jednej z następujących instrukcji:
+Jawne wywołanie destruktora jest rzadko konieczne. Może jednak być przydatne do czyszczenia obiektów umieszczonych w adresach bezwzględnych. Te obiekty są często przydzieleni przy użyciu operatora **New** zdefiniowanego przez użytkownika, który przyjmuje argument umieszczania. Operator **delete** nie może cofnąć alokacji tej pamięci, ponieważ nie jest przydzieloną z magazynu wolnego (Aby uzyskać więcej informacji, zobacz [Operatory New i DELETE](../cpp/new-and-delete-operators.md)). Wywołanie do destruktora może jednak wykonać odpowiednie czyszczenie. Aby jawnie wywołać destruktor dla obiektu, `s`klasy `String`, należy użyć jednej z następujących instrukcji:
 
 ```cpp
 s.String::~String();     // non-virtual call
@@ -223,4 +223,28 @@ s.~String();       // Virtual call
 ps->~String();     // Virtual call
 ```
 
-Notacja do jawnych wywołań destruktory, pokazano w poprzednim, należy używać niezależnie od tego, czy typ Określa destruktor. Dzięki temu można wykonywać takich jawnych wywołań nie wiedząc o tym, jeśli destruktor jest zdefiniowany dla typu. Jawne wywołania destruktora, w którym definiowany jest none nie ma znaczenia.
+Notacja dla jawnych wywołań destruktorów, pokazana w poprzednim, może być używana bez względu na to, czy typ definiuje destruktor. Pozwala to na wykonywanie takich jawnych wywołań bez znajomości tego, czy destruktor jest zdefiniowany dla tego typu. Jawne wywołanie destruktora, gdzie żaden nie jest zdefiniowany, nie ma żadnego wpływu.
+
+## <a name="robust-programming"></a>Niezawodne programowanie
+
+Klasa wymaga destruktora, jeśli uzyskuje zasób i bezpiecznie zarządza zasobem, prawdopodobnie musi implementować Konstruktor kopiujący i przypisanie kopii.
+
+Jeśli te funkcje specjalne nie są zdefiniowane przez użytkownika, są one niejawnie definiowane przez kompilator. Niejawnie wygenerowane konstruktory i operatory przypisania wykonują płytki, składowych kopię, która niemal nie występuje, jeśli obiekt zarządza zasobem.
+
+W następnym przykładzie niejawnie wygenerowany Konstruktor kopiujący wykona wskaźniki `str1.text` i `str2.text` odwołuje się do tej samej pamięci, a po powrocie z `copy_strings()`, pamięć zostanie usunięta dwa razy, co jest zachowaniem niezdefiniowanym:
+
+```cpp
+void copy_strings()
+{
+   String str1("I have a sense of impending disaster...");
+   String str2 = str1; // str1.text and str2.text now refer to the same object
+} // delete[] _text; deallocates the same memory twice
+  // undefined behavior
+```
+
+Jawne zdefiniowanie destruktora, konstruktora kopiującego lub operatora przypisania kopiowania uniemożliwia niejawną definicję konstruktora przenoszącego i operatora przypisania przenoszenia. W tym przypadku niepowodzenie udostępniania operacji przenoszenia jest zwykle, jeśli kopiowanie jest kosztowne, pominięta szansa optymalizacji.
+
+## <a name="see-also"></a>Zobacz także
+
+[Konstruktory kopiujące i kopiujące operatory przypisania](../cpp/copy-constructors-and-copy-assignment-operators-cpp.md)</br>
+[Konstruktory przenoszące i przenoszące operatory przypisania](../cpp/move-constructors-and-move-assignment-operators-cpp.md)
