@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: Praca z projektami i rozwiązaniami (C++)'
+title: 'Przewodnik: Praca z projektami i rozwiązaniamiC++()'
 ms.date: 05/14/2019
 helpviewer_keywords:
 - solutions [C++]
@@ -7,46 +7,46 @@ helpviewer_keywords:
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-ms.openlocfilehash: ae2830d58bb992a4ff065aa0e53085a490eb90d7
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 6d9ee71e2608c2ed4935e7a5a3c54af45921e5d2
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400953"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108397"
 ---
-# <a name="walkthrough-working-with-projects-and-solutions-c"></a>Przewodnik: Praca z projektami i rozwiązaniami (C++)
+# <a name="walkthrough-working-with-projects-and-solutions-c"></a>Przewodnik: Praca z projektami i rozwiązaniamiC++()
 
 Oto jak utworzyć projekt C++ w Visual Studio, dodać kod, a następnie skompilować i uruchomić projekt. Projektem w tym instruktażu jest program, który śledzi, ilu graczy gra w różne gry karciane.
 
-W programie Visual Studio praca jest organizowana w projektach i rozwiązaniach. To rozwiązanie może mieć więcej niż jeden projekt — na przykład biblioteki DLL i plik wykonywalny, który odwołuje się do tej biblioteki DLL. Aby uzyskać więcej informacji, zobacz [rozwiązania i projekty](/visualstudio/ide/solutions-and-projects-in-visual-studio).
+W programie Visual Studio prace są zorganizowane w projekty i rozwiązania. Rozwiązanie może mieć więcej niż jeden projekt — na przykład bibliotekę DLL i plik wykonywalny, który odwołuje się do tej biblioteki DLL. Aby uzyskać więcej informacji, zobacz [rozwiązania i projekty](/visualstudio/ide/solutions-and-projects-in-visual-studio).
 
 ## <a name="before-you-start"></a>Przed rozpoczęciem
 
-Do przeprowadzenia tego instruktażu, potrzebujesz programu Visual Studio 2017 r. lub nowszej. Jeśli potrzebujesz kopii, poniżej przedstawiono krótki przewodnik: [Instalowanie obsługi języka C++ w programie Visual Studio](../build/vscpp-step-0-installation.md). Jeśli go jeszcze nie wykonano jeszcze, wykonaj następujące kroki po zakończeniu instalacji przy użyciu samouczka "Hello, World", aby upewnić się, że C++ składniki zostały zainstalowane poprawnie i to wszystko działa.
+Aby ukończyć ten przewodnik, musisz mieć program Visual Studio 2017 lub nowszy. Jeśli potrzebujesz kopii, Oto krótki przewodnik: [Zainstaluj C++ obsługę w programie Visual Studio](../build/vscpp-step-0-installation.md). Jeśli jeszcze tego nie zrobiono, wykonaj następujące czynności po zakończeniu instalacji w samouczku "Hello, World", aby upewnić C++ się, że składniki są poprawnie zainstalowane i wszystkie działają.
 
-Pomaga ono, jeśli można rozumieć podstawy języka C++ i ustalić, jakie kompilatora, konsolidatora i debugera są używane do. W samouczku założono, że znasz Windows i sposobu użycia menu, okna dialogowe,
+Pozwala ona na zapoznanie się z podstawą C++ języka i wiedzą, w jaki sposób jest używany kompilator, konsolidator i debuger. W tym samouczku założono również, że znasz system Windows i jak używać menu, okien dialogowych,
 
 ## <a name="create-a-project"></a>Tworzenie projektu
 
-Aby utworzyć projekt, należy najpierw wybrać szablon typu projektu. Dla każdego typu projektu programu Visual Studio Ustawia ustawienia kompilatora i — w zależności od typu — generuje kod startowy, który można później zmodyfikować. Poniższe kroki różnią się w zależności od tego, która wersja programu Visual Studio, którego używasz. Upewnij się, że w selektorze wersja w lewym górnym rogu tej strony ustawiono poprawnej wersji.
+Aby utworzyć projekt, należy najpierw wybrać szablon typu projektu. Dla każdego typu projektu program Visual Studio ustawia ustawienia kompilatora i — w zależności od typu — generuje kod początkowy, który można później zmodyfikować. Poniższe kroki różnią się w zależności od używanej wersji programu Visual Studio. Upewnij się, że selektor wersji w lewym górnym rogu tej strony ma ustawioną poprawną wersję.
 
 ::: moniker range="vs-2019"
 
-### <a name="to-create-a-project-in-visual-studio-2019"></a>Aby utworzyć projekt w programie Visual Studio 2019 r.
+### <a name="to-create-a-project-in-visual-studio-2019"></a>Aby utworzyć projekt w programie Visual Studio 2019
 
-1. W menu głównym wybierz **pliku** > **New** > **projektu** otworzyć **Utwórz nowy projekt** okna dialogowego pole.
+1. Z menu głównego wybierz pozycję **plik** > **Nowy** > **projekt** , aby otworzyć okno dialogowe **Tworzenie nowego projektu** .
 
-1. W górnej części okna dialogowego, ustaw **języka** do **C++** ustaw **platformy** do **Windows**i ustaw **Typprojektu** do **konsoli**. 
+1. W górnej części okna dialogowego Ustaw **Język** na **C++** , ustaw platformę na **system Windows**i ustaw **Typ projektu** na **Console**.
 
-1. Wybierz z listy filtrowanej typów projektów, **aplikacja Konsolowa** wybierz **dalej**. Na następnej stronie podaj *gry* jako nazwę projektu.
+1. Z listy filtrowane typy projektów wybierz pozycję **Aplikacja konsolowa** , a następnie wybierz przycisk **dalej**. Na następnej stronie wprowadź *grę* jako nazwę dla projektu.
 
-   Można zaakceptować lokalizację domyślną **lokalizacji** listy rozwijanej, wprowadzić inną lokalizację lub wybierz **Przeglądaj** przycisk, aby przejść do katalogu, w którym chcesz zapisać projekt.
+   Można zaakceptować lokalizację domyślną na liście rozwijanej **Lokalizacja** , wprowadzić inną lokalizację lub wybrać przycisk **Przeglądaj** , aby przejść do katalogu, w którym ma zostać zapisany projekt.
 
-   Podczas tworzenia projektu Visual Studio umieszcza projekt w rozwiązaniu. Domyślnie rozwiązanie ma taką samą nazwę jak projekt. Możesz zmienić nazwę w **Nazwa rozwiązania** polu, ale w tym przykładzie zachowamy nazwę domyślną.
+   Podczas tworzenia projektu program Visual Studio umieszcza projekt w rozwiązaniu. Domyślnie rozwiązanie ma taką samą nazwę jak projekt. Można zmienić nazwę w polu **Nazwa rozwiązania** , ale w tym przykładzie należy zachować nazwę domyślną.
 
-1. Wybierz **Utwórz** przycisk, aby utworzyć projekt.
+1. Wybierz przycisk **Utwórz** , aby utworzyć projekt.
 
-   Visual Studio tworzy nowe rozwiązanie i pliki projektu i zostanie otwarty edytor dla pliku kodu źródłowego Game.cpp, jego wygenerowania.
+   Program Visual Studio tworzy nowe rozwiązanie i pliki projektu, a następnie otwiera edytor dla wygenerowanego pliku kodu źródłowego Game. cpp.
 
 ::: moniker-end
 
@@ -54,21 +54,21 @@ Aby utworzyć projekt, należy najpierw wybrać szablon typu projektu. Dla każd
 
 ### <a name="to-create-a-project-in-visual-studio-2017"></a>Aby utworzyć projekt w programie Visual Studio 2017
 
-1. Na pasku menu wybierz **pliku** > **New** > **projektu**.
+1. Na pasku menu wybierz pozycję **plik** > **Nowy** > **projekt**.
 
-1. W okienku po lewej stronie **nowy projekt** okna dialogowego rozwiń **zainstalowane** i wybierz **Visual C++** , jeśli nie jest otwarty.
+1. W lewym okienku okna dialogowego **Nowy projekt** rozwiń węzeł **zainstalowane** i wybierz pozycję Wizualizacja **C++** , jeśli nie jest jeszcze otwarty.
 
-1. Na liście zainstalowanych szablonów w środkowym okienku wybierz **aplikacji konsoli Windows**.
+1. Na liście zainstalowanych szablonów w środkowym okienku wybierz pozycję **Aplikacja konsolowa systemu Windows**.
 
-1. Wprowadź nazwę dla projektu w **nazwa** pole. W tym przykładzie wprowadź *gry*.
+1. Wprowadź nazwę projektu w polu **Nazwa** . Na potrzeby tego przykładu wpisz *Game*.
 
-   Można zaakceptować lokalizację domyślną **lokalizacji** listy rozwijanej, wprowadzić inną lokalizację lub wybierz **Przeglądaj** przycisk, aby przejść do katalogu, w którym chcesz zapisać projekt.
+   Można zaakceptować lokalizację domyślną na liście rozwijanej **Lokalizacja** , wprowadzić inną lokalizację lub wybrać przycisk **Przeglądaj** , aby przejść do katalogu, w którym ma zostać zapisany projekt.
 
-   Podczas tworzenia projektu Visual Studio umieszcza projekt w rozwiązaniu. Domyślnie rozwiązanie ma taką samą nazwę jak projekt. Możesz zmienić nazwę w **Nazwa rozwiązania** polu, ale w tym przykładzie zachowamy nazwę domyślną.
+   Podczas tworzenia projektu program Visual Studio umieszcza projekt w rozwiązaniu. Domyślnie rozwiązanie ma taką samą nazwę jak projekt. Można zmienić nazwę w polu **Nazwa rozwiązania** , ale w tym przykładzie należy zachować nazwę domyślną.
 
-1. Wybierz **OK** przycisk, aby utworzyć projekt.
+1. Wybierz przycisk **OK** , aby utworzyć projekt.
 
-   Visual Studio tworzy nowe rozwiązanie i pliki projektu i zostanie otwarty edytor dla pliku kodu źródłowego Game.cpp, jego wygenerowania.
+   Program Visual Studio tworzy nowe rozwiązanie i pliki projektu, a następnie otwiera edytor dla wygenerowanego pliku kodu źródłowego Game. cpp.
 
 ::: moniker-end
 
@@ -76,41 +76,41 @@ Aby utworzyć projekt, należy najpierw wybrać szablon typu projektu. Dla każd
 
 ### <a name="to-create-a-project-in-visual-studio-2015"></a>Aby utworzyć projekt w programie Visual Studio 2015
 
-1. Na pasku menu wybierz **pliku** > **New** > **projektu**.
+1. Na pasku menu wybierz pozycję **plik** > **Nowy** > **projekt**.
 
-1. W okienku po lewej stronie **nowy projekt** okna dialogowego rozwiń **zainstalowane** i wybierz **Visual C++** , jeśli nie jest otwarty.
+1. W lewym okienku okna dialogowego **Nowy projekt** rozwiń węzeł **zainstalowane** i wybierz pozycję Wizualizacja **C++** , jeśli nie jest jeszcze otwarty.
 
-1. Na liście zainstalowanych szablonów w środkowym okienku wybierz **Aplikacja konsoli Win32**.
+1. Na liście zainstalowanych szablonów w środkowym okienku wybierz pozycję **aplikacja konsoli Win32**.
 
-1. Wprowadź nazwę dla projektu w **nazwa** pole. W tym przykładzie wprowadź *gry*.
+1. Wprowadź nazwę projektu w polu **Nazwa** . Na potrzeby tego przykładu wpisz *Game*.
 
-   Można zaakceptować lokalizację domyślną **lokalizacji** listy rozwijanej, wprowadzić inną lokalizację lub wybierz **Przeglądaj** przycisk, aby przejść do katalogu, w którym chcesz zapisać projekt.
+   Można zaakceptować lokalizację domyślną na liście rozwijanej **Lokalizacja** , wprowadzić inną lokalizację lub wybrać przycisk **Przeglądaj** , aby przejść do katalogu, w którym ma zostać zapisany projekt.
 
-   Podczas tworzenia projektu Visual Studio umieszcza projekt w rozwiązaniu. Domyślnie rozwiązanie ma taką samą nazwę jak projekt. Możesz zmienić nazwę w **Nazwa rozwiązania** polu, ale w tym przykładzie zachowamy nazwę domyślną.
+   Podczas tworzenia projektu program Visual Studio umieszcza projekt w rozwiązaniu. Domyślnie rozwiązanie ma taką samą nazwę jak projekt. Można zmienić nazwę w polu **Nazwa rozwiązania** , ale w tym przykładzie należy zachować nazwę domyślną.
 
-1. Wybierz **OK** przycisk, aby utworzyć projekt.
+1. Wybierz przycisk **OK** , aby utworzyć projekt.
 
-   Visual Studio tworzy nowe rozwiązanie i pliki projektu i zostanie otwarty edytor dla pliku kodu źródłowego Game.cpp, jego wygenerowania.
+   Program Visual Studio tworzy nowe rozwiązanie i pliki projektu, a następnie otwiera edytor dla wygenerowanego pliku kodu źródłowego Game. cpp.
 
 ::: moniker-end
 
-## <a name="organize-projects-and-files"></a>Organizowanie projektów i plików
+## <a name="organize-projects-and-files"></a>Organizuj projekty i pliki
 
-Możesz użyć **Eksploratora rozwiązań** do organizowania i zarządzania projektami, plikami i innych zasobów w rozwiązaniu.
+Za pomocą **Eksplorator rozwiązań** można organizować i zarządzać projektami, plikami i innymi zasobami w rozwiązaniu.
 
-Tej części instruktażu pokazano, jak dodać klasę do projektu. Po dodaniu klasy program Visual Studio dodaje odpowiednie pliki .h i .cpp. Można wyświetlić wyniki w **Eksploratora rozwiązań**.
+W tej części przewodnika pokazano, jak dodać klasę do projektu. Po dodaniu klasy program Visual Studio dodaje odpowiednie pliki. h i. cpp. Wyniki można zobaczyć w **Eksplorator rozwiązań**.
 
 ### <a name="to-add-a-class-to-a-project"></a>Aby dodać klasę do projektu
 
-1. Jeśli **Eksploratora rozwiązań** okno nie jest wyświetlane w programie Visual Studio, na pasku menu, wybierz polecenie **widoku** > **Eksploratora rozwiązań**.
+1. Jeśli okno **Eksplorator rozwiązań** nie jest wyświetlane w programie Visual Studio, na pasku menu wybierz polecenie **Wyświetl** > **Eksplorator rozwiązań**.
 
-1. W **Eksploratora rozwiązań**, wybierz opcję **gry** projektu. Na pasku menu wybierz **projektu** > **Dodaj klasę**.
+1. W **Eksplorator rozwiązań**wybierz projekt **gry** . Na pasku menu wybierz **projekt** > **Dodaj klasę**.
 
-1. W **Dodaj klasę** okno dialogowe, wprowadź *wartość Cardgame* w **Nazwa klasy** pole. Nie należy modyfikować domyślnych nazw plików i ustawień. Wybierz **OK** przycisku.
+1. W oknie dialogowym **Dodawanie klasy** wprowadź *plik Cardgame* w polu **Nazwa klasy** . Nie należy modyfikować domyślnych nazw plików i ustawień. Wybierz **OK** przycisku.
 
-   Visual Studio tworzy nowe pliki i dodaje je do projektu. Widać je w **Eksploratora rozwiązań** okna. Pliki Cardgame.h i Cardgame.cpp są otwarte w edytorze.
+   Program Visual Studio tworzy nowe pliki i dodaje je do projektu. Można je wyświetlić w oknie **Eksplorator rozwiązań** . Pliki plik Cardgame. h i plik Cardgame. cpp są otwierane w edytorze.
 
-1. Edytuj plik Cardgame.h i wprowadzić te zmiany:
+1. Edytuj plik plik Cardgame. h i wprowadź następujące zmiany:
 
    - Dodaj dwie prywatne składowe danych po nawiasie klamrowym otwierającym definicję klasy.
      <!--      [!code-cpp[NVC_Walkthrough_Working_With_Projects#100](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_1.h)] -->
@@ -120,21 +120,21 @@ Tej części instruktażu pokazano, jak dodać klasę do projektu. Po dodaniu kl
       static int totalParticipants;
       ```
 
-   - Zmodyfikuj domyślnego konstruktora wygenerowanego przez Visual Studio. Po `public:` specyfikatorze dostępu, znajdź wiersz, który wygląda następująco:
+   - Zmodyfikuj domyślnego konstruktora wygenerowanego przez Visual Studio. Po specyfikatorze `public:` dostępu Znajdź wiersz, który wygląda następująco:
 
       `Cardgame();`
 
-      Zmodyfikuj konstruktora, aby pobierał jeden parametr typu `int`o nazwie *graczy*.
+      Zmodyfikuj konstruktora, aby przyjmować jeden parametr typu `int`o nazwie *Players*.
 
       <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]-->
       `Cardgame(int players);`
 
-   - Po domyślnym destruktorze Dodaj wbudowaną deklarację dla `static int` funkcja elementu członkowskiego o nazwie *GetParticipants* która nie przyjmuje żadnych parametrów i zwraca `totalParticipants` wartość.
+   - Po domyślnym destruktorze Dodaj wbudowaną deklarację dla `static int` funkcji składowej o nazwie getuczestnicy, która nie przyjmuje `totalParticipants` parametrów i zwraca wartość.
 
       <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]-->
       `static int GetParticipants() { return totalParticipants; }`
 
-   Plik Cardgame.h powinien wyglądać podobnie poniższy kod, po zmianach przypominać:
+   Plik plik Cardgame. h powinien wyglądać podobnie do poniższego kodu:
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#103](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_4.h)]-->
 
@@ -151,11 +151,11 @@ Tej części instruktażu pokazano, jak dodać klasę do projektu. Po dodaniu kl
     };
     ```
 
-   Wiersz `#pragma once` nakazuje kompilatorowi dołączenie pliku nagłówkowym tylko jeden raz. Aby uzyskać więcej informacji, zobacz [po](../preprocessor/once.md). Aby uzyskać informacje dotyczące innych słów kluczowych języka C++, w pliku nagłówkowym powyżej, zobacz [klasy](../cpp/class-cpp.md), [int](../cpp/fundamental-types-cpp.md), [statyczne](../cpp/storage-classes-cpp.md), i [publicznych](../cpp/public-cpp.md).
+   Wiersz `#pragma once` nakazuje kompilatorowi dołączenie pliku nagłówka tylko jeden raz. Aby uzyskać więcej informacji, zobacz [jeden raz](../preprocessor/once.md). Aby uzyskać informacje dotyczące C++ innych słów kluczowych w pliku nagłówkowym, zobacz [klasy](../cpp/class-cpp.md), [int](../cpp/fundamental-types-cpp.md), [static](../cpp/storage-classes-cpp.md)i [Public](../cpp/public-cpp.md).
 
-1. Wybierz **Cardgame.cpp** kartę w górnej części okienka edycji, aby go otworzyć do edycji.
+1. Wybierz kartę **plik Cardgame. cpp** w górnej części okienka Edycja, aby otworzyć ją do edycji.
 
-1. Usuń całą zawartość pliku i Zamień kod:
+1. Usuń wszystko z pliku i zastąp je kodem:
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#111](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_5.cpp)]-->
 
@@ -182,15 +182,15 @@ Tej części instruktażu pokazano, jak dodać klasę do projektu. Po dodaniu kl
     ```
 
    > [!NOTE]
-   > Podczas wprowadzania kodu można użyć funkcji autouzupełniania. Na przykład, jeśli ten kod, za pomocą klawiatury, można wprowadzić *pl* lub *tot* , a następnie naciśnij klawisz **Ctrl**+**spacja**. Automatyczne uzupełnianie wprowadza `players` lub `totalParticipants` dla Ciebie.
+   > Podczas wprowadzania kodu można użyć funkcji autouzupełniania. Na przykład, jeśli wprowadzisz ten kod na klawiaturze, możesz wprowadzić wartość *pl* lub *tot* , a następnie nacisnąć klawisz **Ctrl**+**spacja**. Autouzupełnianie wprowadza `players` lub `totalParticipants` dla Ciebie.
 
-## <a name="add-test-code-to-your-main-function"></a>Dodaj kod testowy do funkcji main
+## <a name="add-test-code-to-your-main-function"></a>Dodawanie kodu testowego do funkcji Main
 
-Dodawanie kodu do aplikacji, który umożliwia sprawdzenie, nowych funkcji.
+Dodaj do aplikacji kod, który testuje nowe funkcje.
 
-### <a name="to-add-test-code-to-the-project"></a>Aby dodać kod testu do projektu
+### <a name="to-add-test-code-to-the-project"></a>Aby dodać kod testowy do projektu
 
-1. W **Game.cpp** okna edytora Zastąp istniejący kod składnią:
+1. W oknie Edytor **gier. cpp** Zastąp istniejący kod:
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#120](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_6.cpp)]-->
 
@@ -219,17 +219,17 @@ Dodawanie kodu do aplikacji, który umożliwia sprawdzenie, nowych funkcji.
     }
     ```
 
-   Ten kod dodaje funkcję testową, `PlayGames`, aby kod źródłowy i wywołania w `main`.
+   Kod dodaje funkcję `PlayGames`testową,, do kodu źródłowego i wywołuje ją w `main`.
 
-## <a name="build-and-run-your-app-project"></a>Skompiluj i uruchom projekt aplikacji
+## <a name="build-and-run-your-app-project"></a>Kompilowanie i uruchamianie projektu aplikacji
 
-Następnie skompilować projekt i uruchomić aplikację.
+Następnie Skompiluj projekt i uruchom aplikację.
 
 ### <a name="to-build-and-run-the-project"></a>Aby skompilować i uruchomić projekt
 
-1. Na pasku menu wybierz **kompilacji** > **Kompiluj rozwiązanie**.
+1. Na pasku menu wybierz polecenie **Kompiluj** > **kompilację rozwiązania**.
 
-   Dane wyjściowe z kompilacji są wyświetlane w **dane wyjściowe** okna. Jeśli kompilacja zakończy się pomyślnie, dane wyjściowe powinny przypominać:
+   Dane wyjściowe z kompilacji są wyświetlane w oknie **danych wyjściowych** . Jeśli kompilacja zakończy się pomyślnie, dane wyjściowe powinny wyglądać następująco:
 
     ```Output
     1>------ Build started: Project: Game, Configuration: Debug Win32 ------
@@ -241,11 +241,11 @@ Następnie skompilować projekt i uruchomić aplikację.
     ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
     ```
 
-   **Dane wyjściowe** okna może pokazywać różne kroki, w zależności od konfiguracji kompilacji, ale jeśli kompilacja projektu zakończy się pomyślnie, ostatni wiersz powinien być podobny wyświetlone dane wyjściowe.
+   Okno **dane wyjściowe** może pokazywać różne kroki, w zależności od konfiguracji kompilacji, ale jeśli kompilacja projektu zakończy się powodzeniem, ostatni wiersz powinien wyglądać podobnie do przedstawionego w danych wyjściowych.
 
-   Jeśli kompilacja nie powiodła się, porównaj swój kod, aby kod, który jest wyświetlany w poprzednich krokach.
+   Jeśli kompilacja nie powiodła się, porównaj kod z kodem, który jest przedstawiony w poprzednich krokach.
 
-1. Aby uruchomić projekt, na pasku menu, wybierz opcję **debugowania** > **Rozpocznij bez debugowania**. Okno konsoli powinna zostać wyświetlona, a dane wyjściowe powinny przypominać:
+1. Aby uruchomić projekt, na pasku menu wybierz **Debuguj** > **Uruchom bez debugowania**. Powinien pojawić się okno konsoli, a dane wyjściowe powinny wyglądać następująco:
 
     ```Output
     4 players have started a new game.  There are now 4 players in total.
@@ -254,14 +254,14 @@ Następnie skompilować projekt i uruchomić aplikację.
     5 players have started a new game.  There are now 18 players in total.
     ```
 
-   Naciśnij dowolny klawisz, aby zamknąć okno konsoli.
+   Naciśnij klawisz, aby odrzucić okno konsoli.
 
-Gratulacje, pomyślnie skompilowane rozwiązanie i projekt aplikacji. Nadal przewodnika, aby dowiedzieć się więcej o tym, jak tworzyć projekty kodu C++ w programie Visual Studio.
+Gratulacje, projekt aplikacji i rozwiązanie zostały pomyślnie skompilowane. Przejdź do przewodnika, aby dowiedzieć się więcej C++ na temat tworzenia projektów kodu w programie Visual Studio.
 
 ## <a name="next-steps"></a>Następne kroki
 
-**Poprzednie:** [Projektowanie aplikacji w języku C++ w środowisku Visual Studio IDE](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)<br/>
-**Dalej:** [Przewodnik: Tworzenie projektu (C++)](../ide/walkthrough-building-a-project-cpp.md)
+**Ubiegł** [Projektowanie aplikacji w języku C++ w środowisku Visual Studio IDE](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)<br/>
+**Ponown** [Przewodnik: Tworzenie projektu (C++)](../ide/walkthrough-building-a-project-cpp.md)
 
 ## <a name="see-also"></a>Zobacz także
 

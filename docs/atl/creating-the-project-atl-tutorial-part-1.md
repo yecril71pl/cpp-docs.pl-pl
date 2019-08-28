@@ -3,19 +3,16 @@ title: Tworzenie projektu (ALT — Samouczek, część 1)
 ms.custom: get-started-article
 ms.date: 08/19/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 9f7f62ec94d5ac6d6076763853aa19297cf310e6
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 5bb4c6edffd13e13a451b203feea9a03461a9318
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630689"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108369"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Tworzenie projektu (ALT — Samouczek, część 1)
 
-W tym samouczku przedstawiono krok po kroku przez nieprzypisany Projekt ATL, który tworzy obiekt ActiveX, który wyświetla wielokąt. Obiekt zawiera opcje umożliwiające użytkownikowi zmianę liczby stron, które tworzą Wielokąt, i kodu, aby odświeżyć ekran.
-
-> [!NOTE]
-> Biblioteki ATL i MFC nie są ogólnie obsługiwane w wersjach Express programu Visual Studio.
+Ten samouczek przeprowadzi Cię krok po kroku przez Projekt ATL nienależący do atrybutu, który tworzy obiekt ActiveX, który wyświetla wielokąt. Obiekt zawiera opcje umożliwiające użytkownikowi zmianę liczby stron, które tworzą Wielokąt, i kodu, aby odświeżyć ekran.
 
 > [!NOTE]
 > W tym samouczku jest tworzony ten sam kod źródłowy, który jest przykładem wielokąta. Jeśli chcesz, aby nie wprowadzać kodu źródłowego ręcznie, możesz pobrać go z [przykładowej abstrakcyjnej próbki wielokąta](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/Polygon). Następnie można odwoływać się do kodu źródłowego Wielokąt podczas pracy w samouczku lub użyć go do sprawdzenia błędów w projekcie.

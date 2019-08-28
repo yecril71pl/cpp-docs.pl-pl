@@ -1,6 +1,6 @@
 ---
 title: Klasa CMFCTabCtrl
-ms.date: 11/04/2016
+ms.date: 08/28/2019
 f1_keywords:
 - CMFCTabCtrl
 - AFXTABCTRL/CMFCTabCtrl
@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 442860b1751591c5763a768f9bd9b6ba59f33fa5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 74f5c6e0471682a6b96e82cb2f80cc53155866ca
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504886"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108486"
 ---
 # <a name="cmfctabctrl-class"></a>Klasa CMFCTabCtrl
 
@@ -970,7 +970,7 @@ Ma wartość TRUE, jeśli określona karta została uaktywniona; Wartość FALSE
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda nie wysyła powiadomienia AFX_WM_CHANGE_ACTIVE_TAB do okna nadrzędnego kontrolki karta.
+Spowoduje to wysłanie `AFX_WM_CHANGE_ACTIVE_TAB` powiadomienia do okna nadrzędnego i ramki elementu nadrzędnego kontrolki karta.
 
 Metoda automatycznie wywołuje metodę [CMFCTabCtrl:: HideActiveWindowHorzScrollBar](#hideactivewindowhorzscrollbar) , aby zapobiec miganiu ekranu. `SetActiveTab`
 

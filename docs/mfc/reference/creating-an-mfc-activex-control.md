@@ -1,44 +1,42 @@
 ---
 title: Tworzenie kontrolki ActiveX MFC
-ms.date: 09/12/2018
+ms.date: 08/19/2019
 f1_keywords:
 - vc.appwiz.activex.project
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - ActiveX controls [MFC], creating
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
-ms.openlocfilehash: c67f925773854258111b3a2aa1967f51de4df127
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: d35b788910b0c73a3b6da85faf119958ffbccea0
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708251"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108441"
 ---
 # <a name="creating-an-mfc-activex-control"></a>Tworzenie kontrolki ActiveX MFC
 
-Programy formantu ActiveX są moduły programy, w celu określonego typu funkcji do aplikacji nadrzędnej. Na przykład można utworzyć kontrolce, takiej jak przycisk do użycia w oknie dialogowym lub narzędzi do użycia na stronie sieci Web.
+Programy sterujące ActiveX są programami modularnymi zaprojektowanymi w celu zapewnienia określonego typu funkcjonalności aplikacji nadrzędnej. Na przykład można utworzyć kontrolkę, taką jak przycisk do użycia w oknie dialogowym, lub pasek narzędzi do użycia na stronie sieci Web.
 
 >[!IMPORTANT]
-> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji, zobacz [formantów ActiveX](../activex-controls.md).
+> Kontrolka ActiveX to Starsza technologia, która nie powinna być używana do nowych celów programistycznych. Aby uzyskać więcej informacji, zobacz [kontrolki ActiveX](../activex-controls.md).
 
-Najprostszym sposobem utworzenia kontrolki MFC ActiveX jest użycie [Kreator kontrolek ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md).
+Najprostszym sposobem tworzenia kontrolki ActiveX MFC jest użycie [Kreatora kontrolek ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md).
 
-### <a name="to-create-an-mfc-activex-control-using-the-mfc-activex-control-wizard"></a>Aby utworzyć formant ActiveX MFC przy użyciu Kreatora kontrolek ActiveX MFC
+### <a name="to-create-an-mfc-activex-control-using-the-mfc-activex-control-wizard"></a>Aby utworzyć formant ActiveX MFC przy użyciu kreatora kontrolki ActiveX MFC
 
-1. Postępuj zgodnie z instrukcjami w temacie Pomocy [Tworzenie projektu aplikacji konsoli w języku C++](../../get-started/tutorial-console-cpp.md).
+1. Postępuj zgodnie z instrukcjami w temacie pomocy [Tworzenie aplikacji MFC,](creating-an-mfc-application.md) ale wybierz **formant ActiveX MFC** z listy dostępnych szablonów.
 
-1. W **nowy projekt** okno dialogowe, wybierz opcję **kontrolki ActiveX MFC** ikonę w okienku szablonów, aby otworzyć Kreator kontrolek ActiveX MFC.
-
-1. Zdefiniuj swoje [ustawienia aplikacji](../../mfc/reference/application-settings-mfc-activex-control-wizard.md), [nazwy kontrolek](../../mfc/reference/control-names-mfc-activex-control-wizard.md), i [sterowanie ustawieniami](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) przy użyciu Kreatora kontrolek ActiveX MFC.
+1. Zdefiniuj [Ustawienia aplikacji](../../mfc/reference/application-settings-mfc-activex-control-wizard.md), [nazwy kontrolek](../../mfc/reference/control-names-mfc-activex-control-wizard.md)i [Ustawienia kontrolki](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) za pomocą Kreatora kontrolek ActiveX MFC.
 
     > [!NOTE]
-    >  Pomiń ten krok, aby kreator ustawienia domyślne.
+    >  Pomiń ten krok, aby zachować ustawienia domyślne kreatora.
 
-1. Kliknij przycisk **Zakończ** aby zamknąć kreatora i otworzyć nowy projekt w środowisku programistycznym.
+1. Kliknij przycisk **Zakończ** , aby zamknąć kreatora i otworzyć nowy projekt w środowisku programistycznym.
 
-Po utworzeniu projektu można przeglądać pliki utworzone w **Eksploratora rozwiązań**. Aby uzyskać więcej informacji o plikach Kreator tworzy dla projektu, zobacz plik ReadMe.txt wygenerowany przez projekt. Aby uzyskać więcej informacji na temat typów plików, zobacz [typy plików utworzonych dla programu Visual Studio C++ projektów](../../build/reference/file-types-created-for-visual-cpp-projects.md).
+Po utworzeniu projektu można wyświetlić pliki utworzone w **Eksplorator rozwiązań**. Aby uzyskać więcej informacji na temat plików tworzonych przez kreatora dla projektu, zobacz plik Readme. txt wygenerowany przez projekt. Aby uzyskać więcej informacji na temat typów plików, zobacz [typy plików utworzonych dla projektów C++ programu Visual Studio](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
-Po utworzeniu projektu umożliwia kreatorów kodu Dodaj [funkcje](../../ide/add-member-function-wizard.md), [zmienne](../../ide/add-member-variable-wizard.md), [zdarzenia](../../ide/add-event-wizard.md), [właściwości](../../ide/names-add-property-wizard.md), i [metody](../../ide/add-method-wizard.md). Aby uzyskać więcej informacji na temat dostosowywania formant ActiveX, zobacz [kontrolki ActiveX MFC](../../mfc/mfc-activex-controls.md).
+Po utworzeniu projektu można użyć kreatorów kodu do dodawania [funkcji](../../ide/add-member-function-wizard.md), [zmiennych](../../ide/add-member-variable-wizard.md), [zdarzeń](../../ide/add-event-wizard.md), [Właściwości](../../ide/names-add-property-wizard.md)i [metod](../../ide/add-method-wizard.md). Aby uzyskać więcej informacji na temat dostosowywania kontrolki ActiveX, zobacz [kontrolki ActiveX MFC](../../mfc/mfc-activex-controls.md).
 
 ## <a name="see-also"></a>Zobacz także
 
