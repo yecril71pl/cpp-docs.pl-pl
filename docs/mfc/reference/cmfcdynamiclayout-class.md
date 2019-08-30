@@ -1,6 +1,6 @@
 ---
 title: Klasa CMFCDynamicLayout
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - CMFCDynamicLayout
 - AFXLAYOUT/CMFCDynamicLayout
@@ -15,16 +15,16 @@ f1_keywords:
 - AFXLAYOUT/CMFCDynamicLayout::LoadResource
 - AFXLAYOUT/CMFCDynamicLayout::SetMinSize
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
-ms.openlocfilehash: 40dedbe2737a79b7531b8acd47870ce7cb788604
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1ddf35b514d9b89f53d5f1307a6ecb7132d2854
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237595"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177511"
 ---
 # <a name="cmfcdynamiclayout-class"></a>Klasa CMFCDynamicLayout
 
-Określa, jak przenieść i zmiany rozmiaru, ponieważ użytkownik zmienia rozmiar okna kontrolki w oknie.
+Określa sposób przenoszenia i zmiany rozmiaru kontrolek w oknie, gdy użytkownik zmienia rozmiar okna.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,38 +38,38 @@ class CMFCDynamicLayout : public CObject
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`CMFCDynamicLayout::CMFCDynamicLayout`|Konstruuje `CMFCDynamicLayout` obiektu.|
+|`CMFCDynamicLayout::CMFCDynamicLayout`|Konstruuje `CMFCDynamicLayout` obiekt.|
 |`CMFCDynamicLayout::~CMFCDynamicLayout`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCDynamicLayout::AddItem](#additem)|Dodaje okno podrzędne, zwykle kontrolkę, do listy systemu windows, które są kontrolowane przez Menedżera układ dynamiczny.|
-|[CMFCDynamicLayout::Adjust](#adjust)|Dodaje okno podrzędne, zwykle kontrolkę, do listy systemu windows, które są kontrolowane przez Menedżera układ dynamiczny.|
-|[CMFCDynamicLayout::Create](#create)|Przechowuje i weryfikuje okno hosta.|
-|[CMFCDynamicLayout::GetHostWnd](#gethostwnd)|Zwraca wskaźnik do okna hosta.|
-|[CMFCDynamicLayout::GetMinSize](#getminsize)|Zwraca rozmiar okna, poniżej której układu nie jest uwzględniany.|
-|[CMFCDynamicLayout::GetWindowRect](#getwindowrect)|Pobiera prostokąt dla bieżącego obszaru klienckiego okna.|
-|[CMFCDynamicLayout::HasItem](#hasitem)|Sprawdza, jeśli kontrolka podrzędna została dodana do układ dynamiczny.|
-|[CMFCDynamicLayout::IsEmpty](#isempty)|Sprawdza, czy układ dynamiczny ma nie okien podrzędnych dodane.|
-|[CMFCDynamicLayout::LoadResource](#loadresource)|Odczytuje układ dynamiczny z zasobu AFX_DIALOG_LAYOUT, a następnie stosuje układ okna hosta.|
-|statyczne [CMFCDynamicLayout::MoveHorizontal](#movehorizontal)|Pobiera [MoveSettings](#movesettings_structure) wartość, która definiuje, ile kontrolka podrzędna zostanie przesunięta w poziomie, gdy użytkownik zmienia rozmiar okna obsługi.|
-|statyczne [CMFCDynamicLayout::MoveHorizontalAndVertical](#movehorizontalandvertical)|Pobiera [MoveSettings](#movesettings_structure) wartość, która definiuje, ile kontrolka podrzędna zostanie przesunięta w poziomie, gdy użytkownik zmienia rozmiar okna obsługi.|
-|statyczne [CMFCDynamicLayout::MoveNone](#movenone)|Pobiera [MoveSettings](#movesettings_structure) wartość, która reprezentuje nie ruchu pionowych lub poziomych, kontrolki podrzędne.|
-|statyczne [CMFCDynamicLayout::MoveVertical](#movevertical)|Pobiera [MoveSettings](#movesettings_structure) wartość, która definiuje, ile kontrolka podrzędna zostanie przesunięta w pionie, gdy użytkownik zmienia rozmiar okna obsługi.|
-|[CMFCDynamicLayout::SetMinSize](#setminsize)|Ustawia rozmiar okna, poniżej której układu nie jest uwzględniany.|
-|statyczne [CMFCDynamicLayout::SizeHorizontal](#sizehorizontal)|Pobiera [SizeSettings](#sizesettings_structure) wartość, która definiuje, ile kontrolki podrzędnej zmiany rozmiaru w poziomie, gdy użytkownik zmienia rozmiar okna obsługi.|
-|statyczne [CMFCDynamicLayout::SizeHorizontalAndVertical](#sizehorizontalandvertical)|Pobiera [SizeSettings](#sizesettings_structure) wartość, która definiuje, ile kontrolki podrzędnej zmiany rozmiaru w poziomie, gdy użytkownik zmienia rozmiar okna obsługi.|
-|statyczne [CMFCDynamicLayout::SizeNone](#sizenone)|Pobiera [SizeSettings](#sizesettings_structure) wartość, która reprezentuje nie zmieni się rozmiar kontrolki podrzędnej.|
-|statyczne [CMFCDynamicLayout::SizeVertical](#sizevertical)|Pobiera [SizeSettings](#sizesettings_structure) wartość, która definiuje, ile kontrolki podrzędnej zmiany rozmiaru w pionie, gdy użytkownik zmienia rozmiar okna obsługi.|
+|[CMFCDynamicLayout:: AddItem](#additem)|Dodaje okno podrzędne, zazwyczaj kontrolkę, do listy okien, które są kontrolowane przez Menedżera układu dynamicznego.|
+|[CMFCDynamicLayout:: Dopasuj](#adjust)|Dodaje okno podrzędne, zazwyczaj kontrolkę, do listy okien, które są kontrolowane przez Menedżera układu dynamicznego.|
+|[CMFCDynamicLayout:: Create](#create)|Zapisuje i sprawdza poprawność okna hosta.|
+|[CMFCDynamicLayout:: GetHostWnd](#gethostwnd)|Zwraca wskaźnik do okna hosta.|
+|[CMFCDynamicLayout:: GetMinSize](#getminsize)|Zwraca rozmiar okna, poniżej którego układ nie jest dostosowany.|
+|[CMFCDynamicLayout:: GetWindowRect](#getwindowrect)|Pobiera prostokąt dla bieżącego obszaru klienta okna.|
+|[CMFCDynamicLayout:: HasItem](#hasitem)|Sprawdza, czy formant podrzędny został dodany do układu dynamicznego.|
+|[CMFCDynamicLayout:: IsEmpty](#isempty)|Sprawdza, czy układ dynamiczny nie ma dodanych podrzędnych okien.|
+|[CMFCDynamicLayout:: LoadResource](#loadresource)|Odczytuje układ dynamiczny z zasobów AFX_DIALOG_LAYOUT, a następnie stosuje układ do okna hosta.|
+|statyczny [CMFCDynamicLayout:: MoveHorizontal](#movehorizontal)|Pobiera wartość [MoveSettings](#movesettings_structure) , która definiuje, jak dużo kontrolki podrzędnej jest przenoszona w poziomie, gdy użytkownik zmienia rozmiar okna hostingu.|
+|statyczny [CMFCDynamicLayout:: MoveHorizontalAndVertical](#movehorizontalandvertical)|Pobiera wartość [MoveSettings](#movesettings_structure) , która definiuje, jak dużo kontrolki podrzędnej jest przenoszona w poziomie, gdy użytkownik zmienia rozmiar okna hostingu.|
+|statyczny [CMFCDynamicLayout:: MoveNone](#movenone)|Pobiera wartość [MoveSettings](#movesettings_structure) , która reprezentuje brak ruchu, pionowo lub poziomo dla formantu podrzędnego.|
+|statyczny [CMFCDynamicLayout:: MoveVertical](#movevertical)|Pobiera wartość [MoveSettings](#movesettings_structure) , która definiuje, jak dużo kontrolki podrzędnej jest przenoszona w pionie, gdy użytkownik zmienia rozmiar okna hostingu.|
+|[CMFCDynamicLayout::SetMinSize](#setminsize)|Ustawia rozmiar okna, poniżej którego układ nie jest dostosowywany.|
+|statyczny [CMFCDynamicLayout:: SizeHorizontal](#sizehorizontal)|Pobiera wartość [SizeSettings —](#sizesettings_structure) , która określa, ile czasu formant podrzędny jest zmieniany w poziomie, gdy użytkownik zmienia rozmiar okna hostingu.|
+|statyczny [CMFCDynamicLayout:: SizeHorizontalAndVertical](#sizehorizontalandvertical)|Pobiera wartość [SizeSettings —](#sizesettings_structure) , która określa, ile czasu formant podrzędny jest zmieniany w poziomie, gdy użytkownik zmienia rozmiar okna hostingu.|
+|statyczny [CMFCDynamicLayout:: SizeNone](#sizenone)|Pobiera wartość [SizeSettings —](#sizesettings_structure) , która reprezentuje brak zmian w rozmiarze dla formantu podrzędnego.|
+|statyczny [CMFCDynamicLayout:: SizeVertical](#sizevertical)|Pobiera wartość [SizeSettings —](#sizesettings_structure) , która definiuje, jak dużo kontrolki podrzędnej jest zmieniana w pionie, gdy użytkownik zmienia rozmiar okna hostingu.|
 
 ## <a name="nested-types"></a>Zagnieżdżone typy
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Struktura CMFCDynamicLayout::MoveSettings](#movesettings_structure)|Hermetyzuje przenoszenia danych dla formantów w układ dynamiczny.|
-|[Cmfcdynamiclayout::sizesettings — struktura](#sizesettings_structure)|Hermetyzuje dane zmiany rozmiaru formantów w układ dynamiczny.|
+|[CMFCDynamicLayout:: MoveSettings, struktura](#movesettings_structure)|Hermetyzuje przenoszenie danych dla kontrolek w układzie dynamicznym.|
+|[CMFCDynamicLayout:: SizeSettings —, struktura](#sizesettings_structure)|Hermetyzuje zmiany rozmiaru dla kontrolek w układzie dynamicznym.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -81,11 +81,11 @@ class CMFCDynamicLayout : public CObject
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxlayout.h
+**Nagłówek:** afxlayout. h
 
-##  <a name="additem"></a>  CMFCDynamicLayout::AddItem
+##  <a name="additem"></a>CMFCDynamicLayout:: AddItem
 
-Dodaje okno podrzędne, zwykle kontrolkę, do listy systemu windows, które są kontrolowane przez Menedżera układ dynamiczny.
+Dodaje okno podrzędne, zazwyczaj kontrolkę, do listy okien, które są kontrolowane przez Menedżera układu dynamicznego.
 
 ```
 BOOL AddItem(
@@ -99,29 +99,29 @@ BOOL AddItem(
 
 ### <a name="parameters"></a>Parametry
 
-*hwnd*<br/>
-Dojście do okna, aby dodać.
+*Właściwość*<br/>
+Uchwyt do okna do dodania.
 
 *nID*<br/>
-Identyfikator kontrolki podrzędnej do dodania.
+Identyfikator formantu podrzędnego do dodania.
 
 *moveSettings*<br/>
-Struktura, która w tym artykule opisano, jak kontrolka zostanie przeniesiona zgodnie ze zmianami wielkości okna.
+Struktura opisująca, jak zmienia się rozmiar okna.
 
-*sizeSettings*<br/>
-Struktura, która w tym artykule opisano, jak można zmienić formant w zgodnie ze zmianami wielkości okna.
+*SizeSettings —*<br/>
+Struktura opisująca sposób zmiany rozmiaru kontrolki w miarę zmieniania rozmiaru okna.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli element został dodany pomyślnie; w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli element został pomyślnie dodany; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Położenie i rozmiar kontrolki podrzędnej jest zmieniany dynamicznie przy zmianie rozmiaru okna hostowania.
+Położenie i rozmiar kontrolki podrzędnej jest zmieniany dynamicznie w przypadku zmiany rozmiaru okna hostowania.
 
-##  <a name="adjust"></a>  CMFCDynamicLayout::Adjust
+##  <a name="adjust"></a>CMFCDynamicLayout:: Dopasuj
 
-Dodaje okno podrzędne, zwykle kontrolkę, do listy systemu windows, które są kontrolowane przez Menedżera układ dynamiczny.
+Dodaje okno podrzędne, zazwyczaj kontrolkę, do listy okien, które są kontrolowane przez Menedżera układu dynamicznego.
 
 ```
 void Adjust();
@@ -129,11 +129,11 @@ void Adjust();
 
 ### <a name="remarks"></a>Uwagi
 
-Położenie i rozmiar kontrolki podrzędnej jest zmieniany dynamicznie przy zmianie rozmiaru okna hostowania.
+Położenie i rozmiar kontrolki podrzędnej jest zmieniany dynamicznie w przypadku zmiany rozmiaru okna hostowania.
 
-##  <a name="create"></a>  CMFCDynamicLayout::Create
+##  <a name="create"></a>CMFCDynamicLayout:: Create
 
-Przechowuje i weryfikuje okno hosta.
+Zapisuje i sprawdza poprawność okna hosta.
 
 ```
 BOOL Create(CWnd* pHostWnd);
@@ -146,11 +146,11 @@ Wskaźnik do okna hosta.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli tworzenie powiodło się; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli tworzenie powiodło się; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="gethostwnd"></a>  CMFCDynamicLayout::GetHostWnd
+##  <a name="gethostwnd"></a>CMFCDynamicLayout:: GetHostWnd
 
 Zwraca wskaźnik do okna hosta.
 
@@ -164,11 +164,11 @@ Wskaźnik do okna hosta.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie wszystkie pozycje kontrolki podrzędne ponownie obliczone względem tego okna.
+Domyślnie wszystkie pozycje formantu podrzędnego obliczone ponownie względem tego okna.
 
-##  <a name="getminsize"></a>  CMFCDynamicLayout::GetMinSize
+##  <a name="getminsize"></a>CMFCDynamicLayout:: GetMinSize
 
-Zwraca rozmiar okna, poniżej której układu nie jest uwzględniany.
+Zwraca rozmiar okna, poniżej którego układ nie jest dostosowany.
 
 ```
 CSize GetMinSize();
@@ -176,15 +176,15 @@ CSize GetMinSize();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Rozmiar okna, poniżej której układu nie jest uwzględniany.
+Rozmiar okna, poniżej którego układ nie został dostosowany.
 
 ### <a name="remarks"></a>Uwagi
 
-Położenie i rozmiar kontrolki podrzędnej jest zmieniany dynamicznie, gdy zmianie rozmiaru okna hostowania, ale ma minimalnego rozmiaru, poniżej której układ nie jest uwzględniany. Użytkownika można zmienić rozmiar okna na mniejszy, ale części okna są ukryte w widoku.
+Położenie i rozmiar kontrolki podrzędnej jest zmieniany dynamicznie w przypadku zmiany rozmiaru okna hostowania, ale istnieje minimalny rozmiar, poniżej którego układ nie jest dostosowywany. Użytkownik może zmienić rozmiar okna na mniejszy, ale części okna są następnie ukryte z widoku.
 
-##  <a name="getwindowrect"></a>  CMFCDynamicLayout::GetWindowRect
+##  <a name="getwindowrect"></a>CMFCDynamicLayout:: GetWindowRect
 
-Pobiera prostokąt dla bieżącego obszaru klienckiego okna.
+Pobiera prostokąt dla bieżącego obszaru klienta okna.
 
 ```
 void GetHostWndRect(CRect& rect,);
@@ -192,14 +192,14 @@ void GetHostWndRect(CRect& rect,);
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
-Po powrocie funkcji, ten parametr zawiera prostokąt otaczający obszaru układu. To jest parametrem wyjściowym; wartość wejściowa jest zastępowany.
+*cinania*<br/>
+Po powrocie funkcji ten parametr zawiera prostokąt ograniczenia obszaru układu. Jest to parametr out; wartość wejściowa jest zastępowana.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="hasitem"></a>  CMFCDynamicLayout::HasItem
+##  <a name="hasitem"></a>CMFCDynamicLayout:: HasItem
 
-Sprawdza, jeśli kontrolka podrzędna została dodana do układ dynamiczny.
+Sprawdza, czy formant podrzędny został dodany do układu dynamicznego.
 
 ```
 BOOL HasItem(HWND hwnd);
@@ -207,18 +207,18 @@ BOOL HasItem(HWND hwnd);
 
 ### <a name="parameters"></a>Parametry
 
-*hwnd*<br/>
-Uchwyt okna dla formantu.
+*Właściwość*<br/>
+Uchwyt okna dla kontrolki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli układu ma już ten element; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli układ ma już ten element; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isempty"></a>  CMFCDynamicLayout::IsEmpty
+##  <a name="isempty"></a>CMFCDynamicLayout:: IsEmpty
 
-Sprawdza, czy układ dynamiczny ma nie okien podrzędnych dodane.
+Sprawdza, czy układ dynamiczny nie ma dodanych podrzędnych okien.
 
 ```
 BOOL IsEmpty();
@@ -226,13 +226,13 @@ BOOL IsEmpty();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli układu nie ma żadnych elementów; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli układ nie zawiera elementów; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="loadresource"></a>  CMFCDynamicLayout::LoadResource
+##  <a name="loadresource"></a>CMFCDynamicLayout:: LoadResource
 
-Odczytuje układ dynamiczny z zasobu AFX_DIALOG_LAYOUT, a następnie stosuje układ okna hosta.
+Odczytuje układ dynamiczny z zasobów AFX_DIALOG_LAYOUT, a następnie stosuje układ do okna hosta.
 
 ```
 static BOOL LoadResource(CWnd* pHostWnd,
@@ -246,20 +246,20 @@ static BOOL LoadResource(CWnd* pHostWnd,
 Wskaźnik do okna hosta.
 
 *lpResource*<br/>
-Wskaźnik do buforu, który zawiera zasób AFX_DIALOG_LAYOUT.
+Wskaźnik do buforu zawierającego zasób AFX_DIALOG_LAYOUT.
 
 *dwSize*<br/>
 Rozmiar buforu w bajtach.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli zasób jest ładowany i stosowane na oknie hosta. w przeciwnym razie wartość FALSE.
+Ma wartość TRUE, jeśli zasób jest ładowany i stosowany do okna hosta; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="movehorizontal"></a>  CMFCDynamicLayout::MoveHorizontal
+##  <a name="movehorizontal"></a>CMFCDynamicLayout:: MoveHorizontal
 
-Pobiera [MoveSettings](#movesettings_structure) wartość, która definiuje, ile kontrolka podrzędna zostanie przesunięta w poziomie, gdy użytkownik zmienia rozmiar okna obsługi.
+Pobiera wartość [MoveSettings](#movesettings_structure) , która definiuje, jak dużo kontrolki podrzędnej jest przenoszona w poziomie, gdy użytkownik zmienia rozmiar okna hostingu.
 
 ```
 static MoveSettings MoveHorizontal(int nRatio);
@@ -268,17 +268,17 @@ static MoveSettings MoveHorizontal(int nRatio);
 ### <a name="parameters"></a>Parametry
 
 *nRatio*<br/>
-Określa w procentach, jak daleko kontrolka podrzędna zostanie przesunięta w poziomie, gdy użytkownik zmienia rozmiar okna hosta.
+Definiuje jako wartość procentową, o ile formant podrzędny jest przenoszony w poziomie, gdy użytkownik zmienia rozmiar okna hosta.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A [MoveSettings](#movesettings_structure) wartość, która hermetyzuje żądany Przesuń wskaźnik.
+Wartość [MoveSettings](#movesettings_structure) , która hermetyzuje żądany współczynnik przenoszenia.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="movehorizontalandvertical"></a>  CMFCDynamicLayout::MoveHorizontalAndVertical
+##  <a name="movehorizontalandvertical"></a>CMFCDynamicLayout:: MoveHorizontalAndVertical
 
-Pobiera [MoveSettings](#movesettings_structure) wartość, która definiuje, ile kontrolka podrzędna zostanie przesunięta w poziomie, gdy użytkownik zmienia rozmiar okna obsługi.
+Pobiera wartość [MoveSettings](#movesettings_structure) , która definiuje, jak dużo kontrolki podrzędnej jest przenoszona w poziomie, gdy użytkownik zmienia rozmiar okna hostingu.
 
 ```
 static MoveSettings MoveHorizontalAndVertical(int nXRatio int nYRatio);
@@ -287,20 +287,20 @@ static MoveSettings MoveHorizontalAndVertical(int nXRatio int nYRatio);
 ### <a name="parameters"></a>Parametry
 
 *nXRatio*<br/>
-Określa w procentach, jak daleko kontrolka podrzędna zostanie przesunięta w poziomie, gdy użytkownik zmienia rozmiar okna hosta.
+Definiuje jako wartość procentową, o ile formant podrzędny jest przenoszony w poziomie, gdy użytkownik zmienia rozmiar okna hosta.
 
 *nYRatio*<br/>
-Określa w procentach, jak daleko kontrolka podrzędna zostanie przesunięta w pionie, gdy użytkownik zmienia rozmiar okna hosta.
+Definiuje jako wartość procentową, o ile formant podrzędny jest przenoszony w pionie, gdy użytkownik zmienia rozmiar okna hosta.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A [MoveSettings](#movesettings_structure) wartość, która hermetyzuje żądany Przesuń wskaźnik.
+Wartość [MoveSettings](#movesettings_structure) , która hermetyzuje żądany współczynnik przenoszenia.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="movenone"></a>  CMFCDynamicLayout::MoveNone
+##  <a name="movenone"></a>CMFCDynamicLayout:: MoveNone
 
-Pobiera [MoveSettings](#movesettings_structure) wartość, która reprezentuje nie ruchu pionowych lub poziomych, kontrolki podrzędne.
+Pobiera wartość [MoveSettings](#movesettings_structure) , która reprezentuje brak ruchu, pionowo lub poziomo dla formantu podrzędnego.
 
 ```
 static MoveSettings MoveNone();
@@ -308,13 +308,13 @@ static MoveSettings MoveNone();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A [MoveSettings](#movesettings_structure) wartość, która rozwiązuje kontrolki w miejscu, tak aby nie powoduje przeniesienia, ponieważ użytkownik zmienia rozmiar okna hosta.
+Wartość [MoveSettings](#movesettings_structure) , która naprawia zastosowanej kontrolki, tak aby nie była przenoszona, gdy użytkownik zmienia rozmiar okna hosta.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="movesettings_structure"></a>  Struktura CMFCDynamicLayout::MoveSettings
+##  <a name="movesettings_structure"></a>CMFCDynamicLayout:: MoveSettings, struktura
 
-Hermetyzuje przenoszenia danych dla formantów w układ dynamiczny.
+Hermetyzuje przenoszenie danych dla kontrolek w układzie dynamicznym.
 
 ```
 struct CMFCDynamicLayout::MoveSettings;
@@ -322,11 +322,11 @@ struct CMFCDynamicLayout::MoveSettings;
 
 ### <a name="remarks"></a>Uwagi
 
-Jest to klasa zagnieżdżona wewnątrz `CMFCDynamicLayout`.
+Jest to Klasa zagnieżdżona wewnątrz `CMFCDynamicLayout`.
 
-## <a name="cmfcdynamiclayoutmovesettingsishorizontal"></a>CMFCDynamicLayout::MoveSettings::IsHorizontal
+## <a name="cmfcdynamiclayoutmovesettingsishorizontal"></a>CMFCDynamicLayout:: MoveSettings:: ispoziome
 
-Sprawdź, jeśli przenoszenie danych określa wartość różną od zera przenoszenia poziomej.
+Sprawdź, czy Przenieś dane określają przechodzenie w poziomie różny od zera.
 
 ```
 BOOL IsHorizontal() const
@@ -334,11 +334,11 @@ BOOL IsHorizontal() const
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli `MoveSettings` obiektu określa wartość różną od zera przeniesienie poziomej.
+TRUE, `MoveSettings` Jeśli obiekt Określa niezerowe przesunięcie w poziomie.
 
-## <a name="cmfcdynamiclayoutmovesettingsisnone"></a>CMFCDynamicLayout::MoveSettings::IsNone
+## <a name="cmfcdynamiclayoutmovesettingsisnone"></a>CMFCDynamicLayout:: MoveSettings:: IsNone
 
-Sprawdź, jeśli przenoszenie danych określa nie przepływu.
+Sprawdź, czy przeniesienie danych nie określa przenoszenia.
 
 ```
 BOOL IsNone() const
@@ -346,11 +346,11 @@ BOOL IsNone() const
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli `MoveSettings` obiektu określa nie przepływu.
+Ma wartość true `MoveSettings` , jeśli obiekt nie określa przenoszenia.
 
-## <a name="cmfcdynamiclayoutmovesettingsisvertical"></a>CMFCDynamicLayout::MoveSettings::IsVertical
+## <a name="cmfcdynamiclayoutmovesettingsisvertical"></a>CMFCDynamicLayout:: MoveSettings:: ispionowy
 
-  Sprawdź, jeśli przenoszenie danych określa wartość różną od zera przenoszenia pionowy.
+Sprawdź, czy Przenieś dane określają niezerowe przesunięcie w pionie.
 
 ```
 BOOL IsVertical() const
@@ -358,11 +358,11 @@ BOOL IsVertical() const
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli `MoveSettings` obiektu określa wartość różną od zera przenoszenia pionowy.
+TRUE, `MoveSettings` Jeśli obiekt Określa niezerowe przesunięcie w pionie.
 
-##  <a name="movevertical"></a>  CMFCDynamicLayout::MoveVertical
+##  <a name="movevertical"></a>CMFCDynamicLayout:: MoveVertical
 
-Pobiera [MoveSettings](#movesettings_structure) wartość, która definiuje, ile kontrolka podrzędna zostanie przesunięta w pionie, gdy użytkownik zmienia rozmiar okna obsługi.
+Pobiera wartość [MoveSettings](#movesettings_structure) , która definiuje, jak dużo kontrolki podrzędnej jest przenoszona w pionie, gdy użytkownik zmienia rozmiar okna hostingu.
 
 ```
 static MoveSettings MoveVertical(int nRatio);
@@ -371,17 +371,17 @@ static MoveSettings MoveVertical(int nRatio);
 ### <a name="parameters"></a>Parametry
 
 *nRatio*<br/>
-Określa w procentach, jak daleko kontrolka podrzędna zostanie przesunięta w pionie, gdy użytkownik zmienia rozmiar okna hosta.
+Definiuje jako wartość procentową, o ile formant podrzędny jest przenoszony w pionie, gdy użytkownik zmienia rozmiar okna hosta.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A [MoveSettings](#movesettings_structure) wartość, która hermetyzuje żądany Przesuń wskaźnik.
+Wartość [MoveSettings](#movesettings_structure) , która hermetyzuje żądany współczynnik przenoszenia.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setminsize"></a>  CMFCDynamicLayout::SetMinSize
+##  <a name="setminsize"></a>CMFCDynamicLayout:: SetMinSize
 
-Ustawia rozmiar okna, poniżej której układu nie jest uwzględniany.
+Ustawia rozmiar okna, poniżej którego układ nie jest dostosowywany.
 
 ```
 void SetMinSize(const CSize& size);
@@ -389,16 +389,16 @@ void SetMinSize(const CSize& size);
 
 ### <a name="parameters"></a>Parametry
 
-*Rozmiar*<br/>
-Żądany rozmiar, poniżej której układu nie jest uwzględniany.
+*zmienia*<br/>
+Żądany rozmiar, poniżej którego układ nie został dostosowany.
 
 ### <a name="remarks"></a>Uwagi
 
-Położenie i rozmiar kontrolki podrzędnej jest zmieniany dynamicznie, gdy zmianie rozmiaru okna hostowania, ale ma minimalnego rozmiaru, poniżej której układ nie jest uwzględniany. Użytkownika można zmienić rozmiar okna na mniejszy, ale części okna są ukryte w widoku.
+Położenie i rozmiar kontrolki podrzędnej jest zmieniany dynamicznie w przypadku zmiany rozmiaru okna hostowania, ale istnieje minimalny rozmiar, poniżej którego układ nie jest dostosowywany. Użytkownik może zmienić rozmiar okna na mniejszy, ale części okna są następnie ukryte z widoku.
 
-##  <a name="sizehorizontal"></a>  CMFCDynamicLayout::SizeHorizontal
+##  <a name="sizehorizontal"></a>CMFCDynamicLayout:: SizeHorizontal
 
-Pobiera [SizeSettings](#sizesettings_structure) wartość, która definiuje, ile kontrolki podrzędnej zmiany rozmiaru w poziomie, gdy użytkownik zmienia rozmiar okna obsługi.
+Pobiera wartość [SizeSettings —](#sizesettings_structure) , która określa, ile czasu formant podrzędny jest zmieniany w poziomie, gdy użytkownik zmienia rozmiar okna hostingu.
 
 ```
 static SizeSettings SizeHorizontal(int nRatio);
@@ -407,17 +407,17 @@ static SizeSettings SizeHorizontal(int nRatio);
 ### <a name="parameters"></a>Parametry
 
 *nRatio*<br/>
-Określa w procentach, jak daleko kontrolka podrzędna zmiany rozmiaru w poziomie, gdy użytkownik zmienia rozmiar okna hosta.
+Definiuje jako wartość procentową rozmiaru formantu podrzędnego w poziomie, gdy użytkownik zmienia rozmiar okna hosta.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A [SizeSettings](#sizesettings_structure) wartość, która hermetyzuje współczynnik żądanego rozmiaru.
+Wartość [SizeSettings —](#sizesettings_structure) , która hermetyzuje żądany Współczynnik rozmiaru.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="sizehorizontalandvertical"></a>  CMFCDynamicLayout::SizeHorizontalAndVertical
+##  <a name="sizehorizontalandvertical"></a>CMFCDynamicLayout:: SizeHorizontalAndVertical
 
-Pobiera [SizeSettings](#sizesettings_structure) wartość, która definiuje, ile kontrolki podrzędnej zmiany rozmiaru w poziomie, gdy użytkownik zmienia rozmiar okna obsługi.
+Pobiera wartość [SizeSettings —](#sizesettings_structure) , która określa, ile czasu formant podrzędny jest zmieniany w poziomie, gdy użytkownik zmienia rozmiar okna hostingu.
 
 ```
 static SizeSettings SizeHorizontalAndVertical(int nXRatio int nYRatio);
@@ -426,20 +426,20 @@ static SizeSettings SizeHorizontalAndVertical(int nXRatio int nYRatio);
 ### <a name="parameters"></a>Parametry
 
 *nXRatio*<br/>
-Określa w procentach, jak daleko kontrolka podrzędna zmiany rozmiaru w poziomie, gdy użytkownik zmienia rozmiar okna hosta.
+Definiuje jako wartość procentową rozmiaru formantu podrzędnego w poziomie, gdy użytkownik zmienia rozmiar okna hosta.
 
 *nYRatio*<br/>
-Określa w procentach, jak daleko kontrolka podrzędna zmiany rozmiaru w pionie, gdy użytkownik zmienia rozmiar okna hosta.
+Definiuje jako wartość procentową zmiany rozmiaru formantu podrzędnego w pionie, gdy użytkownik zmienia rozmiar okna hosta.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A [SizeSettings](#sizesettings_structure) wartość, która hermetyzuje współczynnik żądanego rozmiaru.
+Wartość [SizeSettings —](#sizesettings_structure) , która hermetyzuje żądany Współczynnik rozmiaru.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="sizenone"></a>  CMFCDynamicLayout::SizeNone
+##  <a name="sizenone"></a>CMFCDynamicLayout:: SizeNone
 
-Pobiera [SizeSettings](#sizesettings_structure) wartość, która reprezentuje nie zmieni się rozmiar kontrolki podrzędnej.
+Pobiera wartość [SizeSettings —](#sizesettings_structure) , która reprezentuje brak zmian w rozmiarze dla formantu podrzędnego.
 
 ```
 static SizeSettings SizeNone();
@@ -447,13 +447,13 @@ static SizeSettings SizeNone();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A [SizeSettings](#sizesettings_structure) wartość, która rozwiązuje formantu o rozmiarze tak, aby nie zmienia rozmiar jako użytkownik zmienia rozmiar okna hosta.
+Wartość [SizeSettings —](#sizesettings_structure) , która naprawia formant w określonym rozmiarze, dzięki czemu nie zmienia rozmiaru okna hosta.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="sizesettings_structure"></a>  Cmfcdynamiclayout::sizesettings — struktura
+##  <a name="sizesettings_structure"></a>CMFCDynamicLayout:: SizeSettings —, struktura
 
-Hermetyzuje dane zmiany rozmiaru formantów w układ dynamiczny.
+Hermetyzuje zmiany rozmiaru dla kontrolek w układzie dynamicznym.
 
 ```
 struct CMFCDynamicLayout::SizeSettings;
@@ -461,11 +461,11 @@ struct CMFCDynamicLayout::SizeSettings;
 
 ### <a name="remarks"></a>Uwagi
 
-Jest to klasa zagnieżdżona wewnątrz `CMFCDynamicLayout`.
+Jest to Klasa zagnieżdżona wewnątrz `CMFCDynamicLayout`.
 
-## <a name="cmfcdynamiclayoutsizesettingsishorizontal"></a>CMFCDynamicLayout::SizeSettings::IsHorizontal
+## <a name="cmfcdynamiclayoutsizesettingsishorizontal"></a>CMFCDynamicLayout:: SizeSettings —:: ispoziome
 
-Sprawdza, czy dane zmiany rozmiaru określa wartość różną od zera poziomy zmiany rozmiaru.
+Sprawdza, czy dane zmiany rozmiaru określają niezerową zmianę rozmiaru w poziomie.
 
 ```
 BOOL IsHorizontal() const
@@ -473,11 +473,11 @@ BOOL IsHorizontal() const
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli `SizeSettings` obiekt określa wartość różną od zera poziomy zmiany rozmiaru.
+TRUE, `SizeSettings` Jeśli obiekt Określa niezerową zmianę w poziomie.
 
-## <a name="cmfcdynamiclayoutsizesettingsisnone"></a>CMFCDynamicLayout::SizeSettings::IsNone
+## <a name="cmfcdynamiclayoutsizesettingsisnone"></a>CMFCDynamicLayout:: SizeSettings —:: IsNone
 
-Sprawdza, czy dane zmiany rozmiaru określa bez zmiany rozmiaru.
+Sprawdza, czy dane zmiany rozmiaru nie określają zmiany rozmiaru.
 
 ```
 BOOL IsNone() const
@@ -485,11 +485,11 @@ BOOL IsNone() const
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli `SizeSettings` obiekt określa bez zmiany rozmiaru.
+Ma wartość true `SizeSettings` , jeśli obiekt nie określa zmiany rozmiarów.
 
-## <a name="cmfcdynamiclayoutsizesettingsisvertical"></a>CMFCDynamicLayout::SizeSettings::IsVertical
+## <a name="cmfcdynamiclayoutsizesettingsisvertical"></a>CMFCDynamicLayout:: SizeSettings —:: ispionowy
 
-Sprawdza, czy dane zmiany rozmiaru określa wartość różną od zera pionowy zmiany rozmiaru.
+Sprawdza, czy dane zmiany rozmiaru określają niezerową zmianę rozmiaru w pionie.
 
 ```
 BOOL IsVertical() const
@@ -497,11 +497,11 @@ BOOL IsVertical() const
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli `SizeSettings` obiekt określa wartość różną od zera pionowy zmiany rozmiaru.
+Ma wartość true `SizeSettings` , jeśli obiekt Określa niezerową zmianę rozmiarów w pionie.
 
-##  <a name="sizevertical"></a>  CMFCDynamicLayout::SizeVertical
+##  <a name="sizevertical"></a>CMFCDynamicLayout:: SizeVertical
 
-Pobiera [SizeSettings](#sizesettings_structure) wartość, która definiuje, ile kontrolki podrzędnej zmiany rozmiaru w pionie, gdy użytkownik zmienia rozmiar okna obsługi.
+Pobiera wartość [SizeSettings —](#sizesettings_structure) , która definiuje, jak dużo kontrolki podrzędnej jest zmieniana w pionie, gdy użytkownik zmienia rozmiar okna hostingu.
 
 ```
 static SizeSettings SizeVertical(int nRatio);
@@ -510,11 +510,11 @@ static SizeSettings SizeVertical(int nRatio);
 ### <a name="parameters"></a>Parametry
 
 *nRatio*<br/>
-Określa w procentach, jak daleko kontrolka podrzędna zmiany rozmiaru w pionie, gdy użytkownik zmienia rozmiar okna hosta.
+Definiuje jako wartość procentową zmiany rozmiaru formantu podrzędnego w pionie, gdy użytkownik zmienia rozmiar okna hosta.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A [SizeSettings](#sizesettings_structure) wartość, która hermetyzuje współczynnik żądanego rozmiaru.
+Wartość [SizeSettings —](#sizesettings_structure) , która hermetyzuje żądany Współczynnik rozmiaru.
 
 ### <a name="remarks"></a>Uwagi
 

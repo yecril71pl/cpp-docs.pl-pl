@@ -1,6 +1,6 @@
 ---
 title: Klasa CFtpConnection
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - CFtpConnection
 - AFXINET/CFtpConnection
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CFtpConnection [MFC], Rename
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
-ms.openlocfilehash: 977a8c9fc6dd653a59434d29bb72b0fe28900001
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 94ee4cb938ee061470282eb2f08a94d83c908805
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506373"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177279"
 ---
 # <a name="cftpconnection-class"></a>Klasa CFtpConnection
 
@@ -174,8 +174,10 @@ Wskaźnik do ciągu zawierającego polecenie do wysłania.
 Określa, czy oczekiwano odpowiedzi z serwera FTP. Może być jedną z następujących wartości:
 
 - `CmdRespNone`Nie oczekiwano odpowiedzi.
-
 - `CmdRespRead`Oczekiwana jest odpowiedź.
+- `CmdRespWrite`Nieużywane.
+
+CmdResponseType jest elementem członkowskim CFtpConnection, zdefiniowanym w *afxinet. h*.
 
 *flagiDW*<br/>
 Wartość zawierająca flagi kontrolujące tę funkcję. Aby uzyskać pełną listę, zobacz [FTPCommand](/windows/win32/api/wininet/nf-wininet-ftpcommandw).

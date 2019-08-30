@@ -1,84 +1,84 @@
 ---
 title: Kreator konsumenta MFC ODBC
-ms.date: 05/09/2019
+ms.date: 08/29/2019
 helpviewer_keywords:
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: 2e8741677031ff9b12989d75243a13550d74b608
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 84fdc0d180f5b1b0f2e64c3597cb474611ad3914
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707384"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177432"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>Kreator konsumenta MFC ODBC
 
 ::: moniker range="vs-2019"
 
-Ten kreator nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach.
+Ten Kreator nie jest dostępny w programie Visual Studio 2019 i nowszych.
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-Ten kreator konfiguruje klasę zestawu rekordów ODBC i powiązania danych niezbędnych do uzyskania dostępu z określonym źródłem danych.
+Ten Kreator konfiguruje klasę zestawu rekordów ODBC i powiązania danych niezbędne do uzyskania dostępu do określonego źródła danych.
 
 ## <a name="uielement-list"></a>Lista elementów UI
 
 - **Źródło danych**
 
-  **Źródła danych** przycisk umożliwia konfigurowanie określonym źródłem danych przy użyciu podanego sterownika ODBC. Aby uzyskać więcej informacji na temat pliki źródła danych (DSN), zobacz [plikowych źródeł danych](/sql/odbc/reference/file-data-sources) w zestawie SDK ODBC.
+  Przycisk **Źródło danych** umożliwia skonfigurowanie określonego źródła danych przy użyciu określonego sterownika ODBC. Aby uzyskać więcej informacji na temat plików źródła danych (DSN), zobacz [plikowe źródła danych](/sql/odbc/reference/file-data-sources) w zestawie ODBC SDK.
 
-  **Wybierz źródło danych** okno dialogowe ma dwie karty:
+  Okno dialogowe **Wybieranie źródła danych** zawiera dwie karty:
 
-  - **Źródło danych pliku** karty:
+  - Karta **źródła danych pliku** :
 
-     **Przeszukania** pole określa katalog, w którym można wybrać pliki, które ma być używany jako źródła danych. Wartość domyślna to \Program Files\Common Files\ODBC\Data źródeł. Istniejących źródeł danych plików (pliki DSN) są wyświetlane w polu listy głównego. Możesz albo Konfigurowanie źródeł danych w przód od chwili **plikową nazwę DSN** karcie [Administrator źródła danych ODBC](/sql/odbc/admin/odbc-data-source-administrator), lub utworzyć nowe przy użyciu tego okna dialogowego.
+     Pole **Szukaj w** określa katalog, w którym należy wybrać pliki, które mają być używane jako źródła danych. Wartość domyślna to \Program Files\Common Files\ODBC\Data sources. Istniejące plikowe źródła danych (pliki. DSN) pojawiają się w głównym polu listy. Źródła danych można skonfigurować wcześniej za pomocą karty Plikowe **DSN** [administratora źródła danych ODBC](/sql/odbc/admin/odbc-data-source-administrator)lub utworzyć nowe przy użyciu tego okna dialogowego.
 
-     Aby utworzyć nowe źródło danych pliku to okno dialogowe, kliknij przycisk `New` do określenia nazwy DSN; **Utwórz nowe źródło danych** pojawi się okno dialogowe. W **Utwórz nowe źródło danych** okna dialogowego pole, wybierz odpowiedni sterownik i kliknij `Next`; kliknij **Przeglądaj**i wybierz nazwę pliku, który ma być używany jako źródło danych (musisz wybrać "Wszystkie pliki" do Wyświetl DSN innych plików, takich jak pliki xls); Kliknij przycisk `Next`, a następnie kliknij przycisk **Zakończ**. (Jeśli wybranego pliku DSN nie zostanie wyświetlony okno dialogowe specyficzne dla sterownika, takie jak "ODBC Instalatora programu Microsoft Excel," który przekonwertuje pliku DSN).
+     Aby utworzyć nowe plikowe źródło danych z tego okna dialogowego, kliknij `New` , aby określić nazwę DSN; zostanie wyświetlone okno dialogowe **Utwórz nowe źródło danych** . W oknie dialogowym **Utwórz nowe źródło danych** wybierz odpowiedni sterownik i kliknij `Next`przycisk **Przeglądaj**, a następnie wybierz nazwę pliku, który ma być używany jako źródło danych (wybierz opcję "wszystkie pliki", aby wyświetlić pliki inne niż DSN, takie jak pliki xls); kliknij przycisk , a następnie kliknij przycisk **Zakończ.** `Next` (W przypadku wybrania pliku bez nazwy DSN zostanie wyświetlone okno dialogowe specyficzne dla sterownika, takie jak "Instalator ODBC programu Microsoft Excel", który przekonwertuje plik na nazwę DSN).
 
      > [!NOTE]
-     > Można również utworzyć nowe źródło danych pliku wcześniej przy użyciu Administratora źródła danych ODBC. Z **Start** menu, wybierz opcję **ustawienia**, **Panelu sterowania**, **narzędzia administracyjne**, **źródła danych (ODBC)**, a następnie **Administrator źródła danych ODBC**.
+     > Możesz również utworzyć nowe plikowe źródło danych za pomocą administratora źródła danych ODBC. Z menu **Start** wybierz kolejno opcje **Ustawienia**, **Panel sterowania**, **Narzędzia administracyjne**, **źródła danych (ODBC)** , a następnie **administratora źródła danych ODBC**.
 
-     **Nazwa DSN** okno pozwala określić nazwę źródła danych pliku. Należy się upewnić, że nazwa DSN kończy się rozszerzeniem odpowiedniego pliku, takie jak xls dla plików programu Excel lub .mdb dla plików programu Access.
+     Pole **nazwa DSN** umożliwia określenie nazwy źródła danych pliku. Musisz się upewnić, że nazwa DSN jest zakończona odpowiednimi rozszerzeniami plików, takimi jak pliki xls dla programu Excel lub pliki. mdb dla plików dostępu.
 
-     Aby uzyskać więcej informacji na temat nazw DSN, zobacz [plikowych źródeł danych](/sql/odbc/reference/file-data-sources) w zestawie SDK ODBC.
+     Aby uzyskać więcej informacji na temat nazw DSN, zobacz [plikowe źródła danych](/sql/odbc/reference/file-data-sources) w zestawie ODBC SDK.
 
-  - **Źródła danych komputera** karty:
+  - Karta **źródła danych komputera** :
 
-     Ta karta zawiera listę systemu oraz źródeł danych użytkownika. Źródła danych użytkownika są specyficzne dla użytkownika na tym komputerze. Systemowe źródła danych może służyć przez wszystkich użytkowników na tym komputerze lub w usłudze ogólnosystemowe. Zobacz [źródeł danych komputera](/sql/odbc/reference/machine-data-sources) w zestawie SDK ODBC
+     Ta karta zawiera listę źródeł danych systemu i użytkownika. Źródła danych użytkownika są specyficzne dla użytkownika na tej maszynie. Systemowe źródła danych mogą być używane przez wszystkich użytkowników na tym komputerze lub w usłudze systemowo. Zobacz [źródła danych maszyn](/sql/odbc/reference/machine-data-sources) w zestawie SDK ODBC
 
-     Aby uzyskać więcej informacji na temat źródeł danych ODBC, zobacz [źródeł danych](/sql/odbc/reference/data-sources) w zestawie SDK ODBC.
+     Aby uzyskać więcej informacji na temat źródeł danych ODBC, zobacz [źródła danych](/sql/odbc/reference/data-sources) w zestawie ODBC SDK.
 
-  Kliknij przycisk **OK**, aby zakończyć. **Obiektu bazy danych wybierz** pojawi się okno dialogowe. To okno dialogowe Wybierz tabelę lub wyświetlić, które będą używane przez konsumenta. Należy pamiętać, że przytrzymać klawisz control i klikając elementy można wybrać wiele widoków i tabel. Kliknij przycisk **OK**, aby zakończyć.
+  Kliknij przycisk **OK**, aby zakończyć. Zostanie wyświetlone okno dialogowe **Wybieranie obiektu bazy danych** . W tym oknie dialogowym Wybierz tabelę lub widok, które będą używane przez konsumenta. Należy pamiętać, że można wybrać wiele widoków i tabel, przytrzymując klawisz sterowania podczas klikania elementów. Kliknij przycisk **OK**, aby zakończyć.
 
 - **Class**
 
       The name of the consumer class, based by default on the name of the file or machine data source that you selected.
 
-- **plik .h**
+- **plik h**
 
-   Nazwa pliku nagłówkowego klasy konsumenta, domyślnie na podstawie nazwy źródła danych maszyny lub pliku, które wybrano.
+   Nazwa pliku nagłówkowego klasy odbiorcy, domyślnie oparta na nazwie wybranego źródła danych pliku lub komputera.
 
-- **Plik CPP**
+- **plik. cpp**
 
-   Nazwa pliku implementacji klasy konsumenta, domyślnie na podstawie nazwy źródła danych maszyny lub pliku, które wybrano.
+   Nazwa pliku implementacji klasy odbiorcy, domyślnie oparta na nazwie wybranego źródła danych pliku lub komputera.
 
 - **Typ**
 
-   Określa, czy zestaw rekordów jest dynamiczny (ustawienie domyślne) lub migawka.
+   Określa, czy zestaw rekordów jest dynamicznym (domyślnym) czy migawką.
 
-   - **Dynaset**: Określa, czy zestaw rekordów jest dynamiczny. Dynamiczny jest wynikiem kwerendę, która zawiera widok indeksowany do kwerendy bazy danych. Dynamiczny przechowuje tylko całkowitą indeksu do oryginalnych danych i związku z tym jest wydajność uzyskiwać za pośrednictwem migawki. Punkty indeksu bezpośrednio do każdego wybranego rekordu można odnaleźć wyniku zapytania i wskazuje, gdy rekord zostanie usunięty. Masz również dostęp do aktualnych informacji w rekordach kwerendy. Domyślnie włączone.
+   - **Zestaw dynamiczny**: Określa, że zestaw rekordów jest dynamiczny. Dynamiczny jest wynikiem zapytania, które zawiera indeksowany widok do danych zapytania bazy danych. Zestaw dynamiczny pamięci podręcznej tworzy tylko integralny indeks danych oryginalnych i w ten sposób oferuje wzrost wydajności dla migawki. Indeks wskazuje bezpośrednio na każdy rekord znaleziony w wyniku zapytania i wskazuje, czy rekord został usunięty. Masz również dostęp do zaktualizowanych informacji w rekordach zapytań. Domyślnie włączone.
 
-   - **Migawka**: Określa, czy zestaw rekordów jest migawką. Migawka jest rezultat zapytania i wgląd w bazę danych w jednym punkcie w czasie. Wszystkie rekordy, które można odnaleźć wyniku kwerendy są buforowane, więc nie widzisz wszelkie zmiany, oryginalnym rekordów.
+   - **Migawka**: Określa, że zestaw rekordów jest migawką. Migawka jest wynikiem zapytania i jest widokiem w bazie danych w jednym punkcie czasu. Wszystkie rekordy Znalezione w wyniku zapytania są buforowane, więc nie są widoczne żadne zmiany w oryginalnych rekordach.
 
 - **Powiąż wszystkie kolumny**
 
-   Określa, czy wszystkie kolumny w tabeli są powiązane. Jeśli wybierzesz to pole (ustawienie domyślne), wszystkie kolumny są powiązane; Jeśli to pole nie jest zaznaczone, są powiązane żadne kolumny i musisz powiązać je ręcznie w klasie zestawu rekordów.
+   Określa, czy wszystkie kolumny w zaznaczonej tabeli są powiązane. Jeśli zaznaczysz to pole (domyślnie), wszystkie kolumny są powiązane; Jeśli to pole nie zostanie zaznaczone, nie są powiązane żadne kolumny i musisz powiązać je ręcznie z klasą zestawów rekordów.
 
 ::: moniker-end
 
 ## <a name="see-also"></a>Zobacz także
 
-[Klient MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
+[Korzystanie z MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)

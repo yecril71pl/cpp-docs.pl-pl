@@ -1,6 +1,6 @@
 ---
-title: C++odwołanie do strony właściwości projektu — Visual Studio
-ms.date: 07/24/2019
+title: Informacje C++ o stronie właściwości projektu systemu Windows — Visual Studio
+ms.date: 08/28/2019
 helpviewer_keywords:
 - project-file macro
 - project properties [C++], default values
@@ -12,16 +12,20 @@ helpviewer_keywords:
 - build macro
 - user-defined macros
 ms.assetid: 13ffe3ea-1bc3-4bee-be5e-053a8a99cce4
-ms.openlocfilehash: d425cc6c5c6a2a8934c026174f396cb01bc3a9b7
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: c9fd4fc00e86e0660972fc0bd37b66b2fea02ee0
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606387"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177471"
 ---
-# <a name="c-project-property-page-reference"></a>C++odwołanie do strony właściwości projektu
+# <a name="windows-c-project-property-page-reference"></a>Informacje C++ o stronie właściwości projektu systemu Windows
 
-W programie Visual Studio można określić opcje kompilatora i konsolidatora, ścieżki plików i inne ustawienia kompilacji za pomocą stron właściwości projektu. Aby otworzyć **strony właściwości**, wybierz**Właściwości** **projektu** > z menu głównego lub kliknij prawym przyciskiem myszy węzeł projektu w **Eksplorator rozwiązań** i wybierz polecenie **Właściwości**. Aby uzyskać więcej informacji na temat właściwości projektu, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
+W programie Visual Studio można określić opcje kompilatora i konsolidatora, ścieżki plików i inne ustawienia kompilacji za pomocą stron właściwości projektu. Właściwości i strony właściwości, które są dostępne, zależą od typu projektu. Na przykład projekt pliku reguł programu make ma stronę właściwości NMake, która nie występuje w projekcie MFC lub konsoli Win32. Aby otworzyć **strony właściwości**, wybierz**Właściwości** **projektu** > z menu głównego lub kliknij prawym przyciskiem myszy węzeł projektu w **Eksplorator rozwiązań** i wybierz polecenie **Właściwości**. Poszczególne pliki mają również strony właściwości, które umożliwiają ustawianie opcji kompilowania i kompilowania tylko dla tego pliku. Poniższa ilustracja przedstawia strony właściwości dla projektu MFC.
+
+![Strony właściwości dla C++ projektu](media/example-prop-page.png)
+
+Ta sekcja zawiera krótkie informacje o samych stronach właściwości. Opcje i ustawienia widoczne na stronach właściwości są udokumentowane w ich własnych tematach i są powiązane ze strony właściwości. Aby uzyskać więcej informacji na temat właściwości projektu, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
 W przypadku stron właściwości w projektach systemu Linux zapoznaj się z informacjami na [stronie właściwości systemu Linux C++ ](../../linux/prop-pages-linux.md).
 
@@ -48,4 +52,5 @@ W przypadku stron właściwości w projektach systemu Linux zapoznaj się z info
 ## <a name="see-also"></a>Zobacz także
 
 [Instrukcje: Tworzenie i usuwanie zależności projektu](/visualstudio/ide/how-to-create-and-remove-project-dependencies)<br/>
-[Instrukcje: Tworzenie i edytowanie konfiguracji](/visualstudio/ide/how-to-create-and-edit-configurations)
+[Instrukcje: Tworzenie i edytowanie konfiguracji](/visualstudio/ide/how-to-create-and-edit-configurations)<br/>
+[Informacje C++ na stronie właściwości systemu Linux](../../linux/prop-pages-linux.md)

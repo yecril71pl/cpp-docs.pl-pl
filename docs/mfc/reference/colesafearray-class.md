@@ -1,6 +1,6 @@
 ---
 title: Klasa COleSafeArray
-ms.date: 08/27/2018
+ms.date: 08/29/2019
 f1_keywords:
 - COleSafeArray
 - AFXDISP/COleSafeArray
@@ -60,12 +60,12 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-ms.openlocfilehash: b947678acc89bad96ce01b93e79cbaa141411ec4
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a0ce0fc03923806c9e044a7edae3178fd3429b76
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503779"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177397"
 ---
 # <a name="colesafearray-class"></a>Klasa COleSafeArray
 
@@ -240,7 +240,7 @@ COleSafeArray(
 
 COleSafeArray(const COleSafeArray& saSrc);
 COleSafeArray(const VARIANT& varSrc);
-  COleSafeArray(LPCVARIANT pSrc);
+COleSafeArray(LPCVARIANT pSrc);
 COleSafeArray(const COleVariant& varSrc);
 ```
 
@@ -596,7 +596,7 @@ Te przeciążone operatory przypisania kopiują wartość źródłową `COleSafe
 ```
 COleSafeArray& operator=(const COleSafeArray& saSrc);
 COleSafeArray& operator=(const VARIANT& varSrc);
-  COleSafeArray& operator=(LPCVARIANT pSrc);
+COleSafeArray& operator=(LPCVARIANT pSrc);
 COleSafeArray& operator=(const COleVariant& varSrc);
 ```
 

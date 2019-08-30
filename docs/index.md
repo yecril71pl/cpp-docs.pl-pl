@@ -1,15 +1,16 @@
 ---
 layout: HubPage
-title: Dokumentacji języka Visual C++
-description: Dowiedz się, jak używać języka C++, aby tworzyć aplikacje, usługi i narzędzia dla platform i urządzeń.
+title: Dokumentacja C++ wizualna
+description: Dowiedz się, C++ jak używać programu do tworzenia aplikacji, usług i narzędzi dla Twoich platform i urządzeń.
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 5db891bd1ed7a51a623dadfd5cc4e40a081cf0e7
-ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
+ms.topic: hub-page
+ms.openlocfilehash: 204571952b7da922ddaac29949568cac3e69d616
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65789013"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177502"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -25,7 +26,7 @@ ms.locfileid: "65789013"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>Zainstaluj program Visual Studio, a następnie wybierz swoje obciążenia języka C++</h3>
+                                    <h3>Instalowanie programu Visual Studio i wybieranie C++ obciążeń</h3>
                                 </div>
                             </div>
                         </div>
@@ -43,7 +44,7 @@ ms.locfileid: "65789013"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>Rozpoczynanie pracy z usługą Visual Studio i języka C++</h3>
+                                    <h3>Rozpocznij pracę z programem Visual Studio iC++</h3>
                                 </div>
                             </div>
                         </div>
@@ -61,7 +62,7 @@ ms.locfileid: "65789013"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>Co nowego w języku C++ w programie Visual Studio</h3>
+                                    <h3>Co nowego C++ w programie Visual Studio</h3>
                                 </div>
                             </div>
                         </div>
@@ -71,13 +72,13 @@ ms.locfileid: "65789013"
         </ul>
     </div>
     <div class="container">
-        <h1>Dokumentacji języka Visual C++</h1>
+        <h1>Dokumentacja C++ wizualna</h1>
         <ul class="pivots">
             <li>
-                <a href="#workloads">Obciążenia</a>
+                <a href="#workloads">Obciążeń</a>
                 <ul id="workloads">
                     <li>
-                        <a href="#workloads1">Obciążenia</a>
+                        <a href="#workloads1">Obciążeń</a>
                         <ul id="workloads1" class="cardsC">
                             <li>
                                 <a href="/cpp/cppcx/universal-windows-apps-cpp">
@@ -91,7 +92,7 @@ ms.locfileid: "65789013"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Opracowywanie zawartości dla platformy Windows Universal</h3>
-                                                    <p>Twórz aplikacje dla Windows platformy Uniwersalnej przy użyciu języka C++.</p>
+                                                    <p>Opracowywanie aplikacji dla platforma uniwersalna systemu Windows (platformy UWP) przy C++użyciu programu.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -110,7 +111,7 @@ ms.locfileid: "65789013"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Programowanie aplikacji Windows w języku C++</h3>
-                                                    <p>Tworzenie klasycznych aplikacji klasycznych Windows i biblioteki statycznej biblioteki DLL przy użyciu systemu Win32, MFC, ATL COM, i/lub C++sposób niezamierzony.</p>
+                                                    <p>Twórz klasyczne aplikacje pulpitu systemu Windows, statyczne libs i dll przy użyciu Win32, MFC, ATL, COM i/ C++lub/CLI.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -148,7 +149,7 @@ ms.locfileid: "65789013"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Tworzenie aplikacji mobilnych w języku C++</h3>
-                                                    <p>Twórz aplikacje mobilne dla systemów iOS, Android i platformy uniwersalnej systemu Windows.</p>
+                                                    <p>Twórz aplikacje mobilne dla systemów iOS, Android i platformy UWP.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -167,7 +168,7 @@ ms.locfileid: "65789013"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Programowanie gier w języku C++</h3>
-                                                    <p>Tworzenie gier i aplikacji graficznych aplikacji przy użyciu technologii DirectX, Unreal i Cocos2D oraz.</p>
+                                                    <p>Twórz gry i aplikacje graficzne przy użyciu technologii DirectX, Unreal, Cocos2D i innych.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -186,7 +187,7 @@ ms.locfileid: "65789013"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Python</h3>
-                                                    <p>Użyj narzędzi Python Tools for Visual Studio do tworzenia aplikacji Python, wchodzących w interakcję z programami C++.</p>
+                                                    <p>Użyj Python Tools for Visual Studio, aby utworzyć aplikacje języka Python, C++ które współpracują z programami.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -198,10 +199,10 @@ ms.locfileid: "65789013"
                 </ul>
             </li>
             <li>
-                <a href="#features">Funkcje</a>
+                <a href="#features">Oferowanych</a>
                 <ul id="features">
                     <li>
-                        <a href="#features1">Funkcje</a>
+                        <a href="#features1">Oferowanych</a>
                         <ul id="features1" class="cardsC">
                             <li>
                                 <a href="/cpp/ide/writing-and-refactoring-code-cpp">
@@ -215,7 +216,7 @@ ms.locfileid: "65789013"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Pisanie kodu</h3>
-                                                    <p>Zapis, refaktoryzacji, zapoznaj się z i rozumienie kodu za pomocą edytora kodu.</p>
+                                                    <p>Pisz, Refaktoryzacja, eksploruj i rozumiej kod przy użyciu edytora kodu.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -234,7 +235,7 @@ ms.locfileid: "65789013"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Kompilacja</h3>
-                                                    <p>Kompiluj i łączenie kodu i Optymalizacja pod kątem maksymalnej przepływności.</p>
+                                                    <p>Kompiluj i łącz swój kod i Optymalizuj pod kątem maksymalnej przepływności.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -253,7 +254,7 @@ ms.locfileid: "65789013"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Debugowanie</h3>
-                                                    <p>Debugowanie kodu języka C++ za pomocą debugera programu Visual Studio.</p>
+                                                    <p>Debuguj C++ kod za pomocą debugera programu Visual Studio.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -272,7 +273,7 @@ ms.locfileid: "65789013"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Test</h3>
-                                                    <p>Tworzenie testów jednostkowych dla kodu C++.</p>
+                                                    <p>Utwórz testy jednostkowe dla C++ kodu.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -291,7 +292,7 @@ ms.locfileid: "65789013"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Deploy</h3>
-                                                    <p>Dystrybucja programu gotowego do użytkowników końcowych.</p>
+                                                    <p>Dystrybuuj gotowy program do użytkowników końcowych.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -329,7 +330,7 @@ ms.locfileid: "65789013"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Eksportowanie i uaktualnianie</h3>
-                                                    <p>Uaktualnienie do najnowszej wersji programu Visual Studio i Migrowanie starszych aplikacji na platformach nowoczesnych.</p>
+                                                    <p>Uaktualnij do najnowszej wersji programu Visual Studio i Migruj starsze aplikacje na nowoczesne platformy.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -357,8 +358,8 @@ ms.locfileid: "65789013"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Standard języka C/C++, języka i bibliotek</h3>
-                                                    <p>Implementacja firmy Microsoft w językach programowania C/C++ i bibliotek.</p>
+                                                    <h3>Standardowa C/C++ język i biblioteki</h3>
+                                                    <p>Microsoft implementacja języków programowania C/C++ i bibliotek.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -376,8 +377,8 @@ ms.locfileid: "65789013"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Component Extensions</h3>
-                                                    <p>Rozszerzenia składnik C++: C++/ Interfejs wiersza polecenia programowania .NET i C++/CX programowania platformy uniwersalnej systemu Windows.</p>
+                                                    <h3>Rozszerzenia składników</h3>
+                                                    <p>Rozszerzenia składników C++: C++/CLI dla programowania .NET i C++/CX dla programowania platformy UWP.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -395,8 +396,8 @@ ms.locfileid: "65789013"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Biblioteki pulpitu Windows</h3>
-                                                    <p>Microsoft Foundation Classes (MFC) i biblioteki Active Template Library (ATL)</p>
+                                                    <h3>Biblioteki klasyczne systemu Windows</h3>
+                                                    <p>Microsoft Foundation Classes (MFC) i Active Template Library (ATL)</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -414,8 +415,8 @@ ms.locfileid: "65789013"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Równoległego programowania bibliotek</h3>
-                                                    <p>Concrt AMP i OpenMP biblioteki dla programowania równoległego.</p>
+                                                    <h3>Biblioteki programowania równoległego</h3>
+                                                    <p>Biblioteki ConcRT, AMP i OpenMP do programowania równoległego.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -433,8 +434,8 @@ ms.locfileid: "65789013"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Chmura i sieć bibliotek</h3>
-                                                    <p>Użyj Microsoft Azure C /C++ zestawy SDK dla IoT, magazynu i innych i C++ biblioteki typu open-source zestawu SDK REST dla programowania dla sieci web.</p>
+                                                    <h3>Biblioteki chmury i sieci</h3>
+                                                    <p>Użyj Microsoft Azure C/C++ SDK na potrzeby IoT, Storage i innych oraz biblioteki Open Source C++ zestawu SDK REST dla programowania w sieci Web.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -452,8 +453,8 @@ ms.locfileid: "65789013"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Universal Windows Platform bibliotek</h3>
-                                                    <p>Zestaw Windows środowiska uruchomieniowego C++ szablon biblioteki (WRL) to Biblioteka szablonów, która zapewnia niskopoziomowy sposób tworzenia i używania składników środowiska wykonawczego Windows.</p>
+                                                    <h3>Biblioteki platforma uniwersalna systemu Windows</h3>
+                                                    <p>Biblioteka szablonów C++ środowisko wykonawcze systemu Windows (WRL) to Biblioteka szablonów, która zapewnia niskiego poziomu sposób tworzenia i używania składników Środowisko wykonawcze systemu Windows.</p>
                                                 </div>
                                             </div>
                                         </div>
