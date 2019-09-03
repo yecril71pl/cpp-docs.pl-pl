@@ -1,6 +1,6 @@
 ---
-title: " — komunikat"
-ms.date: 11/04/2016
+title: message, pragma
+ms.date: 08/29/2019
 f1_keywords:
 - message_CPP
 - vc-pragma.message
@@ -8,31 +8,30 @@ helpviewer_keywords:
 - message pragma
 - pragmas, message
 ms.assetid: 67414f25-ed47-4079-a5dc-21d9d1a39754
-ms.openlocfilehash: e9383238fd308ec59a9767f56af1c07fc3cfcf07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48605fbef3b6d81c140e663e950429cd3dcf9b19
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371742"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218795"
 ---
-# <a name="message"></a> — komunikat
-Wysyła ciąg literału do wyjścia standardowego bez przerywania kompilacji.
+# <a name="message-pragma"></a>message, pragma
+
+Wysyła literał ciągu do wyjścia standardowego bez przerywania kompilacji.
 
 ## <a name="syntax"></a>Składnia
 
-```
-#pragma message( messagestring )
-```
+> **komunikat #pragma (** *ciąg komunikatu* **)**
 
 ## <a name="remarks"></a>Uwagi
 
-Typowym zastosowaniem **komunikat** pragma są wyświetlane komunikaty informacyjne w czasie kompilacji.
+Typowym zastosowaniem dyrektywy pragma **wiadomości** jest wyświetlenie komunikatów informacyjnych w czasie kompilacji.
 
-*Messagestring* parametr może być — makro, który rozwija do literału ciągu i można połączyć tych makr, za pomocą literałów ciągów w dowolnej kombinacji.
+Parametr *ciągu komunikatu* może być makrem rozwijanym do literału ciągu i można łączyć takie makra z literałami ciągu w dowolnej kombinacji.
 
-Wstępnie zdefiniowane makra w **komunikat** pragma, makro powinien zwrócenia ciągu, przeciwnym razie trzeba będzie konwertować dane wyjściowe makra do ciągu.
+W przypadku użycia wstępnie zdefiniowanego makra w pragma **komunikatu** , makro powinno zwrócić ciąg. W przeciwnym razie konieczne będzie przekonwertowanie danych wyjściowych makra na ciąg.
 
-Poniższy fragment kodu używa **komunikat** pragma umożliwiające wyświetlanie komunikatów podczas kompilacji:
+Poniższy fragment kodu używa dyrektywy pragma **komunikatu** do wyświetlania komunikatów podczas kompilacji:
 
 ```cpp
 // pragma_directives_message1.cpp
@@ -59,4 +58,4 @@ Poniższy fragment kodu używa **komunikat** pragma umożliwiające wyświetlani
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

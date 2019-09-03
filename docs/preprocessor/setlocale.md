@@ -1,6 +1,6 @@
 ---
-title: setlocale
-ms.date: 11/04/2016
+title: setlocale, pragma
+ms.date: 08/29/2019
 f1_keywords:
 - setlocale_CPP
 - vc-pragma.setlocale
@@ -8,37 +8,35 @@ helpviewer_keywords:
 - pragmas, setlocale
 - setlocale pragma
 ms.assetid: e60b43d9-fbdf-4c4e-ac85-805523a13b86
-ms.openlocfilehash: b2f28a14b4d4585575a39dd9a936a56a84eeddc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 219354595e5c63b2f13211d43bfa517d97413251
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179623"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218178"
 ---
-# <a name="setlocale"></a>setlocale
+# <a name="setlocale-pragma"></a>setlocale, pragma
 
-Określa ustawienia regionalne (Kraj/Region i język), który będzie używany podczas tłumaczenia Literały ciągu i stałych znaków dwubajtowych.
+Definiuje *Ustawienia regionalne*, kraj, region i język, które mają być używane podczas tłumaczenia stałych znaków dwubajtowych i literałów ciągów.
 
 ## <a name="syntax"></a>Składnia
 
-```
-#pragma setlocale( "[locale-string]" )
-```
+> **#pragma setlocaling ("** [ *Local-String* ] **")**
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ algorytm konwersji na znaki wielobajtowe do znaków dwubajtowych mogą się znacząco różnić ustawień regionalnych lub kompilacja może mieć miejsce w innych ustawień regionalnych, z którym będzie uruchamiany plik wykonywalny, ta pragma zapewnia sposób określania docelowych ustawień regionalnych w czasie kompilacji. Gwarantuje to, że ciągi znaków dwubajtowych będą przechowywane w poprawnym formacie.
+Ponieważ algorytm konwersji znaków wielobajtowych na znaki szerokie może różnić się w zależności od ustawień regionalnych lub kompilacja może odbywać się w różnych ustawieniach regionalnych z lokalizacji, w której zostanie uruchomiony plik wykonywalny, ta pragma zapewnia sposób określania docelowych ustawień regionalnych w czasie kompilacji. Gwarantuje on, że ciągi znaków dwubajtowych są przechowywane w prawidłowym formacie.
 
-Wartość domyślna *ciągu ustawień regionalnych* jest "".
+Domyślnym ustawieniem *Local-String* jest "".
 
-The "C" locale maps each character in the string to its value as a **wchar_t** (unsigned short). Inne wartości, które są prawidłowe dla `setlocale` tych wpisów, które znajdują się w [Language Strings](../c-runtime-library/language-strings.md) listy. Na przykład, możesz wydać:
+Ustawienia regionalne "C" mapują każdy znak w ciągu na jego wartość jako **wchar_t**. Inne prawidłowe wartości dla `setlocale` to wpisy znalezione na liście [ciągów języka](../c-runtime-library/language-strings.md) . Na przykład można określić:
 
 ```cpp
 #pragma setlocale("dutch")
 ```
 
-Zdolność do wystawiania ciąg języka zależy od strony kodowej i język obsługi identyfikatorów na tym komputerze.
+Możliwość określenia ciągu języka zależy od strony kodowej i obsługi identyfikatora języka na komputerze.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,55 +1,55 @@
 ---
 title: __outbyte
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outbyte
 helpviewer_keywords:
 - out instruction
 - __outbyte intrinsic
 ms.assetid: c4cd1a34-8a02-4e37-993d-3201bc17901a
-ms.openlocfilehash: 234892369572a2ee315687f5d70533a0c8cf4b59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18792010c45ffb648e9555ccb73f8614c3e3e6ea
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262973"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217198"
 ---
-# <a name="outbyte"></a>__outbyte
+# <a name="__outbyte"></a>__outbyte
 
 **Microsoft Specific**
 
-Generuje `out` instrukcji, która wysyła 1 bajt określony przez `Data` z portu We/Wy, określony przez `Port`.
+Generuje instrukcję, która wysyła 1 bajt określony przez `Data` port we/wy określony przez `Port`. `out`
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 void __outbyte(
    unsigned short Port,
    unsigned char Data
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Port*<br/>
-[in] Port do wysyłania danych do.
+*Przewożąc*\
+podczas Port, do którego mają zostać wysłane dane.
 
-*Dane*<br/>
-[in] Bajtów, które zostaną wysłane do określonego portu.
+*Data*\
+podczas Bajt, który ma zostać wysłany przez określony port.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__outbyte`|x86, x64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-Ta procedura jest dostępna wyłącznie jako wewnętrzna.
+Ta procedura jest dostępna tylko jako wewnętrzna.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

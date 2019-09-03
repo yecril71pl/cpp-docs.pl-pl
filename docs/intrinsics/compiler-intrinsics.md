@@ -1,38 +1,38 @@
 ---
 title: Funkcje wewnętrzne kompilatora
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 helpviewer_keywords:
 - intrinsics, compiler
 - compiler intrinsics
 - cl.exe compiler, performance
 - cl.exe compiler, intrinsics
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
-ms.openlocfilehash: 9a014e870d731d7e7d443c3bfefd66884aa50d5d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c101de6d74a4f2d3073bd220a29f2a0328d2959
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349111"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216869"
 ---
 # <a name="compiler-intrinsics"></a>Funkcje wewnętrzne kompilatora
 
-Większość funkcji jest zawartych w bibliotekach, ale niektóre funkcje są wbudowane (to znaczy, wewnętrzne) do kompilatora. Te są nazywane funkcjami wewnętrznymi.
+Większość funkcji znajduje się w bibliotekach, ale niektóre funkcje są wbudowane (czyli wewnętrznie) do kompilatora. Są one określane jako funkcje wewnętrzne lub wewnętrzne.
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli funkcja jest wewnętrzna, kod dla tej funkcji jest zwykle wbudowany, unikając obciążenie związane z wywołaniem funkcji, dzięki czemu wysoko wydajnych instrukcji maszynowych dla tej funkcji. Wewnętrzna jest często szybsza niż zestawu równoważnych inline ponieważ Optymalizator ma wbudowaną wiedzę o zachowują się jak wiele obiektów wewnętrznych, więc niektóre optymalizację mogą być dostępne, są niedostępne, gdy jest używany wbudowany zestaw. Ponadto Optymalizator może się inaczej wewnętrznie rozwinąć, wyrównać bufory w inny sposób lub zmienić inne ustawienia w zależności od kontekstu i argumentu wywołania.
+Jeśli funkcja jest wewnętrzną, kod dla tej funkcji jest zwykle wstawiany wewnętrznie, unikając obciążenia wywołania funkcji i umożliwiającego emitowanie wysoko wydajnych instrukcji maszynowych dla tej funkcji. Wewnętrzny jest często szybszy niż odpowiednik wbudowanego zestawu, ponieważ Optymalizator ma wbudowaną wiedzę o liczbie zastosowanych elementów wewnętrznych, dlatego niektóre optymalizacje mogą być dostępne, które nie są dostępne, gdy używany jest zestaw wbudowany. Ponadto Optymalizator może zwiększyć wewnętrzną zmianę, wyrównać bufory inaczej lub wprowadzić inne korekty w zależności od kontekstu i argumentów wywołania.
 
-Użycie wewnętrznych elementów ma wpływ na Przenoszalność kodu, ponieważ funkcje wewnętrzne, które są dostępne w programie Visual C++ mogą nie być dostępne Jeżeli kod jest kompilowany za pomocą innych kompilatorów i niektóre funkcje wewnętrzne, które mogą być dostępne dla docelowych architektur nie są dostępne dla wszystkich architektur. Jednakże funkcje wewnętrzne są zwykle bardziej przenośne niż wbudowane zestawy. Funkcje wewnętrzne są wymagane w 64-bitowych architekturach, gdzie wbudowany zestaw nie jest obsługiwany.
+Użycie funkcji wewnętrznych ma wpływ na przenośność kodu, ponieważ wewnętrzne, które są dostępne w wizualizacji C++ , mogą nie być dostępne, jeśli kod jest kompilowany z innymi kompilatorami, a niektóre funkcje wewnętrzne, które mogą być dostępne dla niektórych architektur docelowych, nie są dostępne dla wszystkich architektur. Jednak funkcje wewnętrzne są zwykle bardziej przenośne niż zestaw wbudowany. Elementy wewnętrzne są wymagane na 64-bitowych architekturach, w których Wbudowany zestaw nie jest obsługiwany.
 
-Niektóre funkcje wewnętrzne, takie jak `__assume` i `__ReadWriteBarrier`, podaj informacje potrzebne do kompilatora, który ma wpływ na zachowanie optymalizatora.
+Niektóre funkcje wewnętrzne, takie jak `__assume` i `__ReadWriteBarrier`, zawierają informacje dla kompilatora, które mają wpływ na zachowanie optymalizatora.
 
-Niektóre funkcje wewnętrzne są dostępne tylko jako funkcje wewnętrzne, a niektóre są dostępne zarówno w funkcji i wewnętrzne implementacje. Można poinstruować kompilator, aby użył wewnętrznych implementacji na jeden z dwóch sposobów, w zależności od tego, czy chcesz włączyć tylko konkretne funkcje, lub jeśli chcesz włączyć wszystkie wewnętrzne. Pierwszym sposobem jest użycie `#pragma intrinsic(` *wewnętrzne funkcja nazwa list*`)`. Pragmy może służyć do określenia pojedynczego wewnętrznego lub wielu wewnętrznych elementów oddzielonych przecinkami. Druga służy wykorzystaniu [/Oi (Generuj funkcje wewnętrzne)](../build/reference/oi-generate-intrinsic-functions.md) opcji kompilatora, która udostępnia wszystkie elementy wewnętrzne na danej platformie. W obszarze **/Oi**, użyj `#pragma function(` *wewnętrzne funkcja nazwa list* `)` Aby wymusić wywołanie funkcji ma być używana zamiast wewnętrzna. Jeśli w dokumentacji poszczególnych funkcji wewnętrznych jest napisane, że procedura jest dostępna jako funkcja wewnętrzna tylko, a następnie wdrożenie wewnętrzne zostanie użyte niezależnie od tego, czy **/Oi** lub `#pragma intrinsic` jest określony. We wszystkich przypadkach **/Oi** lub `#pragma intrinsic` pozwala, ale nie wymusza wewnętrznego użycia przez optymalizator. Optymalizacja może wciąż wywołać funkcję.
+Niektóre funkcje wewnętrzne są dostępne tylko jako elementy wewnętrzne, a niektóre z nich są dostępne zarówno w funkcjach, jak i wewnętrznie. Możesz nakazać kompilatorowi użycie wewnętrznej implementacji na jeden z dwóch sposobów, w zależności od tego, czy chcesz włączyć tylko określone funkcje, czy chcesz włączyć wszystkie elementy wewnętrzne. Pierwszy sposób to użycie `#pragma intrinsic(` *wewnętrznego-Name-list*`)`. Dyrektywy pragma można użyć do określenia jednego wewnętrznego lub wielu elementów wewnętrznych rozdzielonych przecinkami. Drugim jest użycie opcji kompilatora [/Oi (Generuj funkcje wewnętrzne)](../build/reference/oi-generate-intrinsic-functions.md) , która sprawia, że wszystkie elementy wewnętrzne na danej platformie są dostępne. Abywymusić `#pragma function(`użycie wywołania funkcji zamiast wewnętrznego, w obszarze/Oi należy użyć *funkcji wewnętrznego-Name-list* `)` . Jeśli Dokumentacja dla określonych wewnętrznych notatek jest dostępna tylko jako wewnętrzna, implementacja wewnętrzna jest używana bez względu na to, czy **/Oi** `#pragma intrinsic` czy jest określony. We wszystkich przypadkach **/Oi** lub `#pragma intrinsic` zezwala, ale nie wymusza, aby Optymalizator używał wewnętrznej. Optymalizator nadal może wywołać funkcję.
 
-Niektóre standardowe funkcje biblioteki C/C++ są dostępne w wewnętrznych implementacjach na niektórych architekturach. Podczas wywoływania funkcji CRT, niejawna implementacja jest użyta, jeśli **/Oi** jest określona w wierszu polecenia.
+Niektóre standardowe funkcje językaC++ C/library są dostępne w implementacjach wewnętrznych w niektórych architekturach. Podczas wywoływania funkcji CRT, implementacja wewnętrzna jest używana, jeśli **/Oi** jest określony w wierszu polecenia.
 
-Plik nagłówka \<intrin.h >, jest dostępna, która deklaruje prototypy typowe funkcje wewnętrzne. Funkcje specyficzne dla producenta wewnętrzne są dostępne w \<immintrin.h > i \<ammintrin.h > pliki nagłówkowe. Dodatkowo niektóre nagłówki Windows deklarują funkcje, które mapują na wewnętrzne kompilatora.
+Jest dostępny plik \<nagłówka intrin. h >, który deklaruje prototypy dla wspólnych funkcji wewnętrznych. Elementy wewnętrzne charakterystyczne dla producenta są dostępne w \<plikach nagłówkowych immintrin. \<h > i ammintrin. > h. Ponadto niektóre nagłówki systemu Windows deklarują funkcje, które są mapowane na wewnętrzne kompilator.
 
-W poniższych sekcjach wymieniono wszystkie funkcje wewnętrzne, które są dostępne w różnych architekturach. Aby uzyskać więcej informacji na temat sposobu działania funkcji wewnętrznych na Twoim procesorze zapoznaj się z dokumentacją producenta.
+W poniższych sekcjach wymieniono wszystkie funkcje wewnętrzne, które są dostępne w różnych architekturach. Aby uzyskać więcej informacji na temat sposobu działania elementów roboczych na określonym procesorze docelowym, zapoznaj się z dokumentacją producenta.
 
 - [Funkcje wewnętrzne ARM](../intrinsics/arm-intrinsics.md)
 
@@ -40,13 +40,13 @@ W poniższych sekcjach wymieniono wszystkie funkcje wewnętrzne, które są dost
 
 - [Lista funkcji wewnętrznych x64 (amd64)](../intrinsics/x64-amd64-intrinsics-list.md)
 
-- [Funkcje wewnętrzne dostępne we wszystkich architekturach](../intrinsics/intrinsics-available-on-all-architectures.md)
+- [Elementy wewnętrzne dostępne we wszystkich architekturach](../intrinsics/intrinsics-available-on-all-architectures.md)
 
 - [Alfabetyczna lista funkcji wewnętrznych](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)
 
 ## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja asemblera ARM](../assembler/arm/arm-assembler-reference.md)<br/>
-[Microsoft Macro Assembler — dokumentacja](../assembler/masm/microsoft-macro-assembler-reference.md)<br/>
+[Dokumentacja asemblera programu Microsoft Macro](../assembler/masm/microsoft-macro-assembler-reference.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
-[Dokumentacja biblioteki środowiska uruchomieniowego języka C](../c-runtime-library/c-run-time-library-reference.md)
+[Dokumentacja biblioteki wykonawczej języka C](../c-runtime-library/c-run-time-library-reference.md)

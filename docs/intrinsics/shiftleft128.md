@@ -1,27 +1,27 @@
 ---
 title: __shiftleft128
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __shiftleft128
 helpviewer_keywords:
 - __shiftleft128 intrinsic
 ms.assetid: 557b846a-8fb0-469d-91ac-1b1fad80dc2a
-ms.openlocfilehash: 5fcb797694c7a45dc4f2113f3d2ed4a2f578c894
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5da9ac81cedbdd24e10eb438892f88510c32ca24
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390415"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218004"
 ---
-# <a name="shiftleft128"></a>__shiftleft128
+# <a name="__shiftleft128"></a>__shiftleft128
 
 **Microsoft Specific**
 
-Przenosi ilość 128-bitowego, reprezentowane jako dwie ilości 64-bitowych `LowPart` i `HighPart`, w lewo o liczbę bitów określoną przez `Shift` i zwraca wysokiej 64 bity wyniku.
+Przenosi ilość 128-bitową, reprezentowaną jako 2 64-bitowe `LowPart` ilości `HighPart`i, po lewej stronie przez liczbę bitów określoną przez `Shift` , i zwraca wartość o wysokim stopniu 64 bitów wyniku.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 unsigned __int64 __shiftleft128(
    unsigned __int64 LowPart,
    unsigned __int64 HighPart,
@@ -29,36 +29,36 @@ unsigned __int64 __shiftleft128(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*LowPart*<br/>
-[in] Niski 64 bity ilość 128-bitowe przesunięcie.
+*LowPart*\
+podczas Niska 64 bitów ilości 128-bitowej do przesunięcia.
 
-*HighPart*<br/>
-[in] Wysoka 64 bity ilość 128-bitowe przesunięcie.
+*HighPart*\
+podczas Wysoka 64 bitów 128-bitowej liczby do przesunięcia.
 
-*SHIFT*<br/>
-[in] Liczba bitów, aby przesunąć.
+*Nocn*\
+podczas Liczba bitów do przesunięcia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wysoka 64 bity wyniku.
+Wysokie 64 bitów wyniku.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__shiftleft128`|X64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-`Shift` Wartość jest zawsze modulo 64 więc, na przykład, jeśli wywołasz `__shiftleft128(1, 0, 64)`, funkcja zostanie wprowadzony niskiej część `0` bitów lewej i zwracać wysokiej część `0` i nie `1` w przeciwnym razie może być oczekiwany.
+Wartość *przesunięcia* jest zawsze modulo 64, tak więc, na przykład, jeśli `__shiftleft128(1, 0, 64)`wywołasz, funkcja przesunie w `0` lewo `0` bity o niskiej części i zwróci dużą część, a `1` nie jako oczekiwaną w przeciwnym razie.
 
 ## <a name="example"></a>Przykład
 
-```
+```C
 // shiftleft128.c
 // processor: IPF, x64
 #include <stdio.h>
@@ -94,9 +94,9 @@ int main()
 0x100000000000000001 >> 1 = 0x080000000000000000
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 
-[__shiftright128](../intrinsics/shiftright128.md)<br/>
+[__shiftright128](../intrinsics/shiftright128.md)\
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

@@ -1,6 +1,6 @@
 ---
 title: __movsb
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsb
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - rep movsb instruction
 - __movsb intrinsic
 ms.assetid: ba5469f6-f797-4cd2-bee8-74c7666c26d4
-ms.openlocfilehash: 42124743c27b297c723780c1bc19038fb54e638d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca06fc9114f6e824a690cc4e612c21d705a485cd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263818"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217282"
 ---
-# <a name="movsb"></a>__movsb
+# <a name="__movsb"></a>__movsb
 
 **Microsoft Specific**
 
-Generuje ciąg Przenieś (`rep movsb`) instrukcji.
+Generuje instrukcję Move String (`rep movsb`).
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 void __movsb(
    unsigned char* Destination,
    unsigned const char* Source,
@@ -31,34 +31,34 @@ void __movsb(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*miejsce docelowe*<br/>
-[out] Wskaźnik do miejsca docelowego kopii.
+*Punktu*\
+określoną Wskaźnik do lokalizacji docelowej kopii.
 
-*Element źródłowy*<br/>
-[in] Wskaźnik do źródła kopii.
+*Zewnętrz*\
+podczas Wskaźnik do źródła kopii.
 
-*Liczba*<br/>
-[in] Liczba bajtów do skopiowania.
+*Liczbą*\
+podczas Liczba bajtów do skopiowania.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__movsb`|x86, x64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-W wyniku pierwsze `Count` bajtów wskazywany przez `Source` są kopiowane do `Destination` ciągu.
+W efekcie pierwsze `Count` bajty wskazywane przez `Source` są kopiowane do `Destination` ciągu.
 
-Ta procedura jest dostępna wyłącznie jako wewnętrzna.
+Ta procedura jest dostępna tylko jako wewnętrzna.
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // movsb.cpp
 // processor: x86, x64
 #include <stdio.h>
@@ -80,7 +80,7 @@ int main()
 A big black dog. A big black dog.
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

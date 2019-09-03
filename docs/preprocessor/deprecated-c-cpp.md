@@ -1,6 +1,6 @@
 ---
-title: przestarzałe (C/C++)
-ms.date: 11/04/2016
+title: przestarzała wartość dyrektywy pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.deprecated
 - deprecated_CPP
@@ -8,35 +8,33 @@ helpviewer_keywords:
 - deprecated pragma
 - pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
-ms.openlocfilehash: 262b23e6e4813a5e22bc3f4e7c9a18efb9988a7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e76d1c53cb900c108e2839a9aad17b330143a5d
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389297"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222404"
 ---
-# <a name="deprecated-cc"></a>przestarzałe (C/C++)
+# <a name="deprecated-pragma"></a>przestarzała wartość dyrektywy pragma
 
-**Przestarzałe** pragma pozwala wskazać, że funkcja, typ lub innego identyfikatora może nie będą obsługiwane w przyszłości wydania, lub już nie powinny być używane.
+**Zaniechana** pragma umożliwia wskazanie, że funkcja, typ lub inny identyfikator nie może być już obsługiwany w przyszłej wersji lub nie powinien już być używany.
 
 > [!NOTE]
-> Aby uzyskać informacje o C ++ 14 `[[deprecated]]` atrybut i wskazówki dotyczące kiedy należy używać atrybutu vs declspec firmy Microsoft lub pragma, zobacz [atrybuty Standard C++](../cpp/attributes.md) atrybutu.
+> Aby uzyskać informacje o atrybucie c++ `[[deprecated]]` 14 i wskazówki dotyczące sytuacji, w których należy używać tego atrybutu zamiast modyfikatora Microsoft `__declspec(deprecated)` lub **przestarzałej** dyrektywy pragma, zobacz [atrybuty w C++ ](../cpp/attributes.md).
 
 ## <a name="syntax"></a>Składnia
 
-```
-#pragma deprecated( identifier1 [,identifier2, ...] )
-```
+> **#pragma przestarzałe (** *Identifier1* [ **,** *identifier2* ...] **)**
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy kompilator napotka identyfikator określony przez **przestarzałe** pragma, generuje ostrzeżenie kompilatora [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md).
+Gdy kompilator napotka identyfikator określony przez przestarzałą pragmę , wystawia ostrzeżenia kompilatora [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md).
 
-Można zastąpić nazw makr. Umieść nazwę makra w cudzysłowy lub — w przeciwnym razie rozwinięciu makra zostanie przeprowadzona.
+Można przestarzałe nazwy makr. Umieść nazwę makra w cudzysłowie lub w przeciwnym razie nastąpi rozwinięcie makra.
 
-Ponieważ **przestarzałe** pragma działa na wszystkich zgodnych identyfikatorów i nie uwzględnia podpisów, nie jest najlepszym rozwiązaniem dla wycofano określonych wersji dla funkcji przeciążenia. Wszystkie pasujące nazwy funkcji, która jest umieszczany w zakresie wyzwala ostrzeżenia.
+Ponieważ **zaniechana** pragma działa na wszystkich zgodnych identyfikatorach i nie uwzględnia podpisów, nie jest najlepszą opcją dla przestarzałych określonych wersji funkcji przeciążonych. Wszystkie zgodne nazwy funkcji, które są wprowadzane do zakresu wyzwalają ostrzeżenie.
 
-Zalecane jest użycie C ++ 14 `[[deprecated]]` atrybutu, jeśli to możliwe, zamiast **przestarzałe** pragmy. Specyficzne dla firmy Microsoft [__declspec(deprecated)](../cpp/deprecated-cpp.md) modyfikator deklaracji jest także lepszym rozwiązaniem w wielu przypadkach niż **przestarzałe** pragmy. `[[deprecated]]` Atrybutu i `__declspec(deprecated)` modyfikator pozwalają na określenie przestarzałe stanu dla określonej formy przeciążonych funkcji. Diagnostyczne ostrzeżenie pojawia się tylko na odwołania do określonego przeciążonej funkcji atrybut lub modyfikator dotyczy.
+Zalecamy użycie atrybutu c++ 14 `[[deprecated]]` , jeśli jest to możliwe, zamiast **przestarzałej** dyrektywy pragma. Modyfikator deklaracji [__declspec (przestarzały)](../cpp/deprecated-cpp.md) firmy Microsoft jest również lepszym wyborem w wielu przypadkach niż w przypadku **przestarzałej** dyrektywy pragma. `[[deprecated]]` Atrybut i`__declspec(deprecated)` modyfikator umożliwiają określanie przestarzałego stanu dla konkretnych formularzy przeciążonych funkcji. Ostrzeżenie diagnostyczne pojawia się tylko w odniesieniu do określonej przeciążonej funkcji, której dotyczy atrybut lub modyfikator.
 
 ## <a name="example"></a>Przykład
 
@@ -77,4 +75,4 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

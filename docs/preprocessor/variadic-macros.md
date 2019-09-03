@@ -1,26 +1,26 @@
 ---
 title: Makra wariadyczne
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 helpviewer_keywords:
 - variadic macros [C++]
 - __VA_ARGS__ variadic macro specifier
 ms.assetid: 51e757dc-0134-4bb2-bb74-64ea5ad75134
-ms.openlocfilehash: da159ef979ccc38845064debebae55356bc9e9bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 171ea797adc1e407a8b7ef0592508653f758df64
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179572"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216520"
 ---
 # <a name="variadic-macros"></a>Makra wariadyczne
 
-Makra Wariadyczne są funkcyjne makra, które zawierają zmienną liczbę argumentów.
+Makra wariadyczne są makrami podobnymi do funkcji, które zawierają zmienną liczbę argumentów.
 
 ## <a name="remarks"></a>Uwagi
 
-Aby użyć makra wariadyczne, wielokropka może zostać określony jako ostatni argument formalny w definicji makra, a identyfikator zastąpienie `__VA_ARGS__` może służyć w definicji można wstawić dodatkowych argumentów.  `__VA_ARGS__` zastępuje wszystkie argumenty, które odpowiadają wielokropka, w tym oddzielając je przecinkami.
+Aby można było używać makr wariadyczne, wielokropek może być określony jako ostatni argument formalny w definicji makra, a identyfikator `__VA_ARGS__` zastępczy może być używany w definicji w celu wstawienia dodatkowych argumentów.  `__VA_ARGS__`jest zastępowany przez wszystkie argumenty, które pasują do wielokropka, w tym przecinki między nimi.
 
-Standard języka C Określa, że co najmniej jednego argumentu, muszą być przekazywane do wielokropka, aby upewnić się, że makra nie rozpoznać wyrażenia z przecinkiem.  Implementacja języka Visual C++ blokuje wyświetlanie przecinkiem, jeśli żadne argumenty są przekazywane do wielokropka.
+Standard C określa, że co najmniej jeden argument musi być przekazywać do wielokropka, aby upewnić się, że makro nie jest rozpoznawane jako wyrażenie z końcowym przecinkiem. Tradycyjna implementacja C++ firmy Microsoft pomija końcowy przecinek, jeśli żadne argumenty nie są przekazane do wielokropka.
 
 ## <a name="example"></a>Przykład
 

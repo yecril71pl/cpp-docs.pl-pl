@@ -1,35 +1,33 @@
 ---
-title: auto_search
-ms.date: 11/04/2016
+title: auto_search — atrybut importowania
+ms.date: 08/29/2019
 f1_keywords:
 - auto_search
 helpviewer_keywords:
 - auto_search attribute
 ms.assetid: 0fee2503-cd28-4d8c-b4d5-15ca0a91d2d2
-ms.openlocfilehash: 29638afbe42a5c5f1894bc7047d10e05363f494e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36c30b9a1c560659d117203c3146806ef3a1ad4a
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403571"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216285"
 ---
-# <a name="autosearch"></a>auto_search
+# <a name="auto_search-import-attribute"></a>auto_search — atrybut importowania
 
-**Określonego język C++**
+**C++Specjalne**
 
-Określa, że, gdy biblioteki typów jest wskazywane poprzez `#import` i sam odwołuje się do innej biblioteki typów, kompilator można wykonać niejawnej `#import` dla biblioteki typów.
+Określa, że gdy istnieje odwołanie `#import` do biblioteki typów i sama odwołuje się do innej biblioteki typów, kompilator może wykonać niejawną `#import` dla innej biblioteki typów.
 
 ## <a name="syntax"></a>Składnia
 
-```
-auto_search
-```
+> **#import** *Biblioteka typów* **auto_search**
 
 ## <a name="remarks"></a>Uwagi
 
-**KONIEC określonego języka C++**
+**ZAKOŃCZENIE C++ określonych**
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import Directive](../preprocessor/hash-import-directive-cpp.md)
+[Atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

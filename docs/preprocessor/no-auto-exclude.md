@@ -1,36 +1,35 @@
 ---
-title: no_auto_exclude
-ms.date: 11/04/2016
+title: no_auto_exclude — atrybut importowania
+ms.date: 08/29/2019
 f1_keywords:
 - no_auto_exclude
 helpviewer_keywords:
 - no_auto_exclude attribute
 ms.assetid: 3241ef9c-758a-4e86-bdc5-37da6072430f
-ms.openlocfilehash: 06bde7535bd181057750ab9dd4c3999321b4990c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 530c2b2adf24e964cb0a512371f4430a61bf8b11
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371701"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216080"
 ---
-# <a name="noautoexclude"></a>no_auto_exclude
-**Określonego język C++**
+# <a name="no_auto_exclude-import-attribute"></a>no_auto_exclude — atrybut importowania
 
-Wyłącza automatyczne wykluczenia.
+**C++Specjalne**
+
+Wyłącza automatyczne wykluczenie.
 
 ## <a name="syntax"></a>Składnia
 
-```
-no_auto_exclude
-```
+> **#import** *Biblioteka typów* **no_auto_exclude**
 
 ## <a name="remarks"></a>Uwagi
 
-Biblioteki typów mogą obejmować definicje elementy zdefiniowane w nagłówkach systemu lub inne biblioteki typów. `#import` próbuje uniknąć wiele błędów definicji wykluczając automatycznie takie elementy. Po zakończeniu tej operacji [ostrzeżenie kompilatora (poziom 3) C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md) będą wystawiane dla każdego elementu, które mają być wykluczone. To wykluczenie automatycznego można wyłączyć za pomocą tego atrybutu.
+Biblioteki typów mogą zawierać definicje elementów zdefiniowanych w nagłówkach systemowych lub innych bibliotekach typów. `#import`próbuje uniknąć wielu błędów definicji przez automatyczne wyłączenie takich elementów. Powoduje to wystawienie [ostrzeżenia kompilatora (poziom 3)](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md) dla każdego elementu, który ma zostać wykluczony. Można wyłączyć automatyczne wykluczenie przy użyciu tego atrybutu.
 
-**KONIEC określonego języka C++**
+**ZAKOŃCZENIE C++ określonych**
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import Directive](../preprocessor/hash-import-directive-cpp.md)
+[Atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

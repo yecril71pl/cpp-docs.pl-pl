@@ -1,20 +1,20 @@
 ---
 title: _udiv64
-ms.date: 04/17/2019
+ms.date: 09/02/2019
 f1_keywords:
 - _udiv64
 helpviewer_keywords:
 - _udiv64 intrinsic
-ms.openlocfilehash: 73a29b180eeda49a9a25e9e568d25c7563234fad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6dabbc94260ef578eb1a58a1b289b4a4654decdd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390155"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219682"
 ---
-# <a name="udiv64"></a>_udiv64
+# <a name="_udiv64"></a>_udiv64
 
-`_udiv64` Wewnętrzne dzieli 64-bitowej nieoznaczonej liczby całkowitej przez 32-bitowa liczba całkowita bez znaku. Wartość zwracana zawiera iloraz, a funkcja zwraca resztę z dzielenia za pomocą parametru wskaźnika. `_udiv64` jest **specyficzne dla firmy Microsoft**.
+`_udiv64` Wewnętrznie dzieli 64-bitową liczbę całkowitą bez znaku przez 32-bitową liczbę całkowitą bez znaku. Wartość zwracana utrzymuje iloraz, a wewnętrzna Zwraca resztę za pomocą parametru wskaźnika. `_udiv64`jest **specyficzny dla firmy Microsoft**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,28 +28,28 @@ unsigned int _udiv64(
 
 ### <a name="parameters"></a>Parametry
 
-*dzielna*<br/>
-[in] 64-bitowej nieoznaczonej liczby całkowitej do podzielenia.
+*płacone*\
+podczas 64-bitowa liczba całkowita bez znaku do podzielenia.
 
-*divisor*<br/>
-[in] 32-bitowa liczba całkowita bez znaku dzielnikiem.
+*dzielnik*\
+podczas 32-bitowa liczba całkowita bez znaku do dzielenia przez.
 
-*Pozostała*<br/>
-[out] Resztę 32-bitowej nieoznaczonej liczby całkowitej.
+*pozostałej części*\
+określoną 32-bitowa pozostała liczba całkowita bez znaku.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-32 bity ilorazu.
+32 bitów ilorazu.
 
 ## <a name="remarks"></a>Uwagi
 
-`_udiv64` Wewnętrzne dzieli *dzielna* przez *dzielnik*. Przechowuje w 32-bitowa liczba całkowita bez znaku wskazywany przez resztę *resztę*i zwraca 32-bitowy ilorazu.
+Wewnętrznie dzieli *dzielną* przez *dzielnik.* `_udiv64` Przechowuje resztę z 32-bitowej liczby całkowitej bez znaku wskazywanej przez *resztę*i zwraca 32 bitów ilorazu.
 
-`_udiv64` Wewnętrzne są dostępne począwszy od programu Visual Studio 2019 RTM.
+Funkcja `_udiv64` wewnętrzna jest dostępna od wersji Visual Studio 2019 RTM.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|nagłówek|
+|Wewnętrznej|Architektura|nagłówek|
 |---------------|------------------|------------|
 |`_udiv64`|x86, x64|\<immintrin.h>|
 

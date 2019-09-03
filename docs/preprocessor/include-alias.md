@@ -1,6 +1,6 @@
 ---
-title: include_alias
-ms.date: 12/16/2018
+title: include_alias, pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.include_alias
 - include_alias_CPP
@@ -8,25 +8,26 @@ helpviewer_keywords:
 - pragmas, include_alias
 - include_alias pragma
 ms.assetid: 3256d589-12b3-4af0-a586-199e96eabacc
-ms.openlocfilehash: 187fa94f7c2a5457df655081b87a7f49d38adfa2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa3714186e8f95d4044ba5a3b2bc2d5fcfb1fc9c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384045"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218907"
 ---
-# <a name="includealias"></a>include_alias
+# <a name="include_alias-pragma"></a>include_alias, pragma
 
-Określa, że w przypadku *alias_filename* znajduje się w `#include` zastępuje dyrektywy, kompilator *actual_filename* w tym miejscu.
+Określa, że po znalezieniu *alias_filename* w `#include` dyrektywie, kompilator zastępuje *actual_filename* w miejscu.
 
 ## <a name="syntax"></a>Składnia
 
-> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>pragma include_alias ("*alias_filename*","*actual_filename*")
-> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>pragma include_alias (\<*alias_filename*>, \< *actual_filename*>)
+<!-- localization note - it's important to have the italic and bold characters immediately adjacent here. -->
+> **#pragma include_alias (** "*alias_filename*" **,** "*actual_filename*" **)** \
+> **#pragma include_alias (** \< *alias_filename*>  **,** *actual_filename*) \<> 
 
 ## <a name="remarks"></a>Uwagi
 
-**Include_alias** dyrektywa pragmy pozwala zastąpić pliki, które mają różne nazwy lub ścieżki do nazwy pliku dołączane przez pliki źródłowe. Na przykład niektóre systemy plików umożliwiają dłuższe nazwy plików nagłówkowych niż limit 8.3 systemu plików FAT. Kompilator nie może po prostu obciąć dłuższej nazwy do 8.3, ponieważ pierwsze osiem znaków dłuższej nazwy plików nagłówkowych nie musi być unikatowe. Gdy kompilator napotka *alias_filename* ciągu, zastępuje *actual_filename*, a szuka pliku nagłówka *actual_filename* zamiast tego. Ta pragma musi pojawić się przed odpowiednimi dyrektywami `#include`. Na przykład:
+Dyrektywa pragma **include_alias** umożliwia zastępowanie plików o różnych nazwach lub ścieżkach nazw plików dołączonych do plików źródłowych. Na przykład niektóre systemy plików dopuszczają dłuższe nazwy plików nagłówkowe niż limit systemu plików 8,3 FAT. Kompilator nie może po prostu obciąć dłuższych nazw do 8,3, ponieważ pierwsze osiem znaków dłuższych nazw plików nagłówkowych może nie być unikatowe. Za każdym razem, gdy kompilator widzi ciąg alias_filename `#include` w dyrektywie, zastępuje nazwę *actual_filename* . Następnie ładuje plik nagłówkowy *actual_filename* . Ta pragma musi pojawić się przed odpowiednimi dyrektywami `#include`. Na przykład:
 
 ```cpp
 // First eight characters of these two files not unique.
@@ -40,7 +41,7 @@ Określa, że w przypadku *alias_filename* znajduje się w `#include` zastępuje
 #include "GraphicsMenu.h"
 ```
 
-Poszukiwany alias musi odpowiadać specyfikacji, zarówno w wielkości liter jak i pisowni oraz użyciu znaków podwójnego cudzysłowu lub nawiasów ostrokątnych. **Include_alias** wykonuje proste dopasowanie na nazwy plików ciągów; odbywa się nie weryfikacji nazwy pliku. Na przykład, biorąc pod uwagę następujące dyrektywy,
+Alias do wyszukania musi być dokładnie zgodny ze specyfikacją. Wielkość liter, pisownia i użycie podwójny cudzysłów lub nawiasy ostre muszą być zgodne. **Include_alias** pragma jest prostym dopasowaniem ciągu do nazw plików. Nie jest przeprowadzana weryfikacja innych nazw plików. Na przykład, biorąc pod uwagę następujące dyrektywy,
 
 ```cpp
 #pragma include_alias("mymath.h", "math.h")
@@ -48,7 +49,7 @@ Poszukiwany alias musi odpowiadać specyfikacji, zarówno w wielkości liter jak
 #include "sys/mymath.h"
 ```
 
-aliasing (podstawienie) nie jest wykonywany, ponieważ ciągi pliku nagłówkowego nie są dokładnie zgodne. Ponadto nazwy plików nagłówkowych używane jako argumenty `/Yu` i `/Yc` opcje kompilatora lub `hdrstop` pragma, nie są zastępowane. Na przykład, jeśli plik z kodem źródłowym zawiera następujące dyrektywy,
+nie jest wykonywane podstawianie aliasów, ponieważ ciągi pliku nagłówka nie są dokładnie zgodne. Ponadto nazwy plików nagłówków używane jako argumenty dla `/Yu` opcji `hdrstop` kompilatora i `/Yc` lub pragma nie są zastępowane. Na przykład, jeśli plik z kodem źródłowym zawiera następujące dyrektywy,
 
 ```cpp
 #include <AppleSystemHeaderStop.h>
@@ -56,9 +57,9 @@ aliasing (podstawienie) nie jest wykonywany, ponieważ ciągi pliku nagłówkowe
 
 odpowiadające opcje kompilatora to
 
-> /YcAppleSystemHeaderStop.h
+> **/YcAppleSystemHeaderStop.h**
 
-Możesz użyć **include_alias** pragmy do mapowania dowolnej nazwy pliku nagłówkowego. Na przykład:
+Możesz użyć dyrektywy pragma **include_alias** , aby zmapować dowolną nazwę pliku nagłówkowego na inną. Przykład:
 
 ```cpp
 #pragma include_alias( "api.h", "c:\version1.0\api.h" )
@@ -67,7 +68,7 @@ Możesz użyć **include_alias** pragmy do mapowania dowolnej nazwy pliku nagł�
 #include <stdio.h>
 ```
 
-Nie należy mieszać nazw plików ujętych w znaki cudzysłowu z nazwami plików ujętymi w nawiasy ostre. Na przykład dla dwóch podanych wyżej `#pragma include_alias` dyrektyw, kompilator nie wykona podstawienia dla następujących `#include` dyrektywy:
+Nie mieszaj nazw plików ujętych w znaki podwójnego cudzysłowu z nazwami plików ujętych w nawiasy ostre. Na przykład, mając powyższe dwie `#pragma include_alias` dyrektywy, kompilator nie ma podstawienia w następujących `#include` dyrektywach:
 
 ```cpp
 #include <api.h>
@@ -80,14 +81,14 @@ Ponadto, następująca dyrektywa generuje błąd:
 #pragma include_alias(<header.h>, "header.h")  // Error
 ```
 
-Należy pamiętać, że nazwa pliku zgłaszana w komunikatach o błędach lub jako wartość wstępnie zdefiniowanego `__FILE__` makro, to nazwa pliku, po wykonaniu podstawienia. Na przykład wyświetlić dane wyjściowe po następujących dyrektywach:
+Nazwa pliku raportowana w komunikatach o błędach lub jako wartość wstępnie `__FILE__` zdefiniowanego makra to po zakończeniu podstawienia. Na przykład, zobacz dane wyjściowe po następujących dyrektywach:
 
 ```cpp
 #pragma include_alias( "VERYLONGFILENAME.H", "myfile.h" )
 #include "VERYLONGFILENAME.H"
 ```
 
-Błąd w VERYLONGFILENAME. H generuje następujący komunikat o błędzie:
+Błąd w *VERYLONGFILENAME. H* generuje następujący komunikat o błędzie:
 
 ```Output
 myfile.h(15) : error C2059 : syntax error
@@ -101,8 +102,8 @@ Należy również zauważyć, że przechodniość nie jest obsługiwana. Biorąc
 #include "one.h"
 ```
 
-Kompilator wyszuka plik two.h zamiast three.h.
+Kompilator wyszukuje plik *dwa. h* zamiast *trzy. h*.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

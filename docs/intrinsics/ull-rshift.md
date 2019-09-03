@@ -1,61 +1,61 @@
 ---
 title: __ull_rshift
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __ull_rshift
 helpviewer_keywords:
 - ull_rshift intrinsic
 - __ull_rshift intrinsic
 ms.assetid: b7ff5254-3540-4e6e-b57c-a6c4beb7dca2
-ms.openlocfilehash: 5d62ec1526aff595c14a53e9eca43a7a3118c8fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e914a019877482058c6b2842d3138cda02f1e228
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390129"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219706"
 ---
-# <a name="ullrshift"></a>__ull_rshift
+# <a name="__ull_rshift"></a>__ull_rshift
 
 **Microsoft Specific**
 
-na x64 przesuwa wartość 64-bitową, określonym przez pierwszy parametr w prawo o liczbę bitów określoną w drugim parametrze.
+w wersji x64 program przenosi wartość 64-bitową określoną przez pierwszy parametr w prawo przez liczbę bitów określoną przez drugi parametr.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 unsigned __int64 __ull_rshift(
    unsigned __int64 mask, 
    int nBit
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Maska*<br/>
-[in] Wartość 64-bitową liczbę całkowitą na przesunięcie w prawo.
+*bitowa*\
+podczas Wartość 64-bitowa liczba całkowita, która ma zostać przesunięta w prawo.
 
-*nBit*<br/>
-[in] Liczba bitów, aby przenieść modulo 32 na x86 i modulo 64 na x64.
+*nBit*\
+podczas Liczba bitów do przesunięcia, modulo 32 w x86 i modulo 64 w x64.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Maska przesunięte `nBit` usługi bits.
+Maska przesunięta przez `nBit` bity.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__ull_rshift`|x86, x64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli drugi parametr jest większa niż 31 na numer jest pobierany modulo 32 (64 na x64), aby określić liczbę bitów, aby przenieść x86 (63 na x64). `ull` w nazwie wskazuje `unsigned long long (unsigned __int64)`.
+Jeśli drugi parametr jest większy niż 31 na x86 (63 na x64), ta liczba jest pobierana modulo 32 (64 on x64), aby określić liczbę bitów do przesunięcia. Wartość `ull` w polu Nazwa wskazuje `unsigned long long (unsigned __int64)`.
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // ull_rshift.cpp
 // compile with: /EHsc
 // processor: x86, x64
@@ -74,16 +74,14 @@ int main()
 }
 ```
 
-## <a name="output"></a>Dane wyjściowe
-
-```
+```Output
 1
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 
-[__ll_lshift](../intrinsics/ll-lshift.md)<br/>
-[__ll_rshift](../intrinsics/ll-rshift.md)<br/>
+[__ll_lshift](../intrinsics/ll-lshift.md)\
+[__ll_rshift](../intrinsics/ll-rshift.md)\
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

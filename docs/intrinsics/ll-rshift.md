@@ -1,6 +1,6 @@
 ---
 title: __ll_rshift
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __ll_rshift_cpp
 - __ll_rshift
@@ -8,55 +8,55 @@ helpviewer_keywords:
 - __ll_rshift intrinsic
 - ll_rshift intrinsic
 ms.assetid: ef13b732-d122-44a0-add9-f5544a2c4ab2
-ms.openlocfilehash: e39f8fe797467569077dd24baf49670607915107
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ad17991d84acb7e531baf9435610ebd566197a22
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263363"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217502"
 ---
-# <a name="llrshift"></a>__ll_rshift
+# <a name="__ll_rshift"></a>__ll_rshift
 
 **Microsoft Specific**
 
-Przenosi wartość 64-bitową, określonym przez pierwszy parametr w prawo o liczbę bitów określoną w drugim parametrze.
+Przenosi wartość 64-bitową określoną przez pierwszy parametr w prawo przez liczbę bitów określoną przez drugi parametr.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 __int64 __ll_rshift(
    __int64 Mask,
    int nBit
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Maska*<br/>
-[in] Wartość 64-bitową liczbę całkowitą na przesunięcie w prawo.
+*Bitowa*\
+podczas Wartość 64-bitowa liczba całkowita, która ma zostać przesunięta w prawo.
 
-*nBit*<br/>
-[in] Liczba bitów, aby przenieść modulo 64 na x64 i modulo 32 na x86.
+*nBit*\
+podczas Liczba bitów do przesunięcia, modulo 64 w x64 i modulo 32 na x86.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Maska przesunięte `nBit` usługi bits.
+Maska przesunięta przez `nBit` bity.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__ll_rshift`|x86, x64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli drugi parametr jest większa niż 64 na numer jest pobierany modulo 64 (32 na x86), aby określić liczbę bitów, aby przenieść x64 (32 na x86). `ll` Prefiks wskazuje, że jest operacją na `long long`, inną nazwę `__int64`, typ całkowity ze znakiem 64-bitowych.
+Jeśli drugi parametr jest większy niż 64 na x64 (32 na x86), ta liczba jest pobierana z modulo 64 (32 na x86), aby określić liczbę bitów do przesunięcia. Prefiks wskazuje, że jest to operacja na `long long`, inna nazwa dla `__int64`, 64-bitowy typ całkowity ze znakiem. `ll`
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // ll_rshift.cpp
 // compile with: /EHsc
 // processor: x86, x64
@@ -80,19 +80,20 @@ int main()
 
 ## <a name="output"></a>Dane wyjściowe
 
-```
+```Output
 ffffffffffffff00
 - 100
 fffffffffffffff0
 - 10
 ```
 
-**Uwaga** Jeśli `_ull_rshift` było używane, BITEM wartość przesunięte w prawo byłby zero, dzięki czemu oczekiwany wynik może nie zostały uzyskane w przypadku wartości ujemnej.
+> [!NOTE]
+> Jeśli `_ull_rshift` został użyty, MSB wartości z prawej strony byłyby zero, więc żądany wynik nie zostanie uzyskany w przypadku wartości ujemnej.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 
-[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
-[__ll_lshift](../intrinsics/ll-lshift.md)<br/>
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)\
+[__ll_lshift](../intrinsics/ll-lshift.md)\
 [__ull_rshift](../intrinsics/ull-rshift.md)

@@ -1,6 +1,6 @@
 ---
-title: detect_mismatch
-ms.date: 11/04/2016
+title: detect_mismatch, pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.detect_mismatch
 - detect_mismatch_CPP
@@ -8,31 +8,30 @@ helpviewer_keywords:
 - pragmas, detect_mismatch
 - detect_mismatch pragma
 ms.assetid: ddb13ac9-0e2f-40ce-be69-7e44c04f5a12
-ms.openlocfilehash: 42a3ba61cefe3b2db01aef24b802e3a51fed55d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e247b3f251bce47710a3380fb295597314a3bd8
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389336"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222396"
 ---
-# <a name="detectmismatch"></a>detect_mismatch
-Umieszcza rekord w obiekcie. Konsolidator sprawdza, czy te rekordy w potencjalnych niezgodności.
+# <a name="detect_mismatch-pragma"></a>detect_mismatch, pragma
+
+Umieszcza rekord w obiekcie. Konsolidator sprawdza te rekordy pod kątem potencjalnych niezgodności.
 
 ## <a name="syntax"></a>Składnia
 
-```
-#pragma detect_mismatch("name", "value")
-```
+> **#pragma detect_mismatch (** "*name*" **,** "*Value*" **)**
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy łączysz projektu, konsolidator generuje `LNK2038` błąd, jeśli projekt zawiera dwa obiekty, które mają taki sam `name` , ale każde z nich ma inną `value`. Użyj tej pragmie, aby uniemożliwić konsolidacji plików obiektu niespójne.
+Po połączeniu projektu konsolidator zgłasza błąd [LNK2038](../error-messages/tool-errors/linker-tools-error-lnk2038.md) , jeśli projekt zawiera dwa obiekty, które mają taką samą *nazwę* , ale każdy z nich ma inną *wartość*. Użyj tej dyrektywy pragma, aby uniemożliwić łączenie niespójnych plików obiektów.
 
-Nazwy i wartości są literały ciągów i przestrzegają zasad dla literałów ciągów znaków ucieczki i łączenia. Jest rozróżniana wielkość liter, a nie może zawierać przecinka, znaku równości, znaki cudzysłowu lub **null** znaków.
+Zarówno *Nazwa* , jak i *wartość* są literałami ciągów i przestrzegają reguł dla literałów ciągów w odniesieniu do znaków ucieczki i łączenia. Uwzględnia wielkość liter i nie może zawierać przecinka, znaku równości, cudzysłowów ani znaku **null** .
 
 ## <a name="example"></a>Przykład
 
-Ten przykład tworzy dwa pliki, które mają numery wersji różne etykiety w tej samej wersji.
+W tym przykładzie tworzone są dwa pliki, które mają różne numery wersji dla tej samej etykiety wersji.
 
 ```cpp
 // pragma_directive_detect_mismatch_a.cpp
@@ -46,8 +45,8 @@ int main ()
 #pragma detect_mismatch("myLib_version", "1")
 ```
 
-Jeśli kompilujesz oba te pliki przy użyciu wiersza polecenia `cl pragma_directive_detect_mismatch_a.cpp pragma_directive_detect_mismatch_b.cpp`, zostanie wyświetlony błąd `LNK2038`.
+Jeśli kompilujesz oba te pliki przy użyciu wiersza `cl pragma_directive_detect_mismatch_a.cpp pragma_directive_detect_mismatch_b.cpp`polecenia, zostanie wyświetlony komunikat o błędzie. `LNK2038`
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

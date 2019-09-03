@@ -1,6 +1,6 @@
 ---
-title: alloc_text
-ms.date: 11/04/2016
+title: alloc_text, pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.alloc_text
 - alloc_text_CPP
@@ -8,40 +8,37 @@ helpviewer_keywords:
 - alloc_text pragma
 - pragmas, alloc_text
 ms.assetid: 1fd7be18-e4f7-4f70-b079-6326f72b871a
-ms.openlocfilehash: 399e8956a511f289b480e66db7f03cac0a6c7c20
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ddb12b39e068dea42f7a47f7fd937424be43725
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389362"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216338"
 ---
-# <a name="alloctext"></a>alloc_text
-Nazwy sekcji kodu, w którym mają znajdować się definicje określonej funkcji. Pragma musi przypadać między deklaratora funkcji i definicji funkcji o nazwie funkcji.
+# <a name="alloc_text-pragma"></a>alloc_text, pragma
+
+Nazwa sekcji kodu, w której znajdują się określone definicje funkcji. Dyrektywa pragma musi występować między funkcją deklarator i definicją funkcji dla nazwanych funkcji.
 
 ## <a name="syntax"></a>Składnia
 
-```
-#pragma alloc_text( "
-textsection
-", function1, ... )
-```
+> **#pragma alloc_text (** "*textsection*" **,** *function1* [ **,** *function2* ...] **)**
 
 ## <a name="remarks"></a>Uwagi
 
-**Alloc_text** nie obsługuje dyrektywy C++ funkcji składowych lub przeciążonych funkcji. Ma ona zastosowanie tylko do funkcji zadeklarowanych z powiązaniem C — oznacza to, że funkcje zadeklarowane za pomocą **extern "C"** Specyfikacja powiązania. Jeśli spróbujesz użyć tej pragmie dla funkcji z powiązaniem C++, jest generowany błąd kompilatora.
+Dyrektywa pragma **alloc_text** nie obsługuje C++ funkcji składowych ani przeciążonych funkcji. Ma zastosowanie tylko do funkcji zadeklarowanych za pomocą powiązania C — to znaczy, że funkcje zadeklarowane ze specyfikacją powiązania **extern "C"** . Jeśli spróbujesz użyć tej dyrektywy pragma dla funkcji z C++ powiązaniem, zostanie wygenerowany błąd kompilatora.
 
-Ze względu na używanie adresowania funkcja `__based` nie jest obsługiwana, określając lokalizacje sekcji wymaga użycia **alloc_text** pragmy. Nazwa określona przez *textsection* powinna zostać ujęta w znaki cudzysłowu.
+Ponieważ adresowanie funkcji `__based` przy użyciu nie jest obsługiwane, określenie lokalizacji sekcji wymaga zastosowania dyrektywy pragma **alloc_text** . Nazwa określona przez *textsection* powinna być ujęta w znaki podwójnego cudzysłowu.
 
-**Alloc_text** pragma musi pojawić się po deklaracjach dowolnego z określonych funkcji i przed definicjami tych funkcji.
+Dyrektywa pragma **alloc_text** musi występować po deklaracjach którejkolwiek z określonych funkcji i przed definicjami tych funkcji.
 
-Funkcje, do którego odwołuje się **alloc_text** pragma powinien być zdefiniowany w tym samym modułem pragmy. Jeśli nie jest to wykonywane, funkcja undefined później jest skompilowany w sekcji inny tekst błędu może lub nie może zostać przechwycony. Mimo że program zwykle będzie działać poprawnie, funkcja nie zostaną przydzielone w sekcjach zamierzone.
+Funkcje, do których odwołuje się **alloc_text** pragma, powinny być zdefiniowane w tym samym module co pragma. W przeciwnym razie, jeśli Niezdefiniowana funkcja zostanie później skompilowana do innej sekcji tekstu, błąd może lub nie zostać przechwycony. Mimo że program jest zwykle uruchamiany poprawnie, funkcja nie zostanie przypisana w zamierzonych sekcjach.
 
 Inne ograniczenia dotyczące **alloc_text** są następujące:
 
-- Nie można używać wewnątrz funkcji.
+- Nie można jej użyć wewnątrz funkcji.
 
-- Należy użyć, po funkcja została zadeklarowana, ale przed funkcja została zdefiniowana.
+- Musi być używany po zadeklarowaniu funkcji, ale przed zdefiniowaniem funkcji.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,6 +1,6 @@
 ---
-title: fp_contract
-ms.date: 03/12/2018
+title: fp_contract, pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.fp_contract
 - fp_contract_CPP
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - pragmas, fp_contract
 - fp_contract pragma
 ms.assetid: 15b97338-6680-4287-ba2a-2dccc5b2ccf5
-ms.openlocfilehash: 14c3ac60d4fc0f45fcf0ece6c3f73153e5de4271
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 833d8e7f4b8c9da18901610e52afed619468c5c3
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409918"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218562"
 ---
-# <a name="fpcontract"></a>fp_contract
+# <a name="fp_contract-pragma"></a>fp_contract, pragma
 
-Określa, czy zmiennoprzecinkowych zmniejszenia odbywa się. Zmniejszenie zmiennoprzecinkowej jest instrukcji takich jak FMA (topionej-mnożenie-Dodawanie), który łączy dwie oddzielne operacje zmiennoprzecinkowe w pojedynczej instrukcji. Użyj tych instrukcji może wpływać na precyzję zmiennoprzecinkową, ponieważ zamiast zaokrąglając miejsce po zakończeniu każdej operacji, procesor może zaokrąglać tylko jeden raz po zarówno operacji.
+Określa, czy ma miejsce zamówienie zmiennoprzecinkowe. Umowka zmiennoprzecinkowa jest instrukcją, taką jak FMA (-mnożyć-Add), która łączy dwie oddzielne operacje zmiennoprzecinkowe w jedną instrukcję. Użycie tych instrukcji może wpłynąć na precyzję zmiennoprzecinkową, ponieważ zamiast zaokrąglania po każdej operacji, procesor może zaokrąglić tylko raz po obu operacjach.
 
 ## <a name="syntax"></a>Składnia
 
-> **#pragma fp_contract (** { **na** | **poza** } **)**
+> **#pragma fp_contract (** { **on** | **off** } **)**
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie **fp_contract** jest **na**. To informuje kompilator, aby można było użyć instrukcji zmiennoprzecinkowych zmniejszenia, gdzie to możliwe. Ustaw **fp_contract** do **poza** zachować pojedynczych instrukcji zmiennoprzecinkowych.
+Domyślnie **fp_contract** jest **włączone**. Oznacza to, że kompilator będzie używać instrukcji kontraktu zmiennoprzecinkowego, jeśli jest to możliwe. Ustaw opcję **fp_contract** na **off** , aby zachować poszczególne instrukcje zmiennoprzecinkowe.
 
-Aby uzyskać więcej informacji na temat zachowanie liczb zmiennopozycyjnych, zobacz [/FP (określenie zachowania zmiennopozycyjna)](../build/reference/fp-specify-floating-point-behavior.md).
+Aby uzyskać więcej informacji o zachowaniu liczb zmiennoprzecinkowych, zobacz [/FP (Określ zachowanie zmiennoprzecinkowe)](../build/reference/fp-specify-floating-point-behavior.md).
 
-Inne zmiennoprzecinkowych pragm, obejmują:
+Inne pragmy zmiennoprzecinkowe obejmują:
 
 - [fenv_access](../preprocessor/fenv-access.md)
 
@@ -37,7 +37,7 @@ Inne zmiennoprzecinkowych pragm, obejmują:
 
 ## <a name="example"></a>Przykład
 
-Kod generowany na podstawie tego przykładu nie używa instrukcję zespolone mnożenie Dodawanie, nawet wtedy, gdy jest ona dostępna na procesor docelowy. Jeśli komentarz wystąpi poza `#pragma fp_contract (off)`, wygenerowany kod może używać instrukcję zespolone mnożenie Dodawanie, jeśli jest ona dostępna.
+Kod wygenerowany na podstawie tego przykładu nie używa instrukcji "pomnożyć-", nawet jeśli jest ona dostępna na docelowym procesorze. W przypadku dodania komentarza `#pragma fp_contract (off)`do wygenerowanego kodu może zostać wykorzystana instrukcja "podzielna", jeśli jest dostępna.
 
 ```cpp
 // pragma_directive_fp_contract.cpp
@@ -77,4 +77,4 @@ out = 4.587525000000000e+03
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

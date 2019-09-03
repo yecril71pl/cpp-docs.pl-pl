@@ -1,52 +1,51 @@
 ---
 title: __sidt
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __sidt
 helpviewer_keywords:
 - sidt instruction
 - __sidt intrinsic
 ms.assetid: 01e83d14-6e63-4dea-8f64-5a0339d69641
-ms.openlocfilehash: 88dbb4713577fcf224e1c5646bf4c38b2a1dfafe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d6b685da0e02373307a3149c5b7b28213f37ad40
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390324"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222324"
 ---
-# <a name="sidt"></a>__sidt
+# <a name="__sidt"></a>__sidt
 
 **Microsoft Specific**
 
-Przechowuje wartość rejestru Tabela deskryptora przerwania (IDTR) w określonej lokalizacji pamięci.
+Przechowuje wartość rejestru tabeli deskryptorów przerwań (IDTR) w określonej lokalizacji pamięci.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 void __sidt(void * Destination);
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*miejsce docelowe*|[in] Wskaźnik do przechowywania IDTR lokalizacji w pamięci.|
+*Punktu*\
+podczas Wskaźnik do lokalizacji pamięci, w której jest przechowywany IDTR.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__sidt`|x86, x64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-`__sidt` Funkcji jest odpowiednikiem `SIDT` machine instrukcji. Aby uzyskać więcej informacji, wyszukaj dokumentu, "Manual deweloper oprogramowania architekturze firmy Intel, wolumin 2: Instrukcja Ustaw odwołanie,"w [Intel Corporation](https://software.intel.com/articles/intel-sdm) lokacji.
+Funkcja jest równoważna `SIDT` z instrukcją maszyny. `__sidt` Aby uzyskać więcej informacji, Wyszukaj dokument "Podręcznik Intel Architecture Developer, Tom 2: Odwołanie do zestawu instrukcji "w witrynie [firmy Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 
-[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)\
 [__lidt](../intrinsics/lidt.md)

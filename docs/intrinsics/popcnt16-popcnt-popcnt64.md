@@ -1,6 +1,6 @@
 ---
 title: __popcnt16, __popcnt, __popcnt64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __popcnt64
 - __popcnt
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - __popcnt64
 - __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-ms.openlocfilehash: d6cc9a0ce784ab79f5e4225675a082fc55bd53e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e5ae7f897500775671f8bd2563028874579a627
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263220"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221359"
 ---
-# <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
+# <a name="__popcnt16-__popcnt-__popcnt64"></a>__popcnt16, __popcnt, __popcnt64
 
 **Microsoft Specific**
 
-Zlicza jednej usługi bits (liczba populacji) w 16-, 32- lub 64-bitowej nieoznaczonej liczby całkowitej.
+Zlicza liczbę `1` bitów (liczbę populacji) w 16-, 32-lub 64-bitowej liczbie całkowitej bez znaku.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 unsigned short __popcnt16(
    unsigned short value
 );
@@ -38,34 +38,34 @@ unsigned __int64 __popcnt64(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*value*<br/>
-[in] 16-, 32- lub 64-bitowych unsigned integer dla którego chcemy, aby liczba populacji.
+*wartościami*\
+podczas 16-, 32-lub 64-bitowa liczba całkowita bez znaku, dla którego chcemy obliczyć liczbę populacji.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Liczba bitów co `value` parametru.
+Liczba `1` bitów w parametrze *Value* .
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
-|`__popcnt16`|Manipulowanie Bit zaawansowane|
-|`__popcnt`|Manipulowanie Bit zaawansowane|
-|`__popcnt64`|Zaawansowane manipulowania bitowych w trybie 64-bitowym.|
+|`__popcnt16`|Zaawansowane manipulowanie Bitmi|
+|`__popcnt`|Zaawansowane manipulowanie Bitmi|
+|`__popcnt64`|Zaawansowane manipulowanie Bitmi w trybie 64-bitowym.|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji wewnętrznych generuje `popcnt` instrukcji. W trybie 32-bitowym istnieją Brak 64-bitowych ogólnego przeznaczenia rejestrów, dlatego nie 64-bitowych `popcnt`.
+Każda z elementów wewnętrznych generuje `popcnt` instrukcję. W trybie 32-bitowym nie ma żadnych 64-bitowych rejestrów ogólnego przeznaczenia, dlatego 64-bit `popcnt` nie jest obsługiwany.
 
-Aby określić, pomoc techniczna dotycząca sprzętu dla `popcnt` instrukcji, wywołanie `__cpuid` wewnętrzne z `InfoType=0x00000001` i sprawdź bit 23 `CPUInfo[2] (ECX)`. Ten bit jest 1, jeśli instrukcja jest obsługiwana lub 0. Jeśli możesz uruchomić kod, który korzysta z tym wewnętrzne na sprzęcie, który nie obsługuje `popcnt` instrukcji, wyniki są nieprzewidywalne.
+Aby określić obsługę `popcnt` sprzętową instrukcji, `__cpuid` Wywołaj wewnętrzne z `InfoType=0x00000001` i sprawdź bit 23 w `CPUInfo[2] (ECX)`. Ten bit ma wartość 1, jeśli instrukcja jest obsługiwana i 0 w przeciwnym razie. Jeśli uruchamiasz kod, który używa tych elementów wewnętrznych na sprzęcie, który nie `popcnt` obsługuje instrukcji, wyniki są nieprzewidywalne.
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 #include <iostream>
 #include <intrin.h>
 using namespace std;
@@ -99,9 +99,9 @@ __popcnt(0xffff) = 16
 __popcnt(0xffffffff) = 32
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-Copyright 2007 zaawansowane Micro urządzeń, Inc. Wszelkie prawa zastrzeżone. Odtworzyć zgoda zaawansowane Micro urządzeń, Inc.
+Fragmenty Copyright 2007 przez Advanced Micro Devices, Inc. Wszelkie prawa zastrzeżone. Wygenerowane z uprawnieniami z zaawansowanych urządzeń Micro Devices, Inc.
 
 ## <a name="see-also"></a>Zobacz także
 

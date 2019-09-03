@@ -1,46 +1,46 @@
 ---
 title: __nop
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __nop
 helpviewer_keywords:
 - nop instruction
 - __nop intrinsic
 ms.assetid: 7a2a938b-87e0-476d-a348-03ea7635b6b9
-ms.openlocfilehash: 1e76110c1ef0c4b98c295578189eedc99d76eeb9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4561bcb84063f3707825c8ca164867d41500e2db
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396629"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221673"
 ---
-# <a name="nop"></a>__nop
+# <a name="__nop"></a>__nop
 
 **Microsoft Specific**
 
-Generuje kod maszynowy specyficzne dla platformy, która nie wykonuje żadnej operacji.
+Generuje kod maszynowy specyficzny dla platformy, który nie wykonuje operacji.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 void __nop();
 ```
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__nop`|x86, ARM, x64, ARM64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="remarks"></a>Uwagi
 
-`__nop` Funkcji jest odpowiednikiem `NOP` machine instrukcji. Aby uzyskać więcej informacji na temat x86 i x64, wyszukaj dokumentu, "Manual deweloper oprogramowania architekturze firmy Intel, wolumin 2: Instrukcja Ustaw odwołanie,"w [Intel Corporation](https://software.intel.com/articles/intel-sdm) lokacji.
+Funkcja jest równoważna `NOP` z instrukcją maszyny. `__nop` Aby uzyskać więcej informacji na temat architektury x86 i x64, Wyszukaj dokument "Podręcznik Intel Architecture Developer, Tom 2: Odwołanie do zestawu instrukcji "w witrynie [firmy Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="see-also"></a>Zobacz także
 
-[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)\
 [__noop](../intrinsics/noop.md)

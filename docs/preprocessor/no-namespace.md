@@ -1,38 +1,37 @@
 ---
-title: no_namespace
-ms.date: 11/04/2016
+title: no_namespace — atrybut importowania
+ms.date: 08/29/2019
 f1_keywords:
 - no_namespace
 helpviewer_keywords:
 - no_namespace attribute
 ms.assetid: 5d81b741-a558-451b-b493-1f3b18967337
-ms.openlocfilehash: f6bd60de02bf0166d5cf0b0cd1bc1de56ceda5bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba52aed69cdbb46c135e6de5078d718e93f99c87
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326563"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220739"
 ---
-# <a name="nonamespace"></a>no_namespace
-**Określonego język C++**
+# <a name="no_namespace-import-attribute"></a>no_namespace — atrybut importowania
 
-Określa, że nazwa przestrzeni nazw nie są generowane przez kompilator.
+**C++Specjalne**
+
+Określa, że kompilator nie generuje nazwy przestrzeni nazw.
 
 ## <a name="syntax"></a>Składnia
 
-```
-no_namespace
-```
+> **#import** *Biblioteka typów* **no_namespace**
 
 ## <a name="remarks"></a>Uwagi
 
-Biblioteka typów zawartości w `#import` pliku nagłówkowego zwykle są zdefiniowane w przestrzeni nazw. Nazwa przestrzeni nazw jest określona w `library` instrukcji, oryginalnym pliku IDL. Jeśli **no_namespace** atrybut jest określony, a następnie ta przestrzeń nazw nie jest generowany przez kompilator.
+Zawartość biblioteki typów w `#import` pliku nagłówkowym są zwykle zdefiniowane w przestrzeni nazw. Nazwa przestrzeni nazw jest określona w `library` instrukcji oryginalnego pliku IDL. Jeśli atrybut **no_namespace** jest określony, ta przestrzeń nazw nie jest generowana przez kompilator.
 
-Jeśli chcesz użyć nazwy innej przestrzeni nazw, należy użyć [rename_namespace](../preprocessor/rename-namespace.md) zamiast tego atrybutu.
+Jeśli chcesz użyć innej nazwy przestrzeni nazw, zamiast tego użyj atrybutu [rename_namespace](../preprocessor/rename-namespace.md) .
 
-**KONIEC określonego języka C++**
+**ZAKOŃCZENIE C++ określonych**
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import Directive](../preprocessor/hash-import-directive-cpp.md)
+[Atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

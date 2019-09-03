@@ -1,20 +1,20 @@
 ---
 title: _div64
-ms.date: 04/17/2019
+ms.date: 09/02/2019
 f1_keywords:
 - _div64
 helpviewer_keywords:
 - _div64 intrinsic
-ms.openlocfilehash: a221cc7cf0655a41873c6777aecd8a9b27131b74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d05c5d6e25540a5de1b2f8231697c9a738759ce
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264117"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216766"
 ---
-# <a name="div64"></a>_div64
+# <a name="_div64"></a>_div64
 
-`_div64` Wewnętrzne dzieli 64-bitową liczbę całkowitą przez 32-bitową liczbę całkowitą. Wartość zwracana zawiera iloraz, a funkcja zwraca resztę z dzielenia za pomocą parametru wskaźnika. `_div64` jest **specyficzne dla firmy Microsoft**.
+`_div64` Wewnętrznie dzieli 64-bitową liczbę całkowitą przez 32-bitową liczbę całkowitą. Wartość zwracana utrzymuje iloraz, a wewnętrzna Zwraca resztę za pomocą parametru wskaźnika. `_div64`jest **specyficzny dla firmy Microsoft**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,28 +28,28 @@ int _div64(
 
 ### <a name="parameters"></a>Parametry
 
-*dzielna* \
-[in] 64-bitową liczbę całkowitą do podzielenia.
+*płacone* \
+podczas 64-bitowa liczba całkowita do podzielenia.
 
-*dzielnik.* \
-[in] Liczba całkowita 32-bitowych dzielnikiem.
+*dzielnik* \
+podczas 32-bitowa liczba całkowita do podzielenia przez.
 
-*Pozostała* \
-[out] Bity 32-bitową liczbę całkowitą resztę.
+*pozostałej części* \
+określoną 32-bitowe całkowite bity reszty.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-32 bity ilorazu.
+32 bitów ilorazu.
 
 ## <a name="remarks"></a>Uwagi
 
-`_div64` Wewnętrzne dzieli *dzielna* przez *dzielnik*. Przechowuje w 32-bitową liczbę całkowitą, wskazywana przez resztę *resztę*i zwraca 32-bitowy ilorazu.
+Wewnętrznie dzieli *dzielną* przez *dzielnik.* `_div64` Przechowuje resztę z 32-bitowej liczby całkowitej wskazywanej przez *resztę*i zwraca 32 bitów ilorazu.
 
-`_div64` Wewnętrzne są dostępne począwszy od programu Visual Studio 2019 RTM.
+Funkcja `_div64` wewnętrzna jest dostępna od wersji Visual Studio 2019 RTM.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|nagłówek|
+|Wewnętrznej|Architektura|nagłówek|
 |---------------|------------------|------------|
 |`_div64`|x86, x64|\<immintrin.h>|
 

@@ -1,6 +1,6 @@
 ---
-title: optymalizuj
-ms.date: 11/04/2016
+title: optimize, pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.optimize
 - optimize_CPP
@@ -8,57 +8,53 @@ helpviewer_keywords:
 - pragmas, optimize
 - optimize pragma
 ms.assetid: cb13c1cc-186a-45bc-bee7-95a8de7381cc
-ms.openlocfilehash: 9f5240fc59f59a71ddb3d18b67fadf3463a0d1ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d7b99b7a72c133d56a209cf42fa9ef670a4a7f9
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328175"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220519"
 ---
-# <a name="optimize"></a>optymalizuj
+# <a name="optimize-pragma"></a>optimize, pragma
 
-Określa optymalizacje wykonywane na podstawie funkcji przez funkcję.
+Określa optymalizacje na zasadzie funkcji przez funkcję.
 
 ## <a name="syntax"></a>Składnia
 
-```
-#pragma optimize( "[optimization-list]", {on | off} )
-```
+> **#pragma Optymalizuj ("** [ *Lista optymalizacji* ] **",** { **on** | **off** } **)**
 
 ## <a name="remarks"></a>Uwagi
 
-**Zoptymalizować** pragma musi znajdować się poza funkcją i zaczyna obowiązywać przy pierwszej funkcji zdefiniowanych po pragmy jest widoczny. *Na* i *poza* argumenty Włącz opcje określone w *listy optymalizacji* lub wyłączyć.
+**Optymalizacja** pragma musi znajdować się poza funkcją. Zacznie obowiązywać przy pierwszej funkcji zdefiniowanej po wystąpieniu dyrektywy pragma. Argumenty **włączone** i **wyłączone** włączają opcje określone na *liście Optymalizacja —* włączone lub wyłączone.
 
-*Listy optymalizacji* może być zero lub jeden z parametrów pokazano w poniższej tabeli.
+*Lista optymalizacji* może być równa zero lub więcej parametrów przedstawionych w poniższej tabeli.
 
-### <a name="parameters-of-the-optimize-pragma"></a>Parametry optymalizacji Pragma
+### <a name="parameters-of-the-optimize-pragma"></a>Parametry optymalizacji dyrektywy pragma
 
-|Parametry|Typ optymalizacji|
+| Parametry | Typ optymalizacji |
 |--------------------|--------------------------|
-|*g*|Włącz optymalizacje globalne.|
-|*s* lub *t*|Określ krótki i szybkie sekwencji kodu maszynowego.|
-|*y*|Generowanie wskaźników ramek na stosie program.|
+| **g** | Włącz optymalizacje globalne. |
+| **s** lub **t** | Określ krótkie lub szybkie sekwencje kodu maszynowego. |
+| **y** | Generuj wskaźniki ramek na stosie programów. |
 
-Są to tych samych liter, w ramach [/O](../build/reference/o-options-optimize-code.md) opcje kompilatora. Na przykład, następujące pragmy jest odpowiednikiem `/Os` — opcja kompilatora:
+Te parametry są te same litery, które są używane z opcjami kompilatora [/o](../build/reference/o-options-optimize-code.md) . Na przykład następująca pragma jest równoważna `/Os` z opcją kompilatora:
 
+```cpp
+#pragma optimize( "s", on )
 ```
-#pragma optimize( "ts", on )
-```
 
-Za pomocą **zoptymalizować** dyrektywę pusty ciąg (**""**) jest specjalną forma dyrektywy:
+Używanie **optymalizacji** dyrektywy pragma z pustym ciągiem ( **""** ) jest specjalną formą dyrektywy:
 
-Zastosowania *poza* parametru go włącza optymalizacje *g*, *s*, *t*, i *y*, wyłącz.
+Użycie parametru **off** powoduje włączenie wszystkich optymalizacji, **g**, **s**, **t**i **y**.
 
-Kiedy używasz *na* parametru resetuje Optymalizacje te, które określono [/O](../build/reference/o-options-optimize-code.md) — opcja kompilatora.
+**W** przypadku użycia parametru on resetuje optymalizacje do tych, które zostały określone przy użyciu opcji " [/o](../build/reference/o-options-optimize-code.md) kompilatora".
 
-```
+```cpp
 #pragma optimize( "", off )
-.
-.
-.
+/* unoptimized code section */
 #pragma optimize( "", on )
 ```
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

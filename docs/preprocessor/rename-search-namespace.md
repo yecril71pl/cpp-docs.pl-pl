@@ -1,40 +1,38 @@
 ---
-title: rename_search_namespace
-ms.date: 10/18/2018
+title: rename_search_namespace — atrybut importowania
+ms.date: 08/29/2019
 f1_keywords:
 - rename_search_namespace
 helpviewer_keywords:
 - rename_search_namespace attribute
 ms.assetid: 47c9d7fd-59dc-4c62-87a1-9011a0040167
-ms.openlocfilehash: ca5d24ca9cc12e9defaa395cf150bc3c04ee4439
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42c6edb6aa34b441db8041dd2974728c138b2c82
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179779"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216623"
 ---
-# <a name="renamesearchnamespace"></a>rename_search_namespace
+# <a name="rename_search_namespace-import-attribute"></a>rename_search_namespace — atrybut importowania
 
-**Określonego język C++**
+**C++Specjalne**
 
-Ma taką samą funkcjonalność jak [rename_namespace](../preprocessor/rename-namespace.md) atrybutu, ale jest używana na biblioteki typów, których używasz `#import` dyrektywy z [auto_search —](../preprocessor/auto-search.md) atrybutu.
+Ma taką samą funkcjonalność jak atrybut [rename_namespace](../preprocessor/rename-namespace.md) , ale jest używany w bibliotekach typów, w których jest `#import` używana dyrektywa wraz z atrybutem [auto_search](../preprocessor/auto-search.md) .
 
 ## <a name="syntax"></a>Składnia
 
-```
-rename_search_namespace("NewName")
-```
+> **#import** *Biblioteka typów* **rename_search_namespace (** "*newname*" **)**
 
 ### <a name="parameters"></a>Parametry
 
-*Nowa nazwa*<br/>
+*NewName*\
 Nowa nazwa przestrzeni nazw.
 
 ## <a name="remarks"></a>Uwagi
 
-**KONIEC określonego języka C++**
+**ZAKOŃCZENIE C++ określonych**
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import Directive](../preprocessor/hash-import-directive-cpp.md)
+[Atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

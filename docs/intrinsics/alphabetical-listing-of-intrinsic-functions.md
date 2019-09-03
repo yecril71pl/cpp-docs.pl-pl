@@ -6,16 +6,16 @@ helpviewer_keywords:
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-ms.openlocfilehash: 67206e63d163b489c5087e6bc6759cde30a3d6c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff6957436ecfb86ae44388e55488981f528f2c73
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264318"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220079"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>Alfabetyczna lista funkcji wewnętrznych
 
-W poniższych sekcjach opisano specyficzne dla firmy Microsoft funkcje wewnętrzne dostępne w niektórych lub wszystkich architekturach. Inne obsługiwane funkcje wewnętrzne są udokumentowane przez producentów procesora w plikach nagłówkowych lub w swoich witrynach internetowych. Zobacz [funkcje wewnętrzne ARM](../intrinsics/arm-intrinsics.md), [x86 funkcje wewnętrzne](../intrinsics/x86-intrinsics-list.md), i [x64 funkcje wewnętrzne](../intrinsics/x64-amd64-intrinsics-list.md) sekcje, aby uzyskać linki do dokumentacji producenta. Funkcje biblioteki czasu wykonywania (CRT) C, które mają zaimplementowane dla nich funkcje wewnętrzne nie są opisane tutaj; te funkcje są udokumentowane w artykule [odwołanie do biblioteki wykonawczej C](../c-runtime-library/c-run-time-library-reference.md).
+W poniższych sekcjach opisano funkcje wewnętrzne specyficzne dla firmy Microsoft dostępne w niektórych lub wszystkich architekturach. Inne obsługiwane elementy wewnętrzne są udokumentowane przez producentów procesora, w plikach nagłówkowych lub w witrynach sieci Web. Zapoznaj się z sekcją wewnętrzne platformy [ARM](../intrinsics/arm-intrinsics.md), [wewnętrzne wersje x86](../intrinsics/x86-intrinsics-list.md)i funkcje [wewnętrzne x64](../intrinsics/x64-amd64-intrinsics-list.md) , aby uzyskać linki do dokumentacji producenta. Funkcje biblioteki wykonawczej języka C (CRT), które mają wewnętrznie zaimplementowane dla nich, nie są tutaj udokumentowane. te funkcje są udokumentowane w [dokumentacji dotyczącej biblioteki wykonawczej C](../c-runtime-library/c-run-time-library-reference.md).
 
 [__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
 
@@ -75,9 +75,9 @@ W poniższych sekcjach opisano specyficzne dla firmy Microsoft funkcje wewnętrz
 
 [Funkcje wewnętrzne _InterlockedAnd](../intrinsics/interlockedand-intrinsic-functions.md)
 
-[Funkcje wewnętrzne _interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)
+[funkcje wewnętrzne _interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)
 
-[Funkcje wewnętrzne _interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
+[funkcje wewnętrzne _interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
 
 [Funkcje wewnętrzne _InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)
 

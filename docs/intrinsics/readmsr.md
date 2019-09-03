@@ -1,6 +1,6 @@
 ---
 title: __readmsr
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readmsr
 helpviewer_keywords:
@@ -8,51 +8,51 @@ helpviewer_keywords:
 - rdmsr instruction
 - __readmsr intrinsic
 ms.assetid: 7ab1f8e8-72cb-4ce4-817d-3e728a3c9716
-ms.openlocfilehash: 2c866213c452f3b8791bf0fe031a43bb024e91fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4398b9d42369e3a914dbec1ed2d14cafecf58483
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262778"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222342"
 ---
-# <a name="readmsr"></a>__readmsr
+# <a name="__readmsr"></a>__readmsr
 
 **Microsoft Specific**
 
-Generuje `rdmsr` instrukcji, który odczytuje rejestru specyficzne dla modelu, określony przez `register` i zwraca jego wartość.
+Generuje instrukcję, która odczytuje rejestr specyficzny dla modelu określony przez `register` i zwraca jego wartość. `rdmsr`
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 __int64 __readmsr(
    int register
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*register*<br/>
-[in] Rejestr określonego modelu do odczytu.
+*zarejestrować*\
+podczas Rejestr specyficzny dla modelu, który ma zostać odczytany.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość do określonego rejestru.
+Wartość w określonym rejestrze.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__readmsr`|x86, x64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja jest dostępna tylko w trybie jądra, a procedura jest dostępna jako funkcja wewnętrzna tylko.
+Ta funkcja jest dostępna tylko w trybie jądra, a procedura jest dostępna tylko jako wewnętrzna.
 
-Aby uzyskać więcej informacji zobacz dokumentację AMD.
+Aby uzyskać więcej informacji, zobacz dokumentację AMD.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

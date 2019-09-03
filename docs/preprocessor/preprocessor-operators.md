@@ -1,29 +1,30 @@
 ---
 title: Operatory preprocesora
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 helpviewer_keywords:
 - preprocessor operators
 - operators [C++], preprocessor
 ms.assetid: 884126d1-0ce2-48b6-9e06-8a2d7c4a9656
-ms.openlocfilehash: 0b105cc2039e2aa50c11b796e5474a97d8c5c702
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c556e4af5913ba8d0dc7efc9648e0d0004d9d7e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179896"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222251"
 ---
 # <a name="preprocessor-operators"></a>Operatory preprocesora
-Cztery operatory specyficzne dla preprocesora są używane w kontekście `#define` — dyrektywa (zobacz poniżej, aby uzyskać podsumowanie). W trzech kolejnych sekcjach omówiono operatory tworzenia ciągu, charizing i wklejania tokenu. Instrukcje dotyczące `defined` operatora, zobacz [#if, #elif #else i #endif, dyrektywy](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).
+
+Cztery operatory specyficzne dla preprocesora są używane w kontekście `#define` dyrektywy. W poniższej tabeli przedstawiono podsumowanie każdego z nich. Operatory tworzenia ciągu, konwersji na znaki i wklejania tokenu zostały omówione w następnych trzech sekcjach. Aby uzyskać informacje na `defined` temat operatora, zapoznaj [się z dyrektywami #if, #elif, #else i #endif](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).
 
 |Operator|Akcja|
 |--------------|------------|
-|[Operator tworzenia ciągów (#)](../preprocessor/stringizing-operator-hash.md)|Powoduje, że odpowiednie argumenty rzeczywiste do być ujęta w znaki podwójnego cudzysłowu|
-|[Charizing operator (#@)](../preprocessor/charizing-operator-hash-at.md)|Powoduje, że odpowiadający argument do być ujęta w znaki pojedynczego cudzysłowu i powinien być traktowany jako znak (Microsoft Specific)|
-|[Operator wklejania tokenu (##)](../preprocessor/token-pasting-operator-hash-hash.md)|Zezwala na tokeny używane jako argumenty rzeczywiste ma zostać połączony w celu utworzenia innych tokenów|
-|[defined-operator](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|Upraszcza zapisywanie złożonego wyrażenia w niektórych dyrektyw — makro|
+|[Operator tworzenia ciągu (#)](../preprocessor/stringizing-operator-hash.md)|Powoduje, że odpowiadający mu rzeczywisty argument ma być ujęty w znaki podwójnego cudzysłowu|
+|[Operator konwersji na znaki (# @)](../preprocessor/charizing-operator-hash-at.md)|Powoduje, że odpowiadający argument może być ujęty w znaki pojedynczego cudzysłowu i być traktowany jako znak (określony przez firmę Microsoft)|
+|[Operator wklejania tokenu (# #)](../preprocessor/token-pasting-operator-hash-hash.md)|Zezwala na używanie tokenów jako rzeczywistych argumentów do tworzenia innych tokenów|
+|[zdefiniowany operator](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|Upraszcza pisanie wyrażeń złożonych w niektórych dyrektywach makra|
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dyrektywy preprocesora](../preprocessor/preprocessor-directives.md)<br/>
-[Wstępnie zdefiniowane makra](../preprocessor/predefined-macros.md)<br/>
-[Dokumentacja preprocesora języka C/C++](../preprocessor/c-cpp-preprocessor-reference.md)
+[Dyrektywy preprocesora](../preprocessor/preprocessor-directives.md)\
+[Wstępnie zdefiniowane makra](../preprocessor/predefined-macros.md)\
+[Dokumentacja preprocesora języka c/c++](../preprocessor/c-cpp-preprocessor-reference.md)

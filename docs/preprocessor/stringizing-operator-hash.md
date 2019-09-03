@@ -1,6 +1,6 @@
 ---
 title: Operator tworzenia ciągów (#)
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - '#'
 helpviewer_keywords:
@@ -12,29 +12,29 @@ helpviewer_keywords:
 - macros [C++], converting parameters to strings
 - '# preprocessor operator'
 ms.assetid: 1175dd19-4538-43b3-ad97-a008ab80e7b1
-ms.openlocfilehash: d90d07c8f3cce6c443be0eb994db494746c00fcc
-ms.sourcegitcommit: 40ffe764244784c715b086c79626ac390b855d47
+ms.openlocfilehash: 5a1b43198e59bc1e69cdf1b56db56be75719fe46
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68711140"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216548"
 ---
 # <a name="stringizing-operator-"></a>Operator tworzenia ciągów (#)
 
-Operator Number-Sign lub "tworzenia ciągu" ( **#** ) konwertuje parametry makr na literały ciągu bez rozszerzania definicji parametru. Jest on używany tylko z makrami, które przyjmują argumenty. Jeżeli poprzedza on parametr formalny w definicji makra, rzeczywisty argument przekazywany przez wywołanie makra jest ujęty w znaki cudzysłowu i traktowany jako literał ciągu. Literał ciągu następnie zamienia każde wystąpienie kombinacji operatora tworzenia ciągu i parametru formalnego w ramach definicji makra.
+Operator Number-Sign lub "tworzenia ciągu" ( **#** ) konwertuje parametry makr na literały ciągu bez rozszerzania definicji parametru. Jest ona używana tylko z makrami, które przyjmują argumenty. Jeżeli poprzedza on parametr formalny w definicji makra, rzeczywisty argument przekazywany przez wywołanie makra jest ujęty w znaki cudzysłowu i traktowany jako literał ciągu. Literał ciągu następnie zamienia każde wystąpienie kombinacji operatora tworzenia ciągu i parametru formalnego w ramach definicji makra.
 
 > [!NOTE]
 > Rozszerzenie Microsoft C (wersje 6.0 i starsze) dla standardu ANSI C, które wcześniej rozszerzało argumenty formalne makra pojawiające się wewnątrz literałów ciągu i stałych ciągu, nie jest już obsługiwane. Kod, który opiera się na tym rozszerzeniu, należy napisać ponownie przy użyciu **#** operatora tworzenia ciągu ().
 
-Odstęp poprzedzający pierwszy token rzeczywistego argumentu i występujący po ostatnim tokenie rzeczywistego argumentu jest ignorowany. Wszelkie odstępy między tokenami w rzeczywistym argumencie są skracane do pojedynczego odstępu w wynikowym literale ciągu. Zatem jeśli komentarz występuje między dwoma tokenami w rzeczywistym argumencie, jest on skracany do jednego odstępu. Wynikowy literał ciągu jest automatycznie łączony z dowolnymi przylegającymi literałami ciągu, od których jest on oddzielony odstępem.
+Biały znak poprzedzający pierwszy token i następujący po ostatnim tokenie rzeczywistego argumentu jest ignorowany. Wszelkie odstępy między tokenami w rzeczywistym argumencie są skracane do pojedynczego odstępu w wynikowym literale ciągu. Tak więc, jeśli komentarz występuje między dwoma tokenami w rzeczywistym argumencie, zostaje zredukowany do pojedynczego odstępu. Ciąg literału ciągu jest automatycznie łączony z dowolnymi sąsiednimi literałami ciągów, które są rozdzielone tylko odstępem.
 
-Ponadto, jeśli znak zawarty w argumencie zazwyczaj wymaga sekwencji ucieczki, gdy jest używany w literale ciągu (na przykład znak cudzysłowu ( **"** ) lub ukośnik odwrotny ( **\\** )), niezbędny ukośnik odwrotny dla ucieczki jest automatycznie wstawiany przed znakiem.
+Ponadto, jeśli znak zawarty w argumencie zazwyczaj wymaga sekwencji ucieczki, gdy jest używany w literale ciągu, na przykład znak cudzysłowu (`"`) lub ukośnik odwrotny (`\`), niezbędny ukośnik odwrotny jest automatycznie wstawiono przed znakiem.
 
-Operator wizualny C++ tworzenia ciągu nie działa prawidłowo, gdy jest używany z ciągami, które zawierają sekwencje ucieczki. W tej sytuacji kompilator generuje [błąd kompilatora C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md).
+Operator Microsoft C++ tworzenia ciągu nie działa prawidłowo, gdy jest używany z ciągami, które zawierają sekwencje ucieczki. W tej sytuacji kompilator generuje [błąd kompilatora C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md).
 
 ## <a name="examples"></a>Przykłady
 
-W poniższym przykładzie pokazano definicję makra, która zawiera operator tworzenia ciągu i główną funkcję, która wywołuje makro:
+W poniższym przykładzie przedstawiono definicję makra zawierającą operator tworzenia ciągu oraz główną funkcję, która wywołuje makro:
 
 ```cpp
 // stringizer.cpp

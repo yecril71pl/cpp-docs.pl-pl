@@ -1,60 +1,60 @@
 ---
 title: __mulh
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __mulh
 helpviewer_keywords:
 - __mulh intrinsic
 ms.assetid: cd2ab093-9ef6-404d-ac34-0bee033882f3
-ms.openlocfilehash: 122d7ff28a01c0b95c16c6a0f4cd20e883744d2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3a421cdda1c62620d4c933436fd0b5bab589c0e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263077"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221681"
 ---
-# <a name="mulh"></a>__mulh
+# <a name="__mulh"></a>__mulh
 
 **Microsoft Specific**
 
-Zwraca wysokiej 64-bitowy iloczyn dwóch liczb całkowitych ze znakiem 64-bitowych.
+Zwraca wysoki 64 bitów iloczynu 2 64-bitowych liczb całkowitych ze znakiem.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 __int64 __mulh(
    __int64 a,
    __int64 b
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*a*<br/>
-[in] Pierwszy numer do pomnożenia.
+*z*\
+podczas Pierwsza liczba do pomnożenia.
 
-*b*<br/>
-[in] Druga liczba do pomnożenia.
+*b*\
+podczas Druga liczba do pomnożenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wysoka 64 bity 128-bitowego wynik mnożenia.
+Wysokie 64 bitów wynik 128-bitowego mnożenia.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__mulh`|X64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-Ta procedura jest dostępna wyłącznie jako wewnętrzna.
+Ta procedura jest dostępna tylko jako wewnętrzna.
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // mulh.cpp
 // processor: x64
 #include <stdio.h>
@@ -79,7 +79,7 @@ int main()
 0xfffffffffffffff * 0xf0000000 = 0xeffffffffffffff10000000
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,6 +1,6 @@
 ---
 title: __readfsbyte, __readfsdword, __readfsqword, __readfsword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readfsword
 - __readfsdword
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - readfsqword intrinsic
 - __readfsqword intrinsic
 ms.assetid: f6ee7203-4179-402c-a464-0746c84ce6ac
-ms.openlocfilehash: f291747d1f46ebdf3ea1f71cd9ab7e074058201d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30040b33fe8c686bc0cda585c525ae2926cdf314
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262739"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222364"
 ---
-# <a name="readfsbyte-readfsdword-readfsqword-readfsword"></a>__readfsbyte, __readfsdword, __readfsqword, __readfsword
+# <a name="__readfsbyte-__readfsdword-__readfsqword-__readfsword"></a>__readfsbyte, __readfsdword, __readfsqword, __readfsword
 
 **Microsoft Specific**
 
-Odczyt pamięci z lokalizacji określonej przez przesunięcie względem początku segmentu FS.
+Odczytaj pamięć z lokalizacji określonej przez przesunięcie względem początku segmentu FS.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 unsigned char __readfsbyte(
    unsigned long Offset
 );
@@ -46,33 +46,33 @@ unsigned __int64 __readfsqword(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Przesunięcie*<br/>
-[in] Przesunięcie od początku `FS` do odczytu.
+*Przesunięcie*\
+podczas Przesunięcie od początku `FS` , z którego ma zostać odczytane.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zawartość pamięci bajt, wyraz, bitowego lub quadword (co zostało wskazane przez nazwę funkcji o nazwie) w lokalizacji `FS:[Offset]`.
+Zawartość pamięci w bajtach, Word, DoubleWord lub quadword (wskazywanym przez nazwę funkcji o nazwie) w lokalizacji `FS:[Offset]`.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__readfsbyte`|x86|
 |`__readfsdword`|x86|
 |`__readfsqword`|x86|
 |`__readfsword`|x86|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-Te procedury są dostępne tylko jako funkcje wewnętrzne.
+Te procedury są dostępne tylko jako elementy wewnętrzne.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 
-[__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)<br/>
+[__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)\
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

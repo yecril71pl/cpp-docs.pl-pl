@@ -1,6 +1,6 @@
 ---
 title: __stosw
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosw
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - __stosw intrinsic
 - rep stosw instruction
 ms.assetid: 7620fd1d-dba5-40e3-8e07-01aa68895133
-ms.openlocfilehash: c203973a79c2c3b1094ad8a5351db0999a56bf19
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5fd29bbf1aebba115670fc1bc35e0d8cbe29c7ad
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390298"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219929"
 ---
-# <a name="stosw"></a>__stosw
+# <a name="__stosw"></a>__stosw
 
 **Microsoft Specific**
 
@@ -23,42 +23,42 @@ Generuje instrukcję ciągu magazynu (`rep stosw`).
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 void __stosw(
-   unsigned short* Dest,
+   unsigned short* Destination,
    unsigned short Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*docelowy*<br/>
-[out] Lokalizacja docelowa wykonać operację.
+*Punktu*\
+określoną Miejsce docelowe operacji.
 
-*Dane*<br/>
-[in] Dane, które mają być przechowywane.
+*Data*\
+podczas Dane do zapisania.
 
-*Liczba*<br/>
-[in] Długość bloku słowa do zapisu.
+*Liczbą*\
+podczas Długość bloku wyrazów do zapisania.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__stosw`|x86, x64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-Wynik jest to, że wyraz `Data` są zapisywane w bloku `Count` wyrazów w `Dest` ciągu.
+Wynik polega na tym, że *dane* słowa są zapisywane w bloku *liczby* wyrazów w ciągu *docelowym* .
 
-Ta procedura jest dostępna wyłącznie jako wewnętrzna.
+Ta procedura jest dostępna tylko jako wewnętrzna.
 
 ## <a name="example"></a>Przykład
 
-```
+```C
 // stosw.c
 // processor: x86, x64
 #include <stdio.h>
@@ -80,7 +80,7 @@ int main()
 0 128 128 0
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

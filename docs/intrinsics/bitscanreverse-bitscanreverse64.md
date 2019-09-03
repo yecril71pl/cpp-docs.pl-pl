@@ -1,6 +1,6 @@
 ---
 title: _BitScanReverse, _BitScanReverse64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _BitScanReverse64
 - _BitScanReverse_cpp
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - _BitScanReverse intrinsic
 - BitScanReverse intrinsic
 ms.assetid: 2520a207-af8b-4aad-9ae7-831abeadf376
-ms.openlocfilehash: 3639aac38f4c7df82cbbdb23ed9038ac86ba2cc0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 848c153967e5581f08f1d499a28ab282ee2602df
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264286"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216947"
 ---
-# <a name="bitscanreverse-bitscanreverse64"></a>_BitScanReverse, _BitScanReverse64
+# <a name="_bitscanreverse-_bitscanreverse64"></a>_BitScanReverse, _BitScanReverse64
 
 **Microsoft Specific**
 
-Wyszukiwanie danych maski z najbardziej znaczący bit (BITEM) do najmniej znaczący bit (najmniej znaczący BAJT) ustawionego bitu (1).
+Przeszukaj dane maski z najbardziej znaczącego bitu (MSB) na najmniej znaczący bit (LSB) dla zestawu bitów (1).
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 unsigned char _BitScanReverse(
    unsigned long * Index,
    unsigned long Mask
@@ -37,28 +37,28 @@ unsigned char _BitScanReverse64(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Index*<br/>
-[out] Pozycja bitu pierwszego ustawionego bitu [1], znaleziono załadowana.
+*Indeks*\
+określoną Załadowano z pozycją bitową pierwszego zestawu bit (1).
 
-*Maska*<br/>
-[in] 32-bitowy lub 64-bitową wartość do wyszukania.
+*Bitowa*\
+podczas Wartość 32-bitowa lub 64-bitowa do wyszukania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli wartość różną od zera `Index` było zestawu lub 0, jeśli nie znaleziono żadnych bitów zestawu.
+Wartość różna od `Index` zera, jeśli została ustawiona, lub wartość 0, jeśli nie znaleziono żadnego zestawu bitów.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|nagłówek|
+|Wewnętrznej|Architektura|nagłówek|
 |---------------|------------------|------------|
-|`_BitScanReverse`|x86, ARM, x64|\<intrin.h>|
-|`_BitScanReverse64`|ARM, x64||
+|`_BitScanReverse`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_BitScanReverse64`|ARM64, x64|\<intrin.h>|
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // BitScanReverse.cpp
 // compile with: /EHsc
 #include <iostream>
@@ -87,20 +87,16 @@ int main()
 }
 ```
 
-## <a name="input"></a>Dane wejściowe
-
-```
+```Input
 12
 ```
 
-## <a name="sample-output"></a>Przykładowe dane wyjściowe
-
-```
+```Output
 Enter a positive integer as the mask:
 Mask: 12 Index: 3
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,6 +1,6 @@
 ---
 title: __debugbreak
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __debugbreak_cpp
 - __debugbreak
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - breakpoints, __debugbreak intrinsic
 - __debugbreak intrinsic
 ms.assetid: 1d1e1c0c-891a-4613-ae4b-d790094ba830
-ms.openlocfilehash: ed75b94e8bf0aca9369c56f23e8ff00ea6953642
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e4cf2c85818a878417c560ddb5a80f8690e60a93
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509496"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217925"
 ---
 # <a name="__debugbreak"></a>__debugbreak
 
@@ -23,7 +23,7 @@ Powoduje, że punkt przerwania w kodzie, w którym użytkownik zostanie poproszo
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 void __debugbreak();
 ```
 
@@ -38,11 +38,11 @@ void __debugbreak();
 Wewnętrzny kompilator, podobny do DebugBreak, jest przenośnym sposobem na działanie punktu przerwania. [](/windows/win32/api/debugapi/nf-debugapi-debugbreak) `__debugbreak`
 
 > [!NOTE]
->  Podczas kompilowania z **/CLR**, funkcja zawierająca `__debugbreak` zostanie skompilowana do MSIL. `asm int 3`powoduje, że funkcja jest skompilowana do kodu natywnego. Aby uzyskać więcej informacji, zobacz [__asm](../assembler/inline/asm.md).
+> Podczas kompilowania z **/CLR**, funkcja zawierająca `__debugbreak` zostanie skompilowana do MSIL. `asm int 3`powoduje, że funkcja jest skompilowana do kodu natywnego. Aby uzyskać więcej informacji, zobacz [__asm](../assembler/inline/asm.md).
 
-Na przykład:
+Przykład:
 
-```
+```C
 main() {
    __debugbreak();
 }
@@ -50,7 +50,7 @@ main() {
 
 jest podobny do:
 
-```
+```C
 main() {
    __asm {
       int 3
@@ -68,5 +68,5 @@ Ta procedura jest dostępna tylko jako wewnętrzna.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)\
 [Słowa kluczowe](../cpp/keywords-cpp.md)

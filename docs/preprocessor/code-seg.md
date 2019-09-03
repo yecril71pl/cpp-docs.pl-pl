@@ -1,6 +1,6 @@
 ---
-title: code_seg
-ms.date: 11/04/2016
+title: code_seg, pragma
+ms.date: 08/29/2019
 f1_keywords:
 - code_seg_CPP
 - vc-pragma.code_seg
@@ -8,56 +8,56 @@ helpviewer_keywords:
 - pragmas, code_seg
 - code_seg pragma
 ms.assetid: bf4faac1-a511-46a6-8d9e-456851d97d56
-ms.openlocfilehash: e566fb01bf70b343b75254a10466bdda2bc7ce1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0144b3ed220c39cd30aeb8e53bc2aa3c0381b668
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403506"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218313"
 ---
-# <a name="codeseg"></a>code_seg
-Określa segment tekstu, w którym funkcje są przechowywane w pliku .obj.
+# <a name="code_seg-pragma"></a>code_seg, pragma
+
+Określa sekcję tekstową (segment), w której funkcje są przechowywane w pliku obiektu (. obj).
 
 ## <a name="syntax"></a>Składnia
 
-```
-#pragma code_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )
-```
+> **#pragma code_seg (** ["*Nazwa sekcji*" [ **,** "*Klasa sekcji*"]] **)** \
+> **#pragma code_seg (** { **push** | **pop** } [ **,** *Identyfikator* ] [ **,** "*Nazwa sekcji*" [ **,** "*Klasa sekcji*"]] **)**
 
 ### <a name="parameters"></a>Parametry
 
-**push**<br/>
-(Opcjonalnie) Umieszcza rekord na wewnętrznym stosie kompilatora. A **wypychania** może mieć *identyfikator* i *nazwą segmentu*.
+**wydajności**\
+Obowiązkowe Umieszcza rekord na wewnętrznym stosie kompilatora. Wypchnięcie może mieć *Identyfikator* i *nazwę sekcji*.
 
-**POP**<br/>
-(Opcjonalnie) Usuwa rekord z góry wewnętrznego stosu kompilatora.
+**skakując**\
+Obowiązkowe Usuwa rekord z góry wewnętrznego stosu kompilatora. **Punkt obecności** może mieć *Identyfikator* i *nazwę sekcji*. Można wyskakujące wiele rekordów przy użyciu tylko jednego polecenia **pop** przy użyciu *identyfikatora*. *Nazwa sekcji* zmieni się na nazwę aktywnej sekcji tekstowej po punkcie pop.
 
-*Identyfikator*<br/>
-(Opcjonalnie) Gdy jest używane z **wypychania**, przypisuje nazwę rekordowi na wewnętrznym stosie kompilatora. Gdy jest używane z **pop**, zdejmuje rekordy z wewnętrznego stosu aż do usunięcia *identyfikator* zostanie usunięta; Jeśli *identyfikator* nie zostanie znaleziony na wewnętrznym stosie, nic nie zostanie zdjęte.
+*identyfikatora*\
+Obowiązkowe W przypadku użycia z opcją **push**przypisuje nazwę rekordu na wewnętrznym stosie kompilatora. Gdy jest używany z **pop**, dyrektywa pop rejestruje wewnętrzny stos do momentu usunięcia *identyfikatora* . Jeśli na stosie wewnętrznym nie znaleziono *identyfikatora* , nic nie jest zdjęte.
 
-*Identyfikator* umożliwia wielu rekordów zostać zdjęte ze stosu przy użyciu tylko jednego **pop** polecenia.
+"*Nazwa sekcji*" \
+Obowiązkowe Nazwa sekcji. Gdy jest używany z **punktem pop**, stos jest zdjęte, a *sekcja Name* to nazwa aktywnej sekcji tekstowej.
 
-"*nazwą segmentu*"<br/>
-(Opcjonalnie) Nazwa segmentu. Gdy jest używane z **pop**, stos jest zdejmowany i *nazwą segmentu* staje się aktywną nazwą segmentu tekstu.
-
-"*klasy segmentu*"<br/>
-(Opcjonalnie) Ignorowanie, ale włączone dla zachowania zgodności z c++ w wersji wcześniejszej niż wersja 2.0.
+"*Klasa sekcji*" \
+Obowiązkowe Zignorowano, ale uwzględniono zgodność z wersjami C++ firmy Microsoft wcześniejszą niż wersja 2,0.
 
 ## <a name="remarks"></a>Uwagi
 
-**Code_seg** dyrektywa pragmy nie kontroluje umieszczania kodu obiektowego wygenerowanego dla szablonów skonkretyzowanych ani kodu niejawnie wygenerowanego przez kompilator — na przykład funkcji specjalnych elementów członkowskich. Firma Microsoft zaleca użycie [__declspec(code_seg(...)) ](../cpp/code-seg-declspec.md) zamiast tego atrybutu, ponieważ daje on kontrolę nad umieszczaniem całego kodu obiektowego. Obejmuje to kod wygenerowany przez kompilator.
+*Sekcja* w pliku obiektu to nazwany blok danych, który jest ładowany do pamięci jako jednostka. *Sekcja tekstowa* to Sekcja zawierająca kod wykonywalny. W tym artykule, *segment* i *sekcja* terminów mają takie samo znaczenie.
 
-A *segmentu* w .obj pliku to nazwany blok danych, który jest ładowany do pamięci jako jednostka. A *segment tekstu* to segment, który zawiera kod wykonywalny. W tym artykule terminy *segmentu* i *sekcji* są używane zamiennie.
+Dyrektywa pragma **code_seg** informuje kompilator, aby umieścić cały kolejny kod obiektu z jednostki translacji w sekcji tekstowej o nazwie *sekcja-Name*. Domyślnie sekcja tekstowa używana dla funkcji w pliku obiektu ma nazwę `.text`. Dyrektywa pragma **code_seg** bez parametru *Section Name* resetuje nazwę sekcji tekst dla kolejnego kodu obiektu do `.text`.
 
-**Code_seg** dyrektywa pragmy informuje kompilator, aby umieścić cały kolejny kod obiektowy z jednostki translacji w segmencie tekstu o nazwie *nazwą segmentu*. Domyślnie segment tekstu używany dla funkcji w pliku .obj ma nazwę .text.
+Dyrektywa pragma **code_seg** nie kontroluje umieszczania kodu obiektu wygenerowanego dla szablonów wystąpień. Ani nie kontroluje kodu wygenerowanego niejawnie przez kompilator, takiego jak specjalne funkcje składowe. Aby kontrolować ten kod, zalecamy użycie atrybutu [__declspec (code_seg (...))](../cpp/code-seg-declspec.md) . Zapewnia kontrolę nad umieszczaniem wszystkich kodów obiektów, w tym kodu wygenerowanego przez kompilator.
 
-A **code_seg** dyrektywa pragmy bez parametrów resetuje nazwę segmentu tekstu dla kolejnego kodu obiektowego do postaci .text.
+Aby uzyskać listę nazw, które nie powinny być używane do tworzenia sekcji, zobacz [/Section](../build/reference/section-specify-section-attributes.md).
 
-Możesz użyć [DUMPBIN. Plik EXE](../build/reference/dumpbin-command-line.md) aplikacji, aby wyświetlić pliki .obj. Wersje DUMPBIN dla każdej obsługiwanej architektury docelowej są dołączone do programu Visual Studio.
+Można także określić sekcje dla zainicjowanych danych ([data_seg](../preprocessor/data-seg.md)), niezainicjowanych danych ([bss_seg](../preprocessor/bss-seg.md)) i zmienne const ([const_seg](../preprocessor/const-seg.md)).
+
+Możesz użyć [polecenia DUMPBIN. Aplikacja EXE](../build/reference/dumpbin-command-line.md) do wyświetlania plików obiektów. Wersje programu polecenia DUMPBIN dla każdej obsługiwanej architektury docelowej są dołączone do programu Visual Studio.
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie pokazano, jak używać **code_seg** dyrektywa pragmy do kontroli, gdy kod obiektowy jest umieszczany:
+Ten przykład pokazuje, jak używać dyrektywy pragma **code_seg** do kontrolowania miejsca, w którym jest umieszczany kod obiektu:
 
 ```cpp
 // pragma_directive_code_seg.cpp
@@ -80,11 +80,7 @@ int main() {
 }
 ```
 
-Aby uzyskać listę nazw, które nie powinny być używane do tworzenia sekcji, zobacz [/SECTION](../build/reference/section-specify-section-attributes.md).
-
-Można również określić sekcje dla danych zainicjowanych ([data_seg](../preprocessor/data-seg.md)), niezainicjowanych danych ([bss_seg](../preprocessor/bss-seg.md)) i zmiennych const ([const_seg](../preprocessor/const-seg.md)).
-
 ## <a name="see-also"></a>Zobacz także
 
-[code_seg (__declspec)](../cpp/code-seg-declspec.md)<br/>
-[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[code_seg (__declspec)](../cpp/code-seg-declspec.md)\
+[Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

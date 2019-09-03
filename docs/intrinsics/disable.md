@@ -1,6 +1,6 @@
 ---
 title: _disable
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _disable_cpp
 - _disable
@@ -9,42 +9,42 @@ helpviewer_keywords:
 - rsm instruction
 - disable intrinsic
 ms.assetid: 52da3df9-815c-4524-9839-6d1742cff5c6
-ms.openlocfilehash: 93db063c6b53f0bec739ba134728b83379a21f53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94be850e1d494ff62df84922b46f28481be68314
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264169"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216816"
 ---
-# <a name="disable"></a>_disable
+# <a name="_disable"></a>_disable
 
 **Microsoft Specific**
 
-Wyłącza przerwań.
+Wyłącza przerwania.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 void _disable(void);
 ```
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
-|`_disable`|x86, ARM, x64|
+|`_disable`|x86, ARM, x64, ARM64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-`_disable` powoduje, że procesora, aby wyczyścić flagę przerwania. Na x86 systemów, ta funkcja generuje Wyczyść flagę przerwań (`cli`) instrukcji.
+`_disable`instruuje procesor, aby wyczyścił flagę przerwania. W systemach x86 ta funkcja generuje instrukcję Clear Interrupt flag (`cli`).
 
-Ta funkcja jest dostępna tylko w trybie jądra. Jeśli używane w trybie użytkownika, instrukcja uprzywilejowana jest wyjątek w czasie wykonywania.
+Ta funkcja jest dostępna tylko w trybie jądra. W przypadku użycia w trybie użytkownika wyjątek uprzywilejowanych instrukcji jest zgłaszany w czasie wykonywania.
 
-Na platformach ARM, ta procedura jest dostępna wyłącznie jako wewnętrzna.
+Na platformach ARM i ARM64 ta procedura jest dostępna tylko jako wewnętrzna.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

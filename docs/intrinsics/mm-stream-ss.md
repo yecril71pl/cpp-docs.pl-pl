@@ -1,41 +1,41 @@
 ---
 title: _mm_stream_ss
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_stream_ss
 helpviewer_keywords:
 - movntss instruction
 - _mm_stream_ss intrinsic
 ms.assetid: c53dffe9-0dfe-4063-85d3-e8987b870fce
-ms.openlocfilehash: 76c6c848351df773b9857b2f83726b64db982d9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 005f4f697d64f6ea68b35dc32daf1217be463a2a
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263233"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217350"
 ---
-# <a name="mmstreamss"></a>_mm_stream_ss
+# <a name="_mm_stream_ss"></a>_mm_stream_ss
 
 **Microsoft Specific**
 
-Zapisuje 32-bitowych danych w lokalizacji pamięci bez zanieczyszczenie pamięci podręcznych.
+Zapisuje 32-bitowe dane w lokalizacji pamięci bez zanieczyszczania pamięci podręcznych.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 void _mm_stream_ss(
-   float * Dest,
+   float * Destination,
    __m128 Source
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*docelowy*<br/>
-[out] Wskaźnik do lokalizacji, w którym zapisywana jest źródło danych.
+*Punktu*\
+określoną Wskaźnik do lokalizacji, w której zapisano dane źródłowe.
 
-*Element źródłowy*<br/>
-[in] 128-bitową liczbą, która zawiera `float` wartość do zapisania w jej dolnej 32-bitowy...
+*Zewnętrz*\
+podczas Numer 128-bitowy, który zawiera `float` wartość, która ma zostać zapisywana w dolnych bitach 32.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -43,17 +43,17 @@ Brak.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`_mm_stream_ss`|SSE4a|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-Generuje tym wewnętrzne `movntss` instrukcji. Aby ustalić, pomoc techniczna dotycząca sprzętu dla tej instrukcji, należy wywołać `__cpuid` wewnętrzne z `InfoType=0x80000001` i sprawdź bit 6 `CPUInfo[2] (ECX)`. Ten bit jest 1, jeśli instrukcja jest obsługiwana i 0.
+Wewnętrznie generuje `movntss` instrukcję. Aby określić obsługę sprzętową dla tej instrukcji, wywołaj `__cpuid` wewnętrzne z `InfoType=0x80000001` i sprawdź bit 6 `CPUInfo[2] (ECX)`z. Ten bit ma wartość 1, gdy instrukcja jest obsługiwana i 0 w przeciwnym razie.
 
-Jeśli uruchamiasz kod, który używa `_mm_stream_ss` wewnętrzne na sprzęcie, który nie obsługuje `movntss` instrukcji, wyniki są nieprzewidywalne.
+Jeśli uruchamiasz kod, który używa `_mm_stream_ss` wewnętrznego na sprzęcie, który nie `movntss` obsługuje instrukcji, wyniki są nieprzewidywalne.
 
 ## <a name="example"></a>Przykład
 
@@ -87,14 +87,14 @@ f[0] = -1, f[1] = -2
 f[2] = -3, f[3] = 3
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-Copyright 2007 zaawansowane Micro urządzeń, Inc. Wszelkie prawa zastrzeżone. Odtworzyć zgoda zaawansowane Micro urządzeń, Inc.
+Fragmenty Copyright 2007 przez Advanced Micro Devices, Inc. Wszelkie prawa zastrzeżone. Wygenerowane z uprawnieniami z zaawansowanych urządzeń Micro Devices, Inc.
 
 ## <a name="see-also"></a>Zobacz także
 
-[_mm_stream_sd](../intrinsics/mm-stream-sd.md)<br/>
-[_mm_stream_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_ps)<br/>
-[_mm_store_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_ss)<br/>
-[_mm_sfence](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sfence)<br/>
+[_mm_stream_sd](../intrinsics/mm-stream-sd.md)\
+[_mm_stream_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_ps)\
+[_mm_store_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_ss)\
+[_mm_sfence](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sfence)\
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

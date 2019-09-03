@@ -1,43 +1,42 @@
 ---
-title: implementation_only
-ms.date: 11/04/2016
+title: implementation_only — atrybut importowania
+ms.date: 08/29/2019
 f1_keywords:
 - implementation_only
 helpviewer_keywords:
 - implementation_only attribute
 ms.assetid: d8cabc86-4425-45a0-9587-d57536980088
-ms.openlocfilehash: c1435ca74ac2b5a73c308592b1affe6fca097d1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08144b3c815350acfe6a856b36d2d88085d1c04d
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383961"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218975"
 ---
-# <a name="implementationonly"></a>implementation_only
-**Określonego język C++**
+# <a name="implementation_only-import-attribute"></a>implementation_only — atrybut importowania
 
-Powoduje pominięcie generowania pliku nagłówku .tlh (główny plik nagłówka).
+**C++Specjalne**
+
+Pomija generowanie `.tlh` podstawowego pliku nagłówkowego biblioteki typów.
 
 ## <a name="syntax"></a>Składnia
 
-```
-implementation_only
-```
+> **#import** *Biblioteka typów* **implementation_only**
 
 ## <a name="remarks"></a>Uwagi
 
-Ten plik zawiera wszystkie deklaracje używany do udostępnienia zawartość biblioteki typów. .Tli pliku nagłówka, z implementacjami funkcje Członkowskie otoki, zostanie wygenerowany i uwzględniony w kompilacji.
+Ten plik zawiera wszystkie deklaracje używane do ujawniania zawartości biblioteki typów. Plik `.tli` nagłówkowy wraz z implementacjami funkcji składowych otoki zostanie wygenerowany i uwzględniony w kompilacji.
 
-Jeśli ten atrybut jest określony, zawartość nagłówka .tli znajduje się w tej samej przestrzeni nazw jest zwykle używana w nagłówku .tlh. Ponadto funkcje elementów członkowskich nie są deklarowane jako wbudowane.
+Gdy ten atrybut jest określony, zawartość `.tli` nagłówka znajduje się w tej samej przestrzeni nazw co zazwyczaj jest używana `.tlh` w nagłówku. Ponadto funkcje składowe nie są zadeklarowane jako inline.
 
-**Implementation_only —** atrybut jest przeznaczony do użycia w połączeniu z [no_implementation —](../preprocessor/no-implementation.md) atrybutu jako sposób na utrzymanie implementacje z pliku wstępnie skompilowanego nagłówka (PCH). `#import` Instrukcję, określając `no_implementation` atrybut jest umieszczany w regionie źródłowym użyty do utworzenia PCH. Wynikowy PCH jest używany przez wiele plików źródłowych. `#import` Instrukcję, określając **implementation_only —** atrybutu jest następnie używany poza regionem PCH. Jest wymagane, aby użyć tej instrukcji tylko raz w jednym z plików źródłowych. Spowoduje to wygenerowanie wszystkie funkcje składowe wymagane otoki bez dodatkowych ponownej kompilacji dla każdego pliku źródłowego.
+Atrybut **implementation_only** jest przeznaczony do użycia w połączeniu z atrybutem [no_implementation](../preprocessor/no-implementation.md) w celu zachowania implementacji z prekompilowanego pliku nagłówkowego (pch). `#import` Instrukcja`no_implementation` z atrybutem jest umieszczana w regionie źródłowym użytym do utworzenia PCH. Wyniki PCH są używane przez wiele plików źródłowych. Instrukcja z atrybutem implementation_only jest następnie używana poza regionem PCH. `#import` Musisz użyć tej instrukcji tylko raz w jednym z plików źródłowych. Generuje wszystkie wymagane funkcje składowe otoki bez dodatkowych ponownych kompilacji dla każdego pliku źródłowego.
 
 > [!NOTE]
-> **Implementation_only —** atrybutu w jednym `#import` instrukcja musi być używany w połączeniu z innego `#import` instrukcji tego samego wpisz biblioteki, za pomocą `no_implementation` atrybutu. W przeciwnym razie zostaną wygenerowane błędy kompilatora. Jest to spowodowane definicje klas otoki wygenerowane przez `#import` instrukcję, określając `no_implementation` atrybutu są wymagane do kompilowania wdrożoną przez **implementation_only —** atrybutu.
+> Atrybut **implementation_only** w jednej `#import` instrukcji musi być używany w połączeniu z inną `#import` instrukcją o tej samej bibliotece typów z `no_implementation` atrybutem. W przeciwnym razie błędy kompilatora są generowane. Dzieje się tak, ponieważ definicje klas otoki `#import` generowane przez instrukcję `no_implementation` z atrybutem są wymagane do kompilowania implementacji wygenerowanych przez atrybut **implementation_only** .
 
-**KONIEC określonego języka C++**
+**ZAKOŃCZENIE C++ określonych**
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import Directive](../preprocessor/hash-import-directive-cpp.md)
+[Atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

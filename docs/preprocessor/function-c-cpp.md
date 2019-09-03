@@ -1,6 +1,6 @@
 ---
-title: funkcja (C/C++)
-ms.date: 11/04/2016
+title: function — Wartość dyrektywy pragma
+ms.date: 08/29/2019
 f1_keywords:
 - function_CPP
 - vc-pragma.function
@@ -8,27 +8,26 @@ helpviewer_keywords:
 - function pragma
 - pragmas, function
 ms.assetid: cbd1bd60-fabf-4b5a-9c3d-2d9f4b871365
-ms.openlocfilehash: c57ff2053b3c1fd52474c7eb0dd598641632f789
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f99f3c878789a6c47fdb0d48e0a8690d65fa8062
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409931"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220140"
 ---
-# <a name="function-cc"></a>funkcja (C/C++)
-Określa, że wywołania funkcji określonych na liście argumentów pragma być generowane.
+# <a name="function-pragma"></a>function — Wartość dyrektywy pragma
+
+Instruuje kompilator, aby generował wywołania do funkcji określonych na liście argumentów pragma, zamiast umieszczać je w nich.
 
 ## <a name="syntax"></a>Składnia
 
-```
-#pragma function( function1 [, function2, ...] )
-```
+> **funkcja #pragma (** *function1* [ **,** *function2* ...] **)**
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli używasz `intrinsic` pragma (lub /Oi) aby poinformować kompilator, aby wygenerować funkcje wewnętrzne (funkcje wewnętrzne są generowane jako kodu wbudowanego, nie jako wywołania funkcji), można użyć **funkcja** pragmy do jawnego wymuszenia wywołania funkcji. Po pragmie funkcji jest widoczny, zaczyna obowiązywać przy pierwszej definicji funkcji zawierający określoną funkcję wewnętrzne. Efekt kontynuuje do końca pliku źródłowego lub wyglądu `intrinsic` pragma, określając tę samą funkcję wewnętrzne. **Funkcja** dyrektywa może zostać użyta tylko poza funkcją — na poziomie globalnym.
+Funkcje wewnętrzne są zwykle generowane jako kod wbudowany, a nie jako wywołania funkcji. Jeśli używasz [wewnętrznej dyrektywy pragma](intrinsic.md) lub opcji kompilatora [/Oi](../build/reference/oi-generate-intrinsic-functions.md) , aby poinformować kompilator, aby wygenerował funkcje wewnętrzne, możesz użyć dyrektywy pragma, aby jawnie wymusić wywołanie funkcji. Gdy zostanie wyświetlona **Funkcja** pragma, obowiązuje ona w pierwszej definicji funkcji, która zawiera określoną funkcję wewnętrzną. Efekt jest kontynuowany na końcu pliku źródłowego lub do wyglądu `intrinsic` dyrektywy pragma określającej tę samą funkcję wewnętrzną. **Funkcji** pragma można używać tylko poza funkcją, na poziomie globalnym.
 
-Aby uzyskać listę funkcji, które mają wewnętrzne formularzy, zobacz [#pragma wewnętrzne](../preprocessor/intrinsic.md).
+Listę funkcji, które mają wewnętrzne formularze, można znaleźć w temacie [wewnętrzna pragma](intrinsic.md).
 
 ## <a name="example"></a>Przykład
 
@@ -84,4 +83,4 @@ str is '!!!!!!!!!!!!!!!'
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

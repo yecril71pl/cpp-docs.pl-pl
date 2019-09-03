@@ -1,36 +1,35 @@
 ---
-title: raw_dispinterfaces
-ms.date: 11/04/2016
+title: raw_dispinterfaces — atrybut importowania
+ms.date: 08/29/2019
 f1_keywords:
 - raw_dispinterfaces
 helpviewer_keywords:
 - raw_dispinterfaces attribute
 ms.assetid: f762864d-29bf-445b-825a-ba7b29a95409
-ms.openlocfilehash: ef8ed3992c77df0f1d551e923ddc90c2d1bb9b0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73c58b72b27de8dcf96e8ab9464d0fb6bce12b66
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179844"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216225"
 ---
-# <a name="rawdispinterfaces"></a>raw_dispinterfaces
-**Określonego język C++**
+# <a name="raw_dispinterfaces-import-attribute"></a>raw_dispinterfaces — atrybut importowania
 
-Informuje kompilator, aby wygenerować otoki niskiego poziomu funkcji dispinterface metody i właściwości, które wywołują `IDispatch::Invoke` i zwracają kod błędu HRESULT.
+**C++Specjalne**
+
+Instruuje kompilator, aby generował funkcje otoki niskiego poziomu dla metod dispinterface oraz dla właściwości, `IDispatch::Invoke` które wywołują i zwracają kod błędu HRESULT.
 
 ## <a name="syntax"></a>Składnia
 
-```
-raw_dispinterfaces
-```
+> **#import** *Biblioteka typów* **raw_dispinterfaces**
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli ten atrybut nie jest określony, tylko ogólne są generowane otoki, która generuje wyjątków C++ w przypadku awarii.
+Jeśli ten atrybut nie jest określony, generowane są tylko otoki wysokiego poziomu, które generują C++ wyjątki w przypadku niepowodzenia.
 
-**KONIEC określonego języka C++**
+**ZAKOŃCZENIE C++ określonych**
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import Directive](../preprocessor/hash-import-directive-cpp.md)
+[Atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

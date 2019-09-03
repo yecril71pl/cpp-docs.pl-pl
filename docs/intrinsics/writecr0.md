@@ -1,50 +1,50 @@
 ---
 title: __writecr0
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _writecr0
 helpviewer_keywords:
 - _writecr0 intrinsic
 ms.assetid: a143d08d-0333-4e1b-91b4-4acb2ae91b5a
-ms.openlocfilehash: 24d9ffe0e07269fedf19f90a7c66a07e3c5e7d3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f00796242ae352d32935c2551d50f2d93d734ec
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389947"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219302"
 ---
-# <a name="writecr0"></a>__writecr0
+# <a name="__writecr0"></a>__writecr0
 
 **Microsoft Specific**
 
-Zapisuje wartość `Data` do rejestru CR0.
+Zapisuje wartość `Data` w rejestrze CR0.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 void writecr0(
    unsigned __int64 Data
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Dane*<br/>
-[in] Wartość do zapisu do rejestru CR0.
+*Data*\
+podczas Wartość, która ma zostać zapisana w rejestrze CR0.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__writecr0`|x86, x64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-Tym wewnętrzna jest dostępna tylko w trybie jądra, a procedura jest dostępna jako funkcja wewnętrzna tylko.
+Ten element wewnętrzny jest dostępny tylko w trybie jądra, a procedura jest dostępna tylko jako wewnętrzna.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

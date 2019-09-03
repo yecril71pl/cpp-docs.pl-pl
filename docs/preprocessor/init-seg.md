@@ -1,6 +1,6 @@
 ---
-title: init_seg
-ms.date: 11/04/2016
+title: init_seg, pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.init_seg
 - init_seg_CPP
@@ -9,69 +9,69 @@ helpviewer_keywords:
 - init_seg pragma
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-ms.openlocfilehash: 801496739fd9bd2b8a14e699ca4da9fe79f3a28d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e57ea0eedfc1df6e196391c5edd3acfbad0a7c7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383714"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221005"
 ---
-# <a name="initseg"></a>init_seg
+# <a name="init_seg-pragma"></a>init_seg, pragma
 
-**Określonego język C++**
+**C++Specjalne**
 
-Określa sekcję — słowo kluczowe lub kod, który wpływa na kolejność, w której uruchamiania kod jest wykonywany.
+Określa słowo kluczowe lub kod, który ma wpływ na kolejność, w której jest wykonywany kod uruchomienia.
 
 ## <a name="syntax"></a>Składnia
 
-```
-#pragma init_seg({ compiler | lib | user | "section-name" [, func-name]} )
-```
+> **#pragma init_seg (** { **kompilator** | **User** **lib** | | "*Nazwa sekcji*" [ **,** *Func-Name* ]} **)**
 
 ## <a name="remarks"></a>Uwagi
 
-Znaczenie terminów *segmentu* i *sekcji* są wymienne, w tym temacie.
+*Segment* terminów i *sekcja* mają takie samo znaczenie w tym artykule.
 
-Ponieważ inicjowania statycznych obiektów globalnych może obejmować wykonywanie kodu, należy określić słowo kluczowe, które określa, kiedy obiekty mają być zbudowane. Jest to szczególnie ważne użyć **init_seg** pragmy w bibliotekach dołączanych dynamicznie (dll) lub konieczności inicjowania biblioteki.
+Ponieważ kod jest czasami wymagany do zainicjowania globalnych obiektów statycznych, należy określić, kiedy należy skonstruować obiekty. W szczególności ważne jest użycie dyrektywy pragma **init_seg** w bibliotekach dołączanych dynamicznie (dll) lub w bibliotekach, które wymagają inicjalizacji.
 
-Opcje **init_seg** pragma są:
+Opcje **init_seg** pragma są następujące:
 
-*compiler*<br/>
-Zarezerwowane dla inicjowania biblioteki wykonawczej C firmy Microsoft. Obiekty w tej grupie są konstruowane najpierw.
+**Compiler**\
+Zarezerwowane dla inicjalizacji biblioteki wykonawczej Microsoft C. Obiekty w tej grupie są konstruowane jako pierwsze.
 
-*lib*<br/>
-Dostępne dla inicjowania biblioteki klas w innych dostawców. Obiekty w tej grupie są konstruowane, po oznaczone jako *kompilatora* , ale przed wszystkie inne pola.
+**lib**\
+Dostępne dla inicjalizacji dostawców biblioteki klas innych firm. Obiekty w tej grupie są konstruowane po tych, które zostały oznaczone jako **kompilator**, ale przed innymi.
 
-*Użytkownik*<br/>
-Dostępne dla każdego użytkownika. Obiekty w tej grupie są konstruowane ostatnio.
+**Użytkownicy**\
+Dostępne dla każdego użytkownika. Obiekty w tej grupie są zbudowane jako ostatnie.
 
-*Nazwa sekcji* umożliwia jawne określenie sekcji inicjowania. Obiekty w określonych przez użytkownika *nazwa sekcji* nie są niejawnie skonstruowany; jednak ich adresy są umieszczane w sekcji o nazwie określonej przez *nazwa sekcji*.
+*Nazwa sekcji*\
+Umożliwia jawne określenie sekcji inicjalizacji. Obiekty w określonej przez użytkownika *nazwie sekcji* nie są konstruowane niejawnie. Jednak ich adresy są umieszczane w sekcji o nazwie *sekcja-Name*.
 
-Nazwa sekcji, które publikujesz będzie zawierać wskaźniki do funkcji pomocnika, które będzie konstruowania obiektów globalnych, zadeklarowanych w tym module po pragmy.
+Podana *Nazwa sekcji* będzie zawierać wskaźniki do funkcji pomocniczych, które będą konstruować obiekty globalne zadeklarowane po pragmie w tym module.
 
-Aby uzyskać listę nazw, nie należy używać podczas tworzenia sekcji, zobacz [/SECTION](../build/reference/section-specify-section-attributes.md).
+Aby zapoznać się z listą nazw, których nie należy używać podczas tworzenia sekcji, zobacz [/Section](../build/reference/section-specify-section-attributes.md).
 
-*Nazwa FUNC* określa funkcję, która ma być wywoływana zamiast `atexit` gdy program zamyka. Ponadto wywołuje tę funkcję Pomocnika [atexit](../c-runtime-library/reference/atexit.md) ze wskaźnikiem do destruktor dla obiektów globalnych. Jeśli określisz identyfikator funkcji w pragmy formularza
+*Func-Name*\
+Określa funkcję, która ma być wywoływana zamiast `atexit` momentu zakończenia działania programu. Ta funkcja pomocnika wywołuje również [atexit —](../c-runtime-library/reference/atexit.md) ze wskaźnikiem do destruktora dla obiektu globalnego. Jeśli określisz identyfikator funkcji w pragmie formularza,
 
 ```cpp
 int __cdecl myexit (void (__cdecl *pf)(void))
 ```
 
-następnie funkcja będzie wywoływana zamiast biblioteki wykonawczej C `atexit`. Dzięki temu można utworzyć listę destruktorami, które będą muszą zostać wywołane, gdy jesteś gotowy do likwidacji obiektów.
+następnie funkcja zostanie wywołana zamiast biblioteki `atexit`wykonawczej C. Umożliwia utworzenie listy destruktorów do wywołania, gdy wszystko jest gotowe do zniszczenia obiektów.
 
-Jeśli potrzebujesz odroczenie inicjowania (na przykład w bibliotece DLL) można jawnie określić nazwę sekcji. Następnie należy wywołać konstruktory dla każdego obiektu statycznego.
+Jeśli konieczne jest odroczenie inicjalizacji (na przykład w bibliotece DLL), można określić nazwę sekcji jawnie. Kod musi następnie wywołać konstruktory dla każdego obiektu statycznego.
 
-Istnieją nie cudzysłowów wokół identyfikator `atexit` zastępczy.
+Nie ma cudzysłowu otaczającego identyfikator do `atexit` zastąpienia.
 
-Obiekty nadal zostaną umieszczone w sekcjach zdefiniowane przez inne dyrektywy pragma XXX_seg.
+Obiekty będą nadal umieszczane w sekcjach zdefiniowanych przez inne `XXX_seg` dyrektywy pragma.
 
-Obiekty, które są zadeklarowane w module nie zostaną automatycznie zainicjowane przez środowiska wykonawczego języka C. Należy zrobić tego samodzielnie.
+Obiekty, które są zadeklarowane w module nie są automatycznie inicjowane przez czas wykonywania języka C. Kod musi wykonać inicjalizację.
 
-Domyślnie `init_seg` sekcje są tylko do odczytu. Jeśli nazwa sekcji. CRT, kompilator dyskretnie zmieni atrybutu tylko do odczytu, nawet wtedy, gdy jest ona oznaczona jako odczyt, zapis.
+Domyślnie `init_seg` sekcje są tylko do odczytu. Jeśli nazwa sekcji to `.CRT`, kompilator dyskretnie zmienia atrybut na tylko do odczytu, nawet jeśli jest oznaczony jako Odczyt, zapis.
 
-Nie można określić **init_seg** więcej niż jeden raz w jednostce translacji.
+Nie można określić **init_seg** więcej niż raz w jednostce translacji.
 
-Nawet, jeśli obiekt nie ma zdefiniowanych przez użytkownika konstruktora, Konstruktor nie jest jawnie zdefiniowany w kodzie, kompilator może wygenerować (na przykład można powiązać wskaźniki v-table). W związku z tym kod musi wywołać konstruktora generowanych przez kompilator.
+Nawet jeśli obiekt nie ma zdefiniowanego przez użytkownika konstruktora, jawnie zdefiniowany w kodzie, kompilator może wygenerować jeden dla siebie. Na przykład może utworzyć jeden, aby powiązać wskaźniki tabeli v. W razie konieczności kod wywołuje konstruktora wygenerowanego przez kompilator.
 
 ## <a name="example"></a>Przykład
 
@@ -156,4 +156,4 @@ A()
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,48 +1,46 @@
 ---
-title: high_property_prefixes
-ms.date: 10/18/2018
+title: high_property_prefixes — atrybut importowania
+ms.date: 08/29/2019
 f1_keywords:
 - high_property_prefixes
 helpviewer_keywords:
 - high_property_prefixes attribute
 ms.assetid: 91c6cc2b-19b6-4aba-8831-d9e5cccb58b5
-ms.openlocfilehash: 3f8975ec9737e02bb1216166cc6c241549e95a07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e44f6f1afae479f803f4c6d866ef3ee38744561
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409841"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219000"
 ---
-# <a name="highpropertyprefixes"></a>high_property_prefixes
+# <a name="high_property_prefixes-import-attribute"></a>high_property_prefixes — atrybut importowania
 
-**Określonego język C++**
+**C++Specjalne**
 
-Określa alternatywne prefiksów trzy metody właściwości.
+Określa alternatywne prefiksy dla trzech metod właściwości.
 
 ## <a name="syntax"></a>Składnia
 
-```
-high_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")
-```
+> **#import** *Biblioteka typów* **high_property_prefixes (** "*getprefix*" **,** "*PutPrefix*" **,** "*PutRefPrefix*" **)**
 
 ### <a name="parameters"></a>Parametry
 
-*GetPrefix*<br/>
-Prefiks używany dla `propget` metody.
+*Getprefix*\
+Prefiks, `propget` który ma być używany dla metod.
 
-*PutPrefix*<br/>
-Prefiks używany dla `propput` metody.
+*PutPrefix*\
+Prefiks, `propput` który ma być używany dla metod.
 
-*PutRefPrefix*<br/>
-Prefiks używany dla `propputref` metody.
+*PutRefPrefix*\
+Prefiks, `propputref` który ma być używany dla metod.
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie wysokiego poziomu obsługi błędów `propget`, `propput`, i `propputref` metody są udostępniane przez funkcje składowe o nazwie z prefiksami `Get`, `Put`, i `PutRef`, odpowiednio.
+`propget`Domyślnie metody obsługi błędów wysokiego poziomu, `propput`, i `propputref` są uwidaczniane przez funkcje Członkowskie o nazwach z prefiksami `Get`, `Put`i `PutRef`, odpowiednio.
 
-**KONIEC określonego języka C++**
+**ZAKOŃCZENIE C++ określonych**
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import Directive](../preprocessor/hash-import-directive-cpp.md)
+[Atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

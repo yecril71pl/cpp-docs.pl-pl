@@ -1,6 +1,6 @@
 ---
 title: __stosq
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosq
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - stosq instruction
 - __stosq intrinsic
 ms.assetid: 3ea28297-4369-4c2d-bf0c-91fa539ce209
-ms.openlocfilehash: eacb12f7c02b82607d980281f8d4a0bc1e1d7c14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b347d595da4cdbf1fefb6244940e262981671e9
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390350"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219952"
 ---
-# <a name="stosq"></a>__stosq
+# <a name="__stosq"></a>__stosq
 
 **Microsoft Specific**
 
@@ -23,42 +23,42 @@ Generuje instrukcję ciągu magazynu (`rep stosq`).
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 void __stosb(
-   unsigned __int64* Dest,
+   unsigned __int64* Destination,
    unsigned __int64 Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*docelowy*<br/>
-[out] Lokalizacja docelowa wykonać operację.
+*Punktu*\
+określoną Miejsce docelowe operacji.
 
-*Dane*<br/>
-[in] Dane, które mają być przechowywane.
+*Data*\
+podczas Dane do zapisania.
 
-*Liczba*<br/>
-[in] Długość bloku wyrazy w liczbie mnogiej do zapisania.
+*Liczbą*\
+podczas Długość bloku quadwords do zapisania.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__stosq`|AMD64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-Wynik jest fakt, że quadword `Data` są zapisywane w bloku `Count` wyrazy w liczbie mnogiej w `Dest` ciągu.
+Wynik polega na tym, że *dane* quadword są zapisywane w bloku *Count* quadwords w ciągu *docelowym* .
 
-Ta procedura jest dostępna wyłącznie jako wewnętrzna.
+Ta procedura jest dostępna tylko jako wewnętrzna.
 
 ## <a name="example"></a>Przykład
 
-```
+```C
 // stosq.c
 // processor: x64
 #include <stdio.h>
@@ -76,13 +76,11 @@ int main()
 }
 ```
 
-## <a name="output"></a>Dane wyjściowe
-
-```
+```Output
 0 ffffffffffff ffffffffffff 0
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

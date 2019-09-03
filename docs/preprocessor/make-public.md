@@ -1,6 +1,6 @@
 ---
-title: make_public
-ms.date: 11/04/2016
+title: make_public, pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.make_public
 - make_public_CPP
@@ -8,37 +8,37 @@ helpviewer_keywords:
 - pragmas, make_public
 - make_public pragma
 ms.assetid: c3665f4d-268a-4932-9661-c37c8ae6a341
-ms.openlocfilehash: d569758f90b9e55f65ad13517f86dea41d151ca8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d12fab685e0088993cb43073c3603bda12edd2f3
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371766"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218820"
 ---
-# <a name="makepublic"></a>make_public
-Wskazuje, że typ macierzysty powinien mieć publicznego zestawu dostępności.
+# <a name="make_public-pragma"></a>make_public, pragma
+
+Wskazuje, że typ natywny powinien mieć dostępność zestawu publicznego.
 
 ## <a name="syntax"></a>Składnia
 
-```
-#pragma make_public(type)
-```
+> **#pragma make_public (** *Typ* **)**
 
 ### <a name="parameters"></a>Parametry
 
-*Typ* jest nazwa typu, o których chcesz mieć publicznego zestawu dostępności.
+*Wprowadź*\
+Nazwa typu, który ma mieć dostęp do zestawu publicznego.
 
 ## <a name="remarks"></a>Uwagi
 
-**make_public** jest przydatne w przypadku, gdy typ macierzysty, którego chcesz się odwołać pochodzą z pliku .h, którego nie można zmienić. Za pomocą typu natywnego w sygnaturze funkcji publicznych w typie widoczność publiczny zestaw, typ natywny musi również mieć publicznego zestawu dostępności lub kompilator zgłosi ostrzeżenie.
+**make_public** jest przydatne w przypadku, gdy natywny typ, do którego chcesz się odwołać, pochodzi z pliku nagłówkowego, którego nie można zmienić. Jeśli chcesz użyć typu natywnego w podpisie funkcji publicznej w typie z widocznością zestawu publicznego, typ natywny musi mieć również dostęp do zestawu publicznego lub kompilator wyda ostrzeżenie.
 
-**make_public** musi być określona w zakresie globalnym i działa tylko wtedy, od punktu, w których jest zadeklarowany za pomocą na końcu pliku kodu źródłowego.
+**make_public** musi być określona w zakresie globalnym. Działa tylko od punktu, w którym jest zadeklarowany na końcu pliku kodu źródłowego.
 
-Typ natywny może być jawnie lub niejawnie prywatny; zobacz [widoczność typów](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) Aby uzyskać więcej informacji.
+Typ natywny może być niejawnie lub jawnie prywatny. Aby uzyskać więcej informacji, zobacz [typu widoczność](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility).
 
 ## <a name="examples"></a>Przykłady
 
-Poniższy przykład jest zawartość pliku .h, która zawiera definicje dla dwóch struktur natywnych.
+Poniższy przykład to zawartość pliku nagłówkowego, który zawiera definicje dwóch natywnych struktur.
 
 ```cpp
 // make_public_pragma.h
@@ -46,7 +46,7 @@ struct Native_Struct_1 { int i; };
 struct Native_Struct_2 { int i; };
 ```
 
-Poniższy przykład kodu wykorzystuje plik nagłówkowy i pokazuje, że o ile użytkownik wyraźnie oznaczyć natywnej struktury jako publiczne, za pomocą **make_public**, kompilator wygeneruje ostrzeżenie, gdy próba użycia natywnej struktury w Podpis funkcji publicznych w publicznego typu zarządzanego.
+Poniższy przykład kodu zużywa plik nagłówkowy. Pokazuje, że, chyba że jawnie oznaczy natywne struktury jako publiczne przy użyciu **make_public**, kompilator generuje ostrzeżenie przy próbie użycia natywnych struktur w sygnaturze funkcji publicznej w publicznym typie zarządzanym.
 
 ```cpp
 // make_public_pragma.cpp
@@ -63,4 +63,4 @@ public ref struct A {
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

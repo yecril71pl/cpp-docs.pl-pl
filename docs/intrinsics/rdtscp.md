@@ -1,6 +1,6 @@
 ---
 title: __rdtscp
-ms.date: 07/11/2019
+ms.date: 09/02/2019
 f1_keywords:
 - __rdtscp
 helpviewer_keywords:
@@ -8,51 +8,51 @@ helpviewer_keywords:
 - __rdtscp intrinsic
 - rdtscp instruction
 ms.assetid: f17d9a9c-88bb-44e0-b69d-d516bc1c93ee
-ms.openlocfilehash: b8a31c6d19cd171cbe909c75a27c2389866bd578
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: 4dcabd6ed0f7fb3f422927815cbdc91f2b4b9d43
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861106"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221318"
 ---
-# <a name="rdtscp"></a>__rdtscp
+# <a name="__rdtscp"></a>__rdtscp
 
 **Microsoft Specific**
 
-Generuje `rdtscp` instrukcji, zapisuje `TSC_AUX[31:0`] do pamięci i zwraca licznika sygnatury czasu 64-bitowych (`TSC)` wynik.
+Generuje instrukcję, zapis `TSC_AUX[31:0`] do pamięci i zwraca licznik 64-bitowy sygnatura czasowa (`TSC)` wynik. `rdtscp`
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 unsigned __int64 __rdtscp(
-   unsigned int * Aux
+   unsigned int * AUX
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*AUX*<br/>
-[out] Wskaźnik do lokalizacji, która będzie zawierać zawartość rejestru specyficzny dla komputera `TSC_AUX[31:0]`.
+*POMOCNICZ*\
+określoną Wskaźnik do lokalizacji, która będzie zawierać zawartość rejestru `TSC_AUX[31:0]`właściwego dla komputera.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Liczba cykli 64-bitowej nieoznaczonej liczby całkowitej.
+64-bitowa liczba kresek bez znaku.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__rdtscp`|x86, x64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-Generuje tym wewnętrzne `rdtscp` instrukcji. Aby ustalić, pomoc techniczna dotycząca sprzętu dla tej instrukcji, należy wywołać `__cpuid` wewnętrzne z `InfoType=0x80000001` i sprawdź bit 27 `CPUInfo[3] (EDX)`. Ten bit jest 1, jeśli instrukcja jest obsługiwana lub 0.  Jeśli możesz uruchomić kod, który korzysta z tym wewnętrzne na sprzęcie, który nie obsługuje `rdtscp` instrukcji, wyniki są nieprzewidywalne.
+`__rdtscp` Wewnętrznie`rdtscp` generuje instrukcję. Aby określić obsługę sprzętową dla tej instrukcji, wywołaj `__cpuid` wewnętrzne z `InfoType=0x80000001` i sprawdź bit 27 `CPUInfo[3] (EDX)`z. Ten bit ma wartość 1, jeśli instrukcja jest obsługiwana i 0 w przeciwnym razie.  Jeśli uruchamiasz kod, który używa wewnętrznego na sprzęcie, który nie obsługuje `rdtscp` instrukcji, wyniki są nieprzewidywalne.
 
-Ta instrukcja czeka, aż wykonaniu wszystkich poprzednich instrukcji i wszystkie poprzednie obciążenia są widoczne globalnie. Jednak nie jest instrukcja serializacji. Zobacz instrukcje firmy Intel i AMD, aby uzyskać więcej informacji.
+Ta instrukcja czeka, aż wszystkie poprzednie instrukcje zostały wykonane i wszystkie poprzednie obciążenia są widoczne globalnie. Nie jest to jednak serializowana instrukcja. Aby uzyskać więcej informacji, zobacz Podręczniki firmy Intel i AMD.
 
-Znaczenie wartość `TSC_AUX[31:0]` zależy od systemu operacyjnego.
+Znaczenie wartości w `TSC_AUX[31:0]` zależności od systemu operacyjnego.
 
 ## <a name="example"></a>Przykład
 
@@ -74,10 +74,9 @@ int main()
 TSC_AUX was 0
 ```
 
-**END specyficzny dla Microsoft**
-
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 
-[__rdtsc](../intrinsics/rdtsc.md)<br/>
+[__rdtsc](../intrinsics/rdtsc.md)\
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

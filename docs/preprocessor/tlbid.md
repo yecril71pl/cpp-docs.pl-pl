@@ -1,38 +1,36 @@
 ---
-title: tlbid
-ms.date: 10/18/2018
+title: TLBID — atrybut importowania
+ms.date: 08/29/2019
 f1_keywords:
 - tlbid
 helpviewer_keywords:
 - tlbid attribute
 ms.assetid: 54b06785-191b-4e77-a9a5-485f2b4acb09
-ms.openlocfilehash: ae79ce9245bb1c0425c3e9b92dd27b52fa443dba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 364fb224b0f2769cb0933e71d18ff70768189328
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179610"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216535"
 ---
-# <a name="tlbid"></a>tlbid
+# <a name="tlbid-import-attribute"></a>TLBID — atrybut importowania
 
-**Określonego język C++**
+**C++Specjalne**
 
-Umożliwia ładowanie bibliotek innych niż biblioteki typu podstawowego.
+Umożliwia ładowanie bibliotek poza podstawową biblioteką typów.
 
 ## <a name="syntax"></a>Składnia
 
-```
-tlbid(number)
-```
+> **#import** *typ biblioteki DLL* **TLBID (** *Liczba* **)**
 
 ### <a name="parameters"></a>Parametry
 
-*Numer*<br/>
-Liczba bibliotekę typów w `filename`.
+*Liczba*\
+Liczba bibliotek typów w *bibliotece typów*.
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli wiele bibliotek typów są wbudowane w pojedynczego pliku DLL, możliwe do załadowania biblioteki inne niż biblioteki typu podstawowego, za pomocą **tlbid**.
+Jeśli wiele bibliotek typów jest wbudowanych w jedną bibliotekę DLL, można załadować biblioteki inne niż podstawowe biblioteki typów za pomocą **TLBID**.
 
 Na przykład:
 
@@ -46,9 +44,9 @@ jest równoważne:
 LoadTypeLib("MyResource.dll\\2");
 ```
 
-**KONIEC określonego języka C++**
+**ZAKOŃCZENIE C++ określonych**
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import Directive](../preprocessor/hash-import-directive-cpp.md)
+[Atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

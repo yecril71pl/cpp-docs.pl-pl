@@ -1,6 +1,6 @@
 ---
 title: __emul, __emulu
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __emulu_cpp
 - __emul
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - __emul intrinsic
 - __emulu intrinsic
 ms.assetid: 79545236-cca2-40b8-a4e1-8abce9b26311
-ms.openlocfilehash: 8657c0fb034ac6bbcfbebb946e059ad08d9e7046
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16b2b38f6f44b99c9f5b9370ba586342a860684e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264052"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216745"
 ---
-# <a name="emul-emulu"></a>__emul, __emulu
+# <a name="__emul-__emulu"></a>__emul, __emulu
 
 **Microsoft Specific**
 
-Wykonuje mnożenia, które przepełnienia, co może zawierać 32-bitową liczbę całkowitą.
+Wykonuje operacje mnożenia, które przepełnią wartość 32-bitową liczbę całkowitą.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 __int64 __emul(
    int a,
    int b
@@ -36,13 +36,13 @@ unsigned __int64 __emulu(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*a*<br/>
-[in] Pierwszy operand całkowitą mnożenia.
+*z*\
+podczas Pierwszy operand liczby całkowitej mnożenia.
 
-*b*<br/>
-[in] Drugi argument liczby całkowitej mnożenia.
+*b*\
+podczas Drugi operand liczby całkowitej mnożenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -50,22 +50,22 @@ Wynik mnożenia.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__emul`|x86, x64|
 |`__emulu`|x86, x64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-`__emul` przyjmuje dwie wartości podpisem 32-bitowe i zwraca wynik mnożenia jako wartość 64-bitową.
+`__emul`Pobiera 2 32-bitowe wartości podpisane i zwraca wynik mnożenia jako 64-bitową liczbę całkowitą ze znakiem.
 
-`__emulu` przyjmuje dwie wartości 32-bitowej nieoznaczonej liczby całkowitej i zwraca wynik mnożenia jako wartość 64-bitowej nieoznaczonej liczby całkowitej.
+`__emulu`Pobiera 2 32-bitową liczbę całkowitą bez znaku i zwraca wynik mnożenia jako 64-bitową liczbę całkowitą bez znaku.
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // emul.cpp
 // compile with: /EHsc
 // processor: x86, x64
@@ -97,12 +97,12 @@ int main()
 
 ## <a name="output"></a>Dane wyjściowe
 
-```
+```Output
 -268435456 * 2 = -536870912
 4294967295 * 251658240 = 1080863910317260800
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

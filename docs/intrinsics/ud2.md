@@ -1,52 +1,52 @@
 ---
 title: __ud2
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __ud2
 helpviewer_keywords:
 - UD2 instruction
 - __ud2 intrinsic
 ms.assetid: 0831cd5a-8b65-402e-bb57-11e1d5d7ffd2
-ms.openlocfilehash: a36ab5c25ac9138b2a4d6810cc2a339e534f1695
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5aa20804099af4d75dcc62a5e62ccc0d4a09566
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390181"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219754"
 ---
-# <a name="ud2"></a>__ud2
+# <a name="__ud2"></a>__ud2
 
 **Microsoft Specific**
 
-Generuje instrukcję niezdefiniowane.
+Generuje niezdefiniowaną instrukcję.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 void __ud2();
 ```
 
 ## <a name="remarks"></a>Uwagi
 
-Procesor zgłasza wyjątek nieprawidłowy kod operacji, jeśli zostanie wykonana instrukcja niezdefiniowane.
+Podczas wykonywania niezdefiniowanej instrukcji procesor zgłasza nieprawidłowy wyjątek kodu operacji.
 
-`__ud2` Funkcji jest odpowiednikiem `UD2` komputera instrukcji i jest dostępna tylko w trybie jądra. Aby uzyskać więcej informacji, wyszukaj dokumentu, "Manual deweloper oprogramowania architekturze firmy Intel, wolumin 2: Instrukcja Ustaw odwołanie,"w [Intel Corporation](https://software.intel.com/articles/intel-sdm) lokacji.
+Funkcja jest równoważna `UD2` z instrukcją Machine i jest dostępna tylko w trybie jądra. `__ud2` Aby uzyskać więcej informacji, Wyszukaj dokument "Podręcznik Intel Architecture Developer, Tom 2: Odwołanie do zestawu instrukcji "w witrynie [firmy Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__ud2`|x86, x64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład wykonuje instrukcja niezdefiniowane zgłasza wyjątek. Obsługa wyjątków następnie zmienia kod powrotny od zera do jednego.
+Poniższy przykład wykonuje niezdefiniowaną instrukcję, która wywołuje wyjątek. Program obsługi wyjątków zmieni Kod powrotu z zero na jeden.
 
-```
+```cpp
 // __ud2_intrinsic.cpp
 #include <stdio.h>
 #include <intrin.h>

@@ -1,6 +1,6 @@
 ---
-title: zarządzane, niezarządzane
-ms.date: 11/04/2016
+title: managed, unmanaged, pragmy
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.unmanaged
 - managed_CPP
@@ -12,44 +12,43 @@ helpviewer_keywords:
 - pragmas, managed
 - unmanaged pragma
 ms.assetid: f072ddcc-e1ec-408a-8ce1-326ddb60e4a4
-ms.openlocfilehash: 7fa1e3274b85faa9f3f72f4db5bf586ee5d8e274
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c13155d1c84966a593df11baf525a0c3539f02c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409866"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218812"
 ---
-# <a name="managed-unmanaged"></a>zarządzane, niezarządzane
-Włącz kontrolę poziomie funkcji do kompilowania funkcji jako zarządzane lub niezarządzane.
+# <a name="managed-unmanaged-pragmas"></a>managed, unmanaged, pragmy
+
+Włącz kontrolę poziomu funkcji, aby kompilować funkcje jako zarządzane lub niezarządzane.
 
 ## <a name="syntax"></a>Składnia
 
-```
-#pragma managed
-#pragma unmanaged
-#pragma managed([push,] on | off)
-#pragma managed(pop)
-```
+> **#pragma zarządzany**\
+> **niezarządzana #pragma**\
+> **zarządzane #pragma (** [ **push,** ] { **on** | **off** } **)** \
+> **zarządzane #pragma (pop)**
 
 ## <a name="remarks"></a>Uwagi
 
-[/CLR](../build/reference/clr-common-language-runtime-compilation.md) — opcja kompilatora można kontrolować poziom modułu do kompilowania funkcji, jako zarządzane lub niezarządzane.
+Opcja kompilatora [/CLR](../build/reference/clr-common-language-runtime-compilation.md) zapewnia kontrolę poziomu modułu do kompilowania funkcji jako zarządzanych lub niezarządzanych.
 
-Niezarządzanej funkcji zostanie skompilowany dla platformy natywnej, a wykonanie tej części, program zostanie przekazany do platformy natywnej przez środowisko uruchomieniowe języka wspólnego.
+Funkcja niezarządzana zostanie skompilowana dla platformy natywnej. Wykonanie tej części programu zostanie przesłane do natywnej platformy przez środowisko uruchomieniowe języka wspólnego.
 
-Funkcje są kompilowane jako zarządzany domyślnie podczas `/clr` jest używany.
+Funkcje są kompilowane jako zarządzane domyślnie, gdy `/clr` jest używany.
 
-Podczas stosowania tych pragmy:
+Podczas stosowania tych pragm:
 
-- Dodaj pragma poprzedzających funkcji, ale nie w treści funkcji.
+- Dodaj pragmę poprzedzającą funkcję, ale nie w treści funkcji.
 
-- Dodaj dyrektywę po `#include` instrukcji. Nie należy używać tych pragm przed `#include` instrukcji.
+- Dodaj pragma After `#include` instrukcji. Nie używaj tych pragm przed `#include` instrukcją.
 
-Kompilator ignoruje **zarządzane** i **niezarządzanych** pragm Jeśli `/clr` nie jest używany w kompilacji.
+Kompilator ignoruje **zarządzane** i **niezarządzane** dyrektywy pragma, `/clr` Jeśli nie jest używany w kompilacji.
 
-Podczas tworzenia wystąpienia szablonu funkcji stan pragmy w czasie definicji szablonu określa, czy ma zarządzane lub niezarządzane.
+Gdy jest tworzone wystąpienie funkcji szablonu, pragma stan, gdy szablon jest zdefiniowany, określa, czy jest zarządzany lub niezarządzany.
 
-Aby uzyskać więcej informacji, zobacz [inicjowanie zestawów mieszanych](../dotnet/initialization-of-mixed-assemblies.md).
+Aby uzyskać więcej informacji, zobacz [Inicjowanie zestawów mieszanych](../dotnet/initialization-of-mixed-assemblies.md).
 
 ## <a name="example"></a>Przykład
 
@@ -89,4 +88,4 @@ In unmanaged function.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

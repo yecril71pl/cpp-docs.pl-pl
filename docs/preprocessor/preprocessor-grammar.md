@@ -1,91 +1,91 @@
 ---
 title: Gramatyka preprocesora
-ms.date: 09/04/2018
+ms.date: 08/29/2019
 helpviewer_keywords:
 - preprocessor
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-ms.openlocfilehash: 6177cf5fddba549e410842ef3f270edcc13d4782
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0916e3cc9bbdb398db693286dacc4517df03557
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179883"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222259"
 ---
 # <a name="preprocessor-grammar"></a>Gramatyka preprocesora
 
-*control-line*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#define** *identyfikator* *ciąg tokenu*<sub>zoptymalizowany pod kątem</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>identyfikator</em>**(** *identyfikator*<sub>zoptymalizowany pod kątem</sub> **,** ... **,** *identyfikator*<sub>zoptymalizowany pod kątem</sub> **)** *ciąg tokenu*<sub>zoptymalizowany pod kątem</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#include** **"** *path-spec* **"**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *path-spec* **>**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#line** *digit-sequence*  **"** *filename* **"**<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#undef** *identyfikator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#error** *ciąg tokenu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *ciąg tokenu*
+*wiersz kontrolny*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#define** *Identyfikator* *token — ciąg* <sub>wybór</sub>\
+&nbsp;&nbsp;&nbsp;&nbsp; **#define** *Identyfikator* **(** &#x2800;&#x200B;<sub>wybór</sub> identyfikatora **,** ... **,** *Identyfikator* &#x200B;&#x2800; <sub>opt</sub>—<sub>wybór</sub> *ciągu tokenu*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#include** **"** _ścieżka — Specyfikacja_ **"** \
+&nbsp;&nbsp;&nbsp;&nbsp; **#include** _ścieżka — Specyfikacja_ **\<** **>** \
+&nbsp;&nbsp;&nbsp;&nbsp; **#line** *sekwencja cyfr* **"** _Nazwa pliku_ **"** &#x200B; <sub>wybór</sub>  \
+&nbsp;&nbsp;&nbsp;&nbsp; **#undef** *Identyfikator*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#error** *token — ciąg*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#pragma** *token — ciąg*
 
-*constant-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**zdefiniowany (** *identyfikator* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**definicja** *identyfikator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Dowolne wyrażenie stałej
+*wyrażenie stałe*: \
+&nbsp;&nbsp;&nbsp;&nbsp;**zdefiniowane (** &#x2800;*Identyfikator*&#x2800; **)** \
+&nbsp;&nbsp;&nbsp;&nbsp;**zdefiniowane** *Identyfikator*\
+&nbsp;&nbsp;&nbsp;&nbsp;dowolne inne wyrażenie stałe
 
-*warunkowe* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*część IF* *części elif*<sub>zoptymalizowany pod kątem</sub> *część else*<sub>zoptymalizowany pod kątem</sub> *linia endif*
+*warunkowo*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*if-Part* *elif — części* <sub>wybór</sub> *else-część* <sub>wybór</sub> *endif-line*
 
-*część IF* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wiersz z operatorem IF* *tekstu*
+*if-Part*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*if-line* *tekst*
 
-*wiersz z operatorem IF* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if** *wyrażenia stałego*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef** *identyfikator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef** *identyfikator*
+*if-line*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#if** *wyrażenie stałe*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef** *Identyfikator*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef** *Identyfikator*
 
-*części elif* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Linia elif* *tekstu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*części elif* *linii elif* *tekstu*
+*elif — części*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*elif-line* *tekst*\
+&nbsp;&nbsp;&nbsp;&nbsp;*elif — części* *elif-line* *tekst*
 
-*Linia elif* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif** *constant-expression*
+*elif-line*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#elif** *wyrażenie stałe*
 
-*część else* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*else linii* *tekstu*
+*else-część*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*else — wiersz* *tekst*
 
-*else linii* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#else**
+*else-line*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#else**
 
-*Linia ENDIF* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#endif**
+*endif-line*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#endif**
 
-*sekwencja cyfr* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*digit-sequence* *digit*
+*sekwencja cyfr*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*kontrol*\
+&nbsp;&nbsp;&nbsp;&nbsp;*sekwencja cyfr* *cyfra*
 
-*cyfra* : jeden z<br/>
+*cyfra*: jeden z \
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
 
-*token ciągu* :<br/>
+*token-String*: \
 &nbsp;&nbsp;&nbsp;&nbsp;Ciąg tokenów
 
-*Token* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*keyword*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Stałe*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Operator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*znak interpunkcyjny*
+*token*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*kodu*\
+&nbsp;&nbsp;&nbsp;&nbsp;*identyfikatora*\
+&nbsp;&nbsp;&nbsp;&nbsp;*stałego*\
+&nbsp;&nbsp;&nbsp;&nbsp;*zakład*\
+&nbsp;&nbsp;&nbsp;&nbsp;*punctuator*
 
-*Nazwa pliku* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;System operacyjny prawne, nazwa_pliku
+*Nazwa pliku*: \
+&nbsp;&nbsp;&nbsp;&nbsp;Nazwa pliku legalnego systemu operacyjnego
 
-*PATH-spec* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Ścieżka pliku prawne
+*ścieżka — Specyfikacja*: \
+&nbsp;&nbsp;&nbsp;&nbsp;Legalna ścieżka pliku
 
-*tekst* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Dowolną sekwencją tekstu
+*tekst*: \
+&nbsp;&nbsp;&nbsp;&nbsp;Dowolna sekwencja tekstu
 
 > [!NOTE]
-> Następujące symboli nieterminalnych są rozwijane w [konwencje leksykalne](../cpp/lexical-conventions.md) części *C++ Language Reference*: *stałej*, *wyrażenia stałego* , *identyfikator*, *— słowo kluczowe*, *operator*, i *znak interpunkcyjny*.
+> Następujące elementy niebędące terminalami są rozwinięte w sekcji [konwencje leksykalne](../cpp/lexical-conventions.md) w  *C++ dokumentacji języka*: *stała*, *stała — wyrażenie*, *Identyfikator*, *słowo kluczowe*, *operator*i  *punctuator*.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Podsumowanie gramatyki (C/C++)](../preprocessor/grammar-summary-c-cpp.md)
+[Podsumowanie gramatyki (CC++/)](../preprocessor/grammar-summary-c-cpp.md)

@@ -1,6 +1,6 @@
 ---
-title: check_stack
-ms.date: 11/04/2016
+title: check_stack, pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.check_stack
 - check_stack_CPP
@@ -9,38 +9,37 @@ helpviewer_keywords:
 - pragmas, check_stack
 - pragmas, check_stack usage table
 ms.assetid: f18e20cc-9abb-48b7-ad62-8d384875b996
-ms.openlocfilehash: 49477a3b39db17047f349e341bd05c04954c964c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c976692ec36cedcb73825ee0cc7093736a3a3dc
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212402"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216129"
 ---
-# <a name="checkstack"></a>check_stack
-Instruuje kompilator, aby wyłączyć sondy stosu, jeśli `off` (lub `-`) jest określony, lub Włącz sondy stosu, jeśli `on` (lub `+`) jest określony.
+# <a name="check_stack-pragma"></a>check_stack, pragma
+
+Instruuje kompilator, aby wyłączył sondy stosu , jeśli określono **-** wartość off (lub) lub aby włączyć sondy stosu, jeśli określono wartość **+** **on** (lub).
 
 ## <a name="syntax"></a>Składnia
 
-```
-#pragma check_stack([ {on | off}] )
-#pragma check_stack{+ | -}
-```
+> **#pragma check_stack (** [{ **on** | **off** }] **)** \
+> **#pragma check_stack** { **+**  |  **-** }
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli żaden argument nie zostanie podany, sondy stosu są traktowane zgodnie z domyślną. Ta dyrektywa pragma uwzględniona na pierwszej funkcji zdefiniowanych po pragmy jest widoczny. Sondy stosu należą ani makr, ani nie ma funkcji, które są wbudowane wygenerowany.
+Ta pragma jest skuteczna przy pierwszej funkcji zdefiniowanej po wystąpieniu dyrektywy pragma. Sondy stosu nie są częścią makr ani funkcji, które są generowane w tekście.
 
-Jeśli nie udzielisz argument **check_stack** pragma, sprawdzeniem stosu powraca do zachowanie określone w wierszu polecenia. Aby uzyskać więcej informacji, zobacz [odwołanie do kompilatora](../build/reference/compiler-options.md). Interakcja `#pragma check_stack` i [/GS](../build/reference/gs-control-stack-checking-calls.md) opcji podsumowanych w poniższej tabeli.
+Jeśli nie podajesz argumentu dla dyrektywy pragma **check_stack** , sprawdzanie stosu zostanie przywrócone do zachowania określonego w wierszu polecenia. Aby uzyskać więcej informacji, zobacz [Opcje kompilatora](../build/reference/compiler-options.md). W poniższej tabeli zestawiono interakcję `#pragma check_stack` i opcję [/GS](../build/reference/gs-control-stack-checking-calls.md) .
 
-### <a name="using-the-checkstack-pragma"></a>Za pomocą check_stack Pragma
+### <a name="using-the-check_stack-pragma"></a>Używanie dyrektywy pragma check_stack
 
-|Składnia|Skompilowany przy użyciu<br /><br /> Opcja/GS?|Akcja|
+|Składnia|Skompilowane z<br /><br /> Opcja/GS?|Akcja|
 |------------|------------------------------------|------------|
-|`#pragma check_stack( )` lub<br /><br /> `#pragma check_stack`|Tak|Wyłącza sprawdzanie stosu dla funkcji, które należy wykonać|
-|`#pragma check_stack( )` lub<br /><br /> `#pragma check_stack`|Nie|Włącza sprawdzanie stosu dla funkcji, które należy wykonać|
-|`#pragma check_stack(on)`<br /><br /> lub `#pragma check_stack +`|Tak lub nie|Włącza sprawdzanie stosu dla funkcji, które należy wykonać|
-|`#pragma check_stack(off)`<br /><br /> lub `#pragma check_stack -`|Tak lub nie|Wyłącza sprawdzanie stosu dla funkcji, które należy wykonać|
+|`#pragma check_stack( )`oraz<br /><br /> `#pragma check_stack`|Tak|Wyłącza sprawdzanie stosu dla następujących funkcji|
+|`#pragma check_stack( )`oraz<br /><br /> `#pragma check_stack`|Nie|Włącza sprawdzanie stosu dla następujących funkcji|
+|`#pragma check_stack(on)`<br /><br /> oraz`#pragma check_stack +`|Tak lub nie|Włącza sprawdzanie stosu dla następujących funkcji|
+|`#pragma check_stack(off)`<br /><br /> oraz`#pragma check_stack -`|Tak lub nie|Wyłącza sprawdzanie stosu dla następujących funkcji|
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

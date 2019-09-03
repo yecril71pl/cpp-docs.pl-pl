@@ -1,6 +1,6 @@
 ---
 title: __invlpg
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __invlpg
 - __invlpg_cpp
@@ -8,47 +8,47 @@ helpviewer_keywords:
 - invlpg instruction
 - __invlpg intrinsic
 ms.assetid: 3fb3633f-d9b7-4ec0-9e7f-a7f2fa8ed794
-ms.openlocfilehash: b4f941baae9f03ed288a99d59e2b06262962e339
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba8bd81498f805992336b0dc4163fe18fa157a2c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348747"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221899"
 ---
-# <a name="invlpg"></a>__invlpg
+# <a name="__invlpg"></a>__invlpg
 
 **Microsoft Specific**
 
-Generuje x86 `invlpg` instrukcji, co unieważnia buforu referencyjnych tłumaczenia (TLB) dla strony skojarzone z pamięci wskazywany przez `Address`.
+Generuje instrukcję x86 `invlpg` , która unieważnia bufor tłumaczenia referencyjna (TLB) dla strony skojarzonej z pamięcią wskazywaną przez *adres*.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 void __invlpg(
    void* Address
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Adres*<br/>
-[in] 64-bitowy adres.
+*Ulica*\
+podczas Adres 64-bitowy.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__invlpg`|x86, x64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-Wewnętrzne `__invlpg` emituje instrukcja uprzywilejowana i jest dostępna tylko w trybie jądra z poziomem uprawnień (Panel sterowania) 0.
+Wewnętrznie `__invlpg` emituje uprzywilejowaną instrukcję i jest dostępna tylko w trybie jądra z poziomem uprawnień (CPL) równym 0.
 
-Ta procedura jest dostępna wyłącznie jako wewnętrzna.
+Ta procedura jest dostępna tylko jako wewnętrzna.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

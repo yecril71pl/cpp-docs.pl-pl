@@ -1,38 +1,35 @@
 ---
-title: embedded_idl
-ms.date: 10/18/2018
+title: embedded_idl — atrybut importowania
+ms.date: 08/29/2019
 f1_keywords:
 - embedded_idl
 helpviewer_keywords:
 - embedded_idl attribute
 ms.assetid: f1c1c2e8-3872-4172-8795-8d1288a20452
-ms.openlocfilehash: c46924d2757d01a934c21a70f23e6556f6a10fd3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01948b171b20ad0a3bf3e7a41047f1fe3df185b0
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389349"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216326"
 ---
-# <a name="embeddedidl"></a>embedded_idl
+# <a name="embedded_idl-import-attribute"></a>embedded_idl — atrybut importowania
 
-**Określonego język C++**
+**C++Specjalne**
 
-Określa, czy biblioteki typów są zapisywane do pliku .tlh, z zachowanym kodem generowanych atrybutów.
+Określa, czy biblioteka typów jest zapisywana `.tlh` w pliku z zachowaniem kodu generowanego przez atrybut.
 
 ## <a name="syntax"></a>Składnia
 
-```
-embedded_idl[("param")]
-```
+> **#import** *Biblioteka typów* **embedded_idl** [ **(** { **"emitidl"**  |  **"no_emitidl"** } **)** ]
 
 ### <a name="parameters"></a>Parametry
 
-*param*<br/>
-Może być jedną z dwóch wartości:
+**emitidl**\
+Informacje o typie zaimportowane z *biblioteki typów* są obecne w IDL wygenerowanym dla projektu o atrybutach. To zachowanie jest domyślne i obowiązuje, jeśli nie określisz parametru do `embedded_idl`.
 
-- **emitidl**: Informacje o typie zaimportowany z biblioteki typów będą znajdować się we IDL wygenerowany w projekcie z atrybutami.  To jest ustawieniem domyślnym i będą obowiązywać w przypadku nieokreślenia parametru, aby `embedded_idl`.
-
-- **no_emitidl**: Informacje o typie zaimportowany z biblioteki typów nie będą obecne w pliku IDL wygenerowany w projekcie z atrybutami.
+**"no_emitidl"** \
+Informacje o typie zaimportowane z *biblioteki typów* nie są obecne w IDL wygenerowanym dla projektu o atrybutach.
 
 ## <a name="example"></a>Przykład
 
@@ -44,11 +41,9 @@ Może być jedną z dwóch wartości:
 #import "\school\bin\importlib.tlb" embedded_idl("no_emitidl")
 ```
 
-## <a name="remarks"></a>Uwagi
-
-**KONIEC określonego języka C++**
+**ZAKOŃCZENIE C++ określonych**
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import Directive](../preprocessor/hash-import-directive-cpp.md)
+[Atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

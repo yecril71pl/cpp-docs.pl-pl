@@ -1,27 +1,27 @@
 ---
 title: __shiftright128
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __shiftright128
 helpviewer_keywords:
 - __shiftright128 intrinsic
 ms.assetid: 5419a6c4-0de1-43fb-b314-4faa5b2d051f
-ms.openlocfilehash: b721abc9be22709fdc221951e2012300d6b96762
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a18a9958a51f291e4997c23e87ee48f739562416
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390337"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220020"
 ---
-# <a name="shiftright128"></a>__shiftright128
+# <a name="__shiftright128"></a>__shiftright128
 
 **Microsoft Specific**
 
-Przenosi ilość 128-bitowego, reprezentowane jako dwie ilości 64-bitowych `LowPart` i `HighPart`, w prawo o liczbę bitów określoną przez `Shift` i zwraca niski 64 bity wyniku.
+Przenosi ilość 128-bitową, reprezentowaną jako 2 64-bitowe `LowPart` ilości `HighPart`i, po prawej stronie przez liczbę bitów określoną przez `Shift` , i zwraca niskie 64 bitów wyniku.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 unsigned __int64 __shiftright128(
    unsigned __int64 LowPart,
    unsigned __int64 HighPart,
@@ -29,40 +29,40 @@ unsigned __int64 __shiftright128(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*LowPart*<br/>
-[in] Niski 64 bity ilość 128-bitowe przesunięcie.
+*LowPart*\
+podczas Niska 64 bitów ilości 128-bitowej do przesunięcia.
 
-*HighPart*<br/>
-[in] Wysoka 64 bity ilość 128-bitowe przesunięcie.
+*HighPart*\
+podczas Wysoka 64 bitów 128-bitowej liczby do przesunięcia.
 
-*SHIFT*<br/>
-[in] Liczba bitów, aby przesunąć.
+*Nocn*\
+podczas Liczba bitów do przesunięcia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Niski 64 bity wyniku.
+Niska 64 bitów wyniku.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__shiftright128`|X64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-`Shift` Wartość jest zawsze modulo 64 więc, na przykład, jeśli wywołasz `__shiftright128(0, 1, 64)`, funkcja zostanie wprowadzony wysokiej część `0` bitów, kliknij prawym przyciskiem myszy i powrócić niskiej część `0` i nie `1` w przeciwnym razie może być oczekiwany.
+`0` `__shiftright128(0, 1, 64)` `1` `0` Wartość jest zawsze modulo 64, tak więc, na przykład, jeśli wywołasz, funkcja zmieni górną część bitów w prawo i zwróci niską część, a nie jako nieoczekiwaną. `Shift`
 
 ## <a name="example"></a>Przykład
 
-Aby uzyskać przykład, zobacz [__shiftleft128](../intrinsics/shiftleft128.md).
+Aby zapoznać się z przykładem, zobacz [__shiftleft128](../intrinsics/shiftleft128.md).
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 
-[__shiftleft128](../intrinsics/shiftleft128.md)<br/>
+[__shiftleft128](../intrinsics/shiftleft128.md)\
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

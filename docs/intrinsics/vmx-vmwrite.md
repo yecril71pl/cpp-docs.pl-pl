@@ -1,64 +1,68 @@
 ---
 title: __vmx_vmwrite
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __vmx_vmwrite
 helpviewer_keywords:
 - __vmx_vmwrite intrinsic
 - VMWRITE instruction
 ms.assetid: 88139792-fd3f-4210-97ca-9d84f43a0252
-ms.openlocfilehash: e52b1f181f00ce013a111d1a5a62abeff544e20a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cdc5590858f160db24bf75ef11c8f20b204a3152
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389986"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219390"
 ---
-# <a name="vmxvmwrite"></a>__vmx_vmwrite
+# <a name="__vmx_vmwrite"></a>__vmx_vmwrite
 
 **Microsoft Specific**
 
-Zapisuje określoną wartość określonego pola w strukturze kontroli bieżącej maszyny wirtualnej (VMCS).
+Zapisuje określoną wartość do określonego pola w bieżącej strukturze sterowania maszyną wirtualną (VMCS).
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 unsigned char __vmx_vmwrite(
    size_t Field,
    size_t FieldValue
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|*Pole*|[in] Pole VMCS do zapisania.|
-|*FieldValue*|[in] Wartość do zapisania się do pola VMCS.|
+*Polami*\
+podczas Pole VMCS, które ma zostać zapisane.
+
+*FieldValue*\
+podczas Wartość do zapisu w polu VMCS.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-0, operacja zakończyła się pomyślnie.
+2,0
+Operacja zakończyła się pomyślnie.
 
-1 operacja nie powiodła się ze stanem rozszerzone jest dostępne w `VM-instruction error field` z bieżącym VMCS.
+jedno
+Operacja nie powiodła się z rozszerzonym stanem dostępnym w `VM-instruction error field` bieżącym VMCs.
 
-2. Operacja nie powiodła się bez informacji o stanie.
+dwóch
+Operacja nie powiodła się bez dostępnego stanu.
 
 ## <a name="remarks"></a>Uwagi
 
-`__vmx_vmwrite` Funkcji jest odpowiednikiem `VMWRITE` machine instrukcji. Wartość `Field` parametr jest zakodowany indeksu jest opisane w dokumentacji firmy Intel. Aby uzyskać więcej informacji, wyszukaj dokumentu, "Intel Virtualization Technical Preview specyfikacji dla IA-32 architekturze firmy Intel," dokumentu numer C97063-002 w [Intel Corporation](https://software.intel.com/articles/intel-sdm) lokacji, a następnie zapoznaj się z dodatku C dokument.
+Funkcja jest równoważna `VMWRITE` z instrukcją maszyny. `__vmx_vmwrite` Wartość `Field` parametru jest zakodowanym indeksem pola, który jest opisany w dokumentacji firmy Intel. Aby uzyskać więcej informacji, Wyszukaj dodatek C "Specyfikacja techniczna wirtualizacji firmy Intel dla architektury Intel o architekturze IA-32" w witrynie [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__vmx_vmwrite`|X64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 
-[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)\
 [__vmx_vmread](../intrinsics/vmx-vmread.md)

@@ -1,6 +1,6 @@
 ---
-title: _InterlockedAdd — funkcje wewnętrzne
-ms.date: 12/17/2018
+title: Funkcje wewnętrzne _InterlockedAdd
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedAdd64_acq_cpp
 - _InterlockedAdd64_acq
@@ -26,22 +26,22 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-ms.openlocfilehash: 348e936bb05796e36ae45095f25b943076cec464
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c540cfe6abd8ae6dc2933e7fb21e2a331c21ea71
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349520"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217727"
 ---
-# <a name="interlockedadd-intrinsic-functions"></a>_InterlockedAdd — funkcje wewnętrzne
+# <a name="_interlockedadd-intrinsic-functions"></a>Funkcje wewnętrzne _InterlockedAdd
 
 **Microsoft Specific**
 
-Te funkcje wykonać dodatek atomic upewnia się, że operacja zakończy się pomyślnie po więcej niż jeden wątek ma dostęp do udostępnionej zmiennej.
+Te funkcje wykonują niepodzielną dodanie, co gwarantuje, że operacja zostanie zakończona pomyślnie, gdy więcej niż jeden wątek ma dostęp do zmiennej udostępnionej.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 long _InterlockedAdd(
    long volatile * Addend,
    long Value
@@ -76,38 +76,38 @@ __int64 _InterlockedAdd64_rel(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Składnik dodawania*<br/>
-[out w] Wskaźnik do liczby całkowitej, która ma zostać dodany do; zastępuje wynik dodawania.
+*Składnik dodawania*\
+[in. out] Wskaźnik na liczbę całkowitą, która ma zostać dodana; zastąpione przez wynik dodania.
 
-*Wartość*<br/>
-[in] Wartość do dodania.
+*Wartościami*\
+podczas Wartość do dodania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Obie funkcje zwracają wynik dodawania.
+Obie funkcje zwracają wynik dodania.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
-|`_InterlockedAdd`|ARM|
-|`_InterlockedAdd_acq`|ARM|
-|`_InterlockedAdd_nf`|ARM|
-|`_InterlockedAdd_rel`|ARM|
-|`_InterlockedAdd64`|ARM|
-|`_InterlockedAdd64_acq`|ARM|
-|`_InterlockedAdd64_nf`|ARM|
-|`_InterlockedAdd64_rel`|ARM|
+|`_InterlockedAdd`|ARM, ARM64|
+|`_InterlockedAdd_acq`|ARM, ARM64|
+|`_InterlockedAdd_nf`|ARM, ARM64|
+|`_InterlockedAdd_rel`|ARM, ARM64|
+|`_InterlockedAdd64`|ARM, ARM64|
+|`_InterlockedAdd64_acq`|ARM, ARM64|
+|`_InterlockedAdd64_nf`|ARM, ARM64|
+|`_InterlockedAdd64_rel`|ARM, ARM64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-Wersje tych funkcji `_acq` lub `_rel` sufiksy przeprowadzić Dodawanie blokowane, zgodnie z semantyką nabywania lub wersji. *Semantyka nabycia* oznacza, że wynik operacji stają się widoczne dla wszystkich wątków i procesorów przed wszystkie nowsze pamięci operacji odczytu i zapisu. Uzyskiwanie jest przydatne w przypadku wprowadzania sekcję krytyczną. *Zwolnij semantyki* wymuszenie były widoczne dla wszystkich wątków i procesorów, zanim wynik operacji stają się widoczne dla samego oznacza, że wszystkie pamięci operacji odczytu i zapisu. Wersja jest przydatne podczas opuszczania sekcję krytyczną. Funkcje wewnętrzne z `_nf` sufiks ("nie ogranicznika") nie działają jako czynnik blokujący pamięci.
+Wersje tych funkcji z sufiksami `_acq` lub `_rel` wykonują komplementarne Dodawanie przy użyciu semantyki pozyskiwania lub wydawania. *Uzyskanie semantyki* oznacza, że wynik operacji jest widoczny dla wszystkich wątków i procesorów przed późniejszym odczytaniem i zapisem pamięci. Pobieranie jest przydatne podczas wprowadzania sekcji krytycznej. *Semantyka wersji* oznacza, że wszystkie operacje odczytu i zapisu pamięci są wymuszane jako widoczne dla wszystkich wątków i procesorów, zanim wynik operacji zostanie wyświetlony jako widoczny. Wydanie jest przydatne przy opuszczaniu sekcji krytycznej. Elementy wewnętrzne z `_nf` sufiksem ("No ogrodzeni") nie działają jako bariera pamięci.
 
-Te procedury są dostępne tylko jako funkcje wewnętrzne.
+Te procedury są dostępne tylko jako elementy wewnętrzne.
 
 ## <a name="example"></a>Przykład
 
@@ -167,9 +167,9 @@ ff0000000000 + ff0000ffffffff = ffff00ffffffff
 Return value: ffff00ffffffff
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 
-[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)\
 [Konflikty z kompilatorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

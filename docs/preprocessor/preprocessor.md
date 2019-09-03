@@ -1,20 +1,21 @@
 ---
 title: Preprocesor
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 helpviewer_keywords:
 - preprocessor
 ms.assetid: e120eda3-b413-49f1-a07c-e9fb128cf500
-ms.openlocfilehash: b1443d88fdba470cb8ed5058c9a9012bfbdc5bc7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 883504810f1b659e28764a75ebc7cfda325920a5
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179857"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222236"
 ---
 # <a name="preprocessor"></a>Preprocesor
-Preprocesor jest procesora tekstu, która manipuluje tekst pliku źródłowego w ramach pierwszej fazy tłumaczenia. Preprocesor nie analizuje tekst źródłowy, ale jej Podziel je na tokeny na potrzeby znajdowania wywołania makra. Mimo że kompilator wywołuje zazwyczaj preprocesor w jego pierwszym przebiegu, preprocesor można również wywołać oddzielnie do przetwarzania tekstu bez kompilacji.
 
-Materiał odniesienia na preprocesora zawiera następujące sekcje:
+Preprocesor jest procesorem tekstowym, który manipuluje tekstem pliku źródłowego w pierwszej fazie tłumaczenia. Preprocesor nie przeanalizuje tekstu źródłowego, ale podzieli go na tokeny umożliwiające lokalizowanie wywołań makr. Chociaż kompilator zwykle wywołuje preprocesor podczas pierwszego przebiegu, preprocesor może być również wywoływany oddzielnie, aby przetwarzać tekst bez kompilowania.
+
+Materiał referencyjny w preprocesorach zawiera następujące sekcje:
 
 - [Dyrektywy preprocesora](../preprocessor/preprocessor-directives.md)
 
@@ -26,17 +27,17 @@ Materiał odniesienia na preprocesora zawiera następujące sekcje:
 
 **Microsoft Specific**
 
-Możesz uzyskać go w kodzie źródłowym po przetwarzanie wstępne za pomocą [/E](../build/reference/e-preprocess-to-stdout.md) lub [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) — opcja kompilatora. Obie opcje preprocesora wywołania i wynikowy tekst na urządzeniu standardowe dane wyjściowe, które w większości przypadków to konsola danych wyjściowych polecenia. Różnica między dwie opcje jest, że zawiera /E `#line` dyrektywy i /EP usuwa te dyrektywy się.
+Możesz uzyskać listę kodu źródłowego po wstępnej przejściu przy użyciu opcji kompilatora [/e](../build/reference/e-preprocess-to-stdout.md) lub [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) . Obie opcje wywołują preprocesor i wysyłają wynikowy tekst do standardowego urządzenia wyjściowego, które w większości przypadków jest konsolą programu. Różnica między tymi dwiema opcjami `/E` obejmuje dyrektywy, a `/EP` także `#line` paski te dyrektywy.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-##  <a name="_predir_special_terminology"></a> Terminologię
+##  <a name="_predir_special_terminology"></a>Specjalna terminologia
 
-W dokumentacji preprocesora termin "argument" odnosi się do jednostki, który jest przekazywany do funkcji. W niektórych przypadkach jest on zmodyfikowany przez "rzeczywiste" lub "formalnych", której opisano wyrażenie argumentu, określone w wywołaniu funkcji i deklaracji argumentów odpowiednio określone w definicji funkcji.
+W dokumentacji preprocesora termin "argument" odwołuje się do jednostki, która jest przenoszona do funkcji. W niektórych przypadkach jest on modyfikowany przez "rzeczywiste" lub "formalne", który opisuje wyrażenie argumentu określone w wywołaniu funkcji i deklarację argumentu określoną odpowiednio w definicji funkcji.
 
-Termin "Zmienna" odnosi się do obiektu proste danych typu C. Termin "object" odnosi się do obiektu języka C++ i zmiennych; to termin (włącznie).
+Termin "zmienna" odnosi się do prostego obiektu danych typu C. Termin "Object" odnosi się zarówno C++ do obiektów, jak i zmiennych. jest to termin włącznie.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja preprocesora języka C/C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
+[Dokumentacja językaC++ C/preprocesora](../preprocessor/c-cpp-preprocessor-reference.md)\
 [Fazy tłumaczenia](../preprocessor/phases-of-translation.md)

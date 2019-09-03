@@ -1,59 +1,59 @@
 ---
 title: __segmentlimit
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __segmentlimit
 helpviewer_keywords:
 - __segmentlimit intrinsic
 - lsl instruction
 ms.assetid: d0bc3630-90cb-4185-8667-686fd41e23d4
-ms.openlocfilehash: 650a847be3270782dc441d0e68c2c80d910e9d1e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9239d8de8ce2065d09ee7975301a2cb41832ba89
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390389"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217994"
 ---
-# <a name="segmentlimit"></a>__segmentlimit
+# <a name="__segmentlimit"></a>__segmentlimit
 
 **Microsoft Specific**
 
-Generuje `lsl` instrukcji (Limit segmentów obciążenia).
+Generuje instrukcję `lsl` (limit segmentów obciążenia).
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 unsigned long __segmentlimit(
    unsigned long a
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*a*<br/>
-[in] Stała określająca selektor segmentu.
+*z*\
+podczas Stała określająca selektor segmentów.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Limit segmentów selektora segmentu, określony przez `a`pod warunkiem, że selektor jest prawidłowy i widoczne na bieżącym poziomie uprawnień.
+Limit segmentów selektora segmentu określony przez,Jeśli selektor jest prawidłowy i widoczny na bieżącym poziomie uprawnień.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__segmentlimit`|x86, x64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-Nie można pobrać limit segmentów, ta instrukcja nie powiedzie się. W przypadku awarii ta instrukcja czyści flagę ZF i wartość zwracana jest niezdefiniowany.
+Jeśli nie można pobrać limitu segmentów, ta instrukcja kończy się niepowodzeniem. W przypadku niepowodzenia ta instrukcja czyści flagę ZF, a zwracana wartość jest niezdefiniowana.
 
-Ta procedura jest dostępna wyłącznie jako wewnętrzna.
+Ta procedura jest dostępna tylko jako wewnętrzna.
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 #include <stdio.h>
 
 #ifdef _M_IX86
@@ -105,7 +105,7 @@ Success!
 sl was changed
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

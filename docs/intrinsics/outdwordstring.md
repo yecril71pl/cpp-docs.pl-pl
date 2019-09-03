@@ -1,6 +1,6 @@
 ---
 title: __outdwordstring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outdwordstring
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __outdwordstring intrinsic
 - rep outsd instruction
 ms.assetid: 55b31a65-aab7-4b5c-b61d-d9e2fb0c497a
-ms.openlocfilehash: 51cb4a97d271d6d41d39d1025e3a5d34b273cdc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50908a65795af617f18a497c073cfefe009dfd80
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396590"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217164"
 ---
-# <a name="outdwordstring"></a>__outdwordstring
+# <a name="__outdwordstring"></a>__outdwordstring
 
 **Microsoft Specific**
 
-Generuje `rep outsd` instrukcji, która wysyła `Count` wyrazy w liczbie mnogiej zaczynając od `Buffer` z portu We/Wy, określony przez `Port`.
+Generuje instrukcję, która wysyła `Count` doublewords, rozpoczynając `Buffer` od portu we/wy określonego przez `Port`. `rep outsd`
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 void __outdwordstring(
    unsigned short Port,
    unsigned long* Buffer,
@@ -31,30 +31,30 @@ void __outdwordstring(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Port*<br/>
-[in] Port do wysyłania danych do.
+*Przewożąc*\
+podczas Port, do którego mają zostać wysłane dane.
 
-*Bufor*<br/>
-[in] Wskaźnik do danych, które zostaną wysłane do określonego portu.
+*Buforu*\
+podczas Wskaźnik do danych, które mają zostać wysłane przez określony port.
 
-*Liczba*<br/>
-[in] Liczba wyrazy w liczbie mnogiej do wysłania.
+*Liczbą*\
+podczas Liczba doublewords do wysłania.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__outdwordstring`|x86, x64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-Ta procedura jest dostępna wyłącznie jako wewnętrzna.
+Ta procedura jest dostępna tylko jako wewnętrzna.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

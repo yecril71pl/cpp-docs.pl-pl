@@ -1,6 +1,6 @@
 ---
 title: __movsw
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsw
 helpviewer_keywords:
@@ -8,57 +8,57 @@ helpviewer_keywords:
 - rep movsw instruction
 - __movsw intrinsic
 ms.assetid: db402ad5-7f0e-449a-b0b0-eea9928d6435
-ms.openlocfilehash: 3d584300b514ec3e79c44a2943b3fb8a79495df4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67eef7fe0a5b9803650f345740a8c40262cd2014
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263207"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221723"
 ---
-# <a name="movsw"></a>__movsw
+# <a name="__movsw"></a>__movsw
 
 **Microsoft Specific**
 
-Generuje ciąg Przenieś (`rep movsw`) instrukcji.
+Generuje instrukcję Move String (`rep movsw`).
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 void __movsw(
-   unsigned short* Dest,
+   unsigned short* Destination,
    unsigned short* Source,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*docelowy*<br/>
-[out] Lokalizacja docelowa wykonać operację.
+*Punktu*\
+określoną Miejsce docelowe operacji.
 
-*Element źródłowy*<br/>
-[in] Źródło działania.
+*Zewnętrz*\
+podczas Źródło operacji.
 
-*Liczba*<br/>
-[in] Liczbę wyrazów do skopiowania.
+*Liczbą*\
+podczas Liczba słów do skopiowania.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__movsw`|x86, x64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-W wyniku pierwsze `Count` wyrazy wskazywany przez `Source` są kopiowane do `Dest` ciągu.
+Wynikiem tego jest to, że pierwsze słowa liczbowe wskazywane przez *Źródło* są kopiowane do ciągu *docelowego* .
 
-Ta procedura jest dostępna wyłącznie jako wewnętrzna.
+Ta procedura jest dostępna tylko jako wewnętrzna.
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // movsw.cpp
 // processor: x86, x64
 #include <stdio.h>
@@ -82,7 +82,7 @@ int main()
 0 1 2 3 4 5 6 7 8 9
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

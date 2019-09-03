@@ -1,6 +1,6 @@
 ---
-title: region, endregion
-ms.date: 10/18/2018
+title: region, endregion, pragmy
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.endregion
 - endregion_CPP
@@ -12,37 +12,35 @@ helpviewer_keywords:
 - endregion pragma
 - region pragma
 ms.assetid: c697f807-622f-4796-851b-68a42bbecd84
-ms.openlocfilehash: c73a90aa2be83d643b74dde4645081e89da3ff73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a01e04582ac81d678aa0702945c62ee974a4428
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179753"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222375"
 ---
-# <a name="region-endregion"></a>region, endregion
+# <a name="region-endregion-pragmas"></a>region, endregion, pragmy
 
-`#pragma region` Pozwala określić bloku kodu, który można rozwinąć lub zwinąć, korzystając z [konspekt funkcji](/visualstudio/ide/outlining) Edytor kodu programu Visual Studio.
+`#pragma region`umożliwia określenie bloku kodu, który można rozwijać lub zwijać podczas korzystania z funkcji tworzenia [konspektu](/visualstudio/ide/outlining) edytora Visual Studio Code.
 
 ## <a name="syntax"></a>Składnia
 
-```
-#pragma region name
-#pragma endregion comment
-```
+> **region #pragma** *Nazwa*\
+> **#pragma endregion** *komentarz*
 
 ### <a name="parameters"></a>Parametry
 
-*Komentarz*<br/>
-(Opcjonalnie) Komentarz, która będzie wyświetlana w edytorze kodu.
+*komentować*\
+Obowiązkowe Komentarz, który ma być wyświetlany w edytorze kodu.
 
-*Nazwa*<br/>
-(Opcjonalnie) Nazwa regionu.  Ta nazwa będzie wyświetlana w edytorze kodu.
+*Nazwij*\
+Obowiązkowe Nazwa regionu. Ta nazwa jest wyświetlana w edytorze kodu.
 
 ## <a name="remarks"></a>Uwagi
 
-`#pragma endregion` oznacza koniec `#pragma region` bloku.
+`#pragma endregion`oznacza koniec `#pragma region` bloku.
 
-A `#region` musi się kończyć bloku `#pragma endregion`.
+Blok musi być zakończony `#pragma endregion` przez dyrektywę. `#region`
 
 ## <a name="example"></a>Przykład
 
@@ -59,4 +57,4 @@ int main() {}
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

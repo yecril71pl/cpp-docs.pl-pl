@@ -1,59 +1,59 @@
 ---
 title: __vmx_on
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __vmx_on
 helpviewer_keywords:
 - VMXON instruction
 - __vmx_on intrinsic
 ms.assetid: 16804991-6a75-4adf-8ec2-bc95acfa4801
-ms.openlocfilehash: de903eeeb29e3c194a36ccb4cb038ba89b8ea82f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6041711d9b6806362b856475151f2c4f63750cb
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390142"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219575"
 ---
-# <a name="vmxon"></a>__vmx_on
+# <a name="__vmx_on"></a>__vmx_on
 
 **Microsoft Specific**
 
-Aktywuje operacji rozszerzenia (VMX) maszyny wirtualnej w procesorze.
+Aktywuje operacje rozszerzenia maszyny wirtualnej (VMX) w procesorze.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 unsigned char __vmx_on(
    unsigned __int64 *VmsSupportPhysicalAddress
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*VmsSupportPhysicalAddress*<br/>
-[in] Wskaźnik do 64-bitowy adres fizyczny, który wskazuje na strukturę kontroli maszyny wirtualnej (VMCS).
+*VmsSupportPhysicalAddress*\
+podczas Wskaźnik do 64-bitowego adresu fizycznego, który wskazuje na strukturę sterowania maszyną wirtualną (VMCS).
 
 ## <a name="return-value"></a>Wartość zwracana
 
 |Wartość|Znaczenie|
 |-----------|-------------|
 |0|Operacja zakończyła się pomyślnie.|
-|1|Operacja nie powiodła się z rozszerzonych informacji o stanie w `VM-instruction error field` z bieżącym VMCS.|
-|2|Operacja nie powiodła się bez informacji o stanie.|
+|1|Operacja nie powiodła się z rozszerzonym stanem dostępnym w `VM-instruction error field` bieżącym VMCs.|
+|2|Operacja nie powiodła się bez dostępnego stanu.|
 
 ## <a name="remarks"></a>Uwagi
 
-`__vmx_on` Funkcja odpowiada `VMXON` machine instrukcji. Ta funkcja obsługuje interakcji monitor maszyny wirtualnej hosta z gościa operacyjnego i jego aplikacji. Aby uzyskać więcej informacji, wyszukaj dokumentu, "Intel Virtualization Technical Preview specyfikacji dla IA-32 architekturze firmy Intel," dokumentu numer C97063-002 w [Intel Corporation](https://software.intel.com/articles/intel-sdm) lokacji.
+Funkcja odnosi się do instrukcji `VMXON` Machine. `__vmx_on` Ta funkcja obsługuje interakcję z monitorem maszyny wirtualnej hosta z systemem operacyjnym gościa i jego aplikacjami. Aby uzyskać więcej informacji, Wyszukaj dokument "Specyfikacja techniczna wirtualizacji Intel dla architektury Intel o architekturze IA-32", a następnie w witrynie [firmy Intel Corporation](https://software.intel.com/articles/intel-sdm) "numer dokumentu C97063-002".
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__vmx_on`|X64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

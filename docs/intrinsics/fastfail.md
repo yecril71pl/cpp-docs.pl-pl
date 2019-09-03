@@ -1,67 +1,67 @@
 ---
 title: __fastfail
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 ms.assetid: 9cd32639-e395-4c75-9f3a-ac3ba7f49921
-ms.openlocfilehash: a9f75cbf3c572401ef26fb16ced221eb24d35534
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34198409c6a57eb494bfe819b367b71405a84e64
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263883"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222196"
 ---
-# <a name="fastfail"></a>__fastfail
+# <a name="__fastfail"></a>__fastfail
 
 **Microsoft Specific**
 
-Natychmiast kończy proces wywołujący osiąga obciążenie.
+Natychmiast kończy proces wywołujący z minimalnym obciążeniem.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 void __fastfail(unsigned int code);
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Kod*<br/>
-[in] A `FAST_FAIL_<description>` symboliczna stała z pliku winnt.h lub wdm.h, która oznacza powód zakończenia procesu.
+*kodu*\
+podczas `FAST_FAIL_<description>` Symboliczna stała z pliku Winnt. h lub WDM. h, która wskazuje przyczynę zakończenia procesu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-`__fastfail` Wewnętrzne nie zwraca.
+`__fastfail` Wewnętrzna nie zwraca.
 
 ## <a name="remarks"></a>Uwagi
 
-`__fastfail` Wewnętrzne udostępnia mechanizm *szybkie niepowodzenie* żądania — potencjalnie uszkodzony procesu sposób zakończenia procesu natychmiastowego żądania. Błędy krytyczne, które może spowodować uszkodzenie stan programu i stos poza odzyskiwania nie może być obsługiwane przez obsługi funkcji regularnych wyjątków. Użyj `__fastfail` aby zakończyć proces, korzystając z minimalne obciążenie.
+Wewnętrznie udostępnia mechanizm szybkiego żądania niepowodzenia — sposób, w jaki proces potencjalnie uszkodzony może zażądać natychmiastowego zakończenia procesu. `__fastfail` Krytyczne błędy, które mogą mieć uszkodzony stan programu i stosu poza odzyskiwaniem, nie mogą być obsługiwane przez funkcję regularnego obsługi wyjątków. Użyj `__fastfail` , aby przerwać proces przy użyciu minimalnego obciążenia.
 
-Wewnętrznie `__fastfail` jest implementowany przy użyciu kilku mechanizmów architektury:
+Wewnętrznie program `__fastfail` jest implementowany przy użyciu kilku mechanizmów specyficznych dla architektury:
 
-|Architektura|Instrukcja|Lokalizacja kodu argumentu|
+|Architektura|Instrukcja|Lokalizacja argumentu kodu|
 |------------------|-----------------|-------------------------------|
-|x86|int 0x29|ecx|
-|X64|int 0x29|rcx|
-|ARM|OpCode 0xDEFB|r0|
-|ARM64|OpCode 0xF003|x0|
+|x86|int 0x29|`ecx`|
+|X64|int 0x29|`rcx`|
+|ARM|0xDEFB kodu operacji|`r0`|
+|ARM64|0xF003 kodu operacji|`x0`|
 
-Żądanie szybkiego niepowodzenie jest niezależna i zazwyczaj wymaga zaledwie dwóch instrukcji do wykonania. Po awarii szybkie żądanie zostało wykonane przez jądro następnie podejmuje odpowiednie działanie. W kodzie w trybie użytkownika występują żadne zależności pamięci poza wskaźnika instrukcji, sam, gdy zostanie wywołane zdarzenie szybkie kończyć się niepowodzeniem. Maksymalizuje jej niezawodności, nawet jeśli pamięci poważne uszkodzenie.
+Szybkie żądanie niepowodzenia jest samodzielne i zwykle wymaga wykonania tylko dwóch instrukcji. Po wykonaniu szybkiego żądania niepowodzenia jądro podejmuje odpowiednie działanie. W kodzie trybu użytkownika nie ma żadnych zależności pamięci poza wskaźnikiem instrukcji, gdy zostanie zgłoszone zdarzenie szybkiego błędu. To maksymalizuje swoją niezawodność, nawet w przypadku poważnych uszkodzeń pamięci.
 
-`code` Argument — jeden z `FAST_FAIL_<description>` należy stosować stałe symboliczne z pliku winnt.h lub wdm.h—describes typ warunku błędu i jest włączony do raportów o awarii w sposób specyficznymi dla środowiska.
+Argument, jeden `FAST_FAIL_<description>` ze stałych symbolicznych z Winnt. h lub WDM. h, opisuje typ warunku niepowodzenia. `code` Jest on włączany do raportów o błędach w sposób specyficzny dla środowiska.
 
-Żądania szybkie awarii trybu użytkownika są wyświetlane jako drugiej szansy nie można kontynuować wyjątek z kod wyjątku 0xC0000409 i parametrów co najmniej jeden wyjątek. Pierwszy parametr wyjątku ma `code` wartość. Ten kod wyjątku wskazuje raportowania błędów Windows (WER) i debugowania infrastruktury, że proces jest uszkodzony, a minimalny działania w trakcie powinny zostać podjęte w odpowiedzi na błąd. Żądania szybkie kończyć się niepowodzeniem w trybie jądra są implementowane przy użyciu kodu bugcheck dedykowanych, `KERNEL_SECURITY_CHECK_FAILURE` (0x139). W obu przypadkach brak obsługi wyjątków są wywoływane, ponieważ program powinien być w stanie uszkodzenia. Jeśli jest obecny debuger, otrzymuje możliwość sprawdzenia stanu programu przed zakończeniem działania.
+Szybkie błędy w trybie użytkownika są wyświetlane jako wyjątek, który nie jest ciągły, z kodem wyjątku 0xC0000409 oraz co najmniej jeden parametr wyjątku. Pierwszy parametr wyjątku jest `code` wartością. Ten kod wyjątku wskazuje na Raportowanie błędów systemu Windows (raportowanie błędów) i infrastrukturę debugowania, że proces jest uszkodzony, a w odpowiedzi na awarię należy podjąć minimalne akcje w procesie. Żądania szybkiego niepowodzenia w trybie jądra są implementowane przy użyciu dedykowanego kodu `KERNEL_SECURITY_CHECK_FAILURE` wykrywania (0x139). W obu przypadkach nie są wywoływane programy obsługi wyjątków, ponieważ oczekuje się, że program jest w stanie uszkodzenia. Jeśli jest obecny debuger, ma możliwość sprawdzenia stanu programu przed zakończeniem.
 
-Obsługa mechanizmu natywnej awarii szybkie rozpoczął się w systemie Windows 8. Systemy operacyjne Windows, które nie obsługują natywnie instrukcji szybkie kończyć się niepowodzeniem zazwyczaj traktują szybkie Niepowodzenie żądania jako naruszenie zasad dostępu, lub `UNEXPECTED_KERNEL_MODE_TRAP` wyniki operacji. W takich przypadkach program jest nadal zakończone, ale nie musi tak szybko.
+Obsługa natywnego, wbudowanego mechanizmu awarii systemu Windows 8. Systemy operacyjne Windows, które nie obsługują instrukcji Fast Fail, natywnie zazwyczaj traktują szybkie żądanie niepowodzenia jako naruszenie zasad dostępu lub jako `UNEXPECTED_KERNEL_MODE_TRAP` dane wykrywania. W takich przypadkach program jest nadal zakończony, ale nie musi być szybko.
 
-`__fastfail` jest dostępna tylko wewnętrznie.
+`__fastfail`jest dostępny tylko jako wewnętrzny.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__fastfail`|x86, x64, ARM, ARM64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

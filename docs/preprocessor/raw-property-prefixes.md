@@ -1,48 +1,46 @@
 ---
-title: raw_property_prefixes
-ms.date: 10/18/2018
+title: raw_property_prefixes — atrybut importowania
+ms.date: 08/29/2019
 f1_keywords:
 - raw_property_prefixes
 helpviewer_keywords:
 - raw_property_prefixes attribute
 ms.assetid: 03a0f48c-c460-4175-a762-9f7f8d84b12f
-ms.openlocfilehash: 23250b524fdaa2181c8e28229ccec680ffdae715
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4d91470781e7c5f673fd228c24904322d1db8b3
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179805"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216036"
 ---
-# <a name="rawpropertyprefixes"></a>raw_property_prefixes
+# <a name="raw_property_prefixes-import-attribute"></a>raw_property_prefixes — atrybut importowania
 
-**Określonego język C++**
+**C++Specjalne**
 
-Określa alternatywne prefiksów trzy metody właściwości.
+Określa alternatywne prefiksy dla trzech metod właściwości.
 
 ## <a name="syntax"></a>Składnia
 
-```
-raw_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")
-```
+> **#import** *Biblioteka typów* **raw_property_prefixes (** "*getprefix*" **,** "*PutPrefix*" **,** "*PutRefPrefix*" **)**
 
 ### <a name="parameters"></a>Parametry
 
-*GetPrefix*<br/>
-Prefiks używany dla `propget` metody.
+*Getprefix*\
+Prefiks do użycia dla `propget` metod.
 
-*PutPrefix*<br/>
-Prefiks używany dla `propput` metody.
+*PutPrefix*\
+Prefiks do użycia dla `propput` metod.
 
-*PutRefPrefix*<br/>
-Prefiks używany dla `propputref` metody.
+*PutRefPrefix*\
+Prefiks do użycia dla `propputref` metod.
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie niskiego poziomu `propget`, `propput`, i `propputref` metody są udostępniane przez funkcje składowe o nazwie z prefiksami **rzeczoznawcy**, **put_**, i **putref_** odpowiednio. Te prefiksy są zgodne z nazwami używany w plikach nagłówkowych wygenerowano przez MIDL.
+Domyślnie, metody niskiego poziomu `propget`, `propput`i `propputref` są uwidaczniane `get_`przez funkcje Członkowskie o nazwach za pomocą prefiksów `put_`, i `putref_`, odpowiednio. Te prefiksy są zgodne z nazwami używanymi w plikach nagłówkowych generowanych przez MIDL.
 
-**KONIEC określonego języka C++**
+**ZAKOŃCZENIE C++ określonych**
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import Directive](../preprocessor/hash-import-directive-cpp.md)
+[Atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

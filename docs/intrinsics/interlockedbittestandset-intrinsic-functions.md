@@ -1,10 +1,13 @@
 ---
 title: funkcje wewnętrzne _interlockedbittestandset
-ms.date: 12/17/2018
+ms.date: 09/02/2019
 f1_keywords:
 - _interlockedbittestandset_cpp
 - _interlockedbittestandset_HLEAcquire
 - _interlockedbittestandset64
+- _interlockedbittestandset64_acq
+- _interlockedbittestandset64_nf
+- _interlockedbittestandset64_rel
 - _interlockedbittestandset
 - _interlockedbittestandset_rel
 - _interlockedbittestandset64_HLEAcquire
@@ -18,22 +21,22 @@ helpviewer_keywords:
 - _interlockedbittestandset64 intrinsic
 - lock_bts instruction
 ms.assetid: b1b7e334-53ea-48cf-ba60-5fa3ef51a1fc
-ms.openlocfilehash: 3da533b3cf2ab8f396e4ba284cc0bf921a5c80b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9679abf674b5ef366818e73504c3c8c80c5d8ed7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396792"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217763"
 ---
-# <a name="interlockedbittestandset-intrinsic-functions"></a>funkcje wewnętrzne _interlockedbittestandset
+# <a name="_interlockedbittestandset-intrinsic-functions"></a>funkcje wewnętrzne _interlockedbittestandset
 
 **Microsoft Specific**
 
-Generowanie instrukcji, która sprawdza, czy bit `b` adresu `a` i zwraca jego bieżąca wartość przed ustawieniem dla niego wartości 1.
+Wygeneruj instrukcję, aby przeanalizować `b` bit `a` adresu i zwrócić jego bieżącą wartość przed ustawieniem na 1.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 unsigned char _interlockedbittestandset(
    long *a,
    long b
@@ -62,6 +65,18 @@ unsigned char _interlockedbittestandset64(
    __int64 *a,
    __int64 b
 );
+unsigned char _interlockedbittestandset64_acq(
+   __int64 *a,
+   __int64 b
+);
+unsigned char _interlockedbittestandset64_nf(
+   __int64 *a,
+   __int64 b
+);
+unsigned char _interlockedbittestandset64_rel(
+   __int64 *a,
+   __int64 b
+);
 unsigned char _interlockedbittestandset64_HLEAcquire(
    __int64 *a,
    __int64 b
@@ -72,41 +87,42 @@ unsigned char _interlockedbittestandset64_HLERelease(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*a*<br/>
-[in] Wskaźnik do pamięci do sprawdzenia.
+*z*\
+podczas Wskaźnik do pamięci do sprawdzenia.
 
-*b*<br/>
-[in] Pozycja bitu do testowania.
+*b*\
+podczas Pozycja bitu do przetestowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość bitowa w położeniu `b` przed jest ustawiona.
+Wartość bitu w położeniu `b` przed jego ustawieniem.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|nagłówek|
+|Wewnętrznej|Architektura|nagłówek|
 |---------------|------------------|------------|
-|`_interlockedbittestandset`|x86, ARM, x64|\<intrin.h>|
-|`_interlockedbittestandset_acq`, `_interlockedbittestandset_nf`, `_interlockedbittestandset_rel`|ARM|\<intrin.h>|
+|`_interlockedbittestandset`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_interlockedbittestandset_acq`, `_interlockedbittestandset_nf`, `_interlockedbittestandset_rel`|ARM, ARM64|\<intrin.h>|
+|`_interlockedbittestandset64_acq`, `_interlockedbittestandset64_nf`, `_interlockedbittestandset64_rel`|ARM64|\<intrin.h>|
 |`_interlockedbittestandset_HLEAcquire`, `_interlockedbittestandset_HLERelease`|x86, x64|\<immintrin.h>|
-|`_interlockedbittestandset64`|X64|\<intrin.h>|
+|`_interlockedbittestandset64`|x64, ARM64|\<intrin.h>|
 |`_interlockedbittestandset64_HLEAcquire`, `_interlockedbittestandset64_HLERelease`|X64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Uwagi
 
-Na procesorach x86 i x64, użyj funkcji wewnętrznych `lock bts` instrukcji, aby odczytać i ustawić bitu określonego na 1. Operacja jest atomic.
+W przypadku procesorów x86 i x64 te elementy wewnętrzne wykorzystują `lock bts` instrukcję, aby odczytać i ustawić określony bit na 1. Operacja jest niepodzielna.
 
-Na procesorach ARM, użyj funkcji wewnętrznych za pomocą `_acq` i `_rel` sufiksy dla semantyki nabywania i wydania, takie jak na początku i na końcu sekcję krytyczną. Funkcje wewnętrzne ARM przy użyciu `_nf` sufiks ("nie ogranicznika") nie działają jako czynnik blokujący pamięci.
+W przypadku procesorów ARM i arm64 Użyj wewnętrznych z `_acq` i `_rel` sufiksów dla semantyki pozyskiwania i wydawania, na przykład na początku i na końcu sekcji krytycznej. Elementy wewnętrzne ARM z `_nf` sufiksem ("No ogrodzeni") nie działają jako bariera pamięci.
 
-Na procesorach Intel, obsługujące instrukcje pominięcia blokady sprzętu (HLE), funkcje wewnętrzne z `_HLEAcquire` i `_HLERelease` sufiksy obejmują wskazówkę procesora, który może przyspieszyć wydajność, eliminując krok blokady zapisu w sprzęcie. Jeśli te funkcje wewnętrzne są wywoływane na procesorach, które nie obsługują HLE, wskazówka zostanie zignorowany.
+W przypadku procesorów firmy Intel, które obsługują instrukcje dotyczące blokowania sprzętowego dla koprocedury (HLE) `_HLEAcquire` , `_HLERelease` wewnętrzne z i sufiksy zawierają wskazówkę procesora, która może przyspieszyć działanie, eliminując krok blokady zapisu sprzętu. Jeśli te elementy wewnętrzne są wywoływane na procesorach, które nie obsługują HLE, Wskazówka jest ignorowana.
 
-Te procedury są dostępne tylko jako funkcje wewnętrzne.
+Te procedury są dostępne tylko jako elementy wewnętrzne.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 
-[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)\
 [Konflikty z kompilatorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

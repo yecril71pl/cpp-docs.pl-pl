@@ -1,6 +1,6 @@
 ---
-title: runtime_checks
-ms.date: 11/04/2016
+title: runtime_checks, pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.runtime_checks
 - runtime_checks_CPP
@@ -8,58 +8,55 @@ helpviewer_keywords:
 - runtime_checks pragma
 - pragmas, runtime_checks
 ms.assetid: ae50b43f-f88d-47ad-a2db-3389e9e7df5b
-ms.openlocfilehash: 44c26fb90a2d2f9ba78ec7dba7cceed65a4b4ed7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1c8e6cca27e157818e6ec80182f8fefa112daf1
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179987"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216607"
 ---
-# <a name="runtimechecks"></a>runtime_checks
-Wyłącza lub przywraca [usunęliśmy](../build/reference/rtc-run-time-error-checks.md) ustawienia.
+# <a name="runtime_checks-pragma"></a>runtime_checks, pragma
+
+Wyłącza lub przywraca ustawienia [/RTC](../build/reference/rtc-run-time-error-checks.md) .
 
 ## <a name="syntax"></a>Składnia
 
-```
-#pragma runtime_checks( "[runtime_checks]", {restore | off} )
-```
+> **#pragma runtime_checks ("** [ *runtime_checks* ] **",** { **Restore** | **off** } **)**
 
 ## <a name="remarks"></a>Uwagi
 
-Nie można włączyć sprawdzanie w czasie wykonania, która nie została włączona przy użyciu opcji kompilatora. Na przykład, jeśli nie określisz `/RTCs`, określanie `#pragma runtime_checks( "s", restore)` nie umożliwi Weryfikacja ramki stosu.
+Nie można włączyć sprawdzania czasu wykonywania, które nie zostało włączone przez opcję kompilatora. Na przykład, jeśli nie zostanie określony `/RTCs` w wierszu polecenia, określenie `#pragma runtime_checks( "s", restore)` nie spowoduje włączenia weryfikacji ramki stosu.
 
-**Runtime_checks** pragma musi znajdować się poza funkcją i zaczyna obowiązywać przy pierwszej funkcji zdefiniowanych po pragmy jest widoczny. *Przywrócić* i *poza* argumenty Włącz opcje określone w **runtime_checks** lub wyłączyć.
+Dyrektywa pragma **runtime_checks** musi znajdować się poza funkcją i zaczyna obowiązywać przy pierwszej funkcji zdefiniowanej po wystąpieniu dyrektywy pragma. Argumenty **Przywróć** i **Wyłącz** zmieniają opcje określone w **runtime_checks** .
 
-**Runtime_checks** może być zero lub jeden z parametrów pokazano w poniższej tabeli.
+**Runtime_checks** może mieć zero lub więcej parametrów przedstawionych w poniższej tabeli.
 
-### <a name="parameters-of-the-runtimechecks-pragma"></a>Parametry runtime_checks Pragma
+### <a name="parameters-of-the-runtime_checks-pragma"></a>Parametry dyrektywy pragma runtime_checks
 
-|Parametry|Typ kontroli czasu wykonywania|
+| Parametry | Typ sprawdzania czasu wykonywania |
 |--------------------|-----------------------------|
-|*s*|Włącza stosu (ramek) weryfikacji.|
-|*c*|Raporty, gdy wartość jest przypisany do mniejszego typu danych, które powoduje utratę danych.|
-|*u*|Raporty, gdy zmienna jest używana, zanim zostanie on zdefiniowany.|
+| **s** | Włącza weryfikację stosu (ramki). |
+| **c** | Raportuje, gdy wartość jest przypisana do mniejszego typu danych, co powoduje utratę danych. |
+| **u** | Raportuje, gdy zmienna jest używana przed zdefiniowaniem. |
 
-Są to tych samych liter, w ramach `/RTC` — opcja kompilatora. Na przykład:
+Te parametry są takie same, jak te, `/RTC` które są używane z opcją kompilatora. Na przykład:
 
-```
+```cpp
 #pragma runtime_checks( "sc", restore )
 ```
 
-Za pomocą **runtime_checks** dyrektywę pusty ciąg (**""**) jest specjalną forma dyrektywy:
+Użycie dyrektywy pragma **runtime_checks** z pustym ciągiem ( **""** ) jest specjalną formą:
 
-- Kiedy używasz *poza* parametru włącza sprawdzanie błędów czasu wykonywania, wymienione w powyższej tabeli, wyłącz.
+- W przypadku użycia parametru **off** włączane są sprawdzanie błędów czasu wykonywania wyszczególnione w powyższej tabeli, off.
 
-- Kiedy używasz *przywrócić* parametru resetuje sprawdzanie błędów czasu wykonywania do tych, które określone z `/RTC` — opcja kompilatora.
+- W przypadku użycia parametru **Restore** resetuje sprawdzanie błędów czasu wykonywania do tych, które zostały określone przy użyciu `/RTC` opcji kompilatora.
 
-```
+```cpp
 #pragma runtime_checks( "", off )
-.
-.
-.
+/* runtime checks are off in this region */
 #pragma runtime_checks( "", restore )
 ```
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

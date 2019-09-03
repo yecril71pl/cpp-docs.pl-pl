@@ -1,6 +1,6 @@
 ---
-title: _InterlockedCompareExchangePointer, funkcje wewnętrzne
-ms.date: 11/04/2016
+title: Funkcje wewnętrzne _InterlockedCompareExchangePointer
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedCompareExchangePointer_HLERelease
 - _InterlockedCompareExchangePointer_rel
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_nf intrinsic
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
-ms.openlocfilehash: 7b8ba4fe6224292d0160f859aeb630fc17c2d992
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c0a0083c19df51d2d2eccb7a7bbf6521303c1f85
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509430"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222038"
 ---
-# <a name="_interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer, funkcje wewnętrzne
+# <a name="_interlockedcompareexchangepointer-intrinsic-functions"></a>Funkcje wewnętrzne _InterlockedCompareExchangePointer
 
 **Microsoft Specific**
 
@@ -39,7 +39,7 @@ Wykonuje niepodzielną operację, która `Exchange` przechowuje adres `Destinati
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 void * _InterlockedCompareExchangePointer (
    void * volatile * Destination,
    void * Exchange,
@@ -77,15 +77,15 @@ long _InterlockedCompareExchangePointer_rel (
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Punktu*<br/>
+*Punktu*\
 [in. out] Wskaźnik na wskaźnik do wartości docelowej. Znak jest ignorowany.
 
-*Exchange*<br/>
+*Zamian*\
 podczas Wskaźnik programu Exchange. Znak jest ignorowany.
 
-*Argument porównania określony*<br/>
+*Argument porównania określony*\
 podczas Wskaźnik do porównania z miejscem docelowym. Znak jest ignorowany.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -96,8 +96,8 @@ Wartość zwracana jest początkową wartością miejsca docelowego.
 
 |Wewnętrznej|Architektura|nagłówek|
 |---------------|------------------|------------|
-|`_InterlockedCompareExchangePointer`|x86, ARM, x64|\<intrin.h>|
-|`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h>|
+|`_InterlockedCompareExchangePointer`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM, ARM64|\<iiintrin.h>|
 |`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86, x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Uwagi
@@ -120,5 +120,5 @@ Te procedury są dostępne tylko jako elementy wewnętrzne.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)\
 [Słowa kluczowe](../cpp/keywords-cpp.md)

@@ -1,6 +1,6 @@
 ---
-title: const_seg
-ms.date: 09/17/2018
+title: const_seg, pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.const_seg
 - const_seg_CPP
@@ -8,50 +8,52 @@ helpviewer_keywords:
 - pragmas, const_seg
 - const_seg pragma
 ms.assetid: 1eb58ee2-fb0e-4a39-9621-699c8f5ef957
-ms.openlocfilehash: c58f154f5e1ab6906b45d59f454a7dc2b5c0bfbe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 845583889eb922ba97d145eefe6bca280a83817b
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366592"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220435"
 ---
-# <a name="constseg"></a>const_seg
-Określa segment gdzie [const](../cpp/const-cpp.md) zmienne są przechowywane w pliku .obj.
+# <a name="const_seg-pragma"></a>const_seg, pragma
+
+Określa sekcję (segment), gdzie zmienne [const](../cpp/const-cpp.md) są przechowywane w pliku obiektu (. obj).
 
 ## <a name="syntax"></a>Składnia
 
-```
-#pragma const_seg ( [ [ { push | pop}, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )
-```
+> **#pragma const_seg (** ["*Nazwa sekcji*" [ **,** "*Klasa sekcji*"]] **)** \
+> **#pragma const_seg (** { **push** | **pop** } [ **,** *Identyfikator* ] [ **,** "*sekcja-Name*" [ **,** "*Section-Class*"]] **)**
 
 ### <a name="parameters"></a>Parametry
 
-**push**<br/>
-(Opcjonalnie) Umieszcza rekord na wewnętrznym stosie kompilatora. A **wypychania** może mieć *identyfikator* i *nazwą segmentu*.
+**wydajności**\
+Obowiązkowe Umieszcza rekord na wewnętrznym stosie kompilatora. Wypchnięcie może mieć *Identyfikator* i *nazwę sekcji*.
 
-**POP**<br/>
-(Opcjonalnie) Usuwa rekord z góry wewnętrznego stosu kompilatora.
+**skakując**\
+Obowiązkowe Usuwa rekord z góry wewnętrznego stosu kompilatora. **Punkt obecności** może mieć *Identyfikator* i *nazwę sekcji*. Można wyskakujące wiele rekordów przy użyciu tylko jednego polecenia **pop** przy użyciu *identyfikatora*. *Nazwa sekcji* zmieni się na nazwę aktywnej stałej sekcji po punkcie pop.
 
-*Identyfikator*<br/>
-(Opcjonalnie) Gdy jest używane z **wypychania**, przypisuje nazwę rekordowi na wewnętrznym stosie kompilatora. Gdy jest używane z **pop**, zdejmuje rekordy z wewnętrznego stosu aż do usunięcia *identyfikator* zostanie usunięta; Jeśli *identyfikator* nie zostanie znaleziony na wewnętrznym stosie, nic nie zostanie zdjęte.
+*identyfikatora*\
+Obowiązkowe W przypadku użycia z opcją **push**przypisuje nazwę rekordu na wewnętrznym stosie kompilatora. Gdy jest używany z **pop**, dyrektywa pop rejestruje wewnętrzny stos do momentu usunięcia *identyfikatora* . Jeśli na stosie wewnętrznym nie znaleziono *identyfikatora* , nic nie jest zdjęte.
 
-Za pomocą *identyfikator* umożliwia wielu rekordów zostać zdjęte ze stosu za pomocą jednego **pop** polecenia.
+"*Nazwa sekcji*" \
+Obowiązkowe Nazwa sekcji. Gdy jest używany z **punktem obecności**, stos jest zdjęte, a *sekcja Name* to nazwa sekcji aktywnej stałej.
 
-"*nazwą segmentu*"<br/>
-(Opcjonalnie) Nazwa segmentu. Gdy jest używane z **pop**, stos jest zdejmowany i *nazwą segmentu* staje się nazwą aktywny segment.
-
-"*klasy segmentu*"<br/>
-(Opcjonalnie) Uwzględnione na potrzeby utrzymywania zgodności z C++ wcześniejszych niż 2.0. Jest on ignorowany.
+"*Klasa sekcji*" \
+Obowiązkowe Zignorowano, ale uwzględniono zgodność z wersjami C++ firmy Microsoft wcześniejszą niż wersja 2,0.
 
 ## <a name="remarks"></a>Uwagi
 
-Znaczenie terminów *segmentu* i *sekcji* są wymienne, w tym temacie.
+*Sekcja* w pliku obiektu to nazwany blok danych, który jest ładowany do pamięci jako jednostka. *Sekcja const* to Sekcja zawierająca dane stałe. W tym artykule, *segment* i *sekcja* terminów mają takie samo znaczenie.
 
-Pliki OBJ mogą być wyświetlane z [dumpbin](../build/reference/dumpbin-command-line.md) aplikacji. Segment domyślnej w pliku .obj `const` zmiennych jest .rdata. Niektóre `const` zmienne, takie jak wartości skalarnych, są automatycznie śródwierszowe w strumieniu kodu. Śródwierszowe kodu nie będą widoczne w .rdata.
+Dyrektywa pragma **const_seg** informuje kompilator, aby umieszczał wszystkie stałe elementy danych z jednostki translacji w sekcji const o nazwie *sekcja-Name*. Sekcja domyślna w pliku obiektu dla zmiennych **const** ma `.rdata`wartość. Niektóre zmienne **const** , takie jak skalarne, są automatycznie podkreślane w strumieniu kodu. Kod z konturem nie jest wyświetlany `.rdata`w. Dyrektywa pragma **const_seg** nie może mieć parametru *Section Name* resetuje nazwę sekcji dla kolejnych elementów danych **const** do `.rdata`.
 
-Definiowanie obiektu wymagające dynamiczna Inicjalizacja w `const_seg` powoduje zachowanie niezdefiniowane.
+Jeśli zdefiniujesz obiekt, który wymaga inicjalizacji dynamicznej w `const_seg`, wynik jest niezdefiniowanym zachowaniem.
 
-`#pragma const_seg` bez parametrów resetuje segmentu .rdata.
+Aby uzyskać listę nazw, które nie powinny być używane do tworzenia sekcji, zobacz [/Section](../build/reference/section-specify-section-attributes.md).
+
+Można także określić sekcje dla zainicjowanych danych ([data_seg](../preprocessor/data-seg.md)), niezainicjowanych danych ([bss_seg](../preprocessor/bss-seg.md)) i funkcje ([code_seg](../preprocessor/code-seg.md)).
+
+Możesz użyć [polecenia DUMPBIN. Aplikacja EXE](../build/reference/dumpbin-command-line.md) do wyświetlania plików obiektów. Wersje programu polecenia DUMPBIN dla każdej obsługiwanej architektury docelowej są dołączone do programu Visual Studio.
 
 ## <a name="example"></a>Przykład
 
@@ -89,12 +91,6 @@ test3
 test4
 ```
 
-## <a name="comments"></a>Komentarze
-
-Zobacz [/SECTION](../build/reference/section-specify-section-attributes.md) listę nazw, nie należy używać podczas tworzenia sekcji.
-
-Można również określić sekcje dla danych zainicjowanych ([data_seg](../preprocessor/data-seg.md)), niezainicjowanych danych ([bss_seg](../preprocessor/bss-seg.md)) i funkcje ([code_seg](../preprocessor/code-seg.md)).
-
 ## <a name="see-also"></a>Zobacz także
 
-[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

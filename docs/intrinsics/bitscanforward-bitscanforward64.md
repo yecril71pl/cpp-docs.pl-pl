@@ -1,6 +1,6 @@
 ---
 title: _BitScanForward, _BitScanForward64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _BitScanForward
 - _BitScanForward_cpp
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - bsf instruction
 - BitScanForward intrinsic
 ms.assetid: 405e60fb-0815-42a7-9b02-6fc035122203
-ms.openlocfilehash: 8b09aeee485611ddd20d51b4c1e36ec98c03c26e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91f43d19259419b78d1910a00a154d2d4f0adfc7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264221"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222218"
 ---
-# <a name="bitscanforward-bitscanforward64"></a>_BitScanForward, _BitScanForward64
+# <a name="_bitscanforward-_bitscanforward64"></a>_BitScanForward, _BitScanForward64
 
 **Microsoft Specific**
 
-Wyszukaj maskowanie danych z co najmniej znaczący bit (najmniej znaczący BAJT) do najbardziej znaczący bit (BITEM) ustawionego bitu (1).
+Przeszukaj dane maski z co najmniej znaczących bitów (LSB) na najbardziej znaczący bit (MSB) dla zestawu bitów (1).
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 unsigned char _BitScanForward(
    unsigned long * Index,
    unsigned long Mask
@@ -37,34 +37,34 @@ unsigned char _BitScanForward64(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Index*<br/>
-[out] Pozycja bitu pierwszego ustawionego bitu [1], znaleziono załadowana.
+*Indeks*\
+określoną Załadowano z pozycją bitową pierwszego zestawu bit (1).
 
-*Maska*<br/>
-[in] 32-bitowy lub 64-bitową wartość do wyszukania.
+*Bitowa*\
+podczas Wartość 32-bitowa lub 64-bitowa do wyszukania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-0, jeśli maska jest równa zeru; wartość różną od zera w przeciwnym razie.
+0, jeśli maska jest równa zero; w przeciwnym razie.
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli zostanie znaleziony zestaw bitów, pozycja bitu pierwszego ustawionego bitu znaleziono jest zwracany w pierwszym parametrem. Jeśli zostanie znaleziony nie ustawionego bitu, zwracany jest 0; w przeciwnym razie zwracana jest 1.
+Jeśli zostanie znaleziony bit zestawu, w pierwszym parametrze zostanie zwrócona pozycja bitu wynosząca bit pierwszego zestawu. Jeśli nie zostanie znaleziony żaden bit zestawu, zwracana jest wartość 0. w przeciwnym razie zostanie zwrócona 1.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
-|`_BitScanForward`|x86, ARM, x64|
-|`_BitScanForward64`|ARM, x64|
+|`_BitScanForward`|x86, ARM, x64, ARM64|
+|`_BitScanForward64`|ARM64, x64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // BitScanForward.cpp
 // compile with: /EHsc
 #include <iostream>
@@ -93,20 +93,16 @@ int main()
 }
 ```
 
-## <a name="input"></a>Dane wejściowe
-
-```
+```Input
 12
 ```
 
-## <a name="sample-output"></a>Przykładowe dane wyjściowe
-
-```
+```Output
 Enter a positive integer as the mask:
 Mask: 12 Index: 2
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

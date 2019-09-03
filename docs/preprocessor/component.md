@@ -1,6 +1,6 @@
 ---
-title: składnik
-ms.date: 04/08/2019
+title: component, pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.component
 - component_CPP
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - component pragma
 - pragmas, component
 ms.assetid: 7b66355e-3201-4c14-8190-f4a2a81a604a
-ms.openlocfilehash: 4870860650a39d27639ad18100ba37ba14aa15c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 578c590bdb4223f173e0249c18d0eea4e78a18db
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366917"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220476"
 ---
-# <a name="component"></a>składnik
+# <a name="component-pragma"></a>component, pragma
 
-Kontrolę nad zbieraniem informacji dotyczących przeglądania lub informacji zależności z plików źródłowych.
+Kontroluje zbieranie informacji o przeglądaniu lub informacji o zależnościach w plikach źródłowych.
 
 ## <a name="syntax"></a>Składnia
 
-> **#pragma component (przeglądarki,** { **na** | **poza** } [**,** **odwołania** [**,** *nazwa* ]] **)** \
-> **#pragma component (minrebuild na** | **wyłączone)** \
-> **#pragma component (mintypeinfo na** | **wyłączone)**
+> **składnik #pragma (Browser,** { **on** | **off** } [ **,** **odwołania** [ **,** *Nazwa* ]] **)**  \
+> **składnik #pragma (minrebuild,** { **on** | **off** } **)**  \
+> **składnik #pragma (Mintypeinfo,** { **on** | **off** } **)**
 
 ## <a name="remarks"></a>Uwagi
 
@@ -40,9 +40,9 @@ Używanie włączania/wyłączania kontroli kolekcji informacji dotyczących prz
 zatrzymuje kompilator zbierający informacje dotyczące przeglądania.
 
 > [!NOTE]
-> Aby włączyć zbieranie informacji o przeglądaniu za pomocą tej pragmie [informacji o przeglądaniu należy najpierw włączyć](../build/reference/building-browse-information-files-overview.md).
+> Aby włączyć zbieranie informacji o przeglądaniu za pomocą tej dyrektywy pragma, [należy najpierw włączyć informacje o przeglądaniu](../build/reference/building-browse-information-files-overview.md).
 
-`references` Opcji można użyć z lub bez *nazwa* argumentu. Za pomocą `references` bez *nazwa* Włącza lub wyłącza zbieranie odwołań (inne informacje przeglądania nadal będą jednak zbierane). Na przykład:
+Opcja **odwołania** może być używana z argumentem *name* lub bez niego. Użycie **odwołań** bez *nazwy* powoduje włączenie lub wyłączenie zbierania odwołań (inne informacje o przeglądaniu nadal są zbierane). Na przykład:
 
 ```cpp
 #pragma component(browser, off, references)
@@ -50,21 +50,21 @@ zatrzymuje kompilator zbierający informacje dotyczące przeglądania.
 
 zatrzymuje kompilator zbierający informacje dotyczących odwołań.
 
-Za pomocą `references` z *nazwa* i `off` zapobiega odwołania do *nazwa* były wyświetlane w oknie przeglądania informacji. Użyj następującej składni, aby zignorować nazwy i typy, którymi nie jesteś zainteresowany i zmniejsz rozmiar plików przeglądania informacji. Na przykład:
+Użycie **odwołań** z *nazwą* i **Wyłącz** uniemożliwia odwoływanie się do *nazwy* w oknie informacji o przeglądaniu. Użyj następującej składni, aby zignorować nazwy i typy, którymi nie jesteś zainteresowany i zmniejsz rozmiar plików przeglądania informacji. Przykład:
 
 ```cpp
 #pragma component(browser, off, references, DWORD)
 ```
 
-ignoruje odwołania do typu DWORD od tego momentu. Możesz włączyć zbieranie odniesień do DWORD ponownie przy użyciu `on`:
+ignoruje odwołania do wartości DWORD od tego momentu. Można ponownie włączyć zbieranie odwołań do danych DWORD przy użyciu:
 
 ```cpp
 #pragma component(browser, on, references, DWORD)
 ```
 
-Jest jedynym sposobem, aby wznowić zbieranie odwołań do *nazwa*; Musisz jawnie włączyć dowolną *nazwa* , została wyłączona.
+Jest to jedyny sposób na wznowienie zbierania odwołań do *nazwy*; należy jawnie włączyć dowolną *nazwę* , która została wyłączona.
 
-Aby uniemożliwić rozwijanie preprocesora *nazwa* (takich jak rozwijanie wartości NULL na wartość 0), umieść ją w cudzysłowie:
+Aby zapobiec powiększaniu *nazwy* przez preprocesora (na przykład rozszerzanie wartości null na 0), należy umieścić cudzysłowy wokół niej:
 
 ```cpp
 #pragma component(browser, off, references, "NULL")
@@ -72,18 +72,18 @@ Aby uniemożliwić rozwijanie preprocesora *nazwa* (takich jak rozwijanie warto�
 
 ### <a name="minimal-rebuild"></a>Minimalna ponowna kompilacja
 
-Przestarzała [/Gm (Włącz minimalną ponowną kompilację)](../build/reference/gm-enable-minimal-rebuild.md) funkcja wymaga kompilatora, aby utworzyć i zapisać C++ klasy informacji o zależnościach, które zajmują miejsce na dysku. Aby zaoszczędzić miejsce na dysku, można użyć `#pragma component( minrebuild, off )` zawsze, gdy nie musisz zbierać informacji o zależnościach, na przykład w niezmiennych plikach nagłówkowych. Wstaw `#pragma component(minrebuild, on)` po niezmiennych klasach, aby włączyć kolekcję zależności kopii na.
+Przestarzała funkcja [/GM (Włącz minimalną](../build/reference/gm-enable-minimal-rebuild.md) ponowną kompilację) wymaga, aby kompilator C++ utworzył i przechowywał informacje o zależnościach klas, które zajmują miejsce na dysku. Aby zaoszczędzić miejsce na dysku, można użyć `#pragma component( minrebuild, off )` zawsze, gdy nie trzeba zbierać informacji o zależnościach, na przykład w plikach nagłówkowych, które nie są zmieniane. Wstaw `#pragma component( minrebuild, on )` po cofnięciu zmiany klas, aby ponownie włączyć zbieranie zależności.
 
-### <a name="reduce-type-information"></a>Ograniczenie informacji typu
+### <a name="reduce-type-information"></a>Zmniejsz informacje o typie
 
-`mintypeinfo` Opcja ogranicza informacje debugowania dotyczące określonego regionu. Wielkość tych informacji jest znaczna i dotyczy plików .pdb i .obj. Nie można debugować klas i struktur w regionie mintypeinfo. Korzystanie z opcji mintypeinfo może być pomocne, aby uniknąć następującego ostrzeżenia:
+`mintypeinfo` Opcja zmniejsza informacje debugowania dla określonego regionu. Wielkość tych informacji jest znaczna i dotyczy plików .pdb i .obj. Nie można debugować klas i struktur w regionie mintypeinfo. Korzystanie z opcji mintypeinfo może być pomocne, aby uniknąć następującego ostrzeżenia:
 
 ```cmd
 LINK : warning LNK4018: too many type indexes in PDB "filename", discarding subsequent type information
 ```
 
-Aby uzyskać więcej informacji, zobacz [/Gm (Włącz minimalną ponowną kompilację)](../build/reference/gm-enable-minimal-rebuild.md) — opcja kompilatora.
+Aby uzyskać więcej informacji, zobacz opcję kompilatora [/GM (Włącz minimalną](../build/reference/gm-enable-minimal-rebuild.md) ponowną kompilację).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

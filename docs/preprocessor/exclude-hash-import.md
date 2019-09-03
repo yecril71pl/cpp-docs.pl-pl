@@ -1,45 +1,43 @@
 ---
-title: wykluczanie (#import)
-ms.date: 10/18/2018
+title: Wyklucz Importowanie atrybutu
+ms.date: 08/29/2019
 f1_keywords:
 - exclude
 helpviewer_keywords:
 - exclude attribute
 ms.assetid: 0883248a-d4bf-420e-9848-807b28fa976e
-ms.openlocfilehash: d6a320089d5954b2cf1d0d96ae1f37656f2ddd58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a3625ee0dd44f3e2731e1240fea5f3dd4ed109e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389323"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218720"
 ---
-# <a name="exclude-import"></a>Wyklucz (\#importowanie)
+# <a name="exclude-import-attribute"></a>Wyklucz Importowanie atrybutu
 
-**Określonego język C++**
+**C++Specjalne**
 
-Pomija pliki nagłówkowe biblioteki typów generowanych elementów.
+Wyklucza elementy z generowanych plików nagłówkowych biblioteki typów.
 
 ## <a name="syntax"></a>Składnia
 
-```
-exclude("Name1"[, "Name2",...])
-```
+> **#import** *Biblioteka typów* **exclude (** "*Name1*" [ **,** "*NAME2*"...] **)**
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwa1*<br/>
-Pierwszy element do wykluczenia.
+*Name1*\
+Pierwszy element, który ma zostać wykluczony.
 
-*Nazwa2*<br/>
-Drugi element do wykluczenia (jeśli jest to konieczne).
+*NAME2*\
+Obowiązkowe Elementy sekundowe i późniejsze do wykluczenia, w razie potrzeby.
 
 ## <a name="remarks"></a>Uwagi
 
-Biblioteki typów mogą obejmować definicje elementy zdefiniowane w nagłówkach systemu lub inne biblioteki typów. Ten atrybut może być dowolną liczbę argumentów, jest element najwyższego poziomu typu biblioteki do wykluczenia.
+Biblioteki typów mogą zawierać definicje elementów zdefiniowanych w nagłówkach systemowych lub innych bibliotekach typów. Ten atrybut może przyjmować dowolną liczbę argumentów, gdzie każda z nich jest elementem biblioteki typu najwyższego poziomu, który ma zostać wykluczony.
 
-**KONIEC określonego języka C++**
+**ZAKOŃCZENIE C++ określonych**
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import Directive](../preprocessor/hash-import-directive-cpp.md)
+[Atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

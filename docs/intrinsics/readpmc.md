@@ -1,6 +1,6 @@
 ---
 title: __readpmc
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readpmc
 helpviewer_keywords:
@@ -8,49 +8,49 @@ helpviewer_keywords:
 - __readpmc intrinsic
 - rdpmc instruction
 ms.assetid: 14ed45a6-28b6-4635-8437-a597c04b43d4
-ms.openlocfilehash: 848c880e76d6d431ee56a0bb30a33b276837ce76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af0f1874d991771423ddebfedd4624cd0b71760f
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396447"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221036"
 ---
-# <a name="readpmc"></a>__readpmc
+# <a name="__readpmc"></a>__readpmc
 
 **Microsoft Specific**
 
-Generuje `rdpmc` instrukcji, które odczytuje monitorowania określony przez licznik wydajności `counter`.
+Generuje instrukcję, która odczytuje licznik monitorowania wydajności określony przez licznik. `rdpmc`
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 unsigned __int64 __readpmc(
    unsigned long counter
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Licznik*<br/>
-[in] Licznik wydajności do odczytu.
+*przeciw*\
+podczas Licznik wydajności, który ma zostać odczytany.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość licznika wydajności określony.
+Wartość określonego licznika wydajności.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__readpmc`|x86, x64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-Tym wewnętrzna jest dostępna tylko w trybie jądra, a procedura jest dostępna jako funkcja wewnętrzna tylko.
+Element wewnętrzny jest dostępny tylko w trybie jądra, a procedura jest dostępna tylko jako wewnętrzna.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

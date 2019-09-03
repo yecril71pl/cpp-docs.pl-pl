@@ -1,44 +1,41 @@
 ---
-title: strict_gs_check
-ms.date: 11/04/2016
+title: strict_gs_check, pragma
+ms.date: 08/29/2019
 f1_keywords:
 - strict_gs_check
 - strict_gs_check_CPP
 helpviewer_keywords:
 - strict_gs_check pragma
 ms.assetid: decfec81-c916-42e0-a07f-8cc26df6a7ce
-ms.openlocfilehash: b62e1be466e65c0de6fb4eaa33ac6e99915529e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b66e87f2280c923d05103fccfcbbc8d32daf3fd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179948"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216586"
 ---
-# <a name="strictgscheck"></a>strict_gs_check
+# <a name="strict_gs_check-pragma"></a>strict_gs_check, pragma
 
-Ta dyrektywa pragma zapewnia sprawdzanie zwiększone zabezpieczenia.
+Ta pragma zapewnia ulepszone sprawdzanie zabezpieczeń.
 
 ## <a name="syntax"></a>Składnia
 
-```
-#pragma strict_gs_check([push,] on )
-#pragma strict_gs_check([push,] off )
-#pragma strict_gs_check(pop)
-```
+> **#pragma strict_gs_check (** [ **push,** ] { **on** | **off** } **)** \
+> **#pragma strict_gs_check (pop)**
 
 ## <a name="remarks"></a>Uwagi
 
-Instruuje kompilator, aby wstawić osiągnięciem losowego pliku cookie stosu funkcji w celu wykrycia niektóre kategorie przepełnienie buforu opartego na stosie. Domyślnie `/GS` (Sprawdzanie zabezpieczeń bufora) — opcja kompilatora nie wstawia plik cookie dla wszystkich funkcji. Aby uzyskać więcej informacji, zobacz [/GS (Sprawdzanie zabezpieczeń bufora)](../build/reference/gs-buffer-security-check.md).
+Instruuje kompilator, aby wstawia losowo plik cookie w stosie funkcji, aby ułatwić wykrycie niektórych kategorii przepełnienia buforu opartego na stosie. Domyślnie opcja kompilatora `/GS` (sprawdzanie zabezpieczeń bufora) nie wstawia pliku cookie dla wszystkich funkcji. Aby uzyskać więcej informacji, zobacz [/GS (sprawdzanie zabezpieczeń bufora)](../build/reference/gs-buffer-security-check.md).
 
-Należy skompilować z `/GS` (Sprawdzanie zabezpieczeń buforu) umożliwiające **strict_gs_check**.
+Kompiluj przy użyciu `/GS` , aby włączyć **strict_gs_check**.
 
-Użyj tej pragmie w moduły kodu, które są widoczne dla danych potencjalnie szkodliwe. Ta dyrektywa pragma jest bardzo atrakcyjnych i jest stosowane do funkcji, które nie wymagają tego obrony, ale jest zoptymalizowany, aby zminimalizować jej wpływ na wydajność aplikacji wynikowe.
+Użyj tej dyrektywy pragma w modułach kodu, które są narażone na potencjalnie szkodliwe dane. **strict_gs_check** to agresywna pragma, która jest stosowana do funkcji, które mogą nie wymagać tej obrony, ale jest zoptymalizowana, aby zminimalizować jej wpływ na wydajność wynikowej aplikacji.
 
-Nawet w przypadku używania tej pragmie powinien wszelkich starań, aby pisać bezpieczny kod. Oznacza to upewnij się, że Twój kod nie przepełnienia buforu. **strict_gs_check** może chronić aplikację przed przepełnienia buforu, które pozostają w kodzie.
+Nawet w przypadku korzystania z tej dyrektywy pragma należy dążyć do pisania bezpiecznego kodu. Oznacza to, że kod nie ma przekroczeń buforu. **strict_gs_check** może chronić aplikację przed przekroczeniem buforów, które pozostaną w kodzie.
 
 ## <a name="example"></a>Przykład
 
-W poniższym kodzie przepełnienie buforu występuje, gdy firma Microsoft kopiowania tablicy do lokalnej tablicy. Gdy kompilujesz ten kod, za pomocą `/GS`, pliki cookie nie dodaje się na stosie, ponieważ typ danych tablicy jest wskaźnikiem. Dodawanie **strict_gs_check** pragma wymusza pliku cookie stosu w stos funkcji.
+W tym przykładzie przepełnienie buforu występuje, gdy kopiujemy tablicę do tablicy lokalnej. Podczas kompilowania tego kodu przy `/GS`użyciu programu żaden plik cookie nie zostanie wstawiony w stosie, ponieważ typ danych tablicy jest wskaźnikiem. Dodanie dyrektywy pragma **strict_gs_check** wymusza umieszczenie pliku cookie stosu w stosie funkcji.
 
 ```cpp
 // pragma_strict_gs_check.cpp
@@ -67,5 +64,5 @@ void ** ReverseArray(void **pData,
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
-[/GS (Sprawdzanie zabezpieczeń bufora)](../build/reference/gs-buffer-security-check.md)
+[Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)\
+[/GS (sprawdzanie zabezpieczeń bufora)](../build/reference/gs-buffer-security-check.md)

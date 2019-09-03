@@ -1,6 +1,6 @@
 ---
 title: __addfsbyte, __addfsword, __addfsdword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __addfsbyte_cpp
 - __addfsdword
@@ -13,22 +13,22 @@ helpviewer_keywords:
 - __addfsword intrinsic
 - __addfsbyte intrinsic
 ms.assetid: 706c70df-6b52-4401-9268-2977ed8ad715
-ms.openlocfilehash: 61053d9f8c56d8352b12ed535dfa870c0856f558
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 302e58ed13c144913e7806a0a8b7adc202a67ef6
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264481"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218524"
 ---
-# <a name="addfsbyte-addfsword-addfsdword"></a>__addfsbyte, __addfsword, __addfsdword
+# <a name="__addfsbyte-__addfsword-__addfsdword"></a>__addfsbyte, __addfsword, __addfsdword
 
 **Microsoft Specific**
 
-Dodaj wartość do lokalizacji w pamięci określonej przez przesunięcie względem początku `FS` segmentu.
+Dodaj wartość do lokalizacji pamięci określonej przez przesunięcie względem początku `FS` segmentu.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 void __addfsbyte(
    unsigned long Offset,
    unsigned char Data
@@ -43,31 +43,33 @@ void __addfsdword(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Przesunięcie*<br/>
-[in] Przesunięcie od początku `FS`.
+*Przesunięcie*\
+podczas Przesunięcie od początku `FS`.
 
-*Dane*<br/>
-[in] Wartość do dodania do lokalizacji w pamięci.
+*Data*\
+podczas Wartość, która ma zostać dodana do lokalizacji pamięci.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__addfsbyte`|x86|
 |`__addfsword`|x86|
 |`__addfsdword`|x86|
 
+**Plik nagłówka** \<intrin. h >
+
 ## <a name="remarks"></a>Uwagi
 
-Te procedury są dostępne tylko jako funkcje wewnętrzne.
+Te procedury są dostępne tylko jako elementy wewnętrzne.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 
-[__incfsbyte, \__incfsword, \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)<br/>
-[__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)<br/>
-[__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)<br/>
+[__incfsbyte, \__incfsword, \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)\
+[__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)\
+[__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)\
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

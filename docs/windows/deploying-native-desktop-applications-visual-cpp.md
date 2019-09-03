@@ -9,24 +9,25 @@ helpviewer_keywords:
 - deploying applications [C++], about deploying applications
 - distributing applications [C++]
 ms.assetid: 37f1691e-d67c-41e4-926e-528a237a9bac
-ms.openlocfilehash: 46ced4ac5f7952a9b7f66418ea037e053b16e9be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.topic: landing-page
+ms.openlocfilehash: d9500d14fdc70afd2f1d3f67420bb96347b6d71c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346122"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70215967"
 ---
 # <a name="deploying-native-desktop-applications-visual-c"></a>Wdrażanie natywnych aplikacji komputerowych (Visual C++)
 
-Wdrażanie to proces, za pomocą którego można dystrybuować ukończonej aplikacji lub składnika można zainstalować na innych komputerach. Planowanie wdrożenia zostanie uruchomiony po utworzeniu aplikacji na komputerze dewelopera. Wdrożenie kończy się, gdy aplikacja jest zainstalowana i gotowa do uruchomienia na komputerze użytkownika.
+Wdrożenie to proces dystrybucji ukończonej aplikacji lub składnika, który ma zostać zainstalowany na innych komputerach. Planowanie wdrożenia jest uruchamiane, gdy aplikacja zostanie utworzona na komputerze dewelopera. Wdrożenie jest zakończone, gdy aplikacja jest zainstalowana i gotowa do uruchomienia na komputerze użytkownika.
 
-Visual Studio zawiera różne technologie wdrażania aplikacji Windows. Obejmują one wdrażania ClickOnce i wdrażanie za pomocą Instalatora Windows.
+Program Visual Studio oferuje różne technologie wdrażania aplikacji systemu Windows. Obejmują one wdrożenie ClickOnce i wdrożenie Instalator Windows.
 
-- ClickOnce może służyć do wdrażania aplikacji w języku C++, których platformą docelową środowisko uruchomieniowe języka wspólnego (CLR) — zestawów mieszanych, czystych i weryfikowalnych. Mimo, że Instalator Windows umożliwia wdrażanie aplikacji zarządzanej, zaleca się użycie technologii ClickOnce, ponieważ wykorzystuje platformę .NET Framework funkcje zabezpieczeń, takie jak podpisywanie manifestu. ClickOnce nie obsługuje wdrażanie natywnych aplikacji w języku C++. Aby uzyskać więcej informacji, zobacz [wdrożenie rozwiązania ClickOnce dla aplikacji Visual C++](clickonce-deployment-for-visual-cpp-applications.md).
+- Technologii ClickOnce można używać do wdrażania C++ aplikacji przeznaczonych dla środowiska uruchomieniowego języka wspólnego (CLR) — mieszanych, czystych i sprawdzalnych. Mimo że można użyć Instalator Windows do wdrożenia aplikacji zarządzanej, zalecamy korzystanie z technologii ClickOnce, ponieważ wykorzystuje ona .NET Framework funkcje zabezpieczeń, takie jak podpisywanie manifestu. Technologia ClickOnce nie obsługuje wdrażania aplikacji natywnych C++ . Aby uzyskać więcej informacji, zobacz [wdrażanie ClickOnce dla C++ aplikacji wizualnych](clickonce-deployment-for-visual-cpp-applications.md).
 
-- Technologia Instalatora Windows może służyć do wdrożenia natywnych aplikacji w języku C++ lub aplikacji w języku C++, których celem jest CLR.
+- Technologii Instalator Windows można użyć do wdrożenia natywnych C++ aplikacji lub C++ aplikacji przeznaczonych dla środowiska CLR.
 
-Artykuły w tej sekcji dokumentacji omówiono sposób zapewnienia, że natywnych aplikacji Visual C++ jest uruchamiana na dowolnym komputerze, który zawiera pliki, które należy uwzględnić w pakiecie instalacyjnym i zalecane sposoby za pomocą platformy docelowej Ponowna dystrybucja składników, od których zależy aplikacja.
+Artykuły w tej sekcji dokumentacji omawiają, jak zapewnić, że Natywna aplikacja wizualna C++ działa na dowolnym komputerze, który zapewnia obsługiwaną platformę docelową, które pliki należy dołączyć do pakietu instalacyjnego, oraz zalecane sposoby Dystrybuuj ponownie składniki, od których zależy aplikacja.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
@@ -40,7 +41,7 @@ Artykuły w tej sekcji dokumentacji omówiono sposób zapewnienia, że natywnych
 
 - [Wybieranie metody wdrażania](choosing-a-deployment-method.md)
 
-- [Wdrożenie usługi Universal CRT](universal-crt-deployment.md).
+- [Wdrożenie uniwersalnej CRT](universal-crt-deployment.md).
 
 - [Ponowne dystrybuowanie plików programu Visual C++](redistributing-visual-cpp-files.md)
 
@@ -50,7 +51,7 @@ Artykuły w tej sekcji dokumentacji omówiono sposób zapewnienia, że natywnych
 
 - [Wdrożenie rozwiązania ClickOnce dla aplikacji Visual C++](clickonce-deployment-for-visual-cpp-applications.md)
 
-- [Uruchamianie C++ aplikacji na poprzedniej wersji środowiska uruchomieniowego/CLR](running-a-cpp-clr-application-on-a-previous-runtime-version.md)
+- [Uruchamianie aplikacji C++ /CLR w poprzedniej wersji środowiska uruchomieniowego](running-a-cpp-clr-application-on-a-previous-runtime-version.md)
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 

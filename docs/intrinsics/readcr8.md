@@ -1,47 +1,47 @@
 ---
 title: __readcr8
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readcr8
 helpviewer_keywords:
 - __readcr8 intrinsic
 ms.assetid: fce16953-87ff-4fbe-8081-7962b97ae46c
-ms.openlocfilehash: d4c0b22d38d725566062d2da98839579c22d571c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 525775fde4cb96cecfcabef878780d5a2aa6743a
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396460"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221243"
 ---
-# <a name="readcr8"></a>__readcr8
+# <a name="__readcr8"></a>__readcr8
 
 **Microsoft Specific**
 
-Odczytuje rejestru CR8 i zwraca jego wartość.
+Odczytuje rejestr CR8 i zwraca jego wartość.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 unsigned __int64 __readcr8(void);
 ```
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość rejestru CR8.
+Wartość w rejestrze CR8.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__readcr8`|X64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-Tym wewnętrzna jest dostępna tylko w trybie jądra, a procedura jest dostępna jako funkcja wewnętrzna tylko.
+Element wewnętrzny jest dostępny tylko w trybie jądra, a procedura jest dostępna tylko jako wewnętrzna.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

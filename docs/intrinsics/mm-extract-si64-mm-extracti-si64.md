@@ -1,6 +1,6 @@
 ---
 title: _mm_extract_si64, _mm_extracti_si64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_extracti_si64
 - _mm_extract_si64
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - _mm_extracti_si64 intrinsic
 - _mm_extract_si64 intrinsic
 ms.assetid: 459fdd72-cc54-4ee5-bbd5-d2c6067a88e7
-ms.openlocfilehash: e77ca5589ed50a4199921603afec1d9888c6cca5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cfd7029966c29f876f0e4f671830e20e2eacc940
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263701"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217400"
 ---
-# <a name="mmextractsi64-mmextractisi64"></a>_mm_extract_si64, _mm_extracti_si64
+# <a name="_mm_extract_si64-_mm_extracti_si64"></a>_mm_extract_si64, _mm_extracti_si64
 
 **Microsoft Specific**
 
-Generuje `extrq` instrukcji do wyodrębnienia określonym usługi bits z niskim 64-bitowy swój pierwszy argument.
+`extrq` Generuje instrukcję wyodrębniania określonych bitów z najniższych 64 bitów pierwszego argumentu.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 __m128i _mm_extract_si64(
    __m128i Source,
    __m128i Descriptor
@@ -36,46 +36,46 @@ __m128i _mm_extracti_si64(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Element źródłowy*<br/>
-[in] Pole 128-bitowego z danymi wejściowymi w jej dolnej 64-bitowy.
+*Zewnętrz*\
+podczas Pole 128-bitowe z danymi wejściowymi w niższej wersji 64 bitów.
 
-*Deskryptor*<br/>
-[in] Pole 128-bitowego, opisujący pola bitowego do wyodrębnienia.
+*Opis*\
+podczas Pole 128-bitowe opisujące pole bitowe, które ma zostać wyodrębnione.
 
-*Długość*<br/>
-[in] Liczba całkowita określająca długość pola do wyodrębnienia.
+*Długość*\
+podczas Liczba całkowita, która określa długość pola do wyodrębnienia.
 
-*Index*<br/>
-[in] Liczba całkowita określająca indeks pola do wyodrębnienia
+*Indeks*\
+podczas Liczba całkowita określająca indeks pola do wyodrębnienia
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Pole 128-bitowego na wyodrębniony pole z jego najmniej znaczące bity.
+Pole 128-bitowe z wyodrębnionym polem w najmniej znaczących bitach.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`_mm_extract_si64`|SSE4a|
 |`_mm_extracti_si64`|SSE4a|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-Generuje tym wewnętrzne `extrq` instrukcji do wyodrębnienia bitów z `Source`. Wewnętrzne są dwie wersje to: `_mm_extracti_si64` jest natychmiastowe wersji, a `_mm_extract_si64` jest — natychmiastowe.  Każda wersja wyodrębnia z `Source` polem bitowym zdefiniowany przez jego długość i indeks jego najmniej znaczący bit. Wartości długości i indeksu są pobierane mod 64, zatem zarówno wartość -1 do 127, są interpretowane jako 63. Jeśli suma liczby (mniejsze) indeks i długość pola (mniejsze) jest większa niż 64, wyniki są niezdefiniowane. Wartość zerowa długość pola jest interpretowany jako 64. W przypadku pola długości i bitowe indeksu zarówno zero, usługa bits 63:0 z `Source` zostały wyodrębnione. Jeśli długość pola wynosi zero, ale indeks bit jest różna od zera, wyniki są niezdefiniowane.
+Te elementy wewnętrzne generują `extrq` instrukcję wyodrębniania bitów ze *źródła*. Istnieją dwie wersje: `_mm_extracti_si64` jest natychmiastowa wersja i `_mm_extract_si64` jest nienatychmiastowa. Każda wersja wyodrębnia ze *źródła* pole bitowe zdefiniowane przez jego długość i indeks jego najmniej znaczącego bitu. Wartości długości i indeksu są brane pod kątem mod 64, dlatego oba-1 i 127 są interpretowane jako 63. Jeśli sum (zredukowany) indeks i (zmniejszony) długość pola jest większa niż 64, wyniki są niezdefiniowane. Wartość zero dla długości pola jest interpretowana jako 64. Jeśli długość pola i indeks bitu są równe zero, są wyodrębniane bity 63:0 ze *źródła* . Jeśli długość pola wynosi zero, ale indeks bitowy jest różny od zera, wyniki są niezdefiniowane.
 
-W wywołaniu _mm_extract_si64 `Descriptor` zawiera indeks 13:8 bitów i długość pola danych, który ma zostać wyodrębniony w bitach 5:0..
+W wywołaniu do `_mm_extract_si64`, *deskryptor* zawiera indeks w bitach 13:8 i długość pola danych, które mają zostać wyodrębnione w bitach 5:0.
 
-Jeśli wywołasz `_mm_extracti_si64` z argumentami, że kompilator nie można określić jako stałe całkowite kompilator generuje kod, umieszczenie tych wartości w rejestrze XMM (`Descriptor`) oraz wywołanie `_mm_extract_si64`.
+W przypadku wywołania `_mm_extracti_si64` z argumentami, które kompilator nie może ustalić jako stałych całkowitych, kompilator generuje kod, aby spakować te wartości do rejestru XMM(deskryptora) i `_mm_extract_si64`wywołać.
 
-Aby określić, pomoc techniczna dotycząca sprzętu dla `extrq` instrukcji, wywołanie `__cpuid` wewnętrzne z `InfoType=0x80000001` i sprawdź bit 6 `CPUInfo[2] (ECX)`. Ten bit będzie 1, jeśli instrukcja jest obsługiwana lub 0 w inny sposób. Jeśli można uruchomić kod, który używa tego wewnętrzne sprzętu, który nie obsługuje `extrq` instrukcji, wyniki są nieprzewidywalne.
+Aby określić obsługę `extrq` sprzętową instrukcji, `__cpuid` Wywołaj wewnętrzne z `InfoType=0x80000001` i sprawdź bit 6 z `CPUInfo[2] (ECX)`. Ten bit będzie miał wartość 1, jeśli instrukcja jest obsługiwana i 0 w przeciwnym razie. Jeśli uruchamiasz kod korzystający z `extrq` tego wewnętrznego sprzętu, który nie obsługuje instrukcji, wyniki są nieprzewidywalne.
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // Compile this sample with: /EHsc
 #include <iostream>
 #include <intrin.h>
@@ -108,11 +108,11 @@ result2 = 0x30eca86
 result3 = 0x30eca86
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-Copyright 2007 zaawansowane Micro urządzeń, Inc. Wszelkie prawa zastrzeżone. Odtworzyć zgoda zaawansowane Micro urządzeń, Inc.
+Fragmenty Copyright 2007 przez Advanced Micro Devices, Inc. Wszelkie prawa zastrzeżone. Wygenerowane z uprawnieniami z zaawansowanych urządzeń Micro Devices, Inc.
 
 ## <a name="see-also"></a>Zobacz także
 
-[_mm_insert_si64, _mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)<br/>
+[_mm_insert_si64, _mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)\
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

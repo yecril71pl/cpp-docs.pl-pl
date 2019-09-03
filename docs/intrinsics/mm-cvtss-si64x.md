@@ -1,59 +1,59 @@
 ---
 title: _mm_cvtss_si64x
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_cvtss_si64x
 helpviewer_keywords:
 - cvtss2si intrinsic
 - _mm_cvtss_si64x intrinsic
 ms.assetid: c279aff2-ee29-4271-8829-3ec691bf7718
-ms.openlocfilehash: a3b7ece325d975045046e865e6b090f3f6729558
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6079ed7846a35ff16355f0341d63430f9846057f
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263337"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217437"
 ---
-# <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
+# <a name="_mm_cvtss_si64x"></a>_mm_cvtss_si64x
 
 **Microsoft Specific**
 
-Generuje x64 rozszerzonej wersji przekonwertować skalarną pojedynczej dokładności liczba zmiennoprzecinkowa na 64-bitowa liczba całkowita (`cvtss2si`) instrukcji.
+Generuje rozszerzoną wersję x64 liczby zmiennoprzecinkowej konwersji skalarnej o pojedynczej precyzji do 64-bitowej`cvtss2si`liczby całkowitej ().
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 __int64 _mm_cvtss_si64x(
    __m128 value
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*value*<br/>
-[in] `__m128` Struktury zawierającej — wartości zmiennoprzecinkowe.
+*wartościami*\
+podczas `__m128` Struktura zawierająca wartości zmiennoprzecinkowe.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-64-bitową liczbę całkowitą, wynik konwersji pierwsza wartość zmiennoprzecinkowa do liczby całkowitej.
+64-bitowa liczba całkowita, wynik konwersji pierwszej wartości zmiennoprzecinkowej na liczbę całkowitą.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`_mm_cvtss_si64x`|X64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-Pierwszy element wartość struktury jest konwertowana na liczbę całkowitą i zwrócony. Zaokrąglenia bity kontrolne w mxcsr rejestru są używane do określenia zachowania zaokrąglania. Domyślny tryb zaokrąglania to zaokrąglony do najbliższej zaokrąglania parzystą liczbą, jeśli część dziesiętną wynosi 0,5. Ponieważ `__m128` struktury reprezentuje rejestrów XMM to wewnętrzne przyjmuje wartość z rejestru XMM i zapisuje je do pamięci systemowej.
+Pierwszy element wartości struktury jest konwertowany na liczbę całkowitą i zwracany. Bity sterujące zaokrąglaniem w MXCSR są używane do określania zachowania zaokrąglania. Domyślny tryb zaokrąglania jest zaokrąglany do najbliższe, zaokrąglanie do liczby parzystej, jeśli część dziesiętna to 0,5. `__m128` Ponieważ struktura reprezentuje rejestr XMM, wewnętrzna przyjmuje wartość z rejestru XMM i zapisuje ją w pamięci systemowej.
 
-Ta procedura jest dostępna wyłącznie jako wewnętrzna.
+Ta procedura jest dostępna tylko jako wewnętrzna.
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // _mm_cvtss_si64x.cpp
 // processor: x64
 #include <intrin.h>
@@ -85,9 +85,9 @@ int main()
 101
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 
-[__m128d](../cpp/m128d.md)<br/>
+[__m128d](../cpp/m128d.md)\
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

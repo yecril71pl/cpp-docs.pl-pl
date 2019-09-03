@@ -1,6 +1,6 @@
 ---
-title: pointers_to_members
-ms.date: 11/04/2016
+title: pointers_to_members, pragma
+ms.date: 08/29/2019
 f1_keywords:
 - pointers_to_members_CPP
 - vc-pragma.pointers_to_members
@@ -10,56 +10,54 @@ helpviewer_keywords:
 - members, pointers to
 - pointers_to_members pragma
 ms.assetid: 8325428c-c90a-4aed-9e82-cb1dda23f4ca
-ms.openlocfilehash: 5ee45a77a7094fb1ef9ba536bae391aaad00e812
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb5b277252b6c1422a87c5f2a2e2b7230ec49632
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180007"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219064"
 ---
-# <a name="pointerstomembers"></a>pointers_to_members
+# <a name="pointers_to_members-pragma"></a>pointers_to_members, pragma
 
-**Określonego język C++**
+**C++Specjalne**
 
-Określa, czy wskaźnik do składowej klasy może być zadeklarowany przed jego definicją klasy skojarzonej i jest używany do kontroli rozmiaru wskaźnika oraz kodu wymaganego do interpretacji wskaźnika.
+Określa, czy wskaźnik do składowej klasy może być zadeklarowany przed jego definicją klasy skojarzonej. Służy do kontrolowania rozmiaru wskaźnika i kodu wymaganego do interpretacji wskaźnika.
 
 ## <a name="syntax"></a>Składnia
 
-```
-#pragma pointers_to_members( pointer-declaration, [most-general-representation] )
-```
+> **#pragma pointers_to_members (** *wskaźnik — deklaracja* [ **,** *najbardziej ogólna — reprezentacja* ])
 
 ## <a name="remarks"></a>Uwagi
 
-Możesz umieścić **pointers_to_members** dyrektywy w pliku źródłowym, jako alternatywa dla użycia [/vmx](../build/reference/vmb-vmg-representation-method.md) opcje kompilatora lub [słowa kluczowe dziedziczenia](../cpp/inheritance-keywords.md).
+Można umieścić **pointers_to_members** pragmę w pliku źródłowym jako alternatywę dla opcji kompilatora [/VMB lub/VMG](../build/reference/vmb-vmg-representation-method.md) lub [słowo kluczowe dziedziczenia](../cpp/inheritance-keywords.md).
 
-*Deklaracji wskaźnika* argument określa, czy zadeklarowano wskaźnik do członka przed lub po definicji funkcji skojarzonej. *Deklaracji wskaźnika* argument jest jednym z dwóch następujących symboli:
+Argument *deklaracji wskaźnika* określa, czy zadeklarowano wskaźnik do składowej przed lub po definicji powiązanej funkcji. Argument *deklaracji wskaźnika* jest jednym z dwóch następujących symboli:
 
-|Argument|Komentarze|
+| Argument | Komentarze |
 |--------------|--------------|
-|*full_generality*|Generuje bezpieczny, czasem nieoptymalny kod. Możesz użyć *full_generality* jeżeli zadeklarowano dowolny wskaźnik do składowej przed zdefiniowaniem klasy skojarzonej. Ten argument zawsze używa reprezentacji wskaźnika określonej przez *most-general-representation* argumentu. Równoważny z /vmg.|
-|*best_case*|Generuje bezpieczny, optymalny kod przy użyciu reprezentacji najlepszego przypadku dla wszystkich wskaźników do członków. Wymaga zdefiniowania klasy przed zadeklarowaniem wskaźnika do składowej klasy. Wartość domyślna to *best_case*.|
+| **full_generality** | Generuje bezpieczny, czasem nieoptymalny kod. Użyj **full_generality** , jeśli dowolny wskaźnik do składowej jest zadeklarowany przed definicją klasy skojarzonej. Ten argument zawsze używa reprezentacji wskaźnika określonej przez argument z *największą ogólną* reprezentacją. Równoważny z /vmg. |
+| **best_case** | Generuje bezpieczny, optymalny kod przy użyciu reprezentacji najlepszego przypadku dla wszystkich wskaźników do członków. Wymaga zdefiniowania klasy przed zadeklarowaniem wskaźnika do składowej klasy. Wartość domyślna to **best_case**. |
 
-*Most-general-representation* argument określa reprezentację najmniejszego wskaźnika, który kompilator bezpiecznie umożliwia dowolny wskaźnik do składowej klasy w jednostce translacji. Argument może być jednym z następujących:
+Argument *najbardziej ogólna reprezentacja* określa najmniejszą reprezentację wskaźnika, którą kompilator może bezpiecznie użyć, aby odwołać się do dowolnego wskaźnika do składowej klasy w jednostce translacji. Argument może być jedną z następujących wartości:
 
-|Argument|Komentarze|
+| Argument | Komentarze |
 |--------------|--------------|
-|*single_inheritance*|Najbardziej ogólną reprezentacją jest pojedyncze dziedziczenie, wskaźnik do funkcji członkowskiej. Powoduje błąd, jeśli model dziedziczenia definicji klasy, do której zgłaszany jest wskaźnik do składowej, jest wielokrotny lub wirtualny.|
-|*multiple_inheritance*|Najbardziej ogólną reprezentacją jest wielokrotne dziedziczenie, wskaźnik do funkcji członkowskiej. Powoduje błąd, jeśli model dziedziczenia definicji klasy, do której zgłaszany jest wskaźnik do składowej, jest wirtualny.|
-|*virtual_inheritance*|Najbardziej ogólną reprezentacją jest wirtualne dziedziczenie, wskaźnik do funkcji członkowskiej. Nigdy nie powoduje błędu. To jest argument domyślny podczas `#pragma pointers_to_members(full_generality)` jest używany.|
+| **single_inheritance** | Najbardziej ogólną reprezentacją jest pojedyncze dziedziczenie, wskaźnik do funkcji członkowskiej. Powoduje błąd, jeśli model dziedziczenia definicji klasy, do której zgłaszany jest wskaźnik do składowej, jest wielokrotny lub wirtualny. |
+| **multiple_inheritance** | Najbardziej ogólną reprezentacją jest wielokrotne dziedziczenie, wskaźnik do funkcji członkowskiej. Powoduje błąd, jeśli model dziedziczenia definicji klasy, do której zgłaszany jest wskaźnik do składowej, jest wirtualny. |
+| **virtual_inheritance** | Najbardziej ogólną reprezentacją jest wirtualne dziedziczenie, wskaźnik do funkcji członkowskiej. Nigdy nie powoduje błędu. **virtual_inheritance** jest domyślnym argumentem, `#pragma pointers_to_members(full_generality)` gdy jest używany. |
 
 > [!CAUTION]
-> Radzimy umieścić **pointers_to_members** pragma tylko w pliku kodu źródłowego, który chcesz mieć wpływ i tylko po dowolnej `#include` dyrektywy. Taka praktyka zmniejsza ryzyko, że pragma wpłynie na inne pliki i przypadkowo określi wiele definicji dla tej samej zmiennej, funkcji lub nazwy klasy.
+> Firma Microsoft zaleca umieszczenie dyrektywy pragma **pointers_to_members** tylko w pliku kodu źródłowego, który ma mieć wpływ, i tylko po `#include` dodaniu dyrektyw. Taka praktyka zmniejsza ryzyko, że pragma wpłynie na inne pliki i przypadkowo określi wiele definicji dla tej samej zmiennej, funkcji lub nazwy klasy.
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 //   Specify single-inheritance only
 #pragma pointers_to_members( full_generality, single_inheritance )
 ```
 
-## <a name="end-c-specific"></a>KONIEC określonego języka C++
+**ZAKOŃCZENIE C++ określonych**
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

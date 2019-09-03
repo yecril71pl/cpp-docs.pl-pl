@@ -1,6 +1,6 @@
 ---
 title: _bittest, _bittest64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _bittest64
 - _bittest_cpp
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - _bittest64 intrinsic
 - bt instruction
 ms.assetid: 15e62afb-abea-4ee7-a6b1-13efa2034937
-ms.openlocfilehash: 1d29b8bec646bb2da8acfe20479fe0e238db0de5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37d96cc008d0da018355a2eca63c6c592ab50f12
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349176"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216903"
 ---
-# <a name="bittest-bittest64"></a>_bittest, _bittest64
+# <a name="_bittest-_bittest64"></a>_bittest, _bittest64
 
 **Microsoft Specific**
 
-Generuje `bt` instrukcji, która sprawdza, czy bit w pozycji `b` adresu `a`i zwraca wartość tego bitu.
+Generuje instrukcję, która analizuje bit w pozycji `b` Address `a`i zwraca wartość tego bitu. `bt`
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 unsigned char _bittest(
    long const *a,
    long b
@@ -39,26 +39,26 @@ unsigned char _bittest64(
 
 ### <a name="parameters"></a>Parametry
 
-*a*<br/>
-[in] Wskaźnik do pamięci do sprawdzenia.
+*z*\
+podczas Wskaźnik do pamięci do sprawdzenia.
 
-*b*<br/>
-[in] Pozycja bitu do testowania.
+*b*\
+podczas Pozycja bitu do przetestowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bit na określonej pozycji.
+Bit w określonym położeniu.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|nagłówek|
+|Wewnętrznej|Architektura|nagłówek|
 |---------------|------------------|------------|
-|`_bittest`|x86, ARM, x64|\<intrin.h>|
-|`_bittest64`|ARM, x64|\<intrin.h>|
+|`_bittest`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_bittest64`|ARM64, x64|\<intrin.h>|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta procedura jest dostępna wyłącznie jako wewnętrzna.
+Ta procedura jest dostępna tylko jako wewnętrzna.
 
 ## <a name="example"></a>Przykład
 
@@ -100,7 +100,7 @@ Binary representation:
 0000000000000010011000010110010
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

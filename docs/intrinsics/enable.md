@@ -1,6 +1,6 @@
 ---
 title: _enable
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _enable
 - _enable_cpp
@@ -9,40 +9,40 @@ helpviewer_keywords:
 - _enable intrinsic
 - ssm instruction
 ms.assetid: 8bee669b-6bd8-4e25-9383-bb7d57295b4d
-ms.openlocfilehash: e1ece6d6f4040b81b55d8400407d46f165b56b53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7adcd4eac807b8d0937efbbe6d89f8ad6dcb157c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349033"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217873"
 ---
-# <a name="enable"></a>_enable
+# <a name="_enable"></a>_enable
 
 **Microsoft Specific**
 
-Umożliwia przerwań.
+Włącza przerwy.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 void _enable(void);
 ```
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
-|`_enable`|x86, ARM, x64|
+|`_enable`|x86, ARM, x64, ARM64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-`_enable` powoduje, że procesor, która ma ustawienie flagi przerwania. Na x86 systemów, ta funkcja generuje Ustaw flagę przerwań (`sti`) instrukcji.
+`_enable`powoduje, że procesor ustawi flagę przerwania. W systemach x86 ta funkcja generuje instrukcję SET Interrupt flag (`sti`).
 
-Ta funkcja jest dostępna tylko w trybie jądra. Jeśli używane w trybie użytkownika, zwracany jest wyjątek instrukcja uprzywilejowana.
+Ta funkcja jest dostępna tylko w trybie jądra. W przypadku użycia w trybie użytkownika zostanie zgłoszony wyjątek uprzywilejowanej instrukcji.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

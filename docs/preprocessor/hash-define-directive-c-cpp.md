@@ -1,6 +1,6 @@
 ---
-title: '##define — dyrektywa (C/C++)'
-ms.date: 11/04/2016
+title: '#define, dyrektywa (C/C++)'
+ms.date: 08/29/2019
 f1_keywords:
 - '#define'
 helpviewer_keywords:
@@ -10,40 +10,39 @@ helpviewer_keywords:
 - '#define directive, syntax'
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
-ms.openlocfilehash: 8a0cc7e7836a0c82c72055fe8d9e7497995485d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b72e2468b9e9984237c81f5cdb3c5691fe95cbd0
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409905"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216278"
 ---
-# <a name="define-directive-cc"></a>#define — dyrektywa (C/C++)
+# <a name="define-directive-cc"></a>#define — dyrektywa (CC++/)
 
-**#Define** tworzy *— makro*, który jest skojarzenie identyfikatora lub identyfikatora sparametryzowanej ciągiem tokenu. Po zdefiniowaniu makra kompilator może zastąpić ciąg tokenu dla każdego wystąpienia identyfikatora w pliku źródłowym.
+**#Define** tworzy *makro*, czyli Skojarzenie identyfikatora lub identyfikatora sparametryzowanego z ciągiem tokenu. Po zdefiniowaniu makra kompilator może zastąpić ciąg tokenu dla każdego wystąpienia identyfikatora w pliku źródłowym.
 
 ## <a name="syntax"></a>Składnia
 
-`#define` *Identyfikator* *ciąg tokenu*<sub>zoptymalizowany pod kątem</sub>
-
-`#define` *Identyfikator* `(` *identyfikator*<sub>zoptymalizowany pod kątem</sub> `,` *...*  `,` *identyfikator*<sub>zoptymalizowany pod kątem</sub> `)` *ciąg tokenu*<sub>zoptymalizowany pod kątem</sub>
+> **#define** *Identyfikator* *token — ciąg* <sub>wybór</sub>\
+> **#define** *Identyfikator* **(** <sub>wybór</sub>identyfikatora **,** ... **,** *Identyfikator* <sub>wybór</sub> *token —* <sub>wybór</sub> ciągu
 
 ## <a name="remarks"></a>Uwagi
 
-**#Define** dyrektywy powoduje, że kompilator podstawia *ciąg tokenu* dla każdego wystąpienia *identyfikator* w pliku źródłowym. *Identyfikator* jest zastępowany tylko wtedy, gdy stanowi token. Oznacza to, że *identyfikator* nie jest zastępowany, jeśli występuje on w komentarzu, w ciągu lub jako część dłuższego identyfikatora. Aby uzyskać więcej informacji, zobacz [tokenów](../cpp/tokens-cpp.md).
+Dyrektywa **#define** powoduje, że kompilator zastępuje *ciąg tokenów* dla każdego wystąpienia *identyfikatora* w pliku źródłowym. *Identyfikator* jest zamieniany tylko wtedy, gdy tworzy token. Oznacza to, że *Identyfikator* nie jest zastępowany, jeśli pojawia się w komentarzu, w ciągu lub jako część dłuższego identyfikatora. Aby uzyskać więcej informacji, [](../cpp/tokens-cpp.md)Zobacz tokeny.
 
-*Ciąg tokenu* argument składa się z serii tokenów, takich jak słowa kluczowe, stałe lub pełne instrukcje. Muszą być rozdzielone przez co najmniej jeden znak odstępu *ciąg tokenu* z *identyfikator*. Ten biały znak nie jest uważany za część podstawionego tekstu, podobnie jak dowolny biały obszar, który następuje po ostatnim tokenem tekstu.
+Argument *ciągu tokenu* składa się z serii tokenów, takich jak słowa kluczowe, stałe lub kompletne instrukcje. Co najmniej jeden znak odstępu musi oddzielać *ciąg tokenu* od *identyfikatora*. Ten biały znak nie jest uważany za część zastępowanego tekstu ani nie jest żadnym białym znakiem, który następuje po ostatnim tokenie tekstu.
 
-A `#define` bez *ciąg tokenu* usuwa wystąpień *identyfikator* z pliku źródłowego. *Identyfikator* pozostaje zdefiniowany i może być przetestowany przy użyciu `#if defined` i `#ifdef` dyrektywy.
+A `#define` bez *ciągu tokenu* usuwa wystąpienia *identyfikatora* z pliku źródłowego. *Identyfikator* pozostaje zdefiniowany i może być testowany przy użyciu `#if defined` dyrektyw i. `#ifdef`
 
-Druga forma składni definiuje funkcyjne makro za pomocą parametrów. Ten formularz przyjmuje opcjonalną listę parametrów, które muszą być ujęte w nawiasy. Po makro jest zdefiniowany, każde kolejne wystąpienie *identyfikator*( *identyfikator*<sub>zoptymalizowany pod kątem</sub>,..., *identyfikator* <sub>zoptymalizowany pod kątem</sub> ) jest zastępowany przy użyciu wersji *ciąg tokenu* argumentu, który zawiera rzeczywiste argumenty podstawiane dla parametrów formalnych.
+Druga forma składni definiuje makro podobne do funkcji z parametrami. Ten formularz przyjmuje opcjonalną listę parametrów, które muszą występować w nawiasach. Po zdefiniowaniu makra każde kolejne wystąpienie *identyfikatora*(<sub>opt</sub>o *identyfikatorze*,..., wybór *identyfikatora*<sub></sub> ) jest zastępowane wersją argumentu *token-String* , który ma rzeczywiste argumenty zastąpione parametrami formalnymi.
 
-Nazwy parametrów formalnych pojawiają się w *ciąg tokenu* do oznaczania miejsc, w których są zastępowane wartości rzeczywiste. Nazwa każdego parametru może pojawić się wiele razy w *ciąg tokenu*, a nazwy mogą być wyświetlane w dowolnej kolejności. Liczba argumentów w wywołaniu musi odpowiadać liczbie parametrów w definicji makra. Liberalne stosowanie nawiasów gwarantuje poprawną interpretację złożonych bieżących argumentów.
+Nazwy parametrów formalnych są wyświetlane w *ciągu tokenu* , aby oznaczyć lokalizacje, w których są zastępowane wartości rzeczywiste. Nazwy poszczególnych parametrów mogą występować wiele razy w *ciągu tokenu*, a nazwy mogą pojawiać się w dowolnej kolejności. Liczba argumentów w wywołaniu musi być zgodna z liczbą parametrów w definicji makra. Liberalizacja użycia nawiasów gwarantuje, że złożone rzeczywiste argumenty są poprawnie interpretowane.
 
-Parametry formalne na liście są oddzielone przecinkami. Każda nazwa na liście musi być unikatowa, a listy muszą być ujęte w nawiasy. Żadne spacje nie mogą rozdzielić *identyfikator* i nawias otwierający. Użyj łączenia wierszy — umieść ukośnik odwrotny (`\`) bezpośrednio przed znakiem nowego wiersza — dla długich dyrektyw w wielu wierszach źródłowych. Zakres formalnego parametru rozciąga się do nowej linii, która kończy się *ciąg tokenu*.
+Parametry formalne na liście są oddzielone przecinkami. Każda nazwa na liście musi być unikatowa, a lista musi być ujęta w nawiasy. Spacje nie mogą oddzielać *identyfikatora* i nawiasu otwierającego. Użyj łączenia linii — Umieść ukośnik odwrotny (`\`) bezpośrednio przed znakiem nowego wiersza — dla długich dyrektyw w wielu wierszach źródła. Zakres nazwy parametru formalnego rozciąga się do nowego wiersza, który zawiera *ciąg tokenu*.
 
-Po zdefiniowaniu makra w drugim formularzu składni, kolejne wystąpienia tekstowe następuje lista argumentów oznaczają wywołanie makro. Rzeczywiste argumenty, które następują po wystąpieniu *identyfikator* w pliku źródłowym są dopasowywane do odpowiednich parametrów formalnych w definicji makra. Każdy z parametrów formalnych w *ciąg tokenu* nie jest poprzedzony przez ciąg (`#`), charizing (`#@`), lub wklejanie tokenów (`##`) operator, lub nie następuje `##` jest operator zastępuje odpowiednie argumenty rzeczywiste. Wszystkie makra w rzeczywistym argumencie są rozwinięte, zanim dyrektywa zastąpi parametrów formalny. (Operatorzy są opisani w [operatorach Preprocesowych](../preprocessor/preprocessor-operators.md).)
+Gdy makro zostało zdefiniowane w drugim formularzu składni, kolejne wystąpienia tekstowe, po których następuje lista argumentów, wskazują na wywołanie makra. Rzeczywiste argumenty występujące po wystąpieniu *identyfikatora* w pliku źródłowym są dopasowywane do odpowiednich parametrów formalnych w definicji makra. Każdy parametr formalny w *ciągu tokenu* , który nie`#`jest poprzedzony tworzenia ciągu (), konwersji na znaki (`#@`), lub wklejanie tokenu (`##`), lub nie następuje przez `##` operatora, jest zastępowany przez odpowiedni rzeczywisty argument. Wszystkie makra w rzeczywistym argumencie są rozwinięte przed zastąpieniem parametru formalnego przez dyrektywę. (Operatory są opisane w [operatorach preprocesora](../preprocessor/preprocessor-operators.md)).
 
-Poniższe przykłady makr z argumentami ilustrują drugą formę z **#define** składni:
+Poniższe przykłady makr z argumentami ilustrują drugą formę składni **#define** :
 
 ```C
 // Macro to define cursor lines
@@ -54,66 +53,66 @@ Poniższe przykłady makr z argumentami ilustrują drugą formę z **#define** s
     ((rand()%(int)(((max) + 1)-(min)))+ (min))
 ```
 
-Argumenty ze skutami ubocznych czasami powodują, że makra dają nieoczekiwane wyniki. Określony parametr formalny może pojawić się więcej niż jeden raz w *ciąg tokenu*. Jeśli ten parametr formalny zostanie zastąpiony przez wyrażenie z efektami ubocznymi, wyrażenie razem z efektami ubocznymi może ocenione więcej niż jeden raz. (Zobacz przykłady w [Operator wklejania tokenu (##)](../preprocessor/token-pasting-operator-hash-hash.md).)
+Argumenty z efektami ubocznymi czasami powodują, że makra generują nieoczekiwane wyniki. Dany parametr formalny może pojawić się więcej niż jeden raz w *ciągu tokenu*. Jeśli ten parametr formalny jest zastępowany przez wyrażenie z efektami ubocznymi, wyrażenie z efektami ubocznymi może być oceniane więcej niż jeden raz. (Zobacz przykłady w obszarze [operator wklejania tokenu (# #)](../preprocessor/token-pasting-operator-hash-hash.md).)
 
-`#undef` Dyrektywy powoduje, że identyfikator definicji preprocesora usunięcie. Zobacz [dyrektywa #undef](../preprocessor/hash-undef-directive-c-cpp.md) Aby uzyskać więcej informacji.
+Dyrektywa `#undef` powoduje, że definicja preprocesora identyfikatora zostanie zapomniana. Aby uzyskać więcej informacji [, zobacz dyrektywę #undef](../preprocessor/hash-undef-directive-c-cpp.md) .
 
-Jeśli nazwa definiowanego makra występuje w *ciąg tokenu* (nawet w wyniku innego makra rozszerzenia), to nie jest rozwinięta.
+Jeśli nazwa definiowanego makra występuje w *ciągu tokenu* (nawet w wyniku innego rozwinięcia makra), nie jest rozwinięta.
 
-Sekundy **#define** dla makra o takiej samej nazwie generuje ostrzeżenie, o ile nie jest identyczny z pierwszym drugiej sekwencji tokenu.
+Druga **#define** dla makra o tej samej nazwie generuje ostrzeżenie, chyba że druga sekwencja tokenów jest taka sama jak pierwsza.
 
 **Microsoft Specific**
 
-Microsoft C/C++ pozwala na zdefiniowanie makra, jeśli nowa definicja jest syntaktycznie identyczna odpowiadają oryginalnej definicji. Innymi słowy dwie definicje mogą mieć nazwy różnych parametrów. To zachowanie różni się od ANSI C, który wymaga leksykalnej obu definicji.
+Firma Microsoft CC++ /pozwala zdefiniować ponownie makro, jeśli nowa definicja jest syntaktycznie identyczna z oryginalną definicją. Innymi słowy, dwie definicje mogą mieć różne nazwy parametrów. To zachowanie różni się od ANSI C, które wymaga, aby dwie definicje były identyczne.
 
-Na przykład następujące dwa makra są identyczne, z wyjątkiem nazw parametrów. ANSI C nie zezwala na taką ponowną definicję, ale Microsoft C/C++ kompiluje to bez błędu.
+Na przykład następujące dwa makra są identyczne, z wyjątkiem nazw parametrów. ANSI C nie zezwala na taką ponowną definicję, ale firma Microsoft CC++ /kompiluje ją bez błędu.
 
 ```C
 #define multiply( f1, f2 ) ( f1 * f2 )
 #define multiply( a1, a2 ) ( a1 * a2 )
 ```
 
-Z drugiej strony dwa następujące makra nie są identyczne i generują ostrzeżenie w Microsoft C/C++.
+Z drugiej strony następujące dwa makra nie są identyczne i wygenerują ostrzeżenie w Microsoft C/C++.
 
 ```C
 #define multiply( f1, f2 ) ( f1 * f2 )
 #define multiply( a1, a2 ) ( b1 * b2 )
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-Ten przykład ilustruje **#define** dyrektywy:
+Ten przykład ilustruje **#define** dyrektywie:
 
 ```C
 #define WIDTH       80
 #define LENGTH      ( WIDTH + 10 )
 ```
 
-Pierwsza instrukcja Określa identyfikator `WIDTH` jako liczba całkowita stałej 80 i definiuje `LENGTH` pod względem `WIDTH` i liczbę całkowitą 10. Każde wystąpienie `LENGTH` zastępuje się wyrazami (`WIDTH + 10`). Z kolei, każde wystąpienie `WIDTH + 10` jest zastąpione wyrażeniem (`80 + 10`). Nawiasy wokół `WIDTH + 10` są ważne, ponieważ kontrolują interpretację instrukcji takich jak następujące:
+Pierwsza instrukcja definiuje identyfikator `WIDTH` jako stałą liczbę całkowitą 80 i definiuje `LENGTH` `WIDTH` jako całkowitą stałą 10. Każde wystąpienie `LENGTH` jest zastępowane przez (`WIDTH + 10`). Z kolei każde wystąpienie `WIDTH + 10` jest zastępowane wyrażeniem (`80 + 10`). Nawiasy `WIDTH + 10` są ważne, ponieważ kontrolują interpretację instrukcji, takich jak następujące:
 
 ```C
 var = LENGTH * 20;
 ```
 
-Po etapie przetwarzania wstępnego oświadczenie staje się:
+Po etapie przetwarzania wstępnego instrukcja zostanie wystawiona:
 
 ```C
 var = ( 80 + 10 ) * 20;
 ```
 
-który ocenia do 1800. Bez nawiasów wynik jest:
+który ma wartość 1800. Bez nawiasów, wynik:
 
 ```C
 var = 80 + 10 * 20;
 ```
 
-który ocenia do 280.
+który ma wartość 280.
 
 **Microsoft Specific**
 
-Definiowanie makr i stałych z [/D](../build/reference/d-preprocessor-definitions.md) — opcja kompilatora ma ten sam efekt jak użycie **#define** dyrektywy preprocesora na początku pliku. Do 30 makr można zdefiniować przy użyciu opcji/d.
+Definiowanie makr i stałych z opcją [/d](../build/reference/d-preprocessor-definitions.md) kompilatora ma ten sam efekt, co użycie dyrektywy **#define** na początku pliku. Do 30 makr można zdefiniować przy użyciu/D opcji.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

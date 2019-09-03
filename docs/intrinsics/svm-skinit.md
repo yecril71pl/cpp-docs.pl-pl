@@ -1,56 +1,55 @@
 ---
 title: __svm_skinit
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __svm_skinit
 helpviewer_keywords:
 - SKINIT instruction
 - __svm_skinit intrinsic
 ms.assetid: 787ec781-4cf2-40a2-aa20-5192334b131a
-ms.openlocfilehash: 199cba2623f9d8e47c08be642ec485599b87976e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6657921d647a23bf027a5800702527951f7f6831
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390246"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219865"
 ---
-# <a name="svmskinit"></a>__svm_skinit
+# <a name="__svm_skinit"></a>__svm_skinit
 
 **Microsoft Specific**
 
-Inicjuje ładowanie i bezpiecznego oprogramowania, np. monitor maszyny wirtualnej.
+Inicjuje ładowanie bezpiecznego oprogramowania, takiego jak monitor maszyny wirtualnej.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 void __svm_skinit(
-   int SLB
+   int block_address
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|---------------|-----------------|
-|`SLB`|32-bitowy adres fizyczny bajt 64K zabezpieczanie modułu ładującego bloku (SLB).|
+*block_address*\
+32-bitowy adres fizyczny 64-bitowego bloku modułu ładującego.
 
 ## <a name="remarks"></a>Uwagi
 
-`__svm_skinit` Funkcji jest odpowiednikiem `SKINIT` machine instrukcji. Ta funkcja jest częścią system zabezpieczeń, który korzysta z procesora i zaufanych Platform Module (TPM) w celu sprawdzenia i załadować zaufane oprogramowanie o nazwie jądra zabezpieczeń (SK). Monitorowanie maszyny wirtualnej znajduje się przykład jądra zabezpieczeń. System zabezpieczeń sprawdza, składniki programu załadowany w procesie inicjowania i chroni składników przed naruszeniami poprzez przerwań, uzyskiwania dostępu do urządzenia lub innego programu, jeśli komputer jest wieloprocesorowych.
+Funkcja jest równoważna `SKINIT` z instrukcją maszyny. `__svm_skinit` Ta funkcja jest częścią systemu zabezpieczeń, który używa procesora i moduł TPM (TPM) do sprawdzania i ładowania zaufanego oprogramowania, zwanego jądrem *zabezpieczeń* (SK). Przykładem jądra zabezpieczeń jest monitor maszyny wirtualnej. System zabezpieczeń weryfikuje składniki programu załadowane podczas procesu inicjowania. Chroni składniki przed naruszeniem przez przerwania, dostęp do urządzenia lub inny program, jeśli komputer jest wieloprocesorowy.
 
-`SLB` Parametr określa adres fizyczny bloku 64 KB pamięci o nazwie *zabezpieczanie modułu ładującego bloku* (SLB). SLB zawiera program o nazwie bezpiecznego modułu ładującego, która ustanawia środowisko operacyjne dla komputera, a następnie ładuje jądra zabezpieczeń.
+Parametr *block_address* określa adres fizyczny bloku 64 KB pamięci o nazwie *bezpieczny blok modułu ładującego (moduł* równoważenia obciążenia). Moduł równoważenia obciążenia zawiera program o nazwie *bezpiecznego modułu ładującego*. Ustanawia środowisko operacyjne dla komputera, a następnie ładuje jądro zabezpieczeń.
 
-Ta funkcja obsługuje interakcji monitor maszyny wirtualnej hosta z gościa operacyjnego i jego aplikacji. Aby uzyskać więcej informacji, wyszukaj dokumentu, "AMD64 architektury programisty ręczne woluminie 2: System programowania,"numer 24593, wersji 3.11, dokumentu na [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) lokacji.
+Ta funkcja obsługuje interakcję z monitorem maszyny wirtualnej hosta z systemem operacyjnym gościa i jego aplikacjami. Aby uzyskać więcej informacji, wyszukaj frazę "Volume Architecture — ręczny wolumin 2". Programowanie systemu "w witrynie [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) .
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__svm_skinit`|x86, x64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

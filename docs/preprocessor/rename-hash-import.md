@@ -1,64 +1,62 @@
 ---
-title: zmień nazwę (#import)
-ms.date: 10/18/2018
+title: Zmień nazwę atrybutu importu
+ms.date: 08/29/2019
 f1_keywords:
 - Rename
 helpviewer_keywords:
 - rename attribute
 ms.assetid: 5c5c6153-1087-4b7b-87fb-fc59b90b9975
-ms.openlocfilehash: 0fbed04f040a47b5b389f40eeb15254da4a7940b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef1f64e0c268f850899efe499f7b1ad3991dd570
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179733"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216666"
 ---
-# <a name="rename-import"></a>Zmień nazwę (\#importowanie)
+# <a name="rename-import-attribute"></a>Zmień nazwę atrybutu importu
 
-**Określonego język C++**
+**C++Specjalne**
 
-Działania dotyczące problemów kolizji nazw.
+Działa wokół problemów z kolizją nazw.
 
 ## <a name="syntax"></a>Składnia
 
-```
-rename("OldName","NewName")
-```
+> **#import** *Biblioteka typów* **Zmień nazwę (** "*StaraNazwa*" **,** "*newname*" **)**
 
 ### <a name="parameters"></a>Parametry
 
-*OldName*<br/>
+*StaraNazwa*\
 Stara nazwa w bibliotece typów.
 
-*Nowa nazwa*<br/>
-Nazwa ma być używana zamiast starej nazwy.
+*NewName*\
+Nazwa, która ma być używana zamiast starej nazwy.
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli ten atrybut jest określony, kompilator zamienia wszystkie wystąpienia *StaraNazwa* w bibliotece typów, przy użyciu podanego użytkownika *NewName* w wynikowej plikach nagłówkowych.
+Po określeniu atrybutu **zmiany nazwy** kompilator zastępuje wszystkie wystąpienia elementu *StaraNazwa* w *bibliotece typów* z nazwą pliku w plikach nagłówkowych określoną przez użytkownika.
 
-Ten atrybut może być używany, gdy nazwy w bibliotece typów pokrywa się z definicji makra w plikach nagłówkowych systemu. Jeśli ta sytuacja nie uda się rozwiązać, a następnie różne błędy składniowe zostanie wygenerowany, takich jak [błąd kompilatora C2059](../error-messages/compiler-errors-1/compiler-error-c2059.md) i [błąd kompilatora C2061](../error-messages/compiler-errors-1/compiler-error-c2061.md).
+Atrybutu **zmiany nazwy** można użyć, gdy nazwa w bibliotece typów jest zgodna z definicją makra w plikach nagłówkowych systemu. Jeśli ta sytuacja nie zostanie rozwiązana, kompilator może wydać różne błędy składniowe, takie jak [błąd kompilatora C2059](../error-messages/compiler-errors-1/compiler-error-c2059.md) i [błąd kompilatora C2061](../error-messages/compiler-errors-1/compiler-error-c2061.md).
 
 > [!NOTE]
-> Zastąpienie jest nazwę w bibliotece typów nie nazwa używana w powstałym pliku nagłówka.
+> Zastąpienie dotyczy nazwy użytej w bibliotece typów, a nie nazwy użytej w pliku nagłówkowym.
 
-Na przykład, załóżmy, że właściwość o nazwie `MyParent` znajduje się w bibliotece typów i makra `GetMyParent` jest zdefiniowana w pliku nagłówkowym i używana przed `#import`. Ponieważ `GetMyParent` jest domyślna nazwa funkcji otoku obsługi błędów `get` kolizji nazw właściwości, zostanie przeprowadzona. Aby obejść ten problem, należy użyć następujący atrybut w `#import` instrukcji:
-
-```cpp
-rename("MyParent","MyParentX")
-```
-
-który zmienia nazwę `MyParent` w bibliotece typów. Próba zmiany nazwy `GetMyParent` nazwa otoki zakończy się niepowodzeniem:
+Załóżmy na przykład, że właściwość o nazwie `MyParent` istnieje w bibliotece typów, a makro `GetMyParent` jest zdefiniowane w pliku nagłówkowym i używane wcześniej `#import`. Ponieważ `GetMyParent` jest to domyślna nazwa funkcji otoki dla właściwości obsługa `get` błędów, zostanie wystąpiła kolizja nazw. Aby obejść ten problem, użyj następującego atrybutu w `#import` instrukcji:
 
 ```cpp
-rename("GetMyParent","GetMyParentX")
+#import MyTypeLib.tlb rename("MyParent","MyParentX")
 ```
 
-Jest to spowodowane nazwę `GetMyParent` występuje tylko w wynikowy plik nagłówkowy biblioteki typów.
+który zmienia `MyParent` nazwę w bibliotece typów. Próba zmiany `GetMyParent` nazwy otoki zakończy się niepowodzeniem:
 
-**KONIEC określonego języka C++**
+```cpp
+#import MyTypeLib.tlb rename("GetMyParent","GetMyParentX")
+```
+
+Jest to spowodowane faktem `GetMyParent` , że nazwa występuje tylko w pliku nagłówkowym biblioteki typów.
+
+**ZAKOŃCZENIE C++ określonych**
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import Directive](../preprocessor/hash-import-directive-cpp.md)
+[Atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

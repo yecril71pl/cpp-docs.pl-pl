@@ -1,36 +1,35 @@
 ---
-title: no_dual_interfaces
-ms.date: 11/04/2016
+title: no_dual_interfaces — atrybut importowania
+ms.date: 08/29/2019
 f1_keywords:
 - no_dual_interfaces
 helpviewer_keywords:
 - no_dual_interfaces attribute
 ms.assetid: 9acd5d9d-4a49-4cdc-9470-73a2c23cf512
-ms.openlocfilehash: ae75bc2e974f374768f1a9e5a0e1ced61e9904b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6270888f0d31e4fbe18fb3364995be8c73426b83
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409827"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220761"
 ---
-# <a name="nodualinterfaces"></a>no_dual_interfaces
-**Określonego język C++**
+# <a name="no_dual_interfaces-import-attribute"></a>no_dual_interfaces — atrybut importowania
 
-Zmienia sposób, kompilator generuje funkcje otoki dla metod podwójnego interfejsu.
+**C++Specjalne**
+
+Zmienia sposób, w jaki kompilator generuje funkcje otoki dla dwóch metod interfejsu.
 
 ## <a name="syntax"></a>Składnia
 
-```
-no_dual_interfaces
-```
+> **#import** *Biblioteka typów* **no_dual_interfaces**
 
 ## <a name="remarks"></a>Uwagi
 
-Zwykle otoki wywoła metodę przez tabelę funkcji wirtualnych dla interfejsu. Za pomocą **no_dual_interfaces —**, zamiast tego wywołania otoki `IDispatch::Invoke` było wywołanie metody.
+Zwykle otoka wywołuje metodę za pomocą tabeli funkcji wirtualnych dla interfejsu. W przypadku elementu **no_dual_interfaces**otoka wywołuje `IDispatch::Invoke` wywołanie metody.
 
-**KONIEC określonego języka C++**
+**ZAKOŃCZENIE C++ określonych**
 
 ## <a name="see-also"></a>Zobacz także
 
-[atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import Directive](../preprocessor/hash-import-directive-cpp.md)
+[Atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

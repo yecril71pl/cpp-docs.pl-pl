@@ -1,6 +1,6 @@
 ---
-title: _InterlockedExchange, funkcje wewnętrzne
-ms.date: 12/17/2018
+title: Funkcje wewnętrzne _InterlockedExchange
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedExchange_rel
 - _InterlockedExchange8_nf
@@ -44,14 +44,14 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: c96ce57854bfb3eea0e1b8bc6283984c7fce50f9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 53c3545be5e74d802fe63f8e7c03d2a7a2b26110
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509387"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221996"
 ---
-# <a name="_interlockedexchange-intrinsic-functions"></a>_InterlockedExchange, funkcje wewnętrzne
+# <a name="_interlockedexchange-intrinsic-functions"></a>Funkcje wewnętrzne _InterlockedExchange
 
 **Microsoft Specific**
 
@@ -59,7 +59,7 @@ Generuje niepodzielną instrukcję ustawiania określonej wartości.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 long _InterlockedExchange(
    long volatile * Target,
    long Value
@@ -142,12 +142,12 @@ __int64 _InterlockedExchange64_rel(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Obiektów*<br/>
+*Obiektów*\
 [in. out] Wskaźnik na wartość, która ma zostać nadana wymianie. Funkcja ustawia tę zmienną na `Value` i zwraca jej poprzednią wartość.
 
-*Wartość*<br/>
+*Wartościami*\
 podczas Wartość, która ma być wymieniana z wartością wskazywaną `Target`przez.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -158,9 +158,11 @@ Zwraca początkową wartość wskazywaną przez `Target`.
 
 |Wewnętrznej|Architektura|nagłówek|
 |---------------|------------------|------------|
-|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`, `_InterlockedExchange64`|x86, ARM, x64|\<intrin.h>|
-|`_InterlockedExchange_acq`, `_InterlockedExchange_nf`, `_InterlockedExchange_rel`, `_InterlockedExchange8_acq`, `_InterlockedExchange8_nf`, `_InterlockedExchange8_rel`, `_InterlockedExchange16_acq`, `_InterlockedExchange16_nf`, `_InterlockedExchange16_rel`, `_InterlockedExchange64_acq`, `_InterlockedExchange64_nf`, `_InterlockedExchange64_rel`,|ARM|\<intrin.h>|
-|`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`, `_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|x86, x64|\<immintrin.h>|
+|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedExchange64`|ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedExchange_acq`, `_InterlockedExchange_nf`, `_InterlockedExchange_rel`, `_InterlockedExchange8_acq`, `_InterlockedExchange8_nf`, `_InterlockedExchange8_rel`, `_InterlockedExchange16_acq`, `_InterlockedExchange16_nf`, `_InterlockedExchange16_rel`, `_InterlockedExchange64_acq`, `_InterlockedExchange64_nf`, `_InterlockedExchange64_rel`,|ARM, ARM64|\<intrin.h>|
+|`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`|x86, x64|\<immintrin.h>|
+|`_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|X64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -184,6 +186,6 @@ Aby uzyskać przykład sposobu użycia `_InterlockedExchange`, zobacz [_Interloc
 
 ## <a name="see-also"></a>Zobacz także
 
-[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
-[Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)\
+[Keywords](../cpp/keywords-cpp.md)\
 [Konflikty z kompilatorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

@@ -1,6 +1,6 @@
 ---
 title: __ll_lshift
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __ll_lshift_cpp
 - __ll_lshift
@@ -8,57 +8,57 @@ helpviewer_keywords:
 - ll_lshift intrinsic
 - __ll_lshift intrinsic
 ms.assetid: fe98f733-426d-44b3-8f24-5d0d6d44bd94
-ms.openlocfilehash: 5a91ce5db46b19be570f8d48a584a2caeabcc163
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 158ecbf39320d70b51f1f498a0b689ba58fec363
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263389"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221812"
 ---
-# <a name="lllshift"></a>__ll_lshift
+# <a name="__ll_lshift"></a>__ll_lshift
 
 **Microsoft Specific**
 
-Przesuwa podana wartość 64-bitowego w lewo przez określoną liczbę bitów.
+Przesuwa podaną wartość 64-bitową w lewo o określoną liczbę bitów.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 unsigned __int64 __ll_lshift(
    unsigned __int64 Mask,
    int nBit
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Maska*<br/>
-[in] Wartość 64-bitową liczbę całkowitą na przesunięcie w lewo.
+*Bitowa*\
+podczas 64-bitowa wartość całkowita do przesunięcia w lewo.
 
-*nBit*<br/>
-[in] Liczba bitów, aby przesunąć.
+*nBit*\
+podczas Liczba bitów do przesunięcia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Maska przesunięte w lewo przez `nBit` usługi bits.
+Maska przesunięta w lewo `nBit` o bity.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__ll_lshift`|x86, x64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli kompilujesz program za pomocą architektury 64-bitowym i `nBit` jest większy niż 63, jest liczbą bitów, aby przenieść `nBit` modulo 64. Jeśli kompilujesz program za pomocą architektury 32-bitowej i `nBit` jest większy niż 31, jest liczbą bitów, aby przenieść `nBit` modulo 32.
+Jeśli kompilujesz program dla architektury 64-bitowej i `nBit` jest większy niż 63, liczba bitów do przesunięcia to `nBit` modulo 64. Jeśli kompilujesz program dla architektury 32-bitowej i `nBit` jest większy niż 31, liczba bitów do przesunięcia to `nBit` modulo 32.
 
-`ll` Nazwa wskazuje, że jest operacją na `long long` (`__int64`).
+Wartość `ll` w polu Nazwa wskazuje, że jest to operacja na `long long` (`__int64`).
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // ll_lshift.cpp
 // compile with: /EHsc
 // processor: x86, x64
@@ -79,16 +79,17 @@ int main()
 
 ## <a name="output"></a>Dane wyjściowe
 
-```
+```Output
 10000
 ```
 
-**Uwaga** nie ma wersji bez znaku operacji przesunięcia w lewo. Jest to spowodowane `__ll_lshift` już korzysta z parametrem wejściowym bez znaku. W odróżnieniu od przesunięcia w prawo jest ma zależności logowania dla przesunięcia w lewo, ponieważ najmniej znaczący bit w wyniku jest zawsze równa zero, niezależnie od tego, znak wartości przesunięte.
+> [!NOTE]
+> Nie istnieje niepodpisana wersja operacji przesunięcia w lewo. Dzieje się tak `__ll_lshift` , ponieważ używa już niepodpisanego parametru wejściowego. W przeciwieństwie do prawego przesunięcia nie ma zależności od znaku po lewej stronie, ponieważ najmniej znaczący bit w wyniku jest zawsze ustawiony na zero, niezależnie od znaku wartości przesuniętej.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 
-[__ll_rshift](../intrinsics/ll-rshift.md)<br/>
-[__ull_rshift](../intrinsics/ull-rshift.md)<br/>
+[__ll_rshift](../intrinsics/ll-rshift.md)\
+[__ull_rshift](../intrinsics/ull-rshift.md)\
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

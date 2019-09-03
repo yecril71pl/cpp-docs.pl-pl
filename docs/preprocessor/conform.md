@@ -1,6 +1,6 @@
 ---
-title: conform
-ms.date: 11/04/2016
+title: conform, pragma
+ms.date: 08/29/2019
 f1_keywords:
 - conform_CPP
 - vc-pragma.conform
@@ -9,41 +9,42 @@ helpviewer_keywords:
 - forScope conform pragma
 - pragmas, conform
 ms.assetid: 71b3e174-c53c-4bfc-adf3-af39b1554191
-ms.openlocfilehash: 35c3b06106779a9056f682ff76c6ed4b4ab1ab41
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 816ff85bb19f549c6ea072073bd89fcd503545f2
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366762"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220500"
 ---
-# <a name="conform"></a>conform
-**Określonego język C++**
+# <a name="conform-pragma"></a>conform, pragma
 
-Określa zachowanie środowiska wykonawczego [/Zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) — opcja kompilatora.
+**C++Specjalne**
+
+Określa zachowanie w czasie wykonywania dla opcji kompilatora [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) .
 
 ## <a name="syntax"></a>Składnia
 
-> **#pragma są zgodne (** *nazwa* [**, Pokaż** ] [**,** { **na** | **poza** }] [[**,** { **wypychania** | **pop** }] [**,** *identyfikator* ]] **)**
+> **#pragma zgodności (** *Nazwa* [ **, show** ] [ **,** { **on** | **off** }] [[ **,** { **push** | **pop** }] [ **,** *Identyfikator* [ **,** { **on** **wyłączone}** ]  |  ] ] **)**
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwa*<br/>
-Określa nazwę opcję kompilatora, który ma zostać zmodyfikowana. Jedyne prawidłowe *nazwa* jest `forScope`.
+*Nazwij*\
+Określa nazwę opcji kompilatora, która ma zostać zmodyfikowana. Jedyną prawidłową *nazwą* jest `forScope`.
 
-**Pokaż**<br/>
-(Opcjonalnie) Powoduje, że bieżące ustawienie *nazwa* (true lub false), który ma być wyświetlany za pomocą komunikatu ostrzegawczego podczas kompilacji. Na przykład `#pragma conform(forScope, show)`.
+**wskazują**\
+Obowiązkowe Powoduje, że bieżące ustawienie *nazwy* (true lub false) będzie wyświetlane przy użyciu komunikatu ostrzegawczego podczas kompilacji. Na przykład `#pragma conform(forScope, show)`.
 
-**na**, **wyłączone**<br/>
-(Opcjonalnie) Ustawienie *nazwa* do **na** umożliwia [/Zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) — opcja kompilatora. Wartość domyślna to **poza**.
+**włączone**, **wyłączone**\
+Obowiązkowe Ustawienie *Nazwa* na **włączone** włącza opcję kompilatora [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) . Wartość domyślna to **off**.
 
-**push**<br/>
-(Opcjonalnie) Wypychanie bieżącej wartości *nazwa* na wewnętrznym stosie kompilatora. Jeśli określisz *identyfikator*, można określić **na** lub **poza** wartość *nazwa* ma zostać wypchnięty na stos. Na przykład `#pragma conform(forScope, push, myname, on)`.
+**wydajności**\
+Obowiązkowe Wypchnij bieżącą wartość *nazwy* do wewnętrznego stosu kompilatora. **W** przypadku określenia *identyfikatora*można określić wartość Włącz lub **Wyłącz** dla *nazwy* do wypchnięcia na stosie. Na przykład `#pragma conform(forScope, push, myname, on)`.
 
-**POP**<br/>
-(Opcjonalnie) Ustawia wartość *nazwa* wartość u góry wewnętrznego stosu kompilatora, a następnie POP stosu. Jeśli identyfikator jest określany za pomocą **pop**, stos będzie zostać zdjęte ze stosu wstecz, aż znajdzie rekord z *identyfikator*, który będzie również zostać zdjęte ze stosu; bieżąca wartość dla *nazwa* w Następny rekord na stosie staje się nową wartość dla *nazwa*. Jeśli określisz **pop** z *identyfikator* nie jest w rekordzie na stosie, **pop** jest ignorowana.
+**skakując**\
+Obowiązkowe Ustawia wartość *Nazwa* na wartość w górnej części wewnętrznego stosu kompilatora, a następnie umieszcza stos. Jeśli identyfikator jest określony za pomocą **pop**, stos zostanie zdjęte z powrotem do momentu znalezienia rekordu z *identyfikatorem*, który również będzie zdjęte; Bieżąca wartość *nazwy* w następnym rekordzie na stosie zmieni się na nową wartość dla *nazwy*. Jeśli określisz **pop** z *identyfikatorem* , który nie znajduje się w rekordzie na stosie, **pop** zostanie zignorowany.
 
-*Identyfikator*<br/>
-(Opcjonalnie) Można włączyć **wypychania** lub **pop** polecenia. Jeśli *identyfikator* jest używany, a następnie **na** lub **poza** specyfikator może również służyć.
+*identyfikatora*\
+Obowiązkowe Mogą być dołączone do polecenia **push** lub **pop** . Jeśli jest używany *Identyfikator* , można również użyć specyfikatora **on** lub **off** .
 
 ## <a name="example"></a>Przykład
 
@@ -65,4 +66,4 @@ int main() {}
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dyrektywy pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

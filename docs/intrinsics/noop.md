@@ -1,32 +1,32 @@
 ---
 title: __noop
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __noop_cpp
 - __noop
 helpviewer_keywords:
 - __noop keyword [C++]
 ms.assetid: 81ac6e97-7bf8-496b-b3c4-fd02837573e5
-ms.openlocfilehash: 674b5170dd2bba7038dfe11af906e31540acd993
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24ba85b1fbbba4491c03d5a81afae345228db3bd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262986"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217182"
 ---
-# <a name="noop"></a>__noop
+# <a name="__noop"></a>__noop
 
 **Microsoft Specific**
 
-`__noop` Wewnętrzne określa, że funkcja mają być ignorowane i przeanalizowania listy argumentów, ale nie można wygenerować kodu dla argumentów. Jest ona przeznaczona do użytku w funkcje globalne debugowania, które przyjmują zmienną liczbę argumentów.
+`__noop` Wewnętrzna określa, że funkcja powinna być ignorowana. Lista argumentów jest analizowana, ale dla argumentów nie jest generowany żaden kod. Jest ona przeznaczona do użycia w globalnych funkcjach debugowania, które przyjmują zmienną liczbę argumentów.
 
-Kompilator konwertuje `__noop` wewnętrzne na 0 w czasie kompilacji.
+Kompilator konwertuje `__noop` wewnętrzną wartość na 0 w czasie kompilacji.
 
 ## <a name="example"></a>Przykład
 
 Poniższy kod przedstawia sposób użycia `__noop`.
 
-```
+```cpp
 // compiler_intrinsics__noop.cpp
 // compile with or without /DDEBUG
 #include <stdio.h>
@@ -44,5 +44,5 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz także
 
-[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)\
 [Słowa kluczowe](../cpp/keywords-cpp.md)

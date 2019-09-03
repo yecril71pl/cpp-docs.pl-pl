@@ -1,47 +1,47 @@
 ---
 title: __readcr2
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readcr2
 helpviewer_keywords:
 - __readcr2 intrinsic
 ms.assetid: d02c97d8-1953-46e7-a79e-a781e2c5bf27
-ms.openlocfilehash: e26ccbb3db1dfc113f84210314379b06dae93542
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 482f4548a692d6aa3b65fbc42caabda29bb393c1
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396558"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217104"
 ---
-# <a name="readcr2"></a>__readcr2
+# <a name="__readcr2"></a>__readcr2
 
 **Microsoft Specific**
 
-Odczytuje rejestru CR2 i zwraca jego wartość.
+Odczytuje rejestr CR2 i zwraca jego wartość.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```C
 unsigned __int64 __readcr2(void);
 ```
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość rejestru CR2.
+Wartość w rejestrze CR2.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__readcr2`|x86, x64|
 
-**Plik nagłówkowy** \<intrin.h >
+**Plik nagłówka** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-Tym wewnętrzna jest dostępna tylko w trybie jądra, a procedura jest dostępna jako funkcja wewnętrzna tylko.
+Element wewnętrzny jest dostępny tylko w trybie jądra, a procedura jest dostępna tylko jako wewnętrzna.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

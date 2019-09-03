@@ -1,17 +1,18 @@
 ---
 layout: LandingPage
-title: Programowanie dla systemu Linux z dokumentacji języka C++
+title: Programowanie dla systemu C++ Linux za pomocą dokumentacji
 description: Twórz i Debuguj aplikacje działające w systemie Linux.
-ms.openlocfilehash: ac80c6ad3b0650d7da20f18b049af0242ffa5704
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.topic: landing-page
+ms.openlocfilehash: ee956f25914e1996acb6776d9ecbb8c9e79c689b
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042733"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216101"
 ---
-# <a name="linux-development-with-c-documentation"></a>Programowanie dla systemu Linux z dokumentacji języka C++
+# <a name="linux-development-with-c-documentation"></a>Programowanie dla systemu C++ Linux za pomocą dokumentacji
 
-Do tworzenia i debugowania aplikacji uruchamianych na komputerach zdalnych z systemem Linux lub podsystemu Windows dla systemu Linux, należy użyć programu Visual Studio 2017 i nowsze.
+Za pomocą programu Visual Studio 2017 i nowszych można tworzyć i debugować aplikacje działające na maszynach zdalnych z systemem Linux lub podsystem Windows dla systemu Linux.
 
 <ul class="panelContent cardsF">
     <li>
@@ -25,8 +26,8 @@ Do tworzenia i debugowania aplikacji uruchamianych na komputerach zdalnych z sys
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Instalowanie i konfigurowanie obciążeń systemu Linux</h3>
-                        <p>Dowiedz się, jak skonfigurować program Visual Studio 2017 i nowszych do tworzenia aplikacji systemu Linux w języku C++.</p>
+                        <h3>Instalowanie i Konfigurowanie obciążenia systemu Linux</h3>
+                        <p>Dowiedz się, jak skonfigurować program Visual Studio 2017 i nowszego do C++tworzenia aplikacji systemu Linux w systemie.</p>
                     </div>
                 </div>
             </div>
@@ -44,8 +45,8 @@ Do tworzenia i debugowania aplikacji uruchamianych na komputerach zdalnych z sys
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>C++Blog zespołu ds.</h3>
-                        <p>Bądź na bieżąco z wszystkie najnowsze C++ funkcji w programie Visual Studio.</p>
+                        <h3>C++Blog zespołu</h3>
+                        <p>Bądź na bieżąco ze wszystkimi najnowszymi C++ funkcjami programu Visual Studio.</p>
                     </div>
                 </div>
             </div>
