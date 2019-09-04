@@ -1,6 +1,6 @@
 ---
 title: Klasa CAsyncSocket
-ms.date: 11/04/2016
+ms.date: 09/03/2019
 f1_keywords:
 - CAsyncSocket
 - AFXSOCK/CAsyncSocket
@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: ef938796faf8e9b9272a519ed1e51037edc90425
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4e14052d400268a8852298113ba9b51fda713dc8
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507529"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273790"
 ---
 # <a name="casyncsocket-class"></a>Klasa CAsyncSocket
 
@@ -337,7 +337,7 @@ Długość adresu w *lpSockAddr* w bajtach.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie 0, a określony kod błędu można pobrać, wywołując [wartość GetLastError](#getlasterror). Następujące błędy dotyczą tej funkcji składowej:
+Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie 0, a określony kod błędu można pobrać, wywołując [wartość GetLastError](#getlasterror). Poniższa lista zawiera kilka błędów, które mogą zostać zwrócone. Aby uzyskać pełną listę, zobacz [kody błędów usługi Windows Sockets](/windows/win32/winsock/windows-sockets-error-codes-2).
 
 - WSANOTINITIALISED pomyślne [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) musi wystąpić przed użyciem tego interfejsu API.
 
@@ -668,7 +668,7 @@ Niezerowe, jeśli funkcja się powiedzie; w przeciwnym razie 0, a określony kod
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest taka sama jak [CAsyncSocket::](#getpeername) getpeername, z tą różnicą, że obsługuje adresy IPv6 oraz starsze protokoły.
+Ta funkcja jest taka sama jak [CAsyncSocket:: getpeername](#getpeername) , z tą różnicą, że obsługuje adresy IPv6 oraz starsze protokoły.
 
 ##  <a name="getsockname"></a>CAsyncSocket:: GetSockName
 
@@ -1201,7 +1201,7 @@ Ta funkcja jest używana dla podłączonych strumieni lub gniazd datasockets i s
 
 W przypadku gniazd typu SOCK_STREAM zwracana jest ilość informacji, która jest obecnie dostępna do rozmiaru dostarczonego buforu. Jeśli gniazdo zostało skonfigurowane do odbierania w wierszu danych poza pasmem (opcja gniazda SO_OOBINLINE) i dane poza pasmem są odczytane, zostaną zwrócone tylko dane poza pasmem. Aplikacja może użyć `IOCtlSIOCATMARK` opcji lub [OnOutOfBandData](#onoutofbanddata) , aby określić, czy jeszcze więcej danych poza pasmem ma być odczytywane.
 
-W przypadku gniazd datagramów dane są wyodrębniane z pierwszego zapakowanego datagramu do rozmiaru dostarczonego buforu. Jeśli datagram jest większy niż podany bufor, bufor jest wypełniany pierwszą częścią datagramu, nadmiarowe dane są tracone i `Receive` zwraca wartość SOCKET_ERROR z kodem błędu ustawionym na WSAEMSGSIZE. Jeśli w gnieździe nie są dostępne żadne dane przychodzące, wartość SOCKET_ERROR jest zwracana z kodem błędu ustawionym na WSAEWOULDBLOCK. Funkcja [](#onreceive) wywołania zwrotnego OnReceive może służyć do określania, kiedy docierają więcej danych.
+W przypadku gniazd datagramów dane są wyodrębniane z pierwszego zapakowanego datagramu do rozmiaru dostarczonego buforu. Jeśli datagram jest większy niż podany bufor, bufor jest wypełniany pierwszą częścią datagramu, nadmiarowe dane są tracone i `Receive` zwraca wartość SOCKET_ERROR z kodem błędu ustawionym na WSAEMSGSIZE. Jeśli w gnieździe nie są dostępne żadne dane przychodzące, wartość SOCKET_ERROR jest zwracana z kodem błędu ustawionym na WSAEWOULDBLOCK. Funkcja wywołania zwrotnego [OnReceive](#onreceive) może służyć do określania, kiedy docierają więcej danych.
 
 Jeśli gniazdo jest typu SOCK_STREAM, a zdalna Strona zamknie połączenie bezpiecznie, `Receive` zostanie wykonane natychmiast po 0 bajtach. Jeśli połączenie zostało zresetowane, `Receive` zakończy się niepowodzeniem z powodu błędu WSAECONNRESET.
 

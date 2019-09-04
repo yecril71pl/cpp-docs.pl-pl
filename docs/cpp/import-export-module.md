@@ -10,16 +10,16 @@ helpviewer_keywords:
 - modules [C++], import
 - modules [C++], export
 description: Użyj instrukcji import, aby uzyskać dostęp do typów i funkcji zdefiniowanych w określonym module.
-ms.openlocfilehash: fbb9c45ec816c859edb4df38ad67dc7778247e87
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: ee1d50a76a3304359c0771aa0174968439f5faa4
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537765"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273624"
 ---
 # <a name="module-import-export"></a>moduł, import, eksport
 
-Słowa kluczowe **modułu**, **importu**i **eksportu** są dostępne w `/experimental:modules` języku c++ 20 i wymagają przełącznika kompilatora wraz z. `/std:c++latest` Aby uzyskać więcej informacji, zobacz [Omówienie modułów w C++ ](modules-cpp.md)temacie.
+Słowa kluczowe **modułu**, **importu**i **eksportu** są dostępne w języku c++ 20 i wymagają przełącznika kompilatora [/Experimental: modułu](../build/reference/experimental-module.md) z [/std: C + + Najnowsza](../build/reference/std-specify-language-standard-version.md). Aby uzyskać więcej informacji, zobacz [Omówienie modułów w C++ ](modules-cpp.md)temacie.
 
 ## <a name="module"></a>moduł
 
@@ -87,4 +87,5 @@ class Baz
 ```
 
 ## <a name="see-also"></a>Zobacz też
+
 [Przegląd modułów w programieC++](modules-cpp.md)

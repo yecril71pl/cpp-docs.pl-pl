@@ -143,24 +143,24 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: ab478cd8ac51b5cb88cec38f80541df8a7be2789
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 15b70b0292f671d99b320c8d23598e68b47adb0d
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222283"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273818"
 ---
 # <a name="predefined-macros"></a>Wstępnie zdefiniowane makra
 
 Kompilator Microsoft C/C++ COMPILER (MSVC) wstępnie definiuje niektóre makra preprocesora, w zależności od języka (C lub C++), elementu docelowego kompilacji i wybranych opcji kompilatora.
 
-Program MSVC obsługuje wstępnie zdefiniowane makra preprocesora wymagane przez standard ANSI/ISO C99 i standardy ISO C++ 14 i C++ 17. Implementacja obsługuje również kilka innych makr preprocesora specyficznych dla firmy Microsoft. Niektóre makra są definiowane tylko dla określonych środowisk kompilacji lub opcji kompilatora. Poza tym, gdzie zaznaczono, makra są definiowane w całej jednostce tłumaczenia tak, jakby były określone jako argumenty opcji kompilatora. Po zdefiniowaniu makra są rozwijane do określonych wartości przez preprocesor przed kompilacją. Wstępnie zdefiniowane makra nie przyjmują argumentów i nie można ich ponownie zdefiniować.
+Program MSVC obsługuje wstępnie zdefiniowane makra preprocesora wymagane przez standard ANSI/ISO C99 i standardy ISO C++ 14 i C++ 17. Implementacja obsługuje również kilka innych makr preprocesora specyficznych dla firmy Microsoft. Niektóre makra są definiowane tylko dla określonych środowisk kompilacji lub opcji kompilatora. Poza tym, gdzie zaznaczono, makra są definiowane w całej jednostce tłumaczenia tak, jakby były określone jako argumenty **opcji kompilatora.** Po zdefiniowaniu makra są rozwijane do określonych wartości przez preprocesor przed kompilacją. Wstępnie zdefiniowane makra nie przyjmują argumentów i nie można ich ponownie zdefiniować.
 
 ## <a name="standard-predefined-identifier"></a>Standardowy wstępnie zdefiniowany identyfikator
 
 Kompilator obsługuje ten wstępnie zdefiniowany identyfikator określony przez ISO C99 i ISO C++ 11.
 
-- **&#95;&#95; funkcja &#95;Func** Niekwalifikowana i niezamodyfikowana nazwa funkcji otaczającej jako statyczna tablica **stałych** funkcji **char**.
+- **&#95;&#95; funkcja &#95;Func** Niekwalifikowana i niezamodyfikowana nazwa funkcji otaczającej jako **statyczna tablica stałych** funkcji **char**.
 
     ```cpp
     void example(){
@@ -182,7 +182,7 @@ Kompilator obsługuje te wstępnie zdefiniowane makra określone przez standardy
 
 - **&#95; STDC &#95; &#95;** Zdefiniowane jako 1 tylko w przypadku skompilowania jako C i jeśli określono opcję kompilatora [/za](../build/reference/za-ze-disable-language-extensions.md) . W przeciwnym razie, niezdefiniowany.
 
-- **&#95;&#95;STDC&#95;&#95; hostowane** jako 1, jeśli implementacja jest *implementacją hostowaną*, która obsługuje całą wymaganą bibliotekę standardową. W przeciwnym razie zdefiniowane jako 0.
+- **&#95;&#95;STDC&#95;hostowane&#95;**  jako 1, jeśli implementacja jest *implementacją hostowaną*, która obsługuje całą wymaganą bibliotekę standardową. W przeciwnym razie zdefiniowane jako 0.
 
 - **&#95;&#95;STDCPP&#95;wątki&#95;**  zdefiniowane jako 1 i tylko wtedy, gdy program może mieć więcej niż jeden wątek wykonywania i skompilowany jako C++. W przeciwnym razie, niezdefiniowany.
 
@@ -302,7 +302,7 @@ Program MSVC obsługuje te dodatkowe wstępnie zdefiniowane makra.
    }
    ```
 
-- **&#95;&#95; Funkcja &#95;INTELLISENSE** Zdefiniowane jako 1 podczas przejścia kompilatora IntelliSense do środowiska IDE programu Visual Studio. W przeciwnym razie, niezdefiniowany. Możesz użyć tego makra do zabezpieczenia kodu kompilator IntelliSense nie rozpoznaje lub użyć go do przełączania między kompilatorem kompilowania i IntelliSense. Aby uzyskać więcej informacji, zobacz [wskazówki dotyczące rozwiązywania problemów dotyczących](https://devblogs.microsoft.com/cppblog/troubleshooting-tips-for-intellisense-slowness/)niespowolnienia funkcji IntelliSense.
+- **&#95;&#95; Funkcja &#95;INTELLISENSE** Zdefiniowane jako 1 podczas przejścia kompilatora IntelliSense do środowiska IDE programu Visual Studio. W przeciwnym razie, niezdefiniowany. Możesz użyć tego makra do zabezpieczenia kodu kompilator IntelliSense nie rozpoznaje lub użyć go do przełączania między kompilatorem kompilowania i IntelliSense. Aby uzyskać więcej informacji, zobacz [wskazówki dotyczące rozwiązywania problemów dotyczących Niespowolnienia funkcji IntelliSense](https://devblogs.microsoft.com/cppblog/troubleshooting-tips-for-intellisense-slowness/).
 
 - **&#95;ISO&#95;VOLATILE** zdefiniowany jako 1, jeśli opcja kompilatora [/volatile: ISO](../build/reference/volatile-volatile-keyword-interpretation.md) jest ustawiona. W przeciwnym razie, niezdefiniowany.
 
@@ -385,7 +385,7 @@ Program MSVC obsługuje te dodatkowe wstępnie zdefiniowane makra.
    |Visual Studio 2019 w wersji 16,2|1922|
    |Visual Studio 2019 w wersji 16,3|1923|
 
-   Aby przetestować wersje kompilatora lub aktualizacje w danej wersji programu Visual Studio lub później, użyj **>=** operatora. Można jej użyć w dyrektywie warunkowej w celu porównania  **&#95;&#95;** z tą znaną wersją. Jeśli masz kilka wzajemnie wykluczających się wersji do porównania, Porządkuj porównania w kolejności malejącej według numeru wersji. Na przykład ten kod sprawdza kompilatory wydane w programie Visual Studio 2017 i nowszych. Następnie sprawdza kompilatory opublikowane w programie lub po nim w programie Visual Studio 2015. Następnie sprawdza wszystkie kompilatory wydane przed Visual Studio 2015:
+   Aby przetestować wersje kompilatora lub aktualizacje w danej wersji programu Visual Studio lub później, użyj **>=** operatora. Można jej użyć w dyrektywie warunkowej w  **&#95;celu porównania&#95;z** tą znaną wersją. Jeśli masz kilka wzajemnie wykluczających się wersji do porównania, Porządkuj porównania w kolejności malejącej według numeru wersji. Na przykład ten kod sprawdza kompilatory wydane w programie Visual Studio 2017 i nowszych. Następnie sprawdza kompilatory opublikowane w programie lub po nim w programie Visual Studio 2015. Następnie sprawdza wszystkie kompilatory wydane przed Visual Studio 2015:
 
    ```cpp
    #if _MSC_VER >= 1910
@@ -402,6 +402,16 @@ Program MSVC obsługuje te dodatkowe wstępnie zdefiniowane makra.
 - **&#95;MSVC&#95;lang** zdefiniowany jako literał liczby całkowitej, który określa C++ Standard języka wskazywany przez kompilator. Jest ono ustawiane tylko w kodzie skompilowanym jako C++. Makro jest wartością literału liczb całkowitych 201402L domyślnie lub kiedy określono opcję kompilatora [/std: c++ 14](../build/reference/std-specify-language-standard-version.md) . Makro jest ustawione na 201703L, jeśli określono opcję kompilatora [/std: c++ 17](../build/reference/std-specify-language-standard-version.md) . Jest ona ustawiona na wyższą, nieokreśloną wartość, gdy jest określona opcja [/std: c + +](../build/reference/std-specify-language-standard-version.md) . W przeciwnym razie makro jest niezdefiniowane. **&#95;MSVC&#95;LANG** — makro i [/STD (Określ wersję standardu języka)](../build/reference/std-specify-language-standard-version.md) opcje kompilatora są dostępne począwszy od wersji programu Visual Studio 2015 Update 3.
 
 - **&#95;&#95;Testy&#95;środowiska&#95;uruchomieniowego MSVC** zdefiniowane jako 1 po ustawieniu jednej z opcji kompilatora [/RTC](../build/reference/rtc-run-time-error-checks.md) . W przeciwnym razie, niezdefiniowany.
+
+- **&#95;MSVC&#95;tradycyjnie** zdefiniowany jako 0 w trybie zgodności preprocesora [/Experimental: opcja kompilatora preprocesora](../build/reference/rtc-run-time-error-checks.md) jest ustawiona. Domyślnie zdefiniowane jako 1 lub gdy jest ustawiona opcja ["/Experimental: preprocesor-kompilator"](../build/reference/rtc-run-time-error-checks.md) , aby wskazać, że tradycyjny preprocesor jest używany. MSVC tradycyjne makro i [/Experimental: preprocesor (Włącz tryb zgodności preprocesora)](../build/reference/experimental-preprocessor.md) jest dostępny w programie Visual Studio 2017 w wersji 15,8.  **&#95;&#95;**
+
+   ```cpp
+   #if defined(_MSVC_TRADITIONAL) && _MSVC_TRADITIONAL
+   // Logic using the traditional preprocessor
+   #else
+   // Logic using cross-platform compatible preprocessor
+   #endif
+   ```
 
 - **&#95;MT** Zdefiniowane jako 1, jeśli określono [/MD lub/MDD](../build/reference/md-mt-ld-use-run-time-library.md) (WIELOWĄTKOWA Biblioteka DLL) lub [/MT lub/MTD](../build/reference/md-mt-ld-use-run-time-library.md) (wielowątkowy). W przeciwnym razie, niezdefiniowany.
 

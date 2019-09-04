@@ -6,59 +6,59 @@ helpviewer_keywords:
 - testing projects
 - projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-ms.openlocfilehash: c170deef8bf76bdd223bde01794f8996dc77922d
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: e0422b4f862b5438a313e25dac421d591bbbb9a5
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400938"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273698"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>Przewodnik: Testowanie projektu (C++)
 
-Jeśli program jest uruchomiony w trybie debugowania, można użyć punktów przerwania, aby zatrzymać program i przeanalizować stan zmiennych i obiektów.
+Gdy uruchamiasz program w trybie debugowania, możesz użyć punktów przerwania, aby wstrzymać program do sprawdzenia stanu zmiennych i obiektów.
 
-W tym przewodniku oglądać wartości zmiennej po uruchomieniu programu i wywnioskować, dlatego wartość nie jest, czego oczekiwać.
+W tym instruktażu Oglądasz wartość zmiennej w trakcie działania programu i ustalamy, dlaczego wartość nie jest oczekiwana.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- W tym przewodniku przyjęto założenie, że rozumiesz podstawy języka C++.
+- W tym instruktażu założono, że rozumiesz podstawy C++ języka.
 
-- Przyjęto również założenie, że zostały wykonane wcześniej pokrewne instruktaże, które są wymienione w [przy użyciu programu Visual Studio IDE dla programowanie aplikacji klasycznych w języku C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
+- Przyjęto również założenie, że zostały wykonane wcześniejsze powiązane instruktaże, które są wymienione w temacie [Korzystanie z programu C++ Visual Studio IDE do tworzenia aplikacji klasycznych](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
 ### <a name="to-run-a-program-in-debug-mode"></a>Aby uruchomić program w trybie debugowania
 
-1. Games.cpp należy otworzyć do edycji.
+1. Otwórz grę Games. cpp do edycji.
 
-1. Wybierz ten wiersz kodu:
+1. Zaznacz ten wiersz kodu:
 
-   `Cardgame.solitaire(1);`
+   `Cardgame solitaire(1);`
 
-1. Aby ustawić punkt przerwania w danym wierszu, na pasku menu wybierz **debugowania** > **Przełącz punkt przerwania**, lub wybierz **F9** klucza. Czerwony okrąg pojawia się na lewo od linii; oznacza to, że punkt przerwania jest ustawiony. Aby usunąć punkt przerwania, możesz wybrać polecenie menu lub **F9** klucza ponownie.
+1. Aby ustawić punkt przerwania w tym wierszu, na pasku menu wybierz **Debuguj** > **Przełącz punkt przerwania**lub wybierz klawisz **F9** . Czerwony okrąg pojawia się na lewo od wiersza; wskazuje, że punkt przerwania jest ustawiony. Aby usunąć punkt przerwania, możesz ponownie wybrać polecenie menu lub klawisz **F9** .
 
-   Jeśli używasz myszy, możesz również ustawić lub usunąć punkt przerwania, klikając w lewy margines.
+   Jeśli używasz myszy, możesz również ustawić lub usunąć punkt przerwania, klikając na lewym marginesie.
 
-1. Na pasku menu wybierz **debugowania** > **Rozpocznij debugowanie**, lub wybierz **F5** klucza.
+1. Na pasku menu wybierz **Debuguj** > **Rozpocznij debugowanie**lub wybierz klawisz **F5** .
 
-   Kiedy program osiąga linię, która posiada punkt przerwania, wykonanie czasowo się zatrzymuje, ponieważ Twój program jest w trybie przerwania. Żółta strzałka w lewo od linii kodu wskazuje następny wiersz ma być wykonywane.
+   Gdy program osiągnie wiersz z punktem przerwania, wykonywanie jest tymczasowo zatrzymane, ponieważ program jest w trybie przerwania. Żółta strzałka z lewej strony wiersza kodu wskazuje, że jest to kolejny wiersz, który ma zostać wykonany.
 
-1. Aby sprawdzić wartość `Cardgame::totalParticipants` zmiennej, przesuń wskaźnik nad `Cardgame` i przenieś ją nad kontrolką rozciągania po lewej stronie okna etykiety narzędzi. Nazwa zmiennej `totalParticipants` i jego wartość **12** są wyświetlane.
+1. Aby przeanalizować wartość `Cardgame::totalParticipants` zmiennej, przesuń wskaźnik myszy nad `Cardgame` kontrolkę ekspansja po lewej stronie okna etykietki narzędzi. Wyświetlana jest nazwa `totalParticipants` zmiennej i jej wartość **12** .
 
-   Otwórz menu skrótów dla `Cardgame::totalParticipants` zmiennej, a następnie wybierz **Dodaj czujkę** Aby wyświetlić tę zmienna w **Czujka 1** okna. Możesz również wyróżnić zmienną i przeciągnij ją do **Czujka 1** okna.
+   Otwórz menu skrótów dla `Cardgame::totalParticipants` zmiennej, a następnie wybierz polecenie **Dodaj czujkę** , aby wyświetlić tę zmienną w oknie **czujka 1** . Możesz również zaznaczyć zmienną i przeciągnąć ją do okna **czujka 1** .
 
-1. Aby przejść do następnego wiersza kodu, na pasku menu wybierz **debugowania** > **Step Over**, lub wybierz **F10** klucza.
+1. Aby przejść do następnego wiersza kodu, na pasku menu wybierz polecenie **Debuguj** > **krok przekroczenia**lub wybierz klawisz **F10** .
 
-   Wartość `Cardgame::totalParticipants` w **Czujka 1** okna jest teraz wyświetlany jako **13**.
+   Wartość `Cardgame::totalParticipants` w oknie **czujka 1** jest teraz wyświetlana jako **13**.
 
-1. Otwórz menu skrótów dla `return 0;` instrukcji, a następnie wybierz **Uruchom do kursora**. Żółta strzałka po lewej stronie kodu wskazuje na następną instrukcję do wykonania.
+1. Otwórz menu skrótów dla `return 0;` instrukcji, a następnie wybierz polecenie **Uruchom do kursora**. Żółta strzałka z lewej strony kodu wskazuje następną instrukcję do wykonania.
 
-1. `Cardgame::totalParticipants` Kiedy Zmniejsz liczbę `Cardgame` kończy. W tym momencie `Cardgame::totalParticipants` powinna być równa 0, ponieważ wszystkie `Cardgame` wystąpienia zostały usunięte, ale **Czujka 1** okno wskazuje, że `Cardgame::totalparticipants` jest równa **18**. Różnica wskazuje, że jest to błąd w kodzie, w którym można wykryć i naprawić poprzez wypełnienie poniższych wskazówek, [instruktażu: Debugowanie projektu (C++)](../ide/walkthrough-debugging-a-project-cpp.md).
+1. Liczba `Cardgame::totalParticipants` powinna się zmniejszyć `Cardgame` po zakończeniu. `Cardgame::totalParticipants` W tym momencie powinna być równa 0, `Cardgame` ponieważ wszystkie wystąpienia zostały usunięte, ale okno **czujki 1** wskazuje `Cardgame::totalparticipants` , że jest równe **18**. Różnica wskazuje, że w kodzie znajduje się usterka, którą można wykryć i naprawić, wykonując kolejne instruktaże, [Przewodnik: Debugowanie projektu (](../ide/walkthrough-debugging-a-project-cpp.md)C++).
 
-1. Aby zatrzymać program, na pasku menu, wybierz opcję **debugowania** > **Zatrzymaj debugowanie**, lub wybierz **Shift**+**F5**skróty klawiaturowe.
+1. Aby zatrzymać program, na pasku menu wybierz **debugowanie** > **Zatrzymaj debugowanie**lub wybierz skrót klawiaturowy **SHIFT**+**F5** .
 
 ## <a name="next-steps"></a>Następne kroki
 
-**Poprzednie:** [Przewodnik: Tworzenie projektu (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
-**Dalej:** [Przewodnik: Debugowanie projektu (C++)](../ide/walkthrough-debugging-a-project-cpp.md)
+**Ubiegł** [Przewodnik: Tworzenie projektu (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
+**Ponown** [Przewodnik: Debugowanie projektu (C++)](../ide/walkthrough-debugging-a-project-cpp.md)
 
 ## <a name="see-also"></a>Zobacz także
 

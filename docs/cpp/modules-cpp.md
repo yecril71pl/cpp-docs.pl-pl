@@ -1,18 +1,18 @@
 ---
-title: Przegląd modułów w programieC++
+title: Omówienie modułów w języku C++
 ms.date: 07/23/2019
 helpviewer_keywords:
 - modules [C++]
 - modules [C++], overview
 description: Moduły w języku C++ 20 zapewniają nowoczesne alternatywy dla plików nagłówkowych.
-ms.openlocfilehash: 84683d9c4b0e1a514b17883b89c58488b9879edb
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: 17495aa3e295b26fcfa5c489ff6793bb75d13d68
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537771"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273672"
 ---
-# <a name="overview-of-modules-in-c"></a>Przegląd modułów w programieC++
+# <a name="overview-of-modules-in-c"></a>Omówienie modułów w języku C++
 
 C++ 20 wprowadza *moduły*, nowoczesne rozwiązanie do componentization C++ bibliotek i programów. Moduł jest zestawem plików kodu źródłowego, które są kompilowane niezależnie od [jednostek translacji](https://wikipedia.org/wiki/Translation_unit_(programming)) , które je zaimportują. Moduły eliminują lub znacznie zmniejszają wiele problemów związanych z użyciem plików nagłówkowych, a także mogą skrócić czas kompilacji. Makra, dyrektywy preprocesora i nieeksportowane nazwy zadeklarowane w module nie są widoczne i nie mają wpływu na kompilację jednostki tłumaczenia, która importuje moduł. Moduły można importować w dowolnej kolejności bez obaw o ponowne zdefiniowanie makr. Deklaracje w importującej jednostce translacji nie uczestniczą w rozpoznaniu przeciążenia lub wyszukiwaniu nazw w importowanym module. Po skompilowaniu modułu raz, wyniki są przechowywane w pliku binarnym, który opisuje wszystkie eksportowane typy, funkcje i szablony. Ten plik może być przetwarzany znacznie szybciej niż plik nagłówka i może być ponownie używany przez kompilator w każdym miejscu, w którym zaimportowano moduł do projektu.
 
@@ -20,7 +20,7 @@ Moduły mogą być używane obok plików nagłówkowych. Plik C++ źródłowy mo
 
 ## <a name="enable-modules-in-the-microsoft-c-compiler"></a>Włączanie modułów w kompilatorze C++ Microsoft
 
-W programie Visual Studio 2019 w wersji 16,2 moduły nie są w pełni zaimplementowane w kompilatorze firmy Microsoft C++ . Za pomocą funkcji modułów można tworzyć moduły z jedną partycją i importować moduły biblioteki standardowej udostępniane przez firmę Microsoft. Aby włączyć obsługę modułów, skompiluj z `/experimental:modules` i. `/std:c++latest` W projekcie programu Visual Studio kliknij prawym przyciskiem myszy węzeł projektu w **Eksplorator rozwiązań** i wybierz polecenie **Właściwości**. Ustaw listę rozwijaną **Konfiguracja** na **wszystkie konfiguracje**, a następnie wybierz pozycję **Właściwości** > konfiguracji**CC++/**  > **Języki** >  **C++ Włącz moduły ( eksperymentalne)** .
+W programie Visual Studio 2019 w wersji 16,2 moduły nie są w pełni zaimplementowane w kompilatorze firmy Microsoft C++ . Za pomocą funkcji modułów można tworzyć moduły z jedną partycją i importować moduły biblioteki standardowej udostępniane przez firmę Microsoft. Aby włączyć obsługę modułów, skompiluj z [/Experimental: module](../build/reference/experimental-module.md) i [/std: c + + Najnowsza](../build/reference/std-specify-language-standard-version.md). W projekcie programu Visual Studio kliknij prawym przyciskiem myszy węzeł projektu w **Eksplorator rozwiązań** i wybierz polecenie **Właściwości**. Ustaw listę rozwijaną **Konfiguracja** na **wszystkie konfiguracje**, a następnie wybierz pozycję **Właściwości** > konfiguracji**CC++/**  > **Języki** >  **C++ Włącz moduły ( eksperymentalne)** .
 
 Moduł i kod, który go zużywa, muszą być kompilowane z tymi samymi opcjami kompilatora.
 
@@ -34,7 +34,7 @@ Mimo że nie jest to określone przez standard C++ 20, firma Microsoft umożliwi
 - \<STD. Threading udostępnia zawartość nagłówków > niepodzielne, \<condition_variable >, \<przyszłe >, \<mutex > \<, shared_mutex > i \<wątku >
 - STD. Core zapewnia wszystkie inne elementy w C++ standardowej bibliotece
 
-Aby korzystać z tych modułów, po prostu Dodaj instrukcję import na początku pliku kodu źródłowego. Przykład:
+Aby korzystać z tych modułów, po prostu Dodaj instrukcję import na początku pliku kodu źródłowego. Na przykład:
 
 ```cpp
 import std.core;
