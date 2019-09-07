@@ -8,17 +8,17 @@ helpviewer_keywords:
 - uuid __declspec keyword
 ms.assetid: 9d004621-09bc-4a8d-871b-648f5d5102d7
 ms.openlocfilehash: c121ad99dfbe0021a263f324ccdb9a95441bba33
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511660"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740464"
 ---
 # <a name="uuid-c"></a>uuid (C++)
 
 **Microsoft Specific**
 
-Kompilator dołącza identyfikator GUID do klasy lub struktury zadeklarowane lub zdefiniowane (pełna COM definicje obiektów tylko) za pomocą **uuid** atrybutu.
+Kompilator dołącza identyfikator GUID do klasy lub struktury zadeklarowanej lub zdefiniowanej (tylko pełne definicje obiektów COM) przy użyciu atrybutu **UUID** .
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,18 +28,18 @@ __declspec( uuid("ComObjectGUID") ) declarator
 
 ## <a name="remarks"></a>Uwagi
 
-**Uuid** atrybut przyjmuje ciąg jako argumentem. Ten ciąg nazwy identyfikatora GUID w formacie normalne rejestru z lub bez **{}** ograniczników. Na przykład:
+Atrybut **UUID** przyjmuje ciąg jako argument. Ten ciąg Określa identyfikator GUID w normalnym formacie rejestru z ogranicznikami **{}** lub bez nich. Przykład:
 
 ```cpp
 struct __declspec(uuid("00000000-0000-0000-c000-000000000046")) IUnknown;
 struct __declspec(uuid("{00020400-0000-0000-c000-000000000046}")) IDispatch;
 ```
 
-Ten atrybut można stosować w ponowna deklaracja. Dzięki temu nagłówki systemu, aby dostarczyć definicje interfejsów, takich jak `IUnknown`i ponowna deklaracja niektórych innych nagłówka (takie jak \<comdef.h >) umożliwiają określanie wartości identyfikatora GUID.
+Ten atrybut może być stosowany w ponownej deklaracji. Dzięki temu nagłówki systemowe mogą podawać definicje interfejsów, takich jak `IUnknown`, i ponowna deklaracja w innym nagłówku (na \<przykład comdef. h >), aby podać identyfikator GUID.
 
-Słowo kluczowe [__uuidof](../cpp/uuidof-operator.md) mogą być stosowane do pobrania — stała identyfikator GUID jest dołączony do typu zdefiniowanego przez użytkownika.
+Za pomocą słowa kluczowego [__uuidof](../cpp/uuidof-operator.md) można zastosować do pobrania stałego identyfikatora GUID dołączonego do typu zdefiniowanego przez użytkownika.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

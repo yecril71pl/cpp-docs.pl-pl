@@ -2,16 +2,16 @@
 title: Tworzenie aplikacji i bibliotek (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: ec2821a5-3479-4e64-9c2d-c777049f2cdc
-ms.openlocfilehash: d31b917a4f082d9c9eee41c23a79ce5ed1aa9f4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b12b294d4d881df5ce4c4cbea2f3f76476e80090
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257936"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740367"
 ---
 # <a name="building-apps-and-libraries-ccx"></a>Tworzenie aplikacji i bibliotek (C++/CX)
 
-W tematach w tej sekcji przedstawiono kilka informacji na temat używania systemu kompilacji do tworzenia aplikacji uniwersalnych platformy Windows lub składnik środowiska wykonawczego Windows.
+Tematy w tej sekcji zawierają kilka szczegółowych informacji o korzystaniu z systemu kompilacji do tworzenia aplikacji platforma uniwersalna systemu Windows lub środowisko wykonawcze systemu Windows składnika.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
@@ -21,4 +21,5 @@ W tematach w tej sekcji przedstawiono kilka informacji na temat używania system
 
 - [Biblioteki DLL](../cppcx/dlls-c-cx.md)
 
-Uwaga: Wizualne C++ nie obsługuje optymalizacje profilowe z przewodnikiem dla platformy uniwersalnej Windows. Próba skompilowania projektu po ustawieniu tych opcji w środowisku IDE spowoduje wystąpienie błędu kompilacji. Aplikacje konsoli nie są również obsługiwane.
+>[!NOTE]
+>Program Visual Studio nie obsługuje optymalizacji profilowanej dla platforma uniwersalna systemu Windows. Próba skompilowania projektu po ustawieniu tych opcji w środowisku IDE spowoduje wystąpienie błędu kompilacji. Aplikacje konsolowe nie są również obsługiwane.

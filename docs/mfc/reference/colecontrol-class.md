@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 14a195b22c2b26ee0180c68741fab623623fc36e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 97c605426ed0ac869714f0f83d4957f7f6ce7d87
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504750"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741398"
 ---
 # <a name="colecontrol-class"></a>Klasa COleControl
 
@@ -1540,7 +1540,7 @@ short GetAppearance ();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość zwracana określa bieżące ustawienie wyglądu jako krótką ( VT_I2) wartość, jeśli powodzenie. Ta wartość jest równa zero, jeśli wygląd kontrolki jest płaski i 1, jeśli wygląd formantu to 3D.
+Wartość zwracana określa bieżące ustawienie wyglądu jako **krótką** (VT_I2) wartość, jeśli powodzenie. Ta wartość jest równa zero, jeśli wygląd kontrolki jest płaski i 1, jeśli wygląd formantu to 3D.
 
 ##  <a name="getbackcolor"></a>COleControl::GetBackColor
 
@@ -1582,7 +1582,7 @@ W przeciwnym razie zwraca `CWnd` obiekt, który ma przechwycenie myszy ( `CWnd::
 
 ### <a name="remarks"></a>Uwagi
 
-Uaktywniona kontrolka bez okien odbiera przechwytywanie myszy po [](#setcapture) wywołaniu metody setcapture.
+Uaktywniona kontrolka bez okien odbiera przechwytywanie myszy po wywołaniu metody [setcapture](#setcapture) .
 
 ##  <a name="getclassid"></a>COleControl:: GetClassID
 
@@ -1792,7 +1792,7 @@ W przeciwnym razie zwraca `CWnd` obiekt, który ma fokus (taki sam `CWnd::GetFoc
 
 ### <a name="remarks"></a>Uwagi
 
-Uaktywniona kontrolka bez okien otrzymuje fokus, [](#setfocus) gdy jest wywoływana funkcja SetFocus.
+Uaktywniona kontrolka bez okien otrzymuje fokus, gdy jest wywoływana funkcja [SetFocus](#setfocus) .
 
 ##  <a name="getfont"></a>COleControl:: GetFont
 
@@ -1989,7 +1989,7 @@ Wskaźnik do `IDropTarget` interfejsu obiektu. Ponieważ nie ma okna, obiekt bez
 
 ### <a name="remarks"></a>Uwagi
 
-Zwykle jest to wymagane, aby okno kontrolki było rejestrowane jako miejsce docelowe upuszczania. Ale ponieważ kontrolka nie ma własnego okna, Kontener użyje własnego okna jako elementu docelowego upuszczania. Formant po prostu musi dostarczyć implementację `IDropTarget` interfejsu, do którego kontener może delegować wywołania w odpowiednim czasie. Przykład:
+Zwykle jest to wymagane, aby okno kontrolki było rejestrowane jako miejsce docelowe upuszczania. Ale ponieważ kontrolka nie ma własnego okna, Kontener użyje własnego okna jako elementu docelowego upuszczania. Formant po prostu musi dostarczyć implementację `IDropTarget` interfejsu, do którego kontener może delegować wywołania w odpowiednim czasie. Na przykład:
 
 [!code-cpp[NVC_MFCAxCtl#2](../../mfc/reference/codesnippet/cpp/colecontrol-class_3.cpp)]
 
@@ -2448,7 +2448,7 @@ Niezerowe, jeśli wywołanie zakończyło się pomyślnie; w przeciwnym razie 0.
 
 Ma to taki sam efekt jak wywołanie czasownika OLEIVERB_UIACTIVATE kontrolki.
 
-Ta funkcja jest zwykle używana jako funkcja obsługi dla wpisu mapy komunikatów ON_OLEVERB. Powoduje to, że zlecenie "Edit" jest dostępne w menu "Object" kontrolki. Na przykład:
+Ta funkcja jest zwykle używana jako funkcja obsługi dla wpisu mapy komunikatów ON_OLEVERB. Powoduje to, że zlecenie "Edit" jest dostępne w menu "Object" kontrolki. Przykład:
 
 [!code-cpp[NVC_MFCAxCtl#5](../../mfc/reference/codesnippet/cpp/colecontrol-class_6.cpp)]
 
@@ -3178,7 +3178,7 @@ virtual BOOL OnRenderData(
 Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) , określając format, w którym informacje są żądane.
 
 *lpStgMedium*<br/>
-Wskazuje strukturę [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) , w której mają zostać zwrócone dane.
+Wskazuje strukturę [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) , w której mają zostać zwrócone dane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -3301,7 +3301,7 @@ virtual BOOL OnSetData(
 Wskaźnik do struktury [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) , który określa format danych.
 
 *lpStgMedium*<br/>
-Wskaźnik do struktury [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) , w której znajdują się dane.
+Wskaźnik do struktury [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) , w której znajdują się dane.
 
 *bRelease*<br/>
 PRAWDA, jeśli formant powinien zwolnić nośnik magazynu; Wartość FALSE, jeśli formant nie powinien zwalniać nośnika magazynu.
@@ -3427,7 +3427,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Przetwarza komunikaty okna dla kontrolek bez okien. `COleControl``OnWindowlessMessage` należy używać w przypadku komunikatów okna innych niż komunikaty myszy i komunikaty z klawiatury. `COleControl`udostępnia [](#setcapture) funkcję setcapture i SetFocus w celu uzyskania funkcji przechwytywania myszy i fokusu klawiatury dla obiektów OLE bez okien. [](#setfocus)
+Przetwarza komunikaty okna dla kontrolek bez okien. `COleControl``OnWindowlessMessage` należy używać w przypadku komunikatów okna innych niż komunikaty myszy i komunikaty z klawiatury. `COleControl`udostępnia funkcję [setcapture](#setcapture) i [SetFocus](#setfocus) w celu uzyskania funkcji przechwytywania myszy i fokusu klawiatury dla obiektów OLE bez okien.
 
 Ponieważ obiekty bez okien nie mają okna, muszą one mieć mechanizm zezwalający na wysyłanie komunikatów do kontenera. Obiekt OLE bez okien pobiera komunikaty z kontenera za pośrednictwem `OnWindowMessage` metody `IOleInPlaceObjectWindowless` interfejsu (rozszerzenie [IOleInPlaceObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject) do obsługi bez okien). `OnWindowMessage`nie przyjmuje `HWND` parametru.
 

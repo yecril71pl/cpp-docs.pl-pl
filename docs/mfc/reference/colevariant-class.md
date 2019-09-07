@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: 0676f4896401ab777570666236c4639ad94c3a05
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 49cd4a8d3db436d5e3c4d29efbb4d80b4741a270
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503050"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739790"
 ---
 # <a name="colevariant-class"></a>Klasa COleVariant
 
@@ -68,14 +68,14 @@ class COleVariant : public tagVARIANT
 
 ## <a name="remarks"></a>Uwagi
 
-Ten typ danych jest używany w automatyzacji OLE. Struktura [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-tagdispparams) zawiera wskaźnik do tablicy struktur wariantów. Struktura służy do przekazywania parametrów do elementu [IDispatch:: Invoke.](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) `DISPPARAMS`
+Ten typ danych jest używany w automatyzacji OLE. Struktura [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-dispparams) zawiera wskaźnik do tablicy struktur wariantów. Struktura służy do przekazywania parametrów do elementu [IDispatch:: Invoke.](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) `DISPPARAMS`
 
 > [!NOTE]
 > Ta klasa jest pochodną `VARIANT` struktury. Oznacza to, że można przekazać `COleVariant` do parametru, który wywołuje `VARIANT` dla a i że elementy członkowskie `VARIANT` danych struktury są dostępnymi elementami członkowskimi `COleVariant`danych.
 
 Dwie powiązane klasy MFC [COleCurrency](../../mfc/reference/colecurrency-class.md) i [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) hermetyzują typy danych Variant Currency ( `VT_CY`) i Date ( `VT_DATE`). Klasa jest używana w szerokim stopniu w klasach DAO; Zobacz te klasy, aby uzyskać typowy sposób użycia tej klasy, na przykład [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) i [CDaoRecordset.](../../mfc/reference/cdaorecordset-class.md) `COleVariant`
 
-Aby uzyskać więcej informacji, zobacz wpisy [Variant](/windows/win32/api/oaidl/ns-oaidl-variant), [Currency](/windows/win32/api/wtypes/ns-wtypes-cy), [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-tagdispparams)i [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz wpisy [Variant](/windows/win32/api/oaidl/ns-oaidl-variant), [Currency](/windows/win32/api/wtypes/ns-wtypes-cy~r1), [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-dispparams)i [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) w Windows SDK.
 
 Aby uzyskać więcej informacji na `COleVariant` temat klasy i jej użycia w automatyzacji OLE, zobacz "przekazywanie parametrów w automatyzacji OLE" w temacie [Automatyzacja](../../mfc/automation.md)artykułu.
 

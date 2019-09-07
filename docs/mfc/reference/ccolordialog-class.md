@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CColorDialog [MFC], OnColorOK
 - CColorDialog [MFC], m_cc
 ms.assetid: d013dc25-9290-4b5d-a97e-95ad7208e13b
-ms.openlocfilehash: 3031b1e5870dd7f59af7adf48a6a77aaccdf53fc
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f5c235008b72996424e01ee912ca78ecffab450a
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507198"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741573"
 ---
 # <a name="ccolordialog-class"></a>Klasa CColorDialog
 
@@ -72,7 +72,7 @@ class CColorDialog : public CCommonDialog
 
 Aby skonstruować `CColorDialog` obiekt, użyj dostarczonego konstruktora lub Utwórz nową klasę i użyj własnego konstruktora niestandardowego.
 
-Po skonstruowaniu okna dialogowego można ustawić lub zmodyfikować wszystkie wartości w strukturze [m_cc](#m_cc) , aby zainicjować wartości kontrolek okna dialogowego. Struktura *m_cc* jest typu [chooseColor](/windows/win32/api/commdlg/ns-commdlg-choosecolorw).
+Po skonstruowaniu okna dialogowego można ustawić lub zmodyfikować wszystkie wartości w strukturze [m_cc](#m_cc) , aby zainicjować wartości kontrolek okna dialogowego. Struktura *m_cc* jest typu [chooseColor](/windows/win32/api/commdlg/ns-commdlg-choosecolora~r1).
 
 Po zainicjowaniu kontrolek okna dialogowego Wywołaj `DoModal` funkcję członkowską, aby wyświetlić okno dialogowe i umożliwić użytkownikowi wybranie koloru. `DoModal`zwraca wybór użytkownika okna dialogowego OK (IDOK) lub przycisk Anuluj (IDCANCEL).
 
@@ -126,7 +126,7 @@ CColorDialog(
 Domyślny wybór koloru. Jeśli żadna wartość nie zostanie określona, wartością domyślną jest RGB (0, 0, 0) (czerń).
 
 *flagiDW*<br/>
-Zestaw flag, które dostosowują funkcję i wygląd okna dialogowego. Aby uzyskać więcej informacji, zapoznaj się ze strukturą [chooseColor](/windows/win32/api/commdlg/ns-commdlg-choosecolorw) w Windows SDK.
+Zestaw flag, które dostosowują funkcję i wygląd okna dialogowego. Aby uzyskać więcej informacji, zapoznaj się ze strukturą [chooseColor](/windows/win32/api/commdlg/ns-commdlg-choosecolora~r1) w Windows SDK.
 
 *pParentWnd*<br/>
 Wskaźnik do okna dialogowego nadrzędnego lub właściciela.
@@ -199,7 +199,7 @@ Każda z 16 wartości RGB w zwróconej tablicy jest inicjowana do RGB (255255255
 
 ##  <a name="m_cc"></a>CColorDialog::m_cc
 
-Struktura typu [chooseColor](/windows/win32/api/commdlg/ns-commdlg-choosecolorw), której członkowie przechowują cechy i wartości okna dialogowego.
+Struktura typu [chooseColor](/windows/win32/api/commdlg/ns-commdlg-choosecolora~r1), której członkowie przechowują cechy i wartości okna dialogowego.
 
 ```
 CHOOSECOLOR m_cc;
@@ -239,7 +239,7 @@ Zastępowanie `OnColorOK` pozwala odrzucić kolor wprowadzony przez użytkownika
 
 Zwykle nie trzeba używać tej funkcji, ponieważ struktura zapewnia domyślną weryfikację kolorów i wyświetla okno komunikatu, jeśli wprowadzono nieprawidłowy kolor.
 
-Możesz wywołać [SetCurrentColor](#setcurrentcolor) z wewnątrz `OnColorOK` , aby wymusić wybór koloru. Po `OnColorOK` uruchomieniu (oznacza to, że użytkownik klika **przycisk OK** , aby zaakceptować zmianę koloru), można wywołać metodę GetColor, aby uzyskać wartość RGB nowego koloru. [](#getcolor)
+Możesz wywołać [SetCurrentColor](#setcurrentcolor) z wewnątrz `OnColorOK` , aby wymusić wybór koloru. Po `OnColorOK` uruchomieniu (oznacza to, że użytkownik klika **przycisk OK** , aby zaakceptować zmianę koloru), można wywołać metodę [GetColor](#getcolor) , aby uzyskać wartość RGB nowego koloru.
 
 ### <a name="example"></a>Przykład
 

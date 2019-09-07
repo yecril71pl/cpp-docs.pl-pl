@@ -1,6 +1,6 @@
 ---
 title: /Zc:inline (usuwanie nieużywanej sekcji COMDAT)
-ms.date: 03/01/2018
+ms.date: 09/05/2019
 f1_keywords:
 - /Zc:inline
 - VC.Project.VCCLCompilerTool.RemoveUnreferencedCodeData
@@ -10,32 +10,32 @@ helpviewer_keywords:
 - Zc compiler options (C++)
 - /Zc:inline
 ms.assetid: a4c94224-1d73-4bea-a9d5-4fa73dc924df
-ms.openlocfilehash: 06bdb3300aae88c6c4c8f7e66af658f47548ac5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0c0d9a4e5e5f52d239f1a8591006b3d9e369778
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316057"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740112"
 ---
 # <a name="zcinline-remove-unreferenced-comdat"></a>/Zc:inline (usuwanie nieużywanej sekcji COMDAT)
 
-Usuwa nieużywane funkcje lub dane, które są Comdat lub mieć tylko powiązanie wewnętrzne. Gdy **/Zc: inline** jest określony, kompilator wymaga jednostki translacji, korzystające z danych wbudowane lub funkcji śródwierszowych należy również uwzględnić definicje danych lub funkcji.
+Usuwa nieużywane funkcje lub dane, które są COMDAT lub mają tylko połączenie wewnętrzne. Gdy jest określony **/Zc: inline** , kompilator wymaga, aby jednostki tłumaczenia używające danych wbudowanych lub funkcji śródwierszowych muszą również zawierać definicje danych lub funkcji.
 
 ## <a name="syntax"></a>Składnia
 
-> **/Zc:inline**[**-**]
+> **/Zc:inline**[ **-** ]
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy **/Zc: inline** jest określony, kompilator nie emituje informacje o symbolach dla nieużywanej sekcji COMDAT funkcji lub danych lub funkcji lub dane, które mają tylko powiązanie wewnętrzne. Tego rodzaju optymalizacji upraszcza część pracy wykonanej przez konsolidator w kompilacjach wydania lub opcji konsolidatora [/OPT: REF](opt-optimizations.md) jest określony. Gdy kompilator wykonuje tego rodzaju optymalizacji, można znacznie zmniejszyć rozmiar pliku .obj i zwiększyć szybkość konsolidatora. Nie włączono tę opcję kompilatora, gdy są wyłączone optymalizacje ([/Od](od-disable-debug.md)) lub gdy [/GL (Optymalizacja Całoprogramowa)](gl-whole-program-optimization.md) jest określony.
+Gdy jest określony **/Zc: inline** , kompilator nie emituje informacji o symbolach dla nieużywanych funkcji lub danych COMDAT, lub dla funkcji lub danych, które mają tylko wewnętrzny związek. Ta optymalizacja upraszcza część pracy wykonywanej przez konsolidator w kompilacjach wydania lub gdy jest określona opcja konsolidatora [/OPT: ref](opt-optimizations.md) . Gdy kompilator wykonuje tę optymalizację, może znacznie zmniejszyć rozmiar pliku. obj i zwiększyć szybkość konsolidatora. Ta opcja kompilatora nie jest włączona, gdy optymalizacje są wyłączone ([/od](od-disable-debug.md)) lub jeśli określono [/GL (cała Optymalizacja programu)](gl-whole-program-optimization.md) .
 
-Domyślnie ta opcja jest wyłączona (**/Zc:inline-**). [/ Permissive-](permissive-standards-conformance.md) opcji nie włącza **/Zc: inline**.
+Domyślnie ta opcja jest wyłączona ( **/Zc: inline-** ) w kompilacjach w wierszu polecenia. Opcja [/permissive-](permissive-standards-conformance.md) nie włącza **/Zc: inline**. W projektach MSBuild opcja jest ustawiana za pomocą **Właściwości** > konfiguracji**C++C/**  >  > język Usuń kod, którego nie można**odwołać i Właściwość danych** , dla których ustawiono wartość **tak** przez wartooć.
 
-Jeśli **/Zc: inline** jest określony, kompilator wymusza C ++ 11 wymogu, że wszystkie funkcje zadeklarowane `inline` muszą być dostępne w tej samej jednostce translacji definicji, jeśli są one używane. Gdy opcja nie jest określona, kompilator Microsoft umożliwia kod bez zgodności, który wywołuje funkcje zadeklarowane `inline` nawet, jeśli definicja nie jest widoczna. Aby uzyskać więcej informacji zobacz standard C ++ 11, w sekcji 7.1.2 i sekcji 3.2. Tę opcję kompilatora została wprowadzona w Visual Studio 2013 Update 2.
+Jeśli określono **/Zc: inline** , kompilator wymusza wymóg języka c++ 11, że wszystkie zadeklarowane `inline` funkcje muszą mieć definicję dostępną w tej samej jednostce translacji, jeśli są używane. Gdy ta opcja nie jest określona, kompilator firmy Microsoft zezwala na niezgodny kod, który wywołuje funkcje zadeklarowane `inline` , nawet jeśli żadna definicja nie jest widoczna. Aby uzyskać więcej informacji, zobacz Standard C++ 11, w sekcji 3,2 i ppkt 7.1.2. Ta opcja kompilatora została wprowadzona w Visual Studio 2013 Update 2.
 
-Aby użyć **/Zc: inline** opcji kodu braku zgodności aktualizacji.
+Aby użyć opcji **/Zc: inline** , zaktualizuj kod niezgodny.
 
-Ten przykład przedstawia sposób niezgodny z użytkowania wbudowaną deklarację funkcji bez definicji nadal kompiluje i łączy, gdy domyślny **/Zc:inline-** jest używana opcja:
+Ten przykład pokazuje, jak niezgodne użycie deklaracji funkcji wbudowanej bez definicji nadal kompiluje i łączy, gdy zostanie użyta Domyślna **/Zc: line-** Option:
 
 ```cpp
 // example.h
@@ -77,9 +77,9 @@ void main() {
 }
 ```
 
-Gdy **/Zc: inline** jest włączona, taki sam kod przyczyny [LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md) błąd, ponieważ kompilator nie emituje treść-śródwierszowych kodu `Example::inline_call` w example.obj. Powoduje to, że-śródwierszowych wywołania w `main` można odwoływać się do niezdefiniowanego symbolu zewnętrznego.
+Gdy **/Zc: inline** jest włączona, ten sam kod powoduje wystąpienie błędu [LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md) , ponieważ kompilator nie emituje nieliniowej treści kodu dla `Example::inline_call` przykładu. obj. Powoduje to, że wywołanie nieliniowe w `main` celu odwołuje się do niezdefiniowanego symbolu zewnętrznego.
 
-Aby rozwiązać ten problem, można usunąć `inline` słowo kluczowe z deklaracji `Example::inline_call`, Przenieś definicji `Example::inline_call` w nagłówku pliku lub przenieść wykonania `Example` do main.cpp. Następny przykład przenosi definicji do pliku nagłówka, w których jest ona widoczna na dowolny obiekt wywołujący, który zawiera nagłówek.
+Aby rozwiązać ten `inline` problem, można usunąć słowo kluczowe z `Example::inline_call`deklaracji `Example::inline_call` , przenieść definicję do pliku `Example` nagłówkowego lub przenieść implementację do Main. cpp. Następny przykład przenosi definicję do pliku nagłówkowego, gdzie jest widoczny dla każdego obiektu wywołującego, który zawiera nagłówek.
 
 ```cpp
 // example2.h
@@ -119,15 +119,15 @@ void main() {
 }
 ```
 
-Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
+Aby uzyskać więcej informacji na temat problemów ze zgodnością C++w wizualizacji, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **C/C++** > **języka** stronę właściwości.
+1. Wybierz stronę właściwości **Konfiguracja** > **C/C++**  > **Język** .
 
-1. Modyfikowanie **Usuń nieużywany kod i dane** właściwości, a następnie wybierz **OK**.
+1. Zmodyfikuj właściwość **Usuń kod i dane bez odwołań** , a następnie wybierz przycisk **OK**.
 
 ## <a name="see-also"></a>Zobacz także
 

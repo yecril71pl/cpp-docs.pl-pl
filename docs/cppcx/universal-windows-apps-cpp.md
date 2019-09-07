@@ -3,12 +3,12 @@ title: Aplikacje uniwersalne systemu Windows (C++)
 ms.date: 03/30/2018
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
 ms.topic: landing-page
-ms.openlocfilehash: 6c2bf7e44e3f1cb2c73ccaaed4363e34cbd7f0c9
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 68952e93e4f91ac3653a9991802ad42854d9d25a
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218365"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741029"
 ---
 # <a name="universal-windows-apps-c"></a>Aplikacje uniwersalne systemu Windows (C++)
 
@@ -24,7 +24,7 @@ Możesz użyć konwertera aplikacji mostka programu Desktop do spakowania istnie
 
 |||
 |-|-|
-|[Odwołanie C++ do języka wizualnego (C++/CX)](visual-c-language-reference-c-cx.md)|Opisuje zestaw rozszerzeń, które upraszczają C++ użycie interfejsów API środowisko wykonawcze systemu Windows i włączają obsługę błędów, która jest oparta na wyjątkach.|
+|[C++Dokumentacja języka/CX](visual-c-language-reference-c-cx.md)|Opisuje zestaw rozszerzeń, które upraszczają C++ użycie interfejsów API środowisko wykonawcze systemu Windows i włączają obsługę błędów, która jest oparta na wyjątkach.|
 |[Tworzenie aplikacji i bibliotek (C++/CX)](building-apps-and-libraries-c-cx.md)|Opisuje sposób tworzenia bibliotek DLL i bibliotek statycznych, do których można uzyskać dostęp C++za pomocą aplikacji lub składnika/CX.|
 |[Samouczek: Tworzenie aplikacji platformy UWP "Hello, World" w C++usłudze/CX](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)|Przewodnik wprowadzający podstawowe koncepcje opracowywania aplikacji platformy UWP w C++/CX. |
 |[Tworzenie składników środowisko wykonawcze systemu Windows w C++/CX](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)|Opisuje sposób tworzenia bibliotek DLL, które mogą być używane przez inne aplikacje i składniki platformy UWP.|

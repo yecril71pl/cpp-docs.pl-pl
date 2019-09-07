@@ -74,12 +74,12 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: e369cfcbf94a1e5abc59d6f66aa71599efb11765
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: dcae304e8571ecb5743002638ea23f13c3e21517
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503755"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741345"
 ---
 # <a name="coleserveritem-class"></a>Klasa COleServerItem
 
@@ -186,7 +186,7 @@ Wskaźnik do `COleDataSource` obiektu, w którym należy umieścić dane.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska [OnDraw](#ondraw) musi być zaimplementowana w celu udostępnienia formatu prezentacji (obrazu metapliku) dla elementu. Aby obsługiwać inne formaty konwersji, należy zarejestrować je przy użyciu obiektu [by uzyskać COleDataSource](../../mfc/reference/coledatasource-class.md) zwróconego przez GetDataSource i zastąpić funkcję członkowską [OnRenderData](#onrenderdata) w celu zapewnienia danych w formatach, które mają być obsługiwane. [](#getdatasource)
+Funkcja członkowska [OnDraw](#ondraw) musi być zaimplementowana w celu udostępnienia formatu prezentacji (obrazu metapliku) dla elementu. Aby obsługiwać inne formaty konwersji, należy zarejestrować je przy użyciu obiektu [by uzyskać COleDataSource](../../mfc/reference/coledatasource-class.md) zwróconego przez [GetDataSource](#getdatasource) i zastąpić funkcję członkowską [OnRenderData](#onrenderdata) w celu zapewnienia danych w formatach, które mają być obsługiwane.
 
 ##  <a name="coleserveritem"></a>COleServerItem:: COleServerItem
 
@@ -346,7 +346,7 @@ void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
 ### <a name="parameters"></a>Parametry
 
 *lpStgMedium*<br/>
-Wskaźnik do struktury [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) , która będzie odbierać dane CF_EMBEDSOURCE dla elementu OLE.
+Wskaźnik do struktury [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) , która będzie odbierać dane CF_EMBEDSOURCE dla elementu OLE.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -354,7 +354,7 @@ Ten format zawiera dane natywne elementu. Aby ta funkcja działała `Serialize` 
 
 Następnie można dodać wynik do źródła danych przy użyciu [by uzyskać COleDataSource:: CacheData](../../mfc/reference/coledatasource-class.md#cachedata). Ta funkcja jest wywoływana automatycznie przez [COleServerItem:: OnGetClipboardData](#ongetclipboarddata).
 
-Aby uzyskać więcej informacji, zobacz [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) w Windows SDK.
 
 ##  <a name="getitemname"></a>COleServerItem:: getitemname
 
@@ -383,7 +383,7 @@ BOOL GetLinkSourceData(LPSTGMEDIUM lpStgMedium);
 ### <a name="parameters"></a>Parametry
 
 *lpStgMedium*<br/>
-Wskaźnik do struktury [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) , która będzie odbierać dane CF_LINKSOURCE dla elementu OLE.
+Wskaźnik do struktury [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) , która będzie odbierać dane CF_LINKSOURCE dla elementu OLE.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -395,7 +395,7 @@ Ten format obejmuje CLSID opisujące typ elementu OLE i informacje, które są k
 
 Następnie można dodać wynik do źródła danych z [by uzyskać COleDataSource:: CacheData](../../mfc/reference/coledatasource-class.md#cachedata). Ta funkcja jest wywoływana automatycznie przez [OnGetClipboardData](#ongetclipboarddata).
 
-Aby uzyskać więcej informacji, zobacz [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) w Windows SDK.
 
 ##  <a name="getobjectdescriptordata"></a>COleServerItem:: GetObjectDescriptorData
 
@@ -417,13 +417,13 @@ Przesunięcie kliknięcia myszą w lewym górnym rogu elementu OLE. Może mieć 
 Rozmiar elementu OLE. Może mieć wartość NULL.
 
 *lpStgMedium*<br/>
-Wskaźnik do struktury [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) , która będzie odbierać dane CF_OBJECTDESCRIPTOR dla elementu OLE.
+Wskaźnik do struktury [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) , która będzie odbierać dane CF_OBJECTDESCRIPTOR dla elementu OLE.
 
 ### <a name="remarks"></a>Uwagi
 
 Informacje są kopiowane do `STGMEDIUM` struktury wskazywanej przez *lpStgMedium*. Ten format zawiera informacje, które są zbędne w oknie dialogowym wklejanie specjalne.
 
-Aby uzyskać więcej informacji, zobacz [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) w Windows SDK.
 
 ##  <a name="isconnected"></a>COleServerItem:: IsConnected
 
@@ -494,7 +494,7 @@ Wartość z wyliczenia DVASPECT, która wskazuje, który aspekt elementu OLE zos
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli element kontenera jest połączony z dokumentem z automatycznym łączem, element zostanie zaktualizowany w celu odzwierciedlenia zmian. W przypadku aplikacji kontenera pisanych przy użyciu biblioteka MFC [COleClientItem::](../../mfc/reference/coleclientitem-class.md#onchange) OnChange jest wywoływana w odpowiedzi.
+Jeśli element kontenera jest połączony z dokumentem z automatycznym łączem, element zostanie zaktualizowany w celu odzwierciedlenia zmian. W przypadku aplikacji kontenera pisanych przy użyciu biblioteka MFC [COleClientItem:: OnChange](../../mfc/reference/coleclientitem-class.md#onchange) jest wywoływana w odpowiedzi.
 
 ##  <a name="ondoverb"></a>COleServerItem:: OnDoVerb
 
@@ -521,7 +521,7 @@ Wartość-1 jest zwykle aliasem dla innego zlecenia. Jeśli Edycja Open nie jest
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli aplikacja kontenera została zapisywana przy użyciu biblioteka MFC, ta funkcja jest wywoływana, gdy wywoływana jest funkcja członkowska [COleClientItem:: Activate](../../mfc/reference/coleclientitem-class.md#activate) dla odpowiedniego `COleClientItem` obiektu. Domyślna implementacja wywołuje funkcję elementu [](#onshow) Członkowskiego OnShow, jeśli określono podstawowe zlecenie lub OLEIVERB_SHOW, OnOpen, jeśli określono zlecenie pomocnicze lub OLEIVERB_OPEN, i OnHide, jeśli OLEIVERB_HIDE jest określony. [](#onopen) [](#onhide) Domyślne wywołania `OnShow` implementacji, jeśli *iVerb* nie jest jednym z czasowników wymienionych powyżej.
+Jeśli aplikacja kontenera została zapisywana przy użyciu biblioteka MFC, ta funkcja jest wywoływana, gdy wywoływana jest funkcja członkowska [COleClientItem:: Activate](../../mfc/reference/coleclientitem-class.md#activate) dla odpowiedniego `COleClientItem` obiektu. Domyślna implementacja wywołuje funkcję elementu członkowskiego [OnShow](#onshow) , jeśli określono podstawowe zlecenie lub OLEIVERB_SHOW, [OnOpen](#onopen) , jeśli określono zlecenie pomocnicze lub OLEIVERB_OPEN, i [OnHide](#onhide) , jeśli OLEIVERB_HIDE jest określony. Domyślne wywołania `OnShow` implementacji, jeśli *iVerb* nie jest jednym z czasowników wymienionych powyżej.
 
 Przesłoń tę funkcję, jeśli zlecenie podstawowe nie wyświetla elementu. Na przykład jeśli element jest nagraniem dźwiękowym i jego podstawowe zlecenie jest odtwarzane, nie trzeba wyświetlać aplikacji serwerowej w celu odtwarzania elementu.
 
@@ -655,7 +655,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli aplikacja kontenera została zapisywana przy użyciu biblioteka MFC, ta funkcja jest wywoływana, gdy [](../../mfc/reference/coleclientitem-class.md#getextent) wywoływana jest funkcja członkowska getzakres `COleClientItem` odpowiedniego obiektu. Domyślna implementacja nie robi nic. Należy zaimplementować ją samodzielnie. Zastąp tę funkcję, jeśli chcesz przeprowadzić przetwarzanie specjalne podczas obsługi żądania rozmiaru elementu OLE.
+Jeśli aplikacja kontenera została zapisywana przy użyciu biblioteka MFC, ta funkcja jest wywoływana, gdy wywoływana jest funkcja członkowska [getzakres](../../mfc/reference/coleclientitem-class.md#getextent) odpowiedniego `COleClientItem` obiektu. Domyślna implementacja nie robi nic. Należy zaimplementować ją samodzielnie. Zastąp tę funkcję, jeśli chcesz przeprowadzić przetwarzanie specjalne podczas obsługi żądania rozmiaru elementu OLE.
 
 ##  <a name="onhide"></a>COleServerItem:: OnHide
 
@@ -745,7 +745,7 @@ virtual BOOL OnRenderData(
 Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) , określając format, w którym informacje są żądane.
 
 *lpStgMedium*<br/>
-Wskazuje strukturę [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) , w której mają zostać zwrócone dane.
+Wskazuje strukturę [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) , w której mają zostać zwrócone dane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -759,7 +759,7 @@ Jeśli *lpStgMedium*-> *TYMED* jest TYMED_NULL, STGMEDIUM powinien być przydzie
 
 Jest to zaawansowany możliwy do zaawansowania. Zastąp tę funkcję, aby zapewnić dane w żądanym formacie i średnim. W zależności od danych warto zamiast tego zastąpić jedną z innych wersji tej funkcji. Jeśli dane są małe i stały się w rozmiarze, Przesłoń `OnRenderGlobalData`. Jeśli dane są w pliku lub mają zmienny rozmiar, Przesłoń `OnRenderFileData`.
 
-Aby uzyskać więcej informacji, zobacz [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata), [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium), [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)i [TYMED](/windows/win32/api/objidl/ne-objidl-tymed) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata), [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1), [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)i [TYMED](/windows/win32/api/objidl/ne-objidl-tymed) w Windows SDK.
 
 ##  <a name="onrenderfiledata"></a>COleServerItem:: OnRenderFileData
 
@@ -863,7 +863,7 @@ virtual BOOL OnSetData(
 Wskaźnik do struktury [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) , który określa format danych.
 
 *lpStgMedium*<br/>
-Wskaźnik do struktury [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) , w której znajdują się dane.
+Wskaźnik do struktury [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) , w której znajdują się dane.
 
 *bRelease*<br/>
 Wskazuje, kto ma własność nośnika magazynu po zakończeniu wywołania funkcji. Obiekt wywołujący decyduje, kto jest odpowiedzialny za wydanie zasobów przyznanych w imieniu nośnika magazynu. Obiekt wywołujący robi to przez ustawienie *bRelease*. Jeśli *bRelease* jest różna od zera, element serwera przejmuje własność, zwalniając nośnik po zakończeniu jego używania. Gdy *bRelease* jest równa 0, obiekt wywołujący zachowuje własność, a element serwera może korzystać z nośnika magazynu tylko w czasie trwania wywołania.
@@ -878,7 +878,7 @@ Element serwera nie przejmuje własności danych do momentu jego pomyślnego uzy
 
 Domyślna implementacja nie robi nic. Zastąp tę funkcję, aby zastąpić dane elementu OLE określonymi danymi. Jest to zaawansowany możliwy do zaawansowania.
 
-Aby uzyskać więcej informacji, zobacz [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium), [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)i [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1), [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)i [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) w Windows SDK.
 
 ##  <a name="onsetextent"></a>COleServerItem:: OnSetExtent
 
@@ -912,7 +912,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli aplikacja kontenera została zapisywana przy użyciu biblioteka MFC, ta funkcja jest wywoływana, gdy [](../../mfc/reference/coleclientitem-class.md#setextent) wywoływana jest funkcja członkowska setzakres `COleClientItem` odpowiedniego obiektu. Domyślna implementacja ustawia element członkowski [m_sizeExtent](#m_sizeextent) o określonym rozmiarze, jeśli *nDrawAspect* jest DVASPECT_CONTENT; w przeciwnym razie zwraca wartość 0. Przesłoń tę funkcję, aby przeprowadzić przetwarzanie specjalne w przypadku zmiany rozmiaru elementu.
+Jeśli aplikacja kontenera została zapisywana przy użyciu biblioteka MFC, ta funkcja jest wywoływana, gdy wywoływana jest funkcja członkowska [setzakres](../../mfc/reference/coleclientitem-class.md#setextent) odpowiedniego `COleClientItem` obiektu. Domyślna implementacja ustawia element członkowski [m_sizeExtent](#m_sizeextent) o określonym rozmiarze, jeśli *nDrawAspect* jest DVASPECT_CONTENT; w przeciwnym razie zwraca wartość 0. Przesłoń tę funkcję, aby przeprowadzić przetwarzanie specjalne w przypadku zmiany rozmiaru elementu.
 
 ##  <a name="onshow"></a>COleServerItem:: OnShow
 

@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - collection classes
 ms.assetid: eff95de6-78ef-4212-9d7d-1dacbdd4cc58
-ms.openlocfilehash: fe795e54274e1d32dddb7310446bfa5aea22091a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 09c0a64ff34a86c5581fe552ce2dbf0d12ea8e96
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492474"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739528"
 ---
 # <a name="collection-classes"></a>Klasy kolekcji
 
@@ -32,9 +32,9 @@ Poniższe klasy zapewniają obsługę tablic, list, map oraz metod, które ułat
 
 - [CComQIPtrElementTraits](../atl/reference/ccomqiptrelementtraits-class.md) Ta klasa udostępnia metody, funkcje statyczne i definicje typów przydatne podczas tworzenia kolekcji wskaźników interfejsu COM.
 
-- [CComSafeArray](../atl/reference/ccomsafearray-class.md) Ta klasa jest otoką dla struktury [typu danych SAFEARRAY](/windows/win32/api/oaidl/ns-oaidl-tagsafearray) .
+- [CComSafeArray](../atl/reference/ccomsafearray-class.md) Ta klasa jest otoką dla struktury [typu danych SAFEARRAY](/windows/win32/api/oaidl/ns-oaidl-safearray) .
 
-- [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md) Ta klasa jest otoką dla struktury [SAFEARRAYBOUND](/windows/win32/api/oaidl/ns-oaidl-tagsafearraybound) .
+- [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md) Ta klasa jest otoką dla struktury [SAFEARRAYBOUND](/windows/win32/api/oaidl/ns-oaidl-safearraybound) .
 
 - [CComUnkArray](../atl/reference/ccomunkarray-class.md) Ta klasa przechowuje wskaźniki **IUnknown** i jest przeznaczona do użycia jako parametr klasy szablonu [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) .
 

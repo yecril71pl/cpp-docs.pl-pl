@@ -21,15 +21,15 @@ helpviewer_keywords:
 - bitand function
 ms.assetid: 279cf9b5-fac1-49de-b329-f1a31b3481fe
 ms.openlocfilehash: dabe6add3e0fd2711b9149d4fdad88a8dad4871a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51517764"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740035"
 ---
 # <a name="bitand"></a>bitand
 
-Alternatywa dla & — operator.
+Alternatywa dla operatora &.
 
 ## <a name="syntax"></a>Składnia
 
@@ -70,4 +70,4 @@ int main( )
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<iso646.h >
+**Nagłówek:** \<iso646. h >

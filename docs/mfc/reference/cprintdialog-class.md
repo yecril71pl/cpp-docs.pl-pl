@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-ms.openlocfilehash: 1f4a4dbec9a1c79ac1e0cec925156ae7db4c293e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ccc673d665d6d5beb92f398b21e6ffd313a58fc9
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502900"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741361"
 ---
 # <a name="cprintdialog-class"></a>Klasa CPrintDialog
 
@@ -104,7 +104,7 @@ Możesz polegać na architekturze do obsługi wielu aspektów procesu drukowania
 
 Jeśli chcesz, aby aplikacja obsługiwała drukowanie bez zaangażowania platformy, możesz użyć `CPrintDialog` klasy "AS IS" z dostarczonym konstruktorem lub można utworzyć własną klasę dialogową z `CPrintDialog` i napisać konstruktora zgodnie z potrzebami. W obu przypadkach te okna dialogowe będą zachowywać się jak standardowe okna dialogowe MFC, ponieważ pochodzą z klasy `CCommonDialog`.
 
-Aby użyć `CPrintDialog` obiektu, należy najpierw utworzyć obiekt `CPrintDialog` przy użyciu konstruktora. Po skonstruowaniu okna dialogowego można ustawić lub zmodyfikować wszystkie wartości w strukturze [m_pd](#m_pd) , aby zainicjować wartości kontrolek okna dialogowego. Struktura jest typu PRINTDLG. [](/windows/win32/api/commdlg/ns-commdlg-pdw) `m_pd` Aby uzyskać więcej informacji na temat tej struktury, zobacz Windows SDK.
+Aby użyć `CPrintDialog` obiektu, należy najpierw utworzyć obiekt `CPrintDialog` przy użyciu konstruktora. Po skonstruowaniu okna dialogowego można ustawić lub zmodyfikować wszystkie wartości w strukturze [m_pd](#m_pd) , aby zainicjować wartości kontrolek okna dialogowego. Struktura jest typu PRINTDLG. [](/windows/win32/api/commdlg/ns-commdlg-printdlga) `m_pd` Aby uzyskać więcej informacji na temat tej struktury, zobacz Windows SDK.
 
 Jeśli nie podasz `m_pd` własnych uchwytów `hDevMode` dla elementów i `hDevNames` , pamiętaj, aby wywołać funkcję `GlobalFree` systemu Windows dla tych dojść po zakończeniu pracy z oknem dialogowym. W przypadku korzystania z implementacji konfiguracji wydruku struktury dostarczonej `CWinApp::OnFilePrintSetup`przez program nie trzeba zwalniać tych dojść. Uchwyty są obsługiwane przez `CWinApp` program i są zwalniane z `CWinApp`destruktora. Jest to konieczne tylko w przypadku korzystania `CPrintDialog` z autonomicznej usługi.
 
@@ -159,7 +159,7 @@ CPrintDialog(
 Określa, czy wyświetlane jest standardowe okno dialogowe drukowania systemu Windows lub ustawienia wydruku. Ustaw ten parametr na wartość TRUE, aby wyświetlić okno dialogowe Standardowa konfiguracja drukowania systemu Windows. Ustaw na wartość FALSE, aby wyświetlić okno dialogowe drukowania systemu Windows. Jeśli *bPrintSetupOnly* ma wartość false, przycisk opcji konfiguracji drukowania jest nadal wyświetlany w oknie dialogowym drukowania.
 
 *flagiDW*<br/>
-Jedna lub więcej flag, których można użyć, aby dostosować ustawienia okna dialogowego połączone przy użyciu operatora bitowego or. Na przykład flaga PD_ALLPAGES ustawia domyślny zakres drukowania na wszystkie strony dokumentu. Zapoznaj się ze strukturą [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) w Windows SDK, aby uzyskać więcej informacji na temat tych flag.
+Jedna lub więcej flag, których można użyć, aby dostosować ustawienia okna dialogowego połączone przy użyciu operatora bitowego or. Na przykład flaga PD_ALLPAGES ustawia domyślny zakres drukowania na wszystkie strony dokumentu. Zapoznaj się ze strukturą [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) w Windows SDK, aby uzyskać więcej informacji na temat tych flag.
 
 *pParentWnd*<br/>
 Wskaźnik do okna dialogowego nadrzędnego lub właściciela.
@@ -280,7 +280,7 @@ Nazwa aktualnie zaznaczonej drukarki.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję po wywołaniu [DoModal](#domodal) , aby pobrać nazwę aktualnie wybranej drukarki, lub po wywołaniu metody [](#getdefaults) GetDefaults, aby pobrać bieżące wartości domyślne urządzenia drukarki domyślnej. Użyj wskaźnika do `CString` obiektu zwróconego przez `GetDeviceName` jako wartość `lpszDeviceName` w wywołaniu metody [przechwytywania:: CreateDC](../../mfc/reference/cdc-class.md#createdc).
+Wywołaj tę funkcję po wywołaniu [DoModal](#domodal) , aby pobrać nazwę aktualnie wybranej drukarki, lub po wywołaniu metody [GetDefaults](#getdefaults) , aby pobrać bieżące wartości domyślne urządzenia drukarki domyślnej. Użyj wskaźnika do `CString` obiektu zwróconego przez `GetDeviceName` jako wartość `lpszDeviceName` w wywołaniu metody [przechwytywania:: CreateDC](../../mfc/reference/cdc-class.md#createdc).
 
 ### <a name="example"></a>Przykład
 
@@ -302,7 +302,7 @@ Struktura danych [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) , któr
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję po wywołaniu [DoModal](#domodal) lub GetDefaults, aby pobrać informacje o urządzeniu drukującym. [](#getdefaults)
+Wywołaj tę funkcję po wywołaniu [DoModal](#domodal) lub [GetDefaults](#getdefaults) , aby pobrać informacje o urządzeniu drukującym.
 
 ### <a name="example"></a>Przykład
 
@@ -322,11 +322,11 @@ CString GetDriverName() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję po wywołaniu [DoModal](#domodal) lub GetDefaults, aby pobrać nazwę sterownika urządzenia drukarki zdefiniowanej przez system. [](#getdefaults) Użyj wskaźnika do `CString` obiektu zwróconego przez `GetDriverName` jako wartość `lpszDriverName` w wywołaniu metody [przechwytywania:: CreateDC](../../mfc/reference/cdc-class.md#createdc).
+Wywołaj tę funkcję po wywołaniu [DoModal](#domodal) lub [GetDefaults](#getdefaults) , aby pobrać nazwę sterownika urządzenia drukarki zdefiniowanej przez system. Użyj wskaźnika do `CString` obiektu zwróconego przez `GetDriverName` jako wartość `lpszDriverName` w wywołaniu metody [przechwytywania:: CreateDC](../../mfc/reference/cdc-class.md#createdc).
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład dla [CPrintDialog::](#getdevicename)GetDeviceName.
+  Zobacz przykład dla [CPrintDialog:: GetDeviceName](#getdevicename).
 
 ##  <a name="getfrompage"></a>CPrintDialog::GetFromPage
 
@@ -362,11 +362,11 @@ Nazwa aktualnie wybranego portu drukarki.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję po wywołaniu [DoModal](#domodal) lub GetDefaults, aby pobrać nazwę aktualnie wybranego portu drukarki. [](#getdefaults)
+Wywołaj tę funkcję po wywołaniu [DoModal](#domodal) lub [GetDefaults](#getdefaults) , aby pobrać nazwę aktualnie wybranego portu drukarki.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład dla [CPrintDialog::](#getdevicename)GetDeviceName.
+  Zobacz przykład dla [CPrintDialog:: GetDeviceName](#getdevicename).
 
 ##  <a name="getprinterdc"></a>CPrintDialog::GetPrinterDC
 
@@ -418,7 +418,7 @@ PRINTDLG& m_pd;
 
 ### <a name="remarks"></a>Uwagi
 
-Po skonstruowaniu `CPrintDialog` obiektu można użyć `m_pd` , aby ustawić różne aspekty okna dialogowego przed wywołaniem funkcji składowej [DoModal](#domodal) . Aby uzyskać więcej informacji na `m_pd` temat struktury, zobacz [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) w Windows SDK.
+Po skonstruowaniu `CPrintDialog` obiektu można użyć `m_pd` , aby ustawić różne aspekty okna dialogowego przed wywołaniem funkcji składowej [DoModal](#domodal) . Aby uzyskać więcej informacji na `m_pd` temat struktury, zobacz [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) w Windows SDK.
 
 W `m_pd` przypadku zmodyfikowania elementu członkowskiego danych należy zmienić zachowanie domyślne.
 

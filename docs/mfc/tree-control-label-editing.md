@@ -7,12 +7,12 @@ helpviewer_keywords:
 - label editing in CTreeCtrl class [MFC]
 - tree controls [MFC], label editing
 ms.assetid: 6cde2ac3-43ee-468f-bac2-cf1a228ad32d
-ms.openlocfilehash: 10148ef0dd8ccb2cf82c14c1c80ade6e8e5aa2b2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4b53d2c8e5a26a4dc37dfd7ae0710748bcd27bf6
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513308"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741233"
 ---
 # <a name="tree-control-label-editing"></a>Edytowanie etykiety kontrolki drzewa
 
@@ -20,7 +20,7 @@ Użytkownik może bezpośrednio edytować etykiety elementów w kontrolce drzewa
 
 Po rozpoczęciu edycji etykiet formant drzewa wysyła komunikat powiadomienia [TVN_BEGINLABELEDIT](/windows/win32/Controls/tvn-beginlabeledit) . Przetwarzając to powiadomienie, możesz zezwolić na edycję niektórych etykiet i uniemożliwić edytowanie innych. Zwrócenie wartości 0 pozwala na edycję i zwrócenie jej przez zero.
 
-Gdy Edycja etykiet zostanie anulowana lub ukończona, formant drzewa wysyła komunikat powiadomienia [TVN_ENDLABELEDIT](/windows/win32/Controls/tvn-endlabeledit) . Parametr *lParam* jest adresem struktury [NMTVDISPINFO](/windows/win32/api/commctrl/ns-commctrl-tvdispinfow) . **Element członkowski elementu** jest strukturą [TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw) , która identyfikuje element i zawiera edytowany tekst. Użytkownik jest odpowiedzialny za aktualizowanie etykiety elementu, jeśli jest to konieczne, ewentualnie po zweryfikowaniu edytowanego ciągu. Element członkowski `TV_ITEM` pszText ma wartość 0, jeśli edytowanie zostało anulowane.
+Gdy Edycja etykiet zostanie anulowana lub ukończona, formant drzewa wysyła komunikat powiadomienia [TVN_ENDLABELEDIT](/windows/win32/Controls/tvn-endlabeledit) . Parametr *lParam* jest adresem struktury [NMTVDISPINFO](/windows/win32/api/commctrl/ns-commctrl-nmtvdispinfow) . **Element członkowski elementu** jest strukturą [TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw) , która identyfikuje element i zawiera edytowany tekst. Użytkownik jest odpowiedzialny za aktualizowanie etykiety elementu, jeśli jest to konieczne, ewentualnie po zweryfikowaniu edytowanego ciągu. Element członkowski `TV_ITEM` pszText ma wartość 0, jeśli edytowanie zostało anulowane.
 
 Podczas edytowania etykiety, zazwyczaj w odpowiedzi na komunikat powiadomienia [TVN_BEGINLABELEDIT](/windows/win32/Controls/tvn-beginlabeledit) , można uzyskać wskaźnik do kontrolki edycji używanej do edycji etykiet przy użyciu funkcji składowej [GetEditControl](../mfc/reference/ctreectrl-class.md#geteditcontrol) . Można wywołać funkcję elementu członkowskiego [SetLimitText](../mfc/reference/cedit-class.md#setlimittext) kontrolki edycji, aby ograniczyć ilość tekstu, który użytkownik może wprowadzać lub podwoływać kontrolkę edycji w celu przechwycenia i odrzucenia nieprawidłowych znaków. Należy jednak pamiętać, że kontrolka edycji jest wyświetlana dopiero *po* wysłaniu **TVN_BEGINLABELEDIT** .
 

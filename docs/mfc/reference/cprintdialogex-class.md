@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-ms.openlocfilehash: 2334fb0a420e14aa4fa8b8b570671fb9a611de32
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 76c3968b20a66e9653fd769339e23ede2a756bbd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502887"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741327"
 ---
 # <a name="cprintdialogex-class"></a>Klasa CPrintDialogEx
 
@@ -94,7 +94,7 @@ Możesz polegać na architekturze do obsługi wielu aspektów procesu drukowania
 
 Jeśli chcesz, aby aplikacja obsługiwała drukowanie bez zaangażowania platformy, możesz użyć `CPrintDialogEx` klasy "AS IS" z dostarczonym konstruktorem lub można utworzyć własną klasę dialogową z `CPrintDialogEx` i napisać konstruktora zgodnie z potrzebami. W obu przypadkach te okna dialogowe będą zachowywać się jak standardowe okna dialogowe MFC, ponieważ pochodzą z klasy `CCommonDialog`.
 
-Aby użyć `CPrintDialogEx` obiektu, należy najpierw utworzyć obiekt `CPrintDialogEx` przy użyciu konstruktora. Po skonstruowaniu okna dialogowego można ustawić lub zmodyfikować wszystkie wartości w strukturze [m_pdex](#m_pdex) , aby zainicjować wartości kontrolek okna dialogowego. Struktura jest typu PRINTDLGEX. [](/windows/win32/api/commdlg/ns-commdlg-pdexw) `m_pdex` Aby uzyskać więcej informacji na temat tej struktury, zobacz Windows SDK.
+Aby użyć `CPrintDialogEx` obiektu, należy najpierw utworzyć obiekt `CPrintDialogEx` przy użyciu konstruktora. Po skonstruowaniu okna dialogowego można ustawić lub zmodyfikować wszystkie wartości w strukturze [m_pdex](#m_pdex) , aby zainicjować wartości kontrolek okna dialogowego. Struktura jest typu PRINTDLGEX. [](/windows/win32/api/commdlg/ns-commdlg-printdlgexw) `m_pdex` Aby uzyskać więcej informacji na temat tej struktury, zobacz Windows SDK.
 
 Jeśli nie podasz `m_pdex` własnych uchwytów `hDevMode` dla elementów i `hDevNames` , pamiętaj, aby wywołać funkcję `GlobalFree` systemu Windows dla tych dojść po zakończeniu pracy z oknem dialogowym.
 
@@ -143,7 +143,7 @@ CPrintDialogEx(
 ### <a name="parameters"></a>Parametry
 
 *flagiDW*<br/>
-Jedna lub więcej flag, których można użyć, aby dostosować ustawienia okna dialogowego połączone przy użyciu operatora bitowego or. Na przykład flaga PD_ALLPAGES ustawia domyślny zakres drukowania na wszystkie strony dokumentu. Zapoznaj się ze strukturą [PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-pdexw) w Windows SDK, aby uzyskać więcej informacji na temat tych flag.
+Jedna lub więcej flag, których można użyć, aby dostosować ustawienia okna dialogowego połączone przy użyciu operatora bitowego or. Na przykład flaga PD_ALLPAGES ustawia domyślny zakres drukowania na wszystkie strony dokumentu. Zapoznaj się ze strukturą [PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-printdlgexw) w Windows SDK, aby uzyskać więcej informacji na temat tych flag.
 
 *pParentWnd*<br/>
 Wskaźnik do okna dialogowego nadrzędnego lub właściciela.
@@ -224,7 +224,7 @@ Jeśli flaga PD_RETURNDC jest ustawiona, ta funkcja nie tylko zwróci `hDevNames
 
 ##  <a name="getdevicename"></a>CPrintDialogEx:: GetDeviceName
 
-Wywołaj tę funkcję po wywołaniu [DoModal](#domodal) , aby pobrać nazwę aktualnie wybranej drukarki lub po wywołaniu metody GetDefaults w celu pobrania nazwy drukarki domyślnej. [](#getdefaults)
+Wywołaj tę funkcję po wywołaniu [DoModal](#domodal) , aby pobrać nazwę aktualnie wybranej drukarki lub po wywołaniu metody [GetDefaults](#getdefaults) w celu pobrania nazwy drukarki domyślnej.
 
 ```
 CString GetDeviceName() const;
@@ -240,7 +240,7 @@ Użyj wskaźnika do `CString` obiektu zwróconego przez `GetDeviceName` jako war
 
 ##  <a name="getdevmode"></a>CPrintDialogEx:: getdevmode
 
-Wywołaj tę funkcję po wywołaniu [DoModal](#domodal) lub GetDefaults, aby pobrać informacje o urządzeniu drukującym. [](#getdefaults)
+Wywołaj tę funkcję po wywołaniu [DoModal](#domodal) lub [GetDefaults](#getdefaults) , aby pobrać informacje o urządzeniu drukującym.
 
 ```
 LPDEVMODE GetDevMode() const;
@@ -252,7 +252,7 @@ Struktura danych [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) , któr
 
 ##  <a name="getdrivername"></a>CPrintDialogEx:: GetDriverName
 
-Wywołaj tę funkcję po wywołaniu [DoModal](#domodal) lub GetDefaults, aby pobrać nazwę sterownika urządzenia drukarki zdefiniowanej przez system. [](#getdefaults)
+Wywołaj tę funkcję po wywołaniu [DoModal](#domodal) lub [GetDefaults](#getdefaults) , aby pobrać nazwę sterownika urządzenia drukarki zdefiniowanej przez system.
 
 ```
 CString GetDriverName() const;
@@ -268,7 +268,7 @@ Użyj wskaźnika `CString` do obiektu zwróconego `GetDriverName` przez jako war
 
 ##  <a name="getportname"></a>CPrintDialogEx:: GetPortName
 
-Wywołaj tę funkcję po wywołaniu [DoModal](#domodal) lub GetDefaults, aby pobrać nazwę aktualnie wybranego portu drukarki. [](#getdefaults)
+Wywołaj tę funkcję po wywołaniu [DoModal](#domodal) lub [GetDefaults](#getdefaults) , aby pobrać nazwę aktualnie wybranego portu drukarki.
 
 ```
 CString GetPortName() const;
@@ -304,7 +304,7 @@ PRINTDLGEX m_pdex;
 
 ### <a name="remarks"></a>Uwagi
 
-Po skonstruowaniu `CPrintDialogEx` obiektu można użyć `m_pdex` , aby ustawić różne aspekty okna dialogowego przed wywołaniem funkcji składowej [DoModal](#domodal) . Aby uzyskać więcej informacji na `m_pdex` temat struktury, zobacz [PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-pdexw) w Windows SDK.
+Po skonstruowaniu `CPrintDialogEx` obiektu można użyć `m_pdex` , aby ustawić różne aspekty okna dialogowego przed wywołaniem funkcji składowej [DoModal](#domodal) . Aby uzyskać więcej informacji na `m_pdex` temat struktury, zobacz [PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-printdlgexw) w Windows SDK.
 
 W `m_pdex` przypadku zmodyfikowania elementu członkowskiego danych należy zmienić zachowanie domyślne.
 
@@ -358,7 +358,7 @@ PRAWDA, jeśli drukowany jest tylko zakres stron w dokumencie; w przeciwnym razi
 
 ### <a name="remarks"></a>Uwagi
 
-Określone zakresy stron można określić na podstawie [m_pdex](#m_pdex) ( `nPageRanges`Zobacz, `nMaxPageRanges`i `lpPageRanges` w strukturze [PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-pdexw) w Windows SDK).
+Określone zakresy stron można określić na podstawie [m_pdex](#m_pdex) ( `nPageRanges`Zobacz, `nMaxPageRanges`i `lpPageRanges` w strukturze [PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-printdlgexw) w Windows SDK).
 
 ##  <a name="printselection"></a>CPrintDialogEx::P rintSelection
 

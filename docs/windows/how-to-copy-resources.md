@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 56cff04d64f2f0a64fc216fbd418954b4c11b0f2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 718de310bc4fb0cb0072065bc4e7b7adadb182aa
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514741"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740655"
 ---
 # <a name="how-to-manage-resources-c"></a>Instrukcje: Zarządzanie zasobami (C++)
 
@@ -76,7 +76,7 @@ Nie można przeciągać i upuszczać, kopiować, wycinać ani wklejać plików z
 
 Podczas kopiowania w ramach zasobu można zmienić jego właściwość języka lub Właściwość Condition albo oba te elementy.
 
-- Język zasobu określa język używany przez program [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcew) w celu ułatwienia zidentyfikowania zasobu, którego szukasz. Zasoby mogą mieć różnice dla każdego języka, które nie są związane z tekstem, na przykład akceleratory, które mogą działać tylko na klawiaturze japońskiej lub mapie bitowej, które byłyby odpowiednie tylko w przypadku kompilacji zlokalizowanych w języku chińskim.
+- Język zasobu określa język używany przez program [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcea) w celu ułatwienia zidentyfikowania zasobu, którego szukasz. Zasoby mogą mieć różnice dla każdego języka, które nie są związane z tekstem, na przykład akceleratory, które mogą działać tylko na klawiaturze japońskiej lub mapie bitowej, które byłyby odpowiednie tylko w przypadku kompilacji zlokalizowanych w języku chińskim.
 
 - Warunek zasobu jest zdefiniowanym symbolem, który identyfikuje warunek, pod którym ta konkretna kopia zasobu ma być używana.
 

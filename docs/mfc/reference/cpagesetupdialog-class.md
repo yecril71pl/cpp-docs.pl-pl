@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: 18b17d0f40aaab6ba2a018a568950549eda23016
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b81e2a65d09bf5dadbc0860d692caee7a4bd386f
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503012"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739765"
 ---
 # <a name="cpagesetupdialog-class"></a>Klasa CPageSetupDialog
 
@@ -305,7 +305,7 @@ Po skonstruowaniu `CPageSetupDialog` obiektu można użyć `m_psd` , aby ustawi�
 
 W `m_psd` przypadku zmodyfikowania elementu członkowskiego danych należy zmienić zachowanie domyślne.
 
-Aby uzyskać więcej informacji na temat struktury [PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-psdw) , zobacz Windows SDK.
+Aby uzyskać więcej informacji na temat struktury [PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-pagesetupdlgw) , zobacz Windows SDK.
 
 Zobacz przykład dla [CPageSetupDialog:: CPageSetupDialog](#cpagesetupdialog).
 
@@ -393,7 +393,7 @@ Określa orientację papieru lub koperty oraz określa, czy drukarka jest urząd
 - Koperta 0x01f w trybie pionowym (Matrix)
 
 *pPSD*<br/>
-Wskaźnik do `PAGESETUPDLG` struktury. Aby uzyskać więcej informacji na temat [PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-psdw), zobacz Windows SDK.
+Wskaźnik do `PAGESETUPDLG` struktury. Aby uzyskać więcej informacji na temat [PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-pagesetupdlgw), zobacz Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
 

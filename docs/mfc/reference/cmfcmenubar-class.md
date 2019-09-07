@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: 61a5f83e31b4793ca6467287c99f3b9708659402
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 278feca6b64915d0cf789e8f68af3c3fdf9b3129
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505228"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739475"
 ---
 # <a name="cmfcmenubar-class"></a>Klasa CMFCMenuBar
 
@@ -191,7 +191,7 @@ Aby użyć `CMFCMenuBar` obiektu, osadź go w głównym obiekcie ramki okna. Pod
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje sposób użycia różnych metod w `CMFCMenuBar` klasie. W przykładzie pokazano, jak ustawić styl okienka, włączyć przycisk Dostosuj, włączyć okno Pomoc, włączyć cieniowanie dla menu podręcznych i zaktualizować pasek menu. Ten fragment kodu jest częścią przykładu demonstracyjnego dla programu [IE](../../overview/visual-cpp-samples.md).
+Poniższy przykład ilustruje sposób użycia różnych metod w `CMFCMenuBar` klasie. W przykładzie pokazano, jak ustawić styl okienka, włączyć przycisk Dostosuj, włączyć okno Pomoc, włączyć cieniowanie dla menu podręcznych i zaktualizować pasek menu. Ten fragment kodu jest częścią [przykładu demonstracyjnego](../../overview/visual-cpp-samples.md)dla programu IE.
 
 [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#3](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_2.cpp)]
@@ -395,7 +395,7 @@ Aby uzyskać listę dodatkowych stylów, zobacz [kontrolki paska narzędzi i sty
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje sposób użycia `CreateEx` metody `CMFCMenuBar` klasy. Ten fragment kodu jest częścią przykładu demonstracyjnego dla programu [IE](../../overview/visual-cpp-samples.md).
+Poniższy przykład ilustruje sposób użycia `CreateEx` metody `CMFCMenuBar` klasy. Ten fragment kodu jest częścią [przykładu demonstracyjnego](../../overview/visual-cpp-samples.md)dla programu IE.
 
 [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#2](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_3.cpp)]
@@ -1037,7 +1037,7 @@ static BOOL SetMenuFont(
 ### <a name="parameters"></a>Parametry
 
 *lpLogFont*<br/>
-podczas Wskaźnik do struktury [LOGFONT](/windows/win32/api/dimm/ns-dimm-__midl___midl_itf_dimm_0000_0000_0003) , który definiuje czcionkę do ustawienia.
+podczas Wskaźnik do struktury [LOGFONT](/windows/win32/api/dimm/ns-dimm-logfonta) , który definiuje czcionkę do ustawienia.
 
 *bHorz*<br/>
 podczas PRAWDA, jeśli chcesz, aby parametr *lpLogFont* był używany dla czcionki pionowej, wartość false, jeśli ma być używana dla czcionki poziomej.

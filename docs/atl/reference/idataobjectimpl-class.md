@@ -20,12 +20,12 @@ helpviewer_keywords:
 - IDataObjectImpl class
 - IDataObject, ATL implementation
 ms.assetid: b680f0f7-7795-40a1-a0f6-f48768201c89
-ms.openlocfilehash: 8e3369edd0731ede0892a405ef3de4e7b4cfdef1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 80b5dfacd5f0c8b0deb8455a59d3f71b73a35ba0
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495942"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739570"
 ---
 # <a name="idataobjectimpl-class"></a>Klasa IDataObjectImpl
 
@@ -65,7 +65,7 @@ Klasa, która pochodzi od `IDataObjectImpl`.
 
 ## <a name="remarks"></a>Uwagi
 
-Interfejs [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) zapewnia metody do obsługi Uniform Data Transfer. `IDataObject`program używa standardowych struktur formatu [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) i [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) do pobierania i przechowywania danych.
+Interfejs [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) zapewnia metody do obsługi Uniform Data Transfer. `IDataObject`program używa standardowych struktur formatu [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) i [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) do pobierania i przechowywania danych.
 
 `IDataObject`zarządza również połączeniami, aby doradzać ujściam do obsługi powiadomień o zmianach danych. Aby klient mógł odbierać powiadomienia o zmianach danych z obiektu danych, klient musi zaimplementować interfejs [IAdviseSink](/windows/win32/api/objidl/nn-objidl-iadvisesink) na obiekcie o nazwie "Advise". Gdy klient wywołuje `IDataObject::DAdvise`program, połączenie zostanie nawiązane między obiektem danych i ujściam doradzania.
 

@@ -1,5 +1,5 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4673
+title: Ostrzeżenie kompilatora (poziom 4) C4673
 ms.date: 11/04/2016
 f1_keywords:
 - C4673
@@ -7,19 +7,19 @@ helpviewer_keywords:
 - C4673
 ms.assetid: 95626ec6-f05b-43c7-8b9a-a60a6f98dd30
 ms.openlocfilehash: ceaa5cd647dfb527713613b9ce3b5cd81a780fd7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657733"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741390"
 ---
-# <a name="compiler-warning-level-4-c4673"></a>Kompilator ostrzeżenie (poziom 4) C4673
+# <a name="compiler-warning-level-4-c4673"></a>Ostrzeżenie kompilatora (poziom 4) C4673
 
-Zgłaszanie 'Identyfikator' następujących typów, nie zostanie uwzględniony w obszarze przechwytywania
+Zgłaszanie "Identyfikator" następujących typów nie będzie brane pod uwagę w witrynie catch
 
-Obiekt throw nie mogą być obsługiwane w **catch** bloku. Każdy typ, który nie może być obsługiwane znajduje się w dane wyjściowe błędu zaraz po wierszu, zawierające to ostrzeżenie. Każdy nieobsługiwany typ ma swój własny ostrzeżenie. Przeczytaj ostrzeżenia dla każdego określonego typu, aby uzyskać więcej informacji.
+Nie można obsłużyć obiektu throw w bloku **catch** . Każdy typ, którego nie można obsłużyć, jest wymieniony w danych wyjściowych błędu bezpośrednio po wierszu zawierającym to ostrzeżenie. Każdy nieobsługiwany typ ma własne ostrzeżenie. Aby uzyskać więcej informacji, przeczytaj Ostrzeżenie dla każdego określonego typu.
 
-Poniższy przykład spowoduje wygenerowanie C4673:
+Poniższy przykład generuje C4673:
 
 ```
 // C4673.cpp

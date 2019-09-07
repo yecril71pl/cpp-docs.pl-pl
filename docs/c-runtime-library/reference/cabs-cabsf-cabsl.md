@@ -1,5 +1,5 @@
 ---
-title: pliki cab, cabsf, cabsl —
+title: cabs, cabsf, cabsl
 ms.date: 11/04/2016
 apiname:
 - cabs
@@ -31,13 +31,13 @@ helpviewer_keywords:
 - cabsl function
 ms.assetid: 6b8eb453-cc8f-4972-bebf-351cbdfdfc15
 ms.openlocfilehash: cfa437a5d248a83568032d4c9ef8d4f938074dfe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623968"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739877"
 ---
-# <a name="cabs-cabsf-cabsl"></a>pliki cab, cabsf, cabsl —
+# <a name="cabs-cabsf-cabsl"></a>cabs, cabsf, cabsl
 
 Pobiera wartość bezwzględną liczby zespolonej.
 
@@ -64,28 +64,28 @@ long double cabsl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Liczbą.
+Liczba złożona.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość bezwzględna *z*.
+Wartość bezwzględna *z.*
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **cabs** o **_Fcomplex** lub **_Lcomplex** wartości i zwrócenie **float** lub **długie** **double** wartości. W programie C **cabs** zawsze ma **_Dcomplex** wartości i zwraca **double** wartość.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **OOZ** , które pobierają wartości **_Fcomplex** lub **_Lcomplex** , i zwracają wartości **zmiennoprzecinkowe** lub **długie** **Double** . W programie w języku C, **OOZ** zawsze przyjmuje wartość **_Dcomplex** i zwraca wartość **podwójnej precyzji** .
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|Nagłówek języka C++|
+|Procedura|Nagłówek języka C|C++nagłówki|
 |-------------|--------------|------------------|
-|**pliki cab**, **cabsf**, **cabsl —**|\<complex.h>|\<ccomplex >|
+|**OOZ**, **cabsf**, **OOZ**|\<complex.h>|\<ccomplex>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
-[norm normf, norml](norm-normf-norml1.md)<br/>
+[norm, normf, norml](norm-normf-norml1.md)<br/>
 [creal, crealf, creall](creal-crealf-creall.md)<br/>
 [cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
 [conj, conjf, conjl](conj-conjf-conjl.md)<br/>

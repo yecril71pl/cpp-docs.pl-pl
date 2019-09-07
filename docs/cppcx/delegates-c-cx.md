@@ -1,137 +1,137 @@
 ---
-title: Delegates (C++/CX)
+title: DelegatyC++(/CX)
 ms.date: 01/22/2017
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
-ms.openlocfilehash: e2158adad288045c9a98889dbe97e834dc93ea71
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ab455044b98cdd8c7b13a650f729efc2132797e
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406928"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740281"
 ---
-# <a name="delegates-ccx"></a>Delegates (C++/CX)
+# <a name="delegates-ccx"></a>DelegatyC++(/CX)
 
-`delegate` — Słowo kluczowe jest używane do deklarowania typu odwołania, który jest odpowiednikiem obiektu funkcyjnego w standardzie języka C++ środowiska wykonawczego Windows. Deklaracja delegata, podobny do podpisu funkcji. Określa typ zwracany i typy parametrów, które jej opakowana funkcja musi mieć. Jest to deklaracja delegata użytkownika:
+Słowo kluczowe jest używane do deklarowania typu referencyjnego, który jest środowisko wykonawcze systemu Windows odpowiednikiem obiektu funkcji w standardowym C++ `delegate` Deklaracja delegata podobna do sygnatury funkcji; Określa typ zwracany i typy parametrów, które musi zawierać funkcja opakowana. Jest to zdefiniowana przez użytkownika deklaracja delegata:
 
 ```cpp
 public delegate void PrimeFoundHandler(int result);
 ```
 
-Delegaty są najczęściej używane w połączeniu ze zdarzeniami. Zdarzenie ma typ delegata w taki, taki sam sposób, że klasa może mieć typu interfejsu. Reprezentuje obiekt delegowany kontraktu, który znacznie wykonać procedury obsługi zdarzeń. Oto składowej klasy zdarzeń, którego typ jest delegatem uprzednio zdefiniowany:
+Delegaty są najczęściej używane w połączeniu z zdarzeniami. Zdarzenie ma typ delegata, tak samo, jak Klasa może mieć typ interfejsu. Delegat reprezentuje kontrakt, który jest bardzo spełniający procedury obsługi zdarzeń. Oto element członkowski klasy zdarzeń, którego typem jest zdefiniowany wcześniej delegat:
 
 ```cpp
 event PrimeFoundHandler^ primeFoundEvent;
 ```
 
-Podczas deklarowania obiektów delegowanych, które będą dostępne dla klientów między interfejsem binarnym aplikacji środowiska wykonawczego Windows, użyj [Windows::Foundation:: typedeventhandler\<TSender, TResult >](/uwp/api/windows.foundation.typedeventhandler). Ten delegat jest wstępnie zdefiniowane serwera proxy i klas zastępczych pliki binarne, które umożliwiają go do użycia przez klientów języka Javascript.
+W przypadku deklarowania delegatów, które będą udostępniane klientom przez interfejs binarny aplikacji środowisko wykonawcze systemu Windows, użyj [systemu Windows:: Foundation\<:: TypedEventHandler TSender, TResult >](/uwp/api/windows.foundation.typedeventhandler). Ten delegat ma wstępnie zdefiniowane pliki binarne proxy i zastępcze, które umożliwiają korzystanie z nich przez klientów JavaScript.
 
-## <a name="consuming-delegates"></a>Korzystanie z obiektów delegowanych
+## <a name="consuming-delegates"></a>Zużywanie delegatów
 
-Podczas tworzenia aplikacji uniwersalnych platformy Windows często pracują z delegatem, jako typ zdarzenia, które udostępnia klasy środowiska wykonawczego Windows. Aby subskrybować zdarzenie, Utwórz wystąpienie obiektu jego typ delegowany, określając funkcji — lub lambda, które odpowiadają podpisowi delegata. Następnie użyj `+=` operatora do przekazania obiektu delegowanego do elementu członkowskiego zdarzenia w klasie. Jest to nazywane subskrybowanie zdarzenia. Jeśli wystąpienie klasy"" zdarzenia, Twoja funkcja jest wywoływana wraz z innych programów obsługi, które zostały dodane przez obiekt lub innych obiektów.
+Podczas tworzenia aplikacji platforma uniwersalna systemu Windows często pracujesz z delegatem jako typem zdarzenia, które uwidacznia Klasa środowisko wykonawcze systemu Windows. Aby subskrybować zdarzenie, Utwórz wystąpienie jego typu delegata, określając funkcję — lub wyrażenie lambda, które pasuje do sygnatury delegata. Następnie użyj operatora `+=` , aby przekazać obiekt delegata do elementu członkowskiego zdarzenia w klasie. Jest to tzw. subskrybowanie zdarzenia. Gdy wystąpienie klasy "wyzwala" zdarzenie, wywoływana jest funkcja wraz z innymi dodziałami, które zostały dodane przez obiekt lub inne obiekty.
 
 > [!TIP]
-> Program Visual Studio sporego nakładu pracy dla Ciebie podczas tworzenia programu obsługi zdarzeń. Na przykład jeśli określisz program obsługi zdarzeń w znaczniku XAML, pojawi się etykietka narzędzia. Wybranie opcji etykietki narzędzia programu Visual Studio automatycznie tworzy metodę programu obsługi zdarzeń i kojarzy ją z zdarzenia w klasie publikowania.
+> Program Visual Studio wykonuje dużą nakład pracy podczas tworzenia programu obsługi zdarzeń. Na przykład jeśli określisz procedurę obsługi zdarzeń w znaczniku XAML, zostanie wyświetlona etykietka narzędzia. W przypadku wybrania etykietki narzędzia program Visual Studio automatycznie tworzy metodę obsługi zdarzeń i kojarzy ją ze zdarzeniem klasy Publishing.
 
-Poniższy przykład przedstawia podstawowy wzorzec. `Windows::Foundation::TypedEventHandler` jest to typ delegata. Funkcja obsługi jest tworzony przy użyciu o nazwie funkcji.
+Poniższy przykład pokazuje wzorzec podstawowy. `Windows::Foundation::TypedEventHandler`jest typem delegata. Funkcja obsługi jest tworzona za pomocą nazwanej funkcji.
 
-W app.h:
+W aplikacji App. h:
 
 [!code-cpp[cx_delegates#120](../cppcx/codesnippet/CPP/delegatesevents/class1.h#120)]
 
-W app.cpp:
+W aplikacji App. cpp:
 
 [!code-cpp[cx_delegates#121](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#121)]
 
 > [!WARNING]
-> Ogólnie rzecz biorąc procedury obsługi zdarzeń, lepiej jest używać o nazwie funkcji zamiast wyrażenia lambda, chyba że Zwróć szczególną uwagę aby uniknąć odwołania cykliczne. Funkcja o nazwie przechwytuje wskaźnik "this" przez słabe odwołanie, ale wyrażenie lambda przechwytuje go przez silne odwołanie i tworzy odwołanie cykliczne. Aby uzyskać więcej informacji, zobacz [słabe odwołania i przerywanie cykli](../cppcx/weak-references-and-breaking-cycles-c-cx.md).
+> Ogólnie rzecz biorąc, w przypadku programu obsługi zdarzeń lepiej jest używać nazwanej funkcji zamiast wyrażenia lambda, chyba że chcesz uniknąć cyklicznych odwołań. Nazwana funkcja przechwytuje wskaźnik "This" przez słabe odwołanie, ale lambda przechwytuje je przez silną referencję i tworzy odwołanie cykliczne. Aby uzyskać więcej informacji, zobacz [słabe odwołania i cykle przerywania](../cppcx/weak-references-and-breaking-cycles-c-cx.md).
 
-Zgodnie z konwencją nazw delegata obsługi zdarzeń, które są definiowane przez środowisko wykonawcze Windows mają następującą formę * EventHandler — na przykład RoutedEventHandler, SizeChangedEventHandler lub SuspendingEventHandler. Ponadto zgodnie z Konwencją delegatów obsługi zdarzeń mają dwa parametry i zwracać typ void. Delegat, który nie ma parametrów typu, pierwszy parametr jest typu [Platform::Object ^](../cppcx/platform-object-class.md); posiada odwołanie do nadawcy, który jest obiektem, która wywołała zdarzenie. Masz rzutowanie do oryginalnego typu, zanim użyjesz argument w metodzie obsługi zdarzeń. W delegata obsługi zdarzeń, który ma parametry typu, pierwszy parametr typu określa typ nadawcy, a drugi parametr jest dojście do klasy referencyjnej, która przechowuje informacje o zdarzeniu. Zgodnie z Konwencją, ta klasa ma nazwę \*EventArgs. Na przykład obiekt delegowany RoutedEventHandler ma drugi parametr typu RoutedEventArgs ^, a drugi parametr typu DragEventArgs DragEventHander ^.
+Według Konwencji nazwy delegatów obsługi zdarzeń zdefiniowane przez środowisko wykonawcze systemu Windows mają postać * EventHandler — na przykład RoutedEventHandler, SizeChangedEventHandler lub SuspendingEventHandler. Ponadto według Konwencji delegatów obsługi zdarzeń ma dwa parametry i zwracają typ void. W delegatze, który nie ma parametrów typu, pierwszy parametr jest typu [platform:: Object ^](../cppcx/platform-object-class.md); Przechowuje odwołanie do nadawcy, który jest obiektem, który wygenerował zdarzenie. Przed użyciem argumentu w metodzie obsługi zdarzeń należy wykonać rzutowanie na oryginalny typ. W delegatze obsługi zdarzeń, który ma parametry typu, pierwszy parametr typu określa typ nadawcy, a drugi parametr jest dojściem do klasy referencyjnej, która zawiera informacje o zdarzeniu. Według Konwencji Ta klasa ma nazwę \*EventArgs. Na przykład delegat RoutedEventHandler ma drugi parametr typu RoutedEventArgs ^, a DragEventHander ma drugi parametr typu DragEventArgs ^.
 
-Zgodnie z Konwencją, są nazywane delegatów, które umieszczają w otoce kod, który jest wykonywany po zakończeniu operacji asynchronicznej * CompletedHandler. Te obiekty delegowane są definiowane jako właściwości klasy, nie jako zdarzeń. W związku z tym, nie używaj `+=` operator subskrybować; po prostu przypisać obiekt delegowany do właściwości.
+Zgodnie z Konwencją Delegaty zawijają kod, który jest wykonywany po zakończeniu operacji asynchronicznej o nazwie * CompletedHandler. Te Delegaty są zdefiniowane jako właściwości w klasie, a nie jako zdarzenia. W związku z tym nie należy `+=` używać operatora, aby subskrybować te elementy; wystarczy przypisać obiekt delegata do właściwości.
 
 > [!TIP]
-> IntelliSense dla C++ nie wyświetla podpis delegata pełne; w związku z tym nie jest przydatne należy określić parametr EventArgs określonego typu. Aby znaleźć typ, możesz przejść do **przeglądarki obiektów** i przyjrzyj się `Invoke` metodę delegata.
+> C++Funkcja IntelliSense nie pokazuje pełnego podpisu delegata; w związku z tym nie pomaga określić określonego typu parametru EventArgs. Aby znaleźć typ, możesz przejść do **Przeglądarka obiektów** i przyjrzeć `Invoke` się metodzie delegata.
 
 ## <a name="creating-custom-delegates"></a>Tworzenie niestandardowych delegatów
 
-Można zdefiniować własne delegatów do definiowania programów obsługi zdarzeń lub zapewnienia konsumentów przekazać niestandardowe funkcje do składnika środowiska wykonawczego Windows. Podobnie jak dowolny inny typ środowiska uruchomieniowego Windows Delegat publiczny nie można zadeklarować jako ogólnego.
+Możesz zdefiniować własnych delegatów, aby zdefiniować programy obsługi zdarzeń lub umożliwić użytkownikom przekazywanie funkcji niestandardowych do składnika środowisko wykonawcze systemu Windows. Podobnie jak w przypadku dowolnego innego typu środowisko wykonawcze systemu Windows delegat publiczny nie może być zadeklarowany jako generyczny.
 
-### <a name="declaration"></a>Deklaracja
+### <a name="declaration"></a>Oświadczeń
 
-Deklaracja delegata przypomina deklaracji funkcji, z tą różnicą, że delegat jest typem. Zazwyczaj można zadeklarować obiektu delegowany w zakresie przestrzeni nazw, chociaż można także zagnieżdżać deklaracja delegata w deklaracji klasy. Poniższy delegat hermetyzuje żadnej funkcji, która przyjmuje `ContactInfo^` jako dane wejściowe i zwraca `Platform::String^`.
+Deklaracja delegata jest podobna do deklaracji funkcji, z tą różnicą, że delegat jest typem. Zwykle deklaruje delegata w zakresie przestrzeni nazw, chociaż można także zagnieżdżać deklarację delegata w deklaracji klasy. Następujący delegat hermetyzuje każdą funkcję, która przyjmuje `ContactInfo^` jako dane wejściowe i `Platform::String^`zwraca.
 
 [!code-cpp[cx_delegates#111](../cppcx/codesnippet/CPP/delegatesevents/class1.h#111)]
 
-Po zadeklarowaniu typ delegata można zadeklarować składowych klasy tego typu lub metody, które przyjmują obiektów tego typu jako parametry. Metoda lub funkcja może również zwracać typ delegata. W poniższym przykładzie `ToCustomString` metoda przyjmuje delegata jako parametr wejściowy. Ta metoda umożliwia kodu klienta w celu umieszczenia niestandardowych funkcji, która tworzy ciąg z niektóre lub wszystkie publiczne właściwości `ContactInfo` obiektu.
+Po zadeklarowaniu typu delegata można zadeklarować składowe klasy tego typu lub metod, które pobierają obiekty tego typu jako parametry. Metoda lub funkcja może również zwracać typ delegata. W poniższym przykładzie `ToCustomString` Metoda przyjmuje delegat jako parametr wejściowy. Metoda umożliwia kodowi klienta dostarczanie funkcji niestandardowej, która konstruuje ciąg z niektórych lub wszystkich właściwości `ContactInfo` publicznych obiektu.
 
 [!code-cpp[Cx_delegates#112](../cppcx/codesnippet/CPP/delegatesevents/class1.h#112)]
 
 > [!NOTE]
-> Możesz użyć "^" symbol odwoływaniu się do typu delegata, tak samo, jak za pomocą dowolnego środowiska uruchomieniowego Windows odwołujesz typu.
+> Symbol "^" jest używany podczas odwoływania się do typu delegata, podobnie jak w przypadku dowolnego środowisko wykonawcze systemu Windows typu odwołania.
 
-Deklaracja zdarzenia są zawsze ma typ delegata. W tym przykładzie przedstawiono typowe delegatów podpis typu w środowisku uruchomieniowym Windows:
+Deklaracja zdarzenia zawsze ma typ delegata. Ten przykład przedstawia typowy podpis typu delegata w środowisko wykonawcze systemu Windows:
 
 [!code-cpp[cx_delegates#122](../cppcx/codesnippet/CPP/delegatesevents/class1.h#122)]
 
-`Click` Zdarzenia w `Windows:: UI::Xaml::Controls::Primitives::ButtonBase` klasy jest typu `RoutedEventHandler`. Aby uzyskać więcej informacji, zobacz [zdarzenia](../cppcx/events-c-cx.md).
+Zdarzenie w klasie jest typu `RoutedEventHandler`. `Windows:: UI::Xaml::Controls::Primitives::ButtonBase` `Click` Aby uzyskać więcej informacji, zobacz [zdarzenia](../cppcx/events-c-cx.md).
 
-Najpierw kod klienta tworzy wystąpienie delegata za pomocą `ref new` i zapewniając lambda, która jest zgodna z podpis delegata i definiuje niestandardowe zachowanie.
+Kod klienta najpierw Konstruuje wystąpienie delegata przy `ref new` użyciu i dostarczając wyrażenie lambda, które jest zgodne z sygnaturą delegata i definiuje zachowanie niestandardowe.
 
 [!code-cpp[Cx_delegates#113](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#113)]
 
-Następnie wywołuje funkcję elementu członkowskiego i przekazuje delegata. Przyjęto założenie, że `ci` jest `ContactInfo^` wystąpienia i `textBlock` jest XAML `TextBlock^`.
+Następnie wywołuje funkcję członkowską i przekazuje delegata. Załóżmy, `ci` że `ContactInfo^` jest wystąpieniem `textBlock` i jest XAML `TextBlock^`.
 
 [!code-cpp[Cx_delegates#114](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#114)]
 
-W następnym przykładzie aplikacja kliencka przekazuje niestandardową klasę delegatów do publicznej metody w składniku Windows Runtime, która wykonuje delegowanie dla każdej pozycji w `Vector`:
+W następnym przykładzie aplikacja kliencka przekazuje niestandardowego delegata do metody publicznej w składniku środowisko wykonawcze systemu Windows, który wykonuje delegata dla każdego elementu w `Vector`:
 
 [!code-cpp[Cx_delegates#118](../cppcx/codesnippet/CPP/clientapp/mainpage.xaml.cpp#118)]
 
 [!code-cpp[Cx_delegates#119](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#119)]
 
-### <a name="construction"></a>Konstrukcja
+### <a name="construction"></a>Zrekonstruowan
 
-Można utworzyć delegata z dowolnego z tych obiektów:
+Delegat można skonstruować z dowolnego z następujących obiektów:
 
 - lambda
 
-- Funkcja statyczna
+- funkcja statyczna
 
 - wskaźnik do elementu członkowskiego
 
-- STD::Function
+- std:: Function
 
-Poniższy przykład przedstawia sposób tworzenia delegata z każdej z tych obiektów. Delegat będzie korzystać w taki sam sposób, bez względu na typ obiektu, który jest używany do tworzenia go.
+Poniższy przykład pokazuje, jak utworzyć delegata z każdego z tych obiektów. Delegat jest używany w taki sam sposób, niezależnie od typu obiektu, który służy do konstruowania go.
 
 [!code-cpp[Cx_delegates#115](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#115)]
 
 > [!WARNING]
-> Użycie wyrażenia lambda, która przechwytuje "to" wskaźnik, należy użyć `-=` operator, który ma być jawnie un rejestr ze zdarzenia przed zamknięciem wyrażenia lambda. Aby uzyskać więcej informacji, zobacz [zdarzenia](../cppcx/events-c-cx.md).
+> Jeśli używasz wyrażenia lambda, które przechwytuje wskaźnik "This", pamiętaj, aby użyć `-=` operatora, aby jawnie wyrejestrować ze zdarzenia przed wyjściem z wyrażenia lambda. Aby uzyskać więcej informacji, zobacz [zdarzenia](../cppcx/events-c-cx.md).
 
-### <a name="generic-delegates"></a>Delegaty ogólne
+### <a name="generic-delegates"></a>Delegaci ogólni
 
-Delegaty ogólne w C++/CX ma ograniczenia podobnych do deklaracji klasy ogólne. One nie można zadeklarować jako publiczne. Można zadeklarować prywatnego lub wewnętrznego ogólny delegować i używanie go z poziomu języka C++, ale .NET lub klientów języka JavaScript nie można pobrać go, ponieważ nie jest emitowany do metadanych .winmd. W tym przykładzie deklaruje Delegat ogólny, które mogą być używane tylko przez C++:
+Delegaty generyczne w C++/CX mają ograniczenia podobne do deklaracji klas ogólnych. Nie mogą być deklarowane jako publiczne. Można zadeklarować prywatny lub wewnętrzny delegat generyczny i użyć go z C++, ale klienci .NET lub JavaScript nie mogą go wykorzystać, ponieważ nie są emitowane do metadanych WinMD. Ten przykład deklaruje delegata generycznego, który może być C++użyty tylko przez:
 
 [!code-cpp[Cx_delegates#116](../cppcx/codesnippet/CPP/delegatesevents/class1.h#116)]
 
-Następny przykład deklaruje specjalne wystąpienie delegata wewnątrz definicji klasy:
+Następny przykład deklaruje wyspecjalizowane wystąpienie delegata wewnątrz definicji klasy:
 
 [!code-cpp[Cx_delegates#117](../cppcx/codesnippet/CPP/delegatesevents/class1.h#117)]
 
-## <a name="delegates-and-threads"></a>Delegaci i wątki
+## <a name="delegates-and-threads"></a>Obiekty delegowane i wątki
 
-Delegat, podobnie jak obiekt funkcji, zawiera kod, który zostanie wykonany w czasie w przyszłości. Jeśli kod, który tworzy i przekazuje delegata i funkcję, która akceptuje i wykonuje delegata, są uruchomione na tym samym wątku, czynności są stosunkowo proste. Jeśli wątek jest wątku interfejsu użytkownika, a następnie delegata bezpośrednio manipulować obiektów interfejsu użytkownika, takich jak kontrolki XAML.
+Delegat, podobnie jak obiekt Function, zawiera kod, który będzie wykonywany w pewnym czasie w przyszłości. Jeśli kod, który tworzy i przekazuje delegata, a funkcja, która akceptuje i wykonuje delegata, działa w tym samym wątku, wówczas elementy są stosunkowo proste. Jeśli ten wątek jest wątkiem interfejsu użytkownika, delegat może bezpośrednio manipulować obiektami interfejsu użytkownika, takimi jak kontrolki XAML.
 
-Jeśli aplikacja kliencka ładuje składnika wykonawczego Windows działającą w komórek wielowątkowych i udostępnia delegata do tego składnika, następnie domyślnie obiekt delegowany jest wywoływany bezpośrednio w wątku STA. Większość składników środowiska wykonawczego Windows można uruchamiać w STA i MTA.
+Jeśli aplikacja kliencka załaduje składnik środowisko wykonawcze systemu Windows, który działa w Apartament wątkowy i udostępnia delegatowi ten składnik, domyślnie delegat jest wywoływany bezpośrednio w wątku STA. Większość składników środowisko wykonawcze systemu Windows można uruchamiać w WĄTKach lub MTA.
 
-Jeśli kod, który wykonuje delegata jest uruchomiona w innym wątku — na przykład w kontekście obiektu concurrency::task — jesteś odpowiedzialny za synchronizowanie dostępu do udostępnionych danych. Na przykład jeśli pełnomocnik zawiera odwołanie do wektora, a kontrolki XAML odwołuje się do tego samego wektorowych, należy wykonać kroki w celu uniknięcia zakleszczenia lub sytuacje wyścigu, które mogą wystąpić podczas delegata i kontrolki XAML próbują uzyskać dostęp wektora na sam czas e. Użytkownik musi również powinien zachować ostrożność, delegat nie próbuje przechwycić według odwołań zmienne lokalne, które może być wykraczają poza zakres, zanim obiekt delegowany jest wywoływany.
+Jeśli kod, który wykonuje delegata jest uruchomiony w innym wątku — na przykład w kontekście obiektu concurrency:: Task — użytkownik jest odpowiedzialny za synchronizację dostępu do udostępnionych danych. Na przykład, jeśli delegat zawiera odwołanie do wektora, a kontrolka XAML ma odwołanie do tego samego wektora, należy wykonać kroki w celu uniknięcia zakleszczenia lub sytuacji wyścigu, które mogą wystąpić, gdy zarówno delegat, jak i formant XAML próbują uzyskać dostęp do wektora na tym samym poziomie czas e. Należy również zadbać o to, aby delegat nie podejmował prób przechwycenia przez odniesienia lokalne zmienne, które mogą wykraczać poza zakres przed wywołaniem delegata.
 
-Jeśli chcesz, aby Twoje utworzony delegat nastąpi wywołanie zwrotne w tym samym wątku, który został utworzony na — na przykład w przypadku przekazania składnik, który działa w komórce MTA — i można wywołać w tym samym wątku, jak twórca , następnie za pomocą przeciążenia konstruktora delegata, która przyjmuje sekundy `CallbackContext` parametru. To przeciążenie należy używać tylko w delegatów, które zostały zarejestrowane proxy/zastępczego; nie wszystkie delegatów, które są zdefiniowane w Windows.winmd są rejestrowane.
+Jeśli chcesz, aby utworzony delegat został wywołany w tym samym wątku, w którym został on utworzony — na przykład, Jeśli przekażesz go do składnika, który działa w komórce MTA, i chcesz, aby był on wywoływany w tym samym wątku co twórca , następnie Użyj przeciążenia konstruktora delegata, który przyjmuje drugi `CallbackContext` parametr. Tego przeciążenia należy używać tylko w delegatach, które mają zarejestrowany serwer proxy/zastępczy; nie wszystkie Delegaty zdefiniowane w systemie Windows. winmd są zarejestrowane.
 
-Osoby zaznajomione z programami obsługi zdarzeń w programie .NET wiesz, że zalecaną praktyką jest Utwórz lokalne kopie zdarzenia przed jej środowisko. Umożliwia to uniknięcie Sytuacje wyścigu, w których program obsługi zdarzeń mogą zostać usunięte przed zdarzenie jest wywoływane. Nie trzeba to zrobić w C++/CX ponieważ podczas dodawania lub usuwania programów obsługi zdarzeń zostanie utworzona nowa lista programu obsługi. Ponieważ obiektu języka C++ zwiększa liczbę odwołań na liście obsługi przed wywołaniem zdarzenia, jest gwarantowane, będzie obowiązywać wszystkich programów obsługi. Jednak oznacza to, że usunięcie procedury obsługi zdarzeń w zużywającym wątku tego wywołana procedura obsługi nieprawidłowego może nadal uzyskać Jeśli publikowania obiektu nadal działa na własną kopię listy, który jest obecnie przestarzałe. Obiekt publikowania nie otrzyma zaktualizowaną listę po ponownym jej generowane zdarzenie.
+Jeśli znasz programy obsługi zdarzeń w programie .NET, wiesz, że zalecaną metodą jest wykonanie lokalnej kopii zdarzenia przed jego wyzwoleniem. Pozwala to uniknąć sytuacji wyścigu, w których program obsługi zdarzeń może zostać usunięty tuż przed wywołaniem zdarzenia. Nie jest to konieczne w programie/CX C++, ponieważ w przypadku dodania lub usunięcia obsługi zdarzeń zostanie utworzona nowa lista obsługi. Ponieważ C++ obiekt zwiększa liczbę odwołań na liście programu obsługi przed wywołaniem zdarzenia, gwarantowane jest, że wszystkie programy obsługi będą prawidłowe. Oznacza to jednak, że w przypadku usunięcia programu obsługi zdarzeń w wątku zużywania, ten program obsługi może być nadal wywoływany, jeśli obiekt publikacji nadal działa na jego kopii listy, która jest teraz nieaktualna. Obiekt publikacji nie uzyska zaktualizowanej listy do momentu następnego uruchomienia zdarzenia.
 
 ## <a name="see-also"></a>Zobacz także
 
 [System typów](../cppcx/type-system-c-cx.md)<br/>
-[Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Dokumentacja języka C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Dokumentacja przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)

@@ -31,15 +31,15 @@ helpviewer_keywords:
 - cprojl function
 ms.assetid: 32b49623-13bf-4cae-802e-7912d75030fe
 ms.openlocfilehash: f1054172a7b5afde134ce9fa735a7eeda3bddafb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445672"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739848"
 ---
 # <a name="cproj-cprojf-cprojl"></a>cproj, cprojf, cprojl
 
-Pobiera projekcji liczby zespolonej sfery Reimann.
+Pobiera rzutowanie liczby zespolonej w sferze Reimann.
 
 ## <a name="syntax"></a>Składnia
 
@@ -64,28 +64,28 @@ _Lcomplex cprojl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Liczbą.
+Liczba złożona.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Rzut *z* sfery Reimann.
+Rzutowanie z *z na Reimann* sfery.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **cproj** przyjmujące i zwracające **_Fcomplex** i **_Lcomplex** wartości. W programie C **cproj** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **cproj** , które pobierają i zwracają wartości **_Fcomplex** i **_Lcomplex** . W programie C **cproj** zawsze przyjmuje i zwraca wartość **_Dcomplex** .
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|Nagłówek języka C++|
+|Procedura|Nagłówek języka C|C++nagłówki|
 |-------------|--------------|------------------|
-|**cproj**, **cprojf**, **cprojl**|\<complex.h>|\<ccomplex >|
+|**cproj**, **cprojf**, **cprojl**|\<complex.h>|\<ccomplex>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
-[norm normf, norml](norm-normf-norml1.md)<br/>
+[norm, normf, norml](norm-normf-norml1.md)<br/>
 [creal, crealf, creall](creal-crealf-creall.md)<br/>
 [conj, conjf, conjl](conj-conjf-conjl.md)<br/>
 [cimag, cimagf, cimagl](cimag-cimagf-cimagl.md)<br/>

@@ -1,31 +1,31 @@
 ---
-title: Konwersja boxing (C++/CX)
+title: Opakowanie (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: edfb12fa-2a9b-42f6-bdac-d4d76cb8274e
-ms.openlocfilehash: 3c281229b509ef72d37400b2088a6663be1afe42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90c5af31efc6523683227dbf54c85390bc98510a
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257968"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740665"
 ---
-# <a name="boxing-ccx"></a>Konwersja boxing (C++/CX)
+# <a name="boxing-ccx"></a>Opakowanie (C++/CX)
 
-*Konwersja boxing* jest zawijany zmiennej typu wartości takie jak [Windows::Foundation::DateTime](/uwp/api/windows.foundation.datetime)— lub typem skalarnym o podstawowych, takich jak `int`— w klasie ref, gdy zmienna jest przekazywana do metody, która przyjmuje [ Platform::Object ^](../cppcx/platform-object-class.md) jako jej typ danych wejściowych.
+*Opakowanie* dzieli zmienną typu wartości, taką jak [Windows:: Foundation::D atetime](/uwp/api/windows.foundation.datetime)— lub podstawowy typ skalarny, taki `int`jak — w klasie referencyjnej, gdy zmienna jest przenoszona do metody przyjmującej [platform:: Object ^](../cppcx/platform-object-class.md) jako typ danych wejściowych .
 
-## <a name="passing-a-value-type-to-an-object-parameter"></a>Przekazywanie typu wartości do obiektu ^ parametru
+## <a name="passing-a-value-type-to-an-object-parameter"></a>Przekazywanie typu wartości do obiektu ^ Parameter
 
-Mimo że nie trzeba jawnie polu zmiennej w celu przekazania go do parametru metody typu [Platform::Object ^](../cppcx/platform-object-class.md), trzeba jawnie rzutowane do oryginalnego typu podczas pobierania wartości, które zostały wcześniej ramce.
+Chociaż nie musisz jawnie korzystać z zmiennej, aby przekazać ją do parametru metody typu [platform:: Object ^](../cppcx/platform-object-class.md), musisz jawnie rzutować z powrotem do oryginalnego typu podczas pobierania wartości, które zostały wcześniej opakowane.
 
 [!code-cpp[cx_boxing#01](../cppcx/codesnippet/CPP/cx_boxing/class1.cpp#01)]
 
-### <a name="using-platformiboxt-to-support-nullable-value-types"></a>Za pomocą Platform::IBox\<T > do obsługi typy o wartości zerowalnej
+### <a name="using-platformiboxt-to-support-nullable-value-types"></a>Używanie funkcji platform::\<IBox T > do obsługi typów wartości null
 
-C# i Visual Basic obsługuje pojęcie typy o wartości zerowalnej. W C++/CX, można użyć `Platform::IBox<T>` typu do udostępnienia metody publiczne, które obsługują parametrów typu wartości null. W poniższym przykładzie przedstawiono C++/CX metodę publiczną, która zwraca wartość null, gdy C# /obiekt wywołujący przekazuje wartość null dla jednego z argumentów.
+C#i Visual Basic wspierać koncepcję typów wartości null. W C++/CX można użyć `Platform::IBox<T>` typu, aby uwidocznić metody publiczne, które obsługują parametry typu wartości null. Poniższy przykład przedstawia metodę publiczną C++/CX, która zwraca wartość null, C# gdy obiekt wywołujący przekazuje wartość null dla jednego z argumentów.
 
 [!code-cpp[cx_boxing#02](../cppcx/codesnippet/CPP/cx_boxing/class1.h#02)]
 
-W kliencie C#, XAML będzie można korzystać następująco:
+W kliencie C# XAML można wykorzystać go w następujący sposób:
 
 ```
 
@@ -40,5 +40,5 @@ W kliencie C#, XAML będzie można korzystać następująco:
 
 [System typów (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
 [Rzutowanie (C++/CX)](../cppcx/casting-c-cx.md)<br/>
-[Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Dokumentacja języka C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Dokumentacja przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)

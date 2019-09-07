@@ -2,20 +2,20 @@
 title: Klasy częściowe (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 69d93575-636c-4564-8cca-6dfba0c7e328
-ms.openlocfilehash: 71df19e98192a7704d4528fe730ce79977383a9b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 703f12498e0f2c68448e2b3896d3d5f906aba779
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385001"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740471"
 ---
 # <a name="partial-classes-ccx"></a>Klasy częściowe (C++/CX)
 
-Częściowa klasa jest konstrukcja, która obsługuje scenariusze, w których w przypadku modyfikowania jednej części definicji klasy i automatyczne generowanie kodu oprogramowania — na przykład projektant XAML — jest także modyfikowanie kodu w tej samej klasy. Za pomocą klasy częściowej, można zapobiec projektanta zastępowanie kodu. W projekcie programu Visual Studio `partial` modyfikator, jest stosowane automatycznie wygenerowanego pliku.
+Klasa częściowa to konstrukcja, która obsługuje scenariusze, w których jest modyfikowana jedna część definicji klasy oraz automatyczne oprogramowanie generujące kod — na przykład Projektant XAML — również modyfikuje kod w tej samej klasie. Korzystając z klasy częściowej, można zapobiec zastąpieniu kodu przez projektanta. W projekcie `partial` programu Visual Studio modyfikator jest automatycznie stosowany do wygenerowanego pliku.
 
 ## <a name="syntax"></a>Składnia
 
-Aby zdefiniować klasę częściową, należy użyć `partial` — słowo kluczowe bezpośrednio przed klucz klasy o jakie byłyby definicję klasy normalne. Słowo kluczowe, takie jak `partial ref class` jest kontekstowym słowem kluczowym, który zawiera białych znaków. Definicje częściowe są obsługiwane w następujących konstrukcji.
+Aby zdefiniować klasę częściową, użyj `partial` słowa kluczowego bezpośrednio przed kluczem klasy, co mogłoby być normalną definicją klasy. Słowo kluczowe, takie `partial ref class` jak to kontekstowe słowo kluczowe, które zawiera znaki odstępu. Definicje częściowe są obsługiwane w następujących konstrukcjach.
 
 - `class` lub `struct`
 
@@ -25,53 +25,53 @@ Aby zdefiniować klasę częściową, należy użyć `partial` — słowo kluczo
 
 - `enum` lub `enum class`
 
-- `ref interface`, `interface class`, `interface struct`, lub `__interface`
+- `ref interface`, `interface class`, `interface struct`lub`__interface`
 
 - `union`
 
-W tym przykładzie przedstawiono częściowym `ref class`:
+Ten przykład ilustruje częściowe `ref class`:
 
 [!code-cpp[cx_partial#01](../cppcx/codesnippet/CPP/partialclassexample/class1.h#01)]
 
 ## <a name="contents"></a>Spis treści
 
-Definicji częściowej klasy może zawierać wszystko, co w przypadku może zawierać definicję klasy pełną `partial` pominięto — słowo kluczowe. Z jednym wyjątkiem w tym wszelkie prawidłowa konstrukcja, takich jak klas bazowych, elementy członkowskie danych, funkcje składowe, wyliczenia, deklaracje funkcji friend i atrybutów. I wbudowane definicje statyczne elementy członkowskie danych są dozwolone.
+Definicja klasy częściowej może zawierać wszystko, co może zawierać cała definicja klasy, jeśli `partial` słowo kluczowe zostało pominięte. W przypadku jednego wyjątku obejmuje to wszelkie prawidłowe konstrukcje, takie jak klasy bazowe, składowe danych, funkcje składowe, wyliczenia, deklaracje zaprzyjaźnione i atrybuty. I definicje wbudowane składowych danych statycznych są dozwolone.
 
-Jedynym wyjątkiem jest klasa ułatwień dostępu. Na przykład instrukcja `public partial class MyInvalidClass {/* ... */};` , występuje błąd. Wszystkie specyfikatory dostępu, które są używane w definicji klasy częściowej dla MyInvalidClass nie mają wpływu na dostępność domyślne w definicji kolejnych klasy częściowego lub pełnego dla MyInvalidClass.
+Jedynym wyjątkiem jest dostępność klas. Na przykład, instrukcja `public partial class MyInvalidClass {/* ... */};` jest błędem. Wszelkie specyfikatory dostępu, które są używane w definicji klasy częściowej dla MyInvalidClass, nie wpływają na domyślne ułatwienia dostępu w kolejnej częściowej lub pełnej definicji klasy dla MyInvalidClass.
 
-Poniższy fragment kodu pokazuje ułatwień dostępu. W pierwszej klasy częściowej `Method1` jest publiczny, ponieważ jego dostępność jest publiczna. W drugim klasy częściowej `Method2` jest prywatny, ponieważ wartość domyślna klasa dostępu jest prywatny.
+Poniższy fragment kodu ilustruje ułatwienia dostępu. W pierwszej klasie częściowej jest `Method1` publiczna, ponieważ jej dostępność jest publiczna. Druga klasa częściowa jest prywatna, `Method2` ponieważ domyślna dostępność klas jest prywatna.
 
 [!code-cpp[cx_partial#02](../cppcx/codesnippet/CPP/partialclassexample/class1.h#02)]
 
-## <a name="declaration"></a>Deklaracja
+## <a name="declaration"></a>Oświadczeń
 
-Częściową definicję klasy, takie jak *MyClass* jest tylko deklaracja MyClass. Oznacza to, że tylko wprowadza nazwę *MyClass*. *MyClass* nie można używać w taki sposób, że wymaga definicji klasy, na przykład, wiedząc, rozmiar *MyClass* lub korzystanie z obiektem bazowym ani składową z *MyClass*. *MyClass* jest uważany za można zdefiniować tylko, gdy kompilator napotka definicji — do częściowego *MyClass*.
+Częściowa definicja klasy, takiej jak *MyClass* , jest tylko deklaracją MyClass. Oznacza to, że wprowadza tylko nazwę *MyClass*. *MyClass* nie można użyć w sposób, który wymaga definicji klasy, na przykład, znajomości rozmiaru *MyClass* lub przy użyciu podstawowej lub składowanej wartości *MyClass*. *MyClass* jest uznawana za zdefiniowaną tylko wtedy, gdy kompilator napotka nieczęściową definicję *MyClass*.
 
-W poniższym przykładzie pokazano zachowanie deklaracji klasy częściowej. Po zgłoszeniu #1 *MyClass* może służyć jako, jeśli zostałaby napisana jako deklaracją do przodu `ref class MyClass;`. Deklaracja jest równoważna #1.Declaration deklaracji #3 #2 jest nieprawidłowa, ponieważ jest deklaracją do przodu dla klasy. Ale deklaracja #4 jest nieprawidłowy ponieważ
+Poniższy przykład demonstruje zachowanie deklaracji klasy częściowej. Po #1 deklaracji *MyClass* można używać tak, jakby była zapisywana jako deklaracja do przodu, `ref class MyClass;`. Deklaracja #2 jest równoważna z deklaracją #1. Deklaracja #3 jest prawidłowa, ponieważ jest to Deklaracja do przodu klasy. Ale deklaracja #4 jest nieprawidłowa, ponieważ
 
 *MyClass* nie jest w pełni zdefiniowana.
 
-Nie używa deklaracji #5 `partial` — słowo kluczowe i deklaracji pełni definiuje *MyClass*. W związku z tym deklaracja #6 jest nieprawidłowy.
+Deklaracja #5 nie używa `partial` słowa kluczowego, a deklaracja w pełni definiuje *MyClass*. W związku z tym #6 deklaracji jest prawidłowa.
 
 [!code-cpp[Cx_partial#03](../cppcx/codesnippet/CPP/partialclassexample/class1.h#03)]
 
-## <a name="number-and-ordering"></a>Liczbę i kolejność
+## <a name="number-and-ordering"></a>Liczba i porządkowanie
 
-Może to być zero lub więcej częściowych definicji klasy dla każdej pełnej definicji klasy.
+Dla każdej pełnej definicji klasy może istnieć co najmniej zero definicji klasy częściowej.
 
-Każdy definicję klasy częściowej klasy leksykalnie musi poprzedzać jeden pełna definicja tej klasy, ale nie musi poprzedzać deklaracje przechodzenia do przodu klasy. W przypadku nie pełnej definicji klasy, następnie deklaracji klasy częściowej mogą być tylko deklaracje przechodzenia do przodu.
+Każda częściowa definicja klasy klasy musi być jednokierunkowa przed jedną pełną definicją tej klasy, ale nie musi poprzedzać deklaracji przekazywania klasy. Jeśli nie ma żadnej pełnej definicji klasy, deklaracje częściowej klasy mogą być wyłącznie deklaracjami do przodu.
 
-Wszystkie klucze klasy, takie jak `class` i `struct` muszą być zgodne. Na przykład, występuje błąd kodu `partial class X {}; struct X {};`.
+Wszystkie klucze klasy, takie jak `class` i `struct` , muszą być zgodne. Na przykład jest to błąd do kodu `partial class X {}; struct X {};`.
 
-Poniższy przykład pokazuje liczbę i kolejność. Ostatnie częściowa deklaracja kończy się niepowodzeniem, ponieważ klasa jest już zdefiniowana.
+Poniższy przykład ilustruje liczbę i porządkowanie. Ostatnia deklaracja częściowa nie powiodła się, ponieważ Klasa jest już zdefiniowana.
 
 [!code-cpp[cx_partial#04](../cppcx/codesnippet/CPP/partialclassexample/class1.h#04)]
 
 ## <a name="full-definition"></a>Pełna definicja
 
-Punkcie pełna definicja klasy X zachowanie jest takie same tak, jakby definicji X była zadeklarowana wszystkie klasy podstawowe, członków i tak dalej, w kolejności, w którym zostały napotkano i zdefiniowane w klasach częściowa. Oznacza to, że zawartość klasy częściowe są traktowane tak, jakby były one napisane punkcie pełna definicja klasy i wyszukiwania nazw i inne reguły języka, które są stosowane punkcie pełna definicja klasy tak, jakby zawartość klasy częściowe zostały napisane w miejscu
+W punkcie pełnej definicji klasy X zachowanie jest takie samo, jak gdyby definicja X zadeklarowała wszystkie klasy podstawowe, elementy członkowskie itd., w kolejności, w której zostały napotkane i zdefiniowane w klasach częściowych. Oznacza to, że zawartość klas częściowych jest traktowana tak, jakby były zapisywane w punkcie pełnej definicji klasy, a wyszukiwanie nazw i inne reguły języka są stosowane w punkcie pełnej definicji klasy, tak jakby zawartość klas częściowych Zapisano w miejscu
 
-Poniższe dwa przykłady kodu mają identyczne znaczenie i efekt. W pierwszym przykładzie użyto klasy częściowej, a nie w drugim przykładzie.
+Poniższe dwa przykłady kodu mają identyczne znaczenie i skutek. Pierwszy przykład używa klasy częściowej, a drugi przykład nie.
 
 [!code-cpp[cx_partial#05](../cppcx/codesnippet/CPP/partialclassexample/class1.h#05)]
 
@@ -79,17 +79,17 @@ Poniższe dwa przykłady kodu mają identyczne znaczenie i efekt. W pierwszym pr
 
 ## <a name="templates"></a>Szablony
 
-Częściowe klasy nie może być szablonem.
+Klasa częściowa nie może być szablonem.
 
 ## <a name="restrictions"></a>Ograniczenia
 
-Klasy częściowe nie mogą rozciągać się poza jedno tłumaczenie jednostki.
+Klasa częściowa nie może przekroczyć jednej jednostki tłumaczenia.
 
-`partial` Słowo kluczowe jest obsługiwane tylko w połączeniu z `ref class` — słowo kluczowe lub `value class` — słowo kluczowe.
+Słowo kluczowe jest obsługiwane tylko w połączeniu `ref class` ze słowem kluczowym `value class` lub słowem kluczowym. `partial`
 
 ### <a name="examples"></a>Przykłady
 
-W poniższym przykładzie zdefiniowano `Address` klasy przez dwa pliki kodu. Modyfikuje projektanta `Address.details.h` i modyfikować `Address.h`. Tylko definicja klasy w pierwszym pliku używa `partial` — słowo kluczowe.
+W poniższym przykładzie zdefiniowano `Address` klasę w dwóch plikach kodu. Projektant modyfikuje `Address.details.h` i zmodyfikuje `Address.h`. Tylko definicja klasy w pierwszym pliku używa `partial` słowa kluczowego.
 
 [!code-cpp[cx_partial#07](../cppcx/codesnippet/CPP/partialclassexample/address.details.h#07)]
 
@@ -98,5 +98,5 @@ W poniższym przykładzie zdefiniowano `Address` klasy przez dwa pliki kodu. Mod
 ## <a name="see-also"></a>Zobacz także
 
 [System typów](../cppcx/type-system-c-cx.md)<br/>
-[Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Dokumentacja języka C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Dokumentacja przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)

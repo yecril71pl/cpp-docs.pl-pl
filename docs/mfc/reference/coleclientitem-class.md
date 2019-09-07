@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: 4a4492e168d36b114811192c8a5c341a62c156ad
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9f97f117f0fd8570855079aca7bdfd7a63118bc5
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504378"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740879"
 ---
 # <a name="coleclientitem-class"></a>Klasa COleClientItem
 
@@ -285,7 +285,7 @@ Element OLE może być osadzony lub połączony. Jeśli jest osadzony, jego dane
 
 `COleClientItem`definiuje kilka funkcji, które są wywoływane w odpowiedzi na żądania z aplikacji serwera; te zastąpienia zwykle działają jako powiadomienia. Umożliwia to aplikacji serwerowej informowanie kontenera o zmianach wprowadzonych przez użytkownika podczas edytowania elementu OLE lub do pobierania informacji potrzebnych podczas edytowania.
 
-`COleClientItem`może być używany z klasą [COleDocument](../../mfc/reference/coledocument-class.md), [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)lub [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) . Aby użyć `COleClientItem`, należy utworzyć klasy od niej i zaimplementować funkcję [](#onchange) członkowską onchangi, która definiuje, w jaki sposób kontener reaguje na zmiany wprowadzone do elementu. Aby zapewnić obsługę aktywacji w miejscu, Zastąp funkcję elementu członkowskiego [OnGetItemPosition](#ongetitemposition) . Ta funkcja udostępnia informacje o wyświetlanej pozycji elementu OLE.
+`COleClientItem`może być używany z klasą [COleDocument](../../mfc/reference/coledocument-class.md), [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)lub [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) . Aby użyć `COleClientItem`, należy utworzyć klasy od niej i zaimplementować funkcję członkowską [onchangi](#onchange) , która definiuje, w jaki sposób kontener reaguje na zmiany wprowadzone do elementu. Aby zapewnić obsługę aktywacji w miejscu, Zastąp funkcję elementu członkowskiego [OnGetItemPosition](#ongetitemposition) . Ta funkcja udostępnia informacje o wyświetlanej pozycji elementu OLE.
 
 Aby uzyskać więcej informacji na temat korzystania z interfejsu kontenera, zapoznaj się z artykułem [kontenery: Implementacja kontenera](../../mfc/containers-implementing-a-container.md) i [aktywacji](../../mfc/activation-cpp.md).
 
@@ -1085,7 +1085,7 @@ BOOL Draw(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-Wskaźnik do obiektu [](../../mfc/reference/cdc-class.md) przerzutowania używany do rysowania elementu OLE.
+Wskaźnik [do obiektu](../../mfc/reference/cdc-class.md) przerzutowania używany do rysowania elementu OLE.
 
 *lpBounds*<br/>
 Wskaźnik do obiektu [CRect](../../atl-mfc-shared/reference/crect-class.md) lub `RECT` struktury, który definiuje prostokąt ograniczenia, w którym ma być rysowany element OLE (w jednostkach logicznych określonych przez kontekst urządzenia).
@@ -1143,7 +1143,7 @@ Niezerowe, jeśli pomyślne; 0, jeśli element OLE jest pusty.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja udostępnia te same informacje co [getzakres](#getextent). Można jednak wywołać `GetCachedExtent` , aby uzyskać informacje o zakresie podczas przetwarzania innych programów obsługi OLE, takich jak OnChange. [](#onchange) Wymiary znajdują się w jednostkach MM_HIMETRIC.
+Ta funkcja udostępnia te same informacje co [getzakres](#getextent). Można jednak wywołać `GetCachedExtent` , aby uzyskać informacje o zakresie podczas przetwarzania innych programów obsługi OLE, takich jak [OnChange](#onchange). Wymiary znajdują się w jednostkach MM_HIMETRIC.
 
 Jest to możliwe, `GetCachedExtent` ponieważ używa interfejsu [IViewObject2](/windows/win32/api/oleidl/nn-oleidl-iviewobject2) zamiast używania interfejsu [IOleObject](/windows/win32/api/oleidl/nn-oleidl-ioleobject) w celu uzyskania zakresu tego elementu. Obiekt com przechowuje w pamięci podręcznej informacje o zakresie, które są używane w poprzednim wywołaniu [widoku IViewObject::D RAW.](/windows/win32/api/oleidl/nf-oleidl-iviewobject-draw) `IViewObject2`
 
@@ -1254,10 +1254,10 @@ Niezerowe, jeśli pomyślne; 0, jeśli element OLE jest pusty.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli aplikacja serwera została zapisywana przy użyciu biblioteka MFC, ta funkcja powoduje wywołanie funkcji elementu członkowskiego [OnGetExtent](../../mfc/reference/coleserveritem-class.md#ongetextent) odpowiedniego `COleServerItem` obiektu. Należy zauważyć, że pobrany rozmiar może się różnić od rozmiaru ostatniego ustawionego [](#setextent) przez funkcję elementu członkowskiego setSize; rozmiar określony przez `SetExtent` jest traktowany jako sugestia. Wymiary znajdują się w jednostkach MM_HIMETRIC.
+Jeśli aplikacja serwera została zapisywana przy użyciu biblioteka MFC, ta funkcja powoduje wywołanie funkcji elementu członkowskiego [OnGetExtent](../../mfc/reference/coleserveritem-class.md#ongetextent) odpowiedniego `COleServerItem` obiektu. Należy zauważyć, że pobrany rozmiar może się różnić od rozmiaru ostatniego ustawionego [przez funkcję elementu](#setextent) Członkowskiego setSize; rozmiar określony przez `SetExtent` jest traktowany jako sugestia. Wymiary znajdują się w jednostkach MM_HIMETRIC.
 
 > [!NOTE]
->  Nie wywołuj `GetExtent` podczas przetwarzania procedury obsługi OLE, np. OnChange [](#onchange). Zamiast tego wywołaj [GetCachedExtent](#getcachedextent) .
+>  Nie wywołuj `GetExtent` podczas przetwarzania procedury obsługi OLE, np. [OnChange](#onchange). Zamiast tego wywołaj [GetCachedExtent](#getcachedextent) .
 
 Aby uzyskać więcej informacji, zobacz [IOleObject:: GetStop](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getextent) w Windows SDK.
 
@@ -1332,7 +1332,7 @@ UINT GetItemState() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Aby otrzymywać powiadomienia o zmianie stanu elementu OLE, należy użyć funkcji członkowskiej OnChange. [](#onchange)
+Aby otrzymywać powiadomienia o zmianie stanu elementu OLE, należy użyć funkcji członkowskiej [OnChange](#onchange) .
 
 Aby uzyskać więcej informacji, zobacz kontenery artykułów [: Stany](../../mfc/containers-client-item-states.md)elementu klienta.
 
@@ -1426,7 +1426,7 @@ Jest to często wpis w bazie danych rejestracji systemu.
 
 Jeśli zażądano pełnej nazwy typu, ale nie jest ona dostępna, zamiast tego zostanie użyta krótka nazwa. Jeśli w bazie danych rejestracji nie zostanie znaleziony żaden wpis dla typu elementu OLE, lub jeśli dla typu elementu OLE nie zarejestrowano żadnych typów użytkownika, zostanie użyty typ użytkownika aktualnie przechowywany w elemencie OLE. Jeśli nazwa tego typu użytkownika jest ciągiem pustym, zostanie użyty komunikat "nieznany obiekt".
 
-Aby uzyskać więcej informacji, zobacz [IOleObject::](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getusertype) GetUserType w Windows SDK.
+Aby uzyskać więcej informacji, zobacz [IOleObject:: GetUserType](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getusertype) w Windows SDK.
 
 ##  <a name="isinplaceactive"></a>COleClientItem:: IsInPlaceActive
 
@@ -1478,7 +1478,7 @@ Różne od zera, jeśli element OLE jest zanieczyszczony; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [IPersistStorage::](/windows/win32/api/objidl/nf-objidl-ipersiststorage-isdirty) IsDirty in the Windows SDK.
+Aby uzyskać więcej informacji, zobacz [IPersistStorage:: IsDirty](/windows/win32/api/objidl/nf-objidl-ipersiststorage-isdirty) in the Windows SDK.
 
 ##  <a name="isopen"></a>COleClientItem:: IsOpen
 
@@ -1524,7 +1524,7 @@ virtual void OnActivate();
 
 Należy zauważyć, że ta funkcja jest wywoływana, aby wskazać, że serwer jest uruchomiony, a nie wskazuje, że interfejs użytkownika został zainstalowany w aplikacji kontenera. W tym momencie obiekt nie ma aktywnego interfejsu użytkownika (nie `activeUIState`jest). Nie zainstalowano jej menu ani paska narzędzi. Funkcja członkowska [OnActivateUI](#onactivateui) jest wywoływana, gdy wystąpi.
 
-Domyślna implementacja wywołuje funkcję członkowską onchangi z OLE_CHANGEDSTATE jako parametr. [](#onchange) Przesłoń tę funkcję, aby wykonać przetwarzanie niestandardowe, gdy element zostanie aktywny w miejscu.
+Domyślna implementacja wywołuje funkcję członkowską [Onchangi](#onchange) z OLE_CHANGEDSTATE jako parametr. Przesłoń tę funkcję, aby wykonać przetwarzanie niestandardowe, gdy element zostanie aktywny w miejscu.
 
 ##  <a name="onactivateui"></a>COleClientItem:: OnActivateUI
 
@@ -1609,7 +1609,7 @@ virtual void OnDeactivate();
 
 Należy zauważyć, że ta funkcja jest wywoływana, aby wskazać, że element OLE jest zamknięty, a jego interfejs użytkownika został usunięty z aplikacji kontenera. W takim przypadku wywoływana jest funkcja członkowska [OnDeactivateUI](#ondeactivateui) .
 
-Domyślna implementacja wywołuje funkcję członkowską onchangi z OLE_CHANGEDSTATE jako parametr. [](#onchange) Przesłoń tę funkcję, aby przeprowadzić przetwarzanie niestandardowe w przypadku dezaktywowania aktywnego elementu. Na przykład jeśli w aplikacji kontenera jest obsługiwane polecenie Cofnij, można zastąpić tę funkcję, aby odrzucić stan cofnięcia, co oznacza, że ostatnią operację wykonywaną na elemencie OLE nie można cofnąć Po zdezaktywowaniu elementu.
+Domyślna implementacja wywołuje funkcję członkowską [Onchangi](#onchange) z OLE_CHANGEDSTATE jako parametr. Przesłoń tę funkcję, aby przeprowadzić przetwarzanie niestandardowe w przypadku dezaktywowania aktywnego elementu. Na przykład jeśli w aplikacji kontenera jest obsługiwane polecenie Cofnij, można zastąpić tę funkcję, aby odrzucić stan cofnięcia, co oznacza, że ostatnią operację wykonywaną na elemencie OLE nie można cofnąć Po zdezaktywowaniu elementu.
 
 ##  <a name="ondeactivateandundo"></a>COleClientItem:: OnDeactivateAndUndo
 
@@ -1748,7 +1748,7 @@ Wskaźnik na wskaźnik do okna głównego ramki.
 Wskaźnik na wskaźnik do okna ramki dokumentu.
 
 *lpFrameInfo*<br/>
-Wskaźnik do struktury [OLEINPLACEFRAMEINFO](/windows/win32/api/oleidl/ns-oleidl-oifi) , która będzie odbierać informacje o oknie ramek.
+Wskaźnik do struktury [OLEINPLACEFRAMEINFO](/windows/win32/api/oleidl/ns-oleidl-oleinplaceframeinfo) , która będzie odbierać informacje o oknie ramek.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1762,7 +1762,7 @@ Jeśli kontener jest aplikacją MDI, domyślna implementacja zwraca wskaźnik do
 
 Przesłoń tę funkcję tylko wtedy, gdy domyślna implementacja nie odpowiada aplikacji; na przykład jeśli aplikacja ma model interfejsu użytkownika, który różni się od SDI lub MDI. Jest to zaawansowany możliwy do zaawansowania.
 
-Aby uzyskać więcej informacji, zobacz [IOleInPlaceSite:: GetWindowContext](/windows/win32/api/oleidl/nf-oleidl-ioleinplacesite-getwindowcontext) i strukturę [OLEINPLACEFRAMEINFO](/windows/win32/api/oleidl/ns-oleidl-oifi) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz [IOleInPlaceSite:: GetWindowContext](/windows/win32/api/oleidl/nf-oleidl-ioleinplacesite-getwindowcontext) i strukturę [OLEINPLACEFRAMEINFO](/windows/win32/api/oleidl/ns-oleidl-oleinplaceframeinfo) w Windows SDK.
 
 ##  <a name="oninsertmenus"></a>COleClientItem:: OnInsertMenus
 
@@ -1983,7 +1983,7 @@ void Run();
 
 ### <a name="remarks"></a>Uwagi
 
-Przed aktywowaniem elementu wywołaj funkcję członkowskąwceluuruchomieniaaplikacjiserwera.`Run` Jest to wykonywane automatycznie przez [aktywację](#activate) i [DoVerb](#doverb), więc zwykle nie jest to konieczne do wywołania tej funkcji. Wywołaj tę funkcję, jeśli konieczne jest uruchomienie serwera w celu ustawienia atrybutu elementu, takiego jak setstop, [](#setextent)przed wykonaniem [DoVerb](#doverb).
+Przed aktywowaniem elementu wywołaj funkcję członkowskąwceluuruchomieniaaplikacjiserwera.`Run` Jest to wykonywane automatycznie przez [aktywację](#activate) i [DoVerb](#doverb), więc zwykle nie jest to konieczne do wywołania tej funkcji. Wywołaj tę funkcję, jeśli konieczne jest uruchomienie serwera w celu ustawienia atrybutu elementu, takiego jak [setstop](#setextent), przed wykonaniem [DoVerb](#doverb).
 
 ##  <a name="setdrawaspect"></a>COleClientItem:: SetDrawAspect
 
@@ -2060,7 +2060,7 @@ Jeśli aplikacja serwera została zapisywana przy użyciu biblioteka MFC, ta fun
 
 Ta opcja jest również wywoływana automatycznie z nazwą aplikacji i nazwą dokumentu podczas ładowania obiektu lub gdy plik zostanie zapisany pod inną nazwą. W związku z tym nie jest zwykle konieczne bezpośrednie wywołanie tej funkcji.
 
-Aby uzyskać więcej informacji, zobacz [IOleObject::](/windows/win32/api/oleidl/nf-oleidl-ioleobject-sethostnames) SetHostNames w Windows SDK.
+Aby uzyskać więcej informacji, zobacz [IOleObject:: SetHostNames](/windows/win32/api/oleidl/nf-oleidl-ioleobject-sethostnames) w Windows SDK.
 
 ##  <a name="seticonicmetafile"></a>COleClientItem:: SetIconicMetafile
 
@@ -2109,7 +2109,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest wywoływana przez domyślną implementację funkcji składowej [OnChangeItemPosition](#onchangeitemposition) . Należy wywołać tę funkcję przy każdej zmianie położenia lub widocznej części elementu OLE. Zazwyczaj oznacza to, że wywołujesz go z funkcji elementów [](../../mfc/reference/cwnd-class.md#onsize) członkowskich OnSize i [OnScrollBy](../../mfc/reference/cview-class.md#onscrollby) widoku.
+Ta funkcja jest wywoływana przez domyślną implementację funkcji składowej [OnChangeItemPosition](#onchangeitemposition) . Należy wywołać tę funkcję przy każdej zmianie położenia lub widocznej części elementu OLE. Zazwyczaj oznacza to, że wywołujesz go z funkcji elementów członkowskich [OnSize](../../mfc/reference/cwnd-class.md#onsize) i [OnScrollBy](../../mfc/reference/cview-class.md#onscrollby) widoku.
 
 Aby uzyskać więcej informacji, zobacz [IOleInPlaceObject:: SetObjectRects](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-setobjectrects) w Windows SDK.
 
@@ -2151,7 +2151,7 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
 Wskaźnik do struktury danych [DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) , która zawiera informacje o nowym urządzeniu drukowania. Może mieć wartość NULL.
 
 *PPD*<br/>
-Wskaźnik do struktury danych [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) , która zawiera informacje o nowym urządzeniu drukowania. Może mieć wartość NULL.
+Wskaźnik do struktury danych [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) , która zawiera informacje o nowym urządzeniu drukowania. Może mieć wartość NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2163,7 +2163,7 @@ Ta funkcja aktualizuje urządzenie drukowania dla elementu, ale nie odświeża p
 
 Argumenty tej funkcji zawierają informacje używane przez system OLE do identyfikowania urządzenia docelowego. `PRINTDLG` Struktura zawiera informacje używane przez system Windows do zainicjowania wspólnego okna dialogowego drukowania. Gdy użytkownik zamknie okno dialogowe, system Windows zwróci informacje o wyborach użytkownika w tej strukturze. Element członkowski obiektu [CPrintDialog](../../mfc/reference/cprintdialog-class.md) jest `PRINTDLG` strukturą. `m_pd`
 
-Aby uzyskać więcej informacji na temat tej struktury, zobacz [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) w Windows SDK.
+Aby uzyskać więcej informacji na temat tej struktury, zobacz [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) w Windows SDK.
 
 Aby uzyskać więcej informacji, zobacz [DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) w Windows SDK.
 

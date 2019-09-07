@@ -2,41 +2,41 @@
 title: Właściwości (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 64c7bc56-3191-4cd5-bdf4-476d07d285d5
-ms.openlocfilehash: 8303952beefbbac13db14e148c6441c29a46b3d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fdff2bf5abd3177eda962b7cc55ace1078522f32
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375226"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741093"
 ---
 # <a name="properties-ccx"></a>Właściwości (C++/CX)
 
-Typy środowiska wykonawczego Windows ujawnić dane publiczne jako właściwości. Kod klienta uzyskuje dostęp do właściwości, takich jak datamember publicznych. Wewnętrznie właściwość jest zaimplementowana jako blok, który zawiera metody dostępu get i/lub metody dostępu set. Za pomocą metody dostępu, można wykonywać dodatkowych czynności przed lub po pobraniu wartości, na przykład można wyzwolić zdarzenie lub wykonać sprawdzanie poprawności.
+Typy środowisko wykonawcze systemu Windows uwidaczniają dane publiczne jako właściwości. Kod klienta uzyskuje dostęp do właściwości, takiej jak publiczny element członkowski. Wewnętrznie właściwość jest implementowana jako blok, który zawiera metodę get akcesora, metodę dostępu set lub obie. Przy użyciu metod dostępu można wykonać dodatkowe akcje przed lub po pobraniu wartości, na przykład, można wywołać zdarzenie lub przeprowadzić testy weryfikacyjne.
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość właściwości jest zawarta w zmiennej prywatnej — znane jako *magazyn zapasowy*— czyli tego samego typu, ponieważ właściwość. Właściwość może zawierać metody dostępu set, która przypisuje wartość do magazyn zapasowy, i metody dostępu get, który pobiera wartość magazyn zapasowy. Właściwość jest tylko do odczytu zawiera tylko akcesor pobierania, tylko do zapisu, jeśli zawiera tylko metody dostępu set i odczyt/zapis (można modyfikować) zapewnia obu metod dostępu.
+Wartość właściwości jest zawarta w zmiennej prywatnej — nazywanej *magazynem zapasowym*, który jest taki sam jak typ właściwości. Właściwość może zawierać zarówno metodę dostępu zestawu, która przypisuje wartość do magazynu zapasowego, jak i metodę dostępu get, która pobiera wartość magazynu zapasowego. Właściwość jest tylko do odczytu, jeśli zawiera tylko metodę dostępu get, tylko do zapisu, jeśli zawiera tylko metodę dostępu set i odczyt/zapis (modyfikowalny), jeśli zapewnia obydwie metody dostępu.
 
-A *trivial* właściwość jest właściwością odczytu/zapisu, dla których kompilator automatycznie implementuje metody dostępu i magazyn zapasowy. Nie masz dostępu do implementacji kompilatora. Jednak można zadeklarować właściwości niestandardowej i jawnie deklarować swoją metody dostępu i magazyn zapasowy. W ramach metodę dostępu możesz wykonać wszelka logika, która jest wymagana, takich jak sprawdzanie poprawności danych wejściowych do metody dostępu set, obliczania wartości z wartości właściwości, uzyskiwanie dostępu do bazy danych lub wyzwalanie zdarzeń, gdy właściwość.
+*Prosta* właściwość jest właściwością do odczytu/zapisu, dla której kompilator automatycznie implementuje metody dostępu i magazyn zapasowy. Nie masz dostępu do implementacji kompilatora. Można jednak zadeklarować właściwość niestandardową i jawnie zadeklarować jej metody dostępu i magazyn zapasowy. W ramach metody dostępu można wykonać dowolną wymaganą logikę, taką jak walidacja danych wejściowych do zestawu akcesora, obliczanie wartości z wartości właściwości, uzyskiwanie dostępu do bazy danych lub Wyzwalanie zdarzenia po zmianie właściwości.
 
-Gdy C++tworzenia wystąpienia klasy ref /CX, jego pamięci jest inicjowany z wartością zerową przed jego konstruktor jest wywoływany; w związku z tym wszystkie właściwości są przypisywane domyślną wartość zero lub nullptr punkcie deklaracji.
+Po utworzeniu C++wystąpienia klasy ref/CX jej pamięć jest inicjowana zero przed wywołaniem konstruktora; w związku z tym wszystkie właściwości są przypisywane wartości domyślnej zero lub nullptr w punkcie deklaracji.
 
 ### <a name="examples"></a>Przykłady
 
-Poniższy przykład kodu pokazuje sposób deklarowania i dostępu do właściwości. Pierwszą właściwością `Name`, jest znany jako *trivial* właściwość, ponieważ kompilator automatycznie generuje `set` akcesora `get` metody dostępu i magazyn zapasowy.
+Poniższy przykład kodu pokazuje, jak zadeklarować Właściwość i uzyskać do niej dostęp. Pierwsza Właściwość `Name`,,, jest znana jako właściwość *prosta* , ponieważ `set` kompilator automatycznie generuje metodę dostępu, `get` akcesor i magazyn zapasowy.
 
-Drugą właściwością `Doctor`, to właściwość tylko do odczytu, ponieważ określa on *blok właściwości* jawnie określa tylko `get` metody dostępu. Ponieważ jest zadeklarowany w bloku właściwości, należy jawnie zadeklarować magazyn zapasowy; oznacza to, że ciąg prywatnej ^ zmiennej `doctor_`. Zazwyczaj właściwość tylko do odczytu po prostu zwraca wartość magazyn zapasowy. Tylko klasy można ustawić wartość magazynie zapasowym, zazwyczaj w konstruktorze.
+Druga właściwość,, `Doctor`jest właściwością tylko do odczytu, ponieważ określa *blok właściwości* , który `get` jawnie deklaruje tylko metodę dostępu. Ponieważ blok właściwości jest zadeklarowany, należy jawnie zadeklarować magazyn zapasowy; oznacza to, że jest to zmienna `doctor_`ciągu prywatnego ^. Zazwyczaj właściwość tylko do odczytu zwraca wartość magazynu zapasowego. Tylko sama klasa może ustawić wartość magazynu zapasowego, zazwyczaj w konstruktorze.
 
-Właściwość trzeciej `Quantity`, jest właściwością odczytu i zapisu, ponieważ deklaruje bloku właściwości, która deklaruje zarówno `set` metody dostępu i `get` metody dostępu.
+Trzecia Właściwość `Quantity`,, jest właściwością do odczytu i zapisu, ponieważ deklaruje blok właściwości, który deklaruje `set` metodę dostępu i `get` akcesor.
 
-`set` Akcesor wykonuje test zdefiniowanych przez użytkownika ważność przypisaną wartością. W przeciwieństwie do języka C#, tutaj nazwę *wartość* tylko identyfikator parametr w to `set` akcesor; nie jest słowem kluczowym. Jeśli *wartość* nie jest większa niż zero, jest zgłaszany Platform::InvalidArgumentException. W przeciwnym razie przechowywania zapasowy `quantity_`, jest aktualizowany z przypisaną wartością.
+`set` Metoda dostępu wykonuje test ważności zdefiniowany przez użytkownika dla przypisanej wartości. I w przeciwieństwie C#do tego, *wartość* nazwy jest tylko identyfikatorem `set` parametru w metodzie dostępu; nie jest to słowo kluczowe. Jeśli *wartość* nie jest większa od zera, zgłaszany jest obiekt platform:: InvalidArgumentException. W przeciwnym razie magazyn `quantity_`zapasowy, jest aktualizowany przy użyciu przypisanej wartości.
 
-Należy pamiętać, że na liście składowych nie można zainicjować właściwości. Oczywiście można zainicjować zmienne magazyn zapasowy na liście składowych.
+Należy zauważyć, że właściwość nie może zostać zainicjowana na liście elementów członkowskich. Możesz inicjować na liście elementów członkowskich zmienne magazynu zapasowego.
 
 [!code-cpp[cx_properties#01](../cppcx/codesnippet/CPP/cx_properties/class1.h#01)]
 
 ## <a name="see-also"></a>Zobacz także
 
 [System typów](../cppcx/type-system-c-cx.md)<br/>
-[Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Dokumentacja języka C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Dokumentacja przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)

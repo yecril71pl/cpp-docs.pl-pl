@@ -1,5 +1,5 @@
 ---
-title: Wątkowość i Marshaling (C++/CX)
+title: Wątkowość i kierowanie (C++/CX)
 ms.date: 12/30/2016
 f1_keywords:
 - C4451
@@ -8,36 +8,36 @@ helpviewer_keywords:
 - agility, C++/CX
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
-ms.openlocfilehash: 4206dd9c675325d3141a56b0e57f6cf67dc5693d
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 05601367b6907e34d9d67364d35988a37ceae40c
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448148"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741128"
 ---
-# <a name="threading-and-marshaling-ccx"></a>Wątkowość i Marshaling (C++/CX)
+# <a name="threading-and-marshaling-ccx"></a>Wątkowość i kierowanie (C++/CX)
 
-W zdecydowanej większości przypadków wystąpienia klas środowiska wykonawczego Windows, takich jak standardowymi obiektami C++ jest możliwy z żadnym z wątków. Takich klas są określane jako "agile". Jednak niewielkiej liczby klasy środowiska wykonawczego Windows, które są dostarczane z Windows są inne niż agile i należy wykorzystać w bardziej podobnie jak obiekty COM niż standardowymi obiektami C++. Nie musisz być ekspertem COM, używać klas agile, ale należy wziąć pod uwagę klasy modelu wątkowości i jego zachowanie organizowania. Ten artykuł zawiera wskazówki dotyczące tych rzadkich scenariuszach, w których należy używać wystąpienia klasy — agile i tła.
+W większości przypadków wystąpienia klas środowisko wykonawcze systemu Windows, takich jak obiekty standardowe C++ , są dostępne z dowolnego wątku. Takie klasy są określane jako "Agile". Jednak niewielka liczba klas środowisko wykonawcze systemu Windows, które są dostarczane z systemem Windows, nie są Agile i muszą być używane podobnie jak obiekty COM niż obiekty C++ standardowe. Nie musisz być ekspertem COM, aby używać klas innych niż Agile, ale musisz wziąć pod uwagę model wątkowości klasy i jego zachowanie organizacyjne. Ten artykuł zawiera ogólne i wskazówki dotyczące tych rzadkich scenariuszy, w których należy użyć wystąpienia klasy nieagile.
 
-## <a name="threading-model-and-marshaling-behavior"></a>Model wątkowości i zachowanie marshalingu
+## <a name="threading-model-and-marshaling-behavior"></a>Model wątkowości i zachowanie organizowania
 
-Klasy środowiska wykonawczego Windows może obsługiwać dostępu współbieżnych wątków na różne sposoby, wskazane przez dwa atrybuty, które są stosowane do niego:
+Klasa środowisko wykonawcze systemu Windows może obsługiwać współbieżny dostęp do wątków na różne sposoby, zgodnie z wyznaczonymi przez dwa atrybuty, które są do niego stosowane:
 
-- `ThreadingModel` atrybut może mieć jedną z wartości — STA, MTA, lub oba, zgodnie z definicją `ThreadingModel` wyliczenia.
+- `ThreadingModel`atrybut może mieć jedną z wartości — sta, MTA lub oba, zgodnie z `ThreadingModel` definicją w wyliczeniu.
 
-- `MarshallingBehavior` atrybut może mieć jedną z wartości — metodyki Agile, None, lub Standard, zgodnie z definicją `MarshallingType` wyliczenia.
+- `MarshallingBehavior`atrybut może mieć jedną z wartości — Agile, None lub standard zgodnie z `MarshallingType` definicją w wyliczeniu.
 
-`ThreadingModel` Atrybut określa, gdzie jest ładowany klasy, po aktywowaniu: wyłącznie w kontekście wątku (STA) interfejsu użytkownika, tylko w kontekście wątku (MTA) tło lub w kontekście wątku, który tworzy obiekt (oba). `MarshallingBehavior` Wartości atrybutu odnoszą się do zachowania obiektu w różnych kontekstach wątków; w większości przypadków nie musisz zrozumieć te wartości szczegółowo.  Klas, które są dostarczane przez interfejs API Windows, ma około 90 procent `ThreadingModel`= zarówno i `MarshallingType`= Agile. Oznacza to, czy szczegóły niskiego poziomu wątków może obsługują przezroczyste i wydajne.   Kiedy używasz `ref new` Aby utworzyć klasę "agile", można wywoływać metody na nim z wątku usługi głównej aplikacji lub z jednego lub więcej wątków roboczych.  Innymi słowy, można użyć klasy agile — niezależnie od tego, czy podane przez Windows lub innej — z dowolnego miejsca w kodzie. Nie trzeba zajmować się klasy model wątkowości lub zachowanie marshalingu
+`ThreadingModel` Atrybut określa, gdzie Klasa jest ładowana po aktywowaniu: tylko w kontekście wątek interfejsu użytkownika (STA), tylko w kontekście wątku w tle (MTA) lub w kontekście wątku, który tworzy obiekt (oba). Wartości `MarshallingBehavior` atrybutów odnoszą się do zachowania obiektu w różnych kontekstach wątków. w większości przypadków nie trzeba zrozumieć tych wartości szczegółowo.  Klas dostarczanych przez interfejs API systemu Windows o 90% ma `ThreadingModel`= oba i `MarshallingType`= Agile. Oznacza to, że mogą one obsługiwać informacje o wątkach niskiego poziomu w sposób przezroczysty i wydajny.   W przypadku użycia `ref new` do tworzenia klasy "Agile" można wywołać metody z głównego wątku aplikacji lub z jednego lub większej liczby wątków roboczych.  Innymi słowy, można użyć klasy Agile — niezależnie od tego, czy jest ona udostępniana przez system Windows, czy przez inną firmę — od dowolnego miejsca w kodzie. Nie musisz być zaangażowane w model wątkowości klasy ani zachowanie organizowania.
 
-## <a name="consuming-windows-runtime-components"></a>Wykorzystywanie składników środowiska wykonawczego Windows
+## <a name="consuming-windows-runtime-components"></a>Zużywanie składników środowisko wykonawcze systemu Windows
 
-Podczas tworzenia aplikacji uniwersalnych platformy Windows, możesz wchodzić w interakcje składniki agile i agile. Podczas interakcji ze składnikami agile, mogą wystąpić następujące ostrzeżenie.
+Podczas tworzenia aplikacji platforma uniwersalna systemu Windows można korzystać z elementów Agile i innych niż Agile. W przypadku korzystania z składników innych niż Agile może wystąpić poniższe ostrzeżenie.
 
-### <a name="compiler-warning-c4451-when-consuming-non-agile-classes"></a>Kompilator ostrzeżenie C4451 podczas używania klas agile
+### <a name="compiler-warning-c4451-when-consuming-non-agile-classes"></a>Ostrzeżenie kompilatora C4451 podczas konsumowania klas nieagile
 
-Z różnych powodów niektóre klasy nie może być agile. Jeśli uzyskujesz dostęp do wystąpienia klas agile z wątku interfejsu użytkownika i wątku w tle, należy wykonać dodatkowe istotne do zapewnienia poprawnego zachowania w czasie wykonywania. Microsoft C++ kompilator generuje ostrzeżenia podczas tworzenia wystąpienia-agile klasy środowiska wykonawczego w aplikacji w zakresie globalnym lub deklaracja typu agile, jako element członkowski klasy w klasie ref, który sam jest oznaczony jako agile.
+Z różnych powodów niektóre klasy nie mogą być elastyczne. Jeśli uzyskujesz dostęp do wystąpień klas innych niż Agile z wątku interfejsu użytkownika i wątku w tle, weź pod uwagę dodatkowe zachowanie w czasie wykonywania. Kompilator firmy C++ Microsoft wystawia ostrzeżenia podczas tworzenia wystąpienia klasy czasu wykonywania nieagile w aplikacji w zakresie globalnym lub deklarowania typu nieagile jako składowej klasy w klasie referencyjnej, która jest oznaczona jako Agile.
 
-Agile klas najprostszym radzenia sobie z są te, które mają `ThreadingModel`= zarówno i `MarshallingType`= Standard.  Aby włączyć te klasy agile tylko za pomocą `Agile<T>` Klasa pomocy.   W poniższym przykładzie pokazano deklarację-agile obiektu typu `Windows::Security::Credentials::UI::CredentialPickerOptions^`i ostrzeżenia kompilatora, w wyniku wystawiony.
+W przypadku klas innych niż Agile najłatwiej jest zająć się tymi, które mają `ThreadingModel`= oba i `MarshallingType`= Standard.  Te klasy można przyagile tylko przy użyciu `Agile<T>` klasy pomocnika.   Poniższy przykład przedstawia deklarację nieagile obiektu typu `Windows::Security::Credentials::UI::CredentialPickerOptions^`oraz Ostrzeżenie kompilatora, który został wystawiony w wyniku.
 
 ```
 
@@ -57,19 +57,19 @@ ref class MyOptions
     };
 ```
 
-Ostrzeżenie, wystawiany jest następujący:
+Oto ostrzeżenie, które zostało wystawione:
 
 > `Warning 1 warning C4451: 'Platform::Agile<T>::_object' : Usage of ref class 'Windows::Security::Credentials::UI::CredentialPickerOptions' inside this context can lead to invalid marshaling of object across contexts. Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead`
 
-Po dodaniu odwołania — w zakresie elementu członkowskiego lub zakresu globalnego — do obiektu, który ma zachowanie marshalingu "Standardowa", kompilator generuje ostrzeżenie z informacją o tym, aby opakować typ w `Platform::Agile<T>`: `Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead` Jeśli używasz `Agile<T>`, jak w przypadku innych agile klasy wykorzystywaną klasy. Użyj `Platform::Agile<T>` w takiej sytuacji:
+Po dodaniu odwołania — w zakresie elementu członkowskiego lub zakresu globalnego — do obiektu, który ma zachowanie kierujące "Standardowa", kompilator generuje ostrzeżenie, które doradza, aby zawinąć typ w `Platform::Agile<T>`: `Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead`Jeśli używasz, `Agile<T>`możesz użyć klasy, takiej jak każda inna Klasa Agile. `Platform::Agile<T>` W następujących okolicznościach:
 
-- Agile zmienna jest zadeklarowana w zakresie globalnym.
+- Zmienna nieagile jest zadeklarowana w zakresie globalnym.
 
-- Agile zmienna jest zadeklarowana w zakresie klasy i istnieje ryzyko, że korzystanie z kodu może być smuggle wskaźnik — oznacza to, korzystać z niego w różnych apartamentu bez marshaling poprawne.
+- Zmienna inna niż Agile jest zadeklarowana w zakresie klasy i istnieje szansa, że zużywający kod może przemytić wskaźnik, czyli używać go w innej lokalizacji bez poprawnego organizowania.
 
-Jeśli żadna z tych warunków zastosowania, można oznaczyć klasa zawierająca jako agile. Innymi słowy, należy bezpośrednio przechowywania obiektów agile tylko w klasach agile i przechowywania obiektów agile, za pośrednictwem Platform::Agile\<T > w klasach agile.
+Jeśli żaden z tych warunków nie zostanie spełniony, można oznaczyć zawierającą klasę jako nieagile. Innymi słowy, należy bezpośrednio przechowywać obiekty nieagile tylko w klasach nieagile i przechowywać obiekty nieagile za pośrednictwem platformy:: Agile\<T > w klasach Agile.
 
-Poniższy przykład pokazuje, jak używać `Agile<T>` , dzięki czemu można bezpiecznie zignorować to ostrzeżenie.
+Poniższy przykład pokazuje, jak użyć `Agile<T>` , aby można było bezpiecznie zignorować to ostrzeżenie.
 
 ```
 
@@ -91,17 +91,17 @@ ref class MyOptions
     };
 ```
 
-Należy zauważyć, że `Agile` nie mogą być przekazywane jako wartość zwracana lub parametr w klasie ref. `Agile<T>::Get()` Metoda zwraca dojście do obiektu (^), którą można przekazać między interfejsem binarnym aplikacji (ABI) w publiczną metodę lub właściwość.
+Należy zauważyć `Agile` , że nie można przesłać jako wartości zwracanej lub parametru w klasie referencyjnej. `Agile<T>::Get()` Metoda zwraca dojście do obiektu (^), które można przekazać przez interfejs binarny aplikacji (ABI) do publicznej metody lub właściwości.
 
-W programie Visual C++, po utworzeniu odwołania do klasy środowiska wykonawczego Windows w proc, która ma zachowanie marshalingu "None", kompilator generuje ostrzeżenie C4451, ale nie sugerują, rozważ użycie `Platform::Agile<T>`.  Kompilator nie oferuje pomocy poza tym ostrzeżeniu, dlatego jest odpowiedzialny za korzystanie z klasy poprawnie i upewnij się, że Twój kod wywołuje składniki STA, tylko z wątku interfejsu użytkownika i składniki MTA tylko z wątku w tle.
+Gdy tworzysz odwołanie do klasy środowisko wykonawcze systemu Windows w proc, która ma zachowanie Marshaling "none", kompilator wystawia ostrzeżenie C4451, ale nie sugeruje, że należy rozważyć użycie `Platform::Agile<T>`.  Kompilator nie może zaoferować żadnej pomocy poza tym ostrzeżeniem, dlatego jest odpowiedzialny za korzystanie z klasy prawidłowo i upewnij się, że kod wywołuje składniki STA tylko z wątku interfejsu użytkownika i składnika MTA tylko z wątku w tle.
 
-## <a name="authoring-agile-windows-runtime-components"></a>Tworzenie agile składników środowiska wykonawczego Windows
+## <a name="authoring-agile-windows-runtime-components"></a>Tworzenie składników środowisko wykonawcze systemu Windows Agile
 
-Podczas definiowania klasy referencyjnej w C++/CX jest agile domyślnie — oznacza to, że ma ona `ThreadingModel`= zarówno i `MarshallingType`= Agile.  Jeśli używasz Biblioteka szablonów C++ środowiska wykonawczego Windows, możesz wprowadzić klasy agile, wynikające z `FtmBase`, który używa `FreeThreadedMarshaller`.  Jeśli tworzysz klasę, która ma `ThreadingModel`= zarówno lub `ThreadingModel`= MTA, upewnij się, że klasa jest metodą o bezpiecznych wątkach.
+Gdy definiujesz klasę ref w C++/CX, jest ona domyślnie Agile — to znaczy, że ma `ThreadingModel`= oba i `MarshallingType`= Agile.  Jeśli używasz biblioteki szablonów środowisko wykonawcze systemu Windows C++ , możesz zmienić klasę, wyprowadzając ją z `FtmBase` `FreeThreadedMarshaller`, która używa.  Jeśli tworzysz klasę, która ma `ThreadingModel`= Both lub `ThreadingModel`= MTA, upewnij się, że Klasa jest bezpieczna wątkowo.
 
-Można zmodyfikować model wątkowości i zachowanie marshalingu klasy referencyjnej. Jednak jeśli wprowadzisz zmiany, które renderują klasy bez agile, musisz rozumieć konsekwencje, które są skojarzone z tymi zmianami.
+Można zmodyfikować model wątkowości i zachowanie związane z kierowaniem klasy referencyjnej. Jeśli jednak wprowadzisz zmiany, które renderują klasę nieagile, musisz zrozumieć konsekwencje związane z tymi zmianami.
 
-Poniższy przykład pokazuje, jak zastosować `MarshalingBehavior` i `ThreadingModel` atrybutów do klasy środowiska uruchomieniowego w bibliotece klas środowiska wykonawczego Windows. Jeśli aplikacja korzysta z biblioteki DLL i korzysta z `ref new` — słowo kluczowe, aby aktywować `MySTAClass` klasy obiektu, jest ono aktywowane w jednowątkowym apartamentem i nie obsługuje kierowanie obiektu.
+Poniższy przykład pokazuje, jak zastosować `MarshalingBehavior` i `ThreadingModel` atrybuty do klasy środowiska uruchomieniowego w bibliotece klas środowisko wykonawcze systemu Windows. Gdy aplikacja używa biblioteki DLL i używa `ref new` słowa kluczowego do `MySTAClass` uaktywnienia obiektu klasy, obiekt jest aktywowany w jednowątkowym apartamentie i nie obsługuje organizowania.
 
 ```
 using namespace Windows::Foundation::Metadata;
@@ -114,13 +114,13 @@ public ref class MySTAClass
 };
 ```
 
-Niezapieczętowane klasy musi mieć ustawienia atrybut organizowania i wątków, tak, aby kompilator może sprawdzić, czy pochodne mają taką samą wartość dla tych atrybutów. Jeśli klasa nie ma ustawienia ustawiony w sposób jawny, kompilator generuje błąd i nie zostanie skompilowany. Każda klasa, która jest pochodną unsealedclass generuje błąd kompilatora w jednym z następujących przypadkach:
+Niezapieczętowane klasy muszą mieć ustawienia atrybutu organizowania i wątkowości, aby kompilator mógł sprawdzić, czy klasy pochodne mają tę samą wartość dla tych atrybutów. Jeśli Klasa nie ma ustawionych ustawień jawnie, kompilator generuje błąd i kompilacja nie powiedzie się. Każda klasa, która pochodzi od unsealedclass, generuje błąd kompilatora w jednym z następujących przypadków:
 
-- `ThreadingModel` i `MarshallingBehavior` atrybuty nie są zdefiniowane w klasie pochodnej.
+- Atrybuty `ThreadingModel` i`MarshallingBehavior` nie są zdefiniowane w klasie pochodnej.
 
-- Wartości `ThreadingModel` i `MarshallingBehavior` atrybutów w klasie pochodnej nie odpowiadają wartościom w klasie bazowej.
+- Wartości atrybutów `ThreadingModel` i `MarshallingBehavior` w klasie pochodnej nie są zgodne z wartościami w klasie bazowej.
 
-Wątkowość i marshaling informacje wymagane przez składnik środowiska uruchomieniowego Windows innej firmy jest określona w aplikacji informacje rejestracyjne manifestu składnika. Firma Microsoft zaleca wykonanie wszystkie składniki środowiska wykonawczego Windows agile. Dzięki temu kod klienta może wywołać składnika z żadnym z wątków w aplikacji i poprawia wydajność te wywołania, ponieważ są one bezpośrednie wywołania, które mają nie marshaling. Jeśli Tworzenie klasy w ten sposób, a następnie kod klienta, nie trzeba używać `Platform::Agile<T>` korzystanie z klasy.
+Informacje o wątkach i kierowaniu wymagane przez składnik środowisko wykonawcze systemu Windows innej firmy są określone w informacjach o rejestracji manifestu aplikacji dla składnika. Zalecamy, aby wszystkie składniki środowisko wykonawcze systemu Windows były Agile. Dzięki temu kod klienta może wywoływać składnik z dowolnego wątku w aplikacji, a także zwiększyć wydajność tych wywołań, ponieważ są to bezpośrednie wywołania, które nie mają organizowania. Jeśli utworzysz swoją klasę w ten sposób, kod klienta nie musi używać do korzystania `Platform::Agile<T>` z klasy.
 
 ## <a name="see-also"></a>Zobacz także
 

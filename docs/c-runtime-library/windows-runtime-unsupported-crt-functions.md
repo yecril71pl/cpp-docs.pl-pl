@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Windows Runtime, unsupported CRT functions
 ms.assetid: bb8386d6-0ef8-460c-88d8-addff009b6f1
 ms.openlocfilehash: 8f5b900d968bd80f9095c564f0222364769d63c9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745556"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739537"
 ---
 # <a name="windows-runtime-unsupported-crt-functions"></a>Nieobsługiwane funkcje CRT środowiska uruchomieniowego systemu Windows
 
-Nie można używać wielu wykonawcze języka C (CRT) interfejsów API w aplikacjach platformy uniwersalnej Windows (UWP), które ze środowiska wykonawczego Windows. Te aplikacje są kompilowane przy użyciu flagi kompilatora/zw. Aby uzyskać listę nieobsługiwanych funkcji CRT, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+Wiele interfejsów API środowiska uruchomieniowego języka C (CRT) nie można używać w aplikacjach platforma uniwersalna systemu Windows (platformy UWP), które są wykonywane w środowisko wykonawcze systemu Windows. Te aplikacje są kompilowane przy użyciu flagi kompilatora/ZW. Aby uzyskać listę nieobsługiwanych funkcji CRT, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
-Wszystkie interfejsy API CRT są opisane w [alfabetyczna funkcja odwołania](../c-runtime-library/reference/crt-alphabetical-function-reference.md) sekcji dokumentacji.
+Wszystkie interfejsy API CRT są opisane w sekcji [alfabetyczne informacje o funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md) w dokumentacji.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -3,12 +3,12 @@ title: Biblioteka szablonów języka C++ środowiska wykonawczego systemu Window
 ms.date: 11/04/2016
 ms.topic: landing-page
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: bff4c0721903f20bd5d09c25e358126f42d47651
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 7a92676d198ed9ddffeae9a834ebd358c2c58e90
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218395"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740842"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteka szablonów języka C++ środowiska wykonawczego systemu Windows (WRL)
 
@@ -147,5 +147,5 @@ Element [EventSource](eventsource-class.md) służy do zarządzania obsługą zd
 |-|-|
 |[Najważniejsze interfejsy API według kategorii](key-wrl-apis-by-category.md)|Wyróżnia podstawowe typy, C++ funkcje i makra szablonu Środowisko wykonawcze systemu Windows.|
 |[Dokumentacja](wrl-reference.md)|Zawiera informacje referencyjne dla biblioteki C++ szablonów środowisko wykonawcze systemu Windows.|
-|[Krótki przewodnik (środowisko wykonawcze systemu Windows i wizualizacja C++)](../../cppcx/quick-reference-c-cx.md)|Zwięźle opisuje funkcje C++/CX, które obsługują środowisko wykonawcze systemu Windows.|
+|[Krótkie odwołanie C++/CX)](../../cppcx/quick-reference-c-cx.md)|Zwięźle opisuje funkcje C++/CX, które obsługują środowisko wykonawcze systemu Windows.|
 |[Używanie składników środowisko wykonawcze systemu Windows w wizualizacjiC++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|Pokazuje, w jaki C++sposób używać/CX do tworzenia podstawowego składnika Środowisko wykonawcze systemu Windows.|

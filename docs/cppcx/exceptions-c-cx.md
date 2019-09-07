@@ -2,76 +2,76 @@
 title: Wyjątki (C++/CX)
 ms.date: 07/02/2019
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-ms.openlocfilehash: 93a3c096c79140787a46dcbd0ae6ec7edc0bf2e4
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: ade406dc5db6022978f83715555c425caef4375b
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552178"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740177"
 ---
 # <a name="exceptions-ccx"></a>Wyjątki (C++/CX)
 
-Obsługa błędów w C++/CX jest oparta na wyjątkach. Na poziomie większość podstawowych składników środowiska wykonawczego Windows raportować błędy jako wartości HRESULT. W C++/CX, te wartości są konwertowane na silnie typizowaną wyjątki, które zawierają wartość HRESULT i opis ciągu, które są dostępne programowo.  Wyjątki są implementowane jako `ref class` który pochodzi od klasy `Platform::Exception`.  `Platform` Nazw definiuje różne wyjątek klasy dla najbardziej typowych wartości HRESULT; wszystkie inne wartości są raportowane za pośrednictwem `Platform::COMException` klasy. Wszystkie klasy wyjątku mają [Exception::HResult](platform-exception-class.md#hresult) pola, które można użyć do pobrania, oryginalnym HRESULT. Można również sprawdzić informacje stosu wywołań dla kodu użytkownika w debugerze, które mogą ułatwić wskazanie oryginalnego źródła wyjątku, nawet jeśli pochodzi w kodzie, który został napisany w języku innym niż C++.
+Obsługa błędów w C++/CX jest oparta na wyjątkach. Na najbardziej podstawowym poziomie składniki środowisko wykonawcze systemu Windows zgłaszają błędy jako wartości HRESULT. W C++/CX te wartości są konwertowane na wyjątki o jednoznacznie określonym typie, które zawierają wartość HRESULT i opis ciągu, do którego można uzyskać dostęp programowo.  Wyjątki są implementowane jako `ref class` , które pochodzą `Platform::Exception`od.  Przestrzeń nazw definiuje odrębne klasy wyjątków dla najbardziej typowych wartości HRESULT; wszystkie inne wartości są raportowane `Platform::COMException` za pomocą klasy. `Platform` Wszystkie klasy wyjątków mają pole [Exception:: HRESULT](platform-exception-class.md#hresult) , za pomocą którego można pobrać pierwotny wynik HRESULT. Można również przeanalizować informacje stosu wywołań dla kodu użytkownika w debugerze, które mogą ułatwić wskazanie pierwotnego źródła wyjątku, nawet jeśli pochodzi on z kodu, który został zapisany w języku innym niż C++.
 
 ## <a name="exceptions"></a>Wyjątki
 
-W programie C++, throw i catch wyjątku, który pochodzi z operacją środowiska wykonawczego Windows, wyjątek, który jest tworzony na podstawie `std::exception`, lub typ zdefiniowany przez użytkownika. Należy zgłosić wyjątek środowiska uruchomieniowego Windows tylko wtedy, gdy jej będzie między granic interfejsem binarnym (ABI) aplikacji, na przykład, gdy kod, który przechwytuje wyjątek jest napisany w języku JavaScript. Gdy inne niż - Windows środowisko uruchomieniowe C++ wyjątek osiągnie granicę interfejsu ABI, wyjątek jest tłumaczony na `Platform::FailureException` wyjątek, który reprezentuje wartość HRESULT E_FAIL. Aby uzyskać więcej informacji na temat interfejsu ABI zobacz [Tworzenie składników środowiska wykonawczego Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+W C++ programie można zgłosić i wychwycić wyjątek, który pochodzi z środowisko wykonawcze systemu Windows operacji, wyjątek pochodzący z `std::exception`lub typu zdefiniowanego przez użytkownika. Musisz zgłosić wyjątek środowisko wykonawcze systemu Windows tylko wtedy, gdy będzie przekroczyć granicę interfejsu binarnego aplikacji (ABI), na przykład gdy kod, który przechwytuje wyjątek, jest zapisywana w języku JavaScript. Gdy wyjątek inny niż środowisko wykonawcze systemu Windows C++ osiągnie granicę ABI, wyjątek jest tłumaczony na wyjątek, który `Platform::FailureException` reprezentuje wartość E_FAIL HRESULT. Aby uzyskać więcej informacji na temat ABI, zobacz [Tworzenie składników Środowisko wykonawcze systemu Windows C++w programie ](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
-Można zadeklarować [Platform::Exception](platform-exception-class.md) przy użyciu jednej z dwóch konstruktorów parametrem HRESULT lub parametrem HRESULT i [Platform::String](platform-string-class.md)^ parametr, który może być przekazywany przez ABI do dowolnej aplikacji Windows Runtime, która je obsługuje. Lub możesz zadeklarować wyjątek przy użyciu jednej z dwóch [metoda Exception::CreateException](platform-exception-class.md#createexception) przeciążeń, które przyjmują parametr HRESULT lub parametrem HRESULT i `Platform::String^` parametru.
+Można zadeklarować [platformę:: Exception](platform-exception-class.md) przy użyciu jednego z dwóch konstruktorów, które przyjmują parametr HRESULT lub parametru HRESULT i klasy [platform:: String](platform-string-class.md)^, które mogą być przesyłane przez ABI do dowolnej aplikacji środowisko wykonawcze systemu Windows, która go obsługuje. Lub można zadeklarować wyjątek przy użyciu jednego z dwóch [wyjątków:: CreateException metody](platform-exception-class.md#createexception) overloads przyjmujących parametr HRESULT lub parametru HRESULT i `Platform::String^` parametru.
 
-## <a name="standard-exceptions"></a>Standardowych wyjątków
+## <a name="standard-exceptions"></a>Wyjątki standardowe
 
-C++/CX obsługuje zestaw standardowych wyjątków, które reprezentują typowe błędy HRESULT. Każdy standardowy wyjątek pochodzi od klasy [Platform::COMException](platform-comexception-class.md), który z kolei pochodzi od klasy `Platform::Exception`. Gdy zgłoszenie wyjątku przez granicę ABI należy zgłaszać jeden standardowych wyjątków.
+C++/CX obsługuje zestaw wyjątków standardowych, które reprezentują typowe błędy HRESULT. Każdy wyjątek standardowy pochodzi z klasy [platform:: COMException](platform-comexception-class.md), która z kolei pochodzi `Platform::Exception`od. W przypadku zgłaszania wyjątku na granicy ABI należy zgłosić jeden z standardowych wyjątków.
 
-Nie możesz wywodzić swój własny typ wyjątku z `Platform::Exception`. Wyjątku niestandardowych, należy używać do tworzenia HRESULT: zdefiniowane przez użytkownika `COMException` obiektu.
+Nie można utworzyć własnego typu wyjątku z `Platform::Exception`. Aby zgłosić wyjątek niestandardowy, użyj wartości HRESULT zdefiniowanej przez użytkownika do skonstruowania `COMException` obiektu.
 
-W poniższej tabeli wymieniono standardowych wyjątków.
+W poniższej tabeli wymieniono standardowe wyjątki.
 
-|Nazwa|Bazowy HRESULT|Opis|
+|Nazwa|Bazowy wynik HRESULT|Opis|
 |----------|------------------------|-----------------|
-|COMException|*hresult zdefiniowanych przez użytkownika*|Element zgłaszany, gdy wartość HRESULT nierozpoznany jest zwracany z wywołania metody COM.|
-|AccessDeniedException|E\_ACCESSDENIED|Element zgłaszany, gdy odmowa dostępu do zasobów lub funkcji.|
-|ChangedStateException|E\_ZMIENIONO\_STANU|Element zgłaszany, gdy metody iteratora kolekcji lub tego widoku kolekcji są wywoływane po zmianie kolekcji nadrzędnej, a tym samym unieważniając wyniki metody.|
-|ClassNotRegisteredException|REGDB\_E\_CLASSNOTREG|Element zgłaszany, gdy klasa COM nie został zarejestrowany.|
-|DisconnectedException|RPC\_E\_ROZŁĄCZONO|Element zgłaszany, gdy obiekt jest odłączony od swoich klientów.|
-|FailureException|E\_ZAKOŃCZYĆ SIĘ NIEPOWODZENIEM|Element zgłaszany, gdy operacja nie powiedzie się.|
-|InvalidArgumentException|E\_INVALIDARG —|Element zgłaszany, gdy jeden z argumentów, które są dostarczane do metody jest nieprawidłowy.|
-|InvalidCastException|E\_NOINTERFACE|Element zgłaszany, gdy nie można rzutować typu na inny typ.|
-|NotImplementedException|E\_NOTIMPL|Element zgłaszany, gdy metoda interfejsu nie została zaimplementowana w klasie.|
-|Obiektu NullReferenceException|E\_WSKAŹNIKA|Zgłaszany, gdy jest próba cofnąć odwołanie odwołanie do obiektu o wartości null.|
-|ObjectDisposedException|RO\_E\_ZAMKNIĘTE|Element zgłaszany, gdy operacja jest wykonywana na zlikwidowanego obiektu.|
-|OperationCanceledException|E\_ABORT|Element zgłaszany, gdy operacja została przerwana.|
-|OutOfBoundsException|E\_GRANICE|Element zgłaszany, gdy operacja próbuje uzyskać dostęp do danych poza prawidłowym zakresem.|
-|OutOfMemoryException|E\_ZDARZEŃ OUTOFMEMORY|Element zgłaszany, gdy ma za mało pamięci do ukończenia tej operacji.|
-|WrongThreadException|RPC\_E\_NIEWŁAŚCIWEGO\_WĄTKU|Element zgłaszany, gdy wątek wywołuje za pomocą wskaźnika interfejsu, który jest dla obiektu serwera proxy, który nie należy do komórka wątku.|
+|COMException|*wartość HRESULT zdefiniowana przez użytkownika*|Zgłaszany, gdy Nierozpoznana wartość HRESULT jest zwracana z wywołania metody COM.|
+|AccessDeniedException|ACCESSDENIED\_E|Zgłaszany w przypadku odmowy dostępu do zasobu lub funkcji.|
+|ChangedStateException|\_ZMIENIONYSTAN\_|Zgłaszany, gdy metody iteratora kolekcji lub widok kolekcji są wywoływane po zmianie kolekcji nadrzędnej, co powoduje unieważnienie wyników metody.|
+|ClassNotRegisteredException|REGDB\_E\_CLASSNOTREG|Zgłaszany, gdy nie zarejestrowano klasy COM.|
+|DisconnectedException|WYWOŁANIE\_RPC\_E ODŁĄCZONE|Zgłaszane po odłączeniu obiektu od jego klientów.|
+|FailureException|E\_NIEPOWODZENIE|Zgłaszany, gdy operacja nie powiedzie się.|
+|InvalidArgumentException|INVALIDARG —\_E|Zgłaszany, gdy jeden z argumentów dostarczonych do metody jest nieprawidłowy.|
+|InvalidCastException|E\_NOINTERFACE|Zgłaszany, gdy typ nie może być rzutowany na inny typ.|
+|NotImplementedException|NOTIMPL\_E|Zgłaszany, jeśli metoda interfejsu nie została zaimplementowana w klasie.|
+|NullReferenceException|WSKAŹNIK\_E|Zgłaszany w przypadku próby cofnięcia odwołania do odwołania do obiektu o wartości null.|
+|ObjectDisposedException|ZAMKNIĘTO RO\_\_|Zgłaszany, gdy operacja jest wykonywana na usuniętym obiekcie.|
+|OperationCanceledException|PRZERWANIE E\_|Zgłaszany, gdy operacja zostanie przerwana.|
+|OutOfBoundsException|GRANICE\_E|Zgłaszany, gdy operacja próbuje uzyskać dostęp do danych poza prawidłowym zakresem.|
+|OutOfMemoryException|OUTOFMEMORY\_E|Zgłaszany, gdy jest za mało pamięci, aby ukończyć operację.|
+|WrongThreadException|NIEWŁAŚCIWY\_\_WĄTEKRPC\_E|Zgłaszany, gdy wątek wywołuje za pośrednictwem wskaźnika interfejsu, który jest przeznaczony dla obiektu serwera proxy, który nie należy do Apartament wątku.|
 
-## <a name="hresult-and-message-properties"></a>Właściwości HResult i komunikat
+## <a name="hresult-and-message-properties"></a>HResult i właściwości komunikatu
 
-Wszystkie wyjątki mają [HResult](platform-comexception-class.md#hresult) właściwości i [komunikat](platform-comexception-class.md#message) właściwości. [Exception::HResult](platform-exception-class.md#hresult) właściwości pobiera wyjątek podstawowy liczbową wartość HRESULT. [Exception::Message](platform-exception-class.md#message) właściwości pobiera parametry dostarczane przez system, opisujący wyjątek. W systemie Windows 8 komunikat jest dostępna tylko w debugerze i jest tylko do odczytu. Oznacza to, że nie możesz go zmienić po użytkownik Zgłoś ponownie wyjątek. Windows 8.1 możesz programowy dostęp ciąg komunikatu i podaj nowy komunikat, jeśli możesz Zgłoś ponownie wyjątek. Lepsze informacje stosu wywołań jest również dostępna w debugerze, w tym stosy wywołań dla wywołań metod asynchronicznych.
+Wszystkie wyjątki mają właściwość [HRESULT](platform-comexception-class.md#hresult) i Właściwość [Message](platform-comexception-class.md#message) . Właściwość [Exception:: HRESULT](platform-exception-class.md#hresult) pobiera podstawową wartość wynikową dla wyjątku. Właściwość [Exception:: Message](platform-exception-class.md#message) Pobiera ciąg dostarczony przez system, który opisuje wyjątek. W systemie Windows 8 komunikat jest dostępny tylko w debugerze i jest tylko do odczytu. Oznacza to, że nie można go zmienić po ponownym wyrzucaniu wyjątku. W Windows 8.1 można programowo uzyskać dostęp do ciągu komunikatu i podać nowy komunikat, jeśli ponownie Zgłoś wyjątek. Lepsze informacje stosu wywołań są również dostępne w debugerze, w tym stosy wywołań dla wywołań metod asynchronicznych.
 
 ### <a name="examples"></a>Przykłady
 
-W tym przykładzie przedstawiono sposób wyjątku Windows Runtime synchroniczne operacje:
+Ten przykład pokazuje, jak zgłosić wyjątek środowisko wykonawcze systemu Windows dla operacji synchronicznych:
 
 [!code-cpp[cx_exceptions#01](codesnippet/CPP/exceptiontest/class1.cpp#01)]
 
-Następny przykład pokazuje, jak przechwycić wyjątek.
+W następnym przykładzie pokazano, jak przechwytywać wyjątek.
 
 [!code-cpp[cx_exceptions#02](codesnippet/CPP/exceptiontest/class1.cpp#02)]
 
-Aby przechwytywać wyjątki, które powstały podczas operacji asynchronicznej, przy użyciu klasy zadania, a następnie dodaj kontynuacji obsługi błędów. Kontynuacja obsługi błędów kieruje wyjątki wyrzucane na inny wątek z powrotem do wywołanego wątku, dzięki czemu może obsługiwać wszystkie potencjalne wyjątki w tylko jednym punkcie w kodzie. Aby uzyskać więcej informacji, zobacz [asynchronicznego programowania w języku C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
+Aby przechwytywać wyjątki, które są zgłaszane podczas operacji asynchronicznej, należy użyć klasy Task i dodać kontynuację obsługi błędu. Obsługa błędów kierowanie wyjątków, które są zgłaszane w innych wątkach z powrotem do wątku wywołującego, dzięki czemu można obsługiwać wszystkie potencjalne wyjątki w tylko jednym punkcie w kodzie. Aby uzyskać więcej informacji, zobacz [programowanie asynchroniczne C++w ](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
 
 ## <a name="unhandlederrordetected-event"></a>Zdarzenie UnhandledErrorDetected
 
-W Windows 8.1 można subskrybować [Windows::ApplicationModel::Core::CoreApplication::UnhandledErrorDetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror.unhandlederrordetected) zdarzeń statycznych, który zapewnia dostęp do nieobsługiwanych błędów, które chcesz obniżyć ten proces. Niezależnie od tego, skąd pochodzi ten błąd, osiągnie ten program obsługi jako [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) obiektu, który jest przekazywany przy użyciu argumenty zdarzenia. Gdy wywołujesz `Propagate` dla obiektu, tworzy i zgłasza `Platform::*Exception` typu, który odnosi się do kodu błędu. W blokach catch, można zapisać stanu użytkownika, jeśli to konieczne, a następnie albo zezwolić na zakończenie przez wywołanie procesu `throw`, lub Opracuj coś dostępu programu do znanego stanu. Poniższy przykład przedstawia podstawowy wzorzec:
+W Windows 8.1 można subskrybować zdarzenie statyczne [systemu Windows:: ApplicationModel:: Core:: CoreApplication:: UnhandledErrorDetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror.unhandlederrordetected) , które zapewnia dostęp do nieobsługiwanych błędów, które mają zostać przełączone. Niezależnie od tego, skąd pochodzi błąd, dociera do tej procedury obsługi jako obiekt typu [Windows:: ApplicationModel:: Core:: UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) , który jest przesyłany za pomocą argumentów Event. Gdy wywołujesz `Propagate` obiekt, tworzy i `Platform::*Exception` zgłasza typ, który odpowiada kod błędu. W blokach catch można zapisać stan użytkownika, jeśli jest to konieczne, a następnie zezwolić na zakończenie procesu przez wywołanie `throw`lub zrobić coś w celu przywrócenia znanego stanu programu. Poniższy przykład przedstawia podstawowy wzorzec:
 
-W app.xaml.h:
+W pliku App. XAML. h:
 
 ```cpp
 void OnUnhandledException(Platform::Object^ sender, Windows::ApplicationModel::Core::UnhandledErrorDetectedEventArgs^ e);
 ```
 
-W app.xaml.cpp:
+W pliku App. XAML. cpp:
 
 ```cpp
 // Subscribe to the event, for example in the app class constructor:
@@ -103,5 +103,5 @@ C++/CX nie używa `finally` klauzuli.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja języka Visual C++](visual-c-language-reference-c-cx.md)<br/>
+[Dokumentacja języka C++/CX](visual-c-language-reference-c-cx.md)<br/>
 [Dokumentacja przestrzeni nazw](namespaces-reference-c-cx.md)

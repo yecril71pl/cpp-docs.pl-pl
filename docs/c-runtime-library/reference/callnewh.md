@@ -22,15 +22,15 @@ helpviewer_keywords:
 - _callnewh
 ms.assetid: 4dcb73e9-6384-4d12-a973-a8807d4de7a8
 ms.openlocfilehash: 98526f6c8c40b71104345563db71ef098b6cfb8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643667"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739820"
 ---
-# <a name="callnewh"></a>_callnewh
+# <a name="_callnewh"></a>_callnewh
 
-Wywołuje obecnie zainstalowanej *nowy program obsługi*.
+Wywołuje aktualnie zainstalowaną *nową procedurę obsługi*.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,23 +42,23 @@ int _callnewh(
 
 ### <a name="parameters"></a>Parametry
 
-*Rozmiar*<br/>
-Ilość pamięci, który [operatora new](../../cpp/new-operator-cpp.md) próbował przydzielić.
+*zmienia*<br/>
+Ilość pamięci, którą [Nowy operator](../../cpp/new-operator-cpp.md) próbował przydzielić.
 
 ## <a name="return-value"></a>Wartość zwracana
 
 |Wartość|Opis|
 |-----------|-----------------|
-|0|Błąd: Albo nie nowy program obsługi jest zainstalowany lub nie nowy program obsługi jest aktywny.|
-|1|Powodzenie: Nowy program obsługi jest zainstalowaną i aktywną. Mogą być ponawiane alokacji pamięci.|
+|0|Spraw Nie zainstalowano żadnego nowego programu obsługi lub nie jest on aktywny.|
+|1|Prawnego Nowa procedura obsługi jest zainstalowana i aktywna. Można ponowić próbę alokacji pamięci.|
 
 ## <a name="exceptions"></a>Wyjątki
 
-Ta funkcja zgłosi [bad_alloc —](../../standard-library/bad-alloc-class.md) Jeśli *nowy program obsługi* nie można odnaleźć.
+Ta funkcja zgłasza [bad_alloc](../../standard-library/bad-alloc-class.md) , jeśli nie można zlokalizować *nowego programu obsługi* .
 
 ## <a name="remarks"></a>Uwagi
 
-*Nowy program obsługi* jest wywoływana, gdy [operatora new](../../cpp/new-operator-cpp.md) zakończy się niepowodzeniem, można przydzielić pamięci na pomyślnie. Nowy program obsługi może następnie zainicjuj odpowiednich działań, taką jak zwalnianie pamięci, aby pomyślnie kolejnych alokacji.
+*Nowy program obsługi* jest wywoływany, jeśli [Nowy operator](../../cpp/new-operator-cpp.md) nie może pomyślnie przydzielić pamięci. Nowy program obsługi może następnie inicjować pewne odpowiednie działania, takie jak zwalnianie pamięci, aby kolejne przydziały powiodło się.
 
 ## <a name="requirements"></a>Wymagania
 

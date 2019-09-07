@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 732bdf980240b1f496c1aca56c8a89b6a7f52d27
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c35cc01b352285402885587f6d0b91e2c2bdd4ae
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502179"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741237"
 ---
 # <a name="cwinapp-class"></a>Klasa CWinApp
 
@@ -480,7 +480,7 @@ Niezerowe, jeśli kontekst urządzenia drukarki został utworzony pomyślnie; w 
 
 `CreatePrinterDC`Inicjuje kontekst urządzenia przekazywany przez odwołanie, aby można było go użyć do drukowania.
 
-Jeśli funkcja się powiedzie, po zakończeniu drukowania należy zniszczyć kontekst urządzenia. Można pozwolić, aby destruktor obiektu przerzucał go, lub można go jawnie poprzez wywołanie metody [przechwytywania::D eletedc](../../mfc/reference/cdc-class.md#deletedc). [](../../mfc/reference/cdc-class.md)
+Jeśli funkcja się powiedzie, po zakończeniu drukowania należy zniszczyć kontekst urządzenia. Można pozwolić, aby destruktor obiektu przerzucał go, lub można go jawnie poprzez [wywołanie metody](../../mfc/reference/cdc-class.md) [przechwytywania::D eletedc](../../mfc/reference/cdc-class.md#deletedc).
 
 ##  <a name="cwinapp"></a>CWinApp:: CWinApp
 
@@ -850,7 +850,7 @@ BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 ### <a name="parameters"></a>Parametry
 
 *pPrintDlg*<br/>
-Wskaźnik do struktury [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) .
+Wskaźnik do struktury [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) .
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -902,7 +902,7 @@ Ta funkcja członkowska nie uwzględnia wielkości liter, dlatego ciągi w param
 > `GetProfileBinary`przydziela bufor i zwraca jego adres w \* *ppData*. Obiekt wywołujący jest odpowiedzialny za zwolnienie buforu przy użyciu polecenia **delete []** .
 
 > [!IMPORTANT]
-> Dane zwrócone przez tę funkcję nie muszą mieć wartości NULL, a obiekt wywołujący musi przeprowadzić walidację. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
+> Dane zwrócone przez tę funkcję nie muszą mieć wartości NULL, a obiekt wywołujący musi przeprowadzić walidację. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="example"></a>Przykład
 
@@ -943,7 +943,7 @@ Ta funkcja członkowska obsługuje notację szesnastkową dla wartości w. Plik 
 Ta funkcja członkowska nie uwzględnia wielkości liter, dlatego ciągi w parametrach *lpszSection* i *lpszEntry* mogą się różnić w przypadku.
 
 > [!IMPORTANT]
-> Dane zwrócone przez tę funkcję nie muszą mieć wartości NULL, a obiekt wywołujący musi przeprowadzić walidację. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
+> Dane zwrócone przez tę funkcję nie muszą mieć wartości NULL, a obiekt wywołujący musi przeprowadzić walidację. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="example"></a>Przykład
 
@@ -980,7 +980,7 @@ Wartość zwracana jest ciągiem z aplikacji. Plik INI lub *lpszDefault* , jeśl
 ### <a name="remarks"></a>Uwagi
 
 > [!IMPORTANT]
-> Dane zwrócone przez tę funkcję nie muszą mieć wartości NULL, a obiekt wywołujący musi przeprowadzić walidację. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
+> Dane zwrócone przez tę funkcję nie muszą mieć wartości NULL, a obiekt wywołujący musi przeprowadzić walidację. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="example"></a>Przykład
 
@@ -1336,7 +1336,7 @@ enum AFX_HELP_TYPE {
     };
 ```
 
-- Aby ustawić pomoc dotyczącą HTML aplikacji, wywołaj polecenie [](#sethelpmode) sethelpmode i określ `afxHTMLHelp`.
+- Aby ustawić pomoc dotyczącą HTML aplikacji, wywołaj polecenie [Sethelpmode](#sethelpmode) i określ `afxHTMLHelp`.
 
 - Aby ustawić pomoc aplikacji na polecenie WinHelp, wywołaj `SetHelpMode` i określ `afxWinHelp`.
 
@@ -1458,7 +1458,7 @@ LPCTSTR m_pszExeName;
 W przeciwieństwie do [m_pszAppName](#m_pszappname), ta nazwa nie może zawierać pustych wartości. `m_pszExeName`jest publiczną zmienną typu **const char**<strong>\*</strong>.
 
 > [!NOTE]
-> Jeśli przypiszesz wartość do `m_pszExeName`, musi ona być przydzielana dynamicznie na stercie. Destruktor wywołuje Free () z tym wskaźnikiem. `CWinApp` Wiele chce użyć `_tcsdup`funkcji biblioteki wykonawczej () w celu wykonania przydziału. Ponadto zwolnij pamięć skojarzoną z bieżącym wskaźnikiem przed przypisaniem nowej wartości. Na przykład:
+> Jeśli przypiszesz wartość do `m_pszExeName`, musi ona być przydzielana dynamicznie na stercie. Destruktor wywołuje Free () z tym wskaźnikiem. `CWinApp` Wiele chce użyć `_tcsdup`funkcji biblioteki wykonawczej () w celu wykonania przydziału. Ponadto zwolnij pamięć skojarzoną z bieżącym wskaźnikiem przed przypisaniem nowej wartości. Przykład:
 
 [!code-cpp[NVC_MFCWindowing#58](../../mfc/reference/codesnippet/cpp/cwinapp-class_20.cpp)]
 
@@ -1475,7 +1475,7 @@ LPCTSTR m_pszHelpFilePath;
 Domyślnie struktura inicjuje `m_pszHelpFilePath` się nazwą aplikacji z ". HLP "dołączone. Aby zmienić nazwę pliku pomocy, ustaw wartość `m_pszHelpFilePath` na ciąg, który zawiera pełną nazwę żądanego pliku pomocy. Dogodnym miejscem do wykonania jest funkcja [InitInstance](#initinstance) aplikacji. `m_pszHelpFilePath`jest publiczną zmienną typu **const char**<strong>\*</strong>.
 
 > [!NOTE]
-> Jeśli przypiszesz wartość do `m_pszHelpFilePath`, musi ona być przydzielana dynamicznie na stercie. Destruktor wywołuje Free () z tym wskaźnikiem. `CWinApp` Wiele chce użyć `_tcsdup`funkcji biblioteki wykonawczej () w celu wykonania przydziału. Ponadto zwolnij pamięć skojarzoną z bieżącym wskaźnikiem przed przypisaniem nowej wartości. Na przykład:
+> Jeśli przypiszesz wartość do `m_pszHelpFilePath`, musi ona być przydzielana dynamicznie na stercie. Destruktor wywołuje Free () z tym wskaźnikiem. `CWinApp` Wiele chce użyć `_tcsdup`funkcji biblioteki wykonawczej () w celu wykonania przydziału. Ponadto zwolnij pamięć skojarzoną z bieżącym wskaźnikiem przed przypisaniem nowej wartości. Przykład:
 
 [!code-cpp[NVC_MFCWindowing#59](../../mfc/reference/codesnippet/cpp/cwinapp-class_21.cpp)]
 
@@ -1793,7 +1793,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Parametry
 
 *pMsg*<br/>
-Wskaźnik do struktury [MSG](/windows/win32/api/winuser/ns-winuser-tagmsg) , która zawiera komunikat do przetworzenia.
+Wskaźnik do struktury [MSG](/windows/win32/api/winuser/ns-winuser-msg) , która zawiera komunikat do przetworzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1886,7 +1886,7 @@ virtual LRESULT ProcessWndProcException(
 Wskaźnik do nieprzechwyconego wyjątku.
 
 *pMsg*<br/>
-Komunikat [](/windows/win32/api/winuser/ns-winuser-msg)trukturę, który zawiera informacje o komunikacie systemu Windows, który spowodował wygenerowanie wyjątku przez strukturę.
+Komunikat [trukturę,](/windows/win32/api/winuser/ns-winuser-msg)który zawiera informacje o komunikacie systemu Windows, który spowodował wygenerowanie wyjątku przez strukturę.
 
 ### <a name="return-value"></a>Wartość zwracana
 

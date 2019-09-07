@@ -1,129 +1,129 @@
 ---
-title: Klasy i struktury odwołania (C++/CX)
+title: Klasy i struktury ref (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
-ms.openlocfilehash: e9ac14762dba580967fbecd245a81a4ff4356b64
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b58c5b64d8f4a60b418fdd2b11318055a8fb618e
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368594"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740886"
 ---
-# <a name="ref-classes-and-structs-ccx"></a>Klasy i struktury odwołania (C++/CX)
+# <a name="ref-classes-and-structs-ccx"></a>Klasy i struktury ref (C++/CX)
 
-C++Obsługuje /CX zdefiniowanych przez użytkownika *klasy ref* i *struktury ref*i zdefiniowane przez użytkownika *wartość klasy* i *wartość struktury*. Te struktury danych są podstawowym kontenerów za pomocą którego C++/CX obsługuje system typów środowiska wykonawczego Windows. Ich zawartość są emitowane do metadanych zgodnie z niektórych określone zasady, a dzięki temu przekazywane między składników środowiska wykonawczego Windows i aplikacji Universal Windows Platform, które zostały napisane w języku C++ lub innych języków.
+C++/CX obsługuje zdefiniowane przez użytkownika *klasy referencyjne* i *struktury ref*oraz *klasy wartości* zdefiniowane przez użytkownika i *struktury wartości*. Te struktury danych są kontenerami podstawowymi, C++za pomocą których/CX obsługuje system typów środowisko wykonawcze systemu Windows. Ich zawartość jest emitowana do metadanych zgodnie z określonymi regułami i umożliwia ich przekazywanie między składnikami środowisko wykonawcze systemu Windows i platforma uniwersalna systemu Windows aplikacjami, które są zapisane w lub w C++ innych językach.
 
-Klasa ref lub ref struct ma te podstawowe funkcje:
+Klasa referencyjna lub struktura ref ma następujące podstawowe funkcje:
 
-- Musi być zadeklarowany w przestrzeni nazw, w zakresie przestrzeni nazw i w tej przestrzeni nazw może być publicznym lub prywatnym ułatwień dostępu. Tylko typy publiczne są emitowane do metadanych. Definicje klas publicznych zagnieżdżone nie są dozwolone, w tym publiczny zagnieżdżony [wyliczenia](../cppcx/enums-c-cx.md) klasy. Aby uzyskać więcej informacji, zobacz [przestrzenie nazw i widoczność typów](../cppcx/namespaces-and-type-visibility-c-cx.md).
+- Musi być zadeklarowany w przestrzeni nazw, w zakresie przestrzeni nazw, a w tej przestrzeni nazw może być dostępna publiczna lub prywatna dostępność. Tylko typy publiczne są emitowane do metadanych. Zagnieżdżone definicje klas publicznych są niedozwolone, łącznie z zagnieżdżonymi publicznymi klasami [enum](../cppcx/enums-c-cx.md) . Aby uzyskać więcej informacji, zobacz [przestrzenie nazw i widoczność typów](../cppcx/namespaces-and-type-visibility-c-cx.md).
 
-- Może on zawierać jako elementy członkowskie C++/CX, łącznie z klasy ref, wartość klasy, struktury ref, strukturach wartości lub struktury wartości null. Może również zawierać typy skalarne, takie jak float64, wartość logiczna i tak dalej. Może również zawierać standardowych typów C++ takich jak `std::vector` lub niestandardowej klasy tak długo, jak nie są publicznie udostępniane. C++/CX konstrukcje mogą mieć `public`, `protected`, `internal`, `private`, lub `protected private` ułatwień dostępu. Wszystkie `public` lub `protected` elementy członkowskie są emitowane do metadanych. Standard C++ typy muszą mieć `private`, `internal`, lub `protected private` ułatwień dostępu, co zapobiega emitowane do metadanych.
+- Może zawierać jako składowe C++/CX, w tym klasy referencyjne, klasy wartości, struktury ref, struktury wartości lub struktury wartości null. Może również zawierać typy skalarne, takie jak Float64, bool i tak dalej. Może również zawierać typy standardowe C++ , takie jak `std::vector` lub Klasa niestandardowa, o ile nie są publiczne. C++Konstrukcje/CX mogą mieć `public`, `protected`, `internal` `private`, lub`protected private` dostępność. Wszystkie `public` lub`protected` elementy członkowskie są emitowane do metadanych. Standardowe C++ typy muszą mieć `private`, `internal`, lub `protected private` dostępność, które uniemożliwiają emitowanie ich do metadanych.
 
-- To może wprowadzić co najmniej jeden *interfejsu klasy* lub *interfejsu struktury*.
+- Może zaimplementować jedną lub więcej *klas interfejsów* lub *struktur interfejsów*.
 
-- Mogą dziedziczyć z jednej klasy bazowej i klas bazowych, samodzielnie mają dodatkowe ograniczenia. Dziedziczenie w hierarchii klas publicznych ref ma więcej ograniczeń niż dziedziczenia klasy ref prywatnych.
+- Może dziedziczyć z jednej klasy bazowej, a same klasy bazowe mają dodatkowe ograniczenia. Dziedziczenie w publicznych hierarchiach klas referencyjnych ma większe ograniczenia niż dziedziczenie w prywatnych klasach referencyjnych.
 
-- Go nie mogą być deklarowane jako ogólnego. Jeśli ma ona prywatną dostępność, może być szablonem.
+- Nie może być zadeklarowany jako generyczny. Jeśli ma prywatny dostęp, może to być szablon.
 
-- Jego okres istnienia jest zarządzana przez automatyczne liczenie odwołań.
+- Jego okres istnienia jest zarządzany przez automatyczne zliczanie odwołań.
 
-## <a name="declaration"></a>Deklaracja
+## <a name="declaration"></a>Oświadczeń
 
-Poniższy fragment kodu deklaruje `Person` klasy referencyjnej. Należy zauważyć, że standard C++ `std::map` typ jest używany w prywatnych elementów członkowskich i środowiska uruchomieniowego Windows`IMapView` interfejs jest używany w interfejsie publicznym. Ponadto należy zauważyć, że "^" jest dołączany do deklaracji typów odwołań.
+Poniższy fragment kodu deklaruje `Person` klasę ref. Należy zauważyć, że C++ `std::map` typ standardowy jest używany w prywatnych składowych, a interfejs`IMapView` środowisko wykonawcze systemu Windows jest używany w interfejsie publicznym. Zauważ również, że znak "^" jest dołączany do deklaracji typów referencyjnych.
 
 [!code-cpp[cx_classes#03](../cppcx/codesnippet/CPP/classesstructs/class1.h#03)]
 
 ## <a name="implementation"></a>Implementacja
 
-Ten przykładowy kod przedstawia implementację `Person` klasy referencyjnej:
+Ten przykład kodu pokazuje implementację `Person` klasy ref:
 
 [!code-cpp[cx_classes#04](../cppcx/codesnippet/CPP/classesstructs/class1.cpp#04)]
 
 ## <a name="usage"></a>Użycie
 
-W kolejnym przykładzie kodu pokazano, jak kod klienta używa `Person` klasy referencyjnej.
+Następny przykład kodu pokazuje, `Person` jak kod klienta używa klasy ref.
 
 [!code-cpp[cx_classes#05](../cppcx/codesnippet/CPP/classesstructs/class1.cpp#05)]
 
-Semantyka stosu umożliwia również zadeklarować zmienną klasy lokalnego odwołania. Taki obiekt zachowuje się jak zmiennej opartej na stosie, nawet jeśli pamięć nadal jest przydzielany dynamicznie. Jedną istotną różnicą jest to, że nie można przypisać odwołania śledzenia (%) do zmiennej, która jest zadeklarowana za pomocą semantyka stosu; gwarantuje to, czy licznik odwołań zostanie zmniejszona do zera, jeśli funkcja kończy działanie. W tym przykładzie przedstawiono klasy referencyjnej podstawowe `Uri`i funkcję, która używa go z semantyką stosu:
+Można również użyć semantyki stosu, aby zadeklarować zmienną lokalnej klasy referencyjnej. Taki obiekt zachowuje się jak zmienna oparta na stosie, mimo że pamięć jest nadal przydzielana dynamicznie. Istotną różnicą jest to, że nie można przypisać odwołania śledzenia (%) do zmiennej, która jest zadeklarowana przy użyciu semantyki stosu; gwarantuje to, że liczba odwołań jest zmniejszana do zera, gdy funkcja kończy działanie. Ten przykład pokazuje podstawową klasę `Uri`ref i funkcję, która używa jej z semantyką stosu:
 
 [!code-cpp[cx_classes#06](../cppcx/codesnippet/CPP/classesstructs/class1.cpp#06)]
 
 ## <a name="memory-management"></a>Zarządzanie pamięcią
 
-Przydziel w pamięci dynamicznej klasy referencyjnej za pomocą `ref new` — słowo kluczowe.
+Należy przydzielić klasę ref w pamięci dynamicznej przy użyciu `ref new` słowa kluczowego.
 
 [!code-cpp[cx_classes#01](../cppcx/codesnippet/CPP/classesstructs/class1.h#01)]
 
-Operator uchwytu do obiektu ^ jest znana jako "hat" i jest całkowicie C++ inteligentnego wskaźnika. Wskazuje ilość pamięci automatycznie jest niszczony, kiedy ostatnia hat wykracza poza zakres lub jawnie ustawione na `nullptr`.
+Operator dojścia do obiektu ^ jest znany jako "Hat" i jest zasadniczo C++ inteligentnym wskaźnikiem. Pamięć, do której wskazuje, jest automatycznie niszczona, gdy Ostatnia Hat wykracza poza zakres lub jest jawnie ustawiona `nullptr`na.
 
-Zgodnie z definicją klasa ref ma semantykę odwołania. Po przypisaniu klasy referencyjnej zmiennej jest uchwyt, który został skopiowany nie samego obiektu. W następnym przykładzie po przypisaniu zarówno `myClass` i `myClass2` wskazują na tym samym miejscu pamięci.
+Według definicji Klasa ref ma semantykę odwołania. Po przypisaniu zmiennej klasy ref jest to dojście, które jest kopiowane, a nie sam obiekt. W następnym przykładzie po przypisaniu `myClass` i `myClass2` wskazaniu w tej samej lokalizacji pamięci.
 
 [!code-cpp[cx_classes#02](../cppcx/codesnippet/CPP/classesstructs/class1.h#02)]
 
-Gdy C++tworzenia wystąpienia klasy ref /CX, jego pamięci jest inicjowany z wartością zerową przed jego konstruktor jest wywoływany; w związku z tym nie jest konieczne inicjalizacji zero poszczególnych elementów członkowskich, w tym właściwości. Jeśli C++/CX klasa pochodzi od środowiska uruchomieniowego Windows C++ klasy biblioteki (WRL), tylko C++część klasy pochodnej /CX jest inicjowany z wartością zerową.
+Po utworzeniu C++wystąpienia klasy ref/CX jej pamięć jest inicjowana zero przed wywołaniem konstruktora; w związku z tym nie jest konieczne, aby od zera zainicjować pojedynczych członków, w tym właściwości. Jeśli Klasa C++/CX dziedziczy z klasy środowisko wykonawcze systemu Windows C++ Library (WRL), tylko część klasy pochodnej C++/CX jest inicjowana zero.
 
 ### <a name="members"></a>Elementy członkowskie
 
-Klasa ref mogą zawierać `public`, `protected`, i `private` funkcji elementów członkowskich; tylko `public` i `protected` elementy członkowskie są emitowane do metadanych. Klasy referencyjnej i klasy zagnieżdżone są dozwolone, ale nie może być `public`. Pola publiczne nie są dozwolone publiczne elementy członkowskie danych musi być zadeklarowany jako właściwości. Prywatnych lub chronionych wewnętrznych składowych danych mogą być pól. Domyślnie w klasie ref dostępność wszystkich elementów członkowskich jest `private`.
+Klasa referencyjna może zawierać `public`, `protected`i `private` składowe funkcji; tylko `public` `protected` elementy członkowskie są emitowane do metadanych. Klasy zagnieżdżone i klasy ref są dozwolone, ale nie `public`mogą być. Pola publiczne są niedozwolone; publiczne składowe danych muszą być zadeklarowane jako właściwości. Prywatnymi lub chronionymi wewnętrznymi elementami członkowskimi danych mogą być pola. Domyślnie w klasie ref dostępność wszystkich elementów członkowskich to `private`.
 
-Struktury ref jest taka sama jak klasa ref, z tą różnicą, że domyślnie jego członkowie mają `public` ułatwień dostępu.
+Struktura ref jest taka sama jak Klasa ref, z tą różnicą, że domyślnie jej członkowie `public` mają dostęp.
 
-Element `public` klasy referencyjnej lub ref struct jest emitowane w metadanych, ale może być używany z innych aplikacji uniwersalnych platformy Windows i składników środowiska wykonawczego Windows musi mieć co najmniej jeden konstruktor publiczny lub chroniony. Klasa ref publicznej, która ma on publicznego konstruktora musi być także zadeklarowana jako `sealed` Aby uniknąć dalszych tworzenie wartości pochodnych przez interfejsem binarnym aplikacji (ABI).
+Klasa `public` ref lub ref struct są emitowane w metadanych, ale aby można było korzystać z innych platforma uniwersalna systemu Windows aplikacji i składników Środowisko wykonawcze systemu Windows, musi on mieć co najmniej jednego publicznego lub chronionego konstruktora. Publiczna Klasa referencyjna, która ma Konstruktor publiczny, musi być zadeklarowana jako, `sealed` aby zapobiec dalszemu wyprowadzaniu za pomocą interfejsu binarnego aplikacji (ABI).
 
-Publiczne elementy członkowskie nie mogą być deklarowane jako const ponieważ system typów środowiska wykonawczego Windows nie obsługuje const. Właściwość statyczna służy do deklarowania element członkowski danych publicznych z wartością stałą.
+Publiczne składowe nie mogą być zadeklarowane jako const, ponieważ system typu środowisko wykonawcze systemu Windows nie obsługuje const. Możesz użyć właściwości statycznej, aby zadeklarować publiczną składową danych z wartością stałą.
 
-Podczas definiowania ref publiczne klasy lub struktury, kompilator stosuje wymaganych atrybutów do klasy i zapisuje je w pliku winmd w aplikacji. Jednak podczas definiowania publicznych niezapieczętowana klasa ref ręcznie zastosować `Windows::Foundation::Metadata::WebHostHidden` atrybutu, aby upewnić się, że klasa nie jest widoczna dla aplikacji Universal Windows Platform, które zostały napisane w języku JavaScript.
+Podczas definiowania publicznej klasy lub struktury referencyjnej kompilator stosuje wymagane atrybuty do klasy i zapisuje te informacje w pliku winmd aplikacji. Jednak podczas definiowania publicznej niezapieczętowanej klasy ref należy ręcznie zastosować `Windows::Foundation::Metadata::WebHostHidden` atrybut, aby upewnić się, że Klasa nie będzie widoczna dla platforma uniwersalna systemu Windows aplikacji, które są zapisywane w języku JavaScript.
 
-Klasa referencyjna może mieć standardowych typów języka C++, w tym `const` typów, w dowolnym `private`, `internal`, lub `protected private` elementów członkowskich.
+Klasa referencyjna może mieć typy C++ standardowe, w `const` tym typy `internal`, w `private`dowolnych `protected private` lub składowych.
 
-Klasy ref publicznych, które ma parametry typu nie są dozwolone. Klasy ref ogólny zdefiniowany przez użytkownika nie są dozwolone. Prywatne, wewnętrzne lub zabezpieczone prywatnej klasy ref może być szablonem.
+Publiczne klasy referencyjne, które mają parametry typu, są niedozwolone. Klasy referencyjne ogólne zdefiniowane przez użytkownika są niedozwolone. Prywatna, wewnętrzna lub chroniona prywatna Klasa referencyjna może być szablonem.
 
 ## <a name="destructors"></a>Destruktory
 
-W C++/CX, wywołanie `delete` na destruktorem publicznym wywołuje destruktora, niezależnie od tego, licznik odwołań obiektu. To zachowanie umożliwia zdefiniowanie destruktora, który wykonuje niestandardowe oczyszczania nie RAII zasobów w sposób deterministyczny. Jednak nawet w takim przypadku sam obiekt nie zostanie usunięta z pamięci. Pamięć dla obiektu jest zwalniana tylko wtedy, gdy licznik odwołań osiągnie zero.
+W C++/CX wywoływanie `delete` przez destruktor publiczny wywołuje destruktor, niezależnie od liczby odwołań obiektu. To zachowanie umożliwia zdefiniowanie destruktora, który wykonuje niestandardowe Oczyszczanie zasobów innych niż RAII w sposób deterministyczny. Jednak nawet w tym przypadku sam obiekt nie jest usuwany z pamięci. Pamięć dla obiektu jest zwalniana tylko wtedy, gdy licznik odwołań osiągnie wartość zero.
 
-Jeśli destruktor klasy nie jest publiczny, następnie jest tylko wywoływana, gdy licznik odwołań osiągnie zero. Jeśli wywołasz `delete` na obiekt, który ma destruktor prywatnych, kompilator generuje ostrzeżenie C4493, który jest wyświetlany komunikat "Usuń wyrażenie nie przynosi efektu jako destruktor \<Nazwa typu > nie ma dostępności"public"."
+Jeśli destruktor klasy nie jest publiczny, jest wywoływany tylko wtedy, gdy licznik odwołań osiągnie wartość zero. Jeśli wywołasz `delete` obiekt, który ma destruktor prywatny, kompilator zgłasza C4493 ostrzegawczy, co oznacza, że "wyrażenie usuwania nie ma żadnego efektu, ponieważ destruktor \<typu > nie ma dostępu" Public "."
 
-Destruktory klasy REF mogą być deklarowane tylko w następujący sposób:
+Destruktory klasy referencyjnej mogą być deklarowane tylko w następujący sposób:
 
-- publiczne i wirtualnych (dozwolone w typach zapieczętowanych i niezapieczętowanych)
+- publiczne i wirtualne (dozwolone dla typów zapieczętowanych lub niezapieczętowanych)
 
-- chronione, prywatne i niewirtualną (dozwolone tylko dla typów niezapieczętowanych)
+- chroniona prywatna i niewirtualna (dozwolone tylko w przypadku niezapieczętowanych typów)
 
-- prywatne i niewirtualną (dozwolone tylko w typach zapieczętowanych)
+- prywatne i niewirtualne (dozwolone tylko w przypadku zapieczętowanych typów)
 
-Nie inne kombinacje ułatwień dostępu, virtualness i sealedness jest dozwolone.  Jeśli jawnie nie zadeklarowała destruktora, kompilator generuje publicznego destruktora wirtualnego, jeśli typ klasy bazowej lub dowolnego elementu członkowskiego ma destruktorem publicznym. W przeciwnym razie kompilator generuje prywatny chroniony Niewirtualny destruktor w przypadku typów niezapieczętowanych lub prywatnej Niewirtualny destruktor dla typach zapieczętowanych.
+Nie jest dozwolona żadna inna kombinacja dostępności, wirtualizacji i zamknięcia.  Jeśli nie deklarujesz jawnie destruktora, kompilator generuje publiczny destruktor wirtualny, jeśli klasa bazowa typu lub dowolny element członkowski ma destruktor publiczny. W przeciwnym razie kompilator generuje chroniony prywatny destruktor niewirtualny dla niezapieczętowanych typów lub prywatny destruktor niewirtualny dla typów zapieczętowanych.
 
-Zachowanie jest niezdefiniowane, jeśli zostanie podjęta próba dostęp do elementów członkowskich klasy, która ma już jego destruktor uruchomione. najprawdopodobniej spowoduje awarię programu. Wywoływanie `delete t` na typ, który ma nie publicznego destruktora nie ma wpływu. Wywoływanie `delete this` dla typu lub podstawowej klasy, która ma poprawną `private` lub `protected private` destruktor z w jego hierarchii typów nie ma również wpływu.
+Zachowanie jest niezdefiniowane, jeśli próbujesz uzyskać dostęp do elementów członkowskich klasy, która ma już uruchomiony destruktor; najprawdopodobniej spowoduje to awarię programu. Wywołanie `delete t` na typie, który nie ma destruktora publicznego nie ma żadnego wpływu. Wywoływanie `delete this` typu lub klasy bazowej, która ma znany `private` lub `protected private` destruktor z w hierarchii typów, również nie ma żadnego wpływu.
 
-Kiedy Deklarujesz destruktorem publicznym, kompilator generuje kod, tak aby klasy referencyjnej implementuje `Platform::IDisposable` i implementuje destruktor `Dispose` metody. `Platform::IDisposable` jest C++rzut /CX `Windows::Foundation::IClosable`. Nigdy w sposób jawny implementują te interfejsy.
+Podczas deklarowania destruktora publicznego kompilator generuje kod, tak aby Klasa ref implementuje `Platform::IDisposable` i destruktor `Dispose` implementuje metodę. `Platform::IDisposable`jest projekcją C++ `Windows::Foundation::IClosable`/CX. Nigdy nie implementuje jawnie tych interfejsów.
 
 ## <a name="inheritance"></a>Dziedziczenie
 
-Platform::Object jest uniwersalnym klasę bazową dla wszystkich klas ref. Wszystkie klasy referencyjnej są niejawnie konwertowane na Platform::Object, można zmienić [Object::ToString](../cppcx/platform-object-class.md#tostring). Jednak model dziedziczenia Windows Runtime nieprzeznaczonych jako ogólnego modelu dziedziczenia; w C++/CX, oznacza to, że klasy referencyjnej publiczne zdefiniowane przez użytkownika nie może służyć jako klasę bazową.
+Platform:: Object jest uniwersalną klasą bazową dla wszystkich klas referencyjnych. Wszystkie klasy referencyjne są niejawnie konwertowane na platformę:: Object i mogą przesłonić [obiekt:: ToString](../cppcx/platform-object-class.md#tostring). Jednak model dziedziczenia środowisko wykonawcze systemu Windows nie jest przeznaczony jako model dziedziczenia ogólnego; w C++/CX oznacza to, że publiczna Klasa referencyjna zdefiniowana przez użytkownika nie może stanowić klasy bazowej.
 
-Jeśli utworzysz formant użytkownika XAML i obiekt uczestniczy w systemie właściwości zależności, a następnie można użyć `Windows::UI::Xaml::DependencyObject` jako klasę bazową.
+Jeśli tworzysz kontrolkę użytkownika XAML, a obiekt uczestniczy w systemie właściwości zależności, można użyć `Windows::UI::Xaml::DependencyObject` jako klasy bazowej.
 
-Po zdefiniowaniu niezapieczętowane klasy `MyBase` tej, która dziedziczy `DependencyObject`, publicznych lub prywatnych odwołania klas w składniku lub aplikacja może dziedziczyć z `MyBase`. Dziedziczenie klas publicznych ref powinno mieć miejsce tylko do obsługi przesłonięć metod wirtualnych, polimorficznych tożsamości i hermetyzacji.
+Po zdefiniowaniu niezapieczętowanej klasy `MyBase` , która dziedziczy z `DependencyObject`, inne publiczne lub prywatne klasy referencyjne w składniku lub aplikacji mogą dziedziczyć `MyBase`po. Dziedziczenie w publicznych klasach referencyjnych powinno być wykonywane tylko w celu obsługi zastąpień metod wirtualnych, tożsamości polimorficznej i hermetyzacji.
 
-Prywatnej podstawowej klasy ref nie jest wymagane do uzyskania z istniejącej klasy niezapieczętowany. Jeśli potrzebujesz hierarchii obiektów modelu struktury programu lub włączyć ponownego użycia kodu, użyj klasy ref prywatne lub wewnętrzne lub jeszcze lepiej standardowych klas języka C++. Może narazić funkcje hierarchii obiektu prywatnego przy użyciu otoki klasy publicznej ref zapieczętowany.
+Prywatna Klasa referencyjna nie jest wymagana do wyprowadzania z istniejącej niezapieczętowanej klasy. Jeśli potrzebujesz hierarchii obiektów do modelowania własnej struktury programu lub włączania ponownego użycia kodu, użyj prywatnych lub wewnętrznych klas referencyjnych lub lepszych, a także w przypadku C++ klas standardowych. Funkcję hierarchii obiektów prywatnych można uwidocznić za pomocą publicznej, zapieczętowanej otoki klasy referencyjnej.
 
-Klasa ref, która ma Konstruktor publiczny lub chroniony w C++/CX musi być zadeklarowana jako zapieczętowany. Ograniczenie to oznacza, że nie ma możliwości dla klas, które są zapisywane w innych językach, takich jak C# lub Visual Basic dziedziczy z typów, które deklarują w składniku Windows Runtime, która jest napisana w C++/CX.
+Klasa ref, która ma Konstruktor publiczny lub Protected w C++/CX, musi być zadeklarowana jako Sealed. To ograniczenie oznacza, że nie ma żadnego sposobu dla klas, które są zapisywane w innych językach C# , takich jak lub Visual Basic dziedziczenie z typów zadeklarowanych w składniku środowisko wykonawcze systemu Windows, które C++są zapisywane w/CX.
 
-Poniżej przedstawiono podstawowe zasady dziedziczenia w C++/CX:
+Poniżej przedstawiono podstawowe reguły dziedziczenia w programie C++/CX:
 
-- REF klasy mogą dziedziczyć bezpośrednio z co najwyżej jednej klasy bazowej ref, ale może implementować dowolną liczbę interfejsów.
+- Klasy referencyjne mogą dziedziczyć bezpośrednio z co najwyżej jednej podstawowej klasy referencyjnej, ale mogą implementować dowolną liczbę interfejsów.
 
-- Jeśli klasa ma Konstruktor publiczny, musi być zadeklarowana jako sealed, aby uniknąć dalszych pochodnym.
+- Jeśli klasa ma Konstruktor publiczny, musi być zadeklarowana jako zapieczętowana, aby zapobiec dalszemu wywodzeniu.
 
-- Można utworzyć publiczny niezapieczętowanych klas bazowych, które mają wewnętrzne lub zabezpieczone konstruktory prywatne, pod warunkiem, że klasa bazowa pochodzi bezpośrednio lub pośrednio z istniejący, niezapieczętowany klasy bazowej takich jak `Windows::UI::Xaml::DependencyObject`. Dziedziczenie klasy ref zdefiniowanych przez użytkownika na pliki .winmd nie jest obsługiwana; jednak klasy referencyjnej można dziedziczyć interfejsu, który jest zdefiniowany w innym pliku winmd. Można utworzyć klasy pochodne od klasy zdefiniowane przez użytkownika bazowej ref tylko w obrębie tego samego składnika środowiska wykonawczego Windows lub aplikacji Universal Windows Platform.
+- Można utworzyć publiczne niezapieczętowane klasy bazowe, które mają wewnętrzne lub chronione konstruktory prywatne, pod warunkiem, że klasa bazowa dziedziczy bezpośrednio lub pośrednio z istniejącej niezapieczętowanej klasy podstawowej, `Windows::UI::Xaml::DependencyObject`takiej jak. Dziedziczenie klas ref zdefiniowanych przez użytkownika w plikach winmd nie jest obsługiwane. jednak Klasa ref może dziedziczyć z interfejsu, który jest zdefiniowany w innym pliku winmd. Klasy pochodne można utworzyć na podstawie zdefiniowanej przez użytkownika klasy referencyjnej, tylko w tym samym składniku środowisko wykonawcze systemu Windows lub platforma uniwersalna systemu Windows aplikacji.
 
-- Klasy ref obsługiwane są tylko publiczne dziedziczenie.
+- Dla klas ref obsługiwane jest tylko publiczne dziedziczenie.
 
    [!code-cpp[cx_classes#08](../cppcx/codesnippet/CPP/classesstructs/class1.h#08)]
 
-Poniższy przykład pokazuje, jak do udostępnienia klasy publicznej ref pochodzący z innych klas ref w hierarchii dziedziczenia.
+Poniższy przykład pokazuje, jak uwidocznić publiczną klasę referencyjną, która pochodzi od innych klas referencyjnych w hierarchii dziedziczenia.
 
 [!code-cpp[cx_classes#09](../cppcx/codesnippet/CPP/classesstructs/class1.h#09)]
 
@@ -131,5 +131,5 @@ Poniższy przykład pokazuje, jak do udostępnienia klasy publicznej ref pochodz
 
 [System typów](../cppcx/type-system-c-cx.md)<br/>
 [Klasy i struktury wartości](../cppcx/value-classes-and-structs-c-cx.md)<br/>
-[Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Dokumentacja języka C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Dokumentacja przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)

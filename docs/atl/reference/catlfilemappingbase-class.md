@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: 3d9627c7a19cccc0cd3aec46d71b23c8a84711bf
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a20a8f6c00f9404aa819b87a6a69ad2c08fb4561
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497773"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739547"
 ---
 # <a name="catlfilemappingbase-class"></a>Klasa CAtlFileMappingBase
 
@@ -190,7 +190,7 @@ Rozmiar mapowania. W przypadku wartości 0 maksymalny rozmiar obiektu mapowania 
 Przesunięcie pliku, w którym ma zostać rozpoczęte mapowanie. Wartość przesunięcia musi być wielokrotnością stopnia szczegółowości alokacji pamięci systemu.
 
 *dwMappingProtection*<br/>
-Ochrona wymagana dla widoku pliku, gdy plik jest zamapowany. Zobacz *flProtect* in [funkcja CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw) w Windows SDK.
+Ochrona wymagana dla widoku pliku, gdy plik jest zamapowany. Zobacz *flProtect* in [funkcja CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) w Windows SDK.
 
 *dwViewDesiredAccess*<br/>
 Określa typ dostępu do widoku pliku, w związku z czym ochrona stron mapowanych przez plik. Zobacz *dwDesiredAccess* in [Funkcja MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) w Windows SDK.
@@ -201,7 +201,7 @@ Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Po utworzeniu obiektu mapowania plików, rozmiar pliku nie może przekraczać rozmiaru obiektu mapowania plików; Jeśli tak nie jest, nie wszystkie zawartości plików będą dostępne do udostępnienia. Aby uzyskać więcej informacji, zobacz [funkcja CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw) i [Funkcja MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) w Windows SDK.
+Po utworzeniu obiektu mapowania plików, rozmiar pliku nie może przekraczać rozmiaru obiektu mapowania plików; Jeśli tak nie jest, nie wszystkie zawartości plików będą dostępne do udostępnienia. Aby uzyskać więcej informacji, zobacz [funkcja CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) i [Funkcja MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
@@ -233,7 +233,7 @@ Nazwa obiektu mapowania.
 Wskazuje wartość logiczną, która jest ustawiona na wartość TRUE, jeśli obiekt mapowania już istnieje.
 
 *lpsa*<br/>
-Wskaźnik do `SECURITY_ATTRIBUTES` struktury, który określa, czy zwracany uchwyt może być dziedziczony przez procesy podrzędne. Zobacz *lpAttributes* in [funkcja CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw) w Windows SDK.
+Wskaźnik do `SECURITY_ATTRIBUTES` struktury, który określa, czy zwracany uchwyt może być dziedziczony przez procesy podrzędne. Zobacz *lpAttributes* in [funkcja CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) w Windows SDK.
 
 *dwMappingProtection*<br/>
 Ochrona wymagana dla widoku pliku, gdy plik jest zamapowany. Zobacz *flProtect* w `CreateFileMapping` programie w Windows SDK.
@@ -247,7 +247,7 @@ Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-`MapShareMem`zezwala na współużytkowanie istniejącego obiektu mapowania plików utworzonego przez [funkcja CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw)w celu współdzielenia między procesami.
+`MapShareMem`zezwala na współużytkowanie istniejącego obiektu mapowania plików utworzonego przez [funkcja CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga)w celu współdzielenia między procesami.
 
 ##  <a name="openmapping"></a>CAtlFileMappingBase::OpenMapping
 

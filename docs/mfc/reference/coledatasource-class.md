@@ -36,12 +36,12 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-ms.openlocfilehash: 5e6b49edfedc8e7311e9ecc21ca065ad99c15c62
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 062234b9bc3c538e8cd5fcade002a2892eea259f
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504131"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741619"
 ---
 # <a name="coledatasource-class"></a>Klasa by uzyskać COleDataSource
 
@@ -117,7 +117,7 @@ void CacheData(
 Format schowka, w którym mają być oferowane dane. Ten parametr może być jednym ze wstępnie zdefiniowanych formatów Schowka lub wartością zwracaną przez natywną funkcję [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) systemu Windows.
 
 *lpStgMedium*<br/>
-Wskazuje strukturę [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) zawierającą dane w określonym formacie.
+Wskazuje strukturę [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) zawierającą dane w określonym formacie.
 
 *lpFormatEtc*<br/>
 Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) opisującą format, w którym mają być oferowane dane. Podaj wartość tego parametru, jeśli chcesz określić dodatkowe informacje o formacie spoza formatu Schowka określonego przez *cfFormat*. Jeśli ma wartość null, są używane wartości domyślne dla innych pól `FORMATETC` struktury.
@@ -126,13 +126,13 @@ Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) o
 
 Należy podać dane, ponieważ ta funkcja udostępnia je za pomocą natychmiastowego renderowania. Dane są zapisywane w pamięci podręcznej, dopóki nie będzie trzeba.
 
-Podaj dane przy użyciu struktury [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) . Możesz również użyć funkcji członkowskiej, `CacheGlobalData` Jeśli ilość danych, które dostarczasz, jest wystarczająco mała, aby można było ją efektywnie przenieść przy użyciu HGLOBAL.
+Podaj dane przy użyciu struktury [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) . Możesz również użyć funkcji członkowskiej, `CacheGlobalData` Jeśli ilość danych, które dostarczasz, jest wystarczająco mała, aby można było ją efektywnie przenieść przy użyciu HGLOBAL.
 
 `CacheData` Po wywołaniu `ptd` elementu członkowskiego `lpFormatEtc` i treści *lpStgMedium* są własnością obiektu danych, a nie przez wywołującego.
 
 Aby użyć renderowania opóźnionego, wywołaj funkcję członkowską [DelayRenderData](#delayrenderdata) lub [DelayRenderFileData](#delayrenderfiledata) . Aby uzyskać więcej informacji na temat opóźnionego renderowania jako obsługiwanego przez MFC [, zapoznaj się z tematem obiekty danych artykułu i źródła danych: Manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).
 
-Aby uzyskać więcej informacji, zobacz struktury [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) i [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz struktury [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) i [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) w Windows SDK.
 
 Aby uzyskać więcej informacji, zobacz [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) w Windows SDK.
 
@@ -256,7 +256,7 @@ Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) o
 
 ### <a name="remarks"></a>Uwagi
 
-[](#onsetdata) Wywołanie OnSetData zostanie wywołane przez platformę, gdy wystąpi taka sytuacja. Jest on używany tylko wtedy, gdy struktura zwraca źródło danych z [COleServerItem:: GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). Jeśli `DelaySetData` nie jest wywoływana `OnSetData` , funkcja nigdy nie będzie wywoływana. `DelaySetData`należy wywołać dla każdego obsługiwanego schowka `FORMATETC` lub formatu.
+Wywołanie [OnSetData](#onsetdata) zostanie wywołane przez platformę, gdy wystąpi taka sytuacja. Jest on używany tylko wtedy, gdy struktura zwraca źródło danych z [COleServerItem:: GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). Jeśli `DelaySetData` nie jest wywoływana `OnSetData` , funkcja nigdy nie będzie wywoływana. `DelaySetData`należy wywołać dla każdego obsługiwanego schowka `FORMATETC` lub formatu.
 
 Aby uzyskać więcej informacji, zapoznaj się ze strukturą [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) w Windows SDK.
 
@@ -340,7 +340,7 @@ Użyj [setClipboard](#setclipboard) , aby umieścić dane w Schowku.
 
 ##  <a name="getclipboardowner"></a>By uzyskać COleDataSource:: GetClipboardOwner
 
-Określa, czy dane ze schowka uległy zmianie od [](#setclipboard) czasu ostatniego wywołania programu setClipboard i, jeśli tak, identyfikują bieżącego właściciela.
+Określa, czy dane ze schowka uległy zmianie od czasu ostatniego wywołania programu [setClipboard](#setclipboard) i, jeśli tak, identyfikują bieżącego właściciela.
 
 ```
 static COleDataSource* PASCAL GetClipboardOwner();
@@ -366,7 +366,7 @@ virtual BOOL OnRenderData(
 Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) , określając format, w którym informacje są żądane.
 
 *lpStgMedium*<br/>
-Wskazuje strukturę [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) , w której mają zostać zwrócone dane.
+Wskazuje strukturę [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) , w której mają zostać zwrócone dane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -380,7 +380,7 @@ Jeśli *lpStgMedium*-> *TYMED jest* TYMED_NULL, powinnobyćprzydzieloneiwypełni
 
 Jest to zaawansowany możliwy do zaawansowania. Zastąp tę funkcję, aby dostarczyć dane w żądanym formacie i średnim. W zależności od danych warto zamiast tego zastąpić jedną z innych wersji tej funkcji. Jeśli dane są małe i stały się w rozmiarze, Przesłoń `OnRenderGlobalData`. Jeśli dane są w pliku lub mają zmienny rozmiar, Przesłoń `OnRenderFileData`.
 
-Aby uzyskać więcej informacji, zobacz struktury [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) i [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) , typ wyliczenia [TYMED](/windows/win32/api/objidl/ne-objidl-tymed) i [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz struktury [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) i [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) , typ wyliczenia [TYMED](/windows/win32/api/objidl/ne-objidl-tymed) i [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) w Windows SDK.
 
 ##  <a name="onrenderfiledata"></a>By uzyskać COleDataSource:: OnRenderFileData
 
@@ -461,7 +461,7 @@ virtual BOOL OnSetData(
 Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) , określając format, w którym są zastępowane dane.
 
 *lpStgMedium*<br/>
-Wskazuje strukturę [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) zawierającą dane, które zastąpią bieżącą zawartość `COleDataSource` obiektu.
+Wskazuje strukturę [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) zawierającą dane, które zastąpią bieżącą zawartość `COleDataSource` obiektu.
 
 *bRelease*<br/>
 Wskazuje, kto ma własność nośnika magazynu po zakończeniu wywołania funkcji. Obiekt wywołujący decyduje, kto jest odpowiedzialny za wydanie zasobów przyznanych w imieniu nośnika magazynu. Obiekt wywołujący robi to przez ustawienie *bRelease*. Jeśli *bRelease* ma wartość różną od zera, źródłem danych jest własność, zwalniając nośnik po zakończeniu jego używania. Gdy *bRelease* jest równa 0, wywołujący zachowuje własność, a źródło danych może używać nośnika magazynu tylko dla czasu trwania wywołania.
@@ -476,7 +476,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 Domyślna implementacja nie robi nic. Zastąp tę funkcję, aby zastąpić dane w określonym formacie. Jest to zaawansowany możliwy do zaawansowania.
 
-Aby uzyskać więcej informacji, zobacz struktury [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) i [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) oraz [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) i [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz struktury [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) i [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) oraz [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) i [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) w Windows SDK.
 
 ##  <a name="setclipboard"></a>By uzyskać COleDataSource:: setClipboard
 

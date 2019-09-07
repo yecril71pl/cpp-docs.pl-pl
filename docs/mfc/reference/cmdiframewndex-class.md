@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: 7973cf89eaa2090a8f1548f38a728f1100d5cbec
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 42e630c1280eb366f9007511ac5d74ac19455a56
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505535"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741595"
 ---
 # <a name="cmdiframewndex-class"></a>Klasa CMDIFrameWndEx
 
@@ -1218,7 +1218,7 @@ Aby załadować lub zapisać stan kart i grup MDI oraz listę otwartych dokument
 
 - Wywołanie [CMDIFrameWndEx:: LoadMDIState](#loadmdistate) , gdy tworzona jest ramka główna. Zalecane miejsce dla tego wywołania jest przed wyświetleniem ramki głównej po raz pierwszy. Dodaj `CWinAppEx::EnableLoadWindowPlacement` przed`(FALSE);` dodaniem`CBCGPWorkspace::ReloadWindowPlacement` po wywołaniu do,abywyświetlićgłównąramkęwpozycjiprzechowywanejwrejestrze.`LoadMDIState` `(pMainFrame);` `pMainFrame->LoadFrame (IDR_MAINFRAME);.`
 
-- Przesłoń `GetDocumentName` w `CMDIChildWndEx`klasie pochodnej, jeśli aplikacja wyświetla dokumenty, które nie są przechowywane jako pliki. Zwrócony ciąg zostanie zapisany w rejestrze jako identyfikator dokumentu. Podstawowa implementacja elementu [CMDIChildWndEx::](../../mfc/reference/cmdichildwndex-class.md#getdocumentname) GetDocumentName zwraca wartość uzyskaną z [CDocument::](../../mfc/reference/cdocument-class.md#getpathname)getPathname.
+- Przesłoń `GetDocumentName` w `CMDIChildWndEx`klasie pochodnej, jeśli aplikacja wyświetla dokumenty, które nie są przechowywane jako pliki. Zwrócony ciąg zostanie zapisany w rejestrze jako identyfikator dokumentu. Podstawowa implementacja elementu [CMDIChildWndEx:: GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname) zwraca wartość uzyskaną z [CDocument:: getPathname](../../mfc/reference/cdocument-class.md#getpathname).
 
 - Przesłoń [CMDIFrameWndEx:: CreateDocumentWindow](#createdocumentwindow) , aby poprawnie tworzyć dokumenty, gdy są ładowane z rejestru. Pierwszy parametr jest `GetDocumentName` zwracanym ciągiem.
 
@@ -1274,7 +1274,7 @@ BOOL m_bCanCovertControlBarToMDIChild;
 
 ### <a name="remarks"></a>Uwagi
 
-Wskazuje, czy zadokowane paski sterowania mogą być konwertowane do okien podrzędnych MDI. Jeśli ta flaga ma wartość TRUE, struktura obsługuje konwersję automatycznie, gdy użytkownik wybierze polecenie **dokumentu** z kartami. Flaga jest chroniona i należy jawnie włączyć tę opcję przez ustawienie `m_bCanCovertControlBarToMDIChild` w konstruktorze `CMDIFrameWndEx`klasy pochodnej lub przez zastąpienie `CanConvertControlBarToMDIChild`.
+Wskazuje, czy zadokowane paski sterowania mogą być konwertowane do okien podrzędnych MDI. Jeśli ta flaga ma wartość TRUE, struktura obsługuje konwersję automatycznie, gdy użytkownik wybierze polecenie **dokumentu z kartami** . Flaga jest chroniona i należy jawnie włączyć tę opcję przez ustawienie `m_bCanCovertControlBarToMDIChild` w konstruktorze `CMDIFrameWndEx`klasy pochodnej lub przez zastąpienie `CanConvertControlBarToMDIChild`.
 
 Wartość domyślna to `FALSE`.
 
@@ -1502,7 +1502,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 podczas Przycisk paska narzędzi.
 
 *pTI*<br/>
-określoną Wskaźnik do struktury [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) .
+określoną Wskaźnik do struktury [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) .
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1850,7 +1850,7 @@ Aby załadować lub zapisać stan kart i grup MDI oraz listę otwartych dokument
 
 - `CWinAppEx::ReloadWindowPlacement(pMainFrame)` Wywołaj `LoadMDIState` po, aby wyświetlić główną ramkę w pozycji przechowywanej w rejestrze.
 
-- Przesłoń `GetDocumentName` w `CMDIChildWndEx`klasie pochodnej, jeśli aplikacja wyświetla dokumenty, które nie są przechowywane jako pliki. Zwrócony ciąg zostanie zapisany w rejestrze jako identyfikator dokumentu. Aby uzyskać więcej informacji, zobacz [CMDIChildWndEx::](../../mfc/reference/cmdichildwndex-class.md#getdocumentname)GetDocumentName.
+- Przesłoń `GetDocumentName` w `CMDIChildWndEx`klasie pochodnej, jeśli aplikacja wyświetla dokumenty, które nie są przechowywane jako pliki. Zwrócony ciąg zostanie zapisany w rejestrze jako identyfikator dokumentu. Aby uzyskać więcej informacji, zobacz [CMDIChildWndEx:: GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname).
 
 - Przesłoń [CMDIFrameWndEx:: CreateDocumentWindow](#createdocumentwindow) , aby poprawnie tworzyć dokumenty po ich załadowaniu z rejestru. Parametr `CreateDocumentWindow` jest`GetDocumentName` ciągiem zwracanym wcześniej.
 

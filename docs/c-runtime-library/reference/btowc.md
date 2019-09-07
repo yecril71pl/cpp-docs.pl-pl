@@ -22,15 +22,15 @@ helpviewer_keywords:
 - btowc function
 ms.assetid: 99a46e02-6f86-4569-af79-5feca012add8
 ms.openlocfilehash: 399f56fe133a9f67ed457b435ae6c0496e1ecaa5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514685"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740007"
 ---
 # <a name="btowc"></a>btowc
 
-Określanie, czy liczba całkowita reprezentuje prawidłowy znak Jednobajtowy w stanie przesunięcia początkowego.
+Określ, czy liczba całkowita reprezentuje prawidłowy znak jednobajtowy w stanie przesunięcia początkowego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,20 +42,20 @@ wint_t btowc(
 
 ### <a name="parameters"></a>Parametry
 
-*Znak*<br/>
-Liczba całkowita to testowania.
+*Opis*<br/>
+Liczba całkowita do przetestowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca reprezentację znaków dwubajtowych znaków, jeśli liczba całkowita reprezentuje znak Jednobajtowy prawidłowy stan przesunięcia początkowego. Zwraca WEOF, jeśli liczba całkowita jest EOF lub nie jest prawidłowy znak Jednobajtowy w stanie przesunięcia początkowego. Danymi wyjściowymi tej funkcji jest zależna od bieżącego **LC_TYPE** ustawień regionalnych.
+Zwraca reprezentację znaku dwubajtowego znak, jeśli liczba całkowita reprezentuje prawidłowy znak pojedynczej części w stanie początkowym zmiany. Zwraca WEOF, jeśli liczba całkowita to EOF lub nie jest prawidłowym znakiem jednobajtowym w stanie początkowym zmiany. Bieżące ustawienia regionalne **LC_TYPE** mają wpływ na dane wyjściowe tej funkcji.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**btowc**|\<stdio.h > lub \<wchar.h >|
+|**btowc**|\<stdio. h > lub \<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

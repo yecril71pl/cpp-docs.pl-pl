@@ -1,24 +1,24 @@
 ---
-title: Wycofane typy i składowe (C++/CX)
+title: Przestarzałe typy i składoweC++(/CX)
 ms.date: 12/30/2016
 ms.assetid: b20b01c1-a439-4ff0-8cf3-d7280c492813
-ms.openlocfilehash: 7f488dfa522c0b48c75150d40584b0946baae806
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6cd880af7e206b4c7338e53615594ec2c65c59fc
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301503"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740499"
 ---
-# <a name="deprecating-types-and-members-ccx"></a>Wycofane typy i składowe (C++/CX)
+# <a name="deprecating-types-and-members-ccx"></a>Przestarzałe typy i składoweC++(/CX)
 
-W C++/CX, amortyzacja typów środowiska wykonawczego Windows i elementów członkowskich dla producentów i konsumentów, za pomocą [uznane za przestarzałe](/uwp/api/windows.foundation.metadata.deprecatedattribute) atrybut jest obsługiwany. Jeśli wykorzystasz interfejsu API, do którego zastosowano ten atrybut, otrzymasz komunikat ostrzegawczy kompilacji, która wskazuje, że interfejs API jest przestarzały i zaleca również alternatywny interfejsu API do użycia. We własnych typów publicznych i metody można zastosować ten atrybut i Podaj własny niestandardowy komunikat.
+W C++programie/CX jest możliwe wycofanie typów środowisko wykonawcze systemu Windows i członków dla producentów i konsumentów przy użyciu [przestarzałego](/uwp/api/windows.foundation.metadata.deprecatedattribute) atrybutu. Jeśli korzystasz z interfejsu API, do którego zastosowano ten atrybut, otrzymasz komunikat ostrzegawczy czasu kompilacji, który wskazuje, że interfejs API jest przestarzały, a także zaleca alternatywny interfejs API do użycia. We własnych typach i metodach publicznych można zastosować ten atrybut i podać własny komunikat niestandardowy.
 
 > [!CAUTION]
-> [Uznane za przestarzałe](/uwp/api/windows.foundation.metadata.deprecatedattribute) atrybut jest tylko do użytku z typami środowiska wykonawczego Windows. Dla warstwy standardowej C++ klas i składowych, użyj [__declspec(deprecated)](../cpp/deprecated-cpp.md).
+> [Przestarzały](/uwp/api/windows.foundation.metadata.deprecatedattribute) atrybut jest używany tylko z typami środowisko wykonawcze systemu Windows. Dla standardowych C++ klas i elementów członkowskich Użyj [__declspec (przestarzałe)](../cpp/deprecated-cpp.md).
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak wycofana własnych publicznych interfejsów API — na przykład w składnika wykonawczego Windows. Drugi parametr typu [Windows: Foundation:: Metadata::DeprecationType](/uwp/api/windows.foundation.metadata.deprecationtype) Określa, czy interfejs API jest przestarzała lub usunięta. Obecnie tylko DeprecationType::Deprecated wartość jest obsługiwana. Określa trzeci parametr w atrybucie [Windows::Foundation::Metadata::Platform](/uwp/api/windows.foundation.metadata.platformattribute) którego dotyczy ten atrybut.
+Poniższy przykład pokazuje, jak zastąpić własne publiczne interfejsy API — na przykład w składniku środowisko wykonawcze systemu Windows. Drugi parametr typu [Windows: Foundation:: Metadata::D eprecationtype](/uwp/api/windows.foundation.metadata.deprecationtype) określa, czy interfejs API jest przestarzały czy usunięty. Obecnie obsługiwana jest tylko wartość DeprecationType::D eprecated. Trzeci parametr w atrybucie określa [Windows:: Foundation:: Metadata::P latform](/uwp/api/windows.foundation.metadata.platformattribute) , do którego odnosi się ten atrybut.
 
 ```
 
@@ -35,27 +35,27 @@ public:
 };
 ```
 
-## <a name="supported-targets"></a>Obsługiwane obiekty docelowe
+## <a name="supported-targets"></a>Obsługiwane elementy docelowe
 
-W poniższej tabeli wymieniono konstrukcje, których można zastosować atrybutu uznane za przestarzałe:
+W poniższej tabeli wymieniono konstrukcje, do których można zastosować przestarzały atrybut:
 
 | |
 |-|
-|Kontrolki XAML|
+|Kontrolka XAML|
 |delegate|
 |zdarzenie|
-|pola wyliczenia|
+|pole wyliczeniowe|
 |enum|
-|struktura |
+|struktura|
 |— metoda|
 |class|
 |interface|
 |property|
-|pole — struktura|
-|Konstruktor sparametryzowany|
+|pole struktury|
+|sparametryzowany Konstruktor|
 
 ## <a name="see-also"></a>Zobacz także
 
 [System typów](../cppcx/type-system-c-cx.md)<br/>
-[Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Dokumentacja języka C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Dokumentacja przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)

@@ -2,16 +2,16 @@
 title: Współdziałanie z innymi językami (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: f74db99f-7dbd-421e-99e6-c34bbebf5cea
-ms.openlocfilehash: 72e1f08464085197bd3581405f6b8d31749dbeff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfd4509a55b969aa6a120a8d2c75cddc87d715e2
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375239"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740482"
 ---
 # <a name="interoperating-with-other-languages-ccx"></a>Współdziałanie z innymi językami (C++/CX)
 
-Ta część dokumentacji w tym artykule opisano sposób używania C++/CX Tworzenie składników środowiska wykonawczego Windows, które mogą być wykorzystane przez innych języków programowania i bibliotek. Można również tworzyć składniki, które nie mogą być używane przez wszystkie języki. W tej sekcji opisano różne kwestie do rozważenia podczas Twojej C++/CX aplikacji współdziała ze składnikami, które zostały napisane przy użyciu języka JavaScript, języka .NET Framework, zarządzanych lub środowisko wykonawcze Windows C++ biblioteki szablonów.
+W tej części dokumentacji opisano, jak używać C++/CX do tworzenia składników Środowisko wykonawcze systemu Windows, które mogą być używane przez inne języki programowania i biblioteki. Można również tworzyć składniki, których nie można używać we wszystkich językach. W tej sekcji opisano różne aspekty, które należy C++wziąć pod uwagę, gdy aplikacja/CX współpracuje ze składnikami, które są zapisywane przy użyciu języka JavaScript, .NET Framework języku C++ zarządzanym lub biblioteki szablonów środowisko wykonawcze systemu Windows.
 
 ## <a name="related-topics"></a>Tematy pokrewne
 
@@ -21,4 +21,4 @@ Ta część dokumentacji w tym artykule opisano sposób używania C++/CX Tworzen
 
 - [Integracja z biblioteką WLR](../cppcx/wrl-integration-c-cx.md)
 
-- [Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)
+- [Dokumentacja języka C++/CX](../cppcx/visual-c-language-reference-c-cx.md)

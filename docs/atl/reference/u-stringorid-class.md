@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _U_STRINGorID class
 - U_STRINGorID class
 ms.assetid: 443cdc00-d265-4b27-8ef3-2feb95f3e5e3
-ms.openlocfilehash: 57363dbe2a1e7166b8da401900c3a7f913e63a9d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c57d983e9680ce6d2cab375e427b80f4d3b6c2d6
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495112"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739581"
 ---
 # <a name="_u_stringorid-class"></a>Klasa _U_STRINGorID
 
@@ -45,7 +45,7 @@ class _U_STRINGorID
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa jest przeznaczona do implementowania otok do interfejsu API zarządzania zasobami systemu Windows, takich jak funkcje [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcew), [LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw)i [LoadMenu](/windows/win32/api/winuser/nf-winuser-loadmenuw) , które akceptują argument LPCTSTR, który może być nazwą zasobu lub jego identyfikatorem.
+Ta klasa jest przeznaczona do implementowania otok do interfejsu API zarządzania zasobami systemu Windows, takich jak funkcje [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcea), [LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw)i [LoadMenu](/windows/win32/api/winuser/nf-winuser-loadmenuw) , które akceptują argument LPCTSTR, który może być nazwą zasobu lub jego identyfikatorem.
 
 Klasa definiuje dwa przeciążenia konstruktorów: jeden akceptuje argument LPCTSTR, a drugi akceptuje argument UINT. Argument UINT jest konwertowany na typ zasobów zgodny z funkcjami zarządzania zasobami systemu Windows przy użyciu makra MAKEINTRESOURCE i wyniku przechowywanego w jednej składowej danych klasy, [m_lpstr](#_u_stringorid__m_lpstr). Argument konstruktora LPCTSTR jest przechowywany bezpośrednio bez konwersji.
 

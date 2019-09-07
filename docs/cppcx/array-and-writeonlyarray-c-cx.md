@@ -1,94 +1,94 @@
 ---
-title: Tablica i WriteOnlyArray (C++/CX)
+title: Array i WriteOnlyArray (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-ms.openlocfilehash: fd616487bd3c11544f12e84a7dc64f41e63d501a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ade7981d391288edd78f622b4753d546c5eaa04
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209419"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740690"
 ---
-# <a name="array-and-writeonlyarray-ccx"></a>Tablica i WriteOnlyArray (C++/CX)
+# <a name="array-and-writeonlyarray-ccx"></a>Array i WriteOnlyArray (C++/CX)
 
-Można bez ograniczeń wykorzystywać regularne tablice stylu C lub [std::array](../standard-library/array-class-stl.md) w C++/CX program (mimo że [std::vector](../standard-library/vector-class.md) często jest lepszym rozwiązaniem), ale w dowolnym interfejsem API, który jest publikowany w metadanych, należy przekonwertować Tablica w stylu języka C lub vector do [Platform::Array](../cppcx/platform-array-class.md) lub [Platform::WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) typu, w zależności od tego, w jaki sposób jest używany. [Platform::Array](../cppcx/platform-array-class.md) typu nie jest wydajne ani jak [std::vector](../standard-library/vector-class.md), więc generalnie nie należy jej użycia w kodu wewnętrznego, który wykonuje wiele operacji na tablicy elementy.
+Można swobodnie używać zwykłych tablic w stylu C lub [std:: Array](../standard-library/array-class-stl.md) w programie C++/CX (chociaż [std:: Vector](../standard-library/vector-class.md) jest często lepszym wyborem), ale w dowolnym interfejsie API, który jest publikowany w metadanych, należy skonwertować tablicę w stylu C lub wektor na [platformę:: Array ](../cppcx/platform-array-class.md)lub [platform:: WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) , w zależności od tego, jak jest używany. Typ [platform:: Array](../cppcx/platform-array-class.md) nie jest wydajny ani bardzo wydajny jak [std:: Vector](../standard-library/vector-class.md), dlatego w ogólnym wytycznych należy unikać używania w kodzie wewnętrznym, który wykonuje wiele operacji na elementach tablicy.
 
-Następujące typy tablicy mogą być przekazywane między interfejsem ABI:
+Następujące typy tablic można przekazywać przez ABI:
 
-1. Const Platform::Array ^
+1. const platform:: Array ^
 
-1. Platform::Array ^ *
+1. Platform:: Array ^ *
 
-1. Platform::WriteOnlyArray
+1. Platforma:: WriteOnlyArray
 
-1. Zwraca wartość Platform::Array ^
+1. wartość zwracana platformy:: Array ^
 
-Można użyć tych typów tablicy do zaimplementowania trzy rodzaje wzorców tablicy, które są definiowane przez środowisko wykonawcze Windows.
+Te typy tablic są używane do implementowania trzech rodzajów wzorców tablicowych, które są zdefiniowane przez środowisko wykonawcze systemu Windows.
 
-PassArray używana, gdy obiekt wywołujący przekazuje tablicę do metody. Typ parametru wejściowego C++ jest `const` [Platform::Array](../cppcx/platform-array-class.md)\<T >.
+PassArray używany, gdy obiekt wywołujący przekazuje tablicę do metody. Typ C++ parametru wejściowego to `const` [platform:: Array](../cppcx/platform-array-class.md)\<T >.
 
-FillArray używana, gdy obiekt wywołujący przekazuje tablicę dla metody wypełnić. Typ parametru wejściowego C++ jest [Platform::WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md)\<T >.
+Metodzie FillArray używany, gdy obiekt wywołujący przekazuje tablicę dla metody do wypełnienia. Typ C++ parametru wejściowego to [platform:: WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md)\<T >.
 
-ReceiveArray używana, gdy obiekt wywołujący odbiera tablicę, która metoda przydziela. W C++/CX może zwracać tablicy wartości zwracanej jako tablica ^ lub można przywrócić go jako parametru wyjściowego pisania tablicy ^ *.
+ReceiveArray używany, gdy obiekt wywołujący otrzymuje tablicę, która jest przydzielana przez metodę. W C++/CX można zwrócić tablicę w zwracanej wartości jako tablicę ^ lub można ją zwrócić jako parametr out jako tablicę typu% *.
 
 ## <a name="passarray-pattern"></a>Wzorzec PassArray
 
-Gdy kod klienta przekazuje tablicę, aby C++ metody, a także metoda nie powoduje modyfikacji go, metoda akceptuje tablicy jako const tablicy ^. Na poziomie interfejsem binarnym (ABI) aplikacji środowiska wykonawczego Windows jest to nazywane PassArray. Następny przykład pokazuje, jak przekazać tablicę, która jest przydzielany w języku JavaScript do funkcji języka C++, która odczytuje z niego.
+Gdy kod klienta przekazuje tablicę do C++ metody, a metoda nie modyfikuje go, Metoda akceptuje tablicę jako tablicę const ^. Na poziomie środowisko wykonawcze systemu Windows aplikacji interfejs binarny (ABI) jest on znany jako PassArray. W następnym przykładzie pokazano, jak przekazać tablicę, która jest przypisana w języku C++ JavaScript do funkcji, która odczytuje z niej.
 
 [!code-javascript[cx_arrays#101](../cppcx/codesnippet/JavaScript/array-and-writeonlyarray-c-_1.js)]
 
-Poniższy fragment kodu przedstawia metodę C++:
+Poniższy fragment kodu przedstawia C++ metodę:
 
 [!code-cpp[cx_arrays#01](../cppcx/codesnippet/CPP/js-array/class1.cpp#01)]
 
 ## <a name="receivearray-pattern"></a>Wzorzec ReceiveArray
 
-We wzorcu ReceiveArray kod klienta deklaruje tablicę i przekazuje go do metody, które przydziela pamięć i inicjuje ją. Typ parametru wejściowego C++ jest wskaźnik do hat: `Array<T>^*`. Poniższy przykład pokazuje sposób deklarowania obiektu tablicy w języku JavaScript i przekazać go do funkcji języka C++, który przydziela pamięć, inicjuje elementy i zwraca go do języka JavaScript. JavaScript traktuje przydzielanej tablicy jako wartość zwracaną, ale funkcja C++ traktuje je jako parametrem out.
+W wzorcu ReceiveArray kod klienta deklaruje tablicę i przekazuje ją do metody, która przydziela pamięć dla niej i inicjuje ją. Typ C++ parametru wejściowego jest wskaźnikiem do Hat: `Array<T>^*`. Poniższy przykład pokazuje, jak zadeklarować obiekt Array w języku JavaScript i przekazać go do C++ funkcji, która przypisuje pamięć, inicjuje elementy i zwraca je do języka JavaScript. Kod JavaScript traktuje przydzieloną tablicę jako wartość zwracaną C++ , ale funkcja traktuje ją jako parametr out.
 
 [!code-javascript[cx_arrays#102](../cppcx/codesnippet/JavaScript/array-and-writeonlyarray-c-_3.js)]
 
-Poniższy fragment kodu przedstawia dwa sposoby, aby wdrożyć metodę C++:
+Poniższy fragment kodu przedstawia dwa sposoby implementacji C++ metody:
 
 [!code-cpp[cx_arrays#02](../cppcx/codesnippet/CPP/js-array/class1.cpp#02)]
 
-## <a name="fill-arrays"></a>Wypełnij tablic
+## <a name="fill-arrays"></a>Wypełnianie tablic
 
-Kiedy chcesz przydzielić tablicy w obiekcie wywołującym, zainicjować i go modyfikować w / / wywoływany, użyj `WriteOnlyArray`. W kolejnym przykładzie pokazano sposób implementacji funkcji języka C++, który używa `WriteOnlyArray` i wywołać go z języka JavaScript.
+Jeśli chcesz przydzielić tablicę obiektu wywołującego i zainicjować lub zmodyfikować w obiekcie wywoływanym, użyj `WriteOnlyArray`metody. W następnym przykładzie pokazano, jak zaimplementować C++ funkcję, która używa `WriteOnlyArray` i wywołać ją z poziomu języka JavaScript.
 
 [!code-javascript[cx_arrays#103](../cppcx/codesnippet/JavaScript/array-and-writeonlyarray-c-_5.js)]
 
-Poniższy fragment kodu pokazuje, jak zaimplementować metodę C++:
+Poniższy fragment kodu przedstawia sposób implementacji C++ metody:
 
 [!code-cpp[cx_arrays#03](../cppcx/codesnippet/CPP/js-array/class1.cpp#03)]
 
 ## <a name="array-conversions"></a>Konwersje tablic
 
-W tym przykładzie pokazano, jak używać [Platform::Array](../cppcx/platform-array-class.md) do konstruowania inne rodzaje kolekcji:
+Ten przykład pokazuje, jak używać klasy [platform:: Array](../cppcx/platform-array-class.md) do konstruowania innych rodzajów kolekcji:
 
 [!code-cpp[cx_arrays#05](../cppcx/codesnippet/CPP/js-array/class1.cpp#05)]
 
-W kolejnym przykładzie pokazano sposób tworzenia [Platform::Array](../cppcx/platform-array-class.md) ze stylu C macierz, a następnie przywrócić go z publiczną metodę.
+W następnym przykładzie pokazano, jak utworzyć [platformę:: Array](../cppcx/platform-array-class.md) z tablicy w stylu C i zwrócić ją z metody publicznej.
 
 [!code-cpp[cx_arrays#06](../cppcx/codesnippet/CPP/js-array/class1.cpp#06)]
 
 ## <a name="jagged-arrays"></a>Tablice nieregularne
 
-System typów środowiska wykonawczego Windows nie obsługuje pojęcie Tablice nieregularne i dlatego nie można używać `IVector<Platform::Array<T>>` jako parametr wartość lub metoda zwracany w publicznej metodzie. Aby przekazać tablicę nieregularną lub sekwencji między interfejsem ABI, należy użyć `IVector<IVector<T>^>`.
+System typu środowisko wykonawcze systemu Windows nie obsługuje koncepcji tablic nieregularnych, dlatego nie można użyć `IVector<Platform::Array<T>>` jako wartości zwracanej lub parametru metody w metodzie publicznej. Aby przekazać nieregularną tablicę lub sekwencję sekwencji w ramach ABI, użyj `IVector<IVector<T>^>`.
 
-## <a name="use-arrayreference-to-avoid-copying-data"></a>Użyj ArrayReference w celu uniknięcia kopiowania danych
+## <a name="use-arrayreference-to-avoid-copying-data"></a>Użyj ArrayReference, aby uniknąć kopiowania danych
 
-W niektórych scenariuszach, gdzie dane są przekazywane między ABI do [Platform::Array](../cppcx/platform-array-class.md), a ostatecznie chce przetwarzać dane w tablicy stylu C w celu zwiększenia wydajności, można użyć [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) Aby uniknąć operacji kopiowania dodatkowych. Podczas przekazywania [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) jako argumentu do parametru, który przyjmuje `Platform::Array`, `ArrayReference` będą przechowywane dane bezpośrednio do tablicy stylu C, który określisz. Tylko należy pamiętać, że `ArrayReference` ma nie blokadę na źródle danych, więc jeśli zmodyfikowane lub usunięte w innym wątku przed zakończeniem wywołanie danych, wyniki będzie niezdefiniowane.
+W niektórych scenariuszach, w których dane są przesyłane przez ABI do obiektu [platform:: Array](../cppcx/platform-array-class.md), a ostatecznie chcesz przetworzyć te dane w tablicy w stylu C w celu zwiększenia wydajności, możesz użyć [platformy:: ArrayReference](../cppcx/platform-arrayreference-class.md) , aby uniknąć dodatkowej operacji kopiowania. Gdy przekazujesz [platformę:: ArrayReference](../cppcx/platform-arrayreference-class.md) jako argument do parametru, który pobiera obiekt `Platform::Array`, `ArrayReference` dane będą przechowywane bezpośrednio w tablicy w stylu C, którą określisz. Należy pamiętać, że `ArrayReference` nie ma blokady danych źródłowych, więc jeśli dane są modyfikowane lub usuwane w innym wątku przed ukończeniem wywołania, wyniki będą niezdefiniowane.
 
-Poniższy fragment kodu przedstawia sposób kopiowania wyników [DataReader](/uwp/api/Windows.Storage.Streams.DataReader) operacji na `Platform::Array` (zwyczajowego wzorca) i następnie zastąp `ArrayReference` do kopiowania danych bezpośrednio do tablicy stylu C:
+Poniższy fragment kodu przedstawia sposób kopiowania wyników operacji elementu [DataReader](/uwp/api/Windows.Storage.Streams.DataReader) do `Platform::Array` (zwykły wzorzec), a następnie sposób podstawiania `ArrayReference` w celu skopiowania danych bezpośrednio do tablicy w stylu C:
 
 [!code-cpp[cx_arrays#07](../cppcx/codesnippet/CPP/js-array/class1.h#07)]
 
-## <a name="avoid-exposing-an-array-as-a-property"></a>Należy unikać udostępnianie tablicę jako właściwość
+## <a name="avoid-exposing-an-array-as-a-property"></a>Unikaj ujawniania tablicy jako właściwości
 
-Ogólnie rzecz biorąc, należy unikać udostępnianie `Platform::Array` wpisać jako właściwości w klasie ref, ponieważ zwracany jest całej tablicy, nawet wtedy, gdy kod klienta jest tylko próba uzyskania dostępu pojedynczy element. Gdy trzeba udostępnić kontenerem sekwencyjnym jako właściwość w klasie ref publicznych [Windows::Foundation::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) jest lepszym rozwiązaniem. Prywatne lub wewnętrzne interfejsów API, (które nie są publikowane w metadanych), należy wziąć pod uwagę przy użyciu standardowych kontener C++, takich jak [std::vector](../standard-library/vector-class.md).
+Ogólnie rzecz biorąc, należy unikać ujawniania `Platform::Array` typu jako właściwości w klasie referencyjnej, ponieważ cała tablica jest zwracana nawet wtedy, gdy kod klienta próbuje uzyskać dostęp do pojedynczego elementu. Gdy konieczne jest uwidocznienie kontenera sekwencji jako właściwości w publicznej klasie ref, należy poprawić wybór [systemu Windows:: Foundation:: IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) . W prywatnych lub wewnętrznych interfejsach API (które nie są publikowane w metadanych) Rozważ użycie standardowego C++ kontenera, takiego jak [std:: Vector](../standard-library/vector-class.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 [System typów](../cppcx/type-system-c-cx.md)<br/>
-[Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Dokumentacja języka C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Dokumentacja przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)

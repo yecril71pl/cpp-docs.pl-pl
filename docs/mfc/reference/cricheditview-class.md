@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: c8eba16779b837b33912006a2ff3b7cdfa73f1e6
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b32578cc3c9ad4f7a89b8ee76449259c0fa0b43b
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502631"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741510"
 ---
 # <a name="cricheditview-class"></a>Klasa CRichEditView
 
@@ -763,7 +763,7 @@ Wymagana lista efektów formatowania znaków do przełączenia.
 
 Każde wywołanie tej funkcji przełącza określone efekty formatowania dla bieżącego zaznaczenia.
 
-Aby uzyskać więcej informacji o parametrach *dwMask* i *dwEffect* oraz ich potencjalnych wartościach, zobacz odpowiednie elementy członkowskie danych [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) w Windows SDK.
+Aby uzyskać więcej informacji o parametrach *dwMask* i *dwEffect* oraz ich potencjalnych wartościach, zobacz odpowiednie elementy członkowskie danych [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
@@ -997,7 +997,7 @@ Określa efekt formatowania znaków.
 
 Maska *dwMask* określa atrybuty formatowania znaku do sprawdzenia. Flagi *dwEffect* wyświetlają atrybuty formatowania znaku, aby ustawić/wyczyścić.
 
-Aby uzyskać więcej informacji o parametrach *dwMask* i *dwEffect* oraz ich potencjalnych wartościach, zobacz odpowiednie elementy członkowskie danych [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) w Windows SDK.
+Aby uzyskać więcej informacji o parametrach *dwMask* i *dwEffect* oraz ich potencjalnych wartościach, zobacz odpowiednie elementy członkowskie danych [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
@@ -1103,7 +1103,7 @@ Indeks ostatniego znaku, który mieści się na stronie oraz jeden.
 
 Układ każdej strony jest kontrolowany przez [GetPageRect](#getpagerect) i [GetPrintRect](#getprintrect). Zwykle jest to wywołanie [CRichEditCtrl::D isplayband](../../mfc/reference/cricheditctrl-class.md#displayband) , które generuje dane wyjściowe.
 
-Należy zauważyć, że marginesy są względne względem strony fizycznej, a nie strony logicznej. W związku z tym marginesy zerowe będą często obcinać tekst, ponieważ wiele drukarek ma niedrukowalne obszary na stronie. Aby uniknąć obcinania tekstu, należy wywołać metodę Setmargins i ustawić odpowiednie marginesy przed drukowaniem. [](#setmargins)
+Należy zauważyć, że marginesy są względne względem strony fizycznej, a nie strony logicznej. W związku z tym marginesy zerowe będą często obcinać tekst, ponieważ wiele drukarek ma niedrukowalne obszary na stronie. Aby uniknąć obcinania tekstu, należy wywołać metodę [Setmargins](#setmargins) i ustawić odpowiednie marginesy przed drukowaniem.
 
 ##  <a name="queryacceptdata"></a>CRichEditView:: QueryAcceptData
 
@@ -1227,7 +1227,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 ### <a name="parameters"></a>Parametry
 
 *PF*<br/>
-[](/windows/win32/api/richedit/ns-richedit-paraformat2) Struktura PARAFORMAT2a zawierająca nowe domyślne atrybuty formatowania akapitu.
+Struktura [PARAFORMAT2a](/windows/win32/api/richedit/ns-richedit-paraformat2) zawierająca nowe domyślne atrybuty formatowania akapitu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1268,7 +1268,7 @@ Parametr *lpszFind* powinien zawierać tę samą zawartość co ciąg dostarczon
 
 ##  <a name="wrapchanged"></a>CRichEditView:: WrapChanged
 
-Wywołaj tę funkcję po zmianie charakterystyki drukowania (Setmargins lub setpapersize). [](#setmargins) [](#setpapersize)
+Wywołaj tę funkcję po zmianie charakterystyki drukowania ( [Setmargins](#setmargins) lub [setpapersize](#setpapersize)).
 
 ```
 virtual void WrapChanged();

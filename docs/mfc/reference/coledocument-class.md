@@ -52,12 +52,12 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteLinkMenu
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
-ms.openlocfilehash: 666ca54f55c5bb0dd4070a4984500dc19dc9d372
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b92c796fdaa972966dcbfa85b1e34f267b6c629c
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504038"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741611"
 ---
 # <a name="coledocument-class"></a>Klasa COleDocument
 
@@ -105,7 +105,7 @@ class COleDocument : public CDocument
 |[COleDocument::OnFileSendMail](#onfilesendmail)|Wysyła wiadomość e-mail z dołączonym dokumentem.|
 |[COleDocument::OnUpdateEditChangeIcon](#onupdateeditchangeicon)|Wywoływane przez platformę, aby zaktualizować interfejs użytkownika poleceń dla opcji menu Edytuj/Zmień.|
 |[COleDocument::OnUpdateEditLinksMenu](#onupdateeditlinksmenu)|Wywoływane przez platformę, aby zaktualizować interfejs użytkownika poleceń dla opcji menu Edytuj/linki.|
-|[COleDocument::OnUpdateObjectVerbMenu](#onupdateobjectverbmenu)|Wywoływane przez platformę, aby zaktualizować interfejs użytkownika poleceń dla opcji menu Edytuj/ObjectName i podmenu czasownik, do którego można uzyskać dostęp z edycji/ *ObjectName*.|
+|[COleDocument::OnUpdateObjectVerbMenu](#onupdateobjectverbmenu)|Wywoływane przez platformę, aby zaktualizować interfejs użytkownika poleceń dla opcji menu Edytuj/ *ObjectName* i podmenu czasownik, do którego można uzyskać dostęp z edycji/ *ObjectName*.|
 |[COleDocument::OnUpdatePasteLinkMenu](#onupdatepastelinkmenu)|Wywoływane przez platformę, aby zaktualizować interfejs użytkownika poleceń dla opcji menu Wklej specjalnie.|
 |[COleDocument::OnUpdatePasteMenu](#onupdatepastemenu)|Wywoływane przez platformę, aby zaktualizować interfejs użytkownika poleceń dla opcji menu Wklej.|
 
@@ -177,9 +177,9 @@ Niezerowe, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
 Ta funkcja aktualizuje urządzenie drukowania-docelowego dla wszystkich elementów, ale nie odświeża pamięci podręcznej prezentacji dla tych elementów. Aby zaktualizować pamięć podręczną prezentacji dla elementu, wywołaj [COleClientItem:: UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink).
 
-Argumenty tej funkcji zawierają informacje używane przez technologię OLE do identyfikowania urządzenia docelowego. Struktura [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) zawiera informacje używane przez system Windows do zainicjowania wspólnego okna dialogowego drukowania. Gdy użytkownik zamknie okno dialogowe, system Windows zwróci informacje o wyborach użytkownika w tej strukturze. Element członkowski obiektu [CPrintDialog](../../mfc/reference/cprintdialog-class.md) jest `PRINTDLG` strukturą. `m_pd`
+Argumenty tej funkcji zawierają informacje używane przez technologię OLE do identyfikowania urządzenia docelowego. Struktura [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) zawiera informacje używane przez system Windows do zainicjowania wspólnego okna dialogowego drukowania. Gdy użytkownik zamknie okno dialogowe, system Windows zwróci informacje o wyborach użytkownika w tej strukturze. Element członkowski obiektu [CPrintDialog](../../mfc/reference/cprintdialog-class.md) jest `PRINTDLG` strukturą. `m_pd`
 
-Aby uzyskać więcej informacji, zapoznaj się ze strukturą [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) w Windows SDK.
+Aby uzyskać więcej informacji, zapoznaj się ze strukturą [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) w Windows SDK.
 
 Aby uzyskać więcej informacji, zapoznaj się ze strukturą [DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) w Windows SDK.
 
@@ -464,7 +464,7 @@ Począwszy od pierwszego elementu OLE w dokumencie, `OnUpdateEditLinksMenu` uzys
 
 ##  <a name="onupdateobjectverbmenu"></a>COleDocument::OnUpdateObjectVerbMenu
 
-Wywoływane przez platformę, aby zaktualizować polecenie ObjectName w menu Edycja i podmenu czasownik, do którego można uzyskać dostęp z obiektu *ObjectName* , gdzie *ObjectName* jest nazwą obiektów OLE osadzonych w dokumencie.
+Wywoływane przez platformę, aby zaktualizować polecenie *ObjectName* w menu Edycja i podmenu czasownik, do którego można uzyskać dostęp z obiektu *ObjectName* , gdzie *ObjectName* jest nazwą obiektów OLE osadzonych w dokumencie.
 
 ```
 afx_msg void OnUpdateObjectVerbMenu(CCmdUI* pCmdUI);
@@ -477,7 +477,7 @@ Wskaźnik do `CCmdUI` struktury, która reprezentuje menu, które wygenerowało 
 
 ### <a name="remarks"></a>Uwagi
 
-`OnUpdateObjectVerbMenu`aktualizuje Interfejs użytkownika polecenia ObjectName, w zależności od tego, czy w dokumencie istnieje prawidłowy obiekt. Jeśli obiekt istnieje, polecenie *ObjectName* w menu Edycja jest włączone. Po wybraniu tego polecenia menu zostanie wyświetlone podmenu zlecenie. Podmenu zlecenie zawiera wszystkie polecenia zleceń dostępne dla obiektu, takie jak Edycja, właściwości i tak dalej. Zastąp tę funkcję, aby zmienić zachowanie.
+`OnUpdateObjectVerbMenu`aktualizuje interfejs użytkownika polecenia *ObjectName* , w zależności od tego, czy w dokumencie istnieje prawidłowy obiekt. Jeśli obiekt istnieje, polecenie *ObjectName* w menu Edycja jest włączone. Po wybraniu tego polecenia menu zostanie wyświetlone podmenu zlecenie. Podmenu zlecenie zawiera wszystkie polecenia zleceń dostępne dla obiektu, takie jak Edycja, właściwości i tak dalej. Zastąp tę funkcję, aby zmienić zachowanie.
 
 ##  <a name="onupdatepastelinkmenu"></a>COleDocument::OnUpdatePasteLinkMenu
 

@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: fc2b4c08b5a999f0369199e0dd65a09a7cdf8dff
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b3c02c8c2754ce7edb40cff5e44efb74a16353fc
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503150"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741540"
 ---
 # <a name="cricheditctrl-class"></a>Klasa CRichEditCtrl
 
@@ -326,7 +326,7 @@ Różne od zera, jeśli kolejka wykonaj ponownie zawiera akcje, w przeciwnym raz
 
 ### <a name="remarks"></a>Uwagi
 
-Aby odnaleźć nazwę operacji w kolejce ponownego wykonywania, wywołaj [CRichEditCtrl::](#getredoname)ponowienie. Aby ponownie wykonać ostatnią operację cofania, wywołaj polecenie [Wykonaj ponownie](#redo).
+Aby odnaleźć nazwę operacji w kolejce ponownego wykonywania, wywołaj [CRichEditCtrl:: ponowienie](#getredoname). Aby ponownie wykonać ostatnią operację cofania, wywołaj polecenie [Wykonaj ponownie](#redo).
 
 Aby uzyskać więcej informacji, zobacz [EM_CANREDO](/windows/win32/Controls/em-canredo) w Windows SDK.
 
@@ -383,9 +383,9 @@ void Clear();
 
 ### <a name="remarks"></a>Uwagi
 
-Usunięcie wykonane przez `Clear` można [cofnąć](#undo) przez wywołanie funkcji cofnięcia elementu członkowskiego.
+Usunięcie wykonane przez `Clear` można cofnąć przez wywołanie funkcji [cofnięcia](#undo) elementu członkowskiego.
 
-Aby usunąć bieżące zaznaczenie i umieścić zawartość w schowku, wywołaj funkcję wycinania [](#cut) elementu członkowskiego.
+Aby usunąć bieżące zaznaczenie i umieścić zawartość w schowku, wywołaj funkcję [wycinania](#cut) elementu członkowskiego.
 
 Aby uzyskać więcej informacji, zobacz [WM_CLEAR](/windows/win32/dataxchg/wm-clear) w Windows SDK.
 
@@ -461,7 +461,7 @@ Zastosuj następujące [Style okna](../../mfc/reference/styles-used-by-mfc.md#wi
 
 - WS_TABSTOP do uwzględnienia kontrolki edycji w kolejności tabulacji.
 
-Aby uzyskać więcej informacji na temat stylów okna [](/windows/win32/api/winuser/nf-winuser-createwindoww) , zobacz sekcję w Windows SDK.
+Aby uzyskać więcej informacji na temat stylów okna [, zobacz sekcję](/windows/win32/api/winuser/nf-winuser-createwindoww) w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
@@ -531,7 +531,7 @@ void Cut();
 
 ### <a name="remarks"></a>Uwagi
 
-Usunięcie wykonane przez `Cut` można [cofnąć](#undo) przez wywołanie funkcji cofnięcia elementu członkowskiego.
+Usunięcie wykonane przez `Cut` można cofnąć przez wywołanie funkcji [cofnięcia](#undo) elementu członkowskiego.
 
 Aby usunąć bieżące zaznaczenie bez umieszczania w schowku usuniętego tekstu, wywołaj funkcję [czyszczenia](#clear) elementu członkowskiego.
 
@@ -887,7 +887,7 @@ Różne od zera, jeśli tekst w `CRichEditCtrl` tym obiekcie został zmodyfikowa
 
 ### <a name="remarks"></a>Uwagi
 
-System Windows utrzymuje wewnętrzną flagę wskazującą, czy zawartość kontrolki edycji wzbogaconej została zmieniona. Ta flaga jest wyczyszczona, gdy kontrolka edycji jest najpierw tworzona i można ją wyczyścić, [](#setmodify) wywołując funkcję elementu członkowskiego SetModify.
+System Windows utrzymuje wewnętrzną flagę wskazującą, czy zawartość kontrolki edycji wzbogaconej została zmieniona. Ta flaga jest wyczyszczona, gdy kontrolka edycji jest najpierw tworzona i można ją wyczyścić, wywołując funkcję elementu członkowskiego [SetModify](#setmodify) .
 
 Aby uzyskać więcej informacji, zobacz [EM_GETMODIFY](/windows/win32/Controls/em-getmodify) w Windows SDK.
 
@@ -1051,7 +1051,7 @@ DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharForma
 ### <a name="parameters"></a>Parametry
 
 *cf*<br/>
-W pierwszej wersji wskaźnik do struktury [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) , aby otrzymać atrybuty formatowania znaku bieżącego zaznaczenia.
+W pierwszej wersji wskaźnik do struktury [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) , aby otrzymać atrybuty formatowania znaku bieżącego zaznaczenia.
 
 W drugiej wersji wskaźnik do struktury [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , który jest rozbudowanym rozszerzeniem 2,0 do `CHARFORMAT` struktury, aby otrzymać atrybuty formatowania znaku bieżącego zaznaczenia.
 
@@ -1128,7 +1128,7 @@ Aby uzyskać więcej informacji, zobacz [EM_GETSELTEXT](/windows/win32/Controls/
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład dla [CRichEditCtrl::](#getselectiontype)GetSelectionType.
+  Zobacz przykład dla [CRichEditCtrl:: GetSelectionType](#getselectiontype).
 
 ##  <a name="gettextlength"></a>CRichEditCtrl:: GetTextLength
 
@@ -1272,7 +1272,7 @@ Wskazuje, czy ta zmiana widoczności zaznaczenia powinna być trwała.
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy *bPerm* ma wartość true, zmienia opcję ECO_NOHIDESEL dla tego `CRichEditCtrl` obiektu. Aby zapoznać się z krótkim opisem tej opcji, [](#setoptions)Zobacz SetOptions. Za pomocą tej funkcji można ustawić wszystkie opcje dla tego `CRichEditCtrl` obiektu.
+Gdy *bPerm* ma wartość true, zmienia opcję ECO_NOHIDESEL dla tego `CRichEditCtrl` obiektu. Aby zapoznać się z krótkim opisem tej opcji, zobacz [SetOptions](#setoptions). Za pomocą tej funkcji można ustawić wszystkie opcje dla tego `CRichEditCtrl` obiektu.
 
 Aby uzyskać więcej informacji, zobacz [EM_HIDESELECTION](/windows/win32/Controls/em-hideselection) w Windows SDK.
 
@@ -1546,7 +1546,7 @@ void RequestResize();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest przydatna podczas przetwarzania [CWnd::](../../mfc/reference/cwnd-class.md#onsize) onsizeing dla `CRichEditCtrl` bezprawnego obiektu.
+Ta funkcja jest przydatna podczas przetwarzania [CWnd:: onsizeing](../../mfc/reference/cwnd-class.md#onsize) dla `CRichEditCtrl` bezprawnego obiektu.
 
 Aby uzyskać więcej informacji, zapoznaj się z sekcją [EM_REQUESTRESIZE](/windows/win32/Controls/em-requestresize) komunikat i **kontrolki zaawansowanej edycji** w temacie [Informacje o kontrolkach edycji wzbogaconej](/windows/win32/Controls/about-rich-edit-controls) w Windows SDK.
 
@@ -1618,7 +1618,7 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>Parametry
 
 *cf*<br/>
-W pierwszej wersji wskaźnik do struktury [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) zawierającej nowe atrybuty domyślnego formatowania znaku.
+W pierwszej wersji wskaźnik do struktury [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) zawierającej nowe atrybuty domyślnego formatowania znaku.
 
 W drugiej wersji wskaźnik do struktury [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , który jest rozbudowanym rozszerzeniem 2,0 do `CHARFORMAT` struktury, zawierający domyślne atrybuty formatowania znaków.
 
@@ -1678,7 +1678,7 @@ Wartość TRUE wskazuje, że tekst został zmodyfikowany, a wartość FALSE wska
 
 ### <a name="remarks"></a>Uwagi
 
-Zmodyfikowano flagę wskazuje, czy tekst w kontrolce edycji został zmodyfikowany. Jest ona ustawiana automatycznie za każdym razem, gdy użytkownik zmieni tekst. Jej wartość można pobrać za pomocą elementu [](#getmodify) Członkowskiego GetModify.
+Zmodyfikowano flagę wskazuje, czy tekst w kontrolce edycji został zmodyfikowany. Jest ona ustawiana automatycznie za każdym razem, gdy użytkownik zmieni tekst. Jej wartość można pobrać za pomocą elementu członkowskiego [GetModify](#getmodify) .
 
 Aby uzyskać więcej informacji, zobacz [EM_SETMODIFY](/windows/win32/Controls/em-setmodify) w Windows SDK.
 
@@ -1836,7 +1836,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby zapoznać się z krótkim opisem tej opcji, [](#setoptions)Zobacz SetOptions. Za pomocą tej funkcji można ustawić wszystkie opcje dla tego `CRichEditCtrl` obiektu.
+Aby zapoznać się z krótkim opisem tej opcji, zobacz [SetOptions](#setoptions). Za pomocą tej funkcji można ustawić wszystkie opcje dla tego `CRichEditCtrl` obiektu.
 
 Aby uzyskać więcej informacji, zobacz [EM_SETREADONLY](/windows/win32/Controls/em-setreadonly) w Windows SDK.
 
@@ -1855,7 +1855,7 @@ void SetRect(LPCRECT lpRect);
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-[CRect](../../atl-mfc-shared/reference/crect-class.md) lub wskaźnik do prostokąta, który wskazuje nowe granice prostokąta formatowania. [](/windows/win32/api/windef/ns-windef-rect)
+[CRect](../../atl-mfc-shared/reference/crect-class.md) lub wskaźnik [do prostokąta, który wskazuje](/windows/win32/api/windef/ns-windef-rect) nowe granice prostokąta formatowania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1920,7 +1920,7 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>Parametry
 
 *cf*<br/>
-W pierwszej wersji wskaźnik do struktury [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) zawierającej nowe atrybuty formatowania znaku dla bieżącego zaznaczenia.
+W pierwszej wersji wskaźnik do struktury [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) zawierającej nowe atrybuty formatowania znaku dla bieżącego zaznaczenia.
 
 W drugiej wersji wskaźnik do struktury [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , który jest rozbudowanym rozszerzeniem 2,0 do `CHARFORMAT` struktury, zawierającym nowe atrybuty formatowania znaku dla bieżącego zaznaczenia.
 
@@ -1961,7 +1961,7 @@ Dojście do kontekstu urządzenia dla nowego urządzenia docelowego.
 Szerokość linii do użycia podczas formatowania.
 
 *DC*<br/>
-[](../../mfc/reference/cdc-class.md) Przekieruj do nowego urządzenia docelowego.
+[Przekieruj do nowego](../../mfc/reference/cdc-class.md) urządzenia docelowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2033,7 +2033,7 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>Parametry
 
 *cf*<br/>
-W pierwszej wersji wskaźnik do struktury [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) zawierającej nowe atrybuty formatowania znaku dla aktualnie zaznaczonego wyrazu.
+W pierwszej wersji wskaźnik do struktury [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) zawierającej nowe atrybuty formatowania znaku dla aktualnie zaznaczonego wyrazu.
 
 W drugiej wersji wskaźnik do struktury [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , który jest rozbudowanym rozszerzeniem 2,0 do `CHARFORMAT` struktury, zawierającym nowe atrybuty formatowania znaku dla aktualnie zaznaczonego wyrazu.
 
@@ -2102,7 +2102,7 @@ long StreamIn(
 Flagi określające formaty danych wejściowych. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.
 
 *AK*<br/>
-[](/windows/win32/api/richedit/ns-richedit-editstream) Struktura EDITSTREAMa określająca strumień wejściowy. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.
+Struktura [EDITSTREAMa](/windows/win32/api/richedit/ns-richedit-editstream) określająca strumień wejściowy. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2144,7 +2144,7 @@ long StreamOut(
 Flagi określające formaty danych wyjściowych. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.
 
 *AK*<br/>
-[](/windows/win32/api/richedit/ns-richedit-editstream) Struktura EDITSTREAMa określająca strumień wyjściowy. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.
+Struktura [EDITSTREAMa](/windows/win32/api/richedit/ns-richedit-editstream) określająca strumień wyjściowy. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 

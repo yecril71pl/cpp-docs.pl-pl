@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 34dcc618f603302c5598e42588ffad78d61ee222
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 97266ac9e4f1885149ce521f554ad2f22daee6e0
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502709"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741499"
 ---
 # <a name="crgn-class"></a>Klasa CRgn
 
@@ -78,7 +78,7 @@ class CRgn : public CGdiObject
 |[CRgn:: CombineRgn](#combinergn)|Ustawia obiekt tak, aby był równoważny z złożeniem dwóch określonych `CRgn` obiektów. `CRgn`|
 |[CRgn:: CopyRgn](#copyrgn)|Ustawia obiekt tak, aby był to kopia określonego `CRgn` obiektu. `CRgn`|
 |[CRgn:: CreateEllipticRgn](#createellipticrgn)|`CRgn` Inicjuje obiekt z regionem eliptycznym.|
-|[CRgn:: CreateEllipticRgnIndirect](#createellipticrgnindirect)|Inicjuje obiekt z regionem eliptycznego zdefiniowanym przez strukturę [Rect.](/windows/win32/api/windef/ns-windef-tagrect) `CRgn`|
+|[CRgn:: CreateEllipticRgnIndirect](#createellipticrgnindirect)|Inicjuje obiekt z regionem eliptycznego zdefiniowanym przez strukturę [Rect.](/windows/win32/api/windef/ns-windef-rect) `CRgn`|
 |[CRgn:: CreateFromData](#createfromdata)|Tworzy region z danego regionu i danych transformacji.|
 |[CRgn:: CreateFromPath](#createfrompath)|Tworzy region na podstawie ścieżki wybranej w danym kontekście urządzenia.|
 |[CRgn::CreatePolygonRgn](#createpolygonrgn)|`CRgn` Inicjuje obiekt z wielobokówowym regionem. System automatycznie zamknie Wielokąt, w razie potrzeby, rysując linię od ostatniego wierzchołka do pierwszego.|
