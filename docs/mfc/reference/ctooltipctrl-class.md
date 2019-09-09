@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 046c8a3f99e8b505ee6a6e8b534318263090e07d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: bf32671eb3535de1bf072e24bc642145e87c84ee
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502251"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741417"
 ---
 # <a name="ctooltipctrl-class"></a>Klasa CToolTipCtrl
 
@@ -377,7 +377,7 @@ CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
 ### <a name="parameters"></a>Parametry
 
 *lpToolInfo*<br/>
-Wskaźnik do struktury [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) etykietki narzędzia.
+Wskaźnik do struktury [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) etykietki narzędzia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -399,7 +399,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*lpToolInfo*|określoną Wskaźnik na strukturę [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) , która otrzymuje informacje o bieżącym oknie etykietki narzędzia.|
+|*lpToolInfo*|określoną Wskaźnik na strukturę [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) , która otrzymuje informacje o bieżącym oknie etykietki narzędzia.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -598,7 +598,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Elementy członkowskie struktury [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) , do których odwołuje się CToolInfo, identyfikują narzędzie. `hwnd` `uId` Jeśli to narzędzie zostało zarejestrowane za pomocą kontrolki etykietki narzędzia przez poprzednie wywołanie do `AddTool` `TOOLINFO` , struktura jest wypełniana informacjami o narzędziu.
+Elementy członkowskie struktury [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) , do których odwołuje się CToolInfo, identyfikują narzędzie. `hwnd` `uId` Jeśli to narzędzie zostało zarejestrowane za pomocą kontrolki etykietki narzędzia przez poprzednie wywołanie do `AddTool` `TOOLINFO` , struktura jest wypełniana informacjami o narzędziu.
 
 ##  <a name="hittest"></a>CToolTipCtrl:: HitTest
 
@@ -620,7 +620,7 @@ Wskaźnik do okna, które zawiera narzędzie.
 Wskaźnik do `CPoint` obiektu zawierającego współrzędne punktu do przetestowania.
 
 *lpToolInfo*<br/>
-Wskaźnik do struktury [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) , który zawiera informacje o narzędziu.
+Wskaźnik do struktury [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) , który zawiera informacje o narzędziu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -845,7 +845,7 @@ void SetToolInfo(LPTOOLINFO lpToolInfo);
 ### <a name="parameters"></a>Parametry
 
 *lpToolInfo*<br/>
-Wskaźnik do struktury [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) , który określa informacje do ustawienia.
+Wskaźnik do struktury [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) , który określa informacje do ustawienia.
 
 ##  <a name="settoolrect"></a>CToolTipCtrl:: SetToolRect
 

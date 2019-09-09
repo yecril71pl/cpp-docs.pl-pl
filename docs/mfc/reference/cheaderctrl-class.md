@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 407ba2747ed4d6e56e56fe4ccb2ccb828240a732
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 62915da703e1c938e65643ab389999b83c72d459
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506710"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741527"
 ---
 # <a name="cheaderctrl-class"></a>Klasa CHeaderCtrl
 
@@ -140,7 +140,7 @@ Dodano funkcje dla systemu Windows 95/programu Internet Explorer 4,0:
 
 - Obsługa listy obrazów. Elementy nagłówka mogą zawierać obrazy przechowywane w `CImageList` obiekcie lub tekście.
 
-Aby uzyskać więcej informacji o `CHeaderCtrl`używaniu [](../../mfc/controls-mfc.md) programu, zobacz Controls and [using CHeaderCtrl](../../mfc/using-cheaderctrl.md).
+Aby uzyskać więcej informacji o `CHeaderCtrl`używaniu programu, zobacz [Controls](../../mfc/controls-mfc.md) and [using CHeaderCtrl](../../mfc/using-cheaderctrl.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -231,7 +231,7 @@ virtual BOOL Create(
 Określa styl kontrolki nagłówka. Aby uzyskać opis stylów kontrolki nagłówka, zobacz [Style kontrolki nagłówka](/windows/win32/Controls/header-control-styles) w Windows SDK.
 
 *cinania*<br/>
-Określa rozmiar i położenie kontrolki nagłówka. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub struktura. [](/previous-versions/dd162897\(v=vs.85\))
+Określa rozmiar i położenie kontrolki nagłówka. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) [lub struktura.](/previous-versions/dd162897\(v=vs.85\))
 
 *pParentWnd*<br/>
 Określa okno nadrzędne kontrolki nagłówka, zazwyczaj a `CDialog`. Nie może mieć wartości NULL.
@@ -502,7 +502,7 @@ BOOL GetItem(
 Określa indeks (liczony od zera) elementu do pobrania.
 
 *pHeaderItem*<br/>
-Wskaźnik do struktury [HDITEM](/windows/win32/api/commctrl/ns-commctrl-_hd_itemw) , która otrzymuje nowy element. Ta struktura jest używana z `InsertItem` funkcjami składowymi i. `SetItem` Wszystkie flagi ustawione w `mask` elemencie zapewniają prawidłowe wypełnienie wartości w odpowiednich elementach po powrocie. `mask` Jeśli element ma wartość zero, wartości w innych elementach struktury są bezużyteczne.
+Wskaźnik do struktury [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) , która otrzymuje nowy element. Ta struktura jest używana z `InsertItem` funkcjami składowymi i. `SetItem` Wszystkie flagi ustawione w `mask` elemencie zapewniają prawidłowe wypełnienie wartości w odpowiednich elementach po powrocie. `mask` Jeśli element ma wartość zero, wartości w innych elementach struktury są bezużyteczne.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -542,7 +542,7 @@ BOOL GetItemDropDownRect(
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*iItem*|podczas Indeks (liczony od zera) elementu nagłówka, którego styl to HDF_SPLITBUTTON. Aby uzyskać więcej informacji, zobacz `fmt` element członkowski struktury [HDITEM](/windows/win32/api/commctrl/ns-commctrl-_hd_itemw) .|
+|*iItem*|podczas Indeks (liczony od zera) elementu nagłówka, którego styl to HDF_SPLITBUTTON. Aby uzyskać więcej informacji, zobacz `fmt` element członkowski struktury [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) .|
 |*lpRect*|określoną Wskaźnik do struktury [Rect](/previous-versions/dd162897\(v=vs.85\)) , aby otrzymać powiązane informacje o prostokącie.|
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -669,7 +669,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*phdhti*|[in. out] Wskaźnik na strukturę [HDHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-_hd_hittestinfo) , która określa punkt do testowania i odbiera wyniki testu.|
+|*phdhti*|[in. out] Wskaźnik na strukturę [HDHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-hdhittestinfo) , która określa punkt do testowania i odbiera wyniki testu.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -707,7 +707,7 @@ int InsertItem(
 Indeks (liczony od zera) elementu, który ma zostać wstawiony. Jeśli wartość jest równa zero, element zostanie wstawiony na początku kontrolki nagłówka. Jeśli wartość jest większa niż wartość maksymalna, element zostanie wstawiony na końcu kontrolki nagłówek.
 
 *phdi*<br/>
-Wskaźnik na strukturę [HDITEM](/windows/win32/api/commctrl/ns-commctrl-_hd_itemw) , która zawiera informacje o elemencie, który ma zostać wstawiony.
+Wskaźnik na strukturę [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) , która zawiera informacje o elemencie, który ma zostać wstawiony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -728,7 +728,7 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
 ### <a name="parameters"></a>Parametry
 
 *pHeaderLayout*<br/>
-Wskaźnik do struktury [HDLAYOUT](/windows/win32/api/commctrl/ns-commctrl-_hd_layout) , która zawiera informacje używane do ustawiania rozmiaru i położenia kontrolki nagłówka.
+Wskaźnik do struktury [HDLAYOUT](/windows/win32/api/commctrl/ns-commctrl-hdlayout) , która zawiera informacje używane do ustawiania rozmiaru i położenia kontrolki nagłówka.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -917,7 +917,7 @@ BOOL SetItem(
 Indeks (liczony od zera) elementu do manipulowania.
 
 *pHeaderItem*<br/>
-Wskaźnik na strukturę [HDITEM](/windows/win32/api/commctrl/ns-commctrl-_hd_itemw) , która zawiera informacje o nowym elemencie.
+Wskaźnik na strukturę [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) , która zawiera informacje o nowym elemencie.
 
 ### <a name="return-value"></a>Wartość zwracana
 

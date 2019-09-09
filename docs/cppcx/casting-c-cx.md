@@ -1,29 +1,29 @@
 ---
-title: Rzutowanie (C++/CX)
+title: RzutowanieC++(/CX)
 ms.date: 06/19/2018
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
-ms.openlocfilehash: 65d489d14c91b462e5a2bbe8bd60fce2657904a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6711320fd9ca52360f702e029fdc8e129c90c6cd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258216"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740542"
 ---
-# <a name="casting-ccx"></a>Rzutowanie (C++/CX)
+# <a name="casting-ccx"></a>RzutowanieC++(/CX)
 
-Cztery operatory rzutowania różnych dotyczą typów środowiska wykonawczego Windows: [static_cast Operator](../cpp/static-cast-operator.md), [dynamic_cast Operator](../cpp/dynamic-cast-operator.md), **operatora safe_cast**, i [ reinterpret_cast Operator](../cpp/reinterpret-cast-operator.md). **safe_cast** i **static_cast** zgłoszenie wyjątku, gdy nie można wykonać konwersji; [static_cast Operator](../cpp/static-cast-operator.md) wykonuje sprawdzanie typów w czasie kompilacji. **dynamic_cast** zwraca **nullptr** ich powodzenia konwersji typu. Mimo że **reinterpret_cast** zwraca wartość inną niż null, być może jest ono nieprawidłowe. Z tego powodu zaleca się, że nie używasz **reinterpret_cast** Jeśli nie masz pewności, że rzutowanie zakończy się powodzeniem. Ponadto zalecamy nieużywanie rzutowań w stylu języka C w swojej C++/CX kodu, ponieważ są one identyczne **reinterpret_cast**.
+Cztery różne Operatory rzutowania stosują się do typów środowisko wykonawcze systemu Windows: [operatora static_cast](../cpp/static-cast-operator.md), operatora [dynamic_cast](../cpp/dynamic-cast-operator.md), **operatora safe_cast**i [operatora reinterpret_cast](../cpp/reinterpret-cast-operator.md). **safe_cast** i **static_cast** zgłasza wyjątek, jeśli nie można wykonać konwersji; [Operator static_cast](../cpp/static-cast-operator.md) wykonuje także sprawdzanie typu w czasie kompilacji. **dynamic_cast** zwraca **nullptr** , jeśli nie można skonwertować typu. Chociaż element **reinterpret_cast** zwraca wartość różną od null, może być nieprawidłowy. Z tego powodu zaleca się, aby nie używać **operatora reinterpret_cast** , chyba że wiadomo, że rzutowanie zakończy się pomyślnie. Ponadto zaleca się, aby nie używać rzutowania w stylu języka C w kodzie C++/CX, ponieważ są one takie same jak **operatora reinterpret_cast**.
 
-Kompilator i środowisko uruchomieniowe również wykonywać rzutowania niejawnego — na przykład w konwersja boxing operacji, gdy typ wartości lub wbudowany typ są przekazywane jako argumenty do metody, której parametr typu jest `Object^`. Teoretycznie niejawne rzutowanie nigdy nie powinna spowodować wyjątek w czasie wykonywania. Jeśli kompilator nie można wykonać niejawnej konwersji, zgłasza błąd w czasie kompilacji.
+Kompilator i środowisko uruchomieniowe również wykonuje niejawne rzutowania — na przykład w operacjach pakowania, gdy typ wartości lub typ wbudowany są przekazane jako argumenty do metody, której typem parametru `Object^`jest. W teorii niejawne rzutowanie nigdy nie powinno spowodować wyjątku w czasie wykonywania; Jeśli kompilator nie może wykonać konwersji niejawnej, zgłasza błąd w czasie kompilacji.
 
-Środowisko uruchomieniowe Windows jest klasą abstrakcyjną za pośrednictwem modelu COM, używający HRESULT kodów błędów zamiast wyjątków. Ogólnie rzecz biorąc [Platform::InvalidCastException](../cppcx/platform-invalidcastexception-class.md) wskazuje niskiego poziomu błędu modelu COM z E_NOINTERFACE.
+Środowisko wykonawcze systemu Windows jest abstrakcją nad modelem COM, który używa kodów błędów HRESULT zamiast wyjątków. Ogólnie rzecz biorąc, [platforma:: InvalidCastException](../cppcx/platform-invalidcastexception-class.md) wskazuje błąd modelu COM niskiego poziomu wynoszący E_NOINTERFACE.
 
-## <a name="staticcast"></a>static_cast
+## <a name="static_cast"></a>static_cast
 
-A **static_cast** jest sprawdzany w czasie kompilacji, aby ustalić, czy jest relacji dziedziczenia między dwoma typami. Rzutowanie powoduje błąd kompilatora, jeśli typy nie są powiązane.
+**Static_cast** jest sprawdzana w czasie kompilacji w celu ustalenia, czy istnieje relacja dziedziczenia między tymi dwoma typami. Rzutowanie powoduje błąd kompilatora, jeśli typy nie są powiązane.
 
-A **static_cast** parametrami "ref" klasy również powoduje, że sprawdzanie w czasie wykonania do wykonania. A **static_cast** parametrami "ref" klasy można przekazać weryfikacji czasu kompilacji, ale nadal się nie powieść w czasie wykonywania; w tym przypadku `Platform::InvalidCastException` zgłaszany. Ogólnie rzecz biorąc nie trzeba obsługiwać te wyjątki, ponieważ prawie zawsze wskazują błędy programowania, które możesz wyeliminować podczas opracowywania i testowania.
+**Static_cast** w klasie ref również powoduje, że sprawdzanie czasu wykonywania jest wykonywane. **Static_cast** w klasie ref może przekazać weryfikację czasu kompilacji, ale nadal kończy się niepowodzeniem w czasie wykonywania; w tym przypadku `Platform::InvalidCastException` jest zgłaszany. Ogólnie rzecz biorąc nie trzeba obsługiwać tych wyjątków, ponieważ niemal zawsze wskazują błędy programistyczne, które można wyeliminować podczas tworzenia i testowania.
 
-Użyj **static_cast** Jeśli kod deklaruje jawnie relacji między tymi dwoma typami, a zatem masz pewność, że rzutowanie powinny działać.
+Użyj **static_cast** , jeśli kod jawnie deklaruje relację między dwoma typami, i w związku z tym upewnij się, że rzutowanie powinno być wykonane.
 
 ```cpp
     interface class A{};
@@ -34,11 +34,11 @@ Użyj **static_cast** Jeśli kod deklaruje jawnie relacji między tymi dwoma typ
     Class1^ c = static_cast<Class1^>(obj);
 ```
 
-## <a name="safecast"></a>safe_cast
+## <a name="safe_cast"></a>safe_cast
 
-**Safe_cast** operator jest częścią środowiska wykonawczego Windows. Przeprowadza sprawdzanie typu run-time i zgłasza `Platform::InvalidCastException` Jeśli konwersja nie powiedzie się. Użyj **safe_cast** kiedy wskazuje wyjątkowy warunek, błąd czasu wykonywania. Głównym celem **safe_cast** mają na celu ułatwienie identyfikacji błędy programowania podczas opracowywania i testowania fazy w punkcie, w którym wystąpią. Nie trzeba obsłużyć wyjątek, ponieważ nieobsługiwany wyjątek, sama identyfikuje punkt awarii.
+Operator **safe_cast** jest częścią środowisko wykonawcze systemu Windows. Wykonuje sprawdzanie typu w czasie wykonywania i zgłasza `Platform::InvalidCastException` , jeśli konwersja nie powiedzie się. Użyj **safe_cast** , gdy błąd czasu wykonywania wskazuje na wyjątkowe warunki. Głównym celem **safe_cast** jest pomaganie zidentyfikować błędy programowania w fazach tworzenia i testowania w momencie ich wystąpienia. Nie musisz obsługiwać wyjątku, ponieważ nieobsłużony wyjątek identyfikuje punkt awarii.
 
-Korzystanie z polecenia safe_cast, jeśli kod nie deklaruje relacji, ale masz pewność, że rzutowanie powinny działać.
+Użyj safe_cast, jeśli kod nie deklaruje relacji, ale masz pewność, że rzutowanie powinno być wykonane.
 
 ```cpp
     // A and B are not related
@@ -53,9 +53,9 @@ Korzystanie z polecenia safe_cast, jeśli kod nie deklaruje relacji, ale masz pe
     B^ obj2 = safe_cast<B^>(obj);
 ```
 
-## <a name="dynamiccast"></a>dynamic_cast
+## <a name="dynamic_cast"></a>dynamic_cast
 
-Użyj **dynamic_cast** Jeśli zrzutować obiektu (w szczególności hat **^**) do typu bardziej pochodnego oczekujesz, że element docelowy obiekt czasami może być **nullptr** lub Rzutowanie może zakończyć się niepowodzeniem, a chcesz obsługiwać ten warunek jako ścieżka kodu regularnego zamiast wyjątku. Na przykład w **pusta aplikacja (Windows Universal)** szablonu projektu `OnLaunched` metody w zastosowaniach app.xamp.cpp **dynamic_cast** do sprawdzenia, czy zawartość jest okna aplikacji. Nie jest błąd, jeśli nie ma zawartości; jest oczekiwany warunek. `Windows::Current::Content` jest `Windows::UI::XAML::UIElement` i konwersji `Windows::UI.XAML::Controls::Frame`, który jest bardziej pochodnego typu w hierarchii dziedziczenia.
+Użyj **dynamic_cast** podczas rzutowania obiektu (dokładniej, Hat **^** ) na bardziej pochodny typ, spodziewasz się, że obiekt docelowy może być czasami **nullptr** lub że rzutowanie może się nie powieść i chcesz obsłużyć ten warunek jako zwykła ścieżka kodu zamiast wyjątku. Na przykład w szablonie projektu **pusta aplikacja (uniwersalna systemu Windows)** `OnLaunched` Metoda w aplikacji App. XAMP. cpp używa **dynamic_cast** , aby sprawdzić, czy okno aplikacji ma zawartość. Nie jest to błąd, jeśli nie ma zawartości; jest to oczekiwany warunek. `Windows::Current::Content`to a i konwersja to `Windows::UI.XAML::Controls::Frame`, który jest bardziej pochodnym typem w hierarchii dziedziczenia. `Windows::UI::XAML::UIElement`
 
 ```cpp
 void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ args)
@@ -74,15 +74,15 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 }
 ```
 
-Używanie innego **dynamic_cast** jest badanie `Object^` do określenia, czy zawiera on opakowanym typem wartościowym. W tym przypadku próba `dynamic_cast<Platform::Box>` lub `dynamic_cast<Platform::IBox>`.
+Innym wykorzystaniem **dynamic_cast** jest sondowanie `Object^` w celu ustalenia, czy zawiera on opakowany typ wartości. W takim przypadku próbka `dynamic_cast<Platform::Box>` `dynamic_cast<Platform::IBox>`lub.
 
-## <a name="dynamiccast-and-tracking-references-"></a>dynamic_cast i śledzenie odwołania (%)
+## <a name="dynamic_cast-and-tracking-references-"></a>odwołania dynamic_cast i śledzące (%)
 
-Można również zastosować **dynamic_cast** do odwołania śledzenia, ale w tym przypadku rzutowania zachowuje się jak **safe_cast**. Wyniku weryfikacji zgłasza wyjątek `Platform::InvalidCastException` w przypadku niepowodzenia ponieważ odwołania śledzenia nie może mieć wartość **nullptr**.
+Można również zastosować **dynamic_cast** do odwołania śledzenia, ale w tym przypadku rzutowanie zachowuje się jak **safe_cast**. Zgłasza `Platform::InvalidCastException` błąd, ponieważ odwołanie śledzące nie może mieć wartości **nullptr**.
 
-## <a name="reinterpretcast"></a>reinterpret_cast
+## <a name="reinterpret_cast"></a>reinterpret_cast
 
-Firma Microsoft zaleca, aby używać [reinterpret_cast](../cpp/reinterpret-cast-operator.md) ponieważ jest wykonywane sprawdzanie w czasie kompilacji ani sprawdzanie w czasie wykonania. W najgorszym przypadku **reinterpret_cast** umożliwia programowanie błędy, aby niezauważona w czasie tworzenia i spowodować błędy subtelne lub krytyczny w zachowanie programu. Dlatego zaleca się używanie **reinterpret_cast** tylko w tych rzadkich przypadkach, gdy należy rzutować między typami niepowiązanych i wiesz, że rzutowanie zakończy się powodzeniem. Przykładem użycia rzadko jest konwersja typu środowiska uruchomieniowego Windows na jej typ podstawowy ABI — oznacza to, że trwa kontrolę nad Zliczanie dla obiektu. Aby to zrobić, zaleca się, że używasz [comptr — klasa](../cpp/com-ptr-t-class.md) inteligentnego wskaźnika. W przeciwnym razie w szczególności należy wywołać wydania w interfejsie. W poniższym przykładzie pokazano, jak klasa ref mogą być rzutowane na `IInspectable*`.
+Nie zaleca się używania [operatora reinterpret_cast](../cpp/reinterpret-cast-operator.md) , ponieważ nie jest wykonywane sprawdzanie czasu kompilacji ani sprawdzanie czasu wykonywania. W najgorszym przypadku, funkcja **reinterpret_cast** umożliwia programowanie błędów, które nie zostały wykryte w czasie projektowania i powoduje drobne lub katastrofalne błędy w zachowaniu programu. W związku z tym zaleca się używanie **operatora reinterpret_cast** tylko w tych rzadkich przypadkach, gdy trzeba rzutować między niepowiązanymi typami i wiadomo, że rzutowanie zakończy się pomyślnie. Przykładem rzadkich użycia jest przekonwertowanie typu środowisko wykonawcze systemu Windows na jego podstawowy typ ABI. oznacza to, że przejęcie kontroli nad zliczaniem odwołań dla obiektu. W tym celu zalecamy użycie inteligentnego wskaźnika [klasy ComPtr](../cpp/com-ptr-t-class.md) . W przeciwnym razie należy wywołać Release w interfejsie. Poniższy przykład pokazuje, jak Klasa ref może być rzutowana na `IInspectable*`.
 
 ```cpp
 #include <wrl.h>
@@ -92,21 +92,21 @@ ComPtr<IInspectable> inspectable = reinterpret_cast<IInspectable*>(winRtObject);
 // ...
 ```
 
-Jeśli używasz **reinterpret_cast** do konwersji z interfejsu środowiska wykonawczego oneWindows do innego, powoduje, że obiekt, które mogą być wprowadzane na dwa razy. W związku z tym używać tylko to rzutowanie podczas konwertowania interfejsu rozszerzenia składnika C++ inny niż Visual.
+Jeśli używasz **operatora reinterpret_cast** do konwersji z interfejsu środowiska uruchomieniowego oneWindows na inny, spowoduje to dwukrotne wydanie obiektu. W związku z tym używaj tego rzutowania tylko podczas konwertowania na interfejs rozszerzeńC++ nieskładnikowych.
 
-## <a name="abi-types"></a>Typy interfejsu ABI
+## <a name="abi-types"></a>Typy ABI
 
-- Typy interfejsu ABI na żywo w nagłówkach w zestawie Windows SDK. Wygodne nagłówki są nazwane jego imieniem przestrzenie nazw — na przykład `windows.storage.h`.
+- ABI typy na żywo w nagłówkach w Windows SDK. Wygodnie nagłówki są nazwane po przestrzeni nazw — na przykład `windows.storage.h`.
 
-- Typy interfejsu ABI na żywo w specjalne nazw interfejsu ABI — na przykład `ABI::Windows::Storage::Streams::IBuffer*`.
+- ABI typy na żywo w specjalnej przestrzeni nazw ABI — na przykład `ABI::Windows::Storage::Streams::IBuffer*`.
 
-- Konwersje między typem interfejs Windows Runtime i typu interfejsu ABI równoważne są zawsze bezpieczne — czyli `IBuffer^` do `ABI::IBuffer*`.
+- Konwersje między typem interfejsu środowisko wykonawcze systemu Windows i jego odpowiednikiem ABI są zawsze bezpieczne — to znaczy, `IBuffer^` do. `ABI::IBuffer*`
 
-- Klasy środowiska wykonawczego Windows Runtime zawsze powinny być konwertowane na `IInspectable*` lub jego domyślny interfejs, który jest znany.
+- Klasa środowiska uruchomieniowego środowisko wykonawcze systemu Windows powinna zawsze być konwertowana `IInspectable*` do interfejsu domyślnego lub jego domyślny interfejs, jeśli jest znany.
 
-- Po konwersji na typy interfejsu ABI własny okres istnienia tego typu i musi być zgodne z regułami modelu COM. Firma Microsoft zaleca użycie `WRL::ComPtr` do uproszczenia zarządzania okresem istnienia wskaźniki interfejsu ABI.
+- Po przeprowadzeniu konwersji do typów ABI należy posiadać okres istnienia typu i musi on być zgodny z regułami modelu COM. Zalecamy korzystanie `WRL::ComPtr` z programu w celu uproszczenia zarządzania wskaźnikami ABI.
 
-Poniższa tabela zawiera podsumowanie przypadki, w których jest bezpieczny w użyciu **reinterpret_cast**. W każdym przypadku rzutowanie jest bezpieczny w obu kierunkach.
+Poniższa tabela zawiera podsumowanie przypadków bezpiecznego używania **operatora reinterpret_cast**. W każdym przypadku Rzutowanie jest bezpieczne w obu kierunkach.
 
 |||
 |-|-|
@@ -122,5 +122,5 @@ Poniższa tabela zawiera podsumowanie przypadki, w których jest bezpieczny w u�
 ## <a name="see-also"></a>Zobacz także
 
 - [System typów](../cppcx/type-system-c-cx.md)
-- [Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)
+- [Dokumentacja języka C++/CX](../cppcx/visual-c-language-reference-c-cx.md)
 - [Dokumentacja przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)

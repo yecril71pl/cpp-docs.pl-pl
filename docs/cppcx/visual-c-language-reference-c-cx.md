@@ -1,15 +1,15 @@
 ---
-title: Odwołanie C++ do języka wizualnego (C++/CX)
+title: C++Dokumentacja języka/CX
 ms.date: 09/15/2017
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-ms.openlocfilehash: 0b2d344f9889d5669164cd917ba569b5f35d83a5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ed8e2374daf862e99517fb113e869504b7c7aabc
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498426"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740867"
 ---
-# <a name="visual-c-language-reference-ccx"></a>Odwołanie C++ do języka wizualnego (C++/CX)
+# <a name="ccx-language-reference"></a>C++Dokumentacja języka/CX
 
 C++/CX to zestaw rozszerzeń C++ języka, który umożliwia tworzenie aplikacji systemu Windows i składników Środowisko wykonawcze systemu Windows w idiom, które są możliwie jak najbardziej zbliżone do nowoczesnej. C++ Za C++pomocą/CX zapisuj aplikacje i składniki systemu Windows w kodzie natywnym, które łatwo C#współpracują z wizualizacjami, Visual Basic i JavaScript oraz innymi językami, które obsługują środowisko wykonawcze systemu Windows. W tych rzadkich przypadkach, które wymagają bezpośredniego dostępu do nieprzetworzonych interfejsów COM lub niewyjątkowego kodu, można użyć [biblioteki C++ szablonów środowisko wykonawcze systemu Windows (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
 
@@ -38,4 +38,4 @@ Za pomocą C++/CX, można utworzyć:
 |[Dokumentacja przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)|Dokumentacja referencyjna dla domyślnej przestrzeni nazw, przestrzeń nazw platformy, platforma:: Kolekcje i powiązane przestrzenie nazw.|
 |[Funkcje CRT nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)|Wyświetla listę funkcji CRT, które nie są dostępne do użycia w aplikacjach środowisko wykonawcze systemu Windows.|
 |[Wprowadzenie do aplikacji systemu Windows 10](/windows/uwp/get-started/)|Zawiera ogólne wskazówki dotyczące aplikacji systemu Windows 10 i linki do dodatkowych informacji.|
-|[C++/CX część 0 z \[n\]: Wprowadzenie](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C++/CX część 1 z \[n\]: Prosta Klasa](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C++/CX część 2 z \[n\]: Typy, które zużywają systemy](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C++/CX część 3 z \[n\]: W przygotowaniu](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C++/CX część 4 z \[n\]: Statyczne funkcje członkowskie](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|Wstępna seria C++ blogów w C++programie/CX.|
+|[C++/CX część 0 z \[n\]: Wprowadzenie](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C++/CX część 1 z \[n\]: Prosta Klasa](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C++/CX część 2 z \[n\]: Typy, które zużywają systemy](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C++/CX część 3 z \[n\]: W przygotowaniu](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C++/CX część 4 z \[n\]: Statyczne funkcje członkowskie](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|Wstępna seria blogów w C++witrynie/CX.|

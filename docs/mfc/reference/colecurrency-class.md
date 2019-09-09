@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: a23bc489fce00d9ba0be6a3aa71468b469bf54c8
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: fc7c64ada1100b0fc0a51670de3e8ec04b141b04
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177406"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741649"
 ---
 # <a name="colecurrency-class"></a>Klasa COleCurrency
 
@@ -128,7 +128,7 @@ Wszystkie te konstruktory tworzą nowe `COleCurrency` obiekty zainicjowane do ok
 
 - COleCurrency () konstruuje `COleCurrency` obiekt zainicjowany do 0 (zero).
 
-- COleCurrency (`cySrc`) `COleCurrency` konstruuje obiekt z wartości [walutowej](/windows/win32/api/wtypes/ns-wtypes-cy) .
+- COleCurrency (`cySrc`) `COleCurrency` konstruuje obiekt z wartości [walutowej](/windows/win32/api/wtypes/ns-wtypes-cy~r1) .
 
 - COleCurrency (`curSrc`) `COleCurrency` konstruuje obiekt z istniejącego `COleCurrency` obiektu. Nowy obiekt ma ten sam stan co obiekt źródłowy.
 
@@ -136,7 +136,7 @@ Wszystkie te konstruktory tworzą nowe `COleCurrency` obiekty zainicjowane do ok
 
 - `COleCurrency(`nUnits`, `nFractionalUnits`) Constructs a `COleCurrency ' z określonych składników liczbowych. Jeśli wartość bezwzględna części ułamkowej jest większa niż 10 000, odpowiednie dostosowanie jest dokonywane w jednostkach. Należy zauważyć, że jednostki i części ułamkowe są określone przez podpisane długie wartości.
 
-Aby uzyskać więcej informacji, zobacz [](/windows/win32/api/wtypes/ns-wtypes-cy) wartości walutowe i [wariantowe](/windows/win32/api/oaidl/ns-oaidl-variant) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz wartości [walutowe](/windows/win32/api/wtypes/ns-wtypes-cy~r1) i [wariantowe](/windows/win32/api/oaidl/ns-oaidl-variant) w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
@@ -236,14 +236,14 @@ Aby uzyskać więcej informacji o operacjach, które mogą ustawić stan na niep
 
 ##  <a name="m_cur"></a>COleCurrency::m_cur
 
-Bazowa struktura [waluty](/windows/win32/api/wtypes/ns-wtypes-cy) dla tego `COleCurrency` obiektu.
+Bazowa struktura [waluty](/windows/win32/api/wtypes/ns-wtypes-cy~r1) dla tego `COleCurrency` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
 > [!CAUTION]
 >  Zmiana wartości w `CURRENCY` strukturze, do której uzyskuje dostęp wskaźnik zwracany przez tę funkcję, spowoduje zmianę wartości tego `COleCurrency` obiektu. Nie powoduje zmiany stanu tego `COleCurrency` obiektu.
 
-Aby uzyskać więcej informacji, zobacz wpis [waluty](/windows/win32/api/wtypes/ns-wtypes-cy) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz wpis [waluty](/windows/win32/api/wtypes/ns-wtypes-cy~r1) w Windows SDK.
 
 ##  <a name="m_status"></a>COleCurrency::m_status
 
@@ -314,7 +314,7 @@ Poniżej znajduje się krótki opis każdego z następujących operatorów:
 
 - **operator = (** *varSrc* **)** Jeśli konwersja `VARIANT` wartości (lub obiektu [COleVariant](../../mfc/reference/colevariant-class.md) ) na walutę ( `VT_CY`) powiedzie się, przekonwertowana wartość jest kopiowana do tego `COleCurrency` obiektu, a jego stan jest ustawiony na prawidłowy. Jeśli konwersja nie powiedzie się, wartość `COleCurrency` obiektu jest ustawiona na 0, a jego stan na nieprawidłowy.
 
-Aby uzyskać więcej informacji, zobacz [](/windows/win32/api/wtypes/ns-wtypes-cy) wartości walutowe i [wariantowe](/windows/win32/api/oaidl/ns-oaidl-variant) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz wartości [walutowe](/windows/win32/api/wtypes/ns-wtypes-cy~r1) i [wariantowe](/windows/win32/api/oaidl/ns-oaidl-variant) w Windows SDK.
 
 ### <a name="example"></a>Przykład
 
@@ -572,7 +572,7 @@ Aby uzyskać krótki opis tych wartości stanu, zobacz następującą listę:
 - `COleCurrency::null`Wskazuje, że `COleCurrency` ten obiekt ma wartość null, to oznacza, że nie podano wartości dla tego obiektu. (Jest to wartość "null" w sensie bazy danych "bez żadnej wartości", w przeciwieństwie do C++ wartości null).
 
 > [!CAUTION]
->  Ta funkcja jest dla zaawansowanych sytuacji programistycznych. Ta funkcja nie zmienia danych w tym obiekcie. Będzie najczęściej używany do ustawienia stanu na wartość null lub nieprawidłowy. Należy zauważyć, że operator przypisania ( [operator =](#operator_eq)) [](#setcurrency) i SetCurrency ustawia stan na obiekt na podstawie wartości źródłowych.
+>  Ta funkcja jest dla zaawansowanych sytuacji programistycznych. Ta funkcja nie zmienia danych w tym obiekcie. Będzie najczęściej używany do ustawienia stanu na wartość null lub nieprawidłowy. Należy zauważyć, że operator przypisania ( [operator =](#operator_eq)) i [SetCurrency](#setcurrency) ustawia stan na obiekt na podstawie wartości źródłowych.
 
 ## <a name="see-also"></a>Zobacz także
 
