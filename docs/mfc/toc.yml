@@ -2841,8 +2841,6 @@
               href: reference/application-type-mfc-application-wizard.md
             - name: 'Obsługa dokumentów złożonych, kreator aplikacji MFC'
               href: reference/compound-document-support-mfc-application-wizard.md
-            - name: 'Ciągi szablonu dokumentu, kreator aplikacji MFC'
-              href: reference/document-template-strings-mfc-application-wizard.md
             - name: 'Obsługa bazy danych, kreator aplikacji MFC'
               href: reference/database-support-mfc-application-wizard.md
             - name: 'Funkcje interfejsu użytkownika, kreator aplikacji MFC'
@@ -2885,8 +2883,6 @@
           items:
             - name: Kreator dodawania klasy MFC
               href: reference/mfc-add-class-wizard.md
-            - name: 'Ciągi szablonu dokumentu, kreator dodawania klas MFC'
-              href: reference/document-template-strings-mfc-add-class-wizard.md
     - name: Dodawanie klasy MFC z biblioteki typów
       expanded: false
       items:
