@@ -3208,7 +3208,7 @@ C++ Kompilator w Visual Studio 2013 wykrywa niezgodności w _ITERATOR_DEBUG_LEVE
 
    - Zamiast wywoływania, na przykład `afxGlobalData.IsD2DInitialized`, wywołaj. `AfxGetD2DState->IsD2DInitialized`
 
-- Usunięto przestarzałą ATL *. Pliki CPP z folderu \atlmfc\include\
+- Usunięto przestarzałą ATL *. Pliki CPP z folderu \atlmfc\include
 
 - Przeniesiono `afxGlobalData` inicjalizację na żądanie, a nie w czasie inicjacji CRT, `DLLMain` aby spełnić wymagania.
 
