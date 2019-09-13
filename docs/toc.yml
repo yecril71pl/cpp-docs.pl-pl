@@ -6395,8 +6395,6 @@
                   expanded: false
                   items:
                     - name: Pliki i strumienie
-                      href: c-runtime-library/files-and-streams.md
-                    - name: Strumienie binarne i tekstowe
                       href: c-runtime-library/text-and-binary-streams.md
                     - name: Strumienie byte oraz szerokie
                       href: c-runtime-library/byte-and-wide-streams.md
