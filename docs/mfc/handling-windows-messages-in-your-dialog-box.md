@@ -1,23 +1,23 @@
 ---
 title: Obsługa komunikatów systemu Windows w oknie dialogowym
-ms.date: 11/04/2016
+ms.date: 09/05/2019
 helpviewer_keywords:
 - MFC dialog boxes [MFC], Windows messages
 - Windows messages [MFC], handling
 - message handling [MFC], in dialog boxes
 ms.assetid: 4af0c9cb-09da-4b15-97df-a1cfb89def79
-ms.openlocfilehash: 6c32f9781913a571464f4627e89d0e9a118ad28e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5aff70010f3a84dceb88d22ee5e109cbf37abb5b
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62240770"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907701"
 ---
 # <a name="handling-windows-messages-in-your-dialog-box"></a>Obsługa komunikatów systemu Windows w oknie dialogowym
 
-Okna dialogowe są systemu windows, więc może obsługiwać komunikaty Windows, jeśli podasz funkcje odpowiedni program obsługi. Po utworzeniu klasy okien dialogowych za pomocą Kreatora dodawania klasy z mapy pustego komunikatu, Kreator dodaje do klasy. Okno właściwości służy do mapowania dowolnej wiadomości Windows lub polecenia, które klasy do obsługi.
+Okna dialogowe są oknami, dzięki czemu mogą obsługiwać komunikaty systemu Windows, jeśli są dostarczane odpowiednie funkcje obsługi. Podczas tworzenia klasy okien dialogowych za pomocą [kreatora klas](reference/mfc-class-wizard.md)Kreator dodaje pustą mapę komunikatów do klasy. Użyj kreatora, aby zmapować wszystkie komunikaty systemu Windows lub polecenia, które mają być obsługiwane przez klasę.
 
-Zobacz [mapowanie komunikatów Windows Your klasy okien dialogowych](../mfc/mapping-windows-messages-to-your-class.md) Aby uzyskać więcej informacji.
+Aby uzyskać więcej informacji [, zobacz Mapowanie komunikatów systemu Windows do klasy okien dialogowych](../mfc/mapping-windows-messages-to-your-class.md) .
 
 ## <a name="see-also"></a>Zobacz także
 

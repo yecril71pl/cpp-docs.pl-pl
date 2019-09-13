@@ -1,6 +1,6 @@
 ---
 title: wywołaj
-ms.date: 1/02/2018
+ms.date: 01/02/2018
 apiname:
 - raise
 apilocation:
@@ -23,19 +23,19 @@ helpviewer_keywords:
 - raise function
 - signals
 - programs [C++], sending signals to executing programs
-ms.openlocfilehash: 68d1cc653b955e607648e4d30562d2b77e3520e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 1354c76207d6cd59249f6c06df88ae23fe69b1e0
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358063"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927418"
 ---
 # <a name="raise"></a>wywołaj
 
-Wysyła sygnał do wykonywania programu.
+Wysyła sygnał do programu wykonującego.
 
 > [!NOTE]
-> Nie należy używać tej metody do zamykania aplikacji Microsoft Store, z wyjątkiem testowania i debugowania scenariuszy. Sposoby Programmatic lub interfejs użytkownika, zamknąć Store app nie są dozwolone zgodnie z opisem w [zasady Microsoft Store](/legal/windows/agreements/store-policies). Aby uzyskać więcej informacji, zobacz [cykl życia aplikacji platformy uniwersalnej systemu Windows](/windows/uwp/launch-resume/app-lifecycle).
+> Nie należy używać tej metody do zamykania aplikacji Microsoft Store, z wyjątkiem scenariuszy testowania lub debugowania. Sposób programistyczny lub interfejs użytkownika służący do zamykania aplikacji ze sklepu nie są dozwolone zgodnie z [zasadami Microsoft Storeymi](/legal/windows/agreements/store-policies). Aby uzyskać więcej informacji, zobacz [cykl życia aplikacji platformy UWP](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,27 +47,27 @@ int raise(
 
 ### <a name="parameters"></a>Parametry
 
-*sig*<br/>
-Sygnał należy podnieść.
+*SIG*<br/>
+Sygnał, który ma zostać wywołany.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-W przypadku powodzenia **podnieść** zwraca wartość 0. W przeciwnym razie zwraca wartość różną od zera.
+Jeśli **to się** powiedzie, funkcja Return zwraca wartość 0. W przeciwnym razie zwraca wartość różną od zera.
 
 ## <a name="remarks"></a>Uwagi
 
-**Podnieść** funkcji wysyła *sig* do wykonywania programu. Jeśli poprzednie wywołanie **sygnału** zainstalowano funkcję obsługi sygnałów dla *sig*, **podnieść** wykonuje tę funkcję. Brak obsługi funkcji po zainstalowaniu, akcja domyślna skojarzona z wartością sygnału *sig* jest pobierana w następujący sposób.
+Funkcja **podniesienia** wysyła *podpis* do programu wykonującego. Jeśli poprzednie wywołanie do **sygnału** zainstalowało funkcję obsługi sygnałów dla *SIG*, **Podnieś** wartość wykonuje tę funkcję. Jeśli nie zainstalowano żadnej funkcji programu obsługi, zostanie utworzona domyślna akcja skojarzona z wartością sygnału *SIG* , jak pokazano poniżej.
 
-|Sygnał|Znaczenie|Domyślny|
+|wysłać|Znaczenie|Domyślny|
 |------------|-------------|-------------|
-|**SIGABRT**|Nienormalne zakończenie|Kończy program wywołujący kodem zakończenia 3|
-|**SIGFPE**|Błąd wartości zmiennoprzecinkowej|Kończy program wywołujący|
+|**SIGABRT**|Nietypowe zakończenie|Kończy program wywołujący z kodem zakończenia 3|
+|**SIGFPE**|Błąd zmiennoprzecinkowy|Kończy program wywołujący|
 |**SIGILL**|Niedozwolona instrukcja|Kończy program wywołujący|
-|**SIGINT**|CTRL + C przerywa|Kończy program wywołujący|
+|**SIGINT**|Przerwanie CTRL + C|Kończy program wywołujący|
 |**SIGSEGV**|Niedozwolony dostęp do magazynu|Kończy program wywołujący|
-|**SIGTERM**|Zakończenie żądania wysłanego do programu|Ignoruje sygnał|
+|**SIGTERM**|Żądanie zakończenia wysłane do programu|Ignoruje sygnał|
 
-Jeśli argument nie jest prawidłowym sygnałem, jak określono powyżej, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli nie jest obsługiwana, funkcja ustawia **errno** do **EINVAL** i zwraca wartość różną od zera.
+Jeśli argument nie jest prawidłowym sygnałem, jak określono powyżej, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli nie obsłużono, funkcja ustawia **errno** na **EINVAL** i zwraca wartość różną od zera.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -75,7 +75,7 @@ Jeśli argument nie jest prawidłowym sygnałem, jak określono powyżej, proced
 |-------------|---------------------|
 |**raise**|\<signal.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

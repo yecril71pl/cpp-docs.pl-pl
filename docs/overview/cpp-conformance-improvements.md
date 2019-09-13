@@ -5,12 +5,12 @@ description: Firma C++ Microsoft w programie Visual Studio postępuje w kierunku
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: aeaaab704706bee575e3ae44726522cd04c17433
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 8eae104d21de271f11c727262939121c20050092
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222316"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927950"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Ulepszenia zgodności języka C++ w programie Visual Studio
 
@@ -30,7 +30,7 @@ Moduły są teraz oficjalnie w standardzie C++ 20. Ulepszona obsługa została d
 
 ### <a name="modified-specification-of-aggregate-type"></a>Zmodyfikowano specyfikację typu agregacji
 
-Specyfikacja typu agregacji została zmieniona w języku C++ 20 (zobacz Zabroń agregowania w [konstruktorach zadeklarowanych przez użytkownika](https://wg21.link/p1008r1)). W programie Visual Studio 2019, `/std:c++latest`w obszarze, Klasa z dowolnym konstruktorem zadeklarowanym przez użytkownika (na przykład, łącznie `= default` z `= delete`konstruktorem zadeklarowanym lub) nie jest agregacją. Wcześniej tylko konstruktory dostarczone przez użytkownika nie kwalifikują klasy jako agregacji. Ta zmiana powoduje dodatkowe ograniczenia dotyczące sposobu inicjowania takich typów.
+Specyfikacja typu agregacji została zmieniona w języku C++ 20 (zobacz [Zabroń agregowania w konstruktorach zadeklarowanych przez użytkownika](https://wg21.link/p1008r1)). W programie Visual Studio 2019, `/std:c++latest`w obszarze, Klasa z dowolnym konstruktorem zadeklarowanym przez użytkownika (na przykład, łącznie `= default` z `= delete`konstruktorem zadeklarowanym lub) nie jest agregacją. Wcześniej tylko konstruktory dostarczone przez użytkownika nie kwalifikują klasy jako agregacji. Ta zmiana powoduje dodatkowe ograniczenia dotyczące sposobu inicjowania takich typów.
 
 Poniższy kod kompiluje się bez błędów w programie Visual Studio 2017, ale zgłasza błędy C2280 i C2440 w programie Visual `/std:c++latest`Studio 2019 w obszarze:
 
@@ -123,7 +123,7 @@ int main()
 
 ### <a name="lambda-closures"></a>Zamknięcia lambda
 
-W języku C++ 14 typy zamknięć lambda nie są literałami. Podstawową konsekwencją tej reguły jest to, że wyrażenie lambda nie może być przypisane do `constexpr` zmiennej. Poniższy kod kompiluje się bez błędów w programie Visual Studio 2017, ale w programie Visual Studio 2019 wywołuje *C2127: ' l ': niedozwolone inicjowanie jednostki "constexpr" przy użyciu wyrażenia*niestałego:
+W języku C++ 14 typy zamknięć lambda nie są literałami. Podstawową konsekwencją tej reguły jest to, że wyrażenie lambda nie może być przypisane do `constexpr` zmiennej. Poniższy kod kompiluje się bez błędów w programie Visual Studio 2017, ale w programie Visual Studio 2019 wywołuje *C2127: ' l ': niedozwolone inicjowanie jednostki "constexpr" przy użyciu wyrażenia niestałego*:
 
 ```cpp
 int main()
@@ -148,7 +148,7 @@ Nowe równoległe wersje `is_sorted`systemów `is_sorted_until`, `is_partitioned
 
 ### <a name="atomic-initialization"></a>Inicjalizacja niepodzielna
 
-[P0883 "naprawianie](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0883r1.pdf) niepodzielnych `std::atomic` inicjacji" zmiany wartości — inicjowanie zawartej w nim funkcji T zamiast default-inicjowanie. Poprawka jest włączona w przypadku używania Clang/LLVM z biblioteką standard firmy Microsoft. Jest on obecnie wyłączony dla kompilatora Microsoft C++ , ponieważ obejście problemu podczas `constexpr` przetwarzania.
+[P0883 "naprawianie niepodzielnych inicjacji"](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0883r1.pdf) zmiany `std::atomic` wartości — inicjowanie zawartej w nim funkcji T zamiast default-inicjowanie. Poprawka jest włączona w przypadku używania Clang/LLVM z biblioteką standard firmy Microsoft. Jest on obecnie wyłączony dla kompilatora Microsoft C++ , ponieważ obejście problemu podczas `constexpr` przetwarzania.
 
 ### <a name="remove_cvref-and-remove_cvref_t"></a>`remove_cvref` i `remove_cvref_t`
 
@@ -206,7 +206,7 @@ long j = static_cast<long>(i);
 
 Nowy procesor lambda umożliwia pewną składnię w trybie zgodności, która sprawdza w ogólnym wyrażeniu lambda, w obszarze [/std: c + + Najnowsza](../build/reference/std-specify-language-standard-version.md) lub w dowolnym innym trybie języka z **/Experimental: newLambdaProcessor**.
 
-W programie Visual Studio 2017 ten kod kompiluje się bez ostrzeżeń, ale w programie Visual Studio 2019 generuje błąd *składniowy błędu C2760: nieoczekiwany\<token "ID-expression >", oczekiwano "Identyfikator-wyrażenie"* :
+W programie Visual Studio 2017 ten kod kompiluje się bez ostrzeżeń, ale w programie Visual Studio 2019 generuje błąd *składniowy błędu C2760: Nieoczekiwany token "\<ID-expression >", oczekiwano "Identyfikator-wyrażenie"* :
 
 ```cpp
 void f() {
@@ -268,7 +268,7 @@ int main() {
 
 ### <a name="binary-expressions-with-different-enum-types"></a>Wyrażenia binarne z różnymi typami wyliczeniowymi
 
-Możliwość zastosowania zwykłych konwersji arytmetycznych na operandach, gdzie jeden jest typu wyliczenia, a drugi jest innym typem wyliczenia lub typ zmiennoprzecinkowy jest przestarzały w języku C++ 20 ([P1120R0](http://wg21.link/p1120r0)). W programie Visual Studio 2019 w wersji 16,2 lub nowszej Poniższy kod generuje ostrzeżenie poziomu 4, gdy opcja kompilatora [/std: c + +](../build/reference/std-specify-language-standard-version.md) jest włączona:
+Możliwość zastosowania zwykłych konwersji arytmetycznych na operandach, gdzie jeden jest typu wyliczenia, a drugi jest innym typem wyliczenia lub typ zmiennoprzecinkowy jest przestarzały w języku C++ 20 ([P1120R0](https://wg21.link/p1120r0)). W programie Visual Studio 2019 w wersji 16,2 lub nowszej Poniższy kod generuje ostrzeżenie poziomu 4, gdy opcja kompilatora [/std: c + +](../build/reference/std-specify-language-standard-version.md) jest włączona:
 
 ```cpp
 enum E1 { a };
@@ -290,7 +290,7 @@ int main() {
 
 ### <a name="binary-expressions-with-enumeration-and-floating-point-types"></a>Wyrażenia binarne z wyliczeniem i typami zmiennoprzecinkowymi
 
-Możliwość zastosowania zwykłych konwersji arytmetycznych na operandach, gdzie jeden jest typu wyliczenia, a drugi jest innym typem wyliczenia lub typ zmiennoprzecinkowy jest przestarzały w języku C++ 20 ([P1120R0](http://wg21.link/p1120r0)). Innymi słowy, przy użyciu operacji binarnej między wyliczeniem a typem zmiennoprzecinkowym jest teraz ostrzeżenie, gdy opcja kompilatora [/std: c + +](../build/reference/std-specify-language-standard-version.md) jest włączona:
+Możliwość zastosowania zwykłych konwersji arytmetycznych na operandach, gdzie jeden jest typu wyliczenia, a drugi jest innym typem wyliczenia lub typ zmiennoprzecinkowy jest przestarzały w języku C++ 20 ([P1120R0](https://wg21.link/p1120r0)). Innymi słowy, przy użyciu operacji binarnej między wyliczeniem a typem zmiennoprzecinkowym jest teraz ostrzeżenie, gdy opcja kompilatora [/std: c + +](../build/reference/std-specify-language-standard-version.md) jest włączona:
 
 ```cpp
 enum E1 { a };
@@ -310,7 +310,7 @@ int main() {
 
 ### <a name="equality-and-relational-comparisons-of-arrays"></a>Porównanie równości i relacyjnych tablic
 
-Porównania równości i relacyjnych między dwoma operandami typu Array są przestarzałe w języku C++ 20 ([P1120R0](http://wg21.link/p1120r0)). Innymi słowy, operacja porównania między dwiema tablicami (niezależnie od rangi i zakresu podobieństw) jest teraz ostrzeżeniem. Począwszy od programu Visual Studio 2019 w wersji 16,2, poniższy kod generuje *C5056: operator "= =": przestarzały dla typów tablicowych* , gdy jest włączona opcja kompilatora [/std: c + +](../build/reference/std-specify-language-standard-version.md) :
+Porównania równości i relacyjnych między dwoma operandami typu Array są przestarzałe w języku C++ 20 ([P1120R0](https://wg21.link/p1120r0)). Innymi słowy, operacja porównania między dwiema tablicami (niezależnie od rangi i zakresu podobieństw) jest teraz ostrzeżeniem. Począwszy od programu Visual Studio 2019 w wersji 16,2, poniższy kod generuje *C5056: operator "= =": przestarzały dla typów tablicowych* , gdy jest włączona opcja kompilatora [/std: c + +](../build/reference/std-specify-language-standard-version.md) :
 
 ```cpp
 int main() {
@@ -778,7 +778,7 @@ Teraz można w jednej deklaracji przechowywać wartość przy użyciu pojedynczy
 
 ### <a name="construction-rules-for-enum-class-values"></a>Reguły konstrukcji dla `enum class` wartości
 
-Teraz istnieje niejawna/zawężana konwersja z typu podstawowego wyliczenia z zakresem do samego wyliczenia, gdy jego definicja nie wprowadza modułu wyliczającego, a źródło używa składni inicjowania listy. Aby uzyskać więcej informacji, zobacz [reguły tworzenia dla wartości klasy enum](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf) i wyliczeń. [](../cpp/enumerations-cpp.md#no_enumerators)
+Teraz istnieje niejawna/zawężana konwersja z typu podstawowego wyliczenia z zakresem do samego wyliczenia, gdy jego definicja nie wprowadza modułu wyliczającego, a źródło używa składni inicjowania listy. Aby uzyskać więcej informacji, zobacz [reguły tworzenia dla wartości klasy enum](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf) i [wyliczeń](../cpp/enumerations-cpp.md#no_enumerators).
 
 ### <a name="capturing-this-by-value"></a>Przechwytywanie `*this` przez wartość
 
@@ -910,7 +910,7 @@ struct B : A {
 B b(42L); // now calls B(int)
 ```
 
-Aby uzyskać więcej informacji, [](../cpp/constructors-cpp.md#inheriting_constructors)Zobacz konstruktory.
+Aby uzyskać więcej informacji, zobacz [konstruktory](../cpp/constructors-cpp.md#inheriting_constructors).
 
 ### <a name="c17-extended-aggregate-initialization"></a>C++17: Rozszerzona Inicjalizacja agregacji
 
@@ -964,7 +964,7 @@ Derived d2 {}; // error C2248: 'Base::Base': cannot access
 
 [P0127R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0127r2.html)
 
-W trybie **/std: c++ 17** , kompilator może teraz ustalić typ argumentu szablonu bez typu, który jest zadeklarowany za pomocą Auto:
+W trybie **/std: c++ 17** , kompilator może teraz ustalić typ argumentu szablonu bez typu, który jest zadeklarowany **za pomocą**Auto:
 
 ```cpp
 template <auto x> constexpr auto constant = x;

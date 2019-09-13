@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4295
-ms.date: 1/09/2018
+title: Ostrzeżenie kompilatora (poziom 4) C4295
+ms.date: 01/09/2018
 f1_keywords:
 - C4295
 helpviewer_keywords:
 - C4295
 ms.assetid: 20dbff85-9f62-4ca3-8fe9-079d4512006d
-ms.openlocfilehash: ed31ea19f9c36a9c6fab7452a4bfc3843a151059
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e8b546e4eb4b60197db504382b3230e779b1dec
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400880"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70924848"
 ---
-# <a name="compiler-warning-level-4-c4295"></a>Kompilator ostrzeżenie (poziom 4) C4295
+# <a name="compiler-warning-level-4-c4295"></a>Ostrzeżenie kompilatora (poziom 4) C4295
 
-> "*tablicy*": tablica jest zbyt mała, aby uwzględnić znak końcowy null
+> "*Array*": tablica jest zbyt mała, aby można było uwzględnić kończący znak null
 
-Tablica został zainicjowany, ale ostatni znak w tablicy nie ma wartość null; Uzyskiwanie dostępu do tablicy jako ciąg może dać nieoczekiwane wyniki.
+Tablica została zainicjowana, ale ostatni znak w tablicy nie jest wartością null. Uzyskiwanie dostępu do tablicy jako ciągu może spowodować uzyskanie nieoczekiwanych wyników.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4295. Aby rozwiązać ten problem, można zadeklarować rozmiar tablicy większe, aby pomieścić zakończenia o wartości null z ciągu inicjatora lub możesz użyć listy inicjatora tablicy się wyczyść intencji, że jest to tablica `char`, nie ciąg zakończony znakiem null.
+Poniższy przykład generuje C4295. Aby rozwiązać ten problem, można zadeklarować większy rozmiar tablicy w celu przechowywania kończącego się wartości null z ciągu inicjatora lub można użyć listy inicjatora tablicy, aby określić, że jest to tablica `char`, a nie ciąg zakończony znakiem null.
 
 ```C
 // C4295.c

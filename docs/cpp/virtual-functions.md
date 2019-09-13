@@ -1,17 +1,17 @@
 ---
 title: Funkcje wirtualne
-ms.date: 11/04/2016
+ms.date: 09/10/2019
 helpviewer_keywords:
 - functions [C++], virtual functions
 - derived classes [C++], virtual functions
 - virtual functions
 ms.assetid: b3e1ed88-2a90-4af8-960a-16f47deb3452
-ms.openlocfilehash: 07dfd8a602dca93c89a078b2eb69e04cf9d4a7a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c482107b5ad1546c64e0b70ef1714cff8a668ab
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393847"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926090"
 ---
 # <a name="virtual-functions"></a>Funkcje wirtualne
 
@@ -19,7 +19,7 @@ Funkcja wirtualna jest funkcją składową, która powinna zostać ponownie zdef
 
 Funkcje wirtualne zapewniają wywołanie poprawnej funkcji dla obiektu, bez względu na wyrażenie użyte do wywołania funkcji.
 
-Załóżmy, że klasa bazowa zawiera funkcję zadeklarowaną jako [wirtualnego](../cpp/virtual-cpp.md) i Klasa pochodna definiuje tę samą funkcję. Funkcja z klasy pochodnej jest wywoływana dla obiektów klasy pochodnej, nawet jeśli jest wywoływana przy użyciu wskaźnika lub odwołania do klasy bazowej. W poniższym przykładzie przedstawiono klasę bazową, która dostarcza implementację funkcji `PrintBalance` i dwie klasy pochodne
+Załóżmy, że klasa bazowa zawiera funkcję zadeklarowaną jako [wirtualną](../cpp/virtual-cpp.md) , a Klasa pochodna definiuje tę samą funkcję. Funkcja z klasy pochodnej jest wywoływana dla obiektów klasy pochodnej, nawet jeśli jest wywoływana przy użyciu wskaźnika lub odwołania do klasy bazowej. W poniższym przykładzie przedstawiono klasę bazową, która dostarcza implementację funkcji `PrintBalance` i dwie klasy pochodne
 
 ```cpp
 // deriv_VirtualFunctions.cpp
@@ -30,6 +30,7 @@ using namespace std;
 class Account {
 public:
    Account( double d ) { _balance = d; }
+   virtual ~Account() {}
    virtual double GetBalance() { return _balance; }
    virtual void PrintBalance() { cerr << "Error. Balance not available for base type." << endl; }
 private:
@@ -50,15 +51,15 @@ public:
 
 int main() {
    // Create objects of type CheckingAccount and SavingsAccount.
-   CheckingAccount *pChecking = new CheckingAccount( 100.00 ) ;
-   SavingsAccount  *pSavings  = new SavingsAccount( 1000.00 );
+   CheckingAccount checking( 100.00 );
+   SavingsAccount  savings( 1000.00 );
 
    // Call PrintBalance using a pointer to Account.
-   Account *pAccount = pChecking;
+   Account *pAccount = &checking;
    pAccount->PrintBalance();
 
    // Call PrintBalance using a pointer to Account.
-   pAccount = pSavings;
+   pAccount = &savings;
    pAccount->PrintBalance();
 }
 ```
@@ -130,8 +131,6 @@ int main() {
 }
 ```
 
-### <a name="output"></a>Dane wyjściowe
-
 ```Output
 Derived::NameOf
 Invoked by Base
@@ -141,11 +140,11 @@ Invoked by Derived
 
 Należy zauważyć, że bez względu na to, czy funkcja `NameOf` jest wywoływana za pomocą wskaźnika do `Base`, czy wskaźnika do `Derived`, wywołuje funkcję dla `Derived`. Wywołuje funkcję dla `Derived`, ponieważ `NameOf` jest funkcją wirtualną i zarówno `pBase`, jak i `pDerived` wskazują obiekt typu `Derived`.
 
-Ponieważ wirtualne funkcje są wywoływane tylko dla obiektów typu klasy, nie można zadeklarować globalnych lub statycznych funkcji jako **wirtualnego**.
+Ponieważ funkcje wirtualne są wywoływane tylko dla obiektów typu klasy, nie można zadeklarować globalnych lub statycznych funkcji jako **wirtualne**.
 
-**Wirtualnego** — słowo kluczowe można używać podczas deklarowania zastępowanych funkcji w klasie pochodnej, ale nie jest konieczne; zastąpienia funkcji wirtualnych są zawsze wirtualne.
+**Wirtualne** słowo kluczowe może być używane podczas deklarowania funkcji przesłaniania w klasie pochodnej, ale nie jest to potrzebne; przesłonięcia funkcji wirtualnych są zawsze wirtualne.
 
-Muszą być zdefiniowane funkcje wirtualne w klasie bazowej, chyba że są deklarowane za pomocą *czysty specyfikator*. (Aby uzyskać więcej informacji dotyczących czystych funkcji wirtualnych, zobacz [klasy abstrakcyjne](../cpp/abstract-classes-cpp.md).)
+Funkcje wirtualne w klasie bazowej muszą być zdefiniowane, chyba że są deklarowane przy użyciu *czystego specyfikatora*. (Aby uzyskać więcej informacji na temat czystych funkcji wirtualnych, zobacz [klasy abstrakcyjne](../cpp/abstract-classes-cpp.md)).
 
 Mechanizm wywołania funkcji wirtualnych można pominąć przez jawną kwalifikację nazwy funkcji za pomocą operatora rozpoznawania zakresu (`::`). Rozważmy wcześniejszy przykład obejmujący klasę `Account`. Aby wywołać `PrintBalance` w klasie bazowej, należy użyć następującego kodu:
 

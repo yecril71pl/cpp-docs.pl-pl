@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: bd511cf574d0f710134de4768ac27a8be1248e95
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c8f1b8a9ed0ca8437ba40e77b47448d1bb209d20
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505628"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927919"
 ---
 # <a name="clistctrl-class"></a>Klasa CListCtrl
 
@@ -618,7 +618,7 @@ virtual BOOL Create(
 Określa styl kontrolki listy. Zastosuj dowolną kombinację stylów kontrolki listy do kontrolki. Zobacz [Style okna widoku listy](/windows/win32/Controls/list-view-window-styles) w Windows SDK, aby uzyskać pełną listę tych stylów. Ustawianie stylów rozszerzonych specyficznych dla kontrolki przy użyciu [setextended](#setextendedstyle).
 
 *cinania*<br/>
-Określa rozmiar i położenie kontrolki listy. Może to być `CRect` obiekt lub struktura. [](/previous-versions/dd162897\(v=vs.85\))
+Określa rozmiar i położenie kontrolki listy. Może to być `CRect` obiekt [lub struktura.](/previous-versions/dd162897\(v=vs.85\))
 
 *pParentWnd*<br/>
 Określa okno nadrzędne kontrolki listy, zazwyczaj a `CDialog`. Nie może mieć wartości NULL.
@@ -682,7 +682,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 Użyj `CreateEx` zamiast [tworzenia](#create) , aby zastosować rozszerzone style systemu Windows, które są określone przez **WS_EX_** styl rozszerzony systemu Windows.
 
-`CreateEx`tworzy formant przy użyciu rozszerzonych stylów systemu Windows określonych przez *dwExStyle*. Aby ustawić style rozszerzone odpowiednie dla kontrolki, wywołaj metodę [setextended](#setextendedstyle). Na przykład użyj `CreateEx` , aby ustawić takie style jako WS_EX_CONTEXTHELP, ale użyć `SetExtendedStyle` do ustawienia takich stylów jak LVS_EX_FULLROWSELECT. Aby uzyskać więcej informacji, zobacz Style opisane w rozszerzonym [widoku listy](/windows/win32/Controls/extended-list-view-styles) artykułów w Windows SDK.
+`CreateEx`tworzy formant przy użyciu rozszerzonych stylów systemu Windows określonych przez *dwExStyle*. Aby ustawić style rozszerzone odpowiednie dla kontrolki, wywołaj metodę [setextended](#setextendedstyle). Na przykład użyj `CreateEx` , aby ustawić takie style jako WS_EX_CONTEXTHELP, ale użyć `SetExtendedStyle` do ustawienia takich stylów jak LVS_EX_FULLROWSELECT. Aby uzyskać więcej informacji, zobacz Style opisane w [rozszerzonym widoku listy](/windows/win32/Controls/extended-list-view-styles) artykułów w Windows SDK.
 
 ## <a name="createdragimage"></a>CListCtrl:: CreateDragImage
 
@@ -708,7 +708,7 @@ Wskaźnik do listy obrazów do przeciągnięcia, jeśli zakończy się pomyślni
 
 ### <a name="remarks"></a>Uwagi
 
-`CImageList` Obiekt jest trwały i należy go usunąć po zakończeniu. Na przykład:
+`CImageList` Obiekt jest trwały i należy go usunąć po zakończeniu. Przykład:
 
 ```cpp
         CImageList* pImageList = m_myListCtrl.CreateDragImage(nItem, &point);
@@ -1003,7 +1003,7 @@ Ta metoda implementuje zachowanie makra Win32 [ListView_GetBkImage](/windows/win
         if (m_myListCtrl.GetBkImage(&bki) && (bki.ulFlags == LVBKIF_SOURCE_NONE))
         {
             m_myListCtrl.SetBkImage(
-                _T("http://www.microsoft.com/library/images/gifs/homepage/microsoft.gif"),
+                _T("https://www.microsoft.com/library/images/gifs/homepage/microsoft.gif"),
                 TRUE);
         }
 ```
@@ -2093,7 +2093,7 @@ BOOL GetNextItemIndex(
 |Parametr|Opis|
 |---------------|-----------------|
 |*pItemIndex*|[in. out] Wskaźnik do struktury [LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex) , który opisuje element, w którym rozpoczyna się wyszukiwanie, lub-1, aby znaleźć pierwszy element, który jest zgodny z flagami w parametrze *nFlags* .<br /><br /> Jeśli ta metoda zakończy się pomyślnie `LVITEMINDEX` , struktura opisuje element znaleziony przez wyszukiwanie.|
-|*nFlags*|podczas Kombinacja bitowa (lub) flag, które określają sposób wykonania wyszukiwania.<br /><br /> Wyszukiwanie może zależeć od indeksu, stanu lub wyglądu elementu docelowego lub fizycznego położenia elementu docelowego względem elementu określonego przez parametr *pItemIndex* . Aby uzyskać więcej informacji, zobacz parametr flags w komunikacie [LVM_GETNEXTITEMINDEX](/windows/win32/controls/lvm-getnextitemindex) .|
+|*nFlags*|podczas Kombinacja bitowa (lub) flag, które określają sposób wykonania wyszukiwania.<br /><br /> Wyszukiwanie może zależeć od indeksu, stanu lub wyglądu elementu docelowego lub fizycznego położenia elementu docelowego względem elementu określonego przez parametr *pItemIndex* . Aby uzyskać więcej informacji, zobacz parametr *flags* w komunikacie [LVM_GETNEXTITEMINDEX](/windows/win32/controls/lvm-getnextitemindex) .|
 
 ### <a name="return-value"></a>Wartość zwracana
 

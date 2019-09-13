@@ -7,49 +7,49 @@ helpviewer_keywords:
 - dispatch maps [MFC], Automation servers
 - servers, Automation
 ms.assetid: 523fd155-51ce-4f91-b986-b74bdbdd7d92
-ms.openlocfilehash: 39e870db2f5476a630a8ed3bc68944dbb164d469
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 510acfa032ca4303962164a19130ecd1971060fc
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374171"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907966"
 ---
 # <a name="automation-servers"></a>Serwery automatyzacji
 
-Automatyzacja sprawiają, że aplikacja do manipulowania obiektami implementowane w innej aplikacji lub do udostępnienia obiektów, dzięki czemu można manipulować. Serwer automatyzacji to aplikacja, która udostępnia programowalne obiekty (nazywane obiektami automatyzacji) do innych aplikacji (nazywane [klientów automatyzacji](../mfc/automation-clients.md)). Serwery automatyzacji są czasami nazywane składniki automatyzacji.
+Automatyzacja pozwala aplikacji na manipulowanie obiektami zaimplementowanymi w innej aplikacji lub Uwidacznianie obiektów, aby można było manipulować nimi. Serwer automatyzacji to aplikacja, która uwidacznia obiekty programowalne (zwane obiektami automatyzacji) innym aplikacjom (nazywanym [klientami usługi Automation](../mfc/automation-clients.md)). Serwery automatyzacji są czasami nazywane składnikami automatyzacji.
 
-Udostępnianie obiektów automatyzacji umożliwia klientom automatyzacji niektórych procedur, uzyskując bezpośrednio dostęp do obiektów i udostępnia funkcje serwera. Udostępnianie obiektów w ten sposób jest korzystne w przypadku, gdy aplikacje oferują funkcje, które są przydatne w przypadku innych aplikacji. Na przykład do edytora tekstów może narazić swoje funkcje sprawdzania pisowni, aby mogły z niego korzystać inne programy. Narażenia obiektów w związku z tym umożliwia dostawcom ulepszyć funkcje swoich aplikacji za pomocą gotowych do użycia funkcji innych aplikacji.
+Uwidacznianie obiektów automatyzacji umożliwia klientom Automatyzowanie niektórych procedur przez bezpośrednie uzyskiwanie dostępu do obiektów i funkcji udostępnianych przez serwer. Uwidacznianie obiektów w ten sposób jest korzystne, gdy aplikacje udostępniają funkcje, które są przydatne w przypadku innych aplikacji. Na przykład edytor tekstów może uwidaczniać swoją funkcję sprawdzania pisowni, tak aby inne programy mogły z niej korzystać. Narażenie obiektów umożliwia dostawcom ulepszanie funkcji aplikacji przy użyciu gotowych funkcji innych aplikacji.
 
-Te obiekty automatyzacji mają właściwości i metod jako ich interfejs zewnętrzny. Właściwości są nazywane atrybutów obiektu automatyzacji. Właściwości są takie jak członkowie danych klasy języka C++. Metody są funkcje, które działają na obiektów automatyzacji. Metody są takie jak publiczne funkcje Członkowskie klasy języka C++.
+Te obiekty automatyzacji mają właściwości i metody jako ich interfejs zewnętrzny. Właściwości są nazwanymi atrybutami obiektu automatyzacji. Właściwości są podobne do elementów członkowskich danych C++ klasy. Metody to funkcje, które działają na obiektach automatyzacji. Metody są podobne do publicznych funkcji składowych C++ klasy.
 
 > [!NOTE]
->  Właściwości są podobne elementy członkowskie danych języka C++, nie są one dostępne. Aby zapewnić dostęp przezroczyste, skonfiguruj zmiennej wewnętrznej w obiekcie automatyzacji przy użyciu pary pobierania/ustawiania elementów członkowskich, aby uzyskiwać do nich dostęp.
+>  Chociaż właściwości są podobne C++ do składowych danych, nie są bezpośrednio dostępne. Aby zapewnić przezroczysty dostęp, skonfiguruj wewnętrzną zmienną w obiekcie automatyzacji za pomocą pary funkcji elementu członkowskiego Pobierz/ustaw, aby uzyskać do nich dostęp.
 
-Zapewniając funkcjonalność aplikacji za pomocą interfejsu wspólny, dobrze zdefiniowanych, automatyzacji pozwala na tworzenie aplikacji w jednym ogólne języku programowania, takich jak Microsoft Visual Basic zamiast w makrze różnorodnych aplikacji, Języki.
+Dzięki udostępnieniu funkcjonalności aplikacji za pomocą wspólnego, dobrze zdefiniowanego interfejsu, Automatyzacja umożliwia tworzenie aplikacji w jednym ogólnym języku programowania, takim jak Microsoft Visual Basic, zamiast różnorodnych makr specyficznych dla aplikacji Języki.
 
-##  <a name="_core_support_for_automation_servers"></a> Obsługa w przypadku serwerów automatyzacji
+##  <a name="_core_support_for_automation_servers"></a>Obsługa serwerów automatyzacji
 
-Visual C++ i MFC framework zapewnia rozbudowaną obsługę w przypadku serwerów automatyzacji. Obsługują wiele kłopotów związanych z wprowadzeniem serwera automatyzacji, dzięki czemu możesz skoncentrować się na funkcjonalności aplikacji.
+Wizualizacja C++ i platforma MFC zapewniają szeroką obsługę serwerów automatyzacji. Obsługują one większość nakładów związanych z tworzeniem serwera automatyzacji, dzięki czemu możesz skupić się na działaniach aplikacji.
 
-W ramach mechanizmu jednostki do obsługi automatyzacji jest mapa wysyłania, zestaw makra, który rozszerza się w deklaracji i wywołania wymagane do udostępnienia właściwości i metody dla mechanizmu OLE. Mapy wysyłania typowe wygląda następująco:
+Głównym mechanizmem obsługi automatyzacji jest mapa wysyłania, zestaw makr, które rozwijają deklaracje i wywołania potrzebne do udostępnienia metod i właściwości dla OLE. Typowa Mapa wysyłania wygląda następująco:
 
 [!code-cpp[NVC_MFCAutomation#1](../mfc/codesnippet/cpp/automation-servers_1.cpp)]
 
-Okno właściwości i widoku klas pomagają w zachowaniu mapy wysyłania. Po dodaniu nowej metody lub właściwości do klasy, Visual C++ dodaje odnośny `DISP_FUNCTION` lub `DISP_PROPERTY` z parametrami wskazującą nazwę klasy, metody lub właściwości i typy danych wewnętrznych i zewnętrznych nazwy.
+[Kreator klas](reference/mfc-class-wizard.md) i widok klasy pomaga w zachowaniu map wysyłania. Po dodaniu nowej metody lub właściwości do klasy program Visual Studio dodaje odpowiednie `DISP_FUNCTION` lub `DISP_PROPERTY` makro z parametrami wskazującymi nazwę klasy, zewnętrzne i wewnętrzne nazwy metody lub właściwości oraz typy danych.
 
-**Dodaj klasę** okno dialogowe upraszcza również deklaracji klasy automatyzacji i zarządzania ich właściwości i operacji. Gdy używasz okno dialogowe Dodaj klasę, aby dodać klasę do projektu, należy określić jej klasy bazowej. Jeśli klasa podstawowa umożliwia automatyzację, okno dialogowe Dodaj klasę Wyświetla formanty, które służy do określania, czy nowa klasa powinien obsługiwać automatyzacji, czy jest "OLE możliwość utworzenia" (oznacza to, czy obiekty klasy można utworzyć na żądanie w kliencie COM) i nazwę zewnętrznego dla klientów modelu COM do użycia.
+Okno dialogowe **Dodawanie klasy** upraszcza również deklarację klas automatyzacji i zarządzanie ich właściwościami i operacjami. W przypadku dodawania klasy do projektu przy użyciu okna dialogowego Dodawanie klasy należy określić jego klasę bazową. Jeśli klasa bazowa umożliwia automatyzację, w oknie dialogowym Dodawanie klasy są wyświetlane kontrolki używane do określenia, czy nowa klasa powinna obsługiwać automatyzację, czy jest to "OLE do utworzenia" (czyli czy obiekty klasy mogą być tworzone na żądanie od klienta COM). i zewnętrzna Nazwa klienta COM do użycia.
 
-**Dodaj klasę** okno dialogowe tworzy następnie deklaracji klasy, w tym makra odpowiednie dla funkcji OLE określono. Dodaje także szkielet kodu dla implementacji funkcji elementów członkowskich tej klasy.
+W oknie dialogowym **Dodaj klasę** zostanie utworzona deklaracja klasy, włącznie z odpowiednimi makrami dla określonych funkcji OLE. Dodaje również kod szkieletu do implementacji funkcji składowych klasy.
 
-Kreator aplikacji MFC upraszcza etapy wprowadzenie aplikację serwera automatyzacji na wyższy. Jeśli wybierzesz **automatyzacji** pole wyboru **funkcje zaawansowane** strony, Kreator aplikacji MFC, dodaje do aplikacji `InitInstance` wywołaniach wymaganych do zarejestrowania automatyzacji funkcji obiekty, i uruchom aplikację jako serwer automatyzacji.
+Kreator aplikacji MFC upraszcza kroki, które należy wykonać w celu uzyskania aplikacji serwera automatyzacji. W przypadku zaznaczenia pola wyboru **Automatyzacja** na stronie **funkcje zaawansowane** Kreator aplikacji MFC dodaje do `InitInstance` funkcji aplikacji wywołania wymagane do zarejestrowania obiektów automatyzacji i uruchomienia aplikacji jako Serwer automatyzacji.
 
 ### <a name="what-do-you-want-to-do"></a>Co chcesz zrobić
 
-- [Dowiedz się więcej o klientach automatyzacji](../mfc/automation-clients.md)
+- [Informacje o klientach automatyzacji](../mfc/automation-clients.md)
 
-- [Dowiedz się więcej na temat klasy CCmdTarget](../mfc/reference/ccmdtarget-class.md)
+- [Dowiedz się więcej o klasie CCmdTarget](../mfc/reference/ccmdtarget-class.md)
 
-- [Dowiedz się więcej o klasa COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)
+- [Dowiedz się więcej o klasie COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)
 
 ## <a name="see-also"></a>Zobacz także
 

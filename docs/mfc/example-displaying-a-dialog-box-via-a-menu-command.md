@@ -1,6 +1,6 @@
 ---
-title: 'Przykład: Wyświetlanie okna dialogowego za pomocą polecenia Menu'
-ms.date: 11/04/2016
+title: 'Przykład: Wyświetlanie okna dialogowego za pomocą polecenia menu'
+ms.date: 09/07/2019
 helpviewer_keywords:
 - MFC dialog boxes [MFC], examples
 - MFC dialog boxes [MFC], displaying
@@ -10,78 +10,78 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: 1e730125e47609f0bf87814b32962336cb752b04
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b76d481bff6e98b915d71634dbf04a83a432736
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173310"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907744"
 ---
-# <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Przykład: Wyświetlanie okna dialogowego za pomocą polecenia Menu
+# <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Przykład: Wyświetlanie okna dialogowego za pomocą polecenia menu
 
-Ten temat zawiera procedury, aby:
+Ten temat zawiera następujące procedury:
 
-- Wyświetla modalne okno dialogowe za pomocą polecenia menu.
+- Wyświetl modalne okno dialogowe za pomocą polecenia menu.
 
-- Wyświetl niemodalnego okna dialogowego za pomocą polecenia menu.
+- Wyświetl niemodalne okno dialogowe za pomocą polecenia menu.
 
-Zarówno przykładowe procedury dotyczą aplikacjach MFC i będzie działać w aplikacji możesz utworzyć przy użyciu [Kreator aplikacji MFC](../mfc/reference/mfc-application-wizard.md).
+Obie przykładowe procedury są przeznaczone dla aplikacji MFC i będą działały w aplikacji utworzonej za pomocą [Kreatora aplikacji MFC](../mfc/reference/mfc-application-wizard.md).
 
-Procedury należy użyć następujących nazw i wartości:
+W procedurach użyto następujących nazw i wartości:
 
 |Element|Nazwa lub wartość|
 |----------|-------------------|
 |Aplikacja|DisplayDialog|
-|Polecenia menu|Polecenie Test w menu Widok. Identyfikator polecenia = ID_VIEW_TEST|
-|Okno dialogowe|Okno dialogowe testu; Klasa = CTestDialog; Plik nagłówkowy = TestDialog.h; Zmienna = testdlg, ptestdlg|
-|Program obsługi poleceń|OnViewTest|
+|Polecenie menu|Polecenie testowe w menu Widok; Identyfikator polecenia = ID_VIEW_TEST|
+|Okno dialogowe|Test — okno dialogowe; Class = CTestDialog; Plik nagłówka = TestDialog. h; Zmienna = testdlg, ptestdlg|
+|Procedura obsługi polecenia|OnViewTest|
 
-### <a name="to-display-a-modal-dialog-box"></a>Aby wyświetlić okno modalne okno dialogowe
+### <a name="to-display-a-modal-dialog-box"></a>Aby wyświetlić modalne okno dialogowe
 
-1. Utwórz polecenie menu; zobacz [tworzenie menu lub elementy Menu](../windows/creating-a-menu.md).
+1. Utwórz polecenie menu; Zobacz [Tworzenie menu lub elementów menu](../windows/creating-a-menu.md).
 
-1. Tworzenie okna dialogowego; zobacz [uruchomienie edytora okien dialogowych](../windows/creating-a-new-dialog-box.md).
+1. Utwórz okno dialogowe; Zobacz [Uruchamianie edytora okien dialogowych](../windows/creating-a-new-dialog-box.md).
 
-1. Dodaj klasę dla usługi, okno dialogowe. Zobacz [Dodawanie klasy](../ide/adding-a-class-visual-cpp.md) Aby uzyskać więcej informacji.
+1. Dodaj klasę do okna dialogowego. Aby uzyskać więcej informacji [, zobacz Dodawanie klasy](../ide/adding-a-class-visual-cpp.md) .
 
-1. W **Widok klas**, wybierz klasę dokumentu (CDisplayDialogDoc). W **właściwości** okna, kliknij przycisk **zdarzenia** przycisku. Kliknij dwukrotnie identyfikator polecenia menu (ID_VIEW_TEST) w lewym okienku **właściwości** okna, a następnie wybierz pozycję **polecenia**. W okienku po prawej stronie, kliknij strzałkę w dół i wybierz pozycję  **\<Dodaj > OnViewTest**.
+1. W **Widok klasy**wybierz klasę dokumentu (CDisplayDialogDoc). W oknie **Właściwości** kliknij przycisk **zdarzenia** . Kliknij dwukrotnie identyfikator polecenia menu (ID_VIEW_TEST). Następnie kliknij strzałkę w dół i wybierz pozycję  **\<Dodaj > OnViewTest**.
 
-   Jeśli polecenie menu jest dodawany do komputera mainframe aplikacji MDI, należy wybrać klasę aplikacji (CDisplayDialogApp).
+   Jeśli dodano polecenie menu do komputera mainframe aplikacji MDI, zamiast tego wybierz klasę aplikacji (CDisplayDialogApp).
 
-1. Dodaj następujące dołączania instrukcji CDisplayDialogDoc.cpp (lub CDisplayDialogApp.cpp) po istniejącej instrukcji #include:
+1. Dodaj następującą instrukcję include do CDisplayDialogDoc. cpp (lub CDisplayDialogApp. cpp) po istniejącej instrukcji include:
 
    ```cpp
    #include "TestDialog.h"
    ```
 
-1. Dodaj następujący kod do `OnViewTest` do zaimplementowania funkcji:
+1. Dodaj następujący kod w `OnViewTest` celu zaimplementowania funkcji:
 
    ```cpp
    CTestDialog testdlg;
    testdlg.DoModal();  
    ```
 
-### <a name="to-display-a-modeless-dialog-box"></a>Aby wyświetlić niemodalnego okna dialogowego
+### <a name="to-display-a-modeless-dialog-box"></a>Aby wyświetlić niemodalne okno dialogowe
 
-1. Wykonaj pierwsze cztery kroki, aby wyświetlić okno modalne okno dialogowe, z wyjątkiem w kroku 4 Wybierz widok klasy (CDisplayDialogView).
+1. Wykonaj pierwsze cztery kroki, aby wyświetlić modalne okno dialogowe, z wyjątkiem zaznaczania klasy View (CDisplayDialogView) w kroku 4.
 
-1. Edytuj DisplayDialogView.h:
+1. Edytuj DisplayDialogView. h:
 
-   - Zadeklaruj klasy pole okien dialogowych poprzedzających najwyższej klasy deklaracji:
+   - Zadeklaruj klasę okna dialogowego poprzedzającą pierwszą deklarację klasy:
 
    ```cpp
    class CTestDialog;
    ```
 
-   - Deklarowanie wskaźnika do okna dialogowego po sekcji publicznej w atrybuty:
+   - Zadeklaruj wskaźnik do okna dialogowego po sekcji Public Attributes:
 
    ```cpp
    CTestDialog* m_pTestDlg;
    ```
 
-1. Edit DisplayDialogView.cpp:
+1. Edytuj DisplayDialogView. cpp:
 
-   - Dodaj następujące instrukcję #include po istniejącej instrukcji #include:
+   - Dodaj następującą instrukcję include po istniejących instrukcjach include:
 
    ```cpp
    #include "TestDialog.h"
@@ -93,13 +93,13 @@ Procedury należy użyć następujących nazw i wartości:
    m_pTestDlg = NULL;
    ```
 
-   - Dodaj następujący kod do destruktor:
+   - Dodaj następujący kod do destruktora:
 
    ```cpp
    delete m_pTestDlg;
    ```
 
-   - Dodaj następujący kod do `OnViewTest` do zaimplementowania funkcji:
+   - Dodaj następujący kod w `OnViewTest` celu zaimplementowania funkcji:
 
    ```cpp
    if (NULL == m_pTestDlg)

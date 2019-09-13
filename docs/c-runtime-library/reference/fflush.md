@@ -1,6 +1,6 @@
 ---
 title: fflush
-ms.date: 11/04/2016
+ms.date: 09/11/2019
 apiname:
 - fflush
 apilocation:
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - flushing
 - fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
-ms.openlocfilehash: d03d20ee5024915d0ca4c5a21db4159e8c4f876a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 73ef97306f573fba89ba3cdb8000de9db4d10bac
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333985"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927431"
 ---
 # <a name="fflush"></a>fflush
 
-Opróżnia strumienia.
+Opróżnia strumień.
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,26 +45,26 @@ int fflush(
 ### <a name="parameters"></a>Parametry
 
 *stream*<br/>
-Wskaźnik do **pliku** struktury.
+Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**fflush —** zwraca wartość 0, jeśli bufor został pomyślnie opróżniony. Wartość 0 jest także zwracany w przypadkach, w których określonego strumienia ma bufor nie jest otwarty do odczytu tylko. Zwracana wartość wynosząca **EOF** wskazuje na błąd.
+**fflush** zwraca wartość 0, jeśli bufor został pomyślnie opróżniony. Wartość 0 jest również zwracana w przypadkach, w których określony strumień nie ma buforu lub jest otwarty tylko do odczytu. Wartość zwracana przez **znacznik EOF** wskazuje na błąd.
 
 > [!NOTE]
-> Jeśli **fflush —** zwraca **EOF**, dane mogły zostać utracone z powodu błędu zapisu. Podczas konfigurowania obsługi błąd krytyczny, jest najbezpieczniejszy wyłączyć buforowanie z **setvbuf —** funkcji lub użyć procedury we/wy niskiego poziomu, takich jak **_otwórz**, **_zamknij**, i **_write** zamiast funkcje We/Wy strumienia.
+> Jeśli **fflush** zwraca **znacznik EOF**, dane mogły zostać utracone z powodu błędu zapisu. Podczas konfigurowania programu obsługi błędów krytycznych najbezpieczniejszym sposobem jest wyłączenie buforowania przy użyciu funkcji **setvbuf —** lub użycie procedur we/wy niskiego poziomu, takich jak **_open**, **_close**i **_write** zamiast funkcji we/wy strumienia.
 
 ## <a name="remarks"></a>Uwagi
 
-**Fflush —** funkcja opróżnia strumienia *strumienia*. Jeśli strumień został otwarty w zapisu trybu, lub został otwarty w trybie aktualizacji Ostatnia operacja została zapisu, zawartość buforu strumienia są zapisywane w pliku podstawowego lub urządzenie i rozmiar buforu jest odrzucany. Czy strumień został otwarty w trybie do odczytu, czy strumień został bez buforowania wywołanie **fflush —** nie ma wpływu, a wszelkie buforu są zachowywane. Wywołanie **fflush —** neguje efekt wszelkie wcześniejsze wywołanie elementu **ungetc —** dla strumienia. Strumień pozostaje otwarta po wywołaniu.
+Funkcja **fflush** opróżnia *strumień*strumienia. Jeśli strumień został otwarty w trybie zapisu lub został otwarty w trybie aktualizacji, a Ostatnia operacja była zapisu, zawartość buforu strumienia jest zapisywana w źródłowym pliku lub urządzeniu i bufor jest odrzucany. Jeśli strumień został otwarty w trybie odczytu lub strumień nie ma buforu, wywołanie do **fflush** nie ma żadnego efektu i wszystkie bufory są zachowywane. Wywołanie **fflush** powoduje negację efektu dowolnego wcześniejszego wywołania **ungetc —** strumienia. Strumień pozostaje otwarty po wywołaniu.
 
-Jeśli *strumienia* jest **NULL**, zachowanie jest taka sama jak wywołanie **fflush —** na temat każdego strumienia open. Wszystkie strumienie otwarty w trybie zapisu, a wszystkie strumienie otwarte w trybie aktualizacji których ostatnia operacja zakończyła się zapis zostały przesłane. Wywołanie nie ma wpływu na innych strumieni.
+Jeśli *strumień* ma **wartość null**, zachowanie jest takie samo jak wywołanie **fflush** w każdym otwartym strumieniu. Wszystkie strumienie otwarte w trybie zapisu i wszystkie strumienie otwarte w trybie aktualizacji, w których Ostatnia operacja była zapisu, są opróżniane. Wywołanie nie ma wpływu na inne strumienie.
 
-Bufory są zazwyczaj obsługiwane przez system operacyjny, który określa optymalny czas automatycznie zapisywać dane na dysku: gdy bufor jest pełny, jeśli strumień jest zamknięty lub gdy program kończy się zwykle bez zamykania w strumieniu. Funkcja commit-to-disk biblioteki wykonawczej pozwala upewnić się, że krytyczne dane są zapisywane bezpośrednio na dysku, a nie do buforów systemu operacyjnego. Bez konieczności ponownego zapisu istniejący program, można włączyć tę funkcję, konsolidacji plików obiektu programu z plikiem COMMODE.OBJ. Wynikowy plik wykonywalny wywołuje w celu **_flushall —** zapisywanie zawartości wszystkich buforów na dysku. Tylko **_flushall —** i **fflush —** dotyczy plikiem COMMODE.OBJ.
+Bufory są zwykle obsługiwane przez system operacyjny, który określa optymalny czas zapisywania danych na dysku: gdy bufor jest zapełniony, gdy strumień jest zamknięty lub gdy program kończy normalne działanie bez zamykania strumienia. Funkcja zatwierdzania na dysku w bibliotece wykonawczej pozwala zagwarantować, że krytyczne dane są zapisywane bezpośrednio na dysku, a nie w buforach systemu operacyjnego. Bez ponownego zapisywania istniejącego programu można włączyć tę funkcję, łącząc pliki obiektów programu z TOWARami. OBJ. W utworzonym pliku wykonywalnym wywołania **_flushall** zapisują zawartość wszystkich buforów na dysku. Tylko **_flushall** i **fflush** mają wpływ na towary. obj.
 
-Aby uzyskać informacje o sposobie sterowania funkcją commit-to-disk, zobacz [Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md), [fopen —](fopen-wfopen.md), i [_fdopen —](fdopen-wfdopen.md).
+Aby uzyskać informacje dotyczące kontrolowania funkcji zatwierdzania na dysku, zobacz [przesyłanie strumieniowe we/wy](../../c-runtime-library/stream-i-o.md), [fopen](fopen-wfopen.md)i [_fdopen](fdopen-wfdopen.md).
 
-Ta funkcja blokuje wątek wywołujący i dlatego jest metodą o bezpiecznych wątkach. Dla wersji bez blokady, zobacz **_fflush_nolock —**.
+Ta funkcja blokuje wątek wywołujący i dlatego jest bezpieczna wątkowo. W przypadku wersji, która nie jest blokowana, zobacz **_fflush_nolock**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -72,55 +72,61 @@ Ta funkcja blokuje wątek wywołujący i dlatego jest metodą o bezpiecznych wą
 |--------------|---------------------|
 |**fflush**|\<stdio.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
 ```C
 // crt_fflush.c
+// Compile with: cl /W4 crt_fflush.c
+// This sample gets a number from the user, then writes it to a file.
+// It ensures the write isn't lost on crash by calling fflush.
 #include <stdio.h>
-#include <conio.h>
 
-int main( void )
+int * crash_the_program = 0;
+
+int main(void)
 {
-   int integer;
-   char string[81];
+    FILE * my_file;
+    errno_t err = fopen_s(&my_file, "myfile.txt", "w");
+    if (my_file && !err)
+    {
+        printf("Write a number: ");
 
-   // Read each word as a string.
-   printf( "Enter a sentence of four words with scanf: " );
-   for( integer = 0; integer < 4; integer++ )
-   {
-      scanf_s( "%s", string, sizeof(string) );
-      printf( "%s\n", string );
-   }
+        int my_number = 0;
+        scanf_s("%d", &my_number);
 
-   // You must flush the input buffer before using gets.
-   // fflush on input stream is an extension to the C standard
-   fflush( stdin );
-   printf( "Enter the same sentence with gets: " );
-   gets_s( string, sizeof(string) );
-   printf( "%s\n", string );
+        fprintf(my_file, "User selected %d\n", my_number);
+
+        // Write data to a file immediately instead of buffering.
+        fflush(my_file);
+    
+        if (my_number == 5)
+        {
+            // Without using fflush, no data was written to the file 
+            // prior to the crash, so the data is lost.
+            *crash_the_program = 5;
+        }
+
+        // Normally, fflush is not needed as closing the file will write the buffer.
+        // Note that files are automatically closed and flushed during normal termination.
+        fclose(my_file);
+    }
+    return 0;
 }
 ```
 
 ```Input
-This is a test
-This is a test
+5
 ```
 
-```Output
-Enter a sentence of four words with scanf: This is a test
-This
-is
-a
-test
-Enter the same sentence with gets: This is a test
-This is a test
+```myfile.txt
+User selected 5
 ```
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>
 [_flushall](flushall.md)<br/>
 [setvbuf](setvbuf.md)<br/>

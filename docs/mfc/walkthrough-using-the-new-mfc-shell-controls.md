@@ -1,125 +1,125 @@
 ---
-title: 'Przewodnik: Używanie nowych formantów powłoki MFC'
+title: 'Przewodnik: Korzystanie z nowych formantów powłoki MFC'
 ms.date: 04/25/2019
 helpviewer_keywords:
 - shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
-ms.openlocfilehash: b75568c0207dc004bbdb919427e4f3f6860c4a81
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: cf0a6bd230364b48c78c72b8e453e7e641fb2d0e
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64558137"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907409"
 ---
-# <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Przewodnik: Używanie nowych formantów powłoki MFC
+# <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Przewodnik: Korzystanie z nowych formantów powłoki MFC
 
-W tym instruktażu utworzysz aplikację, podobny Eksploratora plików. Utworzysz okno które ma dwa okienka. W okienku po lewej stronie będą przechowywane [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) obiekt, który wyświetla hierarchiczny widok pulpitu. W okienku po prawej stronie będzie przechowywać [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) przedstawiająca pliki w folderze, który wybrano w okienku po lewej stronie.
+W tym instruktażu utworzysz aplikację przypominającą Eksplorator plików. Utworzysz okno, które ma dwa okienka. W lewym okienku będzie przechowywany obiekt [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) , który wyświetla pulpit w widoku hierarchicznym. W okienku po prawej stronie zostanie umieszczona [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) , która będzie zawierać pliki w folderze wybranym w okienku po lewej stronie.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- W programie Visual Studio 2017 i nowsze Obsługa MFC jest opcjonalnym składnikiem. Aby go zainstalować, otwórz Instalator programu Visual Studio w menu Windows Start. Znajdź wersję programu Visual Studio używasz i wybierz **Modyfikuj** przycisku. Upewnij się, że **programowanie aplikacji klasycznych przy użyciu C++**  Kafelek jest zaznaczone. W obszarze **składniki opcjonalne**, sprawdź **obsługi MFC** przycisku.
+- W programie Visual Studio 2017 lub nowszym obsługa MFC jest składnikiem opcjonalnym. Aby go zainstalować, Otwórz Instalator programu Visual Studio z menu Start systemu Windows. Znajdź używaną wersję programu Visual Studio, a następnie wybierz przycisk **Modyfikuj** . Upewnij się, że jest zaznaczone pole **Programowanie na pulpicie z C++**  kafelkiem. W obszarze **Opcjonalne składniki**Sprawdź przycisk **Obsługa MFC** .
 
-- W tym przewodniku przyjęto założenie, że po skonfigurowaniu programu Visual Studio do użycia **ogólnych ustawieniach projektowych**. Jeśli używasz ustawienia tworzenia różnych niektóre okna programu Visual Studio, których używa w tym przewodniku mogą nie być wyświetlane domyślnie.
+- W tym przewodniku przyjęto założenie, że program Visual Studio został skonfigurowany do używania **ogólnych ustawień deweloperskich**. Jeśli używasz innego ustawienia programistycznego, niektóre z okien programu Visual Studio, które są używane w tym instruktażu, mogą nie być wyświetlane domyślnie.
 
 ## <a name="to-create-a-new-mfc-application-by-using-the-mfc-application-wizard"></a>Aby utworzyć nową aplikację MFC przy użyciu Kreatora aplikacji MFC
 
-Te kroki różnią się w zależności od tego, która wersja programu Visual Studio, którego używasz. Upewnij się, że selektor wersji, w lewym górnym rogu tej strony została prawidłowo ustawiona.
+Kroki te różnią się w zależności od używanej wersji programu Visual Studio. Upewnij się, że selektor wersji w lewym górnym rogu tej strony jest poprawnie ustawiony.
 
 ::: moniker range="vs-2019"
 
-### <a name="to-create-an-mfc-project-in-visual-studio-2019"></a>Aby utworzyć projekt MFC w Visual Studio 2019 r.
+### <a name="to-create-an-mfc-project-in-visual-studio-2019"></a>Aby utworzyć projekt MFC w programie Visual Studio 2019
 
-1. W menu głównym wybierz **pliku** > **New** > **projektu** otworzyć **Utwórz nowy projekt** okna dialogowego pole.
+1. Z menu głównego wybierz pozycję **plik** > **Nowy** > **projekt** , aby otworzyć okno dialogowe **Tworzenie nowego projektu** .
 
-1. W polu wyszukiwania u góry wpisz **MFC** , a następnie wybierz **aplikacji MFC** z listy wyników. 
+1. W polu wyszukiwania w górnej części wpisz **MFC** , a następnie wybierz pozycję **aplikacja MFC** z listy wyników. 
 
-1. Kliknij przycisk **Dalej**. Na następnej stronie podaj nazwę dla projektu, a następnie określ lokalizację projektu, w razie potrzeby.
+1. Kliknij przycisk **Dalej**. Na następnej stronie Wprowadź nazwę projektu i określ lokalizację projektu w razie potrzeby.
 
-1. Wybierz **Utwórz** przycisk, aby utworzyć projekt.
+1. Wybierz przycisk **Utwórz** , aby utworzyć projekt.
 
-   Po **Kreator aplikacji MFC** Wyświetla, użyj następujących opcji:
+   Po wyświetleniu **Kreatora aplikacji MFC** należy użyć następujących opcji:
  
-   1. Wybierz **typ aplikacji** po lewej stronie. Następnie wybierz pozycję **pojedynczego dokumentu** i wybierz **Obsługa architektury dokument/widok**. W obszarze **projektu styl**, wybierz opcję **programu Visual Studio**i z **styl wizualny i kolory** listy rozwijanej listy wybierz **Office 2007 (motyw niebieski)**.
+   1. Wybierz pozycję **Typ aplikacji** po lewej stronie. Następnie wybierz pozycję **pojedynczy dokument** , a następnie wybierz pozycję **dokument/widok obsługa architektury**. W obszarze **styl projektu**wybierz pozycję **Visual Studio**, a następnie z listy rozwijanej **styl i kolory wizualizacji** wybierz pozycję **Office 2007 (motyw niebieski)** .
 
-   1. Na **Obsługa dokumentów złożonych** okienku wybierz **Brak**.
+   1. W okienku **Obsługa dokumentu złożonego** zaznacz opcję **Brak**.
 
-   1. Nie wprowadzaj żadnych zmian do **właściwości szablonu dokumentu** okienka.
+   1. Nie wprowadzaj żadnych zmian w okienku **Właściwości szablonu dokumentu** .
 
-   1. Na **funkcje interfejsu użytkownika** okienka, upewnij się, że **użyj paska menu i paska narzędzi** opcja jest zaznaczona. Pozostaw inne opcje, ponieważ są one.
+   1. W okienku **funkcje interfejsu użytkownika** upewnij się, że jest zaznaczona opcja **Użyj paska menu i paska narzędzi** . Pozostaw wszystkie inne opcje.
 
-   1. Na **funkcje zaawansowane** okienku wybierz **formantów ActiveX**, **manifestu wspólnej kontroli**, i **okienka nawigacji** opcji. Pozostaw wszystkie inne elementy, ponieważ jest. **Okienka nawigacji** opcji spowoduje, że kreatora, aby utworzyć w okienku po lewej stronie okna z `CMFCShellTreeCtrl` już osadzonych.
+   1. W okienku **funkcje zaawansowane** wybierz opcję **formanty ActiveX**, **manifest formantów wspólnych**i **okienko nawigacji** . Pozostaw wszystkie inne elementy. Opcja **okienka nawigacji** spowoduje, że Kreator utworzy okienko z lewej strony okna z `CMFCShellTreeCtrl` już osadzonym.
 
-   1. Użyjemy nie wprowadzaj żadnych zmian w **wygenerowane klasy** okienku, kliknij Tak **Zakończ** do utworzenia Twojego nowego projektu MFC.
+   1. Nie będziemy wprowadzać żadnych zmian w okienku **wygenerowane klasy** , więc kliknij przycisk **Zakończ** , aby utworzyć nowy projekt MFC.
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-### <a name="to-create-an-mfc-project-in-visual-studio-2017-or-earlier"></a>Aby utworzyć projekt MFC w programie Visual Studio 2017 lub starszy
+### <a name="to-create-an-mfc-project-in-visual-studio-2017-or-earlier"></a>Aby utworzyć projekt MFC w programie Visual Studio 2017 lub starszym
 
-1. Użyj **Kreator aplikacji MFC** do utworzenia nowej aplikacji MFC. Aby uruchomić kreatora z **pliku** menu wybierz opcję **nowy**, a następnie wybierz pozycję **projektu**. **Nowy projekt** pojawi się okno dialogowe.
+1. Użyj **Kreatora aplikacji MFC** , aby utworzyć nową aplikację MFC. Aby uruchomić kreatora, w menu **plik** wybierz pozycję **Nowy**, a następnie wybierz pozycję **projekt**. Zostanie wyświetlone okno dialogowe **Nowy projekt** .
 
-1. W **nowy projekt** okna dialogowego rozwiń **Visual C++** w węźle **typów projektów** okienka, a następnie wybierz **MFC**. Następnie w **szablony** okienku wybierz **aplikacji MFC**. Wpisz nazwę dla projektu, takie jak `MFCShellControls` i kliknij przycisk **OK**. 
+1. W oknie dialogowym **Nowy projekt** rozwiń węzeł **Wizualizacja C++**  w okienku **typy projektów** , a następnie wybierz pozycję **MFC**. Następnie w okienku **Szablony** wybierz pozycję **aplikacja MFC**. Wpisz nazwę projektu, na przykład, `MFCShellControls` i kliknij przycisk **OK**. 
 
-   Po **Kreator aplikacji MFC** Wyświetla, użyj następujących opcji:
+   Po wyświetleniu **Kreatora aplikacji MFC** należy użyć następujących opcji:
 
-   1. Na **typ aplikacji** okienku w obszarze **typ aplikacji**, wyczyść **dokumenty z zakładkami** opcji. Następnie wybierz pozycję **pojedynczego dokumentu** i wybierz **Obsługa architektury dokument/widok**. W obszarze **projektu styl**, wybierz opcję **programu Visual Studio**i z **styl wizualny i kolory** listy rozwijanej listy wybierz **Office 2007 (motyw niebieski)**.
+   1. W okienku **Typ aplikacji** w obszarze **Typ aplikacji**wyczyść opcję dokumenty z **kartami** . Następnie wybierz kolejno pozycje **pojedynczy dokument** i **Obsługa architektury dokument/widok**. W obszarze **styl projektu**wybierz pozycję **Visual Studio**, a następnie z listy rozwijanej **styl i kolory wizualizacji** wybierz pozycję **Office 2007 (motyw niebieski)** .
 
-   1. Na **Obsługa dokumentów złożonych** okienku wybierz **Brak**.
+   1. W okienku **Obsługa dokumentu złożonego** zaznacz opcję **Brak**.
 
-   1. Nie wprowadzaj żadnych zmian do **ciągi szablonu dokumentu** okienka.
+   1. Nie wprowadzaj żadnych zmian w okienku **ciągi szablonu dokumentu** .
 
-   1. Na **obsługi bazy danych** okienko (Visual Studio 2015 i starsze), wybierz **Brak** aplikacja korzysta z bazy danych.
+   1. W okienku **Obsługa bazy danych** (Visual Studio 2015 i starsze) wybierz pozycję **Brak** , ponieważ aplikacja nie korzysta z bazy danych.
 
-   1. Na **funkcje interfejsu użytkownika** okienka, upewnij się, że **użyj paska menu i paska narzędzi** opcja jest zaznaczona. Pozostaw inne opcje, ponieważ są one.
+   1. W okienku **funkcje interfejsu użytkownika** upewnij się, że jest zaznaczona opcja **Użyj paska menu i paska narzędzi** . Pozostaw wszystkie inne opcje.
 
-   1. Na **funkcje zaawansowane** okienku w obszarze **zaawansowane funkcje**, wybierz tylko **formantów ActiveX** i **manifestu wspólnej kontroli**. W obszarze **zaawansowane okienka ramki**, wybierz tylko **okienka nawigacji** opcji. Spowoduje to, że kreatora, aby utworzyć w okienku po lewej stronie okna z `CMFCShellTreeCtrl` już osadzonych.
+   1. W okienku **funkcje zaawansowane** w obszarze **funkcje zaawansowane**zaznacz opcję tylko **kontrolki ActiveX** i **manifest typowej kontroli**. W obszarze **zaawansowane okienka ramki**wybierz tylko opcję **okienka nawigacji** . Spowoduje to, że Kreator utworzy okienko z lewej strony okna z `CMFCShellTreeCtrl` już osadzonym.
 
-   1. Użyjemy nie wprowadzaj żadnych zmian w **wygenerowane klasy** okienku, kliknij Tak **Zakończ** do utworzenia Twojego nowego projektu MFC.
+   1. Nie będziemy wprowadzać żadnych zmian w okienku **wygenerowane klasy** , więc kliknij przycisk **Zakończ** , aby utworzyć nowy projekt MFC.
 
 ::: moniker-end
 
-Sprawdź, czy aplikacja została pomyślnie utworzona, tworząc i uruchamiając go. Aby skompilować aplikację, z **kompilacji** menu wybierz opcję **Kompiluj rozwiązanie**. Jeśli aplikacja zostanie pomyślnie skompilowana, uruchom aplikację, wybierając **Rozpocznij debugowanie** z **debugowania** menu.
+Sprawdź, czy aplikacja została utworzona pomyślnie, kompilując ją i uruchamiając. Aby skompilować aplikację, w menu **kompilacja** wybierz opcję **Kompiluj rozwiązanie**. Jeśli aplikacja zostanie pomyślnie skompilowana, uruchom aplikację, wybierając pozycję **Rozpocznij debugowanie** z menu **debugowanie** .
 
-Kreator automatycznie tworzy aplikację, która ma standardowy pasek menu, standardowy pasek narzędzi, pasek stanu standardowe i paska Outlook po lewej stronie okna z **folderów** widoku i **kalendarza** widoku .
+Kreator automatycznie tworzy aplikację, która ma standardowy pasek menu, standardowy pasek narzędzi, standardowy pasek stanu i pasek programu Outlook po lewej stronie okna z widokiem **foldery** i widok **kalendarza** .
 
-### <a name="to-add-the-shell-list-control-to-the-document-view"></a>Aby dodać formant listy powłoki do widoku dokumentu
+### <a name="to-add-the-shell-list-control-to-the-document-view"></a>Aby dodać kontrolkę lista powłoki do widoku dokumentu
 
-1. W tej sekcji dodasz wystąpienie `CMFCShellListCtrl` do widoku, utworzony przez kreatora. Otwórz plik nagłówka w widoku, klikając dwukrotnie **MFCShellControlsView.h** w **Eksploratora rozwiązań**.
+1. W tej sekcji dodasz wystąpienie `CMFCShellListCtrl` do widoku utworzonego przez kreatora. Otwórz plik nagłówkowy widoku przez dwukrotne kliknięcie **MFCShellControlsView. h** w **Eksplorator rozwiązań**.
 
-   Znajdź `#pragma once` dyrektywę w górnej części pliku nagłówka. Natychmiast poniżej go Dodaj ten kod, aby uwzględnić plik nagłówka dla `CMFCShellListCtrl`:
+   Znajdź dyrektywę `#pragma once` znajdującą się w górnej części pliku nagłówkowego. Bezpośrednio poniżej dodaje ten kod, aby dołączyć plik nagłówka dla `CMFCShellListCtrl`:
 
    ```cpp
    #include <afxShellListCtrl.h>
    ```
 
-   Teraz Dodaj zmienną składową typu `CMFCShellListCtrl`. Po pierwsze Znajdź poniższy komentarz w pliku nagłówka:
+   Teraz Dodaj zmienną członkowską typu `CMFCShellListCtrl`. Najpierw zlokalizuj następujący komentarz w pliku nagłówka:
 
    ```cpp
    // Generated message map functions
    ```
 
-   Bezpośrednio nad tym komentarzem, Dodaj następujący kod:
+   Bezpośrednio nad tym komentarzem Dodaj następujący kod:
 
    ```cpp
    private:
    CMFCShellListCtrl m_wndList;
    ```
 
-1. **Kreator aplikacji MFC** utworzonym `CMFCShellTreeCtrl` obiektu `CMainFrame` klasy, ale jego chroniony element członkowski. Firma Microsoft będzie później uzyskać dostęp do obiektu, dzięki czemu można teraz tworzyć metody dostępu dla niego. Otwórz plik nagłówkowy MainFrm.h, klikając go dwukrotnie **Eksploratora rozwiązań**. Znajdź poniższy komentarz:
+1. **Kreator aplikacji MFC** utworzył `CMFCShellTreeCtrl` już obiekt w `CMainFrame` klasie, ale jest to chroniony element członkowski. Będziemy uzyskiwać dostęp do obiektu później, dlatego teraz utworzysz metodę dostępu. Otwórz plik nagłówka MainFrm. h, klikając go dwukrotnie w **Eksplorator rozwiązań**. Znajdź następujący komentarz:
 
    ```cpp
    // Attributes
    ```
 
-   Bezpośrednio pod nim, dodaj następującą deklarację metody:
+   Bezpośrednio pod nim Dodaj następującą deklarację metody:
 
    ```cpp
    public:
        CMFCShellTreeCtrl& GetShellTreeCtrl();
    ```
 
-   Następnie otwórz plik źródłowy MainFrm.cpp, klikając go dwukrotnie **Eksploratora rozwiązań**. W dolnej części tego pliku Dodaj następującą definicję metody:
+   Następnie otwórz plik źródłowy MainFrm. cpp, klikając go dwukrotnie w **Eksplorator rozwiązań**. W dolnej części tego pliku Dodaj następującą definicję metody:
 
    ```cpp
    CMFCShellTreeCtrl& CMainFrame::GetShellTreeCtrl()
@@ -128,11 +128,11 @@ Kreator automatycznie tworzy aplikację, która ma standardowy pasek menu, stand
    }
    ```
 
-1. Teraz możemy zaktualizować `CMFCShellControlsView` klasy do obsługi `WM_CREATE` komunikatów systemu windows. Otwórz **Widok klas** okna, a następnie wybierz pozycję `CMFCShellControlsView` klasy. Kliknij prawym przyciskiem myszy i wybierz **właściwości**.
+1. Teraz aktualizujemy `CMFCShellControlsView` klasę, aby `WM_CREATE` obsłużyć komunikat systemu Windows. Otwórz okno **Widok klasy** i wybierz `CMFCShellControlsView` klasę. Kliknij prawym przyciskiem myszy i wybierz pozycję **Właściwości**.
 
-   Następnie w **właściwości** okna, kliknij przycisk **wiadomości** ikony. Przewiń w dół, aż znajdziesz `WM_CREATE` wiadomości. Z listy rozwijanej obok pozycji listy `WM_CREATE`, wybierz opcję  **\<Dodaj > OnCreate**. Polecenie tworzy program obsługi komunikatów dla nas i automatycznie aktualizuje mapy komunikatów MFC.
+   Następnie w [Kreatorze klasy](reference/mfc-class-wizard.md)kliknij kartę **komunikaty** . Przewiń w dół do momentu `WM_CREATE` znalezienia komunikatu. Z listy rozwijanej obok pozycji `WM_CREATE`wybierz pozycję  **\<Dodaj > OnCreate**. Polecenie tworzy program obsługi komunikatów dla nas i automatycznie aktualizuje mapę wiadomości MFC.
 
-   W `OnCreate` metody, utworzymy teraz naszych `CMFCShellListCtrl` obiektu. Znajdź `OnCreate` definicji metody w MFCShellControlsView.cpp pliku źródłowego i zastąp jego implementacja następującym kodem:
+   W metodzie teraz utworzysz nasz `CMFCShellListCtrl` obiekt. `OnCreate` Znajdź definicję `OnCreate` metody w pliku źródłowym MFCShellControlsView. cpp i Zastąp jej implementację następującym kodem:
 
     ```cpp
     int CMFCShellControlsView::OnCreate(LPCREATESTRUCT lpCreateStruct)
@@ -149,7 +149,7 @@ Kreator automatycznie tworzy aplikację, która ma standardowy pasek menu, stand
     }
     ```
 
-1. Powtórz poprzedni krok, ale w przypadku `WM_SIZE` wiadomości. Spowoduje widoku aplikacji narysowania zawsze wtedy, gdy użytkownik zmieni rozmiar okna aplikacji. Zastąp definicję dla `OnSize` metoda następującym kodem:
+1. Powtórz poprzedni krok, ale dla `WM_SIZE` wiadomości. Spowoduje to, że widok aplikacji zostanie narysowany ponownie za każdym razem, gdy użytkownik zmieni rozmiar okna aplikacji. Zastąp definicję dla `OnSize` metody następującym kodem:
 
     ```cpp
     void CMFCShellControlsView::OnSize(UINT nType, int cx, int cy)
@@ -161,9 +161,9 @@ Kreator automatycznie tworzy aplikację, która ma standardowy pasek menu, stand
     }
     ```
 
-1. Ostatni krok polega na połączeniu `CMFCShellTreeCtrl` i `CMFCShellListCtrl` obiektów przy użyciu [CMFCShellTreeCtrl::SetRelatedList](../mfc/reference/cmfcshelltreectrl-class.md#setrelatedlist) metody. Po wywołaniu metody `CMFCShellTreeCtrl::SetRelatedList`, `CMFCShellListCtrl` zostanie automatycznie wyświetlona zawartość elementu wybranego w `CMFCShellTreeCtrl`. Łączymy obiektów w `OnActivateView` metody, która zostanie zastąpiona z [CView::OnActivateView](../mfc/reference/cview-class.md#onactivateview).
+1. Ostatnim krokiem jest połączenie `CMFCShellTreeCtrl` obiektów i `CMFCShellListCtrl` przy użyciu metody [CMFCShellTreeCtrl:: SetRelatedList](../mfc/reference/cmfcshelltreectrl-class.md#setrelatedlist) . Po wywołaniu `CMFCShellTreeCtrl::SetRelatedList`programu `CMFCShellListCtrl` zostanie automatycznie wyświetlona zawartość elementu wybranego w `CMFCShellTreeCtrl`. Połączymy obiekty w `OnActivateView` metodzie, która została przesłonięta z [CView:: OnActivateView](../mfc/reference/cview-class.md#onactivateview).
 
-   W pliku nagłówkowym MFCShellControlsView.h wewnątrz `CMFCShellControlsView` deklaracji klasy, dodaj następującą deklarację metody:
+   W pliku nagłówkowym MFCShellControlsView. h, wewnątrz `CMFCShellControlsView` deklaracji klasy, Dodaj następującą deklarację metody:
 
     ```cpp
     protected:
@@ -172,7 +172,7 @@ Kreator automatycznie tworzy aplikację, która ma standardowy pasek menu, stand
         CView* pDeactiveView);
     ```
 
-   Następnie dodaj definicję dla metody MFCShellControlsView.cpp pliku źródłowego:
+   Następnie Dodaj definicję metody do pliku źródłowego MFCShellControlsView. cpp:
 
     ```cpp
     void CMFCShellControlsView::OnActivateView(BOOL bActivate,
@@ -190,23 +190,23 @@ Kreator automatycznie tworzy aplikację, która ma standardowy pasek menu, stand
     }
     ```
 
-   Ponieważ Zadzwonimy pod numer telefonu metody z `CMainFrame` klasy, możemy dodać `#include` dyrektywę w górnej części pliku źródłowego MFCShellControlsView.cpp:
+   Ponieważ wywołujemy metody z `CMainFrame` klasy, należy `#include` dodać dyrektywę w górnej części pliku źródłowego MFCShellControlsView. cpp:
 
     ```cpp
     #include "MainFrm.h"
     ```
 
-1. Sprawdź, czy aplikacja została pomyślnie utworzona, tworząc i uruchamiając go. Aby skompilować aplikację, z **kompilacji** menu wybierz opcję **Kompiluj rozwiązanie**. Jeśli aplikacja zostanie pomyślnie skompilowana, uruchom go, wybierając **Rozpocznij debugowanie** z **debugowania** menu.
+1. Sprawdź, czy aplikacja została utworzona pomyślnie, kompilując ją i uruchamiając. Aby skompilować aplikację, w menu **kompilacja** wybierz opcję **Kompiluj rozwiązanie**. Jeśli aplikacja zostanie pomyślnie skompilowana, uruchom ją, wybierając pozycję **Rozpocznij debugowanie** z menu **debugowanie** .
 
-   Zostaną wyświetlone szczegóły dotyczące elementu zaznaczonego w `CMFCShellTreeCtrl` w okienku widoku. Po kliknięciu węzła w `CMFCShellTreeCtrl`, `CMFCShellListCtrl` zostaną automatycznie zaktualizowane. Podobnie jeśli klikniesz dwukrotnie folder, w `CMFCShellListCtrl`, `CMFCShellTreeCtrl` powinny być aktualizowane automatycznie.
+   Należy teraz zobaczyć szczegóły dotyczące elementu wybranego w `CMFCShellTreeCtrl` okienku Widok. Po kliknięciu węzła w programie `CMFCShellTreeCtrl` `CMFCShellListCtrl` zostanie on automatycznie zaktualizowany. Podobnie po dwukrotnym kliknięciu folderu w programie `CMFCShellListCtrl` `CMFCShellTreeCtrl` należy automatycznie zaktualizować.
 
-   Kliknij prawym przyciskiem myszy dowolny element w drzewie lub kontrolki listy. Pobieranie tego samego menu kontekstowego tak, jakby były używane rzeczywiste **Eksploratora plików**.
+   Kliknij prawym przyciskiem myszy dowolny element w kontrolce drzewa lub w kontrolce listy. To samo menu kontekstowe jest tak samo, jak w przypadku używania rzeczywistego **Eksploratora plików**.
 
 ## <a name="next-steps"></a>Następne kroki
 
-- Kreator utworzył paska Outlook zarówno **folderów** okienka i **kalendarza** okienka. Prawdopodobnie nie ma sensu ma **kalendarza** okienka **Explorer** okna, więc teraz usunąć okienka.
+- Kreator utworzył pasek programu Outlook z okienka **foldery** i okienka **Kalendarz** . Prawdopodobnie nie ma sensu okienka **kalendarza** w oknie **Eksploratora** , dlatego Usuń to okienko teraz.
 
-- `CMFCShellListCtrl` Obsługuje wyświetlanie plików w różnych trybach, takich jak **duże ikony**, **małe ikony**, **listy**, i **szczegóły**. Zaktualizuj aplikację w celu zaimplementowania tej funkcji. Wskazówka: zobacz [przykłady Visual C++](../overview/visual-cpp-samples.md).
+- Obsługuje wyświetlanie plików w różnych trybach, takich jak duże ikony, małe ikony, lista i szczegóły. `CMFCShellListCtrl` Zaktualizuj aplikację w celu zaimplementowania tej funkcji. Wskazówka: zobacz [Visual C++ Samples](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Zobacz także
 

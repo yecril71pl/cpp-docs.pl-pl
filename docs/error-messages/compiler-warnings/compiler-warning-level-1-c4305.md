@@ -1,28 +1,28 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4305
-ms.date: 1/17/2018
+title: Ostrzeżenie kompilatora (poziom 1) C4305
+ms.date: 01/17/2018
 f1_keywords:
 - C4305
 helpviewer_keywords:
 - C4305
-ms.openlocfilehash: 3f9116b0e7bdd9ee13c42b48f44da4b090f41ccd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc718e5f7ebe9478ed1bf2a7323db940935cb1d6
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327473"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926121"
 ---
-# <a name="compiler-warning-level-1-c4305"></a>Kompilator ostrzeżenie (poziom 1) C4305
+# <a name="compiler-warning-level-1-c4305"></a>Ostrzeżenie kompilatora (poziom 1) C4305
 
-> "*kontekstu*': obcinanie z '*type1*"to"*type2*"
+> "*Context*": obcinanie z "*Type1*" do "*Type2*"
 
 ## <a name="remarks"></a>Uwagi
 
-To ostrzeżenie zostanie wyświetlone, gdy wartość jest konwertowana na mniejszy typ podczas inicjowania lub jako argument konstruktora, co spowoduje utratę informacji.
+To ostrzeżenie jest generowane, gdy wartość zostanie przekonwertowana na mniejszy typ w inicjacji lub jako argument konstruktora, co spowodowało utratę informacji.
 
 ## <a name="example"></a>Przykład
 
-Ten przykład przedstawia dwa sposoby, które można napotkać tego ostrzeżenia:
+Ten przykład pokazuje dwa sposoby wyświetlania tego ostrzeżenia:
 
 ```cpp
 // C4305.cpp
@@ -41,4 +41,4 @@ int main()
 }
 ```
 
-Aby rozwiązać ten problem, inicjowanie przy użyciu poprawnego typu wartości lub użyć jawnego rzutowania do poprawnego typu. Na przykład użyć **float** literału, takich jak 2.71828f zamiast **double** (domyślny typ zmiennoprzecinkowych literałów) do zainicjowania **float** zmiennej, lub do przekazania do Konstruktor pobierający **float** argumentu.
+Aby rozwiązać ten problem, należy zainicjować przy użyciu wartości poprawnego typu lub użyć jawnego rzutowania do poprawnego typu. Na przykład użyj literału **zmiennoprzecinkowego** , takiego jak 2.71828 f zamiast **podwójnego** (domyślny typ literałów zmiennoprzecinkowych), aby zainicjować zmienną **zmiennoprzecinkową** lub przekazać do konstruktora, który przyjmuje argument **zmiennoprzecinkowy** .

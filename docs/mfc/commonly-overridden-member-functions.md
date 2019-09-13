@@ -1,6 +1,6 @@
 ---
 title: Powszechnie zastępowane funkcje członkowskie
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 helpviewer_keywords:
 - CDialog class [MFC], members
 - OnInitDialog function
@@ -10,34 +10,34 @@ helpviewer_keywords:
 - OnOK function
 - MFC dialog boxes [MFC], overriding member functions
 ms.assetid: 78eb566c-e361-4c86-8db5-c7e2791b249a
-ms.openlocfilehash: 26a1527dbdac4b2a9deb57fb13481f8d2f9cb5b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f63dd6079b96181305f3207d4a1ef823df8d8ba4
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152035"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907689"
 ---
 # <a name="commonly-overridden-member-functions"></a>Powszechnie zastępowane funkcje członkowskie
 
-W poniższej tabeli wymieniono najbardziej prawdopodobne funkcje składowe do zastąpienia w swojej `CDialog`-klasy pochodnej.
+W poniższej tabeli wymieniono najbardziej prawdopodobną funkcję członkowską, która `CDialog`ma zostać przesłonięta w klasie pochodnej.
 
-### <a name="commonly-overridden-member-functions-of-class-cdialog"></a>Powszechnie zastępowane funkcje Członkowskie klasy CDialog
+### <a name="commonly-overridden-member-functions-of-class-cdialog"></a>Powszechnie zastępowane funkcje członkowskie klasy CDialog
 
-|Funkcja elementu członkowskiego|Komunikat, który odpowiada|Celem zastępowania|
+|Funkcja członkowska|Komunikat, którego dotyczy odpowiedź|Cel przesłonięcia|
 |---------------------|----------------------------|-----------------------------|
-|`OnInitDialog`|**/ / ZŁAP**|Zainicjuj formantów okna dialogowego.|
-|`OnOK`|**BN_CLICKED** dla przycisku **IDOK**|Należy odpowiedzieć, gdy użytkownik kliknie przycisk OK.|
-|`OnCancel`|**BN_CLICKED** dla przycisku **IDCANCEL**|Należy odpowiedzieć, gdy użytkownik kliknie przycisk Anuluj.|
+|`OnInitDialog`|**WM_INITDIALOG**|Zainicjuj kontrolki okna dialogowego.|
+|`OnOK`|**BN_CLICKED** przycisku **IDOK**|Reaguj, gdy użytkownik kliknie przycisk OK.|
+|`OnCancel`|**BN_CLICKED** przycisku **IDCANCEL**|Reaguj, gdy użytkownik kliknie przycisk Anuluj.|
 
-`OnInitDialog`, `OnOK`, i `OnCancel` funkcji wirtualnych. Można je przesłonić, deklarowanie funkcji przez nadrzędne w klasie pochodnej okna dialogowego za pomocą [okno właściwości](/visualstudio/ide/reference/properties-window).
+`OnInitDialog`, `OnOK`, i `OnCancel` są funkcjami wirtualnymi. Aby je zastąpić, należy zadeklarować funkcję zastępującą w klasie dialogu pochodnego za pomocą [kreatora klas MFC](reference/mfc-class-wizard.md).
 
-`OnInitDialog` jest wywoływana tuż przed, zostanie wyświetlone okno dialogowe. Wartość domyślna, należy wywołać `OnInitDialog` programu obsługi z przesłonięcia — zwykle jako pierwszą akcją w obsłudze. Domyślnie `OnInitDialog` zwraca **TRUE** do wskazania, że fokus powinna być równa pierwszą kontrolkę w oknie dialogowym.
+`OnInitDialog`jest wywoływana tuż przed wyświetleniem okna dialogowego. Musisz wywołać domyślną `OnInitDialog` procedurę obsługi z przesłonięcia — zwykle jako pierwszą akcję w programie obsługi. Domyślnie zwraca `OnInitDialog` **wartość true** , aby wskazać, że fokus powinien być ustawiony na pierwszy formant w oknie dialogowym.
 
-`OnOK` Zazwyczaj jest wyłączona dla niemodalne, ale nie modalne okna dialogowe. Jeśli ten program obsługi dla modalne okno dialogowe, należy wywołać wersję klasy podstawowej z przesłonięcia — do zapewnienia, że `EndDialog` nosi nazwę — lub zadzwoń `EndDialog` samodzielnie.
+`OnOK`jest zwykle zastępowany dla modalnych okien dialogowych, ale nie dla modalnych. Jeśli zastąpisz tę procedurę obsługi dla modalnego okna dialogowego, wywołaj wersję klasy bazowej z przesłonięcia — `EndDialog` aby upewnić się, `EndDialog` że jest wywoływana — lub wywołaj siebie.
 
-`OnCancel` Zazwyczaj jest wyłączona dla Niemodalne okna dialogowe.
+`OnCancel`jest zwykle zastępowany dla niemodalnych okien dialogowych.
 
-Aby uzyskać więcej informacji o tych funkcjach Członkowskich, zobacz klasę [CDialog](../mfc/reference/cdialog-class.md) w *odwołanie MFC* i dyskusji na temat [cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md).
+Aby uzyskać więcej informacji o tych funkcjach składowych, zobacz Klasa [CDialog](../mfc/reference/cdialog-class.md) w *dokumentacji MFC* i w omówieniu [cyklu życia okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md).
 
 ## <a name="see-also"></a>Zobacz także
 

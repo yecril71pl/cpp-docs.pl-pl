@@ -1,6 +1,6 @@
 ---
 title: Używanie formantu użytkownika formularza systemu Windows w MFC
-ms.date: 1/08/2018
+ms.date: 01/08/2018
 helpviewer_keywords:
 - MFC [C++], Windows Forms support
 - interoperability [C++], Windows Forms in MFC
@@ -9,32 +9,32 @@ helpviewer_keywords:
 - interop [C++], MFC
 - Windows Forms [C++], MFC support
 ms.assetid: 63fb099b-1dff-469c-9e34-dab52e122fcd
-ms.openlocfilehash: 38c5c37712b430b137934d441056e60f2c130f78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efabbf84778d925ec1de03f5f4ea0ca09185bd81
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384494"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926056"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>Używanie formantu użytkownika formularza systemu Windows w MFC
 
-Przy użyciu klas pomocy technicznej formularzy Windows w MFC, może obsługiwać kontrolek formularzy Windows Forms w aplikacjach MFC jako formant ActiveX w obrębie okna dialogowe MFC lub widoków. Ponadto formularzy Windows forms może być obsługiwany jako okna dialogowe MFC.
+Przy użyciu klas obsługi MFC Windows Forms można hostować Windows Forms formantów w aplikacjach MFC jako kontrolki ActiveX w oknach dialogowych MFC lub w widokach. Ponadto formularze Windows Forms mogą być hostowane jako okna dialogowe MFC.
 
-W poniższych sekcjach opisano sposób:
+W poniższych sekcjach opisano, jak:
 
-- Hostowanie kontrolki formularzy Windows w oknie dialogowym MFC.
+- Hostowanie kontrolki Windows Forms w oknie dialogowym MFC.
 
 - Hostowanie kontrolki użytkownika Windows Forms jako widoku MFC.
 
-- Hosta formularzy Windows Forms jako okna dialogowego MFC.
+- Hostowanie Windows Forms formularza jako okna dialogowego MFC.
 
 > [!NOTE]
-> Integracja biblioteki MFC, formularzy Windows działa tylko w projektach, które łączą się dynamicznie z MFC (projekty, w którym `_AFXDLL` jest zdefiniowana).
+> Integracja MFC Windows Forms działa tylko w projektach, które łączą się dynamicznie z MFC ( `_AFXDLL` w których zdefiniowane są projekty).
 
 > [!NOTE]
-> W przypadku tworzenia aplikacji za pomocą prywatnej kopii (zmodyfikowany) interfejsy formularzy Windows w MFC DLL (mfcmifc80.dll), nie będzie można zainstalować w GAC, chyba że Zastąp klucz firmy Microsoft przy użyciu własnego klucza dostawcy. Aby uzyskać więcej informacji na temat podpisywanie zestawu, zobacz [programowanie za pomocą zestawów](/dotnet/framework/app-domains/programming-with-assemblies) i [zestawy o silnej nazwach (podpisywanie zestawów) (C++sposób niezamierzony)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+> Podczas kompilowania aplikacji przy użyciu prywatnej (zmodyfikowanej) kopii biblioteki DLL interfejsów Windows Forms MFC (mfcmifc80. dll) instalacja nie zostanie zainstalowana w pamięci podręcznej, o ile nie zastąpisz klucza firmy Microsoft własnym kluczem dostawcy. Aby uzyskać więcej informacji na temat podpisywania zestawu, zobacz [programowanie z](/dotnet/framework/app-domains/programming-with-assemblies) zestawami i [zestawy oC++silnych nazwach (podpisywanie zestawów) (/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
-Jeśli Twoja aplikacja MFC używa Windows Forms, musisz ponownie rozdzielić mfcmifc80.dll z aplikacją. Aby uzyskać więcej informacji, zobacz [redystrybuowanie biblioteki MFC](../windows/redistributing-the-mfc-library.md).
+Jeśli aplikacja MFC używa Windows Forms, należy ponownie rozpowszechnić mfcmifc80. dll z aplikacją. Aby uzyskać więcej informacji, zobacz [Redystrybuowanie biblioteki MFC](../windows/redistributing-the-mfc-library.md).
 
 ## <a name="in-this-section"></a>W tej sekcji
 

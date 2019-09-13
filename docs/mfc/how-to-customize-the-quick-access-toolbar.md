@@ -1,56 +1,56 @@
 ---
 title: 'Instrukcje: Dostosowywanie paska narzędzi Szybki dostęp'
-ms.date: 11/19/2018
+ms.date: 09/07/2019
 helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
-ms.openlocfilehash: c53e405eafe310c0bfc03a916ab85181ae67a34b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b2eb6f7c80c77f69e2bbb65b7bb31a385014c8c
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396435"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907777"
 ---
 # <a name="how-to-customize-the-quick-access-toolbar"></a>Instrukcje: Dostosowywanie paska narzędzi Szybki dostęp
 
-Szybki dostęp do paska narzędzi (QAT) jest paskiem narzędzi, który zawiera zestaw poleceń, które są albo wyświetlane obok przycisku aplikacji lub w ramach karty kategorii. Poniższa ilustracja przedstawia typowy narzędzi Szybki dostęp.
+Pasek narzędzi Szybki dostęp (QAT) to dostosowywalny pasek narzędzi zawierający zestaw poleceń, które są wyświetlane obok przycisku aplikacji lub na kartach kategorie. Na poniższej ilustracji przedstawiono typowy pasek narzędzi Szybki dostęp.
 
-![Pasek narzędzi Szybki dostęp wstążki MFC](../mfc/media/quick_access_toolbar.png "paska narzędzi Szybki dostęp wstążki MFC")
+![Pasek narzędzi szybkiego dostępu do wstążki MFC](../mfc/media/quick_access_toolbar.png "Pasek narzędzi szybkiego dostępu do wstążki MFC")
 
-Aby dostosować paska narzędzi Szybki dostęp, otwórz go w **właściwości** , zmodyfikuj jego poleceń, a następnie Wyświetl podgląd formantu wstążki.
+Aby dostosować pasek narzędzi Szybki dostęp, otwórz go w oknie **Właściwości** , zmodyfikuj jego polecenia, a następnie Wyświetl podgląd kontrolki wstążki.
 
-### <a name="to-open-the-quick-access-toolbar-in-the-properties-window"></a>Aby otworzyć pasek narzędzi Szybki dostęp w oknie dialogowym właściwości
+### <a name="to-open-the-quick-access-toolbar-in-the-properties-window"></a>Aby otworzyć pasek narzędzi Szybki dostęp w okno Właściwości
 
-1. W programie Visual Studio na **widoku** menu, kliknij przycisk **widok zasobów**.
+1. W programie Visual Studio, w menu **Widok** kliknij **Widok zasobów**.
 
-1. W **widok zasobów**, kliknij dwukrotnie zasób wstążki, aby wyświetlić je na powierzchni projektowej.
+1. W **Widok zasobów**kliknij dwukrotnie zasób wstążki, aby wyświetlić go na powierzchni projektowej.
 
-1. Na powierzchni projektowej kliknij prawym przyciskiem myszy menu paska narzędzi Szybki dostęp, a następnie kliknij przycisk **właściwości**.
+1. Na powierzchni projektowej kliknij prawym przyciskiem myszy menu paska narzędzi Szybki dostęp, a następnie kliknij polecenie **Właściwości**.
 
 ## <a name="quick-access-toolbar-properties"></a>Właściwości paska narzędzi Szybki dostęp
 
-W poniższej tabeli opisano właściwości paska narzędzi Szybki dostęp.
+Poniższa tabela zawiera definicje właściwości paska narzędzi Szybki dostęp.
 
 |Właściwość|Definicja|
 |--------------|----------------|
-|Położenie QAT|Określa położenie paska narzędzi Szybki dostęp, podczas uruchamiania aplikacji. Pozycja może być **powyżej** lub **poniżej** formantu wstążki.|
+|Pozycja QAT|Określa pozycję paska narzędzi Szybki dostęp podczas uruchamiania aplikacji. Pozycja może być albo **powyżej** , albo **poniżej** kontrolki wstążki.|
 |Elementy QAT|Określa polecenia, które są dostępne dla paska narzędzi Szybki dostęp.|
 
 #### <a name="to-add-or-remove-commands-on-the-quick-access-toolbar"></a>Aby dodać lub usunąć polecenia na pasku narzędzi Szybki dostęp
 
-1. W **właściwości** okna, kliknij przycisk **elementy QAT**, a następnie kliknij przycisk wielokropka **(...)** .
+1. W oknie **Właściwości** kliknij pozycję **QAT elementy**, a następnie kliknij przycisk wielokropka **(...)** .
 
-1. W **Edytor elementów QAT** okno dialogowe, użyj **Dodaj** i **Usuń** przycisków, aby zmodyfikować listę poleceń na pasku narzędzi Szybki dostęp.
+1. W oknie dialogowym **Edytor elementów QAT** Użyj przycisków **Dodaj** i **Usuń** , aby zmodyfikować listę poleceń na pasku narzędzi Szybki dostęp.
 
-1. Zaznacz pole wyboru obok polecenia, polecenie, aby się na pasku narzędzi Szybki dostęp i menu paska narzędzi Szybki dostęp. Jeśli chcesz umieścić tylko z menu polecenie, wyczyść pole.
+1. Jeśli chcesz, aby polecenie pojawiało się zarówno na pasku narzędzi Szybki dostęp, jak i w menu paska narzędzi Szybki dostęp, zaznacz pole obok polecenia. Jeśli chcesz, aby polecenie było wyświetlane tylko w menu, wyczyść pole wyboru.
 
 ## <a name="previewing-the-ribbon"></a>Wyświetlanie podglądu wstążki
 
-Szybkie polecenia narzędzi dostęp nie jest wyświetlana na powierzchni projektowej. Aby je wyświetlić, możesz przeglądanie Wstążki lub uruchomić aplikację.
+Polecenia paska narzędzi Szybki dostęp nie są wyświetlane na powierzchni projektowej. Aby je wyświetlić, należy wyświetlić podgląd wstążki lub uruchomić aplikację.
 
-#### <a name="to-preview-the-ribbon-control"></a>Aby wyświetlić podgląd formantu wstążki
+#### <a name="to-preview-the-ribbon-control"></a>Aby wyświetlić podgląd kontrolki wstążki
 
-- Na **pasek narzędzi edytora wstążki**, kliknij przycisk **Testuj Wstążkę**.
+- Na **pasku narzędzi edytora wstążki**kliknij pozycję **Testuj wstążka**.
 
 ## <a name="see-also"></a>Zobacz także
 

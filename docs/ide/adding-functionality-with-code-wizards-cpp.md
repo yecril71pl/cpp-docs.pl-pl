@@ -1,81 +1,81 @@
 ---
-title: Dodawanie funkcji za pomocą kreatorów kodu (C++)
+title: Dodawanie funkcji za pomocą kreatorówC++kodu ()
 ms.date: 05/14/2019
 helpviewer_keywords:
 - code wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: efced3be3a0bcc7efe16aef1061c4cd9ec1ed21c
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.openlocfilehash: 360f206ff4dae0b49650e131ccd86ecf9a0ed87d
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741639"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907488"
 ---
-# <a name="adding-functionality-with-code-wizards-c"></a>Dodawanie funkcji za pomocą kreatorów kodu (C++)
+# <a name="adding-functionality-with-code-wizards-c"></a>Dodawanie funkcji za pomocą kreatorówC++kodu ()
 
-Po utworzeniu projektu można zmienić lub dodać do funkcji tego projektu. Takie zadania obejmują tworzenie nowych klas, dodając nowe funkcje Członkowskie i zmienne i Dodawanie metody automatyzacji i właściwości. Kreatorzy kodu są przeznaczone do pozwalają korzystać z tych możliwości.
+Po utworzeniu projektu, należy zmienić lub dodać do funkcji tego projektu. Takie zadania obejmują tworzenie nowych klas, dodawanie nowych funkcji i zmiennych składowych oraz dodawanie metod i właściwości automatyzacji. Kreatory kodu zaprojektowano w celu umożliwienia wykonania wszystkich tych czynności.
 
 > [!NOTE]
-> Następujących kreatorów kodu rzadko używane są usuwane w Visual Studio 2019 r. Ogólna obsługa biblioteki ATL i MFC nie ulega zmianie poprzez usunięcie tych kreatorów. Przykładowy kod dla tych technologii jest archiwizowane w Microsoft Docs i repozytorium VCSamples GitHub.
+> Następujące rzadko używane kreatory kodu są usuwane w programie Visual Studio 2019. Usunięcie tych kreatorów nie ma wpływu na ogólne wsparcie dla ATL i MFC. Przykładowy kod dla tych technologii jest archiwizowany w Microsoft Docs i repozytorium GitHub VCSamples.
 
 - Kreator składników ATL COM+ 1.0
-- Kreator składników stron Active Server ATL
-- Kreator dostawcy interfejsu OLE DB ATL
+- Kreator składnika stron Active Server ATL
+- Kreator dostawcy OLE DB ATL
 - Kreator strony właściwości ATL
-- Kreator konsumenta OLE DB ATL
+- Kreator OLE DB klienta ATL
 - Odbiorca MFC ODBC
-- Klasa MFC z formantu ActiveX
-- Klasa MFC z biblioteki typów.
+- Klasa MFC z kontrolki ActiveX
+- Klasa MFC z typu lib.
 
 
 > [!NOTE]
->  Teraz możesz dodać procedury obsługi komunikatów i mapowanie komunikatów do nich i zastępują funkcje wirtualne MFC przy użyciu [okno właściwości](/visualstudio/ide/reference/properties-window).
+>  Można dodać programy obsługi komunikatów oraz zamapować do nich komunikaty i przesłonić funkcje wirtualne MFC przy użyciu [kreatora klas MFC](../mfc/reference/mfc-class-wizard.md).
 
-## <a name="accessing-c-code-wizards"></a>Uzyskiwanie dostępu do C++ kreatorów kodu
+## <a name="accessing-c-code-wizards"></a>Dostęp C++ do kreatorów kodu
 
-Istnieją trzy miejsca, w którym możesz uzyskać dostęp C++ kreatorów kodu:
+Istnieją trzy lokalizacje, w których można uzyskać C++ dostęp do kreatorów kodu:
 
-- Na **projektu** menu **Dodaj nowy element** polecenie umożliwia wyświetlenie `Add New Item` okno dialogowe, które ułatwia dodawanie nowych plików do projektu. **Dodaj klasę** polecenie wyświetla [Dodaj klasę](../ide/add-class-dialog-box.md) okno dialogowe, które z kolei Otwórz kreatorów, dla każdej klasy typów, możesz dodać do projektu. **Dodaj zasób** polecenie wyświetla [Dodaj zasób](../windows/add-resource-dialog-box.md) okno dialogowe, w którym można utworzyć lub wybrać zasób, aby dodać do projektu.
+- W menu **projekt** polecenie **Dodaj nowy element** umożliwia `Add New Item` wyświetlenie okna dialogowego, które ułatwia dodawanie nowych plików do projektu. Polecenie **Dodaj klasę** wyświetla okno dialogowe [Dodawanie klasy](../ide/add-class-dialog-box.md) , które z kolei umożliwia otwieranie kreatorów dla każdego z typów klas, które można dodać do projektu. W przypadku klas MFC Użyj [kreatora klas MFC](../mfc/reference/mfc-class-wizard.md). Polecenie **Dodaj zasób** wyświetla okno dialogowe [Dodawanie zasobu](../windows/add-resource-dialog-box.md) , w którym można utworzyć lub wybrać zasób do dodania do projektu.
 
-   Jeśli zaznacz klasę lub interfejs, w projekcie w widoku klas **projektu** menu zawiera również następujące polecenia:
+   W przypadku wyróżnienia klasy lub interfejsu w projekcie w Widok klasy, menu **projekt** zostanie również wyświetlone następujące polecenia:
 
-   - **Implementuj interfejs** (sterowania tylko z klasy)
+   - **Implementuj interfejs** (tylko z klasy kontrolki)
 
    - **Dodaj funkcję**
 
    - **Dodaj zmienną**
 
-   - **Dodaj punkt połączenia z** (tylko w przypadku klasy ATL)
+   - **Dodaj punkt połączenia** (Tylko Klasa ATL)
 
-   - **Dodaj metodę** (z interfejsu tylko)
+   - **Add — Metoda** (tylko z interfejsu)
 
-   - **Dodaj właściwość** (z interfejsu tylko)
+   - **Dodaj właściwość** (tylko z interfejsu)
 
-   - **Dodaj zdarzenie** (sterowania tylko z klasy)
+   - **Dodaj zdarzenie** (tylko z klasy kontrolki)
 
-- W **Eksploratora rozwiązań**, klikając prawym przyciskiem myszy dowolny folder i klikając pozycję **Dodaj** za pomocą skrótu menu pozwala na dodawanie nowych lub istniejących plików, folderów, elementy, klasy, zasoby i odwołania do sieci Web Projekt.
+- W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy dowolny folder i kliknij polecenie **Dodaj** z menu skrótów, aby dodać nowe lub istniejące pliki, więcej folderów, elementów, klas, zasobów i odwołań sieci Web do projektu.
 
-- Z [okna widoku klasy](/visualstudio/ide/viewing-the-structure-of-code), klikając prawym przyciskiem myszy odpowiedni węzeł i klikając pozycję **Dodaj** za pomocą skrótu menu pozwala na dodawanie funkcje, zmienne, klas, właściwości, metody, zdarzenia, interfejsy punkty połączenia lub innego kodu do projektu.
+- W [oknie widok klasy](/visualstudio/ide/viewing-the-structure-of-code)kliknij prawym przyciskiem myszy odpowiedni węzeł i kliknij polecenie **Dodaj** z menu skrótów, aby dodać funkcje, zmienne, klasy, właściwości, metody, zdarzenia, interfejsy, punkty połączenia lub inny kod do projektu.
 
    > [!NOTE]
-   > Program Visual Studio nie udostępnia kreatora, aby dodać interfejs do projektu. Można dodać interfejs do projektu ATL lub do [Dodawanie obsługi ATL do projektu MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) przez dodanie przy użyciu prostego obiektu [proste Kreator obiektu ATL](../atl/reference/atl-simple-object-wizard.md). Alternatywnie Otwórz pliku .idl projektu i Utwórz interfejs, wpisując:
+   > Program Visual Studio nie udostępnia kreatora umożliwiającego dodanie interfejsu do projektu. Można dodać interfejs do projektu ATL lub do [dodawania obsługi ATL do projektu MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) przez dodanie prostego obiektu za pomocą [Kreatora prostych obiektów ATL](../atl/reference/atl-simple-object-wizard.md). Alternatywnie Otwórz plik. idl projektu i Utwórz interfejs, wpisując:
 
     ```IDL
     interface IMyInterface {
     };
     ```
 
-   Zobacz [implementującej interfejs](../ide/implementing-an-interface-visual-cpp.md) i [Dodawanie obiektów i kontrolek do projektu ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md) Aby uzyskać więcej informacji.
+   Aby uzyskać więcej informacji, zobacz [implementowanie interfejsu](../ide/implementing-an-interface-visual-cpp.md) i [Dodawanie obiektów i kontrolek do projektu ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md) .
 
-   |Kod dostępu do Kreatora|Opis|
+   |Dostęp do kreatora kodu z|Opis|
    |-----------------------------|-----------------|
-   |Dodaj nowy element|Dodaj nowy element kreatorów kodu Dodaj pliki źródłowe do projektu. Jeśli to konieczne, dodatkowe katalogi są tworzone ma zawierać pliki, w którym aparat kompilacji projektu spodziewa się je znaleźć. Dostępne z ikony elementu Dodawanie kreatorów kodu, obejmują:<br /><br />-Dodaj pliki źródłowe C++ (.cpp, .h, .idl, .rc, .srf, .def, .rgs).<br />-Dodaj pliki programowanie sieci Web (HTML, .asp, CSS, .xml).<br />— Dodawanie plików narzędzi i zasobów (.bmp, .cur, .ico, .rct, .sql, txt).<br /><br />Tych kreatorów kodu zwykle nie monit o podanie informacji, ale Dodaj plik do drzewa Twojego rozwoju. Może zmienić nazwy pliku w oknie właściwości.|
-   |Eksplorator rozwiązań|Dostępne z Eksploratora rozwiązań, kreatorów kodu, zależą od tego, gdzie fokus kursora jest po kliknięciu prawym przyciskiem myszy element. Jeśli **Dodaj** opcja nie jest wyświetlana po kliknięciu prawym przyciskiem myszy element, przesuń kursor góry o jeden poziom w drzewie programowania, a następnie spróbuj ponownie. Kreatorów kodu będzie zawsze umieszczaj dodatkowy kod w odpowiednim miejscu w drzewie programowania niezależnie od tego przypadku kursor. Kreatorzy kodu jest dostępny w Eksploratorze rozwiązań, obejmują:<br /><br />-Dodaj klasę (otwiera **Dodaj klasę** okno dialogowe zawierające nowe kreatorów kodu).<br />— Dodawanie zasobów (nowa, Import lub niestandardowe).<br />-Dodaj odwołanie sieci Web.|
-   |Widok klas|Dostępne w widoku klas kreatorów kodu, zależą od tego, gdzie fokus kursora jest kliknięcie prawym przyciskiem myszy element. Jeśli **Dodaj** opcja nie jest wyświetlana po kliknięciu prawym przyciskiem myszy element, przesuń kursor góry o jeden poziom w drzewie klasy, a następnie spróbuj ponownie. Kreatorów kodu będzie zawsze umieszczaj dodatkowy kod w odpowiednim miejscu w drzewie programowania niezależnie od tego przypadku kursor. Kreatorzy kodu jest dostępny w widoku klas obejmują:<br /><br />- [Dodaj funkcję członkowską](../ide/adding-a-member-function-visual-cpp.md).<br />- [Dodaj zmienną składową](../ide/adding-a-member-variable-visual-cpp.md).<br />- [Dodaj klasę](../ide/adding-a-class-visual-cpp.md).<br />- [Implementuj interfejs](../ide/implement-interface-wizard.md) (sterowania tylko z klasy)<br />- [Dodaj punkt połączenia z](../ide/implement-connection-point-wizard.md) (tylko w przypadku klasy ATL)<br />- [Dodaj metodę](../ide/add-method-wizard.md) (z interfejsu tylko)<br />- [Dodaj właściwość](../ide/names-add-property-wizard.md) (z interfejsu tylko)<br />- [Dodaj zdarzenie](../ide/add-event-wizard.md) (sterowania tylko z klasy)<br /><br />Wybór Dodaj klasę spowoduje otwarcie **Dodaj klasę** okno dialogowe, które umożliwia dostęp do wszystkich nowych kreatorów kodu Dodaj klasę.|
+   |Dodaj nowy element|Kreator Dodaj nowy kod elementu Dodaj pliki źródłowe do projektu. W razie potrzeby dodatkowe katalogi są tworzone w taki sposób, aby zawierały pliki, których oczekuje aparat kompilacji projektu. Kreatory kodu dostępne z ikony Dodaj element obejmują:<br /><br />-Dodaj C++ pliki źródłowe (. cpp,. h,. idl,. RC,. SRF,. def,. RGS).<br />-Dodaj pliki deweloperskie sieci Web (. html,. ASP,. CSS,. xml).<br />-Dodaj pliki narzędzi i zasobów (. bmp,. CUR,. ico,. rct,. SQL,. txt).<br /><br />Te kreatory kodu zwykle nie pytają o żadne informacje, ale dodają plik do drzewa deweloperskiego. Można zmienić nazwę pliku w oknie właściwości.|
+   |Eksplorator rozwiązań|Kreatory kodu dostępne z Eksplorator rozwiązań zależą od tego, gdzie fokus kursora jest po kliknięciu prawym przyciskiem myszy elementu. Jeśli opcja **Dodaj** nie zostanie wyświetlona po kliknięciu prawym przyciskiem myszy elementu, Przenieś kursor w górę o jeden poziom w drzewie deweloperskim i spróbuj ponownie. Kreatory kodu zawsze umieszczają dodatkowy kod w odpowiednim miejscu w drzewie programistycznym, niezależnie od miejsca, w którym znajduje się kursor. Kreatory kodu dostępne z Eksplorator rozwiązań obejmują:<br /><br />-Dodaj klasę (otwiera okno dialogowe **Dodawanie klasy** zawierającej nowych kreatorów kodu).<br />-Dodaj zasób (nowy, importowany lub niestandardowy).<br />-Dodaj odwołanie sieci Web.|
+   |Widok klas|Kreatory kodu dostępne z Widok klasy zależą od tego, gdzie fokus kursora jest po kliknięciu prawym przyciskiem myszy elementu. Jeśli opcja **Dodaj** nie jest wyświetlana po kliknięciu prawym przyciskiem myszy elementu, Przenieś kursor w górę o jeden poziom w drzewie klas i spróbuj ponownie. Kreatory kodu zawsze umieszczają dodatkowy kod w odpowiednim miejscu w drzewie programistycznym, niezależnie od miejsca, w którym znajduje się kursor. Kreatory kodu dostępne z Widok klasy obejmują:<br /><br />- [Dodaj funkcję członkowską](../ide/adding-a-member-function-visual-cpp.md).<br />- [Dodaj zmienną członkowską](../ide/adding-a-member-variable-visual-cpp.md).<br />- [Dodaj klasę](../ide/adding-a-class-visual-cpp.md).<br />- [Implementuj interfejs](../ide/implement-interface-wizard.md) (tylko z klasy kontrolki)<br />- [Dodaj punkt połączenia](../ide/implement-connection-point-wizard.md) (Tylko Klasa ATL)<br />- [Add — Metoda](../ide/add-method-wizard.md) (tylko z interfejsu)<br />- [Dodaj właściwość](../ide/names-add-property-wizard.md) (tylko z interfejsu)<br />- [Dodaj zdarzenie](../ide/add-event-wizard.md) (tylko z klasy kontrolki)<br /><br />Dodaj klasę wybór otwiera okno dialogowe **Dodaj klasę** , które zapewnia dostęp do wszystkich kreatorów dodawania kodu klasy.|
 
 ## <a name="see-also"></a>Zobacz także
 
-[Zastępowanie funkcji wirtualnych](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
-[Przejdź z C++ kodu bazowego w programie Visual Studio](../ide/navigate-code-cpp.md)<br>
+[Zastępowanie funkcji wirtualnej](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
+[Nawigowanie C++ po bazie kodu w programie Visual Studio](../ide/navigate-code-cpp.md)<br>
 [C++typy projektów w programie Visual Studio](../build/reference/visual-cpp-project-types.md)<br>
-[Plik typy utworzone dla programu Visual Studio C++ projektów](../build/reference/file-types-created-for-visual-cpp-projects.md)
+[Typy plików utworzone dla projektów programu C++ Visual Studio](../build/reference/file-types-created-for-visual-cpp-projects.md)

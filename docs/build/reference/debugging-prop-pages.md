@@ -1,6 +1,6 @@
 ---
 title: C++Debugowanie stron właściwości
-ms.date: 7/24/2019
+ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 78115a6b-3799-4515-814e-8566b5bdc55d
 f1_keywords:
@@ -35,16 +35,16 @@ f1_keywords:
 - VC.Project.IVCWebSvcDebugPageObject.HttpUrl
 - VC.Project.IVCWebSvcDebugPageObject.DebuggerType
 - VC.Project.IVCWebSvcDebugPageObject.SQLDebugging
-ms.openlocfilehash: a63ac181b4ef281d6d78d951a46bba85103ba636
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: 5f7a7bc0e2c696365daa38696fde6f1a480644b4
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537768"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927735"
 ---
 # <a name="c-debugging-property-pages"></a>C++Debugowanie stron właściwości
 
-Te strony właściwości są dostępne we **właściwościach**  > **projektu** > **debugowanie** > **właściwości**. Wybierz typ debugera w kontrolce listy rozwijanej. Aby uzyskać więcej informacji na C++ temat debugowania kodu [, zobacz Samouczek: Dowiedz się C++ , jak debugować kod](/visualstudio/debugger/getting-started-with-the-debugger-cpp) przy użyciu programu Visual Studio i [debugować kod natywny](/visualstudio/debugger/debugging-native-code).
+Te strony właściwości są dostępne**we właściwościach** >  **projektu** >  > **debugowanie**właściwości. Wybierz typ debugera w kontrolce listy rozwijanej. Aby uzyskać więcej informacji na C++ temat debugowania kodu [, zobacz Samouczek: Dowiedz się C++ , jak debugować kod](/visualstudio/debugger/getting-started-with-the-debugger-cpp) przy użyciu programu Visual Studio i [debugować kod natywny](/visualstudio/debugger/debugging-native-code).
 
 ## <a name="local-windows-debugger-property-page"></a>Strona właściwości lokalnego debugera systemu Windows
 
@@ -70,11 +70,11 @@ Określa typ debugera do użycia. Po ustawieniu na wartość autodebuger typ zos
 
 **Decyzji**
 
-- Tylko natywny — tylko natywny
+- Tylko **natywny** — tylko natywny
 - **Tylko zarządzane** — tylko zarządzane
 - **Mieszany** — mieszany
-- Autowybieranie
-- Skrypt **— skrypt**
+- **Autowybieranie**
+- **Skrypt — skrypt**
 - **Tylko procesor GPUC++ (amp)** — tylko procesorC++ GPU (amp)
 
 ### <a name="environment"></a>Środowisko
@@ -91,7 +91,7 @@ Ustawia częstotliwość przerwy między debugerem GPU.
 
 **Decyzji**
 
-- **Przerwij raz na** Wypaczenie, raz na osnowę
+- **Przerwij raz na wypaczenie** , raz na osnowę
 - **Przerwij dla każdego wątku (takie jak zachowanie procesora CPU)** — Przerwij dla każdego wątku (takie jak zachowanie procesora CPU)
 
 ### <a name="merge-environment"></a>Scal środowisko
@@ -141,11 +141,11 @@ Określa typ debugera do użycia. Po ustawieniu na wartość autodebuger typ zos
 
 **Decyzji**
 
-- Tylko natywny — tylko natywny
+- Tylko **natywny** — tylko natywny
 - **Tylko zarządzane** — tylko zarządzane
 - **Mieszany** — mieszany
-- Autowybieranie
-- Skrypt **— skrypt**
+- **Autowybieranie**
+- **Skrypt — skrypt**
 - **Tylko procesor GPUC++ (amp)** — tylko procesorC++ GPU (amp)
 
 ### <a name="environment"></a>Środowisko
@@ -162,7 +162,7 @@ Ustawia częstotliwość przerwy między debugerem GPU.
 
 **Decyzji**
 
-- **Przerwij raz na** Wypaczenie, raz na osnowę
+- **Przerwij raz na wypaczenie** , raz na osnowę
 - **Przerwij dla każdego wątku (takie jak zachowanie procesora CPU)** — Przerwij dla każdego wątku (takie jak zachowanie procesora CPU)
 
 ### <a name="attach"></a>Dołącz
@@ -201,11 +201,11 @@ Określa typ debugera do użycia. Po ustawieniu na wartość autodebuger typ zos
 
 **Decyzji**
 
-- Tylko natywny — tylko natywny
+- Tylko **natywny** — tylko natywny
 - **Tylko zarządzane** — tylko zarządzane
 - **Mieszany** — mieszany
-- Autowybieranie
-- Skrypt **— skrypt**
+- **Autowybieranie**
+- **Skrypt — skrypt**
 
 ## <a name="web-service-debugger-property-page"></a>Strona właściwości debugera usługi sieci Web
 
@@ -219,11 +219,11 @@ Określa typ debugera do użycia. Po ustawieniu na wartość autodebuger typ zos
 
 **Decyzji**
 
-- Tylko natywny — tylko natywny
+- Tylko **natywny** — tylko natywny
 - **Tylko zarządzane** — tylko zarządzane
 - **Mieszany** — mieszany
-- Autowybieranie
-- Skrypt **— skrypt**
+- **Autowybieranie**
+- **Skrypt — skrypt**
 
 ### <a name="sql-debugging"></a>Debugowanie SQL
 

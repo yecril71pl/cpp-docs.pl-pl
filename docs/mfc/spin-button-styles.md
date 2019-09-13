@@ -1,39 +1,39 @@
 ---
 title: Style przycisku pokrętła
-ms.date: 11/04/2016
+ms.date: 09/09/2019
 helpviewer_keywords:
 - styles [MFC], CSpinButtonCtrl
 - CSpinButtonCtrl class [MFC], styles
 - styles [MFC], spin button control
 - spin button control, styles
 ms.assetid: fb4a7f6f-9182-47be-bccf-0728fdc5332f
-ms.openlocfilehash: d955ba1d76ee4d5648613ddaf6c5f6a652f3d3af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1aae4b7e4c63929ebe03c97d50f05754bc13ec26
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307175"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907859"
 ---
 # <a name="spin-button-styles"></a>Style przycisku pokrętła
 
-Wiele ustawień dla przycisku pokrętła ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) są kontrolowane przez style. Można ustawić następujące style, przy użyciu **właściwości** okna w edytorze okien dialogowych.
+Wiele ustawień przycisku pokrętła ([Korzystanie CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) są kontrolowane przez style. Za pomocą [kreatora klas](reference/mfc-class-wizard.md)można ustawić następujące style.
 
-- **Orientacja** pionowych lub poziomych. Określa orientację przycisków strzałek. Skojarzone ze stylem UDS_HORZ.
+- **Orientacja** Pionowa lub pozioma. Steruje orientacją przycisków strzałek. Skojarzone ze stylem UDS_HORZ.
 
-- **Wyrównanie** niedołączone, po lewej lub prawej. Określa położenie przycisku pokrętła. Lewy i prawy pozycji przycisku pokrętła obok okno cyklu. Szerokość okna zaprzyjaźnionego jest obniżona do uwzględnienia przycisku pokrętła. Skojarzone z UDS_ALIGNLEFT i UDS_ALIGNRIGHT style.
+- **Wyrównanie** Jeden z niedołączonych, lewy lub prawy. Kontroluje lokalizację przycisku pokrętła. Po lewej i prawej stronie umieść przycisk pokrętła obok okna partnera. Szerokość okna partnera zostanie zmniejszona, aby pomieścić przycisk pokrętła. Skojarzone ze stylami UDS_ALIGNLEFT i UDS_ALIGNRIGHT.
 
-- **Auto Buddy** automatycznie wybiera poprzedniego okna w porządku osi Z jako okno buddy do przycisku pokrętła. W szablonu okna dialogowego to jest formant, który poprzedza przycisku pokrętła w kolejności tabulacji. Skojarzone ze stylem UDS_AUTOBUDDY.
+- **Autokolega** Automatycznie wybiera poprzednie okno w porządku osi Z jako okno kolega do przycisku pokrętła. W szablonie okna dialogowego jest to formant, który poprzedza przycisk pokrętła w kolejności tabulacji. Skojarzone ze stylem UDS_AUTOBUDDY.
 
-- **Ustaw Buddy Integer** powoduje, że kontrolka pokrętła zwiększyć i zmniejszyć podpis okna zaprzyjaźnionego jako bieżące zmiany pozycji. Skojarzone ze stylem UDS_SETBUDDYINT.
+- **Ustaw znajomą liczbę całkowitą** Powoduje, że formant pokrętła zwiększy i zmniejszy podpis okna partnera w miarę zmiany bieżącej pozycji. Skojarzone ze stylem UDS_SETBUDDYINT.
 
-- **Bez tysięcy** nie wstawia tysięcy separatorów w wartości w podpisie okno cyklu. Skojarzone ze stylem UDS_NOTHOUSANDS.
+- **Brak tysięcy** Nie wstawia separatora tysięcy do wartości w podpisie okna partnera. Skojarzone ze stylem UDS_NOTHOUSANDS.
 
     > [!NOTE]
-    >  Ustaw ten styl, jeśli chcesz użyć wymiana danych okna dialogowego (DDX), aby uzyskać wartość całkowitą z formantu partnera. `DDX_Text` nie akceptuje osadzone separatory tysięcy.
+    >  Ustaw ten styl, jeśli chcesz użyć wymiany danych okna dialogowego (DDX) w celu uzyskania wartości całkowitej z formantu partnera. `DDX_Text`nie akceptuje osadzonych separatorów tysięcy.
 
-- **OPAKOWYWANIE** sprawia, że położenie "wrap", wartość jest zwiększone lub zmniejszone poza zakresem formantu. Skojarzone ze stylem UDS_WRAP.
+- **Zawijaj** Powoduje, że pozycja "Otocz" jako wartość jest zwiększana lub zmniejszana poza zakresem formantu. Skojarzone ze stylem UDS_WRAP.
 
-- **Klawisze strzałek** powoduje, że przycisk pokrętła, aby zwiększyć lub zmniejszyć pozycji po naciśnięciu klawisza Strzałka w górę i Strzałka w dół. Skojarzone ze stylem UDS_ARROWKEYS.
+- **Klawisze strzałek** Powoduje, że przycisk pokrętła zwiększa lub zmniejsza pozycję po naciśnięciu klawiszy Strzałka w górę i Strzałka w dół. Skojarzone ze stylem UDS_ARROWKEYS.
 
 ## <a name="see-also"></a>Zobacz także
 

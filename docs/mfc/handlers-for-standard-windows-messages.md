@@ -10,33 +10,33 @@ helpviewer_keywords:
 - functions [MFC], handler
 - messages [MFC], Windows
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
-ms.openlocfilehash: d60ae52225ddd993c1768d0b5ce1989ab0192e45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f512c3b9a7fce5cddd582fa774742d2b1ac0967
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358244"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907426"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>Programy obsługi dla standardowych komunikatów systemu Windows
 
-Domyślne programy obsługi dla standardowych komunikatów Windows (**WM_**) są wstępnie zdefiniowane w klasie `CWnd`. Biblioteka klas określa nazwy dla tych programów obsługi na Nazwa komunikatu. Na przykład program obsługi dla **WM_PAINT** wiadomości jest zadeklarowana w `CWnd` jako:
+Domyślne programy obsługi dla standardowych komunikatów systemu Windows (**WM_** ) są wstępnie zdefiniowane `CWnd`w klasie. Nazwy baz klas dla tych programów obsługi w nazwie komunikatu. Na przykład program obsługi komunikatu **WM_PAINT** jest deklarowany `CWnd` jako:
 
 `afx_msg void OnPaint();`
 
-**Afx_msg** — słowo kluczowe sugeruje efekt C++ **wirtualnego** — słowo kluczowe przy rozróżnianiu obsługi z innych `CWnd` funkcji elementów członkowskich. Należy jednak pamiętać, że te funkcje nie są w rzeczywistości wirtualnej; Zamiast tego są one wykonywane za pomocą mapy komunikatów. Mapy komunikatów zależą od wyłącznie standardowe makra preprocesora, nie na jakichkolwiek rozszerzeń języka C++. **Afx_msg** — słowo kluczowe jest rozpoznawana jako biały znak po przetwarzania wstępnego.
+Słowo kluczowe **afx_msg** sugeruje efekt C++ **wirtualnego** słowa kluczowego poprzez odróżnienie obsługi od innych `CWnd` funkcji Członkowskich. Należy jednak pamiętać, że te funkcje nie są w rzeczywistości wirtualne; Zamiast tego są one wdrażane za poorednictwem map komunikatów. Mapy komunikatów są zależne wyłącznie od standardowych makr preprocesora, a nie na żadnym z C++ rozszerzeń języka. Słowo kluczowe **afx_msg** jest rozpoznawane jako biały znak po przeprowadzeniu wstępnego przetwarzania.
 
-Aby zastąpić procedurę obsługi zdefiniowaną w klasie bazowej, po prostu zdefiniuj funkcję z tego samego prototypu w klasie pochodnej i nawiązać wpis mapy komunikatów dla programu obsługi. Programu obsługi "zastępuje" każdy program obsługi o takiej samej nazwie w jednym z klasy bazowe tej klasy.
+Aby zastąpić procedurę obsługi zdefiniowaną w klasie bazowej, wystarczy zdefiniować funkcję z tym samym prototypem w klasie pochodnej i utworzyć wpis mapy komunikatów dla programu obsługi. Procedura obsługi "przesłania" wszystkie procedury obsługi o tej samej nazwie w dowolnych klasach bazowych klasy.
 
-W niektórych przypadkach programu obsługi należy wywołać obsługi zastąpione w klasie bazowej tak klas podstawowych i Windows, które mogą działać w komunikacie. Gdy wywołujesz obsługi klasa bazowa przesłonięcia zależy od okoliczności. Czasami, należy najpierw wywołać procedurę obsługi klasy podstawowej i czasem ostatniego. Czasami możesz wywołać program obsługi klasy bazowej warunkowo, jeśli nie zdecydujesz się na siebie obsłużyć komunikat. Czasami możesz powinien wywoływanie programu do obsługi klasy bazowej, a następnie warunkowo wykonywanie własnego kodu programu obsługi, w zależności od wartości lub stan zwrócone przez procedurę obsługi klasy bazowej.
+W niektórych przypadkach procedura obsługi powinna wywołać przesłoniętą procedurę obsługi w klasie bazowej, aby klasy podstawowe i system Windows mogły działać w komunikacie. W przypadku wywołania procedury obsługi klasy podstawowej w zastępowaniu zależą od okoliczności. Czasami należy wywołać procedurę obsługi klasy bazowej jako pierwszą i czasami ostatnią. Czasami wywoływanie warunkowego procedury obsługi klasy podstawowej w przypadku zrezygnowania z obsługi wiadomości. Czasami należy wywołać procedurę obsługi klasy podstawowej, a następnie warunkowo wykonać własny kod procedury obsługi, w zależności od wartości lub stanu zwróconego przez procedurę obsługi klasy podstawowej.
 
 > [!CAUTION]
->  Nie jest bezpieczne argumenty przekazywane do programu obsługi, jeśli zamierzasz przekazać ich do obsługi klasy bazowej. Na przykład, być może uznasz, że aby zmodyfikować *nChar* argument `OnChar` obsługi (do przekonwertowania na wielkie litery, na przykład). To zachowanie jest dość zasłoniętej, ale jeśli potrzebujesz osiągnąć ten efekt `CWnd` funkcja elementu członkowskiego `SendMessage` zamiast tego.
+>  Nie można bezpiecznie modyfikować argumentów przekazywanych do procedury obsługi, jeśli zamierzasz przekazać je do procedury obsługi klasy podstawowej. Na przykład może być skłonny do zmodyfikowania argumentu `OnChar` *nchar* procedury obsługi (na przykład w celu przekonwertowania na wielkie litery). To zachowanie jest dość zasłonięte, ale jeśli chcesz to zrobić, zamiast tego należy użyć `CWnd` funkcji `SendMessage` elementu członkowskiego.
 
-Jak określić prawidłowego sposobu zastąpienia danej komunikatów, gdy w oknie właściwości zapisuje szkielet funkcji obsługi dla danego komunikatu — `OnCreate` Obsługa **WM_CREATE**, na przykład — szkice go w formie Funkcja zalecane zgodnym z przesłoniętą składową. Poniższy przykład zaleca obsługi najpierw wywoływanie programu do obsługi klasy podstawowej i kontynuować tylko pod warunkiem, że nie zwraca -1.
+Jak określić właściwy sposób przesłonięcia danego komunikatu, gdy [Kreator klas](reference/mfc-class-wizard.md) zapisuje szkielet funkcji obsługi dla danego komunikatu — `OnCreate` program obsługi **WM_CREATE**, na przykład — szkic w formie zalecanej zastąpiona funkcja członkowska. W poniższym przykładzie zaleca się, aby procedura obsługi najpierw wywołała obsługę klasy podstawowej i kontynuowała tylko wtedy, gdy nie zwraca-1.
 
 [!code-cpp[NVC_MFCMessageHandling#3](../mfc/codesnippet/cpp/handlers-for-standard-windows-messages_1.cpp)]
 
-Według Konwencji nazwy te programy obsługi zaczynają się od prefiksu "On". Niektóre z tych programów obsługi nie przyjmują argumentów, podczas gdy inne przejąć kilka. Niektóre również mieć zwracanego typu innego niż **void**. Programy obsługi domyślnego dla wszystkich **WM_** komunikaty są udokumentowane w *odwołanie MFC* jako funkcje Członkowskie klasy `CWnd` których nazwy zaczynają się od "On". W deklaracjach funkcji Członkowskich `CWnd` mają prefiks **afx_msg**.
+Według Konwencji nazwy tych programów obsługi zaczynają się prefiksem "on". Niektóre z tych programów obsługi nie przyjmują argumentów, a inne zajmują kilka. Niektóre z nich również mają typ zwracany inny niż **void**. Domyślne programy obsługi dla wszystkich komunikatów **WM_** są udokumentowane w *odwołaniu MFC* jako funkcje elementów członkowskich klasy `CWnd` , których nazwy zaczynają się od "on". Deklaracje funkcji Członkowskich w `CWnd` programie są poprzedzone prefiksem **afx_msg**.
 
 ## <a name="see-also"></a>Zobacz także
 

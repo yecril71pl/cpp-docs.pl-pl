@@ -8,36 +8,36 @@ helpviewer_keywords:
 - ActiveX controls [MFC], properties
 - controls [MFC], properties
 ms.assetid: 14ce5152-742b-4e0d-a9ab-c7b456e32918
-ms.openlocfilehash: 0a03acfd880bcf63017eec9796315b98e5d5f4d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d42820efd06c2ae52f5d1b22b0bdfb6335c4a89
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394887"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907805"
 ---
 # <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>Kontenery kontrolek ActiveX: Wyświetlanie i modyfikowanie właściwości kontrolki
 
-Po wstawieniu kontrolki ActiveX do projektu jest przydatny do wyświetlania i zmieniania właściwości jest obsługiwana przez kontrolkę ActiveX. W tym artykule omówiono sposób używania edytora zasobów Visual C++, aby to zrobić.
+Po wstawieniu kontrolki ActiveX do projektu warto wyświetlić i zmienić właściwości obsługiwane przez kontrolkę ActiveX. W tym artykule omówiono sposób użycia edytora zasobów C++ wizualnych w tym celu.
 
-Jeśli Twojej aplikacji kontenera kontrolek ActiveX używa formantów osadzone, należy można wyświetlać i modyfikować właściwości formantu znajduje się w edytorze zasobów. Edytor zasobów umożliwia również do ustawiania wartości właściwości w czasie projektowania. Edytor zasobów następnie automatycznie zapisuje te wartości w pliku zasobów projektu. Dowolne wystąpienie kontrolki będzie miał jego właściwości inicjowana na te wartości.
+Jeśli aplikacja kontenera kontrolki ActiveX używa formantów osadzonych, można wyświetlać i modyfikować właściwości kontrolki w edytorze zasobów. Można również użyć edytora zasobów do ustawiania wartości właściwości w czasie projektowania. Następnie Edytor zasobów automatycznie zapisuje te wartości w pliku zasobów projektu. Wszystkie wystąpienia kontrolki zostaną następnie zainicjowane do tych wartości właściwości.
 
-W tej procedurze założono, że wstawiono formant do projektu. Aby uzyskać informacje, zobacz [kontenery kontrolek ActiveX: Wstawianie kontrolki do aplikacji kontenera kontrolek](../mfc/inserting-a-control-into-a-control-container-application.md).
+W tej procedurze przyjęto założenie, że wstawiono kontrolkę do projektu. Aby uzyskać więcej informacji [, zobacz kontenery kontrolek ActiveX: Wstawianie kontrolki do aplikacji](../mfc/inserting-a-control-into-a-control-container-application.md)kontenera kontrolek.
 
-Pierwszym krokiem podczas przeglądania właściwości formantu jest dodaje wystąpienie formantu do projektu szablonu okna dialogowego.
+Pierwszym krokiem wyświetlania właściwości kontrolki jest dodanie wystąpienia kontrolki do szablonu okna dialogowego projektu.
 
-### <a name="to-view-the-properties-of-a-control"></a>Aby wyświetlić właściwości formantu
+### <a name="to-view-the-properties-of-a-control"></a>Aby wyświetlić właściwości kontrolki
 
-1. Otwórz w widoku zasobu **okna dialogowego** folderu.
+1. W Widok zasobów Otwórz folder **okna dialogowego** .
 
-1. Otwórz szablon okno główne okno dialogowe.
+1. Otwórz główny szablon okna dialogowego.
 
-1. Wstaw kontrolkę ActiveX za pomocą **Wstawianie formantu ActiveX** okno dialogowe. Aby uzyskać więcej informacji, zobacz [wyświetlanie i dodawanie kontrolek ActiveX do okna dialogowego](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).
+1. Wstaw kontrolkę ActiveX przy użyciu okna dialogowego **Wstawianie kontrolki ActiveX** . Aby uzyskać więcej informacji, zobacz [Wyświetlanie i Dodawanie kontrolek ActiveX do okna dialogowego](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).
 
-1. Zaznacz formant ActiveX w oknie dialogowym.
+1. W oknie dialogowym Wybierz kontrolkę ActiveX.
 
-1. W oknie dialogowym właściwości kliknij **właściwości** przycisku.
+1. W oknie **Właściwości** kliknij przycisk **Właściwości** .
 
-Użyj **właściwości** okno dialogowe, aby zmodyfikować i jego natychmiastowe testowanie nowych właściwości.
+Za pomocą okna dialogowego **Właściwości** można natychmiast modyfikować i testować nowe właściwości.
 
 ## <a name="see-also"></a>Zobacz także
 

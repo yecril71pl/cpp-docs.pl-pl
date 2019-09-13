@@ -1,38 +1,32 @@
 ---
 title: Dodawanie klasy MFC
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 f1_keywords:
 - vc.codewiz.classes.adding.mfc
 helpviewer_keywords:
 - classes [MFC], adding MFC
 - MFC, adding classes
 ms.assetid: 9a96b67f-40bf-43d4-8872-2f8dfc5404f1
-ms.openlocfilehash: 1cc3dc734917da46af99e67da40fe243941102e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 266940092e68a76f2ac485a81ac6ac90b02ee0ac
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296777"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907653"
 ---
 # <a name="adding-an-mfc-class"></a>Dodawanie klasy MFC
 
-Aby dodać klasy pochodne od klas biblioteki Microsoft Foundation Class (MFC) do projektu, należy użyć **Dodaj klasę** polecenia dostępne [Widok klas](/visualstudio/ide/viewing-the-structure-of-code). Określ nazwę dla nowej klasy, wybierz klasę bazową, a następnie wybierz identyfikator okna dialogowego, z którą jest skojarzony (jeśli istnieje). Kreator kod tworzy plik nagłówka i pliku z implementacją i dodaje je do projektu.
+Aby dodać klasy pochodne klas Microsoft Foundation Class (MFC) do projektu, użyj przycisku **Dodaj klasę** w [Kreatorze klas](mfc-class-wizard.md). Określ nazwę nowej klasy, wybierz klasę bazową, a następnie wybierz identyfikator okna dialogowego, z którym jest skojarzone (jeśli istnieje). Kreator tworzy plik nagłówka i plik implementacji i dodaje je do projektu.
 
 > [!NOTE]
->  Klasy MFC można dodawać do aplikacji ATL COM, jeśli można początkowo [tworzenia aplikacji z obsługą MFC](../../atl/reference/mfc-support-in-atl-projects.md). Klasy MFC można również dodać do projekty Win32, które obsługują MFC.
+>  Klasy MFC można dodać do aplikacji ATL COM, jeśli początkowo aplikacja została [utworzona przy użyciu obsługi MFC](../../atl/reference/mfc-support-in-atl-projects.md). Można również dodawać klasy MFC do projektów Win32 z obsługą MFC.
 
-### <a name="to-add-an-mfc-class-to-your-project"></a>Dodawanie klasy MFC do projektu
+### <a name="to-add-an-mfc-class-to-your-project"></a>Aby dodać klasę MFC do projektu
 
-1. W widoku klas kliknij prawym przyciskiem myszy nazwę projektu. Kliknij przycisk **Dodaj** a następnie kliknij przycisk **Dodaj klasę** otworzyć [Dodaj klasę](../../ide/add-class-dialog-box.md) okno dialogowe.
-
-1. W okienku szablonów zaznacz **klasy MFC** i naciśnij klawisz **Dodaj** przycisku.
-
-1. Zdefiniuj ustawienia dla nowej klasy w [Kreator klas MFC](../../mfc/reference/mfc-add-class-wizard.md) okno dialogowe.
-
-1. Kliknij przycisk **Zakończ** aby zamknąć kreatora i wyświetlić nową klasę w widoku klas. Można również wyświetlić pliki tworzone przez kreatora w **Eksploratora rozwiązań**.
+W Widok klasy kliknij prawym przyciskiem myszy nazwę projektu. Kliknij przycisk **Kreator klas** , a następnie kliknij przycisk **Dodaj klasę** , aby otworzyć okno dialogowe [Dodawanie klasy MFC](mfc-add-class-wizard.md) . Użyj **kreatora klas** , aby dodać procedury obsługi komunikatów lub nowe metody.
 
 ## <a name="see-also"></a>Zobacz także
 
 [Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)<br/>
-[Klasa — Przegląd](../../mfc/class-library-overview.md)
+[Przegląd klas](../../mfc/class-library-overview.md)

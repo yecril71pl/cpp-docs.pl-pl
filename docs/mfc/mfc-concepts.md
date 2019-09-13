@@ -1,70 +1,70 @@
 ---
 title: Pojęcia związane z MFC
-ms.date: 1/09/2018
+ms.date: 01/09/2018
 f1_keywords:
 - Concepts
-ms.openlocfilehash: 8d021350125acda52bb4ecf3919282cb7bbe52b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5617051dc700bb1dd594a13627c9e3d01ef9caa9
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239028"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927903"
 ---
 # <a name="mfc-concepts"></a>Pojęcia związane z MFC
 
-Ta sekcja zawiera tematy dotyczące pojęć i opartego na zadaniach ułatwiające program za pomocą biblioteki Microsoft Foundation Class (MFC).
+Ta sekcja zawiera tematy dotyczące pojęć i zadań, które ułatwiają programowi korzystanie z biblioteki Microsoft Foundation Class (MFC).
 
 ## <a name="in-this-section"></a>W tej sekcji
 
 [Tematy ogólne dotyczące MFC](../mfc/general-mfc-topics.md)<br/>
-W tym artykule omówiono szczegóły techniczne dotyczące biblioteki MFC.
+Omawia szczegóły techniczne biblioteki MFC.
 
 [Używanie obiektu CObject](../mfc/using-cobject.md)<br/>
-Zawiera łącza do korzystania z `CObject`, klasa bazowa dla większości klas w MFC.
+Oferuje linki do korzystania `CObject`z klasy bazowej dla większości klas w MFC.
 
 [Kolekcje](../mfc/collections.md)<br/>
-W tym artykule omówiono klasy kolekcji utworzone na podstawie i nie utworzone na podstawie szablonów języka C++.
+Omawia klasy kolekcji utworzone na podstawie C++ szablonów i nie zostały utworzone.
 
 [Data i godzina](../atl-mfc-shared/date-and-time.md)<br/>
-Zawiera łącza do tematów omawiających używanie daty i godziny z MFC.
+Zawiera łącza do tematów omawiających użycie daty i godziny w MFC.
 
 [Pliki](../mfc/files-in-mfc.md)<br/>
-W tym artykule omówiono `CFile` i sposób obsługi plików w MFC.
+Omawia `CFile` i jak obsługiwać pliki w MFC.
 
 [Zarządzanie pamięcią (MFC)](../mfc/memory-management.md)<br/>
-W tym artykule opisano, jak korzystać z usług ogólnego przeznaczenia, związane z zarządzaniem pamięcią.
+Opisuje, jak korzystać z usług ogólnego przeznaczenia związanych z zarządzaniem pamięcią.
 
 [Obsługa i mapowanie komunikatów](../mfc/message-handling-and-mapping.md)<br/>
-W tym artykule opisano, jak komunikaty i polecenia są przetwarzane przez platformę, MFC i jak podłączyć je do ich funkcje obsługi.
+Opisuje sposób przetwarzania komunikatów i poleceń przez strukturę MFC oraz sposób łączenia ich z funkcjami obsługi.
 
 [Serializacja](../mfc/serialization-in-mfc.md)<br/>
-Omawia mechanizm serializacji umożliwiający zachowanie obiektów pomiędzy uruchomieniami programu.
+Wyjaśnia mechanizm serializacji zapewniający, że obiekty mają być utrwalane między uruchomieniami programu.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
 [Obsługa wyjątków (MFC)](../mfc/exception-handling-in-mfc.md)<br/>
-W tym artykule wyjaśniono mechanizmy obsługi wyjątków dostępne w MFC.
+Wyjaśnia mechanizmy obsługi wyjątków dostępne w MFC.
 
 [MFC — podstawy programowania Internetu](../mfc/mfc-internet-programming-basics.md)<br/>
-W tym artykule omówiono klasy MFC, które obsługują Programowanie w Internecie.
+Omawia klasy MFC, które obsługują programowanie internetowe.
 
 [MFC — zadania związane z programowaniem Internetu](../mfc/mfc-internet-programming-tasks.md)<br/>
-W tym artykule omówiono sposób dodania obsługi Internetu do aplikacji.
+W tym artykule omówiono sposób dodawania obsługi Internetu do aplikacji.
 
 [Obsługa Unicode i Multibyte Character Set (MBCS)](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)<br/>
-Wyjaśnia, jak używać MFC i ATL obsługę standardu Unicode i zestawach znaków wielobajtowych.
+Wyjaśnia, w jaki sposób używać obsługi MFC i ATL dla zestawów znaków Unicode i wielobajtowych.
 
 [MFC COM](../mfc/mfc-com.md)<br/>
-W tym artykule omówiono podzbiór MFC, który został zaprojektowany do obsługi COM, podczas gdy większość z Active Template Library (ATL) jest przeznaczona do programowania COM.
+Omawia podzestaw MFC, który jest przeznaczony do obsługi modelu COM, podczas gdy większość Active Template Library (ATL) jest zaprojektowana do programowania COM.
 
 [Wielowątkowość z C++ i MFC](../parallel/multithreading-with-cpp-and-mfc.md)<br/>
-W tym artykule opisano, co to są procesy i wątki i podejściu MFC do wielowątkowości.
+Opisuje procesy i wątki oraz omawia podejście MFC do wielowątkowości.
 
 [Gniazda systemu Windows w MFC](../mfc/windows-sockets.md)<br/>
-Obejmuje MFC wdrożenie usługi Windows Sockets.
+Obejmuje implementację MFC usługi Windows Sockets.
 
-[Odwołanie MFC](../mfc/mfc-desktop-applications.md)<br/>
-Oferuje materiały źródłowe dotyczące biblioteki MFC, zestaw klas, które stanowią strukturę aplikacji, która jest strukturą aplikacji napisaną dla interfejsu API Windows.
+[Dokumentacja MFC](../mfc/mfc-desktop-applications.md)<br/>
+Zapewnia materiały referencyjne dla biblioteki MFC, zestaw klas, które stanowią strukturę aplikacji, która jest strukturą aplikacji zapisaną dla interfejsu API systemu Windows.
 
 [Przykłady MFC](../overview/visual-cpp-samples.md)<br/>
-Zawiera łącza do przykładów ukazujących sposoby użycia klas MFC w aplikacje pulpitu, bibliotek DLL, aplikacji baz danych, formantów, aplikacji sieci Web i innych.
+Zawiera łącza do przykładów, które pokazują, jak używać MFC w aplikacjach klasycznych, bibliotekach DLL, aplikacjach baz danych, kontrolkach, aplikacjach sieci Web i innych.

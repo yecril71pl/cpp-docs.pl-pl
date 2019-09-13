@@ -3,12 +3,12 @@ title: 'Instrukcje: Aktywowanie i używanie składnika środowisko wykonawcze sy
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-ms.openlocfilehash: 9e15886e9045f15adb929678ba45023ce80fb084
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 59a031968933ab151dc97a8089aff629026f5ea5
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498392"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926064"
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Instrukcje: Aktywowanie i używanie składnika środowisko wykonawcze systemu Windows przy użyciu WRL
 
@@ -48,7 +48,7 @@ Poniższe kroki używają `Windows::Foundation::IUriRuntimeClass` interfejsu, ab
 
    Środowisko wykonawcze systemu Windows używa w pełni kwalifikowanych nazw do identyfikowania typów. `RuntimeClass_Windows_Foundation_Uri` Parametr jest ciągiem dostarczonym przez środowisko wykonawcze systemu Windows i zawiera wymaganą nazwę klasy środowiska uruchomieniowego.
 
-4. Zainicjuj zmienną [Microsoft:: WRL:: otoki:: HString](hstring-class.md) , która reprezentuje identyfikator `"http://www.microsoft.com"`URI.
+4. Zainicjuj zmienną [Microsoft:: WRL:: otoki:: HString](hstring-class.md) , która reprezentuje identyfikator `"https://www.microsoft.com"`URI.
 
    [!code-cpp[wrl-consume-component#6](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_4.cpp)]
 

@@ -1,6 +1,6 @@
 ---
-title: luki spectre
-ms.date: 1/23/2018
+title: spectre
+ms.date: 01/23/2018
 f1_keywords:
 - spectre_cpp
 - spectre
@@ -8,35 +8,35 @@ f1_keywords:
 helpviewer_keywords:
 - __declspec keyword (C++), spectre
 - spectre __declspec keyword
-ms.openlocfilehash: 2377a3c23be1e27bfe4f2df23eb00823635fa05d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40eee25dec867ae3fce7a6b2d4715f0be81bfe76
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267261"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926365"
 ---
-# <a name="spectre"></a>luki spectre
+# <a name="spectre"></a>spectre
 
 **Microsoft Specific**
 
-Informuje kompilator, aby nie wstawiać luki Spectre w wariancie 1 związanego z wykonywaniem spekulatywnym barierę instrukcje dla funkcji.
+Instruuje kompilator, aby nie wstawiał Spectre wariantów 1 instrukcji związanych z barierą wykonywania w przypadku funkcji.
 
 ## <a name="syntax"></a>Składnia
 
-> **__declspec (spectre(nomitigation))**
+> **__declspec (Spectre (nozaradcze))**
 
 ## <a name="remarks"></a>Uwagi
 
-[/Qspectre](../build/reference/qspectre.md) — opcja kompilatora powoduje, że kompilator wstawić związanego z wykonywaniem spekulatywnym barierę instrukcje, gdzie analizy oznacza, że istnieje luka w zabezpieczeniach Spectre w wariancie 1. Szczegółowe instrukcje, które są emitowane zależeć od procesora. Chociaż te instrukcje mają minimalny wpływ na rozmiar kodu lub wydajności, może to być przypadkach, gdy kod nie dotyczy luki w zabezpieczeniach i wymaga maksymalną wydajność.
+Opcja kompilatora [/Qspectre](../build/reference/qspectre.md) powoduje, że kompilator wstawi instrukcje dotyczące bariery wykonywania spekulacyjnych. Są wstawiane, gdy analiza wskazuje, że istnieje luka w zabezpieczeniach Spectre wariant 1. Określone instrukcje są zależne od procesora. Chociaż te instrukcje powinny mieć minimalny wpływ na rozmiar kodu lub wydajność, mogą wystąpić sytuacje, w których kod nie ma wpływu na ten problem i wymaga maksymalnej wydajności.
 
-Analiza eksperta może określić, że funkcja jest pozbawione luki Spectre w wariancie 1 granice wyboru obejścia wadę. W takim przypadku można pominąć generowanie kodu środki zaradcze w funkcji, stosując `__declspec(spectre(nomitigation))` przy deklaracji funkcji.
+Analiza ekspertów może określić, że funkcja jest bezpieczna z Spectre wariantów 1. Sprawdź wady pomijania. W takim przypadku można pominąć generowanie kodu ograniczenia w ramach funkcji przez zastosowanie `__declspec(spectre(nomitigation))` do deklaracji funkcji.
 
 > [!CAUTION]
-> **/Qspectre** instrukcje barierę związanego z wykonywaniem spekulatywnym zapewniają istotną ochronę i mają niewielki wpływ na wydajność. Dlatego zaleca się, aby nie pomijać ich poza rzadkimi przypadkami, gdy wydajność funkcji odgrywa krytyczną rolę i wiadomo, że funkcja jest bezpieczna.
+> **/Qspectree** instrukcje dotyczące barierowego wykonywania zapewniają ważną ochronę zabezpieczeń i mają znikomy wpływ na wydajność. Dlatego zaleca się, aby nie pomijać ich poza rzadkimi przypadkami, gdy wydajność funkcji odgrywa krytyczną rolę i wiadomo, że funkcja jest bezpieczna.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod przedstawia sposób użycia `__declspec(spectre(nomitigation))`.
+Poniższy kod przedstawia sposób korzystania `__declspec(spectre(nomitigation))`z programu.
 
 ```cpp
 // compile with: /c /Qspectre
@@ -53,7 +53,7 @@ int main() {
 }
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

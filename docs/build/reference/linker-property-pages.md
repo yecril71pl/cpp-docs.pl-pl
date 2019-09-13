@@ -1,18 +1,18 @@
 ---
 title: Strony właściwości konsolidatora
-ms.date: 7/24/2019
+ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 7e7671e5-a35a-4e67-9bdb-661d75c4d11e
-ms.openlocfilehash: 17880d50ae012b640cb83f3766883ab2b1bcbe73
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: 55fcefd826ec6ecb153adad495e21ce97aa432f1
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537590"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927703"
 ---
 # <a name="linker-property-pages"></a>Strony właściwości konsolidatora
 
-W obszarze właściwości > **konfiguracji** > właściwościprojektukonsolidator znajduje się następujące właściwości. >  Aby uzyskać więcej informacji na temat konsolidatora, zobacz [CL wywołuje](cl-invokes-the-linker.md) opcje [](linker-options.md)konsolidatora i konsolidatora.
+W obszarze właściwości**konfiguracji** >  > właściwości > projektu**konsolidator**znajduje się następujące właściwości. Aby uzyskać więcej informacji na temat konsolidatora, zobacz [CL wywołuje Opcje konsolidatora](cl-invokes-the-linker.md) i [konsolidatora](linker-options.md).
 
 ## <a name="general-property-page"></a>Ogólna strona właściwości
 
@@ -27,7 +27,7 @@ Drukuje wiadomości dotyczące postępu konsolidatora
 **Decyzji**
 
 - **Nie ustawiono** — brak szczegółowości.
-- **Wyświetl wszystkie komunikaty** o postępie — wyświetla wszystkie komunikaty o postępie. 
+- **Wyświetl wszystkie komunikaty o postępie** — wyświetla wszystkie komunikaty o postępie. 
 - **W przypadku przeszukiwanych bibliotek** — wyświetla komunikaty o postępie wskazujące tylko przeszukiwane biblioteki.
 - **Informacje o COMDAT składania podczas zoptymalizowanego łączenia** — wyświetla informacje na temat składania COMDAT podczas zoptymalizowanego łączenia.
 - Informacje **o danych usuniętych podczas zoptymalizowanego łączenia** — wyświetla informacje o funkcjach i danych usuniętych podczas zoptymalizowanej konsolidacji.
@@ -48,7 +48,7 @@ Opcja [/nologo](nologo-suppress-startup-banner-linker.md) uniemożliwia wyświet
 
 ### <a name="ignore-import-library"></a>Ignoruj bibliotekę importowaną
 
-Ta właściwość nakazuje konsolidatorowi łączenie się z danymi wyjściowymi lib wygenerowanymi przez tę kompilację z dowolnym projektem zależnym. Dzięki temu system projektu może obsługiwać pliki .dll, które podczas kompilacji nie tworzą pliku .lib. Jeśli projekt jest zależny od innego projektu, który tworzy bibliotekę DLL, system projektu automatycznie łączy plik lib utworzony przez ten projekt podrzędny. Może to być niepotrzebne w projektach generujących pliki COM DLL lub pliki DLL z samymi zasobami, ponieważ te pliki DLL nie eksportują żadnych istotnych danych. Jeśli biblioteka DLL nie ma żadnych eksportów, konsolidator nie generuje pliku. lib. Jeśli na dysku nie ma pliku Export. lib, a system projektu nakazuje konsolidatorowi łączenie się z tą (brakującą) biblioteką DLL, łącze kończy się niepowodzeniem. Aby rozwiązać ten problem, użyj właściwości **Ignorowanie biblioteki importowanej** . W przypadku ustawienia **opcji tak**system projektu ignoruje obecność lub brak tego pliku. lib i powoduje, że każdy projekt, który zależy od tego projektu nie jest połączony z nieistniejącym plikiem. lib.
+Ta właściwość nakazuje konsolidatorowi łączenie się z danymi wyjściowymi lib wygenerowanymi przez tę kompilację z dowolnym projektem zależnym. Umożliwia systemowi projektu obsługę plików DLL, które nie generują pliku lib po skompilowaniu. Jeśli projekt jest zależny od innego projektu, który tworzy bibliotekę DLL, system projektu automatycznie łączy plik lib utworzony przez ten projekt podrzędny. Ta właściwość może być niepotrzebna w projektach, które generują biblioteki DLL COM lub biblioteki DLL z samymi zasobami, ponieważ te biblioteki DLL nie mają żadnych znaczących eksportów. Jeśli biblioteka DLL nie ma żadnych eksportów, konsolidator nie generuje pliku. lib. Jeśli plik eksportu. lib nie istnieje, a system projektu nakazuje konsolidatorowi łączenie się z brakującą biblioteką DLL, link kończy się niepowodzeniem. Aby rozwiązać ten problem, użyj właściwości **Ignorowanie biblioteki importowanej** . W przypadku ustawienia **opcji tak**system projektu ignoruje obecność lub brak pliku. lib i powoduje, że każdy projekt, który zależy od tego projektu nie jest połączony z nieistniejącym plikiem. lib.
 
 Aby programowo uzyskać dostęp do tej właściwości <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreImportLibrary%2A>, zobacz.
 
@@ -60,7 +60,7 @@ Aby programowo uzyskać dostęp do tej właściwości <xref:Microsoft.VisualStud
 
 ### <a name="per-user-redirection"></a>Przekierowanie na użytkownika
 
-Rejestracja w programie Visual Studio tradycyjnie zakończyła się w KLUCZu HKEY_CLASSES_ROOT (HKCR). W systemach operacyjnych Windows Vista i nowszych w celu uzyskania dostępu do HKCR należy uruchomić program Visual Studio w trybie podniesionych uprawnień. Deweloperzy nie zawsze chcą pracować w trybie podwyższonych uprawnień, a mimo to muszą dokonywać rejestracji. Przekierowanie na użytkownika umożliwia rejestrowanie bez konieczności pracy w tym trybie.
+Rejestracja w programie Visual Studio tradycyjnie zakończyła się w KLUCZu HKEY_CLASSES_ROOT (HKCR). W systemach operacyjnych Windows Vista i nowszych w celu uzyskania dostępu do HKCR należy uruchomić program Visual Studio w trybie podniesionych uprawnień. Deweloperzy nie zawsze chcą uruchamiać w trybie podniesionych uprawnień, ale nadal muszą pracować z rejestracją. Przekierowanie na użytkownika umożliwia rejestrację bez konieczności uruchamiania w trybie podniesionych uprawnień.
 
 Przekierowanie na użytkownika wymusza przekierowanie wszystkich zapisów do HKCR do HKEY\_bieżącego\_użytkownika (HKCU). Jeśli przekierowanie na użytkownika jest wyłączone, może to spowodować [błąd PRJ0050 kompilacji projektu](../../error-messages/tool-errors/project-build-error-prj0050.md) , gdy program próbuje wykonać zapis do HKCR.
 
@@ -70,13 +70,13 @@ Zezwala użytkownikowi na przesłanianie ścieżki biblioteki środowiskowej. ([
 
 ### <a name="link-library-dependencies"></a>Połącz zależności biblioteki
 
-Określa, czy mają być połączone pliki. lib, które są tworzone przez projekty zależne. Zazwyczaj chcesz połączyć w plikach lib, ale może to nie być przypadek niektórych bibliotek DLL.
+Określa, czy mają być połączone pliki. lib, które są tworzone przez projekty zależne. Zazwyczaj chcesz połączyć w plikach lib, ale w przypadku niektórych bibliotek DLL może nie być to możliwe.
 
-Można również określić plik. obj, podając nazwę pliku i ścieżkę względną, na przykład ".. \\.. \MyLibProject\MyObjFile.obj". Jeśli kod źródłowy dla pliku. obj #includes prekompilowanego nagłówka, na przykład PCH. h, plik PCH. obj znajduje się w tym samym folderze co MyObjFile. obj i należy również dodać PCH. obj jako dodatkową zależność.
+Można również określić plik. obj, podając nazwę pliku i ścieżkę względną, na przykład ".. \\.. \MyLibProject\MyObjFile.obj". Jeśli kod źródłowy dla pliku. obj #includes prekompilowanego nagłówka, na przykład PCH. h, plik PCH. obj znajduje się w tym samym folderze co MyObjFile. obj. Należy również dodać PCH. obj jako dodatkową zależność.
 
 ### <a name="use-library-dependency-inputs"></a>Użyj danych wejściowych zależności biblioteki
 
-Określa, czy dane wejściowe narzędzia bibliotekarza są używane zamiast pliku biblioteki podczas łączenia w danych wyjściowych biblioteki zależności projektu. W dużym projekcie, gdy projekt zależny tworzy plik .lib, łączenie przyrostowe jest wyłączone. Jeśli istnieje wiele projektów zależnych generujących pliki .lib, kompilowanie aplikacji może trwać długo. Gdy ta właściwość ma wartość **Yes (tak**), system projektu łączy w plikach. obj dla. libs utworzonych przez projekty zależne, co umożliwia łączenie przyrostowe.
+Określa, czy należy używać danych wejściowych narzędzia bibliotekarza, a nie samego pliku biblioteki, podczas łączenia w danych wyjściowych biblioteki zależności projektu. W dużym projekcie, gdy projekt zależny tworzy plik .lib, łączenie przyrostowe jest wyłączone. Jeśli istnieje wiele projektów zależnych generujących pliki .lib, kompilowanie aplikacji może trwać długo. Gdy ta właściwość ma wartość **tak**, system projektu łączy w plikach. obj dla. libs utworzonych przez projekty zależne, umożliwiając łączenie przyrostowe.
 
 Aby uzyskać informacje na temat uzyskiwania dostępu do strony właściwości **Ogólne** konsolidatora, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
@@ -94,12 +94,12 @@ Określa, czy konsolidator powinien wyświetlać wskaźnik postępu pokazujący,
 
 ### <a name="force-file-output"></a>Wymuś dane wyjściowe pliku
 
-Opcja [/Force](force-force-file-output.md) nakazuje konsolidatorowi utworzenie pliku. exe lub DLL nawet wtedy, gdy odwołanie do symbolu jest przywoływane, ale nie zdefiniowane lub jest zdefiniowane wielokrotnie. Może utworzyć nieprawidłowy plik. exe.
+Opcja [/Force](force-force-file-output.md) nakazuje konsolidatorowi utworzenie pliku. exe lub DLL nawet wtedy, gdy odwołanie do symbolu jest przywoływane, ale nie zdefiniowane, lub jest zdefiniowane wielokrotnie. Może utworzyć nieprawidłowy plik. exe.
 
 **Decyzji**
 
 - **Funkcja Enabled** -/Force bez argumentów oznacza zarówno wielokrotne, jak i nierozwiązane.
-- **Wielokrotnie zdefiniowany tylko symbol** — Użyj/Force: Multiple, aby utworzyć plik wyjściowy, niezależnie od tego, czy link znajduje więcej niż jedną definicję symbolu.
+- **Wielokrotnie zdefiniowany tylko symbol** — Użyj/Force: Multiple, aby utworzyć plik wyjściowy, nawet jeśli link znajdzie więcej niż jedną definicję symbolu.
 - **Tylko niezdefiniowany symbol** — Użyj/Force: nierozpoznany do utworzenia pliku wyjściowego, niezależnie od tego, czy link znajdzie niezdefiniowany symbol. /FORCE: nierozpoznany jest ignorowany, jeśli symbol punktu wejścia nie został rozpoznany.
 
 ### <a name="create-hot-patchable-image"></a>Tworzenie obrazu z poprawkami grzewczymi
@@ -129,7 +129,7 @@ Opcja [/NODEFAULTLIB](nodefaultlib-ignore-libraries.md) informuje konsolidator, 
 
 ### <a name="ignore-specific-default-libraries"></a>Ignoruj określone biblioteki domyślne
 
-Określa co najmniej jedną nazwę bibliotek domyślnych do zignorowania; Rozdziel wiele bibliotek średnikami. (/NODEFAULTLIB: [nazwa, nazwa,...])
+Określa co najmniej jedną nazwę bibliotek domyślnych do zignorowania. Rozdziel wiele bibliotek średnikami. (/NODEFAULTLIB: [nazwa, nazwa,...])
 
 ### <a name="module-definition-file"></a>Plik definicji modułu
 
@@ -239,7 +239,7 @@ Opcja [/Subsystem](subsystem-specify-subsystem.md) informuje system operacyjny, 
 - **Nie ustawiono** — nie ustawiono podsystemu.
 - Aplikacja w trybie znakowym w systemie Win32. Aplikacje konsolowe uzyskują konsolę przez system operacyjny. Jeśli jest zdefiniowany główny lub wmain, konsola jest wartością domyślną.
 - **Windows** -aplikacja nie wymaga konsoli, prawdopodobnie dlatego, że tworzy własne okna do interakcji z użytkownikiem. Jeśli zdefiniowano WinMain lub wWinMain, System WINDOWS jest wartością domyślną.
-- Sterowniki urządzeń natywnych dla systemu Windows NT. Jeśli jest określony wartość parametru//lub, natywny jest tryb macierzysty.
+- Sterowniki urządzeń **natywnych** dla systemu Windows NT. Jeśli jest określony wartość parametru//lub, natywny jest tryb macierzysty.
 - Aplikacja **EFI Application** -EFI.
 - **Sterownik usługi rozruchu EFI** — sterownik usługi rozruchu interfejsu EFI.
 - **EFI ROM** -EFI ROM.
@@ -276,11 +276,11 @@ Opcja [/TSAWARE](tsaware-create-terminal-server-aware-application.md) ustawia fl
 
 ### <a name="swap-run-from-cd"></a>Zamień przebieg z dysku CD
 
-Opcja [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) informuje system operacyjny, aby najpierw skopiował dane wyjściowe konsolidatora do pliku wymiany, a następnie uruchomił obraz stamtąd. Jest to funkcja systemu Windows NT 4,0 (i nowszych). Gdy jest określony **dysk CD** , system operacyjny skopiuje obraz na dysk wymienny do pliku stronicowania, a następnie załaduje go.
+Opcja [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) informuje system operacyjny, aby najpierw skopiował dane wyjściowe konsolidatora do pliku wymiany, a następnie uruchomił obraz stamtąd. Ta opcja jest funkcją systemu Windows NT 4,0 (i nowszego). Gdy jest określony **dysk CD** , system operacyjny skopiuje obraz na dysk wymienny do pliku stronicowania, a następnie załaduje go.
 
 ### <a name="swap-run-from-network"></a>Zamień przebieg z sieci
 
-Opcja [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) informuje system operacyjny, aby najpierw skopiował dane wyjściowe konsolidatora do pliku wymiany, a następnie uruchomił obraz stamtąd. Jest to funkcja systemu Windows NT 4,0 (i nowszych). Jeśli zostanie określona wartość **net** , system operacyjny najpierw skopiuje obraz binarny z sieci do pliku wymiany i załaduje go stamtąd. Ta opcja jest przydatna do uruchamiania aplikacji za pośrednictwem sieci.
+Opcja [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) informuje system operacyjny, aby najpierw skopiował dane wyjściowe konsolidatora do pliku wymiany, a następnie uruchomił obraz stamtąd. Ta opcja jest funkcją systemu Windows NT 4,0 (i nowszego). Jeśli zostanie określona wartość **net** , system operacyjny najpierw skopiuje obraz binarny z sieci do pliku wymiany i załaduje go stamtąd. Ta opcja jest przydatna do uruchamiania aplikacji za pośrednictwem sieci.
 
 ### <a name="driver"></a>Sterownik
 
@@ -289,7 +289,7 @@ Aby skompilować sterownik trybu jądra systemu Windows NT, użyj opcji [/konsol
 **Decyzji**
 
 - **Nie ustawiono** domyślnego ustawienia sterownika.
-- Sterownik **-Sterownik**
+- **Sterownik-sterownik**
 - **Tylko** do-///-//-/-//-tylko: powoduje, że KONSOLIDATOR dodaje IMAGE_FILE_UP_SYSTEM_ONLY bit do charakterystyki w nagłówku danych wyjściowych, aby określić, że jest to sterownik jednoprocesorowy. System operacyjny odmówi załadowania sterownika w systemie wieloprocesorowym (MP).
 - **WDM** -IMAGE_DLLCHARACTERISTICS_WDM_DRIVER: WDM powoduje, że konsolidator ustawia bit w polu DLLCHARACTERISTICS opcjonalnego nagłówka.
 
@@ -297,11 +297,11 @@ Aby skompilować sterownik trybu jądra systemu Windows NT, użyj opcji [/konsol
 
 ### <a name="references"></a>Odwołania
 
-[/Opt](opt-optimizations.md): ref eliminuje funkcje i/lub dane, które nigdy nie są przywoływane, podczas gdy/OPT: NOREF utrzymuje funkcje i/lub dane, które nigdy nie są przywoływane. 
+[/Opt](opt-optimizations.md): ref eliminuje funkcje i/lub dane, które nigdy nie są przywoływane, podczas gdy/OPT: NOREF utrzymuje funkcje i/lub dane, które nigdy nie są przywoływane.
 
 ### <a name="enable-comdat-folding"></a>Włącz zwijanie COMDAT
 
-Użyj [/opt](opt-optimizations.md): ICF\[= iteracje], aby wykonać identyczne składanie COMDAT. 
+Użyj [/opt](opt-optimizations.md): ICF\[= iteracje], aby wykonać identyczne składanie COMDAT.
 
 ### <a name="function-order"></a>Kolejność funkcji
 

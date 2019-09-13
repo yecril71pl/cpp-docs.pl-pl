@@ -1,6 +1,6 @@
 ---
-title: Unicode i Multibyte Character Set (MBCS) pomocy technicznej
-ms.date: 1/09/2017
+title: Obsługa zestawu znaków Unicode i wielobajtowego (MBCS)
+ms.date: 01/09/2017
 helpviewer_keywords:
 - MFC [C++], character set support
 - MBCS [C++], strings and MFC support
@@ -10,88 +10,88 @@ helpviewer_keywords:
 - Unicode [C++], string objects
 - strings [C++], Unicode
 - strings [C++], character set support
-ms.openlocfilehash: 59e8759ffbe61b80c74d8b5aba5bc50886d6b23d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 983b3d9bc72d99ab3c665f86cffd205dccf873e8
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252678"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927893"
 ---
-# <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Unicode i Multibyte Character Set (MBCS) pomocy technicznej
+# <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Obsługa zestawu znaków Unicode i wielobajtowego (MBCS)
 
-Niektóre języki, na przykład w języku japońskim i chińskim, są dużych zestawach znaków. Aby włączyć obsługę programowania dla tych rynkach, biblioteki Microsoft Foundation Class (MFC) umożliwia dwa różne podejścia do obsługi dużych zestawów:
+Niektóre języki, na przykład japoński i chiński, mają duże zestawy znaków. Aby obsługiwać Programowanie dla tych rynków, biblioteka MFC (MFC) oferuje dwa różne podejścia do obsługi dużych zestawów znaków:
 
-- [Unicode](#mfc-support-for-unicode-strings), `wchar_t` na podstawie szerokości, znaki oraz ciągi zakodowane w formacie UTF-16.
+- [Unicode](#mfc-support-for-unicode-strings), `wchar_t` w oparciu o szerokie znaki i ciągi zakodowane jako UTF-16.
 
-- [Zestawy znaków wielobajtowych (MBCS)](#mfc-support-for-mbcs-strings), **char** oparte na jednym lub znaków dwubajtowych znaków i ciągi zakodowane w zestawie znaków specyficznych dla ustawień regionalnych.
+- [Zestawy znaków wielobajtowych (MBCS)](#mfc-support-for-mbcs-strings) **, znaki** jednobajtowe i ciągi zakodowane w zestawie znaków specyficznych dla ustawień regionalnych.
 
-Biblioteki MFC Unicode dla wszystkich nowych wdrożeń ma zalecanymi przez firmę Microsoft i bibliotek MBCS zostały uznane za przestarzałe w programie Visual Studio 2013 i Visual Studio 2015. Obecnie taka ewentualność nie zachodzi. Ostrzeżeń dotyczących zakończenia obsługi MBCS zostały usunięte w programie Visual Studio 2017.
+Firma Microsoft zaleca biblioteki Unicode MFC do wszystkich nowych wdrożeń, a biblioteki MBCS były przestarzałe w Visual Studio 2013 i Visual Studio 2015. Obecnie taka ewentualność nie zachodzi. Ostrzeżenia o zaniechaniu MBCS zostały usunięte w programie Visual Studio 2017.
 
 ## <a name="mfc-support-for-unicode-strings"></a>Obsługa MFC dla ciągów Unicode
 
-Całej biblioteki klas MFC warunkowo jest włączona dla znaków Unicode i ciągi przechowywane w znaków dwubajtowych w formacie UTF-16. W szczególności klasy [CString](../atl-mfc-shared/reference/cstringt-class.md) ma włączoną obsługę standardu Unicode.
+Cała biblioteka klas MFC jest warunkowo włączona dla znaków Unicode i ciągów przechowywanych w postaci znaków dwubajtowych w formacie UTF-16. W szczególności Klasa [CString](../atl-mfc-shared/reference/cstringt-class.md) jest włączona w formacie Unicode.
 
-Te biblioteki, debuger i pliki DLL są używane do obsługi standardu Unicode w MFC:
+Te biblioteki, debugery i pliki DLL są używane do obsługi standardu Unicode w MFC:
 
 |||||
 |-|-|-|-|
-|UAFXCW.LIB|UAFXCW.PDB|UAFXCWD.LIB|UAFXCWD.PDB|
-|MFC*wersji*U.LIB|MFC*wersji*U.PDB|MFC*version*U.DLL|MFC*wersji*UD. LIB|
-|MFC*wersji*UD. PLIK PDB|MFC*version*UD.DLL|MFCS*wersji*U.LIB|MFCS*wersji*U.PDB|
-|MFCS*wersji*UD. LIB|MFCS*wersji*UD. PLIK PDB|MFCM*wersji*U.LIB|MFCM*wersji*U.PDB|
-|MFCM*version*U.DLL|MFCM*wersji*UD. LIB|MFCM*wersji*UD. PLIK PDB|MFCM*version*UD.DLL|
+|UAFXCW.LIB|UAFXCW. PDB|UAFXCWD.LIB|UAFXCWD.PDB|
+|MFC*wersja*U. lib|*Wersja*pliku U. pdb usługi MFC|Biblioteka MFC w*wersji*U. dll|*Wersja*MFC ud. LIB|
+|*Wersja*MFC ud. PDB|*Wersja*MFC ud. BIBLIOTECE|MFCS*wersja*U. lib|MFCS*wersja*U. pdb|
+|MFCS*wersja*ud. LIB|MFCS*wersja*ud. PDB|MFCM*wersja*U. lib|MFCM*wersja*U. pdb|
+|MFCM*wersja*U. dll|MFCM*wersja*ud. LIB|MFCM*wersja*ud. PDB|MFCM*wersja*ud. BIBLIOTECE|
 
-(*wersji* reprezentuje numer wersji pliku na przykład "140" oznacza, że w wersji 14.0.)
+(*wersja* reprezentuje numer wersji pliku, na przykład "140" oznacza wersję 14,0).
 
-`CString` opiera się na typie danych TCHAR. Jeśli nie zdefiniowano _UNICODE symboli dla kompilacji programu, TCHAR jest zdefiniowana jako typ `wchar_t`, znak 16-bitowych, typ kodowania. W przeciwnym razie TCHAR jest zdefiniowany jako **char**, kodowanie normalne znaki 8-bitowych. W związku z tym, w formacie Unicode `CString` składa się z 16-bitowych znaków. Bez Unicode, składa się z znaki typu **char**.
+`CString`jest oparty na typie danych używanie TCHAR. Jeśli symbol _UNICODE jest zdefiniowany dla kompilacji programu, używanie TCHAR jest zdefiniowany jako typ `wchar_t`, 16-bitowy typ kodowania znaków. W przeciwnym razie używanie TCHAR jest zdefiniowane jako **char**, czyli normalne, 8-bitowe kodowanie znaków. W związku z tym, w `CString` formacie Unicode, składa się z 16-bitowych znaków. Bez Unicode, składa się z znaków typu **char**.
 
-Na zakończenie programowania Unicode aplikacji, musisz mieć również:
+Aby zakończyć programowanie w formacie Unicode aplikacji, należy również:
 
-- Użyj makro _T warunkowo ciągi literałowe kod będzie działał Unicode.
+- Użyj makra _T do warunkowego kodowania ciągów literałów, które mają być przenośne w formacie Unicode.
 
-- Podczas przekazywania ciągów należy zwrócić uwagę, czy argumenty funkcji wymaga długość w znakach lub długość w bajtach. Różnica jest ważna, jeśli używasz ciągów Unicode.
+- W przypadku przekazywania ciągów należy zwrócić uwagę, czy argumenty funkcji wymagają długości w znakach lub długości w bajtach. Różnica jest ważna, jeśli używasz ciągów Unicode.
 
-- Użyj przenośne wersje funkcji obsługi ciągów środowiska wykonawczego języka C.
+- Używaj przenośnych wersji funkcji obsługi ciągów czasu wykonywania języka C.
 
-- Użyj następujących typów danych do znaków i znaków wskaźników:
+- Używaj następujących typów danych dla znaków i wskaźników znaków:
 
-   - Użyj TCHAR, w której można zastosować **char**.
+   - Użyj używanie TCHAR, gdzie używać **char**.
 
-   - Użyj LPTSTR użycia **char**<strong>\*</strong>.
+   - Użyj LPTSTR, gdzie używać **char**<strong>\*</strong>.
 
-   - Użyj LPCTSTR użycia **const char**<strong>\*</strong>. `CString` zawiera operator LPCTSTR do konwersji między `CString` i LPCTSTR.
+   - Użyj LPCTSTR, gdzie używać **znaku**<strong>\*</strong>const. `CString`zapewnia operatorowi LPCTSTR konwersję między `CString` i LPCTSTR.
 
-`CString` dostarcza również obsługujących Unicode konstruktorów, operatory przypisania i operatory porównania.
+`CString`dostarcza także konstruktory obsługujące kod Unicode, operatory przypisania i operatory porównania.
 
-[Odwołanie do biblioteki wykonawczej](../c-runtime-library/c-run-time-library-reference.md) definiuje przenośne wersje wszystkich funkcji obsługi ciągów. Aby uzyskać więcej informacji, zobacz kategorii [internacjonalizacji](../c-runtime-library/internationalization.md).
+[Dokumentacja biblioteki wykonawczej](../c-runtime-library/c-run-time-library-reference.md) definiuje przenośne wersje wszystkich funkcji obsługi ciągów. Aby uzyskać więcej informacji, zapoznaj się [z kategorią](../c-runtime-library/internationalization.md).
 
-## <a name="mfc-support-for-mbcs-strings"></a>Obsługa MFC MBCS ciągów
+## <a name="mfc-support-for-mbcs-strings"></a>Obsługa MFC dla ciągów MBCS
 
-Biblioteka klas jest także włączona dla zestawów znaków wielobajtowych, ale tylko dla znaków dwubajtowych ustawia (DBCS).
+Biblioteka klas jest również włączona dla zestawów znaków wielobajtowych, ale tylko w przypadku zestawów znaków dwubajtowych (DBCS).
 
-W zestawie znaków wielobajtowych znak może być jeden lub dwa bajty szerokości. Jeśli dwa bajty szerokie, jego pierwszy bajt jest specjalny "bajt" oznacza to wybrane z określonego zakresu, w zależności od tego, który kod strony jest używana. Razem wzięte, potencjalny klient, a następnie "Historia bajtów" Określ kodowanie znaków unikatowy.
+W zestawie znaków wielobajtowych znak może być jeden lub dwa bajty. Jeśli jest to dwa bajty, jego pierwszy bajt jest specjalnym "bajtem wiodącym", który jest wybierany z określonego zakresu, w zależności od tego, która strona kodowa jest używana. Razem, lider i "Trail Bytes" określają unikatowe kodowanie znaków.
 
-Jeśli nie zdefiniowano _MBCS symboli dla kompilacji programu, wpisz TCHAR, na którym `CString` jest oparta, mapuje **char**. To pozwala określić, które bajtów w `CString` są wiodące bajty, które są bajtów dziennika. Biblioteki wykonawczej C dostarcza funkcje ułatwiające to.
+Jeśli symbol _MBCS jest zdefiniowany dla kompilacji programu, wpisz używanie TCHAR, na którym `CString` jest oparty, mapuje na **char**. Istnieje możliwość określenia, które bajty w `CString` bajtach są potencjalnymi, a które są bajtami końcowymi. Biblioteka wykonawcza C udostępnia funkcje ułatwiające określenie tego.
 
-W obszarze znaków Dwubajtowych podany ciąg może zawierać wszystkie jednobajtowe znaki ANSI, wszystkie znaki dwubajtowe lub połączenie tych dwóch. Te możliwości wymagają szczególną ostrożność podczas analizowania ciągów. Obejmuje to `CString` obiektów.
+W obszarze DBCS dany ciąg może zawierać wszystkie jednobajtowe znaki ANSI, wszystkie znaki dwubajtowe lub kombinację dwóch. Te możliwości wymagają specjalnej opieki nad analizowaniem ciągów. Obejmuje `CString` to obiekty.
 
 > [!NOTE]
-> Serializacja ciąg Unicode w MFC mogą odczytywać ciągów Unicode i MBCS — niezależnie od tego, która wersja aplikacji, które są uruchomione. Pliki danych można przenosić między Unicode i MBCS wersji programu.
+> Serializacja ciągów Unicode w MFC może odczytywać ciągi Unicode i MBCS, niezależnie od tego, która wersja aplikacji jest uruchomiona. Pliki danych są przenośne między wersjami Unicode i MBCS programu.
 
-`CString` Użyj funkcji elementów członkowskich specjalne "ogólnego text" wersje funkcji wykonawczej języka C, które wywołują lub używają funkcji obsługujących Unicode. W związku z tym, na przykład jeśli `CString` zazwyczaj wywoływałby funkcję `strcmp`, wywołuje odpowiedniego funkcja generic tekst `_tcscmp` zamiast tego. W zależności od tego, jak zdefiniowano _UNICODE i _MBCS symboli programu `_tcscmp` map w następujący sposób:
+`CString`funkcje członkowskie używają specjalnej "ogólnego tekstu" funkcji języka uruchomieniowego C, które wywołuje, lub korzystają z funkcji obsługujących kod Unicode. W związku z tym, na przykład `CString` , jeśli funkcja `strcmp`zwykle wywołuje, zamiast tego wywoła odpowiednią funkcję `_tcscmp` tekstu ogólnego. W zależności od tego, jak symbole _MBCS i _UNICODE są zdefiniowane `_tcscmp` , mapuje w następujący sposób:
 
 |||
 |-|-|
 |_MBCS zdefiniowano|`_mbscmp`|
 |_UNICODE zdefiniowano|`wcscmp`|
-|Żadna symbolu zdefiniowanego|`strcmp`|
+|Nie zdefiniowano symbolu|`strcmp`|
 
 > [!NOTE]
-> _UNICODE i _MBCS symboli programu wzajemnie się wykluczają.
+> Symbole _MBCS i _UNICODE wzajemnie się wykluczają.
 
-Mapowania zwykłego tekstu, funkcja wszystkie procedury obsługi ciągów czasu wykonywania są omówione w [odwołanie do biblioteki wykonawczej C](../c-runtime-library/c-run-time-library-reference.md). Aby uzyskać listę, zobacz [internacjonalizacji](../c-runtime-library/internationalization.md).
+Mapowania funkcji tekstu ogólnego dla wszystkich procedur obsługi ciągów w czasie wykonywania zostały omówione w temacie [Informacje o bibliotece wykonawczej C](../c-runtime-library/c-run-time-library-reference.md). Aby uzyskać listę, zobacz temat [międzynarodowe](../c-runtime-library/internationalization.md).
 
-Podobnie `CString` metody są implementowane za pomocą mapowania typów danych typu ogólnego. Umożliwia Unicode i MBCS MFC wykorzystuje TCHAR dla **char** lub `wchar_t`, LPTSTR dla **char** <strong>\*</strong> lub `wchar_t*`i LPCTSTR dla **const char** <strong>\*</strong> lub `const wchar_t*`. Te zapewnienia poprawnego mapowania MBCS lub Unicode.
+`CString` Podobnie metody są implementowane za pomocą ogólnych mapowań typów danych. Aby włączyć zarówno MBCS, jak i Unicode, MFC używa używanie TCHAR dla `wchar_t`char lub, LPTStr dla `wchar_t*` **char** <strong>\*</strong> lub, i LPCTSTR dla **const char** <strong>\*</strong> lub. `const wchar_t*` Zapewniają one poprawne mapowania dla MBCS lub Unicode.
 
 ## <a name="see-also"></a>Zobacz także
 

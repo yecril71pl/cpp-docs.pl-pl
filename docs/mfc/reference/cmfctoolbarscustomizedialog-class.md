@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: 239532c78491f121423ca42a2c3dfc306997c841
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4e6bdef10d5747abd344750c888cf6726c47d99e
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504691"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929934"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>Klasa CMFCToolBarsCustomizeDialog
 
@@ -56,13 +56,13 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog:: AddButton](#addbutton)|Wstawia przycisk paska narzędzi do listy poleceń na stronie **poleceń**|
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog:: Add— menu](#addmenu)|Ładuje menu z zasobów i wywołań [CMFCToolBarsCustomizeDialog:: AddMenuCommands](#addmenucommands) , aby dodać to menu do listy poleceń na stronie **poleceń** .|
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog:: AddMenuCommands](#addmenucommands)|Ładuje menu z zasobów i wywołań [CMFCToolBarsCustomizeDialog:: AddMenuCommands](#addmenucommands) , aby dodać to menu do listy poleceń na stronie **poleceń** .|
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog:: AddToolBar](#addtoolbar)|Ładuje pasek narzędzi z zasobów. Następnie dla każdego polecenia w menu wywołuje metodę [CMFCToolBarsCustomizeDialog:: AddButton](#addbutton) , aby wstawić przycisk na liście poleceń na stronie **poleceń** pod określoną kategorią.|
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog:: Create](#create)|Wyświetla okno dialogowe **dostosowywania** .|
+|[CMFCToolBarsCustomizeDialog:: AddButton](#addbutton)|Wstawia przycisk paska narzędzi do listy poleceń na stronie **poleceń**|
+|[CMFCToolBarsCustomizeDialog:: Add— menu](#addmenu)|Ładuje menu z zasobów i wywołań [CMFCToolBarsCustomizeDialog:: AddMenuCommands](#addmenucommands) , aby dodać to menu do listy poleceń na stronie **poleceń** .|
+|[CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands)|Ładuje menu z zasobów i wywołań [CMFCToolBarsCustomizeDialog:: AddMenuCommands](#addmenucommands) , aby dodać to menu do listy poleceń na stronie **poleceń** .|
+|[CMFCToolBarsCustomizeDialog:: AddToolBar](#addtoolbar)|Ładuje pasek narzędzi z zasobów. Następnie dla każdego polecenia w menu wywołuje metodę [CMFCToolBarsCustomizeDialog:: AddButton](#addbutton) , aby wstawić przycisk na liście poleceń na stronie **poleceń** pod określoną kategorią.|
+|[CMFCToolBarsCustomizeDialog:: Create](#create)|Wyświetla okno dialogowe **dostosowywania** .|
 |`CMFCToolBarsCustomizeDialog::EnableTools`|Zarezerwowane do użytku w przyszłości.|
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog:: EnableUserDefinedToolbars](#enableuserdefinedtoolbars)|Włącza lub wyłącza tworzenie nowych pasków narzędzi przy użyciu okna dialogowego **Dostosowywanie** .|
+|[CMFCToolBarsCustomizeDialog::EnableUserDefinedToolbars](#enableuserdefinedtoolbars)|Włącza lub wyłącza tworzenie nowych pasków narzędzi przy użyciu okna dialogowego **Dostosowywanie** .|
 |[CMFCToolBarsCustomizeDialog::FillAllCommandsList](#fillallcommandslist)|Wypełnia podany `CListBox` obiekt za pomocą poleceń w kategorii **wszystkie polecenia** .|
 |[CMFCToolBarsCustomizeDialog::FillCategoriesComboBox](#fillcategoriescombobox)|Wypełnia podany `CComboBox` obiekt nazwą każdej kategorii poleceń w oknie dialogowym **Dostosowywanie** .|
 |[CMFCToolBarsCustomizeDialog::FillCategoriesListBox](#fillcategorieslistbox)|Wypełnia podany `CListBox` obiekt nazwą każdej kategorii poleceń w oknie dialogowym **Dostosowywanie** .|
@@ -70,23 +70,23 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 |[CMFCToolBarsCustomizeDialog::GetCountInCategory](#getcountincategory)|Pobiera liczbę elementów z dostarczonej listy, które mają daną etykietę tekstową.|
 |[CMFCToolBarsCustomizeDialog:: GetFlags](#getflags)|Pobiera zestaw flag, które mają wpływ na zachowanie okna dialogowego.|
 |`CMFCToolBarsCustomizeDialog::GetThisClass`|Używane przez platformę do uzyskania wskaźnika do obiektu [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) , który jest skojarzony z tym typem klasy.|
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog:: OnEditToolbarMenuImage](#onedittoolbarmenuimage)|Uruchamia Edytor obrazów, dzięki czemu użytkownik może dostosować przycisk paska narzędzi lub ikonę elementu menu.|
+|[CMFCToolBarsCustomizeDialog::OnEditToolbarMenuImage](#onedittoolbarmenuimage)|Uruchamia Edytor obrazów, dzięki czemu użytkownik może dostosować przycisk paska narzędzi lub ikonę elementu menu.|
 |[CMFCToolBarsCustomizeDialog:: OnInitDialog](#oninitdialog)|Przesłania do inicjowania arkusza właściwości rozszerzonego. (Przesłania [CPropertySheet:: OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|
 |[CMFCToolBarsCustomizeDialog::P ostNcDestroy](#postncdestroy)|Wywoływane przez platformę po zniszczeniu okna. (Przesłania `CPropertySheet::PostNcDestroy`).|
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog:: RemoveButton](#removebutton)|Usuwa przycisk o określonym IDENTYFIKATORze polecenia z określonej kategorii lub we wszystkich kategoriach.|
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog:: RenameCategory](#renamecategory)|Zmienia nazwę kategorii w polu listy kategorii na karcie **polecenia** .|
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog:: ReplaceButton](#replacebutton)|Zastępuje przycisk na liście poleceń na karcie **polecenia** nowym obiektem przycisku paska narzędzi.|
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog:: SetUserCategory](#setusercategory)|Dodaje kategorię do listy kategorii, które będą wyświetlane na karcie **polecenia** .|
+|[CMFCToolBarsCustomizeDialog::RemoveButton](#removebutton)|Usuwa przycisk o określonym IDENTYFIKATORze polecenia z określonej kategorii lub we wszystkich kategoriach.|
+|[CMFCToolBarsCustomizeDialog::RenameCategory](#renamecategory)|Zmienia nazwę kategorii w polu listy kategorii na karcie **polecenia** .|
+|[CMFCToolBarsCustomizeDialog::ReplaceButton](#replacebutton)|Zastępuje przycisk na liście poleceń na karcie **polecenia** nowym obiektem przycisku paska narzędzi.|
+|[CMFCToolBarsCustomizeDialog::SetUserCategory](#setusercategory)|Dodaje kategorię do listy kategorii, które będą wyświetlane na karcie **polecenia** .|
 
 ### <a name="protected-methods"></a>Metody chronione
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog:: CheckToolsValidity](#checktoolsvalidity)|Wywoływane przez platformę, aby określić, czy lista narzędzi zdefiniowanych przez użytkownika jest prawidłowa.|
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog:: OnAfterChangeTool](#onafterchangetool)|Wywoływane przez platformę, gdy zmienią się właściwości narzędzia zdefiniowanego przez użytkownika.|
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog:: OnAssignKey](#onassignkey)|Określa, czy do akcji można przypisać określony skrót klawiaturowy.|
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog:: OnBeforeChangeTool](#onbeforechangetool)|Określa, czy można zmienić narzędzie zdefiniowane przez użytkownika.|
-|`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog:: OnInitToolsPage](#oninittoolspage)|Wywoływane przez platformę, gdy użytkownik wybierze żądaną kartę **Narzędzia** .|
+|[CMFCToolBarsCustomizeDialog::CheckToolsValidity](#checktoolsvalidity)|Wywoływane przez platformę, aby określić, czy lista narzędzi zdefiniowanych przez użytkownika jest prawidłowa.|
+|[CMFCToolBarsCustomizeDialog::OnAfterChangeTool](#onafterchangetool)|Wywoływane przez platformę, gdy zmienią się właściwości narzędzia zdefiniowanego przez użytkownika.|
+|[CMFCToolBarsCustomizeDialog::OnAssignKey](#onassignkey)|Określa, czy do akcji można przypisać określony skrót klawiaturowy.|
+|[CMFCToolBarsCustomizeDialog::OnBeforeChangeTool](#onbeforechangetool)|Określa, czy można zmienić narzędzie zdefiniowane przez użytkownika.|
+|[CMFCToolBarsCustomizeDialog::OnInitToolsPage](#oninittoolspage)|Wywoływane przez platformę, gdy użytkownik wybierze żądaną kartę **Narzędzia** .|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -96,7 +96,7 @@ Gdy okno dialogowe **Dostosowywanie** jest aktywne, aplikacja działa w trybie s
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje sposób użycia różnych metod w `CMFCToolBarsCustomizeDialog` klasie. W przykładzie pokazano, jak zastąpić przycisk paska narzędzi w polu listy poleceń na stronie **polecenia** , włączyć tworzenie nowych pasków narzędzi przy użyciu okna dialogowego **Dostosowywanie** i wyświetlić okno dialogowe **dostosowywania** . Ten fragment kodu jest częścią przykładu demonstracyjnego dla programu [IE](../../overview/visual-cpp-samples.md).
+Poniższy przykład ilustruje sposób użycia różnych metod w `CMFCToolBarsCustomizeDialog` klasie. W przykładzie pokazano, jak zastąpić przycisk paska narzędzi w polu listy poleceń na stronie **polecenia** , włączyć tworzenie nowych pasków narzędzi przy użyciu okna dialogowego **Dostosowywanie** i wyświetlić okno dialogowe **dostosowywania** . Ten fragment kodu jest częścią [przykładu demonstracyjnego](../../overview/visual-cpp-samples.md)dla programu IE.
 
 [!code-cpp[NVC_MFC_IEDemo#4](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_1.cpp)]
 
@@ -323,7 +323,7 @@ podczas Wskaźnik do listy `CRuntimeClass` obiektów, które określają dodatko
 
 *PlistCustomPages* parametr odwołuje się do listy `CRuntimeClass` obiektów, które określają dodatkowe strony niestandardowe. Konstruktor dodaje więcej stron do okna dialogowego za pomocą metody [CRuntimeClass:: CreateObject](../../mfc/reference/cruntimeclass-structure.md#createobject) . Zobacz przykład CustomPages, aby dodać więcej stron do okna dialogowego **Dostosowywanie** .
 
-Aby uzyskać więcej informacji na temat wartości, które można przekazać w parametrze *uiFlags* , zobacz [CMFCToolBarsCustomizeDialog::](#getflags)GetFlags.
+Aby uzyskać więcej informacji na temat wartości, które można przekazać w parametrze *uiFlags* , zobacz [CMFCToolBarsCustomizeDialog:: GetFlags](#getflags).
 
 ### <a name="example"></a>Przykład
 
@@ -721,7 +721,7 @@ podczas **Stałe** odwołanie do obiektu przycisku paska narzędzi, który zast�
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy [CMFCToolBarsCustomizeDialog:: AddMenu](#addmenu), [CMFCToolBarsCustomizeDialog:: AddMenuCommands](#addmenucommands)lub [CMFCToolBarsCustomizeDialog:: AddToolBar](#addtoolbar) dodaje polecenie do strony Commands , to polecenie ma postać [ Obiekt klasy CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) (lub obiekt [klasy CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) dla elementu menu zawierającego podmenu dodane przez `AddMenuCommands`). Struktura wywołuje również te trzy metody, aby automatycznie dodawać polecenia. Jeśli chcesz, aby polecenie było reprezentowane przez typ pochodny, wywołaj `ReplaceButton` i Przekaż na przycisk typu pochodnego.
+Gdy [CMFCToolBarsCustomizeDialog:: AddMenu](#addmenu), [CMFCToolBarsCustomizeDialog:: AddMenuCommands](#addmenucommands)lub [CMFCToolBarsCustomizeDialog:: AddToolBar](#addtoolbar) dodaje polecenie do strony **Commands** , to polecenie ma postać [ Obiekt klasy CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) (lub obiekt [klasy CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) dla elementu menu zawierającego podmenu dodane przez `AddMenuCommands`). Struktura wywołuje również te trzy metody, aby automatycznie dodawać polecenia. Jeśli chcesz, aby polecenie było reprezentowane przez typ pochodny, wywołaj `ReplaceButton` i Przekaż na przycisk typu pochodnego.
 
 ### <a name="example"></a>Przykład
 

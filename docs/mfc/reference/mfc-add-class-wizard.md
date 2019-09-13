@@ -1,89 +1,77 @@
 ---
 title: Kreator dodawania klasy MFC
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 f1_keywords:
 - vc.codewiz.class.mfc.simple.overview
 helpviewer_keywords:
 - MFC Add Class Wizard
 - wizards [MFC]
 ms.assetid: ad3b0989-d307-43b2-9417-3f9a78889024
-ms.openlocfilehash: fa9b947ae6fc0e48aaecde61e35a5f4152c85f27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c82e084de2123c579299ca6490bdfcfdac5d255
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412738"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908033"
 ---
 # <a name="mfc-add-class-wizard"></a>Kreator dodawania klasy MFC
 
-Użyj tego kreatora kodu, aby dodać klasę do istniejącego projektu MFC lub aby dodać klasę do projektu ATL, który obsługuje MFC. Klasy MFC można również dodać do projekty Win32, które obsługują MFC. Funkcje, które określono podczas tworzenia projektu określają opcje dostępne w tym oknie dialogowym.
+Ten Kreator kodu służy do dodawania klasy do istniejącego projektu MFC lub do dodawania klasy do projektu ATL, który obsługuje MFC. Można również dodawać klasy MFC do projektów Win32 z obsługą MFC. Funkcje określone podczas tworzenia projektu określają opcje dostępne w tym oknie dialogowym. Aby uzyskać dostęp do kreatora, kliknij pozycję **Dodaj klasę** w [Kreatorze klas](mfc-class-wizard.md).
+
+![Kreator dodawania klasy MFC](media/add-mfc-class-wizard.png "Kreator dodawania klasy MFC")
 
 ## <a name="names"></a>Nazwy
 
-Na tej stronie Określ nazwę klasy, klasy bazowej i nazwy plików dla nowej klasy.
+Na tej stronie Określ nazwę klasy, klasę bazową i nazwy plików dla nowej klasy.
 
 - **Nazwa klasy**
 
-  Określa nazwę nowej klasy i stanowi podstawę domyślne dla nazwy identyfikatorów i pliki na tej stronie. Klasy C++ zaczynają się zwykle "C", dlatego na przykład "CMyClass" staje się "MyClass.h", i tak dalej.
+  Określa nazwę nowej klasy i zapewnia domyślną podstawę nazw identyfikatorów i plików na tej stronie. C++klasy zwykle zaczynają się od "C", więc na przykład "CMyClass" przyjmuje wartość "MyClass. h" i tak dalej.
 
 - **Klasa bazowa**
 
-  Określa nazwę klasy bazowej dla nowej klasy. Domyślnie klasa bazowa jest [CWnd](../../mfc/reference/cwnd-class.md). Klasa bazowa, którą wybierzesz Określa, czy inne pola na tej stronie są aktywne.
+  Określa nazwę klasy bazowej dla nowej klasy. Domyślnie Klasa bazowa to [CWnd](../../mfc/reference/cwnd-class.md). Wybrana Klasa bazowa określa, czy inne pola na tej stronie są aktywne.
 
-  Typ klasy, gdy ustawiasz jako klasa bazowa Określa, czy klasa ma identyfikator okna dialogowego lub identyfikator zasobu. Typy ogólne klasy są następujące:
+  Typ klasy ustawianej jako klasa bazowa określa, czy Klasa ma identyfikator okna dialogowego czy identyfikator zasobu. Ogólne typy klas są następujące:
 
-  - Klasy, takie jak [CButton](../../mfc/reference/cbutton-class.md), [CWnd](../../mfc/reference/cwnd-class.md), lub [CDocument](../../mfc/reference/cdocument-class.md), które nie wymagają okna dialogowego identyfikator lub identyfikator zasobu. W ramach tych zajęć, nie należy używać okna dialogowego lub zasobów identyfikatora. Po wybraniu jednej z tych klas dla swojej klasy bazowej, **identyfikator okna dialogowego** pole i **identyfikator zasobu DHTML** pola są wygaszone.
+  - Klasy takie jak [CButton](../../mfc/reference/cbutton-class.md), [CWnd](../../mfc/reference/cwnd-class.md)lub [CDOCUMENT](../../mfc/reference/cdocument-class.md), które nie wymagają identyfikatora okna dialogowego ani identyfikatora zasobu. Te klasy nie używają okna dialogowego ani identyfikatora zasobu. W przypadku wybrania jednej z tych klas dla klasy podstawowej pole **identyfikatora okna dialogowego** i **Identyfikator zasobu DHTML** są wygaszone.
 
-  - Klasy, takie jak [CDialog](../../mfc/reference/cdialog-class.md), [CFormView](../../mfc/reference/cformview-class.md), lub [CPropertyPage](../../mfc/reference/cpropertypage-class.md), które wymagają identyfikatora dla okna dialogowego.
+  - Klasy takie jak [CDialog](../../mfc/reference/cdialog-class.md), [CFormView](../../mfc/reference/cformview-class.md)lub [CPropertyPage](../../mfc/reference/cpropertypage-class.md), które wymagają identyfikatora okna dialogowego.
 
-  - Klasa [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md), co wymaga identyfikator okna dialogowego, identyfikator zasobu DHTML i nazwy pliku HTML.
+  - Klasa [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md), która wymaga identyfikatora okna dialogowego, identyfikatora zasobu DHTML i nazwy pliku HTML.
 
-  Dla klas wymagające identyfikator okna dialogowego, może okazać się bardziej wydajne, aby użyć [Edytor zasobów](../../windows/resource-editors.md) do utworzenia zasobu okna dialogowego, należy przypisać jej identyfikator w [okno właściwości](/visualstudio/ide/reference/properties-window), a następnie Utwórz klasę skojarzone z tego identyfikatora zasobu. Zobacz [Tworzenie nowego okna dialogowego](../../windows/creating-a-new-dialog-box.md) Aby uzyskać więcej informacji na temat tworzenia standardowe okno dialogowe Windows.
+  W przypadku klas wymagających identyfikatora okna dialogowego może okazać się bardziej wydajne użycie [edytora zasobów](../../windows/resource-editors.md) do utworzenia zasobu okna dialogowego, przypisanie jego identyfikatora w [Kreatorze klasy](mfc-class-wizard.md), a następnie utworzenie klasy SKOJARZONEj z tym identyfikatorem zasobu. Aby uzyskać więcej informacji na temat tworzenia standardowego okna dialogowego systemu Windows, zobacz [Tworzenie nowego okna dialogowego](../../windows/creating-a-new-dialog-box.md) .
 
   > [!NOTE]
-  > Jeśli tworzenie zasobu okna dialogowego pierwszy i uzyskania jej nowej klasy, z `CDHtmlDialog`, Usuń standardowa Windows **OK** i **anulować** przycisków, które są wyświetlane w oknie dialogowym domyślne. Standardowe okno dialogowe Windows obsługuje formularz DHTML, który zawiera swój własny **OK** i **anulować** przycisków.
+  > Jeśli najpierw utworzysz zasób okna dialogowego i poprowadzisz jego nową klasę `CDHtmlDialog`z, Usuń standardowe przyciski systemu Windows **OK** i **Anuluj** , które są wyświetlane w domyślnym oknie dialogowym. Standardowe okno dialogowe systemu Windows obsługuje formularz DHTML, który zawiera własne przyciski **OK** i **Anuluj** .
 
-  Gdy dialogowym mogą zawierać zarówno Windows kontrolki oraz DHTML, nie jest zalecane.
+  Chociaż okno dialogowe może zawierać formanty systemu Windows i kontrolki DHTML, nie jest to zalecane.
 
 - **Identyfikator okna dialogowego**
 
-  Określa identyfikator okna dialogowego, w przypadku wybrania `CDialog`, `CFormView`, `CPropertyPage`, lub `CDHtmlDialog` jako **klasy bazowej**.
+  Określa identyfikator okna dialogowego, w `CDialog`przypadku wybrania, `CFormView`, `CPropertyPage`lub `CDHtmlDialog` jako **klasy bazowej**.
 
-- **plik .h**
+- **plik h**
 
-  Określa nazwę pliku nagłówkowego klasy nowego obiektu. Domyślnie ta nazwa jest na podstawie nazwy podane **Nazwa klasy**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku na lokalizację lub dołączyć deklaracji klasy do istniejącego pliku. Jeśli wybierzesz istniejący plik, Kreator nie zapisze go w wybranej lokalizacji do momentu kliknij **Zakończ** w kreatorze.
+  Ustawia nazwę pliku nagłówka dla klasy nowego obiektu. Domyślnie ta nazwa jest oparta na nazwie podanym w polu **Nazwa klasy**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku w wybranej lokalizacji, lub dołączyć deklarację klasy do istniejącego pliku. Jeśli wybierzesz istniejący plik, Kreator nie zapisze go w wybranej lokalizacji, dopóki nie klikniesz przycisku **Zakończ** w kreatorze.
 
-  Kreator nie powoduje zastąpienia pliku. Jeśli wybierasz nazwę istniejącego pliku, po kliknięciu **Zakończ**, Kreator wyświetli monit o wskazują, czy deklaracja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** można dołączyć pliku kliknij przycisk **nie** aby powrócić do kreatora i podaj inną nazwę pliku.
+  Kreator nie zastępuje pliku. Jeśli wybierzesz nazwę istniejącego pliku, po kliknięciu przycisku **Zakończ**Kreator monituje o wskazanie, czy deklaracja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** , aby dołączyć plik; Kliknij przycisk **nie** , aby powrócić do kreatora i określić inną nazwę pliku.
 
-- **Plik CPP**
+- **plik. cpp**
 
-  Określa nazwę pliku implementacji dla nowego obiektu klasy. Domyślnie ta nazwa jest na podstawie nazwy podane **Nazwa klasy**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku w wybranej lokalizacji. Plik nie jest zapisywany w wybranej lokalizacji, dopóki nie klikniesz **Zakończ** w kreatorze.
+  Ustawia nazwę pliku implementacji dla klasy nowego obiektu. Domyślnie ta nazwa jest oparta na nazwie podanym w polu **Nazwa klasy**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku w wybranej lokalizacji. Plik nie jest zapisywany w wybranej lokalizacji, dopóki nie zostanie kliknięty przycisk **Zakończ** w kreatorze.
 
-  Kreator nie powoduje zastąpienia pliku. Jeśli wybierasz nazwę istniejącego pliku, po kliknięciu **Zakończ**, Kreator wyświetli monit o wskazują, czy Implementacja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** można dołączyć pliku kliknij przycisk **nie** aby powrócić do kreatora i podaj inną nazwę pliku.
+  Kreator nie zastępuje pliku. W przypadku wybrania nazwy istniejącego pliku po kliknięciu przycisku **Zakończ**Kreator monituje o wskazanie, czy implementacja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** , aby dołączyć plik; Kliknij przycisk **nie** , aby powrócić do kreatora i określić inną nazwę pliku.
 
-- **Moduł Active accessibility**
+- **Aktywne ułatwienia dostępu**
 
-  Włączenie obsługi MFC Active Accessibility przez wywołanie metody [EnableActiveAccessibility](../../mfc/reference/cwnd-class.md#enableactiveaccessibility) w konstruktorze. Ta opcja jest dostępna dla klasy pochodne [CWnd](../../mfc/reference/cwnd-class.md).
-
-- **Identyfikator zasobu DHTML**
-
-  Dotyczy klasy pochodne `CDHtmlDialog` tylko. Określa identyfikator zasobu okna dialogowego DHTML. Identyfikator zasobu pojawia się w sekcji HTML w pliku .rc w projekcie, wraz z nazwą pliku okno dialogowe HTML. Zasobu DHTML, określonego przez ten identyfikator jest hostowana przez okno dialogowe identyfikowane przez **identyfikator okna dialogowego**.
-
-- **.HTM file**
-
-  Dotyczy klasy pochodne `CDHtmlDialog` tylko. Określa nazwę pliku HTML dla DHTML, okno dialogowe. Domyślnie ta nazwa pliku opiera się na nazwę klasy. Nazwa pliku pojawia się w sekcji HTML projektu pliku .rc, wraz z identyfikatorem DHTML okna dialogowego pole zasobów.
+  Włącza obsługę funkcji Active Accessibility przez MFC, wywołując [EnableActiveAccessibility](../../mfc/reference/cwnd-class.md#enableactiveaccessibility) w konstruktorze. Ta opcja jest dostępna dla klas pochodnych [CWnd](../../mfc/reference/cwnd-class.md).
 
 - **Automatyzacja**
 
-  Ustawia poziom klasy obsługi [automatyzacji](../../mfc/automation.md). Usługa Automation na poziomie klasy jest dostępna dla wszystkich klas, które obsługują automatyzacji. Jest również dostępna w przypadku projektów utworzonych za pomocą obsługę automatyzacji. Oznacza to, albo MFC projekt, który [obsługuje ATL](../../atl/reference/mfc-support-in-atl-projects.md), lub projekcie MFC, dla którego wybrano **automatyzacji** pole wyboru w [funkcje zaawansowane](../../mfc/reference/advanced-features-mfc-application-wizard.md) strony MFC Kreator aplikacji.
+  Ustawia poziom obsługi [automatyzacji](../../mfc/automation.md). Automatyzacja na poziomie klasy jest dostępna dla wszystkich klas, które obsługują automatyzację. Jest ona również dostępna dla projektów utworzonych z obsługą automatyzacji. Oznacza to, że jest to projekt MFC [obsługujący ATL](../../atl/reference/mfc-support-in-atl-projects.md)lub projekt MFC, dla którego zaznaczono pole wyboru **Automatyzacja** na stronie [funkcje zaawansowane](../../mfc/reference/advanced-features-mfc-application-wizard.md) Kreatora aplikacji MFC.
 
-  |Opcja|Opis|
-  |------------|-----------------|
-  |**Brak**|Wskazuje, że klasa ma nie obsługuje automatyzacji.|
-  |**Automatyzacja**|Wskazuje, że klasa obsługuje automatyzację. Jeśli wybierzesz tę opcję, nowo utworzone klasy jest dostępna jako obiekt programowalny przez aplikacje klienckie usługi Automation, takich jak Microsoft Visual Basic oraz programu Microsoft Excel. Ta opcja nie jest dostępna dla klas podstawowych wyświetlonego po tej tabeli.|
-  |**Mogą stworzyć typu identyfikator**|Wskazuje, że klasy oraz projektu obsługiwać inne aplikacje, w tworzenie obiektów tej klasy przy użyciu automatyzacji. Po wybraniu tej opcji klienci automatyzacji można bezpośrednio utworzyć obiekt automatyzacji. Identyfikator typu, w polu tekstowym jest używany przez aplikację klienta, można określić obiekt, który ma zostać utworzony; jest ogólnosystemowe i muszą być unikatowe. Ta opcja nie jest dostępna dla klas podstawowych wyświetlonego po tej tabeli.|
-
-  Obsługa automatyzacji nie jest dostępna dla następujących klas podstawowych:
+   Obsługa automatyzacji nie jest dostępna dla następujących klas bazowych:
 
   - `CAsyncMonitorFile`
 
@@ -107,17 +95,7 @@ Na tej stronie Określ nazwę klasy, klasy bazowej i nazwy plików dla nowej kla
 
   - `CSocket`
 
-- **Identyfikator typu**
-
-  Ustawia identyfikator typu klasy. **Identyfikator typu** pole łączy nazwę projektu i nową nazwę klasy w następujący sposób: *MFCProj.MFCClass*. Ten identyfikator jest zmieniane tylko wtedy, gdy wybrano **automatyzacji** opcji **Creatable według Identyfikatora typu**.
-
-- **Generuj tym zasoby**
-
-  Oznacza, że dokumenty utworzonych przez aplikację ma zasoby szablonu dokumentu. Aby uaktywnić to pole wyboru, projekt musi obsługiwać architektury dokument/widok MFC, a klasa bazowa tej klasy muszą być [CFormView](../../mfc/reference/cformview-class.md).
-
-  Zobacz [szablonów dokumentów i proces tworzenia dokumentu/widoku](../../mfc/document-templates-and-the-document-view-creation-process.md) Aby uzyskać więcej informacji.
-
 ## <a name="see-also"></a>Zobacz także
 
-[MFC Class](../../mfc/reference/adding-an-mfc-class.md)<br/>
+[Klasa MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)

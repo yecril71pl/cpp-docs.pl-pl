@@ -8,26 +8,26 @@ helpviewer_keywords:
 - notifications [MFC], for CMonthCalCtrl
 - notifications [MFC], month calendar control
 ms.assetid: 607c3e90-0756-493b-9503-ce835a50c7ab
-ms.openlocfilehash: fc0bb475a95450c281c92b500083c9502df50931
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 452d24bf1ffd157366f357a510e8c8cfaad28d91
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346149"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908082"
 ---
 # <a name="processing-notification-messages-in-month-calendar-controls"></a>Przetwarzanie komunikatów powiadomień w formantach kalendarza miesięcznego
 
-Jak użytkownicy oddziałują formant kalendarza miesięcznego (wybranie daty i/lub wyświetlanie innego miesiąca), kontrolki (`CMonthCalCtrl`) wysyła powiadomienia do okna nadrzędnego, zazwyczaj obiekt widoku lub w oknie dialogowym. Obsługiwać te komunikaty, jeśli chcesz zrobić coś w odpowiedzi. Na przykład gdy użytkownik wybierze na nowy miesiąc, aby wyświetlić, możesz podać zestaw dat, które powinny zostać.
+Gdy użytkownicy współpracują z kontrolką kalendarza miesięcznego (wybierając daty i/lub wyświetlając inny miesiąc), formant`CMonthCalCtrl`() wysyła komunikaty powiadomień do okna nadrzędnego, zazwyczaj jest to widok lub obiekt okna dialogowego. Obsługuj te komunikaty, jeśli chcesz zrobić coś w odpowiedzi. Na przykład, gdy użytkownik wybierze nowy miesiąc do wyświetlenia, można podać zestaw dat, które należy wyróżnić.
 
-Okno właściwości do dodania obsługi powiadomień do klasy nadrzędnej dla tych wiadomości, które chcesz wdrożyć.
+Użyj [kreatora klas](reference/mfc-class-wizard.md) , aby dodać programy obsługi powiadomień do klasy nadrzędnej dla tych komunikatów, które mają zostać wdrożone.
 
-Poniższa lista zawiera opis różnych powiadomień wysyłanych przez formant kalendarza miesięcznego.
+Na poniższej liście opisano różne powiadomienia wysyłane przez formant kalendarza miesięcznego.
 
-- Informacje o mcn_getdaystate — żądania o tym, które dni powinien być wyświetlany czcionką pogrubioną. Aby uzyskać informacje dotyczące obsługi tego powiadomienia, zobacz [Ustawianie stanu dnia formantu kalendarza miesięcznego](../mfc/setting-the-day-state-of-a-month-calendar-control.md).
+- MCN_GETDAYSTATE żąda informacji o liczbie dni, które powinny być wyświetlane pogrubioną czcionką. Aby uzyskać informacje na temat obsługi tego powiadomienia, zobacz [Ustawianie stanu dnia formantu kalendarza miesięcznego](../mfc/setting-the-day-state-of-a-month-calendar-control.md).
 
-- Notifies MCN_SELCHANGE obiektu nadrzędnego, który wybranej daty lub zakres data została zmieniona.
+- MCN_SELCHANGE powiadamia element nadrzędny o zmianie wybranej daty lub zakresu daty.
 
-- Notifies MCN_SELECT obiektu nadrzędnego, który wprowadził wybór daty jawne.
+- MCN_SELECT powiadamia element nadrzędny o tym, że został wprowadzony jawny wybór daty.
 
 ## <a name="see-also"></a>Zobacz także
 

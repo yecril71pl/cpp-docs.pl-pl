@@ -1,36 +1,38 @@
 ---
-title: '/ Zc: ternary (wymuszenie reguł operatora warunkowego)'
-ms.date: 3/06/2018
+title: /Zc:ternary (Wymuszenie reguł operatora warunkowego)
+ms.date: 09/12/2019
 f1_keywords:
 - /Zc:ternary
 helpviewer_keywords:
 - /Zc:ternary
 - Zc:ternary
 - -Zc:ternary
-ms.openlocfilehash: cb9a4f8468a9cb57af711cdca36ee343e5092493
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5c38a09b92b4173ca962412a413abc283db590ff
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315439"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927497"
 ---
-# <a name="zcternary-enforce-conditional-operator-rules"></a>/ Zc: ternary (wymuszenie reguł operatora warunkowego)
+# <a name="zcternary-enforce-conditional-operator-rules"></a>/Zc:ternary (Wymuszenie reguł operatora warunkowego)
 
-Włącz wymuszanie reguły C++ Standard dla typów i const lub volatile kwalifikacji (cv) drugiego i trzeciego operandu w wyrażeniu operator warunkowy.
+Włącz wymuszanie C++ standardowych zasad dla kwalifikacji typów i const lub volatile (CV) dla drugiego i trzeciego operandu w wyrażeniu operatora warunkowego.
 
 ## <a name="syntax"></a>Składnia
 
-> **/ Zc: ternary**[**-**]
+> **/Zc: Trzyelementowy** [ **-** ]
 
 ## <a name="remarks"></a>Uwagi
 
-Visual Studio w wersji 15.3 włączenie obsługi kompilatora C++ standardowy operator warunkowy (lub trójargumentowy) (**?:**) zachowanie. C++ Standard wymaga argumentów tego samego typu i stałych nietrwałych kwalifikacji lub tylko jeden argument jako jednoznacznie konwertowane do tego samego typu i stałych nietrwałych kwalifikacji, co inne lub jeden lub obydwa operandy jako wyrażenie throw. W wersjach starszych niż wersja 15.5 programu Visual Studio kompilator może konwersje, które są traktowane jako niejednoznaczny przez standard. Gdy **/Zc: ternary** opcja zostanie określona, kompilator jest zgodny ze standardem i odrzuca kod, który nie spełnia warunków reguły dla typów dopasowane i stałych nietrwałych kwalifikacji drugi i trzeci operand.
+Począwszy od programu Visual Studio 2017, kompilator obsługuje C++ zachowanie standardowego *operatora warunkowego* ( **?:** ). Jest on również znany jako *operator Trzyelementowy*. Standard C++ wymaga, aby argumenty operacji Trzyelementowy spełniały jeden z trzech warunków: Operandy muszą być tego samego typu, a **const** lub **volatile** (kwalifikacja CV) lub tylko jeden operand musi być jednoznacznej konwersji na ten sam typ i niezależność. Lub, jeden lub oba operandy muszą być wyrażeniem throw. W wersjach wcześniejszych niż wersja 15,5 programu Visual Studio 2017 kompilator zezwolił na konwersje, które są uważane za niejednoznaczne przez Standard.
 
-**/Zc: ternary** opcja jest domyślnie wyłączona. Użyj **/Zc: ternary** Aby włączyć odpowiadające zachowanie lub **/Zc:ternary-** jawnie określić poprzednie zachowanie kompilatora niezgodnych. [/ Permissive-](permissive-standards-conformance.md) opcji niejawnie włączy tę opcję, ale może być zastąpiona przy użyciu **/Zc:ternary-**.
+Gdy określona jest opcja **/Zc: Trzyelementowy** , kompilator jest zgodny ze standardem. Odrzuci kod, który nie spełnia reguł dla dopasowanych typów oraz kwalifikacji CV dla drugiego i trzeciego operandu.
+
+Opcja **/Zc: Trzyelementowy** jest domyślnie wyłączona w programie Visual Studio 2017. Użyj **/Zc: Trzyelementowy** , aby włączyć zgodne zachowanie, lub **/Zc: Trzyelementowy-** by jawnie określić poprzednie zachowanie kompilatora niezgodnego. Opcja [/permissive-](permissive-standards-conformance.md) powoduje niejawnie włączenie tej opcji, ale można ją zastąpić za pomocą **/Zc: Trzyelementowy-** .
 
 ### <a name="examples"></a>Przykłady
 
-Niniejszy przykład pokazuje, jak klasa, która zawiera zarówno inicjowania niejawnego typu i konwersji do typu może prowadzić do niejednoznaczne. Ten kod jest akceptowany przez kompilator domyślnie, ale kiedy odrzucone **/Zc: ternary** lub **/ permissive-** jest określony.
+Ten przykład pokazuje, jak Klasa, która zapewnia zarówno inicjalizację niejawną z typu, jak i konwersję na typ, może prowadzić do niejednoznacznych konwersji. Ten kod jest domyślnie akceptowany przez kompilator, ale jest odrzucany, gdy określono **/Zc: Trzyelementowy** lub **/permissive-** .
 
 ```cpp
 // zcternary1.cpp
@@ -54,9 +56,9 @@ int main()
 }
 ```
 
-Wymaganej poprawce jest dokonać jawnego rzutowania preferowany typ wspólny lub uniemożliwić jeden kierunek konwersji z uczestnictwa w polu wyszukiwania kompilatora dopasowanie typu, wprowadzając jawnej konwersji.
+Aby naprawić ten kod, należy jawnie rzutować na preferowany typ wspólny lub uniemożliwić jednokierunkową konwersję typu. Kompilator może być zgodny z konwersją typu, ponieważ konwersja jest jawna.
 
-Wyjątek ważne, aby ten typowy wzorzec jest, gdy typ operandu to jeden z typów ciąg zakończony znakiem null, takie jak `const char*`, `const char16_t*`i tak dalej. Można również odtworzyć to typy tablic i typy wskaźników, które one decay do. Zachowanie podczas rzeczywistego drugi lub trzeci operand do?: jest odpowiedni typ literału ciągu jest zależna od standardowy język używany. C ++ 17 zmianie uległa semantyki dla tego przypadku C ++ 14. W rezultacie kod w poniższym przykładzie jest akceptowany w obszarze **/STD: c ++ 14** (domyślna wartość kompilatora), ale jest odrzucane, gdy **/STD: c ++ 17** jest określony.
+Ważnym wyjątkiem od tego wspólnego wzorca jest, gdy typ operandów jest jednym z typów ciągów zakończonych wartością null, takich jak `const char*`, `const char16_t*`, i tak dalej. Możesz również odtworzyć efekt przy użyciu typów tablic i typów wskaźnika, do których się zanikają. Zachowanie, gdy faktyczny drugi lub trzeci operand `?:` jest literałem ciągu odpowiadającego typu, zależy od użytego standardu języka. W języku c++ 17 zmieniono semantykę w tym przypadku w języku C++ 14. W związku z tym kompilator akceptuje kod w poniższym przykładzie pod domyślnym **/std: c++ 14**, ale odrzuca go po określeniu **/std: c++ 17**.
 
 ```cpp
 // zcternary2.cpp
@@ -76,9 +78,9 @@ int main()
 }
 ```
 
-Aby rozwiązać ten kod, oddać jeden z argumentów jawnie.
+Aby naprawić ten kod, Rzutowanie jednego z operandów jawnie.
 
-W obszarze **/Zc: ternary**, operatorów warunkowych odrzutów kompilatora, gdy jeden z argumentów jest typu void, a druga nie jest wyrażeniem throw. Typowym zastosowaniem tych znajduje się w makra ASSERT podobne:
+W obszarze **/Zc: Trzyelementowy**kompilator odrzuca operatory warunkowe, w których jeden z argumentów jest typu **void**, a inne nie jest wyrażeniem throw. Typowym zastosowaniem tego wzorca jest w makrach przypominających podobne:
 
 ```cpp
 // zcternary3.cpp
@@ -95,9 +97,9 @@ int main()
 }
 ```
 
-Typowym rozwiązaniem jest po prostu zastąpić argumentów niż void void().
+Typowym rozwiązaniem jest zamienienie argumentu `void()`innego niż void na.
 
-W tym przykładzie przedstawiono kod, który generuje błąd w obu **/Zc: ternary** i **/Zc:ternary-**:
+Ten przykład pokazuje kod, który generuje błąd w ramach obu **/Zc: Trzyelementowy** i **/Zc: Trzyelementowy-** :
 
 ```cpp
 // zcternary4.cpp
@@ -112,14 +114,14 @@ int main() {
 }
 ```
 
-Ten kod wydał wcześniej ten błąd:
+Ten kod spowodował wcześniej ten błąd:
 
 ```Output
 error C2446: ':': no conversion from 'foo::<lambda_f6cd18702c42f6cd636bfee362b37033>' to 'foo::<lambda_717fca3fc65510deea10bc47e2b06be4>'
 note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
 ```
 
-Za pomocą **/Zc: ternary** przyczynę niepowodzenia staje się bardziej zrozumiały; w architekturach, gdzie dowolnego z kilku konwencji wywoływania zdefiniowanych w implementacji może służyć do generowania każdego lambda, kompilator określa Brak preferencji między nimi który można odróżnić podpisów możliwe lambda. Nowe dane wyjściowe wyglądają następująco:
+W przypadku **/Zc: Trzyelementowy**przyczyna niepowodzenia zostaje wyczyszczona. Do wygenerowania każdego wyrażenia lambda można użyć dowolnej z kilku konwencji wywoływania zdefiniowanych w implementacji. Jednak kompilator nie ma reguły preferencji, aby odróżnić możliwe sygnatury lambda. Nowe dane wyjściowe wyglądają następująco:
 
 ```Output
 error C2593: 'operator ?' is ambiguous
@@ -130,7 +132,7 @@ note: or       'built-in C++ operator?(bool (__vectorcall *)(int,int), bool (__v
 note: while trying to match the argument list '(foo::<lambda_717fca3fc65510deea10bc47e2b06be4>, foo::<lambda_f6cd18702c42f6cd636bfee362b37033>)'
 ```
 
-Wspólne źródło problemy związane z przyjęcia **/Zc: ternary** pochodzi z użycia operatora warunkowego w szablonie meta-programowania, jak zmienić się niektóre typy wyników w ramach tego przełącznika. W poniższym przykładzie pokazano dwa przypadki gdzie **/Zc: ternary** zmieni typ wyniku wyrażenia warunkowego, w kontekście meta programowania:
+Typowym źródłem problemów wykrytym przez **/Zc: Trzyelementowy** pochodzą z operatorów warunkowych używanych w ramach programowania szablonu. Niektóre typy wyników zmieniają się w ramach tego przełącznika. Poniższy przykład ilustruje dwa przypadki, w których **/Zc: Trzyelementowy** zmienia typ wyniku wyrażenia warunkowego w kontekście niemeta-programistycznego:
 
 ```cpp
 // zcternary5.cpp
@@ -145,17 +147,17 @@ int main(int argc, char**) {
 }
 ```
 
-Typowe rozwiązania w takich przypadkach polega na zastosowaniu `std::remove_reference` cech dla wyniku typu w przypadku, gdy spełnione, aby zachować stare zachowanie.
+Typowym rozwiązaniem jest zastosowanie `std::remove_reference` cech typu wyników, gdy jest to konieczne, aby zachować stare zachowanie.
 
-Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
+Aby uzyskać więcej informacji na temat problemów ze zgodnością C++w wizualizacji, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** stronę właściwości.
+1. Wybierz stronę właściwości **Konfiguracja** > **C/C++**  > **wiersz polecenia** .
 
-1. Modyfikowanie **dodatkowe opcje** właściwości do uwzględnienia **/Zc: ternary** lub **/Zc:ternary-** , a następnie wybierz **OK**.
+1. Zmodyfikuj właściwość **Opcje dodatkowe** , aby uwzględnić **/Zc: Trzyelementowy** lub **/Zc: Trzyelementowy** , a następnie wybierz **przycisk OK**.
 
 ## <a name="see-also"></a>Zobacz także
 

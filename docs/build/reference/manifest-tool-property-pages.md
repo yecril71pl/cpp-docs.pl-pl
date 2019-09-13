@@ -1,6 +1,6 @@
 ---
 title: Strony właściwości narzędzia manifestu
-ms.date: 7/24/2019
+ms.date: 07/24/2019
 ms.topic: article
 f1_keywords:
 - VC.Project.VCManifestTool.SuppressStartupBanner
@@ -24,16 +24,16 @@ f1_keywords:
 - VC.Project.VCManifestTool.UpdateFileHashesSearchPath
 - vc.project.AdditionalOptionsPage
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-ms.openlocfilehash: c8413a28024361db82ca74858453202393987e60
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d9b074667614da8d83fae7b00b49bf63c9390b69
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492688"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927669"
 ---
 # <a name="manifest-tool-property-pages"></a>Strony właściwości narzędzia manifestu
 
-Te strony służą do określania opcji ogólnych dla programu [Mt. exe](/windows/win32/sbscs/mt-exe). Te strony znajdują się w obszarze właściwości**konfiguracji** > właściwości **projektu** >  > **narzędzie manifestu**.
+Te strony służą do określania opcji ogólnych dla programu [Mt. exe](/windows/win32/sbscs/mt-exe). Te strony znajdują się w obszarze właściwości**konfiguracji** > **Właściwości** >  **projektu** > **narzędzie manifestu**.
 
 ## <a name="general-property-page"></a>Ogólna strona właściwości
 
@@ -59,7 +59,7 @@ Używa opcji **/manifest** , aby określić pełne ścieżki dodatkowych plików
 
 ###  <a name="input-resource-manifests"></a>Manifesty zasobów wejściowych
 
-Używa opcji **/inputresource** , aby określić pełną ścieżkę zasobu typu RT_MANIFEST, aby wejść do narzędzia manifestu. Po ścieżce może następować określony identyfikator zasobu. Na przykład:
+Używa opcji **/inputresource** , aby określić pełną ścieżkę zasobu typu RT_MANIFEST, aby wejść do narzędzia manifestu. Po ścieżce może następować określony identyfikator zasobu. Przykład:
 
 `dll_with_manifest.dll;#1`
 

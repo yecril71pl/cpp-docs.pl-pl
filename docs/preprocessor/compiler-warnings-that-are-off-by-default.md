@@ -6,10 +6,10 @@ helpviewer_keywords:
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
 ms.openlocfilehash: a8b203c94d4a5af28837627fda1b8e1631dfb0c0
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.sourcegitcommit: 7babce70714242cf498ca811eec3695fad3abd03
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 09/11/2019
 ms.locfileid: "70220490"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Domyślnie wyłączone ostrzeżenia kompilatora
@@ -42,8 +42,8 @@ Następujące ostrzeżenia są domyślnie wyłączone w programie Visual Studio 
 
 |||
 |-|-|
-|[C4061](../error-messages/compiler-warnings/compiler-warning-level-4-c4061.md) (poziom 4)|moduł wyliczający "*Identifier*" w przełączniku wyliczenia"enum" nie jest jawnie obsługiwany przez etykietę case|
-|[C4062](../error-messages/compiler-warnings/compiler-warning-level-4-c4062.md) (poziom 4)|moduł wyliczający "*Identifier*" w przełączniku wyliczenia"enum" nie jest obsługiwany|
+|[C4061](../error-messages/compiler-warnings/compiler-warning-level-4-c4061.md) (poziom 4)|moduł wyliczający "*Identifier*" w przełączniku wyliczenia *"enum" nie*jest jawnie obsługiwany przez etykietę case|
+|[C4062](../error-messages/compiler-warnings/compiler-warning-level-4-c4062.md) (poziom 4)|moduł wyliczający "*Identifier*" w przełączniku wyliczenia *"enum" nie*jest obsługiwany|
 | [C4165](../error-messages/compiler-warnings/compiler-warning-level-1-c4165.md) (poziom 1) | "HRESULT" jest konwertowany na "bool"; Czy na pewno chcesz to zrobić? |
 | [C4191](../error-messages/compiler-warnings/compiler-warning-level-3-c4191.md) (poziom 3)|"*operator*": niebezpieczna konwersja z "*type_of_expression*" na "*type_required*"|
 |[C4242](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md) (poziom 4)|"*Identyfikator*": konwersja z "*Type1*" na "*Type2*", możliwa utrata danych|

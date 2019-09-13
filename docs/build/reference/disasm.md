@@ -1,42 +1,42 @@
 ---
 title: /DISASM
-ms.date: 1/17/2018
+ms.date: 01/17/2018
 f1_keywords:
 - /disasm
 helpviewer_keywords:
 - -DISASM dumpbin option
 - DISASM dumpbin option
 - /DISASM dumpbin option
-ms.openlocfilehash: 10e8187e896b3922438a8cf2dafa0aec4c91f904
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb394b2266470e77c50ce5398aea961c37ac34fb
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272064"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927724"
 ---
 # <a name="disasm"></a>/DISASM
 
-Drukowanie dezasemblacji sekcji kodu w danych wyjściowych polecenia DUMPBIN.
+Wydrukuj demontaż sekcji kodu w danych wyjściowych polecenia DUMPBIN.
 
 ## <a name="syntax"></a>Składnia
 
-> **/DISASM**{**:**\[**BYTES**|**NOBYTES**]}
+> **/DISASM**{ **:** \[**BYTES**|**NOBYTES**]}
 
 ### <a name="arguments"></a>Argumenty
 
 **BYTES**<br/>
-Obejmuje bajtów instrukcji wraz z interpretowanych rozkazów i argumenty w danych wyjściowych dezasemblacji. Jest to opcja domyślna.
+Zawiera instrukcje bajty wraz ze interpretowanymi opcode i argumentami w danych wyjściowych demontażu. Jest to opcja domyślna.
 
 **NOBYTES**<br/>
-Nie obejmuje bajtów instrukcji w danych wyjściowych dezasemblacji.
+Nie zawiera instrukcji w bajtach w danych wyjściowych deasemblera.
 
 ## <a name="remarks"></a>Uwagi
 
-**/DISASM** opcji wyświetla dezasemblację sekcje kodu w pliku. Używa symbole debugowania, jeśli są obecne w pliku.
+Opcja **opcja/DISASM** wyświetla odzbiór sekcji kodu w pliku. Używa symboli debugowania, jeśli znajdują się w pliku.
 
-**/ DISASM** powinien być używany tylko w obrazach macierzystych, nie zarządzany. Jest równoważne narzędzie dla kodu zarządzanego [ILDASM](/dotnet/framework/tools/ildasm-exe-il-disassembler).
+**Opcja/DISASM** należy używać tylko w natywnych, niezarządzanych obrazach. Odpowiednikiem narzędzia dla kodu zarządzanego jest [Ildasm](/dotnet/framework/tools/ildasm-exe-il-disassembler).
 
-Tylko [/HEADERS](headers.md) — opcja polecenia DUMPBIN jest dostępny do użytku na pliki tworzone przez [/GL (optymalizacja całego programu)](gl-whole-program-optimization.md) — opcja kompilatora.
+Tylko opcja [/Headers](headers.md) polecenia DUMPBIN jest dostępna do użytku dla plików tworzonych przez opcję kompilatora [/GL (Optymalizacja całego programu)](gl-whole-program-optimization.md) .
 
 ## <a name="see-also"></a>Zobacz także
 

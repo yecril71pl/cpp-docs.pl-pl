@@ -12,43 +12,43 @@ helpviewer_keywords:
 - MFC, wizards
 - Class View tool, managing Windows messages
 ms.assetid: f5dd4d13-9dc1-4a49-b6bf-5b3cb45fa8ba
-ms.openlocfilehash: 41cbb86b4245bd78baecd222b5573ba5e877243a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb1a523ca82cd8e1a4256da657efe9702517beda
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338301"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907347"
 ---
 # <a name="wizards-and-the-resource-editors"></a>Kreatorzy i edytory zasobów
 
-Visual C++ obejmuje kilka kreatorów do użytku w programowaniu MFC, wraz z wielu edytory zintegrowanych zasobów. Dla formantów ActiveX programowania, [kreatora kontrolek ActiveX](../mfc/reference/mfc-activex-control-wizard.md) pełni funkcję, podobnie jak w przypadku Kreator aplikacji MFC. Podczas pisania aplikacji MFC, bez większość tych narzędzi, narzędzia znacznie uprościć i przyspieszyć swoją pracę.
+Wizualizacja C++ zawiera kilka kreatorów do użycia w programowaniu MFC oraz wiele zintegrowanych edytorów zasobów. W przypadku formantów ActiveX, [Kreator kontrolek ActiveX](../mfc/reference/mfc-activex-control-wizard.md) służy do celów, podobnie jak w Kreatorze aplikacji MFC. Chociaż możesz pisać aplikacje MFC bez większości tych narzędzi, narzędzia znacznie upraszczają i przyspieszają pracę.
 
-##  <a name="_core_use_appwizard_to_create_an_mfc_application"></a> Za pomocą Kreatora aplikacji MFC do tworzenia aplikacji MFC
+##  <a name="_core_use_appwizard_to_create_an_mfc_application"></a>Tworzenie aplikacji MFC przy użyciu Kreatora aplikacji MFC
 
-Użyj [Kreator aplikacji MFC](../mfc/reference/mfc-application-wizard.md) do utworzenia projektu MFC w programie Visual C++, może to być OLE i obsługa bazy danych. Pliki w projekcie zawierają aplikacji, dokumentu, widok i klasy okien ramowych; Standardowe zasoby, łącznie z menu i paska narzędzi opcjonalne; inne wymagane pliki Windows; i opcjonalnie .rtf — pliki zawierające standardowa tematy Pomocy Windows, które można skorygować i rozszerzyć, aby utworzyć plik Pomocy programu.
+Użyj [Kreatora aplikacji MFC](../mfc/reference/mfc-application-wizard.md) , aby utworzyć projekt MFC w wizualizacji C++, który może obejmować obsługę OLE i bazy danych. Pliki w projekcie zawierają klasy aplikacji, dokumentów, widoków i okien ramowych; zasoby standardowe, w tym menu i opcjonalny pasek narzędzi; inne wymagane pliki systemu Windows; i opcjonalne pliki. rtf zawierające standardowe tematy pomocy systemu Windows, które można skorygować i rozszerzyć, aby utworzyć plik pomocy programu.
 
-##  <a name="_core_use_classwizard_to_manage_classes_and_windows_messages"></a> Zarządzać klasy i komunikatów Windows za pomocą widoku klas
+##  <a name="_core_use_classwizard_to_manage_classes_and_windows_messages"></a>Używanie Widok klasy do zarządzania klasami i komunikatami systemu Windows
 
-Klasy widoku ułatwia tworzenie funkcji obsługi dla Windows komunikaty i polecenia, tworzenie i zarządzanie klas, tworzenia zmiennych składowej klasy, tworzenie właściwości i metod automatyzacji, tworzenie klas baz danych i nie tylko.
+Widok klasy ułatwia tworzenie funkcji obsługi dla komunikatów i poleceń systemu Windows, tworzenie klas i zarządzanie nimi, Tworzenie zmiennych składowych klasy, Tworzenie metod automatyzacji i właściwości, tworzenie klas baz danych i nie tylko.
 
 > [!NOTE]
->  Widok klas pomaga też przesłonić funkcje wirtualne w klasach MFC. Wybierz klasy i funkcji wirtualnych do przesłonięcia. Pozostała część procesu jest podobny do obsługi komunikatów, zgodnie z opisem w sekcjach.
+>  Widok klasy również pomaga przesłonić funkcje wirtualne w klasach MFC. Wybierz klasę i funkcję wirtualną, która ma zostać przesłonięta. Pozostała część tego procesu jest podobna do obsługi komunikatów, zgodnie z opisem w poniższych akapitach.
 
-Aplikacje działające w środowisku Windows są [komunikat na podstawie](../mfc/message-handling-and-mapping.md). Akcje użytkownika i inne zdarzenia, które występują w uruchomiony program powodują Windows wysyłać komunikaty do systemu windows w programie. Na przykład jeśli użytkownik kliknie przycisk myszy w oknie, Windows wysyła wiadomości WM_LBUTTONDOWN po naciśnięciu lewego przycisku myszy, a komunikat WM_LBUTTONUP po zwolnieniu przycisku. Windows wysyła również wm_command — komunikaty, gdy użytkownik wybierze polecenia na pasku menu.
+Aplikacje działające w systemie Windows są [sterowane komunikatami](../mfc/message-handling-and-mapping.md). Akcje użytkownika i inne zdarzenia występujące w uruchomionym programie powodują, że system Windows wyśle komunikaty do systemu Windows w programie. Na przykład, jeśli użytkownik kliknie myszą w oknie, system Windows wyśle komunikat WM_LBUTTONDOWN po naciśnięciu lewego przycisku myszy i komunikatu WM_LBUTTONUP po wydaniu przycisku. System Windows wysyła również komunikaty WM_COMMAND, gdy użytkownik wybierze polecenia z paska menu.
 
-W ramach MFC różnych obiektów, takich jak dokumenty, widoki, okien ramowych, szablony dokumentów i obiekt aplikacji mogą "handle" wiadomości. Taki obiekt zawiera "Funkcja obsługi" jako jeden z jego elementów członkowskich funkcje i platformę mapy komunikatów przychodzących do jego obsługi.
+W strukturze MFC, różne obiekty, takie jak dokumenty, widoki, okna ramowe, szablony dokumentów i obiekt aplikacji, mogą "obsługiwać" komunikatów. Taki obiekt udostępnia "funkcję obsługi" jako jedną z jej funkcji składowych, a struktura mapuje komunikat przychodzący do procedury obsługi.
 
-Dużą część Twoim zadaniem jako programisty jest wybranie wiadomości, które można mapować na obiekty, które i następnie Implementowanie mapowania. Aby to zrobić, należy użyć widoku klas i oknie dialogowym właściwości.
+Duża część zadania programistycznego polega na wybraniu komunikatów do mapowania obiektów, a następnie implementowania tego mapowania. W tym celu należy użyć Widok klasy i [kreatora klas](reference/mfc-class-wizard.md).
 
-W oknie właściwości utworzy funkcji elementów członkowskich pusty program obsługi komunikatów, a używasz Edytor kodu źródłowego do wdrożenia programu obsługi. Można również utworzyć lub edytować klasy (w tym klasy własny, nie pochodzi od klasy MFC) i ich członków, za pomocą widoku klas. Aby uzyskać więcej informacji na temat korzystania z widoku klas i kreatorzy dodawania kodu do projektu, zobacz [Dodawanie funkcji z kreatorami kodów](../ide/adding-functionality-with-code-wizards-cpp.md).
+[Kreator klas](reference/mfc-class-wizard.md) utworzy puste funkcje członkowskie programu obsługi komunikatów i użyje edytora kodu źródłowego do zaimplementowania treści programu obsługi. Można również tworzyć lub edytować klasy (w tym klasy własne, niepochodzące od klas MFC) i ich członków za pomocą Widok klasy. Aby uzyskać więcej informacji na temat używania Widok klasy i kreatorów, które dodają kod do projektu, zobacz [Dodawanie funkcji za pomocą kreatorów kodu](../ide/adding-functionality-with-code-wizards-cpp.md).
 
-##  <a name="_core_use_the_resource_editors_to_create_and_edit_resources"></a> Edytory zasobów umożliwia tworzenie i edytowanie zasobów
+##  <a name="_core_use_the_resource_editors_to_create_and_edit_resources"></a>Tworzenie i edytowanie zasobów przy użyciu edytorów zasobów
 
-Używać Visual C++ [edytory zasobów](../windows/resource-editors.md) do tworzenia i edytowania menu, okna dialogowe, niestandardowe formanty, klawiszy skrótów, mapy bitowe, ikony, kursorów, ciągi i zasoby wersji. Począwszy od Visual C++ w wersji 4.0 Edytor paska narzędzi pasków narzędzi tworzenia bardzo ułatwia.
+Za pomocą C++ [edytorów zasobów](../windows/resource-editors.md) wizualnych można tworzyć i edytować menu, okna dialogowe, kontrolki niestandardowe, klawisze skrótów, mapy bitowe, ikony, kursory, ciągi i zasoby wersji. W przypadku wersji C++ Visual 4,0 Edytor paska narzędzi znacznie ułatwia tworzenie pasków narzędzi.
 
-Aby pomóc Ci jeszcze więcej, biblioteki klas Microsoft Foundation udostępnia plik o nazwie wspólne. RES, który zawiera zasoby "clipart", które można skopiować z typowych. RES i Wklej w pliku zasobów. WSPÓLNE. RES zawiera przyciski paska narzędzi, typowe kursorów, ikony i inne. Można użyć, modyfikowania i rozpowszechniania tych zasobów w aplikacji. Aby uzyskać więcej informacji na temat typowych. RES, zobacz [przykładowe Clipart](../overview/visual-cpp-samples.md).
+Aby jeszcze bardziej pomóc, biblioteka MFC udostępnia plik o nazwie COMMON. RES, która zawiera zasoby "clipart", które można skopiować ze wspólnego. RES i wklej do własnego pliku zasobów. Wspólna. ZASÓB zawiera przyciski paska narzędzi, typowe kursory, ikony i inne. W aplikacji można używać, modyfikować i rozpowszechniać te zasoby. Aby uzyskać więcej informacji o typowych. RES, zobacz [przykład clipart](../overview/visual-cpp-samples.md).
 
-Kreator aplikacji MFC, kreatorów Visual C++, edytory zasobów i struktura MFC sporego nakładu pracy dla siebie i należy kodu znacznie łatwiejsze zarządzanie. Duża część kodu aplikacji znajduje się w Twoich zajęciach dokument i widok.
+Kreator aplikacji MFC, kreatorzy wizualizacji C++ , edytory zasobów i platforma MFC nie wykonują dużej nakładu pracy i ułatwiają zarządzanie kodem. Większość kodu specyficznego dla aplikacji znajduje się w dokumentach i widokach klas.
 
 ## <a name="see-also"></a>Zobacz także
 

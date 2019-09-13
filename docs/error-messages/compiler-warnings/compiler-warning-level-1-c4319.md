@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4319
-ms.date: 1/18/2018
+title: Ostrzeżenie kompilatora (poziom 1) C4319
+ms.date: 01/18/2018
 f1_keywords:
 - C4319
 helpviewer_keywords:
 - C4319
 ms.assetid: 1fac8048-9bd6-4552-a21c-192c67772bb9
-ms.openlocfilehash: 20b268bacd6e7e259e9b4fa1c9e98fa6fd353718
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d5ae8fcf5a527031c3a974b227f713675f31ffa
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385475"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926102"
 ---
-# <a name="compiler-warning-level-1-c4319"></a>Kompilator ostrzeżenie (poziom 1) C4319
+# <a name="compiler-warning-level-1-c4319"></a>Ostrzeżenie kompilatora (poziom 1) C4319
 
-> "~": zero rozszerzanie "*type1*"to"*type2*' o większym rozmiarze
+> "~": zero rozszerzające wartość "*Type1*" na "*Type2*" o większym rozmiarze
 
-Wynik **~** — operator (dopełnienia bitowego) jest niepodpisany i następnie rozszerzone zero, gdy jest konwertowany na typ większe.
+Wynik **~** operatora (deuzupełnienie bitowe) jest niepodpisany, a następnie zostanie przedłużony zero, gdy zostanie on przekonwertowany na większy typ.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie `~(a - 1)` jest oceniane jako 32-bitowych unsigned wyrażenie długie i następnie konwertowany na 64-bitowy, zerowego rozszerzenia. Może to prowadzić do operacji nieoczekiwane wyniki.
+W poniższym przykładzie jest oceniane `~(a - 1)` jako 32-bitowe wyrażenie długie bez znaku, a następnie konwertowane do 64 bitów przez zero. Może to prowadzić do nieoczekiwanych wyników operacji.
 
 ```cpp
 // C4319.cpp

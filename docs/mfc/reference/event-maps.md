@@ -1,15 +1,15 @@
 ---
 title: Mapy zdarzeń
-ms.date: 06/20/2018
+ms.date: 09/07/2019
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-ms.openlocfilehash: ef730574b26a4c3619df886b72770ce7e035a40e
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 34741dc05efe77c0932343739540370f54db6008
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916467"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907896"
 ---
 # <a name="event-maps"></a>Mapy zdarzeń
 
@@ -21,7 +21,7 @@ Biblioteka MFC oferuje model programowania zoptymalizowany pod kątem wyzwalania
 
 `EVENT_STOCK_CLICK` Makro wskazuje, że po wykryciu kliknięcia myszą przez formant będzie wyzwalane zdarzenie kliknięcia. Aby zapoznać się z bardziej szczegółową listą innych zdarzeń giełdowych [, zobacz artykuł formanty ActiveX: Zdarzenia](../../mfc/mfc-activex-controls-events.md). Dostępne są również makra wskazujące na zdarzenia niestandardowe.
 
-Mimo że makra mapy zdarzeń są ważne, zazwyczaj nie należy wstawiać ich bezpośrednio. Dzieje się tak, ponieważ okno Właściwości automatycznie tworzy wpisy mapowania zdarzeń w plikach źródłowych, gdy jest on używany do kojarzenia funkcji wyzwalania zdarzeń ze zdarzeniami. Za każdym razem, gdy chcesz edytować lub dodać wpis mapy zdarzeń, możesz użyć okno Właściwości.
+Mimo że makra mapy zdarzeń są ważne, zazwyczaj nie należy wstawiać ich bezpośrednio. Jest to spowodowane tym, że okno **Właściwości** (w **Widok klasy**) automatycznie tworzy wpisy mapowania zdarzeń w plikach źródłowych, gdy jest on używany do kojarzenia funkcji wyzwalania zdarzeń ze zdarzeniami. Za każdym razem, gdy chcesz edytować lub dodać wpis mapy zdarzeń, możesz użyć okna **Właściwości** .
 
 Aby można było obsługiwać mapy zdarzeń, MFC udostępnia następujące makra:
 
@@ -148,7 +148,7 @@ Określa listę zawierającą 32-bitową liczbę całkowitą reprezentującą wa
 |VTS_FONT|`IFontDispatch*`|
 |VTS_HANDLE|UCHWYTY|
 |VTS_SCODE|SCODE|
-|VTS_BOOL|LOGICZNA|
+|VTS_BOOL|BOOL|
 |VTS_VARIANT|`const VARIANT*`|
 |VTS_PVARIANT|`VARIANT*`|
 |VTS_UNKNOWN|LPUNKNOWN|

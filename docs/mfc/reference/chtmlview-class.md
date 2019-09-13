@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 2d00a7216778f4a9a40b9d503bce7d26982669e0
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9643379136398de7ce4d98aaa9ab5f22fa488c0e
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506070"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927939"
 ---
 # <a name="chtmlview-class"></a>Klasa CHtmlView
 
@@ -1194,7 +1194,7 @@ Wskaźnik do ciągu, który jest obliczany na adres URL, nazwę pliku UNC lub PI
 
 Nie każda ramka spowoduje uruchomienie tego zdarzenia, ale każda ramka, która wyzwala zdarzenie [OnDownloadBegin](#ondownloadbegin) , spowoduje wyzwolenie odpowiedniego `OnDocumentComplete` zdarzenia.
 
-Adres URL wskazywany przez *lpszURL* może być inny niż adres URL, do którego przeglądarka otrzymała polecenie, ponieważ ten adres URL jest kanonicznym i kwalifikowanym adresem URL. Na przykład jeśli aplikacja określa adres URL "www.Microsoft.com" w wywołaniu [nawigacji](#navigate) lub [Navigate2](#navigate2), adres URL przesłany przez `OnNavigateComplete2` to "<http://www.microsoft.com/>". Ponadto, jeśli serwer przekierował przeglądarkę do innego adresu URL, przekierowane adresy URL zostaną odzwierciedlone w tym miejscu.
+Adres URL wskazywany przez *lpszURL* może być inny niż adres URL, do którego przeglądarka otrzymała polecenie, ponieważ ten adres URL jest kanonicznym i kwalifikowanym adresem URL. Na przykład `"www.microsoft.com"` Jeśli aplikacja określa adres URL w wywołaniu do [nawigacji](#navigate) lub [Navigate2](#navigate2), adres URL przesłany przez `OnNavigateComplete2` `"<https://www.microsoft.com/>"`to. Ponadto, jeśli serwer przekierował przeglądarkę do innego adresu URL, przekierowane adresy URL zostaną odzwierciedlone w tym miejscu.
 
 ##  <a name="ondocwindowactivate"></a>CHtmlView:: OnDocWindowActivate
 
@@ -1458,7 +1458,7 @@ Wyrażenie ciągu, którego wynikiem jest adres URL, nazwa pliku UNC lub PIDL (w
 
 Parametr adresu URL może być PIDL w przypadku jednostki przestrzeni nazw powłoki, dla której nie istnieje reprezentacja adresu URL.
 
-Należy zauważyć, że adres URL zawarty w *strURL* może różnić się od adresu URL, do którego przeglądarka otrzymała, aby przejść do tego adresu URL. Na przykład jeśli aplikacja określa adres URL "www.Microsoft.com" w wywołaniu [nawigacji](#navigate) lub [Navigate2](#navigate2), adres URL przesłany przez `OnNavigateComplete2` to "<http://www.microsoft.com/>". Ponadto, jeśli serwer przekierował przeglądarkę do innego adresu URL, przekierowane adresy URL zostaną odzwierciedlone w tym miejscu.
+Należy zauważyć, że adres URL zawarty w *strURL* może różnić się od adresu URL, do którego przeglądarka otrzymała, aby przejść do tego adresu URL. Na przykład `"www.microsoft.com"` Jeśli aplikacja określa adres URL w wywołaniu do [nawigacji](#navigate) lub [Navigate2](#navigate2), adres URL przesłany przez `OnNavigateComplete2` `"<https://www.microsoft.com/>"`to. Ponadto, jeśli serwer przekierował przeglądarkę do innego adresu URL, przekierowane adresy URL zostaną odzwierciedlone w tym miejscu.
 
 ##  <a name="onnavigateerror"></a>CHtmlView:: OnNavigateError
 
@@ -1687,7 +1687,7 @@ Ciąg, który zawiera nowy tekst paska stanu.
 
 ##  <a name="ontheatermode"></a>CHtmlView:: onkinamode
 
-Ta funkcja członkowska jest wywoływana przez platformę, [](/previous-versions/aa768273\(v=vs.85\)) gdy właściwość kinamode została zmieniona.
+Ta funkcja członkowska jest wywoływana przez platformę, gdy właściwość [kinamode](/previous-versions/aa768273\(v=vs.85\)) została zmieniona.
 
 ```
 virtual void OnTheaterMode(BOOL bTheaterMode);

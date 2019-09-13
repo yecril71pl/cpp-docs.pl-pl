@@ -1,6 +1,6 @@
 ---
 title: 'Przewodnik: Aktualizowanie aplikacji bazgrołów MFC (część 1)'
-ms.date: 04/25/2019
+ms.date: 09/09/2019
 helpviewer_keywords:
 - examples [MFC], update existing application
 - ribbon UI, porting to
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: 8211111e3f9e6fff2377a62689e6f8b1e0e40990
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 23ddf92514674c32e28c259c4c7aa8f742302485
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630423"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907424"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Przewodnik: Aktualizowanie aplikacji bazgrołów MFC (część 1)
 
@@ -24,7 +24,7 @@ W tym instruktażu jest modyfikowany przykład klasycznego programu Bazgroły 1,
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Przykład programu Bazgroły dla [MFC 1,0](https://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Aby uzyskać pomoc dotyczącą konwersji do programu Visual Studio 2017 lub [nowszego, zobacz Przewodnik dotyczący przenoszenia: , Bazgroły](../porting/porting-guide-mfc-scribble.md)MFC.
+[Przykład programu Bazgroły dla MFC 1,0](https://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Aby uzyskać pomoc dotyczącą konwersji do programu Visual Studio 2017 lub [nowszego, zobacz Przewodnik dotyczący przenoszenia: , Bazgroły](../porting/porting-guide-mfc-scribble.md)MFC.
 
 ##  <a name="top"></a>Poszczególne
 
@@ -127,7 +127,7 @@ W tym instruktażu są kopiowane pliki zasobów z przykładu utworzonego w [prze
 
    1. Utwórz kopię pliku Toolbar. bmp, ale Zapisz kopię na Wstążce przykład. Zmień nazwę pliku Copy panelicons. bmp, a następnie Przenieś kopię do projektu Bazgrołowego.
 
-1. Zaimportuj mapę bitową dla aplikacji MFC. W **Widok zasobów**kliknij dwukrotnie węzeł Bazgroły **. RC** , kliknij dwukrotnie węzeł **Mapa bitowa** , a następnie kliknij pozycję **Dodaj zasób**. W wyświetlonym oknie dialogowym kliknij przycisk **Importuj**. Przejdź do `res` katalogu, wybierz główny plik BMP, a następnie kliknij przycisk **Otwórz**.
+1. Zaimportuj mapę bitową dla aplikacji MFC. W **Widok zasobów**kliknij dwukrotnie węzeł **Bazgroły. RC** , kliknij dwukrotnie węzeł **Mapa bitowa** , a następnie kliknij pozycję **Dodaj zasób**. W wyświetlonym oknie dialogowym kliknij przycisk **Importuj**. Przejdź do `res` katalogu, wybierz główny plik BMP, a następnie kliknij przycisk **Otwórz**.
 
    Mapa bitowa Main. bmp zawiera obraz 26x26. Zmień identyfikator mapy bitowej na `IDB_RIBBON_MAIN`.
 
@@ -163,13 +163,13 @@ Wstążka składa się z przycisku **aplikacji** , który jest dużym przyciskie
 
 1. Z projektem bazgrołów wybranym w **Eksplorator rozwiązań**w menu **projekt** kliknij polecenie **Dodaj zasób**.
 
-1. W oknie dialogowym **Dodawanie zasobu** wybierz Wstążkę , a następnie kliknij przycisk **Nowy**.
+1. W oknie dialogowym **Dodawanie zasobu** wybierz **Wstążkę** , a następnie kliknij przycisk **Nowy**.
 
    Program Visual Studio tworzy zasób wstążki i otwiera go w widoku projektu. Identyfikator zasobu wstążki to `IDR_RIBBON1`, który jest wyświetlany w **Widok zasobów**. Wstążka zawiera jedną kategorię i jeden panel.
 
 1. Przycisk **aplikacji** można dostosować, modyfikując jego właściwości. Identyfikatory komunikatów, które są używane w tym kodzie, są już zdefiniowane w menu dla bazgrołów 1,0.
 
-1. W widoku Projekt kliknij przycisk **aplikacja** , aby wyświetlić jego właściwości. Zmień wartości właściwości w następujący sposób: **Obraz** do `IDB_RIBBON_MAIN`, monitować `File`o **klucze** do `f`, **duże obrazy** do `IDB_RIBBON_FILELARGE`i **małe obrazy** `IDB_RIBBON_FILESMALL`.
+1. W widoku Projekt kliknij przycisk **aplikacja** , aby wyświetlić jego właściwości. Zmień wartości właściwości w następujący sposób: **Obraz** do `IDB_RIBBON_MAIN`, **monitować** `File`o **klucze** do `f`, **duże obrazy** do `IDB_RIBBON_FILELARGE`i **małe obrazy** `IDB_RIBBON_FILESMALL`.
 
 1. Poniższe modyfikacje tworzą menu, które pojawiają się, gdy użytkownik kliknie przycisk **aplikacji** . Kliknij przycisk wielokropka ( **...** ) obok **pozycji główne elementy** , aby otworzyć **Edytor elementów**.
 
@@ -199,6 +199,7 @@ Wstążka składa się z przycisku **aplikacji** , który jest dużym przyciskie
 
 1. Poniższe modyfikacje tworzą przycisk zakończenia, który pojawia się w dolnej części menu przycisku **aplikacji** .
 
+   1. Wybierz kartę **Widok zasobów** w **Eksplorator rozwiązań**.
    1. W oknie **Właściwości** kliknij przycisk wielokropka ( **...** ) obok **przycisku** , aby otworzyć **Edytor elementów**.
 
    1. Po wybraniu **przycisku** typ **elementu** kliknij przycisk **Dodaj** , aby dodać przycisk. Zmień **napis** na `E&xit`, **Identyfikator** na `ID_APP_EXIT`, **obraz** do `8`.
@@ -238,7 +239,7 @@ Po utworzeniu przycisku **aplikacji** możesz dodać elementy do wstążki.
 
 ### <a name="to-add-a-home-category-and-edit-panel"></a>Aby dodać kategorię główną i panel edycji
 
-1. Program Bazgroły wymaga tylko jednej kategorii. W widoku Projekt w przyborniku kliknijdwukrotnie **kategorię Kategoria** , aby dodać ją i wyświetlić jej właściwości. Zmień wartości właściwości w następujący sposób: **Podpis** do `&Home` **, duże obrazy** ,`IDB_RIBBON_HOMESMALL`do. `IDB_RIBBON_HOMELARGE`
+1. Program Bazgroły wymaga tylko jednej kategorii. W widoku Projekt w **przyborniku**kliknij dwukrotnie **kategorię Kategoria** , aby dodać ją i wyświetlić jej właściwości. Zmień wartości właściwości w następujący sposób: **Podpis** do `&Home` **, duże obrazy** **, do.** `IDB_RIBBON_HOMESMALL` `IDB_RIBBON_HOMELARGE`
 
 1. Każda kategoria wstążki jest zorganizowana w nazwane panele. Każdy panel zawiera zestaw kontrolek, które ukończą powiązane operacje. Ta kategoria ma jeden panel. Kliknij **panel**, a następnie zmień **napis** na `Edit`.
 

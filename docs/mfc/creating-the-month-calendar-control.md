@@ -6,34 +6,34 @@ helpviewer_keywords:
 - month calendar controls [MFC], creating
 - month calendar controls [MFC]
 ms.assetid: 185cc642-85e9-4365-8a4c-d90b75b010f7
-ms.openlocfilehash: 809bc9fdf6b4477363d0a43d007a2884bb43a049
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e430a86c2ac08bde0f031a4c91b9ae5c6f570f3
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242190"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907505"
 ---
 # <a name="creating-the-month-calendar-control"></a>Tworzenie formantu kalendarza miesięcznego
 
-Sposób tworzenia formant kalendarza miesięcznego zależy od tego, czy są przy użyciu formantu w oknie dialogowym lub tworzenie go w oknie nondialog.
+Sposób tworzenia kontrolki kalendarza miesięcznego zależy od tego, czy kontrolka jest używana w oknie dialogowym, czy też jest tworzona w oknie niedialogowym.
 
-### <a name="to-use-cmonthcalctrl-directly-in-a-dialog-box"></a>Aby użyć CMonthCalCtrl bezpośrednio w oknie dialogowym
+### <a name="to-use-cmonthcalctrl-directly-in-a-dialog-box"></a>Aby używać CMonthCalCtrl bezpośrednio w oknie dialogowym
 
-1. W edytorze okien dialogowych należy dodać formant kalendarza miesięcznego do zasobu szablonu okna dialogowego. Określ identyfikator kontrolki.
+1. W edytorze okien dialogowych Dodaj formant kalendarza miesięcznego do zasobu szablonu okna dialogowego. Określ jego identyfikator kontrolki.
 
-1. Określ wszystkie style, wymagane, za pomocą okna dialogowego właściwości formantu kalendarza miesięcznego.
+1. Określ wymagane style przy użyciu okna dialogowego właściwości kontrolki kalendarza miesięcznego.
 
-1. Użyj [Kreator dodawania zmiennej składowej](../ide/adding-a-member-variable-visual-cpp.md) można dodać zmiennej składowej typu [CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md) z właściwością kontrolki. Można użyć tego elementu członkowskiego do wywołania `CMonthCalCtrl` funkcji elementów członkowskich.
+1. Użyj [Kreatora dodawania zmiennej członkowskiej](../ide/adding-a-member-variable-visual-cpp.md) , aby dodać zmienną członkowską typu [CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md) z właściwością Control. Tego elementu członkowskiego można użyć do `CMonthCalCtrl` wywołania funkcji Członkowskich.
 
-1. Użyj okna właściwości do mapowania funkcji obsługi w klasy okien dialogowych dla powiadomień formantu kalendarza miesięcznego wiadomości musi obsłużyć (zobacz [mapowanie komunikatów do funkcji](../mfc/reference/mapping-messages-to-functions.md)).
+1. Użyj [kreatora klas](reference/mfc-class-wizard.md) , aby zamapować funkcje obsługi w klasie okna dialogowego na komunikaty powiadomień o dowolnym miesiącu, które mają być obsługiwane (zobacz [Mapowanie komunikatów do funkcji](../mfc/reference/mapping-messages-to-functions.md)).
 
-1. W [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), ustaw wszelkie dodatkowe style `CMonthCalCtrl` obiektu.
+1. W [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), ustaw wszelkie dodatkowe style dla `CMonthCalCtrl` obiektu.
 
-### <a name="to-use-cmonthcalctrl-in-a-nondialog-window"></a>Aby użyć CMonthCalCtrl w oknie nondialog
+### <a name="to-use-cmonthcalctrl-in-a-nondialog-window"></a>Aby użyć CMonthCalCtrl w oknie niedialogowym
 
-1. Zdefiniuj kontrolki w klasie widoku lub w oknie.
+1. Zdefiniuj formant w klasie widoku lub okna.
 
-1. Wywoływanie kontrolki [Utwórz](../mfc/reference/cmonthcalctrl-class.md#create) funkcję członkowską, prawdopodobnie w [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate), prawdopodobnie jako wczesne jako okno nadrzędne [OnCreate](../mfc/reference/cwnd-class.md#oncreate) funkcji obsługi (w przypadku Tworzenie podklasy kontrolki). Ustawianie stylów dla formantu.
+1. Wywoływanie funkcji [tworzenia](../mfc/reference/cmonthcalctrl-class.md#create) elementu członkowskiego kontrolki, prawdopodobnie w [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate), prawdopodobnie tak wcześnie jak funkcja procedury obsługi [OnCreate](../mfc/reference/cwnd-class.md#oncreate) okna nadrzędnego (Jeśli jesteś podklasą kontrolki). Ustaw style dla kontrolki.
 
 ## <a name="see-also"></a>Zobacz także
 

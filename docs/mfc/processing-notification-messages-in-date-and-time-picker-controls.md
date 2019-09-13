@@ -14,18 +14,18 @@ helpviewer_keywords:
 - DTN_FORMAT notification [MFC]
 - DateTimePicker control [MFC]
 ms.assetid: ffbe29ab-ff80-4609-89f7-260b404439c4
-ms.openlocfilehash: fead5643299aee4beace55abde0b6a6c801a324f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 500c31d494c53f34febb0f22c82f13b08a1d33cd
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507876"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908121"
 ---
 # <a name="processing-notification-messages-in-date-and-time-picker-controls"></a>Przetwarzanie komunikatów powiadomień w formantach selektora dat i godzin
 
 Gdy użytkownicy współpracują z kontrolką selektora daty i godziny,`CDateTimeCtrl`formant () wysyła komunikaty powiadomień do okna nadrzędnego, zwykle widok lub obiekt okna dialogowego. Obsługuj te komunikaty, jeśli chcesz zrobić coś w odpowiedzi. Na przykład po otwarciu przez użytkownika selektora daty i godziny w celu wyświetlenia formantu kalendarza z osadzonym miesiącem zostanie wysłane powiadomienie DTN_DROPDOWN.
 
-Użyj okno Właściwości, aby dodać procedury obsługi powiadomień do klasy nadrzędnej dla tych komunikatów, które chcesz zaimplementować.
+Użyj [kreatora klas](reference/mfc-class-wizard.md) , aby dodać programy obsługi powiadomień do klasy nadrzędnej dla tych komunikatów, które mają zostać wdrożone.
 
 Na poniższej liście opisano różne powiadomienia wysyłane przez kontrolkę selektora daty i godziny.
 

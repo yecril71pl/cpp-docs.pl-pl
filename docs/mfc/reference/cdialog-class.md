@@ -1,6 +1,6 @@
 ---
 title: Klasa CDialog
-ms.date: 11/04/2016
+ms.date: 09/07/2019
 f1_keywords:
 - CDialog
 - AFXWIN/CDialog
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: d9969b7dd41dc7a67e21bb2735b1d716bd988d07
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b07190c70fb11950b25aff45fb10e850c0e81b24
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506888"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907608"
 ---
 # <a name="cdialog-class"></a>Klasa CDialog
 
@@ -97,7 +97,7 @@ Okna dialogowe mają dwa typy: modalne i niemodalne. Modalne okno dialogowe musi
 
 Obiekt jest kombinacją szablonu okna dialogowego `CDialog`i klasy pochodnej. `CDialog` Użyj edytora okien dialogowych, aby utworzyć szablon okna dialogowego i zapisać go w zasobie, a następnie użyj Kreatora dodawania klasy, aby utworzyć klasę `CDialog`pochodną.
 
-Okno dialogowe, jak każde inne okno, odbiera komunikaty z systemu Windows. W oknie dialogowym szczególnie interesuje się obsługę komunikatów powiadomień z formantów okna dialogowego, ponieważ jest to sposób interakcji użytkownika z oknem dialogowym. Użyj okno Właściwości, aby wybrać wiadomości, które chcesz obsłużyć i dodać odpowiednie wpisy mapy komunikatów i funkcje członkowskie obsługi komunikatów do klasy. Musisz tylko napisać kod specyficzny dla aplikacji w funkcjach składowych programu obsługi.
+Okno dialogowe, jak każde inne okno, odbiera komunikaty z systemu Windows. W oknie dialogowym szczególnie interesuje się obsługę komunikatów powiadomień z formantów okna dialogowego, ponieważ jest to sposób interakcji użytkownika z oknem dialogowym. Użyj [kreatora klas](mfc-class-wizard.md) , aby wybrać komunikaty, które chcesz obsłużyć i dodać odpowiednie wpisy mapy komunikatów i funkcje członkowskie obsługi komunikatów do klasy. Musisz tylko napisać kod specyficzny dla aplikacji w funkcjach składowych programu obsługi.
 
 Jeśli wolisz, zawsze możesz pisać wpisy mapy komunikatów i funkcje członkowskie ręcznie.
 
@@ -107,7 +107,7 @@ Mapa danych jest generowana w celu automatycznego obsłużenia wymiany danych mi
 
 Aby utworzyć modalne okno dialogowe, Skonstruuj obiekt na stosie przy użyciu konstruktora dla klasy dialogu pochodnego, a następnie Wywołaj `DoModal` , aby utworzyć okno dialogowe i jego formanty. Jeśli chcesz utworzyć niemodalne okno dialogowe, wywołaj `Create` w konstruktorze klasy dialogowej.
 
-Możesz również utworzyć szablon w pamięci przy użyciu struktury danych [DLGTEMPLATE](/windows/win32/api/winuser/ns-winuser-dlgtemplate) , zgodnie z opisem w Windows SDK. Po utworzeniu `CDialog` obiektu Wywołaj polecenie "nodirect", aby utworzyć niemodalne okno dialogowe, lub wywołaj [InitModalIndirect](#initmodalindirect) i [DoModal](#domodal) , aby utworzyć modalne okno dialogowe. [](#createindirect)
+Możesz również utworzyć szablon w pamięci przy użyciu struktury danych [DLGTEMPLATE](/windows/win32/api/winuser/ns-winuser-dlgtemplate) , zgodnie z opisem w Windows SDK. Po `CDialog` utworzeniu obiektu Wywołaj polecenie " [nodirect](#createindirect) ", aby utworzyć niemodalne okno dialogowe, lub wywołaj [InitModalIndirect](#initmodalindirect) i [DoModal](#domodal) , aby utworzyć modalne okno dialogowe.
 
 Mapa danych wymiany i walidacji jest zapisywana w przesłonięciu `CWnd::DoDataExchange` , który jest dodawany do nowej klasy okna dialogowego. `CWnd` Aby uzyskać więcej informacji na temat funkcji wymiany i walidacji, zobacz funkcja członkowska [DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange) .
 
@@ -121,7 +121,7 @@ W przypadku tworzenia okna dialogowego z ręcznym dodawaniem niezbędnych zmienn
 
 Modalne okno dialogowe jest automatycznie zamykane, gdy użytkownik naciśnie przyciski OK lub Anuluj albo gdy kod wywołuje `EndDialog` funkcję członkowską.
 
-W przypadku zaimplementowania niemodalnego okna dialogowego zawsze `OnCancel` Przesłoń funkcję członkowską i Wywołaj `DestroyWindow` ją z niej. Nie wywołuj klasy `CDialog::OnCancel`bazowej, ponieważ wywołuje `EndDialog`ją, co spowoduje, że okno dialogowe jest niewidoczne, ale nie niszczy. Należy również przesłonić `PostNcDestroy` dla niemodalnych okien dialogowych, aby je usunąć, ponieważ modalne okna dialogowe są zwykle przydzielono z **nowymi**. Modalne okna dialogowe są zwykle konstruowane w ramce i nie wymagają `PostNcDestroy` czyszczenia.
+W przypadku zaimplementowania niemodalnego okna dialogowego zawsze `OnCancel` Przesłoń funkcję członkowską i Wywołaj `DestroyWindow` ją z niej. Nie wywołuj klasy `CDialog::OnCancel`bazowej, ponieważ wywołuje `EndDialog`ją, co spowoduje, że okno dialogowe jest niewidoczne, ale nie niszczy. Należy również przesłonić `PostNcDestroy` dla niemodalnych okien dialogowych **, aby**je usunąć, ponieważ modalne okna dialogowe są zwykle przydzielono z **nowymi**. Modalne okna dialogowe są zwykle konstruowane w ramce i nie wymagają `PostNcDestroy` czyszczenia.
 
 Aby uzyskać więcej informacji `CDialog`na temat, zobacz [okna dialogowe](../../mfc/dialog-boxes.md).
 
@@ -215,7 +215,7 @@ Dla obu formularzy Przekaż wskaźnik do obiektu okna nadrzędnego. Jeśli *pPar
 
 Funkcja `Create` członkowska wraca natychmiast po utworzeniu okna dialogowego.
 
-Użyj stylu WS_VISIBLE w szablonie okna dialogowego, jeśli okno dialogowe ma być wyświetlane po utworzeniu okna nadrzędnego. W przeciwnym razie należy wywołać `ShowWindow`metodę. Aby uzyskać więcej stylów okna dialogowego i ich aplikacji, zapoznaj się ze strukturą [DLGTEMPLATE](/windows/win32/api/winuser/ns-winuser-dlgtemplate) w stylach Windows SDK i [okna](../../mfc/reference/styles-used-by-mfc.md#window-styles) w *Kompendium MFC*.
+Użyj stylu WS_VISIBLE w szablonie okna dialogowego, jeśli okno dialogowe ma być wyświetlane po utworzeniu okna nadrzędnego. W przeciwnym razie należy wywołać `ShowWindow`metodę. Aby uzyskać więcej stylów okna dialogowego i ich aplikacji, zapoznaj się ze strukturą [DLGTEMPLATE](/windows/win32/api/winuser/ns-winuser-dlgtemplate) w [stylach](../../mfc/reference/styles-used-by-mfc.md#window-styles) Windows SDK i okna w *Kompendium MFC*.
 
 Użyj funkcji `CWnd::DestroyWindow` , aby zniszczyć okno dialogowe utworzone `Create` przez funkcję.
 
@@ -282,7 +282,7 @@ Wartość **int** , która określa wartość parametru *nwynik* , który zosta�
 
 Ta funkcja członkowska obsługuje całą interakcję z użytkownikiem, gdy okno dialogowe jest aktywne. To sprawia, że okno dialogowe jest modalne; oznacza to, że użytkownik nie może współdziałać z innymi oknami, dopóki okno dialogowe nie zostanie zamknięte.
 
-Jeśli użytkownik kliknie jeden z elementów w oknie dialogowym, na przykład OK lub Anuluj, funkcja członkowska obsługi komunikatów, taka jak [OnOK —](#onok) lub OnCancel, jest wywoływana [](#oncancel)w celu zamknięcia okna dialogowego. Domyślna `OnOK` funkcja członkowska sprawdzi i zaktualizuje dane okna dialogowego i zamknie okno dialogowe z wynikiem IDOK, a domyślna `OnCancel` funkcja członkowska zamknie okno dialogowe z wynikowym IDCANCEL bez weryfikowania ani aktualizowania dane okna dialogowego. Można zastąpić te funkcje programu obsługi komunikatów, aby zmienić ich zachowanie.
+Jeśli użytkownik kliknie jeden z elementów w oknie dialogowym, na przykład OK lub Anuluj, funkcja członkowska obsługi komunikatów, taka jak [OnOK —](#onok) lub [OnCancel](#oncancel), jest wywoływana w celu zamknięcia okna dialogowego. Domyślna `OnOK` funkcja członkowska sprawdzi i zaktualizuje dane okna dialogowego i zamknie okno dialogowe z wynikiem IDOK, a domyślna `OnCancel` funkcja członkowska zamknie okno dialogowe z wynikowym IDCANCEL bez weryfikowania ani aktualizowania dane okna dialogowego. Można zastąpić te funkcje programu obsługi komunikatów, aby zmienić ich zachowanie.
 
 > [!NOTE]
 > `PreTranslateMessage`jest teraz wywoływana dla modalnego przetwarzania komunikatów okna dialogowego.
@@ -462,7 +462,7 @@ Określa, czy aplikacja ustawi fokus wprowadzania na jeden z kontrolek w oknie d
 
 ### <a name="remarks"></a>Uwagi
 
-System Windows wysyła `WM_INITDIALOG` komunikat do okna dialogowego podczas wywołań [Create](#create), DoModal [](#createindirect)lub [](#domodal) , które występują bezpośrednio przed wyświetleniem okna dialogowego.
+System Windows wysyła `WM_INITDIALOG` komunikat do okna dialogowego podczas wywołań [Create](#create), DoModal lub [](#domodal) [, które](#createindirect)występują bezpośrednio przed wyświetleniem okna dialogowego.
 
 Zastąp tę metodę, jeśli chcesz przeprowadzić przetwarzanie specjalne po zainicjowaniu okna dialogowego. W zastąpionej wersji, najpierw Wywołaj klasę `OnInitDialog` bazową, ale zignoruj jej wartość zwracaną. Zwykle wrócisz `TRUE` z przesłoniętej metody.
 

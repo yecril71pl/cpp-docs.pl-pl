@@ -8,42 +8,42 @@ helpviewer_keywords:
 - MCN_GETDAYSTATE notification [MFC]
 - month calendar controls [MFC], day state info
 ms.assetid: 435d1b11-ec0e-4121-9e25-aaa6af812a3c
-ms.openlocfilehash: c75b560509738e071accdc3dba31dfdea35a14aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8a91c8b0c3bdef9256628b9226c5f3ff154ed7d
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307760"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907527"
 ---
 # <a name="setting-the-day-state-of-a-month-calendar-control"></a>Ustawianie stanu dnia formantu kalendarza miesięcznego
 
-Jeden z atrybutów kontrolkę kalendarza miesięcznego jest możliwość przechowywania informacji, nazywane stanu dnia formantu, dla każdego dnia miesiąca. Te informacje są używane w celu wyróżnienia określonych dat w miesiącu, aktualnie wyświetlany.
+Jednym z atrybutów formantu kalendarza miesięcznego jest możliwość przechowywania informacji, nazywanych stanem dnia kontrolki, dla każdego dnia miesiąca. Te informacje służą do podkreślenia niektórych dat dla aktualnie wyświetlanego miesiąca.
 
 > [!NOTE]
->  `CMonthCalCtrl` Obiekt musi mieć styl MCS_DAYSTATE, aby wyświetlić informacje o stanie dnia.
+>  Aby `CMonthCalCtrl` wyświetlić informacje o stanie dnia, obiekt musi mieć styl MCS_DAYSTATE.
 
-Informacje o stanie dnia jest wyrażona jako typu danych 32-bitowych **MONTHDAYSTATE**. Każdy bit w **MONTHDAYSTATE** pole bitowe (od 1 do 31) reprezentuje stan dzień w miesiącu. Jeśli bit jest włączony, zostanie wyświetlony odpowiedni dzień pogrubiona; w przeciwnym razie zostanie wyświetlony ze nie szczególnym.
+Informacje o stanie dnia są wyrażane jako 32-bitowy typ danych, **MONTHDAYSTATE**. Każdy bit w **MONTHDAYSTATE** polu bitowym (od 1 do 31) reprezentuje stan dnia w miesiącu. Jeśli bit jest włączony, odpowiedni dzień będzie wyświetlany pogrubiony; w przeciwnym razie będzie wyświetlana bez wyróżniania.
 
-Istnieją dwie metody do ustawiania stanu dnia formantu kalendarza miesięcznego: jawnie wywołaniem [CMonthCalCtrl::SetDayState](../mfc/reference/cmonthcalctrl-class.md#setdaystate) lub dzięki obsłudze mcn_getdaystate — powiadomienie.
+Istnieją dwie metody ustawiania stanu dnia formantu kalendarza miesięcznego: jawne wywołanie [CMonthCalCtrl:: SetDayState](../mfc/reference/cmonthcalctrl-class.md#setdaystate) lub przez obsługę wiadomości z powiadomieniem MCN_GETDAYSTATE.
 
-## <a name="handling-the-mcngetdaystate-notification-message"></a>Obsługa mcn_getdaystate — powiadomienie
+## <a name="handling-the-mcn_getdaystate-notification-message"></a>Obsługa komunikatu powiadomienia MCN_GETDAYSTATE
 
-Komunikat mcn_getdaystate — jest wysyłany przez kontrolkę ustalenie, jak powinna być wyświetlana dni w ciągu miesięcy widoczne.
+Komunikat MCN_GETDAYSTATE jest wysyłany przez formant, aby określić, jak powinny być wyświetlane dni w widocznych miesiącach.
 
 > [!NOTE]
->  Ponieważ kontrolki buforuje poprzednich i następnych miesięcy, w odniesieniu do widocznych miesiąca, otrzymasz to powiadomienie za każdym razem, gdy wybrano nowego miesiąca.
+>  Ponieważ kontrolka przechowuje w pamięci podręcznej poprzednie i następujące miesiące, w odniesieniu do widocznego miesiąca, to powiadomienie będzie wysyłane za każdym razem, gdy zostanie wybrany nowy miesiąc.
 
-Aby poprawnie obsłużyć ten komunikat, należy określić liczbę miesięcy są informacje o stanie dnia żądania, zainicjować tablicę **MONTHDAYSTATE** struktury z odpowiednimi wartościami i inicjowania elementu członkowskiego struktury pokrewne o nowe informacje. W poniższej procedurze, ze szczegółami dotyczącymi niezbędne kroki przyjęto, że masz `CMonthCalCtrl` obiektu o nazwie *m_monthcal* oraz tablicę **MONTHDAYSTATE** obiektów *mdState*.
+Aby prawidłowo obsłużyć ten komunikat, należy określić, ile miesięcy informacje o stanie są żądane, zainicjować tablicę struktur **MONTHDAYSTATE** z prawidłowymi wartościami i zainicjować element członkowski struktury powiązanej z nowym zawartych. Poniższa procedura `CMonthCalCtrl` , szczegółowo niezbędne kroki, zakłada, że masz obiekt o nazwie *m_monthcal* i tablicę obiektów **MONTHDAYSTATE** , *mdState*.
 
-#### <a name="to-handle-the-mcngetdaystate-notification-message"></a>Aby obsłużyć mcn_getdaystate — powiadomienie
+#### <a name="to-handle-the-mcn_getdaystate-notification-message"></a>Aby obsłużyć komunikat powiadomienia MCN_GETDAYSTATE
 
-1. W oknie właściwości. Dodawanie obsługi powiadomienie do wiadomości mcn_getdaystate — *m_monthcal* obiekt (zobacz [mapowanie komunikatów do funkcji](../mfc/reference/mapping-messages-to-functions.md)).
+1. Za pomocą [kreatora klas](reference/mfc-class-wizard.md)Dodaj procedurę obsługi powiadomień dla komunikatu MCN_GETDAYSTATE do obiektu *M_monthcal* (zobacz [Mapowanie komunikatów do funkcji](../mfc/reference/mapping-messages-to-functions.md)).
 
-1. W treści procedury obsługi Dodaj następujący kod:
+1. W treści programu obsługi Dodaj następujący kod:
 
    [!code-cpp[NVC_MFCControlLadenDialog#26](../mfc/codesnippet/cpp/setting-the-day-state-of-a-month-calendar-control_1.cpp)]
 
-   Przykład konwertuje *pNMHDR* wskaźnik do odpowiedniego typu, określa liczbę miesięcy informacje są żądane (`pDayState->cDayState`). W każdym miesiącu, a bieżąca bitfield (`pDayState->prgDayState[i]`) jest ustawiana na zero, a następnie wymagane daty są ustawione (w tym przypadku 15 dnia każdego miesiąca).
+   Przykład konwertuje wskaźnik *pNMHDR* na właściwy typ, a następnie określa, ile miesięcy informacji jest żądanych (`pDayState->cDayState`). Dla każdego miesiąca bieżąca pole bitowe (`pDayState->prgDayState[i]`) jest inicjowana do zera, a następnie są ustawiane daty w tym przypadku (w tym przypadku 15. każdego miesiąca).
 
 ## <a name="see-also"></a>Zobacz także
 

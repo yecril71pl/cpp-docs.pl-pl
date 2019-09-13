@@ -1,6 +1,6 @@
 ---
-title: Klasa Icommandui
-ms.date: 11/04/2016
+title: ICommandUI, interfejs
+ms.date: 09/07/2019
 f1_keywords:
 - ICommandUI
 - AFXWINFORMS/ICommandUI
@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: 31157ba2445a432af274650011b839fb3df9b3c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a7bb3ab5ed292cef8108e937e67bc9e2ccc1ebce
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62322059"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907887"
 ---
-# <a name="icommandui-interface"></a>Klasa Icommandui
+# <a name="icommandui-interface"></a>ICommandUI, interfejs
 
-Zarządza poleceń interfejsu użytkownika.
+Zarządza poleceniami interfejsu użytkownika.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,52 +37,52 @@ interface class ICommandUI
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[icommandui__Check](#check)|Ustawia stan zaznaczenia odpowiednich element interfejsu użytkownika dla tego polecenia.|
-|[ICommandUI::ContinueRouting](#continuerouting)|Informuje mechanizm routingu poleceń, aby kontynuować, routing do bieżącej wiadomości w łańcuchu obsługi.|
-|[ICommandUI::Enabled](#enabled)|Włącza lub wyłącza element interfejsu użytkownika dla tego polecenia.|
-|[ICommandUI::ID](#id)|Pobiera identyfikator obiektu interfejsu użytkownika, które są reprezentowane przez `ICommandUI` obiektu.|
-|[ICommandUI::Index](#index)|Pobiera indeks obiektu interfejsu użytkownika, które są reprezentowane przez `ICommandUI` obiektu.|
-|[ICommandUI::Radio](#radio)|Ustawia stan zaznaczenia odpowiednich element interfejsu użytkownika dla tego polecenia.|
-|[ICommandUI::Text](#text)|Ustawia tekst elementu interfejsu użytkownika dla tego polecenia.|
+|[icommandui__Check](#check)|Ustawia element interfejsu użytkownika dla tego polecenia do odpowiedniego stanu sprawdzania.|
+|[ICommandUI::ContinueRouting](#continuerouting)|Informuje mechanizm routingu poleceń, aby kontynuować kierowanie bieżącego komunikatu do łańcucha programów obsługi.|
+|[ICommandUI:: Enabled](#enabled)|Włącza lub wyłącza element interfejsu użytkownika dla tego polecenia.|
+|[ICommandUI:: ID](#id)|Pobiera identyfikator obiektu interfejsu użytkownika reprezentowanego przez `ICommandUI` obiekt.|
+|[ICommandUI:: index](#index)|Pobiera indeks obiektu interfejsu użytkownika reprezentowanego przez `ICommandUI` obiekt.|
+|[ICommandUI:: Radio](#radio)|Ustawia element interfejsu użytkownika dla tego polecenia do odpowiedniego stanu sprawdzania.|
+|[ICommandUI:: text](#text)|Ustawia tekst elementu interfejsu użytkownika dla tego polecenia.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ten interfejs zapewnia metody i właściwości, które zarządzają poleceń interfejsu użytkownika. `ICommandUI` jest podobny do [klasa CCmdUI](../../mfc/reference/ccmdui-class.md), chyba że `ICommandUI` jest używana dla aplikacji MFC, które współpracować ze składnikami platformy .NET.
+Ten interfejs zapewnia metody i właściwości, które zarządzają poleceniami interfejsu użytkownika. `ICommandUI`jest podobna do [klasy CCmdUI](../../mfc/reference/ccmdui-class.md), z tą `ICommandUI` różnicą, że jest używana dla aplikacji MFC, które współdziałają ze składnikami platformy .NET.
 
-`ICommandUI` jest używana wewnątrz procedury obsługi ON_UPDATE_COMMAND_UI w [obiektu ICommandTarget](../../mfc/reference/icommandtarget-interface.md)-klasy pochodnej. Gdy użytkownik aplikacji aktywuje (zaznacza lub kliknięcia) menu, każdy element menu jest wyświetlany jako włączone lub wyłączone. Celem każdego polecenia menu udostępnia te informacje poprzez implementację programu obsługi ON_UPDATE_COMMAND_UI. Dla każdego z obiektów interfejsu użytkownika poleceń w aplikacji okno właściwości do utworzenia wpisu mapy wiadomości i prototypu funkcji dla każdej procedury obsługi.
+`ICommandUI`jest używany w ramach procedury obsługi ON_UPDATE_COMMAND_UI w klasie pochodnej [ICommandTarget](../../mfc/reference/icommandtarget-interface.md). Gdy użytkownik uaktywnia (wybiera lub klika) menu, każdy element menu jest wyświetlany jako włączony lub wyłączony. Obiekt docelowy każdego polecenia menu dostarcza te informacje przez implementację procedury obsługi ON_UPDATE_COMMAND_UI. Dla każdego z poleceń obiektów interfejsu użytkownika w aplikacji użyj [kreatora klas](mfc-class-wizard.md) , aby utworzyć wpis mapy komunikatów i prototyp funkcji dla każdej procedury obsługi.
 
-Aby uzyskać więcej informacji na temat sposobu `ICommandUI` interfejs jest używany w routingu poleceń, zobacz [jak: Dodaj polecenie routingu do Windows formantu formularzy](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
+Aby uzyskać więcej informacji na temat `ICommandUI` sposobu użycia interfejsu w routingu poleceń, zobacz [How to: Dodaj routing poleceń do kontrolki](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)Windows Forms.
 
-Aby uzyskać więcej informacji na temat korzystania z Windows Forms, zobacz [za pomocą kontrolki użytkownika formularza Windows w MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+Aby uzyskać więcej informacji na temat korzystania z Windows Forms, zobacz [Korzystanie z kontrolki użytkownika formularza systemu Windows w MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-Aby uzyskać więcej informacji na temat sposobu zarządzania poleceń interfejsu użytkownika w MFC, zobacz [klasa CCmdUI](../../mfc/reference/ccmdui-class.md).
+Aby uzyskać więcej informacji na temat sposobu zarządzania poleceniami interfejsu użytkownika w MFC, zobacz [CCmdUI Class](../../mfc/reference/ccmdui-class.md).
 
-## <a name="check"></a> ICommandUI::Check
+## <a name="check"></a>ICommandUI:: Check
 
-Ustawia stan zaznaczenia odpowiednich element interfejsu użytkownika dla tego polecenia.
+Ustawia element interfejsu użytkownika dla tego polecenia do odpowiedniego stanu sprawdzania.
 ```
 property UICheckState Check;
 ```
 
 ## <a name="remarks"></a>Uwagi
 
-Ta właściwość ustawia element interfejsu użytkownika dla tego polecenia stanie odpowiedniej kontroli. Sprawdź, ustaw następujące wartości:
-- Usuń zaznaczenie 0
-- Sprawdzanie 1
-- Ustaw nieokreślony 2
+Ta właściwość ustawia element interfejsu użytkownika dla tego polecenia do odpowiedniego stanu sprawdzania. Ustaw opcję Sprawdź następujące wartości:
+- 0 — Usuń zaznaczenie
+- 1 sprawdzenie
+- 2 Ustaw nieokreślony
 
-## <a name="continuerouting"></a> ICommandUI::ContinueRouting
+## <a name="continuerouting"></a>ICommandUI::ContinueRouting
 
-Informuje mechanizm routingu polecenia nadal routingu do bieżącej wiadomości w łańcuchu programów obsługi.
+Informuje mechanizm routingu poleceń, aby kontynuować kierowanie bieżącego komunikatu do łańcucha programów obsługi.
 ```
 void ContinueRouting();
 ```
 
 ## <a name="remarks"></a>Uwagi
 
-Jest to funkcja członków na poziomie zaawansowanym, który ma zostać użyty w połączeniu z programem obsługi ON_COMMAND_EX, która zwraca wartość FALSE. Aby uzyskać więcej informacji zobacz Pomoc TN006 Uwaga: Mapy komunikatów.
+Jest to zaawansowana funkcja członkowska, która powinna być używana w połączeniu z obsługą ON_COMMAND_EX, która zwraca wartość FALSE. Aby uzyskać więcej informacji, zobacz Uwagi techniczne TN006: Mapy komunikatów.
 
-## <a name="enabled"></a> ICommandUI::Enabled
+## <a name="enabled"></a>ICommandUI:: Enabled
 
 Włącza lub wyłącza element interfejsu użytkownika dla tego polecenia.
 ```
@@ -91,42 +91,42 @@ property bool Enabled;
 
 ## <a name="remarks"></a>Uwagi
 
-Tej właściwości Włącza lub wyłącza element interfejsu użytkownika dla tego polecenia. Włączone, aby należy ustawić wartość TRUE powoduje włączenie elementu wartość FALSE, aby je wyłączyć.
+Ta właściwość włącza lub wyłącza element interfejsu użytkownika dla tego polecenia. Ustaw wartość TRUE, aby włączyć element, FALSE, aby go wyłączyć.
 
-## <a name="id"></a> ICommandUI::ID
+## <a name="id"></a>ICommandUI:: ID
 
-Pobiera identyfikator obiektu interfejsu użytkownika, które są reprezentowane przez obiekt ICommandUI.
+Pobiera identyfikator obiektu interfejsu użytkownika reprezentowanego przez obiekt ICommandUI.
 ```
 property unsigned int ID;
 ```
 
 ## <a name="remarks"></a>Uwagi
 
-Tej właściwości pobiera identyfikator (uchwyt) elementu menu, przycisk paska narzędzi lub inny obiekt interfejsu użytkownika, reprezentowane przez obiekt ICommandUI.
+Ta właściwość pobiera identyfikator (uchwyt) elementu menu, przycisku paska narzędzi lub innego obiektu interfejsu użytkownika reprezentowanego przez obiekt ICommandUI.
 
-## <a name="index"></a> ICommandUI::Index
+## <a name="index"></a>ICommandUI:: index
 
-Pobiera indeks obiektu interfejsu użytkownika, które są reprezentowane przez obiekt ICommandUI.
+Pobiera indeks obiektu interfejsu użytkownika reprezentowanego przez obiekt ICommandUI.
 ```
 property unsigned int Index;
 ```
 
 ## <a name="remarks"></a>Uwagi
 
-Tej właściwości pobiera indeks (uchwyt) elementu menu, przycisk paska narzędzi lub inny obiekt interfejsu użytkownika, reprezentowane przez obiekt ICommandUI.
+Ta właściwość Pobiera indeks (uchwyt) elementu menu, przycisku paska narzędzi lub innego obiektu interfejsu użytkownika reprezentowanego przez obiekt ICommandUI.
 
-## <a name="radio"></a> ICommandUI::Radio
+## <a name="radio"></a>ICommandUI:: Radio
 
-Ustawia stan zaznaczenia odpowiednich element interfejsu użytkownika dla tego polecenia.
+Ustawia element interfejsu użytkownika dla tego polecenia do odpowiedniego stanu sprawdzania.
 ```
 property bool Radio;
 ```
 
 ## <a name="remarks"></a>Uwagi
 
-Ta właściwość ustawia element interfejsu użytkownika dla tego polecenia stanie odpowiedniej kontroli. Ustaw opcji na wartość TRUE powoduje włączenie elementu; w przeciwnym razie wartość FALSE.
+Ta właściwość ustawia element interfejsu użytkownika dla tego polecenia do odpowiedniego stanu sprawdzania. Ustaw dla opcji Radio wartość TRUE, aby włączyć element; w przeciwnym razie FALSE.
 
-## <a name="text"></a> ICommandUI::Text
+## <a name="text"></a>ICommandUI:: text
 
 Ustawia tekst elementu interfejsu użytkownika dla tego polecenia.
 ```
@@ -135,11 +135,11 @@ property String^ Text;
 
 ## <a name="remarks"></a>Uwagi
 
-Ta właściwość określa tekst elementu interfejsu użytkownika dla tego polecenia. Ustaw tekst do uchwytu ciągu tekstowego.
+Ta właściwość ustawia tekst elementu interfejsu użytkownika dla tego polecenia. Ustaw tekst jako uchwyt ciągu tekstowego.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxwinforms.h (zdefiniowany w zestawie atlmfc\lib\mfcmifc80.dll)
+**Nagłówek:** afxwinforms. h (zdefiniowany w zestawie atlmfc\lib\mfcmifc80.dll)
 
 ## <a name="see-also"></a>Zobacz także
 

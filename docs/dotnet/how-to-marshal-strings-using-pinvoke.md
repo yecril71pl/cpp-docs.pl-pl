@@ -1,31 +1,35 @@
 ---
-title: 'Instrukcje: Przeprowadzanie marshalingu ciągów przy użyciu PInvoke'
+title: 'Instrukcje: Kierowanie ciągów za pomocą funkcji PInvoke'
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 09/09/2016
 helpviewer_keywords:
 - interop [C++], strings
 - marshaling [C++], strings
 - data marshaling [C++], strings
 - platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
-ms.openlocfilehash: f316e33f1711ea0053fb68c0af7e89f90b793e05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3b39a4ce40de2a26ffba4f52ab1e39c94767089
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404406"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907564"
 ---
-# <a name="how-to-marshal-strings-using-pinvoke"></a>Instrukcje: Przeprowadzanie marshalingu ciągów przy użyciu PInvoke
+# <a name="how-to-marshal-strings-using-pinvoke"></a>Instrukcje: Kierowanie ciągów za pomocą funkcji PInvoke
 
-W tym temacie wyjaśniono, jak natywne funkcje, których można wywołać ciągi stylu C przy użyciu ciągu CLR typu System::String dzięki obsłudze wywołania do platformy .NET Framework. W programowaniu w języku Visual C++ są zachęcani do zamiast tego użyj funkcji międzyoperacyjności języka C++ (jeśli jest to możliwe), ponieważ metody P/Invoke zapewnia nieco błąd kompilacji, raportowanie, nie jest bezpieczny i może być uciążliwe do zaimplementowania. Niezarządzany interfejs API jest spakowany jako biblioteki DLL i kod źródłowy jest niedostępny, następnie P/Invoke jest jedyną opcją, ale w przeciwnym razie zobacz [za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
+W tym temacie wyjaśniono, jak natywne funkcje, które akceptują ciągi w stylu C, można wywołać za pomocą typu ciągu CLR System:: String przy użyciu funkcji wywołania .NET Framework platformy. Programiści C++ wizualni są zachęcani do C++ używania funkcji międzyoperacyjnych (jeśli to możliwe), ponieważ funkcja P/Invoke zapewnia niewielkie raportowanie błędów w czasie kompilacji, nie jest bezpieczna pod względem typu i może być żmudnym do wdrożenia. Jeśli niezarządzany interfejs API jest spakowany jako biblioteka DLL, a kod źródłowy jest niedostępny, to polecenie P/Invoke jest jedyną opcją, ale w przeciwnym razie zobacz [using C++ Interop (niejawny element PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
-Ciągi zarządzane i niezarządzane są wyświetlane inaczej w pamięci, dlatego przekazywanie ciągi z kodu zarządzanego do funkcji niezarządzanych wymaga <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybutu, aby poinstruować kompilator, aby wstawić mechanizmy konwersji wymagane do kierowania danych ciągu poprawnie i bezpiecznie.
+Ciągi zarządzane i niezarządzane są inaczej ułożone w pamięci, więc przekazywanie ciągów z zarządzanych do niezarządzanych funkcji wymaga <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybutu, aby kompilator mógł wstawić wymagane mechanizmy konwersji do organizowania danych ciągu prawidłowo i bezpiecznie.
 
-Podobnie jak w przypadku funkcji używających tylko typów danych wewnętrznych <xref:System.Runtime.InteropServices.DllImportAttribute> służy do deklarowania punkty wejścia zarządzanych w funkcjach natywnych, ale — w przypadku przekazywania ciągów — zamiast Definiowanie te punkty wejścia jako ciągi stylu C, dojścia do przełączania <xref:System.String> typu można zamiast tego. Kompilator, aby wstawić kod, który wykonuje wymagane konwersja powoduje wyświetlenie monitu. Dla każdego argumentu funkcji w funkcji niezarządzanej, która przyjmuje parametry <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybut powinien być używany do wskazania, że obiekt ciągu powinny być wprowadzane do natywnej funkcji jako ciąg stylu C.
+Podobnie jak w przypadku funkcji używających tylko typów danych <xref:System.Runtime.InteropServices.DllImportAttribute> wewnętrznych, służy do deklarowania zarządzanych punktów wejścia do funkcji natywnych, ale — do przekazywania ciągów — zamiast definiowania tych punktów wejścia jako ciągów w stylu C, uchwytu <xref:System.String> do typu może być użyta. Zostanie wyświetlony komunikat z instrukcjami kompilatora, aby wstawić kod, który wykonuje wymaganą konwersję. Dla każdego argumentu funkcji w niezarządzanej funkcji, która przyjmuje ciąg, <xref:System.Runtime.InteropServices.MarshalAsAttribute> należy użyć atrybutu, aby wskazać, że obiekt String powinien być zorganizowany do funkcji natywnej jako ciąg w stylu C.
+
+Organizator zawija wywołanie funkcji niezarządzanej w ukrytej procedurze otoki, która przypina i kopiuje ciąg zarządzany do lokalnie przydzielonego ciągu w niezarządzanym kontekście, który następnie jest przekazywany do niezarządzanej funkcji. Gdy funkcja niezarządzana zwróci, otoka usuwa zasób lub, jeśli znajduje się on na stosie, jest odzyskiwana, gdy otoka wykracza poza zakres. Niezarządzana funkcja nie odpowiada za tę pamięć. Kod niezarządzany tworzy i usuwa pamięć w stosie skonfigurowanym przez własną CRT, więc nigdy nie występuje problem dotyczący organizatora przy użyciu innej wersji CRT.
+
+Jeśli niezarządzana funkcja zwraca ciąg, jako wartość zwracaną lub parametr out, organizator kopiuje go do nowego łańcucha zarządzanego, a następnie zwalnia pamięć. Aby uzyskać więcej informacji, zobacz [domyślne zachowanie organizowania](/dotnet/framework/interop/default-marshaling-behavior) i [kierowanie danych za pomocą wywołania platformy](/dotnet/framework/interop/marshaling-data-with-platform-invoke).
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod składa się z modułu zarządzanego i niezarządzanego. Moduł niezarządzane to biblioteki DLL, która definiuje funkcję o nazwie TakesAString, który akceptuje ciąg stylu C ANSI w formie char *. Moduł zarządzany jest aplikacją wiersza polecenia, który importuje funkcja TakesAString, ale definiuje ją jako biorąc zarządzanych System.String zamiast znaku\*. <xref:System.Runtime.InteropServices.MarshalAsAttribute> Atrybut jest używany do wskazania, jak powinny być wprowadzane zarządzanych ciągu wywołanego TakesAString.
+Poniższy kod składa się z niezarządzanego i zarządzanego modułu. Moduł niezarządzany jest biblioteką DLL, która definiuje funkcję o nazwie TakesAString, która akceptuje ciąg ANSI w stylu C w postaci znaku *. Moduł zarządzany jest aplikacją wiersza polecenia, która importuje funkcję TakesAString, ale definiuje ją jako przyjmującą zarządzany system. String zamiast znaku\*. Ten <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybut służy do wskazywania, w jaki sposób zarządzany ciąg powinien być zorganizowany po wywołaniu TakesAString.
 
 ```
 // TraditionalDll2.cpp
@@ -73,9 +77,9 @@ int main() {
 }
 ```
 
-Ta technika sprawia, że kopia ciągu skonstruowany na stosie niezarządzanym, dzięki czemu zmiany wprowadzone do ciągu za pomocą natywnej funkcji nie zostaną odzwierciedlone w zarządzanych kopia ciągu.
+Ta technika powoduje, że kopia ciągu ma być skonstruowana na stercie niezarządzanym, więc zmiany wprowadzone do ciągu przez funkcję natywną nie zostaną odzwierciedlone w zarządzanej kopii ciągu.
 
-Należy pamiętać, że części biblioteki DLL jest narażony na kodu zarządzanego za pośrednictwem tradycyjnych # dyrektywy include. W rzeczywistości biblioteki DLL odbywa się w czasie wykonywania, dzięki czemu problemy z funkcjami zaimportowane wraz z `DllImport` nie zostanie wykryty w czasie kompilacji.
+Należy zauważyć, że żadna część biblioteki DLL nie jest ujawniona w kodzie zarządzanym za pośrednictwem tradycyjnego #include dyrektywy. W rzeczywistości plik DLL jest dostępny tylko w czasie wykonywania, dlatego problemy z funkcjami zaimportowanymi z programem `DllImport` nie będą wykrywane w czasie kompilacji.
 
 ## <a name="see-also"></a>Zobacz także
 

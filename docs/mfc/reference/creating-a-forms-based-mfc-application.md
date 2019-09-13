@@ -1,18 +1,18 @@
 ---
 title: Tworzenie aplikacji MFC opartej na formularzach
-ms.date: 08/19/2019
+ms.date: 09/09/2019
 f1_keywords:
 - vc.appwiz.mfcforms.project
 helpviewer_keywords:
 - applications [MFC], forms-based
 - forms-based applications [MFC]
 ms.assetid: 048d2f7d-b60d-4386-ad8e-71d49af9c05e
-ms.openlocfilehash: 95c7f6061933245b2eb2b796e7a678e1e6b010a6
-ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
+ms.openlocfilehash: 1dbbc5c29f85ced846cb3e07a02a5d6a55c94b20
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108461"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908057"
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>Tworzenie aplikacji MFC opartej na formularzach
 
@@ -30,7 +30,7 @@ Każda aplikacja oparta na oknach dialogowych jest z definicji oparta na formula
 
 Klasą bazową dla aplikacji opartych na formularzach jest [CFormView](cformview-class.md). Jeśli aplikacja obsługuje bazę danych, można również wybrać dowolną klasę pochodzącą od klasy `CFormView`. Formularzem jest dowolne okno pochodzące od klasy `CFormView` albo od dowolnej klasy dziedziczącej z klasy `CFormView`.
 
-Nawet jeśli używasz klasy bazowej, takiej jak [CView](cview-class.md), możesz później utworzyć aplikacje oparte na formularzach, dodając [klasę MFC](adding-an-mfc-class.md) pochodną `CFormView` i zaznaczając pole wyboru **Generuj zasoby szablonu dokumentu** w [Kreatorze klas MFC](document-template-strings-mfc-add-class-wizard.md).
+Nawet jeśli używasz klasy bazowej, takiej jak [CView](cview-class.md), możesz później utworzyć aplikacje oparte na formularzach, [dodając klasę MFC](adding-an-mfc-class.md) pochodną `CFormView`.
 
 Po ukończeniu pracy w kreatorze zostanie otwarty projekt. Jeśli jako klasę bazową wybrano `CFormView` (lub klasę dziedziczącą z klasy `CFormView`) lub jeśli utworzono aplikację opartą na oknach dialogowych, zostanie otwarty edytor okien dialogowych. Teraz można przystąpić do projektowania pierwszego formularza.
 
@@ -43,7 +43,7 @@ Po ukończeniu pracy w kreatorze zostanie otwarty projekt. Jeśli jako klasę ba
 1. Zaznacz **pojedynczy dokument**, **wiele dokumentów**lub **wiele dokumentów najwyższego poziomu**.
 
     > [!NOTE]
-    >  Jeśli wybrano aplikację interfejsu SDI, MDI lub wiele dokumentów najwyższego poziomu, domyślnie `CView` jest ona ustawiana jako klasa bazowa widoku aplikacji na stronie wygenerowane [klasy](generated-classes-mfc-application-wizard.md) kreatora. Aby utworzyć aplikację opartą na formularzach, jako klasę bazową widoku aplikacji należy wybrać klasę `CFormView`. Kreator nie zapewnia funkcji drukowania dla aplikacji opartej na formularzach.
+    >  Jeśli wybrano aplikację interfejsu SDI, MDI lub wiele dokumentów najwyższego poziomu, domyślnie `CView` jest ona ustawiana jako klasa bazowa widoku aplikacji na stronie [wygenerowane klasy](generated-classes-mfc-application-wizard.md) kreatora. Aby utworzyć aplikację opartą na formularzach, jako klasę bazową widoku aplikacji należy wybrać klasę `CFormView`. Kreator nie zapewnia funkcji drukowania dla aplikacji opartej na formularzach.
 
 1. Na pozostałych stronach kreatora skonfiguruj inne opcje projektu.
 

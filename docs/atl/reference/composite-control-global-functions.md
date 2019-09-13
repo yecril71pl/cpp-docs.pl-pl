@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 58c7fed2d6e95967101e98589a13c114fe2e9a8a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 525fc01247053a1e2bc993398978cb332262a1a5
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496641"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927766"
 ---
 # <a name="composite-control-global-functions"></a>Funkcje globalne kontrolki złożonej
 
@@ -88,7 +88,7 @@ Jedna ze standardowych wartości HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby użyć `AtlAxDialogBox` z szablonem okna dialogowego zawierającym formant ActiveX, określ prawidłowy identyfikator CLSID, identyfikator appid lub ciąg adresu URL jako pole *tekstowe* sekcji **kontrolki** zasobu okna dialogowego wraz z "AtlAxWin80" jako pole *nazwy klasy* w tej samej sekcji. Poniżej pokazano, jak może wyglądać prawidłowa sekcja kontrolki:
+Aby użyć `AtlAxDialogBox` z szablonem okna dialogowego zawierającym formant ActiveX, określ prawidłowy identyfikator CLSID, identyfikator appid lub ciąg adresu URL jako pole *tekstowe* sekcji **kontrolki** zasobu okna dialogowego wraz z "AtlAxWin80" jako pole *nazwy klasy* w tej samej sekcji. Poniżej pokazano, jak może wyglądać prawidłowa sekcja **kontrolki** :
 
 ```
 CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
@@ -156,18 +156,18 @@ ATLAPI AtlAxCreateControl(
 *lpszName*<br/>
 Wskaźnik do ciągu, który ma zostać przesłany do kontrolki. Muszą być sformatowane w jeden z następujących sposobów:
 
-- Identyfikator ProgID, taki jak "MSCAL. Calendar. 7
+- Identyfikator ProgID, taki jak`"MSCAL.Calendar.7"`
 
-- Identyfikator CLSID, taki jak "{8E27C92B-1264-101C-8A2F-040224009C02}"
+- Identyfikator CLSID, taki jak`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- Adres URL, taki jak<http://www.microsoft.com>""
+- Adres URL, taki jak`"<https://www.microsoft.com>"`
 
-- Odwołanie do aktywnego dokumentu, na przykład "File://\\\Documents\MyDoc.doc"
+- Odwołanie do aktywnego dokumentu, takiego jak`"file://\\\Documents\MyDoc.doc"`
 
-- Fragment kodu HTML, taki jak "MSHTML:\<HTML >\<Body > to jest wierszem tekstu\</Body >\</HTML >"
+- Fragment kodu HTML, taki jak`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:" musi poprzedzać fragment kodu HTML, tak aby był wyznaczono jako strumień MSHTML.
+   > `"MSHTML:"`musi poprzedzać fragment kodu HTML, aby został wyznaczył jako strumień MSHTML.
 
 *Właściwość*<br/>
 podczas Dojście do okna, do którego zostanie dołączona kontrolka.
@@ -208,18 +208,18 @@ ATLAPI AtlAxCreateControlEx(
 *lpszName*<br/>
 Wskaźnik do ciągu, który ma zostać przesłany do kontrolki. Muszą być sformatowane w jeden z następujących sposobów:
 
-- Identyfikator ProgID, taki jak "MSCAL. Calendar. 7
+- Identyfikator ProgID, taki jak`"MSCAL.Calendar.7"`
 
-- Identyfikator CLSID, taki jak "{8E27C92B-1264-101C-8A2F-040224009C02}"
+- Identyfikator CLSID, taki jak`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- Adres URL, taki jak<http://www.microsoft.com>""
+- Adres URL, taki jak`"<https://www.microsoft.com>"`
 
-- Odwołanie do aktywnego dokumentu, na przykład "File://\\\Documents\MyDoc.doc"
+- Odwołanie do aktywnego dokumentu, takiego jak`"file://\\\Documents\MyDoc.doc"`
 
-- Fragment kodu HTML, taki jak "MSHTML:\<HTML >\<Body > to jest wierszem tekstu\</Body >\</HTML >"
+- Fragment kodu HTML, taki jak`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:" musi poprzedzać fragment kodu HTML, tak aby był wyznaczono jako strumień MSHTML.
+   > `"MSHTML:"`musi poprzedzać fragment kodu HTML, aby został wyznaczył jako strumień MSHTML.
 
 *Właściwość*<br/>
 podczas Dojście do okna, do którego zostanie dołączona kontrolka.
@@ -267,18 +267,18 @@ ATLAPI AtlAxCreateControlLic(
 *lpszName*<br/>
 Wskaźnik do ciągu, który ma zostać przesłany do kontrolki. Muszą być sformatowane w jeden z następujących sposobów:
 
-- Identyfikator ProgID, taki jak "MSCAL. Calendar. 7
+- Identyfikator ProgID, taki jak`"MSCAL.Calendar.7"`
 
-- Identyfikator CLSID, taki jak "{8E27C92B-1264-101C-8A2F-040224009C02}"
+- Identyfikator CLSID, taki jak`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- Adres URL, taki jak<http://www.microsoft.com>""
+- Adres URL, taki jak`"<https://www.microsoft.com>"`
 
-- Odwołanie do aktywnego dokumentu, na przykład "File://\\\Documents\MyDoc.doc"
+- Odwołanie do aktywnego dokumentu, takiego jak`"file://\\\Documents\MyDoc.doc"`
 
-- Fragment kodu HTML, taki jak "MSHTML:\<HTML >\<Body > to jest wierszem tekstu\</Body >\</HTML >"
+- Fragment kodu HTML, taki jak`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:" musi poprzedzać fragment kodu HTML, tak aby był wyznaczono jako strumień MSHTML.
+   > `"MSHTML:"`musi poprzedzać fragment kodu HTML, aby został wyznaczył jako strumień MSHTML.
 
 *Właściwość*<br/>
 Dojście do okna, do którego zostanie dołączona kontrolka.
@@ -321,18 +321,18 @@ ATLAPI AtlAxCreateControlLicEx(
 *lpszName*<br/>
 Wskaźnik do ciągu, który ma zostać przesłany do kontrolki. Muszą być sformatowane w jeden z następujących sposobów:
 
-- Identyfikator ProgID, taki jak "MSCAL. Calendar. 7
+- Identyfikator ProgID, taki jak`"MSCAL.Calendar.7"`
 
-- Identyfikator CLSID, taki jak "{8E27C92B-1264-101C-8A2F-040224009C02}"
+- Identyfikator CLSID, taki jak`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- Adres URL, taki jak<http://www.microsoft.com>""
+- Adres URL, taki jak`"<https://www.microsoft.com>"`
 
-- Odwołanie do aktywnego dokumentu, na przykład "File://\\\Documents\MyDoc.doc"
+- Odwołanie do aktywnego dokumentu, takiego jak`"file://\\\Documents\MyDoc.doc"`
 
-- Fragment kodu HTML, taki jak "MSHTML:\<HTML >\<Body > to jest wierszem tekstu\</Body >\</HTML >"
+- Fragment kodu HTML, taki jak`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:" musi poprzedzać fragment kodu HTML, tak aby był wyznaczono jako strumień MSHTML.
+   > `"MSHTML:"`musi poprzedzać fragment kodu HTML, aby został wyznaczył jako strumień MSHTML.
 
 *Właściwość*<br/>
 Dojście do okna, do którego zostanie dołączona kontrolka.
@@ -474,7 +474,7 @@ Niezerowe, jeśli Inicjalizacja kodu hostingu formantu zakończyła się pomyśl
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja musi zostać wywołana przed użyciem interfejsu API hostingu kontrolki ATL. Po wywołaniu tej funkcji Klasa okna **"AtlAxWin"** może być używana w wywołaniach do lub [](/windows/win32/api/winuser/nf-winuser-createwindoww) [elementu CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw), zgodnie z opisem w Windows SDK.
+Ta funkcja musi zostać wywołana przed użyciem interfejsu API hostingu kontrolki ATL. Po wywołaniu tej funkcji Klasa okna **"AtlAxWin"** może być używana w wywołaniach [do](/windows/win32/api/winuser/nf-winuser-createwindoww) lub [elementu CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw), zgodnie z opisem w Windows SDK.
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm
 
