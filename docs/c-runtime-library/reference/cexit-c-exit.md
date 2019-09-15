@@ -1,10 +1,10 @@
 ---
 title: _cexit, _c_exit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _c_exit
 - _cexit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cexit
 - c_exit
@@ -29,16 +32,16 @@ helpviewer_keywords:
 - _cexit function
 - c_exit function
 ms.assetid: f3072045-9924-4b1a-9fef-b0dcd6d12663
-ms.openlocfilehash: a075e8a8e965a195765b86ffa21fed0915dbf5ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa25d73bef1d85adfed77ba926e2d381e02e45e8
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335493"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939255"
 ---
-# <a name="cexit-cexit"></a>_cexit, _c_exit
+# <a name="_cexit-_c_exit"></a>_cexit, _c_exit
 
-Wykonuje operacje oczyszczania i zwraca bez zakończenie debugowanego procesu.
+Wykonuje operacje czyszczenia i zwraca bez zakończenia procesu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,16 +52,16 @@ void _c_exit( void );
 
 ## <a name="remarks"></a>Uwagi
 
-**_Cexit —** wywołań w ostatni na wejściu, kolejność FIFO (LIFO), funkcje zarejestrowany przez funkcję **atexit** i **_onexit**. Następnie **_cexit —** opróżnia wszystkie bufory We/Wy i zamyka wszystkie otwarte strumienie przed zwróceniem. **_c_exit —** jest taka sama jak **_exit** , ale powraca do wywoływania proces bez przetwarzania **atexit** lub **_onexit** lub opróżniania buforów strumieni. Zachowanie **wyjść**, **_exit**, **_cexit —**, i **_c_exit —** zostały przedstawione w poniższej tabeli.
+Funkcja **_cexit** wywołuje, w kolejności ostatniej-w, pierwszej (LIFO), funkcje zarejestrowane przez **atexit —** i **_onexit**. Następnie **_cexit** opróżnia wszystkie bufory we/wy i zamyka wszystkie otwarte strumienie przed zwróceniem. **_c_exit** jest taka sama jak **_exit** , ale powraca do procesu wywołującego bez przetwarzania buforów strumieni **atexit —** lub **_onexit** lub opróżniania. W poniższej tabeli przedstawiono zachowanie elementów **Exit**, **_exit**, **_cexit**i **_c_exit** .
 
 |Funkcja|Zachowanie|
 |--------------|--------------|
-|**Zakończ**|Wykonuje kompletne procedury kończenia biblioteki C, kończy proces i kończy pracę z dostarczonym kodem stanu.|
+|**Opuść**|Wykonuje kompletne procedury kończenia biblioteki C, kończy proces i kończy pracę z dostarczonym kodem stanu.|
 |**_exit**|Wykonuje szybkie procedury kończenia biblioteki C, kończy proces i kończy pracę z dostarczonym kodem stanu.|
 |**_cexit**|Wykonuje kompletne procedury kończenia biblioteki C i powraca do obiektu wywołującego, ale nie kończy procesu.|
 |**_c_exit**|Wykonuje szybkie procedury kończenia biblioteki C i powraca do obiektu wywołującego, ale nie kończy procesu.|
 
-Gdy wywołujesz **_cexit —** lub **_c_exit —** funkcje, destruktory tymczasowego lub automatycznego obiektu, który istnieje w momencie zgłoszenia wywołania nie są wywoływane. Obiekt automatyczny jest obiektem, który jest zdefiniowany w funkcji, gdzie obiekt nie został zadeklarowany jako statyczny. Obiekt tymczasowy jest obiektem, który został utworzony przez kompilator. Aby zniszczyć obiekt automatyczny przed wywołaniem **_cexit —** lub **_c_exit —**, należy jawnie wywołać destruktor obiektu w następujący sposób:
+Po wywołaniu funkcji **_cexit** lub **_c_exit** , destruktory dla wszelkich tymczasowych lub automatycznych obiektów, które istnieją w czasie wywołania nie są wywoływane. Obiekt automatyczny jest obiektem, który jest zdefiniowany w funkcji, w której obiekt nie został zadeklarowany jako statyczny. Obiekt tymczasowy jest obiektem utworzonym przez kompilator. Aby zniszczyć obiekt automatyczny przed wywołaniem metody **_cexit** lub **_c_exit**, jawnie Wywołaj destruktor dla obiektu w następujący sposób:
 
 ```cpp
 myObject.myClass::~myClass( );
@@ -71,7 +74,7 @@ myObject.myClass::~myClass( );
 |**_cexit**|\<process.h>|
 |**_c_exit**|\<process.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

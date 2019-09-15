@@ -1,7 +1,7 @@
 ---
 title: _STATIC_ASSERT — Makro
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,22 +12,25 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _STATIC_ASSERT
 helpviewer_keywords:
 - _STATIC_ASSERT macro
 ms.assetid: 89b0350c-2c2f-4be6-9786-8b1f0780a5da
-ms.openlocfilehash: 5d3aa1d9665b48a0690d8eb62353fc98c5a550f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac609fc7af937b6f56cd5b310341409187df7de4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354701"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957930"
 ---
-# <a name="staticassert-macro"></a>_STATIC_ASSERT — Makro
+# <a name="_static_assert-macro"></a>_STATIC_ASSERT — Makro
 
-Ocena wyrażenia w czasie kompilacji i wygenerują błąd, jeśli wynik to **FALSE**.
+Oceń wyrażenie w czasie kompilacji i Wygeneruj błąd, gdy wynik ma **wartość false**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,15 +43,15 @@ _STATIC_ASSERT(
 ### <a name="parameters"></a>Parametry
 
 *booleanExpression*<br/>
-Wyrażenie (w tym wskaźniki) obliczane na wartość różną od zera (**TRUE**) lub równa 0 (**FALSE**).
+Wyrażenie (w tym wskaźniki), które ma wartość różną od zera (**true**) lub 0 (**false**).
 
 ## <a name="remarks"></a>Uwagi
 
-Przypomina to makro [_ASSERT i _asserte — makra](assert-asserte-assert-expr-macros.md), chyba że *booleanExpression* jest obliczane w czasie kompilacji, a nie w czasie wykonywania. Jeśli *booleanExpression* daje w wyniku **FALSE** (0), [błąd kompilatora C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) jest generowany.
+To makro przypomina [makra _ASSERT i _ASSERTE](assert-asserte-assert-expr-macros.md), z tą różnicą, że *booleanExpression* jest oceniane w czasie kompilacji, a nie w czasie wykonywania. Jeśli *booleanExpression* zwraca **wartość false** (0), generowany jest [błąd kompilatora C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) .
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie, możemy sprawdzić, czy [sizeof](../../c-language/sizeof-operator-c.md) **int** jest większy niż lub równa 2 bajty oraz tego, czy [sizeof](../../c-language/sizeof-operator-c.md) **długie** jest 1 bajt. Program nie zostanie skompilowany i będzie generować [błąd kompilatora C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) ponieważ **długie** jest większy niż 1 bajt.
+W tym przykładzie sprawdzimy, czy wartość [sizeof](../../c-language/sizeof-operator-c.md) jest **liczbą całkowitą** większą niż lub równą 2 bajty oraz czy [](../../c-language/sizeof-operator-c.md) wartość sizeof **to 1** bajt. Program nie zostanie skompilowany i zostanie wygenerowany [błąd kompilatora C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) , ponieważ **Long** jest większy niż 1 bajt.
 
 ```C
 // crt__static_assert.c

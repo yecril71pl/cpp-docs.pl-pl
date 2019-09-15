@@ -1,11 +1,11 @@
 ---
-title: modf —, modff —, modfl
+title: modf, modff, modfl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - modff
 - modf
 - modfl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - modff
 - _modfl
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: 59d6e2b9b02ad182c5630d6dc9a989c035e8fa92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 32caadb787031dca0b0726c546a11c5cd6722b82
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156333"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951537"
 ---
-# <a name="modf-modff-modfl"></a>modf —, modff —, modfl
+# <a name="modf-modff-modfl"></a>modf, modff, modfl
 
-Dzieli wartość zmiennoprzecinkowa do ułamkową i całkowitą części.
+Dzieli wartość zmiennoprzecinkową na części ułamkowe i całkowite.
 
 ## <a name="syntax"></a>Składnia
 
@@ -60,28 +63,28 @@ long double modf( long double x, long double * intptr );  // C++ only
 *x*<br/>
 Wartość zmiennoprzecinkowa.
 
-*intptr*<br/>
-Wskaźnik do część całkowitą przechowywanych.
+*IntPtr*<br/>
+Wskaźnik do przechowywanej części całkowitej.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Ta funkcja zwraca część ułamkową ze znakiem *x*. Nie będzie zwrotu błędu.
+Ta funkcja zwraca podpisaną część ułamkową *x*. Brak powrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-**Modf —** funkcje podzielić wartość zmiennoprzecinkową *x* w ułamkową i całkowitą części, z których każdy ma ten sam znak co *x*. Oznaczona ułamkowa część *x* jest zwracana. Część całkowitą jest przechowywany jako wartość zmiennoprzecinkowa o *intptr*.
+Funkcja **modf —** dzieli wartość zmiennoprzecinkową *x* na części ułamkowe i całkowite, z których każdy ma ten sam znak jako *x*. Zwracana jest podpisana część ułamkowa *x* . Część całkowita jest przechowywana jako wartość zmiennoprzecinkowa w *IntPtr*.
 
-**modf —** zawiera implementację, która używa Streaming SIMD Extensions 2 (SSE2). Zobacz [_set_sse2_enable —](set-sse2-enable.md) informacje i ograniczenia dotyczące przy użyciu implementacji SSE2.
+**modf —** ma implementację, która używa Streaming SIMD Extensions 2 (SSE2). Zobacz [_set_SSE2_enable](set-sse2-enable.md) , aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2.
 
-Język C++ pozwala na przeciążenie, można więc wywoływać przeciążenia **modf —** przyjmujące i zwracające **float** lub **długie** **double** parametrów. W programie C **modf —** zawsze przyjmuje dwie wartości double i zwraca wartość typu double.
+C++umożliwia Przeciążenie, dlatego można wywoływać przeciążenia **modf —** , które pobierają i zwracają parametry **zmiennoprzecinkowe** lub **długie** . W programie C **modf —** zawsze przyjmuje dwie wartości podwójne i zwraca wartość podwójnej precyzji.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**modf —**, **modff —**, **modfl**|C: \<math.h><br /><br /> C++:, \<cmath > lub \<math.h >|
+|**modf —** , **modff —** , **modfl**|C: \<Math. h ><br /><br /> C++:, \<cmath > lub \<Math. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

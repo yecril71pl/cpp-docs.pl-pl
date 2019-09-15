@@ -1,9 +1,9 @@
 ---
 title: malloc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - malloc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - malloc
 helpviewer_keywords:
 - malloc function
 - memory allocation
 ms.assetid: 144fcee2-be34-4a03-bb7e-ed6d4b99eea0
-ms.openlocfilehash: e6a007fb6f089ebf1c9f5fc9ce59cbcbf0b13888
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8001726bcc2f1b384d527c6f4edcbf8eb92b0d2a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157181"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952832"
 ---
 # <a name="malloc"></a>malloc
 
@@ -43,51 +46,51 @@ void *malloc(
 
 ### <a name="parameters"></a>Parametry
 
-*Rozmiar*<br/>
+*zmienia*<br/>
 Bajty do przydzielenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**malloc** zwraca pusty wskaźnik do przydzielonego miejsca lub **NULL** Jeśli dostępnych jest za mało pamięci. Aby zwrócić wskaźnik do typu innego niż **void**, użyj typu rzutowanego na wartość zwracaną. Miejsca do magazynowania wskazywany przez wartość zwracana jest gwarantowane do bycia odpowiednio wyrównaną do przechowywania dowolnego typu obiektu, którego wymóg wyrównania jest mniejsza niż lub równe, wyrównanie podstawowe. (W programie Visual C++ podstawowe jest wyrównanie, które jest wymagane dla **double**, lub 8 bajtów. W kodzie, który jest przeznaczony dla platform 64-bitowy to 16 bajtów.) Użyj [_aligned_malloc](aligned-malloc.md) do przydzielania pamięci dla obiektów, które mają większe wymagania dotyczące wyrównania — na przykład typy SSE [__m128](../../cpp/m128.md) i **__m256**oraz typy, które są zadeklarowane za pomocą `__declspec(align( n ))` gdzie **n** jest większa niż 8. Jeśli *rozmiar* ma wartość 0, **— funkcja malloc** przydziela element o zerowej długości w stosie i zwraca prawidłowy wskaźnik do tego elementu. Zawsze sprawdzaj zwrot z **— funkcja malloc**, nawet jeśli żądana ilość pamięci jest mała.
+Funkcja **malloc** zwraca wskaźnik void do przydzieloną miejsce lub **wartość null** , jeśli jest za mało dostępnej pamięci. Aby zwrócić wskaźnik do typu innego niż **void**, należy użyć rzutowania typu dla zwracanej wartości. Miejsce do magazynowania wskazywane przez wartość zwracaną jest gwarantowane odpowiednio wyrównane do przechowywania dowolnego typu obiektu, który ma wymaganie wyrównania mniejsze niż lub równe podstawowemu wyrównaniu. (W wizualizacji C++podstawowe wyrównanie to wyrównanie wymagane przez **podwójny**lub 8 bajtów. W kodzie, który jest przeznaczony dla platform 64-bitowych, wynosi 16 bajtów. Za pomocą [_aligned_malloc](aligned-malloc.md) można przydzielić magazyn dla obiektów, które mają większe wymagania dotyczące wyrównania — na przykład typy SSE [__m128](../../cpp/m128.md) i **__m256**oraz typy, które są zadeklarowane za pomocą `__declspec(align( n ))` Where **n** jest większy niż 8. Jeśli *rozmiar* wynosi 0, **malloc** przypisuje element o zerowej długości w stercie i zwraca prawidłowy wskaźnik do tego elementu. Zawsze sprawdzaj poprawność funkcji **malloc**, nawet jeśli żądana ilość pamięci jest mała.
 
 ## <a name="remarks"></a>Uwagi
 
-**— Funkcja malloc** funkcja przydziela blok pamięci wielkości co najmniej *rozmiar* bajtów. Blok może być większa niż *rozmiar* bajtów ze względu na miejsce, które są wymagane do wyrównania i konserwacji informacji.
+Funkcja **malloc** przypisuje blok pamięci o *rozmiarze* co najmniej bajtów. Blok może być większy niż *rozmiar* bajtów ze względu na miejsce, które jest wymagane do wyrównania i konserwacji.
 
-**malloc** ustawia **errno** do **ENOMEM** Jeśli alokacja pamięci nie powiedzie się lub Jeśli żądana ilość pamięci, przekracza **_heap_maxreq —**. Aby uzyskać informacji na temat tego i innych kodów błędu, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Funkcja **malloc** ustawia **errno** do **ENOMEM** , jeśli alokacja pamięci nie powiedzie się lub jeśli żądana ilość pamięci przekroczy **_HEAP_MAXREQ**. Aby uzyskać informacje o tym i innych kodach błędów, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Kod startowy używa **— funkcja malloc** do przydzielania pamięci dla **_environ**, *envp*, i *argv* zmiennych. Następujące funkcje i ich odpowiedniki o znakach szerokich również wywołują **— funkcja malloc**.
+Kod uruchamiania używa usługi **malloc** do przydzielania pamięci dla zmiennych **_environ**, *envp*i *argv* . Następujące funkcje i ich odpowiedniki znakowe są również wywołaniem **malloc**.
 
 |||||
 |-|-|-|-|
-|[calloc](calloc.md)|[fscanf —](fscanf-fscanf-l-fwscanf-fwscanf-l.md)|[_getw](getw.md)|[setvbuf](setvbuf.md)|
-|[Funkcje _exec](../../c-runtime-library/exec-wexec-functions.md)|[fseek](fseek-fseeki64.md)|[_popen](popen-wpopen.md)|[_spawn — funkcje](../../c-runtime-library/spawn-wspawn-functions.md)|
+|[calloc](calloc.md)|[fscanf](fscanf-fscanf-l-fwscanf-fwscanf-l.md)|[_getw](getw.md)|[setvbuf](setvbuf.md)|
+|[funkcje _exec](../../c-runtime-library/exec-wexec-functions.md)|[fseek](fseek-fseeki64.md)|[_popen](popen-wpopen.md)|[funkcje _spawn](../../c-runtime-library/spawn-wspawn-functions.md)|
 |[fgetc](fgetc-fgetwc.md)|[fsetpos](fsetpos.md)|[printf](printf-printf-l-wprintf-wprintf-l.md)|[_strdup](strdup-wcsdup-mbsdup.md)|
 |[_fgetchar](fgetc-fgetwc.md)|[_fullpath](fullpath-wfullpath.md)|[putc](putc-putwc.md)|[system](system-wsystem.md)|
 |[fgets](fgets-fgetws.md)|[fwrite](fwrite.md)|[putchar](putc-putwc.md)|[_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
 |[fprintf —](fprintf-fprintf-l-fwprintf-fwprintf-l.md)|[getc](getc-getwc.md)|[_putenv](putenv-wputenv.md)|[ungetc](ungetc-ungetwc.md)|
-|[fputc](fputc-fputwc.md)|[getchar](getc-getwc.md)|[umieszcza](puts-putws.md)|[vfprintf](vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)|
+|[fputc](fputc-fputwc.md)|[getchar](getc-getwc.md)|[sumaryczn](puts-putws.md)|[vfprintf](vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)|
 |[_fputchar](fputc-fputwc.md)|[_getcwd](getcwd-wgetcwd.md)|[_putw](putw.md)|[vprintf](vprintf-vprintf-l-vwprintf-vwprintf-l.md)|
-|[fputs —](fputs-fputws.md)|[_getdcwd](getcwd-wgetcwd.md)|[scanf](scanf-scanf-l-wscanf-wscanf-l.md)||
-|[fread](fread.md)|[Pobiera](../../c-runtime-library/gets-getws.md)|[_searchenv](searchenv-wsearchenv.md)||
+|[fputs](fputs-fputws.md)|[_getdcwd](getcwd-wgetcwd.md)|[scanf](scanf-scanf-l-wscanf-wscanf-l.md)||
+|[fread](fread.md)|[kto](../../c-runtime-library/gets-getws.md)|[_searchenv](searchenv-wsearchenv.md)||
 
-C++ [_Set_new_mode](set-new-mode.md) funkcja Ustawia nowy tryb obsługi dla **— funkcja malloc**. Nowy tryb obsługi wskazuje, czy w przypadku awarii, **— funkcja malloc** ma wywoływać nową procedurę obsługi zgodnie z ustawieniem [_set_new_handler](set-new-handler.md). Domyślnie **— funkcja malloc** nie wywołuje nowej procedury obsługi awarii w celu przydzielenia pamięci. Można zastąpić to zachowanie domyślne tak, aby, gdy **— funkcja malloc** nie może przydzielić pamięci, **— funkcja malloc** wywoła nową procedurę obsługi w taki sam sposób **nowe** jest operator Jeśli jej nie powiedzie się z tego samego powodu. Aby zastąpić domyślne, wywołaj `_set_new_mode(1)` wcześniej program, lub Połącz z biblioteką NEWMODE. OBJ (zobacz [opcje łącza](../../c-runtime-library/link-options.md)).
+C++ Funkcja [_set_new_mode](set-new-mode.md) ustawia nowy tryb obsługi dla opcji **malloc**. Nowy tryb obsługi wskazuje, czy w przypadku niepowodzenia, **malloc** ma wywołać nową procedurę obsługi jako ustawioną przez [_set_new_handler](set-new-handler.md). Domyślnie funkcja **malloc** nie wywołuje nowej procedury obsługi w przypadku niepowodzenia przydzielenia pamięci. Można zastąpić to zachowanie domyślne, tak aby w przypadku niepowodzenia przydzielenia pamięci przez funkcję **malloc** wywołuje nową procedurę obsługi w taki sam **sposób, w** jaki operator **New** wykonuje, gdy nie powiedzie się z tego samego powodu. Aby zastąpić wartość domyślną, wywołaj `_set_new_mode(1)` wczesne w programie lub Połącz z NEWMODE. OBJ (zobacz [Opcje linku](../../c-runtime-library/link-options.md)).
 
-Gdy aplikacja jest połączona z wersji debugowania bibliotek uruchomieniowych C, **— funkcja malloc** jest rozpoznawana jako [_malloc_dbg](malloc-dbg.md). Aby uzyskać więcej informacji na temat sposobu zarządzania stosem podczas debugowania, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
+Gdy aplikacja jest połączona z wersją debugową bibliotek uruchomieniowych C, **malloc** jest rozpoznawana jako [_malloc_dbg](malloc-dbg.md). Aby uzyskać więcej informacji na temat sposobu zarządzania stertą w procesie debugowania, zobacz [szczegóły sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-**malloc** jest oznaczony jako `__declspec(noalias)` i `__declspec(restrict)`; oznacza to, że funkcja daje gwarancję niemodyfikowania zmiennych globalnych i że zwrócony wskaźnik nie jest aliasem. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md) i [ograniczyć](../../cpp/restrict.md).
+wartość **malloc** jest `__declspec(noalias)` oznaczona `__declspec(restrict)`i; oznacza to, że funkcja jest gwarantowana, aby nie modyfikować zmiennych globalnych i że zwrócony wskaźnik nie jest aliasem. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md) i [ograniczaj](../../cpp/restrict.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**malloc**|\<stdlib.h> and \<malloc.h>|
+|**malloc**|\<STDLIB. h > i \<malloc. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 

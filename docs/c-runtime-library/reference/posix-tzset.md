@@ -1,9 +1,9 @@
 ---
 title: tzset
 ms.date: 11/04/2016
-apiname:
+api_name:
 - tzset
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,22 +14,25 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tzset
 helpviewer_keywords:
 - tzset function
 ms.assetid: c3afa5d0-cb15-4163-9181-fafb962c95aa
-ms.openlocfilehash: 31656199d3ef10e11b74e221ae307db856b1ebda
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 63a61a81a0441f2594daff1898997e5a769f981e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62304699"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950357"
 ---
 # <a name="tzset"></a>tzset
 
-Ta funkcja POSIX jest niezalecana. Użyj ISO C++ zgodność [_tzset —](tzset.md) zamiast tego.
+Ta funkcja POSIX jest przestarzała. Zamiast tego użyj C++ zgodnej z normą ISO [_tzset](tzset.md) .
 
 > [!IMPORTANT]
-> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

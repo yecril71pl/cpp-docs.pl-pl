@@ -1,9 +1,9 @@
 ---
 title: free
 ms.date: 11/04/2016
-apiname:
+api_name:
 - free
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - free
 helpviewer_keywords:
 - memory blocks, deallocating
 - free function
 ms.assetid: 74ded9cf-1863-432e-9306-327a42080bb8
-ms.openlocfilehash: f56212874f05ea5d4ab7bd826a7a4c145551dfc0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e09bec7c83eae64064e3997f2e8d5632a47258a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287762"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956727"
 ---
 # <a name="free"></a>free
 
@@ -44,33 +47,33 @@ void free(
 ### <a name="parameters"></a>Parametry
 
 *memblock*<br/>
-Poprzednio przydzielony blok pamięci, która będzie zwolniona.
+Wcześniej przydzielono blok pamięci, który ma zostać zwolniony.
 
 ## <a name="remarks"></a>Uwagi
 
-**Bezpłatne** funkcja zwalnia blok pamięci (*memblock*) zostały uprzednio alokowane przez wywołanie **calloc**, **— funkcja malloc**, lub **realloc**. Liczba zwolnionych bajtów jest równa liczbie bajtów, jeśli blok został przydzielony (lub przydzielone w przypadku właściwości **realloc**). Jeśli *memblock* jest **o wartości NULL**, wskaźnik jest ignorowany i **bezpłatne** natychmiast powraca. Podjęto próbę bezpłatne nieprawidłowy wskaźnik (wskaźnik do bloku pamięci, która nie została przydzielona przez **calloc**, **— funkcja malloc**, lub **realloc**) może mieć wpływ na żądania alokacji kolejnych i powodować błędy.
+Funkcja **bezpłatna zwalnia** blok pamięci (*memblock*), który został wcześniej przydzielony przez wywołanie metody **calloc**, **malloc**lub **realloc**. Liczba bajtów zwolnionych jest równa liczbie bajtów żądanych, gdy blok został przydzielony (lub ponownie przydzielony w przypadku **przedziału**). Jeśli *memblock* ma **wartość null**, wskaźnik jest ignorowany **i natychmiast** zwraca wartość. Próba zwolnienia nieprawidłowego wskaźnika (wskaźnik do bloku pamięci, który nie został alokowany przez **calloc**, **malloc**lub **realloc**), może mieć wpływ na kolejne żądania alokacji i powoduje błędy.
 
-W przypadku wystąpienia błędu w zwalnianie pamięci, **errno** została ustawiona za pomocą informacji z systemu operacyjnego od charakteru błędu. Aby uzyskać więcej informacji, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Jeśli wystąpi błąd podczas zwalniania pamięci, **errno** jest ustawiany z informacjami z systemu operacyjnego w przypadku awarii. Aby uzyskać więcej informacji, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Po zwolnieniu bloku pamięci, [_heapmin —](heapmin.md) minimalizuje ilość wolnej pamięci na stosie przez łączenie nieużywane regionów i zwalniania ich do systemu operacyjnego. Zwolnionej pamięci, która nie została wydana w systemie operacyjnym zostanie przywrócony do wolnej puli i jest dostępny do alokacji ponownie.
+Po zwolnieniu bloku pamięci [_heapmin](heapmin.md) minimalizuje ilość wolnej pamięci w stercie przez podzbiór nieużywanych regionów i zwolnienie ich z powrotem do systemu operacyjnego. Zwolniona pamięć, która nie została wydana w systemie operacyjnym, zostaje przywrócona do puli bezpłatna i ponownie dostępna do przydzielenia.
 
-Gdy aplikacja jest połączona z wersji debugowania bibliotek uruchomieniowych C, **bezpłatne** jest rozpoznawana jako [_free_dbg —](free-dbg.md). Aby uzyskać więcej informacji na temat sposobu zarządzania stosem podczas debugowania, zobacz [sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
+Gdy aplikacja jest połączona z wersją debugową bibliotek uruchomieniowych C, **bezpłatny** program jest rozpoznawany jako [_free_dbg](free-dbg.md). Aby uzyskać więcej informacji na temat sposobu zarządzania sterty podczas procesu debugowania, zobacz [sterta debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-**bezpłatne** jest oznaczony jako `__declspec(noalias)`, co oznacza, że funkcja daje gwarancję niemodyfikowania zmiennych globalnych. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md).
+wartość **Free** jest `__declspec(noalias)`oznaczona, co oznacza, że funkcja nie modyfikuje zmiennych globalnych. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md).
 
-Aby zwolnić pamięć przydzielana za pomocą [_malloca](malloca.md), użyj [_freea —](freea.md).
+Aby zwolnić pamięć przydzieloną za pomocą [_malloca](malloca.md), użyj [_freea](freea.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**free**|\<stdlib.h> and \<malloc.h>|
+|**free**|\<STDLIB. h > i \<malloc. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [— funkcja malloc](malloc.md).
+Zobacz przykład dla opcji [malloc](malloc.md).
 
 ## <a name="see-also"></a>Zobacz także
 

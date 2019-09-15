@@ -1,12 +1,12 @@
 ---
 title: strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbspbrk
 - wcspbrk
 - _mbspbrk_l
 - strpbrk
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fstrpbrk
 - _mbspbrk
@@ -44,19 +47,19 @@ helpviewer_keywords:
 - _mbspbrk function
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
-ms.openlocfilehash: 059b0659a8088783c6d169288de486b41a6e8d82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d6b18ab6dabfb1181f3e65507d27f6afe98a5b9f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209570"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947161"
 ---
-# <a name="strpbrk-wcspbrk-mbspbrk-mbspbrkl"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
+# <a name="strpbrk-wcspbrk-_mbspbrk-_mbspbrk_l"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 
 Skanuje ciągi znaków w określonych zestawach znaków.
 
 > [!IMPORTANT]
-> `_mbspbrk` i `_mbspbrk_l` nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> `_mbspbrk`i `_mbspbrk_l` nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -117,48 +120,48 @@ const unsigned char *_mbspbrk_l(
 ### <a name="parameters"></a>Parametry
 
 *str*<br/>
-Ciąg zakończony znakiem null, przeszukane.
+Zakończony zerem, przeszukiwany ciąg.
 
 *strCharSet*<br/>
 Zestaw znaków zakończony znakiem null.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do pierwszego wystąpienia dowolnego znaku z *strCharSet* w *str*, lub wskaźnika o wartości NULL, jeśli ciąg dwóch argumentów nie ma znaków wspólnych.
+Zwraca wskaźnik do pierwszego wystąpienia dowolnego znaku z *strCharSet* w *str*lub wskaźnik o wartości null, jeśli dwa argumenty ciągu nie mają wspólnych znaków.
 
 ## <a name="remarks"></a>Uwagi
 
-`strpbrk` Funkcja zwraca wskaźnik do pierwszego wystąpienia znaku w *str* należącej do zestawu znaków w *strCharSet*. Wyszukiwanie nie obejmuje kończącego znaku null.
+Funkcja zwraca wskaźnik do pierwszego wystąpienia znaku w *str* , który należy do zestawu znaków w *strCharSet.* `strpbrk` Wyszukiwanie nie zawiera kończącego znaku null.
 
-`wcspbrk` i `_mbspbrk` są wersjami znaków dwubajtowych i znaków wielobajtowych `strpbrk`. Argumenty i wartość zwracana przez `wcspbrk` są znakami dwubajtowymi ciągów; te z `_mbspbrk` są ciągami znaków wielobajtowych.
+`wcspbrk`i `_mbspbrk` są`strpbrk`wersjami znaków dwubajtowych i znakami wieloznacznymi. Argumenty i wartość zwracana przez `wcspbrk` są ciągami znaków dwubajtowych; te z `_mbspbrk` są ciągami znaków wieloznacznych.
 
-`_mbspbrk` sprawdza poprawność parametrów. Jeśli *str* lub *strCharSet* ma wartość NULL, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, `_mbspbrk` zwraca wartość NULL i ustawia `errno` do EINVAL. `strpbrk` i `wcspbrk` nie sprawdzają poprawność swoich parametrów. Te trzy funkcje zachowują się identycznie.
+`_mbspbrk`sprawdza poprawność swoich parametrów. Jeśli *str* lub *strCharSet* ma wartość null, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, `_mbspbrk` zwraca wartość null i `errno` ustawia do EINVAL. `strpbrk`i `wcspbrk` nie weryfikują ich parametrów. Te trzy funkcje zachowują się identycznie w inny sposób.
 
-`_mbspbrk` jest podobny do `_mbscspn` z tą różnicą, że `_mbspbrk` zwraca wskaźnik, a nie wartość typu [size_t](../../c-runtime-library/standard-types.md).
+`_mbspbrk`jest podobna do `_mbscspn` except, `_mbspbrk` która zwraca wskaźnik, a nie wartość typu [size_t](../../c-runtime-library/standard-types.md).
 
-W języku C, te funkcje biorą **const** wskaźnik dla pierwszego argumentu. W języku C++ dostępne są dwa przeciążenia. Przeciążenie wskaźnika do **const** zwraca wskaźnik do **const**; wersja, która przyjmuje wskaźnik do non -**const** zwraca wskaźnik do non -**const** . _CRT_CONST_CORRECT_OVERLOADS — makro jest zdefiniowany, jeśli oba **const** i innych niż-**const** wersje tych funkcji są dostępne. Jeśli potrzebujesz non -**const** zachowanie dla obu C++ przeciążeń, określ symbol _CONST_RETURN.
+W języku C te funkcje przyjmują wskaźnik **const** dla pierwszego argumentu. W C++programie dostępne są dwa przeciążenia. Przeciążenie pobierające wskaźnik do elementu **const** zwraca wskaźnik do elementu **const**; wersja, która przyjmuje wskaźnik do elementu niebędącego**stałą** , zwraca wskaźnik do elementu innego niż**const**. _CRT_CONST_CORRECT_OVERLOADS makro jest zdefiniowane, jeśli są dostępne zarówno wersje **const** , jak i**niestałe** tych funkcji. Jeśli jest wymagane zachowanie**niestałe** dla obu C++ przeciążeń, zdefiniuj symbol _CONST_RETURN.
 
-Wartość wyjściowa jest zależna od ustawienia LC_CTYPE ustawienia kategorii ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). Wersje tych funkcji, bez **_l** sufiks używają bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych; wersja, która **_l** sufiks jest identyczny, z tą różnicą, że użyto parametru ustawień regionalnych w zamian przekazanych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia LC_CTYPE kategorii ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. wersja z sufiksem **_l** jest identyczna, z tą różnicą, że używa zamiast tego parametru ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |`_tcspbrk`|`strpbrk`|`_mbspbrk`|`wcspbrk`|
-|**n/d**|**n/d**|`_mbspbrk_l`|**n/d**|
+|**nie dotyczy**|**nie dotyczy**|`_mbspbrk_l`|**nie dotyczy**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |`strpbrk`|\<string.h>|
-|`wcspbrk`|\<Włącz String.h > lub \<wchar.h >|
+|`wcspbrk`|\<ciąg. h > lub \<WCHAR. h >|
 |`_mbspbrk`, `_mbspbrk_l`|\<mbstring.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

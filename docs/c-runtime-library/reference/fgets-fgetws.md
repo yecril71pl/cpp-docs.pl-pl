@@ -1,10 +1,10 @@
 ---
 title: fgets, fgetws
 ms.date: 07/11/2018
-apiname:
+api_name:
 - fgets
 - fgetws
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fgetts
 - fgetws
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - fgetws function
 - fgetts function
 ms.assetid: ad549bb5-df98-4ccd-a53f-95114e60c4fc
-ms.openlocfilehash: 16dfb7cb0401083960669a735a976fbcd4ad4081
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f68bee181ebb20eb7a0a2eaca02a72c4dc03616
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333865"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957397"
 ---
 # <a name="fgets-fgetws"></a>fgets, fgetws
 
@@ -58,42 +61,42 @@ wchar_t *fgetws(
 ### <a name="parameters"></a>Parametry
 
 *str*<br/>
-Lokalizacja magazynowa danych.
+Lokalizacja magazynu dla danych.
 
 *numChars*<br/>
 Maksymalna liczba znaków do odczytania.
 
 *stream*<br/>
-Wskaźnik do **pliku** struktury.
+Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca *str*. **Wartość NULL** zwracany jest, aby wskazać błąd lub warunek końca pliku. Użyj **feof** lub **ferror** do określenia, czy wystąpił błąd. Jeśli *str* lub *strumienia* jest wskaźnikiem wartości null lub *numChars* jest mniejszy niż lub równy zero, funkcja wywoła procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [ Walidacja parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL** a funkcja zwraca **NULL**.
+Każda z tych funkcji zwraca *str*. Zwraca **wartość null** , aby wskazać błąd lub warunek końca pliku. Użyj **feof** lub obiektu **odwołującego** , aby określić, czy wystąpił błąd. Jeśli *str* lub *Stream* jest wskaźnikiem o wartości null lub wartość *numChars* jest mniejsza lub równa zero, ta funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcja zwraca **wartość null**.
 
-Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów błędu,.
+Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) , aby uzyskać więcej informacji na temat tych i innych kodów błędów.
 
 ## <a name="remarks"></a>Uwagi
 
-**Fgets** funkcja odczytuje ciągu wejściowego *strumienia* argumentu i zapisuje go w *str*. **fgets** odczytuje znaki z bieżącym stanie strumienia i pierwszy znak nowego wiersza na koniec strumienia, w tym lub do momentu liczba znaków odczytanych jest równa *numChars* - 1, osiągnięta jako pierwsza. Wynik przechowywany w *str* jest dołączany znakiem null. Znak nowego wiersza, jeśli do odczytu, znajduje się w ciągu.
+Funkcja **fgets** odczytuje ciąg z argumentu *strumienia* wejściowego i zapisuje go w *str*. **fgets** odczytuje znaki z bieżącego strumienia do i łącznie z pierwszym znakiem nowego wiersza, na końcu strumienia lub dopóki Liczba odczytanych znaków jest równa *numChars* -1, zależnie od tego, co nastąpi wcześniej. Wynik zapisany w *str* jest dołączany do znaku o wartości null. Znak nowego wiersza, jeśli jest odczytywany, jest uwzględniony w ciągu.
 
-**fgetws —** to wersja znaku dwubajtowego **fgets**.
+**fgetws** to dwubajtowa wersja **fgets**.
 
-**fgetws —** odczytuje argument znaku dwubajtowego *str* jako ciąg znaków wielobajtowych lub ciąg znaków dwubajtowych, zgodnie z czy *strumienia* jest otwarty w trybie tekstu lub w trybie binarnym odpowiednio. Aby uzyskać więcej informacji na temat używania w trybach tekstowym i binarnym w Unicode i wielobajtowych strumienia we/wy, zobacz [tekstowych i binarnych We/Wy trybu](../../c-runtime-library/text-and-binary-mode-file-i-o.md) i [we/wy Stream w Unicode w trybach tekstowym i binarnym](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
+**fgetws** odczytuje argument o szerokim znaku *w postaci* ciągu znaków wielobajtowych lub dwubajtowego ciągu w zależności od tego, czy *strumień* jest otwarty odpowiednio w trybie tekstowym czy w trybie binarnym. Aby uzyskać więcej informacji na temat używania trybów tekstowych i binarnych w strumieniach Unicode i wielobajtowych — we/wy, zobacz [plik tekstowy i tryb binarny we/wy](../../c-runtime-library/text-and-binary-mode-file-i-o.md) i [strumienia Unicode/o w trybach tekstowych i binarnych](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_fgetts**|**fgets**|**fgets**|**fgetws —**|
+|**_fgetts**|**fgets**|**fgets**|**fgetws**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
 |**fgets**|\<stdio.h>|
-|**fgetws —**|\<stdio.h > lub \<wchar.h >|
+|**fgetws**|\<stdio. h > lub \<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -120,7 +123,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtfgetstxt"></a>Dane wejściowe: crt_fgets.txt
+### <a name="input-crt_fgetstxt"></a>Dane wejściowe: crt_fgets. txt
 
 ```Input
 Line one.
@@ -135,7 +138,7 @@ Line one.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fputs, fputws](fputs-fputws.md)<br/>
 [gets, _getws](../../c-runtime-library/gets-getws.md)<br/>
 [puts, _putws](puts-putws.md)<br/>

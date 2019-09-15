@@ -1,11 +1,11 @@
 ---
 title: _ftime_s, _ftime32_s, _ftime64_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ftime_s
 - _ftime64_s
 - _ftime32_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ftime_s
 - _ftime64_s
@@ -35,16 +38,16 @@ helpviewer_keywords:
 - _ftime_s function
 - _ftime32_s function
 ms.assetid: d03080d9-a520-45be-aa65-504bdb197e8b
-ms.openlocfilehash: 696b461cdb6b8d58bb668b996a99c5d0bb774d6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b45a22afc824a33e81170f954e6f99088b629f83
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287684"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956326"
 ---
-# <a name="ftimes-ftime32s-ftime64s"></a>_ftime_s, _ftime32_s, _ftime64_s
+# <a name="_ftime_s-_ftime32_s-_ftime64_s"></a>_ftime_s, _ftime32_s, _ftime64_s
 
-Pobiera bieżącą godzinę. Są to wersje [_ftime _ftime32, _ftime64](ftime-ftime32-ftime64.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Pobiera bieżącą godzinę. Są to wersje [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md) z zabezpieczeniami, jak opisano w [funkcjach zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,42 +60,42 @@ errno_t _ftime64_s( struct __timeb64 *timeptr );
 ### <a name="parameters"></a>Parametry
 
 *timeptr*<br/>
-Wskaźnik do **_timeb —**, **__timeb32**, lub **__timeb64 —** struktury.
+Wskaźnik do struktury **_timeb**, **__timeb32**lub **__timeb64** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli to się powiedzie, kod błędu. Jeśli *timeptr* jest **NULL**, zwracana jest wartość **EINVAL**.
+Zero, jeśli to się powiedzie, kod błędu w przypadku niepowodzenia. Jeśli *timeptr* ma **wartość null**, zwracana wartość to **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Ftime_s** funkcja pobiera bieżącym czasem lokalnym i zapisuje go w strukturze wskazywany przez *timeptr*. **_Timeb —**, **__timeb32**, i **__timeb64 —** struktury są zdefiniowane w SYS\Timeb.h. Zawierają one cztery pola, które są wymienione w poniższej tabeli.
+Funkcja **_ftime_s** pobiera bieżącą godzinę lokalną i zapisuje ją w strukturze wskazywanej przez *timeptr*. Struktury **_timeb**, **__timeb32**i **__timeb64** są zdefiniowane w SYS\Timeb.h. Zawierają cztery pola, które są wymienione w poniższej tabeli.
 
 |Pole|Opis|
 |-|-|
-|**dstflag**|Różna od zera, jeśli czas letni jest obecnie obowiązuje dla lokalnej strefy czasowej. (Zobacz [_tzset —](tzset.md) poznać sposób ustalania czasu letniego.)|
-|**millitm**|Część 1 sekunda w milisekundach.|
-|**czas**|Czas w sekundach, które upłynęły od północy (00: 00:00), 1 stycznia 1970 r., skoordynowanego czasu uniwersalnego (UTC).|
-|**timezone**|Różnica (w minutach), westward, przenoszenie między czasem UTC i czasem lokalnym. Wartość **strefa czasowa** jest ustawiany na wartość zmiennej globalnej **_timezone** (zobacz **_tzset —**).|
+|**dstflag**|Wartość różna od zera, jeśli obowiązuje czas letni dla lokalnej strefy czasowej. (Zobacz [_tzset](tzset.md) , aby dowiedzieć się, jak jest określany czas letni).|
+|**millitm**|Część sekundy w milisekundach.|
+|**czas**|Czas (w sekundach) od północy (00:00:00), 1 stycznia 1970, uniwersalny czas koordynowany (UTC).|
+|**TimeZone**|Różnica w minutach, przesuwanie Westward, między czasem UTC i czasem lokalnym. Wartość **strefy czasowej** jest ustawiana na podstawie wartości zmiennej globalnej **_timezone** (zobacz **_tzset**).|
 
-**_Ftime64_s** funkcji, która używa **__timeb64 —** struktury, umożliwia tworzenie pliku daty do za pośrednictwem 23:59:59, 31 grudnia 3000, UTC, natomiast **_ftime32_s** przedstawia tylko daty do 23:59:59 18 stycznia 2038 r. UTC. Północy 1 stycznia 1970 r., to dolna granica zakresu dat dla tych funkcji.
+Funkcja **_ftime64_s** , która używa struktury **__timeb64** , pozwala na wyrażanie dat tworzenia plików do 23:59:59, 31 grudnia 3000, UTC; **_ftime32_s** reprezentuje tylko daty do 23:59:59 stycznia 18, 2038, UTC. Północ, 1 stycznia 1970, to Dolna granica zakresu dat dla wszystkich tych funkcji.
 
-**_Ftime_s** funkcji jest odpowiednikiem **_ftime64_s**, i **_timeb —** zawiera godzinę 64-bitowych, chyba że **_USE_32BIT_TIME_T** jest zdefiniowane, w którym to przypadku stare zachowanie obowiązuje; **_ftime_s** używany czas 32-bitowe i **_timeb —** zawiera godzinę 32-bitowych.
+Funkcja **_ftime_s** jest równoważna z **_ftime64_s**, a **_timeb** zawiera czas 64-bitowy, chyba że **_USE_32BIT_TIME_T** jest zdefiniowany, w takim przypadku stare zachowanie jest stosowane; **_ftime_s** używa czasu 32-bitowego, a **_timeb** zawiera czas 32-bitowy.
 
-**_ftime_s** sprawdza poprawność parametrów. Jeśli przekazywany jest pusty wskaźnik jako *timeptr*, funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ustawia **errno** do **EINVAL**.
+**_ftime_s** sprawdza poprawność swoich parametrów. Jeśli przeszedł wskaźnik o wartości null jako *timeptr*, funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ustawia **errno** na **EINVAL**.
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_ftime_s**|\<sys/types.h > i \<sys/timeb.h >|
-|**_ftime32_s**|\<sys/types.h > i \<sys/timeb.h >|
-|**_ftime64_s**|\<sys/types.h > i \<sys/timeb.h >|
+|**_ftime_s**|\<sys/typy. h > i \<sys/timeb. h >|
+|**_ftime32_s**|\<sys/typy. h > i \<sys/timeb. h >|
+|**_ftime64_s**|\<sys/typy. h > i \<sys/timeb. h >|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 

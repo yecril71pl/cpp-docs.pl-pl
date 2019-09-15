@@ -1,10 +1,10 @@
 ---
 title: mbstowcs, _mbstowcs_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbstowcs
 - _mbstowcs_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbstowcs
 helpviewer_keywords:
@@ -26,12 +29,12 @@ helpviewer_keywords:
 - mbstowcs_l function
 - mbstowcs function
 ms.assetid: 96696b27-e068-4eeb-8006-3f7a0546ae6d
-ms.openlocfilehash: cae1034d0bcb9789f5cb709399d4992de44cae9d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3df851b08edfa9dfe5bf9b42b9abfd45a8939606
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499780"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952034"
 ---
 # <a name="mbstowcs-_mbstowcs_l"></a>mbstowcs, _mbstowcs_l
 
@@ -89,7 +92,7 @@ Jeśli **mbstowcs** pomyślnie konwertuje ciąg źródłowy, zwraca liczbę prze
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **mbstowcs** konwertuje do maksymalnej liczby znaków wielobajtowych wskazywanych przez *mbstr* do ciągu znaków, które są określone przez bieżące ustawienia regionalne. Przechowuje on ciąg znaków dwubajtowych pod adresem reprezentowanym przez *wcstr*. Wynik jest podobny do serii wywołań [mbtowc](mbtowc-mbtowc-l.md). Jeśli **mbstowcs** napotkała jednobajtowy znak null (' \ 0 ') albo przed lub w czasie występowania, konwertuje znak null na znak o szerokim znaku null (L ' \ 0 ') i zostaje zatrzymany. W ten sposób ciąg znaków dwubajtowych w *wcstr* jest zakończony znakiem null tylko w przypadku, gdy podczas konwersji zostanie napotkany błąd o wartości null. Jeśli sekwencje wskazywane przez *wcstr* i *mbstr* nakładają się na siebie, zachowanie jest niezdefiniowane.
+Funkcja **mbstowcs** konwertuje do *maksymalnej liczby znaków wielobajtowych* wskazywanych przez *mbstr* do ciągu znaków, które są określone przez bieżące ustawienia regionalne. Przechowuje on ciąg znaków dwubajtowych pod adresem reprezentowanym przez *wcstr*. Wynik jest podobny do serii wywołań [mbtowc](mbtowc-mbtowc-l.md). Jeśli **mbstowcs** napotkała jednobajtowy znak null (' \ 0 ') albo przed lub *w czasie* występowania, konwertuje znak null na znak o szerokim znaku null (L ' \ 0 ') i zostaje zatrzymany. W ten sposób ciąg znaków dwubajtowych w *wcstr* jest zakończony znakiem null tylko w przypadku, gdy podczas konwersji zostanie napotkany błąd o wartości null. Jeśli sekwencje wskazywane przez *wcstr* i *mbstr* nakładają się na siebie, zachowanie jest niezdefiniowane.
 
 Jeśli argument *wcstr* ma **wartość null**, funkcja **mbstowcs** zwraca liczbę znaków dwubajtowych, które byłyby wynikiem konwersji, nie uwzględniając terminatora o wartości null. Ciąg źródłowy musi być zakończony znakiem null, aby można było zwrócić poprawną wartość. Jeśli chcesz, aby wynikowy ciąg znaków był zakończony wartością null, Dodaj go do zwracanej wartości.
 

@@ -1,10 +1,10 @@
 ---
 title: ungetc, ungetwc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ungetwc
 - ungetc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ungettc
 - ungetwc
@@ -28,16 +31,16 @@ helpviewer_keywords:
 - _ungettc function
 - ungetc function
 ms.assetid: e0754f3a-b4c6-408f-90c7-e6387b830d84
-ms.openlocfilehash: c504540f8fbbe14961fa051bb93ebef350c2c1da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f3b6c6ed3fe8ff5976afa1da2ed437e25c923b99
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155436"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957419"
 ---
 # <a name="ungetc-ungetwc"></a>ungetc, ungetwc
 
-Przesuwa znak do strumienia.
+Wypchnięcie znaku z powrotem do strumienia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -58,29 +61,29 @@ wint_t ungetwc(
 Znak do wypchnięcia.
 
 *stream*<br/>
-Wskaźnik do **pliku** struktury.
+Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli operacja się powiedzie, każda z tych funkcji zwraca znak argumentu *c*. Jeśli *c* nie może zostać przesunięty lub jeśli został odczytany żaden znak, strumień wejściowy pozostaje niezmieniony i **ungetc —** zwraca **EOF**; **ungetwc —** zwraca **WEOF**. Jeśli *strumienia* jest **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **EOF** lub **WEOF** zwróceniem i **errno** ustawiono **EINVAL**.
+Jeśli to się powiedzie, każda z tych funkcji zwraca argument znaku *c*. Jeśli nie można wypchnąć *dysku c* lub nie odczytano żadnego znaku, strumień wejściowy jest niezmieniony i **ungetc —** zwraca **EOF**; **ungetwc** zwraca **WEOF**. Jeśli *strumień* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, zwracany jest **znacznik EOF** lub **WEOF** , a **errno** jest ustawiony na **EINVAL**.
 
-Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje o tych i innych kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**Ungetc —** funkcja umieszcza znak *c* na *strumienia* i czyści wskaźnik końca pliku. Strumień musi być otwarty do odczytu. Kolejna operacja odczytu na *strumienia* rozpoczyna się od *c*. Próba popchnięcia **EOF** do strumienia z wykorzystaniem **ungetc —** jest ignorowana.
+Funkcja **ungetc —** wypchnięcie znaku *c* z powrotem do *strumienia* i czyści wskaźnik końca pliku. Strumień musi być otwarty do odczytu. Kolejna operacja odczytu *strumienia* zaczyna się od *c*. Próba wypychania **eof** do strumienia przy użyciu **ungetc —** jest ignorowana.
 
-Znaki umieszczone w strumieniu przez **ungetc —** mogą zostać wymazane, jeśli **fflush —**, [fseek](fseek-fseeki64.md), **fsetpos**, lub [rewind](rewind.md) jest wywoływana przed odczytem znaku ze strumienia. Wskaźnik położenia pliku będzie miał wartość, jaką miała zanim znaki były odsunięte. Magazynu zewnętrznego, odpowiadające strumieniowi jest bez zmian. Po pomyślnym **ungetc —** wywołaniu strumienia tekstu, wskaźnik pozycji pliku jest nieokreślony, aż wszystkie znaki przesunięta wstecz zostaną odczytywane lub odrzucone. Na każdym pomyślnym **ungetc —** wywołaniu strumienia binarnego, wskaźnik pozycji pliku zostanie zmniejszony; jeśli jego wartość wynosiła 0 przed wywołaniem, wartość jest niezdefiniowana po wywołaniu.
+Znaki umieszczone w strumieniu przez **ungetc —** mogą zostać wymazane, jeśli **fflush**, [fseek](fseek-fseeki64.md), **fsetpos**lub [przewijania do tyłu](rewind.md) jest wywoływana przed odczytaniem znaku ze strumienia. Wskaźnik położenia pliku będzie miał wartość, która miała przed wypchnięciem znaków. Zewnętrzne magazyny odpowiadające strumieniu nie są zmieniane. W przypadku pomyślnego wywołania **ungetc —** na strumień tekstowy wskaźnik położenia pliku jest nieokreślony do momentu odczytania wszystkich znaków push lub odrzuconych. Dla każdego pomyślnego wywołania **ungetc —** względem strumienia binarnego wskaźnik położenia pliku jest zmniejszany; Jeśli wartość była równa 0 przed wywołaniem, wartość jest niezdefiniowana po wywołaniu.
 
-Wyniki są nieprzewidywalne Jeśli **ungetc —** jest wywoływana dwa razy bez odczytu lub operacji położenia pliku między dwoma połączeniami. Po wywołaniu **fscanf —**, wywołanie **ungetc —** może zakończyć się niepowodzeniem, chyba że inna operacja odczytu (takie jak **getc —**) została wykonana. Jest to spowodowane **fscanf —** nazywa **ungetc —**.
+Wyniki są nieprzewidywalne, jeśli **ungetc —** jest wywoływana dwukrotnie bez operacji odczytu lub położenia pliku między dwoma wywołaniami. Po wywołaniu **fscanf**wywołanie **ungetc —** może zakończyć się niepowodzeniem, chyba że została wykonana inna operacja odczytu (na przykład **getc —** ). Wynika to z faktu, że **fscanf** same wywołuje **ungetc —** .
 
-**ungetwc —** to wersja znaku dwubajtowego **ungetc —**. Jednak na każdym pomyślnym **ungetwc —** wywołaniu strumienia tekstu lub pliku binarnego, wartość wskaźnika pozycji pliku jest nieokreślony, aż wszystkie znaki przesunięta wstecz zostaną odczytywane lub odrzucone.
+**ungetwc** to dwubajtowa wersja **ungetc —** . Jednak dla każdego pomyślnego wywołania **ungetwc** na strumień tekstowy lub binarny wartość wskaźnika położenia pliku jest nieokreślona do momentu odczytania lub odrzucenia wszystkich znaków wypchnięcia.
 
-Te funkcje są odporne na wątki i blokują dane poufne podczas wykonywania. Dla wersji bez blokady, zobacz [_ungetc_nolock —, _ungetwc_nolock —](ungetc-nolock-ungetwc-nolock.md).
+Te funkcje są bezpieczne dla wątków i blokują dane poufne podczas wykonywania. W przypadku wersji, która nie jest blokowana, zobacz [_ungetc_nolock, _ungetwc_nolock](ungetc-nolock-ungetwc-nolock.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_ungettc**|**ungetc**|**ungetc**|**ungetwc**|
 
@@ -89,9 +92,9 @@ Te funkcje są odporne na wątki i blokują dane poufne podczas wykonywania. Dla
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**ungetc**|\<stdio.h>|
-|**ungetwc**|\<stdio.h > lub \<wchar.h >|
+|**ungetwc**|\<stdio. h > lub \<WCHAR. h >|
 
-Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej Windows (UWP). Standardowe uchwyty strumienia, które są powiązane z konsolą, **stdin**, **stdout**, i **stderr**, muszą zostać przekierowane zanim funkcje środowiska wykonawczego języka C można ich używać w aplikacjach platformy UWP . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout**i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -129,6 +132,6 @@ Next character in stream = 'a'
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>
 [putc, putwc](putc-putwc.md)<br/>

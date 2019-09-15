@@ -1,10 +1,10 @@
 ---
 title: fseek, _fseeki64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fseeki64
 - fseek
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fseek
 - _fseeki64
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - file pointers [C++]
 - seek file pointers
 ms.assetid: f6bb1f8b-891c-426e-9e14-0e7e5c62df70
-ms.openlocfilehash: 4cfb4bcea4a110cf8a9c9db664c42d6603328cf0
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: e3da603c3c7f1b083ddb7f7f9577adae9be5e4f1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376081"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956573"
 ---
-# <a name="fseek-fseeki64"></a>fseek, _fseeki64
+# <a name="fseek-_fseeki64"></a>fseek, _fseeki64
 
 Przenosi wskaźnik pliku do określonej lokalizacji.
 
@@ -71,7 +74,7 @@ Jeśli to się powiedzie, **fseek** i **_fseeki64** zwraca 0. W przeciwnym razie
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje **fseek** i **_fseeki64** przesuwają wskaźnik pliku (jeśli istnieje) skojarzony ze *strumieniem* do nowej lokalizacji, która jest przesunięta o bajty od *początku*. Kolejna operacja w strumieniu odbywa się w nowej lokalizacji. W przypadku otwartego strumienia na potrzeby aktualizacji kolejną operacją może być odczyt lub zapis. Pochodzenie  argumentu musi być jedną z następujących stałych zdefiniowanych w stdio. C
+Funkcje **fseek** i **_fseeki64** przesuwają wskaźnik pliku (jeśli istnieje) skojarzony ze *strumieniem* do nowej lokalizacji, która jest *przesunięta* o bajty od *początku*. Kolejna operacja w strumieniu odbywa się w nowej lokalizacji. W przypadku otwartego strumienia na potrzeby aktualizacji kolejną operacją może być odczyt lub zapis. Pochodzenie argumentu musi być jedną z następujących stałych zdefiniowanych w stdio. C
 
 |wartość pochodzenia|Znaczenie|
 |-|-|

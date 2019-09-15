@@ -1,14 +1,14 @@
 ---
 title: _ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbcalpha
 - _ismbcalnum
 - _ismbcdigit
 - _ismbcalnum_l
 - _ismbcdigit_l
 - _ismbcalpha_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbcdigit
 - ismbcalnum_l
@@ -46,19 +49,19 @@ helpviewer_keywords:
 - ismbcalnum_l function
 - ismbcalpha_l function
 ms.assetid: 12d57925-aebe-46e0-80b0-82b84c4c31ec
-ms.openlocfilehash: 1a2f928d826b70b788220130f69c53cc351b4910
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f13d1faab2923827707d8749a8783a10cf989b88
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157311"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953954"
 ---
-# <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
+# <a name="_ismbcalnum-_ismbcalnum_l-_ismbcalpha-_ismbcalpha_l-_ismbcdigit-_ismbcdigit_l"></a>_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 
-Sprawdza, czy znak wielobajtowy jest znakiem alfanumerycznym, alfabetycznym czy znak cyfry.
+Sprawdza, czy znak wielobajtowy jest znakiem alfanumerycznym, alfanumerycznym lub cyfrowym.
 
 > [!IMPORTANT]
-> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -95,36 +98,36 @@ int _ismbcdigit_l
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak do zbadania.
+Znak do przetestowania.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych procedur zwraca wartość różną od zera, jeśli znak spełnia warunek testu lub 0, jeśli nie jest. Jeśli *c*< = 255 i istnieje odpowiedni **_ismbb —** procedura (na przykład **_ismbcalnum —** odpowiada **_ismbbalnum —**), wynik jest wartością zwracaną odpowiadającego **_ismbb —** procedury.
+Każda z tych procedur zwraca wartość różną od zera, jeśli znak spełnia warunek testu lub 0, jeśli tak nie jest. Jeśli *c*< = 255 i istnieje odpowiednia procedura **_ismbb** (na przykład **_ismbcalnum** odpowiada **_ismbbalnum**), wynik jest wartością zwracaną odpowiedniej procedury **_ismbb** .
 
 ## <a name="remarks"></a>Uwagi
 
 Każda z tych procedur testuje dany znak wielobajtowy dla danego warunku.
 
-Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają one ustawień regionalnych przekazanych w zamiast bieżących ustawień regionalnych dla swoich zachowań zależnych od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że używają ustawień regionalnych przewidzianych zamiast bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-|Procedura|Testowanie warunku|Przykład strony kodu 932|
+|Procedura|Warunek testu|Przykładowa strona kodowa 932|
 |-------------|--------------------|---------------------------|
-|**_ismbcalnum —**, **_ismbcalnum_l —**|Alfanumeryczne|Zwraca wartość różną od zera wtedy i tylko wtedy, gdy *c* jest reprezentacją jednobajtowego jednobajtową litery angielskiej ASCII: Zobacz przykłady dla **_ismbcdigit —** i **_ismbcalpha —**.|
-|**_ismbcalpha —**, **_ismbcalpha_l —**|Alfabetyczne|Zwraca wartość różną od zera wtedy i tylko wtedy, gdy *c* jest reprezentacją jednobajtowego jednobajtową litery angielskiej ASCII: 0x41 < =*c*< = 0x5A lub 0x61 < =*c*< = 0x7A; lub literę katakana: 0xA6<=*c*<=0xDF.|
-|**_ismbcdigit —**, **_ismbcdigit —**|cyfra|Zwraca wartość różną od zera wtedy i tylko wtedy, gdy *c* jest reprezentacją jednobajtowego cyfr ASCII: 0x30 < =*c*< = 0x39.|
+|**_ismbcalnum**, **_ismbcalnum_l**|Pełnej|Zwraca wartość różną od zera, jeśli i tylko wtedy, gdy *c* jest reprezentacją jednobajtowej litery angielskiej ASCII: Zobacz przykłady dla **_ismbcdigit** i **_ismbcalpha**.|
+|**_ismbcalpha**, **_ismbcalpha_l**|Alfabetyczne|Zwraca wartość różną od zera, jeśli i tylko wtedy, gdy *c* jest reprezentacją jednobajtowej litery angielskiej ASCII: 0x41 < =*c*< = 0x5a lub 0x61 < =*c*< = 0x7a; lub Katakana litery: 0xA6<=*c*<=0xDF.|
+|**_ismbcdigit**, **_ismbcdigit**|Kontrol|Zwraca wartość różną od zera, jeśli i tylko wtedy, gdy *c* jest reprezentacją jednobajtowej cyfry ASCII: 0x30 < =*c*< = 0x39.|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_ismbcalnum —**, **_ismbcalnum_l —**|\<mbstring.h>|
-|**_ismbcalpha —**, **_ismbcalpha_l —**|\<mbstring.h>|
+|**_ismbcalnum**, **_ismbcalnum_l**|\<mbstring.h>|
+|**_ismbcalpha**, **_ismbcalpha_l**|\<mbstring.h>|
 |**_ismbcdigit**, **_ismbcdigit_l**|\<mbstring.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

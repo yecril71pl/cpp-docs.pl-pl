@@ -1,9 +1,9 @@
 ---
 title: _set_output_format
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_output_format
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr120.dll
 - msvcr100.dll
@@ -11,7 +11,10 @@ apilocation:
 - msvcr90.dll
 - msvcr110.dll
 - msvcr80.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_output_format
 - _set_output_format
@@ -22,19 +25,19 @@ helpviewer_keywords:
 - _set_output_format function
 - set_output_format function
 ms.assetid: 1cb48df8-44b4-4400-bd27-287831d6b3ff
-ms.openlocfilehash: 173c1bbae3009ffb4ee10b7b32ec7751f47c56c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b67abb58f4d62c7c54b61d1b1699f09c1bd51b40
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268748"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957310"
 ---
-# <a name="setoutputformat"></a>_set_output_format
+# <a name="_set_output_format"></a>_set_output_format
 
-Dostosowuje formaty danych wyjściowych używane przez funkcje sformatowane we/wy.
+Dostosowuje formaty wyjściowe używane przez sformatowane funkcje we/wy.
 
 > [!IMPORTANT]
->  Ta funkcja jest przestarzała. Począwszy od programu Visual Studio 2015, nie jest dostępna w CRT.
+>  Ta funkcja jest przestarzała. Począwszy od programu Visual Studio 2015, nie jest on dostępny w CRT.
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,20 +49,20 @@ unsigned int _set_output_format(
 
 #### <a name="parameters"></a>Parametry
 
-*Format*<br/>
-[in] Wartość reprezentująca formatu do użycia.
+*format*<br/>
+podczas Wartość reprezentująca format do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Poprzednie format danych wyjściowych.
+Poprzedni format danych wyjściowych.
 
 ## <a name="remarks"></a>Uwagi
 
-`_set_output_format` Służy do konfigurowania dane wyjściowe sformatowane funkcje We/Wy, takich jak [printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md). Obecnie jedyną Konwencji formatowania, która może zostać zmieniona przez tę funkcję, jest liczbę cyfr wyświetlanych w wykładniki w danych wyjściowych liczb zmiennoprzecinkowych.
+`_set_output_format`służy do konfigurowania danych wyjściowych sformatowanych funkcji we/wy, takich jak [printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md). W tej chwili jedyną Konwencją formatowania, którą można zmienić za pomocą tej funkcji, jest liczba cyfr wyświetlanych w wykładnikach w danych wyjściowych liczb zmiennoprzecinkowych.
 
-Domyślnie dane wyjściowe pływających punktu numery przez funkcje takie jak `printf_s`, `wprintf_s`, i powiązane funkcje biblioteki standardowej C Visual C++ drukuje trzy cyfry wykładnika potęgi, nawet jeśli trzech cyfr nie są wymagane do reprezentowania wartości obiektu wykładnik potęgi. Wartości zerowe są używane do wypełnienia wartości do trzech cyfr. `_set_output_format` Pozwala zmienić to zachowanie, aby były drukowane tylko dwie cyfry wykładnika, chyba że trzecia cyfra jest wymagana przez rozmiar wykładnik potęgi.
+Domyślnie dane wyjściowe liczb zmiennoprzecinkowych przez funkcje takie jak `printf_s`, `wprintf_s`i powiązane funkcje w bibliotece Visual C++ standard C drukują trzy cyfry dla wykładnika, nawet jeśli trzy cyfry nie są wymagane do reprezentowania wartości wykładnika. Zera są używane do uzupełniania wartości do trzech cyfr. `_set_output_format`pozwala zmienić to zachowanie, tak aby tylko dwie cyfry były drukowane w wykładniku, chyba że trzecia cyfra jest wymagana przez rozmiar wykładnika.
 
-Aby włączyć wykładniki dwóch cyfr, wywołaj tę funkcję, za pomocą parametru `_TWO_DIGIT_EXPONENT`, jak pokazano w przykładzie. Aby wyłączyć dwie cyfry wykładniki, wywołaj tę funkcję, z nieprawidłowym argumentem 0.
+Aby włączyć dwucyfrowe wykładniki, Wywołaj tę funkcję z parametrem `_TWO_DIGIT_EXPONENT`, jak pokazano w przykładzie. Aby wyłączyć dwa wykładniki cyfr, Wywołaj tę funkcję z argumentem 0.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -67,7 +70,7 @@ Aby włączyć wykładniki dwóch cyfr, wywołaj tę funkcję, za pomocą parame
 |-------------|---------------------|
 |`_set_output_format`|\<stdio.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../c-runtime-library/compatibility.md) we wstępie.
+Aby uzyskać więcej informacji o zgodności, zobacz temat [zgodność](../c-runtime-library/compatibility.md) we wprowadzeniu.
 
 ## <a name="example"></a>Przykład
 

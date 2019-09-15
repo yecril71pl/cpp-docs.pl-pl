@@ -1,10 +1,10 @@
 ---
 title: _ismbbkana, _ismbbkana_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbkana_l
 - _ismbbkana
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbkana_l
 - ismbbkana_l
@@ -28,16 +31,16 @@ helpviewer_keywords:
 - ismbbkana function
 - ismbbkana_l function
 ms.assetid: 64d4eb4a-205a-40ef-be35-ff9d77fabbaf
-ms.openlocfilehash: 723b914f5df92f20e4982bf6f7f04d1b251606f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ac05940f6ae9d0c0bd3cb2f6ea73fe301557be4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287020"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954149"
 ---
-# <a name="ismbbkana-ismbbkanal"></a>_ismbbkana, _ismbbkana_l
+# <a name="_ismbbkana-_ismbbkana_l"></a>_ismbbkana, _ismbbkana_l
 
-Testuje dla symbolu katakana i jest specyficzny dla strony kodu 932.
+Testuje symbol katakana i jest specyficzny dla strony kodowej 932.
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,14 +57,14 @@ int _ismbbkana_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Liczba całkowita do zbadania.
+Liczba całkowita do przetestowania.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_ismbbkana —** zwraca wartość różną od zera, jeśli liczba całkowita *c* jest symbolem katakana lub 0, jeśli nie jest. **_ismbbkana —** używa bieżących ustawień regionalnych dla wszelkich informacji o znakach zależnych od ustawień regionalnych. **_ismbbkana_l —** jest identyczna, z tą różnicą, że używa przekazany obiekt regionalny. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+**_ismbbkana** zwraca wartość różną od zera, jeśli liczba całkowita *c* jest symbolem katakana lub 0, jeśli nie jest. **_ismbbkana** używa bieżących ustawień regionalnych dla informacji o znakach zależnych od ustawień regionalnych. **_ismbbkana_l** jest identyczny, z tą różnicą, że używa obiektu ustawień regionalnych przekazaną. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -70,7 +73,7 @@ Ustawienia regionalne do użycia.
 |**_ismbbkana**|\<mbctype.h>|
 |**_ismbbkana_l**|\<mbctype.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

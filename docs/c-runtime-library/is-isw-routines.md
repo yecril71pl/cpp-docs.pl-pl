@@ -1,14 +1,17 @@
 ---
 title: is, isw — Procedury
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr110_clr0400.dll
 - msvcr90.dll
 - msvcr80.dll
 - msvcr100.dll
 - msvcr110.dll
 - msvcr120.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - isw
 - is
@@ -16,12 +19,12 @@ helpviewer_keywords:
 - is routines
 - isw routines
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
-ms.openlocfilehash: 1550f8f012802e03e9228e67c381915b1b4e1d64
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 4dad7ff74112da7fc7d0d01714b0cf0dd4e4495c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376035"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940178"
 ---
 # <a name="is-isw-routines"></a>is, isw — Procedury
 
@@ -43,7 +46,7 @@ Te procedury testują znaki dla określonych warunków.
 Procedury **is** generują znaczące wyniki dla dowolnego argumentu całkowitego z-1 (`EOF`) do **UCHAR_MAX** (0xFF) włącznie. Oczekiwany typ argumentu to `int`.
 
 > [!CAUTION]
-> W przypadku procedur **jest** przekazywanie argumentu typu `char` może dać nieprzewidywalne wyniki. Jednobajtowy znak SBCS lub MBCS typu `char` o wartości większej niż 0x7F jest ujemny. Jeśli zostanie przesłany, kompilator może skonwertować wartość na podpisaną `int` lub cyfrowo.  `char` Ta wartość może być poddana zarejestrowaniu przez kompilator z nieoczekiwanymi wynikami.
+> W przypadku procedur **jest** przekazywanie argumentu typu `char` może dać nieprzewidywalne wyniki. Jednobajtowy znak SBCS lub MBCS typu `char` o wartości większej niż 0x7F jest ujemny. Jeśli zostanie przesłany, kompilator może skonwertować wartość na podpisaną `int` lub cyfrowo. `char` Ta wartość może być poddana zarejestrowaniu przez kompilator z nieoczekiwanymi wynikami.
 
 Procedury **ISW** dają znaczące wyniki dla dowolnej wartości całkowitej z-1 (**WEOF**) do 0xFFFF włącznie. Typ danych **wint_t** jest zdefiniowany w WCHAR. H jako **Krótki niepodpisany**; może zawierać dowolny znak dwubajtowy lub szeroki znak końca pliku (**WEOF**).
 

@@ -1,12 +1,12 @@
 ---
 title: _scprintf_p, _scprintf_p_l, _scwprintf_p, _scwprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _scwprintf_p
 - _scprintf_p_l
 - _scwprintf_p_l
 - _scprintf_p
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _scwprintf_p_l
 - _sctprintf_p
@@ -43,16 +46,16 @@ helpviewer_keywords:
 - scwprintf_p_l function
 - _sctprintf_p_l function
 ms.assetid: 8390d1e1-2826-47a4-851f-6635a88087cc
-ms.openlocfilehash: 818dc5c24cca178fa03d08d1f609c23abbc7a013
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79744ee814583b5b5c15fbf51d2822c6e4bfe1fa
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357060"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949483"
 ---
-# <a name="scprintfp-scprintfpl-scwprintfp-scwprintfpl"></a>_scprintf_p, _scprintf_p_l, _scwprintf_p, _scwprintf_p_l
+# <a name="_scprintf_p-_scprintf_p_l-_scwprintf_p-_scwprintf_p_l"></a>_scprintf_p, _scprintf_p_l, _scwprintf_p, _scwprintf_p_l
 
-Zwraca liczbę znaków w sformatowanym ciągu o możliwość określenia kolejność, w którym są używane parametry w ciągu formatu.
+Zwraca liczbę znaków w sformatowanym ciągu, z możliwością określenia kolejności, w której parametry są używane w ciągu formatu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -79,33 +82,33 @@ int _scwprintf_p _l(
 
 ### <a name="parameters"></a>Parametry
 
-*Format*<br/>
+*format*<br/>
 Ciąg kontroli formatu.
 
 *argument*<br/>
 Argumenty opcjonalne.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca liczbę znaków, które zostałyby wygenerowane, jakby był mają być drukowane lub wysyłane do pliku lub buforu przy użyciu określonego kody formatowania. Wartość zwracana nie obejmuje kończącego znaku null. **_scwprintf_p —** działa tak samo dla znaków dwubajtowych.
+Zwraca liczbę znaków, które zostałyby wygenerowane, jeśli ciąg ma być drukowany lub wysyłany do pliku lub buforu przy użyciu określonych kodów formatowania. Zwracana wartość nie zawiera kończącego znaku null. **_scwprintf_p** wykonuje tę samą funkcję w przypadku znaków dwubajtowych.
 
-Różnica między **_scprintf_p —** i **_scprintf** jest fakt, że **_scprintf_p —** wspiera parametry pozycyjne, które umożliwiają określenie kolejności, w której argumenty są używane w ciągu formatu. Aby uzyskać więcej informacji, zobacz [printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md).
+Różnica między **_scprintf_p** i **_scprintf** polega na tym, że **_scprintf_p** obsługuje parametry pozycyjne, które umożliwiają określanie kolejności, w której argumenty są używane w ciągu formatu. Aby uzyskać więcej informacji, zobacz [Printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md).
 
-Jeśli *format* jest **NULL** wskaźnika, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość -1 i ustaw **errno** do **EINVAL**.
+Jeśli *Format* jest **pustym** wskaźnikiem, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość-1 i ustawiają **errno** na **EINVAL**.
 
-Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje o tych i innych kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Każdy *argument* (jeśli istnieje) jest konwertowana według specyfikacji formatu w *format*. Format składa się ze znaków zwykłych i ma taką samą formę i funkcjonuje jako *format* argument [printf](printf-printf-l-wprintf-wprintf-l.md).
+Każdy *argument* (jeśli istnieje) jest konwertowany zgodnie ze specyfikacją formatu w *formacie*. Format składa się ze zwykłych znaków i ma taką samą formę i funkcję jak argument *formatu* dla [printf](printf-printf-l-wprintf-wprintf-l.md).
 
-Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych wątku.
+Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korzystają z przekazaną parametrem ustawień regionalnych zamiast bieżących ustawień regionalnych wątku.
 
 > [!IMPORTANT]
-> Upewnij się, że *format* nie jest ciągiem zdefiniowanym przez użytkownika.
+> Upewnij się, że *Format* nie jest ciągiem zdefiniowanym przez użytkownika.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -119,12 +122,12 @@ Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używa
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_scprintf_p**, **_scprintf_p_l**|\<stdio.h>|
-|**_scwprintf_p**, **_scwprintf_p_l**|\<stdio.h > lub \<wchar.h >|
+|**_scwprintf_p**, **_scwprintf_p_l**|\<stdio. h > lub \<WCHAR. h >|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [_scprintf, _scprintf_l, _scwprintf, _scwprintf_l](scprintf-scprintf-l-scwprintf-scwprintf-l.md)<br/>
 [_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l](printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)<br/>

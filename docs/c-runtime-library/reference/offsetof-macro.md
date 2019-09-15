@@ -1,7 +1,7 @@
 ---
 title: offsetof Macro
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,23 +12,26 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - offsetof
 helpviewer_keywords:
 - structure members, offset
 - offsetof macro
 ms.assetid: f3b4eb16-a882-4d38-afc9-eebd976a7352
-ms.openlocfilehash: a0f367dbe6fa2681a7d413304f32b5699b8f7cee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 278fca89046fcfc98e8c3ff726918cb4319e4ab0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156074"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951252"
 ---
 # <a name="offsetof-macro"></a>offsetof Macro
 
-Pobiera przesunięcie elementu członkowskiego od początku jego nadrzędnej struktury.
+Pobiera przesunięcie elementu członkowskiego od początku jego struktury nadrzędnej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,18 +48,18 @@ size_t offsetof(
 Nazwa nadrzędnej struktury danych.
 
 *memberName*<br/>
-Nazwa elementu członkowskiego w nadrzędnej struktury danych, do których chcesz określić przesunięcie.
+Nazwa elementu członkowskiego w nadrzędnej strukturze danych, dla którego ma zostać określone przesunięcie.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Makro offsetof** zwraca przesunięcie w bajtach określonego elementu członkowskiego od początku jego nadrzędnej struktury danych. Jest niezdefiniowany dla pól bitowych.
+**makro OffsetOf** zwraca przesunięcie w bajtach określonego elementu członkowskiego od początku jego nadrzędnej struktury danych. Nie jest on zdefiniowany dla pól bitowych.
 
 ## <a name="remarks"></a>Uwagi
 
-**Offsetof** — makro zwraca przesunięcie w bajtach *memberName* od początku struktury, określony przez *structName* jako wartość typu **size_ t**. Można określić typy z **struktury** — słowo kluczowe.
+Makro **makro OffsetOf** zwraca przesunięcie w bajtach *elementu MemberName* od początku struktury określonej przez *structname* jako wartość typu **size_t**. Można określić typy za pomocą słowa kluczowego **struct** .
 
 > [!NOTE]
-> **Makro offsetof** nie jest funkcją i nie może być opisany przy użyciu prototypu C.
+> **makro OffsetOf** nie jest funkcją i nie można jej opisać przy użyciu prototypu języka C.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -64,11 +67,11 @@ Nazwa elementu członkowskiego w nadrzędnej struktury danych, do których chces
 |-------------|---------------------|
 |**offsetof**|\<stddef.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,12 +1,12 @@
 ---
 title: va_arg, va_copy, va_end, va_start
 ms.date: 11/04/2016
-apiname:
+api_name:
 - va_arg
 - va_end
 - va_copy
 - va_start
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - va_arg
 - va_start
@@ -37,16 +40,16 @@ helpviewer_keywords:
 - va_alist macro
 - va_copy macro
 ms.assetid: a700dbbd-bfe5-4077-87b6-3a07af74a907
-ms.openlocfilehash: cc0a903f6bc4895f7d2ea6e80990dea94f28c6c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47bd9e3913c6664a52c970dd8a190636683d214e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353576"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957364"
 ---
-# <a name="vaarg-vacopy-vaend-vastart"></a>va_arg, va_copy, va_end, va_start
+# <a name="va_arg-va_copy-va_end-va_start"></a>va_arg, va_copy, va_end, va_start
 
-Uzyskuje dostęp do listy zmiennych argumentów.
+Uzyskuje dostęp do list argumentów zmiennych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -77,41 +80,41 @@ void va_start(
 Typ argumentu do pobrania.
 
 *arg_ptr*<br/>
-Wskaźnik do listy argumentów.
+Wskaźnik na listę argumentów.
 
 *dest*<br/>
-Wskaźnik do listy argumentów z *src*
+Wskaźnik do listy argumentów, które mają zostać zainicjowane z elementu *src*
 
-*src*<br/>
-Wskaźnik do zainicjowane lista argumentów do skopiowania do *dest*.
+*SRC*<br/>
+Wskaźnik na zainicjowaną listę argumentów do skopiowania do miejsca *docelowego*.
 
 *prev_param*<br/>
-Parametr, który poprzedza pierwszy argument opcjonalny.
+Parametr poprzedzający pierwszy argument opcjonalny.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**va_arg** Zwraca bieżące argumentu. **va_copy**, **va_start** i **va_end** nie zwracają wartości.
+**va_arg** zwraca bieżący argument. **va_copy**, **va_start** i **va_end** nie zwracają wartości.
 
 ## <a name="remarks"></a>Uwagi
 
-**Va_arg**, **va_copy**, **va_end**, i **va_start** makra umożliwiają przenośnych dostępu argumenty do funkcji po Funkcja przyjmuje zmienną liczbę argumentów. Istnieją dwie wersje makra: Makra zdefiniowane w STDARG. H są zgodne z ISO C99 standard. makra zdefiniowane w VARARGS. H są przestarzałe, ale zostaną zachowane dla zgodności z poprzednimi wersjami z kodem, który został napisany przed standardowa C89 ANSI.
+Makra **va_arg**, **va_copy**, **va_end**i **va_start** zapewniają przenośny sposób dostępu do argumentów do funkcji, gdy funkcja przyjmuje zmienną liczbę argumentów. Istnieją dwie wersje makr: Makra zdefiniowane w STDARG. H jest zgodna ze standardem ISO C99; makra zdefiniowane w VARARGS. H są przestarzałe, ale są zachowywane w celu zachowania zgodności z poprzednimi wersjami z kodem, który został zapisany przed standardem ANSI c89.
 
-Te makra przyjęto założenie, że funkcja przyjmuje stałą liczbą wymaganych argumentów, a następnie zmienną liczbę argumentów opcjonalnych. Wymagane argumenty są deklarowane jako zwykłe parametrów funkcji i jest możliwy za pośrednictwem nazw parametrów. Argumenty opcjonalne są dostępne za pośrednictwem makra w STDARG. H (lub VARARG). Godz. dla kodu, który został napisany przed standard ANSI C89), który ustawia wskaźnik do pierwszego opcjonalny argument na liście argumentów pobiera argumenty z listy i resetuje wskaźnik po ukończeniu przetwarzanie argumentów.
+W tych makrach przyjęto założenie, że funkcja przyjmuje określoną liczbę wymaganych argumentów, a następnie zmienną liczbę argumentów opcjonalnych. Wymagane argumenty są deklarowane jako parametry zwykłe do funkcji i można do nich uzyskać dostęp za pomocą nazw parametrów. Opcjonalne argumenty są dostępne za pomocą makr w STDARG. H (lub VARARGS. H dla kodu, który został zapisany przed standardem ANSI C89), który ustawia wskaźnik do pierwszego opcjonalnego argumentu na liście argumentów, pobiera argumenty z listy i resetuje wskaźnik po zakończeniu przetwarzania argumentów.
 
-C standard makra, zdefiniowane w pliku STDARG. Godz., są używane w następujący sposób:
+Standardowe makra języka C zdefiniowane w STDARG. H, są używane w następujący sposób:
 
-- **va_start** ustawia *arg_ptr* aby pierwszy argument opcjonalne w liście argumentów, który jest przekazywany do funkcji. Argument *arg_ptr* musi mieć **va_list** typu. Argument *prev_param* nazywa się wymaganym parametrem, który bezpośrednio poprzedzające pierwszy argument opcjonalne na liście argumentów. Jeśli *prev_param* jest zadeklarowana z klasą magazynu rejestru jego zachowanie jest niezdefiniowane. **va_start** należy wykonać przed **va_arg** jest używany po raz pierwszy.
+- **va_start** ustawia *arg_ptr* na pierwszy opcjonalny argument na liście argumentów, które są przekazane do funkcji. Argument *arg_ptr* musi mieć typ **va_list** . Argument *prev_param* jest nazwą wymaganego parametru, który bezpośrednio poprzedza pierwszy opcjonalny argument na liście argumentów. Jeśli *prev_param* jest zadeklarowana z klasą magazynu rejestru, zachowanie makra jest niezdefiniowane. **va_start** należy użyć przed użyciem **va_arg** po raz pierwszy.
 
-- **va_arg** pobiera wartość *typu* z lokalizacji, która została przez *arg_ptr*i zwiększa odczyt *arg_ptr* wskaż następny argument na liście według przy użyciu rozmiaru *typu* ustalenie, gdzie rozpoczyna się następny argument. **va_arg** może być używany w funkcji dowolną liczbę razy, można pobrać argumenty z listy.
+- **va_arg** Pobiera wartość *typu* z lokalizacji, która jest określona przez *arg_ptr*, i zwiększa *arg_ptr* , aby wskazywała na następny argument na liście przy użyciu rozmiaru *typu* , aby określić, gdzie zostanie uruchomiony następny argument. do pobierania argumentów z listy **va_arg** można użyć dowolnej liczby razy w funkcji.
 
-- **va_copy** tworzy kopię listy argumentów w jego bieżącym stanie. *Src* parametru już musi zostać zainicjowany z **va_start**; został zaktualizowany przy użyciu **va_arg** wywołań, ale nie musi mieć zresetować za pomocą **va_end** . Następny argument, który jest pobierany przez **va_arg** z *dest* jest taka sama jak następny argument, który jest pobierany z *src*.
+- **va_copy** tworzy kopię listy argumentów w bieżącym stanie. Parametr *src* musi już być zainicjowany przy użyciu **va_start**; mógł zostać zaktualizowany przy użyciu wywołań **va_arg** , ale nie może zostać zresetowany przy użyciu **va_end**. Następny argument pobrany przez **va_arg** z miejsca *docelowego* jest taki sam jak następny argument pobrany z elementu *src*.
 
-- Po pobraniu wszystkich argumentów **va_end** resetuje wskaźnik do **NULL**. **va_end** musi zostać wywołana w każdej listy argumentów, który jest inicjowany za pomocą **va_start** lub **va_copy** zanim funkcja zwróci.
+- Po pobraniu wszystkich argumentów **va_end** resetuje wskaźnik do **wartości null**. **va_end** musi być wywołana dla każdej listy argumentów, która została zainicjowana z **va_start** lub **va_copy** przed zwróceniem funkcji.
 
 > [!NOTE]
-> Makra w VARARGS. H są przestarzałe i są przechowywane tylko wstecznej zgodności z kodem, który został napisany przed standard ANSI C89. We wszystkich innych przypadkach należy użyć makra w STDARGS. H.
+> Makra w VARARGS. H są przestarzałe i są zachowywane tylko w celu zapewnienia zgodności z poprzednimi wersjami z kodem, który został zapisany przed standardem ANSI c89. We wszystkich innych przypadkach Użyj makr w STDARGS. C.
 
-Kiedy są kompilowane przy użyciu [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md), programów, które używają tych makr może generować nieoczekiwane wyniki z powodu różnic między systemami typu środowiska uruchomieniowego (języka wspólnego CLR) macierzystych i wspólnego języka. Należy wziąć pod uwagę ten program:
+Gdy są kompilowane przy użyciu opcji [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md), programy korzystające z tych makr mogą generować nieoczekiwane wyniki ze względu na różnice między systemami typów środowiska uruchomieniowego języka macierzystego (CLR). Weź pod uwagę następujący program:
 
 ```C
 #include <stdio.h>
@@ -143,7 +146,7 @@ int main()
 }
 ```
 
-Należy zauważyć, że **testit** oczekuje, że jej drugi parametr albo **int** lub **char**<strong>\*</strong>. Argumenty przekazywane są 0xffffffff ( **niepodpisane** **int**, a nie **int**) i **NULL** (faktycznie **int**, a nie **char**<strong>\*</strong>). Gdy program jest skompilowany dla kodu natywnego, produkuje następujące dane wyjściowe:
+Należy zauważyć, że **testit** oczekuje, że drugi parametr jest typu **int** lub **char**<strong>\*</strong>. Przekazane argumenty to 0xFFFFFFFF ( **niepodpisane** **int**, nie **int**) i **null** (w rzeczywistości **int**, not a **char**<strong>\*</strong>). Gdy program jest kompilowany do kodu natywnego, generuje następujące dane wyjściowe:
 
 ```Output
 -1
@@ -153,13 +156,13 @@ Należy zauważyć, że **testit** oczekuje, że jej drugi parametr albo **int**
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<stdio.h > i \<stdarg.h >
+**Nagłówek:** stdio. h > i \<STDARG. h > \<
 
-**Nagłówek przestarzałe:** \<varargs.h >
+**Przestarzały nagłówek:** \<> VarArgs. h
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 

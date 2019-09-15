@@ -1,10 +1,10 @@
 ---
 title: _putenv_s, _wputenv_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wputenv_s
 - _putenv_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - putenv_s
 - wputenv_s
@@ -31,19 +34,19 @@ helpviewer_keywords:
 - environment variables, creating
 - environment variables, modifying
 ms.assetid: fbf51225-a8da-4b9b-9d7c-0b84ef72df18
-ms.openlocfilehash: f675c2c0a2b12db3cce841dd0db9fa722393f1b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2de609314a12f626a21680b470bc8831eada2cb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357866"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949904"
 ---
-# <a name="putenvs-wputenvs"></a>_putenv_s, _wputenv_s
+# <a name="_putenv_s-_wputenv_s"></a>_putenv_s, _wputenv_s
 
-Tworzy, modyfikuje lub usuwa zmienne środowiskowe. Są to wersje [_putenv, _wputenv —](putenv-wputenv.md) , ale mają wzmocnienia zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Tworzy, modyfikuje lub usuwa zmienne środowiskowe. Są to wersje [_putenv, _wputenv,](putenv-wputenv.md) ale mają ulepszenia zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -60,58 +63,58 @@ errno_t _wputenv_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwa zmiennej*<br/>
+*nazwa_zmiennej*<br/>
 Nazwa zmiennej środowiskowej.
 
 *value_string*<br/>
-Wartość do ustawienia zmiennej środowiskowej.
+Wartość, dla której ma zostać ustawiona zmienna środowiskowa.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość 0, jeśli kończy się pomyślnie, lub kod błędu.
+Zwraca wartość 0, jeśli powodzenie lub kod błędu.
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|*Nazwa zmiennej*|*value_string*|Wartość zwracana|
+|*nazwa_zmiennej*|*value_string*|Wartość zwracana|
 |------------|-------------|------------------|
-|**NULL**|Wszystkie|**EINVAL**|
-|Wszystkie|**NULL**|**EINVAL**|
+|**NULL**|Ile|**EINVAL**|
+|Ile|**NULL**|**EINVAL**|
 
-Jeśli jeden z warunków błąd wystąpi, funkcje te wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **EINVAL** i ustaw **errno** do **EINVAL**.
+Jeśli wystąpi jeden z warunków błędów, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **EINVAL** i ustawiają **errno** na **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Putenv_s** funkcji dodaje nowe zmienne środowiskowe lub modyfikuje wartości istniejących zmiennych środowiskowych. Zmienne środowiskowe definiują środowisko, w którym proces działa (na przykład domyślna ścieżka wyszukiwania dla bibliotek musi być połączona z programem). **_wputenv_s —** to wersja znaku dwubajtowego **_putenv_s**; *envstring* argument **_wputenv_s —** jest ciągiem znaku dwubajtowego.
+Funkcja **_putenv_s** dodaje nowe zmienne środowiskowe lub modyfikuje wartości istniejących zmiennych środowiskowych. Zmienne środowiskowe definiują środowisko, w którym jest wykonywany proces (na przykład domyślną ścieżkę wyszukiwania dla bibliotek, które mają być połączone z programem). **_wputenv_s** to dwubajtowa wersja **_putenv_s**; argument *envstring* **_wputenv_s** jest ciągiem znaków dwubajtowych.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tputenv_s**|**_putenv_s**|**_putenv_s**|**_wputenv_s**|
 
-*nazwa_zmiennej* to nazwa zmiennej środowiskowej, aby być dodane lub zmodyfikowane i *value_string* jest wartość zmiennej. Jeśli *nazwa_zmiennej* jest już częścią środowiska, jej wartość jest zastępowana przez *value_string*; w przeciwnym razie nowy *nazwa_zmiennej* zmienna i jej *value_string*  są dodawane do środowiska. Można usunąć zmienną ze środowiska przez określenie pustego ciągu (czyli "") dla *value_string*.
+*nazwa_zmiennej* to nazwa zmiennej środowiskowej, która ma zostać dodana lub zmodyfikowana, a *value_string* to wartość zmiennej. Jeśli *nazwa_zmiennej* jest już częścią środowiska, jej wartość jest zastępowana przez *value_string*; w przeciwnym razie Nowa zmienna *nazwa_zmiennej* i jej *value_string* są dodawane do środowiska. Możesz usunąć zmienną ze środowiska, określając pusty ciąg (czyli "") dla *value_string*.
 
-**_putenv_s** i **_wputenv_s —** wpływu na środowisko lokalne dla bieżącego procesu; nie można ich używać do modyfikowania środowiska poziomie polecenia. Funkcje te działają tylko na struktur danych, które są dostępne dla biblioteki wykonawczej a nie na środowisko "segment", który system operacyjny tworzy proces. Gdy bieżący proces kończy działanie, środowiska powraca do poziomu procesu wywołującego, które w większości przypadków jest to poziom systemu operacyjnego. Jednak zmodyfikowane środowisko może być przekazywany w taki sposób, aby nowe procesy, które są tworzone przez **_spawn**, **_exec**, lub **systemu**, a te nowe procesy uzyskują wszystkie nowe elementy, które są dodane przez **_putenv_s** i **_wputenv_s —**.
+**_putenv_s** i **_wputenv_s** mają wpływ tylko na środowisko, które jest lokalne dla bieżącego procesu; nie można ich używać do modyfikowania środowiska poziomu polecenia. Funkcje te działają tylko na strukturach danych, które są dostępne dla biblioteki wykonawczej, a nie w środowisku "segment", który tworzy system operacyjny dla procesu. Po zakończeniu bieżącego procesu środowisko zostaje przywrócone do poziomu procesu wywołującego, co w większości przypadków jest poziomem systemu operacyjnego. Zmodyfikowane środowisko może być jednak przesyłane do każdego nowego procesu, który jest tworzony przez **_spawn**, **_exec**lub **system**, i te nowe procesy uzyskują nowe elementy, które są dodawane przez **_putenv_s** i **_wputenv_s**.
 
-Nie zmieniaj wpisu środowiska bezpośrednio; Zamiast tego należy użyć **_putenv_s** lub **_wputenv_s —** je zmienić. W szczególności, bezpośrednie zwalnianie elementów **[] _environ** globalnej tablicy może spowodować nieprawidłowe pamięci, należy się zająć.
+Nie zmieniaj bezpośrednio wpisu środowiska; Zamiast tego należy użyć **_putenv_s** lub **_wputenv_s** , aby go zmienić. W szczególności bezpośrednie zwalnianie elementów macierzy globalnej **_environ []** może spowodować nieprawidłową ilość pamięci.
 
-**getenv** i **_putenv_s** używają zmiennej globalnej **_environ** dostępu do tabeli środowiska; **_wgetenv —** i **_wputenv_s —** użyj **_wenviron**. **_putenv_s** i **_wputenv_s —** może zmienić wartość **_environ** i **_wenviron**i tym samym unieważnić *envp*argument **głównego** i **_wenvp** argument **wmain**. Dlatego jest bezpieczniejsze w użyciu **_environ** lub **_wenviron** dostęp do informacji o środowisku. Aby uzyskać więcej informacji na temat relacji między **_putenv_s** i **_wputenv_s —** ze zmiennymi globalnymi, zobacz [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).
+**getenv** i **_putenv_s** używają zmiennej globalnej **_environ** , aby uzyskać dostęp do tabeli środowiskowej. **_wgetenv** i **_wputenv_s** używają **_wenviron**. **_putenv_s** i **_wputenv_s** mogą zmienić wartość **_environ** i **_wenviron**, a tym samym unieważnić argument *envp* do argumentu **Main** i **_wenvp** do **wmain**. W związku z tym można bezpiecznie używać **_environ** lub **_wenviron** do uzyskiwania dostępu do informacji o środowisku. Aby uzyskać więcej informacji na temat relacji **_putenv_s** i **_wputenv_s** ze zmiennymi globalnymi, zobacz [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).
 
 > [!NOTE]
-> **_Putenv_s** i **_getenv_s** rodziny funkcji nie są wątkowo. **_getenv_s** może zwracać wskaźnik ciągu podczas **_putenv_s** jest modyfikuje ciąg, a także spowodować błędy losowe. Upewnij się, że wywołania tych funkcji są synchronizowane.
+> Rodziny **_putenv_s** i **_getenv_s** funkcji nie są bezpieczne wątkowo. **_getenv_s** może zwrócić wskaźnik ciągu, podczas gdy **_putenv_s** modyfikuje ciąg i w związku z tym powoduje losowe błędy. Upewnij się, że wywołania tych funkcji są zsynchronizowane.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_putenv_s**|\<stdlib.h>|
-|**_wputenv_s**|\<stdlib.h> or \<wchar.h>|
+|**_wputenv_s**|\<STDLIB. h > lub \<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Dla przykładu, który pokazuje, jak używać **_putenv_s**, zobacz [getenv_s —, _wgetenv_s —](getenv-s-wgetenv-s.md).
+Aby uzyskać przykład, który pokazuje, jak używać **_putenv_s**, zobacz [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
 
 ## <a name="see-also"></a>Zobacz także
 

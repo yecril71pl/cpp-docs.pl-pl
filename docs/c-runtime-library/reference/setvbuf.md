@@ -1,9 +1,9 @@
 ---
 title: setvbuf
 ms.date: 11/04/2016
-apiname:
+api_name:
 - setvbuf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - setvbuf
 helpviewer_keywords:
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - stream buffering
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
-ms.openlocfilehash: d4336c6cc478a035fcc0b9b059a7161d58bc4442
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38b6474f550107a8edd941c7112ba98891ab3c12
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356319"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948181"
 ---
 # <a name="setvbuf"></a>setvbuf
 
-Kontroluje buforowanie strumienia i rozmiar buforu.
+Steruje buforowaniem strumienia i rozmiarem buforu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -48,36 +51,36 @@ int setvbuf(
 ### <a name="parameters"></a>Parametry
 
 *stream*<br/>
-Wskaźnik do **pliku** struktury.
+Wskaźnik do struktury **pliku** .
 
 *buffer*<br/>
 Bufor przydzielony przez użytkownika.
 
-*Tryb*<br/>
+*wyst*<br/>
 Tryb buforowania.
 
-*Rozmiar*<br/>
-Rozmiar buforu w bajtach. Dopuszczalny zakres: 2 < = *rozmiar* < = INT_MAX (2147483647). Wewnętrznie, wartość podana dla *rozmiar* jest zaokrąglana do najbliższej wielokrotności 2.
+*zmienia*<br/>
+Rozmiar buforu w bajtach. Dozwolony zakres: 2 < = *size* < = INT_MAX (2147483647). Wewnętrznie wartość podana dla *rozmiaru* jest zaokrąglana w dół do najbliższej wielokrotności 2.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość 0, jeśli kończy się pomyślnie.
+Zwraca wartość 0, jeśli powodzenie.
 
-Jeśli *strumienia* jest **NULL**, lub jeśli *tryb* lub *rozmiar* jest poza prawidłowe zmianę, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja zwraca wartość -1 i ustawia **errno** do **EINVAL**.
+Jeśli *strumień* ma **wartość null**lub jeśli *tryb* lub *rozmiar* nie znajduje się w prawidłowej zmianie, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1 i ustawia **errno** na **EINVAL**.
 
-Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje o tych i innych kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**Setvbuf —** funkcja pozwala programowi na kontrolowanie zarówno buforowanie i rozmiar buforu *strumienia*. *strumień* musi odwoływać się do otwartego pliku, które nie zostało poddane operacji We/Wy, ponieważ zostało otwarte. Tablica wskazywany przez *buforu* służy jako bufor, chyba że jest to **NULL**, w którym to przypadku **setvbuf —** używa automatycznie przydzielonego buforu o długości  *rozmiar*/2 \* 2 bajty.
+Funkcja **setvbuf —** pozwala programowi kontrolować zarówno buforowanie, jak i rozmiar buforu dla *strumienia*. *strumień* musi odwoływać się do otwartego pliku, który nie został poddany operacji we/wy, ponieważ został otwarty. Tablica wskazywana przez *bufor* jest używana jako bufor, chyba że ma **wartość null**, w takim przypadku **setvbuf —** używa automatycznie przydzielonego buforu *o długości lub*2 \* 2 bajtów.
 
-Tryb musi mieć wartość **_IOFBF**, **_IOLBF**, lub **_IONBF**. Jeśli *tryb* jest **_IOFBF** lub **_IOLBF**, następnie *rozmiar* jest używany jako rozmiar buforu. Jeśli *tryb* jest **_IONBF**, strumień jest Niebuforowane i *rozmiar* i *buforu* są ignorowane. Wartości *tryb* i ich znaczenie:
+Tryb musi mieć wartość **_IOFBF**, **_IOLBF**lub **_IONBF**. Jeśli *tryb* to **_IOFBF** lub **_IOLBF**, *rozmiar* jest używany jako rozmiar buforu. Jeśli *tryb* to **_IONBF**, strumień jest odbuforowany, a *rozmiar* i *bufor* są ignorowane. Wartości *trybu* i ich znaczenia są następujące:
 
-|*tryb* wartość|Znaczenie|
+|wartość *trybu*|Znaczenie|
 |-|-|
-| **_IOFBF** | Pełne buforowanie; oznacza to, że *buforu* służy jako bufor i *rozmiar* jest używany jako rozmiar buforu. Jeśli *buforu* jest **NULL**, automatycznie przydzielonego buforu *rozmiar* bajtów jest używany. |
-| **_IOLBF** | W przypadku niektórych systemów zapewnia buforowanie wiersza. Jednak dla Win32, zachowanie jest taka sama jak **_IOFBF** — pełna buforowania. |
-| **_IONBF** | Bufor nie jest używane, niezależnie od tego, *buforu* lub *rozmiar*. |
+| **_IOFBF** | Pełny buforowanie; oznacza to, że *bufor* jest używany jako bufor i *rozmiar* jest używany jako rozmiar buforu. Jeśli *bufor* ma **wartość null**, używana jest automatycznie przydzielony *rozmiar* bufora w bajtach. |
+| **_IOLBF** | W przypadku niektórych systemów zapewnia to buforowanie wierszy. Jednak w przypadku systemu Win32 zachowanie jest takie samo jak **_IOFBF** — pełne buforowanie. |
+| **_IONBF** | Nie jest używany żaden bufor, niezależnie od *buforu* lub *rozmiaru*. |
 
 ## <a name="requirements"></a>Wymagania
 
@@ -85,11 +88,11 @@ Tryb musi mieć wartość **_IOFBF**, **_IOLBF**, lub **_IONBF**. Jeśli *tryb* 
 |-------------|---------------------|
 |**setvbuf**|\<stdio.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
@@ -130,7 +133,7 @@ int main( void )
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>
 [fflush](fflush.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>

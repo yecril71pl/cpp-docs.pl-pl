@@ -1,9 +1,9 @@
 ---
 title: localeconv
 ms.date: 11/04/2016
-apiname:
+api_name:
 - localeconv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - localeconv
 helpviewer_keywords:
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - localeconv function
 - locales, getting information on
 ms.assetid: 7ecdb1f2-88f5-4037-a0e7-c754ab003660
-ms.openlocfilehash: bf26e4f7b7fb4f0334b57604fe5c4996312bd62a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca7113903e1ed6e9ffb94bef79beba41e09bfb71
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286309"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953362"
 ---
 # <a name="localeconv"></a>localeconv
 
-Pobiera szczegółowe informacje na temat ustawień regionalnych.
+Pobiera szczegółowe informacje o ustawieniach regionalnych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,74 +45,74 @@ struct lconv *localeconv( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**localeconv** zwraca wskaźnik do obiektu wypełniane typu [lconv — struktura](../../c-runtime-library/standard-types.md). Wartości zawarte w obiekcie są kopiowane z ustawień regionalnych w lokalny magazyn wątków i może zostać zastąpiona przez kolejne wywołania **localeconv**. Zmiany wprowadzone do wartości w tym obiekcie nie należy modyfikować ustawienia regionalne. Wywołania [setlocale](setlocale-wsetlocale.md) z *kategorii* wartości **LC_ALL**, **LC_MONETARY**, lub **LC_NUMERIC** Zastąp zawartość struktury.
+**localeconv** zwraca wskaźnik do wypełnionego obiektu typu [struct lconv](../../c-runtime-library/standard-types.md). Wartości zawarte w obiekcie są kopiowane z ustawień regionalnych w magazynie wątków lokalnych i mogą zostać zastąpione przez kolejne wywołania do **localeconv**. Zmiany wprowadzone w wartościach w tym obiekcie nie modyfikują ustawień ustawień regionalnych. Wywołania metody [setlocaling](setlocale-wsetlocale.md) z wartościami *kategorii* **LC_ALL**, **LC_MONETARY**lub **LC_NUMERIC** zastępują zawartość struktury.
 
 ## <a name="remarks"></a>Uwagi
 
-**Localeconv** funkcja pobiera szczegółowe informacje na temat formatowanie liczbowe bieżących ustawień regionalnych. Te informacje są przechowywane w strukturze typu **lconv —**. **Lconv —** struktury, zdefiniowanego w ustawieniach regionalnych. Godz., zawiera następujące składniki:
+Funkcja **localeconv** pobiera szczegółowe informacje o formatowaniu liczbowym dla bieżących ustawień regionalnych. Te informacje są przechowywane w strukturze typu **lconv**. Struktura **lconv** zdefiniowana w ustawieniach regionalnych. H, zawiera następujących członków:
 
 |Pole|Znaczenie|
 |-|-|
-decimal_point —,<br/>_W_decimal_point|Wskaźnik na znak na ilości niewalutowych dziesiętny.
-thousands_sep —,<br/>_W_thousands_sep|Wskaźnik znaku, który oddziela grup cyfr po lewej stronie przecinka dziesiętnego dla niewalutowych ilości.
-grouping|Wskaźnik do **char**-liczba całkowita, która zawiera rozmiar każdej grupy cyfry w ilości niewalutowych wielkości.
-int_curr_symbol,<br/>_W_int_curr_symbol|Wskaźnik na symbol waluty międzynarodowych dla bieżących ustawień regionalnych. Pierwsze trzy znaki określić symbol waluty międzynarodowe, zgodnie z definicją w *ISO 4217 kodów dla reprezentacji walut i środków pieniężnych* standardowych. Czwarty znak (bezpośrednio poprzedzającego znaku null) oddziela symbol waluty międzynarodowych od ilości pieniężnych.
-currency_symbol,<br/>_W_currency_symbol|Wskaźnik do symbolu waluty lokalnej dla bieżących ustawień regionalnych.
-mon_decimal_point,<br/>_W_mon_decimal_point|Wskaźnik do dziesiętnego znak dla ilości pieniężnych.
-mon_thousands_sep,<br/>_W_mon_thousands_sep|Wskaźnik do separatora grup cyfr w lewo dziesiętnego w ilościach pieniężnych.
-mon_grouping|Wskaźnik do **char**-o rozmiarze liczba całkowita, która zawiera rozmiar każdej grupy cyfry w ilości pieniężnych.
-positive_sign —,<br/>_W_positive_sign|Ciąg oznaczający logowania dla nieujemna ilości pieniężnych.
-negative_sign —,<br/>_W_negative_sign|Ciąg oznaczający znak ujemny ilości pieniężnych.
-int_frac_digits|Liczba cyfr z prawej strony punktu dziesiętnego w wielu krajach sformatowane ilościach pieniężnych.
-frac_digits|Liczba cyfr z prawej strony punktu dziesiętnego w ilościach pieniężnych sformatowany.
-p_cs_precedes|Wartość 1, jeśli symbol waluty poprzedza wartość nieujemna sformatowane ilość pieniężnych. Wartość 0, jeśli symbol jest zgodna wartość.
-p_sep_by_space|Wartość 1, jeśli symbol waluty jest oddzielona od wartości dla nieujemna sformatowane ilości pieniężnych miejsca. W przypadku bez separacji miejsca, należy ustawić na 0.
-n_cs_precedes|Wartość 1, jeśli symbol waluty poprzedza wartość sformatowane pieniężnych ujemną. Jeśli symbol wartość zakończy się powodzeniem, należy ustawić na 0.
-n_sep_by_space|Wartość 1, jeśli symbol waluty jest oddzielona od wartości sformatowane pieniężnych ujemną miejsca. W przypadku bez separacji miejsca, należy ustawić na 0.
-p_sign_posn|Pozycja znaku dodatniego nieujemna sformatowane ilości pieniężnych.
-n_sign_posn|Pozycja znaku dodatniego w ilości ujemne pieniężnych sformatowany.
+decimal_point,<br/>_W_decimal_point|Wskaźnik na znak dziesiętny dla ilości niepieniężnych.
+thousands_sep,<br/>_W_thousands_sep|Wskaźnik do znaku, który oddziela grupy cyfr po lewej stronie przecinka dziesiętnego dla ilości niepieniężnych.
+grouping|Wskaźnik do liczby całkowitej o rozmiarze **char**, która zawiera rozmiar każdej grupy cyfr w ilościach niepieniężnych.
+int_curr_symbol,<br/>_W_int_curr_symbol|Wskaźnik na Międzynarodowy symbol waluty dla bieżących ustawień regionalnych. Pierwsze trzy znaki określają alfabetyczny symbol waluty międzynarodowej zgodnie z definicją w *kodzie ISO 4217 dla reprezentacji standardu walutowego i funduszy* . Czwarty znak (bezpośrednio poprzedzający znak null) oddziela Międzynarodowy symbol waluty od ilości pieniężnej.
+currency_symbol,<br/>_W_currency_symbol|Wskaźnik na symbol waluty lokalnej dla bieżących ustawień regionalnych.
+mon_decimal_point,<br/>_W_mon_decimal_point|Wskaźnik na znak dziesiętny dla ilości pieniężnych.
+mon_thousands_sep,<br/>_W_mon_thousands_sep|Wskaźnik do separatora grup cyfr na lewo od miejsca dziesiętnego w ilościach pieniężnych.
+mon_grouping|Wskaźnik do liczby całkowitej o rozmiarze **char**, która zawiera rozmiar każdej grupy cyfr w ilościach pieniężnych.
+positive_sign,<br/>_W_positive_sign|Ciąg oznaczający znak w przypadku nieujemnych ilości pieniężnych.
+negative_sign,<br/>_W_negative_sign|Ciąg oznaczający znak w przypadku ujemnych ilości pieniężnych.
+int_frac_digits|Liczba cyfr z prawej strony punktu dziesiętnego w przypadku szesnastkowie sformatowanych ilości pieniężnych.
+frac_digits|Liczba cyfr z prawej strony punktu dziesiętnego w sformatowanych ilościach pieniężnych.
+p_cs_precedes|Ustaw wartość 1, jeśli symbol waluty poprzedza wartość wartości dla nieujemnej sformatowanej ilości pieniężnej. Ustaw wartość na 0, jeśli symbol następuje po wartości.
+p_sep_by_space|Ustaw wartość 1, jeśli symbol waluty jest rozdzielony spacją od wartości dla nieujemnej sformatowanej ilości pieniężnej. Ustaw wartość 0, jeśli nie ma separacji miejsca.
+n_cs_precedes|Ustaw wartość 1, jeśli symbol waluty poprzedza wartość wartości dla ujemnej sformatowanej ilości pieniężnej. Ustawienie wartości 0 powoduje, że symbol kończy się powodzeniem.
+n_sep_by_space|Ustaw wartość 1, jeśli symbol waluty jest rozdzielony spacją od wartości dla ujemnie sformatowanej ilości pieniężnej. Ustaw wartość 0, jeśli nie ma separacji miejsca.
+p_sign_posn|Pozycja znaku pozytywnego w nieujemnych, sformatowanych ilościach pieniężnych.
+n_sign_posn|Pozycja znaku pozytywnego w ujemnych sformatowanych ilościach pieniężnych.
 
-Z wyjątkiem jako członkowie określonej, **lconv —** strukturę, która ma `char *` i `wchar_t *` wersje są wskaźnikami do ciągów. Żadnego z tych, które jest równa **""** (lub **L ""** dla **wchar_t** <strong>\*</strong>) ma wartość zerową długość, lub nie jest obsługiwane w bieżącym Ustawienia regionalne. Należy pamiętać, że **decimal_point —** i **_W_decimal_point** są zawsze obsługiwane i długości wartość różną od zera.
+O ile nie określono, członkowie struktury **lconv** , która ma `char *` i `wchar_t *` wersje są wskaźnikami do ciągów. Każdy z tych elementów równy **""** (lub **L ""** dla **wchar_t** <strong>\*</strong>) ma zerową długość lub nie jest obsługiwany w bieżących ustawieniach regionalnych. Należy pamiętać, że **decimal_point** i **_W_decimal_point** są zawsze obsługiwane i o niezerowej długości.
 
-**Char** elementy członkowskie struktury są małymi liczbami nieujemna nie znaków. Żadnego z tych, które jest równa **CHAR_MAX** nie jest obsługiwana przy bieżących ustawieniach regionalnych.
+Składowe **znaku** struktury są małymi nieujemnymi liczbami, a nie znakami. Wszystkie te, które są równe **CHAR_MAX** , nie są obsługiwane w bieżących ustawieniach regionalnych.
 
-Wartości **grupowanie** i **mon_grouping** są interpretowane zgodnie z następującymi zasadami:
+Wartości **grupowania** i **mon_grouping** są interpretowane zgodnie z następującymi regułami:
 
-- **CHAR_MAX** — nie należy wykonywać dalsze grupowania.
+- **CHAR_MAX** — nie wykonuj żadnych dalszych grup.
 
-- 0 — Użyj poprzedni element dla każdego z pozostałych znaków.
+- 0 — użyj poprzedniego elementu dla każdej z pozostałych cyfr.
 
-- *n* — liczba cyfr, które tworzą bieżącą grupę. Następny element jest sprawdzane w celu określenia rozmiaru następną grupę cyfr przed bieżącą grupę.
+- *n* -liczba cyfr tworzących bieżącą grupę. Następny element jest sprawdzany w celu określenia rozmiaru następnej grupy cyfr przed bieżącą grupą.
 
-Wartości **int_curr_symbol** są interpretowane zgodnie z następującymi zasadami:
+Wartości dla **int_curr_symbol** są interpretowane zgodnie z następującymi regułami:
 
-- Pierwsze trzy znaki określić symbol waluty międzynarodowe, zgodnie z definicją w *ISO 4217 kodów dla reprezentacji walut i środków pieniężnych* standardowych.
+- Pierwsze trzy znaki określają alfabetyczny symbol waluty międzynarodowej zgodnie z definicją w *kodzie ISO 4217 dla reprezentacji standardu walutowego i środków pieniężnych* .
 
-- Czwarty znak (bezpośrednio poprzedzający znak null) oddziela symbol waluty międzynarodowych od ilości pieniężnych.
+- Czwarty znak (bezpośrednio poprzedzający znak null) oddziela Międzynarodowy symbol waluty od ilości pieniężnej.
 
-Wartości **p_cs_precedes** i **n_cs_precedes** są interpretowane zgodnie z następującymi zasadami ( **n_cs_precedes** reguła znajduje się w nawiasach):
+Wartości dla **p_cs_precedes** i **n_cs_precedes** są interpretowane zgodnie z następującymi regułami (reguła **n_cs_precedes** jest w nawiasach):
 
-- 0 — symbol waluty jest zgodna wartość nieujemną (negatywna) sformatowaną wartość pieniężną.
+- 1 — symbol waluty jest następujący: wartość dla nieujemnej (ujemnej) sformatowanej wartości pieniężnej.
 
-- 1 - symbol waluty poprzedza wartość nieujemną (negatywna) sformatowaną wartość pieniężną.
+- Symbol 1-Walutowy poprzedza wartość nieujemnej (ujemnej) sformatowanej wartości pieniężnej.
 
-Wartości **p_sep_by_space** i **n_sep_by_space** są interpretowane zgodnie z następującymi zasadami ( **n_sep_by_space** reguła znajduje się w nawiasach):
+Wartości dla **p_sep_by_space** i **n_sep_by_space** są interpretowane zgodnie z następującymi regułami (reguła **n_sep_by_space** jest w nawiasach):
 
-- 0 — symbol waluty jest oddzielony od wartości przez wpisanie nieujemna (negatywna) sformatowaną wartość pieniężną.
+- Symbol 0-walutowy jest oddzielony od wartości przez spację dla nieujemnej (ujemnej) sformatowanej wartości pieniężnej.
 
-- 1 — Brak Brak oddzielenia przestrzeni symbol waluty i wartość nieujemną (negatywna) sformatowaną wartość pieniężną.
+- 1 — nie ma odstępu między symbolem waluty a wartością nieujemnej (ujemnej) sformatowanej wartości pieniężnej.
 
-Wartości **p_sign_posn** i **n_sign_posn** są interpretowane zgodnie z następującymi zasadami:
+Wartości dla **p_sign_posn** i **n_sign_posn** są interpretowane zgodnie z następującymi regułami:
 
-- 0 - nawiasy otaczające symbol ilości i waluty.
+- 0 — nawiasy — liczba przestrzenny i symbol waluty.
 
-- 1 — Logowanie ciągu poprzedza symbol ilości i waluty.
+- ciąg znaków 1 poprzedza liczbę i symbol waluty.
 
-- 2 — ciąg logowanie następuje symbol ilości i waluty.
+- 2 — ciąg znaków jest następujący: ilość i symbol waluty.
 
-- 3 - ciąg sign znajdującego się bezpośrednio przed symbolem waluty.
+- 3 — ciąg znaków bezpośrednio poprzedza symbol waluty.
 
-- 4 — logowanie natychmiast ciągu poniżej symbolu waluty.
+- 4 — ciąg znaku bezpośrednio następuje po symbolu waluty.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -117,11 +120,11 @@ Wartości **p_sign_posn** i **n_sign_posn** są interpretowane zgodnie z następ
 |-------------|---------------------|
 |**localeconv**|\<locale.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Zobacz także
 

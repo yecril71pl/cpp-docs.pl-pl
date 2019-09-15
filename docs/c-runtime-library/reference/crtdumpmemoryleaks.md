@@ -1,9 +1,9 @@
 ---
 title: _CrtDumpMemoryLeaks
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtDumpMemoryLeaks
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CRTDBG_LEAK_CHECK_DF
 - CRTDBG_CHECK_CRT_DF
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - CRTDBG_CHECK_CRT_DF macro
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: 71b2eab4-7f55-44e8-a55a-bfea4f32d34c
-ms.openlocfilehash: baf4f8d8234ba744acda20541d37bbc3ed076678
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dae93577f5c0c0297606577c05d6b6ef2040c831
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339458"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938831"
 ---
-# <a name="crtdumpmemoryleaks"></a>_CrtDumpMemoryLeaks
+# <a name="_crtdumpmemoryleaks"></a>_CrtDumpMemoryLeaks
 
-Zrzuty całą pamięć zablokuje w stosie debugowania wystąpił wyciek pamięci (tylko wersja debugowania).
+Zrzuca wszystkie bloki pamięci w stercie debugowania, gdy wystąpi wyciek pamięci (tylko wersja Debug).
 
 ## <a name="syntax"></a>Składnia
 
@@ -50,19 +53,19 @@ int _CrtDumpMemoryLeaks( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_CrtDumpMemoryLeaks** zwraca wartość PRAWDA, jeśli zostanie znaleziony przeciek pamięci. W przeciwnym razie funkcja zwraca wartość FALSE.
+**_CrtDumpMemoryLeaks** zwraca wartość true, jeśli znaleziono przeciek pamięci. W przeciwnym razie funkcja zwraca wartość FALSE.
 
 ## <a name="remarks"></a>Uwagi
 
-**_CrtDumpMemoryLeaks** funkcja określa, czy wystąpił przeciek pamięci, od momentu rozpoczęcia wykonywania programu. W przypadku odnalezienia przecieku informacji nagłówka debugowania dla wszystkich obiektów w stercie jest zrzucany w postaci czytelny dla użytkownika. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołania **_CrtDumpMemoryLeaks** są usuwane podczas przetwarzania wstępnego.
+Funkcja **_CrtDumpMemoryLeaks** określa, czy wyciek pamięci nastąpił od momentu rozpoczęcia wykonywania programu. Po znalezieniu przecieku informacje nagłówka debugowania dla wszystkich obiektów w stercie są zrzucane w formie możliwej do odczytu przez użytkownika. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołania **_CrtDumpMemoryLeaks** są usuwane podczas przetwarzania wstępnego.
 
-**_CrtDumpMemoryLeaks** często jest wywoływana po zakończeniu wykonywania programu, aby sprawdzić, czy całej pamięci przydzielonej przez aplikację, która została zwolniona. Funkcja może zostać wywołana automatycznie po zakończeniu program, włączając **_CRTDBG_LEAK_CHECK_DF** pola bitowego [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) Flaga przy użyciu [_CrtSetDbgFlag](crtsetdbgflag.md)funkcji.
+**_CrtDumpMemoryLeaks** jest często wywoływana po zakończeniu wykonywania programu, aby sprawdzić, czy cała pamięć przyalokowana przez aplikację została zwolniona. Funkcja może być wywoływana automatycznie przy zakończeniu działania programu, włączając pole bitowe **_CRTDBG_LEAK_CHECK_DF** flagi [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) przy użyciu funkcji [_CrtSetDbgFlag](crtsetdbgflag.md) .
 
-**_CrtDumpMemoryLeaks** wywołania [_crtmemcheckpoint —](crtmemcheckpoint.md) uzyskać bieżący stan sterty, a następnie skanuje stanu dla bloków, które nie mają zostać zwolniony. Po napotkaniu blokiem niezwolnionych **_CrtDumpMemoryLeaks** wywołania [_CrtMemDumpAllObjectsSince](crtmemdumpallobjectssince.md) zrzutu informacji dla wszystkich obiektów, które są przydzielone w stosie, od czasu rozpoczęcia wykonywania programu.
+**_CrtDumpMemoryLeaks** wywołuje [_CrtMemCheckpoint](crtmemcheckpoint.md) w celu uzyskania bieżącego stanu sterty, a następnie skanuje stan dla bloków, które nie zostały zwolnione. Po napotkaniu niezwolnionego bloku **_CrtDumpMemoryLeaks** wywołuje [_CrtMemDumpAllObjectsSince](crtmemdumpallobjectssince.md) w celu zrzutu informacji dla wszystkich obiektów przyznanych w stercie od momentu rozpoczęcia wykonywania programu.
 
-Domyślnie wewnętrzne bloki wykonywania C (**_CRT_BLOCK**) nie są uwzględnione w operacji zrzutu pamięci. [_CrtSetDbgFlag](crtsetdbgflag.md) funkcja może służyć do włączyć **_CRTDBG_CHECK_CRT_DF** trochę **_crtDbgFlag** aby objąć te bloki w procesie wykrywania przecieków.
+Domyślnie wewnętrzne bloki uruchomieniowe C ( **_CRT_BLOCK**) nie są uwzględnione w operacjach zrzutu pamięci. Funkcja [_CrtSetDbgFlag](crtsetdbgflag.md) może służyć do włączania bitu **_CRTDBG_CHECK_CRT_DF** **_crtDbgFlag** w celu uwzględnienia tych bloków w procesie wykrywania przecieków.
 
-Aby uzyskać więcej informacji o funkcjach stanu sterty i **_CrtMemState** struktury, zobacz [funkcje raportowania stanu sterty](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać więcej informacji na temat sposobu bloki pamięci są przydzielane, inicjowane i zarządzane w wersji debugowania podstawowej sterty, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
+Aby uzyskać więcej informacji na temat funkcji stanu sterty i struktury **_CrtMemState** , zobacz [funkcje raportowania stanu sterty](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać więcej informacji o tym, jak bloki pamięci są przydzielane, inicjowane i zarządzane w wersji debugowania sterty podstawowej, zobacz [szczegóły sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -70,15 +73,15 @@ Aby uzyskać więcej informacji o funkcjach stanu sterty i **_CrtMemState** stru
 |-------------|---------------------|
 |**_CrtDumpMemoryLeaks**|\<crtdbg.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Debuguj wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md) tylko.
+Debuguj wersje wyłącznie [bibliotek uruchomieniowych C](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="example"></a>Przykład
 
-Przykład sposobu użycia **_CrtDumpMemoryLeaks**, zobacz [crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1).
+Aby zapoznać się z przykładem sposobu korzystania z **_CrtDumpMemoryLeaks**, zobacz [crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1).
 
 ## <a name="see-also"></a>Zobacz także
 
