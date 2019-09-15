@@ -1,12 +1,12 @@
 ---
 title: _vfprintf_p, _vfprintf_p_l, _vfwprintf_p, _vfwprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vfprintf_p
 - _vfwprintf_p
 - _vfprintf_p_l
 - _vfwprintf_p_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _vfwprintf_p_l
 - _vfprintf_p
@@ -43,12 +46,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - vfwprintf_p function
 ms.assetid: 4d4a0914-4175-4b65-9ca1-037c4ef29147
-ms.openlocfilehash: 7f3a1fa472949d6d1f7880acc942a99c0f32c7ce
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a98c84ae9cfd221fd23da2eaa08c639e01f12ad4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499268"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945561"
 ---
 # <a name="_vfprintf_p-_vfprintf_p_l-_vfwprintf_p-_vfwprintf_p_l"></a>_vfprintf_p, _vfprintf_p_l, _vfwprintf_p, _vfwprintf_p_l
 
@@ -103,14 +106,14 @@ Aby uzyskać więcej informacji, zobacz temat [Formatowanie specyfikacji](../../
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji Pobiera wskaźnik do listy argumentów, a następnie formatuje i zapisuje dane w strumieniu. Funkcje te różnią się od wersji **_vfprint_s** i **_vfwprint_s** tylko w przypadku, gdy obsługują parametry pozycyjne. Aby uzyskać więcej informacji, zobacz [Printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md).
+Każda z tych funkcji Pobiera wskaźnik do listy argumentów, a następnie formatuje i zapisuje dane w *strumieniu*. Funkcje te różnią się od wersji **_vfprint_s** i **_vfwprint_s** tylko w przypadku, gdy obsługują parametry pozycyjne. Aby uzyskać więcej informacji, zobacz [Printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md).
 
 **_vfwprintf_p** to dwubajtowa wersja **_vprintf_p**; dwie funkcje zachowują się identycznie, jeśli strumień jest otwarty w trybie ANSI. **_vprintf_p** obecnie nie obsługuje danych wyjściowych w strumieniu Unicode.
 
 Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korzystają z przekazaną parametrem ustawień regionalnych zamiast bieżących ustawień regionalnych wątku.
 
 > [!IMPORTANT]
-> Upewnij się, że *Format* nie jest ciągiem zdefiniowanym przez użytkownika. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
+> Upewnij się, że *Format* nie jest ciągiem zdefiniowanym przez użytkownika. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 Jeśli *strumień* lub *Format* jest wskaźnikiem typu null lub jeśli ciąg formatu zawiera nieprawidłowe znaki formatowania, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcje zwracają wartość-1 i ustawiają **errno** na **EINVAL**.
 

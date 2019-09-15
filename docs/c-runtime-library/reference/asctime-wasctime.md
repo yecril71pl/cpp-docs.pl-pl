@@ -1,10 +1,10 @@
 ---
 title: asctime, _wasctime
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wasctime
 - asctime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tasctime
 - asctime
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - time structure conversion
 - time, converting
 ms.assetid: 974f1727-10ff-4ed4-8cac-2eb2d681f576
-ms.openlocfilehash: bc2d7a50442d9000eaaebf7a06bf336b3317e4df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9ca9bbcbfff3d2bef41443ff1744a1b612727c20
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341811"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939672"
 ---
-# <a name="asctime-wasctime"></a>asctime, _wasctime
+# <a name="asctime-_wasctime"></a>asctime, _wasctime
 
-Konwertuj **tm** czasu struktury do ciągu znaków. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [asctime_s —, _wasctime_s —](asctime-s-wasctime-s.md).
+Konwertuj strukturę czasu **TM** na ciąg znaków. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [asctime_s, _wasctime_s](asctime-s-wasctime-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -55,54 +58,54 @@ wchar_t *_wasctime(
 ### <a name="parameters"></a>Parametry
 
 *timeptr*<br/>
-Daty/godziny struktury.
+Struktura czasu/daty.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**asctime —** zwraca wskaźnik do wynikowy ciąg znaków; **_wasctime —** zwraca wskaźnik do wynikowy ciąg znaków dwubajtowych. Nie ma błędów zwracane wartości.
+**asctime** zwraca wskaźnik do wyniku ciągu znaków; **_wasctime** zwraca wskaźnik do wyniku ciągu znaków dwubajtowych. Brak zwracanej wartości błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [asctime_s —, _wasctime_s —](asctime-s-wasctime-s.md).
+Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [asctime_s, _wasctime_s](asctime-s-wasctime-s.md).
 
-**Asctime —** funkcja konwertuje czas przechowywane jako struktura do ciągu znaków. *Timeptr* wartość zwykle jest uzyskiwana w wyniku wywołania **gmtime** lub **localtime**, które zwracają wskaźnik do **tm** struktury zdefiniowane w czasie. H.
+Funkcja **asctime** konwertuje godzinę przechowywaną jako strukturę do ciągu znaków. Wartość *timeptr* jest zazwyczaj uzyskiwana z wywołania **gmtime** lub **localtime**, które zwracają wskaźnik do struktury **TM** , zdefiniowane w czasie. C.
 
-|element członkowski timeptr|Wartość|
+|timeptr element członkowski|Wartość|
 |--------------------|-----------|
-|**tm_hour**|Godziny od północy (0-23)|
-|**tm_isdst**|Dodatnie, jeśli czas letni obowiązuje; 0, jeśli czas letni nie jest włączone; ujemna, jeśli stan czasu jest nieznany. Biblioteki wykonawczej C zakłada zasady Stanów Zjednoczonych wykonywania obliczeń czasu letniego (DST).|
+|**tm_hour**|Godz. od północy (0-23)|
+|**tm_isdst**|Pozytywna, jeśli obowiązuje zmiana czasu letniego; 0, jeśli czas letni nie jest stosowany; wartość ujemna, jeśli stan czasu letniego jest nieznany. Biblioteka środowiska uruchomieniowego C przyjmuje reguły Stany Zjednoczone "na potrzeby wykonywania obliczeń czasu letniego (DST).|
 |**tm_mday**|Dzień miesiąca (1-31)|
-|**tm_min**|Min. po godzinie (0-59)|
+|**tm_min**|Minuty po godzinie (0-59)|
 |**tm_mon**|Miesiąc (0-11; Styczeń = 0)|
-|**tm_sec**|Sekundy po minucie (0-59)|
-|**tm_wday**|Dzień tygodnia (0 – 6; Niedziela = 0)|
-|**tm_yday**|Dzień roku (0 – 365; Od 1 stycznia = 0)|
-|**tm_year**|Rok (bieżący roku minus 1900)|
+|**tm_sec**|Sekund po minucie (0-59)|
+|**tm_wday**|Dzień tygodnia (0-6; Niedziela = 0)|
+|**tm_yday**|Dzień roku (0-365; 1 stycznia = 0)|
+|**tm_year**|Year (bieżący rok minus 1900)|
 
-Ciąg przekonwertowany znak również jest dostosowywany zgodnie z ustawieniami strefy czasu lokalnego. Aby uzyskać informacji o konfigurowaniu czasu lokalnego, zobacz [czasu](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md), i [localtime](localtime-localtime32-localtime64.md) funkcje i [_tzset —](tzset.md) — funkcja Aby uzyskać informacji na temat definiowania środowiska strefy czasowej i zmienne globalne.
+Przekonwertowany ciąg znaków jest również dostosowywany zgodnie z ustawieniami lokalnej strefy czasowej. Aby uzyskać informacje o konfigurowaniu czasu lokalnego, zobacz funkcje [Time](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md)i [localtime](localtime-localtime32-localtime64.md) oraz funkcję [_tzset](tzset.md) , aby uzyskać informacje na temat definiowania środowiska strefy czasowej i zmiennych globalnych.
 
-Wynikowy ciąg utworzony przez **asctime —** zawiera dokładnie 26 znaków i ma postać `Wed Jan 02 02:03:55 1980\n\0`. Używany jest zegar 24-godzinny. Wszystkie pola są stałej szerokości. Znak nowego wiersza i znak null zajmują się dwie ostatnie pozycje ciągu. **asctime —** używa pojedynczego, statycznie przydzielanego bufor do przechowywania zwracanego ciągu. Każde wywołanie tej funkcji niszczy wynik poprzedniego wywołania.
+Wynik ciągu utworzony przez **asctime** zawiera dokładnie 26 znaków i ma postać `Wed Jan 02 02:03:55 1980\n\0`. Używany jest zegar 24-godzinny. Wszystkie pola mają stałą szerokość. Znak nowego wiersza i znak null zajmują ostatnie dwa pozycje ciągu. **asctime** używa pojedynczego, przydzieloną statycznie buforu do przechowywania zwracanego ciągu. Każde wywołanie tej funkcji niszczy wynik poprzedniego wywołania.
 
-**_wasctime —** to wersja znaku dwubajtowego **asctime —**. **_wasctime —** i **asctime —** zachowują się identycznie.
+**_wasctime** to dwubajtowa wersja **asctime**. **_wasctime** i **asctime** zachowują się identycznie w inny sposób.
 
-Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *timeptr* jest wskaźnikiem typu null lub jeśli zawiera on wartości spoza zakresu, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **NULL** i ustawia **errno** do **EINVAL**.
+Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *timeptr* jest wskaźnikiem typu null lub jeśli zawiera wartości spoza zakresu, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **wartość null** i ustawia **errno** na **EINVAL**.
 
-### <a name="generic-text-routine-mapping"></a>Mapowania procedur zwykłego tekstu
+### <a name="generic-text-routine-mapping"></a>Mapowanie procedury tekstu ogólnego
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tasctime —**|**asctime —**|**asctime —**|**_wasctime**|
+|**_tasctime**|**asctime**|**asctime**|**_wasctime**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**asctime —**|\<time.h>|
-|**_wasctime**|\<Time.h > lub \<wchar.h >|
+|**asctime**|\<time.h>|
+|**_wasctime**|\<Time. h > lub \<WCHAR. h >|
 
 ## <a name="example"></a>Przykład
 
-Ten program umieszcza czas systemowy w długich liczb całkowitych **aclock**, przekształca je w strukturze **newtime** i konwertuje je do postaci ciągu dla danych wyjściowych, przy użyciu **asctime —** funkcji.
+Ten program umieszcza czas systemowy w **aclockej**liczbie całkowitej, tłumaczy je na strukturę **newtime** , a następnie konwertuje ją na format ciągu dla danych wyjściowych przy użyciu funkcji **asctime** .
 
 ```C
 // crt_asctime.c

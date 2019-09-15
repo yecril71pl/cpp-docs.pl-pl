@@ -1,9 +1,9 @@
 ---
 title: _configthreadlocale
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _configthreadlocale
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _configthreadlocale
 - configthreadlocale
@@ -26,16 +29,16 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-ms.openlocfilehash: 99e10a0330ba4880ea181e9fe3d56f3fb6bd6493
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aac0d36654a81e5d616ffff28e5a254fe06628a3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340264"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939021"
 ---
-# <a name="configthreadlocale"></a>_configthreadlocale
+# <a name="_configthreadlocale"></a>_configthreadlocale
 
-Konfiguruje opcje ustawień regionalnych na wątek.
+Konfiguruje Opcje regionalne dla poszczególnych wątków.
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,27 +49,27 @@ int _configthreadlocale( int per_thread_locale_type );
 ### <a name="parameters"></a>Parametry
 
 *per_thread_locale_type*<br/>
-Możliwość ustawienia. Jedną z opcji wymienionych w poniższej tabeli.
+Opcja ustawiona. Jedna z opcji wymienionych w poniższej tabeli.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Poprzedni stan ustawień regionalnych na wątek (**_DISABLE_PER_THREAD_LOCALE** lub **_ENABLE_PER_THREAD_LOCALE**), lub wartość -1 w przypadku niepowodzenia.
+Poprzednie Stany ustawień regionalnych poszczególnych wątków ( **_DISABLE_PER_THREAD_LOCALE** lub **_ENABLE_PER_THREAD_LOCALE**) lub-1 w przypadku niepowodzenia.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Configurethreadlocale** funkcja służy do kontrolowania użycia ustawień regionalnych właściwych dla wątku. Użyj jednej z tych *per_thread_locale_type* sposoby określania lub ustalania stanu ustawień regionalnych na wątek:
+Funkcja **_configurethreadlocale** służy do kontrolowania użycia ustawień regionalnych specyficznych dla wątku. Użyj jednej z następujących opcji *per_thread_locale_type* , aby określić lub określić stan ustawień regionalnych dla wątku:
 
 | Opcja | Opis |
 |-|-|
-| **_ENABLE_PER_THREAD_LOCALE** | Upewnij się użycie właściwych dla wątku ustawień regionalnych bieżącego wątku. Kolejne wywołania **setlocale** w tym wątku wpływają tylko ustawienia regionalne dla wątku. |
-| **_DISABLE_PER_THREAD_LOCALE** | Należy bieżący wątek, użyj globalnych ustawień regionalnych. Kolejne wywołania **setlocale** w tym wątku wpływają na inne wątki przy użyciu globalnych ustawień regionalnych. |
+| **_ENABLE_PER_THREAD_LOCALE** | Zmień bieżący wątek na Użyj ustawień regionalnych specyficznych dla wątku. Kolejne wywołania metody **setlocals** w tym wątku mają wpływ tylko na własne ustawienia regionalne wątku. |
+| **_DISABLE_PER_THREAD_LOCALE** | Zmień globalne ustawienia regionalne bieżącego wątku. Kolejne wywołania w tym wątku mają **wpływ na inne** wątki korzystające z globalnych ustawień regionalnych. |
 | **0** | Pobiera bieżące ustawienie dla tego określonego wątku. |
 
-Te funkcje mają wpływ na zachowanie **setlocale**, **_tsetlocale —**, **_wsetlocale**, i **_setmbcp**. Gdy ustawienia regionalne na wątek jest wyłączone, wszelkie następne wywołania **setlocale** lub **_wsetlocale** zmieniają ustawienia regionalne wszystkich wątków, które używają globalnych ustawień regionalnych. Po włączeniu ustawień regionalnych na wątek **setlocale** lub **_wsetlocale** ma wpływ tylko na ustawienia regionalne bieżącego wątku.
+Te funkcje mają wpływ na zachowanie funkcji **setlocals**, **_tsetlocale**, **_wsetlocale**i **_setmbcp**. Gdy ustawienia regionalne dla wątku są wyłączone, każde kolejne wywołanie metody **setlocale** lub **_wsetlocale** zmienia ustawienia regionalne wszystkich wątków, które używają globalnych ustawień regionalnych. Gdy włączone są ustawienia regionalne dla wątku, funkcja **setlocale** lub **_wsetlocale** ma wpływ tylko na ustawienia regionalne bieżącego wątku.
 
-Jeśli używasz **_configurethreadlocale** Aby włączyć ustawienia regionalne na wątek, firma Microsoft zaleca, należy wywołać **setlocale** lub **_wsetlocale** można ustawić preferowane ustawienia regionalne w tym wątku zaraz potem.
+Jeśli używasz **_configurethreadlocale** , aby włączyć ustawienia regionalne dla wątku, zalecamy wywołanie metody **setlocale** lub **_wsetlocale** w celu natychmiastowego ustawienia ustawień regionalnych w tym wątku.
 
-Jeśli *per_thread_locale_type* nie jest jedną z wartości wymienionych w tabeli, funkcja wywoła procedurę obsługi nieprawidłowego parametru, z zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ta ustawia **errno** do **EINVAL** i zwraca wartość -1.
+Jeśli *per_thread_locale_type* nie jest jedną z wartości wymienionych w tabeli, ta funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca wartość-1.
 
 ## <a name="requirements"></a>Wymagania
 

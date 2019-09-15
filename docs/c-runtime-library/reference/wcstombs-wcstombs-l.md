@@ -1,10 +1,10 @@
 ---
 title: wcstombs, _wcstombs_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wcstombs
 - _wcstombs_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcstombs
 - _wcstombs_l
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 91234252-9ea1-423a-af99-e9d0ce4a40e3
-ms.openlocfilehash: b5ee2a0e5636e9c1d1f3fc204b2b6cbf8b733d45
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e4aa09ec8e6d97762d39e63aa05b0eb0cc159d17
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498981"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945120"
 ---
 # <a name="wcstombs-_wcstombs_l"></a>wcstombs, _wcstombs_l
 
@@ -92,7 +95,7 @@ Jeśli **wcstombs** pomyślnie konwertuje ciąg wielobajtowy, zwraca liczbę baj
 
 Funkcja **wcstombs** konwertuje ciąg znaków dwubajtowych wskazany przez *wcstr* na odpowiednie znaki wieloznaczne i zapisuje wyniki w tablicy *mbstr* . Parametr *Count* wskazuje maksymalną liczbę bajtów, które mogą być przechowywane w ciągu wyjściowym wielobajtowym (czyli rozmiarem *mbstr*). Ogólnie rzecz biorąc nie wiadomo, ile bajtów będzie wymaganych podczas konwertowania ciągu znaków dwubajtowych. Niektóre szerokie znaki będą wymagały tylko jednego bajtu w ciągu wyjściowym; inne wymagają dwóch. Jeśli istnieją dwa bajty w ciągu wyjściowym wielobajtowym dla każdego znaku dwuznacznego w ciągu wejściowym (w tym o szerokim znaku null), wynik jest zagwarantowany do dopasowania.
 
-Jeśli **wcstombs** napotka znak dwubajtowy o wartości null (L ' \ 0 ') przed lub w przypadku występowania, konwertuje go na 8-bitowy 0 i zatrzyma. W ten sposób ciąg znaków wielobajtowych w *mbstr* jest zakończony wartością null tylko wtedy, gdy **wcstombs** napotka znak dwubajtowy o wartości null podczas konwersji. Jeśli sekwencje wskazywane przez *wcstr* i *mbstr* nakładają się na siebie, zachowanie **wcstombs** jest niezdefiniowane.
+Jeśli **wcstombs** napotka znak dwubajtowy o wartości null (L ' \ 0 ') przed lub w przypadku *występowania* , konwertuje go na 8-bitowy 0 i zatrzyma. W ten sposób ciąg znaków wielobajtowych w *mbstr* jest zakończony wartością null tylko wtedy, gdy **wcstombs** napotka znak dwubajtowy o wartości null podczas konwersji. Jeśli sekwencje wskazywane przez *wcstr* i *mbstr* nakładają się na siebie, zachowanie **wcstombs** jest niezdefiniowane.
 
 Jeśli argument *mbstr* ma **wartość null**, funkcja **wcstombs** zwraca wymagany rozmiar w bajtach ciągu docelowego.
 

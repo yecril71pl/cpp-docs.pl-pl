@@ -1,10 +1,10 @@
 ---
 title: _CrtDbgReport, _CrtDbgReportW
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtDbgReport
 - _CrtDbgReportW
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtDbgReport
 - CrtDbgReportW
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - CrtDbgReportW function
 - _CrtDbgReportW function
 ms.assetid: 6e581fb6-f7fb-4716-9432-f0145d639ecc
-ms.openlocfilehash: b5579a8996950c5f3e923f67ed2a5e667bb566fa
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 986777f755a749e858f7e51b5aa19f10090db13a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500001"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938839"
 ---
 # <a name="_crtdbgreport-_crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 
@@ -88,11 +91,11 @@ Makra debugowania [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) wywołania **_Crt
 
 ## <a name="remarks"></a>Uwagi
 
-**_CrtDbgReport** i **_CrtDbgReportW** mogą wysyłać raport debugowania do trzech różnych miejsc docelowych: plik raportu debugowania, Monitor debugowania (debuger programu Visual Studio) lub okno komunikatu debugowania. Dwie funkcje konfiguracji, [_CrtSetReportMode](crtsetreportmode.md) i [_CrtSetReportFile](crtsetreportfile.md), służą do określania miejsca docelowego i miejsc docelowych dla każdego typu raportu. Te funkcje umożliwiają niezależne sterowanie miejscem docelowym raportowania lub miejsc docelowych dla każdego typu raportu. Można na przykład określić, że element reportType elementu **_CRT_WARN** ma być wysyłany tylko do monitora debugowania, podczas gdy *raport* typu **_CRT_ASSERT** jest wysyłany do okna komunikatu debugowania i pliku raportu zdefiniowanego przez użytkownika.
+**_CrtDbgReport** i **_CrtDbgReportW** mogą wysyłać raport debugowania do trzech różnych miejsc docelowych: plik raportu debugowania, Monitor debugowania (debuger programu Visual Studio) lub okno komunikatu debugowania. Dwie funkcje konfiguracji, [_CrtSetReportMode](crtsetreportmode.md) i [_CrtSetReportFile](crtsetreportfile.md), służą do określania miejsca docelowego i miejsc docelowych dla każdego typu raportu. Te funkcje umożliwiają niezależne sterowanie miejscem docelowym raportowania lub miejsc docelowych dla każdego typu raportu. Można na przykład określić, że element *reportType* elementu **_CRT_WARN** ma być wysyłany tylko do monitora debugowania, podczas gdy *raport* typu **_CRT_ASSERT** jest wysyłany do okna komunikatu debugowania i pliku raportu zdefiniowanego przez użytkownika.
 
 **_CrtDbgReportW** to dwubajtowa wersja **_CrtDbgReport**. Wszystkie parametry danych wyjściowych i ciągów są ciągami znaków dwubajtowych; w przeciwnym razie jest taka sama jak wersja znaku jednobajtowego.
 
-**_CrtDbgReport** i **_CrtDbgReportW** Utwórz komunikat użytkownika dla raportu debugowania, zastępując argumenty *argumentu*[**n**] do ciągu *formatu* , używając tych samych reguł zdefiniowanych przez **printf** lub  **funkcje wprintf** . Te funkcje następnie generują raport debugowania i określają miejsce docelowe lub docelowe w oparciu o bieżące tryby raportu i plik zdefiniowany dla elementu *reportType*. Gdy raport jest wysyłany do okna komunikatu debugowania, *nazwy pliku*, **LineNumber**i ModuleName są zawarte w informacjach wyświetlanych w oknie.
+**_CrtDbgReport** i **_CrtDbgReportW** Utwórz komunikat użytkownika dla raportu debugowania, zastępując argumenty *argumentu*[**n**] do ciągu *formatu* , używając tych samych reguł zdefiniowanych przez **printf** lub  **funkcje wprintf** . Te funkcje następnie generują raport debugowania i określają miejsce docelowe lub docelowe w oparciu o bieżące tryby raportu i plik zdefiniowany dla elementu *reportType*. Gdy raport jest wysyłany do okna komunikatu debugowania, *nazwy pliku*, **LineNumber**i *ModuleName* są zawarte w informacjach wyświetlanych w oknie.
 
 Poniższa tabela zawiera listę dostępnych opcji trybu lub trybów raportów oraz pliku oraz zachowanie wyników **_CrtDbgReport** i **_CrtDbgReportW**. Te opcje są zdefiniowane jako flagi bitowe w \<CRTDBG. h >.
 

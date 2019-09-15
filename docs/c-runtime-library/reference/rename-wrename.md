@@ -1,10 +1,10 @@
 ---
 title: rename, _wrename
 ms.date: 11/04/2016
-apiname:
+api_name:
 - rename
 - _wrename
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wrename
 - _trename
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-ms.openlocfilehash: 3536bfb6c38c99a8d6d943102fb9303dd4d85b7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3d88c46fc055fb173264b40a56c755c360c7adf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357504"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949304"
 ---
-# <a name="rename-wrename"></a>rename, _wrename
+# <a name="rename-_wrename"></a>rename, _wrename
 
 Zmień nazwę pliku lub katalogu.
 
@@ -63,45 +66,45 @@ int _wrename(
 *StaraNazwa*<br/>
 Wskaźnik do starej nazwy.
 
-*Nowa nazwa*<br/>
+*newname*<br/>
 Wskaźnik na nową nazwę.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wartość 0, jeśli to się powiodło. W przypadku błędu, funkcja zwraca wartość różną od zera i ustawia **errno** do jednej z następujących wartości:
+Każda z tych funkcji zwraca wartość 0, jeśli zakończy się pomyślnie. W przypadku błędu funkcja zwraca wartość różną od zera i ustawia **errno** na jedną z następujących wartości:
 
 |errno wartość|Warunek|
 |-|-|
-| **EACCES** | Pliku lub katalogu określonym przez *newname* już istnieje albo nie można utworzyć (Nieprawidłowa ścieżka); lub *StaraNazwa* jest katalogiem i *newname* Określa inną ścieżkę. |
-| **ENOENT** | Plik lub ścieżka określona przez plik *StaraNazwa* nie można odnaleźć. |
+| **EACCES** | Plik lub katalog określony przez *nowa_nazwa* już istnieje lub nie można go utworzyć (nieprawidłowa ścieżka); lub *StaraNazwa* jest katalogiem, a *newname* określa inną ścieżkę. |
+| **ENOENT** | Nie znaleziono pliku lub ścieżki określonego przez *StaraNazwa* . |
 | **EINVAL** | Nazwa zawiera nieprawidłowe znaki. |
 
-Dla innych możliwych wartości zwracanych [_doserrno, _errno, syserrlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać inne możliwe wartości zwracane, zobacz [_doserrno, _errno, syserrlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**Zmień nazwę** funkcja zmienia nazwę pliku lub katalogu określonym przez *StaraNazwa* nazwa podana przez *newname*. Stara nazwa musi być ścieżka istniejącego pliku lub katalogu. Nowa nazwa nie musi być nazwa istniejącego pliku lub katalogu. Możesz użyć **Zmień nazwę** można przenieść pliku z jednego katalogu lub urządzenia do innego, zapewniając inną ścieżkę *newname* argumentu. Nie można jednak użyć **Zmień nazwę** można przenieść katalogu. Katalogi można zmienić nazwy, ale nie przenieść.
+Funkcja **zmiany** nazwy zmienia nazwę pliku lub katalogu określonego przez *StaraNazwa* na nazwę określoną przez *nowa_nazwa*. Stara nazwa musi być ścieżką istniejącego pliku lub katalogu. Nowa nazwa nie może być nazwą istniejącego pliku lub katalogu. Za pomocą **zmiany nazwy** można przenieść plik z jednego katalogu lub urządzenia do innego, podając inną ścieżkę w argumencie *nowa_nazwa* . Nie można jednak użyć **nazwy** do przeniesienia katalogu. Nazwy katalogów można zmienić, ale nie zostały przeniesione.
 
-**_wrename —** to wersja znaku dwubajtowego **_rename**; argumenty **_wrename —** są ciągami znaków dwubajtowych. **_wrename —** i **_rename** zachowują się identycznie.
+**_wrename** to dwubajtowa wersja **_rename**; argumenty **_wrename** są ciągami znaków dwubajtowych. **_wrename** i **_rename** zachowują się identycznie w inny sposób.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_trename —**|**Zmień nazwę**|**Zmień nazwę**|**_wrename —**|
+|**_trename**|**ZmieńNazwę**|**ZmieńNazwę**|**_wrename**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**Zmień nazwę**|\<IO.h > lub \<stdio.h >|
-|**_wrename —**|\<stdio.h > lub \<wchar.h >|
+|**ZmieńNazwę**|\<IO. h > lub \<stdio. h >|
+|**_wrename**|\<stdio. h > lub \<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 

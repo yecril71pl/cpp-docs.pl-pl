@@ -1,9 +1,9 @@
 ---
 title: _get_output_format
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_output_format
-apilocation:
+api_location:
 - msvcr110_clr0400.dll
 - msvcr100.dll
 - msvcr80.dll
@@ -11,7 +11,10 @@ apilocation:
 - msvcr90.dll
 - msvcr120.dll
 - msvcr110.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - get_output_format
 - _get_output_format
@@ -20,19 +23,19 @@ helpviewer_keywords:
 - get_output_format function
 - _get_output_format function
 ms.assetid: 0ce42f3b-3479-41c4-bcbf-1d21f7ee37e7
-ms.openlocfilehash: 60e209f6f8b723bfae1a4b434750b6237dc6479d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20afa988bc4fdf3bc3a6ff073a48a1cc00ff84c5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62343516"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944366"
 ---
-# <a name="getoutputformat"></a>_get_output_format
+# <a name="_get_output_format"></a>_get_output_format
 
 Pobiera bieżącą wartość flagi formatu danych wyjściowych.
 
 > [!IMPORTANT]
->  Ta funkcja jest przestarzała. Począwszy od programu Visual Studio 2015, nie jest dostępna w CRT.
+>  Ta funkcja jest przestarzała. Począwszy od programu Visual Studio 2015, nie jest on dostępny w CRT.
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,7 +49,7 @@ Bieżąca wartość flagi formatu danych wyjściowych.
 
 ## <a name="remarks"></a>Uwagi
 
-Flagi formatu danych wyjściowych steruje funkcjami sformatowane we/wy. Obecnie flaga nie wywiera dwóch wartości: 0 i `_TWO_DIGIT_EXPONENT`. Jeśli `_TWO_DIGIT_EXPONENT` ustawiono wartość zmiennoprzecinkowa liczb zmiennoprzecinkowych zostanie wydrukowany tylko dwie cyfry wykładnika, chyba że trzecia cyfra jest wymagana przez rozmiar wykładnik potęgi. Jeśli flaga wynosi zero, dane wyjściowe zmiennoprzecinkowych, wyświetla trzy cyfry wykładnika, za pomocą zera, jeśli jest to niezbędne do wypełnienia wartości do trzech cyfr.
+Flaga formatu danych wyjściowych kontroluje funkcje sformatowanych operacji we/wy. W obecnym przypadku flaga ma dwie możliwe wartości: 0 i `_TWO_DIGIT_EXPONENT`. Jeśli `_TWO_DIGIT_EXPONENT` jest ustawiona, liczby zmiennoprzecinkowe są drukowane z tylko dwiema cyframi w wykładniku, chyba że trzecia cyfra jest wymagana przez rozmiar wykładnika. Jeśli flaga ma wartość zero, zmiennoprzecinkowe dane wyjściowe wyświetlają trzy cyfry wykładnika, w razie potrzeby w celu uzupełnienia wartości do trzech cyfr.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -54,7 +57,7 @@ Flagi formatu danych wyjściowych steruje funkcjami sformatowane we/wy. Obecnie 
 |-------------|---------------------|
 |`_get_output_format`|\<stdio.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../c-runtime-library/compatibility.md) we wstępie.
+Aby uzyskać więcej informacji o zgodności, zobacz temat [zgodność](../c-runtime-library/compatibility.md) we wprowadzeniu.
 
 ## <a name="see-also"></a>Zobacz także
 

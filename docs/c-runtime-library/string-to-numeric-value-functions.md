@@ -1,14 +1,17 @@
 ---
 title: Konwertowanie ciągów na wartości
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr80.dll
 - msvcr110.dll
 - msvcr120.dll
 - msvcr100.dll
 - msvcr110_clr0400.dll
 - msvcr90.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcstoui64
 - _tcstoi64
@@ -16,12 +19,12 @@ helpviewer_keywords:
 - parsing, numeric strings
 - string conversion, to numeric values
 ms.assetid: 11cbd9ce-033b-4914-bf66-029070e7e385
-ms.openlocfilehash: 3f24b75c2fdb3aa0d84b16874d2d01f1cb96d4b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b9d8218bd5a3151e17b7ac380bb86c85dac3e6a3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62304556"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944728"
 ---
 # <a name="string-to-numeric-value-functions"></a>Konwertowanie ciągów na wartości
 
@@ -37,56 +40,56 @@ ms.locfileid: "62304556"
 
 ## <a name="remarks"></a>Uwagi
 
-Każda funkcja w **strtod** rodziny konwertuje ciąg zakończony znakiem null, wartość liczbową. W poniższej tabeli wymieniono dostępne funkcje.
+Każda funkcja w rodzinie **strtod** konwertuje ciąg zakończony znakiem null na wartość liczbową. Dostępne funkcje są wymienione w poniższej tabeli.
 
 |Funkcja|Opis|
 |--------------|-----------------|
-|`strtod`|Konwertuj ciąg na wartość zmiennoprzecinkową podwójnej precyzji|
-|`strtol`|Konwertuj ciąg na liczba całkowita typu long|
-|`strtoul`|Konwertuj ciąg na niepodpisane długa liczba całkowita|
-|`_strtoi64`|Konwertuj ciąg na 64-bitowych `__int64` liczba całkowita|
-|`_strtoui64`|Przekonwertować ciągu na niepodpisane 64-bitowych `__int64` liczba całkowita|
+|`strtod`|Konwertuj ciąg na wartość zmiennoprzecinkową o podwójnej precyzji|
+|`strtol`|Konwertuj ciąg na długą liczbę całkowitą|
+|`strtoul`|Konwertuj ciąg na długą liczbę całkowitą bez znaku|
+|`_strtoi64`|Konwertuj ciąg na 64-bitową `__int64` liczbę całkowitą|
+|`_strtoui64`|Konwertuj ciąg na niepodpisany 64- `__int64` bitową liczbę całkowitą|
 
-`wcstod`, `wcstol`, `wcstoul`, i `_wcstoi64` są wersjami znaków dwubajtowych `strtod`, `strtol`, `strtoul`, i `_strtoi64`, odpowiednio. Argument typu string każda z tych funkcji znaków dwubajtowych to ciąg znaku dwubajtowego. Każda funkcja zachowuje się tak samo z jego odpowiednikiem pojedynczych bajtów znaków w przeciwnym razie.
+`wcstod`, `wcstol`, `strtoul` `strtol` `_strtoi64`i są wersjami znaków dwubajtowych,,, i, odpowiednio. `strtod` `wcstoul` `_wcstoi64` Argument ciągu dla każdej z tych funkcji o szerokim znaku jest ciągiem znaków dwubajtowych; Każda funkcja zachowuje się identycznie z jego odpowiednikiem pojedynczego bajtu, w przeciwnym razie.
 
-`strtod` Funkcja przyjmuje dwa argumenty: pierwsza to ciąg wejściowy, a drugi wskaźnik znaku, który kończy się proces konwersji. `strtol`, `strtoul`, **_strtoi64 —** i **_strtoui64 —** pobrane trzeci argument numer podstawowy do użycia w procesie konwersji.
+`strtod` Funkcja przyjmuje dwa argumenty: pierwszy to ciąg wejściowy, a drugi wskaźnik do znaku kończącego proces konwersji. `strtol`, `strtoul`, **_strtoi64** i **_strtoui64** przyjmują trzeci argument jako numer bazowy do użycia w procesie konwersji.
 
-Ciąg wejściowy jest sekwencją znaków, które mogą być interpretowane jako wartość liczbowa określonego typu. Każda funkcja przestaje odczytywać ciąg przy pierwszym znaku, który nie może rozpoznać jako elementu liczby. Może to być kończący znak null. Aby uzyskać `strtol`, `strtoul`, `_strtoi64`, i `_strtoui64`, to kończącego znaku można też pierwszy znak numeryczny, większa niż lub równa dostarczone przez użytkownika numer podstawowy.
+Ciąg wejściowy jest sekwencją znaków, które mogą być interpretowane jako wartość liczbowa określonego typu. Każda funkcja przestaje odczytywać ciąg przy pierwszym znaku, którego nie może rozpoznać jako części liczby. Może to być kończący znak null. Dla `strtol` ,`strtoul`, ,i`_strtoui64`, ten znak kończący może być również pierwszym znakiem numerycznym większym niż lub równym podstawie liczby dostarczonej przez użytkownika. `_strtoi64`
 
-Jeśli nie ustawiono Wskaźnik dostarczone przez użytkownika, aby znak zakończenia z konwersji **NULL** w momencie wywołania, wskaźnik znaku, który zatrzymał skanowanie będzie znajdować się zamiast tego. Jeśli konwersja nie może być wykonywana (nie znaleziono żadnych prawidłowych cyfr lub określono nieprawidłową podstawę), wartość wskaźnika ciągu jest przechowywany pod tym adresem.
+Jeśli wskaźnik dostarczony przez użytkownika do znaku końca konwersji nie ma ustawionej **wartości null** w czasie wywołania, zamiast tego zostanie zapisany wskaźnik do znaku, który zatrzymał skanowanie. Jeśli konwersja nie może być wykonywana (nie znaleziono prawidłowych cyfr lub określono nieprawidłową podstawę), wartość wskaźnika ciągu jest przechowywana na tym adresie.
 
-`strtod` oczekuje, że ciąg o następującej postaci:
+`strtod`oczekuje ciągu z następującej formy:
 
-[*odstępu*] [*logowania*] [`digits`] [**.** `digits`] [{**d** &#124; **D** &#124; **e** &#124; **E**} [*logowania*] `digits`]
+[*odstęp*] [*Sign*] [`digits`] [ **.** `digits` &#124; &#124; &#124; ] [{d d e e} [*Sign]]* `digits`
 
-A *odstępu* może składać się ze znaków spacji lub tabulatorów, które są ignorowane. *logowania* jest plus (**+**) lub minus (**-**); i `digits` są co najmniej jedna cyfra dziesiętna. Jeśli żadna cyfra pojawia się przed znakiem podstawy, co najmniej jedna musi występować po znaku podstawy. Cyfr dziesiętnych może następować wykładnik, który składa się z litery wprowadzającej (**d**, **D**, **e**, lub **E**) i opcjonalnie liczby całkowitej ze znakiem. Jeśli wykładnik ani znak podstawy nie pojawia się, znak podstawy zakłada się, że ostatniej cyfrze w ciągu. Pierwszy znak, który nie mieści się tym formularzu zatrzymuje skanowanie.
+*Odstępy* mogą zawierać spacje lub znaki tabulacji, które są ignorowane; *znak* jest znakiem plus **+** () lub minus **-** (); `digits` i jest jedną lub większą liczbą cyfr dziesiętnych. Jeśli żadne cyfry nie pojawiają się przed znakiem podstawy, co najmniej jeden musi występować po znaku podstawy. Po cyfrach dziesiętnych można stosować wykładnikę, która składa się z litery wprowadzającej (**d**, **d**, **e**lub **e**) i opcjonalnie podpisanej liczby całkowitej. Jeśli nie zostanie wyświetlona żadna część wykładnika ani znak podstawy, przyjmuje się, że znak podstawy będzie podążać za ostatnią cyfrą w ciągu. Pierwszy znak, który nie pasuje do tego formularza, zatrzyma skanowanie.
 
-`strtol`, `strtoul`, `_strtoi64`, I `_strtoui64` funkcje oczekiwany ciąg o następującej postaci:
+Funkcje `strtol`, `strtoul`, `_strtoi64`i oczekująciąguwnastępującejpostaci:`_strtoui64`
 
-[*odstępu*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [`digits`]
+[*odstęp*] [{ **+** &#124; `digits` &#124; }] [0 [{x x}]] [] **-**
 
-Jeśli argument podstawowy jest między 2 a 36, następnie jest używany jako podstawa numeru. Jeśli jest 0, początkowe znaki, które odwołuje się do wskaźnika typu "end konwersji" są używane do określenia podstawy. Jeśli pierwszym znakiem jest 0, a drugim znakiem nie jest,, x"lub,, X", ciąg jest interpretowany jako ósemkowa liczba całkowita; w przeciwnym razie jest interpretowany jako liczba dziesiętna. Jeśli pierwszym znakiem jest "0", a drugim znakiem jest,, x"lub,, X", ciąg jest interpretowany jako szesnastkowa liczba całkowita. Jeśli pierwszym znakiem jest,, 1 "do,, 9", ciąg jest interpretowany jako dziesiętna liczba całkowita. Litery od "" do "z" (lub "" – "Z") są przypisane wartości od 10 do 35; tylko litery, w których przypisane wartości są mniej niż *podstawowy* są dozwolone. `strtoul` i `_strtoui64` Zezwalaj znakiem plus (**+**) lub minus (**-**) prefiksu logowania; wiodący znak minus wskazuje, że wartość zwracana jest ujemna.
+Jeśli argument podstawowy należy do zakresu od 2 do 36, jest używany jako podstawa liczby. Jeśli wartość wynosi 0, początkowe znaki, do których odwołuje się wskaźnik końca konwersji, są używane do określenia podstawy. Jeśli pierwszym znakiem jest 0, a drugi znak nie jest "x" lub "X", ciąg jest interpretowany jako ósemkowa liczba całkowita; w przeciwnym razie jest interpretowana jako liczba dziesiętna. Jeśli pierwszy znak to "0", a drugi znak to "x" lub "X", ciąg jest interpretowany jako Szesnastkowa liczba całkowita. Jeśli pierwszym znakiem jest "1" do "9", ciąg jest interpretowany jako dziesiętna liczba całkowita. Litery od "a" do "z" (lub "A" do "z") mają przypisane wartości od 10 do 35; dozwolone są tylko litery, których przypisane wartości są mniejsze niż *podstawowe* . `strtoul`i `_strtoui64` zezwalają na prefiks **+** znaku plus () **-** lub minus (); wiodący znak minus wskazuje, że wartość zwracana jest Negacja.
 
-Wartość wyjściowa jest zależna od ustawienia `LC_NUMERIC` ustawienia kategorii ustawień regionalnych; zobacz [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji, bez **_l** sufiks używają bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych; wersje **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych w zamian przekazanych.
+Wartość wyjściowa jest zależna od ustawienia `LC_NUMERIC` kategorii ustawień regionalnych; Zobacz setlocaling, [](../c-runtime-library/reference/setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. wersje z sufiksem **_l** są identyczne, z tą różnicą, że w zamian korzystają z przekazaną parametrem ustawień regionalnych.
 
-Jeśli wartość zwracana przez te funkcje spowodowałoby przepełnienie lub niedopełnienie lub Jeśli konwersja nie jest możliwe, specjalnych przypadków wartości są zwracane, jak pokazano:
+Gdy wartość zwracana przez te funkcje spowodowałoby przepełnienie lub niedomiar, lub jeśli konwersja nie jest możliwa, w przypadku wartości specjalnych zwracane są następujące dane:
 
-|Funkcja|Warunek|Wartość zwracana|
+|Funkcja|Warunek|Zwrócona wartość|
 |--------------|---------------|--------------------|
-|`strtod`|przepełnienia|+/- `HUGE_VAL`|
-|`strtod`|Niedopełnienie lub bez konwersji|0|
-|`strtol`|+ Przepełnienia|**LONG_MAX**|
-|`strtol`|-Przepełnienia|**LONG_MIN**|
-|`strtol`|Niedopełnienie lub bez konwersji|0|
-|`_strtoi64`|+ Przepełnienia|**_I64_MAX**|
-|`_strtoi64`|-Przepełnienia|**_I64_MIN**|
+|`strtod`|Przepływ|+/- `HUGE_VAL`|
+|`strtod`|Niedopełnienie lub brak konwersji|0|
+|`strtol`|+ Przepełnienie|**LONG_MAX**|
+|`strtol`|-Overflow|**LONG_MIN**|
+|`strtol`|Niedopełnienie lub brak konwersji|0|
+|`_strtoi64`|+ Przepełnienie|**_I64_MAX**|
+|`_strtoi64`|-Overflow|**_I64_MIN**|
 |`_strtoi64`|Brak konwersji|0|
-|`_strtoui64`|przepełnienia|**_UI64_MAX**|
+|`_strtoui64`|Przepływ|**_UI64_MAX**|
 |`_strtoui64`|Brak konwersji|0|
 
-**_I64_MAX**, _**I64_MIN**, i **_UI64_MAX** są zdefiniowane w granicach. H.
+**_I64_MAX**, _**I64_MIN**i **_UI64_MAX** są zdefiniowane w limitach. C.
 
-`wcstod`, `wcstol`, `wcstoul`, `_wcstoi64`, i `_wcstoui64` są wersjami znaków dwubajtowych `strtod`, `strtol`, `strtoul`, `_strtoi64`, i `_strtoui64`odpowiednio; wskaźnik do zakończenia z konwersji przez Każda z tych funkcji znaków dwubajtowych argument jest ciągiem znaku dwubajtowego. W przeciwnym wypadku każda z tych funkcji znaków dwubajtowych działa identycznie do jego odpowiednika pojedynczych bajtów znaków.
+`wcstod`, `wcstol` `strtol` `strtoul`, `wcstoul`, i są`_wcstoui64` wersjami`strtod`znaków dwubajtowych, ,`_strtoi64`, i`_strtoui64`, odpowiednio; wskaźnikiem do `_wcstoi64` argument końca konwersji do każdej z tych funkcji o szerokim znaku jest ciągiem znaków dwubajtowych. W przeciwnym razie każda z tych funkcji o szerokim znaku zachowuje się identycznie ze swoim odpowiednikiem pojedynczego bajtu.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,11 +1,11 @@
 ---
-title: catan catanf, catanl
+title: catan, catanf, catanl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - catan
 - catanf
 - catanl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - catan
 - catanf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - catanf function
 - catanl function
 ms.assetid: 8415ed9c-7909-4d08-b532-4630bafdc7e8
-ms.openlocfilehash: 99acdccca1b83be2fa667b5e5ef6e5181dc1ba81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 204a05b4293fefa4378e54ce93a625bf890cf4d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335519"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943366"
 ---
-# <a name="catan-catanf-catanl"></a>catan catanf, catanl
+# <a name="catan-catanf-catanl"></a>catan, catanf, catanl
 
-Pobiera arcus tangens liczby zespolonej z gałęzi cenowe poza interwał [-1; + 1], wzdłuż osi urojone.
+Pobiera arcus tangens liczby zespolonej z rozgałęzieniem rozmieszczonym poza interwałem [-1; + 1] wzdłuż osi urojonej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,23 +60,23 @@ _Lcomplex catan( _Lcomplex z );  // C++ only
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Liczby zespolonej oznacza kąt w radianach.
+Liczba zespolona, która reprezentuje kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Arcus tangens *z*, w radianach. Wynik jest nieograniczona, wzdłuż osi urojone, a w interwale [-π/2 + π/2] na rzeczywistych osi.
+Arcus *tangens z z, w*radianach. Wynik nie jest powiązany wzdłuż osi urojonej, a w interwale [-π/2; + π/2] wzdłuż osi rzeczywistej.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **catan** przyjmujące i zwracające **_Fcomplex** i **_Lcomplex** wartości. W programie C **catan** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **Catan** , które pobierają i zwracają wartości **_Fcomplex** i **_Lcomplex** . W programie C **Catan** zawsze przyjmuje i zwraca wartość **_Dcomplex** .
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|Nagłówek języka C++|
+|Procedura|Nagłówek języka C|C++nagłówki|
 |-------------|--------------|------------------|
-|**catan**,               **catanf**, **catanl**|\<complex.h>|\<ccomplex>|
+|**Catan**, **catanf**, **catanl**|\<complex.h>|\<ccomplex>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,14 +1,14 @@
 ---
 title: _strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnicoll_l
 - _mbsnicoll
 - _wcsnicoll_l
 - _strnicoll
 - _strnicoll_l
 - _wcsnicoll
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcshicoll_l
 - _ftcsncicoll
@@ -60,19 +63,19 @@ helpviewer_keywords:
 - tcsnicoll function
 - _strnicoll function
 ms.assetid: abf0c569-725b-428d-9ff2-924f430104b4
-ms.openlocfilehash: 6b3562dd077b9aa80b9d188e9b2c43282e797af3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1a26690f4913cb35486886f6548927fc09efc89
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209695"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947080"
 ---
-# <a name="strnicoll-wcsnicoll-mbsnicoll-strnicolll-wcsnicolll-mbsnicolll"></a>_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
+# <a name="_strnicoll-_wcsnicoll-_mbsnicoll-_strnicoll_l-_wcsnicoll_l-_mbsnicoll_l"></a>_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
 
 Porównuje ciągi przy użyciu informacji specyficznych dla ustawień regionalnych.
 
 > [!IMPORTANT]
-> **_mbsnicoll —** i **_mbsnicoll_l —** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnicoll** i **_mbsnicoll_l** nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -117,47 +120,47 @@ int _mbsnicoll_l(
 *ciąg1*, *ciąg2*<br/>
 Ciągi zakończone wartością null do porównania
 
-*Liczba*<br/>
+*liczbą*<br/>
 Liczba znaków do porównania
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wartość wskazującą związek podciągów *ciąg1* i *ciąg2*, wykonując następujące czynności.
+Każda z tych funkcji zwraca wartość wskazującą związek podciągów *ciąg1* i *ciąg2*w następujący sposób.
 
 |Wartość zwracana|Relacja ciąg1 do ciąg2|
 |------------------|----------------------------------------|
-|< 0|*ciąg1* mniej niż *ciąg2*|
-|0|*ciąg1* taka sama jak *ciąg2*|
-|> 0|*ciąg1* większa *ciąg2*|
+|< 0|*ciąg1* mniejszy niż *ciąg2*|
+|0|*ciąg1* identyczny z *ciąg2*|
+|> 0|*ciąg1* większy niż *ciąg2*|
 
-Każda z tych funkcji zwraca **_NLSCMPERROR**. Aby użyć **_NLSCMPERROR**, Dołącz albo ciąg. H lub MBSTRING. H. **_wcsnicoll —** może zakończyć się niepowodzeniem, jeśli *ciąg1* lub *ciąg2* zawiera kody znaków dwubajtowych spoza domeny sekwencji sortowania. Gdy wystąpi błąd, **_wcsnicoll —** mogą ustawiać **errno** do **EINVAL**. Aby sprawdzić, czy błąd w wywołaniu **_wcsnicoll —** ustaw **errno** na 0, a następnie sprawdź **errno** po wywołaniu **_wcsnicoll —**.
+Każda z tych funkcji zwraca **_NLSCMPERROR**. Aby użyć **_NLSCMPERROR**, Dołącz oba ciągi. H lub MBSTRING. C. **_wcsnicoll** może się nie powieść, jeśli *ciąg1* lub *ciąg2* zawiera kody znaków dwubajtowych spoza domeny sekwencji sortowania. Gdy wystąpi błąd, **_wcsnicoll** może ustawić **errno** na **EINVAL**. Aby sprawdzić, czy wystąpił błąd w wywołaniu **_wcsnicoll**, ustaw **errno** na 0, a następnie sprawdź **errno** po wywołaniu **_wcsnicoll**.
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji wykonuje porównania bez uwzględniania pierwszego *liczba* znaki w *ciąg1* i *ciąg2* zgodnie ze stroną kodową. Te funkcje powinny być używane tylko wtedy, gdy istnieje różnica pomiędzy znak zestawu kolejności i kolejnością znaków leksykograficznych w stronie kodowej, a różnica ta ma znaczenie dla porównania ciągu. Wersje tych funkcji, bez **_l** sufiksa używa bieżącej strony ustawień regionalnych i kodu. Wersje **_l** sufiksem są identyczne, z tą różnicą, że używają w zamian przekazanych ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Każda z tych funkcji wykonuje porównanie z wielkością liter pierwszych znaków *Count* w *ciąg1* i *ciąg2* zgodnie ze stroną kodową. Te funkcje powinny być używane tylko wtedy, gdy istnieje różnica pomiędzy kolejnością zestawu znaków i kolejnością znaków leksykograficznych na stronie kodowej, a różnica jest istotna dla porównywania ciągów. Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych i strony kodowej. Wersje z sufiksem **_l** są identyczne, z tą różnicą, że w zamian korzystają z przekazaną ustawieniami regionalnymi. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-Wszystkie te funkcje sprawdzają poprawność swoich parametrów. Jeśli *ciąg1* lub *ciąg2* jest wskaźnikiem wartości null lub jeżeli liczba jest większa niż **INT_MAX**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [ Walidacja parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, te funkcje zwracają **_NLSCMPERROR** i ustaw **errno** do **EINVAL**.
+Wszystkie te funkcje sprawdzają poprawność swoich parametrów. Jeśli *ciąg1* lub *ciąg2* jest wskaźnikiem o wartości null lub jeśli liczba jest większa niż **INT_MAX**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, te funkcje zwracają **_NLSCMPERROR** i ustawiają **errno** na **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsncicoll —**|**_strnicoll**|**_mbsnbicoll**|**_wcsnicoll**|
-|**_tcsnicoll —**|**_strnicoll**|[_mbsnbicoll](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|**_wcsnicoll**|
+|**_tcsncicoll**|**_strnicoll**|**_mbsnbicoll**|**_wcsnicoll**|
+|**_tcsnicoll**|**_strnicoll**|[_mbsnbicoll](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|**_wcsnicoll**|
 |**_tcsnicoll_l**|**_strnicoll_l**|**_mbsnbicoll_l**|**_wcsnicoll_l**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strnicoll —**, **_strnicoll_l —**|\<string.h>|
-|**_wcsnicoll**, **_wcsnicoll_l**|\<WChar.h > lub \<string.h >|
+|**_strnicoll**, **_strnicoll_l**|\<string.h>|
+|**_wcsnicoll**, **_wcsnicoll_l**|\<WCHAR. h > lub \<> String. h|
 |**_mbsnicoll**, **_mbsnicoll_l**|\<mbstring.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

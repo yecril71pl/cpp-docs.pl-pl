@@ -1,14 +1,14 @@
 ---
 title: _strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcsset_s
 - _wcsset_s_l
 - _strset_s
 - _mbsset_s_l
 - _strset_s_l
 - _mbsset_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wcsset_s_l
 - strset_s
@@ -58,19 +61,19 @@ helpviewer_keywords:
 - _tcsset_s function
 - mbsset_s function
 ms.assetid: dceb2909-6b41-4792-acb7-888e45bb8b35
-ms.openlocfilehash: 031678f75dacd8112ac897053066216e7b3b2450
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d959a1b8856fda6abc17c77e0c0f8c0679883a7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368802"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946780"
 ---
-# <a name="strsets-strsetsl-wcssets-wcssetsl-mbssets-mbssetsl"></a>_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l
+# <a name="_strset_s-_strset_s_l-_wcsset_s-_wcsset_s_l-_mbsset_s-_mbsset_s_l"></a>_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l
 
-Ustawia znaki ciągu do znaku. Te wersje [_strset —, _strset_l —, _wcsset —, _wcsset_l —, _mbsset —, _mbsset_l —](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md) mają wzmocnienia zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Ustawia znaki ciągu znaków. Te wersje [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md) mają ulepszenia zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbsset_s —** i **_mbsset_s_l —** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsset_s** i **_mbsset_s_l** nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -113,34 +116,34 @@ errno_t _mbsset_s_l(
 ### <a name="parameters"></a>Parametry
 
 *str*<br/>
-Ciąg zakończony wartością null do ustawienia.
+Ciąg zakończony znakiem null, który ma zostać ustawiony.
 
 *numberOfElements*<br/>
-Rozmiar *str* buforu.
+Rozmiar buforu *str* .
 
 *c*<br/>
-Ustawienie znaków.
+Ustawienie znaku.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli operacja się powiedzie, w przeciwnym razie kod błędu.
+Zero, jeśli się powiedzie, w przeciwnym razie kod błędu.
 
-Te funkcje sprawdzają poprawność swoich argumentów. Jeśli *str* jest wskaźnikiem wartości null lub *numberOfElements* argument jest mniejszy niż lub równe 0, lub przekazany w blok nie jest zakończony znakiem null, a następnie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [ Walidacja parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **EINVAL** i ustaw **errno** do **EINVAL**.
+Te funkcje weryfikują ich argumenty. Jeśli *str* jest wskaźnikiem o wartości null lub argument *NumberOfElements* jest mniejszy niż lub równy 0 lub blok przeszedł nie jest zakończony znakiem null, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **EINVAL** i ustawiają **errno** na **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Strset_s —** funkcja Ustawia wszystkie znaki z *str* do *c* (konwertowane na **char**), z wyjątkiem kończącego znaku null. **_wcsset_s —** i **_mbsset_s —** są wersjami znaków dwubajtowych i znaków wielobajtowych **_strset_s —**. Typy danych argumentów i zwracanych wartości różnią się odpowiednio. Funkcje te zachowują się identycznie.
+Funkcja **_strset_s** ustawia wszystkie znaki *str* na *c* (konwertowane na **char**), z wyjątkiem kończącego znaku null. **_wcsset_s** i **_mbsset_s** są wersjami znaków dwubajtowych i znakami wieloznacznymi **_strset_s**. Typy danych argumentów i wartości zwracanych różnią się odpowiednio. Funkcje te zachowują się identycznie w inny sposób.
 
-Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji, bez **_l** sufiks używają bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych; wersje **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych w zamian przekazanych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocals](setlocale-wsetlocale.md) . Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. wersje z sufiksem **_l** są identyczne, z tą różnicą, że w zamian korzystają z przekazaną parametrem ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-Wersje debugowania tych funkcji najpierw wypełniają bufor 0xfd. Aby wyłączyć to zachowanie, użyj [_crtsetdebugfillthreshold —](crtsetdebugfillthreshold.md).
+Wersje debugowania tych funkcji najpierw wypełniają bufor 0xFD. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsset_s**|**_strset_s**|**_mbsset_s**|**_wcsset_s**|
 |**_tcsset_s_l**|**_strset_s_l**|**_mbsset_s_l**|**_wcsset_s_l**|
@@ -150,12 +153,12 @@ Wersje debugowania tych funkcji najpierw wypełniają bufor 0xfd. Aby wyłączy�
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_strset_s**|\<string.h>|
-|**_strset_s_l**|\<tchar.h>|
-|**_wcsset_s**|\<Włącz String.h > lub \<wchar.h >|
-|**_wcsset_s_l**|\<tchar.h>|
+|**_strset_s_l**|\<Używanie TCHAR. h >|
+|**_wcsset_s**|\<ciąg. h > lub \<WCHAR. h >|
+|**_wcsset_s_l**|\<Używanie TCHAR. h >|
 |**_mbsset_s**, **_mbsset_s_l**|\<mbstring.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

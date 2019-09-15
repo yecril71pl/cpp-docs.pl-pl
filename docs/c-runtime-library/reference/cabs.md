@@ -1,9 +1,9 @@
 ---
 title: _cabs
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cabs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cabsl
 - _cabs
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: 3e95b6f568ce66b8e9e5483bd1dcbcfaa7af3d28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e2536fbeed2f466d3795e2ed26e643279e8bc67
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341070"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943408"
 ---
-# <a name="cabs"></a>_cabs
+# <a name="_cabs"></a>_cabs
 
 Oblicza wartość bezwzględną liczby zespolonej.
 
@@ -50,15 +53,15 @@ double _cabs(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Liczba złożonych.
+Liczba złożona.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_cabs** zwraca wartość bezwzględną argumentu, jeśli to się powiedzie. W przepełnieniu **_cabs** zwraca **HUGE_VAL** i ustawia **errno** do **ERANGE**. Można zmienić błąd obsługi z [_matherr](matherr.md).
+**_cabs** zwraca wartość bezwzględną argumentu, jeśli powodzenie. W przypadku przepełnienia funkcja **_cabs** zwraca **HUGE_VAL** i ustawia **errno** na **ERANGE**. Obsługę błędów można zmienić za pomocą [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_Cabs** funkcja oblicza wartość bezwzględną liczby zespolonej musi być strukturą typu [_complex —](../../c-runtime-library/standard-types.md). Struktura *z* składa się z rzeczywisty składnik *x* i urojone części *y*. Wywołanie **_cabs** generuje wartość odpowiadającą wyrażenia `sqrt( z.x * z.x + z.y * z.y )`.
+Funkcja **_cabs** oblicza wartość bezwzględną liczby zespolonej, która musi być strukturą typu [_complex](../../c-runtime-library/standard-types.md). Struktura *z* składa się ze prawdziwego składnika *x* i części urojonej *y*. Wywołanie **_cabs** generuje wartość równoważną wartości wyrażenia `sqrt( z.x * z.x + z.y * z.y )`.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -66,7 +69,7 @@ Liczba złożonych.
 |-------------|---------------------|
 |**_cabs**|\<math.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

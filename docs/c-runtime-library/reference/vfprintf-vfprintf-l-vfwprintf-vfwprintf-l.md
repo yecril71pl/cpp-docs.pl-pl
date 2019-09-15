@@ -1,12 +1,12 @@
 ---
 title: vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vfprintf_l
 - vfprintf
 - vfwprintf
 - _vfwprintf_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vfwprintf
 - _vftprintf
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - _vfprintf_l function
 - formatted text [C++]
 ms.assetid: 4443be50-cedf-40b2-b3e2-ff2b3af3b666
-ms.openlocfilehash: 18ba244bceb2deaf5ada78ae85aa8cab7058d51b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e72142f33c042e60ac6c06f6b84aa63b3de67457
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499220"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946635"
 ---
 # <a name="vfprintf-_vfprintf_l-vfwprintf-_vfwprintf_l"></a>vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l
 
@@ -97,14 +100,14 @@ Aby uzyskać informacje o tych i innych kodach błędów, zobacz [_doserrno, err
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji Pobiera wskaźnik do listy argumentów, a następnie formatuje i zapisuje dane w strumieniu.
+Każda z tych funkcji Pobiera wskaźnik do listy argumentów, a następnie formatuje i zapisuje dane w *strumieniu*.
 
 **vfwprintf** to dwubajtowa wersja **vfprintf**; dwie funkcje zachowują się identycznie, jeśli strumień jest otwarty w trybie ANSI. **vfprintf** obecnie nie obsługuje danych wyjściowych w strumieniu Unicode.
 
 Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korzystają z przekazaną parametrem ustawień regionalnych zamiast bieżących ustawień regionalnych wątku.
 
 > [!IMPORTANT]
-> Upewnij się, że *Format* nie jest ciągiem zdefiniowanym przez użytkownika. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
+> Upewnij się, że *Format* nie jest ciągiem zdefiniowanym przez użytkownika. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 

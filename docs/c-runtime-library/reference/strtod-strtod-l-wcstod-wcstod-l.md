@@ -1,12 +1,12 @@
 ---
 title: strtod, _strtod_l, wcstod, _wcstod_l
 ms.date: 10/20/2017
-apiname:
+api_name:
 - wcstod
 - _wcstod_l
 - _strtod_l
 - strtod
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcstod
 - strtod
@@ -42,16 +45,16 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: c8c2b3b491e2e7265829fa88580529dc757ace8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5372525eb99dc9d39e31b10def0377c9aad5296c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376474"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946493"
 ---
-# <a name="strtod-strtodl-wcstod-wcstodl"></a>strtod, _strtod_l, wcstod, _wcstod_l
+# <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
-Konwertowanie ciągów na wartości podwójnej precyzji.
+Konwertuje ciągi na wartość o podwójnej precyzji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -79,51 +82,51 @@ double wcstod_l(
 ### <a name="parameters"></a>Parametry
 
 *strSource*<br/>
-Ciąg zakończony wartością null do konwersji.
+Ciąg zakończony znakiem null do przekonwertowania.
 
 *endptr*<br/>
-Wskaźnik znaku zatrzymującego skanowanie.
+Wskaźnik do znaku, który powoduje zatrzymanie skanowania.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**strtod** zwraca wartość zmiennoprzecinkową, z wyjątkiem sytuacji, gdy ta reprezentacja spowodowałoby przepełnienie, w których przypadku funkcja zwraca wartość +/-**HUGE_VAL**. Znak **HUGE_VAL** odpowiada znakowi wartości, który nie może być reprezentowana. **strtod** zwraca wartość 0, jeśli nie można wykonać konwersji lub występuje niedopełnienie.
+**strtod** zwraca wartość liczby zmiennoprzecinkowej, z wyjątkiem sytuacji, gdy reprezentacja spowodowałoby przepełnienie, w takim przypadku funkcja zwraca wartość +/-**HUGE_VAL**. Znak **HUGE_VAL** jest zgodny ze znakiem wartości, która nie może być reprezentowana. **strtod** zwraca wartość 0, jeśli nie można wykonać konwersji lub występuje niedopełnienie.
 
-**wcstod —** zwraca wartości analogicznie do **strtod**. Dla obu funkcji **errno** ustawiono **ERANGE** Jeśli występuje przepełnienie lub niedopełnienie i wywołany nieprawidłowy parametr uchwytu, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na ten temat i inne kody powrotne.
+**wcstod** zwraca wartości analogicznie do **strtod**. W przypadku obu funkcji **errno** jest ustawiony na **ERANGE** , jeśli występuje przepełnienie lub nadmiarowy i zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Aby uzyskać więcej informacji na temat tego i innych kodów powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Uwagi
 
-Każda funkcja konwertuje ciąg wejściowy *strSource* do **double**. **Strtod** funkcji konwertuje *strSource* wartość podwójnej precyzji. **strtod** przestaje odczytywać ciąg *strSource* przy pierwszym znaku, nie może rozpoznać jako elementu liczby. Może to być kończący znak null. **wcstod —** to wersja znaku dwubajtowego **strtod**; jej *strSource* argumentu jest ciągiem znaku dwubajtowego. Funkcje te zachowują się identycznie.
+Każda funkcja konwertuje ciąg wejściowy *strSource* na wartość typu **Double**. Funkcja **strtod** konwertuje *strSource* na wartość o podwójnej precyzji. **strtod** przestaje odczytywania ciągu *strSource* przy pierwszym znaku, którego nie może rozpoznać jako części liczby. Może to być kończący znak null. **wcstod** to dwubajtowa wersja **strtod**; jego argument *strSource* jest ciągiem znaków dwubajtowych. Funkcje te zachowują się identycznie w inny sposób.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcstod —**|**strtod**|**strtod**|**wcstod**|
+|**_tcstod**|**strtod**|**strtod**|**wcstod**|
 |**_tcstod_l**|**_strtod_l**|**_strtod_l**|**_wcstod_l**|
 
-**LC_NUMERIC** ustawienie kategorii bieżących ustawień regionalnych określa rozpoznawanie znaku podstawy w parametrze punktu *strSource*. Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). Funkcje bez **_l** sufiksa używa bieżących ustawień regionalnych; **_strtod_l —** jest taka sama jak **_strtod_l —** z tą różnicą, że używają one *ustawień regionalnych* przekazanych w zamian. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Ustawienie kategorii **LC_NUMERIC** bieżących ustawień regionalnych określa rozpoznawanie znaku podstawy punktu w *strSource*. Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). Funkcje bez sufiksu **_l** używają bieżących ustawień regionalnych; **_strtod_l** jest taka sama jak **_strtod_l** , z tą różnicą, że w zamian korzystają z przekazaną *ustawieniami regionalnymi* . Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-Jeśli *endptr* nie **NULL**, wskaźnik znaku, który zatrzymał skanowanie jest przechowywany w lokalizacji wskazywanej przez *endptr*. Jeśli konwersja nie może być wykonywana (nie znaleziono żadnych prawidłowych cyfr lub określono nieprawidłową podstawę), wartość *strSource* jest przechowywany w lokalizacji wskazywanej przez *endptr*.
+Jeśli *endptr* nie ma **wartości null**, wskaźnik do znaku, który zatrzymał skanowanie jest przechowywany w lokalizacji wskazywanej przez *endptr*. Jeśli konwersja nie może być wykonywana (nie znaleziono prawidłowych cyfr lub określono nieprawidłową podstawę), wartość *strSource* jest przechowywana w lokalizacji wskazywanej przez *endptr*.
 
-**strtod** oczekuje *strSource* do wskaże ciąg z jednej z następujących form:
+**strtod** oczekuje, że *strSource* , aby wskazywały ciąg jednej z następujących form:
 
-[*odstępu*] [*logowania*] {*cyfr* [*podstawy* *cyfr*] &#124;  *podstawy* *cyfr*} [{**e** &#124; **E**} [*logowania*] *cyfr*] [*odstępu*] [*logowania*] {**0 x** &#124; **0 X**} {*cyfry_szesnastkowe* [ *podstawy* *cyfry_szesnastkowe*] &#124; *podstawy* *cyfry_szesnastkowe*} [{**p** &#124; **P**} [*logowania*] *cyfry_szesnastkowe*] [*odstępu*] [*logowania*] { **INF** &#124; **NIESKOŃCZONOŚCI**} [*odstępu*] [*logowania*]  **NAN** [*sekwencji*]
+[*odstęp*] [*Sign*] {*cyfry* [ *cyfry*podstawy] &#124; *podstawy* *cyfry*} [{**e** &#124; **e**} [*Sign*] *cyfry*] [*odstęp*] [*Sign*] {**0x** &#124; **0x**} {*hexdigits* [*podstawy* *hexdigits*] &#124;  *podstawy* *hexdigits*} [{**p** &#124; **p**} [*Sign*] *hexdigits*] [*odstęp*] [*Sign* **] {** &#124; w **nieskończoności**} [*odstęp*] [ *Sign*] **NaN** [*Sequence*]
 
-Opcjonalne wiodących *odstępu* może składać się ze znaków spacji lub tabulatora, które są ignorowane. *logowania* jest plus (+) lub minus (-); *cyfr* są co najmniej jedna cyfra dziesiętna; *cyfry_szesnastkowe* są co najmniej jedna cyfra szesnastkowa; *podstawy* to podstawy punkt znak kropki (.) w domyślnych ustawień regionalnych "C", lub wartość specyficzne dla ustawień regionalnych, jeśli różni się bieżących ustawień regionalnych, lub gdy *ustawień regionalnych* jest określona; *sekwencji* jest sekwencją alfanumerycznych lub znaki podkreślenia. W formularzach zarówno dziesiętną, a szesnastkową liczb Jeśli żadna cyfra pojawia się przed znakiem podstawy punktu, co najmniej jeden musi występować po znaku podstawy w punkcie. W formie dziesiętnej cyfr dziesiętnych może następować wykładnik, który składa się z litery wprowadzającej (**e** lub **E**) i opcjonalnie podpisanej liczby całkowitej. W postaci szesnastkowej cyfr szesnastkowych może następować wykładnik, który składa się z litery wprowadzającej (**p** lub **P**) i opcjonalnie Szesnastkowa liczba całkowita ze znakiem reprezentuje wykładnik jako potęgą liczby 2. W dowolnej postaci wykładnik ani znak podstawy punkt nie jest wyświetlana, znak podstawy punkt jest traktowana jako ostatniej cyfrze w ciągu. Wielkość liter jest ignorowana w obu **INF** i **NAN** formularzy. Pierwszy znak, który nie pasuje do jednej z poniższych metod zatrzymuje skanowanie.
+Opcjonalne *spacje wiodące* mogą zawierać spacje i znaki tabulacji, które są ignorowane; *znak* jest znakiem plus (+) lub minus (-); *cyfry* są jedną lub większą liczbą cyfr dziesiętnych; *hexdigits* to jedna lub więcej cyfr szesnastkowych; *podstawy* jest znakiem punktu podstawy, kropką (.) w domyślnych ustawieniach regionalnych "C" lub wartość specyficzną dla ustawień regionalnych, jeśli bieżące ustawienia regionalne są różne lub jeśli określono *Ustawienia regionalne* ; *sekwencja* jest sekwencją znaków alfanumerycznych lub podkreślenia. W formularzach liczb dziesiętnych i szesnastkowych, jeśli żadne cyfry nie pojawiają się przed znakiem punktu podstawy, co najmniej jeden musi występować po znaku podstawy. W postaci dziesiętnej cyfry dziesiętne mogą następować według wykładnika, która składa się z litery wprowadzającej (**e** lub **e**) i opcjonalnie podpisanej liczby całkowitej. W postaci szesnastkowej cyfry szesnastkowe mogą następować przy użyciu wykładnika, która składa się z litery wprowadzającej (**p** lub **p**) i opcjonalnie podpisanej szesnastkowej liczby całkowitej, która reprezentuje wykładnik jako potęgę 2. W obu formularzach, jeśli nie pojawia się część wykładnika ani znak podstawy, przyjmuje się, że znak punktu podstawy będzie podążać za ostatnią cyfrą w ciągu. Wielkość liter jest ignorowana w formularzach **inf** i **NaN** . Pierwszy znak, który nie pasuje do jednego z tych formularzy, przestanie być skanowane.
 
-UCRT wersje tych funkcji nie obsługują konwersję Fortran stylu (**d** lub **D**) litery wykładnika. To rozszerzenie niestandardowe była obsługiwana przez wcześniejsze wersje CRT i może być istotnej zmiany w kodzie. Wersji 140_xp Biblioteka UCRT obsługują ciągów szesnastkowych i Pełna zgodnooć wersji INF i NAN wartości, które nie są obsługiwane we wcześniejszych wersjach. Ponadto może to spowodować przełomowe zmiany w kodzie. Na przykład ciąg "0x1a" może być interpretowany przez **strtod** jako 0.0 w poprzednich wersjach, ale jako 26.0 w wersji 140_xp Biblioteka UCRT.
+Wersje UCRT tych funkcji nie obsługują konwersji liter wykładnika Pascal (**d** lub **d**). To niestandardowe rozszerzenie było obsługiwane przez wcześniejsze wersje CRT i może być istotną zmianą dla kodu. Wersje UCRT obsługują ciągi szesnastkowe i dwukierunkowe wartości plików INF i NAN, które nie są obsługiwane we wcześniejszych wersjach. Może to również spowodować istotne zmiany w kodzie. Na przykład ciąg "0x1A" byłby interpretowany przez **strtod** jako 0,0 w poprzednich wersjach, ale jako 26,0 w wersji UCRT.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strtod**, **_strtod_l —**|C: &lt;stdlib.h > C++: &lt;cstdlib — > lub &lt;stdlib.h > |
-|**wcstod —**, **_wcstod_l —**|C: &lt;stdlib.h> or &lt;wchar.h> C++: &lt;cstdlib>, &lt;stdlib.h> or &lt;wchar.h> |
+|**strtod**, **_strtod_l**|C: &lt;STDLIB. h > C++: &lt;cstdlib > lub &lt;STDLIB. h > |
+|**wcstod**, **_wcstod_l**|C: &lt;STDLIB. h > lub &lt;WCHAR. h > C++: &lt;cstdlib >, &lt;STDLIB. h > lub &lt;WCHAR. h > |
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

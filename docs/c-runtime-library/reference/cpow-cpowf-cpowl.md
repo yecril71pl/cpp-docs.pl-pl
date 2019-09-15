@@ -1,11 +1,11 @@
 ---
-title: cpow cpowf, cpowl
+title: cpow, cpowf, cpowl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cpow
 - cpowf
 - cpowl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cpow
 - cpowf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - cpowf function
 - complex/cpowl function
 ms.assetid: 83fe2187-22b7-4295-ab16-4d77abdbb80b
-ms.openlocfilehash: 588c437a01237de297e1db31fb2c507eb1145d90
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 005bafd4b19164f5c85be839a90fc7d5259d61bf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339848"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942702"
 ---
-# <a name="cpow-cpowf-cpowl"></a>cpow cpowf, cpowl
+# <a name="cpow-cpowf-cpowl"></a>cpow, cpowf, cpowl
 
-Pobiera wartość liczbę podniesioną do wskazanej potęgi, w których liczby zespolone base i wykładnika. Funkcja ta ma gałąź Wytnij wykładnika potęgi rzeczywistych osi ujemna.
+Pobiera wartość liczby podniesionej do określonej potęgi, gdzie podstawa i wykładnik są liczbami złożonymi. Ta funkcja ma rozgałęzienie do wykładniki wzdłuż ujemnej osi rzeczywistej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -64,26 +67,26 @@ _Lcomplex cpowl(
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Podstawa.
+Baza.
 
 *y*<br/>
-Wykładnik potęgi.
+Wykładnik.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość *x* podniesione do potęgi równej *y* z gałęzią Wytnij dla *x* rzeczywistych osi ujemna.
+Wartość *x* podniesiona do potęgi *y* z gałęzią wyciętych dla *x* wzdłuż ujemnej osi rzeczywistej.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **cpow** przyjmujące i zwracające **_Fcomplex** i **_Lcomplex** wartości. W programie C **cpow** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **cpow** , które pobierają i zwracają wartości **_Fcomplex** i **_Lcomplex** . W programie C **cpow** zawsze przyjmuje i zwraca wartość **_Dcomplex** .
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|Nagłówek języka C++|
+|Procedura|Nagłówek języka C|C++nagłówki|
 |-------------|--------------|------------------|
 |**cpow**, **cpowf**, **cpowl**|\<complex.h>|\<ccomplex>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

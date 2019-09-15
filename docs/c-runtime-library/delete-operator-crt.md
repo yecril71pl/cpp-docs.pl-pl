@@ -1,27 +1,30 @@
 ---
-title: Usuwanie operatora(CRT)
+title: operator delete(CRT)
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr90.dll
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - msvcr120.dll
 - msvcr100.dll
 - msvcr80.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - delete[]
 helpviewer_keywords:
 - operator delete[]
 - vector delete
 ms.assetid: e91bd0df-3815-40ca-950a-67b470518aed
-ms.openlocfilehash: 81fc30d91d487c0077df5b8f964c685cb7453aeb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73869045eeca6a91a429ee38e5d26d28d56117c7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344151"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944521"
 ---
-# <a name="operator-deletecrt"></a>Usuwanie operatora(CRT)
+# <a name="operator-deletecrt"></a>operator delete(CRT)
 
-Począwszy od programu Visual Studio 2013, uniwersalne środowisko uruchomieniowe języka C (UCRT) nie obsługuje już nowy operator specyficznych dla języka C++ i operatora Usuń funkcje. Teraz są częścią standardowej biblioteki języka C++. Aby uzyskać więcej informacji, zobacz [nowych i delete — operatory](../cpp/new-and-delete-operators.md) i [delete operator](../cpp/delete-operator-cpp.md) w dokumentacji języka C++.
+Począwszy od Visual Studio 2013, uniwersalne środowisko uruchomieniowe języka C (UCRT) nie obsługuje C++już operatorów specyficznych dla operatora new i operator delete. Są one teraz częścią biblioteki C++ standardowej. Aby uzyskać więcej informacji, zobacz operator [New and DELETE](../cpp/new-and-delete-operators.md) Operators and [delete](../cpp/delete-operator-cpp.md) w dokumentacji C++ języka.

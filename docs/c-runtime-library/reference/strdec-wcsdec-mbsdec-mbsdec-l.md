@@ -1,12 +1,12 @@
 ---
 title: _strdec, _wcsdec, _mbsdec, _mbsdec_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcsdec
 - _strdec
 - _mbsdec
 - _mbsdec_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _strdec
 - mbsdec_l
@@ -40,12 +43,12 @@ helpviewer_keywords:
 - wcsdec function
 - _mbsdec function
 ms.assetid: ae37c223-800f-48a9-ae8e-38c8d20af2dd
-ms.openlocfilehash: a937f8fcd18dd62bb7c63cf60c250cf7986b69b7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ffb2b81f5ce5a251fb931099a1023a441ca4d496
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500905"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958209"
 ---
 # <a name="_strdec-_wcsdec-_mbsdec-_mbsdec_l"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
 
@@ -82,7 +85,7 @@ unsigned char *_mbsdec_l(
 Wskaźnik na dowolny znak (lub dla **_mbsdec** i **_mbsdec_l**, pierwszy bajt dowolnego znaku wielobajtowego) w ciągu źródłowym; *początek* musi poprzedzać *bieżącą* wartość w ciągu źródłowym.
 
 *obecne*<br/>
-Wskaźnik na dowolny znak (lub dla **_mbsdec** i **_mbsdec_l**, pierwszy bajt dowolnego znaku wielobajtowego) w ciągu źródłowym; *Bieżąca* wartość musi następować po rozpoczęciu w ciągu źródłowym.
+Wskaźnik na dowolny znak (lub dla **_mbsdec** i **_mbsdec_l**, pierwszy bajt dowolnego znaku wielobajtowego) w ciągu źródłowym; *Bieżąca* wartość musi następować po *rozpoczęciu* w ciągu źródłowym.
 
 *ustawienie*<br/>
 Ustawienia regionalne do użycia.
@@ -100,7 +103,7 @@ Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawie�
 Jeśli parametr *Start* lub *Current* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **EINVAL** i ustawia **errno** na **EINVAL**.
 
 > [!IMPORTANT]
-> Te funkcje mogą być narażone na zagrożenia przepełnienia buforu. Przepełnienia buforu mogą służyć do ataków systemu, ponieważ mogą one spowodować nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
+> Te funkcje mogą być narażone na zagrożenia przepełnienia buforu. Przepełnienia buforu mogą służyć do ataków systemu, ponieważ mogą one spowodować nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 

@@ -1,12 +1,12 @@
 ---
 title: _strninc, _wcsninc, _mbsninc, _mbsninc_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsninc
 - _mbsninc_l
 - _wcsninc
 - _strninc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strninc
 - wcsninc
@@ -42,19 +45,19 @@ helpviewer_keywords:
 - mbsninc_l function
 - _tcsninc function
 ms.assetid: 6caace64-f9e4-48c0-afa8-ea51824ad723
-ms.openlocfilehash: ef30a9f57f0b8c84199befb00f3edc13342a1eaf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b03ca4c9515bd2c70a1ce2574850e23b3add44c5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209725"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947068"
 ---
-# <a name="strninc-wcsninc-mbsninc-mbsnincl"></a>_strninc, _wcsninc, _mbsninc, _mbsninc_l
+# <a name="_strninc-_wcsninc-_mbsninc-_mbsninc_l"></a>_strninc, _wcsninc, _mbsninc, _mbsninc_l
 
-Przesuwa wskaźnik ciągu, **n** znaków.
+Przesuwa wskaźnik ciągu o **n** znaków.
 
 > [!IMPORTANT]
-> **_mbsninc** i **_mbsninc_l** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsninc** i **_mbsninc_l** nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -83,19 +86,19 @@ unsigned char *_mbsninc(
 *str*<br/>
 Ciąg źródłowy.
 
-*Liczba*<br/>
-Liczba znaków do przyrostu wskaźnika ciągu.
+*liczbą*<br/>
+Liczba znaków do zwiększenia wskaźnika ciągu.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych procedur zwraca wskaźnik do *str* po *str* została zwiększona przez *liczba* znaków lub **NULL** Jeśli podane wskaźnik jest **NULL**. Jeśli *liczba* jest większa niż lub równa liczbie znaków w *str*, wynik jest niezdefiniowany.
+Każda z tych procedur zwraca wskaźnik do *str* po zwiększeniu *liczby* znaków lub **wartości null** , jeśli dostarczony *wskaźnik ma* **wartość null**. Jeśli *Liczba* jest większa lub równa liczbie znaków w *str*, wynik jest niezdefiniowany.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Mbsninc** funkcja powoduje przyrost *str* przez *liczba* znaków wielobajtowych. **_mbsninc** rozpoznaje sekwencje znaków wielobajtowych według [wielobajtowa strona kodowa](../../c-runtime-library/code-pages.md) aktualnie w użyciu.
+Funkcja **_mbsninc** zwiększa *str* według *liczby* znaków wielobajtowych. **_mbsninc** rozpoznaje sekwencje znaków wielobajtowych zgodnie z aktualnie używaną [stroną kodową](../../c-runtime-library/code-pages.md) .
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -103,9 +106,9 @@ Każda z tych procedur zwraca wskaźnik do *str* po *str* została zwiększona p
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsninc**|**_strninc**|**_mbsninc**|**_wcsninc**|
 
-**_strninc** i **_wcsninc** są wersjami ciągów znaków dwubajtowych i pojedynczych bajtów znaków ciągu **_mbsninc**. **_wcsninc** i **_strninc** są dostarczane tylko dla tego mapowania i nie powinny być używane w inny sposób. Aby uzyskać więcej informacji, zobacz [przy użyciu mapowania typ ogólny-tekst](../../c-runtime-library/using-generic-text-mappings.md) i [mapowania typ ogólny-tekst](../../c-runtime-library/generic-text-mappings.md).
+**_strninc** i **_wcsninc** są ciągami znaków dwubajtowych i ciągami o szerokim znaku **_mbsninc**. **_wcsninc** i **_strninc** są dostępne tylko dla tego mapowania i nie powinny być używane w inny sposób. Aby uzyskać więcej informacji, zobacz [Korzystanie z mapowań tekstu ogólnego](../../c-runtime-library/using-generic-text-mappings.md) i [mapowań tekstu ogólnego](../../c-runtime-library/generic-text-mappings.md).
 
-**_mbsninc_l** jest identyczna, z tą różnicą, że używa parametru ustawień regionalnych przekazanych w zamian. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+**_mbsninc_l** jest identyczny, z tą różnicą, że używa zamiast tego parametru ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -113,10 +116,10 @@ Każda z tych procedur zwraca wskaźnik do *str* po *str* została zwiększona p
 |-------------|---------------------|
 |**_mbsninc**|\<mbstring.h>|
 |**_mbsninc_l**|\<mbstring.h>|
-|**_strninc**|\<tchar.h>|
-|**_wcsninc**|\<tchar.h>|
+|**_strninc**|\<Używanie TCHAR. h >|
+|**_wcsninc**|\<Używanie TCHAR. h >|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

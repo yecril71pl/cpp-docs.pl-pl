@@ -1,10 +1,10 @@
 ---
 title: _tell, _telli64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _telli64
 - _tell
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tell
 - telli64
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-ms.openlocfilehash: 628f37d3b8a39a75fb2329a1b2805426f15e821f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54f672a1b230103d6f9ae1c45d2c9e487764939e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258575"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946261"
 ---
-# <a name="tell-telli64"></a>_tell, _telli64
+# <a name="_tell-_telli64"></a>_tell, _telli64
 
-Pobierz położenie wskaźnika pliku.
+Pobierz pozycję wskaźnika pliku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,20 +57,20 @@ __int64 _telli64(
 
 ### <a name="parameters"></a>Parametry
 
-*handle*<br/>
-Plik deskryptora odnoszące się do otwarcia pliku.
+*uchwyty*<br/>
+Deskryptor pliku odwołujący się do otwartego pliku.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Bieżąca pozycja wskaźnika pliku. Na urządzeniach bez możliwości wyszukiwania wartość zwracana jest niezdefiniowane.
+Bieżąca pozycja wskaźnika pliku. Na urządzeniach, które nie mogą przeszukiwania, wartość zwracana jest niezdefiniowana.
 
-Zwracana wartość l-1 wskazuje błąd. Jeśli *obsługi* nieprawidłowego deskryptora pliku, jest wywołany nieprawidłowy parametr uchwytu, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** do **EBADF** i zwracają wartość-1 L.
+Wartość zwracana parametru-1L wskazuje na błąd. Jeśli *dojście* jest nieprawidłowym deskryptorem pliku, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EBADF** i Return-1L.
 
-Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) kody powrotne — Aby uzyskać więcej informacji na temat tego i innych.
+Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) , aby uzyskać więcej informacji na ten temat, a inne kody powrotne.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Tell —** funkcja pobiera bieżącą pozycję wskaźnika pliku (jeśli istnieje), skojarzone z *obsługi* argumentu. Pozycja jest wyrażona jako liczba bajtów od początku pliku. Aby uzyskać **_telli64 —** funkcji, ta wartość jest wyrażona jako liczba całkowita 64-bitowych.
+Funkcja **_tell** pobiera bieżącą pozycję wskaźnika pliku (jeśli istnieje) skojarzoną z argumentem *uchwytu* . Pozycja jest wyrażona jako liczba bajtów od początku pliku. Dla funkcji **_telli64** ta wartość jest wyrażona jako 64-bitowa liczba całkowita.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -75,7 +78,7 @@ Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errn
 |-------------|---------------------|
 |**_tell**, **_telli64**|\<io.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -110,7 +113,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crttelltxt"></a>Dane wejściowe: crt_tell.txt
+### <a name="input-crt_telltxt"></a>Dane wejściowe: crt_tell. txt
 
 ```Input
 Line one.
@@ -125,6 +128,6 @@ Current file position is: 20
 
 ## <a name="see-also"></a>Zobacz także
 
-[Niskiego poziomu operacji We/Wy](../../c-runtime-library/low-level-i-o.md)<br/>
+[We/wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
 [ftell, _ftelli64](ftell-ftelli64.md)<br/>
 [_lseek, _lseeki64](lseek-lseeki64.md)<br/>

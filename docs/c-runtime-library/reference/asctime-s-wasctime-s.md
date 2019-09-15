@@ -1,10 +1,10 @@
 ---
 title: asctime_s, _wasctime_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wasctime_s
 - asctime_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - asctime_s
 - _wasctime_s
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: fe6ada0d50865897e791fc04b99ec0bb486f5a55
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0a40dad34d607bb52b062fc2cec163dfc8b62219
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499997"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943659"
 ---
 # <a name="asctime_s-_wasctime_s"></a>asctime_s, _wasctime_s
 
@@ -83,10 +86,10 @@ Zero, jeśli powodzenie. Jeśli wystąpi awaria, zostanie wywołana procedura ob
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|*buffer*|*numberOfElements*|*tmSource*|Przesłać|Wartość w *buforze*|
+|*buffer*|*numberOfElements*|*tmSource*|przesłać|Wartość w *buforze*|
 |--------------|------------------------|----------|------------|-----------------------|
-|**NULL**|Any|Any|**EINVAL**|Nie zmodyfikowano|
-|Nie **ma wartości null** (wskazuje na prawidłową pamięć)|0|Any|**EINVAL**|Nie zmodyfikowano|
+|**NULL**|Any|Any|**EINVAL**|nie zmodyfikowano|
+|Nie **ma wartości null** (wskazuje na prawidłową pamięć)|0|Any|**EINVAL**|nie zmodyfikowano|
 |Nie **ma wartości null**|0 < rozmiar < 26|Any|**EINVAL**|Pusty ciąg|
 |Nie **ma wartości null**|>= 26|**NULL**|**EINVAL**|Pusty ciąg|
 |Nie **ma wartości null**|>= 26|Nieprawidłowa struktura czasu lub wartości spoza zakresu dla składników czasu|**EINVAL**|Pusty ciąg|
@@ -135,7 +138,7 @@ W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia 
 
 Jeśli wskaźnik buforu ma wartość inną niż **null** , a wskaźnik nie wskazuje prawidłowego buforu, funkcja zostanie zastąpiona, niezależnie od lokalizacji. Może to również spowodować naruszenie zasad dostępu.
 
-Przepełnienie [buforu](/windows/win32/SecBP/avoiding-buffer-overruns) może wystąpić, jeśli długość argumentu rozmiaru przebiegła jest większa niż rzeczywisty rozmiar buforu.
+[Przepełnienie buforu](/windows/win32/SecBP/avoiding-buffer-overruns) może wystąpić, jeśli długość argumentu rozmiaru przebiegła jest większa niż rzeczywisty rozmiar buforu.
 
 ## <a name="example"></a>Przykład
 

@@ -1,12 +1,12 @@
 ---
 title: _snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _snwscanf_s_l
 - _snwscanf_s
 - _snscanf_s
 - _snscanf_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sntscanf_s
 - snscanf_s
@@ -49,16 +52,16 @@ helpviewer_keywords:
 - _sntscanf_s function
 - snwscanf_s_l function
 ms.assetid: 72356653-7362-461a-af73-597b9c0a8094
-ms.openlocfilehash: 8d56999aea69c4674070410774d5a2fa11abb178
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33507990c1b7e2c6fd1b30e2bdb9277ab611ef2a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355695"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947948"
 ---
-# <a name="snscanfs-snscanfsl-snwscanfs-snwscanfsl"></a>_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
+# <a name="_snscanf_s-_snscanf_s_l-_snwscanf_s-_snwscanf_s_l"></a>_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
 
-Odczyty sformatowanych danych o określonej długości ciągu. Są to wersje [_snscanf —, _snscanf_l —, _snwscanf —, _snwscanf_l —](snscanf-snscanf-l-snwscanf-snwscanf-l.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Odczytuje sformatowane dane o określonej długości z ciągu. Są to wersje [_snscanf, _snscanf_l, _snwscanf, _snwscanf_l](snscanf-snscanf-l-snwscanf-snwscanf-l.md) z ulepszeniami zabezpieczeń, jak opisano w [funkcjach zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -89,45 +92,45 @@ int __cdecl _snwscanf_s_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Dane wejściowe*<br/>
-Wejściowy ciąg do sprawdzenia.
+*klawiatur*<br/>
+Ciąg wejściowy do sprawdzenia.
 
-*Długość*<br/>
-Liczba znaków do sprawdzenia w *wejściowych*.
+*length*<br/>
+Liczba znaków do sprawdzenia w *danych wejściowych*.
 
-*Format*<br/>
+*format*<br/>
 Jeden lub więcej specyfikatorów formatu.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 *argument_list*<br/>
-Argumenty opcjonalne do przypisania, zgodnie z ciągu formatu.
+Opcjonalne argumenty, które mają być przypisane zgodnie z ciągiem formatu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Obu tych funkcji zwraca liczbę pól pomyślnie przekonwertowanych i przypisanych; zwracana wartość nie uwzględnia pól, które zostały odczytane, ale nie przypisane. Zwracana wartość wynosząca 0 wskazuje, że nie przydzielono żadnych pól. Wartość zwracana jest **EOF** dla błędu lub w przypadku osiągnięcia końca ciągu przed dokonaniem pierwszej konwersji. Aby uzyskać więcej informacji, zobacz [sscanf_s —, _sscanf_s_l —, swscanf_s —, _swscanf_s_l —](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
+Obie te funkcje zwracają liczbę pól, które zostały pomyślnie przekonwertowane i przypisane; wartość zwracana nie zawiera pól, które zostały odczytane, ale nie przypisane. Wartość zwracana przez 0 wskazuje, że nie przypisano żadnych pól. Wartość zwracana to **eof** dla błędu lub, jeśli osiągnięto koniec ciągu przed pierwszą konwersją. Aby uzyskać więcej informacji, zobacz [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
 
-Jeśli *wejściowych* lub *format* jest **NULL** wskaźnika, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **EOF** i ustaw **errno** do **EINVAL**.
+Jeśli *wejście* lub *Format* jest wskaźnikiem o **wartości null** , zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **eof** i ustawiają **errno** na **EINVAL**.
 
-Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje o tych i innych kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja przypomina **sscanf_s —** z tą różnicą, że zapewnia możliwość określenia stałą liczbę znaków, aby sprawdzić, z ciągu wejściowego. Aby uzyskać więcej informacji, zobacz [sscanf_s —, _sscanf_s_l —, swscanf_s —, _swscanf_s_l —](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
+Ta funkcja jest taka sama jak **sscanf_s** , z tą różnicą, że umożliwia określenie stałej liczby znaków do sprawdzenia z ciągu wejściowego. Aby uzyskać więcej informacji, zobacz [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
 
-Parametr rozmiaru buforu jest wymagany w przypadku znaki pola typu **c**, **C**, **s**, **S**, i **[** . Aby uzyskać więcej informacji, zobacz [scanf — znaki pola typu](../../c-runtime-library/scanf-type-field-characters.md).
+Wymagany jest parametr rozmiaru buforu z znakami pola typu **c**, **c**, **s**, **s**i **[** . Aby uzyskać więcej informacji, zobacz [znaki pola typu scanf](../../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
-> Parametr rozmiaru ma typ **niepodpisane**, a nie **size_t**.
+> Parametr size jest typu **unsigned**, not **size_t**.
 
-Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych wątku.
+Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korzystają z przekazaną parametrem ustawień regionalnych zamiast bieżących ustawień regionalnych wątku.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_sntscanf_s —**|**_snscanf_s**|**_snscanf_s**|**_snwscanf_s**|
+|**_sntscanf_s**|**_snscanf_s**|**_snscanf_s**|**_snwscanf_s**|
 |**_sntscanf_s_l**|**_snscanf_s_l**|**_snscanf_s_l**|**_snwscanf_s_l**|
 
 ## <a name="requirements"></a>Wymagania
@@ -135,9 +138,9 @@ Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używa
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_snscanf_s**, **_snscanf_s_l**|\<stdio.h>|
-|**_snwscanf_s**, **_snwscanf_s_l**|\<stdio.h > lub \<wchar.h >|
+|**_snwscanf_s**, **_snwscanf_s_l**|\<stdio. h > lub \<WCHAR. h >|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

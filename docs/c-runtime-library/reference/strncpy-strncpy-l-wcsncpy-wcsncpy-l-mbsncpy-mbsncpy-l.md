@@ -1,14 +1,14 @@
 ---
 title: strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strncpy
 - _strncpy_l
 - _mbsncpy
 - wcsncpy
 - _mbsncpy_l
 - _wcsncpy_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fstrncpy
 - strncpy
@@ -62,12 +65,12 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: fac7e052c5c1d5525946bdbc599404ac56d47f5a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 82e88a48752cb96cca5cb636332fa477aef13d50
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499454"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947212"
 ---
 # <a name="strncpy-_strncpy_l-wcsncpy-_wcsncpy_l-_mbsncpy-_mbsncpy_l"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 
@@ -176,7 +179,7 @@ Zwraca *strDest*. Żadna wartość zwracana nie jest zarezerwowana do wskazania 
 Funkcja **strncpy** kopiuje początkową *liczbę* znaków *StrSource* do *strDest* i zwraca *strDest*. Jeśli *Liczba* jest mniejsza lub równa długości *strSource*, znak null nie jest automatycznie dołączany do skopiowanego ciągu. Jeśli *Liczba* jest większa niż długość *strSource*, ciąg docelowy jest uzupełniony znakami o wartości null do *liczby*długości. Zachowanie **strncpy** jest niezdefiniowane, jeśli parametry źródłowe i docelowe nakładają się na siebie.
 
 > [!IMPORTANT]
-> **strncpy** nie sprawdza wystarczającej ilości miejsca w *strDest*; stanowi to potencjalną przyczynę przekroczenia buforu. Argument *Count* ogranicza liczbę znaków skopiowanych; nie jest to limit rozmiaru *strDest*. Zobacz Poniższy przykład. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
+> **strncpy** nie sprawdza wystarczającej ilości miejsca w *strDest*; stanowi to potencjalną przyczynę przekroczenia buforu. Argument *Count* ogranicza liczbę znaków skopiowanych; nie jest to limit rozmiaru *strDest*. Zobacz Poniższy przykład. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 Jeśli *strDest* lub *strSource* jest wskaźnikiem o **wartości null** lub jeśli *Liczba* jest mniejsza lub równa zero, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość-1 i ustawiają **errno** na **EINVAL**.
 

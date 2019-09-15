@@ -1,10 +1,10 @@
 ---
 title: _creat, _wcreat
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _creat
 - _wcreat
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcreat
 - _wcreat
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - creat function
 - _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
-ms.openlocfilehash: 901a95a6a9361f95f38749dacf1a5001d97b3761
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d278bffbfdf856956a20b01da4dad2ba00952359
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335311"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938890"
 ---
-# <a name="creat-wcreat"></a>_creat, _wcreat
+# <a name="_creat-_wcreat"></a>_creat, _wcreat
 
-Tworzy nowy plik. **_creat —** i **_wcreat —** są przestarzałe; użyj [_sopen_s —, _wsopen_s —](sopen-s-wsopen-s.md) zamiast tego.
+Tworzy nowy plik. **_creat** i **_wcreat** są przestarzałe; Zamiast tego użyj [_sopen_s, _wsopen_s](sopen-s-wsopen-s.md) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -62,52 +65,52 @@ int _wcreat(
 Nazwa nowego pliku.
 
 *pmode*<br/>
-Ustawienie uprawnienia.
+Ustawienie uprawnień.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Tych funkcji, jeśli to się powiedzie, przywrócenie deskryptora pliku utworzonego pliku. W przeciwnym wypadku te funkcje zwracają wartość -1 i ustaw **errno** jak pokazano w poniższej tabeli.
+Te funkcje, jeśli pomyślnie, zwracają deskryptor pliku do utworzonego pliku. W przeciwnym razie funkcje zwracają-1 i ustawiają **errno** , jak pokazano w poniższej tabeli.
 
-|**errno** ustawienie|Opis|
+|ustawienie **errno**|Opis|
 |---------------------|-----------------|
-|**EACCES**|*Nazwa pliku* Określa istniejący plik tylko do odczytu lub określa katalog, a nie plikiem.|
-|**EMFILE**|Więcej deskryptorów plików nie są dostępne.|
-|**ENOENT**|Nie można odnaleźć określonego pliku.|
+|**EACCES**|*Nazwa pliku* określa istniejący plik tylko do odczytu lub określa katalog, a nie plik.|
+|**EMFILE**|Nie ma więcej dostępnych deskryptorów plików.|
+|**ENOENT**|Nie można znaleźć określonego pliku.|
 
-Jeśli *filename* jest **NULL**, funkcje te wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** do **EINVAL** i zwracają wartość -1.
+Jeśli *Nazwa pliku* ma **wartość null**, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i Return-1.
 
-Aby uzyskać więcej informacji na temat tych i innych kodach powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tych i innych kodów powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_Creat —** — funkcja lub tworzy nowy plik zostanie otwarty i obcina istniejącą grupę. **_wcreat —** to wersja znaku dwubajtowego **_creat —**; *filename* argument **_wcreat —** jest ciągiem znaku dwubajtowego. **_wcreat —** i **_creat —** zachowują się identycznie.
+Funkcja **_creat** tworzy nowy plik lub otwiera i obcina istniejący. **_wcreat** to dwubajtowa wersja **_creat**; argumentem *filename* **_wcreat** jest ciąg znaków dwubajtowych. **_wcreat** i **_creat** zachowują się identycznie w inny sposób.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tcreat —**|**_creat**|**_creat**|**_wcreat**|
+|**_tcreat**|**_creat**|**_creat**|**_wcreat**|
 
-Jeśli plik określony przez *filename* nie istnieje, nowy plik zostanie utworzony przy użyciu ustawienia dane uprawnienie i jest otwarty do zapisu. Jeśli plik już istnieje, a jego ustawienie uprawnienia umożliwia zapisywanie, **_creat —** obcina pliku długość 0, niszczenie poprzednią zawartość i otwiera go do zapisu. Ustawienie uprawnienia *pmode*, dotyczy tylko dla nowo tworzonych plików. Nowy plik odbiera ustawienia określone uprawnienie jest zamknięte po raz pierwszy. Wyrażenia typu całkowitego *pmode* zawiera jeden lub oba stałe manifestu **_S_IWRITE** i **_S_IREAD**zdefiniowaną w SYS\Stat.h. Gdy oba stałe są podane, są połączone przy użyciu bitowego operatora or — operator ( **&#124;** ). *Pmode* parametr jest ustawiony na jedną z następujących wartości.
+Jeśli plik określony przez *filename* nie istnieje, zostanie utworzony nowy plik z danym ustawieniem uprawnień i zostanie on otwarty do zapisu. Jeśli plik już istnieje, a jego ustawienie uprawnień Zezwalaj na zapisywanie, **_creat** obcina plik do długości 0, niszczy poprzednią zawartość i otwiera go do zapisu. Ustawienie uprawnienia *PMODE*ma zastosowanie tylko do nowo utworzonych plików. Nowy plik otrzymuje określone ustawienie uprawnienia po jego pierwszym zamknięciu. Wyrażenie Integer *PMODE* zawiera jedną lub obie stałe manifestu **_S_IWRITE** i **_S_IREAD**, zdefiniowane w SYS\Stat.h. Po otrzymaniu obu stałych są one przyłączone do operatora bitowego or ( **&#124;** ). Parametr *PMODE* jest ustawiony na jedną z następujących wartości.
 
 |Wartość|Definicja|
 |-----------|----------------|
-|**_S_IWRITE**|Zapisywanie jest dozwolone.|
+|**_S_IWRITE**|Dozwolone jest zapisanie.|
 |**_S_IREAD**|Odczytywanie dozwolone.|
-|**_S_IREAD** &#124; **_S_IWRITE**|Odczyt i zapis dozwolone.|
+|**_S_IREAD** &#124; **_S_IWRITE**|Dozwolone odczytywanie i zapisywanie.|
 
-Jeśli uprawnienia do zapisu nie zostanie określony, plik jest tylko do odczytu. Wszystkie pliki są zawsze czytelny; nie jest możliwe przyznać uprawnienia tylko do zapisu. Tryby **_S_IWRITE** i **_S_IREAD** | **_S_IWRITE** następnie są równoważne. Pliki otwierane przy użyciu **_creat —** zawsze są otwarte w trybie zgodności (zobacz [_sopen](sopen-wsopen.md)) za pomocą **_SH_DENYNO**.
+Jeśli nie podano uprawnienia do zapisu, plik jest tylko do odczytu. Wszystkie pliki są zawsze do odczytu; nie można przyznać uprawnień tylko do zapisu. Tryby **_S_IWRITE** i **_S_IREAD** |  **_S_IWRITE** są następnie równoważne. Pliki otwarte przy użyciu **_creat** są zawsze otwierane w trybie zgodności (zobacz [_Sopen](sopen-wsopen.md)) z **_SH_DENYNO**.
 
-**_creat —** stosuje bieżące maskę uprawnień do pliku, aby *pmode* przed ustawieniem uprawnienia (zobacz [_umask —](umask.md)). **_creat —** głównie w celu zachowania zgodności z poprzedniej biblioteki. Wywołanie **_otwórz** z **_O_CREAT** i **_O_TRUNC** w *oflag* parametr jest równoważny **_creat —** i jest preferowane dla nowego kodu.
+**_creat** stosuje bieżącą maskę uprawnień pliku do *PMODE* przed ustawieniem uprawnień (zobacz [_umask](umask.md)). **_creat** jest dostarczany głównie w celu zapewnienia zgodności z poprzednimi bibliotekami. Wywołanie **_open** z **_O_CREAT** i **_O_TRUNC** w parametrze *Oflag* jest równoważne z **_creat** i jest preferowane dla nowego kodu.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
+|Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
 |**_creat**|\<io.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
-|**_wcreat**|\<IO.h > lub \<wchar.h >|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
+|**_wcreat**|\<IO. h > lub \<WCHAR. h >|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -146,7 +149,7 @@ Created data file.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Niskiego poziomu operacji We/Wy](../../c-runtime-library/low-level-i-o.md)<br/>
+[We/wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>
 [_chsize](chsize.md)<br/>
 [_close](close.md)<br/>

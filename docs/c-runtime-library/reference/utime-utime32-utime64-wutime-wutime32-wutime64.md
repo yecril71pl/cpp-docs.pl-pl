@@ -1,14 +1,14 @@
 ---
 title: _utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _utime64
 - _utime
 - _wutime
 - _wutime64
 - _wutime32
 - _utime32
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tutime
 - _utime64
@@ -58,14 +61,14 @@ helpviewer_keywords:
 - tutime64 function
 - tutime32 function
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
-ms.openlocfilehash: 8e52845a828e272ff3b8458b299c3757b8def748
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d55261b59dbf201be9869f3ab9ced2d2cbab5e02
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155449"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945734"
 ---
-# <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
+# <a name="_utime-_utime32-_utime64-_wutime-_wutime32-_wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 
 Ustaw czas modyfikacji pliku.
 
@@ -103,46 +106,46 @@ int _wutime64(
 *Nazwa pliku*<br/>
 Wskaźnik na ciąg, który zawiera ścieżkę lub nazwę pliku.
 
-*czasy*<br/>
-Wskaźnik do wartości przechowywanej czasu.
+*trzykrotn*<br/>
+Wskaźnik do przechowywanych wartości czasu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wartość 0, jeśli czas modyfikacji pliku została zmieniona. Zwracana wartość-1 wskazuje błąd. Jeśli nieprawidłowy parametr został przekazany, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość -1 i **errno** jest ustawiony na jedną z następujących wartości:
+Każda z tych funkcji zwraca wartość 0, jeśli czas modyfikacji pliku został zmieniony. Zwracana wartość-1 wskazuje na błąd. Jeśli przeszedł nieprawidłowy parametr, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość-1 i **errno** na jedną z następujących wartości:
 
 |errno wartość|Warunek|
 |-|-|
-| **EACCES** | Ścieżka Określa katalog lub plik tylko do odczytu |
-| **EINVAL** | Nieprawidłowy *razy* argumentu |
-| **EMFILE** | Zbyt wiele otwartych plików (musi można otworzyć pliku, aby zmienić czas jego modyfikacji) |
-| **ENOENT** | Ścieżka lub nazwa pliku nie można odnaleźć |
+| **EACCES** | Ścieżka Określa plik katalogu lub tylko do odczytu |
+| **EINVAL** | Nieprawidłowy *czas* argumentu |
+| **EMFILE** | Zbyt wiele otwartych plików (plik musi być otwarty, aby zmienić jego czas modyfikacji) |
+| **ENOENT** | Nie znaleziono ścieżki lub nazwy pliku |
 
-Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) kody powrotne — Aby uzyskać więcej informacji na temat tych i innych.
+Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) , aby uzyskać więcej informacji na temat tych i innych kodów powrotu.
 
-Plik można zmienić z datą pod warunkiem, że zmiana daty jest po północy 1 stycznia 1970 r., a wcześniejsza od daty zakończenia funkcji używane. **_utime** i **_wutime** Użyj wartość czasu 64-bitowym, aby data zakończenia jest 23:59:59, 31 grudnia 3000, czasu UTC. Jeśli **_USE_32BIT_TIME_T** zdefiniowano Aby wymusić stare zachowanie, Data zakończenia jest 23:59:59 18 stycznia 2038 r. UTC. **_utime32** lub **_wutime32** używania typu czasu 32-bitowych, niezależnie od tego, czy **_USE_32BIT_TIME_T** jest zdefiniowana i zawsze mieć wcześniej Data zakończenia. **_utime64** lub **_wutime64** zawsze używany jest typ czasu 64-bitowych, więc te funkcje zawsze obsługuje nowszych Data zakończenia.
+Datę można zmienić dla pliku, jeśli data zmiany przypada po północy, 1 stycznia 1970 i przed datą końcową używanej funkcji. **_utime** i **_wutime** używają 64-bitowej wartości czasu, więc data końcowa to 23:59:59, 31 grudnia 3000, UTC. Jeśli **_USE_32BIT_TIME_T** jest zdefiniowany w celu wymuszenia starego zachowania, Data końcowa to 23:59:59 stycznia 18, 2038, UTC. **_utime32** lub **_wutime32** używają 32-bitowego typu czasu, niezależnie od tego, czy **_USE_32BIT_TIME_T** jest zdefiniowany, i zawsze mają wcześniejszą datę końcową. **_utime64** lub **_wutime64** zawsze używają 64-bitowego typu czasu, dzięki czemu te funkcje zawsze obsługują późniejszą datę zakończenia.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Utime** funkcja ustawia czas modyfikacji pliku określonego przez *filename*. Proces musi mieć dostęp do zapisu do pliku, aby można było zmienić czas. W systemie operacyjnym Windows, możesz zmienić czas dostępu i czas modyfikacji w **_utimbuf —** struktury. Jeśli *razy* jest **NULL** wskaźnik, czas modyfikacji jest ustawiony na bieżącym czasem lokalnym. W przeciwnym razie *razy* musi się odnosić do struktury typu **_utimbuf —** zdefiniowaną w SYS\UTIME. H.
+Funkcja **_utime** ustawia czas modyfikacji pliku określonego przez *filename*. Aby można było zmienić czas, proces musi mieć dostęp do zapisu w pliku. W systemie operacyjnym Windows można zmienić czas dostępu i czas modyfikacji w strukturze **_utimbuf** . Jeśli *czas* jest wskaźnikiem o **wartości null** , czas modyfikacji jest ustawiany na bieżący czas lokalny. W przeciwnym razie *czasy* muszą wskazywać na strukturę typu **_utimbuf**, zdefiniowane w SYS\UTIME. C.
 
-**_Utimbuf —** struktury przechowuje czasy dostępu i modyfikacji plików używane przez **_utime** celu zmiany daty modyfikacji pliku. Struktura zawiera następujące pola, które są zarówno typ **time_t**:
+W strukturze **_utimbuf** są przechowywane czasy dostępu i modyfikacji plików używane przez **_utime** w celu zmiany daty modyfikacji pliku. Struktura zawiera następujące pola, które są zarówno typu **time_t**:
 
 | Pole |   |
 |-------|---|
-| **actime** | Czas dostępu do plików |
-| **modtime** | Czas modyfikacji pliku |
+| **actime** | Czas dostępu do pliku |
+| **modtime** | Godzina modyfikacji pliku |
 
-Określone wersje **_utimbuf —** struktury (**_utimebuf32** i **__utimbuf64 —**) są definiowane przy użyciu 32-bitowych i 64-bitowe wersje typu time. Są one używane w 32-bitowych i 64-bitowych określonych wersji tej funkcji. **_utimbuf —** sam domyślnie korzysta z typu czasu 64-bitowych, chyba że **_USE_32BIT_TIME_T** jest zdefiniowana.
+Określone wersje struktury **_utimbuf** ( **_utimebuf32** i **__utimbuf64**) są zdefiniowane przy użyciu 32-bitowych i 64-bitowych wersji typu czasu. Są one używane w 32-bitowych i 64-bitowych wersjach tej funkcji. **_utimbuf** domyślnie używa typu czasu 64-bitowego, chyba że **_USE_32BIT_TIME_T** jest zdefiniowany.
 
-**_utime** jest taka sama jak **_futime** z tą różnicą, że *filename* argument **_utime** jest nazwa pliku lub ścieżkę do pliku, zamiast deskryptor pliku Otwórz plik.
+**_utime** jest identyczny z **_futime** , z tą różnicą, że argument *filename* **_utime** jest nazwą pliku lub ścieżką do pliku, a nie deskryptorem pliku otwartego pliku.
 
-**_wutime** to wersja znaku dwubajtowego **_utime**; *filename* argument **_wutime** jest ciągiem znaku dwubajtowego. Funkcje te zachowują się identycznie.
+**_wutime** to dwubajtowa wersja **_utime**; argumentem *filename* **_wutime** jest ciąg znaków dwubajtowych. Funkcje te zachowują się identycznie w inny sposób.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tutime —**|**_utime**|**_utime**|**_wutime**|
+|**_tutime**|**_utime**|**_utime**|**_wutime**|
 |**_tutime32**|**_utime32**|**_utime32**|**_wutime32**|
 |**_tutime64**|**_utime64**|**_utime64**|**_wutime64**|
 
@@ -152,13 +155,13 @@ Określone wersje **_utimbuf —** struktury (**_utimebuf32** i **__utimbuf64 �
 |-------------|----------------------|----------------------|
 |**_utime**, **_utime32**, **_utime64**|\<sys/utime.h>|\<errno.h>|
 |**_utime64**|\<sys/utime.h>|\<errno.h>|
-|**_wutime**|\<utime.h > lub \<wchar.h >|\<errno.h>|
+|**_wutime**|\<utime. h > lub \<WCHAR. h >|\<errno.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Ten program używa **_utime** Aby ustawić czas modyfikacji pliku do bieżącego czasu.
+Ten program używa **_utime** do ustawienia czasu modyfikacji pliku na bieżącą godzinę.
 
 ```C
 // crt_utime.c
@@ -237,5 +240,5 @@ Directory of C:\test
 [_futime, _futime32, _futime64](futime-futime32-futime64.md)<br/>
 [gmtime, _gmtime32, _gmtime64](gmtime-gmtime32-gmtime64.md)<br/>
 [localtime, _localtime32, _localtime64](localtime-localtime32-localtime64.md)<br/>
-[_stat, _wstat — funkcje](stat-functions.md)<br/>
+[_stat, _wstat Functions](stat-functions.md)<br/>
 [time, _time32, _time64](time-time32-time64.md)<br/>

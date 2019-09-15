@@ -1,10 +1,10 @@
 ---
 title: _putch, _putwch
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putwch
 - _putch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _putch
 - putwch
@@ -29,19 +32,19 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-ms.openlocfilehash: da45744fe56c198cc97228cae8043abbb5436fbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e7d7d57f5418e8c15aa02f015d3346298fa0422
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358160"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950048"
 ---
-# <a name="putch-putwch"></a>_putch, _putwch
+# <a name="_putch-_putwch"></a>_putch, _putwch
 
-Zapisuje znak do konsoli.
+Zapisuje znak w konsoli.
 
 > [!IMPORTANT]
-> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -58,17 +61,17 @@ wint_t _putwch(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak na wyjściu.
+Znak do wyprowadzenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca *c* w przypadku powodzenia. Jeśli **_putch** nie powiedzie się, zwraca **EOF**; Jeśli **_putwch** nie powiedzie się, zwraca **WEOF**.
+Zwraca *c* , jeśli powodzenie. Jeśli **_putch** nie powiedzie się, zwraca **EOF**; Jeśli **_putwch** nie powiedzie się, zwraca **WEOF**.
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje wpisuje znak *c* bezpośrednio, bez buforowania do konsoli. Windows NT **_putwch** zapisuje znaki Unicode przy użyciu bieżących ustawień regionalnych konsoli.
+Te funkcje zapisują znak *c* bezpośrednio, bez buforowania, do konsoli programu. W systemie Windows NT **_putwch** zapisuje znaki Unicode przy użyciu bieżących ustawień regionalnych konsoli.
 
-Wersje **_nolock** sufiksem są identyczne, z tą różnicą, że nie są chronione przed ingerencją przez inne wątki. Aby uzyskać więcej informacji, zobacz **_putch_nolock**, **_putwch_nolock**.
+Wersje z sufiksem **_nolock** są identyczne, z tą różnicą, że nie są chronione przed ingerencją przez inne wątki. Aby uzyskać więcej informacji, zobacz **_putch_nolock**, **_putwch_nolock**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -83,18 +86,18 @@ Wersje **_nolock** sufiksem są identyczne, z tą różnicą, że nie są chroni
 |**_putch**|\<conio.h>|
 |**_putwch**|\<conio.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [_getch](getch-getwch.md).
+Zobacz przykład dla [_getch](getch-getwch.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[We/wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>

@@ -1,9 +1,9 @@
 ---
 title: fread
 ms.date: 11/28/2018
-apiname:
+api_name:
 - fread
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fread
 helpviewer_keywords:
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - data [C++], reading from input stream
 - streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
-ms.openlocfilehash: da3828142a06ed89a6447ccaef4a0d8ff0063cca
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 7cf4542a656798f7e2431b2f939df1b5d6396144
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376184"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956818"
 ---
 # <a name="fread"></a>fread
 
@@ -62,7 +65,7 @@ Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**fread** zwraca liczbę pełnych elementów, które są faktycznie odczytywane, co może być mniejsze niż *Count* , jeśli wystąpi błąd lub jeśli koniec pliku zostanie napotkany przed osiągnięciem *liczby*. Użyj funkcji **feof** lub  odwołującej, aby odróżnić błąd odczytu od stanu końca pliku. Jeśli *rozmiar* lub *Liczba* to 0, **fread** zwraca 0, a zawartość buforu nie jest zmieniana. Jeśli *strumień* lub *bufor* jest wskaźnikiem o wartości null, **fread** wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca wartość 0.
+**fread** zwraca liczbę pełnych elementów, które są faktycznie odczytywane, co może być mniejsze niż *Count* , jeśli wystąpi błąd lub jeśli koniec pliku zostanie napotkany przed osiągnięciem *liczby*. Użyj funkcji **feof** lub odwołującej, aby odróżnić błąd odczytu od stanu końca pliku. Jeśli *rozmiar* lub *Liczba* to 0, **fread** zwraca 0, a zawartość buforu nie jest zmieniana. Jeśli *strumień* lub *bufor* jest wskaźnikiem o wartości null, **fread** wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca wartość 0.
 
 Zobacz [ \_\_doserrno, errno, \_sys errlist i sys\_NERR, aby uzyskać więcej informacji na temat tych kodów błędów. \_](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)
 
@@ -70,7 +73,7 @@ Zobacz [ \_\_doserrno, errno, \_sys errlist i sys\_NERR, aby uzyskać więcej in
 
 Funkcja **fread** odczytuje do *liczby* elementów *w bajtach* *wejściowych i* zapisuje je w *buforze*. Wskaźnik pliku skojarzony ze *strumieniem* (jeśli istnieje) jest zwiększany o liczbę bajtów rzeczywiście odczytanych. Jeśli dany strumień jest otwarty w [trybie tekstowym](../../c-runtime-library/text-and-binary-mode-file-i-o.md), nowy wiersz w stylu systemu Windows jest konwertowany na znaki nowego wiersza systemu UNIX. Oznacza to, że podwójne znaki wysuwu wiersza (CRLF) są zastępowane znakami pojedynczego znaku wysuwu wiersza (LF). Zastąpienie nie ma wpływu na wskaźnik pliku lub wartość zwracaną. Pozycja wskaźnika pliku jest nieokreślona w przypadku wystąpienia błędu. Nie można określić wartości częściowo odczytanego elementu.
 
-W przypadku użycia w strumieniu trybu tekstu, jeśli ilość żądanych danych (czyli *licznik* *rozmiaru* \* ) jest większa lub równa rozmiarowi wewnętrznego buforu **plików** \* (domyślnie jest to 4096 bajtów, można skonfigurować za pomocą [ setvbuf —](../../c-runtime-library/reference/setvbuf.md)) dane przesyłane strumieniowo są kopiowane bezpośrednio do buforu dostarczonego przez użytkownika, a konwersja nowego wiersza jest wykonywana w tym buforze. Ponieważ przekonwertowane dane mogą być krótsze niż dane strumienia skopiowane do bufora, *rozmiar* *RETURN_VALUE* \* *bufora*\[danych poprzedzających] (gdzie *RETURN_VALUE* jest wartością zwracaną z **fread**) może zawierają nieskonwertowane dane z pliku. Z tego powodu zalecamy, aby dane o znakach kończących wartość \[null w buforze*RETURN_VALUE* \* *rozmiar*], jeśli celem buforu jest działanie jako ciąg w stylu języka C. Zobacz [fopen](fopen-wfopen.md) , aby uzyskać szczegółowe informacje na temat skutków trybu tekstowego i trybu binarnego.
+W przypadku użycia w strumieniu trybu tekstu, jeśli ilość żądanych danych (czyli *licznik* *rozmiaru* \* ) jest większa lub równa rozmiarowi wewnętrznego buforu **plików** \* (domyślnie jest to 4096 bajtów, można skonfigurować za pomocą [ setvbuf —](../../c-runtime-library/reference/setvbuf.md)) dane przesyłane strumieniowo są kopiowane bezpośrednio do buforu dostarczonego przez użytkownika, a konwersja nowego wiersza jest wykonywana w tym buforze. Ponieważ przekonwertowane dane mogą być krótsze niż dane strumienia skopiowane do bufora, *rozmiar* *RETURN_VALUE* \* *bufora*\[danych poprzedzających] (gdzie *RETURN_VALUE* jest wartością zwracaną z **fread**) może zawierają nieskonwertowane dane z pliku. Z tego powodu zalecamy, aby dane o znakach kończących wartość null w *buforze*\[*RETURN_VALUE* \* *rozmiar*], jeśli celem buforu jest działanie jako ciąg w stylu języka C. Zobacz [fopen](fopen-wfopen.md) , aby uzyskać szczegółowe informacje na temat skutków trybu tekstowego i trybu binarnego.
 
 Ta funkcja blokuje inne wątki. Jeśli potrzebujesz wersji, która nie jest blokowana, użyj **_fread_nolock**.
 

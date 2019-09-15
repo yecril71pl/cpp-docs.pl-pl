@@ -1,9 +1,9 @@
 ---
 title: wcrtomb_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wcrtomb_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcrtomb_s
 helpviewer_keywords:
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 9a8a1bd0-1d60-463d-a3a2-d83525eaf656
-ms.openlocfilehash: 7fe7fba861eecec562928cf381973f62a4db60fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1612e7fc4e40e05c46f06d8a29b69534c359421
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155475"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945846"
 ---
-# <a name="wcrtombs"></a>wcrtomb_s
+# <a name="wcrtomb_s"></a>wcrtomb_s
 
-Przekonwertuj znakiem dwubajtowym na jego reprezentację w postaci znaku wielobajtowego. Wersja [wcrtomb —](wcrtomb.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Konwertuj znak dwubajtowy na swoją reprezentację znaku wieloznacznego. Wersja [wcrtomb](wcrtomb.md) z ulepszeniami zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,37 +60,37 @@ errno_t wcrtomb_s(
 ### <a name="parameters"></a>Parametry
 
 *pReturnValue*<br/>
-Zwraca liczbę bajtów zapisanych lub wartość -1, jeśli wystąpił błąd.
+Zwraca liczbę bajtów zapisanych lub-1, jeśli wystąpił błąd.
 
 *mbchar*<br/>
-Wynikowy znaków wielobajtowych konwersji znaków.
+Wynikiem konwersji wielobajtowego znaku.
 
 *sizeOfmbchar*<br/>
-Rozmiar *mbchar* zmiennej w bajtach.
+Rozmiar zmiennej *mbchar* w bajtach.
 
-*WChar*<br/>
-Szeroki znak do przekształcenia.
+*WCHAR*<br/>
+Znak dwubajtowy do przekonwertowania.
 
 *mbstate*<br/>
-Wskaźnik do **mbstate_t** obiektu.
+Wskaźnik do obiektu **mbstate_t** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość zero lub **errno** wartość, jeśli wystąpi błąd.
+Zwraca zero lub wartość **errno** , jeśli wystąpi błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-**Wcrtomb_s —** funkcja konwertuje znakiem dwubajtowym, począwszy od stanu określonej konwersji zawarte w *mbstate*, od wartości zawarte w *wchar*, do adres jest reprezentowany przez *mbchar*. *PReturnValue* wartość będzie liczba bajtów przekonwertowany, ale nie więcej niż **MB_CUR_MAX** bajtów lub wartość -1, jeśli wystąpił błąd.
+Funkcja **wcrtomb_s** konwertuje znak dwubajtowy, zaczynając od określonego stanu konwersji zawartego w *mbstate*, z wartości zawartej w *WCHAR*, do adresu reprezentowanego przez *mbchar*. Wartość *pReturnValue* będzie liczbą przekonwertowanych bajtów, ale nie więcej niż **MB_CUR_MAX** bajtów lub wartość-1, jeśli wystąpił błąd.
 
-Jeśli *mbstate* ma wartość null, wewnętrzny **mbstate_t** stan konwersji jest używany. Jeśli znak zawarty w *wchar* nie ma odpowiedniego znaku wielobajtowego wartość *pReturnValue* będzie mieć wartość -1, a funkcja zwróci **errno** wartość **EILSEQ**.
+Jeśli *mbstate* ma wartość null, używany jest wewnętrzny stan konwersji **mbstate_t** . Jeśli znak zawarty w *WCHAR* nie ma odpowiedniego znaku wielobajtowego, wartość *pReturnValue* będzie równa-1, a funkcja zwróci wartość **errno** **EILSEQ**.
 
-**Wcrtomb_s —** funkcja różni się od [wctomb_s —, _wctomb_s_l —](wctomb-s-wctomb-s-l.md) przez jego restartability. Stan konwersji jest przechowywany w *mbstate* dla kolejnych wywołań tej samej lub innych funkcji ponownego uruchamiania. Podczas korzystania z funkcji ponownego uruchamiania i nonrestartable mieszania, wyniki są niezdefiniowane. Na przykład, aplikacja będzie używać **wcsrlen** zamiast **wcslen —**, jeśli kolejne wywołanie **wcsrtombs_s —** były używane zamiast **wcstombs_s —**.
+Funkcja **wcrtomb_s** różni się od [wctomb_s, _wctomb_s_l,](wctomb-s-wctomb-s-l.md) dzięki czemu można jej uruchomić. Stan konwersji jest przechowywany w *mbstate* dla kolejnych wywołań do tych samych lub innych funkcji, które można uruchomić ponownie. Wyniki są niezdefiniowane podczas mieszania użycia funkcji ponownego uruchamiania i nieuruchomionych ponownie. Na przykład aplikacja będzie używać **wcsrlen** zamiast **wcslen**, jeśli zamiast **wcstombs_s**użyto kolejnego wywołania **wcsrtombs_s** .
 
-W języku C++ za pomocą tej funkcji jest uproszczone przez przeciążania szablonu; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując potrzebę określenia argumentu rozmiaru) oraz ich mogą automatycznie zastąpić starsze, niezabezpieczone funkcje ich nowsze, bezpieczne odpowiedniki. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+W C++programie korzystanie z tej funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując konieczność określenia argumentu rozmiaru) i mogą automatycznie zastąpić starsze, niezabezpieczone funkcje z ich nowszymi, bezpiecznymi odpowiednikami. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="exceptions"></a>Wyjątki
 
-**Wcrtomb_s —** funkcja jest bezpieczna wielowątkowych, tak długo, jak wywołania funkcji, nie w bieżącym wątku **setlocale** podczas wykonywania tej funkcji i *mbstate* ma wartość null.
+Funkcja **wcrtomb_s** jest wielowątkowej bezpiecznie, o ile funkcja w bieżącym wątku nie wywołuje metody **setlocaling** , podczas gdy ta funkcja jest wykonywana, a *mbstate* ma wartość null.
 
 ## <a name="example"></a>Przykład
 
@@ -137,7 +140,7 @@ The corresponding wide character "Q" was converted to a the "Q" multibyte charac
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**wcrtomb_s**|\<wchar.h>|
+|**wcrtomb_s**|\<WCHAR. h >|
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,12 +1,12 @@
 ---
 title: _vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vsprintf_p
 - _vswprintf_p
 - _vsprintf_p_l
 - _vswprintf_p_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vsprintf_p
 - _vswprintf_p
@@ -40,16 +43,16 @@ helpviewer_keywords:
 - _vsprintf_p function
 - _vstprintf_p_l function
 ms.assetid: 00821c0d-9fee-4d8a-836c-0669cfb11317
-ms.openlocfilehash: 15f368da84eb9cbf8c394a0e9b5eeec2611c3f7f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e684bebc0a997e25963366b64fbab6d4f958e8eb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383441"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945239"
 ---
-# <a name="vsprintfp-vsprintfpl-vswprintfp-vswprintfpl"></a>_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
+# <a name="_vsprintf_p-_vsprintf_p_l-_vswprintf_p-_vswprintf_p_l"></a>_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
 
-Napisz sformatowane wyniki za pomocą wskaźnika do listy argumentów, za pomocą możliwość określenia kolejność, w której argumenty są używane.
+Napisz sformatowane dane wyjściowe przy użyciu wskaźnika do listy argumentów, z możliwością określenia kolejności, w której są używane argumenty.
 
 ## <a name="syntax"></a>Składnia
 
@@ -85,40 +88,40 @@ int _vswprintf_p_l(
 ### <a name="parameters"></a>Parametry
 
 *buffer*<br/>
-Lokalizacja magazynowa danych wyjściowych.
+Lokalizacja magazynu dla danych wyjściowych.
 
 *sizeInBytes*<br/>
 Rozmiar *buforu* w znakach.
 
-*Liczba*<br/>
-Maksymalna liczba znaków do przechowywania w wersji UNICODE tej funkcji.
+*liczbą*<br/>
+Maksymalna liczba znaków do zapisania w wersji UNICODE tej funkcji.
 
-*Format*<br/>
+*format*<br/>
 Specyfikacja formatu.
 
 *argptr*<br/>
-Wskaźnik do listy argumentów.
+Wskaźnik na listę argumentów.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_vsprintf_p —** i **_vswprintf_p —** zwracają liczbę znaków napisanych, nie wliczając kończącego znaku null lub wartość ujemną, jeśli wystąpi błąd danych wyjściowych.
+**_vsprintf_p** i **_vswprintf_p** zwracają liczbę znaków, bez uwzględnienia kończącego znaku null, lub wartość ujemną, jeśli wystąpi błąd danych wyjściowych.
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji pobiera wskaźnik do listy argumentów, a następnie formatuje i zapisuje dostarczone dane do pamięci wskazywany przez *buforu*.
+Każda z tych funkcji Pobiera wskaźnik do listy argumentów, a następnie formatuje i zapisuje dane w pamięci wskazywanej przez *bufor*.
 
-Funkcje te różnią się od **vsprintf_s —** i **vswprintf_s —** tylko dlatego, że obsługują one parametry pozycyjne. Aby uzyskać więcej informacji, zobacz [printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md).
+Funkcje te różnią się od **vsprintf_s** i **vswprintf_s** tylko w przypadku, gdy obsługują parametry pozycyjne. Aby uzyskać więcej informacji, zobacz [Printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md).
 
-Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych wątku.
+Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korzystają z przekazaną parametrem ustawień regionalnych zamiast bieżących ustawień regionalnych wątku.
 
-Jeśli *buforu* lub *format* parametry są **NULL** wskaźników, jeśli liczba jest równa zero, lub jeśli ciąg formatu zawiera nieprawidłowe formatowanie znaków, nieprawidłowy parametr Program obsługi zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość -1 i ustaw **errno** do **EINVAL**.
+Jeśli *bufor* lub parametry *formatu* są wskaźnikami o **wartości null** , jeśli licznik ma wartość zero lub jeśli ciąg formatu zawiera nieprawidłowe znaki formatowania, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcje zwracają wartość-1 i ustawiają **errno** na **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vstprintf_p**|**_vsprintf_p**|**_vsprintf_p**|**_vswprintf_p**|
 |**_vstprintf_p_l**|**_vsprintf_p_l**|**_vsprintf_p_l**|**_vswprintf_p_l**|
@@ -127,12 +130,12 @@ Jeśli *buforu* lub *format* parametry są **NULL** wskaźników, jeśli liczba 
 
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
 |-------------|---------------------|----------------------|
-|**_vsprintf_p**, **_vsprintf_p_l**|\<stdio.h > i \<stdarg.h >|\<varargs.h>*|
-|**_vswprintf_p**, **_vswprintf_p_l**|\<stdio.h > lub \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|
+|**_vsprintf_p**, **_vsprintf_p_l**|\<stdio. h > i \<STDARG. h >|\<varargs.h>*|
+|**_vswprintf_p**, **_vswprintf_p_l**|\<stdio. h > lub \<WCHAR. h > i \<STDARG. h >|\<varargs.h>*|
 
-\* Wymagane dla zgodności systemu UNIX V.
+\*Wymagane w przypadku zgodności z systemem UNIX V.
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -185,7 +188,7 @@ This is a string
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [vprintf, funkcje](../../c-runtime-library/vprintf-functions.md)<br/>
 [Składnia specyfikacji formatu: funkcje printf i wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>

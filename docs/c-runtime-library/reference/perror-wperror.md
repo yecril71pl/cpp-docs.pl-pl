@@ -1,10 +1,10 @@
 ---
 title: perror, _wperror
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wperror
 - perror
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wperror
 - _tperror
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - _wperror function
 - perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
-ms.openlocfilehash: c9026a96ecc74640eb2bcd7004d5d1e0fc287e38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 755b638f320fcc583faecfe6aa82269e4e1b3d8f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156109"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951035"
 ---
-# <a name="perror-wperror"></a>perror, _wperror
+# <a name="perror-_wperror"></a>perror, _wperror
 
-Wydrukuj komunikat o błędzie.
+Drukuj komunikat o błędzie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -55,38 +58,38 @@ void _wperror(
 ### <a name="parameters"></a>Parametry
 
 *komunikat*<br/>
-Ciąg komunikatu do drukowania.
+Komunikat ciągu do wydrukowania.
 
 ## <a name="remarks"></a>Uwagi
 
-**Perror** funkcja drukuje komunikat o błędzie do **stderr**. **_wperror —** to wersja znaku dwubajtowego **_perror**; *komunikat* argument **_wperror —** jest ciągiem znaku dwubajtowego. **_wperror —** i **_perror** zachowują się identycznie.
+Funkcja **pError** drukuje komunikat o błędzie do **stderr**. **_wperror** to dwubajtowa wersja **_perror**; argumentem *komunikatu* **_wperror** jest ciąg znaków dwubajtowych. **_wperror** i **_perror** zachowują się identycznie w inny sposób.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tperror —**|**perror**|**perror**|**_wperror**|
+|**_tperror**|**pError**|**pError**|**_wperror**|
 
-*komunikat* najpierw, wydrukowaniu, a następnie dwukropek, a następnie komunikat o błędzie systemu dla ostatniego wywołania biblioteki, które spowodowało błąd, a na koniec znakiem nowego wiersza. Jeśli *komunikat* jest wskaźnikiem typu null lub wskaźnikiem do ciągu o wartości null, **perror** drukuje tylko system komunikat o błędzie.
+*komunikat* jest drukowany po raz pierwszy, po którym następuje dwukropek, następnie komunikat o błędzie systemu dla ostatniego wywołania biblioteki, które wygenerowało błąd, i na koniec przez znak nowego wiersza. Jeśli *komunikat* jest wskaźnikiem typu null lub wskaźnikiem do ciągu o wartości null, **pError** drukuje tylko komunikat o błędzie systemowym.
 
-Numer błędu jest przechowywana w zmiennej [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (zdefiniowany w numer błędu. GODZ.). Komunikaty o błędach systemu są dostępne za pośrednictwem zmiennej [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), który jest tablicą wiadomości według wielkości błędu. **perror** wyświetli odpowiedni komunikat o błędzie komunikat przy użyciu **errno** wartość jako indeksu do **_sys_errlist**. Wartość zmiennej [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) jest zdefiniowana jako maksymalna liczba elementów w **_sys_errlist** tablicy.
+Numer błędu jest przechowywany w zmiennej [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (zdefiniowanej w errno. H). Do komunikatów o błędach systemu uzyskuje się dostęp za pomocą zmiennej [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), która jest tablicą komunikatów uporządkowanych według numeru błędu. **pError** drukuje odpowiedni komunikat o błędzie przy użyciu wartości **errno** jako indeksu do **_sys_errlist**. Wartość zmiennej [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) jest definiowana jako maksymalna liczba elementów w tablicy **_sys_errlist** .
 
-Aby uzyskać dokładne wyniki, należy wywołać **perror** natychmiast, po procedurze biblioteki zwraca błąd. W przeciwnym razie kolejnych wywołań może spowodować zastąpienie **errno** wartości.
+Aby uzyskać dokładne wyniki, należy wywołać **pError** natychmiast po wykonaniu procedury biblioteki z błędem. W przeciwnym razie kolejne wywołania mogą zastąpić wartość **errno** .
 
-W Windows system operacyjny, niektóre **errno** wartości na liście numer błędu. H są nieużywane. Te wartości są zarezerwowane do użytku przez system operacyjny UNIX. Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) listę **errno** wartości używane przez system operacyjny Windows. **perror** drukuje pusty ciąg dla każdego **errno** wartość nie jest używana przez te platformy.
+W systemie operacyjnym Windows niektóre wartości **errno** wymienione w errno. H nie jest używane. Te wartości są zarezerwowane do użytku przez system operacyjny UNIX. Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr,](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) aby zapoznać się z listą wartości **errno** używanych przez system operacyjny Windows. **pError** drukuje pusty ciąg dla dowolnej wartości **errno** , która nie jest używana przez te platformy.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**perror**|\<stdio.h > lub \<stdlib.h >|
-|**_wperror**|\<stdio.h > lub \<wchar.h >|
+|**pError**|\<stdio. h > lub \<STDLIB. h >|
+|**_wperror**|\<stdio. h > lub \<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 

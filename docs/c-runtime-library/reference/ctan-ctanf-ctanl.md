@@ -1,11 +1,11 @@
 ---
-title: ctan ctanf, ctanl
+title: ctan, ctanf, ctanl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ctan
 - ctanf
 - ctanl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ctan
 - ctanf
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - ctanf function
 - ctanl function
 ms.assetid: d3cbd25c-1e93-4a6d-8154-da42921f7223
-ms.openlocfilehash: 2d4da5a39658e46bc633ae3bd9c8f6f0a01555aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d1275f795ae68777515e833a19f2b90f4fedf93
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288757"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938442"
 ---
-# <a name="ctan-ctanf-ctanl"></a>ctan ctanf, ctanl
+# <a name="ctan-ctanf-ctanl"></a>ctan, ctanf, ctanl
 
 Pobiera tangens liczby zespolonej.
 
@@ -64,28 +67,28 @@ _Lcomplex ctanl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Liczby zespolonej, który reprezentuje kąt w radianach.
+Liczba złożona, która reprezentuje kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Tangens *z*.
+Tangens *z.*
 
-|Dane wejściowe|Wyjątek SEH|**_matherr** wyjątku|
+|Dane wejściowe|Wyjątek SEH|**_matherr** Oprócz|
 |-----------|-------------------|--------------------------|
-|∞; GRANICACH, QNAN, ZNAJDŹ|brak|_DOMAIN|
-|∞; granicach (**tan**, **tanf —**)|NIEPRAWIDŁOWY|_DOMAIN|
+|± ∞, QNAN, IND|brak|_DOMAIN|
+|± ∞ (**Tan**, **TANF —** )|NIEPRAWIDŁOWY|_DOMAIN|
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **ctan** przyjmujące i zwracające **_Fcomplex** i **_Lcomplex** wartości. W programie C **ctan** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **CTAN** , które pobierają i zwracają wartości **_Fcomplex** i **_Lcomplex** . W programie C **CTAN** zawsze przyjmuje i zwraca wartość **_Dcomplex** .
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|Nagłówek języka C++|
+|Procedura|Nagłówek języka C|C++nagłówki|
 |-------------|--------------|------------------|
-|**ctan**, **ctanf**, **ctanl**|\<complex.h>|\<ccomplex>|
+|**CTAN**, **ctanf**, **ctanl**|\<complex.h>|\<ccomplex>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

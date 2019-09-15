@@ -1,14 +1,14 @@
 ---
 title: strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strncat
 - _strncat_l
 - _mbsncat
 - _mbsncat_l
 - wcsncat
 - wcsncat_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcsncat_l
 - _wcsncat_l
@@ -58,12 +61,12 @@ helpviewer_keywords:
 - _mbsncat_l function
 - tcsncat function
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-ms.openlocfilehash: 2165ab1c379c89be658341b154f2d5823b2add0b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f27c2cb9b59d789e34da19b531a20d13475e62ee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499439"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947345"
 ---
 # <a name="strncat-_strncat_l-wcsncat-_wcsncat_l-_mbsncat-_mbsncat_l"></a>strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 
@@ -143,14 +146,14 @@ Zwraca wskaźnik do ciągu docelowego. Żadna wartość zwracana nie jest zareze
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **strncat** dołącza co najwyżej liczbę pierwszych znaków *strSource* do *strDest*. Początkowy znak *strSource* zastępuje kończący znak null z *strDest*. Jeśli znak null zostanie wyświetlony w *strSource* przed dołączeniem znaków *Count* , **strncat** dołącza wszystkie znaki z *strSource*, do znaku null. Jeśli *Liczba* jest większa niż długość *StrSource*, długość *strSource* jest używana zamiast *liczby*. We wszystkich przypadkach otrzymany ciąg jest zakończony znakiem null. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
+Funkcja **strncat** dołącza co najwyżej *liczbę pierwszych znaków* *strSource* do *strDest*. Początkowy znak *strSource* zastępuje kończący znak null z *strDest*. Jeśli znak null zostanie wyświetlony w *strSource* przed dołączeniem znaków *Count* , **strncat** dołącza wszystkie znaki z *strSource*, do znaku null. Jeśli *Liczba* jest większa niż długość *StrSource*, długość *strSource* jest używana zamiast *liczby*. We wszystkich przypadkach otrzymany ciąg jest zakończony znakiem null. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
 
 > [!IMPORTANT]
-> **strncat** nie sprawdza wystarczającej ilości miejsca w *strDest*; w związku z tym jest to potencjalna przyczyna przepełnienia buforu. Należy pamiętać, że *licznik* ogranicza liczbę znaków dołączanych; nie jest to limit rozmiaru *strDest*. Zobacz Poniższy przykład. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
+> **strncat** nie sprawdza wystarczającej ilości miejsca w *strDest*; w związku z tym jest to potencjalna przyczyna przepełnienia buforu. Należy pamiętać, że *licznik* ogranicza liczbę znaków dołączanych; nie jest to limit rozmiaru *strDest*. Zobacz Poniższy przykład. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 **wcsncat** i **_mbsncat** są wersjami znaków dwubajtowych i znakami wieloznacznymi **strncat**. Argumenty ciągów i wartość zwracana przez **wcsncat** są ciągami znaków dwubajtowych; te z **_mbsncat** są ciągami znaków wielobajtowych. Te trzy funkcje zachowują się identycznie w inny sposób.
 
-Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawień regionalnych; Aby [](setlocale-wsetlocale.md) uzyskać więcej informacji, zobacz setlocals. Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. wersje z sufiksem **_l** są identyczne, z tą różnicą, że w zamian korzystają z przekazaną parametrem ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocals](setlocale-wsetlocale.md) . Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. wersje z sufiksem **_l** są identyczne, z tą różnicą, że w zamian korzystają z przekazaną parametrem ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 W C++programie te funkcje mają przeciążenia szablonów. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 

@@ -1,7 +1,7 @@
 ---
 title: vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vsnprintf
 - _vsnprintf_l
 - _vsnwprintf
@@ -12,7 +12,7 @@ apiname:
 - _vsnwprintf;
 - _vsnprintf_l;
 - _vsnwprintf_l;
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -24,7 +24,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ntoskrnl.exe
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _vsnprintf
 - _vsnwprintf
@@ -52,12 +55,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-ms.openlocfilehash: 2e665562f3dd8ee0be70b4e50068955a91233c60
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 721ea80272f7a76e959528ec4114d69bd0e80507
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499078"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945314"
 ---
 # <a name="vsnprintf-_vsnprintf-_vsnprintf_l-_vsnwprintf-_vsnwprintf_l"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
@@ -160,7 +163,7 @@ Aby uzyskać więcej informacji, zobacz temat [Formatowanie specyfikacji](../../
 
 Funkcja **vsnprintf** zwraca liczbę znaków pisanych, a nie zlicza kończącego znaku null. Jeśli rozmiar buforu określony przez *licznik* nie jest wystarczająco duży, aby można było zawierać dane wyjściowe określone przez *Format* i *argptr*, zwracana wartość **vsnprintf** jest liczbą znaków, które mają być zapisywane, a nie zlicza wartości null znak, jeśli *Liczba* była wystarczająco duża. Jeśli wartość zwracana jest większa niż *Liczba* -1, dane wyjściowe zostały obcięte. Zwracana wartość-1 wskazuje, że wystąpił błąd kodowania.
 
-Funkcje **_vsnprintf** i **_vsnwprintf** zwracają liczbę znaków napisanych, jeśli liczba znaków do zapisania jest mniejsza lub równa liczbie. Jeśli liczba znaków do zapisania jest większa niż *Liczba*, te funkcje zwracają wartość-1 wskazującą, że dane wyjściowe zostały obcięte.
+Funkcje **_vsnprintf** i **_vsnwprintf** zwracają liczbę znaków napisanych, jeśli liczba znaków do zapisania jest mniejsza lub równa *liczbie.* Jeśli liczba znaków do zapisania jest większa niż *Liczba*, te funkcje zwracają wartość-1 wskazującą, że dane wyjściowe zostały obcięte.
 
 Wartość zwracana przez wszystkie te funkcje nie obejmuje kończącej wartości null, niezależnie od tego, czy jest ona zapisywana. Gdy *Liczba* jest równa zero, zwracana wartość jest liczbą znaków, które mogą być zapisywane przez funkcje, bez uwzględniania żadnego kończącego null. Możesz użyć tego wyniku do przydzielenia wystarczającej ilości miejsca w buforze dla ciągu i jego końcowej wartości null, a następnie ponownie wywołaj funkcję, aby wypełnić bufor.
 
@@ -171,7 +174,7 @@ Jeśli *Format* ma **wartość null**lub jeśli *bufor* ma **wartość null** , 
 Każda z tych funkcji Pobiera wskaźnik do listy argumentów, a następnie formatuje dane i zapisuje do *liczby* znaków w pamięci wskazywanej przez *bufor*. Funkcja **vsnprintf** zawsze zapisuje terminator o wartości null, nawet jeśli obcina dane wyjściowe. W przypadku korzystania z **_vsnprintf** i **_vsnwprintf**bufor będzie zakończony wartością null tylko wtedy, gdy występuje miejsce na końcu (to oznacza, że liczba znaków do zapisania jest mniejsza niż *Liczba*).
 
 > [!IMPORTANT]
-> Aby uniknąć pewnego rodzaju zagrożeń bezpieczeństwa, upewnij się, że *Format* nie jest ciągiem zdefiniowanym przez użytkownika. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
+> Aby uniknąć pewnego rodzaju zagrożeń bezpieczeństwa, upewnij się, że *Format* nie jest ciągiem zdefiniowanym przez użytkownika. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 > [!NOTE]
 > Aby upewnić się, że istnieje pomieszczenie dla kończącego wartości null podczas wywoływania **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** i **_vsnwprintf_l**, należy się upewnić, że *Liczba* jest ściśle mniejsza niż długość buforu i zainicjować bufor do wartość zerowa przed wywołaniem funkcji.

@@ -1,9 +1,9 @@
 ---
 title: cwait
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cwait
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,22 +14,25 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cwait
 helpviewer_keywords:
 - cwait function
 ms.assetid: 1ad1ab19-02e5-4155-94ca-f02c2d5a90a6
-ms.openlocfilehash: 0d59898318f85f2316e5b89f7211b70ea7b75700
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7981cfb40467dcbe662536ac21b38c242b1bfc4c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155969"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950890"
 ---
 # <a name="cwait"></a>cwait
 
-Ta funkcja POSIX jest niezalecana. Użyj ISO C++ zgodność [_cwait](cwait.md) zamiast tego.
+Ta funkcja POSIX jest przestarzała. Zamiast tego użyj C++ zgodnej z normą ISO [_cwait](cwait.md) .
 
 > [!IMPORTANT]
-> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

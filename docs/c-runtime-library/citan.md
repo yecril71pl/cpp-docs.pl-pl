@@ -1,9 +1,9 @@
 ---
 title: _CItan
 ms.date: 04/11/2018
-apiname:
+api_name:
 - _CItan
-apilocation:
+api_location:
 - msvcr100.dll
 - msvcr110_clr0400.dll
 - msvcr80.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr90.dll
 - msvcr120.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CItan
 - CItan
@@ -20,16 +23,16 @@ helpviewer_keywords:
 - CItan intrinsic
 - _CItan intrinsic
 ms.assetid: d1ea3113-50a2-45a6-b6bc-680fcdcc0928
-ms.openlocfilehash: d64ce3e187a055185a82868988825c418b3f54bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e509d785648148e51004950076147b69c2db18ec
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344788"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940467"
 ---
-# <a name="citan"></a>_CItan
+# <a name="_citan"></a>_CItan
 
-Oblicza tangens najwyższą wartość na stosu zmiennoprzecinkowego.
+Oblicza tangens górnej wartości na stosie zmiennoprzecinkowym.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,9 +42,9 @@ void __cdecl _CItan();
 
 ## <a name="remarks"></a>Uwagi
 
-Ta wersja [tan](../c-runtime-library/reference/tan-tanf-tanl.md) funkcja ma specjalne Konwencja wywoływania obsługującą przez kompilator. Funkcja przyspiesza wykonywanie, ponieważ uniemożliwia kopie generowany i pomaga w alokacja rejestru.
+Ta wersja funkcji [Tan](../c-runtime-library/reference/tan-tanf-tanl.md) ma wyspecjalizowaną konwencję wywoływania, którą rozpoznaje kompilator. Funkcja przyspiesza wykonywanie, ponieważ uniemożliwia generowanie kopii i pomaga w zarejestrowaniu alokacji.
 
-Wartość wynikowa są wypychane na górze stosu zmiennoprzecinkowego.
+Wartość wyników jest wypychana na górze stosu zmiennoprzecinkowego.
 
 ## <a name="requirements"></a>Wymagania
 

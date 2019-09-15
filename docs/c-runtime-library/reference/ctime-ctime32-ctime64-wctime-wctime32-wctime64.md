@@ -1,14 +1,14 @@
 ---
 title: ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ctime64
 - _wctime32
 - ctime
 - _wctime64
 - _ctime32
 - _wctime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wctime64
 - _ctime32
@@ -50,16 +53,16 @@ helpviewer_keywords:
 - wctime function
 - time, converting
 ms.assetid: 2423de37-a35c-4f0a-a378-3116bc120a9d
-ms.openlocfilehash: d1858a36c68a2ca5cedf70a1d74d5f250cbac8df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee802e9e6ddef839f08cf6dab6573f404328b2c6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288606"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937759"
 ---
-# <a name="ctime-ctime32-ctime64-wctime-wctime32-wctime64"></a>ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
+# <a name="ctime-_ctime32-_ctime64-_wctime-_wctime32-_wctime64"></a>ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
 
-Konwertuj na wartość godziny na ciąg, a następnie dostosować ustawienia strefy czasu lokalnego. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [ctime_s, _ctime32_s, _ctime64_s —, _wctime_s —, _wctime32_s, _wctime64_s —](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md).
+Przekonwertuj wartość czasu na ciąg i Dostosuj ustawienia lokalnej strefy czasowej. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -79,54 +82,54 @@ Wskaźnik na czas przechowywania do przekonwertowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik wynikowy ciąg znaków. **Wartość NULL** zostanie zwrócona, jeśli:
+Wskaźnik do wyniku ciągu znaków. **Wartość null** zostanie zwrócona, jeśli:
 
-- *sourceTime* reprezentuje datę wcześniejszą o północy, 1 stycznia 1970 r., czasu UTC.
+- *sourceTime* reprezentuje datę sprzed północy, 1 stycznia 1970, UTC.
 
-- Jeśli używasz **_ctime32 —** lub **_wctime32 —** i *sourceTime* reprezentuje datę wypadającą po 23:59:59 18 stycznia 2038 r. UTC.
+- Jeśli używasz **_ctime32** lub **_wctime32** i *SourceTime* reprezentuje datę po 23:59:59 stycznia 18, 2038, UTC.
 
-- Jeśli używasz **_ctime64** lub **_wctime64** i *sourceTime* reprezentuje datę wypadającą po 23:59:59, 31 grudnia 3000, czasu UTC.
+- Jeśli używasz **_ctime64** lub **_wctime64** i *sourceTime* reprezentuje datę z PRZE23:59:59 grudnia, 3000, UTC.
 
-**ctime** jest funkcją śródwierszową, co jest ewaluowane jako **_ctime64** i **time_t** jest odpowiednikiem **__time64_t —**. Jeśli chcesz wymusić na kompilatorze interpretowanie **time_t** jako stary 32-bitowy **time_t**, można zdefiniować **_USE_32BIT_TIME_T**. Takie działanie spowoduje **ctime** na **_ctime32 —**. Nie jest to zalecane, ponieważ aplikacja może przestać działać po 18 stycznia 2038 r. i nie jest dozwolone na platformach 64-bitowych.
+**CTime** jest funkcją wbudowaną, która oblicza wartość **_ctime64** i **time_t** jest odpowiednikiem **__time64_t**. Jeśli trzeba wymusić, aby kompilator interpretował **time_t** jako stary 32-bitowy **time_t**, można zdefiniować **_USE_32BIT_TIME_T**. Spowoduje to **CTime** do **_ctime32**. Nie jest to zalecane, ponieważ aplikacja może zakończyć się niepowodzeniem po 18 stycznia 2038 i nie jest dozwolona na platformach 64-bitowych.
 
 ## <a name="remarks"></a>Uwagi
 
-**Ctime** funkcja konwertuje wartość czasu, przechowywane jako [time_t](../../c-runtime-library/standard-types.md) wartość na ciąg znaków. *SourceTime* wartość zwykle jest uzyskiwana w wyniku wywołania [czasu](time-time32-time64.md), która zwraca liczbę sekund, które upłynęły od północy (00: 00:00), 1 stycznia 1970 r., skoordynowanego czasu uniwersalnego (UTC). Ciągu wartość zwracana zawiera dokładnie 26 znaków i ma postać:
+Funkcja **CTime** konwertuje wartość czasu przechowywaną jako wartość [time_t](../../c-runtime-library/standard-types.md) w ciągu znaków. Wartość *sourceTime* jest zazwyczaj uzyskiwana z wywołania [czasu](time-time32-time64.md), która zwraca liczbę sekund, które upłynęły od północy (00:00:00), 1 stycznia 1970, uniwersalny czas koordynowany (UTC). Ciąg wartości zwracanej zawiera dokładnie 26 znaków i ma postać:
 
 ```Output
 Wed Jan 02 02:03:55 1980\n\0
 ```
 
-Używany jest zegar 24-godzinny. Wszystkie pola są stałej szerokości. Znak nowego wiersza (\n) i znak null (\0) zajmują się dwie ostatnie pozycje ciągu.
+Używany jest zegar 24-godzinny. Wszystkie pola mają stałą szerokość. Znak nowego wiersza ("\n") i znak null ("\ 0") zajmują ostatnie dwa pozycje ciągu.
 
-Ciąg przekonwertowany znak również jest dostosowywany zgodnie z ustawieniami strefy czasu lokalnego. Zobacz [czasu](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md), i [localtime](localtime-localtime32-localtime64.md) funkcji, aby uzyskać informacje na temat konfigurowania lokalnego czasu i [_tzset —](tzset.md) działać w ramach szczegółowe informacje na temat definiowania środowiska strefy czasowej i zmienne globalne.
+Przekonwertowany ciąg znaków jest również dostosowywany zgodnie z ustawieniami lokalnej strefy czasowej. Zobacz funkcje [Time](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md)i [localtime](localtime-localtime32-localtime64.md) , aby uzyskać informacje dotyczące konfigurowania czasu lokalnego i funkcji [_tzset](tzset.md) w celu uzyskania szczegółowych informacji na temat definiowania środowiska strefy czasowej i zmiennych globalnych.
 
-Wywołanie **ctime** modyfikuje pojedynczego buforu statycznie przydzielanego posługują się **gmtime** i **localtime** funkcji. Każde wywołanie jednej z tych procedur niszczy wynik poprzedniego wywołania. **ctime** udostępnia statyczny bufor o **asctime —** funkcji. W związku z tym, wywołanie **ctime** niszczy wyniki każdego poprzedniego wywołania do **asctime —**, **localtime**, lub **gmtime**.
+Wywołanie **CTime** modyfikuje pojedynczy statycznie przydzielonego bufora używany przez funkcje **gmtime** i **localtime** . Każde wywołanie jednej z tych procedur niszczy wynik poprzedniego wywołania. **CTime** udostępnia bufor statyczny za pomocą funkcji **asctime** . W rezultacie wywołanie **CTime** niszczy wyniki dowolnego poprzedniego wywołania do **asctime**, **localtime**lub **gmtime**.
 
-**_wctime** i **_wctime64** to wersja znaku dwubajtowego **ctime** i **_ctime64**; zwracającej wskaźnik do ciągu znaków dwubajtowych. W przeciwnym razie **_ctime64**, **_wctime**, i **_wctime64** zachowują się identycznie do **ctime**.
+**_wctime** i **_wctime64** to dwubajtowa wersja **CTime** i **_ctime64**; Zwracanie wskaźnika do ciągu o szerokim znaku. W przeciwnym razie, **_ctime64**, **_wctime**i **_wctime64** zachowują się identycznie w **CTime**.
 
-Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *sourceTime* jest wskaźnikiem typu null, lub jeśli *sourceTime* wartość jest ujemna, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **NULL** i ustaw **errno** do **EINVAL**.
+Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *sourceTime* jest wskaźnikiem typu null lub jeśli wartość *sourceTime* jest ujemna, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcje zwracają **wartość null** i ustawiają **errno** na **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tctime —**|**ctime —**|**ctime —**|**_wctime**|
+|**_tctime**|**CTime**|**CTime**|**_wctime**|
 |**_tctime32**|**_ctime32**|**_ctime32**|**_wctime32**|
-|**_tctime64 —**|**_ctime64**|**_ctime64**|**_wctime64**|
+|**_tctime64**|**_ctime64**|**_ctime64**|**_wctime64**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**ctime —**|\<time.h>|
+|**CTime**|\<time.h>|
 |**_ctime32**|\<time.h>|
 |**_ctime64**|\<time.h>|
-|**_wctime**|\<Time.h > lub \<wchar.h >|
-|**_wctime32**|\<Time.h > lub \<wchar.h >|
-|**_wctime64**|\<Time.h > lub \<wchar.h >|
+|**_wctime**|\<Time. h > lub \<WCHAR. h >|
+|**_wctime32**|\<Time. h > lub \<WCHAR. h >|
+|**_wctime64**|\<Time. h > lub \<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

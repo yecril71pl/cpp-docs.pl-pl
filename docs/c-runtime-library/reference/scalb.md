@@ -1,10 +1,10 @@
 ---
 title: _scalb, _scalbf
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _scalb
 - _scalbf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - scalb
 - _scalb
@@ -27,16 +30,16 @@ helpviewer_keywords:
 - _scalbf function
 - scalb function
 ms.assetid: 148cf5a8-b405-44bf-a1f0-7487adba2421
-ms.openlocfilehash: c3f776ec27c365601d4fe57fb6cf0a5c9b9e0cbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 630a5e3db2c39cb40d31c71e6a6dfa214ed91e34
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357216"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948881"
 ---
-# <a name="scalb-scalbf"></a>_scalb, _scalbf
+# <a name="_scalb-_scalbf"></a>_scalb, _scalbf
 
-Argument skali przez potęgą liczby 2.
+Skaluje argument z potęgą 2.
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,28 +57,28 @@ float _scalbf(
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Wartość podwójnej precyzji, zmiennoprzecinkowych.
+Wartość zmiennoprzecinkowa o podwójnej precyzji.
 
-*exp*<br/>
-Wykładnik liczba całkowita typu Long.
+*EXP*<br/>
+Wykładnik długiej liczby całkowitej.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość wykładniczą, jeśli to się powiedzie. Przy przepełnieniu (w zależności od jej znaku *x*), **_scalb —** zwraca wartość +/- **HUGE_VAL**; **errno** zmienna jest ustawiona na  **ERANGE**.
+Zwraca wartość wykładniczą, jeśli powodzenie. W przypadku przepełnienia (w zależności od znaku *x*) **_scalb** zwraca +/- **HUGE_VAL**; zmienna **errno** jest ustawiona na **ERANGE**.
 
-Aby uzyskać więcej informacji na temat tego i innych kodach powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tego i innych kodów powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_Scalb —** funkcja oblicza wartość *x* \* 2<sup>*exp*</sup>.
+Funkcja **_scalb** oblicza wartość *x* \* 2<sup>*EXP*</sup>.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_scalb —**, **_scalbf**|\<float.h>|
+|**_scalb**, **_scalbf**|\<float.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
