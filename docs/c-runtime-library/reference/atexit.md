@@ -1,9 +1,9 @@
 ---
 title: atexit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - atexit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,23 +14,26 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - atexit
 helpviewer_keywords:
 - processing, at exit
 - atexit function
 ms.assetid: 92c156d2-8052-4e58-96dc-00128baac6f9
-ms.openlocfilehash: 48f0fbfa1f3350f73899fcdbb3bf7922f1c6174d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b91e6dad81f006b0b94ac17a940e840386f6d2b1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341590"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939659"
 ---
 # <a name="atexit"></a>atexit
 
-Przetwarza określona funkcja przy wyjściu.
+Przetwarza określoną funkcję przy zamykaniu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,20 +45,20 @@ int atexit(
 
 ### <a name="parameters"></a>Parametry
 
-*FUNC*<br/>
-Funkcja do wywołania.
+*func*<br/>
+Funkcja, która ma zostać wywołana.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**atexit** zwraca 0 w przypadku powodzenia lub wartość różną od zera, jeśli wystąpi błąd.
+**atexit —** zwraca wartość 0, jeśli zakończyło się pomyślnie, lub o wartości niezerowej, jeśli wystąpi błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-**Atexit** funkcji jest przekazywany adresu funkcji *func* wywoływana, gdy program zakończy się normalnie. Kolejne wywołania **atexit** tworzenia rejestru funkcji, które zostały wykonane w porządku FIFO (LIFO) — ostatni na wejściu,. Funkcje przekazane do **atexit** nie przyjmuje parametrów. **atexit** i **_onexit** umożliwia przechowywania rejestru funkcje sterty. W związku z tym liczbę funkcji, które mogą być rejestrowane jest jedynym ograniczeniem pamięć sterty.
+Funkcja **atexit —** przekazuje adres funkcji *Func* do wywołania, gdy program kończy normalne działanie. Kolejne wywołania do **atexit —** umożliwiają utworzenie rejestru funkcji, które są wykonywane w kolejności od ostatniej do końca (LIFO). Funkcje przesłane do **atexit —** nie mogą przyjmować parametrów. **atexit —** i **_onexit** używają sterty do przechowywania rejestru funkcji. W ten sposób liczba funkcji, które mogą być rejestrowane, jest ograniczona tylko przez pamięć sterty.
 
-Kod w **atexit** funkcji nie może zawierać żadnych zależności na dowolną biblioteką DLL, która może już zostały usunięte podczas **atexit** funkcja jest wywoływana.
+Kod w funkcji **atexit —** nie powinien zawierać żadnej zależności od żadnej biblioteki DLL, która mogła zostać już zwolniona, gdy wywoływana jest funkcja **atexit —** .
 
-Aby wygenerować aplikację ze standardem ANSI, użyj standardu ANSI **atexit** — funkcja (zamiast podobny **_onexit** funkcji).
+Aby wygenerować aplikację zgodną ze standardem ANSI, należy użyć funkcji **atexit —** standard ANSI (zamiast podobnej funkcji **_onexit** ).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -65,7 +68,7 @@ Aby wygenerować aplikację ze standardem ANSI, użyj standardu ANSI **atexit** 
 
 ## <a name="example"></a>Przykład
 
-Ten program wypchnięć czterech funkcji na stosie funkcji do wykonania, gdy **atexit** jest wywoływana. Gdy program jest zamykany, te programy są wykonywane w ostatni na wejściu, pierwszy się.
+Ten program umieszcza cztery funkcje na stosie funkcji, które mają zostać wykonane po wywołaniu **atexit —** . Po zakończeniu działania programu te programy są wykonywane na ostatnim, a pierwszy z nich.
 
 ```C
 // crt_atexit.c

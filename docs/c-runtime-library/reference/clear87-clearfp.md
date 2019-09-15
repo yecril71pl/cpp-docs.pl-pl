@@ -1,10 +1,10 @@
 ---
 title: _clear87, _clearfp
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _clearfp
 - _clear87
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - clearfp
 - _clearfp
@@ -29,16 +32,16 @@ helpviewer_keywords:
 - _clearfp function
 - clear87 function
 ms.assetid: 72d24a70-7688-4793-ae09-c96d33fcca52
-ms.openlocfilehash: 4148f85d82a4210033686455c73046081832e3c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4ca49895b881d9e307c1116681bc36f86b167c25
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340556"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942954"
 ---
-# <a name="clear87-clearfp"></a>_clear87, _clearfp
+# <a name="_clear87-_clearfp"></a>_clear87, _clearfp
 
-Pobiera i czyści słowa stanu zmiennoprzecinkowego.
+Pobiera i czyści słowo stanu zmiennoprzecinkowego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,24 +52,24 @@ unsigned int _clearfp( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Bity w wartości zwracanej wskazują status sterowania zmiennoprzecinkowego przed wywołaniem do **_clear87 —** lub **_clearfp —**. Aby uzyskać pełną definicję bitów, zwracany przez **_clear87 —**, zobacz Float.h. Wiele funkcji bibliotek matematycznych zmodyfikować 8087/80287 stanu wyrazu jednostki za pomocą nieprzewidywalne rezultaty. Zwracane wartości **_clear87 —** i **_status87 —** stają się bardziej niezawodne, mniej operacji zmiennoprzecinkowych jest wykonywane między znanymi stanami statusu słowa zmiennoprzecinkowego.
+Bity w zwracanej wartości wskazują stan zmiennoprzecinkowy przed wywołaniem metody **_clear87** lub **_clearfp**. Aby uzyskać pełną definicję bitów zwracanych przez **_clear87**, zobacz float. h. Wiele funkcji biblioteki matematycznej modyfikuje wyraz o stanie 8087/80287 z nieprzewidywalnymi wynikami. Wartości zwracane z **_clear87** i **_status87** stają się bardziej niezawodne, ponieważ mniej operacji zmiennoprzecinkowych jest wykonywanych między znanymi Stanami wyrazu stanu zmiennoprzecinkowego.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Clear87 —** funkcja czyści flagi wyjątek w słowa stanu zmiennoprzecinkowego, ustawia bit zajęty 0 i zwraca wyrazy stanu. Zmiennoprzecinkowe wyrazy stanu jest kombinacją wyrazy stanu 8087/80287 i innych warunków wykrytych przez program obsługi wyjątków 8087/80287, takie jak przepełnienie stosu zmiennoprzecinkowego i niedomiaru.
+Funkcja **_clear87** czyści flagi wyjątku w słowie stanu zmiennoprzecinkowego, ustawia bit zajęty na 0 i zwraca słowo stanu. Słowo stanu zmiennoprzecinkowego jest kombinacją słowa stanu 8087/80287 i innych warunków wykrytych przez program obsługi wyjątków 8087/80287, takich jak przepływy stosu zmiennoprzecinkowe i niedopełnienie.
 
-**_clearfp —** jest niezależny od platformy, przenośną wersją **_clear87 —** procedury. Jest on identyczny **_clear87 —** na platformach firmy Intel (x86) i jest również obsługiwana przez platformy ARM i x64. Aby upewnić się, że kod zmiennoprzecinkowy jest przenośny do x64 i ARM, należy użyć **_clearfp —**. Jeśli są przeznaczone tylko dla x86 platform, można użyć dowolnego **_clear87 —** lub **_clearfp —**.
+**_clearfp** to niezależna od platformy, Przenośna wersja procedury **_clear87** . Jest on identyczny z **_clear87** na platformach firmy Intel (x86) i jest również obsługiwany przez platformy x64 i ARM. Aby upewnić się, że kod zmiennoprzecinkowy jest przenośny z architekturą x64 i ARM, użyj **_clearfp**. Jeśli masz tylko platformy x86, możesz użyć opcji **_clear87** lub **_clearfp**.
 
-Funkcje te są używane podczas kompilowania za pomocą [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md) ponieważ środowisko uruchomieniowe języka wspólnego obsługuje tylko domyślną precyzję zmiennoprzecinkową.
+Te funkcje są przestarzałe podczas kompilowania z [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md) , ponieważ środowisko uruchomieniowe języka wspólnego obsługuje tylko domyślną precyzję zmiennoprzecinkową.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_clear87**|\<float.h>|
-|**_clearfp —**|\<float.h>|
+|**_clearfp**|\<float.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

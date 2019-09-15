@@ -1,12 +1,12 @@
 ---
-title: ___mb_cur_max_func ___mb_cur_max_l_func, __p___mb_cur_max, __mb_cur_max
+title: ___mb_cur_max_func, ___mb_cur_max_l_func, __p___mb_cur_max, __mb_cur_max
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ___mb_cur_max_l_func
 - __p___mb_cur_max
 - ___mb_cur_max_func
 - __mb_cur_max
-apilocation:
+api_location:
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - msvcr80.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr90.dll
 - msvcr120.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ___mb_cur_max_func
 - ___mb_cur_max_l_func
@@ -27,16 +30,16 @@ helpviewer_keywords:
 - ___mb_cur_max_l_func
 - __p___mb_cur_max
 ms.assetid: 60d36108-1ca7-45a6-8ce7-68a91f13e3a1
-ms.openlocfilehash: 9d5178a9a0801767019b713696ddf809c3fe6f0c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a37ae2134d92310d6a530c759559b5e4b4af00f6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62342778"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944196"
 ---
-# <a name="mbcurmaxfunc-mbcurmaxlfunc-pmbcurmax-mbcurmax"></a>___mb_cur_max_func ___mb_cur_max_l_func, __p___mb_cur_max, __mb_cur_max
+# <a name="___mb_cur_max_func-___mb_cur_max_l_func-__p___mb_cur_max-__mb_cur_max"></a>___mb_cur_max_func, ___mb_cur_max_l_func, __p___mb_cur_max, __mb_cur_max
 
-Wewnętrzny funkcji CRT. Pobiera maksymalną liczbę bajtów w znak wielobajtowy dla bieżących lub określonych ustawień regionalnych.
+Wewnętrzna funkcja CRT. Pobiera maksymalną liczbę bajtów w znaku wielobajtowym dla bieżących lub określonych ustawień regionalnych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,19 +52,19 @@ int * __p___mb_cur_max(void);
 
 #### <a name="parameters"></a>Parametry
 
-Struktura ustawień regionalnych, można pobrać wyniku z ustawień regionalnych. Jeśli ta wartość jest równa null, ustawień regionalnych bieżącego wątku jest używana.
+Ustawienia regionalne struktury ustawień regionalnych, z których ma zostać pobrany wynik. Jeśli ta wartość jest równa null, używane są bieżące ustawienia regionalne wątku.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Maksymalna liczba bajtów znaków wielobajtowych dla ustawień regionalnych bieżącego wątku lub określonych ustawień regionalnych.
+Maksymalna liczba bajtów w znaku wielobajtowym dla bieżących ustawień regionalnych wątku lub określonych ustawień regionalnych.
 
 ## <a name="remarks"></a>Uwagi
 
-Jest to funkcji wewnętrznej, który używa CRT, aby pobrać bieżącą wartość [MB_CUR_MAX](../c-runtime-library/mb-cur-max.md) — makro z magazynu lokalnego wątku. Firma Microsoft zaleca użycie `MB_CUR_MAX` makra w kodzie do celów przenośności.
+Jest to wewnętrzna funkcja wykorzystywana przez CRT do pobierania bieżącej wartości makra [MB_CUR_MAX](../c-runtime-library/mb-cur-max.md) z lokalnego magazynu wątków. Zalecamy użycie `MB_CUR_MAX` makra w kodzie do przenośności.
 
-`__mb_cur_max` Makro to wygodny sposób wywołania `___mb_cur_max_func()` funkcji. `__p___mb_cur_max` Funkcja jest zdefiniowana na potrzeby utrzymywania zgodności z Visual C++ 5.0 i starszych wersji.
+Makro jest wygodnym sposobem `___mb_cur_max_func()` wywołania funkcji. `__mb_cur_max` Funkcja jest zdefiniowana pod kątem zgodności z programem C++ Visual 5,0 i wcześniejszymi wersjami. `__p___mb_cur_max`
 
-Wewnętrzne funkcje CRT są specyficzne dla implementacji i może ulec zmianie z każdej wersji. Nie zalecamy ich użycie w kodzie.
+Wewnętrzne funkcje CRT są specyficzne dla implementacji i mogą ulec zmianie w każdej wersji. Nie zalecamy ich używania w kodzie.
 
 ## <a name="requirements"></a>Wymagania
 

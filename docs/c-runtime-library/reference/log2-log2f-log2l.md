@@ -1,11 +1,11 @@
 ---
-title: log2 log2f —, log2l
+title: log2, log2f, log2l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - log2
 - log2l
 - log2f
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,18 +17,21 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-ms.openlocfilehash: d70d074b13b0f24f1f040ef0e861e073e303ac7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf1734ea2f96fa1c09b3b0d1f43b681fc31c8f9f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285942"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953167"
 ---
-# <a name="log2-log2f-log2l"></a>log2 log2f —, log2l
+# <a name="log2-log2f-log2l"></a>log2, log2f, log2l
 
-Określa binarne logarytmu (base 2) od określonej wartości.
+Określa LOGARYTM binarny (Base-2) określonej wartości.
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,37 +60,37 @@ long double log2l(
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Wartość do określenia logarytm base 2.
+Wartość określająca logarytm dziesiętny.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-W przypadku powodzenia zwraca zwracają log2 *x*.
+Po powodzeniu zwraca wartość Return log2 — *x*.
 
 W przeciwnym razie może zwracać jedną z następujących wartości:
 
-|Problem|Wróć|
+|Problem|przesłać|
 |-----------|------------|
 |*x* < 0|NaN|
-|*x* = ±0|-NIESKOŃCZONOŚĆ.|
+|*x* = ± 0|-NIESKOŃCZONOŚĆ|
 |*x* = 1|+0|
-|+ INFINITY|+ INFINITY|
+|\+ NIESKOŃCZONOŚĆ|\+ NIESKOŃCZONOŚĆ|
 |NaN|NaN|
-|domeny błędów|NaN|
-|Błąd Bieguna|— HUGE_VAL, - HUGE_VALF, lub - HUGE_VALL|
+|błąd domeny|NaN|
+|błąd słupka|-HUGE_VAL,-HUGE_VALF lub-HUGE_VALL|
 
-Błędy są zgłaszane określonej [_matherr](matherr.md).
+Błędy są raportowane zgodnie z opisem w [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy wartość x jest liczbą całkowitą, ta funkcja zwraca zasadniczo liczony od zera indeks najbardziej znaczącego bitu 1 *x*.
+Jeśli x jest liczbą całkowitą, ta funkcja zasadniczo zwraca indeks (liczony od zera) najbardziej znaczącej 1 bit *x*.
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek języka C|Nagłówek języka C++|
+|Funkcja|Nagłówek języka C|C++nagłówki|
 |--------------|--------------|------------------|
-|**log2 —**, **log2f —**, **log2l**|\<math.h>|\<cmath>|
+|**log2 —** , **log2f —** , **log2l**|\<math.h>|\<cmath >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

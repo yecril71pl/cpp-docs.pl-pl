@@ -1,9 +1,9 @@
 ---
 title: _aligned_malloc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_malloc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_malloc
 - alligned_malloc
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - aligned_malloc function
 - _aligned_malloc function
 ms.assetid: fb788d40-ee94-4039-aa4d-97d73dab1ca0
-ms.openlocfilehash: c89dff7d2159855037fee565f2148a8edb89f07d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4a2b35e5344757a1269ccb781a0524383a4f792
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341824"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943874"
 ---
-# <a name="alignedmalloc"></a>_aligned_malloc
+# <a name="_aligned_malloc"></a>_aligned_malloc
 
 Przydziela pamięć na określonej granicy wyrównania.
 
@@ -45,23 +48,23 @@ void * _aligned_malloc(
 
 ### <a name="parameters"></a>Parametry
 
-*Rozmiar*<br/>
-Rozmiar żądanej alokacji pamięci.
+*zmienia*<br/>
+Rozmiar żądanego przydziału pamięci.
 
-*Wyrównanie*<br/>
+*struktury*<br/>
 Wartość wyrównania, która musi być całkowitą potęgą liczby 2.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do bloku pamięci, która została przydzielona lub wartość NULL, jeśli operacja nie powiodła się. Wskaźnik jest wielokrotnością liczby *wyrównanie*.
+Wskaźnik do bloku pamięci, który został przydzielony lub ma wartość NULL, jeśli operacja nie powiodła się. Wskaźnik jest wielokrotnością *wyrównania*.
 
 ## <a name="remarks"></a>Uwagi
 
-**_aligned_malloc** opiera się na [— funkcja malloc](malloc.md).
+**_aligned_malloc** jest oparta na [malloc](malloc.md).
 
-**_aligned_malloc** jest oznaczony jako `__declspec(noalias)` i `__declspec(restrict)`, co oznacza, że funkcja daje gwarancję niemodyfikowania zmiennych globalnych i że zwrócony wskaźnik nie jest aliasem. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md) i [ograniczyć](../../cpp/restrict.md).
+**_aligned_malloc** jest oznaczona `__declspec(noalias)` i `__declspec(restrict)`, co oznacza, że funkcja jest gwarantowana, aby nie modyfikować zmiennych globalnych i że zwrócony wskaźnik nie jest aliasem. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md) i [ograniczaj](../../cpp/restrict.md).
 
-Ta funkcja ustawia `errno` na `ENOMEM` jeśli alokacja pamięci nie powiodła się lub jeśli żądany rozmiar był większy niż `_HEAP_MAXREQ`. Aby uzyskać więcej informacji na temat `errno`, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Ponadto **_aligned_malloc** sprawdza poprawność parametrów. Jeśli *wyrównanie* nie jest potęgą liczby 2 lub *rozmiar* wynosi zero, funkcja wywoła procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja zwraca wartość NULL i ustawia `errno` do `EINVAL`.
+Ta funkcja ustawia `errno` na `ENOMEM` jeśli alokacja pamięci nie powiodła się lub jeśli żądany rozmiar był większy niż `_HEAP_MAXREQ`. Aby uzyskać więcej informacji `errno`na temat, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Ponadto **_aligned_malloc** sprawdza poprawność swoich parametrów. Jeśli *wyrównanie* *nie jest potęgą 2 lub ma* wartość zero, ta funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja zwraca wartość null i `errno` ustawia `EINVAL`jako.
 
 ## <a name="requirements"></a>Wymagania
 

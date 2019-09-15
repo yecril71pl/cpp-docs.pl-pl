@@ -1,9 +1,9 @@
 ---
 title: sygnał
 ms.date: 04/12/2018
-apiname:
+api_name:
 - signal
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,24 +15,27 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - signal
 helpviewer_keywords:
 - signal function
-ms.openlocfilehash: 351bdbe1d787fc5e5d741460adfe415df7fda756
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04869412272725108911f13857585e650ad20ab9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356293"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948100"
 ---
 # <a name="signal"></a>sygnał
 
-Ustawia przerwanie obsługi sygnałów.
+Ustawia obsługę sygnałów przerwań.
 
 > [!IMPORTANT]
-> Nie należy używać tej metody do zamykania aplikacji Microsoft Store, z wyjątkiem testowania i debugowania scenariuszy. Sposoby Programmatic lub interfejs użytkownika, zamknąć Store app nie są dozwolone zgodnie z opisem w [zasady Microsoft Store](/legal/windows/agreements/store-policies). Aby uzyskać więcej informacji, zobacz [cykl życia aplikacji platformy uniwersalnej systemu Windows](/windows/uwp/launch-resume/app-lifecycle).
+> Nie należy używać tej metody do zamykania aplikacji Microsoft Store, z wyjątkiem scenariuszy testowania lub debugowania. Sposób programistyczny lub interfejs użytkownika służący do zamykania aplikacji ze sklepu nie są dozwolone zgodnie z [zasadami Microsoft Storeymi](/legal/windows/agreements/store-policies). Aby uzyskać więcej informacji, zobacz [cykl życia aplikacji platformy UWP](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,69 +45,69 @@ void __cdecl *signal(int sig, int (*func)(int, int));
 
 ### <a name="parameters"></a>Parametry
 
-*sig*<br/>
+*SIG*<br/>
 Wartość sygnału.
 
-*FUNC*<br/>
-Drugi parametr jest wskaźnikiem do funkcji, które mają zostać wykonane. Pierwszy parametr jest wartością sygnału, a drugi parametr jest podkodem, który można użyć, gdy pierwszym parametrem jest SIGFPE.
+*func*<br/>
+Drugi parametr jest wskaźnikiem do funkcji, która ma zostać wykonana. Pierwszy parametr jest wartością sygnału, a drugi parametr jest kodem podrzędnym, który może być używany, gdy pierwszy parametr to SIGFPE.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**sygnał** zwraca poprzednią wartość func, która jest skojarzona z danego sygnału. Na przykład jeśli poprzednią wartością *func* został **SIG_IGN**, zwracana wartość jest również **SIG_IGN**. Zwracana wartość wynosząca **SIG_ERR** wskazuje błąd; w takim przypadku **errno** ustawiono **EINVAL**.
+**sygnał** zwraca poprzednią wartość funkcji Func, która jest skojarzona z danym sygnałem. Na przykład jeśli Poprzednia wartość *Func* została **SIG_IGN**, zwracana wartość jest również **SIG_IGN**. Wartość zwracana przez **SIG_ERR** wskazuje na błąd; w takim przypadku **errno** jest ustawiony na **EINVAL**.
 
-Zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat kodów powrotnych.
+Aby uzyskać więcej informacji na temat kodów powrotnych, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Uwagi
 
-**Sygnału** funkcja pozwala procesowi wybrać jeden z kilku sposobów, aby obsłużyć sygnał przerwania od systemu operacyjnego. *Sig* argument jest przerwań, do którego **sygnału** odpowiedział; musi być jednym z następujących stałych manifestu, które są zdefiniowane w sygnału. H.
+Funkcja **sygnałów** umożliwia procesowi wybranie jednego z kilku sposobów obsługi sygnału przerwania z systemu operacyjnego. Argument *SIG* to przerwa, do którego reaguje **sygnał** ; musi to być jeden z następujących stałych manifestu, które są zdefiniowane w SYGNALe. C.
 
-|*SIG* wartość|Opis|
+|wartość *SIG*|Opis|
 |-----------------|-----------------|
-|**SIGABRT**|Nienormalne zakończenie|
-|**SIGFPE**|Błąd wartości zmiennoprzecinkowej|
+|**SIGABRT**|Nietypowe zakończenie|
+|**SIGFPE**|Błąd zmiennoprzecinkowy|
 |**SIGILL**|Niedozwolona instrukcja|
-|**SIGINT**|CTRL + C sygnalizuje|
+|**SIGINT**|CTRL + sygnał C|
 |**SIGSEGV**|Niedozwolony dostęp do magazynu|
-|**SIGTERM**|Zakończenie żądania|
+|**SIGTERM**|Żądanie zakończenia|
 
-Jeśli *sig* nie jest jednym z powyższych wartości, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z definicją w [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, funkcja ta ustawia **errno** do **EINVAL** i zwraca **SIG_ERR**.
+Jeśli *SIG* nie jest jedną z powyższych wartości, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z definicją w [walidacji parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca **SIG_ERR**.
 
-Domyślnie **sygnału** kończy program wywołujący z kodem zakończenia 3, niezależnie od wartości *sig*.
+Domyślnie **sygnał** kończy program wywołujący z kodem zakończenia 3, niezależnie od wartości *SIG*.
 
 > [!NOTE]
-> **SIGINT** nie jest obsługiwana dla żadnej aplikacji systemu Win32. Po wystąpieniu przerwania klawisze CTRL + C, system operacyjny Win32 generuje nowy wątek, aby specjalnie obsługiwać to przerwanie. Może to spowodować aplikacją pojedynczego wątku, na przykład jednego w systemie UNIX, aby stać się wielowątkowe i spowodować nieoczekiwane zachowanie.
+> **SIGINT** nie jest obsługiwana dla żadnej aplikacji Win32. Gdy wystąpi przerwa CTRL + C, systemy operacyjne Win32 generują nowy wątek do obsługi tego przerwania. Może to spowodować, że aplikacja jednowątkowa, taka jak jedna w systemie UNIX, będzie pełnić funkcję wielowątkowości i spowodować nieoczekiwane zachowanie.
 
-*Func* argument jest adresem do obsługi sygnałów, które piszesz lub do jednego z wstępnie zdefiniowanych stałych **SIG_DFL** lub **SIG_IGN**, które są również określone w sygnału. H. Jeśli *func* jest funkcją, jest on instalowany jako procedura obsługi sygnału dla danego sygnału. Prototyp obsługi sygnałów wymaga jednego argumentu formalnego, *sig*, typu **int**. System operacyjny udostępnia rzeczywisty argument poprzez *sig* po wystąpieniu przerwania; argument jest sygnałem, który wygenerował przerwanie. W związku z tym możesz można użyć sześciu stałych manifestów (wymienionych w powyższej tabeli) w sieci obsługi sygnałów do określenia przerwania, które miały miejsce i podejmą odpowiednie działania. Na przykład, można wywołać **sygnału** dwa razy, aby przypisać tę samą procedurę obsługi dwóm różnym sygnałom, a następnie przetestować *sig* argument w procedurze obsługi Aby wykonać różne operacje oparciu o otrzymany sygnał.
+Argument *Func* jest adresem do programu obsługi sygnałów, który można napisać lub do jednej ze wstępnie zdefiniowanych stałych **SIG_DFL** lub **SIG_IGN**, które są również zdefiniowane w sygnale. C. Jeśli *Func* jest funkcją, jest ona instalowana jako program obsługi sygnałów dla danego sygnału. Prototyp programu obsługi sygnałów wymaga jednego formalnego argumentu, *SIG*, typu **int**. System operacyjny udostępnia rzeczywisty argument za pomocą *SIG* w przypadku wystąpienia przerwania; argument jest sygnałem, który wygenerował przerwanie. W związku z tym można użyć sześciu stałych manifestu (wymienionych w powyższej tabeli) w programie obsługi sygnałów, aby określić, które przerwanie wystąpiło i podjąć odpowiednie działania. Na przykład można wywołać **sygnał** dwa razy, aby przypisać tę samą procedurę obsługi do dwóch różnych sygnałów, a następnie przetestować argument *SIG* w programie obsługi, aby wykonać różne akcje na podstawie otrzymanego sygnału.
 
-Jeśli testujesz wyjątki zmiennoprzecinkowe (**SIGFPE**), *func* wskazuje funkcję, która przyjmuje opcjonalny drugi argument, który jest jednym z kilku stałych manifestu, określonych w FLOAT. Godz., w postaci **FPE_xxx**. Gdy **SIGFPE** sygnał występuje, można sprawdzić wartość drugiego argumentu, aby określić rodzaj wyjątku zmiennoprzecinkowego i wtedy podjąć odpowiednie działania. Ten argument i jego możliwe wartości są rozszerzeniami Microsoft.
+Jeśli testujesz wyjątki zmiennoprzecinkowe (**SIGFPE**), *Func* wskazuje funkcję, która przyjmuje opcjonalny drugi argument, który jest jednym z kilku stałych manifestu, zdefiniowanych w float. H formularza **FPE_xxx**. Gdy wystąpi sygnał **SIGFPE** , można przetestować wartość drugiego argumentu, aby określić rodzaj wyjątku zmiennoprzecinkowego, a następnie podjąć odpowiednie działania. Ten argument i jego możliwe wartości to rozszerzenia Microsoft.
 
-Przypadku wyjątków zmiennoprzecinkowych, wartość *func* nie jest resetowana po odebraniu sygnału. Aby odzyskać wyjątki zmiennoprzecinkowe, użyj spróbuj /z wyjątkiem klauzul do otoczenia zmiennoprzecinkowego punkt operacji. Istnieje również możliwość odzyskać za pomocą [setjmp](setjmp.md) z [longjmp](longjmp.md). W obu przypadkach proces wywołujący wznawia wykonanie i pozostawia stan zapisu zmiennoprzecinkowego procesu niezdefiniowane.
+Dla wyjątków zmiennoprzecinkowych wartość *Func* nie jest resetowana po odebraniu sygnału. Aby wykonać odzyskiwanie z wyjątków zmiennoprzecinkowych, należy użyć klauzul try/except do obsłużenia operacji zmiennoprzecinkowych. Możliwe jest również odzyskanie za pomocą [setjmp](setjmp.md) z [longjmp](longjmp.md). W obu przypadkach proces wywołujący wznawia wykonywanie i pozostawia stan zmiennoprzecinkowy niezdefiniowanego procesu.
 
-Jeśli procedura obsługi sygnału powraca, proces wywołujący wznawia wykonanie następując bezpośrednio po punkcie, w którym otrzymał sygnał przerwania. Ta zasada obowiązuje niezależnie od rodzaju sygnału lub trybu pracy.
+Jeśli program obsługi sygnałów zwraca, proces wywołujący wznawia wykonywanie natychmiast po punkcie, w którym otrzymał sygnał przerwania. Ta wartość jest prawdziwa niezależnie od rodzaju sygnału lub trybu operacyjnego.
 
-Przed wykonaniem określonej funkcji, wartość *func* ustawiono **SIG_DFL**. Kolejny sygnał przerwania jest traktowany jak opisano dla **SIG_DFL**, chyba że wywołanie interwencyjne **sygnału** określi inaczej. Ta funkcja służy do resetowania sygnałów w wywołanej funkcja.
+Przed wykonaniem określonej funkcji wartość *Func* jest ustawiana na **SIG_DFL**. Następny sygnał przerwania jest traktowany jak opisano dla **SIG_DFL**, chyba że wywołanie wywołujące do **sygnału** określa inaczej. Tej funkcji można użyć do resetowania sygnałów w wywołanej funkcji.
 
-Ponieważ procedury obsługi sygnału są zwykle wywoływane asynchronicznie po wystąpieniu przerwania, funkcję obsługi sygnałów może uzyskać kontrolę, kiedy operacja środowiska uruchomieniowego jest niekompletna i w nieznanym stanie. Na poniższej liście podsumowano ograniczenia, które określają funkcje, których można użyć w rutynowej obsłudze sygnałów, usługi.
+Ponieważ procedury obsługi sygnałów są zwykle wywoływane asynchronicznie w przypadku wystąpienia przerwania, funkcja obsługi sygnałów może uzyskać kontrolę, gdy operacja czasu wykonywania jest niekompletna i w nieznanym stanie. Poniższa lista zawiera podsumowanie ograniczeń, które określają funkcje, których można użyć w procedurze obsługi sygnałów.
 
-- Do niskiego poziomu problem lub stdio —. Procedury we/wy H (na przykład **printf** lub **fread —**).
+- Nie należy wydawać niskiego poziomu ani STDIO. H procedury we/wy (na przykład **printf** lub **fread**).
 
-- Nie wywołuj sterty procedur lub dowolnej procedury korzystającej z procedury sterty (na przykład **— funkcja malloc**, **_strdup —**, lub **_putenv**). Zobacz [— funkcja malloc](malloc.md) Aby uzyskać więcej informacji.
+- Nie wywołuj procedur sterty ani żadnej procedury korzystającej z procedur sterty (na przykład **malloc**, **_strdup**lub **_putenv**). Aby uzyskać więcej informacji, zobacz [malloc](malloc.md) .
 
-- Nie używaj żadnej funkcji, która generuje wywołanie systemowego (na przykład **_getcwd —** lub **czasu**).
+- Nie należy używać żadnej funkcji generującej wywołanie systemowe (na przykład **_getcwd** lub **Time**).
 
-- Nie używaj **longjmp** , chyba że przerwanie jest spowodowane wyjątkiem zmiennoprzecinkowym (to znaczy *sig* jest **SIGFPE**). W tym przypadku najpierw inicjuje ponownie pakiet zmiennoprzecinkowy za pomocą wywołania **_fpreset —**.
+- Nie należy używać **longjmp** , chyba że przerwanie jest spowodowane przez wyjątek zmiennoprzecinkowy (czyli *SIG* to **SIGFPE**). W takim przypadku należy najpierw ponownie zainicjować pakiet zmiennoprzecinkowy przy użyciu wywołania do **_fpreset**.
 
-- Nie używaj żadnych procedur nakładki.
+- Nie należy używać żadnych procedur nakładki.
 
-Program musi zawierać kod zmiennoprzecinkowy, jeżeli ma wyłapać **SIGFPE** wyjątek przy użyciu funkcji. Jeśli program nie posiada kodu zmiennoprzecinkowego ale wymaga kodu obsługi sygnałów biblioteki wykonawczej, Zadeklaruj volatile wartość o podwójnej precyzji i zainicjuj ją na zero:
+Program musi zawierać kod zmiennoprzecinkowy, jeśli jest to pułapka wyjątku **SIGFPE** przy użyciu funkcji. Jeśli program nie ma kodu zmiennoprzecinkowego i wymaga kodu obsługi sygnałów biblioteki wykonawczej, po prostu Zadeklaruj nietrwałą wartość podwójną i zainicjuj ją jako zero:
 
 ```C
 volatile double d = 0.0f;
 ```
 
-**SIGILL** i **SIGTERM** sygnały nie są generowane w obszarze Windows. Są one włączone dla zachowania zgodności z ANSI. W związku z tym, można ustawić programy obsługi sygnału dla tych sygnałów za pomocą **sygnału**, i można także jawnie generować te sygnały poprzez wywołanie [podnieść](raise.md).
+Sygnały **SIGILL** i **SIGTERM** nie są generowane w systemie Windows. Są one dołączone do zgodności ANSI. W związku z tym, można ustawić programy obsługi sygnałów dla tych sygnałów przy użyciu **sygnału**i można również jawnie wygenerować te sygnały przez wywołanie metody [podnieść](raise.md).
 
-Ustawienia sygnału nie są zachowywane w zduplikowanych procesach, które są tworzone przez wywołania [_exec](../../c-runtime-library/exec-wexec-functions.md) lub [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) funkcji. Ustawienia sygnału są resetowane do wartości domyślnych w nowym procesie.
+Ustawienia sygnałów nie są zachowywane w procesach duplikowanych, które są tworzone przez wywołania funkcji [_exec](../../c-runtime-library/exec-wexec-functions.md) lub [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) . Ustawienia sygnału są resetowane do wartości domyślnych w nowym procesie.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -112,11 +115,11 @@ Ustawienia sygnału nie są zachowywane w zduplikowanych procesach, które są t
 |-------------|---------------------|
 |**signal**|\<signal.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak używać **sygnału** dodać niektóre zachowania niestandardowe do **SIGABRT** sygnału. Aby uzyskać dodatkowe informacje na temat zachowań przerywania, zobacz [_set_abort_behavior](set-abort-behavior.md).
+Poniższy przykład pokazuje, jak za pomocą **sygnału** dodać niestandardowe zachowanie do sygnału **SIGABRT** . Aby uzyskać dodatkowe informacje na temat zachowania przerwania, zobacz [_set_abort_behavior](set-abort-behavior.md).
 
 ```C
 // crt_signal.c

@@ -1,9 +1,9 @@
 ---
 title: feholdexcept
 ms.date: 04/05/2018
-apiname:
+api_name:
 - feholdexcept
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,23 +15,26 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - feholdexcept
 - fenv/feholdexcept
 helpviewer_keywords:
 - feholdexcept function
 ms.assetid: 88e512ae-b5d8-452c-afe9-c824cd3ef1d8
-ms.openlocfilehash: 26097398b9f9d498ab4c56690dc9c6cbb950bafb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd55a4ed627d731f7246d589d4b74b4173e31d4e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334388"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941189"
 ---
 # <a name="feholdexcept"></a>feholdexcept
 
-Zapisuje bieżące środowisko zmiennoprzecinkowych określonym obiektem, czyści flagi stanu zmiennoprzecinkowego i, jeśli to możliwe, umieszcza zmiennoprzecinkowych środowiska w trybie gładkie zatrzymanie.
+Zapisuje bieżące środowisko zmiennoprzecinkowe w określonym obiekcie, czyści flagi stanu zmiennoprzecinkowego i, jeśli to możliwe, umieści środowisko zmiennoprzecinkowe w trybie niezatrzymania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,27 +47,27 @@ int feholdexcept(
 ### <a name="parameters"></a>Parametry
 
 *penv*<br/>
-Wskaźnik do **fenv_t** obiekt ma zawierać kopię zmiennoprzecinkowych środowiska.
+Wskaźnik do obiektu **fenv_t** , który zawiera kopię środowiska zmiennoprzecinkowego.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca zero, tylko wtedy, gdy funkcja jest w stanie pomyślnie Włącz obsługę wyjątków zmiennoprzecinkowych gładkie zatrzymanie.
+Zwraca wartość zero, jeśli i tylko wtedy, gdy funkcja może pomyślnie włączyć zatrzymywanie obsługi wyjątków zmiennoprzecinkowych.
 
 ## <a name="remarks"></a>Uwagi
 
-**Feholdexcept** funkcja jest używana do przechowywania stanu bieżącego środowiska ruchomy punkt w **fenv_t** obiekt wskazywany przez *penv*i aby ustawić środowiska Nie można przerwać wykonywanie na wyjątki zmiennoprzecinkowe. Jest to nazywane tryb bez zatrzymania.  Ten tryb jest kontynuowany do momentu przywrócenia środowiska za pomocą [fesetenv](fesetenv1.md) lub [feupdateenv](feupdateenv.md).
+Funkcja **feholdexcept** służy do przechowywania stanu bieżącego środowiska zmiennoprzecinkowego w obiekcie **fenv_t** wskazanym przez *PENV*oraz do ustawienia środowiska, aby nie przerywać wykonywania w wyjątkach zmiennoprzecinkowych. Jest to tzw. Tryb niezatrzymania.  Ten tryb jest kontynuowany do momentu przywrócenia środowiska przy użyciu [fesetenv](fesetenv1.md) lub [feupdateenv](feupdateenv.md).
 
-Funkcja ta jest przydatna na początku procedury, który wymaga, aby ukryć jeden lub kilka wyjątków zmiennoprzecinkowych wywołujący. Aby zgłosić wyjątek, można po prostu wyczyść niechciane wyjątków za pomocą [feclearexcept,](feclearexcept1.md) a następnie zakończyć trybu-stop wywołaniem **feupdateenv**.
+Tej funkcji można użyć na początku procedury podrzędnej, która wymaga ukrycia co najmniej jednego wyjątku zmiennoprzecinkowego z obiektu wywołującego. Aby zgłosić wyjątek, można po prostu usunąć niepożądane wyjątki przy użyciu [feclearexcept,](feclearexcept1.md) a następnie zakończyć tryb niezatrzymania z wywołaniem do **feupdateenv**.
 
-Aby użyć tej funkcji, należy wyłączyć funkcję optymalizacji zmiennopozycyjnych, które mogą uniemożliwić dostęp przy użyciu `#pragma fenv_access(on)` dyrektywy przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).
+Aby użyć tej funkcji, należy wyłączyć optymalizacje zmiennoprzecinkowe, które mogą uniemożliwić dostęp przy użyciu `#pragma fenv_access(on)` dyrektywy przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek języka C|Nagłówek języka C++|
+|Funkcja|Nagłówek języka C|C++nagłówki|
 |--------------|--------------|------------------|
 |**feholdexcept**|\<fenv.h>|\<cfenv>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

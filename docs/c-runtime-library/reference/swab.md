@@ -1,10 +1,10 @@
 ---
 title: _swab
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _swab
 - stdlib/_swab
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _swab
 - stdlib/_swab
@@ -26,16 +29,16 @@ helpviewer_keywords:
 - swab function
 - bytes, swapping
 ms.assetid: 017142f2-050c-4f6a-8b49-6b094f58ec94
-ms.openlocfilehash: 64753383bcb94947e6b413b5f55ac6e2d9c7dbca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0faba55c42023f4d66adae68de6be2c1ab009a0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245511"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946287"
 ---
-# <a name="swab"></a>_swab
+# <a name="_swab"></a>_swab
 
-Zamienia bajtów.
+Zamienia bajty.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,32 +52,32 @@ void _swab(
 
 ## <a name="parameters"></a>Parametry
 
-*src*<br/>
-Dane do skopiowania i zamienione.
+*SRC*<br/>
+Dane, które mają zostać skopiowane i zamienione.
 
 *dest*<br/>
-Lokalizacja magazynowa danych wymienione.
+Lokalizacja magazynu dla zamienionych danych.
 
 *n*<br/>
-Liczba bajtów do skopiowania i zamienione.
+Liczba bajtów, które mają zostać skopiowane i zamienione.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Swab —** funkcja nie zwraca wartości. Zestawy funkcji **errno** do **EINVAL** Jeśli *src* lub *dest* wskaźnika ma wartość null lub *n* jest mniejsza od zera i nieprawidłowy parametr program obsługi zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md).
+Funkcja **wymazania** nie zwraca wartości. Funkcja ustawia **errno** na **EINVAL** , jeśli wskaźnik *src* lub *docelowy* ma wartość null lub *n* jest mniejszy od zera i zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md).
 
-Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na ten temat i inne kody powrotne.
+Aby uzyskać więcej informacji na temat tego i innych kodów powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli *n* jest parzysta, **_swab —** funkcja kopiuje *n* bajtów z *src*zamienia każdej pary bajtów sąsiadujących i zapisuje wynik w *dest*. Jeśli *n* jest nieparzysta, **_swab —** kopiuje i zamienia pierwszy *n*b-1 *src*, a bajt końcowy nie jest kopiowany. **_Swab —** funkcji jest zazwyczaj używany do przygotowania danych binarnych transferu na komputerze, który używa kolejności bajtów różne.
+Jeśli *n* jest nawet, funkcja **_swab** kopiuje *n* bajtów z elementu *src*, zamienia każdą parę sąsiadujących bajtów i zapisuje wynik w miejscu *docelowego*. Jeśli *n* jest nieparzysta, **_swab** kopiuje i zamienia pierwsze *n*-1 bajty *src*, a końcowy bajt nie jest kopiowany. Funkcja **_swab** jest zwykle używana do przygotowywania danych binarnych do przesłania do komputera, który używa innej kolejności bajtów.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_swab**|C: \<stdlib.h > C++: \<cstdlib — > lub \<stdlib.h >|
+|**_swab**|C: \<STDLIB. h > C++: \<cstdlib > lub \<STDLIB. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

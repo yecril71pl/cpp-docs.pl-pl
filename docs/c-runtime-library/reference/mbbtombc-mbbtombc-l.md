@@ -1,10 +1,10 @@
 ---
 title: _mbbtombc, _mbbtombc_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbbtombc_l
 - _mbbtombc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbbtombc_l
 - _mbbtombc
@@ -28,19 +31,19 @@ helpviewer_keywords:
 - _mbbtombc_l function
 - _mbbtombc function
 ms.assetid: 78593389-b0fc-43b6-8c1f-2a6bf702d64e
-ms.openlocfilehash: 63b5dd33399201cd6ead7dbd1f710c8bebe53c69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 244e603a3234b755d19a1c1d0738e8c22d74b8e2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156911"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952735"
 ---
-# <a name="mbbtombc-mbbtombcl"></a>_mbbtombc, _mbbtombc_l
+# <a name="_mbbtombc-_mbbtombc_l"></a>_mbbtombc, _mbbtombc_l
 
-Konwertuje jednobajtowego znaku wielobajtowego do odpowiedniego znaku wielobajtowego znaków dwubajtowych.
+Konwertuje jednobajtowy znak wielostronicowy na odpowiadający mu dwubajtowy znak w bajtach.
 
 > [!IMPORTANT]
-> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,22 +60,22 @@ unsigned int _mbbtombc_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak Jednobajtowy, która ma zostać przekształcony.
+Znak jednobajtowy do przekonwertowania.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli **_mbbtombc —** pomyślnie konwertuje *c*, funkcja zwraca znak wielobajtowy; w przeciwnym razie zwraca *c*.
+Jeśli **_mbbtombc** pomyślnie konwertuje *c*, zwraca znak wielobajtowy; w przeciwnym razie zwraca *c*.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Mbbtombc —** funkcja konwertuje dany znak wielobajtowy pojedynczych bajtów do odpowiedniego znaku wielobajtowego znaków dwubajtowych. Znaki musi być w zakresie 0x20 — 0x7E lub 0xA1 - 0xDF ma zostać przekonwertowany.
+Funkcja **_mbbtombc** konwertuje dany jednobajtowy znak wielostronicowy na odpowiadający mu dwubajtowy znak wieloznaczny. Znaki muszą znajdować się w zakresie 0x20-0x7E lub 0xA1-0xDF do przekonwertowania.
 
-Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych; zobacz [setlocale, _wsetlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tej funkcji są identyczne, z tą różnicą, że **_mbbtombc —** używa bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych i **_mbbtombc_l —** zamiast tego używa przekazanego parametru ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawień regionalnych; Zobacz [setlocaling, _wsetlocale,](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tej funkcji są identyczne, z tą różnicą, że **_mbbtombc** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych, a **_mbbtombc_l** zamiast tego używa parametru ustawień regionalnych, który został przesłany. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-We wcześniejszych wersjach **_mbbtombc —** nosiła nazwę **hantozen**. W przypadku nowego kodu użyj **_mbbtombc —**.
+We wcześniejszych wersjach **_mbbtombc** miał nazwę **hantozen**. Dla nowego kodu Użyj **_mbbtombc**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -81,7 +84,7 @@ We wcześniejszych wersjach **_mbbtombc —** nosiła nazwę **hantozen**. W prz
 |**_mbbtombc**|\<mbstring.h>|
 |**_mbbtombc_l**|\<mbstring.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

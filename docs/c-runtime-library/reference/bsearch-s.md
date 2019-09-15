@@ -1,9 +1,9 @@
 ---
 title: bsearch_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - bsearch_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,23 +16,26 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - bsearch_s
 helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: 56c5fa45a9d8f9ac9b22474601934d3994da55e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9bcd18add216bb0fc2f203183d82e37ede65dba5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349254"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943484"
 ---
-# <a name="bsearchs"></a>bsearch_s
+# <a name="bsearch_s"></a>bsearch_s
 
-Wykonuje wyszukiwanie binarne posortowany tablicy. To jest wersja [bsearch —](bsearch.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Wykonuje binarne wyszukiwanie posortowanej tablicy. Jest to wersja programu [bsearch](bsearch.md) z ulepszeniami zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,59 +56,59 @@ void *bsearch_s(
 Obiekt do wyszukania.
 
 *base*<br/>
-Wskaźnik do podstawowego wyszukiwania danych.
+Wskaźnik do podstawy wyszukiwania danych.
 
-*Numer*<br/>
+*Liczba*<br/>
 Liczba elementów.
 
 *width*<br/>
 Szerokość elementów.
 
-*compare*<br/>
-Funkcja wywołania zwrotnego, która porównuje dwa elementy. Pierwszy argument jest *kontekstu* wskaźnika. Drugi argument jest wskaźnikiem do *klucz* wyszukiwania. Trzeci argument jest wskaźnikiem do elementu tablicy, która ma zostać porównane z *klucz*.
+*porównaniu*<br/>
+Funkcja wywołania zwrotnego, która porównuje dwa elementy. Pierwszy argument jest wskaźnikiem *kontekstu* . Drugi argument jest wskaźnikiem do *klucza* do wyszukania. Trzeci argument jest wskaźnikiem do elementu tablicy, który będzie porównywany z *kluczem*.
 
-*Kontekst*<br/>
-Wskaźnik do obiektu, który może być dostępne w funkcji porównywania.
+*Context*<br/>
+Wskaźnik do obiektu, do którego można uzyskać dostęp w funkcji porównania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**bsearch_s —** zwraca wskaźnik do wystąpienia *klucz* w tablicy, do których prowadzą *podstawowy*. Jeśli *klucz* nie zostanie znaleziony, funkcja zwraca **NULL**. Jeśli tablica nie znajduje się w kolejności rosnącej lub zawiera zduplikowane rekordy z identycznymi kluczami, wynik jest nieprzewidywalne.
+**bsearch_s** zwraca wskaźnik do wystąpienia *klucza* w tablicy wskazywanym przez *bazę*. Jeśli nie odnaleziono *klucza* , funkcja zwraca **wartość null**. Jeśli tablica nie znajduje się w kolejności sortowania rosnącej lub zawiera zduplikowane rekordy z identycznymi kluczami, wynik jest nieprzewidywalny.
 
-Jeśli nieprawidłowe parametry są przekazywane do funkcji, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL** a funkcja zwraca **NULL**. Aby uzyskać więcej informacji, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Jeśli do funkcji są przenoszone nieprawidłowe parametry, procedura obsługi nieprawidłowego parametru jest wywoływana, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcja zwraca **wartość null**. Aby uzyskać więcej informacji, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ### <a name="error-conditions"></a>Warunki błędów
 
 |||||||
 |-|-|-|-|-|-|
-|*Klucz*|*base*|*compare*|*Numer*|*width*|**numer błędu**|
-|**NULL**|Wszystkie|Wszystkie|Wszystkie|Wszystkie|**EINVAL**|
-|Wszystkie|**NULL**|Wszystkie|!= 0|Wszystkie|**EINVAL**|
-|Wszystkie|Wszystkie|Wszystkie|Wszystkie|= 0|**EINVAL**|
-|Wszystkie|Wszystkie|**NULL**|Usługi|Wszystkie|**EINVAL**|
+|*Klucz*|*base*|*porównaniu*|*Liczba*|*width*|**errno**|
+|**NULL**|Ile|Ile|Ile|Ile|**EINVAL**|
+|Ile|**NULL**|Ile|!= 0|Ile|**EINVAL**|
+|Ile|Ile|Ile|Ile|= 0|**EINVAL**|
+|Ile|Ile|**NULL**|Wskazani|Ile|**EINVAL**|
 
 ## <a name="remarks"></a>Uwagi
 
-**Bsearch_s —** — funkcja Wyszukiwanie binarne posortowaną tablicę *numer* elementów, z których każdy z *szerokość* bajtów. *Podstawowy* wartość jest wskaźnikiem do podstawy tablicy, które mają być wyszukiwane i *klucza* jest wartością niestabilna. *Porównania* parametr jest wskaźnikiem do procedury dostarczone przez użytkownika, który porównuje żądany klucz do elementu tablicy i zwraca jedną z następujących wartości, określając ich relacji:
+Funkcja **bsearch_s** wykonuje binarne wyszukiwanie posortowanej tablicy elementów *liczbowych* , a wszystkie bajty o *szerokości* . Wartość *podstawowa* jest wskaźnikiem do podstawy tablicy, która ma być przeszukiwana, a wartość *klucza* jest poszukiwana. Parametr *Compare* jest wskaźnikiem do procedury dostarczonej przez użytkownika, która porównuje żądany klucz z elementem Array i zwraca jedną z następujących wartości określających ich relację:
 
-|Wartość zwrócona przez obiekt *porównania* procedury|Opis|
+|Wartość zwrócona przez procedurę *porównania*|Opis|
 |-----------------------------------------|-----------------|
-|\< 0|Klucz jest mniejsza niż elementu tablicy.|
-|0|Klucz jest równa elementu tablicy.|
+|\< 0|Klucz jest mniejszy niż element tablicy.|
+|0|Klucz jest równy elementowi tablicy.|
 |> 0|Klucz jest większy niż element tablicy.|
 
-*Kontekstu* wskaźnik może być przydatne, jeśli struktura wyszukiwanych danych jest częścią obiektu, a funkcja porównania dostęp do elementów członkowskich obiektu. *Porównania* funkcji może rzutować wskaźnika void do odpowiedniego obiektu typu i dostęp do elementów członkowskich tego obiektu. Dodanie *kontekstu* sprawia, że parametr **bsearch_s —** bezpieczniejsze, ponieważ dodatkowy kontekst pozwala uniknąć błędów współużytkowania wątkowości, związanych z użyciem statyczne zmienne, aby udostępnić dane *porównania* funkcji.
+Wskaźnik *kontekstu* może być przydatny, jeśli przeszukiwana struktura danych jest częścią obiektu, a funkcja porównywania musi uzyskać dostęp do elementów członkowskich obiektu. Funkcja *Compare* może rzutować wskaźnik void na odpowiedni typ obiektu i uzyskać dostęp do elementów członkowskich tego obiektu. Dodanie parametru *Context* sprawia, że **bsearch_s** bezpieczniejszy, ponieważ można użyć dodatkowego kontekstu, aby uniknąć błędów współużytkowania wątkowości skojarzonych z użyciem zmiennych statycznych w celu udostępnienia danych funkcji *Compare* .
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**bsearch_s**|\<stdlib.h > i \<search.h >|
+|**bsearch_s**|\<STDLIB. h > i \<Search. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Ten program sortuje tablicy ciągów przy użyciu [qsort_s —](qsort-s.md), a następnie używa bsearch_s — można znaleźć słowo "cat".
+Ten program Sortuje tablicę ciągów z [qsort_s](qsort-s.md), a następnie używa bsearch_s do znalezienia słowa "Cat".
 
 ```cpp
 // crt_bsearch_s.cpp

@@ -1,9 +1,9 @@
 ---
 title: _CrtIsValidHeapPointer
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtIsValidHeapPointer
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtlsValidHeapPointer
 - _CrtIsValidHeapPointer
@@ -22,16 +25,16 @@ helpviewer_keywords:
 - _CrtIsValidHeapPointer function
 - CrtIsValidHeapPointer function
 ms.assetid: caf597ce-1b05-4764-9f37-0197a982bec5
-ms.openlocfilehash: cdfb02c622cddc4c86a99f614e469abc527d8845
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a8746eb2da90ac5515d92113b977011a4647fe6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339393"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942381"
 ---
-# <a name="crtisvalidheappointer"></a>_CrtIsValidHeapPointer
+# <a name="_crtisvalidheappointer"></a>_CrtIsValidHeapPointer
 
-Weryfikuje, czy określony wskaźnik w stercie przydzielone przez niektóre biblioteki wykonawczej języka C, ale niekoniecznie przez bibliotekę CRT obiektu wywołującego. W wersjach CRT przed Visual Studio 2010 weryfikuje, że określony wskaźnik myszy znajduje się w lokalnej sterty (tylko wersja debugowania).
+Sprawdza, czy określony wskaźnik znajduje się w stercie przydzielonej przez część biblioteki wykonawczej C, ale niekoniecznie przez bibliotekę CRT obiektu wywołującego. W wersjach CRT przed Visual Studio 2010 sprawdza, czy określony wskaźnik znajduje się w stercie lokalnym (tylko wersja do debugowania).
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,23 +47,23 @@ int _CrtIsValidHeapPointer(
 ### <a name="parameters"></a>Parametry
 
 *userData*<br/>
-Wskaźnik do początku blok pamięci przydzielony.
+Wskaźnik na początek przydzielony blok pamięci.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_Crtisvalidheappointer —** zwraca wartość PRAWDA, jeśli określony wskaźnik znajduje się w stosie współużytkowane przez wszystkie wystąpienia biblioteki CRT. W wersjach CRT przed Visual Studio 2010 to zwraca wartość PRAWDA, jeśli określony wskaźnik myszy znajduje się w lokalnej sterty. W przeciwnym razie funkcja zwraca wartość FALSE.
+**_CrtIsValidHeapPointer** zwraca wartość true, jeśli określony wskaźnik znajduje się w stercie współdzielonym przez wszystkie wystąpienia biblioteki CRT. W wersjach CRT przed Visual Studio 2010 zwraca wartość TRUE, jeśli określony wskaźnik znajduje się na stercie lokalnej. W przeciwnym razie funkcja zwraca wartość FALSE.
 
 ## <a name="remarks"></a>Uwagi
 
-Aby użyć tej funkcji nie jest zalecane. Począwszy od biblioteki CRT 2010 w usłudze Visual Studio, wszystkie biblioteki CRT udostępnianie jednego systemu operacyjnego sterty, *sterty procesu*. **_Crtisvalidheappointer —** funkcja zgłasza, czy wskaźnik został przydzielony w stercie CRT, ale nie która została przydzielona przez bibliotekę CRT obiektu wywołującego. Na przykład należy wziąć pod uwagę bloku przydzielane przy użyciu programu Visual Studio 2010 biblioteki CRT. Jeśli **_crtisvalidheappointer —** funkcji eksportowanych przez bibliotekę CRT w wersji programu Visual Studio 2012 badania wskaźnik, zwraca wartość TRUE. To nie jest już przydatna testu. W wersjach biblioteki CRT przed Visual Studio 2010 funkcja służy do upewnij się, że adres pamięci określonych w ramach lokalnej sterty. Lokalnej sterty odnosi się do sterty tworzony i zarządzany przez konkretnego wystąpienia biblioteki wykonawczej C. Jeśli biblioteki dołączanej (dynamicznie DLL) zawiera statyczne łącze do biblioteki czasu wykonywania, ma własne wystąpienie sterty czasu wykonywania, a tym samym własnego stosu, niezależnie od aplikacji lokalnej sterty. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołania **_crtisvalidheappointer —** są usuwane podczas przetwarzania wstępnego.
+Nie zalecamy korzystania z tej funkcji. Począwszy od biblioteki CRT programu Visual Studio 2010, wszystkie biblioteki CRT korzystają z jednej sterty systemu operacyjnego, *sterty procesu*. Funkcja **_CrtIsValidHeapPointer** określa, czy wskaźnik został przydzielony w stercie CRT, ale nie jest przydzielany przez bibliotekę CRT obiektu wywołującego. Rozważmy na przykład blok alokowany przy użyciu wersji programu Visual Studio 2010 biblioteki CRT. Jeśli funkcja **_CrtIsValidHeapPointer** wyeksportowana przez wersję programu Visual Studio 2012 biblioteki CRT testuje wskaźnik, zwraca wartość true. Nie jest to już przydatny test. W wersjach biblioteki CRT przed Visual Studio 2010 funkcja służy do upewnienia się, że określony adres pamięci znajduje się w stercie lokalnej. Sterta lokalna dotyczy sterty utworzonej i zarządzanej przez określone wystąpienie biblioteki wykonawczej C. Jeśli biblioteka dołączana dynamicznie (DLL) zawiera statyczny link do biblioteki wykonawczej, ma własne wystąpienie sterty czasu wykonywania i w związku z tym jego własne sterty niezależnie od sterty lokalnej aplikacji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołania **_CrtIsValidHeapPointer** są usuwane podczas przetwarzania wstępnego.
 
-Ponieważ ta funkcja zwraca wartość PRAWDA lub FAŁSZ, mogą być przekazywane do jednego z [_ASSERT](assert-asserte-assert-expr-macros.md) makra, aby utworzyć prosty błąd debugowania mechanizm obsługi. Poniższy przykład powoduje błąd potwierdzenia, jeśli określony adres nie znajduje się w obrębie lokalnej sterty:
+Ponieważ ta funkcja zwraca wartość TRUE lub FALSE, można ją przesłać do jednego z makr [_ASSERT](assert-asserte-assert-expr-macros.md) w celu utworzenia prostego mechanizmu obsługi błędów debugowania. Poniższy przykład powoduje niepowodzenie potwierdzenia, jeśli określony adres nie znajduje się na stercie lokalnej:
 
 ```C
 _ASSERTE( _CrtIsValidHeapPointer( userData ) );
 ```
 
-Aby uzyskać więcej informacji o tym, jak **_crtisvalidheappointer —** mogą być używane z innych funkcji debugowania i makr, zobacz [makra dla raportowania](/visualstudio/debugger/macros-for-reporting). Aby dowiedzieć się jak bloki pamięci są przydzielane, inicjowane i zarządzane w wersji debugowania podstawowej sterty, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
+Aby uzyskać więcej informacji o tym, jak **_CrtIsValidHeapPointer** może być używany z innymi funkcjami i makrami debugowania, zobacz [MACROS for Reporting](/visualstudio/debugger/macros-for-reporting). Aby uzyskać informacje o tym, jak bloki pamięci są przydzielane, inicjowane i zarządzane w wersji debugowania sterty podstawowej, zobacz [szczegóły sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -68,15 +71,15 @@ Aby uzyskać więcej informacji o tym, jak **_crtisvalidheappointer —** mogą 
 |-------------|---------------------|
 |**_CrtIsValidHeapPointer**|\<crtdbg.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Debuguj wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md) tylko.
+Debuguj wersje wyłącznie [bibliotek uruchomieniowych C](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak sprawdzić, czy pamięć jest prawidłowa w przypadku, gdy jest używany z biblioteki wykonawczej C przed Visual Studio 2010. Ten przykład podano dla użytkowników starszego kodu biblioteki CRT.
+W poniższym przykładzie pokazano, jak sprawdzić, czy pamięć jest prawidłowa, gdy jest używana z bibliotekami uruchomieniowymi C przed programem Visual Studio 2010. Ten przykład jest dostarczany dla użytkowników starszego kodu biblioteki CRT.
 
 ```C
 // crt_isvalid.c

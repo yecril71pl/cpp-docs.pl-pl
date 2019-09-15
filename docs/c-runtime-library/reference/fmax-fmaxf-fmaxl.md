@@ -1,11 +1,11 @@
 ---
 title: fmax, fmaxf, fmaxl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fmax
 - fmaxf
 - fmaxl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fmax
 - fmaxf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - fmaxf function
 - fmaxl function
 ms.assetid: a773ccf7-495e-4a9a-8c6d-dfb53e341e35
-ms.openlocfilehash: 371d53257427f2235048807968c82fec1b8bf699
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27b495e9344ca7e2e3e061b19fee696ce2bdceb2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333436"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957117"
 ---
 # <a name="fmax-fmaxf-fmaxl"></a>fmax, fmaxf, fmaxl
 
-Określ większą z dwóch wartości liczbowych określony.
+Określ większą liczbę dwóch określonych wartości liczbowych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -80,29 +83,29 @@ Druga wartość do porównania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli to się powiedzie, zwraca większy z nich *x* lub *y*. Wartość zwracana jest dokładne i nie zależy od dowolnej formie zaokrąglania.
+Jeśli to się powiedzie, zwraca większą liczbę *x* lub *y*. Zwracana wartość jest dokładna i nie zależy od żadnej formy zaokrąglania.
 
 W przeciwnym razie może zwracać jedną z następujących wartości:
 
-|Problem|Wróć|
+|Problem|przesłać|
 |-----------|------------|
 |*x* = NaN|*y*|
 |*y* = NaN|*x*|
 |*x* i *y* = NaN|NaN|
 
-Ta funkcja nie używa błędy określone w [_matherr](matherr.md).
+Ta funkcja nie używa błędów określonych w [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia fmax, które przyjmują i zwracają zmiennoprzecinkowych i typu long double. W programie C fmax zawsze przyjmuje i zwraca wartość o podwójnej precyzji.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia Fmax —, które pobierają i zwracają zmiennoprzecinkowe i długie podwójne typy. W programie C Fmax — zawsze przyjmuje i zwraca wartość Double.
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek języka C|Nagłówek języka C++|
+|Funkcja|Nagłówek języka C|C++nagłówki|
 |--------------|--------------|------------------|
-|**fmax**, **fmaxf**, **fmaxl**|\<math.h>|\<cmath > lub \<math.h >|
+|**Fmax —** , **fmaxf —** , **fmaxl**|\<math.h>|\<cmath > lub \<Math. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,10 +1,10 @@
 ---
 title: _mbsnbset, _mbsnbset_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbset
 - _mbsnbset_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsnbset
 - mbsnbset_l
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - tcsnset_l function
 - mbsnbset function
 ms.assetid: 8e46ef75-9a56-42d2-a522-a08450c67c19
-ms.openlocfilehash: 7783ff6519147331ae3943f053efe1bae01aee7d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8ba619dba07f102387d70c3bb3a2af729e44b495
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499788"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952166"
 ---
 # <a name="_mbsnbset-_mbsnbset_l"></a>_mbsnbset, _mbsnbset_l
 
@@ -88,9 +91,9 @@ Funkcje **_mbsnbset** i **_mbsnbset_l** , co najwyżej, w pierwszej *liczbie* ba
 
 Jeśli *str* ma **wartość null** lub *Liczba* jest równa zero, ta funkcja generuje wyjątek nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcja zwraca **wartość null**. Ponadto, jeśli *c* nie jest prawidłowym znakiem wielobajtowym, **errno** jest ustawiona na **EINVAL** i zamiast niego jest używane miejsce.
 
-Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawień regionalnych; Aby [](setlocale-wsetlocale.md) uzyskać więcej informacji, zobacz setlocals. Wersja **_mbsnbset** tej funkcji używa bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych; wersja **_mbsnbset_l** jest identyczna, z tą różnicą, że zamiast tego używa parametru ustawień regionalnych przekazaną. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocals](setlocale-wsetlocale.md) . Wersja **_mbsnbset** tej funkcji używa bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych; wersja **_mbsnbset_l** jest identyczna, z tą różnicą, że zamiast tego używa parametru ustawień regionalnych przekazaną. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-**Uwaga dotycząca zabezpieczeń** Ten interfejs API wiąże się z potencjalnym zagrożeniem spowodowanym przez problem z przepełnieniem buforu. Problemy związane z przepełnieniem buforu są częstą metodą ataku systemu, powodując nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
+**Uwaga dotycząca zabezpieczeń** Ten interfejs API wiąże się z potencjalnym zagrożeniem spowodowanym przez problem z przepełnieniem buforu. Problemy związane z przepełnieniem buforu są częstą metodą ataku systemu, powodując nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 

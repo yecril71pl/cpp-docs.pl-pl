@@ -1,9 +1,9 @@
 ---
 title: feclearexcept1
 ms.date: 04/05/2018
-apiname:
+api_name:
 - feclearexcept
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,23 +15,26 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - feclearexcept
 - fenv/feclearexcept
 helpviewer_keywords:
 - feclearexcept function
 ms.assetid: ef419da3-c248-4432-b53c-8e7a475d9533
-ms.openlocfilehash: 3c2f037a5be903fc006debfa7319c483431fdd92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9899d7068a289e7d5f71cb42a8373869d60c3070
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334739"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941274"
 ---
 # <a name="feclearexcept"></a>feclearexcept
 
-Podejmuje próbę wyczyszczenia flagi wyjątków zmiennoprzecinkowych, określonego przez argument.
+Próbuje wyczyścić flagi wyjątków zmiennoprzecinkowych określone przez argument.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,35 +46,35 @@ int feclearexcept(
 
 ### <a name="parameters"></a>Parametry
 
-*z wyjątkiem*<br/>
+*Oprócz*<br/>
 Flagi stanu wyjątku do wyczyszczenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca zero, jeśli *z wyjątkiem* wynosi zero, czy określone wyjątki zostały pomyślnie wyczyszczone. W przeciwnym razie zwraca wartość różną od zera.
+Zwraca zero, jeśli *except* ma wartość zero lub jeśli wszystkie określone wyjątki zostały pomyślnie wyczyszczone. W przeciwnym razie zwraca wartość różną od zera.
 
 ## <a name="remarks"></a>Uwagi
 
-**Feclearexcept** próbuje funkcja wyczyść wartość zmiennoprzecinkowa punkt flagi stanu wyjątku określonego przez *z wyjątkiem*. Funkcja obsługuje te makra wyjątków, zdefiniowane w fenv.h:
+Funkcja **feclearexcept** próbuje wyczyścić flagi stanu wyjątku zmiennoprzecinkowego określone przez *except*. Funkcja obsługuje te makra wyjątków zdefiniowane w fenv. h:
 
-|Makra wyjątków|Opis|
+|Makro wyjątku|Opis|
 |---------------------|-----------------|
-|FE_DIVBYZERO|Wystąpił błąd singularity lub pole w starszej operacji zmiennoprzecinkowej; Utworzono wartości nieskończonej.|
-|FE_INEXACT|Wymuszono funkcji round przechowywanych wynikiem wcześniejszych operacji zmiennoprzecinkowej.|
-|FE_INVALID|Wystąpił błąd domeny w starszej operacji zmiennoprzecinkowej.|
-|FE_OVERFLOW|Wystąpił błąd zakresu; wynik operacji zmiennoprzecinkowej wcześniej była zbyt duża, aby mogły być reprezentowane.|
-|FE_UNDERFLOW|Wcześniej wyniku operacji zmiennoprzecinkowej był za mały, aby mogły być reprezentowane w o pełnej dokładności; wartość została utworzona.|
-|FE_ALL_EXCEPT|Bitowe OR wszystkich obsługiwane wyjątki zmiennoprzecinkowe.|
+|FE_DIVBYZERO|Wystąpił błąd Singularity lub wartość w poprzedniej operacji zmiennoprzecinkowej; utworzono nieskończoną wartość.|
+|FE_INEXACT|Funkcja była zmuszona do zaokrąglania przechowywanego wyniku poprzedniej operacji zmiennoprzecinkowej.|
+|FE_INVALID|Wystąpił błąd domeny w poprzedniej operacji zmiennoprzecinkowej.|
+|FE_OVERFLOW|Wystąpił błąd zakresu; wcześniejszy wynik operacji zmiennoprzecinkowej był zbyt duży, aby można było go przedstawić.|
+|FE_UNDERFLOW|Wcześniejszy wynik operacji zmiennoprzecinkowej był zbyt mały, aby mógł być reprezentowany z pełną dokładnością; utworzono nienormalną wartość.|
+|FE_ALL_EXCEPT|Bitowe lub wszystkie obsługiwane wyjątki zmiennoprzecinkowe.|
 
-*z wyjątkiem* argument może być zero lub logiczną lub co najmniej jednego z makr wyjątków obsługiwanych. Wynik jakakolwiek inna wartość argumentu jest niezdefiniowane.
+Argument *except* może mieć wartość zero lub być bitowe lub co najmniej jednego obsługiwanego makra wyjątku. Wynik innej wartości argumentu jest niezdefiniowany.
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek języka C|Nagłówek języka C++|
+|Funkcja|Nagłówek języka C|C++nagłówki|
 |--------------|--------------|------------------|
 |**feclearexcept**|\<fenv.h>|\<cfenv>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

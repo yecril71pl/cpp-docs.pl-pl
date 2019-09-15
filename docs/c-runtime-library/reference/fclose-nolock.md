@@ -1,9 +1,9 @@
 ---
 title: _fclose_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fclose_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fclose_nolock
 - _fclose_nolock
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - fclose_nolock function
 - _fclose_nolock function
 ms.assetid: b4af4392-5fc8-49bb-9fe2-ca7293d3ce04
-ms.openlocfilehash: 440582bb42a1795721eab17b24be3e0bc3daf80f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e19604f09cdb3ac2a5bfc1635c2b98a8d5218c5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334973"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941425"
 ---
-# <a name="fclosenolock"></a>_fclose_nolock
+# <a name="_fclose_nolock"></a>_fclose_nolock
 
-Zamyka strumienia bez blokowania wątku.
+Zamyka strumień bez blokowania wątków.
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,15 +49,15 @@ int _fclose_nolock(
 ### <a name="parameters"></a>Parametry
 
 *stream*<br/>
-Wskaźnik do **pliku** struktury.
+Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**fclose —** zwraca wartość 0, jeśli strumień jest zamknięty pomyślnie. Zwraca **EOF** wystąpił błąd.
+**fclose** zwraca wartość 0, jeśli strumień został pomyślnie zamknięty. Zwraca **znacznik EOF** , aby wskazać błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-Tej funkcji jest wersja bez blokady **fclose —**. Jest on identyczny, z tą różnicą, że nie jest chronione przed ingerencją przez inne wątki. Może on być szybsze, ponieważ nie są naliczane z obciążeniem związanym z blokowaniem innych wątków. Ta funkcja służy tylko w kontekstach wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywołujący już obsługuje izolację wątków.
+Ta funkcja jest nieblokującą wersją **fclose**. Jest on identyczny, z tą różnicą, że nie jest chroniony przed ingerencją przez inne wątki. Może to być szybsze, ponieważ nie wiąże się z zablokowaniem innych wątków. Tej funkcji należy używać tylko w kontekstach bezpiecznych dla wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywoływania już obsługuje izolację wątku.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -62,11 +65,11 @@ Tej funkcji jest wersja bez blokady **fclose —**. Jest on identyczny, z tą r�
 |--------------|---------------------|
 |**_fclose_nolock**|\<stdio.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [_close](close.md)<br/>
 [_fdopen, _wfdopen](fdopen-wfdopen.md)<br/>
 [fflush](fflush.md)<br/>

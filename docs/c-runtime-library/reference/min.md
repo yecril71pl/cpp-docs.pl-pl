@@ -1,9 +1,9 @@
 ---
 title: __min
 ms.date: 04/05/2018
-apiname:
+api_name:
 - __min
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __min
 - min
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - minimum macro
 - _min macro
 ms.assetid: 2037f26c-b48a-4a69-8870-22519f052a3c
-ms.openlocfilehash: f9e867cd1f3e3519e440c91895e61e317d9688a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b5cc6517c125f91337ca0d9b12b7a49bd7c1753
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156554"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951735"
 ---
-# <a name="min"></a>__min
+# <a name="__min"></a>__min
 
-Makro preprocesora, które zwraca mniejszy z dwóch wartości.
+Makro preprocesora, które zwraca mniejsze z dwóch wartości.
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,17 +48,17 @@ Makro preprocesora, które zwraca mniejszy z dwóch wartości.
 ### <a name="parameters"></a>Parametry
 
 *a*, *b*<br/>
-Wartości dowolnego typu **<** operator pracuje.
+Wartości dowolnego typu, na którym **<** działa operator.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Mniejszej z tych dwóch argumentów.
+Mniejsza z dwóch argumentów.
 
 ## <a name="remarks"></a>Uwagi
 
-**__Min** makro porównuje dwie wartości i zwraca wartość mniejszy. Argumenty mogą być wszelkie wartości numeryczne, typ danych, podpisane lub niepodpisane. Argumenty i wartość zwracana musi być tego samego typu danych.
+Makro **__min** porównuje dwie wartości i zwraca wartość mniejszej. Argumenty mogą być dowolnego typu danych liczbowych, podpisane lub niepodpisane. Oba argumenty i wartość zwracana muszą być tego samego typu danych.
 
-Argument, zwracany jest oceniany dwukrotnie przez makra. Może to prowadzić do nieoczekiwanych wyników, jeśli argument jest wyrażeniem, które zmienia jego wartość, gdy zostanie ono ocenione, takich jak `*p++`.
+Zwracany argument jest obliczany dwukrotnie przez makro. Może to prowadzić do nieoczekiwanych wyników, jeśli argument jest wyrażeniem, które zmienia jego wartość podczas oceniania, np `*p++`.
 
 ## <a name="requirements"></a>Wymagania
 

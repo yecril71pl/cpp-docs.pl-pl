@@ -1,13 +1,13 @@
 ---
 title: tolower, _tolower, towlower, _tolower_l, _towlower_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _tolower_l
 - towlower
 - tolower
 - _tolower
 - _towlower_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _totlower
 - tolower
@@ -43,14 +46,14 @@ helpviewer_keywords:
 - characters, converting
 - _towlower_l function
 ms.assetid: 86e0fc02-94ae-4472-9631-bf8e96f67b92
-ms.openlocfilehash: f7d017235eddb19b08353dceb332a2721e7434aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d182fca50befac3393012572e68e65a8c81fa72
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155522"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957453"
 ---
-# <a name="tolower-tolower-towlower-tolowerl-towlowerl"></a>tolower, _tolower, towlower, _tolower_l, _towlower_l
+# <a name="tolower-_tolower-towlower-_tolower_l-_towlower_l"></a>tolower, _tolower, towlower, _tolower_l, _towlower_l
 
 Konwertuje znak na małe litery.
 
@@ -79,44 +82,44 @@ int _towlower_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak do przekształcenia.
+Znak do przekonwertowania.
 
-*Ustawienia regionalne*<br/>
-Ustawienia regionalne na potrzeby tłumaczenia specyficzne dla ustawień regionalnych.
+*ustawienie*<br/>
+Ustawienia regionalne do użycia dla tłumaczenia specyficznego dla ustawień regionalnych.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych procedur konwertuje kopię *c* na małe litery, jeśli konwersja jest możliwa i zwraca wynik. Nie zwraca wartości jest rezerwowana w celu wskazania błędu.
+Każda z tych procedur konwertuje kopię *c* na małe litery, jeśli konwersja jest możliwa i zwraca wynik. Brak wartości zwracanej zastrzeżonej do wskazania błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych procedur konwertuje dany wielką literą małej literze, jeśli jest możliwe odpowiednie. Konwersja przypadków **towlower —** jest specyficzne dla ustawień regionalnych. Tylko znaki, które są istotne dla bieżących ustawień regionalnych zostały zmienione w przypadku. Funkcje bez **_l** sufiksa używa aktualnie ustawione ustawień regionalnych. Wersje tych funkcji, które mają **_l** sufiks zająć ustawień regionalnych jako parametru i używać go zamiast aktualnie ustawione ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Każda z tych procedur konwertuje daną wielką literę na małą literę, jeśli jest to możliwe i istotne. Konwersja przypadku **towlower** jest specyficzna dla ustawień regionalnych. W przypadku zmiany tylko znaków istotnych dla bieżących ustawień regionalnych. Funkcje bez sufiksu **_l** używają obecnie ustawionych ustawień regionalnych. Wersje tych funkcji, które mają sufiks **_l** przyjmują ustawienia regionalne jako parametr i używają go zamiast obecnie ustawionych ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-Aby **_tolower —** do uzyskania oczekiwanych wyników, [__isascii —](isascii-isascii-iswascii.md) i [isupper](isupper-isupper-l-iswupper-iswupper-l.md) musi oba zwracają wartość różną od zera.
+Aby **_tolower** dać oczekiwane wyniki, [__isascii](isascii-isascii-iswascii.md) i [IsUpper](isupper-isupper-l-iswupper-iswupper-l.md) muszą zwracać wartość różną od zera.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_totlower**|**tolower**|**_mbctolower**|**towlower**|
+|**_totlower**|**ToLower**|**_mbctolower**|**towlower**|
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_l**|
 
 > [!NOTE]
-> **_tolower_l —** i **_towlower_l —** ma zależność od nie ustawień regionalnych i nie są przeznaczone do bezpośredniego wywoływania. Są one udostępniane do użytku wewnętrznego przez **_totlower_l**.
+> **_tolower_l** i **_towlower_l** nie są zależne od ustawień regionalnych i nie są przeznaczone do bezpośredniego wywoływania. Są one udostępniane do użytku wewnętrznego przez **_totlower_l**.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**tolower**|\<ctype.h>|
+|**ToLower**|\<ctype.h>|
 |**_tolower**|\<ctype.h>|
-|**towlower**|\<CType.h > lub \<wchar.h >|
+|**towlower**|\<CType. h > lub \<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład w [funkcji](../../c-runtime-library/to-functions.md).
+Zapoznaj się z przykładem w [funkcji](../../c-runtime-library/to-functions.md).
 
 ## <a name="see-also"></a>Zobacz także
 

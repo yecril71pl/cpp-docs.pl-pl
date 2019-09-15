@@ -1,9 +1,9 @@
 ---
 title: _lock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lock
-apilocation:
+api_location:
 - msvcr110_clr0400.dll
 - msvcr120.dll
 - msvcr100.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr110.dll
 - msvcrt.dll
 - msvcr120_clr0400.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lock
 - _lock
@@ -20,19 +23,19 @@ helpviewer_keywords:
 - lock function
 - _lock function
 ms.assetid: 29f77c37-30de-4b3d-91b6-030216e645a6
-ms.openlocfilehash: d29488c6dec15fb58eef24f50c1bfafefb8e85c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 666fdb8febebe133ae09ef3632cb38b6527d1210
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62343241"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944498"
 ---
-# <a name="lock"></a>_lock
+# <a name="_lock"></a>_lock
 
-Uzyskuje blokadę wielu wątków.
+Uzyskuje blokadę wielowątkowości.
 
 > [!IMPORTANT]
->  Ta funkcja jest przestarzała. Począwszy od programu Visual Studio 2015, nie jest dostępna w CRT.
+>  Ta funkcja jest przestarzała. Począwszy od programu Visual Studio 2015, nie jest on dostępny w CRT.
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,15 +48,15 @@ void __cdecl _lock
 #### <a name="parameters"></a>Parametry
 
 *locknum*<br/>
-[in] Identyfikator blokady w celu uzyskania.
+podczas Identyfikator blokady do pobrania.
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli już pozyskany blokady, ta metoda uzyskuje blokadę mimo to i powoduje błąd wewnętrzny (CRT) środowiska wykonawczego języka C. Jeśli metoda nie może uzyskać blokady, kończy działanie z powodu błędu krytycznego i ustawia kod błędu: `_RT_LOCK`.
+Jeśli blokada została już pobrana, ta metoda uzyskuje blokadę i powoduje błąd wewnętrzny środowiska uruchomieniowego C (CRT). Jeśli metoda nie może uzyskać blokady, kończy się z powodu błędu krytycznego, a kod błędu zostanie ustawiony na `_RT_LOCK`.
 
 ## <a name="requirements"></a>Wymagania
 
-**Źródło:** mlock.c
+**Źródło:** MLOCK. c
 
 ## <a name="see-also"></a>Zobacz także
 

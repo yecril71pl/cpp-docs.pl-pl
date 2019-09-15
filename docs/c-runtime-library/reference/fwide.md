@@ -1,9 +1,9 @@
 ---
 title: fwide
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fwide
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,18 +14,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fwide
 helpviewer_keywords:
 - fwide function
 ms.assetid: a4641f5b-d74f-4946-95d5-53a64610d28d
-ms.openlocfilehash: d992ebc527744beeb4ef14175e3f10646a77a064
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e986ba5ab28072f4933e555eea32a5893c8df56
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287619"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956220"
 ---
 # <a name="fwide"></a>fwide
 
@@ -43,23 +46,23 @@ int fwide(
 ### <a name="parameters"></a>Parametry
 
 *stream*<br/>
-Wskaźnik do **pliku** struktury (zignorowany).
+Wskaźnik do struktury **pliku** (ignorowany).
 
-*Tryb*<br/>
-Nową szerokość strumienia: dodatnia dla znaku dwubajtowego, który jest ujemny bajt, zero, aby pozostawić bez zmian. (Ta wartość jest ignorowana).
+*wyst*<br/>
+Nowa szerokość strumienia: wartość dodatnia dla znaku dwubajtowego, wartość ujemna dla Byte, zero, aby opuścić niezmieniony. (Ta wartość jest ignorowana).
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Ta funkcja jest obecnie po prostu zwraca *tryb*.
+Ta funkcja właśnie zwraca *tryb*.
 
 ## <a name="remarks"></a>Uwagi
 
-Bieżąca wersja tej funkcji jest zgodne ze standardem.
+Bieżąca wersja tej funkcji jest niezgodna ze standardem.
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**fwide**|\<wchar.h>|
+|**fwide**|\<WCHAR. h >|
 
-Aby uzyskać więcej informacji, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji, zobacz [zgodność](../../c-runtime-library/compatibility.md).

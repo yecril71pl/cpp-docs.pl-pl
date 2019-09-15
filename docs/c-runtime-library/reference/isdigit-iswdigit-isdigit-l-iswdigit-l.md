@@ -1,12 +1,12 @@
 ---
 title: isdigit, iswdigit, _isdigit_l, _iswdigit_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _isdigit_l
 - iswdigit
 - _iswdigit_l
 - isdigit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _iswdigit_l
 - _isdigit_l
@@ -39,14 +42,14 @@ helpviewer_keywords:
 - _ismbcdigit_l function
 - _isdigit_l function
 ms.assetid: 350b0093-843a-47b0-954e-c1776e8a3853
-ms.openlocfilehash: 7e85028d43858543f8c9b9d4c5cf1b17664f8331
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30944db0653e26b6130fb7a37ad87e8e81a343f5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331626"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954391"
 ---
-# <a name="isdigit-iswdigit-isdigitl-iswdigitl"></a>isdigit, iswdigit, _isdigit_l, _iswdigit_l
+# <a name="isdigit-iswdigit-_isdigit_l-_iswdigit_l"></a>isdigit, iswdigit, _isdigit_l, _iswdigit_l
 
 Określa, czy liczba całkowita reprezentuje znak cyfry dziesiętnej.
 
@@ -72,22 +75,22 @@ int _iswdigit_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Liczba całkowita to testowania.
+Liczba całkowita do przetestowania.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych procedur zwraca wartość różną od zera, jeśli *c* jest szczególną reprezentacją znaku cyfry dziesiętnej. **isdigit** zwraca wartość różną od zera, jeśli *c* jest cyfrą dziesiętną (0 – 9). **iswdigit —** zwraca wartość różną od zera, jeśli *c* jest znakiem dwubajtowym, który odpowiada znakowi cyfry dziesiętnej. Każda z tych procedur zwraca 0, jeśli *c* nie spełnia warunku testowego.
+Każda z tych procedur zwraca wartość różną od zera, jeśli *c* jest szczególną reprezentacją znaku cyfry dziesiętnej. **iscyfra** zwraca wartość różną od zera, jeśli *c* jest cyfrą dziesiętną (0-9). **iswdigit** zwraca wartość różną od zera, jeśli *c* jest znakiem dwubajtowym, który odpowiada znakowi cyfry dziesiętnej. Każda z tych procedur zwraca wartość 0, jeśli *c* nie spełnia warunku testu.
 
-Wersje tych funkcji, które mają **_l** sufiksa używa ustawień regionalnych, który jest przekazywany zamiast bieżących ustawień regionalnych dla swoich zachowań zależnych od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wersje tych funkcji, które mają **_l** sufiks używają ustawień regionalnych, które zostały przesłane zamiast bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-Zachowanie **isdigit** i **_isdigit_l —** jest niezdefiniowane, jeżeli *c* nie jest równy EOF lub z zakresu od 0 do 0xFF włącznie. Jeśli jest używana biblioteka debugowania CRT i *c* nie jest jedną z tych wartości, funkcje wywołują potwierdzenie.
+Zachowanie **iscyfrowe** i **_isdigit_l** jest niezdefiniowane, jeśli *c* nie jest typu EOF lub z zakresu od 0 do 0xFF włącznie. Gdy jest używana Biblioteka CRT debugowania, a *c* nie jest jedną z tych wartości, funkcje zgłaszają potwierdzenie.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_istdigit**|**isdigit**|[_ismbcdigit](ismbcalnum-functions.md)|**iswdigit**|
 |**_istdigit_l**|**_isdigit_l**|[_ismbcdigit_l](ismbcalnum-functions.md)|**_iswdigit_l**|
@@ -97,11 +100,11 @@ Zachowanie **isdigit** i **_isdigit_l —** jest niezdefiniowane, jeżeli *c* ni
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**isdigit**|\<ctype.h>|
-|**iswdigit**|\<CType.h > lub \<wchar.h >|
+|**iswdigit**|\<CType. h > lub \<WCHAR. h >|
 |**_isdigit_l**|\<ctype.h>|
-|**_iswdigit_l**|\<CType.h > lub \<wchar.h >|
+|**_iswdigit_l**|\<CType. h > lub \<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

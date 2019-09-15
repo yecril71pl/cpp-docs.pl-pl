@@ -1,14 +1,14 @@
 ---
 title: scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - scalblnl
 - scalbnl
 - scalbnf
 - scalblnf
 - scalbn
 - scalbln
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - scalblnf
 - scalbnl
@@ -36,16 +39,16 @@ helpviewer_keywords:
 - scalbnf function
 - scalblnf function
 ms.assetid: df2f1543-8e39-4af4-a5cf-29307e64807d
-ms.openlocfilehash: 7109340afaa634fc21177380d015c9eace506081
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 794d0bdceb13aafb83de85fb29e47a4fa3125cd6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357164"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948915"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 
-Mnoży liczbę zmiennoprzecinkową przez całkowite możliwości FLT_RADIX.
+Mnoży liczbę zmiennoprzecinkową przez integralną moc FLT_RADIX.
 
 ## <a name="syntax"></a>Składnia
 
@@ -97,28 +100,28 @@ long double scalblnl(
 *x*<br/>
 Wartość zmiennoprzecinkowa.
 
-*exp*<br/>
-Wykładnik potęgi liczby całkowitej.
+*EXP*<br/>
+Wykładnik wartości całkowitej.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Scalbn —** funkcje zwracają wartość *x* \* **FLT_RADIX**<sup>exp</sup> po pomyślnym wykonaniu. Przy przepełnieniu (w zależności od jej znaku *x*), **scalbn —** zwraca wartość +/- **HUGE_VAL**; **errno** wartość jest równa **ERANGE** .
+Funkcja **scalbn —** zwraca wartość *x* \* **FLT_RADIX**<sup>EXP</sup> po pomyślnym wykonaniu. W przypadku przepełnienia (w zależności od znaku *x*) **scalbn —** zwraca +/- **HUGE_VAL**; wartość **errno** jest ustawiona na **ERANGE**.
 
-Aby uzyskać więcej informacji na temat **errno** i błędach zwracają wartości, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat **errno** i możliwych zwracanych wartości błędów, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**FLT_RADIX** jest zdefiniowany w \<float.h > jako natywny podstawy zmiennoprzecinkowych; w systemach dane binarne, jest równa 2, a **scalbn —** jest odpowiednikiem [ldexp —](ldexp.md).
+**FLT_RADIX** jest zdefiniowany w \<parametrze float. > h jako natywny zmiennoprzecinkowy podstawy; w systemach binarnych ma wartość 2, a **scalbn —** jest równoważne [ldexp —](ldexp.md).
 
-Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **scalbn —** i **scalbln** przyjmujące i zwracające **float** lub **długie** **double** typów. W programie C **scalbn —** zawsze ma **double** i **int** i zwraca **double**, i **scalbln**zawsze ma **double** i **długie** i zwraca **double**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **scalbn —** i **scalbln** , które pobierają i zwracają **zmiennoprzecinkowe** lub **długie** **podwójne** typy. W programie C **scalbn —** zawsze pobiera wartość typu **Double** i **int** oraz zwraca wartość typu **Double**, a **scalbln** zawsze przyjmuje wartość typu **Double** i **Long** i zwraca wartość typu **Double**.
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek języka C|Nagłówek języka C++|
+|Funkcja|Nagłówek języka C|C++nagłówki|
 |--------------|--------------|------------------|
-|**scalbn**, **scalbnf**, **scalbnl**, **scalbln**, **scalblnf**, **scalblnl**|\<math.h>|\<cmath>|
+|**scalbn**, **scalbnf**, **scalbnl**, **scalbln**, **scalblnf**, **scalblnl**|\<math.h>|\<cmath >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

@@ -1,9 +1,9 @@
 ---
 title: clearerr
 ms.date: 11/04/2016
-apiname:
+api_name:
 - clearerr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - clearerr
 helpviewer_keywords:
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr function
 ms.assetid: a9711cd4-3335-43d4-a018-87bbac5b3bac
-ms.openlocfilehash: c282a577bb7496f899f18abeac857c08388d12f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9fd2f7e7dfcf272e806a887b356418b7555913f5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340564"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942951"
 ---
 # <a name="clearerr"></a>clearerr
 
-Resetuje wskaźnik błędu dla strumienia. Bardziej bezpieczna wersja ta funkcja jest dostępna; zobacz [clearerr_s —](clearerr-s.md).
+Resetuje wskaźnik błędu dla strumienia. Dostępna jest bezpieczniejsza wersja tej funkcji; Zobacz [clearerr_s](clearerr-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,15 +48,15 @@ void clearerr(
 ### <a name="parameters"></a>Parametry
 
 *stream*<br/>
-Wskaźnik do **pliku** struktury.
+Wskaźnik do struktury **pliku** .
 
 ## <a name="remarks"></a>Uwagi
 
-**Clearerr —** funkcja resetuje wskaźnik błędów i wskaźnik końca pliku *strumienia*. Wskaźniki błędów nie zostaną automatycznie wyczyszczone; Po ustawieniu wskaźnika błędu dla określonego strumienia operacje na strumieniu w dalszym ciągu zwraca wartości błędu do czasu **clearerr —**, [fseek](fseek-fseeki64.md), **fsetpos**, lub [rewind](rewind.md) jest wywoływana.
+Funkcja **clearerr** resetuje wskaźnik błędu i wskaźnik końca pliku dla *strumienia*. Wskaźniki błędów nie są automatycznie czyszczone; gdy zostanie ustawiony wskaźnik błędu dla określonego strumienia, operacje w tym strumieniu nadal zwracają wartość błędu do momentu wywołania **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**lub [przewijania do tyłu](rewind.md) .
 
-Jeśli *strumienia* jest **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ta ustawia **errno** do **EINVAL** i zwraca. Aby uzyskać więcej informacji na temat **errno** i kodach błędów, zobacz [errno — stałe](../../c-runtime-library/errno-constants.md).
+Jeśli *strumień* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca. Aby uzyskać więcej informacji o **errno** i kodach błędów, zobacz [errno stałe](../../c-runtime-library/errno-constants.md).
 
-Bardziej bezpieczna wersja ta funkcja jest dostępna; zobacz [clearerr_s —](clearerr-s.md).
+Dostępna jest bezpieczniejsza wersja tej funkcji; Zobacz [clearerr_s](clearerr-s.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -61,7 +64,7 @@ Bardziej bezpieczna wersja ta funkcja jest dostępna; zobacz [clearerr_s —](cl
 |-------------|---------------------|
 |**clearerr**|\<stdio.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -114,7 +117,7 @@ No read error
 ## <a name="see-also"></a>Zobacz także
 
 [Obsługa błędów](../../c-runtime-library/error-handling-crt.md)<br/>
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [_eof](eof.md)<br/>
 [feof](feof.md)<br/>
 [ferror](ferror.md)<br/>

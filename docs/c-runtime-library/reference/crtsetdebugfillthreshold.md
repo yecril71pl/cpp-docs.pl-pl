@@ -1,9 +1,9 @@
 ---
 title: _CrtSetDebugFillThreshold
 ms.date: 03/21/2018
-apiname:
+api_name:
 - _CrtSetDebugFillThreshold
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CrtSetDebugFillThreshold
 - CrtSetDebugFillThreshold
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - buffer-filling behavior
 - 0xFD
 ms.assetid: 6cb360e8-56ae-4248-b17f-e28aee3e0ed7
-ms.openlocfilehash: ebe958ddc1c9a5c372f4ae68336e0dea3144e8b4
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: fe7d998a44502709edde33d22c1b1e88cf5ecbee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342971"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942296"
 ---
-# <a name="crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
+# <a name="_crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
 
-Pobiera lub modyfikuje wartości progowej, kontrolowanie zachowania wypełnianiem buforów w funkcji debugowania.
+Pobiera lub modyfikuje próg kontrolujący zachowanie podczas wypełniania buforu w funkcjach debugowania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,19 +48,19 @@ size_t _CrtSetDebugFillThreshold( size_t newThreshold );
 ### <a name="parameters"></a>Parametry
 
 *newThreshold*<br/>
-Próg nowy rozmiar w bajtach.
+Nowy rozmiar progu w bajtach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Poprzednią wartość progu.
+Wartość poprzedniej wartości progowej.
 
 ## <a name="remarks"></a>Uwagi
 
-Wersje do debugowania niektórych funkcji CRT z rozszerzonymi zabezpieczeniami Wypełnij rozmiar buforu przekazanego do nich przy użyciu znaków specjalnych (0xFE). Pomaga to znaleźć przypadki, w którym niepoprawny rozmiar został przekazany do funkcji. Niestety zmniejsza to także wydajności. Aby zwiększyć wydajność, należy użyć **_crtsetdebugfillthreshold —** wyłączyć wypełnianiem buforów dla buforów przekracza *newThreshold* wartość progową. A *newThreshold* wartość 0 powoduje wyłączenie go dla wszystkich buforów.
+Wersje debugowania niektórych funkcji CRT z rozszerzonymi zabezpieczeniami wypełniają przekazaną do nich bufor ze znakiem specjalnym (0xFE). Dzięki temu można znaleźć przypadki, w których do funkcji przekazano nieprawidłowy rozmiar. Niestety, zmniejsza również wydajność. Aby zwiększyć wydajność, należy użyć **_CrtSetDebugFillThreshold** , aby wyłączyć wypełnianie buforu dla buforów większych niż próg *newThreshold* . Wartość *newThreshold* 0 wyłącza ją dla wszystkich buforów.
 
 Domyślny próg to **SIZE_T_MAX**.
 
-Poniżej przedstawiono listę funkcji, których to dotyczy.
+Poniżej znajduje się lista funkcji, których to dotyczy.
 
 - [_ecvt_s](ecvt-s.md)
 
@@ -101,11 +104,11 @@ Poniżej przedstawiono listę funkcji, których to dotyczy.
 |-------------|---------------------|
 |**_CrtSetDebugFillThreshold**|\<crtdbg.h>|
 
-Ta funkcja jest specyficzne dla firmy Microsoft. Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Ta funkcja jest specyficzna dla firmy Microsoft. Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Debuguj wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md) tylko.
+Debuguj wersje wyłącznie [bibliotek uruchomieniowych C](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="example"></a>Przykład
 

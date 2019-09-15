@@ -1,14 +1,14 @@
 ---
 title: strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 ms.date: 03/25/2019
-apiname:
+api_name:
 - _wcstok_s_l
 - _mbstok_s_l
 - _mbstok_s
 - strtok_s
 - wcstok_s
 - _strtok_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcstok_s_l
 - _wcstok_s_l
@@ -48,19 +51,19 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-ms.openlocfilehash: e2c237927aa133d33085be40b88789c1024d6b34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1bbc5910e6242a0df262cc43b58815ea80ff9681
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176203"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946457"
 ---
-# <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
+# <a name="strtok_s-_strtok_s_l-wcstok_s-_wcstok_s_l-_mbstok_s-_mbstok_s_l"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
-Znajduje następny token w ciągu, przy użyciu bieżących ustawień regionalnych lub przekazanych ustawień regionalnych. Te wersje [strtok —, _strtok_l —, wcstok —, _wcstok_l —, _mbstok —, _mbstok_l —](strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md) mają wzmocnienia zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Znajduje następny token w ciągu, przy użyciu bieżących ustawień regionalnych lub przekazanych ustawień regionalnych. Te wersje [strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l](strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md) mają ulepszenia zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbstok_s —** i **_mbstok_s_l —** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbstok_s** i **_mbstok_s_l** nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -110,42 +113,42 @@ unsigned char* _mbstok_s_l(
 *str*<br/>
 Ciąg zawierający token lub tokeny do znalezienia.
 
-*ograniczniki*<br/>
+*Ograniczniki*<br/>
 Zestaw znaków ogranicznika do użycia.
 
-*Kontekst*<br/>
-Używane do przechowywania informacji pozycji między wywołań funkcji.
+*Context*<br/>
+Służy do przechowywania informacji o położeniu między wywołaniami funkcji.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do następnego tokenu w *str*. Zwraca **NULL** gdy znajdują się żadnych kolejnych tokenów. Każde wywołanie modyfikuje *str* , zastępując znak null w poszukiwaniu ogranicznika pierwszy, która występuje po zwrócony token.
+Zwraca wskaźnik do następnego tokenu znalezionego w *str*. Zwraca **wartość null** , jeśli nie znaleziono więcej tokenów. Każde wywołanie modyfikuje *str* , zastępując znak null dla pierwszego ogranicznika, który występuje po zwróconym tokenie.
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|*str*|*ograniczniki*|*Kontekst*|Wartość zwracana|**numer błędu**|
+|*str*|*Ograniczniki*|*Context*|Wartość zwracana|**errno**|
 |----------------|------------------|---------------|------------------|-------------|
-|**NULL**|Wszystkie|wskaźnik do wskaźnika o wartości null|**NULL**|**EINVAL**|
-|Wszystkie|**NULL**|Wszystkie|**NULL**|**EINVAL**|
-|Wszystkie|Wszystkie|**NULL**|**NULL**|**EINVAL**|
+|**NULL**|Ile|wskaźnik do wskaźnika o wartości null|**NULL**|**EINVAL**|
+|Ile|**NULL**|Ile|**NULL**|**EINVAL**|
+|Ile|Ile|**NULL**|**NULL**|**EINVAL**|
 
-Jeśli *str* jest **NULL** , ale *kontekstu* jest wskaźnikiem do wskaźnika prawidłowego kontekstu nie ma błędów.
+Jeśli *str* ma **wartość null** , ale *kontekst* jest wskaźnikiem do prawidłowego wskaźnika kontekstu, nie ma błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-**Strtok_s —** rodzinę funkcji znajduje następny token w *str*. Zestaw znaków *ograniczniki* określa ograniczniki możliwe tokenu, który ma zostać odnaleziona w *str* w bieżącym wywołaniu. **wcstok_s —** i **_mbstok_s —** są wersjami znaków dwubajtowych i znaków wielobajtowych **strtok_s —**. Argumenty i wartości zwracane **wcstok_s —** i **_wcstok_s_l —** są znakami dwubajtowymi ciągów; te z **_mbstok_s —** i **_mbstok_s_l —** są ciągami znaków wielobajtowych. Funkcje te zachowują się identycznie.
+Rodzina **strtok_s** funkcji znajduje następny token w *str*. Zestaw znaków w *ogranicznikach* określa możliwe ograniczniki tokenu, który ma być znaleziony w *str* na bieżącym wywołaniu. **wcstok_s** i **_mbstok_s** są wersjami znaków dwubajtowych i znakami wieloznacznymi **strtok_s**. Argumenty i wartości zwracane z **wcstok_s** i **_wcstok_s_l** są ciągami znaków dwubajtowych; te z **_mbstok_s** i **_mbstok_s_l** są ciągami znaków wielobajtowych. Funkcje te zachowują się identycznie w inny sposób.
 
-Ta funkcja sprawdza poprawność swoich parametrów. Gdy wystąpi błąd, tak jak w tabeli warunki błędu, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** do **EINVAL** i zwracają **NULL**.
+Ta funkcja sprawdza poprawność swoich parametrów. Gdy wystąpi błąd, jak w tabeli warunków błędu, procedura obsługi nieprawidłowego parametru jest wywoływana, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i zwracają **wartość null**.
 
-W pierwszym wywołaniu **strtok_s —**, funkcja pomija wiodących ograniczniki i zwraca wskaźnik do pierwszego token w *str*, przerywa token znakiem null. Kolejnych tokenów można zaburzyć poza pozostałą część *str* przez szereg wywołań do **strtok_s —**. Każde wywołanie **strtok_s —** modyfikuje *str* przez wstawienie znaku null po tokenowi zwróconemu przez to wywołanie. *Kontekstu* śledzi informacje o wskaźnik ciągu, który jest odczytywany, gdzie w ciągu następnego tokenu jest do odczytu. Można odczytać następnego tokenu z *str*, wywołaj **strtok_s —** z **o wartości NULL** wartość *str* argument i przekazać takie same  *kontekst* parametru. **NULL** *str* powoduje, że argument **strtok_s —** aby wyszukać następny token w zmodyfikowanego *str*. *Ograniczniki* argument może przyjąć dowolną wartość z jednego wywołania do następnego tak, aby zestaw ograniczników mogą się różnić.
+Przy pierwszym wywołaniu funkcji **strtok_s**funkcja pomija wiodące ograniczniki i zwraca wskaźnik do pierwszego tokenu w *str*, kończąc token ze znakiem null. Więcej tokenów można rozbić z pozostałej części *str* przez serię wywołań **strtok_s**. Każde wywołanie **strtok_s** modyfikuje *str* , wstawiając znak null po tokenie zwróconym przez to wywołanie. Wskaźnik *kontekstu* śledzi, który ciąg jest odczytywany i gdzie w ciągu należy odczytać następny token. Aby odczytać następny token z *str*, wywołaj **Strtok_s** z wartością **null** dla argumentu *str* i przekaż ten sam parametr *kontekstu* . **Pusty** ciąg jest przyczyną wyszukiwania następnego tokenu w zmodyfikowanym *str* **strtok_s** . Argument *ograniczników* może przyjmować dowolną wartość z jednego wywołania do następnego, aby zestaw ograniczników mógł się różnić.
 
-Ponieważ *kontekstu* parametr zastępuje statyczne buforów używane w **strtok —** i **_strtok_l —**, można przeanalizować dwa ciągi jednocześnie w tym samym wątku.
+Ponieważ parametr *kontekstowy* zastępuje bufory statyczne używane w **strtok** i **_strtok_l**, możliwe jest przeanalizowanie dwóch ciągów jednocześnie w tym samym wątku.
 
-Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md).
+Wartość wyjściowa jest zależna od ustawienia ustawienia kategorii **LC_CTYPE** ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md).
 
-Wersje tych funkcji, bez **_l** sufiksa używa bieżących ustawień regionalnych wątku tego zachowania zależnego od ustawień regionalnych. Wersje **_l** sufiksem są identyczne, z wyjątkiem używają w zamian ustawień regionalnych określonych przez *ustawień regionalnych* parametru. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych wątku dla tego zachowania zależnego od ustawień regionalnych. Wersje z sufiksem **_l** są identyczne, z tą różnicą, że zamiast nich używają ustawień regionalnych określonych przez parametr *locale* . Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -153,14 +156,14 @@ Wersje tych funkcji, bez **_l** sufiksa używa bieżących ustawień regionalnyc
 |-------------|---------------------|
 |**strtok_s**|\<string.h>|
 |**_strtok_s_l**|\<string.h>|
-|**wcstok_s —**,<br />**_wcstok_s_l**|\<Włącz String.h > lub \<wchar.h >|
+|**wcstok_s**,<br />**_wcstok_s_l**|\<ciąg. h > lub \<WCHAR. h >|
 |**_mbstok_s**,<br />**_mbstok_s_l**|\<mbstring.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|\_UNICODE & \_MBCS niezdefiniowana|\_MBCS zdefiniowany|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|\_Nie zdefiniowano MBCS Unicode & \_|\_MBCS zdefiniowany|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcstok_s**|**strtok_s**|**_mbstok_s**|**wcstok_s**|
 |**_tcstok_s_l**|**_strtok_s_l**|**_mbstok_s_l**|**_wcstok_s_l**|

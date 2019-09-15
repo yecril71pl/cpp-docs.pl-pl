@@ -1,11 +1,11 @@
 ---
 title: acos, acosf, acosl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - acosf
 - acos
 - acosl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - acos
 - acosl
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 22149e9ff552015238d34a15166d04115438534b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e8aba1104af5855db9cb4f3cbb989d182b2c78e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335675"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939997"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -58,33 +61,33 @@ long double acos( long double x );   // C++ only
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Wartość od -1 do 1, dla którego ma zostać obliczona arcus cosinus (odwrotność funkcji cosinus).
+Wartość z przedziału od-1 do 1, dla którego ma zostać obliczony arcus cosinus (arcus cosinus).
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Acos** funkcja Zwraca arcus cosinus *x* z zakresu od 0 do π wartość w radianach.
+Funkcja **Acos** zwraca arcus cosinus *x* z zakresu od 0 do π radianów.
 
-Domyślnie jeśli *x* jest mniejsza niż -1 lub większa niż 1, **acos** zwraca wartość nieokreśloną.
+Domyślnie, jeśli *x* jest mniejsza niż-1 lub większa niż 1, **Acos** zwraca nieokreślony czas.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
 |± ∞|NIEPRAWIDŁOWY|_DOMAIN|
-|GRANICACH QNAN, ZNAJDŹ|brak|_DOMAIN|
+|QNAN, IND|brak|_DOMAIN|
 |&#124;x&#124;>1|NIEPRAWIDŁOWY|_DOMAIN|
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **acos** przyjmujące i zwracające **float** i **długie** **double** typów. W programie C **acos** zawsze przyjmuje i zwraca **double**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **Acos** , które pobierają i zwracają **zmiennoprzecinkowe** i **długie** **podwójne** typy. W programie C **Acos** zawsze przyjmuje i zwraca wartość **Double**.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
 |-------------|---------------------|----------------------|
-|**acos**, **acosf**, **acosl**|\<math.h>|\<errno.h>|
+|**Acos**, **acosf —** , **acosl**|\<math.h>|\<errno.h>|
 
 ## <a name="example"></a>Przykład
 
-Ten program wyświetli monit o wartości z zakresu od -1 do 1. Wartości wejściowe poza tym zakresem dają `_DOMAIN` komunikaty o błędach. W przypadku wprowadzenia jest prawidłową wartością program drukuje arcus sinus i cosinus tej wartości.
+Ten program prosi o wartość z zakresu od 1 do 1. Wartości wejściowe spoza tego zakresu powodują `_DOMAIN` generowanie komunikatów o błędach. W przypadku wprowadzenia prawidłowej wartości, program drukuje arcus sinus i arcus cosinus tej wartości.
 
 ```C
 // crt_asincos.c

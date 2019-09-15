@@ -1,9 +1,9 @@
 ---
 title: __CxxFrameHandler
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __CxxFrameHandler
-apilocation:
+api_location:
 - msvcr110.dll
 - msvcrt.dll
 - msvcr80.dll
@@ -11,22 +11,25 @@ apilocation:
 - msvcr110_clr0400.dll
 - msvcr90.dll
 - msvcr120.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __CxxFrameHandler
 helpviewer_keywords:
 - __CxxFrameHandler
 ms.assetid: b79ac97f-425a-42ae-9b91-8beaef935333
-ms.openlocfilehash: d059df597826c68f4f51eb85f592b7eb44ac7d1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4cb5ae10d4281c4a7167db7adf4ea6788ad3e3c0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344619"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944501"
 ---
-# <a name="cxxframehandler"></a>__CxxFrameHandler
+# <a name="__cxxframehandler"></a>__CxxFrameHandler
 
-Wewnętrzny funkcji CRT. Używane przez CRT, do obsługi wyjątków strukturalnych ramek.
+Wewnętrzna funkcja CRT. Używane przez CRT do obsługi ramek wyjątków strukturalnych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,20 +45,20 @@ EXCEPTION_DISPOSITION __CxxFrameHandler(
 #### <a name="parameters"></a>Parametry
 
 *pExcept*<br/>
-Rekordu wyjątku, który jest przekazywany do możliwe `catch` instrukcji.
+Rekord wyjątku, który jest przesyłany do `catch` możliwych instrukcji.
 
 *pRN*<br/>
-Dynamiczne informacje na temat ramką stosu, która jest używana do obsługi wyjątków. Aby uzyskać więcej informacji zobacz ehdata.h.
+Informacje dynamiczne dotyczące ramki stosu, która jest używana do obsługi wyjątku. Aby uzyskać więcej informacji, zobacz ehdata. h.
 
 *pContext*<br/>
-Kontekst. (Nie używane na procesorach Intel).
+Context. (Nieużywane na procesorach Intel).
 
 *pDC*<br/>
-Dodatkowe informacje na temat funkcji wejścia i stosu ramki.
+Dodatkowe informacje na temat wpisu funkcji i ramki stosu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jedną z *wyrażenie filtru* wartości używane przez [spróbuj-except, instrukcja](../cpp/try-except-statement.md).
+Jedno z wartości *wyrażenia filtru* używane przez [instrukcję try-except](../cpp/try-except-statement.md).
 
 ## <a name="remarks"></a>Uwagi
 
@@ -63,4 +66,4 @@ Jedną z *wyrażenie filtru* wartości używane przez [spróbuj-except, instrukc
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|__CxxFrameHandler|excpt.h, ehdata.h|
+|__CxxFrameHandler|EXCPT. h, ehdata. h|

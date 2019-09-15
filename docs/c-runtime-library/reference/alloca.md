@@ -1,9 +1,9 @@
 ---
 title: _alloca
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _alloca
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _alloca
 - alloca
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - alloca function
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
-ms.openlocfilehash: 7c083e791301d3224709a5fc6c711ceaa6397d38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2212f9e40c78932b63eebfc221ad2f07fa3d3f9d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341603"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943695"
 ---
-# <a name="alloca"></a>_alloca
+# <a name="_alloca"></a>_alloca
 
-Przydziela pamięć na stosie. Ta funkcja jest przestarzały, ponieważ bardziej bezpieczna wersja jest dostępna; zobacz [_malloca](malloca.md).
+Przydziela pamięć na stosie. Ta funkcja jest przestarzała, ponieważ jest dostępna bezpieczniejsza wersja; Zobacz [_malloca](malloca.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,33 +47,33 @@ void *_alloca(
 
 ### <a name="parameters"></a>Parametry
 
-*Rozmiar*<br/>
+*zmienia*<br/>
 Bajty do przydzielenia ze stosu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_Alloca** rutynowe zwroty **void** wskaźnik do przydzielonego miejsca jest gwarantowane do bycia odpowiednio wyrównaną do przechowywania dowolnego typu obiektu. Jeśli *rozmiar* ma wartość 0, **_alloca** przydziela element o zerowej długości i zwraca prawidłowy wskaźnik do tego elementu.
+Procedura **_alloca** zwraca wskaźnik **void** do przydzieloną miejsce, co gwarantuje, że jest odpowiednio wyrównany do przechowywania dowolnego typu obiektu. Jeśli *size* ma wartość 0, **_alloca** przydziela element o zerowej długości i zwraca prawidłowy wskaźnik do tego elementu.
 
-Wyjątek przepełnienia stosu jest generowany, gdy nie można przydzielić miejsce. Wyjątek przepełnienia stosu nie jest wyjątek języka C++; jest wyjątków strukturalnych. Zamiast korzystać z obsługi wyjątków C++, należy użyć [obsługi wyjątków strukturalnych](../../cpp/structured-exception-handling-c-cpp.md) (SEH).
+Wyjątek przepełnienia stosu jest generowany, jeśli nie można przydzielyć miejsca. Wyjątek przepełnienia stosu nie jest C++ wyjątkiem; jest to wyjątek strukturalny. Zamiast korzystać C++ z obsługi wyjątków, należy użyć [obsługi wyjątków strukturalnych](../../cpp/structured-exception-handling-c-cpp.md) (SEH).
 
 ## <a name="remarks"></a>Uwagi
 
-**_alloca** przydziela *rozmiar* bajtów ze stosu program. Ilość miejsca przydzielonego automatycznie jest zwalniana, gdy funkcja wywołująca istnieje (nie w momencie alokacji jedynie przekazuje poza zakresem). W związku z tym, nie przekazuj wartości wskaźnika zwróconej przez **_alloca** jako argument do [bezpłatne](free.md).
+**_alloca** przydziela bajty *rozmiaru* ze stosu programu. Przydzielone miejsce jest automatycznie zwalniane, gdy wywoływana funkcja zostanie zakończona (nie gdy przydział jedynie przejdzie poza zakres). W związku z tym nie przekazuj wartości wskaźnika zwracanej przez **_alloca** jako argument do [zwolnienia](free.md).
 
-Ma ograniczeń do jawnego wywołania **_alloca** w obsłudze wyjątków (EH). Procedury EH, działających na procesorach x86 klasy działają w ich własnych ramki pamięci: Wykonują swoje zadania w obszarze pamięci, która nie jest oparty na bieżącej lokalizacji wskaźnika stosu funkcji otaczającej. Najbardziej najczęściej występujące implementacje to obsługi (SEH) wyjątków systemu Windows NT, ze strukturą i wyrażeń klauzuli catch języka C++. W związku z tym, jawne wywołanie **_alloca** we wszystkich następujących scenariuszy powoduje awarię programu podczas powrotu do wywoływania procedury EH:
+Istnieją ograniczenia dotyczące jawnego wywoływania **_alloca** w obsłudze wyjątków (EH). Procedury EH uruchamiane na procesorach klasy x86 działają w ich własnych ramkach pamięci: Wykonują swoje zadania w przestrzeni pamięci, które nie są oparte na bieżącej lokalizacji wskaźnika stosu otaczającej funkcji. Najpopularniejsze implementacje obejmują obsługę wyjątków strukturalnych systemu Windows NT (SEH) C++ i wyrażenia klauzuli catch. W związku z tym jawne wywołanie **_alloca** w jednym z następujących scenariuszy powoduje niepowodzenie programu podczas powrotu do procedury wywołującej EH:
 
-- Wyrażenie filtru wyjątków SEH Windows NT: `__except ( _alloca() )`
+- Wyrażenie filtru wyjątków SEH systemu Windows NT:`__except ( _alloca() )`
 
-- Program obsługi wyjątków końcowego Windows NT strukturalnej obsługi wyjątków: `__finally { _alloca() }`
+- Końcowy program obsługi wyjątków SEH systemu Windows NT:`__finally { _alloca() }`
 
-- Wyrażenie klauzuli catch EH w języku C++
+- C++Wyrażenie klauzuli catch w instrukcji EH
 
-Jednak **_alloca** mogą być wywoływane bezpośrednio z w ramach procedury EH lub z dostarczonych aplikacji wywołanie zwrotne, które pobiera wywoływane przez jednego ze scenariuszy EH wymienionych powyżej.
+Jednakże **_alloca** można wywołać bezpośrednio z poziomu procedury EH lub z wywołania zwrotnego dostarczonego przez aplikację, które jest wywoływane przez jedno z wcześniej wymienionych scenariuszy EH.
 
 > [!IMPORTANT]
-> Windows XP Jeśli **_alloca** nazywa się wewnątrz bloku try/catch, należy wywołać [_resetstkoflw](resetstkoflw.md) w bloku catch.
+> W systemie Windows XP, jeśli **_alloca** jest wywoływana wewnątrz bloku try/catch, należy wywołać [_resetstkoflw](resetstkoflw.md) w bloku catch.
 
-Oprócz powyższych ograniczeń, korzystając z[/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md) opcji **_alloca** nie można używać w **__except** bloków. Aby uzyskać więcej informacji, zobacz [/CLR ograniczenia](../../build/reference/clr-restrictions.md).
+Oprócz powyższych ograniczeń, przy użyciu opcji[/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md) **_alloca** nie można używać w blokach **__except** . Aby uzyskać więcej informacji, zobacz temat [ograniczenia/CLR](../../build/reference/clr-restrictions.md).
 
 ## <a name="requirements"></a>Wymagania
 

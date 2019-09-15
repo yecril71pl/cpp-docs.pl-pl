@@ -1,9 +1,9 @@
 ---
 title: tmpfile
 ms.date: 11/04/2016
-apiname:
+api_name:
 - tmpfile
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tmpfile
 helpviewer_keywords:
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - tmpfile function
 - temporary files, creating
 ms.assetid: c4a4dc24-70da-438d-ae4e-98352d88e375
-ms.openlocfilehash: 98afcb7a3e04a96a1b08bc1b975634153e550839
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f58c23050fe89f84f283c3784a7c0cee72637bf2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155566"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957540"
 ---
 # <a name="tmpfile"></a>tmpfile
 
-Tworzy plik tymczasowy. Ta funkcja jest przestarzały, ponieważ bardziej bezpieczna wersja jest dostępna; zobacz [tmpfile_s —](tmpfile-s.md).
+Tworzy plik tymczasowy. Ta funkcja jest przestarzała, ponieważ jest dostępna bezpieczniejsza wersja; Zobacz [tmpfile_s](tmpfile-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,15 +45,15 @@ FILE *tmpfile( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-W przypadku powodzenia **tmpfile —** zwraca wskaźnik strumienia. W przeciwnym razie zwraca **NULL** wskaźnika.
+Jeśli to się powiedzie, **tmpfile** zwraca wskaźnik strumienia. W przeciwnym razie zwraca wskaźnik o **wartości null** .
 
 ## <a name="remarks"></a>Uwagi
 
-**Tmpfile —** funkcji utworzy plik tymczasowy i zwraca wskaźnik do tego strumienia. Plik tymczasowy zostanie utworzony w katalogu głównym. Aby utworzyć pliku tymczasowego w katalogu innym niż katalog główny, użyj [tmpnam —](tempnam-wtempnam-tmpnam-wtmpnam.md) lub [tempnam —](tempnam-wtempnam-tmpnam-wtmpnam.md) w połączeniu z [fopen —](fopen-wfopen.md).
+Funkcja **tmpfile** tworzy plik tymczasowy i zwraca wskaźnik do tego strumienia. Plik tymczasowy zostanie utworzony w katalogu głównym. Aby utworzyć plik tymczasowy w katalogu innym niż główny, użyj [tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) lub [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) w połączeniu z [fopen](fopen-wfopen.md).
 
-Jeśli nie można otworzyć pliku, **tmpfile —** zwraca **NULL** wskaźnika. Plik tymczasowy jest automatycznie usuwany po pliku jest zamykane, gdy program zakończy się normalnie lub **_rmtmp —** jest wywoływana przy założeniu, że nie zmienia bieżącego katalogu roboczego. Plik tymczasowy jest otwarty w **w + b** trybu (binarne odczyt/zapis).
+Jeśli nie można otworzyć pliku, **tmpfile** zwraca wskaźnik o **wartości null** . Ten plik tymczasowy jest automatycznie usuwany po zamknięciu pliku, gdy program kończy się normalnie lub gdy **_rmtmp** jest wywoływana, przy założeniu, że bieżący katalog roboczy nie zmienia się. Plik tymczasowy jest otwierany w trybie w **+ b** (binarny odczyt/zapis).
 
-Błąd może wystąpić, jeśli użytkownik podejmie więcej niż TMP_MAX (zobacz stdio —. H) wywołań w przypadku **tmpfile —**.
+Błąd może wystąpić, Jeśli podjęto próbę więcej niż TMP_MAX (patrz STDIO. H) wywołania z **tmpfile**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -58,12 +61,12 @@ Błąd może wystąpić, jeśli użytkownik podejmie więcej niż TMP_MAX (zobac
 |-------------|---------------------|
 |**tmpfile**|\<stdio.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
 > [!NOTE]
-> W tym przykładzie wymaga uprawnień administracyjnych do uruchamiania w systemie Windows Vista.
+> Ten przykład wymaga uprawnień administracyjnych do uruchomienia w systemie Windows Vista.
 
 ```C
 // crt_tmpfile.c
@@ -101,6 +104,6 @@ Temporary file 3 was created
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [_rmtmp](rmtmp.md)<br/>
 [_tempnam, _wtempnam, tmpnam, _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)<br/>

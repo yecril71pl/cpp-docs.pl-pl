@@ -1,9 +1,9 @@
 ---
 title: _setmaxstdio
 ms.date: 05/21/2019
-apiname:
+api_name:
 - _setmaxstdio
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - setmaxstdio
 - _setmaxstdio
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - setmaxstdio function
 - open files, maximum
 ms.assetid: 9e966875-9ff5-47c4-9b5f-e79e83b70249
-ms.openlocfilehash: 94b768d920ffd86a5bd762f8994244dda67fb15f
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: 620213b4df9ea555189a1403b3c9e83b55cad6c6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174822"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948220"
 ---
-# <a name="setmaxstdio"></a>_setmaxstdio
+# <a name="_setmaxstdio"></a>_setmaxstdio
 
-Ustawia poziom maksymalną liczbę plików jednocześnie otwarty na we/wy strumienia.
+Ustawia maksymalną liczbę jednocześnie otwartych plików na poziomie strumienia we/wy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,26 +50,26 @@ int _setmaxstdio(
 ### <a name="parameters"></a>Parametry
 
 *new_max*<br/>
-Nowe maksymalna liczba równocześnie Otwórz pliki na poziomie operacji We/Wy strumienia.
+Nowa Maksymalna liczba otwartych plików jednocześnie na poziomie strumienia we/wy.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca *new_max* w przypadku powodzenia; w przeciwnym razie -1.
+Zwraca *new_max* , jeśli pomyślne; -1 w przeciwnym razie.
 
-Jeśli *new_max* jest mniejsza niż **_IOB_ENTRIES**, lub większa niż maksymalna liczba obsługuje dostępne w systemie operacyjnym, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [ Walidacja parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja zwraca wartość -1 i ustawia **errno** do **EINVAL**.
+Jeśli wartość *new_max* jest mniejsza niż **_IOB_ENTRIES**lub większa niż maksymalna liczba dojść dostępnych w systemie operacyjnym, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1 i ustawia **errno** na **EINVAL**.
 
-Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje o tych i innych kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_Setmaxstdio —** funkcji zmienia wartość maksymalną liczbę plików, które mogą być otwarte jednocześnie w strumieniu poziom operacji We/Wy.
+Funkcja **_setmaxstdio** zmienia maksymalną wartość liczby plików, które mogą być otwarte jednocześnie na poziomie strumienia we/wy.
 
-C czasu wykonywania operacji We/Wy teraz obsługuje maksymalnie 8192 pliki otwarte jednocześnie na [niski poziom operacji We/Wy](../../c-runtime-library/low-level-i-o.md). Ten poziom obejmuje pliki otwarte i uzyskiwać dostęp za pomocą **_otwórz**, **_przeczytaj**, i **_write** rodziny funkcji we/wy. Domyślnie, maksymalnie 512 plików może być otwarty jednocześnie na [strumienia we/wy poziom](../../c-runtime-library/stream-i-o.md). Ten poziom obejmuje pliki otwarte i uzyskiwać dostęp za pomocą **fopen —**, **fgetc —**, i **fputc** rodziny funkcji. Można zwiększyć limit równy 512 otwarte pliki na poziomie we/wy strumienia do maksymalnie 8192 przy użyciu **_setmaxstdio —** funkcji.
+We/wy w czasie wykonywania C/O jest teraz obsługiwane nawet do 8 192 plików jednocześnie na [niskim poziomie we/wy](../../c-runtime-library/low-level-i-o.md). Ten poziom obejmuje pliki otwarte i dostępne przy użyciu rodziny **_open**, **_read**i **_write** funkcji we/wy. Domyślnie do 512 plików można otwierać jednocześnie na [poziomie strumienia we/wy](../../c-runtime-library/stream-i-o.md). Ten poziom obejmuje pliki otwarte i dostępne przy użyciu rodziny **fopen**, **fgetc**i **fputc** funkcji. Limit 512 otwartych plików na poziomie strumienia we/wy można zwiększyć do maksymalnie 8 192 przy użyciu funkcji **_setmaxstdio** .
 
-Ponieważ strumienia I/O-level funkcje, takie jak **fopen —**, są tworzone na podstawie funkcji I/O — poziom niski maksymalnie 8192 jest sztywnego, górnego limitu liczby jednocześnie otwartych plików, dostępne za pośrednictwem biblioteki wykonawczej C.
+Ponieważ funkcje na poziomie strumienia operacji we/wy, takie jak **fopen**, są tworzone na podstawie niskich funkcji we/wy, wartość maksymalna 8 192 to stały górny limit liczby jednocześnie otwartych plików, do których dostęp odbywa się za pomocą biblioteki wykonawczej C.
 
 > [!NOTE]
-> Ta górny limit może być poza co jest obsługiwane w określonej platformy Win32 i o określonej konfiguracji.
+> Ten górny limit może być poza zakresem obsługiwanym przez określoną platformę i konfigurację Win32.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -74,12 +77,12 @@ Ponieważ strumienia I/O-level funkcje, takie jak **fopen —**, są tworzone na
 |-------------|---------------------|
 |**_setmaxstdio**|\<stdio.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz [_getmaxstdio —](getmaxstdio.md) na przykład za pomocą **_setmaxstdio —**.
+Zobacz [_getmaxstdio](getmaxstdio.md) , aby zapoznać się z przykładem korzystania z **_setmaxstdio**.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>

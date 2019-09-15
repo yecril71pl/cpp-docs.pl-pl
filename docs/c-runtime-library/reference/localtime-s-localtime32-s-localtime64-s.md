@@ -1,11 +1,11 @@
 ---
 title: localtime_s, _localtime32_s, _localtime64_s
 ms.date: 07/09/2019
-apiname:
+api_name:
 - _localtime64_s
 - _localtime32_s
 - localtime_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _localtime32_s
 - localtime32_s
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - time, converting values
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
-ms.openlocfilehash: 454ab492fbe8a31b9ceeca518fa5e590271dbf06
-ms.sourcegitcommit: 07b34ca1c1fecced9fadc95de15dc5fee4f31e5a
+ms.openlocfilehash: c00a5d23441612d0e70bfafd571bcb25250edb09
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67693412"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953335"
 ---
-# <a name="localtimes-localtime32s-localtime64s"></a>localtime_s, _localtime32_s, _localtime64_s
+# <a name="localtime_s-_localtime32_s-_localtime64_s"></a>localtime_s, _localtime32_s, _localtime64_s
 
-Konwertuje **time_t** czasu wartość **tm** struktury i usuwa dla lokalnej strefy czasowej. Są to wersje [localtime, _localtime32, _localtime64](localtime-localtime32-localtime64.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Konwertuje wartość czasu **time_t** na strukturę **TM** i koryguje ją dla lokalnej strefy czasowej. Są to wersje [localtime, _localtime32, _localtime64](localtime-localtime32-localtime64.md) z zabezpieczeniami, jak opisano w [funkcjach zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -63,61 +66,61 @@ errno_t _localtime64_s(
 ### <a name="parameters"></a>Parametry
 
 *tmDest*<br/>
-Wskaźnik do struktury czasu należy wypełnić.
+Wskaźnik do struktury czasu, która ma zostać wypełniona.
 
 *sourceTime*<br/>
 Wskaźnik na czas przechowywania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli to się powiedzie. Wartość zwracana jest kod błędu, jeśli wystąpi awaria. Kody błędów są definiowane w Errno.h. Aby uzyskać listę tych błędów, zobacz [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Zero, jeśli powodzenie. Wartość zwracana jest kodem błędu w przypadku wystąpienia błędu. Kody błędów są zdefiniowane w errno. h. Aby uzyskać listę tych błędów, zobacz [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|*tmDest*|*sourceTime*|Wartość zwracana|Wartość w *tmDest*|Wywołuje program obsługi nieprawidłowych parametrów|
+|*tmDest*|*sourceTime*|Wartość zwracana|Wartość w *tmDest*|Wywołuje procedurę obsługi nieprawidłowego parametru|
 |-----------|------------|------------------|--------------------|---------------------------------------|
-|**NULL**|Wszystkie|**EINVAL**|Nie zmodyfikowano|Tak|
-|Nie **NULL** (wskazuje prawidłowy pamięci)|**NULL**|**EINVAL**|Wszystkie pola ustawione na wartość -1|Yes|
-|Nie **NULL** (wskazuje prawidłowy pamięci)|mniejszy niż 0 lub większy niż **_MAX__TIME64_T**|**EINVAL**|Wszystkie pola ustawione na wartość -1|Nie|
+|**NULL**|Ile|**EINVAL**|nie zmodyfikowano|Tak|
+|Nie **ma wartości null** (wskazuje na prawidłową pamięć)|**NULL**|**EINVAL**|Wszystkie pola ustawione na wartość-1|Tak|
+|Nie **ma wartości null** (wskazuje na prawidłową pamięć)|mniejsze niż 0 lub większe niż **_MAX__TIME64_T**|**EINVAL**|Wszystkie pola ustawione na wartość-1|Nie|
 
-W przypadku pierwszego warunków błędów dwóch, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** do **EINVAL** i zwracają **EINVAL**.
+W przypadku pierwszych dwóch warunków błędu procedura obsługi nieprawidłowego parametru jest wywoływana, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i zwracają **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-**Localtime_s —** funkcja konwertuje czas przechowywane jako [time_t](../../c-runtime-library/standard-types.md) wartości i zapisuje wynik w postaci struktury typu [tm](../../c-runtime-library/standard-types.md). **Time_t** wartość *sourceTime* reprezentuje sekund, które upłynęły od północy (00: 00:00), 1 stycznia 1970 r., UTC. Ta wartość jest zazwyczaj uzyskiwane z [czasu](time-time32-time64.md) funkcji.
+Funkcja **localtime_s** konwertuje czas przechowywania jako wartość [time_t](../../c-runtime-library/standard-types.md) i zapisuje wynik w strukturze typu [TM](../../c-runtime-library/standard-types.md). Wartość **Time_t** *sourceTime* reprezentuje sekundy, które upłynęły od północy (00:00:00), 1 stycznia 1970, UTC. Ta wartość jest zazwyczaj uzyskiwana z funkcji [Time](time-time32-time64.md) .
 
-**localtime_s —** poprawia dla lokalnej strefy czasowej, gdy użytkownik najpierw ustawia zmienną środowiskową globalnego **TZ**. Gdy **TZ** jest ustawiona, trzy inne zmienne środowiskowe ( **_timezone**, **_daylight**, i **_tzname**) również są automatycznie ustawiane. Jeśli **TZ** zmienna nie jest ustawiona, **localtime_s —** próbuje użyć informacji o strefie czasowej, określone w aplikacji Data/Godzina w Panelu sterowania. Jeśli nie można uzyskać te informacje, PST8PDT, co oznacza strefy czasu pacyficznego, jest używany domyślnie. Zobacz [_tzset —](tzset.md) opis tych zmiennych. **TZ** rozszerzeń firmy Microsoft i nie jest częścią definicji standard ANSI z **localtime**.
+**localtime_s** jest poprawna dla lokalnej strefy czasowej, jeśli użytkownik najpierw ustawi globalną **zmienną**środowiskową. W **przypadku ustawienia opcji $ są również** automatycznie ustawiane trzy inne zmienne środowiskowe ( **_timezone**, **_daylight**i **_tzname**). Jeśli zmienna **$** nie jest ustawiona, **localtime_s** próbuje użyć informacji o strefie czasowej określonych w aplikacji Data/godzina w panelu sterowania. Jeśli te informacje nie zostaną uzyskane, PST8PDT, który oznacza strefę czasową pacyficznego, jest używany domyślnie. Zobacz [_tzset](tzset.md) , aby uzyskać opis tych zmiennych. $ **To rozszerzenie** firmy Microsoft, a nie część standardowej definicji ANSI **localtime**.
 
 > [!NOTE]
-> Aby ustalić, czy czas letni obowiązuje starać środowiska docelowego.
+> Środowisko docelowe powinno próbować określić, czy obowiązuje czas letni.
 
-**_localtime64_s —** , który używa **__time64_t —** strukturę oraz umożliwia daty do do 23:59:59, 18 stycznia 3001, uniwersalny czas koordynowany (UTC), natomiast **_localtime32_s —** reprezentuje daty do 23:59:59 18 stycznia 2038 r. UTC.
+**_localtime64_s**, który korzysta ze struktury **__time64_t** , umożliwia określenie dat, które mają być wyrażone do 23:59:59, 18 stycznia, 3001, Universal czas koordynowany (UTC), natomiast **_localtime32_s** reprezentuje daty do 23:59:59 18 stycznia, 2038, UTC.
 
-**localtime_s —** jest funkcją śródwierszową, co jest ewaluowane jako **_localtime64_s —** , i **time_t** jest odpowiednikiem **__time64_t —** . Jeśli chcesz wymusić na kompilatorze interpretowanie **time_t** jako stary 32-bitowy **time_t**, można zdefiniować **_USE_32BIT_TIME_T**. Takie działanie spowoduje **localtime_s —** na **_localtime32_s —** . Nie jest to zalecane, ponieważ aplikacja może przestać działać po 18 stycznia 2038 r. i nie jest dozwolone na platformach 64-bitowych.
+**localtime_s** jest funkcją wbudowaną, która jest obliczana do **_localtime64_s**, a **time_t** jest równoznaczna z **__time64_t**. Jeśli trzeba wymusić, aby kompilator interpretował **time_t** jako stary 32-bitowy **time_t**, można zdefiniować **_USE_32BIT_TIME_T**. Spowoduje to **localtime_s** do **_localtime32_s**. Nie jest to zalecane, ponieważ aplikacja może zakończyć się niepowodzeniem po 18 stycznia 2038 i nie jest dozwolona na platformach 64-bitowych.
 
-Pola typu struktury [tm](../../c-runtime-library/standard-types.md) przechowywać następujące wartości, z których każdy jest **int**.
+Pola typu struktury [TM](../../c-runtime-library/standard-types.md) przechowują następujące wartości, z których każdy **jest liczbą całkowitą**.
 
 |Pole|Opis|
 |-|-|
-|**tm_sec**|Sekundy po minucie (0 - 59).|
-|**tm_min**|Min. po godzinie (0 - 59).|
-|**tm_hour**|Godziny od północy (0 - 23).|
+|**tm_sec**|Sekund po minucie (0-59).|
+|**tm_min**|Minut po godzinie (0-59).|
+|**tm_hour**|Godz. od północy (0-23).|
 |**tm_mday**|Dzień miesiąca (1-31).|
-|**tm_mon**|Miesiąc (0 - 11; Styczeń = 0).|
-|**tm_year**|Rok (bieżący roku minus 1900).|
-|**tm_wday**|Dzień tygodnia (0 – 6; Niedziela = 0).|
-|**tm_yday**|Dzień roku (0 – 365; Od 1 stycznia = 0).|
-|**tm_isdst**|Wartość dodatnią, jeśli czas letni obowiązuje; 0, jeśli czas letni nie jest włączone; wartość ujemna, jeśli stan czasu jest nieznany.|
+|**tm_mon**|Miesiąc (0-11; Styczeń = 0).|
+|**tm_year**|Year (bieżący rok minus 1900).|
+|**tm_wday**|Dzień tygodnia (0-6; Niedziela = 0).|
+|**tm_yday**|Dzień roku (0-365; 1 stycznia = 0).|
+|**tm_isdst**|Wartość dodatnia, jeśli obowiązuje zmiana czasu letniego; 0, jeśli czas letni nie jest stosowany; wartość ujemna, jeśli stan czasu letniego jest nieznany.|
 
-Jeśli **TZ** zmienna środowiskowa jest ustawiona, biblioteki wykonawczej C przyjmie reguły odpowiednie do Stanów Zjednoczonych wykonywania obliczeń czasu letniego (DST).
+Jeśli jest **ustawiona zmienna środowiskowa** $, Biblioteka wykonawcza C przyjmuje reguły odpowiednie dla Stany Zjednoczone w celu wdrożenia obliczeń czasu letniego (DST).
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Wymagany nagłówek języka C|Wymagany nagłówek C++|
+|Procedura|Wymagany nagłówek C|Wymagany C++ nagłówek|
 |-------------|---------------------|-|
-|**localtime_s —** , **_localtime32_s —** , **_localtime64_s —**|\<time.h>|\<ctime — > lub \<time.h >|
+|**localtime_s**, **_localtime32_s**, **_localtime64_s**|\<time.h>|\<CTime > lub \<Time. h >|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

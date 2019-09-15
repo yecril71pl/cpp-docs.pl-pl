@@ -1,9 +1,9 @@
 ---
 title: _get_timezone
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_timezone
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _get_timezone
 - get_timezone
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - get_timezone function
 - _get_timezone function
 ms.assetid: 30ab0838-0ae9-4a2f-bfe6-a49ee443b21e
-ms.openlocfilehash: 26cf8114ab766bdb394d2db9ad5842622a447bd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf77ca21383bcae6919b6c1d00b99c082ef99919
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287446"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955632"
 ---
-# <a name="gettimezone"></a>_get_timezone
+# <a name="_get_timezone"></a>_get_timezone
 
-Pobiera różnią się w ciągu kilku sekund uniwersalnego czasu koordynowanego (UTC) i czasu lokalnego.
+Pobiera różnicę sekund między uniwersalnym czasem koordynowanym (UTC) i czasem lokalnym.
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,18 +48,18 @@ error_t _get_timezone(
 
 ### <a name="parameters"></a>Parametry
 
-*seconds*<br/>
+*s*<br/>
 Różnica w sekundach między czasem UTC i czasem lokalnym.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli kończy się pomyślnie lub **errno** wartość, jeśli wystąpi błąd.
+Zero, jeśli wystąpi błąd lub wartość **errno** w przypadku wystąpienia błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Get_timezone —** funkcja pobiera różnica w sekundach między czasem UTC i czasem lokalnym jako liczba całkowita. Wartością domyślną jest 28 800 sekund dla pacyficznego czasu standardowego (osiem godzin za UTC).
+Funkcja **_get_timezone** pobiera różnicę w sekundach między czasem UTC a czasem lokalnym jako liczbą całkowitą. Wartość domyślna to 28 800 sekund, czyli czasu pacyficznego (osiem godzin za UTC).
 
-Jeśli *sekund* jest **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ta ustawia **errno** do **EINVAL** i zwraca **EINVAL**.
+Jeśli *sekundy* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca **EINVAL**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -64,7 +67,7 @@ Jeśli *sekund* jest **NULL**, procedura obsługi nieprawidłowego parametru zos
 |-------------|---------------------|
 |**_get_timezone**|\<time.h>|
 
-Aby uzyskać więcej informacji, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

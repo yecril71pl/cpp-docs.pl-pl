@@ -1,12 +1,12 @@
 ---
 title: isalpha, iswalpha, _isalpha_l, _iswalpha_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - iswalpha
 - _iswalpha_l
 - isalpha
 - _isalpha_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _istalpha
 - _ismbcalpha_l
@@ -38,16 +41,16 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-ms.openlocfilehash: 47b7e43172884524e50e332dcb421e84a99b9806
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a7de0ba1316a6c0155a46eed0564792ee6256f2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157997"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954586"
 ---
-# <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
+# <a name="isalpha-iswalpha-_isalpha_l-_iswalpha_l"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
 
-Określa, czy liczba całkowita reprezentuje znak alfabetyczny.
+Określa, czy liczba całkowita reprezentuje znak alfanumeryczny.
 
 ## <a name="syntax"></a>Składnia
 
@@ -71,36 +74,36 @@ int _iswalpha_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Liczba całkowita to testowania.
+Liczba całkowita do przetestowania.
 
-*Ustawienia regionalne*<br/>
-Ustawienia regionalne, zamiast bieżących ustawień regionalnych.
+*ustawienie*<br/>
+Ustawienia regionalne, które mają być używane zamiast bieżących ustawień regionalnych.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych procedur zwraca wartość różną od zera, jeśli *c* jest szczególną reprezentacją znaku alfabetycznego. **isalpha** zwraca wartość różną od zera, jeśli *c* jest z zakresu A - Z lub a - z. **iswalpha —** zwraca wartość różną od zera dla znaków dwubajtowych, dla których [iswupper —](isupper-isupper-l-iswupper-iswupper-l.md) lub **iswlower —** jest różna od zera; tj dla dowolnego znaku dwubajtowego oznacza to jeden z zestawów zdefiniowanych w implementacji dla których żadna z **iswcntrl —**, **iswdigit —**, **iswpunct —**, lub **iswspace —** jest różna od zera. Każda z tych procedur zwraca 0, jeśli *c* nie spełnia warunku testowego.
+Każda z tych procedur zwraca wartość różną od zera, jeśli *c* jest szczególną reprezentacją znaku alfabetycznego. Funkcja **isalpha** zwraca wartość różną od zera, jeśli *c* znajduje się w zakresie a-z lub a-z. **iswalpha** zwraca wartość różną od zera tylko dla znaków dwubajtowych, dla których [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) lub **iswlower** jest różna od zera. oznacza to, że dla każdego znaku dwubajtowego, który jest jednym z zestawu zdefiniowanego przez implementację, dla którego żadna z **iswcntrl**, **iswdigit**, **iswpunct**lub **iswspace** nie jest różna od zera. Każda z tych procedur zwraca wartość 0, jeśli *c* nie spełnia warunku testu.
 
-Wersje tych funkcji, które mają **_l** sufiksa używa przekazanego parametru ustawień regionalnych, zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wersje tych funkcji, które mają sufiks **_l** używają parametru ustawień regionalnych, który został przekazaną, zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-Zachowanie **isalpha** i **_isalpha_l —** jest niezdefiniowane, jeżeli *c* nie jest równy EOF lub z zakresu od 0 do 0xFF włącznie. Jeśli jest używana biblioteka debugowania CRT i *c* nie jest jedną z tych wartości, funkcje wywołują potwierdzenie.
+Zachowanie funkcji **isalpha** i **_isalpha_l** jest niezdefiniowane, jeśli *c* nie jest typu EOF lub z zakresu od 0 do 0xFF włącznie. Gdy jest używana Biblioteka CRT debugowania, a *c* nie jest jedną z tych wartości, funkcje zgłaszają potwierdzenie.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_istalpha**|**isalpha**|**_ismbcalpha**|**iswalpha**|
-|**_istalpha_l —**|**_isalpha_l**|**_ismbcalpha_l**|**_iswalpha_l —**|
+|**_istalpha_l**|**_isalpha_l**|**_ismbcalpha_l**|**_iswalpha_l**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**isalpha**|\<ctype.h>|
-|**iswalpha**|\<CType.h > lub \<wchar.h >|
+|**iswalpha**|\<CType. h > lub \<WCHAR. h >|
 |**_isalpha_l**|\<ctype.h>|
-|**_iswalpha_l —**|\<CType.h > lub \<wchar.h >|
+|**_iswalpha_l**|\<CType. h > lub \<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,12 +1,12 @@
 ---
 title: isgraph, iswgraph, _isgraph_l, _iswgraph_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - isgraph
 - iswgraph
 - _iswgraph_l
 - _isgraph_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _isgraph_l
 - _iswgraph_l
@@ -37,14 +40,14 @@ helpviewer_keywords:
 - _istgraph function
 - _ismbcgraph_l function
 ms.assetid: 531a5f34-4302-4d0a-8a4f-b7ea150ad941
-ms.openlocfilehash: af3fae11536a869c0c3e3ebae285ebbaca5ea907
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88219ca6dc4218fc13f7d7c0b5f2ba399c07d501
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287046"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954863"
 ---
-# <a name="isgraph-iswgraph-isgraphl-iswgraphl"></a>isgraph, iswgraph, _isgraph_l, _iswgraph_l
+# <a name="isgraph-iswgraph-_isgraph_l-_iswgraph_l"></a>isgraph, iswgraph, _isgraph_l, _iswgraph_l
 
 Określa, czy liczba całkowita reprezentuje znak graficzny.
 
@@ -70,33 +73,33 @@ int _iswgraph_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Liczba całkowita to testowania.
+Liczba całkowita do przetestowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych procedur zwraca wartość różną od zera, jeśli *c* jest szczególną reprezentacją znaku drukowalnego innego niż spacja. **isgraph** zwraca wartość różną od zera, jeśli *c* jest znakiem drukowalnym innym niż spacja. **iswgraph —** zwraca wartość różną od zera, jeśli *c* jest drukowalnym znakiem dwubajtowym innym niż spacja. Każda z tych procedur zwraca 0, jeśli *c* nie spełnia warunku testowego.
+Każda z tych procedur zwraca wartość różną od zera, jeśli *c* jest szczególną reprezentacją znaku drukowalnego innego niż spacja. **isgraph** zwraca wartość różną od zera, jeśli *c* jest znakiem drukowalnym innym niż spacja. **iswgraph** zwraca wartość różną od zera, jeśli *c* jest drukowalnym znakiem dwubajtowym innym niż spacja. Każda z tych procedur zwraca wartość 0, jeśli *c* nie spełnia warunku testu.
 
-Wersje tych funkcji, które mają **_l** sufiksa używa ustawień regionalnych, który jest przekazywany zamiast bieżących ustawień regionalnych dla swoich zachowań zależnych od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wersje tych funkcji, które mają **_l** sufiks używają ustawień regionalnych, które zostały przesłane zamiast bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-Zachowanie **isgraph** i **_isgraph_l —** jest niezdefiniowane, jeżeli *c* nie jest równy EOF lub z zakresu od 0 do 0xFF włącznie. Jeśli jest używana biblioteka debugowania CRT i *c* nie jest jedną z tych wartości, funkcje wywołują potwierdzenie.
+Zachowanie obiektu **isgraph** i **_isgraph_l** jest niezdefiniowane, jeśli *c* nie jest typu EOF lub z zakresu od 0 do 0xFF włącznie. Gdy jest używana Biblioteka CRT debugowania, a *c* nie jest jedną z tych wartości, funkcje zgłaszają potwierdzenie.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_istgraph**|**isgraph**|[_ismbcgraph](ismbcgraph-functions.md)|**iswgraph —**|
+|**_istgraph**|**isgraf**|[_ismbcgraph](ismbcgraph-functions.md)|**iswgraph**|
 |**_istgraph_l**|**_isgraph_l**|[_ismbcgraph_l](ismbcgraph-functions.md)|**_iswgraph_l**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**isgraph**|\<ctype.h>|
-|**iswgraph —**|\<CType.h > lub \<wchar.h >|
+|**isgraf**|\<ctype.h>|
+|**iswgraph**|\<CType. h > lub \<WCHAR. h >|
 |**_isgraph_l**|\<ctype.h>|
-|**_iswgraph_l**|\<CType.h > lub \<wchar.h >|
+|**_iswgraph_l**|\<CType. h > lub \<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

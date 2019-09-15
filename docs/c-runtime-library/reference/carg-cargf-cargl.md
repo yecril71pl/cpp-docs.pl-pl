@@ -1,11 +1,11 @@
 ---
-title: carg cargf, cargl
+title: carg, cargf, cargl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - carg
 - cargf
 - cargl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - carg
 - cargf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - cargf function
 - cargl function
 ms.assetid: 610d6a93-b929-46ab-a966-b77db0b804be
-ms.openlocfilehash: 584732594cd9ca9579907986e3dc3b5f3dbf52c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e66b0b3545b3f28a8f7b4ca14c29ffe1e0fc260c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340719"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939301"
 ---
-# <a name="carg-cargf-cargl"></a>carg cargf, cargl
+# <a name="carg-cargf-cargl"></a>carg, cargf, cargl
 
-Pobiera argument liczby zespolonej z gałęzią Wytnij rzeczywistych osi ujemna.
+Pobiera argument liczby zespolonej z rozgałęzieniem na ujemną oś rzeczywistą.
 
 ## <a name="syntax"></a>Składnia
 
@@ -64,23 +67,23 @@ long double cargl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Liczbą.
+Liczba złożona.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Argument (znanej także jako etap) *z*. Wynik jest w interwale [-π, + π].
+Argument (znany również jako faza) *z.* Wynik jest w interwale [-π, + π].
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **carg** o **_Fcomplex** lub **_Lcomplex** wartości i zwrócenie **float**lub **długie** **double** wartości. W programie C **carg** zawsze ma **_Dcomplex** wartości i zwraca **double** wartość.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **carg** , które pobierają wartości **_Fcomplex** lub **_Lcomplex** i zwracają wartości **zmiennoprzecinkowe** lub **długie** **Double** . W programie C **carg** zawsze przyjmuje wartość **_Dcomplex** i zwraca wartość **podwójną** .
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|Nagłówek języka C++|
+|Procedura|Nagłówek języka C|C++nagłówki|
 |-------------|--------------|------------------|
 |**carg**, **cargf**, **cargl**|\<complex.h>|\<ccomplex>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

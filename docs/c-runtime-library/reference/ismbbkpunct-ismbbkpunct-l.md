@@ -1,10 +1,10 @@
 ---
 title: _ismbbkpunct, _ismbbkpunct_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbkpunct_l
 - _ismbbkpunct
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ismbbkpunct_l
 - _ismbbkpunct_l
@@ -28,16 +31,16 @@ helpviewer_keywords:
 - ismbbkpunct function
 - _ismbbkpunct function
 ms.assetid: a04c59cd-5ca7-4296-bec0-2b0d7f04edd0
-ms.openlocfilehash: 24a82bdf0dde2beb0978226208c151689e06ed72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35f09013fbbe522a1eb747f2d2131a5fbb23f765
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287033"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954089"
 ---
-# <a name="ismbbkpunct-ismbbkpunctl"></a>_ismbbkpunct, _ismbbkpunct_l
+# <a name="_ismbbkpunct-_ismbbkpunct_l"></a>_ismbbkpunct, _ismbbkpunct_l
 
-Sprawdza, czy znak wielobajtowy jest znakiem interpunkcyjnym.
+Sprawdza, czy znak wielobajtowy jest znakiem interpunkcji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,14 +57,14 @@ int _ismbbkpunct_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Liczba całkowita do zbadania.
+Liczba całkowita do przetestowania.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_ismbbkpunct —** zwraca wartość różną od zera, jeśli liczba całkowita *c* jest symbolem interpunkcji spoza zestawu ASCII lub 0, jeśli nie jest. Na przykład na stronie kodowej 932 tylko **_ismbbkpunct —** testy na znaki katakana interpunkcyjne. **_ismbbkpunct —** używa bieżących ustawień regionalnych dla wszelkich ustawień znaków zależnych od ustawień regionalnych. **_ismbbkpunct_l —** jest identyczna, z tą różnicą, że używa ustawień regionalnych, które zostały przekazane. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+**_ismbbkpunct** zwraca wartość różną od zera, jeśli liczba całkowita *c* jest symbolem interpunkcji innym niż ASCII lub 0, jeśli nie jest. Na przykład, na stronie kodowej 932, **_ismbbkpunct** testy dla interpunkcji katakana. **_ismbbkpunct** korzysta z bieżących ustawień regionalnych dla wszelkich ustawień znaków zależnych od ustawień regionalnych. **_ismbbkpunct_l** jest identyczny, z tą różnicą, że używa przekazywania ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -70,7 +73,7 @@ Ustawienia regionalne do użycia.
 |**_ismbbkpunct**|\<mbctype.h>|
 |**_ismbbkpunct_l**|\<mbctype.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,10 +1,10 @@
 ---
 title: __getmainargs, __wgetmainargs
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __wgetmainargs
 - __getmainargs
-apilocation:
+api_location:
 - msvcr100.dll
 - msvcrt.dll
 - msvcr110_clr0400.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr110.dll
 - msvcr90.dll
 - msvcr120.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __wgetmainargs
 - __getmainargs
@@ -20,16 +23,16 @@ helpviewer_keywords:
 - __wgetmainargs
 - __getmainargs
 ms.assetid: f72f54eb-9509-4bdf-8752-40fc49055439
-ms.openlocfilehash: 6e2bf21f2ac50d3486af56f9581ff6c8d0e0c309
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dbf186fa699e8faf85385fd322482a4373b3fd60
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62343450"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940346"
 ---
-# <a name="getmainargs-wgetmainargs"></a>__getmainargs, __wgetmainargs
+# <a name="__getmainargs-__wgetmainargs"></a>__getmainargs, __wgetmainargs
 
-Wywołuje w wierszu polecenia, a następnie kopiuje argumenty `main()` za pośrednictwem przekazanych wskaźników.
+Wywołuje analizę wiersza polecenia i kopiuje argumenty do `main()` tyłu przez przekazane wskaźniki.
 
 ## <a name="syntax"></a>Składnia
 
@@ -52,27 +55,27 @@ int __wgetmainargs (
 #### <a name="parameters"></a>Parametry
 
 `_Argc`<br/>
-Liczba całkowita, która zawiera liczbę argumentów, które należy wykonać w `argv`. Parametr `argc` jest zawsze większy lub równy 1.
+Liczba całkowita, która zawiera liczbę argumentów po `argv`elemencie. Parametr `argc` jest zawsze większy lub równy 1.
 
 `_Argv`<br/>
-Tablica ciągów zakończonych znakiem null, która reprezentuje argumenty wiersza polecenia wprowadzone przez użytkownika programu. Zgodnie z Konwencją `argv[0]` jest poleceniem, z którym wywoływany jest program, argv [1] jest pierwszym argumentem wiersza polecenia i tak dalej, aż do argv [argc —], która jest zawsze **NULL**. Pierwszym argumentem wiersza polecenia jest zawsze `argv[1]` i jest ostatni z nich `argv[argc - 1]`.
+Tablica ciągów zakończonych znakiem null, która reprezentuje argumenty wiersza polecenia wprowadzone przez użytkownika programu. Zgodnie z Konwencją, `argv[0]` jest poleceniem, z którym wywoływany jest program, argv [1] jest pierwszym argumentem wiersza polecenia i tak dalej, do argv [argc], który jest zawsze **wartością null**. Pierwszy argument wiersza polecenia jest zawsze `argv[1]` i ostatnim z nich jest. `argv[argc - 1]`
 
 `_Env`<br/>
-Tablica ciągów reprezentujących zestaw zmiennych w środowisku użytkownika. Ta tablica jest zakończona **NULL** wpisu.
+Tablica ciągów, które reprezentują zmienne ustawione w środowisku użytkownika. Ta tablica została zakończona przez wpis o **wartości null** .
 
 `_DoWildCard`<br/>
-Liczba całkowita, jeśli ustawione na 1 rozwija symboli wieloznacznych w argumentach wiersza polecenia lub jeśli nie robi nic, ustaw wartość 0.
+Liczba całkowita, która po ustawieniu na 1 rozszerza symbole wieloznaczne w argumentach wiersza polecenia lub jeśli wartość 0 nic nie robi.
 
 `_StartInfo`<br/>
-Inne informacje, które zostaną przekazane do biblioteki DLL CRT.
+Inne informacje do przesłania do biblioteki CRT DLL.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-0 w przypadku powodzenia; wartość ujemna w przypadku niepowodzenia.
+0, jeśli pomyślne; wartość ujemna, jeśli nie powiedzie się.
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj `__getmainargs` na platformach — do całego znak i `__wgetmainargs` na platformach znaków dwubajtowych (Unicode).
+Używaj `__getmainargs` na platformach nieszerokich znaków oraz `__wgetmainargs` na platformach szerokich znaków (Unicode).
 
 ## <a name="requirements"></a>Wymagania
 

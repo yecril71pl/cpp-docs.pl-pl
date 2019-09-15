@@ -1,9 +1,9 @@
 ---
 title: _heapwalk
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _heapwalk
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - heapwalk
 - _heapwalk
@@ -24,19 +27,19 @@ helpviewer_keywords:
 - heapwalk function
 - _heapwalk function
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
-ms.openlocfilehash: cc2a49d9032746cc6c82c9dc401fc96baabbe2e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8dc7ee9335f227bde93a414748ff70b165c44f8d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331691"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954775"
 ---
-# <a name="heapwalk"></a>_heapwalk
+# <a name="_heapwalk"></a>_heapwalk
 
-Przechodzi sterty i zwraca informacje o następnej pozycji.
+Przechodzi przez stos i zwraca informacje o następnym wpisie.
 
 > [!IMPORTANT]
-> Tego API nie można używać w aplikacjach, które są wykonywane w środowisku uruchomieniowym Windows z wyjątkiem w kompilacjach do debugowania. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows z wyjątkiem kompilacji debugowania. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,44 +50,44 @@ int _heapwalk( _HEAPINFO *entryinfo );
 ### <a name="parameters"></a>Parametry
 
 *entryinfo*<br/>
-Bufor do przechowywania informacji stosu.
+Bufor zawierający informacje o stercie.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_heapwalk** zwraca jedną z następujących stałych całkowitych manifestu w Malloc.h.
+**_heapwalk** zwraca jedną z następujących stałych literałów liczb całkowitych zdefiniowanych w malloc. h.
 
 |Wartość zwracana|Znaczenie|
 |-|-|
-|**_HEAPBADBEGIN**| Informacje początkowego nagłówka nieprawidłowe lub nie został odnaleziony.|
-|**_HEAPBADNODE**| Sterty uszkodzony lub zły węzeł, do których odnaleźć.|
-|**_HEAPBADPTR**| **_Pentry** pole **_heapinfo —** struktury nie zawiera prawidłowego wskaźnika do sterty lub *entryinfo* jest wskaźnikiem wartości null.|
-|**_HEAPEND**| Koniec sterty osiągnięty pomyślnie.|
-|**_HEAPEMPTY**| Nie zainicjowano stosu.|
-|**_HEAPOK**| Brak błędów do tej pory; *entryinfo* jest aktualizowana informacjami o następnej pozycji stosu.|
+|**_HEAPBADBEGIN**| Informacje o początkowym nagłówku są nieprawidłowe lub nie zostały odnalezione.|
+|**_HEAPBADNODE**| Znaleziono uszkodzony stertę lub zły węzeł.|
+|**_HEAPBADPTR**| Pole **_pentry** struktury **_HEAPINFO** nie zawiera prawidłowego wskaźnika w stercie lub *entryinfo* jest wskaźnikiem o wartości null.|
+|**_HEAPEND**| Pomyślnie osiągnięto koniec sterty.|
+|**_HEAPEMPTY**| Sterta nie została zainicjowana.|
+|**_HEAPOK**| Brak błędów do tej pory; *entryinfo* jest aktualizowany informacjami o następnym wpisie sterty.|
 
-Ponadto, jeśli wystąpi błąd **_heapwalk** ustawia **errno** do **ENOSYS**.
+Ponadto, jeśli wystąpi błąd, **_heapwalk** ustawia **errno** na **ENOSYS**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Heapwalk** funkcja pomaga debugować problemy związane ze stertą w programach. Funkcja przechodzi przez stertę, trawersując przez jeden zapis dla połączenia i zwraca wskaźnik do struktury typu **_heapinfo —** zawierająca informacje o następnej pozycji stosu. **_Heapinfo —** typu, określony w Malloc.h, zawiera następujące elementy.
+Funkcja **_heapwalk** pomaga debugować problemy związane z stertą w programach. Funkcja przeprowadzi przez stos, przechodząc do jednego wpisu na wywołanie i zwraca wskaźnik do struktury typu **_HEAPINFO** , który zawiera informacje o następnym wpisie sterty. Typ **_HEAPINFO** , zdefiniowany w malloc. h, zawiera następujące elementy.
 
 |Pole|Znaczenie|
 |-|-|
-|`int *_pentry`|Wskaźnik wejścia stosu.|
-|`size_t _size`|Rozmiar zapisu sterty.|
-|`int _useflag`|Flaga wskazująca, czy wpis stosu jest w użyciu.|
+|`int *_pentry`|Wskaźnik wejścia sterty.|
+|`size_t _size`|Rozmiar wpisu sterty.|
+|`int _useflag`|Flaga wskazująca, czy wpis sterty jest używany.|
 
-Wywołanie **_heapwalk** zwracającego **_heapok —** przechowuje rozmiar wpisu w **_rozmiar** pola i zestawy **_useflag** pola na wartość **_FREEENTRY** lub **_USEDENTRY** (obie to stałe zdefiniowane w Malloc.h). Aby uzyskać te informacje dotyczące pierwszej pozycji w stosie, należy przekazać **_heapwalk** wskaźnik do **_heapinfo —** struktury, której **_pentry** element członkowski jest **o wartości NULL** . Jeśli system operacyjny nie obsługuje **_heapwalk**(na przykład Windows 98), funkcja zwraca **_heapend —** i ustawia **errno** do **ENOSYS**.
+Wywołanie **_heapwalk** , które zwraca **_HEAPOK** przechowuje rozmiar wpisu w polu **_SIZE** i ustawia pole **_useflag** na **_FREEENTRY** lub **_USEDENTRY** (obie są stałymi zdefiniowanymi w malloc. h). Aby uzyskać te informacje o pierwszym wpisie w stercie, Przekaż **_heapwalk** wskaźnik do struktury **_HEAPINFO** , której członek **_pentry** ma **wartość null**. Jeśli system operacyjny nie obsługuje **_heapwalk**(na przykład Windows 98), funkcja zwraca **_HEAPEND** i ustawia **errno** na **ENOSYS**.
 
-Ta funkcja sprawdza poprawność swojego parametru. Jeśli *entryinfo* jest pustym wskaźnikiem, wywoływany nieprawidłowy parametr uchwytu, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL** a funkcja zwraca **_heapbadptr —**.
+Ta funkcja sprawdza poprawność parametru. Jeśli *entryinfo* jest pustym wskaźnikiem, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcja zwraca **_HEAPBADPTR**.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
+|Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
 |**_heapwalk**|\<malloc.h>|\<errno.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

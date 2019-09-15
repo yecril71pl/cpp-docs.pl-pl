@@ -1,10 +1,10 @@
 ---
 title: memset, wmemset
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wmemset
 - memset
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - memset
 - wmemset
@@ -26,12 +29,12 @@ helpviewer_keywords:
 - wmemset function
 - memset function
 ms.assetid: e7ceb01b-df69-49c2-b294-a39358ad4699
-ms.openlocfilehash: 7d7b57292f582491a7750b4e12a8072112eac4dd
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6e1db021da70f0af7b045e2a3100dbaaa81e5a50
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501012"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951752"
 ---
 # <a name="memset-wmemset"></a>memset, wmemset
 
@@ -71,7 +74,7 @@ Wartość miejsca *docelowego*.
 
 Ustawia pierwszą *liczbę* znaków miejsca *docelowego* na znak *c*.
 
-**Uwaga dotycząca zabezpieczeń** Upewnij się, że bufor docelowy ma wystarczającą ilość miejsca dla co najmniej *liczby* znaków. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
+**Uwaga dotycząca zabezpieczeń** Upewnij się, że bufor docelowy ma wystarczającą ilość miejsca dla co najmniej *liczby* znaków. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ## <a name="requirements"></a>Wymagania
 

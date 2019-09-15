@@ -1,11 +1,11 @@
 ---
 title: trunc, truncf, truncl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - trunc
 - truncf
 - truncl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - trunc
 - truncf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - truncf function
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
-ms.openlocfilehash: 6e023b9d894ea1b40a0e056e73b7c32f1e3cbed7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0c615c91e562fa45f791d8cc20f39a830013aeb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268939"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946007"
 ---
 # <a name="trunc-truncf-truncl"></a>trunc, truncf, truncl
 
-Określa najbliższej liczby całkowitej, która jest mniejsza niż lub równa określonej wartości zmiennoprzecinkowych.
+Określa najbliższą liczbę całkowitą, która jest mniejsza lub równa określonej wartości zmiennoprzecinkowej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -61,33 +64,33 @@ Wartość do obcięcia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli to się powiedzie, zwraca wartość całkowitą *x*zaokrągloną w kierunku zera.
+Jeśli to się powiedzie, zwraca wartość typu Integer *x*, zaokrągloną do zera.
 
-W przeciwnym razie może zwracać jedną z następujących czynności:
+W przeciwnym razie może zwrócić jeden z następujących elementów:
 
-|Problem|Wróć|
+|Problem|przesłać|
 |-----------|------------|
-|*x* = ±INFINITY|x|
-|*x* = ±0|x|
+|*x* = ± nieskończoność|x|
+|*x* = ± 0|x|
 |*x* = NaN|NaN|
 
-Błędy są zgłaszane określonej [_matherr](matherr.md).
+Błędy są raportowane zgodnie z opisem w [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **trunc** przyjmujące i zwracające **float** i **długie** **double** typów. W programie C **trunc** zawsze przyjmuje i zwraca **double**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **TRUNC —** , które pobierają i zwracają **zmiennoprzecinkowe** i **długie** **podwójne** typy. W programie C **TRUNC —** zawsze przyjmuje i zwraca wartość **Double**.
 
-Ponieważ największej wartości zmiennoprzecinkowe są dokładne liczb całkowitych, ta funkcja nie będzie przepełnienia samodzielnie. Może jednak spowodować przepełnienie buforu, zwracając wartość do typu całkowitego funkcji.
+Ponieważ największe wartości zmiennoprzecinkowe są dokładnymi liczbami całkowitymi, ta funkcja nie zostanie przepełniony. Jednak może dojść do przepełnienia funkcji przez zwrócenie wartości do typu Integer.
 
-Można również zaokrąglenie konwertując niejawnie z zmiennoprzecinkowe do całkowitych; Spowoduje to więc jest jednak ograniczona do wartości, które mogą być przechowywane w typie docelowym.
+Możesz również zaokrąglić w dół, niejawnie konwertując od zmiennoprzecinkowego na całkowity; jednak wykonanie tej operacji jest ograniczone do wartości, które mogą być przechowywane w typie docelowym.
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek języka C|Nagłówek języka C++|
+|Funkcja|Nagłówek języka C|C++nagłówki|
 |--------------|--------------|------------------|
-|**trunc**, **truncf**, **truncl**|\<math.h>|\<cmath>|
+|**TRUNC —** , **truncf —** , **truncl**|\<math.h>|\<cmath >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

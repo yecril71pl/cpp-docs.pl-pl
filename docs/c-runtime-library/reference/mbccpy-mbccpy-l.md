@@ -1,10 +1,10 @@
 ---
 title: _mbccpy, _mbccpy_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbccpy
 - _mbccpy_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbccpy
 - tccpy
@@ -34,12 +37,12 @@ helpviewer_keywords:
 - _mbccpy function
 - mbccpy_l function
 ms.assetid: 13f4de6e-7792-41ac-b319-dd9b135433aa
-ms.openlocfilehash: 8d0711a98813565e945dad1d0e998847029668c2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 98ae2eb75949077d02b98ba3aec75da534e93884
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499897"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952700"
 ---
 # <a name="_mbccpy-_mbccpy_l"></a>_mbccpy, _mbccpy_l
 
@@ -81,7 +84,7 @@ Ta funkcja sprawdza poprawność swoich parametrów. Jeśli **_mbccpy** jest prz
 
 **_mbccpy** używa bieżących ustawień regionalnych dla wszelkich zachowań zależnych od ustawień regionalnych. **_mbccpy_l** jest taka sama jak **_mbccpy** , z wyjątkiem tego, że **_mbccpy_l** korzysta z ustawień regionalnych przewidzianych dla wszelkich zachowań zależnych od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-**Uwaga dotycząca zabezpieczeń** Użyj ciągu zakończenia o wartości null. Ciąg zakończony znakiem null nie może przekraczać rozmiaru buforu docelowego. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns). Problemy związane z przepełnieniem buforu są częstą metodą ataku systemu, powodując nieuzasadnione podniesienie uprawnień.
+**Uwaga dotycząca zabezpieczeń** Użyj ciągu zakończenia o wartości null. Ciąg zakończony znakiem null nie może przekraczać rozmiaru buforu docelowego. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns). Problemy związane z przepełnieniem buforu są częstą metodą ataku systemu, powodując nieuzasadnione podniesienie uprawnień.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 

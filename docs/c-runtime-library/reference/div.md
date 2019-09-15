@@ -1,9 +1,9 @@
 ---
-title: DIV ldiv, lldiv
+title: DIV, ldiv, LLDiv
 ms.date: 04/05/2018
-apiname:
+api_name:
 - div
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - div
 helpviewer_keywords:
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - dividing integers
 - remainder computing
 ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
-ms.openlocfilehash: 0ee1b3b6a5d7b15470ffe1e667b4077d1f9581e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b40fa0c4cc9cdf0c0de0f6af21da04b0c70369f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339263"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937695"
 ---
-# <a name="div-ldiv-lldiv"></a>DIV ldiv, lldiv
+# <a name="div-ldiv-lldiv"></a>DIV, ldiv, LLDiv
 
-Oblicza iloraz i resztę dwóch liczb całkowitych.
+Oblicza iloraz i resztę dwóch wartości całkowitych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -66,7 +69,7 @@ lldiv_t div(
 
 ### <a name="parameters"></a>Parametry
 
-*numer*<br/>
+*numeracj*<br/>
 Licznik.
 
 *denom*<br/>
@@ -74,21 +77,21 @@ Mianownik.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**DIV** wywołana z wykorzystaniem argumentów typu **int** zwraca strukturę typu **div_t**, który obejmuje iloraz i resztę. Wartość zwracana z argumentami typu **długie** jest **ldiv_t**i wartość zwracana z argumentami typu **długie** **długie** jest **lldiv_t**. **div_t**, **ldiv_t**, i **lldiv_t** są zdefiniowane w \<stdlib.h >.
+**blok DIV** wywoływany za pomocą argumentów typu **int** zwraca strukturę typu **div_t**, która składa się z ilorazu i reszty. Wartość zwracana z argumentami typu **Long** to **ldiv_t**, a wartość zwracana z argumentami typu **Long** **Long** to **lldiv_t**. **div_t**, **ldiv_t**i **lldiv_t** są zdefiniowane w \<STDLIB. h >.
 
 ## <a name="remarks"></a>Uwagi
 
-**Div** funkcja dzieli *numer* przez *denom* a tym samym oblicza iloraz i resztę. [Div_t](../../c-runtime-library/standard-types.md) struktura zawiera iloraz, **quot**, jak i resztę, **rem**. Znak iloraz jest tożsamy z ilorazem matematycznych. Wartość bezwzględna jest największą liczbą całkowitą, która jest mniejsza niż wartość bezwzględna ilorazu matematycznego. Jeżeli mianownik wynosi 0, program kończy się komunikat o błędzie.
+Funkcja **DIV** dzieli *numer* przez *denom* , a tym samym Oblicza iloraz i resztę. Struktura [div_t](../../c-runtime-library/standard-types.md) zawiera iloraz, **Quote**i resztę, **REM**. Znak ilorazu jest taki sam jak w przypadku ilorazu matematycznego. Wartość bezwzględna jest największą liczbą całkowitą, która jest mniejsza niż wartość bezwzględna ilorazu matematycznego. Jeśli mianownik ma wartość 0, program kończy pracę z komunikatem o błędzie.
 
-Przeciążenia **div** które przyjmują argumenty typu **długie** lub **długie** **długie** są dostępne tylko dla kodu w języku C++. Typy zwracane występujące [ldiv_t](../../c-runtime-library/standard-types.md) i [lldiv_t](../../c-runtime-library/standard-types.md) zawiera elementy członkowskie **quot** i **rem**, które mają samych znaczeń jako członkowie **div_t**.
+Przeciążenia elementu **DIV** , które przyjmują argumenty typu **Long** lub **Long** **Long** , są dostępne tylko C++ dla kodu. Zwracane typy [ldiv_t](../../c-runtime-library/standard-types.md) i [lldiv_t](../../c-runtime-library/standard-types.md) zawierają elementy **Quote** i **REM**, które mają takie same znaczenie jak elementy członkowskie **div_t**.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**DIV**, **ldiv**, **lldiv**|\<stdlib.h>|
+|**DIV**, **ldiv**, **LLDiv**|\<stdlib.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

@@ -1,10 +1,10 @@
 ---
 title: _dupenv_s_dbg, _wdupenv_s_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _dupenv_s_dbg
 - _wdupenv_s_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tdupenv_s_dbg
 - _dupenv_s_dbg
@@ -29,16 +32,16 @@ helpviewer_keywords:
 - wdupenv_s_dbg function
 - _dupenv_s_dbg function
 ms.assetid: e3d81148-e24e-46d0-a21d-fd87b5e6256c
-ms.openlocfilehash: 95d8c18a0ebc543304fdb6bf51c4adde589333aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c61986184f93c6cf6e83b33f77dce2bd017cfae
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339224"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937677"
 ---
-# <a name="dupenvsdbg-wdupenvsdbg"></a>_dupenv_s_dbg, _wdupenv_s_dbg
+# <a name="_dupenv_s_dbg-_wdupenv_s_dbg"></a>_dupenv_s_dbg, _wdupenv_s_dbg
 
-Pobieranie wartości z bieżącego środowiska.  Wersje [_dupenv_s —, _wdupenv_s —](dupenv-s-wdupenv-s.md) , przydziel pamięć z [_malloc_dbg](malloc-dbg.md) podać dodatkowe informacje debugowania.
+Pobierz wartość z bieżącego środowiska.  Wersje [_dupenv_s, _wdupenv_s](dupenv-s-wdupenv-s.md) , które przydzielą pamięć z [_malloc_dbg](malloc-dbg.md) , aby zapewnić dodatkowe informacje o debugowaniu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -69,35 +72,35 @@ Bufor do przechowywania wartości zmiennej.
 *numberOfElements*<br/>
 Rozmiar *buforu*.
 
-*Nazwa zmiennej*<br/>
+*nazwa_zmiennej*<br/>
 Nazwa zmiennej środowiskowej.
 
-*blockType*<br/>
+*BlockType*<br/>
 Żądany typ bloku pamięci: **_CLIENT_BLOCK** lub **_NORMAL_BLOCK**.
 
 *Nazwa pliku*<br/>
-Wskaźnik na nazwę pliku źródłowego lub **NULL**.
+Wskaźnik na nazwę pliku źródłowego lub **wartość null**.
 
-*numer wiersza*<br/>
-Numer wiersza w pliku źródłowym lub **NULL**.
+*LineNumber*<br/>
+Numer wiersza w pliku źródłowym lub **wartości null**.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, w przypadku powodzenia, kod błędu.
+Zero po powodzeniu, kod błędu w przypadku niepowodzenia.
 
-Te funkcje sprawdzają poprawność parametrów; Jeśli *buforu* lub *nazwa_zmiennej* jest **NULL**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcje ustawiają **errno** do **EINVAL** i zwracają **EINVAL**.
+Te funkcje sprawdzają poprawność swoich parametrów; Jeśli *buffer* lub *Nazwa_zmiennej* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcje ustawiają **errno** na **EINVAL** i zwracają **EINVAL**.
 
-Jeśli te funkcje nie może przydzielić wystarczającej ilości pamięci, ustawiają *buforu* do **NULL** i *numberOfElements* do 0 i zwracają **ENOMEM**.
+Jeśli te funkcje nie mogą przydzielić wystarczającej ilości pamięci, ustawia *bufor* na **null** i *NumberOfElements* na 0, a następnie zwraca **ENOMEM**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Dupenv_s_dbg —** i **_wdupenv_s_dbg —** funkcje są takie same jak **_dupenv_s —** i **_wdupenv_s —** z tą różnicą, że gdy **_DEBUG** jest zdefiniowany, te funkcje używają wersji debugowania [— funkcja malloc](malloc.md), [_malloc_dbg](malloc-dbg.md), można przydzielić pamięci dla wartości zmiennej środowiskowej. Instrukcje dotyczące debugowania funkcji **_malloc_dbg**, zobacz [_malloc_dbg](malloc-dbg.md).
+Funkcje **_dupenv_s_dbg** i **_wdupenv_s_dbg** są identyczne z **_dupenv_s** i **_wdupenv_s** , z tą różnicą, że w przypadku zdefiniowania elementu **_DEBUG** te funkcje korzystają z wersji, która jest debugowana [,](malloc.md) [_malloc_dbg](malloc-dbg.md), Aby przydzielić pamięć dla wartości zmiennej środowiskowej. Aby uzyskać informacje na temat funkcji debugowania **_malloc_dbg**, zobacz [_malloc_dbg](malloc-dbg.md).
 
-Nie trzeba jawnie wywołać w większości przypadków te funkcje. Zamiast tego można określić flagę **_CRTDBG_MAP_ALLOC**. Gdy **_CRTDBG_MAP_ALLOC** jest zdefiniowany, wywołania **_dupenv_s —** i **_wdupenv_s —** są mapowane ponownie do **_dupenv_s_dbg —** i **_wdupenv_s_dbg —**, odpowiednio, z *blockType* równa **_NORMAL_BLOCK**. Dzięki temu, nie trzeba jawnie wywołać te funkcje, chyba że chcesz oznaczyć bloki stosu jako **_CLIENT_BLOCK**. Aby uzyskać więcej informacji na temat typów bloków, zobacz [typy bloków na stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
+Nie trzeba jawnie wywoływać tych funkcji w większości przypadków. Zamiast tego można zdefiniować flagę **_CRTDBG_MAP_ALLOC**. Gdy **_CRTDBG_MAP_ALLOC** jest zdefiniowany, wywołania **_dupenv_s** i **_wdupenv_s** są ponownie mapowane odpowiednio do **_dupenv_s_dbg** i **_wdupenv_s_dbg**, z atrybutem *BlockType* ustawionym na wartość **_NORMAL_BLOCK**. W ten sposób nie trzeba wywoływać tych funkcji jawnie, chyba że chcesz oznaczyć bloki sterty jako **_CLIENT_BLOCK**. Aby uzyskać więcej informacji na temat typów bloków, zobacz [typy bloków na stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tdupenv_s_dbg**|**_dupenv_s_dbg**|**_dupenv_s_dbg**|**_wdupenv_s_dbg**|
 
@@ -108,7 +111,7 @@ Nie trzeba jawnie wywołać w większości przypadków te funkcje. Zamiast tego 
 |**_dupenv_s_dbg**|\<crtdbg.h>|
 |**_wdupenv_s_dbg**|\<crtdbg.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

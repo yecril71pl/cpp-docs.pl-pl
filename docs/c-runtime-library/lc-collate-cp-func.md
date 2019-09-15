@@ -1,9 +1,9 @@
 ---
 title: ___lc_collate_cp_func
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ___lc_collate_cp_func
-apilocation:
+api_location:
 - msvcr120.dll
 - msvcrt.dll
 - msvcr100.dll
@@ -11,22 +11,25 @@ apilocation:
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - msvcr90.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ___lc_collate_cp_func
 helpviewer_keywords:
 - ___lc_collate_cp_func
 ms.assetid: 46ccc084-7ac9-4e5d-9138-e12cb5845615
-ms.openlocfilehash: fac8b7ba2e9568dd53509e5cccbb96a6b2f1df8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d6a857760bf3b76481cc608ef8f015bca207f35f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62342768"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940154"
 ---
-# <a name="lccollatecpfunc"></a>___lc_collate_cp_func
+# <a name="___lc_collate_cp_func"></a>___lc_collate_cp_func
 
-Wewnętrzny funkcji CRT. Pobiera bieżący strona kodowa sortowania wątku.
+Wewnętrzna funkcja CRT. Pobiera bieżącą stronę kodową sortowania wątku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,9 +43,9 @@ Bieżąca strona kodowa sortowania wątku.
 
 ## <a name="remarks"></a>Uwagi
 
-`___lc_collate_cp_func` jest wewnętrzny funkcji CRT, który jest używany przez inne funkcje CRT, można uzyskać z magazynu lokalnego wątku CRT danych bieżącej stronie kodowej sortowania. Te informacje są dostępne również za pomocą [_get_current_locale —](../c-runtime-library/reference/get-current-locale.md) funkcji.
+`___lc_collate_cp_func`jest wewnętrzną funkcją CRT, która jest używana przez inne funkcje CRT do pobrania bieżącej strony kodowej sortowania z lokalnego magazynu wątków dla danych CRT. Te informacje są również dostępne przy użyciu funkcji [_get_current_locale](../c-runtime-library/reference/get-current-locale.md) .
 
-Wewnętrzne funkcje CRT są specyficzne dla implementacji i może ulec zmianie z każdej wersji. Nie zalecamy ich użycie w kodzie.
+Wewnętrzne funkcje CRT są specyficzne dla implementacji i mogą ulec zmianie w każdej wersji. Nie zalecamy ich używania w kodzie.
 
 ## <a name="requirements"></a>Wymagania
 

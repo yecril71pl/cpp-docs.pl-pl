@@ -1,10 +1,10 @@
 ---
 title: getenv_s, _wgetenv_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - getenv_s
 - _wgetenv_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getenv_s
 - _tgetenv_s
@@ -29,19 +32,19 @@ helpviewer_keywords:
 - environment variables
 - tgetenv_s function
 ms.assetid: c3ae1ffe-d4cd-4bae-bcb1-3afa754c613a
-ms.openlocfilehash: eac3c036e2f4f271c7bc2d77c8ae82bec28d3617
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7cbd1feab14ac29c46bb8851ff94a48c67bc6014
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331743"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955051"
 ---
-# <a name="getenvs-wgetenvs"></a>getenv_s, _wgetenv_s
+# <a name="getenv_s-_wgetenv_s"></a>getenv_s, _wgetenv_s
 
-Pobiera wartość z bieżącego środowiska. Te wersje [getenv, _wgetenv —](getenv-wgetenv.md) mają wzmocnienia zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Pobiera wartość z bieżącego środowiska. Te wersje programu [getenv _wgetenv](getenv-wgetenv.md) mają ulepszenia zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -75,7 +78,7 @@ errno_t _wgetenv_s(
 ### <a name="parameters"></a>Parametry
 
 *pReturnValue*<br/>
-Rozmiar buforu, który jest wymagany, lub 0, jeśli zmienna nie zostanie znaleziona.
+Wymagany rozmiar buforu lub 0, jeśli zmienna nie zostanie znaleziona.
 
 *buffer*<br/>
 Bufor do przechowywania wartości zmiennej środowiskowej.
@@ -83,61 +86,61 @@ Bufor do przechowywania wartości zmiennej środowiskowej.
 *numberOfElements*<br/>
 Rozmiar *buforu*.
 
-*Nazwa zmiennej*<br/>
+*nazwa_zmiennej*<br/>
 Nazwa zmiennej środowiskowej.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli to się powiedzie; w przeciwnym razie, kod błędu: w przypadku niepowodzenia.
+Zero, jeśli pomyślne; w przeciwnym razie kod błędu w przypadku niepowodzenia.
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|*pReturnValue*|*buffer*|*numberOfElements*|*Nazwa zmiennej*|Wartość zwracana|
+|*pReturnValue*|*buffer*|*numberOfElements*|*nazwa_zmiennej*|Wartość zwracana|
 |--------------------|--------------|------------------------|---------------|------------------|
-|**NULL**|Wszystkie|Wszystkie|Wszystkie|**EINVAL**|
-|Wszystkie|**NULL**|>0|Wszystkie|**EINVAL**|
-|Wszystkie|Wszystkie|Wszystkie|**NULL**|**EINVAL**|
+|**NULL**|Ile|Ile|Ile|**EINVAL**|
+|Ile|**NULL**|>0|Ile|**EINVAL**|
+|Ile|Ile|Ile|**NULL**|**EINVAL**|
 
-Którykolwiek z tych warunków błędu wywołuje program obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcje ustawiają **errno** do **EINVAL** i zwracają **EINVAL**.
+Każdy z tych warunków błędu wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcje ustawiają **errno** na **EINVAL** i zwracają **EINVAL**.
 
-Ponadto, jeśli bufor jest zbyt mały, te funkcje zwracają **ERANGE**. Nie wywołują procedurę obsługi nieprawidłowego parametru. Wymagany rozmiar buforu w nich zapisać *pReturnValue*, a tym samym Włącz programy do wywołania funkcji ponownie, używając bufor większe.
+Ponadto, jeśli bufor jest za mały, te funkcje zwracają **ERANGE**. Nie wywołują procedury obsługi nieprawidłowego parametru. Zapisują wymagany rozmiar buforu w *pReturnValue*, a tym samym umożliwiają programom ponowne wywoływanie funkcji z większym buforem.
 
 ## <a name="remarks"></a>Uwagi
 
-**Getenv_s —** Funkcja przeszukuje listę zmiennych środowiskowych dla *nazwa_zmiennej*. **getenv_s —** nie uwzględnia wielkości liter w systemie operacyjnym Windows. **getenv_s —** i [_putenv_s](putenv-s-wputenv-s.md) użyj kopii środowiska, która jest wskazywana przez zmienną globalną **_environ** można uzyskiwać dostęp do środowiska. **getenv_s —** działa tylko na struktur danych, które są dostępne dla biblioteki wykonawczej a nie na środowisko "segmentu", który jest tworzony dla procesu przez system operacyjny. W związku z tym, programy używające *envp* argument [głównego](../../cpp/main-program-startup.md) lub [wmain](../../cpp/main-program-startup.md) może pobrać nieprawidłowe informacje.
+Funkcja **getenv_s** przeszukuje listę zmiennych środowiskowych dla elementu *nazwa_zmiennej*. w systemie operacyjnym Windows w **getenv_s** nie jest rozróżniana wielkość liter. **getenv_s** i [_putenv_s](putenv-s-wputenv-s.md) używają kopii środowiska, która jest wskazywana przez zmienną globalną **_environ** , aby uzyskać dostęp do środowiska. **getenv_s** działa tylko na strukturach danych, które są dostępne dla biblioteki wykonawczej, a nie w środowisku "segment", który jest tworzony dla procesu przez system operacyjny. W związku z tym programy korzystające z argumentu *envp* do [Main](../../cpp/main-program-startup.md) lub [wmain](../../cpp/main-program-startup.md) mogą pobrać nieprawidłowe informacje.
 
-**_wgetenv_s —** to wersja znaku dwubajtowego **getenv_s —**; argument i wartość zwracana przez **_wgetenv_s —** są ciągami znaków dwubajtowych. **_Wenviron** zmienna globalna jest wersją znaków dwubajtowych **_environ**.
+**_wgetenv_s** to dwubajtowa wersja **getenv_s**; argument i wartość zwracana przez **_wgetenv_s** są ciągami znaków dwubajtowych. **_Wenviron** Global Variable to dwubajtowa wersja **_environ**.
 
-W programie MBCS (na przykład w programie SBCS ASCII) **_wenviron** jest początkowo **NULL** ponieważ środowisko składa się z ciągami znaków wielobajtowych. Następnie w pierwszym wywołaniu [_wputenv —](putenv-wputenv.md), lub na pierwszym wywołaniu **_wgetenv_s —**, jeśli istnieje już środowisko (znaków MBCS), odpowiednie środowisko ciąg znaków dwubajtowych jest tworzony i następnie jest wskazywany przez **_wenviron**.
+W programie MBCS (na przykład w programie SBCS ASCII) **_wenviron** jest początkowo **wartością null** , ponieważ środowisko składa się z ciągów znaków wielobajtowych. Następnie podczas pierwszego wywołania [_wputenv](putenv-wputenv.md)lub pierwszego wywołania **_wgetenv_s**, jeśli istnieje już środowisko (MBCS), jest tworzone odpowiednie środowisko ciągu znaków dwubajtowych, a następnie wskazywane przez **_wenviron**.
 
-Podobnie w formacie Unicode (**_wmain**) program, **_environ** jest początkowo **NULL** ponieważ środowisko składa się z ciągami znaków dwubajtowych. Następnie w pierwszym wywołaniu [_putenv](putenv-wputenv.md), lub na pierwszym wywołaniu **getenv_s —** Jeśli środowiska (Unicode) już istnieje, odpowiednie środowisko MBCS jest tworzony i następnie jest wskazywany przez **_ Environ —**.
+Podobnie w programie Unicode ( **_wmain**), **_Environ** jest początkowo **wartością null** , ponieważ środowisko składa się z ciągów znaków dwubajtowych. Następnie podczas pierwszego wywołania [_putenv](putenv-wputenv.md)lub pierwszego wywołania **getenv_s** , jeśli istnieje już środowisko (Unicode), odpowiednie środowisko MBCS jest tworzone i jest wskazywane przez **_environ**.
 
-Gdy dwie kopie środowiska (MBCS i Unicode) jednocześnie istnieje w programie, systemu w czasie wykonywania, musisz utrzymywać obu kopiach i powoduje wolniejszego czasu wykonania. Na przykład gdy wywołujesz **_putenv**, wywołanie **_wputenv —** również jest wykonywane automatycznie, tak, aby odpowiadać zmiennych środowiskowych dwa.
+Gdy dwie kopie środowiska (MBCS i Unicode) istnieją jednocześnie w programie, system czasu wykonywania musi obsługiwać obie kopie i powoduje wolniejszy czas wykonywania. Na przykład po wywołaniu **_putenv**wywołanie **_wputenv** jest również wykonywane automatycznie, tak aby oba ciągi środowiska odpowiadały.
 
 > [!CAUTION]
-> W rzadkich przypadkach po system środowiska wykonawczego jest obsługa wersji standardu Unicode i wielobajtowych wersję środowiska, wersje dwa środowiska mogą nie odpowiadać dokładnie. Dzieje się tak, ponieważ, mimo że dowolny unikatowy ciąg znaków wielobajtowych jest mapowany na ciąg Unicode unikatowy, mapowanie unikatowy ciąg Unicode na ciąg znaków wielobajtowych nie muszą być unikatowe. Aby uzyskać więcej informacji, zobacz [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).
+> W rzadkich przypadkach, gdy system czasu wykonywania zachowuje zarówno wersję standardu Unicode, jak i wielobajtowe wersje środowiska, te systemy mogą nie odpowiadać dokładnie. Dzieje się tak, ponieważ chociaż każdy unikatowy ciąg znaków wielobajtowych jest mapowany na unikatowy ciąg Unicode, mapowanie z unikatowego ciągu Unicode na ciąg znaków wielobajtowych nie musi być unikatowe. Aby uzyskać więcej informacji, zobacz [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).
 
 > [!NOTE]
-> **_Putenv_s** i **_getenv_s** rodziny funkcji nie są wątkowo. **_getenv_s** może zwracać wskaźnik ciągu podczas **_putenv_s** modyfikuje ciąg, a także spowodować błędy losowe. Upewnij się, że wywołania tych funkcji są synchronizowane.
+> Rodziny **_putenv_s** i **_getenv_s** funkcji nie są bezpieczne wątkowo. **_getenv_s** może zwrócić wskaźnik ciągu, podczas gdy **_putenv_s** modyfikuje ciąg i w związku z tym powoduje losowe błędy. Upewnij się, że wywołania tych funkcji są zsynchronizowane.
 
-W języku C++ korzystania z tych funkcji jest uproszczone przez przeciążania szablonu; przeciążenia mogą automatycznie wywnioskować długość buforu i tym samym wyeliminować konieczność określenia argumentu rozmiaru. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu, a tym samym wyeliminować konieczność określenia argumentu rozmiaru. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tgetenv_s**|**getenv_s**|**getenv_s**|**_wgetenv_s**|
 
-Aby sprawdzić lub zmienić wartość **TZ** użycie zmiennej, środowisko **getenv_s —**, **_putenv**, i **_tzset —**, co jest wymagane. Aby uzyskać więcej informacji na temat **TZ**, zobacz [_tzset —](tzset.md) i [_daylight, _dstbias, _timezone i _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
+Aby sprawdzić lub zmienić wartość **zmiennej środowiskowej** $, użyj **getenv_s**, **_putenv**i **_tzset**, zgodnie z potrzebami. Aby uzyskać więcej informacji o programie **$, zobacz** [_tzset](tzset.md) and [_daylight, _dstbias, _timezone i _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**getenv_s**|\<stdlib.h>|
-|**_wgetenv_s**|\<stdlib.h> or \<wchar.h>|
+|**_wgetenv_s**|\<STDLIB. h > lub \<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

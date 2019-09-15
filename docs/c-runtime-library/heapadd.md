@@ -1,9 +1,9 @@
 ---
 title: _heapadd
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _heapadd
-apilocation:
+api_location:
 - msvcr100.dll
 - msvcr110_clr0400.dll
 - msvcr120.dll
@@ -11,7 +11,10 @@ apilocation:
 - msvcrt.dll
 - msvcr110.dll
 - msvcr90.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - heapadd
 - _heapadd
@@ -21,19 +24,19 @@ helpviewer_keywords:
 - heaps, adding memory
 - heapadd function
 ms.assetid: 4d691fe2-2763-49f4-afb1-62738b7cd3ff
-ms.openlocfilehash: 8cfd2a5a112a7a5b578f7b6dfcdcc3998596bc86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4be87710519c9a389adbaf41fefddb9ea8dfb1e6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62289614"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940281"
 ---
-# <a name="heapadd"></a>_heapadd
+# <a name="_heapadd"></a>_heapadd
 
 Dodaje pamięć do sterty.
 
 > [!IMPORTANT]
->  Ta funkcja jest przestarzała. Począwszy od programu Visual Studio 2015, nie jest dostępna w CRT.
+>  Ta funkcja jest przestarzała. Począwszy od programu Visual Studio 2015, nie jest on dostępny w CRT.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,26 +52,26 @@ int _heapadd(
 *memblock*<br/>
 Wskaźnik do pamięci sterty.
 
-*Rozmiar*<br/>
-Rozmiar pamięci, aby dodać, w bajtach.
+*zmienia*<br/>
+Rozmiar pamięci do dodania w bajtach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-W przypadku powodzenia `_heapadd` zwraca 0; w przeciwnym razie funkcja zwraca wartość -1 i ustawia `errno` do `ENOSYS`.
+Jeśli to się `_heapadd` powiedzie, zwraca 0; w przeciwnym razie funkcja zwraca- `errno` 1 `ENOSYS`i ustawia jako.
 
-Aby uzyskać więcej informacji na temat tego i innych kodach powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tego i innych kodów powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Począwszy od Visual C++ w wersji 4.0, wewnętrzna struktura sterty został przeniesiony do biblioteki wykonawczej C o obsługę nowych funkcji debugowania. W rezultacie `_heapadd` nie jest już obsługiwany na dowolnej platformie, która jest oparta na Win32 API.
+Począwszy od wersji C++ 4,0 programu, struktura sterty źródłowej została przeniesiona do bibliotek uruchomieniowych C, aby obsługiwała nowe funkcje debugowania. W związku z tym `_heapadd` program nie jest już obsługiwany na żadnej platformie, która jest oparta na Win32 API.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
+|Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
 |`_heapadd`|\<malloc.h>|\<errno.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../c-runtime-library/compatibility.md) we wstępie.
+Aby uzyskać więcej informacji o zgodności, zobacz temat [zgodność](../c-runtime-library/compatibility.md) we wprowadzeniu.
 
 ## <a name="see-also"></a>Zobacz także
 

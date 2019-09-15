@@ -1,12 +1,12 @@
 ---
-title: strcmp —, wcscmp —, _mbscmp — _mbscmp_l
+title: strcmp, wcscmp, _mbscmp, _mbscmp_l
 ms.date: 01/22/2019
-apiname:
+api_name:
 - wcscmp
 - _mbscmp
 - _mbscmp_l
 - strcmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbscmp
 - _mbscmp_l
@@ -42,19 +45,19 @@ helpviewer_keywords:
 - _ftcscmp function
 - ftcscmp function
 ms.assetid: 5d216b57-7a5c-4cb3-abf0-0f4facf4396d
-ms.openlocfilehash: dae5e04809ac7312097cb418ab5ffd561fdbd1d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4bef0c61122e93bd45bc0d1238030743f1196d9e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354226"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957960"
 ---
-# <a name="strcmp-wcscmp-mbscmp-mbscmpl"></a>strcmp —, wcscmp —, _mbscmp — _mbscmp_l
+# <a name="strcmp-wcscmp-_mbscmp-_mbscmp_l"></a>strcmp, wcscmp, _mbscmp, _mbscmp_l
 
-Porównywanie ciągów.
+Porównaj ciągi.
 
 > [!IMPORTANT]
-> **_mbscmp —** i **_mbscmp_l** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscmp** i **_mbscmp_l** nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -81,54 +84,54 @@ int _mbscmp_l(
 ### <a name="parameters"></a>Parametry
 
 *ciąg1*, *ciąg2*<br/>
-Ciągi zakończony wartością null do porównania.
+Ciągi zakończone wartością null do porównania.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość zwracana dla każdego z tych funkcji określa numerem porządkowym relacji *ciąg1* do *ciąg2*.
+Wartość zwracana dla każdej z tych funkcji wskazuje liczbę porządkową od *ciąg1* do *ciąg2*.
 
 |Wartość|Relacja ciąg1 do ciąg2|
 |-----------|----------------------------------------|
-|< 0|*ciąg1* jest mniejsza niż *ciąg2*|
-|0|*ciąg1* jest taka sama jak *ciąg2*|
-|> 0|*ciąg1* jest większa niż *ciąg2*|
+|< 0|*ciąg1* jest krótszy niż *ciąg2*|
+|0|*ciąg1* jest identyczny z *ciąg2*|
+|> 0|*ciąg1* jest większy niż *ciąg2*|
 
-Na błąd sprawdzania poprawności parametru **_mbscmp —** i **_mbscmp_l** zwracają **_NLSCMPERROR**, który jest zdefiniowany w \<string.h > i \< mbstring.h >.
+W przypadku błędu walidacji parametru **_mbscmp** i **_mbscmp_l** zwracają **_NLSCMPERROR**, który jest zdefiniowany w \<String. h > i \<mbstring. h >.
 
 ## <a name="remarks"></a>Uwagi
 
-**Strcmp —** funkcja wykonuje porównanie porządkowe *ciąg1* i *ciąg2* i zwraca wartość wskazującą, ich relacje. **wcscmp —** i **_mbscmp —** odpowiednio są wersjami znaków dwubajtowych i znaków wielobajtowych **strcmp —**. **_mbscmp —** rozpoznaje sekwencje znaków wielobajtowych według bieżącej strony kodowe wielobajtowe i zwraca **_NLSCMPERROR** w przypadku błędu. **_mbscmp_l** ma takie samo zachowanie, ale używa przekazanego parametru ustawień regionalnych, zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [stron kodowych](../../c-runtime-library/code-pages.md). Ponadto jeśli *ciąg1* lub *ciąg2* jest pustym wskaźnikiem, **_mbscmp —** wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **_mbscmp —** i **_mbscmp_l** zwracają **_NLSCMPERROR** i ustaw **errno** do **EINVAL** . **strcmp —** i **wcscmp —** nie sprawdzają poprawność swoich parametrów. Funkcje te zachowują się identycznie.
+Funkcja **strcmp** wykonuje porównanie porządkowe *ciąg1* i *ciąg2* i zwraca wartość, która wskazuje ich relację. **wcscmp** i **_mbscmp** są odpowiednio, wersjami szerokich znaków i znaków wielobajtowych **strcmp**. **_mbscmp** rozpoznaje sekwencje znaków wielobajtowych zgodnie z bieżącą stroną kodową wielobajtowego i zwraca **_NLSCMPERROR** w przypadku błędu. **_mbscmp_l** ma takie samo zachowanie, ale używa parametru ustawień regionalnych, który jest przesyłany zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [stronę kodową](../../c-runtime-library/code-pages.md). Ponadto, jeśli *ciąg1* lub *ciąg2* jest wskaźnikiem o wartości null, **_mbscmp** wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **_mbscmp** i **_mbscmp_l** zwracają **_NLSCMPERROR** i ustawia **errno** na **EINVAL**. **strcmp** i **wcscmp** nie weryfikują ich parametrów. Funkcje te zachowują się identycznie w inny sposób.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcscmp —**|**strcmp**|**_mbscmp**|**wcscmp —**|
+|**_tcscmp**|**strcmp**|**_mbscmp**|**wcscmp**|
 
-**Strcmp —** funkcje różnią się od **strcoll —** funkcje, w tym **strcmp —** porównania są porządkowe i są niezależne od ustawień regionalnych. **strcoll —** leksykograficznie porównuje ciągi przy użyciu **LC_COLLATE** kategorii bieżących ustawień regionalnych. Aby uzyskać więcej informacji na temat **LC_COLLATE** kategorii, zobacz [setlocale, _wsetlocale](setlocale-wsetlocale.md).
+Funkcje **strcmp** różnią się od funkcji **strcoll —** w tym porównań **strcmp** z liczbą porządkową i nie wpływają na ustawienia regionalne. **strcoll —** porównuje ciągi lexicographically przy użyciu kategorii **LC_COLLATE** bieżących ustawień regionalnych. Aby uzyskać więcej informacji o kategorii **LC_COLLATE** , zobacz [setlocaling, _wsetlocale](setlocale-wsetlocale.md).
 
-W ustawieniach regionalnych "języka C" kolejność znaków w zestawie znaków (zestaw znaków ASCII) jest taka sama jak kolejnością znaków leksykograficznych. Jednak w innych lokalizacjach kolejność znaków w zestawie znaków mogą się różnić od kolejności leksykograficznej. Na przykład w niektórych ustawień regionalnych Europejskich, znaku "" (wartość 0x61) pochodzi przed znakiem "ź" (wartość 0xE4) w zestawie znaków, ale znak "ź" pochodzi przed znakiem "" leksykograficznie.
+W ustawieniach regionalnych "C" kolejność znaków w zestawie znaków (zestaw znaków ASCII) jest taka sama jak kolejność znaków leksykograficznych. Jednak w innych ustawieniach regionalnych kolejność znaków w zestawie znaków może różnić się od kolejności leksykograficznych. Na przykład w niektórych europejskich ustawieniach regionalnych znak "a" (wartość 0x61) jest wcześniejszy niż znak "ä" (wartość 0xE4) w zestawie znaków, ale znak "ä" znajduje się przed znakiem "a" lexicographically.
 
-W lokalizacjach, w których zestaw znaków i kolejnością znaków leksykograficznych różnią się, można użyć **strcoll —** zamiast **strcmp —** leksykograficznych porównywania ciągów. Alternatywnie, można użyć **strxfrm —** na oryginalnym ciągi, a następnie użyj **strcmp —** na ciągi wynikowe.
+W ustawieniach regionalnych, dla których zestaw znaków i kolejność znaków leksykograficznych są różne, można użyć **strcoll —** zamiast **strcmp** do porównywania ciągów przez leksykograficznych. Alternatywnie możesz użyć **strxfrm** w oryginalnych ciągach, a następnie użyć **strcmp** na ciągach z wynikiem.
 
-**Strcmp —** funkcji jest rozróżniana wielkość liter. **\_stricmp —**,  **\_wcsicmp —**, i  **\_mbsicmp —** porównywania ciągów znaków po przekonwertowaniu ich pierwszym na małe litery formularzy. Dwa ciągi zawierające znaki znajdujące się między "Z" i "" w tabeli kodów ASCII ('[','\\","] "," ^ ","_"i"\`') porównać różnie, w zależności od ich przypadku. Na przykład dwa ciągi "ABCDE" i "ABCD ^" porównują w jedna stronę, jeśli wynikiem porównania jest pisana małymi literami ("abcde" > "abcd ^") i w drugą stronę ("ABCDE" < "ABCD ^"), jeśli wynikiem porównania jest wielką literą.
+W funkcjach **strcmp** jest rozróżniana wielkość liter. stricmp,  **\_wcsicmp**i **mbsicmp porównująciągi,przenoszącjenajpierwdopostacimałychliter\_** .  **\_** Dwa ciągi zawierające znaki, które znajdują się między "z" i "a" w tabeli ASCII ("[", "\\", "]", "^", "_" i "\`"), różnią się w zależności od ich wielkości liter. Na przykład dwa ciągi "ABCDe" i "ABCD ^" porównują jeden sposób, jeśli porównanie jest małe ("abcde" > "abcd ^") i drugi sposób ("ABCDe" < "ABCD ^"), jeśli porównanie ma wielkie litery.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**strcmp**|\<string.h>|
-|**wcscmp —**|\<Włącz String.h > lub \<wchar.h >|
+|**wcscmp**|\<ciąg. h > lub \<WCHAR. h >|
 |**_mbscmp**|\<mbstring.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 

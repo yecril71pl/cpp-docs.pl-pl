@@ -1,10 +1,10 @@
 ---
 title: _getche, _getwche
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getwche
 - _getche
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getwche
 - _getche
@@ -29,19 +32,19 @@ helpviewer_keywords:
 - getwche function
 - _getche function
 ms.assetid: eac978a8-c43a-4130-938f-54f12e2a0fda
-ms.openlocfilehash: 87e9173e21ea51281276601b6fc5e3b73e244fca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf7aa10702dca5118d03d7ce2e2d4341941fc51c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287330"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955325"
 ---
-# <a name="getche-getwche"></a>_getche, _getwche
+# <a name="_getche-_getwche"></a>_getche, _getwche
 
-Pobiera znak z konsoli z echem.
+Pobiera znak z konsoli z echo.
 
 > [!IMPORTANT]
-> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -52,13 +55,13 @@ wint_t _getwche( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca znak odczytywany. Nie będzie zwrotu błędu.
+Zwraca odczyt znaku. Brak powrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Getche** i **_getwche —** funkcje odczytują pojedynczy znak z konsoli z echem, co oznacza, że znak jest wyświetlany na konsoli. Żadna z tych funkcji może służyć do odczytu klawiszy CTRL + C. Podczas czytania klawisza funkcyjnego lub klawisza strzałki, każda funkcja musi być wywołana dwukrotnie; Pierwsza zwraca wywołanie 0 lub wartość 0xE0, a druga zwraca wywołanie rzeczywistego klucza kodu.
+Funkcje **_getche** i **_getwche** odczytają pojedynczy znak z konsoli z echo, co oznacza, że znak jest wyświetlany w konsoli programu. Żadna z tych funkcji nie może być użyta do odczytu kombinacji klawiszy CTRL + C. Podczas odczytywania klucza funkcji lub klawisza Strzałka każda funkcja musi być wywoływana dwukrotnie. pierwsze wywołanie zwraca wartość 0 lub wartość 0xE0, a drugie wywołanie zwraca rzeczywisty kod klucza.
 
-Te funkcje blokują wywołania wątku i dlatego jest metodą o bezpiecznych wątkach. Dla wersji bez blokady, zobacz [_getche_nolock —, _getwche_nolock —](getche-nolock-getwche-nolock.md).
+Te funkcje blokują wątek wywołujący i dlatego są bezpieczne wątkowo. W przypadku wersji bez blokowania zobacz [_getche_nolock, _getwche_nolock](getche-nolock-getwche-nolock.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -71,9 +74,9 @@ Te funkcje blokują wywołania wątku i dlatego jest metodą o bezpiecznych wąt
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_getche**|\<conio.h>|
-|**_getwche**|\<conio.h > lub \<wchar.h >|
+|**_getwche**|\<CONIO. h > lub \<WCHAR. h >|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -113,7 +116,7 @@ Type 'Y' when finished typing keys: abcdefyY
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[We/wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cgets, _cgetws](../../c-runtime-library/cgets-cgetws.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>
 [_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock](ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)<br/>

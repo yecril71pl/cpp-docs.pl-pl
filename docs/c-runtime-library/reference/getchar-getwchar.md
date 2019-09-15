@@ -1,10 +1,10 @@
 ---
 title: getchar, getwchar
 ms.date: 11/04/2016
-apiname:
+api_name:
 - getchar
 - getwchar
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getwchar
 - GetChar
@@ -27,16 +30,16 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-ms.openlocfilehash: 5f8d7dbeb35c8818706eb6070df613df8654feb6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b969dc48e949efa02b807ec0ea442da7cb793e15
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287244"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955412"
 ---
 # <a name="getchar-getwchar"></a>getchar, getwchar
 
-Odczytuje znaku ze standardowego wejścia.
+Odczytuje znak ze standardowego wejścia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,17 +50,17 @@ wint_t getwchar();
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca znak odczytywany. Aby wskazać błąd odczytu lub warunek końca pliku **getchar** zwraca **EOF**, i **getwchar —** zwraca **WEOF**. Aby uzyskać **getchar**, użyj **ferror** lub **feof** pod kątem wystąpienia błędu lub końca pliku.
+Zwraca odczyt znaku. Aby wskazać błąd odczytu lub stan końca pliku, **GetChar** zwraca **EOF**, a **getwchar** zwraca **WEOF**. Dla elementu **GetChar**Użyj obiektu **odwołującego** lub **feof** , aby wyszukać błąd lub koniec pliku.
 
 ## <a name="remarks"></a>Uwagi
 
-Każda procedura odczytuje pojedynczy znak z **stdin** i zwiększa skojarzony wskaźnik pliku aby wskazywała na następny znak. **getchar** jest taka sama jak [_fgetchar —](fgetc-fgetwc.md), ale jest stosowana jako funkcja i makra.
+Każda procedura odczytuje pojedynczy znak z **stdin** i zwiększa skojarzony wskaźnik pliku, aby wskazywał na następny znak. **GetChar** jest taka sama jak [_fgetchar](fgetc-fgetwc.md), ale jest zaimplementowana jako funkcja i jako makro.
 
-Te funkcje blokują wywołania wątku i dlatego jest metodą o bezpiecznych wątkach. Dla wersji bez blokady, zobacz [_getchar_nolock —, _getwchar_nolock —](getchar-nolock-getwchar-nolock.md).
+Te funkcje blokują wątek wywołujący i dlatego są bezpieczne wątkowo. W przypadku wersji, która nie jest blokowana, zobacz [_getchar_nolock, _getwchar_nolock](getchar-nolock-getwchar-nolock.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_gettchar**|**getchar**|**getchar**|**getwchar**|
 
@@ -66,9 +69,9 @@ Te funkcje blokują wywołania wątku i dlatego jest metodą o bezpiecznych wąt
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**getchar**|\<stdio.h>|
-|**getwchar**|\<stdio.h > lub \<wchar.h >|
+|**getwchar**|\<stdio. h > lub \<WCHAR. h >|
 
-Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej Windows (UWP). Standardowe uchwyty strumienia, które są powiązane z konsolą, **stdin**, **stdout**, i **stderr**, muszą zostać przekierowane zanim funkcje środowiska wykonawczego języka C można ich używać w aplikacjach platformy UWP . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout**i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -102,7 +105,7 @@ This textInput was: This text
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>

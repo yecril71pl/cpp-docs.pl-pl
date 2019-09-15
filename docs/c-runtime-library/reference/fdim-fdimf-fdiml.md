@@ -1,11 +1,11 @@
 ---
 title: fdim, fdimf, fdiml
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fdim
 - fdimf
 - fdiml
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fdim
 - fdimf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-ms.openlocfilehash: 263635a32b21b01faa84405ab97bd5518f054ba5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74935f724b678b08e39604d9916c7c5de5925aee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334791"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941297"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
 
-Określa dodatnią różnicę między wartościami pierwszego i drugiego.
+Określa dodatnią różnicę między pierwszą i drugą wartością.
 
 ## <a name="syntax"></a>Składnia
 
@@ -80,36 +83,36 @@ Druga wartość.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Określa dodatnią różnicę między *x* i *y*:
+Zwraca dodatnią różnicę z zakresu od *x* do *y*:
 
 |Wartość zwracana|Scenariusz|
 |------------------|--------------|
 |x-y|if x > y|
-|0|Jeśli x < = t|
+|0|Jeśli x < = y|
 
-W przeciwnym razie może zwracać jedną z następujących błędów:
+W przeciwnym razie może zwrócić jeden z następujących błędów:
 
-|Problem|Wróć|
+|Problem|przesłać|
 |-----------|------------|
-|Błąd w zakresie przepełnienia|+ HUGE_VAL + HUGE_VALF, lub + HUGE_VALL|
-|Błąd zakresu niedopełnienie|Prawidłowe wartości (zaokrągloną)|
-|*x* lub *y* jest wartością typu NaN|NaN|
+|Błąd przepełnienia zakresu|\+ HUGE_VAL, + HUGE_VALF lub + HUGE_VALL|
+|Błąd zakresu niedopełnienia|poprawna wartość (po zaokrągleniu)|
+|*x* lub *y* jest NaN|NaN|
 
-Błędy są zgłaszane określonej [_matherr](matherr.md).
+Błędy są raportowane zgodnie z opisem w [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **fdim —** przyjmujące i zwracające **float** i **długie** **double** typów. W programie C **fdim —** zawsze przyjmuje i zwraca **double**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **fdim —** , które pobierają i zwracają **zmiennoprzecinkowe** i **długie** **podwójne** typy. W programie C **fdim —** zawsze przyjmuje i zwraca wartość **Double**.
 
-Z wyjątkiem obsługi NaN, ta funkcja jest odpowiednikiem `fmax(x - y, 0)`.
+Z wyjątkiem obsługi NaN, ta funkcja jest równoważna z `fmax(x - y, 0)`.
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek języka C|Nagłówek języka C++|
+|Funkcja|Nagłówek języka C|C++nagłówki|
 |--------------|--------------|------------------|
-|**fdim —**, **fdimf —**, **fdiml**|\<math.h>|\<cmath>|
+|**fdim —** , **fdimf —** , **fdiml**|\<math.h>|\<cmath >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

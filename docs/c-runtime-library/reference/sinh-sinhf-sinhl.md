@@ -1,11 +1,11 @@
 ---
-title: SINH sinhf —, sinhl —
+title: sinh, sinhf, sinhl
 ms.date: 04/10/2018
-apiname:
+api_name:
 - sinhl
 - sinhf
 - sinhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - sinh
 - sinhf
@@ -31,14 +34,14 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-ms.openlocfilehash: 7327809a20569c520aa799690203458d54e30fb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ae500cf595707acf9022b1c52232314c36cfe4d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356280"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948112"
 ---
-# <a name="sinh-sinhf-sinhl"></a>SINH sinhf —, sinhl —
+# <a name="sinh-sinhf-sinhl"></a>sinh, sinhf, sinhl
 
 Oblicza sinus hiperboliczny.
 
@@ -62,26 +65,26 @@ Kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Sinh** funkcje zwracają hiperbolicznego sinusa *x*. Domyślnie, jeśli wynik jest za duży **sinh** ustawia **errno** do **ERANGE** i zwraca granicach**HUGE_VAL**.
+Funkcje **sinh** zwracają sinus hiperboliczny *x*. Domyślnie, jeśli wynik jest za duży, **sinh** ustawia **errno** na **ERANGE** i zwraca ±**HUGE_VAL**.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|GRANICACH QNAN, ZNAJDŹ|Brak|_DOMAIN|
-|&#124;x&#124; ≥ 7.104760e+002|OVERFLOW + NIEDOKŁADNY|PRZEPEŁNIENIA|
+|QNAN, IND|Brak|_DOMAIN|
+|&#124;x&#124; ≥ 7.104760 e + 002|PRZEPEŁNIENIE + NIEDOKŁADNE|PRZEPŁYW|
 
 Aby uzyskać więcej informacji na temat kodów powrotnych, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **sinh** przyjmujące i zwracające **float** lub **długie** **double** wartości. W programie C **sinh** zawsze przyjmuje i zwraca **double**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **sinh** , które pobierają i zwracają wartości **zmiennoprzecinkowe** lub **długie** **Double** . W programie C, **sinh** zawsze przyjmuje i zwraca wartość **Double**.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-|-|-|
-|**sinh**, **sinhf**, **sinhl**|\<math.h>|\<cmath > lub \<math.h >|
+|**sinh**, **sinhf —** , **sinh**|\<math.h>|\<cmath > lub \<Math. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

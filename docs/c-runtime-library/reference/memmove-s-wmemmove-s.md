@@ -1,10 +1,10 @@
 ---
 title: memmove_s, wmemmove_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wmemmove_s
 - memmove_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wmemmove_s
 - memmove_s
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: 28d879a205790d1f132caca1022d0740e317c342
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc932bb0b13289349543d042e02ead884921d00a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285154"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951781"
 ---
-# <a name="memmoves-wmemmoves"></a>memmove_s, wmemmove_s
+# <a name="memmove_s-wmemmove_s"></a>memmove_s, wmemmove_s
 
-Przenosi buforu na inny. Są to wersje [memmove, wmemmove —](memmove-wmemmove.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Przenosi jeden bufor do innego. Są to wersje [memmove, wmemmove](memmove-wmemmove.md) z ulepszeniami zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -59,40 +62,40 @@ errno_t wmemmove_s(
 Obiekt docelowy.
 
 *numberOfElements*<br/>
-Rozmiar buforu miejsca docelowego.
+Rozmiar buforu docelowego.
 
-*src*<br/>
+*SRC*<br/>
 Obiekt źródłowy.
 
-*Liczba*<br/>
-Liczba bajtów (**memmove_s —**) ani znaków (**wmemmove_s —**) do skopiowania.
+*liczbą*<br/>
+Liczba bajtów (**memmove_s**) lub znaków (**wmemmove_s**) do skopiowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli to się powiedzie; Kod błędu
+Zero, jeśli pomyślne; kod błędu w przypadku niepowodzenia
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|*dest*|*numberOfElements*|*src*|Wartość zwracana|Zawartość *miejsca docelowego*|
+|*dest*|*numberOfElements*|*SRC*|Wartość zwracana|Zawartość miejsca *docelowego*|
 |------------|------------------------|-----------|------------------|------------------------|
-|**NULL**|Wszystkie|Wszystkie|**EINVAL**|Nie zmodyfikowano|
-|Wszystkie|Wszystkie|**NULL**|**EINVAL**|Nie zmodyfikowano|
-|Wszystkie|< *Liczba*|Wszystkie|**ERANGE**|Nie zmodyfikowano|
+|**NULL**|Ile|Ile|**EINVAL**|nie zmodyfikowano|
+|Ile|Ile|**NULL**|**EINVAL**|nie zmodyfikowano|
+|Ile|< *liczbą*|Ile|**ERANGE**|nie zmodyfikowano|
 
 ## <a name="remarks"></a>Uwagi
 
-Kopiuje *liczba* bajtów znaków ze zbioru *src* do *dest*. Jeśli niektóre regiony obszaru źródłowy i docelowy zachodziły na siebie, **memmove_s —** gwarantuje, że oryginalne źródło bajty nakładających się są kopiowane przed zastąpieniem.
+Kopiuje *liczbę* bajtów znaków z elementu *src* do miejsca *docelowego*. Jeśli niektóre regiony obszaru źródłowego i miejsca docelowego nakładają się na siebie, **memmove_s** zapewnia, że pierwotne bajty źródłowe w nakładanym regionie są kopiowane przed zastąpieniem.
 
-Jeśli *dest* lub jeśli *src* jest wskaźnikiem typu null lub jeśli ciąg docelowy jest zbyt mały, funkcje te wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, te funkcje zwracają **EINVAL** i ustaw **errno** do **EINVAL**.
+Jeśli obiekt *docelowy* lub jeśli *src* jest wskaźnikiem typu null lub jeśli ciąg docelowy jest zbyt mały, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, te funkcje zwracają **EINVAL** i ustawiają **errno** na **EINVAL**.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**memmove_s —**|\<string.h>|
-|**wmemmove_s —**|\<wchar.h>|
+|**memmove_s**|\<string.h>|
+|**wmemmove_s**|\<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

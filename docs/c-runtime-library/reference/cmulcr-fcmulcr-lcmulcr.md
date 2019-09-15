@@ -1,11 +1,11 @@
 ---
 title: _Cmulcr, _FCmulcr, _LCmulcr
 ms.date: 03/30/2018
-apiname:
+api_name:
 - _Cmulcr
 - _FCmulcr
 - _LCmulcr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _Cmulcr
 - _FCmulcr
@@ -29,16 +32,16 @@ helpviewer_keywords:
 - _Cmulcr function
 - _FCmulcr function
 - _LCmulcr function
-ms.openlocfilehash: ce45b1b1081faba18d8532d3a55d1be877cf84e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cbff1c2cb0e66da77b6fdc8127b78fb475aa5080
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340407"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942897"
 ---
-# <a name="cmulcr-fcmulcr-lcmulcr"></a>_Cmulcr, _FCmulcr, _LCmulcr
+# <a name="_cmulcr-_fcmulcr-_lcmulcr"></a>_Cmulcr, _FCmulcr, _LCmulcr
 
-Mnoży liczbę złożone przez liczbę zmiennoprzecinkową.
+Mnoży liczbę zespoloną przez liczbę zmiennoprzecinkową.
 
 ## <a name="syntax"></a>Składnia
 
@@ -51,26 +54,26 @@ _Lcomplex _LCmulcr( _Lcomplex x, long double y );
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Jeden z argumentów złożone do pomnożenia.
+Jeden z złożonych argumentów operacji do pomnożenia.
 
 *y*<br/>
-Argument operacji zmiennoprzecinkowych do pomnożenia.
+Operand zmiennoprzecinkowy do pomnożenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-A **_Dcomplex**, **_Fcomplex**, lub **_Lcomplex** strukturę, która reprezentuje złożonych iloczyn liczby zespolonej *x* i numer punktu flaoting *y*.
+Struktura **_Dcomplex**, **_Fcomplex**lub **_Lcomplex** , która reprezentuje złożony produkt z liczbą zespoloną *x* i flaoting-Point *y*.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ wbudowanych operatorów arytmetycznych, nie działają na implementacja firmy Microsoft, złożonych typów **_Cmulcr**, **_FCmulcr**, i **_LCmulcr** funkcji Uprość mnożenia typy złożone przez typów zmiennoprzecinkowych.
+Ponieważ wbudowane operatory arytmetyczne nie działają w implementacji firmy Microsoft typów złożonych, funkcje **_Cmulcr**, **_FCmulcr**i **_LCmulcr** upraszczają mnożenie typów złożonych przez typy zmiennoprzecinkowe.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|Nagłówek języka C++|
+|Procedura|Nagłówek języka C|C++nagłówki|
 |-------------|--------------|------------------|
 |**_Cmulcr**, **_FCmulcr**, **_LCmulcr**|\<complex.h>|\<complex.h>|
 
-Te funkcje są specyficzne dla firmy Microsoft. Typy **_Dcomplex**, **_Fcomplex**, i **_Lcomplex** są specyficzne dla firmy Microsoft odpowiedniki typów natywnych niezaimplementowana C99 **double _complex —** , **float _complex —**, i **_complex typu long double —**, odpowiednio. Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Te funkcje są specyficzne dla firmy Microsoft. Typy **_Dcomplex**, **_Fcomplex**i **_Lcomplex** są odpowiednikami specyficznymi dla firmy Microsoft dla niewdrożonych typów natywnych C99, odpowiednio **_Complex**, **float _Complex**i **Long podwójnie _Complex**. Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

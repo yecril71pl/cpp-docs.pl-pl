@@ -1,12 +1,12 @@
 ---
 title: printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _printf_s_l
 - wprintf_s
 - _wprintf_s_l
 - printf_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wprintf_s
 - printf_s
@@ -36,16 +39,16 @@ helpviewer_keywords:
 - tprintf_s_l function
 - _wprintf_s_l function
 ms.assetid: 044ebb2e-5cc1-445d-bb4c-f084b405615b
-ms.openlocfilehash: 6b07fd90e0390d5c39bc8f5885f5744de20eeb79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8b324b5f3c23b324bdcd43e3529ad3a3d4d6847
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232004"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950184"
 ---
-# <a name="printfs-printfsl-wprintfs-wprintfsl"></a>printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
+# <a name="printf_s-_printf_s_l-wprintf_s-_wprintf_s_l"></a>printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
 
-Drukuje sformatowane dane wyjściowe do strumienia wyjścia standardowego. Te wersje [printf, _printf_l —, wprintf, _wprintf_l —](printf-printf-l-wprintf-wprintf-l.md) mają wzmocnienia zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Drukuje sformatowane dane wyjściowe w standardowym strumieniu wyjściowym. Te wersje [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md) mają ulepszenia zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -72,13 +75,13 @@ int _wprintf_s_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Format*<br/>
-Formant formatu.
+*format*<br/>
+Kontrolka formatu.
 
 *argument*<br/>
 Argumenty opcjonalne.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -87,51 +90,51 @@ Zwraca liczbę znaków drukowanych lub wartość ujemną, jeśli wystąpi błąd
 
 ## <a name="remarks"></a>Uwagi
 
-**Printf_s** funkcja formatuje i drukuje serie znaków i wartości do standardowego strumienia wyjściowego, **stdout**. Jeśli argumenty *format* ciągu, *format* musi zawierać specyfikacje, które określają format wyjściowy dla argumentów.
+Funkcja **printf_s** formatuje i drukuje serie znaków i wartości do standardowego strumienia wyjściowego **stdout**. Jeśli argumenty są zgodne z ciągiem *formatu* , ciąg *formatu* musi zawierać specyfikacje, które określają format wyjściowy dla argumentów.
 
-Główna różnica między **printf_s** i **printf** jest fakt, że **printf_s** sprawdza, czy ciąg formatu dla prawidłowych znaków formatowania, natomiast **printf**  sprawdza tylko, jeśli ciąg formatu, który jest wskaźnikiem wartości null. Jeśli sprawdzenie zakończy się niepowodzeniem, program obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość -1 i ustawia **errno** do **EINVAL**.
+Główna różnica między **printf_s** i **printf** polega na tym, że **printf_s** sprawdza ciąg formatu pod kątem prawidłowych znaków formatowania, natomiast **printf** sprawdza tylko, czy ciąg formatu jest wskaźnikiem o wartości null. Jeśli sprawdzenie zakończy się niepowodzeniem, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1 i ustawia **errno** na **EINVAL**.
 
-Instrukcje dotyczące **errno** i kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje o **errno** i kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**printf_s** i **fprintf_s —** zachowują się identycznie, chyba że **printf_s** zapisuje dane wyjściowe do **stdout** , a nie do miejsca docelowego typu **Pliku**. Aby uzyskać więcej informacji, zobacz [fprintf_s —, _fprintf_s_l —, fwprintf_s —, _fwprintf_s_l —](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).
+**printf_s** i **fprintf_s** zachowują się identycznie, z tą różnicą, że **printf_s** zapisuje dane wyjściowe w strumieniu **stdout** zamiast do miejsca docelowego typu **plik**. Aby uzyskać więcej informacji, zobacz [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).
 
-**wprintf_s —** to wersja znaku dwubajtowego **printf_s**; *format* jest ciągiem znaku dwubajtowego. **wprintf_s —** i **printf_s** zachowują się identycznie, jeżeli strumień jest otwarty w trybie ANSI. **printf_s** aktualnie nie obsługuje danych wyjściowych w strumieniu UNICODE.
+**wprintf_s** to dwubajtowa wersja **printf_s**; *Format* jest ciągiem znaków dwubajtowych. **wprintf_s** i **printf_s** zachowują się identycznie, jeśli strumień jest otwarty w trybie ANSI. **printf_s** obecnie nie obsługuje danych wyjściowych w strumieniu Unicode.
 
-Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych wątku.
+Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korzystają z przekazaną parametrem ustawień regionalnych zamiast bieżących ustawień regionalnych wątku.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_unicode zdefiniowany|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowany|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tprintf_s**|**printf_s**|**printf_s**|**wprintf_s**|
 |**_tprintf_s_l**|**_printf_s_l**|**_printf_s_l**|**_wprintf_s_l**|
 
-*Format* argument składa się ze znaków zwykłych, sekwencje ucieczki i (Jeśli argumenty *format*) ze specyfikacji formatu. Znaki zwykłe i sekwencje wyjścia są kopiowane do **stdout** w kolejności ich występowania. Na przykład wiersz
+Argument *formatu* składa się ze zwykłych znaków, sekwencji unikowych i (Jeśli argumenty są zgodne z *formatem*). Zwykłe znaki i sekwencje ucieczki są kopiowane do strumienia **stdout** w kolejności ich występowania. Na przykład wiersz
 
 ```C
 printf_s("Line one\n\t\tLine two\n");
 ```
 
-generuje dane wyjściowe
+tworzy dane wyjściowe
 
 ```Output
 Line one
         Line two
 ```
 
-[Specyfikacje formatu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) zawsze zaczynają się od znaku procentu (**%**) i są odczytywane od lewej do prawej. Gdy **printf_s** napotka pierwszą specyfikację formatu (jeśli istnieje), konwertuje wartość pierwszego argumentu po *format* i odpowiednio je. Druga specyfikacja formatu powoduje konwersję drugiego argumentu się i wydalenie na zewnątrz, i tak dalej. Jeśli istnieje więcej argumentów niż specyfikacji formatu, dodatkowe argumenty są ignorowane. Wyniki są niezdefiniowane, jeżeli nie ma wystarczającej liczby argumentów dla wszystkich specyfikacji formatu.
+[Specyfikacje formatu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) zawsze zaczynają się od znaku procentu ( **%** ) i są odczytywane od lewej do prawej. Gdy **printf_s** napotka pierwszą specyfikację formatu (jeśli istnieje), konwertuje wartość pierwszego argumentu po *formacie* i odpowiednio wyprowadza. Druga specyfikacja formatu powoduje, że drugi argument jest konwertowany i wyjściowy itd. Jeśli istnieje więcej argumentów niż specyfikacje formatu, dodatkowe argumenty są ignorowane. Wyniki są niezdefiniowane, jeśli nie ma wystarczającej liczby argumentów dla wszystkich specyfikacji formatu.
 
 > [!IMPORTANT]
-> Upewnij się, że *format* nie jest ciągiem zdefiniowanym przez użytkownika.
+> Upewnij się, że *Format* nie jest ciągiem zdefiniowanym przez użytkownika.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**printf_s**, **_printf_s_l**|\<stdio.h>|
-|**wprintf_s**, **_wprintf_s_l**|\<stdio.h > lub \<wchar.h >|
+|**wprintf_s**, **_wprintf_s_l**|\<stdio. h > lub \<WCHAR. h >|
 
-Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej Windows (UWP). Standardowe uchwyty strumienia, które są powiązane z konsolą, **stdin**, **stdout**, i **stderr**, muszą zostać przekierowane zanim funkcje środowiska wykonawczego języka C można ich używać w aplikacjach platformy UWP . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout**i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -213,7 +216,7 @@ Address as:   0012FF78
 ## <a name="see-also"></a>Zobacz także
 
 [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [Wersja regionalna](../../c-runtime-library/locale.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>

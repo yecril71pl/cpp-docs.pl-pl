@@ -1,12 +1,12 @@
 ---
 title: vprintf, _vprintf_l, vwprintf, _vwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - vprintf
 - _vwprintf_l
 - _vprintf_l
 - vwprintf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vwprintf
 - _vtprintf
@@ -34,12 +37,12 @@ helpviewer_keywords:
 - _vtprintf_l function
 - formatted text [C++]
 ms.assetid: 44549505-00a0-4fa7-9a85-f2e666f55a38
-ms.openlocfilehash: db984b822e8b496d63bf7844882676581562930d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b9b20e2c75c4819e966b42e6ae382fe041f8c4b0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499135"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945497"
 ---
 # <a name="vprintf-_vprintf_l-vwprintf-_vwprintf_l"></a>vprintf, _vprintf_l, vwprintf, _vwprintf_l
 
@@ -96,7 +99,7 @@ Każda z tych funkcji Pobiera wskaźnik do listy argumentów, a następnie forma
 Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korzystają z przekazaną parametrem ustawień regionalnych zamiast bieżących ustawień regionalnych wątku.
 
 > [!IMPORTANT]
-> Upewnij się, że *Format* nie jest ciągiem zdefiniowanym przez użytkownika. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns). Należy zauważyć, że wykryto nieprawidłowe ciągi formatu i spowoduje to wystąpienie błędu.
+> Upewnij się, że *Format* nie jest ciągiem zdefiniowanym przez użytkownika. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns). Należy zauważyć, że wykryto nieprawidłowe ciągi formatu i spowoduje to wystąpienie błędu.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 

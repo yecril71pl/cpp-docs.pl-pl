@@ -1,12 +1,12 @@
 ---
 title: iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - iscntrl
 - _iswcntrl_l
 - _iscntrl_l
 - iswcntrl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _istcntrl_l
 - _iswcntrl_l
@@ -35,14 +38,14 @@ helpviewer_keywords:
 - iswcntrl function
 - _istcntrl_l function
 ms.assetid: 616eebf9-aed4-49ba-ba2c-8677c8fe6fb5
-ms.openlocfilehash: 150073e78426f5029dd46cbc6766fbd6a2a242e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 302c357c054ad58043b00875d629ae70e5a23e0e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157425"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954432"
 ---
-# <a name="iscntrl-iswcntrl-iscntrll-iswcntrll"></a>iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
+# <a name="iscntrl-iswcntrl-_iscntrl_l-_iswcntrl_l"></a>iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
 
 Określa, czy liczba całkowita reprezentuje znak kontrolny.
 
@@ -68,22 +71,22 @@ int _iswcntrl_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Liczba całkowita to testowania
+Liczba całkowita do przetestowania
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych procedur zwraca wartość różną od zera, jeśli *c* jest szczególną reprezentacją znaku kontrolnego. **iscntrl** zwraca wartość różną od zera, jeśli *c* jest znakiem formantu (0x00-0x1F or 0x7F). **iswcntrl —** zwraca wartość różną od zera, jeśli *c* jest formantem szerokość znaków. Każda z tych procedur zwraca 0, jeśli *c* nie spełnia warunku testowego.
+Każda z tych procedur zwraca wartość różną od zera, jeśli *c* jest szczególną reprezentacją znaku kontrolnego. **iscntrl** zwraca wartość różną od zera, jeśli *c* jest znakiem kontrolnym (0X00-0x1F lub 0x7F). **iswcntrl** zwraca wartość różną od zera, jeśli *c* jest znakiem dwubajtowym formantu. Każda z tych procedur zwraca wartość 0, jeśli *c* nie spełnia warunku testu.
 
-Wersje tych funkcji, które mają **_l** sufiksa używa przekazanego parametru ustawień regionalnych, zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wersje tych funkcji, które mają sufiks **_l** używają parametru ustawień regionalnych, który został przekazaną, zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-Zachowanie **iscntrl** i **_iscntrl_l —** jest niezdefiniowane, jeżeli *c* nie jest równy EOF lub z zakresu od 0 do 0xFF włącznie. Jeśli jest używana biblioteka debugowania CRT i *c* nie jest jedną z tych wartości, funkcje wywołują potwierdzenie.
+Zachowanie **iscntrl** i **_iscntrl_l** jest niezdefiniowane, jeśli *c* nie jest typu EOF lub z zakresu od 0 do 0xFF włącznie. Gdy jest używana Biblioteka CRT debugowania, a *c* nie jest jedną z tych wartości, funkcje zgłaszają potwierdzenie.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_istcntrl**|**iscntrl**|**iscntrl**|**iswcntrl**|
 |**_istcntrl_l**|**_iscntrl_l**|**_iscntrl_l**|**_iswcntrl_l**|
@@ -93,11 +96,11 @@ Zachowanie **iscntrl** i **_iscntrl_l —** jest niezdefiniowane, jeżeli *c* ni
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**iscntrl**|\<ctype.h>|
-|**iswcntrl**|\<CType.h > lub \<wchar.h >|
+|**iswcntrl**|\<CType. h > lub \<WCHAR. h >|
 |**_iscntrl_l**|\<ctype.h>|
-|**_iswcntrl_l**|\<CType.h > lub \<wchar.h >|
+|**_iswcntrl_l**|\<CType. h > lub \<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

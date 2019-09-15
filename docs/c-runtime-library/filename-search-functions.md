@@ -1,7 +1,7 @@
 ---
-title: Funkcje wyszukiwania nazwy pliku
+title: Funkcje wyszukiwania nazw plików
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr100.dll
 - msvcr120.dll
 - msvcr90.dll
@@ -9,7 +9,10 @@ apilocation:
 - msvcr80.dll
 - msvcr110.dll
 - msvcr110_clr0400.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 helpviewer_keywords:
 - file names [C++], searching for
 - _find function
@@ -17,18 +20,18 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-ms.openlocfilehash: aebdf2e5aaf6d59e5ee39af05540604206ec6c23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ecc01362bdc14af32df5093ad1ac1ee606026d8f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62343787"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940370"
 ---
-# <a name="filename-search-functions"></a>Funkcje wyszukiwania nazwy pliku
+# <a name="filename-search-functions"></a>Funkcje wyszukiwania nazw plików
 
-Te funkcje wyszukiwania i zamknąć wyszukuje określony plik nazwy:
+Te funkcje szukają i zamykają wyszukiwania pod kątem określonych nazw plików:
 
-- [_findnext, _wfindnext —](../c-runtime-library/reference/findnext-functions.md)
+- [_findnext, _wfindnext](../c-runtime-library/reference/findnext-functions.md)
 
 - [_findfirst, _wfindfirst](../c-runtime-library/reference/findfirst-functions.md)
 
@@ -36,62 +39,62 @@ Te funkcje wyszukiwania i zamknąć wyszukuje określony plik nazwy:
 
 ## <a name="remarks"></a>Uwagi
 
-`_findfirst` Funkcji zawiera informacje dotyczące pierwszego wystąpienia nazwy pliku, który pasuje do pliku określonego w `filespec` argumentu. Można użyć w `filespec` dowolną kombinację znaków symbolu wieloznacznego, który jest obsługiwany przez system operacyjny hosta.
+Funkcja zawiera informacje dotyczące pierwszego wystąpienia nazwy pliku, który jest zgodny z plikiem określonym `filespec` w argumencie. `_findfirst` Można użyć w `filespec` dowolnej kombinacji symboli wieloznacznych, które są obsługiwane przez system operacyjny hosta.
 
-Te funkcje zwracają informacje dotyczące plików w `_finddata_t` struktury, która jest zdefiniowana w IO.h. Różnych funkcji w rodzinie użyć wielu wariantów na `_finddata_t` struktury. Podstawowa `_finddata_t` struktura zawiera następujące elementy:
+Funkcje zwracają informacje o pliku w `_finddata_t` strukturze, która jest zdefiniowana w IO. h. Różne funkcje w rodzinie wykorzystują wiele odmian w `_finddata_t` strukturze. Struktura podstawowa `_finddata_t` obejmuje następujące elementy:
 
 `unsigned attrib`<br/>
 Atrybut pliku.
 
 `time_t time_create`<br/>
-Godzina utworzenia pliku (L-1 dla systemów plików FAT). Tym razem jest przechowywany w formacie UTC. Aby dokonać konwersji czasu lokalnego, należy użyć [localtime_s —](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md).
+Godzina utworzenia pliku (-1L dla systemów plików FAT). Ten czas jest przechowywany w formacie UTC. Aby przekonwertować na czas lokalny, użyj [localtime_s](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md).
 
 `time_t time_access`<br/>
-Czas ostatniego dostępu do plików (L-1 dla systemów plików FAT). Tym razem jest przechowywany w formacie UTC. Aby dokonać konwersji czasu lokalnego, należy użyć `localtime_s`.
+Godzina ostatniego dostępu do pliku (-1L dla systemów plików FAT). Ten czas jest przechowywany w formacie UTC. Aby przekonwertować na czas lokalny, użyj `localtime_s`.
 
 `time_t time_write`<br/>
-Czas ostatniego zapisu do pliku. Tym razem jest przechowywany w formacie UTC. Aby dokonać konwersji czasu lokalnego, należy użyć `localtime_s`.
+Godzina ostatniego zapisu w pliku. Ten czas jest przechowywany w formacie UTC. Aby przekonwertować na czas lokalny, użyj `localtime_s`.
 
 `_fsize_t size`<br/>
 Długość pliku w bajtach.
 
-`char name`[ `_MAX_PATH`] Nazwa dopasowanym pliku lub katalogu, bez ścieżki zakończony znakiem null.
+`char name`[ `_MAX_PATH`] Nazwa zakończyła się wartością null pliku lub katalogu, bez ścieżki.
 
-W systemach plików, które nie obsługują tworzenia i czas ostatniego dostępu do pliku, takich jak FAT system `time_create` i `time_access` pola są zawsze L-1.
+W systemach plików, które nie obsługują czasów tworzenia i ostatniego dostępu pliku, takich jak system plików FAT, `time_create` pola i `time_access` są zawsze 1L.
 
-`_MAX_PATH` jest zdefiniowane w Stdlib.h jako 260 bajtów.
+`_MAX_PATH`jest zdefiniowany w STDLIB. h jako 260 bajtów.
 
-Nie można określić atrybuty docelowe (takie jak `_A_RDONLY`) aby ograniczyć operacji wyszukiwania. Te atrybuty są zwracane w `attrib` pole `_finddata_t` struktury i może mieć następujące wartości (zdefiniowaną w IO.h). Użytkownicy nie należy polegać na są tylko wartości możliwe `attrib` pola.
+Nie można określić atrybutów docelowych (takich jak `_A_RDONLY`), aby ograniczyć liczbę operacji znajdowania. Te atrybuty są zwracane w `attrib` polu `_finddata_t` struktury i mogą mieć następujące wartości (zdefiniowane we/wy. h). Użytkownicy nie powinni korzystać z tych samych wartości dla `attrib` pola.
 
 `_A_ARCH`<br/>
-Archiwum. Ustaw zawsze wtedy, gdy plik jest zmienione i wyczyszczone **kopii zapasowej** polecenia. Wartość: 0x20.
+Folderu. Ustawiaj za każdym razem, gdy plik zostanie zmieniony i wyczyszczony przez polecenie **Backup** . Wartościami 0x20.
 
 `_A_HIDDEN`<br/>
-Ukryty plik. Zazwyczaj występuje przy użyciu polecenia DIR, chyba że używasz **/AH** opcji. Zwraca informacje o plikach normalne i plików, które mają ten atrybut. Wartość: 0x02.
+Ukryty plik. Zwykle niewidoczny w przypadku polecenia DIR, o ile nie zostanie użyta opcja **/Ah** . Zwraca informacje o normalnych plikach i plikach, które mają ten atrybut. Wartościami 0x02.
 
 `_A_NORMAL`<br/>
-Normalny. Plik nie ma inne atrybuty zestawu i można je odczytać lub zapisywane bez ograniczeń. Wartość: 0x00.
+Typow. Plik nie ma ustawionych atrybutów i może być odczytywany lub zapisywana bez ograniczeń. Wartościami 0x00.
 
 `_A_RDONLY`<br/>
-Tylko do odczytu. Nie można otworzyć pliku do zapisu i nie można utworzyć pliku, który ma taką samą nazwę. Wartość: 0x01.
+Tylko do odczytu. Nie można otworzyć pliku do zapisu i nie można utworzyć pliku o tej samej nazwie. Wartościami 0x01.
 
 `_A_SUBDIR`<br/>
-Podkatalog. Wartość: 0x10.
+Podkatalogu. Wartościami 0x10.
 
 `_A_SYSTEM`<br/>
-System plików. Nie są zwykle widoczne z **DIR** , chyba że polecenie **/A** lub **/A:S** jest używana opcja. Wartość: 0x04.
+Plik systemowy. Zwykle niewidoczny dla polecenia **dir** , chyba że jest używana opcja **/a** lub **/a: S** . Wartościami 0x04.
 
-`_findnext` znajduje następnej nazwy, jeśli odpowiada `filespec` argumentu określonym w wcześniejszego wywołania funkcji `_findfirst`. `fileinfo` Argument powinien wskazywać struktury inicjowane przez poprzednie wywołanie `_findfirst`. Jeśli zostanie znalezione dopasowanie, `fileinfo` zawartość struktury są zmieniane, zgodnie z wcześniejszym opisem. W przeciwnym razie zostanie pozostawiony bez zmian. `_findclose` Zamyka uchwyt wyszukiwania i zwalnia wszystkie powiązane zasoby dla obu `_findfirst` i `_findnext`. Uchwyt zwracany przez `_findfirst` lub `_findnext` muszą najpierw zostać przekazane do `_findclose`, zanim operacji modyfikowania, takie jak usuwanie, mogą być wykonywane na katalogi, które tworzą ścieżki przekazany do nich.
+`_findnext`znajduje następną nazwę (jeśli istnieje), która pasuje `filespec` do argumentu określonego we wcześniejszej `_findfirst`wywołaniu. Argument powinien wskazywać strukturę zainicjowaną przez poprzednie `_findfirst`wywołanie metody. `fileinfo` W przypadku znalezienia `fileinfo` dopasowania zawartość struktury zostanie zmieniona zgodnie z wcześniejszym opisem. W przeciwnym razie pozostaje niezmieniona. `_findclose`zamyka określone dojście wyszukiwania i zwalnia wszystkie skojarzone zasoby dla obu `_findfirst` i `_findnext`. Dojście zwrócone przez `_findfirst` lub `_findnext` musi być najpierw przesłane do `_findclose`, przed operacjami modyfikacji, takimi jak usuwanie, można wykonać w katalogach, które tworzą ścieżki do nich przekazana.
 
-Można zagnieżdżać `_find` funkcji. Na przykład, jeśli wywołanie `_findfirst` lub `_findnext` znajdzie plik który jest to podkatalog nowego wyszukiwania mogą być inicjowane z innym wywołaniu `_findfirst` lub `_findnext`.
+`_find` Funkcje można zagnieżdżać. Na przykład jeśli `_findfirst` wywołanie lub `_findnext` znalezienie pliku, który jest podkatalogiem, nowe wyszukiwanie może być inicjowane przy użyciu innego wywołania do `_findfirst` lub `_findnext`.
 
-`_wfindfirst` i `_wfindnext` są wersjami znaków dwubajtowych `_findfirst` i `_findnext`. Argument struktury z wersjami szerokich znaków ma `_wfinddata_t` typu danych, która jest zdefiniowana w IO.h i w Wchar.h. Pola tego typu danych są takie same, jak `_finddata_t` typu danych, chyba że w `_wfinddata_t` pole nazwy jest typu `wchar_t` zamiast typu `char`. W przeciwnym razie `_wfindfirst` i `_wfindnext` zachowują się identycznie do `_findfirst` i `_findnext`.
+`_wfindfirst`i `_wfindnext` `_findnext` są`_findfirst` wersjami znaków dwubajtowych i. Argument Structure wersji o szerokim znaku ma `_wfinddata_t` typ danych, który jest zdefiniowany w IO. h i w WCHAR. h. Pola tego typu danych są `_finddata_t` takie same jak w przypadku typu danych, z tą różnicą, że w `_wfinddata_t` polu Nazwa jest typu `wchar_t` , a nie typ `char`. W `_wfindfirst` przeciwnym `_wfindnext` razie i zachowują `_findfirst` się `_findnext`identycznie z i.
 
-`_findfirst` i `_findnext` Użyj typów w czasie 64-bitowych. Jeśli musisz użyć typu stare time 32-bitowy, można zdefiniować `_USE_32BIT_TIME_T`. Wersje tych funkcji, które mają `32` sufiks nazwy korzystanie z typu time 32-bitowe i osobom `64` sufiksa używa typów w czasie 64-bitowych.
+`_findfirst`i `_findnext` Użyj typu czasu 64-bitowego. Jeśli musisz użyć starego typu czasu 32-bitowego, możesz zdefiniować `_USE_32BIT_TIME_T`. Wersje tych funkcji, które mają `32` sufiks w nazwach korzystają z 32-bitowego typu czasu, a te `64` z sufiksem używają typu czasu 64-bitowego.
 
-Funkcje `_findfirst32i64`, `_findnext32i64`, `_wfindfirst32i64`, i `_wfindnext32i64` również zachowują się identycznie jak typ czasu 32-bitowe wersje tych funkcji z wyjątkiem użyć i zwraca 64-bitowy plik długości. Funkcje `_findfirst64i32`, `_findnext64i32`, `_wfindfirst64i32`, i `_wfindnext64i32` Użyj typów w czasie 64-bitowych, ale używania 32-bitowy plik długości. Te funkcje używają odpowiednich zmian `_finddata_t` typu, w którym pola mają różne typy czasu i rozmiaru pliku.
+Funkcje `_findfirst32i64`, `_findnext32i64`, ,`_wfindfirst32i64` i`_wfindnext32i64` zachowują się identycznie do wersji 32-bitowych typów w tych funkcjach, z wyjątkiem tego, że używają i zwracają długość pliku 64-bitowego. Funkcje `_findfirst64i32`, `_findnext64i32`, `_wfindfirst64i32`i używajątypuczasu64-bitowego,aleużywajądługościplików32-bitowych.`_wfindnext64i32` Te funkcje używają odpowiednich odmian typu, `_finddata_t` w których pola mają różne typy dla czasu i rozmiaru pliku.
 
-`_finddata_t` to naprawdę makro, które daje w wyniku `_finddata64i32_t` (lub `_finddata32_t` Jeśli `_USE_32BIT_TIME_T` jest zdefiniowana). W poniższej tabeli podsumowano różnice w `_finddata_t`:
+`_finddata_t`jest w rzeczywistości makro, którego wynikiem jest `_finddata64i32_t` wartość ( `_finddata32_t` lub `_USE_32BIT_TIME_T` jeśli jest zdefiniowana). Poniższa tabela zawiera podsumowanie różnic `_finddata_t`między:
 
 |Struktura|Typ czasu|Typ rozmiaru pliku|
 |---------------|---------------|--------------------|
@@ -101,7 +104,7 @@ Funkcje `_findfirst32i64`, `_findnext32i64`, `_wfindfirst32i64`, i `_wfindnext32
 |`_finddata32i64_t`, `_wfinddata32i64_t`|`__time32_t`|`__int64`|
 |`_finddata64i32_t`, `_wfinddata64i32_t`|`__time64_t`|`_fsize_t`|
 
-`_fsize_t` jest `typedef` dla `unsigned long` (32-bitowy).
+`_fsize_t``typedef` jest przez `unsigned long` (32 bitów).
 
 ## <a name="example"></a>Przykład
 

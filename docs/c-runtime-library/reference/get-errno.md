@@ -1,9 +1,9 @@
 ---
 title: _get_errno
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_errno
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _get_errno
 helpviewer_keywords:
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - errno global variable
 - _get_errno function
 ms.assetid: b3fd5ebc-f41b-4314-a2f4-2f2d79d6e740
-ms.openlocfilehash: fb0897451c72020cd72a821ec9928ed655d84b7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d60f7ea7a36b4a8c4be678d26c0b0c59e5ec534
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287736"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955972"
 ---
-# <a name="geterrno"></a>_get_errno
+# <a name="_get_errno"></a>_get_errno
 
-Pobiera bieżącą wartość errno — zmienna globalna.
+Pobiera bieżącą wartość zmiennej globalnej errno.
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,15 +48,15 @@ errno_t _get_errno(
 ### <a name="parameters"></a>Parametry
 
 *pValue*<br/>
-Wskaźnik do liczby całkowitej trzeba napełniać bieżącą wartość **errno** zmiennej.
+Wskaźnik do liczby całkowitej, która ma zostać wypełniona bieżącą wartością zmiennej **errno** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość zero, jeśli to się powiedzie; Kod błędu. Jeśli *pValue* jest **NULL**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ta ustawia **errno** do **EINVAL** i zwraca **EINVAL**.
+Zwraca zero, jeśli pomyślne; kod błędu w przypadku niepowodzenia. Jeśli *pValue* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-Możliwe wartości **errno** są zdefiniowane w Errno.h. Zobacz też [errno — stałe](../../c-runtime-library/errno-constants.md).
+Możliwe wartości **errno** są zdefiniowane w errno. h. Zobacz również [stałe errno](../../c-runtime-library/errno-constants.md).
 
 ## <a name="example"></a>Przykład
 
@@ -83,11 +86,11 @@ fyi, ENOENT = 2
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
+|Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
 |**_get_errno**|\<stdlib.h>|\<errno.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

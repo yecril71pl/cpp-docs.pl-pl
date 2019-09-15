@@ -1,11 +1,11 @@
 ---
 title: time, _time32, _time64
 ms.date: 11/06/2018
-apiname:
+api_name:
 - time
 - _time64
 - _time32
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - time
 - _time64
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - system time
 - time64 function
 ms.assetid: 280e00f2-2b93-4ece-94cd-e048484c6cc7
-ms.openlocfilehash: 693b70b3682876d7e6c3721f5d06aa13d31abb96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02dc7f250fe26d9ed7abfd89ca9a4c2163312e6d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155592"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946089"
 ---
-# <a name="time-time32-time64"></a>time, _time32, _time64
+# <a name="time-_time32-_time64"></a>time, _time32, _time64
 
 Pobiera czas systemowy.
 
@@ -55,25 +58,25 @@ __time64_t _time64( __time64_t *destTime );
 ### <a name="parameters"></a>Parametry
 
 *destTime*<br/>
-Wskaźnik do lokalizacji magazynu raz.
+Wskaźnik do lokalizacji magazynu dla czasu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca czas w sekundach, które upłynęły od północy 1 stycznia 1970 r. lub -1 w przypadku błędu.
+Zwraca czas (w sekundach), który upłynął od północy, 1 stycznia, 1970 lub-1 w przypadku błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-**Czasu** funkcja zwraca liczbę sekund, które upłynęły od północy (00: 00:00), 1 stycznia 1970 r., skoordynowanego czasu uniwersalnego (UTC), zgodnie z zegarem systemowym. Zwracana wartość jest przechowywana w lokalizacji określonej przez *destTime*. Ten parametr może być **NULL**, w którym to przypadku nie są przechowywane wartości zwracanej.
+Funkcja **Time** zwraca liczbę sekund, które upłynęły od północy (00:00:00), 1 stycznia 1970, uniwersalny czas koordynowany (UTC), zgodnie z zegarem systemowym. Wartość zwracana jest przechowywana w lokalizacji podawanej przez *destTime*. Ten parametr może mieć wartość **null**, w takim przypadku nie jest przechowywana wartość zwracana.
 
-**czas** jest otoką **_time64** i **time_t** jest domyślnie odpowiednikiem **__time64_t —**. Jeśli chcesz wymusić na kompilatorze interpretowanie **time_t** jako stary 32-bitowy **time_t**, można zdefiniować **_USE_32BIT_TIME_T**. Nie jest to zalecane, ponieważ aplikacja może przestać działać po 18 stycznia 2038; Użycie tego makra jest niedozwolone na platformach 64-bitowych.
+**czas** to otoka dla **_time64** i **time_t** jest domyślnie odpowiednikiem **__time64_t**. Jeśli trzeba wymusić, aby kompilator interpretował **time_t** jako stary 32-bitowy **time_t**, można zdefiniować **_USE_32BIT_TIME_T**. Nie jest to zalecane, ponieważ aplikacja może zakończyć się niepowodzeniem po 18 stycznia 2038; Użycie tego makra jest niedozwolone na platformach 64-bitowych.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Wymagany nagłówek języka C|Wymagany nagłówek C++|
+|Procedura|Wymagany nagłówek C|Wymagany C++ nagłówek|
 |-------|------|---------------------|
-|**time**, **\_time32**, **\_time64**|\<time.h>|\<ctime — > lub \<time.h >|
+|**Time**  **,\_time32**, **time64 \_**|\<time.h>|\<CTime > lub \<Time. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

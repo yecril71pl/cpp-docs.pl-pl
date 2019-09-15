@@ -1,7 +1,7 @@
 ---
 title: _spawn, _wspawn — Funkcje
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr80.dll
 - msvcr110_clr0400.dll
 - msvcr110.dll
@@ -9,7 +9,10 @@ apilocation:
 - msvcr120.dll
 - msvcr100.dll
 - msvcr90.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _spawn
 - _tspawnlp
@@ -45,12 +48,12 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: 8ab368378775102b708635b551c046a326adfecb
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c4a8b33c2233dc0c680ddbe5063ab6fe25a729b0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498908"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957274"
 ---
 # <a name="_spawn-_wspawn-functions"></a>_spawn, _wspawn — Funkcje
 
@@ -123,7 +126,7 @@ Aby przekazać argumenty do nowego procesu, nadaj jeden lub więcej wskaźników
 
 `_spawnle` Wywołania,,`_spawnlp`i są`_spawnlpe` zwykle używane w przypadkach, gdy liczba argumentów jest znana z góry. `_spawnl` Argument jest zwykle wskaźnikiem do `cmdname`. `arg0` Argumenty `arg1` przez`argn` są wskaźnikami do ciągów znaków tworzących nową listę argumentów. Poniżej `argn`, aby oznaczyć koniec listy argumentów, musi istnieć **pusty** wskaźnik.
 
-`_spawnve` Wywołania,,`_spawnvp`i są`_spawnvpe` przydatne, gdy istnieje zmienna liczba argumentów dla nowego procesu. `_spawnv` Wskaźniki do argumentów są przekazane jako tablica, `argv` *.* Argument `argv`[0] jest zwykle wskaźnikiem do ścieżki w trybie rzeczywistym lub do nazwy programu w trybie chronionym, a `argv`[1] do `argv`[`n`] są wskaźnikami do ciągów znaków tworzących nową listę argumentów. Argument `argv`[`n` + 1] musi być pustym wskaźnikiem, aby zaznaczyć koniec listy argumentów.
+`_spawnve` Wywołania,,`_spawnvp`i są`_spawnvpe` przydatne, gdy istnieje zmienna liczba argumentów dla nowego procesu. `_spawnv` Wskaźniki do argumentów są przekazane jako tablica, `argv` *.* Argument `argv`[0] jest zwykle wskaźnikiem do ścieżki w trybie rzeczywistym lub do nazwy programu w trybie chronionym, a `argv`[1] do `argv`[`n`] są wskaźnikami do ciągów znaków tworzących nową listę argumentów. Argument `argv`[`n` + 1] musi być **pustym** wskaźnikiem, aby zaznaczyć koniec listy argumentów.
 
 ## <a name="environment-of-the-spawned-process"></a>Środowisko procesu, który został zduplikowany
 

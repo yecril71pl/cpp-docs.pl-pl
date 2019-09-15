@@ -1,9 +1,9 @@
 ---
 title: _RTC_SetErrorFuncW
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _RTC_SetErrorFuncW
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _RTC_SetErrorFuncW
 - RTC_SetErrorFuncW
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - _RTC_SetErrorFuncW function
 - RTC_error_fnW typedef
 ms.assetid: b3e0d71f-1bd3-4c37-9ede-2f638eb3c81a
-ms.openlocfilehash: 03e9f540a215550a698700f28e5722b33b119149
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d45e5c857e917ca23b62482c64a06314565226e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357229"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948965"
 ---
-# <a name="rtcseterrorfuncw"></a>_RTC_SetErrorFuncW
+# <a name="_rtc_seterrorfuncw"></a>_RTC_SetErrorFuncW
 
-Określa funkcję jako program obsługi raportowania sprawdzanie błędów czasu wykonywania (RTCs).
+Określa funkcję jako program obsługi raportowania błędów czasu wykonywania (RTCs).
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,26 +49,26 @@ _RTC_error_fnW _RTC_SetErrorFuncW(
 
 ### <a name="parameters"></a>Parametry
 
-*— Funkcja*<br/>
-Adres funkcji, która będzie obsługiwać sprawdzanie błędów czasu wykonywania.
+*funkcyjn*<br/>
+Adres funkcji, która będzie obsługiwać sprawdzanie błędów w czasie wykonywania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcję wcześniej zdefiniowaną błędu; lub **NULL** Jeśli nie ma zdefiniowanej wcześniej funkcji.
+Wcześniej zdefiniowana funkcja błędu; lub **wartość null** , jeśli nie ma wcześniej zdefiniowanej funkcji.
 
 ## <a name="remarks"></a>Uwagi
 
-W nowym kodzie, używana będzie tylko **_RTC_SetErrorFuncW**. **_RTC_SetErrorFunc** jest dostępny tylko w bibliotece zgodności z poprzednimi wersjami.
+W nowym kodzie Używaj tylko **_RTC_SetErrorFuncW**. **_RTC_SetErrorFunc** znajduje się tylko w bibliotece w celu zapewnienia zgodności z poprzednimi wersjami.
 
-**_RTC_SetErrorFuncW** wywołania zwrotnego, który ma zastosowanie tylko do składnika, który był połączony, ale nie globalny.
+Wywołanie zwrotne **_RTC_SetErrorFuncW** ma zastosowanie tylko do składnika, w którym został on połączony, ale nie globalnie.
 
-Upewnij się, że adres, który jest przekazywany do **_RTC_SetErrorFuncW** jest fakt, że prawidłowy funkcji obsługi błędu.
+Upewnij się, że adres przekazany do **_RTC_SetErrorFuncW** ma prawidłową funkcję obsługi błędów.
 
-Jeśli błąd został przypisany typ -1 za pomocą [_RTC_SetErrorType](rtc-seterrortype.md), nie zostanie wywołana funkcja obsługi błędów.
+Jeśli do błędu przypisano typ-1 za pomocą [_RTC_SetErrorType](rtc-seterrortype.md), funkcja obsługi błędów nie jest wywoływana.
 
-Przed wywołaniem tej funkcji, najpierw musisz wywołać jedną z funkcji inicjowania sprawdzanie błędów czasu wykonywania. Aby uzyskać więcej informacji, zobacz [przy użyciu biblioteki czasu wykonywania sprawdza, czy bez C Run-Time](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library).
+Aby można było wywołać tę funkcję, należy najpierw wywołać jedną z funkcji inicjowania sprawdzania błędów w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [Używanie testów w czasie wykonywania bez biblioteki uruchomieniowej C](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library).
 
-**_RTC_error_fnW** jest zdefiniowana w następujący sposób:
+**_RTC_error_fnW** jest zdefiniowany w następujący sposób:
 
 ```cpp
 typedef int (__cdecl * _RTC_error_fnW)(
@@ -79,22 +82,22 @@ typedef int (__cdecl * _RTC_error_fnW)(
 
 gdzie:
 
-*errorType*<br/>
+*błądtype*<br/>
 Typ błędu, który jest określony przez [_RTC_SetErrorType](rtc-seterrortype.md).
 
 *Nazwa pliku*<br/>
-Plik źródłowy, w którym wystąpił błąd, lub wartość null, jeśli są dostępne żadne informacje debugowania.
+Plik źródłowy, w którym wystąpił błąd lub wartość null, jeśli nie ma dostępnych informacji o debugowaniu.
 
-*numer wiersza*<br/>
-Wiersz w *filename* moment wystąpienia awarii lub 0, jeśli są dostępne żadne informacje debugowania.
+*LineNumber*<br/>
+Wiersz w *nazwie pliku* , w którym wystąpił błąd, lub 0, jeśli informacje debugowania nie są dostępne.
 
 *moduleName*<br/>
-Plik DLL lub nazwą pliku wykonywalnego, w którym wystąpił błąd.
+Nazwa pliku DLL lub pliku wykonywalnego, w którym wystąpił błąd.
 
-*Format*<br/>
-ciąg stylu printf wyświetlany komunikat o błędzie, za pomocą pozostałych parametrów. Pierwszy argument VA_ARGLIST jest numer błędu RTC, który wystąpił.
+*format*<br/>
+printf ciąg stylu, aby wyświetlić komunikat o błędzie przy użyciu pozostałych parametrów. Pierwszym argumentem VA_ARGLIST jest numer błędu RTC, który wystąpił.
 
-Aby uzyskać przykład, w którym pokazano, jak **_RTC_error_fnW**, zobacz [natywnego środowiska wykonawczego sprawdza dostosowywania](/visualstudio/debugger/native-run-time-checks-customization).
+Aby zapoznać się z przykładem, który pokazuje, jak korzystać z **_RTC_error_fnW**, zobacz [natywne sprawdzanie w czasie wykonywania](/visualstudio/debugger/native-run-time-checks-customization).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -102,11 +105,11 @@ Aby uzyskać przykład, w którym pokazano, jak **_RTC_error_fnW**, zobacz [naty
 |-------------|---------------------|
 |**_RTC_SetErrorFuncW**|\<rtcapi.h>|
 
-Aby uzyskać więcej informacji, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Zobacz także
 

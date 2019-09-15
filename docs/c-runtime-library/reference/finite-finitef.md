@@ -1,10 +1,10 @@
 ---
 title: isfinite, _finite, _finitef
 ms.date: 01/31/2019
-apiname:
+api_name:
 - _finite
 - _finitef
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - isfinite
 - finite
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - _finite function
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
-ms.openlocfilehash: d727839521978be66c3dc9ee173ee2ba0a567445
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2cde4d3a57884413f0c48aa299b171334c5f988
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333719"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957181"
 ---
-# <a name="isfinite-finite-finitef"></a>isfinite, _finite, _finitef
+# <a name="isfinite-_finite-_finitef"></a>isfinite, _finite, _finitef
 
-Określa, czy wartość zmiennoprzecinkowa jest ograniczone.
+Określa, czy wartość zmiennoprzecinkowa jest skończona.
 
 ## <a name="syntax"></a>Składnia
 
@@ -67,24 +70,24 @@ int _finitef(
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Wartość zmiennoprzecinkowa do testowania.
+Wartość zmiennoprzecinkowa do przetestowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-`isfinite` — Makro i `_finite` i `_finitef` funkcje zwracają wartość różna od zera, jeśli *x* jest albo normalnej lub subnormal wartością skończoną. Zwracają 0, jeśli argument jest nieskończony lub NaN. Funkcja szablonu języka C++ w tekście `isfinite` działa tak samo, ale zwraca **true** lub **false**.
+Makro i funkcje`_finitef` i zwracają wartość różną od zera, jeśli x jest wartością normalną lub nienormalną. `isfinite` `_finite` Zwracają one wartość 0, jeśli argument jest nieskończony lub NaN. C++ Wbudowana funkcja `isfinite` szablonu zachowuje się tak samo, ale zwraca **wartość PRAWDA** lub **Fałsz**.
 
 ## <a name="remarks"></a>Uwagi
 
-`isfinite` jest to makro, gdy kompilowany C; oraz wbudowanej funkcji szablonu, gdy skompilowano co kod C++. `_finite` i `_finitef` funkcje są specyficzne dla firmy Microsoft. `_finitef` Funkcja tylko jest dostępna, gdy kompilowany dla x86, ARM i ARM64 platform.
+`isfinite`jest makrem kompilowanym jako C i wbudowaną funkcją szablonu kompilowaną jako C++. Funkcje `_finite` i`_finitef` są specyficzne dla firmy Microsoft. `_finitef` Funkcja jest dostępna tylko po skompilowaniu dla platform x86, ARM lub arm64.
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |--------------|---------------------------|-------------------------------|
-|`_finite`|\<float.h > lub \<math.h >|\<float.h >, \<math.h >, \<cfloat — >, lub \<cmath >|
-|`isfinite`, `_finitef`|\<math.h>|\<Math.h > lub \<cmath >|
+|`_finite`|\<typ float. h > \<lub Math. h >|\<float. h >, \<Math. h >, \<cfloat > lub \<cmath >|
+|`isfinite`, `_finitef`|\<math.h>|\<Math. h > lub \<cmath >|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,9 +1,9 @@
 ---
 title: fesetexceptflag
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fesetexceptflag
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,23 +15,26 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fesetexceptflag
 - fenv/fesetexceptflag
 helpviewer_keywords:
 - fesetexceptflag function
 ms.assetid: 2f7dad77-9e54-4097-a3e3-35176ace4de5
-ms.openlocfilehash: 9ac79e790f0b1e7a89413a0d4974f6053c95616e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29a6b36b0744bec30463fe55df05fe26180b93fe
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333998"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941090"
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
 
-Ustawia flagi stanu zmiennoprzecinkowego określonego w bieżącym środowisku zmiennoprzecinkowych.
+Ustawia określone flagi stanu zmiennoprzecinkowego w bieżącym środowisku zmiennoprzecinkowym.
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,39 +48,39 @@ int fesetexceptflag(
 ### <a name="parameters"></a>Parametry
 
 *pstatus*<br/>
-Wskaźnik do **fexcept_t** obiekt zawierający wartości, aby ustawić wyjątek flagi stanu. Obiekt może być ustawiona przez poprzednie wywołanie [fegetexceptflag](fegetexceptflag2.md).
+Wskaźnik do obiektu **fexcept_t** zawierającego wartości, do których mają zostać ustawione flagi stanu wyjątku. Obiekt może być ustawiony przez poprzednie wywołanie do [fegetexceptflag](fegetexceptflag2.md).
 
-*z wyjątkiem*<br/>
-Flagi stanu wyjątek zmiennoprzecinkowy, którego można ustawić.
+*Oprócz*<br/>
+Flagi stanu wyjątku zmiennoprzecinkowego do ustawienia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli wszystkie flagi stanu określonego wyjątku są ustawione, zwraca wartość 0. W przeciwnym razie zwraca wartość różną od zera.
+Jeśli wszystkie określone flagi stanu wyjątku zostały pomyślnie ustawione, zwraca wartość 0. W przeciwnym razie zwraca wartość różną od zera.
 
 ## <a name="remarks"></a>Uwagi
 
-**Fesetexceptflag** funkcja ustawia stan flagi stanu wyjątków zmiennoprzecinkowych, które są określone przez *z wyjątkiem* odpowiednie wartości w **fexcept_t** Obiekt wskazywany przez *pstatus*.  On zgłaszaj wyjątków. *Pstatus* wskaźnik musi wskazywać prawidłowy **fexcept_t** obiektu lub kolejnych zachowanie jest niezdefiniowane. **Fesetexceptflag** funkcja obsługuje te wartości makra wyjątków w *z wyjątkiem*zdefiniowaną w \<fenv.h >:
+Funkcja **fesetexceptflag** ustawia stan wyjątków zmiennoprzecinkowych, określonych przez, *z wyjątkiem* odpowiednich wartości ustawionych w obiekcie **fexcept_t** wskazanym przez *pstatus*.  Nie zgłasza wyjątków. Wskaźnik *pstatus* musi wskazywać prawidłowy obiekt **fexcept_t** , a następne zachowanie jest niezdefiniowane. Funkcja **fesetexceptflag** obsługuje te wartości makr wyjątków w programie, *z wyjątkiem*zdefiniowanych w \<fenv. h >:
 
-|Makra wyjątków|Opis|
+|Makro wyjątku|Opis|
 |---------------------|-----------------|
-|FE_DIVBYZERO|Wystąpił błąd singularity lub pole w starszej operacji zmiennoprzecinkowej; Utworzono wartości nieskończonej.|
-|FE_INEXACT|Wymuszono funkcji round przechowywanych wynikiem wcześniejszych operacji zmiennoprzecinkowej.|
-|FE_INVALID|Wystąpił błąd domeny w starszej operacji zmiennoprzecinkowej.|
-|FE_OVERFLOW|Wystąpił błąd zakresu; wynik operacji zmiennoprzecinkowej wcześniej była zbyt duża, aby mogły być reprezentowane.|
-|FE_UNDERFLOW|Wcześniej wyniku operacji zmiennoprzecinkowej był za mały, aby mogły być reprezentowane w o pełnej dokładności; wartość została utworzona.|
-|FE_ALLEXCEPT|Bitowe OR wszystkich obsługiwane wyjątki zmiennoprzecinkowe.|
+|FE_DIVBYZERO|Wystąpił błąd Singularity lub wartość w poprzedniej operacji zmiennoprzecinkowej; utworzono nieskończoną wartość.|
+|FE_INEXACT|Funkcja była zmuszona do zaokrąglania przechowywanego wyniku poprzedniej operacji zmiennoprzecinkowej.|
+|FE_INVALID|Wystąpił błąd domeny w poprzedniej operacji zmiennoprzecinkowej.|
+|FE_OVERFLOW|Wystąpił błąd zakresu; wcześniejszy wynik operacji zmiennoprzecinkowej był zbyt duży, aby można było go przedstawić.|
+|FE_UNDERFLOW|Wcześniejszy wynik operacji zmiennoprzecinkowej był zbyt mały, aby mógł być reprezentowany z pełną dokładnością; utworzono nienormalną wartość.|
+|FE_ALLEXCEPT|Bitowe lub wszystkie obsługiwane wyjątki zmiennoprzecinkowe.|
 
-*z wyjątkiem* argument może być zera, makra wyjątków dotyczących liczb zmiennoprzecinkowych obsługiwanych lub operatora testu koniunkcji lub dwóch lub więcej makra. Wpływ dowolna inna wartość argumentu jest niezdefiniowane.
+Argument *except* może mieć wartość zero, jedno z obsługiwanych makr wyjątków zmiennoprzecinkowych lub bitowe lub dwa lub więcej makr. Wynik innej wartości argumentu jest niezdefiniowany.
 
-Aby użyć tej funkcji, należy wyłączyć funkcję optymalizacji zmiennopozycyjnych, które mogą uniemożliwić dostęp przy użyciu `#pragma fenv_access(on)` dyrektywy przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).
+Aby użyć tej funkcji, należy wyłączyć optymalizacje zmiennoprzecinkowe, które mogą uniemożliwić dostęp przy użyciu `#pragma fenv_access(on)` dyrektywy przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek języka C|Nagłówek języka C++|
+|Funkcja|Nagłówek języka C|C++nagłówki|
 |--------------|--------------|------------------|
 |**fesetexceptflag**|\<fenv.h>|\<cfenv>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

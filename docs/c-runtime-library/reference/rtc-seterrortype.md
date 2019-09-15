@@ -1,9 +1,9 @@
 ---
 title: _RTC_SetErrorType
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _RTC_SetErrorType
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - RTC_SetErrorType
 - _RTC_SetErrorType
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - RTC_SetErrorType function
 - _RTC_SetErrorType function
 ms.assetid: f5f99be7-d357-4b11-b8f5-ddd3428f2b06
-ms.openlocfilehash: 022079bd199477c8bca92e853ed66879c96428db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c1eff5920931aa3b72bf3dbc6232c371828b16a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357138"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948922"
 ---
-# <a name="rtcseterrortype"></a>_RTC_SetErrorType
+# <a name="_rtc_seterrortype"></a>_RTC_SetErrorType
 
-Kojarzy błąd, który zostanie wykryty przez sprawdzanie błędów czasu wykonywania (RTCs) z typem. Twoja procedura obsługi błędów przetwarza jak produkt wyjściowy błędy określonego typu.
+Kojarzy błąd, który został wykryty przez sprawdzanie błędów czasu wykonywania (RTCs) z typem. Procedura obsługi błędów przetwarza sposób wyprowadzania błędów określonego typu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,22 +49,22 @@ int _RTC_SetErrorType(
 ### <a name="parameters"></a>Parametry
 
 *errnum*<br/>
-Liczbą z zakresu od zera i jeden mniejsza niż wartość zwrócona przez obiekt [_rtc_numerrors —](rtc-numerrors.md).
+Liczba z przedziału od zera do jednej mniejszej niż wartość zwrócona przez [_RTC_NumErrors](rtc-numerrors.md).
 
 *ErrType*<br/>
-Wartość do przypisania do tego *errnum*. Na przykład, można na przykład **_CRT_ERROR**. Jeśli używasz **_CrtDbgReport** jako procedurę obsługi błędów, *ErrType* może zawierać tylko jeden z symboli zdefiniowanych w [_CrtSetReportMode](crtsetreportmode.md). Jeśli masz własną procedurę obsługi błędów ([_RTC_SetErrorFunc](rtc-seterrorfunc.md)), może mieć tyle *ErrType*są określane jako miejsca *errnum*s.
+Wartość, która ma zostać przypisana do tego *errnum*. Na przykład można użyć **_CRT_ERROR**. Jeśli używasz **_CrtDbgReport** jako programu obsługi błędów, *ErrType* może być tylko jednym z symboli zdefiniowanych w [_CrtSetReportMode](crtsetreportmode.md). Jeśli masz własną procedurę obsługi błędów ([_RTC_SetErrorFunc](rtc-seterrorfunc.md)), możesz mieć dowolną liczbę *ErrType*s, tak jak w przypadku *errnum*s.
 
-*ErrType* _RTC_ERRTYPE_IGNORE ma specjalne znaczenie **_CrtSetReportMode**; błąd jest ignorowany.
+*ERRTYPE* _RTC_ERRTYPE_IGNORE ma specjalne znaczenie dla **_CrtSetReportMode**; błąd jest ignorowany.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Poprzednią wartość dla typu błędu *typu*.
+Poprzednia *wartość typu błędu.*
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie wszystkie błędy są ustawione na *ErrType* = 1, co odpowiada **_CRT_ERROR**. Aby uzyskać więcej informacji o błędzie domyślne typy takie jak **_CRT_ERROR**, zobacz [_CrtDbgReport](crtdbgreport-crtdbgreportw.md).
+Domyślnie wszystkie błędy są ustawiane na *ErrType* = 1, co odpowiada **_CRT_ERROR**. Aby uzyskać więcej informacji na temat domyślnych typów błędów, takich jak **_CRT_ERROR**, zobacz [_CrtDbgReport](crtdbgreport-crtdbgreportw.md).
 
-Przed wywołaniem tej funkcji, należy najpierw wywołać jedną z funkcji inicjowania sprawdzanie błędów czasu wykonywania; zobacz [przy użyciu kontroli czasu wykonywania bez biblioteki wykonawczej języka C](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library)
+Aby można było wywołać tę funkcję, należy najpierw wywołać jedną z funkcji inicjalizacji sprawdzania błędów czasu wykonywania; Zobacz [Używanie testów w czasie wykonywania bez biblioteki wykonawczej C](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library)
 
 ## <a name="requirements"></a>Wymagania
 
@@ -69,11 +72,11 @@ Przed wywołaniem tej funkcji, należy najpierw wywołać jedną z funkcji inicj
 |-------------|---------------------|
 |**_RTC_SetErrorType**|\<rtcapi.h>|
 
-Aby uzyskać więcej informacji, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Zobacz także
 

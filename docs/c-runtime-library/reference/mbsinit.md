@@ -1,9 +1,9 @@
 ---
 title: mbsinit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbsinit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,18 +14,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsinit
 helpviewer_keywords:
 - mbsinit function
 ms.assetid: 4618555b-baaa-4d04-93fa-36abae411034
-ms.openlocfilehash: 8b467ae7f705fc2f4b2b38d3f76f3936f30ec15e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3b1eecc252a2bee83997aa6f2f6f47a96d3321a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331548"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952365"
 ---
 # <a name="mbsinit"></a>mbsinit
 
@@ -41,18 +44,18 @@ int mbsinit(
 
 ### <a name="parameters"></a>Parametry
 
-*PS*<br/>
-Wskaźnik do [mbstate_t](../../c-runtime-library/standard-types.md) zmiennej.
+*iloczyn*<br/>
+Wskaźnik do zmiennej [mbstate_t](../../c-runtime-library/standard-types.md) .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli wartość różną od zera *ps* jest **NULL** lub, jeśli nie w trakcie wykonywania konwersji.
+Różna od zera, jeśli *PS* ma **wartość null** lub nie znajduje się w środku konwersji.
 
 ## <a name="remarks"></a>Uwagi
 
-Korzystając z jednej z funkcji ANSI, które przyjmuje **mbstate_t** wskaźnika, przekazując adres usługi **mbstate_t** zostaną zwrócone informacje na temat tego, czy ostatni bajt w buforze został przekonwertowany.
+W przypadku korzystania z jednej z funkcji ANSI, która przyjmuje wskaźnik **mbstate_t** , przekazywanie adresu **mbstate_t** zwróci informacje o tym, czy ostatni bajt w buforze został przekonwertowany.
 
-Odpowiednią stronę kodową musi zainstalować w celu obsługi swojej znaków wielobajtowych.
+Aby obsługiwać znaki wielobajtowe, należy zainstalować odpowiednią stronę kodową.
 
 ## <a name="example"></a>Przykład
 

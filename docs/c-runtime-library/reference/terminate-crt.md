@@ -1,9 +1,9 @@
 ---
 title: zakończenie (CRT)
 ms.date: 11/04/2016
-apiname:
+api_name:
 - terminate
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,23 +15,26 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - terminate
 helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 90e67402-08e9-4b2a-962c-66a8afd3ccb4
-ms.openlocfilehash: 1f655d328b4d97a2989ad49005ed8a9f44fd9d79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b76ce42817fa1a6b79ef32965fcfa550a508e88d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155631"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946198"
 ---
 # <a name="terminate-crt"></a>zakończenie (CRT)
 
-Wywołania [przerwać](abort.md) funkcji można określić za pomocą **set_terminate**.
+Wywołania [Abort](abort.md) lub funkcja określona za pomocą **set_terminate**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -41,23 +44,23 @@ void terminate( void );
 
 ## <a name="remarks"></a>Uwagi
 
-**Zakończyć** funkcja jest używana z obsługi wyjątków C++ i jest wywoływana w następujących przypadkach:
+Funkcja **Terminate** jest używana z C++ obsługą wyjątków i jest wywoływana w następujących przypadkach:
 
-- Nie można odnaleźć pasującego obsługi catch zgłoszonego wyjątku C++.
+- Nie można odnaleźć zgodnej procedury obsługi catch dla zgłoszonego C++ wyjątku.
 
-- Wyjątek jest generowany przez funkcję destruktor podczas odwijania stosu.
+- Wyjątek jest zgłaszany przez funkcję destruktora podczas operacji unwindy stosu.
 
-- Stos jest uszkodzony po zostanie zgłoszony wyjątek.
+- Stos jest uszkodzony po wystąpieniu wyjątku.
 
-**Zakończenie** wywołania [przerwać](abort.md) domyślnie. Możesz zmienić to ustawienie domyślne, pisanie funkcji zakończenia i wywołanie **set_terminate** o nazwie funkcji jako argumentem. **Zakończenie** wywołuje funkcję ostatniego podawana jako argument do **set_terminate**. Aby uzyskać więcej informacji, zobacz [nieobsługiwanych wyjątków C++](../../cpp/unhandled-cpp-exceptions.md).
+**przerywaj wywołania domyślnie** . [](abort.md) Można zmienić to ustawienie domyślne, pisząc własną funkcję zakończenia i wywołując **set_terminate** z nazwą funkcji jako argumentem. **Przerwij** wywołuje ostatnią funkcję podaną jako argument **set_terminate**. Aby uzyskać więcej informacji, zobacz [nieobsłużone C++ wyjątki](../../cpp/unhandled-cpp-exceptions.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**Zakończenie**|\<eh.h>|
+|**kończyć**|\<eh.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -112,4 +115,4 @@ term_func() was called by terminate().
 [_set_se_translator](set-se-translator.md)<br/>
 [set_terminate](set-terminate-crt.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
-[unexpected](unexpected-crt.md)<br/>
+[oczekiwan](unexpected-crt.md)<br/>

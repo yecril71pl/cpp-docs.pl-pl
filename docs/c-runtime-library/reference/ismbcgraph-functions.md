@@ -1,7 +1,7 @@
 ---
 title: _ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbcpunct_l
 - _ismbcblank
 - _ismbcprint
@@ -12,7 +12,7 @@ apiname:
 - _ismbcspace_l
 - _ismbcspace
 - _ismbcgraph
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -24,7 +24,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbcspace
 - _ismbcgraph
@@ -56,19 +59,19 @@ helpviewer_keywords:
 - _ismbcgraph_l function
 - _ismbcspace function
 ms.assetid: 8e0a5f47-ba64-4411-92a3-3c525d16e3be
-ms.openlocfilehash: 05946def8c4d832751554a1653afa98c9965fee9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25136896555128339aaa4c79cec2ca9bf3ded43c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286878"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953906"
 ---
-# <a name="ismbcgraph-ismbcgraphl-ismbcprint-ismbcprintl-ismbcpunct-ismbcpunctl-ismbcblank-ismbcblankl-ismbcspace-ismbcspacel"></a>_ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
+# <a name="_ismbcgraph-_ismbcgraph_l-_ismbcprint-_ismbcprint_l-_ismbcpunct-_ismbcpunct_l-_ismbcblank-_ismbcblank_l-_ismbcspace-_ismbcspace_l"></a>_ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
 
-Określa, czy znak jest znakiem graficznym, znakiem wyświetlania, znakiem interpunkcyjnym lub znakiem spacji.
+Określa, czy znak jest znakiem graficznym, znakiem wyświetlanym, znakiem interpunkcyjny lub znakiem spacji.
 
 > [!IMPORTANT]
-> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -113,28 +116,28 @@ int _ismbcspace_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak do określenia.
+Znak, który ma zostać określony.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych procedur zwraca wartość różną od zera, jeśli znak spełnia warunek testu lub 0, jeśli nie jest. Jeśli *c* < = 255 i istnieje odpowiedni **_ismbb —** procedura (na przykład **_ismbcalnum —** odpowiada **_ismbbalnum —**), wynik jest wartością zwracaną odpowiadającego **_ismbb —** procedury.
+Każda z tych procedur zwraca wartość różną od zera, jeśli znak spełnia warunek testu lub 0, jeśli tak nie jest. Jeśli *c* < = 255 i istnieje odpowiednia procedura **_ismbb** (na przykład **_ismbcalnum** odpowiada **_ismbbalnum**), wynik jest wartością zwracaną odpowiedniej procedury **_ismbb** .
 
-Wersje tych funkcji są identyczne, z tą różnicą, że te, które mają **_l** sufiksa używa ustawień regionalnych, które są przekazywane do ich zachowań zależnych od ustawień regionalnych, zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wersje tych funkcji są identyczne, z tą różnicą, że te, które mają sufiks **_l** używają ustawień regionalnych, które są przesyłane w ramach zachowania zależnego od ustawień regionalnych, zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji testuje dany znak wielobajtowy dla danego warunku.
+Każda z tych funkcji testuje danego znaku wielobajtowego dla danego warunku.
 
-|Procedura|Testowanie warunku|Przykład strony kodu 932|
+|Procedura|Warunek testu|Przykładowa strona kodowa 932|
 |-------------|--------------------|---------------------------|
-|**_ismbcgraph**|Grafika|Zwraca wartość różną od zera wtedy i tylko wtedy, gdy *c* jest reprezentacją jednobajtowego znaku wszelkie ASCII lub katakana drukowalnego z wyjątkiem (biały).|
-|**_ismbcprint**|Druku|Zwraca wartość różną od zera wtedy i tylko wtedy, gdy *c* jest reprezentacją jednobajtowego jakiegokolwiek ASCII lub katakana znaku drukowalnego łącznie (biały).|
-|**_ismbcpunct**|Znaki interpunkcyjne|Zwraca wartość różną od zera wtedy i tylko wtedy, gdy *c* jest reprezentacją jednobajtowego ASCII lub katakana znak interpunkcyjny.|
-|**_ismbcblank**|SPACJA lub tabulator|Zwraca wartość różną od zera wtedy i tylko wtedy, gdy *c* jest znakiem spacji lub znaku tabulacji poziomej: *c*= 0x20 lub *c*= 0x09.|
-|**_ismbcspace**|Biały znak|Zwraca wartość różną od zera wtedy i tylko wtedy, gdy *c* jest znak odstępu: *c*= 0x20 lub 0x09 < =*c*< = 0x0D.|
+|**_ismbcgraph**|Graphic|Zwraca wartość różną od zera, jeśli i tylko wtedy, gdy *c* jest jednobajtową reprezentacją dowolnego znaku ASCII lub Katakana drukowalnego, z wyjątkiem odstępu ().|
+|**_ismbcprint**|Drukowalnych|Zwraca wartość różną od zera, jeśli i tylko wtedy, gdy *c* jest jednobajtową reprezentacją dowolnego znaku ASCII lub Katakana drukowalnego, w tym odstępu ().|
+|**_ismbcpunct**|Znaki interpunkcyjne|Zwraca wartość różną od zera, jeśli i tylko wtedy, gdy *c* jest reprezentacją jednobajtowego znaku interpunkcyjny ASCII lub Katakana.|
+|**_ismbcblank**|Spacja lub tabulator poziomy|Zwraca wartość różną od zera, jeśli i tylko wtedy, gdy *c* jest spacją lub tabulatorem poziomym: *c*= 0x20 lub *c*= 0x09.|
+|**_ismbcspace**|Biały znak|Zwraca wartość różną od zera, jeśli i tylko wtedy, gdy *c* jest znakiem odstępu: *c*= 0x20 lub 0x09 < =*c*< = 0x0D.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -151,11 +154,11 @@ Każda z tych funkcji testuje dany znak wielobajtowy dla danego warunku.
 |**_ismbcspace**|\<mbstring.h>|
 |**_ismbcspace_l**|\<mbstring.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Zobacz także
 

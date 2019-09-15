@@ -1,10 +1,10 @@
 ---
 title: _get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_invalid_parameter_handler
 - _get_thread_local_invalid_parameter_handler
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _get_invalid_parameter_handler
 - stdlib/_get_invalid_parameter_handler
@@ -26,16 +29,16 @@ helpviewer_keywords:
 - _get_thread_local_invalid_parameter_handler function
 - _get_invalid_parameter_handler function
 ms.assetid: a176da0e-38ca-4d99-92bb-b0e2b8072f53
-ms.openlocfilehash: 7d1a87f9ade0845994918d5a4d59dc56e190d2b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 534590fed77fe06149db892d98ba0e555297ac7c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287485"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955829"
 ---
-# <a name="getinvalidparameterhandler-getthreadlocalinvalidparameterhandler"></a>_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler
+# <a name="_get_invalid_parameter_handler-_get_thread_local_invalid_parameter_handler"></a>_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler
 
-Pobiera funkcja, która jest wywoływana, gdy wykryje CRT, nieprawidłowy argument.
+Pobiera funkcję, która jest wywoływana, gdy CRT wykryje nieprawidłowy argument.
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,13 +49,13 @@ _invalid_parameter_handler _get_thread_local_invalid_parameter_handler(void);
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do aktualnie ustawione funkcji obsługi nieprawidłowego parametru lub wskaźnikiem typu null Jeśli nie została ustawiona.
+Wskaźnik do obecnie ustawionej nieprawidłowej funkcji obsługi parametrów lub pusty wskaźnik, jeśli żaden nie został ustawiony.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Get_invalid_parameter_handler** funkcja pobiera aktualnie ustawione globalne nieprawidłowy parametr uchwytu. Zwraca wskaźnik zerowy, jeśli żadna procedura obsługi globalnej nieprawidłowy parametr został ustawiony. Podobnie **_get_thread_local_invalid_parameter_handler** pobiera bieżącego wątku lokalnego nieprawidłowy parametr uchwytu wątku, jest wywoływana w lub wskaźnikiem typu null, jeśli żadna procedura obsługi nie została ustawiona. Aby uzyskać informacje o sposobie ustawiania globalnych i lokalnych wątków nieprawidłowy parametr obsługi, zobacz [_set_invalid_parameter_handler —, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
+Funkcja **_get_invalid_parameter_handler** Pobiera obecnie ustawioną globalną procedurę obsługi nieprawidłowego parametru. Zwraca wskaźnik o wartości null, jeśli nie ustawiono żadnej procedury obsługi nieprawidłowego parametru. Podobnie **_get_thread_local_invalid_parameter_handler** pobiera bieżącą procedurę obsługi nieprawidłowego parametru wątku, w którym jest on wywoływany, lub pusty wskaźnik, jeśli nie ustawiono żadnej procedury obsługi. Aby uzyskać informacje na temat sposobu ustawiania globalnych i lokalnych procedur obsługi parametrów, zobacz [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
 
-Wskaźnik funkcji obsługi zwrócone nieprawidłowy parametr ma następującego typu:
+Zwrócony wskaźnik funkcji procedury obsługi nieprawidłowego parametru ma następujący typ:
 
 ```C
 typedef void (__cdecl* _invalid_parameter_handler)(
@@ -64,15 +67,15 @@ typedef void (__cdecl* _invalid_parameter_handler)(
     );
 ```
 
-Szczegółowe informacje dotyczące obsługi nieprawidłowego parametru, zobacz temat prototypu w [_set_invalid_parameter_handler —, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
+Aby uzyskać szczegółowe informacje na temat procedury obsługi nieprawidłowego parametru, zobacz prototyp w [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_get_invalid_parameter_handler**, **_get_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib — > lub \<stdlib.h >|
+|**_get_invalid_parameter_handler**, **_get_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib > lub \<STDLIB. h >|
 
-**_Get_invalid_parameter_handler** i **_get_thread_local_invalid_parameter_handler** funkcje są specyficzne dla firmy Microsoft. Aby uzyskać informacje o zgodności – zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Funkcje **_get_invalid_parameter_handler** i **_get_thread_local_invalid_parameter_handler** są specyficzne dla firmy Microsoft. Aby uzyskać informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

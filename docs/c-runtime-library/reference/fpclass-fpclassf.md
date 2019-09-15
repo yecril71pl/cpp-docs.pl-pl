@@ -1,10 +1,10 @@
 ---
 title: _fpclass, _fpclassf
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _fpclass
 - _fpclassf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fpclass
 - _fpclass
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: 987c87cc7a03f4a24e47654ae52e8a2416a15184
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e561cff956ca51707834bf869a1c114f0c99a3e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333225"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957044"
 ---
-# <a name="fpclass-fpclassf"></a>_fpclass, _fpclassf
+# <a name="_fpclass-_fpclassf"></a>_fpclass, _fpclassf
 
-Zwraca wartość wskazującą klasyfikacji zmiennoprzecinkową argumentu.
+Zwraca wartość wskazującą klasyfikację zmiennoprzecinkową argumentu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -56,28 +59,28 @@ int _fpclassf(
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Wartość zmiennoprzecinkowa do testowania.
+Wartość zmiennoprzecinkowa do przetestowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_Fpclass** i **_fpclassf** funkcje zwracają wartość całkowitą, która wskazuje klasyfikacji zmiennoprzecinkową argumentu *x*. Klasyfikacja może mieć jedną z następujących wartości, zdefiniowane w \<float.h >.
+Funkcje **_fpclass** i **_fpclassf** zwracają liczbę całkowitą, która wskazuje na klasyfikację zmiennoprzecinkową argumentu *x*. Klasyfikacja może mieć jedną z następujących wartości zdefiniowanych w \<> float. h.
 
 |Wartość|Opis|
 |-----------|-----------------|
 |**_FPCLASS_SNAN**|Sygnalizowanie NaN|
-|**_FPCLASS_QNAN**|Ciche NaN|
+|**_FPCLASS_QNAN**|Cichy NaN|
 |**_FPCLASS_NINF**|Nieskończoność ujemna (-INF)|
-|**_FPCLASS_NN**|Ujemna znormalizowane różna od zera|
-|**_FPCLASS_ND**|Ujemna nieznormalizowane|
-|**_FPCLASS_NZ**|Zero ujemna (- 0)|
-|**_FPCLASS_PZ**|0 dodatnią (+ 0)|
-|**_FPCLASS_PD**|Wynik dodatni nieznormalizowane|
-|**_FPCLASS_PN**|Wynik dodatni znormalizowane różna od zera|
-|**_FPCLASS_PINF**|Nieskończoności dodatniej (+ INF)|
+|**_FPCLASS_NN**|Ujemna znormalizowana wartość niezerowa|
+|**_FPCLASS_ND**|Nieznormalizowana wartość ujemna|
+|**_FPCLASS_NZ**|Ujemna zero (-0)|
+|**_FPCLASS_PZ**|Dodatnia 0 (+ 0)|
+|**_FPCLASS_PD**|Nieznormalizowana wartość dodatnia|
+|**_FPCLASS_PN**|Dodatnia znormalizowana wartość niezerowa|
+|**_FPCLASS_PINF**|Nieskończoność dodatnia (+ INF)|
 
 ## <a name="remarks"></a>Uwagi
 
-**_Fpclass** i **_fpclassf** funkcje są specyficzne dla firmy Microsoft. Są one podobne do [fpclassify —](fpclassify.md), ale powróci, bardziej szczegółowe informacje o argumentu. **_Fpclassf** funkcja jest dostępna, gdy kompilowany x64 tylko platformy.
+Funkcje **_fpclass** i **_fpclassf** są specyficzne dla firmy Microsoft. Są one podobne do [fpclassify —](fpclassify.md), ale zwracają więcej szczegółowych informacji na temat argumentu. Funkcja **_fpclassf** jest dostępna tylko po skompilowaniu dla platformy x64.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -85,7 +88,7 @@ Wartość zmiennoprzecinkowa do testowania.
 |--------------|---------------------|
 |**_fpclass**, **_fpclassf**|\<float.h>|
 
-Aby uzyskać więcej informacji zgodności i zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać bardziej zgodność i informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,10 +1,10 @@
 ---
 title: system, _wsystem
 ms.date: 11/04/2016
-apiname:
+api_name:
 - system
 - _wsystem
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tsystem
 - _wsystem
@@ -29,19 +32,19 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: 46c4949fcc8cfbe4a3477e66b57d8fc6fc97ed73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82b39f012bebb41772cdc7350eb08dba48678fdd
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259095"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957678"
 ---
-# <a name="system-wsystem"></a>system, _wsystem
+# <a name="system-_wsystem"></a>system, _wsystem
 
 Wykonuje polecenie.
 
 > [!IMPORTANT]
-> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -56,33 +59,33 @@ int _wsystem(
 
 ### <a name="parameters"></a>Parametry
 
-*Polecenie*<br/>
-Polecenie do wykonania.
+*dotyczące*<br/>
+Polecenie, które ma zostać wykonane.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli *polecenia* jest **NULL** i interpretera poleceń zostanie znaleziona, zwraca wartość różną od zera. Jeśli interpreter poleceń nie zostanie znaleziona, zwraca wartość 0 i ustawia **errno** do **ENOENT**. Jeśli *polecenia* nie **NULL**, **systemu** zwraca wartość, która jest zwracana przez interpretera poleceń. Zwraca wartość 0, tylko wtedy, gdy interpreter poleceń zwraca wartość 0. Zwracana wartość-1 wskazuje błąd, i **errno** jest ustawiony na jedną z następujących wartości:
+Jeśli *polecenie* ma wartość **null** i zostanie znaleziony interpreter poleceń, funkcja zwraca wartość różną od zera. Jeśli interpreter poleceń nie zostanie znaleziony, zwraca wartość 0 i ustawia **errno** na **ENOENT**. Jeśli *polecenie* nie ma **wartości null**, **system** zwraca wartość, która jest zwracana przez interpreter poleceń. Zwraca wartość 0 tylko wtedy, gdy interpreter poleceń zwróci wartość 0. Zwracana wartość-1 wskazuje błąd, a **errno** jest ustawiona na jedną z następujących wartości:
 
 |||
 |-|-|
-| **E2BIG** | Lista argumentów (która jest zależna od systemu) jest zbyt duży. |
-| **ENOENT** | Nie można odnaleźć interpreter poleceń. |
-| **ENOEXEC** | Nie można wykonać pliku interpreter poleceń, ponieważ format jest nieprawidłowy. |
-| **ENOMEM** | Jest dostępna, można wykonać polecenia; nie ma wystarczającej ilości pamięci lub ilość dostępnej pamięci jest uszkodzony; lub istnieje nieprawidłowy blok, co oznacza, że proces, który wykonuje wywołanie nie został poprawnie przydzielony. |
+| **E2BIG** | Lista argumentów (która jest zależna od systemu) jest zbyt duża. |
+| **ENOENT** | Nie można znaleźć interpretera poleceń. |
+| **ENOEXEC** | Nie można wykonać pliku interpretera poleceń, ponieważ format jest nieprawidłowy. |
+| **ENOMEM** | Za mało dostępnej pamięci do wykonania polecenia; lub dostępna pamięć została uszkodzona; lub istnieje nieprawidłowy blok, który wskazuje, że proces wywołujący wywołanie nie został poprawnie przydzielony. |
 
-Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) uzyskać więcej informacji o tych kody powrotne.
+Aby uzyskać więcej informacji na temat kodów powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Uwagi
 
-**Systemu** funkcji przebiegów *polecenia* do interpretera poleceń, które wykonuje ciągu jako polecenie systemu operacyjnego. **System** używa **COMSPEC** i **ścieżki** zmiennych środowiskowych w celu zlokalizowania interpreter poleceń plik CMD.exe. Jeśli *polecenia* jest **NULL**, funkcja sprawdza jedynie, czy istnieje interpreter poleceń.
+Funkcja **system** przekazuje *polecenie* do interpretera poleceń, który wykonuje ciąg jako polecenie systemu operacyjnego. **system** używa zmiennych środowiskowych **wywołana** i **Path** do lokalizowania pliku interpretera poleceń Cmd. exe. Jeśli *polecenie* ma **wartość null**, funkcja po prostu sprawdza, czy istnieje interpreter poleceń.
 
-Użytkownik musi jawnie opróżnienia, za pomocą [fflush —](fflush.md) lub [_flushall —](flushall.md), lub zamknij strumienie przed wywołaniem **systemu**.
+Musisz jawnie opróżnić, używając [fflush](fflush.md) lub [_flushall](flushall.md)lub zamknąć wszystkie strumienie przed wywołaniem **system**.
 
-**_wsystem —** to wersja znaku dwubajtowego **systemu**; *polecenia* argument **_wsystem —** jest ciągiem znaku dwubajtowego. Funkcje te zachowują się identycznie.
+**_wsystem** to dwubajtowa wersja **systemu**; argumentem *polecenia* **_wsystem** jest ciąg znaków dwubajtowych. Funkcje te zachowują się identycznie w inny sposób.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsystem**|**system**|**system**|**_wsystem**|
 
@@ -90,14 +93,14 @@ Użytkownik musi jawnie opróżnienia, za pomocą [fflush —](fflush.md) lub [_
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**system**|\<process.h > lub \<stdlib.h >|
-|**_wsystem**|\<process.h > lub \<stdlib.h > lub \<wchar.h >|
+|**system**|\<Process. h > lub \<STDLIB. h >|
+|**_wsystem**|\<Process. h > lub \<STDLIB. h > lub \<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie użyto **systemu** do typu pliku tekstowego.
+Ten przykład używa **systemu** do wpisania pliku tekstowego.
 
 ```C
 // crt_system.c
@@ -110,7 +113,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtsystemtxt"></a>Dane wejściowe: crt_system.txt
+### <a name="input-crt_systemtxt"></a>Dane wejściowe: crt_system. txt
 
 ```Input
 Line one.

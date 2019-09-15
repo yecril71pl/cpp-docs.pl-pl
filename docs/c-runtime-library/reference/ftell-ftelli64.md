@@ -1,10 +1,10 @@
 ---
 title: ftell, _ftelli64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ftelli64
 - ftell
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ftelli64
 - ftell
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - file pointers [C++], getting current position
 - file pointers [C++]
 ms.assetid: 40149cd8-65f2-42ff-b70c-68e3e918cdd7
-ms.openlocfilehash: f9548d4684bd2df734be2b0b703f98d8c7982884
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: fda309420e6ae241d3c8ed73c3d41c8ae50de662
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376125"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956453"
 ---
-# <a name="ftell-ftelli64"></a>ftell, _ftelli64
+# <a name="ftell-_ftelli64"></a>ftell, _ftelli64
 
 Pobiera bieżącą pozycję wskaźnika pliku.
 
@@ -62,7 +65,7 @@ Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errn
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje **ftell** i **_ftelli64** pobierają bieżącą pozycję wskaźnika pliku (jeśli istnieje) skojarzoną ze strumieniem . Pozycja jest wyrażona jako przesunięcie względem początku strumienia.
+Funkcje **ftell** i **_ftelli64** pobierają bieżącą pozycję wskaźnika pliku (jeśli istnieje) skojarzoną ze *strumieniem*. Pozycja jest wyrażona jako przesunięcie względem początku strumienia.
 
 Należy pamiętać, że gdy plik jest otwierany do dołączania danych, bieżąca pozycja w pliku jest określana przez ostatnią operację we/wy, a nie przez miejsce wystąpienia następnego zapisu. Na przykład, jeśli plik jest otwarty do dołączenia, a Ostatnia operacja była odczytana, pozycja w pliku to punkt, w którym rozpocznie się następna operacja odczytu, a nie w miejscu, w którym rozpocznie się następny zapis. (Po otwarciu pliku do dołączenia, pozycja pliku jest przenoszona na koniec pliku przed jakąkolwiek operacją zapisu). Jeśli nie wykonano jeszcze operacji we/wy na pliku otwartym do dołączenia, pozycja w pliku jest początkiem pliku.
 

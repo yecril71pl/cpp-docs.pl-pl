@@ -1,9 +1,9 @@
 ---
 title: towctrans
 ms.date: 11/04/2016
-apiname:
+api_name:
 - towctrans
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - towctrans
 helpviewer_keywords:
 - towctrans function
 ms.assetid: 1ed1e70d-7b31-490f-a7d9-42564b5924ca
-ms.openlocfilehash: b814c65d2f5d0bb18b19d97a539d79dd6df8a1c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d63fc343647cd0f949f282e2a64d4a0636e62bd7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269166"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957427"
 ---
 # <a name="towctrans"></a>towctrans
 
@@ -44,18 +47,18 @@ wint_t towctrans(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak, który chcesz przekształcić.
+Znak, który ma zostać przekształcony.
 
 *category*<br/>
-Identyfikator, który zawiera wartość zwracaną przez [wctrans —](wctrans.md).
+Identyfikator, który zawiera wartość zwracaną z [wctrans](wctrans.md).
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Znak *c*po **towctrans —** używane reguły przekształcania w *kategorii*.
+Znak *c*, po **towctrans** użył reguły przekształcania w *kategorii*.
 
 ## <a name="remarks"></a>Uwagi
 
-Wartość *kategorii* musi zwrócony przez wcześniej pomyślne wywołanie [wctrans —](wctrans.md).
+Wartość *kategorii* musi być zwrócona przez wcześniejsze pomyślne wywołanie do [wctrans](wctrans.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -63,11 +66,11 @@ Wartość *kategorii* musi zwrócony przez wcześniej pomyślne wywołanie [wctr
 |-------------|---------------------|
 |**towctrans**|\<wctype.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz **wctrans —** dla przykładu, który używa **towctrans —**.
+Zobacz **wctrans** , aby uzyskać przykład, który korzysta z **towctrans**.
 
 ## <a name="see-also"></a>Zobacz także
 

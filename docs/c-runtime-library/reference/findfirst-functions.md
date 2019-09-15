@@ -1,7 +1,7 @@
 ---
 title: _findfirst, _findfirst32, _findfirst32i64, _findfirst64, _findfirst64i32, _findfirsti64, _wfindfirst, _wfindfirst32, _wfindfirst32i64, _wfindfirst64, _wfindfirst64i32, _wfindfirsti64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _findfirst
 - _wfindfirst
 - _findfirst32
@@ -14,7 +14,7 @@ apiname:
 - _wfindfirst64i32
 - _findfirsti64
 - _wfindfirsti64
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -26,7 +26,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - findfirst32i64
 - wfindfirst32i64
@@ -100,16 +103,16 @@ helpviewer_keywords:
 - wfindfirst64i32 function
 - _wfindfirst64 function
 ms.assetid: 9bb46d1a-b946-47de-845a-a0b109a33ead
-ms.openlocfilehash: 47a1d7301b59a942a1af860f310e1f1f9da12ec7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f84c70a6b2d9e6f7adf862bdb1622a603c1fdc4c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333745"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957189"
 ---
-# <a name="findfirst-findfirst32-findfirst32i64-findfirst64-findfirst64i32-findfirsti64-wfindfirst-wfindfirst32-wfindfirst32i64-wfindfirst64-wfindfirst64i32-wfindfirsti64"></a>_findfirst, _findfirst32, _findfirst32i64, _findfirst64, _findfirst64i32, _findfirsti64, _wfindfirst, _wfindfirst32, _wfindfirst32i64, _wfindfirst64, _wfindfirst64i32, _wfindfirsti64
+# <a name="_findfirst-_findfirst32-_findfirst32i64-_findfirst64-_findfirst64i32-_findfirsti64-_wfindfirst-_wfindfirst32-_wfindfirst32i64-_wfindfirst64-_wfindfirst64i32-_wfindfirsti64"></a>_findfirst, _findfirst32, _findfirst32i64, _findfirst64, _findfirst64i32, _findfirsti64, _wfindfirst, _wfindfirst32, _wfindfirst32i64, _wfindfirst64, _wfindfirst64i32, _wfindfirsti64
 
-Zawierają informacje dotyczące pierwszego wystąpienia nazwy pliku, który pasuje do pliku określonego w *specyfikacja* argumentu.
+Podaj informacje o pierwszym wystąpieniu nazwy pliku, która jest zgodna z plikiem określonym w argumencie *Specyfikacja* .
 
 ## <a name="syntax"></a>Składnia
 
@@ -166,51 +169,51 @@ intptr_t _wfindfirst64i32(
 
 ### <a name="parameters"></a>Parametry
 
-*filespec*<br/>
+*Specyfikacja*<br/>
 Specyfikacja pliku docelowego (może zawierać symbole wieloznaczne).
 
-*fileinfo*<br/>
-Bufor informacje o pliku.
+*FileInfo*<br/>
+Bufor informacji o plikach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-W przypadku powodzenia **_findfirst** zwraca uchwyt wyszukiwania unikatowe identyfikowanie pliku lub grupy plików, które odpowiadają *specyfikacja* specyfikacja, która może służyć w następnym wywołaniu do metody [_ FindNext](findnext-functions.md) lub [_findclose —](findclose.md). W przeciwnym razie **_findfirst** zwraca wartość -1 i ustawia **errno** do jednej z następujących wartości.
+W przypadku powodzenia funkcja **_findfirst** zwraca unikatowy uchwyt wyszukiwania identyfikujący plik lub grupę plików zgodnych ze specyfikacją *Specyfikacja* , która może być używana w kolejnym wywołaniu [_findnext](findnext-functions.md) lub [_findclose](findclose.md). W przeciwnym razie **_findfirst** zwraca wartość-1 i ustawia **errno** na jedną z następujących wartości.
 
 | errno wartość | Warunek |
 |-|-|
-| **EINVAL** | Nieprawidłowy parametr: *specyfikacja* lub *fileinfo* został **NULL**. Lub system operacyjny zwrócił nieoczekiwany błąd. |
-| **ENOENT** | Specyfikacja pliku nie jest zgodny. |
+| **EINVAL** | Nieprawidłowy parametr: *Specyfikacja* lub *FileInfo* miał **wartość null**. System operacyjny zwrócił nieoczekiwany błąd. |
+| **ENOENT** | Specyfikacja pliku, którego nie można dopasować. |
 | **ENOMEM** | Za mało pamięci. |
-| **EINVAL** | Nieprawidłowy plik specyfikacja nazwy lub nazwy pliku, biorąc pod uwagę był większy niż **MAX_PATH**. |
+| **EINVAL** | Nieprawidłowa specyfikacja nazwy pliku lub określona nazwa pliku jest większa niż **MAX_PATH**. |
 
-Aby uzyskać więcej informacji na temat tych i innych kodach powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tych i innych kodów powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Jeśli podano nieprawidłowy parametr jest przekazywany w, funkcje te wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md).
+Jeśli przeszedł nieprawidłowy parametr, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Należy wywołać [_findclose —](findclose.md) po zakończeniu albo **_findfirst** lub [_findnext](findnext-functions.md) — funkcja (lub warianty). To powoduje zwolnienie zasobów używanych przez te funkcje w aplikacji.
+Musisz wywołać [_findclose](findclose.md) po zakończeniu pracy z funkcją **_findfirst** lub [_findnext](findnext-functions.md) (lub dowolnym wariantem). Spowoduje to zwolnienie zasobów używanych przez te funkcje w aplikacji.
 
-Zmiany te funkcje, które mają **w** prefiks są wersjami znaków dwubajtowych; w przeciwnym razie są identyczne z odpowiednimi funkcjami jednobajtowych.
+Różnice tych funkcji, które mają prefiks **w** , są wersjami znaków dwubajtowych; w przeciwnym razie są identyczne z odpowiednimi funkcjami jednobajtowymi.
 
-Różnice te funkcje obsługuje 32-bitową lub 64-bitowych typów oraz godziny rozmiary plików 32-bitową lub 64-bitowych. Pierwszy sufiksu liczbowego (**32** lub **64**) wskazuje rozmiar typu time; drugi sufiks jest **i32** lub **i64**oraz wskazuje czy rozmiar pliku jest reprezentowany jako 32-bitowy lub 64-bitową liczbę całkowitą. Informacje o tym, które wersje obsługują czasu 32-bitowych i 64-bitowych typów i rozmiarów plików na ten temat można znaleźć w poniższej tabeli. **I32** lub **i64** sufiks jest pomijana, jeżeli jest taki sam jak rozmiar typu czasu, dlatego **_findfirst64 —** również obsługuje 64-bitowy plik długości i **_findfirst32 —**  obsługuje tylko 32-bitowy plik długości.
+Różnice tych funkcji obsługują 32-bitowe lub 64-bitowe typy czasu i 32-bitowe lub 64-bitowe rozmiary plików. Pierwszy sufiks liczbowy (**32** lub **64**) wskazuje rozmiar typu czasu; drugi sufiks jest **I32** lub **I64**i wskazuje, czy rozmiar pliku jest reprezentowany jako 32-bitowa czy 64-bitowa liczba całkowita. Aby uzyskać informacje o tym, które wersje obsługują 32-bitowe i 64-bitowe typy czasu i rozmiary plików, zobacz poniższą tabelę. Sufiks **I32** lub **I64** jest pomijany, jeśli jest taki sam jak rozmiar typu czasu, więc **_findfirst64** obsługuje również 64-bitowe długości plików i **_findfirst32** obsługuje tylko 32-bitowe długości plików.
 
-Te funkcje używają różne rodzaje **_finddata_t —** struktury dla *fileinfo* parametru. Aby uzyskać więcej informacji na temat struktury, zobacz [funkcje wyszukiwania nazwy pliku](../../c-runtime-library/filename-search-functions.md).
+Te funkcje używają różnych form struktury **_finddata_t** dla parametru *FileInfo* . Aby uzyskać więcej informacji na temat struktury, zobacz [funkcje wyszukiwania filename](../../c-runtime-library/filename-search-functions.md).
 
-Zmiany, które używają typu czasu 64-bitowego Włącz daty tworzenia pliku do się wyraża się poprzez 23:59:59, 31 grudnia 3000, czasu UTC. Te, które używają typów 32-bitowych czasu reprezentują daty wyłącznie za pośrednictwem 23:59:59 18 stycznia 2038 r. UTC. Północy 1 stycznia 1970 r., to dolna granica zakresu dat dla tych funkcji.
+Różnice, które korzystają z 64-bitowego typu czasu, umożliwiają, że daty tworzenia plików są wyrażane do 23:59:59, 31 grudnia 3000, UTC. Te, które używają 32-bitowego typu czasu reprezentują daty tylko do 23:59:59 stycznia 18, 2038, UTC. Północ, 1 stycznia 1970, to Dolna granica zakresu dat dla wszystkich tych funkcji.
 
-Chyba że masz powód, aby użyć wersji, które jawnie określ rozmiar w czasie, użyj **_findfirst** lub **_wfindfirst —** lub, jeśli potrzebujesz do obsługi plików większych niż 3 GB, użyj **_ findfirsti64 —** lub **_wfindfirsti64 —**. Wszystkie te funkcje używają typu czasu 64-bitowych. We wcześniejszych wersjach te funkcje używane typem time 32-bitowych. Jeśli jest to istotną zmianę dla aplikacji, można zdefiniować **_USE_32BIT_TIME_T** można przywrócić poprzednie działanie. Jeśli **_USE_32BIT_TIME_T** jest zdefiniowany, **_findfirst**, **_finfirsti64**, i odpowiadające im wersje Unicode używają czasu 32-bitowych.
+O ile nie masz konkretnej przyczyny używania wersji, które jawnie określają rozmiar czasu, użyj **_findfirst** lub **_wfindfirst** lub, jeśli potrzebujesz obsługiwać rozmiary plików większe niż 3 GB, użyj **_findfirsti64** lub **_wfindfirsti64**. Wszystkie te funkcje korzystają z 64-bitowego typu czasu. We wcześniejszych wersjach te funkcje używały typu czasu 32-bitowego. Jeśli jest to istotna zmiana dla aplikacji, można zdefiniować **_USE_32BIT_TIME_T** , aby przywrócić stare zachowanie. Jeśli **_USE_32BIT_TIME_T** jest zdefiniowany, **_findfirst**, **_finfirsti64**i odpowiadające im wersje Unicode używają czasu 32-bitowego.
 
-### <a name="time-type-and-file-length-type-variations-of-findfirst"></a>Typ czasu i zmian typu długość pliku _findfirst
+### <a name="time-type-and-file-length-type-variations-of-_findfirst"></a>Typ czasu i typ długości pliku odmiany _findfirst
 
-|Funkcje|**_USE_32BIT_TIME_T** zdefiniowane?|Typ czasu|Typ długość pliku|
+|Funkcje|Zdefiniowano **_USE_32BIT_TIME_T** ?|Typ czasu|Typ długości pliku|
 |---------------|----------------------------------|---------------|----------------------|
-|**_findfirst**, **_wfindfirst —**|Nie zdefiniowano|64-bitowy|32-bitowa|
-|**_findfirst**, **_wfindfirst —**|Definicja|32-bitowa|32-bitowa|
+|**_findfirst**, **_wfindfirst**|Nie zdefiniowano|64-bitowy|32-bitowa|
+|**_findfirst**, **_wfindfirst**|Określonych|32-bitowa|32-bitowa|
 |**_findfirst32**, **_wfindfirst32**|Nie dotyczy definicji makra|32-bitowa|32-bitowa|
 |**_findfirst64**, **_wfindfirst64**|Nie dotyczy definicji makra|64-bitowy|64-bitowy|
 |**_findfirsti64**, **_wfindfirsti64**|Nie zdefiniowano|64-bitowy|64-bitowy|
-|**_findfirsti64**, **_wfindfirsti64**|Definicja|32-bitowa|64-bitowy|
+|**_findfirsti64**, **_wfindfirsti64**|Określonych|32-bitowa|64-bitowy|
 |**_findfirst32i64**, **_wfindfirst32i64**|Nie dotyczy definicji makra|32-bitowa|64-bitowy|
 |**_findfirst64i32**, **_wfindfirst64i32**|Nie dotyczy definicji makra|64-bitowy|32-bitowa|
 
@@ -235,14 +238,14 @@ Chyba że masz powód, aby użyć wersji, które jawnie określ rozmiar w czasie
 |**_findfirsti64**|\<io.h>|
 |**_findfirst32i64**|\<io.h>|
 |**_findfirst64i32**|\<io.h>|
-|**_wfindfirst**|\<IO.h > lub \<wchar.h >|
-|**_wfindfirst32**|\<IO.h > lub \<wchar.h >|
-|**_wfindfirst64**|\<IO.h > lub \<wchar.h >|
-|**_wfindfirsti64**|\<IO.h > lub \<wchar.h >|
-|**_wfindfirst32i64**|\<IO.h > lub \<wchar.h >|
-|**_wfindfirst64i32**|\<IO.h > lub \<wchar.h >|
+|**_wfindfirst**|\<IO. h > lub \<WCHAR. h >|
+|**_wfindfirst32**|\<IO. h > lub \<WCHAR. h >|
+|**_wfindfirst64**|\<IO. h > lub \<WCHAR. h >|
+|**_wfindfirsti64**|\<IO. h > lub \<WCHAR. h >|
+|**_wfindfirst32i64**|\<IO. h > lub \<WCHAR. h >|
+|**_wfindfirst64i32**|\<IO. h > lub \<WCHAR. h >|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

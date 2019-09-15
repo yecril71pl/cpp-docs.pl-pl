@@ -1,9 +1,9 @@
 ---
 title: _heapset
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _heapset
-apilocation:
+api_location:
 - msvcr90.dll
 - msvcr80.dll
 - msvcr110.dll
@@ -11,7 +11,10 @@ apilocation:
 - msvcrt.dll
 - msvcr120.dll
 - msvcr100.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _heapset
 - heapset
@@ -22,19 +25,19 @@ helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - _heapset function
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
-ms.openlocfilehash: 41c39914964de74401dcdef847b2c44f623af249
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65b74798c4b3b513acea0b51ecc0cb7df98391c1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62343774"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944307"
 ---
-# <a name="heapset"></a>_heapset
+# <a name="_heapset"></a>_heapset
 
-Sprawdza sterty minimalny sprawdzania spójności i ustawia wolnych wpisów określoną wartość.
+Sprawdza sterty pod kątem minimalnej spójności i ustawia bezpłatne wpisy na określoną wartość.
 
 > [!IMPORTANT]
->  Ta funkcja jest przestarzała. Począwszy od programu Visual Studio 2015, nie jest dostępna w CRT.
+>  Ta funkcja jest przestarzała. Począwszy od programu Visual Studio 2015, nie jest on dostępny w CRT.
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,35 +49,35 @@ int _heapset(
 
 #### <a name="parameters"></a>Parametry
 
-*Wypełnienie*<br/>
-Wprowadź znak.
+*pełni*<br/>
+Znak wypełnienia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-`_heapset` Zwraca jedną z następujących stałych całkowitych manifestu w Malloc.h.
+`_heapset`zwraca jedną z następujących stałych w postaci manifestu Integer zdefiniowanej w pliku malloc. h.
 
 |||
 |-|-|
-| `_HEAPBADBEGIN`  | Informacje początkowego nagłówka nieprawidłowe lub nie został odnaleziony.  |
-| `_HEAPBADNODE`  | Sterty uszkodzony lub zły węzeł, do których odnaleźć.  |
-| `_HEAPEMPTY`  | Nie zainicjowano stosu.  |
-| `_HEAPOK`  | Sterty wydaje się być zgodne.  |
+| `_HEAPBADBEGIN`  | Informacje o początkowym nagłówku są nieprawidłowe lub nie zostały odnalezione.  |
+| `_HEAPBADNODE`  | Znaleziono uszkodzony stertę lub zły węzeł.  |
+| `_HEAPEMPTY`  | Sterta nie została zainicjowana.  |
+| `_HEAPOK`  | Sterta wydaje się być spójna.  |
 
-Ponadto, jeśli wystąpi błąd `_heapset` ustawia `errno` do `ENOSYS`.
+Ponadto, jeśli wystąpi błąd, `_heapset` ustawia `errno` na `ENOSYS`.
 
 ## <a name="remarks"></a>Uwagi
 
-`_heapset` Funkcja wykazuje lokalizacje wolnej pamięci albo przez węzły, które zostały przypadkowo zastąpione.
+`_heapset` Funkcja pokazuje wolne lokalizacje pamięci lub węzły, które zostały przypadkowo nadpisane.
 
-`_heapset` sprawdza, czy minimalny spójności na stosie, a następnie ustawia poszczególne bajty sterty bezpłatne wpisów, aby `fill` wartość. Tej znanej wartości pokazuje lokalizacji, w których pamięci sterty zawiera węzły w warstwie bezpłatna i które zawierają dane, które przypadkowo polegają na zwolnionej pamięci. Jeśli system operacyjny nie obsługuje `_heapset`(na przykład Windows 98), funkcja zwraca `_HEAPOK` i ustawia `errno` do `ENOSYS`.
+`_heapset`sprawdza minimalną spójność sterty, a następnie ustawia każdy bajt bezpłatnych wpisów sterty na `fill` wartość. Ta znana wartość wskazuje, które lokalizacje pamięci sterty zawierają wolne węzły, które zawierają dane, które nie zostały celowo zapisywana w pamięci podręcznej. Jeśli `_heapset`system operacyjny nie obsługuje (na przykład Windows 98), funkcja zwraca `_HEAPOK` i ustawia `errno` jako `ENOSYS`.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
+|Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
 |`_heapset`|\<malloc.h>|\<errno.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../c-runtime-library/compatibility.md) we wstępie.
+Aby uzyskać więcej informacji o zgodności, zobacz temat [zgodność](../c-runtime-library/compatibility.md) we wprowadzeniu.
 
 ## <a name="example"></a>Przykład
 

@@ -1,10 +1,10 @@
 ---
 title: puts, _putws
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putws
 - puts
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _putts
 - _putws
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - putts function
 - _putws function
 ms.assetid: 32dada12-ed45-40ac-be06-3feeced9ecd6
-ms.openlocfilehash: 0151d29f627a8f6b91142d619f64921333bb48f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1cd38678b321853cb229d86f9554bb76efbc84d6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358089"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949799"
 ---
-# <a name="puts-putws"></a>puts, _putws
+# <a name="puts-_putws"></a>puts, _putws
 
-Zapisuje ciąg do **stdout**.
+Zapisuje ciąg w strumieniu **stdout**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -59,36 +62,36 @@ Ciąg wyjściowy.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość nieujemną, jeśli to się powiedzie. Jeśli **umieszcza** nie powiedzie się, zwraca **EOF**; Jeśli **_putws —** nie powiedzie się, zwraca **WEOF**. Jeśli *str* jest pustym wskaźnikiem, wywoływany nieprawidłowy parametr uchwytu, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcje ustawiają **errno** do **EINVAL** i zwracają **EOF** lub **WEOF**.
+Zwraca wartość nieujemną, jeśli powodzenie. Jeśli **umieszczenie** nie powiedzie się, zwraca **znacznik EOF**; Jeśli **_putws** nie powiedzie się, zwraca **WEOF**. Jeśli *str* jest pustym wskaźnikiem, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcje ustawiają **errno** na **EINVAL** i zwracają **EOF** lub **WEOF**.
 
-Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje o tych i innych kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**Umieszcza** funkcja pisze *str* do strumienia wyjścia standardowego **stdout**, zastępując ciąg kończący znak null (\0) znakiem nowego wiersza (\n) w strumień wyjściowy.
+Funkcja **Put** zapisuje *str* do standardowego strumienia wyjściowego **stdout**, zastępując znak kończący null ciągu ("\ 0") znakiem nowego wiersza ("\n") w strumieniu wyjściowym.
 
-**_putws —** jest wersją znaków dwubajtowych **umieszcza**; dwie funkcje zachowują się identycznie, jeżeli strumień jest otwarty w trybie ANSI. **umieszcza** aktualnie nie obsługuje danych wyjściowych w strumieniu UNICODE.
+**_putws** to wersja znaku dwubajtowego **umieszczania**; dwie funkcje zachowują się identycznie, jeśli strumień jest otwarty w trybie ANSI. **umieszczenie** nie obsługuje obecnie danych wyjściowych w strumieniu Unicode.
 
 **_putwch** zapisuje znaki Unicode przy użyciu bieżących ustawień regionalnych konsoli.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_putts**|**umieszcza**|**umieszcza**|**_putws**|
+|**_putts**|**sumaryczn**|**sumaryczn**|**_putws**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**umieszcza**|\<stdio.h>|
+|**sumaryczn**|\<stdio.h>|
 |**_putws**|\<stdio.h>|
 
-Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej Windows (UWP). Standardowe uchwyty strumienia, które są powiązane z konsolą, **stdin**, **stdout**, i **stderr**, muszą zostać przekierowane zanim funkcje środowiska wykonawczego języka C można ich używać w aplikacjach platformy UWP . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout**i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
@@ -112,6 +115,6 @@ Hello world from puts!
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fputs, fputws](fputs-fputws.md)<br/>
 [fgets, fgetws](fgets-fgetws.md)<br/>

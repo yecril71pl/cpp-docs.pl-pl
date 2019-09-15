@@ -1,9 +1,9 @@
 ---
 title: _close
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _close
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _close
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-ms.openlocfilehash: faea008903136e8abdc39297672b31800ada796d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e274cd45c42a5cf49430ecce69e111cbbf6fe88b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340017"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942935"
 ---
-# <a name="close"></a>_close
+# <a name="_close"></a>_close
 
 Zamyka plik.
 
@@ -44,36 +47,36 @@ int _close(
 
 ### <a name="parameters"></a>Parametry
 
-*FD*<br/>
-Deskryptor pliku odnoszące się do otwartego pliku.
+*proces*<br/>
+Deskryptor pliku odwołujący się do otwartego pliku.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_zamknij** zwraca wartość 0, jeśli plik został pomyślnie zamknięty. Zwracana wartość-1 wskazuje błąd.
+**_close** zwraca wartość 0, jeśli plik został pomyślnie zamknięty. Zwracana wartość-1 wskazuje na błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Zamknij** funkcja zamyka plik skojarzony z *fd*.
+Funkcja **_close** zamyka plik skojarzony z *FD*.
 
-Deskryptor pliku i dojście do pliku podstawowego systemu operacyjnego są zamknięte. W związku z tym, nie jest konieczne do wywołania **funkcja CloseHandle** Jeśli plik został pierwotnie otwarty przy użyciu funkcji Win32 **CreateFile** i przekonwertowane na deskryptor pliku przy użyciu **_open_osfhandle —**.
+Deskryptor pliku i uchwyt pliku bazowego systemu operacyjnego są zamknięte. Dlatego nie jest konieczne Wywołaj metodę **CloseHandle** , jeśli plik został pierwotnie otwarty przy użyciu funkcji Win32 **File** i przekonwertowanej do deskryptora pliku przy użyciu **_open_osfhandle**.
 
-Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *fd* deskryptor pliku uszkodzonych jest wywołany nieprawidłowy parametr uchwytu, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcje zwraca wartość -1 i **errno** ustawiono **EBADF**.
+Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *FD* jest nieprawidłowym deskryptorem pliku, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcje zwracają wartość-1, a **errno** jest ustawiona na **EBADF**.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
+|Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
 |**_close**|\<io.h>|\<errno.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [_otwórz](open-wopen.md).
+Zobacz przykład dla [_open](open-wopen.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Niskiego poziomu operacji We/Wy](../../c-runtime-library/low-level-i-o.md)<br/>
+[We/wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chsize](chsize.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [_dup, _dup2](dup-dup2.md)<br/>

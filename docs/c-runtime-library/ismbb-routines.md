@@ -1,7 +1,7 @@
 ---
 title: _ismbb — Procedury
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr110.dll
 - msvcrt.dll
 - msvcr80.dll
@@ -9,7 +9,10 @@ apilocation:
 - msvcr120.dll
 - msvcr90.dll
 - msvcr100.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbb
 - ismbb
@@ -17,16 +20,16 @@ helpviewer_keywords:
 - ismbb routines
 - _ismbb routines
 ms.assetid: d63c232e-3fe4-4844-aafd-2133846ece4b
-ms.openlocfilehash: d70604ce71d74bd73a3fea1b99beaf93f052e344
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 374c78ca222f9c63f6b37f26d4cf3a00f48f845e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62343020"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944529"
 ---
-# <a name="ismbb-routines"></a>_ismbb — Procedury
+# <a name="_ismbb-routines"></a>_ismbb — Procedury
 
-Sprawdza daną wartość całkowitą `c` dla określonego warunku, przy użyciu bieżących ustawień regionalnych lub określonej kategorii stanu konwersji LC_CTYPE.
+Testuje daną wartość `c` całkowitą dla określonego warunku przy użyciu bieżących ustawień regionalnych lub określonych kategorii stanu konwersji LC_CTYPE.
 
 |||
 |-|-|
@@ -39,30 +42,30 @@ Sprawdza daną wartość całkowitą `c` dla określonego warunku, przy użyciu 
 
 ## <a name="remarks"></a>Uwagi
 
-Każda procedura w `_ismbb` rodziny sprawdza daną wartość całkowitą `c` dla określonego warunku. Wynik badania jest zależny od stronę kodu wielobajtowego, który jest wynikiem. Domyślnie wielobajtowa strona kodowa jest ustawiona na stronę kodową ANSI uzyskiwaną z systemu operacyjnego w momencie uruchamiania programu. Możesz użyć [_getmbcp](../c-runtime-library/reference/getmbcp.md) utworzyć zapytanie dotyczące stronę kodu wielobajtowego, który jest używany, lub [_setmbcp](../c-runtime-library/reference/setmbcp.md) go zmienić.
+Każda procedura w `_ismbb` rodzinie testuje daną wartość `c` całkowitą dla określonego warunku. Wynik testu zależy od strony kodu wielobajtowego, która obowiązuje. Domyślnie strona kodowa wielobajtowego jest ustawiona na stronę kodową ANSI, która jest uzyskiwana z systemu operacyjnego podczas uruchamiania programu. Możesz użyć [_getmbcp](../c-runtime-library/reference/getmbcp.md) , aby wykonać zapytanie o stronę kodową wielobajtowego, która jest używana, lub [_setmbcp](../c-runtime-library/reference/setmbcp.md) , aby ją zmienić.
 
-Wartość wyjściowa jest zależna od ustawienia `LC_CTYPE` kategorii ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Wersje tych funkcji, które nie mają **_l** sufiks używają bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych; wersje, które mają **_l** sufiksem są identyczne, z wyjątkiem sytuacji, to zamiast nich Użyj parametru ustawień regionalnych, które zostały przekazane.
+Wartość wyjściowa jest zależna od ustawienia `LC_CTYPE` kategorii ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Wersje tych funkcji, które nie mają sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych; wersje, które mają sufiks **_l** są identyczne, z tą różnicą, że zamiast nich używają parametru ustawień regionalnych, który jest przesyłany.
 
-Procedury w `_ismbb` rodziny testu danej liczby całkowitej `c` w następujący sposób.
+Procedury w `_ismbb` rodzinie testują daną liczbę całkowitą `c` w następujący sposób.
 
-|Procedura|Warunki testu bajtu|
+|Procedura|Warunek testu bajtowego|
 |-------------|-------------------------|
 |[_ismbbalnum](../c-runtime-library/reference/ismbbalnum-ismbbalnum-l.md)|`isalnum` &#124;&#124; `_ismbbkalnum`.|
 |[_ismbbalpha](reference/ismbbalpha-ismbbalpha-l.md)|`isalpha` &#124;&#124; `_ismbbkalnum`.|
 |[_ismbbblank](../c-runtime-library/reference/ismbbblank-ismbbblank-l.md)|`isblank`|
-|[_ismbbgraph —](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)|Taki sam jak `_ismbbprint`, ale `_ismbbgraph` nie zawiera znaku spacji (0x20).|
-|[_ismbbkalnum](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|Niż znak interpunkcyjny symbol tekstu spoza zestawu ASCII. Na przykład na stronie kodowej 932 tylko `_ismbbkalnum` testy na znaki katakana alfanumeryczne.|
-|[_ismbbkana](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|Katakana (0xA1 - 0xDF). Specyficzne dla strony kodu 932.|
-|[_ismbbkprint](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|Tekst inny niż ASCII lub symbolem interpunkcji spoza zestawu ASCII. Na przykład na stronie kodowej 932 tylko `_ismbbkprint` testy na znaki katakana alfanumeryczne lub katakana interpunkcyjne (zakres: 0xA1 - 0xDF).|
-|[_ismbbkpunct](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|Znak interpunkcyjny spoza zestawu ASCII. Na przykład na stronie kodowej 932 tylko `_ismbbkpunct` testy na znaki katakana interpunkcyjne.|
-|[_ismbblead](../c-runtime-library/reference/ismbblead-ismbblead-l.md)|Pierwszy bajt znaku wielobajtowego. Na przykład na stronie kodowej 932 tylko, prawidłowymi zakresami są 0x81 - 0x9F, 0xE0 — 0xFC.|
+|[_ismbbgraph](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)|Taki sam `_ismbbprint`jak, `_ismbbgraph` ale nie zawiera znaku spacji (0x20).|
+|[_ismbbkalnum](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|Symbol tekstu spoza zestawu ASCII inny niż interpunkcja. Na przykład, na stronie kodowej 932, `_ismbbkalnum` testy dla znaków alfanumerycznych katakana.|
+|[_ismbbkana](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|Katakana (0xA1-0xDF). Specyficzne dla strony kodowej 932.|
+|[_ismbbkprint](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|Tekst spoza ASCII lub symbol interpunkcyjny spoza ASCII. Na przykład, na stronie kodowej 932 tylko `_ismbbkprint` , testy dla interpunkcji alfanumerycznej katakana lub Katakana (zakres: 0xA1 – 0xDF).|
+|[_ismbbkpunct](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|Znaki interpunkcyjne inne niż ASCII. Na przykład, na stronie kodowej 932 tylko `_ismbbkpunct` , testy dla interpunkcji katakana.|
+|[_ismbblead](../c-runtime-library/reference/ismbblead-ismbblead-l.md)|Pierwszy bajt znaku wielobajtowego. Na przykład, na stronie kodowej 932, prawidłowymi zakresami są 0x81-0x9F, wartość 0xE0-0xFC.|
 |[_ismbbprint](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)|`isprint` &#124;&#124; `_ismbbkprint`. **ismbbprint** zawiera znak spacji (0x20).|
 |[_ismbbpunct](../c-runtime-library/reference/ismbbpunct-ismbbpunct-l.md)|`ispunct` &#124;&#124; `_ismbbkpunct`.|
-|[_ismbbtrail](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md)|Drugi bajt znaku wielobajtowego. Na przykład na stronie kodowej 932 tylko, prawidłowymi zakresami są 0x40 - 0x7E, 0x80 - 0xEC.|
+|[_ismbbtrail](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md)|Drugi bajt znaku wielobajtowego. Na przykład, na stronie kodowej 932, prawidłowymi zakresami są 0x40-0x7E, 0x80-0xEC.|
 
-W poniższej tabeli przedstawiono wartości / / zsumowanie logiczne, które tworzą warunki sprawdzania dla tych procedur. Stałe manifestu `_BLANK`, `_DIGIT`, `_LOWER`, `_PUNCT`, i `_UPPER` są zdefiniowane w Ctype.h.
+W poniższej tabeli przedstawiono wartości logicznie, które tworzą warunki testu dla tych procedur. Stałe `_BLANK`manifestu `_DIGIT` ,`_PUNCT`,, i`_UPPER` są zdefiniowane w CType. h. `_LOWER`
 
-|Procedura|_BLANK|_DIGIT|NIŻSZY|_PUNCT|GÓRNY|Non-<br /><br /> ASCII<br /><br /> tekst|Non-<br /><br /> ASCII<br /><br /> punct|
+|Procedura|_BLANK|_DIGIT|DOŁU|_PUNCT|PRAWYM GÓRNYM|Które<br /><br /> ASCII<br /><br /> tekst|Które<br /><br /> ASCII<br /><br /> punct|
 |-------------|-------------|-------------|-----------|-------------|-----------|------------------------------|-------------------------------|
 |`_ismbbalnum`|—|x|x|—|x|x|—|
 |`_ismbbalpha`|—|—|x|—|x|x|—|
@@ -74,7 +77,7 @@ W poniższej tabeli przedstawiono wartości / / zsumowanie logiczne, które twor
 |`_ismbbprint`|x|x|x|x|x|x|x|
 |`_ismbbpunct`|—|—|—|x|—|—|x|
 
-`_ismbb` Procedury są wykonywane zarówno jako funkcje, jak i makra. Aby uzyskać więcej informacji dotyczących sposoby wyboru każdej implementacji, zobacz [zalecenia dotyczące wybierania pomiędzy funkcjami i makrami](../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).
+`_ismbb` Procedury są implementowane zarówno jako funkcje, jak i makra. Aby uzyskać więcej informacji na temat wybierania implementacji, zobacz [zalecenia dotyczące wybierania funkcji i makr](../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).
 
 ## <a name="see-also"></a>Zobacz także
 

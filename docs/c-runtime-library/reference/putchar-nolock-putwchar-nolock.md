@@ -1,10 +1,10 @@
 ---
 title: _putchar_nolock, _putwchar_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putchar_nolock
 - _putwchar_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - putwchar_nolock
 - _puttchar_nolock
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - _putwchar_nolock function
 - puttchar_nolock function
 ms.assetid: 9ac68092-bfc3-4352-b486-c3e780220575
-ms.openlocfilehash: 2a70c2363b5ae35faab9a0167200366b286408b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4dba6537c5fb7ec66a812f2c34831b1b908fc3e4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358167"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949945"
 ---
-# <a name="putcharnolock-putwcharnolock"></a>_putchar_nolock, _putwchar_nolock
+# <a name="_putchar_nolock-_putwchar_nolock"></a>_putchar_nolock, _putwchar_nolock
 
 Zapisuje znak do **stdout** bez blokowania wątku.
 
@@ -65,7 +68,7 @@ Zobacz **putchar, putwchar**.
 
 ## <a name="remarks"></a>Uwagi
 
-**putchar_nolock** i **_putwchar_nolock —** są takie same jak wersje bez **_nolock** sufiks z tą różnicą, że nie są chronione przed ingerencją przez inne wątki. Mogą one być szybsze, ponieważ nie wiążą się z obciążeniem związanym z blokowaniem innych wątków. Za pomocą tych funkcji tylko w kontekstach wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywołujący już obsługuje izolację wątków.
+**putchar_nolock** i **_putwchar_nolock** są identyczne z wersjami bez sufiksu **_nolock** , z tą różnicą, że nie są chronione przed ingerencją przez inne wątki. Mogą one być szybsze, ponieważ nie wiążą się z zablokowaniem innych wątków. Tych funkcji należy używać tylko w kontekstach bezpiecznych dla wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywoływania już obsługuje izolację wątku.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -78,13 +81,13 @@ Zobacz **putchar, putwchar**.
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_putchar_nolock**|\<stdio.h>|
-|**_putwchar_nolock**|\<stdio.h > lub \<wchar.h >|
+|**_putwchar_nolock**|\<stdio. h > lub \<WCHAR. h >|
 
-Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej Windows (UWP). Standardowe uchwyty strumienia, które są powiązane z konsolą, **stdin**, **stdout**, i **stderr**, muszą zostać przekierowane zanim funkcje środowiska wykonawczego języka C można ich używać w aplikacjach platformy UWP . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout**i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
@@ -118,6 +121,6 @@ This is the line of output
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fputc, fputwc](fputc-fputwc.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>

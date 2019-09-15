@@ -1,9 +1,9 @@
 ---
 title: umask
 ms.date: 11/04/2016
-apiname:
+api_name:
 - umask
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,19 +14,22 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - umask
 helpviewer_keywords:
 - umask function
 ms.assetid: d2f697fc-08d5-4b70-9dd5-df3f5bb8b754
-ms.openlocfilehash: e939282057fee1aa39fb09a4c28cc91278989827
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 988c94e54a23d6ea41a0b7342377f605d7364925
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62304679"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950321"
 ---
 # <a name="umask"></a>umask
 
-Ta funkcja POSIX jest niezalecana. Użyj ISO C++ zgodność [_umask —](umask.md) lub zwiększenia bezpieczeństwa [_umask_s —](umask-s.md) zamiast tego.
+Ta funkcja POSIX jest przestarzała. Zamiast tego użyj C++ [_umask_s](umask-s.md) zgodnego ze standardem ISO [_umask](umask.md) lub zabezpieczeń.

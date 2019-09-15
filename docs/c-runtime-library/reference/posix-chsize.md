@@ -1,9 +1,9 @@
 ---
 title: chsize
 ms.date: 11/04/2016
-apiname:
+api_name:
 - chsize
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,19 +14,22 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - chsize
 helpviewer_keywords:
 - chsize function
 ms.assetid: f94d62f6-b539-4cbf-bf99-b81d081b4216
-ms.openlocfilehash: 63e81ad2386b1480f6481724bbbab6282028a2cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5687065c878dfb5fddb504f5c93047e07681dd76
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156028"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950937"
 ---
 # <a name="chsize"></a>chsize
 
-Ta funkcja POSIX jest niezalecana. Użyj ISO C++ zgodność [_chsize —](chsize.md) lub zwiększenia bezpieczeństwa [_chsize_s —](chsize-s.md) zamiast tego.
+Ta funkcja POSIX jest przestarzała. Zamiast tego użyj C++ [_chsize_s](chsize-s.md) zgodnego ze standardem ISO [_chsize](chsize.md) lub zabezpieczeń.

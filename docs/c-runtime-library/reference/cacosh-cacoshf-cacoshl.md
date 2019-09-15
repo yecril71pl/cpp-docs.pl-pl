@@ -1,11 +1,11 @@
 ---
-title: cacosh cacoshf, cacoshl
+title: cacosh, cacoshf, cacoshl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cacosh
 - cacoshf
 - cacoshl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cacosh
 - cacoshf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - cacoshf function
 - cacoshl function
 ms.assetid: 83fd05eb-3587-4741-9be6-589a830a1703
-ms.openlocfilehash: aa31dfa1b29eda18d34528fc8aa9544e58a5a082
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 05ba0b37540e9f1b2dbb4d255e0fa033b54762d1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340732"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943406"
 ---
-# <a name="cacosh-cacoshf-cacoshl"></a>cacosh cacoshf, cacoshl
+# <a name="cacosh-cacoshf-cacoshl"></a>cacosh, cacoshf, cacoshl
 
-Pobiera cosinus hiperboliczny liczby zespolonej z gałęzią Wytnij mniej niż 1 osi rzeczywistych wartości. .
+Pobiera odwrotny cosinus hiperboliczny liczby zespolonej z rozgałęzieniem o wartości mniejszej niż 1 wzdłuż osi rzeczywistej. .
 
 ## <a name="syntax"></a>Składnia
 
@@ -64,23 +67,23 @@ _Lcomplex cacoshl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Liczby zespolonej oznacza kąt w radianach.
+Liczba zespolona, która reprezentuje kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Arcus cosinus hiperboliczny *z*, w radianach. Wynik jest nieograniczona i wartość nieujemną wzdłuż osi prawdziwe, a w interwale [-iπ, + iπ] urojone osi.
+Arcus cosinus hiperboliczny *z z, w*radianach. Wynik nie jest ograniczony i nieujemny wzdłuż rzeczywistej osi, a w interwale [-iπ, + iπ] wzdłuż osi urojonej.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **cacosh** przyjmujące i zwracające **_Fcomplex** i **_Lcomplex** wartości. W programie C **cacosh** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **cacosh** , które pobierają i zwracają wartości **_Fcomplex** i **_Lcomplex** . W programie C **cacosh** zawsze przyjmuje i zwraca wartość **_Dcomplex** .
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|Nagłówek języka C++|
+|Procedura|Nagłówek języka C|C++nagłówki|
 |-------------|--------------|------------------|
 |**cacosh**,               **cacoshf**, **cacoshl**|\<complex.h>|\<ccomplex>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,11 +1,11 @@
 ---
-title: COS cosf —, cosl —
+title: cos, cosf, cosl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - cos
 - cosf
 - cosl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cos
 - cosf
@@ -31,14 +34,14 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: b050fd98a35028b121def8b665fce62ad58ec437
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d07a8636aabc4973c7beb9725a39e98c229a098
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335363"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942835"
 ---
-# <a name="cos-cosf-cosl"></a>COS cosf —, cosl —
+# <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
 Oblicza cosinus.
 
@@ -62,28 +65,28 @@ Kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Cosinus *x*. Jeśli *x* jest większe niż lub równy 263 lub mniejsze niż lub równy -263, wystąpi utrata znaczenia w wyniku.
+Cosinus *x*. Jeśli wartość *x* jest większa lub równa 263 lub mniejsza lub równa-263, występuje utrata znaczenia w wyniku.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|GRANICACH QNAN, ZNAJDŹ|brak|**_DOMAIN**|
-|GRANICACH INF|**NIEPRAWIDŁOWY**|**_DOMAIN**|
+|QNAN, IND|brak|**_DOMAIN**|
+|± INF|**NIEPRAWIDŁOWY**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **cos** przyjmujące i zwracające **float** lub **długie** **double** wartości. W programie C **cos** zawsze przyjmuje i zwraca **double**.
+Ponieważ C++ umożliwia Przeciążenie, można wywoływać przeciążenia funkcji **cos** , które pobierają i zwracają wartości **zmiennoprzecinkowe** lub **długie** **Double** . W programie C funkcja **cos** zawsze przyjmuje i zwraca wartość **Double**.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Wymagany nagłówek języka C|Wymagany nagłówek C++|
+|Procedura|Wymagany nagłówek C|Wymagany C++ nagłówek|
 |-------------|---------------------|-|
-|**cos**, **cosh**, **cosf**|\<math.h>|\<cmath > lub \<math.h >|
+|**cos**, **cosh —** , **cosf —**|\<math.h>|\<cmath > lub \<Math. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład w [sin, sinf — sinl —](sin-sinf-sinl.md).
+Zobacz przykład w [Sin, SINF —, sinl](sin-sinf-sinl.md).
 
 ## <a name="see-also"></a>Zobacz także
 

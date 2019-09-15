@@ -1,10 +1,10 @@
 ---
 title: _beginthread, _beginthreadex
 ms.date: 02/27/2018
-apiname:
+api_name:
 - _beginthread
 - _beginthreadex
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - beginthread
 - _beginthread
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: 27bc850281f7591b4fa23a03e9adc3bc02bda87b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8714e945464dd98483f9347c4226321a96cda61c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500304"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943631"
 ---
 # <a name="_beginthread-_beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -130,7 +133,7 @@ System operacyjny obsługuje alokację stosu, gdy wywoływana jest **_beginthrea
 
 *arglist* jest parametrem, który ma zostać przesłany do nowo utworzonego wątku. Zwykle jest to adres elementu danych, na przykład ciąg znaków. *arglist* może mieć **wartość null** , jeśli nie jest to konieczne, ale **_beginthread** i **_beginthreadex** muszą mieć określoną wartość do przekazania do nowego wątku. Wszystkie wątki są przerywane, jeśli dowolnych wywołań wątku [Abort](abort.md), **Exit**, **_exit**lub **ExitProcess —** .
 
-Ustawienia regionalne nowego wątku są inicjowane przy użyciu globalnie bieżących informacji o ustawieniach regionalnych dla poszczególnych procesów. Jeśli ustawienia regionalne dla wątku są włączone przez wywołanie [_configthreadlocale](configthreadlocale.md) (globalnie lub tylko dla nowych wątków), wątek może zmienić ustawienia regionalne niezależnie od innych wątków, wywołując metodę setlocale lub **_wsetlocale**. Wątki, które nie mają ustawionej flagi ustawień regionalnych dla wątku, mogą mieć wpływ na informacje o ustawieniach regionalnych we wszystkich innych wątkach, które również nie mają ustawionej flagi ustawień regionalnych dla wątku, a także wszystkie nowo utworzone wątki. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Ustawienia regionalne nowego wątku są inicjowane przy użyciu globalnie bieżących informacji o ustawieniach regionalnych dla poszczególnych procesów. Jeśli ustawienia regionalne dla wątku są włączone przez wywołanie [_configthreadlocale](configthreadlocale.md) (globalnie lub tylko dla nowych wątków), wątek może zmienić ustawienia regionalne niezależnie od innych wątków, wywołując metodę **setlocale** lub **_wsetlocale**. Wątki, które nie mają ustawionej flagi ustawień regionalnych dla wątku, mogą mieć wpływ na informacje o ustawieniach regionalnych we wszystkich innych wątkach, które również nie mają ustawionej flagi ustawień regionalnych dla wątku, a także wszystkie nowo utworzone wątki. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 W przypadku kodu/CLR **_beginthread** i **_beginthreadex** mają dwa przeciążenia. Jeden z nich przyjmuje natywny wskaźnik funkcji konwencji wywoływania, a drugi przyjmuje wskaźnik funkcji **__clrcall** . Pierwsze Przeciążenie nie jest bezpieczne dla domeny aplikacji i nigdy nie będzie. Jeśli piszesz kod **/CLR** , musisz upewnić się, że nowy wątek przejdzie do właściwej domeny aplikacji przed uzyskaniem dostępu do zarządzanych zasobów. Można to zrobić na przykład przy użyciu [funkcji call_in_appdomain](../../dotnet/call-in-appdomain-function.md). Drugie Przeciążenie jest bezpieczne dla domeny aplikacji; nowo utworzony wątek zawsze będzie kończyć się w domenie aplikacji obiektu wywołującego **_beginthread** lub **_beginthreadex**.
 

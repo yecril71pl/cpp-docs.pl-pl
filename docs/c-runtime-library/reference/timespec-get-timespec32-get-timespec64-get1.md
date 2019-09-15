@@ -1,11 +1,11 @@
 ---
 title: timespec_get, _timespec32_get, _timespec64_get1
 ms.date: 11/04/2016
-apiname:
+api_name:
 - timespec_get
 - _timespec32_get
 - _timespec64_get
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - timespec_get
 - _timespec32_get
@@ -33,16 +36,16 @@ helpviewer_keywords:
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-ms.openlocfilehash: 1591189ff2db78605c334e72ac3be13876afc81d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0517c974bf58d502133ccd9868149bd178790d6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155553"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957618"
 ---
-# <a name="timespecget-timespec32get-timespec64get"></a>timespec_get, _timespec32_get, _timespec64_get
+# <a name="timespec_get-_timespec32_get-_timespec64_get"></a>timespec_get, _timespec32_get, _timespec64_get
 
-Ustawia interwał wskazywany przez pierwszy argument bieżący czas w kalendarzu na podstawie określonego czasu podstawowego.
+Ustawia interwał wskazywany przez pierwszy argument do bieżącego czasu kalendarza w oparciu o określony czas podstawowy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -64,32 +67,32 @@ int _timespec64_get(
 ### <a name="parameters"></a>Parametry
 
 *time_spec*<br/>
-Wskaźnik do struktury, który jest ustawiony na czas w sekundach i nanosekundach, od momentu rozpoczęcia epoki.
+Wskaźnik do struktury, która jest ustawiona na czas w sekundach i nanosekundach od momentu rozpoczęcia epoki.
 
 *base*<br/>
-Wartość specyficzne dla implementacji różna od zera, który określa czas (podstawa).
+Różna od zera wartość specyficzna dla implementacji, która określa podstawę czasu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość *podstawowy* Jeśli operacja się powiedzie, w przeciwnym razie zwraca wartość zero.
+Wartość *podstawowa* , jeśli się powiedzie, w przeciwnym razie zwraca wartość zero.
 
 ## <a name="remarks"></a>Uwagi
 
-**Timespec_get** funkcji Ustaw bieżący czas w strukturze wskazywany przez *time_spec* argumentu. Wszystkie wersje tej struktury ma dwa elementy członkowskie, **tv_sec** i **tv_nsec**. **Tv_sec** ma wartość całkowitą liczbę sekund i **tv_nsec** z całkowitą liczbą nanosekundach zaokrąglony rozdzielczość zegara systemowego od momentu rozpoczęcia epoki określony przez *podstawowy*.
+Funkcje **timespec_get** ustawiają bieżący czas w strukturze wskazywany przez argument *time_spec* . Wszystkie wersje tej struktury mają dwa elementy członkowskie, **tv_sec** i **tv_nsec**. Wartość **tv_sec** jest ustawiona na całkowitą liczbę sekund i **tv_nsec** na całkowitą liczbę nanosekund, zaokrągloną do rozdzielczości zegara systemowego, od momentu rozpoczęcia epoki określonej przez *podstawę*.
 
 **Microsoft Specific**
 
-Funkcje te obsługują tylko **TIME_UTC** jako *podstawowy* wartość. To ustawienie *time_spec* wartość liczby sekund i nanosekundach, od początku epoki uruchomienia północy 1 stycznia 1970 r., skoordynowanego czasu uniwersalnego (UTC). W **struktury** **_timespec32**, **tv_sec** jest **__time32_t** wartości. W **struktury** **_timespec64**, **tv_sec** jest **__time64_t —** wartość. W **struktury** **timespec**, **tv_sec** jest **time_t** typ, który jest 32-bitowy lub 64 bity długości, w zależności od tego, czy preprocesora makra zdefiniowano _use_32bit_time_t. **Timespec_get** funkcja jest funkcją śródwierszową, który wywołuje **_timespec32_get** Jeśli zdefiniowano _use_32bit_time_t; w przeciwnym razie wywoływanych przez nią **_timespec64_get**.
+Te funkcje obsługują tylko **TIME_UTC** jako wartość *bazową* . Ustawia wartość *time_spec* na liczbę sekund i nanosekund od momentu rozpoczęcia epoki, północy, 1 stycznia 1970, uniwersalny czas koordynowany (UTC). W **strukturze** **_timespec32** **tv_sec** jest wartością **__time32_t** . W **strukturze** **_timespec64** **tv_sec** jest wartością **__time64_t** . W **strukturze** **timespec** **tv_sec** jest typem **time_t** , który jest 32 bity lub 64 bitów w zależności od tego, czy zdefiniowano _USE_32BIT_TIME_T makro preprocesora. Funkcja **timespec_get** jest wbudowaną funkcją, która wywołuje **_TIMESPEC32_GET** , jeśli _USE_32BIT_TIME_T jest zdefiniowany; w przeciwnym razie wywołuje **_timespec64_get**.
 
-**End specyficzny dla Microsoft**
+**Zakończenie określonych przez firmę Microsoft**
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**timespec_get**, **_timespec32_get**, **_timespec64_get**|C: \<time.h >, języka C++: \<ctime > lub \<time.h >|
+|**timespec_get**, **_timespec32_get**, **_timespec64_get**|C: \<Time. h >, C++: \<CTime > lub \<Time. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,14 +1,14 @@
 ---
 title: _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _atoldbl
 - _atoldbl_l
 - _atodbl
 - _atoflt
 - _atoflt_l
 - _atodbl_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _atoflt
 - _atoflt_l
@@ -49,16 +52,16 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-ms.openlocfilehash: bb8d711dc8dfa912333f34603ad607f0a74143bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f3b164042006cab22d0dfd9a7968e2d2e494f5c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349280"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943621"
 ---
-# <a name="atodbl-atodbll-atoldbl-atoldbll-atoflt-atofltl"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
+# <a name="_atodbl-_atodbl_l-_atoldbl-_atoldbl_l-_atoflt-_atoflt_l"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 
-Konwertuje ciąg na wartość o podwójnej precyzji (**_atodbl —**), podwójny długi (**_atoldbl —**), lub float (**_atoflt —**).
+Konwertuje ciąg na podwójny ( **_atodbl**), long double ( **_atoldbl**) lub float ( **_atoflt**).
 
 ## <a name="syntax"></a>Składnia
 
@@ -74,25 +77,25 @@ int _atoflt_l( _CRT_FLOAT * value, const char * str, locale_t locale );
 ### <a name="parameters"></a>Parametry
 
 *value*<br/>
-Podwójna, Długa podwójna lub wartość zmiennoprzecinkowa, która jest wytwarzana przez przekonwertowanie ciągu na wartość zmiennoprzecinkową. Te wartości są zapakowane w strukturze.
+Wartość Double, long double lub float, która jest generowana przez konwersję ciągu na wartość zmiennoprzecinkową. Te wartości są opakowane w strukturę.
 
 *str*<br/>
-Ciąg, który ma być analizowany, aby przekonwertować na wartość zmiennoprzecinkową.
+Ciąg, który ma zostać przeanalizowany do konwersji na wartość zmiennoprzecinkową.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość 0, jeśli kończy się pomyślnie. Możliwe kody błędów są **_UNDERFLOW** lub **_OVERFLOW**, które są definiowane w pliku nagłówkowym \<math.h >.
+Zwraca wartość 0, jeśli powodzenie. Możliwe kody błędów to **_UNDERFLOW** lub **_OVERFLOW**, które są zdefiniowane w pliku \<nagłówkowym Math. h >.
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje konwertują ciąg na wartość zmiennoprzecinkową. Różnica między tymi funkcjami i **atof —** rodziną funkcji jest, że te funkcje nie generują kodu zmiennoprzecinkowego i nie powodują wyjątków sprzętowych. Zamiast tego błędy są zgłaszane jako kody błędów.
+Te funkcje konwertują ciąg na wartość zmiennoprzecinkową. Różnica między tymi funkcjami i rodziną **atofą** funkcji polega na tym, że funkcje te nie generują kodu zmiennoprzecinkowego i nie powodują wyjątków sprzętowych. Zamiast tego, warunki błędów są raportowane jako kody błędów.
 
-Jeśli ciąg nie posiada prawidłowej interpretacji jako wartość zmiennoprzecinkowa *wartość* jest równa zero i zwracana wartość jest równa zero.
+Jeśli ciąg nie ma prawidłowej interpretacji jako wartości zmiennoprzecinkowej, *wartość* jest ustawiona na zero, a wartość zwracana to zero.
 
-Wersje tych funkcji, które mają **_l** sufiksem są identyczne z wersjami, które nie mają tego sufiksu, z tą różnicą, że używają one *ustawień regionalnych* parametru, który jest przekazywany zamiast bieżącego wątku Ustawienia regionalne.
+Wersje tych funkcji, które mają sufiks **_l** są identyczne z wersjami, które nie mają sufiksu, z tą różnicą, że używają parametru *ustawień regionalnych* , który został przekazaną, zamiast bieżących ustawień regionalnych wątku.
 
 ## <a name="requirements"></a>Wymagania
 

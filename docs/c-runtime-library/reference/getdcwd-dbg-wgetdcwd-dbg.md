@@ -1,10 +1,10 @@
 ---
 title: _getdcwd_dbg, _wgetdcwd_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getdcwd_dbg
 - _wgetdcwd_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getdcwd_dbg
 - getdcwd_dbg
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - _wgetdcwd_dbg function
 - directories [C++], current working
 ms.assetid: 266bf6f0-0417-497f-963d-2e0f306d9385
-ms.openlocfilehash: 700cfe732dc390ca59a976694403bb3d91af5980
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8eb22f3716102c1b63b483e493eb44ac99228004
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331860"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955232"
 ---
-# <a name="getdcwddbg-wgetdcwddbg"></a>_getdcwd_dbg, _wgetdcwd_dbg
+# <a name="_getdcwd_dbg-_wgetdcwd_dbg"></a>_getdcwd_dbg, _wgetdcwd_dbg
 
-Debuguj wersje [_getdcwd —, _wgetdcwd —](getdcwd-wgetdcwd.md) funkcji (dostępne tylko podczas debugowania).
+Wersje debugowania funkcji [_getdcwd, _wgetdcwd](getdcwd-wgetdcwd.md) (dostępne tylko podczas debugowania).
 
 ## <a name="syntax"></a>Składnia
 
@@ -64,33 +67,33 @@ wchar_t *_wgetdcwd_dbg(
 
 ### <a name="parameters"></a>Parametry
 
-*drive*<br/>
-Nazwa dysku.
+*litera*<br/>
+Nazwa stacji dysków.
 
 *buffer*<br/>
 Lokalizacja przechowywania dla ścieżki.
 
 *maxlen*<br/>
-Maksymalna długość ścieżki w znakach: **char** dla **_getdcwd_dbg —** i **wchar_t** dla **_wgetdcwd_dbg —**.
+Maksymalna długość ścieżki w znakach: **char** dla **_getdcwd_dbg** i **wchar_t** dla **_wgetdcwd_dbg**.
 
-*blockType*<br/>
+*BlockType*<br/>
 Żądany typ bloku pamięci: **_CLIENT_BLOCK** lub **_NORMAL_BLOCK**.
 
 *Nazwa pliku*<br/>
-Wskaźnik na nazwę pliku źródłowego, który zażądał operacji alokacji lub **NULL**.
+Wskaźnik na nazwę pliku źródłowego, który zażądał operacji alokacji lub **ma wartość null**.
 
-*numer wiersza*<br/>
-Numer wiersza w pliku źródłowym, gdzie zażądano operacji alokacji lub **NULL**.
+*LineNumber*<br/>
+Numer wiersza w pliku źródłowym, w którym zażądano operacji alokacji lub **ma wartość null**.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do *buforu*. A **NULL** zwracana wartość wskazuje błąd, i **errno** ustawiono opcję **ENOMEM**, wskazujący, że jest za mało pamięci do przydzielenia *maxlen* bajtów (gdy **o wartości NULL** argument jest podawana jako *buforu*), lub **ERANGE**, wskazującą, czy ścieżka jest dłuższa niż *maxlen*  znaków. Aby uzyskać więcej informacji, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Zwraca wskaźnik do *buforu*. Wartość zwracana **null** wskazuje na błąd, a **errno** jest ustawiona na **ENOMEM**, co oznacza, że za mało pamięci do przydzielenia bajtów *MaxLen* (gdy argument o **wartości null** jest podawany jako *bufor*) lub do **ERANGE** , co oznacza, że ścieżka jest dłuższa niż *MaxLen* znaków. Aby uzyskać więcej informacji, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_Getdcwd_dbg —** i **_wgetdcwd_dbg —** funkcje są takie same jak **_getdcwd —** i **_wgetdcwd —** z tą różnicą, że gdy **_DEBUG** jest zdefiniowany, te funkcje używają wersji debugowania **— funkcja malloc** i **_malloc_dbg** można przydzielić pamięci, jeśli **NULL** jest przekazywany jako *buforu* parametru. Aby uzyskać więcej informacji, zobacz [_malloc_dbg](malloc-dbg.md).
+Funkcje **_getdcwd_dbg** i **_wgetdcwd_dbg** są identyczne z **_getdcwd** i **_wgetdcwd** , z tą różnicą, że w przypadku zdefiniowania elementu **_DEBUG** te funkcje korzystają z wersji " **malloc** " i " **_malloc_dbg** " do Przydziel pamięć, jeśli **wartość null** jest przenoszona jako parametr *buforu* . Aby uzyskać więcej informacji, zobacz [_malloc_dbg](malloc-dbg.md).
 
-Nie trzeba jawnie wywołać w większości przypadków te funkcje. Zamiast tego możesz zdefiniować **_CRTDBG_MAP_ALLOC** flagi. Gdy **_CRTDBG_MAP_ALLOC** jest zdefiniowany, wywołania **_getdcwd —** i **_wgetdcwd —** są mapowane ponownie do **_getdcwd_dbg —** i **_ wgetdcwd_dbg —**, odpowiednio, z *blockType* równa **_NORMAL_BLOCK**. Dzięki temu, nie trzeba jawnie wywołać te funkcje, chyba że chcesz oznaczyć bloki stosu jako **_CLIENT_BLOCK**. Aby uzyskać więcej informacji, zobacz [typy bloków na stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
+Nie trzeba jawnie wywoływać tych funkcji w większości przypadków. Zamiast tego można zdefiniować flagę **_CRTDBG_MAP_ALLOC** . Gdy **_CRTDBG_MAP_ALLOC** jest zdefiniowany, wywołania **_getdcwd** i **_wgetdcwd** są ponownie mapowane odpowiednio do **_getdcwd_dbg** i **_wgetdcwd_dbg**, z atrybutem *BlockType* ustawionym na wartość **_NORMAL_BLOCK**. W ten sposób nie trzeba wywoływać tych funkcji jawnie, chyba że chcesz oznaczyć bloki sterty jako **_CLIENT_BLOCK**. Aby uzyskać więcej informacji, zobacz [typy bloków na stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -105,7 +108,7 @@ Nie trzeba jawnie wywołać w większości przypadków te funkcje. Zamiast tego 
 |**_getdcwd_dbg**|\<crtdbg.h>|
 |**_wgetdcwd_dbg**|\<crtdbg.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

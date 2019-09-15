@@ -1,9 +1,9 @@
 ---
 title: _aligned_recalloc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_recalloc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - aligned_recalloc
 - _aligned_recalloc
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - aligned_recalloc function
 - _aligned_recalloc function
 ms.assetid: d3da3dcc-79ef-4273-8af5-ac7469420142
-ms.openlocfilehash: ce505c5a389d4ff6aa12a88bfc47fb0a6f026eea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef25769a04b27b02ccda16e86451a068ab0a0b84
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335611"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943784"
 ---
-# <a name="alignedrecalloc"></a>_aligned_recalloc
+# <a name="_aligned_recalloc"></a>_aligned_recalloc
 
-Zmienia rozmiar bloku pamięci, która została przydzielona za pomocą [_aligned_malloc](aligned-malloc.md) lub [_aligned_offset_malloc —](aligned-offset-malloc.md) i inicjuje pamięć na 0.
+Zmienia rozmiar bloku pamięci, który został przydzielony do [_aligned_malloc](aligned-malloc.md) lub [_aligned_offset_malloc](aligned-offset-malloc.md) i inicjuje pamięć do 0.
 
 ## <a name="syntax"></a>Składnia
 
@@ -48,28 +51,28 @@ void * _aligned_recalloc(
 ### <a name="parameters"></a>Parametry
 
 *memblock*<br/>
-Wskaźnik bieżącego bloku pamięci.
+Bieżący wskaźnik bloku pamięci.
 
-*Numer*<br/>
+*Liczba*<br/>
 Liczba elementów.
 
-*Rozmiar*<br/>
+*zmienia*<br/>
 Rozmiar w bajtach każdego elementu.
 
-*Wyrównanie*<br/>
+*struktury*<br/>
 Wartość wyrównania, która musi być całkowitą potęgą liczby 2.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_aligned_recalloc —** zwraca pusty wskaźnik do bloku pamięci ponownie przydzielane (i ewentualnie przenoszenia). Wartość zwracana jest **NULL** Jeśli rozmiar wynosi zero, a argument bufor nie jest **NULL**, lub jeśli nie jest za mało dostępnej pamięci, aby rozwinąć blok na dany rozmiar. W pierwszym przypadku oryginalnego bloku jest zwalniana. W drugim przypadku oryginalnego bloku jest bez zmian. Zwracana wartość wskazuje miejsce do magazynowania, który gwarantuje bycia odpowiednio wyrównaną do przechowywania dowolnego typu obiektu. Aby uzyskać wskaźnik do typu innego niż void, użyj typu rzutowanego na wartość zwracaną.
+**_aligned_recalloc** zwraca wskaźnik void do ponownie przydzielony blok pamięci (i prawdopodobnie został przeniesiony). Wartość zwracana ma wartość **null** , jeśli rozmiar ma wartość zero, a argument buforu nie ma **wartości null**lub jeśli nie ma wystarczającej ilości dostępnej pamięci, aby rozszerzyć blok na dany rozmiar. W pierwszym przypadku, oryginalny blok jest zwolniony. W drugim przypadku oryginalny blok nie zmienia się. Wartość zwracana wskazuje miejsce do magazynowania, które jest gwarantowane odpowiednio wyrównane do przechowywania dowolnego typu obiektu. Aby uzyskać wskaźnik do typu innego niż void, należy użyć rzutowania typu dla zwracanej wartości.
 
-Jest to błąd, ponownego przydzielenia pamięci i zmienić wyrównanie bloku.
+Wystąpił błąd podczas ponownego przydzielenia pamięci i zmiany wyrównania bloku.
 
 ## <a name="remarks"></a>Uwagi
 
-**_aligned_recalloc —** opiera się na **— funkcja malloc**. Aby uzyskać więcej informacji o korzystaniu z **_aligned_offset_malloc —**, zobacz [— funkcja malloc](malloc.md).
+**_aligned_recalloc** jest oparta na **malloc**. Aby uzyskać więcej informacji na temat korzystania z programu **_aligned_offset_malloc**, zobacz [malloc](malloc.md).
 
-Funkcja ta ustawia **errno** do **ENOMEM** Jeśli alokacja pamięci nie powiodła się lub Jeśli żądany rozmiar był większy niż **_heap_maxreq —**. Aby uzyskać więcej informacji na temat **errno**, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Ponadto **_aligned_recalloc —** sprawdza poprawność parametrów. Jeśli *wyrównanie* nie jest potęgą 2, funkcja wywoła procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **NULL** i ustawia **errno** do **EINVAL**.
+Ta funkcja ustawia **errno** na **ENOMEM** , jeśli alokacja pamięci nie powiodła się lub żądany rozmiar był większy niż **_HEAP_MAXREQ**. Aby uzyskać więcej informacji na temat **errno**, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Ponadto **_aligned_recalloc** sprawdza poprawność swoich parametrów. Jeśli *wyrównanie* nie jest potęgą liczby 2, ta funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja zwraca **wartość null** i ustawia **errno** na **EINVAL**.
 
 ## <a name="requirements"></a>Wymagania
 

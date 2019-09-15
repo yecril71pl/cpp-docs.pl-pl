@@ -1,10 +1,10 @@
 ---
 title: _lrotl, _lrotr
 ms.date: 04/04/2018
-apiname:
+api_name:
 - _lrotl
 - _lrotr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lrotr
 - lrotl
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - _lrotl function
 - bits, rotating
 ms.assetid: d42f295b-35f9-49d2-9ee4-c66896ffe68e
-ms.openlocfilehash: 71ca61676e4551155f9f14e792c5c1cee65ddb7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea78aeb8829a80abae345b4e9e6ac3a7bbaddf8b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156970"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953028"
 ---
-# <a name="lrotl-lrotr"></a>_lrotl, _lrotr
+# <a name="_lrotl-_lrotr"></a>_lrotl, _lrotr
 
-Obracanie bitów w lewo (**_lrotl —**) lub w prawo (**_lrotr —**).
+Powoduje obrócenie bitów w lewo ( **_lrotl**) lub prawo ( **_lrotr**).
 
 ## <a name="syntax"></a>Składnia
 
@@ -52,26 +55,26 @@ unsigned long _lrotr( unsigned long value, int shift );
 ### <a name="parameters"></a>Parametry
 
 *value*<br/>
-Wartość jest.
+Wartość, która ma zostać obrócona.
 
 *shift*<br/>
-Liczba bitów, aby przenieść *wartość*.
+Liczba bitów na *wartość*przesunięcia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Obie funkcje zwracają wartość obrócony. Nie będzie zwrotu błędu.
+Obie funkcje zwracają wartość obróconą. Brak powrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Lrotl —** i **_lrotr —** Obróć funkcje *wartość* przez *shift* usługi bits. **_lrotl —** obraca się wartość pozostanie w kierunku bardziej znaczące bity. **_lrotr —** obraca się wartość po prawej stronie, kierunku mniej znaczące bity. Obie funkcje opakować obracać wyłączyć jeden z punktów końcowych usługi bits *wartość* w innym celu.
+Funkcje **_lrotl** i **_lrotr** obracają *wartość* przez bity *SHIFT* . **_lrotl** obraca wartość w lewo, w kierunku bardziej znaczących bitów. **_lrotr** obraca wartość w prawo w kierunku mniej znaczących bitów. Obie funkcje zawijają bity, obracają się z jednego końca *wartości* do drugiego.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_lrotl —**, **_lrotr —**|\<stdlib.h>|
+|**_lrotl**, **_lrotr**|\<stdlib.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

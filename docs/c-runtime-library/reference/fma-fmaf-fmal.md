@@ -1,11 +1,11 @@
 ---
 title: fma, fmaf, fmal
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fma
 - fmaf
 - fmal
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fma
 - fmaf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-ms.openlocfilehash: f96592e245e443bae2f3334da51cae5572753708
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4ddc4061e5a24ee3b5176aedc569d134d85e0002
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333498"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957104"
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 
-Mnoży dwie wartości ze sobą, dodaje trzecia wartość, a następnie zaokrągla wyniku bez utraty żadnych dokładności spowodowane zaokrąglanie pośrednie.
+Mnoży dwie wartości, dodaje trzecią wartość, a następnie zaokrągla wynik, bez utraty dokładności ze względu na zaokrąglenie pośrednie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -88,34 +91,34 @@ Wartość do dodania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca `(x * y) + z`. Wartość zwracana to jest zaokrąglana przy użyciu bieżącego formatu zaokrąglania.
+Zwraca `(x * y) + z`wartość. Wartość zwracana jest następnie zaokrąglana przy użyciu bieżącego formatu zaokrąglania.
 
 W przeciwnym razie może zwracać jedną z następujących wartości:
 
-|Problem|Wróć|
+|Problem|przesłać|
 |-----------|------------|
-|*x* = NIESKOŃCZONOŚĆ, *y* = 0 lub<br /><br /> *x* = 0, *y* = NIESKOŃCZONOŚĆ|NaN|
-|*x* lub *y* dokładnie mniej więcej w NIESKOŃCZONOŚĆ, *z* = NIESKOŃCZONOŚCI znakiem odwrotną|NaN|
+|*x* = nieskończoność, *y* = 0 lub<br /><br /> *x* = 0, *y* = nieskończoność|NaN|
+|*x* lub *y* = dokładnie ± nieskończoność *z =* nieskończoność ze znakiem odwrotnym|NaN|
 |*x* lub *y* = NaN|NaN|
-|nie (*x* = 0, *y*= nieokreślony) i *z* = NaN<br /><br /> nie (*x*= nieokreślony, *y*= 0) i *z* = NaN|NaN|
-|Błąd w zakresie przepełnienia|±HUGE_VAL, ±HUGE_VALF lub ±HUGE_VALL|
-|Błąd zakresu niedopełnienie|poprawnej wartości, po zaokrągleniu zgodnym.|
+|nie (*x* = 0, *y*= nieograniczone) i *z* = NaN<br /><br /> nie (*x*= nieokreślony, *y*= 0) i *z* = NaN|NaN|
+|Błąd przepełnienia zakresu|HUGE_VAL, HUGE_VALF lub HUGE_VALL|
+|Błąd zakresu niedopełnienia|poprawna wartość po zaokrągleniu.|
 
-Błędy są zgłaszane określonej [_matherr](matherr.md).
+Błędy są raportowane zgodnie z opisem w [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **fma** przyjmujące i zwracające **float** i **długie** **double** typów. W programie C **fma** zawsze przyjmuje i zwraca **double**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **FMA** , które pobierają i zwracają **zmiennoprzecinkowe** i **długie** **podwójne** typy. W programie C **FMA** zawsze przyjmuje i zwraca wartość **Double**.
 
-Ta funkcja oblicza wartość tak, jakby zostały pobrane z dokładnością do nieskończoności, a następnie zaokrągla wynik końcowy.
+Ta funkcja oblicza wartość tak, jakby była pobrana z dokładnością do nieskończoności, a następnie zaokrągla wynik końcowy.
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek języka C|Nagłówek języka C++|
+|Funkcja|Nagłówek języka C|C++nagłówki|
 |--------------|--------------|------------------|
-|**fma**, **fmaf**, **fmal**|\<math.h>|\<cmath>|
+|**FMA**, **fmaf —** , **Fmal**|\<math.h>|\<cmath >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

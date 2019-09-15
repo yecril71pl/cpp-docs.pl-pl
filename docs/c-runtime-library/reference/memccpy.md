@@ -1,9 +1,9 @@
 ---
 title: _memccpy
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _memccpy
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _memccpy
 helpviewer_keywords:
 - _memccpy function
 - memccpy function
 ms.assetid: 9a2337df-6e85-4eba-b247-dd0532f45ddb
-ms.openlocfilehash: 704aab84ea3e39c91def1d4ac8b6d2d9d3650759
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 097cefb504ffcdbfbe6bf131d5e8b1837d11a47a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499691"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951963"
 ---
 # <a name="_memccpy"></a>_memccpy
 
@@ -66,7 +69,7 @@ Jeśli znak *c* jest kopiowany, **_memccpy** zwraca wskaźnik do znaku w elemenc
 
 Funkcja **_memccpy** kopiuje 0 lub więcej znaków *src* do miejsca *docelowego*, zatrzymuje się, gdy znak *c* został skopiowany lub po skopiowaniu *liczby* znaków, w zależności od tego, co nastąpi wcześniej.
 
-**Uwaga dotycząca zabezpieczeń** Upewnij się, że bufor docelowy ma ten sam rozmiar lub większy niż bufor źródłowy. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
+**Uwaga dotycząca zabezpieczeń** Upewnij się, że bufor docelowy ma ten sam rozmiar lub większy niż bufor źródłowy. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ## <a name="requirements"></a>Wymagania
 

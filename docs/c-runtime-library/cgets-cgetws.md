@@ -1,10 +1,10 @@
 ---
 title: _cgets, _cgetws
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cgetws
 - _cgets
-apilocation:
+api_location:
 - msvcr100.dll
 - msvcr110.dll
 - msvcr80.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr110_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cgetws
 - _cgetws
@@ -27,22 +30,22 @@ helpviewer_keywords:
 - cgetws function
 - cgets function
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
-ms.openlocfilehash: ea4d7be7631f22eecbea7c6727295c17d86dba06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa258eaba34feec8ea25d780ea6392f195e37508
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290173"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944688"
 ---
-# <a name="cgets-cgetws"></a>_cgets, _cgetws
+# <a name="_cgets-_cgetws"></a>_cgets, _cgetws
 
-Pobiera ciąg znaków z konsoli. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [_cgets_s, _cgetws_s —](../c-runtime-library/reference/cgets-s-cgetws-s.md).
-
-> [!IMPORTANT]
->  Te funkcje są przestarzałe. Począwszy od programu Visual Studio 2015, nie są one dostępne w CRT. Bezpieczne wersje tych funkcji, _cgets_s i _cgetws_s —, są nadal dostępne. Informacje na temat tych funkcji alternatywnych, zobacz [_cgets_s, _cgetws_s —](../c-runtime-library/reference/cgets-s-cgetws-s.md).
+Pobiera ciąg znaków z konsoli. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).
 
 > [!IMPORTANT]
->  Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+>  Te funkcje są przestarzałe. Począwszy od programu Visual Studio 2015, nie są one dostępne w CRT. Bezpieczne wersje tych funkcji, _cgets_s i _cgetws_s, są nadal dostępne. Aby uzyskać informacje na temat tych funkcji alternatywnych, zobacz [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).
+
+> [!IMPORTANT]
+>  Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -66,19 +69,19 @@ wchar_t *_cgetws(
 #### <a name="parameters"></a>Parametry
 
 *buffer*<br/>
-Lokalizacja magazynowa danych.
+Lokalizacja magazynu dla danych.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-`_cgets` i `_cgetws` zwracają wskaźnik do początku ciągu, w `buffer[2]`. Jeśli `buffer` jest **NULL**, funkcje te wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, zwracają one **NULL** i ustaw `errno` do `EINVAL`.
+`_cgets`i `_cgetws` zwraca wskaźnik do początku ciągu, w `buffer[2]`. Jeśli `buffer` ma **wartość null**, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, zwracają **wartości null** i ustawiają `errno` na `EINVAL`.
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje odczytują ciąg znaków z konsoli i przechowują ciąg i jego długość w lokalizacji wskazywanej przez `buffer`. `buffer` Parametru musi być wskaźnikiem do tablicy znaków. Pierwszy element tablicy, `buffer[0]`, musi zawierać maksymalną długość (w znakach) ciągu do odczytu. Tablica musi zawierać tyle elementów, aby pomieścić ciąg, kończący znak null (\0) i 2 bajty dodatkowe. Funkcja odczytuje znaki do momentu powrotu karetki — wiersza kanału informacyjnego kombinacji (CR-LF) lub określoną liczbę znaków jest do odczytu. Ciąg jest przechowywany, zaczynając od `buffer[2]`. Jeśli funkcja odczytuje CR-LF, przechowuje znak null ('\0'). Funkcja następnie przechowuje rzeczywista długość ciągu drugiego elementu tablicy, `buffer[1]`.
+Te funkcje odczytują ciąg znaków z konsoli programu i przechowują ciąg i jego długość w lokalizacji wskazywanej przez `buffer`. `buffer` Parametr musi być wskaźnikiem do tablicy znaków. Pierwszy element tablicy `buffer[0]`,, musi zawierać maksymalną długość (w znakach) ciągu, który ma zostać odczytany. Tablica musi zawierać wystarczającą liczbę elementów do przechowania ciągu, kończący znak null (' \ 0 ') i 2 dodatkowe bajty. Funkcja odczytuje znaki do momentu, aż zostanie odczytana kombinacja powrotu karetki liniowej (CR-LF) lub podanej liczby znaków. Ciąg jest przechowywany od `buffer[2]`. Jeśli funkcja odczytuje CR-LF, przechowuje znak null (' \ 0 '). Funkcja przechowuje następnie rzeczywistą długość ciągu w drugim elemencie Array, `buffer[1]`.
 
-Ponieważ wszystkie klawisze edycji są aktywne, kiedy `_cgets` lub `_cgetws` jest wywoływana, gdy w konsoli okna, naciskanie klawisza F3 powtarza ostatni wprowadzony wpis.
+Ponieważ wszystkie klawisze edycji są aktywne, `_cgets` gdy `_cgetws` lub jest wywoływana w oknie konsoli, naciśnięcie klawisza F3 powtarza ostatnio wprowadzony wpis.
 
-W języku C++ funkcje te mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../c-runtime-library/secure-template-overloads.md).
+W C++programie te funkcje mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -91,9 +94,9 @@ W języku C++ funkcje te mają przeciążenia szablonu, które wywołują nowsze
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |`_cgets`|\<conio.h>|
-|`_cgetws`|\<conio.h > lub \<wchar.h >|
+|`_cgetws`|\<CONIO. h > lub \<WCHAR. h >|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -141,5 +144,5 @@ Text = A line of input.
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy konsoli i portu](../c-runtime-library/console-and-port-i-o.md)<br/>
+[We/wy konsoli i portu](../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getch, _getwch](../c-runtime-library/reference/getch-getwch.md)

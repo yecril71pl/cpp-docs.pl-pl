@@ -1,12 +1,12 @@
 ---
 title: strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strncmp
 - _mbsncmp
 - wcsncmp
 - _mbsncmp_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ftcsnccmp
 - _ftcsncmp
@@ -49,19 +52,19 @@ helpviewer_keywords:
 - characters [C++], comparing
 - _ftcsnccmp function
 ms.assetid: 2fdbf4e6-77da-4b59-9086-488f6066b8af
-ms.openlocfilehash: 8f022dec6c161814ade5c6be5aaccfcd239a4af4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 597db3825d1d6165fb6bd4b98b8d469ea8947b59
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209863"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947356"
 ---
-# <a name="strncmp-wcsncmp-mbsncmp-mbsncmpl"></a>strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
+# <a name="strncmp-wcsncmp-_mbsncmp-_mbsncmp_l"></a>strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
 
-Porównano do określonej liczby znaków dwa ciągi.
+Porównuje do określonej liczby znaków dwóch ciągów.
 
 > [!IMPORTANT]
-> **_mbsncmp —** i **_mbsncmp_l —** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncmp** i **_mbsncmp_l** nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -96,54 +99,54 @@ int _mbsncmp_l(
 ### <a name="parameters"></a>Parametry
 
 *ciąg1*, *ciąg2*<br/>
-Ciągi znaków do porównania.
+Ciągi do porównania.
 
-*Liczba*<br/>
+*liczbą*<br/>
 Liczba znaków do porównania.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość zwracana określa relację z podciągów *ciąg1* i *ciąg2* w następujący sposób.
+Wartość zwracana określa relację podciągów wartości *ciąg1* i *ciąg2* w następujący sposób.
 
 |Wartość zwracana|Opis|
 |------------------|-----------------|
-|< 0|*ciąg1* podciąg mniejszy niż *ciąg2* podciąg|
-|0|*ciąg1* podciąg identyczny z *ciąg2* podciąg|
-|> 0|*ciąg1* podciąg większy niż *ciąg2* podciąg|
+|< 0|*ciąg1* podciągu krótszy niż *ciąg2* podciąg|
+|0|*ciąg1* podciąg identyczny z podciągiem *ciąg2*|
+|> 0|*ciąg1* podciągu powyżej *ciąg2*|
 
-Na błąd sprawdzania poprawności parametru **_mbsncmp —** i **_mbsncmp_l —** zwracają **_NLSCMPERROR**, który jest zdefiniowany w \<string.h > i \< mbstring.h >.
+W przypadku błędu walidacji parametru **_mbsncmp** i **_mbsncmp_l** zwracają **_NLSCMPERROR**, który jest zdefiniowany w \<String. h > i \<mbstring. h >.
 
 ## <a name="remarks"></a>Uwagi
 
-**Strncmp —** funkcja wykonuje porównanie porządkowe, co najwyżej pierwsze *liczba* znaki w *ciąg1* i *ciąg2* i Zwraca wartość określającą relację pomiędzy podciągami. **strncmp —** jest rozróżniana wielkość liter wersją **_strnicmp —**. **wcsncmp —** i **_mbsncmp —** jest rozróżniana wielkość liter wersje **_wcsnicmp —** i **_mbsnicmp —**.
+Funkcja **strncmp** wykonuje porównanie porządkowe dla pierwszych znaków *Count* w wartości *ciąg1* i *ciąg2* i zwraca wartość wskazującą zależność między podciągami. **strncmp** to wersja **_strnicmp**z uwzględnieniem wielkości liter. **wcsncmp** i **_mbsncmp** to wersje **_wcsnicmp** i **_mbsnicmp**z uwzględnieniem wielkości liter.
 
-**wcsncmp —** i **_mbsncmp —** są wersjami znaków dwubajtowych i znaków wielobajtowych **strncmp —**. Argumenty **wcsncmp —** są znakami dwubajtowymi ciągów; te z **_mbsncmp —** są ciągami znaków wielobajtowych. **_mbsncmp —** rozpoznaje sekwencje znaków wielobajtowych według stronę kodu wielobajtowego i zwraca **_NLSCMPERROR** w przypadku błędu.
+**wcsncmp** i **_mbsncmp** są wersjami znaków dwubajtowych i znakami wieloznacznymi **strncmp**. Argumenty **wcsncmp** są ciągami znaków dwubajtowych; te z **_mbsncmp** są ciągami znaków wielobajtowych. **_mbsncmp** rozpoznaje sekwencje znaków wielobajtowych zgodnie ze stroną kodową wielobajtowego i zwraca **_NLSCMPERROR** w przypadku błędu.
 
-Ponadto **_mbsncmp —** i **_mbsncmp_l —** sprawdzają poprawność parametrów. Jeśli *ciąg1* lub *ciąg2* jest pustym wskaźnikiem, wywoływany nieprawidłowy parametr uchwytu, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **_mbsncmp —** i **_mbsncmp_l —** zwracają **_NLSCMPERROR** i ustaw **errno** do  **EINVAL**. **strncmp —** i **wcsncmp —** nie sprawdzają poprawność swoich parametrów. Funkcje te zachowują się identycznie.
+Ponadto **_mbsncmp** i **_mbsncmp_l** weryfikują parametry. Jeśli *ciąg1* lub *ciąg2* jest wskaźnikiem o wartości null, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **_mbsncmp** i **_mbsncmp_l** zwracają **_NLSCMPERROR** i ustawia **errno** na **EINVAL**. **strncmp** i **wcsncmp** nie weryfikują ich parametrów. Funkcje te zachowują się identycznie w inny sposób.
 
-Zachowanie porównania **_mbsncmp —** i **_mbsncmp_l —** jest zależna od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych. Ta opcja kontroluje wykrywanie początkowe i końcowe bajtów znaków wielobajtowych. Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). **_Mbsncmp —** funkcji używa bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych. **_Mbsncmp_l —** funkcja jest identyczna, z tą różnicą, że używa *ustawień regionalnych* parametru zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md). Jeśli ustawienia regionalne są jednobajtowe ustawień regionalnych, zachowanie tych funkcji jest taka sama jak **strncmp —**.
+Zachowanie porównania **_mbsncmp** i **_mbsncmp_l** ma wpływ na ustawienie kategorii **LC_CTYPE** dla ustawień regionalnych. Kontroluje to wykrywanie wiodących i końcowych bajtów znaków wielobajtowych. Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). Funkcja **_mbsncmp** używa bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. Funkcja **_mbsncmp_l** jest identyczna, z tą różnicą, że zamiast tego używa parametru *ustawień regionalnych* . Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md). Jeśli ustawienia regionalne są jednobajtowe, zachowanie tych funkcji jest identyczne z **strncmp**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsnccmp —**|**strncmp**|**_mbsncmp**|**wcsncmp —**|
-|**_tcsncmp —**|**strncmp**|**_mbsnbcmp**|**wcsncmp —**|
-|**_tccmp**|Mapy i makro lub funkcja śródwierszowa|**_mbsncmp**|Mapy i makro lub funkcja śródwierszowa|
-|**Nie dotyczy**|**Nie dotyczy**|**_mbsncmp_l**|**Nie dotyczy**|
+|**_tcsnccmp**|**strncmp**|**_mbsncmp**|**wcsncmp**|
+|**_tcsncmp**|**strncmp**|**_mbsnbcmp**|**wcsncmp**|
+|**_tccmp**|Mapuje na makro lub funkcję wbudowaną|**_mbsncmp**|Mapuje na makro lub funkcję wbudowaną|
+|**nie dotyczy**|**nie dotyczy**|**_mbsncmp_l**|**nie dotyczy**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**strncmp**|\<string.h>|
-|**wcsncmp —**|\<Włącz String.h > lub \<wchar.h >|
+|**wcsncmp**|\<ciąg. h > lub \<WCHAR. h >|
 |**_mbsncmp**, **_mbsncmp_l**|\<mbstring.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

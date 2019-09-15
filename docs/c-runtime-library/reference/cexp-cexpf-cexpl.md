@@ -1,11 +1,11 @@
 ---
 title: cexp, cexpf, cexpl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cexp
 - cexpf
 - cexpl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cexp
 - cexpf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - cexpl function
 - cexpf function
 ms.assetid: f27fd5a9-70c7-4957-a7ee-5256d19bd1da
-ms.openlocfilehash: 401dd30b326fcd6caef7cae6f1ecbdc43ed5dd5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0dd6c9deddfe93cf044985f93b2129695d0770f0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335467"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943169"
 ---
 # <a name="cexp-cexpf-cexpl"></a>cexp, cexpf, cexpl
 
-Obliczenia eksponentę liczby zespolonej.
+Oblicz wykładniczą wartość liczby zespolonej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,23 +60,23 @@ _Lcomplex cexp( _Lcomplex z );  // C++ only
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Liczby zespolonej, który reprezentuje wykładnik potęgi.
+Liczba złożona, która reprezentuje wykładnik.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość **e** podniesione do potęgi równej *z*.
+Wartość **e** podniesioną do potęgi *z.*
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **cexp** przyjmujące i zwracające **_Fcomplex** i **_Lcomplex** wartości. W programie C **cexp** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **cexp** , które pobierają i zwracają wartości **_Fcomplex** i **_Lcomplex** . W programie C **cexp** zawsze przyjmuje i zwraca wartość **_Dcomplex** .
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|Nagłówek języka C++|
+|Procedura|Nagłówek języka C|C++nagłówki|
 |-------------|--------------|------------------|
 |**cexp**, **cexpf**, **cexpl**|\<complex.h>|\<complex.h>|
 
-Aby uzyskać informacje o zgodności – zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

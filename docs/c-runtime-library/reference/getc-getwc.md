@@ -1,10 +1,10 @@
 ---
 title: getc, getwc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - getwc
 - getc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _gettc
 - getwc
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - getwc function
 - gettc function
 ms.assetid: 354ef514-d0c7-404b-92f5-995f6a834bb3
-ms.openlocfilehash: bbaee79eac6802959a11f7f1ba30eaf590ecf2f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ceb3ca117271e7074c6cb72c9c1f9e74ebe3bc10
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331873"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955494"
 ---
 # <a name="getc-getwc"></a>getc, getwc
 
-Przeczytaj znak ze strumienia.
+Odczytaj znak ze strumienia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -61,26 +64,26 @@ Strumień wejściowy.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca znak odczytywany. Aby wskazać błąd odczytu lub warunek końca pliku **getc —** zwraca **EOF**, i **getwc —** zwraca **WEOF**. Aby uzyskać **getc —**, użyj **ferror** lub **feof** pod kątem wystąpienia błędu lub końca pliku. Jeśli *strumienia* jest **NULL**, **getc —** i **getwc —** wywołują nieprawidłowy parametr uchwytu, zgodnie z opisem w [parametru Sprawdzanie poprawności](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **EOF** (lub **WEOF** dla **getwc —**) i ustaw **errno** do  **EINVAL**.
+Zwraca odczyt znaku. Aby wskazać błąd odczytu lub stan końca pliku, **getc —** zwraca wartość **EOF**, a **getwc** zwraca **WEOF**. W przypadku **getc —** Użyj obiektu **odwołującego** lub **feof** , aby wyszukać błąd lub koniec pliku. Jeśli *strumień* ma **wartość null**, **getc —** i **getwc** Wywołaj procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **eof** (lub **WEOF** dla **getwc**) i ustawiają **errno** na **EINVAL**.
 
-Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów błędu,.
+Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) , aby uzyskać więcej informacji na temat tych i innych kodów błędów.
 
 ## <a name="remarks"></a>Uwagi
 
-Każda procedura odczytuje pojedynczy znak z pliku w bieżącym położeniu i zwiększa skojarzony wskaźnik pliku (Jeżeli zdefiniowane) aby wskazywała na następny znak. Plik jest skojarzony z *strumienia*.
+Każda procedura odczytuje pojedynczy znak z pliku w bieżącym położeniu i zwiększa skojarzony wskaźnik pliku (jeśli jest zdefiniowany), aby wskazywał na następny znak. Plik jest skojarzony ze *strumieniem*.
 
-Te funkcje blokują wywołania wątku i dlatego jest metodą o bezpiecznych wątkach. Dla wersji bez blokady, zobacz [_getc_nolock —, _getwc_nolock —](getc-nolock-getwc-nolock.md).
+Te funkcje blokują wątek wywołujący i dlatego są bezpieczne wątkowo. W przypadku wersji, która nie jest blokowana, zobacz [_getc_nolock, _getwc_nolock](getc-nolock-getwc-nolock.md).
 
-Wykonaj rutynowe specyficzne uwagi.
+Uwagi dotyczące rutynowych czynności.
 
 |Procedura|Uwagi|
 |-------------|-------------|
-|**getc**|Taki sam jak **fgetc —**, ale zaimplementowane jako funkcja i makra.|
-|**getwc**|Wersja znaków dwubajtowych **getc —**. Odczytuje znak wielobajtowy lub znak dwubajtowy ze czy *strumienia* jest otwarty w trybie tekstu lub w trybie binarnym.|
+|**getc**|Analogicznie jak **fgetc**, ale zaimplementowane jako funkcja i jako makro.|
+|**getwc**|Dwubajtowa wersja **getc —** . Odczytuje znak wielobajtowy lub szeroki znak w zależności od tego, czy *strumień* jest otwarty w trybie tekstowym czy w trybie binarnym.|
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_gettc**|**getc**|**getc**|**getwc**|
 
@@ -89,9 +92,9 @@ Wykonaj rutynowe specyficzne uwagi.
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**getc**|\<stdio.h>|
-|**getwc**|\<stdio.h > lub \<wchar.h >|
+|**getwc**|\<stdio. h > lub \<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -130,7 +133,7 @@ int main()
 }
 ```
 
-### <a name="input-crtgetctxt"></a>Dane wejściowe: crt_getc.txt
+### <a name="input-crt_getctxt"></a>Dane wejściowe: crt_getc. txt
 
 ```Input
 Line one.
@@ -145,7 +148,7 @@ Input was: Line one.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>
 [putc, putwc](putc-putwc.md)<br/>

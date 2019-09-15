@@ -1,10 +1,10 @@
 ---
 title: c16rtomb, c32rtomb
 ms.date: 01/22/2018
-apiname:
+api_name:
 - c16rtomb
 - c32rtomb
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - c16rtomb
 - c32rtomb
@@ -26,16 +29,16 @@ helpviewer_keywords:
 - c16rtomb function
 - c32rtomb function
 ms.assetid: 7f5743ca-a90e-4e3f-a310-c73e16f4e14d
-ms.openlocfilehash: ad58184c7bab6f95a842bda5f9eb545f09434a3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a16effe48442ccbb5144b57ead2fb15c908fe898
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341759"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943430"
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb, c32rtomb
 
-Konwertuj UTF-16 lub UTF-32 znaków dwubajtowych znaków wielobajtowych przy bieżących ustawieniach regionalnych.
+Przekonwertuj znak dwubajtowy UTF-16 lub UTF-32 na znak wieloznaczny w bieżącym ustawieniach regionalnych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -55,25 +58,25 @@ size_t c32rtomb(
 ### <a name="parameters"></a>Parametry
 
 *mbchar*<br/>
-Wskaźnik do tablicy do przechowywania wielobajtowy znak przekonwertowany.
+Wskaźnik do tablicy w celu zapisania znaku wielobajtowego.
 
-*WChar*<br/>
-Szeroki znak do przekształcenia.
+*WCHAR*<br/>
+Znak dwubajtowy do przekonwertowania.
 
 *state*<br/>
-Wskaźnik do **mbstate_t** obiektu.
+Wskaźnik do obiektu **mbstate_t** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Liczbę bajtów przechowywanych w tablicy obiektów *mbchar*, włączając wszelkie sekwencje shift. Jeśli *wchar* nie jest prawidłową znakiem dwubajtowym, wartość (**size_t**)(-1) zostaną zwrócone, **errno** jest ustawiona na **EILSEQ**, a wartość *stanu* jest nieokreślona.
+Liczba bajtów przechowywanych w obiekcie array *mbchar*, łącznie z dowolnymi sekwencjami przesunięcia. Jeśli *WCHAR* nie jest prawidłowym znakiem dwubajtowym, zwracana jest wartość (**size_t**) (-1), **errno** jest ustawiona na **EILSEQ**, a wartość *stanu* jest nieokreślona.
 
 ## <a name="remarks"></a>Uwagi
 
-**C16rtomb** funkcja konwertuje znak UTF-16 *wchar* sekwencji równoważne wielobajtowym wąskie przy bieżących ustawieniach regionalnych. Jeśli *mbchar* nie jest wskaźnikiem typu null, magazyny funkcja przekonwertowanego sekwencję w obiekt array wskazywany przez *mbchar*. Maksymalnie **MB_CUR_MAX** bajtów są przechowywane w *mbchar*, i *stanu* jest ustawiona na Wynikowy stan wielobajtowych shift.    Jeśli *wchar* jest null znakiem dwubajtowym, wymagane do sekwencji przywracania stanu początkowego przesunięcia są przechowywane, jeśli to konieczne, następuje znak null i *stanu* jest ustawiony do stanu początkowego konwersji. **C32rtomb** funkcji są identyczne, ale konwertuje znaków UTF-32.
+Funkcja **c16rtomb** KONWERTUJE znak UTF-16 *WCHAR* na równoważną sekwencję znaków wielobajtowych w bieżącym ustawieniach regionalnych. Jeśli *mbchar* nie jest pustym wskaźnikiem, funkcja przechowuje przekonwertowaną sekwencję w obiekcie array wskazywanym przez *mbchar*. Do **MB_CUR_MAX** bajty są przechowywane w *mbchar*, a *stan* jest ustawiony na wynikający z nich stan zmiany wielobajtowego.    Jeśli *WCHAR* jest znakiem dwubajtowym, sekwencja wymagana do przywrócenia stanu początkowej zmiany jest przechowywana, w razie potrzeby, po którym następuje znak null, a *stan* jest ustawiony na początkowy stan konwersji. Funkcja **c32rtomb** jest taka sama, ale KONWERTUJE znak UTF-32.
 
-Jeśli *mbchar* jest pustym wskaźnikiem, zachowanie jest odpowiednikiem wywołania funkcji, która zastępuje buforu wewnętrznego dla *mbchar* oraz szerokiego znaku null dla *wchar*.
+Jeśli *mbchar* jest wskaźnikiem typu null, zachowanie jest równoważne wywołaniu funkcji, która zastępuje bufor wewnętrzny dla *mbchar* i o szerokim znaku null dla *WCHAR*.
 
-*Stanu* konwersji stan obiektu pozwala na utworzenie kolejnych wywołań tej funkcji i innych funkcji ponownego uruchamiania, które obsługi stanu shift znaków wielobajtowych danych wyjściowych. Wyniki są niezdefiniowane podczas jednoczesnego korzystania z funkcji ponownego uruchamiania i bez ponownego uruchamiania, czy wywołanie **setlocale** składa się między wywołaniami funkcji ponownego uruchamiania.
+Obiekt stanu konwersji *stanu* umożliwia wykonywanie kolejnych wywołań tej funkcji i innych funkcji, które są uruchamiane ponownie, które utrzymują stan przesunięcia znaków danych wyjściowych wielobajtowych. Wyniki są niezdefiniowane w przypadku używania funkcji ponownego uruchamiania i nie uruchamianych ponownie lub jeśli wywołanie metody **setlocaling** jest nawiązywane między wywołaniami funkcji, które można uruchomić ponownie.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -81,7 +84,7 @@ Jeśli *mbchar* jest pustym wskaźnikiem, zachowanie jest odpowiednikiem wywoła
 |-------------|---------------------|
 |**c16rtomb**, **c32rtomb**|C, C++: \<uchar.h>|
 
-Aby uzyskać informacje o zgodności – zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

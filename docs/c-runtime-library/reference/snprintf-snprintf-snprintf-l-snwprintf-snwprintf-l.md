@@ -1,13 +1,13 @@
 ---
 title: snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _snwprintf
 - _snprintf
 - _snprintf_l
 - _snwprintf_l
 - snprintf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _snprintf
 - snprintf_l
@@ -48,12 +51,12 @@ helpviewer_keywords:
 - sntprintf function
 - formatted text [C++]
 ms.assetid: 5976c9c8-876e-4ac9-a515-39f3f7fd0925
-ms.openlocfilehash: 8f7ce565467321c8e2ea5c80cae9ef41297ccaed
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a1d11efebad57bdcf44ca959384f449640dad701
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499515"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948004"
 ---
 # <a name="snprintf-_snprintf-_snprintf_l-_snwprintf-_snwprintf_l"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 
@@ -151,11 +154,11 @@ Niech **len** jest długością sformatowanego ciągu danych, bez uwzględnienia
 
 Dla wszystkich funkcji, jeśli **len** < *Count*, **len** znaki są przechowywane w *buforze*, dołączany jest terminator o wartości null i zwracana jest wartość **len** .
 
-Funkcja **snprintf** obcina dane wyjściowe, gdy wartość **len** jest większa lub równa liczbie, przez umieszczenie terminatora null w. `buffer[count-1]` Zwracana wartość to **len**, liczba znaków, które byłyby wyjściowe, jeśli *Liczba* była wystarczająco duża. Funkcja **snprintf** zwraca wartość ujemną, jeśli wystąpi błąd kodowania.
+Funkcja **snprintf** obcina dane wyjściowe, gdy wartość **len** jest większa lub równa *liczbie*, przez umieszczenie terminatora null w `buffer[count-1]`. Zwracana wartość to **len**, liczba znaków, które byłyby wyjściowe, jeśli *Liczba* była wystarczająco duża. Funkcja **snprintf** zwraca wartość ujemną, jeśli wystąpi błąd kodowania.
 
 W przypadku wszystkich funkcji innych **niż snprintf**, **Jeśli len** = *Count*, **len** znaki są przechowywane w *buforze*, dołączany jest znak null-terminator i zwracana jest wartość **len** . Jeśli **len** > *Count*, *Liczba* znaków jest przechowywana w *buforze*, nie jest dołączany znak null-terminator i zwracana jest wartość ujemna.
 
-Jeśli *bufor* jest wskaźnikiem o wartości null, a *Liczba* jest równa zero, **len** jest zwracany jako liczba znaków wymaganych do sformatowania danych wyjściowych, a nie kończący wartość null. Aby wykonać pomyślne wywołanie przy użyciu tego samego *argumentu* i parametrów *ustawień regionalnych* , Przydziel bufor zawierający co najmniej jeden znak.
+Jeśli *bufor* jest wskaźnikiem o wartości null, a *Liczba* jest równa zero, **len** jest zwracany jako liczba znaków wymaganych do sformatowania danych wyjściowych, a nie kończący wartość null. Aby wykonać pomyślne wywołanie przy użyciu tego samego *argumentu* i parametrów *ustawień regionalnych* , Przydziel bufor zawierający co **najmniej jeden** znak.
 
 Jeśli *bufor* jest wskaźnikiem o wartości null, a *Liczba* jest różna od zera lub jeśli *Format* jest wskaźnikiem typu null, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość-1 i ustawiają **errno** na **EINVAL**.
 
@@ -166,7 +169,7 @@ Aby uzyskać informacje o tych i innych kodach błędów, zobacz [errno, _doserr
 Funkcja **snprintf** oraz Rodzina **_snprintfów** funkcji formatują i nie przechowują *liczby* znaków w *buforze*. Funkcja **snprintf** zawsze przechowuje kończący znak null, obcinanie danych wyjściowych w razie potrzeby. Rodzina **_snprintf** funkcji dołącza tylko kończący znak null, jeśli długość sformatowanego ciągu jest mniejsza niż *Liczba* znaków. Każdy *argument* (jeśli istnieje) jest konwertowany i jest wyprowadzany zgodnie z odpowiadającą specyfikacją formatu w *formacie*. Format składa się ze zwykłych znaków i ma taką samą formę i funkcję jak argument *formatu* dla [printf](printf-printf-l-wprintf-wprintf-l.md). Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
 
 > [!IMPORTANT]
-> Upewnij się, że *Format* nie jest ciągiem zdefiniowanym przez użytkownika. Ponieważ funkcje **_snprintf** nie gwarantują zakończenia null — w szczególności, gdy wartość zwracana jest *Liczba*— upewnij się, że następuje kod, który dodaje terminator o wartości null. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
+> Upewnij się, że *Format* nie jest ciągiem zdefiniowanym przez użytkownika. Ponieważ funkcje **_snprintf** nie gwarantują zakończenia null — w szczególności, gdy wartość zwracana jest *Liczba*— upewnij się, że następuje kod, który dodaje terminator o wartości null. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 Począwszy od UCRT w programie Visual Studio 2015 i Windows 10, **snprintf** nie jest już identyczna z **_snprintf**. Zachowanie funkcji **snprintf** jest teraz zgodne ze standardem C99.
 

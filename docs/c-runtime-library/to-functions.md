@@ -1,14 +1,17 @@
 ---
 title: do funkcji
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr120.dll
 - msvcr90.dll
 - msvcr110.dll
 - msvcr110_clr0400.dll
 - msvcr80.dll
 - msvcr100.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - To
 helpviewer_keywords:
@@ -20,59 +23,59 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: 17d80507462b3eb0fdfb5d9e41da6162947bd3de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7a898d70e506ed4707ea718faa0ed618682c2c7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62304400"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944822"
 ---
 # <a name="to-functions"></a>do funkcji
 
-Każdy z **do** funkcji i jej skojarzone — makro, konwertuje jeden znak inny znak.
+Każda z funkcji **do** Functions i powiązane z nią makro (jeśli istnieją) konwertuje pojedynczy znak na inny znak.
 
 |||
 |-|-|
-|[__toascii](../c-runtime-library/reference/toascii-toascii.md)|[toupper _toupper —, towupper —](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)|
-|[tolower _tolower —, towlower —](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)||
+|[__toascii](../c-runtime-library/reference/toascii-toascii.md)|[ToUpper, _toupper, towupper](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)|
+|[ToLower, _tolower, towlower](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)||
 
 ## <a name="remarks"></a>Uwagi
 
-**Do** konwersje makra i funkcje są następujące.
+Funkcje **do** i konwersje makr są następujące.
 
 |Procedura|Macro|Opis|
 |-------------|-----------|-----------------|
-|`__toascii`|`__toascii`|Konwertuje `c` znak ASCII|
-|`tolower`|`tolower`|Konwertuje `c` na małe litery, jeśli jest to odpowiednie|
-|`_tolower`|`_tolower`|Konwertuje `c` na małe litery.|
-|`towlower`|Brak|Konwertuje `c` do odpowiedniego znaku dwubajtowego mała litera|
-|`toupper`|`toupper`|Konwertuje `c` na wielką, jeśli jest to odpowiednie|
+|`__toascii`|`__toascii`|Konwertuje `c` na znak ASCII|
+|`tolower`|`tolower`|Konwertuje `c` na małe litery, jeśli jest to konieczne|
+|`_tolower`|`_tolower`|Konwertuje `c` na małe litery|
+|`towlower`|Brak|Konwertuje `c` na odpowiadającą małą literę o szerokim znaku|
+|`toupper`|`toupper`|Konwertuje `c` na wielkie litery, jeśli jest to konieczne|
 |`_toupper`|`_toupper`|Konwertuje `c` na wielkie litery|
-|`towupper`|Brak|Konwertuje c do odpowiedniego znaku dwubajtowego wielką literą.|
+|`towupper`|Brak|Konwertuje znak c na odpowiadającą wielką literę litery|
 
-Do użycia funkcja wersje **do** procedur, które są również określone jako makra, albo usunięcie definicji makra z `#undef` dyrektywy lub nie dołączaj CTYPE. H. Jeśli używasz opcji kompilatora/za, kompilator używa funkcji wersję `toupper` lub `tolower`. Deklaracje `toupper` i `tolower` funkcji znajdują się w STDLIB. H.
+Aby użyć wersji funkcji **do** procedur, które są również zdefiniowane jako makra, Usuń definicje makr z `#undef` dyrektywami lub nie dodawaj CType. C. Jeśli używasz opcji kompilatora/za, kompilator używa wersji `toupper` funkcji lub. `tolower` Deklaracje `tolower` i funkcji są w STDLIB. `toupper` C.
 
-`__toascii` Rutynowych Ustawia wszystkie, ale niskiego rzędu 7 bity `c` 0, dzięki czemu przekonwertowana wartość reprezentuje znak zestawu znaków ASCII. Jeśli `c` już reprezentuje znak ASCII `c` pozostaje niezmieniony.
+Procedura ustawia wszystkie poza kolejnością 7 bitów o wartości `c` 0, tak aby przekonwertowana wartość reprezentuje znak w zestawie znaków ASCII. `__toascii` Jeśli `c` już reprezentuje znak ASCII, `c` jest niezmieniony.
 
-`tolower` i `toupper` procedury:
+Procedury `tolower` i `toupper` :
 
-- Są zależne od `LC_CTYPE` kategorii bieżących ustawień regionalnych (`tolower` wywołania `isupper` i `toupper` wywołania `islower`).
+- Są `LC_CTYPE` zależne od kategorii bieżących ustawień regionalnych (`tolower` wywołań `isupper` i `toupper` wywołań `islower`).
 
-- Konwertuj `c` Jeśli `c` reprezentuje konwersję litery mają odpowiednią wielkość liter w bieżących ustawień regionalnych i w przeciwnym wypadku nie istnieje dla danego ustawienia regionalnego. W przeciwnym razie `c` pozostaje niezmieniony.
+- Convert `c` if`c` reprezentuje literę do konwersji odpowiedniego przypadku w bieżących ustawieniach regionalnych i odwrotnie istnieje dla tych ustawień regionalnych. W przeciwnym razie jest niezmienione. `c`
 
-`_tolower` i `_toupper` procedury:
+Procedury `_tolower` i `_toupper` :
 
-- Są niezależne od ustawień regionalnych, znacznie szybciej wersje `tolower` i **toupper.**
+- Są niezależne od ustawień regionalnych, znacznie szybszymi `tolower` wersjami i **ToUpper.**
 
-- Można użyć tylko wtedy, gdy **isascii — (**`c`**)** i **isupper (**`c`**)** lub **islower (**`c`**)**, odpowiednio, czy wartość różną od zera.
+- Mogą być używane tylko wtedy, gdy **isascii (** `c` **)** i **IsUpper (** `c` **)** lub **IsLower (** `c` **)** , które są odpowiednio niezerowe.
 
-- Ma niezdefiniowane wyniki, jeśli `c` nie jest litery ASCII odpowiednią wielkość liter do konwersji.
+- Mają niezdefiniowane wyniki `c` , jeśli nie jest literą ASCII odpowiedniej wielkości dla konwersji.
 
-`towlower` i `towupper` funkcje zwracają przekonwertowanego kopię `c` tylko wtedy, gdy oba poniższe warunki są wartość różną od zera. W przeciwnym razie `c` pozostaje niezmieniony.
+Funkcje `towlower` i `towupper` zwracająprzekonwertowanekopieifitylkowtedy,gdyobaponiższewarunkisą`c` inne niż zero. W przeciwnym razie jest niezmienione. `c`
 
-- `c` jest znakiem dwubajtowym odpowiednią wielkość liter (oznacza to, dla którego `iswupper` lub **iswlower —,** odpowiednio jest różna od zera).
+- `c`jest znakiem dwubajtowym odpowiedniego przypadku (to jest, dla którego `iswupper` odpowiednio lub **iswlower** jest różna od zera).
 
-- Brak odpowiedniego znakiem dwubajtowym przypadek docelowego (oznacza to, dla którego `iswlower` lub **iswupper —,** odpowiednio jest różna od zera).
+- Istnieje odpowiedni znak dwubajtowy przypadku docelowego (to jest, dla którego `iswlower` odpowiednio lub **iswupper,** jest różny od zera).
 
 ## <a name="example"></a>Przykład
 

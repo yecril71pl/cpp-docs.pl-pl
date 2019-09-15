@@ -1,9 +1,9 @@
 ---
 title: _set_error_mode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_error_mode
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_error_mode
 - _set_error_mode
@@ -23,19 +26,19 @@ helpviewer_keywords:
 - _set_error_mode function
 - set_error_mode function
 ms.assetid: f0807be5-73d1-4a32-a701-3c9bdd139c5c
-ms.openlocfilehash: 8c95ed45423b791a688f05ea30f48e188826a797
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15a6d72a79f0498fb7d81094ed3595dea1cf444f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356657"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948563"
 ---
-# <a name="seterrormode"></a>_set_error_mode
+# <a name="_set_error_mode"></a>_set_error_mode
 
-Modyfikuje **__error_mode** do określenia lokalizacji innej niż domyślna, w którym środowisko wykonawcze C zapisuje komunikat o błędzie Wystąpił błąd może się to zakończyć program.
+Modyfikuje **__error_mode** w celu określenia lokalizacji innej niż domyślna, w której środowisko uruchomieniowe języka C zapisuje komunikat o błędzie, który może spowodować zakończenie tego programu.
 
 > [!IMPORTANT]
-> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -48,28 +51,28 @@ int _set_error_mode(
 ### <a name="parameters"></a>Parametry
 
 *mode_val*<br/>
-Miejsce docelowe komunikaty o błędach.
+Lokalizacja docelowa komunikatów o błędach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca stare ustawienia lub wartość -1, jeśli wystąpi błąd.
+Zwraca stare ustawienie lub-1, jeśli wystąpi błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-Kontroluje ujścia danych wyjściowych błędu, ustawiając wartość **__error_mode**. Na przykład, Przekieruj dane wyjściowe do błędu standardowego lub użyj **MessageBox** interfejsu API.
+Steruje ujściam wyjściowym błędu przez ustawienie wartości **__error_mode**. Na przykład można skierować dane wyjściowe do błędu standardowego lub użyć interfejsu API **MessageBox** .
 
-*Mode_val* parametr może być ustawiony na jedną z następujących wartości.
+Parametr *mode_val* można ustawić na jedną z następujących wartości.
 
 |Parametr|Opis|
 |---------------|-----------------|
-|**_OUT_TO_DEFAULT**|Błąd ujścia jest określana przez **__app_type**.|
-|**_OUT_TO_STDERR**|Błąd ujścia jest błąd standardowy.|
-|**_OUT_TO_MSGBOX**|Błąd obiektu sink to okno komunikatu.|
-|**_REPORT_ERRMODE**|Zgłoś bieżącą **__error_mode** wartości.|
+|**_OUT_TO_DEFAULT**|Ujścia błędów jest określana przez **__app_type**.|
+|**_OUT_TO_STDERR**|Błąd ujścia jest standardowym błędem.|
+|**_OUT_TO_MSGBOX**|Ujścia błędu to okno komunikatu.|
+|**_REPORT_ERRMODE**|Zgłoś bieżącą wartość **__error_mode** .|
 
-Jeśli przekazanym wartość inna niż te wymienione procedurę obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **_set_error_mode —** ustawia **errno** do **EINVAL** i zwraca wartość -1.
+Jeśli wartość inna niż wymienione na liście jest przenoszona w programie, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **_set_error_mode** ustawia **errno** na **EINVAL** i zwraca wartość-1.
 
-Gdy jest używany z [asercja](assert-macro-assert-wassert.md), **_set_error_mode —** wyświetla instrukcji nie powiodło się w oknie dialogowym i zapewnia wybór **Ignoruj** przycisk, aby można było Kontynuuj uruchomić program.
+Gdy jest używany z [potwierdzeniem](assert-macro-assert-wassert.md), **_set_error_mode** wyświetla niepowodzenie instrukcji w oknie dialogowym i daje możliwość wyboru przycisku **Ignoruj** , aby można było kontynuować uruchamianie programu.
 
 ## <a name="requirements"></a>Wymagania
 

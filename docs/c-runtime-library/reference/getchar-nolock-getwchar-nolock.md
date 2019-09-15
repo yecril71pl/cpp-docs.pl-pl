@@ -1,10 +1,10 @@
 ---
 title: _getchar_nolock, _getwchar_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getchar_nolock
 - _getwchar_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getwchar_nolock
 - _getwchar_nolock
@@ -29,16 +32,16 @@ helpviewer_keywords:
 - getchar_nolock function
 - standard input, reading from
 ms.assetid: dc49ba60-0647-4ae9-aa9a-a0618b1666de
-ms.openlocfilehash: feeda65d06dbcfecb6ea5adc60934abf3d0df415
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df7d07d4478d8feee1d5a0b35c40e4158a93be82
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331810"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955398"
 ---
-# <a name="getcharnolock-getwcharnolock"></a>_getchar_nolock, _getwchar_nolock
+# <a name="_getchar_nolock-_getwchar_nolock"></a>_getchar_nolock, _getwchar_nolock
 
-Odczytuje znaku ze standardowego wejścia.
+Odczytuje znak ze standardowego wejścia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,11 +52,11 @@ wint_t _getwchar_nolock( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zobacz [getchar, getwchar —](getchar-getwchar.md).
+Zobacz [GetChar, getwchar](getchar-getwchar.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_getchar_nolock —** i **_getwchar_nolock —** są takie same jak **getchar** i **getwchar —** z tą różnicą, że nie są chronione przed ingerencją przez inne wątki. Mogą one być szybsze, ponieważ nie wiążą się z obciążeniem związanym z blokowaniem innych wątków. Za pomocą tych funkcji tylko w kontekstach wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywołujący już obsługuje izolację wątków.
+**_getchar_nolock** i **_getwchar_nolock** są takie same jak **GetChar** i **getwchar** , z tą różnicą, że nie są chronione przed ingerencją przez inne wątki. Mogą one być szybsze, ponieważ nie wiążą się z zablokowaniem innych wątków. Tych funkcji należy używać tylko w kontekstach bezpiecznych dla wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywoływania już obsługuje izolację wątku.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -66,9 +69,9 @@ Zobacz [getchar, getwchar —](getchar-getwchar.md).
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_getchar_nolock**|\<stdio.h>|
-|**_getwchar_nolock**|\<stdio.h > lub \<wchar.h >|
+|**_getwchar_nolock**|\<stdio. h > lub \<WCHAR. h >|
 
-Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej Windows (UWP). Standardowe uchwyty strumienia, które są powiązane z konsolą, **stdin**, **stdout**, i **stderr**, muszą zostać przekierowane zanim funkcje środowiska wykonawczego języka C można ich używać w aplikacjach platformy UWP . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout**i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -103,7 +106,7 @@ This textInput was: This text
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>

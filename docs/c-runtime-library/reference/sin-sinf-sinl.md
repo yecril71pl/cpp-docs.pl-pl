@@ -1,11 +1,11 @@
 ---
-title: SIN sinf —, sinl —
+title: sin, sinf, sinl
 ms.date: 04/10/2018
-apiname:
+api_name:
 - sinl
 - sinf
 - sin
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sinl
 - sinf
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: 7006d7246837e5dc69733a007b3f7dab1c55280e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4ef8ac08ada6162932bbf9b872f30e6aa88b79b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356255"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948065"
 ---
-# <a name="sin-sinf-sinl"></a>SIN sinf —, sinl —
+# <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
-Oblicza wartość funkcji sinus wartości zmiennoprzecinkowych.
+Oblicza sinus wartości zmiennoprzecinkowej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -62,26 +65,26 @@ Kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Sin** funkcje zwracają sinusa *x*. Jeśli *x* jest większe niż lub równy 263 lub mniejsze niż lub równy -263, wystąpi utrata znaczenia w wyniku.
+Funkcje **Sin** zwracają sinus *x*. Jeśli wartość *x* jest większa lub równa 263 lub mniejsza lub równa-263, występuje utrata znaczenia w wyniku.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|GRANICACH QNAN, ZNAJDŹ|Brak|_DOMAIN|
-|∞ granicach; (sin, sinf — sinl —)|NIEPRAWIDŁOWY|_DOMAIN|
+|QNAN, IND|Brak|_DOMAIN|
+|± ∞ (SIN, SINF —, sinl)|NIEPRAWIDŁOWY|_DOMAIN|
 
 Aby uzyskać więcej informacji na temat kodów powrotnych, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **sin** przyjmujące i zwracające **float** lub **długie** **double** wartości. W programie C **sin** zawsze przyjmuje i zwraca **double**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **Sin** , które pobierają i zwracają wartości **zmiennoprzecinkowe** lub **długie** **Double** . W programie C, **Sin** zawsze przyjmuje i zwraca wartość **Double**.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-|-|-|
-|**SIN**, **sinf —**, **sinl —**|\<math.h>|\<cmath > lub \<math.h >|
+|**Sin**, **SINF —** , **sinl**|\<math.h>|\<cmath > lub \<Math. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

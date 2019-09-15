@@ -1,9 +1,9 @@
 ---
 title: _purecall
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _purecall
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ntoskrnl.exe
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - purecall
 - _purecall
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - _purecall function
 - purecall function
 ms.assetid: 56135d9b-3403-4e22-822d-e714523801cc
-ms.openlocfilehash: df6dde91ccb952e66eb77c841b2b1ace12756b8c
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 5d62ec30731ce26c4683afc88474d4bddb63a697
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446631"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950158"
 ---
-# <a name="purecall"></a>_purecall
+# <a name="_purecall"></a>_purecall
 
-Domyślne czystą mfunkcję wirtualną wywołanie procedurę obsługi błędów. Kompilator generuje kod, aby wywołać tę funkcję, gdy wywoływana jest czystej wirtualnej funkcji składowej.
+Domyślna procedura obsługi błędów wywołania funkcji wirtualnej. Kompilator generuje kod, aby wywołać tę funkcję w przypadku wywołania czystej wirtualnej funkcji członkowskiej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,13 +45,13 @@ extern "C" int __cdecl _purecall();
 
 ## <a name="remarks"></a>Uwagi
 
-**_Purecall —** funkcja jest specyficzne dla firmy Microsoft szczegółów implementacji Microsoft C++ kompilatora. Ta funkcja nie jest przeznaczony do bezpośredniego wywoływania w kodzie i ma żadna deklaracja publicznych nagłówka. Jest opisane w tym miejscu ponieważ jest on publiczny eksportu biblioteki środowiska uruchomieniowego C.
+Funkcja **_purecall** jest szczegółową implementacją kompilatora firmy Microsoft C++ . Ta funkcja nie jest przeznaczona do wywoływania bezpośrednio przez kod i nie ma deklaracji nagłówka publicznego. Jest on udokumentowany w tym miejscu, ponieważ jest publicznym eksportem biblioteki środowiska uruchomieniowego języka C.
 
-Wywołanie czystej funkcji wirtualnej występuje błąd, ponieważ jej nie ma implementacji. Kompilator generuje kod, aby wywołać **_purecall —** funkcji obsługi błędu, gdy wywoływana jest czysta funkcja wirtualna. Domyślnie **_purecall —** kończy program. Przed zakończeniem, **_purecall —** funkcja wywołuje **_purecall_handler** działać, jeśli bufor został ustawiony dla procesu. Można zainstalować własną funkcję obsługi błędu dla wywołań czystą funkcję wirtualną, wyłapuj je na potrzeby debugowania lub do celów raportowania. Aby użyć własnego procedurę obsługi błędów, należy utworzyć funkcję, która ma **_purecall_handler** podpisu, następnie za pomocą [_set_purecall_handler —](get-purecall-handler-set-purecall-handler.md) się bieżący program obsługi.
+Wywołanie czystej funkcji wirtualnej jest błędem, ponieważ nie ma implementacji. Kompilator generuje kod, aby wywołać funkcję procedury obsługi błędów **_purecall** w przypadku wywołania czystej funkcji wirtualnej. Domyślnie **_purecall** kończy program. Przed zakończeniem funkcja **_purecall** wywołuje funkcję **_purecall_handler** , jeśli została ona ustawiona dla procesu. Możesz zainstalować własną funkcję obsługi błędów dla czystych wywołań funkcji wirtualnych, aby przechwycić je do celów debugowania lub raportowania. Aby użyć własnego programu obsługi błędów, należy utworzyć funkcję, która ma sygnaturę **_purecall_handler** , a następnie użyć [_set_purecall_handler](get-purecall-handler-set-purecall-handler.md) w celu udostępnienia jej jako bieżącej procedury obsługi.
 
 ## <a name="requirements"></a>Wymagania
 
-**_Purecall —** funkcja nie zawiera deklarację nagłówka. **_Purecall_handler** typedef jest zdefiniowany w \<stdlib.h >.
+Funkcja **_purecall** nie ma deklaracji nagłówka. **_Purecall_handler** typedef jest zdefiniowany w \<STDLIB. h >.
 
 ## <a name="see-also"></a>Zobacz także
 

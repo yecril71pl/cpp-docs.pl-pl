@@ -1,9 +1,9 @@
 ---
 title: _unlock_file
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _unlock_file
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _unlock_file
 - unlock_file
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - _unlock_file function
 - unlocking files
 ms.assetid: cf380a51-6d3a-4f38-bd64-2d4fb57b4369
-ms.openlocfilehash: e3d11cbd59ef5846b33908ae6b6c40d7ea6125e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2983408f066ea00c0b7ab111d9a6349700ecaece
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353550"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957479"
 ---
-# <a name="unlockfile"></a>_unlock_file
+# <a name="_unlock_file"></a>_unlock_file
 
-Umożliwia odblokowanie pliku, dzięki czemu inne procesy uzyskać dostęp do pliku.
+Odblokowuje plik, umożliwiając innym procesom dostęp do pliku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,12 +49,12 @@ void _unlock_file(
 
 ### <a name="parameters"></a>Parametry
 
-*Plik*<br/>
+*rozszerzeniem*<br/>
 Dojście do pliku.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Unlock_file —** funkcji powoduje odblokowanie pliku określonego przez *pliku*. Odblokowanie pliku zezwala na dostęp do pliku przez inne procesy. Ta funkcja nie powinien być wywoływany, chyba że **_lock_file —** był wcześniej nazywany programem na *pliku* wskaźnika. Wywoływanie **_unlock_file —** w pliku, który nie jest zablokowany może doprowadzić do zakleszczenia. Aby uzyskać przykład, zobacz [_lock_file —](lock-file.md).
+Funkcja **_unlock_file** odblokowuje plik określony przez *plik*. Odblokowanie pliku umożliwia dostęp do pliku przez inne procesy. Ta funkcja nie powinna być wywoływana, chyba że **_lock_file** została wcześniej wywołana na wskaźniku *pliku* . Wywołanie **_unlock_file** na niezablokowanym pliku może spowodować zakleszczenie. Aby zapoznać się z przykładem, zobacz [_lock_file](lock-file.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -59,7 +62,7 @@ Dojście do pliku.
 |-------------|---------------------|
 |**_unlock_file**|\<stdio.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

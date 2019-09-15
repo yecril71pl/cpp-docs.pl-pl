@@ -1,11 +1,11 @@
 ---
-title: casin casinf, casinl
+title: casin, casinf, casinl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - casin
 - casinf
 - casinl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - casin
 - casinf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - casinf function
 - casinl function
 ms.assetid: b75d1455-7b1e-43b0-bd46-c530be190be9
-ms.openlocfilehash: 209c3da6d6ed03cb5a5b129003c999b002a1a6b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3ae944c9808fd0fc6e8d1ffbd02da2a69454cc6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335597"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943393"
 ---
-# <a name="casin-casinf-casinl"></a>casin casinf, casinl
+# <a name="casin-casinf-casinl"></a>casin, casinf, casinl
 
-Pobiera arcus sinus liczby zespolonej, cenowe gałąź poza interwał [-1, + 1] na rzeczywistych osi.
+Pobiera arcus sinus liczby zespolonej, z rozgałęzieniem, poza interwałem [-1, + 1], wzdłuż osi rzeczywistej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -64,23 +67,23 @@ _Lcomplex casinl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Liczby zespolonej oznacza kąt w radianach.
+Liczba zespolona, która reprezentuje kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Arcus sinus *z*, w radianach. Wynik jest nieograniczona, wzdłuż osi urojone, a w interwale [-π/2 + π/2] na rzeczywistych osi.
+Arcus *sinus z z, w*radianach. Wynik nie jest powiązany wzdłuż osi urojonej, a w interwale [-π/2, + π/2] wzdłuż osi rzeczywistej.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **casin** przyjmujące i zwracające **_Fcomplex** i **_Lcomplex** wartości. W programie C **casin** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **Casin** , które pobierają i zwracają wartości **_Fcomplex** i **_Lcomplex** . W programie C **Casin** zawsze przyjmuje i zwraca wartość **_Dcomplex** .
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|Nagłówek języka C++|
+|Procedura|Nagłówek języka C|C++nagłówki|
 |-------------|--------------|------------------|
-|**casin**, **casinf**, **casinl**|\<complex.h>|\<ccomplex>|
+|**Casin**, **casinf**, **casinl**|\<complex.h>|\<ccomplex>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,9 +1,9 @@
 ---
 title: set_terminate (CRT)
 ms.date: 11/04/2016
-apiname:
+api_name:
 - set_terminate
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_terminate
 helpviewer_keywords:
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
-ms.openlocfilehash: 7be81dec7fba80a273d635cbd30b96b09928bc66
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 860789a3f2fda5ef13cadffa2a00dba4fbd2090a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356449"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948350"
 ---
-# <a name="setterminate-crt"></a>set_terminate (CRT)
+# <a name="set_terminate-crt"></a>set_terminate (CRT)
 
-Instaluje własną procedurę kończenia żądań ma zostać wywołana przez **zakończyć**.
+Instaluje własną procedurę zakończenia, która ma zostać wywołana przez **zakończenie**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,28 +46,28 @@ terminate_function set_terminate( terminate_function termFunction );
 ### <a name="parameters"></a>Parametry
 
 *termFunction*<br/>
-Wskaźnik do funkcji zakończenia, który można zapisać.
+Wskaźnik do funkcji kończenia, którą napiszesz.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do poprzedniej funkcji zarejestrowane przez **set_terminate** tak, aby funkcja poprzedniej można później przywrócić. Jeśli żadna funkcja poprzedniej została ustawiona, wartość zwracana mogą służyć do przywracania domyślne zachowanie; Ta wartość może być **NULL**.
+Zwraca wskaźnik do poprzedniej funkcji zarejestrowanej przez **set_terminate** , aby można było przywrócić poprzednią funkcję. Jeśli nie ustawiono poprzedniej funkcji, wartość zwracana może zostać użyta do przywrócenia zachowania domyślnego. Ta wartość może być **równa null**.
 
 ## <a name="remarks"></a>Uwagi
 
-**Set_terminate** funkcja instaluje *termFunction* jako funkcja wywoływana przez **zakończyć**. **set_terminate** jest używana z C++ obsługi wyjątków i może być wywoływana w dowolnym momencie w swoim programie, zanim wyjątku. **Zakończenie** wywołania [przerwać](abort.md) domyślnie. Możesz zmienić to ustawienie domyślne, pisanie funkcji zakończenia i wywołanie **set_terminate** o nazwie funkcji jako argumentem. **Zakończenie** wywołuje funkcję ostatniego podawana jako argument do **set_terminate**. Po zdatną żądanego zadania oczyszczania *termFunction* powinno zakończyć program. Jeśli go nie istnieje (jeśli jest on wraca do), [przerwać](abort.md) jest wywoływana.
+Funkcja **set_terminate** instaluje *termFunction* jako funkcję wywoływaną przez **zakończenie**. **set_terminate** jest używany z C++ obsługą wyjątków i może być wywoływana w dowolnym momencie w programie przed zgłoszeniem wyjątku. **przerywaj wywołania domyślnie** . [](abort.md) Można zmienić to ustawienie domyślne, pisząc własną funkcję zakończenia i wywołując **set_terminate** z nazwą funkcji jako argumentem. **Przerwij** wywołuje ostatnią funkcję podaną jako argument **set_terminate**. Po wykonaniu wszystkich żądanych zadań oczyszczania *termFunction* powinien wyjść z programu. Jeśli nie zakończy się (jeśli powróci do jego obiektu wywołującego), wywoływana jest metoda [Abort](abort.md) .
 
-W środowisku wielowątkowym zakończyć funkcje są obsługiwane osobno dla każdego wątku. Każdy nowy wątek musi zainstalować jego własnej funkcji zakończenia. W związku z tym każdy wątek jest odpowiedzialne za własną obsługę przerwania.
+W środowisku wielowątkowym funkcje Przerwij są obsługiwane oddzielnie dla każdego wątku. Każdy nowy wątek musi zainstalować własną funkcję terminate. W ten sposób każdy wątek jest odpowiedzialny za jego własną zakończenie obsługi.
 
-**Terminate_function —** typ jest zdefiniowany w EH. H jako wskaźnik do funkcji zdefiniowanych przez użytkownika zakończenia *termFunction* zwracającego **void**. Niestandardowej funkcji *termFunction* może nie przyjmują argumentów i nie powinny zwracać do obiektu wywołującego. Jeśli tak jest, [przerwać](abort.md) jest wywoływana. Nie może być zgłaszany wyjątek z poziomu *termFunction*.
+Typ **terminate_function** jest zdefiniowany w EH. H jako wskaźnik do funkcji zakończenia zdefiniowanej przez użytkownika, *termFunction* , która zwraca wartość **void**. Funkcja niestandardowa *termFunction* może nie przyjmować argumentów i nie powinna zwracać do obiektu wywołującego. W takim przypadku wywoływana jest metoda [Abort](abort.md) . Wyjątek nie może zostać zgłoszony z poziomu *termFunction*.
 
 ```cpp
 typedef void ( *terminate_function )( );
 ```
 
 > [!NOTE]
-> **Set_terminate** funkcja działa tylko poza debugerem.
+> Funkcja **set_terminate** działa tylko poza debugerem.
 
-Istnieje jeden **set_terminate** Obsługa wszystkie połączone dynamicznie biblioteki DLL lub exe; nawet wtedy, gdy wywołujesz **set_terminate** programu obsługi może być zastąpiona przez inną lub może być zastępowania ustawiony przez inny program obsługi Plik DLL lub EXE.
+Istnieje jedna procedura obsługi **set_terminate** dla wszystkich dynamicznie połączonych bibliotek DLL lub exe; nawet jeśli wywołasz **set_terminate** , program obsługi może zostać zastąpiony przez inny lub zamienić procedurę obsługi ustawioną przez inną bibliotekę DLL lub exe.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -72,11 +75,11 @@ Istnieje jeden **set_terminate** Obsługa wszystkie połączone dynamicznie bibl
 |-------------|---------------------|
 |**set_terminate**|\<eh.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [zakończyć](terminate-crt.md).
+Zapoznaj się z przykładem [przerwania](terminate-crt.md).
 
 ## <a name="see-also"></a>Zobacz także
 
@@ -84,5 +87,5 @@ Zobacz przykład [zakończyć](terminate-crt.md).
 [abort](abort.md)<br/>
 [_get_terminate](get-terminate.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
-[Zakończenie](terminate-crt.md)<br/>
-[unexpected](unexpected-crt.md)<br/>
+[kończyć](terminate-crt.md)<br/>
+[oczekiwan](unexpected-crt.md)<br/>

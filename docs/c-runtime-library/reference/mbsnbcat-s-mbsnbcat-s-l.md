@@ -1,10 +1,10 @@
 ---
 title: _mbsnbcat_s, _mbsnbcat_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbcat_s_l
 - _mbsnbcat_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbsnbcat_s
 - mbsnbcat_s
@@ -32,19 +35,19 @@ helpviewer_keywords:
 - mbsnbcat_s_l function
 - tcsncat function
 ms.assetid: 2c9e9be7-d979-4a54-8ada-23428b6648a9
-ms.openlocfilehash: d7e7a9d121336486e590ca3bd9e3967b02a2df08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a3f66f8fc8d4fd659880e8793fdaae635f9f7ba
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331528"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952271"
 ---
-# <a name="mbsnbcats-mbsnbcatsl"></a>_mbsnbcat_s, _mbsnbcat_s_l
+# <a name="_mbsnbcat_s-_mbsnbcat_s_l"></a>_mbsnbcat_s, _mbsnbcat_s_l
 
-Dołącza do ciągu znaków wielobajtowych co najwyżej, pierwsze **n** bajtów inny ciąg znaków wielobajtowych. Są to wersje [_mbsnbcat —, _mbsnbcat_l —](mbsnbcat-mbsnbcat-l.md) , które mają wzmocnienia zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Dołącza do ciągu znaków wielobajtowych, co najwyżej, pierwsze **n** bajtów innego ciągu znaków wielobajtowych. Są to wersje [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md) , które mają ulepszenia zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -80,50 +83,50 @@ errno_t _mbsnbcat_s_l(
 ### <a name="parameters"></a>Parametry
 
 *dest*<br/>
-Ciąg docelowy znaków wielobajtowych przerwany wartością null.
+Przerwany ciąg znaków wielobajtowych zakończony wartością null.
 
 *sizeInBytes*<br/>
-Rozmiar *dest* buforu w bajtach.
+Rozmiar buforu *docelowego* w bajtach.
 
-*src*<br/>
-Ciąg źródłowy znaków wielobajtowych przerwany wartością null.
+*SRC*<br/>
+Ciąg źródłowy znaku wielobajtowego zakończony wartością null.
 
-*Liczba*<br/>
-Liczba bajtów z *src* do dołączenia do *dest*.
+*liczbą*<br/>
+Liczba bajtów z elementu *src* do dołączenia do miejsca *docelowego*.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli to się powiedzie; w przeciwnym razie kod błędu.
+Zero, jeśli pomyślne; w przeciwnym razie kod błędu.
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|**docelowy**|*sizeInBytes*|*src*|Wartość zwracana|
+|**Dest**|*sizeInBytes*|*SRC*|Wartość zwracana|
 |------------|-------------------|-----------|------------------|
-|**NULL**|Wszystkie|Wszystkie|**EINVAL**|
-|Dowolne|<= 0|Wszystkie|**EINVAL**|
-|Dowolne|Wszystkie|**NULL**|**EINVAL**|
+|**NULL**|Ile|Ile|**EINVAL**|
+|Any|<= 0|Ile|**EINVAL**|
+|Any|Ile|**NULL**|**EINVAL**|
 
-Jeśli występuje którykolwiek z warunków błędów, funkcja generuje błąd nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli obsługiwany jest błąd, funkcja zwraca **EINVAL** i ustawia **errno** do **EINVAL**.
+Jeśli wystąpi którykolwiek z warunków błędów, funkcja generuje błąd nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli błąd jest obsługiwany, funkcja zwraca **EINVAL** i ustawia **errno** na **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Mbsnbcat_s —** funkcja dołącza do *dest*, co najwyżej, pierwsze *liczba* bajtów *src*. Jeśli bajt który bezpośrednio poprzedza znak null w *dest* jest bajtem wiodącym, jest on zastąpiony przez bajt początkowy *src*. W przeciwnym razie bajt początkowy *src* zastępuje kończący znak null z *dest*. Jeśli bajt typu null znajduje się w *src* przed *liczba* bajtów są dołączane, **_mbsnbcat_s —** dołącza wszystkie bajty z *src*, do wartości null znak. Jeśli *liczba* jest większa niż długość *src*, długość *src* jest używana zamiast *liczba*. Wynikowy ciąg znaków jest zakończony znakiem null. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
+Funkcja **_mbsnbcat_s** jest dołączana do miejsca *docelowego*, co najwyżej w pierwszej *liczbie* bajtów *src*. Jeśli bajt, który bezpośrednio poprzedza znak null w polu *docelowy* jest bajtem wiodącym, jest zastępowany przez początkowy bajt *src*. W przeciwnym razie początkowy bajt *src* zastępuje kończący znak null jako *docelowy*. Jeśli bajt o wartości null jest wyświetlany w elemencie *src* przed dołączeniem *liczby* bajtów, **_mbsnbcat_s** dołącza wszystkie bajty z elementu *src*, do znaku null. Jeśli *Liczba* jest większa niż długość elementu *src*, Długość elementu *src* jest używana zamiast *liczby*. Ciąg otrzymany jest zakończony znakiem null. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
 
-Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych; zobacz [setlocale, _wsetlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji są identyczne, z tą różnicą, że te, które nie mają **_l** sufiksa używa bieżących ustawień regionalnych i te, które mają **_l** sufiks używają parametru ustawień regionalnych to przekazana. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawień regionalnych; Zobacz [setlocaling, _wsetlocale,](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji są identyczne, z tą różnicą, że te, które nie mają sufiksu **_l** , używają bieżących ustawień regionalnych, a te, które mają sufiks **_l** , zamiast tego używają parametru ustawień regionalnych, który został przesłany. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-W języku C++ korzystania z tych funkcji jest uproszczone przez przeciążania szablonu; przeciążenia mogą automatycznie wywnioskować długość buforu i tym samym wyeliminować konieczność określenia argumentu rozmiaru i ich funkcje nowszymi, bardziej bezpiecznymi mogą automatycznie używać do zastąpić starsze, mniej bezpieczne funkcje. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu, a tym samym wyeliminować konieczność określenia argumentu rozmiaru i mogą automatycznie korzystać z nowych funkcji, które zastępują starsze, mniej bezpieczne funkcje. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
-Wersje debugowania tych funkcji najpierw wypełniają bufor 0xfd. Aby wyłączyć to zachowanie, użyj [_crtsetdebugfillthreshold —](crtsetdebugfillthreshold.md).
+Wersje debugowania tych funkcji najpierw wypełniają bufor 0xFD. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tcsncat —**|[strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)|**_mbsnbcat_s**|[wcsncat —](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)|
-|**_tcsncat_s_l —**|**_strncat_s_l**|**_mbsnbcat_s_l**|**_wcsncat_s_l**|
+|**_tcsncat**|[strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)|**_mbsnbcat_s**|[wcsncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)|
+|**_tcsncat_s_l**|**_strncat_s_l**|**_mbsnbcat_s_l**|**_wcsncat_s_l**|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -132,7 +135,7 @@ Wersje debugowania tych funkcji najpierw wypełniają bufor 0xfd. Aby wyłączy�
 |**_mbsnbcat_s**|\<mbstring.h>|
 |**_mbsnbcat_s_l**|\<mbstring.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

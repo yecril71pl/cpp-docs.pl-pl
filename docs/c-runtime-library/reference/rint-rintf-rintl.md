@@ -1,11 +1,11 @@
 ---
 title: rint, rintf, rintl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - rintf
 - rintl
 - rint
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rintf
 - rintl
@@ -27,16 +30,16 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 9e0e3875b7484735b5439c6c0e0a7252940d4552
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57c4dc60d6b4d29e5c46fa6f1d03d0710ed44309
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357593"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949270"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
-Zaokrągla wartość zmiennoprzecinkową do najbliższej liczby całkowitej w formacie zmiennoprzecinkowych.
+Zaokrągla wartość zmiennoprzecinkową do najbliższej liczby całkowitej w formacie liczb zmiennoprzecinkowych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -58,24 +61,24 @@ Wartość zmiennoprzecinkowa do zaokrąglenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Rukuj** funkcje zwracają wartość zmiennoprzecinkową, która reprezentuje najbliższa liczby całkowitej *x*. Wartości połowiczne są zaokrąglane zgodnie z bieżące ustawienie trybu zaokrąglania zmiennoprzecinkowych, taka sama jak **nearbyint —** funkcji. W odróżnieniu od **nearbyint —** funkcji **rukuj** funkcje mogą zgłaszać **FE_INEXACT** wyjątków zmiennoprzecinkowych, jeśli wynik różni się w wartości w argumencie. Nie będzie zwrotu błędu.
+Funkcje **rukuj** zwracają wartość zmiennoprzecinkową, która reprezentuje najbliższą liczbę całkowitą do *x*. Wartości w połowie są zaokrąglane zgodnie z bieżącym ustawieniem trybu zaokrąglania zmiennoprzecinkowego, tak samo jak w przypadku funkcji **nearbyint —** . W przeciwieństwie do funkcji **nearbyint —** , funkcje **rukuj** mogą podnieść wyjątek zmiennoprzecinkowy **FE_INEXACT** , jeśli wynik różni się od argumentu. Brak powrotu błędu.
 
-|Dane wejściowe|Wyjątek SEH|**_matherr** wyjątku|
+|Dane wejściowe|Wyjątek SEH|**_matherr** Oprócz|
 |-----------|-------------------|--------------------------|
-|∞; GRANICACH, QNAN, ZNAJDŹ|brak|brak|
-|Denormals|EXCEPTION_FLT_UNDERFLOW|brak|
+|± ∞, QNAN, IND|brak|brak|
+|Denormalne|EXCEPTION_FLT_UNDERFLOW|brak|
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **rukuj** przyjmujące i zwracające **float** i **długie** **double** wartości. W programie C **rukuj** zawsze przyjmuje i zwraca **double**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **rukuj** , które pobierają i zwracają wartości **zmiennoprzecinkowe** i **długie** **Double** . W programie C **rukuj** zawsze przyjmuje i zwraca wartość **Double**.
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek języka C|Nagłówek języka C++|
+|Funkcja|Nagłówek języka C|C++nagłówki|
 |--------------|--------------|------------------|
-|**rukuj**, **rintf**, **rintl**|\<math.h>|\<cmath>|
+|**rukuj**, **rintf**, **rintl**|\<math.h>|\<cmath >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

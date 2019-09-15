@@ -1,9 +1,9 @@
 ---
 title: _eof
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _eof
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _eof
 helpviewer_keywords:
@@ -26,16 +29,16 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-ms.openlocfilehash: 1da849c3721d4d83ff0b3166bc18f95728ebf124
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b5c27f1de3369369776dd030df21be05cf20b7a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288139"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942003"
 ---
-# <a name="eof"></a>_eof
+# <a name="_eof"></a>_eof
 
-Testuje pod kątem końca pliku (EOF).
+Testuje koniec pliku (EOF).
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,24 +50,24 @@ int _eof(
 
 ### <a name="parameters"></a>Parametry
 
-*FD*<br/>
-Deskryptor pliku odnoszące się do otwartego pliku.
+*proces*<br/>
+Deskryptor pliku odwołujący się do otwartego pliku.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_eof —** zwraca wartość 1, jeśli bieżące położenie jest końcem pliku lub 0, jeśli nie jest. Zwracana wartość-1 wskazuje błąd; w takim przypadku procedurę obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EBADF**, co oznacza nieprawidłowego deskryptora pliku.
+**_eof** zwraca wartość 1, jeśli bieżąca pozycja jest końcem pliku lub 0, jeśli nie jest. Zwracana wartość-1 wskazuje błąd; w takim przypadku zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EBADF**, co oznacza nieprawidłowy deskryptor pliku.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Eof —** funkcja określa, czy koniec pliku skojarzone z *fd* został osiągnięty.
+Funkcja **_eof** określa, czy osiągnięto koniec pliku skojarzonego z *FD* .
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Wymagany nagłówek|Opcjonalne nagłówki|
+|Funkcja|Wymagany nagłówek|Opcjonalny nagłówek|
 |--------------|---------------------|---------------------|
 |**_eof**|\<io.h>|\<errno.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -106,7 +109,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crteoftxt"></a>Dane wejściowe: crt_eof.txt
+### <a name="input-crt_eoftxt"></a>Dane wejściowe: crt_eof. txt
 
 ```Input
 This file contains some text.
@@ -121,7 +124,7 @@ Number of bytes read = 29
 ## <a name="see-also"></a>Zobacz także
 
 [Obsługa błędów](../../c-runtime-library/error-handling-crt.md)<br/>
-[Niskiego poziomu operacji We/Wy](../../c-runtime-library/low-level-i-o.md)<br/>
+[We/wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
 [clearerr](clearerr.md)<br/>
 [feof](feof.md)<br/>
 [ferror](ferror.md)<br/>

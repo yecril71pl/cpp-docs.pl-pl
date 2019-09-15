@@ -1,9 +1,9 @@
 ---
 title: imaxabs
 ms.date: 04/05/2018
-apiname:
+api_name:
 - imaxabs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - imaxabs
 helpviewer_keywords:
 - imaxabs function
 ms.assetid: de2566a3-1415-4e9a-91b5-7ac3a49ebf5e
-ms.openlocfilehash: a7492e08c3a078698292923ce395524ab5327ecf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1f20c4de2ff9070bae3bfaeb8ba2d97d87d2d4d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157503"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954688"
 ---
 # <a name="imaxabs"></a>imaxabs
 
@@ -43,14 +46,14 @@ intmax_t imaxabs(
 ### <a name="parameters"></a>Parametry
 
 *n*<br/>
-Wartość liczby całkowitej.
+Wartość całkowita.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Imaxabs —** funkcja zwraca wartość bezwzględną argumentu. Nie będzie zwrotu błędu.
+Funkcja **imaxabs** zwraca wartość bezwzględną argumentu. Brak powrotu błędu.
 
 > [!NOTE]
-> Ponieważ zakres ujemnych liczb całkowitych, które mogą być reprezentowane za pomocą **intmax_t** jest większy niż zakres dodatnich liczb całkowitych, które mogą być reprezentowane, jest możliwe, aby podać argument do **imaxabs —** który nie może zostać przekonwertowany. Jeśli wartość bezwzględna argumentu nie może być przedstawiona przez zwracany typ, zachowanie **imaxabs —** jest niezdefiniowana.
+> Ponieważ zakres ujemnych liczb całkowitych, które mogą być reprezentowane za pomocą **intmax_t** , jest większy niż zakres dodatnich liczb całkowitych, które mogą być reprezentowane, możliwe jest podanie argumentu **imaxabs** , którego nie można przekonwertować. Jeśli wartość bezwzględna argumentu nie może być reprezentowana przez zwracany typ, zachowanie **imaxabs** jest niezdefiniowane.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -58,11 +61,11 @@ Wartość liczby całkowitej.
 |-------------|---------------------|
 |**imaxabs**|\<inttypes.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 

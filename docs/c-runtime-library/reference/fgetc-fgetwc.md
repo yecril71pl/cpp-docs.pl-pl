@@ -1,10 +1,10 @@
 ---
 title: fgetc, fgetwc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fgetwc
 - fgetc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fgettc
 - fgetwc
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-ms.openlocfilehash: a853a46fc43106c9ea57be84b37fb46a18041ba8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92f44c65802f3baed37078574577bf108bbcd09a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334011"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940893"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc, fgetwc
 
-Przeczytaj znak ze strumienia.
+Odczytaj znak ze strumienia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -55,27 +58,27 @@ wint_t fgetwc(
 ### <a name="parameters"></a>Parametry
 
 *stream*<br/>
-Wskaźnik do **pliku** struktury.
+Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**fgetc —** zwraca znak odczytywany jako **int** lub zwraca **EOF** aby wskazać błąd lub koniec pliku. **fgetwc —** zwraca, jako [wint_t](../../c-runtime-library/standard-types.md), znak dwubajtowy, który odpowiada znakowi odczytu lub zwraca **WEOF** aby wskazać błąd lub koniec pliku. W przypadku obu tych funkcji, użyj **feof** lub **ferror** Aby rozróżnić między błędem a warunkiem końca pliku. Jeśli wystąpi błąd odczytu, zostanie ustawiony wskaźnik błędu dla strumienia. Jeśli *strumienia* jest **NULL**, **fgetc —** i **fgetwc —** wywołują nieprawidłowy parametr uchwytu, zgodnie z opisem w [parametru Sprawdzanie poprawności](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** do **EINVAL** i zwracają **EOF**.
+**fgetc** zwraca znak odczytywany jako **int** lub zwraca **znacznik EOF** , aby wskazać błąd lub koniec pliku. **fgetwc** zwraca, jako [wint_t](../../c-runtime-library/standard-types.md), znak dwubajtowy, który odpowiada znakowi odczytu lub zwraca **WEOF** , aby wskazać błąd lub koniec pliku. Dla obu funkcji Użyj **feof** lub obiektu **odwołującego** do rozróżnienia między błędem a warunkiem końca pliku. Jeśli wystąpi błąd odczytu, zostanie ustawiony wskaźnik błędu dla strumienia. Jeśli *strumień* ma **wartość null**, **fgetc** i **fgetwc** Wywołaj procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i zwracają **znacznik EOF**.
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji odczytuje pojedynczy znak z bieżącego położenia pliku skojarzone z *strumienia*. Funkcja następnie zwiększa skojarzony wskaźnik pliku (Jeżeli zdefiniowane) aby wskazywała na następny znak. Jeśli strumień jest na końcu pliku, wskaźnik końca pliku dla strumienia jest ustawiony.
+Każda z tych funkcji odczytuje pojedynczy znak z bieżącego położenia pliku skojarzonego ze *strumieniem*. Funkcja następnie zwiększa skojarzony wskaźnik pliku (jeśli jest zdefiniowany), aby wskazywał na następny znak. Jeśli strumień znajduje się na końcu pliku, wskaźnik końca pliku dla strumienia jest ustawiony.
 
-**fgetc —** jest odpowiednikiem **getc —**, ale jest realizowane tylko jako funkcja, a nie jako funkcja i makra.
+**fgetc** jest odpowiednikiem **getc —** , ale jest zaimplementowana tylko jako funkcja, a nie jako funkcja i makro.
 
-**fgetwc —** jest wersją znaków dwubajtowych **fgetc —**; odczytuje **c** jako znak wielobajtowy lub znak dwubajtowy ze czy *strumienia* jest otwarty w Tryb tekstu lub w trybie binarnym.
+**fgetwc** to dwubajtowa wersja **fgetc**; Odczytuje **c** jako znak wielobajtowy lub szeroki znak w zależności od tego, czy *strumień* jest otwarty w trybie tekstowym czy w trybie binarnym.
 
-Wersje **_nolock** sufiksem są identyczne, z tą różnicą, że nie są chronione przed ingerencją przez inne wątki.
+Wersje z sufiksem **_nolock** są identyczne, z tą różnicą, że nie są chronione przed ingerencją przez inne wątki.
 
-Aby uzyskać więcej informacji na temat przetwarzania znaków dwubajtowych i znaków wielobajtowych w trybach tekstowym i binarnym, zobacz [we/wy Stream w Unicode w trybach tekstowym i binarnym](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
+Aby uzyskać więcej informacji o przetwarzaniu szerokich znaków i znaków wielobajtowych w trybach tekstowych i binarnych, zobacz [we/wy strumienia Unicode w trybach tekstowych i binarnych](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_fgettc**|**fgetc**|**fgetc**|**fgetwc**|
 
@@ -84,9 +87,9 @@ Aby uzyskać więcej informacji na temat przetwarzania znaków dwubajtowych i zn
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
 |**fgetc**|\<stdio.h>|
-|**fgetwc**|\<stdio.h > lub \<wchar.h >|
+|**fgetwc**|\<stdio. h > lub \<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -125,7 +128,7 @@ int main( void )
 }
 ```
 
-## <a name="input-crtfgetctxt"></a>Dane wejściowe: crt_fgetc.txt
+## <a name="input-crt_fgetctxt"></a>Dane wejściowe: crt_fgetc. txt
 
 ```Input
 Line one.
@@ -141,6 +144,6 @@ Line two.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fputc, fputwc](fputc-fputwc.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>

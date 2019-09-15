@@ -1,9 +1,9 @@
 ---
 title: quick_exit1
 ms.date: 11/04/2016
-apiname:
+api_name:
 - quick_exit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - quick_exit
 - process/quick_exit
@@ -23,16 +26,16 @@ f1_keywords:
 helpviewer_keywords:
 - quick_exit function
 ms.assetid: ecfbdae6-01c4-45fa-aaeb-b368e1de2a9c
-ms.openlocfilehash: 50f1ee72cce04c2bebc8f7396a2b6fad98301dd7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86246ed7a32dcd2f12b38aa4148570fc5fb3b7a6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358038"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949662"
 ---
-# <a name="quickexit"></a>quick_exit
+# <a name="quick_exit"></a>quick_exit
 
-Powoduje zakończenie normalne programu występuje.
+Powoduje, że normalne zakończenie programu ma miejsce.
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,27 +48,27 @@ __declspec(noreturn) void quick_exit(
 ### <a name="parameters"></a>Parametry
 
 *status*<br/>
-Kod stanu, aby powrócić do środowiska hosta.
+Kod stanu do zwrócenia do środowiska hosta.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Quick_exit** funkcja nie może zwracać do obiektu wywołującego.
+Funkcja **quick_exit** nie może zwrócić do obiektu wywołującego.
 
 ## <a name="remarks"></a>Uwagi
 
-**Quick_exit** funkcja powoduje zakończenie normalne programu. Wywoływanych przez nią żadne funkcje nie zarejestrowane przez **atexit**, **_onexit** lub zarejestrowany przez programy obsługi sygnału **sygnału** funkcji. Zachowanie jest niezdefiniowane, jeżeli **quick_exit** jest wywoływana więcej niż po lub w przypadku **wyjść** funkcja jest również nazywany.
+Funkcja **quick_exit** powoduje normalne zakończenie działania programu. Nie wywołuje żadnych funkcji zarejestrowanych przez **atexit —** , **_onexit** lub programy obsługi sygnałów zarejestrowane przez funkcję **sygnału** . Zachowanie jest niezdefiniowane, jeśli **quick_exit** jest wywoływana więcej niż raz lub funkcja **Exit** jest również wywoływana.
 
-**Quick_exit** wywołań w ostatni na wejściu, kolejność FIFO (LIFO), funkcje zarejestrowany przez funkcję **at_quick_exit**, z wyjątkiem tych funkcji, które już wywoływana, gdy funkcja została zarejestrowana.  Zachowanie jest niezdefiniowane, jeżeli [longjmp](longjmp.md) podczas wywoływania zarejestrowanych funkcja, która zakończy się wywołanie funkcji zostanie nawiązane połączenie.
+Funkcja **quick_exit** wywołuje, w kolejności Last-in, First-Out (LIFO), funkcje zarejestrowane przez **at_quick_exit**, z wyjątkiem tych funkcji, które są już wywoływane podczas rejestrowania funkcji.  Zachowanie jest niezdefiniowane, jeśli wywołanie [longjmp](longjmp.md) jest wykonywane podczas wywołania zarejestrowanej funkcji, która spowodowałaby zakończenie wywołania funkcji.
 
-Po wywołaniu funkcji zarejestrowanych **quick_exit** wywołuje **_Exit** przy użyciu *stan* wartość do zwrócenia kontroli dla środowiska hosta.
+Po wywołaniu zarejestrowanych funkcji **quick_exit** wywołuje **_exit** przy użyciu wartości *status* , aby zwrócić kontrolę do środowiska hosta.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**quick_exit**|\<process.h > lub \<stdlib.h >|
+|**quick_exit**|\<Process. h > lub \<STDLIB. h >|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

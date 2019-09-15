@@ -1,9 +1,9 @@
 ---
 title: _ecvt
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _ecvt
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ecvt
 helpviewer_keywords:
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - converting double numbers
 - ecvt function
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
-ms.openlocfilehash: 36c9cb2e8cd9eb4dd67bb91e9e4dbd36d8d1fc8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f91733c566c1782d5ccfc9a7c01e490a5915a85
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288675"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942036"
 ---
-# <a name="ecvt"></a>_ecvt
+# <a name="_ecvt"></a>_ecvt
 
-Konwertuje **double** liczb na ciąg. Bardziej bezpieczna wersja ta funkcja jest dostępna; zobacz [_ecvt_s —](ecvt-s.md).
+Konwertuje liczbę **podwójną** na ciąg. Dostępna jest bezpieczniejsza wersja tej funkcji; Zobacz [_ecvt_s](ecvt-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,34 +52,34 @@ char *_ecvt(
 ### <a name="parameters"></a>Parametry
 
 *value*<br/>
-Numer ma zostać przekonwertowany.
+Liczba do przekonwertowania.
 
-*Liczba*<br/>
-Liczba cyfr przechowywane.
+*liczbą*<br/>
+Liczba przechowywanych cyfr.
 
-*dec*<br/>
-Przechowywane położenie punktu dziesiętnego.
+*grudzień*<br/>
+Przechowywana pozycja punktu dziesiętnego.
 
 *sign*<br/>
-Znak przekonwertowany numer.
+Znak przekonwertowanego numeru.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_ecvt —** zwraca wskaźnik do ciągu znaków; **NULL** Jeśli wystąpił błąd.
+**_ecvt** zwraca wskaźnik do ciągu cyfr; **Wartość null** , jeśli wystąpił błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Ecvt —** funkcja konwertuje liczbę zmiennoprzecinkową ciąg znaków. *Wartość* parametr jest liczba zmiennoprzecinkowa, która ma zostać przekonwertowany. Ta funkcja przechowuje maksymalnie *liczba* cyfr *wartość* jako ciąg i dołącza znak null ('\0'). Jeśli liczba cyfr w *wartość* przekracza *liczba*, cyfra niskiego rzędu jest zaokrąglana. W przypadku mniej niż *liczba* cyfry, ciąg jest dopełniana zerami.
+Funkcja **_ecvt** konwertuje liczbę zmiennoprzecinkową na ciąg znaków. Parametr *Value* jest liczbą zmiennoprzecinkową do przekonwertowania. Ta funkcja przechowuje maksymalnie *liczbę* cyfr *wartości* jako ciąg i dołącza znak null (' \ 0 '). Jeśli liczba cyfr w *wartości* przekracza *liczbę*, zaokrąglana jest mała kolejność. Jeśli jest mniej niż *Liczba* cyfr, ciąg jest dopełniany zerami.
 
-Całkowita liczba cyfr, zwracany przez **_ecvt —** nie przekroczy **_CVTBUFSIZE**.
+Łączna liczba cyfr zwracanych przez **_ecvt** nie będzie większa niż **_CVTBUFSIZE**.
 
-Tylko cyfry są przechowywane w ciągu. Pozycja punkt dziesiętny i znak *wartość* można otrzymać od *gru* i *logowania* po wywołaniu. *Gru* parametr wskazuje wartość całkowitą, dzięki czemu położenie punktu dziesiętnego w odniesieniu do początku ciągu. Wartość 0 ani ujemna liczba całkowita wskazuje, punkt dziesiętny znajduje się po lewej stronie pierwsza cyfra. *Logowania* parametr wskazuje na liczbę całkowitą, która określa znak przekonwertowany numer. Jeśli wartość całkowitą ma wartość 0, liczba jest dodatnia. W przeciwnym razie liczba jest ujemna.
+W ciągu są przechowywane tylko cyfry. Pozycja punktu dziesiętnego i znak *wartości* można uzyskać od *gru* i *podpisywać* po wywołaniu. Parametr *gru* wskazuje liczbę całkowitą określającą położenie przecinka dziesiętnego w odniesieniu do początku ciągu. Wartość 0 lub ujemna liczba całkowita wskazuje, że punkt dziesiętny znajduje się po lewej stronie pierwszej cyfry. Parametr *Sign* wskazuje liczbę całkowitą wskazującą znak przekonwertowanego numeru. Jeśli wartość całkowita to 0, liczba jest dodatnia. W przeciwnym razie liczba jest ujemna.
 
-Różnica między **_ecvt —** i **_fcvt —** znajduje się w interpretacji *liczba* parametru. **_ecvt —** interpretuje *liczba* jako łączna liczba cyfr w ciągu wyjściowego, natomiast **_fcvt —** interpretuje *liczba* jako liczbę cyfr po punkt dziesiętny.
+Różnica między **_ecvt** i **_fcvt** jest interpretacją parametru *Count* . **_ecvt** interpretuje *liczbę* jako łączną liczbę cyfr w ciągu danych wyjściowych, podczas gdy **_fcvt** interpretuje *liczbę cyfr* po przecinku dziesiętnym.
 
-**_ecvt —** i **_fcvt —** pojedynczy bufor statycznie przydzielanego na użytek konwersji. Każde wywołanie jednej z tych procedur niszczy wynik poprzedniego wywołania.
+**_ecvt** i **_fcvt** używają jednego buforu przydzielenia statycznie dla konwersji. Każde wywołanie jednej z tych procedur niszczy wynik poprzedniego wywołania.
 
-Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *gru* lub *logowania* jest **NULL**, lub *liczba* wynosi 0, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [parametru Sprawdzanie poprawności](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL** i **NULL** jest zwracana.
+Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *gru* lub *Sign* ma **wartość null**lub *licznik* ma wartość 0, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** i zwracana jest **wartość null** .
 
 ## <a name="requirements"></a>Wymagania
 
@@ -84,7 +87,7 @@ Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *gru* lub *logowania
 |--------------|---------------------|
 |**_ecvt**|\<stdlib.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

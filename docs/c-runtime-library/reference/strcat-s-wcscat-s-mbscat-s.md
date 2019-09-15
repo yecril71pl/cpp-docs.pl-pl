@@ -1,12 +1,12 @@
 ---
 title: strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
 ms.date: 01/22/2019
-apiname:
+api_name:
 - strcat_s
 - _mbscat_s
 - _mbscat_s_l
 - wcscat_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strcat_s
 - wcscat_s
@@ -35,19 +38,19 @@ helpviewer_keywords:
 - _mbscat_s_l function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-ms.openlocfilehash: bd7894ba77e7fa67fa3844587394bd3e2e821391
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4449ec788b33a541a04a46d972f56f792797a16e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354382"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957992"
 ---
-# <a name="strcats-wcscats-mbscats-mbscatsl"></a>strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
+# <a name="strcat_s-wcscat_s-_mbscat_s-_mbscat_s_l"></a>strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
 
-Dołącza ciąg. Te wersje [strcat —, wcscat —, _mbscat —](strcat-wcscat-mbscat.md) mają wzmocnienia zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Dołącza ciąg. Te wersje [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md) mają ulepszenia zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbscat_s —** i **_mbscat_s_l** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscat_s** i **_mbscat_s_l** nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -99,7 +102,7 @@ errno_t _mbscat_s_l(
 ### <a name="parameters"></a>Parametry
 
 *strDestination*<br/>
-Bufor ciąg docelowy zakończony wartością null.
+Bufor ciągu miejsca docelowego zakończony wartością null.
 
 *numberOfElements*<br/>
 Rozmiar buforu ciągu docelowego.
@@ -107,26 +110,26 @@ Rozmiar buforu ciągu docelowego.
 *strSource*<br/>
 Bufor ciągu źródła zakończony znakiem null.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli to się powiedzie; Kod błędu.
+Zero, jeśli pomyślne; kod błędu w przypadku niepowodzenia.
 
 ### <a name="error-conditions"></a>Warunki błędów
 
 |*strDestination*|*numberOfElements*|*strSource*|Wartość zwracana|Zawartość *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**Wartość NULL** lub niezakończony|Wszystkie|Wszystkie|**EINVAL**|Nie zmodyfikowano|
-|Wszystkie|Wszystkie|**NULL**|**EINVAL**|*strDestination*[0] ustawiony na 0|
-|Wszystkie|0 lub zbyt mały|Wszystkie|**ERANGE**|*strDestination*[0] ustawiony na 0|
+|**Wartość zerowa** lub niezakończona|Ile|Ile|**EINVAL**|nie zmodyfikowano|
+|Ile|Ile|**NULL**|**EINVAL**|*strDestination* [0] ustaw wartość 0|
+|Ile|0 lub za mały|Ile|**ERANGE**|*strDestination* [0] ustaw wartość 0|
 
 ## <a name="remarks"></a>Uwagi
 
-**Strcat_s** funkcja dołącza *strSource* do *strDestination* i kończy się wynikowy ciąg znakiem null. Początkowy znak *strSource* zastępuje kończący znak null z *strDestination*. Zachowanie **strcat_s** jest niezdefiniowane, jeżeli ciągi źródłowe i docelowe nakładają się.
+Funkcja **strcat_s** dołącza *strSource* do *strDestination* i kończy otrzymany ciąg z pustym znakiem. Początkowy znak *strSource* zastępuje kończący znak null z *strDestination*. Zachowanie **strcat_s** jest niezdefiniowane, jeśli parametry źródłowe i docelowe nakładają się na siebie.
 
-Należy pamiętać, że drugi parametr całkowity rozmiar buforu nie pozostały rozmiar:
+Należy pamiętać, że drugi parametr jest całkowitym rozmiarem buforu, a nie pozostałym rozmiarem:
 
 ```C
 char buf[16];
@@ -135,19 +138,19 @@ strcat_s(buf, 16, " End");               // Correct
 strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 ```
 
-**wcscat_s —** i **_mbscat_s —** są wersjami znaków dwubajtowych i znaków wielobajtowych **strcat_s**. Argumenty i wartość zwracana przez **wcscat_s —** są znakami dwubajtowymi ciągów; te z **_mbscat_s —** są ciągami znaków wielobajtowych. Te trzy funkcje zachowują się identycznie.
+**wcscat_s** i **_mbscat_s** są wersjami znaków dwubajtowych i znakami wieloznacznymi **strcat_s**. Argumenty i wartość zwracana przez **wcscat_s** są ciągami znaków dwubajtowych; te z **_mbscat_s** są ciągami znaków wielobajtowych. Te trzy funkcje zachowują się identycznie w inny sposób.
 
-Jeśli *strDestination* jest wskaźnikiem typu null lub nie jest zakończony znakiem null, lub jeśli *strSource* jest **NULL** wskaźnika, lub jeśli ciąg docelowy jest zbyt mały, nieprawidłowy parametr Program obsługi zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **EINVAL** i ustaw **errno** do **EINVAL**.
+Jeśli *strDestination* jest wskaźnikiem o wartości null lub nie jest zakończony znakiem null lub jeśli *strSource* jest wskaźnikiem typu **null** lub jeśli ciąg docelowy jest zbyt mały, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **EINVAL** i ustawiają **errno** na **EINVAL**.
 
-Wersje funkcji, które mają **_l** sufiks mają takie samo zachowanie, ale użyj parametru ustawień regionalnych, który jest przekazywany zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wersje funkcji, które mają sufiks **_l** mają takie samo zachowanie, ale używają parametru ustawień regionalnych, który jest przesyłany zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążania szablonu; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując potrzebę określenia argumentu rozmiaru) oraz ich mogą automatycznie zastąpić starsze, niezabezpieczone funkcje ich nowsze, bezpieczne odpowiedniki. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując konieczność określenia argumentu rozmiaru) i mogą automatycznie zastąpić starsze, niezabezpieczone funkcje z ich nowszymi, bezpiecznymi odpowiednikami. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
-Wersje debugowania tych funkcji najpierw wypełniają bufor 0xfd. Aby wyłączyć to zachowanie, użyj [_crtsetdebugfillthreshold —](crtsetdebugfillthreshold.md).
+Wersje debugowania tych funkcji najpierw wypełniają bufor 0xFD. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscat_s**|**strcat_s**|**_mbscat_s**|**wcscat_s**|
 
@@ -156,14 +159,14 @@ Wersje debugowania tych funkcji najpierw wypełniają bufor 0xfd. Aby wyłączy�
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**strcat_s**|\<string.h>|
-|**wcscat_s**|\<Włącz String.h > lub \<wchar.h >|
+|**wcscat_s**|\<ciąg. h > lub \<WCHAR. h >|
 |**_mbscat_s**|\<mbstring.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład kodu w [strcpy_s wcscpy_s —, _mbscpy_s —](strcpy-s-wcscpy-s-mbscpy-s.md).
+Zobacz przykład kodu w [strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
 
 ## <a name="see-also"></a>Zobacz także
 

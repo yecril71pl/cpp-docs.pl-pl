@@ -1,10 +1,10 @@
 ---
 title: vfscanf, vfwscanf
 ms.date: 11/04/2016
-apiname:
+api_name:
 - vfwscanf
 - vfscanf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,22 +15,25 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vfwscanf
 - _vftscanf
 - vfscanf
 ms.assetid: c06450ef-03f1-4d24-a8ac-d2dd98847918
-ms.openlocfilehash: 3076f63e05e156a479372adfca9dc707255f9e6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72591c9fa91855745f45f3f77c88dd0ed5b001a0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364782"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945521"
 ---
 # <a name="vfscanf-vfwscanf"></a>vfscanf, vfwscanf
 
-Odczyty sformatowanych danych ze strumienia. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [vfscanf_s, vfwscanf_s](vfscanf-s-vfwscanf-s.md).
+Odczytuje sformatowane dane ze strumienia. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [vfscanf_s, vfwscanf_s](vfscanf-s-vfwscanf-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -50,42 +53,42 @@ int vfwscanf(
 ### <a name="parameters"></a>Parametry
 
 *stream*<br/>
-Wskaźnik do **pliku** struktury.
+Wskaźnik do struktury **pliku** .
 
-*Format*<br/>
+*format*<br/>
 Ciąg kontroli formatu.
 
 *arglist*<br/>
-Lista zmiennych argumentów.
+Lista argumentów zmiennych.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca liczbę pól pomyślnie przekonwertowanych i przypisanych; zwracana wartość nie uwzględnia pól, które są odczytane, ale nie przypisane. Zwracana wartość wynosząca 0 wskazuje, że nie przydzielono żadnych pól. Jeśli wystąpi błąd lub jeśli osiągnięto koniec strumienia pliku przed dokonaniem pierwszej konwersji, zwracana jest wartość **EOF** dla **vfscanf** i **vfwscanf**.
+Każda z tych funkcji zwraca liczbę pól, które zostały pomyślnie przekonwertowane i przypisane; wartość zwracana nie zawiera pól, które są odczytywane, ale nie są przypisane. Wartość zwracana przez 0 wskazuje, że nie przypisano żadnych pól. Jeśli wystąpi błąd lub osiągnięto koniec strumienia pliku przed pierwszą konwersją, wartość zwracana to **eof** dla **vfscanf** i **vfwscanf**.
 
-Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *strumienia* lub *format* jest pustym wskaźnikiem, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **EOF** i ustaw **errno** do **EINVAL**.
+Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *strumień* lub *Format* jest pustym wskaźnikiem, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **eof** i ustawiają **errno** na **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-**Vfscanf** funkcja odczytuje dane z bieżącego położenia obiektu *strumienia* do lokalizacji, które są określone przez *lista_argumentów* listy argumentów. Każdy argument na liście musi być wskaźnikiem do zmiennej typu odpowiadającego specyfikatorowi typu w parametrze *format*. *Format* kontroluje interpretację danych wejściowych pola, a ma taką samą formę i funkcjonuje jako *format* argument **scanf**; zobacz [scanf](scanf-scanf-l-wscanf-wscanf-l.md) dla Opis *format*.
+Funkcja **vfscanf** odczytuje dane z bieżącego położenia *strumienia* do lokalizacji, które są określone przez listę argumentów *arglist* . Każdy argument na liście musi być wskaźnikiem do zmiennej typu odpowiadającego specyfikatorowi typu w *formacie*. *Format* kontroluje interpretację pól wejściowych i ma taką samą formę i funkcję jak argument *formatu* dla **scanf**; Opis *formatu*można znaleźć w temacie [scanf](scanf-scanf-l-wscanf-wscanf-l.md) .
 
-**vfwscanf** to wersja znaku dwubajtowego **vfscanf**; format argumentu **vfwscanf** jest ciągiem znaku dwubajtowego. Funkcje te zachowują się identycznie, jeżeli strumień jest otwarty w trybie ANSI. **vfscanf** nie obsługuje danych wejściowych ze strumienia UNICODE.
+**vfwscanf** to dwubajtowa wersja **vfscanf**; argument formatu **vfwscanf** jest ciągiem znaków dwubajtowych. Te funkcje zachowują się identycznie, jeśli strumień jest otwarty w trybie ANSI. **vfscanf** nie obsługuje danych wejściowych ze strumienia Unicode.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vftscanf**|**vfscanf**|**vfscanf**|**vfwscanf**|
 
-Aby uzyskać więcej informacji, zobacz [pola specyfikacji formatu: funkcji wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
+Aby uzyskać więcej informacji, zobacz [Formatowanie pól specyfikacji: scanf i wscanf Functions](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
 |**vfscanf**|\<stdio.h>|
-|**vfwscanf**|\<stdio.h > lub \<wchar.h >|
+|**vfwscanf**|\<stdio. h > lub \<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -156,7 +159,7 @@ x
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>

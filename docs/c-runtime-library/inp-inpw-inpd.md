@@ -1,11 +1,11 @@
 ---
 title: _inp, _inpw, _inpd
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _inp
 - _inpw
 - _inpd
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr120.dll
 - msvcr110_clr0400.dll
@@ -13,7 +13,10 @@ apilocation:
 - msvcr80.dll
 - msvcr100.dll
 - msvcr90.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - inpd
 - _inp
@@ -29,22 +32,22 @@ helpviewer_keywords:
 - I/O [CRT], port
 - _inpw function
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
-ms.openlocfilehash: 0915b7a98b10137b37025eb59161bc98c27ae7b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4668002fdf709e3e425ac379f136e228250896d4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62343410"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944983"
 ---
-# <a name="inp-inpw-inpd"></a>_inp, _inpw, _inpd
+# <a name="_inp-_inpw-_inpd"></a>_inp, _inpw, _inpd
 
-Dane wejściowe z portu, bajt (`_inp`), słowo (`_inpw`), lub podwójne słowo (`_inpd`).
+Dane wejściowe, z portu, bajt (`_inp`), słowo (`_inpw`) lub podwójne słowo (`_inpd`).
 
 > [!IMPORTANT]
 >  Te funkcje są przestarzałe. Począwszy od programu Visual Studio 2015, nie są one dostępne w CRT.
 
 > [!IMPORTANT]
->  Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+>  Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -62,18 +65,18 @@ unsigned long _inpd(
 
 #### <a name="parameters"></a>Parametry
 
-*port*<br/>
-Numer portu We/Wy.
+*przewożąc*<br/>
+Numer portu we/wy.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje zwracają wartość bajtu, słowa lub podwójnego słowa odczytanego z `port`. Nie będzie zwrotu błędu.
+Funkcje zwracają bajt, wyraz lub podwójne odczytywanie `port`wyrazów. Brak powrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-`_inp`, `_inpw`, I `_inpd` funkcje odczytują bajt, wyraz i podwójne słowo, odpowiednio, z określonego portu wejściowego. Wartość wejściowa może być dowolnym niepodpisana krótka liczba całkowita z zakresu 0 - 65 535.
+`_inp`, ,`_inpw` I`_inpd` funkcje odczytują bajt, wyraz i podwójne słowo, odpowiednio, z określonego portu wejściowego. Wartością wejściową może być każda nieoznaczona krótka liczba całkowita z zakresu od 0 do 65 535.
 
-Ponieważ te funkcje czytają bezpośrednio z portu We/Wy, nie można użyć w kodzie użytkownika.
+Ponieważ te funkcje odczytują się bezpośrednio z portu we/wy, nie można ich używać w kodzie użytkownika.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -83,13 +86,13 @@ Ponieważ te funkcje czytają bezpośrednio z portu We/Wy, nie można użyć w k
 |`_inpw`|\<conio.h>|
 |`_inpd`|\<conio.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawczej C](../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy konsoli i portu](../c-runtime-library/console-and-port-i-o.md)<br/>
+[We/wy konsoli i portu](../c-runtime-library/console-and-port-i-o.md)<br/>
 [_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)

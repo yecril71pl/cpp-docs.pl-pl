@@ -1,11 +1,11 @@
 ---
 title: _control87, _controlfp, __control87_2
 ms.date: 08/29/2019
-apiname:
+api_name:
 - _control87
 - _controlfp
 - __control87_2
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _control87
 - __control87_2
@@ -38,12 +41,12 @@ helpviewer_keywords:
 - EM_AMBIGUOUS
 - control87_2 function
 ms.assetid: 0d09729d-d9a0-43d6-864c-43ff25e7e0c5
-ms.openlocfilehash: 75b2870543ec3ddd20d445a492ad4270b91e80d7
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 15700a5dabfbc3f8915e251bd8b9270f8f9c1a35
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218417"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942906"
 ---
 # <a name="_control87-_controlfp-__control87_2"></a>_control87, _controlfp, __control87_2
 
@@ -123,7 +126,7 @@ Funkcja **__control87_2** umożliwia bezpośrednie sterowanie jednostkami zmienn
 
 Jeśli używasz **__control87_2** do ustawiania różnych wartości dla słów kontrolnych zmiennoprzecinkowych, wówczas **_control87** lub **_controlfp** może nie być w stanie zwrócić pojedynczego wyrazu kontrolki do reprezentowania stanu obu jednostek zmiennoprzecinkowych. W takim przypadku te funkcje ustawiają flagę **EM_AMBIGUOUS** w zwracanej wartości całkowitej, aby wskazać niespójność między dwoma wyrazami kontrolnymi. Flaga **EM_AMBIGUOUS** jest ostrzeżeniem, że zwrócone słowo sterujące może nie reprezentować stanu obu słów sterujących zmiennoprzecinkowych.
 
-Na platformach ARM, ARM64 i x64 zmiana trybu nieskończoności lub precyzji zmiennoprzecinkowej nie jest obsługiwana. Jeśli Maska kontroli dokładności jest używana na platformie x64, funkcja wywołuje potwierdzenie i zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w walidacji [parametru](../../c-runtime-library/parameter-validation.md).
+Na platformach ARM, ARM64 i x64 zmiana trybu nieskończoności lub precyzji zmiennoprzecinkowej nie jest obsługiwana. Jeśli Maska kontroli dokładności jest używana na platformie x64, funkcja wywołuje potwierdzenie i zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md).
 
 > [!NOTE]
 > **__control87_2** nie jest obsługiwana na platformach ARM, arm64 lub x64. W przypadku korzystania z **__control87_2** i kompilowania programu dla platform ARM, arm64 lub x64 kompilator generuje błąd.

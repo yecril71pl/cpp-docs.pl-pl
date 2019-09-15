@@ -1,9 +1,9 @@
 ---
 title: __setusermatherr
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __setusermatherr
-apilocation:
+api_location:
 - msvcr80.dll
 - msvcr90.dll
 - msvcrt.dll
@@ -12,22 +12,25 @@ apilocation:
 - msvcr120.dll
 - msvcr100.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __setusermatherr
 helpviewer_keywords:
 - __setusermatherr
 ms.assetid: f306818d-381a-4d68-8739-71b92bacb5ea
-ms.openlocfilehash: 116abd203cc289c63535a8e41a005a6fd248b08b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1dc20be40614aaeda72040496a61a6ea9df99383
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268684"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957737"
 ---
-# <a name="setusermatherr"></a>__setusermatherr
+# <a name="__setusermatherr"></a>__setusermatherr
 
-Określa rountine dostarczone przez użytkownika, aby obsługiwać błędy matematyczne, zamiast [_matherr](../c-runtime-library/reference/matherr.md) procedury.
+Określa rountine dostarczone przez użytkownika do obsługi błędów matematycznych zamiast procedury [_matherr](../c-runtime-library/reference/matherr.md) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,9 +43,9 @@ void __setusermatherr(
 #### <a name="parameters"></a>Parametry
 
 *PF*<br/>
-Wskaźnik do implementacji `_matherr` który jest dostarczany przez użytkownika.
+Wskaźnik do implementacji `_matherr` , która jest dostarczana przez użytkownika.
 
-Typ *pf* parametru jest zadeklarowany jako `typedef int (__cdecl * _HANDLE_MATH_ERROR)(struct _exception *)`.
+Typ parametru *PF* jest zadeklarowany jako `typedef int (__cdecl * _HANDLE_MATH_ERROR)(struct _exception *)`.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -50,4 +53,4 @@ Typ *pf* parametru jest zadeklarowany jako `typedef int (__cdecl * _HANDLE_MATH_
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|__setusermatherr|matherr.c|
+|__setusermatherr|matherr. c|

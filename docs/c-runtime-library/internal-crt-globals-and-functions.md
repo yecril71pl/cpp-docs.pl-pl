@@ -1,7 +1,7 @@
 ---
-title: Wewnętrzne zmienne globalne CRT i funkcji
+title: Wewnętrzna Globals i funkcje CRT
 ms.date: 01/22/2019
-apiname:
+api_name:
 - __acrt_iob_func
 - __AdjustPointer
 - _assert
@@ -277,7 +277,7 @@ apiname:
 - _wsopen_dispatch
 - _Xbad_alloc
 - _Xlength_error
-apilocation:
+api_location:
 - api-ms-win-crt-math-l1-1-0.dll
 - api-ms-win-crt-heap-l1-1-0.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
@@ -294,7 +294,10 @@ apilocation:
 - msvcp140_app.dll
 - ntdll.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __acrt_iob_func
 - __AdjustPointer
@@ -848,20 +851,20 @@ helpviewer_keywords:
 - _Xbad_alloc
 - _Xlength_error
 ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
-ms.openlocfilehash: 462b9d80b61b8bda3afc5aec4d819e355adbbbd7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 252065039597b6176b42008b31b7082740bcc265
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348058"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940242"
 ---
-# <a name="internal-crt-globals-and-functions"></a>Wewnętrzne zmienne globalne CRT i funkcji
+# <a name="internal-crt-globals-and-functions"></a>Wewnętrzna Globals i funkcje CRT
 
-Biblioteki języka C runtime (CRT) zawiera funkcje i zmienne globalne, które są używane tylko do obsługi interfejs publiczny biblioteki. Niektóre z nich są widoczne w nagłówkach publicznych szczegółów implementacji. Chociaż te funkcje i zmienne globalne są dostępne za pośrednictwem publicznego eksportu, ich nie są przeznaczone do użycia w kodzie. Zaleca się, że zmieniasz wszelki kod, który używa tych funkcji i zmiennych, aby zamiast tego użyj odpowiedników Biblioteka publiczna. Te funkcje mogą ulec zmianie w kolejnych wersjach. Są one wymienione w tym miejscu możesz łatwiej zidentyfikować je. Linki zostały podane, gdy istnieje dodatkowej dokumentacji, ale ogólnie rzecz biorąc, nie opisano szczegóły tych implementacji.
+Biblioteka środowiska uruchomieniowego języka C (CRT) zawiera funkcje i zmienne globalne, które są używane tylko do obsługi interfejsu biblioteki publicznej. Niektóre z nich są ujawniane w publicznych nagłówkach jako szczegóły implementacji. Chociaż te funkcje i zmienne globalne są dostępne za pośrednictwem publicznych eksportów, nie są przeznaczone do użytku w kodzie. Zalecamy zmianę dowolnego kodu, który używa tych funkcji i zmiennych do używania odpowiedników biblioteki publicznej. Te funkcje mogą ulec zmianie z wersji na wersję. Są one wymienione tutaj, aby ułatwić ich identyfikację. Linki są udostępniane, gdy istnieje dodatkowa dokumentacja, ale ogólnie rzecz biorąc, te szczegóły implementacji nie są udokumentowane.
 
-## <a name="internal-crt-globals-and-value-macros"></a>Wewnętrzne zmienne globalne CRT i wartość makra
+## <a name="internal-crt-globals-and-value-macros"></a>Wewnętrzne Globals i makro CRT
 
-Te zmienne globalne i makra definicje są używane do implementowania CRT.
+Te zmienne globalne i definicje makr służą do implementowania CRT.
 
 |Nazwa|
 |----------|
@@ -878,9 +881,9 @@ Te zmienne globalne i makra definicje są używane do implementowania CRT.
 |[_wcmdln](../c-runtime-library/acmdln-tcmdln-wcmdln.md)|
 |__winitenv|
 
-## <a name="internal-crt-functions-and-function-macros"></a>Funkcje wewnętrzne CRT i makra — funkcja
+## <a name="internal-crt-functions-and-function-macros"></a>Wewnętrzne funkcje CRT i makra funkcji
 
-Te funkcje i makra funkcji są używane do implementowania CRT i standardowej biblioteki języka C++.
+Te funkcje i makra funkcji służą do implementowania CRT i C++ standardowej biblioteki.
 
 |Nazwa|
 |----------|
@@ -1096,20 +1099,20 @@ Te funkcje i makra funkcji są używane do implementowania CRT i standardowej bi
 |__p\__dstbias|
 |__p\__environ|
 |[__p\__fmode](../c-runtime-library/p-fmode.md)|
-|__p\__iob —|
+|__p\__iob|
 |__p\__mbcasemap|
 |__p\__mbctype|
-|__p\__pctype —|
-|__p\__pgmptr —|
-|__p\__pwctype —|
+|__p\__pctype|
+|__p\__pgmptr|
+|__p\__pwctype|
 |__p\__timezone|
 |__p\__tzname|
 |__p\__wcmdln|
 |__p\__wenviron|
 |__p\__wpgmptr|
-|_pctype —|
+|_pctype|
 |[__pctype_func](../c-runtime-library/pctype-func.md)|
-|_pwctype —|
+|_pwctype|
 |__pwctype_func|
 |__pxcptinfoptrs|
 |_query_app_type|

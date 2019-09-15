@@ -1,11 +1,11 @@
 ---
 title: cacos, cacosf, cacosl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cacos
 - cacosf
 - cacosl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cacos
 - cacosf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - cacosf function
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
-ms.openlocfilehash: 18757ecd30f399ca3d1fdb77e8bff8213a265e74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b0751703b9b9cdcdb50e265a6b5d3c929d89ae1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348578"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939403"
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos, cacosf, cacosl
 
-Pobiera arcus cosinus liczby zespolonej, cenowe gałąź poza interwał [-1, + 1] na rzeczywistych osi.
+Pobiera arcus cosinus liczby zespolonej, z rozgałęzieniem, poza interwałem [-1, + 1], wzdłuż osi rzeczywistej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,23 +60,23 @@ _Lcomplex cacos( _Lcomplex z );  // C++ only
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Liczby zespolonej oznacza kąt w radianach.
+Liczba zespolona, która reprezentuje kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Arcus cosinus *z*, w radianach. Wynik jest nieograniczona, wzdłuż osi urojone, a w w zakresie [0, π] na rzeczywistych osi. Wystąpi błąd domeny *z* wykracza poza zakres [-1, + 1].
+Arcus *cosinus z z, w*radianach. Wynik jest niepowiązany wzdłuż osi urojonej i w przedziale [0, π] wzdłuż osi rzeczywistej. Wystąpi błąd domeny, jeśli *z* jest spoza interwału [-1, + 1].
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **cacos** przyjmujące i zwracające **_Fcomplex** i **_Lcomplex** wartości. W programie C **cacos** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **cacos** , które pobierają i zwracają wartości **_Fcomplex** i **_Lcomplex** . W programie C **cacos** zawsze przyjmuje i zwraca wartość **_Dcomplex** .
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|Nagłówek języka C++|
+|Procedura|Nagłówek języka C|C++nagłówki|
 |-------------|--------------|------------------|
 |**cacos**,               **cacosf**, **cacosl**|\<complex.h>|\<ccomplex>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

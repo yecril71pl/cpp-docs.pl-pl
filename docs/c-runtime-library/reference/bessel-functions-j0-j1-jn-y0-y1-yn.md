@@ -1,14 +1,14 @@
 ---
-title: 'Bessel Functions: _j0, _j1, _jn, _y0, _y1, _yn'
+title: 'Funkcje Bessela: _j0, _j1, _jn, _y0, _y1, _yn'
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _j0
 - _j1
 - _jn
 - _y0
 - _y1
 - _yn
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - c.bessel
 - _j0
@@ -38,16 +41,16 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-ms.openlocfilehash: 682eaa99d0be1b959152ff94cc10a86aa68d988d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5420b34846998cdbcb4814d8319274f1a3516d91
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341124"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939457"
 ---
-# <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>Bessel Functions: _j0, _j1, _jn, _y0, _y1, _yn
+# <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>Funkcje Bessela: _j0, _j1, _jn, _y0, _y1, _yn
 
-Oblicza funkcję Bessela rodzaju pierwszej lub drugiej zamówień 0, 1 lub n. Funkcje Bessela są często używane w matematyce teorii elektromagnetycznych wave.
+Oblicza funkcję Bessela pierwszego lub drugiego rodzaju zamówień 0, 1 lub n. Funkcje Bessela są często używane w przypadku matematyki teorii fal elektromagnetycznych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -80,35 +83,35 @@ double _yn(
 Wartość zmiennoprzecinkowa.
 
 *n*<br/>
-Liczba całkowita kolejność Bessela funkcji.
+Kolejność liczb całkowitych funkcji Bessela.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych procedur zwraca funkcja Bessela *x*. Jeśli *x* ma ujemną wartość w **_y0**, **_y1**, lub **_yn** funkcje, rutynowe zestawy **errno** do  **EDOM**, drukuje **_domeny** komunikat o błędzie **stderr**i zwraca **_HUGE_VAL**. Możesz zmodyfikować obsługi przy użyciu błędów **_matherr**.
+Każda z tych procedur zwraca funkcję Bessela *x*. Jeśli *x* jest ujemna w funkcjach **_y0**, **_y1**lub **_yn** , procedura ustawia **errno** na **Edom**, drukuje **_DOMAIN** komunikat o błędzie do **stderr**i zwraca **_HUGE_VAL**. Obsługę błędów można modyfikować za pomocą **_matherr**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_J0**, **_j1**, i **_jn** procedury wróć Bessela funkcje pierwszy rodzaj: porządkuje 0, 1 i n, odpowiednio.
+Procedury **_j0**, **_j1**i **_jn** zwracają funkcje Bessela pierwszego rodzaju: Orders 0, 1 i n, odpowiednio.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|GRANICACH **QNAN**, **ZNAJDŹ**|**NIEPRAWIDŁOWY**|**_DOMAIN**|
+|**QNAN**, **IND**|**NIEPRAWIDŁOWY**|**_DOMAIN**|
 
-**_Y0**, **_y1**, i **_yn** procedury wróć Bessela funkcji drugiego rodzaju: porządkuje 0, 1 i n, odpowiednio.
+Procedury **_y0**, **_y1**i **_yn** zwracają funkcje Bessela drugiego rodzaju: Orders 0, 1 i n, odpowiednio.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|GRANICACH **QNAN**, **ZNAJDŹ**|**NIEPRAWIDŁOWY**|**_DOMAIN**|
+|**QNAN**, **IND**|**NIEPRAWIDŁOWY**|**_DOMAIN**|
 |± 0|**ZERODIVIDE**|**_SING**|
-|&#124;x&#124; < 0.0|**NIEPRAWIDŁOWY**|**_DOMAIN**|
+|&#124;x&#124; < 0,0|**NIEPRAWIDŁOWY**|**_DOMAIN**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_j0**, **_j1**, **_jn**, **_y0**, **_y1**, **_yn**|\<cmath > (C++), \<math.h > (C, C++)|
+|**_j0**, **_j1**, **_jn**, **_y0**, **_y1**, **_yn**|\<cmath > (C++), \<Math. h > (C, C++)|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

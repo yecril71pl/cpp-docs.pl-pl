@@ -1,9 +1,9 @@
 ---
 title: _aligned_offset_malloc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_offset_malloc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_offset_malloc
 - aligned_offset_malloc
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - _aligned_offset_malloc function
 - aligned_offset_malloc function
 ms.assetid: 447681a3-7c95-4655-86ba-fa3a4ca4c521
-ms.openlocfilehash: 824edfd8bb96d805a030fb205dee62fa9eb4fd06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e8d6f839f3c675b7543ff14f3f633b0c7d5151f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341772"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943854"
 ---
-# <a name="alignedoffsetmalloc"></a>_aligned_offset_malloc
+# <a name="_aligned_offset_malloc"></a>_aligned_offset_malloc
 
 Przydziela pamięć na określonej granicy wyrównania.
 
@@ -46,10 +49,10 @@ void * _aligned_offset_malloc(
 
 ### <a name="parameters"></a>Parametry
 
-*Rozmiar*<br/>
+*zmienia*<br/>
 Rozmiar alokacji żądanej pamięci.
 
-*Wyrównanie*<br/>
+*struktury*<br/>
 Wartość wyrównania, która musi być całkowitą potęgą liczby 2.
 
 *offset*<br/>
@@ -57,17 +60,17 @@ Przesunięcie alokacji pamięci, aby wymusić wyrównanie.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do bloku pamięci, która została przydzielona lub **NULL** Jeśli operacja nie powiodła się.
+Wskaźnik do bloku pamięci, który został przydzielony lub **ma wartość null** , jeśli operacja nie powiodła się.
 
 ## <a name="remarks"></a>Uwagi
 
-**_aligned_offset_malloc —** jest przydatne w sytuacjach, w których potrzebne jest wyrównanie na elemencie zagnieżdżonym; na przykład jeśli wyrównanie było potrzebne na klasie zagnieżdżonej.
+**_aligned_offset_malloc** jest przydatne w sytuacjach, gdy jest potrzebne wyrównanie w zagnieżdżonym elemencie; na przykład jeśli w klasie zagnieżdżonej jest wymagana wartość wyrównania.
 
-**_aligned_offset_malloc —** opiera się na **— funkcja malloc**; Aby uzyskać więcej informacji, zobacz [— funkcja malloc](malloc.md).
+**_aligned_offset_malloc** jest oparta na **malloc**; Aby uzyskać więcej informacji, zobacz [malloc](malloc.md).
 
-**_aligned_offset_malloc —** jest oznaczony jako `__declspec(noalias)` i `__declspec(restrict)`, co oznacza, że funkcja daje gwarancję niemodyfikowania zmiennych globalnych i że zwrócony wskaźnik nie jest aliasem. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md) i [ograniczyć](../../cpp/restrict.md).
+**_aligned_offset_malloc** jest oznaczona `__declspec(noalias)` i `__declspec(restrict)`, co oznacza, że funkcja jest gwarantowana, aby nie modyfikować zmiennych globalnych i że zwrócony wskaźnik nie jest aliasem. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md) i [ograniczaj](../../cpp/restrict.md).
 
-Funkcja ta ustawia **errno** do **ENOMEM** Jeśli alokacja pamięci nie powiodła się lub Jeśli żądany rozmiar był większy niż **_heap_maxreq —**. Aby uzyskać więcej informacji na temat **errno**, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Ponadto **_aligned_offset_malloc —** sprawdza poprawność parametrów. Jeśli *wyrównanie* nie jest potęgą liczby 2 lub jeśli *przesunięcie* jest większa niż lub równa *rozmiar* i wartość różną od zera, funkcja wywoła procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [ Walidacja parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **NULL** i ustawia **errno** do **EINVAL**.
+Ta funkcja ustawia **errno** na **ENOMEM** , jeśli alokacja pamięci nie powiodła się lub żądany rozmiar był większy niż **_HEAP_MAXREQ**. Aby uzyskać więcej informacji na temat **errno**, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Ponadto **_aligned_offset_malloc** sprawdza poprawność swoich parametrów. Jeśli *wyrównanie* nie jest potęgą 2 lub jeśli *przesunięcie* jest większe niż lub równe *rozmiarowi* i zero, ta funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja zwraca **wartość null** i ustawia **errno** na **EINVAL**.
 
 ## <a name="requirements"></a>Wymagania
 

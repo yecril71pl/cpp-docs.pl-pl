@@ -1,12 +1,12 @@
 ---
 title: _snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _snprintf_s
 - _snprintf_s_l
 - _snwprintf_s
 - _snwprintf_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _snwprintf_s_l
 - _sntprintf_s_l
@@ -47,16 +50,16 @@ helpviewer_keywords:
 - _snwprintf_s function
 - formatted text [C++]
 ms.assetid: 9336ab86-13e5-4a29-a3cd-074adfee6891
-ms.openlocfilehash: ae298e9143a9ce79efe49c2055299f8d74070999
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b95145a468d382ea63ef4d409c095ec217e42f1c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356202"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948014"
 ---
-# <a name="snprintfs-snprintfsl-snwprintfs-snwprintfsl"></a>_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l
+# <a name="_snprintf_s-_snprintf_s_l-_snwprintf_s-_snwprintf_s_l"></a>_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l
 
-Zapisuje sformatowane dane do ciągu. Są to wersje [snprintf —, _snprintf, _snprintf_l —, _snwprintf, _snwprintf_l —](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Zapisuje sformatowane dane do ciągu. Są to wersje [snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) z ulepszeniami zabezpieczeń, jak opisano w [funkcjach zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -113,44 +116,44 @@ int _snwprintf_s(
 Lokalizacja w pamięci dla danych wyjściowych.
 
 *sizeOfBuffer*<br/>
-Rozmiar lokalizacja magazynowa danych wyjściowych. Rozmiar w **bajtów** dla **_snprintf_s** lub rozmiaru w **wyrazy** dla **_snwprintf_s**.
+Rozmiar lokalizacji magazynu dla danych wyjściowych. Rozmiar w **bajtach** dla **_snprintf_s** lub rozmiaru w **wyrazach** dla **_snwprintf_s**.
 
-*Liczba*<br/>
-Maksymalna liczba znaków do przechowywania lub [_TRUNCATE](../../c-runtime-library/truncate.md).
+*liczbą*<br/>
+Maksymalna liczba znaków do zapisania lub [_TRUNCATE](../../c-runtime-library/truncate.md).
 
-*Format*<br/>
+*format*<br/>
 Ciąg kontroli formatu.
 
 *argument*<br/>
 Argumenty opcjonalne.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_snprintf_s** zwraca liczbę znaków przechowywanych w *buforu*, nie licząc zamykającego kończącego znaku null. **_snwprintf_s** zwraca liczbę znaków szerokich przechowywanych w *buforu*, nie licząc zamykającego znaku pustego.
+**_snprintf_s** zwraca liczbę znaków przechowywanych w *buforze*, która nie zlicza kończącego znaku null. Funkcja **_snwprintf_s** zwraca liczbę znaków dwubajtowych przechowywanych w *buforze*, która nie zlicza kończących znaków dwubajtowych o zerowej długości.
 
-Jeśli magazynu wymaganego do przechowywania danych i kończącą wartość null, przekracza *sizeOfBuffer*, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonywanie jest kontynuowane po nieprawidłowy parametr uchwytu, te funkcje ustawiają *buforu* na pusty ciąg, ustaw **errno** do **ERANGE**i zwracają wartość -1.
+Jeśli magazyn wymagany do przechowywania danych i kończący się wartością null przekracza *sizeOfBuffer*, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonywanie jest kontynuowane po procedurze obsługi nieprawidłowego parametru, te funkcje ustawiają *bufor* na pusty ciąg, ustawia **errno** na **ERANGE**i zwracają-1.
 
-Jeśli *buforu* lub *format* jest **o wartości NULL** wskaźnika, lub jeśli *liczba* jest mniejszy niż lub równy zero, procedura obsługi nieprawidłowego parametru zostanie wywołana. Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** do **EINVAL** i zwracają wartość -1.
+Jeśli *bufor* lub *Format* jest wskaźnikiem typu **null** lub jeśli *licznik* jest mniejszy lub równy zero, zostanie wywołana procedura obsługi nieprawidłowego parametru. Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i Return-1.
 
-Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje o tych i innych kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_Snprintf_s** funkcja formatuje i zapisuje *liczba* lub mniej znaków w *buforu* i dołącza zakończenia o wartości null. Każdy argument (jeśli istnieje) jest konwertowaya i wychodzi według specyfikacji formatu w *format*. Formatowanie jest zgodny z **printf** rodzinę funkcji; zobacz [składnia specyfikacji formatu: funkcje printf i wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
+Funkcja **_snprintf_s** formatuje i przechowuje *liczbę* lub mniej znaków w *buforze* i dołącza kończący wartość null. Każdy argument (jeśli istnieje) jest konwertowany i wyprowadzany zgodnie ze specyfikacją formatu w *formacie*. Formatowanie jest spójne z rodziną **printf** funkcji; Zobacz [składnia specyfikacji formatowania: printf i wprintf Functions](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
 
-Jeśli *liczba* jest [_TRUNCATE](../../c-runtime-library/truncate.md), następnie **_snprintf_s** zapisy, jaka ciągu jako będą mieści się w *buforu* przy równoczesnym zachowaniu miejsca dla Trwa przerywanie wykonywania o wartości null. Jeśli cały ciąg (z zakończenia o wartości null) mieści się *buforu*, następnie **_snprintf_s** zwraca liczbę znaków napisanych, (nie wliczając zakończenia o wartości null); w przeciwnym razie **_snprintf_s**  zwraca -1, aby wskazać, że obcięcie wystąpił.
+Jeśli *Liczba* jest równa [_TRUNCATE](../../c-runtime-library/truncate.md), **_snprintf_s** zapisuje tyle ciągu jako ciąg, który zmieści się w *buforze* , pozostawiając miejsce na zakończenie pustej wartości null. Jeśli cały ciąg (z końcowym wartością null) mieści się w *buforze*, **_snprintf_s** zwraca liczbę znaków pisanych (bez uwzględnienia kończącego null); w przeciwnym razie **_snprintf_s** zwraca wartość-1 w celu wskazania, że wystąpiło obcinanie.
 
 > [!IMPORTANT]
-> Upewnij się, że *format* nie jest ciągiem zdefiniowanym przez użytkownika.
+> Upewnij się, że *Format* nie jest ciągiem zdefiniowanym przez użytkownika.
 
-**_snwprintf_s** to wersja znaku dwubajtowego **_snprintf_s**; argumenty wskaźnika do **_snwprintf_s** są ciągami znaków dwubajtowych. Wykrywanie kodowania błędów w **_snwprintf_s** może różnić się od w **_snprintf_s**. **_snwprintf_s**, takiej jak **swprintf_s —**, zapisuje dane wyjściowe do ciągu, a nie do miejsca docelowego typu **pliku**.
+**_snwprintf_s** to dwubajtowa wersja **_snprintf_s**; argumenty wskaźnika do **_snwprintf_s** są ciągami znaków dwubajtowych. Wykrywanie błędów kodowania w programie **_snwprintf_s** może się różnić od tego w **_snprintf_s**. **_snwprintf_s**, podobnie jak **swprintf_s**, zapisuje dane wyjściowe w postaci ciągu, a nie do miejsca docelowego typu **pliku**.
 
-Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych wątku.
+Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korzystają z przekazaną parametrem ustawień regionalnych zamiast bieżących ustawień regionalnych wątku.
 
-W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążania szablonu; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując potrzebę określenia argumentu rozmiaru) oraz ich mogą automatycznie zastąpić starsze, niezabezpieczone funkcje ich nowsze, bezpieczne odpowiedniki. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując konieczność określenia argumentu rozmiaru) i mogą automatycznie zastąpić starsze, niezabezpieczone funkcje z ich nowszymi, bezpiecznymi odpowiednikami. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -164,9 +167,9 @@ W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążania s
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_snprintf_s**, **_snprintf_s_l**|\<stdio.h>|
-|**_snwprintf_s**, **_snwprintf_s_l**|\<stdio.h > lub \<wchar.h >|
+|**_snwprintf_s**, **_snwprintf_s_l**|\<stdio. h > lub \<WCHAR. h >|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -298,7 +301,7 @@ Invalid parameter handler invoked: ("Buffer too small", 0)
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>

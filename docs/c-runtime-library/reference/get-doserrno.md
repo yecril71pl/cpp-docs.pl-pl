@@ -1,9 +1,9 @@
 ---
 title: _get_doserrno
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_doserrno
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _get_doserrno
 - get_doserrno
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - get_doserrno function
 - _get_doserrno function
 ms.assetid: 7fec7be3-6e39-4181-846b-8ef24489361c
-ms.openlocfilehash: 700f710e6d94f48b03697325bb720dbc539fe04e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2810ead8bdd7d6c77cb2b55f4f97371bfc9751e6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287749"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956040"
 ---
-# <a name="getdoserrno"></a>_get_doserrno
+# <a name="_get_doserrno"></a>_get_doserrno
 
-Pobiera wartość błąd, zwrócone przez system operacyjny, zanim je przetłumaczyć **errno** wartości.
+Pobiera wartość błędu zwróconą przez system operacyjny przed przetłumaczeniem jej na wartość **errno** .
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,27 +48,27 @@ errno_t _get_doserrno(
 ### <a name="parameters"></a>Parametry
 
 *pValue*<br/>
-Wskaźnik do liczby całkowitej trzeba napełniać bieżącą wartość **_doserrno** makro globalne.
+Wskaźnik do liczby całkowitej, która ma zostać wypełniona bieżącą wartością makra globalnego **_doserrno** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli **_get_doserrno —** zakończy się powodzeniem, funkcja zwraca zero; jeśli nie powiedzie się, zwraca kod błędu. Jeśli *pValue* jest **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ta ustawia **errno** do **EINVAL** i zwraca **EINVAL**.
+Jeśli **_get_doserrno** powiedzie się, zwraca zero; Jeśli to się nie powiedzie, zwraca kod błędu. Jeśli *pValue* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Doserrno** globalnego makro jest równa zero podczas inicjowania CRT, zanim proces rozpoczyna wykonywanie. Jest ustawiona na wartość Błąd systemu operacyjnego, zwracany przez każde wywołanie funkcji na poziomie systemu, który zwraca błąd systemu operacyjnego, a to, że nigdy nie jest resetowany do zera, podczas wykonywania. Podczas wpisywania kodu, aby sprawdzić wartość błędu zwrócony przez funkcję, zawsze wyczyść **_doserrno** przy użyciu [_set_doserrno —](set-doserrno.md) przed wywołaniem funkcji. Ponieważ inne wywołanie funkcji może spowodować zastąpienie **_doserrno**, sprawdź wartość przy użyciu **_get_doserrno —** natychmiast po wywołaniu funkcji.
+Po rozpoczęciu uruchamiania procesu **_doserrno** globalne makro ma wartość zero. Jest ona ustawiona na wartość błędu systemu operacyjnego zwróconą przez wywołanie funkcji na poziomie systemu, które zwraca błąd systemu operacyjnego i nigdy nie jest resetowany do zera podczas wykonywania. Podczas pisania kodu w celu sprawdzenia wartości błędu zwróconej przez funkcję zawsze Wyczyść **_doserrno** przy użyciu [_set_doserrno](set-doserrno.md) przed wywołaniem funkcji. Ponieważ inne wywołanie funkcji może zastąpić **_doserrno**, sprawdź wartość przy użyciu **_get_doserrno** bezpośrednio po wywołaniu funkcji.
 
-Firma Microsoft zaleca [_get_errno —](get-errno.md) zamiast **_get_doserrno —** kody błędów przenośny.
+Zalecamy [_get_errno](get-errno.md) zamiast **_get_doserrno** dla przenośnych kodów błędów.
 
-Możliwe wartości **_doserrno** są zdefiniowane w \<errno.h >.
+Możliwe wartości **_doserrno** są zdefiniowane w \<errno. h >.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
+|Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_get_doserrno**|\<stdlib.h>, \<cstdlib> (C++)|\<errno.h>, \<cerrno> (C++)|
+|**_get_doserrno**|\<stdlib.h>, \<cstdlib> (C++)|\<errno. h >, \<cerrno > (C++)|
 
-**_get_doserrno —** jest rozszerzeniem firmy Microsoft. Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+**_get_doserrno** jest rozszerzeniem firmy Microsoft. Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

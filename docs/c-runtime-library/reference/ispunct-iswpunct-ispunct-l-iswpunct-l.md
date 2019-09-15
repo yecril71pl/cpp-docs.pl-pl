@@ -1,12 +1,12 @@
 ---
 title: ispunct, iswpunct, _ispunct_l, _iswpunct_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ispunct
 - _iswpunct_l
 - iswpunct
 - _ispunct_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - iswpunct
 - _istpunct
@@ -33,16 +36,16 @@ helpviewer_keywords:
 - _iswpunct_l function
 - iswpunct_l function
 ms.assetid: 94403240-85c8-40a4-9c2b-e3e95c729c76
-ms.openlocfilehash: 209f94bb8f9d3338f62b719d4d4b94b152ed5ab7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54c51c612cf3b491b49d7e141df34ed5b4415520
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286538"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953700"
 ---
-# <a name="ispunct-iswpunct-ispunctl-iswpunctl"></a>ispunct, iswpunct, _ispunct_l, _iswpunct_l
+# <a name="ispunct-iswpunct-_ispunct_l-_iswpunct_l"></a>ispunct, iswpunct, _ispunct_l, _iswpunct_l
 
-Określa, czy liczba całkowita reprezentuje znak interpunkcyjny.
+Określa, czy liczba całkowita reprezentuje znak interpunkcji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -66,35 +69,35 @@ int _iswpunct_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Liczba całkowita to testowania.
+Liczba całkowita do przetestowania.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych procedur zwraca wartość różną od zera, jeśli *c* jest szczególną reprezentacją znaku interpunkcji. **ispunct** zwraca wartość różną od zera dla dowolnego drukowalnego znaku, który nie jest znakiem spacji lub znakiem, dla którego **isalnum** jest różna od zera. **iswpunct —** zwraca wartość różną od zera dla dowolnego drukowalnego znaku dwubajtowego, który nie jest dwubajtowym spacji ani znakiem dwubajtowym, dla którego **iswalnum —** jest różna od zera. Każda z tych procedur zwraca 0, jeśli *c* nie spełnia warunku testowego.
+Każda z tych procedur zwraca wartość różną od zera, jeśli *c* jest szczególną reprezentacją znaku interpunkcji. **ispunct** zwraca wartość różną od zera dla dowolnego znaku drukowalnego, który nie jest znakiem spacji ani znakiem, dla którego **isalnum** jest różna od zera. **iswpunct** zwraca wartość różną od zera dla dowolnego drukowalnego znaku dwubajtowego, który nie jest znakiem szerokości odstępu ani znakiem dwubajtowym, dla którego **iswalnum** jest różna od zera. Każda z tych procedur zwraca wartość 0, jeśli *c* nie spełnia warunku testu.
 
-Wynik warunku testowego dla **ispunct** zależy od funkcji **LC_CTYPE** ustawienia kategorii ustawień regionalnych; zobacz [setlocale, _wsetlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji, które nie mają **_l** sufiks Użyj bieżących ustawień regionalnych dla wszelkich zachowań zależnych od ustawień regionalnych; wersje, które mają **_l** sufiksem są identyczne, z tą różnicą, że używają one Ustawienia regionalne, który jest przekazywany zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wynik warunku testowego dla funkcji **ispunct** zależy od ustawienia kategorii **LC_CTYPE** ustawień regionalnych; Zobacz [setlocaling, _wsetlocale,](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji, które nie mają sufiksu **_l** , używają bieżących ustawień regionalnych dla wszelkich zachowań zależnych od ustawień regionalnych. wersje, które mają sufiks **_l** są identyczne, z tą różnicą, że używają zamiast nich ustawień regionalnych, które zostały przesłane. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-Zachowanie **ispunct** i **_ispunct_l —** jest niezdefiniowane, jeżeli *c* nie jest równy EOF lub z zakresu od 0 do 0xFF włącznie. Jeśli jest używana biblioteka debugowania CRT i *c* nie jest jedną z tych wartości, funkcje wywołują potwierdzenie.
+Zachowanie **ispunct** i **_ispunct_l** jest niezdefiniowane, jeśli *c* nie jest typu EOF lub z zakresu od 0 do 0xFF włącznie. Gdy jest używana Biblioteka CRT debugowania, a *c* nie jest jedną z tych wartości, funkcje zgłaszają potwierdzenie.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_** **istpunct —**|**ispunct**|[_ismbcpunct](ismbcgraph-functions.md)|**iswpunct**|
+|**_** **istpunct**|**ispunct**|[_ismbcpunct](ismbcgraph-functions.md)|**iswpunct**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**ispunct**|\<ctype.h>|
-|**iswpunct**|\<CType.h > lub \<wchar.h >|
+|**iswpunct**|\<CType. h > lub \<WCHAR. h >|
 |**_ispunct_l**|\<ctype.h>|
-|**_iswpunct_l**|\<CType.h > lub \<wchar.h >|
+|**_iswpunct_l**|\<CType. h > lub \<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

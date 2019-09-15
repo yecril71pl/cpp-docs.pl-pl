@@ -1,10 +1,10 @@
 ---
 title: memcmp, wmemcmp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - memcmp
 - wmemcmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,8 +17,10 @@ apilocation:
 - ntdll.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
-topictype: APIRef
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - memcmp
 - wmemcmp
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-ms.openlocfilehash: 228a74ac8cc83bca169779f1afd6936f5be59bee
-ms.sourcegitcommit: 010ecc2bb9a15deea192a34975176ec0426aa3d8
+ms.openlocfilehash: 2fa902c0fa5a4a78f6fd3e46edeb3799aaf92569
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66265632"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951934"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp, wmemcmp
 
-Porównanie znaków w dwóch buforów.
+Porównuje znaki w dwóch buforach.
 
 ## <a name="syntax"></a>Składnia
 
@@ -55,36 +57,36 @@ int wmemcmp(
 ### <a name="parameters"></a>Parametry
 
 *buffer1*<br/>
-Pierwszy buforu.
+Pierwszy bufor.
 
 *buffer2*<br/>
-Drugi buforu.
+Drugi bufor.
 
-*Liczba*<br/>
-Liczba znaków do porównania. (Porównuje bajty dla **memcmp**, znaki dwubajtowe dla **wmemcmp —**).
+*liczbą*<br/>
+Liczba znaków do porównania. (Porównuje bajty dla **funkcji memcmp**, szerokich znaków dla **wmemcmp**).
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość zwracana określa relację pomiędzy buforów.
+Wartość zwracana wskazuje związek między buforami.
 
-|Wartość zwracana|Relacja między pierwszym *liczba* znaków buf1 i buf2|
+|Wartość zwracana|Relacja pierwszych znaków *liczby* z buf1 i buf2|
 |------------------|---------------------------------------------------------------|
-|< 0|*buffer1* mniej niż *buffer2*|
-|0|*buffer1* taka sama jak *buffer2*|
-|> 0|*buffer1* większa *buffer2*|
+|< 0|*buffer1* mniejsze niż *buffer2*|
+|0|*buffer1* identyczne z *buffer2*|
+|> 0|*buffer1* większe niż *buffer2*|
 
 ## <a name="remarks"></a>Uwagi
 
-Porównuje pierwszy *liczba* znaków *buffer1* i *buffer2* i zwraca wartość wskazującą, ich relacje. Znak różna od zera zwracana wartość jest znak różnica między pierwszej pary różne wartości w buforów. Wartości są interpretowane jako **niepodpisane** **char** dla **memcmp**i **wchar_t** dla **wmemcmp —**.
+Porównuje pierwsze znaki *Count* z *buffer1* i *buffer2* i zwraca wartość, która wskazuje ich relację. Znak wartości zwracanej niezerowej jest znakiem różnicy między pierwszą różnicą pary wartości w buforach. Wartości są interpretowane jako **znaki** **bez znaku** dla **funkcji memcmp**oraz jako **wchar_t** dla **wmemcmp**.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**memcmp**|\<Memory.h > lub \<string.h >|
-|**wmemcmp**|\<wchar.h>|
+|**memcmp**|\<> pamięci. h > \<lub String. h|
+|**wmemcmp**|\<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 

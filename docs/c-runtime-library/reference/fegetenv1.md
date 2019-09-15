@@ -1,9 +1,9 @@
 ---
 title: fegetenv
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fetegenv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,23 +15,26 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fegetenv
 - fenv/fegetenv
 helpviewer_keywords:
 - fetegenv function
 ms.assetid: 68962421-6978-4b27-8e4c-ad1577830cf6
-ms.openlocfilehash: d3985e4dd2b3944bcdddb79605887def7ba15473
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2e3566eb96174d0f0ccd6beb401824cc052c995
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334414"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941245"
 ---
 # <a name="fegetenv"></a>fegetenv
 
-Zapisuje bieżące środowisko zmiennoprzecinkowych w określony obiekt.
+Przechowuje bieżące środowisko zmiennoprzecinkowe w określonym obiekcie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,25 +47,25 @@ int fegetenv(
 ### <a name="parameters"></a>Parametry
 
 *penv*<br/>
-Wskaźnik do **fenv_t** będzie zawierał bieżącej wartości zmiennoprzecinkowych środowiska.
+Wskaźnik do obiektu **fenv_t** , aby zawierał bieżące wartości środowisk zmiennoprzecinkowych.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość 0, jeśli zmiennoprzecinkowych środowisko zostało pomyślnie zapisane w *penv*. W przeciwnym razie zwraca wartość różna od zera.
+Zwraca wartość 0, jeśli środowisko zmiennoprzecinkowe zostało pomyślnie zapisane w *PENV*. W przeciwnym razie zwraca wartość różną od zera.
 
 ## <a name="remarks"></a>Uwagi
 
-**Fegetenv** funkcja przechowuje bieżące środowisko zmiennoprzecinkowych w obiekt wskazywany przez *penv*. Wartość zmiennoprzecinkowa środowiska punktu ustawiono flagi stanu i tryby kontrolki, które wpływają na obliczeń zmiennopozycyjnych. Obejmuje to trybu zaokrąglania kierunku i flagi stanu przypadku wyjątków zmiennoprzecinkowych.  Jeśli *penv* nie wskazuje prawidłowego **fenv_t** obiekt, kolejne zachowanie jest niezdefiniowane.
+Funkcja **fegetenv** przechowuje bieżące środowisko zmiennoprzecinkowe w obiekcie wskazywanym przez *PENV*. Środowisko zmiennoprzecinkowe jest zestawem flag stanu i trybów kontroli, które wpływają na obliczenia zmiennoprzecinkowe. Obejmuje to tryb kierunku zaokrąglenia oraz flagi stanu dla wyjątków zmiennoprzecinkowych.  Jeśli *PENV* nie wskazuje prawidłowego obiektu **fenv_t** , następne zachowanie jest niezdefiniowane.
 
-Aby użyć tej funkcji, należy wyłączyć funkcję optymalizacji zmiennopozycyjnych, które mogą uniemożliwić dostęp przy użyciu `#pragma fenv_access(on)` dyrektywy przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).
+Aby użyć tej funkcji, należy wyłączyć optymalizacje zmiennoprzecinkowe, które mogą uniemożliwić dostęp przy użyciu `#pragma fenv_access(on)` dyrektywy przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek języka C|Nagłówek języka C++|
+|Funkcja|Nagłówek języka C|C++nagłówki|
 |--------------|--------------|------------------|
 |**fegetenv**|\<fenv.h>|\<cfenv>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
