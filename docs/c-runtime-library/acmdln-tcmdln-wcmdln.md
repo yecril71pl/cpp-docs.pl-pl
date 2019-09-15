@@ -1,12 +1,15 @@
 ---
 title: _acmdln, _tcmdln, _wcmdln
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcmdln
 - _acmdln
-apilocation:
+api_location:
 - msvcrt.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _acmdln
 - acmdln
@@ -22,16 +25,16 @@ helpviewer_keywords:
 - tcmdln global variable
 - acmdln global variable
 ms.assetid: 4fc0a6a0-3f93-420a-a19f-5276061ba539
-ms.openlocfilehash: f4cacb512cb9b5bb6ea22f4dc4014ac2a2eeebe6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07061244e06256341a6da7d04e5487e81c4b9378
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290511"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940616"
 ---
-# <a name="acmdln-tcmdln-wcmdln"></a>_acmdln, _tcmdln, _wcmdln
+# <a name="_acmdln-_tcmdln-_wcmdln"></a>_acmdln, _tcmdln, _wcmdln
 
-Wewnętrzny CRT zmiennej globalnej. Wiersz polecenia.
+Wewnętrzna zmienna globalna CRT. Wiersz polecenia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,7 +50,7 @@ wchar_t * _wcmdln;
 
 ## <a name="remarks"></a>Uwagi
 
-Te zmienne wewnętrznego CRT przechowywać cały wiersz polecenia. One są udostępniane w symbolach wyeksportowany do CRT, ale nie są przeznaczone do użycia w kodzie. `_acmdln` przechowuje dane jako ciąg znaków. `_wcmdln` przechowuje dane jako ciąg znaków dwubajtowych. `_tcmdln` można zdefiniować jako `_acmdln` lub `_wcmdln`, w których jest właściwy zależności.
+Te zmienne wewnętrzne CRT przechowują kompletny wiersz polecenia. Są one widoczne w eksportowanych symbolach CRT, ale nie są przeznaczone do użycia w kodzie. `_acmdln`przechowuje dane jako ciąg znaków. `_wcmdln`dane są przechowywane jako ciąg znaków dwubajtowych. `_tcmdln`można zdefiniować jako `_acmdln` lub `_wcmdln`, w zależności od tego, który jest odpowiedni.
 
 ## <a name="see-also"></a>Zobacz także
 

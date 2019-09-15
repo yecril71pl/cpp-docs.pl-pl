@@ -1,11 +1,11 @@
 ---
 title: fmin, fminf, fminl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fmin
 - fminf
 - fminl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fmin
 - fminf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-ms.openlocfilehash: f73853e18bd5d7f699cd2c3109fe5fb830859bf1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df01f2205291920b8c0519db622c93048278beb1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333381"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957094"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin, fminf, fminl
 
-Określa mniejszą z dwóch określonych wartości.
+Określa mniejszą liczbę dwóch określonych wartości.
 
 ## <a name="syntax"></a>Składnia
 
@@ -80,27 +83,27 @@ Druga wartość do porównania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli operacja się powiedzie, zwraca mniejszy z *x* lub *y*.
+Jeśli to się powiedzie, zwraca mniejszą liczbę *x* lub *y*.
 
 |Dane wejściowe|Wynik|
 |-----------|------------|
-|*x* jest wartością typu NaN|*y*|
-|*y* jest wartością typu NaN|*x*|
+|*x* jest NaN|*y*|
+|*y* jest NaN|*x*|
 |*x* i *y* są NaN|NaN|
 
-Funkcja nie powoduje, że [_matherr](matherr.md) do wywołania, powodują wyjątki zmiennoprzecinkowe lub zmień wartość właściwości **errno**.
+Funkcja nie powoduje wywołania [_matherr](matherr.md) , powoduje występowanie wyjątków zmiennoprzecinkowych lub zmianę wartości **errno**.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **fmin** przyjmujące i zwracające **float** i **długie** **double** typów. W programie C **fmin** zawsze przyjmuje i zwraca **double**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **fmin —** , które pobierają i zwracają **zmiennoprzecinkowe** i **długie** **podwójne** typy. W programie C **fmin —** zawsze przyjmuje i zwraca wartość **Double**.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**Fmin —**, **fminf —**, **fminl**|C: \<math.h><br />C++: \<math.h > lub \<cmath >|
+|**fmin —** , **fminf —** , **fminl**|C: \<Math. h ><br />C++: \<Math. h > lub \<cmath >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

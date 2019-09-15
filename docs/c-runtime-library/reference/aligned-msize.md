@@ -1,9 +1,9 @@
 ---
 title: _aligned_msize
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_msize
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_msize
 - aligned_msize
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - aligned_msize function
 - _aligned_msize function
 ms.assetid: 10995edc-2110-4212-9ca9-5e0220a464f4
-ms.openlocfilehash: 97c739eed1f54f0c6705d37542eb13c6ec6879d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 922224dc81858076770a36551df26c89940b3282
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341928"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943904"
 ---
-# <a name="alignedmsize"></a>_aligned_msize
+# <a name="_aligned_msize"></a>_aligned_msize
 
-Zwraca rozmiar bloku pamięci przydzielone w stosie.
+Zwraca rozmiar bloku pamięci przydzieloną w stercie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,7 +52,7 @@ size_t _msize(
 *memblock*<br/>
 Wskaźnik do bloku pamięci.
 
-*Wyrównanie*<br/>
+*struktury*<br/>
 Wartość wyrównania, która musi być całkowitą potęgą liczby 2.
 
 *offset*<br/>
@@ -61,11 +64,11 @@ Zwraca rozmiar (w bajtach) jako liczbę całkowitą bez znaku.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Aligned_msize —** funkcja zwraca rozmiar w bajtach, blok pamięci przydzielonej przez wywołanie [_aligned_malloc](aligned-malloc.md) lub [_aligned_realloc —](aligned-realloc.md). *Wyrównanie* i *przesunięcie* wartości muszą być takie same jak wartość przekazana do funkcji, która przydzielona bloku.
+Funkcja **_aligned_msize** zwraca rozmiar (w bajtach) bloku pamięci przydzielonego przez wywołanie do [_aligned_malloc](aligned-malloc.md) lub [_aligned_realloc](aligned-realloc.md). Wartości *wyrównania* i *przesunięcia* muszą być takie same jak wartości przesyłane do funkcji, która przydzieliła blok.
 
-Gdy aplikacja jest połączona z wersji debugowania bibliotek uruchomieniowych C, **_aligned_msize —** jest rozpoznawana jako [_aligned_msize_dbg](aligned-msize-dbg.md). Aby uzyskać więcej informacji na temat sposobu zarządzania stosem podczas debugowania, zobacz [sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
+Gdy aplikacja jest połączona z wersją debugową bibliotek uruchomieniowych C, **_aligned_msize** jest rozpoznawana jako [_aligned_msize_dbg](aligned-msize-dbg.md). Aby uzyskać więcej informacji na temat sposobu zarządzania sterty podczas procesu debugowania, zobacz [sterta debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-Ta funkcja sprawdza poprawność swojego parametru. Jeśli *memblock* jest pustym wskaźnikiem lub *wyrównanie* nie jest potęgą liczby 2, **_msize —** wywołuje program obsługi nieprawidłowego parametru, zgodnie z opisem w [Walidacja parametru ](../../c-runtime-library/parameter-validation.md). Jeśli obsługiwany jest błąd, funkcja ustawia **errno** do **EINVAL** i zwraca wartość -1.
+Ta funkcja sprawdza poprawność parametru. Jeśli *memblock* jest wskaźnikiem o wartości null lub *wyrównaniem* nie jest potęgą liczby 2, **_msize** wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli błąd jest obsługiwany, funkcja ustawia **errno** na **EINVAL** i zwraca wartość-1.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -73,11 +76,11 @@ Ta funkcja sprawdza poprawność swojego parametru. Jeśli *memblock* jest pusty
 |-------------|---------------------|
 |**_msize**|\<malloc.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Zobacz także
 

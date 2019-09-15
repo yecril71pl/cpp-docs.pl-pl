@@ -1,9 +1,9 @@
 ---
 title: _open_osfhandle
 ms.date: 05/21/2019
-apiname:
+api_name:
 - _open_osfhandle
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _open_osfhandle
 - open_osfhandle
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: 9e940844eb5e37755c10999feb294981afc8683a
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: 2fa2d8190082967d14dd780aa9be7286996b1f9f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821599"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951215"
 ---
-# <a name="openosfhandle"></a>_open_osfhandle
+# <a name="_open_osfhandle"></a>_open_osfhandle
 
-Kojarzy deskryptor pliku środowiska wykonawczego języka C z istniejących dojście do pliku systemu operacyjnego.
+Kojarzy deskryptor pliku C Run-Time z istniejącym dojściem do pliku systemu operacyjnego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,29 +50,29 @@ int _open_osfhandle (
 ### <a name="parameters"></a>Parametry
 
 *osfhandle*<br/>
-Uchwyt pliku systemu operacyjnego.
+Dojście do pliku systemu operacyjnego.
 
-*flagi*<br/>
-Typy dozwolone operacje.
+*znaczników*<br/>
+Dozwolone typy operacji.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-W przypadku powodzenia **_open_osfhandle —** zwraca deskryptor pliku środowiska wykonawczego języka C. W przeciwnym razie zwraca wartość -1.
+Jeśli to się powiedzie, **_open_osfhandle** zwraca deskryptor pliku C Run-Time. W przeciwnym razie zwraca wartość-1.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Open_osfhandle —** funkcja przydziela deskryptor pliku środowiska wykonawczego języka C. Kojarzy ten deskryptor pliku z uchwyt pliku systemu operacyjnego, które są określone przez *osfhandle*. Aby uniknąć ostrzeżenia kompilatora, należy rzutować *osfhandle* argumentu od **obsługi** do **intptr_t**. *Flagi* argument jest wyrażeniem liczby całkowitej z jedną lub więcej stałych manifestu zdefiniowane w \<fcntl.h >. Możesz użyć operatora bitowego OR ( **&#124;** ) do łączenia dwóch lub więcej stałych manifestu do formularza *flagi* argumentu.
+Funkcja **_open_osfhandle** przydziela deskryptor pliku w czasie wykonywania C. Kojarzy ten deskryptor pliku z dojściem pliku systemu operacyjnego określonym przez *osfhandle*. Aby uniknąć ostrzeżenia kompilatora, należy rzutować argumentu *osfhandle* z **uchwytu** na **intptr_t**. Argument *flags* jest wyrażeniem liczby całkowitej, które zostało utworzone na podstawie co najmniej jednej stałej \<manifestu zdefiniowanej w fcntl. h >. Można użyć operatora bitowego lub ( **&#124;** ), aby połączyć dwie lub więcej stałych manifestu w celu utworzenia argumentu *flags* .
 
-Te stałe manifestu są zdefiniowane w \<fcntl.h >:
+Te stałe manifestu są zdefiniowane w \<fcntl. h >:
 
 |||
 |-|-|
-| **\_O\_DOŁĄCZANIA** | Umieszcza wskaźnik pliku na koniec pliku przed każdej operacji zapisu. |
-| **\_O\_RDONLY** | Otwiera plik do odczytu tylko. |
-| **\_O\_TEXT** | Otwiera plik w trybie tekstowym (tłumaczonym). |
-| **\_O\_WTEXT** | Otwiera plik w trybie Unicode (przetłumaczone UTF-16). |
+| **\_O\_DOŁĄCZENIE** | Umieszcza wskaźnik pliku na końcu pliku przed każdą operacją zapisu. |
+| **\_O\_RDONLY** | Otwiera plik tylko do odczytu. |
+| **\_O\_TEXT** | Otwiera plik w trybie tekst (przetłumaczony). |
+| **\_O\_WTEXT** | Otwiera plik w trybie Unicode (tłumaczone w formacie UTF-16). |
 
-**_Open_osfhandle —** wywołanie tym przenosi własność dojście do pliku systemu Win32 do deskryptora pliku. Aby zamknąć pliku otwartego przy użyciu **_open_osfhandle —** , wywołaj [ \_Zamknij](close.md). Dojście do pliku podstawowego systemu operacyjnego jest również zamknięty przez wywołanie **_zamknij**. Nie wywołuj funkcję Win32 **funkcja CloseHandle** w dojściu do oryginalnego. Jeżeli deskryptor pliku jest własnością **pliku &#42;**  strumienia, a następnie wywołania [fclose —](fclose-fcloseall.md) zamyka deskryptor pliku i podstawowego dojścia. W tym przypadku nie wywołuj **_zamknij** na deskryptor pliku lub **funkcja CloseHandle** w dojściu do oryginalnego.
+Wywołanie **_open_osfhandle** przenosi własność dojścia pliku Win32 do deskryptora pliku. Aby zamknąć plik otwarty za pomocą **_open_osfhandle**, wywołaj [ \_polecenie Close (Zamknij](close.md)). Dojście do pliku bazowego systemu operacyjnego jest również zamykane przez wywołanie **_close**. Nie wywołuj funkcji **CloseHandle** w systemie Win32 w oryginalnym dojściu. Jeśli deskryptor pliku jest własnością strumienia **pliku &#42;**  , wywołanie [fclose](fclose-fcloseall.md) zamyka zarówno deskryptor pliku, jak i bazowe dojście. W tym przypadku nie należy wywoływać **_close** na deskryptorze pliku ani funkcji **CloseHandle** w oryginalnym dojściu.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -77,7 +80,7 @@ Te stałe manifestu są zdefiniowane w \<fcntl.h >:
 |-------------|---------------------|
 |**_open_osfhandle**|\<io.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

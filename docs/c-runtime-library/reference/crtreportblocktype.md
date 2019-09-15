@@ -1,9 +1,9 @@
 ---
 title: _CrtReportBlockType
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtReportBlockType
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CrtReportBlockType
 - CrtReportBlockType
@@ -26,16 +29,16 @@ helpviewer_keywords:
 - _BLOCK_SUBTYPE macro
 - BLOCK_TYPE macro
 ms.assetid: 0f4b9da7-bebb-4956-9541-b2581640ec6b
-ms.openlocfilehash: 186c63ce1619d6427436ff1458ca551e464d0bce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd50de1d1ade1d83b97bc465ff7e4c73b52fba2d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347418"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942337"
 ---
-# <a name="crtreportblocktype"></a>_CrtReportBlockType
+# <a name="_crtreportblocktype"></a>_CrtReportBlockType
 
-Zwraca typ bloku/podtyp skojarzone ze wskaźnikiem bloku sterty debugowania danego.
+Zwraca typ bloku/podtyp skojarzony z danym wskaźnikiem bloku sterty debugowania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -48,17 +51,17 @@ int _CrtReportBlockType(
 ### <a name="parameters"></a>Parametry
 
 *pBlock*<br/>
-Wskaźnik do bloku sterty debugowania prawidłowe.
+Wskaźnik do prawidłowego bloku sterty debugowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Przy przekazywaniu wskaźnik stosu debugowania prawidłowe **_CrtReportBlockType** funkcja zwraca typ bloku i podtyp w formie **int**. Jeśli przekazano nieprawidłowy wskaźnik, funkcja zwraca wartość -1.
+Gdy przeszedł prawidłowy wskaźnik debugowania, funkcja **_CrtReportBlockType** zwraca typ bloku i podtyp w postaci **int**. Po przekazaniu nieprawidłowego wskaźnika funkcja zwraca wartość-1.
 
 ## <a name="remarks"></a>Uwagi
 
-Można wyodrębnić, typ i podtyp zwrócony przez **_CrtReportBlockType**, użyj makra **_BLOCK_TYPE** i **_BLOCK_SUBTYPE** (oba zdefiniowanej w Crtdbg.h) na wartość zwracaną.
+Aby wyodrębnić typ i podtyp zwracany przez **_CrtReportBlockType**, użyj makr **_BLOCK_TYPE** i **_BLOCK_SUBTYPE** (zdefiniowanych w CRTDBG. h) dla zwracanej wartości.
 
-Aby uzyskać informacje dotyczące alokacji typów bloków i sposobu ich używania, zobacz [typy bloków na stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
+Aby uzyskać informacje o typach bloków alokacji i sposobach ich użycia, zobacz [typy bloków na stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -66,11 +69,11 @@ Aby uzyskać informacje dotyczące alokacji typów bloków i sposobu ich używan
 |-------------|---------------------|
 |**_CrtReportBlockType**|\<crtdbg.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Debuguj wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md) tylko.
+Debuguj wersje wyłącznie [bibliotek uruchomieniowych C](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="example"></a>Przykład
 

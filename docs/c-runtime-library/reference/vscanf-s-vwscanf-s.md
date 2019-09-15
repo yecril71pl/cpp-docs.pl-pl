@@ -1,10 +1,10 @@
 ---
 title: vscanf_s, vwscanf_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - vscanf_s
 - vwscanf_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,22 +15,25 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _vtscanf_s
 - vscanf_s
 - vwscanf_s
 ms.assetid: 23a1c383-5b01-4887-93ce-534a1e38ed93
-ms.openlocfilehash: 90100a5fbc03371a11f437acc12562d9ccf957f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d08679d08fb5b212306cbaeec200d16803a85ef
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364873"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945402"
 ---
-# <a name="vscanfs-vwscanfs"></a>vscanf_s, vwscanf_s
+# <a name="vscanf_s-vwscanf_s"></a>vscanf_s, vwscanf_s
 
-Odczyty sformatowanych danych ze standardowego strumienia wejściowego. Te wersje [vscanf, vwscanf](vscanf-vwscanf.md) mają wzmocnienia zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Odczytuje sformatowane dane ze standardowego strumienia wejściowego. Te wersje programu [vscanf vwscanf](vscanf-vwscanf.md) mają ulepszenia zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,49 +50,49 @@ int vwscanf_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Format*<br/>
-Ciąg formantu formatu.
+*format*<br/>
+Format ciąg kontrolny.
 
 *arglist*<br/>
-Lista zmiennych argumentów.
+Lista argumentów zmiennych.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca liczbę pól pomyślnie przekonwertowanych i przypisanych; zwracana wartość nie uwzględnia pól, które zostały odczytane, ale nie przypisane. Zwracana wartość wynosząca 0 wskazuje, że nie przydzielono żadnych pól. Wartość zwracana jest **EOF** dla błędu, czy znak końca pliku lub koniec ciągu zostanie napotkany w pierwszej próbie odczytania znaku. Jeśli *format* jest **NULL** wskaźnika, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **vscanf_s** i **vwscanf_s** zwracają **EOF** i ustaw **errno** do **EINVAL**.
+Zwraca liczbę pól, które zostały pomyślnie przekonwertowane i przypisane; wartość zwracana nie zawiera pól, które zostały odczytane, ale nie przypisane. Wartość zwracana przez 0 wskazuje, że nie przypisano żadnych pól. Wartość zwracana to **eof** dla błędu lub, jeśli w pierwszej próbie odczytano znak końca pliku lub znak końca ciągu podczas próby odczytania znaku. Jeśli *Format* jest **pustym** wskaźnikiem, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **vscanf_s** i **Vwscanf_s** zwracają **znacznik EOF** i ustawimy **errno** na **EINVAL**.
 
-Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje o tych i innych kodach błędów, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**Vscanf_s** funkcja odczytuje dane ze standardowego strumienia wejściowego **stdin** i zapisuje je w lokalizacjach, które są określone przez *lista_argumentów* listy argumentów. Każdy argument na liście musi być wskaźnikiem do zmiennej typu odpowiadającego specyfikatorowi typu w parametrze *format*. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
+Funkcja **vscanf_s** odczytuje dane ze standardowego strumienia wejściowego **stdin** i zapisuje dane w lokalizacjach, które są określone przez listę argumentów *arglist* . Każdy argument na liście musi być wskaźnikiem do zmiennej typu odpowiadającego specyfikatorowi typu w *formacie*. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
 
-**vwscanf_s** to wersja znaku dwubajtowego **vscanf_s**; *format* argument **vwscanf_s** jest ciągiem znaku dwubajtowego. **vwscanf_s** i **vscanf_s** zachowują się identycznie, jeżeli strumień jest otwarty w trybie ANSI. **vscanf_s** nie obsługuje danych wejściowych ze strumienia UNICODE.
+**vwscanf_s** to dwubajtowa wersja **vscanf_s**; argument *formatu* **vwscanf_s** jest ciągiem znaków dwubajtowych. **vwscanf_s** i **vscanf_s** zachowują się identycznie, jeśli strumień jest otwarty w trybie ANSI. **vscanf_s** nie obsługuje danych wejściowych ze strumienia Unicode.
 
-W odróżnieniu od **vscanf** i **vwscanf**, **vscanf_s** i **vwscanf_s** wymagają rozmiar buforu, należy określić dla wszystkich parametrów wejściowych typu **c**, **C**, **s**, **S**, lub zestawów kontroli, które są ujęte w ciągów **[]**. Rozmiar buforu w znakach jest przekazywany jako dodatkowy parametr natychmiast po wskaźniku do buforu lub zmiennej. Rozmiar buforu w znakach **wchar_t** ciąg nie jest taki sam jak rozmiar w bajtach.
+W przeciwieństwie do **vscanf** i **vwscanf**, **vscanf_s** i **vwscanf_s** wymagają, aby rozmiar buforu został określony dla wszystkich parametrów wejściowych typu **c**, **c**, **s**, **s**lub zestawów kontroli ciągów, które są ujęte w **[]** . Rozmiar buforu w znakach jest przesyłany jako dodatkowy parametr natychmiast po wskaźniku do buforu lub zmiennej. Rozmiar buforu w znakach dla ciągu **wchar_t** nie jest taki sam jak rozmiar w bajtach.
 
-Rozmiar buforu obejmuje kończącą wartość null. Pole określania szerokości można użyć, aby upewnić się, że token, który jest wczytywany w zmieści się w buforze. Jeśli jest używane nie pole specyfikacji szerokości, a odczyt tokenu jest zbyt duży, aby zmieścić się w buforze, nic nie jest zapisywane do tego buforu.
+Rozmiar buforu zawiera kończący wartość null. Pola Specyfikacja szerokości można użyć, aby upewnić się, że token, który jest odczytywany, mieści się w buforze. Jeśli pole specyfikacji szerokości nie jest używane i odczyt tokenu jest zbyt duży, aby zmieścił się w buforze, nic nie jest zapisywane w tym buforze.
 
 > [!NOTE]
-> *Rozmiar* parametr jest typu **niepodpisane**, a nie **size_t**.
+> Parametr *size* jest typu **unsigned**, not **size_t**.
 
-Aby uzyskać więcej informacji, zobacz [scanf — specyfikacje szerokości](../../c-runtime-library/scanf-width-specification.md).
+Aby uzyskać więcej informacji, zobacz [Specyfikacja szerokości scanf](../../c-runtime-library/scanf-width-specification.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vtscanf_s**|**vscanf_s**|**vscanf_s**|**vwscanf_s**|
 
-Aby uzyskać więcej informacji, zobacz [pola specyfikacji formatu: funkcji wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
+Aby uzyskać więcej informacji, zobacz [Formatowanie pól specyfikacji: scanf i wscanf Functions](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**vscanf_s**|\<stdio.h>|
-|**wscanf_s**|\<stdio.h > lub \<wchar.h >|
+|**wscanf_s**|\<stdio. h > lub \<WCHAR. h >|
 
-Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej Windows (UWP). Standardowe uchwyty strumienia, które są powiązane z konsolą, **stdin**, **stdout**, i **stderr**, muszą zostać przekierowane zanim funkcje środowiska wykonawczego języka C można ich używać w aplikacjach platformy UWP . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout**i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -140,7 +143,7 @@ int main( void )
 }
 ```
 
-Gdy ten program został podany w danych wejściowych w przykładzie, produkuje następujące dane wyjściowe:
+Gdy ten program otrzymuje dane wejściowe w przykładzie, generuje następujące dane wyjściowe:
 
 ```Input
 71 98.6 h z Byte characters
@@ -157,7 +160,7 @@ The contents are: 36 92.300003 y n Wide characters
 ## <a name="see-also"></a>Zobacz także
 
 [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [Wersja regionalna](../../c-runtime-library/locale.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>

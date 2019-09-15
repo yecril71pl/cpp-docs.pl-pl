@@ -1,11 +1,11 @@
 ---
 title: conj, conjf, conjl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - conj
 - conjf
 - conjl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - conj
 - conjf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - conjf function
 - conjl function
 ms.assetid: 792fccfa-19c6-4890-99f9-a3b89effccd6
-ms.openlocfilehash: 57ed5e8570a3a2467bf7080524db9d1bef618091
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cb87e502d3fa927f10675796bae0b1d37115b2a2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335402"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939032"
 ---
 # <a name="conj-conjf-conjl"></a>conj, conjf, conjl
 
-Pobiera zespolonej liczbą.
+Pobiera zespolone sprzężenie liczby zespolonej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -64,23 +67,23 @@ _Lcomplex conjl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Liczbą.
+Liczba złożona.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zespolonej *z*.  Wynik zawiera tę samą część rzeczywiste i urojone jako *z*, ale symbol przeciwnego.
+Złożona sprzężona *z.*  Wynik ma tę samą część rzeczywistą i urojoną jak *z*, ale ze znakiem odwrotnym.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **conj** przyjmujące i zwracające **_Fcomplex** i **_Lcomplex** wartości. W programie C **conj** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **CONJ** , które pobierają i zwracają wartości **_Fcomplex** i **_Lcomplex** . W programie C **CONJ** zawsze przyjmuje i zwraca wartość **_Dcomplex** .
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|Nagłówek języka C++|
+|Procedura|Nagłówek języka C|C++nagłówki|
 |-------------|--------------|------------------|
-|**conj**, **conjf**, **conjl**|\<complex.h>|\<ccomplex>|
+|**CONJ**, **conjf**, **conjl**|\<complex.h>|\<ccomplex>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

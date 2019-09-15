@@ -1,10 +1,10 @@
 ---
 title: fputs, fputws
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fputs
 - fputws
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fputs
 - fputws
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - fputs function
 - fputts function
 ms.assetid: d48c82b8-aa17-4830-8c7d-30442ddbb326
-ms.openlocfilehash: 3f7c7cff3300ae28717062a41aebd9e19c0cb5e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7470901fda72e74caea12758bed4f23fcc087a33
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287970"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956912"
 ---
 # <a name="fputs-fputws"></a>fputs, fputws
 
@@ -58,34 +61,34 @@ int fputws(
 Ciąg wyjściowy.
 
 *stream*<br/>
-Wskaźnik do **pliku** struktury.
+Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wartość nieujemną, jeśli zostanie pomyślnie. W przypadku błędu **fputs —** i **fputws —** zwracają **EOF**. Jeśli *str* lub *strumienia* jest pustym wskaźnikiem, funkcje te wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** do **EINVAL** i następnie **fputs —** zwraca **EOF**, i  **fputws —** zwraca **WEOF**.
+Każda z tych funkcji zwraca wartość nieujemną, jeśli zakończy się pomyślnie. W przypadku błędu, **fputs** i **fputws** zwracają **znacznik EOF**. Jeśli *str* lub *Stream* jest wskaźnikiem o wartości null, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** , a następnie **fputs** zwraca **EOF**, a **fputws** zwraca **WEOF**.
 
-Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów błędu,.
+Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) , aby uzyskać więcej informacji na temat tych i innych kodów błędów.
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji kopie *str* w danych wyjściowych *strumienia* w bieżącym położeniu. **fputws —** kopiuje argument znaku dwubajtowego *str* do *strumienia* jako ciąg znaków wielobajtowych lub ciąg znaków dwubajtowych, zgodnie z czy *strumienia*jest otwarty w trybie tekstu lub w trybie binarnym, odpowiednio. Żadna funkcja kopiuje kończącego znaku null.
+Każda z tych funkcji kopiuje *str* do *strumienia* wyjściowego w bieżącym położeniu. **fputws** kopiuje ciąg znaków dwubajtowych, aby *przesyłać strumieniowo* w postaci ciągu znaków wielowymiarowych lub dwubajtowego *ciągu w zależności* od tego, czy *strumień* jest otwarty odpowiednio w trybie tekstowym czy w trybie binarnym. Żadna funkcja nie kopiuje kończącego znaku null.
 
-Te dwie funkcje zachowują się identycznie, jeżeli strumień jest otwarty w trybie ANSI. **fputs —** aktualnie nie obsługuje danych wyjściowych w strumieniu UNICODE.
+Dwie funkcje zachowują się identycznie, jeśli strumień jest otwarty w trybie ANSI. **fputs** obecnie nie obsługuje danych wyjściowych w strumieniu Unicode.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_fputts —**|**fputs —**|**fputs —**|**fputws —**|
+|**_fputts**|**fputs**|**fputs**|**fputws**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**fputs —**|\<stdio.h>|
-|**fputws —**|\<stdio.h > lub \<wchar.h >|
+|**fputs**|\<stdio.h>|
+|**fputws**|\<stdio. h > lub \<WCHAR. h >|
 
-Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej Windows (UWP). Standardowe uchwyty strumienia, które są powiązane z konsolą —**stdin**, **stdout**, i **stderr**— muszą zostać przekierowane zanim funkcje środowiska wykonawczego języka C można ich używać w aplikacjach platformy UWP . Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą —**stdin**, **stdout**i **stderr**— muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -108,7 +111,7 @@ Hello world from fputs.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fgets, fgetws](fgets-fgetws.md)<br/>
 [gets, _getws](../../c-runtime-library/gets-getws.md)<br/>
 [puts, _putws](puts-putws.md)<br/>

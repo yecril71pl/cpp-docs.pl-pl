@@ -1,10 +1,10 @@
 ---
 title: _getc_nolock, _getwc_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getc_nolock
 - _getwc_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getc_nolock
 - _gettc_nolock
@@ -35,16 +38,16 @@ helpviewer_keywords:
 - gettc_nolock function
 - _gettc_nolock function
 ms.assetid: eb37b272-e177-41c9-b077-12ce7ffd3b88
-ms.openlocfilehash: 82c7e1f44dc3177985560319067f9114964218bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f6c2da5297e07d82fdea96452c3282c19329f24f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287511"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955505"
 ---
-# <a name="getcnolock-getwcnolock"></a>_getc_nolock, _getwc_nolock
+# <a name="_getc_nolock-_getwc_nolock"></a>_getc_nolock, _getwc_nolock
 
-Odczytuje znaku ze strumienia.
+Odczytuje znak ze strumienia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -64,11 +67,11 @@ Strumień wejściowy.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zobacz [getc —, getwc —](getc-getwc.md).
+Zobacz [getc —, getwc](getc-getwc.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje są takie same jak **getc —** i **getwc —** z tą różnicą, że ich nie blokują wywołania wątku. Mogą one być szybsze, ponieważ nie wiążą się z obciążeniem związanym z blokowaniem innych wątków. Za pomocą tych funkcji tylko w kontekstach wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywołujący już obsługuje izolację wątków.
+Te funkcje są identyczne z **getc —** i **getwc** , z tą różnicą, że nie blokują wątku wywołującego. Mogą one być szybsze, ponieważ nie wiążą się z zablokowaniem innych wątków. Tych funkcji należy używać tylko w kontekstach bezpiecznych dla wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywoływania już obsługuje izolację wątku.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -81,9 +84,9 @@ Te funkcje są takie same jak **getc —** i **getwc —** z tą różnicą, że
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**getc_nolock**|\<stdio.h>|
-|**getwc_nolock**|\<stdio.h > lub \<wchar.h >|
+|**getwc_nolock**|\<stdio. h > lub \<WCHAR. h >|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -121,7 +124,7 @@ int main()
 }
 ```
 
-### <a name="input-crtgetcnolocktxt"></a>Dane wejściowe: crt_getc_nolock.txt
+### <a name="input-crt_getc_nolocktxt"></a>Dane wejściowe: crt_getc_nolock. txt
 
 ```Input
 Line the first.
@@ -136,7 +139,7 @@ Input was: Line the first.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>
 [putc, putwc](putc-putwc.md)<br/>

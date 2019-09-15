@@ -1,9 +1,9 @@
 ---
 title: feraiseexcept
 ms.date: 04/05/2018
-apiname:
+api_name:
 - feraiseexcept
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,23 +14,24 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: HeaderDef
+api_type:
+- HeaderDef
 f1_keywords:
 - feraiseexcept
 - fenv/feraiseexcept
 helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-ms.openlocfilehash: 581dd4026a20ce7221945c5815af3ae102f132fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40ff315c179a6b62a3073d4f07e4e6a6d1c1acab
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334362"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941128"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
-Wywołuje określone wyjątki zmiennoprzecinkowe.
+Podnosi określone wyjątki zmiennoprzecinkowe.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,8 +43,8 @@ int feraiseexcept(
 
 ### <a name="parameters"></a>Parametry
 
-*z wyjątkiem*<br/>
-Wyjątki zmiennoprzecinkowe, aby wywołać.
+*Oprócz*<br/>
+Wyjątki zmiennoprzecinkowe do podniesienia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -51,30 +52,30 @@ Jeśli wszystkie określone wyjątki są zgłaszane pomyślnie, zwraca wartość
 
 ## <a name="remarks"></a>Uwagi
 
-**Feraiseexcept** funkcja polegające na zgłaszać wyjątki zmiennoprzecinkowe, określony przez *z wyjątkiem*.   **Feraiseexcept** funkcja obsługuje te makra wyjątków, zdefiniowane w pliku \<fenv.h >:
+Funkcja **feraiseexcept** próbuje podnieść wyjątki zmiennoprzecinkowe określone przez *except*.   Funkcja **feraiseexcept** obsługuje te makra wyjątków zdefiniowane w \<fenv. h >:
 
-|Makra wyjątków|Opis|
+|Makro wyjątku|Opis|
 |---------------------|-----------------|
-|FE_DIVBYZERO|Wystąpił błąd singularity lub pole w starszej operacji zmiennoprzecinkowej; Utworzono wartości nieskończonej.|
-|FE_INEXACT|Wymuszono funkcji round przechowywanych wynikiem wcześniejszych operacji zmiennoprzecinkowej.|
-|FE_INVALID|Wystąpił błąd domeny w starszej operacji zmiennoprzecinkowej.|
-|FE_OVERFLOW|Wystąpił błąd zakresu; wynik operacji zmiennoprzecinkowej wcześniej była zbyt duża, aby mogły być reprezentowane.|
-|FE_UNDERFLOW|Wcześniej wyniku operacji zmiennoprzecinkowej był za mały, aby mogły być reprezentowane w o pełnej dokładności; wartość została utworzona.|
-|FE_ALLEXCEPT|Bitowe OR wszystkich obsługiwane wyjątki zmiennoprzecinkowe.|
+|FE_DIVBYZERO|Wystąpił błąd Singularity lub wartość w poprzedniej operacji zmiennoprzecinkowej; utworzono nieskończoną wartość.|
+|FE_INEXACT|Funkcja była zmuszona do zaokrąglania przechowywanego wyniku poprzedniej operacji zmiennoprzecinkowej.|
+|FE_INVALID|Wystąpił błąd domeny w poprzedniej operacji zmiennoprzecinkowej.|
+|FE_OVERFLOW|Wystąpił błąd zakresu; wcześniejszy wynik operacji zmiennoprzecinkowej był zbyt duży, aby można było go przedstawić.|
+|FE_UNDERFLOW|Wcześniejszy wynik operacji zmiennoprzecinkowej był zbyt mały, aby mógł być reprezentowany z pełną dokładnością; utworzono nienormalną wartość.|
+|FE_ALLEXCEPT|Bitowe lub wszystkie obsługiwane wyjątki zmiennoprzecinkowe.|
 
-*z wyjątkiem* argument może wynosić zero, jeden wartości makra wyjątków lub operatora testu koniunkcji lub dwóch lub więcej z makr wyjątków obsługiwanych. Spełnieniu jednego z makr wyjątków określonego FE_OVERFLOW lub FE_UNDERFLOW, może być zgłaszany wyjątek FE_INEXACT, jako efekt uboczny.
+Argument *except* może mieć wartość zero, jedną z wartości makra wyjątku lub bitową lub dwa lub więcej obsługiwanych makr wyjątków. Jeśli jednym z określonych makr wyjątków jest FE_OVERFLOW lub FE_UNDERFLOW, wyjątek FE_INEXACT może być podniesiony jako efekt uboczny.
 
-Aby użyć tej funkcji, należy wyłączyć funkcję optymalizacji zmiennopozycyjnych, które mogą uniemożliwić dostęp przy użyciu `#pragma fenv_access(on)` dyrektywy przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).
+Aby użyć tej funkcji, należy wyłączyć optymalizacje zmiennoprzecinkowe, które mogą uniemożliwić dostęp przy użyciu `#pragma fenv_access(on)` dyrektywy przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).
 
-**Specyficzne dla firmy Microsoft:** Wyjątki określonego w *z wyjątkiem* są wywoływane w kolejności FE_INVALID, FE_DIVBYZERO FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. Jednak FE_INEXACT mogą być wywoływane, gdy FE_OVERFLOW lub FE_UNDERFLOW jest wywoływane, nawet jeśli nie zostanie określony w *z wyjątkiem*. **End specyficzny dla Microsoft**
+**Specyficzne dla firmy Microsoft:** Wyjątki określone w wyjątkach są *wywoływane w kolejności* FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. Jednak FE_INEXACT może być zgłaszane, gdy zostanie wywołane FE_OVERFLOW lub FE_UNDERFLOW, nawet jeśli nie zostanie określony w *z wyjątkiem*. **Zakończenie określonych przez firmę Microsoft**
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek języka C|Nagłówek języka C++|
+|Funkcja|Nagłówek języka C|C++nagłówki|
 |--------------|--------------|------------------|
 |*feraiseexcept*|\<fenv.h>|\<cfenv>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

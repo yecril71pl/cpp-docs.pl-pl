@@ -1,10 +1,10 @@
 ---
 title: _unlink, _wunlink
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _unlink
 - _wunlink
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tunlink
 - _unlink
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-ms.openlocfilehash: ec59a02f1302fe4a2149889cf1b48090d061d6b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 878a1b4aa009bc8528dfac1908ed26c7e3b269ae
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268775"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957388"
 ---
-# <a name="unlink-wunlink"></a>_unlink, _wunlink
+# <a name="_unlink-_wunlink"></a>_unlink, _wunlink
 
-Usuwanie pliku.
+Usuń plik.
 
 ## <a name="syntax"></a>Składnia
 
@@ -61,17 +64,17 @@ Nazwa pliku do usunięcia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wartość 0, jeśli kończy się pomyślnie. W przeciwnym razie funkcja zwraca wartość -1 i ustawia **errno** do **EACCES**, co oznacza, że ścieżka określa tylko do odczytu pliku lub katalogu, lub **ENOENT**, co oznacza plik lub ścieżka Nie można odnaleźć.
+Każda z tych funkcji zwraca wartość 0, jeśli to się powiedzie. W przeciwnym razie funkcja zwraca wartość-1 i ustawia **errno** na **EACCES**, co oznacza, że ścieżka Określa plik tylko do odczytu lub katalog lub do **ENOENT**, co oznacza, że plik lub ścieżka nie zostanie znaleziona.
 
-Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) kody powrotne — Aby uzyskać więcej informacji na temat tych i innych.
+Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) , aby uzyskać więcej informacji na temat tych i innych kodów powrotu.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Unlink —** funkcja usuwa plik określony przez *filename*. **_wunlink —** to wersja znaku dwubajtowego **_unlink —**; *filename* argument **_wunlink —** jest ciągiem znaku dwubajtowego. Funkcje te zachowują się identycznie.
+Funkcja **_unlink** usuwa plik określony przez *filename*. **_wunlink** to dwubajtowa wersja **_unlink**; argumentem *filename* **_wunlink** jest ciąg znaków dwubajtowych. Funkcje te zachowują się identycznie w inny sposób.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tunlink**|**_unlink**|**_unlink**|**_wunlink**|
 
@@ -79,14 +82,14 @@ Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errn
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_unlink**|\<IO.h > i \<stdio.h >|
-|**_wunlink**|\<IO.h > lub \<wchar.h >|
+|**_unlink**|\<IO. h > i \<stdio. h >|
+|**_wunlink**|\<IO. h > lub \<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="code-example"></a>Przykład kodu
 
-_Unlink — jest używane do usuwania CRT_UNLINK. TXT.
+Ten program używa _unlink do usuwania CRT_UNLINK. Zawierającego.
 
 ```C
 // crt_unlink.c
@@ -102,7 +105,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtunlinktxt"></a>Input: crt_unlink.txt
+### <a name="input-crt_unlinktxt"></a>Input: crt_unlink.txt
 
 ```Input
 This file will be deleted.

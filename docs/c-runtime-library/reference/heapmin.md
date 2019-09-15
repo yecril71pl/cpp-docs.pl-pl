@@ -1,9 +1,9 @@
 ---
 title: _heapmin
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _heapmin
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _heapmin
 - heapmin
@@ -27,16 +30,16 @@ helpviewer_keywords:
 - _heapmin function
 - heapmin function
 ms.assetid: c0bccdf6-2d14-4d7b-a7ff-d6a17bdb410f
-ms.openlocfilehash: 130986894d1e2a68415e6ab9218641eff484ffd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c36a1028e42d59217586cc50adcb612e78072b03
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157227"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954805"
 ---
-# <a name="heapmin"></a>_heapmin
+# <a name="_heapmin"></a>_heapmin
 
-Zwalnia pamięć sterty nieużywane systemowi operacyjnemu.
+Zwalnia nieużywaną pamięć sterty do systemu operacyjnego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,21 +49,21 @@ int _heapmin( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-W przypadku powodzenia **_heapmin —** zwraca 0; w przeciwnym razie funkcja zwraca wartość -1 i ustawia **errno** do **ENOSYS**.
+Jeśli to się powiedzie, **_heapmin** zwraca 0; w przeciwnym razie funkcja zwraca wartość-1 i ustawia **errno** na **ENOSYS**.
 
-Aby uzyskać więcej informacji na temat tego i innych kodach powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tego i innych kodów powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_Heapmin —** funkcja minimalizuje sterty, zwalniając pamięć sterty nieużywane systemowi operacyjnemu. Jeśli system operacyjny nie obsługuje **_heapmin —**(na przykład Windows 98), funkcja zwraca wartość -1 i ustawia **errno** do **ENOSYS**.
+Funkcja **_heapmin** minimalizuje stertę, zwalniając nieużywaną pamięć sterty z systemem operacyjnym. Jeśli system operacyjny nie obsługuje **_heapmin**(na przykład Windows 98), funkcja zwraca wartość-1 i ustawia **errno** na **ENOSYS**.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
+|Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
 |**_heapmin**|\<malloc.h>|\<errno.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

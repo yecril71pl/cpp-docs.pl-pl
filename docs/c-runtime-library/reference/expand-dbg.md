@@ -1,9 +1,9 @@
 ---
 title: _expand_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _expand_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - expand_dbg
 - _expand_dbg
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - expand_dbg function
 - _expand_dbg function
 ms.assetid: dc58c91f-72a8-48c6-b643-fe130fb6c1fd
-ms.openlocfilehash: cc3aa2b7e39b52eb71ac10a9b5c4a221ba6fb70c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 836b9cffcf0367f248a14469b30c1a355e2bdec2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288048"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941579"
 ---
-# <a name="expanddbg"></a>_expand_dbg
+# <a name="_expand_dbg"></a>_expand_dbg
 
-Zmienia rozmiar określony blok pamięci w stosie przez rozszerzanie lub zawierania bloku (tylko wersja debugowania).
+Zmienia rozmiar określonego bloku pamięci w stercie przez rozwijanie lub zapełnienie bloku (tylko wersja do debugowania).
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,37 +52,37 @@ void *_expand_dbg(
 ### <a name="parameters"></a>Parametry
 
 *userData*<br/>
-Wskaźnik do bloku pamięci uprzednio przydzielony.
+Wskaźnik do wcześniej przydzielony blok pamięci.
 
-*newsize:*<br/>
+*newSize*<br/>
 Żądany nowy rozmiar bloku (w bajtach).
 
-*blockType*<br/>
-Żądany typ bloku o zmienionym rozmiarze: **_CLIENT_BLOCK** lub **_NORMAL_BLOCK**.
+*BlockType*<br/>
+Żądany typ dla bloku o zmienionym rozmiarze: **_CLIENT_BLOCK** lub **_NORMAL_BLOCK**.
 
 *Nazwa pliku*<br/>
-Wskaźnik na nazwę pliku źródłowego, który zażądał rozwiń operacji lub **NULL**.
+Wskaźnik na nazwę pliku źródłowego, który zażądał operacji rozszerzania lub **ma wartość null**.
 
-*numer wiersza*<br/>
-Numer wiersza w pliku źródłowym, gdzie zażądano operacji rozwijania lub **NULL**.
+*LineNumber*<br/>
+Numer wiersza w pliku źródłowym, w którym zażądano operacji rozwiń lub **wartość null**.
 
-*Filename* i *linenumber* parametry są dostępne tylko podczas **_expand_dbg —** została jawnie wywołana lub [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)stała preprocesora został zdefiniowany.
+Parametry *filename* i *LineNumber* są dostępne tylko wtedy, gdy **_expand_dbg** została wywołana jawnie lub została zdefiniowana stała preprocesora [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Po pomyślnym zakończeniu **_expand_dbg —** zwraca wskaźnik do bloku pamięci o zmienionym rozmiarze. Ponieważ pamięci nie jest przenoszony, adres jest taki sam jak userData. Jeśli wystąpił błąd lub nie można zdekompresować bloku żądany rozmiar, zwraca **NULL**. Jeśli wystąpi błąd, **errno** jest przy użyciu informacji z systemu operacyjnego dotyczące charakteru błędu. Aby uzyskać więcej informacji na temat **errno**, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Po pomyślnym zakończeniu **_expand_dbg** zwraca wskaźnik do bloku pamięci o zmienionym rozmiarze. Ponieważ pamięć nie jest przenoszona, adres jest taki sam jak userData. Jeśli wystąpi błąd lub nie można rozszerzyć bloku o żądany rozmiar, zwraca **wartość null**. Jeśli wystąpi awaria, **errno** jest z informacjami z systemu operacyjnego o charakterze błędu. Aby uzyskać więcej informacji na temat **errno**, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_Expand_dbg —** funkcja jest wersją debugowania _[rozwiń](expand.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, każde wywołanie **_expand_dbg —** jest ograniczone do wywołania **_rozwiń**. Zarówno **_rozwiń** i **_expand_dbg —** rozmiar bloku pamięci na stosie podstawowym, ale **_expand_dbg —** obsługuje kilka funkcji debugowania: bufory po obu stronach użytkownika część bloku do testowania przecieków, parametr typu blok do śledzenia określonych typów alokacji i *filename*/*linenumber* informacji do ustalenia źródła pochodzenia żądania alokacji.
+Funkcja **_expand_dbg** jest wersją debugowania funkcji _[expand](expand.md) . Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, każde wywołanie **_expand_dbg** jest ograniczone do wywołania **_expand**. Zarówno **_expand** , jak i **_expand_dbg** , Zmień rozmiar bloku pamięci w stercie podstawowej, ale **_expand_dbg** obsługuje kilka funkcji debugowania: bufory po obu stronach części bloku, aby przetestować pod kątem wycieków, parametr typu bloku do śledzenia określone typy alokacji i *Nazwa pliku*/*LineNumber* informacje w celu określenia pochodzenia żądań alokacji.
 
-**_expand_dbg —** zmienia rozmiar bloku określonym pamięci z nieco większą ilością miejsca niż żądane *newSize*. *newSize* może być większa lub mniejsza niż rozmiar bloku pamięci pierwotnie przydzielone. Dodatkowe miejsce jest używane przez menedżera stosu debugowania, do łączenia bloków pamięci debugowania i do dostarczenia aplikacji informacji nagłówka debugowania i zastąpienia buforów. Zmiana rozmiaru odbywa się przez rozszerzanie lub instytucje oryginalnego bloku pamięci. **_expand_dbg —** nie powoduje przeniesienia bloku pamięci, tak jak [_realloc_dbg —](realloc-dbg.md) funkcji.
+**_expand_dbg** zmienia rozmiar określonego bloku pamięci na nieco więcej miejsca niż żądany *NewSize*. wartość *NewSize* może być większa lub mniejsza od rozmiaru pierwotnie przydzielonych bloków pamięci. Dodatkowe miejsce jest używane przez menedżera stosu debugowania, do łączenia bloków pamięci debugowania i do dostarczenia aplikacji informacji nagłówka debugowania i zastąpienia buforów. Zmiana rozmiaru jest realizowana przez rozwijanie lub zapełnienie oryginalnego bloku pamięci. **_expand_dbg** nie przenosi bloku pamięci, podobnie jak funkcja [_realloc_dbg](realloc-dbg.md) .
 
-Gdy *newSize* jest większa niż oryginalnego bloku jest rozwinięty rozmiar bloku pamięci. Podczas rozszerzania, jeśli blok pamięci nie można rozszerzyć, aby dopasować żądany rozmiar **NULL** jest zwracana. Gdy *newSize* jest mniejszy od oryginalnego bloku jest nabytej rozmiar bloku pamięci, aż do uzyskania nowego rozmiaru.
+Gdy wartość *NewSize* jest większa niż oryginalny rozmiar bloku, blok pamięci jest rozwinięty. Podczas rozszerzania, jeśli blok pamięci nie może zostać rozszerzony w celu dopasowania żądanego rozmiaru, zwracana jest **wartość null** . Gdy wartość *NewSize* jest mniejsza niż oryginalny rozmiar bloku, blok pamięci jest zakontraktowany do momentu uzyskania nowego rozmiaru.
 
-Aby dowiedzieć się jak bloki pamięci są przydzielane, inicjowane i zarządzane w wersji debugowania podstawowej sterty, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać informacje dotyczące alokacji typów bloków i sposobu ich używania, zobacz [typy bloków na stercie debugowania](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać informacji na temat różnic między wywołaniem funkcji sterty standard oraz jego wersję debugowania do kompilacji debugowanej aplikacji, zobacz [Debuguj wersje z funkcji alokacji sterty](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
+Aby uzyskać informacje o tym, jak bloki pamięci są przydzielane, inicjowane i zarządzane w wersji debugowania sterty podstawowej, zobacz [szczegóły sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać informacje o typach bloków alokacji i sposobach ich użycia, zobacz [typy bloków na stercie debugowania](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać informacje o różnicach między wywołaniem standardowej funkcji sterty i jej wersji debugowania w kompilacji debugowania aplikacji, zobacz [debugowanie wersji funkcji alokacji sterty](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
-Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *memblock* jest wskaźnikiem typu null, lub jeśli rozmiar jest większy niż **_heap_maxreq —**, funkcja wywoła procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL** a funkcja zwraca **NULL**.
+Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *memblock* jest wskaźnikiem o wartości null lub jeśli rozmiar jest większy niż **_HEAP_MAXREQ**, ta funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcja zwraca **wartość null**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -87,11 +90,11 @@ Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *memblock* jest wska
 |-------------|---------------------|
 |**_expand_dbg**|\<crtdbg.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Debuguj wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md) tylko.
+Debuguj wersje wyłącznie [bibliotek uruchomieniowych C](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="example"></a>Przykład
 
@@ -148,7 +151,7 @@ Size of block after _expand_dbg of 1 more long: 164
 
 ## <a name="comment"></a>Komentarz
 
-Dane wyjściowe tego programu, zależy od możliwości na komputerze, aby rozwinąć wszystkie sekcje. Jeśli wszystkie sekcje są rozwinięte, danych wyjściowych jest widoczne w sekcji danych wyjściowych.
+Dane wyjściowe tego programu zależą od możliwości rozwinięcia wszystkich sekcji przez komputer. Jeśli wszystkie sekcje są rozwinięte, dane wyjściowe zostaną odzwierciedlone w sekcji Output (dane wyjściowe).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,11 +1,11 @@
 ---
 title: remquo, remquof, remquol
 ms.date: 04/05/2018
-apiname:
+api_name:
 - remquof
 - remquo
 - remquol
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - remquof
 - remquol
@@ -27,16 +30,16 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: 4c7e93806600ff674baf186a66662aafdeceeaca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c96357dda007e9bf12ddaf6091af47794bfc0630
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357554"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949365"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
 
-Oblicza pozostałą część dwóch wartości całkowitych i przechowuje wartość całkowitą ze znakiem i przybliżoną wielkością współczynnika w lokalizacji, która jest określona w parametrze.
+Oblicza pozostałą część dwóch wartości całkowitych i przechowuje wartość całkowitą ze znakiem i przybliżoną wielkością ilorazu w lokalizacji określonej w parametrze.
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,32 +56,32 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 ### <a name="parameters"></a>Parametry
 
-*numer*<br/>
+*numeracj*<br/>
 Licznik.
 
 *denom*<br/>
 Mianownik.
 
 *quo*<br/>
-Wskaźnik na liczbę całkowitą określającą wartość, która ma znak i przybliżonej wielkości ilorazu.
+Wskaźnik do liczby całkowitej do przechowywania wartości, która ma znak i przybliżoną wielkość ilorazu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**remquo —** zwraca zmiennoprzecinkową resztę działania *x* / *y*. Jeśli wartość *y* jest 0,0, Metoda **remquo —** zwraca ciche NaN. Aby uzyskać informacje o reprezentowaniu cichych NaN przez **printf** rodziny, zobacz [printf, _printf_l —, wprintf, _wprintf_l —](printf-printf-l-wprintf-wprintf-l.md).
+**remquo —** zwraca liczbę zmiennoprzecinkową z przestawu *x* / *y*. Jeśli wartość *y* to 0,0, **remquo —** zwraca cichy NaN. Aby uzyskać informacje o reprezentacji cichej wartości NaN przez rodzinę **printf** , zobacz [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**Remquo —** funkcja oblicza zmiennoprzecinkową resztę *f* z *x* / *y* tak, aby *x*   =  *i* \* *y* + *f*, gdzie *i* jest liczbą całkowitą , *f* ma ten sam znak co *x*, a wartość bezwzględna *f* jest mniejsza niż wartość bezwzględna *y*.
+Funkcja **remquo —** oblicza pozostałą liczbę zmiennoprzecinkową *f* z *x* / *y* , taką jak *x* = *i* \* *y* + *f*, *gdzie* jest liczbą całkowitą, *f* ma ten sam znak jako *x*, a wartość bezwzględna *f* jest mniejsza niż wartość bezwzględna *y*.
 
-Język C++ pozwala na przeciążenie, można więc wywoływać przeciążenia **remquo —** przyjmujące i zwracające **float** lub **długie** **double** wartości. W programie C **remquo —** zawsze przyjmuje dwa **double** argumenty i zwraca **double**.
+C++zezwala na Przeciążenie, dzięki czemu można wywoływać przeciążenia **remquo —** , które pobierają i zwracają wartości **zmiennoprzecinkowe** lub **długie** o **podwójnej precyzji** . W programie C **remquo —** zawsze przyjmuje dwa **podwójne** argumenty i zwraca wartość **podwójną**.
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |--------------|---------------------|-|
-|**remquo**, **remquof**, **remquol**|\<math.h>|\<cmath > lub \<math.h >|
+|**remquo**, **remquof**, **remquol**|\<math.h>|\<cmath > lub \<Math. h >|
 
-Aby uzyskać informacje o zgodności – zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

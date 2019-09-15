@@ -1,9 +1,9 @@
 ---
 title: _getdiskfree
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getdiskfree
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getdiskfree
 - _getdiskfree
@@ -26,19 +29,19 @@ helpviewer_keywords:
 - disk size
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
-ms.openlocfilehash: 03c39802301406bc4250328983c8cf8bad94497f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0feee21ee76d076263ea3750d00fd0142f26b7d9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331769"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955097"
 ---
-# <a name="getdiskfree"></a>_getdiskfree
+# <a name="_getdiskfree"></a>_getdiskfree
 
-Użyje informacji o dysku, aby wypełnić **_diskfree_t —** struktury.
+Program używa informacji o stacji dysków, aby wypełnić strukturę **_diskfree_t** .
 
 > [!IMPORTANT]
-> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -51,19 +54,19 @@ unsigned _getdiskfree(
 
 ### <a name="parameters"></a>Parametry
 
-*drive*<br/>
-Dysk, dla którego chcesz uzyskać.
+*litera*<br/>
+Dysk, dla którego chcesz uzyskać informacje.
 
 *driveinfo*<br/>
-A **_diskfree_t —** strukturę, która zostanie wypełniona przy użyciu informacji o dysku.
+Struktura **_diskfree_t** , która zostanie wypełniona informacjami o dysku.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli funkcja się powiedzie, wartość zwracana wynosi zero. Jeśli funkcja zawiedzie, wartość zwracana jest kod błędu. Wartość **errno** ustawiono pod kątem błędów, które są zwracane przez system operacyjny. Aby uzyskać więcej informacji na temat warunków błędów, które są wskazane przez **errno**, zobacz [errno — stałe](../../c-runtime-library/errno-constants.md).
+Jeśli funkcja się powiedzie, wartość zwracana wynosi zero. Jeśli funkcja się nie powiedzie, zwracaną wartością jest kod błędu. Wartość **errno** jest ustawiana dla wszystkich błędów, które są zwracane przez system operacyjny. Aby uzyskać więcej informacji na temat warunków błędów, które są wskazywane przez **errno**, zobacz [stałe errno](../../c-runtime-library/errno-constants.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_Diskfree_t —** struktury jest zdefiniowany w Direct.h.
+Struktura **_diskfree_t** jest zdefiniowana w bezpośrednim. h.
 
 ```C
 struct _diskfree_t {
@@ -74,7 +77,7 @@ struct _diskfree_t {
 };
 ```
 
-Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *driveinfo* wskaźnik jest **NULL** lub *dysku* określa nieprawidłowy dysk, funkcja wywoła procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [ Walidacja parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **EINVAL** i ustawia **errno** do **EINVAL**. Nieprawidłowa dysków z zakresu od 0 do 26. A *dysku* wartość 0 oznacza bieżący dysk; po tej dacie numery mapowania litery alfabetu angielskiego takie, wartość 1 oznacza stacji A, 3 oznacza dysk C i tak dalej.
+Ta funkcja sprawdza poprawność swoich parametrów. Jeśli wskaźnik *DriveInfo* ma **wartość null** lub *dysk* określa nieprawidłowy dysk, ta funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **EINVAL** i ustawia **errno** na **EINVAL**. Prawidłowe dyski mieszczą się w zakresie od 0 do 26. Wartość *dysku* 0 określa bieżący dysk; następnie cyfry są mapowane na litery alfabetu angielskiego, tak że 1 wskazuje na dysk A, 3 wskazuje dysk C i tak dalej.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -82,7 +85,7 @@ Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *driveinfo* wskaźni
 |-------------|---------------------|
 |**_getdiskfree**|\<direct.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

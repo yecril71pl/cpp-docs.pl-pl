@@ -1,9 +1,9 @@
 ---
 title: setbuf
 ms.date: 04/08/2019
-apiname:
+api_name:
 - setbuf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,23 +15,26 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - setbuf
 helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: 89f8a4d8eb853c774f4f7299ceaa9b9eb6177b42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6c78297b1818131dcfcb10f4f2eaadd752d8ef4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356398"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948278"
 ---
 # <a name="setbuf"></a>setbuf
 
-Formanty buforowanie strumienia. Ta funkcja jest przestarzała; Użyj [setvbuf —](setvbuf.md) zamiast tego.
+Steruje buforowaniem strumienia. Ta funkcja jest przestarzała; Zamiast tego użyj [setvbuf —](setvbuf.md) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,16 +48,16 @@ void setbuf(
 ### <a name="parameters"></a>Parametry
 
 *stream*<br/>
-Wskaźnik do **pliku** struktury.
+Wskaźnik do struktury **pliku** .
 
 *buffer*<br/>
 Bufor przydzielony przez użytkownika.
 
 ## <a name="remarks"></a>Uwagi
 
-**Setbuf —** funkcji kontrolek buforowania *strumienia*. *Strumienia* argumentu musi odwoływać się do otwartego pliku, który nie został zapisu lub odczytu. Jeśli *buforu* argument jest **NULL**, strumień jest Niebuforowane. Jeśli nie, rozmiar buforu musi wskazywać na tablicy znaków o długości **BUFSIZ**, gdzie **BUFSIZ** jest rozmiar buforu, zgodnie z definicją w stdio —. H. Bufor określonych przez użytkownika, zamiast bufor przydzielony systemu domyślny dla danego strumienia jest używany dla we/wy buforowania. **Stderr** strumienia jest niebuforowanego domyślnie, ale można użyć **setbuf —** można przypisać buforów do **stderr**.
+Funkcja **setbuf** kontroluje buforowanie dla *strumienia*. Argument *Stream* musi odwoływać się do otwartego pliku, który nie został odczytany lub zapisany. Jeśli argument *buforu* ma **wartość null**, strumień zostanie zbuforowany. W przeciwnym razie bufor musi wskazywać tablicę znaków o długości **bufsiz**, gdzie **bufsiz** jest rozmiar buforu, zgodnie z definicją w stdio. C. Bufor określony przez użytkownika, a nie domyślny bufor przypisywany przez system dla danego strumienia, jest używany dla buforowania we/wy. Strumień **stderr** jest domyślnie buforowany, ale do przypisywania buforów do obiektu **stderr**można użyć **setbuf** .
 
-**setbuf —** został zastąpiony przez [setvbuf —](setvbuf.md), czyli preferowany procedury dla nowego kodu. W odróżnieniu od **setvbuf —**, **setbuf —** nie ma możliwości raportowania błędów. **setvbuf —** umożliwia także kontrolować zarówno w trybie buforowania, jak i w rozmiar buforu. **setbuf —** istnieje dla zgodności z istniejącego kodu.
+**setbuf** został zastąpiony przez [setvbuf —](setvbuf.md), który jest preferowaną procedurą dla nowego kodu. W przeciwieństwie do **setvbuf —** , **setbuf** nie ma żadnego sposobu raportowania błędów. **setvbuf —** umożliwia również sterowanie zarówno trybem buforowania, jak i rozmiarem buforu. **setbuf** istnieje na potrzeby zgodności z istniejącym kodem.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -62,7 +65,7 @@ Bufor przydzielony przez użytkownika.
 |-------------|---------------------|
 |**setbuf**|\<stdio.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -105,7 +108,7 @@ stream2 buffering disabled
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>
 [fflush](fflush.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>

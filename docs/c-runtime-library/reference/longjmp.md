@@ -1,9 +1,9 @@
 ---
 title: longjmp
 ms.date: 08/14/2018
-apiname:
+api_name:
 - longjmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,23 +15,26 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - longjmp
 helpviewer_keywords:
 - restoring stack environment and execution locale
 - longjmp function
 ms.assetid: 0e13670a-5130-45c1-ad69-6862505b7a2f
-ms.openlocfilehash: e5189ff7cb850acd9c9a1280f47fc9a1270f8b68
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4527a29475f9e393dc5abf19b866d926bec2ccc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157412"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953141"
 ---
 # <a name="longjmp"></a>longjmp
 
-Przywraca stos środowiska i ustawień regionalnych wykonywania ustawiony przez `setjmp` wywołania.
+Przywraca środowisko stosu i ustawienia regionalne wykonywania ustawione przez `setjmp` wywołanie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,40 +47,40 @@ void longjmp(
 
 ### <a name="parameters"></a>Parametry
 
-*środowisko*<br/>
-Zmienna, w którym znajduje się środowisko.
+*kopert*<br/>
+Zmienna, w której jest przechowywane środowisko.
 
 *value*<br/>
-Wartość do zwrócenia do `setjmp` wywołania.
+Wartość, która ma zostać `setjmp` zwrócona do wywołania.
 
 ## <a name="remarks"></a>Uwagi
 
-**Longjmp** funkcja przywraca stos środowiska i ustawień regionalnych wykonywania wcześniej zapisanych w *env* przez `setjmp`. `setjmp` i **longjmp** zapewniają sposób wykonania nielokalne **goto**; zazwyczaj są one używane do przekazywania formantów wykonywania do kodu obsługi błędów lub odzyskiwania w poprzednio wywołanej procedurze bez użycia normalne wywołanie i Konwencji zwracania.
+Funkcja **longjmp** przywraca środowisko stosu i ustawienia regionalne wykonywania wcześniej zapisane w *ENV* przez `setjmp`. `setjmp`i **longjmp** umożliwiają wykonanie nielokalnego elementu **goto**; są one zazwyczaj używane do przekazywania kontroli wykonywania do kodu obsługi błędów lub odzyskiwania w wcześniej wywołanej procedurze bez używania normalnych konwencji wywołania i powrotu.
 
-Wywołanie `setjmp` powoduje, że bieżące środowisko stosu do zapisania w *env*. Kolejne wywołanie **longjmp** przywraca zapisane środowisko i zwraca kontrolę do punktu, natychmiast po odpowiednich `setjmp` wywołania. Wznawia wykonywanie tak, jakby *wartość* miał właśnie wrócił przez `setjmp` wywołania. Wartości wszystkich zmiennych (z wyjątkiem zmienne rejestru), które są dostępne do procedury odbieranie kontroli zawierają wartości, kiedy miało **longjmp** została wywołana. Wartości rejestru zmiennych są nieprzewidywalne. Wartość zwrócona przez obiekt `setjmp` musi mieć wartość różną od zera. Jeśli *wartość* jest przekazywany jako 0, wartość 1, zostanie zastąpiony w rzeczywistego zwrotu.
+Wywołanie `setjmp` powoduje, że bieżące środowisko stosu zostanie zapisane w *ENV*. Kolejne wywołanie **longjmp** przywraca zapisane środowisko i zwraca kontrolę do punktu bezpośrednio po odpowiednim `setjmp` wywołaniu. Wykonywanie jest `setjmp` wznawiane, gdy *wartość* została właśnie zwrócona przez wywołanie. Wartości wszystkich zmiennych (z wyjątkiem zmiennych rejestru), które są dostępne dla rutynowej kontroli, zawierają wartości, które miały po wywołaniu **longjmp** . Wartości zmiennych rejestru są nieprzewidywalne. Wartość zwracana przez program `setjmp` musi być różna od zera. Jeśli *wartość* jest przenoszona jako 0, wartość 1 jest zastępowana w rzeczywistym zwracaniu.
 
 **Microsoft Specific**
 
-W przypadku kodu C++ firmy Microsoft w Windows **longjmp** używa tej samej semantyki odwracania stosu jako kod obsługi wyjątków. Jest bezpieczne do użycia w tych samych miejsc wygenerowany wyjątki C++. Jednak to użycie nie jest przenośny i dołączono niektóre ważne zastrzeżenia.
+W programie C++ Microsoft Code w systemie Windows **longjmp** używa tej samej semantyki odwracania stosu, co kod obsługi wyjątków. Można bezpiecznie użyć w tych samych miejscach, w których C++ mogą zostać zgłoszone wyjątki. Takie użycie nie jest jednak przenośne i zawiera pewne ważne zastrzeżenia.
 
-Wywoływać tylko **longjmp** przed funkcją, która wywołała `setjmp` zwraca; w przeciwnym razie wyniki są nieprzewidywalne.
+Wywołaj **longjmp** tylko przed funkcją, która `setjmp` wywołuje metodę Returns; w przeciwnym razie wyniki są nieprzewidywalne.
 
-Sprawdź następujące ograniczenia w przypadku korzystania z **longjmp**:
+W przypadku korzystania z programu **longjmp**należy przestrzegać następujących ograniczeń:
 
-- Nie należy zakładać, że wartości zmiennych rejestru nie ulegną zmianie. Wartości zmiennych rejestru w rutynowej wywoływania `setjmp` nie mogą być przywracane do odpowiednimi wartościami po **longjmp** jest wykonywany.
+- Nie należy zakładać, że wartości zmiennych rejestru pozostaną takie same. Wartości zmiennych rejestru w wywołaniu `setjmp` procedury mogą nie zostać przywrócone do odpowiednich wartości po wykonaniu **longjmp** .
 
-- Nie używaj **longjmp** do przekazywania kontroli procedurę obsługi przerwań, chyba że przerwanie jest spowodowane wyjątkiem zmiennoprzecinkowym. W takim przypadku program może zwracać z obsługi przerwań za pośrednictwem **longjmp** Jeśli go najpierw ponownie inicjuje pakiecie zmiennoprzecinkowym zapisu matematycznego, wywołując [_fpreset —](fpreset.md).
+- Nie należy używać **longjmp** do transferowania kontroli z procedury obsługi przerwania, chyba że przerwanie jest spowodowane przez wyjątek zmiennoprzecinkowy. W takim przypadku program może zwrócić z procedury obsługi przerwania za pośrednictwem **longjmp** , jeśli najpierw ponownie zainicjuje pakiet matematyczny zmiennoprzecinkowych przez wywołanie [_fpreset](fpreset.md).
 
-- Nie używaj **longjmp** Aby przekazać sterowanie z procedury wywołania zwrotnego wywoływana bezpośrednio lub pośrednio przez kod Windows.
+- Nie należy używać **longjmp** do transferowania kontroli z procedury wywołania zwrotnego wywoływanej bezpośrednio lub pośrednio przez kod systemu Windows.
 
-- Jeśli kod jest kompilowany przy użyciu **/EHS** lub **/ehsc** i funkcji, która zawiera **longjmp** wywołanie jest **noexcept** następnie lokalne obiekty w tym, że funkcja nie może zostać zniszczone podczas odwijania stosu.
+- Jeśli kod jest kompilowany za pomocą **/EHS** lub **/EHsc** , a funkcja, która zawiera wywołanie **longjmp** ma wartość **noexcept** , obiekty lokalne w tej funkcji mogą nie być destruktory podczas operacji unwindy stosu.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 > [!NOTE]
-> W przypadku przenośnego kodu C++, nie można zakładać, `setjmp` i `longjmp` obsługują semantyki obiektów języka C++. W szczególności `setjmp` / `longjmp` wywołanie pary ma niezdefiniowane zachowanie, jeśli zastąpienie `setjmp` i `longjmp` przez **catch** i **throw** powodowałoby wywołanie pliku wykonywalnego wszelkie nietrywialnymi destruktory dla obiektów automatycznych. W programach języka C++ zalecane jest używanie mechanizmu obsługi wyjątków C++.
+> W kodzie C++ przenośnym nie można przyjąć `setjmp` ani `longjmp` obsługiwać C++ semantyki obiektów. `longjmp` `setjmp` W odniesieniu do pary wywołańwystępujeniezdefiniowanezachowanie,jeślizastąpienieobiektuiprzechwycenieithrowwywoławszystkienieuproszczonedestruktorydlawszystkichobiektówautomatycznych.`longjmp` `setjmp` / W C++ obszarze programy zalecamy korzystanie z C++ mechanizmu obsługi wyjątków.
 
-Aby uzyskać więcej informacji, zobacz [przy użyciu funkcji setjmp i longjmp](../../cpp/using-setjmp-longjmp.md).
+Aby uzyskać więcej informacji, zobacz [Korzystanie z setjmp i longjmp](../../cpp/using-setjmp-longjmp.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -85,11 +88,11 @@ Aby uzyskać więcej informacji, zobacz [przy użyciu funkcji setjmp i longjmp](
 |-------------|---------------------|
 |**longjmp**|\<setjmp.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [_fpreset —](fpreset.md).
+Zobacz przykład dla [_fpreset](fpreset.md).
 
 ## <a name="see-also"></a>Zobacz także
 

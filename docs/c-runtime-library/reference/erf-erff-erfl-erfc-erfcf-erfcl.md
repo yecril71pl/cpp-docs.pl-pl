@@ -1,14 +1,14 @@
 ---
 title: erf, erff, erfl, erfc, erfcf, erfcl
 ms.date: 01/31/2019
-apiname:
+api_name:
 - erff
 - erfl
 - erf
 - erfc
 - erfcf
 - erfcl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - erfl
 - erf
@@ -36,16 +39,16 @@ helpviewer_keywords:
 - erfcf function
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-ms.openlocfilehash: 4270d8366686ea282a4dd37741d9f8e37991b88f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df724ed056c02d79b5b51f97ae4aaf8ae267fde5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62289212"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937617"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
 
-Oblicza funkcję błędu lub komplementarną funkcję błędu wartości.
+Oblicza funkcję Error lub uzupełniającą funkcję błędu wartości.
 
 ## <a name="syntax"></a>Składnia
 
@@ -89,25 +92,25 @@ Wartość zmiennoprzecinkowa.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Erf** funkcje zwracają Gaussa funkcję błędu *x*. **Erfc** funkcje zwracają Gaussa uzupełniającą funkcję błędu *x*.
+Funkcje **ERF** zwracają funkcję błędu Gaussa *x*. Funkcje **ERFC —** zwracają komplementarną funkcję błędu Gaussa *x*.
 
 ## <a name="remarks"></a>Uwagi
 
-**Erf** funkcje obliczają wartość funkcji błędu Gaussa z *x*, która została zdefiniowana jako:
+Funkcje **ERF** obliczają funkcję błędu Gaussa *x*, która jest definiowana jako:
 
-![Funkcję błędu x](media/crt_erf_formula.PNG "funkcję błędu x")
+![Funkcja błędu x](media/crt_erf_formula.PNG "Funkcja błędu x")
 
-Uzupełniająca funkcja błędu Gaussa jest zdefiniowana jako 1 – erf(x). **Erf** funkcje zwracają wartość z zakresu od – 1,0 do 1,0. Nie będzie zwrotu błędu. **Erfc** funkcje zwracają wartość z zakresu od 0 do 2. Jeśli *x* jest zbyt duży dla **erfc**, **errno** zmienna jest ustawiona na **ERANGE**.
+Funkcja błędu uzupełniającego Gaussa jest definiowana jako 1-ERF (x). Funkcje **ERF** zwracają wartość z zakresu od-1,0 do 1,0. Brak powrotu błędu. Funkcje **ERFC —** zwracają wartość z zakresu od 0 do 2. Jeśli *x* jest zbyt duży dla **ERFC —** , zmienna **errno** jest ustawiona na **ERANGE**.
 
-Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **erf** i **erfc** przyjmujące i zwracające **float** i **długie** **double** typów. W programie C **erf** i **erfc** zawsze przyjmują i zwracają **double**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia wartości **ERF** i **ERFC —** , które pobierają i zwracają **zmiennoprzecinkowe** i **długie** **podwójne** typy. W programie C, funkcja **ERF** i **ERFC —** zawsze przyjmują i zwracają wartość **podwójną**.
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**erf**, **erff**, **erfl**, **erfc**, **erfcf**, **erfcl**|\<math.h>|
+|**ERF**, **erff —** , **erfl**, **ERFC —** , **erfcf —** , **erfcl**|\<math.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

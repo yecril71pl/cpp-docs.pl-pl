@@ -1,12 +1,12 @@
 ---
 title: abs, labs, llabs, _abs64
 ms.date: 04/05/2018
-apiname:
+api_name:
 - abs
 - _abs64
 - labs
 - llabs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - stdlib/_abs64
 - math/abs
@@ -36,14 +39,14 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-ms.openlocfilehash: 61aa0a48757a35708ffb85d2c0525bb4eac82d56
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf5b4be654a3bd48b3e0d43ac97ce02b348942bc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341993"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939931"
 ---
-# <a name="abs-labs-llabs-abs64"></a>abs, labs, llabs, _abs64
+# <a name="abs-labs-llabs-_abs64"></a>abs, labs, llabs, _abs64
 
 Oblicza wartość bezwzględną argumentu.
 
@@ -67,30 +70,30 @@ float abs( float n );   // C++ only
 ### <a name="parameters"></a>Parametry
 
 *n*<br/>
-Wartość liczbowa.
+Wartość numeryczna.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Abs**, **labs**, **llabs —** i **_abs64 —** funkcje zwracają wartość bezwzględna parametru *n*. Nie będzie zwrotu błędu.
+Funkcje **ABS**, **Labs**, **llabs** i **_abs64** zwracają wartość bezwzględną parametru *n*. Brak powrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **abs** przyjmujące i zwracające **długie**, **długie** **długie**,  **float**, **double**, i **długie** **double** wartości. Te przeciążenia są zdefiniowane w \<cmath > nagłówka. W programie C **abs** zawsze przyjmuje i zwraca **int**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia metody **ABS** , które pobierają izwracają długie **, długie** **długie**, **zmiennoprzecinkowe**, **podwójne**i **długie** **podwójne** wartości. Te przeciążenia są zdefiniowane w \<nagłówku > cmath. W programie w języku C funkcja **ABS** zawsze przyjmuje i zwraca liczbę **całkowitą.**
 
-**Specyficzne dla firmy Microsoft**: Ponieważ zakres ujemnych liczb całkowitych, które mogą być reprezentowane za pomocą dowolnego typu integralnego, jest większy niż zakres dodatnich liczb całkowitych, które mogą być reprezentowane za pomocą tego typu, jest możliwe, aby podać argument do tych funkcji, które nie może zostać przekonwertowany. Jeśli wartość bezwzględna argumentu nie może być przedstawiona przez zwracany typ **abs** funkcje zwracają niezmienioną wartość argumentu. W szczególności `abs(INT_MIN)` zwraca `INT_MIN`, `labs(LONG_MIN)` zwraca `LONG_MIN`, `llabs(LLONG_MIN)` zwraca `LLONG_MIN`, i `_abs64(_I64_MIN)` zwraca `_I64_MIN`. Oznacza to, że **abs** funkcji nie może służyć do zagwarantowania wartości dodatniej.
+**Specyficzne dla firmy Microsoft**: Ponieważ zakres ujemnych liczb całkowitych, które mogą być reprezentowane przy użyciu dowolnego typu całkowitego, jest większy niż zakres dodatnich liczb całkowitych, które mogą być reprezentowane za pomocą tego typu, możliwe jest podanie argumentu tym funkcjom, których nie można przekonwertować. Jeśli wartość bezwzględna argumentu nie może być reprezentowana przez zwracany typ, funkcje **ABS** zwracają wartość argumentu bez zmian. W celu `abs(INT_MIN)` `INT_MIN` zwraca`llabs(LLONG_MIN)` ,zwraca`_abs64(_I64_MIN)` , zwraca, i zwraca .`_I64_MIN` `labs(LONG_MIN)` `LONG_MIN` `LLONG_MIN` Oznacza to, że funkcje **ABS** nie mogą być używane w celu zagwarantowania wartości dodatniej.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Wymagany nagłówek języka C|Wymagany nagłówek C++|
+|Procedura|Wymagany nagłówek C|Wymagany C++ nagłówek|
 |-------------|-----------------------|---------------------------|
-|**ABS**, **labs**, **llabs —**|\<Math.h > lub \<stdlib.h >|\<cmath >, \<cstdlib — >, \<stdlib.h > lub \<math.h >|
-|**_abs64**|\<stdlib.h>|\<cstdlib — > lub \<stdlib.h >|
+|**ABS**, **Labs**, **llabs**|\<Math. h > lub \<STDLIB. h >|\<cmath >, \<cstdlib >, \<STDLIB. h > lub \<Math. h >|
+|**_abs64**|\<stdlib.h>|\<cstdlib > lub \<STDLIB. h >|
 
-Aby użyć przeciążone wersje **abs** w języku C++, należy uwzględnić \<cmath > nagłówka.
+Aby użyć przeciążonych wersji elementów **ABS** w C++, \<należy uwzględnić cmath >.
 
 ## <a name="example"></a>Przykład
 
-Program ten wylicza i wyświetla wartości bezwzględne dla kilku numerów.
+Ten program oblicza i wyświetla wartości bezwzględne kilku liczb.
 
 ```C
 // crt_abs.c

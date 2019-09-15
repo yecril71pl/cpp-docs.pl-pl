@@ -1,12 +1,12 @@
 ---
 title: sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _swprintf_s_l
 - _sprintf_s_l
 - swprintf_s
 - sprintf_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - swprintf_s
 - sprintf_s
@@ -41,16 +44,16 @@ helpviewer_keywords:
 - _sprintf_s_l function
 - formatted text [C++]
 ms.assetid: 424f0a29-22ef-40e8-b565-969f5f57782f
-ms.openlocfilehash: 4d4bec339caccf9b0843afada4b56b435243dd11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34b3ddce68563479b26abff34e8fa31f6298558a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354956"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958010"
 ---
-# <a name="sprintfs-sprintfsl-swprintfs-swprintfsl"></a>sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l
+# <a name="sprintf_s-_sprintf_s_l-swprintf_s-_swprintf_s_l"></a>sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l
 
-Wpisz sformatowane dane do ciągu. Są to wersje [sprintf, _sprintf_l —, swprintf, _swprintf_l —, \__swprintf_l —](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Napisz sformatowane dane do ciągu. Są to wersje [sprintf —, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) z ulepszeniami zabezpieczeń, jak opisano w [funkcjach zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -98,45 +101,45 @@ int swprintf_s(
 ### <a name="parameters"></a>Parametry
 
 *buffer*<br/>
-Lokalizacja magazynowa danych wyjściowych
+Lokalizacja magazynu dla danych wyjściowych
 
 *sizeOfBuffer*<br/>
 Maksymalna liczba znaków do zapisania.
 
-*Format*<br/>
-Ciąg formantu formatu
+*format*<br/>
+Format — ciąg kontrolny
 
 *...*<br/>
-Argumenty opcjonalne formatowania
+Opcjonalne argumenty do sformatowania
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
-Aby uzyskać więcej informacji, zobacz [specyfikacji formatu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Aby uzyskać więcej informacji, zobacz temat [Formatowanie specyfikacji](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Liczba znaków zapisanych, lub -1, jeśli wystąpił błąd. Jeśli *buforu* lub *format* jest pustym wskaźnikiem, **sprintf_s —** i **swprintf_s —** zwracają wartość -1 i ustaw **errno**do **EINVAL**.
+Liczba znaków pisanych lub-1, jeśli wystąpił błąd. Jeśli *bufor* lub *Format* jest wskaźnikiem o wartości null, **sprintf_s** i **swprintf_s** zwracają-1 i ustawiają **errno** na **EINVAL**.
 
-**sprintf_s —** zwraca liczbę bajtów przechowywanych w *buforu*, nie licząc zamykającego kończącego znaku null. **swprintf_s —** zwraca liczbę znaków szerokich przechowywanych w *buforu*, nie licząc zamykającego znaku pustego.
+**sprintf_s** zwraca liczbę bajtów przechowywanych w *buforze*, która nie zlicza kończącego znaku null. Funkcja **swprintf_s** zwraca liczbę znaków dwubajtowych przechowywanych w *buforze*, która nie zlicza kończących znaków dwubajtowych o zerowej długości.
 
 ## <a name="remarks"></a>Uwagi
 
-**Sprintf_s —** funkcja formatuje i przechowuje serie znaków i wartości w *buforu*. Każdy *argument* (jeśli istnieje) jest konwertowaya i wychodzi według specyfikacji formatu w *format*. Format składa się ze znaków zwykłych i ma taką samą formę i funkcjonuje jako *format* argument [printf](printf-printf-l-wprintf-wprintf-l.md). Znak null jest dołączany po ostatnim napisanym znaku. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
+Funkcja **sprintf_s** formatuje i przechowuje serie znaków i wartości w *buforze*. Każdy *argument* (jeśli istnieje) jest konwertowany i wyprowadzany zgodnie ze specyfikacją formatu w *formacie*. Format składa się ze zwykłych znaków i ma taką samą formę i funkcję jak argument *formatu* dla [printf](printf-printf-l-wprintf-wprintf-l.md). Znak null jest dołączany po ostatnim zapisanym znaku. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
 
-Jedną z głównych różnic między **sprintf_s —** i [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) jest fakt, że **sprintf_s —** sprawdza, czy ciąg formatu dla prawidłowych znaków formatowania, natomiast [ sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) sprawdza tylko, jeśli ciąg formatu lub bufor to **NULL** wskaźników. Jeśli sprawdzenie zakończy się niepowodzeniem, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość -1 i ustawia **errno** do **EINVAL**.
+Jedną z głównych różnic między **sprintf_s** i [sprintf —](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) jest to, że **sprintf_s** sprawdza ciąg formatu pod kątem prawidłowych znaków formatowania, natomiast [sprintf —](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) sprawdza tylko, czy ciąg formatu lub bufor mają wskaźniki o **wartości null** . Jeśli sprawdzenie zakończy się niepowodzeniem, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1 i ustawia **errno** na **EINVAL**.
 
-Główna różnica między **sprintf_s —** i [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) jest fakt, że **sprintf_s —** przyjmuje parametr długości określający rozmiar bufora wyjściowego w znakach. Jeśli bufor jest zbyt mały dla tekstu sformatowanego, w tym kończącą wartość null, a następnie bufor zostaje ustawiony na pusty ciąg, umieszczając znak null w *buforu*[0], a zostanie wywołany nieprawidłowy parametr uchwytu. W odróżnieniu od **_snprintf**, **sprintf_s —** gwarantuje, że bufor będzie zakończony zerem, chyba że rozmiar buforu jest równy zero.
+Druga główna różnica między **sprintf_s** i [sprintf —](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) polega na tym, że **sprintf_s** pobiera parametr długości określający rozmiar buforu wyjściowego w znakach. Jeśli bufor jest za mały dla sformatowanego tekstu, łącznie z kończącą się wartością null, wówczas bufor jest ustawiany na pusty ciąg, umieszczając znak null w *buforze*[0] i wywoływana jest procedura obsługi nieprawidłowego parametru. W przeciwieństwie do **_snprintf**, **sprintf_s** gwarantuje, że bufor będzie zakończony wartością null, chyba że rozmiar buforu wynosi zero.
 
-**swprintf_s —** to wersja znaku dwubajtowego **sprintf_s —**; argumenty wskaźnika do **swprintf_s —** są ciągami znaków dwubajtowych. Wykrywanie kodowania błędów w **swprintf_s —** mogą się różnić od tego w **sprintf_s —**. Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych wątku.
+**swprintf_s** to dwubajtowa wersja **sprintf_s**; argumenty wskaźnika do **swprintf_s** są ciągami znaków dwubajtowych. Wykrywanie błędów kodowania w **swprintf_s** może się różnić od tego w **sprintf_s**. Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korzystają z przekazaną parametrem ustawień regionalnych zamiast bieżących ustawień regionalnych wątku.
 
-W języku C++ korzystania z tych funkcji jest uproszczone przez przeciążania szablonu; przeciążenia mogą automatycznie wywnioskować długość buforu, co eliminuje potrzebę określenia argumentu rozmiaru, a te mogą automatycznie zastąpić starsze, niezabezpieczone funkcje za pomocą ich nowsze, bezpieczne odpowiedniki. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość bufora, co eliminuje konieczność określenia argumentu rozmiaru i może automatycznie zastąpić starsze, niezabezpieczone funkcje nowym, bezpiecznymi odpowiednikami. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
-Istnieją wersje **sprintf_s —** , oferują dodatkową kontrolę nad co się stanie, jeśli bufor jest za mały. Aby uzyskać więcej informacji, zobacz [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
+Istnieją wersje programu **sprintf_s** , które oferują dodatkową kontrolę nad tym, co się stanie, jeśli bufor jest za mały. Aby uzyskać więcej informacji, zobacz [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_stprintf_s**|**sprintf_s**|**sprintf_s**|**swprintf_s**|
 |**_stprintf_s_l**|**_sprintf_s_l**|**_sprintf_s_l**|**_swprintf_s_l**|
@@ -145,10 +148,10 @@ Istnieją wersje **sprintf_s —** , oferują dodatkową kontrolę nad co się s
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**sprintf_s**, **_sprintf_s_l**|C: \<stdio.h><br /><br /> C++: \<cstdio — > lub \<stdio.h >|
-|**swprintf_s**, **_swprintf_s_l**|C: \<stdio.h > lub \<wchar.h ><br /><br /> C++: \<cstdio>, \<cwchar>, \<stdio.h> or \<wchar.h>|
+|**sprintf_s**, **_sprintf_s_l**|C: \<stdio.h><br /><br /> C++: \<cstdio > lub \<stdio. h >|
+|**swprintf_s**, **_swprintf_s_l**|C: \<stdio. h > lub \<WCHAR. h ><br /><br /> C++: \<cstdio >, \<cwchar >, \<stdio. h > lub \<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -212,7 +215,7 @@ wrote -1 characters
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
 [sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>

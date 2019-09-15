@@ -1,9 +1,9 @@
 ---
 title: _setmode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _setmode
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _setmode
 helpviewer_keywords:
@@ -26,16 +29,16 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: 67cca27ba03a99d7e192d438a98f1bb3a93845ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f14cc9451b93a9077916b8c650645990ba654a3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356405"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948594"
 ---
-# <a name="setmode"></a>_setmode
+# <a name="_setmode"></a>_setmode
 
-Ustawia tryb tłumaczenia pliku.
+Ustawia tryb tłumaczenia plików.
 
 ## <a name="syntax"></a>Składnia
 
@@ -48,33 +51,33 @@ int _setmode (
 
 ### <a name="parameters"></a>Parametry
 
-*FD*<br/>
+*proces*<br/>
 Deskryptor pliku.
 
-*Tryb*<br/>
-Nowy tryb translacji.
+*wyst*<br/>
+Nowy tryb tłumaczenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli to się powiedzie, zwraca poprzedniego tryb translacji.
+Jeśli to się powiedzie, zwraca poprzedni tryb tłumaczenia.
 
-Jeśli nieprawidłowe parametry są przekazywane do tej funkcji, parametr nieprawidłowy program obsługi zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja zwraca wartość -1 i ustawia **errno** do jednej **EBADF**, co oznacza nieprawidłowego deskryptora pliku, lub **EINVAL**, który wskazuje nieprawidłową *tryb* argumentu.
+Jeśli do tej funkcji są przesyłane nieprawidłowe parametry, procedura obsługi nieprawidłowego parametru jest wywoływana, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1 i ustawia **errno** na **EBADF**, która wskazuje nieprawidłowy deskryptor pliku lub **EINVAL**, który wskazuje nieprawidłowy argument *trybu* .
 
-Aby uzyskać więcej informacji na temat tych i innych kodach powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tych i innych kodów powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_Setmode —** funkcja ustawia *tryb* tryb translacji pliku przez *fd*. Przekazywanie **_O_TEXT** jako *tryb* ustawia tekst (tłumaczonym) trybu. Kombinacji (CR-LF) kanału informacyjnego wiersza powrotu karetki są tłumaczone na jednym wierszu znaku wysuwu na dane wejściowe. Znaki kanału informacyjnego wiersza są tłumaczone na kombinacje CR-LF w danych wyjściowych. Przekazywanie **_O_BINARY** ustawia binarnym (nieprzetłumaczonym) tryb, w którym te tłumaczenia są pomijane.
+Funkcja **_setmode** ustawia tryb translacji pliku *, który jest* określony przez *FD*. Przekazanie trybu **_O_TEXT** jako *tryb* tekstu (który jest tłumaczony). Kombinacje powrotu karetki liniowej (CR-LF) są tłumaczone na pojedynczy znak wysuwu wiersza na wejściu. Znaki wysuwu wiersza są tłumaczone na kombinacje CR-LF w danych wyjściowych. Przekazywanie zestawów **_O_BINARY** ustawia binarny (nieprzetłumaczony) tryb, w którym te tłumaczenia są pomijane.
 
-Można również przekazać **_O_U16TEXT**, **_O_U8TEXT**, lub **_O_WTEXT** Aby włączyć tryb Unicode, jak pokazano w drugim przykładzie w dalszej części tego dokumentu.
-
-> [!CAUTION]
-> Tryb Unicode jest szeroki drukowania funkcji (na przykład `wprintf`) i nie jest obsługiwana dla wąskie funkcji drukowania. Użyj wąskie funkcji drukowania w trybie strumienia Unicode wyzwala assert.
-
-**_setmode —** jest zwykle używane do modyfikowania domyślny tryb translacji **stdin** i **stdout**, ale służy dowolny plik. Jeśli zastosujesz **_setmode —** deskryptor pliku dla strumienia, wywołać **_setmode —** przed wykonaniem jakiejkolwiek operacji na strumieniu danych wejściowych lub wyjściowych.
+Możesz również przekazać **_O_U16TEXT**, **_O_U8TEXT**lub **_O_WTEXT** , aby włączyć tryb Unicode, jak pokazano w drugim przykładzie w dalszej części tego dokumentu.
 
 > [!CAUTION]
-> Jeśli piszesz danych w strumieniu plików jawnie opróżnić kodu za pomocą [fflush —](fflush.md) przed użyciem **_setmode —** Aby zmienić tryb. Jeśli kod nie jest opróżnienia, możesz otrzymać nieoczekiwane zachowanie. W przypadku niezapisania danych w strumieniu ma opróżniania kodu.
+> Tryb Unicode jest przeznaczony dla szerokiej funkcji drukowania (na `wprintf`przykład) i nie jest obsługiwany w przypadku wąskich funkcji drukowania. Użycie wąskiej funkcji drukowania w strumieniu trybu Unicode wyzwala potwierdzenie.
+
+**_setmode** jest zwykle używany do modyfikacji domyślnego trybu translacji **stdin** i **stdout**, ale można go użyć w dowolnym pliku. Jeśli zastosujesz **_setmode** do deskryptora pliku dla strumienia, wywołaj **_setmode** przed wykonaniem jakichkolwiek operacji wejścia lub wyjścia strumienia.
+
+> [!CAUTION]
+> Jeśli zapisujesz dane do strumienia plików, jawnie Opróżniaj kod przy użyciu [fflush](fflush.md) przed użyciem **_setmode** do zmiany trybu. Jeśli kod nie zostanie opróżniony, może wystąpić nieoczekiwane zachowanie. Jeśli nie zapisano danych do strumienia, nie ma potrzeby opróżniania kodu.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -82,7 +85,7 @@ Można również przekazać **_O_U16TEXT**, **_O_U8TEXT**, lub **_O_WTEXT** Aby 
 |-------------|---------------------|----------------------|
 |**_setmode**|\<io.h>|\<fcntl.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

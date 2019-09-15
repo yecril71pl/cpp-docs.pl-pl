@@ -1,9 +1,9 @@
 ---
 title: _fread_nolock_s2
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fread_nolock_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,21 +15,24 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fread_nolock_s
 - stdio/_fread_nolock_s
 ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
-ms.openlocfilehash: 1dccbd362577e524f0455a2248d4d0f209ea6295
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7fded9860b7a1364841d5f9b8a7e3aa478a8420
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333108"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956894"
 ---
-# <a name="freadnolocks"></a>_fread_nolock_s
+# <a name="_fread_nolock_s"></a>_fread_nolock_s
 
-Odczytuje dane ze strumienia bez blokowania inne wątki. Ta wersja [fread_nolock —](fread-nolock.md) ma wzmocnienia zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Odczytuje dane ze strumienia bez blokowania innych wątków. Ta wersja programu [fread_nolock](fread-nolock.md) zawiera ulepszenia zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,19 +49,19 @@ size_t _fread_nolock_s(
 ### <a name="parameters"></a>Parametry
 
 *buffer*<br/>
-Lokalizacja magazynowa danych.
+Lokalizacja magazynu dla danych.
 
 *bufferSize*<br/>
-Rozmiar buforu miejsca docelowego w bajtach.
+Rozmiar buforu docelowego w bajtach.
 
 *elementSize*<br/>
-Rozmiar elementu do odczytu w bajtach.
+Rozmiar elementu, który ma zostać odczytany w bajtach.
 
 *elementCount*<br/>
-Maksymalna liczba elementów, które mają być odczytywane.
+Maksymalna liczba elementów, które mają zostać odczytane.
 
 *stream*<br/>
-Wskaźnik do **pliku** struktury.
+Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -66,18 +69,18 @@ Zobacz [fread_s](fread-s.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja jest wersji bez blokady **fread_s**. Jest on identyczny **fread_s** z tą różnicą, że nie jest chronione przed ingerencją przez inne wątki. Może on być szybsze, ponieważ nie są naliczane z obciążeniem związanym z blokowaniem innych wątków. Ta funkcja służy tylko w kontekstach wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywołujący już obsługuje izolację wątków.
+Ta funkcja jest nieblokującą wersją **fread_s**. Jest on identyczny z **fread_s** , z tą różnicą, że nie jest chroniony przed ingerencją przez inne wątki. Może to być szybsze, ponieważ nie wiąże się z zablokowaniem innych wątków. Tej funkcji należy używać tylko w kontekstach bezpiecznych dla wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywoływania już obsługuje izolację wątku.
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_fread_nolock_s**|C: \<stdio.h >; C++: \<cstdio — > lub \<stdio.h >|
+|**_fread_nolock_s**|C: \<stdio. h >; C++ :\<cstdio > lub \<stdio. h >|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fwrite](fwrite.md)<br/>
 [_read](read.md)<br/>

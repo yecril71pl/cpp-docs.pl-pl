@@ -1,14 +1,14 @@
 ---
 title: atan, atanf, atanl, atan2, atan2f, atan2l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - atan2f
 - atan2l
 - atan2
 - atanf
 - atan
 - atanl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - atan
 - atan2l
@@ -38,16 +41,16 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 59a67b0d213a11630f551fd7582b44aab60e314f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c485dea281d2b754628c9663e38ea10a9b6ab57
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341720"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939609"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
-Oblicza arcus tangens **x** (**atan**, **atanf —**, i **atanl —**) lub arcus tangens **y** / **x** (**atan2**, **atan2f —**, i **atan2l —**).
+Oblicza arcus tangens liczby **x** (**atan**, **atanf —** i **atanl**) lub arcus tangens liczby **y**/**x** (**atan2**, **atan2f —** i **atan2l**).
 
 ## <a name="syntax"></a>Składnia
 
@@ -76,27 +79,27 @@ Wszystkie liczby.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**ATAN** Zwraca arcus tangens *x* w zakresie - π/2 do π/2 radianów. **ATAN2** Zwraca arcus tangens *y*/*x* w zakresie - π na radiany π. Jeśli *x* ma wartość 0, **atan** zwraca wartość 0. Jeśli oba parametry **atan2** to 0, funkcja zwraca 0. Wszystkie wyniki znajdują się w radianach.
+**atan** zwraca arcus tangens *x* w zakresie od π/2 do π/2 radianów. Funkcja **atan2** zwraca arcus tangens liczby *y*/*x* w zakresie od π do π radianów. Jeśli *x* to 0, **atan** zwraca 0. Jeśli oba parametry **atan2** mają wartość 0, funkcja zwraca wartość 0. Wszystkie wyniki są w radianach.
 
-**ATAN2** używa oznaki oba parametry w celu ustalenia quadrant zwracanej wartości.
+Funkcja **atan2** używa znaków obu parametrów, aby określić ćwiartkę zwracanej wartości.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|GRANICACH **QNAN**, **ZNAJDŹ**|brak|**_DOMAIN**|
+|**QNAN**, **IND**|brak|**_DOMAIN**|
 
 ## <a name="remarks"></a>Uwagi
 
-**Atan** funkcja oblicza tangens (odwrotność funkcji tangens) *x*. **ATAN2** oblicza arcus tangens *y*/*x* (Jeśli *x* jest równa 0, **atan2** zwraca π/2, jeśli *y* jest dodatnia, - π/2 if *y* będzie ujemna lub 0, jeśli *y* wynosi 0.)
+Funkcja **atan** Oblicza arcus tangens (funkcja odwrotnej styczności) *x*. **Funkcja atan2** Oblicza arcus tangens *liczby y*/*x* (Jeśli *x* jest równa 0, **atan2** zwraca π/2, jeśli *y* jest dodatnia,-π/2, jeśli *y* jest ujemna, lub 0, jeśli *y* jest równa 0).
 
-**ATAN** zawiera implementację, która używa Streaming SIMD Extensions 2 (SSE2). Aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2, zobacz [_set_sse2_enable —](set-sse2-enable.md).
+**atan** ma implementację, która używa Streaming SIMD Extensions 2 (SSE2). Aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2, zobacz [_set_SSE2_enable](set-sse2-enable.md).
 
-Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **atan** i **atan2** o **float** lub **długie** **double**  argumentów. W programie C **atan** i **atan2** zawsze pobierają **double** argumentów i zwracać **double**.
+Ponieważ C++ umożliwia Przeciążenie, można wywoływać przeciążenia **atan** i **atan2** , które przyjmują **zmiennoprzecinkowe** lub **długie** **podwójne** argumenty. W programie C **atan** i **atan2** zawsze przyjmują **podwójne** argumenty i zwracają **podwójny**.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-------------|---------------------|-|
-|**atan**, **atan2**, **atanf**, **atan2f**, **atanl**, **atan2l**|\<math.h>|\<cmath > lub \<math.h >|
+|**atan**, **atan2**, **atanf**, **atan2f**, **atanl**, **atan2l**|\<math.h>|\<cmath > lub \<Math. h >|
 
 ## <a name="example"></a>Przykład
 

@@ -1,10 +1,10 @@
 ---
 title: _ismbbprint, _ismbbprint_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbprint_l
 - _ismbbprint
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbprint_l
 - _ismbbprint
@@ -28,16 +31,16 @@ helpviewer_keywords:
 - _ismbbprint function
 - _ismbbprint_l function
 ms.assetid: d08a061c-18a8-48f2-a75d-bff4870aec9d
-ms.openlocfilehash: 2fc697dd3ee4fee487beedf5e6e3deb706cc5f75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c40ddc931faa5f1dcff914d7c615207ed57d11cf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286672"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954044"
 ---
-# <a name="ismbbprint-ismbbprintl"></a>_ismbbprint, _ismbbprint_l
+# <a name="_ismbbprint-_ismbbprint_l"></a>_ismbbprint, _ismbbprint_l
 
-Określa, czy określony znak wielobajtowy jest literą.
+Określa, czy określony znak wielobajtowy jest znakiem wydruku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,18 +57,18 @@ int _ismbbprint_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Liczba całkowita do zbadania.
+Liczba całkowita do przetestowania.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_ismbbprint —** zwraca wartość różną od zera, jeśli wyrażenie:
+**_ismbbprint** zwraca wartość różną od zera, jeśli wyrażenie:
 
 `isprint(c) || _ismbbkprint(c)`
 
-jest różny od zera dla *c*, lub 0, jeśli nie jest. **_ismbbprint —** używa bieżących ustawień regionalnych dla wszelkich zachowań zależnych od ustawień regionalnych. **_ismbbprint_l —** jest identyczna, z tą różnicą, że używa ustawień regionalnych przekazanych w zamian. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+jest różna od zera dla *c*lub 0, jeśli nie jest. **_ismbbprint** używa bieżących ustawień regionalnych dla wszelkich zachowań zależnych od ustawień regionalnych. **_ismbbprint_l** jest identyczny, z tą różnicą, że w zamian korzysta z przekazaną ustawieniami regionalnymi. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -74,7 +77,7 @@ jest różny od zera dla *c*, lub 0, jeśli nie jest. **_ismbbprint —** używa
 |**_ismbbprint**|\<mbctype.h>|
 |**_ismbbprint_l**|\<mbctype.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

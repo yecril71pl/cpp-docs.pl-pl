@@ -1,12 +1,12 @@
 ---
 title: _ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbstrail
 - _ismbslead_l
 - _ismbslead
 - _ismbstrail_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbslead
 - ismbs
@@ -40,19 +43,19 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-ms.openlocfilehash: 5b4d3f371f4be640cc22a1bdc3d920acf88e2585
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71a5d2a82c01a41f945ef3fa8c7652f846f05103
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287360"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953781"
 ---
-# <a name="ismbslead-ismbstrail-ismbsleadl-ismbstraill"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
+# <a name="_ismbslead-_ismbstrail-_ismbslead_l-_ismbstrail_l"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 
-Wykonuje testy kontekstowych dla potencjalnych klientów w ciągu w przypadku znaków wielobajtowych bajtów i bajtów dziennika i określa, czy wskaźnik danego podciągu wskazuje na bajt wiodący lub bajt.
+Wykonuje testy z uwzględnieniem kontekstu dla ciągu znaków wielobajtowych i bajtów wiodących i końcowych oraz określa, czy dany wskaźnik podciągu wskazuje na bajt wiodący lub końcowy.
 
 > [!IMPORTANT]
-> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -80,36 +83,36 @@ int _ismbstrail_l(
 ### <a name="parameters"></a>Parametry
 
 *str*<br/>
-Wskaźnik do początku ciągu lub poprzedniego znanych bajt.
+Wskaźnik na początek ciągu lub poprzedniego znanego bajtu potencjalnego klienta.
 
-*bieżący*<br/>
-Wskaźnik na pozycji w ciągu, który ma zostać przetestowana.
+*obecne*<br/>
+Wskaźnik do pozycji w ciągu, który ma być testowany.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_ismbslead —** zwraca wartość -1, jeśli znak jest wiodącym bajtem i **_ismbstrail —** zwraca wartość -1, jeśli znak jest bajt. Jeśli ciągi wejściowe są prawidłowe, ale nie są bajt wiodący lub bajt, te funkcje zwracają wartość zero. Jeśli którykolwiek z argumentów jest **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **NULL** i ustaw **errno** do **EINVAL**.
+**_ismbslead** zwraca wartość-1, jeśli znak jest bajtem wiodącym, a **_ismbstrail** zwraca-1, jeśli znak jest bajtem końcowym. Jeśli ciągi wejściowe są prawidłowe, ale nie są bajtem wiodącym lub bajtem końcowym, te funkcje zwracają zero. Jeśli jeden z argumentów ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **wartość null** i ustawiają **errno** na **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_ismbslead —** i **_ismbstrail —** wolniej niż **_ismbblead** i **_ismbbtrail** wersje ponieważ uwzględniają kontekst ciągu.
+**_ismbslead** i **_ismbstrail** są wolniejsze niż wersje **_ismbblead** i **_ismbbtrail** , ponieważ przyjmują kontekst ciągu do konta.
 
-Wersje tych funkcji, które mają **_l** sufiksem są identyczne, z tą różnicą, że zachowań zależnych od ustawień regionalnych używają ustawień regionalnych, który jest przekazywany zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wersje tych funkcji, które mają sufiks **_l** są identyczne, z tą różnicą, że dla zachowania zależnego od ustawień regionalnych korzystają z przekazaną przez użytkownika ustawień regionalnych zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
+|Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_ismbslead —**|\<mbctype.h > lub \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
-|**_ismbstrail —**|\<mbctype.h > lub \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
-|**_ismbslead_l —**|\<mbctype.h > lub \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
-|**_ismbstrail_l**|\<mbctype.h > lub \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+|**_ismbslead**|\<Mbctype. h > lub \<mbstring. h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+|**_ismbstrail**|\<Mbctype. h > lub \<mbstring. h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+|**_ismbslead_l**|\<Mbctype. h > lub \<mbstring. h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+|**_ismbstrail_l**|\<Mbctype. h > lub \<mbstring. h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
 
-\* Dla stałych manifestu do warunków badania.
+\*Dla stałych manifestu dla warunków testowych.
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

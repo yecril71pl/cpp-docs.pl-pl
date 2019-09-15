@@ -1,9 +1,9 @@
 ---
 title: _findclose
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _findclose
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _findclose
 - findclose
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - _findclose function
 - findclose function
 ms.assetid: 9216c573-0878-444c-b5d7-cdaf16fb9163
-ms.openlocfilehash: 29010f8a502d463eeb6ca98837a1b7dae9f5ae6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c67336cc12bcdee754edd40b91078faa83a17984
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333758"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957321"
 ---
-# <a name="findclose"></a>_findclose
+# <a name="_findclose"></a>_findclose
 
-Zamyka uchwyt wyszukiwania i zwalnia skojarzonych zasobów.
+Zamyka określone dojście wyszukiwania i zwalnia skojarzone zasoby.
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,12 +47,12 @@ int _findclose(
 
 ### <a name="parameters"></a>Parametry
 
-*handle*<br/>
-Dojście wyszukiwania zwrócony przez poprzednie wywołanie **_findfirst**.
+*uchwyty*<br/>
+Dojście wyszukiwania zwrócone przez poprzednie wywołanie do **_findfirst**.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-W przypadku powodzenia **_findclose —** zwraca wartość 0. W przeciwnym razie zwraca wartość -1 i ustawia **errno** do **ENOENT**, wskazujący, że dopasowanie nie ma więcej plików został odnaleziony.
+W przypadku powodzenia funkcja **_findclose** zwraca wartość 0. W przeciwnym razie zwraca wartość-1 i ustawia **errno** na **ENOENT**, co oznacza, że nie można odnaleźć więcej pasujących plików.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -57,7 +60,7 @@ W przypadku powodzenia **_findclose —** zwraca wartość 0. W przeciwnym razie
 |--------------|---------------------|
 |**_findclose**|\<io.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

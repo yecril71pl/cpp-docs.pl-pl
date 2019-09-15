@@ -1,9 +1,9 @@
 ---
 title: _CIatan
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CIatan
-apilocation:
+api_location:
 - msvcr120.dll
 - msvcr110.dll
 - msvcrt.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr90.dll
 - msvcr110_clr0400.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CIatan
 - CIatan
@@ -20,16 +23,16 @@ helpviewer_keywords:
 - CIatan intrinsic
 - _CIatan intrinsic
 ms.assetid: 3baa0429-fe46-4bab-8b00-868e2186dc8c
-ms.openlocfilehash: 81448d976a38d45de821fc66ea87dcf431ebd228
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a932f305f43ecf1d6df978e733f39d7fa91f3e78
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290160"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940607"
 ---
-# <a name="ciatan"></a>_CIatan
+# <a name="_ciatan"></a>_CIatan
 
-Oblicza arcus tangens najwyższą wartość na stosie.
+Oblicza arcus tangens górnej wartości na stosie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,9 +42,9 @@ void __cdecl _CIatan();
 
 ## <a name="remarks"></a>Uwagi
 
-Ta wersja `atan` funkcja ma specjalne Konwencja wywoływania obsługującą przez kompilator. Jego przyspiesza wykonywanie, ponieważ uniemożliwia kopie generowany i pomaga w alokacja rejestru.
+Ta wersja `atan` funkcji ma wyspecjalizowaną konwencję wywoływania, którą rozpoznaje kompilator. Przyspiesza to wykonywanie, ponieważ uniemożliwia generowanie kopii i pomaga w zarejestrowaniu alokacji.
 
-Wartość wynikowa są wypychane na górze stosu.
+Wartość wyników jest wypychana na górze stosu.
 
 ## <a name="requirements"></a>Wymagania
 

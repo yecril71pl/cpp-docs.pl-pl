@@ -1,10 +1,10 @@
 ---
 title: _putch_nolock, _putwch_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putwch_nolock
 - _putch_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _putch_nolock
 - _puttch_nolock
@@ -33,19 +36,19 @@ helpviewer_keywords:
 - console, writing characters to
 - _putwch_nolock function
 ms.assetid: edbc811d-bac6-47fa-a872-fe4f3a1590b0
-ms.openlocfilehash: 3b3ce1bb36e8a6d938ad620af21e8c1d3bc768db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74f1ba5fe43fb8d29a441fd7e024fa195c1c9082
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358213"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950078"
 ---
-# <a name="putchnolock-putwchnolock"></a>_putch_nolock, _putwch_nolock
+# <a name="_putch_nolock-_putwch_nolock"></a>_putch_nolock, _putwch_nolock
 
 Zapisuje znak do konsoli bez blokowania wątku.
 
 > [!IMPORTANT]
-> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -61,15 +64,15 @@ wchar_t c
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak na wyjściu.
+Znak do wyprowadzenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca *c* w przypadku powodzenia. Jeśli **_putch_nolock** nie powiedzie się, zwraca **EOF**; Jeśli **_putwch_nolock** nie powiedzie się, zwraca **WEOF**.
+Zwraca *c* , jeśli powodzenie. Jeśli **_putch_nolock** nie powiedzie się, zwraca **EOF**; Jeśli **_putwch_nolock** nie powiedzie się, zwraca **WEOF**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_putch_nolock** i **_putwch_nolock** są takie same jak **_putch** i **_putwch**, odpowiednio, z tą różnicą, że nie są chronione przed ingerencją przez inne wątki. Mogą one być szybsze, ponieważ nie wiążą się z obciążeniem związanym z blokowaniem innych wątków. Za pomocą tych funkcji tylko w kontekstach wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywołujący już obsługuje izolację wątków.
+**_putch_nolock** i **_putwch_nolock** są identyczne z **_putch** i **_putwch**, z tą różnicą, że nie są chronione przed ingerencją przez inne wątki. Mogą one być szybsze, ponieważ nie wiążą się z zablokowaniem innych wątków. Tych funkcji należy używać tylko w kontekstach bezpiecznych dla wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywoływania już obsługuje izolację wątku.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -84,14 +87,14 @@ Zwraca *c* w przypadku powodzenia. Jeśli **_putch_nolock** nie powiedzie się, 
 |**_putch_nolock**|\<conio.h>|
 |**_putwch_nolock**|\<conio.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[We/wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>

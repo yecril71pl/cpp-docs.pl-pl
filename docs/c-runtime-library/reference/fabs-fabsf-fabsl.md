@@ -1,11 +1,11 @@
 ---
-title: fabs —, fabsf —, fabsl
+title: fabs, fabsf, fabsl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fabsf
 - fabs
 - fabsl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fabs
 - fabsf
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: 8df36c06fb3ca9af9be4cf704998946b3eaf9a6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 155b0e4ced7eb4ea0ade5445a62fc385f0c157e9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334947"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941494"
 ---
-# <a name="fabs-fabsf-fabsl"></a>fabs —, fabsf —, fabsl
+# <a name="fabs-fabsf-fabsl"></a>fabs, fabsf, fabsl
 
 Oblicza wartość bezwzględną argumentu zmiennoprzecinkowego.
 
@@ -70,27 +73,27 @@ Wartość zmiennoprzecinkowa.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Fabs —** funkcje zwracają wartość bezwzględną argumentu *x*. Nie będzie zwrotu błędu.
+Funkcje **fabs —** zwracają wartość bezwzględną argumentu *x*. Brak powrotu błędu.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|GRANICACH QNAN, ZNAJDŹ|brak|_DOMAIN|
+|QNAN, IND|brak|_DOMAIN|
 
 ## <a name="remarks"></a>Uwagi
 
-Język C++ pozwala na przeciążenie, można więc wywoływać przeciążenia **fabs —** Jeśli dołączysz \<cmath > nagłówka. W programie C **fabs —** zawsze przyjmuje i zwraca **double**.
+C++umożliwia Przeciążenie, dlatego można wywoływać przeciążenia **fabs —** , jeśli dołączysz \<nagłówek > cmath. W programie C **fabs —** zawsze przyjmuje i zwraca wartość **Double**.
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Wymagany nagłówek języka C|Wymagany nagłówek C++|
+|Funkcja|Wymagany nagłówek C|Wymagany C++ nagłówek|
 |--------------|-----------------------|---------------------------|
-|**fabs —**, **fabsf —**, **fabsl**|\<math.h>|\<cmath > lub \<math.h >|
+|**fabs —** , **fabsf —** , **fabsl**|\<math.h>|\<cmath > lub \<Math. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [abs](abs-labs-llabs-abs64.md).
+Zobacz przykład dla [ABS](abs-labs-llabs-abs64.md).
 
 ## <a name="see-also"></a>Zobacz także
 

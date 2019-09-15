@@ -1,9 +1,9 @@
 ---
 title: _CrtMemDumpAllObjectsSince
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtMemDumpAllObjectsSince
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtMemDumpAllObjectsSince
 - _CrtMemDumpAllObjectsSince
@@ -22,16 +25,16 @@ helpviewer_keywords:
 - _CrtMemDumpAllObjectsSince function
 - CrtMemDumpAllObjectsSince function
 ms.assetid: c48a447a-e6bb-475c-9271-a3021182a0dc
-ms.openlocfilehash: 7de0ee9ff166af6336a8d14aa0dbd07dbd7d23fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e3793e9b88c593968b108e2801e24476417603c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347460"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942368"
 ---
-# <a name="crtmemdumpallobjectssince"></a>_CrtMemDumpAllObjectsSince
+# <a name="_crtmemdumpallobjectssince"></a>_CrtMemDumpAllObjectsSince
 
-Zrzuca informacje o obiektach w stosie, od czasu rozpoczęcia wykonywania programu, lub ze stanu sterty określony (tylko wersja debugowania).
+Zrzuca informacje o obiektach w stercie od rozpoczęcia wykonywania programu lub z określonego stanu sterty (tylko wersja do debugowania).
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,17 +47,17 @@ void _CrtMemDumpAllObjectsSince(
 ### <a name="parameters"></a>Parametry
 
 *state*<br/>
-Wskaźnik do stanu sterty, aby rozpocząć zrzucanie z lub **NULL**.
+Wskaźnik do stanu sterty, aby rozpocząć zatopienie lub **wartość null**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_CrtMemDumpAllObjectsSince** funkcja zrzuty informacji nagłówka debugowania obiekty przydzielone w stosie, w postaci czytelny dla użytkownika. Informacje o zrzucie może służyć przez aplikację do śledzenia alokacji i wykrycia problemów z pamięcią. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołania **_CrtMemDumpAllObjectsSince** są usuwane podczas przetwarzania wstępnego.
+Funkcja **_CrtMemDumpAllObjectsSince** zrzuca informacje nagłówka debugowania obiektów przyznanych w stercie w formie możliwej do odczytu przez użytkownika. Informacje o zrzucie mogą być używane przez aplikację do śledzenia alokacji i wykrywania problemów z pamięcią. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołania **_CrtMemDumpAllObjectsSince** są usuwane podczas przetwarzania wstępnego.
 
-**_CrtMemDumpAllObjectsSince** używa wartości *stanu* parametru, aby ustalić, gdzie można zainicjować operacji zrzutu informacji. Umożliwiającą zrzucanie ze stanu sterty określonego *stanu* parametru musi być wskaźnikiem do **_CrtMemState** strukturę, która ma zostać wypełnione podczas [_crtmemcheckpoint —](crtmemcheckpoint.md) przed **_CrtMemDumpAllObjectsSince** została wywołana. Gdy *stanu* jest **NULL**, funkcja rozpoczyna się zrzut od czasu rozpoczęcia wykonywania programu.
+**_CrtMemDumpAllObjectsSince** używa wartości parametru *stanu* , aby określić, gdzie ma zostać zainicjowana operacja zrzutu. Aby rozpocząć zrzucanie od określonego stanu sterty, parametr *State* musi być wskaźnikiem do struktury **_CrtMemState** , która została wprowadzona przez [_CrtMemCheckpoint](crtmemcheckpoint.md) przed wywołaniem **_CrtMemDumpAllObjectsSince** . Gdy *stan* ma **wartość null**, funkcja rozpoczyna zrzut od początku wykonywania programu.
 
-Jeśli aplikacja została zainstalowana funkcja podłączania zrzutu, wywołując [_CrtSetDumpClient](crtsetdumpclient.md), a następnie za każdym razem, gdy **_CrtMemDumpAllObjectsSince** Zrzuca informacje o **_CLIENT_BLOCK** typ bloku, wywoływanych przez nią z funkcji zrzutu dostarczone przez aplikację. Domyślnie wewnętrzne bloki wykonywania C (**_CRT_BLOCK**) nie są uwzględnione w operacji zrzutu pamięci. [_CrtSetDbgFlag](crtsetdbgflag.md) funkcja może służyć do włączyć **_CRTDBG_CHECK_CRT_DF** trochę **_crtDbgFlag** aby objąć te bloki. Ponadto bloki oznaczone jako zwolniony, lub zignorować (**_FREE_BLOCK**, **_IGNORE_BLOCK**) nie są uwzględnione w zrzut pamięci.
+Jeśli aplikacja zainstalowała funkcję haka zrzutu przez wywołanie [_CrtSetDumpClient](crtsetdumpclient.md), następnie za każdym razem, gdy **_CrtMemDumpAllObjectsSince** zrzuty informacji o typie bloku **_CLIENT_BLOCK** , wywołuje zrzut dostarczony przez aplikację również funkcja. Domyślnie wewnętrzne bloki uruchomieniowe C ( **_CRT_BLOCK**) nie są uwzględnione w operacjach zrzutu pamięci. Funkcja [_CrtSetDbgFlag](crtsetdbgflag.md) może służyć do włączania bitu **_CRTDBG_CHECK_CRT_DF** **_crtDbgFlag** w celu uwzględnienia tych bloków. Ponadto bloki oznaczone jako zwolnione lub ignorowane ( **_FREE_BLOCK**, **_IGNORE_BLOCK**) nie są uwzględniane w zrzucie pamięci.
 
-Aby uzyskać więcej informacji o funkcjach stanu sterty i **_CrtMemState** struktury, zobacz [funkcje raportowania stanu sterty](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać więcej informacji na temat sposobu bloki pamięci są przydzielane, inicjowane i zarządzane w wersji debugowania podstawowej sterty, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
+Aby uzyskać więcej informacji na temat funkcji stanu sterty i struktury **_CrtMemState** , zobacz [funkcje raportowania stanu sterty](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać więcej informacji o tym, jak bloki pamięci są przydzielane, inicjowane i zarządzane w wersji debugowania sterty podstawowej, zobacz [szczegóły sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -62,15 +65,15 @@ Aby uzyskać więcej informacji o funkcjach stanu sterty i **_CrtMemState** stru
 |-------------|---------------------|
 |**_CrtMemDumpAll-ObjectsSince**|\<crtdbg.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Debuguj wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md) tylko.
+Debuguj wersje wyłącznie [bibliotek uruchomieniowych C](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="example"></a>Przykład
 
-Przykład sposobu użycia **_CrtMemDumpAllObjectsSince**, zobacz [crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2).
+Aby zapoznać się z przykładem sposobu korzystania z **_CrtMemDumpAllObjectsSince**, zobacz [crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,9 +1,9 @@
 ---
 title: _flushall
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _flushall
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _flushall
 helpviewer_keywords:
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - streams, flushing
 - _flushall function
 ms.assetid: 2cd73562-6d00-4ca2-b13c-80d0ae7870b5
-ms.openlocfilehash: de8caf30568816f41441f5d9487293c346d2bff1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dce7412ccc19d4870494851d366c059ff01de16a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333537"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957137"
 ---
-# <a name="flushall"></a>_flushall
+# <a name="_flushall"></a>_flushall
 
-Czyści wszystkie strumienie; Czyści wszystkie bufory.
+Opróżnia wszystkie strumienie; Czyści wszystkie bufory.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,17 +46,17 @@ int _flushall( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_flushall —** zwraca liczbę otwartych strumieni (dane wejściowe i wyjściowe). Nie będzie zwrotu błędu.
+**_flushall** zwraca liczbę otwartych strumieni (wejściowych i wyjściowych). Brak powrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie **_flushall —** funkcja zapisuje do odpowiednich plików zawartości wszystkich buforów skojarzone z strumienie wyjściowe Otwórz. Wszystkie bufory skojarzone z otwartych strumienie wejściowe są usuwane z ich bieżącą zawartość. (Bufory są zazwyczaj obsługiwane przez system operacyjny, który określa optymalny czas automatycznie zapisywać dane na dysku: gdy bufor jest pełny, jeśli strumień jest zamknięty lub gdy program kończy się normalnie bez zamykania strumieni.)
+Domyślnie funkcja **_flushall** zapisuje do odpowiednich plików zawartość wszystkich buforów skojarzonych z otwartymi strumieniami wyjściowymi. Wszystkie bufory skojarzone z otwartymi strumieniami wejściowymi są usuwane z ich bieżącej zawartości. (Te bufory są zwykle obsługiwane przez system operacyjny, który określa optymalny czas zapisywania danych na dysku: gdy bufor jest pełny, gdy strumień jest zamknięty lub gdy program kończy normalne działanie bez zamykania strumieni).
 
-Jeśli odczyt następuje po wywołaniu **_flushall —**, nowe dane są odczytywane z plików wejściowych do buforów. Wszystkie strumienie pozostają otwarte po wywołaniu **_flushall —**.
+Jeśli odczyt następuje po wywołaniu **_flushall**, nowe dane są odczytywane z plików wejściowych do buforów. Wszystkie strumienie pozostają otwarte po wywołaniu **_flushall**.
 
-Funkcja commit-to-disk biblioteki wykonawczej pozwala upewnić się, że krytyczne dane są zapisywane bezpośrednio na dysku, a nie do buforów systemu operacyjnego. Bez konieczności ponownego zapisu istniejący program, można włączyć tę funkcję, konsolidacji plików obiektu programu z plikiem Commode.obj. Wynikowy plik wykonywalny wywołuje w celu **_flushall —** zapisywanie zawartości wszystkich buforów na dysku. Tylko **_flushall —** i [fflush —](fflush.md) dotyczy plikiem Commode.obj.
+Funkcja zatwierdzania na dysku w bibliotece wykonawczej pozwala zagwarantować, że krytyczne dane są zapisywane bezpośrednio na dysku, a nie w buforach systemu operacyjnego. Bez ponownego zapisywania istniejącego programu można włączyć tę funkcję, łącząc pliki obiektów programu z towarami. obj. W utworzonym pliku wykonywalnym wywołania **_flushall** zapisują zawartość wszystkich buforów na dysku. Tylko **_flushall** i [fflush](fflush.md) mają wpływ na towary. obj.
 
-Aby uzyskać informacje o sposobie sterowania funkcją commit-to-disk, zobacz [Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md), [fopen —](fopen-wfopen.md), i [_fdopen —](fdopen-wfdopen.md).
+Aby uzyskać informacje dotyczące kontrolowania funkcji zatwierdzania na dysku, zobacz [przesyłanie strumieniowe we/wy](../../c-runtime-library/stream-i-o.md), [fopen](fopen-wfopen.md)i [_fdopen](fdopen-wfdopen.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -61,7 +64,7 @@ Aby uzyskać informacje o sposobie sterowania funkcją commit-to-disk, zobacz [S
 |--------------|---------------------|
 |**_flushall**|\<stdio.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -87,7 +90,7 @@ There were 3 streams flushed
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [_commit](commit.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>
 [fflush](fflush.md)<br/>

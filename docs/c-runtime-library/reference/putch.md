@@ -1,9 +1,9 @@
 ---
 title: putch
 ms.date: 11/04/2016
-apiname:
+api_name:
 - putch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,22 +14,25 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - putch
 helpviewer_keywords:
 - putch function
 ms.assetid: 81e733e5-770e-4c7a-b7e4-8e66da109f92
-ms.openlocfilehash: b5223c0b2ae1dcdf5eda0f6926d0a7e3268160cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36325b39f7b39520b08998cff93fb2fe84dbdb8e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358150"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949942"
 ---
 # <a name="putch"></a>putch
 
-Ta funkcja POSIX jest niezalecana. Użyj ISO C++ zgodność [_putch](putch-putwch.md) zamiast tego.
+Ta funkcja POSIX jest przestarzała. Zamiast tego użyj C++ zgodnej z normą ISO [_putch](putch-putwch.md) .
 
 > [!IMPORTANT]
-> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

@@ -1,11 +1,11 @@
 ---
 title: clog, clogf, clogl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - clog
 - clogf
 - clogl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - clog
 - clogf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - clogf function
 - clogl function
 ms.assetid: 870b9b0b-6618-46f3-bfcf-da595cbd5e18
-ms.openlocfilehash: fcbc9ba7984898d51f7a3d0beb5ef7c8b6d6892c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76ee6e4e81c275c8cbed0f74914521c0b44499bb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340641"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942920"
 ---
 # <a name="clog-clogf-clogl"></a>clog, clogf, clogl
 
-Pobiera logarytm naturalny liczby zespolonej z gałęzią Wytnij rzeczywistych osi ujemna.
+Pobiera logarytm naturalny liczby zespolonej z rozgałęzieniem na ujemną oś rzeczywistą.
 
 ## <a name="syntax"></a>Składnia
 
@@ -68,13 +71,13 @@ Podstawa logarytmu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Logarytm naturalny *z*. Wynik jest nieograniczona, wzdłuż osi rzeczywiste, a w interwale [-iπ, + iπ] urojone osi.
+Logarytm naturalny *z.* Wynik nie jest powiązany wzdłuż osi rzeczywistej, a w interwale [-iπ, + iπ] wzdłuż osi urojonej.
 
-Możliwe wartości zwracane są:
+Możliwe wartości zwracane to:
 
-|Parametr z|Wartość zwracana|
+|parametr z|Wartość zwracana|
 |-----------------|------------------|
-|Dodatnie|Logarytm 10 z|
+|Dodatnie|Logarytm dziesiętny z|
 |Zero|- ∞|
 |Ujemne|NaN|
 |NaN|NaN|
@@ -82,15 +85,15 @@ Możliwe wartości zwracane są:
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **clog —** przyjmujące i zwracające **_Fcomplex** i **_Lcomplex** wartości. W programie C **clog —** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **CLOG** , które pobierają i zwracają wartości **_Fcomplex** i **_Lcomplex** . W programie C **CLOG** zawsze przyjmuje i zwraca wartość **_Dcomplex** .
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|Nagłówek języka C++|
+|Procedura|Nagłówek języka C|C++nagłówki|
 |-------------|--------------|------------------|
-|**clog —**, **clogf**, **clogl**|\<complex.h>|\<ccomplex>|
+|**CLOG**, **clogf**, **clogl**|\<complex.h>|\<ccomplex>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

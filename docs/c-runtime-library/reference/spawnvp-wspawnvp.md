@@ -1,10 +1,10 @@
 ---
 title: _spawnvp, _wspawnvp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wspawnvp
 - _spawnvp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wspawnvp
 - _spawnvp
@@ -30,19 +33,19 @@ helpviewer_keywords:
 - process creation
 - _spawnvp function
 ms.assetid: 8d8774ec-6ad4-4680-a5aa-440cde1e0249
-ms.openlocfilehash: b697eabd7a45eedbf9c892acee570a9e8b818d1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c54de21c2bfac693b3555c86eea98a32f132576
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355136"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958079"
 ---
-# <a name="spawnvp-wspawnvp"></a>_spawnvp, _wspawnvp
+# <a name="_spawnvp-_wspawnvp"></a>_spawnvp, _wspawnvp
 
-Tworzy proces i uruchamia go.
+Tworzy proces i wykonuje go.
 
 > [!IMPORTANT]
-> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -61,47 +64,47 @@ intptr_t _wspawnvp(
 
 ### <a name="parameters"></a>Parametry
 
-*Tryb*<br/>
-Tryb wykonywania dla procesu wywołującego.
+*wyst*<br/>
+Tryb wykonywania na potrzeby wywoływania procesu.
 
 *cmdname*<br/>
-Ścieżka pliku do wykonania.
+Ścieżka pliku, który ma zostać wykonany.
 
-*ARGV*<br/>
-Tablica wskaźników do argumentów. Argument *argv*[0] jest zazwyczaj wskaźnikiem do ścieżki w trybie rzeczywistym lub nazwy programu w trybie chronionym i *argv*[1] za pomocą *argv*[**n**] są wskaźnikami do ciągów znaków tworzących nowe listy argumentów. Argument *argv*[**n** + 1] musi być **NULL** wskaźnik, aby zaznaczyć koniec listy argumentów.
+*argv*<br/>
+Tablica wskaźników do argumentów. Argument *argv*[0] jest zwykle wskaźnikiem do ścieżki w trybie rzeczywistym lub do nazwy programu w trybie chronionym, a *argv*[1] do *argv*[**n**] są wskaźnikami do ciągów znaków, które tworzą nową listę argumentów. Argument *argv*[**n** + 1] musi być **pustym** wskaźnikiem, aby zaznaczyć koniec listy argumentów.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość zwracana przez synchroniczny **_spawnvp** lub **_wspawnvp —** (**_P_WAIT** określony dla *tryb*) jest stanem wyjścia nowego procesu . Wartość zwracana przez synchroniczny **_spawnvp** lub **_wspawnvp —** (**_P_NOWAIT** lub **_P_NOWAITO** określony dla  *tryb*) jest dojściem do procesu. Stanem wyjścia wynosi 0, jeżeli proces zakończył się normalnie. Możesz ustawić stan wyjścia na wartość różną od zera, jeśli procesu rozmnożonego specjalnie używa argumentu wartość różną od zera do wywołania **wyjść** procedury. Jeśli nowy proces nie ustawi jawnie stanu wyjścia, stan wyjścia wskazuje nietypowe wyjście z porzuceniem lub przerwaniem. Zwracana wartość-1 wskazuje błąd (nowy proces nie jest uruchomiony). W tym przypadku **errno** jest ustawiony na jedną z następujących wartości:
+Wartość zwracana z synchronicznego **_spawnvp** lub **_wspawnvp** ( **_P_WAIT** określona dla *trybu*) jest stanem wyjścia nowego procesu. Wartość zwracana z asynchronicznej **_spawnvp** lub **_wspawnvp** ( **_P_NOWAIT** lub **_P_NOWAITO** określona dla *trybu*) to dojście do procesu. Stan zakończenia to 0, jeśli proces został przerwany normalnie. Można ustawić stan zakończenia na wartość różną od zera, jeśli proces duplikowany używa w pełni niezerowego argumentu do wywołania procedury **wyjściowej** . Jeśli nowy proces nie ustawił jawnie stanu wyjścia pozytywnego, stan wyjścia pozytywnego wskazuje nietypowe wyjście z przerwaniem lub przerwaniem. Zwracana wartość-1 wskazuje błąd (nowy proces nie jest uruchomiony). W tym przypadku **errno** jest ustawiony na jedną z następujących wartości:
 
 |||
 |-|-|
-| **E2BIG** | Argument w postaci listy przekracza 1024 bajty. |
-| **EINVAL** | *tryb* argument jest nieprawidłowy. |
+| **E2BIG** | Lista argumentów przekracza 1024 bajtów. |
+| **EINVAL** | argument *trybu* jest nieprawidłowy. |
 | **ENOENT** | Nie znaleziono pliku lub ścieżki. |
 | **ENOEXEC** | Określony plik nie jest wykonywalny lub ma nieprawidłowy format pliku wykonywalnego. |
-| **ENOMEM** | Nie ma wystarczającej ilości pamięci jest dostępna do wykonania nowego procesu. |
+| **ENOMEM** | Za mało dostępnej pamięci, aby wykonać nowy proces. |
 
-Aby uzyskać więcej informacji na temat tych i innych kodów zwrotu, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tych i innych kodów powrotu, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji tworzy nowy proces wykonuje ten i przekazuje tablicę wskaźników do argumentów wiersza polecenia i używa **ścieżki** zmiennej środowiskowej, aby znaleźć plik do wykonania.
+Każda z tych funkcji tworzy nowy proces i wykonuje go oraz przekazuje tablicę wskaźników do argumentów wiersza polecenia i używa zmiennej środowiskowej **Path** , aby znaleźć plik do wykonania.
 
-Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *cmdname* lub *argv* jest wskaźnikiem typu null, lub jeśli *argv* wskazuje na wskaźnik typu null, lub *argv*[0] to ciąg pusty, nieprawidłowy Procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** do **EINVAL**i zwracają wartość -1. Żaden nowy proces nie jest rozprzestrzeniony.
+Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *cmdname* lub *argv* jest wskaźnikiem typu null lub jeśli *argv* wskazuje na wskaźnik o wartości null lub *argv*[0] jest pustym ciągiem, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL**i zwracają-1. Nie jest duplikowany żaden nowy proces.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_spawnvp**|\<stdio.h > lub \<process.h >|
-|**_wspawnvp**|\<stdio.h > lub \<wchar.h >|
+|**_spawnvp**|\<stdio. h > lub \<Process. h >|
+|**_wspawnvp**|\<stdio. h > lub \<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład w [_spawn, _wspawn — funkcje](../../c-runtime-library/spawn-wspawn-functions.md).
+Zobacz przykład w [_spawn, _Wspawn Functions](../../c-runtime-library/spawn-wspawn-functions.md).
 
 ## <a name="see-also"></a>Zobacz także
 

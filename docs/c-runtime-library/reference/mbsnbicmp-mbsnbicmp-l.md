@@ -1,10 +1,10 @@
 ---
 title: _mbsnbicmp, _mbsnbicmp_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbicmp_l
 - _mbsnbicmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _strnicmp
 - _wcsnicmp_l
@@ -40,19 +43,19 @@ helpviewer_keywords:
 - mbsnbicmp function
 - _wcsnicmp function
 ms.assetid: ddb44974-8b0c-42f0-90d0-56c9350bae0c
-ms.openlocfilehash: 059d0781e465f6491f27fd634bbc4479104bc12f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19ffa4c47f0144ba136607fe5cef09e9bd65374f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331301"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952189"
 ---
-# <a name="mbsnbicmp-mbsnbicmpl"></a>_mbsnbicmp, _mbsnbicmp_l
+# <a name="_mbsnbicmp-_mbsnbicmp_l"></a>_mbsnbicmp, _mbsnbicmp_l
 
-Porównuje **n** bajtów znaków wielobajtowych dwa ciągi i ignoruje wielkość liter.
+Porównuje **n** bajtów dwóch ciągów znaków wielobajtowych i ignoruje wielkość liter.
 
 > [!IMPORTANT]
-> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -67,41 +70,41 @@ int _mbsnbicmp(
 ### <a name="parameters"></a>Parametry
 
 *ciąg1*, *ciąg2*<br/>
-Ciągi zakończony wartością null do porównania.
+Ciągi zakończone wartością null do porównania.
 
-*Liczba*<br/>
+*liczbą*<br/>
 Liczba bajtów do porównania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość zwracana określa relację pomiędzy podciągami.
+Wartość zwracana określa relację między podciągami.
 
 |Wartość zwracana|Opis|
 |------------------|-----------------|
-|< 0|*ciąg1* podciąg mniejszy niż *ciąg2* podciąg.|
-|0|*ciąg1* podciąg identyczny z *ciąg2* podciąg.|
-|> 0|*ciąg1* podciąg większy niż *ciąg2* podciąg.|
+|< 0|*ciąg1* podciągu krótszy niż *ciąg2* podciąg.|
+|0|*ciąg1* podciąg identyczny z podciągiem *ciąg2* .|
+|> 0|*ciąg1* podciąg jest większy niż *ciąg2* podciąg.|
 
-W przypadku błędu **_mbsnbicmp —** zwraca **_NLSCMPERROR**, który jest zdefiniowany w String.h i Mbstring.h.
+W przypadku błędu **_mbsnbicmp** zwraca **_NLSCMPERROR**, który jest zdefiniowany w String. h i mbstring. h.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Mbsnbicmp —** funkcja wykonuje porównanie porządkowe, co najwyżej pierwsze *liczba* bajtów *ciąg1* i *ciąg2*. Porównanie jest wykonywane, dokonując przekonwertowania na małe litery; każdy znak [_mbsnbcmp —](mbsnbcmp-mbsnbcmp-l.md) jest rozróżniana wielkość liter wersją **_mbsnbicmp —**. Porównanie kończy się po osiągnięciu kończącego znaku null albo w ciągu przed *liczba* znaki są porównywane. Jeśli ciągi są równe gdy kończący znak null jest osiągany w każdym ciągu przed *liczba* znaki są porównywane, krótszy ciąg jest mniejszy.
+Funkcja **_mbsnbicmp** wykonuje porównanie porządkowe *dla pierwszych bajtów* z wartości *ciąg1* i *ciąg2*. Porównanie jest wykonywane przez konwersję każdego znaku na małe litery; [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) to wersja **_mbsnbicmp**z uwzględnieniem wielkości liter. Porównanie kończy się, jeśli kończący znak null zostanie osiągnięty w dowolnym ciągu przed porównaniem znaków *Count* . Jeśli ciągi są równe, gdy zostanie osiągnięty kończący znak null w dowolnym ciągu przed porównaniem znaków *Count* , krótszy ciąg jest mniejszy.
 
-**_mbsnbicmp —** przypomina [_mbsnbcmp —](mbsnbcmp-mbsnbcmp-l.md), z tą różnicą, że porównuje ciągi do *liczba* bajtów, a znakami.
+**_mbsnbicmp** jest podobna do [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md), z tą różnicą, że porównuje ciągi do *liczby* bajtów zamiast znaków.
 
-Dwa ciągi zawierające znaki znajdujące się między "Z" i "" w tabeli kodów ASCII ('[','\\","] "," ^ ","_"i"\`') porównać różnie, w zależności od ich przypadku. Na przykład dwa ciągi "ABCDE" i "ABCD ^" porównują w jedna stronę, jeśli wynikiem porównania jest pisana małymi literami ("abcde" > "abcd ^") i w drugą stronę ("ABCDE" < "ABCD ^") jeżeli wynik jest dużą literą.
+Dwa ciągi zawierające znaki znajdujące się między "z" i "a" w tabeli ASCII ("[",\\"", "]", "^", "_" i "\`") są porównywane inaczej, w zależności od ich wielkości liter. Na przykład dwa ciągi "ABCDe" i "ABCD ^" porównują jeden sposób, jeśli porównanie jest małe ("abcde" > "abcd ^") i drugi sposób ("ABCDe" < "ABCD ^"), jeśli jest to wielkie litery.
 
-**_mbsnbicmp —** rozpoznaje sekwencje znaków wielobajtowych według [wielobajtowa strona kodowa](../../c-runtime-library/code-pages.md) aktualnie w użyciu. Nie występuje przy bieżących ustawień regionalnych.
+**_mbsnbicmp** rozpoznaje sekwencje znaków wielobajtowych zgodnie z aktualnie używaną [stroną kodową](../../c-runtime-library/code-pages.md) . Bieżące ustawienie regionalne nie ma na nie wpływ.
 
-Jeśli *ciąg1* lub *ciąg2* jest pustym wskaźnikiem, **_mbsnbicmp —** wywołuje program obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **_NLSCMPERROR** i ustawia **errno** do **EINVAL**.
+Jeśli *ciąg1* lub *ciąg2* jest wskaźnikiem o wartości null, **_mbsnbicmp** wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **_NLSCMPERROR** i ustawia **errno** na **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsnicmp**|**_strnicmp**|**_mbsnbicmp**|**_wcsnicmp**|
-|**_tcsnicmp_l —**|**_strnicmp_l**|**_mbsnbicmp_l**|**_wcsnicmp_l**|
+|**_tcsnicmp_l**|**_strnicmp_l**|**_mbsnbicmp_l**|**_wcsnicmp_l**|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -109,11 +112,11 @@ Jeśli *ciąg1* lub *ciąg2* jest pustym wskaźnikiem, **_mbsnbicmp —** wywoł
 |-------------|---------------------|
 |**_mbsnbicmp**|\<mbstring.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [_mbsnbcmp —, _mbsnbcmp_l —](mbsnbcmp-mbsnbcmp-l.md).
+Zobacz przykład dla [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,10 +1,10 @@
 ---
 title: _fgetc_nolock, _fgetwc_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fgetc_nolock
 - _fgetwc_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fgetwc_nolock
 - fgettc_nolock
@@ -35,16 +38,16 @@ helpviewer_keywords:
 - reading characters from streams
 - _fgettc_nolock function
 ms.assetid: fb8e7c5b-4503-493a-879e-6a1db75aa114
-ms.openlocfilehash: 568a96caf481fbaf3e80cf60958dc826db49dd86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bc2ff8e8ca36a9c6acee821d1507767f4b1a0d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333972"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940880"
 ---
-# <a name="fgetcnolock-fgetwcnolock"></a>_fgetc_nolock, _fgetwc_nolock
+# <a name="_fgetc_nolock-_fgetwc_nolock"></a>_fgetc_nolock, _fgetwc_nolock
 
-Odczytuje znaku ze strumienia bez blokowania wątku.
+Odczytuje znak ze strumienia bez blokowania wątku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -60,15 +63,15 @@ wint_t _fgetwc_nolock(
 ### <a name="parameters"></a>Parametry
 
 *stream*<br/>
-Wskaźnik do **pliku** struktury.
+Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zobacz[fgetc —, fgetwc —](fgetc-fgetwc.md).
+Zobacz[fgetc, fgetwc](fgetc-fgetwc.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_fgetc_nolock —** i **_fgetwc_nolock —** są takie same jak **fgetc —** i **fgetwc —**, odpowiednio, z tą różnicą, że nie są chronione przed ingerencją przez inne wątki. Mogą one być szybsze, ponieważ nie wiążą się z obciążeniem związanym z blokowaniem innych wątków. Za pomocą tych funkcji tylko w kontekstach wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywołujący już obsługuje izolację wątków.
+**_fgetc_nolock** i **_fgetwc_nolock** są identyczne z **fgetc** i **fgetwc**, z tą różnicą, że nie są chronione przed ingerencją przez inne wątki. Mogą one być szybsze, ponieważ nie wiążą się z zablokowaniem innych wątków. Tych funkcji należy używać tylko w kontekstach bezpiecznych dla wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywoływania już obsługuje izolację wątku.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -81,9 +84,9 @@ Zobacz[fgetc —, fgetwc —](fgetc-fgetwc.md).
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
 |**_fgetc_nolock**|\<stdio.h>|
-|**_fgetwc_nolock**|\<stdio.h > lub \<wchar.h >|
+|**_fgetwc_nolock**|\<stdio. h > lub \<WCHAR. h >|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -121,7 +124,7 @@ int main( void )
 }
 ```
 
-## <a name="input-crtfgetcnolocktxt"></a>Dane wejściowe: crt_fgetc_nolock.txt
+## <a name="input-crt_fgetc_nolocktxt"></a>Dane wejściowe: crt_fgetc_nolock. txt
 
 ```Input
 Line one.
@@ -137,6 +140,6 @@ Line two.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fputc, fputwc](fputc-fputwc.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>

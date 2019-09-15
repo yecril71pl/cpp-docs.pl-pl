@@ -1,11 +1,11 @@
 ---
-title: csin csinf, csinl
+title: csin, csinf, csinl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - csin
 - csinf
 - csinl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - csin
 - csinf
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - csinf function
 - csinl function
 ms.assetid: 3ed475e8-9aae-42ba-a25c-7ae656a0fd4d
-ms.openlocfilehash: 66483c9121750c3333850d6244704b89b8893cad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0e0c57596ac36dbe3c0b72f79177b8df7b15af0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288852"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941974"
 ---
-# <a name="csin-csinf-csinl"></a>csin csinf, csinl
+# <a name="csin-csinf-csinl"></a>csin, csinf, csinl
 
 Pobiera sinus liczby zespolonej.
 
@@ -64,23 +67,23 @@ _Lcomplex csinl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Liczby zespolonej oznacza kąt w radianach.
+Liczba zespolona, która reprezentuje kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Sinus *z*, w radianach.
+Sinus *z z, w*radianach.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na przeciążenie, można wywoływać przeciążenia **csin** przyjmujące i zwracające **_Fcomplex** i **_Lcomplex** wartości. W programie C **csin** zawsze przyjmuje i zwraca **_Dcomplex** wartości.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **csin** , które pobierają i zwracają wartości **_Fcomplex** i **_Lcomplex** . W programie C **csin** zawsze przyjmuje i zwraca wartość **_Dcomplex** .
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|Nagłówek języka C++|
+|Procedura|Nagłówek języka C|C++nagłówki|
 |-------------|--------------|------------------|
 |**csin**, **csinf**, **csinl**|\<complex.h>|\<ccomplex>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

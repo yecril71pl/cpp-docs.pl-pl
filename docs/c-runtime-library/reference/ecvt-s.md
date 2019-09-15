@@ -1,9 +1,9 @@
 ---
 title: _ecvt_s
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _ecvt_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ecvt_s
 - _ecvt_s
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-ms.openlocfilehash: 0123c618eb5ba614bd8e5b5b3f1f4b0aff539c4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c50200d16a5e542c247d1c85f8c104381af4a883
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288259"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937715"
 ---
-# <a name="ecvts"></a>_ecvt_s
+# <a name="_ecvt_s"></a>_ecvt_s
 
-Konwertuje **double** liczb na ciąg. To jest wersja [_ecvt —](ecvt.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Konwertuje liczbę **podwójną** na ciąg. Jest to wersja [_ecvt](ecvt.md) z ulepszeniami zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -59,64 +62,64 @@ errno_t _ecvt_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Właściwość _Buffer*<br/>
-Wypełniony wskaźnik na ciąg cyfr, wynik konwersji.
+*_Buffer*<br/>
+Wypełnienie wskaźnikiem do ciągu cyfr, wynik konwersji.
 
 *_SizeInBytes*<br/>
 Rozmiar buforu w bajtach.
 
-*_Wartość*<br/>
-Numer ma zostać przekonwertowany.
+*_Value*<br/>
+Liczba do przekonwertowania.
 
 *_Count*<br/>
-Liczba cyfr przechowywane.
+Liczba przechowywanych cyfr.
 
 *_Dec*<br/>
-Przechowywane położenie punktu dziesiętnego.
+Przechowywana pozycja punktu dziesiętnego.
 
-*Zalo_guj*<br/>
-Znak przekonwertowany numer.
+*_Sign*<br/>
+Znak przekonwertowanego numeru.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli to się powiedzie. Wartość zwracana jest kod błędu, jeśli wystąpi awaria. Kody błędów są definiowane w Errno.h. Aby uzyskać więcej informacji, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Zero, jeśli powodzenie. Wartość zwracana jest kodem błędu w przypadku wystąpienia błędu. Kody błędów są zdefiniowane w errno. h. Aby uzyskać więcej informacji, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-W przypadku nieprawidłowy parametr, zgodnie z opisem w poniższej tabeli funkcja wywoła procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ta ustawia **errno** do **EINVAL** i zwraca **EINVAL**.
+W przypadku nieprawidłowego parametru, jak wymieniono w poniższej tabeli, ta funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca **EINVAL**.
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|*Właściwość _Buffer*|*_SizeInBytes*|_Wartość|_Count|_Dec|Zalo_guj|Wartość zwracana|Wartość w *buforu*|
+|*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|Wartość zwracana|Wartość w *buforze*|
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|
-|**NULL**|Wszystkie|Wszystkie|Wszystkie|Wszystkie|Wszystkie|**EINVAL**|Nie jest modyfikowany.|
-|Nie **NULL** (wskazuje prawidłowy pamięci)|<=0|Wszystkie|Wszystkie|Wszystkie|Wszystkie|**EINVAL**|Nie jest modyfikowany.|
-|Wszystkie|Wszystkie|Wszystkie|Wszystkie|**NULL**|Wszystkie|**EINVAL**|Nie jest modyfikowany.|
-|Wszystkie|Wszystkie|Wszystkie|Wszystkie|Wszystkie|**NULL**|**EINVAL**|Nie jest modyfikowany.|
+|**NULL**|Ile|Ile|Ile|Ile|Ile|**EINVAL**|Nie zmodyfikowano.|
+|Nie **ma wartości null** (wskazuje na prawidłową pamięć)|<=0|Ile|Ile|Ile|Ile|**EINVAL**|Nie zmodyfikowano.|
+|Ile|Ile|Ile|Ile|**NULL**|Ile|**EINVAL**|Nie zmodyfikowano.|
+|Ile|Ile|Ile|Ile|Ile|**NULL**|**EINVAL**|Nie zmodyfikowano.|
 
 ## <a name="security-issues"></a>Problemy dotyczące zabezpieczeń
 
-**_ecvt_s —** może generować naruszenie zasad dostępu, jeśli *buforu* nie wskazuje na prawidłową pamięci i nie jest **NULL**.
+**_ecvt_s** może generować naruszenie zasad dostępu, jeśli *bufor* nie wskazuje prawidłowej pamięci i nie ma **wartości null**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Ecvt_s —** funkcja konwertuje liczbę zmiennoprzecinkową ciąg znaków. *_Wartość* parametr jest liczba zmiennoprzecinkowa, która ma zostać przekonwertowany. Ta funkcja przechowuje maksymalnie *liczba* cyfr *_wartość* jako ciąg i dołącza znak null ('\0'). Jeśli liczba cyfr w *_wartość* przekracza *_Count*, cyfra niskiego rzędu jest zaokrąglana. W przypadku mniej niż *liczba* cyfry, ciąg jest dopełniana zerami.
+Funkcja **_ecvt_s** konwertuje liczbę zmiennoprzecinkową na ciąg znaków. Parametr *_Value* jest liczbą zmiennoprzecinkową do przekonwertowania. Ta funkcja przechowuje do *zliczania* cyfr *_Value* jako ciąg i dołącza znak null (' \ 0 '). Jeśli liczba cyfr w *_Value* przekracza *_Count*, zaokrąglana jest mała kolejność. Jeśli jest mniej niż *Liczba* cyfr, ciąg jest dopełniany zerami.
 
-Tylko cyfry są przechowywane w ciągu. Pozycja punkt dziesiętny i znak *_wartość* można otrzymać od *_Dec* i *_podpisz* po wywołaniu. *_Dec* parametr wskazuje wartość całkowitą, dzięki czemu położenie punktu dziesiętnego w odniesieniu do początku ciągu. Wartość 0 ani ujemna liczba całkowita wskazuje, punkt dziesiętny znajduje się po lewej stronie pierwsza cyfra. *_Podpisz* parametr wskazuje na liczbę całkowitą, która określa znak przekonwertowany numer. Jeśli wartość całkowitą ma wartość 0, liczba jest dodatnia. W przeciwnym razie liczba jest ujemna.
+W ciągu są przechowywane tylko cyfry. Pozycja punktu dziesiętnego i znak *_Value* można uzyskać z *_Dec* i *_Sign* po wywołaniu. Parametr *_Dec* wskazuje liczbę całkowitą określającą położenie przecinka dziesiętnego w odniesieniu do początku ciągu. Wartość 0 lub ujemna liczba całkowita wskazuje, że punkt dziesiętny znajduje się po lewej stronie pierwszej cyfry. Parametr *_Sign* wskazuje liczbę całkowitą wskazującą znak przekonwertowanego numeru. Jeśli wartość całkowita to 0, liczba jest dodatnia. W przeciwnym razie liczba jest ujemna.
 
-Bufor o długości **_CVTBUFSIZE** jest wystarczająca dla dowolnej wartości zmiennoprzecinkowych.
+Bufor o długości **_CVTBUFSIZE** jest wystarczający dla każdej wartości zmiennoprzecinkowej.
 
-Różnica między **_ecvt_s —** i **_fcvt_s —** znajduje się w interpretacji *_Count* parametru. **_ecvt_s —** interpretuje *_Count* jako łączna liczba cyfr w ciągu wyjściowego, natomiast **_fcvt_s —** interpretuje *_Count* jako liczbę cyfr po punktu dziesiętnego.
+Różnica między **_ecvt_s** i **_fcvt_s** jest interpretacją parametru *_Count* . **_ecvt_s** interpretuje *_Count* jako łączną liczbę cyfr w ciągu danych wyjściowych, podczas gdy **_fcvt_s** interpretuje *_Count* jako liczbę cyfr po przecinku dziesiętnym.
 
-W języku C++ za pomocą tej funkcji jest uproszczone przez przeciążenia szablonu; przeciążenia mogą automatycznie wywnioskować długość buforu, eliminując konieczność określenia argumentu rozmiaru. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+W C++programie korzystanie z tej funkcji jest uproszczone przez Przeciążenie szablonu; Przeciążenie może automatycznie wywnioskować długość buforu, eliminując konieczność określenia argumentu rozmiaru. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
-Ta funkcja w wersji debugowania wypełnia najpierw bufor 0xfd. Aby wyłączyć to zachowanie, użyj [_crtsetdebugfillthreshold —](crtsetdebugfillthreshold.md).
+Wersja do debugowania tej funkcji najpierw wypełnia bufor 0xFD. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Wymagany nagłówek|Opcjonalne nagłówki|
+|Funkcja|Wymagany nagłówek|Opcjonalny nagłówek|
 |--------------|---------------------|---------------------|
 |**_ecvt_s**|\<stdlib.h>|\<errno.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

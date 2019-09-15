@@ -1,25 +1,28 @@
 ---
 title: _set_app_type
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_app_type
-apilocation:
+api_location:
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _set_app_type
 - corecrt_startup/_set_app_type
 ms.assetid: 1e7fe786-b587-4116-8c05-f7d762350100
-ms.openlocfilehash: 5a29fd94cca7fdbf6bbb24699b7f510bf1465f15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e04d88d9e9981e35b7d4c80c11d27c868219f65
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268814"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957925"
 ---
-# <a name="setapptype"></a>_set_app_type
+# <a name="_set_app_type"></a>_set_app_type
 
-Funkcja wewnętrznego, używany przy uruchamianiu w celu poinformowania CRT, czy aplikacja jest aplikacją konsoli lub graficznego interfejsu użytkownika aplikacji.
+Funkcja wewnętrzna używana podczas uruchamiania, aby określić, czy aplikacja jest aplikacją konsolową, czy z graficznym interfejsem użytkownika.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,21 +41,21 @@ void __cdecl _set_app_type(
 
 ## <a name="parameters"></a>Parametry
 
-*appType*<br/>
-Wartość, która wskazuje typ aplikacji. Możliwe wartości to:
+*Typ aplikacji*<br/>
+Wartość wskazująca typ aplikacji. Możliwe wartości to:
 
 |Wartość|Opis|
 |----------------|-----------------|
 |_crt_unknown_app|Nieznany typ aplikacji.|
 |_crt_console_app|Aplikacja konsoli (wiersza polecenia).|
-|_crt_gui_app|Aplikacja graficznego interfejsu użytkownika (Windows).|
+|_crt_gui_app|Graficzny interfejs użytkownika (Windows).|
 
 ## <a name="remarks"></a>Uwagi
 
-Zwykle nie trzeba wywołać tę funkcję. Jest on częścią kod startowy środowiska uruchomieniowego języka C, który jest wykonywany przed `main` jest wywoływana w swojej aplikacji.
+Zwykle nie trzeba wywoływać tej funkcji. Jest częścią kodu uruchomienia środowiska uruchomieniowego języka C, który `main` jest wykonywany przed wywołaniem w aplikacji.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|_set_app_type|process.h|
+|_set_app_type|Process. h|

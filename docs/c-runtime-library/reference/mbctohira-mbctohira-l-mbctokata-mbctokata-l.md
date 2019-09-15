@@ -1,12 +1,12 @@
 ---
 title: _mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbctohira
 - _mbctohira_l
 - _mbctokata
 - _mbctokata_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbctokata
 - mbctohira
@@ -38,19 +41,19 @@ helpviewer_keywords:
 - _mbctohira function
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
-ms.openlocfilehash: 11b08449a7d27015c4ffe0ce398c471bbd6069f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e158e933442256b1d712ba42afc28b94e2b123c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285616"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952555"
 ---
-# <a name="mbctohira-mbctohiral-mbctokata-mbctokatal"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
+# <a name="_mbctohira-_mbctohira_l-_mbctokata-_mbctokata_l"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 
-Wykonuje konwersję między znakami hiragana i katakana.
+Konwertuje znaki hiragana i katakana.
 
 > [!IMPORTANT]
-> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -76,25 +79,25 @@ unsigned int _mbctokata_l(
 *c*<br/>
 Znak wielobajtowy do przekonwertowania.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca znak przekonwertowany *c*, jeśli to możliwe. W przeciwnym razie zwraca znak *c* bez zmian.
+Każda z tych funkcji zwraca przekonwertowany znak *c*, jeśli jest to możliwe. W przeciwnym razie zwraca znak *c* niezmieniony.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Mbctohira —** i **_mbctokata —** testowanie funkcji znaku *c* i, jeśli to możliwe, zastosuj jedną z następujących konwersji.
+Funkcje **_mbctohira** i **_mbctokata** testują znak *c* i, jeśli to możliwe, zastosuj jedną z następujących konwersji.
 
-|Procedury|Konwertuje|
+|Procedury|Skonwertowane|
 |--------------|--------------|
-|**_mbctohira**, **_mbctohira_l**|Multibyte katakana to multibyte hiragana.|
-|**_mbctokata**, **_mbctokata_l**|Multibyte hiragana to multibyte katakana.|
+|**_mbctohira**, **_mbctohira_l**|Wielobajtowe znaki katakana do wielobajtowego hiragana.|
+|**_mbctokata**, **_mbctokata_l**|Wielobajtowe Hiragana do wielobajtowego katakana.|
 
-Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji są identyczne, z tą różnicą, że te, które nie mają **_l** sufiksa używa bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych i te, które mają **_l** zamiast niej przyrostka Użyj parametru ustawień regionalnych, które zostały przekazane. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocals](setlocale-wsetlocale.md) . Wersje tych funkcji są identyczne, z tą różnicą, że te, które nie mają sufiksu **_l** , używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych, a te, które mają sufiks **_l** , zamiast tego używają parametru ustawień regionalnych, który został przesłany. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-We wcześniejszych wersjach **_mbctohira —** nosiła nazwę **jtohira** i **_mbctokata —** nosiła nazwę **jtokata**. Dla nowego kodu Użyj nowych nazw.
+We wcześniejszych wersjach **_mbctohira** miał nazwę **jtohira** , a **_mbctokata** miała nazwę **jtokata**. Dla nowego kodu Użyj nowych nazw.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -105,7 +108,7 @@ We wcześniejszych wersjach **_mbctohira —** nosiła nazwę **jtohira** i **_m
 |**_mbctokata**|\<mbstring.h>|
 |**_mbctokata_l**|\<mbstring.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

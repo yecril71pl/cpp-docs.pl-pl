@@ -1,11 +1,14 @@
 ---
 title: errno, _doserrno, _sys_errlist, and _sys_nerr
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _errno
-apilocation:
+api_location:
 - msvcrt.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sys_errlist
 - errno
@@ -21,16 +24,16 @@ helpviewer_keywords:
 - _sys_nerr global variable
 - sys_nerr global variable
 ms.assetid: adbec641-6d91-4e19-8398-9a34046bd369
-ms.openlocfilehash: 57d04fe5867c6a969b6aeca40f26b18b5dcd7a61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b10d98dab41151290d4e44e031f659108b0c73c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344047"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944554"
 ---
-# <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno, _doserrno, _sys_errlist, and _sys_nerr
+# <a name="errno-_doserrno-_sys_errlist-and-_sys_nerr"></a>errno, _doserrno, _sys_errlist, and _sys_nerr
 
-Makra globalne, które zawierają kody błędów, które są ustawiane podczas wykonywania programu, a ciąg odpowiedników kodów błędów do wyświetlenia.
+Makra globalne, które zawierają kody błędów, które są ustawiane podczas wykonywania programu, oraz odpowiedników ciągów kodów błędów do wyświetlenia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,11 +46,11 @@ Makra globalne, które zawierają kody błędów, które są ustawiane podczas w
 
 ## <a name="remarks"></a>Uwagi
 
-Zarówno `errno` i `_doserrno` są ustawione na 0 w czasie wykonywania, podczas uruchamiania programu. `errno` jest ustawiona na błąd w wywołaniu systemowym. Ponieważ `errno` przechowuje wartość ostatniego wywołania, które ją ustawiło, wartość ta może zostać zmieniona przez kolejne wywołania. Biblioteka środowiska uruchomieniowego wywołuje ten zestaw `errno` w przypadku błędu nie usuwaj zaznaczenia opcji `errno` w przypadku powodzenia. Zawsze czyść `errno` przez wywołanie metody `_set_errno(0)` tuż przed wywołaniem, które mogą ustawić go i sprawdzaj ją natychmiast po wywołaniu.
+Oba `errno` i`_doserrno` są ustawione na 0 przez środowisko uruchomieniowe podczas uruchamiania programu. `errno`jest ustawiony na błąd w wywołaniu na poziomie systemu. Ponieważ `errno` przechowuje wartość dla ostatniego wywołania, które go ustawi, ta wartość może zostać zmieniona przez pomyślne wywołania. Wywołania biblioteki czasu wykonywania ustawione `errno` dla błędu nie są czyszczone `errno` po pomyślnym zalogowaniu. Zawsze czyść `errno` , wywołując `_set_errno(0)` bezpośrednio przed wywołaniem, które może go ustawić, i sprawdź je bezpośrednio po wywołaniu.
 
-W przypadku błędu `errno` nie jest zawsze ustawiana na taką samą wartość jak kod błędu zwrócony przez wywołanie systemowe. W przypadku operacji We/Wy `_doserrno` przechowuje odpowiedników kodów błędów systemu operacyjnego `errno` kodów. W przypadku większości operacji innych niż we/wy wartość `_doserrno` nie jest ustawiona.
+W przypadku błędu `errno` nie musi być ustawiona taka sama wartość jak kod błędu zwracany przez wywołanie systemowe. W przypadku operacji we/wy `_doserrno` program przechowuje równoważne `errno` kody kodów błędów systemu operacyjnego. W przypadku większości operacji innych niż we/wy wartość `_doserrno` nie jest ustawiona.
 
-Każdy `errno` wartość jest skojarzona z komunikatem o błędzie w `_sys_errlist` może zostać zrealizowane przy użyciu jednej z [perror](../c-runtime-library/reference/perror-wperror.md) funkcje lub przechowywane w postaci ciągu przy użyciu jednej z [strerror](../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md) lub [strerror_s —](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md) funkcji. `perror` i `strerror` funkcji Użyj `_sys_errlist` tablicy i `_sys_nerr`— liczba elementów w `_sys_errlist`— do przetwarzania informacji o błędzie. Bezpośredni dostęp do `_sys_errlist` i `_sys_nerr` zostało zaniechane ze względów bezpieczeństwa kodu. Zaleca się używanie bezpieczniejszych, funkcjonalnych wersji zamiast makra globalne, jak pokazano poniżej:
+Każda `errno` wartość jest skojarzona z komunikatem o `_sys_errlist` błędzie w programie, który można wydrukować przy użyciu jednej z funkcji [pError](../c-runtime-library/reference/perror-wperror.md) lub przechowywanych w ciągu przy użyciu jednej z funkcji [strerror](../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md) lub [strerror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md) . `_sys_nerr` `_sys_errlist`Funkcje `perror` i`strerror` wykorzystują`_sys_errlist` tablicę i — liczbę elementów w — do przetwarzania informacji o błędach. Bezpośredni dostęp do `_sys_errlist` i `_sys_nerr` jest przestarzały ze względu na zabezpieczenia kodu. Zalecamy korzystanie z bezpieczniejszych wersji funkcjonalnych zamiast makr globalnych, jak pokazano poniżej:
 
 |Makro globalne|Funkcjonalne odpowiedniki|
 |------------------|----------------------------|
@@ -55,9 +58,9 @@ Każdy `errno` wartość jest skojarzona z komunikatem o błędzie w `_sys_errli
 |`errno`|[_get_errno](../c-runtime-library/reference/get-errno.md), [_set_errno](../c-runtime-library/reference/set-errno.md)|
 |`_sys_errlist`, `_sys_nerr`|[strerror_s, _strerror_s, _wcserror_s, \__wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)|
 
-Procedury matematyczne biblioteki ustawiają `errno` przez wywołanie metody [_matherr](../c-runtime-library/reference/matherr.md). Aby obsługiwać błędy matematyczne w inny sposób, napisz własną procedurę według `_matherr` opisu referencyjnego i nadaj mu nazwę `_matherr`.
+Procedury matematyczne biblioteki ustawione `errno` przez wywołanie [_matherr](../c-runtime-library/reference/matherr.md). Aby obsłużyć błędy matematyczne w inny sposób, napisz własną procedurę `_matherr` zgodnie z opisem odwołania i `_matherr`nadaj jej nazwę.
 
-Wszystkie `errno` wartościami w poniższej tabeli są wstępnie zdefiniowanymi stałymi w \<errno.h >, i są zgodne z systemem UNIX. Tylko `ERANGE`, `EILSEQ`, i `EDOM` są określone w normie ISO C99.
+Wszystkie `errno` wartości w poniższej tabeli są wstępnie zdefiniowanymi stałymi w \<errno. h > i są zgodne z systemem UNIX. Tylko `ERANGE`, `EILSEQ` i`EDOM` są określone w standardzie ISO C99.
 
 |Stała|Systemowy komunikat o błędzie|Wartość|
 |--------------|--------------------------|-----------|
@@ -104,12 +107,12 @@ Wszystkie `errno` wartościami w poniższej tabeli są wstępnie zdefiniowanymi 
 
 ## <a name="requirements"></a>Wymagania
 
-|Makro globalne|Wymagany nagłówek|Opcjonalne nagłówki|
+|Makro globalne|Wymagany nagłówek|Opcjonalny nagłówek|
 |------------------|---------------------|---------------------|
-|`errno`|\<errno.h > lub \<stdlib.h >, \<cerrno — > lub \<cstdlib — > (C++)||
-|`_doserrno`, `_sys_errlist`, `_sys_nerr`|\<stdlib.h>, \<cstdlib> (C++)|\<errno.h>, \<cerrno> (C++)|
+|`errno`|\<errno. h > lub \<STDLIB. h >, \<cerrno > lub \<cstdlib > (C++)||
+|`_doserrno`, `_sys_errlist`, `_sys_nerr`|\<stdlib.h>, \<cstdlib> (C++)|\<errno. h >, \<cerrno > (C++)|
 
-`_doserrno`, `_sys_errlist`, I `_sys_nerr` makra są rozszerzeniami Microsoft. Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../c-runtime-library/compatibility.md).
+Makra `_doserrno`, `_sys_errlist` i`_sys_nerr` są rozszerzeniami firmy Microsoft. Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

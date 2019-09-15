@@ -1,10 +1,10 @@
 ---
 title: _get_dstbias
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_dstbias
 - __dstbias
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __dstbias
 - _get_dstbias
@@ -27,16 +30,16 @@ helpviewer_keywords:
 - get_dstbias function
 - _get_dstbias function
 ms.assetid: e751358c-1ecc-411b-ae2c-81b2ec54ea45
-ms.openlocfilehash: 61807f854dc9c2f7de6f0acd5bbf4668987ce49e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a48cc4fe35a1bbd18342750571214ed0977cf3ee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332380"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955949"
 ---
-# <a name="getdstbias"></a>_get_dstbias
+# <a name="_get_dstbias"></a>_get_dstbias
 
-Pobiera przesunięcie czasu letniego w ciągu kilku sekund.
+Pobiera przesunięcie czasu letniego w sekundach.
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,20 +49,20 @@ error_t _get_dstbias( int* seconds );
 
 ### <a name="parameters"></a>Parametry
 
-*seconds*<br/>
-Przesunięcie w ciągu kilku sekund czasu letniego.
+*s*<br/>
+Przesunięcie (w sekundach) czasu letniego.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli kończy się pomyślnie lub **errno** wartość, jeśli wystąpi błąd.
+Zero, jeśli wystąpi błąd lub wartość **errno** w przypadku wystąpienia błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Get_dstbias —** funkcja pobiera liczbę sekund czasu letniego jako liczba całkowita. Jeśli zmiany czasu jest włączone, przesunięcie domyślne wynosi 3600 sekund, czyli liczbę sekund w ciągu jednej godziny (chociaż kilku regionach obserwować przesunięcie dwóch godzin).
+Funkcja **_get_dstbias** Pobiera liczbę sekund w czasie zmiany czasu w postaci liczby całkowitej. Jeśli obowiązuje czas letni, domyślne przesunięcie wynosi 3600 sekund, czyli liczbę sekund w ciągu godziny (chociaż kilka regionów obserwuje przesunięcia dwugodzinne).
 
-Jeśli *sekund* jest **NULL**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ta ustawia **errno** do **EINVAL** i zwraca **EINVAL**.
+Jeśli *sekundy* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca **EINVAL**.
 
-Firma Microsoft zaleca, aby użyć tej funkcji zamiast makro **_dstbias** lub zaniechanej funkcji **__dstbias**.
+Zalecamy użycie tej funkcji zamiast makra **_dstbias** lub przestarzałej funkcji **__dstbias**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -67,7 +70,7 @@ Firma Microsoft zaleca, aby użyć tej funkcji zamiast makro **_dstbias** lub za
 |-------------|---------------------|
 |**_get_dstbias**|\<time.h>|
 
-Aby uzyskać więcej informacji, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

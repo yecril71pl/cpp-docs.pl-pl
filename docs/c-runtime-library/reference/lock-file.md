@@ -1,9 +1,9 @@
 ---
 title: _lock_file
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lock_file
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _lock_file
 - lock_file
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: 4c6d9ef3ae9e2f63e702dd3fc6b01f7edea40626
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43030030d1674cfba24c1300487f576b7a2085ea
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157440"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953304"
 ---
-# <a name="lockfile"></a>_lock_file
+# <a name="_lock_file"></a>_lock_file
 
-Blokuje **pliku** obiektu w celu zapewnienia spójności dla wątków, uzyskiwanie dostępu do **pliku** obiektów jednocześnie.
+Blokuje obiekt **pliku** , aby zapewnić spójność wątków uzyskujących dostęp do obiektu **pliku** współbieżnie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,12 +46,12 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>Parametry
 
-*Plik*<br/>
+*rozszerzeniem*<br/>
 Dojście do pliku.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Lock_file —** funkcję blokady **pliku** obiekt określony przez *pliku*. Plik podstawowy nie jest zablokowany przez **_lock_file —**. Użyj [_unlock_file —](unlock-file.md) zwolnienia blokady pliku. Wywołania **_lock_file —** i **_unlock_file —** muszą się zgadzać w wątku.
+Funkcja **_lock_file** blokuje obiekt **pliku** określony przez *plik*. Plik źródłowy nie jest zablokowany przez **_lock_file**. Użyj [_unlock_file](unlock-file.md) , aby zwolnić blokadę pliku. Wywołania **_lock_file** i **_unlock_file** muszą być dopasowane w wątku.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -56,7 +59,7 @@ Dojście do pliku.
 |-------------|---------------------|
 |**_lock_file**|\<stdio.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

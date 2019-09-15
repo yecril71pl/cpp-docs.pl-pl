@@ -1,12 +1,12 @@
 ---
 title: _cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cscanf_l
 - _cscanf
 - _cwscanf
 - _cwscanf_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cwscanf
 - cwscanf_l
@@ -45,19 +48,19 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-ms.openlocfilehash: 8cb121166ab0103565260538521824d8999425e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee4c380d3e470fa6e3d12066d3bf34918acf1bea
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335260"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938501"
 ---
-# <a name="cscanf-cscanfl-cwscanf-cwscanfl"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
+# <a name="_cscanf-_cscanf_l-_cwscanf-_cwscanf_l"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
-Odczyty sformatowanych danych z konsoli. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [_cscanf_s —, _cscanf_s_l —, _cwscanf_s —, _cwscanf_s_l —](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md).
+Odczytuje sformatowane dane z konsoli programu. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md).
 
 > [!IMPORTANT]
-> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -84,32 +87,32 @@ int _cwscanf_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Format*<br/>
+*format*<br/>
 Ciąg kontroli formatu.
 
 *argument*<br/>
 Parametry opcjonalne.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Liczbę pól pomyślnie przekonwertowanych i przypisanych. Zwracana wartość nie uwzględnia pól, które zostały odczytane, ale nie przypisane. Wartość zwracana jest **EOF** dla próba odczytu na końcu pliku. Taka sytuacja może wystąpić, gdy dane wejściowe z klawiatury są przekierowywane na poziomie wiersza polecenia systemu operacyjnego. Zwracana wartość wynosząca 0 oznacza, że nie przydzielono żadnych pól.
+Liczba pól, które zostały pomyślnie przekonwertowane i przypisane. Wartość zwracana nie zawiera pól, które zostały odczytane, ale nie przypisane. Zwracana wartość to **eof** dla próby odczytu na końcu pliku. Taka sytuacja może wystąpić, gdy dane wejściowe klawiatury są przekierowywane na poziomie wiersza polecenia systemu operacyjnego. Zwracana wartość 0 oznacza, że nie przypisano żadnych pól.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Cscanf** funkcja odczytuje dane bezpośrednio z konsoli w miejscach podanych przez *argument*. [_Getche](getch-getwch.md) funkcja jest używana do odczytu znaków. Każdy parametr opcjonalny musi być wskaźnikiem do zmiennej typu odpowiadającego specyfikatorowi typu w parametrze *format*. Format kontroluje interpretację danych wejściowych pola i ma taką samą formę i funkcjonuje jako *format* parametr [scanf](scanf-scanf-l-wscanf-wscanf-l.md) funkcji. Gdy **_cscanf** zwykle funkcją wprowadzanych znaków nie są tak Jeśli ostatnie wywołanie było do **_ungetch**.
+Funkcja **_cscanf** odczytuje dane bezpośrednio z konsoli programu do lokalizacji określonych przez *argument*. Funkcja [_getche](getch-getwch.md) służy do odczytywania znaków. Każdy opcjonalny parametr musi być wskaźnikiem do zmiennej z typem, który odpowiada specyfikatorowi typu w *formacie*. Format kontroluje interpretację pól wejściowych i ma taką samą formę i funkcję jak parametr *formatu* dla funkcji [scanf](scanf-scanf-l-wscanf-wscanf-l.md) . Podczas gdy **_cscanf** zwykle zwraca znak wejściowy, nie robi to, jeśli ostatnie wywołanie było **_ungetch**.
 
-Ta funkcja sprawdza poprawność swoich parametrów. Jeśli jest w formacie **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL** a funkcja zwraca **EOF**.
+Ta funkcja sprawdza poprawność swoich parametrów. Jeśli format ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcja zwraca **znacznik EOF**.
 
-Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych wątku.
+Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korzystają z przekazaną parametrem ustawień regionalnych zamiast bieżących ustawień regionalnych wątku.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
 |Procedura TCHAR.H|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tcscanf —**|**_cscanf**|**_cscanf**|**_cwscanf**|
+|**_tcscanf**|**_cscanf**|**_cscanf**|**_cwscanf**|
 |**_tcscanf_l**|**_cscanf_l**|**_cscanf_l**|**_cwscanf_l**|
 
 ## <a name="requirements"></a>Wymagania
@@ -117,9 +120,9 @@ Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używa
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_cscanf**, **_cscanf_l**|\<conio.h>|
-|**_cwscanf**, **_cwscanf_l**|\<conio.h > lub \<wchar.h >|
+|**_cwscanf**, **_cwscanf_l**|\<CONIO. h > lub \<WCHAR. h >|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -160,7 +163,7 @@ You entered 3 2 1
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[We/wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>

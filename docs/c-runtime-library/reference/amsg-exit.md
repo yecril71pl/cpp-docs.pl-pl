@@ -1,9 +1,9 @@
 ---
 title: _amsg_exit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _amsg_exit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,22 +14,25 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _amsg_exit
 helpviewer_keywords:
 - _amsg_exit
 ms.assetid: 146d4faf-d763-43a4-b264-12711196456b
-ms.openlocfilehash: 87cd08a6c60a1e29b8a8e15edbfdd69d338d875d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d577bfcf0584ef982ab43ff98674d0cfadd14ba
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335623"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939694"
 ---
-# <a name="amsgexit"></a>_amsg_exit
+# <a name="_amsg_exit"></a>_amsg_exit
 
-Emituje runtime określony komunikat o błędzie, a następnie kończy działanie aplikacji z kodem błędu 255.
+Emituje określony komunikat o błędzie środowiska uruchomieniowego, a następnie kończy działanie aplikacji z kodem błędu 255.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,11 +43,11 @@ void _amsg_exit ( int rterrnum );
 ### <a name="parameters"></a>Parametry
 
 *rterrnum*<br/>
-Numer identyfikacyjny zdefiniowaną przez system runtime komunikat o błędzie.
+Numer identyfikacyjny komunikatu o błędzie środowiska uruchomieniowego zdefiniowanego przez system.
 
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja generuje komunikat o błędzie środowiska uruchomieniowego do **stderr** dla aplikacji konsoli lub wyświetla komunikat w komunikacie pole dla aplikacji Windows. W trybie debugowania można wywołać debugera przed zamknięciem.
+Ta funkcja emituje komunikat o błędzie środowiska uruchomieniowego do **stderr** dla aplikacji konsolowych lub wyświetla komunikat w oknie komunikatu dla aplikacji systemu Windows. W trybie debugowania można wybrać opcję wywołania debugera przed wyjściem.
 
 ## <a name="requirements"></a>Wymagania
 

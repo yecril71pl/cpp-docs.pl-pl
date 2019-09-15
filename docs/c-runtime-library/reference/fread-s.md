@@ -1,9 +1,9 @@
 ---
 title: fread_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fread_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fread_s
 - stdio/fread_s
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-ms.openlocfilehash: 1adc999d37025392f03a11daebfffdeeb637d92b
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: d1f1756af7427ecdfc8ff332f4a2211984a177d8
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376135"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956849"
 ---
-# <a name="freads"></a>fread_s
+# <a name="fread_s"></a>fread_s
 
 Odczytuje dane ze strumienia. Ta wersja programu [fread](fread.md) zawiera ulepszenia zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -62,13 +65,13 @@ Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**fread_s** zwraca liczbę (całość) elementów, które zostały odczytane do buforu, co może być mniejsze niż *licznik* , jeśli wystąpi błąd odczytu lub koniec pliku przed osiągnięciem *liczby* . Użyj funkcji **feof** lub  odwołującej, aby odróżnić błąd od stanu końca pliku. Jeśli *rozmiar* lub *Liczba* to 0, **fread_s** zwraca 0, a zawartość buforu nie jest zmieniana. Jeśli *strumień* lub *bufor* jest wskaźnikiem o wartości null, **fread_s** wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca wartość 0.
+**fread_s** zwraca liczbę (całość) elementów, które zostały odczytane do buforu, co może być mniejsze niż *licznik* , jeśli wystąpi błąd odczytu lub koniec pliku przed osiągnięciem *liczby* . Użyj funkcji **feof** lub odwołującej, aby odróżnić błąd od stanu końca pliku. Jeśli *rozmiar* lub *Liczba* to 0, **fread_s** zwraca 0, a zawartość buforu nie jest zmieniana. Jeśli *strumień* lub *bufor* jest wskaźnikiem o wartości null, **fread_s** wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca wartość 0.
 
 Aby uzyskać więcej informacji o kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **fread_s** odczytuje do *liczby* elementów *elementSize* bajtów ze *strumienia* wejściowego i zapisuje je w buforze.  Wskaźnik pliku skojarzony ze strumieniem (  Jeśli istnieje) jest zwiększany o liczbę bajtów faktycznie odczytywanych. Jeśli dany strumień jest otwarty w trybie tekstowym, pary wysuwu wiersza są zastępowane znakami wysuwu wiersza. Zastąpienie nie ma wpływu na wskaźnik pliku lub wartość zwracaną. Pozycja wskaźnika pliku jest nieokreślona w przypadku wystąpienia błędu. Nie można określić wartości częściowo odczytanego elementu.
+Funkcja **fread_s** odczytuje do *liczby* elementów *elementSize* bajtów ze *strumienia* wejściowego i zapisuje je w *buforze*.  Wskaźnik pliku skojarzony ze strumieniem ( Jeśli istnieje) jest zwiększany o liczbę bajtów faktycznie odczytywanych. Jeśli dany strumień jest otwarty w trybie tekstowym, pary wysuwu wiersza są zastępowane znakami wysuwu wiersza. Zastąpienie nie ma wpływu na wskaźnik pliku lub wartość zwracaną. Pozycja wskaźnika pliku jest nieokreślona w przypadku wystąpienia błędu. Nie można określić wartości częściowo odczytanego elementu.
 
 Ta funkcja blokuje inne wątki. Jeśli wymagana jest wersja bez blokowania, należy użyć **_fread_nolock**.
 

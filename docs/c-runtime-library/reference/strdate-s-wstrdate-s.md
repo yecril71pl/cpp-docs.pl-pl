@@ -1,10 +1,10 @@
 ---
 title: _strdate_s, _wstrdate_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strdate_s
 - _wstrdate_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _strdate_s
 - wstrdate_s
@@ -33,16 +36,16 @@ helpviewer_keywords:
 - _strdate_s function
 - _wstrdate_s function
 ms.assetid: d41d8ea9-e5ce-40d4-864e-1ac29b455991
-ms.openlocfilehash: 85c9ab7dcad68f3aa4832236461cd38b07d4ae44
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fadd30ec81cff59d675212e59c8513656c7b2f35
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353992"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940748"
 ---
-# <a name="strdates-wstrdates"></a>_strdate_s, _wstrdate_s
+# <a name="_strdate_s-_wstrdate_s"></a>_strdate_s, _wstrdate_s
 
-Skopiuj bieżącą datą systemu do buforu. Są to wersje [_strdate —, _wstrdate —](strdate-wstrdate.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Skopiuj bieżącą datę systemową do buforu. Są to wersje [_strdate, _wstrdate](strdate-wstrdate.md) z ulepszeniami zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -68,43 +71,43 @@ errno_t _wstrdate_s(
 ### <a name="parameters"></a>Parametry
 
 *buffer*<br/>
-Wskaźnik do buforu, który zostanie wprowadzona wartość ciągu daty sformatowane.
+Wskaźnik do buforu, który zostanie wypełniony sformatowanym ciągiem daty.
 
 *numberOfElements*<br/>
 Rozmiar buforu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli to się powiedzie. Wartość zwracana jest kod błędu, jeśli wystąpi awaria. Kody błędów są definiowane w numer błędu. GODZ.; Zobacz tabelę poniżej, aby dokładnie błędy generowane przez tę funkcję. Aby uzyskać więcej informacji o kodach błędów, zobacz [errno](../../c-runtime-library/errno-constants.md).
+Zero, jeśli powodzenie. Wartość zwracana jest kodem błędu w przypadku wystąpienia błędu. Kody błędów są zdefiniowane w ERRNO. C w poniższej tabeli przedstawiono dokładne błędy wygenerowane przez tę funkcję. Aby uzyskać więcej informacji na temat kodów błędów, zobacz [errno](../../c-runtime-library/errno-constants.md).
 
 ## <a name="error-conditions"></a>Warunki błędów
 
-|*buffer*|*numberOfElements*|Wróć|Zawartość *buforu*|
+|*buffer*|*numberOfElements*|przesłać|Zawartość *buforu*|
 |--------------|------------------------|------------|--------------------------|
-|**NULL**|(wszystkie)|**EINVAL**|Nie zmodyfikowano|
-|Nie **NULL** (kierujący do prawidłowego buforu)|0|**EINVAL**|Nie zmodyfikowano|
-|Nie **NULL** (kierujący do prawidłowego buforu)|0 < *numberOfElements* < 9|**EINVAL**|Pusty ciąg|
-|Nie **NULL** (kierujący do prawidłowego buforu)|*numberOfElements* > = 9|0|Bieżącą datę w formacie określonym w uwagi|
+|**NULL**|ile|**EINVAL**|nie zmodyfikowano|
+|Nie **ma wartości null** (wskazuje na prawidłowy bufor)|0|**EINVAL**|nie zmodyfikowano|
+|Nie **ma wartości null** (wskazuje na prawidłowy bufor)|0 < *numberOfElements* < 9|**EINVAL**|Pusty ciąg|
+|Nie **ma wartości null** (wskazuje na prawidłowy bufor)|*numberOfElements* > = 9|0|Bieżąca data sformatowana zgodnie z opisem w uwagach|
 
 ## <a name="security-issues"></a>Problemy dotyczące zabezpieczeń
 
-Przekazywanie nieprawidłowy bez **NULL** wartość dla buforu spowoduje powoduje naruszenie zasad dostępu, jeśli *numberOfElements* parametr jest większe niż 9.
+Przekazanie nieprawidłowej wartości **null** dla buforu spowoduje naruszenie zasad dostępu, jeśli parametr *NumberOfElements* jest większy niż 9.
 
-Przekazanie wartości rozmiarów, który jest większy niż rzeczywisty rozmiar *buforu* spowoduje przepełnienie buforu.
+Przekazywanie wartości dla rozmiaru, który jest większy niż rzeczywisty rozmiar *buforu* , spowoduje przepełnienie buforu.
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje zapewniają bardziej bezpieczne wersje **_strdate —** i **_wstrdate —**. **_Strdate_s —** funkcja kopiuje bufor wskazywany przez bieżącą datą systemu *buforu*, sformatowany **mm**/**dd** / **rr**, gdzie **mm** to dwie cyfry reprezentującą miesiąc, **dd** to dwie cyfry reprezentującą dzień, a **RR**  to dwie ostatnie cyfry roku. Na przykład ciąg **12/05/99** reprezentuje 5 grudnia 1999. Rozmiar buforu musi zawierać co najmniej 9 znaków.
+Te funkcje zapewniają bezpieczniejsze wersje **_strdate** i **_wstrdate**. Funkcja **_strdate_s** kopiuje bieżącą datę systemową do buforu wskazywanym przez *bufor*, sformatowaną **mm**/**DD**/**yy**, gdzie **mm** to dwie cyfry reprezentujące miesiąc, **DD** to dwie cyfry reprezentujące dzień, a **yy** to ostatnie dwie cyfry roku. Na przykład ciąg **12/05/99** reprezentuje 5 grudnia 1999. Długość buforu musi wynosić co najmniej 9 znaków.
 
-**_wstrdate_s —** to wersja znaku dwubajtowego **_strdate_s —**; argument i wartość zwracana przez **_wstrdate_s —** są ciągami znaków dwubajtowych. Funkcje te zachowują się identycznie.
+**_wstrdate_s** to dwubajtowa wersja **_strdate_s**; argument i wartość zwracana przez **_wstrdate_s** są ciągami znaków dwubajtowych. Funkcje te zachowują się identycznie w inny sposób.
 
-Jeśli *buforu* jest **NULL** wskaźnika, lub jeśli *numberOfElements* jest mniejsza niż 9 znaków, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [ Walidacja parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość -1 i ustaw **errno** do **EINVAL** Jeśli bufor jest **NULL** lub jeśli *numberOfElements*jest mniejsza niż lub równe 0 lub zestaw **errno** do **ERANGE** Jeśli *numberOfElements* jest mniejsza niż 9.
+Jeśli *bufor* jest wskaźnikiem o **wartości null** lub jeśli *NumberOfElements* jest krótszy niż 9 znaków, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają-1 i ustawiają **errno** na **EINVAL** , jeśli bufor ma **wartość null** lub jeśli wartość *NumberOfElements* jest mniejsza niż lub równa 0 lub ustawiona **errno** na **ERANGE** , jeśli *NumberOfElements* jest mniejsze niż 9.
 
-W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążania szablonu; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując potrzebę określenia argumentu rozmiaru) oraz ich mogą automatycznie zastąpić starsze, niezabezpieczone funkcje ich nowsze, bezpieczne odpowiedniki. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując konieczność określenia argumentu rozmiaru) i mogą automatycznie zastąpić starsze, niezabezpieczone funkcje z ich nowszymi, bezpiecznymi odpowiednikami. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
-### <a name="generic-text-routine-mapping"></a>Mapowania procedur zwykłego tekstu:
+### <a name="generic-text-routine-mapping"></a>Mapowanie procedury tekstu ogólnego:
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tstrdate_s**|**_strdate_s**|**_strdate_s**|**_wstrdate_s**|
 
@@ -113,7 +116,7 @@ W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążania s
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_strdate**|\<time.h>|
-|**_wstrdate**|\<Time.h > lub \<wchar.h >|
+|**_wstrdate**|\<Time. h > lub \<WCHAR. h >|
 |**_strdate_s**|\<time.h>|
 
 ## <a name="example"></a>Przykład

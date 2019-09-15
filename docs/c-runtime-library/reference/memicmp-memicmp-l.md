@@ -1,10 +1,10 @@
 ---
 title: _memicmp, _memicmp_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _memicmp_l
 - _memicmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _memicmp
 - memicmp_l
@@ -27,16 +30,16 @@ helpviewer_keywords:
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-ms.openlocfilehash: 8beb632c8bd2cfac486fc58fc930b94490bdecbc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a463b9c79a76879311bb811b38e4aabcfd6e7226
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285277"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951841"
 ---
-# <a name="memicmp-memicmpl"></a>_memicmp, _memicmp_l
+# <a name="_memicmp-_memicmp_l"></a>_memicmp, _memicmp_l
 
-Porównanie znaków w dwóch buforów (bez uwzględniania wielkości liter).
+Porównuje znaki w dwóch buforach (bez uwzględniania wielkości liter).
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,44 +60,44 @@ int _memicmp_l(
 ### <a name="parameters"></a>Parametry
 
 *buffer1*<br/>
-Pierwszy buforu.
+Pierwszy bufor.
 
 *buffer2*<br/>
-Drugi buforu.
+Drugi bufor.
 
-*Liczba*<br/>
+*liczbą*<br/>
 Liczba znaków.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość zwracana określa relację pomiędzy buforów.
+Wartość zwracana wskazuje związek między buforami.
 
-|Wartość zwracana|Relacja pierwsze bajty liczba buf1 i buf2|
+|Wartość zwracana|Relacja pierwszej liczby bajtów buf1 i buf2|
 |------------------|--------------------------------------------------------|
-|< 0|*buffer1* mniej niż *buffer2*.|
-|0|*buffer1* taka sama jak *buffer2*.|
-|> 0|*buffer1* większa *buffer2*.|
+|< 0|*buffer1* mniejsze niż *buffer2*.|
+|0|*buffer1* identyczne z *buffer2*.|
+|> 0|*buffer1* większa niż *buffer2*.|
 |**_NLSCMPERROR**|Wystąpił błąd.|
 
 ## <a name="remarks"></a>Uwagi
 
-**_Memicmp —** funkcja porównuje pierwszy *liczba* znaki z dwóch buforów *buffer1* i *buffer2* bajt po bajcie. W porównaniu nie jest rozróżniana wielkość liter.
+Funkcja **_memicmp** porównuje pierwsze znaki *Count* z dwóch buforów *buffer1* i *buffer2* bajty przez bajt. W porównaniu z rozróżnianiem wielkości liter.
 
-Jeśli *buffer1* lub *buffer2* jest pustym wskaźnikiem, funkcja wywoła procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **_NLSCMPERROR** i ustawia **errno** do **EINVAL**.
+Jeśli *buffer1* lub *buffer2* jest wskaźnikiem null, ta funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **_NLSCMPERROR** i ustawia **errno** na **EINVAL**.
 
-**_memicmp —** używa bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych; **_memicmp_l —** jest identyczna, z tą różnicą, że używa ustawień regionalnych przekazanych w zamian. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+**_memicmp** używa bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych; **_memicmp_l** jest identyczny, z tą różnicą, że w zamian korzysta z przekazaną ustawieniami regionalnymi. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_memicmp**|\<Memory.h > lub \<string.h >|
-|**_memicmp_l**|\<Memory.h > lub \<string.h >|
+|**_memicmp**|\<> pamięci. h > \<lub String. h|
+|**_memicmp_l**|\<> pamięci. h > \<lub String. h|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

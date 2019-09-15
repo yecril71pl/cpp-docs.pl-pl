@@ -1,12 +1,12 @@
 ---
 title: atof, _atof_l, _wtof, _wtof_l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _wtof_l
 - atof
 - _atof_l
 - _wtof
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tstof
 - _ttof
@@ -46,16 +49,16 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-ms.openlocfilehash: 6c2ec158ac0b75a861b5b226d33de113d76988cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a624ae9f900395ed2117ed2bb89e2768c64daba9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341356"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939567"
 ---
-# <a name="atof-atofl-wtof-wtofl"></a>atof, _atof_l, _wtof, _wtof_l
+# <a name="atof-_atof_l-_wtof-_wtof_l"></a>atof, _atof_l, _wtof, _wtof_l
 
-Konwertuj ciąg na podwójny.
+Konwertuj ciąg na wartość typu Double.
 
 ## <a name="syntax"></a>Składnia
 
@@ -79,50 +82,50 @@ double _wtof_l(
 ## <a name="parameters"></a>Parametry
 
 *str*<br/>
-Ciąg, który ma zostać przekonwertowany.
+Ciąg do przekonwertowania.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda funkcja zwraca **double** wartość generowana przez zinterpretowanie wprowadzonych znaków jako liczby. Wartość zwracana jest 0,0, jeśli dane wejściowe nie można przekonwertować na wartość tego typu.
+Każda funkcja zwraca wartość **podwójną** wygenerowanej przez interpretowanie znaków wejściowych jako liczby. Wartość zwracana to 0,0, jeśli dane wejściowe nie mogą być konwertowane na wartość tego typu.
 
-We wszystkich przypadkach spoza zakresu **errno** ustawiono **ERANGE**. Jeśli parametr przekazany w **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** do **EINVAL** i zwracają 0.
+We wszystkich przypadkach poza zakresem **errno** jest ustawiony na **ERANGE**. Jeśli przekazanie parametru ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i zwracają 0.
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje konwertują ciąg znaków na wartość podwójnej precyzji, zmiennoprzecinkowych.
+Te funkcje konwertują ciąg znaków na podwójną precyzję wartości zmiennoprzecinkowej.
 
-Ciąg wejściowy jest sekwencją znaków, które mogą być interpretowane jako wartość liczbowa określonego typu. Funkcja przestaje odczytywać ciąg wejściowy przy pierwszym znaku, który nie może rozpoznać jako elementu liczby. Ten znak może być znakiem null ('\0' lub L '\0') zakończenie ciągu.
+Ciąg wejściowy jest sekwencją znaków, które mogą być interpretowane jako wartość liczbowa określonego typu. Funkcja przestaje odczytywać ciąg wejściowy przy pierwszym znaku, którego nie może rozpoznać jako część liczby. Ten znak może być znakiem null (' \ 0 ' lub L ' \ 0 '), który kończy ciąg.
 
-*Str* argument **atof —** i **_wtof —** ma następującą postać:
+Argument *str* dla **atof** i **_wtof** ma następującą postać:
 
-[*odstępu*] [*logowania*] [*cyfr*] [__.__ *cyfr*] [{**e** &#124; **E** } [*logowania*]*cyfr*]
+[*odstęp*] [*Sign*] [*cyfry*] [ __.__ *cyfry*] [{**e** &#124; **e** } [*Sign*]*cyfry*]
 
-A *odstępu* składa się ze znaków spacji lub tabulatorów, które są ignorowane. *logowania* jest plus (+) lub minus (-); i *cyfr* są co najmniej jedna cyfra dziesiętna. Jeśli żadna cyfra pojawia się przed przecinkiem dziesiętnym, co najmniej jedna musi znajdować się po punkcie dziesiętnym. Cyfr dziesiętnych może następować wykładnik, który składa się z litery wprowadzającej (**e**, lub **E**) i opcjonalnie podpisem dziesiętna liczba całkowita.
+*Odstęp* składa się ze znaków spacji lub tabulatora, które są ignorowane; *znak* jest znakiem plus (+) lub minus (-); i *cyfry* są jedną lub większą liczbą cyfr dziesiętnych. Jeśli żadne cyfry nie pojawiają się przed punktem dziesiętnym, co najmniej jeden musi pojawić się po przecinku dziesiętnym. Po cyfrach dziesiętnych mogą występować wykładnika, która składa się z litery wprowadzającej (**e**lub **e**) i opcjonalnie cyfry dziesiętnej ze znakiem.
 
-UCRT wersje tych funkcji nie obsługują konwersję Fortran stylu (**d** lub **D**) litery wykładnika. To rozszerzenie niestandardowe była obsługiwana przez wcześniejsze wersje CRT i może być istotnej zmiany w kodzie.
+Wersje UCRT tych funkcji nie obsługują konwersji liter wykładnika Pascal (**d** lub **d**). To niestandardowe rozszerzenie było obsługiwane przez wcześniejsze wersje CRT i może być istotną zmianą dla kodu.
 
-Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają one *ustawień regionalnych* przekazany parametr zamiast bieżących ustawień regionalnych.
+Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korzystają z przekazaną parametrem *ustawień regionalnych* zamiast bieżących ustawień regionalnych.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tstof**|**atof**|**atof**|**_wtof**|
 |**_ttof**|**atof**|**atof**|**_wtof**|
 
 ## <a name="requirements"></a>Wymagania
 
-|Routine(s)|Wymagany nagłówek|
+|Procedury (s)|Wymagany nagłówek|
 |------------------|---------------------|
-|**atof**, **_atof_l**|C: \<math.h> or \<stdlib.h> C++: \<cstdlib>, \<stdlib.h>, \<cmath> or \<math.h>|
-|**_wtof**, **_wtof_l**|C: \<stdlib.h> or \<wchar.h> C++: \<cstdlib>, \<stdlib.h> or \<wchar.h>|
+|**atof**, **_atof_l**|C: \<Math. h > lub \<STDLIB. h > C++: \<cstdlib >, \<STDLIB. h >, \<cmath > lub \<Math. h >|
+|**_wtof**, **_wtof_l**|C: \<STDLIB. h > lub \<WCHAR. h > C++: \<cstdlib >, \<STDLIB. h > lub \<WCHAR. h >|
 
 ## <a name="example"></a>Przykład
 
-Ten program ilustruje, jak liczb przechowywanych jako ciągi można przekonwertować wartości liczbowych przy użyciu **atof —** i **_atof_l —** funkcji.
+Ten program pokazuje, jak liczby przechowywane jako ciągi mogą być konwertowane na wartości liczbowe przy użyciu funkcji **atof** i **_atof_l** .
 
 ```C
 // crt_atof.c

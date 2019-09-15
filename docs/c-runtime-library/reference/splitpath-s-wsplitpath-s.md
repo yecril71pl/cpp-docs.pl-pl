@@ -1,10 +1,10 @@
 ---
 title: _splitpath_s, _wsplitpath_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wsplitpath_s
 - _splitpath_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wsplitpath_s
 - splitpath_s
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-ms.openlocfilehash: 87af8bac525844c06fdfc16d7d13a06eef4d61ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f97c07ed01ae629fe3eb61346c6c0fcd8fa803f0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355032"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958052"
 ---
-# <a name="splitpaths-wsplitpaths"></a>_splitpath_s, _wsplitpath_s
+# <a name="_splitpath_s-_wsplitpath_s"></a>_splitpath_s, _wsplitpath_s
 
-Dzieli ścieżkę na składniki. Są to wersje [_splitpath —, _wsplitpath —](splitpath-wsplitpath.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Dzieli nazwę ścieżki na składniki. Są to wersje [_splitpath, _wsplitpath](splitpath-wsplitpath.md) z ulepszeniami zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -90,65 +93,65 @@ errno_t _wsplitpath_s(
 *Ścieżka*<br/>
 Pełna ścieżka.
 
-*drive*<br/>
-Litera, następuje dwukropek (**:**). Możesz przekazać **NULL** dla tego parametru, jeśli nie potrzebujesz literę dysku.
+*litera*<br/>
+Litera dysku, po którym następuje dwukropek ( **:** ). Jeśli nie potrzebujesz litery dysku, możesz przekazać **wartość null** dla tego parametru.
 
 *driveNumberOfElements*<br/>
-Rozmiar *dysku* buforu znaków jednobajtowych lub szerokiego. Jeśli *dysku* jest **NULL**, ta wartość musi mieć wartość 0.
+Rozmiar buforu *dysku* w znakach jednobajtowych lub szerokich. Jeśli *dysk* ma wartość **null**, ta wartość musi być równa 0.
 
-*dir*<br/>
-Ścieżka katalogu, w tym ukośnika. Kreski ułamkowe ( **/** ), ukośniki odwrotne ( **\\** ), lub obie mogą być używane. Możesz przekazać **NULL** dla tego parametru, jeśli nie potrzebujesz ścieżki katalogu.
+*katalogów*<br/>
+Ścieżka katalogu, włącznie z końcowym ukośnikiem. Można używać ukośników **/** (), ukośników odwrotnych ( **\\** ) lub obu tych wartości. Jeśli ścieżka katalogu nie jest potrzebna, można przekazać **wartość null** dla tego parametru.
 
 *dirNumberOfElements*<br/>
-Rozmiar *dir* buforu znaków jednobajtowych lub szerokiego. Jeśli *dir* jest **NULL**, ta wartość musi mieć wartość 0.
+Rozmiar buforu *dir* w znakach jednobajtowych lub szerokich. Jeśli *dir* ma wartość **null**, ta wartość musi być równa 0.
 
 *fname*<br/>
-Nazwa podstawowa pliku (bez rozszerzenia). Możesz przekazać **NULL** dla tego parametru, jeśli nazwa pliku nie jest potrzebna.
+Podstawowa nazwa pliku (bez rozszerzenia). Jeśli nazwa pliku nie jest potrzebna, można przekazać **wartość null** dla tego parametru.
 
 *nameNumberOfElements*<br/>
-Rozmiar *fname* buforu znaków jednobajtowych lub szerokiego. Jeśli *fname* jest **NULL**, ta wartość musi mieć wartość 0.
+Rozmiar buforu *fname* w znakach jednobajtowych lub szerokich. Jeśli *fname* ma wartość **null**, ta wartość musi być równa 0.
 
-*ext*<br/>
-Rozszerzenie nazwy pliku, w tym wiodące w okresie (**.**). Możesz przekazać **NULL** dla tego parametru, jeśli nie potrzebujesz rozszerzenie nazwy pliku.
+*EXT*<br/>
+Rozszerzenie nazwy pliku, włącznie z kropką wiodącą ( **.** ). Jeśli rozszerzenie nazwy pliku nie jest potrzebne, można przekazać **wartość null** dla tego parametru.
 
 *extNumberOfElements*<br/>
-Rozmiar *ext* buforu znaków jednobajtowych lub szerokiego. Jeśli *ext* jest **NULL**, ta wartość musi mieć wartość 0.
+Rozmiar buforu *EXT* w znakach jednobajtowych lub szerokich. Jeśli *EXT* ma wartość **null**, ta wartość musi być równa 0.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli to się powiedzie; Kod błędu.
+Zero, jeśli pomyślne; kod błędu w przypadku niepowodzenia.
 
 ### <a name="error-conditions"></a>Warunki błędów
 
 |Warunek|Wartość zwracana|
 |---------------|------------------|
-|*ścieżka* jest **o wartości NULL**|**EINVAL**|
-|*dysk* jest **NULL**, *driveNumberOfElements* jest różna od zera|**EINVAL**|
-|*dysk* ma wartość inną niż**NULL**, *driveNumberOfElements* wynosi zero|**EINVAL**|
-|*dir* jest **NULL**, *dirNumberOfElements* jest różna od zera|**EINVAL**|
-|*dir* ma wartość inną niż**NULL**, *dirNumberOfElements* wynosi zero|**EINVAL**|
-|*fname* jest **NULL**, *nameNumberOfElements* jest różna od zera|**EINVAL**|
-|*fname* ma wartość inną niż**NULL**, *nameNumberOfElements* wynosi zero|**EINVAL**|
-|*ext* jest **NULL**, *extNumberOfElements* jest różna od zera|**EINVAL**|
-|*ext* ma wartość inną niż**NULL**, *extNumberOfElements* wynosi zero|**EINVAL**|
+|*ścieżka* ma **wartość null**|**EINVAL**|
+|*dysk* ma **wartość null**, *driveNumberOfElements* jest różny od zera.|**EINVAL**|
+|*dysk* ma wartość różną od**null**, *driveNumberOfElements* ma wartość zero|**EINVAL**|
+|*dir* ma **wartość null**, *dirNumberOfElements* jest różna od zera.|**EINVAL**|
+|*dir* ma wartość różną od**null**, *dirNumberOfElements* ma wartość zero|**EINVAL**|
+|*fname* ma **wartość null**, *nameNumberOfElements* jest różna od zera|**EINVAL**|
+|*fname* jest różna od**null**, *nameNumberOfElements* jest zerem|**EINVAL**|
+|*EXT* ma **wartość null**, *extNumberOfElements* jest różna od zera.|**EINVAL**|
+|*EXT* ma wartość różną od**null**, *extNumberOfElements* jest zerem|**EINVAL**|
 
-Jeśli wystąpi dowolne z powyższych warunków, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** do **EINVAL** i zwracają **EINVAL**.
+Jeśli wystąpi którykolwiek z powyższych warunków, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i zwracają **EINVAL**.
 
-Jeśli któryś z buforów, który jest zbyt krótki, aby pomieścić wynik, te funkcje, wyczyść wszystkie bufory puste ciągi, ustaw **errno** do **ERANGE**i zwróć **ERANGE**.
+Jeśli którykolwiek z buforów jest zbyt krótki, aby pomieścić wynik, te funkcje Wyczyść wszystkie bufory do pustych ciągów, ustaw **errno** na **ERANGE**i zwróć **ERANGE**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Splitpath_s —** funkcja dzieli ścieżkę na jej cztery składniki. **_splitpath_s —** automatycznie obsługuje argumenty ciągu znaków wielobajtowych zgodnie z potrzebami, rozpoznawaniu sekwencje znaków wielobajtowych zgodnie z aktualnie używaną stroną kodową wielobajtowe. **_wsplitpath_s —** to wersja znaku dwubajtowego **_splitpath_s —**; argumenty **_wsplitpath_s —** są ciągami znaków dwubajtowych. Funkcje te zachowują się identycznie
+Funkcja **_splitpath_s** dzieli ścieżkę na cztery składniki. **_splitpath_s** automatycznie obsługuje argumenty ciągu znaków wielobajtowych, aby rozpoznać sekwencje znaków wielobajtowych zgodnie z aktualnie używaną stroną kodową. **_wsplitpath_s** to dwubajtowa wersja **_splitpath_s**; argumenty **_wsplitpath_s** są ciągami znaków dwubajtowych. Funkcje te zachowują się identycznie w inny sposób
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsplitpath_s**|**_splitpath_s**|**_splitpath_s**|**_wsplitpath_s**|
 
-Każdy składnik Pełna ścieżka jest przechowywany w oddzielnych buforu; stałe manifestu **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**, i **_MAX_EXT** (zdefiniowany w STDLIB. H) określ maksymalny dozwolony rozmiar dla każdego składnika w pliku. Składniki plików większych niż odpowiednie stałych manifestu spowodować uszkodzenie sterty.
+Każdy składnik pełnej ścieżki jest przechowywany w osobnym buforze; stałe manifestu **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**i **_MAX_EXT** (zdefiniowane w STDLIB. H) Określ maksymalny dozwolony rozmiar każdego składnika plików. Składniki plików większe niż odpowiednie stałe manifestu powodują uszkodzenie sterty.
 
-W poniższej tabeli wymieniono wartości stałe manifestu.
+Poniższa tabela zawiera listę wartości stałych manifestu.
 
 |Nazwa|Wartość|
 |----------|-----------|
@@ -157,24 +160,24 @@ W poniższej tabeli wymieniono wartości stałe manifestu.
 |_MAX_FNAME|256|
 |_MAX_EXT|256|
 
-Jeśli pełna ścieżka nie zawiera składników (na przykład, nazwa_pliku), **_splitpath_s —** przypisuje pusty ciąg znaków do odpowiedniego buforu.
+Jeśli pełna ścieżka nie zawiera składnika (na przykład filename), **_splitpath_s** przypisze pusty ciąg do odpowiedniego buforu.
 
-W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążania szablonu; przeciążenia mogą automatycznie wywnioskować długość buforu, eliminując konieczność określenia argumentu rozmiaru. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu, eliminując konieczność określenia argumentu rozmiaru. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
-Wersje debugowania tych funkcji najpierw wypełniają bufor 0xfd. Aby wyłączyć to zachowanie, użyj [_crtsetdebugfillthreshold —](crtsetdebugfillthreshold.md).
+Wersje debugowania tych funkcji najpierw wypełniają bufor 0xFD. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_splitpath_s**|\<stdlib.h>|
-|**_wsplitpath_s**|\<stdlib.h> or \<wchar.h>|
+|**_wsplitpath_s**|\<STDLIB. h > lub \<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [_makepath_s —, _wmakepath_s —](makepath-s-wmakepath-s.md).
+Zobacz przykład dla [_makepath_s, _wmakepath_s](makepath-s-wmakepath-s.md).
 
 ## <a name="see-also"></a>Zobacz także
 

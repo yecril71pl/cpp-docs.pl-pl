@@ -1,9 +1,9 @@
 ---
 title: mbrlen
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbrlen
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,22 +15,25 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbrlen
 helpviewer_keywords:
 - mbrlen function
 ms.assetid: dde8dee9-e091-4c4c-81b3-639808885ae1
-ms.openlocfilehash: ec9079b9b164e2b609a956ddf3a75cd42923bafc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9559731f39db35e03f640bb30b9af3fff00cf66
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156775"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952507"
 ---
 # <a name="mbrlen"></a>mbrlen
 
-Określ liczbę bajtów, które są wymagane do ukończenia znaków wielobajtowych przy bieżących ustawieniach regionalnych z możliwością ponownego uruchomienia w środku znaków wielobajtowych.
+Określ liczbę bajtów, które są wymagane do ukończenia znaku wielobajtowego w bieżących ustawieniach regionalnych, z możliwością ponownego uruchomienia w środku znaku wielobajtowego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,36 +48,36 @@ size_t mbrlen(
 ### <a name="parameters"></a>Parametry
 
 *str*<br/>
-Wskaźnik na następny bajt, aby sprawdzić w ciągu znaków wielobajtowych.
+Wskaźnik do następnego bajtu do sprawdzenia w ciągu znaków wielobajtowych.
 
-*Liczba*<br/>
-Maksymalna liczba bajtów do wglądu.
+*liczbą*<br/>
+Maksymalna liczba bajtów do sprawdzenia.
 
 *mbstate*<br/>
-Wskaźnik do bieżącego stanu shift bajt początkowy *str*.
+Wskaźnik do bieżącego stanu przesunięcia początkowego bajtu *str*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeden z następujących wartości:
+Jedna z następujących wartości:
 
 |||
 |-|-|
-0|Następne *liczba* lub mniejsza liczba bajtów zakończą się znak wielobajtowy, który reprezentuje znak dwubajtowy o wartości null.
-1, aby *liczba*włącznie|Następne *liczba* lub mniejsza liczba bajtów Zakończ prawidłowym znakiem wielobajtowym. Wartość zwracana jest liczba bajtów, kończące znaki wielobajtowe.
-(size_t)(-2)|Następne *liczba* bajtów Współtworzenie niekompletne, ale potencjalnie prawidłowy znak wielobajtowy i wszystkie *liczba* bajty zostały przetworzone.
-(size_t)(-1)|Wystąpił błąd kodowania. Następne *liczba* lub mniejszej liczby bajtów nie przyczyniają się do kompletne i prawidłowy znak wielobajtowy. W tym przypadku **errno** jest ustawiona na EILSEQ i stan konwersji, w *mbstate* jest nieokreślona.
+0|Kolejna *Liczba* lub mniejsza liczba bajtów Ukończ znak wielobajtowy, który reprezentuje szeroki znak null.
+1 do *zliczenia*włącznie|Kolejna *Liczba* lub mniejsza liczba bajtów ukończą prawidłowy znak wielobajtowy. Zwracana wartość to liczba bajtów zakończonych znakiem wielobajtowym.
+(size_t)(-2)|Kolejna *Liczba* bajtów przyczynia się do niekompletnego, ale potencjalnie prawidłowego znaku wielobajtowego i wszystkie bajty *licznika* zostały przetworzone.
+(size_t)(-1)|Wystąpił błąd kodowania. Kolejna lub mniejsza *Liczba* bajtów nie przyczyniają się do pełnego i prawidłowego znaku wielobajtowego. W tym przypadku **errno** jest ustawiony na EILSEQ i stan konwersji w *mbstate* jest nieokreślony.
 
 ## <a name="remarks"></a>Uwagi
 
-**Mbrlen —** funkcja sprawdza co najwyżej *liczba* bajty począwszy od bajt wskazywany przez *str* do określenia liczby bajtów, które są wymagane do wykonania następnego znak wielobajtowy, w tym wszelkie sekwencje shift. Jest to równoważne wywołanie `mbrtowc(NULL, str, count, &mbstate)` gdzie *mbstate* jest albo dostarczonych przez użytkownika **mbstate_t** albo statyczny obiekt wewnętrzny, dostarczone przez bibliotekę.
+Funkcja **mbrlen** sprawdza z największą liczbą bajtów rozpoczynającą się od bajtu wskazywanym przez *str* , aby określić *liczbę bajtów,* które są wymagane do ukończenia następnego znaku wielobajtowego, w tym wszystkie sekwencje przesunięcia. Jest równoważne wywołaniu `mbrtowc(NULL, str, count, &mbstate)` , gdzie *mbstate* jest obiektem **mbstate_t** udostępnionym przez użytkownika lub statycznym obiektem wewnętrznym dostarczonym przez bibliotekę.
 
-**Mbrlen —** funkcji zapisuje i używa stanu shift niekompletne znaku wielobajtowego w *mbstate* parametru. Dzięki temu **mbrlen —** możliwości ponownego uruchamiania środku znak wielobajtowy, jeśli muszą być co najwyżej badanie *liczba* bajtów. Jeśli *mbstate* jest pustym wskaźnikiem, **mbrlen —** używa wewnętrznych statyczne **mbstate_t** obiekt ma być przechowywany stan shift. Ponieważ wewnętrzny **mbstate_t** obiekt nie jest metodą o bezpiecznych wątkach, zalecamy zawsze przydzielić i przekazania własnych *mbstate* parametru.
+Funkcja **mbrlen** zapisuje i używa stanu przesunięcia niekompletnego znaku wielobajtowego w parametrze *mbstate* . Dzięki temu **mbrlen** możliwość ponownego uruchomienia w środku znaku wielobajtowego, jeśli jest to konieczne, badanie z największą *liczbą* bajtów. Jeśli *mbstate* jest wskaźnikiem typu null, **mbrlen** używa wewnętrznego, statycznego obiektu **mbstate_t** do przechowywania stanu przesunięcia. Ponieważ wewnętrzny obiekt **mbstate_t** nie jest bezpieczny wątkowo, zalecamy, aby zawsze przydzielić i przekazać własny parametr *mbstate* .
 
-**Mbrlen —** funkcja różni się od [_mbclen —, mblen —, _mblen_l —](mbclen-mblen-mblen-l.md) przez jego restartability. Stan shift jest przechowywany w *mbstate* dla kolejnych wywołań tej samej lub innych funkcji ponownego uruchamiania. Podczas korzystania z funkcji ponownego uruchamiania i nonrestartable mieszania, wyniki są niezdefiniowane.  Na przykład, aplikacja powinna używać **wcsrlen** zamiast **wcslen —** Jeśli kolejne wywołanie **wcsrtombs —** jest używana zamiast **wcstombs —**.
+Funkcja **mbrlen** różni się od [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md) według ich ponownego uruchomienia. Stan przesunięcia jest przechowywany w *mbstate* dla kolejnych wywołań do tych samych lub innych funkcji, które można uruchomić ponownie. Wyniki są niezdefiniowane podczas mieszania użycia funkcji ponownego uruchamiania i nieuruchomionych ponownie.  Na przykład aplikacja powinna używać **wcsrlen** zamiast **wcslen** , jeśli podczas kolejnego wywołania **wcsrtombs** zostanie użyta wartość **wcstombs**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |Nie dotyczy|Nie dotyczy|**mbrlen**|Nie dotyczy|
 
@@ -82,13 +85,13 @@ Jeden z następujących wartości:
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**mbrlen**|\<wchar.h>|
+|**mbrlen**|\<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Ten przykład przedstawia sposób interpretacji znaków wielobajtowych zależy od bieżącej stronie kodowej i pokazuje możliwości wznawianie **mbrlen —**.
+Ten przykład pokazuje, jak interpretacja znaków wielobajtowych zależy od bieżącej strony kodowej i demonstruje możliwości wznawiania **mbrlen**.
 
 ```C
 // crt_mbrlen.c

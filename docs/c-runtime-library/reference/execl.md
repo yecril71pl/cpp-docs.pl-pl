@@ -1,9 +1,9 @@
 ---
 title: execl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - execl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,22 +14,25 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - execl
 helpviewer_keywords:
 - execl function
 ms.assetid: 10f24c52-7ff5-4a61-abcb-fce6d9553f23
-ms.openlocfilehash: d5196c0fc80e04f0085e9b1abbd8b4a8c4474bc1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c5b7bea0aeffc1ae75007c0592b7e97fce55ea38
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339105"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937605"
 ---
 # <a name="execl"></a>execl
 
-Ta funkcja POSIX jest niezalecana. Użyj ISO C++ zgodność [_execl](execl-wexecl.md) zamiast tego.
+Ta funkcja POSIX jest przestarzała. Zamiast tego użyj C++ zgodnej z normą ISO [_execl](execl-wexecl.md) .
 
 > [!IMPORTANT]
-> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

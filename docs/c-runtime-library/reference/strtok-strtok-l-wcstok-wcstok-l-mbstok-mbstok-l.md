@@ -1,14 +1,14 @@
 ---
 title: strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 ms.date: 03/25/2019
-apiname:
+api_name:
 - _mbstok_l
 - _mbstok
 - wcstok
 - _mbstok
 - strtok
 - _wcstok_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbstok
 - strtok
@@ -45,12 +48,12 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: 13fbc0e305f7ad183db06ec0060b2059b4964fe7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 62ed9edc6ec5a7ee60223f1c5e908aa14f421a25
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500792"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957653"
 ---
 # <a name="strtok-_strtok_l-wcstok-_wcstok_l-_mbstok-_mbstok_l"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
@@ -111,11 +114,11 @@ Zwraca wskaźnik do następnego tokenu znalezionego w *strToken*. Funkcje zwraca
 Funkcja **strtok** znajduje następny token w *strToken*. Zestaw znaków w *strDelimit* określa możliwe ograniczniki tokenu, który ma być znaleziony w *strToken* dla bieżącego wywołania. **wcstok** i **_mbstok** są wersjami znaków dwubajtowych i znakami wieloznacznymi **strtok**. Argumenty i wartość zwracana przez **wcstok** są ciągami znaków dwubajtowych; te z **_mbstok** są ciągami znaków wielobajtowych. Te trzy funkcje zachowują się identycznie w inny sposób.
 
 > [!IMPORTANT]
-> Te funkcje powodują potencjalne zagrożenie spowodowane przez problem z przepełnieniem buforu. Problemy związane z przepełnieniem buforu są częstą metodą ataku systemu, powodując nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
+> Te funkcje powodują potencjalne zagrożenie spowodowane przez problem z przepełnieniem buforu. Problemy związane z przepełnieniem buforu są częstą metodą ataku systemu, powodując nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 Przy pierwszym wywołaniu funkcji **strtok**funkcja pomija wiodące ograniczniki i zwraca wskaźnik do pierwszego tokenu w *strToken*, kończąc token ze znakiem null. Więcej tokenów można rozbić z pozostałej części *strToken* przez serię wywołań do **strtok**. Każde wywołanie **strtok** modyfikuje *strToken* , wstawiając znak null po **tokenie** zwróconym przez to wywołanie. Aby odczytać następny token z *strToken*, wywołaj **strtok** z wartością **null** dla argumentu *strToken* . Argument **null** *strToken* powoduje, że **strtok** szuka następnego tokenu w zmodyfikowanym *strToken*. Argument *strDelimit* może przyjmować dowolną wartość z jednego wywołania do następnego, aby zestaw ograniczników mógł się różnić.
 
-Wartość wyjściowa jest zależna od ustawienia ustawienia kategorii **LC_CTYPE** ustawień regionalnych. Aby uzyskać więcej informacji, [](setlocale-wsetlocale.md)Zobacz setlocale.
+Wartość wyjściowa jest zależna od ustawienia ustawienia kategorii **LC_CTYPE** ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md).
 
 Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. Wersje z sufiksem **_l** są identyczne, z tą różnicą, że w zamian korzystają z przekazaną parametrem ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 

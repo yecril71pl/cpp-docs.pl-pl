@@ -1,10 +1,10 @@
 ---
 title: _execl, _wexecl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _execl
 - _wexecl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _execl
 - _wexecl
@@ -27,19 +30,19 @@ helpviewer_keywords:
 - _wexecl function
 - execl function
 ms.assetid: 81fefb8a-0a06-4221-b2bc-be18e38e89f4
-ms.openlocfilehash: 3d736849f90782425e6e1c1cff04536972318c91
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 714ef80c4909e92100c4fa869b7544239f8edeb7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339276"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941949"
 ---
-# <a name="execl-wexecl"></a>_execl, _wexecl
+# <a name="_execl-_wexecl"></a>_execl, _wexecl
 
-Ładuje i uruchamia procesy podrzędne.
+Ładuje i wykonuje nowe procesy podrzędne.
 
 > [!IMPORTANT]
-> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -61,43 +64,43 @@ intptr_t _wexecl(
 ### <a name="parameters"></a>Parametry
 
 *cmdname*<br/>
-Ścieżka pliku do wykonania.
+Ścieżka pliku, który ma zostać wykonany.
 
-*arg0*,... *argn*<br/>
+*arg0*,... *argN*<br/>
 Lista wskaźników do parametrów.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-W przypadku powodzenia, te funkcje nie zwracają procesu wywołującego. Zwracana wartość -1 wskazuje błąd, w którym to przypadku **errno** zmienna globalna jest ustawiona.
+Jeśli to się powiedzie, te funkcje nie zwracają do procesu wywołującego. Zwracana wartość-1 wskazuje błąd, w którym to przypadku jest ustawiona zmienna globalna **errno** .
 
 |errno wartość|Opis|
 |-----------------|-----------------|
 |**E2BIG**|Miejsce wymagane dla argumentów i ustawień środowiska przekracza 32 KB.|
-|**EACCES**|Określony plik ma naruszenie zasad współużytkowania lub blokowania.|
-|**EINVAL**|Nieprawidłowy parametr (jeden lub więcej parametrów było wskaźnikiem typu null lub pusty ciąg znaków).|
-|**EMFILE**|Za dużo plików otwartych (do ustalenia, czy jest wykonywalny musi można otworzyć określonego pliku).|
+|**EACCES**|Określony plik ma naruszenie zasad blokowania lub udostępniania.|
+|**EINVAL**|Nieprawidłowy parametr (co najmniej jeden z parametrów był wskaźnikiem typu null lub ciągiem pustym).|
+|**EMFILE**|Zbyt wiele plików jest otwartych (należy otworzyć określony plik, aby określić, czy jest to plik wykonywalny).|
 |**ENOENT**|Nie znaleziono pliku lub ścieżki.|
 |**ENOEXEC**|Określony plik nie jest wykonywalny lub ma nieprawidłowy format pliku wykonywalnego.|
-|**ENOMEM**|Jest dostępna do wykonania nowego procesu; nie ma wystarczającej ilości pamięci dostępna pamięć jest uszkodzona; lub istnieje nieprawidłowy blok, wskazujący, że proces wywołujący nie został poprawnie przydzielony.|
+|**ENOMEM**|Za mało dostępnej pamięci do wykonania nowego procesu; dostępna pamięć została uszkodzona; lub istnieje nieprawidłowy blok, wskazujący, że proces wywołujący nie został poprawnie przydzielony.|
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji ładuje i uruchamia nowy proces, przekazując każdy argument wiersza polecenia jako oddzielny parametr. Pierwszy argument jest poleceniem lub nazwą pliku wykonywalnego, a drugi argument funkcji powinna być taka sama, jak pierwsza. Staje się `argv[0]` w procesie wykonanym. Trzeci argument jest pierwszym argumentem, `argv[1]`, proces jest wykonywany.
+Każda z tych funkcji ładuje i uruchamia nowy proces, przekazując każdy argument wiersza polecenia jako oddzielny parametr. Pierwszy argument jest poleceniem lub nazwą pliku wykonywalnego, a drugi argument powinien być taki sam jak pierwszy. Zostanie `argv[0]` ona przeprowadzony w procesie. Trzeci argument jest pierwszym argumentem `argv[1]`, z którego wykonywany jest proces.
 
-**_Execl** funkcje sprawdzają poprawność swoich parametrów. Jeśli *cmdname* lub *arg0* jest wskaźnikiem typu null lub pustym ciągiem, funkcje te wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md) Jeśli wykonywania może być kontynuowane, te funkcje ustawiają **errno** do **EINVAL** i zwracają wartość -1. Żaden nowy proces jest wykonywany.
+Funkcje **_execl** sprawdzają poprawność swoich parametrów. Jeśli *cmdname* lub *arg0* jest wskaźnikiem o wartości null lub pustym ciągiem, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md) , jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na  **EINVAL** i Return-1. Żaden nowy proces nie jest wykonywany.
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Wymagany nagłówek|Opcjonalne nagłówki|
+|Funkcja|Wymagany nagłówek|Opcjonalny nagłówek|
 |--------------|---------------------|---------------------|
 |**_execl**|\<process.h>|\<errno.h>|
-|**_wexecl**|\<process.h > lub \<wchar.h >|\<errno.h>|
+|**_wexecl**|\<Process. h > lub \<WCHAR. h >|\<errno.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład w [_exec, _wexec — funkcje](../../c-runtime-library/exec-wexec-functions.md).
+Zobacz przykład w [_exec, _Wexec Functions](../../c-runtime-library/exec-wexec-functions.md).
 
 ## <a name="see-also"></a>Zobacz także
 

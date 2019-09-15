@@ -1,9 +1,9 @@
 ---
 title: _CIlog10
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CIlog10
-apilocation:
+api_location:
 - msvcr100.dll
 - msvcr120.dll
 - msvcr80.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcrt.dll
 - msvcr110.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CIlog10
 - _CIlog10
@@ -20,16 +23,16 @@ helpviewer_keywords:
 - _CIlog10 intrinsic
 - CIlog10 intrinsic
 ms.assetid: 05d7fcaa-3cff-4cc5-8d44-015e7cacba24
-ms.openlocfilehash: 771ed103c8ab0fe29061086923189cc90eb047d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c99fdab859acf280afc8a595696a17b2d03a47e4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290186"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944610"
 ---
-# <a name="cilog10"></a>_CIlog10
+# <a name="_cilog10"></a>_CIlog10
 
-Wykonuje `log10` operacja najwyższą wartość ze stosu.
+`log10` Wykonuje operację na najwyższej wartości na stosie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,9 +42,9 @@ void __cdecl _CIlog10();
 
 ## <a name="remarks"></a>Uwagi
 
-Ta wersja `log10` funkcja ma specjalne Konwencja wywoływania obsługującą przez kompilator. Funkcja przyspiesza wykonywanie, ponieważ uniemożliwia kopie generowany i pomaga w alokacja rejestru.
+Ta wersja `log10` funkcji ma wyspecjalizowaną konwencję wywoływania, którą rozpoznaje kompilator. Funkcja przyspiesza wykonywanie, ponieważ uniemożliwia generowanie kopii i pomaga w zarejestrowaniu alokacji.
 
-Wartość wynikowa są wypychane na górze stosu.
+Wartość wyników jest wypychana na górze stosu.
 
 ## <a name="requirements"></a>Wymagania
 

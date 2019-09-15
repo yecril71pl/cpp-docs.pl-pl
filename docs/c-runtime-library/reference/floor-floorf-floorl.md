@@ -1,11 +1,11 @@
 ---
 title: floor, floorf, floorl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - floorf
 - floorl
 - floor
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - floor
 - floorl
@@ -29,16 +32,16 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: 050b7ea0eedf07666fa52145eeaf43f8fde2e18b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c646437b4a1d79ef79e53d79fcbc342e5360f3cd
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333589"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957156"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
-Oblicza Zaokrąglenie w dół wartość.
+Oblicza piętro wartości.
 
 ## <a name="syntax"></a>Składnia
 
@@ -67,17 +70,17 @@ Wartość zmiennoprzecinkowa.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Floor** funkcje zwracają wartość zmiennoprzecinkową, która reprezentuje największa liczba całkowita, która jest mniejsza niż lub równa *x*. Nie będzie zwrotu błędu.
+Funkcje **podłogi** zwracają wartość zmiennoprzecinkową, która reprezentuje największą liczbę całkowitą, która jest mniejsza lub równa *x*. Brak powrotu błędu.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|GRANICACH QNAN, ZNAJDŹ|brak|_DOMAIN|
+|QNAN, IND|brak|_DOMAIN|
 
-**FLOOR** zawiera implementację, która używa Streaming SIMD Extensions 2 (SSE2). Aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2, zobacz [_set_sse2_enable —](set-sse2-enable.md).
+**piętro** ma implementację, która używa Streaming SIMD Extensions 2 (SSE2). Aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2, zobacz [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Język C++ pozwala na przeciążenie, można więc wywoływać przeciążenia **floor** przyjmujące i zwracające **float** i **długie** **double** wartości. W programie C **floor** zawsze przyjmuje i zwraca **double**.
+C++umożliwia **Przeciążenie, dzięki** czemu można wywoływać przeciążenia, które pobierają i zwracają wartości **zmiennoprzecinkowe** i **długie** **Double** . W programie C **podłoga** zawsze przyjmuje i zwraca wartość **podwójną**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -85,7 +88,7 @@ Język C++ pozwala na przeciążenie, można więc wywoływać przeciążenia **
 |--------------|---------------------|
 |**floor**, **floorf**, **floorl**|\<math.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

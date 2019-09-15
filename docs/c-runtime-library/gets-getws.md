@@ -1,10 +1,10 @@
 ---
 title: gets, _getws
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getws
 - gets
-apilocation:
+api_location:
 - msvcr80.dll
 - msvcr90.dll
 - msvcr120.dll
@@ -13,7 +13,10 @@ apilocation:
 - msvcrt.dll
 - msvcr100.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getts
 - gets
@@ -28,22 +31,22 @@ helpviewer_keywords:
 - gets function
 - standard input, reading from
 ms.assetid: 1ec2dd4b-f801-48ea-97c2-892590f16024
-ms.openlocfilehash: bd5f4e885c0291be963320610942415fc7b61172
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 722d67336e11250f6a5459078dcea173f69bc2af
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62289562"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944343"
 ---
-# <a name="gets-getws"></a>gets, _getws
+# <a name="gets-_getws"></a>gets, _getws
 
-Pobiera wiersz ze `stdin` strumienia. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [gets_s —, _getws_s —](../c-runtime-library/reference/gets-s-getws-s.md).
-
-> [!IMPORTANT]
->  Te funkcje są przestarzałe. Począwszy od programu Visual Studio 2015, nie są one dostępne w CRT. Bezpieczne wersje tych funkcji, gets_s — i _getws_s —, są nadal dostępne. Informacje na temat tych funkcji alternatywnych, zobacz [gets_s —, _getws_s —](../c-runtime-library/reference/gets-s-getws-s.md).
+Pobiera wiersz ze `stdin` strumienia. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).
 
 > [!IMPORTANT]
->  Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+>  Te funkcje są przestarzałe. Począwszy od programu Visual Studio 2015, nie są one dostępne w CRT. Bezpieczne wersje tych funkcji, gets_s i _getws_s, są nadal dostępne. Aby uzyskać informacje na temat tych funkcji alternatywnych, zobacz [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).
+
+> [!IMPORTANT]
+>  Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -67,24 +70,24 @@ wchar_t *_getws(
 #### <a name="parameters"></a>Parametry
 
 *buffer*<br/>
-Lokalizacja magazynowa ciągu wejściowego.
+Lokalizacja magazynu dla ciągu wejściowego.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość argumentu, jeśli to się powiedzie. A **NULL** wskaźnik wskazuje warunek błędu lub końca pliku. Użyj [ferror](../c-runtime-library/reference/ferror.md) lub [feof](../c-runtime-library/reference/feof.md) do określenia, które z nich ma wystąpić. Jeśli `buffer` jest **NULL**, te wywołają procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **NULL** i ustawiają mechanizm errno jako `EINVAL`.
+Zwraca swój argument, jeśli powodzenie. Wskaźnik o **wartości null** wskazuje błąd lub stan końca pliku. Użyjelement lub [feof](../c-runtime-library/reference/feof.md) [, aby](../c-runtime-library/reference/ferror.md) określić, który z nich wystąpił. Jeśli `buffer` ma **wartość null**, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **wartość null** i ustawiają errno `EINVAL`na.
 
 ## <a name="remarks"></a>Uwagi
 
-`gets` Funkcja odczytuje wiersz ze standardowego strumienia wejściowego `stdin` i zapisuje go w `buffer`. Linia składa się z wszystkich znaków, w tym pierwszego znaku nowego wiersza (\n). `gets` następnie zastępuje znak nowego wiersza znakiem null (\0) przed zwróceniem linii. Z kolei `fgets` funkcji zachowuje znak nowego wiersza. `_getws` jest wersją znaków dwubajtowych `gets`; jej argument i wartość zwracana to ciągi znaków dwubajtowych.
+Funkcja odczytuje wiersz ze standardowego strumienia `stdin` wejściowego i zapisuje go w `buffer`. `gets` Wiersz składa się ze wszystkich znaków do i łącznie z pierwszym znakiem nowego wiersza ("\n"). `gets`następnie zastępuje znak nowego wiersza znakiem null (' \ 0 ') przed zwróceniem wiersza. W przeciwieństwie `fgets` funkcja zachowuje znak nowego wiersza. `_getws`jest wersją `gets`znaków dwubajtowych; jej argument i wartość zwracana są ciągami znaków dwubajtowych.
 
 > [!IMPORTANT]
->  Ponieważ nie istnieje żaden sposób, aby ograniczyć liczbę znaków czytanych przez pobiera, niezaufane dane wejściowe mogą łatwo spowodować przeładowanie buforu. Zamiast nich należy używać słów kluczowych `fgets`.
+>  Ponieważ nie ma możliwości ograniczenia liczby znaków odczytywanych przez pobranie, niezaufane dane wejściowe mogą łatwo spowodować przepełnienie buforu. Zamiast nich należy używać słów kluczowych `fgets`.
 
-W języku C++ funkcje te mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../c-runtime-library/secure-template-overloads.md).
+W C++programie te funkcje mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |`_getts`|`gets`|`gets`|`_getws`|
 
@@ -93,9 +96,9 @@ W języku C++ funkcje te mają przeciążenia szablonu, które wywołują nowsze
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |`gets`|\<stdio.h>|
-|`_getws`|\<stdio.h > lub \<wchar.h >|
+|`_getws`|\<stdio. h > lub \<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -115,7 +118,7 @@ int main( void )
 }
 ```
 
-Należy pamiętać, że dane wejściowe dłuższe niż 20 znaków zostanie przepełnią bufor wierszy i prawie na pewno, że program ulega awarii.
+Należy pamiętać, że dane wejściowe dłuższe niż 20 znaków przekroczą bufor wiersza i prawie z tego powodu spowodują awarię programu.
 
 ```Output
 
@@ -124,7 +127,7 @@ Hello there!The line entered was: Hello there!
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../c-runtime-library/stream-i-o.md)<br/>
 [fgets, fgetws](../c-runtime-library/reference/fgets-fgetws.md)<br/>
 [fputs, fputws](../c-runtime-library/reference/fputs-fputws.md)<br/>
 [puts, _putws](../c-runtime-library/reference/puts-putws.md)

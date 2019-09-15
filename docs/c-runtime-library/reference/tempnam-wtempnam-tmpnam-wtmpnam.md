@@ -1,12 +1,12 @@
 ---
 title: _tempnam, _wtempnam, tmpnam, _wtmpnam
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wtempnam
 - _wtmpnam
 - tmpnam
 - _tempnam
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wtempnam
 - _wtmpnam
@@ -40,12 +43,12 @@ helpviewer_keywords:
 - _wtmpnam function
 - _wtempnam function
 ms.assetid: 3ce75f0f-5e30-42a6-9791-8d7cbfe70fca
-ms.openlocfilehash: 0e8e11182948e9bccf1c55685cc7c3d55ff697c8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9fd1eb9f2f718afec5b7d5555145fcd7e5cc17cf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500764"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957518"
 ---
 # <a name="_tempnam-_wtempnam-tmpnam-_wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
 
@@ -86,7 +89,7 @@ Wskaźnik, który będzie przechowywać wygenerowaną nazwę i będzie taka sama
 Każda z tych funkcji zwraca wskaźnik do wygenerowanej nazwy lub **wartości null** , jeśli wystąpił błąd. Błąd może wystąpić, Jeśli podjęto próbę więcej niż **TMP_MAX** (patrz stdio. H) wywołania z **tmpnam** lub w przypadku używania **_tempnam** , w zmiennej środowiskowej tmp i w parametrze *dir* jest określona Nieprawidłowa nazwa katalogu.
 
 > [!NOTE]
-> Wskaźniki zwracane przez **tmpnam** i **_wtmpnam** wskazują wewnętrzne bufory statyczne. [](free.md) nie należy wywoływać bezpłatnej, aby cofnąć te wskaźniki. należy wywołać **bezpłatne** dla wskaźników przyznanych przez **_tempnam** i **_wtempnam**.
+> Wskaźniki zwracane przez **tmpnam** i **_wtmpnam** wskazują wewnętrzne bufory statyczne. nie należy wywoływać [bezpłatnej](free.md) , aby cofnąć te wskaźniki. należy wywołać **bezpłatne** dla wskaźników przyznanych przez **_tempnam** i **_wtempnam**.
 
 ## <a name="remarks"></a>Uwagi
 

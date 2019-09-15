@@ -1,9 +1,9 @@
 ---
 title: _lfind_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lfind_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lfind_s
 - _lfind_s
@@ -27,16 +30,16 @@ helpviewer_keywords:
 - searching, linear
 - _lfind_s function
 ms.assetid: f1d9581d-5c9d-4222-a31c-a6dfafefa40d
-ms.openlocfilehash: 08c04d9d1ca69998d54304c96468298013907179
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69db97dc24b567714bda3e02f5f53ff381ae4911
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286430"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953454"
 ---
-# <a name="lfinds"></a>_lfind_s
+# <a name="_lfind_s"></a>_lfind_s
 
-Wykonuje wyszukiwanie liniowe dla określonego klucza. Wersja [_lfind —](lfind.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Wykonuje wyszukiwanie liniowe dla określonego klucza. Wersja [_lfind](lfind.md) z ulepszeniami zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,48 +60,48 @@ void *_lfind_s(
 Obiekt do wyszukania.
 
 *base*<br/>
-Wskaźnik do bazy danych wyszukiwania.
+Wskaźnik do podstawy wyszukiwania danych.
 
-*Numer*<br/>
+*Liczba*<br/>
 Liczba elementów tablicy.
 
-*Rozmiar*<br/>
-Rozmiar elementów tablicy, w bajtach.
+*zmienia*<br/>
+Rozmiar elementów tablicy w bajtach.
 
-*compare*<br/>
-Wskaźnik do procedury porównania. Pierwszy parametr jest *kontekstu* wskaźnika. Drugi parametr jest wskaźnikiem do klucza dla wyszukiwania. Trzeci parametr jest wskaźnik do elementu tablicy, który można porównać z kluczem.
+*porównaniu*<br/>
+Wskaźnik do procedury porównania. Pierwszy parametr jest wskaźnikiem *kontekstu* . Drugi parametr jest wskaźnikiem do klucza do wyszukania. Trzeci parametr jest wskaźnikiem do elementu tablicy, który będzie porównywany z kluczem.
 
-*Kontekst*<br/>
-Wskaźnik do obiektu, który może być uzyskiwany w funkcji porównywania.
+*Context*<br/>
+Wskaźnik do obiektu, do którego można uzyskać dostęp w funkcji porównywania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli klucz zostanie znaleziony, **_lfind_s —** zwraca wskaźnik do elementu tablicy, od *podstawowy* odpowiadający *klucz*. Jeśli klucz nie zostanie znaleziony, **_lfind_s —** zwraca **NULL**.
+Jeśli klucz zostanie znaleziony, **_lfind_s** zwraca wskaźnik do elementu tablicy w *bazie* , który odpowiada *kluczowi*. Jeśli klucz nie zostanie znaleziony, **_lfind_s** zwraca **wartość null**.
 
-Jeśli nieprawidłowe parametry są przekazywane do funkcji, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL** a funkcja zwraca **NULL**.
+Jeśli do funkcji są przenoszone nieprawidłowe parametry, procedura obsługi nieprawidłowego parametru jest wywoływana, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcja zwraca **wartość null**.
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|klawisz|base|compare|Liczba|size|errno|
+|klawisz|base|compare|numerowan|size|errno|
 |---------|----------|-------------|---------|----------|-----------|
-|**NULL**|Wszystkie|Wszystkie|Wszystkie|Wszystkie|**EINVAL**|
-|Wszystkie|**NULL**|Wszystkie|!= 0|Wszystkie|**EINVAL**|
-|Wszystkie|Wszystkie|Wszystkie|Wszystkie|zero|**EINVAL**|
-|Wszystkie|Wszystkie|**NULL**|Usługi|Wszystkie|**EINVAL**|
+|**NULL**|Ile|Ile|Ile|Ile|**EINVAL**|
+|Ile|**NULL**|Ile|!= 0|Ile|**EINVAL**|
+|Ile|Ile|Ile|Ile|zero|**EINVAL**|
+|Ile|Ile|**NULL**|Wskazani|Ile|**EINVAL**|
 
 ## <a name="remarks"></a>Uwagi
 
-**_Lfind_s —** funkcja wykonuje wyszukiwanie liniowe dla wartości *klucz* tablicę *numer* elementów, z których każdy z *szerokość* bajtów. W odróżnieniu od **bsearch_s —**, **_lfind_s —** nie wymaga tablicy, która ma zostać posortowana. *Podstawowy* argument jest wskaźnikiem do podstawy tablicy, który ma być przeszukiwany. *Porównania* argument jest wskaźnikiem do procedury dostarczone przez użytkownika, która porównuje dwa elementy tablicy, a następnie zwraca wartość określającą, ich relacje. **_lfind_s —** wywołania *porównania* rutynowych jeden lub więcej razy podczas wyszukiwania, przekazując *kontekstu* wskaźnik i wskaźniki do dwóch elementów tablicy przy każdym wywołaniu. *Porównania* procedury należy porównać elementów, a następnie zwraca wartość różną od zera (co oznacza że elementy są różne) lub od 0 (co oznacza, że elementy są identyczne).
+Funkcja **_lfind_s** wykonuje wyszukiwanie liniowe dla *klucza* wartości w tablicy elementów *liczbowych* , każda z bajtów o *szerokości* . W przeciwieństwie do **bsearch_s**, **_lfind_s** nie wymaga sortowania tablicy. Argument *podstawowy* jest wskaźnikiem do podstawy tablicy do przeszukania. Argument *Compare* jest wskaźnikiem do procedury dostarczonej przez użytkownika, która porównuje dwa elementy tablicy, a następnie zwraca wartość określającą ich relację. **_lfind_s** wywołuje procedurę *porównania* w jeden lub więcej razy podczas wyszukiwania, przekazując wskaźnik *kontekstu* i wskaźniki do dwóch elementów tablicy dla każdego wywołania. Procedura *Compare* musi porównać elementy, a następnie zwracać wartość różną od zera (co oznacza, że elementy są różne) lub 0 (oznacza to, że elementy są identyczne).
 
-**_lfind_s —** przypomina **_lfind —** z wyjątkiem dodawania *kontekstu* wskaźnik do argumentów funkcji porównywania i lista parametrów funkcji. *Kontekstu* wskaźnik może być przydatne, jeśli struktura wyszukiwanych danych jest częścią obiektu i *porównania* funkcji ma dostęp do elementów członkowskich obiektu. *Porównania* funkcji można rzutować wskaźnika void do odpowiedniego obiektu typu i dostęp do elementów członkowskich tego obiektu. Dodanie *kontekstu* sprawia, że parametr **_lfind_s —** bezpieczniejsze, ponieważ dodatkowy kontekst można uniknąć błędów współużytkowania wątkowości, związanych z użyciem statyczne zmienne, aby udostępnić dane *porównania* funkcji.
+**_lfind_s** jest podobna do **_lfind** , z wyjątkiem dodawania wskaźnika *kontekstu* do argumentów funkcji porównania i listy parametrów funkcji. Wskaźnik *kontekstu* może być przydatny, jeśli przeszukiwana struktura danych jest częścią obiektu, a funkcja *porównywania* musi uzyskać dostęp do elementów członkowskich obiektu. Funkcja *Compare* może rzutować wskaźnik void na odpowiedni typ obiektu i uzyskać dostęp do elementów członkowskich tego obiektu. Dodanie parametru *Context* sprawia, że **_lfind_s** bezpieczniejszy, ponieważ można użyć dodatkowego kontekstu, aby uniknąć błędów współużytkowania wątkowości skojarzonych z użyciem zmiennych statycznych w celu udostępnienia danych funkcji *Compare* .
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_lfind_s**|\<Search.h >|
+|**_lfind_s**|\<Wyszukaj. h >|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

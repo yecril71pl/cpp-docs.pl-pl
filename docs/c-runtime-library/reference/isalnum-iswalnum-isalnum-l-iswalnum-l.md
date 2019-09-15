@@ -1,12 +1,12 @@
 ---
 title: isalnum, iswalnum, _isalnum_l, _iswalnum_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _iswalnum_l
 - _isalnum_l
 - iswalnum
 - isalnum
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _istalnum_l
 - _iswalnum_l
@@ -37,14 +40,14 @@ helpviewer_keywords:
 - _istalnum_l function
 - _iswalnum_l function
 ms.assetid: 0dc51306-ade8-4944-af27-e4176fc89093
-ms.openlocfilehash: 3aa9adada9ad904221b91e41ac2d843b174677ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 636e43a921c2b859db3a31b3dd658112f4e8e9f4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331652"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954590"
 ---
-# <a name="isalnum-iswalnum-isalnuml-iswalnuml"></a>isalnum, iswalnum, _isalnum_l, _iswalnum_l
+# <a name="isalnum-iswalnum-_isalnum_l-_iswalnum_l"></a>isalnum, iswalnum, _isalnum_l, _iswalnum_l
 
 Określa, czy liczba całkowita reprezentuje znak alfanumeryczny.
 
@@ -60,36 +63,36 @@ int _iswalnum_l( wint_t c, _locale_t locale );
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Liczba całkowita to testowania.
+Liczba całkowita do przetestowania.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych procedur zwraca wartość różną od zera, jeśli *c* jest szczególną reprezentacją znaku alfanumerycznego. **isalnum** zwraca wartość różną od zera, jeśli **isalpha** lub **isdigit** jest różna od zera dla *c*, to znaczy, jeśli *c* znajduje się w zakresu A - Z, - z lub 0 - 9. **iswalnum —** zwraca wartość różną od zera, jeśli **iswalpha —** lub **iswdigit —** jest różna od zera dla *c*. Każda z tych procedur zwraca 0, jeśli *c* nie spełnia warunku testowego.
+Każda z tych procedur zwraca wartość różną od zera, jeśli *c* jest szczególną reprezentacją znaku alfanumerycznego. **isalnum** zwraca wartość różną od zera, jeśli parametr **isalpha** lub **iscyfra** jest różny od zera dla *c*, czyli jeśli *c* należy do zakresów a-z, a-z, lub 0-9. **iswalnum** zwraca wartość różną od zera, jeśli **iswalpha** lub **iswdigit** jest różna od zera dla *c*. Każda z tych procedur zwraca wartość 0, jeśli *c* nie spełnia warunku testu.
 
-Wersje tych funkcji, które mają **_l** sufiksa używa przekazanego parametru ustawień regionalnych, zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wersje tych funkcji, które mają sufiks **_l** używają parametru ustawień regionalnych, który został przekazaną, zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-Zachowanie **isalnum** i **_isalnum_l —** jest niezdefiniowane, jeżeli *c* nie jest równy EOF lub z zakresu od 0 do 0xFF włącznie. Jeśli jest używana biblioteka debugowania CRT i *c* nie jest jedną z tych wartości, funkcje wywołują potwierdzenie.
+Zachowanie **isalnum** i **_isalnum_l** jest niezdefiniowane, jeśli *c* nie jest typu EOF lub z zakresu od 0 do 0xFF włącznie. Gdy jest używana Biblioteka CRT debugowania, a *c* nie jest jedną z tych wartości, funkcje zgłaszają potwierdzenie.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_istalnum —**|**isalnum**|[_ismbcalnum](ismbcalnum-functions.md)|**iswalnum**|
-|**_istalnum_l —**|**_isalnum_l**|**_ismbcalnum_l**|**_iswalnum_l**|
+|**_istalnum**|**isalnum**|[_ismbcalnum](ismbcalnum-functions.md)|**iswalnum**|
+|**_istalnum_l**|**_isalnum_l**|**_ismbcalnum_l**|**_iswalnum_l**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**isalnum**|\<ctype.h>|
-|**iswalnum**|\<CType.h > lub \<wchar.h >|
+|**iswalnum**|\<CType. h > lub \<WCHAR. h >|
 |**_isalnum_l**|\<ctype.h>|
-|**_iswalnum_l**|\<CType.h > lub \<wchar.h >|
+|**_iswalnum_l**|\<CType. h > lub \<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

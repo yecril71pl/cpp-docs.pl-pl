@@ -1,12 +1,12 @@
 ---
 title: strcspn, wcscspn, _mbscspn, _mbscspn_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbscspn_l
 - wcscspn
 - _mbscspn
 - strcspn
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strcspn
 - _mbscspn
@@ -39,19 +42,19 @@ helpviewer_keywords:
 - mbscspn function
 - _tcscspn function
 ms.assetid: f73f51dd-b533-4e46-ba29-d05c553708a6
-ms.openlocfilehash: bcb1699f9a3f3c4d9e5ee040fdcb2e999397ac30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 501732cd4758d14a32aba3bdf503c5d314eee7f9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353979"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940767"
 ---
-# <a name="strcspn-wcscspn-mbscspn-mbscspnl"></a>strcspn, wcscspn, _mbscspn, _mbscspn_l
+# <a name="strcspn-wcscspn-_mbscspn-_mbscspn_l"></a>strcspn, wcscspn, _mbscspn, _mbscspn_l
 
-Zwraca indeks pierwszego wystąpienia w ciągu znaków, który należy do zestawu znaków.
+Zwraca indeks pierwszego wystąpienia w ciągu, znaku, który należy do zestawu znaków.
 
 > [!IMPORTANT]
-> **_mbschr —** i **_mbschr_l —** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbschr** i **_mbschr_l** nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -78,31 +81,31 @@ size_t _mbscspn_l(
 ### <a name="parameters"></a>Parametry
 
 *str*<br/>
-Zakończony znakiem null przeszukiwanego ciągu.
+Wyszukiwany ciąg zakończony znakiem null.
 
 *strCharSet*<br/>
 Zestaw znaków zakończony znakiem null.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje te zwracają indeks pierwszego znaku w *str* w *strCharSet*. Jeśli żaden ze znaków w *str* znajduje się w *strCharSet*, wówczas wartość zwracana jest długością *str*.
+Te funkcje zwracają indeks pierwszego znaku w *str* , który znajduje się w *strCharSet*. Jeśli żaden ze znaków w *str* nie jest w *strCharSet*, wartość zwracana jest długość *str*.
 
-Zwraca żadnej wartości zarezerwowanej, aby wskazać błąd.
+Żadna wartość zwracana nie jest zarezerwowana do wskazania błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-**wcscspn —** i **_mbscspn —** są wersjami znaków dwubajtowych i znaków wielobajtowych **strcspn**. Argumenty **wcscspn —** są znakami dwubajtowymi ciągów; te z **_mbscspn —** są ciągami znaków wielobajtowych.
+**wcscspn** i **_mbscspn** są wersjami znaków dwubajtowych i znakami wieloznacznymi **strcspn**. Argumenty **wcscspn** są ciągami znaków dwubajtowych; te z **_mbscspn** są ciągami znaków wielobajtowych.
 
-**_mbscspn —** sprawdza poprawność parametrów. Jeśli *str* lub *strCharSet* jest pustym wskaźnikiem, wywoływany nieprawidłowy parametr uchwytu, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca 0 i ustawia **errno** do **EINVAL**. **strcspn** i **wcscspn —** nie sprawdzają poprawność swoich parametrów. Te trzy funkcje zachowują się identycznie.
+**_mbscspn** sprawdza poprawność swoich parametrów. Jeśli parametr *str* lub *strCharSet* jest pustym wskaźnikiem, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość 0 i ustawia **errno** na **EINVAL**. **strcspn** i **wcscspn** nie weryfikują ich parametrów. Te trzy funkcje zachowują się identycznie w inny sposób.
 
-Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji, bez **_l** sufiks używają bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych; wersje **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych w zamian przekazanych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocals](setlocale-wsetlocale.md) . Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. wersje z sufiksem **_l** są identyczne, z tą różnicą, że w zamian korzystają z przekazaną parametrem ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscspn**|**strcspn**|**_mbscspn**|**wcscspn**|
 |n/d|n/d|**_mbscspn_l**|n/d|
@@ -112,10 +115,10 @@ Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategor
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**strcspn**|\<string.h>|
-|**wcscspn**|\<Włącz String.h > lub \<wchar.h >|
+|**wcscspn**|\<ciąg. h > lub \<WCHAR. h >|
 |**_mbscspn**, **_mbscspn_l**|\<mbstring.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

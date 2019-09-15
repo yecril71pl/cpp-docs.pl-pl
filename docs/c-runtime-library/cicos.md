@@ -1,9 +1,9 @@
 ---
 title: _CIcos
 ms.date: 04/11/2018
-apiname:
+api_name:
 - _CIcos
-apilocation:
+api_location:
 - msvcr90.dll
 - msvcrt.dll
 - msvcr120.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CIcos
 - _CIcos
@@ -20,16 +23,16 @@ helpviewer_keywords:
 - _CIcos intrinsic
 - CIcos intrinsic
 ms.assetid: 6fc203fb-66f3-4ead-9784-f85833c26f1b
-ms.openlocfilehash: fef9ef9e197dcd6e8a1880c3acdfa2755ccf1ae1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a57e948a73b8c4243ebe5a8a12f62cc55a40f3b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290212"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940537"
 ---
-# <a name="cicos"></a>_CIcos
+# <a name="_cicos"></a>_CIcos
 
-Oblicza cosinus najwyższą wartość ze stosu zmiennoprzecinkowego.
+Oblicza cosinus górnej wartości w stosie zmiennoprzecinkowym.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,9 +42,9 @@ void __cdecl _CIcos();
 
 ## <a name="remarks"></a>Uwagi
 
-Ta wersja [cos](../c-runtime-library/reference/cos-cosf-cosl.md) funkcja ma specjalne Konwencja wywoływania obsługującą przez kompilator. Jego przyspiesza wykonywanie, ponieważ uniemożliwia kopie generowany i pomaga w alokacja rejestru.
+Ta wersja funkcji [cos](../c-runtime-library/reference/cos-cosf-cosl.md) ma wyspecjalizowaną konwencję wywoływania, którą rozpoznaje kompilator. Przyspiesza to wykonywanie, ponieważ uniemożliwia generowanie kopii i pomaga w zarejestrowaniu alokacji.
 
-Wartość wynikowa są wypychane na górze stosu zmiennoprzecinkowego.
+Wartość wyników jest wypychana na górze stosu zmiennoprzecinkowego.
 
 ## <a name="requirements"></a>Wymagania
 

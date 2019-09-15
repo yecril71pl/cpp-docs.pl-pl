@@ -1,9 +1,9 @@
 ---
 title: __RTDynamicCast
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __RTDynamicCast
-apilocation:
+api_location:
 - msvcr90.dll
 - msvcr110.dll
 - msvcr120.dll
@@ -11,22 +11,25 @@ apilocation:
 - msvcr100.dll
 - msvcr80.dll
 - msvcr110_clr0400.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __RTDynamicCast
 helpviewer_keywords:
 - __RTDynamicCast
 ms.assetid: 56aa2d7a-aa47-46ef-830d-e37175611239
-ms.openlocfilehash: f4bf4895af99b2d5c2d61e739c9d49d59cecb020
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c4b0caadf20d6c5494acf47ee5a788b5ee009c47
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184531"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957340"
 ---
-# <a name="rtdynamiccast"></a>__RTDynamicCast
+# <a name="__rtdynamiccast"></a>__RTDynamicCast
 
-Implementacja środowiska uruchomieniowego [dynamic_cast](../cpp/dynamic-cast-operator.md) operatora.
+Implementacja operatora [dynamic_cast](../cpp/dynamic-cast-operator.md) w czasie wykonywania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,34 +46,34 @@ PVOID __RTDynamicCast (
 #### <a name="parameters"></a>Parametry
 
 *inptr*<br/>
-Wskaźnik do obiektu polimorficznych.
+Wskaźnik do obiektu polimorficznego.
 
 *VfDelta*<br/>
 Przesunięcie wskaźnika funkcji wirtualnej w obiekcie.
 
 *SrcType*<br/>
-Typ statyczny obiekt wskazywany przez `inptr` parametru.
+Typ statyczny obiektu wskazywanego przez `inptr` parametr.
 
-*TargetType*<br/>
+*Typ*<br/>
 Zamierzony wynik rzutowania.
 
 *isReference*<br/>
-**wartość true,** Jeśli dane wejściowe to odwołanie; **false** Jeśli danych wejściowych jest wskaźnikiem.
+**prawda** , jeśli dane wejściowe są odwołaniami; **Fałsz** , jeśli dane wejściowe są wskaźnikiem.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do odpowiedniego obiektu podrzędnego, jeśli to się powiedzie; w przeciwnym razie **NULL**.
+Wskaźnik do odpowiedniego obiektu podrzędnego, jeśli powodzenie; w przeciwnym razie **wartość null**.
 
 ## <a name="exceptions"></a>Wyjątki
 
-`bad_cast()` Jeśli dane wejściowe `dynamic_cast<>` jest odwołaniem i rzutowania zakończy się niepowodzeniem.
+`bad_cast()`Jeśli dane wejściowe `dynamic_cast<>` to odwołanie, a rzutowanie nie powiedzie się.
 
 ## <a name="remarks"></a>Uwagi
 
-Konwertuje `inptr` do obiektu typu `TargetType`. Typ `inptr` musi być wskaźnikiem, jeśli `TargetType` jest wskaźnikiem lub l wartością, jeśli `TargetType` to odwołanie. `TargetType` musi to być wskaźnik lub odwołanie do typu klasy uprzednio zdefiniowany lub wskaźnika do typu void.
+Konwertuje `inptr` do obiektu typu `TargetType`. Typ elementu `inptr` musi być wskaźnikiem, jeśli `TargetType` jest wskaźnikiem lub l-wartością, jeśli `TargetType` jest odwołaniem. `TargetType`musi być wskaźnikiem lub odwołaniem do wcześniej zdefiniowanego typu klasy lub wskaźnikiem do wartości void.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|__RTDynamicCast|rtti.h|
+|__RTDynamicCast|RTTI. h|

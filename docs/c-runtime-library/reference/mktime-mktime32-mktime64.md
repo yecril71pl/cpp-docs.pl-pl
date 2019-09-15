@@ -1,11 +1,11 @@
 ---
 title: mktime, _mktime32, _mktime64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mktime32
 - mktime
 - _mktime64
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mktime
 - _mktime64
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - _mktime64 function
 - time, converting
 ms.assetid: 284ed5d4-7064-48a2-bd50-15effdae32cf
-ms.openlocfilehash: c45b69f84a0aec159ed59a480e9358f27c8e85e2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a282e9f27a0e8f2a91219facda96a5929d3982ea
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501003"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951523"
 ---
 # <a name="mktime-_mktime32-_mktime64"></a>mktime, _mktime32, _mktime64
 
@@ -83,7 +86,7 @@ Te funkcje mogą służyć do sprawdzania poprawności i wypełnienia struktury 
 
 - Wartość mniejsza od zera, aby można było obliczyć kod biblioteki wykonawczej C, niezależnie od tego, czy obowiązuje czas standardowy czy czas letni.
 
-Biblioteka środowiska uruchomieniowego C określi zachowanie czasu letniego ze zmiennej środowiskowej $ [](tzset.md) . Jeśli nie ustawiono opcji/$, Win32 API wywołanie [GetTimeZoneInformation](/windows/win32/api/timezoneapi/nf-timezoneapi-gettimezoneinformation) służy do uzyskiwania informacji o czasie letnim z systemu operacyjnego. Jeśli to się nie powiedzie, biblioteka zakłada, że używane są reguły Stany Zjednoczone w celu wykonania obliczeń czasu letniego. **tm_isdst** jest polem wymaganym. Jeśli nie zostanie ustawiona, jego wartość jest niezdefiniowana i wartość zwracana z tych funkcji jest nieprzewidywalne. Jeśli *timeptr* wskazuje strukturę **TM** zwróconą przez poprzednie wywołanie do [asctime](asctime-wasctime.md), [gmtime](gmtime-gmtime32-gmtime64.md)lub [localtime](localtime-localtime32-localtime64.md) (lub warianty tych funkcji), pole **tm_isdst** zawiera poprawną wartość.
+Biblioteka środowiska uruchomieniowego C określi zachowanie czasu letniego [ze zmiennej](tzset.md) środowiskowej $. Jeśli **nie ustawiono opcji** /$, Win32 API wywołanie [GetTimeZoneInformation](/windows/win32/api/timezoneapi/nf-timezoneapi-gettimezoneinformation) służy do uzyskiwania informacji o czasie letnim z systemu operacyjnego. Jeśli to się nie powiedzie, biblioteka zakłada, że używane są reguły Stany Zjednoczone w celu wykonania obliczeń czasu letniego. **tm_isdst** jest polem wymaganym. Jeśli nie zostanie ustawiona, jego wartość jest niezdefiniowana i wartość zwracana z tych funkcji jest nieprzewidywalne. Jeśli *timeptr* wskazuje strukturę **TM** zwróconą przez poprzednie wywołanie do [asctime](asctime-wasctime.md), [gmtime](gmtime-gmtime32-gmtime64.md)lub [localtime](localtime-localtime32-localtime64.md) (lub warianty tych funkcji), pole **tm_isdst** zawiera poprawną wartość.
 
 Należy zauważyć, że **gmtime** i **localtime** (oraz **_gmtime32**, **_gmtime64**, **_localtime32**i **_localtime64**) używają jednego buforu dla każdej wątku dla konwersji. Jeśli podasz ten bufor do **mktime**, **_mktime32** lub **_mktime64**, poprzednia zawartość zostanie zniszczona.
 

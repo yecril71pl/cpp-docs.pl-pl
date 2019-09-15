@@ -1,12 +1,12 @@
 ---
 title: _sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _sprintf_p
 - _swprintf_p_l
 - _swprintf_p
 - _sprintf_p_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sprintf_p
 - _swprintf_p_l
@@ -42,16 +45,16 @@ helpviewer_keywords:
 - formatted text [C++]
 - _stprintf_p_l function
 ms.assetid: a2ae78e8-6b0c-48d5-87a9-ea2365b0693d
-ms.openlocfilehash: c55dce7d37d63c79e8c8d9976a76adf331412812
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bb8993293236a20c87707db06715e9a012e643e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354962"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958032"
 ---
-# <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
+# <a name="_sprintf_p-_sprintf_p_l-_swprintf_p-_swprintf_p_l"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 
-Wpisz sformatowane dane do ciągu za pomocą możliwość określenia kolejność, że parametry są używane w ciągu formatu.
+Zapisz sformatowane dane do ciągu z możliwością określenia kolejności, w której parametry są używane w ciągu formatu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -87,37 +90,37 @@ int _swprintf_p_l(
 ### <a name="parameters"></a>Parametry
 
 *buffer*<br/>
-Lokalizacja magazynowa danych wyjściowych
+Lokalizacja magazynu dla danych wyjściowych
 
 *sizeOfBuffer*<br/>
 Maksymalna liczba znaków do zapisania.
 
-*Format*<br/>
+*format*<br/>
 Ciąg kontroli formatu.
 
 *argument_list*<br/>
-Opcjonalne argumenty ciągu formatu.
+Argumenty opcjonalne do ciągu formatu.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
-Aby uzyskać więcej informacji, zobacz [specyfikacji formatu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Aby uzyskać więcej informacji, zobacz temat [Formatowanie specyfikacji](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Liczba znaków zapisanych, lub -1, jeśli wystąpił błąd.
+Liczba znaków pisanych lub-1, jeśli wystąpił błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Sprintf_p —** funkcja formatuje i przechowuje serie znaków i wartości w *buforu*. Każdy argument *argument_list* (jeśli istnieje) jest konwertowaya i wychodzi według specyfikacji formatu w *format*. *Format* używa argumentu [formatowanie składni Specyfikacja funkcji printf i wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Znak null jest dołączany po ostatnim napisanym znaku. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane. Różnica między **_sprintf_p —** i **sprintf_s —** jest fakt, że **_sprintf_p —** wspiera parametry pozycyjne, które umożliwiają określenie kolejności, w której argumenty są: używany w ciągu formatu. Aby uzyskać więcej informacji, zobacz [printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md).
+Funkcja **_sprintf_p** formatuje i przechowuje serie znaków i wartości w *buforze*. Każdy argument w *argument_list* (jeśli istnieje) jest konwertowany i wyprowadzany zgodnie ze specyfikacją formatu w *formacie*. Argument *Format* używa [składni specyfikacji formatu dla funkcji printf i wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Znak null jest dołączany po ostatnim zapisanym znaku. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane. Różnica między **_sprintf_p** i **sprintf_s** polega na tym, że **_sprintf_p** obsługuje parametry pozycyjne, które umożliwiają określanie kolejności, w której argumenty są używane w ciągu formatu. Aby uzyskać więcej informacji, zobacz [Printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md).
 
-**_swprintf_p —** to wersja znaku dwubajtowego **_sprintf_p —**; argumenty wskaźnika do **_swprintf_p —** są ciągami znaków dwubajtowych. Wykrywanie kodowania błędów w **_swprintf_p —** mogą się różnić od tego w **_sprintf_p —**. **_swprintf_p —** i **fwprintf_p —** zachowują się identycznie, chyba że **_swprintf_p —** zapisuje dane wyjściowe do ciągu, a nie do miejsca docelowego typu **pliku**, i **_swprintf_p —** wymaga *liczba* parametru, aby określić maksymalną liczbę znaków, które mają być zapisywane. Wersje tych funkcji **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych wątku.
+**_swprintf_p** to dwubajtowa wersja **_sprintf_p**; argumenty wskaźnika do **_swprintf_p** są ciągami znaków dwubajtowych. Wykrywanie błędów kodowania w **_swprintf_p** może się różnić od tego w **_sprintf_p**. **_swprintf_p** i **fwprintf_p** zachowują się identycznie, z tą różnicą, że **_swprintf_p** zapisuje dane wyjściowe do ciągu, a nie do miejsca docelowego typu **pliku**, a **_swprintf_p** wymaga parametru *Count* , aby określić Maksymalna liczba znaków do zapisania. Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korzystają z przekazaną parametrem ustawień regionalnych zamiast bieżących ustawień regionalnych wątku.
 
-**_sprintf_p —** zwraca liczbę bajtów przechowywanych w *buforu*, nie licząc zamykającego kończącego znaku null. **_swprintf_p —** zwraca liczbę znaków szerokich przechowywanych w *buforu*, nie licząc zamykającego znaku pustego. Jeśli *buforu* lub *format* jest wskaźnikiem typu null lub jeżeli ciąg formatu zawiera nieprawidłowe znaki formatowania, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Walidacja parametru ](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość -1 i ustaw **errno** do **EINVAL**.
+**_sprintf_p** zwraca liczbę bajtów przechowywanych w *buforze*, która nie zlicza kończącego znaku null. Funkcja **_swprintf_p** zwraca liczbę znaków dwubajtowych przechowywanych w *buforze*, która nie zlicza kończących znaków dwubajtowych o zerowej długości. Jeśli *bufor* lub *Format* jest wskaźnikiem typu null lub jeśli ciąg formatu zawiera nieprawidłowe znaki formatowania, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość-1 i ustawiają **errno** na **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_stprintf_p**|**_sprintf_p**|**_sprintf_p**|**_swprintf_p**|
 |**_stprintf_p_l**|**_sprintf_p_l**|**_sprintf_p_l**|**_swprintf_p_l**|
@@ -127,9 +130,9 @@ Liczba znaków zapisanych, lub -1, jeśli wystąpił błąd.
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_sprintf_p**, **_sprintf_p_l**|\<stdio.h>|
-|**_swprintf_p**, **_swprintf_p_l**|\<stdio.h > lub \<wchar.h >|
+|**_swprintf_p**, **_swprintf_p_l**|\<stdio. h > lub \<WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -208,7 +211,7 @@ Wrote -1 characters
 
 ## <a name="see-also"></a>Zobacz także
 
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l](printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)<br/>

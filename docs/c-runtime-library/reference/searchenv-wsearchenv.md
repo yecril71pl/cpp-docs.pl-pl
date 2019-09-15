@@ -1,10 +1,10 @@
 ---
 title: _searchenv, _wsearchenv
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _searchenv
 - _wsearchenv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wsearchenv
 - _tsearchenv
@@ -34,19 +37,19 @@ helpviewer_keywords:
 - searchenv function
 - environment paths
 ms.assetid: 9c944a27-d326-409b-aee6-410e8762d9d3
-ms.openlocfilehash: c1d2361fceec448c98fd9e5a368653aac38c83e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a3139ab87335ba581ef65707602c5da1819ce4a1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356774"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948773"
 ---
-# <a name="searchenv-wsearchenv"></a>_searchenv, _wsearchenv
+# <a name="_searchenv-_wsearchenv"></a>_searchenv, _wsearchenv
 
-Używa ścieżki środowiska, aby wyszukać plik. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [_searchenv_s —, _wsearchenv_s —](searchenv-s-wsearchenv-s.md).
+Wyszukuje plik za pomocą ścieżek środowiskowych. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [_searchenv_s, _wsearchenv_s](searchenv-s-wsearchenv-s.md).
 
 > [!IMPORTANT]
-> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -80,44 +83,44 @@ void _wsearchenv(
 *Nazwa pliku*<br/>
 Nazwa pliku do wyszukania.
 
-*Nazwa zmiennej*<br/>
-Środowisko do wyszukiwania.
+*nazwa_zmiennej*<br/>
+Środowisko do wyszukania.
 
-*Nazwa ścieżki*<br/>
+*ścieżki*<br/>
 Bufor do przechowywania pełnej ścieżki.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Searchenv** procedura wyszukiwania pliku docelowego w określonej domenie. *Nazwa_zmiennej* zmiennej może być dowolnym środowiskiem lub zmienną zdefiniowaną przez użytkownika — na przykład **ścieżki**, **LIB**, lub **INCLUDE**— Określa, że Lista ścieżek katalogów. Ponieważ **_searchenv** jest uwzględniana wielkość liter, *nazwa_zmiennej* powinien odpowiadać wielkości zmiennej środowiskowej.
+Procedura **_searchenv** wyszukuje plik docelowy w określonej domenie. Zmienna *nazwa_zmiennej* może być dowolnego środowiska lub zmiennej zdefiniowanej przez użytkownika, na przykład **Path**, **lib**lub **include**, która określa listę ścieżek katalogów. Ponieważ **_searchenv** jest uwzględniana wielkość liter, wartość *nazwa_zmiennej* powinna być zgodna z wielkością liter zmiennej środowiskowej.
 
-Rutyna szuka najpierw pliku w bieżącym katalogu roboczym. Jeśli nie znajdzie pliku, szuka przez katalogi, które są określone przez zmienną środowiskową. Jeśli plik docelowy znajduje się w jednym z tych katalogów, nowo utworzona ścieżka jest kopiowana do *pathname*. Jeśli *filename* nie znaleziono pliku *pathname* zawiera pusty ciąg zakończony znakiem null.
+Procedura najpierw przeszukuje plik w bieżącym katalogu roboczym. Jeśli plik nie zostanie znaleziony, przeszukiwane są katalogi, które są określone przez zmienną środowiskową. Jeśli plik docelowy znajduje się w jednym z tych katalogów, nowo utworzona ścieżka jest kopiowana do *nazwy ścieżki*. Jeśli plik *filename* nie zostanie znaleziony, *Nazwa ścieżki* zawiera pusty ciąg zakończony znakiem null.
 
-*Pathname* buforu powinien wynosić co najmniej **_MAX_PATH** znaków, aby było pomieścić taką pełną nazwę ścieżki konstruowanej. W przeciwnym razie **_searchenv** może przepełnienie *pathname* buffer i spowodować nieoczekiwane zachowanie.
+Bufor nazw powinien zawierać co najmniej **_MAX_PATH** *znaków, aby* pomieścić pełną długość ścieżki skonstruowanej. W przeciwnym razie **_searchenv** może przekroczyć bufor *nazwy ścieżki* i spowodować nieoczekiwane zachowanie.
 
-**_wsearchenv** to wersja znaku dwubajtowego **_searchenv**i argumenty do **_wsearchenv** są ciągami znaków dwubajtowych. **_wsearchenv** i **_searchenv** zachowują się identycznie.
+**_wsearchenv** to dwubajtowa wersja **_searchenv**, a argumenty dla **_wsearchenv** są ciągami znaków dwubajtowych. **_wsearchenv** i **_searchenv** zachowują się identycznie w inny sposób.
 
-Jeśli *filename* jest pustym ciągiem, funkcje te zwracają **ENOENT**.
+Jeśli *Nazwa pliku* jest pustym ciągiem, funkcje te zwracają **ENOENT**.
 
-Jeśli *filename* lub *pathname* jest **NULL** wskaźnika, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość -1 i ustaw **errno** do **EINVAL**.
+Jeśli *Nazwa pliku* lub *Nazwa ścieżki* jest **pustym** wskaźnikiem, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość-1 i ustawiają **errno** na **EINVAL**.
 
-Aby uzyskać więcej informacji na temat **errno** i kodach błędów, zobacz [errno — stałe](../../c-runtime-library/errno-constants.md).
+Aby uzyskać więcej informacji o **errno** i kodach błędów, zobacz [errno stałe](../../c-runtime-library/errno-constants.md).
 
-W języku C++ funkcje te mają przeciążenia szablonu, które wywołują nowsze, bezpieczniejsze odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+W C++programie te funkcje mają przeciążenia szablonu, które wywołują nowsze, bardziej bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tsearchenv —**|**_searchenv**|**_searchenv**|**_wsearchenv**|
+|**_tsearchenv**|**_searchenv**|**_searchenv**|**_wsearchenv**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_searchenv**|\<stdlib.h>|
-|**_wsearchenv**|\<stdlib.h> or \<wchar.h>|
+|**_wsearchenv**|\<STDLIB. h > lub \<WCHAR. h >|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

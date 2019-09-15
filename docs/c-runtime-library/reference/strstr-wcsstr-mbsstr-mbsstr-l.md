@@ -1,12 +1,12 @@
 ---
 title: strstr, wcsstr, _mbsstr, _mbsstr_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsstr
 - wcsstr
 - _mbsstr_l
 - strstr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fstrstr
 - _ftcsstr
@@ -44,12 +47,12 @@ helpviewer_keywords:
 - _mbsstr_l function
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
-ms.openlocfilehash: 003e5fd88bdfaafff539c5c993a99cd9ecca0b82
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8c113e02f308b634b6bcb8aea6e46fc14b9abd92
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500819"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946586"
 ---
 # <a name="strstr-wcsstr-_mbsstr-_mbsstr_l"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
 
@@ -134,11 +137,11 @@ Zwraca wskaźnik do pierwszego wystąpienia *strSearch* w *str*lub null, jeśli 
 Funkcja zwraca wskaźnik do pierwszego wystąpienia strSearch w *str*. `strstr` Wyszukiwanie nie obejmuje kończących się pustych znaków. `wcsstr`jest wersją `strstr` znaków dwubajtowych i `_mbsstr` jest wersją znaku wieloznakówowego. Argumenty i wartość zwracana przez `wcsstr` są ciągami znaków dwubajtowych; te z `_mbsstr` są ciągami znaków wieloznacznych. `_mbsstr`sprawdza poprawność swoich parametrów. Jeśli *str* lub *strSearch* ma wartość null, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, `_mbsstr` ustawia `errno` na EINVAL i zwraca 0. `strstr`i `wcsstr` nie weryfikują ich parametrów. Te trzy funkcje zachowują się identycznie w inny sposób.
 
 > [!IMPORTANT]
-> Te funkcje mogą spowodować zagrożenie z powodu problemu z przepełnieniem buforu. Problemy z przepełnieniem buforu mogą służyć do ataku systemu, ponieważ mogą one umożliwić wykonanie dowolnego kodu, co może spowodować nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz Unikanie przekroczeń [buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
+> Te funkcje mogą spowodować zagrożenie z powodu problemu z przepełnieniem buforu. Problemy z przepełnieniem buforu mogą służyć do ataku systemu, ponieważ mogą one umożliwić wykonanie dowolnego kodu, co może spowodować nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-W języku C te funkcje przyjmują wskaźnik **const** dla pierwszego argumentu. W C++programie dostępne są dwa przeciążenia. Przeciążenie, które Pobiera wskaźnik do elementu **const** , zwraca wskaźnik do elementu **const**; wersja, która przyjmuje wskaźnik do elementu niebędącego**stałą** , zwraca wskaźnik do elementu innego niż**const**. _CRT_CONST_CORRECT_OVERLOADS makro jest zdefiniowane, jeśli są dostępne zarówno wersje **const** , jak i niestałe tych funkcji. Jeśli jest wymagane zachowanie niestałe dla obu C++ przeciążeń, zdefiniuj symbol _CONST_RETURN.
+W języku C te funkcje przyjmują wskaźnik **const** dla pierwszego argumentu. W C++programie dostępne są dwa przeciążenia. Przeciążenie, które Pobiera wskaźnik do elementu **const** , zwraca wskaźnik do elementu **const**; wersja, która przyjmuje wskaźnik do elementu niebędącego**stałą** , zwraca wskaźnik do elementu innego niż**const**. _CRT_CONST_CORRECT_OVERLOADS makro jest zdefiniowane, jeśli są dostępne zarówno wersje **const** , jak i**niestałe** tych funkcji. Jeśli jest wymagane zachowanie**niestałe** dla obu C++ przeciążeń, zdefiniuj symbol _CONST_RETURN.
 
-Wartość wyjściowa jest zależna od ustawienia kategorii ustawień regionalnych LC_CTYPE; Aby uzyskać więcej informacji, zobacz setlocals [, _wsetlocale](setlocale-wsetlocale.md). Wersje tych funkcji, które nie mają sufiksu **_l** , używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. wersje, które mają sufiks **_l** są identyczne, z tą różnicą, że zamiast tego używają parametru ustawień regionalnych, który jest przesyłany. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia kategorii ustawień regionalnych LC_CTYPE; Aby uzyskać więcej informacji, zobacz [setlocals, _wsetlocale](setlocale-wsetlocale.md). Wersje tych funkcji, które nie mają sufiksu **_l** , używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. wersje, które mają sufiks **_l** są identyczne, z tą różnicą, że zamiast tego używają parametru ustawień regionalnych, który jest przesyłany. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 

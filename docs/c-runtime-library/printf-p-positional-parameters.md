@@ -1,30 +1,33 @@
 ---
 title: printf_p Parametry pozycyjne
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr120.dll
 - msvcr110.dll
 - msvcr110_clr0400.dll
 - msvcr90.dll
 - msvcr80.dll
 - msvcr100.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 helpviewer_keywords:
 - _printf_p function, positional parameters
 - printf_p function, positional parameters
 ms.assetid: beb4fd85-a7aa-4665-9085-2c907a5b9ab0
-ms.openlocfilehash: f6ee84a68b2f40e535ed1dc76e4617a21bb29a6e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 156baa1a91931199ebca5f6200e239aa944fee1e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348046"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944047"
 ---
-# <a name="printfp-positional-parameters"></a>printf_p Parametry pozycyjne
+# <a name="printf_p-positional-parameters"></a>printf_p Parametry pozycyjne
 
-Parametry pozycyjne zapewniają możliwość określenia przez liczbę, czyli argumentów do podstawienia w polu w ciągu formatu. Następujący parametr pozycyjne `printf` funkcje są dostępne:
+Parametry pozycyjne zapewniają możliwość określenia przez liczbę argumentów, które mają zostać zastąpione w polu w ciągu formatu. Dostępne są następujące funkcje parametrów `printf` pozycyjnych:
 
-| Funkcje printf non pozycyjne | Odpowiedniki parametr pozycyjne |
+| Niepozycyjne funkcje printf | Równoważne parametry pozycyjne |
 |---|---|
 |[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|[_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l](../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)|
 |[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|[_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l](../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)|
@@ -36,51 +39,51 @@ Parametry pozycyjne zapewniają możliwość określenia przez liczbę, czyli ar
 
 ## <a name="how-to-specify-positional-parameters"></a>Jak określić parametry pozycyjne
 
-### <a name="parameter-indexing"></a>Parametr indeksowania
+### <a name="parameter-indexing"></a>Indeksowanie parametrów
 
-Domyślnie jeśli pozycyjne formatowanie nie jest obecny, pozycyjne funkcje zachowują się identycznie niepozycyjnych te. Określ parametr pozycyjne, aby sformatować przy użyciu `%n$` na początku specyfikatora formatu, gdzie `n` to pozycja parametru, aby sformatować na liście parametrów. Pozycja parametru rozpoczyna się od 1 dla pierwszego argumentu po ciągu formatu. W pozostałej części specyfikator formatu te same reguły jako `printf` specyfikatora formatu. Aby uzyskać więcej informacji na temat formatu specfiers zobacz [składnia specyfikacji formatu: funkcje printf i wprintf](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Domyślnie, jeśli nie ma żadnego formatowania pozycyjnyego, funkcje pozycyjne zachowują się identycznie do tych, które nie są pozycjonowane. Należy określić parametr pozycyjny do formatowania przy użyciu `%n$` na początku specyfikatora formatu, gdzie `n` jest pozycją parametru do sformatowania na liście parametrów. Pozycja parametru rozpoczyna się od 1 dla pierwszego argumentu po ciągu formatu. Pozostała część specyfikatora formatu jest zgodna z tymi samymi `printf` regułami, które są zgodne ze specyfikatorem formatu. Aby uzyskać więcej informacji na temat formatu specfiers, zobacz [składnia specyfikacji formatowania: printf i wprintf Functions](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
-Oto przykład pozycyjne formatowania:
+Oto przykładowe formatowanie pozycyjne:
 
 ```C
 _printf_p("%1$s %2$s", "November", "10");
 ```
 
-Wyświetla to:
+Ten wydruk jest następujący:
 
 ```
 November 10
 ```
 
-Kolejność numerów używanych nie musi być zgodna z kolejnością argumenty. Na przykład jest to ciąg prawidłowy format:
+Kolejność użytych liczb nie musi być zgodna z kolejnością argumentów. Na przykład jest to prawidłowy ciąg formatu:
 
 ```C
 _printf_p("%2$s %1$s", "November", "10");
 ```
 
-Wyświetla to:
+Ten wydruk jest następujący:
 
 ```
 10 November
 ```
 
-W przeciwieństwie do ciągów formatu tradycyjnych parametry pozycyjne może służyć więcej niż jeden raz w ciągu formatu. Na przykład
+W przeciwieństwie do tradycyjnych ciągów formatowania, parametry pozycyjne mogą być używane więcej niż raz w ciągu formatu. Na przykład
 
 ```C
 _printf_p("%1$d times %1$d is %2$d", 10, 100);
 ```
 
-Wyświetla to:
+Ten wydruk jest następujący:
 
 ```
 10 times 10 is 100
 ```
 
-Wszystkie argumenty należy użyć co najmniej raz gdzieś w ciągu formatu. Maksymalna liczba parametry pozycyjne są niedozwolone w ciągu formatu jest nadawana przez `_ARGMAX`.
+Wszystkie argumenty muszą być używane co najmniej raz w ciągu formatu. Maksymalna liczba parametrów pozycyjnych dozwolonych w ciągu formatu jest określona przez `_ARGMAX`.
 
 ### <a name="width-and-precision"></a>Szerokość i precyzja
 
-Możesz użyć `*n$` określić parametr pozycyjne jako specyfikatora szerokość lub dokładności, gdzie `n` to pozycja parametru szerokość lub dokładności na liście parametrów. Pozycja wartości szerokości lub dokładności musi występować bezpośrednio po \* symboli. Na przykład
+Można użyć `*n$` , aby określić parametr pozycyjny jako szerokość lub specyfikator dokładności, gdzie `n` jest pozycją parametru Width lub dokładności na liście parametrów. Pozycja wartości Width lub dokładności musi występować bezpośrednio po \* symbolu. Na przykład
 
 ```C
 _printf_p("%1$*2$s","Hello", 10);
@@ -94,7 +97,7 @@ _printf_p("%2$*1$s", 10, "Hello");
 
 ### <a name="mixing-positional-and-non-positional-arguments"></a>Mieszanie argumentów pozycyjnych i niepozycyjnych
 
-Parametry pozycyjne nie mogą być łączone z parametrami pozycyjne, w tym samym ciągu formatu. Jeśli pozycyjne formatowania jest używany, wszystkich specyfikatorów formatu należy użyć formatowania pozycyjnych. Jednak `printf_p` i powiązane funkcje nadal obsługuje parametry pozycyjne nie ciągi formatu zawierające nie parametry pozycyjne.
+Parametry pozycyjne nie mogą być mieszane z parametrami niepozycyjnymi w tym samym ciągu formatu. Jeśli używane jest dowolne formatowanie pozycyjne, wszystkie specyfikatory formatu muszą używać formatowania pozycyjnego. Jednak funkcje pokrewne nadal obsługują parametry niepozycyjnye w ciągach formatujących ,któreniezawierająparametrówpozycyjnych.`printf_p`
 
 ## <a name="example"></a>Przykład
 

@@ -1,11 +1,11 @@
 ---
 title: gmtime_s, _gmtime32_s, _gmtime64_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _gmtime32_s
 - gmtime_s
 - _gmtime64_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _gmtime_s
 - gmtime64_s
@@ -35,16 +38,16 @@ helpviewer_keywords:
 - _gmtime_s function
 - _gmtime32_s function
 ms.assetid: 261c7df0-2b0c-44ba-ba61-cb83efaec60f
-ms.openlocfilehash: 8225fed21ca9dc67440a4af5dcf43b2ad5cfdffb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bcfc512022393c6a3e8a9cd97efe96d03b4877ab
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157451"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954842"
 ---
-# <a name="gmtimes-gmtime32s-gmtime64s"></a>gmtime_s, _gmtime32_s, _gmtime64_s
+# <a name="gmtime_s-_gmtime32_s-_gmtime64_s"></a>gmtime_s, _gmtime32_s, _gmtime64_s
 
-Konwertuje wartość czasu **tm** struktury. Są to wersje [_gmtime32, _gmtime64](gmtime-gmtime32-gmtime64.md) ze wzmocnieniem zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Konwertuje wartość czasu na strukturę **TM** . Są to wersje [_gmtime32, _gmtime64](gmtime-gmtime32-gmtime64.md) z ulepszeniami zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -66,57 +69,57 @@ errno_t _gmtime64_s(
 ### <a name="parameters"></a>Parametry
 
 *tmDest*<br/>
-Wskaźnik do [tm](../../c-runtime-library/standard-types.md) struktury. Pola zwróconej struktury przechowują ocenianą wartość z *czasomierza* argument w formacie UTC, a nie według czasu lokalnego.
+Wskaźnik na strukturę [TM](../../c-runtime-library/standard-types.md) . Pola w zwracanej strukturze przechowują obliczoną wartość argumentu *Timer* w formacie UTC, a nie w czasie lokalnym.
 
 *sourceTime*<br/>
-Wskaźnik na czas przechowywania. Czas jest reprezentowany jako sekundach, które upłynęły od północy (00: 00:00), 1 stycznia 1970 r., skoordynowanego czasu uniwersalnego (UTC).
+Wskaźnik na czas przechowywania. Czas jest reprezentowany jako sekund, które upłynęły od północy (00:00:00), 1 stycznia 1970, uniwersalny czas koordynowany (UTC).
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli to się powiedzie. Wartość zwracana jest kod błędu, jeśli wystąpi awaria. Kody błędów są zdefiniowane w Errno.h; Aby uzyskać listę tych błędów, zobacz [errno](../../c-runtime-library/errno-constants.md).
+Zero, jeśli powodzenie. Wartość zwracana jest kodem błędu w przypadku wystąpienia błędu. Kody błędów są zdefiniowane w errno. h; Aby uzyskać listę tych błędów, zobacz [errno](../../c-runtime-library/errno-constants.md).
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|*tmDest*|*sourceTime*|Wróć|Wartość w *tmDest*|
+|*tmDest*|*sourceTime*|przesłać|Wartość w *tmDest*|
 |-----------|------------|------------|--------------------|
-|**NULL**|Wszystkie|**EINVAL**|Nie jest modyfikowany.|
-|Nie **NULL** (wskazuje prawidłowy pamięci)|**NULL**|**EINVAL**|Wszystkie pola ustawione na wartość -1.|
-|Nie **o wartości NULL**|< 0|**EINVAL**|Wszystkie pola ustawione na wartość -1.|
+|**NULL**|Ile|**EINVAL**|Nie zmodyfikowano.|
+|Nie **ma wartości null** (wskazuje na prawidłową pamięć)|**NULL**|**EINVAL**|Wszystkie pola mają ustawioną wartość-1.|
+|Nie **ma wartości null**|< 0|**EINVAL**|Wszystkie pola mają ustawioną wartość-1.|
 
-W przypadku pierwszego warunków błędów dwóch, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** do **EINVAL** i zwracają **EINVAL**.
+W przypadku pierwszych dwóch warunków błędu procedura obsługi nieprawidłowego parametru jest wywoływana, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i zwracają **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Gmtime32_s —** funkcja dzieli *sourceTime* wartości i zapisuje je w strukturze typu **tm**, zdefiniowanego w czasie.h. Adres struktury jest przekazywany w *tmDest*. Wartość *sourceTime* są zazwyczaj uzyskiwane z wywołania [czasu](time-time32-time64.md) funkcji.
+Funkcja **_gmtime32_s** dzieli wartość *sourceTime* i zapisuje ją w strukturze typu **TM**, zdefiniowanej w Time. h. Adres struktury jest przesyłany w *tmDest*. Wartość *sourceTime* jest zazwyczaj uzyskiwana z wywołania funkcji [Time](time-time32-time64.md) .
 
 > [!NOTE]
-> Środowisko docelowe starać się ustalić, czy czas letni obowiązuje. Biblioteki wykonawczej C zakłada zasady Stanów Zjednoczonych wykonywania obliczeń czasu letniego.
+> Środowisko docelowe powinno próbować określić, czy obowiązuje czas letni. Biblioteka środowiska uruchomieniowego C przyjmuje reguły Stany Zjednoczone na potrzeby implementowania obliczeń czasu letniego.
 
-Każde z pól struktury jest typu **int**, jak pokazano w poniższej tabeli.
+Każde pole struktury jest typu **int**, jak pokazano w poniższej tabeli.
 
 |Pole|Opis|
 |-|-|
-|**tm_sec**|Sekundy po minucie (0 - 59).|
-|**tm_min**|Min. po godzinie (0 - 59).|
-|**tm_hour**|Godziny od północy (0 - 23).|
+|**tm_sec**|Sekund po minucie (0-59).|
+|**tm_min**|Minut po godzinie (0-59).|
+|**tm_hour**|Godz. od północy (0-23).|
 |**tm_mday**|Dzień miesiąca (1-31).|
-|**tm_mon**|Miesiąc (0 - 11; Styczeń = 0).|
-|**tm_year**|Rok (bieżący roku minus 1900).|
-|**tm_wday**|Dzień tygodnia (0 – 6; Niedziela = 0).|
-|**tm_yday**|Dzień roku (0 – 365; Od 1 stycznia = 0).|
-|**tm_isdst**|Zawsze 0 dla **gmtime_s —**.|
+|**tm_mon**|Miesiąc (0-11; Styczeń = 0).|
+|**tm_year**|Year (bieżący rok minus 1900).|
+|**tm_wday**|Dzień tygodnia (0-6; Niedziela = 0).|
+|**tm_yday**|Dzień roku (0-365; 1 stycznia = 0).|
+|**tm_isdst**|Zawsze 0 dla **gmtime_s**.|
 
-**_gmtime64_s —**, który używa **__time64_t —** struktury, umożliwia daty do za pośrednictwem 23:59:59, 31 grudnia 3000, UTC, podczas gdy **gmtime32_s —** przedstawia tylko daty do 23:59:59 18 stycznia 2038 r. UTC. Północy 1 stycznia 1970 r., to dolna granica zakresu dat dla obu tych funkcji.
+**_gmtime64_s**, który używa struktury **__time64_t** , umożliwia określenie dat do dnia, 23:59:59 do 31 grudnia, 3000, UTC; **gmtime32_s** reprezentuje tylko daty do 23:59:59 stycznia 18, 2038, UTC. Północ, 1 stycznia 1970, to Dolna granica zakresu dat dla obu tych funkcji.
 
-**gmtime_s —** jest funkcją śródwierszową, co jest ewaluowane jako **_gmtime64_s —** i **time_t** jest odpowiednikiem **__time64_t —**. Jeśli chcesz wymusić na kompilatorze interpretowanie **time_t** jako stary 32-bitowy **time_t**, można zdefiniować **_USE_32BIT_TIME_T**. Takie działanie spowoduje **gmtime_s —** być wyrównane z **_gmtime32_s —**. Nie jest to zalecane, ponieważ aplikacja może przestać działać po 18 stycznia 2038 r. i nie jest dozwolone na platformach 64-bitowych.
+**gmtime_s** jest funkcją wbudowaną, która oblicza wartość **_gmtime64_s** i **time_t** jest odpowiednikiem **__time64_t**. Jeśli trzeba wymusić, aby kompilator interpretował **time_t** jako stary 32-bitowy **time_t**, można zdefiniować **_USE_32BIT_TIME_T**. To spowoduje, że **gmtime_s** będzie w **_gmtime32_s**. Nie jest to zalecane, ponieważ aplikacja może zakończyć się niepowodzeniem po 18 stycznia 2038 i nie jest dozwolona na platformach 64-bitowych.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Wymagany nagłówek języka C|Wymagany nagłówek C++|
+|Procedura|Wymagany nagłówek C|Wymagany C++ nagłówek|
 |-------------|---------------------|-|
-|**gmtime_s**, **_gmtime32_s**, **_gmtime64_s**|\<time.h>|\<ctime — > lub \<time.h >|
+|**gmtime_s**, **_gmtime32_s**, **_gmtime64_s**|\<time.h>|\<CTime > lub \<Time. h >|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

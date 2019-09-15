@@ -1,11 +1,11 @@
 ---
 title: difftime, _difftime32, _difftime64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _difftime32
 - difftime
 - _difftime64
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _difftime64
 - difftime
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - _difftime64 function
 - difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
-ms.openlocfilehash: 80aaac1696fc82db248b097e73a2d89d81a20346
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51d74ae447e87e91e9be3c27864b8dfe7f490b14
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288526"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937642"
 ---
-# <a name="difftime-difftime32-difftime64"></a>difftime, _difftime32, _difftime64
+# <a name="difftime-_difftime32-_difftime64"></a>difftime, _difftime32, _difftime64
 
-Znajduje różnicę między dwiema wartościami godziny.
+Znajduje różnicę między dwoma razy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,31 +60,31 @@ double _difftime64( __time64_t timeEnd, __time64_t timeStart );
 Godzina zakończenia.
 
 *timeStart*<br/>
-Czas rozpoczęcia.
+Godzina rozpoczęcia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**difftime —** zwraca czas w sekundach, z *timeStart* do *timeEnd*. Wartość zwracana jest liczba zmiennoprzecinkowa podwójnej precyzji. Zwracana wartość może być 0, co wskazuje na błąd.
+**difftime** zwraca czas w sekundach, od *timeStart* do *timeEnd*. Zwracana wartość to liczba zmiennoprzecinkowa o podwójnej precyzji. Zwracana wartość może być równa 0, co wskazuje na błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-**Difftime —** funkcja oblicza różnicę między dwiema wartościami godziny podane *timeStart* i *timeEnd*.
+Funkcja **difftime** oblicza różnicę między dwoma dostarczonymi wartościami czasu *timeStart* i *timeEnd*.
 
-Dostarczona wartość czasu musi mieścić się w zakresie **time_t**. **time_t** ma wartość 64-bitowych. W związku z tym koniec zakresu został rozszerzony 23:59:59 18 stycznia 2038 r. UTC do 23:59:59, 31 grudnia 3000. Dolna granica z **time_t** jest nadal północy 1 stycznia 1970.
+Podana wartość czasu musi mieścić się w zakresie **time_t**. **time_t** jest wartością 64-bitową. W związku z tym koniec zakresu został rozszerzony z 23:59:59 stycznia 18, 2038, UTC do 23:59:59, 31 grudnia 3000. Dolny zakres **time_t** jest nadal północy, 1 stycznia 1970.
 
-**difftime —** jest funkcją śródwierszową, którego wynikiem jest albo **_difftime32 —** lub **_difftime64 —** zależności od tego, czy **_USE_32BIT_TIME_T** jest zdefiniowana. _difftime32 — i _difftime64 — można bezpośrednio, aby wymusić użycie o ustalonym rozmiarze typu time.
+**difftime** to wbudowana funkcja, która oblicza wartość **_difftime32** lub **_difftime64** w zależności od tego, czy **_USE_32BIT_TIME_T** jest zdefiniowany. _difftime32 i _difftime64 mogą być używane bezpośrednio w celu wymuszenia użycia określonego rozmiaru typu czasu.
 
-Te funkcje sprawdzają poprawność swoich parametrów. Jeśli z parametrów ma wartość zero lub ujemne, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają 0 i ustaw **errno** do **EINVAL**.
+Te funkcje sprawdzają poprawność swoich parametrów. Jeśli jeden z parametrów ma wartość zero lub wartość ujemną, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość 0 i ustawimy wartość **errno** na **EINVAL**.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**difftime —**|\<time.h>|
+|**difftime**|\<time.h>|
 |**_difftime32**|\<time.h>|
 |**_difftime64**|\<time.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

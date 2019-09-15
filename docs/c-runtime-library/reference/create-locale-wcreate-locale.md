@@ -1,11 +1,11 @@
 ---
 title: _create_locale, _wcreate_locale
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _create_locale
 - __create_locale
 - _wcreate_locale
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - create_locale
 - _create_locale
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - create_locale function
 - __create_locale function
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
-ms.openlocfilehash: 109a1d93692d0c65269b40fd0559381907ce1cab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a7098dc572ecdbefd891efc8443e977b01850fa4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340368"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938855"
 ---
-# <a name="createlocale-wcreatelocale"></a>_create_locale, _wcreate_locale
+# <a name="_create_locale-_wcreate_locale"></a>_create_locale, _wcreate_locale
 
 Tworzy obiekt ustawień regionalnych.
 
@@ -55,50 +58,50 @@ _locale_t _wcreate_locale(
 ### <a name="parameters"></a>Parametry
 
 *category*<br/>
-Kategoria.
+Kategorii.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Specyfikator ustawień regionalnych.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli jest to prawidłowy *ustawień regionalnych* i *kategorii* otrzymują, zwraca określone ustawienia regionalne jako **_locale_t —** obiektu. Bieżące ustawienia regionalne programu nie ulegną zmianie.
+Jeśli podano prawidłowe ustawienia *regionalne* i *Kategorie* , funkcja zwraca określone ustawienia regionalne jako obiekt **_locale_t** . Bieżące ustawienia regionalne programu nie są zmieniane.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Create_locale** funkcja pozwala utworzyć obiekt, który reprezentuje niektóre ustawienia specyficzne dla regionu, do użytku w wersjach specyficznych dla ustawień regionalnych wielu funkcji CRT (funkcje z **_l** sufiks ). Zachowanie jest podobne do **setlocale**, z tą różnicą, że zamiast stosowania ustawień regionalnych określonych dla bieżącego środowiska, ustawienia te są zapisywane w **_locale_t —** strukturę, która jest zwracana. **_Locale_t —** struktura powinna zostać uwolniona za pomocą [_free_locale —](free-locale.md) gdy jest już potrzebny.
+Funkcja **_create_locale** umożliwia utworzenie obiektu, który reprezentuje określone ustawienia specyficzne dla regionu, do użycia w wersjach specyficznych dla ustawień regionalnych wielu funkcji CRT (funkcje z sufiksem **_l** ). Zachowanie jest podobne do **setlocaling**, z tą różnicą, że zamiast zastosowania określonych ustawień regionalnych do bieżącego środowiska, ustawienia są zapisywane w **_locale_tej** strukturze, która jest zwracana. Strukturę **_locale_t** należy zwolnić przy użyciu [_free_locale](free-locale.md) , gdy nie jest już potrzebne.
 
-**_wcreate_locale** to wersja znaku dwubajtowego **_create_locale**; *ustawień regionalnych* argument **_wcreate_locale** jest ciągiem znaku dwubajtowego. **_wcreate_locale** i **_create_locale** zachowują się identycznie.
+**_wcreate_locale** to dwubajtowa wersja **_create_locale**; argument *locale* **_wcreate_locale** jest ciągiem znaków dwubajtowych. **_wcreate_locale** i **_create_locale** zachowują się identycznie w inny sposób.
 
-*Kategorii* argument określa części zachowania specyficzne dla ustawień regionalnych, których to dotyczy. Flagi używane do *kategorii* i części program wpływają na to, jak pokazano w poniższej tabeli:
+Argument *kategorii* określa części zachowań specyficznych dla ustawień regionalnych, których dotyczy problem. Flagi używane dla *kategorii* i części programu, których one dotyczą, są przedstawione w poniższej tabeli:
 
-| *Kategoria* flagi | Dotyczy |
+| Flaga *kategorii* | Mową |
 |-----------------|---------|
-| **LC_ALL** |Wszystkie kategorie, wymienione poniżej. |
-| **LC_COLLATE** |**Strcoll —**, **_stricoll —**, **wcscoll —**, **_wcsicoll —**, **strxfrm —**, **_ strncoll —**, **_strnicoll —**, **_wcsncoll —**, **_wcsnicoll —**, i **wcsxfrm —** funkcji. |
-| **LC_CTYPE** | Funkcje obsługi znaków (z wyjątkiem **isdigit**, **isxdigit**, **mbstowcs**, i **mbtowc**, które są bez zmian). |
-| **LC_MONETARY** | Informacje o formatowaniu walutowym zwracane przez **localeconv** funkcji. |
-| **LC_NUMERIC** | Dziesiętny znak dla sformatowanych procedur danych wyjściowych (takich jak **printf**), dla procedur konwersji danych i dla niepieniężnych informacji formatowania zwracanych przez **localeconv**. Oprócz znaku dziesiętnego **LC_NUMERIC** ustawia separator tysięcy i sterujący grupowaniem zwracany przez ciąg [localeconv](localeconv.md). |
-| **LC_TIME** | **Strftime** i **wcsftime** funkcji. |
+| **LC_ALL** |Wszystkie kategorie, jak wymieniono poniżej. |
+| **LC_COLLATE** |Funkcje **strcoll —** , **_stricoll**, **wcscoll**, **_wcsicoll**, **strxfrm**, **_strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll**i **wcsxfrm** . |
+| **LC_CTYPE** | Funkcje obsługi znaków (z wyjątkiem **iscyfr**, **isxdigit**, **mbstowcs**i **mbtowc**, których nie dotyczy). |
+| **LC_MONETARY** | Informacje o formatowaniu pieniężnym zwracane przez funkcję **localeconv** . |
+| **LC_NUMERIC** | Znak dziesiętny dla sformatowanych procedur danych wyjściowych (takich jak **printf**), dla procedur konwersji danych i dla niepieniężnych informacji o formatowaniu zwracanych przez **localeconv**. Oprócz znaku dziesiętnego, **LC_NUMERIC** ustawia separator tysięcy i ciąg sterujący grupowania zwracanego przez [localeconv](localeconv.md). |
+| **LC_TIME** | Funkcje **strftime** i **wcsftime** . |
 
-Ta funkcja sprawdza poprawność *kategorii* i *ustawień regionalnych* parametrów. Jeśli parametr kategorii nie jest jedną z wartości podanych w powyższej tabeli lub *ustawień regionalnych* jest **NULL**, funkcja zwraca **NULL**.
+Ta funkcja sprawdza poprawność *kategorii* i parametrów *ustawień regionalnych* . Jeśli parametr kategorii nie jest jedną z wartości podanej w poprzedniej tabeli lub jeśli *Ustawienia regionalne* mają **wartość null**, funkcja zwróci **wartość null**.
 
-*Ustawień regionalnych* argument jest wskaźnikiem do ciągu, który określa ustawienia regionalne. Aby uzyskać informacje o formacie parametru *ustawień regionalnych* argumentów, zobacz [nazwy lokalne, języki i ciągi Kraj/Region](../../c-runtime-library/locale-names-languages-and-country-region-strings.md).
+Argument *locale* jest wskaźnikiem do ciągu, który określa ustawienia regionalne. Aby uzyskać informacje na temat formatu argumentu *ustawień regionalnych* , zobacz [nazwy ustawień regionalnych, Języki i ciągi kraj/region](../../c-runtime-library/locale-names-languages-and-country-region-strings.md).
 
-*Ustawień regionalnych* argument może przyjąć nazwy ustawień regionalnych, ciąg języka, ciąg języka i kraju/regionu, stronę kodową lub ciąg języka, kod kraju/regionu i stronę kodową. Zestaw dostępnych nazw ustawień regionalnych, języków, kodów krajów/regionów i stron kodowych zawiera wszystkie opcje, które są obsługiwane przez API Windows NLS, z wyjątkiem stron kodowych, które wymagają więcej niż dwóch bajtów na znak — na przykład, UTF-7 i UTF-8. Jeżeli podasz stronę kodową, taką jak UTF-7 lub UTF-8, **_create_locale** będą się niepowodzeniem i zwróci **NULL**. Zestaw nazw ustawień regionalnych obsługiwanych przez **_create_locale** są opisane w [nazwy lokalne, języki i ciągi Kraj/Region](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Zestaw ciągów języka i kraju/regionu, obsługiwany przez **_create_locale** są wymienione w [Language Strings](../../c-runtime-library/language-strings.md) i [ciągi Kraj/Region](../../c-runtime-library/country-region-strings.md).
+Argument *locale* może przyjmować nazwę ustawień regionalnych, ciąg języka, ciąg języka i kod kraju/regionu, stronę kodową lub ciąg języka, kod kraju/regionu i stronę kodową. Zestaw dostępnych nazw ustawień regionalnych, języków, kodów krajów/regionów i stron kodowych zawiera wszystkie, które są obsługiwane przez NLS API systemu Windows, z wyjątkiem stron kodowych, które wymagają więcej niż dwóch bajtów na znak — na przykład UTF-7 i UTF-8. Jeśli podajesz stronę kodową, taką jak UTF-7 lub UTF-8, **_create_locale** zakończy się niepowodzeniem i zwróci **wartość null**. Zestaw nazw ustawień regionalnych obsługiwanych przez **_create_locale** jest opisany w temacie [nazwy regionalne, Języki i ciągi kraj/region](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Zestaw ciągów języka i kraju/regionu obsługiwanych przez **_create_locale** są wymienione w [ciągach języka](../../c-runtime-library/language-strings.md) i w [ciągach kraju/regionu](../../c-runtime-library/country-region-strings.md).
 
-Aby uzyskać więcej informacji na temat ustawień regionalnych, zobacz [setlocale, _wsetlocale](setlocale-wsetlocale.md).
+Aby uzyskać więcej informacji na temat ustawień regionalnych, zobacz [setlocals, _wsetlocale](setlocale-wsetlocale.md).
 
-Poprzednia nazwa tej funkcji **__create_locale** (z dwoma wiodącymi podkreśleniami), jest przestarzała.
+Poprzednia nazwa tej funkcji, **__create_locale** (z dwoma znakami wiodącymi), jest przestarzała.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_create_locale**|\<locale.h>|
-|**_wcreate_locale**|\<Locale.h > lub \<wchar.h >|
+|**_wcreate_locale**|\<locale. h > \<lub WCHAR. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -164,9 +167,9 @@ In 'C' locale, _strftime_l returns 'Saturday, February 09, 2002'
 
 ## <a name="see-also"></a>Zobacz także
 
-[Nazwy lokalne, języki i ciągi Kraj/Region](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+[Nazwy lokalne, Języki i ciągi kraj/region](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [Ciągi języka](../../c-runtime-library/language-strings.md)<br/>
-[Ciągi Kraj/Region](../../c-runtime-library/country-region-strings.md)<br/>
+[Ciągi kraju/regionu](../../c-runtime-library/country-region-strings.md)<br/>
 [_free_locale](free-locale.md)<br/>
 [_configthreadlocale](configthreadlocale.md)<br/>
 [setlocale](../../preprocessor/setlocale.md)<br/>

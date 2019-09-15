@@ -1,10 +1,10 @@
 ---
 title: _mbsnbset_s, _mbsnbset_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbset_s_l
 - _mbsnbset_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsnbset_s
 - _mbsnbset_s_l
@@ -32,19 +35,19 @@ helpviewer_keywords:
 - _tcsnset_s function
 - tcsnset_s_l function
 ms.assetid: 811f92c9-cc31-4bbd-8017-2d1bfc6fb96f
-ms.openlocfilehash: 5d021f147ba407f5b0b7316afc7cfd79fe300997
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b54a05d163430aa01f4c12e841a11d1faf5a6c4b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331249"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952109"
 ---
-# <a name="mbsnbsets-mbsnbsetsl"></a>_mbsnbset_s, _mbsnbset_s_l
+# <a name="_mbsnbset_s-_mbsnbset_s_l"></a>_mbsnbset_s, _mbsnbset_s_l
 
-Ustawia pierwszy **n** bajtów ciąg znaków wielobajtowych do określonego znaku. Te wersje [_mbsnbset —, _mbsnbset_l —](mbsnbset-mbsnbset-l.md) mają wzmocnienia zabezpieczeń, zgodnie z opisem w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Ustawia pierwsze **n** bajtów ciągu znaków wielobajtowych do określonego znaku. Te wersje programu [_mbsnbset _mbsnbset_l](mbsnbset-mbsnbset-l.md) mają ulepszenia zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -80,43 +83,43 @@ errno_t _mbsnbset_s_l(
 ### <a name="parameters"></a>Parametry
 
 *str*<br/>
-Ciąg, który ma zostać zmodyfikowana.
+Ciąg, który ma zostać zmieniony.
 
-*Rozmiar*<br/>
+*zmienia*<br/>
 Rozmiar buforu ciągu.
 
 *c*<br/>
-Ustawienie jednobajtowych lub znaków wielobajtowych.
+Ustawienie znaków pojedynczego bajtu lub znaku bajtowego.
 
-*Liczba*<br/>
-Liczba bajtów do ustawienia.
+*liczbą*<br/>
+Liczba bajtów, które mają zostać ustawione.
 
-*Ustawienia regionalne*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli to się powiedzie; w przeciwnym razie kod błędu.
+Zero, jeśli pomyślne; w przeciwnym razie kod błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Mbsnbset_s —** i **_mbsnbset_s_l —** funkcje ustawiają, co najwyżej, pierwsze *liczba* bajtów *str* do *c*. Jeśli *liczba* jest większa niż długość *str*, długość *str* jest używana zamiast *liczba*. Jeśli *c* jest znakiem wielobajtowym i nie może być wyłącznie ustawiony jako ostatni bajt, który jest określony przez *liczba*, ostatni bajt jest uzupełniany pustym znakiem. **_mbsnbset_s —** i **_mbsnbset_s_l —** nie umieszczają kończącego znaku null na końcu *str*.
+Funkcje **_mbsnbset_s** i **_mbsnbset_s_l** , co najwyżej, w pierwszej *liczbie* bajtów *str* - *c*. Jeśli *Liczba* jest większa niż długość *str*, używana jest długość *str* zamiast *Count*. Jeśli *c* jest znakiem wielobajtowym i nie może zostać ustawiony całkowicie do ostatniego bajtu określonego przez *licznik*, ostatni bajt jest uzupełniony pustym znakiem. **_mbsnbset_s** i **_mbsnbset_s_l** nie umieszczają kończącej wartości null na końcu *str*.
 
-**_mbsnbset_s —** i **_mbsnbset_s_l —** przypominają **_mbsnset —**, chyba że ustawiają *liczba* bajtów zamiast *liczba* znaki *c*.
+**_mbsnbset_s** i **_mbsnbset_s_l** przypominają **_mbsnset**, z tą różnicą, że ustawiają *liczbę* bajtów zamiast *liczby* znaków *c*.
 
-Jeśli *str* jest **NULL** lub *liczba* wynosi zero, funkcja ta wytwarza wyjątek nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL** a funkcja zwraca **NULL**. Ponadto jeśli *c* nie jest prawidłowym znakiem wielobajtowym **errno** ustawiono **EINVAL** i spacja jest używana w zamian.
+Jeśli *str* ma **wartość null** lub *Liczba* jest równa zero, ta funkcja generuje wyjątek nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcja zwraca **wartość null**. Ponadto, jeśli *c* nie jest prawidłowym znakiem wielobajtowym, **errno** jest ustawiona na **EINVAL** i zamiast niego jest używane miejsce.
 
-Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych; zobacz [setlocale, _wsetlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. **_Mbsnbset_s —** wersja tej funkcji używa bieżących ustawień regionalnych dla wszelkich zachowań; **_mbsnbset_s_l —** wersja jest identyczna, z tą różnicą, że zamiast użyto parametru ustawień regionalnych to przekazana. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawień regionalnych; Zobacz [setlocaling, _wsetlocale,](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersja **_mbsnbset_s** tej funkcji używa bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych; wersja **_mbsnbset_s_l** jest identyczna z tą różnicą, że zamiast tego używa parametru ustawień regionalnych, który został przekazaną. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-W języku C++ korzystania z tych funkcji jest uproszczone przez przeciążania szablonu; przeciążenia mogą automatycznie wywnioskować długość buforu i tym samym wyeliminować konieczność określenia argumentu rozmiaru. Aby uzyskać więcej informacji, zobacz [Secure przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu, a tym samym wyeliminować konieczność określenia argumentu rozmiaru. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
-Wersje debugowania tych funkcji najpierw wypełniają bufor 0xfd. Aby wyłączyć to zachowanie, użyj [_crtsetdebugfillthreshold —](crtsetdebugfillthreshold.md).
+Wersje debugowania tych funkcji najpierw wypełniają bufor 0xFD. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tcsnset_s —**|**_strnset_s**|**_mbsnbset_s**|**_wcsnset_s**|
+|**_tcsnset_s**|**_strnset_s**|**_mbsnbset_s**|**_wcsnset_s**|
 |**_tcsnset_s_l**|`_strnset_s _l`|**_mbsnbset_s_l**|**_wcsnset_s_l**|
 
 ## <a name="requirements"></a>Wymagania
@@ -126,7 +129,7 @@ Wersje debugowania tych funkcji najpierw wypełniają bufor 0xfd. Aby wyłączy�
 |**_mbsnbset_s**|\<mbstring.h>|
 |**_mbsnbset_s_l**|\<mbstring.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

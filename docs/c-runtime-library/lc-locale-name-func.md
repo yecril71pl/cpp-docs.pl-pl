@@ -1,9 +1,9 @@
 ---
 title: ___lc_locale_name_func
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ___lc_locale_name_func
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr110.dll
 - msvcr100.dll
@@ -11,22 +11,25 @@ apilocation:
 - msvcr120.dll
 - msvcr80.dll
 - msvcr110_clr0400.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ___lc_locale_name_func
 helpviewer_keywords:
 - ___lc_locale_name_func
 ms.assetid: ef858308-872e-43de-95e0-9b1b4084343e
-ms.openlocfilehash: 88ce07ca3fece558c23f4fcd9a12949f184b7532
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: abc1ade393538586ad07f57e6838591833c9948b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62342682"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944227"
 ---
-# <a name="lclocalenamefunc"></a>___lc_locale_name_func
+# <a name="___lc_locale_name_func"></a>___lc_locale_name_func
 
-Wewnętrzny funkcji CRT. Pobiera nazwę ustawień regionalnych bieżącego wątku.
+Wewnętrzna funkcja CRT. Pobiera bieżącą nazwę ustawień regionalnych wątku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,13 +39,13 @@ wchar_t** ___lc_locale_name_func(void);
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do ciągu, który zawiera nazwę ustawień regionalnych bieżącego wątku.
+Wskaźnik do ciągu, który zawiera bieżącą nazwę ustawień regionalnych wątku.
 
 ## <a name="remarks"></a>Uwagi
 
-`___lc_locale_name_func` jest wewnętrzny funkcji CRT, który jest używany przez inne funkcje CRT, można uzyskać z magazynu lokalnego wątku CRT data bieżąca nazwa ustawień regionalnych. Te informacje są dostępne również za pomocą [_get_current_locale —](../c-runtime-library/reference/get-current-locale.md) funkcji lub [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) funkcji.
+`___lc_locale_name_func`to wewnętrzna funkcja CRT, która jest używana przez inne funkcje CRT do uzyskiwania bieżącej nazwy ustawień regionalnych z lokalnego magazynu wątków dla danych CRT. Te informacje są również dostępne za pomocą funkcji [_get_current_locale](../c-runtime-library/reference/get-current-locale.md) lub funkcji [setlocaling, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) .
 
-Wewnętrzne funkcje CRT są specyficzne dla implementacji i może ulec zmianie z każdej wersji. Nie zalecamy ich użycie w kodzie.
+Wewnętrzne funkcje CRT są specyficzne dla implementacji i mogą ulec zmianie w każdej wersji. Nie zalecamy ich używania w kodzie.
 
 ## <a name="requirements"></a>Wymagania
 

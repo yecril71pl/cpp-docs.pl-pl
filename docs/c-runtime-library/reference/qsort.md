@@ -1,9 +1,9 @@
 ---
 title: qsort
 ms.date: 11/04/2016
-apiname:
+api_name:
 - qsort
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - qsort
 helpviewer_keywords:
@@ -26,16 +29,16 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-ms.openlocfilehash: 8a770965a03e43227b99f122924c723691f79c61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f445158bb72c50507af913986aff2d225ee50928
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358102"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949711"
 ---
 # <a name="qsort"></a>qsort
 
-Wykonuje szybkie sortowanie. Bardziej bezpieczna wersja ta funkcja jest dostępna; zobacz [qsort_s —](qsort-s.md).
+Wykonuje szybkie sortowanie. Dostępna jest bezpieczniejsza wersja tej funkcji; Zobacz [qsort_s](qsort-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,20 +56,20 @@ void qsort(
 *base*<br/>
 Początek tablicy docelowej.
 
-*Numer*<br/>
+*Liczba*<br/>
 Rozmiar tablicy w elementach.
 
 *width*<br/>
-Element rozmiar w bajtach.
+Rozmiar elementu w bajtach.
 
-*compare*<br/>
-Wskaźnik do procedury dostarczone przez użytkownika, która porównuje dwa elementy tablicy i zwraca wartość, która określa ich relacje.
+*porównaniu*<br/>
+Wskaźnik do procedury dostarczonej przez użytkownika, która porównuje dwa elementy tablicy i zwraca wartość określającą ich relację.
 
 ## <a name="remarks"></a>Uwagi
 
-**Qsort —** funkcja implementuje algorytm szybkiego sortowania, aby posortować tablicę *numer* elementów, z których każdy z *szerokość* bajtów. Argument *podstawowy* jest wskaźnikiem do podstawy tablicy, która ma zostać posortowana. **qsort —** zastępuje tej tablicy przy użyciu posortowanych elementów.
+Funkcja **qsort** implementuje algorytm szybkiego sortowania, aby posortować tablicę elementów *liczbowych* , a każda z nich ma *Szerokość* . *Podstawa* argumentu jest wskaźnikiem do podstawy tablicy, która ma zostać posortowana. **qsort** zastępuje tę tablicę przy użyciu posortowanych elementów.
 
-**qsort —** wywołania *porównania* rutynowych jeden lub więcej razy w ciągu sortowanie i przekazuje wskaźniki do dwóch elementów tablicy przy każdym wywołaniu.
+**qsort** wywołuje procedurę *porównania* w jeden lub więcej razy podczas sortowania i przekazuje wskaźniki do dwóch elementów tablicy dla każdego wywołania.
 
 ```C
 compare( (void *) & elem1, (void *) & elem2 );
@@ -74,23 +77,23 @@ compare( (void *) & elem1, (void *) & elem2 );
 
 Procedura porównuje elementy i zwraca jedną z następujących wartości.
 
-|Porównaj wartości zwracanej funkcji|Opis|
+|Porównywanie zwracanej wartości funkcji|Opis|
 |-----------------------------------|-----------------|
-|< 0|**elem1** mniej niż **elem2**|
-|0|**elem1** odpowiednikiem **elem2**|
-|> 0|**elem1** większa **elem2**|
+|< 0|**elem1** mniejsze niż **elem2**|
+|0|**elem1** równoważne **elem2**|
+|> 0|**elem1** większe niż **elem2**|
 
-Tablica jest sortowane rosnąco, zgodnie z definicją funkcji porównywania. Aby posortować tablicę w kolejności malejącej, odwrócić sens "równy" i "poniżej" w funkcji porównywania.
+Tablica jest sortowana w kolejności rosnącej, zgodnie z definicją w funkcji porównania. Aby posortować tablicę w kolejności malejącej, Odwróć wartość "większe niż" i "mniejsze niż" w funkcji porównywania.
 
-Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *porównania* lub *numer* jest **NULL**, lub jeśli *podstawowy* jest **o wartości NULL** i *numer* jest różna od zera, lub jeśli *szerokość* jest mniejsza niż zero, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca i **errno** ustawiono **EINVAL**.
+Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *Compare* lub *Number* ma **wartość null**lub jeśli *podstawa* ma **wartość null** , a *Liczba* jest różna od zera, lub jeśli *Szerokość* jest mniejsza od zera, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca i **errno** jest ustawiona na **EINVAL**.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**qsort**|\<stdlib.h > i \<search.h >|
+|**qsort**|\<STDLIB. h > i \<Search. h >|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

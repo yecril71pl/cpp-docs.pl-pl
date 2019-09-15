@@ -1,13 +1,16 @@
 ---
-title: _execute_onexit_table _initialize_onexit_table, _register_onexit_function
+title: _execute_onexit_table, _initialize_onexit_table, _register_onexit_function
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _execute_onexit_table
 - _initialize_onexit_table
 - _register_onexit_function
-apilocation:
+api_location:
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _execute_onexit_table
 - process/_execute_onexit_table
@@ -20,16 +23,16 @@ helpviewer_keywords:
 - _initialize_onexit_table function
 - _register_onexit_function function
 ms.assetid: ad9e4149-d4ad-4fdf-aaaf-cf786fcb4473
-ms.openlocfilehash: 0090d5d1504f4320c122ae1e811e0af88cccdd2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf8c61e467796c7bfaedff6918bfbf598ada528e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62343975"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944371"
 ---
-# <a name="executeonexittable-initializeonexittable-registeronexitfunction"></a>_execute_onexit_table _initialize_onexit_table, _register_onexit_function
+# <a name="_execute_onexit_table-_initialize_onexit_table-_register_onexit_function"></a>_execute_onexit_table, _initialize_onexit_table, _register_onexit_function
 
-Zarządza procedury wywoływanej w momencie zakończenia.
+Zarządza procedurami, które mają być wywoływane w czasie zakończenia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -50,33 +53,33 @@ int _execute_onexit_table(
 
 #### <a name="parameters"></a>Parametry
 
-*Tabela*<br/>
-[out w] Wskaźnik do tablicy funkcji OnExit —.
+*tabele*<br/>
+[in. out] Wskaźnik do tabeli funkcji OnExit.
 
-*— Funkcja*<br/>
-[in] Wskaźnik do funkcji, można dodać do tabeli funkcji OnExit —.
+*funkcyjn*<br/>
+podczas Wskaźnik do funkcji, która ma zostać dodana do tabeli funkcji OnExit.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli to się powiedzie, zwraca wartość 0. W przeciwnym razie zwraca wartość ujemną.
+Jeśli powiedzie się, zwraca wartość 0. W przeciwnym razie zwraca wartość ujemną.
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje są szczegóły implementacji infrastruktury używane do obsługi środowiska uruchomieniowego C i nie powinna być wywoływana bezpośrednio w kodzie. Środowisko uruchomieniowe C używa *OnExit — funkcja tabeli* sekwencji zarejestrowane w wyniku wywołania funkcji `atexit`, `at_quick_exit`, i `_onexit`. Struktura danych OnExit — funkcja tabeli jest szczegółowo opisuje implementacja nieprzezroczyste środowiska uruchomieniowego C; kolejność i znaczenie składowych danych mogą ulec zmianie. Powinny one być nie kontrolowane przez kod zewnętrzny.
+Te funkcje są szczegółami implementacji infrastruktury używanymi do obsługi środowiska uruchomieniowego języka C i nie powinny być wywoływane bezpośrednio z kodu. Środowisko uruchomieniowe języka C używa *tabeli funkcji OnExit* do reprezentowania sekwencji funkcji zarejestrowanych przez wywołania do `atexit`, `at_quick_exit`, i `_onexit`. Struktura danych tabeli funkcji OnExit to nieprzezroczysta implementacja szczegółów środowiska uruchomieniowego języka C. kolejność i znaczenie jego składowych danych mogą ulec zmianie. Nie powinny być sprawdzane przez kod zewnętrzny.
 
-`_initialize_onexit_table` Funkcja inicjuje tabelę funkcji OnExit — do swojej wartości początkowej.  Ta funkcja musi zostać wywołana przed tabelę funkcji OnExit — jest przekazywany do obu `_register_onexit_function` lub `_execute_onexit_table`.
+`_initialize_onexit_table` Funkcja inicjuje tabelę funkcji OnExit do jej początkowej wartości.  Ta funkcja musi zostać wywołana przed przekazaniem tabeli funkcji OnExit do `_register_onexit_function` elementu lub. `_execute_onexit_table`
 
-`_register_onexit_function` Funkcja dołącza funkcję do końca tablicy funkcji OnExit —.
+`_register_onexit_function` Funkcja dołącza funkcję do końca tabeli funkcji OnExit.
 
-`_execute_onexit_table` Funkcja wykonuje wszystkie funkcje w tabeli funkcji OnExit —, czyści tabeli, a następnie zwraca. Po wywołaniu `_execute_onexit_table`, tabela jest w stanie nie jest ważna; muszą zostać zainicjowane ponownie przez wywołanie `_initialize_onexit_table` zanim zostanie on użyty ponownie.
+`_execute_onexit_table` Funkcja wykonuje wszystkie funkcje w tabeli funkcji OnExit, czyści tabelę, a następnie zwraca. Po wywołaniu `_execute_onexit_table`, tabela jest w stanie nieprawidłowym; musi być zainicjowana przez `_initialize_onexit_table` wywołanie przed ponownym użyciem.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|`_initialize_onexit_table function`, `_register_onexit_function`, `_execute_onexit_table`|C, C++: \<process.h>|
+|`_initialize_onexit_table function`, `_register_onexit_function`, `_execute_onexit_table`|C, C++: \<Process. h >|
 
-`_initialize_onexit_table`, `_register_onexit_function`, I `_execute_onexit_table` funkcje są specyficzne dla firmy Microsoft. Aby uzyskać informacje o zgodności – zobacz [zgodności](../c-runtime-library/compatibility.md).
+Funkcje `_initialize_onexit_table`, `_register_onexit_function` i`_execute_onexit_table` są specyficzne dla firmy Microsoft. Aby uzyskać informacje o zgodności, zobacz [zgodność](../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

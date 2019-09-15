@@ -1,9 +1,9 @@
 ---
 title: feof
 ms.date: 11/04/2016
-apiname:
+api_name:
 - feof
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,23 +15,26 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - feof
 helpviewer_keywords:
 - end of file, testing for
 - feof function
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
-ms.openlocfilehash: 9c023290df601bfc48f9708af86d32d91cd52dc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf6cfdb63689f5d69cc45dd407ecc6b08a7a7a73
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334401"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941134"
 ---
 # <a name="feof"></a>feof
 
-Testuje pod kątem koniec pliku dla strumienia.
+Testuje koniec pliku w strumieniu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,19 +47,19 @@ int feof(
 ### <a name="parameters"></a>Parametry
 
 *stream*<br/>
-Wskaźnik do **pliku** struktury.
+Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Feof** funkcja zwraca wartość różną od zera, jeśli operacja odczytu podjął próbę odczytu poza końcem pliku; w przeciwnym razie zwraca 0. Jeśli wskaźnik strumienia **NULL**, funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL** i **feof** zwraca wartość 0.
+Funkcja **feof** zwraca wartość różną od zera, jeśli podczas operacji odczytu podjęto próbę odczytu poza końcem pliku; Zwraca wartość 0 w przeciwnym razie. Jeśli wskaźnik strumienia ma **wartość null**, funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a **feof** zwraca wartość 0.
 
-Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów błędu,.
+Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) , aby uzyskać więcej informacji na temat tych i innych kodów błędów.
 
 ## <a name="remarks"></a>Uwagi
 
-**Feof** procedura (implementowana jako funkcja i jak makra) określa czy koniec *strumienia* został przekazany. Po upływie na końcu pliku odczytać operacje zwracają wskaźnik końca pliku, dopóki strumień jest zamknięty lub do momentu [rewind](rewind.md), **fsetpos**, [fseek](fseek-fseeki64.md), lub  **clearerr —** nazywa się przed nim.
+Procedura **feof** (zaimplementowana zarówno jako funkcja, jak i jako makro) określa, czy koniec *strumienia* został zakończony. Po przekazaniu końca pliku operacje odczytu zwracają wskaźnik końca pliku do momentu zamknięcia strumienia lub do przełączenia do [tyłu](rewind.md), **fsetpos**, [fseek](fseek-fseeki64.md)lub **clearerr** .
 
-Na przykład, jeśli plik zawiera 10 bajtów i odczytu 10 bajtów z pliku **feof** zwróci 0, ponieważ mimo że wskaźnik pliku znajduje się na końcu pliku, nie podjęto próbę odczytu poza końcem. Tylko po użytkownik próbuje odczytać 11 bajtów będą **feof** zwracają wartość różną od zera.
+Na przykład, jeśli plik zawiera 10 bajtów i czytasz 10 bajtów z pliku, **feof** zwróci 0, a mimo to, że wskaźnik pliku znajduje się na końcu pliku, nie podjęto próby odczytu poza końcem. Dopiero po próbie odczytania jedenastego bajtu **feof** zwraca wartość różną od zera.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -64,7 +67,7 @@ Na przykład, jeśli plik zawiera 10 bajtów i odczytu 10 bajtów z pliku **feof
 |--------------|---------------------|
 |**feof**|\<stdio.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -106,7 +109,7 @@ int main( void )
 }
 ```
 
-## <a name="input-crtfeoftxt"></a>Dane wejściowe: crt_feof.txt
+## <a name="input-crt_feoftxt"></a>Dane wejściowe: crt_feof. txt
 
 ```Input
 Line one.
@@ -122,7 +125,7 @@ Number of bytes read = 19
 ## <a name="see-also"></a>Zobacz także
 
 [Obsługa błędów](../../c-runtime-library/error-handling-crt.md)<br/>
-[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
+[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [clearerr](clearerr.md)<br/>
 [_eof](eof.md)<br/>
 [ferror](ferror.md)<br/>
