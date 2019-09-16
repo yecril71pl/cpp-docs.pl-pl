@@ -1,14 +1,14 @@
 ---
 title: hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _hypotf
 - hypot
 - hypotf
 - _hypot
 - _hypotl
 - hypotl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - hypotf
 - hypotl
@@ -37,16 +40,16 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-ms.openlocfilehash: ea25ea87a0ec23a0e98dbdc7bb92ce691fc2fa0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8cee9e217b23c43a9ce5a1521b52215301b932fe
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157404"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954790"
 ---
-# <a name="hypot-hypotf-hypotl-hypot-hypotf-hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
+# <a name="hypot-hypotf-hypotl-_hypot-_hypotf-_hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 
-Oblicza przeciwprostokątną.
+Oblicza przeciwprostokątnej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -84,23 +87,23 @@ Wartości zmiennoprzecinkowe.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-W przypadku powodzenia **hypot —** zwraca długość przeciwprostokątnej; przy przepełnieniu **hypot —** zwraca INF (nieskończoność) i **errno** zmienna jest ustawiona na **ERANGE** . Możesz użyć **_matherr** do modyfikowania obsługi błędów.
+Jeśli to się powiedzie, **hypot —** zwraca długość przeciwprostokątnej; w przypadku przepełnienia funkcja **hypot —** zwraca plik inf (nieskończoność), a zmienna **errno** jest ustawiona na **ERANGE**. Możesz użyć **_matherr** , aby zmodyfikować obsługę błędów.
 
 Aby uzyskać więcej informacji na temat kodów powrotnych, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**Hypot —** funkcje obliczają długość przeciwprostokątnej trójkąta prostokątnego, biorąc pod uwagę długość obu stron *x* i *y* (innymi słowy, pierwiastek kwadratowy liczby *x*<sup>2</sup> + *y*<sup>2</sup>).
+Funkcja **hypot —** oblicza długość przeciwprostokątneju prawego trójkąta, uwzględniając długość dwóch boków *x* i *y* (innymi słowy, pierwiastek kwadratowy *x*<sup>2</sup> + *y*<sup>2</sup>).
 
-Wersje funkcji, które mają wiodące znaki podkreślenia są zapewniane dla zgodności z wcześniejszymi standardami. Ich zachowanie jest identyczne z wersjami, które nie mają wiodących znaków podkreślenia. Zaleca się używania wersji bez wiodącego podkreślenia dla nowego kodu.
+Wersje funkcji, które mają wiodące znaki podkreślenia, są zapewniane pod kątem zgodności z wcześniejszymi standardami. Ich zachowanie jest identyczne z wersjami, które nie mają wiodących podkreśleń. Zalecamy używanie wersji bez wiodących podkreśleń dla nowego kodu.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**hypot**, **hypotf**, **hypotl**, **_hypot**, **_hypotf**, **_hypotl**|\<math.h>|
+|**hypot —** , **hypotf —** , **hypotl**, **_hypot**, **_hypotf**, **_hypotl**|\<math.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

@@ -1,10 +1,10 @@
 ---
 title: _chdir, _wchdir
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wchdir
 - _chdir
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tchdir
 - _chdir
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - chdir function
 - directories [C++], changing
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
-ms.openlocfilehash: e4cf7a44864df0b5ecca531aab3db4546c25bb2c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b54e0978626779be21900e543a546bfae05efe2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347668"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939370"
 ---
-# <a name="chdir-wchdir"></a>_chdir, _wchdir
+# <a name="_chdir-_wchdir"></a>_chdir, _wchdir
 
 Zmienia bieżący katalog roboczy.
 
@@ -57,25 +60,25 @@ int _wchdir(
 ### <a name="parameters"></a>Parametry
 
 *dirname*<br/>
-Ścieżka do nowego katalogu roboczego.
+Ścieżka nowego katalogu roboczego.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Te funkcje zwracają wartość 0, jeśli kończy się pomyślnie. Zwracana wartość-1 wskazuje błąd. Jeśli nie można odnaleźć określonej ścieżki, **errno** ustawiono **ENOENT**. Jeśli *nazwa_kat* jest **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL** a funkcja zwraca wartość -1.
+Te funkcje zwracają wartość 0 w przypadku powodzenia. Zwracana wartość-1 oznacza niepowodzenie. Jeśli nie można znaleźć określonej ścieżki, **errno** jest ustawiona na **ENOENT**. Jeśli *dirname* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcja zwraca wartość-1.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Chdir —** funkcji zmienia bieżący katalog roboczy do katalogu określonego przez *nazwa_kat*. *Nazwa_kat* parametru musi odwoływać się do istniejącego katalogu. Tę funkcję można zmienić bieżący katalog roboczy na dowolnym dysku. Jeśli litera dysku została określona w *nazwa_kat*, również zmiany domyślną literę dysku. Na przykład jeśli jest domyślną literę dysku i \BIN jest bieżący katalog roboczy, poniższe wywołanie zmienia bieżący katalog roboczy na dysku C i ustanawia C jako nowego dysku domyślne:
+Funkcja **_chdir** zmienia bieżący katalog roboczy do katalogu określonego przez *dirname*. Parametr *dirname* musi odwoływać się do istniejącego katalogu. Ta funkcja może zmienić bieżący katalog roboczy na dowolnym dysku. Jeśli w *dirname*określono nową literę dysku, domyślnie zostanie zmieniona litera dysku. Na przykład jeśli jest domyślną literę dysku i \BIN jest bieżącym katalogiem roboczym, następujące wywołanie zmienia bieżący katalog roboczy dla dysku C i ustanawia C jako nowy dysk domyślny:
 
 ```C
 _chdir("c:\temp");
 ```
 
-Jeśli używasz opcjonalne ukośnika odwrotnego (**&#92;**) w ścieżkach, należy umieścić dwa ukośniki odwrotne (**&#92;&#92;**) ciągu języka C do reprezentowania pojedynczy ukośnik odwrotny ( **&#92;**).
+W przypadku używania opcjonalnego znaku ukośnika odwrotnego ( **&#92;** ) w ścieżkach należy umieścić dwa ukośniki odwrotne ( **&#92;** ) w literale ciągu C, aby reprezentować pojedynczy ukośnik odwrotny ( **&#92;** ).
 
-**_wchdir —** to wersja znaku dwubajtowego **_chdir —**; *nazwa_kat* argument **_wchdir —** jest ciągiem znaku dwubajtowego. **_wchdir —** i **_chdir —** zachowują się identycznie.
+**_wchdir** to dwubajtowa wersja **_chdir**; argument *dirname* **_wchdir** jest ciągiem znaków dwubajtowych. **_wchdir** i **_chdir** zachowują się identycznie w inny sposób.
 
-### <a name="generic-text-routine-mapping"></a>Mapowania procedur zwykłego tekstu:
+### <a name="generic-text-routine-mapping"></a>Mapowanie procedury tekstu ogólnego:
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -83,12 +86,12 @@ Jeśli używasz opcjonalne ukośnika odwrotnego (**&#92;**) w ścieżkach, nale�
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
+|Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
 |**_chdir**|\<direct.h>|\<errno.h>|
-|**_wchdir**|\<Direct.h > lub \<wchar.h >|\<errno.h>|
+|**_wchdir**|\<Direct. h > lub \<WCHAR. h >|\<errno.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

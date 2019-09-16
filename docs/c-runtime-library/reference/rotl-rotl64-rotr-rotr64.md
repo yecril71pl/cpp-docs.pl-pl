@@ -1,12 +1,12 @@
 ---
 title: _rotl, _rotl64, _rotr, _rotr64
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _rotr64
 - _rotl
 - _rotr
 - _rotl64
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _rotr64
 - rotl64
@@ -40,16 +43,16 @@ helpviewer_keywords:
 - _rotr64 function
 - bits, rotating
 ms.assetid: cfce439b-366f-4584-8ab1-d527b13fcfc6
-ms.openlocfilehash: c8cf61ecd8ffab9433f5c6ad077ddba39401c0e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ae2df7d80778cd4c573192a13b1fd91fb358eef
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357411"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949151"
 ---
-# <a name="rotl-rotl64-rotr-rotr64"></a>_rotl, _rotl64, _rotr, _rotr64
+# <a name="_rotl-_rotl64-_rotr-_rotr64"></a>_rotl, _rotl64, _rotr, _rotr64
 
-Obracanie bitów w lewo (**_rotl —**) lub w prawo (**_rotr —**).
+Powoduje obrócenie bitów w lewo ( **_rotl**) lub prawo ( **_rotr**).
 
 ## <a name="syntax"></a>Składnia
 
@@ -76,31 +79,31 @@ unsigned __int64 _rotr64(
 ### <a name="parameters"></a>Parametry
 
 *value*<br/>
-Wartość jest.
+Wartość, która ma zostać obrócona.
 
 *shift*<br/>
-Liczba bitów, aby przesunąć.
+Liczba bitów do przesunięcia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Obrócony wartość. Nie będzie zwrotu błędu.
+Obrócona wartość. Brak powrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Rotl —** i **_rotr —** funkcje Obróć niepodpisane *wartość* przez *shift* usługi bits. **_rotl —** obraca się wartości po lewej. **_rotr —** obraca się wartość po prawej stronie. Obie funkcje opakować obracać wyłączyć jeden z punktów końcowych usługi bits *wartość* w innym celu.
+Funkcje **_rotl** i **_rotr** obracają *wartość* unsigned przez bity *SHIFT* . **_rotl** obraca wartość w lewo. **_rotr** obraca wartość w prawo. Obie funkcje zawijają bity, obracają się z jednego końca *wartości* do drugiego.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_rotl**, **_rotl64**|\<stdlib.h>|
-|**_rotr —**, **_rotr64 —**|\<stdlib.h>|
+|**_rotr**, **_rotr64**|\<stdlib.h>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 

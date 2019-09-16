@@ -1,12 +1,12 @@
 ---
 title: strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strxfrm
 - _wcsxfrm_l
 - _strxfrm_l
 - wcsxfrm
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strxfrm
 - _tcsxfrm
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - strings [C++], comparing locale
 - _wcsxfrm_l function
 ms.assetid: 6ba8e1f6-4484-49aa-83b8-bc2373187d9e
-ms.openlocfilehash: e4dc94d76562daf10544e9b0d09d9608bd83e454
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 411fe3a5a6f66614f0a22e0f623b73685a6e0844
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500784"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957608"
 ---
 # <a name="strxfrm-wcsxfrm-_strxfrm_l-_wcsxfrm_l"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 
@@ -89,11 +92,11 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca długość przekształconego ciągu, który nie zlicza kończącego znaku null. Jeśli wartość zwracana jest większa lub równa liczbie, zawartość *strDest* jest nieprzewidywalne. W przypadku błędu każda funkcja ustawia **errno** i zwraca **INT_MAX**. Dla nieprawidłowego znaku **errno** jest ustawiony na **EILSEQ**.
+Zwraca długość przekształconego ciągu, który nie zlicza kończącego znaku null. Jeśli wartość zwracana jest większa lub równa *liczbie*, zawartość *strDest* jest nieprzewidywalne. W przypadku błędu każda funkcja ustawia **errno** i zwraca **INT_MAX**. Dla nieprawidłowego znaku **errno** jest ustawiony na **EILSEQ**.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **strxfrm** przekształca ciąg wskazany przez *strSource* do nowego, posortowanego formularza, który jest przechowywany w *strDest*. Nie więcej niż *Liczba* znaków, w tym znak null, są przekształcane i umieszczane w ciągu wynikowym. Przekształcenie jest realizowane przy użyciu ustawienia kategorii **LC_COLLATE** ustawień regionalnych. Aby uzyskać więcej informacji na temat **LC_COLLATE**, zobacz setlocale. [](setlocale-wsetlocale.md) **strxfrm** używa bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych; **_strxfrm_l** jest identyczny, z tą różnicą, że używa ustawień regionalnych przekazaną zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Funkcja **strxfrm** przekształca ciąg wskazany przez *strSource* do nowego, posortowanego formularza, który jest przechowywany w *strDest*. Nie więcej niż *Liczba* znaków, w tym znak null, są przekształcane i umieszczane w ciągu wynikowym. Przekształcenie jest realizowane przy użyciu ustawienia kategorii **LC_COLLATE** ustawień regionalnych. Aby uzyskać więcej informacji na temat **LC_COLLATE**, zobacz [setlocale](setlocale-wsetlocale.md). **strxfrm** używa bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych; **_strxfrm_l** jest identyczny, z tą różnicą, że używa ustawień regionalnych przekazaną zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 Po przekształceniu wywołanie **strcmp** z dwoma przekształconymi ciągami daje wyniki identyczne z wywołaniami **strcoll —** zastosowanymi do oryginalnych dwóch ciągów. Podobnie jak w przypadku **strcoll —** i **stricoll**, **strxfrm** automatycznie obsługuje ciągi znaków wielobajtowych.
 

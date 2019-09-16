@@ -1,10 +1,10 @@
 ---
 title: _dup, _dup2
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _dup
 - _dup2
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _dup2
 - _dup
@@ -28,16 +31,16 @@ helpviewer_keywords:
 - dup2 function
 - _dup function
 ms.assetid: 4d07e92c-0d76-4832-a770-dfec0e7a0cfa
-ms.openlocfilehash: a00b9506102e6b274a9aa87c33c144d75cfc2508
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da47d6f040b62906d30107f9036ffa2a3ea05a1c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288969"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937786"
 ---
-# <a name="dup-dup2"></a>_dup, _dup2
+# <a name="_dup-_dup2"></a>_dup, _dup2
 
-Tworzy deskryptor drugiego pliku dla otwartego pliku (**_dup —**), lub ponownie przypisuje deskryptor pliku (**_dup2 —**).
+Tworzy drugi deskryptor pliku dla otwartego pliku ( **_dup**) lub ponownie przypisuje deskryptor pliku ( **_dup2**).
 
 ## <a name="syntax"></a>Składnia
 
@@ -48,23 +51,23 @@ int _dup2( int fd1, int fd2 );
 
 ### <a name="parameters"></a>Parametry
 
-*FD*, *fd1*<br/>
-Deskryptory pliku odnoszące się do otwarcia pliku.
+*FD*, *FD1*<br/>
+Deskryptory plików odwołujące się do otwartego pliku.
 
 *fd2*<br/>
-Każdy deskryptor pliku.
+Dowolny deskryptor pliku.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_dup —** zwraca nowy deskryptor pliku. **_dup2 —** zwraca wartość 0, informując o powodzeniu. Jeśli wystąpi błąd, każda funkcja zwraca wartość -1 i ustawia **errno** do **EBADF** Jeżeli deskryptor pliku jest nieprawidłowa lub aby **EMFILE** Jeśli więcej deskryptorów plików nie są dostępne. W przypadku nieprawidłowego deskryptora pliku, funkcja również wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md).
+**_dup** zwraca nowy deskryptor pliku. **_dup2** zwraca wartość 0, aby wskazać powodzenie. Jeśli wystąpi błąd, każda funkcja zwraca wartość-1 i ustawia **errno** na **EBADF** , jeśli deskryptor pliku jest nieprawidłowy lub **EMFILE** , jeśli nie ma więcej dostępnych deskryptorów plików. W przypadku nieprawidłowego deskryptora pliku funkcja wywołuje również procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md).
 
-Aby uzyskać więcej informacji na temat tych i innych kodach powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tych i innych kodów powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_Dup —** i **_dup2 —** funkcje kojarzą deskryptor drugiego pliku z aktualnie otwartym plikiem. Te funkcje można skojarzyć deskryptor pliku wstępnie zdefiniowanych w takim **stdout**, z innego pliku. Operacje na pliku mogą odbywać się przy użyciu pliku albo deskryptora pliku. Typ dostępu przyznany dla pliku jest zależny od utworzenia nowego deskryptora. **_dup —** zwraca następny dostępny deskryptor pliku dla danego pliku. **_dup2 —** wymusza *fd2* do odwoływania się do tego samego pliku jako *fd1*. Jeśli *fd2* jest skojarzony z plikiem otwartym w momencie wywołania, ten plik jest zamknięty.
+Funkcje **_dup** i **_dup2** kojarzą drugi deskryptor pliku z aktualnie otwartym plikiem. Te funkcje mogą służyć do kojarzenia wstępnie zdefiniowanego deskryptora pliku, takiego jak w przypadku strumienia **stdout**, z innym plikiem. Operacje na pliku można wykonać przy użyciu deskryptora pliku. Nie ma to wpływ na typ dostępu dozwolony dla danego pliku. **_dup** zwraca następny dostępny deskryptor pliku dla danego pliku. **_dup2** zmusza *FD2* do odwoływania się do tego samego pliku jako *FD1*. Jeśli *FD2* jest skojarzony z otwartym plikiem w momencie wywołania, ten plik jest zamknięty.
 
-Zarówno **_dup —** i **_dup2 —** akceptują deskryptory jako parametry. Aby przekazać strumień (`FILE *`) do jednej z tych funkcji, należy użyć [_fileno](fileno.md). **Fileno —** rutynowe zwroty deskryptora pliku aktualnie skojarzone z danym strumieniem. Poniższy przykład pokazuje, jak skojarzyć **stderr** (zdefiniowany jako `FILE *` w Stdio.h) z deskryptorem pliku:
+Zarówno **_dup** , jak i **_dup2** akceptują deskryptory plików jako parametry. Aby przekazać strumień (`FILE *`) do jednej z tych funkcji, użyj [_fileno](fileno.md). Procedura **fileno** zwraca deskryptor pliku aktualnie skojarzony z danym strumieniem. Poniższy przykład pokazuje, jak skojarzyć **stderr** (zdefiniowany jako `FILE *` w stdio. h) z deskryptorem pliku:
 
 ```C
 int cstderr = _dup( _fileno( stderr ));
@@ -77,7 +80,7 @@ int cstderr = _dup( _fileno( stderr ));
 |**_dup**|\<io.h>|
 |**_dup2**|\<io.h>|
 
-Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej Windows (UWP). Standardowe uchwyty strumienia, które są powiązane z konsolą, **stdin**, **stdout**, i **stderr**, muszą zostać przekierowane zanim funkcje środowiska wykonawczego języka C można ich używać w aplikacjach platformy UWP . Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout**i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -142,7 +145,7 @@ This goes to file 'data'
 
 ## <a name="see-also"></a>Zobacz także
 
-[Niskiego poziomu operacji We/Wy](../../c-runtime-library/low-level-i-o.md)<br/>
+[We/wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
 [_close](close.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>
