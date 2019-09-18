@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: f33365fffc9a4addb0f22a90b87f8a03fdf2c1a9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8bc2a42c5a9006065e2f0f4ecb70911e0055823e
+ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513739"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71062073"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Przewodnik: Tworzenie tradycyjnej aplikacji klasycznej systemu WindowsC++()
 
@@ -44,7 +44,7 @@ Wykonaj następujące kroki, aby utworzyć pierwszy projekt pulpitu systemu Wind
 
 1. Z menu głównego wybierz pozycję **plik** > **Nowy** > **projekt** , aby otworzyć okno dialogowe **Tworzenie nowego projektu** .
 
-1. W górnej części okna dialogowego Ustaw **Język** na **C++** , ustaw platformę na **system Windows**i ustaw **Typ projektu** na **Desktop**. 
+1. W górnej części okna dialogowego Ustaw **Język** na **C++** , ustaw **platformę** na **system Windows**i ustaw **Typ projektu** na **Desktop**. 
 
 1. Z listy filtrowane typy projektów wybierz pozycję **Kreator pulpitu systemu Windows** , a następnie wybierz przycisk **dalej**. Na następnej stronie Wprowadź nazwę projektu i określ lokalizację projektu w razie potrzeby.
 
@@ -70,7 +70,7 @@ Projekt jest teraz tworzony i plik źródłowy zostanie otwarty w edytorze. Aby 
 
 1. Na **pliku** menu, wybierz **New** , a następnie wybierz **projektu**.
 
-1. W oknie dialogowym **Nowy projekt** w lewym okienku rozwiń pozycję zainstalowana > **Wizualizacja C++** , a następnie wybierz pozycję **Windows Desktop**. W środkowym okienku wybierz pozycję **Kreator pulpitu systemu Windows**.
+1. W oknie dialogowym **Nowy projekt** w lewym okienku rozwiń pozycję **zainstalowana** > **Wizualizacja C++** , a następnie wybierz pozycję **Windows Desktop**. W środkowym okienku wybierz pozycję **Kreator pulpitu systemu Windows**.
 
    W polu **Nazwa** wpisz nazwę projektu, na przykład *DesktopApp*. Wybierz **OK**.
 
@@ -98,7 +98,7 @@ Projekt jest teraz tworzony i plik źródłowy zostanie otwarty w edytorze. Aby 
 
 1. Na **pliku** menu, wybierz **New** , a następnie wybierz **projektu**.
 
-1. W oknie dialogowym **Nowy projekt** w lewym okienku rozwiń węzeł **zainstalowane** > **Szablony** > **C++wizualizacji**, a następnie wybierz opcję **Win32**. W środkowym okienku wybierz pozycję **projekt Win32**.
+1. W oknie dialogowym **Nowy projekt** w lewym okienku rozwiń węzeł **zainstalowane** > **Szablony** > **wizualizacji C++** , a następnie wybierz opcję **Win32**. W środkowym okienku wybierz pozycję **projekt Win32**.
 
    W polu **Nazwa** wpisz nazwę projektu, na przykład *DesktopApp*. Wybierz **OK**.
 
@@ -157,8 +157,8 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych systemu Win
 
    ```cpp
    LRESULT CALLBACK WndProc(
-      _In_ HWND   hwnd,
-      _In_ UINT   uMsg,
+      _In_ HWND   hWnd,
+      _In_ UINT   message,
       _In_ WPARAM wParam,
       _In_ LPARAM lParam
    );
