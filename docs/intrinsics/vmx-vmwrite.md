@@ -39,13 +39,13 @@ podczas Wartość do zapisu w polu VMCS.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-2,0
+0\
 Operacja zakończyła się pomyślnie.
 
-jedno
+1\
 Operacja nie powiodła się z rozszerzonym stanem dostępnym w `VM-instruction error field` bieżącym VMCs.
 
-dwóch
+2\
 Operacja nie powiodła się bez dostępnego stanu.
 
 ## <a name="remarks"></a>Uwagi
