@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - cstdlib header
 ms.assetid: 0a6aaebf-84e9-4b60-ae90-17e11981cf54
-ms.openlocfilehash: 298d6a512b2863a326bda0670f33fe8f1bda0688
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0b4f24f50c78d9a079e2c7d0c8e3d3c5bfe952c2
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449409"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127220"
 ---
 # <a name="ltcstdlibgt"></a>&lt;cstdlib&gt;
 
@@ -98,7 +98,7 @@ Zero, jeśli rejestracja powiedzie się, jeśli nie powiedzie się.
 
 #### <a name="remarks"></a>Uwagi
 
-Funkcja rejestruje funkcję wskazywaną przez *Func* do wywołania bez argumentów, gdy `quick_exit` jest wywoływana. `at_quick_exit()` Nie określono `at_quick_exit()` , czy wywołanie, które nie występuje, zanim wszystkie `quick_exit` wywołania zakończą się pomyślnie, a `at_quick_exit()` funkcje nie spowodują wyścigu. Kolejność rejestracji może być nieokreślona, jeśli `at_quick_exit` została wywołana z więcej niż jednego wątku, a `at_quick_exit` ponieważ rejestracje różnią się `atexit` od rejestracji, aplikacje mogą wymagać wywołania obu funkcji rejestracji z ten sam argument. Implementacja obsługuje rejestrację co najmniej 32 funkcji.
+Funkcja rejestruje funkcję *funkcji, która*jest wywoływana bez argumentów, gdy `quick_exit` jest wywoływana. `at_quick_exit()` Wywołanie `at_quick_exit()` , które nie występuje, zanim wszystkie wywołania programu `quick_exit` mogą się nie powieść. `at_quick_exit()` Funkcje nie wprowadzają wyścigu do danych. Kolejność rejestracji może być nieokreślona, jeśli `at_quick_exit` została wywołana z więcej niż jednego wątku. Ponieważ `at_quick_exit` rejestracje różnią się `atexit` od rejestracji, aplikacje mogą wymagać wywołania obu funkcji rejestracji przy użyciu tego samego argumentu. MSVC obsługuje rejestrację co najmniej 32 funkcji.
 
 ### <a name="atexit"></a>atexit —
 
@@ -109,7 +109,7 @@ int atexit(atexit-handler * func) noexcept;
 
 #### <a name="remarks"></a>Uwagi
 
-Funkcja rejestruje funkcję wskazywaną przez Func, która ma zostać wywołana bez argumentów przy normalnym zakończeniu działania programu.  `atexit()` Nie określono `atexit()` , czy wywołanie, które nie występuje, zanim `exit()` wywołanie powiodło się, a `atexit()` funkcje nie spowodują wyścigu. Implementacja obsługuje rejestrację co najmniej 32 funkcji.
+Funkcja rejestruje funkcję wskazywaną przez Func, która ma zostać wywołana bez argumentów przy normalnym zakończeniu działania programu. `atexit()` Wywołanie `atexit()` , które nie występuje, przed `exit()` wywołaniem metody może się nie powieść. `atexit()` Funkcje nie wprowadzają wyścigu do danych.
 
 #### <a name="return-value"></a>Wartość zwracana
 
@@ -125,11 +125,11 @@ Zwraca zero, jeśli rejestracja kończy się niepowodzeniem, jeśli nie powiedzi
 
 Najpierw obiekty z okresem przechowywania wątków i skojarzone z bieżącym wątkiem są niszczone.
 
-Następnie obiekty ze statycznym okresem przechowywania są niszczone, a funkcje `atexit` zarejestrowane przez wywołanie są wywoływane. Obiekty automatyczne nie są niszczone w wyniku wywołania `exit()`. Jeśli kontrolka opuszcza zarejestrowana funkcja wywołana `exit` przez, ponieważ funkcja nie dostarcza procedury obsługi dla zgłoszonego wyjątku `std::terminate()` , należy wywołać. Funkcja jest wywoływana za każdym razem, gdy jest zarejestrowana. Obiekty z automatycznym okresem magazynu są niszczone w programie, którego główna funkcja nie zawiera obiektów automatycznych i wykonuje wywołanie `exit()`do. Kontrolę można przenieść bezpośrednio do takiej funkcji Main, zwracając wyjątek, który jest przechwytywany w głównej.
+Następnie obiekty ze statycznym okresem przechowywania są niszczone, a funkcje `atexit` zarejestrowane przez wywołanie są wywoływane. Obiekty automatyczne nie są niszczone, gdy `exit()` jest wywoływana. Jeśli kontrolka opuszcza zarejestrowana funkcja wywołana `exit` przez, ponieważ funkcja nie dostarcza procedury obsługi dla zgłoszonego wyjątku `std::terminate()` , jest wywoływana. Funkcja jest wywoływana raz przy każdym zarejestrowaniu. Obiekty z automatycznym okresem magazynu są niszczone w programie `main` , którego funkcja nie zawiera obiektów automatycznych i wykonuje `exit()`wywołanie metody. Kontrolę można przenieść bezpośrednio do takiej `main` funkcji, zwracając wyjątek, który jest `main`przechwytywany.
 
-Następnie wszystkie otwarte strumienie języka C (zgodnie z opisem w <cstdio>temacie) z niezapisanymi danymi buforowanymi są opróżniane, wszystkie otwarte strumienie c są zamknięte, a wszystkie pliki utworzone przez wywołanie `tmpfile()` są usuwane.
+Następnie wszystkie otwarte strumienie języka C (w rezultacie sygnatury funkcji zadeklarowanych w \<cstdio >) z niezapisanymi danymi buforowanymi są opróżniane, wszystkie otwarte strumienie c są zamknięte, a wszystkie pliki `tmpfile()` utworzone przez wywołanie są usuwane.
 
-Na koniec kontrola jest zwracana do środowiska hosta. Jeśli stan ma wartość zero lub EXIT_SUCCESS, zwracany jest formularz o stanie pomyślne zakończenie stanu. Jeśli status ma wartość EXIT_FAILURE, zwracana jest postać zdefiniowana przez implementację kończenia niepowodzenia stanu. W przeciwnym razie zwrócony stan jest zdefiniowany przez implementację.
+Na koniec kontrola jest zwracana do środowiska hosta. Gdy *stan* ma wartość zero lub EXIT_SUCCESS, zwracany jest formularz o stanie pomyślne zakończenie stanu. MSVC zwraca wartość zero. Jeśli *stan* to EXIT_FAILURE, MSVC zwraca wartość 3. W przeciwnym razie MSVC zwraca wartość parametru *stanu* .
 
 ### <a name="getenv"></a>getenv
 
@@ -145,7 +145,7 @@ char* getenv(const char* name);
 
 #### <a name="remarks"></a>Uwagi
 
-Funkcje zarejestrowane przez wywołania `at_quick_exit` są wywoływane w odwrotnej kolejności rejestracji, z tą różnicą, że funkcja jest wywoływana po wszelkich wcześniej zarejestrowanych funkcjach, które zostały już wywołane w chwili rejestracji. Obiekty nie są niszczone w wyniku wywołania `quick_exit`. Jeśli kontrolka opuszcza zarejestrowana funkcja wywołana `quick_exit` przez, ponieważ funkcja nie dostarcza procedury obsługi dla zgłoszonego wyjątku `std::terminate()` , należy wywołać. Funkcja zarejestrowana za `at_quick_exit` pośrednictwem jest wywoływana przez wątek `quick_exit`wywołujący, który może być innym wątkiem niż ten, który go zarejestrował, dlatego zarejestrowane funkcje nie należy polegać na tożsamości obiektów z okresem przechowywania wątków. Po wywołaniu funkcji `quick_exit` zarejestrowanych należy wywołać metodę `_Exit(status)`. Standardowe bufory plików nie są opróżniane. Funkcja `quick_exit` jest bezpieczna sygnałem, gdy funkcje zarejestrowane w `at_quick_exit` są.
+Ogólnie rzecz biorąc, funkcje zarejestrowane przez `at_quick_exit` wywołania są wywoływane w odwrotnej kolejności rejestracji. Ta kolejność nie ma zastosowania do funkcji zarejestrowanych po zarejestrowaniu innych funkcji, które zostały już wywołane. Gdy `quick_exit` jest wywoływana, żadne obiekty nie są niszczone. Jeśli kontrolka opuszcza zarejestrowana funkcja wywołana `quick_exit` przez, ponieważ funkcja nie dostarcza procedury obsługi dla zgłoszonego wyjątku `std::terminate()` , jest wywoływana. Funkcja zarejestrowana za `at_quick_exit` pośrednictwem jest wywoływana przez wątek `quick_exit`wywołujący, który może być innym wątkiem niż ten, który go zarejestrował. Oznacza to, że zarejestrowane funkcje nie należy polegać na tożsamości obiektów, które mają czas trwania magazynu wątków. Po wywołaniu zarejestrowanych funkcji `quick_exit` wywołania. `_Exit(status)` Standardowe bufory plików nie są opróżniane. Funkcja `quick_exit` jest bezpieczna sygnałem, gdy funkcje zarejestrowane w `at_quick_exit` są.
 
 ### <a name="system"></a>systemami
 
@@ -156,11 +156,20 @@ int system(const char* string);
 ## <a name="memory-allocation-functions"></a>Funkcje alokacji pamięci
 
 ```cpp
-void* aligned_alloc(size_t alignment, size_t size);
+// void* aligned_alloc(size_t alignment, size_t size); // Unsupported in MSVC
 void* calloc(size_t nmemb, size_t size);
 void free(void* ptr);
 void* malloc(size_t size);
 void* realloc(void* ptr, size_t size);
+```
+
+### <a name="remarks"></a>Uwagi
+
+Te funkcje mają semantykę określoną w standardowej bibliotece języka C. MSVC nie obsługuje `aligned_alloc` funkcji. C11 określone `aligned_alloc()` w sposób, który jest niezgodny z `free()`implementacją firmy Microsoft, czyli, `free()` która musi być w stanie obsługiwać wysoce wyrównane alokacje.
+
+## <a name="numeric-string-conversions"></a>Konwersje ciągów numerycznych
+
+```cpp
 double atof(const char* nptr);
 int atoi(const char* nptr);
 long int atol(const char* nptr);
@@ -174,11 +183,11 @@ unsigned long int strtoul(const char* nptr, char** endptr, int base);
 unsigned long long int strtoull(const char* nptr, char** endptr, int base);
 ```
 
-#### <a name="remarks"></a>Uwagi
+### <a name="remarks"></a>Uwagi
 
 Te funkcje mają semantykę określoną w standardowej bibliotece języka C.
 
-##  <a name="multibyte--wide-string-and-character-conversion-functions"></a>Funkcje konwersji ciągów wielobajtowych/szerokich i znaków
+## <a name="multibyte--wide-string-and-character-conversion-functions"></a>Funkcje konwersji ciągów wielobajtowych/szerokich i znaków
 
 ```cpp
 int mblen(const char* s, size_t n);
@@ -227,6 +236,15 @@ double abs(double j);
 long double abs(long double j);
 long int labs(long int j);
 long long int llabs(long long int j);
+```
+
+### <a name="remarks"></a>Uwagi
+
+Te funkcje mają semantykę określoną w standardowej bibliotece języka C.
+
+## <a name="integer-division"></a>Dzielenie liczb całkowitych
+
+```cpp
 div_t div(int numer, int denom);
 ldiv_t div(long int numer, long int denom);
 lldiv_t div(long long int numer, long long int denom);
@@ -237,17 +255,6 @@ lldiv_t lldiv(long long int numer, long long int denom);
 ### <a name="remarks"></a>Uwagi
 
 Te funkcje mają semantykę określoną w standardowej bibliotece języka C.
-
-## <a name="functions"></a>Funkcje
-
-```cpp
-void* bsearch(const void* key, const void* base, size_t nmemb, size_t size,
-c-compare-pred * compar);
-void* bsearch(const void* key, const void* base, size_t nmemb, size_t size,
-compare-pred * compar);
-void qsort(void* base, size_t nmemb, size_t size, c-compare-pred * compar);
-void qsort(void* base, size_t nmemb, size_t size, compare-pred * compar);
-```
 
 ## <a name="see-also"></a>Zobacz także
 

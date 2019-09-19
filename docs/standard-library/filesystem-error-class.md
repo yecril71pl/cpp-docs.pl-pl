@@ -4,16 +4,16 @@ ms.date: 09/10/2018
 f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 ms.assetid: c53aac27-c1fa-43e4-8967-48ea8ba1f172
-ms.openlocfilehash: c3dbfc080f0a1494950016f42189d932be05b0f1
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7bd6b2d3d716ba25999388d44e7bd5a8d0750eb5
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240743"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127199"
 ---
-# <a name="filesystemerror-class"></a>filesystem_error — klasa
+# <a name="filesystem_error-class"></a>filesystem_error — klasa
 
-Klasa bazowa dla wszystkich wyjątków, które są zgłaszane do zgłaszania przepełnienie system niskiego poziomu.
+Klasa bazowa dla wszystkich wyjątków, które są zgłaszane do zgłaszania przepełnienia systemu niskiego poziomu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -23,7 +23,7 @@ class filesystem_error    : public system_error;
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa służy jako klasa bazowa dla wszystkich wyjątków generowanych zgłosić błąd w \<filesystem > funkcji. Przechowuje obiekt typu `string`, co jest nazywane `mymesg` tutaj na potrzeby specyfikacji. Przechowuje dwa obiekty typu `path`, co jest nazywane `mypval1` i `mypval2`.
+Klasa służy jako klasa bazowa dla wszystkich wyjątków zgłoszonych w celu zgłaszania błędu w \<funkcjach > systemu plików. Zapisuje obiekt typu `string`, o nazwie `mymesg` w tym miejscu do celów specyfikacji. Przechowuje również dwa obiekty typu `path`, nazywane `mypval1` i `mypval2`.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -31,25 +31,25 @@ Klasa służy jako klasa bazowa dla wszystkich wyjątków generowanych zgłosić
 
 |||
 |-|-|
-|[filesystem_error](#filesystem_error)|Konstruuje `filesystem_error` wiadomości.|
+|[filesystem_error](#filesystem_error)|`filesystem_error` Tworzy komunikat.|
 
 ### <a name="functions"></a>Funkcje
 
 |||
 |-|-|
-|[path1](#path1)|Zwraca `mypval1`|
-|[path2](#path2)|Zwraca `mypval2`|
-|[Co to](#what)|Zwraca wskaźnik do `NTBS`.|
+|[path1](#path1)|Typu`mypval1`|
+|[path2](#path2)|Typu`mypval2`|
+|[Whatman](#what)|Zwraca wskaźnik do elementu `NTBS`.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<filesystem >
+**Nagłówek:** \<> systemu plików
 
-**Namespace:** std::experimental::filesystem
+**Przestrzeń nazw:** std:: eksperymentalne:: filesystem
 
-## <a name="filesystem_error"></a> filesystem_error
+## <a name="filesystem_error"></a>filesystem_error
 
-Pierwszy Konstruktor konstruuje komunikat z *what_arg* i *we*. Drugi Konstruktor tworzy komunikat z *pval1*, którą przechowuje w `mypval1`. Trzeci Konstruktor konstruuje również komunikat z *pval1*, przechowywanego w `mypval1`i z *pval2*, którą przechowuje w `mypval2`.
+Pierwszy Konstruktor konstruuje swój komunikat z *what_arg* i *we*. Drugi Konstruktor konstruuje również swój komunikat z *Pval1*, który przechowuje w `mypval1`. Trzeci Konstruktor konstruuje również swój komunikat z *Pval1*, który jest przechowywany w `mypval1`, i z *Pval2*, który przechowuje w `mypval2`.
 
 ```cpp
 filesystem_error(const string& what_arg,
@@ -70,34 +70,34 @@ filesystem_error(const string& what_arg,
 *what_arg*\
 Określony komunikat.
 
-*we*\
+*udziela*\
 Określony kod błędu.
 
 *mypval1*\
-Dodatkowo parametr określony komunikat.
+Dokładniejszy określony parametr komunikatu.
 
 *mypval2*\
-Dodatkowo komunikat określony parametr.
+Dokładniejszy określony parametr komunikatu.
 
-## <a name="path1"></a> ścieżka1
+## <a name="path1"></a>path1
 
-Funkcja elementu członkowskiego zwraca `mypval1`
+Funkcja członkowska zwraca`mypval1`
 
 ```cpp
 const path& path1() const noexcept;
 ```
 
-## <a name="path2"></a> ścieżka2
+## <a name="path2"></a>path2
 
-Funkcja elementu członkowskiego zwraca `mypval2`
+Funkcja członkowska zwraca`mypval2`
 
 ```cpp
 const path& path2() const noexcept;
 ```
 
-## <a name="what"></a> Co to
+## <a name="what"></a>Whatman
 
-Element członkowski funkcji zwraca wskaźnik do `NTBS`, najlepiej jest złożone z `runtime_error::what()`, `system_error::what()`, `mymesg`, `mypval1.native_string()`, i `mypval2.native_string()`.
+Funkcja członkowska zwraca `NTBS`wskaźnik do, najlepiej składający się z `runtime_error::what()`, `system_error::what()`, `mymesg`, `mypval1.native_string()`, i. `mypval2.native_string()`
 
 ```cpp
 const char *what() const noexcept;

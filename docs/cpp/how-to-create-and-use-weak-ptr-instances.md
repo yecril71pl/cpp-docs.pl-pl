@@ -1,21 +1,21 @@
 ---
 title: 'Instrukcje: Tworzenie wystąpień weak_ptr i korzystanie z nich'
 ms.custom: how-to
-ms.date: 07/12/2018
+ms.date: 09/18/2019
 ms.topic: conceptual
 ms.assetid: 8dd6909b-b070-4afa-9696-f2fc94579c65
-ms.openlocfilehash: 63eed40117d1a79c69bd05e5bd1503d4222f556d
-ms.sourcegitcommit: af4ab63866ed09b5988ed53f1bb6996a54f02484
+ms.openlocfilehash: e5d1b13d894a617ca514e26f14fde3f514540d34
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787088"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127183"
 ---
 # <a name="how-to-create-and-use-weak_ptr-instances"></a>Instrukcje: Tworzenie wystąpień weak_ptr i korzystanie z nich
 
 Czasami obiekt musi przechowywać sposób dostępu do obiektu bazowego a `shared_ptr` bez powodowania zwiększenia liczby odwołań. Zazwyczaj ta sytuacja występuje, gdy istnieją cykliczne odwołania między `shared_ptr` wystąpieniami.
 
-Najlepszym rozwiązaniem jest uniknięcie wspólnej własności wskaźników w każdym momencie. Jeśli jednak użytkownik musi mieć współużytkowaną własność `shared_ptr` wystąpień, należy unikać cyklicznych odwołań między nimi. Gdy odwołania cykliczne są niemożliwe do uniknięcia lub nawet preferowane z jakiegoś powodu, `weak_ptr` należy użyć, aby nadać jednemu lub większej liczbie właścicieli słabe `shared_ptr`odwołanie do innego. Za pomocą `weak_ptr`, można `shared_ptr` utworzyć sprzężenie do istniejącego zestawu powiązanych wystąpień, ale tylko wtedy, gdy zasób pamięci bazowej jest nadal ważny. `weak_ptr` Samo nie uczestniczy w zliczaniu odwołań i w związku z tym nie może zapobiec występowaniu liczby odwołań z przechodzenia do zera. Można jednak użyć elementu `weak_ptr` , aby spróbować uzyskać nową kopię, `shared_ptr` z którą została zainicjowana. Jeśli pamięć została już usunięta, `bad_weak_ptr` zgłaszany jest wyjątek. Jeśli pamięć jest nadal ważna, nowy udostępniony wskaźnik zwiększa liczbę odwołań i gwarantuje, że pamięć będzie obowiązywać `shared_ptr` , o ile zmienna pozostaje w zakresie.
+Najlepszym rozwiązaniem jest uniknięcie wspólnej własności wskaźników w każdym momencie. Jeśli jednak użytkownik musi mieć współużytkowaną własność `shared_ptr` wystąpień, należy unikać cyklicznych odwołań między nimi. Gdy odwołania cykliczne są niemożliwe do uniknięcia lub nawet preferowane z jakiegoś powodu, `weak_ptr` należy użyć, aby nadać jednemu lub większej liczbie właścicieli słabe `shared_ptr`odwołanie do innego. Za pomocą `weak_ptr`, można `shared_ptr` utworzyć sprzężenie do istniejącego zestawu powiązanych wystąpień, ale tylko wtedy, gdy zasób pamięci bazowej jest nadal ważny. `weak_ptr` Samo nie uczestniczy w zliczaniu odwołań i w związku z tym nie może zapobiec występowaniu liczby odwołań z przechodzenia do zera. Można jednak użyć elementu `weak_ptr` , aby spróbować uzyskać nową kopię, `shared_ptr` z którą została zainicjowana. Jeśli pamięć została już usunięta, `weak_ptr`operator logiczny zwraca wartość. `false` Jeśli pamięć jest nadal ważna, nowy udostępniony wskaźnik zwiększa liczbę odwołań i gwarantuje, że pamięć będzie obowiązywać `shared_ptr` , o ile zmienna pozostaje w zakresie.
 
 ## <a name="example"></a>Przykład
 

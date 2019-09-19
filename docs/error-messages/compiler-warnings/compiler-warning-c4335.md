@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4335
 ms.assetid: e66467ad-a10b-4438-8c7c-e8e8d11d39bb
-ms.openlocfilehash: 43c2f5d9092cdbad14e429349bd7d04e236b75e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d44a1ae5354e8d22e41694f4d6df42ad22c3986d
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151854"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127165"
 ---
 # <a name="compiler-warning-c4335"></a>Ostrzeżenie kompilatora C4335
 
-Wykryto format pliku Mac: Skonwertuj plik źródłowy do formatu DOS lub systemu UNIX
+Wykryto format pliku Mac: Skonwertuj plik źródłowy do formatu DOS lub UNIX
 
-Znak zakończenia wiersza pierwszego wiersza pliku źródłowego jest styl dla komputerów Macintosh ('\r'), w przeciwieństwie do systemu UNIX ('\n') lub systemu DOS ("\r\n").
+Znak zakończenia wiersza pierwszego wiersza pliku źródłowego to Macintosh Style ("\r") w przeciwieństwie do systemu UNIX ("\n") lub DOS ("\r\n").
 
-To jest zawsze ostrzeżenie jako błąd.  Zobacz [ostrzeżenie](../../preprocessor/warning.md) pragma, aby uzyskać informacje o sposobie wyłączyć to ostrzeżenie.  Ponadto to tylko ostrzeżenie raz na compiland —. W związku z tym jeśli dostępnych jest wiele `#include` dyrektyw, które określają pliki w formacie dla komputerów Macintosh, C4335 tylko pojawi się jeden raz.
+To ostrzeżenie jest zawsze emitowane jako błąd.  Aby uzyskać informacje na temat sposobu wyłączania tego ostrzeżenia, zobacz pragma [ostrzeżenia](../../preprocessor/warning.md) .  To ostrzeżenie jest również wydawane tylko raz na jednostka kompilacji. W związku z tym, jeśli `#include` istnieje wiele dyrektyw, które określają pliki w formacie Macintosh, C4335 zostanie wystawiony tylko raz.
 
-Jednym ze sposobów ma generować pliki w formacie dla komputerów Macintosh polega na użyciu **zaawansowane opcje zapisywania** (na **pliku** menu) w programie Visual Studio.
+Jednym ze sposobów generowania plików w formacie komputerów Macintosh jest użycie **zaawansowanych opcji zapisywania** (w menu **plik** ) w programie Visual Studio.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4335.
+Poniższy przykład generuje C4335.
 
 ```
 // C4335 expected

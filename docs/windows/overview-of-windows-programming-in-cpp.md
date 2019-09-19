@@ -1,13 +1,13 @@
 ---
 title: Omówienie programowania w systemie Windows w języku C++
-ms.date: 07/28/2019
+ms.date: 09/17/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 10ef9698e27099d5856c1ed5f8ed2f21cea72c24
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 96a03194059f59f57780bfd70cab3065d6a1aff0
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514796"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127191"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Omówienie programowania w systemie Windows w języku C++
 
@@ -17,7 +17,7 @@ W tej sekcji omówiono, jak używać programu Visual Studio i bibliotek otoki MF
 
 ## <a name="command-line-console-applications"></a>Aplikacje wiersza polecenia (konsoli)
 
-C++aplikacje konsolowe są uruchamiane z wiersza polecenia w oknie konsoli i mogą wyświetlać tylko dane wyjściowe. Aby uzyskać więcej informacji, zobacz [aplikacje konsolowe](console-applications-in-visual-cpp.md).
+C++aplikacje konsolowe są uruchamiane z wiersza polecenia w oknie konsoli i mogą wyświetlać tylko dane wyjściowe. Aby uzyskać więcej informacji, zobacz [Tworzenie C++ projektu aplikacji konsoli](../get-started/tutorial-console-cpp.md).
 
 ## <a name="native-desktop-client-applications"></a>Natywne aplikacje klienckie dla komputerów stacjonarnych
 
@@ -107,7 +107,7 @@ Inne platformy, takie jak Xbox i Azure, mają swoje własne zestawy SDK, które 
 |[Dostęp do danych](../data/data-access-in-cpp.md)| OLE DB i ODBC|
 |[Tekst i ciągi](../text/text-and-strings-in-visual-cpp.md)|Różne typy ciągów w systemie Windows.|
 |[Zasoby służące do tworzenia gier za pomocą programu DirectX](resources-for-creating-a-game-using-directx.md)
-|[Instrukcje: używanie zestawu SDK systemu Windows 10 w aplikacji klasycznej systemu Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows SDK|
+|[Instrukcje: używanie zestawu SDK systemu Windows 10 w aplikacji klasycznej systemu Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Zestaw SDK systemu Windows|
 |[Praca z plikami zasobów](working-with-resource-files.md)|Jak dodać obrazy, ikony, tabele ciągów i inne zasoby do aplikacji klasycznej.|
 |[Zasoby służące do tworzenia gier za pomocąC++programu DirectX ()](resources-for-creating-a-game-using-directx.md)|Linki do zawartości na potrzeby tworzenia gier C++w programie.|
 |[Instrukcje: używanie zestawu SDK systemu Windows 10 w aplikacji klasycznej systemu Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Zawiera kroki konfigurowania projektu do kompilowania przy użyciu zestawu SDK systemu Windows 10.|
