@@ -1,6 +1,6 @@
 ---
 title: Przegląd biblioteki klas
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 f1_keywords:
 - vc.classes.mfc
 helpviewer_keywords:
@@ -10,20 +10,20 @@ helpviewer_keywords:
 - class libraries, MFC
 - class libraries
 ms.assetid: 9b0e3152-ac39-4f52-91b4-f20aa3a674aa
-ms.openlocfilehash: aec295ea93868ff1fe6e0d3d1d2370a344e47c73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23097c0bf3399a4dced6640f41c0d46dba101b26
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327317"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095945"
 ---
 # <a name="class-library-overview"></a>Przegląd biblioteki klas
 
-Ten przegląd kategoryzuje i opisuje klasy w Microsoft Foundation Class Library (MFC) wersji 9.0. Klasy w MFC, razem wzięte, stanowią strukturę aplikacji — strukturę aplikacji napisanych dla interfejsu API Windows. Twoim zadaniem jako programisty jest wypełnienie kodu, które są specyficzne dla aplikacji.
+To omówienie obejmuje kategoryzacje i opisuje klasy w biblioteka MFC (MFC) w wersji 9,0. Klasy w MFC, a razem stanowią strukturę aplikacji — strukturę aplikacji zapisaną dla interfejsu API systemu Windows. Zadaniem programowania jest wypełnienie kodu, który jest specyficzny dla Twojej aplikacji.
 
-Klasy bibliotek są prezentowane w następujących kategoriach:
+Klasy biblioteki są prezentowane w następujących kategoriach:
 
-- [Root Class: CObject](../mfc/root-class-cobject.md)
+- [Klasa główna: CObject](../mfc/root-class-cobject.md)
 
 - [Klasy związane z architekturą aplikacji MFC](../mfc/mfc-application-architecture-classes.md)
 
@@ -71,7 +71,7 @@ Klasy bibliotek są prezentowane w następujących kategoriach:
 
 - [Klasy plików i baz danych](../mfc/file-and-database-classes.md)
 
-   - [Klasy we/wy pliku](../mfc/file-i-o-classes.md)
+   - [Klasy we/wy plików](../mfc/file-i-o-classes.md)
 
    - [Klasy DAO](../mfc/dao-classes.md)
 
@@ -109,13 +109,13 @@ Klasy bibliotek są prezentowane w następujących kategoriach:
 
    - [Klasy wyjątków](../mfc/exception-classes.md)
 
-Sekcja [filozofia projektowania klas](../mfc/general-class-design-philosophy.md) wyjaśnia, w jaki sposób zaprojektowano bibliotekę MFC.
+W sekcji [ogólne zasady projektowania klasy](../mfc/general-class-design-philosophy.md) wyjaśniono, jak biblioteka MFC została zaprojektowana.
 
-Omówienie Framework, zobacz [używanie klas do pisania aplikacji dla Windows](../mfc/using-the-classes-to-write-applications-for-windows.md). Niektóre z wymienionych powyżej klas są klasami ogólnego przeznaczenia, które mogą być używane poza szablonem i dostarczają przydatnych abstrakcji takich jak kolekcje, wyjątki, pliki i ciągi.
+Aby zapoznać się z omówieniem platformy, zobacz [Używanie klas do pisania aplikacji dla systemu Windows](../mfc/using-the-classes-to-write-applications-for-windows.md). Niektóre wymienione powyżej klasy są klasami ogólnego przeznaczenia, które mogą być używane poza platformą i zapewniają przydatne streszczenia, takie jak kolekcje, wyjątki, pliki i ciągi.
 
-Aby zobaczyć dziedziczenie klasy, użyj [Tabela hierarchii klas](../mfc/hierarchy-chart.md).
+Aby wyświetlić dziedziczenie klasy, użyj [wykresu hierarchii klas](../mfc/hierarchy-chart.md).
 
-Oprócz klas wymienionych w tym przeglądzie Biblioteka MFC zawiera szereg funkcji globalnych, zmienne globalne i makra. Przegląd i szczegółowe wyliczenie w temacie [makr MFC i funkcje globalne](../mfc/reference/mfc-macros-and-globals.md), który następuje po umożliwiają alfabetyczne odniesienia do klas MFC.
+Poza klasami wymienionymi w tym przeglądzie Biblioteka MFC zawiera wiele funkcji globalnych, zmiennych globalnych i makr. Istnieje przegląd i szczegółowa lista tych elementów w temacie [makra MFC i Globals](../mfc/reference/mfc-macros-and-globals.md), która następuje po alfabetycznym odwołaniu do klas MFC.
 
 ## <a name="see-also"></a>Zobacz także
 

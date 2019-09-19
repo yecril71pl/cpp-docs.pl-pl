@@ -1,22 +1,24 @@
 ---
 title: CDaoParameterInfo — Struktura
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 f1_keywords:
 - CDaoParameterInfo
 helpviewer_keywords:
 - CDaoParameterInfo structure [MFC]
 - DAO (Data Access Objects), Parameters collection
 ms.assetid: 45fd53cd-cb84-4e12-b48d-7f2979f898ad
-ms.openlocfilehash: 62addd44f8aa8fceafef6a27244994a2ec6b766b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f0ee7ebe1d5d4eff50194c2d5c5cccf8f373c61
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399788"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096084"
 ---
 # <a name="cdaoparameterinfo-structure"></a>CDaoParameterInfo — Struktura
 
-`CDaoParameterInfo` Struktura zawiera informacje dotyczące obiektu parametr zdefiniowany dla obiektów dostępu do danych (DAO).
+`CDaoParameterInfo` Struktura zawiera informacje o obiekcie parametru zdefiniowanym dla obiektów dostępu do danych (DAO).
+Element DAO 3,6 jest wersją ostateczną i jest uznawany za przestarzały.
+
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,30 +34,30 @@ struct CDaoParameterInfo
 #### <a name="parameters"></a>Parametry
 
 *m_strName*<br/>
-Unikatowej nazwy obiektu parametru. Aby uzyskać więcej informacji zobacz temat "Nazwa właściwości" w Pomocy programu DAO.
+Unikatowa nazwa obiektu parametru. Aby uzyskać więcej informacji, zobacz temat "Nazwa właściwości" w pomocy DAO.
 
 *m_nType*<br/>
-Wartość, która wskazuje typ danych parametru obiektu. Aby uzyskać listę możliwych wartości, zobacz *m_nType* członkiem [cdaofieldinfo —](../../mfc/reference/cdaofieldinfo-structure.md) struktury. Aby uzyskać więcej informacji zobacz temat "Właściwość Type" w Pomocy programu DAO.
+Wartość, która wskazuje typ danych obiektu parametru. Aby uzyskać listę możliwych wartości, zobacz *m_nType* składowa struktury [CDaoFieldInfo —](../../mfc/reference/cdaofieldinfo-structure.md) . Aby uzyskać więcej informacji, zobacz temat "Type Property" w pomocy DAO.
 
 *m_varValue*<br/>
-Wartość parametru, przechowywane w [COleVariant](../../mfc/reference/colevariant-class.md) obiektu.
+Wartość parametru przechowywana w obiekcie [COleVariant](../../mfc/reference/colevariant-class.md) .
 
 ## <a name="remarks"></a>Uwagi
 
-Odwołania do podstawowym i pomocniczym powyżej wskazują, jak informacji jest zwróconych przez [getparameterinfo —](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) funkcja elementu członkowskiego w klasie `CDaoQueryDef`.
+Odwołania do podstawowych i pomocniczych powyżej wskazują, jak informacje są zwracane przez funkcję elementu członkowskiego [GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) w `CDaoQueryDef`klasie.
 
-MFC nie hermetyzuje DAO parametr obiektów w klasie. DAO querydef obiektów podstawowych MFC `CDaoQueryDef` obiekty przechowywania parametrów w ich kolekcji parametrów. Dostęp do obiektów parametru w [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) obiektu, wywołaj obiektu querydef `GetParameterInfo` funkcję członkowską nazwę określonego parametru lub indeksu w kolekcji parametrów. Możesz użyć [CDaoQueryDef::GetParameterCount](../../mfc/reference/cdaoquerydef-class.md#getparametercount) funkcja elementu członkowskiego w połączeniu z `GetParameterInfo` pętli kolekcji parametrów.
+MFC nie hermetyzuje obiektów parametrów DAO w klasie. Obiekty DAO querydef powiązane z `CDaoQueryDef` obiektami MFC są przechowywane parametry w kolekcjach parametrów. Aby uzyskać dostęp do obiektów parametrów w obiekcie [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) , wywołaj funkcję `GetParameterInfo` członkowską obiektu querydef dla określonej nazwy parametru lub indeks w kolekcji Parameters. Można użyć funkcji składowej [CDaoQueryDef:: GetParameterCount](../../mfc/reference/cdaoquerydef-class.md#getparametercount) w połączeniu z `GetParameterInfo` pętlą for za pomocą kolekcji Parameters.
 
-Informacje o pobrane przez [CDaoQueryDef::GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) funkcja członkowska jest przechowywany w `CDaoParameterInfo` struktury. Wywołaj `GetParameterInfo` dla obiektu querydef, w których Kolekcja parametrów jest przechowywany obiekt parametru.
+Informacje pobierane przez funkcję członkowską [CDaoQueryDef:: GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) są przechowywane w `CDaoParameterInfo` strukturze. Wywołanie `GetParameterInfo` obiektu querydef w kolekcji Parameters, w której jest przechowywany obiekt Parameter.
 
 > [!NOTE]
->  Jeśli chcesz pobrać lub ustawić wartości parametru, użyj [GetParamValue](../../mfc/reference/cdaorecordset-class.md#getparamvalue) i [SetParamValue](../../mfc/reference/cdaorecordset-class.md#setparamvalue) funkcji elementów członkowskich klasy `CDaoRecordset`.
+>  Jeśli chcesz uzyskać lub ustawić tylko wartość parametru, użyj funkcji składowych [GetParamValue](../../mfc/reference/cdaorecordset-class.md#getparamvalue) i [SetParamValue](../../mfc/reference/cdaorecordset-class.md#setparamvalue) klasy `CDaoRecordset`.
 
-`CDaoParameterInfo` definiuje również `Dump` kompilacje funkcja elementu członkowskiego podczas debugowania. Możesz użyć `Dump` do porzucenia zawartość `CDaoParameterInfo` obiektu.
+`CDaoParameterInfo`definiuje również funkcję `Dump` członkowską w kompilacjach debugowania. Możesz użyć `Dump` , aby zrzucić zawartość `CDaoParameterInfo` obiektu.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdao.h
+**Nagłówek:** afxdao. h
 
 ## <a name="see-also"></a>Zobacz także
 

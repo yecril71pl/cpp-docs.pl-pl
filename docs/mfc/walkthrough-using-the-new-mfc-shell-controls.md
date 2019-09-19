@@ -4,12 +4,12 @@ ms.date: 04/25/2019
 helpviewer_keywords:
 - shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
-ms.openlocfilehash: cf0a6bd230364b48c78c72b8e453e7e641fb2d0e
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: e371368d4e588de5f94f6a252c6db291ec851e0a
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907409"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096018"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Przewodnik: Korzystanie z nowych formantów powłoki MFC
 
@@ -31,14 +31,14 @@ Kroki te różnią się w zależności od używanej wersji programu Visual Studi
 
 1. Z menu głównego wybierz pozycję **plik** > **Nowy** > **projekt** , aby otworzyć okno dialogowe **Tworzenie nowego projektu** .
 
-1. W polu wyszukiwania w górnej części wpisz **MFC** , a następnie wybierz pozycję **aplikacja MFC** z listy wyników. 
+1. W polu wyszukiwania w górnej części wpisz **MFC** , a następnie wybierz pozycję **aplikacja MFC** z listy wyników.
 
 1. Kliknij przycisk **Dalej**. Na następnej stronie Wprowadź nazwę projektu i określ lokalizację projektu w razie potrzeby.
 
 1. Wybierz przycisk **Utwórz** , aby utworzyć projekt.
 
    Po wyświetleniu **Kreatora aplikacji MFC** należy użyć następujących opcji:
- 
+
    1. Wybierz pozycję **Typ aplikacji** po lewej stronie. Następnie wybierz pozycję **pojedynczy dokument** , a następnie wybierz pozycję **dokument/widok obsługa architektury**. W obszarze **styl projektu**wybierz pozycję **Visual Studio**, a następnie z listy rozwijanej **styl i kolory wizualizacji** wybierz pozycję **Office 2007 (motyw niebieski)** .
 
    1. W okienku **Obsługa dokumentu złożonego** zaznacz opcję **Brak**.
@@ -59,7 +59,7 @@ Kroki te różnią się w zależności od używanej wersji programu Visual Studi
 
 1. Użyj **Kreatora aplikacji MFC** , aby utworzyć nową aplikację MFC. Aby uruchomić kreatora, w menu **plik** wybierz pozycję **Nowy**, a następnie wybierz pozycję **projekt**. Zostanie wyświetlone okno dialogowe **Nowy projekt** .
 
-1. W oknie dialogowym **Nowy projekt** rozwiń węzeł **Wizualizacja C++**  w okienku **typy projektów** , a następnie wybierz pozycję **MFC**. Następnie w okienku **Szablony** wybierz pozycję **aplikacja MFC**. Wpisz nazwę projektu, na przykład, `MFCShellControls` i kliknij przycisk **OK**. 
+1. W oknie dialogowym **Nowy projekt** rozwiń węzeł **Wizualizacja C++**  w okienku **typy projektów** , a następnie wybierz pozycję **MFC**. Następnie w okienku **Szablony** wybierz pozycję **aplikacja MFC**. Wpisz nazwę projektu, na przykład, `MFCShellControls` i kliknij przycisk **OK**.
 
    Po wyświetleniu **Kreatora aplikacji MFC** należy użyć następujących opcji:
 

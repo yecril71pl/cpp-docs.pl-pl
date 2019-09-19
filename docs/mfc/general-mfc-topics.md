@@ -1,29 +1,29 @@
 ---
 title: Tematy ogólne dotyczące MFC
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 helpviewer_keywords:
 - MFC
 - class libraries [MFC], MFC
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
-ms.openlocfilehash: 71cdda0abea8cec29c3b6e17ddfb584e32a931c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f4c75e3f8bd8f7d32109cf92465dfa6e5aba6ed
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219733"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095854"
 ---
 # <a name="general-mfc-topics"></a>Tematy ogólne dotyczące MFC
 
-Tej rodziny artykułów zawiera szczegółowe informacje techniczne dotyczące biblioteki Microsoft Foundation Class (MFC), a także z omówieniem programu MFC framework i jego najważniejsze składniki i podsystemy.
+Ta rodzina artykułów zawiera szczegółowe informacje techniczne o bibliotece Microsoft Foundation Class (MFC) i zawiera omówienie struktury MFC oraz jej najważniejszych składników i podsystemów.
 
-Biblioteki klas Microsoft Foundation to struktura aplikacji dla programowania w Windows firmy Microsoft. Napisanego w języku C++, MFC zapewnia dostęp do większości kodu, które są niezbędne do zarządzania systemem windows, menu i okien dialogowych; wykonywanie podstawowych operacji wejścia/wyjścia; przechowywanie kolekcje obiektów danych; i tak dalej. To wszystko, co należy zrobić, Dodaj swój kod specyficzne dla aplikacji do tej struktury. Ze względu na charakter programowania klasy C++, łatwo jest rozszerzyć lub Przesłoń podstawową funkcjonalność, [struktura MFC](../mfc/framework-mfc.md) dostarcza.
+Biblioteka MFC to struktura aplikacji do programowania w systemie Microsoft Windows. Zapisywana C++w programie MFC zawiera większość kodu niezbędnego do zarządzania oknami, menu i oknach dialogowych; wykonywanie podstawowych operacji wejścia/wyjścia; przechowywanie kolekcji obiektów danych; i tak dalej. Wystarczy dodać kod specyficzny dla aplikacji do tej struktury. Mając na względzie C++ charakter programowania klasy, można łatwo rozciągnąć lub zastępować podstawowe funkcje oferowane [przez platformę MFC](../mfc/framework-mfc.md) .
 
-Struktura MFC jest wydajne podejście, które pozwala tworzyć na pracę doświadczonych ekspertów w programowaniu dla Windows. MFC skraca czas opracowywania; sprawia, że kod jest bardziej przenośny; obsługuje ogromną bez obniżania programowania wolności i elastyczności; i zapewnia łatwy dostęp do "trudno program" elementy interfejsu użytkownika i technologii, takich jak technologia Active, OLE i Internet programowania. Ponadto MFC upraszcza Programowanie przy użyciu systemu nazw domen (DAO, Data Access Objects) i Open Database Connectivity (ODBC) i sieci programowania za pomocą Windows Sockets bazy danych. MFC ułatwia funkcje programu, takie jak arkusze właściwości ("kartę wyświetlanymi w oknach dialogowych"), podglądu wydruku i przestawne, można dostosować paski narzędzi.
+Platforma MFC jest zaawansowanym podejściem, które pozwala na kompilowanie pracy z ekspertami dla systemu Windows. MFC skraca czas programowania; sprawia, że kod jest bardziej przenośny; zapewnia ogromne wsparcie, bez zmniejszania elastyczności i elastyczność programistyczną; zapewnia łatwy dostęp do "trudnej do programowania" elementów interfejsu użytkownika i technologii, takich jak technologia Active, OLE i programowanie internetowe. Ponadto MFC upraszcza programowanie baz danych za pośrednictwem obiektów dostępu do danych (DAO) (obecnie przestarzałych) oraz Open Database Connectivity (ODBC) i programowanie sieci za pośrednictwem usługi Windows Sockets. MFC ułatwia programowanie funkcji, takich jak arkusze właściwości (okna dialogowe kart "), Podgląd wydruku i przestawne, dostosowywalne paski narzędzi.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-`MFC Samples`, które są dostarczane w [przykłady Visual C++](../overview/visual-cpp-samples.md)
+`MFC Samples`, które są dostarczane w [przykładach wizualizacji C++ ](../overview/visual-cpp-samples.md)
 
 [Korzystanie z plików źródłowych MFC](../mfc/using-the-mfc-source-files.md)
 
@@ -33,7 +33,7 @@ Struktura MFC jest wydajne podejście, które pozwala tworzyć na pracę doświa
 
 [Opieranie się na strukturze](../mfc/building-on-the-framework.md)
 
-[CWinApp: Klasa aplikacji](../mfc/cwinapp-the-application-class.md)
+[CWinApp: klasa aplikacji](../mfc/cwinapp-the-application-class.md)
 
 [Szablony dokumentów i proces tworzenia dokumentu/widoku](../mfc/document-templates-and-the-document-view-creation-process.md)
 
@@ -47,13 +47,13 @@ Struktura MFC jest wydajne podejście, które pozwala tworzyć na pracę doświa
 
 [Wymagania kontrolek standardowych systemu Windows Vista dotyczące kompilacji](../mfc/build-requirements-for-windows-vista-common-controls.md)
 
-[Instrukcje: Dodawanie obsługi Menedżera ponownego uruchamiania](../mfc/how-to-add-restart-manager-support.md)
+[Instrukcje: dodawanie obsługi menedżera ponownego uruchamiania](../mfc/how-to-add-restart-manager-support.md)
 
 [Układ dynamiczny](../mfc/dynamic-layout.md)
 
-Omówienie dokumentacji MFC, zobacz [bibliotekę Microsoft Foundation Class](../mfc/mfc-desktop-applications.md).
+Aby zapoznać się z omówieniem dokumentacji MFC, zobacz [Biblioteka MFC](../mfc/mfc-desktop-applications.md).
 
-Aby uzyskać informacji na temat biblioteki ATL, zobacz [odwołanie do biblioteki Active szablonu](../atl/atl-class-overview.md).
+Informacje o ATL można znaleźć w temacie [Active Template Library Reference](../atl/atl-class-overview.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - message handling [MFC], adding handlers
 ms.assetid: 4251cfce-76ca-443d-bd2f-6303afa6d942
-ms.openlocfilehash: cf46c4f388c4607dbb8fb0e7f439603e5964ea03
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 1287c8166e02c3aa7696a3a0d79ecc1a240e3032
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907661"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095867"
 ---
 # <a name="adding-an-mfc-message-handler"></a>Dodawanie handlera komunikatów MFC
 
-Możesz użyć [kreatora klas](mfc-class-wizard.md) lub okna **Właściwości** w **widoku klas** , aby dodać program obsługi komunikatów (funkcja członkowska, która obsługuje komunikaty systemu Windows) do klasy i mapować komunikaty systemu Windows do programu obsługi komunikatów. Możesz również dodać [obsługę zdarzeń dla dowolnej kontrolki okna dialogowego](../../windows/adding-event-handlers-for-dialog-box-controls.md). 
+Możesz użyć [kreatora klas](mfc-class-wizard.md) lub okna **Właściwości** w **widoku klas** , aby dodać program obsługi komunikatów (funkcja członkowska, która obsługuje komunikaty systemu Windows) do klasy i mapować komunikaty systemu Windows do programu obsługi komunikatów. Możesz również dodać [obsługę zdarzeń dla dowolnej kontrolki okna dialogowego](../../windows/adding-event-handlers-for-dialog-box-controls.md).
 
 Za pomocą **kreatora klas** lub okna **właściwości** (w **Widok klasy**) do definiowania funkcji obsługi komunikatów i zdarzeń, można automatycznie zaktualizować tabelę wysyłania komunikatów (lub mapę wiadomości) i plik nagłówka klasy.
 

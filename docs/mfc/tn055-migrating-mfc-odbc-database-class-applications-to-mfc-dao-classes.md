@@ -1,6 +1,6 @@
 ---
 title: 'TN055: Migrowanie aplikacji klas baz danych MFC ODBC do klas MFC DAO'
-ms.date: 06/20/2018
+ms.date: 09/17/2019
 helpviewer_keywords:
 - DAO [MFC], migration
 - TN055
@@ -12,55 +12,55 @@ helpviewer_keywords:
 - porting ODBC database applications to DAO
 - migrating database applications [MFC]
 ms.assetid: 0f858bd1-e168-4e2e-bcd1-8debd82856e4
-ms.openlocfilehash: 7a1d3436a9b19c40df2a08576d797de49833f14f
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 7107964cc894a0aa45be5de362c9edd166dc0af1
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611234"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095959"
 ---
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055: Migrowanie aplikacji klas baz danych MFC ODBC do klas MFC DAO
 
 > [!NOTE]
-> Środowiska Visual C++ i kreatory nie obsługują DAO (mimo że uwzględniono klas DAO i nadal można użyć). Firma Microsoft zaleca się, że używasz [szablony OLE DB](../data/oledb/ole-db-templates.md) lub [ODBC i MFC](../data/odbc/odbc-and-mfc.md) dla nowych projektów. DAO należy używać tylko w zachowaniu istniejących aplikacji.
+> Obiekty DAO są używane z bazami danych programu Access i są obsługiwane za pomocą pakietu Office 2013. 3,6 jest wersją ostateczną i jest uznawana za przestarzałą. Środowisko i C++ kreatory wizualne nie obsługują obiektów DAO (mimo że klasy DAO są dołączone i nadal można ich używać). Firma Microsoft zaleca korzystanie z [szablonów OLE DB](../data/oledb/ole-db-templates.md) lub [ODBC oraz MFC](../data/odbc/odbc-and-mfc.md) dla nowych projektów. Obiektów DAO należy używać tylko w przypadku zarządzania istniejącymi aplikacjami.
 
 ## <a name="overview"></a>Omówienie
 
-W wielu sytuacjach może być pożądane, aby przeprowadzić migrację aplikacji używających klasy bazy danych programu MFC ODBC do klas baz danych DAO MFC. Ta uwaga techniczna dotyczył większość różnic między klas MFC ODBC i DAO. Z różnicami należy pamiętać, nie powinna być zbyt trudne do migracji aplikacji z klasy ODBC do klas MFC, w razie potrzeby.
+W wielu sytuacjach może być pożądane Migrowanie aplikacji, które używają klas baz danych ODBC MFC do klas baz danych DAO MFC. Ta Uwaga techniczna zawiera szczegółowe informacje dotyczące większości różnic między klasami MFC ODBC i DAO. Mając na uwadze różnice, nie powinno być nadmiernie trudne do migrowania aplikacji z klas ODBC do klas MFC w razie potrzeby.
 
-## <a name="why-migrate-from-odbc-to-dao"></a>Dlaczego warto przeprowadzić migrację z ODBC do DAO
+## <a name="why-migrate-from-odbc-to-dao"></a>Dlaczego należy przeprowadzić migrację z ODBC do DAO
 
-Istnieje kilka powodów dlaczego warto dokonać migracji aplikacji z klas baz danych ODBC do klas baz danych DAO, ale decyzja nie musi być proste lub oczywiste. Warto pamiętać, to czy aparat bazy danych Microsoft Jet, który jest używany przez DAO przeczytasz dowolnego źródła danych ODBC, do której masz sterownika ODBC. Może być bardziej efektywne, aby użyć klasy bazy danych ODBC lub wywołania ODBC bezpośrednio samodzielnie, ale aparat bazy danych Microsoft Jet można odczytać danych ODBC.
+Istnieje kilka powodów, dla których warto chcieć migrować aplikacje z klas baz danych ODBC do klas baz danych DAO, ale decyzja nie jest konieczna. Należy pamiętać, że aparat bazy danych Microsoft Jet używany przez DAO może odczytywać dowolne źródło danych ODBC, dla którego masz sterownik ODBC. Korzystanie z klas baz danych ODBC lub bezpośrednie wywoływanie ODBC może być bardziej wydajne, ale aparat bazy danych Microsoft Jet może odczytywać dane ODBC.
 
-Czasami prosty, wchodzące w ODBC/DAO decyzji łatwo. Na przykład gdy wystarczy tylko dostęp do danych w formacie, który może być odczytany aparatu Microsoft Jet bezpośrednio (format programu Access, formatu programu Excel i tak dalej) jest użycie klas baz danych DAO oczywistym wyborem.
+Niektóre proste przypadki, które ułatwiają podejmowanie decyzji ODBC/DAO. Na przykład jeśli potrzebujesz dostępu do danych w formacie, który aparat Microsoft Jet może odczytać bezpośrednio (format dostępu, format programu Excel itd.), oczywistym wyborem jest użycie klas bazy danych DAO.
 
-Bardziej złożonych przypadkach wystąpić, gdy dane istnieje na serwerze lub na wielu różnych serwerach. W tym przypadku decyzji o użyciu klas baz danych ODBC i klasy baz danych DAO jest trudne. Jeśli chcesz zrobić elementy, takie jak heterogenicznych sprzężenia (łączenie danych z serwerów w wielu formatach, takich jak SQL Server i Oracle), a następnie aparatu bazy danych Microsoft Jet będzie wykonać ich sprzężenie należy zamiast co zmuszało do wykonują pracę niezbędne, jeśli używana baza danych ODBC Klasy lub bezpośrednio wywołana ODBC. Jeśli używasz sterownika ODBC obsługującego kursory sterownika, najlepszym rozwiązaniem może być klas baz danych ODBC.
+Bardziej złożone przypadki powstają, gdy dane istnieją na serwerze lub na różnych różnych serwerach. W takim przypadku decyzja o korzystaniu z klas baz danych ODBC lub klas baz danych DAO jest trudna. Jeśli chcesz wykonywać takie operacje jak sprzężenia heterogeniczne (sprzęgać dane z serwerów w wielu formatach, takich jak SQL Server i Oracle), aparat bazy danych Microsoft Jet przeprowadzi sprzężenie dla Ciebie zamiast wymuszenia działania niezbędnego w przypadku korzystania z bazy danych ODBC Klasy lub bezpośrednio nazywane ODBC. Jeśli używasz sterownika ODBC, który obsługuje kursory sterowników, najlepszym wyborem może być Klasa bazy danych ODBC.
 
-Wybór może być skomplikowane, dzięki czemu możesz chcieć napisać przykładowy kod do testowania wydajności różnych metod, biorąc pod uwagę swoje specjalnymi potrzebami. Ta uwaga techniczna przyjęto założenie, wprowadzono decyzja o migracji z klas baz danych ODBC do klas baz danych DAO.
+Wybór może być skomplikowany, dlatego warto napisać przykładowy kod w celu przetestowania wydajności różnych metod z uwzględnieniem specjalnych potrzeb. W tej uwadze technicznej przyjęto założenie, że podjęto decyzję o migracji z klas baz danych ODBC do klas baz danych DAO.
 
-## <a name="similarities-between-odbc-database-classes-and-mfc-dao-database-classes"></a>Podobieństwa między usługami klas baz danych ODBC i klasy baz danych MFC DAO
+## <a name="similarities-between-odbc-database-classes-and-mfc-dao-database-classes"></a>Podobieństwa między klasami baz danych ODBC i klasami baz danych MFC DAO
 
-Oryginalny projekt klasach MFC ODBC zostało oparte na modelu obiektów DAO, które było używane w programie Microsoft Access i Microsoft Visual Basic. Oznacza to, że jest wiele typowych funkcji klasy ODBC i DAO MFC, które nie wszystkie wyświetlane jest w tej sekcji. Ogólnie rzecz biorąc modele programowania są takie same.
+Oryginalny projekt klas MFC ODBC był oparty na modelu obiektów DAO, który był używany w programie Microsoft Access i Microsoft Visual Basic. Oznacza to, że istnieje wiele typowych funkcji klas ODBC i DAO MFC, które nie zostaną wymienione w tej sekcji. Ogólnie rzecz biorąc modele programowania są takie same.
 
-Aby zaznaczyć kilka podobieństwa:
+Aby wyróżnić kilka podobieństw:
 
-- Klasy ODBC i DAO mają obiektów bazy danych o zarządzanych za pomocą podstawowego system zarządzania bazami danych (DBMS).
+- Zarówno klasy ODBC, jak i DAO mają obiekty bazy danych, którymi zarządza program przy użyciu podstawowego systemu zarządzania bazami danych (DBMS).
 
-- Mają obiektów rekordów reprezentujących zestaw wyników zwrócony z tego systemu DBMS.
+- Oba mają obiekty zestawu rekordów reprezentujące zestaw wyników zwróconych z tego systemu DBMS.
 
-- Obiekty bazy danych i zestaw rekordów DAO członkowie prawie identyczna klasy ODBC.
+- Obiekty bazy danych i zestaw rekordów DAO mają elementy członkowskie niemal identyczne z klasami ODBC.
 
-- Za pomocą obu zestawów klasy identyczne, z wyjątkiem niektórych zmiany nazw obiektów i elementów członkowskich jest kod, aby pobrać dane. Zmiany będzie wymagana, ale zwykle proces to zmiana nazwy proste, w przypadku przechodzenia z klasy ODBC do klas DAO.
+- W obu zestawach klas kod służący do pobierania danych jest identyczny z wyjątkiem niektórych zmian nazw obiektów i elementów członkowskich. Zmiany będą wymagane, ale zazwyczaj proces jest prostą zmianą nazwy podczas przełączania z klas ODBC do klas DAO.
 
-Na przykład w obu modelach procedury do pobierania danych jest utworzyć i otworzyć obiektu bazy danych, utworzyć i otworzyć obiekt zestawu rekordów i poruszać (przenoszenie) danych, wykonywania pewnych operacji.
+Na przykład w obu modelach procedura pobierania danych polega na utworzeniu i otwarciu obiektu bazy danych, utworzeniu i otwarciu obiektu zestawu rekordów i przejściu (przeniesieniu), gdy dane wykonują kilka operacji.
 
-## <a name="differences-between-odbc-and-dao-mfc-classes"></a>Różnice między klasy DAO MFC i ODBC
+## <a name="differences-between-odbc-and-dao-mfc-classes"></a>Różnice między klasami ODBC i DAO MFC
 
-Klasy DAO zawierają więcej obiektów i metod z bogatszego zestawu, ale w tej sekcji dotyczył tylko różnice w podobnych klasy i funkcje.
+Klasy DAO obejmują więcej obiektów i bogatszy zestaw metod, ale w tej sekcji szczegółowo opisano różnice w podobnych klasach i funkcjach.
 
-Prawdopodobnie najbardziej oczywiste różnice między klasami są zmiany nazwy dla podobnych klasy i funkcje globalne. Na poniższej liście przedstawiono zmiany nazw obiektów, metody i funkcje globalne skojarzone z klas baz danych:
+Prawdopodobnie najbardziej oczywiste różnice między klasami są zmianami nazw dla podobnych klas i funkcji globalnych. Na poniższej liście przedstawiono zmiany nazw obiektów, metod i funkcji globalnych skojarzonych z klasami baz danych:
 
-|Klasa lub funkcja|Odpowiedniej wartości wyrażonej w klas MFC DAO|
+|Klasa lub funkcja|Odpowiednik w klasach MFC DAO|
 |-----------------------|-----------------------------------|
 |`CDatabase`|`CDaoDatabase`|
 |`CDatabase::ExecuteSQL`|`CDaoDatabase::Execute`|
@@ -74,35 +74,35 @@ Prawdopodobnie najbardziej oczywiste różnice między klasami są zmiany nazwy 
 ||`DFX_Currency`|
 |`RFX_Single`|`DFX_Single`|
 |`RFX_Double`|`DFX_Double`|
-|`RFX_Date`<sup>1</sup>|`DFX_Date` (`COleDateTime`— na podstawie)|
+|`RFX_Date`<sup>1</sup>|`DFX_Date`(`COleDateTime`na podstawie)|
 |`RFX_Text`|`DFX_Text`|
 |`RFX_Binary`|`DFX_Binary`|
 |`RFX_LongBinary`|`DFX_LongBinary`|
 
-<sup>1</sup> `RFX_Date` funkcja opiera się na `CTime` i `TIMESTAMP_STRUCT`.
+1 funkcja jest oparta na `CTime` i. <sup></sup> `RFX_Date` `TIMESTAMP_STRUCT`
 
-Poniżej przedstawiono najważniejszych zmian funkcji, które mogą wpływać na aplikację i wymagają więcej niż prosta nazwa zmian.
+Poniżej przedstawiono istotne zmiany w funkcjonalności, które mogą mieć wpływ na aplikację i wymagają więcej niż proste zmiany nazw.
 
-- Stałe i makra używane do określenia elementów, takich jak zestaw rekordów otwórz typ i zestaw rekordów, Otwórz opcje zostały zmienione.
+- Stałe i makra używane do określania elementów, takich jak typ otwartego zestawu rekordów i opcje otwierania zestawu rekordów, zostały zmienione.
 
-   Klasy ODBC MFC niezbędnej do zdefiniowania tych opcji za pomocą makra lub wyliczany typów.
+   Za pomocą MFC klas ODBC wymaganych do definiowania tych opcji za pośrednictwem makr lub typów wyliczeniowych.
 
-   Przy użyciu klas DAO DAO znajduje się definicja tych opcji w pliku nagłówkowym (DBDAOINT. GODZ.). Zatem typ zbioru rekordów jest wyliczany elementem członkowskim `CRecordset`, ale za pomocą DAO jest stałą, zamiast tego. Na przykład można użyć **migawki** podczas określania typu `CRecordset` w ODBC, ale **DB_OPEN_SNAPSHOT** podczas określania typu `CDaoRecordset`.
+   Klasy DAO zawierają definicje tych opcji w pliku nagłówkowym (DBDAOINT. H). W ten sposób typem zestawu rekordów jest wyliczany element `CRecordset`członkowski, ale z obiektem DAO jest to stała. Na przykład można użyć **migawki** podczas określania typu `CRecordset` w ODBC, ale **DB_OPEN_SNAPSHOT** podczas określania typu `CDaoRecordset`.
 
-- Domyślny typ zestawu rekordów dla `CRecordset` jest **migawki** podczas domyślnego zestawu rekordów typu `CDaoRecordset` jest **dynamiczny** (patrz uwaga poniżej dla dodatkowego problemu dotyczących migawek klasy ODBC).
+- Domyślny typ zestawu rekordów dla `CRecordset` jest **migawką** , podczas gdy domyślny typ `CDaoRecordset` zestawu rekordów dla to **dynamiczny** (Zobacz uwagi poniżej, aby uzyskać dodatkowy problem dotyczący migawek klas ODBC).
 
-- ODBC `CRecordset` klasa ma możliwość utworzenia typu rekordów. W `CDaoRecordset` klasy, tylko do przodu nie jest typu zestawu rekordów, ale raczej właściwości (lub opcja) niektórych typów zestawów rekordów.
+- Klasa ODBC `CRecordset` ma opcję tworzenia zestawu rekordów tylko do przodu. `CDaoRecordset` W klasie, tylko do przodu nie jest typem zestawu rekordów, ale zamiast właściwości (lub opcji) niektórych typów zestawów rekordów.
 
-- Zestaw rekordów tylko do dołączania podczas otwierania `CRecordset` obiektu przeznaczona czy w zestawie rekordów danych może odczytać i dołączany. Za pomocą `CDaoRecordset` obiektu tylko do dołączania opcji oznacza, że dosłownie w zestawie rekordów danych może składać dołączany (a nie do odczytu).
+- Zestaw rekordów tylko do dołączenia podczas `CRecordset` otwierania obiektu, w którym można odczytywać i dołączać dane zestawu rekordów. Z `CDaoRecordset` obiektem opcja tylko do dołączania oznacza, że tylko dane zestawu rekordów mogą być dołączane (i nie odczytywane).
 
-- Funkcje Członkowskie transakcji do klas ODBC są elementami członkowskimi `CDatabase` i działają na poziomie bazy danych. Do klas DAO transakcji funkcji elementów członkowskich są elementami członkowskimi wyższy poziom klasy (`CDaoWorkspace`) i w związku z tym może mieć wpływ na wiele `CDaoDatabase` obiektów udostępnianie tego samego obszaru roboczego (miejsca transakcji).
+- Funkcje Członkowskie transakcji klas ODBC są członkami `CDatabase` i działają na poziomie bazy danych. W klasach DAO funkcje składowe transakcji są elementami klasy wyższego poziomu (`CDaoWorkspace`), co może mieć wpływ na wiele `CDaoDatabase` obiektów, które współużytkują ten sam obszar roboczy (przestrzeń transakcji).
 
-- Klasy wyjątków został zmieniony. `CDBExceptions` są zgłaszane w klasach ODBC i `CDaoExceptions` klas DAO.
+- Klasa wyjątku została zmieniona. `CDBExceptions`są generowane w klasach ODBC i `CDaoExceptions` w klasach DAO.
 
-- `RFX_Date` używa `CTime` i `TIMESTAMP_STRUCT` obiektów podczas `DFX_Date` używa `COleDateTime`. `COleDateTime` Jest prawie identyczna `CTime`, ale opiera się na OLE 8-bajtowych **data** zamiast 4-bajtowych **time_t** , może on przechowywać znacznie większy zakres danych.
+- `RFX_Date`używa `CTime` obiektów `TIMESTAMP_STRUCT` i w `DFX_Date` trakcie korzystania`COleDateTime`z nich. Jest niemal identyczny z `CTime`, ale jest oparty na 8-bajtowej **dacie** OLE zamiast 4-bajtowej time_t, dzięki czemu może przechowywać znacznie większy zakres danych. `COleDateTime`
 
    > [!NOTE]
-   > DAO (`CDaoRecordset`) migawki są tylko do odczytu podczas ODBC (`CRecordset`) migawki mogą być można aktualizować w zależności od tego, czy sterownik i korzystanie z biblioteki kursorów ODBC. Jeśli korzystasz z biblioteki kursorów `CRecordset` migawki są aktualizowalne. Jeśli używasz dowolnego sterowniki firmy Microsoft 3.0 pakiet sterownika pulpitu bez z biblioteki kursorów ODBC `CRecordset` migawki są przeznaczone tylko do odczytu. Jeśli używasz innego sterownika w dokumentacji sterownika czy migawek (`STATIC_CURSORS`) są przeznaczone tylko do odczytu.
+   > Migawki DAO`CDaoRecordset`() są tylko do odczytu, a migawki`CRecordset`ODBC () mogą być aktualizowalne w zależności od sterownika i używania biblioteki kursora ODBC. Jeśli używasz biblioteki kursorów, `CRecordset` migawki są aktualizowalne. Jeśli używasz dowolnego ze sterowników firmy Microsoft z pakietu sterowników pulpitu 3,0 bez biblioteki kursora ODBC, migawki są tylko do `CRecordset` odczytu. Jeśli używasz innego sterownika, zapoznaj się z dokumentacją sterownika, aby zobaczyć, czy migawki`STATIC_CURSORS`() są tylko do odczytu.
 
 ## <a name="see-also"></a>Zobacz także
 

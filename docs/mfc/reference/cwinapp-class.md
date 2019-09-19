@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: c35cc01b352285402885587f6d0b91e2c2bdd4ae
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: e65ad8b5d8b14ff747adc55b517d9e695d9cbb66
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741237"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095754"
 ---
 # <a name="cwinapp-class"></a>Klasa CWinApp
 
@@ -1036,7 +1036,7 @@ virtual void HtmlHelp(
 Określa dodatkowe dane. Używana wartość zależy od wartości parametru *nCmd* . Wartość domyślna `0x000F` to [HH_HELP_CONTEXT](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command).
 
 *nCmd*<br/>
-Określa typ żądanej pomocy. Aby zapoznać się z listą możliwych wartości i wpływem na parametr *dwData* , zobacz parametr *uCommand* opisany w funkcjach interfejsu API [HtmlHelpW](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpw) lub [HtmlHelpA](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpa) w Windows SDK.  
+Określa typ żądanej pomocy. Aby zapoznać się z listą możliwych wartości i wpływem na parametr *dwData* , zobacz parametr *uCommand* opisany w funkcjach interfejsu API [HtmlHelpW](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpw) lub [HtmlHelpA](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpa) w Windows SDK. 
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1458,7 +1458,7 @@ LPCTSTR m_pszExeName;
 W przeciwieństwie do [m_pszAppName](#m_pszappname), ta nazwa nie może zawierać pustych wartości. `m_pszExeName`jest publiczną zmienną typu **const char**<strong>\*</strong>.
 
 > [!NOTE]
-> Jeśli przypiszesz wartość do `m_pszExeName`, musi ona być przydzielana dynamicznie na stercie. Destruktor wywołuje Free () z tym wskaźnikiem. `CWinApp` Wiele chce użyć `_tcsdup`funkcji biblioteki wykonawczej () w celu wykonania przydziału. Ponadto zwolnij pamięć skojarzoną z bieżącym wskaźnikiem przed przypisaniem nowej wartości. Przykład:
+> Jeśli przypiszesz wartość do `m_pszExeName`, musi ona być przydzielana dynamicznie na stercie. Destruktor wywołuje Free () z tym wskaźnikiem. `CWinApp` Wiele chce użyć `_tcsdup`funkcji biblioteki wykonawczej () w celu wykonania przydziału. Ponadto zwolnij pamięć skojarzoną z bieżącym wskaźnikiem przed przypisaniem nowej wartości. Na przykład:
 
 [!code-cpp[NVC_MFCWindowing#58](../../mfc/reference/codesnippet/cpp/cwinapp-class_20.cpp)]
 
@@ -1475,7 +1475,7 @@ LPCTSTR m_pszHelpFilePath;
 Domyślnie struktura inicjuje `m_pszHelpFilePath` się nazwą aplikacji z ". HLP "dołączone. Aby zmienić nazwę pliku pomocy, ustaw wartość `m_pszHelpFilePath` na ciąg, który zawiera pełną nazwę żądanego pliku pomocy. Dogodnym miejscem do wykonania jest funkcja [InitInstance](#initinstance) aplikacji. `m_pszHelpFilePath`jest publiczną zmienną typu **const char**<strong>\*</strong>.
 
 > [!NOTE]
-> Jeśli przypiszesz wartość do `m_pszHelpFilePath`, musi ona być przydzielana dynamicznie na stercie. Destruktor wywołuje Free () z tym wskaźnikiem. `CWinApp` Wiele chce użyć `_tcsdup`funkcji biblioteki wykonawczej () w celu wykonania przydziału. Ponadto zwolnij pamięć skojarzoną z bieżącym wskaźnikiem przed przypisaniem nowej wartości. Przykład:
+> Jeśli przypiszesz wartość do `m_pszHelpFilePath`, musi ona być przydzielana dynamicznie na stercie. Destruktor wywołuje Free () z tym wskaźnikiem. `CWinApp` Wiele chce użyć `_tcsdup`funkcji biblioteki wykonawczej () w celu wykonania przydziału. Ponadto zwolnij pamięć skojarzoną z bieżącym wskaźnikiem przed przypisaniem nowej wartości. Na przykład:
 
 [!code-cpp[NVC_MFCWindowing#59](../../mfc/reference/codesnippet/cpp/cwinapp-class_21.cpp)]
 
@@ -1510,7 +1510,7 @@ Zwykle ten element członkowski danych jest traktowany jako tylko do odczytu.
 
 - Wartość jest przechowywana w kluczu rejestru. Nazwa ustawienia profilu aplikacji jest dołączana do następującego klucza rejestru: HKEY_CURRENT_USER/Software/LocalAppWizard — Wygenerowano/.
 
-Jeśli przypiszesz wartość do `m_pszRegistryKey`, musi ona być przydzielana dynamicznie na stercie. Destruktor wywołuje Free () z tym wskaźnikiem. `CWinApp` Wiele chce użyć `_tcsdup`funkcji biblioteki wykonawczej () w celu wykonania przydziału. Ponadto zwolnij pamięć skojarzoną z bieżącym wskaźnikiem przed przypisaniem nowej wartości. Na przykład:
+Jeśli przypiszesz wartość do `m_pszRegistryKey`, musi ona być przydzielana dynamicznie na stercie. Destruktor wywołuje Free () z tym wskaźnikiem. `CWinApp` Wiele chce użyć `_tcsdup`funkcji biblioteki wykonawczej () w celu wykonania przydziału. Ponadto zwolnij pamięć skojarzoną z bieżącym wskaźnikiem przed przypisaniem nowej wartości. Przykład:
 
 [!code-cpp[NVC_MFCWindowing#61](../../mfc/reference/codesnippet/cpp/cwinapp-class_23.cpp)]
 
