@@ -13,7 +13,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68460001"
 ---
-# <a name="timeputbyname-class"></a>time_put_byname — Klasa
+# <a name="time_put_byname-class"></a>time_put_byname — Klasa
 
 Klasa pochodna szablonu opisuje obiekt, który może być używany jako zestaw reguł ustawień regionalnych `time_put` typu \< CharType, OutputIterator >.
 
@@ -48,7 +48,8 @@ Początkowa liczba odwołań.
 
 ## <a name="remarks"></a>Uwagi
 
-Jego zachowanie zależy od nazwanych [](../standard-library/locale-class.md#name) ustawień regionalnych *_Locname*. Każdy Konstruktor inicjuje swój obiekt podstawowy z [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator > (`_Refs`).
+Jego zachowanie zależy od nazwanych [o nazwie
+](../standard-library/locale-class.md#name) ustawień regionalnych *_Locname*. Każdy Konstruktor inicjuje swój obiekt podstawowy z [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator > (`_Refs`).
 
 ## <a name="requirements"></a>Wymagania
 
