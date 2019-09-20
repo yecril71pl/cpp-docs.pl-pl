@@ -1,27 +1,27 @@
 ---
 title: Błąd kompilatora C2337
-ms.date: 11/04/2016
+ms.date: 09/19/2019
 f1_keywords:
 - C2337
 helpviewer_keywords:
 - C2337
 ms.assetid: eccc9178-a15e-42cd-bbd0-3cea7cf2d55b
-ms.openlocfilehash: 63f18a12ccd1962dd221324f5557c29be89eb04c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf9b3e782804add13aeaef0e6672d2dd66d193be
+ms.sourcegitcommit: f907b15f50a6b945d0b87c03af0050946157d701
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188279"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71158774"
 ---
 # <a name="compiler-error-c2337"></a>Błąd kompilatora C2337
 
-"atrybut name": nie znaleziono atrybutu
+> "*Attribute-Name*": nie znaleziono atrybutu
 
-Użyto atrybutu, który nie jest obsługiwana w tej wersji programu Visual C++.
+Kod używa atrybutu, który nie jest obsługiwany w tym kontekście. Lub atrybut nie jest dostępny w tej wersji kompilatora. Aby rozwiązać ten problem, Usuń nieobsługiwany atrybut.
 
-Poniższy przykład spowoduje wygenerowanie C2337:
+Poniższy przykład generuje C2337:
 
-```
+```cpp
 // C2337.cpp
 // compile with: /c
 [emitidl];

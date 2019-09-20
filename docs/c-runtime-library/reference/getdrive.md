@@ -1,6 +1,6 @@
 ---
 title: _getdrive
-ms.date: 11/04/2016
+ms.date: 09/19/2019
 api_name:
 - _getdrive
 api_location:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - disk drives
 - _getdrive function
 ms.assetid: e40631a0-8f1a-4897-90ac-e1037ff30bca
-ms.openlocfilehash: eb79d18c4ad177d7dc4da140e047ff3071ea3542
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 94d6c15270827cf61ec6086de8fa11251b435e2c
+ms.sourcegitcommit: f907b15f50a6b945d0b87c03af0050946157d701
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955088"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71158764"
 ---
 # <a name="_getdrive"></a>_getdrive
 
@@ -50,7 +50,7 @@ int _getdrive( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca bieżący (domyślny) dysk (1 = A, 2 = B i tak dalej). Brak powrotu błędu.
+Zwraca bieżący (domyślny) dysk (1 = A, 2 = B i tak dalej). Wartość zwracana przez zero oznacza, że bieżąca ścieżka nie zaczyna się od nazwy dysku literowego, na przykład ścieżki UNC. Lub oznacza to, że wewnętrzny przydział buforu nie powiódł się. Jeśli wewnętrzna alokacja nie powiedzie się, `errno` jest ustawiona na ENOMEM.
 
 ## <a name="requirements"></a>Wymagania
 

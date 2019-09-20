@@ -1,6 +1,7 @@
 ---
 title: Obsługa wyjątków strukturalnych w języku C++
-ms.date: 08/14/2018
+description: Jak obsługiwać wyjątki strukturalne przy użyciu C++ modelu obsługi wyjątków.
+ms.date: 09/19/2019
 helpviewer_keywords:
 - structured exception handling [C++], vs. C++ exception handling
 - structured exception handling [C++], vs. unstructured
@@ -8,24 +9,24 @@ helpviewer_keywords:
 - C++ exception handling [C++], vs. structured exception handling
 - wrapper classes [C++], C exception
 ms.assetid: f21d1944-4810-468e-b02a-9f77da4138c9
-ms.openlocfilehash: 2c4f1a8c3729e2b4d49a0152425e57717f7e9997
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c0e458f576325034d77676d247020adedfa33e5
+ms.sourcegitcommit: f907b15f50a6b945d0b87c03af0050946157d701
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154415"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71158738"
 ---
 # <a name="handle-structured-exceptions-in-c"></a>Obsługa wyjątków strukturalnych w języku C++
 
-Główna różnica między C strukturalnych (SEH) do obsługi wyjątków i obsługa wyjątków C++ jest, że model operuje na różnych typach obsługi wyjątków C++, podczas C strukturalny model obsługi wyjątków zajmuje się wyjątkami jednego typu; w szczególności **unsigned int**. Oznacza to, że wyjątki C są identyfikowane przez nieoznaczoną wartość całkowitą, natomiast wyjątki C++ są identyfikowane przez typ danych. Jeśli wyjątek strukturalny jest zgłaszany w języku C, każdy możliwy program obsługi wykonuje filtr, który sprawdza kontekst wyjątków C i określa, czy należy zaakceptować wyjątek, przekazać go do innego programu obsługi lub zignorować. Gdy wyjątek jest zgłaszany w języku C++, może być dowolnego typu.
+Główna różnica między obsługą wyjątków strukturalnych C (SEH) i C++ obsługą wyjątków polega na C++ tym, że model obsługi wyjątków zajmuje się typami, podczas gdy model obsługi wyjątków strukturalnych C zajmuje się wyjątkami jednego typu; w specjalnej postaci **bez znaku int**. Oznacza to, że wyjątki C są identyfikowane przez nieoznaczoną wartość całkowitą, natomiast wyjątki C++ są identyfikowane przez typ danych. Gdy wyjątek strukturalny jest wywoływany w języku C, każda możliwa obsługa wykonuje filtr, który sprawdza kontekst wyjątku C i określa, czy należy zaakceptować wyjątek, przekazać go do innego programu obsługi lub zignorować. Gdy wyjątek jest zgłaszany w języku C++, może być dowolnego typu.
 
-Druga różnica polega na to, że model obsługi wyjątków strukturalnych C jest określany jako *asynchronicznego*, ponieważ wyjątki występują pobocznie do normalnego przepływu sterowania. Mechanizm obsługi wyjątków C++ jest całkowicie *synchroniczne*, co oznacza, że wyjątki występują tylko wtedy kiedy są zgłaszane.
+Druga różnica polega na tym, że model obsługi wyjątków strukturalnych C jest określany jako *asynchroniczny*, ponieważ wyjątki występują jako pomocnicze dla normalnego przepływu sterowania. Mechanizm C++ obsługi wyjątków jest w pełni *synchroniczny*, co oznacza, że wyjątki występują tylko wtedy, gdy są zgłaszane.
 
-Kiedy używasz [/EHS lub/ehsc](../build/reference/eh-exception-handling-model.md) — opcja kompilatora, bez wyjątków uchwyt ze strukturą programów obsługi wyjątków C++. Te wyjątki są obsługiwane tylko przez **__catch** programów obsługi wyjątków strukturalnych lub **__finally** ze strukturą programy obsługi zakończenia. Aby uzyskać informacje, zobacz [obsługi wyjątków strukturalnych, (C/C++)](structured-exception-handling-c-cpp.md).
+W przypadku korzystania z opcji kompilatora [/EHS lub/EHsc](../build/reference/eh-exception-handling-model.md) żadne programy C++ obsługi wyjątków nie obsługują wyjątków strukturalnych. Te wyjątki są obsługiwane tylko przez program obsługi wyjątków strukturalnych **__except** lub programy obsługi zakończenia strukturalnego **__finally** . Aby uzyskać więcej informacji, zobacz [strukturalna obsługa wyjątkówC++(C/)](structured-exception-handling-c-cpp.md).
 
-W obszarze [/eha](../build/reference/eh-exception-handling-model.md) — opcja kompilatora, jeśli wyjątek C jest inicjowany w programie C++, mogą być obsługiwane przez program obsługi wyjątków strukturalnych z skojarzonym filtrem lub przez C++ **catch** obsługi, która kwota jest dynamicznie bliżej kontekstu wyjątku. Na przykład, poniższy program w języku C++ zgłasza wyjątek C wewnątrz C++ **spróbuj** kontekstu:
+W przypadku opcji kompilatora [/EHa](../build/reference/eh-exception-handling-model.md) , jeśli wyjątek C jest wywoływany w C++ programie, może być obsługiwany przez procedurę obsługi wyjątków strukturalnych ze skojarzonym filtrem lub przez C++ program obsługi **catch** , w zależności od tego, który jest dynamicznie zbliżony do wyjątku Context. Na przykład ten przykładowy C++ program zgłasza wyjątek C wewnątrz C++ kontekstu **try** :
 
-## <a name="example---catch-a-c-exception-in-a-c-catch-block"></a>Przykład — Catch blok catch wyjątek C w języku C++
+## <a name="example---catch-a-c-exception-in-a-c-catch-block"></a>Przykład — Przechwyć wyjątek C w bloku C++ catch
 
 ```cpp
 // exceptions_Exception_Handling_Differences.cpp
@@ -60,11 +61,11 @@ In finally.
 Caught a C exception.
 ```
 
-## <a name="c-exception-wrapper-classes"></a>Klasy otoki wyjątku w języku C
+## <a name="c-exception-wrapper-classes"></a>Klasy otoki wyjątków języka C
 
-W prostym przykładzie jak wyżej, wyjątek C może zostać przechwycony tylko wielokropkiem (**...** ) **catch** programu obsługi. Brak informacji na temat typu lub rodzaju wyjątku jest przekazywany do modułu obsługi. Chociaż ta metoda zadziała, w niektórych przypadkach możesz chcieć zdefiniowanie transformacji między dwoma modelami obsługi wyjątków, tak aby każdy wyjątek C był skojarzony z konkretną klasą. W tym celu, można zdefiniować klasy „otoki” wyjątku w języku C, które mogą być używane lub dziedziczone w celu przypisania atrybutu typu określonej klasy do wyjątku języka C. W ten sposób każdy wyjątek C mogą być obsługiwane osobno przez właściwe C++ **catch** programu obsługi, a nie wszystkie z nich w pojedynczy program obsługi.
+W prostym przykładzie podobnym do powyższego wyjątek C może być przechwytywany tylko przez wielokropek ( **...** ) Procedura obsługi **catch** . Brak informacji na temat typu lub rodzaju wyjątku jest przekazywany do modułu obsługi. Chociaż ta metoda działa, w niektórych przypadkach może być konieczne zdefiniowanie transformacji między dwoma modelami obsługi wyjątków, aby każdy wyjątek C był skojarzony z konkretną klasą. Aby przekształcić jeden, można zdefiniować klasę "otoka" wyjątku języka C, która może być używana lub pochodna w celu podzielenia określonego typu klasy na wyjątek C. Dzięki temu każdy wyjątek C może być obsługiwany oddzielnie przez określony C++ program obsługi **catch** , a nie wszystkie z nich w ramach jednej procedury obsługi.
 
-Klasa otoki może mieć interfejs składający się z niektórych funkcji składowych, które określają wartość wyjątku i dostęp do rozszerzonych informacji kontekstu wyjątku dostarczonych przez model wyjątków C. Można także zdefiniować domyślny konstruktor i Konstruktor, który akceptuje **unsigned int** argument (zapewnienie podstawowej reprezentacji wyjątku C) i bitowy Konstruktor kopiujący. Oto możliwa implementacja klasy otoki wyjątku C:
+Klasa otoki może mieć interfejs składający się z niektórych funkcji składowych, które określają wartość wyjątku i dostęp do rozszerzonych informacji kontekstu wyjątku dostarczonych przez model wyjątków C. Można również zdefiniować konstruktora domyślnego i konstruktora, który akceptuje argument **int bez znaku** (aby zapewnić podstawową reprezentację wyjątku C) i bitowego konstruktora kopiującego. Oto możliwa implementacja klasy otoki wyjątków C:
 
 ```cpp
 // exceptions_Exception_Handling_Differences2.cpp
@@ -83,11 +84,11 @@ public:
 };
 ```
 
-Aby użyć tej klasy, należy zainstalować niestandardowych funkcji do tłumaczenia wyjątek C, która jest wywoływana przez mechanizm obsługi wyjątków, każdorazowo, gdy jest zgłaszany wyjątek C. W ramach funkcji tłumaczenia, możliwe jest zgłoszenie wyjątku dowolnego typu (być może `SE_Exception` wpisać lub typ klasy pochodnej z `SE_Exception`), może zostać przechwycony przez odpowiednie języka C++ **catch** programu obsługi. Funkcja tłumaczenia może po prostu może nic nie zwracać, co oznacza, że nie obsłużyła wyjątku. Jeżeli sama funkcja tłumaczenia zgłasza wyjątek C, [zakończyć](../c-runtime-library/reference/terminate-crt.md) jest wywoływana.
+Aby użyć tej klasy, zainstaluj funkcję translacji wyjątków niestandardowych języka C, która jest wywoływana przez mechanizm obsługi wyjątków wewnętrznych za każdym razem, gdy zostanie zgłoszony wyjątek C. W ramach funkcji tłumaczenia można zgłosić dowolny `SE_Exception` wyjątek typu (być może typ lub typ klasy pochodzący z `SE_Exception`), który może zostać przechwycony przez odpowiednią pasującą C++ procedurę obsługi **catch** . Funkcja tłumaczenia może zamiast tego zwracać wartość, co oznacza, że nie obsłużył wyjątku. Jeśli sama funkcja tłumaczenia zgłasza wyjątek C, zostanie wywołana [przerwa](../c-runtime-library/reference/terminate-crt.md) .
 
-Aby określić niestandardową funkcję tłumaczenia, należy wywołać [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) funkcji o nazwie funkcji tłumaczenia, jako pojedynczy argument. Napisana funkcja tłumaczenia jest wywoływana jeden raz dla każdego wywołania funkcji na stosie, które ma **spróbuj** bloków. Nie ma domyślnego tłumaczenia funkcji; Jeśli nie określisz jedna poprzez wywołanie **_set_se_translator**, wyjątek C można zastosować wyłącznie z wielokropkiem modelu **catch** programu obsługi.
+Aby określić niestandardową funkcję tłumaczenia, wywołaj funkcję [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) z nazwą funkcji tłumaczenia jako jej pojedynczy argument. Funkcja tłumaczenia, którą można napisać, jest wywoływana jednokrotnie dla każdego wywołania funkcji na stosie, który ma bloki **try** . Nie istnieje domyślna Funkcja tłumaczenia; Jeśli nie określisz go przez wywołanie **_set_se_translator**, wyjątek C może być przechwytywany tylko przez procedurę obsługi **catch** z wielokropkiem.
 
-## <a name="example---use-a-custom-translation-function"></a>Przykład — użyj niestandardową funkcję tłumaczenia
+## <a name="example---use-a-custom-translation-function"></a>Przykład — używanie niestandardowej funkcji tłumaczenia
 
 Na przykład, poniższy kod instaluje niestandardową funkcję tłumaczenia i następnie zgłasza wyjątek C, który jest otoczony przez klasę `SE_Exception`:
 
@@ -145,4 +146,4 @@ nSE = 0xc0000094
 
 ## <a name="see-also"></a>Zobacz także
 
-[Mieszanie C (ze strukturą) i wyjątki języka C++](../cpp/mixing-c-structured-and-cpp-exceptions.md)
+[Mieszanie języka C (Structured) C++ i wyjątków](../cpp/mixing-c-structured-and-cpp-exceptions.md)
