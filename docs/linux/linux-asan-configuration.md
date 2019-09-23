@@ -1,62 +1,65 @@
 ---
-title: Konfigurowanie projektów systemu Linux, aby używać moduł czyszczący adresu
-description: W tym artykule opisano sposób konfigurowania C++ projektów systemu Linux w programie Visual Studio, aby użyć moduł czyszczący adresu.
+title: Konfigurowanie projektów systemu Linux do używania narzędzia Address Sanitizer
+description: Opisuje sposób konfigurowania C++ projektów systemu Linux w programie Visual Studio do używania adresu Sanitizer.
 ms.date: 06/07/2019
-ms.openlocfilehash: 2415e8971614de35f046b699ce99c3822faf9372
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: da7197981a431becfc1231dae96f7542062de675
+ms.sourcegitcommit: b3d19b5f59f3a5d90c24f9f16c73bad4c5eb6944
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66823572"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71195882"
 ---
-# <a name="configure-linux-projects-to-use-address-sanitizer"></a>Konfigurowanie projektów systemu Linux, aby używać moduł czyszczący adresu
+# <a name="configure-linux-projects-to-use-address-sanitizer"></a>Konfigurowanie projektów systemu Linux do używania narzędzia Address Sanitizer
 
-W programie Visual Studio 2019 r wersji 16.1 Obsługa AddressSanitizer (ASan) jest zintegrowana projektów systemu Linux. Można włączyć ASan dla projektów opartych na platformie MSBuild systemu Linux i projekty narzędzia CMake. Działa ona na zdalnych systemów Linux i podsystemu Windows dla systemu Linux (WSL).
+W programie Visual Studio 2019 w wersji 16,1, obsługa AddressSanitizer (ASan) jest zintegrowana z projektami systemu Linux. Możesz włączyć ASan dla projektów systemu Linux opartych na programie MSBuild i projektów CMake. Działa on w zdalnych systemach Linux i w podsystemie Windows dla systemu Linux (WSL).
 
-## <a name="about-asan"></a>Temat ASan
+## <a name="about-asan"></a>Informacje o ASan
 
-ASan jest wykrywanie błędów pamięci środowiska uruchomieniowego, dla języka C /C++ który wychwytuje następujące błędy:
+ASan to detektor błędów pamięci środowiska uruchomieniowego dla językaC++ C/przechwytuje następujące błędy:
 
-- Używany po zakończeniu bezpłatnego (delegujące wskaźnik odwołanie)
+- Użyj po zwolnieniu (odwołanie do wskaźnika zawieszonego)
 - Przepełnienie buforu sterty
-- Przepełnienie bufora stosu
-- Użyj po przywróceniu
-- Użyj po zakresu
-- Inicjowanie kolejności usterki
+- Przepełnienie buforu stosu
+- Użyj po zwrocie
+- Użyj po zakresie
+- Błędy kolejności inicjowania
 
-Gdy ASan wykryje błąd, go zatrzymuje wykonywanie natychmiast. Jeśli z włączoną funkcją ASan program zostanie uruchomiony w debugerze, zostanie wyświetlony komunikat, który opisuje typ błędu, adres pamięci oraz lokalizację w pliku źródłowym, w którym wystąpił błąd:
+Gdy ASan wykryje błąd, natychmiast przestanie działać. Jeśli w debugerze zostanie uruchomiony program z obsługą ASan, zostanie wyświetlony komunikat z opisem typu błędu, adresu pamięci i lokalizacji w pliku źródłowym, w którym wystąpił błąd:
 
-   ![Komunikat o błędzie ASan](media/asan-error.png)
+   ![ASan komunikat o błędzie](media/asan-error.png)
 
-W okienku debugowanie okna wyniki, można również wyświetlić pełne dane wyjściowe ASan (łącznie, gdzie uszkodzony pamięć została przydzielona/z cofniętą alokacją).
+Możesz również wyświetlić pełne dane wyjściowe ASan (w tym miejsce, gdzie uszkodzona pamięć została przypisana/cofnięta alokacja) w okienku debugowanie w oknie danych wyjściowych.
 
-## <a name="enable-asan-for-msbuild-based-linux-projects"></a>Włącz ASan dla projektów opartych na platformie MSBuild systemu Linux
+## <a name="enable-asan-for-msbuild-based-linux-projects"></a>Włącz ASan dla projektów systemu Linux opartych na programie MSBuild
 
-Aby włączyć ASan dla projektów opartych na platformie MSBuild systemu Linux, kliknij prawym przyciskiem myszy projekt w **Eksploratora rozwiązań** i wybierz **właściwości**. Następnie przejdź do **właściwości konfiguracji** > **C /C++**  > **Sanitizers**. ASan jest włączone za pomocą kompilatora i konsolidatora flag i wymaga projektu do ponownej kompilacji do pracy.
+> [!NOTE]
+> Począwszy od programu Visual Studio 2019 w wersji 16,4, AddressSanitizer for Linux projekty są włączane za pośrednictwem **Właściwości** > konfiguracji**C/C++**  > Enable Address Sanitizer.
 
-![Włącz ASan dla projektu programu MSBuild](media/msbuild-asan-prop-page.png)
+Aby włączyć ASan dla projektów systemu Linux opartych na programie MSBuild, kliknij prawym przyciskiem myszy projekt w **Eksplorator rozwiązań** a następnie wybierz pozycję **Właściwości**. Następnie przejdź do pozycji **Właściwości** > konfiguracji**C/C++**  > **oczyszczanie**. ASan jest włączana za pośrednictwem flag kompilatora i konsolidatora i wymaga, aby projekt został ponownie skompilowany do pracy.
 
-Flagi opcjonalne środowiska uruchomieniowego ASan można przekazać, przechodząc do **właściwości konfiguracji** > **debugowanie** > **AddressSanitizer środowiska uruchomieniowego flagi**. Kliknij strzałkę w dół, aby dodać lub usunąć flagi.
+![Włącz ASan dla projektu MSBuild](media/msbuild-asan-prop-page.png)
 
-![Konfigurowanie ASan środowiska uruchomieniowego flagi](media/msbuild-asan-runtime-flags.png)
+Opcjonalne flagi środowiska uruchomieniowego ASan można przekazać, przechodząc do **Właściwości** > konfiguracji**debugowanie** > **flagi środowiska uruchomieniowego AddressSanitizer**. Kliknij strzałkę w dół, aby dodać lub usunąć flagi.
 
-## <a name="enable-asan-for-visual-studio-cmake-projects"></a>Włącz ASan dla projektów programu Visual Studio narzędzia CMake
+![Konfigurowanie flag środowiska uruchomieniowego ASan](media/msbuild-asan-runtime-flags.png)
 
-Aby włączyć ASan dla narzędzia CMake, kliknij prawym przyciskiem myszy pliku CMakeLists.txt w **Eksploratora rozwiązań** i wybierz polecenie **ustawienia narzędzia CMake dla projektu**.
+## <a name="enable-asan-for-visual-studio-cmake-projects"></a>Włącz ASan dla projektów programu Visual Studio CMake
 
-Upewnij się, że konfiguracja systemu Linux (na przykład **debugowania dla systemu Linux**) wybranego w lewym okienku okna dialogowego:
+Aby włączyć ASan dla CMake, kliknij prawym przyciskiem myszy plik CMakeLists. txt w **Eksplorator rozwiązań** i wybierz pozycję **CMAKE ustawienia dla projektu**.
+
+Upewnij się, że masz wybraną konfigurację systemu Linux (na przykład **Linux-Debug**) w lewym okienku okna dialogowego:
 
 ![Konfiguracja debugowania systemu Linux](media/linux-debug-configuration.png)
 
-W obszarze dostępne są następujące opcje ASan **ogólne**. Wprowadź ASan flagi środowiska uruchomieniowego w formacie "flagi = wartość", oddzielone średnikami.
+Opcje ASan są **Ogólne**. Wprowadź flagi środowiska uruchomieniowego ASan w formacie "Flaga = wartość" oddzielone średnikami.
 
 ![Konfiguracja debugowania systemu Linux](media/cmake-settings-asan-options.png)
 
-## <a name="install-the-asan-debug-symbols"></a>Zainstaluj ASan symbole debugowania
+## <a name="install-the-asan-debug-symbols"></a>Instalowanie symboli debugowania ASan
 
-Aby włączyć diagnostykę ASan, należy zainstalować jego symboli debugowania (libasan dbg) na komputerze zdalnym systemem Linux lub WSL instalacji. Wersja dbg libasan, który należy załadować zależy od wersji kompilatora GCC zainstalowane na maszynie z systemem Linux:
+Aby włączyć diagnostykę ASan, należy zainstalować jej symbole debugowania (libasan-DBG) na zdalnym komputerze z systemem Linux lub w instalacji WSL. Załadowana wersja libasan-DBG jest zależna od wersji programu w witrynie na komputerze z systemem Linux:
 
-|**Wersja ASan**|**Wersja kompilatora GCC**|
+|**Wersja ASan**|**Wersja z programu w zatoce**|
 | --- | --- |
 |libasan0|gcc-4.8|
 |libasan2|gcc-5|
@@ -64,22 +67,22 @@ Aby włączyć diagnostykę ASan, należy zainstalować jego symboli debugowania
 |libasan4|gcc-7|
 |libasan5|gcc-8|
 
-Można określić wersji kompilatora GCC, możesz uzyskać, korzystając z tego polecenia:
+Korzystając z tego polecenia, można określić, która wersja usługi w zatoce jest dostępna:
 
 ```bash
 gcc --version
 ```
 
-Aby wyświetlić wersję dbg libasan, należy, uruchom program, a następnie sprawdź **debugowania** okienku **dane wyjściowe** okna. Wersja ASan, który jest ładowany odnosi się do wersji dbg libasan, potrzebne na maszynie z systemem Linux. Możesz użyć **Ctrl + F** "libasan" w oknie wyszukiwania. Jeśli masz libasan4, na przykład, zostanie wyświetlony wiersz, podobny do tego:
+Aby wyświetlić wymaganą wersję libasan-DBG, uruchom program, a następnie przejdź do okienka **debugowanie** w oknie **danych wyjściowych** . Załadowana wersja ASan jest zgodna z wersją libasan-DBG wymaganą na komputerze z systemem Linux. Aby wyszukać ciąg "libasan" w oknie, można użyć **kombinacji klawiszy Ctrl + F** . Jeśli masz libasan4, na przykład zobaczysz wiersz podobny do tego:
 
 ```Output
 Loaded '/usr/lib/x86_64-linux-gnu/libasan.so.4'. Symbols loaded.
 ```
 
-Usługa bits debugowania ASan można zainstalować na dystrybucje systemu Linux, używanego przez apt za pomocą następującego polecenia. To polecenie powoduje zainstalowanie wersji 4:
+Usługi ASan Debug można zainstalować w systemie Linux dystrybucje, które używają apt za pomocą następującego polecenia. To polecenie służy do instalowania wersji 4:
 
 ```bash
 sudo apt-get install libasan4-dbg
 ```
 
-Jeśli włączono ASan, Visual Studio wyświetli monit w górnej części **debugowania** okienku **dane wyjściowe** okna, aby zainstalować symbole debugowania ASan.
+Jeśli ASan jest włączona, program Visual Studio wyświetli w górnej części okienka **debugowanie** okna **dane wyjściowe** , aby zainstalować symbole debugowania ASan.
