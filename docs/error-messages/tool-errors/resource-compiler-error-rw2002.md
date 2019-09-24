@@ -6,159 +6,159 @@ f1_keywords:
 helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
-ms.openlocfilehash: 4cd922fff691b524ec9d278ac5948992fc096e09
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1726e6ce74dfd7b6b0c6e4b69771a826cdf07774
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396794"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71230405"
 ---
 # <a name="resource-compiler-error-rw2002"></a>Błąd kompilatora zasobów RW2002
 
 Błąd analizy
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać ten problem, sprawdzając następujące możliwe przyczyny
 
-1. **Typ akceleratora wymagane (ASCII lub VIRTKEY)**
+1. **Wymagany typ akceleratora (ASCII lub standardowym VIRTKEY)**
 
-   `type` Pole **AKCELERATORÓW** instrukcja musi zawierać wartość ASCII lub VIRTKEY.
+   Pole w instrukcji akceleratorów musi zawierać wartość ASCII lub standardowym VIRTKEY. `type`
 
-1. **Rozpocznij w tabeli akceleratora**
+1. **Oczekiwano instrukcji BEGIN w tabeli akceleratora**
 
-   **Rozpocząć** — słowo kluczowe należy natychmiast wykonać **AKCELERATORÓW** — słowo kluczowe.
+   Słowo kluczowe BEGIN musi być **od** razu zgodne ze słowem kluczowym **akceleratorów** .
 
-1. **W oknie dialogowym oczekiwano BEGIN**
+1. **Oczekiwanie w oknie dialogowym**
 
-   **Rozpocząć** — słowo kluczowe należy natychmiast wykonać **okna DIALOGOWEGO** — słowo kluczowe.
+   Słowo kluczowe BEGIN musi być **od** razu zgodne ze słowem kluczowym **okna dialogowego** .
 
-1. **W menu oczekiwano BEGIN**
+1. **Oczekiwanie w menu**
 
-   **Rozpocząć** — słowo kluczowe należy natychmiast wykonać **MENU** — słowo kluczowe.
+   Słowo kluczowe **BEGIN** musi być bezpośrednio zgodne z słowem kluczowym **menu** .
 
-1. **W RCData oczekiwano BEGIN**
+1. **Oczekiwano rozpoczęcia w RCData**
 
-   **Rozpocząć** — słowo kluczowe należy natychmiast wykonać **RCDATA** — słowo kluczowe.
+   Słowo kluczowe **BEGIN** musi być bezpośrednio zgodne ze słowem kluczowym **RCDATA** .
 
-1. **BEGIN — słowo kluczowe, oczekiwano w tabeli ciągów**
+1. **Oczekiwano słowa kluczowego BEGIN w tabeli ciągów**
 
-   **Rozpocząć** — słowo kluczowe należy natychmiast wykonać **STRINGTABLE** — słowo kluczowe.
+   Słowo kluczowe BEGIN musi być **od** razu zgodne ze słowem kluczowym " **String** ".
 
-1. **Nie można ponownie używać stałych ciągów**
+1. **Nie można ponowne użyć stałych ciągu**
 
-   W przypadku korzystania z taką samą wartość, dwa razy w **STRINGTABLE** instrukcji. Upewnij się, że są nie mieszanie nakładających się wartości dziesiętnej i szesnastkowej. Każdy identyfikator w **STRINGTABLE** muszą być unikatowe. Osiągnięcie maksymalnej wydajności należy używać stałych ciągłych, uruchamianych w wielu 16.
+   Używasz tej samej wartości dwukrotnie w instrukcji **String** . Upewnij się, że nie Mieszasz nakładających się wartości dziesiętnych i szesnastkowych. Każdy identyfikator w tabeli **ciągów** musi być unikatowy. Aby uzyskać maksymalną wydajność, użyj ciągłych stałych, które zaczynają się od wielokrotności 16.
 
-1. **Kontrolowanie znak poza zakresem [^ A - ^ Z]**
+1. **Znak kontrolny poza zakresem [^ A-^ Z]**
 
-   Znaku kontrolnego w **AKCELERATORÓW** instrukcja jest nieprawidłowa. Znak następujący karetki (**^**) musi należeć do zakresu od A i Z (włącznie).
+   Znak kontrolny w instrukcji **akceleratorów** jest nieprawidłowy. Znak następujący po znaku daszka **^** () musi należeć do zakresu od a do z, włącznie.
 
-1. **pusty menu niedozwolone**
+1. **Puste menu są niedozwolone**
 
-   **Zakończenia** — słowo kluczowe jest wyświetlana, zanim wszystkie elementy menu są zdefiniowane w **MENU** instrukcji. Kompilator zasobów nie dopuszcza pustego menu. Upewnij się, że nie masz żadnych otwartych znaki cudzysłowu, w ramach **MENU** instrukcji.
+   Słowo kluczowe **End** pojawia się przed zdefiniowaniem jakichkolwiek elementów menu w instrukcji **menu** . Kompilator zasobów nie zezwala na używanie pustych menu. Upewnij się, że nie masz żadnych otwartych cudzysłowów w instrukcji **menu** .
 
-1. **Oczekiwano w oknie dialogowym zakończenia**
+1. **Oczekiwano końca w oknie dialogowym**
 
-   **Zakończenia** — słowo kluczowe musi wystąpić na końcu **okna DIALOGOWEGO** instrukcji. Upewnij się, że nie ma żadnych otwarte oferty pozostanie z poprzednich instrukcji.
+   Słowo kluczowe **End** musi wystąpić na końcu instrukcji **okna dialogowego** . Upewnij się, że nie ma żadnych otwartych cudzysłowów pozostałych od poprzedniej instrukcji.
 
-1. **END w menu**
+1. **Oczekiwano końca w menu**
 
-   **Zakończenia** — słowo kluczowe musi przypadać na końcu **MENU** instrukcji. Upewnij się, nie masz wszelkie cudzysłowy open lub niezgodne pary **rozpocząć** i **zakończenia** instrukcji.
+   Słowo kluczowe **End** musi znajdować się na końcu instrukcji **menu** . Upewnij się, że nie masz żadnych otwartych cudzysłowów lub niepasującej pary instrukcji **BEGIN** i **End** .
 
-1. **Oczekiwany przecinek w tabeli akceleratora**
+1. **Oczekiwano przecinka w tabeli akceleratora**
 
-   Kompilator zasobów wymaga przecinka między `event` i *idvalue* pola w **AKCELERATORÓW** instrukcji.
+   Kompilator zasobów wymaga przecinka między `event` polami i *idvalue* w instrukcji **akceleratorów** .
 
-1. **Nazwa klasy kontrolki oczekiwanego**
+1. **Oczekiwana nazwa klasy kontrolki**
 
-   `class` Pole **kontroli** instrukcji w **okna DIALOGOWEGO** instrukcja musi być jednym z następujących typów: PRZYCISK, COMBOBOX, Edytuj, pola listy, pasek PRZEWIJANIA, statyczna, lub zdefiniowany przez użytkownika. Upewnij się, że klasa jest poprawna.
+   Pole instrukcji **sterującej** w instrukcji **okna dialogowego** musi być jednym z następujących typów: `class` PRZYCISK, COMBOBOX, Edytuj, LISTBOX, SCROLLBAR, STATIC lub zdefiniowany przez użytkownika. Upewnij się, że Klasa jest wpisana poprawnie.
 
-1. **Oczekiwano nazwy krój czcionki**
+1. **Oczekiwana nazwa kroju czcionki**
 
-   *Krój czcionki* pole opcji czcionki w **okna DIALOGOWEGO** instrukcja musi być ujęte w podwójny cudzysłów ciąg znaków ASCII. To pole określa nazwę czcionki.
+   Pole *kroju* czcionki opcji Font w instrukcji **okna dialogowego** musi być ciągiem znaków ASCII ujętym w znaki podwójnego cudzysłowu. To pole określa nazwę czcionki.
 
-1. **Oczekiwana wartość Identyfikatora dla elementu menuitem**
+1. **Oczekiwana wartość identyfikatora elementu MenuItem**
 
-   **MENU** instrukcja musi zawierać *menuID* pola, który określa nazwę lub liczbę, która identyfikuje zasób menu.
+   Instrukcja **menu** musi zawierać pole *MenuID* , które określa nazwę lub numer identyfikujący zasób menu.
 
-1. **Ciąg oczekiwany menu**
+1. **Oczekiwany ciąg menu**
 
-   Każdy **MENUITEM** i **okno PODRĘCZNE** instrukcja musi zawierać *tekstu* pola, które jest ciąg ujęty w znaki podwójnego cudzysłowu, który określa nazwę elementu menu lub okno podręczne menu. A **MENUITEM SEPARATOR** instrukcja wymaga ciągów w cudzysłowach.
+   Każda instrukcja **MenuItem** i **popup** musi zawierać pole *tekstowe* , czyli ciąg ujęty w znaki podwójnego cudzysłowu, który określa nazwę elementu menu lub menu podręcznego. Instrukcja **MenuItem separator** nie wymaga ciągu ujętego w cudzysłów.
 
-1. **Oczekiwana wartość liczbową polecenia**
+1. **Oczekiwana wartość polecenia liczbowego**
 
-   Kompilator zasobów oczekiwała liczbową *idvalue* pole **AKCELERATORÓW** instrukcji. Upewnij się, że używasz `#define` stałą, aby określić wartość i że stała jest poprawna.
+   Kompilator zasobów oczekiwał pola numerycznego *idvalue* w instrukcji **akceleratorów** . Upewnij się, że użyto `#define` stałej, aby określić wartość i że stała jest wpisana poprawnie.
 
 1. **Oczekiwano stałej liczbowej w tabeli ciągów**
 
-   Stałej liczbowej zdefiniowane w `#define` instrukcji, należy natychmiast wykonać **rozpocząć** — słowo kluczowe w **STRINGTABLE** instrukcji.
+   Stała numeryczna zdefiniowana w `#define` instrukcji musi być od razu zgodna ze słowem kluczowym **BEGIN** w instrukcji **String** .
 
-1. **Oczekiwano liczbowego w punktach**
+1. **Oczekiwany rozmiar punktu liczbowego**
 
-   *Pointsize* pole opcji czcionki w **okna DIALOGOWEGO** instrukcja musi być wartością całkowitą z zakresu punktu rozmiar.
+   Pole *Pointsize* opcji Font w instrukcji **okna dialogowego** musi być wartością typu Liczba całkowita.
 
-1. **Oczekiwano stałej wartości liczbowych okna dialogowego**
+1. **Oczekiwana stała numeryczna okna dialogowego**
 
-   A **okna DIALOGOWEGO** instrukcja wymaga wartości całkowitoliczbowe dla *x, y, szerokość*, i *wysokość* pola. Upewnij się, że te wartości są objęte po **okna DIALOGOWEGO** — słowo kluczowe i że nie są one ujemna.
+   Instrukcja **okna dialogowego** wymaga wartości liczb całkowitych dla pól *x, y, Szerokość*i *wysokość* . Upewnij się, że te wartości są zawarte po słowie kluczowym **okna dialogowego** i że nie są ujemne.
 
-1. **Oczekiwano ciągu w STRINGTABLE**
+1. **Oczekiwano ciągu w tabeli CIĄGÓW**
 
-   Oczekiwano ciągu po każdym poleceniu *stringid* wartość w **STRINGTABLE** instrukcji.
+   Ciąg jest oczekiwany po każdej wartości *stringid* w instrukcji **String** .
 
-1. **Oczekiwano ciągu lub stała klawisz skrótu — polecenie**
+1. **Oczekiwano ciągu lub stałego akceleratora polecenia**
 
-   Kompilator zasobów nie jest możliwe ustalenie, jakiego rodzaju klucza jest konfigurowana dla akceleratora. `event` Pole **AKCELERATORÓW** instrukcja może być nieprawidłowy.
+   Kompilator zasobów nie mógł określić, jakiego rodzaju klucz jest skonfigurowany dla akceleratora. Pole w instrukcji akceleratorów może być nieprawidłowe. `event`
 
-1. **Oczekiwano liczby dla Identyfikatora**
+1. **Oczekiwano liczby dla identyfikatora**
 
-   Oczekiwano liczby dla `id` pola w instrukcji sterowania **okna DIALOGOWEGO** instrukcji. Upewnij się, że masz wiele lub `#define` poufności informacji dotyczące Identyfikator kontrolki.
+   Oczekiwano liczby dla `id` pola instrukcji sterującej w instrukcji **okna dialogowego** . Upewnij się, że masz liczbę lub `#define` instrukcję dla identyfikatora formantu.
 
-1. **Oczekiwano ciągu w cudzysłowie w klasy okien dialogowych**
+1. **Oczekiwano ciągu w cudzysłowie w klasie okna dialogowego**
 
-   `class` Pole opcji klasy w **okna DIALOGOWEGO** instrukcja musi być liczba całkowita lub ciąg ujęty w znaki podwójnego cudzysłowu.
+   Pole opcji klasy w instrukcji **okna dialogowego** musi być liczbą całkowitą lub ciągiem ujętym w znaki podwójnego cudzysłowu. `class`
 
 1. **Oczekiwano ciągu w cudzysłowie w tytule okna dialogowego**
 
-   `captiontext` Pole opcji podpis w **okna DIALOGOWEGO** instrukcja musi być ujęte w podwójny cudzysłów ciąg znaków ASCII.
+   Pole opcji Caption w instrukcji **okna dialogowego** musi być ciągiem znaków ASCII ujętym w znaki podwójnego cudzysłowu. `captiontext`
 
-1. **Nie można odnaleźć pliku: Nazwa pliku**
+1. **Nie znaleziono pliku: filename**
 
-   Nie można odnaleźć pliku określonego w wierszu polecenia kompilator zasobów. Sprawdź, czy plik został przeniesiony do innego katalogu oraz czy nazwy pliku lub ścieżki jest wpisana poprawnie. Pliki są wyszukiwane przy użyciu **INCLUDE** zmiennej środowiskowej lub ustawienie Visual w aplikacji Workbench, jeśli jest dostępny.
+   Nie znaleziono pliku określonego w wierszu polecenia kompilatora zasobów. Sprawdź, czy plik został przeniesiony do innego katalogu i czy nazwa pliku lub ścieżka jest wpisana poprawnie. Pliki są przeszukiwane przy użyciu zmiennej środowiskowej **include** lub ustawienia programu Visual Studio, jeśli jest dostępny.
 
-1. **Nazwy czcionki musi być porządkowe**
+1. **Nazwy czcionek muszą być liczbami porządkowymi**
 
-   *Pointsize* pole w instrukcji czcionki musi być liczbą całkowitą, a nie w ciągu.
+   Pole *Pointsize* w instrukcji Font musi być liczbą całkowitą, a nie ciągiem.
 
-1. **Nieprawidłowy klawiszy skrótów**
+1. **Nieprawidłowy akcelerator**
 
-   `event` Pole **AKCELERATORÓW** instrukcji nie zostało rozpoznane lub jest więcej niż dwa znaki.
+   Pole w instrukcji akceleratorów nie zostało rozpoznane lub miało więcej niż dwa znaki. `event`
 
-1. **Typ akceleratora nieprawidłowy (ASCII lub VIRTKEY)**
+1. **Nieprawidłowy typ akceleratora (ASCII lub standardowym VIRTKEY)**
 
-   `type` Pole **AKCELERATORÓW** instrukcja musi zawierać wartość ASCII lub VIRTKEY.
+   Pole w instrukcji akceleratorów musi zawierać wartość ASCII lub standardowym VIRTKEY. `type`
 
-1. **znak kontrolny nieprawidłowy**
+1. **Nieprawidłowy znak kontrolny**
 
-   Znaku kontrolnego w **AKCELERATORÓW** instrukcja jest nieprawidłowa. To prawidłowy znak kontrolny składa się z jednej literze (tylko) po daszek (^).
+   Znak kontrolny w instrukcji **akceleratorów** jest nieprawidłowy. Prawidłowy znak kontrolny składa się z jednej litery (tylko) po karetki (^).
 
-1. **Nieprawidłowy typ formantu**
+1. **Nieprawidłowy typ kontrolki**
 
-   Każdej instrukcji kontroli w **okna DIALOGOWEGO** instrukcja musi mieć jedną z następujących czynności: POLE WYBORU, COMBOBOX, KONTROLKA, CTEXT, DEFPUSHBUTTON, TYPU CZĘŚCI EDITTEXT, GROUPBOX, IKONĘ, LISTBOX, LTEXT, PRZYCISK, RADIOBUTTON, RTEXT, PASEK PRZEWIJANIA. Upewnij się, tych instrukcji sterowania jest poprawna.
+   Każda instrukcja sterująca w instrukcji **okna dialogowego** musi mieć jedną z następujących wartości: CHECKBOX, COMBOBOX, CONTROL, CTEXT, DEFPUSHBUTTON, EDITTEXT, GRUPY, IKONA, LISTBOX, LTEXT, PRZYCISK, RADIOBUTTON, RTEXT, SCROLLBAR. Upewnij się, że te instrukcje sterujące są poprawnie napisane.
 
 1. **Nieprawidłowy typ**
 
-   Typ zasobu nie jest wśród typów zdefiniowanych w pliku WINDOWS.h.
+   Typ zasobu nie należy do typów zdefiniowanych w pliku WINDOWS. h.
 
-1. **Ciąg tekstowy lub liczbę porządkową, oczekiwano w kontrolce**
+1. **W kontrolce oczekiwano ciągu tekstowego lub liczby porządkowej**
 
-   *Tekstu* pole **kontroli** instrukcji w **okna DIALOGOWEGO** instrukcja musi być ciąg tekstowy lub numerem porządkowym referencje dla typu kontrolki. Jeśli przy użyciu numeru porządkowego, upewnij się, że masz `#define` instrukcji dla formantu.
+   Pole *tekstowe* instrukcji **sterującej** w instrukcji **okna dialogowego** musi być ciągiem tekstowym lub odwołaniem porządkowym do typu formantu. W przypadku używania numeru porządkowego upewnij się, że masz `#define` instrukcję dla kontrolki.
 
 1. **Niedopasowane nawiasy**
 
-   Upewnij się, przypadku zamknięcia co otwartego nawiasu **okna DIALOGOWEGO** instrukcji.
+   Upewnij się, że wszystkie otwarte nawiasy zostały zamknięte w instrukcji **okna dialogowego** .
 
 1. **Nieoczekiwana wartość w RCData**
 
-   *Danych pierwotnych* wartości w **RCDATA** instrukcji muszą być liczbami całkowitymi lub ciągów, każda jest oddzielona przecinkiem. Upewnij się, nie Opuść przecinek lub nie Opuść cudzysłów wokół ciągu.
+   Wartości *danych pierwotnych* w instrukcji **RCDATA** muszą być liczbami całkowitymi lub ciągami, z których każda oddzielona przecinkami. Upewnij się, że nie opuścisz przecinka lub nie opuszczasz znaku cudzysłowu otaczającego ciąg.
 
-1. **Podtyp nieznany menu**
+1. **Nieznany podtyp menu**
 
-   *Definicji elementu* pole **MENU** instrukcji może zawierać tylko **MENUITEM** i **okno PODRĘCZNE** instrukcji.
+   Pole *definicji elementu* w instrukcji **menu** może zawierać tylko instrukcje **MenuItem** i **popup** .

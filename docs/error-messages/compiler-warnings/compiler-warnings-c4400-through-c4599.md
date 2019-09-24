@@ -134,12 +134,12 @@ helpviewer_keywords:
 - C4594
 - C4595
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
-ms.openlocfilehash: 9f7886a88ebd98d5d7ab1848ea7a788967362ad7
-ms.sourcegitcommit: d3829ae0c3db909f96057755a80665f5ea4896ea
+ms.openlocfilehash: d1a4da3d5e721c85879441a53ef4bc00549b587d
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550441"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71230485"
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>Ostrzeżenia kompilatora — od C4400 do C4599
 
@@ -174,7 +174,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzestaw komunikatów ostrzega
 |Ostrzeżenie kompilatora (poziom 3) C4419|element "*symbol*" nie ma wpływu, gdy jest stosowany do prywatnej klasy ref "*Class*".|
 |[Ostrzeżenie kompilatora (poziom 1) C4420](../../error-messages/compiler-warnings/compiler-warning-level-1-c4420.md)|"*checked_operator*": operator nie jest dostępny, zamiast niego używa "*operator*"; Sprawdzanie w czasie wykonywania może być naruszone|
 |Ostrzeżenie kompilatora (poziom 3) C4421|"*Parameter*": parametr Reference funkcji możliwością wznowienia jest potencjalnie niebezpieczny|
-|Ostrzeżenie kompilatora (poziom 3) C4423|"std:: bad_alloc": zostanie przechwycony przez klasę ("*Type*") w numerze wiersza|
+|Ostrzeżenie kompilatora (poziom 3) C4423|"std:: bad_alloc": zostanie przechwycony przez klasę ("*Type*") w *numerze* wiersza|
 |Ostrzeżenie kompilatora (poziom 3) C4424|Catch for "*Type1*" poprzedzony znakiem "*Type2*" w *numerze*wiersza; nieprzewidywalne zachowanie może wynikać, jeśli zostanie zgłoszony element "std:: bad_alloc"|
 |Ostrzeżenie kompilatora (poziom 1) C4425|Nie można zastosować adnotacji SAL do "..."|
 |Ostrzeżenie kompilatora (poziom 1) C4426|flagi optymalizacji zostały zmienione po dołączeniu nagłówka, może to być spowodowane #pragma optymalizacją ()|
@@ -222,7 +222,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzestaw komunikatów ostrzega
 |Ostrzeżenie kompilatora (poziom 3) C4476|"*Function*": nieznany znak pola typu "*Character*" w specyfikatorze formatu|
 |[Ostrzeżenie kompilatora (poziom 1) C4477](c4477.md)|"*Function*": ciąg formatu "*String*" wymaga argumentu typu "*Type*", ale *numer* argumentu wariadyczne ma typ "*Type*"|
 |Ostrzeżenie kompilatora (poziom 1) C4478|"*Function*": symbole zastępcze pozycyjne i niepozycyjne nie mogą być mieszane w tym samym ciągu formatu|
-|Ostrzeżenie kompilatora (error) C4480|użyto niestandardowego rozszerzenia: Określanie typu podstawowego dla wyliczenia wyliczenia|
+|Ostrzeżenie kompilatora (error) C4480|użyto niestandardowego rozszerzenia: Określanie typu podstawowego*dla wyliczenia wyliczenia*|
 |[Ostrzeżenie kompilatora (poziom 4) C4481](../../error-messages/compiler-warnings/compiler-warning-level-4-c4481.md)|użyto niestandardowego rozszerzenia: override specyfikator "*słowo kluczowe*"|
 |Ostrzeżenie kompilatora C4482|użyto niestandardowego rozszerzenia:*Wyliczenie*wyliczeniowy "enum" użyte w nazwie kwalifikowanej|
 |Ostrzeżenie kompilatora (poziom 1, błąd) C4483|Błąd składniowy: oczekiwano C++ słowa kluczowego|
@@ -266,14 +266,14 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzestaw komunikatów ostrzega
 |Ostrzeżenie kompilatora (poziom 1) C4531|C++Obsługa wyjątków nie jest dostępna na Windows CE. Użyj strukturalnej obsługi wyjątków|
 |[Ostrzeżenie kompilatora (poziom 1) C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md)|"Kontynuuj": Wyskocz z bloku "__finally/finally" ma niezdefiniowane zachowanie podczas obsługi zakończenia|
 |[Ostrzeżenie kompilatora (poziom 1) C4533](../../error-messages/compiler-warnings/compiler-warning-level-1-c4533.md)|Inicjalizacja elementu "*Variable*" jest pomijana przez element "*goto Label*"|
-|[Ostrzeżenie kompilatora (poziom 3) C4534](../../error-messages/compiler-warnings/compiler-warning-level-3-c4534.md)|Konstruktornie będzie konstruktorem domyślnym dla*identyfikatora*"Class/struct" "z powodu argumentu domyślnego|
+|[Ostrzeżenie kompilatora (poziom 3) C4534](../../error-messages/compiler-warnings/compiler-warning-level-3-c4534.md)|Konstruktor*nie*będzie konstruktorem domyślnym dla*identyfikatora*"Class/struct" "z powodu argumentu domyślnego|
 |[Ostrzeżenie kompilatora (poziom 3) C4535](../../error-messages/compiler-warnings/compiler-warning-level-3-c4535.md)|Wywołanie _set_se_translator () wymaga/EHa|
 |[Ostrzeżenie kompilatora (poziom 4) C4536](../../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md)|"*TypeName*": nazwa typu przekracza limit meta danych znaków "*character_limit*"|
 |[Ostrzeżenie kompilatora (poziom 1) C4537](../../error-messages/compiler-warnings/compiler-warning-level-1-c4537.md)|"*Object*": "." zastosowany do typu innego niż UDT|
 |[Ostrzeżenie kompilatora (poziom 3) C4538](../../error-messages/compiler-warnings/compiler-warning-level-3-c4538.md)|"*Type*": kwalifikatory const/volatile dla tego typu nie są obsługiwane|
 |[Ostrzeżenie kompilatora (poziom 1) C4540](../../error-messages/compiler-warnings/compiler-warning-level-1-c4540.md)|dynamic_cast używany do konwertowania na niedostępną lub niejednoznaczną podstawę; test czasu wykonywania zakończy się niepowodzeniem ("*Type1*" na "*Type2*")|
 |[Ostrzeżenie kompilatora (poziom 1) C4541](../../error-messages/compiler-warnings/compiler-warning-level-1-c4541.md)|element "*Identifier*" jest używany w typie polimorficznym "*Type*" z/gr-; może to spowodować nieprzewidywalne zachowanie|
-|Ostrzeżenie kompilatora (poziom 1) C4542|Pomijanie generowania scalonego, wstrzykniętego pliku tekstowego; nie można zapisać pliku typu plików: "*problem*": *komunikat*|
+|Ostrzeżenie kompilatora (poziom 1) C4542|Pomijanie generowania scalonego, wstrzykniętego pliku tekstowego; nie *można zapisać pliku* typu plików: "*problem*": *komunikat*|
 |[Ostrzeżenie kompilatora (poziom 3) C4543](../../error-messages/compiler-warnings/compiler-warning-level-3-c4543.md)|Wstrzykiwany tekst został pominięty przez atrybut "\_No injected_text"|
 |[Ostrzeżenie kompilatora (poziom 1) C4544](../../error-messages/compiler-warnings/compiler-warning-level-1-c4544.md)|"*Deklaracja*": domyślny argument szablonu został zignorowany dla tej deklaracji szablonu|
 |[Ostrzeżenie kompilatora (poziom 1) C4545](../../error-messages/compiler-warnings/compiler-warning-level-1-c4545.md)|wyrażenie przed przecinkiem daje w wyniku funkcję, dla której brakuje listy argumentów|
@@ -299,13 +299,13 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzestaw komunikatów ostrzega
 |Ostrzeżenie kompilatora (poziom 1) C4568|"*Function*": żadne składowe nie odpowiadają sygnaturze jawnego przesłaniania|
 |Ostrzeżenie kompilatora (poziom 3) C4569|"*Function*": żadne składowe nie odpowiadają sygnaturze jawnego przesłaniania|
 |[Ostrzeżenie kompilatora (poziom 3) C4570](../../error-messages/compiler-warnings/compiler-warning-level-3-c4570.md)|"*Type*": nie jest jawnie zadeklarowany jako abstrakcyjny, ale ma funkcje abstrakcyjne|
-|[Ostrzeżenie kompilatora (poziom 4) C4571](../../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md)|Informacyjne: semantyka catch (...) zmieniła się C++ od Visual 7,1; wyjątki strukturalne (SEH) nie są już przechwytywane|
+|[Ostrzeżenie kompilatora (poziom 4) C4571](../../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md)|informacyjne: semantyka catch (...) zmieniła się C++ od Visual 7,1; wyjątki strukturalne (SEH) nie są już przechwytywane|
 |[Ostrzeżenie kompilatora (poziom 1) C4572](../../error-messages/compiler-warnings/compiler-warning-level-1-c4572.md)|Atrybut [ParamArray] jest przestarzały z opcją/CLR, użyj "..." INSTEAD|
 |Ostrzeżenie kompilatora (poziom 1) C4573|Użycie*wyrażenia "lambda Function*" wymaga, aby kompilator przechwycić element "This", ale bieżący domyślny tryb przechwytywania nie zezwala na to|
 |Ostrzeżenie kompilatora (poziom 4) C4574|"*Identyfikator*" jest zdefiniowany jako "0": Czy chodziło o użycie "#if identyfikator"?|
 |Ostrzeżenie kompilatora (poziom 1) C4575|element "__vectorcall" jest niezgodny z opcją "/CLR": konwertowanie na "__stdcall"|
 |Ostrzeżenie kompilatora (poziom 1, błąd) C4576|Typ ujęty w nawiasy, po którym następuje lista inicjatora, to niestandardowa składnia konwersji typu jawnego|
-|Ostrzeżenie kompilatora (poziom 1, off) C4577|użyto "noexcept" bez określonego trybu obsługi wyjątków; zakończenie przy wyjątku nie jest gwarantowane. Określ/EHsc|
+|[Ostrzeżenie kompilatora (poziom 1, off) C4577](../../error-messages/compiler-warnings/compiler-warning-level-1-c4577.md)|użyto "noexcept" bez określonego trybu obsługi wyjątków; zakończenie przy wyjątku nie jest gwarantowane. Określ/EHsc|
 |Ostrzeżenie kompilatora (poziom 1, błąd) C4578|"ABS": konwersja z "*Type1*" na "*Type2*", możliwa utrata danych (Czy chodziło o wywołanie "*Function*" lub #include \<cmath >?)|
 |[Ostrzeżenie kompilatora (poziom 3) C4580](../../error-messages/compiler-warnings/compiler-warning-level-3-c4580.md)|[Attribute] jest przestarzały; Zamiast tego należy określić system:: Attribute lub platform:: Metadata jako klasę bazową|
 |[Ostrzeżenie kompilatora (poziom 1) C4581](../../error-messages/compiler-warnings/compiler-warning-level-1-c4581.md)|przestarzałe zachowanie: element ""*String*"został zastąpiony*ciągiem" String*", aby przetworzyć atrybut|
@@ -324,7 +324,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzestaw komunikatów ostrzega
 |[Ostrzeżenie kompilatora (poziom 4) C4596](../../error-messages/compiler-warnings/c4596.md)|"*Identyfikator*": niedozwolona kwalifikowana nazwa w deklaracji składowej|
 |Ostrzeżenie kompilatora (error) C4597|niezdefiniowane zachowanie: makro OffsetOf zastosowana do elementu członkowskiego wirtualnej bazy|
 |Ostrzeżenie kompilatora (poziom 1 i poziom 3) C4598|*nagłówek*"#include" ": *numer* numeru nagłówka w prekompilowanym nagłówku nie jest zgodny z bieżącą kompilacją w tej pozycji|
-|Ostrzeżenie kompilatora (poziom 3) C4599|"*Flaga flagi*": *numer* argumentu wiersza polecenia nie pasuje do prekompilowanego nagłówka|
+|Ostrzeżenie kompilatora (poziom 3) C4599|"*Flaga flagi* *":* *numer* argumentu wiersza polecenia nie pasuje do prekompilowanego nagłówka|
 
 ## <a name="see-also"></a>Zobacz także
 

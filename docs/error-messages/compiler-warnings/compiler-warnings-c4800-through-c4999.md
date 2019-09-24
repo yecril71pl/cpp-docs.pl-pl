@@ -63,8 +63,6 @@ f1_keywords:
 - C5042
 - C5043
 - C5044
-- C5045
-- C5046
 - C5047
 - C5048
 - C5049
@@ -74,7 +72,6 @@ f1_keywords:
 - C5102
 - C5103
 - C5104
-- C5105
 - C5106
 - C5107
 helpviewer_keywords:
@@ -139,8 +136,6 @@ helpviewer_keywords:
 - C5042
 - C5043
 - C5044
-- C5045
-- C5046
 - C5047
 - C5048
 - C5049
@@ -150,15 +145,14 @@ helpviewer_keywords:
 - C5102
 - C5103
 - C5104
-- C5105
 - C5106
 - C5107
-ms.openlocfilehash: ae73d4ba503dfbbc27f91040c31beb91da3b7e54
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 7e715dcbac9dc59fe09ee1f917c02a23b3c4db14
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69631537"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71230475"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Ostrzeżenia kompilatora — od C4800 do C5999
 
@@ -302,9 +296,9 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzestaw komunikatów ostrzega
 |Ostrzeżenie kompilatora (poziom 1) C5041|"*Definicja*": Definicja poza wierszem elementu członkowskiego danych statycznych constexpr nie jest wymagana i jest przestarzała w języku c++ 17|
 |Ostrzeżenie kompilatora (poziom 3) C5042|"*Deklaracja*": deklaracje funkcji w zakresie bloku nie mogą być określone jako "inline" w standardzie C++; Usuń specyfikator "inline"|
 |Ostrzeżenie kompilatora (poziom 2) C5043|"*Specyfikacja*": Specyfikacja wyjątku nie jest zgodna z poprzednią deklaracją|
-|Ostrzeżenie kompilatora (poziom 4) C5044|Argument dla *opcji* wiersza polecenia wskazuje ścieżkę, która nie istnieje|
-|[Ostrzeżenie kompilatora C5045](c5045.md)|Kompilator wstawi środki zaradcze Spectre na potrzeby ładowania pamięci, jeśli określono przełącznik/Qspectre|
-|[Ostrzeżenie kompilatora (poziom 2) C5046](c5046.md)|"*Function*": Nie zdefiniowano symbolu powiązanego z typem z wewnętrznym powiązaniem|
+|Ostrzeżenie kompilatora (poziom 4) C5044|Argument dla *opcji* wiersza polecenia*wskazuje ścieżkę,* która nie istnieje|
+| [Ostrzeżenie kompilatora C5045](c5045.md) | Kompilator wstawi środki zaradcze Spectre na potrzeby ładowania pamięci, jeśli określono przełącznik/Qspectre |
+| [Ostrzeżenie kompilatora (poziom 2) C5046](c5046.md) | "*Function*": Nie zdefiniowano symbolu powiązanego z typem z wewnętrznym powiązaniem |
 | Ostrzeżenie kompilatora (poziom 1) C5047 | Użycie niestandardowych \_ \_Jeśliistniejezmodułaminiejestobsługiwane\_ |
 | Ostrzeżenie kompilatora (poziom 1) C5048 | Użycie makra "*Macroname*" może spowodować niedeterministyczne dane wyjściowe |
 | Ostrzeżenie kompilatora (poziom 1) C5049 | "*String*": Osadzenie pełnej ścieżki może spowodować wyjście zależne od maszyny |
@@ -314,7 +308,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzestaw komunikatów ostrzega
 | Ostrzeżenie kompilatora (poziom 1) C5102 | ignorowanie nieprawidłowej definicji makra wiersza polecenia "*Value*" |
 | Ostrzeżenie kompilatora (poziom 1) C5103 | wklejanie elementów "*token1*" i "*token2*" nie powoduje prawidłowego tokenu przetwarzania wstępnego |
 | Ostrzeżenie kompilatora (poziom 1) C5104 | znaleziono "*ciąg1*#*ciąg2*" na liście zastąpień makra, czy chodziło o "*ciąg1*" "#*ciąg2*"? |
-| Ostrzeżenie kompilatora (poziom 1) C5105 | niezdefiniowane zachowanie podczas tworzenia makra "defined" |
+| [Ostrzeżenie kompilatora (poziom 1) C5105](c5105.md) | niezdefiniowane zachowanie podczas tworzenia makra "defined" |
 | Ostrzeżenie kompilatora (poziom 1) C5106 | makro ponownie zdefiniowane z innymi nazwami parametrów |
 | Ostrzeżenie kompilatora (poziom 1) C5107 | brak zamykającego znaku "*char*" |
 
