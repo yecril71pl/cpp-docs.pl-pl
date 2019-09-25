@@ -51,10 +51,10 @@ helpviewer_keywords:
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
 ms.openlocfilehash: 72c42a06da8276d118c6c204f838ed4b31d142b9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69514693"
 ---
 # <a name="toolbar-editor-c"></a>Edytor paska narzędziC++()
@@ -183,7 +183,7 @@ W okienku **widok paska narzędzi** przeciągnij przycisk, który ma zostać prz
 
 1. Wybierz przycisk paska narzędzi.
 
-1. W [oknie właściwości](/visualstudio/ide/reference/properties-window)w polu monitu Dodaj opis przycisku dla paska stanu, a następnie po wiadomości, Dodaj `\n` i nazwę etykietki narzędzia.
+1. W [oknie właściwości](/visualstudio/ide/reference/properties-window)w polu **monitu** Dodaj opis przycisku dla paska stanu, a następnie po wiadomości, Dodaj `\n` i nazwę etykietki narzędzia.
 
 Na przykład, aby wyświetlić etykietkę narzędzia dla przycisku **Drukuj** w programie **WordPad**:
 
@@ -203,6 +203,6 @@ MFC lub ATL
 
 ## <a name="see-also"></a>Zobacz także
 
-[](../windows/resource-editors.md)
-Menu edytorów zasobów[i inne zasoby](/windows/win32/menurc/resources)<br/>
+[Menu edytorów](../windows/resource-editors.md)
+zasobów[i inne zasoby](/windows/win32/menurc/resources)<br/>
 [Właściwości przycisku paska narzędzi](../windows/toolbar-button-properties.md)<br/>

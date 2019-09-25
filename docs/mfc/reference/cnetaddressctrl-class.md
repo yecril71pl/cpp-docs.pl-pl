@@ -21,10 +21,10 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
 ms.openlocfilehash: 5e485c22bcc4bf35f61226d84345102052689f89
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69504531"
 ---
 # <a name="cnetaddressctrl-class"></a>Klasa CNetAddressCtrl
@@ -58,7 +58,7 @@ class CNetAddressCtrl : public CEdit
 
 ## <a name="remarks"></a>Uwagi
 
-Kontrolka adres sieciowy sprawdza, czy format adresu, który wprowadza użytkownik, jest poprawny. Kontrolka nie łączy się w rzeczywistości z adresem sieciowym. Metoda [CNetAddressCtrl::](#setallowtype) SetAllowType określa jeden lub więcej typów adresów, które Metoda [CNetAddressCtrl:: GetAddress](#getaddress) może przeanalizować i zweryfikować. Adres może mieć postać adresu IPv4, IPv6 lub nazwanego adresu dla docelowej lokalizacji serwera, sieci, hosta lub komunikatu emisji. Jeśli format adresu jest niepoprawny, można użyć metody [CNetAddressCtrl::D isplayerrortip](#displayerrortip) , aby wyświetlić okno komunikatu z poradą, które wskazuje graficznie punkt tekstowy kontroli adresu sieciowego i wyświetla wstępnie zdefiniowany komunikat o błędzie.
+Kontrolka adres sieciowy sprawdza, czy format adresu, który wprowadza użytkownik, jest poprawny. Kontrolka nie łączy się w rzeczywistości z adresem sieciowym. Metoda [CNetAddressCtrl:: SetAllowType](#setallowtype) określa jeden lub więcej typów adresów, które Metoda [CNetAddressCtrl:: GetAddress](#getaddress) może przeanalizować i zweryfikować. Adres może mieć postać adresu IPv4, IPv6 lub nazwanego adresu dla docelowej lokalizacji serwera, sieci, hosta lub komunikatu emisji. Jeśli format adresu jest niepoprawny, można użyć metody [CNetAddressCtrl::D isplayerrortip](#displayerrortip) , aby wyświetlić okno komunikatu z poradą, które wskazuje graficznie punkt tekstowy kontroli adresu sieciowego i wyświetla wstępnie zdefiniowany komunikat o błędzie.
 
 Klasa pochodzi od klasy CEdit. [](../../mfc/reference/cedit-class.md) `CNetAddressCtrl` W związku z tym Kontrola adresów sieciowych zapewnia dostęp do wszystkich komunikatów kontroli systemu Windows.
 
@@ -176,7 +176,7 @@ Wartość `S_OK` , jeśli ta metoda zakończyła się pomyślnie; w przeciwnym r
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj metody [CNetAddressCtrl::](#setallowtype) SetAllowType, aby określić typy adresów, które mogą być obsługiwane przez bieżącą kontrolę adresu sieciowego. Użyj metody [CNetAddressCtrl:: GetAddress](#getaddress) , aby sprawdzić poprawność i przeanalizować adres sieciowy wprowadzony przez użytkownika. Użyj metody [CNetAddressCtrl::D isplayerrortip](#displayerrortip) , aby wyświetlić poradę komunikatu o błędzie, jeśli metoda [CNetAddressCtrl:: GetAddress](#getaddress) nie powiedzie się.
+Użyj metody [CNetAddressCtrl:: SetAllowType](#setallowtype) , aby określić typy adresów, które mogą być obsługiwane przez bieżącą kontrolę adresu sieciowego. Użyj metody [CNetAddressCtrl:: GetAddress](#getaddress) , aby sprawdzić poprawność i przeanalizować adres sieciowy wprowadzony przez użytkownika. Użyj metody [CNetAddressCtrl::D isplayerrortip](#displayerrortip) , aby wyświetlić poradę komunikatu o błędzie, jeśli metoda [CNetAddressCtrl:: GetAddress](#getaddress) nie powiedzie się.
 
 Ten komunikat wywołuje makro [NetAddr_DisplayErrorTip](/windows/win32/api/shellapi/nf-shellapi-netaddr_displayerrortip) , które jest opisane w Windows SDK. To makro wysyła `NCM_DISPLAYERRORTIP` komunikat.
 
@@ -201,7 +201,7 @@ Wartość S_OK, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie k
 
 Jeśli ta metoda zakończy się pomyślnie, struktura [NET_ADDRESS_INFO](/windows/win32/shell/hkey-type) zawiera dodatkowe informacje o adresie sieciowym.
 
-Użyj metody [CNetAddressCtrl::](#setallowtype) SetAllowType, aby określić typy adresów, które może obsługiwać bieżąca Kontrola adresów sieciowych. Użyj metody [CNetAddressCtrl:: GetAddress](#getaddress) , aby sprawdzić poprawność i przeanalizować adres sieciowy wprowadzony przez użytkownika. Użyj metody [CNetAddressCtrl::D isplayerrortip](#displayerrortip) , aby wyświetlić poradę komunikatu o błędzie, jeśli metoda [CNetAddressCtrl:: GetAddress](#getaddress) nie powiedzie się.
+Użyj metody [CNetAddressCtrl:: SetAllowType](#setallowtype) , aby określić typy adresów, które może obsługiwać bieżąca Kontrola adresów sieciowych. Użyj metody [CNetAddressCtrl:: GetAddress](#getaddress) , aby sprawdzić poprawność i przeanalizować adres sieciowy wprowadzony przez użytkownika. Użyj metody [CNetAddressCtrl::D isplayerrortip](#displayerrortip) , aby wyświetlić poradę komunikatu o błędzie, jeśli metoda [CNetAddressCtrl:: GetAddress](#getaddress) nie powiedzie się.
 
 Ta metoda wywołuje makro [NetAddr_GetAddress](/windows/win32/api/shellapi/nf-shellapi-netaddr_getaddress) , które jest opisane w Windows SDK. To makro wysyła komunikat NCM_GETADDRESS.
 
@@ -241,7 +241,7 @@ S_OK Jeśli ta metoda zakończyła się pomyślnie; w przeciwnym razie kod błę
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj metody [CNetAddressCtrl::](#setallowtype) SetAllowType, aby określić typy adresów, które mogą być obsługiwane przez bieżącą kontrolę adresu sieciowego. Użyj metody [CNetAddressCtrl:: GetAddress](#getaddress) , aby sprawdzić poprawność i przeanalizować adres sieciowy wprowadzony przez użytkownika. Użyj metody [CNetAddressCtrl::D isplayerrortip](#displayerrortip) , aby wyświetlić poradę komunikatu o błędzie, jeśli metoda [CNetAddressCtrl:: GetAddress](#getaddress) nie powiedzie się.
+Użyj metody [CNetAddressCtrl:: SetAllowType](#setallowtype) , aby określić typy adresów, które mogą być obsługiwane przez bieżącą kontrolę adresu sieciowego. Użyj metody [CNetAddressCtrl:: GetAddress](#getaddress) , aby sprawdzić poprawność i przeanalizować adres sieciowy wprowadzony przez użytkownika. Użyj metody [CNetAddressCtrl::D isplayerrortip](#displayerrortip) , aby wyświetlić poradę komunikatu o błędzie, jeśli metoda [CNetAddressCtrl:: GetAddress](#getaddress) nie powiedzie się.
 
 Ten komunikat wywołuje makro [NetAddr_SetAllowType](/windows/win32/api/shellapi/nf-shellapi-netaddr_setallowtype) , które jest opisane w Windows SDK. To makro wysyła komunikat NCM_SETALLOWTYPE.
 

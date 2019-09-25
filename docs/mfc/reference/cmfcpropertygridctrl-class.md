@@ -151,10 +151,10 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
 ms.openlocfilehash: 20b3bafcdbaf02b0f7e40f0092d7f6661855114d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69505172"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Klasa CMFCPropertyGridCtrl
@@ -1115,7 +1115,7 @@ Ma wartość TRUE, Jeśli kontrolka siatki właściwości jest w trybie alfabety
 
 Gdy kontrolka siatki właściwości jest w trybie alfabetycznym, wszystkie właściwości są sortowane alfabetycznie według ich nazw. W przeciwnym razie właściwości są pogrupowane w węzłach nadrzędnych.
 
-Aby włączyć lub wyłączyć tryb alfabetyczny, należy użyć metody [CMFCPropertyGridCtrl::](#setalphabeticmode) setalphabeticmode.
+Aby włączyć lub wyłączyć tryb alfabetyczny, należy użyć metody [CMFCPropertyGridCtrl:: Setalphabeticmode](#setalphabeticmode) .
 
 ##  <a name="isalwaysshowusertooltip"></a>CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip
 
@@ -1508,7 +1508,7 @@ podczas Kolor linii rysowanych między właściwościami.
 
 Dla dowolnego parametru należy określić `((COLORREF)-1)` wartość koloru, aby użyć domyślnego koloru dla tego elementu formantu siatki właściwości.
 
-Aby dostosować wygląd określonej właściwości, należy utworzyć klasę z klasy [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) , a następnie zastąpić [CMFCPropertyGridProperty::](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawname)ondrawname, [CMFCPropertyGridProperty:: OnDrawValue](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue), [ CMFCPropertyGridProperty:: OnDrawExpandBox](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawexpandbox)i [CMFCPropertyGridProperty:: OnDrawButton](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawbutton) — metody.
+Aby dostosować wygląd określonej właściwości, należy utworzyć klasę z klasy [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) , a następnie zastąpić [CMFCPropertyGridProperty:: ondrawname](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawname), [CMFCPropertyGridProperty:: OnDrawValue](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue), [ CMFCPropertyGridProperty:: OnDrawExpandBox](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawexpandbox)i [CMFCPropertyGridProperty:: OnDrawButton](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawbutton) — metody.
 
 ##  <a name="setdescriptionrows"></a>CMFCPropertyGridCtrl::SetDescriptionRows
 

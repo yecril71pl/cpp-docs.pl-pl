@@ -8,10 +8,10 @@ helpviewer_keywords:
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
 ms.openlocfilehash: 7bc0cb58cbbe995aa9d74e3ccb627ddc442bd4fb
-ms.sourcegitcommit: ec524d1f87bcce2b26b02e6d297f42c94b3db36e
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70026024"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Przewodnik: Tworzenie własnej biblioteki dołączanej dynamicznie (C++) i korzystanie z niej
@@ -194,7 +194,7 @@ Teraz ta biblioteka DLL nie działa znacznie. Następnie utworzysz plik nagłów
 
 Ten plik nagłówkowy deklaruje pewne funkcje, aby utworzyć uogólnioną sekwencję Fibonacci, uwzględniając dwie wartości początkowe. Wywołanie w celu `fibonacci_init(1, 1)` wygenerowania znanej sekwencji Fibonacci Number.
 
-Zwróć uwagę na instrukcje preprocesora w górnej części pliku. Nowy szablon projektu dla projektu DLL dodaje eksporty ** _ProjectName_&#95; do zdefiniowanych makr preprocesora. W tym przykładzie program Visual Studio definiuje **eksporty MATHLIBRARY&#95;** podczas kompilowania projektu DLL MATHLIBRARY.
+Zwróć uwagę na instrukcje preprocesora w górnej części pliku. Nowy szablon projektu dla projektu DLL dodaje **eksporty _ProjectName_&#95; do zdefiniowanych makr preprocesora. W tym przykładzie program Visual Studio definiuje **eksporty MATHLIBRARY&#95;** podczas kompilowania projektu DLL MATHLIBRARY.
 
 Po zdefiniowaniu makra **MATHLIBRARY&#95;exports** makro **interfejsu API&#95;MATHLIBRARY** ustawia `__declspec(dllexport)` modyfikator dla deklaracji funkcji. Ten modyfikator instruuje kompilator i konsolidator, aby wyeksportować funkcję lub zmienną z biblioteki DLL do użytku przez inne aplikacje. Gdy **eksporty MATHLIBRARY&#95;** są niezdefiniowane, na przykład gdy plik nagłówkowy jest dołączany przez aplikację kliencką, interfejs `__declspec(dllimport)` **API MATHLIBRARY&#95;** stosuje modyfikator do deklaracji. Ten modyfikator optymalizuje Importowanie funkcji lub zmiennej w aplikacji. Aby uzyskać więcej informacji, zobacz [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
@@ -449,7 +449,7 @@ Po zakończeniu pracy kreatora zostanie utworzony projekt o minimalnej aplikacji
 
 ::: moniker-end
 
-Następnie, aby wywołać funkcje MathLibrary w kodzie źródłowym, projekt musi zawierać plik *MathLibrary. h* . Możesz skopiować ten plik nagłówka do projektu aplikacji klienckiej, a następnie dodać go do projektu jako istniejący element. Ta metoda może być dobrym wyborem dla bibliotek innych firm. Jeśli jednak pracujesz nad kodem biblioteki DLL i klienta w tym samym czasie, pliki nagłówkowe mogą nie być zsynchronizowane. Aby uniknąć tego problemu, należy ustawić ścieżkę do **katalogu dodatkowe katalogi** dołączane w projekcie w celu uwzględnienia ścieżki do oryginalnego nagłówka.
+Następnie, aby wywołać funkcje MathLibrary w kodzie źródłowym, projekt musi zawierać plik *MathLibrary. h* . Możesz skopiować ten plik nagłówka do projektu aplikacji klienckiej, a następnie dodać go do projektu jako istniejący element. Ta metoda może być dobrym wyborem dla bibliotek innych firm. Jeśli jednak pracujesz nad kodem biblioteki DLL i klienta w tym samym czasie, pliki nagłówkowe mogą nie być zsynchronizowane. Aby uniknąć tego problemu, należy ustawić ścieżkę do **katalogu dodatkowe katalogi dołączane** w projekcie w celu uwzględnienia ścieżki do oryginalnego nagłówka.
 
 ### <a name="to-add-the-dll-header-to-your-include-path"></a>Aby dodać nagłówek DLL do ścieżki dołączania
 
@@ -479,7 +479,7 @@ Następnie, aby wywołać funkcje MathLibrary w kodzie źródłowym, projekt mus
 
    ![Dodaj lokalizację nagłówka do właściwości dodatkowe katalogi dołączane](media/mathclient-additional-include-directories.png "Dodaj lokalizację nagłówka do właściwości dodatkowe katalogi dołączane")
 
-1. Po wprowadzeniu ścieżki do pliku nagłówkowego w oknie dialogowym **Dodatkowe katalogi** dołączenia wybierz przycisk **OK** . W oknie dialogowym **strony właściwości** wybierz przycisk **OK** , aby zapisać zmiany.
+1. Po wprowadzeniu ścieżki do pliku nagłówkowego w oknie dialogowym **Dodatkowe katalogi dołączenia** wybierz przycisk **OK** . W oknie dialogowym **strony właściwości** wybierz przycisk **OK** , aby zapisać zmiany.
 
 Teraz możesz dołączyć plik **MathLibrary. h** i użyć funkcji zadeklarowanych w aplikacji klienckiej. Zastąp zawartość **MathClient. cpp** przy użyciu tego kodu:
 

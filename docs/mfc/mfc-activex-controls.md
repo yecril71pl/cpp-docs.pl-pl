@@ -16,10 +16,10 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
 ms.openlocfilehash: a1c7bb070a75f4406556817163931f0707706c40
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69508125"
 ---
 # <a name="mfc-activex-controls"></a>Kontrolki ActiveX MFC
@@ -60,7 +60,7 @@ Aby uzyskać więcej informacji, zobacz:
 
 Kontrolka ActiveX używa kilku elementów programistycznych do wydajnej współpracy z kontenerem sterowania i użytkownikiem. Są to klasy [COleControl](../mfc/reference/colecontrol-class.md), zestaw funkcji uruchamiania zdarzeń oraz mapa wysyłania.
 
-Każdy obiekt formantu ActiveX, który tworzysz, `COleControl`dziedziczy zaawansowany zestaw funkcji z klasy podstawowej MFC. Te funkcje obejmują aktywację w miejscu i logikę automatyzacji. `COleControl`może dostarczyć obiekt sterowania z tą samą funkcjonalnością co obiekt okna MFC oraz możliwość uruchamiania zdarzeń. `COleControl`może również udostępniać [](../mfc/providing-windowless-activation.md)bezokienkowe kontrolki, które są zależne od ich kontenera, aby uzyskać pomoc dotyczącą niektórych funkcji dostępnych w oknie (przechwytywanie myszy, fokus klawiatury, przewijanie), ale oferują znacznie szybsze wyświetlanie.
+Każdy obiekt formantu ActiveX, który tworzysz, `COleControl`dziedziczy zaawansowany zestaw funkcji z klasy podstawowej MFC. Te funkcje obejmują aktywację w miejscu i logikę automatyzacji. `COleControl`może dostarczyć obiekt sterowania z tą samą funkcjonalnością co obiekt okna MFC oraz możliwość uruchamiania zdarzeń. `COleControl`może również udostępniać [bezokienkowe kontrolki](../mfc/providing-windowless-activation.md), które są zależne od ich kontenera, aby uzyskać pomoc dotyczącą niektórych funkcji dostępnych w oknie (przechwytywanie myszy, fokus klawiatury, przewijanie), ale oferują znacznie szybsze wyświetlanie.
 
 Ponieważ Klasa formantów pochodzi z `COleControl`, dziedziczy możliwość wysyłania komunikatów (nazywanych zdarzeniami) do kontenera kontroli po spełnieniu określonych warunków. Te zdarzenia są używane do powiadamiania kontenera kontroli, gdy jakaś istotna występuje w formancie. Można wysłać dodatkowe informacje o zdarzeniu do kontenera kontroli przez dołączenie parametrów do zdarzenia. Aby uzyskać więcej informacji na temat zdarzeń kontrolki ActiveX, [Zobacz artykuł formanty ActiveX MFC: Zdarzenia](../mfc/mfc-activex-controls-events.md).
 
@@ -81,7 +81,7 @@ Cała komunikacja formantu z kontenerem jest wykonywana przez `COleControl`. Aby
 
 Kontrolka ma dwa stany podstawowe: aktywne i nieaktywne. Tradycyjnie te Stany były rozróżniane, niezależnie od tego, czy formant miał okno. Aktywna kontrolka miała okno; nieaktywna kontrolka. W przypadku wprowadzenia aktywacji bezokienkowej tego rozróżnienia nie jest już uniwersalne, ale nadal dotyczy wielu kontrolek.
 
-Gdy [sterowanie](../mfc/providing-windowless-activation.md) bezokienkowe jest aktywne, wywołuje funkcję przechwytywania myszy, fokus klawiatury, przewijanie i inne usługi okna z jego kontenera. Możesz również [zapewnić interakcję myszy z](../mfc/providing-mouse-interaction-while-inactive.md)nieaktywnymi kontrolkami, a także tworzyć kontrolki, które [oczekują na utworzenie okna](../mfc/turning-off-the-activate-when-visible-option.md).
+Gdy [sterowanie bezokienkowe](../mfc/providing-windowless-activation.md) jest aktywne, wywołuje funkcję przechwytywania myszy, fokus klawiatury, przewijanie i inne usługi okna z jego kontenera. Możesz również [zapewnić interakcję myszy z nieaktywnymi kontrolkami](../mfc/providing-mouse-interaction-while-inactive.md), a także tworzyć kontrolki, które [oczekują na utworzenie okna](../mfc/turning-off-the-activate-when-visible-option.md).
 
 Gdy kontrolka z oknem stanie się aktywna, można w pełni korzystać z kontenera kontroli, użytkownika i systemu Windows. Na poniższym rysunku przedstawiono ścieżki komunikacji między kontrolką ActiveX, kontenerem sterowania i systemem operacyjnym.
 

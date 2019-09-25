@@ -10,10 +10,10 @@ helpviewer_keywords:
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
 ms.openlocfilehash: 3a7f9c5720c4bd6a43a1a95f9bc19680ba0a9c1e
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69631728"
 ---
 # <a name="cancellation-in-the-ppl"></a>Anulowanie w PPL
@@ -21,7 +21,7 @@ ms.locfileid: "69631728"
 W tym dokumencie wyjaśniono rolę anulowania w bibliotece równoległych wzorców (PPL), jak anulować pracę równoległą i jak ustalić, kiedy równoległe działanie zostało anulowane.
 
 > [!NOTE]
->  Środowisko uruchomieniowe używa obsługi wyjątków w celu zaimplementowania anulowania. Nie należy przechwytywać ani obsługiwać tych wyjątków w kodzie. Ponadto zalecamy napisać kod bezpieczny dla wyjątków w treści funkcji dla zadań podrzędnych. Na przykład można użyć wzorca pozyskiwania *zasobów* (RAII), aby upewnić się, że zasoby są prawidłowo obsługiwane, gdy w treści zadania zostanie zgłoszony wyjątek. Aby zapoznać się z kompletnym przykładem korzystającym ze wzorca RAII w celu wyczyszczenia zasobu w ramach zadania [, które można anulować, zobacz Przewodnik: Usuwanie pracy z wątku](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)interfejsu użytkownika.
+>  Środowisko uruchomieniowe używa obsługi wyjątków w celu zaimplementowania anulowania. Nie należy przechwytywać ani obsługiwać tych wyjątków w kodzie. Ponadto zalecamy napisać kod bezpieczny dla wyjątków w treści funkcji dla zadań podrzędnych. Na przykład można użyć wzorca *pozyskiwania zasobów* (RAII), aby upewnić się, że zasoby są prawidłowo obsługiwane, gdy w treści zadania zostanie zgłoszony wyjątek. Aby zapoznać się z kompletnym przykładem korzystającym ze wzorca RAII w celu wyczyszczenia zasobu w ramach zadania [, które można anulować, zobacz Przewodnik: Usuwanie pracy z wątku](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)interfejsu użytkownika.
 
 ## <a name="key-points"></a>Kwestie kluczowe
 
@@ -152,7 +152,7 @@ Jeśli zadanie podrzędne wykonuje czasochłonną operację i nie wywołuje do �
 
 [!code-cpp[concrt-task-tree#6](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_6.cpp)]
 
-Ten przykład sprawdza, czy dla każdej 100<sup></sup> iteracji pętli zadań jest wykonywane anulowanie. Częstotliwość, z którą jest sprawdzane anulowanie, zależy od ilości pracy wykonywanej przez zadanie oraz szybkości, z jaką zadania mogą reagować na anulowanie.
+Ten przykład sprawdza, czy dla<sup>każdej 100 iteracji</sup> pętli zadań jest wykonywane anulowanie. Częstotliwość, z którą jest sprawdzane anulowanie, zależy od ilości pracy wykonywanej przez zadanie oraz szybkości, z jaką zadania mogą reagować na anulowanie.
 
 Jeśli nie masz dostępu do obiektu nadrzędnej grupy zadań, wywołaj funkcję [concurrency:: is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling) , aby określić, czy nadrzędna grupa zadań została anulowana.
 

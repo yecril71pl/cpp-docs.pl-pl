@@ -4,10 +4,10 @@ ms.custom: get-started-article
 ms.date: 07/12/2018
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
 ms.openlocfilehash: 8dbf18d24c0369507743c3c1da624838f9ab4703
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69513824"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Instrukcje: Korzystanie z zestawu SDK systemu Windows 10 w aplikacji klasycznej systemu Windows
@@ -42,7 +42,7 @@ Począwszy od programu Visual Studio 2015 i zestawu SDK systemu Windows 10, Bibl
 
    ![Wersja platformy docelowej](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")
 
-   Ta akcja zmienia wartości makr projektu, które zawierają ścieżki do plików nagłówkowych i plików bibliotek. Aby zobaczyć, co zostało zmienione, w sekcji  **C++ katalogi wizualizacji** okna dialogowego **właściwości projektu** wybierz jedną z właściwości, takich jak **katalogi**dołączania, wybierz pozycję Otwórz listę rozwijaną, a \<następnie wybierz pozycję Edytuj >. Zostanie wyświetlone okno dialogowe Dołączanie **katalogów** .
+   Ta akcja zmienia wartości makr projektu, które zawierają ścieżki do plików nagłówkowych i plików bibliotek. Aby zobaczyć, co zostało zmienione, w sekcji **katalogi wizualizacji C++**  okna dialogowego **właściwości projektu** wybierz jedną z właściwości, takich jak **katalogi dołączania**, wybierz pozycję Otwórz listę rozwijaną, a \<następnie wybierz pozycję Edytuj >. Zostanie wyświetlone okno dialogowe **dołączanie katalogów** .
 
    ![Okno dialogowe dołączania katalogów](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")
 

@@ -43,10 +43,10 @@ helpviewer_keywords:
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
 ms.openlocfilehash: 0f8fe228b804538b6a0d0377f05d79c34e787587
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69514218"
 ---
 # <a name="image-editor-for-icons-c"></a>Edytor obrazów dla ikon (C++)
@@ -104,7 +104,7 @@ Okno dialogowe **Ustawienia siatki** umożliwia określenie ustawień siatki obr
 
 Pasek narzędzi **edytora obrazów** zawiera narzędzia do rysowania, malowania, wprowadzania tekstu, wymazywania i manipulowania widokami. Zawiera również selektor opcji, za pomocą którego można wybrać opcje używania poszczególnych narzędzi. Można na przykład wybrać różne szerokości pędzla, współczynniki powiększenia i style linii.
 
-Wszystkie narzędzia dostępne na pasku narzędzi **edytora obrazów** są również dostępne w narzędziach **obrazu** > menu. Aby użyć paska narzędzi **edytora obrazów** i selektora **opcji** , wybierz odpowiednie narzędzie lub opcję.
+Wszystkie narzędzia dostępne na pasku narzędzi **edytora obrazów** są również dostępne w**narzędziach** **obrazu** > menu. Aby użyć paska narzędzi **edytora obrazów** i selektora **opcji** , wybierz odpowiednie narzędzie lub opcję.
 
 ![Pasek narzędzi edytora obrazów](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")<br/>
 Pasek narzędzi **edytora obrazów**
@@ -112,7 +112,7 @@ Pasek narzędzi **edytora obrazów**
 > [!TIP]
 > Etykietki narzędzi są wyświetlane po umieszczeniu wskaźnika myszy na przycisku paska narzędzi. Te porady mogą ułatwić identyfikację funkcji poszczególnych przycisków.
 
-Ponieważ wiele narzędzi do rysowania jest dostępnych na klawiaturze [](../windows/accelerator-keys-image-editor-for-icons.md), czasami warto ukryć pasek narzędzi **edytora obrazu** .
+Ponieważ wiele narzędzi do rysowania jest dostępnych na [klawiaturze](../windows/accelerator-keys-image-editor-for-icons.md), czasami warto ukryć pasek narzędzi **edytora obrazu** .
 
 - Aby wyświetlić lub ukryć pasek narzędzi **edytora obrazów** , przejdź do **widoku** > menu**paski narzędzi** i wybierz **Edytor obrazów**.
 
@@ -167,7 +167,7 @@ Oto przykład sposobu dodawania tekstu do ikony w aplikacji systemu Windows i ma
 
    - Wybierz pozycję **Times New Roman** z listy dostępnych czcionek, które są wymienione w polu listy **czcionka** .
 
-   - Wybierz pozycję pogrubienie z listy dostępnych stylów czcionki w polu listy **styl czcionki** .
+   - Wybierz pozycję **pogrubienie** z listy dostępnych stylów czcionki w polu listy **styl czcionki** .
 
    - Wybierz pozycję **10** z listy dostępnych rozmiarów punktów wymienionych w polu listy **rozmiar** .
 
@@ -178,7 +178,7 @@ Oto przykład sposobu dodawania tekstu do ikony w aplikacji systemu Windows i ma
 W obszarze tekstowym zostanie wyświetlony tekst wyświetlany jako część zasobu. Początkowo ten obszar jest pusty.
 
 > [!NOTE]
-> W przypadku ustawienia **przezroczystego tła** tylko tekst zostanie umieszczony w obrazie. W przypadku ustawienia **tła** nieprzezroczystego prostokąt ograniczenia wypełniony kolorem tła zostanie umieszczony za tekstem.
+> W przypadku ustawienia **przezroczystego tła** tylko tekst zostanie umieszczony w obrazie. W przypadku ustawienia **tła nieprzezroczystego** prostokąt ograniczenia wypełniony kolorem tła zostanie umieszczony za tekstem.
 
 ## <a name="window-panes"></a>Okienka
 
@@ -200,7 +200,7 @@ Domyślnie **Edytor obrazów** wyświetla widok w okienku po lewej stronie w rze
 
 1. Wybierz okienko **edytora obrazu** , którego współczynnik powiększenia chcesz zmienić.
 
-1. Na pasku narzędzi **edytora obrazu** wybierz strzałkę po prawej stronie narzędzia Powiększ i wybierz współczynnik powiększenia z podmenu: **1x**, **2x**, **6X**lub **8x**.
+1. Na pasku narzędzi **edytora obrazu** wybierz strzałkę po prawej stronie narzędzia **Powiększ** i wybierz współczynnik powiększenia z podmenu: **1x**, **2x**, **6X**lub **8x**.
 
    > [!NOTE]
    > Aby wybrać współczynnik powiększenia inny niż wymienione w narzędziu **Powiększ** , użyj klawiszy skrótów.

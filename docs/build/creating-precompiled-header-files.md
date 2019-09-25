@@ -8,15 +8,15 @@ helpviewer_keywords:
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
 ms.openlocfilehash: 273d8cf996c2717339dd20dcbc7512f9c62afa8d
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69630490"
 ---
 # <a name="precompiled-header-files"></a>Pliki prekompilowanego nagłówka
 
-Podczas tworzenia nowego projektu w programie Visual Studio do projektu zostanie dodany prekompilowany *plik nagłówkowy* o nazwie *PCH. h* . (W programie Visual Studio 2017 i starszych plik miał nazwę *stdafx. h*). Celem pliku jest przyspieszenie procesu kompilacji. Wszystkie stabilne pliki nagłówkowe, na przykład nagłówki biblioteki standardowej, `<vector>`takie jak, powinny być zawarte w tym miejscu. Prekompilowany nagłówek jest kompilowany tylko wtedy, gdy jest lub wszystkie pliki, które zawiera, są modyfikowane. Jeśli wprowadzasz tylko zmiany w kodzie źródłowym projektu, kompilacja pominie kompilację dla prekompilowanego nagłówka. 
+Podczas tworzenia nowego projektu w programie Visual Studio do projektu zostanie dodany *prekompilowany plik nagłówkowy* o nazwie *PCH. h* . (W programie Visual Studio 2017 i starszych plik miał nazwę *stdafx. h*). Celem pliku jest przyspieszenie procesu kompilacji. Wszystkie stabilne pliki nagłówkowe, na przykład nagłówki biblioteki standardowej, `<vector>`takie jak, powinny być zawarte w tym miejscu. Prekompilowany nagłówek jest kompilowany tylko wtedy, gdy jest lub wszystkie pliki, które zawiera, są modyfikowane. Jeśli wprowadzasz tylko zmiany w kodzie źródłowym projektu, kompilacja pominie kompilację dla prekompilowanego nagłówka. 
 
 Opcje kompilatora dla prekompilowanych nagłówków to [/y](reference/y-precompiled-headers.md). Na stronach właściwości projektu opcje znajdują się w obszarze **Właściwości konfiguracji > C/C++ > prekompilowane nagłówki**. Można zrezygnować z używania prekompilowanych nagłówków i określić nazwę pliku nagłówka oraz nazwę i ścieżkę pliku wyjściowego. 
 
@@ -135,7 +135,7 @@ Inne podejście do używania opcji ręcznego prekompilowanego nagłówka w proje
 
 ## <a name="pch-files-in-the-build-process"></a>Pliki PCH w procesie kompilacji
 
-Baza kodu projektu oprogramowania zwykle znajduje się w wielu plikach C lub C++ źródłowych, plikach obiektów, bibliotekach i plikach nagłówkowych. Zwykle plik reguł programu make koordynuje kombinację tych elementów w pliku wykonywalnym. Na poniższej ilustracji przedstawiono strukturę pliku reguł programu make, który używa prekompilowanych plików nagłówkowych. Nazwy makr NMAKE i nazwy plików na tym diagramie są spójne z tymi w przykładowym kodzie znalezionym w przykładowym pliku [reguł programu make dla PCH](#sample-makefile-for-pch) i [przykładowego kodu dla PCH](#example-code-for-pch).
+Baza kodu projektu oprogramowania zwykle znajduje się w wielu plikach C lub C++ źródłowych, plikach obiektów, bibliotekach i plikach nagłówkowych. Zwykle plik reguł programu make koordynuje kombinację tych elementów w pliku wykonywalnym. Na poniższej ilustracji przedstawiono strukturę pliku reguł programu make, który używa prekompilowanych plików nagłówkowych. Nazwy makr NMAKE i nazwy plików na tym diagramie są spójne z tymi w przykładowym kodzie znalezionym w [przykładowym pliku reguł programu make dla PCH](#sample-makefile-for-pch) i [przykładowego kodu dla PCH](#example-code-for-pch).
 
 Rysunek używa trzech urządzeń diagramowy do wyświetlania przepływu procesu kompilacji. Nazwane prostokąty reprezentują każdy plik lub makro; trzy makra reprezentują jeden lub więcej plików. Zacienione obszary reprezentują każdą akcję kompilacji lub łącza. Strzałki pokazują, które pliki i makra są łączone podczas kompilacji lub procesu łączenia.
 

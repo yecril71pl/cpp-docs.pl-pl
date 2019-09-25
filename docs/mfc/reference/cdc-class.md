@@ -403,10 +403,10 @@ helpviewer_keywords:
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
 ms.openlocfilehash: bae2f9a5a4f39c4eeffe68cc33e744e44c6800c8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69507014"
 ---
 # <a name="cdc-class"></a>Klasa przechwytywania
@@ -653,7 +653,7 @@ Aby użyć `CDC` obiektu, Konstruuj go, a następnie Wywołaj jego funkcje czło
 
 W przypadku określonych celów biblioteka MFC zawiera kilka klas pochodnych od `CDC` . `CPaintDC`hermetyzuje wywołania do `BeginPaint` i `EndPaint`. `CClientDC`zarządza kontekstem wyświetlania skojarzonym z obszarem klienckim okna. `CWindowDC`zarządza kontekstem wyświetlania skojarzonym z całym oknem, włącznie z jego ramką i kontrolkami. `CMetaFileDC`kojarzy kontekst urządzenia z metaplikiem.
 
-`CDC`Program udostępnia dwie funkcje składowe, [GetLayout](#getlayout) i SetLayout w celu odwrócenia układu kontekstu urządzenia, który nie dziedziczy układu z okna. [](#setlayout) W przypadku aplikacji utworzonych dla kultur, takich jak arabski lub hebrajski, taka orientacja jest niezbędna, gdy układ znaków nie jest standardem europejskim.
+`CDC`Program udostępnia dwie funkcje składowe, [GetLayout](#getlayout) i [SetLayout](#setlayout)w celu odwrócenia układu kontekstu urządzenia, który nie dziedziczy układu z okna. W przypadku aplikacji utworzonych dla kultur, takich jak arabski lub hebrajski, taka orientacja jest niezbędna, gdy układ znaków nie jest standardem europejskim.
 
 `CDC`zawiera dwa konteksty urządzenia, [m_hDC](#m_hdc) i [m_hAttribDC](#m_hattribdc), które podczas `CDC` tworzenia obiektu odnoszą się do tego samego urządzenia. `CDC`kieruje wszystkie wyjściowe wywołania GDI do `m_hDC` i większość atrybutów wywołania GDI do `m_hAttribDC`. (Przykład wywołania atrybutu jest `GetTextColor`, podczas gdy `SetTextColor` jest wywołaniem wyjściowym).
 
@@ -1465,7 +1465,7 @@ void DrawDragRect(
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Wskazuje na strukturę [](/windows/win32/api/windef/ns-windef-rect) prostokąta lub obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , który określa współrzędne logiczne prostokąta — w tym przypadku położenie końcowe prostokąta.
+Wskazuje [na strukturę](/windows/win32/api/windef/ns-windef-rect) prostokąta lub obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , który określa współrzędne logiczne prostokąta — w tym przypadku położenie końcowe prostokąta.
 
 *zmienia*<br/>
 Określa przemieszczenie od lewego górnego rogu obramowania zewnętrznego do lewego górnego rogu obramowania wewnętrznego (czyli grubości obramowania) prostokąta.
@@ -1858,7 +1858,7 @@ Jeśli wybrana czcionka jest zbyt duża dla określonego prostokąta, `DrawText`
 
 Jeśli flaga DT_CALCRECT jest określona, prostokąt określony przez *lpRect* zostanie zaktualizowany w taki sposób, aby odzwierciedlała szerokość i wysokość, które są konieczne do narysowania tekstu.
 
-Jeśli ustawiono flagę wyrównania tekstu TA_UPDATECP (zobacz element przestawny [::](#settextalign)TextAlign `DrawText` ), zostanie wyświetlony tekst zaczynający się na bieżącym miejscu, a nie na lewo od danego prostokąta. `DrawText`nie spowoduje zawijania tekstu po ustawieniu flagi TA_UPDATECP (oznacza to, że flaga DT_WORDBREAK nie będzie miała żadnego efektu).
+Jeśli ustawiono flagę wyrównania tekstu TA_UPDATECP (zobacz element przestawny [:: TextAlign](#settextalign)), `DrawText` zostanie wyświetlony tekst zaczynający się na bieżącym miejscu, a nie na lewo od danego prostokąta. `DrawText`nie spowoduje zawijania tekstu po ustawieniu flagi TA_UPDATECP (oznacza to, że flaga DT_WORDBREAK nie będzie miała żadnego efektu).
 
 Kolor tekstu może być ustawiony przez wartość [przechwytywania:: SetTextColor](#settextcolor).
 
@@ -1896,7 +1896,7 @@ Wskazuje strukturę [Rect](/windows/win32/api/windef/ns-windef-rect) lub obiekt 
 Obiekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) , który zawiera określone znaki do narysowania.
 
 *nFormat*<br/>
-Określa metodę formatowania tekstu. Może to być dowolna kombinacja wartości opisanych dla parametru *uFormat* w [DrawText](/windows/win32/api/winuser/nf-winuser-drawtext) w Windows SDK. (Połącz przy użyciu operatora bitowego or):
+Określa metodę formatowania tekstu. Może to być dowolna kombinacja wartości opisanych dla parametru *uFormat* w [DrawText](/windows/win32/api/winuser/nf-winuser-drawtext) w Windows SDK. (Połącz przy **użyciu operatora bitowego or)** :
 
 > [!NOTE]
 >  Niektóre kombinacje flag *uFormat* mogą spowodować modyfikację przesłanego ciągu. Użycie DT_MODIFYSTRING z parametrami DT_END_ELLIPSIS lub DT_PATH_ELLIPSIS może spowodować modyfikację ciągu, powodując potwierdzenie w `CString` przesłonięciu. Wartości DT_CALCRECT, DT_EXTERNALLEADING, DT_INTERNAL, DT_NOCLIP i DT_NOPREFIX nie można używać z wartością DT_TABSTOP.
@@ -2047,13 +2047,13 @@ Określa ostatnią wartość zwracaną przez [funkcję wywołania zwrotnego](cal
 
 Dla każdego obiektu danego typu funkcja wywołania zwrotnego jest wywoływana z informacjami dla tego obiektu. System wywołuje funkcję wywołania zwrotnego do momentu, gdy nie ma więcej obiektów lub funkcja wywołania zwrotnego zwróci wartość 0.
 
-Należy pamiętać, że nowe funkcje programu C++ Microsoft wizualne umożliwiają użycie zwykłej funkcji jako funkcji przekazaną do `EnumObjects`. Adres przesłany do `EnumObjects` jest wskaźnikiem do funkcji wyeksportowanej z eksportem i konwencją wywoływania Pascal. W aplikacjach trybu ochrony nie trzeba tworzyć tej funkcji za pomocą funkcji MakeProcInstance systemu Windows ani zwalniać funkcji po użyciu z funkcją systemu Windows FreeProcInstance.
+Należy pamiętać, że nowe funkcje programu C++ Microsoft wizualne umożliwiają użycie zwykłej funkcji jako funkcji przekazaną do `EnumObjects`. Adres przesłany do `EnumObjects` jest wskaźnikiem do funkcji wyeksportowanej z **eksportem** i konwencją wywoływania Pascal. W aplikacjach trybu ochrony nie trzeba tworzyć tej funkcji za pomocą funkcji MakeProcInstance systemu Windows ani zwalniać funkcji po użyciu z funkcją systemu Windows FreeProcInstance.
 
-Nie trzeba również eksportować nazwy funkcji w instrukcji EXPORTS w pliku definicji modułu aplikacji. Zamiast tego można użyć modyfikatora funkcji **Export** , jak w
+Nie trzeba również eksportować nazwy funkcji w instrukcji **exports** w pliku definicji modułu aplikacji. Zamiast tego można użyć modyfikatora funkcji **Export** , jak w
 
 **eksport wywołania zwrotnego int** AFunction **(LPSTR**, **LPSTR);**
 
-Aby spowodować, że kompilator emituje właściwy rekord eksportu do eksportu przez nazwę bez aliasowania. Działa to w przypadku większości potrzeb. W przypadku niektórych specjalnych przypadków, takich jak Eksportowanie funkcji przez numer porządkowy lub alias eksportu, nadal trzeba użyć instrukcji Eksports w pliku definicji modułu.
+Aby spowodować, że kompilator emituje właściwy rekord eksportu do eksportu przez nazwę bez aliasowania. Działa to w przypadku większości potrzeb. W przypadku niektórych specjalnych przypadków, takich jak Eksportowanie funkcji przez numer porządkowy lub alias eksportu, nadal trzeba użyć instrukcji **eksports** w pliku definicji modułu.
 
 W przypadku kompilowania programów Microsoft Foundation zwykle używane są opcje kompilatora/GA i/GEs. Opcja kompilatora/GW nie jest używana w przypadku klas Microsoft Foundation. (Jeśli używasz funkcji `MakeProcInstance`systemu Windows, musisz jawnie rzutować zwracany wskaźnik funkcji z FARPROC na typ wymagany w tym interfejsie API). Interfejsy rejestracji wywołania zwrotnego są teraz bezpieczne dla typów (należy przekazać wskaźnik funkcji, który wskazuje na właściwy rodzaj funkcji dla określonego wywołania zwrotnego).
 
@@ -2310,7 +2310,7 @@ Wskazuje określony ciąg znaków do narysowania. Można również przekazać ob
 Określa liczbę znaków w ciągu.
 
 *lpDxWidths*<br/>
-Wskazuje tablicę wartości, która wskazuje odległość między źródłami sąsiadujących znaków. Na przykład jednostki logiczne *lpDxWidths*[ *i*] oddzielają źródła znaku i komórki znaku i + 1. Jeśli *lpDxWidths* ma wartość null `ExtTextOut` , używa domyślnego odstępu między znakami.
+Wskazuje tablicę wartości, która wskazuje odległość między źródłami sąsiadujących znaków. Na przykład jednostki logiczne *lpDxWidths*[ *i*] oddzielają źródła *znaku i komórki* znaku *i + 1* . Jeśli *lpDxWidths* ma wartość null `ExtTextOut` , używa domyślnego odstępu między znakami.
 
 *str*<br/>
 `CString` Obiekt, który zawiera określone znaki do narysowania.
@@ -2354,7 +2354,7 @@ void FillRect(
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Wskazuje strukturę prostokąta, która zawiera współrzędne logiczne prostokąta, który ma zostać wypełniony. [](/windows/win32/api/windef/ns-windef-rect) Można również przekazać obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) dla tego parametru.
+Wskazuje [strukturę](/windows/win32/api/windef/ns-windef-rect) prostokąta, która zawiera współrzędne logiczne prostokąta, który ma zostać wypełniony. Można również przekazać obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) dla tego parametru.
 
 *pBrush*<br/>
 Identyfikuje pędzel używany do wypełnienia prostokąta.
@@ -3097,7 +3097,7 @@ Wartość żądanej możliwości, jeśli funkcja się powiedzie.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład dla [CPrintDialog::](../../mfc/reference/cprintdialog-class.md#getdefaults)GetDefaults.
+  Zobacz przykład dla [CPrintDialog:: GetDefaults](../../mfc/reference/cprintdialog-class.md#getdefaults).
 
 ##  <a name="getfontdata"></a>Przechwytywanie zmian:: GetFontData
 
@@ -3216,7 +3216,7 @@ int GetGraphicsMode() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca bieżący tryb grafiki po powodzeniu. Aby zapoznać się z listą wartości, które ta metoda może zwrócić [](/windows/win32/api/wingdi/nf-wingdi-getgraphicsmode), zobacz getgraphicsmode.
+Zwraca bieżący tryb grafiki po powodzeniu. Aby zapoznać się z listą wartości, które ta metoda może zwrócić, zobacz [Getgraphicsmode](/windows/win32/api/wingdi/nf-wingdi-getgraphicsmode).
 
 Zwraca wartość 0 w przypadku niepowodzenia.
 
@@ -3224,7 +3224,7 @@ Aby uzyskać rozszerzone informacje o błędzie, wywołaj [wartość GetLastErro
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda otacza funkcję interfejsu GDI systemu Windows [](/windows/win32/api/wingdi/nf-wingdi-getgraphicsmode).
+Ta metoda [otacza funkcję interfejsu](/windows/win32/api/wingdi/nf-wingdi-getgraphicsmode)GDI systemu Windows.
 
 ##  <a name="gethalftonebrush"></a>Przechwytywanie zmian:: GetHalftoneBrush
 
@@ -3299,7 +3299,7 @@ Tryb mapowania.
 Aby uzyskać opis trybów mapowania, zobacz `SetMapMode` funkcja członkowska.
 
 > [!NOTE]
->  Jeśli wywołasz [](#setlayout) metodę SetLayout w celu zmiany układu DC na układ od prawej do lewej `SetLayout` , program automatycznie zmieni tryb mapowania na MM_ISOTROPIC. W związku z `GetMapMode` tym każde kolejne wywołanie zwróci MM_ISOTROPIC.
+>  Jeśli wywołasz metodę [SetLayout](#setlayout) w celu zmiany układu DC na układ od prawej do lewej `SetLayout` , program automatycznie zmieni tryb mapowania na MM_ISOTROPIC. W związku z `GetMapMode` tym każde kolejne wywołanie zwróci MM_ISOTROPIC.
 
 ##  <a name="getmiterlimit"></a>Przechwytywanie zmian:: GetMiterLimit
 
@@ -4926,7 +4926,7 @@ Typy PT_BEZIERTO zawsze występują w zestawach trzech. Bieżąca pozycja defini
 
 - PT_CLOSEFIGURE określa, że rysunek jest automatycznie zamykany po wykonaniu typu PT_LINETO lub PT_BEZIERTO dla tego punktu. Wiersz jest rysowany od tego punktu do najnowszej PT_MOVETO lub `MoveTo` punktu.
 
-   Ta flaga jest połączona z typem PT_LINETO dla wiersza lub z typem PT_BEZIERTO punktu końcowego dla krzywej składanej Bzier za pomocą operatora bitowego or. Bieżąca pozycja jest ustawiana na punkt końcowy wiersza zamykającego.
+   Ta flaga jest połączona z typem PT_LINETO dla wiersza lub z typem PT_BEZIERTO punktu końcowego dla krzywej składanej Bzier za **pomocą operatora bitowego or.** Bieżąca pozycja jest ustawiana na punkt końcowy wiersza zamykającego.
 
 *nCount*<br/>
 Określa łączną liczbę punktów w tablicy *lpPoints* , tak samo jak liczba bajtów w tablicy *lpTypes* .
@@ -5643,7 +5643,7 @@ CPalette* SelectPalette(
 ### <a name="parameters"></a>Parametry
 
 *pPalette*<br/>
-Określa paletę logiczną, która ma zostać wybrana. Ta paleta musi już być utworzona za pomocą `CPalette` funkcji elementu [](../../mfc/reference/cpalette-class.md#createpalette)Członkowskiego.
+Określa paletę logiczną, która ma zostać wybrana. Ta paleta musi już być utworzona za pomocą `CPalette` [funkcji elementu](../../mfc/reference/cpalette-class.md#createpalette)Członkowskiego.
 
 *bForceBackground*<br/>
 Określa, czy w przypadku palety logicznej wymuszona jest paleta w tle. Jeśli *bForceBackground* jest różna od zera, wybrana paleta jest zawsze paletą tła, bez względu na to, czy okno ma fokus wprowadzania. Jeśli *bForceBackground* ma wartość 0, a kontekst urządzenia jest dołączony do okna, paleta logiczna jest paletą pierwszego planu, gdy okno ma fokus wprowadzania.
@@ -5740,11 +5740,11 @@ Jeśli aplikacja umożliwia anulowanie zadania drukowania podczas buforowania, n
 
 Należy zauważyć, że funkcje programu Microsoft C++ Visual upraszczają tworzenie funkcji wywołania zwrotnego przesłanej do `SetAbortProc`. Adres przesłany do `EnumObjects` funkcji składowej jest wskaźnikiem do funkcji wyeksportowanej `__declspec(dllexport)` z i z `__stdcall` konwencją wywoływania.
 
-Nie trzeba również eksportować nazwy funkcji w instrukcji EXPORTS w pliku definicji modułu aplikacji. Zamiast tego można użyć modyfikatora funkcji **Export** , jak w
+Nie trzeba również eksportować nazwy funkcji w instrukcji **exports** w pliku definicji modułu aplikacji. Zamiast tego można użyć modyfikatora funkcji **Export** , jak w
 
 **eksport wartości logicznej wywołania zwrotnego** AFunction ( **używający HDC**, `int` **);**
 
-Aby spowodować, że kompilator emituje właściwy rekord eksportu do eksportu przez nazwę bez aliasowania. Działa to w przypadku większości potrzeb. W przypadku niektórych specjalnych przypadków, takich jak Eksportowanie funkcji przez numer porządkowy lub alias eksportu, nadal trzeba użyć instrukcji Eksports w pliku definicji modułu.
+Aby spowodować, że kompilator emituje właściwy rekord eksportu do eksportu przez nazwę bez aliasowania. Działa to w przypadku większości potrzeb. W przypadku niektórych specjalnych przypadków, takich jak Eksportowanie funkcji przez numer porządkowy lub alias eksportu, nadal trzeba użyć instrukcji **eksports** w pliku definicji modułu.
 
 Interfejsy rejestracji wywołania zwrotnego są teraz bezpieczne dla typów (należy przekazać wskaźnik funkcji, który wskazuje na właściwy rodzaj funkcji dla określonego wywołania zwrotnego).
 
@@ -5997,7 +5997,7 @@ int SetGraphicsMode(int iMode);
 ### <a name="parameters"></a>Parametry
 
 *iMode*<br/>
-Określa tryb grafiki. Aby zapoznać się z listą wartości, które może wykonać ten parametr [](/windows/win32/api/wingdi/nf-wingdi-setgraphicsmode), zobacz setgraphicsmode.
+Określa tryb grafiki. Aby zapoznać się z listą wartości, które może wykonać ten parametr, zobacz [Setgraphicsmode](/windows/win32/api/wingdi/nf-wingdi-setgraphicsmode).
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -6007,7 +6007,7 @@ Zwraca wartość 0 w przypadku niepowodzenia. Aby uzyskać rozszerzone informacj
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda otacza funkcję interfejsu GDI systemu Windows [](/windows/win32/api/wingdi/nf-wingdi-setgraphicsmode).
+Ta metoda [otacza funkcję interfejsu](/windows/win32/api/wingdi/nf-wingdi-setgraphicsmode)GDI systemu Windows.
 
 ##  <a name="setlayout"></a>Przechwytywanie zmian:: SetLayout
 
@@ -6038,7 +6038,7 @@ Jeśli nie powiodło się, GDI_ERROR. Aby uzyskać rozszerzone informacje o bł�
 
 Zwykle nie można wywoływać `SetLayout` okna. Zamiast tego możesz sterować układem od prawej do lewej w oknie przez ustawienie [stylów okna rozszerzonego](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) , takich jak WS_EX_RTLREADING. Kontekst urządzenia, taki jak drukarka lub metaplik, nie dziedziczy tego układu. Jedynym sposobem ustawienia kontekstu urządzenia dla układu od prawej do lewej jest wywołanie metody `SetLayout`.
 
-Jeśli wywołasz metodę SetLayout **(LAYOUT_RTL** ) `SetLayout` , program automatycznie zmieni tryb mapowania na MM_ISOTROPIC. W związku z tym kolejne wywołanie do [GetMapMode](#getmapmode) zwróci wartość MM_ISOTROPIC zamiast MM_TEXT.
+Jeśli wywołasz metodę **SetLayout (LAYOUT_RTL** ) `SetLayout` , program automatycznie zmieni tryb mapowania na MM_ISOTROPIC. W związku z tym kolejne wywołanie do [GetMapMode](#getmapmode) zwróci wartość MM_ISOTROPIC zamiast MM_TEXT.
 
 W niektórych przypadkach, na przykład z wieloma mapami bitowymi, możesz chcieć zachować układ od lewej do prawej. W takich przypadkach renderuje obraz przez wywołanie metody `BitBlt` lub `StretchBlt`, a następnie ustawienie flagi kontrolki mapy bitowej dla *dwLayout* na LAYOUT_BITMAPORIENTATIONPRESERVED.
 
@@ -6084,7 +6084,7 @@ Tryb mapowania definiuje jednostkę miary służącą do konwertowania jednostek
 Tryby MM_HIENGLISH, MM_HIMETRIC, MM_LOENGLISH, MM_LOMETRIC i MM_TWIPS są przydatne w przypadku aplikacji, które muszą rysować w fizycznie znaczących jednostkach (takich jak cale lub milimetry). Tryb MM_ISOTROPIC zapewnia współczynnik proporcji 1:1, który jest przydatny, gdy jest ważne, aby zachować dokładny kształt obrazu. Tryb MM_ANISOTROPIC umożliwia niezależne dostosowanie współrzędnych x i y.
 
 > [!NOTE]
->  Jeśli wywołasz [](#setlayout) polecenie SetLayout by zmienić kontroler domeny (kontekst urządzenia) na układ od prawej do lewej, `SetLayout` program automatycznie zmieni tryb mapowania na MM_ISOTROPIC.
+>  Jeśli wywołasz polecenie [SetLayout](#setlayout) by zmienić kontroler domeny (kontekst urządzenia) na układ od prawej do lewej, `SetLayout` program automatycznie zmieni tryb mapowania na MM_ISOTROPIC.
 
 ### <a name="example"></a>Przykład
 
@@ -6915,7 +6915,7 @@ Tekst jest zapisywana w aktualnie zaznaczonej czcionce. Jeśli *nTabPositions* j
 
 Jeśli *nTabPositions* ma wartość 1, tabulatory są oddzielone o odległość określoną przez pierwszą wartość w tablicy *lpnTabStopPositions* . Jeśli tablica *lpnTabStopPositions* zawiera więcej niż jedną wartość, tabulator jest ustawiany dla każdej wartości w tablicy, do numeru określonego przez *nTabPositions*. Parametr *nTabOrigin* umożliwia aplikacji kilkakrotne wywołanie `TabbedTextOut` funkcji dla pojedynczego wiersza. Jeśli aplikacja wywołuje funkcję więcej niż raz z *nTabOrigin* ustawioną na tę samą wartość za każdym razem, funkcja rozszerza wszystkie karty względem położenia określonego przez *nTabOrigin*.
 
-Domyślnie, funkcja nie używa ani nie aktualizuje bieżącej pozycji. Jeśli aplikacja musi zaktualizować bieżącą pozycję, gdy wywołuje funkcję, aplikacja może wywołać funkcję elementu członkowskiego TextAlign z *nFlags* ustawioną na TA_UPDATECP. [](#settextalign) Gdy ta flaga jest ustawiona, system Windows ignoruje parametry *x* i *y* podczas kolejnych wywołań `TabbedTextOut`do, przy użyciu bieżącej pozycji.
+Domyślnie, funkcja nie używa ani nie aktualizuje bieżącej pozycji. Jeśli aplikacja musi zaktualizować bieżącą pozycję, gdy wywołuje funkcję, aplikacja może wywołać funkcję elementu członkowskiego [TextAlign](#settextalign) z *nFlags* ustawioną na TA_UPDATECP. Gdy ta flaga jest ustawiona, system Windows ignoruje parametry *x* i *y* podczas kolejnych wywołań `TabbedTextOut`do, przy użyciu bieżącej pozycji.
 
 ##  <a name="textout"></a>Przechwytywanie zmian:: TextOut
 
