@@ -5,12 +5,12 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: a8b203c94d4a5af28837627fda1b8e1631dfb0c0
-ms.sourcegitcommit: 7babce70714242cf498ca811eec3695fad3abd03
+ms.openlocfilehash: d497886b22c7a90ab7cda47e46dc13daf297b192
+ms.sourcegitcommit: b4572ffcc71e6bdb0ca23221f9476cfaf4528406
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70220490"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314458"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Domyślnie wyłączone ostrzeżenia kompilatora
 
@@ -150,14 +150,7 @@ Następujące ostrzeżenia są domyślnie wyłączone w programie Visual Studio 
 |C5042 (poziom 3)|"*Function*": deklaracje funkcji w zakresie bloku nie mogą być określone jako "inline" w standardzie C++; Usuń specyfikator "inline" <sup>15,5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|Kompilator wstawi środki zaradcze Spectre na potrzeby ładowania pamięci, jeśli przełącznik/Qspectre określony <sup>15,7</sup>|
 
-<sup>14,1</sup> to ostrzeżenie jest dostępne począwszy od programu Visual Studio 2015 Update 1. \
-<sup>14,3</sup> to ostrzeżenie jest dostępne począwszy od programu Visual Studio 2015 Update 3. \
-<sup>15,3</sup> to ostrzeżenie jest dostępne począwszy od programu Visual Studio 2017 w wersji 15,3. \
-<sup>15,5</sup> to ostrzeżenie jest dostępne począwszy od programu Visual Studio 2017 w wersji 15,5. \
-<sup>15,7</sup> to ostrzeżenie jest dostępne począwszy od programu Visual Studio 2017 w wersji 15,7. \
-<sup>15,8</sup> to ostrzeżenie jest dostępne począwszy od programu Visual Studio 2017 w wersji 15,8. \
-<sup>16,0</sup> to ostrzeżenie jest dostępne od wersji Visual Studio 2019 RTM. \
-<sup>Uprawnienie</sup> To ostrzeżenie jest wyłączone, chyba że opcja kompilatora [/permissive-](../build/reference/permissive-standards-conformance.md) jest ustawiona.
+<sup>14,1</sup> to ostrzeżenie jest dostępne począwszy od programu Visual Studio 2015 Update 1.\\ <sup>14,3</sup> to ostrzeżenie jest dostępne począwszy od programu Visual Studio 2015 Update 3.\\ <sup>15,3</sup> to ostrzeżenie jest dostępne począwszy od programu Visual Studio 2017 w wersji 15,3.\\ <sup>15,5</sup> to ostrzeżenie jest dostępne począwszy od programu Visual Studio 2017 w wersji 15,5.\\ <sup>15,7</sup> to ostrzeżenie jest dostępne począwszy od programu Visual Studio 2017 w wersji 15,7.\\ <sup>15,8</sup> to ostrzeżenie jest dostępne począwszy od programu Visual Studio 2017 w wersji 15,8.\\ <sup>16,0</sup> to ostrzeżenie jest dostępne od wersji Visual Studio 2019 RTM.\\ <sup>Uprawnienie</sup> To ostrzeżenie jest wyłączone, chyba że opcja kompilatora [/permissive-](../build/reference/permissive-standards-conformance.md) jest ustawiona.
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Ostrzeżenia są domyślnie wyłączone we wcześniejszych wersjach
 
