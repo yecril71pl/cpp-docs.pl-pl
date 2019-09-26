@@ -3,13 +3,13 @@ title: Edytuj i Refaktoryzacja C++ kodu w programie Visual Studio
 description: Użyj edytora C++ kodu w programie Visual Studio do formatowania, nawigowania, zrozumienia i refaktoryzacji kodu.
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
-ms.topic: landing-page
-ms.openlocfilehash: 255576bfc4a7eb78a660e5bfb05b0a97a7eb4c34
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.topic: overview
+ms.openlocfilehash: 2da1b38d2f5bb61edb473e5909b76225f214a116
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221542"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274776"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>Edytuj i Refaktoryzacja C++ kodu w programie Visual Studio
 
@@ -25,7 +25,7 @@ Niektóre symbole są pomijane automatycznie, aby pomóc w zawężaniu wyników.
 
 Po wybraniu symbolu z listy rozwijanej można uzupełnić go za pomocą **klawisza Tab**, **wprowadzić**lub jednego z innych znaków zatwierdzenia (domyślnie: {} [ ]().,:; +-*/% & | ^! =? @ #\)). Aby dodać lub usunąć znaki z tej listy, wyszukaj ciąg "IntelliSense" w obszarze **Szybkie uruchamianie** (Ctrl + Q) i wybierz **Edytor tekstu > opcji CC++ /> Advanced** . Opcja **zatwierdzania list elementów członkowskich** umożliwia dostosowanie listy przy użyciu żądanych zmian.
 
-Opcja **tryb filtrowania listy składowych** określa, jakie rodzaje sugestii autouzupełniania funkcji IntelliSense są widoczne. Domyślnie jest ustawiona wartość **rozmyte**. W przypadku wyszukiwania rozmytego, jeśli masz symbol o nazwie *MyAwesomeClass*, możesz wpisać "Mac" i znaleźć klasę w sugestiach autouzupełniania. Algorytm rozmyte ustawia minimalny próg, który musi spełniać symbole, aby były widoczne na liście. Filtrowanie **inteligentne** wyświetla wszystkie symbole zawierające podciągi, które pasują do wpisanych informacji. Filtrowanie prefiksów wyszukuje ciągi zaczynające się od wpisanego typu.
+Opcja **tryb filtrowania listy składowych** określa, jakie rodzaje sugestii autouzupełniania funkcji IntelliSense są widoczne. Domyślnie jest ustawiona wartość **rozmyte**. W przypadku wyszukiwania rozmytego, jeśli masz symbol o nazwie *MyAwesomeClass*, możesz wpisać "Mac" i znaleźć klasę w sugestiach autouzupełniania. Algorytm rozmyte ustawia minimalny próg, który musi spełniać symbole, aby były widoczne na liście. Filtrowanie **inteligentne** wyświetla wszystkie symbole zawierające podciągi, które pasują do wpisanych informacji. Filtrowanie **prefiksów** wyszukuje ciągi zaczynające się od wpisanego typu.
 
 Aby uzyskać więcej informacji C++ na temat technologii IntelliSense, zobacz [ C++ Visual IntelliSense](/visualstudio/ide/visual-cpp-intellisense) i [Konfigurowanie C++ projektu dla IntelliSense](/visualstudio/ide/visual-cpp-intellisense-configuration).
 
@@ -51,7 +51,7 @@ W programie Visual Studio 2017 rozszerzenia intellicode jest dostępny jako rozs
 
 ## <a name="predictive-intellisense-experimental"></a>Funkcja IntelliSense predykcyjna (eksperymentalna)
 
-Funkcja **IntelliSense predykcyjna** jest eksperymentalną funkcją, która korzysta z rozpoznawania kontekstowego, aby ograniczyć liczbę wyników wyświetlanych na liście rozwijanej IntelliSense. Algorytm stosuje dopasowanie typu, aby wyświetlić tylko te wyniki, które pasują do oczekiwanego typu. W najprostszym przypadku, jeśli wpiszesz `int x =` i wywołajesz listę rozwijaną IntelliSense, zobaczysz tylko liczby całkowite lub funkcje zwracające liczby całkowite. Ta funkcja jest domyślnie wyłączona, ponieważ nadal trwa tworzenie. Najlepiej sprawdza się w przypadku symboli globalnych; funkcje składowe nie są jeszcze obsługiwane. Można ją włączyć, wpisując "predykcyjne" w szybkim **uruchomieniu** lub wybierając**Opcje** >  **Narzędzia** > **Edytor** > tekstu > **C/C++** **eksperymentalny** **Włącz funkcję IntelliSense predykcyjną.**  > 
+Funkcja **IntelliSense predykcyjna** jest eksperymentalną funkcją, która korzysta z rozpoznawania kontekstowego, aby ograniczyć liczbę wyników wyświetlanych na liście rozwijanej IntelliSense. Algorytm stosuje dopasowanie typu, aby wyświetlić tylko te wyniki, które pasują do oczekiwanego typu. W najprostszym przypadku, jeśli wpiszesz `int x =` i wywołajesz listę rozwijaną IntelliSense, zobaczysz tylko liczby całkowite lub funkcje zwracające liczby całkowite. Ta funkcja jest domyślnie wyłączona, ponieważ nadal trwa tworzenie. Najlepiej sprawdza się w przypadku symboli globalnych; funkcje składowe nie są jeszcze obsługiwane. Można ją włączyć, wpisując "predykcyjne" w **szybkim uruchomieniu** lub wybierając**Opcje** >  **Narzędzia** > **Edytor** > tekstu**C++C/**  > eksperymentalny **Włącz funkcję IntelliSense predykcyjną.**  > 
 
 Aby zastąpić **predykcyjną funkcję IntelliSense** i wyświetlić dłuższą listę, naciśnij **klawisze Ctrl + J**. Jeśli funkcja **IntelliSense predykcyjna** jest włączona, wywołanie **klawiszy Ctrl + J** spowoduje usunięcie filtra predykcyjnego. Naciśnięcie **klawiszy Ctrl + J** ponownie usuwa filtr dostępności z listy elementów członkowskich, tam gdzie ma to zastosowanie. Przycisk ([+]) pod listą rozwijaną IntelliSense ma taki sam efekt jak **Ctrl + J**. Umieść kursor nad przyciskiem, aby zobaczyć informacje o tym, co jest wyświetlane.
 
@@ -130,11 +130,11 @@ Można również użyć kreatora klas do modyfikacji lub przeanalizowania istnie
 
 ![Kreator&#43; &#43; klasy C](../ide/media/vs2017-class-wizard.png)
 
-Aby uzyskać więcej informacji, zobacz [Dodawanie funkcji za pomocą kreatorów koduC++()](../ide/adding-functionality-with-code-wizards-cpp.md).
+Aby uzyskać więcej informacji, zobacz [Dodawanie funkcji za pomocą kreatorów kodu (C++)](../ide/adding-functionality-with-code-wizards-cpp.md).
 
 ##  <a name="refactoring"></a>Refaktoryzacja
 
-Refaktoryzacje są dostępne w menu kontekstowym szybkiej akcji lub przez kliknięcie żarówki w [](/visualstudio/ide/perform-quick-actions-with-light-bulbs) edytorze.  Niektóre znajdują się również w menu **edytuj > refaktoryzacji** .  Te funkcje obejmują:
+Refaktoryzacje są dostępne w menu kontekstowym szybkiej akcji lub przez kliknięcie [żarówki](/visualstudio/ide/perform-quick-actions-with-light-bulbs) w edytorze.  Niektóre znajdują się również w menu **edytuj > refaktoryzacji** .  Te funkcje obejmują:
 
 * [Zmiana nazwy](refactoring/rename.md)
 * [Wyodrębnianie funkcji](refactoring/extract-function.md)

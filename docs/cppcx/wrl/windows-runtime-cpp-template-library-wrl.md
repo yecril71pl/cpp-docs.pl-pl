@@ -1,14 +1,14 @@
 ---
 title: Biblioteka szablonów języka C++ środowiska wykonawczego systemu Windows (WRL)
 ms.date: 11/04/2016
-ms.topic: landing-page
+ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 7a92676d198ed9ddffeae9a834ebd358c2c58e90
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 7b99f6429f620b56aec5adbc4b8f15d89cc54264
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740842"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274674"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteka szablonów języka C++ środowiska wykonawczego systemu Windows (WRL)
 
@@ -85,7 +85,7 @@ Biblioteka C++ szablonów środowisko wykonawcze systemu Windows jest podobna do
 
 Biblioteka C++ szablonów środowisko wykonawcze systemu Windows obsługuje funkcje com wymagane przez aplikacje platformy UWP. W związku z tym różni się od ATL, ponieważ pomija bezpośrednią obsługę funkcji COM, takich jak:
 
-- agregacji
+- Agregacji
 
 - implementacje giełdowe
 

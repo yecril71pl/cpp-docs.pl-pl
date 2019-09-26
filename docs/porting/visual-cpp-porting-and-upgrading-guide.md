@@ -2,13 +2,13 @@
 title: Wizualne C++ przenoszenie i uaktualnianie przewodnika
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.topic: landing-page
-ms.openlocfilehash: eed1f3d6ba66aa77561d610530f820b09cf439df
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.topic: overview
+ms.openlocfilehash: 55bfb9a1ad23a0e4a3efa7f0a9361523c6c9754d
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216369"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274687"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Wizualne C++ przenoszenie i uaktualnianie przewodnika
 
@@ -68,7 +68,7 @@ Po uaktualnieniu i przetestowaniu projektu warto również rozważyć polepszeni
 
 Co z Twoim interfejsem użytkownika? Jeśli używasz MFC, możesz chcieć zaktualizować interfejs użytkownika. Czy używasz dowolnych nowszych funkcji MFC, które zostały wprowadzone w 2008 jako pakiet funkcji? Jeśli chcesz, aby Twoja aplikacja była nowsza, bez konieczności ponownego pisania całej aplikacji, możesz rozważyć użycie interfejsów API wstążki w MFC lub przy użyciu niektórych nowych funkcji MFC.
 
-Jeśli chcesz nadać programowi interfejs użytkownika języka XAML, ale nie chcesz tworzyć aplikacji platformy UWP, możesz użyć C# with WPF do utworzenia warstwy interfejsu użytkownika i refaktoryzacji standardowej C++ logiki do bibliotek DLL. Utwórz warstwę współdziałania C++w programie/CLI C# , aby połączyć się z kodem natywnym. Innym rozwiązaniem jest utworzenie aplikacji platformy UWP przy użyciu [ C++/CX](../cppcx/visual-c-language-reference-c-cx.md) lub [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/). W systemie Windows 10 można użyć konwertera [aplikacji klasycznej](/windows/msix/desktop/desktop-to-uwp-run-desktop-app-converter) do spakowania istniejącej aplikacji klasycznej jako aplikacji platformy UWP bez konieczności modyfikowania kodu.
+Jeśli chcesz nadać programowi interfejs użytkownika języka XAML, ale nie chcesz tworzyć aplikacji platformy UWP, możesz użyć C# with WPF do utworzenia warstwy interfejsu użytkownika i refaktoryzacji standardowej C++ logiki do bibliotek DLL. Utwórz warstwę współdziałania C++w programie/CLI C# , aby połączyć się z kodem natywnym. Innym rozwiązaniem jest utworzenie aplikacji platformy UWP przy użyciu [ C++/CX](../cppcx/visual-c-language-reference-c-cx.md) lub [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/). W systemie Windows 10 można użyć [konwertera aplikacji klasycznej](/windows/msix/desktop/desktop-to-uwp-run-desktop-app-converter) do spakowania istniejącej aplikacji klasycznej jako aplikacji platformy UWP bez konieczności modyfikowania kodu.
 
 Alternatywnie, prawdopodobnie masz nowe wymagania lub można przewidzieć potrzeby dla platform docelowych innych niż komputery z systemem Windows, takie jak Windows Phone czy urządzenia z systemem Android. Kod interfejsu użytkownika można przenieść do biblioteki interfejsów użytkownika dla wielu platform. Dzięki tym architekturom interfejsu użytkownika można kierować wiele urządzeń, a nadal używać programu Visual Studio i debugera programu Visual Studio jako środowiska deweloperskiego.
 
