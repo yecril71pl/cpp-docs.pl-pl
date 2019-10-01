@@ -10,12 +10,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: 23cd1c3ce767cf8046e3439432db795f032dc370
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: c7a44be5bb21bf83d621bd57c45713bd01e22cb6
+ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685590"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712701"
 ---
 # <a name="linker-options"></a>Opcje konsolidatora
 
@@ -23,11 +23,11 @@ LINK. exe łączy pliki i biblioteki obiektów Common Object File Format (COFF),
 
 W poniższej tabeli wymieniono opcje LINK. exe. Aby uzyskać więcej informacji na temat łącza, zobacz:
 
-- [Opcje łączy sterowane kompilatorem](compiler-controlled-link-options.md)
+- [Opcje LINK kontrolowane przez kompilator](compiler-controlled-link-options.md)
 
-- [Połącz pliki wejściowe](link-input-files.md)
+- [Pliki wejściowe LINK](link-input-files.md)
 
-- [Połącz dane wyjściowe](link-output.md)
+- [Dane wyjściowe LINK](link-output.md)
 
 - [Słowa zastrzeżone](reserved-words.md)
 
@@ -37,7 +37,7 @@ Aby określić Opcje konsolidatora, można użyć dyrektywy pragma [komentarza](
 
 ## <a name="linker-options-listed-alphabetically"></a>Opcje konsolidatora w porządku alfabetycznym
 
-|Opcja|Przeznaczenie|
+|Opcja|Cel|
 |------------|-------------|
 |[@](at-specify-a-linker-response-file.md)|Określa plik odpowiedzi.|
 |[/ALIGN](align-section-alignment.md)|Określa wyrównanie każdej sekcji.|
@@ -88,7 +88,7 @@ Aby określić Opcje konsolidatora, można użyć dyrektywy pragma [komentarza](
 |[/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)|Informuje kompilator, że aplikacja obsługuje adresy większe niż dwa gigabajty|
 |[/LIBPATH](libpath-additional-libpath.md)|Określa ścieżkę do wyszukania przed ścieżką biblioteki środowiska.|
 |[/LINKREPRO](linkrepro.md)|Określa ścieżkę, w której mają zostać wygenerowane artefakty Odtwórz linku.|
-|[/LINKREPROTARGET](linkreprotarget.md)|Generuje link Odtwórz tylko podczas tworzenia określonego elementu docelowego.|
+|[/LINKREPROTARGET](linkreprotarget.md)|Generuje link Odtwórz tylko podczas tworzenia określonego elementu docelowego. <sup>16,1</sup>|
 |[/LTCG](ltcg-link-time-code-generation.md)|Określa generowanie kodu w czasie konsolidacji.|
 |[/MACHINE](machine-specify-target-platform.md)|Określa platformę docelową.|
 |[/MANIFEST](manifest-create-side-by-side-assembly-manifest.md)|Tworzy plik manifestu Side-by-Side i opcjonalnie osadza go w danych binarnych.|
@@ -137,9 +137,9 @@ Aby określić Opcje konsolidatora, można użyć dyrektywy pragma [komentarza](
 |[/WINMDDELAYSIGN](winmddelaysign-partially-sign-a-winmd.md)|Częściowo podpisuje plik metadanych środowisko wykonawcze systemu Windows (WinMD), umieszczając klucz publiczny w pliku winmd.|
 |[/WX](wx-treat-linker-warnings-as-errors.md)|Traktuje ostrzeżenia konsolidatora jako błędy.|
 
-Aby uzyskać więcej informacji, zobacz [Opcje łącza kontrolowane przez kompilator](compiler-controlled-link-options.md).
+<sup>16,1</sup> ta opcja jest dostępna począwszy od programu Visual Studio 2019 w wersji 16,1.
 
 ## <a name="see-also"></a>Zobacz także
 
 [Odwołanie doC++ budynku C/](c-cpp-building-reference.md)\
-[Odwołanie konsolidatora MSVC](linking.md)
+[Dokumentacja konsolidatora MSVC](linking.md)

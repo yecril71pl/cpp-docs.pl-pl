@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /LINKREPROTARGET linker option
 - -LINKREPROTARGET linker option
 - linker repro reporting
-ms.openlocfilehash: 4912e8bc64d31e3ecc97ea25783c7329e7d7861c
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: d629c4c2665239d03f38569677fa579b6c8d37e0
+ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686839"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712688"
 ---
 # <a name="linkreprotarget-link-repro-file-name"></a>/LINKREPROTARGET (nazwa pliku linku Odtwórz)
 
@@ -38,6 +38,8 @@ Opcja **/LINKREPROTARGET** jest przydatna w złożonych kompilacjach, które wyw
 Aby uzyskać więcej informacji na temat sposobu i czasu tworzenia linku Odtwórz, zobacz sekcję dotyczącą [linków](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md#link-repros) [Reports, aby zgłosić problem z zestawem narzędzi firmy Microsoft C++ ](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).
 
 Aby opcja **/LINKREPROTARGET** działała, należy ustawić opcje **/LINKREPRO** i [/out](out-output-file-name.md) .
+
+**/LINKREPROTARGET** jest dostępna od wersji 16,1 programu Visual Studio 2019.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 

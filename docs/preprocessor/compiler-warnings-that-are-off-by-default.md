@@ -5,12 +5,12 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: ac6ad3b5bbe5f3a738dc0019a43ff08a17cf27ca
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: f74c413a81a1da6398666a0c15936cb76b5a7144
+ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685716"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712681"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Domyślnie wyłączone ostrzeżenia kompilatora
 
@@ -22,7 +22,7 @@ Ostrzeżenia, które są zwykle wyłączone domyślnie, można włączyć przy u
 
 - **ostrzeżenie #pragma (domyślnie:** *warning_number* **)**
 
-   Określone ostrzeżenie (*warning_number*) jest włączone na jego domyślnym poziomie. Dokumentacja ostrzeżenia zawiera domyślny poziom ostrzeżenia.
+   Określone ostrzeżenie (*warning_number*) jest włączone na jego domyślnym poziomie. Dokumentacja dla ostrzeżenia zawiera domyślny poziom ostrzeżeń.
 
 - **Ostrzeżenie #pragma (** *warning_level* **:** *warning_number* **)**
 
@@ -59,27 +59,27 @@ Następujące ostrzeżenia są domyślnie wyłączone w programie Visual Studio 
 |[C4339](../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md) (poziom 4)|"*Type*": użycie niezdefiniowanego typu wykryte w metadanych CLR — użycie tego typu może prowadzić do wyjątku czasu wykonywania|
 |[C4342](../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md) (poziom 1)|zmiana zachowania: wywołano*funkcję "Function*", ale operator składowej został wywołany w poprzednich wersjach|
 |[C4350](../error-messages/compiler-warnings/compiler-warning-level-1-c4350.md) (poziom 1)|zmiana zachowania: wywołano "*member1*" zamiast "*member2*"|
-|[C4355](../error-messages/compiler-warnings/compiler-warning-c4355.md)|"This": używany na liście inicjatora podstawowego elementu członkowskiego|
+|[C4355](../error-messages/compiler-warnings/compiler-warning-c4355.md)|'this': używany na liście inicjatora bazowego elementu członkowskiego|
 |[C4365](../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md) (poziom 4)|"*Action*": konwersja z "*type_1*" na "*type_2*", niezgodność ze znakiem/bez znaku|
-|C4370 (poziom 3)|układ klasy został zmieniony z poprzedniej wersji kompilatora ze względu na lepsze pakowanie|
+|C4370 (poziom 3)|układ klasy zmienił się z poprzedniej wersji kompilatora ze względu na lepsze pakowanie|
 |[C4371](../error-messages/compiler-warnings/c4371.md) (poziom 3)|"*ClassName*": układ klasy może ulec zmianie z poprzedniej wersji kompilatora, ze względu na lepsze pakowanie składowej "*member*"|
 |C4388 (poziom 4)|niezgodność ze znakiem/bez znaku|
 |[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md) (poziom 2)|"*Function*": Sygnatura funkcji zawiera typ "*Type*"; C++ obiekty nie są bezpieczne do przekazania między czystym kodem a mieszanym lub natywnym|
 |C4426 (poziom 1)|flagi optymalizacji zostały zmienione po dołączeniu nagłówka, może to być spowodowane #pragma optymalizacją () <sup>14,1</sup>|
 |[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (poziom 4)|"*Class1*": układ obiektów w obszarze/VD2 zmieni zmieni się ze względu na wirtualną bazę " *'klasa*"|
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) (poziom 4)|dynamic_cast z wirtualnej bazy "*Class1*" do " *'klasa*" może zakończyć się niepowodzeniem w niektórych kontekstach|
-|C4444 (poziom 3)|element najwyższego poziomu "__unaligned" nie jest zaimplementowany w tym kontekście|
+|C4444 (poziom 3)|'__unaligned' najwyższego poziomu nie jest zaimplementowany w tym kontekście|
 |[C4464](../error-messages/compiler-warnings/c4464.md) (poziom 4)|względna ścieżka dołączania zawiera ".."|
 |[C4471](../error-messages/compiler-warnings/compiler-warning-level-4-c4471.md) (poziom 4)|Deklaracja do przodu wyliczenia nienależącego do zakresu musi mieć typ podstawowy (założono int) <sup>uprawnienie</sup>|
 |C4472 (poziom 1)|element "*Identifier*" jest natywnym wyliczeniem: Dodaj specyfikator dostępu (Private/Public), aby zadeklarować zarządzane Wyliczenie|
 |[C4514](../error-messages/compiler-warnings/compiler-warning-level-4-c4514.md) (poziom 4)|"*Function*": funkcja wbudowana, do której nie istnieje odwołanie, została usunięta|
 |[C4536](../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md) (poziom 4)|"type name": nazwa typu przekracza limit meta danych znaków "*Limit*"|
-|[C4545](../error-messages/compiler-warnings/compiler-warning-level-1-c4545.md) (poziom 1)|wyrażenie przed przecinkiem daje w wyniku funkcję, której brakuje listy argumentów|
-|[C4546](../error-messages/compiler-warnings/compiler-warning-level-1-c4546.md) (poziom 1)|Wywołanie funkcji przed przecinkiem brakuje listy argumentów|
+|[C4545](../error-messages/compiler-warnings/compiler-warning-level-1-c4545.md) (poziom 1)|wyrażenie przed przecinkiem daje w wyniku funkcję, dla której brakuje listy argumentów|
+|[C4546](../error-messages/compiler-warnings/compiler-warning-level-1-c4546.md) (poziom 1)|wywołanie funkcji przed przecinkiem, brak listy argumentów|
 |[C4547](../error-messages/compiler-warnings/compiler-warning-level-1-c4547.md) (poziom 1)|operator "*operator*": przed przecinkiem nie ma żadnego wpływu; Oczekiwano operatora z efektem ubocznym|
-|[C4548](../error-messages/compiler-warnings/compiler-warning-level-1-c4548.md) (poziom 1)|wyrażenie przed przecinkiem nie ma żadnego wpływu; oczekiwano wyrażenia z efektem ubocznym|
+|[C4548](../error-messages/compiler-warnings/compiler-warning-level-1-c4548.md) (poziom 1)|wyrażenie przed przecinkiem nie przynosi efektu; oczekiwane wyrażenie, który przynosi efekt|
 |[C4549](../error-messages/compiler-warnings/compiler-warning-level-1-c4549.md) (poziom 1)|"*operator1*": operator przed przecinkiem nie ma żadnego wpływu; Czy chodziło o "*operator2*"?|
-|[C4555](../error-messages/compiler-warnings/compiler-warning-level-1-c4555.md) (poziom 1)|wyrażenie nie ma żadnego wpływu; oczekiwano wyrażenia z efektem ubocznym|
+|[C4555](../error-messages/compiler-warnings/compiler-warning-level-1-c4555.md) (poziom 1)|wyrażenie nie przynosi efektu; oczekiwane wyrażenie, który przynosi efekt|
 |[C4557](../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md) (poziom 3)|"__assume" zawiera efekt "*efekt*"|
 |[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) (poziom 4)|informacyjne: semantyka catch (...) zmieniła się C++ od Visual 7,1; wyjątki strukturalne (SEH) nie są już przechwytywane|
 |C4574 (poziom 4)|"*Identyfikator*" jest zdefiniowany jako "0": Czy chodziło o użycie "#if *Identyfikator*"?|
@@ -94,10 +94,10 @@ Następujące ostrzeżenia są domyślnie wyłączone w programie Visual Studio 
 |C4605 (poziom 1)|"/D*makro*" określone w bieżącym wierszu polecenia, ale nie zostało określone podczas kompilowania prekompilowanego nagłówka|
 |[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md) (poziom 3)|"*union_member*" został już zainicjowany przez inny element członkowski Unii na liście inicjatora "*union_member*" <sup>uprawnienie</sup>|
 |[C4619](../error-messages/compiler-warnings/compiler-warning-level-3-c4619.md) (poziom 3)|Ostrzeżenie #pragma: Brak ostrzeżenia numer "*numer*"|
-|[C4623](../error-messages/compiler-warnings/compiler-warning-level-4-c4623.md) (poziom 4)|"Klasa pochodna": nie można wygenerować konstruktora domyślnego, ponieważ domyślny Konstruktor klasy bazowej jest niedostępny|
-|[C4625](../error-messages/compiler-warnings/compiler-warning-level-4-c4625.md) (poziom 4)|"Klasa pochodna": nie można wygenerować konstruktora kopiującego, ponieważ Konstruktor kopiujący klasy bazowej jest niedostępny|
-|[C4626](../error-messages/compiler-warnings/compiler-warning-level-4-c4626.md) (poziom 4)|"Klasa pochodna": nie można wygenerować operatora przypisania, ponieważ operator przypisania klasy bazowej jest niedostępny|
-|[C4628](../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md) (poziom 1)|podgrafy nie są obsługiwane z-ze. Sekwencja znaków "*ungraph*" nie jest interpretowana jako alternatywny token dla "*char*"|
+|[C4623](../error-messages/compiler-warnings/compiler-warning-level-4-c4623.md) (poziom 4)|„klasa pochodna”: nie można wygenerować konstruktora domyślnego, ponieważ domyślny konstruktor klasy bazowej jest niedostępny|
+|[C4625](../error-messages/compiler-warnings/compiler-warning-level-4-c4625.md) (poziom 4)|„klasa pochodna”: nie można wygenerować konstruktora kopiowania, ponieważ konstruktor kopiowania klasy bazowej jest niedostępny|
+|[C4626](../error-messages/compiler-warnings/compiler-warning-level-4-c4626.md) (poziom 4)|„klasa pochodna”: nie można wygenerować operatora przypisania, ponieważ operator przypisania klasy bazowej jest niedostępny|
+|[C4628](../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md) (poziom 1)|dwuznaki nieobsługiwane z -Ze. Sekwencja znaków "*ungraph*" nie jest interpretowana jako alternatywny token dla "*char*"|
 |[C4640](../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md) (poziom 3)|"*wystąpienie*": konstrukcja lokalnego obiektu statycznego nie jest bezpieczna wątkowo|
 | C4643 (poziom 4) | Deklarowanie "*Identyfikator*" w przestrzeni nazw std nie jest dozwolone przez C++ Standard. <sup>15,8</sup> |
 |C4647 (poziom 3)|zmiana zachowania: __is_pod (*Typ*) ma inną wartość w poprzednich wersjach|
@@ -107,7 +107,7 @@ Następujące ostrzeżenia są domyślnie wyłączone w programie Visual Studio 
 |[C4686](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md) (poziom 3)|"*Typ zdefiniowany przez użytkownika*": możliwa zmiana w zachowaniu, zmiana w Konwencji WYWOŁYWANIA powrotu UDT|
 |[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) (poziom 1)|"*Function*": Sygnatura nieprywatnej składowej zawiera natywny prywatny Typ zestawu "*NATIVE_TYPE*"|
 |[C4710](../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md) (poziom 4)|"*Function*": funkcja nie została wbudowana|
-|[C4738](../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md) (poziom 3)|przechowywanie 32-bitowego wyniku zmiennoprzecinkowego w pamięci, możliwa utrata wydajności|
+|[C4738](../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md) (poziom 3)|przechowywanie 32-bitowego wyniku zmiennopozycyjnego w pamięci, możliwa utrata wydajności|
 |[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|dostęp nietrwały elementu "*Expression*" podlega/volatile: \<iso&#124;MS > Setting; Rozważ użycie funkcji wewnętrznych __iso_volatile_load/Store|
 |C4749 (poziom 4)|warunkowo obsługiwane: makro OffsetOf zastosowany do typu układu niestandardowym "*Type*"|
 |C4767 (poziom 4)|Nazwa sekcji "*symbol*" jest dłuższa niż 8 znaków i zostanie obcięta przez konsolidator|
@@ -123,15 +123,15 @@ Następujące ostrzeżenia są domyślnie wyłączone w programie Visual Studio 
 |C4841 (poziom 4)|użyto niestandardowego rozszerzenia: wyznaczenie złożonego elementu członkowskiego użytego w makro OffsetOf|
 |C4842 (poziom 4)|wynik elementu "makro OffsetOf" zastosowanego do typu używającego wielu dziedziczeń nie jest gwarantowany spójny między wydaniami kompilatora|
 |[C4868](../error-messages/compiler-warnings/compiler-warning-c4868.md) (poziom 4)|Kompilator "_File_(*line_number*)" nie może wymusić kolejności oceny od lewej do prawej na liście inicjalizacji z nawiasami klamrowymi|
-|[C4905](../error-messages/compiler-warnings/compiler-warning-level-1-c4905.md) (poziom 1)|Rzutowanie szerokiego literału ciągu na element "LPSTR"|
-|[C4906](../error-messages/compiler-warnings/compiler-warning-level-1-c4906.md) (poziom 1)|literał ciągu rzutowany na element "LPWSTR"|
+|[C4905](../error-messages/compiler-warnings/compiler-warning-level-1-c4905.md) (poziom 1)|literał ciągu dwubajtowego rzutowany na 'LPSTR'|
+|[C4906](../error-messages/compiler-warnings/compiler-warning-level-1-c4906.md) (poziom 1)|literał ciągu rzutowany na 'LPWSTR'|
 |[C4917](../error-messages/compiler-warnings/compiler-warning-level-1-c4917.md) (poziom 1)|"*deklarator*": identyfikator GUID może być skojarzony tylko z klasą, interfejsem lub przestrzenią nazw|
-|[C4928](../error-messages/compiler-warnings/compiler-warning-level-1-c4928.md) (poziom 1)|niedozwolona Inicjalizacja kopii; więcej niż jedna konwersja zdefiniowana przez użytkownika została zastosowana niejawnie|
-|[C4931](../error-messages/compiler-warnings/compiler-warning-level-4-c4931.md) (poziom 4)|przyjęto, że biblioteka typów została skompilowana dla wskaźników liczby bitów|
+|[C4928](../error-messages/compiler-warnings/compiler-warning-level-1-c4928.md) (poziom 1)|nieprawidłowe inicjowanie kopiowania; niejawnie zastosowano więcej niż jedną konwersję zdefiniowaną przez użytkownika|
+|[C4931](../error-messages/compiler-warnings/compiler-warning-level-4-c4931.md) (poziom 4)|zakładamy, że biblioteka typów została zbudowana dla wskaźników liczba-bit|
 |[C4946](../error-messages/compiler-warnings/compiler-warning-level-1-c4946.md) (poziom 1)|użyto operatora reinterpret_cast między powiązanymi klasami: "*Class1*" i " *'klasa*"|
 |C4962|"*Function*": optymalizacje profilowane zostały wyłączone, ponieważ optymalizacje powodowały niespójność danych profilowych|
 |[C4986](../error-messages/compiler-warnings/compiler-warning-c4986.md) (poziom 4)|"*symbol*": Specyfikacja wyjątku nie jest zgodna z poprzednią deklaracją|
-|C4987 (poziom 4)|użyto niestandardowego rozszerzenia: "throw (...)"|
+|C4987 (poziom 4)|użyto rozszerzenia niestandardowego: 'throw (...)'|
 |C4988 (poziom 4)|"*symbol*": zmienna zadeklarowana poza zakresem klasy/funkcji|
 |C5022|"*Type*": określono wiele konstruktorów przenoszenia|
 |C5023|"*Type*": określono wiele operatorów przypisania przenoszenia|
@@ -150,13 +150,13 @@ Następujące ostrzeżenia są domyślnie wyłączone w programie Visual Studio 
 |C5042 (poziom 3)|"*Function*": deklaracje funkcji w zakresie bloku nie mogą być określone jako "inline" w standardzie C++; Usuń specyfikator "inline" <sup>15,5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|Kompilator wstawi środki zaradcze Spectre na potrzeby ładowania pamięci, jeśli przełącznik/Qspectre określony <sup>15,7</sup>|
 
-<sup>14,1</sup> to ostrzeżenie jest dostępne począwszy od programu Visual Studio 2015 Update 1. <br/>
-<sup>14,3</sup> to ostrzeżenie jest dostępne począwszy od programu Visual Studio 2015 Update 3. <br/>
-<sup>15,3</sup> to ostrzeżenie jest dostępne począwszy od programu Visual Studio 2017 w wersji 15,3. <br/>
-<sup>15,5</sup> to ostrzeżenie jest dostępne począwszy od programu Visual Studio 2017 w wersji 15,5. <br/>
-<sup>15,7</sup> to ostrzeżenie jest dostępne począwszy od programu Visual Studio 2017 w wersji 15,7. <br/>
-<sup>15,8</sup> to ostrzeżenie jest dostępne począwszy od programu Visual Studio 2017 w wersji 15,8. <br/>
-<sup>16,0</sup> to ostrzeżenie jest dostępne od wersji Visual Studio 2019 RTM. <br/>
+<sup>14,1</sup> to ostrzeżenie jest dostępne począwszy od programu Visual Studio 2015 Update 1. \
+<sup>14,3</sup> to ostrzeżenie jest dostępne począwszy od programu Visual Studio 2015 Update 3. \
+<sup>15,3</sup> to ostrzeżenie jest dostępne począwszy od programu Visual Studio 2017 w wersji 15,3. \
+<sup>15,5</sup> to ostrzeżenie jest dostępne począwszy od programu Visual Studio 2017 w wersji 15,5. \
+<sup>15,7</sup> to ostrzeżenie jest dostępne począwszy od programu Visual Studio 2017 w wersji 15,7. \
+<sup>15,8</sup> to ostrzeżenie jest dostępne począwszy od programu Visual Studio 2017 w wersji 15,8. \
+<sup>16,0</sup> to ostrzeżenie jest dostępne od wersji Visual Studio 2019 RTM. \
 <sup>Uprawnienie</sup> To ostrzeżenie jest wyłączone, chyba że opcja kompilatora [/permissive-](../build/reference/permissive-standards-conformance.md) jest ustawiona.
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Ostrzeżenia są domyślnie wyłączone we wcześniejszych wersjach
@@ -174,8 +174,8 @@ To ostrzeżenie zostało domyślnie wyłączone w wersjach kompilatora przed Vis
 
 |||
 |-|-|
-|[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) (poziom 4)|Brak specyfikatora typu-założono, że int. Uwaga: język C nie obsługuje już domyślnego-int|
+|[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) (poziom 4)|brak specyfikatora typu — zakładany int. Uwaga: C nie obsługuje już domyślnego int|
 
 ## <a name="see-also"></a>Zobacz także
 
-[wyświetlania](../preprocessor/warning.md)
+[ostrzeżenie](../preprocessor/warning.md)
