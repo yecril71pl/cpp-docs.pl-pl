@@ -1,51 +1,52 @@
 ---
-title: Jak zgłosić problem za pomocą programu Microsoft C++ zestawu narzędzi
-ms.date: 06/21/2019
+title: Jak zgłosić problem z zestawem narzędzi firmy C++ Microsoft
+description: Jak utworzyć dobry raport o problemie i Odtwórz informacje dotyczące zestawu narzędzi C++ firmy Microsoft.
+ms.date: 09/24/2019
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 13826349836e4c58b7d6a7ce8936186930bc7100
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: 350e902501aca5cbe2b4022ec1f977719844644b
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344383"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685703"
 ---
-# <a name="how-to-report-a-problem-with-the-microsoft-c-toolset-or-documentation"></a>Jak zgłosić problem za pomocą programu Microsoft C++ zestaw narzędzi i dokumentacji
+# <a name="how-to-report-a-problem-with-the-microsoft-c-toolset-or-documentation"></a>Jak zgłosić problem z zestawem narzędzi lub C++ dokumentacją firmy Microsoft
 
-Jeśli znajdziesz problemy w programie Microsoft C++ (MSVC) kompilatora, konsolidatora, lub innych narzędzi i bibliotek, chcemy dowiedzieć się o nich. Gdy problem jest w naszej dokumentacji, chcielibyśmy się dowiedzieć o tym, za.
+Jeśli znajdziesz problemy z kompilatorem firmy C++ Microsoft (MSVC), konsolidatorem lub innymi narzędziami i bibliotekami, chcemy wiedzieć o nich. Gdy problem znajduje się w naszej dokumentacji, chcemy wiedzieć o tym.
 
-## <a name="how-to-report-a-c-toolset-issue"></a>Jak zgłosić problem zestawu narzędzi języka C++
+## <a name="how-to-report-a-c-toolset-issue"></a>Jak zgłosić problem zestawu C++ narzędzi
 
-Najlepszym sposobem, aby dać nam znać o problemie jest wysłać nam raport zawierający opis problemu, który już znasz. Powinien on wszystkie szczegóły na temat sposobu kompilacji programu. Powinna ona zawierać *odtwarzania*, pełną przypadek testowy, możemy użyć, aby odtworzyć problem na własnych maszynach. Te informacje umożliwiają szybko sprawdzić, czy problem istnieje w naszym kodzie i nie jest lokalny dla danego środowiska. Pomaga on ustalić, czy ma wpływ na innych wersji kompilatora i diagnozować ich przyczyny.
+Najlepszym sposobem, aby poinformować nas o problemie, jest wysłanie nam raportu zawierającego opis wykrytego problemu. Powinien on zawierać wszystkie szczegółowe informacje o sposobie tworzenia programu. Powinien on zawierać *Odtwórz*, kompletny przypadek testowy, którego można użyć do odtworzenia problemu na własnych maszynach. Te informacje pozwalają nam szybko sprawdzić, czy problem występuje w naszym kodzie i nie jest lokalny dla Twojego środowiska. Pomaga nam w ustaleniu, czy ma wpływ na inne wersje kompilatora i zdiagnozować jego przyczynę.
 
-W poniższych sekcjach przeczytasz o co sprawia, że dobry raport. Opisano sposób generowania odtwarzania dla rodzaju problem, który Ci się znaleźć oraz wysłać raport do zespół pracujący nad produktem. Raporty są ważne dla nas i dla innych deweloperów takich jak Ty. Dziękujemy za pomoc w ulepszeniu programu Microsoft C++!
+W poniższych sekcjach znajdziesz informacje o tym, co robi dobry raport. Opisujemy, jak generować Odtwórz dla rodzaju wykrytego problemu oraz jak wysyłać raporty do zespołu produktów. Twoje raporty są ważne dla nas i dla innych deweloperów, takich jak ty. Dziękujemy za pomoc w ulepszaniu firmy C++Microsoft!
 
 ## <a name="how-to-prepare-your-report"></a>Jak przygotować raport
 
-Ważne jest utworzyć raport o wysokiej jakości, ponieważ jest trudne w firmie Microsoft w celu odtworzenia problemu znaleziono bez pełnych informacji. Lepsze raportu, bardziej efektywne możemy ponownie utworzyć i zdiagnozować problem.
+Ważne jest, aby utworzyć raport wysokiej jakości, ponieważ trudno jest odtworzyć znaleziony problem bez kompletnych informacji. Im lepszy raport to, tym bardziej efektywnie możemy odtworzyć i zdiagnozować problem.
 
-Jako minimum raport powinien zawierać:
+Raport powinien zawierać co najmniej następujące wartości:
 
-- Pełne informacji o wersji zestawu narzędzi, z którego korzystasz.
+- Pełne informacje o wersji zestawu narzędzi, którego używasz.
 
-- Cl.exe pełny wiersz polecenia używany do tworzenia kodu.
+- Pełny wiersz polecenia CL. exe używany do kompilowania kodu.
 
-- Szczegółowy opis problemu, możesz znaleźć.
+- Szczegółowy opis znalezionego problemu.
 
-- Odtwórz: źródła pełną, uproszczona, niezależna przykładowy kod, który pokazuje problem.
+- Odtwórz: kompletny, uproszczony, z własnym przykładem kod źródłowy, który pokazuje problem.
 
-Czytaj dalej, aby dowiedzieć się więcej o określonych informacji i gdzie można znaleźć, a także sposób tworzenia dobrych odtwarzania.
+Przeczytaj, aby dowiedzieć się więcej o konkretnych informacjach, których potrzebujemy, i skąd można ją znaleźć oraz jak utworzyć dobry Odtwórz.
 
 ### <a name="the-toolset-version"></a>Wersja zestawu narzędzi
 
-Potrzebujemy informacji pełnej wersji i architektury docelowej z zestawem narzędzi, który powoduje, że ten problem. To, dzięki czemu możemy sprawdzić swoje odtwarzania względem tego samego zestawu narzędzi na naszych komputerach. Jeśli firma Microsoft może odtworzyć problem, te informacje również daje nam punkt wyjścia do badania, które wersje zestawu narzędzi mają ten sam problem.
+Potrzebujemy pełnej informacji o wersji i architektury docelowej zestawu narzędzi, który powoduje problem. Dzięki temu możemy testować Odtwórz na tym samym zestawie narzędzi na naszych komputerach. Jeśli będziemy mogli odtworzyć ten problem, te informacje będą również wskazywały na rozpoczęcie badania, które inne wersje zestawu narzędzi mają ten sam problem.
 
 #### <a name="to-report-the-full-version-of-your-compiler"></a>Aby zgłosić pełną wersję kompilatora
 
-1. Otwórz **wiersz polecenia dla deweloperów** odpowiadającej architektury konfiguracji i wersji programu Visual Studio umożliwia kompilowanie projektu. Na przykład, jeśli tworzysz za pomocą programu Visual Studio 2017 na x64 x64 wybierz elementy docelowe, **x64 natywnych narzędzi wiersza polecenia dla programu VS 2017**. Aby uzyskać więcej informacji, zobacz [skróty wiersza polecenia dla deweloperów](../build/building-on-the-command-line.md#developer_command_prompt_shortcuts).
+1. Otwórz **wiersz polecenia dla deweloperów** , które pasują do wersji programu Visual Studio i architektury konfiguracji użytej do skompilowania projektu. Na przykład, Jeśli kompilujesz przy użyciu programu Visual Studio 2017 na platformie x64 dla elementów docelowych x64, wybierz **wiersz polecenia narzędzi x64 Native Tools dla programu VS 2017**. Aby uzyskać więcej informacji, zobacz [skróty do wiersza polecenia dla deweloperów](../build/building-on-the-command-line.md#developer_command_prompt_shortcuts).
 
-1. W oknie konsoli wiersza polecenia dla deweloperów, wprowadź polecenie **cl /Bv**.
+1. W oknie konsoli wiersza polecenia dla deweloperów wprowadź polecenie **CL/BV**.
 
 Dane wyjściowe powinny wyglądać podobnie do:
 
@@ -66,66 +67,66 @@ Compiler Passes:
 cl : Command line error D8003 : missing source filename
 ```
 
-Skopiuj i Wklej wszystkie dane wyjściowe do raportu.
+Skopiuj i wklej całe dane wyjściowe do raportu.
 
-### <a name="the-command-line"></a>W wierszu polecenia
+### <a name="the-command-line"></a>Wiersz polecenia
 
-Potrzebujemy dokładny wiersz polecenia, cl.exe i wszystkie jej argumenty używane do kompilowania kodu. To, dzięki czemu możemy ją tworzyć je w taki sam sposób na naszych komputerach. Jest ważne, ponieważ problem, który Ci się znaleźć może istnieć tylko podczas kompilowania przy użyciu określonego argumentu lub kombinacja argumentów.
+Potrzebujemy dokładnego wiersza polecenia, CL. exe i wszystkich jego argumentów, służącego do kompilowania kodu. Dzięki temu możemy skompilować ją w taki sam sposób na naszych komputerach. Ważne, ponieważ znaleziony problem może wystąpić tylko w przypadku kompilowania z określonym argumentem lub kombinacją argumentów.
 
-W dzienniku kompilacji jest najlepszym miejscem, aby znaleźć te informacje, natychmiast po zakończeniu występuje dany problem. Zapewnia, że wiersz polecenia zawiera dokładnie te same argumenty, które mogą przyczynić się do problemu.
+Najlepsze miejsce na znalezienie tych informacji znajduje się w dzienniku kompilacji natychmiast po napotkaniu problemu. Zapewnia, że wiersz polecenia zawiera dokładnie te same argumenty, które mogą przyczynić się do problemu.
 
 #### <a name="to-report-the-contents-of-the-command-line"></a>Aby zgłosić zawartość wiersza polecenia
 
-1. Znajdź **CL.command.1.tlog** pliku i otwórz go. Domyślnie ten plik znajduje się w folderze Moje dokumenty w \\programu Visual Studio *wersji*\\projektów\\*SolutionName* \\ *ProjectName*\\*konfiguracji*\\*ProjectName*.tlog\\CL.command.1.tlog, lub w folderze użytkownika w obszarze \\Źródła\\repozytoriów\\*SolutionName*\\*ProjectName*\\*konfiguracji* \\ *ProjectName*.tlog\\CL.command.1.tlog. Jeśli używasz innego systemu kompilacji, czy zmiany zostały wprowadzone domyślną lokalizację dla projektu może być w innej lokalizacji.
+1. Znajdź plik **CL. Command. 1. tlog** , a następnie otwórz go. Domyślnie ten plik znajduje się w folderze dokumenty w programie @no__t 0Visual Studio w *wersji*\\Projects @ no__t-3*SolutionName*\\*ProjectName*\\*Configuration*\\*ProjectName*.tlog1CL.command.1.tlog lub w folderze użytkownika w obszarze 2Source @ no__t-13Repos @ no__t-14*SolutionName*6*ProjectName*8*Configuration*0*ProjectName*.tlog2CL.command.1.tlog. Może znajdować się w innej lokalizacji, jeśli używasz innego systemu kompilacji lub zmieniono lokalizację domyślną dla projektu.
 
-   W tym pliku można znaleźć nazwy źródła plików kodu, a następnie argumenty wiersza polecenia używane do kompilowania ich, każdy w osobnych wierszach.
+   Wewnątrz tego pliku znajdują się nazwy plików kodu źródłowego, a następnie argumenty wiersza polecenia używane do kompilowania, każdy w osobnych wierszach.
 
-1. Znajdź wiersz, który zawiera nazwę pliku źródła kodu, w którym występuje problem. Wiersz poniżej zawiera odpowiednie argumenty wiersza polecenia cl.exe.
+1. Znajdź wiersz, który zawiera nazwę pliku kodu źródłowego, w którym występuje problem. Wiersz poniżej zawiera odpowiednie argumenty polecenia CL. exe.
 
-Skopiuj i Wklej całego wiersza polecenia do raportu.
+Skopiuj i wklej cały wiersz polecenia do raportu.
 
 ### <a name="a-description-of-the-problem"></a>Opis problemu
 
-Potrzebujemy, aby uzyskać szczegółowy opis problemu, który Ci się znaleźć. To, dzięki czemu można sprawdzić, czy widać ten sam efekt na naszych komputerach. Jest to również czasami przydatne dla nas wiedzieć, co próbujesz osiągnąć oczekiwany efekt.
+Potrzebujemy szczegółowego opisu znalezionego problemu. Dzięki temu możemy sprawdzić, czy na naszych komputerach widzimy ten sam efekt. Czasami warto również wiedzieć, co próbujesz zrobić, i czego oczekujesz.
 
-Dobry opis zawiera **dokładnie komunikaty o błędach** podane przez zestaw narzędzi lub zachowanie dokładnego czasu wykonywania, zostanie wyświetlony. Potrzebujemy tych informacji, aby zweryfikować, że firma Microsoft została poprawnie odtworzyć problem. Obejmują **wszystkich** kompilatora, dane wyjściowe, nie tylko ostatni komunikat o błędzie. Potrzebujemy wyświetlić wszystkie elementy, które doprowadziły do problemu, który możesz zgłaszać. Jeśli ten problem można duplikować, za pomocą kompilatora wiersza polecenia, te dane wyjściowe kompilatora jest preferowana. IDE oraz innych systemów kompilacji może filtrować komunikaty o błędach, zobacz lub przechwytywać tylko pierwszego wiersza komunikatu o błędzie.
+Dobry opis zawiera **szczegółowe komunikaty o błędach** dostarczone przez zestaw narzędzi lub dokładne zachowanie środowiska uruchomieniowego, które widzisz. Potrzebujemy tych informacji, aby sprawdzić, czy problem został wystawiony prawidłowo. Uwzględnij **wszystkie** dane wyjściowe kompilatora, a nie tylko ostatni komunikat o błędzie. Musimy zobaczyć wszystko, co doprowadziło do zgłoszenia problemu. Jeśli problem można zduplikować przy użyciu kompilatora wiersza polecenia, to dane wyjściowe kompilatora są preferowane. Środowisko IDE i inne systemy kompilacji mogą odfiltrować wyświetlane komunikaty o błędach lub tylko przechwycić pierwszy wiersz komunikatu o błędzie.
 
-Jeśli problem będzie się, że kompilator akceptuje nieprawidłowy kod i nie generuje diagnostyki, należy uwzględnić, w raporcie.
+Jeśli problem polega na tym, że kompilator akceptuje nieprawidłowy kod i nie generuje diagnostyki, należy uwzględnić to w raporcie.
 
-Aby zgłosić problem zachowanie środowiska uruchomieniowego, należy dołączyć **dokładna kopia** jakiego program drukuje i powinna się pojawić. W idealnym przypadku będzie osadzeniu go w danych wyjściowych instrukcji, na przykład `printf("This should be 5: %d\n", actual_result);`. Jeśli program ulegnie awarii, zawiesza się mówią, że także.
+Aby zgłosić problem z zachowaniem środowiska uruchomieniowego, należy podać **dokładną kopię** tego, co program drukuje, i oczekiwane informacje. W idealnym przypadku można osadzić go w instrukcji Output, na przykład `printf("This should be 5: %d\n", actual_result);`. Jeśli program ulegnie awarii lub zawiesza się, należy również wspomnieć o tym.
 
-Dodaj inne szczegóły, które mogą pomóc nam zdiagnozować problem, znalezionego, takich jak żadnych obejść, które już znasz. Nie należy powtórzyć informacjach znajdujących się gdzie indziej w raporcie.
+Dodaj inne szczegóły, które mogą pomóc nam w zdiagnozowaniu znalezionego problemu, na przykład w przypadku wszystkich wykrytych działań. Spróbuj nie powtarzać informacji znalezionych w innym miejscu raportu.
 
 ### <a name="the-repro"></a>Odtwórz
 
-A *odtwarzania* podano przykładowy kod źródłowy kompletny, niezależny. Odtwarzalnie demonstruje problem Ci się znaleźć, dlatego nazwę. Potrzebujemy odtwarzania, dzięki czemu możemy odtworzyć błąd, na naszych komputerach. Samodzielnie utworzyć podstawowy plik wykonywalny, który kompiluje i uruchamia kod powinny być wystarczające. Ewentualnie *będzie* skompilować i uruchomić, jeśli nie dla problemu został znaleziony. Odtwórz nie fragmentu kodu. Należy mieć pełne funkcje i klasy i zawierają wszystkie niezbędne # dyrektyw, nawet w przypadku standardowych nagłówków include.
+*Odtwórz* to kompletny, samodzielny przykład kodu źródłowego. Reproducibly IT demonstruje znaleziony problem, dlatego nazwę. Potrzebujemy elementu Odtwórz, aby można było odtworzyć błąd na naszych komputerach. Kod powinien być wystarczający do utworzenia podstawowego pliku wykonywalnego, który kompiluje i uruchamia. Lub, które *byłyby* skompilowane i uruchomione, jeśli nie dotyczy wykrytego problemu. Odtwórz nie jest fragmentem kodu. Powinien on mieć kompletną funkcję i klasy oraz zawierać wszystkie niezbędne dyrektywy #include, nawet dla standardowych nagłówków.
 
-#### <a name="what-makes-a-good-repro"></a>Co sprawia, że dobry odtwarzania
+#### <a name="what-makes-a-good-repro"></a>Co robi dobry Odtwórz
 
-Jest dobrą odtwarzania:
+Dobrym odtwórzem jest:
 
-- **Minimalny.** Reprodukcje powinien być możliwie najmniejsze, ale nadal pokazują znalezionego problemu. Reprodukcje nie muszą być złożone ani realistyczne. Wystarczy wyświetlić kod, który jest zgodny ze standardem lub implementacji kompilatora udokumentowane. Brakujący element diagnostyki, Twoje odtwarzania powinny pokazywać kod, który nie jest zgodna. Proste, aby punkt reprodukcje, zawierających tylko wystarczającą ilość kodu, w celu zademonstrowania problemu są najlepsze. Jeśli można wyeliminować lub uprościć kod i pozostają zgodność, a także pozostawić ten problem, bez zmian, to robić. Nie ma potrzeby obejmują przeciwdziałania przykłady kodu, który działa.
+- **Mniejsze.** Reprofesjonalisty powinny być tak małe, jak to możliwe, jednak nadal pokazują dokładnie znaleziony problem. Reprofesjonalisty nie muszą być złożone ani realistyczne. Muszą oni tylko wyświetlić kod, który jest zgodny ze standardem lub do udokumentowanej implementacji kompilatora. W przypadku brakującej diagnostyki Odtwórz powinien pokazać kod, który nie jest zgodny. Proste, do-punktowe rozwiązania, które zawierają tylko wystarczającą ilość kodu do zademonstrowania problemu, są najlepsze. Jeśli możesz wyeliminować lub uprościć kod i zachować zgodność, a także pozostawić problem bez zmian, należy to zrobić. Nie trzeba dołączać licznika-przykłady kodu, który działa.
 
-- **Self-Contained.** Reprodukcje należy unikać niepotrzebne zależności. Jeśli można odtworzyć problem bez bibliotek innych firm, to robić. Czy można odtworzyć problem bez konieczności wprowadzania kodu biblioteki, oprócz instrukcji proste dane wyjściowe (na przykład `puts("this shouldn't compile");`, `std::cout << value;`, i `printf("%d\n", value);`), należy to zrobić. To idealne rozwiązanie, jeśli na przykład, można zmniejszone do pliku z kodem jednego źródła, bez odwołania do żadnych nagłówków użytkownika. Zmniejszenie ilości kodu, który mamy można rozważyć jako możliwe Współautor problem jest teraz znacznie USA.
+- **Samodzielny.** Reprofesjonalisty powinny unikać niepotrzebnych zależności. Jeśli problem można odtworzyć bez bibliotek innych firm, należy to zrobić. Jeśli problem można odtworzyć bez kodu biblioteki oprócz prostych instrukcji wyjściowych (na przykład `puts("this shouldn't compile");`, `std::cout << value;` i `printf("%d\n", value);`), należy to zrobić. Jest to idealne rozwiązanie, jeśli przykład może zostać skrócony do pojedynczego pliku kodu źródłowego bez odwołania do żadnego nagłówka użytkownika. Zmniejszenie ilości kodu, który należy wziąć pod uwagę jako możliwy współautor problemu, jest w sposób nieużyteczny dla nas.
 
-- **W najnowszej wersji kompilatora.** Reprodukcje należy używać najnowszej aktualizacji do najnowszej wersji zestawu narzędzi, jeśli to możliwe. Możesz też użyć najnowszej wersji wstępnej następnej aktualizacji lub kolejnej głównej wersji. Często Naprawiono problemów, które można znaleźć w starszych wersjach zestawu narzędzi w nowszych wersjach. Poprawki są backported do starszych wersji tylko w wyjątkowych okolicznościach.
+- **Względem najnowszej wersji kompilatora.** Recenty powinny używać najnowszej aktualizacji do najnowszej wersji zestawu narzędzi zawsze wtedy, gdy jest to możliwe. Można też użyć najnowszej wersji wstępnej następnej aktualizacji lub następnego wydania. Problemy, które mogą znajdować się w starszych wersjach zestawu narzędzi, często zostały rozwiązane w nowszych wersjach. Poprawki są przełączone do starszych wersji tylko w wyjątkowych okolicznościach.
 
-- **Sprawdza, czy inne kompilatory** w razie potrzeby. Reprodukcje obejmujące przenośnego kodu C++ należy sprawdzić zachowanie względem innych kompilatorów, jeśli jest to możliwe. C++ Standard określa poprawność programu i kompilator nie jest doskonałym rozwiązaniem. Jednak gdy Clang i kompilatora GCC zaakceptować kodzie bez Diagnostyka, a nie MSVC, prawdopodobnie zostały znaleziono usterkę w naszym kompilatora. (Inne możliwości obejmują różnice w systemach Unix i Windows zachowanie lub różnych poziomach implementacji standardów C++ i tak dalej). Gdy wszystkie kompilatory odrzucić kodu, to prawdopodobnie, że Twój kod jest nieprawidłowy. Oglądanie komunikatów o błędach różnych może pomóc zdiagnozować problem samodzielnie.
+- **Sprawdzane względem innych kompilatorów** , jeśli są odpowiednie. Reprofesjonalisty, które C++ obejmują kod przenośny, powinny weryfikować zachowanie w przypadku innych kompilatorów, jeśli jest to możliwe. C++ Standardowa ostatecznie określa prawidłowość programu i żaden kompilator nie jest idealny. Jednak w przypadku gdy Clang i w zatoce zaakceptują swój kod bez diagnostyki, a MSVC nie, prawdopodobnie znaleziono usterkę w naszym kompilatorze. (Inne możliwości obejmują różnice w działaniu systemu UNIX i Windows albo różne poziomy C++ implementacji standardów itd.) Gdy wszystkie kompilatory odrzucają kod, prawdopodobnie kod jest nieprawidłowy. Wyświetlanie różnych komunikatów o błędach może ułatwić zdiagnozowanie problemu.
 
-   Możesz znaleźć listy kompilatory online, aby przetestować kod w [Kompilatory języka C++ w trybie Online](https://isocpp.org/blog/2013/01/online-c-compilers) w witrynie sieci Web ISO C++ lub to nadzorowana [listy kompilatory C++ Online](https://arnemertz.github.io/online-compilers/) w witrynie GitHub. Niektóre szczególne przykłady [Wandbox](https://wandbox.org/), [Explorer kompilatora](https://godbolt.org/), i [Coliru](https://coliru.stacked-crooked.com/).
+   Możesz znaleźć listę kompilatorów online, aby przetestować swój kod w [kompilatorach online C++ ](https://isocpp.org/blog/2013/01/online-c-compilers) w witrynie internetowej ISO C++ lub na nienadzorowanej [liście kompilatorów online C++ ](https://arnemertz.github.io/online-compilers/) w serwisie GitHub. Niektóre konkretne przykłady to [Wandbox](https://wandbox.org/), [Eksplorator kompilatora](https://godbolt.org/)i [Coliru](https://coliru.stacked-crooked.com/).
 
    > [!NOTE]
-   > Kompilatora online witryn sieci Web nie są powiązane z firmą Microsoft. Wiele witryn internetowych z kompilatora online są uruchamiane jako projektów osobistych. Niektóre z tych witrynach mogą być niedostępne, gdy to odczytu, ale wyszukiwania powinien znajdować się inne osoby, których można użyć.
+   > Witryny sieci Web kompilatora online nie są powiązane z firmą Microsoft. Wiele witryn sieci Web kompilatora online jest uruchomionych jako projekty osobiste. Niektóre z tych witryn mogą być niedostępne podczas czytania, ale wyszukiwanie powinno znaleźć inne, których można użyć.
 
-Problemy z kompilatora, konsolidatora i w bibliotekach, często pojawiają się w szczególności sposobów. Typ problemu możesz znaleźć określi, jakiego rodzaju odtwarzania należy uwzględnić w raporcie. Bez odpowiedniego odtwarzania mamy nie ma niczego do zbadania. Poniżej przedstawiono niektóre rodzaje problemów, które może zostać wyświetlony. Zawiera instrukcje dotyczące sposobu generowania rodzaj odtwarzania ma być użyte do zgłaszania każdego rodzaju problemu.
+Problemy w kompilatorze, konsolidatorze i w bibliotekach, które mają na celu pokazanie siebie w określony sposób. Rodzaj znalezionego problemu określi, jakiego rodzaju Odtwórz należy uwzględnić w raporcie. Bez odpowiedniej Odtwórz nie mamy nic do zbadania. Poniżej przedstawiono kilka rodzajów problemów, które mogą zostać wyświetlone. Zawieramy instrukcje dotyczące sposobu generowania rodzaju Odtwórz, którego należy użyć do zgłaszania każdego rodzaju problemu.
 
-#### <a name="frontend-parser-crash"></a>Awaria serwera sieci Web (analizator składni)
+#### <a name="frontend-parser-crash"></a>Awaria frontonu (analizator)
 
-Występują awarie frontonu fazie analizy kompilatora. Zwykle, kompilator generuje [krytyczny C1001 błąd](../error-messages/compiler-errors-1/fatal-error-c1001.md)i odwołania do pliku kodu źródłowego i wierszu numer na którym wystąpił błąd. Często wspomniany plik o nazwie msc1.cpp, ale można zignorować te dane.
+Awarie frontonu występują podczas fazy analizy kompilatora. Zazwyczaj kompilator emituje [błąd krytyczny C1001](../error-messages/compiler-errors-1/fatal-error-c1001.md)i odwołuje się do pliku kodu źródłowego oraz numeru wiersza, na którym wystąpił błąd. Często wymienia plik o nazwie MSC1. cpp, ale można zignorować te szczegóły.
 
-W przypadku awarii tego rodzaju oferują [wstępnie przetworzony odtwarzania](#preprocessed-repros).
+W przypadku tego rodzaju awarii należy zapewnić [wstępnie przetworzony Odtwórz](#preprocessed-repros).
 
-Poniżej przedstawiono przykładowe dane wyjściowe kompilatora dla tego rodzaju awarii:
+Oto przykładowe dane wyjściowe kompilatora dla tego rodzaju awarii:
 
 ```Output
 SandBoxHost.cpp
@@ -146,13 +147,13 @@ INTERNAL COMPILER ERROR in 'd:\o\dev\otools\bin\x64\cl.exe'
     Help menu, or open the Technical Support help file for more information
 ```
 
-#### <a name="backend-code-generation-crash"></a>Awaria wewnętrznej bazy danych (Generowanie kodu)
+#### <a name="backend-code-generation-crash"></a>Awaria zaplecza (generowanie kodu)
 
-Kod fazy generowania kompilatora odbywały się awarii wewnętrznej bazy danych. Zwykle, kompilator generuje [krytyczny C1001 błąd](../error-messages/compiler-errors-1/fatal-error-c1001.md), i mogą odwoływać się do pliku kodu źródłowego i nie skojarzony z tym problemem numer wiersza. Często tematem przewodnim kompilatora pliku\\utc\\src\\p2\\main.c, ale można zignorować te dane.
+Awarie zaplecza występują podczas fazy generowania kodu kompilatora. Zazwyczaj kompilator emituje [błąd krytyczny C1001](../error-messages/compiler-errors-1/fatal-error-c1001.md)i nie odwołuje się do pliku kodu źródłowego i numeru wiersza skojarzonego z problemem. Często wymienia on kompilator plików @ no__t-0utc @ no__t-1src @ no__t-2p2 @ no__t-3main. c, ale można zignorować te szczegóły.
 
-Dla tego rodzaju awaria zapewniają [odtwarzania łącze](#link-repros) Jeśli używasz generowanie kodu czasie konsolidowania (LTCG) włączane przez **/GL** argument wiersza polecenia, aby cl.exe. Jeśli nie, należy podać [wstępnie przetworzony odtwarzania](#preprocessed-repros) zamiast tego.
+W przypadku tego rodzaju awarii Podaj [link Odtwórz](#link-repros) , jeśli używasz generowania kodu w czasie konsolidacji (LTCG), który jest włączony przez argument wiersza polecenia **/GL** do CL. exe. W przeciwnym razie zamiast tego Podaj [wstępnie przetworzony Odtwórz](#preprocessed-repros) .
 
-Oto przykładowe dane wyjściowe kompilatora dla wewnętrznej bazy danych o awariach, w którym nie jest używany LTCG. Jeśli dane wyjściowe kompilatora wygląda podobnie do poniższego, należy podać [wstępnie przetworzony odtwarzania](#preprocessed-repros).
+Oto przykładowe dane wyjściowe kompilatora dla awarii wewnętrznej bazy danych, w której LTCG nie jest używany. Jeśli dane wyjściowe kompilatora wyglądają jak poniżej, należy dostarczyć [wstępnie przetworzony Odtwórz](#preprocessed-repros).
 
 ```Output
 repro.cpp
@@ -169,16 +170,16 @@ INTERNAL COMPILER ERROR in
     Help menu, or open the Technical Support help file for more information
 ```
 
-Jeśli wiersz, rozpoczyna się od **wewnętrzny błąd KOMPILATORA** wspomniany link.exe, zamiast cl.exe LTCG została włączona. Podaj [odtwarzania łącze](#link-repros) w tym przypadku. Jeśli nie jest jasne, czy włączono LTCG z komunikatu o błędzie kompilatora, Sprawdź argumenty wiersza polecenia. Skopiowano z dziennika kompilacji, w poprzednim kroku dla **/GL** argument wiersza polecenia.
+Jeśli wiersz zaczynający się od **wewnętrznego błędu kompilatora** wymienia plik link. exe, a nie CL. exe, LTCG został włączony. W tym przypadku podaj [link Odtwórz](#link-repros) . Gdy nie jest jasne, czy LTCG został włączony z komunikatu o błędzie kompilatora, sprawdź argumenty wiersza polecenia. Skopiowano je z dziennika kompilacji w poprzednim kroku dla argumentu wiersza polecenia **/GL** .
 
 #### <a name="linker-crash"></a>Awaria konsolidatora
 
-Występują awarie konsolidatora w fazie tworzenia łącza po uruchomieniu kompilator. Zazwyczaj zostanie wyemitowany przez konsolidator [błąd narzędzi konsolidatora LNK1000](../error-messages/tool-errors/linker-tools-error-lnk1000.md).
+Awarie konsolidatora występują w fazie konsolidacji po uruchomieniu kompilatora. Zwykle konsolidator wyemituje [Narzędzia konsolidatora LNK1000 błąd](../error-messages/tool-errors/linker-tools-error-lnk1000.md).
 
 > [!NOTE]
-> Jeśli dane wyjściowe wspomniany C1001 lub obejmuje generowanie kodu w czasie konsolidacji, zapoznaj się [awarii wewnętrznej bazy danych (Generowanie kodu)](#backend-code-generation-crash) zamiast tego.
+> Jeśli dane wyjściowe wymieniają C1001 lub obejmują generowanie kodu w czasie konsolidacji, zapoznaj się z [Zaplecem (generowanie kodu)](#backend-code-generation-crash) .
 
-W przypadku awarii tego rodzaju oferują [odtwarzania łącze](#link-repros).
+W przypadku tego rodzaju awarii Podaj [link Odtwórz](#link-repros).
 
 Oto przykład danych wyjściowych kompilatora dla tego rodzaju awarii:
 
@@ -214,189 +215,201 @@ CONTEXT:
   Dr2    = 0000000000000000  Dr7    = 0000000000000000
 ```
 
-Jeśli łączenie przyrostowe jest włączone, a awaria wystąpił dopiero po pomyślnym łącze początkowej, oznacza to, dopiero po pierwszy link pełną, na którym opiera się później konsolidowania przyrostowego, udostępniają kopię obiektu (.obj) i biblioteki (.lib) plików, które odnoszą się do źródła pliki zmodyfikowane po początkowej łącze zostało ukończone.
+Jeśli konsolidacja przyrostowa jest włączona, a awaria wystąpiła dopiero po pomyślnym nawiązaniu połączenia początkowego, to jest tylko po pierwszym pełnym łączu, na którym bazuje kolejne łącze przyrostowe, również udostępnieniu kopii plików obiektu (. obj) i biblioteki (lib), które odpowiadają źródłu pliki zmodyfikowane po początkowym łączu zostały ukończone.
 
-#### <a name="bad-code-generation"></a>Wygenerowanie złego kodu
+#### <a name="bad-code-generation"></a>Złe generowanie kodu
 
-Wygenerowanie złego kodu jest rzadkie. Występuje ona, gdy kompilator generuje przez pomyłkę niepoprawny kod, który powoduje, że aplikacja awarii w czasie wykonywania. Jej zamiast tego należy generować poprawny kod lub wykryć problem w czasie kompilacji. Jeśli uważasz, że problem Ci się znaleźć wyniki w wygenerowanie złego kodu, raport będzie traktowany takie same [(Generowanie kodu) w wewnętrznej bazie danych o awariach](#backend-code-generation-crash).
+Niewłaściwe generowanie kodu jest rzadkie. Występuje, gdy kompilator błędnie wygeneruje niepoprawny kod, który powoduje awarię aplikacji w czasie wykonywania. Zamiast tego należy wygenerować prawidłowy kod lub wykryć problem w czasie kompilacji. Jeśli uważasz, że znaleziony problem powoduje niewłaściwe generowanie kodu, zgłoś raport w taki sam sposób, jak [awaria zaplecza (generowanie kodu)](#backend-code-generation-crash).
 
-Dla tego rodzaju awaria zapewniają [odtwarzania łącze](#link-repros) Jeśli używasz **/GL** argument wiersza polecenia, aby cl.exe. Podaj [wstępnie przetworzony odtwarzania](#preprocessed-repros) w przeciwnym razie.
+W przypadku tego rodzaju awarii Podaj [link Odtwórz](#link-repros) , jeśli używasz argumentu wiersza polecenia **/GL** do CL. exe. Jeśli nie, podaj [wstępnie przetworzony Odtwórz](#preprocessed-repros) .
 
-## <a name="how-to-generate-a-repro"></a>Sposób generowania odtwarzania
+## <a name="how-to-generate-a-repro"></a>Jak wygenerować Odtwórz
 
-Aby pomóc nam śledzenie źródło problemu, [dobre odtwarzania](#what-makes-a-good-repro) jest istotne. Przed wykonaniem dowolnej czynności opisane poniżej dla określonych typów reprodukcje spróbuj zagęszczanie kod, który pokazuje, jak najszerzej problem. Spróbuj wyeliminować lub zminimalizować zależności, wymagane nagłówki i biblioteki. Ogranicz opcje kompilatora i definicje preprocesora używane, jeśli jest to możliwe.
+Aby pomóc nam w śledzeniu źródła problemu, [dobrym odtwórzm](#what-makes-a-good-repro) jest istotna wartość. Przed wykonaniem któregokolwiek z kroków opisanych poniżej dla określonych rodzajów odniesień spróbuj odpowiednio zakodować kod, który pokazuje problem. Spróbuj wyeliminować lub zminimalizować zależności, wymagane nagłówki i biblioteki. Ogranicz opcje kompilatora i używane Definicje preprocesora, jeśli to możliwe.
 
-Poniżej przedstawiono instrukcje dotyczące generowania różne rodzaje reprodukcje, które będą używane do różnych rodzajów problemów w raporcie.
+Poniżej znajdują się instrukcje dotyczące generowania różnych rodzajów regeneracji, które będą używane do zgłaszania różnych rodzajów problemów.
 
-### <a name="preprocessed-repros"></a>Wstępnie przetworzony reprodukcje
+### <a name="preprocessed-repros"></a>Wstępnie przetworzone wyprofesjonalisty
 
-A *wstępnie przetworzony odtwarzania* plik jednego źródła, który pokazuje problem. Jest generowany na podstawie dane wyjściowe preprocesora C. Aby utworzyć jeden, użyj **/P** — opcja kompilatora na oryginalnego pliku źródłowego odtwarzania. Ta opcja inlines uwzględnione nagłówki, aby usunąć zależności w pliki dodatkowe źródło i nagłówek. Opcja rozwiązuje również makra, warunkowych #ifdef i innych poleceń preprocesora, które może zależeć od środowiska lokalnego.
+*Wstępnie przetworzony Odtwórz* jest pojedynczym plikiem źródłowym, który pokazuje problem. Jest generowany na podstawie danych wyjściowych preprocesora języka C. Aby go utworzyć, użyj opcji " **/p** kompilator" w oryginalnym pliku źródłowym Odtwórz. Ta opcja podkreśla zawarte nagłówki, aby usunąć zależności od dodatkowych plików źródłowych i nagłówków. Opcja rozwiązuje również problemy z makrami, #ifdefmi warunkowymi i innymi poleceniami preprocesora, które mogą być zależne od środowiska lokalnego.
 
 > [!NOTE]
-> Wstępnie przetworzony reprodukcje nie są tak przydatne w przypadku problemów, które może być skutkiem błędów w naszej implementacji standardowej biblioteki, ponieważ firma Microsoft często chcą zastąpić naszej implementacji najnowsze, w toku, aby zobaczyć, czy już rozwiązaliśmy problem. W tym przypadku nie Przetwarzaj wstępnie odtwarzania, a jeśli nie można zmniejszyć problem z plikiem pojedyncze źródło pakietu kodu w pliku zip lub podobnych, lub rozważ zastosowanie odtworzenia projektu środowiska IDE. Aby uzyskać więcej informacji, zobacz [innych reprodukcje](#other-repros).
+> Wstępnie przetworzone rozwiązania nie są tak przydatne w przypadku problemów, które mogą wynikać z błędów w naszej implementacji biblioteki standardowej, ponieważ często chcemy zastąpić najnowszą implementację w toku, aby sprawdzić, czy problem został już rozwiązany. W takim przypadku nie należy wstępnie przetworzyć Odtwórz, a jeśli problem nie zostanie zredukowany do pojedynczego pliku źródłowego, spakuj kod do pliku zip lub podobne lub Rozważ użycie Odtwórz projektu IDE. Aby uzyskać więcej informacji, zobacz [inne reformatyki](#other-repros).
 
-#### <a name="to-preprocess-a-source-code-file"></a>Można wstępnie przetworzyć plik kodu źródłowego
+#### <a name="to-preprocess-a-source-code-file"></a>Aby wstępnie przetworzyć plik kodu źródłowego
 
-1. Przechwytywanie argumenty wiersza polecenia używane do konstruowania swoje odtwarzania, zgodnie z opisem w [zgłosić zawartość wiersza polecenia](#to-report-the-contents-of-the-command-line).
+1. Przechwyć argumenty wiersza polecenia używane do kompilowania Odtwórz, zgodnie z opisem w artykule [Aby zgłosić zawartość wiersza polecenia](#to-report-the-contents-of-the-command-line).
 
-1. Otwórz **wiersz polecenia dla deweloperów** odpowiadającej architektury konfiguracji i wersji programu Visual Studio umożliwia kompilowanie projektu.
+1. Otwórz **wiersz polecenia dla deweloperów** , które pasują do wersji programu Visual Studio i architektury konfiguracji użytej do skompilowania projektu.
 
-1. Przejdź do katalogu, zawierająca projekt Twojego odtwarzania.
+1. Przejdź do katalogu, który zawiera projekt Odtwórz.
 
-1. W oknie konsoli wiersza polecenia dla deweloperów, wprowadź polecenie **cl /P** *argumenty* *filename.cpp*. Aby uzyskać *argumenty*, użyj listy argumentów przechwycone powyżej. *filename.cpp* to nazwa pliku źródłowego odtwarzania. To polecenie replikuje wiersza polecenia używane do odtworzenia, ale zatrzymuje kompilację po przebiegu preprocesora. A następnie zapisuje kod źródłowy wstępnie przetworzony do *filename.i*.
+1. W oknie konsoli wiersza polecenia dla deweloperów wprowadź polecenie **CL/p** *argumenty* *filename. cpp*. Dla *argumentów*Użyj listy przechwyconych powyżej argumentów. *filename. cpp* to nazwa pliku źródłowego Odtwórz. To polecenie replikuje wiersz polecenia, który został użyty w Odtwórz, ale kończy kompilację po przejściu preprocesora. Następnie zapisuje wstępnie przetworzony kod źródłowy do *filename. i*.
 
-Jeśli masz przetwarzania wstępnego C++/CX pliku z kodem źródłowym, czy też korzystasz C++ funkcją modułów pewne dodatkowe kroki są wymagane. Aby uzyskać więcej informacji zobacz sekcje poniżej.
+Jeśli przetwarzasz wstępnie plik kodu źródłowego C++/CX lub używasz funkcji C++ modułów, wymagane są pewne dodatkowe czynności. Aby uzyskać więcej informacji, zobacz poniższe sekcje.
 
-Po wygenerowaniu wstępnie przetworzony plik jest dobry pomysł, aby upewnić się, że nadal reprodukcje problem podczas kompilowania wstępnie przetworzonego pliku.
+Po wygenerowaniu wstępnie przygotowanego pliku dobrym pomysłem jest upewnienie się, że problem nadal odbędzie się w przypadku kompilowania wstępnie przygotowanego pliku.
 
-#### <a name="to-confirm-the-preprocessed-file-still-repros-the-error"></a>Aby upewnić się, błąd reprodukcje nadal wstępnie przetworzony plik
+#### <a name="to-confirm-the-preprocessed-file-still-repros-the-error"></a>Aby potwierdzić, że wstępnie przetworzony plik nadal wystanowił problem
 
-1. W oknie konsoli wiersza polecenia dla deweloperów, wprowadź polecenie **cl** *argumenty* **/TP** *filename.i* mówić cl.exe, aby skompilować Wstępnie przetworzony plik jako C++ pliku źródłowego. *Argumenty* są te same argumenty, które są przechwytywane powyżej, ale także z dowolnymi **/D** i **/I** argumenty usunięte. To, ponieważ zostało już zawarta w pliku wstępnie przetworzony. *filename.i* jest nazwę wstępnie przetworzonego pliku.
+1. W oknie konsoli wiersza polecenia dla deweloperów wprowadź polecenie **CL** *argumenty* , a następnie *, aby powiedzieć CL. exe* , aby skompilować wstępnie przetworzony plik jako plik C++ źródłowy. *Argumenty* są tymi samymi argumentami, które zostały przechwycone powyżej, ale z usuniętymi argumentami **/d** i **/i** . Wynika to z faktu, że zostały one już zawarte w wstępnie przetworzonym pliku. *filename. i* jest nazwą wstępnie przetworzonego pliku.
 
-1. Upewnij się, że problem jest przedstawiony.
+1. Upewnij się, że problem został odtworzony.
 
-Na koniec dołączyć wstępnie przetworzony odtwarzania *filename*.i do raportu.
+Na koniec Dołącz wstępnie przetworzony *plik*Odtwórz do raportu.
 
-### <a name="preprocessed-ccx-winrtuwp-code-repros"></a>Wstępnie przetworzony C++/CX reprodukcje kodu WinRT/platformy uniwersalnej systemu Windows
+### <a name="preprocessed-ccx-winrtuwp-code-repros"></a>Wstępnie przetworzonych C++/CX WINRT/platformy UWP kodu
 
-Jeśli używasz C++/CX, aby utworzyć plik wykonywalny, istnieją pewne dodatkowe kroki wymagane do tworzenia i sprawdzania poprawności wstępnie przetworzony odtwarzania.
+Jeśli używasz C++/CX do kompilowania pliku wykonywalnego, musisz wykonać kilka dodatkowych kroków, aby utworzyć i zweryfikować wstępnie przetworzony Odtwórz.
 
-#### <a name="to-preprocess-ccx-source-code"></a>Można wstępnie przetworzyć C++/CX kodu źródłowego
+#### <a name="to-preprocess-ccx-source-code"></a>Aby wstępnie przetworzyć C++kod źródłowy/CX
 
-1. Utwórz plik wstępnie przetworzone źródło, zgodnie z opisem w [można wstępnie przetworzyć plik kodu źródłowego](#to-preprocess-a-source-code-file).
+1. Utwórz wstępnie przetworzony plik źródłowy zgodnie z opisem w artykule, [Aby wstępnie przetworzyć plik kodu źródłowego](#to-preprocess-a-source-code-file).
 
-1. Wyszukaj wygenerowany _filename_pliku .i **#using** dyrektywy.
+1. Przeszukaj plik wygenerowanej _nazwy_pliku. i dla dyrektyw **#using** .
 
-1. Sporządź listę wszystkich plików, do którego istnieje odwołanie. Opuść wszelkie Windows\*pliki .winmd, pliki platform.winmd i mscorlib.dll.
+1. Utwórz listę wszystkich plików, do których istnieją odwołania. Pozostaw wszystkie pliki winmd systemu Windows @ no__t-0, pliki. winmd i mscorlib. dll.
 
-Aby przygotować się do zweryfikowania, że wstępnie przetworzony plik nadal odtwarza ten problem,
+Aby przygotować się do zweryfikowania, że wstępnie przetworzony plik nadal powoduje problem,
 
-1. Utwórz nowy katalog dla wstępnie przetworzony plik i skopiuj go do nowego katalogu.
+1. Utwórz nowy katalog dla wstępnie przetworzonego pliku i skopiuj go do nowego katalogu.
 
-1. Skopiuj pliki .winmd z Twojej **#using** listy do nowego katalogu.
+1. Skopiuj pliki winmd z listy **#using** do nowego katalogu.
 
-1. Utwórz plik vccorlib.h pusty w nowym katalogu.
+1. Utwórz pusty plik vccorlib. h w nowym katalogu.
 
-1. Edytuj wstępnie przetworzony plik, aby usunąć dowolny **#using** dyrektywy dla biblioteki mscorlib.dll.
+1. Edytuj wstępnie przetworzony plik, aby usunąć wszystkie dyrektywy **#using** dla biblioteki mscorlib. dll.
 
-1. Edytuj plik wstępnie przetworzony, aby zmienić żadnych ścieżek bezwzględnych tylko bez nazwy plików dla plików skopiowanych winmd.
+1. Przeprowadź edycję wstępnie przetworzonego pliku, aby zmienić wszystkie ścieżki bezwzględne na tylko nazwy plików. winmd.
 
-Upewnij się, że wstępnie przetworzony plik nadal odtwarza ten problem, jak powyżej.
+Upewnij się, że wstępnie przetworzony plik nadal powoduje problem, jak powyżej.
 
-### <a name="preprocessed-c-modules-repros"></a>Wstępnie przetworzony reprodukcje moduły języka C++
+### <a name="preprocessed-c-modules-repros"></a>Reprodukcje C++ modułów wstępnie przetworzonych
 
-Jeśli używasz funkcji modułów kompilatora C++ istnieją wykonanie innych czynności wymagane do tworzenia i sprawdzania poprawności wstępnie przetworzony odtwarzania.
+Jeśli używasz funkcji modułów C++ kompilatora, istnieją różne kroki wymagane do utworzenia i zweryfikowania wstępnie przetworzonego Odtwórz.
 
-#### <a name="to-preprocess-a-source-code-file-that-uses-a-module"></a>Można wstępnie przetworzyć pliku kodu źródłowego, który używa modułu
+#### <a name="to-preprocess-a-source-code-file-that-uses-a-module"></a>Aby wstępnie przetworzyć plik kodu źródłowego, który używa modułu
 
-1. Przechwytywanie argumenty wiersza polecenia używane do konstruowania swoje odtwarzania, zgodnie z opisem w [zgłosić zawartość wiersza polecenia](#to-report-the-contents-of-the-command-line).
+1. Przechwyć argumenty wiersza polecenia używane do kompilowania Odtwórz, zgodnie z opisem w artykule [Aby zgłosić zawartość wiersza polecenia](#to-report-the-contents-of-the-command-line).
 
-1. Otwórz **wiersz polecenia dla deweloperów** odpowiadającej architektury konfiguracji i wersji programu Visual Studio umożliwia kompilowanie projektu.
+1. Otwórz **wiersz polecenia dla deweloperów** , które pasują do wersji programu Visual Studio i architektury konfiguracji użytej do skompilowania projektu.
 
-1. Przejdź do katalogu, zawierająca projekt Twojego odtwarzania.
+1. Przejdź do katalogu, który zawiera projekt Odtwórz.
 
-1. W oknie konsoli wiersza polecenia dla deweloperów, wprowadź polecenie **cl /P** *argumenty* *filename.cpp*. *Argumenty* argumentów przechwycone powyżej i *filename.cpp* to nazwa pliku źródłowego, który korzysta z modułu.
+1. W oknie konsoli wiersza polecenia dla deweloperów wprowadź polecenie **CL/p** *argumenty* *filename. cpp*. *Argumenty* są przechwyconych powyżej argumentów, a *filename. cpp* jest nazwą pliku źródłowego, który korzysta z modułu.
 
-1. Przejdź do katalogu, zawierającego projekt odtwarzania z wbudowanej interfejsu modułu (dane wyjściowe .ifc).
+1. Przejdź do katalogu, który zawiera projekt Odtwórz, który skompilowano interfejs modułu (dane wyjściowe IFC).
 
-1. Przechwyć argumenty wiersza polecenia używane do tworzenia interfejsu modułu.
+1. Przechwyć argumenty wiersza polecenia użyte do skompilowania interfejsu modułu.
 
-1. W oknie konsoli wiersza polecenia dla deweloperów, wprowadź polecenie **cl /P** *argumenty* *modulename.ixx*. *Argumenty* argumentów przechwycone powyżej, a *modulename.ixx* to nazwa pliku który jest tworzony interfejs modułu.
+1. W oknie konsoli wiersza polecenia dla deweloperów wprowadź polecenie **CL/p** *argumenty* *ModuleName. IXX*. *Argumenty* są przechwyconych powyżej argumentów, a wartość *ModuleName. IXX* jest nazwą pliku, który tworzy interfejs modułu.
 
-Po wygenerowaniu wstępnie przetworzonych plików jest dobry pomysł, aby upewnić się, reprodukcje nadal problem korzystając z wstępnie przetworzonego pliku.
+Po wygenerowaniu wstępnie przetworzonych plików dobrym pomysłem jest upewnienie się, że problem nadal odbędzie się w przypadku użycia wstępnie przetworzonego pliku.
 
-#### <a name="to-confirm-the-preprocessed-file-still-repros-the-error"></a>Aby upewnić się, błąd reprodukcje nadal wstępnie przetworzony plik
+#### <a name="to-confirm-the-preprocessed-file-still-repros-the-error"></a>Aby potwierdzić, że wstępnie przetworzony plik nadal wystanowił problem
 
-1. W oknie konsoli dewelopera zmiany do katalogu zawierającego projekt odtwarzania.
+1. W oknie konsoli dewelopera Wróć do katalogu, który zawiera projekt Odtwórz.
 
-1. Wprowadź polecenie **cl** *argumenty* **/TP** *filename*.i opisanych powyżej, aby skompilować wstępnie przetworzony plik tak, jakby była pliku źródłowego języka C++.
+1. Wprowadź ciąg Command **CL** *argumentów* **/TP** *filename*. i jak powyżej, aby skompilować wstępnie przetworzony plik, tak jakby był plikiem C++ źródłowym.
 
-1. Upewnij się, że problem nadal jest przedstawiony przez wstępnie przetworzony plik.
+1. Upewnij się, że problem jest nadal odtwarzany przez wstępnie przetworzony plik.
 
-Na koniec dołączania plików wstępnie przetworzony odtwarzania (*filename*.i i *modulename*.i) wraz z danych wyjściowych .ifc do raportu.
+Na koniec Dołącz wstępnie przetworzone pliki Odtwórz (*filename*. i i *ModuleName*. i) wraz z danymi wyjściowymi. IFC do raportu.
 
-### <a name="link-repros"></a>Reprodukcje łącza
+### <a name="link-repros"></a>Linki reinformatyków
 
-A *odtwarzania łącze* jest generowanych przez konsolidator zawartość katalogu określonego przez **łącze\_odtwarzania** zmiennej środowiskowej. Zawiera ona artefaktów kompilacji, które wspólnie pokazują problem występujący w czasie połączenia. Przykłady obejmują wewnętrznej bazy danych o awariach, obejmujące generowanie kodu czasie konsolidowania (LTCG) lub awarię konsolidatora. Te artefakty kompilacji mogą wymaganiom konsolidatora danych wejściowych, dzięki czemu można odtworzyć problem. Odtwórz łącza można utworzyć prosty sposób za pomocą tej zmiennej środowiskowej. Dzięki temu konsolidator posiada wbudowane odtwarzania generowania możliwości.
+*Link Odtwórz* to zawartość katalogu wygenerowanego przez konsolidatora, określona przez zmienną środowiskową **link @ no__t-2repro** lub jako argument dla opcji konsolidatora [/LINKREPRO](../build/reference/linkrepro.md) . Zawiera ona artefakty kompilacji, które zbiorczo przedstawiają problem występujący w czasie łączenia. Przykładami mogą być awarie zaplecza obejmujące generowanie kodu w czasie konsolidacji (LTCG) lub awarię konsolidatora. Te artefakty kompilacji są tymi, które są zbędne jako dane wejściowe konsolidatora, aby można było odtworzyć problem. Odtwórz linku można łatwo utworzyć przy użyciu tej zmiennej środowiskowej. Umożliwia wbudowaną funkcję generacji Odtwórz.
 
-#### <a name="to-generate-a-link-repro"></a>Aby wygenerować odtwarzania łącza
+#### <a name="to-generate-a-link-repro-using-the-link_repro-environment-variable"></a>Aby wygenerować łącze Odtwórz przy użyciu zmiennej środowiskowej link_repro
 
-1. Przechwytywanie argumenty wiersza polecenia używane do konstruowania swoje odtwarzania, zgodnie z opisem w [zgłosić zawartość wiersza polecenia](#to-report-the-contents-of-the-command-line).
+1. Przechwyć argumenty wiersza polecenia używane do kompilowania Odtwórz, zgodnie z opisem w artykule [Aby zgłosić zawartość wiersza polecenia](#to-report-the-contents-of-the-command-line).
 
-1. Otwórz **wiersz polecenia dla deweloperów** odpowiadającej architektury konfiguracji i wersji programu Visual Studio umożliwia kompilowanie projektu.
+1. Otwórz **wiersz polecenia dla deweloperów** , które pasują do wersji programu Visual Studio i architektury konfiguracji użytej do skompilowania projektu.
 
-1. W oknie konsoli wiersza polecenia dla deweloperów przejdź do katalogu, zawierająca projekt Twojego odtwarzania.
+1. W oknie konsoli wiersza polecenia dla deweloperów Przejdź do katalogu, który zawiera projekt Odtwórz.
 
-1. Wprowadź **mkdir linkrepro** można utworzyć katalogu frazy odtwarz łącza.
+1. Wprowadź **mkdir linkrepro** , aby utworzyć katalog o nazwie *linkrepro* dla łącza Odtwórz. Możesz użyć innej nazwy, aby przechwycić inne łącze Odtwórz.
 
-1. Wprowadź polecenie **Ustaw link\_odtwarzania = linkrepro** można ustawić **łącze\_odtwarzania** zmiennej środowiskowej do katalogu, który został utworzony. Jeśli kompilacja jest uruchamiana z innego katalogu, jak często w przypadku bardziej złożonych projektów, wartość **łącze\_odtwarzania** na pełną ścieżkę do katalogu linkrepro zamiast tego.
+1. Wprowadź polecenie **Set link @ no__t-1repro = linkrepro** , aby ustawić zmienną środowiskową **link @ no__t-3repro** do utworzonego katalogu. Jeśli kompilacja jest uruchamiana z innego katalogu, jak często jest to w przypadku bardziej złożonych projektów, a następnie ustaw **link @ no__t-1repro** na pełną ścieżkę do katalogu link Odtwórz.
 
-1. Aby skompilować projekt odtwarzania w programie Visual Studio w oknie konsoli wiersza polecenia dla deweloperów, wprowadź polecenie **devenv**. Zapewnia, że wartość **łącze\_odtwarzania** zmienna środowiskowa jest widoczny dla programu Visual Studio. Aby skompilować projekt w wierszu polecenia, użyj argumentów wiersza polecenia, przechwycenie powyżej zduplikowane kompilacji odtwarzania.
+1. Aby skompilować projekt Odtwórz w programie Visual Studio, w oknie konsoli wiersza polecenia dla deweloperów wprowadź polecenie **devenv**. Gwarantuje to, że wartość zmiennej środowiskowej **link @ no__t-1repro** jest widoczna dla programu Visual Studio. Aby skompilować projekt w wierszu polecenia, użyj argumentów wiersza polecenia przechwycone powyżej, aby zduplikować kompilację Odtwórz.
 
-1. Kompilowanie projektu odtwarzania i upewnij się, że wystąpił problem oczekiwane.
+1. Skompiluj projekt Odtwórz i upewnij się, że wystąpił oczekiwany problem.
 
-1. Zamknij program Visual Studio, jeśli użyto celu kompilacji.
+1. Zamknij program Visual Studio, jeśli został on użyty do wykonania kompilacji.
 
-1. W oknie konsoli wiersza polecenia dla deweloperów, wprowadź polecenie **Ustaw link\_odtwarzania =** wyczyść **łącze\_odtwarzania** zmiennej środowiskowej.
+1. W oknie konsoli wiersza polecenia dla deweloperów wprowadź polecenie **Ustaw link @ no__t-1repro =** , aby wyczyścić zmienną środowiskową **link @ no__t-3repro** .
 
-Na koniec pakiet odtwarzania poprzez kompresowanie całego linkrepro katalogu do pliku zip lub podobne i dołączyć go do raportu.
+Na koniec Spakuj Odtwórz, kompresując cały katalog linkrepro do pliku zip lub podobne i dołącz go do raportu.
 
-### <a name="other-repros"></a>Inne reprodukcje
+Opcja konsolidatora **/LINKREPRO** ma taki sam skutek jak zmienna środowiskowa **link @ no__t-2repro** . Można użyć opcji [/LINKREPROTARGET](../build/reference/linkreprotarget.md) , aby określić nazwę do filtrowania dla wygenerowanego linku Odtwórz. Aby użyć **/LINKREPROTARGET**, należy również określić opcję konsolidatora **/out** .
 
-Jeśli problem nie można zmniejszyć do pojedynczego źródła pliku lub odtworzenia wstępnie przetworzony, a problem nie wymaga odtwarzania łącze, firma Microsoft można zbadać projektu środowiska IDE. Nadal mają zastosowanie wszystkie wskazówki dotyczące sposobu tworzenia dobrych odtwarzania: Kod powinno być minimalna i niezależna. Problem w przypadku wystąpienia w nasze najnowsze narzędzia i w razie potrzeby, nie są widoczne w innych kompilatorów.
+#### <a name="to-generate-a-link-repro-using-the-linkrepro-option"></a>Aby wygenerować łącze Odtwórz przy użyciu opcji/LINKREPRO
 
-Utwórz swoje odtwarzania jako projektu minimalnego środowiska IDE, a następnie spakujesz ją poprzez kompresowanie całej struktury katalogów w pliku zip lub podobne i dołączyć go do raportu.
+1. Utwórz katalog do przechowywania linku Odtwórz. Odwołujemy się do pełnej ścieżki katalogu, którą utworzysz jako _ścieżkę katalogu_. Użyj podwójnego cudzysłowu wokół ścieżki, jeśli zawiera spacje.
 
-## <a name="ways-to-send-your-report"></a>Sposoby, aby wysłać raport
+1. Dodaj polecenie **/LINKREPRO:** _Directory-Path_ do wiersza polecenia konsolidatora. W programie Visual Studio Otwórz okno dialogowe **strony właściwości** dla projektu. Wybierz **Właściwości konfiguracji** > **konsolidator** >  Strona właściwości**wiersza polecenia** . Następnie w polu **dodatkowe opcje** wprowadź wartość **/LINKREPRO:** _Directory-Path_ . Wybierz **przycisk OK** , aby zapisać zmiany.
 
-Istnieje kilka sposobów uzyskać raport z nami. Można użyć wbudowanego programu Visual Studio [narzędzia Zgłoś Problem](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017), lub [społeczności deweloperów programu Visual Studio](https://developercommunity.visualstudio.com/) stron. Istnieje również **opinie o produkcie** znajdujący się u dołu tej strony. Wybór zależy od tego, czy chcesz użyć wbudowane narzędzia w IDE, Przechwytywanie zrzutów ekranu i organizowania raportu. Jeśli wolisz nie może bezpośrednio korzystać witryny sieci Web społeczności deweloperów.
+1. Skompiluj projekt Odtwórz i upewnij się, że wystąpił oczekiwany problem.
+
+Na koniec Utwórz pakiet Odtwórz przez skompresowanie całej _ścieżki katalogu_ Odtwórz katalogu w pliku zip lub podobnej, a następnie Dołącz do raportu.
+
+### <a name="other-repros"></a>Inne reprofesjonalisty
+
+Jeśli nie możesz zmniejszyć problemu do pojedynczego pliku źródłowego lub wstępnie przetworzonego Odtwórz, a problem nie wymaga linku Odtwórz, możemy zbadać projekt IDE. Wszystkie wskazówki dotyczące tworzenia dobrego Odtwórz nadal mają zastosowanie: kod powinien być minimalny i niezależny. Problem powinien wystąpić w naszych najnowszych narzędziach, a jeśli ma to zastosowanie, nie powinien być widoczny w innych kompilatorach.
+
+Utwórz Odtwórz jako minimalny projekt IDE, a następnie spakuj go, kompresując całą strukturę katalogów do pliku zip lub podobną i dołączając ją do raportu.
+
+## <a name="ways-to-send-your-report"></a>Sposoby wysyłania raportu
+
+Masz kilka dobrych metod uzyskiwania raportu do nas. Możesz użyć wbudowanego raportu programu Visual Studio, [Narzędzia problemu](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)lub stron [społeczności deweloperów programu Visual Studio](https://developercommunity.visualstudio.com/) . W dolnej części tej strony znajduje się również przycisk **opinii o produkcie** . Wybór zależy od tego, czy chcesz używać wbudowanych narzędzi w IDE do przechwytywania zrzutów ekranu i organizowania raportu. Jeśli wolisz nie, możesz bezpośrednio korzystać z witryny internetowej społeczności deweloperów.
 
 > [!NOTE]
-> Niezależnie od tego, jak możesz przesłać raport firma Microsoft szanuje Twoją prywatność. Firma Microsoft poświęca zgodności ze wszystkimi prawem ochrony danych i przepisów. Aby dowiedzieć się, jak będzie traktowany jak dane, które możesz wysłać do nas, zobacz [zasady zachowania poufności informacji firmy Microsoft](https://privacy.microsoft.com/privacystatement).
+> Niezależnie od tego, jak przesyłasz raport, firma Microsoft szanuje Twoją prywatność. Firma Microsoft jest zobowiązana do zgodności ze wszystkimi przepisami i przepisami dotyczącymi ochrony prywatności danych. Aby dowiedzieć się, jak traktujemy dane wysyłane do nas, zobacz [zasady zachowania poufności informacji firmy Microsoft](https://privacy.microsoft.com/privacystatement).
 
-### <a name="use-the-report-a-problem-tool"></a>Raport narzędzia Problem
+### <a name="use-the-report-a-problem-tool"></a>Korzystanie z narzędzia Zgłoś problem
 
-**Zgłoś Problem** narzędzia w programie Visual Studio jest sposobem użytkowników programu Visual Studio na zgłaszanie problemów za pomocą kilku kliknięć. W wyświetlonym prosty formularz, aby wysłać szczegółowe informacje o problemie, który Ci się znaleźć. Później możesz przesłać raportu bez opuszczania środowiska IDE.
+Narzędzie **Zgłoś problem** w programie Visual Studio umożliwia użytkownikom programu Visual Studio zgłaszanie problemów za pomocą zaledwie kilku kliknięć. Zostanie wystawiony prosty formularz umożliwiający wysłanie szczegółowych informacji o znalezionym problemie. Następnie można przesłać raport bez opuszczania środowiska IDE.
 
-Zgłoszenie problemu za pomocą **Zgłoś Problem** narzędzie to można łatwo i wygodnie z poziomu środowiska IDE. Dostęp z paska tytułu, wybierając **Wyślij opinię** ikona obok pozycji **Szybkie uruchamianie** pola wyszukiwania. Lub możesz go znaleźć na pasku menu w **pomocy** > **Wyślij opinię** > **Zgłoś Problem**.
+Raportowanie problemu za pomocą narzędzia **Zgłoś problem** jest łatwe i wygodne w środowisku IDE. Możesz uzyskać do niego dostęp z paska tytułu, wybierając ikonę **Wyślij opinię** obok pola wyszukiwania **Szybkie uruchamianie** . Lub można ją znaleźć na pasku menu w **pomocy** > **Wyślij opinię** > **Zgłoś problem**.
 
-Po wybraniu opcji Zgłoś problem najpierw wyszukać społeczności deweloperów dla podobne problemy. W przypadku, gdy problem został zgłoszony, Zagłosuj raportu i dodać komentarze o dodatkowe charakterystyce. Jeśli nie widzisz podobny problem, wybierz opcję **Zgłoś nowy problem** znajdujący się w dolnej części okna dialogowego programu Visual Studio Feedback i postępuj zgodnie z instrukcjami, aby zgłosić problem.
+Gdy zdecydujesz się zgłosić problem, najpierw Przeszukaj społeczność deweloperów pod kątem podobnych problemów. Jeśli Twój problem został zgłoszony wcześniej, przekazanie raportu i dodanie komentarzy z dodatkowymi szczegółami. Jeśli nie widzisz podobnego problemu, wybierz przycisk **zgłoś nowy problem** u dołu okna dialogowego opinii programu Visual Studio i postępuj zgodnie z instrukcjami, aby zgłosić problem.
 
-### <a name="use-the-visual-studio-developer-community-pages"></a>Użyj stron społeczności deweloperów programu Visual Studio
+### <a name="use-the-visual-studio-developer-community-pages"></a>Korzystanie ze stron społeczności deweloperów programu Visual Studio
 
-Strony społeczności deweloperów programu Visual Studio są innego wygodny sposób zgłaszać problemy i rozwiązania dla programu Visual Studio i kompilatora języka C++, narzędzi i bibliotek. Istnieją konkretne strony społeczności deweloperów dla [programu Visual Studio](https://developercommunity.visualstudio.com/spaces/8/index.html), [programu Visual Studio dla komputerów Mac](https://developercommunity.visualstudio.com/spaces/41/index.html), [.NET](https://developercommunity.visualstudio.com/spaces/61/index.html), [ C++ ](https://developercommunity.visualstudio.com/spaces/62/index.html), [Usługi azure DevOps](https://developercommunity.visualstudio.com/spaces/21/index.html), i [TFS](https://developercommunity.visualstudio.com/spaces/22/index.html).
+Strony społeczności deweloperów programu Visual Studio to kolejną wygodną metodę zgłaszania problemów i znajdowania rozwiązań dla programu Visual C++ Studio oraz kompilatora, narzędzia i biblioteki. Istnieją konkretne strony społeczności deweloperów dla [programu Visual Studio](https://developercommunity.visualstudio.com/spaces/8/index.html), [Visual Studio dla komputerów Mac](https://developercommunity.visualstudio.com/spaces/41/index.html), [.NET](https://developercommunity.visualstudio.com/spaces/61/index.html), [C++](https://developercommunity.visualstudio.com/spaces/62/index.html) [Azure DevOps Services](https://developercommunity.visualstudio.com/spaces/21/index.html)i [TFS](https://developercommunity.visualstudio.com/spaces/22/index.html).
 
-Poniżej karty społeczności, u góry każdej strony jest pole wyszukiwania. Służy on do Znajdź wpisy, które zgłaszanie problemów podobnej do Twojej. Może się okazać rozwiązania lub inne przydatne informacje dotyczące tego problemu jest już dostępny. Jeśli ktoś zgłosił ten sam problem, przed następnie Zagłosuj i komentarz na który raportu, zamiast tworzyć nowy raport o problemie. Aby dodać komentarz, Zagłosuj lub zgłosić nowy problem, może być konieczne Zaloguj się do swojego konta programu Visual Studio. Podczas pierwszego logowania, musisz wyrazić zgodę na przypisać społeczność deweloperów aplikacji dostęp do Twojego profilu.
+Poniżej kart społeczności w górnej części każdej strony jest pole wyszukiwania. Można go użyć, aby znaleźć wpisy, które zgłaszają problemy podobne do Twoich potrzeb. Rozwiązanie lub inne przydatne informacje związane z Twoim problemem są już dostępne. Jeśli ktoś zgłosił ten sam problem przed, należy zagłosować i skomentować ten raport zamiast tworzyć nowy raport o problemie. Aby skomentować, zagłosować lub zgłosić nowy problem, może zostać wyświetlony monit o zalogowanie się do konta programu Visual Studio. Gdy logujesz się po raz pierwszy, musisz wyrazić zgodę na uzyskanie dostępu do Twojego profilu aplikacji społeczności deweloperów.
 
-W przypadku problemów przy użyciu kompilatora, konsolidatora i innych narzędzi i bibliotek C++ [C++](https://developercommunity.visualstudio.com/spaces/62/index.html) strony. Jeśli wyszukiwanie dla danego problemu, a nie został zgłoszony przed, wybierz opcję **Zgłoś problem** przycisk znajdujący się obok pola wyszukiwania. Może zawierać kod odtwarzania i wiersza polecenia, zrzuty ekranu, linki do pokrewnych dyskusjami i inne informacje, które Twoim zdaniem są istotne i przydatne.
+W przypadku problemów z C++ kompilatorem, konsolidatorem i innymi narzędziami i bibliotekami [C++](https://developercommunity.visualstudio.com/spaces/62/index.html) Użyj strony. Jeśli wyszukasz problem i nie został on zgłoszony wcześniej, wybierz przycisk **Zgłoś problem** obok pola wyszukiwania. Możesz dołączyć kod Odtwórz i wiersz polecenia, zrzuty ekranu, linki do powiązanych dyskusji i inne informacje, które Twoim zdaniem są odpowiednie i przydatne.
 
 > [!TIP]
-> Dla innych rodzajów problemów można znaleźć w Visual Studio, które są związane C++ zestaw narzędzi (na przykład interfejsu użytkownika problemy, uszkodzenie funkcjonalności środowiska IDE lub awarie ogólne), użyj **Zgłoś Problem** narzędzia w IDE. Jest to najlepszy wybór, ze względu na jej możliwości zrzut ekranu i możliwość rejestrowania działania interfejsu użytkownika, które mogą prowadzić do problemu, który Ci się znaleźć. Te rodzaje błędów można również wyszukiwać [społeczności deweloperów](https://developercommunity.visualstudio.com/) lokacji. Aby uzyskać więcej informacji, zobacz [jak zgłosić problem z programem Visual Studio](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017).
+> W przypadku innych rodzajów problemów, które mogą znajdować się w programie Visual Studio, które C++ nie są związane z zestawem narzędzi (na przykład problemy z interfejsem użytkownika, uszkodzone funkcje środowiska IDE lub ogólne awarie), użyj narzędzia **Zgłoś problem** w środowisku IDE. Jest to najlepszy wybór ze względu na możliwości zrzutu ekranu i możliwości rejestrowania akcji interfejsu użytkownika, które prowadzą do znalezionego problemu. Te rodzaje błędów można również wyszukać w witrynie [społeczności deweloperów](https://developercommunity.visualstudio.com/) . Aby uzyskać więcej informacji, zobacz [Jak zgłosić problem w programie Visual Studio](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017).
 
-### <a name="reports-and-privacy"></a>Raporty i ochrona prywatności
+### <a name="reports-and-privacy"></a>Raporty i prywatność
 
-**Wszystkie informacje w raportach i wszelkie komentarze i odpowiedzi są publicznie widoczne, domyślnie**. Zazwyczaj jest to korzyść ponieważ zezwala ona na całej społeczności, aby wyświetlić problemy, rozwiązania i rozwiązania, które znaleziono innym użytkownikom. Jednak jeśli interesujące Cię ujawnianie Twoje dane lub tożsamość, dla prywatności lub z przyczyn własności intelektualnej, dostępne opcje.
+**Wszystkie informacje w raportach i komentarze i odpowiedzi są publicznie widoczne domyślnie**. Zwykle jest to korzyść, ponieważ umożliwia całej społeczności przeglądanie problemów, rozwiązań i obejścia przez innych użytkowników. Jeśli jednak obawiasz się, że dane lub tożsamość są publiczne, w celu zachowania poufności lub własności intelektualnej są dostępne opcje.
 
-Jeśli jest sprawą przedstawiania swoją tożsamość, [Utwórz nowe konto Microsoft](https://signup.live.com/) , nie ujawni wszelkie szczegółowe informacje o Tobie. Aby utworzyć raport, należy użyć tego konta.
+Jeśli chodzi o ujawnienie tożsamości, [Utwórz nową konto Microsoft](https://signup.live.com/) , która nie ujawnia żadnych szczegółowych informacji o użytkowniku. Użyj tego konta, aby utworzyć raport.
 
-**Nie umieszczaj coś, co chcesz przechowywać prywatne w ramach tytułu lub zawartości elementu początkowego raportu, który nie jest publiczny.** Zamiast tego Załóżmy, że będzie wysłanie szczegółów prywatnie w oddzielnych komentarz. Aby upewnić się, że raport jest kierowany do odpowiednich osób, obejmują **cppcompiler** w temacie Lista raport o problemie. Po utworzeniu raport o problemie, jest teraz możliwość określenia, kto może wyświetlać odpowiedzi i załączników.
+**Nie umieszczaj żadnych elementów, które chcesz zachować prywatną w tytule lub treści raportu początkowego, który jest publiczny.** Zamiast tego należy powiedzieć, że dane będą wysyłane prywatnie w osobnym komentarzu. Aby upewnić się, że raport jest kierowany do odpowiednich osób, należy uwzględnić **cppcompiler** na liście tematów raportu o problemie. Po utworzeniu raportu o problemie można określić, kto może wyświetlać Twoje odpowiedzi i załączniki.
 
-#### <a name="to-create-a-problem-report-for-private-information"></a>Aby utworzyć raport o problemie informacji prywatnych
+#### <a name="to-create-a-problem-report-for-private-information"></a>Aby utworzyć raport dotyczący problemu dla prywatnych informacji
 
-1. W raporcie, możesz utworzyć, wybierz **Dodaj komentarz** do utworzenia prywatnej opis problemu.
+1. W utworzonym raporcie wybierz pozycję **Dodaj komentarz** , aby utworzyć swój prywatny opis problemu.
 
-1. W edytorze odpowiedzi, należy użyć z rozwijanej listy formantów poniżej **przesyłania** i **anulować** przycisków, aby określić odbiorców w odpowiedzi. Tylko osoby, które określisz zobaczyć te prywatnej odpowiedzi i obrazów, łącza lub kod, który należy uwzględnić w nich. Wybierz **Viewable moderatorzy i oryginalnego plakat** Aby ograniczyć widoczność, aby pracownicy firmy Microsoft i samodzielnie.
+1. W edytorze odpowiedzi użyj kontrolki lista rozwijana poniżej przycisków **Prześlij** i **Anuluj** , aby określić odbiorców odpowiedzi. Tylko określone osoby mogą wyświetlać te prywatne odpowiedzi i wszystkie obrazy, linki lub kod, które są w nich zawarte. Wybierz opcję **widoczne dla moderatorów i oryginalny plakat** , aby ograniczyć widoczność do pracowników firmy Microsoft i siebie.
 
-1. Dodaj opis i wszelkie inne informacje, obrazy i załączniki plików potrzebnych do odtworzenia usługi. Wybierz **przesyłania** przycisk, aby wysyłać tych informacji przez użytkowników.
+1. Dodaj opis i wszelkie inne informacje, obrazy i załączniki plików potrzebne do Odtwórz. Wybierz przycisk **Prześlij** , aby wysłać te informacje prywatnie.
 
-   Istnieje limit 2GB na dołączonych plików i maksymalnie 10 plików. Wszelkie większych przekazywania żądanie adresu URL przekazywania w komentarzu do prywatnego.
+   Istnieje limit 2 GB załączonych plików i maksymalnie 10 plików. W przypadku większych przeciążeń Zażądaj adresu URL przekazywania w Twoim komentarzu prywatnym.
 
-Wszystkie odpowiedzi w ramach tego komentarza ma taką samą widoczność ograniczone, wskazana. To PRAWDA, nawet wtedy, gdy kontrolka listy rozwijanej w odpowiedzi nie wyświetla stan widoczności ograniczeniami poprawnie.
+Wszystkie odpowiedzi w ramach tego komentarza mają tę samą widoczność z ograniczeniami. Jest ona prawdziwa nawet wtedy, gdy kontrolka listy rozwijanej na odpowiedzi nie pokazuje poprawnie stanu widoczności z ograniczeniami.
 
-Aby zachować prywatność użytkownika i zachować poufne informacje z widoku publicznego, należy zachować ostrożność. Zachowaj wszystkie interakcje z firmą Microsoft, aby odpowiedzi w obszarze ograniczone komentarz. Odpowiadanie na komentarze innych może spowodować przypadkowe ujawnienie poufnych informacji.
+Aby zachować prywatność i zachować poufne informacje z widoku publicznego, należy zachować ostrożność. Zadbaj o to, aby cała interakcja z firmą Microsoft była odpowiedzią objętą komentarzem ograniczonym Odpowiedzi na inne komentarze mogą spowodować przypadkowe ujawnienie poufnych informacji.
 
-## <a name="how-to-report-a-c-documentation-issue"></a>Jak zgłosić problem z dokumentacją języka C++
+## <a name="how-to-report-a-c-documentation-issue"></a>Jak zgłosić problem z C++ dokumentacją
 
-Problemy usługi GitHub są używane do śledzenia problemów zgłaszanych w naszej dokumentacji. Teraz można utworzyć usługi GitHub problemów bezpośrednio ze strony zawartości, dzięki czemu można wchodzić w interakcje w sposób znacznie bogatsze ze autorzy i zespołach produktu. Jeśli widzisz wystąpił problem z dokumentu, próbkę błędnym kodem, wyjaśnienie mylące, krytyczne pominięcie lub nawet po prostu błąd pisowni, możesz łatwo dać nam znać. Przewiń ekran do dolnej części strony i wybierz pozycję **Zaloguj się przekazać opinię dotyczącą dokumentacji**. Musisz utworzyć konto usługi GitHub, jeśli nie masz jeszcze takiego. W przypadku konta usługi GitHub możesz zobaczyć wszystkie problemy dotyczące naszej dokumentacji i ich stan. Podczas wprowadzania zmian do problemu, zgłoszonych również otrzymywać powiadomienia. Aby uzyskać więcej informacji, zobacz [nowe opinii pojawi się System docs.microsoft.com](/teamblog/a-new-feedback-system-is-coming-to-docs).
+Problemy z usługą GitHub są używane do śledzenia problemów raportowanych w naszej dokumentacji. Problemy z usługą GitHub można teraz tworzyć bezpośrednio ze strony zawartości, co pozwala na korzystanie z znacznie bogatszego sposobu korzystania z autorów i zespołów produktów. Jeśli zobaczysz problem z dokumentem, jest to zły kod przykładowy, mylące wyjaśnienie, krytyczne pominięcie lub nawet literówka, możesz łatwo znać nas. Przewiń w dół strony i wybierz pozycję Zaloguj się, **Aby przekazać opinię dotyczącą dokumentacji**. Jeśli jeszcze tego nie zrobiono, musisz utworzyć konto usługi GitHub. Jeśli masz konto w usłudze GitHub, zobaczysz wszystkie nasze problemy z dokumentacją i ich stan. Otrzymasz również powiadomienia o wprowadzeniu zmian dotyczących zgłoszonego problemu. Aby uzyskać więcej informacji, zobacz [Nowy system opinii jest docs.Microsoft.com](/teamblog/a-new-feedback-system-is-coming-to-docs).
 
-Utworzysz problem z dokumentacją w serwisie GitHub, korzystając z przycisku wysyłania opinii dokumentacji. Ten problem zostanie automatycznie wypełniona niektóre informacje na temat strony, do której został utworzony na problem. To jak wiemy, gdzie problem znajduje się, więc nie należy ich edytować te informacje. Po prostu Dołącz szczegółowe informacje o nowościach problem, a jeśli chcesz sugerowanej poprawki. [Nasze C++ dokumentacja jest typu open source](https://github.com/MicrosoftDocs/cpp-docs/), więc jeśli chcesz przesłać poprawki, samodzielnie, możesz to zrobić. Aby uzyskać więcej informacji na temat sposobu współtworzenia naszej dokumentacji, zobacz nasze [przewodnik Dodawanie](https://github.com/MicrosoftDocs/cpp-docs/blob/master/CONTRIBUTING.md) w witrynie GitHub.
+Problem z dokumentacją można utworzyć w witrynie GitHub, gdy jest używany przycisk opinii o dokumentacji. Problem jest automatycznie wypełniany przy użyciu pewnych informacji o stronie, na której został utworzony problem. Wiadomo, gdzie znajduje się problem, dlatego nie należy edytować tych informacji. Wystarczy dołączyć szczegóły dotyczące tego, co jest nieprawidłowe, a jeśli chcesz, sugerowaną poprawkę. [Nasze C++ dokumenty są typu open source](https://github.com/MicrosoftDocs/cpp-docs/), więc jeśli chcesz samodzielnie przesłać poprawkę, możesz to zrobić. Aby uzyskać więcej informacji na temat sposobu współtworzenia dokumentacji, zapoznaj się z naszym [przewodnikiem](https://github.com/MicrosoftDocs/cpp-docs/blob/master/CONTRIBUTING.md) w witrynie GitHub.

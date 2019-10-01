@@ -1,5 +1,5 @@
 ---
-title: Mapowanie komunikatów systemu Windows na klasę
+title: Mapowanie komunikatów systemu Windows do klasy
 ms.date: 09/06/2019
 helpviewer_keywords:
 - MFC dialog boxes [MFC], Windows messages
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - messages to dialog class [MFC], mapping
 - Class Wizard [MFC]
 ms.assetid: a4c6fd1f-1d33-47c9-baa0-001755746d6d
-ms.openlocfilehash: 49d1a888b148793f82cf214637956589d6b8ff07
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 0f1207faca56acd709db86478722eba85eeb284a
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907475"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685616"
 ---
-# <a name="mapping-windows-messages-to-your-class"></a>Mapowanie komunikatów systemu Windows na klasę
+# <a name="mapping-windows-messages-to-your-class"></a>Mapowanie komunikatów systemu Windows do klasy
 
 Jeśli potrzebujesz okna dialogowego do obsługi komunikatów systemu Windows, Zastąp odpowiednie funkcje obsługi. Aby to zrobić, wybierz kartę **Widok klasy** w **Eksplorator rozwiązań**, kliknij prawym przyciskiem myszy klasę, która reprezentuje okno dialogowe, a następnie wybierz polecenie [Kreator klas](reference/mfc-class-wizard.md). Użyj kreatora, aby [zamapować komunikaty](../mfc/reference/mapping-messages-to-functions.md) do klasy okna dialogowego. Spowoduje to zapisanie wpisu mapy komunikatów dla każdego komunikatu i dodanie funkcji składowych obsługi komunikatów do klasy. Użyj edytora kodu, aby napisać kod w programach obsługi komunikatów.
 
@@ -35,4 +35,4 @@ Można również przesłonić funkcje składowe [CDialog](../mfc/reference/cdial
 ## <a name="see-also"></a>Zobacz także
 
 [Okna dialogowe](../mfc/dialog-boxes.md)<br/>
-[Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
+[Praca z polami okna dialogowego w MFC](../mfc/life-cycle-of-a-dialog-box.md)

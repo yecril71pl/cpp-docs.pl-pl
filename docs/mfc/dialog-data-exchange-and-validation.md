@@ -15,24 +15,24 @@ helpviewer_keywords:
 - dialog boxes [MFC], retrieving data
 - retrieving dialog box data
 ms.assetid: 7d373554-7330-43ae-abf1-4bb14e437b4a
-ms.openlocfilehash: a52af898c844cce05a138b8bc0e608681d13a491
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 651ec5779e3fe1190ff1a3f0f807fb0187e348f8
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302101"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685760"
 ---
 # <a name="dialog-data-exchange-and-validation"></a>Wymiana i walidacja danych w oknie dialogowym
 
-Wymiana danych okna dialogowego (DDX) to prosty sposób zainicjować formantów w oknie dialogowym i zbierania danych wejściowych przez użytkownika. Walidacja danych okna dialogowego (DDV) to prosty sposób na sprawdzanie poprawności wprowadzania danych w oknie dialogowym. Aby skorzystać z DDX i DDV znajdują się w polach okna dialogowego, należy użyć [Dodaj kreatora zmiennej elementu członkowskiego](../ide/add-member-variable-wizard.md) do tworzenia elementów członkowskich danych i ustaw ich typów danych i określić reguły sprawdzania poprawności.
+Wymiana danych w oknie dialogowym (DDX) to prosty sposób na zainicjowanie kontrolek w oknie dialogowym i zebranie danych wprowadzonych przez użytkownika. Walidacja danych okna dialogowego (DDV) to prosty sposób na zweryfikowanie wpisu danych w oknie dialogowym. Aby skorzystać z DDX i DDV w oknach dialogowych, użyj [Kreatora dodawania zmiennej składowej](../ide/add-member-variable-wizard.md) , aby utworzyć elementy członkowskie danych i ustawić ich typy danych i określić reguły walidacji.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
-- [Wymiana danych okna dialogowego](../mfc/dialog-data-exchange.md)
+- [Wymiana danych w oknie dialogowym](../mfc/dialog-data-exchange.md)
 
 - [Walidacja danych okna dialogowego](../mfc/dialog-data-validation.md)
 
 ## <a name="see-also"></a>Zobacz także
 
 [Okna dialogowe](../mfc/dialog-boxes.md)<br/>
-[Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
+[Praca z polami okna dialogowego w MFC](../mfc/life-cycle-of-a-dialog-box.md)

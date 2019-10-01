@@ -1,5 +1,5 @@
 ---
-title: Modalne i niemodalne okna dialogowe
+title: Modalne i Niemodalne okna dialogowe
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC dialog boxes [MFC], modeless
@@ -7,34 +7,34 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], modal
 - modal dialog boxes [MFC]
 ms.assetid: e83df336-5994-4b8f-8233-7942f997315b
-ms.openlocfilehash: c3a5263736324d7fe25066e8879d13b3a41768de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 886229a2b66968bf76129ecb1da838bd36e66215
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62238420"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685182"
 ---
-# <a name="modal-and-modeless-dialog-boxes"></a>Modalne i niemodalne okna dialogowe
+# <a name="modal-and-modeless-dialog-boxes"></a>Modalne i Niemodalne okna dialogowe
 
-Można użyć klasy [CDialog](../mfc/reference/cdialog-class.md) Zarządzanie dwa rodzaje okien dialogowych:
+Klasy [CDialog](../mfc/reference/cdialog-class.md) można użyć do zarządzania dwoma rodzajami okien dialogowych:
 
-- *Modalne okna dialogowe*, która wymaga od użytkownika odpowiada przed kontynuowaniem program
+- *Modalne okna dialogowe*, które wymagają, aby użytkownik mógł odpowiedzieć przed kontynuowaniem działania programu
 
-- *Niemodalne okna dialogowe*, które pozostają na ekranie i są dostępne do użycia w dowolnym momencie, ale zezwala na inne działania użytkownika
+- *Niemodalne okna dialogowe*, które pozostają na ekranie i są dostępne do użytku w dowolnym momencie, ale zezwalają na inne działania użytkownika
 
-Edytowanie zasobów oraz procedury tworzenia szablonu okna dialogowego są takie same dla modalne i Niemodalne okna dialogowe.
+Edytowanie zasobów i procedury tworzenia szablonu okna dialogowego są takie same dla modalnych i niemodalnych okien dialogowych.
 
-Tworzenie okna dialogowego programu wymaga wykonania następujących czynności:
+Tworzenie okna dialogowego dla programu wymaga wykonania następujących czynności:
 
-1. Użyj [Edytor okien dialogowych](../windows/dialog-editor.md) projektować okno dialogowe i utworzyć jej zasobów szablonu okna dialogowego.
+1. Użyj [edytora okien dialogowych](../windows/dialog-editor.md) , aby zaprojektować okno dialogowe i utworzyć zasób szablonu okna dialogowego.
 
-1. Tworzenie klasy okien dialogowych.
+1. Utwórz klasę okna dialogowego.
 
-1. Połącz [kontrolki zasobu okna dialogowego do obsługi komunikatów](../windows/adding-event-handlers-for-dialog-box-controls.md) klasy okna dialogowego.
+1. Połącz [kontrolki zasobu okna dialogowego z obsługą komunikatów](../windows/adding-event-handlers-for-dialog-box-controls.md) w klasie okna dialogowego.
 
-1. Dodaj elementy członkowskie danych skojarzonych z formantów w oknie dialogowym oraz określić [wymiana danych okna dialogowego](../mfc/dialog-data-exchange.md) i [walidacji danych okna dialogowego](../mfc/dialog-data-validation.md) formantów.
+1. Dodaj elementy członkowskie danych skojarzone z kontrolkami okna dialogowego i, aby określić [wymianę danych okna](../mfc/dialog-data-exchange.md) dialogowego i [Sprawdzanie poprawności danych okna](../mfc/dialog-data-validation.md) dialogowego dla kontrolek.
 
 ## <a name="see-also"></a>Zobacz także
 
 [Okna dialogowe](../mfc/dialog-boxes.md)<br/>
-[Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
+[Praca z polami okna dialogowego w MFC](../mfc/life-cycle-of-a-dialog-box.md)

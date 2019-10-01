@@ -8,19 +8,19 @@ helpviewer_keywords:
 - modeless dialog boxes [MFC], initializing
 - MFC dialog boxes [MFC], initializing
 ms.assetid: 968142f5-19f9-4b34-a1d4-8e6412d4379b
-ms.openlocfilehash: 87b3405f1441e730cf5c9ce7fc03d2c7372e55db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14cdf94bef79f254b4aaa2c1c0dfba6c88b7498b
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297102"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685623"
 ---
 # <a name="initializing-the-dialog-box"></a>Inicjowanie okna dialogowego
 
-Po okna dialogowego pole i wszystkich jego formantów są tworzone, ale tuż przed okna dialogowego pole (dowolnego typu) są wyświetlane na ekranie, obiektu okna dialogowego firmy [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) funkcja członkowska jest wywoływana. Dla modalnego okna dialogowego, ten problem wystąpi podczas `DoModal` wywołania. Aby uzyskać niemodalnego okna dialogowego `OnInitDialog` jest wywoływana, gdy `Create` jest wywoływana. Zazwyczaj zastąpienie `OnInitDialog` zainicjować okno dialogowe formanty, takie jak ustawianie początkowy tekst pola edycji. Należy wywołać `OnInitDialog` funkcji składowej klasy bazowej `CDialog`, z Twojej `OnInitDialog` zastąpienia.
+Po utworzeniu okna dialogowego i wszystkich jego kontrolek, ale tuż przed oknem dialogowym (dowolnego typu) pojawia się na ekranie, wywoływana jest funkcja członkowska [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) obiektu okna dialogowego. W przypadku modalnego okna dialogowego dzieje się to w trakcie wywołania `DoModal`. Dla niemodalnego okna dialogowego, `OnInitDialog` jest wywoływana, gdy zostanie wywołana `Create`. Zwykle zastąpisz `OnInitDialog`, aby zainicjować kontrolki okna dialogowego, takie jak ustawienie początkowego tekstu pola edycji. Należy wywołać funkcję członkowską `OnInitDialog` klasy podstawowej, `CDialog`, z przesłonięcia `OnInitDialog`.
 
-Jeśli chcesz ustawić kolor tła okno dialogowe (i w przypadku wszystkich innych oknach dialogowych w aplikacji), zobacz [Ustawianie koloru tła okna dialogowego](../mfc/setting-the-dialog-boxs-background-color.md).
+Jeśli chcesz ustawić kolor tła okna dialogowego (i wszystkie inne okna dialogowe w aplikacji), zobacz [Ustawianie koloru tła okna dialogowego](../mfc/setting-the-dialog-boxs-background-color.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
+[Praca z polami okna dialogowego w MFC](../mfc/life-cycle-of-a-dialog-box.md)

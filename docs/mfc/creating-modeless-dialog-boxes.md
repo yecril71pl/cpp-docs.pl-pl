@@ -6,17 +6,17 @@ helpviewer_keywords:
 - modeless dialog boxes [MFC], creating
 - MFC dialog boxes [MFC], creating
 ms.assetid: 70d78c7f-3d40-477b-9f78-0f33c359f88b
-ms.openlocfilehash: 71cca82e667ddbf5cfc4c2abb5880cd69c7fafae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7da6d82257d1407dfcf4d6d3c15cdadbb8c0fa30
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388491"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685660"
 ---
 # <a name="creating-modeless-dialog-boxes"></a>Tworzenie niemodalnych okien dialogowych
 
-Niemodalne okno dialogowe trzeba podać publicznego konstruktora w klasy okien dialogowych. Aby utworzyć niemodalne okno dialogowe, wywołania konstruktora publicznego, a następnie wywołać obiektu okna dialogowego [Utwórz](../mfc/reference/cdialog-class.md#create) funkcja elementu członkowskiego, które można załadować zasobu okna dialogowego. Możesz wywołać **Utwórz** podczas lub po wywołaniu konstruktora. Jeśli zasobu okna dialogowego właściwości **WS_VISIBLE**, natychmiast pojawi się okno dialogowe. Jeśli nie, należy wywołać jej [ShowWindow](../mfc/reference/cwnd-class.md#showwindow) funkcja elementu członkowskiego.
+W przypadku niemodalnego okna dialogowego musisz podać własny Konstruktor publiczny w swojej klasie okna dialogowego. Aby utworzyć niemodalne okno dialogowe, Wywołaj konstruktora publicznego, a następnie wywołaj funkcję [tworzenia](../mfc/reference/cdialog-class.md#create) członka obiektu okna dialogowego w celu załadowania zasobu okna dialogowego. Można wywołać metodę **Create** w trakcie lub po wywołaniu konstruktora. Jeśli zasób okna dialogowego ma właściwość **WS_VISIBLE**, okno dialogowe pojawi się od razu. W przeciwnym razie należy wywołać funkcję członkowską [Funkcja ShowWindow](../mfc/reference/cwnd-class.md#showwindow) .
 
 ## <a name="see-also"></a>Zobacz także
 
-[Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
+[Praca z polami okna dialogowego w MFC](../mfc/life-cycle-of-a-dialog-box.md)

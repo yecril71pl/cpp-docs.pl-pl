@@ -7,36 +7,36 @@ helpviewer_keywords:
 - code wizards
 - dialog classes [MFC], creating
 ms.assetid: a7157b9d-f1a8-4381-a4cf-180cd2c7f1b2
-ms.openlocfilehash: d99188a3a70965f33a8038eb904f606e74c1591b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dd18a639bc94686bb3023d64c09074ca4d808546
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405888"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685843"
 ---
 # <a name="creating-a-dialog-class-with-code-wizards"></a>Tworzenie klasy okien dialogowych za pomocą kreatorów kodu
 
-W poniższej tabeli wymieniono zadania związane z okna dialogowego, które pomagają kreatorów kodu, którymi zarządzasz.
+Poniższa tabela zawiera listę zadań związanych z oknem dialogowym, które ułatwiają zarządzanie za pomocą kreatorów kodu.
 
-### <a name="dialog-related-tasks"></a>Zadania związane z okna dialogowego
+### <a name="dialog-related-tasks"></a>Zadania związane z oknem dialogowym
 
-|Zadanie|Dotyczy. . .|
+|Zadanie|Zastosuj do. . .|
 |----------|--------------------|
-|[Tworzenie nowej klasy pochodnej CDialog](../mfc/creating-your-dialog-class.md) Zarządzanie Twoje okno dialogowe.|Każdy okno dialogowe.|
-|[Mapowanie komunikatów Windows](../mfc/handling-windows-messages-in-your-dialog-box.md) do klasy okien dialogowych.|Każdy komunikat, który ma być obsługiwany.|
-|Zadeklaruj składowej klasy reprezentujące kontrolki w oknie dialogowym Zmienne.|Każdy formant, który daje wartość tekstowa lub liczbowa chcesz uzyskać dostęp z Twojego programu.|
-|Określ [jak dane są wymieniane](../mfc/dialog-data-exchange-and-validation.md) między formantami a zmienne Członkowskie.|Każdy formant, który chcesz uzyskać dostęp do programu.|
-|Określ [reguł sprawdzania poprawności](../mfc/dialog-data-exchange-and-validation.md) zmiennych Członkowskich.|Każdy formant, który daje tekst lub wartość liczbowa, w razie potrzeby.|
+|[Utwórz nową klasę pochodną CDialog](../mfc/creating-your-dialog-class.md) , aby zarządzać oknem dialogowym.|Każde okno dialogowe.|
+|[Mapuj komunikaty systemu Windows](../mfc/handling-windows-messages-in-your-dialog-box.md) do klasy okna dialogowego.|Każdy komunikat, który ma być obsługiwany.|
+|Zadeklaruj zmienne składowe klasy, aby reprezentować kontrolki w oknie dialogowym.|Każda kontrolka, która zwraca tekst lub wartość liczbową, do której chcesz uzyskać dostęp z programu.|
+|Określ, [w jaki sposób dane mają być wymieniane](../mfc/dialog-data-exchange-and-validation.md) między kontrolkami i zmiennymi składowymi.|Każdy formant, do którego chcesz uzyskać dostęp z programu.|
+|Określ [reguły walidacji](../mfc/dialog-data-exchange-and-validation.md) dla zmiennych składowych.|Każda kontrolka, która zwraca wartość tekstową lub liczbową, w razie potrzeby.|
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
 - [Tworzenie klasy okien dialogowych](../mfc/creating-your-dialog-class.md)
 
-- [Obsługa komunikatów Windows w oknie dialogowym](../mfc/handling-windows-messages-in-your-dialog-box.md)
+- [Obsługa komunikatów systemu Windows w oknie dialogowym](../mfc/handling-windows-messages-in-your-dialog-box.md)
 
-- [Wymiana danych okna dialogowego i sprawdzanie poprawności](../mfc/dialog-data-exchange-and-validation.md)
+- [Wymiana i walidacja danych w oknie dialogowym](../mfc/dialog-data-exchange-and-validation.md)
 
 ## <a name="see-also"></a>Zobacz także
 
 [Okna dialogowe](../mfc/dialog-boxes.md)<br/>
-[Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
+[Praca z polami okna dialogowego w MFC](../mfc/life-cycle-of-a-dialog-box.md)

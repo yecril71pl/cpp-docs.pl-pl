@@ -19,38 +19,38 @@ helpviewer_keywords:
 - UpdateData method [MFC]
 - retrieving dialog box data [MFC]
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
-ms.openlocfilehash: 338630aef358d9490461179288d5c45a2d3b821c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a0199577ea46520c2eadc308812de8a1ce4b514
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348800"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685804"
 ---
 # <a name="dialog-data-exchange"></a>Wymiana danych w oknie dialogowym
 
-Użycie mechanizmu DDX ustawisz wartości początkowe w oknie dialogowym Zmienne Członkowskie obiektu, zwykle w swojej `OnInitDialog` obsługi lub konstruktora okna dialogowego. Natychmiast przed wyświetleniem okna dialogowego, mechanizm DDX struktury przesyła wartości zmiennych składowych kontrolek w oknie dialogowym, w którym są wyświetlane podczas samego pojawi się okno dialogowe w odpowiedzi na `DoModal` lub `Create`. Domyślna implementacja klasy `OnInitDialog` w `CDialog` wywołania `UpdateData` funkcji składowej klasy typu `CWnd` zainicjować formantów w oknie dialogowym.
+W przypadku korzystania z mechanizmu DDX należy ustawić początkowe wartości zmiennych składowych obiektu okna dialogowego, zazwyczaj w programie obsługi `OnInitDialog` lub w konstruktorze okien dialogowych. Bezpośrednio przed wyświetleniem okna dialogowego mechanizm DDX struktury przenosi wartości zmiennych Członkowskich do kontrolek w oknie dialogowym, gdzie są wyświetlane, gdy samo okno dialogowe pojawia się w odpowiedzi na `DoModal` lub `Create`. Domyślna implementacja `OnInitDialog` w `CDialog` wywołuje funkcję członkowską `UpdateData` klasy `CWnd` w celu zainicjowania kontrolek w oknie dialogowym.
 
-Ten sam mechanizm przesyła wartości z kontrolek do zmiennych składowych po kliknięciu przycisku OK (lub po każdym wywołaniu `UpdateData` funkcja elementu członkowskiego z argumentem **TRUE**). Mechanizm walidacji danych okna dialogowego sprawdza wszystkie elementy danych, dla których określono reguły poprawności.
+Ten sam mechanizm przenosi wartości z formantów do zmiennych składowych, gdy użytkownik kliknie przycisk OK (lub po każdym wywołaniu funkcji składowej `UpdateData` z argumentem **true**). Mechanizm walidacji danych okna dialogowego sprawdza poprawność wszystkich elementów danych, dla których określono reguły walidacji.
 
-Na poniższym rysunku przedstawiono wymiana danych okna dialogowego.
+Na poniższej ilustracji przedstawiono wymianę danych okna dialogowego.
 
-![Wymiana danych okno dialogowe](../mfc/media/vc379d1.gif "wymiany danych okno dialogowe") <br/>
+![Wymiana]danych okien dialogowych(../mfc/media/vc379d1.gif "okna dialogowego") Exchange <br/>
 Wymiana danych w oknie dialogowym
 
-`UpdateData` działa w obu kierunkach, określony przez **BOOL** parametr przekazywany do niego. Przeprowadzenie programu exchange, `UpdateData` konfiguruje `CDataExchange` wywołań i obiekt klasy okna dialogowego zastąpieniu obiektu `CDialog`firmy `DoDataExchange` funkcja elementu członkowskiego. `DoDataExchange` przyjmuje argument typu `CDataExchange`. `CDataExchange` Obiekt przekazany do `UpdateData` reprezentuje kontekst programu exchange, definiowanie takie informacje jak kierunek programu exchange.
+`UpdateData` działa w obu kierunkach, jak określono w parametrze **bool** przekazanym do niego. Aby przeprowadzić wymianę, `UpdateData` konfiguruje obiekt `CDataExchange` i wywołuje przesłonięcie klasy okna dialogowego `CDialog` funkcji składowej `DoDataExchange`. `DoDataExchange` przyjmuje argument typu `CDataExchange`. Obiekt `CDataExchange` przeszedł do `UpdateData` reprezentuje kontekst wymiany, definiując takie informacje jako kierunek wymiany.
 
-Po użytkownik (lub Kreatora kodów) zastąpić `DoDataExchange`, określ wywołanie jednej funkcji DDX na element członkowski danych (kontrola). Każda funkcja DDX wie, jak do wymiany danych w obu kierunkach, na podstawie kontekstu dostarczonych przez `CDataExchange` argument przekazany do usługi `DoDataExchange` przez `UpdateData`.
+Gdy użytkownik (lub Kreator kodu) przesłonić `DoDataExchange`, należy określić wywołanie jednej funkcji DDX na element członkowski danych (kontrolka). Każda funkcja DDX wie, jak wymieniać dane w obu kierunkach na podstawie kontekstu dostarczonego przez argument `CDataExchange` przekazany do `DoDataExchange` przez `UpdateData`.
 
-Biblioteka MFC zawiera wiele funkcji DDX dla różnych rodzajów wymiany. W poniższym przykładzie przedstawiono `DoDataExchange` zastąpienia, w której dwa DDX funkcje i jedna funkcja DDV noszą nazwę:
+MFC udostępnia wiele funkcji DDX dla różnych rodzajów wymiany. W poniższym przykładzie pokazano przesłonięcie `DoDataExchange`, w którym są wywoływane dwie funkcje DDX i jedna funkcja DDV:
 
 [!code-cpp[NVC_MFCControlLadenDialog#49](../mfc/codesnippet/cpp/dialog-data-exchange_1.cpp)]
 
-`DDX_` i `DDV_` wiersze to mapowanie danych. Funkcje DDX i DDV przykładowych pokazano są odpowiednio kontrolkę pola wyboru i formant pola edycji.
+Linie `DDX_` i `DDV_` to Mapa danych. Wyświetlane przykładowe funkcje DDX i DDV są przeznaczone dla kontrolki pole wyboru i kontrolka pole edycji.
 
-Jeśli użytkownik anuluje modalne okno dialogowe, `OnCancel` funkcja elementu członkowskiego kończy się okno dialogowe i `DoModal` zwraca wartość **IDCANCEL**. W takiej sytuacji żadne dane nie są wymieniane między okna dialogowego i obiektu okna dialogowego.
+Jeśli użytkownik anuluje modalne okno dialogowe, funkcja członkowska `OnCancel` kończy działanie okna dialogowego i `DoModal` zwraca wartość **IDCANCEL**. W takim przypadku żadne dane nie są wymieniane między oknem dialogowym a obiektem okna dialogowego.
 
 ## <a name="see-also"></a>Zobacz także
 
 [Wymiana i walidacja danych w oknie dialogowym](../mfc/dialog-data-exchange-and-validation.md)<br/>
-[Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[Praca z polami okna dialogowego w MFC](../mfc/life-cycle-of-a-dialog-box.md)<br/>
 [Walidacja danych okna dialogowego](../mfc/dialog-data-validation.md)

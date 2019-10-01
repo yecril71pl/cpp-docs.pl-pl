@@ -8,32 +8,32 @@ helpviewer_keywords:
 - CDialog class [MFC], MFC dialog boxes
 - MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
-ms.openlocfilehash: 32a8f8784459338131d4893f25d8798f8031b68b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18b4c4d1386716a0a3282b88d6fdf5a701abce08
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262635"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685790"
 ---
 # <a name="dialog-boxes"></a>Okna dialogowe
 
-Aplikacje dla Windows często komunikują się z użytkownikiem za pośrednictwem okna dialogowe. Klasa [CDialog](../mfc/reference/cdialog-class.md) udostępnia interfejs dla zarządzania okien dialogowych, Edytor okien dialogowych Visual C++ ułatwia projektowanie okien dialogowych i tworzenie ich zasobów szablonu okna dialogowego i kreatorów kodu upraszcza proces inicjowania i Sprawdzanie poprawności formantów w oknie dialogowym i zbierania wartości wprowadzonej przez użytkownika.
+Aplikacje dla systemu Windows często komunikują się z użytkownikiem przy użyciu okien dialogowych. Klasa [CDialog](../mfc/reference/cdialog-class.md) udostępnia interfejs do zarządzania oknach dialogowych, Edytor okna C++ dialogowego wizualizacji ułatwia projektowanie okien dialogowych i tworzenie zasobów szablonów okien dialogowych, a kreatory kodu upraszczają proces inicjowania i weryfikowania kontrolki w oknie dialogowym i gromadzenie wartości wprowadzonych przez użytkownika.
 
-Okna dialogowe zawierają formantów, w tym:
+Okna dialogowe zawierają kontrolki, w tym:
 
-- Typowe kontrolki Windows takich jak edytować pola, przyciski, pola listy, pola kombi, kontrolki drzewa, kontrolki listy i wskaźniki postępu.
+- Formanty standardowe systemu Windows, takie jak pola edycji, przyciski, pola listy, pola kombi, kontrolki drzewa, kontrolki listy i wskaźniki postępu.
 
 - Kontrolki ActiveX.
 
-- Formanty rysowane przez właściciela: formanty, które są odpowiedzialne za narysowanie w oknie dialogowym.
+- Kontrolki rysowane przez właściciela: kontrolki, które są odpowiedzialne za Rysowanie w oknie dialogowym.
 
-Większość okna dialogowe są modalne, która wymaga od użytkownika zamknąć okno dialogowe przed rozpoczęciem korzystania z innych części programu. Jednak jest możliwe tworzenie niemodalnych okien dialogowych, które umożliwiają użytkownikom pracę z innymi oknami, gdy jest otwarte okno dialogowe. Biblioteka MFC obsługuje oba rodzaje okno dialogowe z klasą `CDialog`. Formanty są uporządkowane i zarządzane przy użyciu zasobu szablonu okna dialogowego, utworzony za pomocą [Edytor okien dialogowych](../windows/dialog-editor.md).
+Większość okien dialogowych jest modalnych, co wymaga od użytkownika zamknięcia okna dialogowego przed użyciem innej części programu. Ale istnieje możliwość tworzenia niemodalnych okien dialogowych, które umożliwiają użytkownikom współpracę z innymi oknami, gdy okno dialogowe jest otwarte. MFC obsługuje oba rodzaje okien dialogowych z klasą `CDialog`. Kontrolki są rozmieszczane i zarządzane przy użyciu zasobu szablonu okna dialogowego utworzonego za pomocą [edytora okien dialogowych](../windows/dialog-editor.md).
 
-[Arkusze właściwości](../mfc/property-sheets-mfc.md), znany także jako karcie okna dialogowe, są okna dialogowe, zawierające "strony" formantów distinct okno dialogowe. Każda strona ma folder plików "kartę" u góry. Po kliknięciu karty zapewnia tej strony na początku okna dialogowego.
+[Arkusze właściwości](../mfc/property-sheets-mfc.md), znane również jako okna dialogowe kart, to okna dialogowe zawierające "strony" różnych kontrolek okna dialogowego. Każda Strona ma folder plików "Tab" u góry. Kliknięcie karty powoduje wyświetlenie tej strony na początku okna dialogowego.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
-- [Przykład: Wyświetlanie okna dialogowego za pomocą polecenia Menu](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)
+- [Przykład: wyświetlanie okna dialogowego za pomocą polecenia menu](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)
 
 - [Składniki okna dialogowego w strukturze](../mfc/dialog-box-components-in-the-framework.md)
 
@@ -45,23 +45,23 @@ Większość okna dialogowe są modalne, która wymaga od użytkownika zamknąć
 
 - [Tworzenie klasy okien dialogowych za pomocą kreatorów kodu](../mfc/creating-a-dialog-class-with-code-wizards.md)
 
-- [Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
+- [Praca z polami okna dialogowego w MFC](../mfc/life-cycle-of-a-dialog-box.md)
 
-- [Wymiana danych okna dialogowego (DDX) i sprawdzania poprawności (DDV)](../mfc/dialog-data-exchange-and-validation.md)
+- [Wymiana danych okna dialogowego (DDX) i walidacja (DDV)](../mfc/dialog-data-exchange-and-validation.md)
 
-- [Bezpieczny dostęp do formantów w oknie dialogowym](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)
+- [Bezpieczny dostęp do kontrolek w oknie dialogowym](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)
 
-- [Mapowanie komunikatów Windows na klasę](../mfc/mapping-windows-messages-to-your-class.md)
+- [Mapowanie komunikatów systemu Windows do klasy](../mfc/mapping-windows-messages-to-your-class.md)
 
-- [Powszechnie zastępowane funkcje składowe](../mfc/commonly-overridden-member-functions.md)
+- [Powszechnie zastępowane funkcje członkowskie](../mfc/commonly-overridden-member-functions.md)
 
-- [Powszechnie dodawane funkcje składowe](../mfc/commonly-added-member-functions.md)
+- [Powszechnie dodawane funkcje członkowskie](../mfc/commonly-added-member-functions.md)
 
-- [Klasy wspólnych okien dialogowych](../mfc/common-dialog-classes.md)
+- [Wspólne klasy okien dialogowych](../mfc/common-dialog-classes.md)
 
 - [Okna dialogowe w OLE](../mfc/dialog-boxes-in-ole.md)
 
-- Tworzenie aplikacji interfejsu użytkownika, którego to okno dialogowe: zobacz [CMNCTRL1](../overview/visual-cpp-samples.md) lub [CMNCTRL2](../overview/visual-cpp-samples.md) przykładowe programy. Kreator aplikacji udostępnia również tej opcji.
+- Tworzenie aplikacji, której interfejs użytkownika jest oknem dialogowym: zobacz [CMNCTRL1](../overview/visual-cpp-samples.md) lub [CMNCTRL2](../overview/visual-cpp-samples.md) przykładowe programy. Ta opcja jest również dostępna w Kreatorze aplikacji.
 
 - [Przykłady](../mfc/dialog-sample-list.md)
 
