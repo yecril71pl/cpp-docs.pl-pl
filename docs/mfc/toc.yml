@@ -12,7 +12,7 @@
           href: general-mfc-topics.md
         - name: Korzystanie z plików źródłowych MFC
           href: using-the-mfc-source-files.md
-        - name: Wersje biblioteki MFC
+        - name: wersje biblioteki MFC
           expanded: false
           items:
             - name: Wersje biblioteki MFC
@@ -1023,7 +1023,7 @@
             - name: Cykl życiowy okna dialogowego
               expanded: false
               items:
-                - name: Cykl życiowy okna dialogowego
+                - name: Praca z oknami dialogowymi w MFC
                   href: life-cycle-of-a-dialog-box.md
                 - name: Tworzenie i wyświetlanie okien dialogowych
                   href: creating-and-displaying-dialog-boxes.md
@@ -2749,7 +2749,7 @@
               href: reference/cdaoquerydefinfo-structure.md
             - name: 'CDaoRelationInfo, struktura'
               href: reference/cdaorelationinfo-structure.md
-            - name: 'CDaoRelationFieldInfo, struktura'
+            - name: CDaoRelationFieldInfo — struktura
               href: reference/cdaorelationfieldinfo-structure.md
             - name: 'CDaoTableDefInfo, struktura'
               href: reference/cdaotabledefinfo-structure.md

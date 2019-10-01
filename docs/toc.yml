@@ -409,6 +409,8 @@
                   href: build/reference/vcxproj-file-structure.md
                 - name: Przykładowy plik projektu
                   href: build/reference/project-files.md
+                - name: Struktura plików vcxproj.filters
+                  href: build/reference/vcxproj-filters-files.md
             - name: Strony właściwości projektu języka C++
               expanded: false
               items:
@@ -426,15 +428,15 @@
                   href: build/reference/vcpp-directories-property-page.md
                 - name: Strony właściwości języka C/C++
                   href: build/reference/c-cpp-prop-page.md
-                - name: Strony właściwości konsolidatora
+                - name: strony właściwości konsolidatora
                   href: build/reference/linker-property-pages.md
                 - name: Strony właściwości wiersza polecenia
                   href: build/reference/command-line-property-pages.md
-                - name: Strona właściwości NMake
+                - name: NMake — Strona właściwości
                   href: build/reference/nmake-property-page.md
-                - name: Strony właściwości narzędzia manifestu
+                - name: strony właściwości narzędzi manifestu
                   href: build/reference/manifest-tool-property-pages.md
-                - name: Strony właściwości zasobów
+                - name: strony właściwości zasobów
                   href: build/reference/resources-property-pages.md
                 - name: Strona właściwości Zarządzane zasoby
                   href: build/reference/managed-resources-property-page.md
@@ -794,6 +796,8 @@
                       href: build/reference/zf.md
                     - name: /Zg (Generuj prototypy funkcji)
                       href: build/reference/zg-generate-function-prototypes.md
+                    - name: /ZH (algorytm wyznaczania wartości skrótu dla sumy kontrolnej w informacjach debugowania)
+                      href: build/reference/zh.md
                     - name: /Zl (Pomiń domyślną nazwę biblioteki)
                       href: build/reference/zl-omit-default-library-name.md
                     - name: /Zm (Określ limit alokacji pamięci prekompilowanego nagłówka)
@@ -952,6 +956,10 @@
                   href: build/reference/largeaddressaware-handle-large-addresses.md
                 - name: /LIBPATH (Dodatkowa libpath)
                   href: build/reference/libpath-additional-libpath.md
+                - name: /LINKREPRO (nazwa katalogu odtwarzania dla łączenia)
+                  href: build/reference/linkrepro.md
+                - name: /LINKREPROTARGET (nazwa pliku odtwarzania dla łączenia)
+                  href: build/reference/linkreprotarget.md
                 - name: /LTCG (Generowanie łączonych kodów czasowych)
                   href: build/reference/ltcg-link-time-code-generation.md
                 - name: /MACHINE (Określ platformę docelową)
@@ -1521,6 +1529,8 @@
           href: ide/writing-and-refactoring-code-cpp.md
         - name: Nawigowanie po kodzie w języku C++
           href: ide/navigate-code-cpp.md
+        - name: Ustawianie preferencji pisania kodu w języku C++
+          href: ide/how-to-set-preferences.md
         - name: Współpraca przy użyciu rozszerzenia Live Share dla języka C++
           href: ide/live-share-cpp.md
         - name: Zmienianie podpisu
@@ -4840,7 +4850,7 @@
               items:
                 - name: Dyrektywy pragma i słowo kluczowe __pragma
                   href: preprocessor/pragma-directives-and-the-pragma-keyword.md
-                - name: 'alloc_text, pragma'
+                - name: alloc_text pragma
                   href: preprocessor/alloc-text.md
                 - name: 'auto_inline, pragma'
                   href: preprocessor/auto-inline.md
@@ -8991,7 +9001,7 @@
                       href: standard-library/shared-ptr-class.md
                     - name: 'unique_ptr, klasa'
                       href: standard-library/unique-ptr-class.md
-                    - name: 'weak_ptr, klasa'
+                    - name: weak_ptr — Klasa
                       href: standard-library/weak-ptr-class.md
                 - name: <memory_resource>
                   expanded: false
@@ -9069,7 +9079,7 @@
                   items:
                     - name: <ostream>
                       href: standard-library/ostream.md
-                    - name: 'basic_ostream, klasa'
+                    - name: basic_ostream — Klasa
                       href: standard-library/basic-ostream-class.md
                     - name: '<ostream>, funkcje'
                       href: standard-library/ostream-functions.md
@@ -9630,7 +9640,7 @@
                       href: standard-library/slice-array-class.md
                     - name: 'valarray, klasa'
                       href: standard-library/valarray-class.md
-                    - name: 'valarray<bool>, klasa'
+                    - name: valarray<bool> — Klasa
                       href: standard-library/valarray-bool-class.md
                 - name: <variant>
                   expanded: false
@@ -9648,7 +9658,7 @@
                   items:
                     - name: <vector>
                       href: standard-library/vector.md
-                    - name: 'vector, klasa'
+                    - name: vector — Klasa
                       href: standard-library/vector-class.md
                     - name: 'vector<bool>, klasa'
                       expanded: false
@@ -9873,10 +9883,10 @@
               href: standard-library/regular-expressions-cpp.md
             - name: Nawigacja w systemie plików
               href: standard-library/file-system-navigation.md
-        - name: Biblioteka SafeInt
+        - name: SafeInt — Biblioteka
           expanded: false
           items:
-            - name: Biblioteka SafeInt
+            - name: SafeInt — Biblioteka
               href: safeint/safeint-library.md
             - name: SafeInt — Klasa
               href: safeint/safeint-class.md
@@ -10415,7 +10425,7 @@
                           href: parallel/concrt/reference/scheduler-worker-creation-error-class.md
                         - name: 'SchedulerPolicy, klasa'
                           href: parallel/concrt/reference/schedulerpolicy-class.md
-                        - name: 'simple_partitioner, klasa'
+                        - name: simple_partitioner — klasa
                           href: parallel/concrt/reference/simple-partitioner-class.md
                         - name: 'single_assignment, klasa'
                           href: parallel/concrt/reference/single-assignment-class.md
