@@ -1,12 +1,17 @@
 ---
 title: Wstępnie zdefiniowane makra
 ms.custom: update_every_version
-ms.date: 04/05/2019
+ms.date: 10/01/2019
 f1_keywords:
 - _ATL_VER
 - __ATOM__
 - __AVX__
 - __AVX2__
+- __AVX512BW__
+- __AVX512CD__
+- __AVX512DQ__
+- __AVX512F__
+- __AVX512VL__
 - _CHAR_UNSIGNED
 - __CLR_VER
 - _CONTROL_FLOW_GUARD
@@ -80,6 +85,11 @@ helpviewer_keywords:
 - __ATOM__ macro
 - __AVX__ macro
 - __AVX2__ macro
+- __AVX512BW__ macro
+- __AVX512CD__ macro
+- __AVX512DQ__ macro
+- __AVX512F__ macro
+- __AVX512VL__ macro
 - _CHAR_UNSIGNED macro
 - __CLR_VER macro
 - _CONTROL_FLOW_GUARD macro
@@ -143,12 +153,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: 15b70b0292f671d99b320c8d23598e68b47adb0d
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: eb75273bc8cbe5ccbf62edc82a1e7deccc605757
+ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273818"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816602"
 ---
 # <a name="predefined-macros"></a>Wstępnie zdefiniowane makra
 
@@ -178,7 +188,7 @@ Kompilator obsługuje te wstępnie zdefiniowane makra określone przez standardy
 
 - **&#95; Plik &#95; &#95;** Nazwa bieżącego pliku źródłowego. Plik powiększa się do literału ciągu znaków. **&#95; &#95;&#95;** Aby upewnić się, że zostanie wyświetlona pełna ścieżka do pliku, użyj [/FC (Pełna ścieżka pliku kodu źródłowego w diagnostyce)](../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md). To makro jest zawsze definiowane.
 
-- **&#95; Wiersz &#95; &#95;** Zdefiniowany jako numer wiersza w postaci liczby całkowitej w bieżącym pliku źródłowym. **&#95; &#95;&#95;** Wartość`#line` makra wiersza można zmienić za pomocą dyrektywy. To makro jest zawsze definiowane.
+- **&#95; Wiersz &#95; &#95;** Zdefiniowany jako numer wiersza w postaci liczby całkowitej w bieżącym pliku źródłowym. Wartość **&#95; &#95;makra wiersza&#95;** można zmienić za pomocą dyrektywy `#line`. To makro jest zawsze definiowane.
 
 - **&#95; STDC &#95; &#95;** Zdefiniowane jako 1 tylko w przypadku skompilowania jako C i jeśli określono opcję kompilatora [/za](../build/reference/za-ze-disable-language-extensions.md) . W przeciwnym razie, niezdefiniowany.
 
@@ -194,13 +204,23 @@ Program MSVC obsługuje te dodatkowe wstępnie zdefiniowane makra.
 
 - **&#95; Atom &#95; &#95;** Zdefiniowane jako 1, gdy opcja kompilatora [/Favor: Atom](../build/reference/favor-optimize-for-architecture-specifics.md) jest ustawiona, a obiekt docelowy kompilatora to x86 lub x64. W przeciwnym razie, niezdefiniowany.
 
-- **&#95; AVX &#95; &#95;** Zdefiniowane jako 1, gdy opcje kompilatora [/arch: AVX](../build/reference/arch-x86.md) lub [/arch: AVX2](../build/reference/arch-x86.md) są ustawione, a element docelowy kompilatora to x86 lub x64. W przeciwnym razie, niezdefiniowany.
+- **&#95; AVX &#95; &#95;** Zdefiniowane jako 1, gdy są ustawione opcje kompilatora [/arch: AVX](../build/reference/arch-x86.md), [/arch: AVX2](../build/reference/arch-x86.md) lub [/arch: AVX512](../build/reference/arch-x86.md) , a element docelowy kompilatora to x86 lub x64. W przeciwnym razie, niezdefiniowany.
 
-- **&#95; AVX2 &#95; &#95;** Zdefiniowane jako 1, gdy opcja kompilatora [/arch: AVX2](../build/reference/arch-x86.md) jest ustawiona, a obiekt docelowy kompilatora to x86 lub x64. W przeciwnym razie, niezdefiniowany.
+- **&#95; AVX2 &#95; &#95;** Zdefiniowane jako 1, gdy opcja kompilatora [/arch: AVX2](../build/reference/arch-x86.md) lub [/arch: AVX512](../build/reference/arch-x86.md) jest ustawiona, a obiektem docelowym kompilatora jest x86 lub x64. W przeciwnym razie, niezdefiniowany.
+
+- **&#95; AVX512BW &#95; &#95;** Zdefiniowane jako 1, gdy opcja kompilatora [/arch: AVX512](../build/reference/arch-x86.md) jest ustawiona, a obiekt docelowy kompilatora to x86 lub x64. W przeciwnym razie, niezdefiniowany.
+
+- **&#95; AVX512CD &#95; &#95;** Zdefiniowane jako 1, gdy opcja kompilatora [/arch: AVX512](../build/reference/arch-x86.md) jest ustawiona, a obiekt docelowy kompilatora to x86 lub x64. W przeciwnym razie, niezdefiniowany.
+
+- **&#95; AVX512DQ &#95; &#95;** Zdefiniowane jako 1, gdy opcja kompilatora [/arch: AVX512](../build/reference/arch-x86.md) jest ustawiona, a obiekt docelowy kompilatora to x86 lub x64. W przeciwnym razie, niezdefiniowany.
+
+- **&#95; AVX512F &#95; &#95;** Zdefiniowane jako 1, gdy opcja kompilatora [/arch: AVX512](../build/reference/arch-x86.md) jest ustawiona, a obiekt docelowy kompilatora to x86 lub x64. W przeciwnym razie, niezdefiniowany.
+
+- **&#95; AVX512VL &#95; &#95;** Zdefiniowane jako 1, gdy opcja kompilatora [/arch: AVX512](../build/reference/arch-x86.md) jest ustawiona, a obiekt docelowy kompilatora to x86 lub x64. W przeciwnym razie, niezdefiniowany.
 
 - **&#95;ZNAK&#95;bez znaku** zdefiniowany jako 1, jeśli domyślny typ **char** jest niepodpisany. Ta wartość jest definiowana podczas ustawiania opcji kompilatora [/j (domyślny typ Char)](../build/reference/j-default-char-type-is-unsigned.md) . W przeciwnym razie, niezdefiniowany.
 
-- **środowisko CLR&#95;Ver &#95; &#95;** Zdefiniowany jako literał typu Liczba całkowita reprezentująca wersję środowiska uruchomieniowego języka wspólnego (CLR) używanego do kompilowania aplikacji. Wartość jest zakodowana `Mmmbbbbb`w postaci, gdzie `M` jest wersją główną środowiska uruchomieniowego, `mm` jest wersją pomocniczą środowiska uruchomieniowego i `bbbbb` jest numerem kompilacji. **&#95;&#95;Środowisko&#95;CLR Ver** jest zdefiniowane, jeśli opcja kompilatora [/CLR](../build/reference/clr-common-language-runtime-compilation.md) jest ustawiona. W przeciwnym razie, niezdefiniowany.
+- **środowisko CLR&#95;Ver &#95; &#95;** Zdefiniowany jako literał typu Liczba całkowita reprezentująca wersję środowiska uruchomieniowego języka wspólnego (CLR) używanego do kompilowania aplikacji. Wartość jest zakodowana w postaci `Mmmbbbbb`, gdzie `M` jest wersją główną środowiska uruchomieniowego, `mm` jest wersją pomocniczą środowiska uruchomieniowego, a `bbbbb` jest numerem kompilacji. **&#95;&#95;Środowisko&#95;CLR Ver** jest zdefiniowane, jeśli opcja kompilatora [/CLR](../build/reference/clr-common-language-runtime-compilation.md) jest ustawiona. W przeciwnym razie, niezdefiniowany.
 
     ```cpp
     // clr_ver.cpp
@@ -215,7 +235,7 @@ Program MSVC obsługuje te dodatkowe wstępnie zdefiniowane makra.
 
 - **&#95; Licznik &#95; &#95;** Rozwija do literału liczby całkowitej, który zaczyna się od 0. Wartość jest zwiększana o 1 za każdym razem, gdy jest używana w pliku źródłowym lub w zawartych nagłówkach pliku źródłowego. Licznik zapamiętuje swój stan w przypadku używania prekompilowanych nagłówków. **&#95; &#95;&#95;** To makro jest zawsze definiowane.
 
-  Ten przykład używa `__COUNTER__` do przypisywania unikatowych identyfikatorów do trzech różnych obiektów tego samego typu. `exampleClass` Konstruktor przyjmuje liczbę całkowitą jako parametr. W `main`programie aplikacja deklaruje trzy obiekty typu `exampleClass`, używając `__COUNTER__` jako parametru unikatowego identyfikatora:
+  W tym przykładzie używa `__COUNTER__` do przypisywania unikatowych identyfikatorów do trzech różnych obiektów tego samego typu. Konstruktor `exampleClass` przyjmuje liczbę całkowitą jako parametr. W `main` Aplikacja deklaruje trzy obiekty typu `exampleClass`, używając `__COUNTER__` jako parametru unikatowego identyfikatora:
 
     ```cpp
     // macro__COUNTER__.cpp
@@ -284,13 +304,13 @@ Program MSVC obsługuje te dodatkowe wstępnie zdefiniowane makra.
 
 - **&#95; FUNCDNAME &#95; &#95;** Zdefiniowane jako literał ciągu, który zawiera [nazwę dekoracyjną](../build/reference/decorated-names.md) otaczającej funkcji. Makro jest zdefiniowane tylko w obrębie funkcji. [](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)  **&#95;Makro FUNCDNAME&#95; nie jest rozwinięte, jeśli używasz opcji kompilatora/EP lub &#95;** [/p](../build/reference/p-preprocess-to-a-file.md) .
 
-   Ten przykład używa `__FUNCDNAME__`makr, `__FUNCSIG__`i `__FUNCTION__` do wyświetlania informacji o funkcji.
+   Ten przykład używa makr `__FUNCDNAME__`, `__FUNCSIG__` i `__FUNCTION__`, aby wyświetlić informacje o funkcji.
 
    [!code-cpp[NVC_Predefined_Macros_Examples#1](../preprocessor/codesnippet/CPP/predefined-macros_1.cpp)]
 
-- **&#95; FUNCSIG &#95; &#95;** Zdefiniowane jako literał ciągu, który zawiera sygnaturę otaczającej funkcji. Makro jest zdefiniowane tylko w obrębie funkcji. [](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)  **&#95;Makro FUNCSIG&#95; nie jest rozwinięte, jeśli używasz opcji kompilatora/EP lub &#95;** [/p](../build/reference/p-preprocess-to-a-file.md) . Po skompilowaniu dla elementu docelowego 64-bitowego Konwencja wywoływania jest `__cdecl` domyślnie. Przykład użycia można znaleźć w `__FUNCDNAME__` makrze.
+- **&#95; FUNCSIG &#95; &#95;** Zdefiniowane jako literał ciągu, który zawiera sygnaturę otaczającej funkcji. Makro jest zdefiniowane tylko w obrębie funkcji. [](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)  **&#95;Makro FUNCSIG&#95; nie jest rozwinięte, jeśli używasz opcji kompilatora/EP lub &#95;** [/p](../build/reference/p-preprocess-to-a-file.md) . Po skompilowaniu dla elementu docelowego 64-bitowego Konwencja wywoływania jest domyślnie `__cdecl`. Przykład użycia można znaleźć w makrze `__FUNCDNAME__`.
 
-- **&#95; Funkcja &#95; &#95;** Zdefiniowane jako literał ciągu, który zawiera niedekoracyjną nazwę otaczającej funkcji. Makro jest zdefiniowane tylko w obrębie funkcji. [](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)  **&#95;Makro funkcji&#95; nie jest rozwinięte, jeśli używasz opcji kompilatora/EP lub &#95;** [/p](../build/reference/p-preprocess-to-a-file.md) . Przykład użycia można znaleźć w `__FUNCDNAME__` makrze.
+- **&#95; Funkcja &#95; &#95;** Zdefiniowane jako literał ciągu, który zawiera niedekoracyjną nazwę otaczającej funkcji. Makro jest zdefiniowane tylko w obrębie funkcji. [](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)  **&#95;Makro funkcji&#95; nie jest rozwinięte, jeśli używasz opcji kompilatora/EP lub &#95;** [/p](../build/reference/p-preprocess-to-a-file.md) . Przykład użycia można znaleźć w makrze `__FUNCDNAME__`.
 
 - **Maksymalna liczba&#95;bitów całk&#95; &#95;** Zdefiniowane jako wartość literału liczb całkowitych 64, maksymalny rozmiar (w bitach) dla typu całkowitego bez wektora. To makro jest zawsze definiowane.
 
@@ -316,9 +336,9 @@ Program MSVC obsługuje te dodatkowe wstępnie zdefiniowane makra.
 
 - **&#95;M&#95;ARM&#95;FP** zdefiniowane jako wartość literału liczb całkowitych, która wskazuje, która opcja kompilatora [/Arch](../build/reference/arch-arm.md) została ustawiona dla docelowych procesorów ARM. W przeciwnym razie, niezdefiniowany.
 
-  - Wartość w zakresie 30-39, jeśli nie `/arch` została określona opcja ARM, wskazująca, że domyślna architektura dla ARM została ustawiona (`VFPv3`).
+  - Wartość w zakresie 30-39, jeśli nie została określona opcja ARM `/arch`, co oznacza, że ustawiono architekturę domyślną dla ARM (`VFPv3`).
 
-  - Wartość w zakresie 40-49, jeśli `/arch:VFPv4` została ustawiona.
+  - Wartość z zakresu 40-49, jeśli ustawiono `/arch:VFPv4`.
 
   - Aby uzyskać więcej informacji, zobacz [/arch (ARM)](../build/reference/arch-arm.md).
 
@@ -342,11 +362,11 @@ Program MSVC obsługuje te dodatkowe wstępnie zdefiniowane makra.
 
 - **&#95;M&#95;IX86&#95;FP** zdefiniowany jako wartość literału liczb całkowitych, która wskazuje opcję kompilatora [/Arch](../build/reference/arch-arm.md) , która została ustawiona, lub wartość domyślną. To makro jest zawsze definiowane, gdy element docelowy kompilacji jest procesorem x86. W przeciwnym razie, niezdefiniowany. Po zdefiniowaniu wartość jest:
 
-  - 0, `/arch:IA32` Jeśli ustawiono opcję kompilatora.
+  - 0, jeśli ustawiono opcję kompilatora `/arch:IA32`.
 
-  - 1, `/arch:SSE` Jeśli ustawiono opcję kompilatora.
+  - 1, jeśli ustawiono opcję kompilatora `/arch:SSE`.
 
-  - 2 `/arch:SSE2`, jeśli ustawiono `/arch:AVX`opcję kompilatora `/arch:AVX2` , lub. Ta wartość jest wartością domyślną, jeśli `/arch` nie określono opcji kompilatora. Gdy `/arch:AVX` jest określona, zostanie również  **&#95; &#95;zdefiniowana&#95; AVX** makr. Gdy `/arch:AVX2` jest określony, definiowane są również zarówno **&#95; &#95;AVX&#95;** , jak i **&#95; &#95;AVX2&#95;** .
+  - 2 Jeśli ustawiono opcję kompilatora `/arch:SSE2`, `/arch:AVX`, `/arch:AVX2` lub `/arch:AVX512`. Ta wartość jest wartością domyślną, jeśli nie określono opcji kompilatora `/arch`. Gdy zostanie określona `/arch:AVX`, zostanie również  **&#95; &#95;zdefiniowana&#95; AVX** makr. Po określeniu wartości `/arch:AVX2` są także zdefiniowane zarówno **&#95; &#95;AVX&#95;** , jak i **&#95; &#95;AVX2&#95;** . Gdy `/arch:AVX512` jest określony,  **&#95; &#95;AVX&#95;** ,  **&#95; &#95;AVX2&#95;** ,  **&#95; &#95;AVX512BW&#95;** ,  **&#95;&#95;AVX512CD, &#95;**  **&#95;Zdefiniowano również&#95;AVX512DQ, AVX512F i AVX512VL. &#95;** **&#95; &#95;&#95;** **&#95; &#95;&#95;**
 
   - Aby uzyskać więcej informacji, zobacz [/arch (x86)](../build/reference/arch-x86.md).
 
@@ -362,30 +382,30 @@ Program MSVC obsługuje te dodatkowe wstępnie zdefiniowane makra.
 
 - **&#95;wersja&#95;MSC** Zdefiniowane jako literał liczby całkowitej, który koduje główne i pomocnicze elementy numeru wersji kompilatora. Numer główny to pierwszy element rozdzielanego kropką numeru wersji, a numer pomocniczy to drugi element. Jeśli na przykład numer wersji pakietu Microsoft C/C++ Compiler to 17.00.51106.1, makro  **&#95;MSC&#95;Ver** ma wartość 1700. Wprowadź `cl /?` w wierszu polecenia, aby wyświetlić numer wersji kompilatora. To makro jest zawsze definiowane.
 
-   |Wersja programu Visual Studio|**&#95;WERSJA&#95;MSC**|
+   |Wersja programu Visual Studio|**&#95;wersja&#95;msc**|
    |-|-|
    |Visual Studio 6.0|1200|
-   |Visual Studio .NET 2002 (7.0)|1300|
-   |Visual Studio .NET 2003 (7.1)|1310|
+   |Visual Studio .NET 2002 (7,0)|1300|
+   |Visual Studio .NET 2003 (7,1)|1310|
    |Visual Studio 2005 (8,0)|1400|
    |Visual Studio 2008 (9,0)|1500|
-   |Visual Studio 2010 (10.0)|1600|
+   |Visual Studio 2010 (10,0)|1600|
    |Visual Studio 2012 (11,0)|1700|
    |Visual Studio 2013 (12,0)|1800|
    |Visual Studio 2015 (14,0)|1900|
    |RTW programu Visual Studio 2017 (15,0)|1910|
    |Visual Studio 2017 w wersji 15,3|1911|
-   |Visual Studio 2017 w wersji 15.5|1912|
-   |Visual Studio 2017 wersja 15.6|1913|
+   |Visual Studio 2017 w wersji 15,5|1912|
+   |Visual Studio 2017 w wersji 15,6|1913|
    |Visual Studio 2017 w wersji 15,7|1914|
-   |Visual Studio 2017 w wersji 15.8|1915|
+   |Visual Studio 2017 w wersji 15,8|1915|
    |Visual Studio 2017 w wersji 15,9|1916|
    |RTW programu Visual Studio 2019 (16,0)|1920|
    |Visual Studio 2019 w wersji 16,1|1921|
    |Visual Studio 2019 w wersji 16,2|1922|
    |Visual Studio 2019 w wersji 16,3|1923|
 
-   Aby przetestować wersje kompilatora lub aktualizacje w danej wersji programu Visual Studio lub później, użyj **>=** operatora. Można jej użyć w dyrektywie warunkowej w  **&#95;celu porównania&#95;z** tą znaną wersją. Jeśli masz kilka wzajemnie wykluczających się wersji do porównania, Porządkuj porównania w kolejności malejącej według numeru wersji. Na przykład ten kod sprawdza kompilatory wydane w programie Visual Studio 2017 i nowszych. Następnie sprawdza kompilatory opublikowane w programie lub po nim w programie Visual Studio 2015. Następnie sprawdza wszystkie kompilatory wydane przed Visual Studio 2015:
+   Aby przetestować wersje kompilatora lub aktualizacje w danej wersji programu Visual Studio lub później, użyj operatora **>=** . Można jej użyć w dyrektywie warunkowej w  **&#95;celu porównania&#95;z** tą znaną wersją. Jeśli masz kilka wzajemnie wykluczających się wersji do porównania, Porządkuj porównania w kolejności malejącej według numeru wersji. Na przykład ten kod sprawdza kompilatory wydane w programie Visual Studio 2017 i nowszych. Następnie sprawdza kompilatory opublikowane w programie lub po nim w programie Visual Studio 2015. Następnie sprawdza wszystkie kompilatory wydane przed Visual Studio 2015:
 
    ```cpp
    #if _MSC_VER >= 1910
@@ -399,7 +419,7 @@ Program MSVC obsługuje te dodatkowe wstępnie zdefiniowane makra.
 
    Aby uzyskać więcej informacji, [Zobacz C++ wersja kompilatora Visual](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/) w blogu C++ Microsoft Team.
 
-- **&#95;MSVC&#95;lang** zdefiniowany jako literał liczby całkowitej, który określa C++ Standard języka wskazywany przez kompilator. Jest ono ustawiane tylko w kodzie skompilowanym jako C++. Makro jest wartością literału liczb całkowitych 201402L domyślnie lub kiedy określono opcję kompilatora [/std: c++ 14](../build/reference/std-specify-language-standard-version.md) . Makro jest ustawione na 201703L, jeśli określono opcję kompilatora [/std: c++ 17](../build/reference/std-specify-language-standard-version.md) . Jest ona ustawiona na wyższą, nieokreśloną wartość, gdy jest określona opcja [/std: c + +](../build/reference/std-specify-language-standard-version.md) . W przeciwnym razie makro jest niezdefiniowane. **&#95;MSVC&#95;LANG** — makro i [/STD (Określ wersję standardu języka)](../build/reference/std-specify-language-standard-version.md) opcje kompilatora są dostępne począwszy od wersji programu Visual Studio 2015 Update 3.
+- **&#95;MSVC&#95;lang** zdefiniowany jako literał liczby całkowitej, który określa C++ Standard języka wskazywany przez kompilator. Jest ono ustawiane tylko w kodzie skompilowanym jako C++. Makro jest wartością literału liczb całkowitych 201402L domyślnie lub kiedy określono opcję kompilatora [/std: c++ 14](../build/reference/std-specify-language-standard-version.md) . Makro jest ustawione na 201703L, jeśli określono opcję kompilatora [/std: c++ 17](../build/reference/std-specify-language-standard-version.md) . Jest ona ustawiona na wyższą, nieokreśloną wartość, gdy jest określona opcja [/std: c + +](../build/reference/std-specify-language-standard-version.md) . W przeciwnym razie makro jest niezdefiniowane. W programie Visual Studio 2015 Update 3 dostępne są opcje kompilatora  **&#95;&#95;MSVC** i [/STD (Określ wersję Standard Language)](../build/reference/std-specify-language-standard-version.md) .
 
 - **&#95;&#95;Testy&#95;środowiska&#95;uruchomieniowego MSVC** zdefiniowane jako 1 po ustawieniu jednej z opcji kompilatora [/RTC](../build/reference/rtc-run-time-error-checks.md) . W przeciwnym razie, niezdefiniowany.
 
@@ -434,7 +454,7 @@ Program MSVC obsługuje te dodatkowe wstępnie zdefiniowane makra.
 
 - **&#95;NODEFAULTLIB&#95;VC** definiuje się jako 1 w przypadku ustawienia opcji kompilatora [/zl (Pomiń domyślną nazwę biblioteki)](../build/reference/zl-omit-default-library-name.md) . W przeciwnym razie, niezdefiniowany.
 
-- **&#95;Zdefiniowano&#95;WCHAR&#95;T** zdefiniowane jako 1, gdy ustawiona jest domyślna opcja kompilatora [/Zc: wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) . **&#95;WCHAR&#95;T&#95;zdefiniowane** — makro jest zdefiniowany, ale jeśli nie ma wartości `/Zc:wchar_t-` — opcja kompilatora jest ustawiona, i **wchar_t** jest zdefiniowana w systemowym pliku nagłówkowym, objęte usługi Projekt. W przeciwnym razie, niezdefiniowany.
+- **&#95;Zdefiniowano&#95;WCHAR&#95;T** zdefiniowane jako 1, gdy ustawiona jest domyślna opcja kompilatora [/Zc: wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) . Zdefiniowane  **&#95;makro&#95;WCHAR&#95;T** jest zdefiniowane, ale nie ma żadnej wartości, jeśli opcja kompilatora `/Zc:wchar_t-` jest ustawiona, a **wchar_t** jest zdefiniowana w pliku nagłówkowym systemu zawartym w projekcie. W przeciwnym razie, niezdefiniowany.
 
 - **&#95;System Win32** Zdefiniowane jako 1, gdy element docelowy kompilacji to 32-bit ARM, 64-bit ARM, x86 lub x64. W przeciwnym razie, niezdefiniowany.
 
@@ -444,9 +464,9 @@ Program MSVC obsługuje te dodatkowe wstępnie zdefiniowane makra.
 
 Brak makr preprocesora, które identyfikują wersję biblioteki ATL lub MFC, są wstępnie zdefiniowane przez kompilator. Nagłówki biblioteki ATL i MFC definiują wewnętrznie te makra. Są one niezdefiniowane w dyrektywach preprocesora, które zostały wykonane przed dołączeniem wymaganego nagłówka.
 
-- **&#95;Element&#95;ATL Ver** zdefiniowany \<w atldef. h > jako literał liczby całkowitej, który koduje numer wersji ATL.
+- **&#95;wersja&#95;ATL** Zdefiniowane w \<atldef. h > jako literał liczby całkowitej, który koduje numer wersji ATL.
 
-- **&#95;MFC&#95;Ver** zdefiniowane w \<afxver_. h > jako literał liczby całkowitej, który koduje numer wersji MFC.
+- **&#95;MFC&#95;Ver** Zdefiniowane w \<afxver_. h > jako literał liczby całkowitej, który koduje numer wersji MFC.
 
 ## <a name="see-also"></a>Zobacz także
 

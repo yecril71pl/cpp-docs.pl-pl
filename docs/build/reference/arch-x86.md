@@ -1,62 +1,75 @@
 ---
 title: /arch (x86)
-ms.date: 11/04/2016
+ms.date: 10/01/2019
 ms.assetid: 9dd5a75d-06e4-4674-aade-33228486078d
-ms.openlocfilehash: a429824a7c22aa9aba460481394785d31b92a5ef
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: b1e5501f6edd3eb016395380ff476250c0c388b9
+ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341051"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816317"
 ---
 # <a name="arch-x86"></a>/arch (x86)
 
-Określa architekturę do generowania kodu na x86. Zobacz też [/arch (x64)](arch-x64.md) i [/arch (ARM)](arch-arm.md).
+Określa architekturę generowania kodu w architekturze x86. Zobacz też [/arch (x64)](arch-x64.md) i [/arch (ARM)](arch-arm.md).
 
 ## <a name="syntax"></a>Składnia
 
 ```
-/arch:[IA32|SSE|SSE2|AVX|AVX2]
+/arch:[IA32|SSE|SSE2|AVX|AVX2|AVX512]
 ```
 
 ## <a name="arguments"></a>Argumenty
 
-**/arch:IA32**<br/>
-Określa Brak rozszerzonych instrukcji, a także określa x87 dla obliczeń zmiennopozycyjnych.
+**/arch: IA32**<br/>
+Określa brak rozszerzonych instrukcji i określa x87 dla obliczeń zmiennoprzecinkowych.
 
-**/arch:SSE**<br/>
-Włącza używanie instrukcji SSE.
+**/arch: SSE**<br/>
+Umożliwia korzystanie z instrukcji SSE.
 
-**/arch:SSE2**<br/>
-Włącza używanie instrukcji SSE2. Jest to domyślny instrukcji na x86 platformy, jeśli nie **/arch** określono opcję.
+**/arch: SSE2**<br/>
+Umożliwia korzystanie z instrukcji SSE2. Jest to domyślna instrukcja na platformach x86, jeśli nie określono opcji **/Arch** .
 
-**/arch:AVX**<br/>
-Włącza używanie instrukcji Intel Advanced Vector Extensions.
+**/arch: AVX**<br/>
+Umożliwia korzystanie z zaawansowanych instrukcji dotyczących rozszerzeń wektorów firmy Intel.
 
-**/arch:AVX2**<br/>
-Włącza używanie instrukcji Intel zaawansowany wektor rozszerzeń 2.
+**/arch: AVX2**<br/>
+Umożliwia korzystanie z instrukcji Intel Advanced Vector Extensions 2.
+
+**/arch: AVX512**<br/>
+Umożliwia korzystanie z instrukcji 512 dla zaawansowanych rozszerzeń wektorów firmy Intel.
 
 ## <a name="remarks"></a>Uwagi
 
-Instrukcji SSE i SSE2 istnieje na różnych procesorach Intel i AMD. Instrukcji AVX istnieje na procesorach Intel Sandy mostek i procesory AMD Bulldozer. Instrukcji AVX2 są obsługiwane przez Intel Haswell i Broadwell procesorów oraz procesorów opartych na Koparka AMD.
+Opcja **/Arch** włącza lub wyłącza korzystanie z niektórych rozszerzeń zestawu instrukcji, szczególnie w przypadku obliczeń wektorowych, dostępnych w procesorach z procesorów Intel i AMD. Ogólnie rzecz biorąc, ostatnio wprowadzone procesory mogą obsługiwać dodatkowe rozszerzenia, które są obsługiwane przez starsze procesory, chociaż należy zapoznać się z dokumentacją dla określonego procesora lub testu w celu obsługi rozszerzenia zestawu instrukcji za pomocą [__ CPUID](../../intrinsics/cpuid-cpuidex.md) przed wykonaniem kodu przy użyciu rozszerzenia zestawu instrukcji.
 
-`_M_IX86_FP`, `__AVX__` i `__AVX2__` wskazać makra, które, jeśli są dostępne, **/arch** użyto opcji kompilatora. Aby uzyskać więcej informacji, zobacz [wstępnie zdefiniowane makra](../../preprocessor/predefined-macros.md). **/Arch:AVX2** opcji i `__AVX2__` — makro zostały wprowadzone w programie Visual Studio 2013 Update 2, wersja 12.0.34567.1.
+**/Arch** ma wpływ tylko na generowanie kodu dla funkcji natywnych. W przypadku użycia opcji [/CLR](clr-common-language-runtime-compilation.md) do kompilowania **/Arch** nie ma wpływu na generowanie kodu dla funkcji zarządzanych.
 
-Optymalizator pozwala wybrać, kiedy i jak użyj instrukcji SSE i SSE2, gdy **/arch** jest określony. Używa ona SSE i SSE2 instrukcje dotyczące kilka skalarne obliczeń zmiennoprzecinkowych, podczas określania, czy szybciej jest używać instrukcji SSE/SSE2 i rejestrów zamiast x87 zmiennoprzecinkowych Zarejestruj stosu. W rezultacie Twój kod może faktycznie na użytek kombinację zarówno x87 SSE/SSE2 obliczeń zmiennoprzecinkowych. Ponadto za pomocą **SSE2**, instrukcje SSE2 może służyć do niektórych operacji 64-bitową liczbę całkowitą.
+Opcje **/Arch** odnoszą się do rozszerzeń zestawu instrukcji o następujących cechach:
 
-Oprócz przy użyciu instrukcji SSE i SSE2, kompilator używa także inne instrukcje, które znajdują się na poprawki procesora, które obsługują rozszerzenia SSE i SSE2. Przykładem jest instrukcji CMOV, która najpierw pojawiły się na procesor Pentium Pro korektą procesory Intel.
+- **Ia32** jest starszym 32-bitowym zestawem instrukcji x86 bez żadnych operacji wektorowych i przy użyciu x87 dla obliczeń zmiennoprzecinkowych.
 
-Ponieważ x86 kompilator generuje kod używającego instrukcji SSE2, domyślnie, należy określić **/arch:IA32** wyłączenie generowania instrukcji SSE i SSE2 dla x86 procesorów.
+- Funkcja **SSE** umożliwia obliczanie przy użyciu wektorów maksymalnie czterech wartości zmiennoprzecinkowych o pojedynczej precyzji. Dodano również odpowiednie skalarne instrukcje zmiennoprzecinkowe.
 
-**/ arch** tylko ma wpływ na generowanie kodu dla funkcji natywnych. Kiedy używasz [/CLR](clr-common-language-runtime-compilation.md) do kompilowania, **/arch** nie ma wpływu na generowanie kodu dla funkcji zarządzanej.
+- **SSE2** umożliwia obliczanie przy użyciu wektorów 128-bitowych o pojedynczej precyzji, podwójnej precyzji i 1, 2, 4 lub 8-bajtowych wartości całkowitych. Dodano również instrukcje skalarne o podwójnej precyzji.
 
-**/ arch** i [/QIfist](qifist-suppress-ftol.md) nie można użyć w tym samym compiland —. W szczególności, jeśli nie używasz `_controlfp` do modyfikowania słowa sterującego FP, a następnie uruchamiania środowiska wykonawczego zestawy x87 FPU kontrolki programu word sterowanie dokładnością pola Kod do 53 bitów. W związku z tym co zmiennoprzecinkowe i podwójne operacji w wyrażeniu używa mantysę 53-bitową i wykładnik 15-bitowych. Jednak każda operacja pojedynczej precyzji SSE używa mantysę 24-bitowego i wykładnik 8-bitową i SSE2 podwójnej precyzji operacje używają mantysę 53-bitową i wykładnik 11-bitowych. Aby uzyskać więcej informacji, zobacz [_control87 —, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md). Te różnice są możliwe w drzewie jedno wyrażenie, ale nie w przypadkach, gdzie uczestniczy przypisanie użytkownika po każdym Podwyrażenie. Rozważ następujące opcje:
+- **AVX** wprowadził alternatywne kodowanie instrukcji dla wektorów i zmiennoprzecinkowych instrukcji skalarnych, które umożliwiają wektorów 128 bitów lub 256 bitów, a zero — rozszerza wszystkie wyniki wektorów do pełnego rozmiaru wektora. (W przypadku starszej zgodności, instrukcje wektora stylu SSE zachowują wszystkie bity poza bitowym 127). Większość operacji zmiennoprzecinkowych jest przedłużona do 256 bitów.
+
+- **AVX2** rozszerza większość operacji całkowitych na 256-bitowe wektory i umożliwia korzystanie z odpornych instrukcji typu "pomnóż-Add" (FMA).
+
+- **AVX512** wprowadza inny formularz kodowania instrukcji, który umożliwia 512-bitowe wektory oraz niektóre inne funkcje opcjonalne. Dodano również instrukcje dotyczące dodatkowych operacji.
+
+Optymalizator wybiera, kiedy i jak używać instrukcji wektorowych w zależności od tego, który **/Arch** jest określony. Skalarne obliczenia zmiennoprzecinkowe są wykonywane przy użyciu instrukcji SSE lub AVX, jeśli są dostępne. Niektóre konwencje wywoływania określają przekazywanie argumentów zmiennoprzecinkowych na stosie x87. w związku z tym kod może używać mieszanki instrukcji x87 i SSE/AVX dla obliczeń zmiennoprzecinkowych. Instrukcje wektora liczb całkowitych mogą być również używane dla niektórych operacji 64-bitowych liczb całkowitych, jeśli są dostępne.
+
+Oprócz wektorów i zmiennoprzecinkowych instrukcji skalarnych każda opcja **/Arch** może także umożliwić użycie innych instrukcji innych niż wektorowe, które są skojarzone z tą opcją. Przykładem jest rodzina instrukcji CMOVcc, która po raz pierwszy pojawiła się na procesorach Intel Pentium Pro. Ponieważ instrukcje SSE zostały wprowadzone wraz z kolejnym procesorem Intel Pentium III, instrukcje CMOVcc można generować z wyjątkiem przypadków, gdy określono **/arch: ia32** .
+
+Operacje zmiennoprzecinkowe są zwykle zaokrąglane do podwójnej precyzji (64-bitowe) w kodzie x87, ale można użyć `_controlfp`, aby zmodyfikować słowo kontroli FP, włącznie z ustawieniem kontroli dokładności na rozszerzoną precyzję (80-bitową) lub pojedynczej precyzji (32-bit). Aby uzyskać więcej informacji, zobacz [_control87, _controlfp, @no__t -1 _control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md). SSE i AVX mają oddzielne instrukcje o pojedynczej precyzji i podwójnej precyzji dla każdej operacji, więc nie istnieje odpowiednik kodu SSE/AVX. Może to zmienić sposób zaokrąglania wyników, gdy wynik operacji zmiennoprzecinkowej jest używany bezpośrednio do dalszej obliczeń zamiast przypisywania go do zmiennej użytkownika. Rozważ następujące opcje:
 
 ```cpp
 r = f1 * f2 + d;  // Different results are possible on SSE/SSE2.
 ```
 
-Porównaj:
+Z jawnym przypisaniem:
 
 ```cpp
 t = f1 * f2;   // Do f1 * f2, round to the type of t.
@@ -64,15 +77,29 @@ r = t + d;     // This should produce the same overall result
                // whether x87 stack is used or SSE/SSE2 is used.
 ```
 
-### <a name="to-set-this-compiler-option-for-avx-avx2-ia32-sse-or-sse2-in-visual-studio"></a>Aby ustawić tę opcję kompilatora AVX, AVX2, IA32, SSE lub SSE2 w programie Visual Studio
+**/Arch** i [/QIfist](qifist-suppress-ftol.md) nie mogą być używane w tym samym jednostka kompilacji. Opcja **/QIfist** zmienia zachowanie zaokrąglania zmiennoprzecinkowego na konwersję liczb całkowitych. Domyślnym zachowaniem jest obcinanie (zaokrąglanie w kierunku zera), podczas gdy opcja **/QIfist** określa użycie trybu zaokrąglania środowiska zmiennoprzecinkowego. Ponieważ spowoduje to zmianę zachowania wszystkich konwersji zmiennoprzecinkowych na liczbę całkowitą, ta flaga jest przestarzała. Podczas kompilowania dla instrukcji SSE lub AVX można zaokrąglić wartość zmiennoprzecinkową do liczby całkowitej przy użyciu trybu zaokrąglania środowiska zmiennoprzecinkowego za pomocą wewnętrznej sekwencji funkcji:
 
-1. Otwórz **stron właściwości** okno dialogowe dla projektu. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+```cpp
+int convert_float_to_int(float x) {
+    return _mm_cvtss_si32(_mm_set_ss(x));
+}
 
-1. Wybierz **właściwości konfiguracji**, **C/C++** folderu.
+int convert_double_to_int(double x) {
+    return _mm_cvtsd_si32(_mm_set_sd(x));
+}
+```
 
-1. Wybierz **generowania kodu** stronę właściwości.
+@No__t-0, `__AVX__`, `__AVX2__`, `__AVX512F__`, `__AVX512CD__`, `__AVX512BW__`, `__AVX512DQ__` i `__AVX512VL__` makra wskazują, które, w przypadku użycia opcji kompilatora **/Arch** . Aby uzyskać więcej informacji, zobacz [wstępnie zdefiniowane makra](../../preprocessor/predefined-macros.md). Opcja **/arch: AVX2** i makro `__AVX2__` zostały wprowadzone w Visual Studio 2013 Update 2 w wersji 12.0.34567.1. Ograniczona obsługa **/arch: AVX512** została dodana w programie visual Studio 2017 i rozwinięta w programie visual Studio 2019.
 
-1. Modyfikowanie **Włącz rozszerzone rozkazów** właściwości.
+### <a name="to-set-this-compiler-option-for-avx-avx2-avx512-ia32-sse-or-sse2-in-visual-studio"></a>Aby ustawić tę opcję kompilatora dla AVX, AVX2, AVX512, IA32, SSE lub SSE2 w programie Visual Studio
+
+1. Otwórz okno dialogowe **strony właściwości** dla projektu. Aby uzyskać więcej informacji, [Zobacz C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
+
+1. Wybierz **Właściwości konfiguracji**, **C/C++**  folder.
+
+1. Wybierz stronę właściwości **generowanie kodu** .
+
+1. Zmodyfikuj właściwość **Włącz rozszerzony zestaw instrukcji** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
