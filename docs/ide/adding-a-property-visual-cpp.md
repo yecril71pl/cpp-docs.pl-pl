@@ -157,7 +157,7 @@ Użyj tej strony Kreatora dodawania właściwości, aby określić ustawienia j�
 
 - `helpstring`
 
-  Określa ciąg znaków, który jest używany do opisania elementu, do którego ma zastosowanie. Domyślnie jest ono ustawione na `property` &nbsp; *&nbsp;nazwę właściwości*. Zobacz [HelpString](/windows/win32/Midl/helpstring) w *dokumentacji MIDL*.
+  Określa ciąg znaków, który jest używany do opisania elementu, do którego ma zastosowanie. Domyślnie jest ono ustawione na `property`&nbsp; *&nbsp;nazwę właściwości*. Zobacz [HelpString](/windows/win32/Midl/helpstring) w *dokumentacji MIDL*.
 
 ### <a name="other-options"></a>Inne opcje
 
