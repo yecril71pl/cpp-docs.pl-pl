@@ -3,12 +3,12 @@ title: Nawiązywanie połączenia z docelowym systemem Linux w programie Visual 
 description: Jak nawiązać połączenie ze zdalną maszyną z systemem Linux lub WSL z C++ poziomu projektu programu Visual Studio.
 ms.date: 09/04/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 75d8b3db64d9b1f3562d6730685b7c29fe4982f4
-ms.sourcegitcommit: a42d3b0408f02138dcd6fabcb98d50b0cb159191
+ms.openlocfilehash: 2f4e6311493f2b29ba6911ec1b76225b6c7abe6d
+ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383406"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71925558"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Nawiązywanie połączenia z docelowym systemem Linux w programie Visual Studio
 
@@ -52,11 +52,11 @@ Aby skonfigurować to połączenie zdalne:
    
    Plik prywatnego klucza RSA można utworzyć, wykonując następujące czynności:
 
-    1. Na komputerze z systemem Windows Utwórz parę kluczy SSH z `ssh-keygen -t rsa`. Spowoduje to utworzenie klucza publicznego i klucza prywatnego. Domyślnie klucze są umieszczane w obszarze `C:\Users\%USERNAME%\.ssh` z nazwami `id_rsa` `id_rsa.pub` i.
+    1. Na komputerze z systemem Windows Utwórz parę kluczy SSH z `ssh-keygen -t rsa`. Spowoduje to utworzenie klucza publicznego i klucza prywatnego. Domyślnie klucze są umieszczane w obszarze `C:\Users\%USERNAME%\.ssh` z nazwami `id_rsa.pub` i `id_rsa`.
 
     1. W systemie Windows skopiuj klucz publiczny na komputer z systemem Linux: `scp -p C:\Users\%USERNAME%\.ssh\id_rsa.pub user@hostname`.
 
-    1. W systemie Linux Dodaj klucz do listy autoryzowanych kluczy (i upewnij się, że plik ma odpowiednie uprawnienia):`cat ~/id_rsa.pub >> ~/.ssh/authorized_keys; chmod 600 ~/.ssh/authorized_keys`
+    1. W systemie Linux Dodaj klucz do listy autoryzowanych kluczy (i upewnij się, że plik ma odpowiednie uprawnienia): `cat ~/id_rsa.pub >> ~/.ssh/authorized_keys; chmod 600 ~/.ssh/authorized_keys`
 
 1. Kliknij przycisk **Połącz** , aby podjąć próbę nawiązania połączenia z komputerem zdalnym. 
 
@@ -94,11 +94,12 @@ W programie Visual Studio 2017 można nawiązać połączenie z usługą WSL, wy
 
 Program Visual Studio 2019 w wersji 16,1 dodano natywną C++ obsługę programu z [podsystemem Windows dla systemu Linux (WSL)](https://docs.microsoft.com/windows/wsl/about).  Oznacza to, że nie trzeba już dodawać połączenia zdalnego ani konfigurować protokołu SSH w celu kompilowania i debugowania lokalnej instalacji WSL. Szczegółowe informacje na [temat sposobu instalowania WSL](https://docs.microsoft.com/windows/wsl/install-win10) można znaleźć tutaj.
 
-Aby skonfigurować instalację programu WSL do pracy z programem Visual Studio, potrzebne są następujące narzędzia: do współpracy w zatoce, GDB, marka, rsync i zip. Można je zainstalować na dystrybucje, które używają apt z tym poleceniem: 
+Aby skonfigurować instalację WSL do pracy z programem Visual Studio, potrzebne są następujące narzędzia: w zatoce lub Clang, GDB, marka, rsync i zip. Można je zainstalować na dystrybucje, które używają apt przy użyciu tego polecenia, które również instaluje kompilator g + +: 
 
 ```bash
 sudo apt install g++ gdb make rsync zip
 ```
+Aby uzyskać więcej informacji, zobacz [pobieranie, Instalowanie i Konfigurowanie obciążenia systemu Linux](download-install-and-setup-the-linux-development-workload.md).
 
 Aby skonfigurować projekt dla programu WSL, zobacz [Konfigurowanie projektu systemu Linux](configure-a-linux-project.md) lub [Konfigurowanie projektu systemu Linux CMAKE](cmake-linux-project.md) w zależności od rodzaju projektu. Aby wykonać instrukcje krok po kroku dotyczące tworzenia prostej aplikacji konsolowej z WSL, zapoznaj się z tym wpisem na blogu wprowadzającym w [ C++ programie Visual Studio 2019 i podsystemem Windows dla systemu Linux (WSL)](https://devblogs.microsoft.com/cppblog/c-with-visual-studio-2019-and-windows-subsystem-for-linux-wsl/).
 
@@ -109,4 +110,4 @@ Aby skonfigurować projekt dla programu WSL, zobacz [Konfigurowanie projektu sys
 [Konfigurowanie projektu systemu Linux](configure-a-linux-project.md)<br />
 [Konfigurowanie projektu CMake systemu Linux](cmake-linux-project.md)<br />
 [Wdrażanie, uruchamianie i debugowanie projektu systemu Linux](deploy-run-and-debug-your-linux-project.md)<br />
-[Konfigurowanie sesji debugowania narzędzia CMake](../build/configure-cmake-debugging-sessions.md)
+[Konfigurowanie sesji debugowania CMake](../build/configure-cmake-debugging-sessions.md)

@@ -4,12 +4,12 @@ ms.date: 10/01/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 52ca34ef8522ada1881e2f7f5df212167c64c919
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.openlocfilehash: 168f5b0aac34757a9c2d73bcebc908a0d58721fe
+ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816387"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71925576"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>CMake projekty w programie Visual Studio
 
@@ -58,12 +58,6 @@ Jeśli musisz przekazać argumenty do pliku wykonywalnego w czasie debugowania, 
 
 > [!NOTE]
 > W przypadku innych rodzajów projektów otwartych folderów są używane dwa dodatkowe pliki JSON: **pliku cppproperties. JSON** i **Tasks. vs. JSON**. Żadna z tych elementów nie jest istotna dla projektów CMake.
-
-## <a name="import-an-existing-cache"></a>Importowanie istniejącej pamięci podręcznej
-
-Podczas importowania istniejącego pliku CMakeCache. txt program Visual Studio automatycznie wyodrębnia dostosowane zmienne i tworzy wstępnie wypełniony plik **pliku cmakesettings. JSON** na podstawie tych elementów. Oryginalna pamięć podręczna nie jest modyfikowana w żaden sposób i nadal może być używana z wiersza polecenia lub z dowolnym narzędziem lub środowiskiem IDE użytym do jego wygenerowania. Nowy plik **pliku cmakesettings. JSON** zostanie umieszczony obok głównego pliku CMakeLists. txt projektu. Program Visual Studio generuje nową pamięć podręczną opartą na pliku ustawień. Automatyczne generowanie pamięci podręcznej można przesłonić w oknie **narzędzia > opcje > CMake > ogólne** .
-
-Nie wszystkie elementy w pamięci podręcznej są importowane. Właściwości, takie jak generator i lokalizacja kompilatorów, są zastępowane wartościami domyślnymi, które są znane do pracy z IDE.
 
 ## <a name="open-an-existing-cache"></a>Otwieranie istniejącej pamięci podręcznej
 
@@ -311,8 +305,8 @@ W programie Visual Studio 2015 użytkownicy programu Visual Studio mogą używa�
 [Samouczek: Tworzenie C++ projektów dla wielu platform w programie Visual Studio](get-started-linux-cmake.md)<br/>
 [Konfigurowanie projektu CMake systemu Linux](../linux/cmake-linux-project.md)<br/>
 [Nawiązywanie połączenia ze zdalnym komputerem z systemem Linux](../linux/connect-to-your-remote-linux-computer.md)<br/>
-[Dostosowywanie ustawień kompilacji narzędzia CMake](customize-cmake-settings.md)<br/>
-[Dokumentacja pliku CMakeSettings.json](cmakesettings-reference.md)<br/>
-[Konfigurowanie sesji debugowania narzędzia CMake](configure-cmake-debugging-sessions.md)<br/>
+[Dostosuj ustawienia kompilacji CMake](customize-cmake-settings.md)<br/>
+[Odwołanie pliku cmakesettings. JSON](cmakesettings-reference.md)<br/>
+[Konfigurowanie sesji debugowania CMake](configure-cmake-debugging-sessions.md)<br/>
 [Wdrażanie, uruchamianie i debugowanie projektu systemu Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
 [CMake wstępnie zdefiniowanej konfiguracji](cmake-predefined-configuration-reference.md)<br/>
