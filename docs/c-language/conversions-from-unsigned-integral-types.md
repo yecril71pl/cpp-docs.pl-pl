@@ -1,6 +1,6 @@
 ---
 title: Konwersje z niepodpisanych typów całkowitych
-ms.date: 03/27/2019
+ms.date: 10/02/2019
 helpviewer_keywords:
 - integers, converting
 - type casts, involving integers
@@ -8,67 +8,83 @@ helpviewer_keywords:
 - type conversion [C++], signed and unsigned integers
 - integral conversions, from unsigned
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
-ms.openlocfilehash: 3f6136a721f84332451184baa648ebc7c909d5d7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3099f0113103223e392dc20560899b4a6e3ebf20
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312443"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998791"
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>Konwersje z niepodpisanych typów całkowitych
 
-Liczbą całkowitą bez znaku jest konwertowana na krótszą liczba całkowita bez znaku lub podpisany tworzy bardziej znaczących bitów lub już bez znaku lub podpisanej liczby całkowitej przez zero, rozszerzenie. Aby uzyskać więcej informacji, zobacz [konwersje z niepodpisanych typów całkowitych tabeli](#conversions-from-unsigned-integral-types-table).
+Gdy liczba całkowita bez znaku jest konwertowana na typ liczba całkowita lub zmiennoprzecinkowa, jeśli oryginalna wartość jest reprezentacja w typie wyniku, wartość nie jest zmieniana.
 
-Gdy wartością typu całkowitego jest obniżony do liczby całkowitej ze znakiem o rozmiarze mniejszym lub liczbą całkowitą bez znaku jest konwertowany na liczbę całkowitą ze znakiem odpowiednie, wartość jest bez zmian, jeśli mogą być reprezentowane w nowego typu. Jednak wartość reprezentuje zmiany, jeśli ustawiono bit znaku, jak w poniższym przykładzie.
+Podczas konwertowania liczby całkowitej bez znaku na liczbę całkowitą o większym rozmiarze wartość jest zerowa-rozszerzona. Podczas konwertowania na liczbę całkowitą o mniejszym rozmiarze bity o wysokim stopniu są obcinane. Wynik jest interpretowany przy użyciu typu wyniku, jak pokazano w tym przykładzie.
 
 ```C
-int j;
-unsigned short k = 65533;
+unsigned k = 65533;
+short j;
 
 j = k;
 printf_s( "%hd\n", j );   // Prints -3
 ```
 
-Jeśli nie może być przedstawiona, wynik zależy od implementacji. Zobacz [konwersje rzutowania typów](../c-language/type-cast-conversions.md) informacji na temat obsługi kompilator Microsoft C: zwężanie liczb całkowitych. Te same zachowanie wyniki z konwersji liczby całkowitej lub Rzutowanie liczb całkowitych.
+W przypadku konwertowania nieoznaczonej liczby całkowitej na typ zmiennoprzecinkowy, jeśli oryginalna wartość nie może być reprezentowana dokładnie w typie wyniku, wynik jest następną wyższą lub mniejszą reprezentacją wartości.
 
-Wartości bez znaku są konwertowane w sposób, który zachowuje ich wartości i nie jest stałego bezpośrednio w C. Jedynym wyjątkiem jest konwersja **unsigned long** do **float**, która co najwyżej traci mniej znaczące bity. W przeciwnym razie wartość jest zachowywana, znakiem lub bez znaku. Wartość typu Liczba całkowita jest konwertowana do zmiennoprzecinkowych, gdy wartość jest poza zakresem stałego, wynik jest niezdefiniowany. (Zobacz [magazyn typów podstawowych](../c-language/storage-of-basic-types.md) uzyskać informacji na temat zakresu dla typów całkowitych i zmiennoprzecinkowych.)
+Zobacz [Magazyn typów podstawowych](../c-language/storage-of-basic-types.md) , aby uzyskać informacje o rozmiarach typów całkowitych i zmiennoprzecinkowych.
 
-W poniższej tabeli przedstawiono konwersje z niepodpisanych typów całkowitych.
+**Specyficzne dla firmy Microsoft**
 
-## <a name="conversions-from-unsigned-integral-types-table"></a>Konwersje z niepodpisanych typów całkowitych tabeli
+W kompilatorze Microsoft: **unsigned** (lub **unsigned int**) i **unsigned long** są DISTINCT, ale równoważnymi typami. Konwersja **niepodpisanej wartości int** jest wykonywana w taki sam sposób jak w przypadku konwersji typu **unsigned long**.
 
-|Z|Zadanie|Metoda|
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
+
+Poniższa tabela zawiera podsumowanie konwersji z niepodpisanych typów całkowitych.
+
+## <a name="table-of-conversions-from-unsigned-integral-types"></a>Tabela konwersji z niepodpisanych typów całkowitych
+
+|Z|Do|Metoda|
 |----------|--------|------------|
-|**unsigned char**|**char**|Zachowaj wzorzec bitowy; bit wyższego rzędu staje się bitu znaku|
-|**unsigned char**|**short**|Zero-extend|
-|**unsigned char**|**long**|Zero-extend|
-|**unsigned char**|**short bez znaku**|Zero-extend|
-|**unsigned char**|**unsigned long**|Zero-extend|
-|**unsigned char**|**float**|Konwertuj na **długie**; Konwertuj **długie** do **float**|
-|**unsigned char**|**double**|Konwertuj na **długie**; Konwertuj **długie** do **double**|
-|**unsigned char**|**Liczba typu double**|Konwertuj na **długie**; Konwertuj **długie** do **double**|
-|**short bez znaku**|**char**|Zachowaj mniej znaczący bajt|
-|**short bez znaku**|**short**|Zachowaj wzorzec bitowy; bit wyższego rzędu staje się bitu znaku|
-|**short bez znaku**|**long**|Zero-extend|
-|**short bez znaku**|**unsigned char**|Zachowaj mniej znaczący bajt|
-|**short bez znaku**|**unsigned long**|Zero-extend|
-|**short bez znaku**|**float**|Konwertuj na **długie**; Konwertuj **długie** do **float**|
-|**short bez znaku**|**double**|Konwertuj na **długie**; Konwertuj **długie** do **double**|
-|**short bez znaku**|**Liczba typu double**|Konwertuj na **długie**; Konwertuj **długie** do **double**|
-|**unsigned long**|**char**|Zachowaj mniej znaczący bajt|
-|**unsigned long**|**short**|Zachowaj niskiego rzędu programu word|
-|**unsigned long**|**long**|Zachowaj wzorzec bitowy; bit wyższego rzędu staje się bitu znaku|
-|**unsigned long**|**unsigned char**|Zachowaj mniej znaczący bajt|
-|**unsigned long**|**short bez znaku**|Zachowaj niskiego rzędu programu word|
-|**unsigned long**|**float**|Konwertuj na **długie**; Konwertuj **długie** do **float**|
-|**unsigned long**|**double**|Konwertuj bezpośrednio do **double**|
-|**unsigned long**|**Liczba typu double**|Konwertuj na **długie**; Konwertuj **długie** do **double**|
-
-**Microsoft Specific**
-
-Dla kompilatora Microsoft C **unsigned int** typu jest odpowiednikiem **unsigned long** typu. Konwersja **unsigned int** wartość przechodzi w ten sam sposób jak konwersja **unsigned long**. Konwersje z **unsigned long** wartości **float** nie są prawidłowe, jeśli konwertowana wartość jest większa niż maksymalna wynik dodatni podpisany **długie** wartość.
-
-**END specyficzny dla Microsoft**
+|**znak bez znaku**|**char**|Zachowaj wzorzec bitowy; bit z wysokim priorytetem jest bit znaku|
+|**znak bez znaku**|**short**|Zero — zwiększenie|
+|**znak bez znaku**|**long**|Zero — zwiększenie|
+|**znak bez znaku**|**Long Long**|Zero — zwiększenie|
+|**znak bez znaku**|**bez znaku Short**|Zero — zwiększenie|
+|**znak bez znaku**|**bez znaku**|Zero — zwiększenie|
+|**znak bez znaku**|**bez znaku Long Long**|Zero — zwiększenie|
+|**znak bez znaku**|**float**|Konwertuj na **Long**; Konwertuj **Long** na **zmiennoprzecinkową**|
+|**znak bez znaku**|**double**|Konwertuj na **Long**; Konwertuj **Long** na **Double**|
+|**znak bez znaku**|**Long Double**|Konwertuj na **Long**; Konwertuj **Long** na **Double**|
+|**bez znaku Short**|**char**|Zachowaj bajt o niskiej kolejności|
+|**bez znaku Short**|**short**|Zachowaj wzorzec bitowy; bit z wysokim priorytetem jest bit znaku|
+|**bez znaku Short**|**long**|Zero — zwiększenie|
+|**bez znaku Short**|**Long Long**|Zero — zwiększenie|
+|**bez znaku Short**|**znak bez znaku**|Zachowaj bajt o niskiej kolejności|
+|**bez znaku Short**|**bez znaku**|Zero — zwiększenie|
+|**bez znaku Short**|**bez znaku Long Long**|Zero — zwiększenie|
+|**bez znaku Short**|**float**|Konwertuj na **Long**; Konwertuj **Long** na **zmiennoprzecinkową**|
+|**bez znaku Short**|**double**|Konwertuj na **Long**; Konwertuj **Long** na **Double**|
+|**bez znaku Short**|**Long Double**|Konwertuj na **Long**; Konwertuj **Long** na **Double**|
+|**bez znaku**|**char**|Zachowaj bajt o niskiej kolejności|
+|**bez znaku**|**short**|Zachowaj wyraz o niskiej kolejności|
+|**bez znaku**|**long**|Zachowaj wzorzec bitowy; bit z wysokim priorytetem jest bit znaku|
+|**bez znaku**|**Long Long**|Zero — zwiększenie|
+|**bez znaku**|**znak bez znaku**|Zachowaj bajt o niskiej kolejności|
+|**bez znaku**|**bez znaku Short**|Zachowaj wyraz o niskiej kolejności|
+|**bez znaku**|**bez znaku Long Long**|Zero — zwiększenie|
+|**bez znaku**|**float**|Konwertuj na **Long**; Konwertuj **Long** na **zmiennoprzecinkową**|
+|**bez znaku**|**double**|Konwertuj bezpośrednio do **podwójnego**|
+|**bez znaku**|**Long Double**|Konwertuj na **Long**; Konwertuj **Long** na **Double**|
+|**bez znaku Long Long**|**char**|Zachowaj bajt o niskiej kolejności|
+|**bez znaku Long Long**|**short**|Zachowaj wyraz o niskiej kolejności|
+|**bez znaku Long Long**|**long**|Zachowywanie wartości DWORD z niską kolejnością|
+|**bez znaku Long Long**|**Long Long**|Zachowaj wzorzec bitowy; bit z wysokim priorytetem jest bit znaku|
+|**bez znaku Long Long**|**znak bez znaku**|Zachowaj bajt o niskiej kolejności|
+|**bez znaku Long Long**|**bez znaku Short**|Zachowaj wyraz o niskiej kolejności|
+|**bez znaku Long Long**|**bez znaku**|Zachowywanie wartości DWORD z niską kolejnością|
+|**bez znaku Long Long**|**float**|Konwertuj na **Long**; Konwertuj **Long** na **zmiennoprzecinkową**|
+|**bez znaku Long Long**|**double**|Konwertuj bezpośrednio do **podwójnego**|
+|**bez znaku Long Long**|**Long Double**|Konwertuj na **Long**; Konwertuj **Long** na **Double**|
 
 ## <a name="see-also"></a>Zobacz także
 

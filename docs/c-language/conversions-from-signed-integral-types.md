@@ -1,6 +1,6 @@
 ---
 title: Konwersje z podpisanych typów całkowitych
-ms.date: 11/04/2016
+ms.date: 10/02/2019
 helpviewer_keywords:
 - integral conversions, from signed
 - integers, converting
@@ -8,16 +8,18 @@ helpviewer_keywords:
 - data type conversion [C++], signed and unsigned integers
 - type conversion [C++], signed and unsigned integers
 ms.assetid: 5eea32f8-8b14-413d-acac-c063b3d118d7
-ms.openlocfilehash: 4d2f0ab43adf3cbad3d1ffa244551c67883c6606
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79608b5ca4335ee3c30bdab27e7efade5b7e2f54
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312456"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998721"
 ---
 # <a name="conversions-from-signed-integral-types"></a>Konwersje z podpisanych typów całkowitych
 
-Jeśli wartość liczby całkowitej ze znakiem nie jest ujemna liczba całkowita ze znakiem jest konwertowany na liczbę całkowitą bez znaku z równym lub większym rozmiarze, wartość jest bez zmian. Konwersja dokonuje logowania zwiększanie liczby całkowitej ze znakiem. Liczba całkowita ze znakiem jest konwertowany krótszy liczby całkowitej ze znakiem tworzy bardziej znaczących bitów. Wynik jest interpretowany jako wartość nieoznaczona, jak pokazano w poniższym przykładzie.
+Gdy liczba całkowita ze znakiem jest konwertowana na liczbę całkowitą lub typ zmiennoprzecinkowy, jeśli oryginalna wartość jest reprezentacja w typie wynikowym, wartość nie jest zmieniana.
+
+Gdy liczba całkowita ze znakiem jest konwertowana na liczbę całkowitą o większym rozmiarze, wartość jest podwyższana. W przypadku przekonwertowania na liczbę całkowitą o mniejszym rozmiarze bity o dużej kolejności są obcinane. Wynik jest interpretowany przy użyciu typu wyniku, jak pokazano w poniższym przykładzie:
 
 ```C
 int i = -3;
@@ -27,46 +29,64 @@ u = i;
 printf_s( "%hu\n", u );  // Prints 65533
 ```
 
-Dane nie zostaną utracone podczas liczba całkowita ze znakiem jest konwertowana na wartość zmiennoprzecinkową, z wyjątkiem tego, aby precyzyjnie mogą zostać utracone podczas **long int** lub **unsigned long int** wartość jest konwertowana na **float** wartość.
+W przypadku konwertowania podpisanej liczby całkowitej na typ zmiennoprzecinkowy, jeśli oryginalna wartość nie jest zaprezentowana dokładnie w typie wynikowym, wynik jest następną wyższą lub mniejszą reprezentacją wartości.
 
-W poniższej tabeli przedstawiono konwersje z podpisanych typów całkowitych. Ta tabela zakłada się, że **char** typ ma znak domyślnie. Jeśli używasz opcji kompilacji, aby zmienić domyślną **char** konwersje w typów na typy bez znaku, [konwersje z niepodpisanych typów całkowitych](../c-language/conversions-from-unsigned-integral-types.md) tabeli dla **unsigned char**  typu Zastosuj zamiast konwersje w poniższej tabeli, konwersje z typów całkowitych oznaczonych.
+Informacje o rozmiarach typów całkowitych i zmiennoprzecinkowych znajdują się w temacie [Storage of Basic Types](../c-language/storage-of-basic-types.md).
 
-### <a name="conversions-from-signed-integral-types"></a>Konwersje z podpisanych typów całkowitych
+Poniższa tabela zawiera podsumowanie konwersji z podpisanych typów całkowitych. Przyjęto założenie, że typ **char** jest podpisany domyślnie. Jeśli użyjesz opcji czasu kompilowania, aby zmienić wartość domyślną dla typu **char** na unsigned, zamiast konwersji w tej tabeli należy zastosować konwersje [z tabeli niepodpisanych typów całkowitych](../c-language/conversions-from-unsigned-integral-types.md) dla typu **znak bez znaku** .
 
-|Z|Zadanie|Metoda|
+**Specyficzne dla firmy Microsoft**
+
+W kompilatorze firmy Microsoft **int** i **Long** są odrębnymi, ale równoważnymi typami. Konwersja wartości **int** jest wykonywana w taki sam sposób jak w przypadku konwersji **Long**.
+
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
+
+## <a name="table-of-conversions-from-signed-integral-types"></a>Tabela konwersji z podpisanych typów całkowitych
+
+|Z|Do|Metoda|
 |----------|--------|------------|
-|**CHAR**1|**short**|Rozszerzanie logowania|
-|**char**|**long**|Rozszerzanie logowania|
-|**char**|**unsigned char**|Zachowaj wzorca; bit wyższego rzędu traci funkcję jako bitu znaku|
-|**char**|**short bez znaku**|Rozszerzenie o znak na **krótki**; Konwertuj **krótki** do **typ unsigned short**|
-|**char**|**unsigned long**|Rozszerzanie logowania na **długie**; Konwertuj **długie** do **unsigned long**|
-|**char**|**float**|Rozszerzanie logowania na **długie**; Konwertuj **długie** do **float**|
-|**char**|**double**|Rozszerzanie logowania na **długie**; Konwertuj **długie** do **double**|
-|**char**|**Liczba typu double**|Rozszerzanie logowania na **długie**; Konwertuj **długie** do **double**|
-|**short**|**char**|Zachowaj mniej znaczący bajt|
-|**short**|**long**|Rozszerzanie logowania|
-|**short**|**unsigned char**|Zachowaj mniej znaczący bajt|
-|**short**|**short bez znaku**|Zachowaj wzorzec bitowy; bit wyższego rzędu traci funkcję jako bitu znaku|
-|**short**|**unsigned long**|Rozszerzanie logowania na **długie**; Konwertuj **długie** do **unsigned long**|
-|**short**|**float**|Rozszerzanie logowania na **długie**; Konwertuj **długie** do **float**|
-|**short**|**double**|Rozszerzanie logowania na **długie**; Konwertuj **długie** do **double**|
-|**short**|**Liczba typu double**|Rozszerzanie logowania na **długie**; Konwertuj **długie** do **double**|
-|**long**|**char**|Zachowaj mniej znaczący bajt|
-|**long**|**short**|Zachowaj niskiego rzędu programu word|
-|**long**|**unsigned char**|Zachowaj mniej znaczący bajt|
-|**long**|**short bez znaku**|Zachowaj niskiego rzędu programu word|
-|**long**|**unsigned long**|Zachowaj wzorzec bitowy; bit wyższego rzędu traci funkcję jako bitu znaku|
-|**long**|**float**|Reprezentacja jako **float**. Jeśli **długie** nie może być reprezentowany dokładnie tak, niektóre dokładności zostaną utracone.|
-|**long**|**double**|Reprezentacja jako **double**. Jeśli **długie** nie może być reprezentowany dokładnie jako **double**, niektóre dokładności zostaną utracone.|
-|**long**|**Liczba typu double**|Reprezentacja jako **double**. Jeśli **długie** nie może być reprezentowany dokładnie jako **double**, niektóre dokładności zostaną utracone.|
+|**znak**<sup>1</sup>|**short**|Podjęcie i rozciągnięcie|
+|**char**|**long**|Podjęcie i rozciągnięcie|
+|**char**|**Long Long**|Podjęcie i rozciągnięcie|
+|**char**|**znak bez znaku**|Zachowaj wzorzec; bit o wysokiej kolejności utraci funkcję jako bit znaku|
+|**char**|**bez znaku Short**|Podpisz do **Short**; Konwertuj **krótko** - **unsigned Short**|
+|**char**|**bez znaku**|Podpisz do **Long**; Konwertuj **Long** na **Long bez znaku**|
+|**char**|**bez znaku Long Long**|Podpisz do **Long Long**; Konwertuj **Long** Long na **unsigned** Long Long|
+|**char**|**float**|Podpisz do **Long**; Konwertuj **Long** na **zmiennoprzecinkową**|
+|**char**|**double**|Podpisz do **Long**; Konwertuj **Long** na **Double**|
+|**char**|**Long Double**|Podpisz do **Long**; Konwertuj **Long** na **Double**|
+|**short**|**char**|Zachowaj bajt o niskiej kolejności|
+|**short**|**long**|Podjęcie i rozciągnięcie|
+|**short**|**Long Long**|Podjęcie i rozciągnięcie|
+|**short**|**znak bez znaku**|Zachowaj bajt o niskiej kolejności|
+|**short**|**bez znaku Short**|Zachowaj wzorzec bitowy; bit o wysokiej kolejności utraci funkcję jako bit znaku|
+|**short**|**bez znaku**|Podpisz do **Long**; Konwertuj **Long** na **Long bez znaku**|
+|**short**|**bez znaku Long Long**|Podpisz do **Long Long**; Konwertuj **Long** Long na **unsigned** Long Long|
+|**short**|**float**|Podpisz do **Long**; Konwertuj **Long** na **zmiennoprzecinkową**|
+|**short**|**double**|Podpisz do **Long**; Konwertuj **Long** na **Double**|
+|**short**|**Long Double**|Podpisz do **Long**; Konwertuj **Long** na **Double**|
+|**long**|**char**|Zachowaj bajt o niskiej kolejności|
+|**long**|**short**|Zachowaj wyraz o niskiej kolejności|
+|**long**|**Long Long**|Podjęcie i rozciągnięcie|
+|**long**|**znak bez znaku**|Zachowaj bajt o niskiej kolejności|
+|**long**|**bez znaku Short**|Zachowaj wyraz o niskiej kolejności|
+|**long**|**bez znaku**|Zachowaj wzorzec bitowy; bit o wysokiej kolejności utraci funkcję jako bit znaku|
+|**long**|**bez znaku Long Long**|Podpisz do **Long Long**; Konwertuj **Long** Long na **unsigned** Long Long|
+|**long**|**float**|Reprezentuje jako **zmiennoprzecinkowe**. Jeśli **Long** nie można przedstawić dokładnie, pewna precyzja zostanie utracona.|
+|**long**|**double**|Reprezentuje jako **Double**. Jeśli **Long** nie można reprezentować dokładnie jako **podwójnej**precyzji, pewne są tracone.|
+|**long**|**Long Double**|Reprezentuje jako **Double**. Jeśli **Long** nie można reprezentować dokładnie jako **podwójnej**precyzji, pewne są tracone.|
+|**Long Long**|**char**|Zachowaj bajt o niskiej kolejności|
+|**Long Long**|**short**|Zachowaj wyraz o niskiej kolejności|
+|**Long Long**|**long**|Zachowywanie wartości DWORD z niską kolejnością|
+|**Long Long**|**znak bez znaku**|Zachowaj bajt o niskiej kolejności|
+|**Long Long**|**bez znaku Short**|Zachowaj wyraz o niskiej kolejności|
+|**Long Long**|**bez znaku**|Zachowywanie wartości DWORD z niską kolejnością|
+|**Long Long**|**bez znaku Long Long**|Zachowaj wzorzec bitowy; bit o wysokiej kolejności utraci funkcję jako bit znaku|
+|**Long Long**|**float**|Reprezentuje jako **zmiennoprzecinkowe**. Jeśli **Long Long** nie można dokładnie przedstawić, pewna dokładność zostanie utracona.|
+|**Long Long**|**double**|Reprezentuje jako **Double**. Jeśli **Long Long** nie można reprezentować dokładnie jako **Double**, pewna dokładność zostanie utracona.|
+|**Long Long**|**Long Double**|Reprezentuje jako **Double**. Jeśli **Long Long** nie można reprezentować dokładnie jako **Double**, pewna dokładność zostanie utracona.|
 
-1. Wszystkie **char** wpisy przyjęto założenie, że **char** typ ma znak domyślnie.
-
-**Microsoft Specific**
-
-Kompilator Microsoft 32-bitowe języka C, liczba całkowita jest odpowiednikiem **długie**. Konwersja **int** wartość rozpoczynające się takie same jak w przypadku **długie**.
-
-**END specyficzny dla Microsoft**
+<sup>1</sup> wszystkie wpisy **znaków** zakładają, że typ **char** jest podpisany domyślnie.
 
 ## <a name="see-also"></a>Zobacz także
 

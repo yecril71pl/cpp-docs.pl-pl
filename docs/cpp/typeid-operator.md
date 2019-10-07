@@ -1,15 +1,15 @@
 ---
 title: typeid — operator
-ms.date: 11/04/2016
+ms.date: 10/04/2019
 helpviewer_keywords:
 - typeid operator
 ms.assetid: 8871cee6-d6b9-4301-a5cb-bf3dc9798d61
-ms.openlocfilehash: b1185f48df4a941eb2a5d81bfa67d07cdf4387d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93a2d3c494cd5aadafedcaaae9ec72809d633a4a
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404666"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998749"
 ---
 # <a name="typeid-operator"></a>typeid — operator
 
@@ -22,27 +22,27 @@ typeid(expression)
 
 ## <a name="remarks"></a>Uwagi
 
-**Typeid** operator zezwala na typ obiektu był ustalony w czasie wykonywania.
+Operator **typeid** umożliwia określenie typu obiektu w czasie wykonywania.
 
-Wynik **typeid** jest `const type_info&`. Wartość jest odwołaniem do `type_info` obiekt, który reprezentuje *identyfikator typu* lub typ *wyrażenie*, zależnie od formy użycia **typeid** jest używany. Zobacz [type_info Class](../cpp/type-info-class.md) Aby uzyskać więcej informacji.
+Wynikiem elementu **typeid** jest `const type_info&`. Wartość jest odwołaniem do obiektu `type_info`, który reprezentuje *Identyfikator typu* lub typ *wyrażenia*, w zależności od tego, który formularz **typeid** jest używany. Aby uzyskać więcej informacji, zobacz [Klasa type_info](../cpp/type-info-class.md).
 
-**Typeid** operator nie działa z typami zarządzanymi (abstrakcyjnymi deklaratorami lub wystąpieniami), zobacz [typeid](../extensions/typeid-cpp-component-extensions.md) informacji na temat pobierania <xref:System.Type> określonego typu.
+Operator **typeid** nie działa z typami zarządzanymi (abstrakcyjne Deklaratory lub Instances). Aby uzyskać informacje na temat pobierania <xref:System.Type> określonego typu, zobacz [typeid](../extensions/typeid-cpp-component-extensions.md).
 
-**Typeid** operator jest sprawdzenie czasu wykonywania, gdy jest stosowany do l wartością typu polimorficznej klasy, gdzie wartość true, typ obiektu nie można określić dostarczonymi informacjami statycznymi. Takie przypadki są:
+Operator **typeid** wykonuje sprawdzanie w czasie wykonywania w przypadku zastosowania do l-wartości typu polimorficznej klasy, w której nie można ustalić prawdziwego typu obiektu za pomocą dostarczonych informacji statycznych. Takie przypadki są:
 
 - Odwołaniem do klasy
 
-- Wskaźnikiem, wyłuskanym za pomocą \*
+- Wskaźnik, do którego odwołuje się `*`
 
-- Indeksem wskaźnika (tj.) [ ]). (Należy zauważyć, że ogólnie nie jest bezpiecznie korzystać z indeksu dolnego ze wskaźnikiem do typu polimorficznego).
+- Wskaźnik indeksu dolnego (`[ ]`). (Użycie indeksu dolnego ze wskaźnikiem do typu polimorficznego nie jest bezpieczne.)
 
-Jeśli *wyrażenie* wskazuje na typ klasy bazowej, obiekt jest rzeczywiście typu dziedziczonego z tej klasy bazowej `type_info` odwoływać się do klasy pochodnej jest wynikiem. *Wyrażenie* musi wskazywać typ polimorficzny (klasa funkcji wirtualnych). W przeciwnym razie wynikiem jest `type_info` dla klasy statycznej określonej w *wyrażenie*. Ponadto, wskaźnik musi być wyłuskany, aby wskazywany przez niego obiekt został użyty. Bez wyłuskania wskaźnika, wynik będzie `type_info` dla wskaźnika, nie jakie wskazuje. Na przykład:
+Jeśli *wyrażenie* wskazuje typ klasy bazowej, a obiekt faktycznie jest typu pochodnego od tej klasy bazowej, to wynik jest odwołaniem `type_info` dla klasy pochodnej. *Wyrażenie* musi wskazywać na typ polimorficzny (Klasa z funkcjami wirtualnymi). W przeciwnym razie wynik jest `type_info` dla klasy statycznej, do której odwołuje się w *wyrażeniu*. Dodatkowo, wskaźnik musi być wywoływany, aby użyty obiekt był punktem, do którego się odwołuje. Bez wyłuskania wskaźnika, wynik będzie `type_info` dla wskaźnika, a nie wskazuje. Na przykład:
 
 ```cpp
 // expre_typeid_Operator.cpp
 // compile with: /GR /EHsc
 #include <iostream>
-#include <typeinfo.h>
+#include <typeinfo>
 
 class Base {
 public:
@@ -63,9 +63,9 @@ int main() {
 }
 ```
 
-Jeśli *wyrażenie* jest wyłuskaniem wskaźnika i że jego wartość wynosi zero, **typeid** zgłasza [wyjątek bad_typeid](../cpp/bad-typeid-exception.md). Jeżeli wskaźnik nie wskazuje prawidłowego obiektu `__non_rtti_object` wyjątku, wskazując próbę analizy RTTI, która wyzwoliła taki błąd (np. naruszenie zasad dostępu), ponieważ obiekt jest z jakiegoś powodu nieprawidłowy (zły wskaźnik lub kod nie został skompilowany z [GR](../build/reference/gr-enable-run-time-type-information.md)).
+Jeśli *wyrażenie* odwołuje się do wskaźnika, a wartość wskaźnika jest równa zero, **typeid** zgłasza [wyjątek bad_typeid](../cpp/bad-typeid-exception.md). Jeśli wskaźnik nie wskazuje prawidłowego obiektu, zostanie zgłoszony wyjątek `__non_rtti_object`. Wskazuje ona próbę analizy RTTI, która wyzwoliła błąd, ponieważ obiekt jest w jakiś sposób nieprawidłowy. (Na przykład jest to zły wskaźnik lub kod nie został skompilowany z [/gr](../build/reference/gr-enable-run-time-type-information.md)).
 
-Jeśli *wyrażenie* jest ani wskaźnikiem ani odwołaniem do klasy bazowej obiektu, wynik jest `type_info` odwołaniem typu statycznego *wyrażenie*. *Typu statycznego* wyrażenie odwołuje się do typu wyrażenia jaki jest znany w czasie kompilacji. Semantyka wykonania jest ignorowana przy ocenie typu statycznego wyrażenia. Ponadto, odwołania są ignorowane, gdy to możliwe przy określaniu typu statycznego wyrażenia:
+Jeśli *wyrażenie* nie jest wskaźnikiem ani odwołaniem do klasy bazowej obiektu, wynikiem jest odwołanie `type_info` reprezentujące typ statyczny *wyrażenia*. *Typ statyczny* wyrażenia odwołuje się do typu wyrażenia, ponieważ jest on znany w czasie kompilacji. Semantyka wykonania jest ignorowana przy ocenie typu statycznego wyrażenia. Ponadto, odwołania są ignorowane, gdy to możliwe przy określaniu typu statycznego wyrażenia:
 
 ```cpp
 // expre_typeid_Operator_2.cpp
@@ -77,7 +77,7 @@ int main()
 }
 ```
 
-**TypeID** można również w szablonach w celu określenia typu parametru szablonu:
+elementu **typeid** można także użyć w szablonach, aby określić typ parametru szablonu:
 
 ```cpp
 // expre_typeid_Operator_3.cpp
@@ -92,5 +92,5 @@ T max( T arg1, T arg2 ) {
 
 ## <a name="see-also"></a>Zobacz także
 
-[Informacje o typach uzyskiwane w czasie rzeczywistym](../cpp/run-time-type-information.md)<br/>
+[Informacje o typie czasu wykonywania](../cpp/run-time-type-information.md)\
 [Słowa kluczowe](../cpp/keywords-cpp.md)

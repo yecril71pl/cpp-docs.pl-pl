@@ -5,16 +5,16 @@ helpviewer_keywords:
 - conversions, assignment
 - assignment conversions
 ms.assetid: 4ee01013-de32-4aae-b12e-0051d0cde927
-ms.openlocfilehash: 6caed3d7a8079bc6b02e9ad17859cd4062cbee7f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f118c4a7fee493793b1410cb26f6a0af571c5fcc
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313574"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998709"
 ---
 # <a name="assignment-conversions"></a>Konwersje przypisań
 
-W operacji przypisania typ wartości jest przypisane jest konwertowany na typ zmiennej, która odbiera przypisania. C umożliwia konwersje przez przypisanie między typów całkowitych i zmiennoprzecinkowych, nawet wtedy, gdy informacje są tracone w konwersji. Metodę konwersji zależy od typów, które są związane z przypisania, zgodnie z opisem w [zwykle konwersje arytmetyczne](../c-language/usual-arithmetic-conversions.md) i w poniższych sekcjach:
+W operacjach przypisywania typ przypisanej wartości jest konwertowany na typ zmiennej, która otrzymuje przypisanie. Język C umożliwia konwersje przez przypisanie między typami całkowitymi i zmiennoprzecinkowymi, nawet jeśli informacje zostaną utracone podczas konwersji. Używana metoda konwersji zależy od typów należących do przypisania, zgodnie z opisem w [zwykłych konwersje arytmetyczne](../c-language/usual-arithmetic-conversions.md) i w następujących sekcjach:
 
 - [Konwersje z podpisanych typów całkowitych](../c-language/conversions-from-signed-integral-types.md)
 
@@ -26,7 +26,7 @@ W operacji przypisania typ wartości jest przypisane jest konwertowany na typ zm
 
 - [Konwersje z innych typów](../c-language/conversions-from-other-types.md)
 
-Kwalifikatory typów nie wpływają na istoty konwersji mimo że **const** l wartością, nie można użyć po lewej stronie przypisania.
+Kwalifikatory typu nie wpływają na dopuszczanie konwersji, chociaż **stała** l-wartość nie może być używana po lewej stronie przypisania.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,16 +1,16 @@
 ---
 title: C++ulepszenia zgodności
-ms.date: 09/25/2019
+ms.date: 10/04/2019
 description: Firma C++ Microsoft w programie Visual Studio postępuje w kierunku pełnej zgodności ze standardem języka c++ 20.
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 02cf57666c3bffd1adabb912f042f22b71e8d8f5
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.openlocfilehash: d313a9a1f9f2bc1aa091935658ca1214f929c048
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816352"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998888"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Ulepszenia zgodności języka C++ w programie Visual Studio
 
@@ -457,6 +457,10 @@ extern "C" void f(int, int, int, BOOL){}
 
 Aby uniknąć błędów w poprzednim przykładzie, użyj **bool** zamiast **bool** spójnie w obu deklaracjach `f`.
 
+### <a name="standard-library-improvements"></a>Ulepszenia biblioteki standardowej
+
+Nagłówki niestandardowe \<stdexcpt. h > i \<typeinfo. h > zostały usunięte. Kod, który zawiera te elementy, powinien zamiast niego zawierać nagłówki standardowe \<exception > i \<typeinfo >.
+
 ## <a name="update_160"></a>Poprawki błędów i zmiany zachowań w programie Visual Studio 2019
 
 ### <a name="reinterpret_cast-in-a-constexpr-function"></a>Operatora Reinterpret_cast w funkcji constexpr
@@ -722,7 +726,7 @@ Kontener nieuporządkowany `reserve` funkcja teraz faktycznie rezerwuje dla N el
 
 - Wcześniej niektóre wartości czasu, które zostały przesłane do biblioteki współbieżności, zostałyby przepełnione, na przykład `condition_variable::wait_for(seconds::max())`. Naprawiono napływy zmieniono zachowanie na pozornie losowym cyklu 29-dniowym (gdy uint32_t MS zaakceptowane przez bazowe interfejsy API Win32 są przepływane).
 
-- Nagłówek <ctime> teraz poprawnie deklaruje `timespec` i `timespec_get` w przestrzeni nazw `std`, a także deklarować je w globalnej przestrzeni nazw.
+- Nagłówek \<ctime > teraz prawidłowo deklaruje `timespec` i `timespec_get` w przestrzeni nazw `std` oprócz deklarowania ich w globalnej przestrzeni nazw.
 
 ### <a name="various-fixes-for-containers"></a>Różne poprawki dla kontenerów
 

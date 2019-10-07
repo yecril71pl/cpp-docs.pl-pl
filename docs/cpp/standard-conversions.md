@@ -1,31 +1,31 @@
 ---
 title: Konwersje standardowe
-ms.date: 11/19/2018
+ms.date: 10/02/2019
 helpviewer_keywords:
 - standard conversions, categories of
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-ms.openlocfilehash: aee100bdc7e8ba6dd7d06c6bca9ed39c09cf2d97
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c51a5ea5aaabb27babb9e4cd355721742088d31e
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267288"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998898"
 ---
 # <a name="standard-conversions"></a>Konwersje standardowe
 
-Język C++ definiuje konwersje między typami podstawowymi. Definiuje również konwersji do wskaźnik, odniesieni i typy pochodne wskaźników do elementów członkowskich. Konwersje te są nazywane *konwersje standardowe*.
+C++ Język definiuje konwersje między typami podstawowymi. Definiuje również konwersje dla typów pochodnych wskaźnika, odwołania i wskaźnika do elementu członkowskiego. Te konwersje są nazywane *konwersjemi standardowymi*.
 
-W tej sekcji omówiono następujące konwersje standardowe:
+W tej sekcji omówiono następujące Konwersje standardowe:
 
-- Promocje typów całkowitych
+- Promocje integralne
 
-- Konwersje wartości całkowitych
+- Konwersje całkowite
 
-- Konwersje zmiennoprzecinkowe
+- Konwersje przestawne
 
-- Konwersje typów całkowitych i zmiennoprzecinkowych
+- Konwersje zmiennoprzecinkowe i całkowite
 
 - Konwersje arytmetyczne
 
@@ -35,10 +35,10 @@ W tej sekcji omówiono następujące konwersje standardowe:
 
 - Konwersje wskaźników do elementów członkowskich
 
-    > [!NOTE]
-    >  Typy zdefiniowane przez użytkownika, można określić własne konwersji. Konwersja typów zdefiniowanych przez użytkownika są omówione w [konstruktory](../cpp/constructors-cpp.md) i [konwersje](../cpp/user-defined-type-conversions-cpp.md).
+  > [!NOTE]
+  > Typy zdefiniowane przez użytkownika mogą określać własne konwersje. Konwersja typów zdefiniowanych przez użytkownika jest objęta [konstruktorami](../cpp/constructors-cpp.md) i [konwersjemi](../cpp/user-defined-type-conversions-cpp.md).
 
-Poniższy kod powoduje konwersje (w tym przykładzie promocje typów całkowitych):
+Poniższy kod powoduje konwersje (w tym przykładzie, Promocje całkowite):
 
 ```cpp
 long  long_num1, long_num2;
@@ -51,41 +51,41 @@ long_num1 = int_num;
 long_num2 = int_num * long_num2;
 ```
 
-Wynik konwersji jest l wartością, tylko wtedy, gdy generuje typ odwołania. Na przykład konwersja zdefiniowana przez użytkownika jest zadeklarowany jako `operator int&()` zwraca odwołanie i jest l wartością. Jednak konwersja zadeklarowane jako `operator int()`zwraca obiekt, a nie jest l wartością.
+Wynik konwersji jest wartością l, tylko wtedy, gdy tworzy typ referencyjny. Na przykład zdefiniowana przez użytkownika konwersja zadeklarowana jako `operator int&()` zwraca odwołanie i jest l-wartością. Jednak konwersja zadeklarowana jako `operator int()` zwraca obiekt i nie jest l-wartością.
 
-## <a name="integral-promotions"></a>Promocje typów całkowitych
+## <a name="integral-promotions"></a>Promocje integralne
 
-Obiekty typu całkowitego można konwertować do innego, szerszego typu całkowitego (to znaczy typu, który reprezentuje większy zbiór wartości). Ta rozszerzająca typ konwersja nazywa się „promocją typu całkowitego”. Dzięki promocji typu całkowitego, można użyć w każdym wyrażeniu, w którym można użyć innego typu całkowitego:
+Obiekty typu całkowitego mogą być konwertowane na inne szerszego typu całkowitego, czyli typu, który może reprezentować większy zestaw wartości. Ten rozszerzony typ konwersji nazywa się *promocją integralną*. Dzięki promocji typu całkowitego można użyć następujących typów w wyrażeniu, w którym można wykorzystać inny typ całkowity:
 
-- Obiektów, literałów i stałych typu **char** i **krótka wartość całkowita**
+- Obiekty, literały i stałe typu **char** i **short int**
 
 - Typów wyliczeniowych
 
-- **int** pola bitowe
+- pola bitowe **int**
 
 - Modułów wyliczających
 
-Promocje w C++ „zachowują wartość”. Oznacza to, że wartość po promocji jest taka sama, jak wartość przed promocją. W zachowujących wartość promocjach, obiekty krótszych typów całkowitych (takie jak pola bitowe lub obiekty typu **char**) są promowane do typu **int** Jeśli **int** może reprezentować pełny zakres oryginalnego typu. Jeśli **int** nie może reprezentować pełnego zakresu wartości, a następnie obiekt jest promowany do typu **unsigned int**. Chociaż ta strategia jest taka sama, jak te stosowane w ANSI C, zachowujące wartość konwersje nie zachowują znaku obiektu.
+C++promocje są "z zachowaniem wartości", ponieważ wartość po podwyższeniu poziomu powinna być taka sama jak wartość przed podwyższeniem poziomu. W promocjach z zachowaniem wartości, obiekty krótszych typów całkowitych (takie jak pola bitowe lub obiekty typu **char**) są podwyższane do typu **int** , jeśli **int** może reprezentować pełen zakres oryginalnego typu. Jeśli **int** nie może reprezentować pełnego zakresu wartości, obiekt zostanie podwyższony do typu **unsigned int**.  Chociaż ta strategia jest taka sama jak używana w standardowym języku C, konwersje z zachowaniem wartości nie zachowują "podpisu" obiektu.
 
-Zachowujące wartość promocje i promocje, które zachowują znak zazwyczaj generują te same wyniki. Jednakże, mogą wygenerować różne wyniki, jeśli promowany obiekt jest jednym z poniższych:
+Zachowujące wartość promocje i promocje, które zachowują znak zazwyczaj generują te same wyniki. Jednak mogą generować różne wyniki, jeśli podwyższony obiekt jest wyświetlany jako:
 
-- Argument operacji **/**, `%`, `/=`, `%=`, **<**, **\< =**, **>**, lub **>=**
+- Operand `/`, `%`, `/=`, `%=`, `<`, `<=`, `>` lub `>=`
 
-   Operatory te opierają się na znaku w celu określenia wyniku. W związku z tym, zachowujące wartość i znak promocje generują różne wyniki w razie zastosowania do tych operandów.
+   Operatory te opierają się na znaku w celu określenia wyniku. Zachowywanie wartości i oszczędność z zachowaniem konta daje różne wyniki w przypadku zastosowania do tych operandów.
 
-- Lewy operand **>>** lub **>>=**
+- Lewy argument operacji `>>` lub `>>=`
 
-   Podczas wykonywania operacji przesunięcia, operatory inaczej traktują ilości oznaczone i nieznaczone. W przypadku ilości oznaczonych, przesunięcie liczby w prawo powoduje propagację bitu znaku na pozycje opuszczonych bitów. W przypadku ilości nieznaczonych, opuszczone pozycje bitowe są wypełniane zerami.
+   Te operatory traktują podpisane i niepodpisane liczby inaczej w operacji przesunięcia. W przypadku cyfr ze znakiem operacja przesunięcia w prawo propaguje bit znaku do pozycji opuszczone bit, natomiast pozycje bitu opuszczone są puste od zera w niepodpisanych ilościach.
 
-- Argument do przeciążonej funkcji lub operand przeciążonego operatora, który zależy od tego, czy typ określa znak tego operandu dla dopasowywania argumentów. (Zobacz [przeciążone operatory](../cpp/operator-overloading.md) więcej informacji na temat definiowania przeciążonych operatorów.)
+- Argument funkcji przeciążonej lub operand przeciążonego operatora, który zależy od typu argumentu operacji dla dopasowywania argumentów. Aby uzyskać więcej informacji na temat definiowania przeciążonych operatorów, zobacz [przeciążone operatory](../cpp/operator-overloading.md).
 
-## <a name="integral-conversions"></a>Konwersje wartości całkowitych
+## <a name="integral-conversions"></a>Konwersje całkowite
 
-Konwersje wartości całkowitych są wykonywane między typami całkowitymi. Typy całkowite są **char**, **int**, i **długie** (i **krótki**, **podpisany**i **niepodpisane** wersje tych typów).
+*Konwersje całkowite* są konwersjami między typami całkowitymi. Typy całkowite to **char**, **Short** (lub **short int**), **int**, **Long**i **Long Long**. Te typy mogą być kwalifikowane ze **znakiem** lub **bez znaku** **, a nie** mogą być używane jako skróty dla **niepodpisanych liczb całkowitych**.
 
-**Podpisanych na typy niepodpisane**
+### <a name="signed-to-unsigned"></a>Podpisana do niepodpisanego
 
-Obiekty z podpisanych typów całkowitych można przekonwertować odpowiednie typy bez znaku. W przypadku wystąpienia takiej konwersji nie zmienia się wzorca bitowego rzeczywiste; jednak zmienia interpretację danych. Rozważmy ten kod:
+Obiekty podpisanych typów całkowitych można przekonwertować na odpowiednie typy bez znaku. Gdy te konwersje wystąpią, faktyczny wzorzec bitowy nie zmienia się. Jednak interpretacja zmian danych. Rozważmy ten kod:
 
 ```cpp
 #include <iostream>
@@ -101,11 +101,11 @@ int main()
 // Output: 65533
 ```
 
-W powyższym przykładzie **short ze znakiem**, `i`, został zdefiniowany i jest ustawiana na wartość ujemną. Wyrażenie `(u = i)` powoduje, że `i` są konwertowane na **typ unsigned short** przed przypisanie do `u`.
+W powyższym przykładzie **podpisana Short**, `i`, jest zdefiniowana i inicjowana jako ujemna. Wyrażenie `(u = i)` powoduje, że `i` mają być konwertowane na **niepodpisane krótko** przed przypisaniem do `u`.
 
-**Niepodpisane podpisane**
+### <a name="unsigned-to-signed"></a>Niepodpisane z podpisem
 
-Obiekty niepodpisanych typów całkowitych można przekonwertować na odpowiednie typy ze znakiem. Taka Konwersja może jednak spowodować błędnej interpretacji danych, jeśli wartość obiektu bez znaku jest poza zakresem reprezentowanych przez typ ze znakiem, jak pokazano w poniższym przykładzie:
+Obiekty niepodpisanych typów całkowitych można przekonwertować na odpowiednie typy podpisane. Jeśli jednak wartość bez znaku jest poza zaprezentowanym zakresem typu podpisanego, wynik nie będzie miał poprawnej wartości, jak pokazano w następującym przykładzie:
 
 ```cpp
 #include <iostream>
@@ -121,38 +121,38 @@ cout << (i = u) << "\n";
 //Output: -3
 ```
 
-W powyższym przykładzie `u` jest **typ unsigned short** całkowitego obiekt, który musi zostać skonwertowany do podpisem ilość można oszacować wyrażenia `(i = u)`. Ponieważ jej wartość nie można poprawnie przedstawić w **short ze znakiem**, danych jest niemożliwe, jak pokazano.
+W poprzednim przykładzie `u` jest **niepodpisanym krótkim** obiektem całkowitym, który musi zostać skonwertowany na liczbę ze znakiem, aby oszacować wyrażenie `(i = u)`. Ponieważ jej wartość nie może być poprawnie reprezentowana w formie **krótkiej**, dane są interpretowane jako pokazane.
 
-## <a name="floating-point-conversions"></a>Punkt konwersje zmiennoprzecinkowe
+## <a name="floating-point-conversions"></a>Konwersje zmiennoprzecinkowe
 
-Obiektu typu zmiennoprzecinkowego, które mogą być bezpiecznie konwertowane na bardziej precyzyjne typ zmiennoprzecinkowy — oznacza to, konwersja powoduje, że nie utrata znaczenia. Na przykład konwersja **float** do **double** lub **double** do **typu long double** są bezpieczne, a wartość pozostaje niezmieniony.
+Obiekt typu zmiennoprzecinkowego może być bezpiecznie konwertowany na bardziej precyzyjny typ zmiennoprzecinkowy — to znaczy, że konwersja nie powoduje utraty znaczenia. Na przykład konwersje z typu **float** do **Double** lub z **podwójnego** na **Long Double** są bezpieczne, a wartość nie jest zmieniana.
 
-Obiekt typu zmiennoprzecinkowego można też przekonwertować na typ mniej dokładne, jeśli znajduje się w zakresie reprezentowanych przez tego typu. (Zobacz [limity liczb zmiennoprzecinkowych](../cpp/floating-limits.md) dla zakresów typu zmiennoprzecinkowego.) Jeśli oryginalna wartość nie może być przedstawiony w dokładnie, aby można było przekonwertować do jednej następnego wyższe lub niższe następną wartość. Jeśli nie ma takiej wartości, wynik jest niezdefiniowany. Rozważmy następujący przykład:
+Obiekt typu zmiennoprzecinkowego może być również konwertowany na mniej dokładny typ, jeśli znajduje się w zakresie, który jest zaprezentowany przez ten typ. (Zobacz [limity przestawne](../cpp/floating-limits.md) dla zakresów typów zmiennoprzecinkowych). Jeśli pierwotna wartość nie jest możliwa do zaprezentowania, można ją przekonwertować na następną wyższą lub następną dolną wartość. Wynik jest niezdefiniowany, jeśli taka wartość nie istnieje. Rozważmy następujący przykład:
 
 ```cpp
 cout << (float)1E300 << endl;
 ```
 
-Wartość maksymalna reprezentowana przez typ **float** jest 3.402823466E38 — znacznie mniejszej liczby, niż 1E300. W związku z tym liczba jest konwertowana do nieskończoności, a wynik jest "inf".
+Wartość maksymalna do zaprezentowania przez typ **float** to 3.402823466 E38 — dużo mniejsza liczba niż 1E300. W związku z tym liczba jest konwertowana na nieskończoność, a wynikiem jest "inf".
 
-## <a name="conversions-between-integral-and-floating-point-types"></a>Konwersje między typami punktu całkowite i zmiennoprzecinkowe
+## <a name="conversions-between-integral-and-floating-point-types"></a>Konwersje między typami całkowitymi i zmiennoprzecinkowymi
 
-Niektórych wyrażeń może spowodować obiekty typu zmiennoprzecinkowego typu przeznaczonego do konwersji do typów całkowitych lub na odwrót. Gdy obiekt typu Liczba całkowita jest konwertowany na typ zmiennoprzecinkowy i nie można dokładnie przedstawić oryginalnej wartości, wynik jest albo następnym wyższe lub niższe następną wartość.
+Niektóre wyrażenia mogą spowodować przekonwertowanie obiektów typu zmiennoprzecinkowego na typy całkowite lub odwrotnie. Gdy obiekt typu całkowitego jest konwertowany na typ zmiennoprzecinkowy, a oryginalna wartość nie jest możliwa do zaprezentowania dokładnie, wynikiem jest kolejna wyższa lub Następna Dolna wartość.
 
-Gdy obiekt typu zmiennoprzecinkowego jest konwertowany na typ całkowity, część ułamkowa zostanie obcięta. Zaokrąglenie nie odbywa się w procesie konwersji. Obcięcie oznacza, że numer, takie jak 1.3 jest konwertowana na 1 i-1.3 jest konwertowana na wartość -1.
+Gdy obiekt typu zmiennoprzecinkowego jest konwertowany na typ całkowity, część ułamkowa jest *obcinana*lub zaokrąglana w kierunku zera. Liczba, na przykład 1,3, jest konwertowana na 1, a-1,3 jest konwertowana na-1. Jeśli wartość obcięta jest większa niż największa wartość, lub mniejsza niż najmniejsza wartość, wynik jest niezdefiniowany.
 
 ## <a name="arithmetic-conversions"></a>Konwersje arytmetyczne
 
-Wiele operatorów binarnych (omówionych w [wyrażenia z operatorami Dwuargumentowymi](../cpp/expressions-with-binary-operators.md)) powoduje konwersje operandów i daje wyniki taki sam sposób. Sposób, w jaki te operatory powodują konwersje jest nazywany „typowe konwersje arytmetyczne”. Konwersje arytmetyczne operandów o różnych typach natywnych są wykonywane jak pokazano w poniższej tabeli. Typy typedef zachowują się zgodnie z ich podstawowymi typami natywnymi.
+Wiele operatorów binarnych (omówionych w [wyrażeniach z operatorami binarnymi](../cpp/expressions-with-binary-operators.md)) powoduje konwersje argumentów operacji i daje wyniki w taki sam sposób. Konwersje te powodują, że są to *typowe konwersje arytmetyczne*. Konwersje arytmetyczne operandów o różnych typach natywnych są wykonywane jak pokazano w poniższej tabeli. Typy typedef zachowują się zgodnie z ich podstawowymi typami natywnymi.
 
-### <a name="conditions-for-type-conversion"></a>Warunki dotyczące konwersji typów
+### <a name="conditions-for-type-conversion"></a>Warunki konwersji typów
 
 |Spełnione warunki|Konwersja|
 |--------------------|----------------|
-|Jeden z operandów jest typu **typu long double**.|Drugi operand jest konwertowany na typ **typu long double**.|
-|Poprzedza warunek nie jest spełniony i jeden z operandów jest typu **double**.|Drugi operand jest konwertowany na typ **double**.|
-|Poprzedza warunki nie są spełnione i jeden z operandów jest typu **float**.|Drugi operand jest konwertowany na typ **float**.|
-|Powyższe warunki nie są spełnione (żaden z operandów nie jest typu zmiennoprzecinkowego).|Promocje typów całkowitych są wykonywane na operandach w następujący sposób:<br /><br />— Jeśli jeden z operandów jest typu **unsigned long**, to drugi operand jest konwertowany na typ **unsigned long**.<br />-Jeśli powyższy warunek nie zostały spełnione i jeden z operandów jest typu **długie** i drugą typu **unsigned int**, oba operandy są konwertowane na typ **unsigned long**.<br />-Jeśli dwa powyższe warunki nie są spełnione i jeden z operandów jest typu **długie**, to drugi operand jest konwertowany na typ **długie**.<br />-Jeśli trzy powyższe warunki nie są spełnione i jeden z operandów jest typu **unsigned int**, to drugi operand jest konwertowany na typ **unsigned int**.<br />— Jeśli żaden z powyższych warunków nie jest spełniony, oba operandy są konwertowane na typ **int**.|
+|Oba operandy są typu **Long Double**.|Inny operand jest konwertowany na typ **Long Double**.|
+|Poprzedni warunek nie jest spełniony, a oba operandy są typu **Double**.|Inny operand jest konwertowany na typ **Double**.|
+|Powyższe warunki nie zostały spełnione, a oba operandy są typu **zmiennoprzecinkowego**.|Inny operand jest konwertowany na typ **float**.|
+|Powyższe warunki nie są spełnione (żaden z operandów nie jest typu zmiennoprzecinkowego).|Operandy otrzymują całkowite promocje w następujący sposób:<br /><br />-Jeśli jeden z operandów jest typu **unsigned long**, drugi operand jest konwertowany na typ **unsigned long**.<br />-Jeśli poprzedni warunek nie został spełniony i jeśli którykolwiek z operandów jest typu **Long** , a drugi typ **int bez znaku**, oba operandy są konwertowane na typ **unsigned long**.<br />— Jeśli powyższe dwa warunki nie są spełnione i jeśli oba operandy są typu **Long**, drugi operand jest konwertowany na typ **Long**.<br />— Jeśli powyższe trzy warunki nie są spełnione, a jeśli oba operandy są typu **int bez znaku**, drugi operand jest konwertowany na typ **unsigned int**.<br />-Jeśli żaden z powyższych warunków nie zostanie spełniony, oba operandy są konwertowane na typ **int**.|
 
 Następujący kod ilustruje reguły konwersji opisane w tabeli:
 
@@ -173,46 +173,44 @@ int main() {
 }
 ```
 
-Pierwsza instrukcja w powyższym przykładzie pokazuje mnożenie dwóch typów całkowitych: `iVal` i `ulVal`. Spełniony jest warunek, że żaden z operandów jest typu zmiennoprzecinkowego i jeden z operandów jest typu **unsigned int**. W związku z tym, drugi operand `iVal`, jest konwertowany na typ **unsigned int**. Wynik jest przypisany do `dVal`. Spełniony jest warunek, że jeden z operandów jest typu **double**; w związku z tym, **unsigned int** wynik mnożenia jest konwertowany na typ **double**.
+Pierwsza instrukcja w powyższym przykładzie pokazuje mnożenie dwóch typów całkowitych: `iVal` i `ulVal`. Spełniony warunek polega na tym, że żaden operand nie jest typu zmiennoprzecinkowego, a jeden operand jest typu **int bez znaku**. Dlatego drugi operand, `iVal`, jest konwertowany na typ **unsigned int**. Następnie wynik zostanie przypisany do `dVal`. Warunek został spełniony to oznacza, że jeden operand jest typu **Double**, więc **niepodpisany wynik int** operacji mnożenia jest konwertowany na typ **Double**.
 
-Druga instrukcja w powyższym przykładzie pokazuje Dodawanie typu **float** i typem całkowitym `fVal` i `ulVal`. `ulVal` Zmienna jest konwertowany na typ **float** (trzeci warunek określony w tabeli). Wynik dodawania jest konwertowany na typ **double** (drugi warunek określony w tabeli) i przypisane do `dVal`.
+Druga instrukcja w powyższym przykładzie pokazuje dodanie wartości **zmiennoprzecinkowej** i typu całkowitego: `fVal` i `ulVal`. Zmienna `ulVal` jest konwertowana na typ **float** (Trzeci warunek w tabeli). Wynik dodawania jest konwertowany na typ **Double** (drugi warunek w tabeli) i przypisany do `dVal`.
 
 ## <a name="pointer-conversions"></a>Konwersje wskaźników
 
-Wskaźniki mogą być konwertowane podczas przypisywania, inicjowanie, porównania i inne wyrażenia.
+Wskaźniki można przekonwertować podczas przypisywania, inicjowania, porównywania i innych wyrażeń.
 
-### <a name="pointer-to-classes"></a>Wskaźnik do klasy
+### <a name="pointer-to-classes"></a>Wskaźnik do klas
 
-Istnieją dwa przypadki, w których można przekonwertować na wskaźnik do klasy bazowej na wskaźnik do klasy.
+Istnieją dwa przypadki, w których wskaźnik do klasy można przekonwertować na wskaźnik do klasy bazowej.
 
-Pierwszy przypadek jest, gdy określona klasa bazowa jest dostępny i jednoznaczna konwersja. (Zobacz [wielu klas bazowych](../cpp/multiple-base-classes.md) Aby uzyskać więcej informacji na temat niejednoznacznego odwołania do klasy bazowej.)
+Pierwszym przypadkiem jest to, że określona klasa bazowa jest dostępna, a konwersja jest niejednoznaczna. Aby uzyskać więcej informacji na temat niejednoznacznych odwołań klas podstawowych, zobacz [wiele klas bazowych](../cpp/multiple-base-classes.md).
 
-Czy klasa bazowa jest niedostępna, zależy od rodzaju dziedziczenia używany podczas wyprowadzania. Należy wziąć pod uwagę dziedziczenia zilustrowane na poniższym rysunku.
+Określa, czy klasa bazowa jest dostępna, zależy od rodzaju dziedziczenia używanego do wyprowadzania. Rozważ dziedziczenie zilustrowane na poniższej ilustracji.
 
-![Wykres dziedziczenia, przedstawiający podstawowy&#45;klasy ułatwień dostępu](../cpp/media/vc38xa1.gif "Wykres dziedziczenia, przedstawiający podstawowy&#45;klasy ułatwień dostępu") <br/>
-Wykres dziedziczenia opisano klasy podstawowej w ułatwienia dostępu
+![Wykres dziedziczenia przedstawiający wykres dziedziczenia dostępności klasy podstawowej&#45;](../cpp/media/vc38xa1.gif "przedstawiający dostępność klasy podstawowej&#45;") <br/>
+Wykres dziedziczenia dla zilustrowania dostępności klasy podstawowej
 
-W poniższej tabeli przedstawiono dostępność klasy podstawowej w sytuacji, przedstawione na rysunku.
+W poniższej tabeli przedstawiono dostępność klasy podstawowej dla sytuacji zilustrowanej na rysunku.
 
-### <a name="base-class-accessibility"></a>Klasa bazowa ułatwień dostępu
-
-|Typ funkcji|Tworzenie wartości pochodnych|Konwersja z<br /><br /> B * a\* prawne?|
+|Typ funkcji|Pochodnych|Konwersja z<br /><br /> B * na wartość @ no__t-0 Legal?|
 |----------------------|----------------|-------------------------------------------|
-|Funkcji zewnętrznych (nie klasy zakresu)|Private|Nie|
+|Funkcja zewnętrzna (nieobjęta zakresem klasy)|Private|Nie|
 ||Protected|Nie|
 ||Public|Tak|
-|Funkcja elementu członkowskiego B (w zakresie B)|Private|Yes|
+|B funkcja członkowska (w zakresie B)|Private|Tak|
 ||Protected|Tak|
 ||Public|Tak|
-|Funkcja elementu członkowskiego języka C (w zakresie języka C)|Private|Nie|
+|Funkcja członkowska języka c (w zakresie języka C)|Private|Nie|
 ||Protected|Tak|
 ||Public|Tak|
 
-Drugi przypadek, w którym wskaźnik do klasy można przekonwertować na wskaźnik do klasy bazowej jest w przypadku używania jawną konwersję typu. (Zobacz [jawnego operatora konwersji typu](explicit-type-conversion-operator-parens.md) Aby uzyskać więcej informacji dotyczących konwersji typu jawnego.)
+Drugi przypadek, w którym wskaźnik do klasy może być konwertowany na wskaźnik do klasy bazowej, jest używany w przypadku jawnej konwersji typu. Aby uzyskać więcej informacji na temat jawnych konwersji typów, zobacz [operator Explicit konwersji typu](explicit-type-conversion-operator-parens.md).
 
-Wynik konwersji elementu jest wskaźnikiem do "podobiektu," część obiektu, który jest całkowicie opisane przez klasę bazową.
+Wynikiem takiej konwersji jest wskaźnik do *podobiektu*, część obiektu, która jest całkowicie opisana przez klasę bazową.
 
-Poniższy kod definiuje dwie klasy `A` i `B`, gdzie `B` jest tworzony na podstawie `A`. (Aby uzyskać więcej informacji na temat dziedziczenia, zobacz [klasy pochodne](../cpp/inheritance-cpp.md).) Następnie definiuje `bObject`, obiekt typu `B`i dwa wskaźniki (`pA` i `pB`) wskazujące na obiekt.
+Poniższy kod definiuje dwie klasy, `A` i `B`, gdzie `B` pochodzi od `A`. (Aby uzyskać więcej informacji na temat dziedziczenia, zobacz [klasy pochodne](../cpp/inheritance-cpp.md)). Następnie definiuje `bObject`, obiekt typu `B` i dwa wskaźniki (`pA` i `pB`) wskazujące na obiekt.
 
 ```cpp
 // C2039 expected
@@ -241,79 +239,79 @@ int main()
 }
 ```
 
-Wskaźnik `pA` typu `A *`, który może być interpretowany jako znaczenie "wskaźnik do obiektu typu `A`." Elementy członkowskie `bObject` `(`takich jak `BComponent` i `BMemberFunc`) są unikatowe dla typu `B` i dlatego są niedostępne za pośrednictwem `pA`. `pA` Wskaźnik zezwala na dostęp tylko do tych właściwości (funkcje składowe i dane) obiektu, które są zdefiniowane w klasie `A`.
+Wskaźnik `pA` jest typu `A *`, który może być interpretowany jako "wskaźnik do obiektu typu `A`". Elementy członkowskie `bObject` (takie jak `BComponent` i `BMemberFunc`) są unikatowe dla typu `B` i w związku z tym są niedostępne w `pA`. Wskaźnik `pA` zezwala na dostęp tylko do tych cech (funkcji składowych i danych) obiektu, które są zdefiniowane w klasie `A`.
 
 ### <a name="pointer-to-function"></a>Wskaźnik do funkcji
 
-Wskaźnik do funkcji może być konwertowany na typ `void *`, jeśli typ `void *` jest wystarczająco duży, aby pomieścić ten wskaźnik.
+Wskaźnik do funkcji można przekonwertować na typ `void *`, jeśli typ `void *` jest wystarczająco duży, aby pomieścić ten wskaźnik.
 
-### <a name="pointer-to-void"></a>Wskaźnik do typu void
+### <a name="pointer-to-void"></a>Wskaźnik na typ void
 
-Wskaźniki do typu **void** mogą być konwertowane do wskaźników do jakichkolwiek innych typów, ale tylko w przypadku typu jawnego rzutowania (w przeciwieństwie do w języku C). Wskaźnik do dowolnego typu można niejawnie przekonwertować na wskaźnik do typu **void**. Wskaźnik do obiektu niekompletnego typu można przekonwertować na wskaźnik do **void** (niejawnie) i wykonać ich kopię (jawne). Wynik konwersji elementu jest równa wartości oryginalny wskaźnik. Obiekt jest traktowany jako niekompletne, jeśli jest on zadeklarowany, ale ma za mało informacji do określenia jego rozmiar lub klasa bazowa.
+Wskaźniki do typu **void** mogą być konwertowane na wskaźniki do dowolnego innego typu, ale tylko w przypadku jawnego rzutowania typu (w przeciwieństwie do języka C). Wskaźnik do dowolnego typu można przekonwertować niejawnie na wskaźnik do typu **void**. Wskaźnik do niekompletnego obiektu typu można przekonwertować na wskaźnik na **typ void** (niejawnie) i odwrotnie (jawnie). Wynik takiej konwersji jest równy wartości oryginalnego wskaźnika. Obiekt jest uznawany za niekompletny, jeśli jest zadeklarowany, ale nie ma wystarczających informacji, aby określić jego rozmiar lub klasę bazową.
 
-Wskaźnik do dowolnego obiektu, który nie jest **const** lub **volatile** można niejawnie przekonwertować na wskaźnik typu `void *`.
+Wskaźnik do dowolnego obiektu, który nie jest **stałą** lub **volatile** , może być niejawnie konwertowany na wskaźnik typu `void *`.
 
-### <a name="const-and-volatile-pointers"></a>wskaźniki stałe i nietrwałe
+### <a name="const-and-volatile-pointers"></a>const i volatile, wskaźniki
 
-C++ nie dostarcza konwersja standardowa ze **const** lub **volatile** typu do typu, który nie jest **const** lub **volatile**. Jednak dowolny rodzaj konwersji można określić za pomocą typu jawnego rzutowania (w tym konwersje niebezpieczne).
+C++nie dostarcza standardowej konwersji z typu **const** lub **volatile** na typ, który nie jest **stałą** lub **nietrwały**. Jednak każde sortowanie konwersji można określić za pomocą jawnego rzutowania typu (w tym konwersje, które są niebezpieczne).
 
 > [!NOTE]
->  C++ wskaźników do elementów członkowskich, z wyjątkiem wskaźniki do statycznych elementów członkowskich, różnią się od normalnych wskaźników i nie mają tego samego konwersje standardowe. Wskaźniki do statycznych elementów członkowskich są wskaźnikami normalne i mieć tej samej konwersji jako normalny wskaźniki.
+> C++wskaźniki do elementów członkowskich, z wyjątkiem wskaźników do statycznych elementów członkowskich, różnią się od normalnych wskaźników i nie mają tych samych konwersji standardowych. Wskaźniki do statycznych elementów członkowskich są normalnymi wskaźnikami i mają takie same konwersje jak normalne wskaźniki.
 
-### <a name="null-pointer-conversions"></a>Konwersje wskaźników o wartości null
+### <a name="null-pointer-conversions"></a>Konwersje wskaźnika o wartości null
 
-Wyrażenie stałe całkowite osiągnie wartość zero lub Rzutowanie na typ wskaźnika wyrażenia jest konwertowana na wskaźnik o nazwie "wskaźnik o wartości null." This, wskaźnik jest gwarantowane, aby porównać nierówne na wskaźnik do dowolnego prawidłowego obiektu lub funkcji (z wyjątkiem wskaźników do obiektów na podstawie, które mogą mieć tego samego przesunięcie, a nadal wskazują różne obiekty).
+Wyrażenie stałej całkowitej, którego wynikiem jest wartość zero lub takie rzutowanie wyrażenia na typ wskaźnika, jest konwertowane na wskaźnik o nazwie *wskaźnik o wartości null*. Ten wskaźnik zawsze porównuje nierówne wskaźnikiem z dowolnym prawidłowym obiektem lub funkcją. Wyjątek jest wskaźnikiem do obiektów opartych na obiektach, które mogą mieć te same przesunięcie i nadal wskazują na inne obiekty.
 
-W języku C ++ 11 [nullptr](../cpp/nullptr.md) typ powinien być preferowana względem wskaźnika o wartości null w stylu języka C.
+W języku C++ 11, typ [nullptr](../cpp/nullptr.md) powinien być preferowany dla wskaźnika o wartości null w stylu C.
 
-### <a name="pointer-expression-conversions"></a>Konwersje wyrażenia wskaźników
+### <a name="pointer-expression-conversions"></a>Konwersje wyrażeń wskaźnika
 
-Dowolne wyrażenie z typem tablicy można przekonwertować na wskaźnik do tego samego typu. Wynik konwersji jest wskaźnik do pierwszego elementu tablicy. W poniższym przykładzie pokazano konwersji elementu:
+Dowolne wyrażenie z typem tablicowym można przekonwertować na wskaźnik tego samego typu. Wynikiem konwersji jest wskaźnik do pierwszego elementu tablicy. Poniższy przykład ilustruje taką konwersję:
 
 ```cpp
 char szPath[_MAX_PATH]; // Array of type char.
 char *pszPath = szPath; // Equals &szPath[0].
 ```
 
-Wyrażenie, które powoduje funkcja zwracająca określonego typu, jest konwertowany na wskaźnik do funkcji zwracającej tego typu, chyba że:
+Wyrażenie, które powoduje zwrócenie funkcji zwracającej określony typ, jest konwertowane na wskaźnik do funkcji zwracającej ten typ, z wyjątkiem sytuacji, gdy:
 
-- Wyrażenie jest używana jako argument operatora address-of (**&**).
+- Wyrażenie jest używane jako operand do operatora address-of ( **&** ).
 
-- Wyrażenie jest używana jako argument operatora wywołania funkcji.
+- Wyrażenie jest używane jako argument operacji operatora wywołania funkcji.
 
 ## <a name="reference-conversions"></a>Konwersje odwołań
 
-Odwołanie do klasy mogą być konwertowane na odwołania do klasy bazowej w następujących przypadkach:
+Odwołanie do klasy może być konwertowane na odwołanie do klasy bazowej w takich przypadkach:
 
 - Określona klasa bazowa jest dostępna.
 
-- Konwersja jest jednoznaczna. (Zobacz [wielu klas bazowych](../cpp/multiple-base-classes.md) Aby uzyskać więcej informacji na temat niejednoznacznego odwołania do klasy bazowej.)
+- Konwersja jest niejednoznaczna. (Aby uzyskać więcej informacji na temat niejednoznacznych odwołań klas podstawowych, zobacz [wiele klas bazowych](../cpp/multiple-base-classes.md)).
 
-Wynik konwersji jest wskaźnikiem do podobiektów, który reprezentuje klasę bazową.
+Wynikiem konwersji jest wskaźnik do podobiektu, który reprezentuje klasę bazową.
 
-## <a name="pointer-to-member"></a>Wskaźnik do składowej
+## <a name="pointer-to-member"></a>Wskaźnik do elementu członkowskiego
 
-Wskaźniki do składowych klasy mogą być konwertowane podczas przypisywania, inicjowanie, porównania i inne wyrażenia. W tej sekcji opisano następujące konwersje wskaźników do elementów członkowskich:
+Wskaźniki do elementów członkowskich klasy mogą być konwertowane podczas przypisywania, inicjowania, porównywania i innych wyrażeń. W tej sekcji opisano następujące Konwersje wskaźników do elementów członkowskich:
 
-## <a name="pointer-to-base-class-member"></a>Wskaźnik do składowej klasy bazowej
+### <a name="pointer-to-base-class-member"></a>Wskaźnik do składowej klasy bazowej
 
-Wskaźnik do składowej klasy bazowej można przekonwertować na wskaźnik do składowej klasy pochodzącej od niego, gdy są spełnione następujące warunki:
+Wskaźnik do składowej klasy bazowej można przekonwertować na wskaźnik do elementu członkowskiego klasy pochodnej, gdy spełnione są następujące warunki:
 
-- Odwrotność konwersji ze wskaźnika do klasy pochodnej na wskaźnik klasy bazowej, jest dostępny.
+- Konwersja odwrotna ze wskaźnika do klasy pochodnej na wskaźnik klasy podstawowej jest dostępna.
 
 - Klasa pochodna nie dziedziczy praktycznie z klasy bazowej.
 
-Kiedy Lewy argument operacji jest wskaźnik do składowej, prawy operand musi być typu wskaźnika do elementu członkowskiego lub być wyrażeniem stałym, którego wynikiem jest 0. To przypisanie jest prawidłowy tylko w następujących przypadkach:
+Gdy argument operacji po lewej stronie jest wskaźnikiem do elementu członkowskiego, prawy operand musi być typu wskaźnika do składowej lub być wyrażeniem stałym, którego wynikiem jest 0. To przypisanie jest prawidłowe tylko w następujących przypadkach:
 
-- Prawy operand jest wskaźnik do składowej tej samej klasy jako lewy operand.
+- Prawy operand jest wskaźnikiem do składowej tej samej klasy, co lewy argument operacji.
 
-- Lewy operand jest wskaźnik do składowej klasy pochodnej publicznie i jednoznacznie z klasy prawy operand.
+- Lewy operand jest wskaźnikiem do składowej klasy pochodnej publicznie i jednoznacznie z klasy argumentu operacji po prawej stronie.
 
-## <a name="integral-constant-conversions"></a>Konwersje wartości całkowitych stałej
+### <a name="null-pointer-to-member-conversions"></a>pusty wskaźnik do konwersji elementów członkowskich
 
-Wyrażenie stałe całkowite osiągnie wartość zero jest konwertowana na wskaźnik o nazwie "wskaźnik o wartości null." This, wskaźnik jest gwarantowane, aby porównać nierówne na wskaźnik do dowolnego prawidłowego obiektu lub funkcji (z wyjątkiem wskaźników do obiektów na podstawie, które mogą mieć tego samego przesunięcie, a nadal wskazują różne obiekty).
+Wyrażenie stałej całkowitej, którego wynikiem jest zero, jest konwertowane na wskaźnik o wartości null. Ten wskaźnik zawsze porównuje nierówne wskaźnikiem z dowolnym prawidłowym obiektem lub funkcją. Wyjątek jest wskaźnikiem do obiektów opartych na obiektach, które mogą mieć te same przesunięcie i nadal wskazują na inne obiekty.
 
-Poniższy kod ilustruje definicji wskaźnik do składowej `i` w klasie `A`. Wskaźnik, `pai`, jest ustawiana na 0, co jest wskaźnikiem wartości null.
+Poniższy kod ilustruje definicję wskaźnika do składowej `i` w klasie `A`. Wskaźnik `pai` jest zainicjowany do 0, który jest wskaźnikiem o wartości null.
 
 ```cpp
 class A
@@ -331,4 +329,4 @@ int main()
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja języka C++](../cpp/cpp-language-reference.md)
+[C++Dokumentacja języka](../cpp/cpp-language-reference.md)

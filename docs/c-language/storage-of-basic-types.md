@@ -1,6 +1,6 @@
 ---
 title: Magazyn typów podstawowych
-ms.date: 11/04/2016
+ms.date: 10/02/2019
 helpviewer_keywords:
 - specifiers [C++], type
 - integral types, storage
@@ -21,30 +21,31 @@ helpviewer_keywords:
 - unsigned types [C++], storage
 - data types [C], storage
 ms.assetid: bd1f33c1-c6b9-4558-8a72-afb21aef3318
-ms.openlocfilehash: 51b67b375cf7a4608d3080e5922cabbf3135ddfe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64c642df4dd85e4aa09f90a143b8aa67c28b7dc2
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335889"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998763"
 ---
 # <a name="storage-of-basic-types"></a>Magazyn typów podstawowych
 
-Poniższa tabela zawiera podsumowanie magazynu skojarzone z poszczególnymi typami podstawowe.
+Poniższa tabela zawiera podsumowanie magazynu skojarzonego z każdym typem podstawowym.
 
-### <a name="sizes-of-fundamental-types"></a>Rozmiary typów podstawowych
+## <a name="sizes-of-fundamental-types"></a>Rozmiary typów podstawowych
 
 |Typ|Magazyn|
 |----------|-------------|
-|`char`, `unsigned char`, **podpisany char**|1 bajt|
-|**krótki**, **typ unsigned short**|2 bajty|
-|`int`, `unsigned int`|4 bajty|
-|**długi**, `unsigned long`|4 bajty|
+|**char**, **znak bez znaku** **, znak ze znakiem**|1 bajt|
+|**krótkie**, **niepodpisane, krótkie**|2 bajty|
+|**int**, **unsigned int**|4 bajty|
+|**Long**, **Long unsigned**|4 bajty|
+|**Long Long**, **unsigned long long**|8 bajtów|
 |**float**|4 bajty|
 |**double**|8 bajtów|
-|`long double`|8 bajtów|
+|**Long Double**|8 bajtów|
 
-Typy danych C można podzielić na kategorie ogólne. "Typów całkowitych" obejmują `char`, `int`, **krótki**, **długie**, **podpisany**, `unsigned`, i `enum`. Obejmują "Typy zmiennoprzecinkowe" **float**, **double**, i `long double`. "Typy arytmetyczne" to wszystkich typów całkowitych i zmiennoprzecinkowych.
+Typy danych języka C są podzielone na kategorie ogólne. *Typy całkowite* obejmują **int**, **char**, **Short**, **Long**i **Long Long**. Te typy mogą być kwalifikowane ze **znakiem** i **bez znaku** **, ale nie** mogą być używane jako skróty dla **niepodpisanych int**. Typy wyliczeniowe (**enum**) również są traktowane jako typy całkowite w większości celów. *Typy przestawne* obejmują wartości **zmiennoprzecinkowe**, **podwójne**i **Long Double**. *Typy arytmetyczne* obejmują wszystkie typy zmiennoprzecinkowe i całkowite.
 
 ## <a name="see-also"></a>Zobacz także
 

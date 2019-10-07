@@ -1,6 +1,6 @@
 ---
 title: bad_typeid — Wyjątek
-ms.date: 11/04/2016
+ms.date: 10/04/2019
 f1_keywords:
 - bad_typeid
 - bad_typeid_cpp
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - bad_typeid exception
 - exceptions [C++], bad_typeid
 ms.assetid: 5963ed58-4ede-4597-957d-f7bbd06299c2
-ms.openlocfilehash: 2ff7339b02cfe8c21cebfa7d9bb0cc98b3e08799
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6410f27342ed40300ff236ee1c47ada740255f84
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68242262"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998803"
 ---
-# <a name="badtypeid-exception"></a>bad_typeid — Wyjątek
+# <a name="bad_typeid-exception"></a>bad_typeid — Wyjątek
 
-**Bad_typeid** wyjątek jest generowany przez [typeid operator](../cpp/typeid-operator.md) gdy argument **typeid** jest wskaźnikiem typu NULL.
+Wyjątek **bad_typeid** jest generowany przez [operatora typeid](../cpp/typeid-operator.md) , gdy operand dla elementu **typeid** jest wskaźnikiem o wartości null.
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,12 +44,12 @@ public:
 };
 ```
 
-W poniższym przykładzie przedstawiono **typeid** operator zgłaszanie **bad_typeid** wyjątku.
+Poniższy przykład przedstawia operator **typeid** , który zgłasza wyjątek **bad_typeid** .
 
 ```cpp
 // expre_bad_typeid.cpp
 // compile with: /EHsc /GR
-#include <typeinfo.h>
+#include <typeinfo>
 #include <iostream>
 
 class A{
@@ -80,5 +80,5 @@ Object is NULL
 
 ## <a name="see-also"></a>Zobacz także
 
-[Informacje o typach uzyskiwane w czasie rzeczywistym](../cpp/run-time-type-information.md)<br/>
+[Informacje o typie czasu wykonywania](../cpp/run-time-type-information.md)\
 [Słowa kluczowe](../cpp/keywords-cpp.md)
