@@ -1,5 +1,5 @@
 ---
-title: Błąd narzędzi konsolidatora LNK2019
+title: LNK2019 błędu narzędzi konsolidatora
 ms.date: 12/15/2017
 f1_keywords:
 - LNK2019
@@ -7,108 +7,112 @@ helpviewer_keywords:
 - nochkclr.obj
 - LNK2019
 - _check_commonlanguageruntime_version
-ms.openlocfilehash: eb28ff3673c054b8ac1876d8ba736ceddfa5fd1a
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 3c4e5578c7b0f496feb4d40933af624f462a31d2
+ms.sourcegitcommit: 680a155cc44a38f88bb2b1c5a1ef6dcb7141c011
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449616"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252625"
 ---
-# <a name="linker-tools-error-lnk2019"></a>Błąd narzędzi konsolidatora LNK2019
+# <a name="linker-tools-error-lnk2019"></a>LNK2019 błędu narzędzi konsolidatora
 
-Nierozpoznany symbol zewnętrzny "*symbol*"przywoływany w funkcji"*funkcja*"
+nierozpoznany symbol zewnętrzny "*symbol*" przywoływany w funkcji "*Function*"
 
-Skompilowany kod *funkcja* sprawia, że odwołanie lub wywołanie *symbol*, ale ta symbol nie jest zdefiniowany w żadnym z biblioteki lub określono konsolidatora plików obiektów.
+Skompilowany kod dla *funkcji* wykonuje odwołanie lub wywołanie do *symbolu*, ale ten symbol nie jest zdefiniowany w żadnej z bibliotek lub plików obiektów określonych dla konsolidatora.
 
-Ten komunikat o błędzie następuje błąd krytyczny [LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md). Należy naprawić wszystkie LNK2001 i LNK2019 błędów, aby naprawić błąd LNK1120.
+Ten komunikat o błędzie następuje po błędzie krytycznym [LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md). Aby naprawić błąd LNK1120, należy naprawić wszystkie błędy LNK2001 i LNK2019.
 
 ## <a name="possible-causes"></a>Możliwe przyczyny
 
-Istnieje wiele sposobów, aby uzyskać ten błąd, ale wszystkie z nich obejmują odwołania do funkcji lub zmienna, która nie konsolidator *rozwiązać*, lub znaleźć definicję. Kompilator może wskazywać, gdy nie jest symbolem *zadeklarowana*, ale nie Jeśli nie zostanie *zdefiniowane*, ponieważ definicja może znajdować się w innym plikiem źródłowym lub biblioteki. Jeśli symbol jest określone, ale nigdy nie jest zdefiniowany, konsolidator generuje błąd nierozpoznany symbol zewnętrzny.
+Istnieje wiele sposobów na uzyskanie tego błędu, ale wszystkie z nich obejmują odwołanie do funkcji lub zmiennej, którą nie może *rozpoznać*konsolidator, lub znaleźć definicję dla. Kompilator może określić, kiedy symbol nie jest *zadeklarowany*, ale nie, gdy nie jest *zdefiniowany*, ponieważ definicja może znajdować się w innym pliku lub bibliotece źródłowej. Jeśli symbol jest określany, ale nigdy nie zdefiniowany, konsolidator generuje nierozpoznany błąd symbolu zewnętrznego.
 
-Poniżej przedstawiono niektóre typowe problemy powodujące LNK2019:
+Poniżej przedstawiono niektóre typowe problemy, które powodują LNK2019:
 
-### <a name="the-object-file-or-library-that-contains-the-definition-of-the-symbol-is-not-linked"></a>Plik obiektu lub biblioteki, który zawiera definicję symbolu nie został połączony.
+### <a name="the-object-file-or-library-that-contains-the-definition-of-the-symbol-is-not-linked"></a>Plik lub biblioteka obiektu, która zawiera definicję symbolu, nie jest połączona
 
-W programie Visual Studio Sprawdź, czy plik źródłowy, który zawiera definicję jest skompilowane i połączone w ramach projektu. W wierszu polecenia Sprawdź, czy plik źródłowy, który zawiera definicję jest kompilowany i że wynikowy plik obiektu znajduje się lista plików, połączyć.
+W programie Visual Studio Sprawdź, czy plik źródłowy, który zawiera definicję, został skompilowany i połączony jako część projektu. W wierszu polecenia upewnij się, że plik źródłowy, który zawiera definicję, jest kompilowany i że utworzony plik obiektu zostanie uwzględniony na liście plików do połączenia.
 
-### <a name="the-declaration-of-the-symbol-is-not-spelled-the-same-as-the-definition-of-the-symbol"></a>Deklaracja symbolu nie została wpisana taka sama jak definicji symbolu
+### <a name="the-declaration-of-the-symbol-is-not-spelled-the-same-as-the-definition-of-the-symbol"></a>Deklaracja symbolu nie jest taka sama jak definicja symbolu
 
-Sprawdź błędu pisowni i wielkości liter, jest używany zarówno w deklaracji i definicji i wszędzie tam, gdzie używane lub o nazwie symbolu.
+Sprawdź, czy pisownia i wielkie litery są używane zarówno w deklaracji, jak i w definicji, i wszędzie tam, gdzie symbol jest używany lub wywoływana.
 
-### <a name="a-function-is-used-but-the-type-or-number-of-the-parameters-do-not-match-the-function-definition"></a>Funkcja jest używana, ale typ lub liczba parametrów nie są zgodne w definicji funkcji
+### <a name="a-function-is-used-but-the-type-or-number-of-the-parameters-do-not-match-the-function-definition"></a>Używana jest funkcja, ale typ lub liczba parametrów nie są zgodne z definicją funkcji
 
-Deklaracja funkcji musi być zgodny definicją. Sprawdź, czy wywołanie funkcji jest zgodna deklaracja i że deklaracja jest zgodna z definicją. Kod, który wywołuje funkcje szablonu musi mieć również dopasowywanie deklaracji funkcji szablonu, które zawierają te same parametry szablonu jako definicji. Na przykład w przypadku niezgodności deklaracji szablonu zobacz przykładową LNK2019e.cpp w sekcji przykładów.
+Deklaracja funkcji musi być zgodna z definicją. Sprawdź, czy wywołanie funkcji jest zgodne z deklaracją i czy deklaracja jest zgodna z definicją. Kod, który wywołuje funkcje szablonu, musi również mieć zgodne deklaracje funkcji szablonu, które zawierają te same parametry szablonu, jak definicja. Przykład niezgodności deklaracji szablonu zawiera przykład LNK2019e. cpp w sekcji przykładów.
 
-### <a name="a-function-or-variable-is-declared-but-not-defined"></a>Funkcja lub zmienna jest zadeklarowana ale niezdefiniowana
+### <a name="a-function-or-variable-is-declared-but-not-defined"></a>Funkcja lub zmienna jest zadeklarowana, ale nie jest zdefiniowana
 
-Zwykle oznacza to, deklarację istnieje w pliku nagłówkowym, ale brak pasujących definicji jest zaimplementowana. Dla funkcji składowych lub elementów członkowskich danych statycznych implementacja musi zawierać selektor zakres klasy. Aby uzyskać przykład, zobacz [Brak treść funkcji lub zmienna](../../error-messages/tool-errors/missing-function-body-or-variable.md).
+Zazwyczaj oznacza to, że deklaracja istnieje w pliku nagłówkowym, ale nie zaimplementowano pasującej definicji. W przypadku funkcji Członkowskich lub statycznych elementów członkowskich danych implementacja musi zawierać selektor zakresu klas. Aby zapoznać się z przykładem, zobacz sekcję [brakująca treść funkcji lub zmienna](../../error-messages/tool-errors/missing-function-body-or-variable.md).
 
-### <a name="the-calling-convention-is-different-between-the-function-declaration-and-the-function-definition"></a>Konwencja wywoływania różni się od deklaracji funkcji i definicji funkcji
+### <a name="the-calling-convention-is-different-between-the-function-declaration-and-the-function-definition"></a>Konwencja wywoływania różni się między deklaracją funkcji a definicją funkcji
 
-Konwencje wywoływania ([__cdecl](../../cpp/cdecl.md), [__stdcall](../../cpp/stdcall.md), [__fastcall](../../cpp/fastcall.md), lub [__vectorcall](../../cpp/vectorcall.md)) są zakodowane jako część nazwy dekoracyjne. Sprawdź, czy konwencja wywołania jest taka sama.
+Konwencje wywoływania ([__cdecl](../../cpp/cdecl.md), [__stdcall](../../cpp/stdcall.md), [__fastcall](../../cpp/fastcall.md)lub [__vectorcall](../../cpp/vectorcall.md)) są kodowane jako część nazwy dekoracyjnej. Sprawdź, czy Konwencja wywoływania jest taka sama.
 
-### <a name="a-symbol-is-defined-in-a-c-file-but-declared-without-using-extern-c-in-a-c-file"></a>Symbol jest zdefiniowana w pliku C, ale zadeklarowana bez użycia extern "C" w pliku języka C++
+### <a name="a-symbol-is-defined-in-a-c-file-but-declared-without-using-extern-c-in-a-c-file"></a>Symbol jest zdefiniowany w pliku C, ale deklarowany bez użycia extern "C" w C++ pliku
 
-Symbole zdefiniowane w pliku, który jest kompilowany jako C mają różne nazwy dekoracyjne niż symbole zadeklarowanych w pliku języka C++, chyba że używasz [extern "C"](../../cpp/using-extern-to-specify-linkage.md) modyfikator. Sprawdź, czy deklaracja jest zgodna z powiązaniem kompilacji dla każdego symbolu. Podobnie, jeśli symbol jest zdefiniowana w pliku C++, który będzie używany przez C program, użyj `extern "C"` w definicji.
+Symbole zdefiniowane w pliku, który jest kompilowany jako C mają różne nazwy dekoracyjne niż symbole zadeklarowane C++ w pliku, chyba że jest używany zewnętrzny modyfikator ["C"](../../cpp/using-extern-to-specify-linkage.md) . Sprawdź, czy deklaracja pasuje do powiązania kompilacji dla każdego symbolu. Podobnie, jeśli zdefiniujesz symbol w C++ pliku, który będzie używany przez program C, użyj `extern "C"` w definicji.
 
-### <a name="a-symbol-is-defined-as-static-and-then-later-referenced-outside-the-file"></a>Symbol został zdefiniowany jako statyczny i później przywoływane poza plikiem
+### <a name="a-symbol-is-defined-as-static-and-then-later-referenced-outside-the-file"></a>Symbol jest definiowany jako statyczny, a następnie przywoływany poza plikiem
 
-W języku C++, w przeciwieństwie do języka C [stałe globalne](../../error-messages/tool-errors/global-constants-in-cpp.md) mają `static` powiązania. Aby obejść to ograniczenie, można dołączyć `const` inicjalizacje w nagłówku pliku i dołączyć ten nagłówek w plikach CPP lub ustaw dla zmiennej niestałe i użyj stałe odwołanie do niego dostęp.
+W C++, w przeciwieństwie do języka C, [globalne stałe](../../error-messages/tool-errors/global-constants-in-cpp.md) mają powiązania `static`. Aby obejść to ograniczenie, można uwzględnić inicjalizacje `const` w pliku nagłówkowym i dołączyć ten nagłówek do plików. cpp lub można wprowadzić zmienną niestałą i użyć do niej dostępu stałego.
 
-### <a name="a-static-member-of-a-class-is-not-defined"></a>Nie zdefiniowano statycznej składowej klasy
+### <a name="a-static-member-of-a-class-is-not-defined"></a>Statyczny element członkowski klasy nie jest zdefiniowany
 
-Członek klasy statycznej musi mieć unikatowy definicji lub go będzie naruszenia reguły jednej definicji. Element członkowski klasy statycznej, który nie może być zdefiniowano w tekście musi być zdefiniowany w jednym pliku źródłowym przy użyciu jego w pełni kwalifikowana nazwa. Jeśli nie jest zdefiniowana w ogóle, konsolidator generuje LNK2019.
+Statyczny element członkowski klasy musi mieć unikatową definicję lub narusza regułę z jedną definicją. Statyczny element członkowski klasy, który nie może być zdefiniowany w tekście, musi być zdefiniowany w jednym pliku źródłowym przy użyciu jego w pełni kwalifikowanej nazwy. Jeśli nie jest on zdefiniowany, konsolidator generuje LNK2019.
 
-### <a name="a-build-dependency-is-only-defined-as-a-project-dependency-in-the-solution"></a>Zależność kompilacji jest zdefiniowana tylko jako zależność projektu w rozwiązaniu
+### <a name="a-build-dependency-is-only-defined-as-a-project-dependency-in-the-solution"></a>Zależność kompilacji jest definiowana tylko jako zależność projektu w rozwiązaniu
 
-We wcześniejszych wersjach programu Visual Studio ten poziom zależności była wystarczająca. Począwszy od programu Visual Studio 2010, Visual Studio wymaga jednak [odwołania projekt projekt](/visualstudio/ide/managing-references-in-a-project). Jeśli projekt nie ma odwołania projekt projekt, otrzymasz ten błąd konsolidatora. Dodaj odwołanie projektu do projektu, aby rozwiązać ten problem.
+W starszych wersjach programu Visual Studio wystarcza ten poziom zależności. Jednak począwszy od programu Visual Studio 2010, program Visual Studio wymaga [odwołania projektu do projektu](/visualstudio/ide/managing-references-in-a-project). Jeśli projekt nie ma odwołania projekt-projekt, może wystąpić błąd konsolidatora. Dodaj odwołanie projekt-projekt, aby je usunąć.
 
-### <a name="you-build-a-console-application-by-using-settings-for-a-windows-application"></a>Tworzenie aplikacji konsolowej przy użyciu ustawień dla aplikacji Windows
+### <a name="an-entry-point-is-not-defined"></a>Punkt wejścia nie jest zdefiniowany
 
-Jeśli komunikat o błędzie jest podobny do **nierozpoznany symbol zewnętrzny WinMain przywoływany w funkcji** *nazwa_funkcji*, link przy użyciu **opcji** zamiast **/Subsystem: Windows**. Aby uzyskać więcej informacji na temat tego ustawienia i w jaki sposób ustawić tę właściwość w programie Visual Studio, zobacz [/Subsystem (Określ podsystem)](../../build/reference/subsystem-specify-subsystem.md).
+Kod aplikacji musi definiować odpowiedni punkt wejścia: `main` lub `wmain` dla aplikacji konsolowych, `WinMain` lub `wWinMain` dla aplikacji systemu Windows. Aby uzyskać więcej informacji, zobacz [Main: Uruchamianie programu](../../cpp/main-program-startup.md) lub [Funkcja WinMain](/windows/win32/api/winbase/nf-winbase-winmain). Aby użyć niestandardowego punktu wejścia, określ opcję konsolidatora [/entry (symbol punktu wejścia)](../../build/reference/entry-entry-point-symbol.md) . 
 
-### <a name="you-attempt-to-link-64-bit-libraries-to-32-bit-code-or-32-bit-libraries-to-64-bit-code"></a>Spróbuj połączyć 64-bitowych bibliotek kodu 32-bitowego lub 32-bitowych bibliotek kodu 64-bitowego
+### <a name="you-build-a-console-application-by-using-settings-for-a-windows-application"></a>Tworzenie aplikacji konsolowej przy użyciu ustawień dla aplikacji systemu Windows
 
-Biblioteki i pliki obiektów powiązany kod musi być skompilowana dla taką samą architekturę jako kod. Upewnij się, że biblioteki odwołania projektu są kompilowane dla taką samą architekturę co projekt. Upewnij się, że [/libpath —](../../build/reference/libpath-additional-libpath.md) lub **dodatkowe katalogi bibliotek** ścieżki opcji używanych przez punkty konsolidatora do bibliotek stworzona z myślą o architektury.
+Jeśli komunikat o błędzie przypomina **nierozpoznany symbol zewnętrzny WinMain przywoływany w funkcji** *function_name*, link przy użyciu **/SUBSYSTEM: Console** zamiast **/SUBSYSTEM: Windows**. Aby uzyskać więcej informacji na temat tego ustawienia i instrukcje dotyczące sposobu ustawiania tej właściwości w programie Visual Studio, zobacz [/subsystem (Określ podsystem)](../../build/reference/subsystem-specify-subsystem.md).
 
-### <a name="you-use-different-compiler-options-for-function-inlining-in-different-source-files"></a>Użyj różne opcje kompilatora dla funkcji wbudowanie w innych plików źródłowych
+### <a name="you-attempt-to-link-64-bit-libraries-to-32-bit-code-or-32-bit-libraries-to-64-bit-code"></a>Podjęto próbę połączenia bibliotek 64-bitowych z 32-bitowym kodem lub 32-bitowych bibliotek do kodu 64-bitowego
 
-Za pomocą funkcji śródwierszowych zdefiniowane w plikach CPP i mieszanie funkcja wbudowanie opcje kompilatora w innych plików źródłowych może spowodować, że LNK2019. Aby uzyskać więcej informacji, zobacz [problemy ze Śródwierszowaniem funkcji](../../error-messages/tool-errors/function-inlining-problems.md).
+Biblioteki i pliki obiektów połączone z kodem muszą być kompilowane dla tej samej architektury, w której znajduje się kod. Sprawdź, czy biblioteki, do których odwołuje się projekt, są kompilowane dla tej samej architektury co projekt. Upewnij się, że opcja ścieżki [/LIBPATH](../../build/reference/libpath-additional-libpath.md) lub **Dodatkowe katalogi bibliotek** używana przez konsolidator wskazuje na biblioteki skompilowane dla właściwej architektury.
 
-### <a name="you-use-automatic-variables-outside-their-scope"></a>W przypadku używania zmiennych automatycznych poza ich zakresem
+### <a name="you-use-different-compiler-options-for-function-inlining-in-different-source-files"></a>W różnych plikach źródłowych można używać różnych opcji kompilatora.
 
-Automatyczne zmienne (zakresem funkcji) należy używać tylko w zakresie tej funkcji. Nie można zadeklarować zmienne `extern` i używane w innych plikach źródłowych. Aby uzyskać przykład, zobacz [automatyczne zmienne (związane z zakresem funkcji)](../../error-messages/tool-errors/automatic-function-scope-variables.md).
+Używanie wbudowanych funkcji zdefiniowanych w plikach. cpp i mieszanie opcji kompilatora w celu wyróżnienia funkcji w różnych plikach źródłowych może spowodować LNK2019. Aby uzyskać więcej informacji, zobacz temat [problemy z wykreśleniem funkcji](../../error-messages/tool-errors/function-inlining-problems.md).
 
-### <a name="you-call-instrinsic-functions-or-pass-argument-types-to-intrinsic-functions-that-are-not-supported-on-your-target-architecture"></a>Wywoływanie funkcji instrinsic lub przekazać typy argumentów do funkcje wewnętrzne, które nie są obsługiwane dla docelowej architektury
+### <a name="you-use-automatic-variables-outside-their-scope"></a>Używasz zmiennych automatycznych poza ich zakresem
 
-Na przykład, jeśli korzystasz AVX2 wewnętrznej, ale nie należy określać [/ARCH:AVX2](../../build/reference/arch-x86.md) — opcja kompilatora, kompilator zakłada, że wewnętrznych jest funkcją zewnętrzną. Zamiast generowania instrukcję wbudowane, kompilator generuje wywołanie symbol zewnętrzny z taką samą nazwę jak wewnętrznych. Próba Znajdź definicję tę funkcję, brak przez konsolidator generuje LNK2019. Sprawdź, czy używasz tylko funkcje wewnętrzne i typy obsługiwane przez architektury docelowej.
+Automatyczne zmienne (zakres funkcji) mogą być używane tylko w zakresie tej funkcji. Te zmienne nie mogą być deklarowane `extern` i używane w innych plikach źródłowych. Aby zapoznać się z przykładem, zobacz [Automatyczne zmienne (zakres funkcji)](../../error-messages/tool-errors/automatic-function-scope-variables.md).
 
-### <a name="you-mix-code-that-uses-native-wchart-with-code-that-doesnt"></a>Mieszanie kod używający natywnej wchar\_t z kodem, który nie
+### <a name="you-call-instrinsic-functions-or-pass-argument-types-to-intrinsic-functions-that-are-not-supported-on-your-target-architecture"></a>Wywoływanie funkcji instrinsic lub przekazywanie typów argumentów do funkcji wewnętrznych, które nie są obsługiwane w architekturze docelowej
 
-C++język zgodność pracy, która została wykonana w programie Visual Studio 2005 wprowadzone `wchar_t` typu natywnego domyślnie. Należy użyć [/Zc:wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) — opcja kompilatora do generowania kodu zgodne z plikami biblioteki i obiektu skompilowane przy użyciu starszych wersji programu Visual Studio. Jeśli nie wszystkie pliki zostały skompilowane, korzystając z tych samych **/Zc:wchar\_t** ustawienia, typ odwołania nie mogą prowadzić do zgodnych typów. Upewnij się, że `wchar_t` typów we wszystkich plikach do biblioteki i obiektu są zgodne, aktualizując typy, które są używane, lub przy użyciu spójnego **/Zc:** ustawienia podczas kompilowania.
+Na przykład jeśli używasz wewnętrznego AVX2, ale nie określisz opcji kompilatora [/arch: AVX2](../../build/reference/arch-x86.md) , kompilator zakłada, że wewnętrzna jest funkcją zewnętrzną. Zamiast generować wbudowaną instrukcję, kompilator generuje wywołanie do zewnętrznego symbolu o takiej samej nazwie jak wewnętrzna. Gdy konsolidator próbuje znaleźć definicję brakującej funkcji, generuje LNK2019. Sprawdź, czy używane są tylko elementy wewnętrzne i typy obsługiwane przez architekturę docelową.
 
-## <a name="third-party-library-issues-and-vcpkg"></a>Problemy z biblioteki innych firm i Vcpkg
+### <a name="you-mix-code-that-uses-native-wchar_t-with-code-that-doesnt"></a>Mieszać kod, który używa natywnego WCHAR @ no__t-0T z kodem, który nie
 
-Jeśli zostanie wyświetlony ten błąd, jeśli próbujesz skonfigurować biblioteki innych firm w ramach kompilacji, należy rozważyć użycie [Vcpkg](../../vcpkg.md), do Visual C++ Menedżera pakietów, instalowanie i tworzenie biblioteki. Vcpkg obsługująca duży i rosnący [listę bibliotek innych firm](https://github.com/Microsoft/vcpkg/tree/master/ports)i ustawia właściwości konfiguracji i zależności wymagane do pomyślnej kompilacji w ramach projektu. Aby uzyskać więcej informacji, zobacz powiązane [blogu Visual C++](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/) wpis.
+C++zgodność z językiem, która została wykonana w programie Visual Studio 2005 `wchar_t` domyślnie typem natywnym. Musisz użyć opcji [/Zc: wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Compiler, aby wygenerować kod zgodny z bibliotekami i plikami obiektów skompilowanymi przy użyciu wcześniejszych wersji programu Visual Studio. Jeśli nie wszystkie pliki zostały skompilowane przy użyciu tego samego **/Zc: WCHAR @ no__t-1T** , odwołania do typów mogą nie być rozpoznawane jako zgodne typy. Sprawdź, czy typy `wchar_t` we wszystkich bibliotekach i plikach obiektów są zgodne, aktualizując typy, które są używane, lub używając spójnych ustawień **/Zc: wchar_t** podczas kompilowania.
 
-## <a name="diagnosis-tools"></a>Narzędzia do diagnostyki
+## <a name="third-party-library-issues-and-vcpkg"></a>Problemy z biblioteką innych firm i Vcpkg
 
-Może być trudno stwierdzić, dlaczego konsolidator nie można odnaleźć definicji określonego symbolu. Często problem jest, że nie wprowadzono kodu, który zawiera definicję w kompilacji lub kompilacji, utworzonych przez opcje innej dekorowane nazwy zewnętrzne symbole. Istnieją różne narzędzia i opcje, które mogą pomóc Ci diagnozowanie błędów LNK2019.
+Jeśli ten błąd jest wyświetlany podczas próby skonfigurowania biblioteki innej firmy jako części kompilacji, należy rozważyć użycie [Vcpkg](../../vcpkg.md), Menedżera pakietów Visual C++ Package, aby zainstalować i skompilować bibliotekę. Program Vcpkg obsługuje dużą i rosnącą [listę bibliotek innych firm](https://github.com/Microsoft/vcpkg/tree/master/ports), a także ustawia wszystkie właściwości konfiguracji i zależności wymagane dla zakończonych powodzeniem kompilacji w ramach projektu. Aby uzyskać więcej informacji, zobacz odpowiedni wpis w [blogu wizualnym C++ ](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/) .
 
-- [/VERBOSE](../../build/reference/verbose-print-progress-messages.md) — opcja konsolidatora może pomóc w określeniu, plików, których odwołania konsolidatora. Może to ułatwić możesz sprawdzić, czy plik, który zawiera definicję symbolu znajduje się w kompilacji.
+## <a name="diagnosis-tools"></a>Narzędzia diagnostyczne
 
-- [/EKSPORTUJE](../../build/reference/dash-exports.md) i [/symbole](../../build/reference/symbols.md) opcje **DUMPBIN** narzędzie może pomóc odkryć, symboli, które są zdefiniowane w plikach dll i obiektu lub biblioteki. Sprawdź wyeksportowany dekorowane odpowiada nazwy dekoracyjne konsolidator nazwy wyszukuje.
+Może być trudne, aby określić, dlaczego konsolidator nie może znaleźć określonej definicji symbolu. Często problem polega na tym, że nie dołączono kodu, który zawiera definicję w kompilacji, lub opcje kompilacji stworzyły różne nazwy dekoracyjne symboli zewnętrznych. Istnieje kilka narzędzi i opcji, które mogą pomóc zdiagnozować błąd LNK2019.
 
-- **UNDNAME** narzędzia można wyświetlić równoważne niedekorowanego symbolu zewnętrznego dla nazwy dekoracyjne.
+- Opcja konsolidatora [/verbose](../../build/reference/verbose-print-progress-messages.md) może pomóc określić, które pliki są przywoływane przez konsolidator. Może to pomóc w sprawdzeniu, czy plik, który zawiera definicję symbolu, jest uwzględniony w kompilacji.
+
+- Opcje [/exports](../../build/reference/dash-exports.md) i [/Symbols](../../build/reference/symbols.md) narzędzia **polecenia DUMPBIN** mogą pomóc w ustaleniu, które symbole są zdefiniowane w plikach dll i obiektach biblioteki. Sprawdź, czy eksportowane nazwy dekoracyjne pasują do dekoracyjnych nazw, które wyszukuje konsolidator.
+
+- Narzędzie **UNDNAME** może wyświetlić odpowiedni, niedekoracyjny symbol zewnętrzny dla nazwy dekoracyjnej.
 
 ## <a name="examples"></a>Przykłady
 
-Poniżej przedstawiono kilka przykładów kodu, który powoduje, że to błąd LNK2019 wraz z informacjami o tym, jak naprawić błąd.
+Poniżej przedstawiono kilka przykładów kodu, które powodują błąd LNK2019, wraz z informacjami dotyczącymi sposobu usuwania błędu.
 
-### <a name="a-symbol-is-declared-but-not-defined"></a>Symbol jest zadeklarowana ale niezdefiniowana
+### <a name="a-symbol-is-declared-but-not-defined"></a>Symbol jest zadeklarowany, ale nie został zdefiniowany
 
-W tym przykładzie zewnętrznej zmiennej jest zadeklarowana ale niezdefiniowana:
+W tym przykładzie zmienna zewnętrzna jest zadeklarowana, ale nie jest zdefiniowana:
 
 ```cpp
 // LNK2019.cpp
@@ -120,7 +124,7 @@ int main() {
 }
 ```
 
-Oto inny przykład, w którym zmiennych i funkcji są deklarowane jako `extern` dostarczono nie definicji:
+Oto inny przykład, w którym zmienna i funkcja są zadeklarowane jako `extern`, ale nie podano definicji:
 
 ```cpp
 // LNK2019c.cpp
@@ -135,11 +139,11 @@ void f() {
 int main() {}
 ```
 
-Chyba że `i` i `g` są definiowane w jednym z plików znajdujących się w kompilacji, konsolidator generuje LNK2019. Przez dołączenie pliku kodu źródłowego, który zawiera definicje jako część kompilacji, można naprawić błędy. Alternatywnie można przekazać pliki .obj lub pliki .lib, które zawierają definicje do konsolidatora.
+Jeśli `i` i `g` są zdefiniowane w jednym z plików zawartych w kompilacji, konsolidator generuje LNK2019. Błędy można naprawić, dołączając plik kodu źródłowego, który zawiera definicje w ramach kompilacji. Alternatywnie można przekazać pliki. obj lub. lib, które zawierają definicje do konsolidatora.
 
-### <a name="a-static-data-member-is-declared-but-not-defined"></a>Element członkowski danych statycznych jest zadeklarowana ale niezdefiniowana
+### <a name="a-static-data-member-is-declared-but-not-defined"></a>Statyczny element członkowski danych jest zadeklarowany, ale nie został zdefiniowany
 
-LNK2019 może również wystąpić, gdy element członkowski danych statycznych jest zadeklarowana ale niezdefiniowana. Poniższy przykład generuje LNK2019 i pokazuje, jak go naprawić.
+LNK2019 może również wystąpić, gdy statyczny element członkowski danych jest zadeklarowany, ale nie został zdefiniowany. Poniższy przykład generuje LNK2019 i pokazuje, jak rozwiązać ten problem.
 
 ```cpp
 // LNK2019b.cpp
@@ -158,9 +162,9 @@ int main() {
 }
 ```
 
-### <a name="declaration-parameters-do-not-match-definition"></a>Deklaracji parametrów nie pasują do definicji
+### <a name="declaration-parameters-do-not-match-definition"></a>Parametry deklaracji nie są zgodne z definicją
 
-Kod, który wywołuje funkcje szablonu muszą mieć, dopasowanie deklaracji funkcji szablonu. Deklaracje mogą zawierać te same parametry szablonu jako definicji. Poniższy przykład generuje LNK2019 na zdefiniowany przez użytkownika operator i pokazuje, jak go naprawić.
+Kod, który wywołuje funkcje szablonu, musi mieć zgodne deklaracje funkcji szablonu. Deklaracje muszą zawierać takie same parametry szablonu, jak definicja. Poniższy przykład generuje LNK2019 w operatorze zdefiniowanym przez użytkownika i pokazuje, jak rozwiązać ten problem.
 
 ```cpp
 // LNK2019e.cpp
@@ -188,9 +192,9 @@ int main() {
 }
 ```
 
-### <a name="inconsistent-wchart-type-definitions"></a>Niespójne wchar_t definicji typu
+### <a name="inconsistent-wchar_t-type-definitions"></a>Niespójne definicje typów wchar_t
 
-Ten przykład umożliwia utworzenie biblioteki DLL, która ma eksportu, która używa `WCHAR`, która jest rozpoznawana jako `wchar_t`.
+Ten przykład tworzy plik DLL, który ma eksport, który używa `WCHAR`, który jest rozpoznawany jako `wchar_t`.
 
 ```cpp
 // LNK2019g.cpp
@@ -200,7 +204,7 @@ Ten przykład umożliwia utworzenie biblioteki DLL, która ma eksportu, która u
 __declspec(dllexport) void func(WCHAR*) {}
 ```
 
-Następny przykład korzysta z biblioteki DLL w poprzednim przykładzie, a następnie generuje LNK2019, ponieważ typy unsigned short * i WCHAR\* nie są takie same.
+Następny przykład używa biblioteki DLL w poprzednim przykładzie i generuje LNK2019, ponieważ typy unsigned Short * i WCHAR @ no__t-0 nie są takie same.
 
 ```cpp
 // LNK2019h.cpp
@@ -213,9 +217,9 @@ int main() {
 }
 ```
 
-Aby naprawić ten błąd, zmień `unsigned short` do `wchar_t` lub `WCHAR`, lub Kompiluj LNK2019g.cpp przy użyciu **/Zc:wchar_t-** .
+Aby naprawić ten błąd, Zmień `unsigned short` na `wchar_t` lub `WCHAR` lub skompiluj LNK2019g. cpp przy użyciu **/Zc: wchar_t-** .
 
-## <a name="additional-resources"></a>Dodatkowe zasoby
+## <a name="additional-resources"></a>Zasoby dodatkowe
 
-Aby uzyskać więcej informacji na temat możliwych przyczyn i rozwiązań dla LNK2001 zobacz pytanie dotyczące przepełnienia stosu [co to jest błąd zewnętrzny symbol Niezdefiniowany odwołania/nierozpoznanych i jak go naprawić?](https://stackoverflow.com/q/12573816/2002113).
+Aby uzyskać więcej informacji na temat możliwych przyczyn i rozwiązań dla programu LNK2001, zobacz pytanie Stack Overflow, [co to jest błąd niezdefiniowanego odwołania/nierozpoznany symbol zewnętrzny i jak go naprawić?](https://stackoverflow.com/q/12573816/2002113).
 
