@@ -2,12 +2,12 @@
 title: Odwołanie do biblioteki OpenMP
 ms.date: 07/30/2019
 ms.assetid: a25188c6-edde-43d0-84b5-780e797b08fc
-ms.openlocfilehash: c78c2677741714ab48d49a4443ad753369ec4500
-ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
+ms.openlocfilehash: c63ae5ba7f04d8ee6bd02418792804373fa71e6b
+ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682589"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72348223"
 ---
 # <a name="openmp-library-reference"></a>Odwołanie do biblioteki OpenMP
 
@@ -26,10 +26,10 @@ Funkcje biblioteki C++ wykonawczej Visual OpenMP są zawarte w następujących b
 
 |Biblioteka wykonawcza OpenMP|Elementy|
 |------------------------------|---------------------|
-|VCOMP.LIB|Wielowątkowy, dynamiczny link (Biblioteka importowana dla VCOMP. LIB).|
-|VCOMPD.LIB|Wielowątkowy, dynamiczny link (Biblioteka importowana dla VCOMPD. POKRYWA) (Debuguj)|
+|VCOMP. LIB|Wielowątkowy, dynamiczny link (Biblioteka importowana dla VCOMP. LIB).|
+|VCOMPD. LIB|Wielowątkowy, dynamiczny link (Biblioteka importowana dla VCOMPD. POKRYWA) (Debuguj)|
 
-Jeśli _DEBUG jest zdefiniowany w kompilacji i jeśli `#include omp.h` znajduje się w kodzie źródłowym, VCOMPD. LIB będzie domyślną lib, w przeciwnym razie VCOMP. Zostanie użyta Biblioteka LIB.
+Jeśli _DEBUG jest zdefiniowany w kompilacji i jeśli `#include <omp.h>` jest w kodzie źródłowym, VCOMPD. LIB będzie domyślną lib, w przeciwnym razie VCOMP. Zostanie użyta Biblioteka LIB.
 
 Możesz użyć [/NODEFAULTLIB (Ignoruj biblioteki)](../../../build/reference/nodefaultlib-ignore-libraries.md) , aby usunąć domyślną lib i jawnie połączyć z dowolnie wybraną lib.
 
