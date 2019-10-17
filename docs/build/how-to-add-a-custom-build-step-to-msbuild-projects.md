@@ -1,45 +1,45 @@
 ---
-title: 'Instrukcje: Dodawanie niestandardowego kroku kompilacji do projektów MSBuild'
-ms.date: 11/04/2016
+title: 'Porady: dodawanie niestandardowego kroku kompilacji do projektów MSBuild'
+ms.date: 10/16/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: add a custom build step'
 ms.assetid: a20a0c47-4df4-4754-a1f0-a94a99958916
-ms.openlocfilehash: d70f145a9d43463266a9c0bbff68e8e7f36ef2c6
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 78d40a5b4a02fe9b065bbbdde33afc6180d75381
+ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220729"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444919"
 ---
-# <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Instrukcje: Dodawanie niestandardowego kroku kompilacji do projektów MSBuild
+# <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Porady: dodawanie niestandardowego kroku kompilacji do projektów MSBuild
 
-Krok niestandardowej kompilacji jest krokiem zdefiniowanych przez użytkownika w kompilacji. Niestandardowy krok kompilacji, który zachowuje się jak każdy inny *narzędzia poleceń* kroku, takie jak standardowy kroku narzędzie kompilacji lub łącza.
+Niestandardowy krok kompilacji to krok zdefiniowany przez użytkownika w kompilacji. Niestandardowy krok kompilacji zachowuje się jak każdy inny krok *narzędzia poleceń* , taki jak standardowy krok narzędzia do kompilowania lub łączenia.
 
-Określ niestandardowego kroku kompilacji w pliku projektu (.vcxproj). Ten krok można określić w wierszu polecenia wykonaj wszelkie dodatkowe dane wejściowe lub wyjściowe pliki i komunikat do wyświetlenia. Jeśli **MSBuild** Określa, że Twoje pliki wyjściowe są nieaktualne w odniesieniu do plików wejściowych, wyświetla komunikat i wykonuje polecenie.
+Określ niestandardowy krok kompilacji w pliku projektu (. vcxproj). Krok może określać wiersz poleceń do wykonania, wszelkie dodatkowe pliki wejściowe lub wyjściowe oraz komunikat do wyświetlenia. Jeśli program **MSBuild** określi, że pliki wyjściowe są nieaktualne w odniesieniu do plików wejściowych, wyświetla komunikat i wykonuje polecenie.
 
-Aby określić lokalizację kompilacji niestandardowej krok w sekwencji obiektów docelowych kompilacji, użyj jedną lub obie `CustomBuildAfterTargets` i `CustomBuildBeforeTargets` elementy XML w pliku projektu. Można na przykład określić, czy wykonywania kroku niestandardowej kompilacji, po cel narzędzia łącza, a przed docelowej narzędzia manifestu. Rzeczywisty zestaw dostępnych elementów docelowych zależy od konkretnej kompilacji.
+Aby określić lokalizację niestandardowego kroku kompilacji w sekwencji elementów docelowych kompilacji, Użyj co najmniej jednego `CustomBuildAfterTargets` i `CustomBuildBeforeTargets` elementów XML w pliku projektu. Można na przykład określić, że niestandardowy krok kompilacji będzie uruchamiany po elemencie docelowym narzędzia konsolidacji i przed elementem docelowym narzędzia manifestu. Rzeczywisty zestaw dostępnych elementów docelowych zależy od konkretnej kompilacji.
 
-Określ `CustomBuildBeforeTargets` elementu, aby wykonać krok niestandardowej kompilacji, przed uruchomieniem określonego celu, `CustomBuildAfterTargets` element do wykonania kroku po uruchomieniu dany element docelowy lub oba te elementy, które można wykonać kroku między dwa sąsiadujące elementy docelowe. Jeśli element nie jest określony, narzędzie niestandardowej kompilacji wykonuje w domyślnej lokalizacji, czyli po **łącze** docelowej.
+Określ element `CustomBuildBeforeTargets`, aby wykonać niestandardowy krok kompilacji przed uruchomieniem określonego elementu docelowego, element `CustomBuildAfterTargets`, aby wykonać ten krok po przebiegu określonego elementu docelowego, lub oba elementy, aby wykonać krok między dwoma sąsiednimi obiektami docelowymi. Jeśli żaden z elementów nie zostanie określony, narzędzie kompilacji niestandardowej wykonuje się w lokalizacji domyślnej, która jest po elemencie docelowym **linku** .
 
-Niestandardowych krokach budowania lub niestandardowych narzędzi kompilacji udostępnianie informacji określonych w `CustomBuildBeforeTargets` i `CustomBuildAfterTargets` elementów XML. W związku z tym określanie elementów docelowych tylko jeden raz w pliku projektu.
+Niestandardowe kroki kompilacji i niestandardowe narzędzia kompilacji udostępniają informacje określone w elementach XML `CustomBuildBeforeTargets` i `CustomBuildAfterTargets`. W związku z tym Określ te elementy docelowe tylko raz w pliku projektu.
 
-### <a name="to-define-what-is-executed-by-the-custom-build-step"></a>Aby zdefiniować, co to jest wykonywane przez krok niestandardowej kompilacji
+### <a name="to-define-what-is-executed-by-the-custom-build-step"></a>Aby określić, co jest wykonywane przez krok niestandardowej kompilacji
 
-1. Dodaj grupy właściwości do pliku projektu. W tej grupie właściwości określ polecenie, jego danych wejściowych i danych wyjściowych oraz wiadomość, jak pokazano w poniższym przykładzie. W tym przykładzie tworzy plik cab z pliku main.cpp został utworzony w [instruktażu: Korzystanie z MSBuild do tworzenia C++ projektu](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md).
+1. Dodaj grupę właściwości do pliku projektu. W tej grupie Właściwości określ polecenie, jego dane wejściowe i wyjściowe oraz komunikat, jak pokazano w poniższym przykładzie. Ten przykład tworzy plik cab z głównego pliku. cpp utworzonego w [przewodniku: używanie programu MSBuild do C++ tworzenia projektu](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md).
 
     ```
     <ItemDefinitionGroup>
       <CustomBuildStep>
         <Command>makecab.exe $(ProjectDir)main.cpp $(TargetName).cab</Command>
         <Outputs>$(TargetName).cab</Outputs>
-        <Inputs>$(TargetFileName)</Inputs>
+        <Inputs>$(ProjectDir)main.cpp</Inputs>
       </CustomBuildStep>
     </ItemDefinitionGroup>
     ```
 
-### <a name="to-define-where-in-the-build-the-custom-build-step-will-execute"></a>Aby zdefiniować, gdzie w kompilacji niestandardowy krok kompilacji będzie wykonywał
+### <a name="to-define-where-in-the-build-the-custom-build-step-will-execute"></a>Aby zdefiniować, gdzie w kompilacji krok kompilacji niestandardowej zostanie wykonany
 
-1. Dodaj następujące grupy właściwości do pliku projektu. Można określić obu elementów docelowych, lub możesz jednym pominąć, jeśli po prostu chcesz niestandardowy krok do wykonania przed lub po określonej lokalizacji docelowej. W tym przykładzie informuje **MSBuild** przeprowadzić niestandardowy krok po kroku kompilacji, ale przed krokiem link.
+1. Dodaj następującą grupę właściwości do pliku projektu. Można określić oba elementy docelowe lub można je pominąć, jeśli chcesz, aby krok niestandardowy był wykonywany przed lub po określonym miejscu docelowym. Ten przykład informuje program **MSBuild** , aby wykonał niestandardowy krok po kroku kompilacji, ale przed krokiem linku.
 
     ```
     <PropertyGroup>
@@ -50,6 +50,6 @@ Niestandardowych krokach budowania lub niestandardowych narzędzi kompilacji udo
 
 ## <a name="see-also"></a>Zobacz także
 
-[Przewodnik: używanie programu MSBuild do tworzenia projektu w języku C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
+[Przewodnik: Tworzenie C++ projektu za pomocą programu MSBuild](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
 [Instrukcje: korzystanie ze zdarzeń kompilacji w projektach MSBuild](how-to-use-build-events-in-msbuild-projects.md)<br/>
 [Instrukcje: dodawanie niestandardowych narzędzi kompilacji do projektów MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md)
