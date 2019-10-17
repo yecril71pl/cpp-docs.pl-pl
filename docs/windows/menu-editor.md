@@ -39,12 +39,12 @@ helpviewer_keywords:
 - commands [C++], deleting from menus
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-ms.openlocfilehash: f2a5f1ac63007bf44dc331e2104c6e9e5cac23da
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: a21ff3ba736bd345e4b8399a761b5a8d9db531ac
+ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69514825"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444988"
 ---
 # <a name="menu-editor-c"></a>Edytor menu (C++)
 
@@ -59,7 +59,7 @@ Menu umożliwiają rozmieszczenie poleceń w logicznym i łatwym w użyciu spos�
 
 ### <a name="to-create-a-standard-menu"></a>Aby utworzyć menu standardowe
 
-1. Przejdź do **widoku** > menu**Widok zasobów** i kliknij prawym przyciskiem myszy nagłówek **menu** . Wybierz pozycję **Dodaj zasób**, a następnie **menu**.
+1. Przejdź do **widoku**menu,  > **inne okna** > **Widok zasobów** i kliknij prawym przyciskiem myszy nagłówek **menu** . Wybierz pozycję **Dodaj zasób**, a następnie **menu**.
 
 1. Zaznacz pole **nowy element** (prostokąt zawierający *tekst*) na pasku menu.
 
@@ -104,7 +104,7 @@ Wybierz istniejącą nazwę menu i naciśnij klawisz **INSERT** lub kliknij praw
    > Wpisany tekst jest wyświetlany w **Edytorze menu** i w polu **podpis** w [oknie właściwości](/visualstudio/ide/reference/properties-window). Można edytować właściwości nowego menu w jednej z tych lokalizacji.
 
    > [!TIP]
-   > Można zdefiniować klawisz skrótu (klawisz dostępu), który umożliwia użytkownikowi wybranie polecenia menu. Wpisz znak handlowego "`&`i" () przed literą, aby określić go jako element. Użytkownik może wybrać polecenie menu, wpisując tę literę.
+   > Można zdefiniować klawisz skrótu (klawisz dostępu), który umożliwia użytkownikowi wybranie polecenia menu. Wpisz znak handlowego "i" (`&`) przed literą, aby określić go jako element. Użytkownik może wybrać polecenie menu, wpisując tę literę.
 
 1. W oknie **Właściwości** wybierz właściwości polecenia menu, które mają zastosowanie. Aby uzyskać szczegółowe informacje, zobacz [Właściwości polecenia menu](../windows/menu-command-properties.md).
 

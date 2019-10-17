@@ -23,102 +23,102 @@ helpviewer_keywords:
 - Dialog Editor [C++], switching between controls and code
 - Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-ms.openlocfilehash: dc5a823951e07af96efceec52d2aa23552c2d002
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40b5d8c8390c638b70bc2c0860ccf3c17872719c
+ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414388"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72445022"
 ---
 # <a name="dialog-editor-c"></a>Edytor okien dialogowych (C++)
 
-**Edytor okien dialogowych** pozwala na tworzenie lub edytowanie zasobów okien dialogowych.
+**Edytor okien** dialogowych umożliwia tworzenie i edytowanie zasobów okien dialogowych.
 
-- Aby otworzyć Edytor, kliknij dwukrotnie plik .rc okna dialogowego w **widok zasobów** okna lub przejdź do menu **widoku** > **widok zasobów**.
+- Aby otworzyć Edytor, kliknij dwukrotnie plik. RC okna dialogowego w oknie **Widok zasobów** lub przejdź do **widoku**menu  >  inne @no__t**Widok zasobów** **systemu Windows**.
 
-Jedną z pierwszych kroków w tworzeniu nowego okna dialogowego lub szablonu okna dialogowego, jest dodanie formantów. W **Edytor okien dialogowych**, można rozmieścić formanty w celu dopasowania niektórych rozmiaru, kształtu lub wyrównania lub przenosić je około do pracy w oknie dialogowym. W łatwy sposób można również usunąć formant.
+Jednym z pierwszych kroków w tworzeniu nowego okna dialogowego lub szablonu okna dialogowego jest dodawanie kontrolek. W **edytorze okien dialogowych**można rozmieścić kontrolki tak, aby mieściły się w określonym rozmiarze, kształcie lub wyrównaniu, albo przenieść je do pracy w oknie dialogowym. W łatwy sposób można również usunąć formant.
 
 Okno dialogowe można przechowywać jako szablon w celu ponownego użycia. Można także łatwo przełączyć się między projektowaniem okna dialogowego a edycją kodu, który go implementuje.
 
-Jest również możliwe edytowanie właściwości jednego lub wielu formantów w **Edytor okien dialogowych**. Możesz zmienić kolejność tabulacji, czyli kolejność, w której formanty uzyskują Skoncentruj się kiedy **kartę** naciśnięcia klawisza lub można zdefiniować klawisz dostępu lub kombinacji klawiszy, który pozwala użytkownikom na wybór formantu przy użyciu klawiatury.
+Istnieje również możliwość edytowania właściwości jednego lub wielu kontrolek w **edytorze okien dialogowych**. Można zmienić kolejność tabulacji, czyli kolejność, w której formanty uzyskują fokus po naciśnięciu klawisza **Tab** , lub można zdefiniować klawisz dostępu lub kombinację klawiszy, która umożliwia użytkownikom wybranie kontrolki przy użyciu klawiatury.
 
-**Edytor okien dialogowych** pozwala również na używanie niestandardowych formantów, w tym formantów ActiveX. Można również edytować [widok formularza](../mfc/reference/cformview-class.md), [rejestrowania widoków](../data/record-views-mfc-data-access.md), lub [paski dialogowe](../mfc/dialog-bars.md).
+**Edytor okien dialogowych** umożliwia również korzystanie z kontrolek niestandardowych, w tym kontrolek ActiveX. Możesz również edytować [Widok formularza](../mfc/reference/cformview-class.md), [widoki rekordów](../data/record-views-mfc-data-access.md)lub [paski okien dialogowych](../mfc/dialog-bars.md).
 
-Począwszy od programu Visual Studio 2015, można użyć **Edytor okien dialogowych** do definiowania dynamicznych układy, które określają, jak przenieść kontrolek i zmienianie rozmiarów, gdy użytkownik zmienia rozmiar okna dialogowego. Aby uzyskać więcej informacji, zobacz [układ dynamiczny](../mfc/dynamic-layout.md).
+Począwszy od programu Visual Studio 2015, można użyć **edytora okien dialogowych** , aby zdefiniować układy dynamiczne, które określają sposób przenoszenia i zmiany rozmiaru kontrolek, gdy użytkownik zmienia rozmiar okna dialogowego. Aby uzyskać więcej informacji, zobacz [dynamiczny układ](../mfc/dynamic-layout.md).
 
-Aby uzyskać więcej informacji na temat zasobów, zobacz instrukcje [okno dialogowe Tworzenie](../windows/creating-a-new-dialog-box.md) i [formantów okna dialogowego](../windows/controls-in-dialog-boxes.md).
+Aby uzyskać więcej informacji o zasobach, zobacz jak [utworzyć okno dialogowe](../windows/creating-a-new-dialog-box.md) i [kontrolki okna dialogowego](../windows/controls-in-dialog-boxes.md).
 
 > [!TIP]
-> Podczas korzystania z **Edytor okien dialogowych**, w wielu przypadkach można wybrać z prawego przycisku myszy wyświetli menu skrótów z najczęściej używanymi poleceniami.
+> Korzystając z **edytora okien dialogowych**, w wielu przypadkach można wybrać przycisk z prawym przyciskiem myszy, aby wyświetlić menu skrótów często używanych poleceń.
 
 ## <a name="dialog-editor-toolbar"></a>Pasek narzędzi edytora okien dialogowych
 
-**Edytor okien dialogowych** narzędzi zawiera przyciski rozmieszczanie układu kontrolek w oknie dialogowym, na przykład rozmiar i wyrównanie. **Edytor okien dialogowych** przycisków paska narzędzi odpowiadają poleceń na **Format** menu.
+Pasek narzędzi **edytora okien dialogowych** zawiera przyciski służące do organizowania układu kontrolek w oknie dialogowym, na przykład rozmiaru i wyrównania. Przyciski paska narzędzi **edytora okna dialogowego** są zgodne z poleceniami w menu **Format** .
 
 |Ikona|Znaczenie|Ikona|Znaczenie|
 |----------|-------------|----------|-------------|
-|![Przycisk okna dialogowego test](../mfc/media/vcdialogeditortestdialog.png "vcDialogEditorTestDialog")|Okno dialogowe testu|![Miejsce na przycisku](../mfc/media/vcdialogeditoracross.png "vcDialogEditorAcross")|Między|
-|![Przycisk wej wyrównania](../mfc/media/vcdialogeditoralignlefts.png "vcDialogEditorAlignLefts")|Wyrównaj wej|![Przycisk miejsce w dół](../mfc/media/vcdialogeditordown.png "vcDialogEditorDown")|W dół|
-|![Przycisk praw wyrównania](../mfc/media/vcdialogeditoralignrights.png "vcDialogEditorAlignRights")|Wyrównaj prawa|![Przycisk tej samej szerokości upewnij](../mfc/media/vcdialogeditorsamewidth.png "vcDialogEditorSameWidth")|Taka sama szerokość|
-|![Wyrównaj górne krawędzie przycisk](../mfc/media/vcdialogeditoraligntops.png "vcDialogEditorAlignTops")|Wyrównaj górne krawędzie|![Marka sama wysokość przycisku](../mfc/media/vcdialogeditormakesameheight.png "vcDialogEditorMakeSameHeight")|Taka sama wysokość|
-|![Wyrównaj do dołu przycisk](../mfc/media/vcdialogeditoralignbottoms.png "vcDialogEditorAlignBottoms")|Wyrównaj do dołu|![Utwórz ten sam rozmiar przycisku](../mfc/media/vcdialogeditorsamesize.png "vcDialogEditorSameSize")|Taki sam rozmiar|
-|![Center Vertical button](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|W pionie|![Przełącz przycisk siatki](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|Przełączanie siatki|
-|![Środkowy przycisk poziomy](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|Poziome|![Przełącz prowadnice przycisk](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|Przełącz prowadnice|
+|![Przycisk okna dialogowego testu](../mfc/media/vcdialogeditortestdialog.png "vcDialogEditorTestDialog")|Okno dialogowe testu|![Odstępy między przyciskami](../mfc/media/vcdialogeditoracross.png "vcDialogEditorAcross")|Całą|
+|![Przycisk wyrównany do lewej](../mfc/media/vcdialogeditoralignlefts.png "vcDialogEditorAlignLefts")|Wyrównaj do lewej|![Przycisk odstępu w dół](../mfc/media/vcdialogeditordown.png "vcDialogEditorDown")|Notuj|
+|![Przycisk Wyrównaj prawa](../mfc/media/vcdialogeditoralignrights.png "vcDialogEditorAlignRights")|Wyrównaj prawa|![Przycisk Wyrównaj Szerokość](../mfc/media/vcdialogeditorsamewidth.png "vcDialogEditorSameWidth")|Wyrównaj Szerokość|
+|![Przycisk Wyrównaj do góry](../mfc/media/vcdialogeditoraligntops.png "vcDialogEditorAlignTops")|Wyrównaj do góry|![Przycisk Wyrównaj wysokość](../mfc/media/vcdialogeditormakesameheight.png "vcDialogEditorMakeSameHeight")|Wyrównaj wysokość|
+|![Przycisk Wyrównaj do dołu](../mfc/media/vcdialogeditoralignbottoms.png "vcDialogEditorAlignBottoms")|Wyrównaj do dołu|![Przycisk Utwórz ten sam rozmiar](../mfc/media/vcdialogeditorsamesize.png "vcDialogEditorSameSize")|Wyrównaj rozmiar|
+|![Przycisk Wyśrodkuj w pionie](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|Pionow|![Przycisk przełączania siatki](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|Przełączanie siatki|
+|![Przycisk Wyśrodkuj w poziomie](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|Układ|![Przycisk przełączania prowadnic](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|Przełącz prowadnice|
 
-- Aby pokazać lub ukryć **Edytor okien dialogowych** narzędzi, przejdź do menu **widoku** > **pasków narzędzi** > **Edytor okien dialogowych**.
+- Aby pokazać lub ukryć pasek narzędzi **edytora okien dialogowych** , przejdź do **widoku**menu  > **paski narzędzi** > **Edytor okien dialogowych**.
 
-Po otwarciu **Edytor okien dialogowych** w projekcie w języku C++ **Edytor okien dialogowych** pasek narzędzi pojawia się automatycznie w górnej części rozwiązania, jednak jeśli pasek narzędzi jest jawnie zamknięty, należy wywołać go Gdy następnym razem otworzysz **Edytor okien dialogowych**. Można przełączać wyświetlanie, wybierając je z listy dostępnych pasków narzędzi i okien.
+Po otwarciu **edytora okien dialogowych** w C++ projekcie pasek narzędzi **edytora okien dialogowych** automatycznie pojawia się u góry rozwiązania, jednak jeśli jawnie zamknięto ten pasek narzędzi, należy wywołać go przy następnym otwarciu **edytora okien dialogowych** . Możesz przełączać jej wyświetlanie, wybierając ją z listy dostępnych pasków narzędzi i okien.
 
 ## <a name="switch-between-dialog-box-controls-and-code"></a>Przełączanie między kontrolkami okna dialogowego i kodem
 
-W aplikacjach MFC można kliknąć dwukrotnie na formantów okna dialogowego, aby przejść do swój kod procedury obsługi lub szybko utworzyć szkieletu funkcje obsługi.
+W aplikacjach MFC można dwukrotnie kliknąć kontrolki okna dialogowego, aby przejść do kodu obsługi lub szybko utworzyć funkcje procedury obsługi.
 
-Dzięki nim wybrany jakiś formant, wybierz **ControlEvents** przycisk lub **wiadomości** znajdujący się w [okno właściwości](/visualstudio/ide/reference/properties-window) Aby wyświetlić pełną listę Windows komunikaty i zdarzenia dostępne dla wybranego elementu. Wybierz z listy, aby utworzyć lub edytować funkcje programu obsługi.
+Po wybraniu kontrolki wybierz przycisk **ControlEvents** lub przycisk **komunikaty** w [okno właściwości](/visualstudio/ide/reference/properties-window) , aby wyświetlić pełną listę komunikatów i zdarzeń systemu Windows dostępnych dla wybranego elementu. Wybierz z listy, aby utworzyć lub edytować funkcje obsługi.
 
-- Aby przejść do kodu z **Edytor okien dialogowych**, kliknij dwukrotnie ikonę kontrolki w oknie dialogowym, aby przejść do deklaracji pod kątem komunikat ostatnio zaimplementowano funkcji obsługi.
+- Aby przejść do kodu z **edytora okien dialogowych**, kliknij dwukrotnie formant w oknie dialogowym, aby przejść do deklaracji najbardziej ostatnio zaimplementowanej funkcji obsługi komunikatów.
 
-   Dla oparty na bibliotece ATL klasy okien dialogowych możesz zawsze przejść do definicji konstruktora.
+   Dla klas okien dialogowych opartych na ATL, zawsze przeskakuje do definicji konstruktora.
 
-- Aby wyświetlić zdarzenia dla kontrolki z wybraniu formantu wybierz **ControlEvents** znajdujący się w **właściwości** okna.
+- Aby wyświetlić zdarzenia dla kontrolki, z wybraną kontrolką, wybierz przycisk **ControlEvents** w oknie **Właściwości** .
 
-   Gdy jeden formant ma fokus w oknie dialogowym, można kliknąć prawym przyciskiem myszy i wybrać **dodać program obsługi zdarzeń**. Dzięki temu można określić klasę, do którego jest dodawany program obsługi. Aby uzyskać więcej informacji, zobacz [Dodawanie obsługi zdarzeń](../ide/adding-an-event-handler-visual-cpp.md).
+   Gdy pojedynczy formant ma fokus w oknie dialogowym, możesz kliknąć prawym przyciskiem myszy i wybrać polecenie **Dodaj obsługę zdarzeń**. Pozwala to określić klasę, do której zostanie dodana procedura obsługi. Aby uzyskać więcej informacji, zobacz [Dodawanie programu obsługi zdarzeń](../ide/adding-an-event-handler-visual-cpp.md).
 
    > [!NOTE]
-   > Wybieranie **ControlEvents** przycisku, gdy okno dialogowe ma fokus przedstawia listę wszystkich kontrolek w oknie dialogowym, które można następnie rozszerzyć do zdarzeń dla poszczególnych formantów edycji.
+   > Wybranie przycisku **ControlEvents** , gdy okno dialogowe ma fokus, uwidacznia listę wszystkich kontrolek w oknie dialogowym, które następnie można rozwinąć, aby edytować zdarzenia dla poszczególnych kontrolek.
 
-- Aby wyświetlić wiadomości dla okna dialogowego za pomocą okna dialogowego z wybraniu wybierz **wiadomości** znajdujący się w **właściwości** okna.
+- Aby wyświetlić komunikaty dla okna dialogowego, z wybranym oknem dialogowym, w oknie **Właściwości** wybierz przycisk **komunikaty** .
 
 ## <a name="accelerator-keys"></a>Klawisze skrótów
 
-Poniżej przedstawiono domyślną klawiszy skrótów dla **Edytor okien dialogowych** poleceń.  
+Poniżej znajdują się domyślne klawisze skrótów dla poleceń **edytora okien dialogowych** .  
 
-|Polecenie|klucze|Opis|
+|Polecenie|Ponownie|Opis|
 |-------------|----------|-----------------|
-|Format.AlignBottoms|**CTRL** + **Shift** + **strzałkę w dół**|Wyrównuje dolną krawędzią zaznaczonych formantów z formantu dominującego.|
-|Format.AlignCenters|**Shift** + **F9**|Wyrównuje centra pionowe zaznaczonych formantów z formantu dominującego.|
-|Format.AlignLefts|**CTRL** + **Shift** + **Strzałka w lewo**|Wyrównuje lewe krawędzie zaznaczonych formantów z formantu dominującego.|
-|Format.AlignMiddles|**F9**|Wyrównuje Centra poziome z wybranych kontrolek za pomocą formantu dominującego.|
-|Format.AlignRights|**CTRL** + **Shift** + **Strzałka w prawo**|Wyrównuje prawe krawędzie zaznaczonych formantów z formantu dominującego.|
-|Format.AlignTops|**CTRL** + **Shift** + **Strzałka w górę**|Wyrównuje górne krawędzie zaznaczonych formantów z formantu dominującego.|
-|Format.ButtonBottom|**Ctrl** + **B**|Powoduje umieszczenie wybranego przyciski wzdłuż dolnej środek okno dialogowe.|
-|Format.ButtonRight|**Ctrl** + **R**|Przełącza wybranego przycisków w prawym górnym rogu okna dialogowego.|
-|Format.CenterHorizontal|**Ctrl** + **Shift** + **F9**|Centra kontrolki w poziomie w oknie dialogowym.|
-|Format.CenterVertical|**CTRL** + **F9**|Centra kontrolki w pionie w oknie dialogowym.|
-|Format.CheckMnemonics|**Ctrl** + **M**|Sprawdza unikatowość klawiszy skrótu.|
-|Format.SizeToContent|**SHIFT** + **F7**|Zmienia rozmiar wybranych kontrolkach w celu dopasowania do tekstu transkrypcji.|
-|Format.SpaceAcross|**ALT** + **Strzałka w lewo**|Równomiernie spacje wybranych kontrolek w poziomie.|
-|Format.SpaceDown|**ALT** + **strzałkę w dół**|Równomierne rozmieszczenie w pionie wybrane formanty.|
+|Format.AlignBottoms|**Ctrl** + **SHIFT** + **Strzałka w dół**|Wyrównuje dolne krawędzie zaznaczonych kontrolek z kontrolką dominującą.|
+|Format.AlignCenters|**Shift** + **F9**|Wyrównuje Pionowe centra zaznaczonych kontrolek z kontrolką dominującą.|
+|Format.AlignLefts|**Ctrl** + **SHIFT** + **Strzałka w lewo**|Wyrównuje Lewe krawędzie zaznaczonych kontrolek z kontrolką dominującą.|
+|Format.AlignMiddles|**F9**|Wyrównuje poziome centra wybranych kontrolek z kontrolką dominującą.|
+|Format.AlignRights|**Ctrl** + **SHIFT** + **Strzałka w prawo**|Wyrównuje prawej krawędzi zaznaczonych kontrolek z kontrolką dominującą.|
+|Format.AlignTops|**Ctrl** + **SHIFT** + **Strzałka w górę**|Wyrównuje górne krawędzie zaznaczonych kontrolek z kontrolką dominującą.|
+|Format.ButtonBottom|**Ctrl** + **B**|Umieszcza wybrane przyciski wzdłuż środka okna dialogowego.|
+|Format.ButtonRight|**Ctrl** + **R**|Umieszcza wybrane przyciski w prawym górnym rogu okna dialogowego.|
+|Format.CenterHorizontal|**Ctrl** + **SHIFT** + **F9**|Ustawia poziomy formantów w poziomie okna dialogowego.|
+|Format.CenterVertical|**Ctrl** + **F9**|Ustawia kontrolki w pionie wewnątrz okna dialogowego.|
+|Format.CheckMnemonics|**Ctrl** + **M**|Sprawdza unikatowość symboli.|
+|Format. SizeToContent|**Shift** + **F7**|Zmienia rozmiar zaznaczonych kontrolek w celu dopasowania do tekstu podpisu.|
+|Format.SpaceAcross|**Alt** + **Strzałka w lewo**|Równo zaznaczaj zaznaczone kontrolki w poziomie.|
+|Format.SpaceDown|**Alt**@no__t — 1**Strzałka w dół**|Równo zaznaczaj zaznaczone kontrolki w pionie.|
 |Format.TabOrder|**Ctrl** + **D**|Ustawia kolejność formantów w oknie dialogowym.|
-|Format.TestDialog|**CTRL** + **T**|Uruchamia okno dialogowe, aby przetestować wygląd i zachowanie.|
-|Format.ToggleGuides|**Ctrl** + **G**|Przełączanie między nie siatki, wskazówek i siatki do okna dialogowego edycji.|
+|Format.TestDialog|**Ctrl** + **t**|Uruchamia okno dialogowe, aby przetestować wygląd i zachowanie.|
+|Format.ToggleGuides|**Ctrl** + **G**|Przełączanie między nie siatką, wskazówkami i siatką w celu edytowania okna dialogowego.|
 
-- Aby zmienić klawisze skrótów, przejdź do menu **narzędzia** > **opcje**i wybierz polecenie **klawiatury** w obszarze **środowiska** folderu.
+- Aby zmienić klawisze skrótów, przejdź do menu **narzędzia** > **Opcje**, a następnie wybierz pozycję **Klawiatura** w folderze **Environment (środowisko** ).
 
-   Aby uzyskać więcej informacji, zobacz [określenie i dostosowywanie skrótów klawiaturowych](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
+   Aby uzyskać więcej informacji, zobacz [Identyfikowanie i Dostosowywanie skrótów klawiaturowych](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 
-- Aby zmienić swoje ustawienia, przejdź do menu **narzędzia** > **Import i eksport ustawień**.
+- Aby zmienić ustawienia, przejdź do menu **Narzędzia**,  > **Importowanie i eksportowanie ustawień**.
 
-   Dostępne opcje w oknach dialogowych i nazwy i lokalizacje poleceń menu, zostanie wyświetlony, mogą się różnić od opisanych w **pomocy** w zależności od ustawień aktywnych lub wersji.  Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
+   Opcje dostępne w oknach dialogowych oraz nazwy i lokalizacje poleceń menu, które są widoczne, mogą się różnić od tego, co opisano w **pomocy** , w zależności od ustawień aktywnych lub wydania.  Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
 ## <a name="requirements"></a>Wymagania
 

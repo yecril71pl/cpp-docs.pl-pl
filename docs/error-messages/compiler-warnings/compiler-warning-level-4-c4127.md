@@ -1,31 +1,31 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4127
-ms.date: 09/13/2018
+title: Ostrzeżenie kompilatora (poziom 4) C4127
+ms.date: 10/16/2019
 f1_keywords:
 - C4127
 helpviewer_keywords:
 - C4127
 ms.assetid: f59ded9e-5227-45bd-ac43-2aa861581363
-ms.openlocfilehash: 7f1e23d15d8daa126987278611cb5a85a5a36fc9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bef825f546573b878c415c385e1a2a2286e08db4
+ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401316"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444907"
 ---
-# <a name="compiler-warning-level-4-c4127"></a>Kompilator ostrzeżenie (poziom 4) C4127
+# <a name="compiler-warning-level-4-c4127"></a>Ostrzeżenie kompilatora (poziom 4) C4127
 
 > wyrażenie warunkowe jest stałą
 
 ## <a name="remarks"></a>Uwagi
 
-Wyrażenie kontrolujące **Jeśli** instrukcji lub **podczas** pętli, daje w wyniku stałej. Ze względu na ich wspólne użycie idiomatyczną, począwszy od programu Visual Studio 2015 update 3, stałe prosta, taką jak 1 lub **true** nie wyzwalają ostrzeżenie, chyba że są one wynik operacji w wyrażeniu.
+Wyrażenie kontrolne instrukcji **if** lub **while** jest oceniane jako stała. Ze względu na typowe użycie idiomatyczne, zaczynając od programu Visual Studio 2015 Update 3, proste stałe, takie jak 1 lub **true** , nie wyzwalają ostrzeżenia, chyba że są wynikiem operacji w wyrażeniu.
 
-Jeśli wyrażenie kontrolujące **podczas** pętli jest stałą, ponieważ pętli kończy działanie w środku, rozważ zastąpienie **podczas** pętli z **dla** pętli. Można pominąć inicjowanie, test zakończenia i pętli z przyrostem **dla** pętli, która powoduje, że pętla nieskończony, podobnie jak `while(1)`, i może wyjście z pętli z treści **dla** Instrukcja.
+Jeśli wyrażenie sterujące pętli **while** jest stałą, ponieważ pętla kończy się w środku, rozważ zastępowanie pętli **while** pętlą **for** . Można pominąć inicjalizację, test zakończenia i przyrost pętli pętli **for** , co powoduje nieskończoność pętli, podobnie jak `while(1)`, i można opuścić pętlę z treści instrukcji **for** .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje dwa sposoby C4127 jest generowany i przedstawia sposób użycia dla pętli uniknąć ostrzeżenia:
+Poniższy przykład przedstawia dwa sposoby C4127 jest generowany i pokazuje, jak używać pętli for, aby uniknąć ostrzeżenia:
 
 ```cpp
 // C4127.cpp
@@ -41,5 +41,34 @@ int main() {
       printf("test\n");
       break;
    }
+}
+```
+
+To ostrzeżenie można również wygenerować, gdy w wyrażeniu warunkowym jest używana stała czasu kompilacji:
+
+
+```cpp
+#include <string>
+
+using namespace std;
+
+template<size_t S, class T>
+void MyFunc()
+{
+   if (sizeof(T) >= S) // C4127. "Consider using 'if constexpr' statement instead"
+   {
+   }
+}
+
+class Foo
+{
+   int i;
+   string s;
+};
+
+int main()
+{
+   Foo f;
+   MyFunc<4, Foo>();
 }
 ```

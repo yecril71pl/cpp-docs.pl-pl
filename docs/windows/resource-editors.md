@@ -1,5 +1,5 @@
 ---
-title: Edytory zasobów (C++)
+title: Edytory zasobówC++()
 ms.date: 02/14/2019
 f1_keywords:
 - vs.editors.resource
@@ -21,106 +21,106 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 850d4b72ddb45551528526cd9e02345aee74d751
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: 893ddf3b4d030384572baf77647e09d4d2a9d719
+ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344228"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444995"
 ---
-# <a name="resource-editors-c"></a>Edytory zasobów (C++)
+# <a name="resource-editors-c"></a>Edytory zasobówC++()
 
-Edytor zasobów to specjalne środowisko służące do tworzenia lub modyfikowania zasobów, które są zawarte w projekcie programu Visual Studio. Edytory zasobów programu Visual Studio udostępnianie techniki i interfejsy, które ułatwiają tworzenie i modyfikowanie zasobów aplikacji, szybkie i łatwe. Edytory zasobów umożliwia wyświetlanie i edytowanie zasobów w odpowiednich zasobach w edytorze i w wersji zapoznawczej.
+Edytor zasobów to wyspecjalizowane środowisko do tworzenia lub modyfikowania zasobów uwzględnionych w projekcie programu Visual Studio. Edytory zasobów programu Visual Studio udostępniają techniki i interfejsy ułatwiające szybkie i łatwe tworzenie i modyfikowanie zasobów aplikacji. Edytory zasobów umożliwiają wyświetlanie i edytowanie zasobów w odpowiednim edytorze i Podgląd zasobów.
 
-Odpowiedniego edytora jest otwierany automatycznie podczas tworzenia lub otwierania zasobu.
+Odpowiedni edytor zostanie otwarty automatycznie podczas tworzenia lub otwierania zasobu.
 
 > [!NOTE]
-> Ponieważ projektów zarządzanych plików skryptu zasobu nie jest używany, należy otworzyć swoich zasobów przed **Eksploratora rozwiązań**. Możesz użyć [edytora obrazów](../windows/image-editor-for-icons.md) i [Edytor plików binarnych](binary-editor.md) do pracy z plikami zasobów w projektach zarządzanych. Wszelkie zarządzane zasoby, które chcesz edytować, muszą być powiązanymi zasobami. Edytory zasobów programu Visual Studio nie obsługują edycji zasobów osadzonych.
+> Ponieważ projekty zarządzane nie używają plików skryptów zasobów, należy otworzyć zasoby z **Eksplorator rozwiązań**. Możesz użyć [edytora obrazów](../windows/image-editor-for-icons.md) i [edytora binarnego](binary-editor.md) do pracy z plikami zasobów w projektach zarządzanych. Wszelkie zarządzane zasoby, które chcesz edytować, muszą być powiązanymi zasobami. Edytory zasobów programu Visual Studio nie obsługują edycji zasobów osadzonych.
 
-|Użyj...|Aby edytować...|
+|Korzystanie z...|Aby edytować...|
 |----------------|----------------|
-|[Edytor klawiszy skrótów](../windows/accelerator-editor.md)|Tabele akceleratora w programie Visual Studio C++ projektów.|
-|[Edytor plików binarnych](binary-editor.md)|Dane binarne informacje i zasoby niestandardowe w projektach języka Visual C++, Visual Basic lub Visual C#.|
-|[Edytor okien dialogowych](../windows/dialog-editor.md)|Okna dialogowe w programie Visual Studio C++ projektów.|
-|[Edytor obrazów](../windows/image-editor-for-icons.md)|Mapy bitowe, ikony, kursorów i inne pliki obrazów w projektach języka Visual C++, Visual Basic lub Visual C#.|
-|[Edytor menu](../windows/menu-editor.md)|Zasobów menu programu Visual Studio C++ projektów.|
-|[Edytor Ribbon](../mfc/ribbon-designer-mfc.md)|Zasoby wstążki w projektach MFC.|
-|[Edytor ciągów](../windows/string-editor.md)|Ciąg tabel w programie Visual Studio C++ projektów.|
-|[Edytor paska narzędzi](../windows/toolbar-editor.md)|Zasoby paska narzędzi w programie Visual Studio C++ projektów. **Edytor paska narzędzi** jest częścią **edytora obrazów**.|
-|[Edytor informacji o wersji](../windows/version-information-editor.md)|Informacje o wersji w programie Visual Studio C++ projektów.|
+|[Edytor klawiszy skrótów](../windows/accelerator-editor.md)|Tabele akceleratora w projektach C++ programu Visual Studio.|
+|[Edytor plików binarnych](binary-editor.md)|Informacje o danych binarnych i zasoby niestandardowe C++w wizualizacjach, Visual Basic C# lub projektach wizualnych.|
+|[Edytor okien dialogowych](../windows/dialog-editor.md)|Okna dialogowe w projektach programu C++ Visual Studio.|
+|[Edytor obrazów](../windows/image-editor-for-icons.md)|Mapy bitowe, ikony, kursory i inne pliki obrazów w wizualizacji C++, Visual Basic lub Visual C# .|
+|[Edytor menu](../windows/menu-editor.md)|Zasoby menu w projektach programu C++ Visual Studio.|
+|[Edytor wstążki](../mfc/ribbon-designer-mfc.md)|Zasoby wstążki w projektach MFC.|
+|[Edytor ciągów](../windows/string-editor.md)|Tabele ciągów w projektach programu C++ Visual Studio.|
+|[Edytor paska narzędzi](../windows/toolbar-editor.md)|Zasoby paska narzędzi w projektach C++ programu Visual Studio. **Edytor paska narzędzi** jest częścią **edytora obrazu**.|
+|[Edytor informacji o wersji](../windows/version-information-editor.md)|Informacje o wersji w projektach C++ programu Visual Studio.|
 
 > [!NOTE]
-> Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [jak: Tworzenie zasobów](../windows/how-to-create-a-resource-script-file.md).
+> Jeśli projekt nie zawiera jeszcze pliku. RC, zobacz [How to: Create Resources](../windows/how-to-create-a-resource-script-file.md).
 
 ## <a name="view-and-edit-resources"></a>Wyświetlanie i edytowanie zasobów
 
-Każdy typ zasobu ma edytorze zasobów specyficznych dla typu zasobu. Można zmienić kolejność, zmiany rozmiaru, dodawać formanty i funkcje lub inny sposób modyfikować aspektów zasobu za pomocą edytora skojarzone. Można również edytować zasobu w [format tekstu](../windows/how-to-open-a-resource-script-file-in-text-format.md) i [format binarny](../windows/opening-a-resource-for-binary-editing.md).
+Każdy typ zasobu ma Edytor zasobów specyficzny dla tego typu zasobu. Można zmieniać rozmieszczenie, zmieniać rozmiar, dodawać kontrolki i funkcje albo modyfikować aspekty zasobu przy użyciu skojarzonego z nim edytora. Możesz również edytować zasób w [formacie tekstowym](../windows/how-to-open-a-resource-script-file-in-text-format.md) i [formacie binarnym](../windows/opening-a-resource-for-binary-editing.md).
 
-Niektóre typy zasobów są pojedyncze pliki, które mogą być importowane i używane na różne sposoby; obejmują one map bitowych, ikon, kursorów, paski narzędzi i pliki html. Takie zasoby mają nazwy plików i [identyfikatory zasobów](../windows/symbols-resource-identifiers.md). Inne, takie jak okna dialogowe, menu i tabele ciągów w projektach systemu Win32, istnieje tylko jako część pliku skryptu (.rc) zasobów lub zasobu, plik szablonu (.rct).
+Niektóre typy zasobów są pojedynczymi plikami, które mogą być importowane i używane na różne sposoby. obejmują one mapy bitowe, ikony, kursory, paski narzędzi i pliki HTML. Takie zasoby mają nazwy plików i [identyfikatory zasobów](../windows/symbols-resource-identifiers.md). Inne, takie jak okna dialogowe, menu i tabele ciągów w projektach Win32, istnieją tylko jako część pliku skryptu zasobu (. RC) lub plik szablonu zasobów (. rct).
 
-Zasoby można również edytować poza projektem, bez konieczności otwarty projekt, zobacz [jak: Tworzenie zasobów](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
+Zasoby mogą być również edytowane poza projektem bez otwartego projektu, zobacz [How to: Create Resources](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
 
 > [!NOTE]
-> Można modyfikować właściwości zasobu za pomocą **właściwości** okna.
+> Właściwości zasobu można zmodyfikować przy użyciu okna **Właściwości** .
 
-- Aby edytować właściwości zasobu w [widok zasobów](how-to-create-a-resource-script-file.md#create-resources), kliknij prawym przyciskiem myszy zasób, o których chcesz edytować, a następnie wybierz **właściwości**.  Następnie w [okno właściwości](/visualstudio/ide/reference/properties-window), zmiana właściwości zasobu.
+- Aby edytować właściwości zasobu, w [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources)kliknij prawym przyciskiem myszy zasób, który chcesz edytować, a następnie wybierz polecenie **Właściwości**.  Następnie w [okno właściwości](/visualstudio/ide/reference/properties-window)zmienić właściwości zasobu.
 
-- Aby cofnąć zmiany wprowadzone do właściwości zasobu, upewnij się, zasób ma fokus w **widok zasobów** i wybierz polecenie **Cofnij** z **Edytuj** menu.
+- Aby cofnąć zmiany wprowadzone we właściwościach zasobu, upewnij się, że zasób ma fokus w **Widok zasobów** i wybierz polecenie **Cofnij** z menu **Edycja** .
 
 ### <a name="win32-resources"></a>Zasoby Win32
 
-Dostęp zasobów Win32 w [widok zasobów](how-to-create-a-resource-script-file.md#create-resources) okienka.
+Dostęp do zasobów Win32 można uzyskać w okienku [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources) .
 
 #### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>Aby wyświetlić zasób Win32 w edytorze zasobów
 
-1. Przejdź do menu **widoku** > **widok zasobów**.
+1. Przejdź do **widoku**menu  > **innych** **Widok zasobów**Windows  > .
 
-1. Jeśli **widok zasobów** okno nie jest oknem najważniejsze wybierz **widok zasobów** kartę, aby przełączyć go do góry.
+1. Jeśli okno **Widok zasobów** nie jest oknem najwyższego poziomu, wybierz kartę **Widok zasobów** , aby ją wyświetlić.
 
-1. Z **widok zasobów**, rozwiń folder dla projektu, który zawiera zasoby, które chcesz wyświetlić. Na przykład, jeśli chcesz wyświetlić zasobu okna dialogowego, rozwiń **okna dialogowego** folderu.
+1. W **Widok zasobów**rozwiń folder dla projektu zawierającego zasoby, które chcesz wyświetlić. Jeśli na przykład chcesz wyświetlić zasób okna dialogowego, rozwiń folder **okna dialogowego** .
 
 1. Kliknij dwukrotnie zasób, na przykład **IDD_ABOUTBOX**.
 
-   Zasób zostanie otwarty w edytorze odpowiednie. Na przykład dla zasobów okna dialogowego, zasobu otwiera wewnątrz **Edytor okien dialogowych**.
+   Zasób zostanie otwarty w odpowiednim edytorze. Na przykład dla zasobów okna dialogowego zasób zostanie otwarty w **edytorze okien dialogowych**.
 
 #### <a name="to-delete-an-existing-win32-resource"></a>Aby usunąć istniejący zasób Win32
 
-1. W **widok zasobów**, rozwiń węzeł dla typu zasobu.
+1. W **Widok zasobów**rozwiń węzeł dla typu zasobu.
 
-1. Kliknij prawym przyciskiem myszy do zasobu, które chcesz usunąć, a następnie wybierz **Usuń**.
+1. Kliknij prawym przyciskiem myszy zasób, który chcesz usunąć, a następnie wybierz polecenie **Usuń**.
 
 > [!TIP]
-> Tej metody można użyć również, gdy plik .rc jest otwarty w oknie dokumentu poza projektem.
+> Tej metody można również użyć, gdy plik. RC jest otwarty w oknie dokumentu poza projektem.
 
-### <a name="managed-project-resources"></a>Zasoby zarządzanego projektu
+### <a name="managed-project-resources"></a>Zarządzane zasoby projektu
 
-Ponieważ projektów zarządzanych, nie używaj plików skryptu zasobu, należy otworzyć swoich zasobów przed **Eksploratora rozwiązań**. Użyj [edytora obrazów](../windows/image-editor-for-icons.md) i [Edytor plików binarnych](binary-editor.md) do pracy z plikami zasobów w projektach zarządzanych. Zarządzane zasoby, które chcesz edytować, muszą być powiązanymi zasobami i edytory zasobów programu Visual Studio nie obsługują edycji zasobów osadzonych.
+Ponieważ projekty zarządzane nie używają plików skryptów zasobów, należy otworzyć zasoby z **Eksplorator rozwiązań**. Użyj [edytora obrazów](../windows/image-editor-for-icons.md) i [edytora binarnego](binary-editor.md) do pracy z plikami zasobów w projektach zarządzanych. Wszystkie zarządzane zasoby, które chcesz edytować, muszą być zasobami połączonymi i edytorami zasobów programu Visual Studio nie obsługują edycji zasobów osadzonych.
 
-- Aby wyświetlić zasobów zarządzanych w edytorze zasobów, w **Eksploratora rozwiązań**, kliknij dwukrotnie zasób, na przykład *Bitmap1.bmp*, i zasobu, który zostanie otwarty w edytorze odpowiednie.
+- Aby wyświetlić zasób zarządzany w edytorze zasobów, w **Eksplorator rozwiązań**kliknij dwukrotnie zasób, na przykład *BITMAP1. bmp*, a zasób zostanie otwarty w odpowiednim edytorze.
 
-- Do usuwania istniejących zasobów zarządzanych w **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy zasób, o których chcesz usunąć, a następnie wybierz **Usuń**.
+- Aby usunąć istniejący zasób zarządzany, w **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy zasób, który chcesz usunąć, a następnie wybierz polecenie **Usuń**.
 
-## <a name="preview-resources"></a>Zasoby (wersja zapoznawcza)
+## <a name="preview-resources"></a>Podgląd zasobów
 
-Zasobów, aby umożliwić wyświetlanie zasobów graficznych bez ich otwierania w wersji zapoznawczej. Podgląd jest również przydatne dla plików wykonywalnych po została skompilowana, ponieważ zmiany numery identyfikatorów zasobów. Ponieważ te identyfikatory numeryczne często nie zapewniają wystarczających informacji, wyświetlanie podglądu zasobów pomaga szybko określić ich.
+Wyświetl podgląd zasobów, aby umożliwić wyświetlanie zasobów graficznych bez ich otwierania. Podgląd jest również przydatny dla plików wykonywalnych po ich skompilowaniu, ponieważ identyfikatory zasobów zmieniają się na liczby. Ponieważ te identyfikatory liczbowe często nie zapewniają wystarczającej ilości informacji, Podgląd zasobów ułatwia ich szybkie identyfikowanie.
 
-Następujące typy zasobów zapewniają układ wizualizacji (wersja zapoznawcza): Mapa bitowa, okno dialogowe, ikony, Menu, kursor, pasek narzędzi
+Następujące typy zasobów udostępniają podgląd układu wizualizacji: Mapa bitowa, okno dialogowe, ikona, menu, kursor, pasek narzędzi
 
-Poniższe zasoby nie przedstawiają wyświetlania podglądu: Akcelerator, informacje o wersji manifestu, Tabela ciągów
+Następujące zasoby nie udostępniają wizualizacji Visual Preview: akcelerator, manifest, tabela ciągów, informacje o wersji
 
 > [!NOTE]
-> Aby wyświetlić podgląd zasobów wymaga systemu Win32.
+> Aby uzyskać podgląd zasobów, wymagany jest system Win32.
 
 ### <a name="to-preview-resources"></a>Aby wyświetlić podgląd zasobów
 
-1. W [widok zasobów](how-to-create-a-resource-script-file.md#create-resources) lub okno dokumentu, wybierz zasób, na przykład **IDD_ABOUTBOX**.
+1. W [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources) lub oknie dokumentu wybierz swój zasób, na przykład **IDD_ABOUTBOX**.
 
-1. W [okno właściwości](/visualstudio/ide/reference/properties-window), wybierz opcję **stron właściwości** przycisku.
+1. W [okno właściwości](/visualstudio/ide/reference/properties-window)wybierz przycisk **strony właściwości** .
 
    > [!TIP]
-   > Użyj skrótu, przejdź do menu **widoku** > **stron właściwości**.
+   > Użyj skrótu, przejdź do **widoku**menu,  > **strony właściwości**.
 
-   **Właściwość** zostanie otwarta strona dla zasobu, za pomocą wyświetlania podglądu tego zasobu. Możesz użyć **się** i **dół** klawiszy strzałek, aby przejść w drzewie w kontrolce **widok zasobów** lub okno dokumentu. **Właściwość** strona będzie pozostają otwarte i Pokaż dowolnego zasobu, który ma fokus i można je przeglądać.
+   Zostanie otwarta strona **Właściwości** zasobu wyświetlająca podgląd tego zasobu. Możesz użyć klawiszy strzałek w **górę** i **w dół** , aby nawigować po formancie drzewa w **Widok zasobów** lub oknie dokumentu. Na stronie **Właściwości** pozostanie otwarta i zostanie wyświetlony dowolny zasób, który ma fokus i będzie można go wyświetlić.
 
 ## <a name="requirements"></a>Wymagania
 
