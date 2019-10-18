@@ -1,26 +1,30 @@
 ---
-title: Konfigurowanie narzędzia CMake debugowania sesji w programie Visual Studio
+title: Konfigurowanie sesji debugowania CMake w programie Visual Studio
 ms.date: 03/21/2019
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 9899f99994935ec419fff400670644b7d78a190a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41f53c0c3ea46a8a1aa11215968aaee6c13c2dea
+ms.sourcegitcommit: e33126222c418daf977533ea9e2819d99e0d7b8d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195531"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72534102"
 ---
-# <a name="configure-cmake-debugging-sessions"></a>Konfigurowanie narzędzia CMake sesjami debugowania
+# <a name="configure-cmake-debugging-sessions"></a>Konfigurowanie sesji debugowania narzędzia CMake
 
-Wszystkie elementy docelowe z pliku wykonywalnego narzędzia CMake są wyświetlane w **element startowy** liście rozwijanej **ogólne** paska narzędzi. Aby rozpocząć sesję debugowania, po prostu zaznacz jedną i uruchomić debugera.
+Wszystkie elementy wykonywalne CMake są wyświetlane na liście rozwijanej **elementu startowego** na pasku narzędzi **Ogólne** . Aby rozpocząć sesję debugowania, po prostu wybierz jeden z nich i uruchom debuger.
 
-![Narzędzie CMake uruchamiania elementu z listy rozwijanej](media/cmake-startup-item-dropdown.png "CMake uruchamiania elementu z listy rozwijanej")
+![Lista rozwijana elementu startowego CMake](media/cmake-startup-item-dropdown.png "Lista rozwijana elementu startowego CMake")
 
-Można również uruchomić sesję debugowania z menu Narzędzia CMake.
+Możesz również uruchomić sesję debugowania z poziomu Eksplorator rozwiązań. Najpierw przejdź do **widoku CMAKE targets** w oknie **Eksplorator rozwiązań** .
 
-## <a name="customize-debugger-settings"></a>Dostosowywanie ustawień debugera
+![Przycisk Widok elementów docelowych CMake](media/cmake-targets-view.png  "Element menu Widok elementów docelowych CMake")
 
-Aby dostosować ustawienia debugera dla dowolnego pliku wykonywalnego docelowych narzędzia CMake w projekcie, kliknij prawym przyciskiem myszy w określonym pliku CMakeLists.txt, a następnie wybierz **ustawienia debugowania i uruchamiania**. (Lub wybierz element docelowy w **widok elementów docelowych** w **Eksploratora rozwiązań**.) Po wybraniu docelowych narzędzia CMake w podmenu plik o nazwie **launch.vs.json** zostanie utworzony. Ten plik jest wstępnie wypełniane przy użyciu informacji o docelowej narzędzia CMake, wybrana przez Ciebie i pozwala określić dodatkowe parametry, takie jak argumenty programu lub typ debugera. Aby odwołać się dowolnym kluczu w **CMakeSettings.json** plików, należy poprzedzić go `cmake.` w **pliku launch.vs.json**. W poniższym przykładzie przedstawiono prosty **launch.vs.json** pliku, który pobiera wartość `remoteCopySources` w **CMakeSettings.json** pliku dla aktualnie wybranej konfiguracji:
+Następnie kliknij prawym przyciskiem myszy dowolny plik wykonywalny i wybierz polecenie **Debuguj** lub **Debuguj i Uruchom ustawienia**. **Debugowanie** automatycznie rozpocznie debugowanie wybranego elementu docelowego na podstawie aktywnej konfiguracji. **Ustawienia debugowania i uruchamiania** otwierają plik *Launch. vs. JSON* i dodaje nową konfigurację debugowania dla wybranego celu.
+
+## <a name="customize-debugger-settings"></a>Dostosuj ustawienia debugera
+
+Aby dostosować ustawienia debugera dla dowolnego pliku wykonywalnego CMake w projekcie, kliknij prawym przyciskiem myszy określony plik CMakeLists. txt i wybierz polecenie **Ustawienia debugowania i uruchamiania**. (Lub wybierz element docelowy w **widoku targets** w **Eksplorator rozwiązań**). Po wybraniu elementu docelowego CMake w podmenu zostanie utworzony plik o nazwie **Launch. vs. JSON** . Ten plik jest wstępnie wypełniony informacjami o wybranym miejscu docelowym CMake i umożliwia określenie dodatkowych parametrów, takich jak argumenty programu lub typ debugera. Aby odwołać się do dowolnego klucza w pliku **pliku cmakesettings. JSON** , należy poprzedzić go `cmake.` w elemencie **Launch. vs. JSON**. W poniższym przykładzie przedstawiono prosty plik **Launch. vs. JSON** , który ściąga wartość klucza `remoteCopySources` w pliku **pliku cmakesettings. JSON** dla aktualnie wybranej konfiguracji:
 
 ```json
 {
@@ -38,11 +42,11 @@ Aby dostosować ustawienia debugera dla dowolnego pliku wykonywalnego docelowych
 }
 ```
 
-Zaraz po zapisaniu **launch.vs.json** plik, zostanie utworzony wpis w **element startowy** lista rozwijana z nową nazwą. Edytując **launch.vs.json** pliku, można utworzyć dla dowolnej liczby elementów docelowych narzędzia CMake, takich jak wiele konfiguracji debugowania.
+Po zapisaniu pliku **Launch. vs. JSON** wpis zostanie utworzony na liście rozwijanej **elementu startowego** z nową nazwą. Edytując plik **Launch. vs. JSON** , można utworzyć dowolną liczbę konfiguracji debugowania, tak jak w przypadku dowolnej liczby elementów docelowych CMAKE.
 
-## <a name="support-for-cmakesettings-variables"></a>Obsługa zmiennych pliku cmakesettings na pozycji
+## <a name="support-for-cmakesettings-variables"></a>Obsługa zmiennych pliku cmakesettings
 
- **Launch.VS.JSON** obsługuje zmienne, które są zadeklarowane w **CMakeSettings.json** (patrz poniżej) i które mają zastosowanie do konfiguracji aktualnie wybrany. Także ma klucz o nazwie `currentDir`, który ustawia bieżący katalog uruchamiania aplikacji na potrzeby lokalnego projektu:
+ Plik **Start. vs. JSON** obsługuje zmienne, które są zadeklarowane w **pliku cmakesettings. JSON** (patrz poniżej) i które mają zastosowanie do aktualnie wybranej konfiguracji. Ma również klucz o nazwie `currentDir`, który ustawia bieżący katalog uruchamiania aplikacji dla projektu lokalnego:
 
 ```json
 {
@@ -54,13 +58,13 @@ Zaraz po zapisaniu **launch.vs.json** plik, zostanie utworzony wpis w **element 
 }
 ```
 
-Po uruchomieniu aplikacji, a wartość `currentDir` jest podobny do
+Po uruchomieniu aplikacji wartość `currentDir` jest coś podobnego do
 
 ```cmd
 C:\Users\satyan\7f14809a-2626-873e-952e-cdf038211175\
 ```
 
-Klucz "cwd" Ustawia bieżący katalog uruchamiania aplikacji na potrzeby zdalnego projektu. Wartością domyślną jest "${debugInfo.defaultWorkingDirectory}", która daje w wyniku 
+Klucz "cwd" ustawia bieżący katalog uruchamiania aplikacji dla projektu zdalnego. Wartością domyślną jest "$ {debugInfo. defaultWorkingDirectory}", której wynikiem jest 
 
 ```cmd
 /var/tmp/src/bfc6f7f4-4f0f-8b35-80d7-9198fa973fb9/Linux-Debug
@@ -68,10 +72,10 @@ Klucz "cwd" Ustawia bieżący katalog uruchamiania aplikacji na potrzeby zdalneg
 
 ## <a name="see-also"></a>Zobacz także
 
-[Projekty CMake w programie Visual Studio](cmake-projects-in-visual-studio.md)<br/>
+[CMake projekty w programie Visual Studio](cmake-projects-in-visual-studio.md)<br/>
 [Konfigurowanie projektu CMake systemu Linux](../linux/cmake-linux-project.md)<br/>
 [Nawiązywanie połączenia ze zdalnym komputerem z systemem Linux](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [Dostosowywanie ustawień kompilacji narzędzia CMake](customize-cmake-settings.md)<br/>
 [Konfigurowanie sesji debugowania narzędzia CMake](configure-cmake-debugging-sessions.md)<br/>
 [Wdrażanie, uruchamianie i debugowanie projektu systemu Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
-[Informacje o konfiguracji narzędzia CMake wstępnie zdefiniowane](cmake-predefined-configuration-reference.md)<br/>
+[CMake wstępnie zdefiniowanej konfiguracji](cmake-predefined-configuration-reference.md)<br/>
