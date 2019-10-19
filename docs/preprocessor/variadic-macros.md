@@ -1,16 +1,16 @@
 ---
 title: Makra wariadyczne
-ms.date: 08/29/2019
+ms.date: 10/17/2019
 helpviewer_keywords:
 - variadic macros [C++]
 - __VA_ARGS__ variadic macro specifier
 ms.assetid: 51e757dc-0134-4bb2-bb74-64ea5ad75134
-ms.openlocfilehash: 171ea797adc1e407a8b7ef0592508653f758df64
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: de4d3a7f03f613cb058e564664f01837df23aefb
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216520"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587883"
 ---
 # <a name="variadic-macros"></a>Makra wariadyczne
 
@@ -18,9 +18,9 @@ Makra wariadyczne są makrami podobnymi do funkcji, które zawierają zmienną l
 
 ## <a name="remarks"></a>Uwagi
 
-Aby można było używać makr wariadyczne, wielokropek może być określony jako ostatni argument formalny w definicji makra, a identyfikator `__VA_ARGS__` zastępczy może być używany w definicji w celu wstawienia dodatkowych argumentów.  `__VA_ARGS__`jest zastępowany przez wszystkie argumenty, które pasują do wielokropka, w tym przecinki między nimi.
+Aby można było używać makr wariadyczne, wielokropek może być określony jako ostatni argument formalny w definicji makra, a identyfikator zastępczy `__VA_ARGS__` może być używany w definicji w celu wstawienia dodatkowych argumentów.  `__VA_ARGS__` jest zastępowana przez wszystkie argumenty, które pasują do wielokropka, w tym przecinki między nimi.
 
-Standard C określa, że co najmniej jeden argument musi być przekazywać do wielokropka, aby upewnić się, że makro nie jest rozpoznawane jako wyrażenie z końcowym przecinkiem. Tradycyjna implementacja C++ firmy Microsoft pomija końcowy przecinek, jeśli żadne argumenty nie są przekazane do wielokropka.
+Standard C określa, że co najmniej jeden argument musi być przekazywać do wielokropka, aby upewnić się, że makro nie jest rozpoznawane jako wyrażenie z końcowym przecinkiem. Tradycyjna implementacja C++ firmy Microsoft pomija końcowy przecinek, jeśli żadne argumenty nie są przekazane do wielokropka. Po ustawieniu opcji kompilatora `/experimental:preprocessor` końcowy przecinek nie jest pomijany.
 
 ## <a name="example"></a>Przykład
 

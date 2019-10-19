@@ -20,34 +20,34 @@ helpviewer_keywords:
 - retrieving dialog box data [MFC]
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
 ms.openlocfilehash: 9a0199577ea46520c2eadc308812de8a1ce4b514
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "71685804"
 ---
 # <a name="dialog-data-exchange"></a>Wymiana danych w oknie dialogowym
 
-W przypadku korzystania z mechanizmu DDX należy ustawić początkowe wartości zmiennych składowych obiektu okna dialogowego, zazwyczaj w programie obsługi `OnInitDialog` lub w konstruktorze okien dialogowych. Bezpośrednio przed wyświetleniem okna dialogowego mechanizm DDX struktury przenosi wartości zmiennych Członkowskich do kontrolek w oknie dialogowym, gdzie są wyświetlane, gdy samo okno dialogowe pojawia się w odpowiedzi na `DoModal` lub `Create`. Domyślna implementacja `OnInitDialog` w `CDialog` wywołuje funkcję członkowską `UpdateData` klasy `CWnd` w celu zainicjowania kontrolek w oknie dialogowym.
+W przypadku korzystania z mechanizmu DDX należy ustawić początkowe wartości zmiennych składowych obiektu okna dialogowego, zazwyczaj w obsłudze `OnInitDialog` lub w konstruktorze okna dialogowego. Bezpośrednio przed wyświetleniem okna dialogowego mechanizm DDX struktury przenosi wartości zmiennych Członkowskich do kontrolek w oknie dialogowym, gdzie są wyświetlane, gdy samo okno dialogowe pojawia się w odpowiedzi na `DoModal` lub `Create`. Domyślna implementacja `OnInitDialog` w `CDialog` wywołuje funkcję elementu członkowskiego `UpdateData` klasy `CWnd` w celu zainicjowania kontrolek w oknie dialogowym.
 
 Ten sam mechanizm przenosi wartości z formantów do zmiennych składowych, gdy użytkownik kliknie przycisk OK (lub po każdym wywołaniu funkcji składowej `UpdateData` z argumentem **true**). Mechanizm walidacji danych okna dialogowego sprawdza poprawność wszystkich elementów danych, dla których określono reguły walidacji.
 
 Na poniższej ilustracji przedstawiono wymianę danych okna dialogowego.
 
-![Wymiana]danych okien dialogowych(../mfc/media/vc379d1.gif "okna dialogowego") Exchange <br/>
+![Wymiana danych okna dialogowego](../mfc/media/vc379d1.gif "Wymiana danych okna dialogowego") <br/>
 Wymiana danych w oknie dialogowym
 
-`UpdateData` działa w obu kierunkach, jak określono w parametrze **bool** przekazanym do niego. Aby przeprowadzić wymianę, `UpdateData` konfiguruje obiekt `CDataExchange` i wywołuje przesłonięcie klasy okna dialogowego `CDialog` funkcji składowej `DoDataExchange`. `DoDataExchange` przyjmuje argument typu `CDataExchange`. Obiekt `CDataExchange` przeszedł do `UpdateData` reprezentuje kontekst wymiany, definiując takie informacje jako kierunek wymiany.
+`UpdateData` działa w obu kierunkach, jak określono w parametrze **bool** przekazanym do niego. Aby przeprowadzić wymianę, `UpdateData` konfiguruje obiekt `CDataExchange` i wywołuje przesłonięcie klasy okna dialogowego `DoDataExchange` funkcji członkowskiej `CDialog`. `DoDataExchange` przyjmuje argument typu `CDataExchange`. Obiekt `CDataExchange` przeszedł do `UpdateData` reprezentuje kontekst wymiany, definiując takie informacje jako kierunek wymiany.
 
-Gdy użytkownik (lub Kreator kodu) przesłonić `DoDataExchange`, należy określić wywołanie jednej funkcji DDX na element członkowski danych (kontrolka). Każda funkcja DDX wie, jak wymieniać dane w obu kierunkach na podstawie kontekstu dostarczonego przez argument `CDataExchange` przekazany do `DoDataExchange` przez `UpdateData`.
+Gdy użytkownik (lub Kreator kodu) przesłoni `DoDataExchange`, należy określić wywołanie jednej funkcji DDX na element członkowski danych (kontrolka). Każda funkcja DDX wie, jak wymieniać dane w obu kierunkach na podstawie kontekstu dostarczonego przez argument `CDataExchange` przekazany do `DoDataExchange` przez `UpdateData`.
 
 MFC udostępnia wiele funkcji DDX dla różnych rodzajów wymiany. W poniższym przykładzie pokazano przesłonięcie `DoDataExchange`, w którym są wywoływane dwie funkcje DDX i jedna funkcja DDV:
 
 [!code-cpp[NVC_MFCControlLadenDialog#49](../mfc/codesnippet/cpp/dialog-data-exchange_1.cpp)]
 
-Linie `DDX_` i `DDV_` to Mapa danych. Wyświetlane przykładowe funkcje DDX i DDV są przeznaczone dla kontrolki pole wyboru i kontrolka pole edycji.
+@No__t_0 i `DDV_` wierszy są mapą danych. Wyświetlane przykładowe funkcje DDX i DDV są przeznaczone dla kontrolki pole wyboru i kontrolka pole edycji.
 
-Jeśli użytkownik anuluje modalne okno dialogowe, funkcja członkowska `OnCancel` kończy działanie okna dialogowego i `DoModal` zwraca wartość **IDCANCEL**. W takim przypadku żadne dane nie są wymieniane między oknem dialogowym a obiektem okna dialogowego.
+Jeśli użytkownik anuluje modalne okno dialogowe, funkcja elementu członkowskiego `OnCancel` kończy działanie okna dialogowego i `DoModal` zwróci wartość **IDCANCEL**. W takim przypadku żadne dane nie są wymieniane między oknem dialogowym a obiektem okna dialogowego.
 
 ## <a name="see-also"></a>Zobacz także
 

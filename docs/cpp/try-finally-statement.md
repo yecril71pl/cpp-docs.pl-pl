@@ -21,31 +21,31 @@ helpviewer_keywords:
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
 ms.openlocfilehash: c26b72f7c675a4130f38c515cf71ecc290328ccc
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "69498606"
 ---
 # <a name="try-finally-statement"></a>try-finally — instrukcja
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Następująca składnia opisuje instrukcję **try-finally** :
 
-> **\_\_spróbował**<br/>
+> **\_ \_try**<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;chroniony kod<br/>
+> &nbsp; &nbsp; &nbsp; kod &nbsp;//chroniony<br/>
 > }<br/>
-> **\_\_Ostateczny**<br/>
+> **\_ \_finally**<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;kod zakończenia<br/>
+> &nbsp; &nbsp; &nbsp; kod &nbsp;//zakończenia<br/>
 > }
 
 ## <a name="grammar"></a>Gramatyka
 
 *try-finally-Statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Instrukcja try złożonej *instrukcji*  **\_ \_"finally** "  **\_ \_**
+&nbsp; &nbsp; &nbsp; &nbsp; **\_ \_try** *złożonej instrukcji* **\_ 0finally** *instrukcji złożonej*
 
 Instrukcja **try-finally** to rozszerzenie firmy Microsoft do języków C i C++ , które umożliwiają aplikacjom docelowym wykonywanie kodu czyszczącego w przypadku przerwania wykonywania bloku kodu. Oczyszczanie składa się z takich zadań, jak cofanie alokacji pamięci, zamykanie plików i zwalnianie dojść do plików. Instrukcja **try-finally** jest szczególnie przydatna w przypadku procedur, które mają kilka miejsc, w których wystąpiło sprawdzenie błędu, który może spowodować przedwcześnie powrót z procedury.
 
@@ -66,15 +66,15 @@ Kontrolka osiągnie instrukcję **__try** przez proste wykonywanie sekwencyjne (
 
 Jeśli wystąpi wyjątek w bloku **__try** , system operacyjny musi znaleźć procedurę obsługi dla wyjątku lub program zakończy się niepowodzeniem. Jeśli zostanie znaleziona procedura obsługi, wszystkie bloki **__finally** są wykonywane i wznawiają wykonywanie w programie obsługi.
 
-Załóżmy na przykład, że seria wywołań funkcji łączy funkcję A z funkcją D, jak pokazano na poniższej ilustracji. Każda funkcja ma jedną procedurę obsługi zakończenia. Jeśli wyjątek jest wywoływany w funkcji D i obsługiwany w, programy obsługi zakończenia są wywoływane w tej kolejności, w jakiej system wychodzi ze stosu: D, C, B.
+Załóżmy na przykład, że seria wywołań funkcji łączy funkcję A z funkcją D, jak pokazano na poniższej ilustracji. Każda funkcja ma jedną procedurę obsługi zakończenia. Jeśli wyjątek jest wywoływany w funkcji D i obsługiwany w, programy obsługi zakończenia są wywoływane w tej kolejności, w której system rozwinięcia stosu: D, C, B.
 
-![Kolejność&#45;]wykonywania procedury obsługi zakończenia(../cpp/media/vc38cx1.gif "wykonania&#45;") procedury obsługi zakończenia <br/>
+![Kolejność wykonywania procedury&#45;obsługi zakończenia](../cpp/media/vc38cx1.gif "Kolejność wykonywania procedury&#45;obsługi zakończenia") <br/>
 Kolejność zakończenia — wykonywanie programu obsługi
 
 > [!NOTE]
 > Zachowanie try-finally różni się od innych języków, które obsługują korzystanie z **finally**, takich jak C#.  Pojedynczy **__try** może mieć jedną, ale nie obie wartości **__finally** i **__except**.  Jeśli oba te elementy mają być używane razem, zewnętrzna Instrukcja try-except musi zawierać wewnętrzną instrukcję try-finally.  Reguły określające, kiedy każdy blok wykonuje się również inaczej.
 
-Aby zapewnić zgodność z poprzednimi wersjami, **_try**, **_finally**i **_leave** są synonimami dla **__try**, **__finally**i **__leave** , chyba że opcja kompilatora [/za \(wyłączanie rozszerzeń języka) ](../build/reference/za-ze-disable-language-extensions.md)jest określony.
+Aby zapewnić zgodność z poprzednimi wersjami, **_try**, **_finally**i **_leave** są synonimami dla **__try**, **__finally**i **__leave** , chyba że opcja kompilatora [/za \(Disable rozszerzenia języka)](../build/reference/za-ze-disable-language-extensions.md) wyszczególnion.
 
 ## <a name="the-__leave-keyword"></a>Słowo kluczowe __leave
 

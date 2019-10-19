@@ -50,10 +50,10 @@ helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
 ms.openlocfilehash: ba1c831d772deef34449d17adc2c8e7a6f90eaef
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "69496615"
 ---
 # <a name="cpatht-class"></a>Klasa CPathT
@@ -98,7 +98,7 @@ Klasa ATL/MFC do użycia dla ścieżki (zobacz [CStringT](../../atl-mfc-shared/r
 |[CPathT::AddBackslash](#addbackslash)|Wywołaj tę metodę, aby dodać ukośnik odwrotny do końca ciągu, aby utworzyć poprawną składnię dla ścieżki.|
 |[CPathT:: AddExtension](#addextension)|Wywołaj tę metodę, aby dodać rozszerzenie pliku do ścieżki.|
 |[CPathT:: Append](#append)|Wywołaj tę metodę, aby dołączyć ciąg do bieżącej ścieżki.|
-|[CPathT::BuildRoot](#buildroot)|Wywołaj tę metodę, aby utworzyć ścieżkę główną z danego numeru dysku.|
+|[CPathT:: element buildroot](#buildroot)|Wywołaj tę metodę, aby utworzyć ścieżkę główną z danego numeru dysku.|
 |[CPathT:: sprowadź](#canonicalize)|Wywołaj tę metodę, aby skonwertować ścieżkę do formy kanonicznej.|
 |[CPathT:: Połącz](#combine)|Wywołaj tę metodę, aby połączyć ciąg reprezentujący nazwę katalogu i ciąg reprezentujący nazwę ścieżki pliku do jednej ścieżki.|
 |[CPathT::CommonPrefix](#commonprefix)|Wywołaj tę metodę, aby określić, czy określona ścieżka udostępnia wspólny prefiks z bieżącą ścieżką.|
@@ -110,14 +110,14 @@ Klasa ATL/MFC do użycia dla ścieżki (zobacz [CStringT](../../atl-mfc-shared/r
 |[CPathT::GetDriveNumber](#getdrivenumber)|Wywołaj tę metodę, aby wyszukać ścieżkę litery dysku w zakresie od "A" do "Z" i zwrócić odpowiedni numer dysku.|
 |[CPathT:: GetExtension](#getextension)|Wywołaj tę metodę, aby uzyskać rozszerzenie pliku ze ścieżki.|
 |[CPathT:: IsDirectory](#isdirectory)|Wywołaj tę metodę, aby sprawdzić, czy ścieżka jest prawidłowym katalogiem.|
-|[CPathT::IsFileSpec](#isfilespec)|Wywołaj tę metodę, aby przeszukać ścieżkę do dowolnej ścieżki, ograniczając znaki (na przykład ': ' lub '\\'). Jeśli nie ma żadnych znaków ograniczających ścieżki, ścieżka jest traktowana jako ścieżka do pliku specyfikacji.|
+|[CPathT::IsFileSpec](#isfilespec)|Wywołaj tę metodę, aby przeszukać ścieżkę do dowolnej ścieżki, ograniczając znaki (na przykład ":" lub "\\"). Jeśli nie ma żadnych znaków ograniczających ścieżki, ścieżka jest traktowana jako ścieżka do pliku specyfikacji.|
 |[CPathT:: IsPrefix](#isprefix)|Wywołaj tę metodę, aby określić, czy ścieżka zawiera prawidłowy prefiks typu przekazaną przez *pszPrefix*.|
-|[CPathT::IsRelative](#isrelative)|Wywołaj tę metodę, aby określić, czy ścieżka jest względna.|
+|[CPathT:: isrelatywn](#isrelative)|Wywołaj tę metodę, aby określić, czy ścieżka jest względna.|
 |[CPathT:: IsRoot](#isroot)|Wywołaj tę metodę, aby określić, czy ścieżka jest katalogiem głównym katalogu.|
 |[CPathT::IsSameRoot](#issameroot)|Wywołaj tę metodę, aby określić, czy inna ścieżka ma wspólny składnik główny z bieżącą ścieżką.|
 |[CPathT::IsUNC](#isunc)|Wywołaj tę metodę, aby określić, czy ścieżka jest prawidłową ścieżką UNC (uniwersalną konwencją nazewnictwa) dla serwera i udziału.|
 |[CPathT::IsUNCServer](#isuncserver)|Wywołaj tę metodę, aby określić, czy ścieżka jest prawidłową ścieżką UNC (uniwersalną konwencją nazewnictwa) tylko dla serwera.|
-|[CPathT::IsUNCServerShare](#isuncservershare)|Wywołaj tę metodę, aby określić, czy ścieżka jest prawidłową ścieżką UNC (uniwersalną konwencją \\nazewnictwa \ ),*udziałem* *serwera*\ .|
+|[CPathT::IsUNCServerShare](#isuncservershare)|Wywołaj tę metodę, aby określić, czy ścieżka jest prawidłową ścieżką UNC (uniwersalną konwencją nazewnictwa), \\ \ *serwera* \ *udziału*.|
 |[CPathT::MakePretty](#makepretty)|Wywołaj tę metodę, aby skonwertować ścieżkę do wszystkich małych liter, aby nadać ścieżce spójny wygląd.|
 |[CPathT::MatchSpec](#matchspec)|Wywołaj tę metodę, aby wyszukać ciąg zawierający typ dopasowania z symbolami wieloznacznymi.|
 |[CPathT::QuoteSpaces](#quotespaces)|Wywołaj tę metodę, aby umieścić ścieżkę w cudzysłowie, jeśli zawiera spacje.|
@@ -150,7 +150,7 @@ Klasa ATL/MFC do użycia dla ścieżki (zobacz [CStringT](../../atl-mfc-shared/r
 
 ## <a name="remarks"></a>Uwagi
 
-`CPath`, `CPathA` `CPathT` i `CPathW` są wystąpieniami zdefiniowanymi w następujący sposób:
+`CPath`, `CPathA` i `CPathW` są wystąpieniami `CPathT` zdefiniowane w następujący sposób:
 
 `typedef CPathT< CString > CPath;`
 
@@ -284,7 +284,7 @@ Zwraca wspólny prefiks.
 
 ### <a name="remarks"></a>Uwagi
 
-Prefiks jest jednym z następujących typów: "C:\\\\", ".", "..", ".. \\\\". Aby uzyskać więcej informacji, zobacz [PathCommonPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw).
+Prefiks jest jednym z następujących typów: "C: \\ \\", ".", "..", ".. \\ \\ ". Aby uzyskać więcej informacji, zobacz [PathCommonPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw).
 
 ##  <a name="compactpath"></a>CPathT::CompactPath
 
@@ -296,7 +296,7 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
 
 ### <a name="parameters"></a>Parametry
 
-*hDC*<br/>
+*Używający HDC*<br/>
 Kontekst urządzenia używany do metryk czcionki.
 
 *nWidth*<br/>
@@ -349,7 +349,7 @@ CPathT() throw();
 *pszPath*<br/>
 Wskaźnik do ciągu ścieżki.
 
-*Ścieżka*<br/>
+*ścieżka*<br/>
 Ciąg ścieżki.
 
 ##  <a name="fileexists"></a>CPathT::FileExists
@@ -446,7 +446,7 @@ Aby uzyskać więcej informacji, zobacz [PathIsDirectory](/windows/win32/api/shl
 
 ##  <a name="isfilespec"></a>CPathT::IsFileSpec
 
-Wywołaj tę metodę, aby przeszukać ścieżkę do dowolnej ścieżki, ograniczając znaki (na przykład ': ' lub '\\'). Jeśli nie ma żadnych znaków ograniczających ścieżki, ścieżka jest traktowana jako ścieżka do pliku specyfikacji.
+Wywołaj tę metodę, aby przeszukać ścieżkę do dowolnej ścieżki, ograniczając znaki (na przykład ":" lub "\\"). Jeśli nie ma żadnych znaków ograniczających ścieżki, ścieżka jest traktowana jako ścieżka do pliku specyfikacji.
 
 ```
 BOOL IsFileSpec() const;
@@ -471,7 +471,7 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
 ### <a name="parameters"></a>Parametry
 
 *pszPrefix*<br/>
-Prefiks do wyszukania. Prefiks jest jednym z następujących typów: "C:\\\\", ".", "..", ".. \\\\".
+Prefiks do wyszukania. Prefiks jest jednym z następujących typów: "C: \\ \\", ".", "..", ".. \\ \\ ".
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -568,7 +568,7 @@ Aby uzyskać więcej informacji, zobacz [PathIsUNCServer](/windows/win32/api/shl
 
 ##  <a name="isuncservershare"></a>CPathT::IsUNCServerShare
 
-Wywołaj tę metodę, aby określić, czy ścieżka jest prawidłową ścieżką UNC (uniwersalną konwencją \\nazewnictwa \ ),*udziałem* *serwera*\ .
+Wywołaj tę metodę, aby określić, czy ścieżka jest prawidłową ścieżką UNC (uniwersalną konwencją nazewnictwa), \\ \ *serwera* \ *udziału*.
 
 ```
 BOOL IsUNCServerShare() const;
@@ -576,7 +576,7 @@ BOOL IsUNCServerShare() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli ścieżka znajduje się w \\ \ postaci *serwer*\ *udział*, lub false w przeciwnym razie.
+Zwraca wartość TRUE, jeśli ścieżka ma postać \\ \ *server* \ *Share*lub false w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -592,7 +592,7 @@ StringType m_strPath;
 
 ### <a name="remarks"></a>Uwagi
 
-`StringType`jest parametrem szablonu do `CPathT`.
+`StringType` jest parametrem szablonu do `CPathT`.
 
 ##  <a name="makepretty"></a>CPathT::MakePretty
 
@@ -648,7 +648,7 @@ Ciąg do dołączenia.
 
 Zwraca zaktualizowaną ścieżkę.
 
-##  <a name="operator_const_stringtype_amp"></a>CPathT:: operator const StringType&amp;
+##  <a name="operator_const_stringtype_amp"></a>CPathT:: operator const StringType &amp;
 
 Ten operator pozwala, aby obiekt był traktowany jak ciąg.
 
@@ -672,7 +672,7 @@ operator PCXSTR() const throw();
 
 Zwraca ciąg reprezentujący bieżącą ścieżkę zarządzaną przez ten obiekt.
 
-##  <a name="operator_stringtype_amp"></a>CPathT:: operator — ciąg&amp;
+##  <a name="operator_stringtype_amp"></a>CPathT:: operator StringType &amp;
 
 Ten operator pozwala, aby obiekt był traktowany jak ciąg.
 
@@ -694,7 +694,7 @@ typedef StringType::PCXSTR PCXSTR;
 
 ### <a name="remarks"></a>Uwagi
 
-`StringType`jest parametrem szablonu do `CPathT`.
+`StringType` jest parametrem szablonu do `CPathT`.
 
 ##  <a name="pxstr"></a>CPathT::P XSTR
 
@@ -706,7 +706,7 @@ typedef StringType::PXSTR PXSTR;
 
 ### <a name="remarks"></a>Uwagi
 
-`StringType`jest parametrem szablonu do `CPathT`.
+`StringType` jest parametrem szablonu do `CPathT`.
 
 ##  <a name="quotespaces"></a>CPathT::QuoteSpaces
 
@@ -905,7 +905,7 @@ typedef StringType::XCHAR XCHAR;
 
 ### <a name="remarks"></a>Uwagi
 
-`StringType`jest parametrem szablonu do `CPathT`.
+`StringType` jest parametrem szablonu do `CPathT`.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -3,10 +3,10 @@ title: Układ dynamiczny
 ms.date: 09/09/2019
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
 ms.openlocfilehash: 1b0d035d3c551fd309d515ccb8b22159218c1b0a
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "70907552"
 ---
 # <a name="dynamic-layout"></a>Układ dynamiczny
@@ -23,7 +23,7 @@ Po zmianie rozmiaru obszar ListBox zostanie powiększony, aby pokazać więcej e
 
 ![Po zmianie rozmiaru okna dialogowego.](../mfc/media/mfcdynamiclayout5.png "Po zmianie rozmiaru okna dialogowego.")
 
-Układ dynamiczny można kontrolować, określając szczegóły dla każdej kontrolki w edytorze zasobów w środowisku IDE, lub można to zrobić programowo, uzyskując dostęp `CMFCDynamicLayout` do obiektu dla konkretnej kontrolki i ustawiając właściwości.
+Układ dynamiczny można kontrolować, określając szczegóły dla każdej kontrolki w edytorze zasobów w środowisku IDE, lub można to zrobić programowo, uzyskując dostęp do obiektu `CMFCDynamicLayout` dla konkretnej kontrolki i ustawiając właściwości.
 
 ### <a name="setting-dynamic-layout-properties-in-the-resource-editor"></a>Ustawianie właściwości układu dynamicznego w edytorze zasobów
 
@@ -55,13 +55,13 @@ Poprzednia procedura jest przydatna do określania właściwości układu dynami
 
 1. Znajdź lub Utwórz miejsce w kodzie implementacji klasy okna dialogowego, w którym chcesz określić układ dynamiczny okna dialogowego. Na przykład możesz chcieć dodać metodę, taką jak `AdjustLayout` w oknie dialogowym, i wywoływać ją z miejsc, w których układ musi zostać zmieniony. Użytkownik może najpierw wywołać ten program z konstruktora lub po wprowadzeniu zmian w oknie dialogowym.
 
-1. Dla okna dialogowego Wywołaj [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), metodę `CWnd` klasy. `GetDynamicLayout`Zwraca wskaźnik do `CMFCDynamicLayout` obiektu.
+1. Dla okna dialogowego Wywołaj [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), metodę klasy `CWnd`. `GetDynamicLayout` zwraca wskaźnik do obiektu `CMFCDynamicLayout`.
 
     ```cpp
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
     ```
 
-1. W przypadku pierwszej kontrolki, do której ma zostać dodane dynamiczne zachowanie, użyj metod statycznych klasy układu dynamicznego, aby utworzyć strukturę [MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure) , która koduje sposób, w jaki formant powinien zostać dostosowany. W tym celu należy najpierw wybrać odpowiednią metodę statyczną: [CMFCDynamicLayout:: MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal), [CMFCDynamicLayout:: MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical), [CMFCDynamicLayout:: MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone)lub [CMFCDynamicLayout:: MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). Należy przekazać wartość procentową dla aspektów poziomych i/lub pionowych przenoszenia. Wszystkie te metody statyczne zwracają nowo utworzony obiekt MoveSettings, którego można użyć do określenia zachowania przenoszenia kontrolki.
+1. W przypadku pierwszej kontrolki, do której ma zostać dodane dynamiczne zachowanie, użyj metod statycznych klasy układu dynamicznego, aby utworzyć strukturę [MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure) , która koduje sposób, w jaki formant powinien zostać dostosowany. W tym celu należy najpierw wybrać odpowiednią metodę statyczną: [CMFCDynamicLayout:: MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal), [CMFCDynamicLayout:: MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical), [CMFCDynamicLayout:: MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone)lub [CMFCDynamicLayout:: MoveHorizontalAndVertical ](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). Należy przekazać wartość procentową dla aspektów poziomych i/lub pionowych przenoszenia. Wszystkie te metody statyczne zwracają nowo utworzony obiekt MoveSettings, którego można użyć do określenia zachowania przenoszenia kontrolki.
 
    Należy pamiętać, że 100 oznacza przeniesieniu dokładnie tak, jak zmienia się rozmiar okna dialogowego, co powoduje, że krawędź kontrolki pozostaje stała odległość od nowego obramowania.
 

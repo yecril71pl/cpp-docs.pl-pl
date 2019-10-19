@@ -40,10 +40,10 @@ helpviewer_keywords:
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
 ms.openlocfilehash: df724ed056c02d79b5b51f97ae4aaf8ae267fde5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "70937617"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
@@ -87,7 +87,7 @@ long double erfcl(
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*y*<br/>
 Wartość zmiennoprzecinkowa.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -108,7 +108,7 @@ Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia warto
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**ERF**, **erff —** , **erfl**, **ERFC —** , **erfcf —** , **erfcl**|\<math.h>|
+|**ERF**, **erff —** , **erfl**, **ERFC —** , **erfcf —** , **erfcl**|\<math. h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
