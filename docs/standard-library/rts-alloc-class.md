@@ -12,16 +12,16 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: 065c0eaf936a438f48dbb8aa28704e0f53926a03
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b0ec7d4d3dbe5ef1334bf3c394819a4f5235c28c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451139"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688980"
 ---
-# <a name="rtsalloc-class"></a>rts_alloc — Klasa
+# <a name="rts_alloc-class"></a>rts_alloc — Klasa
 
-Klasa szablonu rts_alloc opisuje [Filtr](../standard-library/allocators-header.md) , który przechowuje tablicę wystąpień pamięci podręcznej i określa, które wystąpienie ma być używane do alokacji i dealokacji w czasie wykonywania, a nie podczas kompilowania.
+Szablon klasy rts_alloc opisuje [Filtr](../standard-library/allocators-header.md) , który przechowuje tablicę wystąpień pamięci podręcznej i określa, które wystąpienie ma być używane do alokacji i alokacji w czasie wykonywania, a nie podczas kompilowania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,7 +38,7 @@ class rts_alloc
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa szablonu zawiera wiele wystąpień alokatora blokowego i określa, które wystąpienie ma być używane do alokacji lub cofania alokacji w czasie wykonywania, a nie podczas kompilowania. Jest on używany z kompilatorami, które nie mogą skompilować ponownie powiązania.
+Ten szablon klasy zawiera wiele wystąpień alokatora blokowego i określa, które wystąpienie ma być używane do alokacji lub cofania alokacji w czasie wykonywania, a nie podczas kompilowania. Jest on używany z kompilatorami, które nie mogą skompilować ponownie powiązania.
 
 ### <a name="member-functions"></a>Funkcje członkowskie
 
@@ -50,7 +50,7 @@ Ta klasa szablonu zawiera wiele wystąpień alokatora blokowego i określa, któ
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<przypisania >
+**Nagłówek:** \<allocators >
 
 **Przestrzeń nazw:** stdext
 
@@ -74,7 +74,7 @@ Wskaźnik do przydzielony obiekt.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca `caches[_IDX].allocate(count)`, gdzie indeks `_IDX` jest określony przez żądaną *liczbę*rozmiarów bloku lub, jeśli *Liczba* jest zbyt duża, zwraca wartość `operator new(count)`. `cache`, która reprezentuje obiekt pamięci podręcznej.
+Funkcja członkowska zwraca `caches[_IDX].allocate(count)`, gdzie indeks `_IDX` jest określany przez żądaną *liczbę*rozmiarów bloku lub, jeśli *Liczba* jest zbyt duża, zwraca `operator new(count)`. `cache`, który reprezentuje obiekt pamięci podręcznej.
 
 ## <a name="deallocate"></a>rts_alloc::d eallocate
 
@@ -93,7 +93,7 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego `caches[_IDX].deallocate(ptr, count)`wywołuje, gdzie indeks `_IDX` jest określony przez żądaną *liczbę*rozmiarów bloku lub, jeśli *Liczba* jest zbyt duża, zwraca `operator delete(ptr)`.
+Funkcja członkowska wywołuje `caches[_IDX].deallocate(ptr, count)`, gdzie indeks `_IDX` jest określany przez żądaną *liczbę*rozmiarów bloku lub, jeśli *Liczba* jest zbyt duża, zwraca `operator delete(ptr)`.
 
 ## <a name="equals"></a>rts_alloc:: Equals
 
@@ -112,9 +112,9 @@ bool equals(const sync<_Cache>& _Other) const;
 
 ### <a name="remarks"></a>Uwagi
 
-**prawda** , jeśli wynik `caches[0].equals(other.caches[0])`; w przeciwnym razie, **Fałsz**. `caches`reprezentuje tablicę obiektów pamięci podręcznej.
+**wartość true** , jeśli wynik `caches[0].equals(other.caches[0])`; w przeciwnym razie **false**. `caches` reprezentuje tablicę obiektów pamięci podręcznej.
 
 ## <a name="see-also"></a>Zobacz także
 
-[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)\
-[\<allocators>](../standard-library/allocators-header.md)
+[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) \
+[\<allocators >](../standard-library/allocators-header.md)

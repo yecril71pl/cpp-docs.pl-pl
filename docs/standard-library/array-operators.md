@@ -1,5 +1,5 @@
 ---
-title: '&lt;Operatory&gt; tablic'
+title: Operatory &gt; &lt;array
 ms.date: 11/04/2016
 f1_keywords:
 - array/std::array::operator!=
@@ -9,21 +9,21 @@ f1_keywords:
 - array/std::array::operator>=
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 88244879be9ab27c826c0b051b724fa1c3ed4784
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3d65cd6b6b8549fd9964f6c5bb6d8b2d3c0a27b6
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456763"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688467"
 ---
-# <a name="ltarraygt-operators"></a>&lt;Operatory&gt; tablic
+# <a name="ltarraygt-operators"></a>Operatory &gt; &lt;array
 
-Nagłówek > tablicy zawiera te funkcje szablonu porównania, które nie są elementami członkowskimi.  \<
+Nagłówek \<array > **zawiera te funkcje** szablonu porównania, które nie są elementami członkowskimi.
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[zakład&gt;](#op_gt)|[zakład&gt;=](#op_gt_eq)|
-|[zakład&lt;](#op_lt)|[zakład&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
+|[operator!=](#op_neq)|[&gt; operatora](#op_gt)|[&gt; operatora =](#op_gt_eq)|
+|[&lt; operatora](#op_lt)|[&lt; operatora =](#op_lt_eq)|[operator = =](#op_eq_eq)|
 
 ## <a name="op_neq"></a>operator! =
 
@@ -38,21 +38,21 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*Br*\
+*Ty* \
 Typ elementu.
 
-*AZOTAN*\
+*N* \
 Rozmiar tablicy.
 
-*lewym*\
+\ *lewo*
 Lewy kontener do porównania.
 
-*Kliknij*\
+*prawa* \
 Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca wartość `!(left == right)`.
+Funkcja szablonu zwraca `!(left == right)`.
 
 ### <a name="example"></a>Przykład
 
@@ -98,7 +98,7 @@ false
 true
 ```
 
-## <a name="op_lt"></a>zakład&lt;
+## <a name="op_lt"></a>&lt; operatora
 
 Porównanie tablicowe, mniejsze niż.
 
@@ -111,21 +111,21 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*Br*\
+*Ty* \
 Typ elementu.
 
-*AZOTAN*\
+*N* \
 Rozmiar tablicy.
 
-*lewym*\
+\ *lewo*
 Lewy kontener do porównania.
 
-*Kliknij*\
+*prawa* \
 Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu przeciążania `operator<` w celu porównania dwóch obiektów [klasy](../standard-library/array-class-stl.md)klasy szablonu. Funkcja zwraca wartość `lexicographical_compare(left.begin(), left.end(), right.begin())`.
+Funkcja szablonu przeciążuje `operator<`, aby porównać dwa obiekty [klasy Array](../standard-library/array-class-stl.md)szablonu klasy. Funkcja zwraca `lexicographical_compare(left.begin(), left.end(), right.begin())`.
 
 ### <a name="example"></a>Przykład
 
@@ -171,7 +171,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a>zakład&lt;=
+## <a name="op_lt_eq"></a>&lt; operatora =
 
 Porównanie tablicowe, mniejsze niż lub równe.
 
@@ -184,21 +184,21 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*Br*\
+*Ty* \
 Typ elementu.
 
-*AZOTAN*\
+*N* \
 Rozmiar tablicy.
 
-*lewym*\
+\ *lewo*
 Lewy kontener do porównania.
 
-*Kliknij*\
+*prawa* \
 Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca wartość `!(right < left)`.
+Funkcja szablonu zwraca `!(right < left)`.
 
 ### <a name="example"></a>Przykład
 
@@ -257,21 +257,21 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*Br*\
+*Ty* \
 Typ elementu.
 
-*AZOTAN*\
+*N* \
 Rozmiar tablicy.
 
-*lewym*\
+\ *lewo*
 Lewy kontener do porównania.
 
-*Kliknij*\
+*prawa* \
 Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu przeciążania `operator==` w celu porównania dwóch obiektów [klasy](../standard-library/array-class-stl.md)klasy szablonu. Funkcja zwraca wartość `equal(left.begin(), left.end(), right.begin())`.
+Funkcja szablonu przeciążuje `operator==`, aby porównać dwa obiekty [klasy Array](../standard-library/array-class-stl.md)szablonu klasy. Funkcja zwraca `equal(left.begin(), left.end(), right.begin())`.
 
 ### <a name="example"></a>Przykład
 
@@ -317,7 +317,7 @@ true
 false
 ```
 
-## <a name="op_gt"></a>zakład&gt;
+## <a name="op_gt"></a>&gt; operatora
 
 Porównanie tablicowe, większe niż.
 
@@ -330,21 +330,21 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*Br*\
+*Ty* \
 Typ elementu.
 
-*AZOTAN*\
+*N* \
 Rozmiar tablicy.
 
-*lewym*\
+\ *lewo*
 Lewy kontener do porównania.
 
-*Kliknij*\
+*prawa* \
 Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca wartość `(right < left)`.
+Funkcja szablonu zwraca `(right < left)`.
 
 ### <a name="example"></a>Przykład
 
@@ -390,7 +390,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a>zakład&gt;=
+## <a name="op_gt_eq"></a>&gt; operatora =
 
 Porównanie tablicowe, większe niż lub równe.
 
@@ -403,21 +403,21 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*Br*\
+*Ty* \
 Typ elementu.
 
-*AZOTAN*\
+*N* \
 Rozmiar tablicy.
 
-*lewym*\
+\ *lewo*
 Lewy kontener do porównania.
 
-*Kliknij*\
+*prawa* \
 Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca wartość `!(left < right)`.
+Funkcja szablonu zwraca `!(left < right)`.
 
 ### <a name="example"></a>Przykład
 
@@ -465,4 +465,4 @@ false
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<array>](../standard-library/array.md)
+[\<array >](../standard-library/array.md)

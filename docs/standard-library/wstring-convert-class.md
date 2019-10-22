@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::wstring_convert [C++], converted
 - std::wstring_convert [C++], state
 ms.assetid: e34f5b65-d572-4bdc-ac69-20778712e376
-ms.openlocfilehash: 35689f79f8987cb55c4578869369f35d8656faec
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ce03510bec05f3e5e770e930759648c9add0387f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450899"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684055"
 ---
-# <a name="wstringconvert-class"></a>wstring_convert — Klasa
+# <a name="wstring_convert-class"></a>wstring_convert — Klasa
 
-Klasa `wstring_convert` szablonu wykonuje konwersje między ciągiem szerokim i ciągiem bajtowym.
+Szablon klasy `wstring_convert` wykonuje konwersje między ciągiem szerokim i ciągiem bajtowym.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,17 +42,17 @@ class wstring_convert
 
 ### <a name="parameters"></a>Parametry
 
-*Codecvt*\
+*Codecvt* \
 Zestaw reguł [ustawień regionalnych](../standard-library/locale-class.md) , który reprezentuje obiekt konwersji.
 
-*Elem*\
+*Elem* \
 Typ elementu dwubajtowego.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje obiekt, który kontroluje konwersje między obiektami szerokich ciągów klas `std::basic_string<Elem>` i ciągów bajtów klasy `std::basic_string<char>` (znanych także jako `std::string`). Klasa szablonu definiuje typy `wide_string` i `byte_string` jako synonimy dla tych dwóch typów. Konwersja między sekwencją `Elem` wartości (przechowywanych `wide_string` w obiekcie) i `byte_string` sekwencjami wielobajtowymi (przechowywanych w obiekcie) jest wykonywana przez obiekt klasy `Codecvt<Elem, char, std::mbstate_t>`, który spełnia wymagania standardu aspekt `std::codecvt<Elem, char, std::mbstate_t>`konwersji kodu.
+Szablon klasy opisuje obiekt, który kontroluje konwersje między obiektami typu Wide String klasy `std::basic_string<Elem>` i ciągi bajtów klasy `std::basic_string<char>` (znany również jako `std::string`). Szablon klasy definiuje typy `wide_string` i `byte_string` jako synonimy dla tych dwóch typów. Konwersja między sekwencją `Elem` wartości (przechowywana w obiekcie `wide_string`) i sekwencje wielobajtowe (przechowywane w obiekcie `byte_string`) jest wykonywana przez obiekt klasy `Codecvt<Elem, char, std::mbstate_t>`, który spełnia wymagania standardowego aspektu konwersji kodu `std::codecvt<Elem, char, std::mbstate_t>`.
 
-Obiekt tej klasy szablonu przechowuje:
+Obiekt tego szablonu klasy przechowuje:
 
 - Ciąg bajtowy do wyświetlenia w przypadku błędów
 
@@ -86,11 +86,11 @@ Obiekt tej klasy szablonu przechowuje:
 |[from_bytes](#from_bytes)|Konwertuje ciąg bajtowy na ciąg szeroki.|
 |[to_bytes](#to_bytes)|Konwertuje szeroki ciąg na ciąg bajtowy.|
 |[skonwertowana](#converted)|Zwraca liczbę pomyślnych konwersji.|
-|[state](#state)|Zwraca obiekt reprezentujący stan konwersji.|
+|[Państwu](#state)|Zwraca obiekt reprezentujący stan konwersji.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<> ustawień regionalnych
+**Nagłówek:** \<locale >
 
 **Przestrzeń nazw:** std
 
@@ -137,10 +137,10 @@ wide_string from_bytes(const char* first, const char* last);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Byte*|Sekwencja bajtów pojedynczego elementu do przekonwertowania.|
+|*Bajc*|Sekwencja bajtów pojedynczego elementu do przekonwertowania.|
 |*ptr*|Styl języka C, sekwencja znaków zakończona znakiem null do przekonwertowania.|
 |*Ani*|[Byte_string](#byte_string) do przekonwertowania.|
-|*first*|Pierwszy znak w zakresie znaków do przekonwertowania.|
+|*pierwszego*|Pierwszy znak w zakresie znaków do przekonwertowania.|
 |*ostatniego*|Ostatni znak w zakresie znaków do przekonwertowania.|
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -207,9 +207,9 @@ byte_string to_bytes(const Elem* first, const Elem* last);
 |Parametr|Opis|
 |---------------|-----------------|
 |*Delikatn*|Znak dwubajtowy do przekonwertowania.|
-|*Wptr*|Styl języka C, sekwencja zakończona zerem, rozpoczynająca się w `wptr`, który ma zostać przekonwertowany.|
+|*Wptr*|Styl C, sekwencja zakończona zerem, rozpoczynając od `wptr`, do przekonwertowania.|
 |*Wstr*|[Wide_string](#wide_string) do przekonwertowania.|
-|*first*|Pierwszy element w zakresie elementów do przekonwertowania.|
+|*pierwszego*|Pierwszy element w zakresie elementów do przekonwertowania.|
 |*ostatniego*|Ostatni element w zakresie elementów do przekonwertowania.|
 
 ### <a name="remarks"></a>Uwagi

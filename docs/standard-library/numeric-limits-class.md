@@ -70,16 +70,16 @@ helpviewer_keywords:
 - std::numeric_limits [C++], tinyness_before
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
-ms.openlocfilehash: bc9f9bd1157af96ced3c901309f19dcaa5dadab3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5373bd6a99605f5a63fb6aa2ed6de50c12b1c8f1
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246708"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687619"
 ---
-# <a name="numericlimits-class"></a>numeric_limits — Klasa
+# <a name="numeric_limits-class"></a>numeric_limits — Klasa
 
-Klasa szablonu opisuje arytmetyczne właściwości wbudowanych typów liczbowych.
+Szablon klasy opisuje arytmetyczne właściwości wbudowanych typów liczbowych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -90,55 +90,55 @@ template <class Type>
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*\
-Element podstawowy typ danych, którego właściwości są przetestowane zapytania lub zestawu. *Typ* mogą być także zadeklarowane **const**, **volatile**, lub **const volatile**.
+*Typ* \
+Typ danych elementu podstawowego, którego właściwości są testowane lub są badane lub ustawiane. *Typ* może być również zadeklarowany jako **const**, **volatile**lub **const volatile**.
 
 ## <a name="remarks"></a>Uwagi
 
-Nagłówek definiuje jawne specjalizacje dla typów **wchar_t**, **bool**, **char**, **podpisany char**, **bez znaku CHAR**, **krótki**, **typ unsigned short**, **int**, **unsigned int**, **długich**, **unsigned long**, **float**, **double**, **typu long double**, **długi długi**, **unsigned long long**, **char16_t**, i **char32_t**. Dla tych jawne specjalizacje elementu członkowskiego [numeric_limits::is_specialized](#is_specialized) jest **true**, i wszystkie odpowiednie elementy członkowskie mają znaczący wartości. Program można podać dodatkowe jawne specjalizacje. Większość funkcji składowej klasy opisują lub testowania implementacji możliwe **float**.
+Nagłówek definiuje jawne specjalizacje dla typów **wchar_t**, **bool**, **char**, signed **char**, **char bez**znaku, **Short**, unsigned **Short**, **int**, unsigned **int**, **Long**, **unsigned long**, **float**, **Double**, **Long Double**, **Long Long**, **unsigned long long**, **char16_t**i **char32_t**. Dla tych jawnych specjalizacji element członkowski [numeric_limits:: is_specialized](#is_specialized) ma **wartość true**, a wszystkie odpowiednie elementy członkowskie mają znaczące wartości. Program może podawać dodatkowe jawne specjalizacje. Większość funkcji członkowskich klasy opisuje lub testuje możliwe implementacje **zmiennoprzecinkowe**.
 
-Dla dowolnego specjalizacji żadnych elementów członkowskich mają znaczący wartości. Obiekt elementu członkowskiego, który nie ma odpowiednią wartość przechowuje wartość zero (lub **false**) i funkcja elementu członkowskiego, która nie zwraca zrozumiałą wartość zwraca `Type(0)`.
+W przypadku dowolnej specjalizacji żaden element członkowski nie ma znaczących wartości. Obiekt elementu członkowskiego, który nie ma zrozumiałej wartości, przechowuje zero (lub **Fałsz**) i funkcję członkowską, która nie zwraca znaczącej wartości zwraca `Type(0)`.
 
-## <a name="static-functions-and-constants"></a>Funkcje statyczne i stałe
+## <a name="static-functions-and-constants"></a>Statyczne funkcje i stałe
 
 |||
 |-|-|
-|[denorm_min](#denorm_min)|Zwraca wartość różną od zera najmniejszy nieznormalizowane wartość.|
-|[cyfry](#digits)|Zwraca liczbę cyfr podstawy, których typ może reprezentować bez utraty dokładności.|
-|[digits10](#digits10)|Zwraca liczbę cyfr dziesiętnych, reprezentujących przez typ bez utraty dokładności.|
-|[Epsilon](#epsilon)|Zwraca różnicę między 1 a najmniejsza wartość większa niż 1, który może reprezentować typu danych.|
-|[has_denorm](#has_denorm)|Sprawdza, czy typ umożliwia nieznormalizowane wartości.|
-|[has_denorm_loss](#has_denorm_loss)|Sprawdza, czy wykryto utratę dokładności utratę denormalizacja, a nie jako niedokładny wynik.|
-|[has_infinity](#has_infinity)|Sprawdza, czy typ ma reprezentację nieskończoności dodatniej.|
-|[has_quiet_NaN](#has_quiet_nan)|Sprawdza, czy typ ma reprezentację quiet nie jest liczbą (NAN), które jest inne niż sygnalizacji.|
-|[has_signaling_NaN](#has_signaling_nan)|Sprawdza, czy typ ma reprezentację sygnalizowania nie jest liczbą (NAN).|
-|[infinity](#infinity)|Reprezentacja do nieskończoności dodatniej dla typu, jeśli jest dostępny.|
-|[is_bounded](#is_bounded)|Sprawdza, czy zbiór wartości, które mogą reprezentować typem jest jednak ograniczona.|
-|[is_exact](#is_exact)|Sprawdza, czy obliczenia wykonywane w danym typie są wolne od błędów zaokrąglania.|
-|[is_iec559](#is_iec559)|Sprawdza, czy typ jest zgodny ze standardami IEC 559.|
-|[is_integer](#is_integer)|Sprawdza, czy typ ma reprezentację w postaci liczby całkowitej.|
-|[is_modulo](#is_modulo)|Sprawdza, czy typ ma modulo reprezentacji.|
-|[is_signed](#is_signed)|Sprawdza, czy typ ma reprezentację podpisem.|
-|[is_specialized](#is_specialized)|Sprawdza, czy typ ma jawnej specjalizacji zdefiniowanej w klasie szablonu `numeric_limits`.|
-|[lowest](#lowest)|Zwraca najbardziej ujemną wartość skończoną.|
-|[max](#max)|Zwraca maksymalną wartość skończoną dla typu.|
-|[max_digits10](#max_digits10)|Zwraca liczbę cyfr dziesiętnych, które są wymagane w celu zapewnienia, że dwa odrębne wartości typu mają różne reprezentacje dziesiętną.|
-|[max_exponent](#max_exponent)|Zwraca wartość maksymalnego dodatniego wykładnika typu całkowitego typu zmiennoprzecinkowego można przedstawić jako wartość skończoną, gdy została podniesiona do tych możliwości wersji podstawowej podstawy.|
-|[max_exponent10](#max_exponent10)|Zwraca wartość maksymalnego dodatniego wykładnika typu całkowitego, który może reprezentować typu zmiennoprzecinkowego jako wartość skończoną, gdy base 10, zostanie zgłoszony do tych możliwości.|
-|[min](#min)|Zwraca minimalną wartość znormalizowana dla typu.|
-|[min_exponent —](#min_exponent)|Zwraca maksymalną ujemnego wykładnika typu całkowitego typu zmiennoprzecinkowego można przedstawić jako wartość skończoną, gdy została podniesiona do tych możliwości wersji podstawowej podstawy.|
-|[min_exponent10](#min_exponent10)|Zwraca maksymalną ujemnego wykładnika typu całkowitego typu zmiennoprzecinkowego można przedstawić jako wartość skończoną, gdy base 10, zostanie zgłoszony do tych możliwości.|
-|[quiet_NaN](#quiet_nan)|Zwraca reprezentację quiet nie jest liczbą (NAN) dla typu.|
-|[radix](#radix)|Zwraca bazowego typu całkowitego, określane jako podstawy, używane do reprezentacji typu.|
-|[round_error](#round_error)|Zwraca maksymalną zaokrąglania błąd dla typu.|
-|[round_style](#round_style)|Zwraca wartość, która w tym artykule opisano różne metody wdrażania można wybrać podczas zaokrąglania wartość zmiennoprzecinkowa wartość będącą liczbą całkowitą.|
-|[signaling_NaN](#signaling_nan)|Zwraca reprezentację sygnalizowania nie jest liczbą (NAN) dla typu.|
-|[tinyness_before](#tinyness_before)|Sprawdza, czy typ można określić, czy wartość jest zbyt mała, aby przedstawić jako wartość znormalizowaną przed jej zaokrąglania.|
-|[pułapki](#traps)|Sprawdza, czy generują pułapki, który zgłasza wyjątki arytmetyczne został zaimplementowany dla typu.|
+|[denorm_min](#denorm_min)|Zwraca najmniejszą niezerową wartość nieznormalizowaną.|
+|[cyfr](#digits)|Zwraca liczbę podstawy cyfr, które typ może reprezentować bez utraty dokładności.|
+|[digits10](#digits10)|Zwraca liczbę cyfr dziesiętnych, które typ może reprezentować bez utraty dokładności.|
+|[Epsilon](#epsilon)|Zwraca różnicę z przedziału od 1 do najmniejszej wartości większej niż 1, którą może reprezentować typ danych.|
+|[has_denorm](#has_denorm)|Testuje, czy typ zezwala na nieznormalizowane wartości.|
+|[has_denorm_loss](#has_denorm_loss)|Testuje, czy ubytek dokładności został wykryty jako ubytek denormalizacji, a nie jako wynik niedokładny.|
+|[has_infinity](#has_infinity)|Testuje, czy typ ma reprezentację dla nieskończoności dodatniej.|
+|[has_quiet_NaN](#has_quiet_nan)|Testuje, czy typ ma reprezentację dla cichej nie liczby (NAN), która nie jest sygnalizująca.|
+|[has_signaling_NaN](#has_signaling_nan)|Testuje, czy typ ma reprezentację do sygnalizowania nie liczbą (NAN).|
+|[nieskończoność](#infinity)|Reprezentacja dla dodatniej nieskończoności dla typu, jeśli jest dostępna.|
+|[is_bounded](#is_bounded)|Testuje, czy zestaw wartości, które może reprezentować, jest ograniczony.|
+|[is_exact](#is_exact)|Testuje, czy obliczenia wykonywane na typie są wolne od błędów zaokrąglania.|
+|[is_iec559](#is_iec559)|Testuje, czy typ jest zgodny ze standardami IEC 559.|
+|[is_integer](#is_integer)|Testuje, czy typ ma reprezentację liczb całkowitych.|
+|[is_modulo](#is_modulo)|Testuje, czy typ ma reprezentację modulo.|
+|[is_signed](#is_signed)|Testuje, czy typ ma podpisaną reprezentację.|
+|[is_specialized](#is_specialized)|Testuje, czy typ ma jawną specjalizację zdefiniowaną w szablonie klasy `numeric_limits`.|
+|[okreolon](#lowest)|Zwraca najbardziej ujemną wartość skończoną.|
+|[Maksymalny](#max)|Zwraca maksymalną skończoną wartość dla typu.|
+|[max_digits10](#max_digits10)|Zwraca liczbę cyfr dziesiętnych wymaganych do zapewnienia, że dwie odrębne wartości typu mają odrębne reprezentacje dziesiętne.|
+|[max_exponent](#max_exponent)|Zwraca maksymalną dodatnią wartość wykładnika całkowitą, którą typ zmiennoprzecinkowy może reprezentować jako skończone wartości, gdy podstawa podstawy jest podnoszona do tej potęgi.|
+|[max_exponent10](#max_exponent10)|Zwraca maksymalną dodatnią wartość wykładnika całkowitą, którą typ zmiennoprzecinkowy może reprezentować jako skończone wartości, gdy baza danych jest podnoszona do tej potęgi.|
+|[długości](#min)|Zwraca minimalną znormalizowaną wartość dla typu.|
+|[min_exponent](#min_exponent)|Zwraca maksymalny całkowity ujemny wykładnik, który typ zmiennoprzecinkowy może reprezentować jako skończoną wartość, gdy baza podstawy jest podniesiona do tej potęgi.|
+|[min_exponent10](#min_exponent10)|Zwraca maksymalny całkowity ujemny wykładnik, który typ zmiennoprzecinkowy może reprezentować jako skończoną wartość, gdy baza danych jest podnoszona do tej potęgi.|
+|[quiet_NaN](#quiet_nan)|Zwraca reprezentację wartości typu quiet nie jest liczbą (NAN) dla tego elementu.|
+|[podstawy](#radix)|Zwraca część całkowitą, która jest określana jako podstawy, używana do reprezentowania typu.|
+|[round_error](#round_error)|Zwraca maksymalny błąd zaokrąglenia typu.|
+|[round_style](#round_style)|Zwraca wartość opisującą różne metody, które można wybrać, aby zaokrąglić wartość zmiennoprzecinkową do wartości całkowitej.|
+|[signaling_NaN](#signaling_nan)|Zwraca reprezentację sygnalizującego nie jest liczbą (NAN) dla tego typu.|
+|[tinyness_before](#tinyness_before)|Testuje, czy typ może określić, że wartość jest zbyt mała, aby reprezentować jako znormalizowaną wartość przed jej zaokrągleniem.|
+|[pułapek](#traps)|Testuje, czy zalewkowanie raportów na wyjątkach arytmetycznych jest implementowane dla typu.|
 
-### <a name="denorm_min"></a> denorm_min —
+### <a name="denorm_min"></a>denorm_min
 
-Zwraca wartość różną od zera najmniejszy nieznormalizowane wartość.
+Zwraca najmniejszą niezerową wartość nieznormalizowaną.
 
 ```cpp
 static constexpr Type denorm_min() throw();
@@ -146,13 +146,13 @@ static constexpr Type denorm_min() throw();
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Najmniejsza wartość różną od zera nieznormalizowany.
+Najmniejsza nieznormalizowana wartość niezerową.
 
 #### <a name="remarks"></a>Uwagi
 
-**double** jest taka sama jak **double** dla kompilatora języka C++.
+wartość **Long Double** jest taka sama jak wartość Double C++ dla kompilatora.
 
-Funkcja zwraca minimalną wartość dla typu, która jest taka sama jak [min](#min) Jeśli [has_denorm —](#has_denorm) nie jest równa `denorm_present`.
+Funkcja zwraca wartość minimalną dla typu, która jest taka sama jak [min](#min) , jeśli [has_denorm](#has_denorm) nie jest równa `denorm_present`.
 
 #### <a name="example"></a>Przykład
 
@@ -195,9 +195,9 @@ for long double objects is: 4.94066e-324
 0
 ```
 
-### <a name="digits"></a> cyfry
+### <a name="digits"></a>cyfr
 
-Zwraca liczbę cyfr podstawy, których typ może reprezentować bez utraty dokładności.
+Zwraca liczbę podstawy cyfr, które typ może reprezentować bez utraty dokładności.
 
 ```cpp
 static constexpr int digits = 0;
@@ -205,11 +205,11 @@ static constexpr int digits = 0;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Liczba cyfr podstawy, których typ może reprezentować bez utraty dokładności.
+Liczba podstawy, które typ może reprezentować bez utraty dokładności.
 
 #### <a name="remarks"></a>Uwagi
 
-Element członkowski przechowuje liczbę cyfr podstawy, reprezentujących przez typ bez zmian, czyli liczbę bitów niż każdego bitu znaku dla typu integer wstępnie zdefiniowanych lub liczbę cyfr mantysy dla wstępnie zdefiniowanego typu zmiennoprzecinkowego.
+Składowa przechowuje liczbę podstawy cyfr, które typ może reprezentować bez zmiany, czyli liczbę bitów innych niż dowolny bit znaku dla wstępnie zdefiniowanego typu Integer lub liczbę cyfr mantysy dla wstępnie zdefiniowanego typu zmiennoprzecinkowego.
 
 #### <a name="example"></a>Przykład
 
@@ -239,9 +239,9 @@ int main( )
 63
 ```
 
-### <a name="digits10"></a> digits10 —
+### <a name="digits10"></a>digits10
 
-Zwraca liczbę cyfr dziesiętnych, reprezentujących przez typ bez utraty dokładności.
+Zwraca liczbę cyfr dziesiętnych, które typ może reprezentować bez utraty dokładności.
 
 ```cpp
 static constexpr int digits10 = 0;
@@ -249,7 +249,7 @@ static constexpr int digits10 = 0;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Liczba cyfr dziesiętnych, reprezentujących przez typ bez utraty dokładności.
+Liczba cyfr dziesiętnych, które typ może reprezentować bez utraty dokładności.
 
 #### <a name="example"></a>Przykład
 
@@ -283,9 +283,9 @@ int main( )
 The float is; 100000000
 ```
 
-### <a name="epsilon"></a> Epsilon
+### <a name="epsilon"></a>Epsilon
 
-Funkcja zwraca różnicę między 1 a najmniejsza wartość większa niż 1, który jest stałego dla typu danych.
+Funkcja zwraca różnicę z zakresu od 1 do najmniejszej wartości większej niż 1, która jest zaprezentowana dla typu danych.
 
 ```cpp
 static constexpr Type epsilon() throw();
@@ -293,11 +293,11 @@ static constexpr Type epsilon() throw();
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Różnica między 1 a to najmniejsza wartość większa niż 1, który jest stałego dla typu danych.
+Różnica między 1 a najmniejszą wartością większą niż 1, która jest zaprezentowania dla typu danych.
 
 #### <a name="remarks"></a>Uwagi
 
-FLT_EPSILON jest wartość typu **float**. `epsilon` Typ jest najmniejsza dodatnia liczba zmiennoprzecinkowa *N* tak, aby *N* + `epsilon` + *N* jest stałego.
+Wartość jest FLT_EPSILON dla typu **float**. `epsilon` dla typu jest najmniejszą dodatnią liczbą zmiennoprzecinkową *n* wskazującą, że *n*  +  `epsilon`  + *n* jest możliwe do zaprezentowania.
 
 #### <a name="example"></a>Przykład
 
@@ -335,9 +335,9 @@ The difference between 1 and the smallest value greater than 1
 for long double objects is: 2.22045e-016
 ```
 
-### <a name="has_denorm"></a> has_denorm —
+### <a name="has_denorm"></a>has_denorm
 
-Sprawdza, czy typ umożliwia nieznormalizowane wartości.
+Testuje, czy typ zezwala na nieznormalizowane wartości.
 
 ```cpp
 static constexpr float_denorm_style has_denorm = denorm_absent;
@@ -345,11 +345,11 @@ static constexpr float_denorm_style has_denorm = denorm_absent;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Wartość wyliczenia typu **const**`float_denorm_style`oznaczający tego, czy typ dopuszcza wartości nieznormalizowany.
+Wartość wyliczenia typu **const** `float_denorm_style`, wskazująca, czy typ zezwala na nieznormalizowane wartości.
 
 #### <a name="remarks"></a>Uwagi
 
-Magazyny elementu członkowskiego `denorm_present` dla typu zmiennoprzecinkowego, który ma być nieznormalizowane wartości skutecznie zmienną liczbę bitów wykładnika.
+Element członkowski przechowuje `denorm_present` dla typu zmiennoprzecinkowego, który ma nieznormalizowane wartości, efektywnie zmienną liczbę bitów wykładnika.
 
 #### <a name="example"></a>Przykład
 
@@ -381,9 +381,9 @@ Whether double objects allow denormalized values: 1
 Whether long int objects allow denormalized values: 0
 ```
 
-### <a name="has_denorm_loss"></a> has_denorm_loss —
+### <a name="has_denorm_loss"></a>has_denorm_loss
 
-Sprawdza, czy wykryto utratę dokładności utratę denormalizacja, a nie jako niedokładny wynik.
+Testuje, czy ubytek dokładności został wykryty jako ubytek denormalizacji, a nie jako wynik niedokładny.
 
 ```cpp
 static constexpr bool has_denorm_loss = false;
@@ -391,11 +391,11 @@ static constexpr bool has_denorm_loss = false;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** wykrycie utraty dokładności utratę denormalizacja; **false** w przeciwnym razie.
+**ma wartość true** , jeśli utrata dokładności zostanie wykryta jako ubytek denormalizacji; **wartość false** , jeśli nie.
 
 #### <a name="remarks"></a>Uwagi
 
-Element członkowski przechowuje wartość true dla typu, który określa, czy wartość utracił dokładności, ponieważ przekazaniem wyniku denormalizowane (zbyt mała, aby przedstawić jako wartość znormalizowaną) lub jest niedokładna (nie sam w rezultacie nie podlegają ograniczeń wykładnik zakres i dokładność) opcję z IEC 559 zmiennoprzecinkowych oświadczenia, które mogą wpłynąć na niektóre wyniki.
+Element członkowski przechowuje wartość true dla typu, który określa, czy wartość utraciła dokładność, ponieważ jest ona dostarczana jako wynik nieznormalizowany (za mały, aby reprezentować jako znormalizowana wartość) lub ponieważ jest ona niedokładna (nie jest taka sama jak w przypadku ograniczeń wykładnika zakres i precyzja), opcja z reprezentacjami zmiennoprzecinkowymi IEC 559, które mogą mieć wpływ na niektóre wyniki.
 
 #### <a name="example"></a>Przykład
 
@@ -427,9 +427,9 @@ Whether double objects can detect denormalized loss: 1
 Whether long int objects can detect denormalized loss: 0
 ```
 
-### <a name="has_infinity"></a> has_infinity —
+### <a name="has_infinity"></a>has_infinity
 
-Sprawdza, czy typ ma reprezentację nieskończoności dodatniej.
+Testuje, czy typ ma reprezentację dla nieskończoności dodatniej.
 
 ```cpp
 static constexpr bool has_infinity = false;
@@ -437,11 +437,11 @@ static constexpr bool has_infinity = false;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli typ ma reprezentację nieskończoności dodatniej; **false** w przeciwnym razie.
+ma **wartość true** , jeśli typ ma reprezentację dla nieskończoności dodatniej; **wartość false** , jeśli nie.
 
 #### <a name="remarks"></a>Uwagi
 
-Zwraca element członkowski **true** Jeśli [is_iec559 —](#is_iec559) jest **true**.
+Element członkowski zwraca **wartość true** , jeśli [is_iec559](#is_iec559) ma **wartość true**.
 
 #### <a name="example"></a>Przykład
 
@@ -473,9 +473,9 @@ Whether double objects have infinity: 1
 Whether long int objects have infinity: 0
 ```
 
-### <a name="has_quiet_nan"></a> has_quiet_nan —
+### <a name="has_quiet_nan"></a>has_quiet_NaN
 
-Sprawdza, czy typ ma reprezentację quiet nie jest liczbą (NAN), czyli nonsignaling.
+Testuje, czy typ ma reprezentację dla cichej nie liczby (NAN), która nie jest sygnalizująca.
 
 ```cpp
 static constexpr bool has_quiet_NaN = false;
@@ -483,11 +483,11 @@ static constexpr bool has_quiet_NaN = false;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli **typu** ma reprezentację cichych NAN; **false** w przeciwnym razie.
+**true** , jeśli **Typ** ma reprezentację dla cichego NaN; **wartość false** , jeśli nie.
 
 #### <a name="remarks"></a>Uwagi
 
-Ciche NAN jest kodowanie nie jest liczbą, która nie sygnalizują jego obecność w wyrażeniu. Wartość zwracana jest **true** Jeśli [is_iec559 —](#is_iec559) ma wartość true.
+Cichy NAN jest kodowaniem nie jest liczbą, która nie sygnalizuje obecności w wyrażeniu. Wartość zwracana ma wartość **true** , jeśli [is_iec559](#is_iec559) ma wartość true.
 
 #### <a name="example"></a>Przykład
 
@@ -519,9 +519,9 @@ Whether double objects have quiet_NaN: 1
 Whether long int objects have quiet_NaN: 0
 ```
 
-### <a name="has_signaling_nan"></a> has_signaling_nan —
+### <a name="has_signaling_nan"></a>has_signaling_NaN
 
-Sprawdza, czy typ ma reprezentację sygnalizowania nie jest liczbą (NAN).
+Testuje, czy typ ma reprezentację do sygnalizowania nie liczbą (NAN).
 
 ```cpp
 static constexpr bool has_signaling_NaN = false;
@@ -529,11 +529,11 @@ static constexpr bool has_signaling_NaN = false;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli typ ma reprezentację sygnalizowania NAN; **false** w przeciwnym razie.
+**true** , jeśli typ ma reprezentację sygnalizującego NaN; **wartość false** , jeśli nie.
 
 #### <a name="remarks"></a>Uwagi
 
-Sygnalizowanie NAN jest kodowanie nie jest liczbą, które sygnalizują jego obecność w wyrażeniu. Wartość zwracana jest **true** Jeśli [is_iec559 —](#is_iec559) ma wartość true.
+Sygnalizowanie NAN jest kodowaniem niebędącym liczbą, która sygnalizuje swoją obecność w wyrażeniu. Wartość zwracana ma wartość **true** , jeśli [is_iec559](#is_iec559) ma wartość true.
 
 #### <a name="example"></a>Przykład
 
@@ -565,9 +565,9 @@ Whether double objects have a signaling_NaN: 1
 Whether long int objects have a signaling_NaN: 0
 ```
 
-### <a name="infinity"></a> infinity
+### <a name="infinity"></a>nieskończoność
 
-Reprezentacja nieskończoności dodatniej dla typu, jeśli jest dostępny.
+Reprezentacja dodatniej nieskończoności dla typu, jeśli jest dostępna.
 
 ```cpp
 static constexpr Type infinity() throw();
@@ -575,11 +575,11 @@ static constexpr Type infinity() throw();
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Reprezentacja nieskończoności dodatniej dla typu, jeśli jest dostępny.
+Reprezentacja dodatniej nieskończoności dla typu, jeśli jest dostępna.
 
 #### <a name="remarks"></a>Uwagi
 
-Wartość zwracana ma znaczenie tylko wtedy, gdy [has_infinity —](#has_infinity) jest **true**.
+Wartość zwracana ma znaczenie tylko wtedy, gdy [has_infinity](#has_infinity) ma **wartość true**.
 
 #### <a name="example"></a>Przykład
 
@@ -619,9 +619,9 @@ The representation of infinity for type double is: inf
 The representation of infinity for type long double is: inf
 ```
 
-### <a name="is_bounded"></a> is_bounded
+### <a name="is_bounded"></a>is_bounded
 
-Sprawdza, czy zbiór wartości, które mogą reprezentować typem jest jednak ograniczona.
+Testuje, czy zestaw wartości, które może reprezentować, jest ograniczony.
 
 ```cpp
 static constexpr bool is_bounded = false;
@@ -629,11 +629,11 @@ static constexpr bool is_bounded = false;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli typ ma ograniczony zestaw reprezentowanych wartości. **false** w przeciwnym razie.
+ma **wartość true** , jeśli typ ma ograniczony zestaw wartości, które są możliwe do zaprezentowania; **wartość false** , jeśli nie.
 
 #### <a name="remarks"></a>Uwagi
 
-Wszystkie wstępnie zdefiniowanych typów mają ograniczony zestaw reprezentowanych wartości i zwracają **true**.
+Wszystkie wstępnie zdefiniowane typy mają ograniczony zestaw wartości, które są możliwe do zaprezentowania i zwracają **wartość true**.
 
 #### <a name="example"></a>Przykład
 
@@ -673,9 +673,9 @@ Whether long int objects have bounded set of representable values: 1
 Whether unsigned char objects have bounded set of representable values: 1
 ```
 
-### <a name="is_exact"></a> is_exact —
+### <a name="is_exact"></a>is_exact
 
-Sprawdza, czy obliczenia wykonywane w danym typie są wolne od błędów zaokrąglania.
+Testuje, czy obliczenia wykonywane na typie są wolne od błędów zaokrąglania.
 
 ```cpp
 static constexpr bool is_exact = false;
@@ -683,11 +683,11 @@ static constexpr bool is_exact = false;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** w przypadku obliczeń wolny od błędów; zaokrąglania **false** w przeciwnym razie.
+**ma wartość true** , jeśli obliczenia są wolne od błędów zaokrąglania; **wartość false** , jeśli nie.
 
 #### <a name="remarks"></a>Uwagi
 
-Wszystkie wstępnie zdefiniowane całkowitoliczbowe mają dokładnie reprezentacji podanie ich wartości i zwracają **false**. Reprezentacja notację stałoprzecinkową lub wymierne jest również uważana za dokładne odwzorowanie liczby zmiennoprzecinkowej jest jednak nie.
+Wszystkie wstępnie zdefiniowane typy całkowite mają dokładne reprezentacje dla ich wartości i zwracają **wartość false**. Reprezentacja stała lub racjonalna jest również uważana za dokładną, ale reprezentacja zmiennoprzecinkowa nie jest.
 
 #### <a name="example"></a>Przykład
 
@@ -727,9 +727,9 @@ Whether long int objects have calculations free of rounding errors: 1
 Whether unsigned char objects have calculations free of rounding errors: 1
 ```
 
-### <a name="is_iec559"></a> is_iec559 —
+### <a name="is_iec559"></a>is_iec559
 
-Sprawdza, czy typ jest zgodny ze standardami IEC 559.
+Testuje, czy typ jest zgodny ze standardami IEC 559.
 
 ```cpp
 static constexpr bool is_iec559 = false;
@@ -737,11 +737,11 @@ static constexpr bool is_iec559 = false;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli typ jest zgodny ze standardami IEC 559; **false** w przeciwnym razie.
+**prawda** , jeśli typ jest zgodny ze standardami IEC 559; **wartość false** , jeśli nie.
 
 #### <a name="remarks"></a>Uwagi
 
-IEC 559 jest międzynarodową normą dotyczącą reprezentująca różne wartości zmiennoprzecinkowe i jest również znany jako IEEE 754 w USA.
+IEC 559 jest międzynarodowym standardem do reprezentowania wartości zmiennoprzecinkowych i jest również znany jako IEEE 754 w USA.
 
 #### <a name="example"></a>Przykład
 
@@ -777,9 +777,9 @@ Whether int objects conform to iec559 standards: 0
 Whether unsigned char objects conform to iec559 standards: 0
 ```
 
-### <a name="is_integer"></a> is_integer —
+### <a name="is_integer"></a>is_integer
 
-Sprawdza, czy typ ma reprezentację w postaci liczby całkowitej.
+Testuje, czy typ ma reprezentację liczb całkowitych.
 
 ```cpp
 static constexpr bool is_integer = false;
@@ -787,11 +787,11 @@ static constexpr bool is_integer = false;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli typ ma reprezentację w postaci liczby całkowitej; **false** w przeciwnym razie.
+**prawda** , jeśli typ ma reprezentację całkowitą; **wartość false** , jeśli nie.
 
 #### <a name="remarks"></a>Uwagi
 
-Wszystkie typy wstępnie zdefiniowanej liczby całkowitej mają reprezentację w postaci liczby całkowitej.
+Wszystkie wstępnie zdefiniowane typy całkowite mają reprezentację liczb całkowitych.
 
 #### <a name="example"></a>Przykład
 
@@ -827,9 +827,9 @@ Whether int objects have an integral representation: 1
 Whether unsigned char objects have an integral representation: 1
 ```
 
-### <a name="is_modulo"></a> is_modulo —
+### <a name="is_modulo"></a>is_modulo
 
-Sprawdza, czy **typu** ma modulo reprezentacji.
+Testuje, czy **Typ** ma reprezentację modulo.
 
 ```cpp
 static constexpr bool is_modulo = false;
@@ -837,11 +837,11 @@ static constexpr bool is_modulo = false;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli typ ma modulo reprezentacji; **false** w przeciwnym razie.
+**prawda** , jeśli typ ma reprezentację modulo; **wartość false** , jeśli nie.
 
 #### <a name="remarks"></a>Uwagi
 
-Modulo reprezentacja jest reprezentacja gdzie wszystkie wyniki są zmniejszone modulo jakąś wartość. Wszystkie typy wstępnie zdefiniowanej liczby całkowitej bez znaku mają modulo reprezentacji.
+Reprezentacja modulo jest reprezentacją, w której wszystkie wyniki są ograniczone do niektórych wartości. Wszystkie wstępnie zdefiniowane typy całkowite bez znaku mają reprezentację modulo.
 
 #### <a name="example"></a>Przykład
 
@@ -877,9 +877,9 @@ Whether signed char objects have a modulo representation: 1
 Whether unsigned char objects have a modulo representation: 1
 ```
 
-### <a name="is_signed"></a> is_signed —
+### <a name="is_signed"></a>is_signed
 
-Sprawdza, czy typ ma reprezentację podpisem.
+Testuje, czy typ ma podpisaną reprezentację.
 
 ```cpp
 static constexpr bool is_signed = false;
@@ -887,11 +887,11 @@ static constexpr bool is_signed = false;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli typ ma reprezentację podpisany; **false** w przeciwnym razie.
+ma **wartość true** , jeśli typ ma podpisaną reprezentację; **wartość false** , jeśli nie.
 
 #### <a name="remarks"></a>Uwagi
 
-Element członkowski przechowuje wartość true dla typu, który został podpisany reprezentacji w przypadku wszystkich wstępnie zdefiniowanych typów zmiennoprzecinkowych i podpisane liczby całkowitej.
+Element członkowski przechowuje wartość true dla typu, który ma podpisaną reprezentację, czyli w przypadku wszystkich wstępnie zdefiniowanych typów liczb całkowitych zmiennoprzecinkowych i ze znakiem.
 
 #### <a name="example"></a>Przykład
 
@@ -927,9 +927,9 @@ Whether signed char objects have a signed representation: 1
 Whether unsigned char objects have a signed representation: 0
 ```
 
-### <a name="is_specialized"></a> is_specialized —
+### <a name="is_specialized"></a>is_specialized
 
-Sprawdza, czy typ ma jawnej specjalizacji zdefiniowanej w klasie szablonu `numeric_limits`.
+Testuje, czy typ ma jawną specjalizację zdefiniowaną w szablonie klasy `numeric_limits`.
 
 ```cpp
 static constexpr bool is_specialized = false;
@@ -937,11 +937,11 @@ static constexpr bool is_specialized = false;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli typ ma jawnej specjalizacji zdefiniowanej w klasie szablonu; **false** w przeciwnym razie.
+**true** , jeśli typ ma jawną specjalizację zdefiniowaną w szablonie klasy; **wartość false** , jeśli nie.
 
 #### <a name="remarks"></a>Uwagi
 
-Wszystkie typy skalarne niż wskaźniki mają jawną specjalizacją zdefiniowane dla szablonu klasy `numeric_limits`.
+Wszystkie typy skalarne inne niż wskaźniki mają jawną specjalizację zdefiniowaną dla szablonu klasy `numeric_limits`.
 
 #### <a name="example"></a>Przykład
 
@@ -981,7 +981,7 @@ Whether int objects have an explicit specialization in the class: 1
 Whether int* objects have an explicit specialization in the class: 0
 ```
 
-### <a name="lowest"></a> Najniższy
+### <a name="lowest"></a>okreolon
 
 Zwraca najbardziej ujemną wartość skończoną.
 
@@ -995,11 +995,11 @@ Zwraca najbardziej ujemną wartość skończoną.
 
 #### <a name="remarks"></a>Uwagi
 
-Zwraca najbardziej ujemną wartość skończoną dla typu (zazwyczaj `min()` dla typów całkowitoliczbowych i `-max()` dla typów zmiennopozycyjnych). Wartość zwracana ma znaczenie przypadku `is_bounded` jest **true**.
+Zwraca najbardziej ujemną wartość skończoną dla typu (zwykle `min()` dla typów całkowitych i `-max()` dla typów zmiennoprzecinkowych). Wartość zwracana ma znaczenie, jeśli `is_bounded` ma **wartość true**.
 
-### <a name="max"></a> Maksymalna
+### <a name="max"></a>Maksymalny
 
-Zwraca maksymalną wartość skończoną dla typu.
+Zwraca maksymalną skończoną wartość dla typu.
 
 ```cpp
 static constexpr Type max() throw();
@@ -1011,7 +1011,7 @@ Maksymalna wartość skończoną dla typu.
 
 #### <a name="remarks"></a>Uwagi
 
-Maksymalna wartość skończoną jest INT_MAX dla typu **int** i FLT_MAX dla typu **float**. Wartość zwracana ma znaczenie przypadku [is_bounded](#is_bounded) jest **true**.
+Maksymalna wartość skończoną to INT_MAX dla typu **int** i FLT_MAX dla typu **float**. Wartość zwracana ma znaczenie, jeśli [is_bounded](#is_bounded) ma **wartość true**.
 
 #### <a name="example"></a>Przykład
 
@@ -1039,9 +1039,9 @@ int main() {
 }
 ```
 
-### <a name="max_digits10"></a> max_digits10 —
+### <a name="max_digits10"></a>max_digits10
 
-Zwraca liczbę cyfr dziesiętnych, które są wymagane, aby upewnić się, że dwa odrębne wartości typu mają różne reprezentacje dziesiętną.
+Zwraca liczbę cyfr dziesiętnych wymaganych do upewnienia się, że dwie odrębne wartości typu mają odrębne reprezentacje dziesiętne.
 
 ```cpp
 static constexpr int max_digits10 = 0;
@@ -1049,15 +1049,15 @@ static constexpr int max_digits10 = 0;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Zwraca liczbę miejsc dziesiętnych, które są wymagane, aby upewnić się, że dwa odrębne wartości typu mają różne reprezentacje dziesiętną.
+Zwraca liczbę cyfr dziesiętnych, które są wymagane, aby upewnić się, że dwie odrębne wartości typu mają odrębne reprezentacje dziesiętne.
 
 #### <a name="remarks"></a>Uwagi
 
-Element członkowski przechowuje liczbę cyfr dziesiętnych, wymagane, aby upewnić się, że dwa odrębne wartości typu mają różne reprezentacje dziesiętną.
+Składowa przechowuje liczbę cyfr dziesiętnych wymaganych do upewnienia się, że dwie odrębne wartości typu mają odrębne reprezentacje dziesiętne.
 
-### <a name="max_exponent"></a> max_exponent —
+### <a name="max_exponent"></a>max_exponent
 
-Zwraca wartość maksymalnego dodatniego wykładnika typu całkowitego typu zmiennoprzecinkowego można przedstawić jako wartość skończoną, gdy została podniesiona do tych możliwości wersji podstawowej podstawy.
+Zwraca maksymalną dodatnią wartość wykładnika całkowitą, którą typ zmiennoprzecinkowy może reprezentować jako skończone wartości, gdy podstawa podstawy jest podnoszona do tej potęgi.
 
 ```cpp
 static constexpr int max_exponent = 0;
@@ -1065,11 +1065,11 @@ static constexpr int max_exponent = 0;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Maksymalny całkowity na podstawie podstawy wykładnik reprezentowanych przez typ.
+Maksymalny szacowany całkowity podstawy wykładnika oparta na typie.
 
 #### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego, zwracany jest istotny tylko dla typów zmiennoprzecinkowych. `max_exponent` Jest wartość typu FLT_MAX_EXP **float**.
+Zwracana funkcja elementu członkowskiego ma znaczenie tylko dla typów zmiennoprzecinkowych. @No__t_0 jest wartością FLT_MAX_EXP dla typu **float**.
 
 #### <a name="example"></a>Przykład
 
@@ -1101,9 +1101,9 @@ The maximum radix-based exponent for type double is:  1024
 The maximum radix-based exponent for type long double is:  1024
 ```
 
-### <a name="max_exponent10"></a> max_exponent10 —
+### <a name="max_exponent10"></a>max_exponent10
 
-Zwraca wartość maksymalnego dodatniego wykładnika typu całkowitego, który może reprezentować typu zmiennoprzecinkowego jako wartość skończoną, gdy base 10, zostanie zgłoszony do tych możliwości.
+Zwraca maksymalną dodatnią wartość wykładnika całkowitą, którą typ zmiennoprzecinkowy może reprezentować jako skończone wartości, gdy baza danych jest podnoszona do tej potęgi.
 
 ```cpp
 static constexpr int max_exponent10 = 0;
@@ -1111,11 +1111,11 @@ static constexpr int max_exponent10 = 0;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Maksymalny całkowity o podstawie 10 wykładnik reprezentowanych przez typ.
+Maksymalny całkowity 10-podstawowy wykładnik, który jest zaprezentowany przez typ.
 
 #### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego, zwracany jest istotny tylko dla typów zmiennoprzecinkowych. `max_exponent` Jest wartość typu FLT_MAX_10 **float**.
+Zwracana funkcja elementu członkowskiego ma znaczenie tylko dla typów zmiennoprzecinkowych. @No__t_0 jest wartością FLT_MAX_10 dla typu **float**.
 
 #### <a name="example"></a>Przykład
 
@@ -1147,9 +1147,9 @@ The maximum base 10 exponent for type double is:  308
 The maximum base 10 exponent for type long double is:  308
 ```
 
-### <a name="min"></a> min
+### <a name="min"></a>długości
 
-Zwraca minimalną wartość znormalizowana dla typu.
+Zwraca minimalną znormalizowaną wartość dla typu.
 
 ```cpp
 static constexpr Type min() throw();
@@ -1157,11 +1157,11 @@ static constexpr Type min() throw();
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Minimalna wartość znormalizowana dla typu.
+Minimalna znormalizowana wartość dla typu.
 
 #### <a name="remarks"></a>Uwagi
 
-Minimalna wartość znormalizowana to INT_MIN dla typu **int** i FLT_MIN dla typu **float**. Wartość zwracana ma znaczenie przypadku [is_bounded](#is_bounded) jest **true** lub jeśli [is_signed —](#is_signed) jest **false**.
+Minimalna znormalizowana wartość to INT_MIN dla typu **int** i FLT_MIN dla typu **zmiennoprzecinkowego**. Wartość zwracana ma znaczenie, jeśli [is_bounded](#is_bounded) ma **wartość true** lub [is_signed](#is_signed) ma **wartość false**.
 
 #### <a name="example"></a>Przykład
 
@@ -1197,9 +1197,9 @@ The minimum value for type int is:  -2147483648
 The minimum value for type short int is:  -32768
 ```
 
-### <a name="min_exponent"></a> min_exponent —
+### <a name="min_exponent"></a>min_exponent
 
-Zwraca maksymalną ujemnego wykładnika typu całkowitego typu zmiennoprzecinkowego można przedstawić jako wartość skończoną, gdy została podniesiona do tych możliwości wersji podstawowej podstawy.
+Zwraca maksymalny całkowity ujemny wykładnik, który typ zmiennoprzecinkowy może reprezentować jako skończoną wartość, gdy baza podstawy jest podniesiona do tej potęgi.
 
 ```cpp
 static constexpr int min_exponent = 0;
@@ -1207,11 +1207,11 @@ static constexpr int min_exponent = 0;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Minimalna typu całkowitego na podstawie podstawy wykładnik reprezentowanych przez typ.
+Minimalny całkowity podstawy wykładnika oparta na typie.
 
 #### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego ma znaczenie tylko dla typów zmiennoprzecinkowych. `min_exponent` Jest wartość typu FLT_MIN_EXP **float**.
+Funkcja członkowska ma znaczenie tylko dla typów zmiennoprzecinkowych. @No__t_0 jest wartością FLT_MIN_EXP dla typu **float**.
 
 #### <a name="example"></a>Przykład
 
@@ -1243,9 +1243,9 @@ The minimum radix-based exponent for type double is:  -1021
 The minimum radix-based exponent for type long double is:  -1021
 ```
 
-### <a name="min_exponent10"></a> min_exponent10 —
+### <a name="min_exponent10"></a>min_exponent10
 
-Zwraca maksymalną ujemnego wykładnika typu całkowitego typu zmiennoprzecinkowego można przedstawić jako wartość skończoną, gdy base 10, zostanie zgłoszony do tych możliwości.
+Zwraca maksymalny całkowity ujemny wykładnik, który typ zmiennoprzecinkowy może reprezentować jako skończoną wartość, gdy baza danych jest podnoszona do tej potęgi.
 
 ```cpp
 static constexpr int min_exponent10 = 0;
@@ -1253,11 +1253,11 @@ static constexpr int min_exponent10 = 0;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Minimum całkowitych o podstawie 10 wykładnik reprezentowanych przez typ.
+Minimalny całkowity, 10-podstawowy wykładnik do zaprezentowania przez typ.
 
 #### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego ma znaczenie tylko dla typów zmiennoprzecinkowych. `min_exponent10` Jest wartość typu FLT_MIN_10_EXP **float**.
+Funkcja członkowska ma znaczenie tylko dla typów zmiennoprzecinkowych. @No__t_0 jest wartością FLT_MIN_10_EXP dla typu **float**.
 
 #### <a name="example"></a>Przykład
 
@@ -1289,9 +1289,9 @@ The minimum base 10 exponent for type double is:  -307
 The minimum base 10 exponent for type long double is:  -307
 ```
 
-### <a name="quiet_nan"></a> quiet_nan —
+### <a name="quiet_nan"></a>quiet_NaN
 
-Zwraca reprezentację quiet nie jest liczbą (NAN) dla typu.
+Zwraca reprezentację wartości typu quiet nie jest liczbą (NAN) dla tego elementu.
 
 ```cpp
 static constexpr Type quiet_NaN() throw();
@@ -1299,11 +1299,11 @@ static constexpr Type quiet_NaN() throw();
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Reprezentacja cichych NAN dla typu.
+Reprezentacja cichego NAN dla typu.
 
 #### <a name="remarks"></a>Uwagi
 
-Wartość zwracana ma znaczenie tylko wtedy, gdy [has_quiet_nan —](#has_quiet_nan) jest **true**.
+Wartość zwracana ma znaczenie tylko wtedy, gdy [has_quiet_NaN](#has_quiet_nan) ma **wartość true**.
 
 #### <a name="example"></a>Przykład
 
@@ -1335,9 +1335,9 @@ The quiet NaN for type int is:  0
 The quiet NaN for type long double is:  1.#QNAN
 ```
 
-### <a name="radix"></a> podstawy
+### <a name="radix"></a>podstawy
 
-Zwraca bazowego typu całkowitego, określane jako podstawy, używane do reprezentacji typu.
+Zwraca część całkowitą, która jest określana jako podstawy, używana do reprezentowania typu.
 
 ```cpp
 static constexpr int radix = 0;
@@ -1345,11 +1345,11 @@ static constexpr int radix = 0;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Całkowite podstawa reprezentacji typu.
+Część podstawowa dla reprezentacji typu.
 
 #### <a name="remarks"></a>Uwagi
 
-Podstawowa to 2, w przypadku typów całkowitych wstępnie zdefiniowanych i podstawowa, do którego jest wywoływane wykładnik lub FLT_RADIX, wstępnie zdefiniowanych typów zmiennoprzecinkowych.
+Podstawą jest 2 dla wstępnie zdefiniowanych typów całkowitych i podstawa, do której jest podnoszona lub FLT_RADIX wykładnika dla wstępnie zdefiniowanych typów zmiennoprzecinkowych.
 
 #### <a name="example"></a>Przykład
 
@@ -1381,9 +1381,9 @@ The base for type int is:  2
 The base for type long double is:  2
 ```
 
-### <a name="round_error"></a> round_error —
+### <a name="round_error"></a>round_error
 
-Zwraca maksymalną zaokrąglania błąd dla typu.
+Zwraca maksymalny błąd zaokrąglenia typu.
 
 ```cpp
 static constexpr Type round_error() throw();
@@ -1391,7 +1391,7 @@ static constexpr Type round_error() throw();
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Maksymalna zaokrąglania błąd dla typu.
+Maksymalny błąd zaokrąglania typu.
 
 #### <a name="example"></a>Przykład
 
@@ -1423,9 +1423,9 @@ The maximum rounding error for type int is:  0
 The maximum rounding error for type long double is:  0.5
 ```
 
-### <a name="round_style"></a> round_style —
+### <a name="round_style"></a>round_style
 
-Zwraca wartość, która w tym artykule opisano różne metody wdrażania można wybrać podczas zaokrąglania wartość zmiennoprzecinkowa wartość będącą liczbą całkowitą.
+Zwraca wartość opisującą różne metody, które można wybrać, aby zaokrąglić wartość zmiennoprzecinkową do wartości całkowitej.
 
 ```cpp
 static constexpr float_round_style round_style = round_toward_zero;
@@ -1433,13 +1433,13 @@ static constexpr float_round_style round_style = round_toward_zero;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Wartość z zakresu od `float_round_style` stylu wyliczenie opisujące zaokrąglania.
+Wartość z wyliczenia `float_round_style` opisującego styl zaokrąglenia.
 
 #### <a name="remarks"></a>Uwagi
 
-Element członkowski przechowuje wartość, która w tym artykule opisano różne metody wdrażania można wybrać podczas zaokrąglania wartość zmiennoprzecinkowa wartość będącą liczbą całkowitą.
+Składowa przechowuje wartość opisującą różne metody, które można wybrać, aby zaokrąglić wartość zmiennoprzecinkową do wartości całkowitej.
 
-Round stylu jest trudne, kodowane w tej implementacji, nawet po uruchomieniu programu przy użyciu innego trybu zaokrąglania, ta wartość nie zmienia się.
+Styl okrągły jest zakodowany w tej implementacji, więc nawet jeśli program zostanie uruchomiony z innym trybem zaokrąglania, ta wartość nie zostanie zmieniona.
 
 #### <a name="example"></a>Przykład
 
@@ -1470,9 +1470,9 @@ The rounding style for a double type is now: 1
 The rounding style for an int type is: 0
 ```
 
-### <a name="signaling_nan"></a> signaling_nan —
+### <a name="signaling_nan"></a>signaling_NaN
 
-Zwraca reprezentację sygnalizowania nie jest liczbą (NAN) dla typu.
+Zwraca reprezentację sygnalizującego nie jest liczbą (NAN) dla tego typu.
 
 ```cpp
 static constexpr Type signaling_NaN() throw();
@@ -1480,11 +1480,11 @@ static constexpr Type signaling_NaN() throw();
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Reprezentację sygnalizowania NAN dla typu.
+Reprezentacja wartości NAN sygnalizującej typ.
 
 #### <a name="remarks"></a>Uwagi
 
-Wartość zwracana ma znaczenie tylko wtedy, gdy [has_signaling_nan —](#has_signaling_nan) jest **true**.
+Wartość zwracana ma znaczenie tylko wtedy, gdy [has_signaling_NaN](#has_signaling_nan) ma **wartość true**.
 
 #### <a name="example"></a>Przykład
 
@@ -1510,9 +1510,9 @@ int main( )
 }
 ```
 
-### <a name="tinyness_before"></a> tinyness_before —
+### <a name="tinyness_before"></a>tinyness_before
 
-Sprawdza, czy typ można określić, czy wartość jest zbyt mała, aby przedstawić jako wartość znormalizowaną przed jej zaokrąglania.
+Testuje, czy typ może określić, że wartość jest zbyt mała, aby reprezentować jako znormalizowaną wartość przed jej zaokrągleniem.
 
 ```cpp
 static constexpr bool tinyness_before = false;
@@ -1520,11 +1520,11 @@ static constexpr bool tinyness_before = false;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli typ może wykryć niewielki rozmiar wartości przed zaokrąglania; **false** Jeśli jest ona nieosiągalna.
+**ma wartość true** , jeśli typ może wykryć małe wartości przed zaokrągleniem; **wartość false** , jeśli nie jest.
 
 #### <a name="remarks"></a>Uwagi
 
-Typy, które mogą wykrywać tinyness zostały opcją przy użyciu reprezentacji zmiennoprzecinkowych IEC 559, a jego implementacja może mieć wpływ na niektóre wyniki.
+Typy, które mogą wykrywać niewielką część, zostały dołączone jako opcja z reprezentacjimi zmiennoprzecinkowymi IEC 559, a jej implementacja może mieć wpływ na niektóre wyniki.
 
 #### <a name="example"></a>Przykład
 
@@ -1560,9 +1560,9 @@ Whether long int types can detect tinyness before rounding: 0
 Whether unsigned char types can detect tinyness before rounding: 0
 ```
 
-### <a name="traps"></a> pułapki
+### <a name="traps"></a>pułapek
 
-Sprawdza, czy generują pułapki, który zgłasza wyjątki arytmetyczne został zaimplementowany dla typu.
+Testuje, czy zalewkowanie raportów na wyjątkach arytmetycznych jest implementowane dla typu.
 
 ```cpp
 static constexpr bool traps = false;
@@ -1570,7 +1570,7 @@ static constexpr bool traps = false;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli wyłapywanie został zaimplementowany dla tego typu; **false** Jeśli tak nie jest.
+**prawda** , jeśli Pułapka jest zaimplementowana dla typu; **wartość false** , jeśli nie jest.
 
 #### <a name="example"></a>Przykład
 

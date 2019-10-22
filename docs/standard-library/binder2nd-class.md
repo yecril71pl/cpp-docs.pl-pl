@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - binder2nd class
 ms.assetid: b2a9c1d1-dfc4-4ca9-a10e-ae84e195a62d
-ms.openlocfilehash: 5f59887e6c9d2965a6c8680f17a40c5bd93869c0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 46c8bb2ae450b3ef56f2729717fb9b5563a7c139
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243355"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689934"
 ---
 # <a name="binder2nd-class"></a>binder2nd — Klasa
 
-Klasa szablonu, zapewniając konstruktora, który konwertuje obiekt binarny funkcji do obiektu funkcyjnego jednoargumentowe przez powiązanie drugi argument funkcji binarnego na określoną wartość. Przestarzałe w C ++ 11, usunięte w języku C ++ 17.
+Szablon klasy dostarczający Konstruktor, który konwertuje obiekt funkcji binarnej na jednoargumentowy obiekt funkcji przez powiązanie drugiego argumentu funkcji Binary z określoną wartością. Przestarzałe w języku C++ 11, usunięte w języku C++ 17.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,24 +38,24 @@ class binder2nd
 
 ### <a name="parameters"></a>Parametry
 
-*FUNC*\
-Obiekt binarny funkcji do konwersji na obiekt funkcyjny jednoargumentowy.
+@No__t_1 *Func*
+Obiekt funkcji binarnej do przekonwertowania na jednoargumentowy obiekt funkcji.
 
-*po prawej stronie*\
-Wartość, do którego ma zostać powiązany drugi argument obiektu binarnego funkcji.
+*prawa* \
+Wartość, do której należy powiązać drugi argument obiektu funkcji binarnej.
 
-*po lewej stronie*\
-Wartość argumentu, który porównuje dostosowane obiektu binarnego stała wartość drugiego argumentu.
+\ *lewo*
+Wartość argumentu, który dostosowany obiekt binarny porównuje do ustalonej wartości drugiego argumentu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Obiekt funkcji Jednoelementowy, będącą wynikiem powiązanie drugi argument obiektu binarnego funkcji z wartością *prawo*.
+Jednoargumentowy obiekt funkcji, który jest wynikiem powiązania drugiego argumentu obiektu funkcji binarnej z *prawą*wartością.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu przechowuje kopię _ obiektu binarnego funkcja *Func* w `op`, a kopia *prawo* w `value`. Definiuje jej funkcji członkowskiej `operator()` powrotu **op**(`left`, **wartość**).
+Szablon klasy przechowuje kopię obiektu funkcji binarnej _ *Func* w `op` i kopię *prawa* w `value`. Definiuje jej funkcję członkowską `operator()` jako zwracaną **op**(`left`, **Value**).
 
-Jeśli `Func` jest obiektem typu `Operation` i języka c jest stałą, następnie [bind2nd —](../standard-library/functional-functions.md#bind2nd) (`Func`, `c`) jest odpowiednikiem `binder2nd` konstruktora klasy `binder2nd` \<  **Operacja**> (`Func`, `c`) i wygodniejsze.
+Jeśli `Func` jest obiektem typu `Operation`, a c jest stałą, wówczas [bind2nd —](../standard-library/functional-functions.md#bind2nd) (`Func`, `c`) jest odpowiednikiem konstruktora klasy `binder2nd` `binder2nd` \< **operacji**> (`Func`, 0) i bardziej wygodne.
 
 ## <a name="example"></a>Przykład
 

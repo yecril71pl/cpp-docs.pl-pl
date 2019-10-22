@@ -28,14 +28,14 @@ helpviewer_keywords:
 - std::weak_ptr [C++], swap
 - std::weak_ptr [C++], use_count
 ms.assetid: 2db4afb2-c7be-46fc-9c20-34ec2f8cc7c2
-ms.openlocfilehash: d4ba30f737bc570a4ee700b3a317b5feebe8a50a
-ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
+ms.openlocfilehash: 2591c4cd124f83085235828d3eb29ab1a90d894a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682410"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684082"
 ---
-# <a name="weakptr-class"></a>weak_ptr — Klasa
+# <a name="weak_ptr-class"></a>weak_ptr — Klasa
 
 Otacza słabo połączony wskaźnik.
 
@@ -47,38 +47,38 @@ template<class T> class weak_ptr;
 
 ### <a name="parameters"></a>Parametry
 
-*&* \
+*T* \
 Typ kontrolowany przez słaby wskaźnik.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje obiekt, który wskazuje na zasób, który jest zarządzany przez jeden lub więcej obiektów [shared_ptr](shared-ptr-class.md) . `weak_ptr` Obiekty wskazujące na zasób nie wpływają na liczbę odwołań zasobu. Gdy ostatni `shared_ptr` obiekt zarządzający tym zasobem zostanie zniszczony, zasób zostanie zwolniony, nawet jeśli `weak_ptr` istnieją obiekty wskazujące na ten zasób. Takie zachowanie jest niezbędne w przypadku unikania cykli w strukturach danych.
+Szablon klasy opisuje obiekt, który wskazuje na zasób, który jest zarządzany przez jeden lub więcej obiektów [shared_ptr](shared-ptr-class.md) . Obiekty `weak_ptr` wskazujące na zasób nie wpływają na liczbę odwołań zasobu. Gdy ostatni obiekt `shared_ptr`, który zarządza tym zasobem, zostanie zniszczony, zasób zostanie zwolniony nawet wtedy, gdy istnieją `weak_ptr` obiekty wskazujące na ten zasób. Takie zachowanie jest niezbędne w przypadku unikania cykli w strukturach danych.
 
-Obiekt wskazuje na zasób, jeśli został skonstruowany `shared_ptr` z obiektu, który jest właścicielem tego zasobu, jeśli został skonstruowany z `weak_ptr` obiektu, który wskazuje na ten zasób, lub jeśli ten zasób został przypisany do niego przy użyciu [operatora =](#op_eq). `weak_ptr` `weak_ptr` Obiekt nie zapewnia bezpośredniego dostępu do zasobu, do którego wskazuje. Kod, który musi korzystać z zasobu, odbywa się za `shared_ptr` pomocą obiektu, który jest właścicielem tego zasobu, przez wywołanie [blokady](#lock)funkcji składowej. Obiekt wygasł, gdy zasób, który wskazuje w, został zwolniony, ponieważ wszystkie `shared_ptr` obiekty należące do zasobu zostały zniszczone. `weak_ptr` Wywołanie `lock`obiektu,który wygasł,powodujeutworzeniepustegoobiektushared_ptr.`weak_ptr`
+Obiekt `weak_ptr` wskazuje na zasób, jeśli został skonstruowany z obiektu `shared_ptr`, który jest właścicielem tego zasobu, jeśli został skonstruowany z obiektu `weak_ptr`, który wskazuje na ten zasób, lub jeśli ten zasób został przypisany do niego przy użyciu [operatora =](#op_eq). Obiekt `weak_ptr` nie zapewnia bezpośredniego dostępu do zasobu, do którego wskazuje. Kod, który musi korzystać z zasobu, odbywa się za pomocą obiektu `shared_ptr`, który jest właścicielem tego zasobu, utworzonego przez wywołanie [blokady](#lock)funkcji składowej. Obiekt `weak_ptr` wygasł, gdy zasób, który wskazuje na, został zwolniony ze względu na to, że wszystkie obiekty `shared_ptr` należące do zasobu zostały zniszczone. Wywołanie `lock` na obiekcie `weak_ptr`, który wygasł, powoduje utworzenie pustego obiektu shared_ptr.
 
-Pusty obiekt weak_ptr nie wskazuje żadnych zasobów i nie ma bloku sterowania. Funkcja `lock` członkowska zwraca pusty obiekt shared_ptr.
+Pusty obiekt weak_ptr nie wskazuje żadnych zasobów i nie ma bloku sterowania. Funkcja członkowska `lock` zwraca pusty obiekt shared_ptr.
 
-Cykl występuje, gdy co najmniej dwa zasoby kontrolowane przez `shared_ptr` obiekty wzajemnie odwołują `shared_ptr` się do obiektów. Na przykład cykliczna lista połączona z trzema `N0`elementami ma węzeł główny; ten węzeł `shared_ptr` zawiera obiekt, który jest właścicielem następnego węzła, `N1`a ten węzeł zawiera `shared_ptr` obiekt, który jest właścicielem następnego węzła `N2`; ten węzeł, w z kolei utrzymuje `shared_ptr` obiekt będący właścicielem `N0`węzła głównego, zamykający cykl. W tej sytuacji liczby odwołań nigdy nie staną się zerami, a węzły w cyklu nigdy nie są zwalniane. Aby wyeliminować cykl, ostatni `N2` węzeł powinien `weak_ptr` przechowywać obiekt `shared_ptr` wskazujący `N0` zamiast obiektu. Ponieważ obiekt nie jest jego `N0` własnością, nie `N0`ma to wpływu na liczbę odwołań i gdy ostatnie odwołanie programu do węzła głównego jest niszczone, węzły na liście również zostaną zniszczone. `weak_ptr`
+Cykl występuje, gdy co najmniej dwa zasoby kontrolowane przez `shared_ptr` obiekty wzajemnie odwołują się do `shared_ptr` obiektów. Na przykład cykliczna lista połączona z trzema elementami ma węzeł główny `N0`; Ten węzeł utrzymuje obiekt `shared_ptr`, który jest właścicielem następnego węzła, `N1`; Ten węzeł utrzymuje obiekt `shared_ptr`, który jest właścicielem następnego węzła, `N2`; Ten węzeł z kolei utrzymuje obiekt `shared_ptr`, który jest właścicielem węzła głównego, `N0`, zamykając cykl. W tej sytuacji liczby odwołań nigdy nie staną się zerami, a węzły w cyklu nigdy nie są zwalniane. Aby wyeliminować cykl, ostatni węzeł `N2` powinien zawierać obiekt `weak_ptr` wskazujący `N0` zamiast obiektu `shared_ptr`. Ponieważ obiekt `weak_ptr` nie jest własnością `N0` nie ma to wpływu na liczbę odwołań `N0` i gdy ostatnie odwołanie programu do węzła głównego jest niszczone, węzły na liście również zostaną zniszczone.
 
 ## <a name="members"></a>Elementy członkowskie
 
 |||
 |-|-|
 | **Konstruktory** | |
-|[weak_ptr](#weak_ptr)|Konstruuje `weak_ptr`a.|
+|[weak_ptr](#weak_ptr)|Konstruuje `weak_ptr`.|
 | **Destruktory** | |
-|[~ weak_ptr](#tilde-weak_ptr)|Konstruuje `weak_ptr`a.|
+|[~ weak_ptr](#tilde-weak_ptr)|Konstruuje `weak_ptr`.|
 | **Definicje typów** | |
 |[element_type](#element_type)|Typ elementu.|
 | **Funkcje członkowskie** | |
 |[przeterminowanych](#expired)|Testuje, czy własność wygasła.|
 |[lock](#lock)|Uzyskuje wyłączną własność zasobu.|
-|[owner_before](#owner_before)|Zwraca **wartość PRAWDA** , `weak_ptr` jeśli jest ona uporządkowana przed (lub mniej niż) dostarczonym wskaźnikiem.|
+|[owner_before](#owner_before)|Zwraca **wartość PRAWDA** , jeśli ta `weak_ptr` jest uporządkowana przed (lub mniej) podanego wskaźnika.|
 |[zresetować](#reset)|Przynależność do zasobów.|
-|[swap](#swap)|Zamienia dwa `weak_ptr` obiekty.|
-|[use_count](#use_count)|Liczy liczbę `shared_ptr` obiektów.|
+|[wymiany](#swap)|Zamienia dwa obiekty `weak_ptr`.|
+|[use_count](#use_count)|Liczy liczbę obiektów `shared_ptr`.|
 | **Operatory** | |
-|[operator=](#op_eq)|Zamienia posiadane zasoby.|
+|[operator =](#op_eq)|Zamienia posiadane zasoby.|
 
 ## <a name="element_type"></a>element_type
 
@@ -91,7 +91,7 @@ using element_type = remove_extent_t<T>; // C++20
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla parametru `T`szablonu.
+Typ jest synonimem dla parametru szablonu `T`.
 
 ### <a name="example"></a>Przykład
 
@@ -127,7 +127,7 @@ bool expired() const noexcept;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca **wartość true** , jeśli `*this` wygasła, w przeciwnym razie **false**.
+Funkcja członkowska zwraca **wartość true** , jeśli `*this` wygasła. w przeciwnym razie **wartość false**.
 
 ### <a name="example"></a>Przykład
 
@@ -168,7 +168,7 @@ wp.expired() == true
 
 ## <a name="lock"></a>skręt
 
-Uzyskuje udział `shared_ptr` , który współużytkuje własność zasobu.
+Uzyskuje `shared_ptr`, które współużytkują własność zasobu.
 
 ```cpp
 shared_ptr<T> lock() const noexcept;
@@ -176,7 +176,7 @@ shared_ptr<T> lock() const noexcept;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca pusty obiekt [shared_ptr](shared-ptr-class.md) , jeśli `*this` wygasł; `shared_ptr<T>` w przeciwnym razie zwraca obiekt, który jest właścicielem zasobu, `*this` który wskazuje. Zwraca wartość odpowiadającą niepodzielnym wykonywaniu `expired() ? shared_ptr<T>() : shared_ptr<T>(*this)`.
+Funkcja członkowska zwraca pusty obiekt [shared_ptr](shared-ptr-class.md) , jeśli `*this` utracił ważność; w przeciwnym razie zwraca obiekt `shared_ptr<T>`, który jest właścicielem zasobu, do którego `*this` punkty. Zwraca wartość równoważną niepodzielnym wykonywaniu `expired() ? shared_ptr<T>() : shared_ptr<T>(*this)`.
 
 ### <a name="example"></a>Przykład
 
@@ -231,15 +231,15 @@ weak_ptr& operator=(const shared_ptr<Other>& ptr) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Różnych*\
+*Inne* \
 Typ kontrolowany przez wspólny lub słaby wskaźnik argumentu.
 
-*PTR*\
+\ *PTR*
 Słaby wskaźnik lub udostępniony wskaźnik do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Operatory wszystkie zwalniają aktualnie wskazywane przez siebie `*this` zasoby i przypisują własność zasobu o nazwie *PTR* do. `*this` Jeśli operator zakończy się niepowodzeniem `*this` , pozostaje niezmieniony. Każdy operator ma efekt równoważny z `weak_ptr(ptr).swap(*this)`.
+Operatory wszystkie zwalniają aktualnie wskazywane przez `*this` i przypisują własność zasobu o nazwie *PTR* do `*this`. Jeśli operator zakończy się niepowodzeniem, pozostawia `*this` bez zmian. Każdy operator ma efekt równy `weak_ptr(ptr).swap(*this)`.
 
 ### <a name="example"></a>Przykład
 
@@ -275,7 +275,7 @@ int main()
 
 ## <a name="owner_before"></a>owner_before
 
-Zwraca **wartość PRAWDA** , `weak_ptr` jeśli jest ona uporządkowana przed (lub mniej niż) dostarczonym wskaźnikiem.
+Zwraca **wartość PRAWDA** , jeśli ta `weak_ptr` jest uporządkowana przed (lub mniej) podanego wskaźnika.
 
 ```cpp
 template <class Other>
@@ -287,8 +287,8 @@ bool owner_before(const weak_ptr<Other>& ptr) const noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*PTR*\
-Odwołanie lvalue do `shared_ptr` `weak_ptr`lub.
+\ *PTR*
+Odwołanie lvalue do `shared_ptr` lub `weak_ptr`.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -304,7 +304,7 @@ void reset() noexcept;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwalnia zasób wskazywany przez `*this` i konwertuje `*this` do pustego `weak_ptr` obiektu.
+Funkcja członkowska zwalnia zasób wskazany przez `*this` i konwertuje `*this` do pustego obiektu `weak_ptr`.
 
 ### <a name="example"></a>Przykład
 
@@ -338,7 +338,7 @@ wp.expired() == true
 
 ## <a name="swap"></a>wymiany
 
-Zamienia dwa `weak_ptr` obiekty.
+Zamienia dwa obiekty `weak_ptr`.
 
 ```cpp
 void swap(weak_ptr& wp) noexcept;
@@ -353,12 +353,12 @@ void swap(weak_ptr<T>& a, weak_ptr<T>& b) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*dokumenty*\
+\ *WP*
 Słaby wskaźnik do zamiany na.
 
 ### <a name="remarks"></a>Uwagi
 
-`*this` `*this`Po, zasób początkowo wskazywany przez program jest wskazywany przez WP, a zasób początkowo wskazywany przez WP jest wskazywany przez. `swap` Funkcja nie zmienia liczby odwołań dla dwóch zasobów i nie generuje żadnych wyjątków. Efekt specjalizacji szablonu jest odpowiednikiem `a.swap(b)`.
+Po `swap` zasób początkowo wskazywany przez `*this` jest wskazywany przez *WP*, a zasób początkowo wskazywany przez *WP* jest wskazywany przez `*this`. Funkcja nie zmienia liczby odwołań dla dwóch zasobów i nie generuje żadnych wyjątków. Efekt specjalizacji szablonu jest odpowiednikiem `a.swap(b)`.
 
 ### <a name="example"></a>Przykład
 
@@ -407,7 +407,7 @@ int main()
 
 ## <a name="use_count"></a>use_count
 
-`shared_ptr` Zlicza obiekty należące do zasobu udostępnionego.
+Zlicza obiekty `shared_ptr` należące do zasobu udostępnionego.
 
 ```cpp
 long use_count() const noexcept;
@@ -415,7 +415,7 @@ long use_count() const noexcept;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca liczbę `shared_ptr` obiektów należących do zasobu wskazywanego przez. `*this`
+Funkcja członkowska zwraca liczbę `shared_ptr` obiektów, które są własnością zasobu wskazywanym przez `*this`.
 
 ### <a name="example"></a>Przykład
 
@@ -447,7 +447,7 @@ wp.use_count() == 2
 
 ## <a name="weak_ptr"></a>weak_ptr
 
-Konstruuje `weak_ptr`a.
+Konstruuje `weak_ptr`.
 
 ```cpp
 constexpr weak_ptr() noexcept;
@@ -468,18 +468,18 @@ weak_ptr(const shared_ptr<Other>& sp) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Różnych*\
-Typ kontrolowany przez argument Shared/słaby wskaźnik. Konstruktory te nie uczestniczą w rozpoznawaniu przeciążenia, chyba `element_type*`że _inne\*_  są zgodne z programem.
+*Inne* \
+Typ kontrolowany przez argument Shared/słaby wskaźnik. Konstruktory te nie uczestniczą w rozpoznawaniu przeciążenia, chyba że _inne \*_ są zgodne z `element_type*`.
 
-*dokumenty*\
+\ *WP*
 Słaby wskaźnik do skopiowania.
 
-*requirement*\
+\ *SP*
 Udostępniony wskaźnik do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruktor domyślny konstruuje pusty `weak_ptr` obiekt. Konstruktory przyjmujące argument każdy konstruują pusty `weak_ptr` obiekt, jeśli wskaźnik argumentu jest pusty. W przeciwnym razie konstruuje `weak_ptr` obiekt, który wskazuje na zasób o nazwie przez argument. Liczba odwołań do obiektu udostępnionego nie została zmieniona.
+Konstruktor domyślny konstruuje pusty obiekt `weak_ptr`. Konstruktory przyjmujące argument każdy konstruują pusty obiekt `weak_ptr`, jeśli wskaźnik argumentu jest pusty. W przeciwnym razie konstruuje obiekt `weak_ptr`, który wskazuje na zasób o nazwie przez argument. Liczba odwołań do obiektu udostępnionego nie została zmieniona.
 
 ### <a name="example"></a>Przykład
 
@@ -516,7 +516,7 @@ wp0.expired() == true
 
 ## <a name="tilde-weak_ptr"></a>~ weak_ptr
 
-`weak_ptr`Niszczy.
+Niszczy `weak_ptr`.
 
 ```cpp
 ~weak_ptr();
@@ -524,10 +524,10 @@ wp0.expired() == true
 
 ### <a name="remarks"></a>Uwagi
 
-Destruktor niszczy ten `weak_ptr` sposób, ale nie ma wpływu na liczbę odwołań obiektu, w którym znajdują się punkty wskaźnika.
+Destruktor niszczy ten `weak_ptr` ale nie ma wpływu na liczbę odwołań obiektu, w którym znajdują się punkty wskaźnika.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja plików nagłówkowych](cpp-standard-library-header-files.md)\
-[\<memory>](memory.md)\
+[Odwołania do plików nagłówkowych](cpp-standard-library-header-files.md) \
+[\<memory >](memory.md) \
 [Klasa shared_ptr](shared-ptr-class.md)

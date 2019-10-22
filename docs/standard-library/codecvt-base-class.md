@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_base class
 ms.assetid: 7e95c083-91b4-4b3f-8918-0d4ea244a040
-ms.openlocfilehash: 1a32ba5e583fdb20118a3397f1ddb326302f2de1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6fca9b2130407b165a7a7bfb1fb2a9ec81774e20
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459388"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689893"
 ---
-# <a name="codecvtbase-class"></a>codecvt_base — Klasa
+# <a name="codecvt_base-class"></a>codecvt_base — Klasa
 
-Klasa bazowa dla klasy codecvt, która jest używana do definiowania typu wyliczenia `result`, który jest określany jako, używany jako zwracany typ dla funkcji składowych aspektu, aby wskazać wynik konwersji.
+Klasa bazowa dla klasy codecvt, która jest używana do definiowania typu wyliczenia, określanego jako `result`, używanego jako zwracany typ dla funkcji składowych aspektu, aby wskazać wynik konwersji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,19 +38,19 @@ protected:
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa opisuje Wyliczenie wspólne dla wszystkich specjalizacji klasy szablonu [codecvt](../standard-library/codecvt-class.md). Wynik wyliczenia zawiera opis możliwych wartości zwracanych z [do_in](../standard-library/codecvt-class.md#do_in) lub [do_out](../standard-library/codecvt-class.md#do_out):
+Klasa opisuje Wyliczenie wspólne dla wszystkich specjalizacji szablonu klasy [codecvt](../standard-library/codecvt-class.md). Wynik wyliczenia zawiera opis możliwych wartości zwracanych z [do_in](../standard-library/codecvt-class.md#do_in) lub [do_out](../standard-library/codecvt-class.md#do_out):
 
-- `ok`w przypadku powodzenia konwersji między wewnętrznymi i zewnętrznymi kodowaniem znaków.
+- `ok`, jeśli konwersja między wewnętrznymi i zewnętrznymi kodowaniem znaków zostanie zakończona pomyślnie.
 
-- `partial`Jeśli miejsce docelowe nie jest wystarczająco duże, aby konwersja powiodła się.
+- `partial`, jeśli miejsce docelowe nie jest wystarczająco duże, aby konwersja powiodła się.
 
-- `error`Jeśli sekwencja źródłowa jest źle sformułowana.
+- `error`, jeśli sekwencja źródłowa jest źle sformułowana.
 
-- `noconv`Jeśli funkcja nie wykonuje konwersji.
+- `noconv`, jeśli funkcja nie wykonuje konwersji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<> ustawień regionalnych
+**Nagłówek:** \<locale >
 
 **Przestrzeń nazw:** std
 

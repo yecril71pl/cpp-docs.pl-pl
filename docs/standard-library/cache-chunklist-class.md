@@ -10,14 +10,14 @@ helpviewer_keywords:
 - stdext::cache_chunklist [C++], allocate
 - stdext::cache_chunklist [C++], deallocate
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
-ms.openlocfilehash: 73730e0a4a22e7f5e63809cc2c1603cbda1ab596
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 035e5153b4e4c84743a64bcc9cec24920a6a0336
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449664"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688363"
 ---
-# <a name="cachechunklist-class"></a>cache_chunklist — Klasa
+# <a name="cache_chunklist-class"></a>cache_chunklist — Klasa
 
 Definiuje [Alokator bloku](../standard-library/allocators-header.md) , który przydziela i cofa alokacje bloków pamięci o pojedynczym rozmiarze.
 
@@ -36,9 +36,9 @@ class cache_chunklist
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa szablonu używa **operatora new** do przydzielania fragmentów pamięci nieprzetworzonej, przydzielenia bloków do przydzielania magazynu dla bloku pamięci w razie potrzeby; przechowuje cofnięte alokacje bloków pamięci na oddzielnej liście wolnej dla każdego fragmentu i używa **operatora delete** w celu cofnięcia przydziału fragmentu, gdy żaden z jego bloków pamięci nie jest używany.
+Ten szablon klasy używa **operatora new** do przydzielania fragmentów pamięci nieprzetworzonej, przydzielenia bloków w celu przydzielania magazynu dla bloku pamięci w razie potrzeby; przechowuje cofnięte alokacje bloków pamięci na oddzielnej liście wolnej dla każdego fragmentu i używa **operatora delete** w celu cofnięcia przydziału fragmentu, gdy żaden z jego bloków pamięci nie jest używany.
 
-Każdy blok pamięci zawiera *sz* bajtów użytecznej pamięci i wskaźnik do fragmentu, do którego należy. Każdy fragment zawiera `Nelts` bloki pamięci, trzy wskaźniki, int i dane, które są wymagane przez **operatora new** i **operator delete** .
+Każdy blok pamięci zawiera *sz* bajtów użytecznej pamięci i wskaźnik do fragmentu, do którego należy. Każdy fragment zawiera `Nelts` bloków pamięci, trzy wskaźniki, int i dane, które **operator new** i **operator delete** wymagają.
 
 ### <a name="constructors"></a>Konstruktorów
 
@@ -55,7 +55,7 @@ Każdy blok pamięci zawiera *sz* bajtów użytecznej pamięci i wskaźnik do fr
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<przypisania >
+**Nagłówek:** \<allocators >
 
 **Przestrzeń nazw:** stdext
 
@@ -108,4 +108,4 @@ void deallocate(void* ptr, std::size_t count);
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<allocators >](../standard-library/allocators-header.md)

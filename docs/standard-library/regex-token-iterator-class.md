@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::regex_token_iterator [C++], pointer
 - std::regex_token_iterator [C++], reference
 ms.assetid: a213ba48-8e4e-4b6b-871a-2637acf05f15
-ms.openlocfilehash: 78d01ed8606e65e55af7e0c8dc24c02b51c53a39
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 57fac1d9d5c73c2644a679402809933290dd3fc3
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451545"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689054"
 ---
-# <a name="regextokeniterator-class"></a>regex_token_iterator — Klasa
+# <a name="regex_token_iterator-class"></a>regex_token_iterator — Klasa
 
 Klasa iteratora dla podpasowań.
 
@@ -45,20 +45,20 @@ class regex_token_iterator
 
 ## <a name="parameters"></a>Parametry
 
-*BidIt*\
+*BidIt* \
 Typ iteratora dla podpasowań.
 
-*Elem*\
+*Elem* \
 Typ elementów, do których ma pasować.
 
-*RXtraits*\
+*RXtraits* \
 Klasa cech dla elementów.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje stały obiekt iteratora do przodu. Koncepcyjnie przechowuje `regex_iterator` obiekt, którego używa do wyszukiwania zgodności wyrażeń regularnych w sekwencji znaków. Wyodrębnia obiekty typu `sub_match<BidIt>` reprezentujące poddopasowania identyfikowane przez wartości indeksu w przechowywanym wektorze `subs` dla każdego dopasowania wyrażenia regularnego.
+Szablon klasy opisuje stały obiekt iteratora do przodu. Koncepcyjnie zawiera obiekt `regex_iterator`, którego używa do wyszukiwania dopasowania wyrażenia regularnego w sekwencji znaków. Wyodrębnia obiekty typu `sub_match<BidIt>` reprezentujące poddopasowania identyfikowane przez wartości indeksu w przechowywanych `subs` wektorów dla każdego dopasowania wyrażenia regularnego.
 
-Wartość indeksu-1 oznacza sekwencję znaków rozpoczynającą się natychmiast po zakończeniu poprzedniego wyrażenia regularnego lub Zaczynając od początku sekwencji znaków, jeśli nie było żadnego dopasowania poprzedniego wyrażenia regularnego i rozszerzając do, ale nie dołączenie pierwszego znaku bieżącego wyrażenia regularnego lub do końca sekwencji znaków, jeśli nie ma bieżącego dopasowania. Każda inna wartość `idx` indeksu wyznacza zawartość grupy przechwytywania przechowywanej w `it.match[idx]`.
+Wartość indeksu-1 oznacza sekwencję znaków rozpoczynającą się natychmiast po zakończeniu poprzedniego wyrażenia regularnego lub Zaczynając od początku sekwencji znaków, jeśli nie było żadnego dopasowania poprzedniego wyrażenia regularnego i rozszerzając do, ale nie dołączenie pierwszego znaku bieżącego wyrażenia regularnego lub do końca sekwencji znaków, jeśli nie ma bieżącego dopasowania. Każda inna wartość indeksu `idx` wyznacza zawartość grupy przechwytywania przechowywanej w `it.match[idx]`.
 
 ### <a name="members"></a>Elementy członkowskie
 
@@ -80,8 +80,8 @@ Wartość indeksu-1 oznacza sekwencję znaków rozpoczynającą się natychmiast
 |-|-|
 |[difference_type](#difference_type)|Typ różnicy iteratora.|
 |[iterator_category](#iterator_category)|Typ kategorii iteratora.|
-|[pointer](#pointer)|Typ wskaźnika do dopasowania.|
-|[Odwołanie](#reference)|Typ odwołania do poddopasowania.|
+|[przytrzymaj](#pointer)|Typ wskaźnika do dopasowania.|
+|[odwoła](#reference)|Typ odwołania do poddopasowania.|
 |[regex_type](#regex_type)|Typ wyrażenia regularnego do dopasowania.|
 |[value_type](#value_type)|Typ poddopasowania.|
 
@@ -91,13 +91,13 @@ Wartość indeksu-1 oznacza sekwencję znaków rozpoczynającą się natychmiast
 |-|-|
 |[operator!=](#op_neq)|Porównuje Iteratory pod kątem nierówności.|
 |[zakład](#op_star)|Uzyskuje dostęp do wyoznaczonego dopasowania.|
-|[operator++](#op_add_add)|Zwiększa iterator.|
-|[operator==](#op_eq_eq)|Porównuje Iteratory dla równości.|
+|[operator + +](#op_add_add)|Zwiększa iterator.|
+|[operator = =](#op_eq_eq)|Porównuje Iteratory dla równości.|
 |[operator — >](#op_arrow)|Uzyskuje dostęp do wyoznaczonego dopasowania.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<> wyrażeń regularnych
+**Nagłówek:** \<regex >
 
 **Przestrzeń nazw:** std
 
@@ -231,12 +231,12 @@ bool operator!=(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknij*\
+*prawa* \
 Iterator, do którego ma zostać wykonane porównanie.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca `!(*this == right)`wartość.
+Funkcja członkowska zwraca `!(*this == right)`.
 
 ## <a name="op_star"></a>regex_token_iterator:: operator *
 
@@ -248,7 +248,7 @@ const sub_match<BidIt>& operator*();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca `sub_match<BidIt>` obiekt reprezentujący grupę przechwytywania identyfikowaną przez wartość `subs[pos]`indeksu.
+Funkcja członkowska zwraca obiekt `sub_match<BidIt>` reprezentujący grupę przechwytywania identyfikowaną przez wartość indeksu `subs[pos]`.
 
 ## <a name="op_add_add"></a>regex_token_iterator:: operator + +
 
@@ -262,7 +262,7 @@ regex_token_iterator& operator++(int);
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli zapisywany iterator `it` jest iteratorem End-of-Sequence, Pierwszy operator ustawia wartość `pos` przechowywaną na wartość `subs.size()` (w ten sposób iterator End-of-Sequence). W przeciwnym razie operator zwiększa `pos`wartość przechowywaną; Jeśli wynik jest równy wartości `subs.size()` , ustawia wartość `pos` przechowywaną na zero i zwiększa przechowywany iterator `it`. Jeśli zwiększanie składowanego iteratora pozostawia nie równe iteratorowi z końcówką sekwencji, operator nie wykonuje żadnych dalszych operacji. W przeciwnym razie, jeśli koniec poprzedniego dopasowania znajdował się na końcu sekwencji znaków, operator ustawia przechowywaną wartość `pos` do. `subs.size()` W przeciwnym razie operator wielokrotnie zwiększa przechowywaną wartość `pos` do `pos == subs.size()` lub `subs[pos] == -1` (w związku z tym, że następne odwołanie iteratora zwróci ogon sekwencji znaków, jeśli jedna z wartości indeksu wynosi-1). We wszystkich przypadkach operator zwraca obiekt.
+Jeśli zapisywany `it` iteratora jest iteratorem End-of-Sequence, Pierwszy operator ustawia przechowywaną wartość `pos` do wartości `subs.size()` (w związku z tym jest to iteracja końca sekwencji). W przeciwnym razie operator zwiększa przechowywaną wartość `pos`; Jeśli wynik jest równy wartości, `subs.size()` ustawia wartość przechowywane `pos` na zero i zwiększa przechowywany `it` iteratora. Jeśli zwiększanie składowanego iteratora pozostawia nie równe iteratorowi z końcówką sekwencji, operator nie wykonuje żadnych dalszych operacji. W przeciwnym razie, jeśli koniec poprzedniego dopasowania znajdował się na końcu sekwencji znaków, operator ustawia przechowywaną wartość `pos`, aby `subs.size()`. W przeciwnym razie operator wielokrotnie zwiększa przechowywaną wartość `pos` do momentu `pos == subs.size()` lub `subs[pos] == -1` (w związku z tym, że następne odwołanie iteratora zwróci ogon sekwencji znaków, jeśli jedna z wartości indeksu wynosi-1). We wszystkich przypadkach operator zwraca obiekt.
 
 Drugi operator wykonuje kopię obiektu, zwiększa obiekt, a następnie zwraca kopię.
 
@@ -276,12 +276,12 @@ bool operator==(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknij*\
+*prawa* \
 Iterator, do którego ma zostać wykonane porównanie.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca `it == right.it && subs == right.subs && pos == right.pos`wartość.
+Funkcja członkowska zwraca `it == right.it && subs == right.subs && pos == right.pos`.
 
 ## <a name="op_arrow"></a>regex_token_iterator:: operator-&gt;
 
@@ -293,7 +293,7 @@ const sub_match<BidIt> * operator->();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca wskaźnik do `sub_match<BidIt>` obiektu reprezentującego grupę przechwytywania identyfikowaną przez wartość `subs[pos]`indeksu.
+Funkcja członkowska zwraca wskaźnik do obiektu `sub_match<BidIt>` reprezentującego grupę przechwytywania identyfikowaną przez wartość indeksu `subs[pos]`.
 
 ## <a name="pointer"></a>regex_token_iterator::p ointer
 
@@ -342,27 +342,27 @@ regex_token_iterator(BidIt first, BidIt last,
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszego*\
+*pierwszy* \
 Początek sekwencji do dopasowania.
 
-*ostatniego*\
+*ostatni* \
 Koniec sekwencji do dopasowania.
 
-*Eksport*\
+*\*
 Wyrażenie regularne dla dopasowania.
 
-*n*\
+\ *f*
 Flagi dla dopasowania.
 
 ### <a name="remarks"></a>Uwagi
 
 Pierwszy Konstruktor konstruuje iterator końca sekwencji.
 
-Drugi Konstruktor `it` konstruuje obiekt, którego zainicjowano iterator, do `regex_iterator<BidIt, Elem, RXtraits>(first, last, re, f)`którego przechowywany wektor `subs` ma dokładnie jedną liczbę całkowitą, z `submatch`wartością i której wartość `pos` składowana jest równa zero. Uwaga: obiekt wyniku wyodrębnia poddopasowanie identyfikowane przez wartość `submatch` indeksu dla każdego pomyślnego dopasowania wyrażenia regularnego.
+Drugi Konstruktor konstruuje obiekt, którego przechowywany `it` iteratora jest zainicjowany do `regex_iterator<BidIt, Elem, RXtraits>(first, last, re, f)`, którego składowany wektor `subs` przechowuje dokładnie jedną liczbę całkowitą, z wartością `submatch` i której przechowywana wartość `pos` równa zero. Uwaga: obiekt wyniku wyodrębnia poddopasowanie identyfikowane przez wartość indeksu `submatch` dla każdego pomyślnego dopasowania wyrażenia regularnego.
 
-Trzeci Konstruktor `it` konstruuje obiekt, którego zainicjowano iterator, do `regex_iterator<BidIt, Elem, RXtraits>(first, last, re, f)`którego przechowywany wektor `subs` przechowuje kopię argumentu `submatches`konstruktora, a wartość `pos` przechowywana jest równa zero.
+Trzeci Konstruktor konstruuje obiekt, którego przechowywany `it` iteratora jest zainicjowany do `regex_iterator<BidIt, Elem, RXtraits>(first, last, re, f)`, którego przechowywane `subs` wektora przechowuje kopię argumentu konstruktora `submatches`, a wartość przechowywana `pos` równa zero.
 
-Czwarty Konstruktor konstruuje `it` obiekt, którego składowany iterator jest zainicjowany, `N` którego przechowywany `subs` wektor przechowuje wartości wskazywane przez argument `submatches`konstruktora i który `regex_iterator<BidIt, Elem, RXtraits>(first, last, re, f)`jest przechowywany wartość `pos` jest równa zero.
+Czwarty Konstruktor konstruuje obiekt, którego przechowywany `it` iteratora jest zainicjowany do `regex_iterator<BidIt, Elem, RXtraits>(first, last, re, f)`, którego przechowywane `subs` wektora przechowuje wartości `N` wskazywane przez argument konstruktora `submatches`, a których przechowywana wartość `pos` równa zero.
 
 ## <a name="regex_type"></a>regex_token_iterator::regex_type
 
@@ -390,11 +390,11 @@ Typ jest synonimem dla `sub_match<BidIt>`, gdzie `BidIt` jest parametrem szablon
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<regex>](../standard-library/regex.md)\
-[Klasa regex_constants](../standard-library/regex-constants-class.md)\
-[Klasa regex_error](../standard-library/regex-error-class.md)\
-[\<Funkcje > wyrażenia regularnego](../standard-library/regex-functions.md)\
-[Klasa regex_iterator](../standard-library/regex-iterator-class.md)\
-[\<Operatory > wyrażenia regularnego](../standard-library/regex-operators.md)\
-[Klasa regex_traits](../standard-library/regex-traits-class.md)\
-[\<wyrażenie regularne > Typedefs](../standard-library/regex-typedefs.md)
+[\<regex >](../standard-library/regex.md) \
+[Klasa regex_constants](../standard-library/regex-constants-class.md) \
+[Klasa regex_error](../standard-library/regex-error-class.md) \
+[\<regex funkcje >](../standard-library/regex-functions.md) \
+[Klasa regex_iterator](../standard-library/regex-iterator-class.md) \
+[\<regex operatory >](../standard-library/regex-operators.md) \
+[Klasa regex_traits](../standard-library/regex-traits-class.md) \
+[\<regex > Typedefs](../standard-library/regex-typedefs.md)

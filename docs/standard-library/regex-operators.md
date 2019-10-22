@@ -1,5 +1,5 @@
 ---
-title: '&lt;Operatory&gt; wyrażenia regularnego'
+title: Operatory &gt; &lt;regex
 ms.date: 11/04/2016
 f1_keywords:
 - regex/std::operator!=
@@ -10,20 +10,20 @@ f1_keywords:
 - regex/std::operator==
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: 829b4cf50b02db0a88d61a8801c1e21ddb470344
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8795d0f1c387fb87c44f2d68c45aa27d1edbfb79
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460135"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689071"
 ---
-# <a name="ltregexgt-operators"></a>&lt;Operatory&gt; wyrażenia regularnego
+# <a name="ltregexgt-operators"></a>Operatory &gt; &lt;regex
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[zakład&gt;](#op_gt)|[zakład&gt;=](#op_gt_eq)|
-|[zakład&lt;](#op_lt)|[zakład&lt;&lt;](#op_lt_lt)|[zakład&lt;=](#op_lt_eq)|
-|[operator==](#op_eq_eq)|
+|[operator!=](#op_neq)|[&gt; operatora](#op_gt)|[&gt; operatora =](#op_gt_eq)|
+|[&lt; operatora](#op_lt)|[&lt; operatora &lt;](#op_lt_lt)|[&lt; operatora =](#op_lt_eq)|
+|[operator = =](#op_eq_eq)|
 
 ## <a name="op_neq"></a>operator! =
 
@@ -66,24 +66,24 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parametry
 
-*BidIt*\
+*BidIt* \
 Typ iteratora.
 
-*IOtraits*\
+*IOtraits* \
 Klasa cech ciągu.
 
-*Alokacj*\
+@No__t_1 *alokacji*
 Klasa alokatora.
 
-*lewym*\
+\ *lewo*
 Lewy obiekt do porównania.
 
-*Kliknij*\
+*prawa* \
 Odpowiedni obiekt do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Każdy operator szablonu zwraca `!(left == right)`wartość.
+Każdy operator szablonu zwraca `!(left == right)`.
 
 ### <a name="example"></a>Przykład
 
@@ -144,7 +144,7 @@ sub != "aab" == true
 sub != 'a' == true
 ```
 
-## <a name="op_lt"></a>zakład&lt;
+## <a name="op_lt"></a>&lt; operatora
 
 Mniejsze niż porównanie dla różnych obiektów.
 
@@ -181,19 +181,19 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametry
 
-*BidIt*\
+*BidIt* \
 Typ iteratora.
 
-*IOtraits*\
+*IOtraits* \
 Klasa cech ciągu.
 
-*Alokacj*\
+@No__t_1 *alokacji*
 Klasa alokatora.
 
-*lewym*\
+\ *lewo*
 Lewy obiekt do porównania.
 
-*Kliknij*\
+*prawa* \
 Odpowiedni obiekt do porównania.
 
 ### <a name="remarks"></a>Uwagi
@@ -254,7 +254,7 @@ sub < "aab" == true
 sub < 'a' == false
 ```
 
-## <a name="op_lt_lt"></a>zakład&lt;&lt;
+## <a name="op_lt_lt"></a>&lt; operatora &lt;
 
 Wstawia element sub_match w strumieniu.
 
@@ -266,27 +266,27 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>Parametry
 
-*Elem*\
+*Elem* \
 Typ elementu.
 
-*IOtraits*\
+*IOtraits* \
 Klasa cech ciągu.
 
-*Alokacj*\
+@No__t_1 *alokacji*
 Klasa alokatora.
 
-*BidIt*\
+*BidIt* \
 Typ iteratora.
 
-*Macintosh*\
+\ *systemu operacyjnego*
 Strumień danych wyjściowych.
 
-*Kliknij*\
+*prawa* \
 Obiekt do wstawienia.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator szablonu zwraca wartość `os << right.str()`.
+Operator szablonu zwraca `os << right.str()`.
 
 ### <a name="example"></a>Przykład
 
@@ -314,7 +314,7 @@ int main()
 whole match: caaa
 ```
 
-## <a name="op_lt_eq"></a>zakład&lt;=
+## <a name="op_lt_eq"></a>&lt; operatora =
 
 Mniejsze niż lub równe porównanie dla różnych obiektów.
 
@@ -351,24 +351,24 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametry
 
-*BidIt*\
+*BidIt* \
 Typ iteratora.
 
-*IOtraits*\
+*IOtraits* \
 Klasa cech ciągu.
 
-*Alokacj*\
+@No__t_1 *alokacji*
 Klasa alokatora.
 
-*lewym*\
+\ *lewo*
 Lewy obiekt do porównania.
 
-*Kliknij*\
+*prawa* \
 Odpowiedni obiekt do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Każdy operator szablonu zwraca `!(right < left)`wartość.
+Każdy operator szablonu zwraca `!(right < left)`.
 
 ### <a name="example"></a>Przykład
 
@@ -465,19 +465,19 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parametry
 
-*BidIt*\
+*BidIt* \
 Typ iteratora.
 
-*IOtraits*\
+*IOtraits* \
 Klasa cech ciągu.
 
-*Alokacj*\
+@No__t_1 *alokacji*
 Klasa alokatora.
 
-*lewym*\
+\ *lewo*
 Lewy obiekt do porównania.
 
-*Kliknij*\
+*prawa* \
 Odpowiedni obiekt do porównania.
 
 ### <a name="remarks"></a>Uwagi
@@ -486,11 +486,11 @@ Każdy operator szablonu konwertuje każdy z argumentów na typ String i zwraca 
 
 Gdy operator szablonu konwertuje jego argumenty na typ ciągu, używa pierwszego z następujących przekształceń:
 
-argumenty, których typy są specjalizacją klasy `match_results` szablonu lub `sub_match` `str` są konwertowane przez wywołanie funkcji składowej;
+argumenty, których typy są specjalizacją szablonu klasy `match_results` lub `sub_match` są konwertowane przez wywołanie funkcji składowej `str`;
 
-argumenty, których typy są specjalizacją klasy `basic_string` szablonu, nie są zmieniane;
+argumenty, których typy są specjalizacją szablonu klasy `basic_string` są niezmienione;
 
-wszystkie inne typy argumentów są konwertowane przez przekazanie wartości argumentu do konstruktora w celu uzyskania odpowiedniej specjalizacji klasy `basic_string`szablonu.
+wszystkie inne typy argumentów są konwertowane przez przekazanie wartości argumentu do konstruktora w celu uzyskania odpowiedniej specjalizacji szablonu klasy `basic_string`.
 
 ### <a name="example"></a>Przykład
 
@@ -551,7 +551,7 @@ sub == "aab" == false
 sub == 'a' == false
 ```
 
-## <a name="op_gt"></a>zakład&gt;
+## <a name="op_gt"></a>&gt; operatora
 
 Większe niż porównanie dla różnych obiektów.
 
@@ -588,24 +588,24 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametry
 
-*BidIt*\
+*BidIt* \
 Typ iteratora.
 
-*IOtraits*\
+*IOtraits* \
 Klasa cech ciągu.
 
-*Alokacj*\
+@No__t_1 *alokacji*
 Klasa alokatora.
 
-*lewym*\
+\ *lewo*
 Lewy obiekt do porównania.
 
-*Kliknij*\
+*prawa* \
 Odpowiedni obiekt do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Każdy operator szablonu zwraca `right < left`wartość.
+Każdy operator szablonu zwraca `right < left`.
 
 ### <a name="example"></a>Przykład
 
@@ -661,7 +661,7 @@ sub > "aab" == false
 sub > 'a' == true
 ```
 
-## <a name="op_gt_eq"></a>zakład&gt;=
+## <a name="op_gt_eq"></a>&gt; operatora =
 
 Większe niż lub równe porównanie dla różnych obiektów.
 
@@ -698,24 +698,24 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametry
 
-*BidIt*\
+*BidIt* \
 Typ iteratora.
 
-*IOtraits*\
+*IOtraits* \
 Klasa cech ciągu.
 
-*Alokacj*\
+@No__t_1 *alokacji*
 Klasa alokatora.
 
-*lewym*\
+\ *lewo*
 Lewy obiekt do porównania.
 
-*Kliknij*\
+*prawa* \
 Odpowiedni obiekt do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Każdy operator szablonu zwraca `!(left < right)`wartość.
+Każdy operator szablonu zwraca `!(left < right)`.
 
 ### <a name="example"></a>Przykład
 
@@ -773,11 +773,11 @@ sub >= 'a' == true
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<regex>](../standard-library/regex.md)\
-[Klasa regex_constants](../standard-library/regex-constants-class.md)\
-[Klasa regex_error](../standard-library/regex-error-class.md)\
-[\<Funkcje > wyrażenia regularnego](../standard-library/regex-functions.md)\
-[Klasa regex_iterator](../standard-library/regex-iterator-class.md)\
-[Klasa regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
-[Klasa regex_traits](../standard-library/regex-traits-class.md)\
-[\<wyrażenie regularne > Typedefs](../standard-library/regex-typedefs.md)
+[\<regex >](../standard-library/regex.md) \
+[Klasa regex_constants](../standard-library/regex-constants-class.md) \
+[Klasa regex_error](../standard-library/regex-error-class.md) \
+[\<regex funkcje >](../standard-library/regex-functions.md) \
+[Klasa regex_iterator](../standard-library/regex-iterator-class.md) \
+[Klasa regex_token_iterator](../standard-library/regex-token-iterator-class.md) \
+[Klasa regex_traits](../standard-library/regex-traits-class.md) \
+[\<regex > Typedefs](../standard-library/regex-typedefs.md)

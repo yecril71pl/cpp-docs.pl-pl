@@ -134,16 +134,16 @@ helpviewer_keywords:
 - std::unordered_set::size
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
-ms.openlocfilehash: 739e39dcb5dd79cfaae8875c5166eb7015134430
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 1aebb30649d138b22c5b9dae95662f84a6bf39f2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243439"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684104"
 ---
-# <a name="unorderedset-class"></a>unordered_set — Klasa
+# <a name="unordered_set-class"></a>unordered_set — Klasa
 
-Klasa szablonu opisuje obiekt, który kontroluje różnej długości sekwencje elementów typu `const Key`. Sekwencja jest słabo uporządkowana według funkcji mieszania, która dzieli sekwencję na uporządkowany zestaw podsekwencji, zwanych przedziałami, segmentami lub pakietami. W ramach każdego przedziału funkcja porównania określa, czy jakaś para elementów ma równoważną kolejność. Każdy element służy jako zarówno klucz sortowania, jak i wartość. Sekwencja jest reprezentowana w sposób, który pozwala na wyszukiwanie, wstawianie i usuwanie dowolnego elementu z wielu operacji, które mogą być niezależne od liczby elementów w sekwencji (stały czas), co najmniej kiedy wszystkie przedziały są w przybliżeniu jednakowej długości. W najgorszym przypadku, gdy wszystkie elementy znajdują się w jednym przedziale, liczba operacji jest proporcjonalna do liczby elementów w sekwencji (liniowy czas). Ponadto, wstawianie elementu nie unieważnia iteratorów, a usuwanie elementu unieważnia tylko te iteratory, które wskazują na usunięty element.
+Szablon klasy opisuje obiekt, który kontroluje różnej długości sekwencje elementów typu `const Key`. Sekwencja jest słabo uporządkowana według funkcji mieszania, która dzieli sekwencję na uporządkowany zestaw podsekwencji, zwanych przedziałami, segmentami lub pakietami. W ramach każdego przedziału funkcja porównania określa, czy jakaś para elementów ma równoważną kolejność. Każdy element służy jako zarówno klucz sortowania, jak i wartość. Sekwencja jest reprezentowana w sposób, który pozwala na wyszukiwanie, wstawianie i usuwanie dowolnego elementu z wielu operacji, które mogą być niezależne od liczby elementów w sekwencji (stały czas), co najmniej kiedy wszystkie przedziały są w przybliżeniu jednakowej długości. W najgorszym przypadku, gdy wszystkie elementy znajdują się w jednym przedziale, liczba operacji jest proporcjonalna do liczby elementów w sekwencji (liniowy czas). Ponadto, wstawianie elementu nie unieważnia iteratorów, a usuwanie elementu unieważnia tylko te iteratory, które wskazują na usunięty element.
 
 ## <a name="syntax"></a>Składnia
 
@@ -158,16 +158,16 @@ class unordered_set;
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz*\
+*Klucz* \
 Typ klucza.
 
-*Skrót*\
+@No__t_1 *skrótu*
 Typ obiektu funkcji mieszania.
 
-*P.* \
+*Pred* \
 Typ obiektu funkcji porównywania równości.
 
-*Alokacji*\
+@No__t_1 *alokacji*
 Klasa alokatora.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -182,13 +182,13 @@ Klasa alokatora.
 |[const_pointer](#const_pointer)|Typ stałego wskaźnika do elementu.|
 |[const_reference](#const_reference)|Typ stałego odwołania do elementu.|
 |[difference_type](#difference_type)|Typ odległości ze znakiem między dwoma elementami.|
-|[hasher](#hasher)|Typ funkcji mieszania.|
-|[iterator](#iterator)|Typ iteratora dla kontrolowanej sekwencji.|
+|[programu tworzącego skróty](#hasher)|Typ funkcji mieszania.|
+|[Iterator](#iterator)|Typ iteratora dla kontrolowanej sekwencji.|
 |[key_equal](#key_equal)|Typ funkcji porównywania.|
 |[key_type](#key_type)|Typ klucza sortowania.|
 |[local_iterator](#local_iterator)|Typ iteratora przedziału dla kontrolowanej sekwencji.|
-|[pointer](#pointer)|Typ wskaźnika do elementu.|
-|[Odwołanie](#reference)|Typ odwołania do elementu.|
+|[przytrzymaj](#pointer)|Typ wskaźnika do elementu.|
+|[odwoła](#reference)|Typ odwołania do elementu.|
 |[size_type](#size_type)|Typ odległości bez znaku między dwoma elementami.|
 |[value_type](#value_type)|Typ elementu.|
 
@@ -196,51 +196,51 @@ Klasa alokatora.
 
 |||
 |-|-|
-|[begin](#begin)|Określa początek kontrolowanej sekwencji.|
-|[bucket](#bucket)|Pobiera numer przedziału dla wartości klucza.|
+|[zaczną](#begin)|Określa początek kontrolowanej sekwencji.|
+|[porcj](#bucket)|Pobiera numer przedziału dla wartości klucza.|
 |[bucket_count](#bucket_count)|Pobiera liczbę przedziałów.|
 |[bucket_size](#bucket_size)|Pobiera rozmiar przedziału.|
 |[cbegin](#cbegin)|Określa początek kontrolowanej sekwencji.|
 |[cend](#cend)|Określa koniec kontrolowanej sekwencji.|
-|[Usuń zaznaczenie](#clear)|Usuwa wszystkie elementy.|
-|[Liczba](#count)|Wyszukuje liczbę elementów pasujących do określonego klucza.|
-|[emplace —](#emplace)|Dodaje element skonstruowany na miejscu.|
+|[Wyczyść](#clear)|Usuwa wszystkie elementy.|
+|[liczbą](#count)|Wyszukuje liczbę elementów pasujących do określonego klucza.|
+|[emplace](#emplace)|Dodaje element skonstruowany na miejscu.|
 |[emplace_hint](#emplace_hint)|Dodaje element skonstruowany na miejscu, z podpowiedzią.|
-|[pusty](#empty)|Sprawdza, czy nie ma żadnych elementów.|
-|[koniec](#end)|Określa koniec kontrolowanej sekwencji.|
+|[ciągiem](#empty)|Sprawdza, czy nie ma żadnych elementów.|
+|[punktów](#end)|Określa koniec kontrolowanej sekwencji.|
 |[equal_range](#equal_range)|Wyszukuje zakres, który odpowiada określonemu kluczowi.|
-|[wymazywanie](#erase)|Usuwa elementy z określonych pozycji.|
-|[Znajdź](#find)|Wyszukuje element, który odpowiada określonemu kluczowi.|
+|[Wyłączanie](#erase)|Usuwa elementy z określonych pozycji.|
+|[wyświetlić](#find)|Wyszukuje element, który odpowiada określonemu kluczowi.|
 |[get_allocator](#get_allocator)|Pobiera przechowywany obiekt alokatora.|
 |[hash_function](#hash)|Pobiera przechowywany obiekt funkcji mieszania.|
-|[Wstaw](#insert)|Dodaje elementy.|
+|[wstawienia](#insert)|Dodaje elementy.|
 |[key_eq](#key_eq)|Pobiera przechowywany obiekt funkcji porównywania.|
 |[load_factor](#load_factor)|Oblicza średnią liczbę elementów na przedział.|
 |[max_bucket_count](#max_bucket_count)|Pobiera maksymalną liczbę przedziałów.|
 |[max_load_factor](#max_load_factor)|Pobiera lub ustawia maksymalną liczbę elementów na przedział.|
 |[max_size](#max_size)|Pobiera maksymalny rozmiar kontrolowanej sekwencji.|
 |[rehash —](#rehash)|Przebudowuje tabelę mieszania.|
-|[Rozmiar](#size)|Liczy liczbę elementów.|
-|[swap](#swap)|Zamienia zawartości dwóch kontenerów.|
+|[zmienia](#size)|Liczy liczbę elementów.|
+|[wymiany](#swap)|Zamienia zawartości dwóch kontenerów.|
 |[unordered_set](#unordered_set)|Konstruuje obiekt kontenera.|
 
 ### <a name="operators"></a>Operatory
 
 |||
 |-|-|
-|[unordered_set::operator=](#op_eq)|Kopiuje tabelę mieszania.|
+|[unordered_set:: operator =](#op_eq)|Kopiuje tabelę mieszania.|
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekt porządkuje sekwencję którą kontroluje, przez wywołanie dwóch przechowywanych obiektów, obiektu funkcji porównywania typu[unordered_set::key_equal](#key_equal) i obiektu funkcji mieszania typu[unordered_set::hasher](#hasher). Dostęp do pierwszego przechowywanego obiektu przez wywołanie funkcji elementu członkowskiego[unordered_set::key_eq](#key_eq)`()`; i dostęp do drugiego przechowywanego obiektu przez wywołanie funkcji elementu członkowskiego[unordered_set::hash_function](#hash) `()`. W szczególności dla wszystkich wartości `X` i `Y` typu `Key`, wywołanie `key_eq()(X, Y)` zwraca wartość true tylko wtedy, gdy dwie wartości argumentu mają równoważną kolejność; wywołanie `hash_function()(keyval)` daje w wyniku rozkład wartości typu `size_t`. W odróżnieniu od klasy szablonu[unordered_multiset, klasa](../standard-library/unordered-multiset-class.md), obiekt klasy szablonu `unordered_set` zapewnia, że `key_eq()(X, Y)` ma zawsze wartość false dla którychkolwiek dwóch elementów kontrolowanej sekwencji. (Klucze są unikatowe).
+Obiekt porządkuje sekwencję, która kontroluje, wywołując dwa przechowywane obiekty, obiekt funkcji porównania typu [unordered_set:: key_equal](#key_equal) i obiektu funkcji hash typu [unordered_set:: Hasher](#hasher). Użytkownik uzyskuje dostęp do pierwszego przechowywanego obiektu przez wywołanie funkcji składowej [unordered_set:: key_eq](#key_eq) `()`; a dostęp do drugiego przechowywanego obiektu przez wywołanie funkcji składowej [unordered_set:: hash_function](#hash) `()`. W odniesieniu do wszystkich wartości `X` i `Y` typu `Key` wywołanie `key_eq()(X, Y)` zwraca wartość true tylko wtedy, gdy wartości dwóch argumentów mają równoważne porządkowanie; Wywołanie `hash_function()(keyval)` daje rozkład wartości typu `size_t`. W przeciwieństwie do [klasy unordered_multiset](../standard-library/unordered-multiset-class.md)szablonu klasy, obiekt typu `unordered_set` zapewnia, że `key_eq()(X, Y)` zawsze ma wartość false dla każdego z dwóch elementów kontrolowanej sekwencji. (Klucze są unikatowe).
 
-Obiekt przechowuje również współczynnik maksymalnego obciążenia, który określa maksymalną żądaną średnią liczbę elementów na przedział. Jeśli Wstawianie elementu powoduje, że[unordered_set::load_factor](#load_factor) `()` przekracza współczynnik maksymalnego obciążenia, kontener zwiększa liczbę przedziałów i odbudowuje tabelę mieszania, stosownie do potrzeb.
+Obiekt przechowuje również współczynnik maksymalnego obciążenia, który określa maksymalną żądaną średnią liczbę elementów na przedział. Jeśli wstawianie elementu powoduje, że [unordered_set:: load_factor](#load_factor) `()` przekroczenie maksymalnego współczynnika obciążenia, kontener zwiększa liczbę zasobników i ponownie kompiluje tablicę skrótów zgodnie z wymaganiami.
 
 Rzeczywista kolejność elementów w kontrolowanej sekwencji zależy od funkcji mieszania, funkcji porównywania, kolejności wstawiania, współczynnika maksymalnego obciążenia i bieżącej liczby przedziałów. Na ogół nie można przewidzieć kolejności elementów w kontrolowanej sekwencji. Można jednak zawsze mieć pewność, że dowolny podzbiór elementów, które mają równoważną kolejność, są obok siebie w kontrolowanej sekwencji.
 
-Obiekt przydziela i zwalnia pamięć dla sekwencji za pośrednictwem przechowywanego obiektu alokatora typu[unordered_set::allocator_type](#allocator_type). Taki obiekt alokatora musi mieć ten sam interfejs zewnętrzny co obiekt klasy szablonu `allocator`. Należy zauważyć, że przechowywany obiekt alokatora nie jest kopiowany po przypisaniu obiektu kontenera.
+Obiekt przydziela i zwalnia magazyn dla sekwencji, która kontroluje przez przechowywany obiekt alokatora typu [unordered_set:: allocator_type](#allocator_type). Taki obiekt alokatora musi mieć ten sam interfejs zewnętrzny co obiekt typu `allocator`. Należy zauważyć, że przechowywany obiekt alokatora nie jest kopiowany po przypisaniu obiektu kontenera.
 
-## <a name="allocator_type"></a>  unordered_set::allocator_type
+## <a name="allocator_type"></a>unordered_set::allocator_type
 
 Typ alokatora do zarządzania pamięcią.
 
@@ -278,9 +278,9 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="begin"></a> Rozpocznij
+## <a name="begin"></a>zaczną
 
-Określa początek kontrolowanej sekwencji lub przedział.
+Określa początek kontrolowanej sekwencji lub przedziału.
 
 ```cpp
 iterator begin();
@@ -294,12 +294,12 @@ const_local_iterator begin(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nbucket*\
-Numer przedziału.
+*nbucket* \
+Numer zasobnika.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsze dwie funkcje Członkowskie zwracają iterator do przodu, na którą wskazuje na pierwszy element sekwencji (lub tuż za koniec pustej sekwencji). Ostatnie dwie funkcje Członkowskie zwracają iterator do przodu, na którą wskazuje na pierwszy element zasobnika *nbucket* (lub tuż za koniec pusty zasobnik).
+Pierwsze dwie funkcje członkowskie zwracają iterator do przodu, który wskazuje na pierwszy element sekwencji (lub tuż poza końcem pustej sekwencji). Ostatnie dwie funkcje członkowskie zwracają iterator do przodu, który wskazuje na pierwszy element zasobnika *nbucket* (lub tuż poza końcem pustego zasobnika).
 
 ### <a name="example"></a>Przykład
 
@@ -357,7 +357,7 @@ int main()
 [a]
 ```
 
-## <a name="bucket"></a> Zasobnik
+## <a name="bucket"></a>porcj
 
 Pobiera numer przedziału dla wartości klucza.
 
@@ -367,12 +367,12 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*\
-Wartość klucza do mapowania.
+*keyval* \
+Wartość klucza do zamapowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca numer przedziału obecnie odpowiadający wartości klucza *keyval*.
+Funkcja członkowska zwraca numer zasobnika aktualnie odpowiadający wartości klucza *keyval*.
 
 ### <a name="example"></a>Przykład
 
@@ -412,7 +412,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="bucket_count"></a> bucket_count —
+## <a name="bucket_count"></a>bucket_count
 
 Pobiera liczbę przedziałów.
 
@@ -422,7 +422,7 @@ size_type bucket_count() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca bieżącej liczby przedziałów.
+Funkcja członkowska zwraca bieżącą liczbę zasobników.
 
 ### <a name="example"></a>Przykład
 
@@ -497,9 +497,9 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="bucket_size"></a> bucket_size —
+## <a name="bucket_size"></a>bucket_size
 
-Pobiera rozmiar przedziału
+Pobiera rozmiar zasobnika
 
 ```cpp
 size_type bucket_size(size_type nbucket) const;
@@ -507,12 +507,12 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nbucket*\
-Numer przedziału.
+*nbucket* \
+Numer zasobnika.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje elementów członkowskich zwraca rozmiar numer przedziału *nbucket*.
+Funkcja członkowska zwraca rozmiar zasobnika *nbucket*.
 
 ### <a name="example"></a>Przykład
 
@@ -552,9 +552,9 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="cbegin"></a> cbegin —
+## <a name="cbegin"></a>cbegin
 
-Zwraca **const** iterator odnoszący się do pierwszego elementu w zakresie.
+Zwraca iterator **const** , który dotyczy pierwszego elementu w zakresie.
 
 ```cpp
 const_iterator cbegin() const;
@@ -562,13 +562,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A **const** iterator dostępu do przodu, który wskazuje na pierwszy element zakresu lub lokalizację tuż poza końcem pustego zakresu (dla pustego zakresu, `cbegin() == cend()`).
+Iterator **const** dostęp do przodu, który wskazuje na pierwszy element zakresu lub lokalizację tuż poza końcem pustego zakresu (dla pustego zakresu, `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Uwagi
 
-Wartością zwracaną `cbegin`, nie można modyfikować elementów w zakresie.
+Z wartością zwracaną `cbegin` nie można modyfikować elementów w zakresie.
 
-Można użyć tej funkcji elementu członkowskiego zamiast `begin()` funkcja elementu członkowskiego w celu zagwarantowania, że wartość zwracana jest `const_iterator`. Zazwyczaj jest używana w połączeniu z[automatycznie](../cpp/auto-cpp.md) wpisz słowem kluczowym dedukcji, jak pokazano w poniższym przykładzie. W tym przykładzie należy wziąć pod uwagę `Container` jako modyfikowalny (nie - **const**) kontener dowolnego rodzaju, który obsługuje `begin()` i `cbegin()`.
+Można użyć tej funkcji elementu członkowskiego zamiast funkcji składowej `begin()`, aby zagwarantować, że wartość zwracana jest `const_iterator`. Zwykle jest używany w połączeniu z słowem kluczowym odejmowania [autotype,](../cpp/auto-cpp.md) jak pokazano w poniższym przykładzie. W tym przykładzie Rozważmy, że `Container` być kontenerem modyfikowalnym (innym niż **const**) dowolnego rodzaju, który obsługuje `begin()` i `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -578,9 +578,9 @@ auto i2 = Container.cbegin();
 // i2 isContainer<T>::const_iterator
 ```
 
-## <a name="cend"></a> cend
+## <a name="cend"></a>cend
 
-Zwraca **const** iterator adresujący lokalizację tuż za ostatnim elementem w zakresie.
+Zwraca iterator **const** , który odnosi się do lokalizacji jedynie poza ostatnim elementem w zakresie.
 
 ```cpp
 const_iterator cend() const;
@@ -588,13 +588,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A **const** iterator dostępu do przodu, który wskazuje tuż za koniec zakresu.
+Iterator **const** dostępu do przodu, który wskazuje tuż poza końcem zakresu.
 
 ### <a name="remarks"></a>Uwagi
 
-`cend` Służy do sprawdzenia, czy iterator minął koniec swojego zakresu.
+`cend` służy do sprawdzania, czy iterator przeszedł koniec zakresu.
 
-Można użyć tej funkcji elementu członkowskiego zamiast `end()` funkcja elementu członkowskiego w celu zagwarantowania, że wartość zwracana jest `const_iterator`. Zazwyczaj jest używana w połączeniu z[automatycznie](../cpp/auto-cpp.md) wpisz słowem kluczowym dedukcji, jak pokazano w poniższym przykładzie. W tym przykładzie należy wziąć pod uwagę `Container` jako modyfikowalny (nie - **const**) kontener dowolnego rodzaju, który obsługuje `end()` i `cend()`.
+Można użyć tej funkcji elementu członkowskiego zamiast funkcji składowej `end()`, aby zagwarantować, że wartość zwracana jest `const_iterator`. Zwykle jest używany w połączeniu z słowem kluczowym odejmowania [autotype,](../cpp/auto-cpp.md) jak pokazano w poniższym przykładzie. W tym przykładzie Rozważmy, że `Container` być kontenerem modyfikowalnym (innym niż **const**) dowolnego rodzaju, który obsługuje `end()` i `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -604,9 +604,9 @@ auto i2 = Container.cend();
 // i2 isContainer<T>::const_iterator
 ```
 
-Wartość zwrócona przez obiekt `cend` nie należy usuwać odwołania.
+Nie należy wywoływać wartości zwracanej przez `cend`.
 
-## <a name="clear"></a> Usuń zaznaczenie
+## <a name="clear"></a>Wyczyść
 
 Usuwa wszystkie elementy.
 
@@ -616,7 +616,7 @@ void clear();
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania funkcji elementu członkowskiego[unordered_set::erase](#erase) `(` [unordered_set::begin](#begin) `(),` [unordered_set::end](#end)`())`.
+Funkcja członkowska wywołuje [unordered_set:: erase](#erase) `(` [unordered_set:: BEGIN](#begin) `(),` [unordered_set:: end](#end) `())`.
 
 ### <a name="example"></a>Przykład
 
@@ -670,7 +670,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="const_iterator"></a> const_iterator
+## <a name="const_iterator"></a>const_iterator
 
 Typ iteratora stałego dla kontrolowanej sekwencji.
 
@@ -680,7 +680,7 @@ typedef T1 const_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może służyć jako stały iterator do przodu dla kontrolowanej sekwencji. Jest on opisany tutaj jako synonim dla typu zdefiniowanego w implementacji `T1`.
+Typ opisuje obiekt, który może działać jako ciągły iterator do przodu dla kontrolowanej sekwencji. Jest on opisany tutaj jako synonim dla typu zdefiniowanego przez implementację `T1`.
 
 ### <a name="example"></a>Przykład
 
@@ -712,7 +712,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="const_local_iterator"></a> const_local_iterator
+## <a name="const_local_iterator"></a>const_local_iterator
 
 Typ iteratora stałego przedziału dla kontrolowanej sekwencji.
 
@@ -722,7 +722,7 @@ typedef T5 const_local_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może służyć jako stały iterator do przodu dla przedziału. Jest on opisany tutaj jako synonim dla typu zdefiniowanego w implementacji `T5`.
+Typ opisuje obiekt, który może obsłużyć ciągły iterator do przodu dla przedziału. Jest on opisany tutaj jako synonim dla typu zdefiniowanego przez implementację `T5`.
 
 ### <a name="example"></a>Przykład
 
@@ -759,7 +759,7 @@ int main()
 [a]
 ```
 
-## <a name="const_pointer"></a> const_pointer
+## <a name="const_pointer"></a>const_pointer
 
 Typ stałego wskaźnika do elementu.
 
@@ -769,7 +769,7 @@ typedef Alloc::const_pointer const_pointer;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może służyć jako stały wskaźnik do elementu w kontrolowanej sekwencji.
+Typ opisuje obiekt, który może obsłużyć jako stały wskaźnik do elementu kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -804,7 +804,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="const_reference"></a> const_reference —
+## <a name="const_reference"></a>const_reference
 
 Typ stałego odwołania do elementu.
 
@@ -814,7 +814,7 @@ typedef Alloc::const_reference const_reference;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może służyć jako stałe odwołanie do elementu w kontrolowanej sekwencji.
+Typ opisuje obiekt, który może stanowić stałe odwołanie do elementu kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -849,7 +849,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="count"></a> Liczba
+## <a name="count"></a>liczbą
 
 Wyszukuje liczbę elementów pasujących do określonego klucza.
 
@@ -859,12 +859,12 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*\
+*keyval* \
 Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Element członkowski funkcji zwraca liczbę elementów w zakresie rozdzielone[unordered_set::equal_range](#equal_range)`(keyval)`.
+Funkcja członkowska zwraca liczbę elementów w zakresie ograniczonym przez [unordered_set:: equal_range](#equal_range) `(keyval)`.
 
 ### <a name="example"></a>Przykład
 
@@ -903,7 +903,7 @@ count('b') == 1
 count('C') == 0
 ```
 
-## <a name="difference_type"></a> difference_type
+## <a name="difference_type"></a>difference_type
 
 Typ odległości ze znakiem między dwoma elementami.
 
@@ -913,7 +913,7 @@ typedef T3 difference_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ liczby całkowitej ze znakiem opisuje obiekt, który może reprezentować różnica między adresami którychkolwiek dwóch elementów w kontrolowanej sekwencji. Jest on opisany tutaj jako synonim dla typu zdefiniowanego w implementacji `T3`.
+Typ Liczba całkowita ze znakiem opisuje obiekt, który może reprezentować różnicę między adresami wszystkich dwóch elementów w kontrolowanej sekwencji. Jest on opisany tutaj jako synonim dla typu zdefiniowanego przez implementację `T3`.
 
 ### <a name="example"></a>Przykład
 
@@ -959,9 +959,9 @@ end()-begin() == 3
 begin()-end() == -3
 ```
 
-## <a name="emplace"></a> emplace —
+## <a name="emplace"></a>emplace
 
-Wstawia element skonstruowany w miejscu (nie kopiowania lub przenoszenia operacji).
+Wstawia element skonstruowany w miejscu (nie są wykonywane żadne operacje kopiowania ani przenoszenia).
 
 ```cpp
 template <class... Args>
@@ -972,26 +972,26 @@ Args&&... args);
 
 ### <a name="parameters"></a>Parametry
 
-*argumenty*\
-Argumenty przekazywane do skonstruowania elementu mają być wstawione do unordered_set, chyba że zawiera już element, którego wartość ekwiwalentnie są porządkowane.
+*argumenty* \
+Argumenty przekazywane do konstruowania elementu, który ma zostać wstawiony do unordered_set, chyba że zawiera już element, którego wartość jest uporządkowana równorzędnie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A `pair` którego **bool** składnika zwraca wartość true, jeśli wykonano wstawiania i wartość false, gdy `unordered_set` już zawiera element, którego klucz ma wartość równoważne w kolejności, a następnie zwraca którego składnik iteratora adres, gdzie został wstawiony nowego elementu lub którym element został już znajduje się.
+@No__t_0, którego składnik **bool** zwraca wartość true, jeśli wstawiono i ma wartość false, jeśli `unordered_set` już zawierała element, którego klucz ma odpowiednik wartości w kolejności, a Składnik iteratora zwraca adres, pod który został wstawiony nowy element lub gdzie znajduje się już element.
 
-Aby dostęp do składnika iterator w parze `pr` zwracana przez tę funkcję elementu członkowskiego, użyj `pr.first`, odwołania do niego użyj `*(pr.first)`. Aby uzyskać dostęp do **bool** składnika pary `pr` zwracana przez tę funkcję elementu członkowskiego, użyj `pr.second`.
+Aby uzyskać dostęp do składnika iteratora pary `pr` zwrócone przez tę funkcję elementu członkowskiego, użyj `pr.first` i aby usunąć odwołanie do niego, użyj `*(pr.first)`. Aby uzyskać dostęp do składnika **bool** pary `pr` zwrócone przez tę funkcję elementu członkowskiego, należy użyć `pr.second`.
 
 ### <a name="remarks"></a>Uwagi
 
-Nie Iteratory lub odwołania nie są unieważniane przez tę funkcję.
+Ta funkcja nie unieważnia iteratorów ani odwołań.
 
-Podczas wstawiania Jeśli wyjątek jest zgłaszany, lecz nie występuje w kontenerze funkcji mieszania, kontenera nie jest modyfikowany. Jeśli wyjątek jest zgłaszany w funkcji mieszania, wynik jest niezdefiniowany.
+Podczas wstawiania, jeśli wyjątek jest zgłaszany, ale nie występuje w funkcji skrótu kontenera, kontener nie jest modyfikowany. Jeśli wyjątek jest zgłaszany w funkcji skrótu, wynik jest niezdefiniowany.
 
-Dla przykładu kodu zobacz[set::emplace](../standard-library/set-class.md#emplace).
+Aby zapoznać się z przykładem kodu, zobacz [set:: emplace](../standard-library/set-class.md#emplace).
 
-## <a name="emplace_hint"></a> emplace_hint —
+## <a name="emplace_hint"></a>emplace_hint
 
-Wstawia element skonstruowany w miejscu (nie kopiowania lub przenoszenia operacji), ze wskazówką położenia.
+Wstawia element skonstruowany w miejscu (nie są wykonywane żadne operacje kopiowania ani przenoszenia) z wskazówką dotyczącą położenia.
 
 ```cpp
 template <class... Args>
@@ -1002,27 +1002,27 @@ Args&&... args);
 
 ### <a name="parameters"></a>Parametry
 
-*argumenty*\
-Argumenty przekazywane do skonstruowania elementu mają być wstawione do unordered_set, chyba że unordered_set już zawiera ten element lub bardziej ogólnie rzecz biorąc, chyba że jest on już zawiera element, którego klucz ekwiwalentnie porządkowania.
+*argumenty* \
+Argumenty przekazywane do konstruowania elementu, który ma zostać wstawiony do unordered_set, chyba że unordered_set już zawiera ten element lub, bardziej ogólnie, chyba że zawiera już element, którego klucz jest równoważny uporządkowanie.
 
-*gdzie*\
-Wskazówki dotyczące właściwe miejsce rozpoczęcia wyszukiwania prawidłowy punkt wstawiania.
+*gdzie* \
+Wskazówka dotycząca miejsca, w którym rozpoczyna się wyszukiwanie poprawnego punktu wstawiania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Iterator do nowo wstawionego elementu.
 
-Jeśli wstawiania nie powiodła się, ponieważ istnieje już element, zwraca iterator do istniejącego elementu.
+Jeśli wstawianie nie powiodło się, ponieważ element już istnieje, zwraca iterator do istniejącego elementu.
 
 ### <a name="remarks"></a>Uwagi
 
-Nie Iteratory lub odwołania nie są unieważniane przez tę funkcję.
+Ta funkcja nie unieważnia iteratorów ani odwołań.
 
-Podczas wstawiania Jeśli wyjątek jest zgłaszany, lecz nie występuje w kontenerze funkcji mieszania, kontenera nie jest modyfikowany. Jeśli wyjątek jest zgłaszany w funkcji mieszania, wynik jest niezdefiniowany.
+Podczas wstawiania, jeśli wyjątek jest zgłaszany, ale nie występuje w funkcji skrótu kontenera, kontener nie jest modyfikowany. Jeśli wyjątek jest zgłaszany w funkcji skrótu, wynik jest niezdefiniowany.
 
-Dla przykładu kodu zobacz[set::emplace_hint](../standard-library/set-class.md#emplace_hint).
+Aby zapoznać się z przykładem kodu, zobacz [set:: emplace_hint](../standard-library/set-class.md#emplace_hint).
 
-## <a name="empty"></a> pusty
+## <a name="empty"></a>ciągiem
 
 Sprawdza, czy nie ma żadnych elementów.
 
@@ -1032,7 +1032,7 @@ bool empty() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca wartość true dla pustą kontrolowaną sekwencję.
+Funkcja członkowska zwraca wartość true dla pustej kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -1086,7 +1086,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="end"></a> koniec
+## <a name="end"></a>punktów
 
 Określa koniec kontrolowanej sekwencji.
 
@@ -1102,12 +1102,12 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nbucket*\
-Numer przedziału.
+*nbucket* \
+Numer zasobnika.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsze dwie funkcje Członkowskie zwracają iterator do przodu, który wskazuje tuż za koniec sekwencji. Ostatnie dwie funkcje Członkowskie zwracają iterator do przodu, na którą wskazuje tuż za koniec przedziału *nbucket*.
+Pierwsze dwie funkcje członkowskie zwracają iterator do przodu, który wskazuje tuż poza końcem sekwencji. Ostatnie dwie funkcje członkowskie zwracają iterator do przodu, który wskazuje tuż poza końcem zasobnika *nbucket*.
 
 ### <a name="example"></a>Przykład
 
@@ -1154,7 +1154,7 @@ int main()
 [a]
 ```
 
-## <a name="equal_range"></a> equal_range —
+## <a name="equal_range"></a>equal_range
 
 Wyszukuje zakres, który odpowiada określonemu kluczowi.
 
@@ -1168,12 +1168,12 @@ equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*\
+*keyval* \
 Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca parę iteratorów `X` tak, aby`[X.first, X.second)` rozgranicza tylko te elementy kontrolowanej sekwencji, które mają równoważną kolejność z *keyval*. Jeśli istnieje nie takie elementy, oba Iteratory są `end()`.
+Funkcja członkowska zwraca parę iteratorów `X` takich, które `[X.first, X.second)` ograniczają tylko te elementy kontrolowanej sekwencji o równoważnej kolejności z *keyval*. Jeśli takie elementy nie istnieją, oba Iteratory są `end()`.
 
 ### <a name="example"></a>Przykład
 
@@ -1222,9 +1222,9 @@ equal_range('x'):
 equal_range('b'): [b]
 ```
 
-## <a name="erase"></a> wymazywanie
+## <a name="erase"></a>Wyłączanie
 
-Usuwa element lub zakres elementów w unordered_set z określonych pozycji lub usuwa elementy, które odpowiadają określonemu kluczowi.
+Usuwa element lub zakres elementów w unordered_set z określonych pozycji lub usuwa elementy, które pasują do określonego klucza.
 
 ```cpp
 iterator erase(const_iterator Where);
@@ -1236,29 +1236,29 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>Parametry
 
-*gdzie*\
+*Gdzie* \
 Pozycja elementu, który ma zostać usunięty.
 
-*pierwszy*\
-Pozycja pierwszego elementu do usunięcia.
+*Pierwszy* \
+Pozycja pierwszego elementu, który ma zostać usunięty.
 
-*ostatni*\
-Pozycja tuż za ostatni element do usunięcia.
+*Ostatni* \
+Umieść tuż poza ostatnim elementem, który ma zostać usunięty.
 
-*Klucz*\
+*Klucz* \
 Wartość klucza elementów do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwsze dwie funkcje Członkowskie, aby uzyskać iteratora dwukierunkowego, określa pierwszy element pozostający poza wszelkimi elementami usuniętymi lub element, który jest końcem unordered_set, jeśli taki element nie istnieje.
+W przypadku pierwszych dwóch funkcji składowych iterator dwukierunkowy, który wyznacza pierwszy element, który jest poza wszystkimi elementami usuniętymi lub element, który jest końcem unordered_set, jeśli taki element nie istnieje.
 
-Dla trzeciego funkcja elementu członkowskiego zwraca liczbę elementów, które zostały usunięte z unordered_set.
+Dla trzeciej funkcji składowej zwraca liczbę elementów, które zostały usunięte z unordered_set.
 
 ### <a name="remarks"></a>Uwagi
 
-Dla przykładu kodu zobacz[set::erase](../standard-library/set-class.md#erase).
+Aby zapoznać się z przykładem kodu, zobacz [set:: Erase](../standard-library/set-class.md#erase).
 
-## <a name="find"></a> Znajdź
+## <a name="find"></a>wyświetlić
 
 Wyszukuje element, który odpowiada określonemu kluczowi.
 
@@ -1268,12 +1268,12 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*\
+*keyval* \
 Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca[unordered_set::equal_range](#equal_range)`(keyval).first`.
+Funkcja członkowska zwraca [unordered_set:: equal_range](#equal_range) `(keyval).first`.
 
 ### <a name="example"></a>Przykład
 
@@ -1317,7 +1317,7 @@ find('A') == false
 find('b') == true: [b]
 ```
 
-## <a name="get_allocator"></a> get_allocator —
+## <a name="get_allocator"></a>get_allocator
 
 Pobiera przechowywany obiekt alokatora.
 
@@ -1327,7 +1327,7 @@ Alloc get_allocator() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca przechowywany obiekt alokatora.
+Funkcja członkowska zwraca przechowywany obiekt alokatora.
 
 ### <a name="example"></a>Przykład
 
@@ -1355,7 +1355,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="hash"></a> hash_function —
+## <a name="hash"></a>hash_function
 
 Pobiera przechowywany obiekt funkcji mieszania.
 
@@ -1365,7 +1365,7 @@ Hash hash_function() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca przechowywany obiekt funkcji mieszania.
+Funkcja członkowska zwraca przechowywany obiekt funkcji skrótu.
 
 ### <a name="example"></a>Przykład
 
@@ -1393,7 +1393,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="hasher"></a> hasher
+## <a name="hasher"></a>programu tworzącego skróty
 
 Typ funkcji mieszania.
 
@@ -1431,7 +1431,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="insert"></a> Wstaw
+## <a name="insert"></a>wstawienia
 
 Wstawia element lub zakres elementów do unordered_set.
 
@@ -1460,54 +1460,54 @@ void insert(initializer_list<value_type> IList);
 
 ### <a name="parameters"></a>Parametry
 
-*Val*\
-Wartość elementu do wstawienia do unordered_set, chyba że zawiera już element, którego klucz ekwiwalentnie są porządkowane.
+*Val* \
+Wartość elementu, który ma zostać wstawiony do unordered_set, chyba że zawiera już element, którego klucz jest uporządkowany równorzędnie.
 
-*gdzie*\
-Miejsce, aby rozpocząć wyszukiwanie poprawne punktu wstawiania.
+*Gdzie* \
+Miejsce, w którym rozpocznie się wyszukiwanie poprawnego punktu wstawiania.
 
-*ValTy*\
-Parametr szablonu określający typ argumentu, który unordered_set służy do konstruowania elementu[value_type](../standard-library/map-class.md#value_type)i przekazuje doskonałe rozwiązanie *Val* jako argument.
+*ValTy* \
+Parametr szablonu, który określa typ argumentu, który unordered_set może używać do konstruowania elementu [value_type](../standard-library/map-class.md#value_type), i idealny do przesyłania *dalej jako argumentu* .
 
-*pierwszy*\
-Pozycja pierwszego elementu, który ma być skopiowany.
+*Pierwszy* \
+Pozycja pierwszego elementu, który ma zostać skopiowany.
 
-*ostatni*\
-Pozycja tuż za ostatnim elementem do skopiowania.
+*Ostatni* \
+Pozycja tuż poza ostatnim elementem, który ma zostać skopiowany.
 
-*InputIterator*\
-Argument funkcji szablonu, który spełnia wymagania[iterator danych wejściowych](../standard-library/input-iterator-tag-struct.md) wskazującej elementów typu, który może służyć do konstruowania[value_type](../standard-library/map-class.md#value_type) obiektów.
+*InputIterator* \
+Argument funkcji szablonu, który spełnia wymagania [iteratora danych wejściowych](../standard-library/input-iterator-tag-struct.md) , który wskazuje elementy typu, które mogą być używane do konstruowania obiektów [value_type](../standard-library/map-class.md#value_type) .
 
-*IList*\
-[Initializer_list](../standard-library/initializer-list.md) z którego można skopiować elementy.
+@No__t_1 *IList*
+[Initializer_list](../standard-library/initializer-list.md) , z którego mają zostać skopiowane elementy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Funkcje elementów członkowskich Jednoelementowy (1) i (2), zwracają[pary](../standard-library/pair-structure.md) którego **bool** składnik to wartość true, jeśli wykonano wstawiania i wartość false, jeśli unordered_set już zawiera element, którego klucz miał równoważna wartość w kolejności. Składnik iteratora pary zwracana wartość wskazuje na nowo wstawionej element, jeśli **bool** składnik jest wartość PRAWDA lub do istniejącego elementu, jeśli **bool** składnik to false.
+Jednoelementowe funkcje składowe, (1) i (2) zwracają [parę](../standard-library/pair-structure.md) , których składnik **bool** ma wartość true, jeśli wykonano wstawienie, i wartość false, jeśli unordered_set już zawiera element, którego klucz ma odpowiednik wartości w kolejności. Składnik iteratora pary zwracanych wartości wskazuje nowo wstawiony element, jeśli składnik **bool** ma wartość true lub do istniejącego elementu, jeśli składnik **bool** ma wartość false.
 
-Funkcje Członkowskie jednego elementu za pomocą wskazówki, (3) i (4) zwraca iterator, który wskazuje na stanowisko, w przypadku, gdy nowy element został wstawiony unordered_set lub, jeśli element równoważne kluczem już istnieje, do istniejącego elementu.
+Funkcje członkowskie jednoelementowe z wskazówką, (3) i (4) zwracają iterator, który wskazuje na pozycję, w której nowy element został wstawiony do unordered_set lub, jeśli element z równoważnym kluczem już istnieje, do istniejącego elementu.
 
 ### <a name="remarks"></a>Uwagi
 
-Nie Iteratory, wskaźniki lub odwołania nie są unieważniane przez tę funkcję.
+Ta funkcja nie unieważnia iteratorów, wskaźników ani odwołań.
 
-Podczas wstawiania tylko jeden element Jeśli wyjątek jest zgłaszany, lecz nie występuje w funkcji mieszania kontenera, stan kontenera nie jest modyfikowany. Jeśli wyjątek jest zgłaszany w funkcji mieszania, wynik jest niezdefiniowany. Podczas wstawiania wielu elementów jeśli wyjątek jest zgłaszany, kontener pozostanie w stanie nieokreślony, ale prawidłowe.
+Podczas wstawiania tylko jednego elementu, jeśli wyjątek jest zgłaszany, ale nie występuje w funkcji skrótu kontenera, stan kontenera nie jest modyfikowany. Jeśli wyjątek jest zgłaszany w funkcji skrótu, wynik jest niezdefiniowany. Podczas wstawiania wielu elementów, jeśli wyjątek jest zgłaszany, kontener pozostaje w nieokreślonym, ale prawidłowym stanie.
 
-Składnik iterator dostępu do `pair` `pr` zwracanym przez funkcje składowe Jednoelementowy, należy użyć `pr.first`; można wyłuskać iteratora w ramach zwrócona para, należy użyć`*pr.first`, dzięki czemu element. Aby uzyskać dostęp do **bool** składnika, użyj `pr.second`. Aby uzyskać przykład zobacz przykładowy kod w dalszej części tego artykułu.
+Aby uzyskać dostęp do składnika iteratora `pr` `pair`, który jest zwracany przez jednoelementowe funkcje członkowskie, użyj `pr.first`; Aby usunąć odwołanie do iteratora w zwróconej parze, użyj `*pr.first`, dając Ci element. Aby uzyskać dostęp do składnika **bool** , użyj `pr.second`. Aby zapoznać się z przykładem, zobacz przykładowy kod w dalszej części tego artykułu.
 
-[Value_type](../standard-library/map-class.md#value_type) kontenera jest typedef, który należy do kontenera, a w przypadku zestawu, `unordered_set<V>::value_type` jest typem `const V`.
+[Value_type](../standard-library/map-class.md#value_type) kontenera to element typedef, który należy do kontenera, a dla opcji set, `unordered_set<V>::value_type` jest typu `const V`.
 
-Funkcja elementu członkowskiego zakres [5] wstawia sekwencję wartości elementu do unordered_set, która odnosi się do każdego elementu kierowanego przez iterator w zakresie `[First, Last)`; w związku z tym, *ostatniego* nie uzyskać wstawiony. Funkcja elementu członkowskiego kontenera `end()` odwołuje się do pozycji zaraz po ostatnim elemencie w kontenerze — na przykład instrukcja `s.insert(v.begin(), v.end());` próba wstawienia wszystkie elementy `v` do `s`. Tylko te elementy, które mają unikatowe wartości w zakresie są wstawiane; duplikaty są ignorowane. Aby obserwować, które elementy są odrzucane, użyj wersji Jednoelementowy `insert`.
+Funkcja elementu członkowskiego zakresu (5) wstawia sekwencję wartości elementów do unordered_set, która odnosi się do każdego elementu, który jest kierowany przez iterator w zakresie `[First, Last)`; w związku z tym *ostatni* nie zostanie wstawiony. Funkcja elementu członkowskiego kontenera `end()` odnosi się do pozycji tuż po ostatnim elemencie w kontenerze — na przykład, instrukcja `s.insert(v.begin(), v.end());` próbuje wstawić wszystkie elementy `v` do `s`. Wstawiane są tylko elementy, które mają unikatowe wartości z zakresu; duplikaty zostały zignorowane. Aby sprawdzić, które elementy są odrzucane, użyj jednoelementowych wersji `insert`.
 
-(6) używa funkcji elementu członkowskiego listy inicjatorów[initializer_list](../standard-library/initializer-list.md) do skopiowania elementów do unordered_set.
+Funkcja członkowska listy inicjatorów (6) używa [initializer_list](../standard-library/initializer-list.md) do kopiowania elementów do unordered_set.
 
-Do wstawienia element skonstruowany w miejscu — oznacza to, że są wykonywane żadne operacje kopiowania lub przenoszenia — zobacz[set::emplace](../standard-library/set-class.md#emplace) i[set::emplace_hint](../standard-library/set-class.md#emplace_hint).
+Do wstawienia elementu skonstruowanego w miejscu — to znaczy, że nie są wykonywane żadne operacje kopiowania ani przenoszenia — zobacz [set:: emplace](../standard-library/set-class.md#emplace) i [set:: emplace_hint](../standard-library/set-class.md#emplace_hint).
 
-Dla przykładu kodu zobacz[set::insert](../standard-library/set-class.md#insert).
+Aby zapoznać się z przykładem kodu, zobacz [set:: INSERT](../standard-library/set-class.md#insert).
 
-## <a name="iterator"></a> Iterator
+## <a name="iterator"></a>Iterator
 
-Typ, który zapewnia stałą[iterator do przodu](../standard-library/forward-iterator-tag-struct.md) który może odczytywać elementy unordered_set.
+Typ, który zapewnia ciągły [iterator do przodu](../standard-library/forward-iterator-tag-struct.md) , który może odczytywać elementy w unordered_set.
 
 ```cpp
 typedef implementation-defined iterator;
@@ -1515,9 +1515,9 @@ typedef implementation-defined iterator;
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład[rozpocząć](../standard-library/set-class.md#begin) przykładowy sposób deklarowania i użyj**iteratora**.
+Zapoznaj się z przykładem początku, aby zapoznać [się](../standard-library/set-class.md#begin) z przykładem sposobu deklarowania**iteratora**i korzystania z niego.
 
-## <a name="key_eq"></a> key_eq —
+## <a name="key_eq"></a>key_eq
 
 Pobiera przechowywany obiekt funkcji porównywania.
 
@@ -1527,7 +1527,7 @@ Pred key_eq() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca przechowywany obiekt funkcji porównywania.
+Funkcja członkowska zwraca przechowywany obiekt funkcji porównywania.
 
 ### <a name="example"></a>Przykład
 
@@ -1557,7 +1557,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_equal"></a> key_equal
+## <a name="key_equal"></a>key_equal
 
 Typ funkcji porównywania.
 
@@ -1597,7 +1597,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_type"></a> key_type
+## <a name="key_type"></a>key_type
 
 Typ klucza sortowania.
 
@@ -1649,7 +1649,7 @@ int main()
 [d] [c] [b] [a]
 ```
 
-## <a name="load_factor"></a> load_factor —
+## <a name="load_factor"></a>load_factor
 
 Oblicza średnią liczbę elementów na przedział.
 
@@ -1659,7 +1659,7 @@ float load_factor() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca`(float)`[unordered_set::size](#size)`() / (float)`[unordered_set::bucket_count](#bucket_count)`()`, średnia liczba elementów na przedział.
+Funkcja członkowska zwraca `(float)`[unordered_set:: size](#size) `() / (float)`[unordered_set:: bucket_count](#bucket_count) `()`, średnią liczbę elementów na przedział.
 
 ### <a name="example"></a>Przykład
 
@@ -1734,9 +1734,9 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="local_iterator"></a> local_iterator
+## <a name="local_iterator"></a>local_iterator
 
-Typ iteratora przedziału.
+Typ iteratora zasobnika.
 
 ```cpp
 typedef T4 local_iterator;
@@ -1744,7 +1744,7 @@ typedef T4 local_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może służyć jako iterator do przodu dla przedziału. Jest on opisany tutaj jako synonim dla typu zdefiniowanego w implementacji `T4`.
+Typ opisuje obiekt, który może obsłużyć iterator do przodu dla przedziału. Jest on opisany tutaj jako synonim dla typu zdefiniowanego przez implementację `T4`.
 
 ### <a name="example"></a>Przykład
 
@@ -1781,7 +1781,7 @@ int main()
 [a]
 ```
 
-## <a name="max_bucket_count"></a> max_bucket_count —
+## <a name="max_bucket_count"></a>max_bucket_count
 
 Pobiera maksymalną liczbę przedziałów.
 
@@ -1791,7 +1791,7 @@ size_type max_bucket_count() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca maksymalną liczbę przedziałów obecnie dozwolone.
+Funkcja członkowska zwraca maksymalną dozwoloną liczbę zasobników.
 
 ### <a name="example"></a>Przykład
 
@@ -1866,7 +1866,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_load_factor"></a> max_load_factor —
+## <a name="max_load_factor"></a>max_load_factor
 
 Pobiera lub ustawia maksymalną liczbę elementów na przedział.
 
@@ -1878,12 +1878,12 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parametry
 
-*współczynnik*\
-Nowy współczynnik maksymalnego obciążenia.
+\ *współczynnika*
+Nowy maksymalny współczynnik obciążenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja elementu członkowskiego zwraca współczynnik przechowywanych maksymalnego obciążenia. Funkcja drugiego członka zastępuje czynnik przechowywanych maksymalnego obciążenia *współczynnik*.
+Pierwsza funkcja członkowska zwraca przechowywany maksymalny współczynnik obciążenia. Druga funkcja członkowska zastępuje zachowaną wartość maksymalnego obciążenia *czynnikem*.
 
 ### <a name="example"></a>Przykład
 
@@ -1958,7 +1958,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_size"></a> max_size —
+## <a name="max_size"></a>max_size
 
 Pobiera maksymalny rozmiar kontrolowanej sekwencji.
 
@@ -1968,7 +1968,7 @@ size_type max_size() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca długość najdłuższej sekwencji, która może kontrolować obiekt.
+Funkcja członkowska zwraca długość najdłuższej sekwencji, którą obiekt może kontrolować.
 
 ### <a name="example"></a>Przykład
 
@@ -1993,7 +1993,7 @@ int main()
 max_size() == 4294967295
 ```
 
-## <a name="op_eq"></a> operator =
+## <a name="op_eq"></a>operator =
 
 Kopiuje tabelę mieszania.
 
@@ -2005,12 +2005,12 @@ unordered_set& operator=(unordered_set&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*po prawej stronie*\
-[Unordered_set](../standard-library/unordered-set-class.md) są kopiowane do `unordered_set`.
+*prawa* \
+[Unordered_set](../standard-library/unordered-set-class.md) jest kopiowana do `unordered_set`.
 
 ### <a name="remarks"></a>Uwagi
 
-Po wymazaniu wszelkie elementy istniejących w `unordered_set`, `operator=` kopiuje lub przenosi zawartość *prawo* do `unordered_set`.
+Po wymazaniu wszelkich istniejących elementów w `unordered_set`, `operator=` kopiuje lub przenosi zawartość *bezpośrednio* do `unordered_set`.
 
 ### <a name="example"></a>Przykład
 
@@ -2049,7 +2049,7 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a> Wskaźnik
+## <a name="pointer"></a>przytrzymaj
 
 Typ wskaźnika do elementu.
 
@@ -2059,7 +2059,7 @@ typedef Alloc::pointer pointer;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może służyć jako wskaźnik do elementu w kontrolowanej sekwencji.
+Typ opisuje obiekt, który może obsłużyć jako wskaźnik do elementu kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -2095,7 +2095,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="reference"></a> Odwołanie
+## <a name="reference"></a>odwoła
 
 Typ odwołania do elementu.
 
@@ -2105,7 +2105,7 @@ typedef Alloc::reference reference;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może służyć jako odwołanie do elementu w kontrolowanej sekwencji.
+Typ opisuje obiekt, który może obsłużyć jako odwołanie do elementu kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -2141,7 +2141,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="rehash"></a> rehash —
+## <a name="rehash"></a>rehash —
 
 Przebudowuje tabelę mieszania.
 
@@ -2151,12 +2151,12 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parametry
 
-*nbuckets*\
-Żądaną liczbę przedziałów.
+*nbuckets* \
+Żądana liczba zasobników.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zmienia liczbę przedziałów, na co najmniej *nbuckets* i odbudowuje tabelę mieszania, stosownie do potrzeb.
+Funkcja członkowska zmienia liczbę przedziałów na co najmniej *nbuckets* i ponownie kompiluje tabelę skrótów zgodnie z wymaganiami.
 
 ### <a name="example"></a>Przykład
 
@@ -2218,7 +2218,7 @@ load_factor() == 0.0234375
 max_load_factor() == 0.1
 ```
 
-## <a name="size"></a> Rozmiar
+## <a name="size"></a>zmienia
 
 Liczy liczbę elementów.
 
@@ -2228,7 +2228,7 @@ size_type size() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca długość kontrolowanej sekwencji.
+Funkcja członkowska zwraca długość kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -2283,7 +2283,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="size_type"></a> size_type
+## <a name="size_type"></a>size_type
 
 Typ odległości bez znaku między dwoma elementami.
 
@@ -2293,7 +2293,7 @@ typedef T2 size_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ całkowitoliczbowy bez znaku, opisująca obiekt, który może reprezentować długość wszelkie kontrolowanej sekwencji. Jest on opisany tutaj jako synonim dla typu zdefiniowanego w implementacji `T2`.
+Typ liczby całkowitej bez znaku opisuje obiekt, który może reprezentować długość dowolnej kontrolowanej sekwencji. Jest on opisany tutaj jako synonim dla typu zdefiniowanego przez implementację `T2`.
 
 ### <a name="example"></a>Przykład
 
@@ -2319,7 +2319,7 @@ int main()
 size == 0
 ```
 
-## <a name="swap"></a> swap
+## <a name="swap"></a>wymiany
 
 Zamienia zawartości dwóch kontenerów.
 
@@ -2329,12 +2329,12 @@ void swap(unordered_set& right);
 
 ### <a name="parameters"></a>Parametry
 
-*po prawej stronie*\
-Kontener wymiany.
+*prawa* \
+Kontener, w którym ma zostać zamieniony.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zamienia kontrolowanej sekwencji między `*this` i *prawo*. Jeśli [unordered_set::get_allocator](#get_allocator)`() == right.get_allocator()`robi to w stałym czasie, jego zgłasza wyjątek, tylko w wyniku kopiowanie obiektów przechowywanych cech typu `Tr`, a jego unieważnia żadnych odwołań, wskaźniki, lub Iteratory, które wyznaczają elementy w dwóch kontrolowanej sekwencji. W przeciwnym razie wykonuje szereg element zadania i Konstruktor wywołuje proporcjonalna do liczby elementów w dwóch kontrolowanej sekwencji.
+Funkcja członkowska zamienia kontrolowane sekwencje między `*this` i *po prawej*. Jeśli [unordered_set:: get_allocator](#get_allocator) `() == right.get_allocator()`, robi to w stałym czasie, zgłasza wyjątek tylko w wyniku skopiowania obiektu składowanych cech typu `Tr` i unieważnia brak odwołań, wskaźników lub iteratorów, które wyznaczają elementy w dwie kontrolowane sekwencje. W przeciwnym razie wykonuje wiele przypisań elementów i wywołań konstruktora proporcjonalnie do liczby elementów w dwóch kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -2388,7 +2388,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="unordered_set"></a> unordered_set —
+## <a name="unordered_set"></a>unordered_set
 
 Konstruuje obiekt kontenera.
 
@@ -2437,42 +2437,42 @@ unordered_set(
 
 ### <a name="parameters"></a>Parametry
 
-*InputIterator*\
+*InputIterator* \
 Typ iteratora.
 
-*Al*\
+*Al* \
 Obiekt alokatora, który ma być przechowywany.
 
-*Comp*\
+@No__t_1 *zgodności*
 Obiekt funkcji porównywania, który ma być przechowywany.
 
-*Skrót*\
+@No__t_1 *skrótu*
 Obiekt funkcji mieszania, który ma być przechowywany.
 
-*bucket_count —* \
+*bucket_count* \
 Minimalna liczba przedziałów.
 
-*po prawej stronie*\
+*Prawa* \
 Kontener, który ma być skopiowany.
 
-*IList*\
+@No__t_1 *IList*
 Lista initializer_list zawierająca elementy do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor Określa kopię sekwencji kontrolowanej przez *po prawej stronie*. Drugi konstruktor określa pustą kontrolowaną sekwencję. Trzeci Konstruktor Określa kopię sekwencji, przesuwając *po prawej stronie* czwarta za pomocą konstruktorów ósmy używają initializer_list określić elementy do skopiowania. Dziewiąty Konstruktor wstawia sekwencję wartości elementu`[first, last)`.
+Pierwszy Konstruktor określa kopię sekwencji kontrolowanej przez *prawo*. Drugi konstruktor określa pustą kontrolowaną sekwencję. Trzeci konstruktor określa kopię sekwencji, przenosząc *ją w prawo* czwarty za pomocą ósmego konstruktorów, użyj initializer_list, aby określić elementy do skopiowania. Dziewiąty Konstruktor wstawia sekwencję wartości elementu `[first, last)`.
 
-Wszystkie konstruktory również inicjują kilka przechowywanych wartości. Dla konstruktora kopiującego, wartości są uzyskiwane z *po prawej stronie*. W przeciwnym razie:
+Wszystkie konstruktory również inicjują kilka przechowywanych wartości. W przypadku konstruktora kopiującego wartości są uzyskiwane z *prawej strony*. W przeciwnym razie:
 
-Minimalna liczba przedziałów jest argumentem *bucket_count —* , jeśli obecny; w przeciwnym razie jest to wartość domyślna opisana tutaj jako wartość zdefiniowana w implementacji `N0`.
+Minimalna liczba przedziałów jest argumentem *bucket_count*, jeśli jest obecny; w przeciwnym razie jest to wartość domyślna opisana tutaj jako wartość zdefiniowana przez implementację `N0`.
 
-Obiekt funkcji mieszania jest argumentem *skrótu*, jeśli obecny; w przeciwnym razie jest `Hash()`.
+Obiekt funkcji mieszania jest *wartością skrótu*argumentu (jeśli istnieje); w przeciwnym razie jest `Hash()`.
 
-Obiekt funkcji porównywania jest argumentem *Comp*, jeśli obecny; w przeciwnym razie jest `Comp()`.
+Obiekt funkcji porównywania jest argumentem *COMP*, jeśli jest obecny; w przeciwnym razie jest `Comp()`.
 
-Obiekt alokatora jest argumentem *Al*, jeśli obecny; w przeciwnym razie jest `Alloc()`.
+Obiekt alokatora jest argumentem *Al*, jeśli jest obecny; w przeciwnym razie jest `Alloc()`.
 
-## <a name="value_type"></a> value_type
+## <a name="value_type"></a>value_type
 
 Typ elementu.
 
@@ -2482,7 +2482,7 @@ typedef Key value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje elementu w kontrolowanej sekwencji.
+Typ opisuje element kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 

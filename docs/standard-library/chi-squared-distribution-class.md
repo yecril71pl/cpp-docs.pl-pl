@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::chi_squared_distribution [C++], param_type
 - std::chi_squared_distribution [C++], param_type
 ms.assetid: 9b603fbe-cafd-4a92-b8c5-a434d60b8122
-ms.openlocfilehash: 2eac3324516cf88a114064cf0145593c7bf4806b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f7f6f038c0e8bc922874388065ce06d76854bc1b
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459468"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688305"
 ---
-# <a name="chisquareddistribution-class"></a>chi_squared_distribution — Klasa
+# <a name="chi_squared_distribution-class"></a>chi_squared_distribution — Klasa
 
 Generuje rozkład chi-kwadrat.
 
@@ -66,32 +66,32 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*Liczba rzeczywista*\
-Typ wyniku zmiennoprzecinkowego, wartość domyślna to **Double**. W przypadku możliwych typów zobacz [ \<losowe >](../standard-library/random.md).
+@No__t_1 *rzeczywistości*
+Typ wyniku zmiennoprzecinkowego, wartość domyślna to **Double**. W przypadku możliwych typów zobacz [\<random >](../standard-library/random.md).
 
-*URNG*\
-Jednolity aparat generatora liczb losowych. W przypadku możliwych typów zobacz [ \<losowe >](../standard-library/random.md).
+*URNG* \
+Jednolity aparat generatora liczb losowych. W przypadku możliwych typów zobacz [\<random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje dystrybucję, która produkuje wartości typu zmiennoprzecinkowego określonego przez użytkownika, lub typ **Double** , jeśli nie jest podany, dystrybuowany zgodnie z rozkładem chi kwadrat. Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków.
+Szablon klasy opisuje dystrybucję, która produkuje wartości typu zmiennoprzecinkowego określonego przez użytkownika, lub typ **Double** , jeśli nie jest podany, dystrybuowany zgodnie z rozkładem chi kwadrat. Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków.
 
 ||||
 |-|-|-|
 |[chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)|`chi_squared_distribution::n`|`chi_squared_distribution::param`|
 |`chi_squared_distribution::operator()`||[param_type](#param_type)|
 
-Funkcja `n()` Property zwraca wartość dla przechowywanego parametru `n`dystrybucji.
+Funkcja Property `n()` zwraca wartość dla przechowywanego parametru dystrybucji `n`.
 
-Element członkowski `param()` właściwości ustawia lub `param_type` zwraca przechowywany pakiet parametrów dystrybucji.
+Element członkowski właściwości `param()` ustawia lub zwraca `param_type` przechowywany pakiet parametrów dystrybucji.
 
-`min()` I`max()` funkcje członkowskie zwracają najmniejszy możliwy wynik i największy możliwy wynik.
+Funkcje członkowskie `min()` i `max()` zwracają najmniejszy możliwy wynik i największy możliwy wynik.
 
-Funkcja członkowska odrzuca wszystkie wartości pamięci podręcznej, dzięki czemu wynik następnego wywołania do `operator()` nie zależy od wartości uzyskanych z aparatu przed wywołaniem. `reset()`
+Funkcja członkowska `reset()` odrzuca wszystkie wartości pamięci podręcznej, dzięki czemu wynik następnego wywołania do `operator()` nie zależy od wartości uzyskanych z aparatu przed wywołaniem.
 
-Funkcje `operator()` Członkowskie zwracają następną wygenerowaną wartość opartą na aparacie URNG, z bieżącego pakietu parametrów lub z określonym pakietem parametrów.
+Funkcje składowe `operator()` zwracają następną wygenerowaną wartość opartą na aparacie URNG, z bieżącego pakietu parametrów lub z określonym pakietem parametrów.
 
-Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [ \<Random >](../standard-library/random.md).
+Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [\<random >](../standard-library/random.md).
 
 Aby uzyskać szczegółowe informacje na temat rozkładu chi kwadrat, zobacz Wolfram MathWorld w artykule [chi-kwadrat](https://go.microsoft.com/fwlink/p/?linkid=400528).
 
@@ -220,7 +220,7 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowe >
+**Nagłówek:** \<random >
 
 **Przestrzeń nazw:** std
 
@@ -235,19 +235,19 @@ explicit chi_squared_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*Azotan*\
-Parametr `n` rozkładu.
+*n* \
+@No__t_0 parametr dystrybucji.
 
-*parametr*\
+*parametr* \
 Struktura parametru używana do konstruowania rozkładu.
 
 ### <a name="remarks"></a>Uwagi
 
 **Warunek wstępny:** `0.0 < n`
 
-Pierwszy Konstruktor konstruuje obiekt, którego przechowywana `n` wartość przechowuje wartość *n*.
+Pierwszy Konstruktor konstruuje obiekt, którego przechowywana `n` wartość ma wartość *n*.
 
-Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżące parametry istniejącej dystrybucji, wywołując `param()` funkcję członkowską.
+Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżące parametry istniejącej dystrybucji, wywołując funkcję elementu członkowskiego `param()`.
 
 ## <a name="param_type"></a>chi_squared_distribution::p aram_type
 
@@ -266,18 +266,18 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*Azotan*\
-Parametr `n` rozkładu.
+*n* \
+@No__t_0 parametr dystrybucji.
 
-*Kliknij*\
-Obiekt `param_type` , który ma zostać porównany.
+*prawa* \
+Obiekt `param_type`, do którego ma zostać wykonane porównanie.
 
 ### <a name="remarks"></a>Uwagi
 
 **Warunek wstępny:** `0.0 < n`
 
-Tę strukturę można przesłać do konstruktora klasy dystrybucji podczas tworzenia wystąpienia, do `param()` funkcji składowej, aby ustawić przechowywane parametry istniejącej dystrybucji, `operator()` a także użyć zamiast przechowywanych parametrów.
+Tę strukturę można przesłać do konstruktora klasy dystrybucji podczas tworzenia wystąpienia, do funkcji składowej `param()`, aby ustawić przechowywane parametry istniejącej dystrybucji i `operator()` do użycia zamiast przechowywanych parametrów.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<random>](../standard-library/random.md)
+[\<random >](../standard-library/random.md)

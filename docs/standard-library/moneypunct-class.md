@@ -46,16 +46,16 @@ helpviewer_keywords:
 - std::moneypunct [C++], positive_sign
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
-ms.openlocfilehash: b6cd2524f8ae010e81d06a30d9a001398a106622
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7960ee8b5e9ce6b27494e896e38bbf6b5256fe7e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460188"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689293"
 ---
 # <a name="moneypunct-class"></a>moneypunct — Klasa
 
-Klasa szablonu opisuje obiekt, który może służyć jako zestaw reguł ustawień regionalnych do opisania sekwencji typu CharType  używanego do reprezentowania pola walutowego lub pola danych wyjściowych pieniężnych. Jeśli parametr szablonu *Intl* ma *wartość true*, są przestrzegane międzynarodowe konwencje.
+Szablon klasy opisuje obiekt, który może służyć jako zestaw reguł ustawień regionalnych do opisania sekwencji typu *CharType* używanego do reprezentowania pola walutowego lub pola danych wyjściowych pieniężnych. Jeśli parametr szablonu *Intl* ma *wartość true*, są przestrzegane międzynarodowe konwencje.
 
 ## <a name="syntax"></a>Składnia
 
@@ -66,10 +66,10 @@ class moneypunct;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType*\
+@No__t_1 *CharType*
 Typ używany w programie do kodowania znaków.
 
-*Intl*\
+@No__t_1 *Intl*
 Flaga określająca, czy międzynarodowe konwencje mają być przestrzegane.
 
 ## <a name="remarks"></a>Uwagi
@@ -116,7 +116,7 @@ Obiekt statyczny const Intl przechowuje wartość parametru szablonu *Intl*.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<> ustawień regionalnych
+**Nagłówek:** \<locale >
 
 **Przestrzeń nazw:** std
 
@@ -130,7 +130,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla parametru szablonu CharType .
+Typ jest synonimem dla parametru szablonu **CharType**.
 
 ## <a name="curr_symbol"></a>moneypunct:: curr_symbol
 
@@ -291,19 +291,19 @@ virtual pattern do_neg_format() const;
 
 Chroniona funkcja wirtualna elementu członkowskiego zwraca regułę specyficzną dla ustawień regionalnych służącą do określania sposobu generowania pola danych wyjściowych pieniężnych dla liczby ujemnej. Każdy z czterech elementów `pattern::field` może mieć wartości:
 
-- `none`Aby dopasować zero lub więcej spacji lub wygenerować Nothing.
+- `none`, aby dopasować zero lub więcej spacji lub wygenerować Nothing.
 
-- `sign`Aby dopasować lub wygenerować znak dodatni lub ujemny.
+- `sign` dopasować lub wygenerować znaku dodatniego lub ujemnego.
 
-- `space`Aby dopasować zero lub więcej spacji lub wygenerować spację.
+- `space`, aby dopasować zero lub więcej spacji lub wygenerować spację.
 
-- `symbol`Aby dopasować lub wygenerować symbol waluty.
+- `symbol` dopasować lub wygenerować symbol waluty.
 
-- `value`Aby dopasować lub wygenerować wartość pieniężną.
+- `value` dopasować lub wygenerować wartości pieniężnej.
 
-Składniki pola danych wyjściowych pieniężnych są generowane, a składniki pola danych wejściowych pieniężnych są dopasowane w kolejności, w której te elementy `pattern::field`są wyświetlane w. `sign`Każda z wartości `none` , `symbol`, i albo`space` musi być wyświetlana dokładnie jeden raz. `value` Wartość `none` nie może być wyświetlana jako pierwsza. Przestrzeń wartości nie **może** być wyświetlana jako pierwsza ani Ostatnia. Jeśli `Intl` ma wartość true, Order jest `symbol`, `sign`, `none`, then `value`.
+Składniki pola danych wyjściowych pieniężnych są generowane, a składniki pola danych wejściowych pieniężnych są dopasowane w kolejności, w jakiej te elementy pojawiają się w `pattern::field`. Każda z wartości `sign`, `symbol`, `value` i `none` lub `space` musi być wyświetlana dokładnie jeden raz. Wartość `none` nie może być wyświetlana jako pierwsza. Przestrzeń wartości nie **może** być wyświetlana jako pierwsza ani Ostatnia. Jeśli `Intl` ma wartość true, Order jest `symbol`, `sign`, `none`, a następnie `value`.
 
-Wersja szablonu `moneypunct` typu  `{`     CharType, Intl > zwraca money_base:: symbol, money_base:: Sign, money_base:: value, money_base:: none \< `}`.
+Wersja szablonu `moneypunct` \< **CharType**, **Intl**> zwraca `{`**money_base:: symbol**, **money_base:: Sign**, **money_base:: value**, **money_base:: none** `}`.
 
 ### <a name="example"></a>Przykład
 
@@ -337,7 +337,7 @@ virtual pattern do_pos_format() const;
 
 Chroniona funkcja wirtualna elementu członkowskiego zwraca regułę specyficzną dla ustawień regionalnych służącą do określania sposobu generowania pola danych wyjściowych pieniężnych dla liczby dodatniej. (Określa również, jak dopasować składniki pola danych wejściowych pieniężnych). Kodowanie jest takie samo jak w przypadku [do_neg_format](#do_neg_format).
 
-\< Wersja szablonu moneypunct **CharType**, **Inputlterator**> zwraca `{` **money_base:: symbol**, **money_base:: Sign**, **money_base:: value**, **money_base:: none** `}`.
+Wersja szablonu moneypunct \< **CharType**, **Inputlterator**> zwraca `{`**money_base:: symbol**, **money_base:: Sign**, **money_base:: value**, **money_base:: none** `}`.
 
 ### <a name="example"></a>Przykład
 
@@ -523,18 +523,18 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs*\
+*_Refs* \
 Wartość całkowita służąca do określania typu zarządzania pamięcią dla obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
 Możliwe wartości parametru *_Refs* i ich znaczenie są następujące:
 
-- 0: Okres istnienia obiektu jest zarządzany przez elementy lokalne, które go zawierają.
+- 0: okres istnienia obiektu jest zarządzany przez elementy lokalne, które go zawierają.
 
-- 1: Okres istnienia obiektu musi być zarządzany ręcznie.
+- 1: okres istnienia obiektu musi być zarządzany ręcznie.
 
-- \> 1: Te wartości nie są zdefiniowane.
+- \> 1: te wartości nie są zdefiniowane.
 
 Nie są możliwe żadne bezpośrednie przykłady, ponieważ destruktor jest chroniony.
 
@@ -762,7 +762,7 @@ French_France.1252 domestic positive sign:
 
 ## <a name="string_type"></a>moneypunct:: string_type
 
-Typ, który opisuje ciąg zawierający znaki typu CharType .
+Typ, który opisuje ciąg zawierający znaki typu **CharType**.
 
 ```cpp
 typedef basic_string<CharType, Traits, Allocator> string_type;
@@ -770,7 +770,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje specjalizację klasy szablonu [basic_string](../standard-library/basic-string-class.md) , której obiekty mogą przechowywać kopie sekwencji interpunkcji.
+Typ opisuje specjalizację szablonu klasy [basic_string](../standard-library/basic-string-class.md) , którego obiekty mogą przechowywać kopie sekwencji interpunkcji.
 
 ## <a name="thousands_sep"></a>moneypunct:: thousands_sep
 
@@ -835,5 +835,5 @@ English_Canada.1252 domestic thousands separator: ,
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<locale>](../standard-library/locale.md)\
+[\<locale >](../standard-library/locale.md) \
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

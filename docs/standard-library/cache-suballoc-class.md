@@ -10,14 +10,14 @@ helpviewer_keywords:
 - stdext::cache_suballoc [C++], allocate
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
-ms.openlocfilehash: aa0ceda69fc169593719c3a4f81d308bb6cde284
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7a21f0c4f81277200ff069baf751fa013a3c0cea
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449655"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688343"
 ---
-# <a name="cachesuballoc-class"></a>cache_suballoc — Klasa
+# <a name="cache_suballoc-class"></a>cache_suballoc — Klasa
 
 Definiuje [Alokator bloku](../standard-library/allocators-header.md) , który przydziela i cofa alokacje bloków pamięci o pojedynczym rozmiarze.
 
@@ -36,7 +36,7 @@ class cache_suballoc
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu cache_suballoc przechowuje cofnięte alokacje bloków pamięci na wolnej liście o nieograniczonej długości, `freelist<sizeof(Type), max_unbounded>`przy użyciu i podporządkować bloków pamięci z większego fragmentu przydzielonego za pomocą **operatora new** , gdy lista bezpłatna jest pusta.
+Szablon klasy cache_suballoc przechowuje cofnięte alokacje bloków pamięci na wolnej liście o nieograniczonej długości, przy użyciu `freelist<sizeof(Type), max_unbounded>` i podpisuje bloki pamięci z większego fragmentu przydzielonego za pomocą **operatora new** , gdy lista bezpłatna jest pusta.
 
 Każdy fragment zawiera `Sz * Nelts` bajty użytecznej pamięci oraz dane, które **operator new** i **operator delete** wymagają. Przydzieloną fragmenty nie są nigdy zwalniane.
 
@@ -55,7 +55,7 @@ Każdy fragment zawiera `Sz * Nelts` bajty użytecznej pamięci oraz dane, któr
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<przypisania >
+**Nagłówek:** \<allocators >
 
 **Przestrzeń nazw:** stdext
 
@@ -108,4 +108,4 @@ void deallocate(void* ptr, std::size_t count);
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<allocators >](../standard-library/allocators-header.md)

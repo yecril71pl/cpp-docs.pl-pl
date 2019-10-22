@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - money_base class
 ms.assetid: 1a303c15-9272-4f26-ae16-dcf43a0fd38a
-ms.openlocfilehash: 5b19635cf4d2cce58ec50226c463a075cfac5b0f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c614832b0cbb1cc23e42ecb3a939ccf1334a5cea
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455566"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689324"
 ---
-# <a name="moneybase-class"></a>money_base — Klasa
+# <a name="money_base-class"></a>money_base — Klasa
 
-Klasa opisuje Wyliczenie i strukturę wspólną dla wszystkich specjalizacji klasy szablonu [moneypunct](../standard-library/moneypunct-class.md).
+Klasa opisuje Wyliczenie i strukturę wspólną dla wszystkich specjalizacji szablonu klasy [moneypunct](../standard-library/moneypunct-class.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,21 +28,21 @@ struct pattern
 
 ## <a name="remarks"></a>Uwagi
 
-Wyliczenie `part` opisuje możliwe wartości w elementach pola tablicy we wzorcu struktury. Wartości `part` są:
+Wyliczenie `part` opisuje możliwe wartości w elementach pola tablicy we wzorcu struktury. Wartości `part` są następujące:
 
-- `none`Aby dopasować zero lub więcej spacji lub wygenerować Nothing.
+- `none`, aby dopasować zero lub więcej spacji lub wygenerować Nothing.
 
-- `sign`Aby dopasować lub wygenerować znak dodatni lub ujemny.
+- `sign` dopasować lub wygenerować znaku dodatniego lub ujemnego.
 
-- `space`Aby dopasować zero lub więcej spacji lub wygenerować spację.
+- `space`, aby dopasować zero lub więcej spacji lub wygenerować spację.
 
-- `symbol`Aby dopasować lub wygenerować symbol waluty.
+- `symbol` dopasować lub wygenerować symbol waluty.
 
-- `value`Aby dopasować lub wygenerować wartość pieniężną.
+- `value` dopasować lub wygenerować wartości pieniężnej.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<> ustawień regionalnych
+**Nagłówek:** \<locale >
 
 **Przestrzeń nazw:** std
 

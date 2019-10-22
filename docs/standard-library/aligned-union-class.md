@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - aligned_union
 ms.assetid: 9931a44d-3a67-4f29-a0f6-d47a7cf560ac
-ms.openlocfilehash: b9ffb4aff4d4d5667ab8d626ea13a21da94ca0c1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ae03802549f7791e51dccf1ea98a7b18929a4a4b
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456461"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690105"
 ---
-# <a name="alignedunion-class"></a>aligned_union — klasa
+# <a name="aligned_union-class"></a>aligned_union — klasa
 
 Zapewnia, że typ na jest wystarczająco duży i odpowiednio wyrównany do przechowywania typu Unii i wymagany rozmiar.
 
@@ -29,19 +29,19 @@ using aligned_union_t = typename aligned_union<Len, Types...>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*Funkcja*\
+*Len* \
 Wartość wyrównania dla największego typu w Unii.
 
-*Typ*\
+*Typy* \
 Różne typy w podstawowym związku.
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj klasy Template, aby uzyskać wyrównanie i rozmiar wymagany do przechowywania Unii w niezainicjowanym magazynie. Element typedef `type` składa nazwy typu pod odpowiednie do przechowywania dowolnego typu wymienionego w *typach*; minimalny rozmiar to *len*. Statyczny element `alignment_value` członkowski typu `std::size_t` zawiera najdokładniejsze wyrównanie wymagane przez wszystkie typy wymienione w *typach*.
+Użyj szablonu klasy, aby uzyskać wyrównanie i rozmiar wymagany do przechowywania Unii w niezainicjowanym magazynie. Element typedef składowej `type` nazwy typu POD odpowiednie do przechowywania dowolnego typu wymienionego w *typach*; minimalny rozmiar to *len*. Statyczny element członkowski `alignment_value` typu `std::size_t` zawiera najdokładniejsze wyrównanie wymagane przez wszystkie typy wymienione w *typach*.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak użyć `aligned_union` do przydzielenia wyrównanego buforu stosu, aby umieścić Unię.
+Poniższy przykład pokazuje, jak używać `aligned_union` do przydzielenia wyrównanego buforu stosu do złożenia.
 
 ```cpp
 // std__type_traits__aligned_union.cpp
@@ -85,5 +85,5 @@ value of u->i is 1065353216
 
 ## <a name="see-also"></a>Zobacz także
 
-[< type_traits >](../standard-library/type-traits.md)\
+[< type_traits >](../standard-library/type-traits.md) \
 [alignment_of, klasa](../standard-library/alignment-of-class.md)

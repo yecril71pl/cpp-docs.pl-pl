@@ -14,16 +14,16 @@ f1_keywords:
 - xmemory0/std::pointer_traits::rebind
 - memory/std::pointer_traits::pointer_to
 ms.assetid: 545aecf1-3561-4859-8b34-603c079fe1b3
-ms.openlocfilehash: 109e51ad9eba54f31b90da9b8b85bec105c7dce6
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6d89348867982bfb86c0bf2404a017f6a448d1a1
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240428"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687138"
 ---
-# <a name="pointertraits-struct"></a>pointer_traits — struktura
+# <a name="pointer_traits-struct"></a>pointer_traits — struktura
 
-Dostarcza informacje, które są wymagane przez obiekt klasy szablonu `allocator_traits` do opisania alokatora z typem wskaźnika `Ptr`.
+Dostarcza informacje, które są konieczne przez obiekt typu `allocator_traits` do opisania alokatora z typem wskaźnika `Ptr`.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,7 +34,7 @@ template <class Ptr>
 
 ## <a name="remarks"></a>Uwagi
 
-PTR można surowego wskaźnika typu `Ty *` lub klasie z atrybutem następujące właściwości.
+PTR może być nieprzetworzonym wskaźnikiem typu `Ty *` lub klasy z następującymi właściwościami.
 
 ```cpp
 struct Ptr
@@ -54,25 +54,25 @@ struct Ptr
 
 |||
 |-|-|
-|`typedef T2 difference_type`|Typ `T2` jest `Ptr::difference_type` istnienia tego typu, w przeciwnym razie `ptrdiff_t`. Jeśli `Ptr` jest surowy wskaźnik jest typu `ptrdiff_t`.|
-|`typedef T1 element_type`|Typ `T1` jest `Ptr::element_type` istnienia tego typu, w przeciwnym razie `Ty`. Jeśli `Ptr` jest surowy wskaźnik jest typu `Ty`.|
+|`typedef T2 difference_type`|Typ `T2` jest `Ptr::difference_type`, jeśli ten typ istnieje, w przeciwnym razie `ptrdiff_t`. Jeśli `Ptr` jest wskaźnikiem nieprzetworzonym, typ jest `ptrdiff_t`.|
+|`typedef T1 element_type`|Typ `T1` jest `Ptr::element_type`, jeśli ten typ istnieje, w przeciwnym razie `Ty`. Jeśli `Ptr` jest wskaźnikiem nieprzetworzonym, typ jest `Ty`.|
 |`typedef Ptr pointer`|Typ jest `Ptr`.|
 
 ### <a name="structs"></a>Struktury
 
 |||
 |-|-|
-|`rebind`|Próbuje przekonwertować podstawowego wskaźnika typu do określonego typu.|
+|`rebind`|Próbuje skonwertować podstawowy typ wskaźnika do określonego typu.|
 
 ### <a name="methods"></a>Metody
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[pointer_to](#pointer_to)|Konwertuje dowolnego odwołania do obiektu klasy `Ptr`.|
+|[pointer_to](#pointer_to)|Konwertuje arbitralne odwołanie do obiektu klasy `Ptr`.|
 
-### <a name="pointer_to"></a> pointer_to
+### <a name="pointer_to"></a>pointer_to
 
-Metoda statyczna zwraca `Ptr::pointer_to(obj)`, jeśli istnieje w tej funkcji. W przeciwnym razie nie jest możliwe do przekonwertowania dowolnego odwołania do obiektu klasy `Ptr`. Jeśli `Ptr` jest surowy wskaźnik, Metoda ta zwraca `addressof(obj)`.
+Metoda statyczna zwracająca `Ptr::pointer_to(obj)`, jeśli ta funkcja istnieje. W przeciwnym razie nie jest możliwe przekonwertowanie dowolnego odwołania do obiektu klasy `Ptr`. Jeśli `Ptr` jest wskaźnikiem surowym, ta metoda zwraca `addressof(obj)`.
 
 ```cpp
 static pointer pointer_to(element_type& obj);

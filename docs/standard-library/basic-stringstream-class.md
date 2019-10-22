@@ -12,16 +12,16 @@ helpviewer_keywords:
 - std::basic_stringstream [C++], rdbuf
 - std::basic_stringstream [C++], str
 ms.assetid: 49629814-ca37-45c5-931b-4ff894e6ebd2
-ms.openlocfilehash: 9278b6ce0fa23fa875f1af57ea15719111439372
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ebf9b87b60cf790a2ca032eb805095f277324178
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447809"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688412"
 ---
-# <a name="basicstringstream-class"></a>basic_stringstream — Klasa
+# <a name="basic_stringstream-class"></a>basic_stringstream — Klasa
 
-Opisuje obiekt, który kontroluje Wstawianie i wyodrębnianie elementów i zakodowanych obiektów przy użyciu buforu strumienia klasy [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **elem**, **TR**, `Alloc`>.
+Opisuje obiekt, który kontroluje Wstawianie i wyodrębnianie elementów i zakodowanych obiektów przy użyciu buforu strumienia klasy [basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem**, **TR**`Alloc` >.
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,18 +32,18 @@ class basic_stringstream : public basic_iostream<Elem, Tr>
 
 ### <a name="parameters"></a>Parametry
 
-*Alokacj*\
+@No__t_1 *alokacji*
 Klasa alokatora.
 
-*Elem*\
+*Elem* \
 Typ podstawowego elementu ciągu.
 
-*Zdawczy*\
+@No__t_1 *TR*
 Cechy znaków wyspecjalizowane dla elementu Basic ciągu.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje obiekt, który kontroluje Wstawianie i wyodrębnianie elementów i zakodowanych obiektów przy użyciu bufora strumienia klasy [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **elem**, **TR**, `Alloc`>, z elementami typu `Elem`, których cechy znaku są określane przez klasę `Tr`i których elementy są przydzielane przez Alokator klasy `Alloc`. Obiekt przechowuje obiekt klasy basic_stringbuf < **elem**, `Alloc` **TR**>.
+Szablon klasy opisuje obiekt, który kontroluje Wstawianie i wyodrębnianie elementów i zakodowanych obiektów przy użyciu buforu strumienia klasy [basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **elem**, **TR**, `Alloc` >, z elementami typu `Elem`, których cechy znaków są określane przez klasę `Tr` i których elementy są przydzielane przez Alokator klasy `Alloc`. Obiekt przechowuje obiekt klasy basic_stringbuf < **elem**, **TR**`Alloc` >.
 
 ### <a name="constructors"></a>Konstruktorów
 
@@ -55,24 +55,24 @@ Klasa szablonu opisuje obiekt, który kontroluje Wstawianie i wyodrębnianie ele
 
 |Nazwa typu|Opis|
 |-|-|
-|[allocator_type](#allocator_type)|Typ jest synonimem dla parametru `Alloc`szablonu.|
+|[allocator_type](#allocator_type)|Typ jest synonimem dla parametru szablonu `Alloc`.|
 
 ### <a name="member-functions"></a>Funkcje członkowskie
 
 |Funkcja członkowska|Opis|
 |-|-|
-|[rdbuf](#rdbuf)|Zwraca adres buforu `pointer` zapisanego strumienia typu do [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`>.|
+|[rdbuf](#rdbuf)|Zwraca adres buforu zapisanego strumienia typu `pointer` do [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  `Elem`, `Tr`, `Alloc` >.|
 |[str](#str)|Ustawia lub pobiera tekst w buforze ciągów bez zmiany pozycji zapisu.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<strumienia >
+**Nagłówek:** \<sstream >
 
 **Przestrzeń nazw:** std
 
 ## <a name="allocator_type"></a>basic_stringstream::allocator_type
 
-Typ jest synonimem dla parametru `Alloc`szablonu.
+Typ jest synonimem dla parametru szablonu `Alloc`.
 
 ```cpp
 typedef Alloc allocator_type;
@@ -90,21 +90,21 @@ explicit basic_stringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base::
 
 ### <a name="parameters"></a>Parametry
 
-*_Mode*\
+*_Mode* \
 Jedno z wyliczeń w [ios_base:: openmode](../standard-library/ios-base-class.md#openmode).
 
-*str*\
+*str* \
 Obiekt typu `basic_string`.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor inicjuje klasę bazową przez wywołanie [basic_iostream](../standard-library/basic-iostream-class.md)( **SB**) `sb` , gdzie jest przechowywany obiekt klasy [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **elem**, **TR**, `Alloc`>. Jest on również `sb` inicjowany przez wywołanie basic_stringbuf < **elem**, `Alloc` **TR**, `_Mode`> ().
+Pierwszy Konstruktor inicjuje klasę bazową przez wywołanie [basic_iostream](../standard-library/basic-iostream-class.md)( **SB**), gdzie `sb` jest przechowywany obiekt klasy [basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **elem**, **TR**, `Alloc` >. Inicjuje również `sb` przez wywołanie basic_stringbuf < **elem**, **TR**`Alloc` > (`_Mode`).
 
-Drugi Konstruktor inicjuje klasę bazową przez wywołanie basic_iostream ( **SB**). Jest on również `sb` inicjowany przez wywołanie basic_stringbuf < **elem**, `Alloc` **TR**> ( _ str `_Mode`).
+Drugi Konstruktor inicjuje klasę bazową przez wywołanie basic_iostream ( **SB**). Inicjuje również `sb` przez wywołanie basic_stringbuf < **elem**, **TR**`Alloc` > (_ *str*, `_Mode`).
 
 ## <a name="rdbuf"></a>basic_stringstream:: rdbuf
 
-Zwraca adres przechowywanego bufora strumienia typu **wskaźnik** do [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **elem**, **TR**, `Alloc`>.
+Zwraca adres buforu zapisanego strumienia typu **wskaźnik** do [basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **elem**, **TR**`Alloc` >.
 
 ```cpp
 basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
@@ -112,11 +112,11 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Adres buforu `pointer` zapisanego strumienia typu do basic_stringbuf < **elem**, **TR** `Alloc`>.
+Adres buforu zapisanego strumienia typu `pointer` do basic_stringbuf < **elem**, **Tr**, `Alloc` >.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [basic_filebuf:: Close](../standard-library/basic-filebuf-class.md#close) , aby zapoznać się z `rdbuf`przykładem, który używa.
+Zobacz [basic_filebuf:: Close](../standard-library/basic-filebuf-class.md#close) , aby zapoznać się z przykładem, który używa `rdbuf`.
 
 ## <a name="str"></a>basic_stringstream:: str
 
@@ -131,23 +131,23 @@ void str(
 
 ### <a name="parameters"></a>Parametry
 
-*_Newstr*\
+*_Newstr* \
 Nowy ciąg.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca obiekt klasy [basic_string](../standard-library/basic-string-class.md)< **elem**, **TR**, `Alloc`>, której kontrolowana sekwencja jest kopią sekwencji kontrolowanej przez  **\*ten**element.
+Zwraca obiekt klasy [basic_string](../standard-library/basic-string-class.md) < **Elem**, **TR**`Alloc` >, którego kontrolowana sekwencja jest kopią sekwencji kontrolowanej przez **\*this**.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja członkowska zwraca [rdbuf](#rdbuf) -> [str](../standard-library/basic-stringbuf-class.md#str). Druga funkcja członkowska wywołuje `rdbuf`  ->  **str**( `_Newstr`).
+Pierwsza funkcja członkowska zwraca [rdbuf](#rdbuf)  -> [str](../standard-library/basic-stringbuf-class.md#str). Druga funkcja członkowska wywołuje `rdbuf`  -> **str**(`_Newstr`).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [basic_stringbuf:: str](../standard-library/basic-stringbuf-class.md#str) , aby zapoznać się z `str`przykładem, który używa.
+Zobacz [basic_stringbuf:: str](../standard-library/basic-stringbuf-class.md#str) , aby zapoznać się z przykładem, który używa `str`.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Programowanie iostream](../standard-library/iostream-programming.md)\
+[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
+\ [programowania iostream](../standard-library/iostream-programming.md)
 [Konwencje iostream](../standard-library/iostreams-conventions.md)

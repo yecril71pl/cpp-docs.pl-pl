@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - time_put_byname class
 ms.assetid: e08c2348-64d2-4ace-98b1-1496e14c7b1a
-ms.openlocfilehash: 2da2bf4ea1c709b820c1a82dc20e288634139a83
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4471c0df352a4d40d863ac36f0245cf8194f588c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460001"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685463"
 ---
 # <a name="time_put_byname-class"></a>time_put_byname — Klasa
 
-Klasa pochodna szablonu opisuje obiekt, który może być używany jako zestaw reguł ustawień regionalnych `time_put` typu \< CharType, OutputIterator >.
+Szablon klasy pochodnej opisuje obiekt, który może być używany jako zestaw reguł ustawień regionalnych typu `time_put` \< CharType, OutputIterator >.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,20 +40,20 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-*_Locname*\
+*_Locname* \
 Nazwa ustawień regionalnych.
 
-*_Refs*\
+*_Refs* \
 Początkowa liczba odwołań.
 
 ## <a name="remarks"></a>Uwagi
 
 Jego zachowanie zależy od nazwanych [o nazwie
-](../standard-library/locale-class.md#name) ustawień regionalnych *_Locname*. Każdy Konstruktor inicjuje swój obiekt podstawowy z [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator > (`_Refs`).
+](../standard-library/locale-class.md#name) ustawień regionalnych *_Locname*. Każdy Konstruktor inicjuje swój obiekt podstawowy z [time_put](../standard-library/time-put-class.md#time_put) \<CharType, OutputIterator > (`_Refs`).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<> ustawień regionalnych
+**Nagłówek:** \<locale >
 
 **Przestrzeń nazw:** std
 

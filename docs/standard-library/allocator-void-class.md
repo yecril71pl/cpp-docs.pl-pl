@@ -1,5 +1,5 @@
 ---
-title: Allocator&lt;void&gt; klasy
+title: Alokator &lt;void &gt; klasy
 ms.date: 11/04/2016
 f1_keywords:
 - memory/std::allocator<void>
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - allocator<void> class
 ms.assetid: abfb40f5-c600-46a6-b130-f42c6535b2bd
-ms.openlocfilehash: 7ac7fbaa8c50eb13457271cf96ddc3412733c833
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: c8d787fe03dfe6f67fb8e228308ec74b6e7f620a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245880"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688529"
 ---
-# <a name="allocatorltvoidgt-class"></a>Allocator&lt;void&gt; klasy
+# <a name="allocatorltvoidgt-class"></a>Alokator &lt;void &gt; klasy
 
-Specjalizacja alokatora klasy szablonu do typu **void**, definiowanie typów, które są uwzględnione w tym kontekście.
+Specjalizacja alokatora szablonu klasy do typu **void**, definiując typy, które mają sens w tym kontekście.
 
 ## <a name="syntax"></a>Składnia
 
@@ -41,7 +41,7 @@ class allocator<void> {
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa jawnie specjalizuje się klasy szablonu [alokatora](../standard-library/allocator-class.md) dla typu **void**. Jego konstruktorów i operator przypisania działają takie same jak dla klasy szablonu, ale definiuje on tylko następujących typów:
+Klasa jawnie wyspecjalizowany [Alokator](../standard-library/allocator-class.md) szablonu klasy dla typu **void**. Jego konstruktory i operator przypisania zachowują się tak samo jak dla szablonu klasy, ale definiuje tylko następujące typy:
 
 - [const_pointer](../standard-library/allocator-class.md#const_pointer).
 
@@ -49,4 +49,4 @@ Klasa jawnie specjalizuje się klasy szablonu [alokatora](../standard-library/al
 
 - [value_type](../standard-library/allocator-class.md#value_type).
 
-- [ponownie powiązać](../standard-library/allocator-class.md#rebind), szablon klasy zagnieżdżonej.
+- ponownie [powiązać](../standard-library/allocator-class.md#rebind)szablon klasy zagnieżdżonej.

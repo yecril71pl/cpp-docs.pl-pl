@@ -38,14 +38,14 @@ helpviewer_keywords:
 - std::regex_traits [C++], imbue
 - std::regex_traits [C++], getloc
 ms.assetid: bc5a5eed-32fc-4eb7-913d-71c42e729e81
-ms.openlocfilehash: a34346b4fc15beb605836037ef8a05a541562f33
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2a04e0f1c202717bb6d40a10f07475d78453ffd7
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451509"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689037"
 ---
-# <a name="regextraits-class"></a>regex_traits — Klasa
+# <a name="regex_traits-class"></a>regex_traits — Klasa
 
 Opisuje charakterystykę elementów do dopasowania.
 
@@ -58,14 +58,14 @@ class regex_traits
 
 ## <a name="parameters"></a>Parametry
 
-*Elem*\
+*Elem* \
 Typ elementu znaku do opisania.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje różne cechy wyrażeń regularnych dla typu *elem*. [Klasa basic_regex](../standard-library/basic-regex-class.md) klasy szablonu używa tych informacji do manipulowania elementami typu *elem*.
+Szablon klasy opisuje różne cechy wyrażeń regularnych dla typu *elem*. [Klasa basic_regex](../standard-library/basic-regex-class.md) szablonu klasy używa tych informacji do manipulowania elementami typu *elem*.
 
-Każdy `regex_traits` obiekt zawiera obiekt typu `regex_traits::locale` , który jest używany przez niektóre z jego funkcji składowych. Domyślne ustawienia regionalne to kopia `regex_traits::locale()`. Funkcja `imbue` członkowska zastępuje obiekt ustawień regionalnych, a funkcja `getloc` członkowska zwraca kopię obiektu ustawień regionalnych.
+Każdy obiekt `regex_traits` przechowuje obiekt typu `regex_traits::locale`, który jest używany przez niektóre z jego funkcji składowych. Domyślne ustawienia regionalne to kopia `regex_traits::locale()`. Funkcja członkowska `imbue` zastępuje obiekt ustawień regionalnych, a funkcja członkowska `getloc` zwraca kopię obiektu ustawień regionalnych.
 
 ### <a name="constructors"></a>Konstruktorów
 
@@ -88,12 +88,12 @@ Każdy `regex_traits` obiekt zawiera obiekt typu `regex_traits::locale` , który
 |Funkcja członkowska|Opis|
 |-|-|
 |[getloc](#getloc)|Zwraca przechowywany obiekt locale.|
-|[imbue](#imbue)|Zmienia przechowywany obiekt locale.|
+|[imbue —](#imbue)|Zmienia przechowywany obiekt locale.|
 |[isctype —](#isctype)|Testy dla członkostwa w klasie.|
-|[length](#length)|Zwraca długość sekwencji zakończonych znakiem null.|
+|[Długość](#length)|Zwraca długość sekwencji zakończonych znakiem null.|
 |[lookup_classname](#lookup_classname)|Mapuje sekwencję do klasy znaków.|
 |[lookup_collatename](#lookup_collatename)|Mapuje sekwencję do elementu sortowania.|
-|[transform](#transform)|Konwertuje na równoważną uporządkowaną sekwencję.|
+|[przekształcania](#transform)|Konwertuje na równoważną uporządkowaną sekwencję.|
 |[transform_primary](#transform_primary)|Konwertuje na równoważną sekwencję uporządkowaną bezliterowo.|
 |[Przetłumacz](#translate)|Konwertuje na odpowiedni pasujący element.|
 |[translate_nocase](#translate_nocase)|Konwertuje do równoważnego elementu pasującego do samego wielkości liter.|
@@ -101,7 +101,7 @@ Każdy `regex_traits` obiekt zawiera obiekt typu `regex_traits::locale` , który
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<> wyrażeń regularnych
+**Nagłówek:** \<regex >
 
 **Przestrzeń nazw:** std
 
@@ -185,7 +185,7 @@ typedef T8 char_class_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla nieokreślonego typu, który wyznacza klasy znaków. Wartości tego typu można łączyć za pomocą `|` operatora, aby wyznaczyć klasy znaków, które są Unią klas wyznaczonych przez operandy.
+Typ jest synonimem dla nieokreślonego typu, który wyznacza klasy znaków. Wartości tego typu można łączyć za pomocą operatora `|`, aby wyznaczyć klasy znaków, które są Unią klas wyznaczonych przez operandy.
 
 ## <a name="char_type"></a>regex_traits::char_type
 
@@ -197,7 +197,7 @@ typedef Elem char_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Element typedef jest synonimem argumentu `Elem`szablonu.
+Element typedef jest synonimem dla argumentu szablonu `Elem`.
 
 ## <a name="getloc"></a>regex_traits:: getloc
 
@@ -209,7 +209,7 @@ locale_type getloc() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca przechowywany `locale` obiekt.
+Funkcja członkowska zwraca przechowywany obiekt `locale`.
 
 ## <a name="imbue"></a>regex_traits:: imbue —
 
@@ -221,12 +221,12 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parametry
 
-*Loc*\
+\. *Loc*
 Obiekt ustawień regionalnych do przechowywania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska kopiuje element *Loc* do przechowywanego `locale` obiektu i zwraca kopię poprzedniej wartości przechowywanego `locale` obiektu.
+Funkcja członkowska kopiuje element *Loc* do przechowywanego obiektu `locale` i zwraca kopię poprzedniej wartości przechowywanego obiektu `locale`.
 
 ## <a name="isctype"></a>regex_traits:: isctype —
 
@@ -238,10 +238,10 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 ### <a name="parameters"></a>Parametry
 
-*ch*\
+*ch* \
 Element do przetestowania.
 
-*ze*\
+\ *CLS*
 Klasy do przetestowania.
 
 ### <a name="remarks"></a>Uwagi
@@ -258,12 +258,12 @@ static size_type length(const char_type *str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
+*str* \
 Sekwencja zakończona wartością null.
 
 ### <a name="remarks"></a>Uwagi
 
-Statyczna funkcja członkowska `std::char_traits<char_type>::length(str)`zwraca wartość.
+Statyczna funkcja członkowska zwraca `std::char_traits<char_type>::length(str)`.
 
 ## <a name="locale_type"></a>regex_traits::locale_type
 
@@ -275,7 +275,7 @@ typedef T7 locale_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Element typedef jest synonimem typu, który hermetyzuje ustawienia regionalne. W specjalizacjach `regex_traits<char>` i `regex_traits<wchar_t>` jest synonimem dla `std::locale`.
+Element typedef jest synonimem typu, który hermetyzuje ustawienia regionalne. W `regex_traits<char>` specjalizacji i `regex_traits<wchar_t>` jest to synonim dla `std::locale`.
 
 ## <a name="lookup_classname"></a>regex_traits::lookup_classname
 
@@ -288,19 +288,19 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszego*\
+*pierwszy* \
 Początek sekwencji do wyszukania.
 
-*ostatniego*\
+*ostatni* \
 Koniec sekwencji do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
 Funkcja członkowska zwraca wartość, która wyznacza klasę znaku o nazwie w sekwencji znaków wskazywanej przez argumenty. Wartość nie jest zależna od wielkości liter w sekwencji.
 
-`regex_traits<char>` Specjalizacja rozpoznaje nazwy ,`"lower"`, `"s"` ,,`"blank"`, ,`"digit"`, ,`"graph"`, `"d"` `"w"` `"alnum"` `"alpha"` `"cntrl"` `"print"`, ,`"punct"` ,i`"xdigit"`, wszystkie bez względu na wielkość liter. `"space"` `"upper"`
+Specjalizacja `regex_traits<char>` rozpoznaje nazwy `"d"`, `"s"`, `"w"`, `"alnum"`, `"alpha"`, `"blank"`, `"cntrl"`, `"digit"`, `"graph"`, 0, 1, 2, 3 , 4 i 5, bez względu na wielkość liter.
 
-`regex_traits<wchar_t>` Specjalizacja rozpoznaje nazwy ,`L"lower"`, `L"s"` ,,`L"blank"`, ,`L"digit"`, ,`L"graph"`, `L"d"` `L"w"` `L"alnum"` `L"alpha"` `L"cntrl"` `L"print"`, ,`L"punct"` ,i`L"xdigit"`, wszystkie bez względu na wielkość liter. `L"space"` `L"upper"`
+Specjalizacja `regex_traits<wchar_t>` rozpoznaje nazwy `L"d"`, `L"s"`, `L"w"`, `L"alnum"`, `L"alpha"`, `L"blank"`, `L"cntrl"`, `L"digit"`, `L"graph"`, 0, 1, 2, 3 , 4 i 5, bez względu na wielkość liter.
 
 ## <a name="lookup_collatename"></a>regex_traits::lookup_collatename
 
@@ -313,15 +313,15 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszego*\
+*pierwszy* \
 Początek sekwencji do wyszukania.
 
-*ostatniego*\
+*ostatni* \
 Koniec sekwencji do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca obiekt String zawierający element sortowania odpowiadający sekwencji `[first, last)`lub pusty ciąg, jeśli sekwencja nie jest prawidłowym elementem sortowania.
+Funkcja członkowska zwraca obiekt String zawierający element sortowania odpowiadający sekwencji `[first, last)` lub pusty ciąg, jeśli sekwencja nie jest prawidłowym elementem sortowania.
 
 ## <a name="regex_traits"></a>regex_traits::regex_traits
 
@@ -333,7 +333,7 @@ regex_traits();
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruktor konstruuje obiekt, którego przechowywany `locale` obiekt jest zainicjowany do domyślnych ustawień regionalnych.
+Konstruktor konstruuje obiekt, którego przechowywany `locale` obiekt jest inicjowany do domyślnych ustawień regionalnych.
 
 ## <a name="size_type"></a>regex_traits::size_type
 
@@ -345,7 +345,7 @@ typedef T6 size_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Element typedef jest synonimem dla niepodpisanego typu całkowitego. W specjalizacjach `regex_traits<char>` i `regex_traits<wchar_t>` jest synonimem dla `std::size_t`.
+Element typedef jest synonimem dla niepodpisanego typu całkowitego. W `regex_traits<char>` specjalizacji i `regex_traits<wchar_t>` jest to synonim dla `std::size_t`.
 
 Element typedef jest synonimem dla `std::size_t`.
 
@@ -372,15 +372,15 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszego*\
+*pierwszy* \
 Początek sekwencji do przekształcenia.
 
-*ostatniego*\
+*ostatni* \
 Koniec sekwencji do przekształcenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca ciąg wygenerowany przy użyciu reguły transformacji, która zależy od przechowywanego `locale` obiektu. Dla dwóch sekwencji znaków wyznaczono przez zakresy `[first1, last1)` iteratora i `transform(first1, last1) < transform(first2, last2)` `[first2, last2)`, jeśli sekwencja znaków oznaczona przez zakres `[first1, last1)` iteratora jest sortowana przed sekwencją znaków wyznaczono przez zakres iteratora `[first2, last2)`.
+Funkcja członkowska zwraca ciąg wygenerowany przy użyciu reguły transformacji, która zależy od przechowywanego obiektu `locale`. Dla dwóch sekwencji znaków wyznacznych przez zakresy iteratorów `[first1, last1)` i `[first2, last2)`, `transform(first1, last1) < transform(first2, last2)` Jeśli sekwencja znaków oznaczona przez zakres iteratora `[first1, last1)` sortuje przed sekwencją znaków wydaną przez zakres iteratora `[first2, last2)`.
 
 ## <a name="transform_primary"></a>regex_traits::transform_primary
 
@@ -393,15 +393,15 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszego*\
+*pierwszy* \
 Początek sekwencji do przekształcenia.
 
-*ostatniego*\
+*ostatni* \
 Koniec sekwencji do przekształcenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca ciąg wygenerowany przy użyciu reguły transformacji, która zależy od przechowywanego `locale` obiektu. Dla dwóch sekwencji znaków wyznaczono przez zakresy `[first1, last1)` iteratora i `transform_primary(first1, last1) < transform_primary(first2, last2)` `[first2, last2)`, jeśli sekwencja znaków oznaczona przez zakres `[first1, last1)` iteratora jest sortowana przed sekwencją znaków wyznaczono przez zakres iteratora `[first2, last2)` bez względu na wielkość liter lub akcentów.
+Funkcja członkowska zwraca ciąg wygenerowany przy użyciu reguły transformacji, która zależy od przechowywanego obiektu `locale`. Dla dwóch sekwencji znaków wyznaczono przez zakresy iteratorów `[first1, last1)` i `[first2, last2)`, `transform_primary(first1, last1) < transform_primary(first2, last2)` Jeśli sekwencja znaków oznaczona przez zakres iteratora `[first1, last1)` sortuje przed sekwencją znaków wydaną przez zakres iteratora `[first2, last2)` bez względu na przypadek lub akcent.
 
 ## <a name="translate"></a>regex_traits:: tłumaczyć
 
@@ -413,12 +413,12 @@ char_type translate(char_type ch) const;
 
 ### <a name="parameters"></a>Parametry
 
-*ch*\
+*ch* \
 Element do przekonwertowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca znak generowany przy użyciu reguły transformacji, która zależy od przechowywanego `locale` obiektu. Dla dwóch `char_type` obiektów `ch1` `translate(ch1) == translate(ch2)` i ,tylko`ch1` wtedy, gdy`ch2` i powinny być zgodne, gdy występuje w definicji wyrażenia regularnego, a drugi występuje w odpowiedniej pozycji w miejscu docelowym `ch2` Sekwencja dla dopasowania z uwzględnieniem ustawień regionalnych.
+Funkcja członkowska zwraca znak generowany przy użyciu reguły transformacji, która zależy od przechowywanego obiektu `locale`. Dla dwóch `char_type` obiektów `ch1` i `ch2` `translate(ch1) == translate(ch2)` tylko wtedy, gdy `ch1` i `ch2` powinny być zgodne, gdy występuje w definicji wyrażenia regularnego, a drugi występuje w odpowiedniej pozycji w sekwencji docelowej dla dopasowania z uwzględnieniem ustawień regionalnych.
 
 ## <a name="translate_nocase"></a>regex_traits::translate_nocase
 
@@ -430,12 +430,12 @@ char_type translate_nocase(char_type ch) const;
 
 ### <a name="parameters"></a>Parametry
 
-*ch*\
+*ch* \
 Element do przekonwertowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca znak generowany przy użyciu reguły transformacji, która zależy od przechowywanego `locale` obiektu. Dla dwóch `char_type` obiektów `ch1` `translate_nocase(ch1) == translate_nocase(ch2)` i ,tylko`ch1` wtedy, gdy`ch2` i powinny być zgodne, gdy występuje w definicji wyrażenia regularnego, a drugi występuje w odpowiedniej pozycji w miejscu docelowym `ch2` Sekwencja dla dopasowania bez uwzględniania wielkości liter.
+Funkcja członkowska zwraca znak generowany przy użyciu reguły transformacji, która zależy od przechowywanego obiektu `locale`. Dla dwóch `char_type` obiektów `ch1` i `ch2` `translate_nocase(ch1) == translate_nocase(ch2)` tylko wtedy, gdy `ch1` i `ch2` powinny być zgodne, gdy występuje w definicji wyrażenia regularnego, a drugi występuje w odpowiedniej pozycji w sekwencji docelowej dla dopasowania bez uwzględniania wielkości liter.
 
 ## <a name="value"></a>regex_traits:: value
 
@@ -447,10 +447,10 @@ int value(Elem ch, int radix) const;
 
 ### <a name="parameters"></a>Parametry
 
-*ch*\
+*ch* \
 Element do przekonwertowania.
 
-*podstawy*\
+*podstawy* \
 Baza arytmetyczna, która ma zostać użyta.
 
 ### <a name="remarks"></a>Uwagi
@@ -459,13 +459,13 @@ Funkcja członkowska zwraca wartość reprezentowaną przez znak *ch* w podstawo
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<regex>](../standard-library/regex.md)\
-[Klasa regex_constants](../standard-library/regex-constants-class.md)\
-[Klasa regex_error](../standard-library/regex-error-class.md)\
-[\<Funkcje > wyrażenia regularnego](../standard-library/regex-functions.md)\
-[Klasa regex_iterator](../standard-library/regex-iterator-class.md)\
-[\<Operatory > wyrażenia regularnego](../standard-library/regex-operators.md)\
-[Klasa regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
-[\<wyrażenie regularne > Typedefs](../standard-library/regex-typedefs.md)\
-[Klasa\<regex_traits char >](../standard-library/regex-traits-char-class.md)\
-[Klasa\<regex_traits wchar_t >](../standard-library/regex-traits-wchar-t-class.md)
+[\<regex >](../standard-library/regex.md) \
+[Klasa regex_constants](../standard-library/regex-constants-class.md) \
+[Klasa regex_error](../standard-library/regex-error-class.md) \
+[\<regex funkcje >](../standard-library/regex-functions.md) \
+[Klasa regex_iterator](../standard-library/regex-iterator-class.md) \
+[\<regex operatory >](../standard-library/regex-operators.md) \
+[Klasa regex_token_iterator](../standard-library/regex-token-iterator-class.md) \
+[\<regex > typedefs](../standard-library/regex-typedefs.md) \
+[regex_traits \<char > klasy](../standard-library/regex-traits-char-class.md) \
+[Klasa regex_traits \<wchar_t >](../standard-library/regex-traits-wchar-t-class.md)

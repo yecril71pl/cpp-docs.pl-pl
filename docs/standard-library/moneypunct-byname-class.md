@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - moneypunct_byname class
 ms.assetid: e8a544d2-6aee-420d-b513-deb385c9b416
-ms.openlocfilehash: 47c9d2281973cb57288bfdcf865926fb6dd9ed0e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c687bc870e4d78cfe9174eb04ea09c34d6a9c955
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460213"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687657"
 ---
-# <a name="moneypunctbyname-class"></a>moneypunct_byname — Klasa
+# <a name="moneypunct_byname-class"></a>moneypunct_byname — Klasa
 
-Klasa pochodna szablonu opisująca obiekt, który może być używany jako `moneypunct` zestaw reguł dla danego ustawienia regionalnego, umożliwiając formatowanie pola wejściowego pieniężnego lub pola walutowych danych wyjściowych.
+Szablon klasy pochodnej, który opisuje obiekt, który może być `moneypunct` aspektem danego ustawienia regionalnego, umożliwiając formatowanie pola wejściowego pieniężnego lub pola walutowych danych wyjściowych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,11 +40,11 @@ protected:
 
 ## <a name="remarks"></a>Uwagi
 
-Jego zachowanie zależy od nazwanych ustawień regionalnych `_Locname`. Każdy Konstruktor inicjuje swój obiekt podstawowy z [moneypunct](../standard-library/moneypunct-class.md#moneypunct)\<CharType, Intl > ( `_Refs`).
+Jego zachowanie zależy od nazwanych ustawień regionalnych `_Locname`. Każdy Konstruktor inicjuje swój obiekt podstawowy z [moneypunct](../standard-library/moneypunct-class.md#moneypunct) \<CharType, Intl > (`_Refs`).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<> ustawień regionalnych
+**Nagłówek:** \<locale >
 
 **Przestrzeń nazw:** std
 

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
-ms.openlocfilehash: 384a870a10c9f806684443d8c67647e924b6b2aa
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 15b704134d47b7bf7d8857bf380c756b0b03a1b0
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243384"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688389"
 ---
 # <a name="binder1st-class"></a>binder1st — Klasa
 
-Klasa szablonu, zapewniając konstruktora, który konwertuje obiekt binarny funkcji do obiektu funkcyjnego jednoargumentowe przez powiązanie pierwszy argument funkcji binarnego na określoną wartość. Przestarzałe w C ++ 11 uzyskać [powiązania](functional-functions.md#bind)i usuwane w języku C ++ 17.
+Szablon klasy dostarczający Konstruktor, który konwertuje obiekt funkcji binarnej na jednoargumentowy obiekt funkcji przez powiązanie pierwszego argumentu funkcji Binary z określoną wartością. Przestarzałe w języku C++ 11 na rzecz [powiązania](functional-functions.md#bind)i usunięte w języku c++ 17.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,24 +43,24 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-*binary_fn*\
-Obiekt binarny funkcji do konwersji na obiekt funkcyjny jednoargumentowy.
+*binary_fn* \
+Obiekt funkcji binarnej do przekonwertowania na jednoargumentowy obiekt funkcji.
 
-*po lewej stronie*\
-Wartość, do którego ma zostać powiązany pierwszy argument obiektu binarnego funkcji.
+\ *lewo*
+Wartość, do której należy powiązać pierwszy argument obiektu funkcji binarnej.
 
-*po prawej stronie*\
-Wartość argumentu, który porównuje dostosowane obiektu binarnego stała wartość drugiego argumentu.
+*prawa* \
+Wartość argumentu, który dostosowany obiekt binarny porównuje do ustalonej wartości drugiego argumentu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Obiekt funkcji Jednoelementowy, będącą wynikiem powiązanie pierwszy argument obiektu binarnego funkcji z wartością *po lewej stronie*.
+Jednoargumentowy obiekt funkcji, który jest wynikiem powiązania pierwszego argumentu obiektu funkcji binarnej z wartością *pozostawioną*.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu przechowuje kopię obiektu binarnego funkcja *binary_fn* w `op`, a kopia *po lewej stronie* w `value`. Definiuje jej funkcji członkowskiej `operator()` powrotu `op(value, right)`.
+Szablon klasy przechowuje kopię obiektu funkcji binarnej *binary_fn* w `op` i kopię *pozostawioną* w `value`. Definiuje jej funkcję członkowską `operator()` jako zwracającą `op(value, right)`.
 
-Jeśli *binary_fn* jest obiektem typu `Operation` i `c` jest stałą, następnie `bind1st(binary_fn, c)` jest bardziej wygodne odpowiednikiem `binder1st<Operation>(binary_fn, c)`. Aby uzyskać więcej informacji, zobacz [bind1st —](../standard-library/functional-functions.md#bind1st).
+Jeśli *binary_fn* jest obiektem typu `Operation` i `c` jest stałą, `bind1st(binary_fn, c)` jest bardziej wygodnym odpowiednikiem `binder1st<Operation>(binary_fn, c)`. Aby uzyskać więcej informacji, zobacz [bind1st —](../standard-library/functional-functions.md#bind1st).
 
 ## <a name="example"></a>Przykład
 

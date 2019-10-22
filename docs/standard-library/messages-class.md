@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::messages [C++], get
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
-ms.openlocfilehash: f417c33d5502f8e5bd247936c8a0f93007239924
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 704ee2ce40b4026cc066213181c96cf0f744d152
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449938"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687687"
 ---
 # <a name="messages-class"></a>messages — Klasa
 
-Klasa szablonu opisuje obiekt, który może służyć jako zestaw reguł ustawień regionalnych w celu pobrania zlokalizowanych komunikatów z katalogu międzynarodowych wiadomości dla danego ustawienia regionalnego.
+Szablon klasy opisuje obiekt, który może stanowić zestaw reguł ustawień regionalnych w celu pobrania zlokalizowanych komunikatów z katalogu międzynarodowych komunikatów dla danego ustawienia regionalnego.
 
 Obecnie gdy klasa komunikatów jest implementowana, nie ma żadnych komunikatów.
 
@@ -44,7 +44,7 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType*\
+@No__t_1 *CharType*
 Typ używany w programie do kodowania znaków w ustawieniach regionalnych.
 
 ## <a name="remarks"></a>Uwagi
@@ -64,7 +64,7 @@ W zasadzie ten zestaw reguł otwiera katalog komunikatów zdefiniowany w klasie 
 |Nazwa typu|Opis|
 |-|-|
 |[char_type](#char_type)|Typ znaku, który jest używany do wyświetlania komunikatów.|
-|[string_type](#string_type)|Typ, który opisuje ciąg `basic_string` zawierający znaki typu. `CharType`|
+|[string_type](#string_type)|Typ, który opisuje ciąg typu `basic_string` zawierający znaki typu `CharType`.|
 
 ### <a name="member-functions"></a>Funkcje członkowskie
 
@@ -79,7 +79,7 @@ W zasadzie ten zestaw reguł otwiera katalog komunikatów zdefiniowany w klasie 
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<> ustawień regionalnych
+**Nagłówek:** \<locale >
 
 **Przestrzeń nazw:** std
 
@@ -93,7 +93,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla parametru szablonu CharType .
+Typ jest synonimem dla parametru szablonu **CharType**.
 
 ## <a name="close"></a>messages:: Close
 
@@ -105,7 +105,7 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Catval*\
+*_Catval* \
 Wykaz, który ma zostać zamknięty.
 
 ### <a name="remarks"></a>Uwagi
@@ -122,7 +122,7 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Catval*\
+*_Catval* \
 Wykaz, który ma zostać zamknięty.
 
 ### <a name="remarks"></a>Uwagi
@@ -149,16 +149,16 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>Parametry
 
-*_Catval*\
+*_Catval* \
 Wartość identyfikacyjna określająca wykaz komunikatów do przeszukania.
 
-*_Ustaw*\
+*_Ustaw* \
 Pierwszy zidentyfikowany, używany do lokalizowania komunikatu w wykazie komunikatów.
 
-*_Message*\
+*_Message* \
 Drugi zidentyfikowany, używany do lokalizowania komunikatu w wykazie komunikatów.
 
-*_Dfault*\
+*_Dfault* \
 Ciąg, który ma zostać zwrócony w przypadku niepowodzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -171,7 +171,7 @@ Funkcja chronionego elementu członkowskiego próbuje uzyskać sekwencję komuni
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład dla [Get](#get), który wywołuje `do_get`.
+Zobacz przykład [pobierania](#get), który wywołuje `do_get`.
 
 ## <a name="do_open"></a>komunikaty::d o_open
 
@@ -185,10 +185,10 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>Parametry
 
-*_Catname*\
+*_Catname* \
 Nazwa katalogu, który ma być przeszukiwany.
 
-*_Loc*\
+*_Loc* \
 Ustawienia regionalne, które są wyszukiwane w katalogu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -203,7 +203,7 @@ Wartość zwracana powinna być używana jako argument dla późniejszego wywoł
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [otwierania](#open), które wywołuje `do_open`.
+Zobacz przykład [otwierania](#open), który wywołuje `do_open`.
 
 ## <a name="get"></a>messages:: Get
 
@@ -219,16 +219,16 @@ string_type get(
 
 ### <a name="parameters"></a>Parametry
 
-*_Catval*\
+*_Catval* \
 Wartość identyfikacyjna określająca wykaz komunikatów do przeszukania.
 
-*_Ustaw*\
+*_Ustaw* \
 Pierwszy zidentyfikowany, używany do lokalizowania komunikatu w wykazie komunikatów.
 
-*_Message*\
+*_Message* \
 Drugi zidentyfikowany, używany do lokalizowania komunikatu w wykazie komunikatów.
 
-*_Dfault*\
+*_Dfault* \
 Ciąg, który ma zostać zwrócony w przypadku niepowodzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -237,7 +237,7 @@ Zwraca kopię *_Dfault* w przypadku niepowodzenia. W przeciwnym razie zwraca kop
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca [do_get](#do_get)( `_Catval`, `_Set`, `_Message` `_Dfault`,).
+Funkcja członkowska zwraca [do_get](#do_get)(`_Catval`, `_Set`, `_Message`, `_Dfault`).
 
 ## <a name="messages"></a>messages:: messages
 
@@ -254,25 +254,25 @@ protected: messages(
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs*\
+*_Refs* \
 Wartość całkowita służąca do określania typu zarządzania pamięcią dla obiektu.
 
-*_Locname*\
+*_Locname* \
 Nazwa ustawień regionalnych.
 
 ### <a name="remarks"></a>Uwagi
 
 Możliwe wartości parametru *_Refs* i ich znaczenie są następujące:
 
-- 0: Okres istnienia obiektu jest zarządzany przez elementy lokalne, które go zawierają.
+- 0: okres istnienia obiektu jest zarządzany przez elementy lokalne, które go zawierają.
 
-- 1: Okres istnienia obiektu musi być zarządzany ręcznie.
+- 1: okres istnienia obiektu musi być zarządzany ręcznie.
 
-- \> 1: Te wartości nie są zdefiniowane.
+- \> 1: te wartości nie są zdefiniowane.
 
 Nie są możliwe żadne bezpośrednie przykłady, ponieważ destruktor jest chroniony.
 
-Konstruktor inicjuje swój obiekt podstawowy przy użyciu **ustawień regionalnych::** [facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
+Konstruktor inicjuje swój obiekt podstawowy przy użyciu **ustawień regionalnych::** [facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
 ## <a name="open"></a>messages:: Open
 
@@ -286,10 +286,10 @@ catalog open(
 
 ### <a name="parameters"></a>Parametry
 
-*_Catname*\
+*_Catname* \
 Nazwa katalogu, który ma być przeszukiwany.
 
-*_Loc*\
+*_Loc* \
 Ustawienia regionalne, które są wyszukiwane w katalogu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -298,11 +298,11 @@ Zwraca wartość, która porównuje mniej niż zero w przypadku niepowodzenia. W
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca [do_open](#do_open)( `_Catname`, `_Loc`).
+Funkcja członkowska zwraca [do_open](#do_open)(`_Catname`, `_Loc`).
 
 ## <a name="string_type"></a>messages:: string_type
 
-Typ, który opisuje ciąg `basic_string` zawierający znaki typu. `CharType`
+Typ, który opisuje ciąg typu `basic_string` zawierający znaki typu `CharType`.
 
 ```cpp
 typedef basic_string<CharType, Traits, Allocator> string_type;
@@ -310,10 +310,10 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje specjalizację klasy szablonu [basic_string](../standard-library/basic-string-class.md) , której obiekty mogą przechowywać kopie sekwencji komunikatów.
+Typ opisuje specjalizację szablonu klasy [basic_string](../standard-library/basic-string-class.md) , którego obiekty mogą przechowywać kopie sekwencji komunikatów.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<locale>](../standard-library/locale.md)\
-[Klasa messages_base](../standard-library/messages-base-class.md)\
+[\<locale >](../standard-library/locale.md) \
+[Klasa messages_base](../standard-library/messages-base-class.md) \
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

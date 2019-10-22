@@ -5,20 +5,20 @@ f1_keywords:
 - <optional>
 helpviewer_keywords:
 - <optional>
-ms.openlocfilehash: f3b4896a3cb4774e46b36480dd9769fa131fc287
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: bce31811c98d351f3c561b3136d41f7ed23d13e0
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957177"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687255"
 ---
 # <a name="ltoptionalgt"></a>&lt;optional&gt;
 
-Definiuje klasę `optional` szablonu kontenera i kilka szablonów pomocniczych.
+Definiuje szablon klasy kontenera `optional` i kilka szablonów pomocniczych.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<> opcjonalne
+**Nagłówek:** \<optional >
 
 **Przestrzeń nazw:** std
 
@@ -28,22 +28,22 @@ Definiuje klasę `optional` szablonu kontenera i kilka szablonów pomocniczych.
 
 |||
 |-|-|
-|[operator==](../standard-library/optional-operators.md#op_eq_eq)|Testuje, czy obiekt jest równy innemu obiektowi.|
+|[operator = =](../standard-library/optional-operators.md#op_eq_eq)|Testuje, czy obiekt jest równy innemu obiektowi.|
 |[operator!=](../standard-library/optional-operators.md#op_neq)|Testuje, czy obiekt nie jest równy innemu obiektowi.|
 |[< operatora](../standard-library/optional-operators.md#op_lt)|Testuje, czy obiekt po lewej stronie jest mniejszy niż obiekt po prawej stronie.|
 |[< operatora =](../standard-library/optional-operators.md#op_lt_eq)|Testuje, czy obiekt po lewej stronie jest mniejszy niż lub równy obiektowi po prawej stronie.|
-|[operator>](../standard-library/optional-operators.md#op_gt)|Testuje, czy obiekt po lewej stronie jest większy niż obiekt po prawej stronie.|
+|[> operatora](../standard-library/optional-operators.md#op_gt)|Testuje, czy obiekt po lewej stronie jest większy niż obiekt po prawej stronie.|
 |[operator>=](../standard-library/optional-operators.md#op_lt_eq)|Testuje, czy obiekt po lewej stronie jest większy lub równy obiektowi po prawej stronie.|
 
 > [!NOTE]
-> Oprócz porównywania \<relacyjnego operatory opcjonalne > obsługują również porównanie z **nullopt** i `T`.
+> Oprócz porównania relacyjnego operatory \<optional > obsługują również porównanie z **nullopt** i `T`.
 
 ### <a name="functions"></a>Funkcje
 
 |||
 |-|-|
 |[make_optional](../standard-library/optional-functions.md#make_optional)|Sprawia, że obiekt jest opcjonalny.|
-|[swap](../standard-library/optional-functions.md#swap)|Zamienia zawarte wartości dwóch `optional` obiektów.|
+|[wymiany](../standard-library/optional-functions.md#swap)|Zamienia zawarte wartości dwóch `optional` obiektów.|
 
 ### <a name="classes-and-structs"></a>Klasy i struktury
 
@@ -58,7 +58,7 @@ Definiuje klasę `optional` szablonu kontenera i kilka szablonów pomocniczych.
 
 |||
 |-|-|
-|[nullopt](../standard-library/optional-functions.md#nullopt)|Wystąpienie `nullopt_t` do porównywania.|
+|[nullopt](../standard-library/optional-functions.md#nullopt)|Wystąpienie `nullopt_t` do porównania.|
 
 ## <a name="see-also"></a>Zobacz także
 

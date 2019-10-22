@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::ostreambuf_iterator [C++], traits_type
 - std::ostreambuf_iterator [C++], failed
 ms.assetid: dad1e624-2f45-4e94-8887-a885e95f9071
-ms.openlocfilehash: 815647deb7c11f4d7be5650e0ec2e635338551ad
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: be4421a7646756da5687ebc9b98f18daf4845809
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448180"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687218"
 ---
-# <a name="ostreambufiterator-class"></a>Klasa ostreambuf_iterator
+# <a name="ostreambuf_iterator-class"></a>Klasa ostreambuf_iterator
 
-Klasa szablonu ostreambuf_iterator opisuje obiekt iteratora wyjściowego, który zapisuje kolejne elementy znaku w strumieniu wyjściowym z operatorem ekstrakcji **> >** . S różni się od elementów [klasy ostream_iterator](../standard-library/ostream-iterator-class.md) w postaci znaków, a nie typu ogólnego w typie obiektu wstawianym do strumienia wyjściowego. `ostreambuf_iterator`
+Szablon klasy ostreambuf_iterator opisuje obiekt iteratora wyjściowego, który zapisuje kolejne elementy znaku w strumieniu wyjściowym z **operatorem ekstrakcji > >** . @No__t_0s różni się od elementów [klasy ostream_iterator](../standard-library/ostream-iterator-class.md) w postaci znaków, a nie typu ogólnego w typie obiektu wstawianym do strumienia wyjściowego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,11 +35,11 @@ template <class CharType = char class Traits = char_traits <CharType>>
 
 ### <a name="parameters"></a>Parametry
 
-*CharType*\
+@No__t_1 *CharType*
 Typ, który reprezentuje typ znaków dla ostreambuf_iterator. Ten argument jest opcjonalny, a wartość domyślna to **char**.
 
-*Cech*\
-Typ, który reprezentuje typ znaków dla ostreambuf_iterator. Ten argument jest opcjonalny, a wartość domyślna to `char_traits` \< *CharType >.*
+*Cechy* \
+Typ, który reprezentuje typ znaków dla ostreambuf_iterator. Ten argument jest opcjonalny, a wartość domyślna to `char_traits` \< *chartype >.*
 
 ## <a name="remarks"></a>Uwagi
 
@@ -49,16 +49,16 @@ Klasa ostreambuf_iterator musi spełniać wymagania dla iteratora wyjściowego. 
 
 |Konstruktor|Opis|
 |-|-|
-|[ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator)|Tworzy obiekt `ostreambuf_iterator` , który jest zainicjowany, aby pisać znaki do strumienia wyjściowego.|
+|[ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator)|Konstruuje `ostreambuf_iterator`, które są inicjowane w celu zapisywania znaków w strumieniu wyjściowym.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Nazwa typu|Opis|
 |-|-|
-|[char_type](#char_type)|Typ, który zapewnia typ `ostreambuf_iterator`znaku.|
-|[ostream_type](#ostreambuf_iterator_ostream_type)|Typ, który zapewnia typ `ostream_iterator`strumienia.|
-|[streambuf_type](#streambuf_type)|Typ, który zapewnia typ `ostreambuf_iterator`strumienia.|
-|[traits_type](#traits_type)|Typ, który zapewnia dla typu `ostream_iterator`cechy znakowe.|
+|[char_type](#char_type)|Typ, który zapewnia typ znaku `ostreambuf_iterator`.|
+|[ostream_type](#ostreambuf_iterator_ostream_type)|Typ, który zapewnia typ strumienia `ostream_iterator`.|
+|[streambuf_type](#streambuf_type)|Typ, który zapewnia typ strumienia `ostreambuf_iterator`.|
+|[traits_type](#traits_type)|Typ, który zapewnia dla typu cechy znaku `ostream_iterator`.|
 
 ### <a name="member-functions"></a>Funkcje członkowskie
 
@@ -70,19 +70,19 @@ Klasa ostreambuf_iterator musi spełniać wymagania dla iteratora wyjściowego. 
 
 |Operator|Opis|
 |-|-|
-|[zakład](#op_star)|Operator dereferencji używany do \* implementowania wyrażenia `i`  =  `x`iteratora danych wyjściowych.|
-|[operator++](#op_add_add)|Niefunkcjonalny operator przyrostu zwracający `ostreambuf_iterator` do tego samego obiektu, do którego odnosił się przed wywołaniem operacji.|
-|[operator=](#op_eq)|Operator wstawia znak do bufora skojarzonego strumienia.|
+|[zakład](#op_star)|Operator dereferencji używany do implementowania wyrażenia iteratora danych wyjściowych \* `i`  =  `x`.|
+|[operator + +](#op_add_add)|Niefunkcjonalny operator przyrostu, który zwraca `ostreambuf_iterator` do tego samego obiektu, do którego odnosił się przed wywołaniem operacji.|
+|[operator =](#op_eq)|Operator wstawia znak do bufora skojarzonego strumienia.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<> iteratora
+**Nagłówek:** \<iterator >
 
 **Przestrzeń nazw:** std
 
 ## <a name="char_type"></a>ostreambuf_iterator::char_type
 
-Typ, który zapewnia typ `ostreambuf_iterator`znaku.
+Typ, który zapewnia typ znaku `ostreambuf_iterator`.
 
 ```cpp
 typedef CharType char_type;
@@ -90,7 +90,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla parametru `CharType`szablonu.
+Typ jest synonimem dla parametru szablonu `CharType`.
 
 ### <a name="example"></a>Przykład
 
@@ -144,7 +144,7 @@ ma **wartość true** , jeśli nie poprzednia próba wstawienia do buforu strumi
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca **wartość true** , jeśli w dowolnym poprzednim użyciu elementu `operator=`Członkowskiego wywołanie **subf**_-> `sputc` zwróciło **znacznik EOF**.
+Funkcja członkowska zwraca **wartość true** , jeśli w dowolnym wcześniejszym użyciu `operator=` elementu członkowskiego wywołanie **subf**_-> `sputc` zwróciło **znacznik EOF**.
 
 ### <a name="example"></a>Przykład
 
@@ -181,9 +181,9 @@ No insertions failed.
 */
 ```
 
-## <a name="op_star"></a>ostreambuf_iterator:: operator\*
+## <a name="op_star"></a>ostreambuf_iterator:: operator \*
 
-Niefunkcjonalny operator dereferencji używany do \* implementowania wyrażenia iteratora danych wyjściowych *i* = *x*.
+Niefunkcjonalny operator dereferencji używany do implementowania wyrażenia iteratora danych wyjściowych \* *i*  = *x*.
 
 ```cpp
 ostreambuf_iterator<CharType, Traits>& operator*();
@@ -195,7 +195,7 @@ Obiekt iteratora ostreambuf.
 
 ### <a name="remarks"></a>Uwagi
 
-Ten operator działa tylko w wyrażeniu \* iteratora danych wyjściowych *i* = *x* do znaków wyjściowych do buforu strumienia. Zastosowano do iteratora ostreambuf, zwraca iterator; ITER zwraca **ITER**,  **\***
+Ten operator działa tylko w wyrażeniu iteratora danych wyjściowych \* *i*  = *x* do znaków wyjściowych do buforu strumienia. Zastosowano do iteratora ostreambuf, zwraca iterator; **\*iter** zwraca **ITER**,
 
 ### <a name="example"></a>Przykład
 
@@ -239,11 +239,11 @@ ostreambuf_iterator<CharType, Traits>& operator++(int);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do znaku pierwotnie dotyczyło lub do obiektu zdefiniowanego przez implementację, który jest konwertowany `ostreambuf_iterator` \< na **CharType**, **cechy**>.
+Odwołanie do znaku, które pierwotnie dotyczyło lub do obiektu zdefiniowanego przez implementację, który jest konwertowany na `ostreambuf_iterator` \< **CharType**, **cechy**>.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator służy do \* implementowania wyrażenia iteratora danych wyjściowych *i* = *x*.
+Operator służy do implementowania wyrażenia iteratora danych wyjściowych \* *i*  = *x*.
 
 ### <a name="example"></a>Przykład
 
@@ -286,7 +286,7 @@ ostreambuf_iterator<CharType, Traits>& operator=(CharType _Char);
 
 ### <a name="parameters"></a>Parametry
 
-*_Char*\
+*_Char* \
 Znak, który ma zostać wstawiony do buforu strumienia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -295,7 +295,7 @@ Odwołanie do znaku wstawionego do buforu strumienia.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator przypisania używany \* do implementowania wyrażenia iteratora wyjściowego *i* = *x* do zapisu w strumieniu wyjściowym.
+Operator przypisania używany do implementowania wyrażenia iteratora danych wyjściowych \* *i*  = *x* do zapisu w strumieniu wyjściowym.
 
 ### <a name="example"></a>Przykład
 
@@ -330,7 +330,7 @@ OUT
 
 ## <a name="ostreambuf_iterator_ostreambuf_iterator"></a>ostreambuf_iterator::ostreambuf_iterator
 
-Tworzy obiekt `ostreambuf_iterator` , który jest zainicjowany, aby pisać znaki do strumienia wyjściowego.
+Konstruuje `ostreambuf_iterator`, które są inicjowane w celu zapisywania znaków w strumieniu wyjściowym.
 
 ```cpp
 ostreambuf_iterator(streambuf_type* strbuf) throw();
@@ -339,17 +339,17 @@ ostreambuf_iterator(ostream_type& Ostr) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*strbuf*\
+*strbuf* \
 Wyjściowy obiekt streambuf używany do inicjowania wskaźnika wyjściowego buforu strumienia.
 
-*Ostr*\
+*Ostr* \
 Obiekt strumienia wyjściowego używany do inicjowania wskaźnika buforu wyjściowego strumienia.
 
 ### <a name="remarks"></a>Uwagi
 
 Pierwszy Konstruktor inicjuje wskaźnik bufora strumienia wyjściowego z *strbuf*.
 
-Drugi Konstruktor inicjuje wskaźnik bufora strumienia wyjściowego z `Ostr`. `rdbuf`. Składowany wskaźnik nie może być pustym wskaźnikiem.
+Drugi Konstruktor inicjuje wskaźnik bufora strumienia wyjściowego z `Ostr`. `rdbuf`., Składowany wskaźnik nie może być pustym wskaźnikiem.
 
 ### <a name="example"></a>Przykład
 
@@ -386,7 +386,7 @@ These characters are being written to the output stream.
 
 ## <a name="ostreambuf_iterator_ostream_type"></a>ostreambuf_iterator::ostream_type
 
-Typ, który zapewnia typ `ostream_iterator`strumienia.
+Typ, który zapewnia typ strumienia `ostream_iterator`.
 
 ```cpp
 typedef basicOstream<CharType, Traits> ostream_type;
@@ -394,7 +394,7 @@ typedef basicOstream<CharType, Traits> ostream_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem `basicOstream` dla \< **CharType**, **cech**>
+Typ jest synonimem dla `basicOstream` \< **CharType**, **cech** >
 
 ### <a name="example"></a>Przykład
 
@@ -402,7 +402,7 @@ Zobacz [ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator) , aby zap
 
 ## <a name="streambuf_type"></a>ostreambuf_iterator::streambuf_type
 
-Typ, który zapewnia typ `ostreambuf_iterator`strumienia.
+Typ, który zapewnia typ strumienia `ostreambuf_iterator`.
 
 ```cpp
 typedef basic_streambuf<CharType, Traits> streambuf_type;
@@ -410,7 +410,7 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem `basic_streambuf` dla  \< CharType, **cech**>, klasy strumienia dla buforów we/wy, które staną się `streambuf` w miarę wyspecjalizowane dla znaku typu **char**.
+Typ jest synonimem dla `basic_streambuf` \< **CharType**, **cech**>, klasy strumienia dla buforów we/wy, które staną się `streambuf`, gdy są wyspecjalizowane dla znaku typu **char**.
 
 ### <a name="example"></a>Przykład
 
@@ -418,7 +418,7 @@ Zobacz [ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator) , aby zap
 
 ## <a name="traits_type"></a>ostreambuf_iterator::traits_type
 
-Typ, który zapewnia dla typu `ostream_iterator`cechy znakowe.
+Typ, który zapewnia dla typu cechy znaku `ostream_iterator`.
 
 ```cpp
 typedef Traits traits_type;
@@ -426,7 +426,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla parametru `Traits`szablonu.
+Typ jest synonimem dla parametru szablonu `Traits`.
 
 ### <a name="example"></a>Przykład
 
@@ -468,6 +468,6 @@ by charOutBuf are: OUT.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<iterator>](../standard-library/iterator.md)\
-[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[\<iterator >](../standard-library/iterator.md) \
+[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
 [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)

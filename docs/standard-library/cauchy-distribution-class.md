@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::cauchy_distribution [C++], param_type
 - std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
-ms.openlocfilehash: 628d79c8026c11c7583448ce021a6aaee4ace6d9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6a2bbdc9cc5ef8b633842bca3d94e0d8073c9abb
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449862"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688333"
 ---
-# <a name="cauchydistribution-class"></a>cauchy_distribution — Klasa
+# <a name="cauchy_distribution-class"></a>cauchy_distribution — Klasa
 
 Generuje rozkład Cauchy.
 
@@ -70,32 +70,32 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*Liczba rzeczywista*\
-Typ wyniku zmiennoprzecinkowego, wartość domyślna to **Double**. W przypadku możliwych typów zobacz [ \<losowe >](../standard-library/random.md).
+@No__t_1 *rzeczywistości*
+Typ wyniku zmiennoprzecinkowego, wartość domyślna to **Double**. W przypadku możliwych typów zobacz [\<random >](../standard-library/random.md).
 
-*URNG*\
-Jednolity aparat generatora liczb losowych. W przypadku możliwych typów zobacz [ \<losowe >](../standard-library/random.md).
+*URNG* \
+Jednolity aparat generatora liczb losowych. W przypadku możliwych typów zobacz [\<random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje dystrybucję, która produkuje wartości typu zmiennoprzecinkowego określonego przez użytkownika, lub typ **Double** , jeśli nie jest podany, dystrybuowany zgodnie z rozkładem Cauchy. Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków.
+Szablon klasy zawiera opis dystrybucji, która produkuje wartości typu zmiennoprzecinkowego określonego przez użytkownika, lub typ **Double** , jeśli nie jest podany, dystrybuowany zgodnie z rozkładem Cauchy. Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków.
 
 ||||
 |-|-|-|
 |[cauchy_distribution](#cauchy_distribution)|`cauchy_distribution::a`|`cauchy_distribution::param`|
 |`cauchy_distribution::operator()`|`cauchy_distribution::b`|[param_type](#param_type)|
 
-Właściwość działa `a()` i `b()` zwraca odpowiednie wartości dla przechowywanych parametrów `a` dystrybucji i `b`.
+Funkcje właściwości `a()` i `b()` zwracają odpowiednie wartości dla przechowywanych parametrów dystrybucji `a` i `b`.
 
-Element członkowski `param()` właściwości ustawia lub `param_type` zwraca przechowywany pakiet parametrów dystrybucji.
+Element członkowski właściwości `param()` ustawia lub zwraca `param_type` przechowywany pakiet parametrów dystrybucji.
 
-`min()` I`max()` funkcje członkowskie zwracają najmniejszy możliwy wynik i największy możliwy wynik.
+Funkcje członkowskie `min()` i `max()` zwracają najmniejszy możliwy wynik i największy możliwy wynik.
 
-Funkcja członkowska odrzuca wszystkie wartości pamięci podręcznej, dzięki czemu wynik następnego wywołania do `operator()` nie zależy od wartości uzyskanych z aparatu przed wywołaniem. `reset()`
+Funkcja członkowska `reset()` odrzuca wszystkie wartości pamięci podręcznej, dzięki czemu wynik następnego wywołania do `operator()` nie zależy od wartości uzyskanych z aparatu przed wywołaniem.
 
-Funkcje `operator()` Członkowskie zwracają następną wygenerowaną wartość opartą na aparacie URNG, z bieżącego pakietu parametrów lub z określonym pakietem parametrów.
+Funkcje składowe `operator()` zwracają następną wygenerowaną wartość opartą na aparacie URNG, z bieżącego pakietu parametrów lub z określonym pakietem parametrów.
 
-Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [ \<Random >](../standard-library/random.md).
+Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [\<random >](../standard-library/random.md).
 
 Aby uzyskać szczegółowe informacje na temat dystrybucji Cauchy, zobacz Wolfram [MathWorld artykułu.](https://go.microsoft.com/fwlink/p/?linkid=400523)
 
@@ -236,7 +236,7 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowe >
+**Nagłówek:** \<random >
 
 **Przestrzeń nazw:** std
 
@@ -251,22 +251,22 @@ explicit cauchy_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*z*\
-Parametr `a` rozkładu.
+*\*
+@No__t_0 parametr dystrybucji.
 
-*b*\
-Parametr `b` rozkładu.
+*b* \
+@No__t_0 parametr dystrybucji.
 
-*parametr*\
-`param_type` Struktura używana do konstruowania rozkładu.
+*parametr* \
+Struktura `param_type` używana do konstruowania rozkładu.
 
 ### <a name="remarks"></a>Uwagi
 
 **Warunek wstępny:** `0.0 < b`
 
-Pierwszy Konstruktor konstrukcji obiektu których przechowywane `a` wartość przechowuje wartość *a* i których przechowywane `b` wartość zawiera wartość *b*.
+Pierwszy Konstruktor konstruuje obiekt, którego przechowywana `a` wartość przechowuje wartość *a* i której przechowywana `b` wartość przechowuje wartość *b*.
 
-Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżące parametry istniejącej dystrybucji, wywołując `param()` funkcję członkowską.
+Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżące parametry istniejącej dystrybucji, wywołując funkcję elementu członkowskiego `param()`.
 
 ## <a name="param_type"></a>cauchy_distribution::p aram_type
 
@@ -286,21 +286,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*z*\
-Parametr `a` rozkładu.
+*\*
+@No__t_0 parametr dystrybucji.
 
-*b*\
-Parametr `b` rozkładu.
+*b* \
+@No__t_0 parametr dystrybucji.
 
-*Kliknij*\
-Obiekt `param_type` , który ma zostać porównany.
+*prawa* \
+Obiekt `param_type`, do którego ma zostać wykonane porównanie.
 
 ### <a name="remarks"></a>Uwagi
 
 **Warunek wstępny:** `0.0 < b`
 
-Tę strukturę można przesłać do konstruktora klasy dystrybucji podczas tworzenia wystąpienia, do `param()` funkcji składowej, aby ustawić przechowywane parametry istniejącej dystrybucji, `operator()` a także użyć zamiast przechowywanych parametrów.
+Tę strukturę można przesłać do konstruktora klasy dystrybucji podczas tworzenia wystąpienia, do funkcji składowej `param()`, aby ustawić przechowywane parametry istniejącej dystrybucji i `operator()` do użycia zamiast przechowywanych parametrów.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<random>](../standard-library/random.md)
+[\<random >](../standard-library/random.md)

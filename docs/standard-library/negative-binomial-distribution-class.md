@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-ms.openlocfilehash: 11e705629675903803f7230d540417846417cc77
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d8e71b351d88a1c4dee61f88c18aec513d776cd3
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456962"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689254"
 ---
-# <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution — Klasa
+# <a name="negative_binomial_distribution-class"></a>negative_binomial_distribution — Klasa
 
 Generuje ujemny rozkład dwumianowy.
 
@@ -71,31 +71,31 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*IntType*\
-Typ wyniku liczby całkowitej, wartość domyślna to **int**. W przypadku możliwych typów zobacz [ \<losowe >](../standard-library/random.md).
+*IntType* \
+Typ wyniku liczby całkowitej, wartość domyślna to **int**. W przypadku możliwych typów zobacz [\<random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje dystrybucję, która produkuje wartości typu całkowitego określonego przez użytkownika, lub typ **int** , jeśli nie jest podany, dystrybuowany zgodnie z ujemną funkcją prawdopodobieństwa rozkład dwumianowy. Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków.
+Szablon klasy opisuje dystrybucję, która produkuje wartości typu całkowitego określonego przez użytkownika, lub typ **int** , jeśli nie jest podany, dystrybuowany zgodnie z ujemną funkcją prawdopodobieństwa rozkład dwumianowy. Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków.
 
 ||||
 |-|-|-|
 |[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
 |`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
 
-Elementy członkowskie `k()` właściwości i `p()` zwracają odpowiednio przechowywane wartości parametrów dystrybucji *k* i *p* .
+Elementy członkowskie właściwości `k()` i `p()` zwracają aktualnie przechowywane wartości parametrów dystrybucji *k* i *p* .
 
-Element członkowski `param()` właściwości ustawia lub `param_type` zwraca przechowywany pakiet parametrów dystrybucji.
+Element członkowski właściwości `param()` ustawia lub zwraca `param_type` przechowywany pakiet parametrów dystrybucji.
 
-`min()` I`max()` funkcje członkowskie zwracają najmniejszy możliwy wynik i największy możliwy wynik.
+Funkcje członkowskie `min()` i `max()` zwracają najmniejszy możliwy wynik i największy możliwy wynik.
 
-Funkcja członkowska odrzuca wszystkie wartości pamięci podręcznej, dzięki czemu wynik następnego wywołania do `operator()` nie zależy od wartości uzyskanych z aparatu przed wywołaniem. `reset()`
+Funkcja członkowska `reset()` odrzuca wszystkie wartości pamięci podręcznej, dzięki czemu wynik następnego wywołania do `operator()` nie zależy od wartości uzyskanych z aparatu przed wywołaniem.
 
-Funkcje `operator()` Członkowskie zwracają następną wygenerowaną wartość opartą na aparacie URNG, z bieżącego pakietu parametrów lub z określonym pakietem parametrów.
+Funkcje składowe `operator()` zwracają następną wygenerowaną wartość opartą na aparacie URNG, z bieżącego pakietu parametrów lub z określonym pakietem parametrów.
 
-Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [ \<Random >](../standard-library/random.md).
+Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [\<random >](../standard-library/random.md).
 
-Aby uzyskać szczegółowe informacje o ujemnej funkcji prawdopodobieństwa rozkładu dwumianowego, zobacz [rozkład](https://go.microsoft.com/fwlink/p/?linkid=400516)dwumianowy Wolfram MathWorld.
+Aby uzyskać szczegółowe informacje o ujemnej funkcji prawdopodobieństwa rozkładu dwumianowego, zobacz [rozkład dwumianowy](https://go.microsoft.com/fwlink/p/?linkid=400516)Wolfram MathWorld.
 
 ## <a name="example"></a>Przykład
 
@@ -217,7 +217,7 @@ Histogram for 100 samples:
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowe >
+**Nagłówek:** \<random >
 
 **Przestrzeń nazw:** std
 
@@ -232,48 +232,48 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*k*\
-Parametr `k` rozkładu.
+\ *k*
+@No__t_0 parametr dystrybucji.
 
-*St*\
-Parametr `p` rozkładu.
+*p* \
+@No__t_0 parametr dystrybucji.
 
-*parametr*\
+*parametr* \
 Struktura parametru używana do konstruowania rozkładu.
 
 ### <a name="remarks"></a>Uwagi
 
-**Warunek wstępny:** `0.0 < k` i`0.0 < p ≤ 1.0`
+**Warunek wstępny:** `0.0 < k` i `0.0 < p ≤ 1.0`
 
-Pierwszy Konstruktor konstruuje obiekt, którego przechowywana `p` wartość utrzymuje wartość *p* i której przechowywana `k` wartość przechowuje wartość *k*.
+Pierwszy Konstruktor konstruuje obiekt, którego składowana `p` wartość utrzymuje wartość *p* i której przechowywana `k` wartość przechowuje wartość *k*.
 
-Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżące parametry istniejącej dystrybucji, wywołując `param()` funkcję członkowską.
+Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżące parametry istniejącej dystrybucji, wywołując funkcję elementu członkowskiego `param()`.
 
 ## <a name="param_type"></a>negative_binomial_distribution::p aram_type
 
 Przechowuje parametry dystrybucji.
 
-struct param_type {typedef negative_binomial_distribution`<`result_type > distribution_type; param_type (result_type k = 1, Double p = 0,5); result_type k () const; Double p () const;
+struct param_type {typedef negative_binomial_distribution `<`result_type > distribution_type; param_type (result_type k = 1, Double p = 0,5); result_type k () const; Double p () const;
 
    operator logiczny = = (const param_type & Right) const; operator logiczny! = (const param_type & Right) const; };
 
 ### <a name="parameters"></a>Parametry
 
-*k*\
-Parametr `k` rozkładu.
+\ *k*
+@No__t_0 parametr dystrybucji.
 
-*St*\
-Parametr `p` rozkładu.
+*p* \
+@No__t_0 parametr dystrybucji.
 
-*Kliknij*\
-`param_type` Struktura użyta do porównania.
+*prawa* \
+Struktura `param_type` używana do porównywania.
 
 ### <a name="remarks"></a>Uwagi
 
-**Warunek wstępny:** `0.0 < k` i`0.0 < p ≤ 1.0`
+**Warunek wstępny:** `0.0 < k` i `0.0 < p ≤ 1.0`
 
-Tę strukturę można przesłać do konstruktora klasy dystrybucji podczas tworzenia wystąpienia, do `param()` funkcji składowej, aby ustawić przechowywane parametry istniejącej dystrybucji, `operator()` a także użyć zamiast przechowywanych parametrów.
+Tę strukturę można przesłać do konstruktora klasy dystrybucji podczas tworzenia wystąpienia, do funkcji składowej `param()`, aby ustawić przechowywane parametry istniejącej dystrybucji i `operator()` do użycia zamiast przechowywanych parametrów.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<random>](../standard-library/random.md)
+[\<random >](../standard-library/random.md)

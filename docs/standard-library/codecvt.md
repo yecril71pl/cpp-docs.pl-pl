@@ -1,5 +1,5 @@
 ---
-title: '&lt;codecvt&gt;'
+title: '&lt;codecvt &gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - codecvt
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
-ms.openlocfilehash: fc711b14a2d30041b4585a9515a95e42280f5306
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 972672e80ce4f82402296317c75e35dcd10c9e93
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458606"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688283"
 ---
-# <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
+# <a name="ltcodecvtgt"></a>&lt;codecvt &gt;
 
-Definiuje kilka klas szablonów, które opisują obiekty na podstawie klasy szablonu [codecvt](../standard-library/codecvt-class.md). Te obiekty mogą stanowić zestawy [reguł ustawień regionalnych](../standard-library/locale-class.md#facet_class) , które kontrolują konwersje między sekwencją wartości typu `Elem` a sekwencją wartości typu **char**.
+Definiuje kilka szablonów klas, które opisują obiekty na podstawie szablonu klasy [codecvt](../standard-library/codecvt-class.md). Te obiekty mogą działać jako zestawy [reguł ustawień regionalnych](../standard-library/locale-class.md#facet_class) , które kontrolują konwersje między sekwencją wartości typu `Elem` i sekwencją wartości typu **char**.
 
 ## <a name="syntax"></a>Składnia
 

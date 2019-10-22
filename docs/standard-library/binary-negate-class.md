@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - binary_negate class
 ms.assetid: 7b86f02c-af7e-4c7f-9df1-08addae4dd65
-ms.openlocfilehash: d93ead4f301b6c5df918a6f402cea6963a9535e1
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 01396384cbd551cca5682c7ffd1b31d89e6d1dc2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243365"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688398"
 ---
-# <a name="binarynegate-class"></a>binary_negate — Klasa
+# <a name="binary_negate-class"></a>binary_negate — Klasa
 
-Klasa szablonu, zapewniając funkcją składową, negujące wartość zwracaną określoną funkcję binarny. Przestarzała w języku C ++ 17 zastąpiona ceną [not_fn](functional-functions.md#not_fn).
+Szablon klasy dostarczający funkcję członkowską, która wyklucza wartość zwracaną określonej funkcji binarnej. Przestarzałe w języku C++ 17 na korzyść [not_fn](functional-functions.md#not_fn).
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,24 +33,24 @@ class binary_negate
 
 ### <a name="parameters"></a>Parametry
 
-*FUNC*\
-Binarny funkcja być ujemna.
+@No__t_1 *Func*
+Funkcja binarna, która ma być negacją.
 
-*po lewej stronie*\
-Lewy operand binarne funkcję, aby być ujemna.
+\ *lewo*
+Lewy operand funkcji binarnej, która ma być negacją.
 
-*po prawej stronie*\
-Prawy operand binarne funkcję, aby być ujemna.
+*prawa* \
+Prawy operand funkcji binarnej, która ma być negacją.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Negacja binarne funkcji.
+Negacja funkcji binarnej.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu przechowuje kopię obiektu binarnego funkcja *Func*. Definiuje jej funkcji członkowskiej `operator()` powrotu `!Func(left, right)`.
+Szablon klasy przechowuje kopię *obiektu funkcji*binarnej. Definiuje jej funkcję członkowską `operator()` jako zwracającą `!Func(left, right)`.
 
-Konstruktor obiektu `binary_negate` jest rzadko używana bezpośrednio. Funkcja Pomocnika [not2 —](../standard-library/functional-functions.md#not2) zwykle są preferowane dla deklarowanie i użycie **binary_negator** predykatu adaptera.
+Konstruktor `binary_negate` jest rzadko używany bezpośrednio. Funkcja pomocnika [not2 —](../standard-library/functional-functions.md#not2) jest zwykle preferowana do zadeklarowania i użycia predykatu adaptera **binary_negator** .
 
 ## <a name="example"></a>Przykład
 

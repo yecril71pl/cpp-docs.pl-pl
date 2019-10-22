@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - messages_byname class
 ms.assetid: c6c64841-3e80-43c8-b54c-fed41833ad6b
-ms.openlocfilehash: b8fe1ab2db792819831f5c50aa99a02559f71cdd
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 56d8931cb404d9c0f3f5113f8b2ca0f1158209f2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451806"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689331"
 ---
-# <a name="messagesbyname-class"></a>messages_byname — Klasa
+# <a name="messages_byname-class"></a>messages_byname — Klasa
 
-Klasa pochodna szablonu opisuje obiekt, który może stanowić zestaw aspektów komunikatów dla danego ustawienia regionalnego, umożliwiając pobieranie zlokalizowanych komunikatów.
+Szablon klasy pochodnej opisuje obiekt, który może stanowić zestaw aspektów komunikatów dla danego ustawienia regionalnego, umożliwiając pobieranie zlokalizowanych komunikatów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,19 +39,19 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-*_Locname*\
+*_Locname* \
 Nazwane ustawienia regionalne.
 
-*_Refs*\
+*_Refs* \
 Początkowa liczba odwołań.
 
 ## <a name="remarks"></a>Uwagi
 
-Jego zachowanie zależy od nazwanych ustawień regionalnych *_Locname*. Każdy Konstruktor inicjuje swój obiekt podstawowy z [komunikatami](../standard-library/messages-class.md#messages)\<CharType > `_Refs`().
+Jego zachowanie zależy od nazwanych ustawień regionalnych *_Locname*. Każdy Konstruktor inicjuje swój obiekt podstawowy z [komunikatami](../standard-library/messages-class.md#messages) \<CharType > (`_Refs`).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<> ustawień regionalnych
+**Nagłówek:** \<locale >
 
 **Przestrzeń nazw:** std
 

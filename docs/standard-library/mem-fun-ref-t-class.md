@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - mem_fun_ref_t class
 ms.assetid: 7dadcac3-8d33-4e4b-a792-81bd53d3df39
-ms.openlocfilehash: 0879736863a9b8052d19cc86dc5636ba14bcf993
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d8f5ef05d1bdeec694cdf22d7e7a163478127dfc
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240607"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687760"
 ---
-# <a name="memfunreft-class"></a>mem_fun_ref_t — Klasa
+# <a name="mem_fun_ref_t-class"></a>mem_fun_ref_t — Klasa
 
-Klasa adaptera, który umożliwia `non_const` funkcja elementu członkowskiego, która nie przyjmuje żadnych argumentów, które ma być wywoływana jako obiekt funkcji jednoargumentowe po zainicjowaniu z argumentem odwołania. Przestarzałe w C ++ 11, usunięte w języku C ++ 17.
+Klasa adaptera, która umożliwia `non_const` funkcji członkowskiej, która nie przyjmuje argumentów do wywołania jednoargumentowego obiektu, gdy zostanie zainicjowany z argumentem odwołania. Przestarzałe w języku C++ 11, usunięte w języku C++ 17.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,20 +31,20 @@ class mem_fun_ref_t : public unary_function<Type, Result> {
 
 ### <a name="parameters"></a>Parametry
 
-*_Pm*\
-Wskaźnik do funkcji składowej klasy typu `Type` do konwersji na obiekt funkcyjny.
+*_Pm* \
+Wskaźnik do funkcji członkowskiej klasy `Type` do przekonwertowania na obiekt funkcji.
 
-*po lewej stronie*\
-Obiekt, *_Pm* wywoływana jest funkcja elementu członkowskiego.
+\ *lewo*
+Obiekt, na którym jest wywoływana funkcja członkowska *_Pm* .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcję jednoargumentową dostosowywalne.
+Dostosowywalna funkcja Jednoargumentowa.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu przechowuje kopię *_Pm*, który musi być wskaźnikiem do funkcji składowej klasy `Type`, w obiekcie prywatnego elementu członkowskiego. Definiuje jej funkcji członkowskiej `operator()` powrotu (**po lewej stronie**. * `_Pm`) ().
+Szablon klasy przechowuje kopię *_Pm*, która musi być wskaźnikiem do funkcji składowej klasy `Type`, w prywatnym obiekcie członkowskim. Definiuje jej funkcję członkowską `operator()` jako zwracającą (**Left**. * `_Pm`) ().
 
 ## <a name="example"></a>Przykład
 
-Konstruktor obiektu `mem_fun_ref_t` nie jest zazwyczaj używana bezpośrednio; funkcja Pomocnika `mem_fun_ref` umożliwia dostosowanie funkcji elementów członkowskich. Zobacz [mem_fun_ref —](../standard-library/functional-functions.md#mem_fun_ref) przykład sposobu użycia adapterów funkcja elementu członkowskiego.
+Konstruktor `mem_fun_ref_t` nie jest zazwyczaj używany bezpośrednio; funkcja pomocnika `mem_fun_ref` jest używana do adaptacji funkcji Członkowskich. Zobacz [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref) , aby zapoznać się z przykładem użycia adapterów funkcji składowych.

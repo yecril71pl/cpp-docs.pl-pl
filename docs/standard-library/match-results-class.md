@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
-ms.openlocfilehash: 72a948c7f8422b36b94a16cdb2c815bca92d20c7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c282791fb0ff85c0c8818c6905c51703614f4675
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456387"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689385"
 ---
-# <a name="matchresults-class"></a>match_results — Klasa
+# <a name="match_results-class"></a>match_results — Klasa
 
 Przechowuje sekwencję podpasowań.
 
@@ -26,15 +26,15 @@ class match_results
 
 ## <a name="parameters"></a>Parametry
 
-*BidIt*\
+*BidIt* \
 Typ iteratora dla podpasowań.
 
-*Alokacj*\
+@No__t_1 *alokacji*
 Typ alokatora do zarządzania pamięcią.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje obiekt, który kontroluje niemodyfikowalną sekwencję elementów typu `sub_match<BidIt>` wygenerowanego przez wyszukiwanie wyrażenia regularnego. Każdy element wskazuje podsekwencję, która była zgodna z grupą przechwytywania odpowiadającą temu elementowi.
+Szablon klasy opisuje obiekt, który kontroluje niemodyfikowalną sekwencję elementów typu `sub_match<BidIt>` generowaną przez wyszukiwanie wyrażenia regularnego. Każdy element wskazuje podsekwencję, która była zgodna z grupą przechwytywania odpowiadającą temu elementowi.
 
 ### <a name="constructors"></a>Konstruktorów
 
@@ -51,8 +51,8 @@ Klasa szablonu opisuje obiekt, który kontroluje niemodyfikowalną sekwencję el
 |[const_iterator](#const_iterator)|Typ iteratora const dla podpasowań.|
 |[const_reference](#const_reference)|Typ odwołania do elementu const.|
 |[difference_type](#difference_type)|Typ różnicy iteratora.|
-|[iterator](#iterator)|Typ iteratora dla podpasowań.|
-|[Odwołanie](#reference)|Typ odwołania do elementu.|
+|[Iterator](#iterator)|Typ iteratora dla podpasowań.|
+|[odwoła](#reference)|Typ odwołania do elementu.|
 |[size_type](#size_type)|Typ liczby poddopasowywania.|
 |[string_type](#string_type)|Typ ciągu.|
 |[value_type](#value_type)|Typ poddopasowania.|
@@ -61,30 +61,30 @@ Klasa szablonu opisuje obiekt, który kontroluje niemodyfikowalną sekwencję el
 
 |Funkcja członkowska|Opis|
 |-|-|
-|[begin](#begin)|Określa początek sekwencji poddopasowywania.|
-|[empty](#empty)|Testuje brak podpasowań.|
+|[zaczną](#begin)|Określa początek sekwencji poddopasowywania.|
+|[ciągiem](#empty)|Testuje brak podpasowań.|
 |[punktów](#end)|Określa koniec sekwencji poddopasowywania.|
-|[format](#format)|Poddopasowania formatów.|
+|[Formatowanie](#format)|Poddopasowania formatów.|
 |[get_allocator](#get_allocator)|Zwraca przechowywany program przydzielający.|
-|[length](#length)|Zwraca długość poddopasowania.|
+|[Długość](#length)|Zwraca długość poddopasowania.|
 |[max_size](#max_size)|Pobiera największą liczbę podpasowań.|
 |[umieścić](#position)|Pobierz początkowe przesunięcie podgrupy.|
-|[prefix](#prefix)|Pobiera sekwencję przed pierwszym poddopasowaniem.|
+|[prefiks](#prefix)|Pobiera sekwencję przed pierwszym poddopasowaniem.|
 |[zmienia](#size)|Liczy liczbę podpasowań.|
 |[str](#str)|Zwraca poddopasowanie.|
-|[suffix](#suffix)|Pobiera sekwencję po ostatnim dopasowań.|
-|[swap](#swap)|Zamienia dwa obiekty match_results.|
+|[przedrostk](#suffix)|Pobiera sekwencję po ostatnim dopasowań.|
+|[wymiany](#swap)|Zamienia dwa obiekty match_results.|
 
 ### <a name="operators"></a>Operatory
 
 |Operator|Opis|
 |-|-|
-|[operator=](#op_eq)|Skopiuj obiekt match_results.|
-|[zakład\[\]](#op_at)|Dostęp do podobiektu.|
+|[operator =](#op_eq)|Skopiuj obiekt match_results.|
+|[\[ operatora \]](#op_at)|Dostęp do podobiektu.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<> wyrażeń regularnych
+**Nagłówek:** \<regex >
 
 **Przestrzeń nazw:** std
 
@@ -222,7 +222,7 @@ typedef typename iterator_traits<BidIt>::value_type char_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Element typedef jest synonimem typu `iterator_traits<BidIt>::value_type`, który jest typem elementu przeszukiwanej sekwencji znaków.
+Element typedef jest synonimem dla typu `iterator_traits<BidIt>::value_type`, który jest typem elementu przeszukiwanej sekwencji znaków.
 
 ## <a name="const_iterator"></a>match_results::const_iterator
 
@@ -258,7 +258,7 @@ typedef typename iterator_traits<BidIt>::difference_type difference_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Element typedef jest synonimem dla typu `iterator_traits<BidIt>::difference_type`; opisuje obiekt, który może reprezentować różnicę między dwoma iteratorami, które wskazują na elementy kontrolowanej sekwencji.
+Element typedef jest synonimem dla typu `iterator_traits<BidIt>::difference_type`; opisuje obiekt, który może reprezentować różnicę między dowolnymi dwoma iteratorami, które wskazują na elementy kontrolowanej sekwencji.
 
 ## <a name="empty"></a>match_results:: Empty
 
@@ -298,21 +298,21 @@ string_type format(const string_type& fmt, match_flag_type flags = format_defaul
 
 ### <a name="parameters"></a>Parametry
 
-*OutIt*\
+*OutIt* \
 Typ iteratora danych wyjściowych.
 
-*określoną*\
+\ *out*
 Strumień wyjściowy, do którego będą zapisywane dane.
 
-*FMT*\
+*fmt* \
 Ciąg formatu.
 
-*znaczników*\
+*flagi* \
 Flagi formatu.
 
 ### <a name="remarks"></a>Uwagi
 
-Każda funkcja członkowska generuje sformatowany tekst w kontrolce formatu *FMT*. Pierwsza funkcja elementu członkowskiego zapisuje sformatowany tekst do sekwencji zdefiniowanej przez jej argument *out* i zwraca wartość *out*. Druga funkcja elementu członkowskiego zwraca obiekt ciągu, który zawiera kopię sformatowanego tekstu.
+Każda funkcja członkowska generuje sformatowany tekst w kontrolce formatu *FMT*. Pierwsza funkcja elementu członkowskiego zapisuje sformatowany tekst do sekwencji zdefiniowanej przez jej argument *out* i zwraca wartość *out*. Druga funkcja członkowska zwraca obiekt ciągu przechowujący kopię sformatowanego tekstu.
 
 W celu wygenerowania sformatowanego tekstu. tekst literału w ciągu formatu jest zwykle kopiowany do sekwencji docelowej. Każda sekwencja unikowa w ciągu formatu jest zastępowana przez tekst, który reprezentuje. Szczegóły dotyczące kopiowania i wymiany są kontrolowane przez flagi formatu przekazane do funkcji.
 
@@ -326,7 +326,7 @@ allocator_type get_allocator() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca kopię obiektu alokatora używanego przez `*this` program w celu przydzielenia jego `sub_match` obiektów.
+Funkcja członkowska zwraca kopię obiektu alokatora używanego przez `*this` do przydzielenia swoich obiektów `sub_match`.
 
 ## <a name="iterator"></a>match_results:: iterator
 
@@ -350,12 +350,12 @@ difference_type length(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Sub*\
+\ *podrzędne*
 Indeks poddopasowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca `(*this)[sub].length()`wartość.
+Funkcja członkowska zwraca `(*this)[sub].length()`.
 
 ## <a name="match_results"></a>match_results::match_results
 
@@ -369,15 +369,15 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>Parametry
 
-*alokacj*\
+\ *alokacji*
 Obiekt alokatora, który ma być przechowywany.
 
-*Kliknij*\
+*prawa* \
 Obiekt match_results do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor konstruuje `match_results` obiekt, który nie zawiera żadnych pododpowiedników. Drugi Konstruktor konstruuje `match_results` obiekt, który jest kopią *prawej*.
+Pierwszy Konstruktor konstruuje obiekt `match_results`, który nie zawiera pododpowiedników. Drugi Konstruktor konstruuje obiekt `match_results`, który jest kopią *prawa*.
 
 ## <a name="max_size"></a>match_results::max_size
 
@@ -401,12 +401,12 @@ match_results& operator=(const match_results& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknij*\
+*prawa* \
 Obiekt match_results do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator elementu członkowskiego zastępuje sekwencję `*this` z funkcją z kopią sekwencji kontrolowanej przez *prawo*.
+Operator elementu członkowskiego zastępuje sekwencję `*this` z kopią sekwencji kontrolowanej przez *prawo*.
 
 ## <a name="op_at"></a>match_results:: operator []
 
@@ -418,12 +418,12 @@ const_reference operator[](size_type n) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Azotan*\
+*n* \
 Indeks poddopasowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca odwołanie do elementu *n* kontrolowanej sekwencji lub odwołanie do pustego `sub_match` obiektu, jeśli `size() <= n` lub jeśli grupa przechwytywania *n* nie była częścią dopasowania.
+Funkcja członkowska zwraca odwołanie do elementu *n* kontrolowanej sekwencji lub odwołanie do pustego obiektu `sub_match`, jeśli `size() <= n` lub grupa przechwytywania *n* nie była częścią dopasowania.
 
 ## <a name="position"></a>match_results::p ozycja
 
@@ -435,12 +435,12 @@ difference_type position(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Sub*\
+\ *podrzędne*
 Indeks poddopasowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca `std::distance(prefix().first, (*this)[sub].first)`, czyli odległość od pierwszego znaku w sekwencji docelowej do pierwszego znaku w dopasowań wskazywanym przez element `n` w kontrolowanej sekwencji.
+Funkcja członkowska zwraca `std::distance(prefix().first, (*this)[sub].first)`, czyli odległość od pierwszego znaku w sekwencji docelowej do pierwszego znaku w dopasowań wskazywanym przez element `n` kontrolowanej sekwencji.
 
 ## <a name="prefix"></a>match_results::p refix
 
@@ -452,7 +452,7 @@ const_reference prefix() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca odwołanie do obiektu typu `sub_match<BidIt>` , który wskazuje na sekwencję znaków rozpoczynającą się na początku sekwencji docelowej i kończącą się na `(*this)[0].first`, czyli wskazuje na tekst poprzedzający dopasowaną podsekwencję.
+Funkcja członkowska zwraca odwołanie do obiektu typu `sub_match<BidIt>`, który wskazuje na sekwencję znaków rozpoczynającą się na początku sekwencji docelowej i kończącą się na `(*this)[0].first`, to oznacza, że wskazuje na tekst poprzedzający dopasowaną podsekwencję.
 
 ## <a name="reference"></a>match_results:: Reference
 
@@ -464,7 +464,7 @@ typedef const_reference reference;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem typu `const_reference`.
+Typ jest synonimem dla typu `const_reference`.
 
 ## <a name="size"></a>match_results:: size
 
@@ -488,7 +488,7 @@ typedef typename Alloc::size_type size_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem typu `Alloc::size_type`.
+Typ jest synonimem dla typu `Alloc::size_type`.
 
 ## <a name="str"></a>match_results:: str
 
@@ -500,12 +500,12 @@ string_type str(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Sub*\
+\ *podrzędne*
 Indeks poddopasowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca `string_type((*this)[sub])`wartość.
+Funkcja członkowska zwraca `string_type((*this)[sub])`.
 
 ## <a name="string_type"></a>match_results::string_type
 
@@ -517,7 +517,7 @@ typedef basic_string<char_type> string_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem typu `basic_string<char_type>`.
+Typ jest synonimem dla typu `basic_string<char_type>`.
 
 ## <a name="suffix"></a>match_results:: sufiks
 
@@ -529,7 +529,7 @@ const_reference suffix() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca odwołanie do obiektu typu `sub_match<BidIt>` , który wskazuje na sekwencję znaków, która rozpoczyna się od `(*this)[size() - 1].second` i kończy się na końcu sekwencji docelowej, czyli wskazuje na tekst, który następuje po dopasowanej podsekwencji.
+Funkcja członkowska zwraca odwołanie do obiektu typu `sub_match<BidIt>`, który wskazuje na sekwencję znaków, która rozpoczyna się od `(*this)[size() - 1].second` i kończy się na końcu sekwencji docelowej, czyli wskazuje na tekst, który następuje po dopasowanym podsekwencję.
 
 ## <a name="swap"></a>match_results:: swap
 
@@ -541,7 +541,7 @@ void swap(const match_results& right) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknij*\
+*prawa* \
 Obiekt match_results do zamiany.
 
 ### <a name="remarks"></a>Uwagi
@@ -558,8 +558,8 @@ typedef sub_match<BidIt> value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Element typedef jest synonimem typu `sub_match<BidIt>`.
+Element typedef jest synonimem dla typu `sub_match<BidIt>`.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<regex>](../standard-library/regex.md)
+[\<regex >](../standard-library/regex.md)

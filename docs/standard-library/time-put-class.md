@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::time_put [C++], do_put
 - std::time_put [C++], put
 ms.assetid: df79493e-3331-48d2-97c3-ac3a745f0791
-ms.openlocfilehash: 73f4cdd0028164ce5f8215258c517c2e59eb7538
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2c0ae501693a8abffc72a23be9c427f31bad65b6
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459942"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685420"
 ---
-# <a name="timeput-class"></a>time_put — Klasa
+# <a name="time_put-class"></a>time_put — Klasa
 
-Klasa szablonu opisuje obiekt, który może obsłużyć jako zestaw reguł ustawień regionalnych w celu kontrolowania konwersji wartości czasu na sekwencje typu `CharType`.
+Szablon klasy opisuje obiekt, który może stanowić zestaw reguł ustawień regionalnych w celu kontrolowania konwersji wartości czasu na sekwencje typu `CharType`.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,10 +35,10 @@ class time_put : public locale::facet;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType*\
+@No__t_1 *CharType*
 Typ używany w programie do kodowania znaków.
 
-*OutputIterator*\
+*OutputIterator* \
 Typ iteratora, do którego funkcje czasu put zapisują swoje dane wyjściowe.
 
 ## <a name="remarks"></a>Uwagi
@@ -63,11 +63,11 @@ Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identy
 |Funkcja członkowska|Opis|
 |-|-|
 |[do_put](#do_put)|Funkcja wirtualna, która wyprowadza informacje o dacie i godzinie jako sekwencję `CharType`s.|
-|[put](#put)|Wyprowadza informacje o dacie i godzinie jako sekwencję `CharType`s.|
+|[Ubrani](#put)|Wyprowadza informacje o dacie i godzinie jako sekwencję `CharType`s.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<> ustawień regionalnych
+**Nagłówek:** \<locale >
 
 **Przestrzeń nazw:** std
 
@@ -81,7 +81,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla parametru `CharType`szablonu.
+Typ jest synonimem dla parametru szablonu `CharType`.
 
 ## <a name="do_put"></a>time_put::d o_put
 
@@ -98,19 +98,19 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parametry
 
-*ponown*\
+*następny* \
 Iterator danych wyjściowych, w którym sekwencja znaków reprezentująca datę i godzinę ma zostać wstawiona.
 
-*_Iosbase*\
+*_Iosbase* \
 Przestrzeń.
 
-*_Pt*\
+*_Pt* \
 Informacje o godzinie i dacie, które są wyprowadzane.
 
-*_Fmt*\
+*_Fmt* \
 Format danych wyjściowych. Zobacz [strftime, wcsftime, _strftime_l, _wcsftime_l,](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) Aby uzyskać prawidłowe wartości.
 
-*_Mod*\
+*_Mod* \
 Modyfikator dla formatu. Zobacz [strftime, wcsftime, _strftime_l, _wcsftime_l,](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) Aby uzyskać prawidłowe wartości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -119,13 +119,13 @@ Iterator do pierwszej pozycji po wstawieniu ostatniego elementu.
 
 ### <a name="remarks"></a>Uwagi
 
-Wirtualna funkcja chroniona składowa generuje elementy `next` sekwencyjne zaczynające się od wartości czasu, które są przechowywane w obiekcie \* `_Pt`typu `tm`. Funkcja zwraca iterator wyznaczający następne miejsce do wstawienia elementu poza wygenerowanymi danymi wyjściowymi.
+Wirtualna funkcja chroniona składowa generuje elementy sekwencyjne zaczynające się na `next` od wartości czasu przechowywanych w obiekcie \* `_Pt` typu `tm`. Funkcja zwraca iterator wyznaczający następne miejsce do wstawienia elementu poza wygenerowanymi danymi wyjściowymi.
 
-Dane wyjściowe są generowane przez te same reguły, które `strftime`są używane przez, z ostatnim argumentem *_Pt*, do generowania serii elementów **char** w tablicy. Każdy taki **znak** jest założono, że jest mapowany na odpowiednik elementu typu `CharType` przez proste, jedno-do-jednego mapowania. Jeśli *_Mod* jest równe zero, efektywnym formatem jest "% F", gdzie F jest zastępowany przez *_Fmt*. W przeciwnym razie obowiązuje format "% MF", gdzie M jest zastępowany przez *_Mod*.
+Dane wyjściowe są generowane przez te same reguły, które są używane przez `strftime`, z ostatnim argumentem *_Pt*, do generowania serii elementów **char** w tablicy. Każdy taki element **char** jest założono, aby mapować do równoważnego elementu typu `CharType` przez proste mapowanie jeden do jednego. Jeśli *_Mod* jest równe zero, efektywnym formatem jest "% F", gdzie F jest zastępowany przez *_Fmt*. W przeciwnym razie obowiązuje format "% MF", gdzie M jest zastępowany przez *_Mod*.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład umieszczania [](#put)wywołań `do_put`.
+Zobacz przykład dla elementu [Put](#put), który wywołuje `do_put`.
 
 ## <a name="iter_type"></a>time_put::iter_type
 
@@ -137,7 +137,7 @@ typedef OutputIterator iter_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla parametru `OutputIterator`szablonu.
+Typ jest synonimem dla parametru szablonu `OutputIterator`.
 
 ## <a name="put"></a>time_put::p UT
 
@@ -161,28 +161,28 @@ iter_type put(iter_type next,
 
 ### <a name="parameters"></a>Parametry
 
-*ponown*\
+*następny* \
 Iterator danych wyjściowych, w którym sekwencja znaków reprezentująca datę i godzinę ma zostać wstawiona.
 
-*_Iosbase*\
+*_Iosbase* \
 Przestrzeń.
 
-*_Fill*\
+*_Fill* \
 Znak typu `CharType` używany do odstępów.
 
-*_Pt*\
+*_Pt* \
 Informacje o godzinie i dacie, które są wyprowadzane.
 
-*_Fmt*\
+*_Fmt* \
 Format danych wyjściowych. Zobacz [strftime, wcsftime, _strftime_l, _wcsftime_l,](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) Aby uzyskać prawidłowe wartości.
 
-*_Mod*\
+*_Mod* \
 Modyfikator dla formatu. Zobacz [strftime, wcsftime, _strftime_l, _wcsftime_l,](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) Aby uzyskać prawidłowe wartości.
 
-*pierwszego*\
+*pierwszy* \
 Początek ciągu formatowania dla danych wyjściowych. Zobacz [strftime, wcsftime, _strftime_l, _wcsftime_l,](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) Aby uzyskać prawidłowe wartości.
 
-*ostatniego*\
+*ostatni* \
 Koniec ciągu formatowania dla danych wyjściowych. Zobacz [strftime, wcsftime, _strftime_l, _wcsftime_l,](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) Aby uzyskać prawidłowe wartości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -191,7 +191,7 @@ Iterator do pierwszej pozycji po wstawieniu ostatniego elementu.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja członkowska zwraca [do_put](#do_put)(`next` `_Iosbase` `_Fill` ,,`_Pt`,, `_Mod`,). `_Fmt` Druga \* funkcja członkowska jest kopiowana do `next` + + dowolnego elementu w interwale `first`[ `last`,) innym niż procent (%). Dla wartości procentowej, po której występuje znak *C* w interwale `first`[ `last`, `_Iosbase` `next` `next`  =  `do_put`), zamiast tego funkcja oblicza wartość (, `_Fill`, `_Pt`,, *C*, 0) i pomija ostatnich *C*. Jeśli jednak *C* jest znakiem kwalifikatora z zestawu EOQ #, po którym następuje znak `C2` w interwale [ `first`, `last`), zamiast tego funkcja oblicza `next`  =  `do_put`wartość ( `next`, `_Iosbase` ,`_Fill`  ,,,C`C2`) i pomija poprzednie. `C2` `_Pt`
+Pierwsza funkcja członkowska zwraca [do_put](#do_put)(`next`, `_Iosbase`, `_Fill`, `_Pt`, `_Fmt`, `_Mod`). Druga funkcja członkowska jest kopiowana do \* `next` + + dowolnego elementu w interwale [`first`, `last`) innym niż procent (%). W przypadku wartości procentowej, po której następuje znak *C* w interwale [`first`, `last`), zamiast tego funkcja szacuje `next`  =  `do_put` (`next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) i pomija ostatnich *C*. Jeśli jednak *C* jest znakiem kwalifikatora z zestawu EOQ #, po którym następuje znak 3 w interwale [4, 5), zamiast tego funkcja szacuje 6 7 8 (9, 0 , 1, 2, 3, *C*) i pomija poprzednie 5.
 
 ### <a name="example"></a>Przykład
 
@@ -247,23 +247,23 @@ explicit time_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs*\
+*_Refs* \
 Wartość całkowita służąca do określania typu zarządzania pamięcią dla obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
 Możliwe wartości parametru *_Refs* i ich znaczenie są następujące:
 
-- 0: Okres istnienia obiektu jest zarządzany przez elementy lokalne, które go zawierają.
+- 0: okres istnienia obiektu jest zarządzany przez elementy lokalne, które go zawierają.
 
-- 1: Okres istnienia obiektu musi być zarządzany ręcznie.
+- 1: okres istnienia obiektu musi być zarządzany ręcznie.
 
-- \> 1: Te wartości nie są zdefiniowane.
+- \> 1: te wartości nie są zdefiniowane.
 
 Konstruktor inicjuje swój obiekt podstawowy przy użyciu [ustawień regionalnych:: facet](../standard-library/locale-class.md#facet_class)( *_Refs*).
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<locale>](../standard-library/locale.md)\
-[Klasa time_base](../standard-library/time-base-class.md)\
+[\<locale >](../standard-library/locale.md) \
+[Klasa time_base](../standard-library/time-base-class.md) \
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

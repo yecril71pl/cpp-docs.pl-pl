@@ -1,5 +1,5 @@
 ---
-title: '&lt;forward_list —&gt; operatorów'
+title: Operatory &gt; &lt;forward_list
 ms.date: 11/04/2016
 f1_keywords:
 - forward_list/std::operator!=
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - std::operatoroperator&gt=; (forward_list)
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
-ms.openlocfilehash: 64a49273cafd72158f176ee34ec271557ebee097
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 1ddfb56c7ff68ec10c7bb56af3495e4042acb83c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240662"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689686"
 ---
-# <a name="ltforwardlistgt-operators"></a>&lt;forward_list —&gt; operatorów
+# <a name="ltforward_listgt-operators"></a>Operatory &gt; &lt;forward_list
 
-## <a name="op_eq_eq"></a> operator ==
+## <a name="op_eq_eq"></a>operator = =
 
-Sprawdza, czy obiekt listy do przodu po lewej stronie operatora jest równy obiektowi do przodu listy po prawej stronie.
+Testuje, czy obiekt listy do przodu po lewej stronie operatora jest równy obiektowi listy do przodu po prawej stronie.
 
 ```cpp
 bool operator==(
@@ -37,19 +37,19 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
+\ *lewo*
 Obiekt typu `forward_list`.
 
-*po prawej stronie*\
+*prawa* \
 Obiekt typu `forward_list`.
 
 ### <a name="remarks"></a>Uwagi
 
-Przeciążenia tej funkcji szablonu `operator==` do porównywania dwóch obiektów klasy szablonu `forward_list`. Funkcja zwraca `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`.
+Ta funkcja szablonu przeciąża `operator==`, aby porównać dwa obiekty `forward_list` szablonu klasy. Funkcja zwraca `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`.
 
-## <a name="op_neq"></a> operator! =
+## <a name="op_neq"></a>operator! =
 
-Sprawdza, czy obiekt listy do przodu po lewej stronie operatora nie jest taki sam jak obiekt do przodu listy po prawej stronie.
+Testuje, czy obiekt listy do przodu po lewej stronie operatora nie jest równy obiektowi listy do przodu po prawej stronie.
 
 ```cpp
 bool operator!=(
@@ -59,23 +59,23 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
+\ *lewo*
 Obiekt typu `forward_list`.
 
-*po prawej stronie*\
+*prawa* \
 Obiekt typu `forward_list`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** listy nie są równe; **false** list są równe.
+**prawda** , jeśli listy nie są równe; **wartość false** , jeśli listy są równe.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca `!(left == right)`.
+Ta funkcja szablonu zwraca `!(left == right)`.
 
-## <a name="op_lt"></a> Operator&lt;
+## <a name="op_lt"></a>&lt; operatora
 
-Sprawdza, czy obiekt listy do przodu, po lewej stronie operatora jest mniejszy niż obiekt listy do przodu, po prawej stronie.
+Testuje, czy obiekt listy do przodu po lewej stronie operatora jest mniejszy niż obiekt listy do przodu po prawej stronie.
 
 ```cpp
 bool operator<(
@@ -85,23 +85,23 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
+\ *lewo*
 Obiekt typu `forward_list`.
 
-*po prawej stronie*\
+*prawa* \
 Obiekt typu `forward_list`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli na liście po lewej stronie operatora jest mniejszy niż, ale nie równa listy po prawej stronie operatora; w przeciwnym razie **false**.
+**prawda** , jeśli lista po lewej stronie operatora jest mniejsza niż, ale nie równa liście po prawej stronie operatora; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Przeciążenia tej funkcji szablonu `operator<` do porównywania dwóch obiektów klasy szablonu `forward_list`. Funkcja zwraca `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.
+Ta funkcja szablonu przeciąża `operator<`, aby porównać dwa obiekty `forward_list` szablonu klasy. Funkcja zwraca `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.
 
-## <a name="op_lt_eq"></a> Operator&lt;=
+## <a name="op_lt_eq"></a>&lt; operatora =
 
-Sprawdza, czy obiekt listy do przodu, po lewej stronie operatora jest mniejszy niż lub równy obiektowi do przodu listy po prawej stronie.
+Testuje, czy obiekt listy do przodu po lewej stronie operatora jest mniejszy niż lub równy obiektowi listy do przodu po prawej stronie.
 
 ```cpp
 bool operator<=(
@@ -111,23 +111,23 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
+\ *lewo*
 Obiekt typu `forward_list`.
 
-*po prawej stronie*\
+*prawa* \
 Obiekt typu `forward_list`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli lista po lewej stronie operatora jest mniejszy niż lub równe do listy po prawej stronie operatora; w przeciwnym **false**.
+**prawda** , jeśli lista po lewej stronie operatora jest mniejsza lub równa liście po prawej stronie operatora; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca `!(right < left)`.
+Ta funkcja szablonu zwraca `!(right < left)`.
 
-## <a name="op_gt"></a> Operator&gt;
+## <a name="op_gt"></a>&gt; operatora
 
-Sprawdza, czy obiekt listy do przodu, po lewej stronie operatora jest większy niż obiekt listy do przodu, po prawej stronie.
+Testuje, czy obiekt listy do przodu po lewej stronie operatora jest większy niż obiekt listy do przodu po prawej stronie.
 
 ```cpp
 bool operator>(
@@ -137,23 +137,23 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
+\ *lewo*
 Obiekt typu `forward_list`.
 
-*po prawej stronie*\
+*prawa* \
 Obiekt typu `forward_list`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli lista po lewej stronie operatora jest większy niż listy po prawej stronie operatora; w przeciwnym razie **false**.
+**prawda** , jeśli lista po lewej stronie operatora jest większa niż lista po prawej stronie operatora; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca `right < left`.
+Ta funkcja szablonu zwraca `right < left`.
 
-## <a name="op_gt_eq"></a> Operator&gt;=
+## <a name="op_gt_eq"></a>&gt; operatora =
 
-Sprawdza, czy obiekt listy do przodu po lewej stronie operatora jest większy lub równy obiektowi do przodu listy po prawej stronie.
+Testuje, czy obiekt listy do przodu po lewej stronie operatora jest większy niż lub równy obiektowi listy do przodu po prawej stronie.
 
 ```cpp
 bool operator>=(
@@ -163,15 +163,15 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie*\
+\ *lewo*
 Obiekt typu `forward_list`.
 
-*po prawej stronie*\
+*prawa* \
 Obiekt typu `forward_list`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli do przodu lista po lewej stronie operatora jest większy niż lub równe do przekierowania listy po prawej stronie operatora; w przeciwnym **false**.
+**ma wartość true** , jeśli lista przesyłania dalej po lewej stronie operatora jest większa lub równa liście do przodu po prawej stronie operatora; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 

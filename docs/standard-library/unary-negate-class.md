@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
-ms.openlocfilehash: 2a7ce9a8593b0dd93b1c3cfe58f2d87fe10ea997
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 2d9f0bedd9e541e65f04ac20375f16f41413cf03
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240546"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684434"
 ---
-# <a name="unarynegate-class"></a>unary_negate — Klasa
+# <a name="unary_negate-class"></a>unary_negate — Klasa
 
-Klasa szablonu, zapewniając funkcją składową, negujące wartość zwracaną funkcję jednoargumentową określony. Przestarzała w języku C ++ 17 zastąpiona ceną [not_fn](functional-functions.md#not_fn).
+Szablon klasy dostarczający funkcję członkowską, która wyklucza wartość zwracaną przez określoną funkcję jednoargumentową. Przestarzałe w języku C++ 17 na korzyść [not_fn](functional-functions.md#not_fn).
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,21 +31,21 @@ class unary_negate
 
 ### <a name="parameters"></a>Parametry
 
-*FUNC*\
-Funkcja jednoargumentowe być ujemna.
+@No__t_1 *Func*
+Funkcja Jednoargumentowa, która ma być negacją.
 
-*po lewej stronie*\
-Argument operacji funkcję jednoargumentową, aby być ujemna.
+\ *lewo*
+Operand funkcji jednoargumentowej, która ma być negacją.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Negacja funkcję jednoargumentową.
+Negacja funkcji jednoargumentowej.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu przechowuje kopię obiektu funkcyjnego jednoargumentowe  *\_Func*. Definiuje jej funkcji członkowskiej `operator()` powrotu `!_Func(left)`.
+Szablon klasy przechowuje kopię jednoargumentowego obiektu *\_Func*. Definiuje jej funkcję członkowską `operator()` jako zwracającą `!_Func(left)`.
 
-Konstruktor obiektu `unary_negate` jest rzadko używana bezpośrednio. Funkcja Pomocnika [not1 —](../standard-library/functional-functions.md#not1) zapewnia łatwiejszy sposób deklarowanie i użycie **unary_negator** predykatu adaptera.
+Konstruktor `unary_negate` jest rzadko używany bezpośrednio. Funkcja pomocnika [not1 —](../standard-library/functional-functions.md#not1) zapewnia łatwiejszy sposób deklarowania i używania predykatu adaptacji **unary_negator** .
 
 ## <a name="example"></a>Przykład
 
