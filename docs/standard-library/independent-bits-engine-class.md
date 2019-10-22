@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - independent_bits_engine class
 ms.assetid: 889e9a82-f457-49a7-9d2e-26e0fc3cd907
-ms.openlocfilehash: a90e4be4ff6e92734f6b2e6804f8059be78e66b9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 28c9301d270ef516a1acc59f6ab06f0e61a1c9c5
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456344"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687928"
 ---
-# <a name="independentbitsengine-class"></a>independent_bits_engine — Klasa
+# <a name="independent_bits_engine-class"></a>independent_bits_engine — Klasa
 
 Generuje losową sekwencję liczb z określoną liczbą bitów przez przepakowywanie bitów z wartości zwracanych przez aparat podstawowy.
 
@@ -26,14 +26,14 @@ class independent_bits_engine;
 
 ### <a name="parameters"></a>Parametry
 
-*Wyszukiwarce*\
+@No__t_1 *silnika*
 Typ aparatu podstawowego.
 
-*K*\
-**Rozmiar wyrazu**. Rozmiar w bitach dla każdej wygenerowanej liczby. **Warunek wstępny**:`0 < W ≤ numeric_limits<UIntType>::digits`
+*W* \
+**Rozmiar wyrazu**. Rozmiar w bitach dla każdej wygenerowanej liczby. **Warunek wstępny**: `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*UInttype*\
-Typ wyniku bez znaku liczby całkowitej. W przypadku możliwych typów zobacz [ \<losowe >](../standard-library/random.md).
+@No__t_1 *UIntType*
+Typ wyniku bez znaku liczby całkowitej. W przypadku możliwych typów zobacz [\<random >](../standard-library/random.md).
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -42,18 +42,18 @@ Typ wyniku bez znaku liczby całkowitej. W przypadku możliwych typów zobacz [ 
 |`independent_bits_engine::independent_bits_engine`|`independent_bits_engine::base`|`independent_bits_engine::discard`|
 |`independent_bits_engine::operator()`|`independent_bits_engine::base_type`|`independent_bits_engine::seed`|
 
-Aby uzyskać więcej informacji na temat elementów członkowskich silnika, zobacz [ \<Random >](../standard-library/random.md).
+Aby uzyskać więcej informacji na temat elementów członkowskich silnika, zobacz [\<random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa szablonu opisuje *adapter aparatu* , który tworzy wartości poprzez przepakowywanie bitów z wartości zwracanych przez aparat podstawowy, co spowodowało wartości w bitach .
+Ten szablon klasy zawiera opis *adaptera* , który tworzy wartości poprzez przepakowywanie bitów z wartości zwracanych przez aparat podstawowy, co spowodowało *wartości w bitach*.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowe >
+**Nagłówek:** \<random >
 
 **Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<random>](../standard-library/random.md)
+[\<random >](../standard-library/random.md)

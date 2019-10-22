@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - gslice_array class
 ms.assetid: ad1b4514-b14a-4baf-a293-d5a8e8674c75
-ms.openlocfilehash: 37c54d09fdfe920c832c4baa7984fee4e090d04a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 68ce774128395e941ff80580a02c4ee28a74a4e4
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448921"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689599"
 ---
-# <a name="gslicearray-class"></a>gslice_array — Klasa
+# <a name="gslice_array-class"></a>gslice_array — Klasa
 
-Wewnętrzna, pomocnicza Klasa szablonu, która obsługuje ogólne obiekty wycinków, dostarczając operacje między tablicami podzestawu zdefiniowanymi przez ogólny wycinek elementu valarray.
+Wewnętrzny, pomocniczy szablon klasy, który obsługuje ogólne obiekty wycinków, dostarczając operacje między tablicami podzestawu zdefiniowanymi przez ogólny wycinek elementu valarray.
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,15 +54,15 @@ public:
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa opisuje obiekt `va` , który przechowuje odwołanie do obiektu klasy [valarray](../standard-library/valarray-class.md) **\<typu >** , wraz z obiektem `gs` klasy [gslice](../standard-library/gslice-class.md) , który opisuje sekwencję elementów do wyboru `valarray<Type>` obiekt.
+Klasa opisuje obiekt, który przechowuje odwołanie do obiektu `va` klasy [valarray](../standard-library/valarray-class.md)  **\<Type >** oraz obiekt `gs` klasy [gslice](../standard-library/gslice-class.md) , który opisuje sekwencję elementów do wybrania z obiektu `valarray<Type>`.
 
-`gslice_array<Type>` Obiekt można skonstruować tylko przez napisanie wyrażenia w postaci [VA&#91;GS&#93;](../standard-library/valarray-class.md#op_at). Funkcje składowe klasy gslice_array, zachowują się jak odpowiadające im sygnatury `valarray<Type>`funkcji zdefiniowane dla, z tą różnicą, że dotyczy tylko sekwencji wybranych elementów.
+Obiekt `gslice_array<Type>` można skonstruować tylko przez napisanie wyrażenia w postaci [VA&#91;GS&#93;](../standard-library/valarray-class.md#op_at). Funkcje członkowskie klasy gslice_array, zachowują się jak odpowiadające im sygnatury funkcji zdefiniowane dla `valarray<Type>`, z tą różnicą, że dotyczy tylko sekwencji wybranych elementów.
 
-Klasa szablonu jest tworzona pośrednio przez pewne operacje valarray i nie może być używana bezpośrednio w programie. Wewnętrzna Klasa szablonu pomocniczego jest używana przez Operator indeksu dolnego:
+Szablon klasy jest tworzony pośrednio przez pewne operacje valarray i nie może być używany bezpośrednio w programie. Wewnętrzny szablon klasy pomocniczej jest używany przez Operator indeksu dolnego:
 
-`gslice_array`\<**Typ** >  **Wpisz >** : :`operator[]` ( **constgslice &** ). `valarray` \<
+`gslice_array` **typ** \< >  `valarray` \< **Typ**>:: `operator[]` ( **constgslice &** ).
 
-`gslice_array<Type>` Obiekt można skonstruować tylko przez napisanie wyrażenia w postaci `va[gsl]`dla wycinka `gsl` valarray `va`. Funkcje składowe klasy gslice_array, zachowują się jak odpowiadające im sygnatury `valarray<Type>`funkcji zdefiniowane dla, z tą różnicą, że dotyczy tylko sekwencji wybranych elementów. Sekwencja kontrolowana przez gslice_array jest definiowana przez trzy parametry konstruktora wycinka, indeks pierwszego elementu w pierwszym wycinkze, liczbę elementów w każdym wycinku i odległość między elementami w każdym wycinku.
+Obiekt `gslice_array<Type>` można skonstruować tylko przez napisanie wyrażenia `va[gsl]` formularza dla wycinka `gsl` `va` valarray. Funkcje członkowskie klasy gslice_array, zachowują się jak odpowiadające im sygnatury funkcji zdefiniowane dla `valarray<Type>`, z tą różnicą, że dotyczy tylko sekwencji wybranych elementów. Sekwencja kontrolowana przez gslice_array jest definiowana przez trzy parametry konstruktora wycinka, indeks pierwszego elementu w pierwszym wycinkze, liczbę elementów w każdym wycinku i odległość między elementami w każdym wycinku.
 
 W poniższym przykładzie:
 

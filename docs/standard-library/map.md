@@ -1,30 +1,30 @@
 ---
-title: '&lt;zmapować&gt;'
+title: '&lt;map &gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <map>
 helpviewer_keywords:
 - map header
 ms.assetid: bbf76680-7362-456e-88fa-ecda93561b6a
-ms.openlocfilehash: 3c3c7fc34e75772c10ba39ecc51f6d2ac59d7ad5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2e861d2250585fbcdf3e1ef63d92f18185fc7f1c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456290"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687778"
 ---
-# <a name="ltmapgt"></a>&lt;zmapować&gt;
+# <a name="ltmapgt"></a>&lt;map &gt;
 
-Definiuje mapowania klas szablonu kontenera i multimap oraz ich szablony pomocnicze.
+Definiuje szablony klas kontenerów map i multimap oraz ich szablony pomocnicze.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<Mapuj >
+**Nagłówek:** \<map >
 
 **Przestrzeń nazw:** std
 
 > [!NOTE]
-> Biblioteka > `#include <initializer_list>` map również używa instrukcji. \<
+> Biblioteka > \<map również używa instrukcji `#include <initializer_list>`.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -34,8 +34,8 @@ Definiuje mapowania klas szablonu kontenera i multimap oraz ich szablony pomocni
 |-----------------|----------------------|-----------------|
 |[operator! = (map)](../standard-library/map-operators.md#op_neq)|[operator! = (multimap)](../standard-library/map-operators.md#op_neq)|Testuje, czy obiekt mapy lub multimap po lewej stronie operatora nie jest równy obiektowi mapy lub multimap po prawej stronie.|
 |[< operatora (mapa)](../standard-library/map-operators.md#op_eq_eq)|[< operatora (multimap)](../standard-library/map-operators.md#op_eq_eq)|Testuje, czy obiekt mapy lub multimap po lewej stronie operatora jest mniejszy niż obiekt mapy lub multimap po prawej stronie.|
-|[operator < = (map)](../standard-library/map-operators.md#op_lt)|[operator\<= (multimap)](../standard-library/map-operators.md#op_lt)|Testuje, czy obiekt mapy lub multimap po lewej stronie operatora jest mniejszy niż lub równy obiektowi mapy lub multimap po prawej stronie.|
-|[operator== (map)](../standard-library/map-operators.md#op_eq_eq)|[operator== (multimap)](../standard-library/map-operators.md#op_eq_eq_multimap)|Testuje, czy obiekt mapy lub multimap po lewej stronie operatora jest równy obiektowi mapy lub multimap po prawej stronie.|
+|[operator < = (map)](../standard-library/map-operators.md#op_lt)|[\< operatora = (multimap)](../standard-library/map-operators.md#op_lt)|Testuje, czy obiekt mapy lub multimap po lewej stronie operatora jest mniejszy niż lub równy obiektowi mapy lub multimap po prawej stronie.|
+|[operator = = (map)](../standard-library/map-operators.md#op_eq_eq)|[operator = = (multimap)](../standard-library/map-operators.md#op_eq_eq_multimap)|Testuje, czy obiekt mapy lub multimap po lewej stronie operatora jest równy obiektowi mapy lub multimap po prawej stronie.|
 |[> operatora (mapa)](../standard-library/map-operators.md#op_gt)|[> operatora (multimap)](../standard-library/map-operators.md#op_gt_multimap)|Testuje, czy obiekt mapy lub multimap po lewej stronie operatora jest większy niż obiekt mapy lub multimap po prawej stronie.|
 |[operator > = (map)](../standard-library/map-operators.md#op_gt_eq)|[> operatora = (multimap)](../standard-library/map-operators.md#op_gt_eq_multimap)|Testuje, czy obiekt mapy lub multimap po lewej stronie operatora jest większy niż lub równy obiektowi mapy lub multimap po prawej stronie.|
 
@@ -55,6 +55,6 @@ Definiuje mapowania klas szablonu kontenera i multimap oraz ich szablony pomocni
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
-[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Odwołania do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md) \
+[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
 [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)

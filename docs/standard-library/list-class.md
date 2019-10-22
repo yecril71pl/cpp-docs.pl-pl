@@ -98,16 +98,16 @@ helpviewer_keywords:
 - std::list [C++], swap
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
-ms.openlocfilehash: c38c6823f48d61cf616f7b91a96dfcc040d666ed
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d5f64f44ec62a8bd1862af2b8f9cb72b2d0210e4
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246483"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687824"
 ---
 # <a name="list-class"></a>list — Klasa
 
-Klasa listy standardowej biblioteki języka C++ jest klasą szablonu, kontenerów sekwencji, obsługa ich elementy w układzie liniowych, które umożliwia wydajne wstawienia i usunięcia w dowolnym miejscu w sekwencji. Sekwencja jest przechowywany jako dwukierunkowy połączonej listy elementów, każdy z nich zawierający członkiem pewnego typu *typu*.
+Klasa C++ standardowej biblioteki klas to szablon klasy kontenerów sekwencji, które utrzymują elementy w rozmieszczeniu liniowym i umożliwiają efektywne Wstawianie i usuwanie w dowolnej lokalizacji w ramach sekwencji. Sekwencja jest przechowywana jako dwukierunkowa, połączona lista elementów, z których każdy zawiera element członkowski pewnego *typu.*
 
 ## <a name="syntax"></a>Składnia
 
@@ -118,21 +118,21 @@ class list
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*\
-Typ danych elementu mają być przechowywane na liście.
+*Typ* \
+Typ danych elementu, który ma być przechowywany na liście.
 
-*Allocator*\
-Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i dezalokacji pamięci listy. Ten argument jest opcjonalny, a wartość domyślna to **alokatora**\<*typu*>.
+@No__t_1 *alokatora*
+Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji listy i cofania alokacji pamięci. Ten argument jest opcjonalny, a wartość domyślna to **alokator** \<*typu*>.
 
 ## <a name="remarks"></a>Uwagi
 
-Wybór typu kontenera powinien ogólnie być oparty o typ wyszukiwania i wstawiania wymagany przez aplikację. Wektory powinny być preferowane kontenera do zarządzania sekwencji, gdy jest losowe do dowolnego elementu w warstwie premium i wstawienia i usunięcia elementów tylko wymagane na końcu sekwencji. Wydajność kontenera deque — klasa jest przełożonego, gdy wymagany jest dostęp losowy i wstawienia i usunięcia na początku i na końcu sekwencji w warstwie premium.
+Wybór typu kontenera powinien ogólnie być oparty o typ wyszukiwania i wstawiania wymagany przez aplikację. Wektory powinny być preferowanym kontenerem do zarządzania sekwencją, gdy losowy dostęp do dowolnego elementu znajduje się w warstwie Premium, a wstawienia lub usunięcia elementów są wymagane tylko na końcu sekwencji. Wydajność kontenera deque klasy jest wyższa, gdy wymagany jest dostęp losowy, a wstawienia i usunięcia na początku i na końcu sekwencji są w wersji Premium.
 
-Funkcje elementów członkowskich listy [scalania](#merge), [odwrotnej](#reverse), [unikatowy](#unique), [Usuń](#remove), i [remove_if —](#remove_if) zostały zoptymalizowane pod kątem operacji na listę obiektów i oferty o wysokiej wydajności alternatywa ich odpowiedniki ogólnego.
+Funkcje elementów członkowskich listy [scalanie](#merge), [odwrócenie](#reverse), [unikatowe](#unique), [usuwanie](#remove)i [remove_if](#remove_if) zostały zoptymalizowane pod kątem operacji na obiektach list i oferują alternatywną wydajność dla ich rodzajowych odpowiedników.
 
-Ponowne przydzielenie listy występuje, gdy składowa należy wstawić taśmie ani wymazać elementy listy. W takich przypadkach jedynym Iteratory lub odwołania, które wskazują na usuwane części kontrolowanej sekwencji stają się nieprawidłowe.
+Ponowna Alokacja listy występuje, gdy funkcja członkowska musi wstawić lub wymazać elementy listy. We wszystkich takich przypadkach tylko Iteratory lub odwołania wskazujące na wymazane fragmenty kontrolowanej sekwencji stają się nieprawidłowe.
 
-Dołączyć standardowy nagłówek biblioteki standardowej języka C++ \<listy > do definiowania [kontenera](../standard-library/stl-containers.md) szablonu listy klas i kilka szablonów pomocniczych.
+C++ Uwzględnij standardowy nagłówek standardowej biblioteki \<list >, aby zdefiniować listę szablonów klas [kontenerów](../standard-library/stl-containers.md) i kilka szablonów pomocniczych.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -140,77 +140,77 @@ Dołączyć standardowy nagłówek biblioteki standardowej języka C++ \<listy >
 
 |||
 |-|-|
-|[list](#list)|Tworzy listę o określonym rozmiarze lub z elementami określonej wartości lub z określonego `allocator` lub jako kopię niektórych innych list.|
+|[list](#list)|Tworzy listę o określonym rozmiarze lub z elementami określonej wartości lub z określonym `allocator` lub jako kopią innej listy.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
-|[allocator_type](#allocator_type)|Typ, który reprezentuje `allocator` klasy dla obiektu listy.|
-|[const_iterator](#const_iterator)|Typ, który dostarcza iterator dwukierunkowy, który może odczytać **const** element na liście.|
-|[const_pointer](#const_pointer)|Typ, który dostarcza wskaźnik do **const** element na liście.|
-|[const_reference](#const_reference)|Typ, który zawiera odwołanie do **const** element przechowywane na liście do odczytu i wykonywania **const** operacji.|
-|[const_reverse_iterator](#const_reverse_iterator)|Typ, który dostarcza iterator dwukierunkowy, który może odczytać dowolny **const** element na liście.|
+|[allocator_type](#allocator_type)|Typ, który reprezentuje klasę `allocator` dla obiektu list.|
+|[const_iterator](#const_iterator)|Typ, który dostarcza iterator dwukierunkowy, który może odczytać element **const** na liście.|
+|[const_pointer](#const_pointer)|Typ, który dostarcza wskaźnik do elementu **const** na liście.|
+|[const_reference](#const_reference)|Typ, który dostarcza odwołanie do elementu **const** przechowywanego na liście do odczytu i wykonywania operacji **const** .|
+|[const_reverse_iterator](#const_reverse_iterator)|Typ, który dostarcza iterator dwukierunkowy, który może odczytać dowolny element **const** na liście.|
 |[difference_type](#difference_type)|Typ, który zawiera różnicę między dwoma iteratorami odwołującymi się do elementów w obrębie tej samej listy.|
-|[iterator](#iterator)|Typ, który dostarcza iterator dwukierunkowy, który może odczytać lub zmodyfikować dowolny element na liście.|
-|[pointer](#pointer)|Typ, który dostarcza wskaźnik do elementu na liście.|
-|[Odwołanie](#reference)|Typ, który zawiera odwołanie do **const** element przechowywane na liście do odczytu i wykonywania **const** operacji.|
+|[Iterator](#iterator)|Typ, który dostarcza iterator dwukierunkowy, który może odczytać lub zmodyfikować dowolny element na liście.|
+|[przytrzymaj](#pointer)|Typ, który dostarcza wskaźnik do elementu na liście.|
+|[odwoła](#reference)|Typ, który dostarcza odwołanie do elementu **const** przechowywanego na liście do odczytu i wykonywania operacji **const** .|
 |[reverse_iterator](#reverse_iterator)|Typ, który dostarcza iterator dwukierunkowy, który może odczytać lub zmodyfikować element na liście odwróconej.|
 |[size_type](#size_type)|Typ, który zlicza liczbę elementów na liście.|
-|[value_type](#value_type)|Typ, który reprezentuje typ danych przechowywanych na liście.|
+|[value_type](#value_type)|Typ, który reprezentuje typ danych przechowywany na liście.|
 
 ### <a name="functions"></a>Funkcje
 
 |||
 |-|-|
-|[Przypisz](#assign)|Usuwa elementy z listy i kopiuje nowy zbiór elementów do listy docelowej.|
-|[back](#back)|Zwraca odwołanie do ostatniego elementu listy.|
-|[begin](#begin)|Zwraca iterator adresujący pierwszy element na liście.|
-|[cbegin](#cbegin)|Zwraca iterator stałych adresujący pierwszy element na liście.|
-|[cend](#cend)|Zwraca iterator const, który dotyczy lokalizacji następującej po ostatnim elemencie na liście.|
-|[Usuń zaznaczenie](#clear)|Usuwa wszystkie elementy listy.|
-|[crbegin](#crbegin)|Zwraca iterator stałych adresujący pierwszy element na liście odwróconej.|
-|[crend —](#crend)|Zwraca iterator const, który dotyczy lokalizacji następującej po ostatnim elemencie na liście odwróconej.|
-|[emplace —](#emplace)|Wstawia element skonstruowany w miejscu do listy na określonej pozycji.|
-|[emplace_back](#emplace_back)|Dodaje element skonstruowany w miejscu do końca listy.|
+|[ponownie](#assign)|Wymazuje elementy z listy i kopiuje nowy zestaw elementów na listę docelową.|
+|[Wstecz](#back)|Zwraca odwołanie do ostatniego elementu listy.|
+|[zaczną](#begin)|Zwraca iterator odnoszący się do pierwszego elementu na liście.|
+|[cbegin](#cbegin)|Zwraca iterator const odnoszący się do pierwszego elementu na liście.|
+|[cend](#cend)|Zwraca iterator const, który odnosi się do lokalizacji po ostatnim elemencie na liście.|
+|[Wyczyść](#clear)|Usuwa wszystkie elementy listy.|
+|[crbegin —](#crbegin)|Zwraca iterator const odnoszący się do pierwszego elementu na liście odwróconej.|
+|[crend](#crend)|Zwraca iterator const, który odnosi się do lokalizacji po ostatnim elemencie na liście odwróconej.|
+|[emplace](#emplace)|Wstawia element skonstruowany w miejscu do listy w określonym położeniu.|
+|[emplace_back](#emplace_back)|Dodaje element skonstruowany w miejscu na końcu listy.|
 |[emplace_front](#emplace_front)|Dodaje element skonstruowany w miejscu na początku listy.|
-|[pusty](#empty)|Sprawdza, czy lista jest pusta.|
-|[koniec](#end)|Zwraca iterator adresujący lokalizację następującą po ostatnim elemencie na liście.|
-|[wymazywanie](#erase)|Usuwa element lub zakres elementów na liście z określonych pozycji.|
-|[Frontonu](#front)|Zwraca odwołanie do pierwszego elementu na liście.|
-|[get_allocator](#get_allocator)|Zwraca kopię obiektu `allocator` użytego do stworzenia listy.|
-|[Wstaw](#insert)|Wstawia element lub szereg elementów lub szereg elementów do listy na określonej pozycji.|
+|[ciągiem](#empty)|Testuje, czy lista jest pusta.|
+|[punktów](#end)|Zwraca iterator, który odnosi się do lokalizacji na końcu ostatniego elementu na liście.|
+|[Wyłączanie](#erase)|Usuwa element lub zakres elementów na liście z określonych pozycji.|
+|[FSB](#front)|Zwraca odwołanie do pierwszego elementu na liście.|
+|[get_allocator](#get_allocator)|Zwraca kopię obiektu `allocator` użytego do konstruowania listy.|
+|[wstawienia](#insert)|Wstawia element lub liczbę elementów lub zakres elementów do listy w określonym położeniu.|
 |[max_size](#max_size)|Zwraca maksymalną długość listy.|
-|[merge](#merge)|Usuwa elementy z listy argumentów, wstawia je do listy docelowej i porządkuje nowe, połączone zbiór elementów w kolejności rosnącej lub w określonej kolejności.|
+|[połączenie](#merge)|Usuwa elementy z listy argumentów, wstawia je do listy docelowej i porządkuje nowy, połączony zestaw elementów w kolejności rosnącej lub w innej określonej kolejności.|
 |[pop_back](#pop_back)|Usuwa element na końcu listy.|
 |[pop_front](#pop_front)|Usuwa element na początku listy.|
-|[push_back](#push_back)|Dodaje element do końca listy.|
-|[push_front](#push_front)|Dodaje element do początku listy.|
-|[rbegin](#rbegin)|Zwraca iterator adresujący pierwszy element na liście odwróconej.|
-|[remove](#remove)|Usuwa elementy na liście, które pasują do określonej wartości.|
+|[push_back](#push_back)|Dodaje element na końcu listy.|
+|[push_front](#push_front)|Dodaje element na początku listy.|
+|[rbegin](#rbegin)|Zwraca iterator odnoszący się do pierwszego elementu na liście odwróconej.|
+|[remove](#remove)|Wymazuje elementy znajdujące się na liście, które pasują do określonej wartości.|
 |[remove_if](#remove_if)|Usuwa elementy z listy, dla których jest spełniony określony predykat.|
-|[rend —](#rend)|Zwraca iterator adresujący lokalizację następującą po ostatnim elemencie na liście odwróconej.|
-|[Zmiana rozmiaru](#resize)|Określa nowy rozmiar listy.|
-|[zwrotny](#reverse)|Odwraca kolejność, w której elementy występują na liście.|
-|[Rozmiar](#size)|Zwraca liczbę elementów na liście.|
-|[sort](#sort)|Rozmieszcza elementy listy w kolejności rosnącej lub w odniesieniu do innych relacji zamówienia.|
-|[splice](#splice)|Usuwa elementy z listy argumentów i wstawia je do listy docelowej.|
-|[swap](#swap)|Zamienia elementy z dwóch list.|
-|[unique](#unique)|Usuwa sąsiadujących zduplikowane elementy lub sąsiadujące elementy, które spełniają pewne binarny predykat z listy.|
+|[rend](#rend)|Zwraca iterator, który odnosi się do lokalizacji po ostatnim elemencie na liście odwróconej.|
+|[Zmień rozmiar](#resize)|Określa nowy rozmiar listy.|
+|[cofnięci](#reverse)|Odwraca kolejność elementów na liście.|
+|[zmienia](#size)|Zwraca liczbę elementów na liście.|
+|[porządku](#sort)|Rozmieszcza elementy listy w kolejności rosnącej lub w odniesieniu do innej relacji Order.|
+|[splice](#splice)|Usuwa elementy z listy argumentów i wstawia je do listy elementów docelowych.|
+|[wymiany](#swap)|Wymienia elementy dwóch list.|
+|[unique](#unique)|Usuwa sąsiadujące zduplikowane elementy lub sąsiadujące elementy, które spełniają inny Predykat binarny z listy.|
 
 ### <a name="operators"></a>Operatory
 
 |||
 |-|-|
-|[operator=](#op_eq)|Zamienia elementy listy kopię innej listy.|
+|[operator =](#op_eq)|Zamienia elementy listy na kopię innej listy.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek**: \<listy >
+**Nagłówek**: \<list >
 
-## <a name="allocator_type"></a> allocator_type
+## <a name="allocator_type"></a>allocator_type
 
-Typ, który reprezentuje klasę alokatora dla obiektu listy.
+Typ, który reprezentuje klasę alokatora dla obiektu list.
 
 ```cpp
 typedef Allocator allocator_type;
@@ -218,15 +218,15 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>Uwagi
 
-`allocator_type` synonim dla parametru szablonu jest *alokatora*.
+`allocator_type` jest synonimem dla *alokatora*parametrów szablonu.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [get_allocator —](#get_allocator).
+Zobacz przykład dla [get_allocator](#get_allocator).
 
-## <a name="assign"></a> Przypisz
+## <a name="assign"></a>ponownie
 
-Usuwa elementy z listy i kopiuje nowy zbiór elementów do listy docelowej.
+Wymazuje elementy z listy i kopiuje nowy zestaw elementów na listę docelową.
 
 ```cpp
 void assign(
@@ -244,24 +244,24 @@ void assign(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*\
-Pozycja pierwszego elementu w zakresie elementów, które mają być kopiowane z listy argumentów.
+*Pierwszy* \
+Pozycja pierwszego elementu w zakresie elementów, który ma zostać skopiowany z listy argumentów.
 
-*ostatni*\
-Pozycja pierwszego elementu poza zakresem elementów, które mają być kopiowane z listy argumentów.
+*Ostatni* \
+Pozycja pierwszego elementu tuż poza zakresem elementów, które mają być skopiowane z listy argumentów.
 
-*Liczba*\
-Liczba kopii element jest wstawiany do listy.
+*Liczba* \
+Liczba kopii elementu wstawianych do listy.
 
-*Val*\
-Wartość elementu jest wstawiany do listy.
+*Val* \
+Wartość wstawianego elementu do listy.
 
-*IList*\
-Lista initializer_list zawierająca elementy, które ma zostać wstawiony.
+@No__t_1 *IList*
+Initializer_list, który zawiera elementy do wstawienia.
 
 ### <a name="remarks"></a>Uwagi
 
-Po wymazaniu wszelkie istniejące elementy na liście, przypisz Wstawia określony zakres elementów z oryginalnej listy lub niektórych innych list na listę docelową lub wstawia kopii nowego elementu z określoną wartością do listy docelowej
+Po wymazaniu wszystkich istniejących elementów z listy docelowej Przypisz do listy docelowej lub wstawi z niej określony zakres elementów z listy pierwotnej lub z innej listy lub wstawia kopie nowego elementu z określoną wartością do listy elementów docelowych.
 
 ### <a name="example"></a>Przykład
 
@@ -313,7 +313,7 @@ int main()
 c1 = 10 20 30c1 = 50 60c1 = 4 4 4 4 4 4 4c1 = 10 20 30 40
 ```
 
-## <a name="back"></a> Wstecz
+## <a name="back"></a>Wstecz
 
 Zwraca odwołanie do ostatniego elementu listy.
 
@@ -325,13 +325,13 @@ const_reference back() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ostatni element listy. Jeśli lista jest pusta, zwracana wartość jest niezdefiniowana.
+Ostatni element listy. Jeśli lista jest pusta, wartość zwracana jest niezdefiniowana.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wartość zwracaną przez `back` jest przypisany do `const_reference`, nie można zmodyfikować obiektu list. Jeśli wartość zwracaną przez `back` jest przypisany do `reference`, można zmodyfikować obiekt list.
+Jeśli wartość zwracana `back` jest przypisana do `const_reference`, nie można zmodyfikować obiektu listy. Jeśli wartość zwracana `back` jest przypisana do `reference`, można zmodyfikować obiekt listy.
 
-Gdy kompilowany przy użyciu [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) zdefiniowana jako 1 lub 2, wystąpi błąd czasu wykonywania przy próbie uzyskania dostępu do elementu na pustej liście.  Zobacz [Checked Iterators](../standard-library/checked-iterators.md) Aby uzyskać więcej informacji.
+Po skompilowaniu przy użyciu [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) zdefiniowanego jako 1 lub 2, wystąpi błąd czasu wykonywania, jeśli spróbujesz uzyskać dostęp do elementu na pustej liście.  Aby uzyskać więcej informacji, zobacz [sprawdzone Iteratory](../standard-library/checked-iterators.md) .
 
 ### <a name="example"></a>Przykład
 
@@ -363,9 +363,9 @@ The last integer of c1 is 11
 The next-to-last integer of c1 is 10
 ```
 
-## <a name="begin"></a> Rozpocznij
+## <a name="begin"></a>zaczną
 
-Zwraca iterator adresujący pierwszy element na liście.
+Zwraca iterator odnoszący się do pierwszego elementu na liście.
 
 ```cpp
 const_iterator begin() const;
@@ -375,11 +375,11 @@ iterator begin();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Iterator dwukierunkowy odnoszący się do pierwszego elementu na liście lub do lokalizacji następującej po pustej listy.
+Iterator dwukierunkowy odnoszący się do pierwszego elementu na liście lub do lokalizacji, która pomyślnie ma pustą listę.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wartość zwracaną przez `begin` jest przypisany do `const_iterator`, nie można modyfikować elementów w obiekcie listy. Jeśli wartość zwracaną przez `begin` jest przypisany do `iterator`, można modyfikować elementów w obiekcie listy.
+Jeśli wartość zwracana `begin` jest przypisana do `const_iterator`, nie można modyfikować elementów w obiekcie list. Jeśli wartość zwracana `begin` jest przypisana do `iterator`, elementy w obiekcie listy mogą być modyfikowane.
 
 ### <a name="example"></a>Przykład
 
@@ -416,9 +416,9 @@ The first element of c1 is 1
 The first element of c1 is now 20
 ```
 
-## <a name="cbegin"></a> cbegin —
+## <a name="cbegin"></a>cbegin
 
-Zwraca **const** iterator odnoszący się do pierwszego elementu w zakresie.
+Zwraca iterator **const** , który dotyczy pierwszego elementu w zakresie.
 
 ```cpp
 const_iterator cbegin() const;
@@ -426,13 +426,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A **const** iterator dostępu dwukierunkowego, który wskazuje na pierwszy element zakresu lub lokalizację tuż poza końcem pustego zakresu (dla pustego zakresu, `cbegin() == cend()`).
+**Stałe** Iterator dostępu dwukierunkowego, który wskazuje na pierwszy element zakresu lub lokalizację tuż poza końcem pustego zakresu (dla pustego zakresu, `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Uwagi
 
-Wartością zwracaną `cbegin`, nie można modyfikować elementów w zakresie.
+Z wartością zwracaną `cbegin` nie można modyfikować elementów w zakresie.
 
-Można użyć tej funkcji elementu członkowskiego zamiast `begin()` funkcja elementu członkowskiego w celu zagwarantowania, że wartość zwracana jest `const_iterator`. Zazwyczaj jest używana w połączeniu z [automatycznie](../cpp/auto-cpp.md) wpisz słowem kluczowym dedukcji, jak pokazano w poniższym przykładzie. W tym przykładzie należy wziąć pod uwagę `Container` jako modyfikowalny (nie - **const**) kontener dowolnego rodzaju, który obsługuje `begin()` i `cbegin()`.
+Można użyć tej funkcji elementu członkowskiego zamiast funkcji składowej `begin()`, aby zagwarantować, że wartość zwracana jest `const_iterator`. Zwykle jest używany w połączeniu z słowem kluczowym odejmowania [autotype,](../cpp/auto-cpp.md) jak pokazano w poniższym przykładzie. W tym przykładzie Rozważmy, że `Container` być kontenerem modyfikowalnym (innym niż **const**) dowolnego rodzaju, który obsługuje `begin()` i `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -442,9 +442,9 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a> cend
+## <a name="cend"></a>cend
 
-Zwraca `const` iterator adresujący lokalizację tuż za ostatnim elementem w zakresie.
+Zwraca iterator `const`, który odnosi się do lokalizacji jedynie poza ostatnim elementem w zakresie.
 
 ```cpp
 const_iterator cend() const;
@@ -452,13 +452,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A `const` iterator dostępu dwukierunkowego, który wskazuje tuż za koniec zakresu.
+@No__t_0 Iterator dostępu dwukierunkowego, który wskazuje tuż poza końcem zakresu.
 
 ### <a name="remarks"></a>Uwagi
 
-`cend` Służy do sprawdzenia, czy iterator minął koniec swojego zakresu.
+`cend` służy do sprawdzania, czy iterator przeszedł koniec zakresu.
 
-Można użyć tej funkcji elementu członkowskiego zamiast `end()` funkcja elementu członkowskiego w celu zagwarantowania, że wartość zwracana jest `const_iterator`. Zazwyczaj jest używana w połączeniu z [automatycznie](../cpp/auto-cpp.md) wpisz słowem kluczowym dedukcji, jak pokazano w poniższym przykładzie. W tym przykładzie należy wziąć pod uwagę `Container` jako modyfikowalny (nie - **const**) kontener dowolnego rodzaju, który obsługuje `end()` i `cend()`.
+Można użyć tej funkcji elementu członkowskiego zamiast funkcji składowej `end()`, aby zagwarantować, że wartość zwracana jest `const_iterator`. Zwykle jest używany w połączeniu z słowem kluczowym odejmowania [autotype,](../cpp/auto-cpp.md) jak pokazano w poniższym przykładzie. W tym przykładzie Rozważmy, że `Container` być kontenerem modyfikowalnym (innym niż **const**) dowolnego rodzaju, który obsługuje `end()` i `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -468,9 +468,9 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator
 ```
 
-Wartość zwrócona przez obiekt `cend` nie należy usuwać odwołania.
+Nie należy wywoływać wartości zwracanej przez `cend`.
 
-## <a name="clear"></a> Usuń zaznaczenie
+## <a name="clear"></a>Wyczyść
 
 Usuwa wszystkie elementy listy.
 
@@ -505,9 +505,9 @@ The size of the list is initially 3
 The size of list after clearing is 0
 ```
 
-## <a name="const_iterator"></a> const_iterator
+## <a name="const_iterator"></a>const_iterator
 
-Typ, który dostarcza iterator dwukierunkowy, który może odczytać **const** element na liście.
+Typ, który dostarcza iterator dwukierunkowy, który może odczytać element **const** na liście.
 
 ```cpp
 typedef implementation-defined const_iterator;
@@ -515,15 +515,15 @@ typedef implementation-defined const_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ `const_iterator` nie może służyć do modyfikowania wartości elementu.
+Typu `const_iterator` nie można użyć do zmodyfikowania wartości elementu.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [ponownie](#back).
+Zobacz przykład dla z [tyłu](#back).
 
-## <a name="const_pointer"></a> const_pointer
+## <a name="const_pointer"></a>const_pointer
 
-Zawiera wskaźnik do **const** element na liście.
+Udostępnia wskaźnik do elementu **const** na liście.
 
 ```cpp
 typedef typename Allocator::const_pointer const_pointer;
@@ -531,13 +531,13 @@ typedef typename Allocator::const_pointer const_pointer;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ `const_pointer` nie może służyć do modyfikowania wartości elementu.
+Typu `const_pointer` nie można użyć do zmodyfikowania wartości elementu.
 
-W większości przypadków [iteratora](#iterator) powinien być używany do uzyskania dostępu do elementów w obiekcie listy.
+W większości przypadków [iterator](#iterator) powinien być używany do uzyskiwania dostępu do elementów w obiekcie list.
 
-## <a name="const_reference"></a> const_reference —
+## <a name="const_reference"></a>const_reference
 
-Typ, który zawiera odwołanie do **const** element przechowywane na liście do odczytu i wykonywania **const** operacji.
+Typ, który dostarcza odwołanie do elementu **const** przechowywanego na liście do odczytu i wykonywania operacji **const** .
 
 ```cpp
 typedef typename Allocator::const_reference const_reference;
@@ -545,7 +545,7 @@ typedef typename Allocator::const_reference const_reference;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ `const_reference` nie może służyć do modyfikowania wartości elementu.
+Typu `const_reference` nie można użyć do zmodyfikowania wartości elementu.
 
 ### <a name="example"></a>Przykład
 
@@ -579,9 +579,9 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="const_reverse_iterator"></a> const_reverse_iterator —
+## <a name="const_reverse_iterator"></a>const_reverse_iterator
 
-Typ, który dostarcza iterator dwukierunkowy, który może odczytać dowolny **const** element na liście.
+Typ, który dostarcza iterator dwukierunkowy, który może odczytać dowolny element **const** na liście.
 
 ```cpp
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
@@ -589,15 +589,15 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ `const_reverse_iterator` nie można zmodyfikować wartości elementu i jest używana do iteracji przez listę w odwrotnej kolejności.
+Typ `const_reverse_iterator` nie może zmodyfikować wartości elementu i służy do iterowania przez listę w odwrotnej.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [rbegin —](#rbegin).
+Zobacz przykład dla [rbegin](#rbegin).
 
-## <a name="crbegin"></a> crbegin —
+## <a name="crbegin"></a>crbegin —
 
-Zwraca iterator stałych adresujący pierwszy element na liście odwróconej.
+Zwraca iterator const odnoszący się do pierwszego elementu na liście odwróconej.
 
 ```cpp
 const_reverse_iterator rbegin() const;
@@ -605,13 +605,13 @@ const_reverse_iterator rbegin() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Stała odwrotnego iterator dwukierunkowy odnoszący się do pierwszego elementu na liście odwróconej (lub adresowania, który był ostatnim elementem w nieodwróconej `list`).
+Nieodwrócony iterator dwukierunkowy, odnoszący się do pierwszego elementu na liście odwróconej (lub adresowania ostatniego elementu w nieodwróconej `list`).
 
 ### <a name="remarks"></a>Uwagi
 
-`crbegin` jest używana z listą odwróconą tak jak [list::begin](#begin) jest używana z `list`.
+`crbegin` jest używany z odwróconą listą, tak jak [Lista:: BEGIN](#begin) jest używany z `list`.
 
-Wartością zwracaną `crbegin`, nie można zmodyfikować obiektu list. [list::rbegin](#rbegin) może służyć do iteracji przez listę wstecz.
+Po wartości zwracanej `crbegin` nie można zmodyfikować obiektu list. [list:: rbegin](#rbegin) można użyć do iteracji listy wstecz.
 
 ### <a name="example"></a>Przykład
 
@@ -639,9 +639,9 @@ int main( )
 The last element in the list is 30.
 ```
 
-## <a name="crend"></a> crend —
+## <a name="crend"></a>crend
 
-Zwraca iterator const, który dotyczy lokalizacji następującej po ostatnim elemencie na liście odwróconej.
+Zwraca iterator const, który odnosi się do lokalizacji po ostatnim elemencie na liście odwróconej.
 
 ```cpp
 const_reverse_iterator rend() const;
@@ -649,17 +649,17 @@ const_reverse_iterator rend() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Stała odwrotnego iteratora dwukierunkowego, który dotyczy lokalizacji następującej po ostatnim elemencie w odwróconej [listy](../standard-library/list-class.md) (miejsca przed pierwszym elementem w nieodwróconej `list`).
+Nieodwrócony iterator dwukierunkowy, który odnosi się do lokalizacji po ostatnim elemencie na [liście](../standard-library/list-class.md) odwróconej (lokalizacja, która poprzedza pierwszy element w nieodwróconym `list`).
 
 ### <a name="remarks"></a>Uwagi
 
-`crend` jest używana z listą odwróconą tak jak [list::end](#end) jest używana z `list`.
+`crend` jest używany z odwróconą listą, podobnie jak [list:: end](#end) jest używany z `list`.
 
-Wartością zwracaną `crend`, `list` nie można zmodyfikować obiektu.
+Z wartością zwracaną `crend` nie można zmodyfikować obiektu `list`.
 
-`crend` można sprawdzać, czy wsteczny iterator osiągnął koniec swojej `list`.
+`crend` można użyć do przetestowania, czy iterator odwrotny osiągnął koniec jego `list`.
 
-Wartość zwrócona przez obiekt `crend` nie należy usuwać odwołania.
+Nie należy wywoływać wartości zwracanej przez `crend`.
 
 ### <a name="example"></a>Przykład
 
@@ -690,9 +690,9 @@ int main( )
 The first element in the list is: 10
 ```
 
-## <a name="difference_type"></a> difference_type
+## <a name="difference_type"></a>difference_type
 
-Typ liczby całkowitej ze znakiem, który może służyć do reprezentowania liczby elementów na liście w zakresie pomiędzy elementami wskazywanymi przez Iteratory.
+Typ liczby całkowitej ze znakiem, który może służyć do reprezentowania liczby elementów listy w zakresie między elementami wskazywanymi przez Iteratory.
 
 ```cpp
 typedef typename Allocator::difference_type difference_type;
@@ -700,9 +700,9 @@ typedef typename Allocator::difference_type difference_type;
 
 ### <a name="remarks"></a>Uwagi
 
-`difference_type` Jest typ zwracany, jeśli odjęcie lub inkrementacji poprzez Iteratory kontenera. `difference_type` Jest zazwyczaj używany do reprezentowania liczby elementów w zakresie [ `first`, `last`) między Iteratory `first` i `last`, zawiera element wskazywany przez `first` i zakres elementów do , ale bez element wskazane przez `last`.
+@No__t_0 jest typem zwracanym podczas odejmowania lub zwiększania przez Iteratory kontenera. @No__t_0 jest zwykle używany do reprezentowania liczby elementów w zakresie [`first`, `last`) między iteratorami `first` i `last`, zawiera element wskazywany przez `first` i zakres elementów do , ale nie obejmuje, element wskazywany przez `last`.
 
-Należy pamiętać, że chociaż `difference_type` jest dostępna dla wszystkich iteratorów, które spełniają wymagania iteratora danych wejściowych zawiera klasę iteratorów dwukierunkowych obsługiwane przez odwracalnego kontenerów, takich jak zestaw, odejmowania między Iteratory jest tylko obsługiwane przez Iteratory dostępu swobodnego, dostarczone przez kontener dostępu swobodnego, takich jak [vector, klasa](../standard-library/vector-class.md).
+Należy zauważyć, że chociaż `difference_type` jest dostępny dla wszystkich iteratorów, które spełniają wymagania iteratora danych wejściowych, który obejmuje klasę iteratorów dwukierunkowych obsługiwanych przez kontenery odwracalne, takie jak Set, odejmowanie między iteratorami jest obsługiwane tylko przez Iteratory dostępu swobodnego udostępniane przez kontener dostępu swobodnego, taki jak [Klasa wektora](../standard-library/vector-class.md).
 
 ### <a name="example"></a>Przykład
 
@@ -747,9 +747,9 @@ The number '20' is in c1 collection 2 times.
 The number '30' is in c1 collection 3 times.
 ```
 
-## <a name="emplace"></a> emplace —
+## <a name="emplace"></a>emplace
 
-Wstawia element skonstruowany w miejscu do listy na określonej pozycji.
+Wstawia element skonstruowany w miejscu do listy w określonym położeniu.
 
 ```cpp
 void emplace(iterator Where, Type&& val);
@@ -757,15 +757,15 @@ void emplace(iterator Where, Type&& val);
 
 ### <a name="parameters"></a>Parametry
 
-*gdzie*\
-Położenie w elemencie docelowym [listy](../standard-library/list-class.md) polegający na wstawieniu pierwszego elementu.
+*Gdzie* \
+Pozycja na [liście](../standard-library/list-class.md) docelowej, w której wstawiany jest pierwszy element.
 
-*Val*\
+*val* \
 Element dodany na końcu `list`.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wyjątek jest zgłaszany, `list` jest niezmieniony po lewej stronie, a wyjątek jest zgłaszany ponownie.
+Jeśli wystąpi wyjątek, `list` pozostaje niezmieniona i wyjątek zostanie ponownie zgłoszony.
 
 ### <a name="example"></a>Przykład
 
@@ -791,9 +791,9 @@ int main( )
 Moved first element: a
 ```
 
-## <a name="emplace_back"></a> emplace_back
+## <a name="emplace_back"></a>emplace_back
 
-Dodaje element skonstruowany w miejscu do końca listy.
+Dodaje element skonstruowany w miejscu na końcu listy.
 
 ```cpp
 void emplace_back(Type&& val);
@@ -801,12 +801,12 @@ void emplace_back(Type&& val);
 
 ### <a name="parameters"></a>Parametry
 
-*Val*\
+*val* \
 Element dodany na końcu [listy](../standard-library/list-class.md).
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wyjątek jest zgłaszany, `list` jest niezmieniony po lewej stronie, a wyjątek jest zgłaszany ponownie.
+Jeśli wystąpi wyjątek, `list` pozostaje niezmieniona i wyjątek zostanie ponownie zgłoszony.
 
 ### <a name="example"></a>Przykład
 
@@ -832,7 +832,7 @@ int main( )
 Moved first element: a
 ```
 
-## <a name="emplace_front"></a> emplace_front —
+## <a name="emplace_front"></a>emplace_front
 
 Dodaje element skonstruowany w miejscu na początku listy.
 
@@ -842,12 +842,12 @@ void emplace_front(Type&& val);
 
 ### <a name="parameters"></a>Parametry
 
-*Val*\
-Element dodany do stanu sprzed [listy](../standard-library/list-class.md).
+*val* \
+Element dodany na początku [listy](../standard-library/list-class.md).
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wyjątek jest zgłaszany, `list` jest niezmieniony po lewej stronie, a wyjątek jest zgłaszany ponownie.
+Jeśli wystąpi wyjątek, `list` pozostaje niezmieniona i wyjątek zostanie ponownie zgłoszony.
 
 ### <a name="example"></a>Przykład
 
@@ -873,9 +873,9 @@ int main( )
 Moved first element: a
 ```
 
-## <a name="empty"></a> pusty
+## <a name="empty"></a>ciągiem
 
-Sprawdza, czy lista jest pusta.
+Testuje, czy lista jest pusta.
 
 ```cpp
 bool empty() const;
@@ -883,7 +883,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli lista jest pusta. **false** Jeśli lista nie jest pusty.
+**ma wartość true** , jeśli lista jest pusta. **Fałsz** , jeśli lista nie jest pusta.
 
 ### <a name="example"></a>Przykład
 
@@ -910,9 +910,9 @@ int main( )
 The list is not empty.
 ```
 
-## <a name="end"></a> koniec
+## <a name="end"></a>punktów
 
-Zwraca iterator adresujący lokalizację następującą po ostatnim elemencie na liście.
+Zwraca iterator, który odnosi się do lokalizacji na końcu ostatniego elementu na liście.
 
 ```cpp
 const_iterator end() const;
@@ -921,11 +921,11 @@ iterator end();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Iterator dwukierunkowy odnoszący się do lokalizacji następującej po ostatnim elemencie na liście. Jeśli lista jest pusta, następnie `list::end == list::begin`.
+Iterator dwukierunkowy, który odnosi się do lokalizacji na końcu ostatniego elementu na liście. Jeśli lista jest pusta, a następnie `list::end == list::begin`.
 
 ### <a name="remarks"></a>Uwagi
 
-`end` Służy do sprawdzenia, czy iterator osiągnął koniec swojej listy.
+`end` służy do sprawdzania, czy iterator osiągnął koniec listy.
 
 ### <a name="example"></a>Przykład
 
@@ -970,7 +970,7 @@ The new next-to-last integer of c1 is 400
 The list is now: 10 400 30
 ```
 
-## <a name="erase"></a> wymazywanie
+## <a name="erase"></a>Wyłączanie
 
 Usuwa element lub zakres elementów na liście z określonych pozycji.
 
@@ -981,24 +981,24 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>Parametry
 
-*gdzie*\
-Pozycja elementu do usunięcia z listy.
+*Gdzie* \
+Pozycja elementu, który ma zostać usunięty z listy.
 
-*pierwszy*\
+*pierwszy* \
 Pozycja pierwszego elementu usunięty z listy.
 
-*ostatni*\
-Pozycja tuż za ostatnim elementem usunięty z listy.
+*ostatni* \
+Umieść tuż poza ostatnim elementem usuniętym z listy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Iterator dwukierunkowy, który wskazuje na pierwszy element pozostający poza wszelkimi elementami usuniętymi lub wskaźnik do końca listy, jeśli taki element nie istnieje.
+Iterator dwukierunkowy, który wyznacza pierwszy element pozostały poza elementami usuniętymi lub wskaźnik do końca listy, jeśli taki element nie istnieje.
 
 ### <a name="remarks"></a>Uwagi
 
-Nie ponowne przydzielenie występuje, iteratorów i odwołania stają się nieprawidłowe tylko dla elementów wymazane.
+Nie ma żadnych ponownych alokacji, dlatego Iteratory i odwołania stają się nieprawidłowe tylko dla wymazanych elementów.
 
-`erase` nigdy nie zgłasza wyjątek.
+`erase` nigdy nie zgłasza wyjątku.
 
 ### <a name="example"></a>Przykład
 
@@ -1045,7 +1045,7 @@ After erasing the first element, the list becomes: 20 30 40 50
 After erasing all elements but the first, the list becomes:  20
 ```
 
-## <a name="front"></a> Frontonu
+## <a name="front"></a>FSB
 
 Zwraca odwołanie do pierwszego elementu na liście.
 
@@ -1056,13 +1056,13 @@ const_reference front() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli lista jest pusta, zwracana jest niezdefiniowane.
+Jeśli lista jest pusta, zwracana jest wartość undefined.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wartość zwracaną przez `front` jest przypisany do `const_reference`, nie można zmodyfikować obiektu list. Jeśli wartość zwracaną przez `front` jest przypisany do `reference`, można zmodyfikować obiekt list.
+Jeśli wartość zwracana `front` jest przypisana do `const_reference`, nie można zmodyfikować obiektu listy. Jeśli wartość zwracana `front` jest przypisana do `reference`, można zmodyfikować obiekt listy.
 
-Gdy kompilowany przy użyciu [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) zdefiniowana jako 1 lub 2, wystąpi błąd czasu wykonywania przy próbie uzyskania dostępu do elementu na pustej liście.  Zobacz [Checked Iterators](../standard-library/checked-iterators.md) Aby uzyskać więcej informacji.
+Po skompilowaniu przy użyciu [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) zdefiniowanego jako 1 lub 2, wystąpi błąd czasu wykonywania, jeśli spróbujesz uzyskać dostęp do elementu na pustej liście.  Aby uzyskać więcej informacji, zobacz [sprawdzone Iteratory](../standard-library/checked-iterators.md) .
 
 ### <a name="example"></a>Przykład
 
@@ -1092,9 +1092,9 @@ The first integer of c1 is 10
 The first integer of c1 is 11
 ```
 
-## <a name="get_allocator"></a> get_allocator —
+## <a name="get_allocator"></a>get_allocator
 
-Zwraca kopię obiektu programu przydzielania, używany do utworzenia listy.
+Zwraca kopię obiektu alokatora używanego do konstruowania listy.
 
 ```cpp
 Allocator get_allocator() const;
@@ -1102,11 +1102,11 @@ Allocator get_allocator() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Alokator używany przez listy.
+Alokator używany przez listę.
 
 ### <a name="remarks"></a>Uwagi
 
-Puli buforów dla klasy listy Określ, jak klasa zarządza magazynem. Buforów domyślną dostarczony wraz z klasy kontenera standardowej biblioteki języka C++ są wystarczające dla większości potrzeb programowania. Pisanie i przy użyciu klasy alokatora jest temat zaawansowany C++.
+Przypisania klasy list określają sposób zarządzania magazynem przez klasę. Domyślne przydzielenie klas kontenerów C++ biblioteki standardowej jest wystarczające dla większości potrzeb programistycznych. Pisanie i używanie własnej klasy alokatora jest zaawansowanym C++ tematem.
 
 ### <a name="example"></a>Przykład
 
@@ -1132,9 +1132,9 @@ int main( )
 }
 ```
 
-## <a name="insert"></a> Wstaw
+## <a name="insert"></a>wstawienia
 
-Wstawia element lub szereg elementów lub szereg elementów do listy na określonej pozycji.
+Wstawia element lub liczbę elementów lub zakres elementów do listy w określonym położeniu.
 
 ```cpp
 iterator insert(iterator Where, const Type& Val);
@@ -1149,24 +1149,24 @@ void insert(iterator Where, InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>Parametry
 
-*gdzie*\
-Pozycja na liście cel polegający na wstawieniu pierwszego elementu.
+*Gdzie* \
+Pozycja na liście docelowej, w której wstawiany jest pierwszy element.
 
-*Val*\
-Wartość elementu jest wstawiany do listy.
+*Val* \
+Wartość wstawianego elementu do listy.
 
-*Liczba*\
-Liczba elementów, które są umieszczone na liście.
+*Liczba* \
+Liczba elementów, które są wstawiane do listy.
 
-*pierwszy*\
+*Pierwszy* \
 Pozycja pierwszego elementu w zakresie elementów na liście argumentów do skopiowania.
 
-*ostatni*\
+*Ostatni* \
 Pozycja pierwszego elementu poza zakresem elementów na liście argumentów do skopiowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wstaw dwa pierwsze zwracają iterator, który wskazuje miejsce, gdzie dodano nowy element do listy.
+Pierwsze dwie funkcje INSERT zwracają iterator, który wskazuje na miejsce, w którym nowy element został wstawiony do listy.
 
 ### <a name="example"></a>Przykład
 
@@ -1238,7 +1238,7 @@ int main()
 }
 ```
 
-## <a name="iterator"></a> Iterator
+## <a name="iterator"></a>Iterator
 
 Typ, który dostarcza iterator dwukierunkowy, który może odczytać lub zmodyfikować dowolny element na liście.
 
@@ -1252,11 +1252,11 @@ Typ `iterator` może służyć do modyfikowania wartości elementu.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [rozpocząć](#begin).
+Zobacz przykład [rozpoczęcia](#begin).
 
-## <a name="list"></a> Lista
+## <a name="list"></a>staw
 
-Tworzy listę o określonym rozmiarze lub z elementami określonej wartości lub z określonego programu przydzielania lub jako kopię całości lub części niektórych innych list.
+Tworzy listę o określonym rozmiarze lub z elementami określonej wartości lub z określonym alokatorem lub jako kopią całości lub części innej listy.
 
 ```cpp
 list();
@@ -1278,48 +1278,48 @@ list(InputIterator First, InputIterator Last, const Allocator& Al);
 
 ### <a name="parameters"></a>Parametry
 
-*Al*\
+*Al* \
 Klasa alokatora do wykorzystania z tym obiektem.
 
-*Liczba*\
-Liczba elementów na utworzonej liście.
+*Liczba* \
+Liczba elementów na liście skonstruowane.
 
-*Val*\
+*Val* \
 Wartość elementów na liście.
 
-*po prawej stronie*\
-Lista, z której kopią jest lista skonstruowana.
+*Prawa* \
+Lista, której skonstruowaną listą jest kopia.
 
-*pierwszy*\
+*Pierwszy* \
 Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.
 
-*ostatni*\
+*Ostatni* \
 Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.
 
-*IList*\
-Lista initializer_list zawierająca elementy, które ma być skopiowany.
+@No__t_1 *IList*
+Initializer_list, który zawiera elementy, które mają zostać skopiowane.
 
 ### <a name="remarks"></a>Uwagi
 
-Wszystkie konstruktory zapisują obiekt programu przydzielania (*Al*) i inicjują listy.
+Wszystkie konstruktory przechowują obiekt alokatora (*Al*) i inicjują listę.
 
-[get_allocator —](#get_allocator) zwraca kopię obiektu programu przydzielania, używany do utworzenia listy.
+[get_allocator](#get_allocator) zwraca kopię obiektu alokatora używanego do konstruowania listy.
 
-Dwa pierwsze konstruktory określają pustą listę wstępną, drugi określa typ programu przydzielania (*Al*) ma być używany.
+Pierwsze dwa konstruktory określają pustą listę początkową, drugą określającą typ alokatora (*Al*), który ma być używany.
 
-Trzeci Konstruktor określa powtórzenie określonej liczby (*liczba*) elementów wartości domyślnej dla klasy `Type`.
+Trzeci konstruktor określa powtarzanie określonej liczby (*Count*) elementów wartości domyślnej dla klasy `Type`.
 
-Czwarty i piąty Konstruktor określają powtórzenia (*liczba*) elementów wartości *Val*.
+Czwarty i piąty konstruktory określają powtórzenia (*Count*) elementów wartości *Val*.
 
-Szósty Konstruktor Określa kopię listy *po prawej stronie*.
+Szósty konstruktor określa kopię *po prawej stronie*listy.
 
-Siódmego Konstruktor przenosi listę *po prawej stronie*.
+Siódmy Konstruktor przenosi listę w *prawo*.
 
-Konstruktor ósmego używa initializer_list w celu określenia elementów.
+Ósmy Konstruktor używa elementu initializer_list, aby określić elementy.
 
-Następne dwa konstruktory kopiują zakres `[First, Last)` listy.
+Dwa następne konstruktory skopiują zakres `[First, Last)` listy.
 
-Żaden z konstruktorów wykonuje żadnych tymczasowych realokacji.
+Żaden z konstruktorów nie wykonuje żadnych tymczasowych ponownych alokacji.
 
 ### <a name="example"></a>Przykład
 
@@ -1412,7 +1412,7 @@ int main()
 c1 = 0 0 0c2 = 2 2 2 2 2c3 = 1 1 1c4 = 2 2 2 2 2c5 = 2 2c6 = 2 2 2c7 = 2 2 2c8 = 1 2 3 4
 ```
 
-## <a name="max_size"></a> max_size —
+## <a name="max_size"></a>max_size
 
 Zwraca maksymalną długość listy.
 
@@ -1443,9 +1443,9 @@ int main( )
 }
 ```
 
-## <a name="merge"></a> Scalanie
+## <a name="merge"></a>połączenie
 
-Usuwa elementy z listy argumentów, wstawia je do listy docelowej i porządkuje nowe, połączone zbiór elementów w kolejności rosnącej lub w określonej kolejności.
+Usuwa elementy z listy argumentów, wstawia je do listy docelowej i porządkuje nowy, połączony zestaw elementów w kolejności rosnącej lub w innej określonej kolejności.
 
 ```cpp
 void merge(list<Type, Allocator>& right);
@@ -1456,17 +1456,17 @@ void merge(list<Type, Allocator>& right, Traits comp);
 
 ### <a name="parameters"></a>Parametry
 
-*po prawej stronie*\
-Lista argumentów, które ma zostać scalona z listy docelowej.
+*prawa* \
+Lista argumentów, która ma zostać scalona z listą docelową.
 
-*Comp*\
-Operator porównania ustawiał elementów listy docelowej.
+\ *zgodności*
+Operator porównania używany do porządkowania elementów listy docelowej.
 
 ### <a name="remarks"></a>Uwagi
 
-Lista argumentów *prawo* jest scalany z listy docelowej.
+*Prawo* listy argumentów jest scalane z listą docelową.
 
-Muszą być uporządkowane listy zarówno argument, jak i obiektem docelowym za pomocą tej samej relacji porównania, za pomocą którego ma zostać określona wynikowa sekwencja. Domyślna kolejność Pierwsza funkcja członkowska jest rosnąco. Funkcja drugiego członka nakłada operacji porównania określonych przez użytkownika *comp* klasy `Traits`.
+Oba argumenty i listy docelowe muszą być uporządkowane przy użyciu tej samej relacji porównania, w której ma być uporządkowana wynikowa sekwencja. Kolejność domyślna pierwszej składowej to rosnąca kolejność. Druga funkcja członkowska nakłada określony przez użytkownika *zgodność* operacji porównania klasy `Traits`.
 
 ### <a name="example"></a>Przykład
 
@@ -1527,9 +1527,9 @@ c3 = 5 1
 After merging c3 with c2 according to the '>' comparison relation: c2 = 6 5 4 3 2 1
 ```
 
-## <a name="op_eq"></a> operator =
+## <a name="op_eq"></a>operator =
 
-Zamienia elementy listy kopię innej listy.
+Zamienia elementy listy na kopię innej listy.
 
 ```cpp
 list& operator=(const list& right);
@@ -1538,12 +1538,12 @@ list& operator=(list&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*po prawej stronie*\
-[Listy](../standard-library/list-class.md) są kopiowane do `list`.
+*prawa* \
+[Lista](../standard-library/list-class.md) kopiowana do `list`.
 
 ### <a name="remarks"></a>Uwagi
 
-Po wymazaniu wszelkie elementy istniejących w `list`, użytkownik kopiuje lub przenosi zawartość *prawo* do `list`.
+Po wymazaniu wszelkich istniejących elementów w `list` operator kopiuje lub przenosi zawartość *bezpośrednio* do `list`.
 
 ### <a name="example"></a>Przykład
 
@@ -1586,7 +1586,7 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a> Wskaźnik
+## <a name="pointer"></a>przytrzymaj
 
 Udostępnia wskaźnik do elementu na liście.
 
@@ -1598,9 +1598,9 @@ typedef typename Allocator::pointer pointer;
 
 Typ `pointer` może służyć do modyfikowania wartości elementu.
 
-W większości przypadków [iteratora](#iterator) powinien być używany do uzyskania dostępu do elementów w obiekcie listy.
+W większości przypadków [iterator](#iterator) powinien być używany do uzyskiwania dostępu do elementów w obiekcie list.
 
-## <a name="pop_back"></a> pop_back —
+## <a name="pop_back"></a>pop_back
 
 Usuwa element na końcu listy.
 
@@ -1610,7 +1610,7 @@ void pop_back();
 
 ### <a name="remarks"></a>Uwagi
 
-Ostatni element nie może być pusta. `pop_back` nigdy nie zgłasza wyjątek.
+Ostatni element nie może być pusty. `pop_back` nigdy nie zgłasza wyjątku.
 
 ### <a name="example"></a>Przykład
 
@@ -1642,7 +1642,7 @@ The last element is: 2
 After deleting the element at the end of the list, the last element is: 1
 ```
 
-## <a name="pop_front"></a> pop_front —
+## <a name="pop_front"></a>pop_front
 
 Usuwa element na początku listy.
 
@@ -1652,7 +1652,7 @@ void pop_front();
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy element nie może być pusta. `pop_front` nigdy nie zgłasza wyjątek.
+Pierwszy element nie może być pusty. `pop_front` nigdy nie zgłasza wyjątku.
 
 ### <a name="example"></a>Przykład
 
@@ -1684,9 +1684,9 @@ The second element is: 2
 After deleting the element at the beginning of the list, the first element is: 2
 ```
 
-## <a name="push_back"></a> push_back —
+## <a name="push_back"></a>push_back
 
-Dodaje element do końca listy.
+Dodaje element na końcu listy.
 
 ```cpp
 void push_back(void push_back(Type&& val);
@@ -1694,12 +1694,12 @@ void push_back(void push_back(Type&& val);
 
 ### <a name="parameters"></a>Parametry
 
-*Val*\
+*val* \
 Element dodany na końcu listy.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wyjątek jest zgłaszany, lista pozostanie niezmieniony, a wyjątek jest zgłaszany ponownie.
+Jeśli wyjątek jest zgłaszany, lista pozostaje niezmieniona i wyjątek jest zgłaszany ponownie.
 
 ### <a name="example"></a>Przykład
 
@@ -1738,9 +1738,9 @@ New last element: 2
 Moved first element: a
 ```
 
-## <a name="push_front"></a> push_front —
+## <a name="push_front"></a>push_front
 
-Dodaje element do początku listy.
+Dodaje element na początku listy.
 
 ```cpp
 void push_front(const Type& val);
@@ -1749,12 +1749,12 @@ void push_front(Type&& val);
 
 ### <a name="parameters"></a>Parametry
 
-*Val*\
+*val* \
 Element dodany na początku listy.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wyjątek jest zgłaszany, lista pozostanie niezmieniony, a wyjątek jest zgłaszany ponownie.
+Jeśli wyjątek jest zgłaszany, lista pozostaje niezmieniona i wyjątek jest zgłaszany ponownie.
 
 ### <a name="example"></a>Przykład
 
@@ -1793,9 +1793,9 @@ New first element: 2
 Moved first element: a
 ```
 
-## <a name="rbegin"></a> rbegin —
+## <a name="rbegin"></a>rbegin
 
-Zwraca iterator adresujący pierwszy element na liście odwróconej.
+Zwraca iterator, który odnosi się do pierwszego elementu na liście odwróconej.
 
 ```cpp
 const_reverse_iterator rbegin() const;
@@ -1804,15 +1804,15 @@ reverse_iterator rbegin();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwrotnej dwukierunkowy iterator odnoszący się do pierwszego elementu na liście odwróconej (lub adresowania, który był ostatnim elementem na liście nieodwróconej).
+Odwrotny iterator dwukierunkowy odnoszący się do pierwszego elementu na liście odwróconej (lub adresowania ostatniego elementu na liście nieodwróconej).
 
 ### <a name="remarks"></a>Uwagi
 
-`rbegin` jest używana z listą odwróconą tak jak [rozpocząć](#begin) jest używana z listą.
+`rbegin` jest używany z odwróconą listą, tak jak [początek](#begin) jest używany z listą.
 
-Jeśli wartość zwracaną przez `rbegin` jest przypisany do `const_reverse_iterator`, nie można zmodyfikować obiektu list. Jeśli wartość zwracaną przez `rbegin` jest przypisany do `reverse_iterator`, można zmodyfikować obiekt list.
+Jeśli wartość zwracana `rbegin` jest przypisana do `const_reverse_iterator`, nie można zmodyfikować obiektu listy. Jeśli wartość zwracana `rbegin` jest przypisana do `reverse_iterator`, można zmodyfikować obiekt listy.
 
-`rbegin` może służyć do iteracji przez listę wstecz.
+`rbegin` można użyć do iteracji listy wstecz.
 
 ### <a name="example"></a>Przykład
 
@@ -1864,7 +1864,7 @@ The reversed list is: 30 20 10
 The last element in the list is now 40.
 ```
 
-## <a name="reference"></a> Odwołanie
+## <a name="reference"></a>odwoła
 
 Typ, który zawiera odwołanie do elementu przechowywanego na liście.
 
@@ -1900,9 +1900,9 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="remove"></a> Usuń
+## <a name="remove"></a>usuwa
 
-Usuwa elementy na liście, które pasują do określonej wartości.
+Wymazuje elementy znajdujące się na liście, które pasują do określonej wartości.
 
 ```cpp
 void remove(const Type& val);
@@ -1910,12 +1910,12 @@ void remove(const Type& val);
 
 ### <a name="parameters"></a>Parametry
 
-*Val*\
-Wartość, która posiadaniu elementu, spowoduje usunięcie tego elementu z listy.
+*val* \
+Wartość, która, jeśli jest przechowywana przez element, spowoduje usunięcie tego elementu z listy.
 
 ### <a name="remarks"></a>Uwagi
 
-Nie wpływa na kolejność pozostałych elementów.
+Nie ma to oddziaływać na kolejność pozostałych elementów.
 
 ### <a name="example"></a>Przykład
 
@@ -1957,7 +1957,7 @@ The initial list is c1 = 5 100 5 200 5 300
 After removing elements with value 5, the list becomes c2 = 100 200 300
 ```
 
-## <a name="remove_if"></a> remove_if —
+## <a name="remove_if"></a>remove_if
 
 Usuwa elementy z listy, dla których jest spełniony określony predykat.
 
@@ -1968,8 +1968,8 @@ void remove_if(Predicate pred)
 
 ### <a name="parameters"></a>Parametry
 
-*P.* \
-Predykat jednoelementowy, który, jeżeli zostanie spełniony przez element, powoduje usunięcie tego elementu z listy.
+*pred* \
+Predykat jednoargumentowy, który, jeśli jest spełniony przez element, powoduje usunięcie tego elementu z listy.
 
 ### <a name="example"></a>Przykład
 
@@ -2022,9 +2022,9 @@ The initial list is c1 = 3 4 5 6 7 8
 After removing the odd elements, the list becomes c2 = 4 6 8
 ```
 
-## <a name="rend"></a> rend —
+## <a name="rend"></a>rend
 
-Zwraca iterator odnoszący się do lokalizacji, która następuje po ostatnim elemencie na liście odwróconej.
+Zwraca iterator, który odnosi się do lokalizacji, która następuje po ostatnim elemencie na liście odwróconej.
 
 ```cpp
 const_reverse_iterator rend() const;
@@ -2033,17 +2033,17 @@ reverse_iterator rend();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwrotny iterator dwukierunkowy odnoszący się do lokalizacji następującej po ostatnim elemencie na liście odwróconej (miejsca przed pierwszy element na liście nieodwróconej).
+Odwrotny iterator dwukierunkowy, który odnosi się do lokalizacji po ostatnim elemencie na liście odwróconej (lokalizacja, która poprzedza pierwszy element na liście nieodwróconej).
 
 ### <a name="remarks"></a>Uwagi
 
-`rend` jest używana z listą odwróconą tak jak [zakończenia](#end) jest używana z listą.
+`rend` jest używany z odwróconą listą, tak jak [koniec](#end) jest używany z listą.
 
-Jeśli wartość zwracaną przez `rend` jest przypisany do `const_reverse_iterator`, nie można zmodyfikować obiektu list. Jeśli wartość zwracaną przez `rend` jest przypisany do `reverse_iterator`, można zmodyfikować obiekt list.
+Jeśli wartość zwracana `rend` jest przypisana do `const_reverse_iterator`, nie można zmodyfikować obiektu listy. Jeśli wartość zwracana `rend` jest przypisana do `reverse_iterator`, można zmodyfikować obiekt listy.
 
-`rend` można sprawdzać, czy wsteczny iterator osiągnął koniec swojej listy.
+`rend` można użyć do przetestowania, czy iterator odwrotny osiągnął koniec listy.
 
-Wartość zwrócona przez obiekt `rend` nie należy usuwać odwołania.
+Nie należy wywoływać wartości zwracanej przez `rend`.
 
 ### <a name="example"></a>Przykład
 
@@ -2108,7 +2108,7 @@ The reversed list is: 30 20 10
 The modified reversed list is: 30 20 40
 ```
 
-## <a name="resize"></a> Zmiana rozmiaru
+## <a name="resize"></a>Zmień rozmiar
 
 Określa nowy rozmiar listy.
 
@@ -2119,19 +2119,19 @@ void resize(size_type _Newsize, Type val);
 
 ### <a name="parameters"></a>Parametry
 
-*_Newsize*\
+*_Newsize* \
 Nowy rozmiar listy.
 
-*Val*\
-Wartość nowych elementów do dodania do listy nowy rozmiar jest większy, oryginalnym rozmiarze. W przypadku pominięcia wartości, nowym elementom zostanie przypisana wartość domyślna dla klasy.
+*val* \
+Wartość nowych elementów, które mają zostać dodane do listy, jeśli nowy rozmiar jest większy niż rozmiar oryginalny. W przypadku pominięcia wartości nowe elementy są przypisywane do wartości domyślnej klasy.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli rozmiar listy jest mniejszy niż rozmiar żądanej *_Newsize*, elementy są dodawane do listy, dopóki nie osiągnie żądanego rozmiaru.
+Jeśli rozmiar listy jest mniejszy niż żądany rozmiar, *_Newsize*, elementy są dodawane do listy do momentu osiągnięcia żądanego rozmiaru.
 
-Jeśli rozmiar listy jest większy niż wymagany, najbliższe końca listy elementy są usuwane do momentu osiągnięcia przez listę rozmiaru *_Newsize*.
+Jeśli rozmiar listy jest większy niż żądany rozmiar, elementy znajdujące się najbliżej końca listy są usuwane, dopóki lista osiągnie rozmiar *_Newsize*.
 
-Jeśli obecny rozmiar listy jest taki sam jak żądany rozmiar, nie podjęto żadnej akcji.
+Jeśli obecny rozmiar listy jest taki sam jak żądany rozmiar, nie jest podejmowana żadna akcja.
 
 [rozmiar](#size) odzwierciedla bieżący rozmiar listy.
 
@@ -2175,9 +2175,9 @@ The reduced size of c1 is: 2
 The value of the last element is now 20
 ```
 
-## <a name="reverse"></a> zwrotny
+## <a name="reverse"></a>cofnięci
 
-Odwraca kolejność, w której elementy występują na liście.
+Odwraca kolejność elementów na liście.
 
 ```cpp
 void reverse();
@@ -2219,7 +2219,7 @@ c1 = 10 20 30
 Reversed c1 = 30 20 10
 ```
 
-## <a name="reverse_iterator"></a> reverse_iterator —
+## <a name="reverse_iterator"></a>reverse_iterator
 
 Typ, który dostarcza iterator dwukierunkowy, który może odczytać lub zmodyfikować element na liście odwróconej.
 
@@ -2229,13 +2229,13 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ `reverse_iterator` jest używana do iteracji przez listę w odwrotnej kolejności.
+Typ `reverse_iterator` jest używany do iteracji listy w odwrotnej.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [rbegin —](#rbegin).
+Zobacz przykład dla [rbegin](#rbegin).
 
-## <a name="size"></a> Rozmiar
+## <a name="size"></a>zmienia
 
 Zwraca liczbę elementów na liście.
 
@@ -2276,7 +2276,7 @@ List length is 1.
 List length is now 2.
 ```
 
-## <a name="size_type"></a> size_type
+## <a name="size_type"></a>size_type
 
 Typ, który zlicza liczbę elementów na liście.
 
@@ -2286,11 +2286,11 @@ typedef typename Allocator::size_type size_type;
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [rozmiar](#size).
+Zobacz przykład [rozmiaru](#size).
 
-## <a name="sort"></a> Sortowanie
+## <a name="sort"></a>porządku
 
-Rozmieszcza elementy listy w kolejności rosnącej lub w odniesieniu do niektórych określonych przez użytkownika kolejności.
+Rozmieszcza elementy listy w kolejności rosnącej lub w odniesieniu do innej kolejności określonej przez użytkownika.
 
 ```cpp
 void sort();
@@ -2301,14 +2301,14 @@ template <class Traits>
 
 ### <a name="parameters"></a>Parametry
 
-*Comp*\
-Operator porównania ustawiał kolejne elementy.
+\ *zgodności*
+Operator porównania używany do uporządkowania kolejnych elementów.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja członkowska umieszcza elementy w kolejności rosnącej według domyślnie.
+Pierwsza funkcja członkowska domyślnie umieszcza elementy w kolejności rosnącej.
 
-Funkcję szablonu członka Porządkuje elementy według operacji porównania określonych przez użytkownika *comp* klasy `Traits`.
+Funkcja szablonu elementu członkowskiego Porządkuje elementy zgodnie z określoną przez użytkownika *kompozycją* operacji porównywania klasy `Traits`.
 
 ### <a name="example"></a>Przykład
 
@@ -2353,9 +2353,9 @@ After sorting c1 = 10 20 30
 After sorting with 'greater than' operation, c1 = 30 20 10
 ```
 
-## <a name="splice"></a> splice
+## <a name="splice"></a>splice
 
-Usuwa elementy z listy źródeł i wstawia je do listy docelowej.
+Usuwa elementy z listy źródłowej i wstawia je do listy docelowej.
 
 ```cpp
 // insert the entire source list
@@ -2373,32 +2373,32 @@ void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator
 
 ### <a name="parameters"></a>Parametry
 
-*gdzie*\
-Pozycja na liście docelowy, przed którym ma zostać wstawiony.
+*Gdzie* \
+Pozycja na liście docelowej przed wstawieniem.
 
-*Źródło*\
-Lista źródeł, który ma zostać wstawiony do listy docelowej.
+@No__t_1 *źródłowa*
+Lista źródłowa, która ma zostać wstawiona na listę docelową.
 
-*ITER*\
-Element, który ma zostać wstawiony z listy źródeł.
+@No__t_1 *ITER*
+Element, który ma zostać wstawiony z listy źródłowej.
 
-*pierwszy*\
-Pierwszy element w zakresie, który ma zostać wstawiony z listy źródeł.
+*Pierwszy* \
+Pierwszy element z zakresu, który ma zostać wstawiony z listy źródłowej.
 
-*ostatni*\
-Do pierwszej pozycji poza ostatnim elementem w zakresie, który ma zostać wstawiony z listy źródeł.
+*Ostatni* \
+Pierwsza pozycja poza ostatnim elementem w zakresie, który ma zostać wstawiony z listy źródłowej.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy pary elementów członkowskich wstawia wszystkie elementy z listy źródeł do listy docelowej przed pozycji odwołuje się *gdzie* i usuwa wszystkie elementy z listy źródeł. (`&Source` nie musi być równa `this`.)
+Pierwsza para funkcji Członkowskich wstawia wszystkie elementy z listy źródłowej na listę docelową przed pozycją, *do której odwołuje się i usuwa* wszystkie elementy z listy źródłowej. (`&Source` nie może być równe `this`.)
 
-Druga para elementów członkowskich wstawia element przywoływany przez *Iter* przed pozycji na liście docelowego określonego przez *gdzie* i usuwa *Iter* z Lista źródeł. (Jeśli `Where == Iter || Where == ++Iter`, nie zmienią.)
+Druga para funkcji Członkowskich wstawia element, do którego odnosi się *ITER* przed pozycją na liście docelowej, do której odwołuje się, *gdzie* i usuwa *ITER* z listy źródłowej. (Jeśli `Where == Iter || Where == ++Iter`, nie ma zmian).
 
-Trzecia para elementów członkowskich wstawia zakresu wyznaczonego przez [ `First`, `Last`) przed elementu na liście docelowego określonego przez *gdzie* oraz usunięcie tego zakresu elementów z listy źródeł. (Jeśli `&Source == this`, zakres `[First, Last)` nie może zawierać element wskazane przez *gdzie*.)
+Trzecia para funkcji Członkowskich wstawia zakres wystawiony przez [`First`, `Last`) przed elementem na liście docelowej, do którego odwołuje się, *gdzie* i usuwa ten zakres elementów z listy źródłowej. (W przypadku `&Source == this` zakres `[First, Last)` nie może zawierać elementu wskazywanego przez *WHERE*.)
 
-Jeśli ranged splice wstawia `N` elementów, a `&Source != this`, obiekt klasy [iteratora](../standard-library/forward-list-class.md#iterator) jest zwiększany `N` razy.
+Jeśli metoda łączenia w zakresie wstawia `N` elementy, a `&Source != this`, obiekt [iteratora](../standard-library/forward-list-class.md#iterator) klas jest zwiększany `N` razy.
 
-We wszystkich przypadkach Iteratory, wskaźników lub odwołań, które odwołują się do elementów spliced zachowają ważność i są przekazywane do kontenera docelowego.
+We wszystkich przypadkach Iteratory, wskaźniki lub odwołania odwołujące się do rozmieszczonych elementów pozostają prawidłowe i są przekazywane do kontenera docelowego.
 
 ### <a name="example"></a>Przykład
 
@@ -2476,9 +2476,9 @@ int main()
 Beginning state of lists:c1 = 2 elements: (10) (11)c2 = 3 elements: (20) (21) (22)c3 = 2 elements: (30) (31)c4 = 4 elements: (40) (41) (42) (43)After splicing c1 into c2:c1 = 0 elements:c2 = 5 elements: (20) (10) (11) (21) (22)After splicing the first element of c3 into c2:c3 = 1 elements: (31)c2 = 6 elements: (20) (10) (11) (30) (21) (22)After splicing a range of c4 into c2:c4 = 2 elements: (40) (43)c2 = 8 elements: (20) (10) (11) (30) (41) (42) (21) (22)
 ```
 
-## <a name="swap"></a> swap
+## <a name="swap"></a>wymiany
 
-Zamienia elementy z dwóch list.
+Wymienia elementy dwóch list.
 
 ```cpp
 void swap(list<Type, Allocator>& right);
@@ -2487,11 +2487,11 @@ friend void swap(list<Type, Allocator>& left, list<Type, Allocator>& right)
 
 ### <a name="parameters"></a>Parametry
 
-*po prawej stronie*\
-Lista zawierająca elementy, które mają być zamienione lub lista, której elementy są wymieniane z postanowieniami listy *po lewej stronie*.
+*prawa* \
+Lista zawierająca elementy, które mają zostać zamienione, lub listę, której elementy mają być wymieniane z tymi wymienionymi na liście *po lewej stronie*.
 
-*po lewej stronie*\
-Lista, której elementy są wymieniane z postanowieniami listy *prawo*.
+\ *lewo*
+Lista, której elementy mają być wymieniane z listami *po prawej stronie*.
 
 ### <a name="example"></a>Przykład
 
@@ -2541,9 +2541,9 @@ After swapping with c2, list c1 is: 10 20
 After swapping with c3, list c1 is: 100
 ```
 
-## <a name="unique"></a> unikatowe
+## <a name="unique"></a>unikatowy
 
-Usuwa sąsiadujących zduplikowane elementy lub sąsiadujące elementy, które spełniają pewne binarny predykat z listy.
+Usuwa sąsiadujące zduplikowane elementy lub sąsiadujące elementy, które spełniają inny Predykat binarny z listy.
 
 ```cpp
 void unique();
@@ -2554,16 +2554,16 @@ void unique(BinaryPredicate pred);
 
 ### <a name="parameters"></a>Parametry
 
-*P.* \
-Jeśli predykat binarny jest użyty do porównania kolejne elementy.
+*pred* \
+Predykat binarny używany do porównywania kolejnych elementów.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja przyjęto założenie, że lista jest sortowana, tak, aby wszystkie zduplikowane elementy znajdują się obok siebie. Duplikaty, które nie są one sąsiadujące nie zostaną usunięte.
+Ta funkcja zakłada, że lista jest sortowana, dzięki czemu wszystkie zduplikowane elementy są przyległe. Duplikaty, które nie sąsiadują ze sobą, nie zostaną usunięte.
 
-Pierwsza funkcja członkostwa Usuwa każdy element, który porównuje równa jego poprzedzający element.
+Pierwsza funkcja członkowska usuwa każdy element, który porównuje wartość równą jego poprzedzającemu elementowi.
 
-Funkcja drugiego członka Usuwa każdy element, który spełnia funkcji predykatu *pred* w porównaniu z jej poprzedniego elementu. Możesz użyć dowolnej obiektów funkcji binarne zadeklarowanych w \<funkcjonalności > nagłówka dla argumentu *pred* lub możesz utworzyć swój własny.
+Druga funkcja członkowska usuwa każdy element, który spełnia funkcję predykatu *pred* w porównaniu z poprzednim elementem. Można użyć dowolnego z obiektów funkcji binarnych zadeklarowanych w nagłówku \<functional > dla argumentu *pred* lub można utworzyć własny.
 
 ### <a name="example"></a>Przykład
 
@@ -2614,9 +2614,9 @@ After removing successive duplicate elements, c2 = -10 10 20 -10
 After removing successive unequal elements, c3 = -10 -10
 ```
 
-## <a name="value_type"></a> value_type
+## <a name="value_type"></a>value_type
 
-Typ, który reprezentuje typ danych przechowywanych na liście.
+Typ, który reprezentuje typ danych przechowywany na liście.
 
 ```cpp
 typedef typename Allocator::value_type value_type;
@@ -2624,7 +2624,7 @@ typedef typename Allocator::value_type value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-`value_type` synonim dla parametru szablonu jest *typu*.
+`value_type` jest synonimem dla *typu*parametru szablonu.
 
 ### <a name="example"></a>Przykład
 

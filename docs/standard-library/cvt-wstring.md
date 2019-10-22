@@ -1,5 +1,5 @@
 ---
-title: '&lt;CVT — wstring&gt;'
+title: '&lt;cvt — wstring &gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - stdext.cvt.<cvt/wstring>
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - cvt/wstring header
 ms.assetid: d78b04bb-9ac0-4adb-8ffe-3aefb9b14c2d
-ms.openlocfilehash: 7b540644d0d1ba0f539688e9d7e30ef7ae631f91
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 57b4dd482c7659b4ce5e27b20e4626c6809f8a4e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455382"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688124"
 ---
-# <a name="ltcvtwstringgt"></a>&lt;CVT/wstring&gt;
+# <a name="ltcvtwstringgt"></a>&lt;cvt/wstring &gt;
 
-Nagłówek `<cvt/wstring>` w poprzednich wersjach programu Visual Studio określił klasę [wstring_convert](../standard-library/wstring-convert-class.md) klasy szablonu w przestrzeni nazw stdext:: CVT. Nagłówek jest zachowany w celu zapewnienia zgodności z poprzednimi wersjami. Nowy kod powinien korzystać z wersji klasy zdefiniowanej w `std` [ \<ustawieniach regionalnych >](../standard-library/locale.md) w przestrzeni nazw
+Nagłówek `<cvt/wstring>` w poprzednich wersjach programu Visual Studio określił [klasę wstring_convert](../standard-library/wstring-convert-class.md) szablonu klasy w przestrzeni nazw stdext:: CVT. Nagłówek jest zachowany w celu zapewnienia zgodności z poprzednimi wersjami. Nowy kod powinien korzystać z wersji klasy zdefiniowanej w [\<locale >](../standard-library/locale.md) w przestrzeni nazw `std`
 
 ## <a name="syntax"></a>Składnia
 

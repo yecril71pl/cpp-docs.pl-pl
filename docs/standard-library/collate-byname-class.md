@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - collate_byname class
 ms.assetid: 3dc380df-867c-4763-b60e-ba62a8e63ca7
-ms.openlocfilehash: b8ed428da05e706796a981b8ca9d601033156c6f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3e9a256ac7bdb5f6d077746fe2a08990ed41e931
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458624"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688271"
 ---
-# <a name="collatebyname-class"></a>collate_byname — Klasa
+# <a name="collate_byname-class"></a>collate_byname — Klasa
 
-Klasa pochodna szablonu opisująca obiekt, który może służyć jako zestaw reguł sortowania danych ustawień regionalnych, umożliwiając pobieranie informacji specyficznych dla obszaru kulturowego dotyczących konwencji sortowania ciągów.
+Szablon klasy pochodnej, który opisuje obiekt, który może być używany jako zestaw reguł sortowania dla danego ustawienia regionalnego, umożliwiając pobieranie informacji specyficznych dla obszaru kulturowego dotyczących Konwencji sortowania ciągów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,19 +39,20 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-*_Locname*\
+*_Locname* \
 Nazwane ustawienia regionalne.
 
-*_Refs*\
+*_Refs* \
 Początkowa liczba odwołań.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje obiekt, który może obsłużyć jako zestaw [reguł ustawień regionalnych](../standard-library/locale-class.md#facet_class) typu [Sortuj](../standard-library/collate-class.md#collate)\<CharType >. Jego zachowanie zależy od nazwanych [](../standard-library/locale-class.md#name) ustawień regionalnych *_Locname*. Każdy Konstruktor inicjuje swój obiekt podstawowy z [sortowaniem](../standard-library/collate-class.md#collate)\<CharType > `_Refs`().
+Szablon klasy opisuje obiekt, który może obsłużyć jako zestaw [reguł ustawień regionalnych](../standard-library/locale-class.md#facet_class) typu [COLLATE](../standard-library/collate-class.md#collate) \<CharType >. Jego zachowanie zależy od nazwanych [o nazwie
+](../standard-library/locale-class.md#name) ustawień regionalnych *_Locname*. Każdy Konstruktor inicjuje swój obiekt podstawowy z [sortowaniem](../standard-library/collate-class.md#collate) \<CharType > (`_Refs`).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<> ustawień regionalnych
+**Nagłówek:** \<locale >
 
 **Przestrzeń nazw:** std
 

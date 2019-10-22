@@ -1,20 +1,20 @@
 ---
-title: '&lt;memory_resource&gt;'
+title: '&lt;memory_resource &gt;'
 ms.date: 04/04/2019
 f1_keywords:
 - <memory_resource>
 helpviewer_keywords:
 - memory_resource header
-ms.openlocfilehash: d4b25c6ee575191f1e17b0202d33298e2e9e67f0
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 752396bb06b292ce29b7c6cd292287955b6066a7
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451905"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687711"
 ---
-# <a name="ltmemoryresourcegt"></a>&lt;memory_resource&gt;
+# <a name="ltmemory_resourcegt"></a>&lt;memory_resource &gt;
 
-Definiuje klasę szablonu kontenera memory_resource i jej szablony pomocnicze.
+Definiuje szablon klasy kontenera memory_resource i jego szablony pomocnicze.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,7 +29,7 @@ Definiuje klasę szablonu kontenera memory_resource i jej szablony pomocnicze.
 |||
 |-|-|
 |[operator!=](../standard-library/memory-resource-operators.md#op_neq)|Testuje, czy obiekt memory_resource po lewej stronie operatora nie jest równy obiektowi memory_resource po prawej stronie.|
-|[operator==](../standard-library/memory-resource-operators.md#op_eq_eq)|Testuje, czy obiekt memory_resource po lewej stronie operatora jest równy obiektowi memory_resource po prawej stronie.|
+|[operator = =](../standard-library/memory-resource-operators.md#op_eq_eq)|Testuje, czy obiekt memory_resource po lewej stronie operatora jest równy obiektowi memory_resource po prawej stronie.|
 
 ### <a name="specialized-template-functions"></a>Specialized Template — Funkcje
 
@@ -58,6 +58,6 @@ Definiuje klasę szablonu kontenera memory_resource i jej szablony pomocnicze.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
-[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Odwołania do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md) \
+[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
 [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)

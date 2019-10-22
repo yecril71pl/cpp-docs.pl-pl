@@ -1,5 +1,5 @@
 ---
-title: '&lt;complex&gt;'
+title: '&lt;complex &gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <complex>
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: 585f970f1a3482412ff225454b7acce9060e2d7c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 071e9369cdd0469d8ddc1c6649a3801732d8e23f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449427"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688220"
 ---
-# <a name="ltcomplexgt"></a>&lt;complex&gt;
+# <a name="ltcomplexgt"></a>&lt;complex &gt;
 
-Definiuje klasę `complex` szablonu kontenera i jej szablony pomocnicze.
+Definiuje szablon klasy kontenera `complex` i jego szablony pomocnicze.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek**: \<złożony >
+**Nagłówek**: \<complex >
 
 **Przestrzeń nazw:** std
 
@@ -28,9 +28,9 @@ Definiuje klasę `complex` szablonu kontenera i jej szablony pomocnicze.
 
 Liczba zespolona to uporządkowana para liczb rzeczywistych. W warunkach czysto geometrycznych Płaszczyzna złożona to rzeczywista, dwuwymiarowa płaszczyzna. Specjalne cechy złożonej płaszczyzny, która odróżnia ją od rzeczywistej płaszczyzny, są spowodowane jej dodatkową strukturą algebraicznych. Ta struktura algebraicznych ma dwie podstawowe operacje:
 
-- Dodanie zdefiniowany jako (*a*, *b*) + (*c*, *d*) = (*a* + *c* , *b* + *d*)
+- Dodanie zdefiniowane jako (*a*, *b*) + (*c*, *d*) = (*a*  + *c*, *b*  + *d*)
 
-- Zdefiniowany jako mnożenia (*a*, *b*) \* (*c*, *d*) = (*ac*  -  *bd*, *ad* + *bc*)
+- Mnożenie zdefiniowane jako (*a*, *b*) \* (*c*, *d*) = (*AC*  - *BD*, *AD*  + *BC*)
 
 Zestaw liczb zespolonych z operacjami złożonego dodawania i złożonego mnożenia jest polem w standardowym sensie algebraicznych:
 
@@ -38,27 +38,27 @@ Zestaw liczb zespolonych z operacjami złożonego dodawania i złożonego mnoże
 
 - Liczba zespolona (0, 0) jest tożsamością dodatku i (1, 0) jest tożsamością mnożenia.
 
-- Odwrotność dodatku dla liczbą (*a*, *b*) jest (-*a*, -*b*) i multiplicative dla takiej liczby złożone z wyjątkiem (0, 0) jest
+- Dodatek odwrotny dla liczby zespolonej (*a*, *b*) to (-*a*,-*b*) i mnożenia odwrotny dla wszystkich takich złożonych liczb, z wyjątkiem (0, 0) to
 
-   (*a*/ (*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/ (*a*<sup>2</sup> + *b*<sup>2</sup>))
+   (*a*/(*a/* <sup>2</sup>  + *b*<sup>2</sup>),-*b*/(*a*<sup>2</sup>  + *b*<sup>2</sup>))
 
-Przez reprezentujący liczbą *z* = (*a*, *b*) w formie *z* = *a*  +  *bi*, gdzie *i*<sup>2</sup> = -1, reguły dla algebraiczną zbioru liczb rzeczywistych można zastosować do zbioru liczb złożone i ich elementy. Na przykład:
+Reprezentując liczbę zespoloną *z* = (*a*, *b*) w postaci *z* * =   + * *BI*, gdzie *i*<sup>2</sup> =-1, reguły dla algebry zestawu liczb rzeczywistych mogą być stosowane do zestawu złożonego liczby i ich składniki. Na przykład:
 
-   (1 + 2*i*)  \* \* <sup></sup>    (2 + 3 i) = 1 (2 + 3 i) + 2 i (2 + 3 i) = (2 + 3 i) + (4 i + 6 i 2) = (2-6) + (3 + 4) i =-4 + 7 i \*
+   (1 + 2*i*) \* (2 + 3*i*) = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>) = (2-6) + (3 + 4)*i* =-4 + 7*i*
 
 System liczb zespolonych to pole, ale nie jest to pole uporządkowane. Nie ma kolejności liczb zespolonych, ponieważ istnieją pola liczb rzeczywistych i ich podzestawy, dlatego nie można zastosować nierówności do liczb zespolonych, ponieważ są one liczbami rzeczywistymi.
 
 Istnieją trzy popularne formy przedstawiające liczbę zespoloną *z*:
 
-- Kartezjańskimi: *z* = *a* + *analizy biznesowej*
+- Kartezjańskiego: *z*  =  * + * *BI*
 
-- Biegunowy: *z* = *r* (cos *p* + *i* Sin *p*)
+- Biegunowy: *z*  = *r* (cos *p*  + *i* Sin *p*)
 
-- Wykładniczy: *z* = *r* \* *e*<sup>*adres IP*</sup>
+- Wykładniczy: *z*  = *r* \* *e*<sup>*IP*</sup>
 
 Warunki użyte w tych standardowych reprezentacjach liczby zespolonej są określane w następujący sposób:
 
-- Składnik rzeczywistym kartezjańskimi lub część rzeczywista *a*.
+- Prawdziwy składnik kartezjańskiego lub część rzeczywista *a*.
 
 - Składnik kartezjańskiego urojony lub część urojona *b*.
 
@@ -81,16 +81,16 @@ O ile nie określono inaczej, funkcje, które mogą zwracać wiele wartości, s�
 |[Asin](../standard-library/complex-functions.md#asin)||
 |[ASINH —](../standard-library/complex-functions.md#asinh)||
 |[atan](../standard-library/complex-functions.md#atan)||
-|[atanh](../standard-library/complex-functions.md#atanh)||
+|[ATANH —](../standard-library/complex-functions.md#atanh)||
 |[conj](../standard-library/complex-functions.md#conj)|Zwraca zespoloną wartość sprzężoną liczby zespolonej.|
-|[cos](../standard-library/complex-functions.md#cos)|Zwraca cosinus liczby zespolonej.|
-|[cosh](../standard-library/complex-functions.md#cosh)|Zwraca cosinus hiperboliczny liczby zespolonej.|
+|[cosinus](../standard-library/complex-functions.md#cos)|Zwraca cosinus liczby zespolonej.|
+|[cosh —](../standard-library/complex-functions.md#cosh)|Zwraca cosinus hiperboliczny liczby zespolonej.|
 |[EXP](../standard-library/complex-functions.md#exp)|Zwraca funkcję wykładniczą liczby zespolonej.|
 |[imag](../standard-library/complex-functions.md#imag)|Wyodrębnia część urojoną liczby zespolonej.|
-|[log](../standard-library/complex-functions.md#log)|Zwraca logarytm naturalny liczby zespolonej.|
-|[log10](../standard-library/complex-functions.md#log10)|Zwraca logarytm dziesiętny liczby zespolonej.|
+|[rejestrowane](../standard-library/complex-functions.md#log)|Zwraca logarytm naturalny liczby zespolonej.|
+|[log10 —](../standard-library/complex-functions.md#log10)|Zwraca logarytm dziesiętny liczby zespolonej.|
 |[oblicza](../standard-library/complex-functions.md#norm)|Wyodrębnia normę liczby zespolonej.|
-|[polar](../standard-library/complex-functions.md#polar)|Zwraca liczbę zespoloną, która odnosi się do określonego modułu i argumentu w formie kartezjańskiego.|
+|[Wykres](../standard-library/complex-functions.md#polar)|Zwraca liczbę zespoloną, która odnosi się do określonego modułu i argumentu w formie kartezjańskiego.|
 |[pow](../standard-library/complex-functions.md#pow)|Oblicza liczbę zespoloną uzyskaną przez podnoszenie wartości bazowej, która jest liczbą zespoloną do potęgi innej liczby zespolonej.|
 |[proj](../standard-library/complex-functions.md#proj)||
 |[czasie rzeczywistym](../standard-library/complex-functions.md#real)|Wyodrębnia prawdziwy składnik liczby zespolonej.|
@@ -109,30 +109,30 @@ O ile nie określono inaczej, funkcje, które mogą zwracać wiele wartości, s�
 |[operator +](../standard-library/complex-operators.md#op_add)|Dodaje dwie liczby zespolone, jedno lub oba, które mogą należeć do podzbioru typu dla części rzeczywistych i urojonych.|
 |[zakład](../standard-library/complex-operators.md#operator-)|Odejmuje dwie liczby zespolone, jedno lub oba, które mogą należeć do podzbioru typu dla części rzeczywistych i urojonych.|
 |[zakład](../standard-library/complex-operators.md#op_div)|Dzieli dwie liczby zespolone, jedno lub oba, które mogą należeć do podzbioru typu dla części rzeczywistych i urojonych.|
-|[< operatora\<](../standard-library/complex-operators.md#op_lt_lt)|Funkcja szablonu, która wstawia liczbę zespoloną do strumienia wyjściowego.|
-|[operator==](../standard-library/complex-operators.md#op_eq_eq)|Testuje równość między dwoma złożonymi liczbami, jedno lub oba, które mogą należeć do podzbioru typu dla części rzeczywistych i urojonych.|
-|[operator>>](../standard-library/complex-operators.md#op_gt_gt)|Funkcja szablonu, która wyodrębnia wartość złożoną ze strumienia wejściowego.|
+|[< operatora \<](../standard-library/complex-operators.md#op_lt_lt)|Funkcja szablonu, która wstawia liczbę zespoloną do strumienia wyjściowego.|
+|[operator = =](../standard-library/complex-operators.md#op_eq_eq)|Testuje równość między dwoma złożonymi liczbami, jedno lub oba, które mogą należeć do podzbioru typu dla części rzeczywistych i urojonych.|
+|[> operatora >](../standard-library/complex-operators.md#op_gt_gt)|Funkcja szablonu, która wyodrębnia wartość złożoną ze strumienia wejściowego.|
 
 ### <a name="classes"></a>Klasy
 
 |||
 |-|-|
-|[złożone\<podwójne >](../standard-library/complex-double.md)|Jawnie wyspecjalizowana Klasa szablonu opisuje obiekt, który przechowuje uporządkowaną parę obiektów, obie typu **Double**, gdzie pierwsza reprezentuje rzeczywistą część liczby zespolonej, a druga reprezentuje część urojoną.|
-|[złożone\<> zmiennoprzecinkowe](../standard-library/complex-float.md)|Jawnie wyspecjalizowana Klasa szablonu opisuje obiekt, który przechowuje uporządkowaną parę obiektów, obu typów zmiennoprzecinkowych , gdzie pierwsza reprezentuje rzeczywistą część liczby zespolonej, a druga reprezentuje część urojoną.|
-|[złożone\<długie > o podwójnej precyzji](../standard-library/complex-long-double.md)|Jawnie wyspecjalizowana Klasa szablonu opisuje obiekt, który przechowuje uporządkowaną parę obiektów, obie typu **Long Double**, gdzie pierwsza reprezentuje rzeczywistą część liczby zespolonej, a druga reprezentuje część urojoną.|
-|[complex](../standard-library/complex-class.md)|Klasa szablonu opisuje obiekt używany do reprezentowania złożonego systemu i wykonuje złożone operacje arytmetyczne.|
+|[złożone > \<double](../standard-library/complex-double.md)|Jawnie wyspecjalizowany szablon klasy opisuje obiekt, który przechowuje uporządkowaną parę obiektów, obie typu **Double**, gdzie pierwsza reprezentuje rzeczywistą część liczby zespolonej, a druga reprezentuje część urojoną.|
+|[złożone > \<float](../standard-library/complex-float.md)|Jawnie wyspecjalizowany szablon klasy opisuje obiekt, który przechowuje uporządkowaną parę obiektów, obu typów **zmiennoprzecinkowych**, gdzie pierwsza reprezentuje rzeczywistą część liczby zespolonej, a druga reprezentuje część urojoną.|
+|[złożone \<long podwójne >](../standard-library/complex-long-double.md)|Jawnie wyspecjalizowany szablon klasy opisuje obiekt, który przechowuje uporządkowaną parę obiektów, obie typu **Long Double**, gdzie pierwsza reprezentuje rzeczywistą część liczby zespolonej, a druga reprezentuje część urojoną.|
+|[złożonych](../standard-library/complex-class.md)|Szablon klasy opisuje obiekt używany do reprezentowania kompleksowego systemu liczb i wykonywania złożonych operacji arytmetycznych.|
 
 ### <a name="literals"></a>Literały
 
-Nagłówek złożony > definiuje następujące literały [zdefiniowane przez użytkownika](../cpp/user-defined-literals-cpp.md) , które tworzą liczbę zespoloną z zerem częścią rzeczywistą i części urojoną wartości parametru wejściowego. \<
+Nagłówek \<complex > definiuje następujące [literały zdefiniowane przez użytkownika](../cpp/user-defined-literals-cpp.md) , które tworzą liczbę zespoloną z zerem częścią rzeczywistą i części urojoną wartości parametru wejściowego.
 
 |||
 |-|-|
-|`constexpr complex<long double> operator""il(long double d)`<br />`constexpr complex<long double> operator""il(unsigned long long d)`|Typu`complex<long double>{0.0L, static_cast<long double>(d)}`|
+|`constexpr complex<long double> operator""il(long double d)`<br />`constexpr complex<long double> operator""il(unsigned long long d)`|Zwraca: `complex<long double>{0.0L, static_cast<long double>(d)}`|
 |`constexpr complex<double> operator""i(long double d)`<br />`constexpr complex<double> operator""i(unsigned long long d)`|Zwraca: `complex<double>{0.0, static_cast<double>(d)}`.|
 |`constexpr complex<float> operator""if(long double d)`<br />`constexpr complex<float> operator""if(unsigned long long d)`|Zwraca: `complex<float>{0.0f, static_cast<float>(d)}`.|
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[Odwołania do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md) \
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

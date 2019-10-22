@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - hash_compare class
 ms.assetid: d502bb59-de57-4585-beb9-00e3a998c0af
-ms.openlocfilehash: 399b412c41128f513cf01d1e034bad2bbc5ef79f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4fb44a371630a66275f6ef59a0bf66b4cb73a71f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448807"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689559"
 ---
-# <a name="hashcompare-class"></a>hash_compare — Klasa
+# <a name="hash_compare-class"></a>hash_compare — Klasa
 
-Klasa szablonu opisuje obiekt, który może być używany przez dowolny ze skrótów kontenerów asocjacyjnych — hash_map, hash_multimap, hash_set lub hash_multiset — jako domyślny obiekt parametru **cech** w celu uporządkowania i mieszania elementów, które zawierają.
+Szablon klasy opisuje obiekt, który może być używany przez dowolny kontener asocjacyjnych skrótów — hash_map, hash_multimap, hash_set lub hash_multiset — jako domyślny obiekt parametru **cech** do porządkowania i mieszania elementów, które zawierają.
 
 ## <a name="syntax"></a>Składnia
 
@@ -23,15 +23,15 @@ Klasa hash_compare {cechuje się; Public: const size_t bucket_size = 4; const si
 
 ## <a name="remarks"></a>Uwagi
 
-Każdy element skrótu asocjacyjny kontener przechowuje obiekt cech mieszania typu `Traits` (parametr szablonu). Można utworzyć klasę z specjalizacji hash_compare, aby selektywnie zastępować pewne funkcje i obiekty, lub podać własną wersję tej klasy, jeśli spełniasz pewne wymagania minimalne. W odniesieniu do obiektu hash_comp typu `hash_compare<Key, Traits>`należy wykonać następujące czynności, które są wymagane przez powyższe kontenery:
+Każdy Kontener asocjacyjny, który przechowuje obiekt cech skrótu typu `Traits` (parametr szablonu). Można utworzyć klasę z specjalizacji hash_compare, aby selektywnie zastępować pewne funkcje i obiekty, lub podać własną wersję tej klasy, jeśli spełniasz pewne wymagania minimalne. W odniesieniu do obiektu hash_comp typu `hash_compare<Key, Traits>` w powyższych kontenerach wymagane jest następujące zachowanie:
 
-- Dla wszystkich wartości `key` typu `Key`wywołanie **hash_comp**(`key`) służy jako funkcja skrótu, która zwraca rozkład wartości typu `size_t`. Funkcja dostarczana przez hash_compare zwraca `key`wartość.
+- Dla wszystkich wartości `key` typu `Key`, wywołanie **hash_comp**(`key`) służy jako funkcja skrótu, która zwraca rozkład wartości typu `size_t`. Funkcja dostarczana przez hash_compare zwraca `key`.
 
-- Dla każdej wartości `key1` typu `Key` , która poprzedza `key2` sekwencję i ma tę samą wartość skrótu (wartość zwrócona przez funkcję mieszania), **hash_comp**(`key2`, `key1`) ma wartość false. Funkcja musi nałożyć całkowitą kolejność na wartości typu `Key`. Funkcja dostarczana przez hash_compare zwraca element COMP`key2`( `key1`, `,` ), gdzie *COMP* jest przechowywanym obiektem typu `Traits` , który można określić podczas konstruowania obiektu hash_comp. Dla domyślnego `Traits` typu `less<Key>`parametru Sortuj klucze nigdy nie zmniejszają wartości.
+- Dla każdej wartości `key1` typu `Key`, która poprzedza `key2` w sekwencji i ma tę samą wartość skrótu (wartość zwrócona przez funkcję mieszania), **hash_comp**(`key2`, `key1`) ma false. Funkcja musi nałożyć całkowitą kolejność na wartości typu `Key`. Funkcja dostarczana przez hash_compare zwraca wartość *COMP*(`key2`, `key1`) `,` gdzie *COMP* to przechowywany obiekt typu `Traits`, który można określić podczas konstruowania obiektu hash_comp. W przypadku domyślnego `less<Key>` typu `Traits` parametru, klucze sortowania nigdy nie zmniejszają wartości.
 
-- Stała `bucket_size` całkowita Określa średnią liczbę elementów na "zasobnik" (wpis w tabeli skrótów), którą kontener powinien próbować nie przekraczać. Musi być większa od zera. Wartość dostarczona przez hash_compare to 4.
+- Stała całkowita `bucket_size` Określa średnią liczbę elementów na "zasobnik" (wpis w tabeli skrótów), którą kontener powinien próbować nie przekraczać. Musi być większa od zera. Wartość dostarczona przez hash_compare to 4.
 
-- Stała `min_buckets` całkowita określa minimalną liczbę przedziałów do utrzymania w tabeli skrótów. Musi być potęgą liczby 2 i większa od zera. Wartość dostarczona przez hash_compare to 8.
+- Stała całkowita `min_buckets` określa minimalną liczbę przedziałów do utrzymania w tabeli skrótów. Musi być potęgą liczby 2 i większa od zera. Wartość dostarczona przez hash_compare to 8.
 
 ## <a name="example"></a>Przykład
 
@@ -39,11 +39,11 @@ Zobacz przykłady dla [hash_map:: hash_map](../standard-library/hash-map-class.m
 
 ## <a name="requirements"></a>Wymagania
 
-**Header:** \<hash_map>
+**Nagłówek:** \<hash_map >
 
 **Przestrzeń nazw:** stdext
 
 ## <a name="see-also"></a>Zobacz także
 
-[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
 [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)

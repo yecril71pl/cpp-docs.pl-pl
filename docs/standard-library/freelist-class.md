@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::freelist [C++], pop
 - stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
-ms.openlocfilehash: 8a504f58f9f64aa8b0d26b17090387c5c2b5de21
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e37b2371238211033d6a8a0847a41677b4e908a2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454138"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688053"
 ---
 # <a name="freelist-class"></a>freelist — Klasa
 
@@ -33,11 +33,11 @@ class freelist : public Max
 |Parametr|Opis|
 |---------------|-----------------|
 |*Sz*|Liczba elementów w tablicy, która ma zostać przypisana.|
-|*Maksymalna*|Maksymalna liczba elementów, które mają być przechowywane na liście bezpłatnych. Maksymalną klasą może być [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md)lub [max_variable_size](../standard-library/max-variable-size-class.md).|
+|*Maksymalny*|Maksymalna liczba elementów, które mają być przechowywane na liście bezpłatnych. Maksymalną klasą może być [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md)lub [max_variable_size](../standard-library/max-variable-size-class.md).|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa szablonu zarządza listą bloków pamięci o rozmiarze *sz* z maksymalną długością listy określoną przez maksymalną przekazaną długość *klasy.*
+Ten szablon klasy służy do zarządzania listą bloków pamięci o rozmiarze *sz* z maksymalną długością listy określoną przez maksymalną przekazaną długość klasy *.*
 
 ### <a name="constructors"></a>Konstruktorów
 
@@ -54,7 +54,7 @@ Ta klasa szablonu zarządza listą bloków pamięci o rozmiarze *sz* z maksymaln
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<przypisania >
+**Nagłówek:** \<allocators >
 
 **Przestrzeń nazw:** stdext
 
@@ -100,12 +100,12 @@ bool push(void* ptr);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli `full` funkcja Max zwraca `push` **wartość false**; w przeciwnym razie funkcja zwraca **wartość false**.
+**prawda** , jeśli funkcja `full` klasy Max zwraca **wartość false**; w przeciwnym razie funkcja `push` zwraca **wartość false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli funkcja Max zwraca **wartość false**, ta funkcja członkowska dodaje blok pamięci wskazywany przez PTR do nagłówka listy.  `full`
+Jeśli funkcja `full` klasy Max zwraca **wartość false**, ta funkcja członkowska dodaje blok pamięci wskazywany przez *PTR* do nagłówka listy.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<allocators >](../standard-library/allocators-header.md)

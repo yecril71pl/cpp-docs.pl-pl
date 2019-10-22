@@ -1,21 +1,21 @@
 ---
-title: '&lt;iosfwd&gt;'
+title: '&lt;iosfwd &gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <iosfwd>
 helpviewer_keywords:
 - iosfwd header
 ms.assetid: 964442eb-17f1-43ef-a0e0-c5bb77f9c187
-ms.openlocfilehash: e66c3e869f01775512419c877cd52c7f0e0fa2c4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8d257a57100615e592f6ebd62b5c91c6c59df408
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449083"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687867"
 ---
-# <a name="ltiosfwdgt"></a>&lt;iosfwd&gt;
+# <a name="ltiosfwdgt"></a>&lt;iosfwd &gt;
 
-Deklaruje przekazywanie odwołań do kilku klas szablonów używanych w ramach iostreams. Wszystkie takie klasy szablonów są zdefiniowane w innych standardowych nagłówkach. Ten nagłówek jest uwzględniany jawnie tylko wtedy, gdy potrzebna jest jedna z jej deklaracji, ale nie jej definicja.
+Deklaruje przekazywanie odwołań do kilku szablonów klas używanych w ramach iostreams. Wszystkie te szablony klas są zdefiniowane w innych standardowych nagłówkach. Ten nagłówek jest uwzględniany jawnie tylko wtedy, gdy potrzebna jest jedna z jej deklaracji, ale nie jej definicja.
 
 ## <a name="syntax"></a>Składnia
 
@@ -62,7 +62,7 @@ typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 };
 ```
 
-## <a name="forward-declarationstemplate-classes"></a>Przekazywanie deklaracji/klas szablonów
+## <a name="forward-declarations-and-class-templates"></a>Przekazywanie deklaracji i szablonów klas
 
 ```cpp
 template <class _Statetype>
@@ -128,7 +128,7 @@ class basic_fstream;
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
-[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Programowanie iostream](../standard-library/iostream-programming.md)\
+[Odwołania do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md) \
+[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
+\ [programowania iostream](../standard-library/iostream-programming.md)
 [Konwencje iostream](../standard-library/iostreams-conventions.md)

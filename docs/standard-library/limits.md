@@ -1,5 +1,5 @@
 ---
-title: '&lt;ograniczeń&gt;'
+title: '&lt;limits &gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - limits/std::<limits>
@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - limits header
 ms.assetid: e07d6379-5b00-4a3d-a789-40d41538b59e
-ms.openlocfilehash: de8f815cd59b84a1e63c231e18e4882d0b5d6f09
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3ad740975cfff4f65f9e1c800a709cfaca3367db
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447571"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687820"
 ---
-# <a name="ltlimitsgt"></a>&lt;ograniczeń&gt;
+# <a name="ltlimitsgt"></a>&lt;limits &gt;
 
-Definiuje klasę `numeric_limits` szablonu i dwa wyliczenia dotyczące reprezentacji zmiennoprzecinkowych i zaokrąglania.
+Definiuje szablon klasy `numeric_limits` i dwa wyliczenia dotyczące reprezentacji zmiennoprzecinkowych i zaokrąglania.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<limity >
+**Nagłówek:** \<limits >
 
 **Przestrzeń nazw:** std
 
 ## <a name="remarks"></a>Uwagi
 
-Jawne specjalizacje `numeric_limits` klasy opisują wiele właściwości typów podstawowych, takich jak znak, liczba całkowita i typy zmiennoprzecinkowe oraz **bool** , które są zdefiniowane przez implementację, a nie ustalone przez reguły C++język. Właściwości opisane w \<limitach > obejmują dokładność, minimalną i maksymalną reprezentację rozmiaru, zaokrąglenie i Sygnalizowanie błędów typu.
+Jawne specjalizacje klasy `numeric_limits` opisują wiele właściwości typów podstawowych, takich jak znak, liczba całkowita i typy zmiennoprzecinkowe oraz **bool** , które są zdefiniowane przez implementację, a nie ustalone przez reguły C++ językowe. Właściwości opisane w \<limits > obejmują dokładność, minimalną i maksymalną reprezentację rozmiaru, zaokrąglenie i Sygnalizowanie błędów typu.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -41,9 +41,9 @@ Jawne specjalizacje `numeric_limits` klasy opisują wiele właściwości typów 
 
 |||
 |-|-|
-|[numeric_limits, klasa](../standard-library/numeric-limits-class.md)|Klasa szablonu opisuje arytmetyczne właściwości wbudowanych typów liczbowych.|
+|[numeric_limits, klasa](../standard-library/numeric-limits-class.md)|Szablon klasy opisuje arytmetyczne właściwości wbudowanych typów liczbowych.|
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[Odwołania do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md) \
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -30,16 +30,16 @@ helpviewer_keywords:
 - std::numpunct [C++], thousands_sep
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
-ms.openlocfilehash: c23f23172894ce0b5adcbff1d2db58c78caf7a03
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 07285f5c014db1ddf419c372913cac0364538a55
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454183"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689218"
 ---
 # <a name="numpunct-class"></a>numpunct — Klasa
 
-Klasa szablonu opisująca obiekt, który może służyć jako zestaw reguł lokalnych do opisywania sekwencji typu `CharType` używanego do reprezentowania informacji o formatowaniu i interpunkcji wyrażeń liczbowych i logicznych.
+Szablon klasy, który opisuje obiekt, który może służyć jako zestaw reguł lokalnych do opisywania sekwencji typu `CharType` używany do reprezentowania informacji o formatowaniu i interpunkcji wyrażeń liczbowych i logicznych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -50,7 +50,7 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType*\
+@No__t_1 *CharType*
 Typ używany w programie do kodowania znaków w ustawieniach regionalnych.
 
 ## <a name="remarks"></a>Uwagi
@@ -87,7 +87,7 @@ Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identy
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<> ustawień regionalnych
+**Nagłówek:** \<locale >
 
 **Przestrzeń nazw:** std
 
@@ -101,7 +101,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla parametru szablonu CharType **.**
+Typ jest synonimem dla parametru szablonu **CharType.**
 
 ## <a name="decimal_point"></a>numpunct::d ecimal_point
 
@@ -180,7 +180,7 @@ Funkcja członkowska zwraca ciąg "false" reprezentujący wartość **false** we
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład dla falsename, gdzie wirtualna funkcja członkowska jest wywoływana przez. [](#falsename) `falsename`
+Zobacz przykład dla [falsename](#falsename), gdzie wirtualna funkcja członkowska jest wywoływana przez `falsename`.
 
 ## <a name="do_grouping"></a>numpunct::d o_grouping
 
@@ -216,7 +216,7 @@ Zwraca element specyficzny dla ustawień regionalnych używany jako separator ty
 
 ### <a name="remarks"></a>Uwagi
 
-Chroniona funkcja wirtualna elementu członkowskiego zwraca element specyficzny dla ustawień `CharType` regionalnych typu, który ma być używany jako separator grupy z lewej strony dowolnego punktu dziesiętnego.
+Chroniona funkcja wirtualna elementu członkowskiego zwraca element specyficzny dla ustawień regionalnych typu `CharType`, który ma być używany jako separator grupy z lewej strony dowolnego punktu dziesiętnego.
 
 ### <a name="example"></a>Przykład
 
@@ -238,7 +238,7 @@ Wszystkie ustawienia regionalne zwracają ciąg "true", aby reprezentować warto
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład dla prawdyname, gdzie wirtualna funkcja członkowska jest wywoływana przez. [](#truename) `truename`
+Zobacz przykład dla [prawdyname](#truename), gdzie wirtualna funkcja członkowska jest wywoływana przez `truename`.
 
 ## <a name="falsename"></a>numpunct:: falsename
 
@@ -345,18 +345,18 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs*\
+*_Refs* \
 Wartość całkowita służąca do określania typu zarządzania pamięcią dla obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
 Możliwe wartości parametru *_Refs* i ich znaczenie są następujące:
 
-- 0: Okres istnienia obiektu jest zarządzany przez elementy lokalne, które go zawierają.
+- 0: okres istnienia obiektu jest zarządzany przez elementy lokalne, które go zawierają.
 
-- 1: Okres istnienia obiektu musi być zarządzany ręcznie.
+- 1: okres istnienia obiektu musi być zarządzany ręcznie.
 
-- \> 1: Te wartości nie są zdefiniowane.
+- \> 1: te wartości nie są zdefiniowane.
 
 Nie są możliwe żadne bezpośrednie przykłady, ponieważ destruktor jest chroniony.
 
@@ -364,7 +364,7 @@ Konstruktor inicjuje swój obiekt podstawowy przy użyciu **ustawień regionalny
 
 ## <a name="string_type"></a>numpunct:: string_type
 
-Typ, który opisuje ciąg zawierający znaki typu CharType .
+Typ, który opisuje ciąg zawierający znaki typu **CharType**.
 
 ```cpp
 typedef basic_string<CharType, Traits, Allocator> string_type;
@@ -372,7 +372,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje specjalizację klasy szablonu [basic_string](../standard-library/basic-string-class.md) , której obiekty mogą przechowywać kopie sekwencji interpunkcji.
+Typ opisuje specjalizację szablonu klasy [basic_string](../standard-library/basic-string-class.md) , którego obiekty mogą przechowywać kopie sekwencji interpunkcji.
 
 ## <a name="thousands_sep"></a>numpunct:: thousands_sep
 
@@ -468,6 +468,6 @@ French_France.1252 falsename false
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<locale>](../standard-library/locale.md)\
-[facet — Klasa](../standard-library/locale-class.md#facet_class)\
+[\<locale >](../standard-library/locale.md) \
+[Klasa aspektów](../standard-library/locale-class.md#facet_class) \
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

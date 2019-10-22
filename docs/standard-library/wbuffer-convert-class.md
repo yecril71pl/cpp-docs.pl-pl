@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - wbuffer_convert class
 ms.assetid: 4a56f9bf-4138-4612-b516-525fea401358
-ms.openlocfilehash: d19abf74bd9f794bc39ce04e5ed22e360cde75b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8de0091af93120290105ce7603fae5acff257b76
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410892"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688543"
 ---
-# <a name="wbufferconvert-class"></a>wbuffer_convert — Klasa
+# <a name="wbuffer_convert-class"></a>wbuffer_convert — Klasa
 
-W tym artykule opisano buforu strumieni, który kontroluje przekazywanie elementów do i z buforu strumienia bajtów.
+Opisuje bufor strumienia, który kontroluje przekazywanie elementów do i z bufora strumienia bajtów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,18 +29,18 @@ class wbuffer_convert
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Codecvt*|[Ustawień regionalnych](../standard-library/locale-class.md) reguł, który reprezentuje obiekt konwersji.|
-|*Elem*|Typ elementu znaków dwubajtowych.|
-|*Cechy*|Cechy skojarzone z *Elem*.|
+|*Codecvt*|Zestaw reguł [ustawień regionalnych](../standard-library/locale-class.md) , który reprezentuje obiekt konwersji.|
+|*Elem*|Typ elementu dwubajtowego.|
+|*Cech*|Cechy skojarzone z *elem*.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa szablonu opisuje buforu strumieni, który kontroluje transmisji elementów typu `_Elem`, którego cech są opisane przez klasę `Traits`, do i z typu bufor strumienia bajtów `std::streambuf`.
+Ten szablon klasy opisuje bufor strumienia, który kontroluje transmisję elementów typu `_Elem`, których cechy znakowe są opisane przez klasę `Traits`, do i z bufora strumienia bajtów typu `std::streambuf`.
 
-Konwersja między sekwencjami `Elem` wartości i wielobajtowych sekwencji jest wykonywana przez obiekt klasy `Codecvt<Elem, char, std::mbstate_t>`, które spełnia wymagania aspekt standardowych konwersji kodu `std::codecvt<Elem, char, std::mbstate_t>`.
+Konwersja między sekwencją wartości `Elem` i sekwencji wielobajtowych jest wykonywana przez obiekt klasy `Codecvt<Elem, char, std::mbstate_t>`, który spełnia wymagania standardowego aspektu konwersji kodu `std::codecvt<Elem, char, std::mbstate_t>`.
 
-Przechowuje obiekt tej klasy szablonu:
+Obiekt tego szablonu klasy przechowuje:
 
-- Wskaźnik do podstawowego buforu strumienia bajtów
+- Wskaźnik do buforu strumienia bajtów źródłowych
 
-- Wskaźnik do obiektu przydzielonego konwersji (który jest zwolniony, kiedy [wbuffer_convert —](../standard-library/wbuffer-convert-class.md)
+- Wskaźnik do przydzielony obiekt konwersji (zwolniony, gdy [wbuffer_convert](../standard-library/wbuffer-convert-class.md)

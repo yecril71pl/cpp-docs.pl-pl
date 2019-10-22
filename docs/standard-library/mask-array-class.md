@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - mask_array class
 ms.assetid: c49bed6a-3000-4f39-bff6-cb9a453acb0b
-ms.openlocfilehash: 9da5e3593288be02819330e11b60e306784054dc
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 12398203d61f2c3ea155b5f6e6e7b118d4a13c75
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460136"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689402"
 ---
-# <a name="maskarray-class"></a>mask_array — Klasa
+# <a name="mask_array-class"></a>mask_array — Klasa
 
-Wewnętrzna, pomocnicza Klasa szablonu, która obsługuje obiekty, które są podzbiorami elementu nadrzędnego valarrays, określone za pomocą wyrażenia logicznego, dostarczając operacje między tablicami podzbioru.
+Wewnętrzny, pomocniczy szablon klasy, który obsługuje obiekty, które są podzbiorami elementu nadrzędnego valarrays, określone za pomocą wyrażenia logicznego, dostarczając operacje między tablicami podzbioru.
 
 ## <a name="syntax"></a>Składnia
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa opisuje obiekt, który przechowuje odwołanie do `va` obiektu klasy [valarray](../standard-library/valarray-class.md) **\<typu >** , wraz z obiektem [\<](../standard-library/valarray-bool-class.md) `ba` > bool klasy valarray, który opisuje sekwencja elementów do wybrania z `valarray<Type>` obiektu.
+Klasa opisuje obiekt, który przechowuje odwołanie do obiektu `va` klasy [valarray](../standard-library/valarray-class.md)  **\<Type >** , wraz z obiektem `ba` klasy [valarray \<bool](../standard-library/valarray-bool-class.md)>, który opisuje sekwencję elementów do wybrania z obiektu `valarray<Type>`.
 
-`mask_array<Type>` Obiekt można skonstruować tylko przez napisanie wyrażenia w formie [VA&#91;ba&#93;](../standard-library/valarray-class.md#op_at). Funkcje składowe klasy mask_array, zachowują się jak odpowiadające im sygnatury `valarray<Type>`funkcji zdefiniowane dla, z tą różnicą, że dotyczy tylko sekwencji wybranych elementów.
+Obiekt `mask_array<Type>` można skonstruować tylko przez napisanie wyrażenia w formie [VA&#91;ba&#93;](../standard-library/valarray-class.md#op_at). Funkcje członkowskie klasy mask_array, zachowują się jak odpowiadające im sygnatury funkcji zdefiniowane dla `valarray<Type>`, z tą różnicą, że dotyczy tylko sekwencji wybranych elementów.
 
-Sekwencja składa się z najwyżej `ba.size` elementów. Element *J* jest uwzględniany tylko wtedy, gdy **ba**[ *J*] ma wartość true. W związku z tym istnieje wiele elementów w sekwencji, ponieważ w programie `ba`istnieją prawdziwe elementy. Jeśli `I` jest indeksem najniższej wartości true w `ba`, wówczas wartość VA `I`[] jest elementem zero w wybranej sekwencji.
+Sekwencja składa się z co najwyżej `ba.size` elementów. Element *J* jest uwzględniany tylko wtedy, gdy **ba**[ *J*] ma wartość true. W związku z tym istnieje wiele elementów w sekwencji, ponieważ w `ba` są prawdziwe elementy. Jeśli `I` jest indeksem najniższej wartości true w `ba`, wówczas liczba **VA**[`I`] jest elementem zero w wybranej sekwencji.
 
 ## <a name="example"></a>Przykład
 

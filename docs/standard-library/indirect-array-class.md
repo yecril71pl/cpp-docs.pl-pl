@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - indirect_array class
 ms.assetid: 10e1eaea-ba5a-405c-a25e-7bdd3eee7fc7
-ms.openlocfilehash: 5db5f2ce60038267b70ae8e77d9dd929d972af6a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6be0c5153cbc94d09b414fc9e14fa498c7a4cfa7
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456331"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687919"
 ---
-# <a name="indirectarray-class"></a>indirect_array — Klasa
+# <a name="indirect_array-class"></a>indirect_array — Klasa
 
-Wewnętrzna, pomocnicza Klasa szablonu, która obsługuje obiekty, które są podzestawami valarrays przez dostarczanie operacji między tablicami podzbioru, zdefiniowanymi przez określenie podzestawu indeksów nadrzędnego valarray.
+Wewnętrzny, pomocniczy szablon klasy, który obsługuje obiekty, które są podzestawami valarrays przez dostarczanie operacji między tablicami podzestawu zdefiniowanymi przez określenie podzestawu indeksów nadrzędnego valarray.
 
 ## <a name="syntax"></a>Składnia
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa opisuje obiekt, który przechowuje odwołanie do `va` obiektu klasy [valarray](../standard-library/valarray-class.md) **\<typu >** , wraz z obiektem `xa` klasy `valarray<size_t>`, który opisuje sekwencję elementów do wyboru `valarray<Type>` obiekt.
+Klasa opisuje obiekt, który przechowuje odwołanie do obiektu `va` klasy [valarray](../standard-library/valarray-class.md)  **\<Type >** oraz obiekt `xa` klasy `valarray<size_t>`, który opisuje sekwencję elementów do wybrania z obiektu `valarray<Type>`.
 
-`indirect_array<Type>` Obiekt można skonstruować tylko przez napisanie wyrażenia formularza `va[xa]`. Funkcje składowe klasy indirect_array, zachowują się jak odpowiadające im sygnatury `valarray<Type>`funkcji zdefiniowane dla, z tą różnicą, że dotyczy tylko sekwencji wybranych elementów.
+Obiekt `indirect_array<Type>` można skonstruować tylko przez napisanie wyrażenia `va[xa]` formularza. Funkcje członkowskie klasy indirect_array, zachowują się jak odpowiadające im sygnatury funkcji zdefiniowane dla `valarray<Type>`, z tą różnicą, że dotyczy tylko sekwencji wybranych elementów.
 
-Sekwencja składa się z **XA.** elementy [size](../standard-library/valarray-class.md#size) , gdzie element `I` jest indeksem **XA**[ `I`] w `va`.
+Sekwencja składa się z **XA.** elementy [size](../standard-library/valarray-class.md#size) , gdzie element `I` stać się indeksem **XA**[`I`] w `va`.
 
 ## <a name="example"></a>Przykład:
 

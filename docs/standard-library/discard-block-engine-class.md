@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - discard_block_engine class
 ms.assetid: aa84808e-38fe-4fa0-9f73-d5b9a653345b
-ms.openlocfilehash: 76a78a2f47bd160c6b2b981b1ccdda2ef3a90575
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: eb00945084affb2be9299953e5ca9352c56d3b32
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454394"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688103"
 ---
-# <a name="discardblockengine-class"></a>discard_block_engine — Klasa
+# <a name="discard_block_engine-class"></a>discard_block_engine — Klasa
 
 Generuje losową sekwencję przez odrzucenie wartości zwracanych przez aparat podstawowy.
 
@@ -26,14 +26,14 @@ class discard_block_engine;
 
 ### <a name="parameters"></a>Parametry
 
-*Wyszukiwarce*\
+@No__t_1 *silnika*
 Typ aparatu podstawowego.
 
-*ST*\
+*P* \
 **Rozmiar bloku**. Liczba wartości w każdym bloku.
 
-*R*\
-**Używany blok**. Liczba wartości w każdym używanym bloku. Pozostałe są odrzucane (`P` - `R`). **Warunek wstępny**:`0 < R ≤ P`
+@No__t_1 *R*
+**Używany blok**. Liczba wartości w każdym używanym bloku. Pozostałe są odrzucane (`P`  -  `R`). **Warunek wstępny**: `0 < R ≤ P`
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -42,18 +42,18 @@ Typ aparatu podstawowego.
 |`discard_block_engine::discard_block_engine`|`discard_block_engine::base`|`discard_block_engine::discard`|
 |`discard_block_engine::operator()`|`discard_block_engine::base_type`|`discard_block_engine::seed`|
 
-Aby uzyskać więcej informacji na temat elementów członkowskich silnika, zobacz [ \<Random >](../standard-library/random.md).
+Aby uzyskać więcej informacji na temat elementów członkowskich silnika, zobacz [\<random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa szablonu opisuje adapter aparatu, który tworzy wartości przez odrzucenie niektórych wartości zwracanych przez aparat podstawowy.
+Ten szablon klasy zawiera opis adaptera, który tworzy wartości przez odrzucenie niektórych wartości zwracanych przez aparat podstawowy.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowe >
+**Nagłówek:** \<random >
 
 **Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<random>](../standard-library/random.md)
+[\<random >](../standard-library/random.md)

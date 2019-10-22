@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - time_base class
 ms.assetid: 9ae37f0b-9a42-496e-9870-3d9b71bab8fb
-ms.openlocfilehash: 85565dc0c0ec904551eb8dd981cfacc9a2e1f256
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ddaf9905e859c062031940d35adfa2a3393dbb5a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460037"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685785"
 ---
-# <a name="timebase-class"></a>time_base — Klasa
+# <a name="time_base-class"></a>time_base — Klasa
 
-Klasa służy jako klasa bazowa dla aspektów klasy szablonu time_get, definiując tylko typ `dateorder` wyliczeniowy i kilka stałych tego typu.
+Klasa służy jako klasa bazowa dla aspektów szablonu klasy time_get, definiując tylko typ wyliczeniowy `dateorder` i kilka stałych tego typu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,19 +38,19 @@ public:
 
 Każda stała charakteryzuje inny sposób uporządkowania składników daty. Stałe są następujące:
 
-- `no_order`Określa brak określonej kolejności.
+- `no_order` określa brak określonej kolejności.
 
-- `dmy`określa dzień zamówienia, miesiąc, rok, jak w 2 grudnia 1979.
+- `dmy` określa dzień zamówienia, miesiąc, rok, jak w 2 grudnia 1979.
 
-- `mdy`określa miesiąc zamówienia, dzień, rok, zgodnie z 2 grudnia 1979.
+- `mdy` określa miesiąc zamówienia, dzień, rok, zgodnie z 2 grudnia 1979.
 
-- `ymd`Określa rok zamówienia, miesiąc, dzień, jak w 1979/12/2.
+- `ymd` określa rok zamówienia, miesiąc, dzień, jak w 1979/12/2.
 
-- `ydm`Określa rok zamówienia, dzień, miesiąc, jak w 1979: 2 grudnia.
+- `ydm` określa rok zamówienia, dzień, miesiąc, jak w 1979:2 grudnia.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<> ustawień regionalnych
+**Nagłówek:** \<locale >
 
 **Przestrzeń nazw:** std
 
