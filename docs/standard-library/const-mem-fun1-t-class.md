@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun1_t class
 ms.assetid: 250fac30-9663-4133-9051-6303f76ea259
-ms.openlocfilehash: 8ccd9d7e58b9cadec83b64df5553564db20a5745
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 1af44635400037c6359b13c4f2925c3ac7f2d9d5
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244527"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689747"
 ---
-# <a name="constmemfun1t-class"></a>const_mem_fun1_t — Klasa
+# <a name="const_mem_fun1_t-class"></a>const_mem_fun1_t — Klasa
 
-Klasa adaptera, który umożliwia **const** funkcja elementu członkowskiego, który przyjmuje jeden argument do wywoływania jako obiektu binarnego funkcja podczas inicjowania przy użyciu argumentu będącego wskaźnikiem. Przestarzałe w C ++ 11, usunięte w języku C ++ 17.
+Klasa adaptera, która umożliwia **stałemu** funkcji składowej, która przyjmuje pojedynczy argument jako obiekt funkcji binarnej, gdy zostanie zainicjowany przy użyciu argumentu wskaźnika. Przestarzałe w języku C++ 11, usunięte w języku C++ 17.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,23 +30,23 @@ class const_mem_fun1_t : public binary_function<const Type *, Arg, Result>
 
 ### <a name="parameters"></a>Parametry
 
-*member_ptr*\
-Wskaźnik do funkcji składowej klasy typu `Type` do konwersji na obiekt funkcyjny.
+*member_ptr* \
+Wskaźnik do funkcji członkowskiej klasy `Type` do przekonwertowania na obiekt funkcji.
 
-*po lewej stronie*\
-**Const** obiekt *member_ptr* wywoływana jest funkcja elementu członkowskiego.
+\ *lewo*
+Obiekt **const** , dla którego jest wywoływana funkcja członkowska *member_ptr* .
 
-*po prawej stronie*\
-Argument, który jest umożliwiającej *member_ptr*.
+*prawa* \
+Argument, który jest przyznawany *member_ptr*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Dostosowywalne funkcja binarnego.
+Dostosowywalna funkcja binarna.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu przechowuje kopię *member_ptr*, który musi być wskaźnikiem do funkcji składowej klasy `Type`, w obiekcie prywatnego elementu członkowskiego. Definiuje jej funkcji członkowskiej `operator()` powrotu `(left->member_ptr)(right) const`.
+Szablon klasy przechowuje kopię *member_ptr*, która musi być wskaźnikiem do funkcji składowej klasy `Type`, w prywatnym obiekcie członkowskim. Definiuje jej funkcję członkowską `operator()` jako zwracającą `(left->member_ptr)(right) const`.
 
 ## <a name="example"></a>Przykład
 
-Konstruktor obiektu `const_mem_fun1_t` jest rzadko używana bezpośrednio. `mem_fn` Umożliwia dostosowanie funkcji elementów członkowskich. Zobacz [mem_fn —](../standard-library/functional-functions.md#mem_fn) przykład sposobu użycia adapterów funkcja elementu członkowskiego.
+Konstruktor `const_mem_fun1_t` jest rzadko używany bezpośrednio. `mem_fn` służy do adaptacji funkcji Członkowskich. Zobacz [mem_fn](../standard-library/functional-functions.md#mem_fn) , aby zapoznać się z przykładem użycia adapterów funkcji składowych.

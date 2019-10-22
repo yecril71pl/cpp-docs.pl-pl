@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: 44d44d48f66c9bdbf03d4e36e752ea3dee5ff9c9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 687665d2ad8bf80f4f2db07ce11c4866ff1ee903
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453175"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688259"
 ---
 # <a name="complex-class"></a>complex — Klasa
 
-Klasa szablonu opisuje obiekt przechowujący dwa obiekty typu `Type`, taki, który reprezentuje rzeczywistą część liczby zespolonej i jeden, który reprezentuje część urojoną.
+Szablon klasy opisuje obiekt przechowujący dwa obiekty typu `Type`, taki, który reprezentuje rzeczywistą część liczby zespolonej i jeden, który reprezentuje część urojoną.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,9 +38,9 @@ Obiekt klasy `Type`:
 
 - Definiuje operatory arytmetyczne i funkcje matematyczne w razie potrzeby, które są zdefiniowane dla typów zmiennoprzecinkowych z zachowaniem konwencjonalnym.
 
-W szczególności nie mogą istnieć żadne delikatne różnice między konstrukcją kopiowania i domyślną konstrukcją, po którym następuje przypisanie. Żadna z operacji na obiektach klasy `Type` nie może zgłosić wyjątków.
+W szczególności nie mogą istnieć żadne delikatne różnice między konstrukcją kopiowania i domyślną konstrukcją, po którym następuje przypisanie. Żadna z operacji na obiektach klasy `Type` może generować wyjątki.
 
-Jawne specjalizacje złożone z klasy szablonu istnieją dla trzech typów zmiennoprzecinkowych. W tej implementacji wartość dowolnego `Type` innego typu jest rzutowanie dla rzeczywistych obliczeń,  z podwójnym wynikiem przypisanym z  powrotem do przechowywanego obiektu typu `Type`.
+Jawne specjalizacje złożone szablonu klas istnieją dla trzech typów zmiennoprzecinkowych. W tej implementacji wartość dowolnego innego typu `Type` jest **rzutowanie dla** rzeczywistej obliczeń, z **podwójnym** wynikiem przypisanym do przechowywanego obiektu typu `Type`.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -48,7 +48,7 @@ Jawne specjalizacje złożone z klasy szablonu istnieją dla trzech typów zmien
 
 |||
 |-|-|
-|[complex](#complex)|Konstruuje liczbę zespoloną z określonymi częściami rzeczywistymi i urojonymi albo jako kopię innej liczby zespolonej.|
+|[złożonych](#complex)|Konstruuje liczbę zespoloną z określonymi częściami rzeczywistymi i urojonymi albo jako kopię innej liczby zespolonej.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -67,11 +67,11 @@ Jawne specjalizacje złożone z klasy szablonu istnieją dla trzech typów zmien
 
 |||
 |-|-|
-|[operator*=](#op_star_eq)|Mnoży docelowy liczbę zespoloną przez współczynnik, który może być złożony lub być tego samego typu, co są częścią rzeczywistą i urojoną liczby zespolonej.|
-|[operator+=](#op_add_eq)|Dodaje liczbę do docelowej liczby zespolonej, w której dodana liczba może być złożona lub tego samego typu co są częścią rzeczywistą i urojoną liczby zespolonej, do której jest dodawany.|
+|[operator * =](#op_star_eq)|Mnoży docelowy liczbę zespoloną przez współczynnik, który może być złożony lub być tego samego typu, co są częścią rzeczywistą i urojoną liczby zespolonej.|
+|[operator + =](#op_add_eq)|Dodaje liczbę do docelowej liczby zespolonej, w której dodana liczba może być złożona lub tego samego typu co są częścią rzeczywistą i urojoną liczby zespolonej, do której jest dodawany.|
 |[operator-=](#operator-_eq)|Odejmuje liczbę od docelowej liczby zespolonej, w której liczba odejmowanych może być złożona lub tego samego typu co są częścią rzeczywistą i urojoną liczby zespolonej, do której jest dodawany.|
 |[operator/=](#op_div_eq)|Dzieli docelowy liczbę zespoloną przez dzielnik, który może być złożony lub być tego samego typu co wartości rzeczywiste i urojone części liczby zespolonej.|
-|[operator=](#op_eq)|Przypisuje liczbę do docelowego numeru zespolonego, gdzie przypisana liczba może być złożona lub tego samego typu, co jest częścią rzeczywistą i urojoną liczby zespolonej, do której jest przypisany.|
+|[operator =](#op_eq)|Przypisuje liczbę do docelowego numeru zespolonego, gdzie przypisana liczba może być złożona lub tego samego typu, co jest częścią rzeczywistą i urojoną liczby zespolonej, do której jest przypisany.|
 
 
 
@@ -91,18 +91,18 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parametry
 
-*_RealVal*\
+*_RealVal* \
 Wartość części rzeczywistej użytej do zainicjowania konstruowanej liczby zespolonej.
 
-*_ImagVal*\
+*_ImagVal* \
 Wartość części urojonej użytej do zainicjowania konstruowanej liczby zespolonej.
 
-*complexNum*\
+*complexNum* \
 Liczba zespolona, której części rzeczywiste i urojone są używane do inicjowania konstruowanej liczby zespolonej.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor inicjuje przechowywaną część rzeczywistą do  *\_RealVal* i magazynowaną część urojoną do  *\_Imagval*. Drugi Konstruktor inicjuje przechowywaną część rzeczywistą do `complexNum.real()` i przechowywaną część urojoną do `complexNum.imag()`.
+Pierwszy Konstruktor inicjuje przechowywaną część rzeczywistą do *\_RealVal* i magazynowaną część urojoną do *\_Imagval*. Drugi Konstruktor inicjuje przechowywaną część rzeczywistą do `complexNum.real()` i magazynowaną część urojoną do `complexNum.imag()`.
 
 W tej implementacji, jeśli Translator nie obsługuje funkcji szablonu elementu członkowskiego, szablon:
 
@@ -171,7 +171,7 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknij*\
+*prawa* \
 Liczba złożona, której wartość urojona ma zostać wyodrębniona.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -228,7 +228,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknij*\
+*prawa* \
 Liczba złożona lub liczba, która jest tego samego typu co parametr docelowego numeru zespolonego.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -313,7 +313,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknij*\
+*prawa* \
 Liczba złożona lub liczba, która jest tego samego typu co parametr docelowego numeru zespolonego.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -416,10 +416,10 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum*\
+*complexNum* \
 Liczba zespolona, która ma zostać odjęta od docelowego numeru zespolonego.
 
-*_RealPart*\
+*_RealPart* \
 Liczba rzeczywista, która ma zostać odjęta od docelowego numeru zespolonego.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -524,10 +524,10 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum*\
+*complexNum* \
 Liczba zespolona, która ma zostać odjęta od docelowego numeru zespolonego.
 
-*_RealPart*\
+*_RealPart* \
 Liczba rzeczywista, która ma zostać odjęta od docelowego numeru zespolonego.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -626,7 +626,7 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknij*\
+*prawa* \
 Liczba złożona lub liczba, która jest tego samego typu co parametr docelowego numeru zespolonego.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -703,7 +703,7 @@ T real(const T& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknij*\
+*prawa* \
 Liczba złożona, której rzeczywista wartość ma zostać wyodrębniona.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -755,7 +755,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-`value_type`jest synonimem dla parametru szablonu złożonego `Type` klasy.
+`value_type` jest synonimem dla parametru złożonego szablonu `Type` klasy.
 
 ### <a name="example"></a>Przykład
 

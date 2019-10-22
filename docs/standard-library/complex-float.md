@@ -1,19 +1,19 @@
 ---
-title: złożone&lt;zmiennoprzecinkowe&gt;
+title: złożone &gt; &lt;float
 ms.date: 11/04/2016
 f1_keywords:
 - complex/std::complex<float>
 helpviewer_keywords:
 - complex<float> function
 ms.assetid: 1178eb1e-39bd-4017-89cd-aea95f813939
-ms.openlocfilehash: bfe0e9dcb0bf8f8b74487404998e06d233097a39
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7b49e63302ad0c26f393fdfd9dd443c77455a643
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453114"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688240"
 ---
-# <a name="complexltfloatgt"></a>złożone&lt;zmiennoprzecinkowe&gt;
+# <a name="complexltfloatgt"></a>złożone &gt; &lt;float
 
 Opisuje obiekt, który przechowuje uporządkowaną parę obiektów typu **float**, pierwszą reprezentującą rzeczywistą część liczby zespolonej i drugą reprezentującą część urojoną.
 
@@ -35,30 +35,30 @@ constexpr complex(
 
 constexpr complex(
     const complex<long double>& complexNum);
-// rest same as template class complex
+// rest same as class template complex
 };
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_RealVal*\
+*_RealVal* \
 Wartość typu **float** dla rzeczywistej części konstruowanej liczby zespolonej.
 
-*_ImagVal*\
+*_ImagVal* \
 Wartość typu **float** dla części urojonej konstruowanej liczby zespolonej.
 
-*complexNum*\
+*complexNum* \
 Złożona liczba typu **Double** lub typu **Long Double** , których elementy rzeczywiste i urojone są używane do zainicjowania złożonej liczby konstruowanych typów **zmiennoprzecinkowych** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Złożona liczba typu zmiennoprzecinkowego .
+Złożona liczba typu **zmiennoprzecinkowego**.
 
 ## <a name="remarks"></a>Uwagi
 
-Jawna specjalizacja klasy szablonu złożonej do złożonej klasy typu zmiennoprzecinkowego różni  się od klasy szablonu tylko w konstruktorach, które definiuje. Konwersja z wartości **zmiennoprzecinkowej** na **Double** może być niejawna, ale mniej bezpieczna konwersja z  wartości zmiennoprzecinkowych na **Long Double** musi być **jawna**. Użycie jawnych  reguł inicjacji z konwersją typu przy użyciu składni przypisania.
+Jawna specjalizacja szablonu klasy złożonego do złożonej klasy typu **zmiennoprzecinkowego** różni się od szablonu klasy tylko w konstruktorach, które definiuje. Konwersja z wartości **zmiennoprzecinkowej** na **Double** może być niejawna, ale mniej bezpieczna konwersja z wartości **zmiennoprzecinkowych** na **Long Double** musi być **jawna**. Użycie **jawnych** reguł inicjacji z konwersją typu przy użyciu składni przypisania.
 
-Aby uzyskać więcej informacji na temat klasy `complex`szablonu, zobacz [Klasa złożona](../standard-library/complex-class.md). Aby uzyskać listę elementów członkowskich klasy `complex`szablonu, zobacz.
+Aby uzyskać więcej informacji na `complex` szablonu klasy, zobacz [Klasa złożona](../standard-library/complex-class.md). Aby uzyskać listę elementów członkowskich `complex` szablonu klasy, zobacz.
 
 ## <a name="example"></a>Przykład
 
@@ -118,11 +118,11 @@ arg ( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek**: \<złożony >
+**Nagłówek**: \<complex >
 
 **Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[Klasa złożona](../standard-library/complex-class.md)\
+[Klasa złożona](../standard-library/complex-class.md) \
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype_byname class
 ms.assetid: a5cec021-a1f8-425f-8757-08e6f064b604
-ms.openlocfilehash: 0b0f33781cc9f1f54661a44a5434c94316432a45
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: dcaaff45fb33155710f788af4ceb657eff97464e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457894"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689735"
 ---
-# <a name="ctypebyname-class"></a>ctype_byname — Klasa
+# <a name="ctype_byname-class"></a>ctype_byname — Klasa
 
-Klasa pochodna szablonu opisuje obiekt, który może być używany jako zestaw reguł CType dla danego ustawienia regionalnego, co umożliwia klasyfikację znaków i konwersję znaków między zestawami znaków w przypadku i natywnym.
+Szablon klasy pochodnej opisuje obiekt, który może być używany jako zestaw reguł CType dla danego ustawienia regionalnego, co umożliwia klasyfikację znaków i konwersję znaków między zestawami znaków w przypadku i natywnym i lokalnym.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,11 +40,11 @@ protected:
 
 ## <a name="remarks"></a>Uwagi
 
-Jego zachowanie zależy od nazwanych ustawień regionalnych `_Locname`. Każdy Konstruktor inicjuje swój obiekt podstawowy z [CType](../standard-library/ctype-class.md)\<CharType > ( `_Refs`) lub odpowiednikiem klasy `ctype<char>`bazowej.
+Jego zachowanie zależy od nazwanych ustawień regionalnych `_Locname`. Każdy Konstruktor inicjuje swój obiekt podstawowy z [ctype](../standard-library/ctype-class.md) \<CharType > (`_Refs`) lub odpowiednikiem klasy bazowej `ctype<char>`.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<> ustawień regionalnych
+**Nagłówek:** \<locale >
 
 **Przestrzeń nazw:** std
 
