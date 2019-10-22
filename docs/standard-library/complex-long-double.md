@@ -1,5 +1,5 @@
 ---
-title: złożone&lt;long double&gt;
+title: złożone &lt;long podwójne &gt;
 ms.date: 11/04/2016
 f1_keywords:
 - std::complex<long double>
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-ms.openlocfilehash: 280fb4c15219b11d2325ff37a296e133810bf2b5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: afd85321ee443359f17850384b06b854dfe89985
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449480"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688230"
 ---
-# <a name="complexltlong-doublegt"></a>złożone&lt;long double&gt;
+# <a name="complexltlong-doublegt"></a>złożone &lt;long podwójne &gt;
 
-Ta jawnie wyspecjalizowana Klasa szablonu opisuje obiekt, który przechowuje uporządkowaną parę obiektów, obie typu **Long Double**, pierwsze reprezentujące rzeczywistą część liczby zespolonej i sekundę reprezentującą część urojoną.
+Ten jawnie wyspecjalizowany szablon klasy opisuje obiekt, który przechowuje uporządkowaną parę obiektów, obie typu **Long Double**, pierwsze reprezentujące rzeczywistą część liczby zespolonej i sekundę reprezentującą część urojoną.
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,20 +32,20 @@ public:
 complex(
     constexpr complex<long double>& complexNum);
 
-// rest same as template class complex
+// rest same as class template complex
 };
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_RealVal*\
+*_RealVal* \
 Wartość typu **Long Double** dla rzeczywistej części konstruowanej liczby zespolonej.
 
-*_ImagVal*\
+*_ImagVal* \
 Wartość typu **Long Double** dla części urojonej konstruowanej liczby zespolonej.
 
-*complexNum*\
-Liczba zespolona typu **Double** lub typu zmiennoprzecinkowego  , których elementy rzeczywiste i urojone są używane do zainicjowania złożonej liczby typu **Long Double** .
+*complexNum* \
+Liczba zespolona typu **Double** lub typu **zmiennoprzecinkowego** , których elementy rzeczywiste i urojone są używane do zainicjowania złożonej liczby typu **Long Double** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -53,11 +53,11 @@ Złożona liczba typu **Long Double**.
 
 ## <a name="remarks"></a>Uwagi
 
-Jawna specjalizacja klasy `complex` szablonu do złożonej klasy typu **Long Double** różni się od klasy szablonu tylko w konstruktorach, które definiuje. Konwersja z **Long Double** na **zmiennoprzecinkowe** może być niejawna, ale konwersja z **podwójnej** do **Long Double** musi być jawna . Użycie jawnych  reguł inicjacji z konwersją typu przy użyciu składni przypisania.
+Jawna specjalizacja szablonu klasy `complex` do złożonej klasy typu **Long Double** różni się od szablonu klasy tylko w konstruktorach, które definiuje. Konwersja z **Long Double** na **zmiennoprzecinkowe** może być niejawna, ale konwersja z **podwójnej** do **Long Double** musi być **jawna**. Użycie **jawnych** reguł inicjacji z konwersją typu przy użyciu składni przypisania.
 
-Aby uzyskać więcej informacji na temat klasy `complex` szablonu i jej elementów członkowskich, zobacz [Klasa złożona](../standard-library/complex-class.md).
+Aby uzyskać więcej informacji na temat szablonu klasy `complex` i jego składowych, zobacz [Klasa złożona](../standard-library/complex-class.md).
 
-**Specyficzne dla firmy Microsoft**: Typy **Long Double** i **Double** mają tę samą reprezentację, ale są to różne typy. Aby uzyskać więcej informacji, zobacz [podstawowe typy](../cpp/fundamental-types-cpp.md).
+**Specyficzne dla firmy Microsoft**: typy **Long Double** i **Double** mają tę samą reprezentację, ale są to różne typy. Aby uzyskać więcej informacji, zobacz [podstawowe typy](../cpp/fundamental-types-cpp.md).
 
 ## <a name="example"></a>Przykład
 
@@ -117,11 +117,11 @@ arg( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek**: \<złożony >
+**Nagłówek**: \<complex >
 
 **Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[Klasa złożona](../standard-library/complex-class.md)\
+[Klasa złożona](../standard-library/complex-class.md) \
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
