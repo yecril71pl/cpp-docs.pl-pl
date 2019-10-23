@@ -2969,7 +2969,7 @@
                           href: c-language/c-integer-constants.md
                         - name: Typy całkowite
                           href: c-language/integer-types.md
-                        - name: Limity liczb całkowitych C++
+                        - name: Limity liczb całkowitych w języku C i C++
                           href: c-language/cpp-integer-limits.md
                     - name: Stałe znakowe języka C
                       expanded: false
