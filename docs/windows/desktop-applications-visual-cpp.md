@@ -3,26 +3,26 @@ title: Aplikacje klasyczne (wizualizacja C++)
 ms.date: 07/28/2019
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
 ms.topic: overview
-ms.openlocfilehash: 91fcc596a4c30e3fa74043c846eda6f06b666f2c
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 98909097cf791d55f5971a89643839e07b0c60d1
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274725"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778503"
 ---
 # <a name="desktop-applications-visual-c"></a>Aplikacje klasyczne (wizualizacja C++)
 
-*Aplikacja klasyczna* w C++ programie to Natywna aplikacja, która może uzyskiwać dostęp do pełnego zestawu interfejsów API systemu Windows i jest uruchamiana w oknie lub w konsoli systemowej. Aplikacje klasyczne programu C++ mogą działać w systemie Windows XP za poorednictwem systemu Windows 10 (mimo że system Windows XP nie jest już oficjalnie obsługiwany i istnieje wiele interfejsów API systemu Windows, które zostały wprowadzone od tej pory). 
+*Aplikacja klasyczna* w C++ programie to Natywna aplikacja, która może uzyskiwać dostęp do pełnego zestawu interfejsów API systemu Windows i jest uruchamiana w oknie lub w konsoli systemowej. Aplikacje klasyczne programu C++ mogą działać w systemie Windows XP za poorednictwem systemu Windows 10 (mimo że system Windows XP nie jest już oficjalnie obsługiwany i istnieje wiele interfejsów API systemu Windows, które zostały wprowadzone od tej pory).
 
-Aplikacja klasyczna różni się od aplikacji platforma uniwersalna systemu Windows (platformy UWP), która może być uruchamiana na komputerach z systemem Windows 10, a także na konsolach XBox, Windows Phone, Surface Hub i innych urządzeniach. Więcej informacji o programie Desktop a PLATFORMY UWP aplikacje, zobacz [Wybierz swoją technologię](/windows/win32/choose-your-technology).
+Aplikacja klasyczna różni się od aplikacji platforma uniwersalna systemu Windows (platformy UWP), która może być uruchamiana na komputerach z systemem Windows 10, a także na konsolach XBox, Windows Phone, Surface Hub i innych urządzeniach. Aby uzyskać więcej informacji na temat aplikacji Desktop vs. platformy UWP, zobacz [Wybieranie technologii](/windows/win32/choose-your-technology).
 
-### <a name="desktop-bridge"></a>Mostek Desktop
+## <a name="desktop-bridge"></a>Mostek Desktop
 
 W systemie Windows 10 istnieje możliwość spakowania istniejącej aplikacji klasycznej lub obiektu COM jako aplikacji platformy UWP oraz dodania funkcji platformy UWP, takich jak Touch, lub wywołania interfejsów API z zestawu nowoczesnych interfejsów API systemu Windows. Możesz również dodać aplikację platformy UWP do rozwiązania pulpitu w programie Visual Studio i spakować je razem w jednym pakiecie i używać interfejsów API systemu Windows do komunikacji między nimi.
 
 W programie Visual Studio 2017 w wersji 15,4 lub nowszej można utworzyć projekt pakietu aplikacji systemu Windows, aby znacznie uprościć pracę nad pakowaniem istniejącej aplikacji klasycznej. Istnieją pewne ograniczenia dotyczące tego, jakie są wywołania rejestru lub interfejsy API używane przez aplikację klasyczną, ale w wielu przypadkach można utworzyć alternatywne ścieżki kodu, aby osiągnąć podobną funkcjonalność podczas działania w pakiecie aplikacji. Aby uzyskać więcej informacji, zobacz [mostek Desktop](/windows/uwp/porting/desktop-to-uwp-root).
 
-### <a name="terminology"></a>Terminologia
+## <a name="terminology"></a>Terminologia
 
 - Aplikacja *Win32* to aplikacja klasyczna systemu Windows w C++ systemie, która może korzystać z natywnych interfejsów API [systemu Windows C i/lub](/windows/win32/apiindex/windows-api-list) interfejsów API języka c++ oraz interfejsów API biblioteki standardowej i bibliotek innych firm. Aplikacja Win32 uruchamiana w oknie wymaga, aby deweloper działał jawnie z komunikatami systemu Windows w ramach funkcji procedury systemu Windows. Pomimo nazwy, aplikacja Win32 może być skompilowana jako plik binarny 32-bitowy (x86) lub 64-bitowy (x64). W środowisku IDE programu Visual Studio warunki x86 i Win32 są synonimami.
 
@@ -52,7 +52,7 @@ Dowolna aplikacja klasyczna w programie C++ może korzystać z klas środowiska 
 |Tytuł|Opis|
 |-----------|-----------------|
 |[Tworzenie aplikacji dla systemu Windows](/windows/win32/index)|Zawiera informacje o interfejsie API systemu Windows i modelu COM. (Niektóre interfejsy API systemu Windows i biblioteki DLL innych firm są implementowane jako obiekty COM).|
-|[Hilo Opracowywanie C++ aplikacji dla systemu Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Opisuje sposób tworzenia rozbudowanej aplikacji klasycznej systemu Windows, która używa animacji systemu Windows i Direct2D do tworzenia interfejsu użytkownika opartego na karuzeli.  Ten samouczek nie został zaktualizowany od systemu Windows 7, ale nadal zawiera szczegółowe wprowadzenie do programowania Win32.|
+|[Hilo: Programowanie C++ aplikacji dla systemu Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Opisuje sposób tworzenia rozbudowanej aplikacji klasycznej systemu Windows, która używa animacji systemu Windows i Direct2D do tworzenia interfejsu użytkownika opartego na karuzeli.  Ten samouczek nie został zaktualizowany od systemu Windows 7, ale nadal zawiera szczegółowe wprowadzenie do programowania Win32.|
 |[Omówienie programowania w systemie Windows w języku C++](overview-of-windows-programming-in-cpp.md)|Zawiera opis najważniejszych funkcji programowania komputerów z systemem C++Windows w systemie.|
 
 ## <a name="see-also"></a>Zobacz także
