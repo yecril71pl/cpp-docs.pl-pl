@@ -5,18 +5,18 @@ helpviewer_keywords:
 - lexical conventions
 - conventions, lexical
 ms.assetid: 20668a49-cab7-4153-a6d9-7439aac3ff3b
-ms.openlocfilehash: af220854f71a84902d9ad417242b6d037d4ba0f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52b20c5a8eccbf9e8a87cfa7e8fb01da846153d8
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234089"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778458"
 ---
 # <a name="elements-of-c"></a>Elementy języka C
 
-W tej sekcji opisano elementy języka programowania C, łącznie z nazwami, cyfry i znaki używane do konstruowania C program. Składni ANSI C etykiet tokeny te składniki.
+W tej sekcji opisano elementy języka programowania C, w tym nazwy, cyfry i znaki używane do konstruowania programu C. Składnia ANSI C etykietuje te tokeny składników.
 
-W tej sekcji opisano sposób definiowania tokenów i jak kompilator ocenia je na.
+W tej sekcji wyjaśniono, jak definiować tokeny i jak kompilator szacuje je.
 
 Omówiono następujące tematy:
 
@@ -34,9 +34,9 @@ Omówiono następujące tematy:
 
 - [Interpunkcja i znaki specjalne](../c-language/punctuation-and-special-characters.md)
 
-Sekcja zawiera również tabele odwołań dla [Trójznaków](../c-language/trigraphs.md), [limity dla stałych zmiennopozycyjna](../c-language/limits-on-floating-point-constants.md), [limity liczb całkowitych C++](../c-language/cpp-integer-limits.md), i [sekwencje ucieczki ](../c-language/escape-sequences.md).
+Sekcja zawiera również tabele referencyjne dla [trigraphs](../c-language/trigraphs.md), [limity dla stałych zmiennoprzecinkowych](../c-language/limits-on-floating-point-constants.md), [limity C i C++ liczby całkowite](../c-language/cpp-integer-limits.md)oraz [Sekwencje ucieczki](../c-language/escape-sequences.md).
 
-Operatory są symbole (pojedyncze znaki i kombinacji znaków), które określają, jak mają być zmieniane wartości. Każdy symbol jest interpretowany jako pojedyncza jednostka o nazwie tokenu. Aby uzyskać więcej informacji, zobacz [operatory](../c-language/c-operators.md).
+Operatory to symbole (znaki pojedyncze i kombinacje znaków) określające sposób manipulowania wartościami. Każdy symbol jest interpretowany jako pojedyncza jednostka, nazywana tokenem. Aby uzyskać więcej informacji, zobacz [Operatory](../c-language/c-operators.md).
 
 ## <a name="see-also"></a>Zobacz także
 

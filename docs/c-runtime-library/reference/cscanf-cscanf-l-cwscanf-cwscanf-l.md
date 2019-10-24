@@ -1,6 +1,6 @@
 ---
 title: _cscanf, _cscanf_l, _cwscanf, _cwscanf_l
-ms.date: 11/04/2016
+ms.date: 10/21/2019
 api_name:
 - _cscanf_l
 - _cscanf
@@ -48,16 +48,19 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-ms.openlocfilehash: ee4c380d3e470fa6e3d12066d3bf34918acf1bea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8b996e510d6a8c106aa88a60a8da456d36a4b3e5
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938501"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778311"
 ---
 # <a name="_cscanf-_cscanf_l-_cwscanf-_cwscanf_l"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
 Odczytuje sformatowane dane z konsoli programu. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md).
+
+> [!NOTE] 
+> W programie Visual Studio 2015 `printf` i `scanf` Rodzina funkcji zostały zadeklarowane jako **wbudowane** i przeniesione do nagłówków `<stdio.h>` i `<conio.h>`. W przypadku migrowania starszego kodu w połączeniu z tymi funkcjami może być widoczny *LNK2019* . Aby uzyskać więcej informacji, [Zobacz C++ historia zmian wizualnych 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
 
 > [!IMPORTANT]
 > Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -87,7 +90,7 @@ int _cwscanf_l(
 
 ### <a name="parameters"></a>Parametry
 
-*format*<br/>
+*Formatowanie*<br/>
 Ciąg kontroli formatu.
 
 *argument*<br/>
@@ -119,7 +122,7 @@ Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korz
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_cscanf**, **_cscanf_l**|\<conio.h>|
+|**_cscanf**, **_cscanf_l**|\<CONIO. h >|
 |**_cwscanf**, **_cwscanf_l**|\<CONIO. h > lub \<WCHAR. h >|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
