@@ -1,15 +1,15 @@
 ---
 title: Obsługa otwartych folderów dla C++ systemów kompilacji w programie Visual Studio
-ms.date: 08/20/2019
+ms.date: 10/21/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 78b1c00b07423e9d02f585c707156a1c843bea6f
-ms.sourcegitcommit: ace42fa67e704d56d03c03745b0b17d2a5afeba4
+ms.openlocfilehash: 0eed40430050655f8fd9bdc83144adc7aa8c32e7
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69976008"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778342"
 ---
 # <a name="open-folder-support-for-c-build-systems-in-visual-studio"></a>Obsługa otwartych folderów dla C++ systemów kompilacji w programie Visual Studio
 
@@ -21,7 +21,7 @@ Funkcja Otwórz folder jest dostępna w programie Visual Studio 2017 i nowszych.
 
 ::: moniker range=">=vs-2017"
 
-W programie Visual Studio 2017 i nowszych funkcja "Otwórz folder" umożliwia otworzenie folderu plików źródłowych i natychmiastowe rozpoczęcie kodowania z obsługą funkcji IntelliSense, przeglądanie, Refaktoryzacja, debugowanie i tak dalej. Jak edytowanie, tworzenie, przenieść lub usunąć pliki programu Visual Studio automatycznie śledzi zmiany i stale aktualizuje jego indeksu funkcji IntelliSense. Nie są załadowane pliki sln ani vcxproj; w razie konieczności można określić zadania niestandardowe, a także parametry kompilowania i uruchamiania za poorednictwem prostych plików JSON. Ta funkcja umożliwia integrację dowolnego systemu kompilacji innej firmy z Visual Studio. Aby uzyskać ogólne informacje na temat otwartego folderu, zobacz [Programowanie kodu w programie Visual Studio bez projektów i rozwiązań](/visualstudio/ide/develop-code-in-visual-studio-without-projects-or-solutions).
+W programie Visual Studio 2017 i nowszych funkcja "Otwórz folder" umożliwia otworzenie folderu plików źródłowych i natychmiastowe rozpoczęcie kodowania z obsługą funkcji IntelliSense, przeglądanie, Refaktoryzacja, debugowanie i tak dalej. Podczas edytowania, tworzenia, przenoszenia lub usuwania plików program Visual Studio automatycznie śledzi zmiany i ciągle aktualizuje swój indeks IntelliSense. Nie są załadowane pliki sln ani vcxproj; w razie konieczności można określić zadania niestandardowe, a także parametry kompilowania i uruchamiania za poorednictwem prostych plików JSON. Ta funkcja umożliwia integrację dowolnego systemu kompilacji innej firmy z Visual Studio. Aby uzyskać ogólne informacje na temat otwartego folderu, zobacz [Programowanie kodu w programie Visual Studio bez projektów i rozwiązań](/visualstudio/ide/develop-code-in-visual-studio-without-projects-or-solutions).
 
 ## <a name="cmake-and-qt"></a>CMake i QT
 
@@ -29,13 +29,13 @@ CMake jest zintegrowany w środowisku IDE programu Visual Studio jako składnik 
 
 ## <a name="other-build-systems"></a>Inne systemy kompilacji
 
-Aby użyć środowiska IDE programu Visual Studio z systemem kompilacji lub zestawem narzędzi kompilatora, który nie jest bezpośrednio obsługiwany z menu głównego wybierz **plik | Otwórz |** Lub naciśnij **klawisze Ctrl + Shift + Alt + O**. Przejdź do folderu, który zawiera pliki kodu źródłowego. Aby skompilować projekt, skonfigurować funkcję IntelliSense i ustawić parametry debugowania, należy dodać trzy pliki JSON:
+Aby użyć środowiska IDE programu Visual Studio z systemem kompilacji lub zestawem narzędzi kompilatora, który nie jest bezpośrednio obsługiwany z menu głównego wybierz **plik | Otwórz | Lub naciśnij** **klawisze Ctrl + Shift + Alt + O**. Przejdź do folderu, który zawiera pliki kodu źródłowego. Aby skompilować projekt, skonfigurować funkcję IntelliSense i ustawić parametry debugowania, należy dodać trzy pliki JSON:
 
 | | |
 |-|-|
-|CppProperties.json|Określ informacje o konfiguracji niestandardowej do przeglądania. Utwórz ten plik, w razie konieczności, w folderze głównym projektu. (Nieużywane w projektach CMake).|
-|tasks.vs.json|Określ niestandardowe polecenia kompilacji. Udostępnianych za pośrednictwem **Eksploratora rozwiązań** element menu kontekstowego **skonfigurować zadania**.|
-|launch.vs.json|Określ argumenty wiersza polecenia dla debugera. Udostępnianych za pośrednictwem **Eksploratora rozwiązań** element menu kontekstowego **ustawienia debugowania i uruchamiania**.|
+|Pliku cppproperties. JSON|Określ informacje o konfiguracji niestandardowej do przeglądania. Utwórz ten plik, w razie konieczności, w folderze głównym projektu. (Nieużywane w projektach CMake).|
+|Tasks. vs. JSON|Określ niestandardowe polecenia kompilacji. Dostępne za pośrednictwem **elementu menu**kontekstowego **Eksplorator rozwiązań** .|
+|Uruchom plik. vs. JSON|Określ argumenty wiersza polecenia dla debugera. Dostępne za pośrednictwem elementu menu kontekstowego **Eksplorator rozwiązań** **Ustawienia debugowania i uruchamiania**.|
 
 ## <a name="configure-code-navigation-with-cpppropertiesjson"></a>Skonfiguruj nawigację po kodzie za pomocą pliku pliku cppproperties. JSON
 
@@ -73,7 +73,10 @@ Jeśli na przykład wybierzesz opcję **x64-Debug**, program Visual Studio tworz
 }
 ```
 
-Ta konfiguracja "dziedziczy" zmienne środowiskowe wiersz polecenia dla deweloperów programu Visual Studio [x64](building-on-the-command-line.md). Jedna z tych zmiennych jest `INCLUDE` i można do niej odwołać się w tym miejscu `${env.INCLUDE}` za pomocą makra. `includePath` Właściwość nakazuje programowi Visual Studio wyszukiwanie wszystkich źródeł wymaganych przez funkcję IntelliSense. W tym przypadku jest to komunikat "Znajdź wszystkie katalogi określone przez zmienną środowiskową INCLUDE, a także wszystkie katalogi w bieżącym drzewie folderów roboczych". `name` Właściwość to nazwa, która będzie wyświetlana na liście rozwijanej i może być dowolna. `defines` Właściwość zawiera wskazówki do funkcji IntelliSense, gdy napotykają bloki kompilacji warunkowej. `intelliSenseMode` Właściwość zawiera kilka dodatkowych wskazówek opartych na typie kompilatora. Dostępne są różne opcje MSVC, w zatoce i Clang.
+Ta konfiguracja "dziedziczy" zmienne środowiskowe wiersz polecenia dla deweloperów programu Visual Studio [x64](building-on-the-command-line.md). Jedna z tych zmiennych jest `INCLUDE` i można do niej odwołać się w tym miejscu przy użyciu makra `${env.INCLUDE}`. Właściwość `includePath` nakazuje programowi Visual Studio wyszukanie wszystkich źródeł wymaganych przez funkcję IntelliSense. W tym przypadku jest to komunikat "Znajdź wszystkie katalogi określone przez zmienną środowiskową INCLUDE, a także wszystkie katalogi w bieżącym drzewie folderów roboczych". Właściwość `name` to nazwa, która będzie wyświetlana na liście rozwijanej i może być dowolna. Właściwość `defines` udostępnia podpowiedzi do funkcji IntelliSense, gdy napotykają one instrukcje kompilacji warunkowej. Właściwość `intelliSenseMode` zawiera dodatkowe wskazówki na podstawie typu kompilatora. Dostępne są różne opcje MSVC, w zatoce i Clang.
+
+> [!NOTE]
+> Jeśli program Visual Studio prawdopodobnie zignoruje ustawienia w *pliku cppproperties. JSON*, spróbuj dodać wyjątek do pliku *. gitignore* w następujący sposób: `!/CppProperties.json`.
 
 ## <a name="example-configuration-for-gcc"></a>Przykładowa konfiguracja dla programu w zatoce
 
@@ -107,12 +110,12 @@ Jeśli używasz kompilatora innego niż Microsoft C++, musisz utworzyć niestand
 }
 ```
 
-Zwróć uwagę `environments` na blok. Definiuje właściwości, które zachowują się jak zmienne środowiskowe i są dostępne nie tylko w pliku *pliku cppproperties. JSON* , ale również w innych plikach konfiguracji *Task. vs. JSON* i *uruchamiania. vs. JSON*. Konfiguracja dziedziczy środowisko i używa jego `INCLUDE` właściwości do określenia wartości dla `includePath`. `Mingw64` `mingw_w64` W razie potrzeby możesz dodać inne ścieżki do tej właściwości tablicy.
+Zwróć uwagę na blok `environments`. Definiuje właściwości, które zachowują się jak zmienne środowiskowe i są dostępne nie tylko w pliku *pliku cppproperties. JSON* , ale również w innych plikach konfiguracji *Task. vs. JSON* i *uruchamiania. vs. JSON*. @No__t_0 konfiguracja dziedziczy środowisko `mingw_w64` i używa jego właściwości `INCLUDE`, aby określić wartość dla `includePath`. W razie potrzeby możesz dodać inne ścieżki do tej właściwości tablicy.
 
 > [!WARNING]
-> Obecnie występuje znany problem, w którym `INCLUDE` wartość określona w `environments` `includePath` nie jest prawidłowo przenoszona do właściwości. Aby obejść ten problem, można dodać pełny literał obejmujący ścieżki do `includePath` tablicy.
+> Obecnie występuje znany problem, w którym wartość `INCLUDE` określona w `environments` nie jest prawidłowo przenoszona do właściwości `includePath`. Aby obejść ten problem, dodając pełny literał, Dołącz ścieżki do tablicy `includePath`.
 
-`intelliSenseMode` Właściwość ma ustawioną wartość odpowiednią dla programu w zatoce. Aby uzyskać więcej informacji na temat wszystkich tych właściwości, zobacz [pliku cppproperties Schema Reference](cppproperties-schema-reference.md).
+Właściwość `intelliSenseMode` ma ustawioną wartość odpowiednią dla programu w zatoce. Aby uzyskać więcej informacji na temat wszystkich tych właściwości, zobacz [pliku cppproperties Schema Reference](cppproperties-schema-reference.md).
 
 Gdy wszystko działa prawidłowo, po umieszczeniu wskaźnika myszy na typie zobaczysz funkcję IntelliSense z nagłówków w witrynie współpracy w zatoce:
 
@@ -120,15 +123,15 @@ Gdy wszystko działa prawidłowo, po umieszczeniu wskaźnika myszy na typie zoba
 
 ## <a name="enable-intellisense-diagnostics"></a>Włączanie diagnostyki IntelliSense
 
-Jeśli nie widzisz oczekiwanej technologii IntelliSense, możesz rozwiązać problemy, przechodząc do**opcji** >  **Narzędzia** > **Edytor** > tekstu > **C/C++** **Advanced** i ustawienie **Włącz rejestrowanie** na **wartość true**. Aby rozpocząć pracę z programem, spróbuj ustawić **poziom rejestrowania** na 5 i **filtry rejestrowania** na 8.
+Jeśli nie widzisz oczekiwanej technologii IntelliSense, możesz rozwiązać problemy, przechodząc do opcji **Narzędzia**  > **Opcje**  > **edytorze tekstów**  > **C/C++**   > **Zaawansowane** i ustawienie **Włącz rejestrowanie** na **wartość true**. Aby rozpocząć pracę z programem, spróbuj ustawić **poziom rejestrowania** na 5 i **filtry rejestrowania** na 8.
 
 ![Rejestrowanie informacji diagnostycznych](media/diagnostic-logging.png)
 
-Dane wyjściowe są przekazywane do **okno dane wyjściowe** i są widoczne po wybraniu polecenia **Pokaż dane wyjściowe z: C++ Dziennik*wizualny. Dane wyjściowe zawierają między innymi listę rzeczywistych ścieżek dołączania, które próbuje użyć IntelliSense. Jeśli ścieżki nie pasują do tych w pliku *pliku cppproperties. JSON*, spróbuj zamknąć ten folder i usunąć podfolder *. vs* zawierający buforowane dane przeglądania.
+Dane wyjściowe są przekazywane do **okno dane wyjściowe** i są widoczne po wybraniu polecenia **Pokaż dane wyjściowe z: C++ dziennik wizualny*. Dane wyjściowe zawierają między innymi listę rzeczywistych ścieżek dołączania, które próbuje użyć IntelliSense. Jeśli ścieżki nie pasują do tych w pliku *pliku cppproperties. JSON*, spróbuj zamknąć ten folder i usunąć podfolder *. vs* zawierający buforowane dane przeglądania.
 
 ### <a name="define-build-tasks-with-tasksvsjson"></a>Definiowanie zadań kompilacji przy użyciu zadań. vs. JSON
 
-Można zautomatyzować skrypty kompilacji lub innych zewnętrznych operacji na plikach, znajdującym się w bieżącym obszarze roboczym, uruchamiając je jako zadania bezpośrednio w środowisku IDE. Można skonfigurować nowe zadanie, kliknij prawym przyciskiem myszy pliku lub folderu i wybierając **skonfigurować zadania**.
+Możesz zautomatyzować skrypty kompilacji lub wszystkie inne operacje zewnętrzne na plikach znajdujących się w bieżącym obszarze roboczym, uruchamiając je jako zadania bezpośrednio w środowisku IDE. Nowe zadanie można skonfigurować, klikając prawym przyciskiem myszy plik lub folder, a następnie wybierając pozycję **Konfiguruj zadania**.
 
 ![Otwórz folder konfiguracja zadań](media/configure-tasks.png)
 
@@ -157,7 +160,7 @@ Spowoduje to utworzenie (lub otwarcie) pliku *Tasks. vs. JSON* w folderze. vs, k
 
 Plik JSON jest umieszczany w podfolderze *. vs* , który można zobaczyć po kliknięciu przycisku **Pokaż wszystkie pliki** w górnej części **Eksplorator rozwiązań**. To zadanie można uruchomić, klikając prawym przyciskiem myszy węzeł główny w **Eksplorator rozwiązań** i wybierając polecenie **Kompiluj Hello**. Po zakończeniu zadania w **Eksplorator rozwiązań**powinien zostać wyświetlony nowy plik *Hello. exe* .
 
-Można zdefiniować wiele rodzajów zadań. W poniższym przykładzie przedstawiono *plik Tasks. vs. JSON* , który definiuje pojedyncze zadanie. `taskLabel`definiuje nazwę, która pojawia się w menu kontekstowym. `appliesTo`Określa pliki, na których można wykonać polecenie. Właściwość odwołuje się do zmiennej środowiskowej wywołana, która identyfikuje ścieżkę konsoli programu (*cmd. exe* w systemie Windows). `command` Można także odwoływać się do zmiennych środowiskowych, które są zadeklarowane w pliku cppproperties. JSON lub pliku cmakesettings. JSON. `args` Właściwość określa wiersz polecenia, który ma zostać wywołany. `${file}` — Makro pobiera wybranego pliku w **Eksploratora rozwiązań**. W poniższym przykładzie zostanie wyświetlona nazwa pliku aktualnie wybranego pliku CPP.
+Można zdefiniować wiele rodzajów zadań. W poniższym przykładzie przedstawiono *plik Tasks. vs. JSON* , który definiuje pojedyncze zadanie. `taskLabel` definiuje nazwę, która pojawia się w menu kontekstowym. `appliesTo` definiuje pliki, na których można wykonać polecenie. Właściwość `command` odwołuje się do zmiennej środowiskowej wywołana, która identyfikuje ścieżkę konsoli programu (*cmd. exe* w systemie Windows). Można także odwoływać się do zmiennych środowiskowych, które są zadeklarowane w pliku cppproperties. JSON lub pliku cmakesettings. JSON. Właściwość `args` określa wiersz polecenia, który ma zostać wywołany. Makro `${file}` pobiera wybrany plik z **Eksplorator rozwiązań**. W poniższym przykładzie zostanie wyświetlona nazwa pliku aktualnie wybranego pliku CPP.
 
 ```json
 {
@@ -180,7 +183,7 @@ Aby uzyskać więcej informacji, zobacz [Dokumentacja schematu Tasks. vs. JSON](
 
 ### <a name="configure-debugging-parameters-with-launchvsjson"></a>Konfigurowanie parametrów debugowania za pomocą pliku Launch. vs. JSON
 
-Aby dostosować argumenty wiersza polecenia programu i instrukcje debugowania, kliknij prawym przyciskiem myszy plik wykonywalny w **Eksplorator rozwiązań** a następnie wybierz pozycję **Ustawienia debugowania i uruchamiania**. Spowoduje to otwarcie istniejącego pliku *uruchamiania. vs. JSON* lub jeśli nie istnieje, spowoduje utworzenie nowego pliku z zestawem minimalnych ustawień uruchamiania. Po pierwsze użytkownik otrzymuje wybór rodzaju sesji debugowania, która ma zostać skonfigurowana. Do debugowania projektu MinGw-W64 wybieramy **CC++ /Launch dla MinGGW/Cygwin (GDB)** . Spowoduje to utworzenie konfiguracji uruchamiania dla programu *GDB. exe* z niektórymi przewidzianymi próbami dotyczącymi wartości domyślnych. Jedną z tych wartości domyślnych jest `MINGW_PREFIX`. Można zastąpić ścieżkę literału (jak pokazano poniżej) lub zdefiniować właściwość w pliku `MINGW_PREFIX` *pliku cppproperties. JSON*:
+Aby dostosować argumenty wiersza polecenia programu i instrukcje debugowania, kliknij prawym przyciskiem myszy plik wykonywalny w **Eksplorator rozwiązań** a następnie wybierz pozycję **Ustawienia debugowania i uruchamiania**. Spowoduje to otwarcie istniejącego pliku *uruchamiania. vs. JSON* lub jeśli nie istnieje, spowoduje utworzenie nowego pliku z zestawem minimalnych ustawień uruchamiania. Po pierwsze użytkownik otrzymuje wybór rodzaju sesji debugowania, która ma zostać skonfigurowana. Do debugowania projektu MinGw-W64 wybieramy **CC++ /Launch dla MinGGW/Cygwin (GDB)** . Spowoduje to utworzenie konfiguracji uruchamiania dla programu *GDB. exe* z niektórymi przewidzianymi próbami dotyczącymi wartości domyślnych. Jedną z tych wartości domyślnych jest `MINGW_PREFIX`. Można zastąpić ścieżkę literału (jak pokazano poniżej) lub można zdefiniować Właściwość `MINGW_PREFIX` w *pliku cppproperties. JSON*:
 
 ```json
 {
@@ -212,7 +215,7 @@ Aby uzyskać więcej informacji, zobacz informacje o [schemacie Launch. vs. JSON
 
 ## <a name="launching-other-executables"></a>Uruchamianie innych plików wykonywalnych
 
-Można zdefiniować ustawienia uruchamiania dla dowolnego pliku wykonywalnego na komputerze. Poniższy przykład uruchamia *7za* i określa dodatkowe argumenty, dodając je do `args` tablicy JSON:
+Można zdefiniować ustawienia uruchamiania dla dowolnego pliku wykonywalnego na komputerze. Poniższy przykład uruchamia *7za* i określa dodatkowe argumenty, dodając je do tablicy JSON `args`:
 
 ```json
 {
