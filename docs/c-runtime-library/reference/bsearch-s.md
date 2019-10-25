@@ -1,6 +1,6 @@
 ---
 title: bsearch_s
-ms.date: 11/04/2016
+ms.date: 10/22/2019
 api_name:
 - bsearch_s
 api_location:
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: 9bcd18add216bb0fc2f203183d82e37ede65dba5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fc86576dbbe73f63da6bf0e28e7166ef7c552e55
+ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943484"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72811147"
 ---
 # <a name="bsearch_s"></a>bsearch_s
 
-Wykonuje binarne wyszukiwanie posortowanej tablicy. Jest to wersja programu [bsearch](bsearch.md) z ulepszeniami zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Wykonuje binarne wyszukiwanie posortowanej tablicy. Ta funkcja jest wersją programu [bsearch](bsearch.md) z ulepszonymi zabezpieczeniami, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -52,39 +52,39 @@ void *bsearch_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz*<br/>
-Obiekt do wyszukania.
+*klucz* \
+Wskaźnik na klucz, który ma zostać wyszukany.
 
-*base*<br/>
+\ *podstawowe*
 Wskaźnik do podstawy wyszukiwania danych.
 
-*Liczba*<br/>
+*liczba*\
 Liczba elementów.
 
-*width*<br/>
+*szerokość*\
 Szerokość elementów.
 
-*porównaniu*<br/>
+*porównaj*\
 Funkcja wywołania zwrotnego, która porównuje dwa elementy. Pierwszy argument jest wskaźnikiem *kontekstu* . Drugi argument jest wskaźnikiem do *klucza* do wyszukania. Trzeci argument jest wskaźnikiem do elementu tablicy, który będzie porównywany z *kluczem*.
 
-*Context*<br/>
+\ *kontekstu*
 Wskaźnik do obiektu, do którego można uzyskać dostęp w funkcji porównania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
 **bsearch_s** zwraca wskaźnik do wystąpienia *klucza* w tablicy wskazywanym przez *bazę*. Jeśli nie odnaleziono *klucza* , funkcja zwraca **wartość null**. Jeśli tablica nie znajduje się w kolejności sortowania rosnącej lub zawiera zduplikowane rekordy z identycznymi kluczami, wynik jest nieprzewidywalny.
 
-Jeśli do funkcji są przenoszone nieprawidłowe parametry, procedura obsługi nieprawidłowego parametru jest wywoływana, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcja zwraca **wartość null**. Aby uzyskać więcej informacji, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Jeśli do funkcji są przesyłane nieprawidłowe parametry, wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcja zwraca **wartość null**. Aby uzyskać więcej informacji, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ### <a name="error-conditions"></a>Warunki błędów
 
 |||||||
 |-|-|-|-|-|-|
-|*Klucz*|*base*|*porównaniu*|*Liczba*|*width*|**errno**|
+|*głównych*|*base*|*porównaniu*|*Liczba*|*Szerokość*|**errno**|
 |**NULL**|Ile|Ile|Ile|Ile|**EINVAL**|
-|Ile|**NULL**|Ile|!= 0|Ile|**EINVAL**|
+|Ile|**NULL**|Ile|! = 0|Ile|**EINVAL**|
 |Ile|Ile|Ile|Ile|= 0|**EINVAL**|
-|Ile|Ile|**NULL**|Wskazani|Ile|**EINVAL**|
+|Ile|Ile|**NULL**|wskazani|Ile|**EINVAL**|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -194,7 +194,7 @@ cat found at 002F0F04
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wyszukiwanie i sortowanie](../../c-runtime-library/searching-and-sorting.md)<br/>
-[_lfind](lfind.md)<br/>
-[_lsearch](lsearch.md)<br/>
-[qsort](qsort.md)<br/>
+[Wyszukiwanie i sortowanie](../../c-runtime-library/searching-and-sorting.md)\
+[_lfind](lfind.md)\
+[_lsearch](lsearch.md)\
+[qsort](qsort.md)

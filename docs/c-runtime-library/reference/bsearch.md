@@ -1,6 +1,6 @@
 ---
 title: bsearch
-ms.date: 11/04/2016
+ms.date: 10/22/2019
 api_name:
 - bsearch
 api_location:
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-ms.openlocfilehash: 9e44e85d1c6d73a68da2edd099cdeb6156f9759d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6b476cbdd5e9c072cae03ad1091a96e2d0b7422b
+ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939437"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72811089"
 ---
 # <a name="bsearch"></a>bsearch
 
@@ -51,19 +51,19 @@ void *bsearch(
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz*<br/>
-Obiekt do wyszukania.
+*klucz* \
+Wskaźnik na klucz, który ma zostać wyszukany.
 
-*base*<br/>
+\ *podstawowe*
 Wskaźnik do podstawy wyszukiwania danych.
 
-*Liczba*<br/>
+*liczba*\
 Liczba elementów.
 
-*width*<br/>
+*szerokość*\
 Szerokość elementów.
 
-*porównaniu*<br/>
+*porównaj*\
 Funkcja wywołania zwrotnego, która porównuje dwa elementy. Pierwszy jest wskaźnikiem do klucza do wyszukania, a drugi jest wskaźnikiem do elementu tablicy, który będzie porównywany z kluczem.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -72,7 +72,7 @@ Funkcja wywołania zwrotnego, która porównuje dwa elementy. Pierwszy jest wska
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **bsearch** wykonuje binarne wyszukiwanie posortowanej tablicy elementów *liczbowych* , a wszystkie bajty o *szerokości* . Wartość *podstawowa* jest wskaźnikiem do podstawy tablicy, która ma być przeszukiwana, a wartość *klucza* jest poszukiwana. Parametr *Compare* jest wskaźnikiem do procedury dostarczonej przez użytkownika, która porównuje żądany klucz z elementem Array i zwraca jedną z następujących wartości określających ich relację:
+Funkcja **bsearch** wykonuje binarne wyszukiwanie posortowanej tablicy elementów *liczbowych* , a wszystkie bajty o *szerokości* . Wartość *podstawowa* jest wskaźnikiem do podstawy tablicy, która ma być przeszukiwana, a wartość *klucza* jest poszukiwana. Parametr *Compare* jest wskaźnikiem do procedury dostarczonej przez użytkownika, która porównuje żądany klucz z elementem tablicy. Zwraca jedną z następujących wartości, które określają ich relację:
 
 |Wartość zwrócona przez procedurę *porównania*|Opis|
 |-----------------------------------------|-----------------|
@@ -80,7 +80,7 @@ Funkcja **bsearch** wykonuje binarne wyszukiwanie posortowanej tablicy elementó
 |0|Klucz jest równy elementowi tablicy.|
 |> 0|Klucz jest większy niż element tablicy.|
 
-Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *Compare*, *Key* lub *Number* ma **wartość null**lub jeśli *Base* ma **wartość null** , a *Liczba* jest różna od zera lub jeśli *Szerokość* wynosi zero, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametrów ](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na `EINVAL` , a funkcja zwraca **wartość null**.
+Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *Compare*, *Key* lub *Number* ma **wartość null**lub jeśli *Base* ma **wartość null** , a *Liczba* jest różna od zera lub jeśli *Szerokość* jest równa zero, funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [parametrze Sprawdzanie poprawności](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiony na `EINVAL` i funkcja zwraca **wartość null**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -137,7 +137,7 @@ cat found at 002F0F04
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wyszukiwanie i sortowanie](../../c-runtime-library/searching-and-sorting.md)<br/>
-[_lfind](lfind.md)<br/>
-[_lsearch](lsearch.md)<br/>
-[qsort](qsort.md)<br/>
+[Wyszukiwanie i sortowanie](../../c-runtime-library/searching-and-sorting.md)\
+[_lfind](lfind.md)\
+[_lsearch](lsearch.md)\
+[qsort](qsort.md)
