@@ -79,12 +79,12 @@ helpviewer_keywords:
 - std::forward_list::splice_after
 - std::forward_list::swap
 - std::forward_list::unique
-ms.openlocfilehash: f1015e53e137b9001bd90233c281345d474bc03f
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: e13242aa41cc99cdd01a6f16b607ef568195d659
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689702"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890203"
 ---
 # <a name="forward_list-class"></a>forward_list — Klasa
 
@@ -103,7 +103,7 @@ class forward_list
 Typ * \
 Typ danych elementu, który ma być przechowywany w forward_list.
 
-@No__t_1 *alokatora*
+\ *alokatora*
 Przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji forward_list i dealokacji pamięci. Ten parametr jest opcjonalny. Wartość domyślna to Alokator < `Type` >.
 
 ## <a name="remarks"></a>Uwagi
@@ -223,7 +223,7 @@ Wartość, aby przypisać każdy element.
 *Typ* \
 Typ wartości.
 
-@No__t_1 *IList*
+\ *IList*
 Initializer_list do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
@@ -533,7 +533,7 @@ Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowa
 *Ostatni* \
 Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.
 
-@No__t_1 *IList*
+\ *IList*
 Initializer_list do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
@@ -607,7 +607,7 @@ Koniec zakresu wstawiania.
 *Val* \
 Element dodany do listy do przodu.
 
-@No__t_1 *IList*
+\ *IList*
 Initializer_list do wstawienia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -622,7 +622,7 @@ Pierwsza funkcja członkowska wstawia element, który ma wartość *Val* i zwrac
 
 Druga funkcja członkowska wstawia powtarzające się elementy *Count* wartości *Val*.
 
-Jeśli `InputIterator` jest typu Integer, trzecia funkcja członkowska zachowuje się tak samo jak `insert(it, (size_type)First, (Type)Last)`. W przeciwnym razie wstawia `[First, Last)` sekwencji, która nie może nakładać się na początkową sekwencję.
+Jeśli `InputIterator` jest typu Integer, trzecia funkcja członkowska zachowuje się tak samo jak `insert(it, (size_type)First, (Type)Last)`. W przeciwnym razie wstawia `[First, Last)`sekwencji, która nie może nakładać się na początkową sekwencję.
 
 Czwarta funkcja członkowska wstawia sekwencję, która jest określona przez obiekt klasy `initializer_list<Type>`.
 
@@ -678,7 +678,7 @@ Obiekt funkcji Compare, który jest używany do sortowania elementów.
 
 ### <a name="remarks"></a>Uwagi
 
-`forward_list::merge` usuwa elementy z `right` `forward_list` i wstawia je do tego `forward_list`. Obie sekwencje muszą być uporządkowane według tego samego predykatu, co opisano poniżej. Połączona sekwencja jest również uporządkowana przez ten obiekt funkcji porównywania.
+`forward_list::merge` usuwa elementy z `right``forward_list` i wstawia je do tego `forward_list`. Obie sekwencje muszą być uporządkowane według tego samego predykatu, co opisano poniżej. Połączona sekwencja jest również uporządkowana przez ten obiekt funkcji porównywania.
 
 W przypadku iteratorów `Pi` i `Pj` wyznaczania elementów w pozycji `i` i `j` Pierwsza funkcja członkowska nakłada `!(*Pj < *Pi)` zamówienia w przypadku `i < j`. (Elementy są sortowane w kolejności `ascending`). Druga funkcja członkowska nakłada kolejność `! comp(*Pj, *Pi)` za każdym razem, gdy `i < j`.
 
@@ -701,7 +701,7 @@ forward_list& operator=(forward_list&& right);
 *prawa* \
 Lista do przodu jest kopiowana na listę do przodu.
 
-@No__t_1 *IList*
+\ *IList*
 Lista inicjalizatora w nawiasach klamrowych, która zachowuje się podobnie jak sekwencja elementów typu `Type`.
 
 ### <a name="remarks"></a>Uwagi
@@ -810,7 +810,7 @@ void resize(size_type _Newsize, const Type& val);
 
 ### <a name="parameters"></a>Parametry
 
-*_Newsize* \
+*_Newsize*\
 Liczba elementów na liście o zmienionym rozmiarze.
 
 *val* \
@@ -895,10 +895,10 @@ void splice_after(
 *Gdzie* \
 Pozycja w miejscu docelowym forward_list, która ma zostać wstawiona.
 
-@No__t_1 *źródłowa*
+\ *źródłowa*
 Forward_list źródłowa, która ma zostać wstawiona do docelowego forward_list.
 
-@No__t_1 *ITER*
+\ *ITER*
 Element, który ma zostać wstawiony z forward_list źródłowego.
 
 *Pierwszy* \
@@ -1044,4 +1044,4 @@ typedef typename Allocator::value_type value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla parametru szablonu _ `Ty`.
+Typ jest synonimem dla parametru szablonu `Type`.

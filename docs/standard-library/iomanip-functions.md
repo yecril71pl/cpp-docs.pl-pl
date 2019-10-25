@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 09bb043c40774b102dee023773349223a2fbb4a9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 995ad9ae21d7f00a74a912436d599dfead2c9ebb
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449216"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890145"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;funkcje&gt; iomanip
 
@@ -48,22 +48,22 @@ Wyodrębnia wartość pieniężną ze strumienia przy użyciu żądanego formatu
 
 ```cpp
 template <class Money>
-T7 get_money(Money& _Amount, bool _Intl);
+T7 get_money(Money& amount, bool use_intl);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Amount*\
+\ *Kwota*
 Wyodrębniona wartość pieniężna.
 
-*_Intl*\
+*use_intl*\
 W przypadku **wartości true**należy użyć formatu międzynarodowego. Wartość domyślna to **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Manipulator `str`zwraca obiekt, który po wyodrębnieniu ze strumienia zachowuje się `get` `formatted input function` jako wywołujący funkcję członkowską dla aspektu `money_get` ustawień regionalnych skojarzonych z `str`, przy użyciu *_Intl* do wskaż format międzynarodowy. Jeśli to się powiedzie, magazyny wywołań w *_Amount* wyodrębnioną wartość pieniężną. Manipulator następnie zwraca wartość `str`.
+Manipulator zwraca obiekt, który po wyodrębnieniu z `str`strumienia zachowuje jako `formatted input function`, który wywołuje funkcję członkowską `get` zestawu reguł ustawień regionalnych `money_get` skojarzone z `str`, przy użyciu *use_intl* do wskazania formatu międzynarodowego . Jeśli to się powiedzie, magazyny wywołań mają *kwotę* wyodrębnioną wartość pieniężną. Manipulator następnie zwraca `str`.
 
-`Money`musi być typu `long double` lub wystąpienia `basic_string` z tego samego elementu i parametrów cech co `str`.
+`Money` musi być typu `long double` lub wystąpienia `basic_string` z tym samym elementem i parametrami cech co `str`.
 
 ## <a name="iomanip_get_time"></a>get_time
 
@@ -71,20 +71,20 @@ Wyodrębnia wartość czasu ze strumienia w żądanym formacie. Zwraca wartość
 
 ```cpp
 template <class Elem>
-T10 put_time(struct tm *_Tptr, const Elem *_Fmt);
+T10 put_time(struct tm *time_ptr, const Elem *time_format);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Tptr*\
+*time_ptr*\
 Godzina w postaci struktury czasowej.
 
-*_Fmt*\
+*time_format*\
 Żądany format do użycia w celu uzyskania wartości czasu.
 
 ### <a name="remarks"></a>Uwagi
 
-Manipulator zwraca obiekt, który `str`po wyodrębnieniu ze strumienia zachowuje się `formatted input function` jako wywołujący funkcję `get` członkowską dla zestawu reguł `time_get` ustawień regionalnych skojarzonych z `str`, przy użyciu `tptr` do wskaż strukturę czasową i `fmt` wskaż początek ciągu formatu zakończony wartością null. Jeśli to się powiedzie, w strukturze czasu są przechowywane wartości skojarzone z dowolnym wyodrębnionym polem czasu. Manipulator następnie zwraca wartość `str`.
+Manipulator zwraca obiekt, który po wyodrębnieniu z `str`strumienia zachowuje się jako `formatted input function`, który wywołuje funkcję członkowską `get` zestawu reguł ustawień regionalnych `time_get` skojarzone z `str`, przy użyciu `tptr` do wskazywania struktury czasu i `fmt`, aby wskazać początek ciągu formatu zakończony wartością null. Jeśli to się powiedzie, w strukturze czasu są przechowywane wartości skojarzone z dowolnym wyodrębnionym polem czasu. Manipulator następnie zwraca `str`.
 
 ## <a name="iomanip_put_money"></a>put_money
 
@@ -92,26 +92,26 @@ Wstawia kwotę pieniężną przy użyciu odpowiedniego formatu do strumienia.
 
 ```cpp
 template <class Money>
-T8 put_money(const Money& _Amount, bool _Intl);
+T8 put_money(const Money& amount, bool use_intl);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Amount*\
+\ *Kwota*
 Kwota pieniężna do wstawienia do strumienia.
 
-*_Intl*\
+*use_intl*\
 Ustaw **wartość true** , jeśli Manipulator powinien używać formatu międzynarodowego, **Fałsz** , jeśli nie powinien.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca `str`wartość.
+Zwraca `str`.
 
 ### <a name="remarks"></a>Uwagi
 
-Manipulator zwraca obiekt, który po wstawieniu do `str`strumienia zachowuje się jako sformatowana funkcja wyjściowa, która wywołuje funkcję `put` członkowską dla zestawu reguł `money_put` ustawień regionalnych skojarzonych z `str`. Jeśli to się powiedzie, `amount` wywołanie wstawia odpowiednio sformatowane,` to indicate international format and `używając * _Intl str.`, as the fill element. The manipulator then returns `Fill () str '.
+Manipulator zwraca obiekt, który po wstawieniu do strumienia `str`zachowuje się jako sformatowana funkcja wyjściowa, która wywołuje funkcję członkowską `put` dla zestawu reguł ustawień regionalnych `money_put` skojarzone z `str`. Jeśli to się powiedzie, wywołanie wstawia `amount` odpowiednio sformatowane, przy użyciu *use_intl* , aby wskazać międzynarodowy format i `str.fill()`, jako element Fill. Manipulator następnie zwraca `str`.
 
-`Money`musi być typu `long double` lub wystąpienia `basic_string` z tego samego elementu i parametrów cech co `str`.
+`Money` musi być typu `long double` lub wystąpienia `basic_string` z tym samym elementem i parametrami cech co `str`.
 
 ## <a name="iomanip_put_time"></a>put_time
 
@@ -119,20 +119,20 @@ Zapisuje wartość czasu ze struktury czasu do strumienia przy użyciu określon
 
 ```cpp
 template <class Elem>
-T10 put_time(struct tm* _Tptr, const Elem* _Fmt);
+T10 put_time(struct tm* time_ptr, const Elem* time_format);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Tptr*\
+*time_ptr*\
 Wartość czasu do zapisu w strumieniu określona w strukturze czasu.
 
-*_Fmt*\
+*time_format*\
 Żądany format zapisu wartości czasu.
 
 ### <a name="remarks"></a>Uwagi
 
-Manipulator zwraca obiekt, który po wstawieniu do strumienia `str`zachowuje się `formatted output function`jako. Funkcja Output wywołuje funkcję `put` członkowską dla zestawu reguł `time_put` ustawień regionalnych skojarzonych z `str`. Funkcja Output używa *_Tptr* , aby wskazać strukturę czasową i *_Fmt* do wskazania początku ciągu formatu zakończony wartością null. Jeśli to się powiedzie, wywołanie wstawia tekst literału z ciągu formatu i przekonwertowane wartości z struktury czasowej. Manipulator następnie zwraca wartość `str`.
+Manipulator zwraca obiekt, który po wstawieniu do strumienia `str`zachowuje się jako `formatted output function`. Funkcja Output wywołuje funkcję członkowską `put` dla zestawu reguł ustawień regionalnych `time_put` skojarzonych z `str`. Funkcja Output używa *time_ptr* , aby wskazać strukturę czasową i *time_format* do wskazania początku ciągu formatu zakończony wartością null. Jeśli to się powiedzie, wywołanie wstawia tekst literału z ciągu formatu i przekonwertowane wartości z struktury czasowej. Manipulator następnie zwraca `str`.
 
 ## <a name="quoted"></a>znak
 
@@ -147,13 +147,13 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
+*str* \
 Std:: String, char\*, literał ciągu lub nieprzetworzony literał ciągu lub szeroka wersja któregokolwiek z tych (np. std:: wstring, wchar_t\*).
 
-*ogranicznik*\
+\ *ogranicznika*
 Znak określony przez użytkownika lub znak dwubajtowy, który ma być używany jako ogranicznik dla początku i końca ciągu.
 
-*poza*\
+\ *ucieczki*
 Znak określony przez użytkownika lub znak dwubajtowy, który ma być używany jako znak ucieczki dla sekwencji unikowych w ciągu.
 
 ### <a name="remarks"></a>Uwagi
@@ -162,7 +162,7 @@ Zobacz [Używanie operatorów wstawiania i formatu kontrolek](../standard-librar
 
 ### <a name="example"></a>Przykład
 
-Ten przykład pokazuje, jak używać `quoted` w przypadku domyślnego ogranicznika i znaku ucieczki przy użyciu wąskich ciągów. Szerokie ciągi są równie obsługiwane.
+Ten przykład pokazuje, jak używać `quoted` z Domyślnym ogranicznikiem i znakiem ucieczki przy użyciu wąskich ciągów znaków. Szerokie ciągi są równie obsługiwane.
 
 ```cpp
 #include <iostream>
@@ -306,50 +306,50 @@ Press Enter to exit
 Czyści określone flagi.
 
 ```cpp
-T1 resetiosflags(ios_base::fmtflags Mask);
+T1 resetiosflags(ios_base::fmtflags mask);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Bitowa*\
+\ *masek*
 Flagi do wyczyszczenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Manipulator zwraca obiekt, który po wyodrębnieniu z lub wstawieniu do strumienia `str`, wywołuje **str**. [setf](../standard-library/ios-base-class.md#setf) ( `ios_base::` [fmtflags](../standard-library/ios-base-class.md#fmtflags), _ *maska*), a następnie zwraca `str`.
+Manipulator zwraca obiekt, który w przypadku wyodrębnienia z lub wstawienia do `str`strumienia wywołuje `str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)`, mask)`, a następnie zwraca `str`.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [setw](../standard-library/iomanip-functions.md#setw) , aby poznać przykład użycia `resetiosflags`.
+Zobacz [setw](../standard-library/iomanip-functions.md#setw) , aby zapoznać się z przykładem korzystania z `resetiosflags`.
 
 ## <a name="setbase"></a>setbase
 
 Ustaw bazę dla liczb całkowitych.
 
 ```cpp
-T3 setbase(int _Base);
+T3 setbase(int base);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Base*\
+\ *podstawowe*
 Podstawa liczby.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Manipulator zwraca obiekt, który po wyodrębnieniu z lub wstawieniu do strumienia `str`, wywołuje **str**. `setf`( **Mask**, [ios_base:: basefield](../standard-library/ios-base-class.md#fmtflags)), a następnie zwraca `str`. W tym miejscu jest określany w następujący sposób: `mask`
+Manipulator zwraca obiekt, który w przypadku wyodrębnienia z lub wstawienia do `str`strumienia wywołuje `str.setf(mask, `[ios_base:: basefield](../standard-library/ios-base-class.md#fmtflags)`)`, a następnie zwraca `str`. W tym miejscu `mask` jest określany w następujący sposób:
 
-- Jeśli _ *Base* to 8, `mask` to jest `ios_base::` [OCT](../standard-library/ios-functions.md#oct).
+- Jeśli *podstawa* to 8, `mask` jest `ios_base::`[OCT](../standard-library/ios-functions.md#oct).
 
-- Jeśli _ *Base* ma wartość 10, maska jest `ios_base::` [gru](../standard-library/ios-functions.md#dec).
+- Jeśli *Base* ma wartość 10, maska jest `ios_base::`[gru](../standard-library/ios-functions.md#dec).
 
-- Jeśli _ *Base* ma wartość 16, `mask` to `ios_base::`wartość [szesnastkowa](../standard-library/ios-functions.md#hex).
+- Jeśli wartość *bazowa* to 16, `mask` jest `ios_base::`[szesnastkowa](../standard-library/ios-functions.md#hex).
 
-- Jeśli _ *Base* jest dowolną inną wartością, maska jest `ios_base::` [fmtflags](../standard-library/ios-base-class.md#fmtflags)(0).
+- Jeśli *podstawą* jest inna wartość, maska jest `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)`(0)`.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [setw](../standard-library/iomanip-functions.md#setw) , aby poznać przykład użycia `setbase`.
+Zobacz [setw](../standard-library/iomanip-functions.md#setw) , aby zapoznać się z przykładem korzystania z `setbase`.
 
 ## <a name="setfill"></a>setfill
 
@@ -362,37 +362,37 @@ T4 setfill(Elem Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*Ch*\
+*Ch* \
 Znak, który będzie używany do wypełniania spacji w wyświetlaniu wyrównanym do prawej strony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Manipulator szablonu zwraca obiekt, który po wyodrębnieniu z lub wstawieniu do strumienia `str`, wywołuje **str**. [wypełnienie](../standard-library/basic-ios-class.md#fill) (`Ch`), a następnie zwraca `str`. Typ `Elem` musi być taki sam jak typ elementu strumienia `str`.
+Manipulator szablonu zwraca obiekt, który w przypadku wyodrębnienia z lub wstawienia do `str`strumienia wywołuje `str.`[wypełnienia](../standard-library/basic-ios-class.md#fill)`(Ch)`, a następnie zwraca `str`. Typ `Elem` musi być taki sam jak typ elementu `str`strumienia.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [setw](../standard-library/iomanip-functions.md#setw) , aby poznać przykład użycia `setfill`.
+Zobacz [setw](../standard-library/iomanip-functions.md#setw) , aby zapoznać się z przykładem korzystania z `setfill`.
 
 ## <a name="setiosflags"></a>setiosflags
 
 Ustawia określone flagi.
 
 ```cpp
-T2 setiosflags(ios_base::fmtflags Mask);
+T2 setiosflags(ios_base::fmtflags mask);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Bitowa*\
+\ *masek*
 Flagi do ustawienia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Manipulator zwraca obiekt, który po wyodrębnieniu z lub wstawieniu do strumienia `str`, wywołuje **str**. [setf](../standard-library/ios-base-class.md#setf) ( *Maska*_), a następnie zwraca `str`.
+Manipulator zwraca obiekt, który w przypadku wyodrębnienia z lub wstawienia do `str`strumienia wywołuje `str.`[setf](../standard-library/ios-base-class.md#setf)`(mask)`, a następnie zwraca `str`.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [setw](../standard-library/iomanip-functions.md#setw) , aby poznać przykład użycia `setiosflags`.
+Zobacz [setw](../standard-library/iomanip-functions.md#setw) , aby zapoznać się z przykładem korzystania z `setiosflags`.
 
 ## <a name="setprecision"></a>setprecision
 
@@ -409,11 +409,11 @@ Precyzja wartości zmiennoprzecinkowych.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Manipulator zwraca obiekt, który po wyodrębnieniu z lub wstawieniu do strumienia `str`, wywołuje **str**. [precyzja](../standard-library/ios-base-class.md#precision) (`Prec`), a następnie zwraca `str`.
+Manipulator zwraca obiekt, który w przypadku wyodrębnienia z lub wstawienia do `str`strumienia wywołuje `str.`[dokładności](../standard-library/ios-base-class.md#precision)`(Prec)`, a następnie zwraca `str`.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [setw](../standard-library/iomanip-functions.md#setw) , aby poznać przykład użycia `setprecision`.
+Zobacz [setw](../standard-library/iomanip-functions.md#setw) , aby zapoznać się z przykładem korzystania z `setprecision`.
 
 ## <a name="setw"></a>setw
 
@@ -425,12 +425,12 @@ T6 setw(streamsize Wide);
 
 ### <a name="parameters"></a>Parametry
 
-*Szerokooć*\
+*Szerokie*\
 Szerokość pola wyświetlania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Manipulator zwraca obiekt, który po wyodrębnieniu z lub wstawieniu do strumienia `str`, wywołuje **str**. [Szerokość](../standard-library/ios-base-class.md#width) (_ *Szeroki*), a następnie `str`zwraca.
+Manipulator zwraca obiekt, który w przypadku wyodrębnienia z lub wstawienia do `str`strumienia wywołuje `str.`[width](../standard-library/ios-base-class.md#width)`(Wide)`, a następnie zwraca `str`.
 
 ### <a name="remarks"></a>Uwagi
 

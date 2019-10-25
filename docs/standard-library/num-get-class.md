@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::num_get [C++], do_get
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
-ms.openlocfilehash: 5c6fec7002541b519d7cf7d043eed3e5c932bcb9
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: bf6623bb61e7a217fcc18a268a583a7ecea4931d
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689231"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72889996"
 ---
 # <a name="num_get-class"></a>num_get — Klasa
 
@@ -34,7 +34,7 @@ class num_get : public locale::facet;
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *CharType*
+\ *CharType*
 Typ używany w programie do kodowania znaków w ustawieniach regionalnych.
 
 *InputIterator* \
@@ -90,78 +90,78 @@ Funkcja wirtualna wywoływana w celu wyodrębniania wartości liczbowej lub logi
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     long& val) const;
 
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     unsigned short& val) const;
 
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     unsigned int& val) const;
 
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     unsigned long& val) const;
 
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     long long& val) const;
 
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     unsigned long long& val) const;
 
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     float& val) const;
 
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     double& val) const;
 
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     long double& val) const;
 
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     void *& val) const;
 
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     bool& val) const;
 ```
 
@@ -173,10 +173,10 @@ Początek zakresu znaków, z którego ma zostać odczytana liczba.
 *ostatni* \
 Koniec zakresu znaków, z którego ma zostać odczytana liczba.
 
-*_Iosbase* \
+*iosbase* \
 [Ios_base](../standard-library/ios-base-class.md) , którego flagi są używane przez konwersję.
 
-*_State* \
+\ *stanu*
 Stan, do którego failbit (zobacz [ios_base:: iostate](../standard-library/ios-base-class.md#iostate)) jest dodawany w przypadku awarii.
 
 *val* \
@@ -194,8 +194,8 @@ Pierwsza wirtualna chroniona funkcja członkowska,
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     long& val) const;
 ```
 
@@ -203,7 +203,7 @@ dopasowuje elementy sekwencyjne zaczynające się *najpierw* w sekwencji `[first
 
 Pole danych wejściowych Integer jest konwertowane na te same reguły, które są używane przez funkcje skanowania do dopasowywania i konwertowania serii elementów **char** z pliku. (Każdy taki **znak** jest założono, aby mapować do równoważnego elementu typu `Elem` przez proste, jedno-do-jednego, mapowanie.) Zgodna specyfikacja konwersji skanowania jest określana w następujący sposób:
 
-Jeśli `iosbase.`[ios_base:: flags](../standard-library/ios-base-class.md#flags) `() & ios_base::basefield == ios_base::`[OCT](../standard-library/ios-functions.md#oct), specyfikacja konwersji jest `lo`.
+Jeśli `iosbase.`[ios_base:: flags](../standard-library/ios-base-class.md#flags)`() & ios_base::basefield == ios_base::`[OCT](../standard-library/ios-functions.md#oct), specyfikacja konwersji jest `lo`.
 
 W przypadku `iosbase.flags() & ios_base::basefield == ios_base::`[HEX](../standard-library/ios-functions.md#hex)specyfikacja konwersji jest `lx`.
 
@@ -211,11 +211,11 @@ Jeśli `iosbase.flags() & ios_base::basefield == 0`, specyfikacja konwersji jest
 
 W przeciwnym razie specyfikacja konwersji jest `ld`.
 
-Format pola wejściowego Integer jest bardziej określony przez zestaw [reguł ustawień regionalnych](../standard-library/locale-class.md#facet_class) `fac` zwracany przez wywołanie [use_facet](../standard-library/locale-functions.md#use_facet) `<`[numpunct](../standard-library/numpunct-class.md) `<Elem>(iosbase.` [ios_base:: getloc](../standard-library/ios-base-class.md#getloc) `())`. Opracowany
+Format pola wejściowego Integer jest bardziej określony przez zestaw [reguł ustawień regionalnych](../standard-library/locale-class.md#facet_class)`fac` zwracany przez wywołanie [use_facet](../standard-library/locale-functions.md#use_facet) `<`[numpunct](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[ios_base:: getloc](../standard-library/ios-base-class.md#getloc)`())`. Opracowany
 
-`fac.` [numpunct:: grouping](../standard-library/numpunct-class.md#grouping) `()` określa, jak cyfry są pogrupowane po lewej stronie dowolnego punktu dziesiętnego
+`fac.`[numpunct:: grouping](../standard-library/numpunct-class.md#grouping)`()` określa, jak cyfry są pogrupowane po lewej stronie dowolnego punktu dziesiętnego
 
-`fac.` [numpunct:: thousands_sep](../standard-library/numpunct-class.md#thousands_sep) `()` Określa sekwencję oddzielającą grupy cyfr z lewej strony dowolnego punktu dziesiętnego.
+`fac.`[numpunct:: thousands_sep](../standard-library/numpunct-class.md#thousands_sep)`()` Określa sekwencję oddzielającą grupy cyfr z lewej strony dowolnego punktu dziesiętnego.
 
 Jeśli w polu numeryczne dane wejściowe nie wystąpią żadne wystąpienia `fac.thousands_sep()`, żadne ograniczenie grupowania nie zostanie nałożone. W przeciwnym razie wszystkie ograniczenia grupowania narzucone przez `fac.grouping()` są wymuszane, a separatory zostaną usunięte przed wykonaniem konwersji skanowania.
 
@@ -225,8 +225,8 @@ Czwarta chroniona funkcja wirtualna elementu członkowskiego:
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     unsigned long& val) const;
 ```
 
@@ -238,8 +238,8 @@ Piąta chroniona funkcja wirtualna elementu członkowskiego:
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     long long& val) const;
 ```
 
@@ -251,8 +251,8 @@ Szósta chroniona funkcja wirtualna elementu członkowskiego:
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     unsigned long long& val) const;
 ```
 
@@ -264,12 +264,12 @@ Siódma wirtualna chroniona funkcja członkowska:
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     float& val) const;
 ```
 
-zachowuje się tak samo jak pierwszy, z tą różnicą, że przedsięwzięciach się na wypełnienie kompletnego, niepustego pola wejściowego zmiennoprzecinkowego. `fac.`[numpunct::d ecimal_point](../standard-library/numpunct-class.md#decimal_point) `()` Określa sekwencję oddzielające cyfry całkowite od cyfr ułamkowych. Odpowiedni specyfikator konwersji skanowania jest `lf`.
+zachowuje się tak samo jak pierwszy, z tą różnicą, że przedsięwzięciach się na wypełnienie kompletnego, niepustego pola wejściowego zmiennoprzecinkowego. `fac.`[numpunct::d ecimal_point](../standard-library/numpunct-class.md#decimal_point)`()` Określa sekwencję oddzielające cyfry całkowite od cyfr ułamkowych. Odpowiedni specyfikator konwersji skanowania jest `lf`.
 
 Ósma wirtualna chroniona funkcja członkowska:
 
@@ -277,12 +277,12 @@ zachowuje się tak samo jak pierwszy, z tą różnicą, że przedsięwzięciach 
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     double& val) const;
 ```
 
-zachowuje się tak samo jak pierwszy, z tą różnicą, że przedsięwzięciach się na wypełnienie kompletnego, niepustego pola wejściowego zmiennoprzecinkowego. `fac.`[numpunct::d ecimal_point](../standard-library/numpunct-class.md#decimal_point) `()` Określa sekwencję oddzielające cyfry całkowite od cyfr ułamkowych. Odpowiedni specyfikator konwersji skanowania jest `lf`.
+zachowuje się tak samo jak pierwszy, z tą różnicą, że przedsięwzięciach się na wypełnienie kompletnego, niepustego pola wejściowego zmiennoprzecinkowego. `fac.`[numpunct::d ecimal_point](../standard-library/numpunct-class.md#decimal_point)`()` Określa sekwencję oddzielające cyfry całkowite od cyfr ułamkowych. Odpowiedni specyfikator konwersji skanowania jest `lf`.
 
 Dziewiąta chroniona funkcja wirtualna elementu członkowskiego:
 
@@ -290,8 +290,8 @@ Dziewiąta chroniona funkcja wirtualna elementu członkowskiego:
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     long double& val) const;
 ```
 
@@ -303,8 +303,8 @@ Dziesiąta chroniona funkcja wirtualna elementu członkowskiego:
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     void *& val) const;
 ```
 
@@ -316,8 +316,8 @@ Ostatnia (jedenasta) wirtualna funkcja chronionego elementu członkowskiego:
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     bool& val) const;
 ```
 
@@ -337,78 +337,78 @@ Wyodrębnia wartość liczbową lub logiczną z sekwencji znaków.
 iter_type get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     bool& val) const;
 
 iter_type get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     unsigned short& val) const;
 
 iter_type get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     unsigned int& val) const;
 
 iter_type get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     long& val) const;
 
 iter_type get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     unsigned long& val) const;
 
 iter_type get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     long long& val) const;
 
 iter_type get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     unsigned long long& val) const;
 
 iter_type get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     float& val) const;
 
 iter_type get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     double& val) const;
 
 iter_type get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     long double& val) const;
 
 iter_type get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     void *& val) const;
 ```
 
@@ -420,10 +420,10 @@ Początek zakresu znaków, z którego ma zostać odczytana liczba.
 *ostatni* \
 Koniec zakresu znaków, z którego ma zostać odczytana liczba.
 
-*_Iosbase* \
+*iosbase* \
 [Ios_base](../standard-library/ios-base-class.md) , którego flagi są używane przez konwersję.
 
-*_State* \
+\ *stanu*
 Stan, do którego failbit (zobacz [ios_base:: iostate](../standard-library/ios-base-class.md#iostate)) jest dodawany w przypadku awarii.
 
 *val* \
@@ -435,35 +435,35 @@ Iterator po odczytaniu wartości.
 
 ### <a name="remarks"></a>Uwagi
 
-Wszystkie funkcje składowe zwracają [do_get](#do_get)(`first`, `last`, `_Iosbase`, `_State`, `val`).
+Wszystkie funkcje członkowskie zwracają [do_get](#do_get)`( first, last, iosbase, state, val)`.
 
-Pierwsza wirtualna chroniona funkcja członkowska próbuje dopasować elementy sekwencyjne zaczynające się od pierwszej w sekwencji [`first`, `last`), dopóki nie rozpoznano kompletnego, niepustego pola wejściowego. Jeśli to się powiedzie, konwertuje to pole na jego równoważną wartość jako typ **Long** i zapisuje wynik w wartości *Val*. Zwraca iterator wyznaczający pierwszy element poza liczbowe pole wejściowe. W przeciwnym razie funkcja przechowuje Nothing w wartości *Val* i ustawia `ios_base::failbit` w *stanie*_. Zwraca iterator wyznaczający pierwszy element poza dowolnym prefiksem prawidłowego pola wejściowego Integer. W obu przypadkach, jeśli wartość zwracana jest równa *Last*, funkcja ustawia `ios_base::eofbit` w *_State*.
+Pierwsza wirtualna chroniona funkcja członkowska próbuje dopasować elementy sekwencyjne zaczynające się od pierwszej w sekwencji [`first`, `last`), dopóki nie rozpoznano kompletnego, niepustego pola wejściowego. Jeśli to się powiedzie, konwertuje to pole na jego równoważną wartość jako typ **Long** i zapisuje wynik w wartości *Val*. Zwraca iterator wyznaczający pierwszy element poza liczbowe pole wejściowe. W przeciwnym razie funkcja przechowuje Nothing w wartości *Val* i ustawia `ios_base::failbit` w *stanie*. Zwraca iterator wyznaczający pierwszy element poza dowolnym prefiksem prawidłowego pola wejściowego Integer. W obu przypadkach, jeśli wartość zwracana jest równa *Last*, funkcja ustawia `ios_base::eofbit` w *stanie*.
 
 Pole danych wejściowych Integer jest konwertowane na te same reguły, które są używane przez funkcje skanowania do dopasowywania i konwertowania serii elementów **char** z pliku. Każdy taki element **char** jest założono, aby mapować do równoważnego elementu typu `CharType` przez proste mapowanie jeden do jednego. Zgodna specyfikacja konwersji skanowania jest określana w następujący sposób:
 
-- Jeśli `iosbase`. [flagi](../standard-library/ios-base-class.md#flags)  &  `ios_base::basefield`  ==  `ios_base::`[OCT](../standard-library/ios-functions.md#oct), specyfikacja konwersji to `lo`.
+- W przypadku `iosbase.`[flag](../standard-library/ios-base-class.md#flags)` & ios_base::basefield == ios_base::`[KTZ](../standard-library/ios-functions.md#oct)specyfikacja konwersji jest `lo`.
 
-- Jeśli **iosbase. flags**  & **ios_base:: basefield**  ==  `ios_base::`[hex](../standard-library/ios-functions.md#hex), specyfikacja konwersji jest `lx`.
+- W przypadku `iosbase.flags & ios_base::basefield == ios_base::`[HEX](../standard-library/ios-functions.md#hex)specyfikacja konwersji jest `lx`.
 
-- Jeśli **iosbase. flags**  & **ios_base:: basefield** = = 0, specyfikacja konwersji jest `li`.
+- Jeśli `iosbase.flags & ios_base::basefield == 0`, specyfikacja konwersji jest `li`.
 
 - W przeciwnym razie specyfikacja konwersji jest `ld`.
 
-Format pola wejściowego Integer jest bardziej określony przez zestaw [reguł ustawień regionalnych](../standard-library/locale-class.md#facet_class)**FAC** zwrócony przez wywołanie [use_facet](../standard-library/locale-functions.md#use_facet)  < [numpunct](../standard-library/numpunct-class.md) \< **elem**> ( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)). Opracowany
+Format pola wejściowego Integer jest bardziej określony przez zestaw [reguł ustawień regionalnych](../standard-library/locale-class.md#facet_class) `fac` zwracany przez wywołanie [use_facet](../standard-library/locale-functions.md#use_facet)`<`[`numpunct`](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[getloc](../standard-library/ios-base-class.md#getloc)`())`. Opracowany
 
-- **FAC**. [grupowanie](../standard-library/numpunct-class.md#grouping) określa sposób grupowania cyfr na lewo od dowolnego punktu dziesiętnego.
+- [grupowanie](../standard-library/numpunct-class.md#grouping) `fac.`określa, jak cyfry są pogrupowane na lewo od dowolnego miejsca dziesiętnego.
 
-- **FAC**. [thousands_sep](../standard-library/numpunct-class.md#thousands_sep) Określa sekwencję, która oddziela grupy cyfr po lewej stronie dowolnego miejsca dziesiętnego.
+- `fac.`[thousands_sep](../standard-library/numpunct-class.md#thousands_sep) Określa sekwencję, która oddziela grupy cyfr po lewej stronie dowolnego miejsca dziesiętnego.
 
-Jeśli nie ma wystąpień elementu **FAC**. `thousands_sep` występuje w polu liczbowych danych wejściowych, nie nałożono ograniczenia grupowania. W przeciwnym razie wszystkie ograniczenia grupowania narzucone przez **FAC**. **grupowanie** jest wymuszane, a separatory są usuwane przed wykonaniem konwersji skanowania.
+Jeśli w polu numeryczne dane wejściowe nie wystąpią żadne wystąpienia `fac.thousands_sep`, żadne ograniczenie grupowania nie zostanie nałożone. W przeciwnym razie wszystkie ograniczenia grupowania narzucone przez `fac.grouping` są wymuszane, a separatory zostaną usunięte przed wykonaniem konwersji skanowania.
 
 Druga wirtualna chroniona funkcja członkowska:
 
 ```cpp
 virtual iter_type do_get(iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     unsigned long& val) const;
 ```
 
@@ -474,20 +474,20 @@ Trzecia wirtualna chroniona funkcja członkowska:
 ```cpp
 virtual iter_type do_get(iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     double& val) const;
 ```
 
-zachowuje się tak samo jak pierwszy, z tą różnicą, że próbuje dopasować kompletne, niepuste pole wejściowe zmiennoprzecinkowe. **FAC**. [decimal_point](../standard-library/numpunct-class.md#decimal_point) Określa sekwencję oddzielające cyfry całkowite od cyfr ułamkowych. Odpowiedni specyfikator konwersji skanowania jest `lf`.
+zachowuje się tak samo jak pierwszy, z tą różnicą, że próbuje dopasować kompletne, niepuste pole wejściowe zmiennoprzecinkowe. `fac.`[decimal_point](../standard-library/numpunct-class.md#decimal_point) Określa sekwencję oddzielające cyfry całkowite od cyfr ułamkowych. Odpowiedni specyfikator konwersji skanowania jest `lf`.
 
 Czwarta chroniona funkcja wirtualna elementu członkowskiego:
 
 ```cpp
 virtual iter_type do_get(iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     long double& val) const;
 ```
 
@@ -498,8 +498,8 @@ Piąta chroniona funkcja wirtualna elementu członkowskiego:
 ```cpp
 virtual iter_type do_get(iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     void *& val) const;
 ```
 
@@ -510,14 +510,14 @@ Szósta chroniona funkcja wirtualna elementu członkowskiego:
 ```cpp
 virtual iter_type do_get(iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     bool& val) const;
 ```
 
 zachowuje się tak samo jak pierwszy, z tą różnicą, że próbuje dopasować kompletne, niepuste pole wejściowej wartości logicznej. W przypadku pomyślnego przeprowadzenia konwersji pola danych wejściowych Boolean na wartość typu **bool** i przechowuje tę wartość w *Val*.
 
-Pole danych wejściowych Boolean przyjmuje jeden z dwóch form. Jeśli **iosbase**. **flagi**  &  `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) ma **wartość false**, jest taka sama jak pole danych wejściowych Integer, z tą różnicą, że przekonwertowana wartość musi być równa 0 (dla wartości **false**) lub 1 (dla **prawdy**). W przeciwnym razie sekwencja musi być zgodna z **FAC**. [falsename](../standard-library/numpunct-class.md#falsename) (dla **wartości false**) lub **FAC**. [TrueName](../standard-library/numpunct-class.md#truename) (dla **wartości true**).
+Pole danych wejściowych Boolean przyjmuje jeden z dwóch form. Jeśli `iosbase.flags & ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) ma **wartość false**, jest taka sama jak pole danych wejściowych Integer, z tą różnicą, że przekonwertowana wartość musi być równa 0 (dla wartości **false**) lub 1 (dla **prawdy**). W przeciwnym razie sekwencja musi pasować do `fac.`[falsename](../standard-library/numpunct-class.md#falsename) (dla **wartości false**) lub `fac.`[TrueName](../standard-library/numpunct-class.md#truename) (dla **prawdy**).
 
 ### <a name="example"></a>Przykład
 
@@ -568,17 +568,17 @@ Typ jest synonimem dla parametru szablonu `InputIterator`.
 Konstruktor dla obiektów typu `num_get`, które są używane do wyodrębniania wartości liczbowych z sekwencji.
 
 ```cpp
-explicit num_get(size_t _Refs = 0);
+explicit num_get(size_t refs = 0);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs* \
+\ systemu plików *ReFS*
 Wartość całkowita służąca do określania typu zarządzania pamięcią dla obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Możliwe wartości parametru *_Refs* i ich znaczenie są następujące:
+Możliwe wartości parametru *ReFS* i ich znaczenie są następujące:
 
 - 0: okres istnienia obiektu jest zarządzany przez elementy lokalne, które go zawierają.
 
@@ -588,7 +588,7 @@ Możliwe wartości parametru *_Refs* i ich znaczenie są następujące:
 
 Nie są możliwe żadne bezpośrednie przykłady, ponieważ destruktor jest chroniony.
 
-Konstruktor inicjuje swój obiekt podstawowy przy użyciu **ustawień regionalnych::** [facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
+Konstruktor inicjuje swój obiekt podstawowy z `locale::`[aspektem](../standard-library/locale-class.md#facet_class)`(refs)`.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - binder2nd class
 ms.assetid: b2a9c1d1-dfc4-4ca9-a10e-ae84e195a62d
-ms.openlocfilehash: 46c8bb2ae450b3ef56f2729717fb9b5563a7c139
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 297f91dd9283b9f004247d2d1814b30a17e7ffa2
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689934"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890090"
 ---
 # <a name="binder2nd-class"></a>binder2nd — Klasa
 
@@ -28,7 +28,7 @@ class binder2nd
     typedef typename Operation::argument_type argument_type;
     typedef typename Operation::result_type result_type;
     binder2nd(
-        const Operation& Func,
+        const Operation& func,
         const typename Operation::second_argument_type& right);
 
     result_type operator()(const argument_type& left) const;
@@ -38,7 +38,7 @@ class binder2nd
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *Func*
+\ *Func*
 Obiekt funkcji binarnej do przekonwertowania na jednoargumentowy obiekt funkcji.
 
 *prawa* \
@@ -53,9 +53,9 @@ Jednoargumentowy obiekt funkcji, który jest wynikiem powiązania drugiego argum
 
 ## <a name="remarks"></a>Uwagi
 
-Szablon klasy przechowuje kopię obiektu funkcji binarnej _ *Func* w `op` i kopię *prawa* w `value`. Definiuje jej funkcję członkowską `operator()` jako zwracaną **op**(`left`, **Value**).
+Szablon klasy przechowuje kopię obiektu funkcji binarnej *Func* w `op`i kopię *prawa* w `value`. Definiuje jej funkcję członkowską `operator()` jako zwracającą `op(left, value)`.
 
-Jeśli `Func` jest obiektem typu `Operation`, a c jest stałą, wówczas [bind2nd —](../standard-library/functional-functions.md#bind2nd) (`Func`, `c`) jest odpowiednikiem konstruktora klasy `binder2nd` `binder2nd` \< **operacji**> (`Func`, 0) i bardziej wygodne.
+Jeśli *Func* jest obiektem typu `Operation`, a c jest stałą, wówczas`(func, c)` [bind2nd —](../standard-library/functional-functions.md#bind2nd) jest odpowiednikiem konstruktora klasy `binder2nd` `binder2nd<Operation>(func, c)`i wygodniejsze.
 
 ## <a name="example"></a>Przykład
 

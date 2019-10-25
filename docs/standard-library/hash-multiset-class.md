@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_multiset::upper_bound
 - stdext::hash_multiset::value_comp
 ms.assetid: 0580397a-a76e-40ad-aea2-5c6f3a9d0a21
-ms.openlocfilehash: 6b3a57d110f2416f5539399ed087e0acbb156991
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 7881b1d6775206fbea40c3ba4b15572a6d4b3580
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689583"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890085"
 ---
 # <a name="hash_multiset-class"></a>hash_multiset — Klasa
 
@@ -115,7 +115,7 @@ Typ danych elementu, który ma być przechowywany w hash_multiset.
 *Cechy* \
 Typ, który zawiera dwa obiekty funkcji, jeden z porównywanych klas, który jest predykatem binarnym, może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność i funkcję mieszania, która jest jednoargumentową kluczem mapowania predykatów elementów do niepodpisanych liczby całkowite typu `size_t`. Ten argument jest opcjonalny, a `hash_compare<Key, less<Key> >` jest wartością domyślną.
 
-@No__t_1 *alokatora*
+\ *alokatora*
 Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji hash_multiset's i dealokacji pamięci. Ten argument jest opcjonalny, a wartość domyślna to `allocator<Key>`.
 
 ## <a name="remarks"></a>Uwagi
@@ -138,7 +138,7 @@ Wybór typu kontenera powinien ogólnie być oparty o typ wyszukiwania i wstawia
 
 Hash_multiset powinien być kontenerem asocjacyjnym wyboru, gdy warunki kojarzenia wartości z kluczami są spełnione przez aplikację. Elementy elementu hash_multiset mogą być wielokrotne i służyć jako własne klucze sortowania, dlatego klucze nie są unikatowe. Model dla tego typu konstrukcji jest uporządkowaną listą, np. wyrazów, w których wyrazy mogą występować więcej niż jeden raz. Nie zezwolono na wiele wystąpień wyrazów, a następnie hash_set być odpowiednią strukturą kontenera. Jeśli unikatowe definicje zostały dołączone jako wartości do listy unikatowych słów kluczowych, hash_map będzie odpowiednią strukturą zawierającą te dane. Jeśli zamiast tego definicje nie były unikatowe, hash_multimap będzie kontenerem wyboru.
 
-Hash_multiset porządkuje sekwencję, która kontroluje, przez wywołanie zapisanego obiektu cechy skrótu typu [value_compare](#value_compare). Dostęp do tego przechowywanego obiektu można uzyskać, wywołując funkcję elementu członkowskiego [key_comp](#key_comp). Taki obiekt funkcji musi zachowywać się tak samo jak obiekt klasy `hash_compare<Key, less<Key> >`. W odniesieniu do wszystkich *kluczy* wartości typu `Key` wywołanie `Trait(Key)` daje rozkład wartości typu `size_t`.
+Hash_multiset porządkuje sekwencję, która kontroluje, przez wywołanie zapisanego obiektu cechy skrótu typu [value_compare](#value_compare). Dostęp do tego przechowywanego obiektu można uzyskać, wywołując funkcję elementu członkowskiego [key_comp](#key_comp). Taki obiekt funkcji musi zachowywać się tak samo jak obiekt klasy `hash_compare<Key, less<Key> >`. W odniesieniu do wszystkich *kluczy* wartości typu `Key`wywołanie `Trait(Key)` daje rozkład wartości typu `size_t`.
 
 Ogólnie rzecz biorąc, elementy muszą być nieco mniej porównywalne, aby ustalić kolejność: tak aby, mając dowolne dwa elementy, można było określić, czy są one równoważne (w sensie, żaden nie jest mniejszy niż ten drugi) lub, że jeden jest mniejszy niż ten drugi. Skutkuje to ustaleniem kolejności dla elementów nierównoważnych. Ze strony bardziej technicznej, funkcja porównywania jest predykatem binarnym, który wymusza ścisłe słabe porządkowanie w standardowym sensie matematycznym. Predykat binarny *f*( *x*, *y*) jest obiektem funkcji, który ma dwa obiekty argumentu x i y oraz wartość zwracaną true lub false. Kolejność nałożona na hash_multiset jest ściśle nieścisłą kolejnością, jeśli Predykat binarny jest niezwrotny, antysymetryczny i przechodni oraz jeśli równoważność jest przechodnia, gdzie dwa obiekty x i y są zdefiniowane jako równoważne, gdy zarówno *f*( *x*, *y* ) i *f*( *y*, *x*) mają wartość false. Jeśli silniejszy warunek równości pomiędzy kluczami zastąpi ten równoważności, to porządkowanie będzie całkowite (w sensie, że wszystkie elementy są uporządkowane względem siebie), a dopasowane klucze będą od siebie nieodróżnialne.
 
@@ -184,7 +184,7 @@ Iterator dostarczony przez klasę hash_multiset jest iteratorem dwukierunkowym, 
 |[crbegin —](#crbegin)|Zwraca iterator const odnoszący się do pierwszego elementu w odwróconej `hash_multiset`.|
 |[crend](#crend)|Zwraca iterator const, który odnosi się do lokalizacji następującej po ostatnim elemencie w odwróconym `hash_multiset`.|
 |[emplace](#emplace)|Wstawia element skonstruowany w miejscu do `hash_multiset`.|
-|[emplace_hint](#emplace_hint)|Wstawia element skonstruowany w miejscu do `hash_multiset` z wskazówką dotyczącą położenia.|
+|[emplace_hint](#emplace_hint)|Wstawia element skonstruowany w miejscu do `hash_multiset`z wskazówką dotyczącą położenia.|
 |[ciągiem](#empty)|Testuje, czy `hash_multiset` jest pusty.|
 |[punktów](#end)|Zwraca iterator, który odnosi się do lokalizacji następującej po ostatnim elemencie w `hash_multiset`.|
 |[equal_range](#equal_range)|Zwraca parę iteratorów odpowiednio do pierwszego elementu w `hash_multiset` z kluczem, który jest większy niż określony klucz i do pierwszego elementu w `hash_multiset`, z kluczem, który jest równy lub większy niż klucz.|
@@ -307,7 +307,7 @@ A const iteratora dwukierunkowego odwołującego się do pierwszego elementu w [
 
 ### <a name="remarks"></a>Uwagi
 
-W przypadku wartości zwracanej `cbegin` nie można modyfikować elementów w obiekcie `hash_multiset`.
+W przypadku wartości zwracanej `cbegin`nie można modyfikować elementów w obiekcie `hash_multiset`.
 
 ### <a name="example"></a>Przykład
 
@@ -613,7 +613,7 @@ Stałe odwrotne Iteratory, odnoszące się do pierwszego elementu w odwróconej 
 
 `crbegin` jest używany z odwróconym `hash_multiset` tak samo jak [hash_multiset:: BEGIN](#begin) jest używany z `hash_multiset`.
 
-Z wartością zwracaną `crbegin` nie można zmodyfikować obiektu `hash_multiset`.
+Z wartością zwracaną `crbegin`nie można zmodyfikować obiektu `hash_multiset`.
 
 `crbegin` można użyć do iteracji `hash_multiset` do tyłu.
 
@@ -665,7 +665,7 @@ Nieodwrócony iterator dwukierunkowy, który odnosi się do lokalizacji po ostat
 
 `crend` jest używany z odwróconym `hash_multiset` tak samo jak [hash_multiset:: end](#end) jest używany z `hash_multiset`.
 
-Z wartością zwracaną `crend` nie można zmodyfikować obiektu `hash_multiset`.
+Z wartością zwracaną `crend`nie można zmodyfikować obiektu `hash_multiset`.
 
 `crend` można użyć do przetestowania, czy iterator odwrotny osiągnął koniec hash_multiset.
 
@@ -712,7 +712,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::di
 
 ### <a name="remarks"></a>Uwagi
 
-@No__t_0 jest typem zwracanym podczas odejmowania lub zwiększania przez Iteratory kontenera. @No__t_0 jest zwykle używany do reprezentowania liczby elementów w zakresie [`first`, `last`) między iteratorami `first` i `last`, zawiera element wskazywany przez `first` i zakres elementów do , ale nie obejmuje, element wskazywany przez `last`.
+`difference_type` jest typem zwracanym podczas odejmowania lub zwiększania przez Iteratory kontenera. `difference_type` jest zwykle używany do reprezentowania liczby elementów w zakresie [`first`, `last`) między iteratorami `first` i `last`, zawiera element wskazywany przez `first` i zakres elementów do , ale nie obejmuje, element wskazywany przez `last`.
 
 Należy zauważyć, że chociaż `difference_type` jest dostępny dla wszystkich iteratorów, które spełniają wymagania iteratora danych wejściowych, który obejmuje klasę iteratorów dwukierunkowych obsługiwanych przez kontenery odwracalne, takie jak Set. Odejmowanie między iteratorami jest obsługiwane tylko przez Iteratory dostępu swobodnego zapewniane przez kontener dostępu swobodnego, taki jak Vector lub deque.
 
@@ -839,16 +839,17 @@ Wstawia element skonstruowany w miejscu do elementu hash_multiset z wskazówką 
 ```cpp
 template <class ValTy>
 iterator insert(
-    const_iterator _Where,
+    const_iterator where,
     ValTy&& val);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|-|-|
-|*użyte*|Wartość elementu, który ma zostać wstawiony do [hash_multiset](../standard-library/hash-multiset-class.md) , chyba że `hash_multiset` już zawiera ten element lub, bardziej ogólnie, elementu, którego klucz jest uporządkowany równorzędnie.|
-|*_Where*|Miejsce, w którym rozpocznie się wyszukiwanie poprawnego punktu wstawiania. (Wstawianie może odbywać się w amortyzowanym stałym czasie, a nie w czasie logarytmu, jeśli punkt wstawiania następuje zaraz po *_Where*).|
+*val* \
+Wartość elementu, który ma zostać wstawiony do [hash_multiset](../standard-library/hash-multiset-class.md) , chyba że `hash_multiset` już zawiera ten element lub, bardziej ogólnie, elementu, którego klucz jest uporządkowany równorzędnie.
+
+*gdzie* \
+Miejsce, w którym rozpocznie się wyszukiwanie poprawnego punktu wstawiania. (Wstawianie może odbywać się w amortyzowanym stałym czasie, a nie w czasie logarytmu, jeśli punkt wstawiania *następuje zaraz*po elemencie).
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -856,7 +857,7 @@ Funkcja członkowska [hash_multiset:: emplace](#emplace) zwraca iterator, który
 
 ### <a name="remarks"></a>Uwagi
 
-Wstawianie może odbywać się w amortyzowanym stałym czasie, a nie w czasie logarytmu, jeśli punkt wstawiania następuje zaraz po *_Where*.
+Wstawianie może odbywać się w amortyzowanym stałym czasie, a nie w czasie logarytmu, jeśli punkt wstawiania następuje zaraz po tym *miejscu*.
 
 ### <a name="example"></a>Przykład
 
@@ -1091,7 +1092,7 @@ The hash_multiset hms1 doesn't have an element with a key less than 40.
 Usuwa element lub zakres elementów w hash_multiset z określonych pozycji lub usuwa elementy, które pasują do określonego klucza.
 
 ```cpp
-iterator erase(iterator _Where);
+iterator erase(iterator where);
 
 iterator erase(iterator first, iterator last);
 
@@ -1100,7 +1101,7 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Parametry
 
-*_Where* \
+*gdzie* \
 Pozycja elementu, który ma zostać usunięty z hash_multiset.
 
 *pierwszy* \
@@ -1392,33 +1393,42 @@ hash_multiset(
 
 template <class InputIterator>
 hash_multiset(
-    InputIterator First,
-    InputIterator Last);
+    InputIterator first,
+    InputIterator last);
 
 template <class InputIterator>
 hash_multiset(
-    InputIterator First,
-    InputIterator Last,
+    InputIterator first,
+    InputIterator last,
     const Traits& Comp);
 
 template <class InputIterator>
 hash_multiset(
-    InputIterator First,
-    InputIterator Last,
+    InputIterator first,
+    InputIterator last,
     const Traits& Comp,
     const Allocator& Al);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|-|-|
-|*Wsp*|Klasa alokatora magazynu, która ma być używana dla tego obiektu `hash_multiset`, który ma wartość domyślną `Allocator`.|
-|*Przepisów*|Funkcja porównania typu `const Traits` użyta do uporządkowania elementów w `hash_multiset`, które są wartościami domyślnymi `hash_compare`.|
-|*Kliknij*|@No__t_0, do której skonstruowany `hash_multiset` ma być kopia.|
-|*Pierwszego*|Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.|
-|*Ostatniego*|Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.|
-|*IList*|Initializer_list, który zawiera elementy, które mają zostać skopiowane.|
+*Al* \
+Klasa alokatora magazynu, która ma być używana dla tego obiektu `hash_multiset`, który ma wartość domyślną `Allocator`.
+
+\ *zgodności*
+Funkcja porównania typu `const Traits` użyta do uporządkowania elementów w `hash_multiset`, które są wartościami domyślnymi `hash_compare`.
+
+*Prawa* \
+`hash_multiset`, do której skonstruowany `hash_multiset` ma być kopia.
+
+*pierwszy* \
+Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.
+
+*ostatni* \
+Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.
+
+\ *IList*
+Initializer_list, który zawiera elementy, które mają zostać skopiowane.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1428,13 +1438,13 @@ Wszystkie konstruktory inicjują hash_multisets.
 
 Wszystkie konstruktory przechowują obiekt funkcji typu `Traits`, który jest używany do ustanowienia zamówienia między kluczami `hash_multiset` i który może być później zwracany przez wywołanie [hash_multiset:: key_comp](#key_comp). Aby uzyskać więcej informacji na `Traits` Zobacz temat [Klasa hash_multiset](../standard-library/hash-multiset-class.md) .
 
-Pierwsze trzy konstruktory określają pustą `hash_multiset` początkową, drugą określającą typ funkcji porównywania (*COMP*), która ma być używana w celu ustalenia kolejności elementów i trzeciego jawnie określającego typ alokatora (*Al*), który ma być służyć. Słowo kluczowe **Explicit** pomija pewne rodzaje automatycznej konwersji typów.
+Pierwsze trzy konstruktory określają pustą `hash_multiset`początkową, drugą określającą typ funkcji porównywania (*COMP*), która ma być używana w celu ustalenia kolejności elementów i trzeciego jawnie określającego typ alokatora (*Al*), który ma być służyć. Słowo kluczowe **Explicit** pomija pewne rodzaje automatycznej konwersji typów.
 
-Czwarty Konstruktor przenosi `Right` `hash_multiset`.
+Czwarty Konstruktor przenosi `Right``hash_multiset`.
 
 W przypadku konstruktorów piąty, szósty i siódmy jest używany initializer_list.
 
-Ostatnie trzy konstruktory skopiują zakres [`First`, `Last`) `hash_multiset` z rosnącą jawnością w określaniu typu funkcji porównania klasy porównującej i alokatora.
+Ostatnie trzy konstruktory skopiują zakres [`first`, `last`) `hash_multiset` z rosnącą jawnością w określaniu typu funkcji porównania klasy porównującej i alokatora.
 
 Rzeczywista kolejność elementów w kontenerze zestawu skrótów zależy od funkcji mieszania, funkcji porządkowania i bieżącego rozmiaru tabeli skrótów i nie może być ogólnie przewidywalna, ponieważ może to być obiektem zestawu, gdzie został ustalony przez funkcję porządkowania niezależne.
 
@@ -1447,46 +1457,53 @@ Wstawia element lub zakres elementów do hash_multiset.
 
 ```cpp
 iterator insert(
-    const Type& Val);
+    const Type& value);
 
 iterator insert(
-    iterator Where,
+    iterator where,
     const Type& Al);
 
 void insert(
     initializer_list<Type> IList);
 
 iterator insert(
-    const Type& Val);
+    const Type& value);
 
 iterator insert(
-    Iterator Where,
-    const Type& Val);
+    Iterator where,
+    const Type& value);
 
 template <class InputIterator>
 void insert(
-    InputIterator First,
-    InputIterator Last);
+    InputIterator first,
+    InputIterator last);
 
 template <class ValTy>
 iterator insert(
-    ValTy&& Val);
+    ValTy&& value);
 
 template <class ValTy>
 iterator insert(
-    const_iterator Where,
-    ValTy&& Val);
+    const_iterator where,
+    ValTy&& value);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Opis|
-|-|-|
-|*Użyte*|Wartość elementu, który ma zostać wstawiony do hash_multiset, chyba że hash_multiset już zawiera ten element lub, bardziej ogólnie, elementu, którego klucz jest uporządkowany równorzędnie.|
-|*Miejscu*|Miejsce, w którym rozpocznie się wyszukiwanie poprawnego punktu wstawiania. (Wstawianie może odbywać się w amortyzowanym stałym czasie, a nie w czasie logarytmu, jeśli punkt wstawiania natychmiast następuje `_Where`).|
-|*Pierwszego*|Pozycja pierwszego elementu, który ma zostać skopiowany z hash_multiset.|
-|*Ostatniego*|Pozycja tuż poza ostatnim elementem do skopiowania z hash_multiset.|
-|*IList*|Initializer_list, który zawiera elementy do skopiowania.|
+\ *wartości*
+Wartość elementu, który ma zostać wstawiony do hash_multiset, chyba że hash_multiset już zawiera ten element lub, bardziej ogólnie, elementu, którego klucz jest uporządkowany równorzędnie.
+
+*gdzie* \
+Miejsce, w którym rozpocznie się wyszukiwanie poprawnego punktu wstawiania. (Wstawianie może odbywać się w amortyzowanym stałym czasie, a nie w czasie logarytmu, jeśli punkt wstawiania *następuje zaraz*po elemencie).
+
+*pierwszy* \
+Pozycja pierwszego elementu, który ma zostać skopiowany z hash_multiset.
+
+*ostatni* \
+Pozycja tuż poza ostatnim elementem do skopiowania z hash_multiset.
+
+\ *IList*
+Initializer_list, który zawiera elementy do skopiowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1494,7 +1511,7 @@ Pierwsze dwie funkcje elementu członkowskiego INSERT zwracają iterator, który
 
 W następnych trzech funkcjach składowych użyto elementu initializer_list.
 
-Trzecia funkcja członkowska wstawia sekwencję wartości elementów do hash_multiset odpowiadającego każdemu elementowi, który jest kierowany przez iterator w zakresie [`First`, `Last`) określonej hash_multiset.
+Trzecia funkcja członkowska wstawia sekwencję wartości elementów do hash_multiset odpowiadającego każdemu elementowi, który jest kierowany przez iterator w zakresie [`first`, `last`) określonej hash_multiset.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1540,7 +1557,7 @@ Aby uzyskać więcej informacji o *cechach* , zobacz temat [Klasa hash_multiset]
 
 Przechowywany obiekt definiuje funkcję członkowską:
 
-**operator bool**( **const Key &** *_xVal,* **const Key &** _ `yVal`);
+`bool operator<(const Key& _xVal, const Key& _yVal);`
 
 zwraca **wartość true** , jeśli `_xVal` poprzedza i nie jest równa `_yVal` w kolejności sortowania.
 
