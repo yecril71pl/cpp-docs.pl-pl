@@ -1,22 +1,22 @@
 ---
 title: Pliki prekompilowanego nagłówka
-ms.date: 08/19/2019
+ms.date: 10/24/2019
 helpviewer_keywords:
 - precompiled header files, creating
 - PCH files, creating
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 273d8cf996c2717339dd20dcbc7512f9c62afa8d
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 071839df431071a7d8921d1b445094f886ad38e2
+ms.sourcegitcommit: 33a898bf976c65f998b4e88a84765a0cef4193a8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69630490"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920107"
 ---
 # <a name="precompiled-header-files"></a>Pliki prekompilowanego nagłówka
 
-Podczas tworzenia nowego projektu w programie Visual Studio do projektu zostanie dodany *prekompilowany plik nagłówkowy* o nazwie *PCH. h* . (W programie Visual Studio 2017 i starszych plik miał nazwę *stdafx. h*). Celem pliku jest przyspieszenie procesu kompilacji. Wszystkie stabilne pliki nagłówkowe, na przykład nagłówki biblioteki standardowej, `<vector>`takie jak, powinny być zawarte w tym miejscu. Prekompilowany nagłówek jest kompilowany tylko wtedy, gdy jest lub wszystkie pliki, które zawiera, są modyfikowane. Jeśli wprowadzasz tylko zmiany w kodzie źródłowym projektu, kompilacja pominie kompilację dla prekompilowanego nagłówka. 
+Podczas tworzenia nowego projektu w programie Visual Studio do projektu zostanie dodany *prekompilowany plik nagłówkowy* o nazwie *PCH. h* . (W programie Visual Studio 2017 i starszych plik miał nazwę *stdafx. h*). Celem pliku jest przyspieszenie procesu kompilacji. Wszystkie pliki z stabilnymi nagłówkami, na przykład nagłówki biblioteki standardowej, takie jak `<vector>`, powinny być zawarte w tym miejscu. Prekompilowany nagłówek jest kompilowany tylko wtedy, gdy jest lub wszystkie pliki, które zawiera, są modyfikowane. Jeśli wprowadzasz tylko zmiany w kodzie źródłowym projektu, kompilacja pominie kompilację dla prekompilowanego nagłówka. 
 
 Opcje kompilatora dla prekompilowanych nagłówków to [/y](reference/y-precompiled-headers.md). Na stronach właściwości projektu opcje znajdują się w obszarze **Właściwości konfiguracji > C/C++ > prekompilowane nagłówki**. Można zrezygnować z używania prekompilowanych nagłówków i określić nazwę pliku nagłówka oraz nazwę i ścieżkę pliku wyjściowego. 
 
@@ -87,7 +87,7 @@ W przypadku określenia opcji Użyj prekompilowanego pliku nagłówkowego (/Yu) 
 
 ### <a name="pragma-consistency"></a>Spójności dyrektywy pragma
 
-Dyrektywy pragma przetwarzane podczas tworzenia pliku PCH zwykle wpływają na plik, z którego następnie jest używany plik PCH. Dyrektywy `comment` i`message` nie wpływają na resztę kompilacji.
+Dyrektywy pragma przetwarzane podczas tworzenia pliku PCH zwykle wpływają na plik, z którego następnie jest używany plik PCH. `comment` i `message` pragma nie wpływają na resztę kompilacji.
 
 Te dyrektywy pragma wpływają tylko na kod w pliku PCH; nie mają one wpływu na kod, który następnie używa pliku PCH:
 
@@ -118,7 +118,7 @@ Ta tabela zawiera listę opcji kompilatora, które mogą wyzwolić ostrzeżenie 
 
 |Opcja|Nazwa|Reguła|
 |------------|----------|----------|
-|/D|Definiowanie stałych i makr|Musi być taka sama między kompilacją, która utworzyła prekompilowany nagłówek i bieżącą kompilację. Stan zdefiniowanych stałych nie jest zaznaczony, ale mogą wystąpić nieprzewidywalne wyniki, jeśli pliki są zależne od wartości zmienionych stałych.|
+|Parametr|Definiowanie stałych i makr|Musi być taka sama między kompilacją, która utworzyła prekompilowany nagłówek i bieżącą kompilację. Stan zdefiniowanych stałych nie jest zaznaczony, ale mogą wystąpić nieprzewidywalne wyniki, jeśli pliki są zależne od wartości zmienionych stałych.|
 |/E lub/EP|Kopiuj dane wyjściowe preprocesora do wyjścia standardowego|Prekompilowane nagłówki nie działają z opcją/E lub/EP.|
 |/Fr lub/FR|Generuj informacje o przeglądarce Microsoft Source|Aby opcje/fr i/FR były prawidłowe dla opcji/Yu, muszą one być stosowane podczas tworzenia prekompilowanego nagłówka. Kolejne kompilacje, które używają prekompilowanego nagłówka, również generują informacje o przeglądarce źródłowej. Informacje o przeglądarce są umieszczane w jednym pliku. sbr i są odwołujące się do innych plików w taki sam sposób, jak informacje CodeView. Nie można zastąpić umieszczania informacji w przeglądarce źródłowej.|
 |/GA,/GD,/GE,/GW lub/GW|Opcje protokołu systemu Windows|Musi być taka sama między kompilacją, która utworzyła prekompilowany nagłówek i bieżącą kompilację. Jeśli te opcje różnią się, zostanie wyświetlony komunikat ostrzegawczy.|
@@ -179,9 +179,9 @@ UNSTABLEHDRS = unstable.h
 CLFLAGS = /c /W3
 # List all linker options common to both debug and final
 # versions of your code here:
-LINKFLAGS = /NOD /ONERROR:NOEXE
+LINKFLAGS = /nologo
 !IF "$(DEBUG)" == "1"
-CLFLAGS   = /D_DEBUG $(CLFLAGS) /Od /Zi /f
+CLFLAGS   = /D_DEBUG $(CLFLAGS) /Od /Zi
 LINKFLAGS = $(LINKFLAGS) /COD
 LIBS      = slibce
 !ELSE
@@ -257,7 +257,7 @@ void savetime( void );
 //
 #ifndef __UNSTABLE_H
 #define __UNSTABLE_H
-#include<iostream.h>
+#include<iostream>
 void notstable( void );
 #endif // __UNSTABLE_H
 ```
@@ -270,6 +270,7 @@ void notstable( void );
 #include"another.h"
 #include"stable.h"
 #include"unstable.h"
+using namespace std;
 // The following code represents code that is deemed stable and
 // not likely to change. The associated interface code is
 // precompiled. In this example, the header files STABLE.H and
