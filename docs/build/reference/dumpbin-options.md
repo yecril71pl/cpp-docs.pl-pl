@@ -1,23 +1,25 @@
 ---
 title: Opcje DUMPBIN
-ms.date: 11/04/2016
+ms.date: 10/24/2019
 f1_keywords:
 - dumpbin
 helpviewer_keywords:
 - DUMPBIN program, options
 ms.assetid: 563b696e-7599-4480-94b9-014776289ec8
-ms.openlocfilehash: 655087236e3e4644c6215da2adccd9755c767b77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81c66f1971294531a2904a0b681819476bcc1eb2
+ms.sourcegitcommit: 6ed1bc5b26dc60a780c1fc5f2f19d57ba1dc47d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272744"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73144557"
 ---
 # <a name="dumpbin-options"></a>Opcje DUMPBIN
 
-Opcja składa się z specyfikator opcji kreski (-) lub ukośnikiem (/), następuje nazwa opcji. Nie należy skracać nazwy opcji. Niektóre opcje przyjmują argumentów, określone po dwukropek (:). Nie spacje lub tabulatory są dozwolone w obrębie Specyfikacja opcji. Użyj miejsc do magazynowania lub karty do oddzielenia specyfikacje opcji w wierszu polecenia. Opcja nazwy i ich argumenty nazwy pliku lub słowo kluczowe nie są z uwzględnieniem wielkości liter. Większość opcje mają zastosowanie do wszystkich plików binarnych; kilka mają zastosowanie tylko do niektórych typów plików. Domyślnie DUMPBIN wysyła informacje do wyjścia standardowego. Użyj [/OUT](out-dumpbin.md) opcję, aby wysłać dane wyjściowe do pliku.
+Opcja składa się ze *specyfikatora opcji*, który jest kreską (`-`) lub ukośnikiem (`/`), po którym następuje nazwa opcji. Nazwy opcji nie mogą być skracane. Niektóre opcje przyjmują argumenty, określone po dwukropku (`:`). W specyfikacji opcji nie można używać spacji ani tabulatorów. Użyj co najmniej jednej spacji lub kart, aby oddzielić specyfikacje opcji w wierszu polecenia. Nazwy opcji i ich słowa kluczowego lub nazwy pliku nie są rozróżniane wielkości liter. Większość opcji stosuje się do wszystkich plików binarnych, ale tylko dla niektórych typów plików. Domyślnie polecenia DUMPBIN wysyła informacje do wyjścia standardowego. Użyj opcji [/out](out-dumpbin.md) , aby wysłać dane wyjściowe do pliku.
 
-DUMPBIN ma następujące opcje:
+## <a name="options-list"></a>Lista opcji
+
+POLECENIA DUMPBIN z następującymi opcjami:
 
 - [/ALL](all.md)
 
@@ -29,9 +31,9 @@ DUMPBIN ma następujące opcje:
 
 - [/DIRECTIVES](directives.md)
 
-- [/DISASM](disasm.md)
+- [Opcja/DISASM\[: {BAJTy\|nobytes}\]](disasm.md)
 
-- [/ERRORREPORT (dumpbin.exe)](errorreport-dumpbin-exe.md)
+- [/ERRORREPORT: {NONE | MONITUJ | KOLEJka | WYŚL](errorreport-dumpbin-exe.md)
 
 - [/EXPORTS](dash-exports.md)
 
@@ -39,27 +41,29 @@ DUMPBIN ma następujące opcje:
 
 - [/HEADERS](headers.md)
 
-- [/IMPORTS](imports-dumpbin.md)
+- [/IMPORTS —\[: filename\]](imports-dumpbin.md)
 
 - [/LINENUMBERS](linenumbers.md)
 
-- [/LINKERMEMBER](linkermember.md)
+- [/LINKERMEMBER\[: {1 | 2}\]](linkermember.md)
 
 - [/LOADCONFIG](loadconfig.md)
 
-- [/ OUT](out-dumpbin.md)
+- [/NOPDB](nopdb.md)
+
+- [/OUT: filename](out-dumpbin.md)
 
 - [/PDATA](pdata.md)
 
-- [/PDBPATH](pdbpath.md)
+- [/PDBPATH\[: verbose\]](pdbpath.md)
 
-- [/RANGE](range.md)
+- [/RANGEE: vaMin\[, vaMax\]](range.md)
 
-- [/RAWDATA](rawdata.md)
+- [/RAWDATA\[: {NONE\|1\|2\|4\|8}\[, #\]\]](rawdata.md)
 
 - [/RELOCATIONS](relocations.md)
 
-- [/ SECTION](section-dumpbin.md)
+- [/SECTION: Nazwa](section-dumpbin.md)
 
 - [/SUMMARY](summary.md)
 
@@ -67,7 +71,10 @@ DUMPBIN ma następujące opcje:
 
 - [/TLS](tls.md)
 
+Aby wyświetlić listę opcji obsługiwanych przez polecenia DUMPBIN w wierszu polecenia, użyj **/?** zaznaczyć.
+
 ## <a name="see-also"></a>Zobacz także
 
-[MSVC dodatkowe narzędzia do kompilacji](c-cpp-build-tools.md)<br/>
-[DUMPBIN — dokumentacja](dumpbin-reference.md)
+[Dodatkowe\ narzędzia kompilacji MSVC](c-cpp-build-tools.md)
+\ [wiersza polecenia polecenia DUMPBIN](dumpbin-command-line.md)
+[Odwołanie polecenia DUMPBIN](dumpbin-reference.md)
