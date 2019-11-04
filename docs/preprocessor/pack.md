@@ -21,20 +21,20 @@ Określa wyrównanie pakowania dla elementów członkowskich struktury, Unii i k
 
 ## <a name="syntax"></a>Składnia
 
-> **Pakiet #pragma (Pokaż)** \
-> **#pragma Pack (wypychanie** [ **,** *Identyfikator* ] [ **,** *n* ] **)** \
-> **#pragma Pack (pop** [ **,** { *Identyfikator* | *n* }] **)** \
-> **pakiet #pragma (** [ *n* ] **)**
+> **#pragma pack( show )** \
+> **#pragma pack ( push** [ **,** *Identyfikator* ] [ **,** *n* ] **)** \
+> **#pragma Pack ( pop** [ **,** { *Identyfikator* | *n* }] **)** \
+> **#pragma pack(** [ *n* ] **)**
 
 ### <a name="parameters"></a>Parametry
 
-**wskazują**\
+**show**\
 Obowiązkowe Wyświetla bieżącą wartość bajtu na potrzeby wyrównania pakowania. Wartość jest wyświetlana przez komunikat ostrzegawczy.
 
-**wydajności**\
+**push**\
 Obowiązkowe Wypycha bieżącą wartość wyrównania pakowania na wewnętrznym stosie kompilatora i ustawia bieżącą wartość wyrównania pakowania na *n*. Jeśli *n* nie jest określony, bieżąca wartość wyrównania pakowania jest wypchnięcia.
 
-**skakując**\
+**pop**\
 Obowiązkowe Usuwa rekord z góry wewnętrznego stosu kompilatora. Jeśli *n* nie jest określony za pomocą **pop**, wartość pakowania skojarzona z rekordem wyjściowym w górnej części stosu jest nową wartością wyrównania. Jeśli *n* jest określony, na przykład `#pragma pack(pop, 16)`, *n* zmienia wartość nowej wartości wyrównania. Jeśli używasz *identyfikatora*, na przykład `#pragma pack(pop, r1)`, wszystkie rekordy na stosie są zdjęte do momentu znalezienia rekordu o *identyfikatorze* . Ten rekord to zdjęte, a wartość pakowania skojarzona z rekordem wyjściowym w górnej części stosu jest nową wartością wyrównania. Jeśli używasz *identyfikatora* , który nie został znaleziony w żadnym rekordzie na stosie, zostanie on zignorowany.
 
 *identyfikatora*\
