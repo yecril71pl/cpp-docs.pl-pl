@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4485
 ms.assetid: a6f2b437-ca93-4dcd-b9cb-df415e10df86
-ms.openlocfilehash: b5afb829485e0e9533a14e818e6d6785f268a83b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 896fca6c6b257c90ccdf813a9c6cb6bc27ad9e96
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311326"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623614"
 ---
 # <a name="compiler-warning-c4485"></a>Ostrzeżenie kompilatora C4485
 
-"override_function": odpowiada metodzie bazowej klasy referencyjnej "base_class_function", ale nie jest oznaczona "new" ani "override"; przyjęto "new" (i "virtual")
+"override_function": pasuje do metody bazowej klasy referencyjnej "base_class_function", ale nie jest oznaczona modyfikatorem "New" ani "override"; Założono modyfikator "New" (i "Virtual")
 
-Zastępuje metodę dostępu, z lub bez `virtual` — słowo kluczowe, funkcja dostępu klasy bazowej, ale `override` lub `new` specyfikator nie jest częścią nadrzędnych sygnatura funkcji. Dodaj `new` lub `override` specyfikator w celu rozwiązania tego ostrzeżenia.
+Metoda dostępu zastępuje, przy użyciu słowa kluczowego `virtual` lub bez niego, funkcja akcesora klasy bazowej, ale specyfikator `override` lub `new` nie był częścią zastępujący sygnatury funkcji. Dodaj specyfikator `new` lub `override`, aby rozwiązać to ostrzeżenie.
 
-Zobacz [zastąpienia](../../extensions/override-cpp-component-extensions.md) i [new (nowe gniazdo w vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md) Aby uzyskać więcej informacji.
+Aby uzyskać więcej informacji, zobacz [przesłonięcie](../../extensions/override-cpp-component-extensions.md) i [nowe (nowe miejsce w tabeli tablic wirtualnych)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md) .
 
-C4485 zawsze jest wystawiany jako błąd. Użyj [ostrzeżenie](../../preprocessor/warning.md) pragma może pominąć C4485.
+C4485 jest zawsze wystawiony jako błąd. Użyj [ostrzeżenia](../../preprocessor/warning.md) pragma, aby pominąć C4485.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4485
+Poniższy przykład generuje C4485
 
-```
+```cpp
 // C4485.cpp
 // compile with: /clr
 delegate void Del();
