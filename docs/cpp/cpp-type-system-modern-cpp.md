@@ -70,7 +70,7 @@ Poniższa tabela wymienia najczęściej używane typy podstawowe:
 |bool|1 bajt|Przedstawia wartości, które mogą być prawdziwe lub fałszywe.|
 |char|1 bajt|Używaj dla znaków ASCII w starszych ciągach typu C lub obiektach std::string, które nigdy nie będą musiały zostać skonwertowane na UNICODE.|
 |wchar_t|2 bajty|Przedstawia wartości znaku „szerokiego”, które mogą być zakodowane w formacie UNICODE (UTF-16 w systemie Windows, inne systemy operacyjne mogą się różnić). Jest to typ znaku używany w ciągach typu `std::wstring`.|
-|&nbsp;char bez znaku|1 bajt|C++nie ma wbudowanego typu `byte`.  Używaj unsigned char, aby reprezentować wartość bajtową.|
+|unsigned&nbsp;char|1 bajt|C++nie ma wbudowanego typu `byte`.  Używaj unsigned char, aby reprezentować wartość bajtową.|
 |unsigned int|4 bajty|Wybór domyślny dla flag bitowych.|
 |long long|8 bajtów|Przedstawia bardzo duże wartości całkowitoliczbowe.|
 
