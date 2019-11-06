@@ -42,16 +42,16 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-ms.openlocfilehash: f8d461566f748ce5af3d4b2aab443b5966c27dd7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 74caba0398fdb5cdd0f9c80270a42d2903200a5d
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958151"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625808"
 ---
 # <a name="strerror_s-_strerror_s-_wcserror_s-__wcserror_s"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 
-Pobierz systemowy komunikat o błędzie (**strerror_s**, **_wcserror_s**) lub wydrukuj komunikat o błędzie dostarczony przez użytkownika ( **_strerror_s**, **__wcserror_s**). Są to wersje [strerror, _strerror, \__wcserror, _wcserror](strerror-strerror-wcserror-wcserror.md) z ulepszeniami zabezpieczeń, jak opisano w [funkcjach zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Pobierz systemowy komunikat o błędzie (**strerror_s**, **_wcserror_s**) lub wydrukuj komunikat o błędzie dostarczony przez użytkownika ( **_strerror_s**, **__wcserror_s**). Są to wersje [strerror, _strerror, _wcserror, \__wcserror](strerror-strerror-wcserror-wcserror.md) z ulepszeniami zabezpieczeń, jak opisano w [funkcjach zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -100,7 +100,7 @@ errno_t __wcserror_s(
 
 ### <a name="parameters"></a>Parametry
 
-*buffer*<br/>
+*buforu*<br/>
 Bufor do przechowywania ciągu błędu.
 
 *numberOfElements*<br/>
@@ -118,14 +118,14 @@ Zero, jeśli to się powiedzie, kod błędu w przypadku niepowodzenia.
 
 ### <a name="error-condtions"></a>Warunki błędów
 
-|*buffer*|*numberOfElements*|*strErrMsg*|Zawartość *buforu*|
+|*buforu*|*numberOfElements*|*strErrMsg*|Zawartość *buforu*|
 |--------------|------------------------|-----------------|--------------------------|
 |**NULL**|Ile|Ile|n/d|
 |Ile|0|Ile|nie zmodyfikowano|
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **strerror_s** mapuje *errnum* na ciąg komunikatu o błędzie, zwracając ciąg w *buforze*. **_strerror_s** nie przyjmuje numeru błędu; używa ona bieżącej wartości **errno** , aby określić odpowiedni komunikat. Nie **strerror_s** ani **_strerror_s** rzeczywiście drukuje komunikat: W tym celu należy wywołać funkcję wyjściową, taką jak [fprintf —](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
+Funkcja **strerror_s** mapuje *errnum* na ciąg komunikatu o błędzie, zwracając ciąg w *buforze*. **_strerror_s** nie przyjmuje numeru błędu; używa ona bieżącej wartości **errno** , aby określić odpowiedni komunikat. Nie **strerror_s** ani **_strerror_s** faktycznie drukuje komunikat: dla tego elementu należy wywołać funkcję wyjściową, taką jak [fprintf —](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
 ```C
 if (( _access( "datafile",2 )) == -1 )
@@ -149,7 +149,7 @@ Te funkcje sprawdzają poprawność swoich parametrów. Jeśli bufor ma **warto�
 
 W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu, eliminując konieczność określenia argumentu rozmiaru. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
-Wersje debugowania tych funkcji najpierw wypełniają bufor 0xFD. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -161,8 +161,8 @@ Wersje debugowania tych funkcji najpierw wypełniają bufor 0xFD. Aby wyłączy�
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strerror_s**, **_strerror_s**|\<string.h>|
-|**_wcserror_s**, **__wcserror_s**|\<ciąg. h > lub \<WCHAR. h >|
+|**strerror_s**, **_strerror_s**|\<string. h >|
+|**_wcserror_s**, **__wcserror_s**|\<String. h > lub \<WCHAR. h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

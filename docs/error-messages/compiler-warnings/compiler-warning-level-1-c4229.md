@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4229
+title: Ostrzeżenie kompilatora (poziom 1) C4229
 ms.date: 11/04/2016
 f1_keywords:
 - C4229
 helpviewer_keywords:
 - C4229
 ms.assetid: aadfc83b-1e5f-4229-bd0a-9c10a5d13182
-ms.openlocfilehash: 05d11a02d3aea8748a2955dff77a0af750ee0275
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d2372275da02a7c3bbde6c8bf044c621c5d3d09
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207509"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624929"
 ---
-# <a name="compiler-warning-level-1-c4229"></a>Kompilator ostrzeżenie (poziom 1) C4229
+# <a name="compiler-warning-level-1-c4229"></a>Ostrzeżenie kompilatora (poziom 1) C4229
 
-użyto konstrukcji przestarzałej: Modyfikatory dla danych są ignorowane.
+anachronizm: Modyfikatory dla danych są ignorowane
 
-Przy użyciu modyfikatora firmy Microsoft, takich jak `__cdecl` danych w deklaracji jest nieaktualny.
+Używanie modyfikatora Microsoft, takiego jak `__cdecl` na deklaracji danych, jest nieaktualnym postępowaniem.
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // C4229.cpp
 // compile with: /W1 /LD
 int __cdecl counter;   // C4229 cdecl ignored

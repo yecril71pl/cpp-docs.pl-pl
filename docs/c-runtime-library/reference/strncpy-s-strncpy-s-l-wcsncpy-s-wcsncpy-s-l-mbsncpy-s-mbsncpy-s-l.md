@@ -49,12 +49,12 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-ms.openlocfilehash: 196a3aac09db790da6b8137029383cca77c3d2ad
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2ccfde34d12dadb76bc8b4058a3f9b52c3d1f4bc
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947274"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626149"
 ---
 # <a name="strncpy_s-_strncpy_s_l-wcsncpy_s-_wcsncpy_s_l-_mbsncpy_s-_mbsncpy_s_l"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 
@@ -172,9 +172,9 @@ Zero, jeśli zakończyło się pomyślnie, **STRUNCATE** Jeśli wystąpiło obci
 |*strDest*|*numberOfElements*|*strSource*|Wartość zwracana|Zawartość *strDest*|
 |---------------|------------------------|-----------------|------------------|---------------------------|
 |**NULL**|Ile|Ile|**EINVAL**|nie zmodyfikowano|
-|Ile|Ile|**NULL**|**EINVAL**|*strDest* [0] ustaw wartość 0|
+|Ile|Ile|**NULL**|**EINVAL**|*strDest*[0] ustaw na 0|
 |Ile|0|Ile|**EINVAL**|nie zmodyfikowano|
-|Nie **ma wartości null**|za mały|Ile|**ERANGE**|*strDest* [0] ustaw wartość 0|
+|Nie **ma wartości null**|za mały|Ile|**ERANGE**|*strDest*[0] ustaw na 0|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -210,7 +210,7 @@ Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawie�
 
 W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując konieczność określenia argumentu rozmiaru) i mogą automatycznie zastąpić starsze, niezabezpieczone funkcje z ich nowszymi, bezpiecznymi odpowiednikami. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
-Wersje debugowania tych funkcji najpierw wypełniają bufor 0xFD. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -226,9 +226,9 @@ Wersje debugowania tych funkcji najpierw wypełniają bufor 0xFD. Aby wyłączy�
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strncpy_s**, **_strncpy_s_l**|\<string.h>|
-|**wcsncpy_s**, **_wcsncpy_s_l**|\<ciąg. h > lub \<WCHAR. h >|
-|**_mbsncpy_s**, **_mbsncpy_s_l**|\<mbstring.h>|
+|**strncpy_s**, **_strncpy_s_l**|\<string. h >|
+|**wcsncpy_s**, **_wcsncpy_s_l**|\<String. h > lub \<WCHAR. h >|
+|**_mbsncpy_s**, **_mbsncpy_s_l**|\<mbstring. h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

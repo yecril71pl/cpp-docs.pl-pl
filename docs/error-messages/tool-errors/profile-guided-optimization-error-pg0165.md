@@ -1,22 +1,27 @@
 ---
-title: Błąd optymalizacji sterowanej profilem PG0165
-ms.date: 11/04/2016
+title: Błąd optymalizacji opartej na profilach PG0165
+description: Opisuje błędy PG0165 podczas odczytywania danych optymalizacji opartej na profilach (PGO).
+ms.date: 10/30/2019
 f1_keywords:
 - PG0165
 helpviewer_keywords:
 - PG0165
 ms.assetid: e98122e7-ddee-4a2c-96b2-d232e4c65f3e
-ms.openlocfilehash: f39bbe6540ebec10cd25c41ac2fe9f2acfca9b13
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c5e5c5d37f8c70a6c2a3d9f7a43c13bb46d0e25a
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359738"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626802"
 ---
-# <a name="profile-guided-optimization-error-pg0165"></a>Błąd optymalizacji sterowanej profilem PG0165
+# <a name="profile-guided-optimization-error-pg0165"></a>Błąd optymalizacji opartej na profilach PG0165
 
-Odczytywanie "Filename.pgd": "Nie jest obsługiwana wersja pliku PGD (niezgodność wersji)".
+Wystąpił błąd podczas odczytywania danych optymalizacji z przewodnikiem. Ten błąd może pojawić się w kilku formach:
 
-Pliki PGD są specyficzne dla kompilatora określonego zestawu narzędzi. Ten błąd jest generowany, gdy używasz innego kompilatora niż ten używany do *Filename*.pgd. Ten błąd wskazuje, że ten zestaw narzędzi kompilatora nie mogą używać danych z *Filename*.pgd do optymalizacji bieżącego programu.
+> Odczytywanie*pliku "filename. PGD*": "wersja PGD nie jest obsługiwana (niezgodność wersji)".
 
-Aby rozwiązać ten problem, należy ponownie wygenerować *Filename*.pgd przy użyciu bieżącego zestawu narzędzi kompilatora.
+Pliki PGD są specyficzne dla określonego zestawu narzędzi kompilatora. Ten błąd jest generowany, gdy używasz innego kompilatora niż ten, który został użyty do utworzenia *pliku filename. PGD*. Błąd oznacza, że ten zestaw narzędzi kompilatora nie może użyć danych z *pliku filename. PGD* do optymalizacji bieżącego programu. Aby rozwiązać ten problem, należy ponownie wygenerować *plik NazwaPliku*. PGD przy użyciu bieżącego zestawu narzędzi kompilatora.
+
+> Odczytywanie pliku "*filename. PGD*": "plik PGD jest tylko do odczytu".
+
+Ten błąd jest wyświetlany, gdy plik PGD jest oznaczony jako tylko do odczytu w systemie plików. Aby rozwiązać ten problem, Zmień atrybuty pliku na odczyt i zapis.

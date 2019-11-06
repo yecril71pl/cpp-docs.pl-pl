@@ -28,12 +28,12 @@ helpviewer_keywords:
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-ms.openlocfilehash: c50200d16a5e542c247d1c85f8c104381af4a883
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a37508c293ee72934a8580f822878f27031b864b
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937715"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624386"
 ---
 # <a name="_ecvt_s"></a>_ecvt_s
 
@@ -91,7 +91,7 @@ W przypadku nieprawidłowego parametru, jak wymieniono w poniższej tabeli, ta f
 |*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|Wartość zwracana|Wartość w *buforze*|
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|
 |**NULL**|Ile|Ile|Ile|Ile|Ile|**EINVAL**|Nie zmodyfikowano.|
-|Nie **ma wartości null** (wskazuje na prawidłową pamięć)|<=0|Ile|Ile|Ile|Ile|**EINVAL**|Nie zmodyfikowano.|
+|Nie **ma wartości null** (wskazuje na prawidłową pamięć)|< = 0|Ile|Ile|Ile|Ile|**EINVAL**|Nie zmodyfikowano.|
 |Ile|Ile|Ile|Ile|**NULL**|Ile|**EINVAL**|Nie zmodyfikowano.|
 |Ile|Ile|Ile|Ile|Ile|**NULL**|**EINVAL**|Nie zmodyfikowano.|
 
@@ -111,13 +111,13 @@ Różnica między **_ecvt_s** i **_fcvt_s** jest interpretacją parametru *_Coun
 
 W C++programie korzystanie z tej funkcji jest uproszczone przez Przeciążenie szablonu; Przeciążenie może automatycznie wywnioskować długość buforu, eliminując konieczność określenia argumentu rozmiaru. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
-Wersja do debugowania tej funkcji najpierw wypełnia bufor 0xFD. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Wersja do debugowania tej funkcji najpierw wypełnia bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|Opcjonalny nagłówek|
 |--------------|---------------------|---------------------|
-|**_ecvt_s**|\<stdlib.h>|\<errno.h>|
+|**_ecvt_s**|\<STDLIB. h >|\<errno. h >|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

@@ -1,42 +1,42 @@
 ---
-title: Informacje o konfiguracji narzędzia CMake wstępnie zdefiniowane
+title: CMake wstępnie zdefiniowanej konfiguracji
 ms.description: Visual Studio provides several predefined build configurations for CMake projects on Linux, Windows, ARM, and IoT.
 ms.date: 06/12/2019
 helpviewer_keywords:
 - CMake redefined configurations
-ms.openlocfilehash: a4d92984d9ecff5afb3c5df08df0933ef3be25e6
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: 3988c5f062c1f30886dbaa4bca8502e2bd841dfc
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042656"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624741"
 ---
-# <a name="cmake-predefined-build-configurations"></a>Konfiguracje kompilacji CMake wstępnie zdefiniowane
+# <a name="cmake-predefined-build-configurations"></a>CMake wstępnie zdefiniowanych konfiguracji kompilacji
 
 ::: moniker range="vs-2015"
 
-Projekty CMake są obsługiwane w programie Visual Studio 2017 i nowszych wersjach.
+Projekty CMake są obsługiwane w programie Visual Studio 2017 i nowszych.
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range=">=vs-2017"
 
-W projekcie programu CMake konfiguracje kompilacji są przechowywane w pliku CMakeSettings.json. Po wybraniu **Zarządzanie konfiguracjami** z listy rozwijanej konfiguracji kompilacji na głównym pasku narzędzi, okno dialogowe zostanie wyświetlone domyślne konfiguracji narzędzia CMake dostępnych w programie Visual Studio:
-- x86 Debug
-- Zwolnij x86
-- x64 Debug
-- Zwolnij x64
-- Linux-Debug
-- Linux-Release
+W projekcie CMake konfiguracje kompilacji są przechowywane w pliku pliku cmakesettings. JSON. Po wybraniu opcji **Zarządzaj konfiguracjami** na liście rozwijanej konfiguracja kompilacji na głównym pasku narzędzi zostanie wyświetlone okno dialogowe, w którym są wyświetlane domyślne konfiguracje CMAKE dostępne w programie Visual Studio:
+- Debugowanie x86
+- Wersja x86
+- Debugowanie x64
+- Wersja x64
+- Linux — debugowanie
+- Linux — wydanie
 - Debugowanie IoT
-- Wersja IoT
-- MinGW debugowania
-- Wersja środowiska MinGW
+- Wydanie IoT
+- Debuguj MinGW
+- Wersja MinGW
 
-W przypadku wybrania konfiguracji, jest dodawany w pliku CMakeSettings.json w folderze głównym projektu. Można następnie użyć do kompilowania projektu.
+Po wybraniu konfiguracji jest ona dodawana do pliku *pliku cmakesettings. JSON* w folderze głównym projektu. Można następnie użyć go do skompilowania projektu. Aby uzyskać informacje o właściwościach konfiguracji, zobacz [pliku cmakesettings Reference](cmakesettings-reference.md).
 
 
-## <a name="linux-predefined-build-configurations"></a>Linux wstępnie zdefiniowane konfiguracje kompilacji:
+## <a name="linux-predefined-build-configurations"></a>Wstępnie zdefiniowane konfiguracje kompilacji systemu Linux:
 
 ```json
 {
@@ -109,9 +109,9 @@ You can use these optional settings for more control:
 }
 ```
 
-Te opcje umożliwiają uruchamianie poleceń w systemie zdalnym, przed i po kompilacji, a przed generowania narzędzia CMake. Te wartości mogą być dowolnego polecenia, który jest prawidłowy w systemie zdalnym. Dane wyjściowe w potoku do programu Visual Studio.
+Te opcje umożliwiają uruchamianie poleceń w systemie zdalnym przed i po skompilowaniu oraz przed CMake generacji. Wartości mogą być dowolnym poleceniem, które jest prawidłowe w systemie zdalnym. Dane wyjściowe są przekazywane z powrotem do programu Visual Studio.
 
-## <a name="iot-predefined-build-configurations"></a>IoT wstępnie zdefiniowane konfiguracje kompilacji
+## <a name="iot-predefined-build-configurations"></a>Wstępnie zdefiniowane konfiguracje kompilacji IoT
 
 ```json
 {
@@ -204,7 +204,7 @@ Te opcje umożliwiają uruchamianie poleceń w systemie zdalnym, przed i po komp
     }
 ```
 
-## <a name="mingw-predefined-build-configurations"></a>MinGW wstępnie zdefiniowane konfiguracje kompilacji
+## <a name="mingw-predefined-build-configurations"></a>MinGW wstępnie zdefiniowanych konfiguracji kompilacji
 
 ```json
 {
@@ -280,7 +280,7 @@ Te opcje umożliwiają uruchamianie poleceń w systemie zdalnym, przed i po komp
     }
 ```
 
-## <a name="x86-64-predefined-build-configurations"></a>x86-64, wstępnie zdefiniowane konfiguracje kompilacji
+## <a name="x86-64-predefined-build-configurations"></a>wstępnie zdefiniowane konfiguracje kompilacji x86-64
 
 ```json
     {
@@ -355,31 +355,31 @@ Te opcje umożliwiają uruchamianie poleceń w systemie zdalnym, przed i po komp
 
 ::: moniker range="vs-2019"
 
-W projekcie programu CMake konfiguracje kompilacji są przechowywane w pliku CMakeSettings.json. Po wybraniu **Zarządzanie konfiguracjami** z listy rozwijanej konfiguracji kompilacji na głównym pasku narzędzi, okno dialogowe zostanie wyświetlone domyślne konfiguracji narzędzia CMake dostępnych w programie Visual Studio:
+W projekcie CMake konfiguracje kompilacji są przechowywane w pliku pliku cmakesettings. JSON. Po wybraniu opcji **Zarządzaj konfiguracjami** na liście rozwijanej konfiguracja kompilacji na głównym pasku narzędzi zostanie wyświetlone okno dialogowe, w którym są wyświetlane domyślne konfiguracje CMAKE dostępne w programie Visual Studio:
 
-- x86 Debug
-- x86 Clang Debug
-- Zwolnij x86
-- clang x86 wydania
-- x64 Debug
-- x64 Clang Debug
-- Zwolnij x64
-- clang x64 wydania
-- Linux-Debug
-- Linux-Release
-- Linux-Clang-Debug
-- Linux-Clang-Release
-- Istniejąca pamięć podręczna (zdalne)
+- Debugowanie x86
+- Debuguj Clang x86
+- Wersja x86
+- Wersja x86 Clang
+- Debugowanie x64
+- Clang debugowanie x64
+- Wersja x64
+- Wersja x64 Clang
+- Linux — debugowanie
+- Linux — wydanie
+- Linux — Clang — Debuguj
+- Linux — Clang — wydanie
+- Istniejąca pamięć podręczna (zdalna)
 - Istniejąca pamięć podręczna
-- MinGW debugowania
-- Wersja środowiska MinGW
-- WSL Debug
+- Debuguj MinGW
+- Wersja MinGW
+- Debuguj WSL
 - Wersja WSL
-- WSL Clang Debug
-- Wersja Clang WSL
+- Debugowanie WSL Clang
+- WSL Clang, wersja
 - Clang
 
-W przypadku wybrania konfiguracji, jest dodawany w pliku CMakeSettings.json w folderze głównym projektu. Można następnie użyć do kompilowania projektu.
+Po wybraniu konfiguracji jest ona dodawana do pliku pliku cmakesettings. JSON w folderze głównym projektu. Można następnie użyć go do skompilowania projektu.
 
 
 ```json
@@ -697,9 +697,9 @@ W przypadku wybrania konfiguracji, jest dodawany w pliku CMakeSettings.json w fo
 ::: moniker-end
 ## <a name="see-also"></a>Zobacz także
 
-[Projekty CMake w programie Visual Studio](cmake-projects-in-visual-studio.md)<br/>
+[CMake projekty w programie Visual Studio](cmake-projects-in-visual-studio.md)<br/>
 [Konfigurowanie projektu CMake systemu Linux](../linux/cmake-linux-project.md)<br/>
 [Nawiązywanie połączenia ze zdalnym komputerem z systemem Linux](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [Konfigurowanie sesji debugowania narzędzia CMake](configure-cmake-debugging-sessions.md)<br/>
 [Wdrażanie, uruchamianie i debugowanie projektu systemu Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
-[Informacje o konfiguracji narzędzia CMake wstępnie zdefiniowane](cmake-predefined-configuration-reference.md)<br/>
+[CMake wstępnie zdefiniowanej konfiguracji](cmake-predefined-configuration-reference.md)<br/>

@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4075
+title: Ostrzeżenie kompilatora (poziom 1) C4075
 ms.date: 11/04/2016
 f1_keywords:
 - C4075
 helpviewer_keywords:
 - C4075
 ms.assetid: 19a700b6-f210-4b9d-a2f2-76cfe39ab178
-ms.openlocfilehash: f739e0363cc08d31bd26b063ef13658a392398bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4181059a406d85514c3941ed2856d9e95673957
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208019"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626952"
 ---
-# <a name="compiler-warning-level-1-c4075"></a>Kompilator ostrzeżenie (poziom 1) C4075
+# <a name="compiler-warning-level-1-c4075"></a>Ostrzeżenie kompilatora (poziom 1) C4075
 
-Inicjatory umieszczono w nierozpoznanym obszarze inicjalizacyjnym
+inicjatory są umieszczane w nierozpoznanym obszarze inicjalizacji
 
-A [#pragma init_seg](../../preprocessor/init-seg.md) używa nazwy sekcji nierozpoznany. Kompilator ignoruje **pragma** polecenia.
+[#Pragma init_seg](../../preprocessor/init-seg.md) używa nierozpoznanej nazwy sekcji. Kompilator ignoruje polecenie **pragma** .
 
-Poniższy przykład spowoduje wygenerowanie C4075:
+Poniższy przykład generuje C4075:
 
-```
+```cpp
 // C4075.cpp
 // compile with: /W1
 #pragma init_seg("mysegg")   // C4075

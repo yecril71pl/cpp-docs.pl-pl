@@ -1,25 +1,25 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4068
+title: Ostrzeżenie kompilatora (poziom 1) C4068
 ms.date: 11/04/2016
 f1_keywords:
 - C4068
 helpviewer_keywords:
 - C4068
 ms.assetid: 96a7397a-4eab-44ab-b3bb-36747503f7e5
-ms.openlocfilehash: 1e0cb7229733e15afd87548a1b18b3f58a64c239
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba6e57fb954e0331e8eede5e7859fbeed5ce6424
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160862"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626931"
 ---
-# <a name="compiler-warning-level-1-c4068"></a>Kompilator ostrzeżenie (poziom 1) C4068
+# <a name="compiler-warning-level-1-c4068"></a>Ostrzeżenie kompilatora (poziom 1) C4068
 
-Nieznana pragma
+nieznana pragma
 
-Kompilator ignorowane nierozpoznanej [pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md). Upewnij się, **pragma** jest dozwolona przez kompilator, którego używasz. Poniższy przykład spowoduje wygenerowanie C4068:
+Kompilator zignorował nierozpoznaną wartość [pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md). Upewnij się, że **pragma** jest dozwolona przez używany kompilator. Poniższy przykład generuje C4068:
 
-```
+```cpp
 // C4068.cpp
 // compile with: /W1
 #pragma NotAValidPragmaName   // C4068, use valid name to resolve

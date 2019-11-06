@@ -1,61 +1,77 @@
 ---
-title: Tworzenie nowego projektu systemu Linux w języku C++ w programie Visual Studio
-ms.date: 06/11/2019
+title: Tworzenie nowego C++ projektu systemu Linux w programie Visual Studio
+ms.date: 10/24/2019
+description: Utwórz nowy projekt systemu Linux oparty na programie MSBuild w programie Visual Studio.
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
-ms.openlocfilehash: 0377e21177b29d998fc3e66bb1863dbc127c1fbe
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: 5d5fa67566d86edb2ed0389fdbe38866b47e2211
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042708"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626723"
 ---
 # <a name="create-a-new-linux-project"></a>Tworzenie nowego projektu systemu Linux
 
 ::: moniker range="vs-2015"
 
-Projektów systemu Linux są dostępne w programie Visual Studio 2017 i nowszych wersjach.
-
-::: moniker-end
-
-Najpierw upewnij się, że masz **obciążenia projektowanie systemu Linux** dla zainstalowanego programu Visual Studio. Aby uzyskać więcej informacji, zobacz [pobieranie, instalowanie i konfigurowanie obciążenia Linux](download-install-and-setup-the-linux-development-workload.md).
-
-Podczas tworzenia nowego C++ projektu dla systemu Linux w programie Visual Studio, można wybrać utworzyć projekt programu Visual Studio lub projektu narzędzia CMake. W tym artykule opisano sposób tworzenia projektu programu Visual Studio. Aby uzyskać informacje o sposobie tworzenia i pracy z istniejących projektów CMake, zobacz [tworzenie i konfigurowanie projektu CMake systemu Linux ](cmake-linux-project.md).
-
-## <a name="to-create-a-new-linux-project"></a>Aby utworzyć nowy projekt systemu Linux
-
-Aby utworzyć nowego projektu systemu Linux w programie Visual Studio, wykonaj następujące kroki:
-
-::: moniker range="vs-2019"
-
-1. Wybierz **Plik > Nowy projekt** w programie Visual Studio lub naciśnij klawisz **Ctrl + Shift + N**.
-1. Ustaw **języka** do **C++** i poszukaj pozycji "Linux". Wybierz typ projektu, aby utworzyć, a następnie wybierz **dalej**. Wprowadź **nazwa** i **lokalizacji**i wybierz polecenie **Utwórz**.
-
-   ![Nowego projektu systemu Linux](media/newproject-vs2019.png)
+Projekty systemu Linux są dostępne w programie Visual Studio 2017 i nowszych.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-1. Wybierz **Plik > Nowy projekt** w programie Visual Studio lub naciśnij klawisz **Ctrl + Shift + N**.
-1. Wybierz **Visual C++ > wiele Platform > Linux** węzeł, a następnie wybierz typ projektu do utworzenia. Wprowadź **nazwa** i **lokalizacji**i wybierz polecenie **OK**.
+Najpierw upewnij się, że masz zainstalowane **obciążenie deweloperskie systemu Linux** dla programu Visual Studio. Aby uzyskać więcej informacji, zobacz [pobieranie, Instalowanie i Konfigurowanie obciążenia systemu Linux](download-install-and-setup-the-linux-development-workload.md).
 
-   ![Nowego projektu systemu Linux](media/newproject.png)
+W przypadku kompilacji na wielu platformach zalecamy użycie CMake. Obsługa CMake jest bardziej kompletna w programie Visual Studio 2019. Jeśli CMake nie jest opcją i masz istniejące rozwiązanie Windows Visual Studio, które ma zostać rozbudowane do kompilacji dla systemu Linux, możesz dodać projekt programu Visual Studio Linux do rozwiązania systemu Windows wraz z projektem **elementów współużytkowanych** . Umieść kod, który jest współużytkowany między obiema platformami w projekcie elementy udostępnione, i Dodaj odwołanie do tego projektu z projektów systemu Windows i Linux.
 
-::: moniker-end
+## <a name="to-create-a-new-linux-project"></a>Aby utworzyć nowy projekt systemu Linux
+
+Aby utworzyć nowy projekt systemu Linux w programie Visual Studio 2017, wykonaj następujące kroki:
+
+1. Wybierz pozycję **plik > nowy projekt** w programie Visual Studio lub naciśnij **klawisze Ctrl + Shift + N**.
+1. Wybierz węzeł **Visual C++ > cross platform > Linux** , a następnie wybierz typ projektu do utworzenia. Wprowadź **nazwę** i **lokalizację**, a następnie wybierz **przycisk OK**.
+
+   ![Nowy projekt systemu Linux](media/newproject.png)
 
    | Typ projektu | Opis |
    | ------------ | --- |
-   | **Miganie (Raspberry)**           | Projekt przeznaczony dla urządzenia Raspberry Pi, przy użyciu przykładowy kod, który miga diody LED |
-   | **Aplikacja konsoli (Linux)** | Projekt przeznaczony dla dowolnego komputera z systemem Linux, przykładowy kod, który wyświetla tekst do konsoli |
-   | **Pusty projekt (Linux)**       | Projekt przeznaczony dla dowolnego komputera z systemem Linux, nie przykładowy kod |
-   | **Projekt pliku reguł programu make (Linux)**    | Projekt przeznaczony dla dowolnego komputera z systemem Linux utworzone przy użyciu standardowego pliku reguł programu make systemu kompilacji |
-
-   ::: moniker range="vs-2019"
-
-   Visual Studio 2019 umożliwia utworzenie nowego projektu narzędzia CMake. Aby uzyskać więcej informacji, zobacz [tworzenie i konfigurowanie projektu CMake systemu Linux ](cmake-linux-project.md).
-   
-   ::: moniker-end
+   | **Miganie (Raspberry)**           | Projekt przeznaczony dla urządzenia Raspberry Pi z przykładowym kodem, który miga diody LED |
+   | **Aplikacja konsolowa (Linux)** | Projekt przeznaczony dla dowolnego komputera z systemem Linux z przykładowym kodem, który wyprowadza tekst do konsoli |
+   | **Pusty projekt (Linux)**       | Projekt przeznaczony dla dowolnego komputera z systemem Linux bez przykładowego kodu |
+   | **Projekt pliku reguł programu make (Linux)**    | Projekt przeznaczony dla dowolnego komputera z systemem Linux utworzony przy użyciu standardowego systemu kompilacji pliku reguł programu make |
 
 ## <a name="next-steps"></a>Następne kroki
 
 [Konfigurowanie projektu systemu Linux](configure-a-linux-project.md)
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+Najpierw upewnij się, że masz zainstalowane **obciążenie deweloperskie systemu Linux** dla programu Visual Studio. Aby uzyskać więcej informacji, zobacz [pobieranie, Instalowanie i Konfigurowanie obciążenia systemu Linux](download-install-and-setup-the-linux-development-workload.md).
+
+Podczas tworzenia nowego C++ projektu dla systemu Linux w programie Visual Studio można utworzyć projekt programu Visual Studio lub projekt CMAKE. W tym artykule opisano sposób tworzenia projektu programu Visual Studio. Ogólnie rzecz biorąc, w przypadku nowych projektów, które mogą obejmować kod w języku Open Source lub który ma zostać skompilowany do opracowania na wiele platform, zalecamy użycie CMake z programem Visual Studio. Za pomocą projektu CMake można kompilować i debugować ten sam projekt zarówno w systemie Windows, jak i Linux. Aby uzyskać więcej informacji, zobacz [Tworzenie i Konfigurowanie projektu systemu Linux CMAKE](cmake-linux-project.md).
+
+Jeśli masz istniejące rozwiązanie Windows Visual Studio, które chcesz rozłożyć na kompilację dla systemu Linux, a CMake nie jest opcją, możesz dodać projekt programu Visual Studio Linux do rozwiązania systemu Windows wraz z projektem **elementów współużytkowanych** . Umieść kod, który jest współużytkowany między obiema platformami w projekcie elementy udostępnione, i Dodaj odwołanie do tego projektu z projektów systemu Windows i Linux.
+
+## <a name="to-create-a-new-linux-project"></a>Aby utworzyć nowy projekt systemu Linux
+
+Aby utworzyć nowy projekt systemu Linux w programie Visual Studio 2019, wykonaj następujące kroki:
+
+1. Wybierz pozycję **plik > nowy projekt** w programie Visual Studio lub naciśnij **klawisze Ctrl + Shift + N**.
+1. Ustaw **Język** na **C++** i wyszukaj ciąg "Linux". Wybierz typ projektu, który chcesz utworzyć, a następnie wybierz przycisk **dalej**. Wprowadź **nazwę** i **lokalizację**, a następnie wybierz pozycję **Utwórz**.
+
+   ![Nowy projekt systemu Linux](media/newproject-vs2019.png)
+
+   | Typ projektu | Opis |
+   | ------------ | --- |
+   | **Miganie (Raspberry)**           | Projekt przeznaczony dla urządzenia Raspberry Pi z przykładowym kodem, który miga diody LED |
+   | **Aplikacja konsolowa (Linux)** | Projekt przeznaczony dla dowolnego komputera z systemem Linux z przykładowym kodem, który wyprowadza tekst do konsoli |
+   | **Pusty projekt (Linux)**       | Projekt przeznaczony dla dowolnego komputera z systemem Linux bez przykładowego kodu |
+   | **Projekt pliku reguł programu make (Linux)**    | Projekt przeznaczony dla dowolnego komputera z systemem Linux utworzony przy użyciu standardowego systemu kompilacji pliku reguł programu make |
+
+## <a name="next-steps"></a>Następne kroki
+
+[Konfigurowanie projektu systemu Linux](configure-a-linux-project.md)
+
+::: moniker-end

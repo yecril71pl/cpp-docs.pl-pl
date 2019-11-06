@@ -23,12 +23,12 @@ f1_keywords:
 - signal
 helpviewer_keywords:
 - signal function
-ms.openlocfilehash: 04869412272725108911f13857585e650ad20ab9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 232bf7bc518907db8744fbb85e0f3a33c9296006
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948100"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625852"
 ---
 # <a name="signal"></a>sygnał
 
@@ -113,7 +113,7 @@ Ustawienia sygnałów nie są zachowywane w procesach duplikowanych, które są 
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**signal**|\<signal.h>|
+|**signal**|\<sygnał. h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -127,7 +127,6 @@ Poniższy przykład pokazuje, jak za pomocą **sygnału** dodać niestandardowe 
 // Use signal to attach a signal handler to the abort routine
 #include <stdlib.h>
 #include <signal.h>
-#include <tchar.h>
 
 void SignalHandler(int signal)
 {
@@ -149,9 +148,16 @@ int main()
 }
 ```
 
+Dane wyjściowe są zależne od używanej wersji środowiska uruchomieniowego, bez względu na to, czy aplikacja jest konsolą lub aplikacją systemu Windows, czy w ustawieniach rejestru systemu Windows. W przypadku aplikacji konsolowej można wysłać do stderr następujący komunikat podobny do następującego:
+
 ```Output
-This application has requested the Runtime to terminate it in an unusual way.
-Please contact the application's support team for more information.
+Debug Error!
+
+Program: c:\Projects\crt_signal\Debug\crt_signal.exe
+
+R6010
+
+- abort() has been called
 ```
 
 ## <a name="see-also"></a>Zobacz także

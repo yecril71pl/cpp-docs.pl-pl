@@ -28,12 +28,12 @@ helpviewer_keywords:
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-ms.openlocfilehash: a63b542333717a57097da455fb514eeef80344b4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a7dcb9b7acc462d9570ee2cb7adb0dbd06df77c9
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941352"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623834"
 ---
 # <a name="_fcvt_s"></a>_fcvt_s
 
@@ -62,7 +62,7 @@ errno_t _fcvt_s(
 
 ### <a name="parameters"></a>Parametry
 
-*buffer*<br/>
+*buforu*<br/>
 Podany bufor, który będzie przechowywać wynik konwersji.
 
 *sizeInBytes*<br/>
@@ -88,10 +88,10 @@ W przypadku nieprawidłowego parametru, jak wymieniono w poniższej tabeli, ta f
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|*buffer*|*sizeInBytes*|value|count|dec|znak|przesłać|Wartość w *buforze*|
+|*buforu*|*sizeInBytes*|value|count|dec|znak|przesłać|Wartość w *buforze*|
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|
 |**NULL**|Ile|Ile|Ile|Ile|Ile|**EINVAL**|Nie zmodyfikowano.|
-|Nie **ma wartości null** (wskazuje na prawidłową pamięć)|<=0|Ile|Ile|Ile|Ile|**EINVAL**|Nie zmodyfikowano.|
+|Nie **ma wartości null** (wskazuje na prawidłową pamięć)|< = 0|Ile|Ile|Ile|Ile|**EINVAL**|Nie zmodyfikowano.|
 |Ile|Ile|Ile|Ile|**NULL**|Ile|**EINVAL**|Nie zmodyfikowano.|
 |Ile|Ile|Ile|Ile|Ile|**NULL**|**EINVAL**|Nie zmodyfikowano.|
 
@@ -111,17 +111,17 @@ Różnica między **_ecvt_s** i **_fcvt_s** jest interpretacją parametru *Count
 
 W C++programie korzystanie z tej funkcji jest uproszczone przez Przeciążenie szablonu; Przeciążenie może automatycznie wywnioskować długość buforu, eliminując konieczność określenia argumentu rozmiaru. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
-Wersja do debugowania tej funkcji najpierw wypełnia bufor 0xFD. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Wersja do debugowania tej funkcji najpierw wypełnia bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|Opcjonalny nagłówek|
 |--------------|---------------------|---------------------|
-|**_fcvt_s**|\<stdlib.h>|\<errno.h>|
+|**_fcvt_s**|\<STDLIB. h >|\<errno. h >|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-**Bibliotece** Wszystkie wersje [funkcji biblioteki CRT](../../c-runtime-library/crt-library-features.md).
+**Biblioteki:** Wszystkie wersje [funkcji biblioteki CRT](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 

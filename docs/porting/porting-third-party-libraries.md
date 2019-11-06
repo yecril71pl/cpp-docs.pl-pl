@@ -1,30 +1,30 @@
 ---
 title: Przenoszenie bibliotek innych firm
-ms.date: 01/10/2017
+ms.date: 10/29/2019
 helpviewer_keywords:
 - 3rd-party libraries
 - vspkg
 ms.assetid: b055ed20-8a9e-45b2-ac2a-e3d94271c009
-ms.openlocfilehash: e1aefc82eb23a8479035dd3372fa9ec24ab8feb1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89460af1ad0b356f4f5952141636a9f067131750
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337235"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627191"
 ---
 # <a name="porting-third-party-libraries"></a>Przenoszenie bibliotek innych firm
 
-Po uaktualnieniu projektu do bieżącej wersji programu Visual C++, należy uaktualnić wszystkie biblioteki, które używa projekt, tak, aby biblioteki, a projekt są tworzone za pomocą tę samą wersję i wersja kompilatora. (Aby uzyskać więcej informacji, zobacz [omówienie potencjalnych problemów z uaktualnieniem](overview-of-potential-upgrade-issues-visual-cpp.md)).
+W przypadku uaktualniania projektu z programu Visual Studio 2013 lub starszej wersji programu Visual C++należy również uaktualnić wszystkie biblioteki, których używa projekt, tak aby biblioteka i projekt zostały skompilowane z tą samą wersją, jak wersja kompilatora. Jeśli nie masz dostępu do kodu źródłowego biblioteki, a biblioteka nie jest dostępna za pośrednictwem vcpkg, należy uzyskać zaktualizowany plik binarny od dostawcy biblioteki. (Aby uzyskać więcej informacji, zobacz [Omówienie potencjalnych problemów z uaktualnianiem](overview-of-potential-upgrade-issues-visual-cpp.md)).
 
-## <a name="introducing-vcpkg"></a>Wprowadzenie do vcpkg
+W przypadku uaktualniania aplikacji z programu Visual Studio 2015 lub Visual Studio 2017 do programu Visual Studio 2019 nie trzeba uaktualniać zależności, ponieważ kod wygenerowany przez te trzy wersje jest zgodny z plikiem binarnym. Aby uzyskać więcej informacji, zobacz [ C++ zgodność binarna między programami Visual Studio 2015 i Visual Studio 2019](binary-compat-2015-2017.md).
 
-W przeszłości Znajdowanie i uaktualnianie 3rd bibliotek innych firm był czasami nietrywialnymi zadania. Aby ułatwić uzyskiwanie i Odbuduj C++ 3rd bibliotek typu open source innych firm, zespołu Visual C++ został utworzony z wiersza polecenia narzędzia o nazwie **narzędzia pakowania VC ++** lub **vcpkg**. Vcpkg ma przeszukiwanie wykazu wielu popularnych bibliotek typu open-source języka C++. Można zainstalować wszystkie biblioteki w wykazie bezpośrednio z poziomu wiersza polecenia vcpkg. Podczas instalowania biblioteki Vcpkg tworzy drzewo katalogów na komputerze i dodaje .h, lib i plikach binarnych, w tym folderze. Możesz użyć tego folderu w wierszu polecenia kompilacji, lub zintegrować ją z programu Visual Studio 2015 lub później za pomocą vcpkg integracja polecenia install. Po zintegrowaniu lokalizację biblioteki programu Visual Studio można je znaleźć i dodać go do nowego projektu, które tworzysz. Aby użyć biblioteki, po prostu `#include` i programu Visual Studio będzie automatycznie dodać ścieżkę .lib do ustawień projektu i skopiuj bibliotekę dll do folderu rozwiązania. Aby uzyskać więcej informacji, zobacz [vcpkg: Menedżer pakietów dla języka C++](../build/vcpkg.md).
+## <a name="vcpkg-for-open-source-libraries"></a>vcpkg dla bibliotek Open Source
+
+W przeszłości wyszukiwanie i uaktualnianie bibliotek innych firm było czasami nieuproszczonym zadaniem. Aby ułatwić uzyskiwanie i ponowne kompilowanie C++ bibliotek typu "open source" innych firm, C++ zespół wizualny utworzył narzędzie wiersza polecenia o nazwie **Narzędzia pakietu VC + +** lub **vcpkg**. Vcpkg ma przeszukiwany katalog wielu popularnych C++ bibliotek typu "open source". Każdą bibliotekę można zainstalować w katalogu bezpośrednio z wiersza polecenia vcpkg. Po zainstalowaniu biblioteki program Vcpkg tworzy drzewo katalogów na komputerze i dodaje plik h, lib i binarne w tym folderze. Możesz użyć tego folderu w wierszu polecenia kompilacji lub zintegrować go z Visual Studio 2015 lub nowszym za pomocą polecenia vcpkg Zintegruj install. Po zintegrowaniu lokalizacji biblioteki program Visual Studio może ją znaleźć i dodać do każdego nowo utworzonego projektu. Aby użyć biblioteki, po prostu `#include` ją, a program Visual Studio automatycznie doda ścieżkę. lib do ustawień projektu i skopiuje bibliotekę DLL do folderu rozwiązania. Aby uzyskać więcej informacji, zobacz [vcpkg: A Package Manager C++for ](../build/vcpkg.md).
 
 ## <a name="reporting-issues"></a>Raportowanie problemów
 
-Jeśli biblioteka nie jest obecny w **vcpkg** katalogu, można otworzyć zgłoszenie na [repozytorium GitHub](https://github.com/Microsoft/vcpkg/issues) gdzie społeczności i zespołu Visual C++ może go wyświetlać i potencjalnie tworzenia pliku port dla tej biblioteki.
-
-Aby uzyskać zastrzeżonej 3rd bibliotek innych firm (inne niż Otwórz źródło) firma Microsoft zaleca, skontaktuj się z dostawcą biblioteki. Jednak Dbamy o dowolnym własności libs jest używany i nie można zablokować, Daj nam znać, który z nich, na których polegasz (skontaktuj się z nami pod adresem vcupgrade@microsoft.com).
+Jeśli Biblioteka open source nie jest obecna w katalogu **vcpkg** , możesz otworzyć problem w [repozytorium GitHub](https://github.com/Microsoft/vcpkg/issues) , w którym społeczność i zespół wizualny C++ mogą go zobaczyć i potencjalnie utworzyć plik portu dla tej biblioteki.
 
 ## <a name="see-also"></a>Zobacz także
 

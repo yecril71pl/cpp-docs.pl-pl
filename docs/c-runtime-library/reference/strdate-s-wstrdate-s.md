@@ -1,6 +1,7 @@
 ---
 title: _strdate_s, _wstrdate_s
-ms.date: 11/04/2016
+description: _strdate_s i _wstrdate_s są bezpiecznymi wersjami CRT funkcji _strdate i _wstrdate, które umieszczają bieżącą datę w buforze.
+ms.date: 11/01/2019
 api_name:
 - _strdate_s
 - _wstrdate_s
@@ -36,27 +37,27 @@ helpviewer_keywords:
 - _strdate_s function
 - _wstrdate_s function
 ms.assetid: d41d8ea9-e5ce-40d4-864e-1ac29b455991
-ms.openlocfilehash: fadd30ec81cff59d675212e59c8513656c7b2f35
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7d04c134fcd19753ac0cecf8cc3b87e902d92e83
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940748"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625763"
 ---
 # <a name="_strdate_s-_wstrdate_s"></a>_strdate_s, _wstrdate_s
 
-Skopiuj bieżącą datę systemową do buforu. Są to wersje [_strdate, _wstrdate](strdate-wstrdate.md) z ulepszeniami zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Skopiuj bieżącą datę systemową do buforu. Te funkcje są wersjami [_strdate, _wstrdate](strdate-wstrdate.md) z ulepszonymi zabezpieczeniami, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
 ```C
 errno_t _strdate_s(
    char *buffer,
-   size_t numberOfElements
+   size_t size
 );
 errno_t _wstrdate_s(
    wchar_t *buffer,
-   size_t numberOfElements
+   size_t size
 );
 template <size_t size>
 errno_t _strdate_s(
@@ -70,11 +71,11 @@ errno_t _wstrdate_s(
 
 ### <a name="parameters"></a>Parametry
 
-*buffer*<br/>
-Wskaźnik do buforu, który zostanie wypełniony sformatowanym ciągiem daty.
+*bufor* \
+Wskaźnik do buforu służący do umieszczenia sformatowanego ciągu daty.
 
-*numberOfElements*<br/>
-Rozmiar buforu.
+\ *rozmiaru*
+Rozmiar buforu w jednostkach znakowych.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -82,28 +83,30 @@ Zero, jeśli powodzenie. Wartość zwracana jest kodem błędu w przypadku wyst�
 
 ## <a name="error-conditions"></a>Warunki błędów
 
-|*buffer*|*numberOfElements*|przesłać|Zawartość *buforu*|
+|*buforu*|*zmienia*|przesłać|Zawartość *buforu*|
 |--------------|------------------------|------------|--------------------------|
 |**NULL**|ile|**EINVAL**|nie zmodyfikowano|
 |Nie **ma wartości null** (wskazuje na prawidłowy bufor)|0|**EINVAL**|nie zmodyfikowano|
-|Nie **ma wartości null** (wskazuje na prawidłowy bufor)|0 < *numberOfElements* < 9|**EINVAL**|Pusty ciąg|
-|Nie **ma wartości null** (wskazuje na prawidłowy bufor)|*numberOfElements* > = 9|0|Bieżąca data sformatowana zgodnie z opisem w uwagach|
+|Nie **ma wartości null** (wskazuje na prawidłowy bufor)|0 < *rozmiar* < 9|**EINVAL**|Pusty ciąg|
+|Nie **ma wartości null** (wskazuje na prawidłowy bufor)|*rozmiar* > = 9|0|Bieżąca data sformatowana zgodnie z opisem w uwagach|
 
-## <a name="security-issues"></a>Problemy dotyczące zabezpieczeń
+## <a name="security-issues"></a>Problemy z zabezpieczeniami
 
-Przekazanie nieprawidłowej wartości **null** dla buforu spowoduje naruszenie zasad dostępu, jeśli parametr *NumberOfElements* jest większy niż 9.
+Przekazywanie w nieprawidłowej wartości innej niż NULL dla *buforu* powoduje naruszenie zasad dostępu, jeśli parametr *size* jest większy niż dziewięć.
 
-Przekazywanie wartości dla rozmiaru, który jest większy niż rzeczywisty rozmiar *buforu* , spowoduje przepełnienie buforu.
+Przekazywanie wartości *rozmiaru* większego niż rzeczywisty rozmiar *buforu* powoduje przepełnienie buforu.
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje zapewniają bezpieczniejsze wersje **_strdate** i **_wstrdate**. Funkcja **_strdate_s** kopiuje bieżącą datę systemową do buforu wskazywanym przez *bufor*, sformatowaną **mm**/**DD**/**yy**, gdzie **mm** to dwie cyfry reprezentujące miesiąc, **DD** to dwie cyfry reprezentujące dzień, a **yy** to ostatnie dwie cyfry roku. Na przykład ciąg **12/05/99** reprezentuje 5 grudnia 1999. Długość buforu musi wynosić co najmniej 9 znaków.
+Te funkcje zapewniają bezpieczniejsze wersje **_strdate** i **_wstrdate**. Funkcja **_strdate_s** kopiuje bieżącą datę systemową do buforu wskazywanym przez *bufor*. Jest on sformatowany `mm/dd/yy`, gdzie `mm` jest miesiącem dwucyfrowym, `dd` jest dzień dwucyfrowy, a `yy` to ostatnie dwie cyfry roku. Na przykład ciąg `12/05/99` reprezentuje 5 grudnia 1999. Długość buforu musi wynosić co najmniej dziewięć znaków.
 
 **_wstrdate_s** to dwubajtowa wersja **_strdate_s**; argument i wartość zwracana przez **_wstrdate_s** są ciągami znaków dwubajtowych. Funkcje te zachowują się identycznie w inny sposób.
 
-Jeśli *bufor* jest wskaźnikiem o **wartości null** lub jeśli *NumberOfElements* jest krótszy niż 9 znaków, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają-1 i ustawiają **errno** na **EINVAL** , jeśli bufor ma **wartość null** lub jeśli wartość *NumberOfElements* jest mniejsza niż lub równa 0 lub ustawiona **errno** na **ERANGE** , jeśli *NumberOfElements* jest mniejsze niż 9.
+Gdy *bufor* jest wskaźnikiem o **wartości null** lub *rozmiar* jest krótszy niż dziewięć znaków, zostanie wywołana procedura obsługi nieprawidłowego parametru. Jest on opisany w temacie [Walidacja parametrów](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają-1. Ustawili **errno** na **EINVAL** , jeśli bufor ma **wartość null** lub jeśli *rozmiar* jest mniejszy lub równy 0. Lub ustawiają **errno** na **ERANGE** , jeśli *rozmiar* jest mniejszy niż 9.
 
-W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując konieczność określenia argumentu rozmiaru) i mogą automatycznie zastąpić starsze, niezabezpieczone funkcje z ich nowszymi, bezpiecznymi odpowiednikami. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
+W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów. Przeciążenia mogą automatycznie wywnioskować długość buforu, co eliminuje konieczność określenia argumentu *rozmiaru* . Ponadto mogą automatycznie zastąpić funkcje niezabezpieczone nowszymi, bardziej bezpiecznymi odpowiednikami. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
+
+Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mapping"></a>Mapowanie procedury tekstu ogólnego:
 
@@ -115,9 +118,9 @@ W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia 
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strdate**|\<time.h>|
+|**_strdate**|\<time. h >|
 |**_wstrdate**|\<Time. h > lub \<WCHAR. h >|
-|**_strdate_s**|\<time.h>|
+|**_strdate_s**|\<time. h >|
 
 ## <a name="example"></a>Przykład
 
@@ -125,11 +128,11 @@ Zobacz przykład [czasu](time-time32-time64.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Zarządzanie czasem](../../c-runtime-library/time-management.md)<br/>
-[asctime_s, _wasctime_s](asctime-s-wasctime-s.md)<br/>
-[ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)<br/>
-[gmtime_s, _gmtime32_s, _gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)<br/>
-[localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md)<br/>
-[mktime, _mktime32, _mktime64](mktime-mktime32-mktime64.md)<br/>
-[time, _time32, _time64](time-time32-time64.md)<br/>
-[_tzset](tzset.md)<br/>
+\ [zarządzania czasem](../../c-runtime-library/time-management.md)
+[asctime_s, _wasctime_s](asctime-s-wasctime-s.md)\
+[ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)\
+[gmtime_s, _gmtime32_s, _gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md) ,\
+[localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md) ,\
+[mktime, _mktime32, _mktime64](mktime-mktime32-mktime64.md) ,\
+[Time, _time32, _time64](time-time32-time64.md)\
+[_tzset](tzset.md)

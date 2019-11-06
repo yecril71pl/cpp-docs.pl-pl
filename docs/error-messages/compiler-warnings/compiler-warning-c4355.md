@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4355
 ms.assetid: b819ecab-8a07-42d7-8fa4-1180d51626c0
-ms.openlocfilehash: 6b74c8dd5ce9860cb218d21790f12ba05e9be22f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1f5e5be2606a03ec5e9ecd0c571f94c25f82494
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151828"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623747"
 ---
 # <a name="compiler-warning-c4355"></a>Ostrzeżenie kompilatora C4355
 
 'this': używany na liście inicjatora bazowego elementu członkowskiego
 
-**To** wskaźnik jest prawidłowy tylko w obrębie Niestatyczne funkcje Członkowskie. Nie można użyć na liście inicjatora dla klasy bazowej.
+**Ten** wskaźnik jest prawidłowy tylko wewnątrz niestatycznych funkcji składowych. Nie można jej użyć na liście inicjatorów dla klasy bazowej.
 
-Konstruktory klasy bazowej i konstruktory składowej klasy, które są wywoływane przed **to** konstruktora. W efekcie zrealizowaniu wskaźnik do obiektu unconstructed do innego konstruktora. Jeśli te inne konstruktory dostęp do wszystkich członków lub wywoływać funkcje Członkowskie na tym, wynik jest niezdefiniowana. Nie należy używać **to** wskaźnika przed ukończeniem wszystkich konstrukcji.
+Konstruktory klasy podstawowej i konstruktory elementów członkowskich klasy są wywoływane przed **tym** konstruktorem. W efekcie przeszedł wskaźnik do niekonstruowanego obiektu do innego konstruktora. Jeśli te inne konstruktory uzyskują dostęp do dowolnych elementów członkowskich lub wywołują funkcje składowe, wynik będzie niezdefiniowany. Nie należy używać **tego** wskaźnika, dopóki cała konstrukcja nie zostanie ukończona.
 
-To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+To ostrzeżenie jest domyślnie wyłączone. Aby uzyskać więcej informacji [, zobacz ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
-Poniższy przykład spowoduje wygenerowanie C4355:
+Poniższy przykład generuje C4355:
 
-```
+```cpp
 // C4355.cpp
 // compile with: /w14355 /c
 #include <tchar.h>

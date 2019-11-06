@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4867
 ms.assetid: 8a257d70-c3a7-462d-b285-e57c952a8bf7
-ms.openlocfilehash: 0fd5de46f713aed08508f8755c9e54c3ff46366b
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: e093d262bc26cf0acfbb181d621fffc1aa391ee9
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447208"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626587"
 ---
 # <a name="compiler-warning-c4867"></a>Ostrzeżenie kompilatora C4867
 
-'Funkcja': wywołanie funkcji brakuje listy argumentów; Użyj "wywołać", aby utworzyć wskaźnik do składowej
+"Function": wywołanie funkcji nie ma listy argumentów; Użyj elementu "Call", aby utworzyć wskaźnik do składowej
 
-Wskaźnik do funkcji składowej został niepoprawnie zainicjowany.
+Nieprawidłowo zainicjowany wskaźnik do funkcji członkowskiej.
 
-To ostrzeżenie można wygenerować w wyniku pracy zgodności kompilatora, która została wykonana dla programu Visual Studio 2005: rozszerzoną zgodność wskaźników do elementów członkowskich.  Kod, który jest skompilowany przed Visual Studio 2005 teraz wygeneruje C4867.
+To ostrzeżenie może być generowane w wyniku działania kompilatora, który został wykonany dla programu Visual Studio 2005: Ulepszona zgodność wskaźnika do składowej.  Kod, który został skompilowany przed Visual Studio 2005, będzie teraz generował C4867.
 
-To jest zawsze ostrzeżenie jako błąd. Użyj [ostrzeżenie](../../preprocessor/warning.md) pragma może wyłączyć to ostrzeżenie. Aby uzyskać więcej informacji na temat C4867 i MFC i ATL, zobacz [_ATL_ENABLE_PTM_WARNING](../../atl/reference/compiler-options-macros.md#_atl_enable_ptm_warning).
+To ostrzeżenie jest zawsze emitowane jako błąd. Aby wyłączyć to ostrzeżenie, użyj dyrektywy pragma [ostrzeżenia](../../preprocessor/warning.md) . Aby uzyskać więcej informacji na temat C4867 i MFC/ATL, zobacz [_ATL_ENABLE_PTM_WARNING](../../atl/reference/compiler-options-macros.md#_atl_enable_ptm_warning).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4867.
+Poniższy przykład generuje C4867.
 
-```
+```cpp
 // C4867.cpp
 // compile with: /c
 class A {

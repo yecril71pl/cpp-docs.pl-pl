@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4010
+title: Ostrzeżenie kompilatora (poziom 1) C4010
 ms.date: 11/04/2016
 f1_keywords:
 - C4010
 helpviewer_keywords:
 - C4010
 ms.assetid: d607a9ff-8f8f-45c0-b07b-3b2f439e5485
-ms.openlocfilehash: 40c6724daf17c1c0b546bb7bc64bb704f732e8d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 045b3f6e615e11c24caa9a088baf6ea9f6448efb
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386554"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627318"
 ---
-# <a name="compiler-warning-level-1-c4010"></a>Kompilator ostrzeżenie (poziom 1) C4010
+# <a name="compiler-warning-level-1-c4010"></a>Ostrzeżenie kompilatora (poziom 1) C4010
 
-komentarz jednowierszowy zawiera znak kontynuacji wiersza
+Komentarz jednowierszowy zawiera znak kontynuacji wiersza
 
-Komentarz jednowierszowy, który został wprowadzony przez / / zawiera ukośnik odwrotny (\\) który służy jako znak kontynuacji wiersza. Kompilator traktuje następny wiersz jako kontynuację i traktuje je jako komentarz.
+Jednowierszowy komentarz, który jest wprowadzany przez//, zawiera ukośnik odwrotny (\\), który służy jako znak kontynuacji wiersza. Kompilator traktuje następny wiersz jako kontynuację i traktuje go jako komentarz.
 
-Niektóre składni skierowane edytory nie wskazują wiersza po znaku kontynuacji jako komentarz. Ignoruj kolorowania na wszystkie wiersze, które powodują to ostrzeżenie.
+Niektóre redaktory skierowane do składni nie wskazują wiersza następującego po znaku kontynuacji jako komentarza. Ignoruj kolorowanie składni dla wszystkich wierszy, które powodują to ostrzeżenie.
 
-Poniższy przykład spowoduje wygenerowanie C4010:
+Poniższy przykład generuje C4010:
 
-```
+```cpp
 // C4010.cpp
 // compile with: /WX
 int main() {

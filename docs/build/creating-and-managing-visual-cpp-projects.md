@@ -1,6 +1,6 @@
 ---
-title: Projekty programu Visual Studio — C++
-ms.date: 12/12/2018
+title: Projekty programu Visual Studio —C++
+ms.date: 10/25/2019
 helpviewer_keywords:
 - ATL projects, creating
 - Visual Studio C++ projects, creating
@@ -8,82 +8,83 @@ helpviewer_keywords:
 - Visual Studio C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: 30d3b13ba4d392cdc5d1c7c611b61066503647a2
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: d6bfefdaa3dfc67f861cf116718f89c0e9766e47
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837044"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624477"
 ---
-# <a name="visual-studio-projects---c"></a>Projektów programu Visual Studio — C++
+# <a name="visual-studio-projects---c"></a>Projekty programu Visual Studio — C++
 
-A *projektu programu Visual Studio* projekt zależy od systemu kompilacji MSBuild. Program MSBuild jest system kompilacji natywnej dla programu Visual Studio i ogólnie najlepsze kompilacji systemowi operacyjnemu używanie dla aplikacji platformy uniwersalnej systemu Windows, a także aplikacji pulpitu, korzystających z biblioteki ATL i MFC, składników COM i innych programów specyficzne dla Windows. Program MSBuild jest ściśle zintegrowana z programem Visual Studio, ale można go także użyć w wierszu polecenia. 
+*Projekt programu Visual Studio* jest projektem opartym na systemie kompilacji MSBuild. MSBuild jest natywnym systemem kompilacji dla programu Visual Studio i jest generalnie najlepszym systemem kompilacji do użycia dla programów specyficznych dla systemu Windows. Program MSBuild jest ściśle zintegrowany z programem Visual Studio, ale można go również użyć z poziomu wiersza polecenia. W przypadku projektów dla wielu platform lub projektów korzystających z bibliotek Open Source zalecamy używanie [projektów CMAKE w programie Visual](cmake-projects-in-visual-studio.md) Studio w programie visual Studio 2017 i nowszych. Informacje o uaktualnianiu projektów programu MSBuild ze starszych wersji programu Visual Studio można znaleźć [w C++ przewodniku dotyczącym przenoszenia i uaktualniania usługi Microsoft](../porting/visual-cpp-porting-and-upgrading-guide.md).
 
 ## <a name="create-a-project"></a>Tworzenie projektu
 
 ::: moniker range="vs-2019"
 
-Możesz utworzyć C++ projektów, wybierając **pliku** > **nowy** > **projektu**, następnie ustawiając **języka** do C++. Na liście wyników możesz wyświetlić listę szablonów projektów, które można filtrować, ustawiając **platformy** lub **typu projektu** i wpisując słowa kluczowe w polu wyszukiwania. 
+Możesz tworzyć C++ projekty, wybierając kolejno pozycje **plik** > **Nowy** > **projekt**, a następnie ustawiając C++ **Język** na. Na liście wyników zostanie wyświetlona lista szablonów projektu, które można filtrować, ustawiając typ **platformy** lub **projektu** oraz wpisując słowa kluczowe w polu wyszukiwania. 
 
-   ![Szablony projektu 2019 r w usłudze Visual Studio](../build/media/vs2019-choose-console-app.png "Visual Studio 2019 nowego projektu okna dialogowego")
+   ![Szablony projektów programu Visual Studio 2019](../build/media/vs2019-choose-console-app.png "Okno dialogowe nowego projektu programu Visual Studio 2019")
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-Możesz utworzyć C++ projektów, wybierając **pliku** > **New** > **projektu**, wybierając Visual C++ w okienku po lewej stronie. W środkowym okienku można wyświetlić listę szablonów projektu:
+C++ Możesz tworzyć projekty, wybierając pozycję **plik** > **Nowy** > **projekt**, a następnie wybierając C++ pozycję wizualizacja w okienku po lewej stronie. W środkowym okienku zostanie wyświetlona lista szablonów projektu:
 
-   ![Szablony projektów](../overview/media/vs2017-new-project.png "programu Visual Studio 2017 nowego projektu okna dialogowego")
+   ![Szablony projektów](../overview/media/vs2017-new-project.png "Okno dialogowe nowego projektu programu Visual Studio 2017")
 
 ::: moniker-end
 
-Aby uzyskać więcej informacji na temat wszystkie domyślne szablony projektów, które są zawarte w programie Visual Studio, zobacz [szablonów projektów języka C++ w programie Visual Studio](reference/visual-cpp-project-types.md). Można tworzyć własne szablony projektu. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie szablonów projektów](/visualstudio/ide/how-to-create-project-templates).
+Aby uzyskać więcej informacji na temat wszystkich domyślnych szablonów projektu, które są dołączone do programu Visual Studio, zobacz [ C++ szablony projektów w programie Visual Studio](reference/visual-cpp-project-types.md). Możesz tworzyć własne szablony projektów. Aby uzyskać więcej informacji, zobacz [How to: Create Project Templates](/visualstudio/ide/how-to-create-project-templates).
 
-Po utworzeniu projektu, pojawi się w [Eksploratora rozwiązań](/visualstudio/ide/solutions-and-projects-in-visual-studio) okna:
+Po utworzeniu projektu jest on wyświetlany w oknie [Eksplorator rozwiązań](/visualstudio/ide/solutions-and-projects-in-visual-studio) :
 
    ![Eksplorator rozwiązań](media/mathlibrary-solution-explorer-153.png)
 
-Podczas tworzenia nowego projektu tworzony jest także plik rozwiązania (.sln). Można dodać dodatkowe projekty do rozwiązania, klikając prawym przyciskiem myszy na nim w **Eksploratora rozwiązań**. Plik rozwiązania służy do koordynowania zależności kompilacji, jeśli masz wiele powiązanych projektów, ale nie robi znacznie więcej niż. Wszystkie opcje kompilatora są ustawiane na poziomie projektu.
+Podczas tworzenia nowego projektu tworzony jest również plik rozwiązania (. sln). Możesz dodać kolejne projekty do rozwiązania, klikając je prawym przyciskiem myszy w **Eksplorator rozwiązań**. Plik rozwiązania służy do koordynowania zależności kompilacji, gdy istnieje wiele powiązanych projektów, ale nie jest to znacznie więcej niż. Wszystkie opcje kompilatora są ustawiane na poziomie projektu.
 
-## <a name="add-items"></a>Dodawanie elementów
+## <a name="add-items"></a>Dodaj elementy
 
-Dodawanie plików kodu źródłowego, ikony lub innych elementów do projektu, klikając prawym przyciskiem myszy nad projektem w **Eksploratora rozwiązań** i wybierając pozycję **Dodaj > Nowy** lub **Dodaj > istniejące**.
+Dodaj pliki kodu źródłowego, ikony lub inne elementy do projektu, klikając prawym przyciskiem myszy projekt w **Eksplorator rozwiązań** i wybierając polecenie **Dodaj > nowe** lub **Dodaj > istniejące**.
 
-## <a name="add-third-party-libraries"></a>Dodawanie bibliotek innych firm
+## <a name="add-third-party-libraries"></a>Dodaj biblioteki innych firm
 
-Aby dodać bibliotek innych firm, należy użyć [vcpkg](vcpkg.md) Menedżera pakietów. Uruchom krok integracji programu Visual Studio, aby skonfigurować ścieżki do tej biblioteki, gdy odwołujesz z każdego projektu programu Visual Studio. 
+Aby dodać biblioteki innych firm, użyj Menedżera pakietów [vcpkg](vcpkg.md) . Uruchom krok integracja z programem Visual Studio, aby skonfigurować ścieżki do tej biblioteki podczas odwoływania się do niej z dowolnego projektu programu Visual Studio. 
 
-## <a name="set-compiler-options-and-other-build-properties"></a>Ustaw opcje kompilatora i inne właściwości kompilacji
+## <a name="set-compiler-options-and-other-build-properties"></a>Ustawianie opcji kompilatora i innych właściwości kompilacji
 
-Aby skonfigurować ustawienia kompilacji dla projektu, kliknij prawym przyciskiem myszy projekt w **Eksploratora rozwiązań** i wybierz polecenie **właściwości**. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](working-with-project-properties.md).
+Aby skonfigurować ustawienia kompilacji dla projektu, kliknij prawym przyciskiem myszy projekt w **Eksplorator rozwiązań** i wybierz polecenie **Właściwości**. Aby uzyskać więcej informacji, [Zobacz C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](working-with-project-properties.md).
 
-## <a name="compile-and-run"></a>Kompilowanie i uruchamianie
+## <a name="compile-and-run"></a>Kompiluj i uruchom
 
-Aby skompilować i uruchomić nowy projekt, naciśnij klawisz **F5** lub kliknij przycisk *listy rozwijanej Debuguj* z zieloną strzałką na głównym pasku narzędzi. *Listy rozwijanej konfiguracji* jest, gdzie możesz zdecydować się przeprowadzić *debugowania* lub *wersji* kompilacji (lub innych niestandardowych konfiguracji).
+Aby skompilować i uruchomić nowy projekt, naciśnij klawisz **F5** lub kliknij *listę rozwijaną Debug* z zieloną strzałką na głównym pasku narzędzi. *Lista rozwijana konfiguracji* umożliwia wybranie, czy należy przeprowadzić kompilację *debugowania* czy *wydania* (lub inną konfigurację niestandardową).
 
-Nowy projekt kompiluje bez błędów. Dodając własny kod, może co pewien czas wprowadzenia w błąd lub wyzwalania ostrzeżenia. Błąd uniemożliwia ukończenie; kompilacji Ostrzeżenie — nie. Wszystkie błędy i ostrzeżenia pojawi się zarówno w oknie danych wyjściowych, jak i na liście błędów podczas kompilowania projektu. 
+Nowy projekt kompiluje się bez błędów. Podczas dodawania własnego kodu możesz czasami wprowadzić błąd lub wyzwolić ostrzeżenie. Błąd uniemożliwia ukończenie kompilacji; Ostrzeżenie nie jest. Wszystkie błędy i ostrzeżenia pojawią się zarówno w Okno Dane wyjściowe, jak i w Lista błędów podczas kompilowania projektu. 
 
-   ![Dane wyjściowe okna i na liście błędów](../overview/media/vs2017-output-error-list.png)
+   ![Okno danych wyjściowych i Lista błędów](../overview/media/vs2017-output-error-list.png)
 
-Na liście błędów, możesz nacisnąć przycisk **F1** w przypadku wyróżnione błędu, aby przejść do jego temat w dokumentacji.
+W Lista błędów można nacisnąć klawisz **F1** w wyróżnionym błędzie, aby przejść do tematu dokumentacji.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
 [Ustawianie właściwości kompilacji i kompilatora języka C++ w programie Visual Studio](working-with-project-properties.md)<br/>
-Jak używać stron właściwości i arkuszach właściwości, aby określić własne ustawienia projektu.
+Jak używać stron właściwości i arkuszy właściwości do określania ustawień projektu.
 
 [Odwoływanie się do bibliotek i składników podczas kompilacji](adding-references-in-visual-cpp-projects.md)<br/>
-Jak dołączyć biblioteki i biblioteki dll, składniki COM i .NET w projekcie.
+Jak dołączyć składniki libs, DLL, COM i .NET do projektu.
  
 [Porządkowanie plików wyjściowych projektu](how-to-organize-project-output-files-for-builds.md)<br/>
-Jak dostosować lokalizację plików wykonywalnych, utworzone w procesie kompilacji.
+Jak dostosować lokalizację plików wykonywalnych utworzonych w procesie kompilacji.
 
 [Niestandardowe kroki kompilacji i zdarzenia kompilacji](understanding-custom-build-steps-and-build-events.md)<br/>
-Jak dodać dowolnego dowolnego polecenia do procesu kompilacji w wybranych punktach.
+Jak dodać dowolne dowolne polecenie do procesu kompilacji w określonych punktach.
 
 [Tworzenie projektu z istniejącego kodu](how-to-create-a-cpp-project-from-existing-code.md)<br/>
-Jak utworzyć nowy projekt programu Visual Studio z kolekcją luźno plików źródłowych.
+Jak utworzyć nowy projekt programu Visual Studio na podstawie luźnej kolekcji plików źródłowych.
 
 ## <a name="see-also"></a>Zobacz także
 
 [Projekty i systemy kompilacji](projects-and-build-systems-cpp.md)<br>
+[Przewodnik C++ dotyczący przenoszenia i uaktualniania firmy Microsoft](../porting/visual-cpp-porting-and-upgrading-guide.md)

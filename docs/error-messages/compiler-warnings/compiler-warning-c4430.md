@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4430
 ms.assetid: 12efbfff-aa58-4a86-a7d6-2c6a12d01dd3
-ms.openlocfilehash: fe765fa49b9aa11667e1eac4a9cfed54bb84fd8f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 661b687373d6c72b9f40a05d1406bc89ce332133
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447861"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623702"
 ---
 # <a name="compiler-warning-c4430"></a>Ostrzeżenie kompilatora C4430
 
-brak specyfikatora typu — zakładany int. Uwaga: Język C++ obsługuje domyślnie typu int
+brak specyfikatora typu — zakładany int. Uwaga: C++ nie obsługuje funkcji default-int
 
-Ten błąd można wygenerować w wyniku pracy zgodności kompilatora, która została wykonana dla programu Visual Studio 2005: wszystkie deklaracje należy jawnie określić typ; jest już założono, że.
+Ten błąd może być wygenerowany jako wynik zgodności kompilatora, który został wykonany dla programu Visual Studio 2005: wszystkie deklaracje muszą jawnie określać typ; wartość int nie jest już założono.
 
-C4430 zawsze jest wystawiany jako błąd.  Możesz wyłączyć to ostrzeżenie za pomocą `#pragma warning` lub **/wd**; zobacz [ostrzeżenie](../../preprocessor/warning.md) lub [Wn /W0, / W1, / W2, / W3, / W4, / W1, / W2, / W3, / W4, / Wall / wo, WV, /WX (poziom ostrzegawczy)](../../build/reference/compiler-option-warning-level.md)Aby uzyskać więcej informacji.
+C4430 jest zawsze wystawiony jako błąd.  To ostrzeżenie można wyłączyć za pomocą `#pragma warning` lub **/WD**; Aby uzyskać więcej informacji, zobacz [Ostrzeżenie](../../preprocessor/warning.md) lub [/w,/W0,/W1,/W2,/W3,/W4,/W1,/W2,/W3,/W4,/Wall,/WD,/we,/wo,/WV,/WX (poziom ostrzeżenia)](../../build/reference/compiler-option-warning-level.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4430.
+Poniższy przykład generuje C4430.
 
-```
+```cpp
 // C4430.cpp
 // compile with: /c
 struct CMyClass {

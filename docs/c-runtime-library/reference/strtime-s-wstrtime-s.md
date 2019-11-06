@@ -33,12 +33,12 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-ms.openlocfilehash: 855c88f22e00cad398f6357b8e35931598041aeb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c74e7359f68469fd8322ba1c9348acffd636282a
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946578"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625919"
 ---
 # <a name="_strtime_s-_wstrtime_s"></a>_strtime_s, _wstrtime_s
 
@@ -67,7 +67,7 @@ errno_t _wstrtime_s(
 
 ### <a name="parameters"></a>Parametry
 
-*buffer*<br/>
+*buforu*<br/>
 Bufor o długości co najmniej 10 bajtów, gdzie zostanie zapisany czas.
 
 *numberOfElements*<br/>
@@ -81,7 +81,7 @@ Jeśli wystąpi błąd, zostanie wywołana procedura obsługi nieprawidłowego p
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|*buffer*|*numberOfElements*|przesłać|Zawartość *buforu*|
+|*buforu*|*numberOfElements*|przesłać|Zawartość *buforu*|
 |--------------|------------------------|------------|--------------------------|
 |**NULL**|ile|**EINVAL**|nie zmodyfikowano|
 |Nie **ma wartości null** (wskazuje na prawidłowy bufor)|0|**EINVAL**|nie zmodyfikowano|
@@ -102,6 +102,8 @@ Te funkcje zapewniają bezpieczniejsze wersje [_strtime](strtime-wstrtime.md) i 
 
 W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując konieczność określenia argumentu rozmiaru) i mogą automatycznie zastąpić starsze, niezabezpieczone funkcje z ich nowszymi, bezpiecznymi odpowiednikami. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
+Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
 ### <a name="generic-text-routine-mapping"></a>Mapowanie procedury tekstu ogólnego:
 
 |Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
@@ -112,7 +114,7 @@ W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia 
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strtime_s**|\<time.h>|
+|**_strtime_s**|\<time. h >|
 |**_wstrtime_s**|\<Time. h > lub \<WCHAR. h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).

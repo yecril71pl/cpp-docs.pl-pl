@@ -1,25 +1,25 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4141
+title: Ostrzeżenie kompilatora (poziom 1) C4141
 ms.date: 11/04/2016
 f1_keywords:
 - C4141
 helpviewer_keywords:
 - C4141
 ms.assetid: 6ce8c058-7f4c-41cf-93e7-90a466744656
-ms.openlocfilehash: bbc2aea86c367c4977c8899e7aa9b8418e7fedcf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 707df8ef4b56879da80d885ed75f352b36299fe9
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255669"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625027"
 ---
-# <a name="compiler-warning-level-1-c4141"></a>Kompilator ostrzeżenie (poziom 1) C4141
+# <a name="compiler-warning-level-1-c4141"></a>Ostrzeżenie kompilatora (poziom 1) C4141
 
 "modyfikator": użyto więcej niż raz
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // C4141.cpp
 // compile with: /W1 /LD
 inline inline void func ();   // C4141

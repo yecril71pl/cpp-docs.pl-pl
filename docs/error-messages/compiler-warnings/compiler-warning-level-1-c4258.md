@@ -1,25 +1,25 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4258
+title: Ostrzeżenie kompilatora (poziom 1) C4258
 ms.date: 11/04/2016
 f1_keywords:
 - C4258
 helpviewer_keywords:
 - C4258
 ms.assetid: bbb75e6d-6693-4e62-8ed3-b006a0ec55e3
-ms.openlocfilehash: a3ce4c81a86920baddfc1b277df0236a96254be4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75d706fafacc5c1524915d063a7fa392cea01b4c
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207399"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624878"
 ---
-# <a name="compiler-warning-level-1-c4258"></a>Kompilator ostrzeżenie (poziom 1) C4258
+# <a name="compiler-warning-level-1-c4258"></a>Ostrzeżenie kompilatora (poziom 1) C4258
 
-'Zmienna': definicja z pętli for jest zignorowana; Służy definicji z otaczającego zakresu"
+"zmienna": definicja z pętli for jest ignorowana; używana jest definicja z otaczającego zakresu "
 
-W obszarze [/Ze](../../build/reference/za-ze-disable-language-extensions.md) i [/Zc: forscope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md), zmienne zdefiniowane w [dla](../../cpp/for-statement-cpp.md) pętli wykraczają poza zakres po **dla** zakończeniu pętli. To ostrzeżenie występuje, jeśli zmienna o takiej samej nazwie jako zmiennej pętli, ale zdefiniowanych w otaczającej pętli jest używany ponownie w zawierającym zakresie **dla** pętli. Na przykład:
+W obszarze [/ze](../../build/reference/za-ze-disable-language-extensions.md) i [/Zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)zmienne zdefiniowane w pętli [for](../../cpp/for-statement-cpp.md) wykraczają poza zakres po zakończeniu pętli **for** . To ostrzeżenie występuje, jeśli zmienna o takiej samej nazwie jak zmienna pętli, ale zdefiniowana w otaczającej pętli, jest używana ponownie w zakresie zawierającym pętlę **for** . Na przykład:
 
-```
+```cpp
 // C4258.cpp
 // compile with: /Zc:forScope /W1
 int main()

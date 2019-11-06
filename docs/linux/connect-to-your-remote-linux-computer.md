@@ -3,12 +3,12 @@ title: Nawiązywanie połączenia z docelowym systemem Linux w programie Visual 
 description: Jak nawiązać połączenie ze zdalną maszyną z systemem Linux lub WSL z C++ poziomu projektu programu Visual Studio.
 ms.date: 09/04/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 2f4e6311493f2b29ba6911ec1b76225b6c7abe6d
-ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
+ms.openlocfilehash: 3d91faa7aa83c86e8c2f3544ee61c16f75f8c346
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71925558"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626768"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Nawiązywanie połączenia z docelowym systemem Linux w programie Visual Studio
 
@@ -38,10 +38,10 @@ Aby skonfigurować to połączenie zdalne:
 
 1. Wprowadź następujące informacje:
 
-   | Wpis | Opis
+   | Entry | Opis
    | ----- | ---
    | **Nazwa hosta**           | Nazwa lub adres IP urządzenia docelowego
-   | **Port**                | Port, na którym działa usługa SSH, zazwyczaj 22
+   | **Przewożąc**                | Port, na którym działa usługa SSH, zazwyczaj 22
    | **Nazwa użytkownika**           | Użytkownik do uwierzytelniania jako
    | **Typ uwierzytelniania** | Obsługiwane są zarówno hasło, jak i klucz prywatny
    | **Hasło**            | Hasło do podanej nazwy użytkownika
@@ -79,6 +79,20 @@ Aby skonfigurować to połączenie zdalne:
    Dzienniki obejmują połączenia, wszystkie polecenia wysyłane do maszyny zdalnej (ich tekst, kod zakończenia i czas wykonywania) oraz wszystkie dane wyjściowe z programu Visual Studio do powłoki. Rejestrowanie działa w przypadku dowolnego projektu CMake na wielu platformach lub w programie Visual Studio opartym na programie MSBuild.
 
    Można skonfigurować dane wyjściowe, aby przejść do pliku lub okienka **rejestrowania między platformami** w okno dane wyjściowe. W przypadku projektów systemu Linux opartych na programie MSBuild polecenia wydane dla komputera zdalnego przez program MSBuild nie są kierowane do **okno dane wyjściowe** , ponieważ są emitowane poza procesem. Zamiast tego są one rejestrowane w pliku z prefiksem "msbuild_".
+   
+## <a name="tcp-port-forwarding"></a>Przekazywanie portów TCP
+
+Obsługa systemu Linux w programie Visual Studio ma zależność od przekazywania portów TCP. Jeśli przekazywanie portów TCP jest wyłączone w systemie zdalnym, wpłynie to na **rsync** i **serwera gdbserver** . 
+
+Rsync jest używany przez projekty systemu Linux oparte na programie MSBuild i projekty CMake do [kopiowania nagłówków z zdalnego komputera do systemu Windows, które mają być używane na potrzeby funkcji IntelliSense](configure-a-linux-project.md#remote_intellisense). Jeśli nie możesz włączyć przekazywania portów TCP, możesz wyłączyć automatyczne pobieranie nagłówków zdalnych za pomocą narzędzi > Opcje > Międzyplatformowe > Menedżer połączeń > zdalnych nagłówków programu IntelliSense. Jeśli zdalny system, z którym próbujesz nawiązać połączenie, nie ma włączonego przekazywania portów TCP, zobaczysz następujący komunikat o błędzie, gdy zostanie rozpoczęte pobieranie zdalnych nagłówków dla funkcji IntelliSense.
+
+![Błąd nagłówków](media/port-forwarding-headers-error.png)
+
+Rsync jest również używany przez wsparcie CMake programu Visual Studio do kopiowania plików źródłowych do systemu zdalnego. Jeśli nie możesz włączyć przekazywania portów TCP, możesz użyć protokołu SFTP jako metody źródła kopiowania zdalnego. Protokół SFTP jest ogólnie wolniejszy niż rsync, ale nie ma zależności od przekazywania portów TCP. Metodami kopiowania zdalnego można zarządzać za pomocą właściwości remoteCopySourcesMethod w [Edytorze ustawień CMAKE](../build/cmakesettings-reference.md#additional-settings-for-cmake-linux-projects). Jeśli przekazywanie portów TCP jest wyłączone w systemie zdalnym, w oknie danych wyjściowych CMake zostanie wyświetlony komunikat o błędzie przy pierwszym wywołaniu rsync.
+
+![Błąd rsync](media/port-forwarding-copy-error.png)
+
+Serwera gdbserver może służyć do debugowania na urządzeniach osadzonych. Jeśli nie możesz włączyć przekazywania portów TCP, musisz użyć GDB dla wszystkich scenariuszy zdalnego debugowania. GDB jest używana domyślnie podczas debugowania projektów w systemie zdalnym. 
 
    ::: moniker-end
 
@@ -110,4 +124,4 @@ Aby skonfigurować projekt dla programu WSL, zobacz [Konfigurowanie projektu sys
 [Konfigurowanie projektu systemu Linux](configure-a-linux-project.md)<br />
 [Konfigurowanie projektu CMake systemu Linux](cmake-linux-project.md)<br />
 [Wdrażanie, uruchamianie i debugowanie projektu systemu Linux](deploy-run-and-debug-your-linux-project.md)<br />
-[Konfigurowanie sesji debugowania CMake](../build/configure-cmake-debugging-sessions.md)
+[Konfigurowanie sesji debugowania narzędzia CMake](../build/configure-cmake-debugging-sessions.md)

@@ -1,22 +1,26 @@
 ---
 title: Błąd narzędzi konsolidatora LNK1120
-ms.date: 05/17/2017
+description: Opisuje błąd konsolidatora LNK1120, który raportuje liczbę nierozwiązanych błędów symboli zewnętrznych w łączu.
+ms.date: 10/31/2019
 f1_keywords:
 - LNK1120
 helpviewer_keywords:
 - LNK1120
 ms.assetid: 56aa7d36-921f-4daf-b44d-cca0d4fb1b51
-ms.openlocfilehash: b11318dcffb665d3b422fffcbd7e6275f35984dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21a1ede07a69cdc065dd897715e243115529600d
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255108"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626581"
 ---
 # <a name="linker-tools-error-lnk1120"></a>Błąd narzędzi konsolidatora LNK1120
 
 > *Liczba* nierozpoznanych elementów zewnętrznych
 
-Błąd LNK1120 liczności (*numer*) błędów nierozpoznany symbol zewnętrzny dla tej operacji łączenia. Większość nierozpoznanych symboli zewnętrznych błędy są zgłaszane indywidualnie przez [błąd narzędzi konsolidatora LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md) i [błąd narzędzi konsolidatora LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md), które poprzedzają ten komunikat o błędzie, jeden raz dla każdego nierozpoznany zewnętrzny symbol błędu.
+LNK1120 błędów zgłasza liczbę [nierozwiązanych błędów symboli zewnętrznych](linker-tools-error-lnk2001.md#what-is-an-unresolved-external-symbol) w bieżącym łączu.
 
-Aby naprawić ten błąd, należy rozwiązać wszystkie inne nierozwiązane błędy zewnętrznych lub inne błędy konsolidatora, które należy poprzedzić go w danych wyjściowych kompilacji. Ten błąd nie jest zgłaszany, kiedy pozostają żadne nierozwiązane błędy zewnętrznych.
+Każdy nierozpoznany symbol zewnętrzny najpierw jest raportowany przez błąd [LNK2001](linker-tools-error-lnk2001.md) lub [LNK2019](linker-tools-error-lnk2019.md) . Komunikat LNK1120 jest ostatni i zawiera nierozpoznaną liczbę błędów symboli.
+
+> [!IMPORTANT]
+> **Nie musisz naprawić tego błędu.** Ten błąd znajduje się w przypadku skorygowania wszystkich błędów konsolidatora LNK2001 i LNK2019 przed nim w danych wyjściowych kompilacji. Zawsze usuwaj problemy, zaczynając od pierwszego zgłoszonego błędu. Późniejsze błędy mogą wynikać z wcześniejszych wersji i przejść po usunięciu wcześniejszych błędów.

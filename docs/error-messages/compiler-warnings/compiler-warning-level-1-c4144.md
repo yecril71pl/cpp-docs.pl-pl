@@ -1,25 +1,25 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4144
+title: Ostrzeżenie kompilatora (poziom 1) C4144
 ms.date: 11/04/2016
 f1_keywords:
 - C4144
 helpviewer_keywords:
 - C4144
 ms.assetid: a37b445d-dbc6-43b4-8d95-ffd0e4225464
-ms.openlocfilehash: b2406357baf70e45566f2d2f25839d151bac4186
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e780c2a4f83106bfa298ef5320ddc85daf2d44c4
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352952"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624980"
 ---
-# <a name="compiler-warning-level-1-c4144"></a>Kompilator ostrzeżenie (poziom 1) C4144
+# <a name="compiler-warning-level-1-c4144"></a>Ostrzeżenie kompilatora (poziom 1) C4144
 
-"expression": wyrażenie relacyjne jako wyrażenie przełącznik
+wyrażenie "Expression": wyrażenie relacyjne jako wyrażenie przełącznika
 
-Użyto określone wyrażenie relacyjne jako wyrażenie kontroli [Przełącz](../../cpp/switch-statement-cpp.md) instrukcji. Skojarzone instrukcji case oferowane są wartościami logicznymi. Poniższy przykład spowoduje wygenerowanie C4144:
+Określone wyrażenie relacyjne zostało użyte jako wyrażenie kontrolne instrukcji [Switch](../../cpp/switch-statement-cpp.md) . Skojarzone instrukcje Case będą oferować wartości logiczne. Poniższy przykład generuje C4144:
 
-```
+```cpp
 // C4144.cpp
 // compile with: /W1
 int main()

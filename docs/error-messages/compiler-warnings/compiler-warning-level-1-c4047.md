@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4047
+title: Ostrzeżenie kompilatora (poziom 1) C4047
 ms.date: 11/04/2016
 f1_keywords:
 - C4047
 helpviewer_keywords:
 - C4047
 ms.assetid: b75ad6fb-5c93-4434-a85f-c4083051a5de
-ms.openlocfilehash: 87c9e39e5dac40341adc63af45cc0e460806c736
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0bfbcb0e88380dfcc21eb724fc3682ac66b655e6
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388829"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624938"
 ---
-# <a name="compiler-warning-level-1-c4047"></a>Kompilator ostrzeżenie (poziom 1) C4047
+# <a name="compiler-warning-level-1-c4047"></a>Ostrzeżenie kompilatora (poziom 1) C4047
 
-'operator': "identifier1" różni się w poziomach pośredników od "identifier2"
+"operator": "Identifier1" różni się w poziomach pośrednich od "identifier2"
 
-Zmienna (jeden poziom pośredni), wskazać wskaźnik do innego wskaźnika, który wskazuje zmienna (dwa poziomy pośredni) i tak dalej.
+Wskaźnik może wskazywać na zmienną (jeden poziom pośredni), do innego wskaźnika, który wskazuje na zmienną (dwa poziomy pośrednie) itd.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4047:
+Poniższy przykład generuje C4047:
 
-```
+```c
 // C4047.c
 // compile with: /W1
 
@@ -41,9 +41,9 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4047:
+Poniższy przykład generuje C4047:
 
-```
+```c
 // C4047b.c
 // compile with: /W1
 #include <stdio.h>

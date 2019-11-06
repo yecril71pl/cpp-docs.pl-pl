@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4368
 ms.assetid: cb85bcee-fd3d-4aa5-b626-2324f07a4f1b
-ms.openlocfilehash: b2af1166738d867c84ff4ebae832f831af7940ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1870d076d21c02574793a8079c4658b39ebf121
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311502"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623643"
 ---
 # <a name="compiler-warning-c4368"></a>Ostrzeżenie kompilatora C4368
 
-Nie można zdefiniować "członek" jako członka zarządzanego "type": mieszane typy nie są obsługiwane.
+nie można zdefiniować elementu "member" jako elementu członkowskiego zarządzanego "Type": typy mieszane nie są obsługiwane.
 
-Element członkowski danych natywnych nie można osadzić w typie CLR.
+Nie można osadzić natywnej składowej danych w typie CLR.
 
-Możliwe, jednak zadeklarować wskaźnika do typu macierzystego i kontrolować jego okres istnienia w Konstruktor i destruktor i finalizator klasy zarządzanej. Aby uzyskać więcej informacji, zobacz [destruktory i finalizatory](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Można jednak zadeklarować wskaźnik do typu natywnego i kontrolować jego okres istnienia w konstruktorze i destruktorze oraz finalizatorze klasy zarządzanej. Aby uzyskać więcej informacji [, zobacz Destruktory i finalizatory](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
-To jest zawsze ostrzeżenie jako błąd. Użyj [ostrzeżenie](../../preprocessor/warning.md) pragma może wyłączyć C4368.
+To ostrzeżenie jest zawsze emitowane jako błąd. Użyj [ostrzeżenia](../../preprocessor/warning.md) pragma, aby wyłączyć C4368.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4368.
+Poniższy przykład generuje C4368.
 
-```
+```cpp
 // C4368.cpp
 // compile with: /clr /c
 struct N {};

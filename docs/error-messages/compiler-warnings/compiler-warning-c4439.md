@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4439
 ms.assetid: 9449958f-f407-4824-829b-9e092f2af97d
-ms.openlocfilehash: d604c234b9445a7e5304118124620f0057f30975
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7cab2e55fca640438051fbb79ac933e83d5f3cbb
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311348"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623655"
 ---
 # <a name="compiler-warning-c4439"></a>Ostrzeżenie kompilatora C4439
 
-'Funkcja': definicja funkcji z zarządzanym typem w sygnaturze musi mieć konwencję wywołania __clrcall
+"Function": definicja funkcji z typem zarządzanym w podpisie musi mieć konwencję wywoływania __clrcall
 
-Kompilator niejawnie zastąpione konwencja wywołania z [__clrcall](../../cpp/clrcall.md). Aby rozwiązać tego ostrzeżenia, należy usunąć `__cdecl` lub `__stdcall` konwencji wywoływania.
+Kompilator niejawnie zastąpił konwencją wywoływania z [__clrcall](../../cpp/clrcall.md). Aby rozwiązać ten problem, Usuń konwencję wywoływania `__cdecl` lub `__stdcall`.
 
-C4439 zawsze jest wystawiany jako błąd. Możesz wyłączyć to ostrzeżenie za pomocą `#pragma warning` lub **/wd**; zobacz [ostrzeżenie](../../preprocessor/warning.md) lub [Wn /W0, / W1, / W2, / W3, / W4, / W1, / W2, / W3, / W4, / Wall / wo, WV, /WX (poziom ostrzegawczy)](../../build/reference/compiler-option-warning-level.md)Aby uzyskać więcej informacji.
+C4439 jest zawsze wystawiony jako błąd. To ostrzeżenie można wyłączyć za pomocą `#pragma warning` lub **/WD**; Aby uzyskać więcej informacji, zobacz [Ostrzeżenie](../../preprocessor/warning.md) lub [/w,/W0,/W1,/W2,/W3,/W4,/W1,/W2,/W3,/W4,/Wall,/WD,/we,/wo,/WV,/WX (poziom ostrzeżenia)](../../build/reference/compiler-option-warning-level.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4439.
+Poniższy przykład generuje C4439.
 
-```
+```cpp
 // C4439.cpp
 // compile with: /clr
 void __stdcall f( System::String^ arg ) {}   // C4439

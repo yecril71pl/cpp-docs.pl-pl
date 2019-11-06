@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4097
+title: Ostrzeżenie kompilatora (poziom 1) C4097
 ms.date: 11/04/2016
 f1_keywords:
 - C4097
 helpviewer_keywords:
 - C4097
 ms.assetid: 2525be51-fac2-43b2-b57c-3bbf1a2268f7
-ms.openlocfilehash: d27e1d33db7a531d541bffdac015176de72077d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a96f7d7d70919410cb7291ed2784a41d244ff2b
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152201"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627112"
 ---
-# <a name="compiler-warning-level-1-c4097"></a>Kompilator ostrzeżenie (poziom 1) C4097
+# <a name="compiler-warning-level-1-c4097"></a>Ostrzeżenie kompilatora (poziom 1) C4097
 
-Oczekiwano wartości parametru pragma "Restore" lub "off"
+Oczekiwano parametru pragma "Restore" lub "off"
 
-Dyrektywa pragma została przekazana nieprawidłowa wartość.
+Do dyrektywy pragma została przekazano nieprawidłową wartość.
 
-Poniższy przykład spowoduje wygenerowanie C4097:
+Poniższy przykład generuje C4097:
 
-```
+```cpp
 // C4097.cpp
 // compile with: /W1
 #pragma runtime_checks("",test)   // C4097

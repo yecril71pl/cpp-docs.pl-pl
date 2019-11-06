@@ -1,35 +1,35 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4042
+title: Ostrzeżenie kompilatora (poziom 1) C4042
 ms.date: 11/04/2016
 f1_keywords:
 - C4042
 helpviewer_keywords:
 - C4042
 ms.assetid: e4bd861b-1194-426b-bf79-68c5b021eb0a
-ms.openlocfilehash: 99f4f45aad82aa9898dad4cffb60b8e3311ddc9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db7f0425c3752c20ca8c5d4b6c95845ff64475c5
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152146"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627040"
 ---
-# <a name="compiler-warning-level-1-c4042"></a>Kompilator ostrzeżenie (poziom 1) C4042
+# <a name="compiler-warning-level-1-c4042"></a>Ostrzeżenie kompilatora (poziom 1) C4042
 
-'Identyfikator': ma złą klasę magazynu
+"Identyfikator": ma złą klasę magazynu
 
-Klasa wybrany magazyn nie można używać z tego identyfikatora w tym kontekście. Kompilator używa domyślnej klasy magazynu, zamiast tego:
+Nie można użyć określonej klasy magazynu z tym identyfikatorem w tym kontekście. Kompilator używa domyślnej klasy magazynu:
 
-- `extern`, jeśli *identyfikator* jest funkcją.
+- `extern`, jeśli *Identyfikator* jest funkcją.
 
-- **automatyczne**, jeśli *identyfikator* formalny parametr lub zmienna lokalna.
+- Auto, jeśli *Identyfikator* jest parametrem formalnym lub zmienną lokalną.
 
-- Brak magazynu klasy, jeśli *identyfikator* jest zmienną globalną.
+- Brak klasy magazynu, jeśli *Identyfikator* jest zmienną globalną.
 
-To ostrzeżenie może być spowodowany przez określenie klasę magazynu innego niż **zarejestrować** w deklaracji parametru.
+To ostrzeżenie może być spowodowane określeniem klasy magazynu innej niż **register** w deklaracji parametru.
 
-Poniższy przykład spowoduje wygenerowanie C4042
+Poniższy przykład generuje C4042
 
-```
+```cpp
 // C4042.cpp
 // compile with: /W1 /LD
 int func2( __declspec( thread ) int tls_i )    // C4042

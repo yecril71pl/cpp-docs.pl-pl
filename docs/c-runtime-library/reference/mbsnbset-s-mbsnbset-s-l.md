@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _tcsnset_s function
 - tcsnset_s_l function
 ms.assetid: 811f92c9-cc31-4bbd-8017-2d1bfc6fb96f
-ms.openlocfilehash: b54a05d163430aa01f4c12e841a11d1faf5a6c4b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7addd7e053816c462ae430443506445b878464a0
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952109"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625114"
 ---
 # <a name="_mbsnbset_s-_mbsnbset_s_l"></a>_mbsnbset_s, _mbsnbset_s_l
 
@@ -88,7 +88,7 @@ Ciąg, który ma zostać zmieniony.
 *zmienia*<br/>
 Rozmiar buforu ciągu.
 
-*c*<br/>
+*s*<br/>
 Ustawienie znaków pojedynczego bajtu lub znaku bajtowego.
 
 *liczbą*<br/>
@@ -113,7 +113,7 @@ Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawie�
 
 W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu, a tym samym wyeliminować konieczność określenia argumentu rozmiaru. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
-Wersje debugowania tych funkcji najpierw wypełniają bufor 0xFD. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -126,8 +126,8 @@ Wersje debugowania tych funkcji najpierw wypełniają bufor 0xFD. Aby wyłączy�
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mbsnbset_s**|\<mbstring.h>|
-|**_mbsnbset_s_l**|\<mbstring.h>|
+|**_mbsnbset_s**|\<mbstring. h >|
+|**_mbsnbset_s_l**|\<mbstring. h >|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

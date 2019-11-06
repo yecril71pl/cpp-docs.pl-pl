@@ -1,31 +1,31 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4036
+title: Ostrzeżenie kompilatora (poziom 1) C4036
 ms.date: 11/04/2016
 f1_keywords:
 - C4036
 helpviewer_keywords:
 - C4036
 ms.assetid: f0b15359-4d62-48ec-8cb1-a7b36587a47f
-ms.openlocfilehash: 632e88bb64568c97e937e83e177598054a954f22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 858cf089d3f681438a221115c8758c38a5cf8d9a
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151789"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626265"
 ---
-# <a name="compiler-warning-level-1-c4036"></a>Kompilator ostrzeżenie (poziom 1) C4036
+# <a name="compiler-warning-level-1-c4036"></a>Ostrzeżenie kompilatora (poziom 1) C4036
 
-nienazwane "type" jako rzeczywisty parametr
+nienazwane "typ" jako rzeczywisty parametr
 
-Nazwa typu, nie jest określony dla struktury, złożenia, wyliczenia lub klasą używaną jako rzeczywisty parametr. Jeśli używasz [/Zg](../../build/reference/zg-generate-function-prototypes.md) do Generuj prototypy funkcji, kompilator generuje to ostrzeżenie i komentarze parametrów formalnych w prototypie wygenerowany.
+Nie podano nazwy typu dla struktury, Unii, wyliczenia lub klasy używanej jako rzeczywisty parametr. Jeśli używasz [/zg](../../build/reference/zg-generate-function-prototypes.md) , aby generować prototypy funkcji, kompilator wystawia to ostrzeżenie i komentarze do parametru formalnego w wygenerowanym prototypie.
 
-Należy określić nazwę typu, aby rozwiązać tego ostrzeżenia.
+Określ nazwę typu, aby usunąć to ostrzeżenie.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4036.
+Poniższy przykład generuje C4036.
 
-```
+```c
 // C4036.c
 // compile with: /Zg /W1
 // D9035 expected

@@ -1,33 +1,33 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4142
+title: Ostrzeżenie kompilatora (poziom 1) C4142
 ms.date: 11/04/2016
 f1_keywords:
 - C4142
 helpviewer_keywords:
 - C4142
 ms.assetid: 1fdfc3dc-60a2-4f00-b133-20e400f9b7a6
-ms.openlocfilehash: 762f52c9f051a660cce68d424e02fc45422376e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97b13ad65335df435d071c106f577aefca7e072d
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302283"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625007"
 ---
-# <a name="compiler-warning-level-1-c4142"></a>Kompilator ostrzeżenie (poziom 1) C4142
+# <a name="compiler-warning-level-1-c4142"></a>Ostrzeżenie kompilatora (poziom 1) C4142
 
-nieszkodliwa ponowna definicja typu
+niegroźna ponowna definicja typu
 
-Typ jest ponownie zdefiniować w taki sposób, który nie ma wpływu na wygenerowany kod.
+Typ jest ponownie definiowany w sposób, który nie ma wpływu na wygenerowany kod.
 
 Aby rozwiązać ten problem, sprawdzając następujące możliwe przyczyny:
 
-- Funkcji składowej klasy pochodnej ma inny typ zwracany z odpowiedniej funkcji składowej klasy bazowej.
+- Funkcja członkowska klasy pochodnej ma inny typ zwracany od odpowiedniej funkcji członkowskiej klasy podstawowej.
 
-- Typ zdefiniowany przy użyciu `typedef` polecenie zostało przedefiniowane przy użyciu różnej składni.
+- Typ zdefiniowany za pomocą polecenia `typedef` jest ponownie definiowany przy użyciu innej składni.
 
-Poniższy przykład spowoduje wygenerowanie C4142:
+Poniższy przykład generuje C4142:
 
-```
+```c
 // C4142.c
 // compile with: /W1
 float X2;

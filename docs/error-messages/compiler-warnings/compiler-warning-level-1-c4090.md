@@ -1,31 +1,31 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4090
+title: Ostrzeżenie kompilatora (poziom 1) C4090
 ms.date: 11/04/2016
 f1_keywords:
 - C4090
 helpviewer_keywords:
 - C4090
 ms.assetid: baad469d-23d4-45aa-ad9c-305b32d61e9a
-ms.openlocfilehash: b47d0bfbb6eab24fbe811d3e4f79b6bd86b3bb11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88ed48e9bf7057c55ee4004ca1bb1eb18cd4be51
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406486"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626164"
 ---
-# <a name="compiler-warning-level-1-c4090"></a>Kompilator ostrzeżenie (poziom 1) C4090
+# <a name="compiler-warning-level-1-c4090"></a>Ostrzeżenie kompilatora (poziom 1) C4090
 
-'Operacja': kwalifikatory innego modyfikatora
+"Operation": różne kwalifikatory "modyfikator"
 
-Zmienna użyty w operacji jest zdefiniowana za pomocą określonego modyfikatora, która zapobiega modyfikowaniu bez wykrycia przez kompilator. Wyrażenie jest kompilowany bez żadnych modyfikacji.
+Zmienna użyta w operacji jest zdefiniowana z określonym modyfikatorem, który uniemożliwia jego modyfikację bez wykrywania przez kompilator. Wyrażenie jest kompilowane bez modyfikacji.
 
-To ostrzeżenie może wystąpić, gdy wskaźnik do **const** lub `volatile` elementu jest przypisany do wskaźnika nie jest zadeklarowany jako wskazujący **const** lub `volatile`.
+To ostrzeżenie może być spowodowane tym, że wskaźnik do elementu **const** lub `volatile` jest przypisany do wskaźnika, który nie został zadeklarowany jako wskazujący **stałą** lub `volatile`.
 
-To ostrzeżenie zostanie wyświetlone dla programów C. W C++ program, kompilator generuje błąd: [C2440](../../error-messages/compiler-errors-1/compiler-error-c2440.md).
+To ostrzeżenie jest wydawane dla programów C. W C++ programie kompilator zgłasza błąd: [C2440](../../error-messages/compiler-errors-1/compiler-error-c2440.md).
 
-Poniższy przykład spowoduje wygenerowanie C4090:
+Poniższy przykład generuje C4090:
 
-```
+```c
 // C4090.c
 // compile with: /W1
 int *volatile *p;

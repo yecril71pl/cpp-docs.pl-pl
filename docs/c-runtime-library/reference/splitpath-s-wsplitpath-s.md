@@ -34,12 +34,12 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-ms.openlocfilehash: f97c07ed01ae629fe3eb61346c6c0fcd8fa803f0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8eeb6a0f43827578c5d5ba900c35a3ac30f4ae7c
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958052"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625840"
 ---
 # <a name="_splitpath_s-_wsplitpath_s"></a>_splitpath_s, _wsplitpath_s
 
@@ -90,7 +90,7 @@ errno_t _wsplitpath_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Ścieżka*<br/>
+*ścieżka*<br/>
 Pełna ścieżka.
 
 *litera*<br/>
@@ -100,7 +100,7 @@ Litera dysku, po którym następuje dwukropek ( **:** ). Jeśli nie potrzebujesz
 Rozmiar buforu *dysku* w znakach jednobajtowych lub szerokich. Jeśli *dysk* ma wartość **null**, ta wartość musi być równa 0.
 
 *katalogów*<br/>
-Ścieżka katalogu, włącznie z końcowym ukośnikiem. Można używać ukośników **/** (), ukośników odwrotnych ( **\\** ) lub obu tych wartości. Jeśli ścieżka katalogu nie jest potrzebna, można przekazać **wartość null** dla tego parametru.
+Ścieżka katalogu, włącznie z końcowym ukośnikiem. Można używać ukośników ( **/** ), ukośników odwrotnych ( **\\** ) lub obu tych wartości. Jeśli ścieżka katalogu nie jest potrzebna, można przekazać **wartość null** dla tego parametru.
 
 *dirNumberOfElements*<br/>
 Rozmiar buforu *dir* w znakach jednobajtowych lub szerokich. Jeśli *dir* ma wartość **null**, ta wartość musi być równa 0.
@@ -164,13 +164,13 @@ Jeśli pełna ścieżka nie zawiera składnika (na przykład filename), **_split
 
 W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu, eliminując konieczność określenia argumentu rozmiaru. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
-Wersje debugowania tych funkcji najpierw wypełniają bufor 0xFD. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_splitpath_s**|\<stdlib.h>|
+|**_splitpath_s**|\<STDLIB. h >|
 |**_wsplitpath_s**|\<STDLIB. h > lub \<WCHAR. h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).

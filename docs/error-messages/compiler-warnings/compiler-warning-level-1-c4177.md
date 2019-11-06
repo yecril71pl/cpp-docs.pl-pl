@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4177
+title: Ostrzeżenie kompilatora (poziom 1) C4177
 ms.date: 11/04/2016
 f1_keywords:
 - C4177
 helpviewer_keywords:
 - C4177
 ms.assetid: 2b05a5b3-696e-4f21-818e-227b9335e748
-ms.openlocfilehash: 5c8f3dc37c76ad0d016108b792ee61c67cce63d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82aae8e5d0be15adef7891b39a6f7e482c729e60
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391663"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625057"
 ---
-# <a name="compiler-warning-level-1-c4177"></a>Kompilator ostrzeżenie (poziom 1) C4177
+# <a name="compiler-warning-level-1-c4177"></a>Ostrzeżenie kompilatora (poziom 1) C4177
 
-\#dyrektywy pragma powinien być w zakresie globalnym
+pragma \#pragma powinna być w zakresie globalnym
 
-[Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md) pragma nie powinny być używane w ramach zakresu lokalnego. **Pragma** nie będzie obowiązywać do momentu występuje zakresie globalnym po bieżącym zakresie.
+Nie należy używać dyrektywy [pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md) pragma w zakresie lokalnym. **Pragma** nie będzie ważna, dopóki nie zostanie wykryty zakres globalny po bieżącym zakresie.
 
-Poniższy przykład spowoduje wygenerowanie C4177:
+Poniższy przykład generuje C4177:
 
-```
+```cpp
 // C4177.cpp
 // compile with: /W1
 // #pragma bss_seg("global")   // OK

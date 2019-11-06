@@ -1,15 +1,15 @@
 ---
-title: 'Przewodnik przenoszenia: MFC Scribble'
-ms.date: 11/19/2018
+title: 'Przewodnik przenoszenia: Aplikacja Scribble MFC'
+ms.date: 10/23/2019
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: e808f67b1479653add27a54ddf91f6578c046734
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c5e0e8fecd99e4f03077574da7b7fcb3e538762b
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511531"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627213"
 ---
-# <a name="porting-guide-mfc-scribble"></a>Przewodnik przenoszenia: MFC Scribble
+# <a name="porting-guide-mfc-scribble"></a>Przewodnik przenoszenia: Aplikacja Scribble MFC
 
 Ten temat jest pierwszym z kilku tematów, które wprowadzają do procedury uaktualniania projektów programu Visual Studio C++ , które zostały utworzone we wcześniejszych wersjach programu Visual Studio, do Visual Studio 2017. Te tematy wprowadzają proces uaktualniania na przykład, rozpoczynając od bardzo prostego projektu i przechodzą do nieco bardziej złożonych. W tym temacie opisano proces uaktualniania dla określonego projektu, Bazgroły MFC. Jest to podstawowe wprowadzenie do procesu uaktualniania dla C++ projektów.
 
@@ -19,17 +19,17 @@ Każda wersja programu Visual Studio wprowadza możliwe niezgodności, które mo
 
 Obiekt Bazgroły MFC jest dobrze znanym przykładem, który został uwzględniony w wielu różnych C++wersjach wizualizacji. Jest to prosta aplikacja do rysowania, która ilustruje niektóre podstawowe funkcje MFC. Dostępne są różne wersje, w tym wersje zarządzane i natywne. W tym przykładzie znaleźliśmy starą wersję Bazgroły w kodzie natywnym z programu Visual Studio 2005 i otwarto ją w programie Visual Studio 2017.
 
-Przed podjęciem próby uaktualnienia upewnij się, że zainstalowano obciążenie pulpitu systemu Windows. Otwórz Instalatora programu Visual Studio (vs_installer. exe). Jednym ze sposobów otwierania Instalatora jest wybranie opcji **plik** > **Nowy projekt** i przewinięcie do dołu listy zainstalowanych szablonów do momentu wyświetlenia **otwartej Instalator programu Visual Studio**. Po otwarciu Instalatora zostaną wyświetlone wszystkie dostępne obciążenia. Jeśli nie wybrano pola dla obciążenia **pulpitu systemu Windows** , wybierz je i kliknij przycisk **Modify** u dołu okna.
+Przed podjęciem próby uaktualnienia upewnij się, że zainstalowano obciążenie pulpitu systemu Windows. Otwórz Instalatora programu Visual Studio (vs_installer. exe). Jednym ze sposobów otwierania Instalatora jest wybranie opcji **plik** > **Nowy projekt** i przewinięcie do dołu listy zainstalowanych szablonów do momentu wyświetlenia **otwartego Instalator programu Visual Studio**. Po otwarciu Instalatora zostaną wyświetlone wszystkie dostępne obciążenia. Jeśli nie wybrano pola dla obciążenia **pulpitu systemu Windows** , wybierz je i kliknij przycisk **Modify** u dołu okna.
 
 Następnie wykonaj kopię zapasową całego rozwiązania i całej jego zawartości.
 
-Na koniec konieczne jest podjęcie decyzji dotyczącej konkretnej metody uaktualniania. W przypadku bardziej złożonych rozwiązań i projektów, które nie zostały uaktualnione przez dłuższy czas, należy rozważyć uaktualnienie jednej wersji programu Visual Studio w danym momencie. Dzięki temu możesz zawęzić wersję programu Visual Studio, która wprowadziła problem. W przypadku prostego projektu warto próbować otworzyć go w najnowszej wersji programu Visual Studio i umożliwić kreatorowi konwersję projektu. Jeśli to nie zadziała, możesz spróbować uaktualnić jedną wersję jednocześnie, jeśli masz dostęp do odpowiednich wersji programu Visual Studio.
+Na koniec Otwórz rozwiązanie w najnowszej wersji programu Visual Studio i zezwól kreatorowi na konwersję projektu. 
 
-Należy pamiętać, że można również uruchomić devenv w wierszu polecenia, korzystając z `/Upgrade` opcji, zamiast korzystać z kreatora w celu uaktualnienia projektów. Zobacz [/Upgrade (devenv. exe)](/visualstudio/ide/reference/upgrade-devenv-exe). Może to być przydatne w automatyzowaniu procesu uaktualniania dla dużej liczby projektów.
+Należy pamiętać, że można również uruchomić devenv w wierszu polecenia, korzystając z opcji `/Upgrade`, zamiast korzystać z kreatora w celu uaktualnienia projektów. Zobacz [/Upgrade (devenv. exe)](/visualstudio/ide/reference/upgrade-devenv-exe). Może to być przydatne w automatyzowaniu procesu uaktualniania dla dużej liczby projektów.
 
 ### <a name="step-1-converting-the-project-file"></a>Krok 1. Konwertowanie pliku projektu
 
-Gdy otworzysz stary plik projektu w programie Visual Studio 2017, program Visual Studio oferuje możliwość konwersji pliku projektu do najnowszej wersji, która została zaakceptowana. Pojawiło się następujące okno dialogowe:
+Gdy otworzysz stary plik projektu w programie Visual Studio, program Visual Studio oferuje możliwość konwersji pliku projektu do najnowszej wersji, która została zaakceptowana. Pojawiło się następujące okno dialogowe:
 
 ![Przejrzyj zmiany projektu i rozwiązania](../porting/media/scribbleprojectupgrade.PNG "Przejrzyj zmiany projektu i rozwiązania")
 
@@ -43,15 +43,15 @@ W momencie utworzenia poprzedniego projektu bazgrołów Itanium była ważną pl
 
 Program Visual Studio wyświetli raport dotyczący migracji zawierający listę wszystkich problemów ze starym plikiem projektu.
 
-![Raport] o uaktualnieniu (../porting/media/scribblemigrationreport.PNG "Raport") o uaktualnieniu
+![Raport o uaktualnieniu](../porting/media/scribblemigrationreport.PNG "Raport o uaktualnieniu")
 
 W takim przypadku problemy były wszystkie ostrzeżeniami, a program Visual Studio wprowadził odpowiednie zmiany w pliku projektu. Istotną różnicą, o ile chodzi o projekt, jest to, że narzędzie kompilacji zmieniło się z vcbuild na MSBuild. Ta zmiana została wprowadzona po raz pierwszy w programie Visual Studio 2010. Inne zmiany obejmują kilka przemieszczenia sekwencji elementów w pliku projektu. Żaden z problemów nie wymagał dalszej uwagi dla tego prostego projektu.
 
 ### <a name="step-2-getting-it-to-build"></a>Krok 2. Trwa przygotowywanie do kompilacji
 
-Przed rozpoczęciem kompilowania sprawdzimy zestaw narzędzi platformy, aby poznać, która wersja kompilatora używa systemu projektu. W oknie dialogowym właściwości projektu, w obszarze **Właściwości konfiguracji**, w kategorii **Ogólne** Sprawdź właściwość zestaw **narzędzi platformy** . Zawiera wersję programu Visual Studio i numer wersji narzędzia platformy, która w tym przypadku jest najnowsze 141 dla narzędzia Visual Studio 2017. Podczas konwersji projektu, który został pierwotnie skompilowany przy użyciu programu Visual Studio 2010, 2012, 2013 lub 2015, zestaw narzędzi nie jest automatycznie aktualizowany do zestawu narzędzi programu Visual 2017 Studio.
+Przed rozpoczęciem kompilowania sprawdzimy zestaw narzędzi platformy, aby poznać, która wersja kompilatora używa systemu projektu. W oknie dialogowym właściwości projektu, w obszarze **Właściwości konfiguracji**, w kategorii **Ogólne** Sprawdź właściwość zestaw **narzędzi platformy** . Zawiera wersję programu Visual Studio i numer wersji narzędzia platformy, która w tym przypadku jest najnowsze 141 dla narzędzia Visual Studio 2017. Podczas konwersji projektu, który został pierwotnie skompilowany przy użyciu programu Visual Studio 2010, 2012, 2013 lub 2015, zestaw narzędzi nie jest automatycznie aktualizowany do najnowszego zestawu narzędzi.
 
-Aby przełączyć się na format Unicode, Otwórz właściwości projektu, w obszarze **Właściwości konfiguracji**, wybierz sekcję **Ogólne** i Znajdź właściwość **zestaw znaków** . Zmień tę wartość przy **użyciu zestawu znaków** wielobajtowych, aby **użyć zestawu znaków Unicode**. Efektem tej zmiany jest to, że teraz makra _UNICODE i Unicode są zdefiniowane i _MBCS nie, które można sprawdzić w oknie dialogowym właściwości w obszarze **C/C++**  Category we właściwości **wiersza polecenia** .
+Aby przełączyć się na format Unicode, Otwórz właściwości projektu, w obszarze **Właściwości konfiguracji**, wybierz sekcję **Ogólne** i Znajdź właściwość **zestaw znaków** . Zmień tę wartość przy **użyciu zestawu znaków wielobajtowych** , aby **użyć zestawu znaków Unicode**. Efektem tej zmiany jest to, że teraz makra _UNICODE i Unicode są zdefiniowane i _MBCS nie, które można sprawdzić w oknie dialogowym właściwości w obszarze **C/C++**  Category we właściwości **wiersza polecenia** .
 
 ```Output
 /GS /analyze- /W4 /Zc:wchar_t /Zi /Gm- /Od /Fd".\Debug\vc141.pdb" /Zc:inline /fp:precise /D "_AFXDLL" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_UNICODE" /D "UNICODE" /errorReport:prompt /WX /Zc:forScope /Gd /Oy- /MDd /Fa".\Debug\" /EHsc /nologo /Fo".\Debug\" /Fp".\Debug\Scribble.pch" /diagnostics:classic

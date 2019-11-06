@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: 0a40dad34d607bb52b062fc2cec163dfc8b62219
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1cd2a15db0a27dedd88b9abf24b98d338515c949
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943659"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624787"
 ---
 # <a name="asctime_s-_wasctime_s"></a>asctime_s, _wasctime_s
 
@@ -71,7 +71,7 @@ errno_t _wasctime_s(
 
 ### <a name="parameters"></a>Parametry
 
-*buffer*<br/>
+*buforu*<br/>
 Wskaźnik do buforu do przechowywania wyniku ciągu znaków. Ta funkcja przyjmuje wskaźnik do prawidłowej lokalizacji w pamięci o rozmiarze określonym przez *NumberOfElements*.
 
 *numberOfElements*<br/>
@@ -86,13 +86,13 @@ Zero, jeśli powodzenie. Jeśli wystąpi awaria, zostanie wywołana procedura ob
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|*buffer*|*numberOfElements*|*tmSource*|przesłać|Wartość w *buforze*|
+|*buforu*|*numberOfElements*|*tmSource*|przesłać|Wartość w *buforze*|
 |--------------|------------------------|----------|------------|-----------------------|
-|**NULL**|Any|Any|**EINVAL**|nie zmodyfikowano|
-|Nie **ma wartości null** (wskazuje na prawidłową pamięć)|0|Any|**EINVAL**|nie zmodyfikowano|
-|Nie **ma wartości null**|0 < rozmiar < 26|Any|**EINVAL**|Pusty ciąg|
-|Nie **ma wartości null**|>= 26|**NULL**|**EINVAL**|Pusty ciąg|
-|Nie **ma wartości null**|>= 26|Nieprawidłowa struktura czasu lub wartości spoza zakresu dla składników czasu|**EINVAL**|Pusty ciąg|
+|**NULL**|Ile|Ile|**EINVAL**|nie zmodyfikowano|
+|Nie **ma wartości null** (wskazuje na prawidłową pamięć)|0|Ile|**EINVAL**|nie zmodyfikowano|
+|Nie **ma wartości null**|0 < rozmiar < 26|Ile|**EINVAL**|Pusty ciąg|
+|Nie **ma wartości null**|> = 26|**NULL**|**EINVAL**|Pusty ciąg|
+|Nie **ma wartości null**|> = 26|Nieprawidłowa struktura czasu lub wartości spoza zakresu dla składników czasu|**EINVAL**|Pusty ciąg|
 
 > [!NOTE]
 > Warunki błędów dla **wasctime_s** są podobne do **asctime_s** , z wyjątkiem tego, że limit rozmiaru jest mierzony w wyrazach.
@@ -115,9 +115,11 @@ Funkcja **asctime** konwertuje godzinę przechowywaną jako strukturę do ciągu
 
 Przekonwertowany ciąg znaków jest również dostosowywany zgodnie z ustawieniami lokalnej strefy czasowej. Zapoznaj się z funkcjami [Time, _time32, _time64](time-time32-time64.md), [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md)i [localtime_s, _localtime32_s](localtime-s-localtime32-s-localtime64-s.md) , _localtime64_s, aby uzyskać informacje o konfigurowaniu czasu lokalnego i funkcji [_tzset](tzset.md) w celu uzyskania informacji na temat Definiowanie środowiska strefy czasowej i zmiennych globalnych.
 
-Wynik ciągu utworzony przez **asctime_s** zawiera dokładnie 26 znaków i ma postać `Wed Jan 02 02:03:55 1980\n\0`. Używany jest zegar 24-godzinny. Wszystkie pola mają stałą szerokość. Nowy znak linii i znak null zajmują ostatnie dwa pozycje ciągu. Wartość, która została przeniesiona jako drugi parametr, musi mieć co najmniej wartość Big. Jeśli jest mniejsza, zostanie zwrócony kod błędu, **EINVAL**.
+Wynik w postaci ciągu utworzony przez **asctime_s** zawiera dokładnie 26 znaków i ma `Wed Jan 02 02:03:55 1980\n\0`. Używany jest zegar 24-godzinny. Wszystkie pola mają stałą szerokość. Nowy znak linii i znak null zajmują ostatnie dwa pozycje ciągu. Wartość, która została przeniesiona jako drugi parametr, musi mieć co najmniej wartość Big. Jeśli jest mniejsza, zostanie zwrócony kod błędu, **EINVAL**.
 
 **_wasctime_s** to dwubajtowa wersja **asctime_s**. **_wasctime_s** i **asctime_s** zachowują się identycznie w inny sposób.
+
+Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mapping"></a>Mapowanie procedury tekstu ogólnego
 
@@ -131,7 +133,7 @@ W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia 
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**asctime_s**|\<time.h>|
+|**asctime_s**|\<time. h >|
 |**_wasctime_s**|\<Time. h > lub \<WCHAR. h >|
 
 ## <a name="security"></a>Zabezpieczenia

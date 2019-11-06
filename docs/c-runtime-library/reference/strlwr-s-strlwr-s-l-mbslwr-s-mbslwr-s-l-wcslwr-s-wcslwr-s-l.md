@@ -63,12 +63,12 @@ helpviewer_keywords:
 - tcslwr_s_l function
 - strings [C++], converting case
 ms.assetid: 4883d31b-bdac-4049-83a1-91dfdeceee79
-ms.openlocfilehash: 70009f1d7d0230b37c6a59da20996842f976d02f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5790cf6c36faa0669fd12d6875b7e7488e819b12
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947589"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625800"
 ---
 # <a name="_strlwr_s-_strlwr_s_l-_mbslwr_s-_mbslwr_s_l-_wcslwr_s-_wcslwr_s_l"></a>_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l
 
@@ -161,7 +161,7 @@ Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawie�
 
 W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując konieczność określenia argumentu rozmiaru) i mogą automatycznie zastąpić starsze, niezabezpieczone funkcje z ich nowszymi, bezpiecznymi odpowiednikami. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
-Wersje debugowania tych funkcji najpierw wypełniają bufor 0xFD. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -174,9 +174,9 @@ Wersje debugowania tych funkcji najpierw wypełniają bufor 0xFD. Aby wyłączy�
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strlwr_s**, **_strlwr_s_l**|\<string.h>|
-|**_mbslwr_s**, **_mbslwr_s_l**|\<mbstring.h>|
-|**_wcslwr_s**, **_wcslwr_s_l**|\<ciąg. h > lub \<WCHAR. h >|
+|**_strlwr_s**, **_strlwr_s_l**|\<string. h >|
+|**_mbslwr_s**, **_mbslwr_s_l**|\<mbstring. h >|
+|**_wcslwr_s**, **_wcslwr_s_l**|\<String. h > lub \<WCHAR. h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

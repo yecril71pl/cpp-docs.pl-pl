@@ -32,12 +32,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-ms.openlocfilehash: 7ecb6fe105d8a976979f91d38c9e536b10989310
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: da36641f6a3ba8dc1da0894aedbfa390d2e796ae
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956110"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625047"
 ---
 # <a name="_gcvt_s"></a>_gcvt_s
 
@@ -62,7 +62,7 @@ errno_t _gcvt_s(
 
 ### <a name="parameters"></a>Parametry
 
-*buffer*<br/>
+*buforu*<br/>
 Bufor do przechowywania wyniku konwersji.
 
 *sizeInBytes*<br/>
@@ -80,7 +80,7 @@ Zero, jeśli powodzenie. Jeśli wystąpi błąd spowodowany nieprawidłowym para
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|*buffer*|*sizeInBytes*|*value*|*cyfr*|przesłać|Wartość w *buforze*|
+|*buforu*|*sizeInBytes*|*value*|*cyfr*|przesłać|Wartość w *buforze*|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
 |**NULL**|Ile|Ile|Ile|**EINVAL**|Nie zmodyfikowano.|
 |Nie **ma wartości null** (wskazuje na prawidłową pamięć)|zero|Ile|Ile|**EINVAL**|Nie zmodyfikowano.|
@@ -96,13 +96,13 @@ Funkcja **_gcvt_s** konwertuje *wartość* zmiennoprzecinkową na ciąg znaków 
 
 W C++programie korzystanie z tej funkcji jest uproszczone przez Przeciążenie szablonu; Przeciążenie może automatycznie wywnioskować długość buforu, eliminując konieczność określenia argumentu rozmiaru. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
-Wersja do debugowania tej funkcji najpierw wypełnia bufor 0xFD. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Wersja do debugowania tej funkcji najpierw wypełnia bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_gcvt_s**|\<stdlib.h>|\<error.h>|
+|**_gcvt_s**|\<STDLIB. h >|\<błąd. h >|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

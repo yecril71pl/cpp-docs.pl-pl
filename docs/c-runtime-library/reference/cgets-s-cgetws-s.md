@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-ms.openlocfilehash: 2039fc32cecb768c3c3fbc239446abedeb48f188
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: be2acefcf907ca9b908fa7f439b6e245a5e103d8
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939262"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624767"
 ---
 # <a name="_cgets_s-_cgetws_s"></a>_cgets_s, _cgetws_s
 
@@ -74,7 +74,7 @@ errno_t _cgetws_s(
 
 ### <a name="parameters"></a>Parametry
 
-*buffer*<br/>
+*buforu*<br/>
 Lokalizacja magazynu dla danych.
 
 *numberOfElements*<br/>
@@ -89,7 +89,7 @@ Wartość zwracana wynosi zero, jeśli to się powiedzie; w przeciwnym razie kod
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|*buffer*|*numberOfElements*|*pSizeRead*|przesłać|Zawartość *buforu*|
+|*buforu*|*numberOfElements*|*pSizeRead*|przesłać|Zawartość *buforu*|
 |--------------|------------------------|-----------------|------------|--------------------------|
 |**NULL**|Ile|Ile|**EINVAL**|n/d|
 |Nie **ma wartości null**|zero|Ile|**EINVAL**|nie zmodyfikowano|
@@ -103,6 +103,8 @@ Jeśli wystąpi błąd podczas operacji lub weryfikacji parametrów, zostanie wy
 
 W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość bufora, eliminując tym samym konieczność określenia argumentu rozmiaru i mogą automatycznie zastąpić starsze, mniej bezpieczne funkcje z ich nowszymi, bardziej bezpiecznymi odpowiednikami. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
+Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
@@ -113,7 +115,7 @@ W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia 
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_cgets_s**|\<conio.h>|
+|**_cgets_s**|\<CONIO. h >|
 |**_cgetws_s**|\<CONIO. h > lub \<WCHAR. h >|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).

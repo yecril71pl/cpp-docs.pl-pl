@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4180
+title: Ostrzeżenie kompilatora (poziom 1) C4180
 ms.date: 11/04/2016
 f1_keywords:
 - C4180
 helpviewer_keywords:
 - C4180
 ms.assetid: 40c91bd4-37f1-4d59-a4f3-d5ddab68239b
-ms.openlocfilehash: 8ed09edae5a9577773c573337b6e646a49599862
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1fd56f3bcc662a326e4a263bb0a266ffc37d6ec6
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391702"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626236"
 ---
-# <a name="compiler-warning-level-1-c4180"></a>Kompilator ostrzeżenie (poziom 1) C4180
+# <a name="compiler-warning-level-1-c4180"></a>Ostrzeżenie kompilatora (poziom 1) C4180
 
-Kwalifikator stosowany do typu funkcji nie ma znaczenia; ignorowane
+kwalifikator stosowany do typu funkcji nie ma znaczenia; Ignoruj
 
-Kwalifikatorze, takie jak **const**, jest stosowany do typu funkcji zdefiniowanych przez `typedef`.
+Kwalifikator, taki jak **const**, jest stosowany do typu funkcji zdefiniowanej przez `typedef`.
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // C4180.cpp
 // compile with: /W1 /c
 typedef int FuncType(void);

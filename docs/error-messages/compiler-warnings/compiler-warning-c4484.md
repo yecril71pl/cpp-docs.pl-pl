@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4484
 ms.assetid: 3d30e5b3-2297-45b7-a37a-1360056fdd0e
-ms.openlocfilehash: 29e99da02aa0144699d3c20e523b5e5e4b6b8f72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d3f72ddf7675ea7ad73022dc55a60fdc74d4390
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363534"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623628"
 ---
 # <a name="compiler-warning-c4484"></a>Ostrzeżenie kompilatora C4484
 
-"override_function": pasuje do metody bazowej klasy referencyjnej "base_class_function", ale nie jest oznaczona "virtual", "new" lub "override"; przyjęto "new" (a nie "virtual")
+"override_function": pasuje do metody bazowej klasy referencyjnej "base_class_function", ale nie jest oznaczona modyfikatorem "Virtual", "New" ani "override"; Założono modyfikator "New" (ale nie "Virtual")
 
-Podczas kompilowania za pomocą **/CLR**, kompilator niejawnie nie zastępuje funkcję klasy bazowej, która oznacza, że funkcja otrzyma nowe gniazdo w vtable. Aby rozwiązać problem, należy jawnie określić, czy funkcja jest przesłonięciem.
+Podczas kompilowania z **/CLR**kompilator nie będzie niejawnie przesłaniał funkcji klasy bazowej, co oznacza, że funkcja uzyska nowe miejsce w tabeli metod wirtualnych. Aby rozwiązać ten problem, należy jawnie określić, czy funkcja jest przesłonięciem.
 
 Aby uzyskać więcej informacji, zobacz:
 
@@ -27,13 +27,13 @@ Aby uzyskać więcej informacji, zobacz:
 
 - [new (nowe gniazdo w vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
 
-C4484 zawsze jest wystawiany jako błąd. Użyj [ostrzeżenie](../../preprocessor/warning.md) pragma może pominąć C4484.
+C4484 jest zawsze wystawiony jako błąd. Użyj [ostrzeżenia](../../preprocessor/warning.md) pragma, aby pominąć C4484.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4484.
+Poniższy przykład generuje C4484.
 
-```
+```cpp
 // C4484.cpp
 // compile with: /clr
 ref struct A {

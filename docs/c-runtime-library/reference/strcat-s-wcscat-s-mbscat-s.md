@@ -38,12 +38,12 @@ helpviewer_keywords:
 - _mbscat_s_l function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-ms.openlocfilehash: 4449ec788b33a541a04a46d972f56f792797a16e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b0f2d1a295908ba2f0c8a89f57e81d6f822f3535
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957992"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625782"
 ---
 # <a name="strcat_s-wcscat_s-_mbscat_s-_mbscat_s_l"></a>strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
 
@@ -122,8 +122,8 @@ Zero, jeśli pomyślne; kod błędu w przypadku niepowodzenia.
 |*strDestination*|*numberOfElements*|*strSource*|Wartość zwracana|Zawartość *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
 |**Wartość zerowa** lub niezakończona|Ile|Ile|**EINVAL**|nie zmodyfikowano|
-|Ile|Ile|**NULL**|**EINVAL**|*strDestination* [0] ustaw wartość 0|
-|Ile|0 lub za mały|Ile|**ERANGE**|*strDestination* [0] ustaw wartość 0|
+|Ile|Ile|**NULL**|**EINVAL**|*strDestination*[0] ustaw na 0|
+|Ile|0 lub za mały|Ile|**ERANGE**|*strDestination*[0] ustaw na 0|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -146,7 +146,7 @@ Wersje funkcji, które mają sufiks **_l** mają takie samo zachowanie, ale uży
 
 W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując konieczność określenia argumentu rozmiaru) i mogą automatycznie zastąpić starsze, niezabezpieczone funkcje z ich nowszymi, bezpiecznymi odpowiednikami. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
-Wersje debugowania tych funkcji najpierw wypełniają bufor 0xFD. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -158,9 +158,9 @@ Wersje debugowania tych funkcji najpierw wypełniają bufor 0xFD. Aby wyłączy�
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strcat_s**|\<string.h>|
-|**wcscat_s**|\<ciąg. h > lub \<WCHAR. h >|
-|**_mbscat_s**|\<mbstring.h>|
+|**strcat_s**|\<string. h >|
+|**wcscat_s**|\<String. h > lub \<WCHAR. h >|
+|**_mbscat_s**|\<mbstring. h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

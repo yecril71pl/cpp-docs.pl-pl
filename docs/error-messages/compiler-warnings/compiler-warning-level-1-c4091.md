@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4091
+title: Ostrzeżenie kompilatora (poziom 1) C4091
 ms.date: 11/04/2016
 f1_keywords:
 - C4091
 helpviewer_keywords:
 - C4091
 ms.assetid: 3a404967-ab42-49b0-b324-fd7ba1859d78
-ms.openlocfilehash: 87432a74dfe7c09a52f436d4e91b3f70eb66856b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce6dd980ef70f129a0dbae474b8f717f7573f861
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410450"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626751"
 ---
-# <a name="compiler-warning-level-1-c4091"></a>Kompilator ostrzeżenie (poziom 1) C4091
+# <a name="compiler-warning-level-1-c4091"></a>Ostrzeżenie kompilatora (poziom 1) C4091
 
-"— słowo kluczowe": zignorowano na lewo od "type", gdy brak deklaracji zmiennej
+"słowo kluczowe": zignorowane po lewej "Type", gdy nie jest zadeklarowana żadna zmienna
 
-Kompilator wykrył sytuacji, gdy użytkownik prawdopodobnie ma można zadeklarować zmienną, ale kompilator nie może zadeklarować zmienną.
+Kompilator wykrył sytuację, w której użytkownik prawdopodobnie zażądał zadeklarowanej zmiennej, ale kompilator nie mógł zadeklarować zmiennej.
 
 ## <a name="example"></a>Przykład
 
-A `__declspec` atrybut znajdujący się na początku deklaracji typu zdefiniowanego przez użytkownika stosuje się do zmiennej tego typu. C4091 wskazuje, że brak deklaracji zmiennej. Poniższy przykład spowoduje wygenerowanie C4091.
+Atrybut `__declspec` na początku deklaracji typu zdefiniowanego przez użytkownika ma zastosowanie do zmiennej tego typu. C4091 wskazuje, że żadna zmienna nie jest zadeklarowana. Poniższy przykład generuje C4091.
 
-```
+```cpp
 // C4091.cpp
 // compile with: /W1 /c
 __declspec(dllimport) class X {}; // C4091
@@ -38,9 +38,9 @@ class __declspec(dllimport) X3 {};
 
 ## <a name="example"></a>Przykład
 
-Identyfikator przypadku typedef nie może być również nazwa zmiennej. Poniższy przykład spowoduje wygenerowanie C4091.
+Jeśli identyfikator jest typedef, nie może być również nazwą zmiennej. Poniższy przykład generuje C4091.
 
-```
+```cpp
 // C4091_b.cpp
 // compile with: /c /W1 /WX
 #define LIST 4

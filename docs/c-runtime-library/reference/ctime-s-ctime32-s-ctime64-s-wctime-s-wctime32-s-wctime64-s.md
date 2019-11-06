@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-ms.openlocfilehash: d983ee4219985c7b213812a69f6f83f49dbf389b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a6329319be5d002c8f0a35ceb0258cb9081923f7
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941978"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624413"
 ---
 # <a name="ctime_s-_ctime32_s-_ctime64_s-_wctime_s-_wctime32_s-_wctime64_s"></a>ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 
@@ -125,7 +125,7 @@ errno_t _wctime64_s(
 
 ### <a name="parameters"></a>Parametry
 
-*buffer*<br/>
+*buforu*<br/>
 Musi być wystarczająco duży, aby pomieścić 26 znaków. Wskaźnik do wyniku ciągu znaków lub **wartość null** , jeśli:
 
 - *sourceTime* reprezentuje datę sprzed północy, 1 stycznia 1970, UTC.
@@ -148,13 +148,13 @@ Zero, jeśli powodzenie. W przypadku niepowodzenia z powodu nieprawidłowego par
 
 ## <a name="error-conditions"></a>Warunki błędów
 
-|*buffer*|*numberOfElements*|*sourceTime*|przesłać|Wartość w *buforze*|
+|*buforu*|*numberOfElements*|*sourceTime*|przesłać|Wartość w *buforze*|
 |--------------|------------------------|------------|------------|-----------------------|
 |**NULL**|Ile|Ile|**EINVAL**|nie zmodyfikowano|
 |Nie **ma wartości null** (wskazuje na prawidłową pamięć)|0|Ile|**EINVAL**|nie zmodyfikowano|
 |Nie **ma wartości null**|0 < rozmiar < 26|Ile|**EINVAL**|Pusty ciąg|
-|Nie **ma wartości null**|>= 26|NULL|**EINVAL**|Pusty ciąg|
-|Nie **ma wartości null**|>= 26|< 0|**EINVAL**|Pusty ciąg|
+|Nie **ma wartości null**|> = 26|NULL|**EINVAL**|Pusty ciąg|
+|Nie **ma wartości null**|> = 26|< 0|**EINVAL**|Pusty ciąg|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -172,6 +172,8 @@ Przekonwertowany ciąg znaków jest również dostosowywany zgodnie z ustawienia
 
 W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu, eliminując konieczność określenia argumentu rozmiaru. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
+Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
 |Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
@@ -184,7 +186,7 @@ W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia 
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**ctime_s**, **_ctime32_s**, **_ctime64_s**|\<time.h>|
+|**ctime_s**, **_ctime32_s**, **_ctime64_s**|\<time. h >|
 |**_wctime_s**, **_wctime32_s**, **_wctime64_s**|\<Time. h > lub \<WCHAR. h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).

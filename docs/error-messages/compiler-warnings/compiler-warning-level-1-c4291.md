@@ -1,31 +1,31 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4291
+title: Ostrzeżenie kompilatora (poziom 1) C4291
 ms.date: 11/04/2016
 f1_keywords:
 - C4291
 helpviewer_keywords:
 - C4291
 ms.assetid: c2b95dea-38f2-4609-9104-707c30798da4
-ms.openlocfilehash: e1b787e7149afe93fb50cc1e6ceaecba2e787876
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8dc35a58d40d2619f6e035e07b4ad0b3351c45d
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384258"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626641"
 ---
-# <a name="compiler-warning-level-1-c4291"></a>Kompilator ostrzeżenie (poziom 1) C4291
+# <a name="compiler-warning-level-1-c4291"></a>Ostrzeżenie kompilatora (poziom 1) C4291
 
-"deklaracją": nie pasującego operatora delete odnaleziony; pamięć nie zostanie zwolniona, jeśli Inicjalizacja generuje wyjątek
+"Deklaracja": nie znaleziono pasującego operatora delete; pamięć nie zostanie zwolniona, jeśli Inicjalizacja zgłosi wyjątek
 
-Umieszczanie [nowe](../../cpp/new-operator-cpp.md) jest używany dla których nie ma żadnych umieszczania [Usuń](../../cpp/delete-operator-cpp.md).
+Zostanie użyte [nowe](../../cpp/new-operator-cpp.md) miejsce umieszczenia, dla którego nie ma żadnego [usunięcia](../../cpp/delete-operator-cpp.md)umieszczania.
 
-Jeśli pamięć została przydzielona do obiektu za pomocą operatora **nowe**, wywoływany jest konstruktor obiektu. Jeśli Konstruktor zgłasza wyjątek, wszystkie pamięci, która została przydzielona dla obiektu powinien być z cofniętą alokacją. Nie może to mieć miejsce, chyba że operator **Usuń** istnieje funkcja pasujący operator **nowe**.
+Po przydzieleniu pamięci dla obiektu z operatorem **New**, Konstruktor obiektu jest wywoływany. Jeśli Konstruktor zgłasza wyjątek, wszystkie pamięci, które zostały przydzieloną dla tego obiektu, powinny zostać cofnięte. Nie można tego zrobić, chyba że istnieje funkcja **delete** operatora, która pasuje do operatora **New**.
 
-Jeśli korzystasz z operatora **nowe** bez żadnych dodatkowych argumentów i kompilujesz z [/GX](../../build/reference/gx-enable-exception-handling.md), [/EHS](../../build/reference/eh-exception-handling-model.md), lub opcji/eha, aby włączyć obsługę wyjątków, kompilator wygeneruje kod operator wywołania **Usuń** Jeśli Konstruktor zgłasza wyjątek.
+Jeśli używasz operatora **New** bez żadnych dodatkowych argumentów i Kompiluj z opcjami [/GX](../../build/reference/gx-enable-exception-handling.md), [/EHS](../../build/reference/eh-exception-handling-model.md)lub/EHa, aby włączyć obsługę wyjątków, kompilator generuje kod w celu wywołania operatora **delete** , jeśli Konstruktor zgłosi wyjątek.
 
-Jeśli używasz postaci umieszczania **nowe** operatora (formularza z argumentami prócz rozmiaru alokacji) i konstruktora obiektu zgłasza wyjątek, kompilator wygeneruje nadal kod, aby wywołać operator **Usuń**; ale tylko wtedy będzie wykonywać więc jeśli formularza położenia operatora **Usuń** istnieje dopasowanie formularza położenia operatora **nowe** , przydzielonej pamięci. Na przykład:
+Jeśli używasz formularza położenia operatora **New** (formularz z argumentami oprócz rozmiaru alokacji) i Konstruktor obiektu zgłasza wyjątek, kompilator nadal będzie generował kod, aby wywołać operator **delete**; jednak będzie to zrobić tylko wtedy, gdy istnieje forma rozmieszczenia operatora **delete** pasująca do formy umieszczania operatora **New** , która przydzieliła pamięć. Na przykład:
 
-```
+```cpp
 // C4291.cpp
 // compile with: /EHsc /W1
 #include <malloc.h>
@@ -74,7 +74,7 @@ int main(void)
 }
 ```
 
-Powyższy przykład generuje ostrzeżenie C4291, ponieważ żadna z form położenia operatora **Usuń** została zdefiniowana, które odpowiadają formularza położenia operatora **nowe**. Aby rozwiązać ten problem, Wstaw następujący kod powyżej **głównego**. Należy zauważyć, że wszystkie przeciążonego operatora **Usuń** parametry funkcji są zgodne z tymi przeciążonego operatora **nowe**, z wyjątkiem pierwszego parametru.
+Powyższy przykład generuje ostrzeżenie C4291, ponieważ nie zdefiniowano formy umieszczania operatora **delete** , która pasuje do formy umieszczania operatora **New**. Aby rozwiązać ten problem, Wstaw poniższy kod powyżej **Main**. Zwróć uwagę, że wszystkie parametry funkcji **delete** przeciążonego operatora są zgodne z tymi, które są używane przez przeciążony operator **New**, z wyjątkiem pierwszego parametru.
 
 ```
 void operator delete(void* pMem, char* pszFilename, int nLine)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 799be6cfd4b14061ba61586f361dd884ad59224c
-ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.openlocfilehash: 8fa7f02f8537f60b71ff21a476589cab9fcf595b
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72587943"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625086"
 ---
 # <a name="constructors-c"></a>Konstruktory (C++)
 
@@ -68,7 +68,7 @@ int main()
 
 ## <a name="member_init_list"></a>Listy inicjatorów składowych
 
-Konstruktor może opcjonalnie mieć listę inicjatorów składowych, która inicjuje składowe klasy przed wykonaniem treści konstruktora. (Należy zauważyć, że lista inicjatorów składowych nie jest taka sama jak lista *inicjatorów* typu [std:: initializer_list \<T >](../standard-library/initializer-list-class.md)).
+Konstruktor może opcjonalnie mieć listę inicjatorów składowych, która inicjuje składowe klasy przed wykonaniem treści konstruktora. (Należy zauważyć, że lista inicjatorów składowych nie jest taka sama jak lista *inicjatorów* typu [std:: initializer_list\<t >](../standard-library/initializer-list-class.md)).
 
 Użycie listy inicjatorów składowych jest preferowane przez przypisanie wartości w treści konstruktora, ponieważ bezpośrednio Inicjuje element członkowski. W poniższym przykładzie przedstawiono listę inicjatorów składowych składającą się ze wszystkich wyrażeń **identyfikatora (argumentu)** po dwukropku:
 
@@ -78,7 +78,7 @@ Użycie listy inicjatorów składowych jest preferowane przez przypisanie warto�
     {}
 ```
 
-Identyfikator musi odwoływać się do elementu członkowskiego klasy; zostanie ona zainicjowana przy użyciu wartości argumentu. Argument może być jednym z parametrów konstruktora, wywołania funkcji lub [std:: initializer_list \<T >](../standard-library/initializer-list-class.md).
+Identyfikator musi odwoływać się do elementu członkowskiego klasy; zostanie ona zainicjowana przy użyciu wartości argumentu. Argument może być jednym z parametrów konstruktora, wywołania funkcji lub [std:: initializer_list\<t >](../standard-library/initializer-list-class.md).
 
 składowe **const** i elementy członkowskie typu referencyjnego muszą być zainicjowane na liście inicjatorów elementów członkowskich.
 
@@ -318,7 +318,7 @@ Konstruktor może być zadeklarowany jako [constexpr](constexpr-cpp.md) , jeśli
 
 ## <a name="init_list_constructors"></a>Konstruktory list inicjatorów
 
-Jeśli Konstruktor przyjmuje wartość [std:: initializer_list \<T \>](../standard-library/initializer-list-class.md) jako parametr, a wszystkie inne parametry mają argumenty domyślne, ten Konstruktor zostanie wybrany w celu rozpoznania przeciążenia podczas tworzenia wystąpienia klasy za pośrednictwem operatora bezpośredniego zainicjować. Można użyć initializer_list do zainicjowania dowolnego elementu członkowskiego, który może go zaakceptować. Załóżmy na przykład, że Klasa Box (pokazana wcześniej) ma `std::vector<string>` składową `m_contents`. Można podać Konstruktor podobny do tego:
+Jeśli Konstruktor przyjmuje wartość [std:: initializer_list\<t\>](../standard-library/initializer-list-class.md) jako parametr, a wszystkie inne parametry mają argumenty domyślne, ten Konstruktor zostanie wybrany w celu rozpoznania przeciążenia podczas tworzenia wystąpienia klasy za pośrednictwem operatora bezpośredniego zainicjować. Można użyć initializer_list do zainicjowania dowolnego elementu członkowskiego, który może go zaakceptować. Załóżmy na przykład, że Klasa Box (pokazana wcześniej) ma `std::vector<string>` składową `m_contents`. Można podać Konstruktor podobny do tego:
 
 ```cpp
     Box(initializer_list<string> list, int w = 0, int h = 0, int l = 0)

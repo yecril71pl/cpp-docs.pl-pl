@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4172
+title: Ostrzeżenie kompilatora (poziom 1) C4172
 ms.date: 11/04/2016
 f1_keywords:
 - C4172
 helpviewer_keywords:
 - C4172
 ms.assetid: a8d2bf65-d8b1-4fe3-8340-a223d7e7fde6
-ms.openlocfilehash: caa71da9182c1da1d17d87d901084d0ee9badf73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d53972dbcb2e3ab6a95b0b874cc6bb98cd66840
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391793"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624823"
 ---
-# <a name="compiler-warning-level-1-c4172"></a>Kompilator ostrzeżenie (poziom 1) C4172
+# <a name="compiler-warning-level-1-c4172"></a>Ostrzeżenie kompilatora (poziom 1) C4172
 
-zwracanie adresu lokalnej zmiennej lub tymczasowej
+Zwracanie adresu lokalnej zmiennej lub tymczasowej
 
-Funkcja zwraca adres obiektu lokalnej zmiennej lub tymczasowej. Zmienne lokalne i obiekty tymczasowe są niszczony, kiedy funkcja zwraca, więc zwrócony adres jest nieprawidłowy.
+Funkcja zwraca adres zmiennej lokalnej lub obiektu tymczasowego. Zmienne lokalne i obiekty tymczasowe są niszczone, gdy funkcja zwraca, więc zwrócony adres jest nieprawidłowy.
 
-Zmodyfikowanie funkcji, tak aby nie zwróci adresu lokalnego obiektu.
+Przeprojektowanie funkcji tak, aby nie zwracała adresu obiektu lokalnego.
 
-Poniższy przykład spowoduje wygenerowanie C4172:
+Poniższy przykład generuje C4172:
 
-```
+```cpp
 // C4172.cpp
 // compile with: /W1 /LD
 float f = 10;

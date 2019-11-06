@@ -1,17 +1,18 @@
 ---
 title: 'Przewodnik: Tworzenie tradycyjnej aplikacji klasycznej systemu WindowsC++()'
+description: Jak utworzyć minimalną, tradycyjną aplikację klasyczną systemu Windows przy użyciu C++programu Visual Studio, i Win32 API
 ms.custom: get-started-article
-ms.date: 10/21/2019
+ms.date: 11/03/2019
 helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 080c4cd9612058a0a54f19e5d0f4b8add4a03bce
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: 6f219a0c199971b563b1c0ff291f2f5d12803023
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778547"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627478"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Przewodnik: Tworzenie tradycyjnej aplikacji klasycznej systemu WindowsC++()
 
@@ -76,9 +77,7 @@ Projekt jest teraz tworzony i plik źródłowy zostanie otwarty w edytorze. Aby 
 
    ![Nazwij projekt DesktopApp](../build/media/desktop-app-new-project-name-153.png "Nazwij projekt DesktopApp")
 
-1. W oknie dialogowym **projekt pulpitu systemu Windows** w obszarze **Typ aplikacji**wybierz pozycję **aplikacja systemu Windows (exe)** . W obszarze **Opcje dodatkowe**wybierz pozycję **pusty projekt**. Wybierz **przycisk OK** , aby utworzyć projekt.
-
-   ![Tworzenie DesktopApp w Kreatorze projektu klasycznego systemu Windows](../build/media/desktop-app-new-project-wizard-153.png "Tworzenie DesktopApp w Kreatorze projektu klasycznego systemu Windows")
+1. W oknie dialogowym **projekt pulpitu systemu Windows** w obszarze **Typ aplikacji**wybierz pozycję **aplikacja systemu Windows (exe)** . W obszarze **Opcje dodatkowe**wybierz pozycję **pusty projekt**. Upewnij się, że nie wybrano **prekompilowanego nagłówka** . Wybierz **przycisk OK** , aby utworzyć projekt.
 
 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **DesktopApp** , wybierz polecenie **Dodaj**, a następnie wybierz polecenie **nowy element**.
 
@@ -108,9 +107,7 @@ Projekt jest teraz tworzony i plik źródłowy zostanie otwarty w edytorze. Aby 
 
    ![Tworzenie DesktopApp w Kreatorze aplikacji Win32 — Omówienie](../build/media/desktop-app-win32-wizard-overview-150.png "Tworzenie DesktopApp w Kreatorze aplikacji Win32 — Omówienie")
 
-1. Na stronie **Ustawienia aplikacji** w obszarze **Typ aplikacji**wybierz pozycję **aplikacja systemu Windows**. W obszarze **Opcje dodatkowe**wybierz pozycję **pusty projekt**. Wybierz pozycję **Zakończ** , aby utworzyć projekt.
-
-   ![Tworzenie DesktopApp w ustawieniach Kreatora aplikacji Win32](../build/media/desktop-app-win32-wizard-settings-150.png "Tworzenie DesktopApp w ustawieniach Kreatora aplikacji Win32")
+1. Na stronie **Ustawienia aplikacji** w obszarze **Typ aplikacji**wybierz pozycję **aplikacja systemu Windows**. W obszarze **Opcje dodatkowe**Usuń zaznaczenie pola **prekompilowany nagłówek**, a następnie wybierz pozycję **pusty projekt**. Wybierz pozycję **Zakończ** , aby utworzyć projekt.
 
 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt DesktopApp, wybierz polecenie **Dodaj**, a następnie wybierz polecenie **nowy element**.
 
@@ -144,9 +141,9 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych systemu Win
    Aby uzyskać informacje na temat parametrów i wartości zwracanej przez tę funkcję, zobacz [WinMain Entry Point](/windows/win32/api/winbase/nf-winbase-winmain).
 
    > [!NOTE]
-   > Co to są wszystkie dodatkowe słowa, takie jak `CALLBACK`, `HINSTANCE` lub `_In_`? Tradycyjny interfejs API systemu Windows używa często zawartych w nich elementów typedef i preprocesora, aby uzyskać bardziej szczegółowe informacje o typach i kodzie specyficznym dla platformy, takich jak Konwencje wywoływania, deklaracje **__declspec** i dyrektywy pragma kompilatora. W programie Visual Studio można użyć funkcji IntelliSense [Quick info](/visualstudio/ide/using-intellisense#quick-info) , aby zobaczyć, co definiuje te definicje typów i makr. Umieść wskaźnik myszy na wyrazie zainteresowania lub zaznacz go i naciśnij **klawisze ctrl** +**K**, **Ctrl** +**i** dla małego okna podręcznego, który zawiera definicję. Aby uzyskać więcej informacji, zobacz [Korzystanie z funkcji IntelliSense](/visualstudio/ide/using-intellisense). Parametry i typy zwracane często używają *adnotacji sal* , aby ułatwić przechwytywanie błędów programistycznych. Aby uzyskać więcej informacji, zobacz [Używanie adnotacji sal w celuC++ zmniejszenia wad języka C/Code](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
+   > Co to są wszystkie dodatkowe słowa, takie jak `CALLBACK`, `HINSTANCE`lub `_In_`? Tradycyjny interfejs API systemu Windows używa często zawartych w nich elementów typedef i preprocesora, aby uzyskać bardziej szczegółowe informacje o typach i kodzie specyficznym dla platformy, takich jak Konwencje wywoływania, deklaracje **__declspec** i dyrektywy pragma kompilatora. W programie Visual Studio można użyć funkcji IntelliSense [Quick info](/visualstudio/ide/using-intellisense#quick-info) , aby zobaczyć, co definiuje te definicje typów i makr. Umieść wskaźnik myszy na wyrazie zainteresowania lub zaznacz go i naciśnij **klawisze ctrl** +**K**, **Ctrl** +**i** dla małego okna podręcznego, który zawiera definicję. Aby uzyskać więcej informacji, zobacz [Korzystanie z funkcji IntelliSense](/visualstudio/ide/using-intellisense). Parametry i typy zwracane często używają *adnotacji sal* , aby ułatwić przechwytywanie błędów programistycznych. Aby uzyskać więcej informacji, zobacz [Używanie adnotacji sal w celuC++ zmniejszenia wad języka C/Code](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
 
-1. Programy klasyczne systemu Windows wymagają &lt;windows. h >. &lt;tchar. h > definiuje makro `TCHAR`, które jest rozpoznawane jako **wchar_t** , jeśli symbol Unicode jest zdefiniowany w projekcie, w przeciwnym razie jest rozpoznawany jako **char**.  Jeśli zawsze kompilujesz przy użyciu standardu UNICODE, nie potrzebujesz używanie TCHAR i możesz tylko bezpośrednio korzystać z **wchar_t** .
+1. Programy klasyczne systemu Windows wymagają &lt;windows. h >. &lt;używanie TCHAR. h > definiuje makro `TCHAR`, które jest rozpoznawane ostatecznie do **wchar_t** , jeśli symbol Unicode jest zdefiniowany w projekcie, w przeciwnym razie jest rozpoznawany jako **char**.  Jeśli zawsze kompilujesz przy użyciu standardu UNICODE, nie potrzebujesz używanie TCHAR i możesz tylko bezpośrednio korzystać z **wchar_t** .
 
    ```cpp
    #include <windows.h>

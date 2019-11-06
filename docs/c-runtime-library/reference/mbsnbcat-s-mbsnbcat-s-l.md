@@ -35,12 +35,12 @@ helpviewer_keywords:
 - mbsnbcat_s_l function
 - tcsncat function
 ms.assetid: 2c9e9be7-d979-4a54-8ada-23428b6648a9
-ms.openlocfilehash: 8a3f66f8fc8d4fd659880e8793fdaae635f9f7ba
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a148f4be503ee793e4e36855233edfc8fa8f165a
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952271"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624333"
 ---
 # <a name="_mbsnbcat_s-_mbsnbcat_s_l"></a>_mbsnbcat_s, _mbsnbcat_s_l
 
@@ -106,8 +106,8 @@ Zero, jeśli pomyślne; w przeciwnym razie kod błędu.
 |**Dest**|*sizeInBytes*|*SRC*|Wartość zwracana|
 |------------|-------------------|-----------|------------------|
 |**NULL**|Ile|Ile|**EINVAL**|
-|Any|<= 0|Ile|**EINVAL**|
-|Any|Ile|**NULL**|**EINVAL**|
+|Ile|< = 0|Ile|**EINVAL**|
+|Ile|Ile|**NULL**|**EINVAL**|
 
 Jeśli wystąpi którykolwiek z warunków błędów, funkcja generuje błąd nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli błąd jest obsługiwany, funkcja zwraca **EINVAL** i ustawia **errno** na **EINVAL**.
 
@@ -119,7 +119,7 @@ Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawie�
 
 W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu, a tym samym wyeliminować konieczność określenia argumentu rozmiaru i mogą automatycznie korzystać z nowych funkcji, które zastępują starsze, mniej bezpieczne funkcje. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
-Wersje debugowania tych funkcji najpierw wypełniają bufor 0xFD. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -132,8 +132,8 @@ Wersje debugowania tych funkcji najpierw wypełniają bufor 0xFD. Aby wyłączy�
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mbsnbcat_s**|\<mbstring.h>|
-|**_mbsnbcat_s_l**|\<mbstring.h>|
+|**_mbsnbcat_s**|\<mbstring. h >|
+|**_mbsnbcat_s_l**|\<mbstring. h >|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

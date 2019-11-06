@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4162
+title: Ostrzeżenie kompilatora (poziom 1) C4162
 ms.date: 11/04/2016
 f1_keywords:
 - C4162
 helpviewer_keywords:
 - C4162
 ms.assetid: 21ae3c92-501d-4689-ad7d-13753cb65eff
-ms.openlocfilehash: 6c6b675fd47cb6e98255515c7cd77c6dd48ea02b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e70898065a40a965b08b090bc59263acd918515
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391819"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624847"
 ---
-# <a name="compiler-warning-level-1-c4162"></a>Kompilator ostrzeżenie (poziom 1) C4162
+# <a name="compiler-warning-level-1-c4162"></a>Ostrzeżenie kompilatora (poziom 1) C4162
 
-'Identyfikator': Brak funkcji z powiązaniem C, znaleziono
+"Identyfikator": nie znaleziono funkcji z powiązaniem C
 
-Funkcji z powiązaniem C jest zadeklarowana, ale nie można odnaleźć.
+Funkcja z powiązaniem C jest zadeklarowana, ale nie można jej odnaleźć.
 
-Aby rozwiązać to ostrzeżenie, skompiluj w pliku c (wywoływanie z kompilatora C).  Jeśli należy wywołać kompilatora języka C++, należy umieścić extern "C" przed deklaracją funkcji.
+Aby rozwiązać ten problem, skompiluj w pliku c (Wywołaj kompilator C).  Jeśli musisz wywołać C++ kompilator, umieść extern "C" przed deklaracją funkcji.
 
-Poniższy przykład spowoduje wygenerowanie C4162
+Poniższy przykład generuje C4162
 
-```
+```cpp
 // C4162.cpp
 // compile with: /c /W1
 unsigned char _bittest(long* a, long b);
@@ -38,7 +38,7 @@ int main() {
 
 Możliwe rozwiązanie:
 
-```
+```cpp
 // C4162b.cpp
 // compile with: /c
 extern "C"

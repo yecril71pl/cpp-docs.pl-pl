@@ -1,18 +1,18 @@
 ---
-title: Modyfikowanie symboli WINVER i _WIN32_WINNT
+title: Aktualizuj WINVER i _WIN32_WINNT
 ms.date: 09/04/2017
 helpviewer_keywords:
 - WINVER in an upgraded Visual Studio C++ project
 - _WIN32_WINNT in an upgraded Visual Studio C++ project
 ms.assetid: 6a1f1d66-ae0e-48a7-81c3-524d8e8f3447
-ms.openlocfilehash: a83e92444e7010e4d3b65153b2e60e1c5d952cef
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0cfdb3d065a85bd02ef21de9c4c5282cf54fcb2a
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511606"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627259"
 ---
-# <a name="modifying-winver-and-_win32_winnt"></a>Modyfikowanie symboli WINVER i _WIN32_WINNT
+# <a name="update-winver-and-_win32_winnt"></a>Aktualizuj WINVER i _WIN32_WINNT
 
 Wizualizacja C++ nie obsługuje już systemu Windows 95, Windows 98, Windows Me, Windows NT ani Windows 2000. Jeśli makra **winver** lub **_WIN32_WINNT** są przypisane do jednej z tych wersji systemu Windows, należy zmodyfikować makra. W przypadku uaktualniania projektu, który został utworzony przy użyciu wcześniejszej wersji wizualizacji C++, można zobaczyć błędy kompilacji związane z makrami **winver** lub **_WIN32_WINNT** , jeśli są przypisane do wersji systemu Windows, która nie jest już obsługiwana.
 
@@ -51,7 +51,7 @@ Jeśli wszystkie te wersje systemu Windows nie są widoczne na liście w kopii d
 > [!NOTE]
 > Wartości nie są gwarantowane, jeśli dołączysz wewnętrzne nagłówki MFC w aplikacji.
 
-Możesz również zdefiniować to makro przy użyciu `/D` opcji kompilatora. Aby uzyskać więcej informacji, zobacz [/d (Definicje preprocesora)](../build/reference/d-preprocessor-definitions.md).
+Możesz również zdefiniować to makro przy użyciu opcji kompilatora `/D`. Aby uzyskać więcej informacji, zobacz [/d (Definicje preprocesora)](../build/reference/d-preprocessor-definitions.md).
 
 Aby uzyskać więcej informacji na temat znaczenia tych makr, zobacz [Korzystanie z nagłówków systemu Windows](/windows/win32/WinProg/using-the-windows-headers).
 

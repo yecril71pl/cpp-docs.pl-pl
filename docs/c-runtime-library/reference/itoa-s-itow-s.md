@@ -79,14 +79,14 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-ms.openlocfilehash: 204abd65981371a970623879ec94ff77db6728b2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: df7f3ec970e0205ab999d1a04299a22dcc422d42
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953557"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625069"
 ---
-# <a name="_itoa_s-_ltoa_s-_ultoa_s-_i64toa_s-_ui64toa_s-_itow_s--_ltow_s--_ultow_s-_i64tow_s-_ui64tow_s"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s,  _ltow_s,  _ultow_s, _i64tow_s, _ui64tow_s
+# <a name="_itoa_s-_ltoa_s-_ultoa_s-_i64toa_s-_ui64toa_s-_itow_s--_ltow_s--_ultow_s-_i64tow_s-_ui64tow_s"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s, _ltow_s, _ultow_s, _i64tow_s, _ui64tow_s
 
 Konwertuje liczbę całkowitą na ciąg. Są to wersje [_itoa, _itow funkcje](itoa-itow.md) z ulepszeniami zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -138,13 +138,13 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 *value*<br/>
 Liczba do przekonwertowania.
 
-*buffer*<br/>
+*buforu*<br/>
 Bufor wyjściowy, który przechowuje wynik konwersji.
 
 *zmienia*<br/>
 Rozmiar *buforu* w znakach lub znaki dwubajtowe.
 
-*radix*<br/>
+*podstawy*<br/>
 Podstawy lub numeryczna, która ma zostać użyta do przekonwertowania *wartości*, która musi znajdować się w zakresie 2-36.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -153,10 +153,10 @@ Zero, jeśli pomyślne; kod błędu w przypadku niepowodzenia. W przypadku zasto
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|value|Buforu|size|radix|przesłać|
+|value|Buforu|size|podstawy|przesłać|
 |-----------|------------|----------------------|-----------|------------|
 |Ile|**NULL**|Ile|Ile|**EINVAL**|
-|Ile|Ile|<=0|Ile|**EINVAL**|
+|Ile|Ile|< = 0|Ile|**EINVAL**|
 |Ile|Ile|< = długość wymaganego ciągu wynikowego|Ile|**EINVAL**|
 |Ile|Ile|Ile|*podstawy* < 2 lub *podstawy* > 36|**EINVAL**|
 
@@ -170,7 +170,7 @@ Z wyjątkiem parametrów i wartości zwracanej rodziny funkcji **_itoa_s** i **_
 
 W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując konieczność określenia argumentu rozmiaru) i mogą automatycznie zastąpić starsze, niezabezpieczone funkcje z ich nowszymi, bezpiecznymi odpowiednikami. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
-Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFD. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 CRT zawiera wygodne makra do zdefiniowania rozmiaru buforu wymaganego do przekonwertowania najdłuższej możliwej wartości poszczególnych typów całkowitych, łącznie z terminatorem wartości null i znakiem znaku, dla kilku typowych baz. Aby uzyskać więcej informacji, zobacz [maksymalne liczby przeliczników makr](itoa-itow.md#maximum-conversion-count-macros).
 
@@ -188,7 +188,7 @@ CRT zawiera wygodne makra do zdefiniowania rozmiaru buforu wymaganego do przekon
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_itoa_s**, **_ltoa_s**, **_ultoa_s**, **_i64toa_s**, **_ui64toa_s**|\<stdlib.h>|
+|**_itoa_s**, **_ltoa_s**, **_ultoa_s**, **_i64toa_s**, **_ui64toa_s**|\<STDLIB. h >|
 |**_itow_s**, **_ltow_s**, **_ultow_s**, **_i64tow_s**, **_ui64tow_s**|\<STDLIB. h > lub \<WCHAR. h >|
 
 Te funkcje są specyficzne dla firmy Microsoft. Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).

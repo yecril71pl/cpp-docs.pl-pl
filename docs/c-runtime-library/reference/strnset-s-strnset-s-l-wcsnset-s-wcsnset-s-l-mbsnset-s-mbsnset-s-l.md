@@ -58,12 +58,12 @@ helpviewer_keywords:
 - strnset_s function
 - _wcsnset_s function
 ms.assetid: 9cf1b321-b5cb-4469-b285-4c07cfbd8813
-ms.openlocfilehash: 3542d2272282a9c3f6b2aed8cc443bef85dfe883
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: acf84e6f09436f3bd97f9556ab8db9604243b8a8
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946991"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626133"
 ---
 # <a name="_strnset_s-_strnset_s_l-_wcsnset_s-_wcsnset_s_l-_mbsnset_s-_mbsnset_s_l"></a>_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
 
@@ -124,7 +124,7 @@ Ciąg, który ma zostać zmieniony.
 *numberOfElements*<br/>
 Rozmiar buforu *str* .
 
-*c*<br/>
+*s*<br/>
 Ustawienie znaku.
 
 *liczbą*<br/>
@@ -147,7 +147,7 @@ Te funkcje są ustawiane jako pierwsze w pierwszej *liczbie* znaków od *str* do
 
 Wartość wyjściowa jest zależna od ustawienia **LC_CTYPE** kategorii ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocals](setlocale-wsetlocale.md) . Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. wersje z sufiksem **_l** są identyczne, z tą różnicą, że w zamian korzystają z przekazaną parametrem ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-Wersje debugowania tych funkcji najpierw wypełniają bufor 0xFD. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -160,11 +160,11 @@ Wersje debugowania tych funkcji najpierw wypełniają bufor 0xFD. Aby wyłączy�
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strnset_s**|\<string.h>|
-|**_strnset_s_l**|\<Używanie TCHAR. h >|
-|**_wcsnset_s**|\<ciąg. h > lub \<WCHAR. h >|
-|**_wcsnset_s_l**|\<Używanie TCHAR. h >|
-|**_mbsnset_s**, **_mbsnset_s_l**|\<mbstring.h>|
+|**_strnset_s**|\<string. h >|
+|**_strnset_s_l**|\<używanie TCHAR. h >|
+|**_wcsnset_s**|\<String. h > lub \<WCHAR. h >|
+|**_wcsnset_s_l**|\<używanie TCHAR. h >|
+|**_mbsnset_s**, **_mbsnset_s_l**|\<mbstring. h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

@@ -35,12 +35,12 @@ helpviewer_keywords:
 - wmktemp_s function
 - temporary files [C++]
 ms.assetid: 92a7e269-7f3d-4c71-bad6-14bc827a451d
-ms.openlocfilehash: b0db1a50f638c6130e4beb6798431179edec153b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 464f0dfbdb0b84e1fd29ec650e53f5c2543c4403
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951594"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624209"
 ---
 # <a name="_mktemp_s-_wmktemp_s"></a>_mktemp_s, _wmktemp_s
 
@@ -93,6 +93,8 @@ Jeśli wystąpi którykolwiek z powyższych warunków błędu, zostanie wywołan
 
 Funkcja **_mktemp_s** tworzy unikatową nazwę pliku, modyfikując argument *nameTemplate* , tak że po wywołaniu, wskaźnik *nameTemplate* wskazuje ciąg zawierający nową nazwę pliku. **_mktemp_s** automatycznie obsługuje argumenty ciągu znaków wielobajtowych, aby rozpoznawać sekwencje znaków wielobajtowych zgodnie ze stroną kodową wielobajtowego aktualnie używaną przez system czasu wykonywania. **_wmktemp_s** to dwubajtowa wersja **_mktemp_s**; argument **_wmktemp_s** jest ciągiem znaków dwubajtowych. **_wmktemp_s** i **_mktemp_s** zachowują się identycznie, z tą różnicą, że **_wmktemp_s** nie obsługują ciągów znaków wielobajtowych.
 
+Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
@@ -125,8 +127,8 @@ W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia 
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mktemp_s**|\<io.h>|
-|**_wmktemp_s**|\<IO. h > lub \<WCHAR. h >|
+|**_mktemp_s**|\<we/wy >|
+|**_wmktemp_s**|\<we/wy > lub \<WCHAR. h >|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

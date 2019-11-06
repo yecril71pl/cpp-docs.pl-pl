@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _wmakepath_s function
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
-ms.openlocfilehash: 7efd7c8e5ce7314e6fe719073685377f4b325fbd
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7bd85734e71120a214d652048c02c176728474b2
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952946"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624357"
 ---
 # <a name="_makepath_s-_wmakepath_s"></a>_makepath_s, _wmakepath_s
 
@@ -83,7 +83,7 @@ errno_t _wmakepath_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Ścieżka*<br/>
+*ścieżka*<br/>
 Bufor pełnej ścieżki.
 
 *sizeInWords*<br/>
@@ -96,7 +96,7 @@ Rozmiar buforu w bajtach.
 Zawiera literę (A, B i tak dalej) odpowiadającą żądanym dyskowi i opcjonalnym dwukropkiem. **_makepath_s** automatycznie wstawia dwukropek w ścieżce złożonej, jeśli nie istnieje. Jeśli *dysk* ma **wartość null** lub wskazuje pusty ciąg, w ciągu *ścieżki* złożonej nie zostanie wyświetlona litera dysku.
 
 *katalogów*<br/>
-Zawiera ścieżkę katalogów, w tym oznaczenie dysku lub rzeczywistą nazwę pliku. Końcowy ukośnik jest opcjonalny, a ukośnik (/) lub ukośnik odwrotny (\\) mogą być używane w pojedynczym argumencie *dir* . Jeśli nie zostanie określony końcowy ukośnik (/ \\lub), zostanie on wstawiony automatycznie. Jeśli *dir* ma **wartość null** lub wskazuje na pusty ciąg, w ciągu *ścieżki* złożonej nie zostanie wstawiona ścieżka katalogu.
+Zawiera ścieżkę katalogów, w tym oznaczenie dysku lub rzeczywistą nazwę pliku. Końcowy ukośnik jest opcjonalny, a ukośnik (/) lub ukośnik odwrotny (\\) lub oba mogą być używane w pojedynczym argumencie *dir* . Jeśli nie zostanie określony końcowy ukośnik (/lub \\), zostanie on wstawiony automatycznie. Jeśli *dir* ma **wartość null** lub wskazuje na pusty ciąg, w ciągu *ścieżki* złożonej nie zostanie wstawiona ścieżka katalogu.
 
 *fname*<br/>
 Zawiera podstawową nazwę pliku bez rozszerzeń nazw plików. Jeśli *fname* ma **wartość null** lub wskazuje na pusty ciąg, w ciągu *ścieżki* złożonej nie zostanie wstawiona nazwa pliku.
@@ -110,10 +110,10 @@ Zero, jeśli pomyślne; kod błędu w przypadku niepowodzenia.
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|*Ścieżka*|*sizeInWords*sizeInBytes / |przesłać|Zawartość *ścieżki*|
+|*ścieżka*|*sizeInWords* / *sizeInBytes*|przesłać|Zawartość *ścieżki*|
 |------------|------------------------------------|------------|------------------------|
 |**NULL**|Ile|**EINVAL**|nie zmodyfikowano|
-|Ile|<= 0|**EINVAL**|nie zmodyfikowano|
+|Ile|< = 0|**EINVAL**|nie zmodyfikowano|
 
 Jeśli wystąpi którykolwiek z powyższych warunków błędu, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcje zwracają **EINVAL**. Dla parametrów *Drive*, *fname*i *EXT*jest dozwolona **wartość null** . Aby uzyskać informacje o zachowaniu, gdy te parametry mają wskaźniki o wartości null lub puste ciągi, zobacz sekcję Uwagi.
 
@@ -133,13 +133,13 @@ Jeśli ścieżka ma **wartość null**, zostanie wywołana procedura obsługi ni
 
 W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując konieczność określenia argumentu rozmiaru) i mogą automatycznie zastąpić starsze, niezabezpieczone funkcje z ich nowszymi, bezpiecznymi odpowiednikami. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
-Wersje debugowania tych funkcji najpierw wypełniają bufor 0xFD. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_makepath_s**|\<stdlib.h>|
+|**_makepath_s**|\<STDLIB. h >|
 |**_wmakepath_s**|\<STDLIB. h > lub \<WCHAR. h >|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).

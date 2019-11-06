@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4163
+title: Ostrzeżenie kompilatora (poziom 1) C4163
 ms.date: 11/04/2016
 f1_keywords:
 - C4163
 helpviewer_keywords:
 - C4163
 ms.assetid: b08413fd-03fc-4f41-9167-a98976ac12f2
-ms.openlocfilehash: 737cf7ad00bfefd429792eed3f730844789e0c02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 640ce66233fb8820ec434e70060a5ab3cf56c3c0
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391767"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627441"
 ---
-# <a name="compiler-warning-level-1-c4163"></a>Kompilator ostrzeżenie (poziom 1) C4163
+# <a name="compiler-warning-level-1-c4163"></a>Ostrzeżenie kompilatora (poziom 1) C4163
 
-'Identyfikator': nie jest dostępna jako funkcja wewnętrzna
+"Identyfikator": niedostępne jako funkcja wewnętrzna
 
-Określona funkcja nie może służyć jako [wewnętrzne](../../preprocessor/intrinsic.md) funkcji. Kompilator ignoruje nieprawidłową nazwę funkcji.
+Nie można użyć określonej funkcji jako funkcji [wewnętrznej](../../preprocessor/intrinsic.md) . Kompilator ignoruje nieprawidłową nazwę funkcji.
 
-Poniższy przykład spowoduje wygenerowanie C4163:
+Poniższy przykład generuje C4163:
 
-```
+```cpp
 // C4163.cpp
 // compile with: /W1 /LD
 #include <math.h>
