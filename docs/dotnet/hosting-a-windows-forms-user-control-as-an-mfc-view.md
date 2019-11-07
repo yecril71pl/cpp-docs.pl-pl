@@ -6,22 +6,22 @@ helpviewer_keywords:
 - Windows Forms controls [C++], hosting as an MFC view
 - hosting Windows Forms control [C++]
 ms.assetid: 43c02ab4-1366-434c-a980-0b19326d6ea0
-ms.openlocfilehash: df193bae541aecf8416056c2b169f0079539d173
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 9eb157ecbc738e1d7a1c3022d5f156fb590e8f04
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450858"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73704125"
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>Hostowanie formantu użytkownika interfejsu Windows Forms jako widoku MFC
 
-MFC używa klas CWinFormsView do hostowania kontrolki użytkownika Windows Forms w widoku MFC. Widoki formularzy Windows w MFC są formantów ActiveX. Formant użytkownika znajduje się jako element podrzędny elementu natywnego widoku i zajmuje całego obszaru klienta natywnego widoku.
+MFC używa klasy CWinFormsView do hostowania kontrolki użytkownika Windows Forms w widoku MFC. Widoki Windows Forms MFC są kontrolkami ActiveX. Kontrolka użytkownika jest hostowana jako element podrzędny widoku natywnego i zajmuje cały obszar klienta widoku natywnego.
 
-Wynik końcowy przypomina model wykorzystywany przez [klasa CFormView](../mfc/reference/cformview-class.md). Dzięki temu można korzystać z projektanta Windows Forms i środowiska uruchomieniowego, które pozwala tworzyć rozbudowane widoki oparte na formularzach.
+Wynik końcowy przypomina model używany przez [klasę CFormView](../mfc/reference/cformview-class.md). Dzięki temu można korzystać z projektanta Windows Forms i środowiska uruchomieniowego w celu tworzenia zaawansowanych widoków opartych na formularzach.
 
-Ponieważ widoki formularzy Windows w MFC formantów ActiveX, nie mają takie same `hwnd` jako widoki MFC. Ponadto nie mogą być przekazywane jako wskaźnik do [CView](../mfc/reference/cview-class.md) widoku. Ogólnie rzecz biorąc należy użyć metod .NET Framework do pracy z widokami Windows Forms i zmniejszenia zakresu Win32.
+Ponieważ widoki Windows Forms MFC są kontrolkami ActiveX, nie mają tych samych `hwnd` jako widoków MFC. Nie można ich również przekazywać jako wskaźnika do widoku [CView](../mfc/reference/cview-class.md) . Ogólnie rzecz biorąc, użyj .NET Framework metod do pracy z widokami Windows Forms i zależą od systemu Win32.
 
-Dla przykładowej aplikacji, który pokazuje formularze Windows używane z biblioteką MFC, zobacz [MFC i integracji formularzy Windows](https://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
+Aby uzyskać przykładową aplikację, która zawiera Windows Forms używane z MFC, zobacz [integrację MFC i Windows Forms](https://www.microsoft.com/en-us/download/details.aspx?id=2113).
 
 ## <a name="in-this-section"></a>W tej sekcji
 
@@ -34,4 +34,4 @@ Dla przykładowej aplikacji, który pokazuje formularze Windows używane z bibli
 ## <a name="see-also"></a>Zobacz także
 
 [Używanie kontrolki użytkownika formularza systemu Windows w MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)<br/>
-[Instrukcje: Formanty złożone autora](/dotnet/framework/winforms/controls/how-to-author-composite-controls)
+[Instrukcje: tworzenie kontrolek złożonych](/dotnet/framework/winforms/controls/how-to-author-composite-controls)

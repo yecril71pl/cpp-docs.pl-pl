@@ -1,21 +1,21 @@
 ---
 title: .MODEL
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .MODEL
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: c409bf10a2f863c380cda6b4822583ffb3787da6
-ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.openlocfilehash: b341cfaec35c08f5ac16447890c85570e9c9c0df
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934088"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703579"
 ---
-# <a name="model"></a>.MODEL
+# <a name="model-32-bit-masm"></a>. MODEL (32-bitowy MASM)
 
-Inicjuje model pamięci programu.
+Inicjuje model pamięci programu. (tylko 32-bitowy MASM).
 
 ## <a name="syntax"></a>Składnia
 
@@ -24,35 +24,35 @@ Inicjuje model pamięci programu.
 ### <a name="parameters"></a>Parametry
 
 *memorymodel*<br/>
-Wymagany parametr, który określa rozmiar wskaźniki kodu i danych.
+Wymagany parametr określający rozmiar kodu i wskaźników danych.
 
 *langtype*<br/>
-Opcjonalny parametr, który ustawia Konwencje wywoływania i nazewnictwa, aby uzyskać procedury i symboli publicznych.
+Opcjonalny parametr, który ustawia konwencje wywoływania i nazewnictwa dla procedur i symboli publicznych.
 
 *stackoption*<br/>
-Parametr opcjonalny.
+Opcjonalny parametr.
 
-*stackoption* nie jest używane, jeśli *memorymodel* jest `FLAT`.
+*stackoption* nie jest używana, jeśli *memorymodel* jest `FLAT`.
 
-Określanie `NEARSTACK` grupuje segment stosu w jednym segmencie fizycznym (`DGROUP`) wraz z danymi. Zarejestruj segment stosu (`SS`) zakłada, że jest przechowywania jako ten sam adres rejestru segmentu danych (`DS`). `FARSTACK` nie powoduje grupowania stosu za pomocą `DGROUP`; w związku z tym `SS` nie jest równa `DS`.
+Określanie `NEARSTACK` grupuje segment stosu w pojedynczym segmencie fizycznym (`DGROUP`) wraz z danymi. Założono, że rejestr segmentu stosu (`SS`) przechowuje ten sam adres co rejestr segmentu danych (`DS`). `FARSTACK` nie grupuje stosu z `DGROUP`; Tak więc `SS` nie są równe `DS`.
 
 ## <a name="remarks"></a>Uwagi
 
-.`MODEL` nie jest używany w [MASM x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+.`MODEL` nie jest używany w programie [MASM for x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
-W poniższej tabeli wymieniono możliwe wartości dla każdego parametru podczas określania wartości 16-bitowe i 32-bitowych platform:
+Poniższa tabela zawiera listę możliwych wartości dla każdego parametru, które są przeznaczone dla platform 16-bitowych i 32-bitowych:
 
-|Parametr|wartości 32-bitowe|wartości 16-bitowych (obsługa opracowywania wcześniej 16-bitowe)|
+|Parametr|32-wartości bitowe|wartości 16-bitowe (obsługa wcześniejszych wersji 16-bitowych)|
 |---------------|--------------------|----------------------------------------------------------------|
 |*memorymodel*|`FLAT`|`TINY`, `SMALL`, `COMPACT`, `MEDIUM`, `LARGE`, `HUGE`, `FLAT`|
-|*langtype*|`C`, `STDCALL`|`C`, `BASIC`, `FORTRAN`, `PASCAL`, `SYSCALL`, `STDCALL`|
+|*langtype*|`C`, `STDCALL`|`C`, `BASIC`, `FORTRAN`, `PASCAL`, `SYSCALL``STDCALL`|
 |*stackoption*|Nieużywane|`NEARSTACK`, `FARSTACK`|
 
 ## <a name="code"></a>Kod
 
-Aby uzyskać przykłady związane z MASM, Pobierz przykłady kompilatora z [przykłady Visual C++ i powiązanej dokumentacji dla programu Visual Studio 2010](https://go.microsoft.com/fwlink/p/?linkid=178749).
+W przypadku przykładów związanych z MASM Pobierz przykłady kompilatora z [przykładów wizualizacji C++ i powiązanej dokumentacji dla programu Visual Studio 2010](https://go.microsoft.com/fwlink/p/?linkid=178749).
 
-W poniższym przykładzie pokazano użycie `.MODEL` dyrektywy.
+Poniższy przykład demonstruje użycie dyrektywy `.MODEL`.
 
 ## <a name="example"></a>Przykład
 

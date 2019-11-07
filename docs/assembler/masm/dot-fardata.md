@@ -1,25 +1,25 @@
 ---
 title: .FARDATA
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .FARDATA
 helpviewer_keywords:
 - .FARDATA directive
 ms.assetid: 4458ef66-5626-4607-bf83-71637b459f77
-ms.openlocfilehash: 2be434171c34f089f78bb662a6ffadf51cba73ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f25e5db4c5f17a5644db7fceea28eec29209e688
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204087"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703807"
 ---
-# <a name="fardata"></a>.FARDATA
+# <a name="fardata-32-bit-masm"></a>. FARDATA (32-bitowy MASM)
 
-Gdy jest używane z [. MODEL](../../assembler/masm/dot-model.md), rozpoczyna się segment daleko danych dla danych zainicjowanych (Nazwa segmentu FAR_DATA lub *nazwa*).
+W przypadku użycia z [. MODEL](../../assembler/masm/dot-model.md), uruchamia dużo segmentu danych dla zainicjowanych danych (nazwa segmentu FAR_DATA lub *Nazwa*). (tylko 32-bitowy MASM).
 
 ## <a name="syntax"></a>Składnia
 
-> . FARDATA [[name]]
+> . FARDATA [[nazwa]]
 
 ## <a name="see-also"></a>Zobacz także
 

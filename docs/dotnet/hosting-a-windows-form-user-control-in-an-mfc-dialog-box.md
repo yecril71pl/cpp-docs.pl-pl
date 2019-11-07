@@ -6,37 +6,37 @@ helpviewer_keywords:
 - hosting Windows Forms control [C++]
 - Windows Forms [C++], MFC support
 ms.assetid: 9f66ee52-b7cb-4ffd-8306-392a5da990d8
-ms.openlocfilehash: 22f2c5c6c162e459470f9babab66c61c096540ec
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 1a688870f4700e8e3b935245f2c9243f8d5aa823
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450691"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73704090"
 ---
 # <a name="hosting-a-windows-form-user-control-in-an-mfc-dialog-box"></a>Hostowanie kontrolki użytkownika formularza systemu Windows w oknie dialogowym MFC
 
-Obsługuje formant programu Windows Forms jako specjalny rodzaj kontrolki ActiveX MFC i komunikuje się za pomocą kontrolki przy użyciu interfejsów ActiveX i właściwości i metod <xref:System.Windows.Forms.Control> klasy. Zalecamy użycie systemu .NET Framework, właściwości i metod do działania na formancie.
+MFC obsługuje kontrolkę Windows Forms jako specjalny rodzaj kontrolki ActiveX i komunikuje się z kontrolką przy użyciu interfejsów ActiveX oraz właściwości i metod klasy <xref:System.Windows.Forms.Control>. Zalecamy używanie .NET Framework właściwości i metod do działania na formancie.
 
-Dla przykładowej aplikacji, który pokazuje formularze Windows używane z biblioteką MFC, zobacz [MFC i integracji formularzy Windows](https://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
+Aby uzyskać przykładową aplikację, która zawiera Windows Forms używane z MFC, zobacz [integrację MFC i Windows Forms](https://www.microsoft.com/en-us/download/details.aspx?id=2113).
 
 > [!NOTE]
->  W bieżącej wersji `CDialogBar` obiektu nie może obsługiwać kontrolek formularzy Windows Forms.
+>  W bieżącej wersji obiekt `CDialogBar` nie może hostować formantów Windows Forms.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
 [Instrukcje: tworzenie kontrolki użytkownika i hosta w oknie dialogowym](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)
 
-[Instrukcje: Czy danych DDX/DDV powiązania z Windows Forms](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)
+[Instrukcje: wykonywanie powiązania danych DDX/DDV za pomocą Windows Forms](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)
 
 [Instrukcje: wychwytywanie zdarzeń interfejsu Windows Forms z klas natywnych języka C++](../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
 ## <a name="reference"></a>Tematy pomocy
 
-[Klasa CWinFormsControl](../mfc/reference/cwinformscontrol-class.md) &#124; [klasa CDialog](../mfc/reference/cdialog-class.md) &#124; [klasa CWnd](../mfc/reference/cwnd-class.md)&#124; <xref:System.Windows.Forms.Control>
+&#124; Klasa [CWinFormsControl](../mfc/reference/cwinformscontrol-class.md) klasy [CDialog](../mfc/reference/cdialog-class.md) &#124; klasy [CWnd](../mfc/reference/cwnd-class.md) &#124; <xref:System.Windows.Forms.Control>
 
 ## <a name="see-also"></a>Zobacz także
 
 [Używanie kontrolki użytkownika formularza systemu Windows w MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)<br/>
-[Różnice w programie Windows Forms/MFC programowania](../dotnet/windows-forms-mfc-programming-differences.md)<br/>
+[Różnice w programowaniu Windows Forms/MFC](../dotnet/windows-forms-mfc-programming-differences.md)<br/>
 [Hostowanie kontrolki użytkownika interfejsu Windows Forms jako widoku MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)<br/>
 [Hostowanie kontrolki użytkownika formularza systemu Windows jako okna dialogowego MFC](../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md)
