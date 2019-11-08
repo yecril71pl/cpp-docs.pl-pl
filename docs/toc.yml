@@ -4714,6 +4714,8 @@
               items:
                 - name: Preprocesor
                   href: preprocessor/preprocessor.md
+                - name: Omówienie preprocesora eksperymentalnego
+                  href: preprocessor/preprocessor-experimental-overview.md
                 - name: Fazy tłumaczenia
                   href: preprocessor/phases-of-translation.md
                 - name: Dyrektywy preprocesora
@@ -10419,9 +10421,9 @@
                           href: parallel/concrt/reference/single-link-registry-class.md
                         - name: 'source_block, klasa'
                           href: parallel/concrt/reference/source-block-class.md
-                        - name: 'source_link_manager, klasa'
+                        - name: source_link_manager — klasa
                           href: parallel/concrt/reference/source-link-manager-class.md
-                        - name: static_partitioner — klasa
+                        - name: 'static_partitioner, klasa'
                           href: parallel/concrt/reference/static-partitioner-class.md
                         - name: 'structured_task_group, klasa'
                           href: parallel/concrt/reference/structured-task-group-class.md
