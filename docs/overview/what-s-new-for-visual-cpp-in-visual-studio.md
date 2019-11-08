@@ -5,12 +5,12 @@ ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 4b9f393f133fea41e1fbffa88abe225f9b05a9ec
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: bde8b8e17c3186d22493f099a5f7d1b5a2646a67
+ms.sourcegitcommit: 2362d15b5eb18d27773c3f7522da3d0eed9e2571
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626489"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754135"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Co nowego w języku C++ w programie Visual Studio
 
@@ -256,6 +256,10 @@ Kompilator obsługuje około 75% funkcji, które są nowe w języku C++ 17, w ty
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 w wersji 15,7
 
 Zestaw narzędzi kompilatora MSVC w programie Visual Studio w wersji 15,7 jest teraz zgodny ze C++ standardem. Aby uzyskać więcej informacji, zobacz temat [ogłaszanie: MSVC jest C++ zgodny z normą](https://devblogs.microsoft.com/cppblog/announcing-msvc-conforms-to-the-c-standard/) i [zgodnością języka firmy Microsoft C++ ](../visual-cpp-language-conformance.md).
+
+##### <a name="visual-studio-2017-version-158"></a>Visual Studio 2017 w wersji 15,8
+
+Przełącznik kompilatora [/Experimental: preprocesora](../build/reference/experimental-preprocessor.md) włącza nowy eksperymentalny preprocesor MSVC, który ostatecznie będzie zgodny ze wszystkimi mającymi zastosowanie C i C++ standardami. Aby uzyskać więcej informacji, zobacz [MSVC eksperymentalny preprocesora — Omówienie](../preprocessor/preprocessor-experimental-overview.md).
 
 ### <a name="new-compiler-options"></a>Nowe opcje kompilatora
 
