@@ -3,12 +3,12 @@ title: Instalowanie obciążenia C++ systemu Linux w programie Visual Studio
 description: Opisuje sposób pobierania, instalowania i konfigurowania obciążenia systemu Linux dla C++ programu Visual Studio.
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: ad0fd856fc15ce9f787ba620463480bfe3e59d47
-ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
+ms.openlocfilehash: 68e347a4f90fc15f9d3846c82c3392213e1bd7bc
+ms.sourcegitcommit: eb254b4462a58d219376ff501bf768bd1adc07ae
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71925420"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73912906"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Pobieranie, Instalowanie i Konfigurowanie obciążenia systemu Linux
 
@@ -48,7 +48,7 @@ W przypadku każdego z tych scenariuszy wymagane jest **Programowanie przy C++ u
 
 Jeśli nie masz jeszcze maszyny z systemem Linux, możesz utworzyć maszynę wirtualną z systemem Linux na platformie Azure. Aby uzyskać więcej informacji, zobacz [Szybki Start: Tworzenie maszyny wirtualnej z systemem Linux w Azure Portal](/azure/virtual-machines/linux/quick-create-portal).
 
-W systemie Windows 10 można zainstalować i wskazać Ulubione dystrybucji z systemem Linux w podsystemie Windows dla systemu Linux (WSL). Aby uzyskać więcej informacji, zobacz [Przewodnik instalacji systemu Windows w systemie Linux dla systemu Windows 10](/windows/wsl/install-win10). WSL to wygodne środowisko konsoli, ale nie jest zalecane w przypadku aplikacji graficznych. 
+W systemie Windows 10 można zainstalować i wskazać Ulubione dystrybucji z systemem Linux w podsystemie Windows dla systemu Linux (WSL). Aby uzyskać więcej informacji, zobacz [Przewodnik instalacji systemu Windows w systemie Linux dla systemu Windows 10](/windows/wsl/install-win10). Jeśli nie możesz uzyskać dostępu do sklepu Windows, możesz [ręcznie pobrać pakiety WSL dystrybucji](/windows/wsl/install-manual). WSL to wygodne środowisko konsoli, ale nie jest zalecane w przypadku aplikacji graficznych. 
 
 ::: moniker-end
 

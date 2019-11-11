@@ -1,5 +1,5 @@
 ---
-title: '&lt;algorithm&gt;'
+title: algorytm &lt;&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - <algorithm>
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: 0b9b259d49808002442492ce2912b4f9aa96d2b8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f72969052ae3ecc0d9fb88382e1560c846e2167c
+ms.sourcegitcommit: eb254b4462a58d219376ff501bf768bd1adc07ae
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456499"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73912896"
 ---
-# <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
+# <a name="ltalgorithmgt"></a>algorytm &lt;&gt;
 
 Definiuje C++ standardowe funkcje szablonu kontenera biblioteki, które wykonują algorytmy.
 
@@ -26,23 +26,23 @@ Definiuje C++ standardowe funkcje szablonu kontenera biblioteki, które wykonuj�
 ```
 
 > [!NOTE]
-> Algorytm > Library `#include <initializer_list>` używa również instrukcji. \<
+> Algorytm \<> Library używa również instrukcji `#include <initializer_list>`.
 
 ## <a name="remarks"></a>Uwagi
 
-Algorytmy C++ standardowej biblioteki są ogólne, ponieważ mogą działać na różnych strukturach danych. Struktury danych, na których mogą pracować, obejmują nie tylko klasy C++ kontenerów biblioteki standardowej, takie `vector` jak `list`i, ale również struktury danych zdefiniowane przez program i tablice elementów, które spełniają wymagania określony algorytm. C++Algorytmy biblioteki standardowej osiągają ten poziom ogólny poprzez dostęp do elementów kontenera pośrednio i przechodzenie przez nie przez Iteratory.
+Algorytmy C++ standardowej biblioteki są ogólne, ponieważ mogą działać na różnych strukturach danych. Struktury danych, na których mogą pracować, obejmują nie tylko klasy C++ kontenerów biblioteki standardowej, takie jak `vector` i `list`, ale również struktury danych zdefiniowane przez program i tablice elementów, które spełniają wymagania określonego algorytmu. C++Algorytmy biblioteki standardowej osiągają ten poziom ogólny poprzez dostęp do elementów kontenera pośrednio i przechodzenie przez nie przez Iteratory.
 
 C++Algorytmy biblioteki standardowej przetwarzają zakresy iteratorów, które zazwyczaj są określane przez ich początkową lub końcową pozycję. Odnośne zakresy muszą być prawidłowe w tym sensie, że wszystkie wskaźniki w zakresach muszą być wyłuskiwalne, a w ramach sekwencji każdego zakresu, ostatnia pozycja musi być osiągalna od pierwszej przez inkrementację.
 
 Algorytmy biblioteki C++ standardowej obejmują akcje obsługiwane przez operacje i funkcje elementów członkowskich każdego C++ kontenera biblioteki standardowej i umożliwiają pracę, na przykład z różnymi typami obiektów kontenera w tym samym czasie. Do przekazywania informacji o przeznaczeniu algorytmów były używane dwa przyrostki.
 
-- `_if` Sufiks wskazuje, że algorytm jest używany z obiektami funkcji działającymi na wartościach elementów, a nie na wartościach samych elementów. Algorytm szuka elementów, których wartości spełniają kryterium określone przez obiekt funkcji, `find` a algorytm wyszukuje określoną wartość. `find_if`
+- Sufiks `_if` wskazuje, że algorytm jest używany z obiektami funkcji, które działają na wartościach elementów, a nie samych elementów. Algorytm `find_if` szuka elementów, których wartości spełniają kryterium określone przez obiekt funkcji, a algorytm `find` wyszukuje określoną wartość.
 
-- Przyrostek _copy oznacza, że algorytm nie tylko manipuluje wartościami elementów, ale również kopiuje zmodyfikowane wartości do zakresu docelowego. Algorytm odwraca kolejność elementów w zakresie, `reverse_copy` a algorytm kopiuje także wynik do zakresu docelowego. `reverse`
+- Przyrostek _copy oznacza, że algorytm nie tylko manipuluje wartościami elementów, ale również kopiuje zmodyfikowane wartości do zakresu docelowego. Algorytm `reverse` odwraca kolejność elementów w zakresie, a algorytm `reverse_copy` kopiuje także wynik do zakresu docelowego.
 
 C++Algorytmy biblioteki standardowej często są klasyfikowane do grup, które wskazują na ich przeznaczenie lub wymagania. Obejmują one modyfikowanie algorytmów, które zmieniają wartość elementów w porównaniu z niemodyfikującymi algorytmami, które nie są modyfikowane. Algorytmy mutujące zmieniają kolejność elementów, ale nie ich wartości. Algorytmy usuwające mogą wyeliminować elementy z zakresu lub kopii zakresu. Algorytmy sortowania umożliwiają zmianę kolejności elementów w zakresie na różne sposoby i posortowane algorytmy zakresów działają tylko na zakresach, których elementy zostały posortowane w określony sposób.
 
-Niestandardowe algorytmy numeryczne, które są udostępniane do przetwarzania liczbowego, mają własny [ \<](../standard-library/numeric.md)plik nagłówkowy >, a obiekty i adaptery funkcji są zdefiniowane w [ \<> funkcjonalnej nagłówka](../standard-library/functional.md) C++ Obiekty funkcyjne zwracające wartości logiczne są znane jako predykaty. Domyślnym predykatem binarnym jest porównanie `operator<`. Ogólnie rzecz biorąc, szeregowane elementy muszą być mniej niż porównywalne, tak aby, mając dowolne dwa elementy, można było określić, czy są one równoważne (w sensie, żaden nie jest mniejszy niż ten drugi), czy że jeden jest mniejszy od drugiego. Skutkuje to ustaleniem kolejności elementów nierównoważnych.
+C++ Niestandardowe algorytmy numeryczne, które są udostępniane do przetwarzania liczbowego, mają własny plik nagłówkowy [\<liczbowej >](../standard-library/numeric.md), a obiekty i adaptery funkcji są zdefiniowane w nagłówku [\<funkcjonalne](../standard-library/functional.md) obiekty funkcji >, które zwracają wartości logiczne, są znane jako predykaty. Domyślnym predykatem binarnym jest porównanie `operator<`. Ogólnie rzecz biorąc, szeregowane elementy muszą być mniej niż porównywalne, tak aby, mając dowolne dwa elementy, można było określić, czy są one równoważne (w sensie, żaden nie jest mniejszy niż ten drugi), czy że jeden jest mniejszy od drugiego. Skutkuje to ustaleniem kolejności elementów nierównoważnych.
 
 ### <a name="function-templates"></a>Szablony funkcji
 
@@ -59,7 +59,7 @@ Niestandardowe algorytmy numeryczne, które są udostępniane do przetwarzania l
 |[copy_n](../standard-library/algorithm-functions.md#copy_n)|Kopiuje określoną liczbę elementów.|
 |[liczbą](../standard-library/algorithm-functions.md#count)|Zwraca liczbę elementów w zakresie, których wartości pasują do określonej wartości.|
 |[count_if](../standard-library/algorithm-functions.md#count_if)|Zwraca liczbę elementów w zakresie, których wartości pasują do określonego warunku.|
-|[equal](../standard-library/algorithm-functions.md#equal)|Porównuje dwa zakresy element po elemencie, pod względem równości lub równoważności w sensie określonym przez predykat binarny.|
+|[większy](../standard-library/algorithm-functions.md#equal)|Porównuje dwa zakresy element po elemencie, pod względem równości lub równoważności w sensie określonym przez predykat binarny.|
 |[equal_range](../standard-library/algorithm-functions.md#equal_range)|Wyszukuje parę pozycji w uporządkowanym zakresie, pierwszą mniejszą lub równoważną położeniu określonego elementu, a drugą większą niż pozycja elementu, gdzie sens równoważności lub szeregowania używany do ustanawiania pozycji w sekwencji może zostać określony przez predykat binarny.|
 |[pełni](../standard-library/algorithm-functions.md#fill)|Przypisuje tę samą nową wartość każdemu elementowi w określonym zakresie.|
 |[fill_n](../standard-library/algorithm-functions.md#fill_n)|Przypisuje nową wartość określonej liczbie elementów z zakresu, począwszy od konkretnego elementu.|
@@ -84,15 +84,15 @@ Niestandardowe algorytmy numeryczne, które są udostępniane do przetwarzania l
 |[lexicographical_compare](../standard-library/algorithm-functions.md#lexicographical_compare)|Porównuje dwie sekwencje element po elemencie, aby określić, która z nich jest mniejsza.|
 |[lower_bound](../standard-library/algorithm-functions.md#lower_bound)|Znajduje pozycję pierwszego elementu w uporządkowanym zakresie, który ma wartość większą niż lub równoważną określonej wartości, gdzie kryterium szeregowania może być określone przez predykat binarny.|
 |[make_heap](../standard-library/algorithm-functions.md#make_heap)|Konwertuje elementy z określonego zakresu na stertę, w której pierwszy element jest największy i dla której kryterium sortowania może być określone przez predykat binarny.|
-|[max](../standard-library/algorithm-functions.md#max)|Porównuje dwa obiekty i zwraca większy z nich, gdzie kryterium sortowania może być określone przez predykat binarny.|
+|[Maksymalny](../standard-library/algorithm-functions.md#max)|Porównuje dwa obiekty i zwraca większy z nich, gdzie kryterium sortowania może być określone przez predykat binarny.|
 |[max_element](../standard-library/algorithm-functions.md#max_element)|Znajduje pierwsze wystąpienie największego elementu w określonym zakresie, gdzie kryterium sortowania może być określone przez predykat binarny.|
-|[merge](../standard-library/algorithm-functions.md#merge)|Łączy wszystkie elementy z dwóch następujących po sobie posortowanych zakresów źródłowych w pojedynczy posortowany zakres docelowy, gdzie kryterium szeregowania może być określone przez predykat binarny.|
-|[min](../standard-library/algorithm-functions.md#min)|Porównuje dwa obiekty i zwraca mniejszy z nich, gdzie kryterium sortowania może być określone przez predykat binarny.|
+|[połączenie](../standard-library/algorithm-functions.md#merge)|Łączy wszystkie elementy z dwóch następujących po sobie posortowanych zakresów źródłowych w pojedynczy posortowany zakres docelowy, gdzie kryterium szeregowania może być określone przez predykat binarny.|
+|[długości](../standard-library/algorithm-functions.md#min)|Porównuje dwa obiekty i zwraca mniejszy z nich, gdzie kryterium sortowania może być określone przez predykat binarny.|
 |[min_element](../standard-library/algorithm-functions.md#min_element)|Znajduje pierwsze wystąpienie najmniejszego elementu w określonym zakresie, gdzie kryterium sortowania może być określone przez predykat binarny.|
-|[minmax](../standard-library/algorithm-functions.md#minmax)|Porównuje dwa parametry wejściowe i zwraca je jako parę w kolejności od najmniejszego do największego.|
+|[MinMax](../standard-library/algorithm-functions.md#minmax)|Porównuje dwa parametry wejściowe i zwraca je jako parę w kolejności od najmniejszego do największego.|
 |[minmax_element](../standard-library/algorithm-functions.md#minmax_element)|Wykonuje działania wykonywane przez [min_element](../standard-library/algorithm-functions.md#min_element) i [max_element](../standard-library/algorithm-functions.md#max_element) w jednym wywołaniu.|
-|[mismatch](../standard-library/algorithm-functions.md#mismatch)|Porównuje dwa zakresy element po elemencie pod względem równości lub odpowiedniości w sensie określonym przez predykat binarny i lokalizuje pierwsze miejsce, w którym występuje różnica.|
-|[&lt;alg&gt; Przenieś](../standard-library/algorithm-functions.md#alg_move)|Przenieś elementy związane z określonym zakresem.|
+|[nieodpowiedni](../standard-library/algorithm-functions.md#mismatch)|Porównuje dwa zakresy element po elemencie pod względem równości lub odpowiedniości w sensie określonym przez predykat binarny i lokalizuje pierwsze miejsce, w którym występuje różnica.|
+|[&lt;alg&gt; przenoszenia](../standard-library/algorithm-functions.md#alg_move)|Przenieś elementy związane z określonym zakresem.|
 |[move_backward](../standard-library/algorithm-functions.md#move_backward)|Przenosi elementy jednego iteratora do drugiego. Przeniesienie rozpoczyna się od ostatniego elementu w określonym zakresie, a kończy się na pierwszym elemencie w tym zakresie.|
 |[next_permutation](../standard-library/algorithm-functions.md#next_permutation)|Zmienia kolejność elementów w zakresie, tak że oryginalna kolejność jest zastąpiona przez leksykograficznie kolejną większą permutację, o ile takowa istnieje, gdzie sens „kolejna” może być określony przez predykat binarny.|
 |[none_of](../standard-library/algorithm-functions.md#none_of)|Zwraca **wartość PRAWDA** , jeśli warunek nigdy nie występuje między elementami w danym zakresie.|
@@ -110,7 +110,7 @@ Niestandardowe algorytmy numeryczne, które są udostępniane do przetwarzania l
 |[remove_copy](../standard-library/algorithm-functions.md#remove_copy)|Kopiuje elementy z zakresu źródłowego do zakresu docelowego, z tym wyjątkiem, że elementy o określonej wartości nie są kopiowane, bez naruszania kolejności pozostałych elementów i zwracania końca nowego zakresu docelowego.|
 |[remove_copy_if](../standard-library/algorithm-functions.md#remove_copy_if)|Kopiuje elementy z zakresu źródłowego do zakresu docelowego, z tym wyjątkiem, że elementy spełniające predykat nie są kopiowane, bez naruszania kolejności pozostałych elementów i zwracania końca nowego zakresu docelowego.|
 |[remove_if](../standard-library/algorithm-functions.md#remove_if)|Eliminuje elementy, które spełniają predykat, z danego zakresu bez zakłócania kolejności pozostałych elementów i zwracania końca nowego zakresu wolnego od określonej wartości.|
-|[replace](../standard-library/algorithm-functions.md#replace)|Sprawdza każdy element w zakresie i zastępuje go, jeśli odpowiada określonej wartości.|
+|[stępować](../standard-library/algorithm-functions.md#replace)|Sprawdza każdy element w zakresie i zastępuje go, jeśli odpowiada określonej wartości.|
 |[replace_copy](../standard-library/algorithm-functions.md#replace_copy)|Sprawdza każdy element w zakresie źródłowym i zastępuje go, jeśli odpowiada określonej wartości, jednocześnie kopiując wynik do nowego zakresu docelowego.|
 |[replace_copy_if](../standard-library/algorithm-functions.md#replace_copy_if)|Sprawdza każdy element w zakresie źródłowym i zastępuje go, jeśli spełnia określony predykat, jednocześnie kopiując wynik do nowego zakresu docelowego.|
 |[replace_if](../standard-library/algorithm-functions.md#replace_if)|Sprawdza każdy element w zakresie i zastępuje go, jeśli spełnia określony predykat.|
@@ -125,20 +125,20 @@ Niestandardowe algorytmy numeryczne, które są udostępniane do przetwarzania l
 |[set_intersection](../standard-library/algorithm-functions.md#set_intersection)|Łączy w sobie wszystkie elementy, które należą do obu posortowanych zakresów źródłowych w pojedynczy posortowany zakres docelowy, gdzie kryterium szeregowania może być określone przez predykat binarny.|
 |[set_symmetric_difference](../standard-library/algorithm-functions.md#set_symmetric_difference)|Łączy w sobie wszystkie elementy, które należą do jednego z, ale nie obu posortowanych zakresów źródłowych w pojedynczy posortowany zakres docelowy, gdzie kryterium szeregowania może być określone przez predykat binarny.|
 |[set_union](../standard-library/algorithm-functions.md#set_union)|Łączy w sobie wszystkie elementy, które należą do przynajmniej jednego z dwóch posortowanych zakresów źródłowych w pojedynczy posortowany zakres docelowy, gdzie kryterium szeregowania może być określone przez predykat binarny.|
-|[sort](../standard-library/algorithm-functions.md#sort)|Rozmieszcza elementy w określonym zakresie w niemalejącej kolejności lub według kryteriów sortowania określonych przez binarny predykat.|
-|[shuffle](../standard-library/algorithm-functions.md#shuffle)|Powoduje losowe (rozmieszczanie) elementów dla danego zakresu przy użyciu generatora liczb losowych.|
+|[porządku](../standard-library/algorithm-functions.md#sort)|Rozmieszcza elementy w określonym zakresie w niemalejącej kolejności lub według kryteriów sortowania określonych przez binarny predykat.|
+|[konfigurację](../standard-library/algorithm-functions.md#shuffle)|Powoduje losowe (rozmieszczanie) elementów dla danego zakresu przy użyciu generatora liczb losowych.|
 |[sort_heap](../standard-library/algorithm-functions.md#sort_heap)|Konwertuje stertę na sortowany zakres.|
 |[stable_partition](../standard-library/algorithm-functions.md#stable_partition)|Klasyfikuje elementy w zakresie na dwa rozłączne zestawy, z elementami spełniającymi predykat unarny poprzedzającymi te, które go nie spełniają, zachowując względną kolejność elementów równoważnych.|
 |[stable_sort](../standard-library/algorithm-functions.md#stable_sort)|Rozmieszcza elementy w określonym zakresie w niemalejącej kolejności lub według kryterium sortowania określonego przez binarny predykat i zachowuje względną kolejność elementów równoważnych.|
-|[swap](../standard-library/algorithm-functions.md#swap)|Wymienia wartości elementów między dwoma typami obiektów, przypisując zawartość pierwszego obiektu do drugiego obiektu, a zawartość drugiego do pierwszego.|
+|[wymiany](../standard-library/algorithm-functions.md#swap)|Wymienia wartości elementów między dwoma typami obiektów, przypisując zawartość pierwszego obiektu do drugiego obiektu, a zawartość drugiego do pierwszego.|
 |[swap_ranges](../standard-library/algorithm-functions.md#swap_ranges)|Zamienia elementy jednego zakresu przez elementy innego zakresu, zakresy mają równe wielkości.|
-|[transform](../standard-library/algorithm-functions.md#transform)|Stosuje określony obiekt funkcji dla każdego elementu w zakresie sortowania lub dla pary elementów z dwóch zakresów sortowania i kopiuje zwracane wartości obiektu funkcji do zakresu docelowego.|
+|[przekształcania](../standard-library/algorithm-functions.md#transform)|Stosuje określony obiekt funkcji dla każdego elementu w zakresie sortowania lub dla pary elementów z dwóch zakresów sortowania i kopiuje zwracane wartości obiektu funkcji do zakresu docelowego.|
 |[unique](../standard-library/algorithm-functions.md#unique)|Usuwa zduplikowane elementy, które sąsiadują ze sobą w określonym zakresie.|
 |[unique_copy](../standard-library/algorithm-functions.md#unique_copy)|Kopiuje elementy z zakresu źródłowego do zakresu docelowego z wyjątkiem zduplikowanych elementów, które ze sobą sąsiadują.|
 |[upper_bound](../standard-library/algorithm-functions.md#upper_bound)|Znajduje pozycję pierwszego elementu w uporządkowanym zakresie, który ma wartość większą niż określona wartość, gdzie kryterium sortowania może być określone przez predykat binarny.|
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
-[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Odwołania do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md) \
+[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
 [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
