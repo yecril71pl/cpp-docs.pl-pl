@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4392
+title: Ostrzeżenie kompilatora (poziom 1) C4392
 ms.date: 11/04/2016
 f1_keywords:
 - C4392
 helpviewer_keywords:
 - C4392
 ms.assetid: 817806ad-06a6-4b9e-8355-e25687c782dc
-ms.openlocfilehash: 1dc0c546509b17132358f432f6a781035a314a72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b19080f4a86267a48618a5f40d7576c07c96c18a
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386424"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966107"
 ---
-# <a name="compiler-warning-level-1-c4392"></a>Kompilator ostrzeżenie (poziom 1) C4392
+# <a name="compiler-warning-level-1-c4392"></a>Ostrzeżenie kompilatora (poziom 1) C4392
 
-"podpis": Nieprawidłowa liczba argumentów dla wewnętrznej funkcji, oczekiwano "number" argumentów
+"Signature": niepoprawna liczba argumentów dla wewnętrznej funkcji, oczekiwano argumentów "number"
 
-Deklaracja funkcji wewnętrzne polecenie kompilatora ma nieprawidłową liczbę argumentów. Obraz wynikowy może nie działać poprawnie.
+Deklaracja funkcji dla wewnętrznego kompilatora miała nieprawidłową liczbę argumentów. Obraz z wynikiem może nie działać poprawnie.
 
-Aby usunąć to ostrzeżenie, popraw deklarację albo usuń deklarację i po prostu #include do odpowiedniego pliku nagłówka.
+Aby usunąć to ostrzeżenie, Popraw deklarację lub Usuń deklarację i po prostu #include odpowiedni plik nagłówkowy.
 
-Poniższy przykład spowoduje wygenerowanie C4392:
+Poniższy przykład generuje C4392:
 
-```
+```cpp
 // C4392.cpp
 // compile with: /W1
 // processor: x86

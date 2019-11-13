@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4544
+title: Ostrzeżenie kompilatora (poziom 1) C4544
 ms.date: 11/04/2016
 f1_keywords:
 - C4544
 helpviewer_keywords:
 - C4544
 ms.assetid: 11ee04df-41ae-435f-af44-881e801315a8
-ms.openlocfilehash: f2a3f2e64a6a859add8182de4fc883c735563e92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 094662270569c7362b7bb3c4953a466b19ed2e65
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352926"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966485"
 ---
-# <a name="compiler-warning-level-1-c4544"></a>Kompilator ostrzeżenie (poziom 1) C4544
+# <a name="compiler-warning-level-1-c4544"></a>Ostrzeżenie kompilatora (poziom 1) C4544
 
-"deklaracją": Argument szablonu domyślnego został zignorowany dla tej deklaracji szablonu
+"Deklaracja": domyślny argument szablonu został zignorowany dla tej deklaracji szablonu
 
-Domyślny argument szablonu został określony w nieprawidłowej lokalizacji i został zignorowany. Domyślny argument szablonu dla szablonu klasy można określić tylko w deklaracji lub definicji szablonu klasy a nie w składowej szablonu klasy.
+Argument szablonu domyślnego został określony w niepoprawnej lokalizacji i został zignorowany. Domyślny argument szablonu dla szablonu klasy może być określony tylko w deklaracji lub definicji szablonu klasy, a nie w składowej szablonu klasy.
 
-Ten przykład generuje C4545 i następny przykład pokazuje, jak go naprawić:
+Ten przykład generuje C4545, a następny przykład pokazuje, jak rozwiązać ten problem:
 
-```
+```cpp
 // C4544.cpp
 // compile with: /W1 /LD
 template <class T>
@@ -37,9 +37,9 @@ template <class T1>
 struct S<T>::S1 {};   // C4544
 ```
 
-W tym przykładzie parametr domyślny ma zastosowanie do szablonu klasy `S`:
+W tym przykładzie domyślny parametr ma zastosowanie do `S`szablonu klasy:
 
-```
+```cpp
 // C4544b.cpp
 // compile with: /LD
 template <class T = int>

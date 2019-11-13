@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4312
 ms.assetid: 541906ed-4f62-4bcb-947f-cf9ae7411bcb
-ms.openlocfilehash: 1983d7b89688568b8152372328216c2a814f7bc0
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 83f8aa5d03bddde58f9edd4ffc9f19073045da30
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510082"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966096"
 ---
 # <a name="compiler-warning-level-1-c4312"></a>Ostrzeżenie kompilatora (poziom 1) C4312
 
 'operacja' : konwersja z 'typ1' na 'typ2' o większym rozmiarze
 
-To ostrzeżenie wykrywa próbę przypisania wartości 32-bitowej do typu wskaźnika 64-bitowego, na przykład rzutowania 32 bitowego `int` lub `long` do wskaźnika 64-bitowego.
+To ostrzeżenie wykrywa próbę przypisania wartości 32-bitowej do typu wskaźnika 64-bitowego, na przykład rzutowania 32-bitowego `int` lub `long` do wskaźnika 64-bitowego.
 
 Może to być niebezpieczna konwersja nawet w przypadku wartości wskaźnika, które mieszczą się w 32 bitach, gdy występuje rozszerzenie podpisywania. Jeśli ujemna 32-bitowa liczba całkowita jest przypisana do typu wskaźnika 64-bitowego, rozszerzenie znaku powoduje, że wartość wskaźnika odwołuje się do adresu pamięci innego niż wartość całkowita.
 
@@ -25,7 +25,7 @@ To ostrzeżenie jest wydawane wyłącznie dla 64-bitowych kompilacji elementów 
 
 Poniższy przykład kodu generuje C4312 podczas kompilowania dla elementów docelowych 64-bitowych:
 
-```
+```cpp
 // C4312.cpp
 // compile by using: cl /W1 /LD C4312.cpp
 void* f(int i) {

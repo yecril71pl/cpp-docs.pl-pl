@@ -1,31 +1,31 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4546
+title: Ostrzeżenie kompilatora (poziom 1) C4546
 ms.date: 11/04/2016
 f1_keywords:
 - C4546
 helpviewer_keywords:
 - C4546
 ms.assetid: 071e1709-3841-46c1-8e71-96109cd22041
-ms.openlocfilehash: 47dd30b3ce59254528f9500139310412393435d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c2e47b92050bb83b1f55836e633d9749bb5e309
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151880"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966417"
 ---
-# <a name="compiler-warning-level-1-c4546"></a>Kompilator ostrzeżenie (poziom 1) C4546
+# <a name="compiler-warning-level-1-c4546"></a>Ostrzeżenie kompilatora (poziom 1) C4546
 
 wywołanie funkcji przed przecinkiem, brak listy argumentów
 
-Kompilator wykrył wyrażenie przecinkowe źle sformułowane.
+Kompilator wykrył nieprawidłowo sformułowane wyrażenie przecinka.
 
-To ostrzeżenie jest domyślnie wyłączona. Aby uzyskać więcej informacji, zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+To ostrzeżenie jest domyślnie wyłączone. Aby uzyskać więcej informacji, zobacz [ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4546:
+Poniższy przykład generuje C4546:
 
-```
+```cpp
 // C4546.cpp
 // compile with: /W1
 #pragma warning (default : 4546)

@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4374
+title: Ostrzeżenie kompilatora (poziom 1) C4374
 ms.date: 11/04/2016
 f1_keywords:
 - C4374
 helpviewer_keywords:
 - C4374
 ms.assetid: 4ac9aaec-d815-4b6e-825f-fa872092dd3b
-ms.openlocfilehash: 5cf18a3dcd94f59ce1ae8feb675f251bea5715a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31a43467020e3d90a2f02c667f7cdb6177b4d833
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302244"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966439"
 ---
-# <a name="compiler-warning-level-1-c4374"></a>Kompilator ostrzeżenie (poziom 1) C4374
+# <a name="compiler-warning-level-1-c4374"></a>Ostrzeżenie kompilatora (poziom 1) C4374
 
-"function1": metoda interfejsu nie będzie zaimplementowana przez niewirtualną metodę "function2"
+"function1": metoda interfejsu nie zostanie zaimplementowana przez niewirtualną metodę "function2"
 
-Kompilator Oczekiwano znalezienia [wirtualnego](../../cpp/virtual-specifier.md) słowo kluczowe w definicji metody.
+Kompilator oczekiwał na znalezienie słowa kluczowego [Virtual](../../cpp/virtual-specifier.md) w definicji metody.
 
-Poniższy przykład spowoduje wygenerowanie C4374:
+Poniższy przykład generuje C4374:
 
-```
+```cpp
 // C4374.cpp
 // compile with: /clr /W1 /c /WX
 public interface class I {

@@ -5,45 +5,45 @@ helpviewer_keywords:
 - MFC, redistributing
 - redistributing MFC library
 ms.assetid: 72714ce1-385e-4c1c-afa5-96b03e873866
-ms.openlocfilehash: faca2e7213ab0ad0c9b1a1a0fd6a7274094853f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b38299bc39ce282769e40e915847b2220ec28ca
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362227"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965606"
 ---
 # <a name="redistributing-the-mfc-library"></a>Redystrybuowanie biblioteki MFC
 
-Jeśli dynamicznie połączysz aplikację do biblioteki MFC, należy ponownie rozesłać zgodne biblioteki MFC DLL. Na przykład jeśli aplikacja MFC został utworzony przy użyciu wersji MFC, który jest dostarczany z programem Visual Studio 2015, należy ponownie rozesłać mfc140.dll lub mfc140u.dll, w zależności od tego, czy aplikacja jest kompilowana wąskie znaki lub obsługi standardu Unicode.
+W przypadku dynamicznego łączenia aplikacji z biblioteką MFC należy ponownie rozpowszechnić zgodną bibliotekę MFC DLL. Na przykład jeśli aplikacja MFC została skompilowana przy użyciu wersji MFC, która jest dostarczana z programem Visual Studio 2015, należy ponownie rozpowszechnić mfc140. dll lub mfc140u. dll, w zależności od tego, czy aplikacja jest skompilowana dla wąskich znaków lub obsługi Unicode.
 
 > [!NOTE]
->  Pliki mfc140.dll zostały pominięte pliki redystrybucyjne katalogu w Visual Studio 2015 RTM. Wersje zainstalowane przez program Visual Studio 2015 w katalogach Windows\system32 i Windows\syswow64 zamiast tego można użyć.
+>  Pliki mfc140. dll zostały pominięte w katalogu plików redystrybucyjnych w programie Visual Studio 2015 RTM. Zamiast tego można użyć wersji zainstalowanych przez program Visual Studio 2015 w katalogach Windows\System32 i Windows\syswow64.
 
-Ponieważ wszystkie biblioteki MFC DLL używają udostępnionych wersji biblioteki wykonawczej języka C (CRT), konieczne może być Ponowna dystrybucja CRT. Wersji MFC, który jest dostarczany z programem Visual Studio 2015 korzysta z biblioteki CRT uniwersalnej jest rozpowszechniany jako element systemu Windows 10. Aby uruchomić aplikację MFC skompilowanych przy użyciu programu Visual Studio 2015 w starszych wersjach systemu Windows, należy ponownie rozesłać Universal CRT. Aby uzyskać informacji na temat sposobu redystrybucji universal CRT, jako składnik systemu operacyjnego lub za pomocą lokalnego wdrażania, zobacz [wprowadzenie do Universal CRT](https://devblogs.microsoft.com/cppblog/introducing-the-universal-crt/). Aby pobrać uniwersalne CRT w przypadku wdrożenia centralnego w obsługiwanych wersjach systemu Windows, zobacz [systemu Windows 10 uniwersalnego środowiska uruchomieniowego C](https://www.microsoft.com/en-us/download/details.aspx?id=48234). Pakiet redystrybucyjny architektury wersje ucrtbase.dll lokalnego wdrożenia znajdują się w zestawie Windows SDK. Domyślnie program Visual Studio instaluje je w \Windows Kits\10\Redist\ucrt\DLLs\ C:\Program Files (x86) w podkatalogu architektury.
+Ponieważ wszystkie biblioteki MFC DLL używają udostępnionej wersji biblioteki środowiska uruchomieniowego języka C (CRT), może być również konieczne ponowne rozproszenie CRT. Wersja MFC, która jest dostarczana z programem Visual Studio 2015, korzysta z uniwersalnej biblioteki CRT, która jest dystrybuowana w ramach systemu Windows 10. Aby uruchomić aplikację MFC skompilowaną przy użyciu programu Visual Studio 2015 we wcześniejszych wersjach systemu Windows, należy ponownie rozpowszechnić uniwersalną CRT. Aby uzyskać informacje na temat sposobu redystrybucji uniwersalnej platformy CRT jako składnika systemu operacyjnego lub przy użyciu wdrożenia lokalnego, zobacz [wprowadzenie do uniwersalnej CRT](https://devblogs.microsoft.com/cppblog/introducing-the-universal-crt/). Aby pobrać uniwersalne środowisko CRT do wdrożenia centralnego w obsługiwanych wersjach systemu Windows, zobacz [Windows 10 Universal C Runtime](https://www.microsoft.com/download/details.aspx?id=48234). W Windows SDK znajdują się informacje o architekturze redystrybucyjnej z wersjami ucrtbase. dll dla lokalnego wdrożenia. Domyślnie program Visual Studio instaluje je w folderze C:\Program Files (x86) \Windows Kits\10\Redist\ucrt\DLLs\ w podkatalogu specyficznym dla architektury.
 
-Jeśli aplikacja został utworzony przy użyciu starszej wersji biblioteki MFC, należy ponownie rozesłać pasującego DLL CRT z katalogu pliki redystrybucyjne. Na przykład jeśli aplikacja MFC został utworzony przy użyciu zestawu narzędzi Visual Studio 2013 (vc120), należy ponownie rozesłać msvcr120.dll. Masz również do redystrybucji mfc pasującego`<version>`u.dll lub mfc`<version>`.dll.
+Jeśli aplikacja została skompilowana przy użyciu wcześniejszej wersji biblioteki MFC, należy ponownie rozpowszechnić zgodną bibliotekę DLL CRT z katalogu plików redystrybucyjnych. Na przykład jeśli aplikacja MFC została skompilowana przy użyciu zestawu narzędzi Visual Studio 2013 (vc120), należy ponownie rozpowszechnić msvcr120. dll. Należy również ponownie rozpowszechnić pasującą MFC`<version>`u. dll lub MFC`<version>`. dll.
 
-Jeśli statycznie połączysz aplikacje do MFC (to znaczy, jeśli określisz **Użyj MFC w bibliotece statycznej** na **ogólne** karcie **stron właściwości** okno dialogowe), nie masz Redystrybucja biblioteki MFC DLL. Jednak mimo że łączenie statyczne może działać w przypadku testowania i wewnętrznego wdrażania aplikacji, zaleca się że nie używasz go do redystrybucji MFC. Aby uzyskać więcej informacji dotyczących zalecanych strategii wdrażania bibliotek Visual C++, zobacz [Wybieranie metody wdrażania](choosing-a-deployment-method.md).
+W przypadku statycznego łączenia aplikacji z MFC (oznacza to, że w przypadku określenia **użycia MFC w bibliotece statycznej** na karcie **Ogólne** w oknie dialogowym **strony właściwości** ) nie trzeba ponownie rozpowszechniać biblioteki MFC DLL. Chociaż konsolidacja statyczna może być używana do testowania i wewnętrznego wdrażania aplikacji, zaleca się, aby nie używać jej do redystrybucji MFC. Aby uzyskać więcej informacji na temat zalecanych strategii wdrażania C++ bibliotek wizualizacji, zobacz [Wybieranie metody wdrażania](choosing-a-deployment-method.md).
 
-Jeśli aplikacja używa klas MFC, które implementują formant WebBrowser (na przykład [klasa CHtmlView](../mfc/reference/chtmlview-class.md) lub [klasa CHtmlEditView](../mfc/reference/chtmleditview-class.md)), firma Microsoft zaleca również zainstalowanie najbardziej aktualnej wersji Program Microsoft Internet Explorer, aby komputer docelowy będzie miał najbardziej aktualne pliki wspólnej kontroli. (Co najmniej program Internet Explorer 4.0 jest wymagany). Informacje dotyczące sposobu instalowania składników programu Internet Explorer są dostępne w "artykule 185375: Jak utworzyć pojedynczej EXE instalacji programu Internet Explorer"w witrynie Microsoft Support.
+Jeśli aplikacja używa klas MFC, które implementują formant WebBrowser (na przykład [Klasa CHtmlView](../mfc/reference/chtmlview-class.md) lub [Klasa CHtmlEditView](../mfc/reference/chtmleditview-class.md)), zalecamy także zainstalowanie najnowszej wersji programu Microsoft Internet Explorer, aby komputer docelowy miał najbardziej aktualne pliki wspólnych kontrolek. (Co najmniej wymagany jest program Internet Explorer 4,0). Informacje dotyczące sposobu instalowania składników programu Internet Explorer są dostępne w artykule "artykuł 185375: jak utworzyć pojedynczy plik EXE instalacji programu Internet Explorer" w witrynie sieci Web pomoc techniczna firmy Microsoft.
 
-Jeśli aplikacja używa klas baz danych MFC (na przykład [klasa CRecordset](../mfc/reference/crecordset-class.md) i [klasa CRecordView](../mfc/reference/crecordview-class.md)), można redystrybuować ODBC i wszystkie sterowniki ODBC używane przez aplikację.
+Jeśli aplikacja używa klas baz danych MFC (na przykład Klasa [CRecordset](../mfc/reference/crecordset-class.md) i [Klasa formularzy CRecordView](../mfc/reference/crecordview-class.md)), należy ponownie rozesłać ODBC i wszystkie sterowniki ODBC używane przez aplikację.
 
-Jeśli aplikacja MFC używa formantów Windows Forms, musi ponownie rozdzielić mfcmifc80.dll z aplikacją. Ta biblioteka DLL jest silne podpisanym zestaw .NET, który można rozpowszechniać za pomocą aplikacji w aplikacji folderu lokalnego lub wdrażając go do globalnej pamięci podręcznej zestawów (GAC) za pomocą [Gacutil.exe (Global Assembly Cache Tool)](/dotnet/framework/tools/gacutil-exe-gac-tool).
+Jeśli aplikacja MFC używa formantów Windows Forms, należy ponownie rozpowszechnić mfcmifc80. dll z aplikacją. Ta biblioteka DLL jest zestawem .NET ze znakiem silnej nazwy, który można rozpowszechniać za pomocą aplikacji w lokalnym folderze aplikacji lub przez wdrożenie go w globalnej pamięci podręcznej zestawów (GAC) przy użyciu programu [Gacutil. exe (Global Assembly Cache Tool)](/dotnet/framework/tools/gacutil-exe-gac-tool).
 
-Jeśli ponownie dystrybuujesz bibliotekę MFC DLL, upewnij się ponownie rozesłać wersję handlową, a nie wersji do debugowania. Wersje debugowania bibliotek DLL nie są do dystrybucji. Nazwy wersji do debugowania biblioteki MFC DLL kończyć się znakiem "d", na przykład Mfc140d.dll.
+Jeśli ponownie dystrybuujesz bibliotekę MFC DLL, pamiętaj o ponownym rozproszeniu wersji detalicznej, a nie wersji do debugowania. Wersje debugowania bibliotek DLL nie są redystrybucyjne. Nazwy wersji debugowania bibliotek DLL MFC kończą się znakiem "d", na przykład Mfc140d. dll.
 
-Można redystrybuować MFC przy użyciu albo VCRedist_*architektury*.exe, moduły scalania, które są instalowane z programem Visual Studio lub wdrażając biblioteki MFC DLL w tym samym folderze co aplikacja. Aby uzyskać więcej informacji na temat sposobu redystrybucji MFC, zobacz [Redistributing Visual C++ Files](redistributing-visual-cpp-files.md).
+Można redystrybuować MFC przy użyciu programu VCRedist_*Architecture*. exe, modułów scalania, które są zainstalowane z programem Visual Studio, lub przez wdrożenie biblioteki MFC DLL w tym samym folderze, w którym znajduje się aplikacja. Aby uzyskać więcej informacji na temat sposobu redystrybucji MFC, zobacz redystrybuuj [pliki wizualne C++ ](redistributing-visual-cpp-files.md).
 
-## <a name="installation-of-localized-mfc-components"></a>Instalacja składników zlokalizowanej MFC
+## <a name="installation-of-localized-mfc-components"></a>Instalacja zlokalizowanych składników MFC
 
-Jeśli zdecydujesz się zlokalizować aplikację przez zainstalowanie lokalizacji MFC DLL, należy użyć plików scalania do (dystrybucji.msm). Na przykład, jeśli chcesz zlokalizować aplikację na x86 komputera, musisz scalić Microsoft_VC`<version>`_MFCLOC_x86.msm pakietem instalacyjnym dla x86 komputera.
+W przypadku podjęcia decyzji o zlokalizowaniu aplikacji przez zainstalowanie biblioteki DLL lokalizacji MFC należy użyć plików scalonych (. msm). Jeśli na przykład chcesz zlokalizować aplikację na komputerze z procesorem x86, musisz scalić Microsoft_VC`<version>`_MFCLOC_x86. MSM z pakietem instalacyjnym dla komputera x86.
 
-Pliki pakietu redystrybucyjnego .msm zawierają biblioteki dll, które są używane dla lokalizacji. Istnieje jeden DLL dla każdego z obsługiwanych języków. Proces instalacji instaluje te biblioteki dll w folderze %windir%\system32\ na komputerze docelowym.
+Pliki redystrybucyjne. MSM zawierają biblioteki DLL, które są używane do lokalizacji. Istnieje jedna biblioteka DLL dla każdego obsługiwanego języka. Proces instalacji instaluje te biblioteki DLL w folderze%windir%\system32\ na komputerze docelowym.
 
 Aby uzyskać więcej informacji o sposobie lokalizowania aplikacji MFC, zobacz [TN057: Lokalizacja składników MFC](../mfc/tn057-localization-of-mfc-components.md).
 
-Można redystrybuować Lokalizacja biblioteki MFC DLL przez wdrożenie biblioteki MFC DLL w lokalnym folderze aplikacji. Aby uzyskać więcej informacji na temat sposobu redystrybucji bibliotek Visual C++, zobacz [Redistributing Visual C++ Files](redistributing-visual-cpp-files.md).
+Można redystrybuować biblioteki DLL lokalizacji MFC przez wdrożenie biblioteki MFC DLL w folderze lokalnym aplikacji. Aby uzyskać więcej informacji na temat sposobu rozpowszechniania C++ bibliotek wizualizacji, zobacz [Redystrybuowanie plików wizualnych C++ ](redistributing-visual-cpp-files.md).
 
 ## <a name="see-also"></a>Zobacz także
 

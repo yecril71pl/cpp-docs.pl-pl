@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4369
+title: Ostrzeżenie kompilatora (poziom 1) C4369
 ms.date: 11/04/2016
 f1_keywords:
 - C4369
 helpviewer_keywords:
 - C4369
 ms.assetid: ade87e84-36be-4e00-be99-2930af848feb
-ms.openlocfilehash: b374b67fa3319be35490358d7664bcb45bc640db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 617cb2cc3774b288581a3868125ced19b28ba45a
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207033"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966511"
 ---
-# <a name="compiler-warning-level-1-c4369"></a>Kompilator ostrzeżenie (poziom 1) C4369
+# <a name="compiler-warning-level-1-c4369"></a>Ostrzeżenie kompilatora (poziom 1) C4369
 
-'moduł wyliczający': moduł wyliczający wartość "value" nie może być reprezentowana "type", wartość to "nowa_wartość"
+"Enumerator": wartość modułu wyliczającego "value" nie może być reprezentowana jako "Type", wartość to "new_value"
 
-Moduł wyliczający został obliczony powinien być większy niż największa wartość dla określonego typu bazowego.  To spowodowało przepełnienie i kompilator opakowane wartość modułu wyliczającego do najmniejszej możliwej wartości dla typu.
+Obliczono, że moduł wyliczający jest większy niż największa wartość dla określonego typu podstawowego.  Spowodowało to przepełnienie, a kompilator opakowan wartość modułu wyliczającego na najmniejszą możliwą wartość dla tego typu.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4369.
+Poniższy przykład generuje C4369.
 
-```
+```cpp
 // C4369.cpp
 // compile with: /W1
 int main() {

@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4553
+title: Ostrzeżenie kompilatora (poziom 1) C4553
 ms.date: 11/04/2016
 f1_keywords:
 - C4553
 helpviewer_keywords:
 - C4553
 ms.assetid: d8aacbe0-3cb5-4367-a6e5-fd7e28f0ff9d
-ms.openlocfilehash: 7a299d4a99818699e9be31e7d15d9e589de05c15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2d5e52e565878011b2439792c721eeb57cdd20a
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410346"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966327"
 ---
-# <a name="compiler-warning-level-1-c4553"></a>Kompilator ostrzeżenie (poziom 1) C4553
+# <a name="compiler-warning-level-1-c4553"></a>Ostrzeżenie kompilatora (poziom 1) C4553
 
-'operator': operator nie przynosi efektu; Czy chodziło 'operator'?
+"operator": operator nie ma żadnego wpływu; Czy chodziło o "operator"?
 
-Jeśli Instrukcja wyrażenia operatora z efektem nie jako górnej części wyrażenia, prawdopodobnie jest błąd.
+Jeśli instrukcja wyrażenia ma operator bez efektów ubocznych w górnej części wyrażenia, prawdopodobnie wystąpi błąd.
 
-Poniższy przykład spowoduje wygenerowanie C4553:
+Poniższy przykład generuje C4553:
 
-```
+```cpp
 // C4553.cpp
 // compile with: /W1
 int func()

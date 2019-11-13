@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4393
+title: Ostrzeżenie kompilatora (poziom 1) C4393
 ms.date: 11/04/2016
 f1_keywords:
 - C4393
 helpviewer_keywords:
 - C4393
 ms.assetid: 353a0539-d1ea-4c1b-8849-c9b321ec9842
-ms.openlocfilehash: 4226c8ecd41e890d70fa5741decae605d45b620f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92cb9a063a2f6e4660c3f84516527c1417c55e46
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386931"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966149"
 ---
-# <a name="compiler-warning-level-1-c4393"></a>Kompilator ostrzeżenie (poziom 1) C4393
+# <a name="compiler-warning-level-1-c4393"></a>Ostrzeżenie kompilatora (poziom 1) C4393
 
-"var": const nie ma wpływu na literał składowej danych; ignorowane
+"var": const nie ma wpływu na literał składowej danych; Ignoruj
 
-A [literału](../../extensions/literal-cpp-component-extensions.md) element członkowski danych również został określony jako stała.  Ponieważ literał składowej danych wskazuje const, nie trzeba dodać const do deklaracji.
+[Literał](../../extensions/literal-cpp-component-extensions.md) elementu członkowskiego danych został również określony jako const.  Ponieważ literał składowej danych oznacza stałą, nie trzeba dodawać const do deklaracji.
 
-Poniższy przykład spowoduje wygenerowanie C4393:
+Poniższy przykład generuje C4393:
 
-```
+```cpp
 // C4393.cpp
 // compile with: /clr /W1 /c
 ref struct Y1 {

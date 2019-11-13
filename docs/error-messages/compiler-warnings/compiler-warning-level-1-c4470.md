@@ -1,23 +1,23 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4470
+title: Ostrzeżenie kompilatora (poziom 1) C4470
 ms.date: 11/04/2016
 f1_keywords:
 - C4470
 helpviewer_keywords:
 - C4470
 ms.assetid: f52a3eaa-a235-4747-a47d-9ec4ad4cb0ea
-ms.openlocfilehash: 7fd4644ab39e350c0c0badb527875b427a2c6987
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc1efad7f18310727e2fdb756e49b95294357c4d
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160903"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965411"
 ---
-# <a name="compiler-warning-level-1-c4470"></a>Kompilator ostrzeżenie (poziom 1) C4470
+# <a name="compiler-warning-level-1-c4470"></a>Ostrzeżenie kompilatora (poziom 1) C4470
 
-dyrektywy pragma sterowania zmiennoprzecinkowego zignorowane z opcją/CLR
+dyrektywy kontroli zmiennoprzecinkowej zostały zignorowane w opcji/CLR
 
-Kontroli zmiennoprzecinkowych pragm:
+Dyrektywy pragma kontroli zmiennoprzecinkowej:
 
 - [fenv_access](../../preprocessor/fenv-access.md)
 
@@ -25,11 +25,11 @@ Kontroli zmiennoprzecinkowych pragm:
 
 - [fp_contract](../../preprocessor/fp-contract.md)
 
-nie mają wpływu w obszarze [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).
+nie ma żadnego wpływu na [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).
 
-Poniższy przykład spowoduje wygenerowanie C4470:
+Poniższy przykład generuje C4470:
 
-```
+```cpp
 // C4470.cpp
 // compile with: /clr /W1 /LD
 #pragma float_control(except, on)   // C4470

@@ -3,12 +3,12 @@ title: Instalowanie obciążenia C++ systemu Linux w programie Visual Studio
 description: Opisuje sposób pobierania, instalowania i konfigurowania obciążenia systemu Linux dla C++ programu Visual Studio.
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 68e347a4f90fc15f9d3846c82c3392213e1bd7bc
-ms.sourcegitcommit: eb254b4462a58d219376ff501bf768bd1adc07ae
+ms.openlocfilehash: 1dad17756cbc12fdf65250b7c54314ff2a645287
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73912906"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966208"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Pobieranie, Instalowanie i Konfigurowanie obciążenia systemu Linux
 
@@ -48,29 +48,31 @@ W przypadku każdego z tych scenariuszy wymagane jest **Programowanie przy C++ u
 
 Jeśli nie masz jeszcze maszyny z systemem Linux, możesz utworzyć maszynę wirtualną z systemem Linux na platformie Azure. Aby uzyskać więcej informacji, zobacz [Szybki Start: Tworzenie maszyny wirtualnej z systemem Linux w Azure Portal](/azure/virtual-machines/linux/quick-create-portal).
 
-W systemie Windows 10 można zainstalować i wskazać Ulubione dystrybucji z systemem Linux w podsystemie Windows dla systemu Linux (WSL). Aby uzyskać więcej informacji, zobacz [Przewodnik instalacji systemu Windows w systemie Linux dla systemu Windows 10](/windows/wsl/install-win10). Jeśli nie możesz uzyskać dostępu do sklepu Windows, możesz [ręcznie pobrać pakiety WSL dystrybucji](/windows/wsl/install-manual). WSL to wygodne środowisko konsoli, ale nie jest zalecane w przypadku aplikacji graficznych. 
+W systemie Windows 10 można zainstalować i wskazać Ulubione dystrybucji z systemem Linux w podsystemie Windows dla systemu Linux (WSL). Aby uzyskać więcej informacji, zobacz [Przewodnik instalacji systemu Windows w systemie Linux dla systemu Windows 10](/windows/wsl/install-win10). Jeśli nie możesz uzyskać dostępu do sklepu Windows, możesz [ręcznie pobrać pakiety WSL dystrybucji](/windows/wsl/install-manual). WSL to wygodne środowisko konsoli, ale nie jest zalecane w przypadku aplikacji graficznych.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Projekty systemu Linux w programie Visual Studio wymagają zainstalowania następujących zależności w zdalnym systemie Linux lub WSL: 
-- **Kompilator programu** Visual Studio 2019 ma wbudowaną obsługę programu do obsługi i [Clang](https://docs.microsoft.com/en-us/cpp/build/clang-support-cmake?view=vs-2019). 
-- **GDB** — program Visual Studio automatycznie uruchamia GDB w systemie Linux i używa frontonu debugera programu Visual Studio, aby zapewnić środowisko debugowania pełnej wierności w systemie Linux. 
+Projekty systemu Linux w programie Visual Studio wymagają zainstalowania następujących zależności w zdalnym systemie Linux lub WSL:
+
+- **Kompilator programu** Visual Studio 2019 ma wbudowaną obsługę programu do obsługi i [Clang](/cpp/build/clang-support-cmake?view=vs-2019).
+- **GDB** — program Visual Studio automatycznie uruchamia GDB w systemie Linux i używa frontonu debugera programu Visual Studio, aby zapewnić środowisko debugowania pełnej wierności w systemie Linux.
 - **rsync** i **zip** — włączenie funkcji rsync i zip umożliwia programowi Visual Studio wyodrębnienie plików nagłówkowych z systemu Linux do systemu plików Windows w celu użycia przez funkcję IntelliSense.
 - **SprawdY**
 - **OpenSSH — serwer** (tylko systemy zdalnego systemu Linux) — program Visual Studio nawiązuje połączenie ze zdalnymi systemami Linux za pośrednictwem bezpiecznego połączenia SSH.
 - **CMAKE** (tylko projekty CMAKE) — można zainstalować [statycznie połączone pliki binarne](https://github.com/microsoft/CMake/releases)firmy Microsoft dla systemu Linux.
 
-W poniższych poleceniach przyjęto założenie, że używany jest program g + + zamiast Clang. 
+W poniższych poleceniach przyjęto założenie, że używany jest program g + + zamiast Clang.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-Projekty systemu Linux w programie Visual Studio wymagają zainstalowania następujących zależności w zdalnym systemie Linux lub WSL: 
+Projekty systemu Linux w programie Visual Studio wymagają zainstalowania następujących zależności w zdalnym systemie Linux lub WSL:
+
 - w ramach **programu z działem IT — program** Visual Studio 2017 oferuje wbudowaną pomoc techniczną dla programu z działem IT.
-- **GDB** — program Visual Studio automatycznie uruchamia GDB w systemie Linux i używa frontonu debugera programu Visual Studio, aby zapewnić środowisko debugowania pełnej wierności w systemie Linux. 
+- **GDB** — program Visual Studio automatycznie uruchamia GDB w systemie Linux i używa frontonu debugera programu Visual Studio, aby zapewnić środowisko debugowania pełnej wierności w systemie Linux.
 - **rsync** i **zip** — dołączenie rsync i zip umożliwia programowi Visual Studio wyodrębnienie plików nagłówkowych z systemu Linux do systemu plików Windows, aby można było korzystać z funkcji IntelliSense.
 - **SprawdY**
 - **OpenSSH — serwer** — program Visual Studio nawiązuje połączenie ze zdalnym systemem Linux za pośrednictwem bezpiecznego połączenia SSH.
@@ -78,7 +80,7 @@ Projekty systemu Linux w programie Visual Studio wymagają zainstalowania nastę
 
 ::: moniker-end
 
-::: moniker range="vs-2019" 
+::: moniker range="vs-2019"
 
 ## <a name="linux-setup-ubuntu-on-wsl"></a>Konfiguracja systemu Linux: Ubuntu on WSL
 

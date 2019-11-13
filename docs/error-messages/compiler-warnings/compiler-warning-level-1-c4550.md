@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4550
+title: Ostrzeżenie kompilatora (poziom 1) C4550
 ms.date: 11/04/2016
 f1_keywords:
 - C4550
 helpviewer_keywords:
 - C4550
 ms.assetid: f902b4ed-5f17-48ea-b693-92f4fb8c8054
-ms.openlocfilehash: eff3548ef43075a86f52086caf9b79158ad70cb9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c310855ee3925374de8b736cde9013d48df6482
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410385"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966375"
 ---
-# <a name="compiler-warning-level-1-c4550"></a>Kompilator ostrzeżenie (poziom 1) C4550
+# <a name="compiler-warning-level-1-c4550"></a>Ostrzeżenie kompilatora (poziom 1) C4550
 
 wyrażenie daje w wyniku funkcję, której brakuje listy argumentów
 
-Wyłuskiwany wskaźnik do funkcji brakuje listy argumentów.
+Brak listy argumentów ze wskaźnikiem do odwołania do funkcji.
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // C4550.cpp
 // compile with: /W1
 bool f()

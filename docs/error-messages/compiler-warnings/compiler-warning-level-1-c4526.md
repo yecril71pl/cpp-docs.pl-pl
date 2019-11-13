@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4526
+title: Ostrzeżenie kompilatora (poziom 1) C4526
 ms.date: 11/04/2016
 f1_keywords:
 - C4526
 helpviewer_keywords:
 - C4526
 ms.assetid: 490f8916-5fdc-4cad-b412-76c3382a5976
-ms.openlocfilehash: 892e6c37e54a868be48ced35354a1096aa7bf9d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60ac01d6a118f37a22b39ab41fa60252866f3360
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160747"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966268"
 ---
-# <a name="compiler-warning-level-1-c4526"></a>Kompilator ostrzeżenie (poziom 1) C4526
+# <a name="compiler-warning-level-1-c4526"></a>Ostrzeżenie kompilatora (poziom 1) C4526
 
-'Funkcja': funkcja statycznej składowej nie można przesłonić funkcji wirtualnej ' wirtualnego function'override zignorowane, funkcja wirtualna zostanie ukryta
+"Function": statyczna funkcja członkowska nie może przesłonić funkcji wirtualnej "Virtual function'overrideed", funkcja wirtualna zostanie ukryta
 
-Funkcja statycznej składowej spełnia kryteria, które można przesłonić funkcji wirtualnej, co sprawia, że funkcja elementu członkowskiego wirtualnego i statyczne.
+Statyczna funkcja członkowska spełnia kryteria umożliwiające przesłonięcie funkcji wirtualnej, co sprawia, że funkcja członkowska jest wirtualna i statyczna.
 
 Poniższy kod generuje C4526:
 
-```
+```cpp
 // C4526.cpp
 // compile with: /W1 /c
 // C4526 expected
@@ -34,8 +34,8 @@ struct myStruct2: public myStruct1 {
 };
 ```
 
-Poniżej przedstawiono możliwe poprawki:
+Możliwe są następujące poprawki:
 
-- Jeśli funkcja była zamierzona można przesłonić funkcji wirtualnej klasy bazowej, Usuń specyfikator statycznej.
+- Jeśli funkcja była przeznaczona do przesłonięcia funkcji wirtualnej klasy bazowej, Usuń specyfikator statyczny.
 
-- Jeśli funkcja ma to być statycznej funkcji członkowskiej, należy ją zmienić, dzięki czemu nie koliduje to z funkcją wirtualną klasę bazową.
+- Jeśli funkcja była przeznaczona do statycznej funkcji członkowskiej, zmień jej nazwę, aby nie powodowała konfliktu z funkcją wirtualną klasy bazowej.

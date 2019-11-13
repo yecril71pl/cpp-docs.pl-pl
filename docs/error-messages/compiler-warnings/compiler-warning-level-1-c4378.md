@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4378
+title: Ostrzeżenie kompilatora (poziom 1) C4378
 ms.date: 11/04/2016
 f1_keywords:
 - C4378
 helpviewer_keywords:
 - C4378
 ms.assetid: d08e11ef-891a-4752-9a5e-360e7394acf7
-ms.openlocfilehash: 6197bd66214785d515bb1b73ceaf5a68d6751e79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc5e5365ffb53125085ce7b374f1362e93f4bb03
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410411"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966494"
 ---
-# <a name="compiler-warning-level-1-c4378"></a>Kompilator ostrzeżenie (poziom 1) C4378
+# <a name="compiler-warning-level-1-c4378"></a>Ostrzeżenie kompilatora (poziom 1) C4378
 
-Należy uzyskać wskaźniki do funkcji, aby uruchomić inicjatory; należy wziąć pod uwagę system::ModuleHandle:: resolvemethodhandle
+Musi uzyskać wskaźniki funkcji, aby uruchomić inicjatory; Rozważmy system:: ModuleHandle:: ResolveMethodHandle
 
-W obszarze **/CLR**, symbole inicjator zawierać tokeny funkcji, nie wskaźników funkcji.  Należy przekonwertować tokenów do wskaźników przy użyciu <xref:System.ModuleHandle.ResolveMethodHandle%2A>.
+W obszarze **/CLR**symbole inicjatora zawierają tokeny funkcji, a nie wskaźniki funkcji.  Należy przekonwertować tokeny na wskaźniki przy użyciu <xref:System.ModuleHandle.ResolveMethodHandle%2A>.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4378.
+Poniższy przykład generuje C4378.
 
-```
+```cpp
 // C4378.cpp
 // compile with: /W1 /clr /c
 typedef void (__cdecl *PF)(void);
@@ -67,7 +67,7 @@ int main () {
 
 Poniższy przykład pokazuje, jak rozwiązać C4378.
 
-```
+```cpp
 // C4378_b.cpp
 // compile with: /clr
 #pragma warning(disable:4378)

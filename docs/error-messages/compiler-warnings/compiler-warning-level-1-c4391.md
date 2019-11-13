@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4391
+title: Ostrzeżenie kompilatora (poziom 1) C4391
 ms.date: 11/04/2016
 f1_keywords:
 - C4391
 helpviewer_keywords:
 - C4391
 ms.assetid: 95c6182c-fae9-4174-8f7b-98aa352e68ca
-ms.openlocfilehash: d9d1cebe08a6a163d76271ab001ec91b7cee82a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60b68906697f76d56ff6c0e13f1b4ec105ef1c25
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386463"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966112"
 ---
-# <a name="compiler-warning-level-1-c4391"></a>Kompilator ostrzeżenie (poziom 1) C4391
+# <a name="compiler-warning-level-1-c4391"></a>Ostrzeżenie kompilatora (poziom 1) C4391
 
-"podpis": nieprawidłowy typ zwracany dla wewnętrznej funkcji, oczekiwano "type"
+"Signature": nieprawidłowy typ zwracany dla wewnętrznej funkcji, oczekiwano "Type"
 
-Deklaracja funkcji wewnętrzne polecenie kompilatora ma niewłaściwy typ zwracany. Obraz wynikowy może nie działać poprawnie.
+Deklaracja funkcji dla wewnętrznego kompilatora ma nieprawidłowy zwracany typ. Obraz z wynikiem może nie działać poprawnie.
 
-Aby usunąć to ostrzeżenie, popraw deklarację albo usuń deklarację i po prostu #include do odpowiedniego pliku nagłówka.
+Aby usunąć to ostrzeżenie, Popraw deklarację lub Usuń deklarację i po prostu #include odpowiedni plik nagłówkowy.
 
-Poniższy przykład spowoduje wygenerowanie C4391:
+Poniższy przykład generuje C4391:
 
-```
+```cpp
 // C4391.cpp
 // compile with: /W1
 // processor: x86

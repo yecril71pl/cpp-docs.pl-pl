@@ -1,31 +1,31 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4407
+title: Ostrzeżenie kompilatora (poziom 1) C4407
 ms.date: 11/04/2016
 f1_keywords:
 - C4407
 helpviewer_keywords:
 - C4407
 ms.assetid: 32bc2c21-363a-4bb8-b486-725faeaededc
-ms.openlocfilehash: 2e47e293b650f64d2a6be91a837cc4195e073e8f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: cdc25155aced50331851e9581c346155c6f8e45c
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447748"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966344"
 ---
-# <a name="compiler-warning-level-1-c4407"></a>Kompilator ostrzeżenie (poziom 1) C4407
+# <a name="compiler-warning-level-1-c4407"></a>Ostrzeżenie kompilatora (poziom 1) C4407
 
-Wykonuj rzutowania między różnych reprezentacjami wskaźników do składowej, kompilator może wygenerować niepoprawny kod
+Rzutowanie między różnymi wskaźnikami do przedstawienia elementu członkowskiego, kompilator może wygenerować niepoprawny kod
 
 Wykryto nieprawidłowe rzutowanie.
 
-C4407 mogą być generowane z powodu pracy zgodności kompilatora, która została wykonana w programie Visual Studio 2005. Wskaźnik do elementu członkowskiego, teraz wymaga kwalifikowana nazwa i operatora address-of (&).
+C4407 można generować z powodu zgodności kompilatora, który został wykonany w programie Visual Studio 2005. Wskaźnik do elementu członkowskiego wymaga teraz kwalifikowanej nazwy i operatora address-of (&).
 
-C4407 może wystąpić, jeśli rzutowanie między wieloma dziedziczenia wskaźnika do składowej na pojedyncze dziedziczenie wskaźnika do składowej. Czasami może się powtórzy, ale czasami nie ponieważ reprezentacja wskaźnika do elementu członkowskiego pojedyncze dziedziczenie nie ma wystarczających informacji. Kompilowanie przy użyciu **/VMM** mogą pomóc (Aby uzyskać więcej informacji, zobacz [/VMM, / VMS, / vmv (ogólna reprezentacja celu)](../../build/reference/vmm-vms-vmv-general-purpose-representation.md)). Możesz też spróbować rozmieszczanie swojej klasy bazowej; Kompilator wykrywa utraty informacji w konwersji, ponieważ klasa bazowa jest przesunięciem od zera z pochodnej.
+C4407 może wystąpić w przypadku rzutowania między wskaźnikami dziedziczenia wielu elementów członkowskich na jeden wskaźnik dziedziczenia do elementu członkowskiego. Czasami może to być możliwe, ale czasami nie jest, ponieważ reprezentacja wskaźnika do elementu członkowskiego pojedynczego dziedziczenia nie zawiera wystarczających informacji. Kompilacja z **/VMM** może pomóc (Aby uzyskać więcej informacji, zobacz [/VMM,/VMS,/VMV (reprezentacja ogólnego przeznaczenia)](../../build/reference/vmm-vms-vmv-general-purpose-representation.md)). Możesz również spróbować ponownie rozmieścić klasy bazowe; Kompilator wykrywa utratę informacji w konwersji, ponieważ klasa bazowa ma przesunięcie o wartości innej niż zero od pochodnego.
 
-Poniższy przykład spowoduje wygenerowanie C4407:
+Poniższy przykład generuje C4407:
 
-```
+```cpp
 // C4407.cpp
 // compile with: /W1 /c
 struct C1 {};
