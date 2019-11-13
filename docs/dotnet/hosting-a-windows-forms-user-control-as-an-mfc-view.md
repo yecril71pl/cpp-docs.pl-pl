@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms controls [C++], hosting as an MFC view
 - hosting Windows Forms control [C++]
 ms.assetid: 43c02ab4-1366-434c-a980-0b19326d6ea0
-ms.openlocfilehash: 9eb157ecbc738e1d7a1c3022d5f156fb590e8f04
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: bf91730f98685935d50ee0076739b436e8d9da60
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73704125"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964936"
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>Hostowanie formantu użytkownika interfejsu Windows Forms jako widoku MFC
 
@@ -21,7 +21,7 @@ Wynik końcowy przypomina model używany przez [klasę CFormView](../mfc/referen
 
 Ponieważ widoki Windows Forms MFC są kontrolkami ActiveX, nie mają tych samych `hwnd` jako widoków MFC. Nie można ich również przekazywać jako wskaźnika do widoku [CView](../mfc/reference/cview-class.md) . Ogólnie rzecz biorąc, użyj .NET Framework metod do pracy z widokami Windows Forms i zależą od systemu Win32.
 
-Aby uzyskać przykładową aplikację, która zawiera Windows Forms używane z MFC, zobacz [integrację MFC i Windows Forms](https://www.microsoft.com/en-us/download/details.aspx?id=2113).
+Aby uzyskać przykładową aplikację, która zawiera Windows Forms używane z MFC, zobacz [integrację MFC i Windows Forms](https://www.microsoft.com/download/details.aspx?id=2113).
 
 ## <a name="in-this-section"></a>W tej sekcji
 

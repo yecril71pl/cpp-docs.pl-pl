@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4606
+title: Ostrzeżenie kompilatora (poziom 1) C4606
 ms.date: 11/04/2016
 f1_keywords:
 - C4606
 helpviewer_keywords:
 - C4606
 ms.assetid: c1b45fb6-672b-42eb-9e1c-c67b3e4150d3
-ms.openlocfilehash: e471ca3e478d1166b150e49bf25efa4b9d5803cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d36031aa9a831d4669d796d8a40292e2d6ba15a8
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402518"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964975"
 ---
-# <a name="compiler-warning-level-1-c4606"></a>Kompilator ostrzeżenie (poziom 1) C4606
+# <a name="compiler-warning-level-1-c4606"></a>Ostrzeżenie kompilatora (poziom 1) C4606
 
-\#warning elementu pragma: "warning_number" ignorowane. Ostrzeżenia analizy kodu nie są skojarzone z poziomami ostrzeżeń
+Ostrzeżenie \#pragma: zignorowano element "warning_number"; Ostrzeżenia analizy kodu nie są skojarzone z poziomami ostrzeżeń
 
-Ostrzeżenia analizy kodu, tylko `error`, `once`, i `default` są obsługiwane w przypadku [ostrzeżenie](../../preprocessor/warning.md) pragmy.
+W przypadku ostrzeżeń dotyczących analizy kodu tylko `error`, `once`i `default` są obsługiwane przez pragmę [ostrzeżenia](../../preprocessor/warning.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4606.
+Poniższy przykład generuje C4606.
 
-```
+```cpp
 // C4606.cpp
 // compile with: /c /W1
 #pragma warning(1: 6001)   // C4606

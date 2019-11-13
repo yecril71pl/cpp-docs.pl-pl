@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4346
+title: Ostrzeżenie kompilatora (poziom 1) C4346
 ms.date: 11/04/2016
 f1_keywords:
 - C4346
 helpviewer_keywords:
 - C4346
 ms.assetid: 68ee562d-cca9-4a2a-9a1b-14ad1a1e7396
-ms.openlocfilehash: 53381ca6e33321001299ce27bce550c5b2b8f59e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa71565824355ff4b3658fd9de22c09d6db6dc33
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187221"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966561"
 ---
-# <a name="compiler-warning-level-1-c4346"></a>Kompilator ostrzeżenie (poziom 1) C4346
+# <a name="compiler-warning-level-1-c4346"></a>Ostrzeżenie kompilatora (poziom 1) C4346
 
-"name": zależna nazwa nie jest typem
+"name": Nazwa zależna nie jest typem
 
-[Typename](../../cpp/typename.md) — słowo kluczowe jest wymagany, jeśli zależna nazwa jest traktowane jako typu. Kod, który działa tak samo, we wszystkich wersjach programu Visual C++, można dodać `typename` do deklaracji.
+Słowo kluczowe [TypeName](../../cpp/typename.md) jest wymagane, jeśli nazwa zależna ma być traktowana jako typ. W przypadku kodu, który działa tak samo we wszystkich wersjach C++wizualizacji, Dodaj `typename` do deklaracji.
 
-Poniższy przykład spowoduje wygenerowanie C4346:
+Poniższy przykład generuje C4346:
 
-```
+```cpp
 // C4346.cpp
 // compile with: /WX /LD
 template<class T>
@@ -32,9 +32,9 @@ struct C {
 };
 ```
 
-Poniższe przykłady przedstawiono inne przykłady gdzie **typename** — słowo kluczowe jest wymagane:
+W poniższych przykładach pokazano inne przykłady, w których wymagane jest słowo kluczowe **TypeName** :
 
-```
+```cpp
 // C4346b.cpp
 // compile with: /LD /W1
 template<class T>
@@ -53,9 +53,9 @@ struct M : public L<typename T::Type, T::Value>
 };
 ```
 
-i to,
+i,
 
-```
+```cpp
 // C4346c.cpp
 // compile with: /LD /WX
 struct Y {

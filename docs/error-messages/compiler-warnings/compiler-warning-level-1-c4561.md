@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4561
+title: Ostrzeżenie kompilatora (poziom 1) C4561
 ms.date: 11/04/2016
 f1_keywords:
 - C4561
 helpviewer_keywords:
 - C4561
 ms.assetid: 3a10c12c-601b-4b6c-9861-331fd022e021
-ms.openlocfilehash: 24a3ca8b35266e93f298314f45015b7a480e2af0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0fd27142f0404a53fa2fee87fb2309e2f54d2c2
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397292"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965978"
 ---
-# <a name="compiler-warning-level-1-c4561"></a>Kompilator ostrzeżenie (poziom 1) C4561
+# <a name="compiler-warning-level-1-c4561"></a>Ostrzeżenie kompilatora (poziom 1) C4561
 
-Wywołanie "__fastcall" niezgodne z "/ clr" opcja: konwertowanie "\__stdcall"
+element "__fastcall" jest niezgodny z opcją "/CLR": konwertowanie na "\__stdcall"
 
-[__Fastcall](../../cpp/fastcall.md) Konwencja wywoływania funkcji nie można używać z [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) — opcja kompilatora. Kompilator ignoruje wywołania `__fastcall`. Aby usunąć to ostrzeżenie, albo Usuń wywołania **__fastcall** lub skompilować bez **/CLR**.
+Nie można używać konwencji wywoływania funkcji [__fastcall](../../cpp/fastcall.md) z opcją kompilatora [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) . Kompilator ignoruje wywołania `__fastcall`. Aby usunąć to ostrzeżenie, Usuń wywołania do **__fastcall** lub Kompiluj bez **/CLR**.
 
-Poniższy przykład spowoduje wygenerowanie C4561:
+Poniższy przykład generuje C4561:
 
-```
+```cpp
 // C4561.cpp
 // compile with: /clr /W1 /c
 // processor: x86

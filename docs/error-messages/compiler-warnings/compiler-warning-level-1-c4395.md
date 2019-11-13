@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4395
+title: Ostrzeżenie kompilatora (poziom 1) C4395
 ms.date: 11/04/2016
 f1_keywords:
 - C4395
 helpviewer_keywords:
 - C4395
 ms.assetid: 8051469a-3a39-4677-80f7-1300fbffe8ea
-ms.openlocfilehash: 27503b94a18b949637293201203e18793f5e7788
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 074e00ff2ae44986127f629da6ef38f9f5df7212
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182408"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964870"
 ---
-# <a name="compiler-warning-level-1-c4395"></a>Kompilator ostrzeżenie (poziom 1) C4395
+# <a name="compiler-warning-level-1-c4395"></a>Ostrzeżenie kompilatora (poziom 1) C4395
 
-'Funkcja': funkcja składowa zostanie wywołana na kopii składowej danych initonly 'składowa'
+"Function": funkcja członkowska zostanie wywołana na kopii składowej danych initonly "member"
 
-Funkcja elementu członkowskiego wywołano w [initonly (C++sposób niezamierzony)](../../dotnet/initonly-cpp-cli.md) element członkowski danych.  C4395 ostrzega, że **initonly** element członkowski danych nie można zmodyfikować przez funkcję.
+Funkcja członkowska została wywołana dla elementu członkowskiego danych [initonly (C++/CLI)](../../dotnet/initonly-cpp-cli.md) .  C4395 ostrzega o tym, że element członkowski danych **initonly** nie może być modyfikowany przez funkcję.
 
-Poniższy przykład spowoduje wygenerowanie C4395:
+Poniższy przykład generuje C4395:
 
-```
+```cpp
 // C4395.cpp
 // compile with: /W1 /clr
 public value class V {
