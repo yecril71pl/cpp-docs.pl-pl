@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: kompilowanie programu C++ natywnego w wierszu polecenia'
+title: 'Wskazówki: kompilowanie natywnego programu C++ na wiersz polecenia'
 description: Użyj kompilatora Microsoft C++ z wiersza polecenia.
 ms.custom: conceptual
 ms.date: 04/23/2019
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-ms.openlocfilehash: 36017b28ab91478da2515cd7c8588a998013171d
-ms.sourcegitcommit: c53a3efcc5d51fc55fa57ac83cca796b33ae888f
+ms.openlocfilehash: daab00768f8140869a8db39c73f4fec3ab6304c7
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71960713"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051510"
 ---
-# <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Przewodnik: kompilowanie programu C++ natywnego w wierszu polecenia
+# <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Wskazówki: kompilowanie natywnego programu C++ na wiersz polecenia
 
 Program Visual Studio zawiera kompilator wiersza C++ polecenia, za pomocą którego można utworzyć wszystko z podstawowych aplikacji konsolowych do platforma uniwersalna systemu Windows aplikacji, aplikacji klasycznych, sterowników urządzeń i składników .NET.
 
@@ -30,7 +30,7 @@ Aby ukończyć ten przewodnik, musisz mieć zainstalowane programy Visual Studio
 
 Program Visual Studio to zaawansowane zintegrowane środowisko programistyczne (IDE), które obsługuje w pełni funkcjonalne Edytor, menedżerów zasobów, debugery i kompilatory dla wielu języków i platform. Aby uzyskać informacje na temat pobierania i instalowania programu Visual Studio, w tym bezpłatnej wersji programu Visual Studio Community Edition i dołączeniaC++ pomocy technicznej dla języka C/Development, zobacz [Install C++ Support in Visual Studio](vscpp-step-0-installation.md).
 
-Narzędzia kompilacji dla programu Visual Studio instalują tylko kompilatory wiersza polecenia, narzędzia i biblioteki potrzebne do kompilowania C i C++ programów. Doskonale nadaje się do kompilowania laboratoriów lub ćwiczeń z zajęć i jest stosunkowo szybko instalowana. Aby zainstalować tylko narzędzia wiersza polecenia, należy poszukać narzędzia Build Tools for Visual Studio na stronie [pliki do pobrania programu Visual Studio](https://visualstudio.microsoft.com/downloads/) .
+Narzędzia kompilacji dla programu Visual Studio instalują tylko kompilatory wiersza polecenia, narzędzia i biblioteki potrzebne do kompilowania C i C++ programów. Doskonale nadaje się do kompilowania laboratoriów lub ćwiczeń z zajęć i jest stosunkowo szybko instalowana. Aby zainstalować tylko narzędzia wiersza polecenia, należy poszukać narzędzia Build Tools for Visual Studio na stronie [pliki do pobrania programu Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019) .
 
 Aby można było skompilować C lub C++ program w wierszu polecenia, należy sprawdzić, czy są zainstalowane narzędzia i czy można uzyskać do nich dostęp z wiersza polecenia. Wizualizacja C++ ma złożone wymagania dotyczące środowiska wiersza polecenia, aby znaleźć narzędzia, nagłówki i biblioteki, których używa. **Nie można użyć wizualizacji C++ w zwykłym oknie wiersza polecenia** bez wykonywania niektórych czynności przygotowawczych. Na szczęście Wizualizacja C++ instaluje skróty umożliwiające uruchamianie wiersza polecenia dla deweloperów, który ma skonfigurowane środowisko dla kompilacji wiersza polecenia. Niestety nazwy skrótów dla wiersza polecenia dla deweloperów i lokalizacji, gdzie się znajdują, są inne w prawie każdej wersji wizualizacji C++ i w różnych wersjach systemu Windows. Pierwsze zadanie instruktażu wyszukuje prawo do użycia.
 
@@ -58,12 +58,12 @@ Aby można było skompilować C lub C++ program w wierszu polecenia, należy spr
    W zależności od wersji wizualizacji C++ i zainstalowanych aktualizacji mogą wystąpić różnice w bieżącym katalogu lub numerach wersji. Jeśli powyższe dane wyjściowe są podobne do tego, co widzisz, możesz przystąpić do kompilowania C lub C++ programów w wierszu polecenia.
 
    > [!NOTE]
-   > Jeśli wystąpi błąd, taki jak "CL", nie został rozpoznany jako polecenie wewnętrzne lub zewnętrzne, program wykonywalny lub plik wsadowy, "Błąd C1034 lub błąd LNK1104 podczas uruchamiania **CL** polecenia, nie używasz wiersza polecenia dla deweloperów lub coś jest niewłaściwe z instalacją wizualizacji C++. Należy rozwiązać ten problem, zanim będzie można kontynuować.
+   > Jeśli wystąpi błąd, taki jak "CL", nie jest rozpoznawany jako polecenie wewnętrzne lub zewnętrzne, program interoperacyjny lub plik wsadowy, "Błąd C1034 lub błąd LNK1104 podczas uruchamiania **CL** polecenia, nie używasz wiersza polecenia dewelopera lub coś jest niewłaściwe w przypadku instalacji wizualizacji C++. Należy rozwiązać ten problem, zanim będzie można kontynuować.
 
-   Jeśli nie możesz znaleźć skrótu do wiersza polecenia dla deweloperów lub jeśli zostanie wyświetlony komunikat o błędzie po wprowadzeniu `cl`, wówczas instalacja wizualizacji C++ może mieć problem. Spróbuj zainstalować ponownie składnik wizualny C++ w programie Visual Studio lub zainstalować narzędzia Microsoft Visual C++ Build Tools. Nie należy przechodzić do następnej sekcji do momentu tego działania. Aby uzyskać więcej informacji na temat instalowania i C++rozwiązywania problemów z wizualizacją, zobacz [Instalowanie programu Visual Studio](/visualstudio/install/install-visual-studio).
+   Jeśli nie możesz znaleźć skrótu do wiersza polecenia dla deweloperów lub jeśli zostanie wyświetlony komunikat o błędzie podczas wprowadzania `cl`, wówczas instalacja wizualizacji C++ może mieć problem. Spróbuj zainstalować ponownie składnik wizualny C++ w programie Visual Studio lub zainstalować narzędzia Microsoft Visual C++ Build Tools. Nie należy przechodzić do następnej sekcji do momentu tego działania. Aby uzyskać więcej informacji na temat instalowania i C++rozwiązywania problemów z wizualizacją, zobacz [Instalowanie programu Visual Studio](/visualstudio/install/install-visual-studio).
 
    > [!NOTE]
-   > W zależności od wersji systemu Windows na komputerze i konfiguracji zabezpieczeń systemu może być konieczne kliknięcie prawym przyciskiem myszy, aby otworzyć menu skrótów dla skrótu wiersza polecenia dla deweloperów, a następnie wybrać polecenie **Uruchom jako administrator** , aby pomyślnie skompilować i uruchomić Program tworzony przez użytkownika zgodnie z tym przewodnikiem.
+   > W zależności od wersji systemu Windows na komputerze i konfiguracji zabezpieczeń systemu może być konieczne kliknięcie prawym przyciskiem myszy, aby otworzyć menu skrótów dla skrótu wiersza polecenia dla deweloperów, a następnie wybrać polecenie **Uruchom jako administrator** , aby pomyślnie skompilować i uruchomić program tworzony w ramach tego przewodnika.
 
 ### <a name="create-a-visual-c-source-file-and-compile-it-on-the-command-line"></a>Utwórz plik źródłowy C++ Visual i skompiluj go w wierszu polecenia
 
@@ -172,6 +172,6 @@ Kompilator MSVC zawiera bibliotekę środowiska uruchomieniowego języka C (CRT)
 
 ## <a name="see-also"></a>Zobacz także
 
-[C++Dokumentacja języka](../cpp/cpp-language-reference.md)<br/>
+[Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
 [Projekty i systemy kompilacji](projects-and-build-systems-cpp.md)<br/>
 [Opcje kompilatora MSVC](reference/compiler-options.md)

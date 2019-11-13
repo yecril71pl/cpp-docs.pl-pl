@@ -1,31 +1,31 @@
 ---
-title: Kompilator ostrzeżenie (poziom 3) C4287
+title: Ostrzeżenie kompilatora (poziom 3) C4287
 ms.date: 11/04/2016
 f1_keywords:
 - C4287
 helpviewer_keywords:
 - C4287
 ms.assetid: 1bf3bff8-6402-4d06-95ba-431678a790a7
-ms.openlocfilehash: da051bb27ec877fd6347469c9f06b09bd4e0db32
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b37e0692a63f02dc96dec8717d4defd64d7183ac
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402102"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051674"
 ---
-# <a name="compiler-warning-level-3-c4287"></a>Kompilator ostrzeżenie (poziom 3) C4287
+# <a name="compiler-warning-level-3-c4287"></a>Ostrzeżenie kompilatora (poziom 3) C4287
 
-'operator': niezgodność stałej bez znaku/ujemnej
+"operator": niezgodność stałej ze znakiem/bez znaku
 
-Zmienna bez znaku został użyty w operacji z liczbą ujemną.
+Zmienna bez znaku została użyta w operacji z liczbą ujemną.
 
-To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+To ostrzeżenie jest domyślnie wyłączone. Aby uzyskać więcej informacji [, zobacz ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4287:
+Poniższy przykład generuje C4287:
 
-```
+```cpp
 // C4287.cpp
 // compile with: /W3
 #pragma warning(default : 4287)

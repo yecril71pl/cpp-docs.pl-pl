@@ -1,41 +1,41 @@
 ---
-title: Kompilator ostrzeżenie (poziom 2) C4146
+title: Ostrzeżenie kompilatora (poziom 2) C4146
 ms.date: 11/04/2016
 f1_keywords:
 - C4146
 helpviewer_keywords:
 - C4146
 ms.assetid: d6c31ab1-3120-40d5-8d80-32b5f7046e32
-ms.openlocfilehash: 8b3090f1bc3a64752ede4dab2b1e1b5cd800057d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d595befc80d954c8fb84f83ad6c4e0cb5f4fcf26
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349792"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052165"
 ---
-# <a name="compiler-warning-level-2-c4146"></a>Kompilator ostrzeżenie (poziom 2) C4146
+# <a name="compiler-warning-level-2-c4146"></a>Ostrzeżenie kompilatora (poziom 2) C4146
 
-Jednoargumentowy minus operator zastosowany do typu unsigned, wynik nadal unsigned
+jednoargumentowy operator minus zastosowany do typu bez znaku; wynik nadal jest niepodpisany
 
-Typy bez znaku może zawierać wartości tylko nieujemnej wartości, więc jednoargumentowego znaku minusa (negacja) nie ma zazwyczaj sensu w przypadku zastosowania do typ bez znaku. Wynik i argument są nieujemnej wartości.
+Typy bez znaku mogą zawierać tylko wartości nieujemne, więc jednoargumentowe minus (Negacja) nie ma na ogół sensu w przypadku zastosowania do typu bez znaku. Oba operandy i wynik są nieujemne.
 
-W praktyce dzieje się tak podczas programistę do wyrażenia wartości minimalnej liczbie całkowitej, która jest -2147483648. Nie można zapisać tej wartości jako -2147483648, ponieważ wyrażenie jest przetwarzany w dwóch etapach:
+Praktycznie, dzieje się tak, gdy programista próbuje wyrazić minimalną wartość całkowitą, czyli-2147483648. Ta wartość nie może być zapisywana jako-2147483648, ponieważ wyrażenie jest przetwarzane na dwóch etapach:
 
-1. Liczba 2147483648 jest oceniany. Ponieważ jest większa niż wartość maksymalna liczba całkowita 2147483647, nie jest typu 2147483648 [int](../../c-language/integer-types.md), ale `unsigned int`.
+1. Oceniana jest liczba 2147483648. Ponieważ jest większa niż maksymalna liczba całkowita 2147483647, typ 2147483648 nie jest liczbą [int](../../c-language/integer-types.md), ale `unsigned int`.
 
-1. Minus jednoargumentowy jest stosowany do wynik bez znaku, który również ma miejsce 2147483648 wartością.
+1. Jednoargumentowy znak minus jest stosowany do wartości z niepodpisanym wynikiem, który również ma wartość 2147483648.
 
-Bez znaku typu wyniku, może spowodować nieoczekiwane zachowanie. Jeśli zostanie użyty wynik porównania, a następnie niepodpisane porównania mogą być używane, na przykład, gdy jest to drugi operand `int`. To wyjaśnia, dlaczego poniższy program przykład drukuje tylko jeden wiersz.
+Niepodpisany typ wyniku może spowodować nieoczekiwane zachowanie. Jeśli wynik jest używany w porównaniu, można użyć niepodpisanego porównania, na przykład gdy inny operand jest `int`. To wyjaśnia, dlaczego Przykładowy program drukuje tylko jeden wiersz.
 
-Oczekiwano drugi wiersz `1 is greater than the most negative int`, nie jest drukowany, ponieważ `((unsigned int)1) > 2147483648` ma wartość false.
+Oczekiwany drugi wiersz, `1 is greater than the most negative int`, nie jest drukowany, ponieważ `((unsigned int)1) > 2147483648` ma wartość false.
 
-Możesz uniknąć C4146 przy użyciu INT_MIN z limits.h, która ma typ **podpisany int**.
+Możesz uniknąć C4146, korzystając z INT_MIN z limitów. h, który ma typ z **cyfrą int**.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4146:
+Poniższy przykład generuje C4146:
 
-```
+```cpp
 // C4146.cpp
 // compile with: /W2
 #include <stdio.h>

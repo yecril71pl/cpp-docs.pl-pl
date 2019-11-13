@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 2) C4250
+title: Ostrzeżenie kompilatora (poziom 2) C4250
 ms.date: 11/04/2016
 f1_keywords:
 - C4250
 helpviewer_keywords:
 - C4250
 ms.assetid: d47f7249-6b5a-414b-b2d4-56e5d246a782
-ms.openlocfilehash: 8baf3c03c87dc70a80b785d7f81cbee4e1d828f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03826f10659cbdf6035cd4dedebecca3e3302e3a
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349714"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052111"
 ---
-# <a name="compiler-warning-level-2-c4250"></a>Kompilator ostrzeżenie (poziom 2) C4250
+# <a name="compiler-warning-level-2-c4250"></a>Ostrzeżenie kompilatora (poziom 2) C4250
 
-'klasa1': dziedziczy "class2::member" za pośrednictwem pozycji dominującej
+"Class1": dziedziczy element "'klasa:: member" za pośrednictwem pozycji dominującej
 
-Co najmniej dwa elementy członkowskie mają taką samą nazwę. W `class2` jest dziedziczone, ponieważ jest on klasą bazową dla klas, które zawiera ten element członkowski.
+Co najmniej dwa składowe mają tę samą nazwę. Jeden w `class2` jest dziedziczony, ponieważ jest klasą bazową dla innych klas, które zawierały ten element członkowski.
 
-Aby pominąć C4250, należy użyć [ostrzeżenie](../../preprocessor/warning.md) pragmy.
+Aby pominąć C4250, użyj dyrektywy pragma [ostrzeżenia](../../preprocessor/warning.md) .
 
-Ponieważ wirtualnej klasy bazowej jest współużytkowana przez wiele klas pochodnych, nazwę w klasie pochodnej większą nazwę w klasie bazowej. Na przykład, biorąc pod uwagę następujące hierarchii klas, istnieją dwie definicje func dziedziczone w obrębie romb: wystąpienie vbc::func() za pośrednictwem słabych klasy i dominujący:: func() za pośrednictwem klasy dominującej. Niekwalifikowane wywołanie func() za pośrednictwem obiektu klasy romb zawsze wywołuje wystąpienie dominate:: func().  Gdyby słabe klasy wprowadzenie wystąpienie func() ani definicja będzie dominują i wywołanie zostanie oznaczony jako niejednoznaczny.
+Ponieważ wirtualna Klasa bazowa jest współdzielona przez wiele klas pochodnych, nazwa w klasie pochodnej dominuje nazwę w klasie bazowej. Na przykład, uwzględniając następującą hierarchię klas, istnieją dwie definicje funkcji Func dziedziczone w obrębie rombu: wystąpienie VBC:: Func () za pomocą klasy słabej oraz elementu dominującego:: Func () za pomocą klasy dominującej. Niekwalifikowane wywołanie funkcji Func () za pomocą obiektu klasy Diamond, zawsze wywołuje wystąpienie dominuje:: Func ().  Jeśli słaba Klasa miała wprowadzić wystąpienie funkcji Func (), żadna definicja nie zostanie użyta, a wywołanie zostanie oflagowane jako niejednoznaczne.
 
-```
+```cpp
 // C4250.cpp
 // compile with: /c /W2
 #include <stdio.h>
@@ -47,9 +47,9 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4250.
+Poniższy przykład generuje C4250.
 
-```
+```cpp
 // C4250_b.cpp
 // compile with: /W2 /EHsc
 #include <iostream>
@@ -80,9 +80,9 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie pokazano bardziej złożona sytuacja. Poniższy przykład spowoduje wygenerowanie C4250.
+Ten przykład pokazuje bardziej skomplikowaną sytuację. Poniższy przykład generuje C4250.
 
-```
+```cpp
 // C4250_c.cpp
 // compile with: /W2 /EHsc
 #include <iostream>

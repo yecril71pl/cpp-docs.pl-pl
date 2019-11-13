@@ -1,43 +1,43 @@
 ---
-title: C4191 (poziom 3) ostrzeżenia kompilatora
+title: Ostrzeżenie kompilatora (poziom 3) C4191
 ms.date: 11/04/2016
 f1_keywords:
 - C4191
 helpviewer_keywords:
 - C4191
 ms.assetid: 576d3bc6-95b7-448a-af31-5d798452df09
-ms.openlocfilehash: 72a485811647911207b6d048c686acdadd142b65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd0d7dc57c8d3c94a52f72b536657bb3ea1c6b3a
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402258"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051882"
 ---
-# <a name="compiler-warning-level-3-c4191"></a>C4191 (poziom 3) ostrzeżenia kompilatora
+# <a name="compiler-warning-level-3-c4191"></a>Ostrzeżenie kompilatora (poziom 3) C4191
 
-' operator/operacja': niebezpieczna konwersja z 'typ wyrażenia' na 'typ wymagany'
+"operator/Operation": niebezpieczna konwersja z typu wyrażenia na typ "Required"
 
 Kilka operacji obejmujących wskaźniki funkcji są uważane za niebezpieczne:
 
-- Typy funkcji przy użyciu różnych konwencji wywoływania.
+- Typy funkcji z różnymi konwencjami wywoływania.
 
-- Typy funkcji przy użyciu różnych konwencji zwracania.
+- Typy funkcji z różnymi konwencjami powrotu.
 
-- Argument lub zwracane typy o różnych rozmiarach, typ kategorii lub klasyfikacji.
+- Argumenty lub typy zwracane z różnymi rozmiarami, kategoriami typów lub klasyfikacjami.
 
-- Różne długości listy argumentów (na `__cdecl`tylko na rzutowanie z dłuższą listę do krótszej listy, nawet jeśli krótszy jest VARARG).
+- Różne długości list argumentów (na `__cdecl`, tylko na rzutach z większej listy do krótszej listy, nawet jeśli krótszy jest VarArgs).
 
-- Wskaźnik do danych (inne niż **void**<strong>\*</strong>) aliasem względem wskaźnika do funkcji.
+- Wskaźnik do danych (innych niż **void** <strong>\*</strong>) jest aliasem dla wskaźnika do działania.
 
-- Inne różnica typu, które byłyby błąd lub ostrzeżenie na `reinterpret_cast`.
+- Wszelkie inne różnice typu, które mogą spowodować błąd lub ostrzeżenie na `reinterpret_cast`.
 
-Wywołanie tej funkcji za pośrednictwem wynikowego wskaźnika może spowodować awarię programu.
+Wywołanie tej funkcji za pomocą wskaźnika wynikowego może spowodować awarię programu.
 
-To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+To ostrzeżenie jest domyślnie wyłączone. Aby uzyskać więcej informacji [, zobacz ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
-Poniższy przykład spowoduje wygenerowanie C4191:
+Poniższy przykład generuje C4191:
 
-```
+```cpp
 // C4191.cpp
 // compile with: /W3 /clr
 #pragma warning(default: 4191)

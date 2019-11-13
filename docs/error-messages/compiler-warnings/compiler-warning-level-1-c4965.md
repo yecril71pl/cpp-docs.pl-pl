@@ -1,31 +1,31 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4965
+title: Ostrzeżenie kompilatora (poziom 1) C4965
 ms.date: 11/04/2016
 f1_keywords:
 - C4965
 helpviewer_keywords:
 - C4965
 ms.assetid: 47f3f6dc-459b-4a25-9947-f394c8966cb5
-ms.openlocfilehash: 2e93fdeba7f9b5b10340ccd1920807a3fcb345a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac1ffc1626a8b72fd7c9026afb6c6a54bace3750
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383857"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052233"
 ---
-# <a name="compiler-warning-level-1-c4965"></a>Kompilator ostrzeżenie (poziom 1) C4965
+# <a name="compiler-warning-level-1-c4965"></a>Ostrzeżenie kompilatora (poziom 1) C4965
 
-niejawne rzutowanie liczby całkowitej 0; Użyj nullptr lub jawnego rzutowania
+niejawne pole z liczbą całkowitą 0; Użyj nullptr lub jawnego rzutowania
 
-Visual C++ funkcje niejawna konwersja boxing typów wartości. Instrukcji, która spowodowała przypisanie wartości null, przy użyciu zarządzanych rozszerzeń języka C++ teraz staje się przypisania do spakowanej int.
+Funkcje C++ wizualne niejawnego pakowania typów wartości. Instrukcja, która spowodowała przypisanie wartości null przy użyciu rozszerzeń zarządzanych dla C++ teraz, zostaje przypisana do opakowanej int.
 
-Aby uzyskać więcej informacji, zobacz [pakowania](../../extensions/boxing-cpp-component-extensions.md).
+Aby uzyskać więcej informacji, zobacz [opakowanie](../../extensions/boxing-cpp-component-extensions.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4965.
+Poniższy przykład generuje C4965.
 
-```
+```cpp
 // C4965.cpp
 // compile with: /clr /W1
 int main() {

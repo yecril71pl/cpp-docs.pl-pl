@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4616
+title: Ostrzeżenie kompilatora (poziom 1) C4616
 ms.date: 11/04/2016
 f1_keywords:
 - C4616
 helpviewer_keywords:
 - C4616
 ms.assetid: 71e15265-c5bc-42ce-a6a9-4879892472b1
-ms.openlocfilehash: d63e1abffce617a48ac1a5cd8c61feba941b31ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c13eb28981779e2d089575660d8968c54e4e75f
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221361"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051478"
 ---
-# <a name="compiler-warning-level-1-c4616"></a>Kompilator ostrzeżenie (poziom 1) C4616
+# <a name="compiler-warning-level-1-c4616"></a>Ostrzeżenie kompilatora (poziom 1) C4616
 
-\#warning elementu pragma: numeru ostrzeżenia 'numer' nie jest prawidłowym ostrzeżeniem kompilatora
+Ostrzeżenie \#pragma: ostrzeżenie numer "number" nie jest prawidłowym ostrzeżeniem kompilatora
 
-Podany numer ostrzeżenia [ostrzeżenie](../../preprocessor/warning.md) pragma nie może zostać przypisany. Pragma została zignorowana.
+Nie można ponownie przypisać numeru ostrzegawczego określonego w pragmie [ostrzeżenia](../../preprocessor/warning.md) . Pragma została zignorowana.
 
-Poniższy przykład spowoduje wygenerowanie C4616:
+Poniższy przykład generuje C4616:
 
-```
+```cpp
 // C4616.cpp
 // compile with: /W1 /c
 #pragma warning( disable : 0 )   // C4616

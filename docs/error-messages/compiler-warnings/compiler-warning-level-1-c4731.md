@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4731
+title: Ostrzeżenie kompilatora (poziom 1) C4731
 ms.date: 11/04/2016
 f1_keywords:
 - C4731
 helpviewer_keywords:
 - C4731
 ms.assetid: 5658c24c-3e6f-4505-835b-1fb92d47cab0
-ms.openlocfilehash: af091d1d35fff955afcc5af3da48b80416e79f36
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2591756dfaa8887affbe4e470f1c98738b6b680
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385436"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052429"
 ---
-# <a name="compiler-warning-level-1-c4731"></a>Kompilator ostrzeżenie (poziom 1) C4731
+# <a name="compiler-warning-level-1-c4731"></a>Ostrzeżenie kompilatora (poziom 1) C4731
 
-"wskaźnik": rejestr wskaźnika "register" zmodyfikowany przez wbudowany kod asemblera ramki
+"wskaźnik": Rejestr wskaźnika ramki "Register" został zmodyfikowany przez wbudowany kod asemblera
 
-Rejestr wskaźnika ramki zostało zmodyfikowane. Należy zapisać i przywrócić rejestr w tekście zestawu bloku lub ramki zmiennej (lokalnego lub parametru, w zależności od rejestru modyfikacji) lub Twój kod może nie działać prawidłowo.
+Zmodyfikowano rejestr wskaźników klatki. Musisz zapisać i przywrócić rejestr w bloku zestawu wbudowanego lub zmiennej ramki (Local lub Parameter, w zależności od zmodyfikowanego rejestru) lub kod może nie funkcjonować prawidłowo.
 
-Poniższy przykład spowoduje wygenerowanie C4731:
+Poniższy przykład generuje C4731:
 
-```
+```cpp
 // C4731.cpp
 // compile with: /W1 /LD
 // processor: x86
@@ -39,4 +39,4 @@ void bad(int p) {
 }
 ```
 
-EBP jest wskaźnik ramki (niedopuszczalne FPO) i jest modyfikowana. Gdy `p` jest późniejsza odwołania, jest ona przywoływana względem `EBP`. Ale `EBP` został zastąpiony przez kod, dzięki czemu program nie będzie działać prawidłowo i może nawet błędów.
+EBP jest wskaźnikiem ramki (FPO jest niedozwolony) i jest modyfikowany. Gdy `p` jest przywoływany, odwołuje się względem `EBP`. Ale `EBP` został nadpisany przez kod, więc program nie będzie działał prawidłowo i może nawet ulec awarii.

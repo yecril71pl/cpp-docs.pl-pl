@@ -1,25 +1,25 @@
 ---
-title: Kompilator ostrzeżenie (poziom 3) C4073
+title: Ostrzeżenie kompilatora (poziom 3) C4073
 ms.date: 11/04/2016
 f1_keywords:
 - C4073
 helpviewer_keywords:
 - C4073
 ms.assetid: 50081a6e-6acd-45ff-8484-9b1ea926cc5c
-ms.openlocfilehash: db39f76f9bfdd46c300ea6e3738a63b636fe0a03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af9f8fc7323fab8c737e7a63cea20809c9182ad9
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402336"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051912"
 ---
-# <a name="compiler-warning-level-3-c4073"></a>Kompilator ostrzeżenie (poziom 3) C4073
+# <a name="compiler-warning-level-3-c4073"></a>Ostrzeżenie kompilatora (poziom 3) C4073
 
-Inicjatory umieszczono w obszarze inicjalizacyjnym biblioteki
+inicjatory umieszczane w obszarze inicjalizacji biblioteki
 
-Tylko deweloperów bibliotek innych firm należy używać obszarze inicjalizacyjnym biblioteki, która jest określona przez [#pragma init_seg](../../preprocessor/init-seg.md). Poniższy przykład spowoduje wygenerowanie C4073:
+Tylko deweloperzy biblioteki innych firm powinni korzystać z obszaru inicjalizacji biblioteki, który jest określony przez [#pragma init_seg](../../preprocessor/init-seg.md). Poniższy przykład generuje C4073:
 
-```
+```cpp
 // C4073.cpp
 // compile with: /W3
 #pragma init_seg(lib)   // C4073

@@ -2,7 +2,7 @@
 title: Korzystanie z zestawu C++ narzędzi firmy Microsoft z poziomu wiersza polecenia
 description: Użyj programu Microsoft C++ Compiler łańcucha narzędzi (MSVC) z wiersza polecenia poza ŚRODOWISKiem IDE programu Visual Studio.
 ms.custom: conceptual
-ms.date: 10/22/2019
+ms.date: 11/12/2019
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -10,16 +10,20 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: 7aa8673b7bb29591c7cf1c26b96b48261db9fee4
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: ec30cba8e119f96efc5bca156fa565db77904520
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811160"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051494"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>Korzystanie z zestawu C++ narzędzi firmy Microsoft z poziomu wiersza polecenia
 
-Możesz tworzyć C i C++ aplikacje w wierszu polecenia, korzystając z narzędzi dostępnych w programie Visual Studio. Zestaw narzędzi C++ kompilatora firmy Microsoft (MSVC) jest również pobierany jako pakiet autonomiczny ze strony [plików do pobrania programu Visual Studio](https://visualstudio.microsoft.com/downloads/) . Jest częścią pakietu **narzędzi do kompilacji dla programu Visual Studio** . Możesz wybrać opcję pobrania tylko tych narzędzi, które są potrzebne C++ do programowania.
+Możesz tworzyć C i C++ aplikacje w wierszu polecenia, korzystając z narzędzi dostępnych w programie Visual Studio. Zestaw narzędzi C++ kompilatora firmy Microsoft (MSVC) jest również pobierany jako pakiet autonomiczny, który nie zawiera środowiska IDE programu Visual Studio.
+
+## <a name="download-and-install-the-tools"></a>Pobieranie i Instalowanie narzędzi
+
+Jeśli zainstalowano program Visual Studio i C++ obciążenie, masz wszystkie narzędzia wiersza polecenia. Aby uzyskać informacje na temat instalowania C++ i programu Visual Studio, [Zobacz C++ Install Support in Visual Studio](vscpp-step-0-installation.md). Jeśli potrzebujesz tylko zestawu narzędzi wiersza polecenia, Pobierz [Narzędzia do kompilacji dla programu Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019). Po uruchomieniu pobranego pliku wykonywalnego program aktualizuje i uruchamia Instalator programu Visual Studio. Aby zainstalować tylko potrzebne narzędzia do C++ tworzenia, wybierz obciążenie  **C++ narzędzi kompilacji** . Można wybrać opcjonalne biblioteki i zestawy narzędzi do uwzględnienia w obszarze **szczegóły instalacji**. Aby skompilować kod przy użyciu zestawów narzędzi programu Visual Studio 2015 lub 2017, wybierz opcjonalne narzędzia do kompilacji MSVC wersji 140 lub MSVC najnowsze 141. Po spełnieniu wybranych opcji wybierz pozycję **Zainstaluj**.
 
 ## <a name="how-to-use-the-command-line-tools"></a>Jak używać narzędzi wiersza polecenia
 
@@ -123,7 +127,7 @@ Gdy jest używany bez argumentów, vcvarsall. bat konfiguruje zmienne środowisk
 
 ### <a name="vcvarsall-syntax"></a>Składnia vcvarsall
 
-> **vcvarsall. bat** [*Architektura*] [*platform_type*] [*winsdk_version*] [ **-vcvars_ver =** _vcversion_]
+> **vcvarsall. bat** [*architektura*] [*platform_type*] [*winsdk_version*] [ **-vcvars_ver =** _vcversion_]
 
 *Będąc*<br/>
 Ten opcjonalny argument określa architekturę hosta i docelowy do użycia. Jeśli *Architektura* nie jest określona, używane jest domyślne środowisko kompilacji. Te argumenty są obsługiwane:

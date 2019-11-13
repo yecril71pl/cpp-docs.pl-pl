@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4621
+title: Ostrzeżenie kompilatora (poziom 1) C4621
 ms.date: 11/04/2016
 f1_keywords:
 - C4621
 helpviewer_keywords:
 - C4621
 ms.assetid: 40931bd9-cb89-497e-86f0-cec9f016c63c
-ms.openlocfilehash: d35c4143d5b90c7a6a49337931dad4ba73804f20
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dd4defe18a94f65e265d02f6c26c715667cd696
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221368"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052591"
 ---
-# <a name="compiler-warning-level-1-c4621"></a>Kompilator ostrzeżenie (poziom 1) C4621
+# <a name="compiler-warning-level-1-c4621"></a>Ostrzeżenie kompilatora (poziom 1) C4621
 
-nie przyrostkowej formy "operator--" znaleziono dla typu "type" forma przedrostkowa
+nie znaleziono przyrostkowej formy "operator--" dla typu "Type", przy użyciu formy prefiksu
 
-Nie było żadnych przyrostkowego operatora dekrementacyjnego, który jest zdefiniowany dla danego typu. Kompilator używał operatora prefiksowego przeciążona.
+Dla danego typu nie zdefiniowano operatora zmniejszania przyrostu. Kompilator użył operatora przeciążonego prefiksu.
 
-Można uniknąć tego ostrzeżenia, definiując przyrostkowe `--` operatora. Tworzenie wersji dwuargumentową `--` operatora, jak pokazano poniżej:
+To ostrzeżenie można uniknąć, definiując Przyrostkowy operator `--`. Utwórz dwuargumentową wersję operatora `--`, jak pokazano poniżej:
 
-```
+```cpp
 // C4621.cpp
 // compile with: /W1
 class A

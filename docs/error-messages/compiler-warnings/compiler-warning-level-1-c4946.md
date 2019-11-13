@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4946
+title: Ostrzeżenie kompilatora (poziom 1) C4946
 ms.date: 11/04/2016
 f1_keywords:
 - C4946
 helpviewer_keywords:
 - C4946
 ms.assetid: b85cbef0-e053-4de6-9b14-7b0f82d40495
-ms.openlocfilehash: f215c621486bf223d8f6c90b0a4f4ae119ad4b1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 238e842202bfde05f41d5ab7bc4e3eb2b8b63735
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280574"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74050204"
 ---
-# <a name="compiler-warning-level-1-c4946"></a>Kompilator ostrzeżenie (poziom 1) C4946
+# <a name="compiler-warning-level-1-c4946"></a>Ostrzeżenie kompilatora (poziom 1) C4946
 
 reinterpret_cast używane między pokrewnymi klasami: 'klasa1' i 'klasa2'
 
-Nie używaj [reinterpret_cast](../../cpp/reinterpret-cast-operator.md) do rzutowania między typami powiązane. Użyj [static_cast](../../cpp/static-cast-operator.md) zamiast tego lub typach polimorficznych, użyj [dynamic_cast](../../cpp/dynamic-cast-operator.md).
+Nie należy używać [reinterpret_cast](../../cpp/reinterpret-cast-operator.md) do rzutowania między powiązanymi typami. Zamiast tego użyj [static_cast](../../cpp/static-cast-operator.md) lub dla typów polimorficznych Użyj [dynamic_cast](../../cpp/dynamic-cast-operator.md).
 
-Domyślnie to ostrzeżenie jest wyłączone. Aby uzyskać więcej informacji, zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+Domyślnie to ostrzeżenie jest wyłączone. Aby uzyskać więcej informacji, zobacz [ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
-Poniższy kod generuje C4946:
+Poniższy przykład kodu generuje C4946:
 
-```
+```cpp
 // C4946.cpp
 // compile with: /W1
 #pragma warning (default : 4946)

@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 3) C4102
+title: Ostrzeżenie kompilatora (poziom 3) C4102
 ms.date: 11/04/2016
 f1_keywords:
 - C4102
 helpviewer_keywords:
 - C4102
 ms.assetid: 349f308a-daf3-48c6-bd53-6c38b73f8880
-ms.openlocfilehash: 9e5b4850c82083e19a0fe859b1021b5beecf1a1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a0c5389a5f8f6f2dc885fccecf34313308bf769
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402310"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051891"
 ---
-# <a name="compiler-warning-level-3-c4102"></a>Kompilator ostrzeżenie (poziom 3) C4102
+# <a name="compiler-warning-level-3-c4102"></a>Ostrzeżenie kompilatora (poziom 3) C4102
 
-"etykieta": Etykieta bez odwołań
+"label": etykieta, do której nie ma odwołania
 
-Etykieta jest zdefiniowany, ale nigdy nie jest przywoływany. Kompilator ignoruje etykiety.
+Etykieta jest zdefiniowana, ale nigdy nie jest przywoływana. Kompilator ignoruje etykietę.
 
-Poniższy przykład spowoduje wygenerowanie C4102:
+Poniższy przykład generuje C4102:
 
-```
+```cpp
 // C4102.cpp
 // compile with: /W3
 int main() {

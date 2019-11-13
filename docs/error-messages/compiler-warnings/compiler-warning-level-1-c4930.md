@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4930
+title: Ostrzeżenie kompilatora (poziom 1) C4930
 ms.date: 11/04/2016
 f1_keywords:
 - C4930
 helpviewer_keywords:
 - C4930
 ms.assetid: 89a206c9-c536-4186-8e81-1cde3e7f4f5b
-ms.openlocfilehash: 15cd1ed61c747e2c9168b9fc0fee03dca8403a24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b21cc6364692eb2f3b1d56b03d175df1f2ad7ee8
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242789"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74050284"
 ---
-# <a name="compiler-warning-level-1-c4930"></a>Kompilator ostrzeżenie (poziom 1) C4930
+# <a name="compiler-warning-level-1-c4930"></a>Ostrzeżenie kompilatora (poziom 1) C4930
 
-"prototyp": prototypowana funkcja nie wywołana (czy definicja zmiennej była przeznaczona?)
+"prototyp": funkcja prototypowa nie została wywołana (czy definicja zmiennej była zamierzona?)
 
-Kompilator wykrył prototypu funkcji nieużywane. Jeśli prototyp była zamierzona jako deklaracja zmiennej, Usuń nawiasy otwarte i zamknięte.
+Kompilator wykrył nieużywany prototyp funkcji. Jeśli prototyp został zamierzony jako deklaracja zmiennej, Usuń nawiasy otwierające/zamykające.
 
-Poniższy przykład spowoduje wygenerowanie C4930:
+Poniższy przykład generuje C4930:
 
-```
+```cpp
 // C4930.cpp
 // compile with: /W1
 class Lock {
@@ -39,11 +39,11 @@ int main() {
 }
 ```
 
-C4930 może również wystąpić, gdy kompilator nie rozróżnia deklarację prototyp funkcji i wywołanie funkcji.
+C4930 może również wystąpić, gdy kompilator nie może rozróżnić deklaracji prototypu funkcji i wywołania funkcji.
 
-Poniższy przykład spowoduje wygenerowanie C4930:
+Poniższy przykład generuje C4930:
 
-```
+```cpp
 // C4930b.cpp
 // compile with: /EHsc /W1
 
@@ -112,4 +112,4 @@ int main()
 }
 ```
 
-W powyższym przykładzie wynik metody, która nie przyjmuje argumentów, zerowego jest przekazywany jako argument do konstruktora obiektu w zmiennej bez nazwy klasy lokalnej. Wywołanie może być rozróżniane przy nazwy zmiennej lokalnej lub poprzedzania ich wywołania metody, za pomocą wystąpienia obiektu wraz z odpowiednich operatorów wskaźnika do elementu członkowskiego.
+W powyższym przykładzie wynik metody, która przyjmuje zero argumentów jest przenoszona jako argument do konstruktora nienazwanej zmiennej klasy lokalnej. Wywołanie można rozróżnić przy użyciu nazwy zmiennej lokalnej lub prefiksu wywołania metody z wystąpieniem obiektu wraz z odpowiednim operatorem do składowej.

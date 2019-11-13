@@ -1,33 +1,33 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4691
+title: Ostrzeżenie kompilatora (poziom 1) C4691
 ms.date: 11/04/2016
 f1_keywords:
 - C4691
 helpviewer_keywords:
 - C4691
 ms.assetid: 722133d9-87f6-46c1-9e86-9825453d6999
-ms.openlocfilehash: c194e19c8766b67eb7deef32e7228564cda5f1e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6124171bb5f257dac1dd972f7943d001fb54c9ca
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406382"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051363"
 ---
-# <a name="compiler-warning-level-1-c4691"></a>Kompilator ostrzeżenie (poziom 1) C4691
+# <a name="compiler-warning-level-1-c4691"></a>Ostrzeżenie kompilatora (poziom 1) C4691
 
-"type": oczekiwano typu odwołania w zestawie nieużywanej 'Plik' typ zdefiniowany w bieżącej jednostce tłumaczenia, zamiast tego użyć
+"Type": Oczekiwano typu odwołania w nieużywanym zestawie "File", w zamian użyto typu zdefiniowanego w bieżącej jednostce tłumaczenia
 
-Nie odwołuje się plik metadanych zawierający oryginalnej definicji typu, a kompilator używa definicję typu lokalnego.
+Nie można odwołać się do pliku metadanych zawierającego pierwotną definicję typu, a kompilator używa definicji typu lokalnego.
 
-W przypadku, gdy są ponownie skompilować *pliku*, mogą być ignorowane lub wyłączone z pragmą C4691 [ostrzeżenie](../../preprocessor/warning.md).  Oznacza to jeśli plik, który tworzysz jest taki sam jak plik, w których kompilator spodziewa się znaleźć definicję typu, możesz zignorować C4691.
+W przypadku ponownego kompilowania *pliku*C4691 można zignorować lub wyłączyć za pomocą [ostrzeżenia](../../preprocessor/warning.md)pragma.  Oznacza to, że jeśli tworzony plik jest taki sam jak plik, którego kompilator oczekuje na znalezienie definicji typu, można zignorować C4691.
 
-Jednak może wystąpić nieoczekiwane zachowanie, jeśli kompilator używa definicję, która nie pochodzi z tego samego zestawu, który odwołuje się do metadanych; Typy CLR są wpisane, nie tylko przez nazwę typu, ale również przez zestaw.  Oznacza to z typem Z z zestawu z.dll różni się od typu Z z y.dll zestawu.
+Jednak nieoczekiwane zachowanie może wystąpić, jeśli kompilator używa definicji, która nie jest z tego samego zestawu, do którego odwołuje się metadane; Typy CLR są wpisywane nie tylko nazwami typu, ale również przez zestaw.  Oznacza to, że typ z z zestawu z. dll różni się od typu z zestawu y. dll.
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie zawiera oryginalnej definicji typu.
+Ten przykład zawiera pierwotną definicję typu.
 
-```
+```cpp
 // C4691_a.cpp
 // compile with: /clr /LD /W1
 public ref class Original_Type {};
@@ -35,9 +35,9 @@ public ref class Original_Type {};
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie przedstawiono C4691_a.dll i deklaruje pole o typie Original_Type.
+Ten przykład odwołuje się C4691_a. dll i deklaruje pole typu Original_Type.
 
-```
+```cpp
 // C4691_b.cpp
 // compile with: /clr /LD
 #using "C4691_a.dll"
@@ -49,11 +49,11 @@ public:
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4691.  Zwróć uwagę, w tym przykładzie zawiera definicję dla Original_Type i nie odwołuje się C4691a.dll.
+Poniższy przykład generuje C4691.  Zwróć uwagę, że ten przykład zawiera definicję Original_Type i nie odwołuje się do C4691a. dll.
 
-Aby rozwiązać problem, Przywołaj plik metadanych zawierający oryginalnej definicji typu i usuwanie lokalnej deklaracji i definicji.
+Aby rozwiązać ten problem, należy odwołać się do pliku metadanych, który zawiera pierwotną definicję typu, i usunąć lokalną deklarację i definicję.
 
-```
+```cpp
 // C4691_c.cpp
 // compile with: /clr /LD /W1
 // C4691 expected

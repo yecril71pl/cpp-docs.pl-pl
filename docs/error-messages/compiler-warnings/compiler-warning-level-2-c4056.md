@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 2) C4056
+title: Ostrzeżenie kompilatora (poziom 2) C4056
 ms.date: 11/04/2016
 f1_keywords:
 - C4056
 helpviewer_keywords:
 - C4056
 ms.assetid: a3c3a9b8-ec30-452d-96cb-3694adcce789
-ms.openlocfilehash: 59c66f2f7dcbd1e20463df613b1b7deae6a1c349
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20e7c2693c14c0ea05cc6f07f8dad4ce76c1ef5e
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349870"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052193"
 ---
-# <a name="compiler-warning-level-2-c4056"></a>Kompilator ostrzeżenie (poziom 2) C4056
+# <a name="compiler-warning-level-2-c4056"></a>Ostrzeżenie kompilatora (poziom 2) C4056
 
-przepełnienie w zmeinnoprzecinkowych punktach arytmetycznych stałej
+przepełnienie w zmiennoprzecinkowej stałej arytmetycznej
 
-Zmiennoprzecinkowej stałej arytmetycznej generuje wyniki, która przekracza maksymalną dozwoloną wartość.
+Stała zmiennoprzecinkowa arytmetyczna generuje wynik, który przekracza maksymalną dozwoloną wartość.
 
-To ostrzeżenie może być spowodowany optymalizacje kompilatora wykonywane podczas arytmetyce stałej. Można bezpiecznie zignorować to ostrzeżenie, jeśli jego zniknąć, gdy wyłączenie funkcji optymalizacji ([/Od](../../build/reference/od-disable-debug.md)).
+To ostrzeżenie może być spowodowane optymalizacją kompilatora wykonywaną podczas arytmetycznej stałej. Możesz bezpiecznie zignorować to ostrzeżenie, Jeśli wyłączysz opcję Optymalizacja ([/od](../../build/reference/od-disable-debug.md)).
 
-Poniższy przykład spowoduje wygenerowanie C4056:
+Poniższy przykład generuje C4056:
 
-```
+```cpp
 // C4056.cpp
 // compile with: /W2 /LD
 #pragma warning (default : 4056)

@@ -1,33 +1,33 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4742
+title: Ostrzeżenie kompilatora (poziom 1) C4742
 ms.date: 11/04/2016
 f1_keywords:
 - C4742
 helpviewer_keywords:
 - C4742
 ms.assetid: e520881d-1eeb-48b1-9df0-8017ee8ba076
-ms.openlocfilehash: 00ac67fec3aafa5a259b5222bd6bb8654210fa61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11663a9b8672e2f91feb59e275181dbe645484e9
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390428"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051310"
 ---
-# <a name="compiler-warning-level-1-c4742"></a>Kompilator ostrzeżenie (poziom 1) C4742
+# <a name="compiler-warning-level-1-c4742"></a>Ostrzeżenie kompilatora (poziom 1) C4742
 
-"var" ma inne wyrównanie w 'plik1' i 'plik2': i numer
+element "var" ma inne wyrównanie w "plik1" i "plik2": Number i Number
 
-Zewnętrzne zmiennej, która została lub odwołuje się zdefiniowane w dwóch plikach ma inne wyrównanie w tych plikach. To ostrzeżenie jest emitowane, gdy kompilator wykryje, że `__alignof` dla zmiennej w *plik1* różni się od `__alignof` dla zmiennej w *plik2*. Może to być spowodowane przy użyciu niezgodne typy podczas deklarowania zmiennej w różnych plików lub przy użyciu niezgodny `#pragma pack` w różnych plikach.
+Zmienna zewnętrzna, do której odwołuje się lub została zdefiniowana w dwóch plikach, ma inne wyrównanie w tych plikach. To ostrzeżenie jest emitowane po znalezieniu przez kompilator `__alignof` dla zmiennej w *plik1* różni się od `__alignof` dla zmiennej w *plik2*. Może to być spowodowane użyciem niezgodnych typów podczas deklarowania zmiennej w różnych plikach lub przy użyciu `#pragma pack` niezgodnych z innymi plikami.
 
-Aby rozwiązać to ostrzeżenie, użyj jednej definicji typu albo używać różnych nazw zmiennych.
+Aby rozwiązać to ostrzeżenie, należy użyć tej samej definicji typu lub użyć różnych nazw dla zmiennych.
 
-Aby uzyskać więcej informacji, zobacz [pakiet](../../preprocessor/pack.md) i [__alignof Operator](../../cpp/alignof-operator.md).
+Aby uzyskać więcej informacji, zobacz [pakiet](../../preprocessor/pack.md) i [operator __alignof](../../cpp/alignof-operator.md).
 
 ## <a name="example"></a>Przykład
 
 Jest to pierwszy plik, który definiuje typ.
 
-```
+```c
 // C4742a.c
 // compile with: /c
 struct X {
@@ -37,9 +37,9 @@ struct X {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4742.
+Poniższy przykład generuje C4742.
 
-```
+```c
 // C4742b.c
 // compile with: C4742a.c /W1 /GL
 // C4742 expected

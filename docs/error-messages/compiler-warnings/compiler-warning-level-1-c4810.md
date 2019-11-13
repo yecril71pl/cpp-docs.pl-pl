@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4810
+title: Ostrzeżenie kompilatora (poziom 1) C4810
 ms.date: 11/04/2016
 f1_keywords:
 - C4810
 helpviewer_keywords:
 - C4810
 ms.assetid: 39e2cae0-9c1c-4ac1-aaa0-5f661d06085b
-ms.openlocfilehash: 4701ac40d436a9f5511f2c7cec86e8183ec2f837
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1f62b744547dc91923b397f3715c09659433a05
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406304"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052330"
 ---
-# <a name="compiler-warning-level-1-c4810"></a>Kompilator ostrzeżenie (poziom 1) C4810
+# <a name="compiler-warning-level-1-c4810"></a>Ostrzeżenie kompilatora (poziom 1) C4810
 
-Wartość dyrektywy pragma pack(show) == n
+wartość dyrektywy pragma Pack (show) = = n
 
-To ostrzeżenie zostanie wyświetlone, gdy używasz **Pokaż** opcji [pakiet](../../preprocessor/pack.md) pragmy. *n* czy aktualna wartość pakietu.
+To ostrzeżenie jest generowane, gdy używana jest opcja **Pokaż** dyrektywy pragma [pakietu](../../preprocessor/pack.md) . *n* to bieżąca wartość pakietu.
 
-Na przykład poniższy kod przedstawia, jak ostrzeżenie C4810 współpracuje z pack pragma:
+Na przykład poniższy kod pokazuje, jak działa ostrzeżenie C4810 z dyrektywy pragma Pack:
 
-```
+```cpp
 // C4810.cpp
 // compile with: /W1 /LD
 // C4810 expected

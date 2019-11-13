@@ -1,25 +1,25 @@
 ---
-title: Kompilator ostrzeżenie (poziom 3) C4101
+title: Ostrzeżenie kompilatora (poziom 3) C4101
 ms.date: 11/04/2016
 f1_keywords:
 - C4101
 helpviewer_keywords:
 - C4101
 ms.assetid: d98563cd-9dce-4aae-8f12-bd552a4ea677
-ms.openlocfilehash: d1109a32e754a6055e5e1d90632ad85332d832f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5effdbb4c7e83999655641a248c389c7c4d260d0
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402323"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051906"
 ---
-# <a name="compiler-warning-level-3-c4101"></a>Kompilator ostrzeżenie (poziom 3) C4101
+# <a name="compiler-warning-level-3-c4101"></a>Ostrzeżenie kompilatora (poziom 3) C4101
 
-'Identyfikator': nieużywanej zmienna lokalna
+"Identyfikator": niereferencyjna zmienna lokalna
 
-Zmienna lokalna nigdy nie jest używany. To ostrzeżenie wystąpi w oczywisty sytuacji:
+Zmienna lokalna nie jest nigdy używana. To ostrzeżenie będzie miało miejsce w oczywistej sytuacji:
 
-```
+```cpp
 // C4101a.cpp
 // compile with: /W3
 int main() {
@@ -27,9 +27,9 @@ int i;   // C4101
 }
 ```
 
-Jednak to ostrzeżenie wystąpi również podczas wywoływania **statyczne** funkcja elementu członkowskiego przez wystąpienie klasy:
+Jednak to ostrzeżenie również występuje podczas wywoływania **statycznej** funkcji składowej za pomocą wystąpienia klasy:
 
-```
+```cpp
 // C4101b.cpp
 // compile with:  /W3
 struct S {
@@ -46,10 +46,10 @@ int main() {
 }
 ```
 
-W takiej sytuacji, kompilator używa informacji o `si` dostęp do **statyczne** funkcji, ale wystąpienia klasy nie jest potrzebna do wywołania **statyczne** funkcji; dlatego ostrzeżenia. Aby rozwiązać tego ostrzeżenia, można wykonać następujące akcje:
+W tej sytuacji kompilator używa informacji o `si`, aby uzyskać dostęp do funkcji **statycznej** , ale wystąpienie klasy nie jest konieczne do wywołania funkcji **statycznej** ; w związku z tym ostrzeżeniem. Aby rozwiązać ten problem, możesz:
 
-- Dodaj Konstruktor, w którym kompilator użyje wystąpienia `si` w wywołaniu `func`.
+- Dodaj Konstruktor, w którym kompilator będzie używać wystąpienia `si` w wywołaniu `func`.
 
-- Usuń **statyczne** — słowo kluczowe w definicji `func`.
+- Usuń słowo kluczowe **static** z definicji `func`.
 
-- Wywołaj **statyczne** funkcji jawnie: `int y = S::func();`.
+- Jawnie wywołaj funkcję **statyczną** : `int y = S::func();`.

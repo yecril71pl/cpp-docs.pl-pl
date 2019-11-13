@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4812
+title: Ostrzeżenie kompilatora (poziom 1) C4812
 ms.date: 11/04/2016
 f1_keywords:
 - C4812
 helpviewer_keywords:
 - C4812
 ms.assetid: a7f5721f-2019-44de-ad62-ed30bac8b1f3
-ms.openlocfilehash: 6ba32bf3cad905d686eae78fbfbc198e911e91c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 420c44359b9e92cf8e77070bd3a270f992722d48
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406265"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051283"
 ---
-# <a name="compiler-warning-level-1-c4812"></a>Kompilator ostrzeżenie (poziom 1) C4812
+# <a name="compiler-warning-level-1-c4812"></a>Ostrzeżenie kompilatora (poziom 1) C4812
 
-przestarzała deklaracja stylu: zamiast tego użyj "new_syntax"
+przestarzała deklaracja stylu: zamiast niej użyj "new_syntax"
 
-W bieżącej wersji programu Visual C++ specjalizacji jawny Konstruktor jest nadal obsługiwane, ale nie mogą być obsługiwane w przyszłych wydaniach.
+W bieżącej wersji wizualizacji C++Jawna specjalizacja konstruktora jest nadal obsługiwana, ale może nie być obsługiwana w przyszłych wydaniach.
 
-Poniższy przykład spowoduje wygenerowanie C4812:
+Poniższy przykład generuje C4812:
 
-```
+```cpp
 // C4812.cpp
 // compile with: /W1 /c
 template <class T>

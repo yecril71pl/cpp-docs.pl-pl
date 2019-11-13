@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4739
+title: Ostrzeżenie kompilatora (poziom 1) C4739
 ms.date: 11/04/2016
 f1_keywords:
 - C4739
 helpviewer_keywords:
 - C4739
 ms.assetid: 600873b3-7c85-4cd4-944e-cd8e01bfcbb0
-ms.openlocfilehash: 4c48ad9349361324c18ec790c51d1095cce104e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df8f3bcf6cfcc9feb2a400526285ccd9cb0396e4
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280441"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052407"
 ---
-# <a name="compiler-warning-level-1-c4739"></a>Kompilator ostrzeżenie (poziom 1) C4739
+# <a name="compiler-warning-level-1-c4739"></a>Ostrzeżenie kompilatora (poziom 1) C4739
 
-Odwołanie do zmiennej "var" przekracza jego miejsce do magazynowania
+odwołanie do zmiennej "var" przekracza jego miejsce w magazynie
 
-Wartość została przypisana do zmiennej, ale wartość jest większa niż rozmiar zmiennej. Pamięć zostanie zapisany poza zmienną lokalizacji pamięci, a możliwa jest utrata danych.
+Wartość została przypisana do zmiennej, ale wartość jest większa niż rozmiar zmiennej. Pamięć zostanie zapisywana poza lokalizacją pamięci zmiennej i będzie możliwa utrata danych.
 
-Aby rozwiązać tego ostrzeżenia, tylko przypisać wartości do zmiennej, na których może pomieścić wartość.
+Aby rozwiązać ten problem, należy przypisać wartość tylko do zmiennej, której rozmiar może posłużyć wartości.
 
-Poniższy przykład spowoduje wygenerowanie C4739:
+Poniższy przykład generuje C4739:
 
-```
+```cpp
 // C4739.cpp
 // compile with: /RTCs /Zi /W1 /c
 char *pc;

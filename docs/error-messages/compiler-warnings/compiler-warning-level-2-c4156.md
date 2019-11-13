@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 2) C4156
+title: Ostrzeżenie kompilatora (poziom 2) C4156
 ms.date: 11/04/2016
 f1_keywords:
 - C4156
 helpviewer_keywords:
 - C4156
 ms.assetid: 9adf3acb-c0fe-42a8-a4db-5822b1493f77
-ms.openlocfilehash: 7d9a4ed09f026267e2c0f37fbbe4550ecd668dfc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95605aa29e1faba449e19dcf20e6895d31cc5874
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350468"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052142"
 ---
-# <a name="compiler-warning-level-2-c4156"></a>Kompilator ostrzeżenie (poziom 2) C4156
+# <a name="compiler-warning-level-2-c4156"></a>Ostrzeżenie kompilatora (poziom 2) C4156
 
-Usunięcie wyrażenia tablicowego bez użycia formularza tablicy "delete"; zastąpiono formularz tablicy
+usunięcie wyrażenia tablicowego bez użycia formularza tablicy "Delete"; zastąpiono formularz tablicy
 
-Inny niż tablica formie **Usuń** nie można usunąć tablicy. Kompilator przetłumaczył **Usuń** do formularza tablicy.
+Forma nie będąca tablicą elementu **delete** nie może usunąć tablicy. Kompilator **przetłumaczy** do formularza tablicy.
 
-Ostrzeżenie to pojawia się tylko w ramach rozszerzenia Microsoft (/Ze).
+To ostrzeżenie występuje tylko w ramach rozszerzeń Microsoft (/ze).
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // C4156.cpp
 // compile with: /W2
 int main()

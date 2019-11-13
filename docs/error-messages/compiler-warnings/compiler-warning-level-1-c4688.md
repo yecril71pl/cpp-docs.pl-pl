@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4688
+title: Ostrzeżenie kompilatora (poziom 1) C4688
 ms.date: 11/04/2016
 f1_keywords:
 - C4688
 helpviewer_keywords:
 - C4688
 ms.assetid: a027df3c-b2b8-4c49-8539-c2bc42db74e8
-ms.openlocfilehash: 1c94198eca0a88174c8655e0d571c37f82a2df36
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc869b7e22bc8bce0230892dc9a67d6aaec09f46
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375096"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052498"
 ---
-# <a name="compiler-warning-level-1-c4688"></a>Kompilator ostrzeżenie (poziom 1) C4688
+# <a name="compiler-warning-level-1-c4688"></a>Ostrzeżenie kompilatora (poziom 1) C4688
 
-"ograniczenia": Lista ograniczeń zawiera prywatny typ zestawu "type"
+"Constraint": Lista ograniczeń zawiera prywatny Typ zestawu "Type"
 
-Lista ograniczeń zawiera prywatny typ zestawu, co oznacza, że nie będzie dostępny, gdy typ jest dostępne spoza zestawu. Aby uzyskać więcej informacji, zobacz [ogólne](../../extensions/generics-cpp-component-extensions.md).
+Lista ograniczeń ma typ prywatny zestawu, co oznacza, że nie będzie ona dostępna, gdy do typu zostanie uzyskany dostęp spoza zestawu. Aby uzyskać więcej informacji, zobacz [Ogólne](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4688.
+Poniższy przykład generuje C4688.
 
-```
+```cpp
 // C4688.cpp
 // compile with: /clr /c /W1
 ref struct A {};   // private type

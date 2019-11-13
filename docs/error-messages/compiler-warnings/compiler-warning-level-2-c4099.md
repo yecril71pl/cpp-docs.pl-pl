@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4099
 ms.assetid: 00bb803d-cae7-4ab8-8969-b46f54139ac8
-ms.openlocfilehash: 09ea9e2963735c1e011e25b42b04ad6d67d084a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d685f1f40826b975623dbedc2ba8115c6b3edc45
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349818"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052177"
 ---
 # <a name="compiler-warning-level-2-c4099"></a>Ostrzeżenie kompilatora (poziom 2) C4099
 
-'Identyfikator': Nazwa typu najpierw widoczna przy użyciu "objecttype1" teraz widoczna przy użyciu "objecttype2"
+"Identyfikator": nazwa typu najpierw widoczna przy użyciu "objecttype1" jest teraz widoczna przy użyciu "objecttype2"
 
-Obiekt, który został zadeklarowany jako struktura jest zdefiniowana jako klasa lub obiekt, który został zadeklarowany jako klasa jest zdefiniowana jako struktury. Kompilator używa typu podanego w definicji.
+Obiekt zadeklarowany jako struktura jest zdefiniowany jako Klasa lub obiekt zadeklarowany jako klasa jest zdefiniowany jako struktura. Kompilator używa typu podanego w definicji.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4099.
+Poniższy przykład generuje C4099.
 
-```
+```cpp
 // C4099.cpp
 // compile with: /W2 /c
 struct A;

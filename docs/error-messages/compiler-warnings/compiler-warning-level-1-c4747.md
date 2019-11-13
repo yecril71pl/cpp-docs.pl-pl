@@ -1,37 +1,37 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4747
+title: Ostrzeżenie kompilatora (poziom 1) C4747
 ms.date: 11/04/2016
 f1_keywords:
 - C4747
 helpviewer_keywords:
 - C4747
 ms.assetid: af37befd-ba1f-4bdc-96e1-a953f7a2ad9c
-ms.openlocfilehash: ecaabd482049771b1d3915470a2be7a52e36d361
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 623b29d345a850cc312f23e4c521aa0be5b47242
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404029"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052440"
 ---
-# <a name="compiler-warning-level-1-c4747"></a>Kompilator ostrzeżenie (poziom 1) C4747
+# <a name="compiler-warning-level-1-c4747"></a>Ostrzeżenie kompilatora (poziom 1) C4747
 
-Wywołanie zarządzanego "punkt wejścia": Kod zarządzany nie mogą być uruchamiane w ramach blokady modułu ładującego, włączając w to punkt wejścia biblioteki DLL i wywołania osiągnięte z punktu wejścia biblioteki DLL
+Wywoływanie funkcji "EntryPoint": kod zarządzany nie może być uruchamiany w ramach blokady modułu ładującego, w tym punktu wejścia biblioteki DLL i wywołań uzyskanych z punktu wejścia biblioteki DLL
 
-Kompilator znaleziono skompilowane do MSIL (prawdopodobieństwo) punkt wejścia biblioteki DLL.  Ze względu na potencjalne problemy z ładowaniem DLL, w której punkt wejścia został wcześniej skompilowany na język MSIL, zdecydowanie odradza się kompilowanie funkcję punktu wejścia w DLL na język MSIL.
+Kompilator znalazł (prawdopodobnie) punkt wejścia biblioteki DLL skompilowany do MSIL.  Ze względu na potencjalne problemy z ładowaniem biblioteki DLL, której punkt wejścia został skompilowany do MSIL, stanowczo odradza się Kompilowanie funkcji punktu wejścia biblioteki DLL do MSIL.
 
-Aby uzyskać więcej informacji, zobacz [inicjowanie zestawów mieszanych](../../dotnet/initialization-of-mixed-assemblies.md) i [błąd narzędzi konsolidatora LNK1306](../../error-messages/tool-errors/linker-tools-error-lnk1306.md).
+Aby uzyskać więcej informacji, zobacz [Inicjowanie zestawów mieszanych](../../dotnet/initialization-of-mixed-assemblies.md) i [narzędzi konsolidatora LNK1306 błąd](../../error-messages/tool-errors/linker-tools-error-lnk1306.md).
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-1. Nie można skompilować moduł za pomocą **/CLR**.
+1. Nie Kompiluj modułu z **/CLR**.
 
 1. Oznacz funkcję punktu wejścia przy użyciu `#pragma unmanaged`.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4747.
+Poniższy przykład generuje C4747.
 
-```
+```cpp
 // C4747.cpp
 // compile with: /clr /c /W1
 // C4747 expected

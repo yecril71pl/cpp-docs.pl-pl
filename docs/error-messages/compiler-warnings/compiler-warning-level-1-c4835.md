@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4835
+title: Ostrzeżenie kompilatora (poziom 1) C4835
 ms.date: 11/04/2016
 f1_keywords:
 - C4835
 helpviewer_keywords:
 - C4835
 ms.assetid: d2e44c62-7b0e-4a45-943d-97903e27ed9d
-ms.openlocfilehash: 0427a97a9e368a19a40a8d1a552f7713e36f831e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e59c8a7c9cdd9b892155a7d8ee8c8259324c2045
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380854"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052304"
 ---
-# <a name="compiler-warning-level-1-c4835"></a>Kompilator ostrzeżenie (poziom 1) C4835
+# <a name="compiler-warning-level-1-c4835"></a>Ostrzeżenie kompilatora (poziom 1) C4835
 
-'Zmienna': Inicjator dla eksportowanych danych nie będzie działać, dopóki kod zarządzany jest wykonywany jako pierwszy w zestawie hosta
+"zmienna": inicjator dla eksportowanych danych nie zostanie uruchomiony, dopóki kod zarządzany nie zostanie uruchomiony po raz pierwszy w zestawie hosta
 
-Podczas uzyskiwania dostępu do danych między składników zarządzanych, zaleca się nie używać natywnego języka C++ importu i eksportu mechanizmów. Zamiast tego należy zadeklarować członkom danych wewnątrz typu zarządzanego i odwoływać się do metadanych z `#using` w kliencie. Aby uzyskać więcej informacji, zobacz [# dyrektywa using](../../preprocessor/hash-using-directive-cpp.md).
+W przypadku uzyskiwania dostępu do danych między składnikami zarządzanymi zaleca się, aby C++ nie używać natywnych mechanizmów importu i eksportu. Zamiast tego należy zadeklarować składowe danych w typie zarządzanym i odwołać się do metadanych przy użyciu `#using` na kliencie. Aby uzyskać więcej informacji, zobacz [#using dyrektywie](../../preprocessor/hash-using-directive-cpp.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4835.
+Poniższy przykład generuje C4835.
 
-```
+```cpp
 // C4835.cpp
 // compile with: /W1 /clr /LD
 int f() { return 1; }
@@ -35,9 +35,9 @@ __declspec(dllexport) int *p = &n;   // C4835
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład używa składnika utworzone w poprzednim przykładzie, pokazujący, że wartości zmiennych nie jest zgodne z oczekiwaniami.
+Poniższy przykład zużywa składnik skompilowany w poprzednim przykładzie, pokazując, że wartości zmiennych nie są zgodne z oczekiwaniami.
 
-```
+```cpp
 // C4835_b.cpp
 // compile with: /clr C4835.lib
 #include <stdio.h>

@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 2) C4094
+title: Ostrzeżenie kompilatora (poziom 2) C4094
 ms.date: 11/04/2016
 f1_keywords:
 - C4094
 helpviewer_keywords:
 - C4094
 ms.assetid: e68929fb-3a1c-4be7-920b-d5f79f534f99
-ms.openlocfilehash: 73805afc897d14c6d2cc87490dfa0769a8de5193
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c293522e5d60d0edb4cc2da289e0ece71f89329f
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350520"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052202"
 ---
-# <a name="compiler-warning-level-2-c4094"></a>Kompilator ostrzeżenie (poziom 2) C4094
+# <a name="compiler-warning-level-2-c4094"></a>Ostrzeżenie kompilatora (poziom 2) C4094
 
-nieoznakowany "token" nie zadeklarował żadnych symboli
+nieoznakowany "token" zadeklarowany jako brak symboli
 
-Kompilator wykrył pusta deklaracja, za pomocą nieoznakowany struktura, Unia lub klasa. Deklaracja jest ignorowany.
+Kompilator wykrył pustą deklarację przy użyciu nieoznakowanej struktury, Unii lub klasy. Deklaracja jest ignorowana.
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // C4094.cpp
 // compile with: /W2
 struct
@@ -33,4 +33,4 @@ int main()
 }
 ```
 
-Ten warunek generuje błąd w obszarze zgodności ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Ten stan generuje błąd w obszarze zgodność ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)).

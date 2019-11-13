@@ -1,31 +1,31 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4794
+title: Ostrzeżenie kompilatora (poziom 1) C4794
 ms.date: 11/04/2016
 f1_keywords:
 - C4794
 helpviewer_keywords:
 - C4794
 ms.assetid: badc9c36-fa1a-4fec-929b-7bfda7a7b79f
-ms.openlocfilehash: d44e3af88de9457fdc5c2df905ccbae22d3562da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d669280c0dc6a730a22480e602dac8cc6153449
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280376"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052380"
 ---
-# <a name="compiler-warning-level-1-c4794"></a>Kompilator ostrzeżenie (poziom 1) C4794
+# <a name="compiler-warning-level-1-c4794"></a>Ostrzeżenie kompilatora (poziom 1) C4794
 
-segment zmiennej lokalny magazyn wątków 'Zmienna' zmieniony z "Nazwa sekcji" na ".tls$"
+segment zmiennej lokalnego magazynu wątku "variable" został zmieniony z "Nazwa sekcji" na ". TLS $"
 
-Użyte [#pragma data_seg](../../preprocessor/data-seg.md) umieścić zmiennej tls w sekcji nie uruchamia się za pomocą .tls$.
+Użyto [#pragma data_seg](../../preprocessor/data-seg.md) , aby umieścić zmienną TLS w sekcji, która nie zaczyna się od. TLS $.
 
-.Tls$*x* sekcji będzie istnieć w pliku obiektu gdzie [__declspec(thread)](../../cpp/thread.md) zmienne są zdefiniowane. Sekcja .tls w pliku EXE lub DLL spowoduje w tych sekcjach.
+Sekcja. TLS $*x* będzie istnieć w pliku obiektu, w którym zdefiniowano zmienne [__declspec (wątku)](../../cpp/thread.md) . Sekcja. TLS w pliku EXE lub DLL będzie wynikać z tych sekcji.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4794:
+Poniższy przykład generuje C4794:
 
-```
+```cpp
 // C4794.cpp
 // compile with: /W1 /c
 #pragma data_seg(".someseg")

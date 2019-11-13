@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4822
+title: Ostrzeżenie kompilatora (poziom 1) C4822
 ms.date: 11/04/2016
 f1_keywords:
 - C4822
 helpviewer_keywords:
 - C4822
 ms.assetid: 0f231a30-2eb0-4722-aaa0-e2d19d3e7eea
-ms.openlocfilehash: 02e7ba11f7bda134bcc98ce2c494a3ef367c0d6f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f54f29fcbc6fb71033bc6d1d87c7ddb31622ee40
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378508"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051256"
 ---
-# <a name="compiler-warning-level-1-c4822"></a>Kompilator ostrzeżenie (poziom 1) C4822
+# <a name="compiler-warning-level-1-c4822"></a>Ostrzeżenie kompilatora (poziom 1) C4822
 
-"członek": funkcja składowa klasy lokalnej nie ma treści
+"member": Funkcja składowa klasy lokalnej nie ma treści
 
-Funkcja składowa klasy lokalnej został zadeklarowany, ale nie jest zdefiniowany w klasie. Aby korzystać z funkcji składowej klasy lokalnej, należy zdefiniować go w klasie. Nie można zadeklarować ją w klasie i definiowania go z klasy.
+Funkcja składowej klasy lokalnej została zadeklarowana, ale nie została zdefiniowana w klasie. Aby użyć funkcji składowej klasy lokalnej, należy ją zdefiniować w klasie. Nie można zadeklarować go w klasie i zdefiniować go poza klasą.
 
-Wszelkie definicji klasy dla funkcji członkowskiej klasy lokalnej będzie błąd.
+Każda definicja poza klasą dla funkcji składowej klasy lokalnej będzie błędem.
 
-Poniższy przykład spowoduje wygenerowanie C4822:
+Poniższy przykład generuje C4822:
 
-```
+```cpp
 // C4822.cpp
 // compile with: /W1
 int main() {

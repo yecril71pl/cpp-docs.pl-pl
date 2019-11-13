@@ -6,42 +6,42 @@ helpviewer_keywords:
 - ml64.exe
 - masm for x64
 ms.assetid: 89059103-f372-4968-80ea-0c7f90bb9c91
-ms.openlocfilehash: 1a92d2a22e8aa9df29c18fa36ff4508eb8eec57f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: d9b550313c8e65e47db70dc81519abce7db95da5
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65445866"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74050195"
 ---
 # <a name="masm-for-x64-ml64exe"></a>MASM dla wersji x64 (ml64.exe)
 
-Visual Studio zawiera zarówno 32-bitowych i 64-bitowe wersje hostowanej Microsoft Assembler (MASM) kierowania x64 kodu. Nazwane ml64.exe, to asemblera, który akceptuje x64 języka asemblera. Po wybraniu obciążenia C++ podczas instalacji programu Visual Studio, są zainstalowane narzędzia wiersza polecenia MASM. Narzędzia MASM nie są dostępne do pobrania osobno. Aby uzyskać instrukcje, jak pobrać i zainstalować kopię programu Visual Studio, zobacz [Zainstaluj program Visual Studio](/visualstudio/install/install-visual-studio). Jeśli nie chcesz zainstalować pełne Visual Studio IDE, ale mają tylko narzędzia wiersza polecenia, należy pobrać [Build Tools for Visual Studio](https://visualstudio.microsoft.com/downloads/).
+Program Visual Studio zawiera zarówno 32-bitowe, jak i 64-bitowe obsługiwane wersje asemblera firmy Microsoft (MASM), aby obsługiwały kod x64. O nazwie ml64. exe jest to asembler, który akceptuje język asemblera x64. Narzędzia wiersza polecenia MASM są instalowane w przypadku wybrania C++ obciążenia podczas instalacji programu Visual Studio. Narzędzia MASM nie są dostępne w oddzielnym pobieraniu. Aby uzyskać instrukcje dotyczące pobierania i instalowania kopii programu Visual Studio, zobacz [Instalowanie programu Visual Studio](/visualstudio/install/install-visual-studio). Jeśli nie chcesz instalować kompletnego środowiska IDE programu Visual Studio, ale potrzebujesz tylko narzędzi wiersza polecenia, Pobierz [narzędzia kompilacji dla programu Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019).
 
-Za pomocą MASM tworzyć kod x64 jest przeznaczony dla w wierszu polecenia, należy użyć wiersz polecenia dla deweloperów x64 obiektów docelowych, które ustawia ścieżkę wymagane i inne zmienne środowiskowe. Aby uzyskać informacje na temat sposobu uruchamiania wiersza polecenia dla deweloperów, zobacz [kodu kompilacji C/C++ w wierszu polecenia](../../build/building-on-the-command-line.md).
+Aby użyć MASM do kompilowania kodu dla obiektów docelowych x64 w wierszu polecenia, należy użyć wiersza polecenia dewelopera dla obiektów docelowych x64, które ustawia wymaganą ścieżkę i inne zmienne środowiskowe. Aby uzyskać informacje na temat sposobu uruchamiania wiersza polecenia dewelopera, zobacz [kompilacja CC++ /Code w wierszu polecenia](../../build/building-on-the-command-line.md).
 
-Aby uzyskać informacje na temat opcji wiersza polecenia ml64.exe, zobacz [ML i ML64 dotyczące wiersza polecenia](../../assembler/masm/ml-and-ml64-command-line-reference.md).
+Aby uzyskać informacje na temat opcji wiersza polecenia ml64. exe, zobacz [informacje dotyczące wiersza polecenia ml i ML64](../../assembler/masm/ml-and-ml64-command-line-reference.md).
 
-Asembler wbudowany lub użycie słowa kluczowego ASM nie jest obsługiwana dla x64 lub celów ARM. Do portu usługi x86 kodu tego używa wbudowanego asemblera do x64 lub ARM można przekonwertować kodu C++, użyj funkcje wewnętrzne kompilatora lub utworzyć pliki źródłowe języka asemblera. Microsoft C++ kompilator obsługuje funkcje wewnętrzne umożliwia postępuj zgodnie z instrukcjami specjalnej funkcji, na przykład uprzywilejowany, bit skanowania i testowania, blokowane i tak dalej, w jak blisko sposób dla wielu platform, jak to możliwe. Aby uzyskać informacji na temat dostępności funkcji wewnętrznych, zobacz [funkcje wewnętrzne kompilatora](../../intrinsics/compiler-intrinsics.md).
+Wbudowane asembler lub użycie słowa kluczowego ASM nie jest obsługiwane dla elementów docelowych x64 i ARM. Aby przenieść kod x86, który używa asemblera wbudowanego do architektury x64 lub ARM, Możesz skonwertować swój kod C++na, użyć wewnętrznych kompilatorów lub utworzyć pliki źródłowe języka asemblera. Kompilator firmy C++ Microsoft obsługuje funkcje wewnętrzne, aby umożliwić korzystanie z instrukcji specjalnych, na przykład uprzywilejowanego, skanowania bitowego/testowania, blokowania, i tak dalej, w sposób zbliżony do obsługiwanej przez wiele platform. Aby uzyskać informacje o dostępnych funkcjach wewnętrznych, zobacz [wewnętrzne kompilatory](../../intrinsics/compiler-intrinsics.md).
 
-## <a name="add-an-assembler-language-file-to-a-visual-studio-c-project"></a>Dodaj plik języka asemblera do programu Visual Studio C++ projektu
+## <a name="add-an-assembler-language-file-to-a-visual-studio-c-project"></a>Dodawanie pliku pakietu asemblera do projektu programu Visual Studio C++
 
-System projektu programu Visual Studio obsługuje pliki języka asemblera skompilowanych przy użyciu MASM w projektach C++. Można utworzyć x64 źródło języka asemblera pliki i rozbudowuj je pliki obiektów przy użyciu MASM, która w pełni obsługuje x64. Następnie można połączyć te pliki obiektów kodu C++ wbudowane x64 elementów docelowych. To jest jednym ze sposobów rozwiązywania braku x64 asemblera wbudowanego.
+System projektu programu Visual Studio obsługuje pliki języka asemblera skompilowane przy użyciu MASM w C++ projektach. Można tworzyć pliki źródłowe języka asemblera x64 i kompilować je w plikach obiektów przy użyciu MASM, który obsługuje 64 w pełni. Następnie można połączyć te pliki obiektów z C++ kodem skompilowanym dla celów x64. Jest to jeden ze sposobów na przezwyciężenie braku wbudowanego asemblera x64.
 
-### <a name="to-add-an-assembler-language-file-to-an-existing-visual-studio-c-project"></a>Aby dodać plik języka asemblera do istniejącego programu Visual Studio C++ projektu
+### <a name="to-add-an-assembler-language-file-to-an-existing-visual-studio-c-project"></a>Aby dodać plik programu asemblera do istniejącego projektu programu Visual Studio C++
 
-1. Wybierz projekt w **Eksploratora rozwiązań**. Na pasku menu wybierz **projektu**, **dostosowania kompilacji**.
+1. Wybierz projekt w **Eksplorator rozwiązań**. Na pasku menu wybierz **projekt**, a następnie pozycję **dostosowania kompilacji**.
 
-1. W **pliki z dostosowywania kompilacji Visual C++** okna dialogowego pole, zaznacz pole wyboru obok pozycji **masm(.targets,.props)**. Wybierz **OK** Aby zapisać swój wybór i zamknąć okno dialogowe.
+1. W oknie **dialogowym C++ pliki dostosowania kompilacji wizualizacji** zaznacz pole wyboru obok pozycji **MASM (. targets,. props)** . Wybierz **przycisk OK** , aby zapisać wybór i zamknąć okno dialogowe.
 
-1. Na pasku menu wybierz **projektu**, **Dodaj nowy element**.
+1. Na pasku menu wybierz **projekt**, **Dodaj nowy element**.
 
-1. W **Dodaj nowy element** okno dialogowe, wybierz opcję **plik C++ (.cpp)** w środkowym okienku. W **nazwa** formant edycji, wprowadź nową nazwę pliku, który ma **.asm** rozszerzenia zamiast .cpp. Wybierz **Dodaj** Dodaj plik do projektu i zamknąć okno dialogowe.
+1. W oknie dialogowym **Dodaj nowy element** wybierz pozycję  **C++ plik (. cpp)** w środkowym okienku. W kontrolce Edycja **nazwy** wprowadź nową nazwę pliku o rozszerzeniu **. asm** zamiast. cpp. Wybierz pozycję **Dodaj** , aby dodać plik do projektu i zamknąć okno dialogowe.
 
-Utwórz kod języka asemblera w pliku .asm, którą dodałeś. Podczas kompilowania rozwiązania asemblera MASM jest wywoływane w celu złożenia plików .asm w pliku obiektu, który jest następnie łączony do projektu. Aby ułatwić dostęp do symboli, deklaruj swoje funkcje asemblera, jak `extern "C"` w kodzie źródłowym C++ zamiast przy użyciu języka C++ nazwę konwencje dekoracji w Twoim języku asembler plików źródłowych.
+Utwórz kod języka asemblera w pliku. ASM, który został dodany. Podczas kompilowania rozwiązania MASM asembler jest wywoływany, aby złożyć plik. asm do pliku obiektu, który jest następnie połączony z projektem. Aby ułatwić dostęp do symboli, należy zadeklarować funkcje asemblera jako `extern "C"` w C++ kodzie źródłowym, zamiast używać konwencji dekoracji C++ nazw w plikach źródłowych języka asemblera.
 
 ## <a name="ml64-specific-directives"></a>Dyrektywy specyficzne dla ml64
 
-Następujące dyrektywy specyficzne dla ml64 można użyć w kodzie źródłowym języka asemblera, który jest przeznaczony dla x64:
+W kodzie źródłowym języka asemblera, który jest przeznaczony dla architektury x64, można użyć następujących dyrektyw specyficznych dla ML64:
 
 - [.ALLOCSTACK](../../assembler/masm/dot-allocstack.md)
 
@@ -57,11 +57,11 @@ Następujące dyrektywy specyficzne dla ml64 można użyć w kodzie źródłowym
 
 - [.SETFRAME](../../assembler/masm/dot-setframe.md)
 
-Ponadto [PROC](../../assembler/masm/proc.md) dyrektywa został zaktualizowany do użytku z programem ml64.exe.
+Ponadto dyrektywa [proc](../../assembler/masm/proc.md) została zaktualizowana do użycia z ml64. exe.
 
-## <a name="32-bit-address-mode-address-size-override"></a>Tryb adresu 32-bitowych (adres rozmiar zastąpienie)
+## <a name="32-bit-address-mode-address-size-override"></a>32 — tryb adresu bitowego (przesłonięcie rozmiaru adresu)
 
-MASM emituje zastąpienie rozmiar adresu 0x67, jeśli argument pamięci zawiera 32-bitowych rejestrów. Na przykład poniższe przykłady spowodować zastąpienie rozmiar adresu emitowane:
+MASM emituje przesłonięcie rozmiaru adresu 0x67, jeśli argument operacji pamięci zawiera 32-bitowe rejestry. Na przykład następujące przykłady powodują wydawanie przesłania rozmiaru adresu:
 
 ```asm
 mov rax, QWORD PTR [ecx]
@@ -71,9 +71,9 @@ prefetch [eax]
 movnti rax, QWORD PTR [r8d]
 ```
 
-MASM przyjęto założenie, czy jeśli 32-bitowe przesunięcie pojawi się jako argument pamięci, 64-bitowych adresów jest przeznaczony. Obecnie nie jest obsługiwane dla 32-bitowych adresowania za pomocą tych argumentów.
+MASM zakłada, że jeśli przemieszczenie 32-bitowe występuje pojedynczo jako operand pamięci, adres 64-bitowy jest zamierzony. Obecnie nie są obsługiwane adresy 32-bitowe z takimi operandami.
 
-Na koniec mieszanie rozmiary rejestr w ramach operand pamięci, jak pokazano w poniższym kodzie, spowoduje wygenerowanie błędu.
+Na koniec mieszanie rozmiarów rejestru w obrębie operandu pamięci, jak pokazano w poniższym kodzie, generuje błąd.
 
 ```asm
 mov eax, DWORD PTR [rcx*2+r10d]

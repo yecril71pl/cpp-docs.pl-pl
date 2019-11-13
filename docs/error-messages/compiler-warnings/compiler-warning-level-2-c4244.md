@@ -1,33 +1,33 @@
 ---
-title: Kompilator ostrzeżenie (poziom 2) C4244
+title: Ostrzeżenie kompilatora (poziom 2) C4244
 ms.date: 11/04/2016
 f1_keywords:
 - C4244
 helpviewer_keywords:
 - C4244
 ms.assetid: 2c19d157-21d1-42c2-a6c0-3f30f2ce3813
-ms.openlocfilehash: af821d80ff8c4c7717986f2ff4d0f3392cd6fca3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43d8a992801d556ce85577f5f9da1bec584cb173
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349727"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052133"
 ---
-# <a name="compiler-warning-level-2-c4244"></a>Kompilator ostrzeżenie (poziom 2) C4244
+# <a name="compiler-warning-level-2-c4244"></a>Ostrzeżenie kompilatora (poziom 2) C4244
 
-"argument": konwersja z 'Typ1' na 'Typ2', możliwa utrata danych
+"argument": konwersja z "type1" na "type2", możliwa utrata danych
 
-Element typu punktu zmiennoprzecinkowego został przekonwertowany na typ liczby całkowitej.  Może wystąpić możliwa utrata danych.
+Typ zmiennoprzecinkowy został przekonwertowany na typ Integer.  Mogła wystąpić utrata danych.
 
-Jeśli C4244, powinny albo zmienić program, aby używać zgodnych typów lub dodać logikę do kodu, aby upewnić się, że zakres możliwych wartości zawsze będzie zgodny z typami, którego używasz.
+W przypadku uzyskania C4244 należy zmienić program tak, aby korzystał z zgodnych typów, lub dodać do kodu logikę, aby upewnić się, że zakres możliwych wartości będzie zawsze zgodny z typami, z których korzystasz.
 
-C4244 można również wyzwalać na poziomie 3 i 4; zobacz [ostrzeżenie kompilatora (poziomy 3 i 4) C4244](../../error-messages/compiler-warnings/compiler-warning-levels-3-and-4-c4244.md) Aby uzyskać więcej informacji.
+C4244 może również być wyzwalane na poziomie 3 i 4; Aby uzyskać więcej informacji, zobacz [Ostrzeżenie kompilatora (poziomy 3 i 4) C4244](../../error-messages/compiler-warnings/compiler-warning-levels-3-and-4-c4244.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4244:
+Poniższy przykład generuje C4244:
 
-```
+```cpp
 // C4244_level2.cpp
 // compile with: /W2
 

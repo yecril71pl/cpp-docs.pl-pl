@@ -1,34 +1,34 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4744
+title: Ostrzeżenie kompilatora (poziom 1) C4744
 ms.date: 11/04/2016
 f1_keywords:
 - C4744
 helpviewer_keywords:
 - C4744
 ms.assetid: f2a7d0b5-afd5-4926-abc3-cfbd367e3ff5
-ms.openlocfilehash: 2118a32af8b99d35c1e1a6691561391ec5d2b8cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f6954ae7966edf200249bb5d10f0dfb011bcef22
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385423"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051557"
 ---
-# <a name="compiler-warning-level-1-c4744"></a>Kompilator ostrzeżenie (poziom 1) C4744
+# <a name="compiler-warning-level-1-c4744"></a>Ostrzeżenie kompilatora (poziom 1) C4744
 
-"var" ma inny typ w 'plik1' i 'plik2': 'Typ1' i 'type2'
+element "var" ma inny typ w "plik1" i "plik2": "type1" i "type2"
 
-Zewnętrznej zmiennej lub odwołuje się do zdefiniowanych w dwóch plikach ma różne typy w tych plikach.  Aby rozwiązać problem, ten sam definicje typów lub zmień nazwę zmiennej w jeden z plików.
+Zmienna zewnętrzna, do której odwołuje się lub została zdefiniowana w dwóch plikach, ma różne typy w tych plikach.  Aby rozwiązać ten problem, wprowadź definicje typu tak samo lub Zmień nazwę zmiennej w jednym z plików.
 
-C4744 jest emitowane tylko wtedy, gdy pliki są kompilowane z opcją/GL.  Aby uzyskać więcej informacji, zobacz [/GL (Optymalizacja Całoprogramowa)](../../build/reference/gl-whole-program-optimization.md).
+C4744 jest emitowana tylko wtedy, gdy pliki są kompilowane przy użyciu/GL.  Aby uzyskać więcej informacji, zobacz [/GL (Optymalizacja całego programu)](../../build/reference/gl-whole-program-optimization.md).
 
 > [!NOTE]
->  C4744 zwykle występuje w plikach C (nie C++), ponieważ w języku C++ nazwę zmiennej ma informacje o typie.  Próbki (poniżej) jest kompiluje co kod C++, otrzymasz błąd konsolidatora LNK2019.
+>  C4744 zazwyczaj występuje w plikach C ( C++nie), ponieważ w C++ nazwie zmiennej są zawarte informacje o typie.  Gdy próbka (poniżej) jest skompilowana jako C++, zostanie wyświetlony komunikat o błędzie konsolidatora LNK2019.
 
 ## <a name="example"></a>Przykład
 
 Ten przykład zawiera pierwszą definicję.
 
-```
+```c
 // C4744.c
 // compile with: /c /GL
 int global;
@@ -36,9 +36,9 @@ int global;
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4744.
+Poniższy przykład generuje C4744.
 
-```
+```c
 // C4744b.c
 // compile with: C4744.c /GL /W1
 // C4744 expected

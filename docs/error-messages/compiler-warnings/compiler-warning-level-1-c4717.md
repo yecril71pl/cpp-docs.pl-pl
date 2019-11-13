@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4717
+title: Ostrzeżenie kompilatora (poziom 1) C4717
 ms.date: 11/04/2016
 f1_keywords:
 - C4717
 helpviewer_keywords:
 - C4717
 ms.assetid: 5ef3c6c7-8599-4714-a973-0f5b69cdab3c
-ms.openlocfilehash: 0cf9aef8f68ca5972fd3d7886cd8061b88d043ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0bc95cc770914a1c02a7a40f9754415c2f013d63
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221144"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051346"
 ---
-# <a name="compiler-warning-level-1-c4717"></a>Kompilator ostrzeżenie (poziom 1) C4717
+# <a name="compiler-warning-level-1-c4717"></a>Ostrzeżenie kompilatora (poziom 1) C4717
 
-'Funkcja': cykliczne we wszystkich ścieżkach, funkcja spowoduje przepełnienie stosu środowiska uruchomieniowego
+"Function": rekursywnie we wszystkich ścieżkach kontroli, funkcja spowoduje przepełnienie stosu środowiska uruchomieniowego
 
-Każdej ścieżce za pomocą funkcji zawiera wywołanie do funkcji. Ponieważ nie istnieje żaden sposób, aby zakończyć działanie funkcji bez wywoływania pierwszy, sama cyklicznie, funkcja nigdy nie zostanie zakończona.
+Każda ścieżka przez funkcję zawiera wywołanie funkcji. Ponieważ nie istnieje sposób, aby wyjść z funkcji bez uprzedniego wywołania się cyklicznie, funkcja nigdy nie zostanie zakończona.
 
-Poniższy przykład spowoduje wygenerowanie C4717:
+Poniższy przykład generuje C4717:
 
-```
+```cpp
 // C4717.cpp
 // compile with: /W1 /c
 // C4717 expected

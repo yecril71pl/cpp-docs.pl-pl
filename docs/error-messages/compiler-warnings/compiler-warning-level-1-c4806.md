@@ -1,25 +1,25 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4806
+title: Ostrzeżenie kompilatora (poziom 1) C4806
 ms.date: 11/04/2016
 f1_keywords:
 - C4806
 helpviewer_keywords:
 - C4806
 ms.assetid: 79eb74cd-b925-4b5b-84e1-8ae6f33e38b3
-ms.openlocfilehash: b6fc5708d4e2f9982ceaab57260f13e134e4d247
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dae6ed7d7a38daf0ce525ae62409823212db711b
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406408"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052361"
 ---
-# <a name="compiler-warning-level-1-c4806"></a>Kompilator ostrzeżenie (poziom 1) C4806
+# <a name="compiler-warning-level-1-c4806"></a>Ostrzeżenie kompilatora (poziom 1) C4806
 
-'Operacja': niebezpieczna operacja: żadna wartość typu "type" promowane do typu "type" może być równe podanej stałej
+"Operation": niebezpieczna operacja: żadna wartość typu "Type", która nie została podwyższona do typu "Type", może być równa podanych stałej
 
-Ten komunikat ostrzega względem kodu, takich jak `b == 3`, gdzie `b` ma typ `bool`. Wspieranie reguł Przyczyna `bool` do zajęcia miejsca `int`. To jest dozwolony, ale nigdy nie może być **true**. Poniższy przykład spowoduje wygenerowanie C4806:
+Ten komunikat ostrzega o kodzie, takim jak `b == 3`, gdzie `b` ma `bool`typu. Reguły promocji powodują awansowanie `bool` `int`. Jest to dozwolone, ale nigdy nie może być **prawdziwe**. Poniższy przykład generuje C4806:
 
-```
+```cpp
 // C4806.cpp
 // compile with: /W1
 int main()

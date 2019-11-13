@@ -1,33 +1,33 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4803
+title: Ostrzeżenie kompilatora (poziom 1) C4803
 ms.date: 11/04/2016
 f1_keywords:
 - C4803
 helpviewer_keywords:
 - C4803
 ms.assetid: 2552f3a6-c418-49f4-98a2-a929857be658
-ms.openlocfilehash: bb8f5fe9d55a44193325a2fcfe9ef7675a2b3b89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ebf7b3baec3519a142c7a1835aa15a980974bb48
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406499"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052346"
 ---
-# <a name="compiler-warning-level-1-c4803"></a>Kompilator ostrzeżenie (poziom 1) C4803
+# <a name="compiler-warning-level-1-c4803"></a>Ostrzeżenie kompilatora (poziom 1) C4803
 
-"method": podniesiona metoda ma klasę magazynu inną od zdarzenia, "event"
+"Metoda": Metoda podniesienia ma inną klasę magazynu od zdarzenia, "Event"
 
-Metody zdarzeń musi mieć tą samą klasę magazynu jako deklaracja zdarzenia. Kompilator dostosowuje metody zdarzeń, tak aby klasy magazynu są takie same.
+Metody zdarzeń muszą mieć tę samą klasę magazynu co deklaracja zdarzenia. Kompilator dostosowuje metody zdarzenia tak, aby klasy magazynu były takie same.
 
-To ostrzeżenie może wystąpić, jeśli masz klasę, która implementuje zdarzenia z interfejsu. Kompilator nie generuje niejawnie metodę Zgłoś zdarzenie w interfejsie. Podczas implementowania interfejsu w klasie, kompilator niejawnie wygenerować metody wzrostu i tej metody nie będzie wirtualnego, dlatego to ostrzeżenie. Aby uzyskać więcej informacji na temat zdarzeń, zobacz [zdarzeń](../../extensions/event-cpp-component-extensions.md).
+To ostrzeżenie może wystąpić, jeśli masz klasę, która implementuje zdarzenie z interfejsu. Kompilator nie generuje niejawnie metody podniesienia dla zdarzenia w interfejsie. Podczas implementowania tego interfejsu w klasie kompilator niejawnie generuje metodę podniesienia i ta metoda nie będzie wirtualna, a tym samym ostrzeżenie. Aby uzyskać więcej informacji na temat zdarzeń, zobacz [zdarzenie](../../extensions/event-cpp-component-extensions.md).
 
-Zobacz [ostrzeżenie](../../preprocessor/warning.md) pragma informacji na temat wyłączyć ostrzeżenia.
+Aby uzyskać informacje na temat wyłączania ostrzeżenia, zobacz pragma [Warning](../../preprocessor/warning.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4803.
+Poniższy przykład generuje C4803.
 
-```
+```cpp
 // C4803.cpp
 // compile with: /clr /W1
 using namespace System;

@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 3) C4334
+title: Ostrzeżenie kompilatora (poziom 3) C4334
 ms.date: 11/04/2016
 f1_keywords:
 - C4334
 helpviewer_keywords:
 - C4334
 ms.assetid: d845857f-bc95-4faf-a079-626a0cf935ba
-ms.openlocfilehash: 55512bf28c8c20512d0d245810d3e5c1fec36939
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ebebfe9994be3dd136e3924cb2aea60c0c901926
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402037"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051635"
 ---
-# <a name="compiler-warning-level-3-c4334"></a>Kompilator ostrzeżenie (poziom 3) C4334
+# <a name="compiler-warning-level-3-c4334"></a>Ostrzeżenie kompilatora (poziom 3) C4334
 
-'operator': wynik 32-bitowe przesunięcia niejawnie skonwertowano do 64 bitów (była 64-bitowe przesunięcie przeznaczone?)
+"operator": wynik 32-bit Shift niejawnie przekonwertowany na 64 bitów (czy został on 64-bitowe przesunięcia?)
 
-Wynik 32-bitowe przesunięcia niejawnie został przekonwertowany na 64-bitowej i kompilatora podejrzewa, że 64-bitowe przesunięcie było zamierzone.  Aby rozwiązać to ostrzeżenie, użyj 64-bitowe przesunięcie albo jawnie rzutowane wynik przesunięcia do 64-bitowej.
+Wynik 32-bitowego przesunięcia został niejawnie przekonwertowany na 64-bitowy, a kompilator podejrzewa, że przeznaczenie 64-bit zostało zamierzone.  Aby rozwiązać ten problem, należy użyć 64-bitowego przesunięcia lub jawnie rzutować wynik przesunięcia do 64-bitowego.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4334.
+Poniższy przykład generuje C4334.
 
-```
+```cpp
 // C4334.cpp
 // compile with: /W3 /c
 void SetBit(unsigned __int64 *p, int i) {

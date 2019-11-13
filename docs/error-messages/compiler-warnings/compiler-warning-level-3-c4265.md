@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 3) C4265
+title: Ostrzeżenie kompilatora (poziom 3) C4265
 ms.date: 11/04/2016
 f1_keywords:
 - C4265
 helpviewer_keywords:
 - C4265
 ms.assetid: 20547159-6f30-4cc4-83aa-927884c8bb4c
-ms.openlocfilehash: f06e70f88bc0a34e2feecba19da8dd9edc630230
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ad07e2a920ed251467c9ffd1d0fb1765557aa7e
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402193"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051708"
 ---
-# <a name="compiler-warning-level-3-c4265"></a>Kompilator ostrzeżenie (poziom 3) C4265
+# <a name="compiler-warning-level-3-c4265"></a>Ostrzeżenie kompilatora (poziom 3) C4265
 
-"class": klasa ma funkcje wirtualne, ale destruktor nie jest wirtualny
+"Class": Klasa ma funkcje wirtualne, ale destruktor nie jest wirtualny
 
-Gdy klasa ma funkcje wirtualne, ale Niewirtualny destruktor, obiektów tego typu może nie zostać zniszczone prawidłowo kiedy niszczony jest klasy za pomocą wskaźnika klasy podstawowej.
+Gdy Klasa ma funkcje wirtualne, ale destruktor niewirtualny, obiekty typu mogą nie zostać zniszczone prawidłowo, gdy Klasa jest niszczona przez wskaźnik klasy bazowej.
 
-To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+To ostrzeżenie jest domyślnie wyłączone. Aby uzyskać więcej informacji [, zobacz ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
-Poniższy przykład spowoduje wygenerowanie C4265:
+Poniższy przykład generuje C4265:
 
-```
+```cpp
 // C4265.cpp
 // compile with: /W3 /c
 #pragma warning(default : 4265)

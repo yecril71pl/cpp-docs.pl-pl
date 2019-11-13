@@ -1,33 +1,33 @@
 ---
-title: Kompilator ostrzeżenie (poziom 2) C4396
+title: Ostrzeżenie kompilatora (poziom 2) C4396
 ms.date: 11/04/2016
 f1_keywords:
 - C4396
 helpviewer_keywords:
 - C4396
 ms.assetid: 7cd6b283-db17-4574-b299-03e0b913ad70
-ms.openlocfilehash: 84045ea2c285be8b1c1c9d1fd62b417db00dd29c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e874e00d44eef29240cca55541837facfcf64495
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402453"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052042"
 ---
-# <a name="compiler-warning-level-2-c4396"></a>Kompilator ostrzeżenie (poziom 2) C4396
+# <a name="compiler-warning-level-2-c4396"></a>Ostrzeżenie kompilatora (poziom 2) C4396
 
-"name": wbudowany specyfikator nie można użyć, gdy zaprzyjaźniona deklaracja odnosi się do specjalizacji szablonu funkcji
+"name": wbudowany specyfikator nie może być używany, gdy zaprzyjaźniona deklaracja odnosi się do specjalizacji szablonu funkcji
 
-Specjalizacja szablonu funkcji nie można określić dowolną z [wbudowane](../../cpp/inline-functions-cpp.md) specyfikatorów. Kompilator generuje ostrzeżenie C4396 i ignoruje wbudowany specyfikator.
+Specjalizacja szablonu funkcji nie może określać żadnego ze specyfikatorów [wbudowanych](../../cpp/inline-functions-cpp.md) . Kompilator wystawia ostrzeżenia C4396 i ignoruje Specyfikator wbudowany.
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-- Usuń `inline`, `__inline`, lub `__forceinline` specyfikator w deklaracji funkcji friend.
+- Usuń specyfikator `inline`, `__inline`lub `__forceinline` z deklaracji zaprzyjaźnionej funkcji.
 
 ## <a name="example"></a>Przykład
 
-Nieprawidłowy friend funkcji deklaracji z ilustruje poniższy przykład kodu `inline` specyfikator.
+Poniższy przykład kodu przedstawia nieprawidłową deklarację zaprzyjaźnionej funkcji ze specyfikatorem `inline`.
 
-```
+```cpp
 // C4396.cpp
 // compile with: /W2 /c
 

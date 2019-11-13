@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4804
+title: Ostrzeżenie kompilatora (poziom 1) C4804
 ms.date: 11/04/2016
 f1_keywords:
 - C4804
 helpviewer_keywords:
 - C4804
 ms.assetid: 069e8f44-3ef6-43bb-8524-4116fc6eea83
-ms.openlocfilehash: 28b3e49717993a3bf20c8cfec5938d698266c0f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97ad076325b11329896d98367fb3ac311ec5ded9
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406538"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051573"
 ---
-# <a name="compiler-warning-level-1-c4804"></a>Kompilator ostrzeżenie (poziom 1) C4804
+# <a name="compiler-warning-level-1-c4804"></a>Ostrzeżenie kompilatora (poziom 1) C4804
 
-'Operacja': niebezpieczne użycie typu "bool" w operacji
+"Operation": niebezpieczne użycie typu "bool" w operacji
 
-To ostrzeżenie dotyczy sytuacji, gdy używasz `bool` zmiennej lub wartość w nieoczekiwany sposób. Na przykład C4804 jest generowany, gdy używasz operatorów, takich jak operator jednoargumentowy ujemna (**-**) lub operatorem dopełnienia (`~`). Kompilator oblicza wyrażenie.
+To ostrzeżenie dotyczy, gdy użyto zmiennej `bool` lub wartości w nieoczekiwany sposób. Na przykład C4804 jest generowany, jeśli używasz operatorów, takich jak ujemny operator jednoargumentowy ( **-** ) lub operator uzupełniania (`~`). Kompilator szacuje wyrażenie.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4804:
+Poniższy przykład generuje C4804:
 
-```
+```cpp
 // C4804.cpp
 // compile with: /W1
 

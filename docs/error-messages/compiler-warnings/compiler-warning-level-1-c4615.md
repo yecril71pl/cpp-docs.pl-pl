@@ -1,27 +1,27 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4615
+title: Ostrzeżenie kompilatora (poziom 1) C4615
 ms.date: 11/04/2016
 f1_keywords:
 - C4615
 helpviewer_keywords:
 - C4615
 ms.assetid: 7b107c01-0da2-4e01-8b40-93813e30b94c
-ms.openlocfilehash: 1032261c39e0a285ac686e09573161de3b46e0e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c682b309cbabbaf97346e37038806d331f949ac
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324548"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052608"
 ---
-# <a name="compiler-warning-level-1-c4615"></a>Kompilatora (poziom 1) ostrzeżenie C4615
+# <a name="compiler-warning-level-1-c4615"></a>Ostrzeżenie kompilatora (poziom 1) C4615
 
-\#warning elementu pragma: Nieznany typ ostrzeżenia użytkownika
+Ostrzeżenie \#pragma: nieznany typ ostrzeżenia użytkownika
 
-Nieprawidłowy specyfikator ostrzeżenie był używany z **pragma** [ostrzeżenie](../../preprocessor/warning.md). Aby naprawić błąd, należy użyć Nieprawidłowy specyfikator ostrzeżenie.
+Użyto nieprawidłowego specyfikatora ostrzeżenia z [ostrzeżeniem](../../preprocessor/warning.md) **pragma** . Aby rozwiązać ten problem, użyj prawidłowego specyfikatora ostrzeżenia.
 
-Poniższy przykład spowoduje wygenerowanie C4615:
+Poniższy przykład generuje C4615:
 
-```
+```cpp
 // C4615.cpp
 // compile with: /W1 /LD
 #pragma warning(enable : 4401)   // C4615, 'enable' not valid specifier

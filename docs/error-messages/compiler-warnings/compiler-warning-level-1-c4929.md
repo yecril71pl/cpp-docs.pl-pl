@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4929
+title: Ostrzeżenie kompilatora (poziom 1) C4929
 ms.date: 11/04/2016
 f1_keywords:
 - C4929
 helpviewer_keywords:
 - C4929
 ms.assetid: 95f8ab4f-4468-4caa-acd5-8f4592f03b3c
-ms.openlocfilehash: 07081f2b8e305e20eb1725d3d76a6d77638caa7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8ed1252d61748047077defb4e7e77c85e596107
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393431"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052271"
 ---
-# <a name="compiler-warning-level-1-c4929"></a>Kompilator ostrzeżenie (poziom 1) C4929
+# <a name="compiler-warning-level-1-c4929"></a>Ostrzeżenie kompilatora (poziom 1) C4929
 
-'Plik': Biblioteka typów zawiera Unię; ignorowanie kwalifikatora "embedded_idl"
+"plik": Biblioteka typów zawiera Unię; ignorowanie kwalifikatora "embedded_idl"
 
-Atrybutu embedded_idl [#import](../../preprocessor/hash-import-directive-cpp.md) nie można zastosować do biblioteki typów, ponieważ Unii znajduje się w bibliotece typów. Aby rozwiązać tego ostrzeżenia, nie używaj embedded_idl.
+Nie można zastosować atrybutu embedded_idl [#import](../../preprocessor/hash-import-directive-cpp.md) do biblioteki typów, ponieważ element Union znajduje się w bibliotece typów. Aby usunąć to ostrzeżenie, nie używaj embedded_idl.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład definiuje składnika.
+Poniższy przykład definiuje składnik.
 
-```
+```cpp
 // C4929a.cpp
 // compile with: /LD /link /TLBOUT:C4929a.tlb
 #include <objbase.h>
@@ -55,9 +55,9 @@ struct C : I {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4929.
+Poniższy przykład generuje C4929.
 
-```
+```cpp
 // C4929b.cpp
 // compile with: /c /W1
 #import "C4929a.tlb" embedded_idl   // C4929

@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4677
+title: Ostrzeżenie kompilatora (poziom 1) C4677
 ms.date: 11/04/2016
 f1_keywords:
 - C4677
 helpviewer_keywords:
 - C4677
 ms.assetid: a8d656a1-e2ff-4f8b-9028-201765131026
-ms.openlocfilehash: 66b8d42b63bcbf328703523c4eeda7a047f4643c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8567e7392537507a25121977448ac47ec079316b
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374576"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051369"
 ---
-# <a name="compiler-warning-level-1-c4677"></a>Kompilator ostrzeżenie (poziom 1) C4677
+# <a name="compiler-warning-level-1-c4677"></a>Ostrzeżenie kompilatora (poziom 1) C4677
 
-'Funkcja': podpis z nieprywatnej składowej zawiera prywatny typ zestawu "private_type"
+"Function": Sygnatura nieprywatnej składowej zawiera prywatny Typ zestawu "private_type"
 
-Typ, który ma dostęp publiczny spoza zestawu, używa typ, który ma dostęp prywatny spoza zestawu. Składnik, który odwołuje się do typu publicznego zestawu nie będzie używać składowej typu lub elementów członkowskich, które odwołują się prywatny typ zestawu.
+Typ z publiczną dostępnością poza zestawem korzysta z typu, który ma prywatny dostęp poza zestawem. Składnik, który odwołuje się do typu zestawu publicznego, nie będzie mógł używać składowej typu lub składowych odwołujących się do typu prywatnego zestawu.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4677.
+Poniższy przykład generuje C4677.
 
-```
+```cpp
 // C4677.cpp
 // compile with: /clr /c /W1
 delegate void TestDel();
