@@ -1,15 +1,15 @@
 ---
 title: Przewodnik C++ dotyczący przenoszenia i uaktualniania firmy Microsoft
 description: Uaktualnij C++ kod firmy Microsoft do najnowszej wersji programu Visual Studio.
-ms.date: 10/29/2019
+ms.date: 11/05/2019
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
 ms.topic: overview
-ms.openlocfilehash: d67c2665574242a46d697f6e9f24321556146958
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 04c3950d637c01031e78d0d95e13232143ceb232
+ms.sourcegitcommit: 4dde7914608508e47c21cae03ac58fe953a0c29b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625684"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119492"
 ---
 # <a name="microsoft-c-porting-and-upgrading-guide"></a>Przewodnik C++ dotyczący przenoszenia i uaktualniania firmy Microsoft
 
@@ -25,7 +25,7 @@ Jeśli Starsza aplikacja działa prawidłowo, w bezpiecznym środowisku i nie je
 
 - Ten sam kod może działać szybciej ze względu na udoskonalone optymalizacje kompilatora.
 
-- Nowoczesne C++ funkcje i praktyki programistyczne eliminują wiele typowych przyczyn błędów i są znacznie prostsze, aby zachować starsze Idiomy w stylu języka C.
+- Nowoczesne C++ funkcje i praktyki programistyczne eliminują wiele typowych przyczyn błędów i tworzą kod, który jest bardzo łatwiejszy w obsłudze niż starszy idiomy języka C.
 
 - Czasy kompilacji są znacznie szybsze, ze względu na ulepszenia wydajności kompilatora i konsolidatora.
 
@@ -48,6 +48,7 @@ Aby uzyskać więcej informacji, zobacz [Używanie natywnego wielu elementów do
 |Tytuł|Opis|
 |-----------|-----------------|
 |[Uaktualnianie C++ projektów ze starszych wersji programu Visual Studio](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Jak uaktualnić bazę kodu do programu Visual Studio 2019 i v142 kompilatora.|
+|[Narzędzia IDE do uaktualniania C++ kodu](ide-tools-for-upgrading-code.md)|Przydatne funkcje środowiska IDE, które pomagają w procesie uaktualniania.|
 |[C++Zgodność binarna z zakresu od 2015 do 2019](binary-compat-2015-2017.md)|Korzystaj z bibliotek wersji 140 jako — z projektów v142.|
 |[Używanie natywnej wielowersyjności kodu w programie Visual Studio do kompilacji starych projektów](use-native-multi-targeting.md)|Użyj programu Visual Studio 2019 ze starszymi kompilatorami i bibliotekami.|
 |[Visual C++ — historia zmian w latach 2003–2015](visual-cpp-change-history-2003-2015.md)|Lista wszystkich zmian w bibliotekach i narzędziach C++ kompilacji firmy Microsoft z programu Visual Studio 2003 do 2015, które mogą wymagać zmian w kodzie.|
