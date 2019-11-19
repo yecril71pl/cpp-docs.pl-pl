@@ -153,12 +153,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: eb75273bc8cbe5ccbf62edc82a1e7deccc605757
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.openlocfilehash: 57982e32da75aa7f364c51146e50c3d75b4b7710
+ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816602"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74163337"
 ---
 # <a name="predefined-macros"></a>Wstępnie zdefiniowane makra
 
@@ -235,7 +235,7 @@ Program MSVC obsługuje te dodatkowe wstępnie zdefiniowane makra.
 
 - **&#95; Licznik &#95; &#95;** Rozwija do literału liczby całkowitej, który zaczyna się od 0. Wartość jest zwiększana o 1 za każdym razem, gdy jest używana w pliku źródłowym lub w zawartych nagłówkach pliku źródłowego. Licznik zapamiętuje swój stan w przypadku używania prekompilowanych nagłówków. **&#95; &#95;&#95;** To makro jest zawsze definiowane.
 
-  W tym przykładzie używa `__COUNTER__` do przypisywania unikatowych identyfikatorów do trzech różnych obiektów tego samego typu. Konstruktor `exampleClass` przyjmuje liczbę całkowitą jako parametr. W `main` Aplikacja deklaruje trzy obiekty typu `exampleClass`, używając `__COUNTER__` jako parametru unikatowego identyfikatora:
+  Ten przykład używa `__COUNTER__` do przypisywania unikatowych identyfikatorów do trzech różnych obiektów tego samego typu. Konstruktor `exampleClass` przyjmuje liczbę całkowitą jako parametr. W `main`aplikacja deklaruje trzy obiekty typu `exampleClass`, używając `__COUNTER__` jako parametru unikatowego identyfikatora:
 
     ```cpp
     // macro__COUNTER__.cpp
@@ -304,7 +304,7 @@ Program MSVC obsługuje te dodatkowe wstępnie zdefiniowane makra.
 
 - **&#95; FUNCDNAME &#95; &#95;** Zdefiniowane jako literał ciągu, który zawiera [nazwę dekoracyjną](../build/reference/decorated-names.md) otaczającej funkcji. Makro jest zdefiniowane tylko w obrębie funkcji. [](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)  **&#95;Makro FUNCDNAME&#95; nie jest rozwinięte, jeśli używasz opcji kompilatora/EP lub &#95;** [/p](../build/reference/p-preprocess-to-a-file.md) .
 
-   Ten przykład używa makr `__FUNCDNAME__`, `__FUNCSIG__` i `__FUNCTION__`, aby wyświetlić informacje o funkcji.
+   Ten przykład używa makr `__FUNCDNAME__`, `__FUNCSIG__`i `__FUNCTION__` do wyświetlania informacji o funkcji.
 
    [!code-cpp[NVC_Predefined_Macros_Examples#1](../preprocessor/codesnippet/CPP/predefined-macros_1.cpp)]
 
@@ -336,9 +336,9 @@ Program MSVC obsługuje te dodatkowe wstępnie zdefiniowane makra.
 
 - **&#95;M&#95;ARM&#95;FP** zdefiniowane jako wartość literału liczb całkowitych, która wskazuje, która opcja kompilatora [/Arch](../build/reference/arch-arm.md) została ustawiona dla docelowych procesorów ARM. W przeciwnym razie, niezdefiniowany.
 
-  - Wartość w zakresie 30-39, jeśli nie została określona opcja ARM `/arch`, co oznacza, że ustawiono architekturę domyślną dla ARM (`VFPv3`).
+  - Wartość w zakresie 30-39, jeśli nie określono opcji ARM `/arch`, wskazując, że domyślna architektura dla ARM została ustawiona (`VFPv3`).
 
-  - Wartość z zakresu 40-49, jeśli ustawiono `/arch:VFPv4`.
+  - Wartość z zakresu 40-49, jeśli `/arch:VFPv4` została ustawiona.
 
   - Aby uzyskać więcej informacji, zobacz [/arch (ARM)](../build/reference/arch-arm.md).
 
@@ -366,7 +366,7 @@ Program MSVC obsługuje te dodatkowe wstępnie zdefiniowane makra.
 
   - 1, jeśli ustawiono opcję kompilatora `/arch:SSE`.
 
-  - 2 Jeśli ustawiono opcję kompilatora `/arch:SSE2`, `/arch:AVX`, `/arch:AVX2` lub `/arch:AVX512`. Ta wartość jest wartością domyślną, jeśli nie określono opcji kompilatora `/arch`. Gdy zostanie określona `/arch:AVX`, zostanie również  **&#95; &#95;zdefiniowana&#95; AVX** makr. Po określeniu wartości `/arch:AVX2` są także zdefiniowane zarówno **&#95; &#95;AVX&#95;** , jak i **&#95; &#95;AVX2&#95;** . Gdy `/arch:AVX512` jest określony,  **&#95; &#95;AVX&#95;** ,  **&#95; &#95;AVX2&#95;** ,  **&#95; &#95;AVX512BW&#95;** ,  **&#95;&#95;AVX512CD, &#95;**  **&#95;Zdefiniowano również&#95;AVX512DQ, AVX512F i AVX512VL. &#95;** **&#95; &#95;&#95;** **&#95; &#95;&#95;**
+  - 2, jeśli ustawiono opcję kompilatora `/arch:SSE2`, `/arch:AVX`, `/arch:AVX2`lub `/arch:AVX512`. Ta wartość jest wartością domyślną, jeśli nie określono opcji kompilatora `/arch`. Gdy `/arch:AVX` jest określona, zostanie również  **&#95; &#95;zdefiniowana&#95; AVX** makr. W przypadku określenia `/arch:AVX2` są również  **&#95; &#95;zdefiniowane&#95; zarówno AVX** , jak i **&#95; &#95;AVX2&#95;** . Gdy `/arch:AVX512` jest określony,  **&#95; &#95;&#95;** są również zdefiniowane AVX,  **&#95; &#95;AVX2&#95;**  **&#95; &#95;,&#95;AVX512BW**,  **&#95; &#95;AVX512CD&#95;** , **&#95;AVX512DQ, &#95; &#95;** **AVX512F &#95;i&#95; AVX512VL. &#95;** **&#95; &#95;&#95;**
 
   - Aby uzyskać więcej informacji, zobacz [/arch (x86)](../build/reference/arch-x86.md).
 
@@ -423,7 +423,7 @@ Program MSVC obsługuje te dodatkowe wstępnie zdefiniowane makra.
 
 - **&#95;&#95;Testy&#95;środowiska&#95;uruchomieniowego MSVC** zdefiniowane jako 1 po ustawieniu jednej z opcji kompilatora [/RTC](../build/reference/rtc-run-time-error-checks.md) . W przeciwnym razie, niezdefiniowany.
 
-- **&#95;MSVC&#95;tradycyjnie** zdefiniowany jako 0 w trybie zgodności preprocesora [/Experimental: opcja kompilatora preprocesora](../build/reference/rtc-run-time-error-checks.md) jest ustawiona. Domyślnie zdefiniowane jako 1 lub gdy jest ustawiona opcja ["/Experimental: preprocesor-kompilator"](../build/reference/rtc-run-time-error-checks.md) , aby wskazać, że tradycyjny preprocesor jest używany. MSVC tradycyjne makro i [/Experimental: preprocesor (Włącz tryb zgodności preprocesora)](../build/reference/experimental-preprocessor.md) jest dostępny w programie Visual Studio 2017 w wersji 15,8.  **&#95;&#95;**
+- **&#95;MSVC&#95;tradycyjnie** zdefiniowany jako 0 w trybie zgodności preprocesora [/Experimental: opcja kompilatora preprocesora](../build/reference/experimental-preprocessor.md) jest ustawiona. Domyślnie zdefiniowane jako 1 lub gdy jest ustawiona opcja ["/Experimental: preprocesor-kompilator"](../build/reference/experimental-preprocessor.md) , aby wskazać, że tradycyjny preprocesor jest używany. MSVC tradycyjne makro i [/Experimental: preprocesor (Włącz tryb zgodności preprocesora)](../build/reference/experimental-preprocessor.md) jest dostępny w programie Visual Studio 2017 w wersji 15,8.  **&#95;&#95;**
 
    ```cpp
    #if defined(_MSVC_TRADITIONAL) && _MSVC_TRADITIONAL
@@ -435,7 +435,7 @@ Program MSVC obsługuje te dodatkowe wstępnie zdefiniowane makra.
 
 - **&#95;MT** Zdefiniowane jako 1, jeśli określono [/MD lub/MDD](../build/reference/md-mt-ld-use-run-time-library.md) (WIELOWĄTKOWA Biblioteka DLL) lub [/MT lub/MTD](../build/reference/md-mt-ld-use-run-time-library.md) (wielowątkowy). W przeciwnym razie, niezdefiniowany.
 
-- **&#95;&#95;Natywny&#95;WCHAR&#95;T** zdefiniowany jako 1, gdy opcja kompilatora [/Zc: wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) jest ustawiona. W przeciwnym razie, niezdefiniowany.
+- **&#95;&#95;Natywne&#95;WCHAR&#95;T** zdefiniowane jako 1 po ustawieniu opcji kompilatora [/Zc: wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) . W przeciwnym razie, niezdefiniowany.
 
 - **&#95;OPENMP** Zdefiniowane jako literał liczby całkowitej 200203, jeśli ustawiono opcję kompilatora [/OpenMP (Włącz obsługę openmp 2,0)](../build/reference/openmp-enable-openmp-2-0-support.md) . Ta wartość reprezentuje datę specyfikacji OpenMP zaimplementowanej przez MSVC. W przeciwnym razie, niezdefiniowany.
 

@@ -2,28 +2,29 @@
 title: Odwołanie do asemblera ARM
 ms.date: 08/28/2017
 ms.assetid: f8a076cc-9627-4328-a34a-9c44f7a3aab1
-ms.openlocfilehash: 698bbae8e3ed48ff89c851baba380d7d9de7432a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dadb3730ae0efc4f81ee8141c0dbac956f2693ef
+ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167546"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74163232"
 ---
 # <a name="arm-assembler-reference"></a>Odwołanie do asemblera ARM
 
-Artykuły w tej części dokumentacji zapewniają materiały źródłowe dotyczące asemblera ARM firmy Microsoft (armasm) i pokrewnych narzędzi.
+Artykuły w tej sekcji dokumentacji zawierają materiały referencyjne dla asemblera ARM firmy Microsoft (armasm) i powiązanych narzędzi.
 
 ## <a name="related-articles"></a>Powiązane artykuły
 
 |Tytuł|Opis|
 |-----------|-----------------|
-|[Dokumentacja wiersza polecenia asemblera ARM](../../assembler/arm/arm-assembler-command-line-reference.md)|W tym artykule opisano opcje wiersza polecenia armasm.|
-|[Komunikaty diagnostyczne asemblera ARM](../../assembler/arm/arm-assembler-diagnostic-messages.md)|W tym artykule opisano najczęściej spotykanych armasm ostrzeżenia i komunikaty o błędach.|
+|[Dokumentacja wiersza polecenia asemblera ARM](../../assembler/arm/arm-assembler-command-line-reference.md)|Opisuje opcje wiersza polecenia armasm.|
+|[Komunikaty diagnostyczne asemblera ARM](../../assembler/arm/arm-assembler-diagnostic-messages.md)|Opisuje często występujące ostrzeżenia i komunikaty o błędach armasm.|
 |[Dyrektywy ARM dotycząca asemblera](../../assembler/arm/arm-assembler-directives.md)|Opisuje dyrektywy ARM, które różnią się w armasm.|
-|[Ręczne odwołanie do architektury ARM](https://developer.arm.com/search#q=ARM%20Architecture%20Reference%20Manual) w witrynie sieci Web deweloperów ARM.|Wybierz odpowiednie podręcznika dla architektury ARM. Każdy zawiera odwołanie do sekcji o ARM, miniatury, NEON i Visual FOXPRO i dodatkowe informacje na temat języka asemblera ARM.|
-|[ARM kompilator armasm Podręcznik użytkownika](https://developer.arm.com/search#q=ARM%20Compiler%20armasm%20User%20Guide) w witrynie sieci Web deweloperów ARM.|Wybierz najnowszą wersję można znaleźć aktualne informacje na temat języka asemblera ARM. **Uwaga:**  Asembler "armasm", która odnosi się do witryny dla deweloperów ARM nie jest asemblera armasm firmy Microsoft, który znajduje się w programie Visual Studio i jest opisana w tej sekcji.|
+|[Podręcznik referencyjny architektury ARM](https://developer.arm.com/search#q=ARM%20Architecture%20Reference%20Manual) w witrynie sieci Web dla deweloperów ARM.|Wybierz odpowiedni Podręcznik dla architektury ARM. Każda z nich zawiera sekcje referencyjne dotyczące ARM, kciuka, NEONu i Visual FoxPro oraz dodatkowe informacje na temat języka asemblera ARM.|
+|[Podręcznik użytkownika armasm kompilatora ARM](https://developer.arm.com/search#q=ARM%20Compiler%20armasm%20User%20Guide) w witrynie sieci Web dla deweloperów ARM.|Wybierz najnowszą wersję, aby uzyskać aktualne informacje o języku asemblera ARM. **Uwaga:**  Asembler "armasm", do którego odwołuje się witryna sieci Web dla deweloperów ARM, nie jest asemblerem programu Microsoft armasm, który jest zawarty w programie Visual Studio i został opisany w tej sekcji.|
 
 ## <a name="see-also"></a>Zobacz także
 
-[Funkcje wewnętrzne ARM](../../intrinsics/arm-intrinsics.md)<br/>
-[Funkcje wewnętrzne kompilatora](../../intrinsics/compiler-intrinsics.md)<br/>
+\ [wewnętrzne ARM](../../intrinsics/arm-intrinsics.md)
+[Arm64 wewnętrzne](../../intrinsics/arm64-intrinsics.md)\
+[Funkcje wewnętrzne kompilatora](../../intrinsics/compiler-intrinsics.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - cl.exe compiler, performance
 - cl.exe compiler, intrinsics
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
-ms.openlocfilehash: 8c101de6d74a4f2d3073bd220a29f2a0328d2959
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 61fc825e333b8d839d15752ce737dfc6d3980809
+ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216869"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74163489"
 ---
 # <a name="compiler-intrinsics"></a>Funkcje wewnętrzne kompilatora
 
@@ -26,15 +26,17 @@ Użycie funkcji wewnętrznych ma wpływ na przenośność kodu, ponieważ wewnę
 
 Niektóre funkcje wewnętrzne, takie jak `__assume` i `__ReadWriteBarrier`, zawierają informacje dla kompilatora, które mają wpływ na zachowanie optymalizatora.
 
-Niektóre funkcje wewnętrzne są dostępne tylko jako elementy wewnętrzne, a niektóre z nich są dostępne zarówno w funkcjach, jak i wewnętrznie. Możesz nakazać kompilatorowi użycie wewnętrznej implementacji na jeden z dwóch sposobów, w zależności od tego, czy chcesz włączyć tylko określone funkcje, czy chcesz włączyć wszystkie elementy wewnętrzne. Pierwszy sposób to użycie `#pragma intrinsic(` *wewnętrznego-Name-list*`)`. Dyrektywy pragma można użyć do określenia jednego wewnętrznego lub wielu elementów wewnętrznych rozdzielonych przecinkami. Drugim jest użycie opcji kompilatora [/Oi (Generuj funkcje wewnętrzne)](../build/reference/oi-generate-intrinsic-functions.md) , która sprawia, że wszystkie elementy wewnętrzne na danej platformie są dostępne. Abywymusić `#pragma function(`użycie wywołania funkcji zamiast wewnętrznego, w obszarze/Oi należy użyć *funkcji wewnętrznego-Name-list* `)` . Jeśli Dokumentacja dla określonych wewnętrznych notatek jest dostępna tylko jako wewnętrzna, implementacja wewnętrzna jest używana bez względu na to, czy **/Oi** `#pragma intrinsic` czy jest określony. We wszystkich przypadkach **/Oi** lub `#pragma intrinsic` zezwala, ale nie wymusza, aby Optymalizator używał wewnętrznej. Optymalizator nadal może wywołać funkcję.
+Niektóre funkcje wewnętrzne są dostępne tylko jako elementy wewnętrzne, a niektóre z nich są dostępne zarówno w funkcjach, jak i wewnętrznie. Możesz nakazać kompilatorowi użycie wewnętrznej implementacji na jeden z dwóch sposobów, w zależności od tego, czy chcesz włączyć tylko określone funkcje, czy chcesz włączyć wszystkie elementy wewnętrzne. Pierwszy sposób to użycie`)``#pragma intrinsic(`*wewnętrznego-Name-list* . Dyrektywy pragma można użyć do określenia jednego wewnętrznego lub wielu elementów wewnętrznych rozdzielonych przecinkami. Drugim jest użycie opcji kompilatora [/Oi (Generuj funkcje wewnętrzne)](../build/reference/oi-generate-intrinsic-functions.md) , która sprawia, że wszystkie elementy wewnętrzne na danej platformie są dostępne. Aby wymusić użycie wywołania funkcji zamiast wewnętrznego, w obszarze **/Oi**należy `#pragma function(`użyć`)` z *listy nazw wewnętrznych funkcji* . Jeśli Dokumentacja dla określonych wewnętrznych informacji jest dostępna tylko jako wewnętrzna, to implementacja wewnętrzna jest używana bez względu na to, czy określono **/Oi** lub `#pragma intrinsic`. We wszystkich przypadkach **/Oi** lub `#pragma intrinsic` zezwala, ale nie wymusza użycia wewnętrznego przez optymalizator. Optymalizator nadal może wywołać funkcję.
 
 Niektóre standardowe funkcje językaC++ C/library są dostępne w implementacjach wewnętrznych w niektórych architekturach. Podczas wywoływania funkcji CRT, implementacja wewnętrzna jest używana, jeśli **/Oi** jest określony w wierszu polecenia.
 
-Jest dostępny plik \<nagłówka intrin. h >, który deklaruje prototypy dla wspólnych funkcji wewnętrznych. Elementy wewnętrzne charakterystyczne dla producenta są dostępne w \<plikach nagłówkowych immintrin. \<h > i ammintrin. > h. Ponadto niektóre nagłówki systemu Windows deklarują funkcje, które są mapowane na wewnętrzne kompilator.
+Jest dostępny plik nagłówka \<intrin. h >, który deklaruje prototypy dla wspólnych funkcji wewnętrznych. Elementy wewnętrzne specyficzne dla producenta są dostępne w \<immintrin. h > i \<ammintrin. h > plików nagłówkowych. Ponadto niektóre nagłówki systemu Windows deklarują funkcje, które są mapowane na wewnętrzne kompilator.
 
 W poniższych sekcjach wymieniono wszystkie funkcje wewnętrzne, które są dostępne w różnych architekturach. Aby uzyskać więcej informacji na temat sposobu działania elementów roboczych na określonym procesorze docelowym, zapoznaj się z dokumentacją producenta.
 
 - [Funkcje wewnętrzne ARM](../intrinsics/arm-intrinsics.md)
+
+- [ARM64 wewnętrzne](../intrinsics/arm64-intrinsics.md)
 
 - [Lista funkcji wewnętrznych x86](../intrinsics/x86-intrinsics-list.md)
 

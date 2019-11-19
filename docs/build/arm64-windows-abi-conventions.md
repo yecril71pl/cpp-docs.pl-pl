@@ -1,57 +1,55 @@
 ---
-title: Przegląd Konwencji ARM64 ABI
+title: Przegląd konwencji ABI ARM64
 ms.date: 03/27/2019
-ms.openlocfilehash: bfb1b5b6be6a7a368c2ed7cab255da90ae7a22df
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 3a3df475b8f814fcecaf2e67a0a62c7267a0de30
+ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220992"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74163221"
 ---
-# <a name="overview-of-arm64-abi-conventions"></a>Przegląd Konwencji ARM64 ABI
+# <a name="overview-of-arm64-abi-conventions"></a>Przegląd konwencji ABI ARM64
 
-Interfejsem binarnym aplikacji w warstwie podstawowa (ABI) dla Windows podczas kompilowania i uruchamiania w procesorach ARM w trybie 64-bitowych (ARMv8 lub nowszej architektury), w przeważającej części następuje standardowa EABI AArch64 firmy ARM. W tym artykule opisano niektóre kluczowe założenia i zmiany z dokumentacji w EABI. Aby uzyskać informacji na temat interfejsu ABI 32-bitowych, zobacz [Konwencji ABI Przegląd ARM](overview-of-arm-abi-conventions.md). Aby uzyskać więcej informacji na temat standardowych EABI ARM, zobacz [aplikacji binarny interfejsu (ABI) dla architektury ARM](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html) (link zewnętrzny).
+Podstawowy interfejs binarny aplikacji (ABI) dla systemu Windows podczas kompilowania i uruchamiania na procesorach ARM w trybie 64-bitowym (ARMv8 lub nowsza), w większości przypadków, zgodnie z standardowym EABI AArch64. W tym artykule przedstawiono niektóre z najważniejszych założeń i zmian z tego, co opisano w EABI. Aby uzyskać informacje o 32-bitowym ABI, zobacz [Omówienie Konwencji usługi ARM ABI](overview-of-arm-abi-conventions.md). Aby uzyskać więcej informacji na temat standardowego ARM EABI, zobacz [Application Binary Interface (ABI) dla architektury ARM](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html) (Link zewnętrzny).
 
 ## <a name="definitions"></a>Definicje
 
-Wraz z wprowadzeniem Obsługa 64-bitowego ARM został zdefiniowany wiele warunków:
+Wraz z wprowadzeniem 64-bitowego wsparcia ARM definiuje kilka warunków:
 
-- **AArch32** — starszej wersji 32-bitowych rozkazów architektury (ISA) zdefiniowane przez ARM, w tym wykonywania w trybie Thumb.
-- **AArch64** — nowe 64-bitowych rozkazów architektury (ISA) zdefiniowane przez ARM.
-- **ARMv7** — Specyfikacja "generacja 7" ARM sprzętu, co obejmuje tylko obsługę AArch32. Ta wersja sprzętu ARM jest pierwszą wersję Windows dla ARM obsługiwane.
-- **ARMv8** — Specyfikacja pokolenia"8" ARM sprzętu, co obejmuje obsługę zarówno AArch32, jak i AArch64.
+- **AArch32** — starsza niż 32-bitowa architektura zestawu instrukcji (ISA) zdefiniowana przez ARM, w tym wykonywanie trybu przewijania.
+- **AArch64** — Nowa 64-bitowa architektura zestawu instrukcji (ISA) zdefiniowana przez ARM.
+- **Architektury ARMv7** — specyfikacja sprzętu ARM "siódma generacja", który obejmuje tylko obsługę AArch32. Ta wersja sprzętu ARM to pierwsza wersja systemu Windows dla usługi ARM.
+- **ARMv8** — specyfikacja sprzętu ARM "ósmy generacja", który obejmuje obsługę zarówno AArch32, jak i AArch64.
 
-Windows używa również następujące warunki:
+System Windows używa również następujących warunków:
 
-- **ARM** — odnosi się do 32-bitowa architektura ARM (AArch32), czasami nazywane podają (Windows na ARM).
-- **ARM32** — jest to taka sama jak ARM, powyżej; używanych w tym dokumencie w celu uściślenia.
-- **ARM64** — odnosi się do architektury ARM 64-bitowych (AArch64). Brak coś takiego jak WoA64.
+- **ARM** — oznacza 32-bitową architekturę ARM (AArch32), czasami nazywaną WoA (Windows on ARM).
+- **ARM32** — taka sama jak ARM, powyżej; używany w tym dokumencie do przejrzystości.
+- **Arm64** — dotyczy architektury ARM 64-bitowego (AArch64). Nie ma takiej WoA64.
 
-Na koniec przy odwoływaniu się do typów danych, następujące definicje z ARM do których istnieją odwołania:
+Na koniec podczas odwoływania się do typów danych są odwoływane następujące definicje z usługi ARM:
 
-- **Krótki wektor** — typ danych bezpośrednio reprezentowanych w SIMD, wektor elementów, które pomagają w zrealizowaniu 8 lub 16 bajtów. Jest wyrównany do jej rozmiaru 8 bajtów lub 16-bajtowy, gdzie każdy element może być 1, 2, 4 lub 8 bajtów.
-- **HFA (jednorodnych zmiennopozycyjna agregacji)** — typ danych z identycznymi członkami zmiennoprzecinkowych 2 do 4, liczby zmiennoprzecinkowe lub rozwiązanie quorum zwiększa dwukrotnie.
-- **HVA (jednorodnych krótki wektor agregacji)** — typ danych z identycznymi członkami krótki wektor 2 do 4.
+- **Short-Vector** — typ danych, które można bezpośrednio przedstawić w SIMD, wektor 8 bajtów lub 16 bajtów elementów. Jest on wyrównany do jego rozmiaru, 8 bajtów lub 16 bajtów, gdzie każdy element może mieć wartość 1, 2, 4 lub 8 bajtów.
+- **HFA (jednorodna agregacja zmiennoprzecinkowa)** — typ danych z 2 do 4 identycznych elementów członkowskich zmiennoprzecinkowych, wartości zmiennoprzecinkowe lub podwójne.
+- **HVA (jednorodna funkcja globalnej agregacji wektorowej)** — typ danych z 2 do 4 identycznych elementów członkowskich krótkich wektorów.
 
-## <a name="base-requirements"></a>Wymagania dotyczące podstawowej
+## <a name="base-requirements"></a>Wymagania podstawowe
 
-Wersja architektury ARM64 Windows zakłada, że działa on ARMv8 lub nowszej architektury przez cały czas. Zarówno zmiennoprzecinkowe i pomocy technicznej NEON jest uznawana za tę obecny w sprzęcie.
+Wersja ARM64 systemu Windows zakłada, że jest uruchomiona w architekturze ARMv8 lub nowszej. Założenie, że obsługa zmiennoprzecinkowa i NEON jest obecna na sprzęcie.
 
-Specyfikacja ARMv8 umożliwia pełną obsługę AArch32 aplikacji. Jednak obsługa istniejących aplikacji ARM32 w wersji ARM64 Windows nie jest planowana. (Oznacza to, że nie ma żadnych planów dla WOW64). Ta obsługa podlega ponowną ocenę w przyszłości, ale jest bieżącym założeń pracy.
+Specyfikacja ARMv8 zawiera opis nowych opcjonalnych kodów operacji dla pomocników kryptograficznych i CRC zarówno dla AArch32, jak i AArch64. Obsługa dla nich jest obecnie opcjonalna, ale zalecana. Aby móc korzystać z tych kodów, aplikacje powinny najpierw przeprowadzić testy w czasie wykonywania.
 
-Specyfikacja ARMv8 opis nowego crypto opcjonalne i sumy kontrolnej pomocnika rozkazów AArch32 i AArch64. Wsparcie dla nich jest obecnie opcjonalne, ale zalecane. Aby móc korzystać z tych rozkazów, aplikacje, należy najpierw upewnić środowisko uruchomieniowe sprawdza, czy ich istnienia.
+## <a name="endianness"></a>Endian
 
-## <a name="endianness"></a>Kolejność bajtów
-
-Jak za pomocą ARM32 wersji systemu Windows na Windows ARM64 wykonuje w trybie little-endian. Przełączanie kolejność bajtów jest trudny do osiągnięcia bez obsługi trybu jądra w AArch64, dzięki czemu łatwiej jest je wymuszania.
+Podobnie jak w przypadku wersji ARM32 systemu Windows, w programie ARM64 system Windows jest wykonywany w trybie little-endian. Nie ma potrzeby obsługi trybu jądra w AArch64, dzięki czemu można łatwiej wymusić przełączanie endian.
 
 ## <a name="alignment"></a>Wyrównanie
 
-Uruchomione dla procesorów ARM64 Windows umożliwia sprzętu Procesora do obsługi niewyrównane dostępy do w sposób niewidoczny dla użytkownika. W poprawę AArch32 ta obsługa również działa teraz dla wszystkich dostępów całkowitą (w tym uzyskuje dostęp do wielu słów) i zmiennoprzecinkowych uzyskuje dostęp do.
+System Windows działający w systemie ARM64 umożliwia sprzętowe użycie procesora CPU w sposób niewidoczny dla użytkownika. W wyniku ulepszeń z AArch32 ta obsługa jest teraz również dostępna dla wszystkich dostępu do liczby całkowitej (w tym dostępu do tekstów) i dla dostępu zmiennoprzecinkowego.
 
-Jednak dostęp do pamięci bez buforowania (urządzenia) nadal muszą zawsze być wyrównane. Jeśli kodu prawdopodobnie można odczytać lub zapisać niewyrównane dane z pamięci bez buforowania, upewnij się wyrównać każdy dostęp.
+Jednak dostęp do pamięci podręcznej (urządzenia) nadal musi być zawsze wyrównany. Jeśli kod może spowodować odczytanie lub zapisanie niewyrównanych danych z pamięci niebuforowanej, należy upewnić się, że są wyrównane wszystkie dostępy.
 
-Wyrównanie układ domyślny dla zmiennych lokalnych:
+Domyślne wyrównanie układu dla ustawień regionalnych:
 
 | Rozmiar w bajtach | Wyrównanie w bajtach |
 | - | - |
@@ -60,200 +58,200 @@ Wyrównanie układ domyślny dla zmiennych lokalnych:
 | 3, 4 | 4 |
 | > 4 | 8 |
 
-Domyślne wyrównanie układ i elementy statyczne zmienne globalne:
+Domyślne wyrównanie układu dla Globals i statics:
 
 | Rozmiar w bajtach | Wyrównanie w bajtach |
 | - | - |
 | 1 | 1 |
 | 2 - 7 | 4 |
 | 8 - 63 | 8 |
-| >= 64 | 16 |
+| > = 64 | 16 |
 
-## <a name="integer-registers"></a>Rejestruje liczbę całkowitą
+## <a name="integer-registers"></a>Rejestry całkowite
 
-Architektura AArch64 obsługuje 32 rejestrów liczbą całkowitą:
+Architektura AArch64 obsługuje rejestry całkowite 32:
 
-| Rejestruj | Nietrwałe? | Rola |
+| Rejestruj | Volatile? | Roli |
 | - | - | - |
-| x0 | Volatile | Parametr/podstaw Zarejestruj 1, zarejestruj się wynik |
-| x1-x7 | Volatile | Parametr/podstaw rejestru od 2 do 8 |
-| x8-x15 | Volatile | Rejestruje pliki tymczasowe |
-| x16-x17 | Volatile | Rejestruje pliki tymczasowe wewnątrz procedury wywołania |
-| x18 | Non-volatile | Rejestr platformy: w trybie jądra wskazuje KPCR dla bieżącego procesora; w trybie użytkownika wskazuje TEB |
-| x19-x28 | Non-volatile | Rejestruje pliki tymczasowe |
-| x29/fp | Non-volatile | Wskaźnik ramki |
-| x30/lr | Non-volatile | Rejestruje łącza |
+| kolumn | Volatile | Parametr/rejestr wyrejestrowania 1, rejestr wyników |
+| x1 — 120 | Volatile | Rejestr/Wyrejestrowanie 2-8 |
+| x8 — x15 | Volatile | Rejestry |
+| x16 — x17 | Volatile | Wewnętrzne rejestry wywołań |
+| x18 | Nietrwały | Rejestracja platformy: w trybie jądra wskazuje KPCR dla bieżącego procesora; w trybie użytkownika wskazuje TEB |
+| x19-x28 | Nietrwały | Rejestry |
+| x29/FP | Nietrwały | Wskaźnik ramki |
+| X30/LR | Nietrwały | Rejestry linków |
 
-Każdego rejestru można uzyskać dostęp, jako wartość pełnej 64-bitowych (za pośrednictwem x0 x30) lub jako 32-bitową wartość (za pośrednictwem w0 w30). 32-bitowe operacje zero — rozszerzenie osiągnęli maksymalnie 64-bitowy.
+Do każdej rejestracji można uzyskać dostęp jako pełna wartość 64-bitowa (za pośrednictwem x0-X30) lub jako wartość 32-bitowa (za pośrednictwem W0-W30). 32-bitowe operacje zero — zwiększają ich wyniki do 64 bitów.
 
-Zobacz przekazywanie sekcji, aby uzyskać szczegółowe informacje związane z użyciem rejestrów parametr parametru.
+Zobacz sekcję przekazywanie parametrów, aby uzyskać szczegółowe informacje na temat używania rejestrów parametrów.
 
-W odróżnieniu od AArch32 licznik programu (PC) i wskaźnik stosu (SP) nie są indeksowane rejestrów. Są one ograniczone w jaki sposób można uzyskać dostęp. Zwróć uwagę, że nie x31 zarejestrować. Czy używane jest kodowanie do specjalnych celów.
+W przeciwieństwie do AArch32, licznik programu (komputer) i wskaźnik stosu (SP) nie są indeksowane rejestrów. Są one ograniczone do uzyskiwania dostępu do nich. Należy również zauważyć, że nie ma żadnego rejestru x31. To kodowanie jest używane do celów specjalnych.
 
-Wskaźnik ramki (x29) jest wymagane dla zachowania zgodności z szybkiego stosu zalet posługują się zdarzeń systemu Windows i innych usług. Musi wskazywać na poprzednim {x29, x 30} pary na stosie.
+Wskaźnik ramki (x29) jest wymagany w celu zapewnienia zgodności z szybkim poramie stosu używanym przez funkcję ETW i inne usługi. Musi ona wskazywać na poprzednią parę {x29, X30} na stosie.
 
-## <a name="floating-pointsimd-registers"></a>Rejestruje Floating point/SIMD
+## <a name="floating-pointsimd-registers"></a>Rejestry zmiennoprzecinkowe/SIMD
 
-Architektura AArch64 obsługuje również 32 rejestrów floating point/SIMD, podsumowano poniżej:
+Architektura AArch64 obsługuje również 32 rejestrów zmiennoprzecinkowych/SIMD, podsumowujących poniżej:
 
-| Rejestruj | Nietrwałe? | Rola |
+| Rejestruj | Volatile? | Roli |
 | - | - | - |
-| v0 | Volatile | Parametr/podstaw Zarejestruj 1, zarejestruj się wynik |
-| v1-v7 | Volatile | Parametr/podstaw rejestruje od 2 do 8 |
-| v8-v15 | Non-volatile | Pliki tymczasowe rejestrów (tylko 64-bitowy niski trwałej) |
-| v16-v31 | Volatile | Rejestruje pliki tymczasowe |
+| VO | Volatile | Parametr/rejestr wyrejestrowania 1, rejestr wyników |
+| V1 — wersji 7 | Volatile | Rejestry parametrów/rejestrowania 2-8 |
+| V8 — 15 | Nietrwały | Rejestry wstępne (tylko niskie 64 bitów są nietrwałe) |
+| v16-v31 | Volatile | Rejestry |
 
-Każdego rejestru można uzyskać dostęp jako wartość 128 bitów (za pośrednictwem v0 v31 lub q0 q31). Jego można uzyskać dostęp jako wartość 64-bitowych (za pośrednictwem d0-d31) jako 32-bitową wartość (za pośrednictwem s0-s31) jako wartości 16-bitowych (za pośrednictwem h0 h31) lub jako wartości 8-bitowa (za pośrednictwem b0 b31). Uzyskuje dostęp do mniejszy niż 128 bitów dostęp tylko do dolnej bity rejestru 128 bitów. Pozostałych bitów opuszczają bez zmian, chyba że określono inaczej. (AArch64 różni się od AArch32, gdzie mniejszych rejestrów umieszczono je na podstawie większych rejestrów.)
+Do każdego rejestru można uzyskać dostęp jako pełna wartość 128-bitowa (za pośrednictwem VO-v31 lub Q0-q31). Dostęp do niego można uzyskać jako wartość 64-bitowa (za pośrednictwem d0-D31) jako wartość 32-bitowa (za pośrednictwem S0-S31) jako wartość 16-bitowa (za pośrednictwem H0-H31) lub jako wartość 8-bitowa (za pośrednictwem B0-B31). Dostęp mniejszy niż 128 bitów uzyskuje dostęp tylko do dolnych bitów pełnego rejestru 128-bitowego. Pozostałe bity pozostają bez zmian, o ile nie określono inaczej. (AArch64 różni się od AArch32, gdzie mniejsze rejestry zostały spakowane na wyższym poziomie rejestrów).
 
-Rejestrowanie sterowania zmiennoprzecinkowego (FPCR) na różne pola bitów w nim wiążą się pewne wymagania:
+Rejestr kontroli zmiennoprzecinkowej (FPCR) ma pewne wymagania dotyczące różnych pola bitów w nim:
 
-| Bity | Znaczenie | Nietrwałe? | Rola |
+| Bity | Znaczenie | Volatile? | Roli |
 | - | - | - | - |
-| 26 | AHP | -Volatile | Alternatywne formant precyzji połowę. |
-| 25 | NAZWA WYRÓŻNIAJĄCA | -Volatile | Domyślny formant tryb NaN. |
-| 24 | FZ | Non-volatile | Kontrolka trybu opróżniania do zera. |
-| 23-22 | RMode | Non-volatile | Tryb formant zaokrąglenia. |
-| 15,12-8 | IDE/IXE/etc | -Volatile | Wyjątek pułapki włączenie usługi bits, zawsze musi być równa 0. |
+| 25 | AHP | Nietrwały | Alternatywny formant o połówkowej precyzji. |
+| 6,25 | WYRÓŻNIAJĄC | Nietrwały | Domyślna kontrolka trybu NaN. |
+| codzienne | FZ | Nietrwały | Kontrolka trybu opróżniania do zera. |
+| 23-22 | RMode | Nietrwały | Kontrolka tryb zaokrąglania. |
+| 15, 12 – 8 | IDE/IXE/etc | Nietrwały | W przypadku usługi BITS pułapki wyjątków musi być zawsze równa 0. |
 
-## <a name="system-registers"></a>System rejestrów
+## <a name="system-registers"></a>Rejestry systemu
 
-Jak AArch32 Specyfikacja AArch64 zawiera trzy kontrolowane przez system "identyfikator wątku" rejestrów:
+Podobnie jak w przypadku AArch32, Specyfikacja AArch64 zawiera trzy rejestry "Identyfikator wątku" sterowane systemem:
 
-| Rejestruj | Rola |
+| Rejestruj | Roli |
 | - | - |
-| TPIDR_EL0 | Zastrzeżone. |
-| TPIDRRO_EL0 | Zawiera numer procesora CPU dla bieżącego procesora. |
+| TPIDR_EL0 | Rezerwacj. |
+| TPIDRRO_EL0 | Zawiera liczbę procesorów dla bieżącego procesora. |
 | TPIDR_EL1 | Wskazuje strukturę KPCR dla bieżącego procesora. |
 
 ## <a name="floating-point-exceptions"></a>Wyjątki zmiennoprzecinkowe
 
-Obsługa wyjątków zmiennoprzecinkowych IEEE jest opcjonalny w systemach AArch64. Wariantów procesora, które mają wyjątków zmiennoprzecinkowych sprzętu jądra Windows zostaje niezauważenie przechwycony wyjątek i niejawnie wyłącza je w rejestrze FPCR. Tej pułapki zapewnia zachowanie znormalizowane we wariantów procesora. W przeciwnym razie kod opracowany na platformie bez obsługi wyjątków może się okazać sam biorąc nieoczekiwane wyjątki podczas uruchamiania na platformie, z pomocą techniczną.
+Obsługa wyjątków zmiennoprzecinkowych IEEE jest opcjonalna w systemach AArch64. W przypadku wariantów procesora, które mają sprzętowe wyjątki zmiennoprzecinkowe, jądro systemu Windows dyskretnie przechwytuje wyjątki i niejawnie wyłącza je w rejestrze FPCR. Ta pułapka zapewnia znormalizowane zachowanie dla różnych wariantów procesora. W przeciwnym razie kod opracowany na platformie bez obsługi wyjątków może być w trakcie uruchamiania na platformie z obsługą nieoczekiwanych wyjątków.
 
-## <a name="parameter-passing"></a>Przekazywanie parametru
+## <a name="parameter-passing"></a>Przekazywanie parametrów
 
-W przypadku funkcji innych zmiennych Windows ABI jest zgodna z regułami określonymi przez ARM dla parametru, przekazując. Te reguły pochodzą bezpośrednio ze standardowego wywołania procedury dla architektury AArch64:
+W przypadku funkcji innych niż wariadyczne system Windows ABI stosuje się do zasad określonych przez ARM na potrzeby przekazywania parametrów. Te reguły są przedstawione bezpośrednio w standardowym wywołaniu procedury dla architektury AArch64:
 
-### <a name="stage-a--initialization"></a>Etap A — inicjowanie
+### <a name="stage-a--initialization"></a>Etap A — Inicjalizacja
 
-Ten etap odbywa się dokładnie jeden raz, przed rozpoczęciem przetwarzania argumentów.
+Ten etap jest wykonywany dokładnie raz, przed rozpoczęciem przetwarzania argumentów.
 
-1. Następny General-purpose zarejestrować numer (NGRN) jest równa zero.
+1. Następny numer rejestru ogólnego przeznaczenia (NGRN) jest ustawiony na zero.
 
-1. Dalej SIMD i zmiennopozycyjna zarejestrować numer (NSRN) jest równa zero.
+1. W następnym SIMD i liczbie zmiennoprzecinkowej rejestru (NSRN) jest ustawiona wartość zero.
 
-1. Adres następnego skumulowany argumentu (NSAA) jest równa bieżąca wartość wskaźnika stosu (SP).
+1. Następny skumulowany adres argumentu (NSAA) jest ustawiony na bieżącą wartość wskaźnika stosu (SP).
 
-### <a name="stage-b--pre-padding-and-extension-of-arguments"></a>Etap B — wstępne wypełnienie i rozszerzenie argumentów
+### <a name="stage-b--pre-padding-and-extension-of-arguments"></a>Etap B — wstępne uzupełnienie i rozszerzenie argumentów
 
-W każdy argument na liście jest stosowane pierwsza pasująca reguła z poniższej listy. Jeśli nie są zgodne reguły, argument jest używany w niezmienionej postaci.
+Dla każdego argumentu na liście stosowana jest pierwsza reguła dopasowywania z poniższej listy. Jeśli żadna reguła nie pasuje, argument jest używany niemodyfikowany.
 
-1. Jeśli typ argumentu jest typu złożonego, którego rozmiar nie można ustalić statycznie przez obiekt wywołujący i obiekt wywoływany, argument jest kopiowany do pamięci, a argument jest zastępowany przez wskaźnik do skopiowania. (Nie ma żadnych takich typów, jak w języku C/C++, ale istnieją one w innych językach lub rozszerzenia językowe).
+1. Jeśli typ argumentu jest typem złożonym, którego rozmiar nie może być statycznie określony przez obiekt wywołujący i wywoływany, argument jest kopiowany do pamięci, a argument jest zastępowany przez wskaźnik do kopii. (Nie ma takich typów w C/C++ , ale istnieją w innych językach lub w rozszerzeniach języka).
 
-1. Jeśli typ argumentu jest HFA lub HVA, a następnie jest używany argument zostały zmodyfikowane.
+1. Jeśli typ argumentu to HFA lub HVA, argument jest używany niemodyfikowany.
 
-1. Jeśli typ argumentu jest większa niż 16-bajtowy typ złożony, następnie argument jest kopiowana do pamięci przydzielonej przez obiekt wywołujący, a argument jest zastępowany przez wskaźnik do skopiowania.
+1. Jeśli typ argumentu jest typem złożonym większym niż 16 bajtów, argument jest kopiowany do pamięci przydzielonej przez obiekt wywołujący, a argument jest zastępowany przez wskaźnik do kopii.
 
-1. Jeśli typ argumentu jest typu złożonego, rozmiar argumentu jest zaokrąglana w górę do najbliższej wielokrotności 8 bajtów.
+1. Jeśli typ argumentu jest typem złożonym, rozmiar argumentu jest zaokrąglany do najbliższej wielokrotności 8 bajtów.
 
-### <a name="stage-c--assignment-of-arguments-to-registers-and-stack"></a>Etap C — przypisanie argumenty do rejestrów i stosu
+### <a name="stage-c--assignment-of-arguments-to-registers-and-stack"></a>Etap C — przypisanie argumentów do rejestrów i stosu
 
-Dla każdego argumentu na liście stosowane są następujące reguły z kolei, dopóki nie została przydzielona argumentu. Jeśli argument jest przypisana do rejestru, nieużywane wszystkie bity, które są dostępne w rejestrze ma nie określono tego parametru wartości. Jeśli argument jest przypisany do miejsca na stosie, wszelkie bajtów uzupełniających nieużywane mają nie określono tego parametru wartości.
+Dla każdego argumentu na liście są stosowane następujące reguły do momentu przydzielenia tego argumentu. Gdy argument jest przypisany do rejestru, wszystkie nieużywane bity w rejestrze mają nieokreśloną wartość. Jeśli argument jest przypisany do gniazda stosu, wszystkie nieużywane bajty uzupełniania mają nieokreśloną wartość.
 
-1. Jeśli argument jest pół-, jedno-, Double lub cztery precyzji zmiennoprzecinkowego lub typu krótkiego wektora i NSRN jest mniejsze niż 8, a następnie argument jest przydzielany do najmniej znaczących bitów rejestru v\[NSRN]. NSRN jest zwiększany o jeden. Argument została przydzielona.
+1. Jeśli argument jest typu pół-lub o podwójnej precyzji zmiennoprzecinkowej lub krótkiej, a wartość NSRN jest mniejsza niż 8, argument jest przypisywany do najmniej znaczących bitów usługi Register v\[NSRN]. NSRN jest zwiększana o jeden. Argument został przydzielony.
 
-1. Jeśli argument jest HFA lub HVA i istnieje wystarczająca nieprzydzielone SIMD i rejestrów zmiennoprzecinkowych (NSRN + liczba elementów członkowskich ≤ 8), argument jest przydzielany SIMD i rejestruje zmiennopozycyjna jeden rejestr poszczególnych członków HFA lub HVA. NSRN jest zwiększany przez liczbę rejestry używane. Argument została przydzielona.
+1. Jeśli argument jest HFA lub HVA, a istnieją wystarczające przydzielono rejestrów SIMD i zmiennoprzecinkowych (NSRN + liczba członków ≤ 8), argument jest przypisywany do i rejestrów zmiennoprzecinkowych, jeden rejestr na element członkowski SIMD lub HFA. NSRN jest zwiększana o liczbę używanych rejestrów. Argument został przydzielony.
 
-1. Jeśli argument jest HFA lub HVA, następnie NSRN jest równa 8, a rozmiar argumentu jest zaokrąglana w górę do najbliższej wielokrotności 8 bajtów.
+1. Jeśli argument jest HFA lub HVA, wówczas NSRN jest ustawiona na 8, a rozmiar argumentu jest zaokrąglany do najbliższej wielokrotności 8 bajtów.
 
-1. Jeśli argument jest HFA, HVA, cztery precyzji zmiennoprzecinkowego lub krótki typem wektora, a następnie NSAA jest zaokrąglana do większego z 8 lub naturalnego wyrównania składowej typu argumentu.
+1. Jeśli argument jest HFA, HVA, typu zmiennoprzecinkowego o poczwórnej precyzji lub krótkiej wektora, a następnie NSAA jest zaokrąglana do większej liczby 8 lub naturalnego wyrównania typu argumentu.
 
-1. Jeśli argument jest typem zmiennoprzecinkowej połowie lub pojedynczej precyzji, rozmiar argumentu jest ustawiony na 8 bajtów. Efekt jest tak, jakby było argument został skopiowany do najmniej znaczących bitów rejestr 64-bitowy i pozostałych bitów wypełnione wartościami nieokreślony.
+1. Jeśli argument jest typu zmiennoprzecinkowego o połowie lub pojedynczej precyzji, wówczas rozmiar argumentu jest ustawiony na 8 bajtów. Jest to efekt, tak jakby argument został skopiowany do najmniej znaczących bitów rejestru 64-bitowego, a pozostałe bity zostały wypełnione nieokreślonymi wartościami.
 
-1. Jeśli argument jest HFA, HVA, pół-, jedno-, Double- lub cztery precyzji zmiennoprzecinkowego lub typu krótkiego wektora, a następnie argument jest kopiowany do pamięci na skorygowany NSAA. NSAA jest zwiększany o rozmiar argumentu. Argument została przydzielona.
+1. Jeśli argument jest HFA, typu zmiennoprzecinkowego, pojedynczej, podwójnej precyzji lub krótkiej klasy wektora, to argument jest kopiowany do pamięci na dostosowaną NSAA. Wartość NSAA jest zwiększana o rozmiar argumentu. Argument został przydzielony.
 
-1. Jeśli argument jest całkowitego lub typu wskaźnika, rozmiar argumentu jest większa niż 8 bajtów i NGRN wynosi mniej niż 8, argument jest kopiowany do najmniej znaczących bitów w x\[NGRN]. NGRN jest zwiększany o jeden. Argument została przydzielona.
+1. Jeśli argument jest typem całkowitym lub wskaźnikowym, rozmiar argumentu jest mniejszy niż lub równy 8 bajtów, a NGRN jest mniejszy niż 8, argument jest kopiowany do najmniej znaczących bitów w x\[NGRN]. NGRN jest zwiększana o jeden. Argument został przydzielony.
 
-1. Jeśli argument jest wyrównanie, 16, NGRN jest zaokrąglana w górę do najbliższej parzystej liczby.
+1. Jeśli argument ma wyrównanie 16, to NGRN jest zaokrąglana do następnej parzystej liczby.
 
-1. Jeśli argument jest typem całkowitym, rozmiar argumentu jest równy 16 i NGRN jest mniejszy niż 7, argument jest kopiowany do x\[NGRN] i x\[NGRN + 1]. x\[NGRN] zawiera niższe zaadresowane double — słowo pamięci reprezentacji w postaci argumentu. NGRN jest zwiększany przez dwa. Argument została przydzielona.
+1. Jeśli argument jest typem całkowitym, rozmiar argumentu jest równy 16, a NGRN jest mniejszy niż 7, argument jest kopiowany do x\[NGRN] i x\[NGRN + 1]. x\[NGRN] musi zawierać dolną, rozstawioną dwuwyrazową reprezentację pamięci argumentu. NGRN jest zwiększana o dwa. Argument został przydzielony.
 
-1. Jeśli argument jest typu złożonego i rozmiar w słowa podwójne argumentu jest nie więcej niż 8 minus NGRN, a następnie argument jest kopiowana do kolejnych rejestrów ogólnego przeznaczenia, zaczynając od x\[NGRN]. Argument jest przekazywany tak, jakby został załadowany do rejestrów z adresu wyrównane do słowa podwójne przy użyciu odpowiedniej sekwencji LDR instrukcji, które ładują kolejnych rejestrów z pamięci. Zawartość częściami nieużywanych rejestrów, które są nie zostanie podany przez tego standardu. NGRN jest zwiększany przez liczbę rejestry używane. Argument została przydzielona.
+1. Jeśli argument jest typu złożonego, a rozmiar w podwójnych słowach argumentu nie przekracza 8 minus NGRN, argument jest kopiowany do kolejnych rejestrów ogólnego przeznaczenia, zaczynając od x\[NGRN]. Argument jest przesyłany tak, jakby został załadowany do rejestrów z adresu wyrównanego do podwójnego tekstu, z odpowiednią sekwencją instrukcji LDR, które ładują kolejne rejestry z pamięci. Zawartość wszelkich nieużywanych części rejestrów nie jest określona przez ten standard. NGRN jest zwiększana o liczbę używanych rejestrów. Argument został przydzielony.
 
-1. NGRN jest ustawiony na 8.
+1. NGRN jest ustawiona na 8.
 
-1. NSAA jest zaokrąglana do większego z 8 lub naturalnego wyrównania składowej typu argumentu.
+1. NSAA jest zaokrąglana do większej liczby 8 lub naturalnego wyrównania typu argumentu.
 
-1. Jeśli argument jest typu złożonego, argument jest kopiowany do pamięci na skorygowany NSAA. NSAA jest zwiększany o rozmiar argumentu. Argument została przydzielona.
+1. Jeśli argument jest typu złożonego, wówczas argument jest kopiowany do pamięci pod dostosowaną NSAA. Wartość NSAA jest zwiększana o rozmiar argumentu. Argument został przydzielony.
 
-1. Jeśli rozmiar argumentu jest mniejsza niż 8 bajtów, rozmiar argumentu jest ustawiony na 8 bajtów. Efekt jest tak, jakby argument został skopiowany do najmniej znaczących bitów rejestr 64-bitowy, a pozostałe bitów zostały wypełnione wartościami nieokreślony.
+1. Jeśli rozmiar argumentu jest mniejszy niż 8 bajtów, rozmiar argumentu jest ustawiony na 8 bajtów. Ma to wpływ na to, czy argument został skopiowany do najmniej znaczących bitów rejestru 64-bitowego, a pozostałe bity zostały wypełnione nieokreślonymi wartościami.
 
-1. Argument jest kopiowany do pamięci na skorygowany NSAA. NSAA jest zwiększany o rozmiar argumentu. Argument została przydzielona.
+1. Argument jest kopiowany do pamięci po dostosowaniu NSAA. Wartość NSAA jest zwiększana o rozmiar argumentu. Argument został przydzielony.
 
-### <a name="addendum-variadic-functions"></a>Dodatek: Funkcje ze zmienną liczbą argumentów
+### <a name="addendum-variadic-functions"></a>Uzupełnienie: funkcje wariadyczne
 
-Funkcje, które przyjmują zmienną liczbę argumentów są obsługiwane inaczej niż powyżej, w następujący sposób:
+Funkcje, które przyjmują zmienną liczbę argumentów, są obsługiwane inaczej niż powyżej, w następujący sposób:
 
-1. Wszystkie złożone są traktowane jako konta; nie specjalnego traktowania HFAs lub HVAs.
+1. Wszystkie złożone są traktowane jak takie jak: Brak specjalnego traktowania HFAs lub HVAs.
 
-1. SIMD i rejestruje zmiennopozycyjna nie są używane.
+1. SIMD i rejestry zmiennoprzecinkowe nie są używane.
 
-Skutecznie jest taka sama jak następujące reguły C.12–C.15 przydzielić argumenty urojone stosu, gdzie pierwszy 64 bajtów stosu są ładowane do x0 x7, a wszystkie pozostałe argumenty stosu są zwykle umieszczane.
+Efektywnie jest to taka sama jak następująca reguła C. 12 – C. 15 do przydzielania argumentów do wielobajtowego stosu, gdzie pierwsze 64 bajtów stosu są ładowane do x0-120 i wszystkie pozostałe argumenty stosu są zwykle umieszczane.
 
 ## <a name="return-values"></a>Zwracane wartości
 
-Wartości całkowitych są zwracane w x0.
+Wartości całkowite są zwracane w x0.
 
-Wartości zmiennoprzecinkowe są zwracane w s0, d0 lub v0 zgodnie z potrzebami.
+Wartości zmiennoprzecinkowe są zwracane w S0, d0 lub v0, zgodnie z potrzebami.
 
-Wartości HFA i HVA są zwracane w s0 s3, d0 d3 lub v0-v3, zgodnie z potrzebami.
+Wartości HFA i HVA są zwracane w S0-S3, d0-D3 lub v0-v3, zgodnie z potrzebami.
 
-Typy zwracane przez wartość są obsługiwane inaczej w zależności od tego, czy mają one pewne właściwości. Typy, które mają wszystkie te właściwości
+Typy zwracane przez wartość są obsługiwane w różny sposób w zależności od tego, czy mają pewne właściwości. Typy, które mają wszystkie te właściwości,
 
-- są one *agregacji* przez C ++ 14 definicję standardowych, oznacza to, że mają dostarczone przez użytkownika konstruktorów, nie prywatnych lub chronionych niestatycznych składowych danych, nie mają klas bazowych i żadnych funkcji wirtualnych i
-- mają one operator przypisania kopiowania prosta i
-- mają one proste destruktora
+- są one *agregowane* przez standardową definicję języka c++ 14, czyli nie mają konstruktorów dostarczonych przez użytkownika, żadnych prywatnych lub chronionych niestatycznych elementów członkowskich danych, nie klas bazowych ani żadnych funkcji wirtualnych, a także
+- mają operator przypisywania prostej kopii i
+- mają prosty destruktor,
 
-Użyj następujących stylu zwracany:
+Użyj następującego stylu powrotu:
 
-- Typy zwracane są mniejsze niż 8 bajtów w x0.
-- Typy zwracane są mniej niż 16-bajtowy x0 i x1 z x0 zawierający niższego rzędu 8 bajtów.
-- Dla typów więcej niż 16 bajtów obiekt wywołujący zachowuje blok pamięci w procentach wystarczający rozmiar i wyrównanie na potrzeby przechowywania wyniku. Adres bloku pamięci jest przekazywany jako dodatkowy argument do funkcji w x8. Obiekt wywoływany może modyfikować blok pamięci wynik w dowolnym momencie podczas wykonywania procedury. Obiekt wywoływany nie jest wymagane, aby zachować wartość przechowywaną w x8.
+- W x0 nie są zwracane typy mniejsze niż lub równe 8 bajtów.
+- Typy mniejsze niż lub równe 16 bajty są zwracane w x0 i x1 z parametrem x0 zawierającym mniej niż 8 bajtów.
+- W przypadku typów o wartości większej niż 16 bajtów obiekt wywołujący rezerwuje blok pamięci o wystarczającym rozmiarze i wyrównaniu, aby pomieścić wynik. Adres bloku pamięci jest przenoszona jako dodatkowy argument do funkcji w x8. Wywoływany może zmodyfikować blok pamięci wynikowej w dowolnym momencie wykonywania procedury podrzędnej. Wartość parametru wywoływanego nie jest wymagana w celu zachowania wartości przechowywanej w x8.
 
-Wszystkie pozostałe typy Użyj niniejszej Konwencji:
+Wszystkie inne typy używają tej Konwencji:
 
-- Obiekt wywołujący zachowuje blok pamięci w procentach wystarczający rozmiar i wyrównanie na potrzeby przechowywania wyniku. Adres bloku pamięci jest przekazywany jako dodatkowy argument do funkcji w x0 lub x1 Jeśli $te informacje są przekazywane w x0. Obiekt wywoływany może modyfikować blok pamięci wynik w dowolnym momencie podczas wykonywania procedury. / / Wywoływany zwraca x0 adres bloku pamięci.
+- Obiekt wywołujący rezerwuje blok pamięci o wystarczającym rozmiarze i wyrównaniu, aby pomieścić wynik. Adres bloku pamięci jest przenoszona jako dodatkowy argument do funkcji w x0 lub x1, jeśli $this jest przenoszona w x0. Wywoływany może zmodyfikować blok pamięci wynikowej w dowolnym momencie wykonywania procedury podrzędnej. Wywoływany zwraca adres bloku pamięci w x0.
 
 ## <a name="stack"></a>Stos
 
-Następujące ABI ogłoszonym przez ARM stos musi pozostać 16-bajtowy dostosowane przez cały czas. AArch64 zawiera funkcja sprzętowa, która generuje błędy wyrównania stosu za każdym razem PS nie jest wyrównany 16-bajtowy i powiązane z wątkiem SP obciążenia lub magazynu jest wykonywane. Windows działa z tą funkcją włączone przez cały czas.
+Po ABI przez ARM stos musi pozostać 16-bajtowy. AArch64 zawiera funkcję sprzętową, która generuje błędy wyrównania stosu za każdym razem, gdy SP nie jest wyrównany 16-bajtowe i jest wykonywane względnie obciążenie lub przechowywanie zależne od SP. System Windows jest uruchamiany z włączoną tą funkcją przez cały czas.
 
-Funkcje, które alokują 4k co najmniej warte stosu należy się upewnić, że każda strona przed ostatnią stronę jest dotknięciu w kolejności. Ta akcja zagwarantuje, żaden kod nie może "przeć za pośrednictwem" stron ochrony, używane przez program Windows do rozwijania stosu. Dotknięcie jest zazwyczaj wykonywane przez `__chkstk` pomocnika, która ma niestandardowy Konwencja wywoływania spełniającą alokacji stosu całkowita podzielona przez 16 w x15.
+Funkcje, które przydzielą 4K lub więcej informacji o stosie, muszą mieć pewność, że każda strona przed ostatnią stroną jest w porządku. Ta akcja zapewnia, że żaden kod nie może "przekroczyć" stron ochrony, które są używane przez system Windows do rozszerzenia stosu. Zwykle dotknięcie odbywa się przez pomocnika `__chkstk`, który ma niestandardową konwencję wywoływania, która przekazuje całkowitą alokację stosu podzieloną przez 16 w x15.
 
-## <a name="red-zone"></a>Czerwony strefy
+## <a name="red-zone"></a>Czerwona strefa
 
-16-bajtowy obszar bezpośrednio pod bieżący wskaźnik stosu jest zarezerwowany do użycia podczas analizy i dynamiczne, poprawianie scenariuszy. Ten obszar pozwala na dokładnie wygenerowany kod w celu wstawienia, która przechowuje dwa rejestrów w [sp nr 16] oraz tymczasowo są one używane do celów dowolnego. Jądra Windows gwarantuje, że te 16-bajtowy nie są zastąpione, jeśli wystąpi wyjątek lub przerwania jest pobierana w trybie użytkownika i jądra.
+Obszar 16-bajtowy bezpośrednio poniżej bieżącego wskaźnika stosu jest zarezerwowany do użytku w scenariuszach analizy i stosowania poprawek dynamicznych. Ten obszar pozwala na wstawienie dokładnie wygenerowanego kodu, który przechowuje dwa rejestry w [SP, #-16] i tymczasowo używa ich do dowolnych celów. Jądro systemu Windows gwarantuje, że te 16 bajtów nie są zastępowane w przypadku wykonania wyjątku lub przerwania w trybie użytkownika i jądra.
 
 ## <a name="kernel-stack"></a>Stos jądra
 
-Stosu trybu jądra domyślne w Windows to sześć stron (24k). W trybie jądra, należy zwracać szczególną uwagę do funkcji ze stosu dużych buforów. Ill-timed przerwania może pochodzić się przy użyciu nieco sporo miejsca, a następnie utwórz operację sprawdzania błędów alarm stosu.
+Domyślny stos trybu jądra w systemie Windows to sześć stron (24k). Zwróć szczególną uwagę na funkcje z dużymi buforami stosu w trybie jądra. Niewłaściwie przekroczenie czasu przerwanie może następować przy niewielkim stopniu i utworzyć kontrolę błędów awaryjnego stosu.
 
-## <a name="stack-walking"></a>Przechodzenie po stosie
+## <a name="stack-walking"></a>Idący stos
 
-Kod w Windows jest kompilowany za pomocą wskaźników ramek włączone ([/Oy-](reference/oy-frame-pointer-omission.md)) umożliwiające szybkie stos. Ogólnie rzecz biorąc, x29 (fp) wskazuje na link do następnej w łańcuchu, czyli {fp, lr} parę, wskazując wskaźnik do poprzedniej ramki na stosie i adres zwrotny. Zaleca się kodu innych firm Włącz wskaźników ramek, aby umożliwić profilowanie ulepszone i śledzenie.
+Kod w systemie Windows jest kompilowany z włączonymi wskaźnikami ramki ([/Oy-](reference/oy-frame-pointer-omission.md)), aby umożliwić szybkie przechodzenie na stosie. Ogólnie rzecz biorąc, x29 (FP) wskazuje następne łącze w łańcuchu, czyli parę {FP, LR}, wskazującą wskaźnik do poprzedniej ramki na stosie i adresie zwrotnym. Kod innej firmy zachęca się również do włączania wskaźników ramki, aby umożliwić lepsze profilowanie i śledzenie.
 
-## <a name="exception-unwinding"></a>Odwijanie wyjątków
+## <a name="exception-unwinding"></a>Odwracanie wyjątku
 
-Odwijanie podczas obsługi wyjątków jest wspierana przy użyciu kodów unwind. Kody unwind to sekwencja bajtów przechowywanych w sekcji .xdata pliku wykonywalnego. Opisano w nich operacji prologu i epilogu w sposób abstrakcyjne taki sposób, że efekty prologu funkcji mogą zostać cofnięte w ramach przygotowania do wykonywania kopii zapasowych wywołującego ramki stosu. Aby uzyskać więcej informacji o kodach unwind zobacz [obsługi wyjątków ARM64](arm64-exception-handling.md).
+Odwinięcie podczas obsługi wyjątków jest wspomagane za pomocą kodów wyłączania. Kody operacji unwind są sekwencją bajtów przechowywanych w sekcji. xdata pliku wykonywalnego. Opisują one operacje prologu i epilogu w sposób abstrakcyjny, w taki sposób, że efekty prologu funkcji można cofnąć, aby utworzyć kopię zapasową do ramki stosu wywołującego. Aby uzyskać więcej informacji na temat kodów unwind, zobacz [arm64 exceptioning](arm64-exception-handling.md).
 
-ARM EABI określa również odwijania model wyjątków, który używa kodów odwinięcia. Jednak specyfikacji prezentowany jest niewystarczająca dla odwijanie w Windows, który musi obsługiwać przypadki, w której komputer jest w trakcie funkcja prologu i epilogu.
+EABI ARM określa również wyjątek, który odwraca model, który używa kodów unwind. Jednakże specyfikacja przedstawiona jest niewystarczająca do odwinięcia w systemie Windows, co musi obsługiwać przypadki, w których komputer znajduje się w środku funkcji prologu lub epilogu.
 
-Powinny być opisane kod, który jest generowana dynamicznie przy użyciu funkcji dynamicznej tabel za pomocą `RtlAddFunctionTable` i skojarzone funkcje, tak aby wygenerowanego kodu mogą uczestniczyć w programie obsługi wyjątków.
+Dynamicznie generowany kod powinien zostać opisany przy użyciu tabel funkcji dynamicznych za pośrednictwem `RtlAddFunctionTable` i skojarzonych funkcji, tak aby wygenerowany kod mógł uczestniczyć w obsłudze wyjątków.
 
 ## <a name="cycle-counter"></a>Licznik cyklu
 
-Wszystkie procesory ARMv8 są wymagane do obsługi licznika cyklu zarejestrować rejestru 64-bitowym, który konfiguruje Windows, aby można było odczytać na dowolnym poziomie wyjątku, w tym trybie użytkownika. Jest możliwy za pośrednictwem specjalnego PMCCNTR_EL0 zarejestrować, przy użyciu MSR opcode w kodzie zestawu lub `_ReadStatusReg` wewnętrzne w języku C /C++ kodu.
+Wszystkie procesory ARMv8 są wymagane do obsługi rejestru licznika cykl, rejestr 64-bitowy, który system Windows konfiguruje do odczytu na dowolnym poziomie wyjątku, w tym w trybie użytkownika. Dostęp do niego można uzyskać za pośrednictwem specjalnego rejestru PMCCNTR_EL0 przy użyciu kodu w kodzie zestawu lub `_ReadStatusReg` wewnętrznej w języku C/C++ Code.
 
-Wartość licznika cyklu jest licznikiem true cyklu, nie zegara tablicy. Częstotliwość zliczania będą się różnić z częstotliwością procesora. Jeśli uważasz, że musisz wiedzieć, częstotliwości licznika cyklu, nie należy używać licznika cyklu. Zamiast tego chcesz zmierzyć czas zegarowy, dla którego należy używać `QueryPerformanceCounter`.
+W tym miejscu licznik cyklu jest wartością prawda, a nie zegarem ściany. Częstotliwość zliczania zależy od częstotliwości procesora. Jeśli uważasz, że musisz znać częstotliwość licznika cykl, nie należy używać licznika cykli. Zamiast tego należy mierzyć czas zegara ściany, dla którego należy używać `QueryPerformanceCounter`.
 
 ## <a name="see-also"></a>Zobacz także
 
