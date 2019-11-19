@@ -4,12 +4,12 @@ ms.date: 09/02/2019
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
-ms.openlocfilehash: 93f53bf90bd8defaa4559e52c00cfcd6269edee4
-ms.sourcegitcommit: 499dfcb5622c4cd1b6afaf23b9de5b09b7751579
+ms.openlocfilehash: 0293daacd717b3ae85b993729090fe363f7e0b9b
+ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71012249"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74163471"
 ---
 # <a name="intrinsics-available-on-all-architectures"></a>Funkcje wewnętrzne dostępne we wszystkich architekturach
 
@@ -75,93 +75,94 @@ Następujące funkcje UCRT mają wewnętrzne formularze dla wszystkich architekt
 
 |Wewnętrznej|nagłówek|
 |---------------|------------|
-|[ABS](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
-|[_abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
-|[Acos](../c-runtime-library/reference/acos-acosf-acosl.md)|math.h|
-|[acosf](../c-runtime-library/reference/acos-acosf-acosl.md)|math.h|
-|[acosl](../c-runtime-library/reference/acos-acosf-acosl.md)|math.h|
-|[_alloca](../c-runtime-library/reference/alloca.md)|malloc.h|
-|[Asin](../c-runtime-library/reference/asin-asinf-asinl.md)|math.h|
-|[asinf —](../c-runtime-library/reference/asin-asinf-asinl.md)|math.h|
-|[asinl](../c-runtime-library/reference/asin-asinf-asinl.md)|math.h|
-|[atan](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|math.h|
-|[atan2](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|math.h|
-|[atan2f](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|math.h|
-|[atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|math.h|
-|[atanf](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|math.h|
-|[atanl](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|math.h|
-|[_byteswap_uint64](../c-runtime-library/reference/byteswap-uint64-byteswap-ulong-byteswap-ushort.md)|stdlib.h|
-|[_byteswap_ulong](../c-runtime-library/reference/byteswap-uint64-byteswap-ulong-byteswap-ushort.md)|stdlib.h|
-|[_byteswap_ushort](../c-runtime-library/reference/byteswap-uint64-byteswap-ulong-byteswap-ushort.md)|stdlib.h|
-|[CEIL —](../c-runtime-library/reference/ceil-ceilf-ceill.md)|math.h|
-|[ceilf](../c-runtime-library/reference/ceil-ceilf-ceill.md)|math.h|
-|[ceill](../c-runtime-library/reference/ceil-ceilf-ceill.md)|math.h|
-|[cos](../c-runtime-library/reference/cos-cosf-cosl.md)|math.h|
-|[cosf](../c-runtime-library/reference/cos-cosf-cosl.md)|math.h|
-|[cosh](../c-runtime-library/reference/cosh-coshf-coshl.md)|math.h|
-|[coshf](../c-runtime-library/reference/cosh-coshf-coshl.md)|math.h|
-|[coshl](../c-runtime-library/reference/cosh-coshf-coshl.md)|math.h|
-|[cosl](../c-runtime-library/reference/cos-cosf-cosl.md)|math.h|
-|[EXP](../c-runtime-library/reference/exp-expf.md)|math.h|
-|[expf](../c-runtime-library/reference/exp-expf.md)|math.h|
-|[expl](../c-runtime-library/reference/exp-expf.md)|math.h|
-|[fabs —](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|math.h|
-|[fabsf —](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|math.h|
-|[wykładzin](../c-runtime-library/reference/floor-floorf-floorl.md)|math.h|
-|[floorf](../c-runtime-library/reference/floor-floorf-floorl.md)|math.h|
-|[piętro](../c-runtime-library/reference/floor-floorf-floorl.md)|math.h|
-|[FMOD —](../c-runtime-library/reference/fmod-fmodf.md)|math.h|
-|[fmodf](../c-runtime-library/reference/fmod-fmodf.md)|math.h|
-|[fmodl](../c-runtime-library/reference/fmod-fmodf.md)|math.h|
-|[Labs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
-|[llabs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
-|[log](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
-|[log10](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
-|[log10f](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
-|[log10l](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
-|[logf](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
-|[logl](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
-|[_lrotl](../c-runtime-library/reference/lrotl-lrotr.md)|stdlib.h|
-|[_lrotr](../c-runtime-library/reference/lrotl-lrotr.md)|stdlib.h|
-|[memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md)|string.h|
-|[memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)|string.h|
-|[memset](../c-runtime-library/reference/memset-wmemset.md)|string.h|
-|[pow](../c-runtime-library/reference/pow-powf-powl.md)|math.h|
-|[powf](../c-runtime-library/reference/pow-powf-powl.md)|math.h|
-|[powl](../c-runtime-library/reference/pow-powf-powl.md)|math.h|
-|[_rotl](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)|stdlib.h|
-|[_rotl64](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)|stdlib.h|
-|[_rotr](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)|stdlib.h|
-|[_rotr64](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)|stdlib.h|
-|[sinus](../c-runtime-library/reference/sin-sinf-sinl.md)|math.h|
-|[sinf](../c-runtime-library/reference/sin-sinf-sinl.md)|math.h|
-|[SINH](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|math.h|
-|[sinhf](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|math.h|
-|[sinhl](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|math.h|
-|[sinl](../c-runtime-library/reference/sin-sinf-sinl.md)|math.h|
-|[sqrt](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|math.h|
-|[sqrtf](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|math.h|
-|[sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|math.h|
-|[strcat](../c-runtime-library/reference/strcat-wcscat-mbscat.md)|string.h|
-|[strcmp](../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)|string.h|
-|[strcpy](../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)|string.h|
-|[strlen](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)|string.h|
-|[_strset](../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)|string.h|
-|[strset](../c-runtime-library/reference/strset-wcsset.md)|string.h|
-|[Tan](../c-runtime-library/reference/tan-tanf-tanl.md)|math.h|
-|[TANF —](../c-runtime-library/reference/tan-tanf-tanl.md)|math.h|
-|[TANH —](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|math.h|
-|[tanhf](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|math.h|
-|[tanhl](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|math.h|
-|[tanl](../c-runtime-library/reference/tan-tanf-tanl.md)|math.h|
-|[wcscat](../c-runtime-library/reference/strcat-wcscat-mbscat.md)|string.h|
-|[wcscmp](../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)|string.h|
-|[wcscpy](../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)|string.h|
-|[wcslen](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)|string.h|
-|[_wcsset](../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)|string.h|
+|[ABS](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|STDLIB. h|
+|[_abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|STDLIB. h|
+|[Acos](../c-runtime-library/reference/acos-acosf-acosl.md)|Math. h|
+|[acosf —](../c-runtime-library/reference/acos-acosf-acosl.md)|Math. h|
+|[acosl](../c-runtime-library/reference/acos-acosf-acosl.md)|Math. h|
+|[_alloca](../c-runtime-library/reference/alloca.md)|malloc. h|
+|[Asin](../c-runtime-library/reference/asin-asinf-asinl.md)|Math. h|
+|[asinf —](../c-runtime-library/reference/asin-asinf-asinl.md)|Math. h|
+|[asinl](../c-runtime-library/reference/asin-asinf-asinl.md)|Math. h|
+|[atan](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|Math. h|
+|[atan2](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|Math. h|
+|[atan2f —](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|Math. h|
+|[atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|Math. h|
+|[atanf —](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|Math. h|
+|[atanl](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|Math. h|
+|[_byteswap_uint64](../c-runtime-library/reference/byteswap-uint64-byteswap-ulong-byteswap-ushort.md)|STDLIB. h|
+|[_byteswap_ulong](../c-runtime-library/reference/byteswap-uint64-byteswap-ulong-byteswap-ushort.md)|STDLIB. h|
+|[_byteswap_ushort](../c-runtime-library/reference/byteswap-uint64-byteswap-ulong-byteswap-ushort.md)|STDLIB. h|
+|[CEIL —](../c-runtime-library/reference/ceil-ceilf-ceill.md)|Math. h|
+|[ceilf —](../c-runtime-library/reference/ceil-ceilf-ceill.md)|Math. h|
+|[ceill](../c-runtime-library/reference/ceil-ceilf-ceill.md)|Math. h|
+|[cosinus](../c-runtime-library/reference/cos-cosf-cosl.md)|Math. h|
+|[cosf —](../c-runtime-library/reference/cos-cosf-cosl.md)|Math. h|
+|[cosh —](../c-runtime-library/reference/cosh-coshf-coshl.md)|Math. h|
+|[coshf —](../c-runtime-library/reference/cosh-coshf-coshl.md)|Math. h|
+|[coshl](../c-runtime-library/reference/cosh-coshf-coshl.md)|Math. h|
+|[cosl](../c-runtime-library/reference/cos-cosf-cosl.md)|Math. h|
+|[EXP](../c-runtime-library/reference/exp-expf.md)|Math. h|
+|[expf —](../c-runtime-library/reference/exp-expf.md)|Math. h|
+|[expl](../c-runtime-library/reference/exp-expf.md)|Math. h|
+|[fabs —](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|Math. h|
+|[fabsf —](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|Math. h|
+|[wykładzin](../c-runtime-library/reference/floor-floorf-floorl.md)|Math. h|
+|[floorf —](../c-runtime-library/reference/floor-floorf-floorl.md)|Math. h|
+|[piętro](../c-runtime-library/reference/floor-floorf-floorl.md)|Math. h|
+|[FMOD —](../c-runtime-library/reference/fmod-fmodf.md)|Math. h|
+|[fmodf —](../c-runtime-library/reference/fmod-fmodf.md)|Math. h|
+|[fmodl](../c-runtime-library/reference/fmod-fmodf.md)|Math. h|
+|[Labs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|STDLIB. h|
+|[llabs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|STDLIB. h|
+|[rejestrowane](../c-runtime-library/reference/log-logf-log10-log10f.md)|Math. h|
+|[log10 —](../c-runtime-library/reference/log-logf-log10-log10f.md)|Math. h|
+|[log10f —](../c-runtime-library/reference/log-logf-log10-log10f.md)|Math. h|
+|[log10l](../c-runtime-library/reference/log-logf-log10-log10f.md)|Math. h|
+|[logf —](../c-runtime-library/reference/log-logf-log10-log10f.md)|Math. h|
+|[logl](../c-runtime-library/reference/log-logf-log10-log10f.md)|Math. h|
+|[_lrotl](../c-runtime-library/reference/lrotl-lrotr.md)|STDLIB. h|
+|[_lrotr](../c-runtime-library/reference/lrotl-lrotr.md)|STDLIB. h|
+|[funkcji memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md)|ciąg. h|
+|[memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)|ciąg. h|
+|[funkcji memset](../c-runtime-library/reference/memset-wmemset.md)|ciąg. h|
+|[pow](../c-runtime-library/reference/pow-powf-powl.md)|Math. h|
+|[powf —](../c-runtime-library/reference/pow-powf-powl.md)|Math. h|
+|[powl](../c-runtime-library/reference/pow-powf-powl.md)|Math. h|
+|[_rotl](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)|STDLIB. h|
+|[_rotl64](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)|STDLIB. h|
+|[_rotr](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)|STDLIB. h|
+|[_rotr64](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)|STDLIB. h|
+|[sinus](../c-runtime-library/reference/sin-sinf-sinl.md)|Math. h|
+|[SINF —](../c-runtime-library/reference/sin-sinf-sinl.md)|Math. h|
+|[SINH](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|Math. h|
+|[sinhf —](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|Math. h|
+|[SINH](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|Math. h|
+|[sinl](../c-runtime-library/reference/sin-sinf-sinl.md)|Math. h|
+|[sqrt](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|Math. h|
+|[sqrtf —](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|Math. h|
+|[sqrt](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|Math. h|
+|[strcat](../c-runtime-library/reference/strcat-wcscat-mbscat.md)|ciąg. h|
+|[strcmp](../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)|ciąg. h|
+|[strcpy](../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)|ciąg. h|
+|[strlen](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)|ciąg. h|
+|[_strset](../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)|ciąg. h|
+|[strset](../c-runtime-library/reference/strset-wcsset.md)|ciąg. h|
+|[Tan](../c-runtime-library/reference/tan-tanf-tanl.md)|Math. h|
+|[TANF —](../c-runtime-library/reference/tan-tanf-tanl.md)|Math. h|
+|[TANH —](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|Math. h|
+|[tanhf —](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|Math. h|
+|[tanhl](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|Math. h|
+|[tanl](../c-runtime-library/reference/tan-tanf-tanl.md)|Math. h|
+|[wcscat](../c-runtime-library/reference/strcat-wcscat-mbscat.md)|ciąg. h|
+|[wcscmp](../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)|ciąg. h|
+|[wcscpy](../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)|ciąg. h|
+|[wcslen](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)|ciąg. h|
+|[_wcsset](../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)|ciąg. h|
 
 ## <a name="see-also"></a>Zobacz także
 
-[Funkcje wewnętrzne ARM](../intrinsics/arm-intrinsics.md)<br/>
-[Lista funkcji wewnętrznych x86](../intrinsics/x86-intrinsics-list.md)<br/>
-[Lista funkcji wewnętrznych x64 (amd64)](../intrinsics/x64-amd64-intrinsics-list.md)<br/>
+\ [wewnętrzne ARM](../intrinsics/arm-intrinsics.md)
+[Arm64 wewnętrzne](../intrinsics/arm64-intrinsics.md)\
+[Lista elementów wewnętrznych x86](../intrinsics/x86-intrinsics-list.md)\
+[Lista funkcji wewnętrznych x64 (amd64)](../intrinsics/x64-amd64-intrinsics-list.md)

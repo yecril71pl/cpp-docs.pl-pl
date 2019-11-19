@@ -2848,6 +2848,8 @@
           href: porting/porting-third-party-libraries.md
         - name: Przenoszenie aplikacji danych
           href: data/data-access-programming-mfc-atl.md
+    - name: Narzędzia IDE do uaktualniania kodu C++
+      href: porting/ide-tools-for-upgrading-code.md
     - name: Visual C++ — historia zmian w latach 2003–2015
       href: porting/visual-cpp-change-history-2003-2015.md
     - name: Visual C++ — co nowego od roku 2003 do 2015
@@ -10419,9 +10421,9 @@
                           href: parallel/concrt/reference/single-assignment-class.md
                         - name: 'single_link_registry, klasa'
                           href: parallel/concrt/reference/single-link-registry-class.md
-                        - name: 'source_block, klasa'
+                        - name: source_block — klasa
                           href: parallel/concrt/reference/source-block-class.md
-                        - name: source_link_manager — klasa
+                        - name: 'source_link_manager, klasa'
                           href: parallel/concrt/reference/source-link-manager-class.md
                         - name: 'static_partitioner, klasa'
                           href: parallel/concrt/reference/static-partitioner-class.md
