@@ -4931,6 +4931,8 @@
               href: intrinsics/compiler-intrinsics.md
             - name: Funkcje wewnętrzne ARM
               href: intrinsics/arm-intrinsics.md
+            - name: Funkcje wewnętrzne ARM64
+              href: intrinsics/arm64-intrinsics.md
             - name: Lista funkcji wewnętrznych x86
               href: intrinsics/x86-intrinsics-list.md
             - name: Lista funkcji wewnętrznych x64 (amd64)
@@ -10419,9 +10421,9 @@
                           href: parallel/concrt/reference/simple-partitioner-class.md
                         - name: 'single_assignment, klasa'
                           href: parallel/concrt/reference/single-assignment-class.md
-                        - name: 'single_link_registry, klasa'
+                        - name: single_link_registry — klasa
                           href: parallel/concrt/reference/single-link-registry-class.md
-                        - name: source_block — klasa
+                        - name: 'source_block, klasa'
                           href: parallel/concrt/reference/source-block-class.md
                         - name: 'source_link_manager, klasa'
                           href: parallel/concrt/reference/source-link-manager-class.md
