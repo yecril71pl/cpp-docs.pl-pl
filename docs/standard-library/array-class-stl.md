@@ -1,6 +1,6 @@
 ---
-title: Array — KlasaC++ (standardowa biblioteka) | Microsoft Docs
-ms.date: 11/04/2016
+title: array Class (C++ Standard Library)| Microsoft Docs
+ms.date: 11/13/2019
 f1_keywords:
 - array/std::array
 - array/std::array::const_iterator
@@ -96,16 +96,16 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-ms.openlocfilehash: aba7026fa60045720c893478c1ea637dbaa037c1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e93f5089e62956e7473c95eb6835046b5fe992bf
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456919"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189407"
 ---
-# <a name="array-class-c-standard-library"></a>Array — KlasaC++ (standardowa biblioteka)
+# <a name="array-class-c-standard-library"></a>array Class (C++ Standard Library)
 
-Opisuje obiekt, który kontroluje sekwencję długości `N` elementów typu. `Ty` Sekwencja jest przechowywana w postaci tablicy `Ty`, zawartej `array<Ty, N>` w obiekcie.
+Describes an object that controls a sequence of length `N` of elements of type `Ty`. The sequence is stored as an array of `Ty`, contained in the `array<Ty, N>` object.
 
 ## <a name="syntax"></a>Składnia
 
@@ -119,7 +119,7 @@ class array;
 |Parametr|Opis|
 |-|-|
 |`Ty`|Typ elementu.|
-|`N`|Liczba elementów.|
+|`N`|The number of elements.|
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -128,61 +128,61 @@ class array;
 |[const_iterator](#const_iterator)|Typ iteratora stałego dla kontrolowanej sekwencji.|
 |[const_pointer](#const_pointer)|Typ stałego wskaźnika do elementu.|
 |[const_reference](#const_reference)|Typ stałego odwołania do elementu.|
-|[const_reverse_iterator](#const_reverse_iterator)|Typ iteratora stałego zwrotnego dla kontrolowanej sekwencji.|
+|[const_reverse_iterator](#const_reverse_iterator)|The type of a constant reverse iterator for the controlled sequence.|
 |[difference_type](#difference_type)|Typ odległości ze znakiem między dwoma elementami.|
 |[iterator](#iterator)|Typ iteratora dla kontrolowanej sekwencji.|
 |[pointer](#pointer)|Typ wskaźnika do elementu.|
-|[Odwołanie](#reference)|Typ odwołania do elementu.|
-|[reverse_iterator](#reverse_iterator)|Typ iteratora odwrotnego dla kontrolowanej sekwencji.|
+|[reference](#reference)|Typ odwołania do elementu.|
+|[reverse_iterator](#reverse_iterator)|The type of a reverse iterator for the controlled sequence.|
 |[size_type](#size_type)|Typ odległości bez znaku między dwoma elementami.|
 |[value_type](#value_type)|Typ elementu.|
 
 |Funkcja elementów członkowskich|Opis|
 |-|-|
-|[array](#array)|Konstruuje obiekt Array.|
-|[ponownie](#assign)|Zamienia wszystkie elementy.|
-|[at](#at)|Uzyskuje dostęp do elementu w określonej pozycji.|
-|[back](#back)|Uzyskuje dostęp do ostatniego elementu.|
+|[array](#array)|Constructs an array object.|
+|[assign](#assign)|(Obsolete. Use `fill`.) Replaces all elements.|
+|[at](#at)|Accesses an element at a specified position.|
+|[back](#back)|Accesses the last element.|
 |[begin](#begin)|Określa początek kontrolowanej sekwencji.|
-|[cbegin](#cbegin)|Zwraca iterator const dostępu swobodnego do pierwszego elementu w tablicy.|
-|[cend](#cend)|Zwraca iterator const dostępu swobodnego, który wskazuje tuż poza końcem tablicy.|
-|[crbegin](#crbegin)|Zwraca iterator const do pierwszego elementu w odwróconej tablicy.|
-|[crend](#crend)|Zwraca iterator const do końca odwróconej tablicy.|
-|[Data](#data)|Pobiera adres pierwszego elementu.|
-|[empty](#empty)|Testuje, czy elementy są obecne.|
-|[punktów](#end)|Określa koniec kontrolowanej sekwencji.|
-|[pełni](#fill)|Zastępuje wszystkie elementy określoną wartością.|
-|[FSB](#front)|Uzyskuje dostęp do pierwszego elementu.|
+|[cbegin](#cbegin)|Returns a random-access const iterator to the first element in the array.|
+|[cend](#cend)|Returns a random-access const iterator that points just beyond the end of the array.|
+|[crbegin](#crbegin)|Returns a const iterator to the first element in a reversed array.|
+|[crend](#crend)|Returns a const iterator to the end of a reversed array.|
+|[data](#data)|Gets the address of the first element.|
+|[empty](#empty)|Tests whether elements are present.|
+|[end](#end)|Określa koniec kontrolowanej sekwencji.|
+|[fill](#fill)|Replaces all elements with a specified value.|
+|[front](#front)|Accesses the first element.|
 |[max_size](#max_size)|Liczy liczbę elementów.|
-|[rbegin](#rbegin)|Określa początek odwróconej sekwencji kontrolowanej.|
-|[rend](#rend)|Określa koniec odwróconej kontrolowanej sekwencji.|
-|[zmienia](#size)|Liczy liczbę elementów.|
+|[rbegin](#rbegin)|Designates the beginning of the reversed controlled sequence.|
+|[rend](#rend)|Designates the end of the reversed controlled sequence.|
+|[size](#size)|Liczy liczbę elementów.|
 |[swap](#swap)|Zamienia zawartości dwóch kontenerów.|
 
 |Operator|Opis|
 |-|-|
-|[Array:: operator =](#op_eq)|Zastępuje kontrolowaną sekwencję.|
-|[Array:: operator\[\]](#op_at)|Uzyskuje dostęp do elementu w określonej pozycji.|
+|[array::operator=](#op_eq)|Replaces the controlled sequence.|
+|[array::operator\[\]](#op_at)|Accesses an element at a specified position.|
 
 ## <a name="remarks"></a>Uwagi
 
-Typ ma konstruktora `array()` domyślnego i domyślnego operatora `operator=`przypisania i `aggregate`spełnia wymagania dla. W związku z tym obiekty `array<Ty, N>` typu mogą być inicjowane za pomocą inicjatora agregacji. Na przykład
+The type has a default constructor `array()` and a default assignment operator `operator=`, and satisfies the requirements for an `aggregate`. Therefore, objects of type `array<Ty, N>` can be initialized by using an aggregate initializer. Na przykład
 
 ```cpp
 array<int, 4> ai = { 1, 2, 3 };
 ```
 
-Tworzy obiekt `ai` , który przechowuje cztery wartości całkowite, inicjuje pierwsze trzy elementy odpowiednio do wartości 1, 2 i 3, i inicjuje czwarty element do 0.
+creates the object `ai` that holds four integer values, initializes the first three elements to the values 1, 2, and 3, respectively, and initializes the fourth element to 0.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<> tablicy
+**Header:** \<array>
 
-**Przestrzeń nazw:** std
+**Namespace:** std
 
-## <a name="array"></a>Array:: Array
+## <a name="array"></a>  array::array
 
-Konstruuje obiekt Array.
+Constructs an array object.
 
 ```cpp
 array();
@@ -192,108 +192,60 @@ array(const array& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknij*\
-Obiekt lub zakres do wstawienia.
+*right*\
+Object or range to insert.
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruktor `array()` domyślny pozostawia kontrolowanej sekwencji niezainicjowanej (lub domyślnie zainicjowany). Służy do określania niezainicjowanej kontrolowanej sekwencji.
+The default constructor `array()` leaves the controlled sequence uninitialized (or default initialized). You use it to specify an uninitialized controlled sequence.
 
-Konstruktor `array(const array& right)` kopiujący inicjuje kontrolowaną sekwencję z sekwencją [*Right*`.begin()`, *Right*`.end()`). Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej *przez obiekt Array*.
+The copy constructor `array(const array& right)` initializes the controlled sequence with the sequence [*right*`.begin()`, *right*`.end()`). You use it to specify an initial controlled sequence that is a copy of the sequence controlled by the array object *right*.
 
 ### <a name="example"></a>Przykład
 
 ```cpp
-// std__array__array_array.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    typedef std::array<int, 4> Myarray;
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    Myarray c0 = { 0, 1, 2, 3 };
+
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
     Myarray c1(c0);
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c1.begin();
-        it != c1.end(); ++it)
-        std::cout << " " << *it;
-    std::cout << std::endl;
-
-    return (0);
-    }
-```
-
-```Output
-0 1 2 3
-0 1 2 3
-```
-
-## <a name="assign"></a>Array:: Assign
-
-Przestarzałe w języku C++ 11, zastąpione przez [wypełnienie](#fill). Zamienia wszystkie elementy.
-
-```cpp
-void assign(const Ty& val);
-```
-
-### <a name="parameters"></a>Parametry
-
-*użyte*\
-Wartość do przypisania.
-
-### <a name="remarks"></a>Uwagi
-
-Funkcja członkowska zastępuje sekwencję sterowaną `*this` przez powtarzanie `N` elementów wartości *Val*.
-
-### <a name="example"></a>Przykład
-
-```cpp
-// std__array__array_assign.cpp
-// compile with: /EHsc
-#include <array>
-#include <iostream>
-
-typedef std::array<int, 4> Myarray;
-int main()
+    // display contents " 0 1 2 3"
+    for (const auto& it : c1)
     {
-    Myarray c0 = {0, 1, 2, 3};
-
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
-    std::cout << std::endl;
-
-    Myarray c1;
-    c1.assign(4);
-
-// display contents " 4 4 4 4"
-    for (Myarray::const_iterator it = c1.begin();
-        it != c1.end(); ++it)
-        std::cout << " " << *it;
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
 0 1 2 3
-4 4 4 4
+0 1 2 3
 ```
 
-## <a name="at"></a>Array:: at
+## <a name="assign"></a>  array::assign
 
-Uzyskuje dostęp do elementu w określonej pozycji.
+Obsolete in C++11, replaced by [fill](#fill). Replaces all elements.
+
+## <a name="at"></a>  array::at
+
+Accesses an element at a specified position.
 
 ```cpp
 reference at(size_type off);
@@ -303,44 +255,43 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Logowanie*\
-Pozycja elementu do uzyskania dostępu.
+*off*\
+Position of element to access.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje członkowskie zwracają odwołanie do elementu kontrolowanej sekwencji w pozycji *wyłączone*. Jeśli ta pozycja jest nieprawidłowa, funkcja zgłasza obiekt klasy `out_of_range`.
+The member functions return a reference to the element of the controlled sequence at position *off*. If that position is invalid, the function throws an object of class `out_of_range`.
 
 ### <a name="example"></a>Przykład
 
 ```cpp
-// std__array__array_at.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display odd elements " 1 3"
+    // display odd elements " 1 3"
     std::cout << " " << c0.at(1);
     std::cout << " " << c0.at(3);
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
-## <a name="back"></a>Array:: Back
+## <a name="back"></a>  array::back
 
-Uzyskuje dostęp do ostatniego elementu.
+Accesses the last element.
 
 ```cpp
 reference back();
@@ -350,33 +301,32 @@ constexpr const_reference back() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje członkowskie zwracają odwołanie do ostatniego elementu kontrolowanej sekwencji, która nie może być pusta.
+The member functions return a reference to the last element of the controlled sequence, which must be non-empty.
 
 ### <a name="example"></a>Przykład
 
 ```cpp
-// std__array__array_back.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display last element " 3"
+    // display last element " 3"
     std::cout << " " << c0.back();
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -384,7 +334,7 @@ int main()
 3
 ```
 
-## <a name="begin"></a>Array:: BEGIN
+## <a name="begin"></a>  array::begin
 
 Określa początek kontrolowanej sekwencji.
 
@@ -395,34 +345,33 @@ const_iterator begin() const noexcept;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje członkowskie zwracają Iterator dostępu swobodnego, który wskazuje na pierwszy element sekwencji (lub tuż poza końcem pustej sekwencji).
+The member functions return a random-access iterator that points at the first element of the sequence (or just beyond the end of an empty sequence).
 
 ### <a name="example"></a>Przykład
 
 ```cpp
-// std__array__array_begin.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display first element " 0"
+    // display first element " 0"
     Myarray::iterator it2 = c0.begin();
     std::cout << " " << *it2;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -430,9 +379,9 @@ int main()
 0
 ```
 
-## <a name="cbegin"></a>Array:: cbegin
+## <a name="cbegin"></a>  array::cbegin
 
-Zwraca iterator **const** , który dotyczy pierwszego elementu w zakresie.
+Returns a **const** iterator that addresses the first element in the range.
 
 ```cpp
 const_iterator cbegin() const noexcept;
@@ -440,13 +389,13 @@ const_iterator cbegin() const noexcept;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Iterator **stałej** dostępu swobodnego, który wskazuje na pierwszy element zakresu lub lokalizację tuż poza końcem pustego zakresu (dla pustego zakresu `cbegin() == cend()`).
+A **const** random-access iterator that points at the first element of the range, or the location just beyond the end of an empty range (for an empty range, `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Uwagi
 
-Z wartością `cbegin`zwracaną nie można modyfikować elementów w zakresie.
+With the return value of `cbegin`, the elements in the range cannot be modified.
 
-Można użyć tej funkcji elementu członkowskiego zamiast `begin()` funkcji składowej, aby zagwarantować, że wartość zwracana to. `const_iterator` Zwykle jest używany w połączeniu z słowem kluczowym odejmowania [autotype,](../cpp/auto-cpp.md) jak pokazano w poniższym przykładzie. W tym przykładzie Rozważmy `Container` , że jest to modyfikowalny kontener dowolnego rodzaju, który obsługuje `begin()` i `cbegin()`.
+You can use this member function in place of the `begin()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- **const**) container of any kind that supports `begin()` and `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -456,9 +405,9 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a>Array:: cend
+## <a name="cend"></a>  array::cend
 
-Zwraca iterator **const** , który odnosi się do lokalizacji jedynie poza ostatnim elementem w zakresie.
+Returns a **const** iterator that addresses the location just beyond the last element in a range.
 
 ```cpp
 const_iterator cend() const noexcept;
@@ -470,9 +419,9 @@ Iterator dostępu swobodnego, który wskazuje tuż za koniec zakresu.
 
 ### <a name="remarks"></a>Uwagi
 
-`cend`służy do sprawdzania, czy iterator przeszedł koniec zakresu.
+`cend` is used to test whether an iterator has passed the end of its range.
 
-Można użyć tej funkcji elementu członkowskiego zamiast `end()` funkcji składowej, aby zagwarantować, że wartość zwracana to. `const_iterator` Zwykle jest używany w połączeniu z słowem kluczowym odejmowania [autotype,](../cpp/auto-cpp.md) jak pokazano w poniższym przykładzie. W tym przykładzie Rozważmy `Container` , że jest to modyfikowalny kontener dowolnego rodzaju, który obsługuje `end()` i `cend()`.
+You can use this member function in place of the `end()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- **const**) container of any kind that supports `end()` and `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -482,9 +431,9 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator
 ```
 
-Nie można usunąć odwołania `cend` do wartości zwracanej przez.
+The value returned by `cend` should not be dereferenced.
 
-## <a name="const_iterator"></a>Array:: const_iterator
+## <a name="const_iterator"></a>  array::const_iterator
 
 Typ iteratora stałego dla kontrolowanej sekwencji.
 
@@ -494,13 +443,11 @@ typedef implementation-defined const_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może być używany jako iterator stałego dostępu swobodnego dla kontrolowanej sekwencji.
+The type describes an object that can serve as a constant random-access iterator for the controlled sequence.
 
 ### <a name="example"></a>Przykład
 
 ```cpp
-// std__array__array_const_iterator.cpp
-// compile with: /EHsc /W4
 #include <array>
 #include <iostream>
 
@@ -508,14 +455,14 @@ typedef std::array<int, 4> MyArray;
 
 int main()
 {
-    MyArray c0 = {0, 1, 2, 3};
+    MyArray c0 = { 0, 1, 2, 3 };
 
     // display contents " 0 1 2 3"
     std::cout << "it1:";
-    for ( MyArray::const_iterator it1 = c0.begin();
-          it1 != c0.end();
-          ++it1 ) {
-       std::cout << " " << *it1;
+    for (MyArray::const_iterator it1 = c0.begin();
+        it1 != c0.end();
+        ++it1) {
+        std::cout << " " << *it1;
     }
     std::cout << std::endl;
 
@@ -534,7 +481,7 @@ it1: 0 1 2 3
 it2: 0
 ```
 
-## <a name="const_pointer"></a>Array:: const_pointer
+## <a name="const_pointer"></a>  array::const_pointer
 
 Typ stałego wskaźnika do elementu.
 
@@ -544,34 +491,33 @@ typedef const Ty *const_pointer;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może obsłużyć jako stały wskaźnik do elementów sekwencji.
+The type describes an object that can serve as a constant pointer to elements of the sequence.
 
 ### <a name="example"></a>Przykład
 
 ```cpp
-// std__array__array_const_pointer.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display first element " 0"
+    // display first element " 0"
     Myarray::const_pointer ptr = &*c0.begin();
     std::cout << " " << *ptr;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -579,7 +525,7 @@ int main()
 0
 ```
 
-## <a name="const_reference"></a>Array:: const_reference
+## <a name="const_reference"></a>  array::const_reference
 
 Typ stałego odwołania do elementu.
 
@@ -589,34 +535,33 @@ typedef const Ty& const_reference;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może stanowić stałe odwołanie do elementu kontrolowanej sekwencji.
+The type describes an object that can serve as a constant reference to an element of the controlled sequence.
 
 ### <a name="example"></a>Przykład
 
 ```cpp
-// std__array__array_const_reference.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display first element " 0"
+    // display first element " 0"
     Myarray::const_reference ref = *c0.begin();
     std::cout << " " << ref;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -624,9 +569,9 @@ int main()
 0
 ```
 
-## <a name="const_reverse_iterator"></a>Array:: const_reverse_iterator
+## <a name="const_reverse_iterator"></a>  array::const_reverse_iterator
 
-Typ iteratora stałego zwrotnego dla kontrolowanej sekwencji.
+The type of a constant reverse iterator for the controlled sequence.
 
 ```cpp
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
@@ -634,34 +579,33 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może być używany jako ciągły iterator odwrotny dla kontrolowanej sekwencji.
+The type describes an object that can serve as a constant reverse iterator for the controlled sequence.
 
 ### <a name="example"></a>Przykład
 
 ```cpp
-// std__array__array_const_reverse_iterator.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display last element " 3"
+    // display last element " 3"
     Myarray::const_reverse_iterator it2 = c0.rbegin();
     std::cout << " " << *it2;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -669,9 +613,9 @@ int main()
 3
 ```
 
-## <a name="crbegin"></a>Array:: crbegin —
+## <a name="crbegin"></a>  array::crbegin
 
-Zwraca iterator const do pierwszego elementu w odwróconej tablicy.
+Returns a const iterator to the first element in a reversed array.
 
 ```cpp
 const_reverse_iterator crbegin() const;
@@ -679,17 +623,15 @@ const_reverse_iterator crbegin() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Iterator typu stała odwrotnie dostęp losowy odnoszący się do pierwszego elementu w odwróconej tablicy lub na adres, który był ostatnim elementem w nieodwróconej tablicy.
+A const reverse random-access iterator addressing the first element in a reversed array or addressing what had been the last element in the unreversed array.
 
 ### <a name="remarks"></a>Uwagi
 
-Z wartością `crbegin`zwracaną nie można zmodyfikować obiektu Array.
+With the return value of `crbegin`, the array object cannot be modified.
 
 ### <a name="example"></a>Przykład
 
 ```cpp
-// array_crbegin.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
@@ -715,9 +657,9 @@ The first element of array is 1.
 The first element of the reversed array is 2.
 ```
 
-## <a name="crend"></a>Array:: crend
+## <a name="crend"></a>  array::crend
 
-Zwraca iterator const, który odnosi się do lokalizacji po ostatnim elemencie w odwróconej tablicy.
+Returns a const iterator that addresses the location succeeding the last element in a reversed array.
 
 ```cpp
 const_reverse_iterator crend() const noexcept;
@@ -725,23 +667,21 @@ const_reverse_iterator crend() const noexcept;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Iterator typu const odwrotnie dostępu swobodnego, który odnosi się do lokalizacji po ostatnim elemencie w odwróconej tablicy (lokalizacja, która poprzedza pierwszy element w nieodwróconej tablicy).
+A const reverse random-access iterator that addresses the location succeeding the last element in a reversed array (the location that had preceded the first element in the unreversed array).
 
 ### <a name="remarks"></a>Uwagi
 
-`crend`jest używany z odwróconą tablicą, tak jak [Array:: cend](#cend) jest używany z tablicą.
+`crend` is used with a reversed array just as [array::cend](#cend) is used with a array.
 
-Po wartości `crend` zwracanej (odpowiednio zmniejszonej) obiekt Array nie może być modyfikowany.
+With the return value of `crend` (suitably decremented), the array object cannot be modified.
 
-`crend`może służyć do sprawdzenia, czy iterator odwrotny osiągnął koniec tablicy.
+`crend` can be used to test to whether a reverse iterator has reached the end of its array.
 
-Nie można usunąć odwołania `crend` do wartości zwracanej przez.
+The value returned by `crend` should not be dereferenced.
 
 ### <a name="example"></a>Przykład
 
 ```cpp
-// array_crend.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
@@ -761,9 +701,9 @@ int main( )
 1
 ```
 
-## <a name="data"></a>Tablica::d ATA
+## <a name="data"></a>  array::data
 
-Pobiera adres pierwszego elementu.
+Gets the address of the first element.
 
 ```cpp
 Ty *data();
@@ -773,34 +713,33 @@ const Ty *data() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje członkowskie zwracają adres pierwszego elementu w kontrolowanej sekwencji.
+The member functions return the address of the first element in the controlled sequence.
 
 ### <a name="example"></a>Przykład
 
 ```cpp
-// std__array__array_data.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display first element " 0"
+    // display first element " 0"
     Myarray::pointer ptr = c0.data();
     std::cout << " " << *ptr;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -808,7 +747,7 @@ int main()
 0
 ```
 
-## <a name="difference_type"></a>Tablica::d ifference_type
+## <a name="difference_type"></a>  array::difference_type
 
 Typ odległości ze znakiem między dwoma elementami.
 
@@ -818,34 +757,33 @@ typedef std::ptrdiff_t difference_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ Liczba całkowita ze znakiem opisuje obiekt, który może reprezentować różnicę między adresami wszystkich dwóch elementów w kontrolowanej sekwencji. Jest to synonim dla typu `std::ptrdiff_t`.
+The signed integer type describes an object that can represent the difference between the addresses of any two elements in the controlled sequence. It is a synonym for the type `std::ptrdiff_t`.
 
 ### <a name="example"></a>Przykład
 
 ```cpp
-// std__array__array_difference_type.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display distance first-last " -4"
+    // display distance first-last " -4"
     Myarray::difference_type diff = c0.begin() - c0.end();
     std::cout << " " << diff;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -853,7 +791,7 @@ int main()
 -4
 ```
 
-## <a name="empty"></a>Array:: Empty
+## <a name="empty"></a>  array::empty
 
 Sprawdza, czy nie ma żadnych elementów.
 
@@ -863,39 +801,38 @@ constexpr bool empty() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca wartość true tylko `N == 0`wtedy, gdy.
+The member function returns true only if `N == 0`.
 
 ### <a name="example"></a>Przykład
 
 ```cpp
-// std__array__array_empty.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display whether c0 is empty " false"
+    // display whether c0 is empty " false"
     std::cout << std::boolalpha << " " << c0.empty();
     std::cout << std::endl;
 
     std::array<int, 0> c1;
 
-// display whether c1 is empty " true"
+    // display whether c1 is empty " true"
     std::cout << std::boolalpha << " " << c1.empty();
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -904,7 +841,7 @@ false
 true
 ```
 
-## <a name="end"></a>Array:: end
+## <a name="end"></a>  array::end
 
 Określa koniec kontrolowanej sekwencji.
 
@@ -916,34 +853,33 @@ const_reference end() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje członkowskie zwracają Iterator dostępu swobodnego, który wskazuje tuż poza końcem sekwencji.
+The member functions return a random-access iterator that points just beyond the end of the sequence.
 
 ### <a name="example"></a>Przykład
 
 ```cpp
-// std__array__array_end.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display last element " 3"
+    // display last element " 3"
     Myarray::iterator it2 = c0.end();
     std::cout << " " << *--it2;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -951,9 +887,9 @@ int main()
 3
 ```
 
-## <a name="fill"></a>Array:: Fill
+## <a name="fill"></a>  array::fill
 
-Wymazuje tablicę i kopiuje określone elementy do pustej tablicy.
+Erases a array and copies the specified elements to the empty array.
 
 ```cpp
 void fill(const Type& val);
@@ -963,42 +899,43 @@ void fill(const Type& val);
 
 |Parametr|Opis|
 |-|-|
-|*użyte*|Wartość wstawianego elementu do tablicy.|
+|*val*|The value of the element being inserted into the array.|
 
 ### <a name="remarks"></a>Uwagi
 
-`fill`zamienia każdy element tablicy na określoną wartość.
+`fill` replaces each element of the array with the specified value.
 
 ### <a name="example"></a>Przykład
 
 ```cpp
-// array_fill.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
-int main( )
+int main()
 {
-   using namespace std;
-   array<int, 2> v1 = {1, 2};
-   array<int, 2>::iterator iter;
+    using namespace std;
+    array<int, 2> v1 = { 1, 2 };
 
-   cout << "v1 = " ;
-   for (iter = v1.begin(); iter != v1.end(); iter++)
-      cout << *iter << " ";
-   cout << endl;
+    cout << "v1 = ";
+    for (const auto& it : v1)
+    {
+        std::cout << " " << it;
+    }
+    cout << endl;
 
-   v1.fill(3);
-   cout << "v1 = " ;
-   for (iter = v1.begin(); iter != v1.end(); iter++)
-      cout << *iter << " ";
-   cout << endl;
+    v1.fill(3);
+    cout << "v1 = ";
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
+    cout << endl;
 }
 ```
 
-## <a name="front"></a>Array:: front
+## <a name="front"></a>  array::front
 
-Uzyskuje dostęp do pierwszego elementu.
+Accesses the first element.
 
 ```cpp
 reference front();
@@ -1008,33 +945,32 @@ constexpr const_reference front() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje członkowskie zwracają odwołanie do pierwszego elementu kontrolowanej sekwencji, która nie może być pusta.
+The member functions return a reference to the first element of the controlled sequence, which must be non-empty.
 
 ### <a name="example"></a>Przykład
 
 ```cpp
-// std__array__array_front.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display first element " 0"
+    // display first element " 0"
     std::cout << " " << c0.front();
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1042,7 +978,7 @@ int main()
 0
 ```
 
-## <a name="iterator"></a>Array:: iterator
+## <a name="iterator"></a>  array::iterator
 
 Typ iteratora dla kontrolowanej sekwencji.
 
@@ -1052,13 +988,11 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może działać jako Iterator dostępu swobodnego dla kontrolowanej sekwencji.
+The type describes an object that can serve as a random-access iterator for the controlled sequence.
 
 ### <a name="example"></a>Przykład
 
 ```cpp
-// std__array__array_iterator.cpp
-// compile with: /EHsc /W4
 #include <array>
 #include <iostream>
 
@@ -1066,14 +1000,14 @@ typedef std::array<int, 4> MyArray;
 
 int main()
 {
-    MyArray c0 = {0, 1, 2, 3};
+    MyArray c0 = { 0, 1, 2, 3 };
 
     // display contents " 0 1 2 3"
     std::cout << "it1:";
-    for ( MyArray::iterator it1 = c0.begin();
-          it1 != c0.end();
-          ++it1 ) {
-       std::cout << " " << *it1;
+    for (MyArray::iterator it1 = c0.begin();
+        it1 != c0.end();
+        ++it1) {
+        std::cout << " " << *it1;
     }
     std::cout << std::endl;
 
@@ -1093,7 +1027,7 @@ it1: 0 1 2 3
 it2: 0
 ```
 
-## <a name="max_size"></a>Array:: max_size
+## <a name="max_size"></a>  array::max_size
 
 Liczy liczbę elementów.
 
@@ -1103,33 +1037,32 @@ constexpr size_type max_size() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca `N`wartość.
+The member function returns `N`.
 
 ### <a name="example"></a>Przykład
 
 ```cpp
-// std__array__array_max_size.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display (maximum) size " 4"
+    // display (maximum) size " 4"
     std::cout << " " << c0.max_size();
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1137,9 +1070,9 @@ int main()
 4
 ```
 
-## <a name="op_at"></a>Array:: operator []
+## <a name="op_at"></a>  array::operator[]
 
-Uzyskuje dostęp do elementu w określonej pozycji.
+Accesses an element at a specified position.
 
 ```cpp
 reference operator[](size_type off);
@@ -1149,41 +1082,40 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Logowanie*\
-Pozycja elementu do uzyskania dostępu.
+*off*\
+Position of element to access.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje członkowskie zwracają odwołanie do elementu kontrolowanej sekwencji w pozycji *wyłączone*. Jeśli ta pozycja jest nieprawidłowa, zachowanie jest niezdefiniowane.
+The member functions return a reference to the element of the controlled sequence at position *off*. If that position is invalid, the behavior is undefined.
 
-Dostępna jest również funkcja [Get](array-functions.md#get) poza składową, która umożliwia uzyskanie odwołania do elementu **tablicy**.
+There is also a non-member [get](array-functions.md#get) function available to get a reference to an element of an **array**.
 
 ### <a name="example"></a>Przykład
 
 ```cpp
-// std__array__array_operator_sub.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display odd elements " 1 3"
+    // display odd elements " 1 3"
     std::cout << " " << c0[1];
     std::cout << " " << c0[3];
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1191,9 +1123,9 @@ int main()
 1 3
 ```
 
-## <a name="op_eq"></a>Array:: operator =
+## <a name="op_eq"></a>  array::operator=
 
-Zastępuje kontrolowaną sekwencję.
+Replaces the controlled sequence.
 
 ```cpp
 array<Value> operator=(array<Value> right);
@@ -1201,43 +1133,44 @@ array<Value> operator=(array<Value> right);
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknij*\
-Kontener do skopiowania.
+*right*\
+Container to copy.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator członkowski przypisuje każdy element *bezpośrednio* do odpowiadającego elementu kontrolowanej sekwencji, a następnie zwraca `*this`. Służy do zastępowania kontrolowanej sekwencji kopią kontrolowanej sekwencji *po prawej stronie*.
+The member operator assigns each element of *right* to the corresponding element of the controlled sequence, then returns `*this`. You use it to replace the controlled sequence with a copy of the controlled sequence in *right*.
 
 ### <a name="example"></a>Przykład
 
 ```cpp
-// std__array__array_operator_as.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
     Myarray c1;
     c1 = c0;
 
-// display copied contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c1.begin();
-        it != c1.end(); ++it)
-        std::cout << " " << *it;
+    // display copied contents " 0 1 2 3"
+        // display contents " 0 1 2 3"
+    for (auto it : c1)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1245,7 +1178,7 @@ int main()
 0 1 2 3
 ```
 
-## <a name="pointer"></a>Tablica::p ointer
+## <a name="pointer"></a>  array::pointer
 
 Typ wskaźnika do elementu.
 
@@ -1255,34 +1188,33 @@ typedef Ty *pointer;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może obsłużyć jako wskaźnik do elementów sekwencji.
+The type describes an object that can serve as a pointer to elements of the sequence.
 
 ### <a name="example"></a>Przykład
 
 ```cpp
-// std__array__array_pointer.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display first element " 0"
+    // display first element " 0"
     Myarray::pointer ptr = &*c0.begin();
     std::cout << " " << *ptr;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1290,9 +1222,9 @@ int main()
 0
 ```
 
-## <a name="rbegin"></a>Array:: rbegin
+## <a name="rbegin"></a>  array::rbegin
 
-Określa początek odwróconej sekwencji kontrolowanej.
+Designates the beginning of the reversed controlled sequence.
 
 ```cpp
 reverse_iterator rbegin()noexcept;
@@ -1301,34 +1233,33 @@ const_reverse_iterator rbegin() const noexcept;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje członkowskie zwracają iterator odwrotny, który wskazuje tuż poza końcem kontrolowanej sekwencji. W związku z tym określa początek sekwencji odwrotnej.
+The member functions return a reverse iterator that points just beyond the end of the controlled sequence. Hence, it designates the beginning of the reverse sequence.
 
 ### <a name="example"></a>Przykład
 
 ```cpp
-// std__array__array_rbegin.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display last element " 3"
+    // display last element " 3"
     Myarray::const_reverse_iterator it2 = c0.rbegin();
     std::cout << " " << *it2;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1336,7 +1267,7 @@ int main()
 3
 ```
 
-## <a name="reference"></a>Array:: Reference
+## <a name="reference"></a>  array::reference
 
 Typ odwołania do elementu.
 
@@ -1346,34 +1277,33 @@ typedef Ty& reference;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może obsłużyć jako odwołanie do elementu kontrolowanej sekwencji.
+The type describes an object that can serve as a reference to an element of the controlled sequence.
 
 ### <a name="example"></a>Przykład
 
 ```cpp
-// std__array__array_reference.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display first element " 0"
+    // display first element " 0"
     Myarray::reference ref = *c0.begin();
     std::cout << " " << ref;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1381,9 +1311,9 @@ int main()
 0
 ```
 
-## <a name="rend"></a>Array:: rend
+## <a name="rend"></a>  array::rend
 
-Określa koniec odwróconej kontrolowanej sekwencji.
+Designates the end of the reversed controlled sequence.
 
 ```cpp
 reverse_iterator rend()noexcept;
@@ -1392,34 +1322,33 @@ const_reverse_iterator rend() const noexcept;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje członkowskie zwracają iterator odwrotny, który wskazuje na pierwszy element sekwencji (lub tuż poza końcem pustej sekwencji)). W związku z tym wyznacza koniec sekwencji odwrotnej.
+The member functions return a reverse iterator that points at the first element of the sequence (or just beyond the end of an empty sequence)). Hence, it designates the end of the reverse sequence.
 
 ### <a name="example"></a>Przykład
 
 ```cpp
-// std__array__array_rend.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display first element " 0"
+    // display first element " 0"
     Myarray::const_reverse_iterator it2 = c0.rend();
     std::cout << " " << *--it2;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1427,9 +1356,9 @@ int main()
 0
 ```
 
-## <a name="reverse_iterator"></a>Array:: reverse_iterator
+## <a name="reverse_iterator"></a>  array::reverse_iterator
 
-Typ iteratora odwrotnego dla kontrolowanej sekwencji.
+The type of a reverse iterator for the controlled sequence.
 
 ```cpp
 typedef std::reverse_iterator<iterator> reverse_iterator;
@@ -1437,34 +1366,33 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może obsłużyć iterator odwrotny dla kontrolowanej sekwencji.
+The type describes an object that can serve as a reverse iterator for the controlled sequence.
 
 ### <a name="example"></a>Przykład
 
 ```cpp
-// std__array__array_reverse_iterator.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display last element " 3"
+    // display last element " 3"
     Myarray::reverse_iterator it2 = c0.rbegin();
     std::cout << " " << *it2;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1472,7 +1400,7 @@ int main()
 3
 ```
 
-## <a name="size"></a>Array:: size
+## <a name="size"></a>  array::size
 
 Liczy liczbę elementów.
 
@@ -1482,33 +1410,32 @@ constexpr size_type size() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca `N`wartość.
+The member function returns `N`.
 
 ### <a name="example"></a>Przykład
 
 ```cpp
-// std__array__array_size.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display size " 4"
+    // display size " 4"
     std::cout << " " << c0.size();
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1516,9 +1443,9 @@ int main()
 4
 ```
 
-## <a name="size_type"></a>Array:: size_type
+## <a name="size_type"></a>  array::size_type
 
-Typ niepodpisanej odległości między dwoma elementami.
+The type of an unsigned distance between two element.
 
 ```cpp
 typedef std::size_t size_type;
@@ -1526,34 +1453,33 @@ typedef std::size_t size_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ liczby całkowitej bez znaku opisuje obiekt, który może reprezentować długość dowolnej kontrolowanej sekwencji. Jest to synonim dla typu `std::size_t`.
+The unsigned integer type describes an object that can represent the length of any controlled sequence. It is a synonym for the type `std::size_t`.
 
 ### <a name="example"></a>Przykład
 
 ```cpp
-// std__array__array_size_type.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display distance last-first " 4"
+    // display distance last-first " 4"
     Myarray::size_type diff = c0.end() - c0.begin();
     std::cout << " " << diff;
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1561,9 +1487,9 @@ int main()
 4
 ```
 
-## <a name="swap"></a>Array:: swap
+## <a name="swap"></a>  array::swap
 
-Zamienia zawartość tej tablicy na inną tablicę.
+Swaps the contents of this array with another array.
 
 ```cpp
 void swap(array& right);
@@ -1571,53 +1497,54 @@ void swap(array& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknij*\
-Tablica, do której ma zostać zamieniony zawartość.
+*right*\
+Array to swap contents with.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zamienia kontrolowane sekwencje między `*this` i *po prawej*. Wykonuje wiele przypisań elementów i wywołań konstruktora proporcjonalnie do `N`.
+The member function swaps the controlled sequences between `*this` and *right*. It performs a number of element assignments and constructor calls proportional to `N`.
 
-Dostępna jest również funkcja zamiany poza [](array-functions.md#swap) składową, która umożliwia zamianę dwóch wystąpień **tablicy** .
+There is also a non-member [swap](array-functions.md#swap) function available to swap two **array** instances.
 
 ### <a name="example"></a>Przykład
 
 ```cpp
-// std__array__array_swap.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-    Myarray c1 = {4, 5, 6, 7};
+    Myarray c1 = { 4, 5, 6, 7 };
     c0.swap(c1);
 
-// display swapped contents " 4 5 6 7"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display swapped contents " 4 5 6 7"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
     swap(c0, c1);
 
-// display swapped contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display swapped contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -1626,7 +1553,7 @@ int main()
 0 1 2 3
 ```
 
-## <a name="value_type"></a>Array:: value_type
+## <a name="value_type"></a>  array::value_type
 
 Typ elementu.
 
@@ -1636,38 +1563,36 @@ typedef Ty value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla parametru `Ty`szablonu.
+The type is a synonym for the template parameter `Ty`.
 
 ### <a name="example"></a>Przykład
 
 ```cpp
-// std__array__array_value_type.cpp
-// compile with: /EHsc
 #include <array>
 #include <iostream>
 
 typedef std::array<int, 4> Myarray;
 int main()
-    {
-    Myarray c0 = {0, 1, 2, 3};
+{
+    Myarray c0 = { 0, 1, 2, 3 };
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        std::cout << " " << *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        std::cout << " " << it;
+    }
     std::cout << std::endl;
 
-// display contents " 0 1 2 3"
-    for (Myarray::const_iterator it = c0.begin();
-        it != c0.end(); ++it)
-        {
-        Myarray::value_type val = *it;
+    // display contents " 0 1 2 3"
+    for (const auto& it : c0)
+    {
+        Myarray::value_type val = it;
         std::cout << " " << val;
-        }
+    }
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output

@@ -1,35 +1,35 @@
 ---
-title: Kompilator ostrzeżenie (poziom 3) C4738
+title: Compiler Warning (Level 3) C4738
 ms.date: 11/04/2016
 f1_keywords:
 - C4738
 helpviewer_keywords:
 - C4738
 ms.assetid: 9094895f-7eec-46c2-83d3-249b761d585e
-ms.openlocfilehash: 833546d20454e6104a2d5fcb272bf5bb9518ea44
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5162a03b213b35913ed1fc7f39360796ccf2c4a0
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401582"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189393"
 ---
-# <a name="compiler-warning-level-3-c4738"></a>Kompilator ostrzeżenie (poziom 3) C4738
+# <a name="compiler-warning-level-3-c4738"></a>Compiler Warning (Level 3) C4738
 
 przechowywanie 32-bitowego wyniku zmiennopozycyjnego w pamięci, możliwa utrata wydajności
 
-C4738 ostrzega, że wynik przypisania, cast przekazany argument lub inna operacja może być konieczne ma zostać zaokrąglona lub za mało rejestruje działanie, a potrzebnych do korzystania z pamięci (rozlanie). Może to spowodować utratę wydajności.
+C4738 warns that the result of an assignment, cast, passed argument, or other operation may need to be rounded or that the operation ran out of registers and needed to use memory (spilling). This can result in performance loss.
 
-Aby rozwiązać tego ostrzeżenia i uniknąć zaokrąglania, należy skompilować z [Fast](../../build/reference/fp-specify-floating-point-behavior.md) lub użyj `double` zamiast `float`.
+To resolve this warning and avoid rounding, compile with [/fp:fast](../../build/reference/fp-specify-floating-point-behavior.md) or use `double` instead of `float`.
 
-Aby rozwiązać tego ostrzeżenia i uniknąć korzystającym z rejestrów, zmienić kolejność obliczeń i zmodyfikuj użytkowania wbudowanie
+To resolve this warning and avoid running out of registers, change the order of computation and modify your use of inlining
 
-To ostrzeżenie jest domyślnie wyłączona. Aby uzyskać więcej informacji, zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+This warning is off by default. For more information, see [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4738:
+The following sample generates C4738:
 
-```
+```cpp
 // C4738.cpp
 // compile with: /c /fp:precise /O2 /W3
 // processor: x86

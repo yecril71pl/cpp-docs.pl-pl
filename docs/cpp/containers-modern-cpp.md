@@ -1,24 +1,24 @@
 ---
 title: Kontenery (Modern C++)
-ms.date: 01/18/2018
+ms.date: 11/12/2019
 ms.topic: conceptual
-ms.openlocfilehash: 37b540132fc9ddc03d5eaafd33c545b5db5e7935
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 41b9d560ce827cee5c90467184ef5b2b729e0639
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926257"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188900"
 ---
 # <a name="containers-modern-c"></a>Kontenery (Modern C++)
 
-Domyślnie użyj [wektora](../standard-library/vector-class.md) jako preferowanego kontenera sekwencyjnego w C++. Jest to odpowiednik `List<T>` w językach .NET.
+By default, use [std::vector](../standard-library/vector-class.md) as the preferred sequential container in C++. The performance of **std::vector** is comparable to C-style arrays in most scenarios and is far safer. **std::vector** is equivalent to `List<T>` in .NET languages.
 
 ```cpp
 vector<string> apples;
 apples.push_back("Granny Smith");
 ```
 
-Użyj [mapy](../standard-library/map-class.md) (nie `unordered_map`) jako domyślnego kontenera asocjacyjnego. Używaj [zestawu](../standard-library/set-class.md), [multimap](../standard-library/multimap-class.md)i [zestawów wielokrotnych](../standard-library/multiset-class.md) w celu wygenerowania wielu przypadków &.
+Use [map](../standard-library/map-class.md) (not `unordered_map`) as the default associative container. Use [set](../standard-library/set-class.md), [multimap](../standard-library/multimap-class.md), and [multiset](../standard-library/multiset-class.md) for degenerate & multi cases.
 
 ```cpp
 map<string, string> apple_color;
@@ -26,17 +26,17 @@ map<string, string> apple_color;
 apple_color["Granny Smith"] = "Green";
 ```
 
-W przypadku konieczności optymalizacji wydajności należy rozważyć użycie:
+When performance optimization is needed, consider using:
 
-- Typ [tablicy](../standard-library/array-class-stl.md) podczas osadzania jest ważny, na przykład jako element członkowski klasy.
+- The [array](../standard-library/array-class-stl.md) type when embedding is important, for example, as a class member.
 
-- Nieuporządkowane Kontenery asocjacyjne, takie jak [unordered_map](../standard-library/unordered-map-class.md). Są to mniejsze obciążenie poszczególnych elementów i wyszukiwanie w czasie stałym, ale mogą być trudniejsze do użycia poprawnie i wydajnie.
+- Unordered associative containers such as [unordered_map](../standard-library/unordered-map-class.md). These have lower per-element overhead and constant-time lookup, but they can be harder to use correctly and efficiently.
 
-- Posortowane `vector`. Aby uzyskać więcej informacji, [](../cpp/algorithms-modern-cpp.md)Zobacz algorytmy.
+- Sorted `vector`. For more information, see [Algorithms](../cpp/algorithms-modern-cpp.md).
 
-Nie używaj tablic stylów języka C. W przypadku starszych interfejsów API, które wymagają bezpośredniego dostępu do danych, należy użyć metod `f(vec.data(), vec.size());` dostępu, takich jak zamiast.
+Don’t use C-style arrays. For older APIs that need direct access to the data, use accessor methods such as `f(vec.data(), vec.size());` instead.
 
-Aby uzyskać więcej informacji na temat kontenerów, zobacz [ C++ Kontenery biblioteki standardowej](../standard-library/stl-containers.md).
+For more information about containers, see [C++ Standard Library Containers](../standard-library/stl-containers.md).
 
 ## <a name="see-also"></a>Zobacz także
 

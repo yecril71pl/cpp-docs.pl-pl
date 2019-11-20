@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 3) C4535
+title: Compiler Warning (level 3) C4535
 ms.date: 11/04/2016
 f1_keywords:
 - C4535
 helpviewer_keywords:
 - C4535
 ms.assetid: 2c5ad1aa-2558-41d1-8f06-47fef74c8d9b
-ms.openlocfilehash: 2483e5803c5de7d63bd2fa9fed97730b7c894137
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba10bff1da4875d81f73a65474ba9728d5aa1673
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401868"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189020"
 ---
-# <a name="compiler-warning-level-3-c4535"></a>Kompilator ostrzeżenie (poziom 3) C4535
+# <a name="compiler-warning-level-3-c4535"></a>Compiler Warning (level 3) C4535
 
-Wywołanie funkcji _set_se_translator() wymaga/eha
+calling _set_se_translator() requires /EHa
 
-Korzystanie z [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) wymaga [/eha](../../build/reference/eh-exception-handling-model.md) — opcja kompilatora i nie **/EHS**.
+The use of [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) requires the [/EHa](../../build/reference/eh-exception-handling-model.md) compiler option and not **/EHs**.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4535.
+The following sample generates C4535.
 
-```
+```cpp
 // C4535.cpp
 // compile with: /W3 /EHsc /c
 // C4535 expected

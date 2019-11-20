@@ -11,33 +11,33 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: af28dac17c57c8c0699950cc1fdb542642c01722
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: ca111fcb8b0fc511fda3bbb3a4769ebc9fdd28bc
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707114"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189008"
 ---
 # <a name="hint-files"></a>Pliki wskazówki
 
-A *pliku podpowiedzi* zawiera makra, które mogłyby spowodować regiony kodu do pominięcia przez Parser bazy danych przeglądania C++. Po otwarciu programu Visual Studio C++ projektu analizator analizuje kod w każdym pliku źródłowego w projekcie i tworzy bazę danych przy użyciu informacji na temat każdego identyfikatora. IDE używa, aby uzyskać informacje dotyczące obsługi przeglądania kodu funkcje, takie jak **Widok klas** przeglądarki i **pasek nawigacyjny**.
+A *hint file* contains macros that would otherwise cause regions of code to be skipped by the C++ Browsing Database Parser. When you open a Visual Studio C++ project, the parser analyzes the code in each source file in the project and builds a database with information about every identifier. The IDE uses that information to support code browsing features such as the **Class View** browser and the **Navigation Bar**.
 
-Analiza bazy danych przeglądania C++ jest rozmyte analizatora, które można analizować duże ilości kodu w krótkim czasie. Jedną z przyczyn jest szybkie jest, ponieważ pomija zawartość bloków. Na przykład on tylko rekordy lokalizacji i parametrów funkcji i ignoruje jego zawartość. Pewne makra może spowodować problemy z algorytmów heurystycznych używany w celu określenia początku i na końcu bloku. Te problemy powodują regiony kodu ma zostać nieprawidłowo zarejestrowany.
+The C++ Browsing Database Parser is a fuzzy parser that can parse large amounts of code in a short amount of time. One reason it's fast is because it skips the content of blocks. For instance, it only records the location and parameters of a function, and ignores its contents. Certain macros can cause issues for the heuristics used to determine the start and end of a block. These issues cause regions of code to be recorded improperly.
 
-Te regiony pominięto manifestu można na wiele sposobów:
+These skipped regions can manifest in multiple ways:
 
-- Brak typów i funkcje w **Widok klas**, **przejdź do** i **pasek nawigacyjny**
+- Missing types and functions in **Class View**, **Go To** and **Navigation Bar**
 
-- Niepoprawne zakresów w **pasek nawigacyjny**
+- Incorrect scopes in the **Navigation Bar**
 
-- Sugestie **Utwórz deklarację/definicję** dla funkcji, które są już zdefiniowane
+- Suggestions to **Create Declaration/Definition** for functions that are already defined
 
-Pliku podpowiedzi zawiera użytkownika można dostosować wskazówek dotyczących serwerów, które mają tej samej składni jako definicje makr C/C++. Visual C++ zawiera plik wskazówka wbudowane są wystarczające dla większości projektów. Można jednak utworzyć we własnych plikach wskazówki, aby poprawić analizatora specjalnie dla Twojego projektu.
+A hint file contains user-customizable hints, which have the same syntax as C/C++ macro definitions. Visual C++ includes a built-in hint file that is sufficient for most projects. However, you can create your own hint files to improve the parser specifically for your project.
 
 > [!IMPORTANT]
-> Modyfikowanie lub Dodawanie pliku podpowiedzi, musisz wykonać dodatkowe kroki, aby zmiany zaczęły obowiązywać:
-> - W wersjach starszych niż program Visual Studio 2017 w wersji 15.6: Usuń plik sdf i/lub plik VC.db w rozwiązaniu dla wszystkich zmian.
-> - W wersjach programu Visual Studio 2017 15.6 za pośrednictwem 15.9: Zamknij i otwórz ponownie rozwiązanie po dodaniu nowych plików wskazówki.
+> If you modify or add a hint file, you need to take additional steps in order for the changes to take effect:
+> - In versions before Visual Studio 2017 version 15.6: Delete the .sdf file and/or VC.db file in the solution for all changes.
+> - In Visual Studio 2017 version 15.6 and later: Close and reopen the solution after adding new hint files.
 
 ## <a name="scenario"></a>Scenariusz
 
@@ -48,129 +48,129 @@ void Function() NOEXCEPT
 }
 ```
 
-Bez pliku podpowiedzi `Function` nie pojawiają się w **Widok klas**, **przejdź do** lub **pasek nawigacyjny**. Po dodaniu pliku podpowiedzi, z tą definicją makra, analizator teraz rozumie i zastępuje `NOEXCEPT` makro, co pozwala na poprawnie przeanalizować funkcji:
+Without a hint file, `Function` doesn't show up in **Class View**, **Go To** or the **Navigation Bar**. After adding a hint file with this macro definition, the parser now understands and replaces the `NOEXCEPT` macro, which allows it to correctly parse the function:
 
 ```cpp.hint
 #define NOEXCEPT
 ```
 
-## <a name="disruptive-macros"></a>Szkodliwe makra
+## <a name="disruptive-macros"></a>Disruptive Macros
 
-Istnieją dwie kategorie makr, które zakłócają analizator składni:
+There are two categories of macros that disrupt the parser:
 
-- Makra, które hermetyzują słów kluczowych, które ozdobić funkcji
+- Macros that encapsulate keywords that adorn a function
 
    ```cpp
    #define NOEXCEPT noexcept
    #define STDMETHODCALLTYPE __stdcall
    ```
 
-   Dla tych typów makra tylko nazwa makra jest wymagany w pliku wskazówek:
+   For these types of macros, only the macro name is required in the hint file:
 
    ```cpp.hint
    #define NOEXCEPT
    #define STDMETHODCALLTYPE
    ```
 
-- Makra, które zawierają niezrównoważone nawiasy kwadratowe
+- Macros that contain unbalanced brackets
 
    ```cpp
    #define BEGIN {
    ```
 
-   Dla tych typów makr w pliku podpowiedzi są wymagane nazwy makra wraz z zawartością:
+   For these types of macros, both the macro name and its contents are required in the hint file:
 
    ```cpp.hint
    #define BEGIN {
    ```
 
-## <a name="editor-support"></a>Pomoc techniczna do edytora
+## <a name="editor-support"></a>Editor Support
 
-Począwszy od programu Visual Studio 2017 w wersji 15.8 kilka funkcji do identyfikowania szkodliwe makra:
+Starting in Visual Studio 2017 version 15.8 there are several features to identify disruptive macros:
 
-- Makra, które znajdują się w regionach pominięte przez parser są wyróżnione.
+- Macros that are inside regions skipped by the parser are highlighted.
 
-- Jest szybka akcja do utworzenia pliku wskazówkę, który zawiera wyróżnione makro lub w przypadku istniejącego pliku podpowiedzi do dodawania makra do pliku podpowiedzi.
+- There's a Quick Action to create a hint file that includes the highlighted macro, or if there's an existing hint file, to add the macro to the hint file.
 
-![Wyróżnione makra. ](media/hint-squiggle-and-actions.png "Podpowiedzi wężyk i szybkie akcje")
+![Highlighted Macro.](media/hint-squiggle-and-actions.png "Hint squiggle and Quick Actions")
 
-Po wykonaniu, albo szybkie akcje, analizator reparses plików dotyczy pliku podpowiedzi.
+After executing either of the Quick Actions, the parser reparses the files affected by the hint file.
 
-Domyślnie makro problem jest podświetlona jako sugestię. Wyróżnienie można ją zmienić na coś bardziej zauważalne, takich jak wężyk czerwonego lub zielonego. Użyj **makra w regionach pominięte przeglądania** opcji **faliste linie kodu** sekcji **narzędzia** > **opcje**  >  **Edytora tekstów** > **C/C++** > **widoku**.
+By default, the problem macro is highlighted as a suggestion. The highlight can be changed to something more noticeable, such as a red or green squiggle. Use the **Macros in Skipped Browsing Regions** option in the **Code Squiggles** section under **Tools** > **Options** > **Text Editor** > **C/C++**  > **View**.
 
-![Makra w pominięto opcję przeglądania w regionach. ](media/skipped-regions-squiggle-option.png "Pominięto opcję wężyk regionów.")
+![Macros in Skipped Browsing Regions Option.](media/skipped-regions-squiggle-option.png "Skipped regions squiggle option.")
 
-## <a name="display-browsing-database-errors"></a>Wyświetl błędy bazy danych przeglądania
+## <a name="display-browsing-database-errors"></a>Display Browsing Database Errors
 
-**Projektu** > **błędów bazy danych przeglądania wyświetlania** menu polecenie wyświetla wszystkie regiony, które nie można przeanalizować w **lista błędów**. Polecenie jest przeznaczone do usprawnić kompilowanie pliku podpowiedzi początkowej. Jednak Analizator nie wiadomo, jeśli przyczyną błędu były powodującego zakłócenia — makro, dlatego należy ocenić poszczególne błędy. Uruchom **błędów bazy danych przeglądania wyświetlania** polecenia i przejdź do każdego błędu, aby załadować wspomniany plik w edytorze. Po załadowaniu pliku, jeśli wszystkie makra znajdują się w regionie, jest wyróżniona. Można wywoływać szybkie akcje, aby dodać je do pliku podpowiedzi. Po zaktualizowaniu pliku wskazówkę lista błędów jest aktualizowane automatycznie. Alternatywnie, w przypadku ręcznie modyfikacji pliku podpowiedzi można użyć **Skanuj ponownie rozwiązanie** polecenie, aby uruchomić aktualizację.
+The **Project** > **Display Browsing Database Errors** menu command displays all the regions that failed to parse in the **Error List**. The command is meant to streamline building the initial hint file. However, the parser can't tell if the cause of the error was a disruptive macro, so you must evaluate each error. Run the **Display Browsing Database Errors** command and navigate to each error to load the affected file in the editor. Once the file is loaded, if any macros are inside the region, they're highlighted. You can invoke the Quick Actions to add them to a hint file. After a hint file update, the error list is updated automatically. Alternatively, if you're modifying the hint file manually you can use the **Rescan Solution** command to trigger an update.
 
 ## <a name="architecture"></a>Architektura
 
-Pliki wskazówki odnoszą się do katalogów fizycznych nie logiczne katalogi pokazane **Eksploratora rozwiązań**. Nie trzeba dodać pliku podpowiedzi do projektu do pliku podpowiedzi, które mają wpływ. Podczas analizowania system używa pliki wskazówki, tylko wtedy, gdy jej analizuje pliki źródłowe.
+Hint files relate to physical directories, not the logical directories shown in **Solution Explorer**. You don't have to add a hint file to your project for the hint file to have an effect. The parsing system uses hint files only when it parses source files.
 
-Nosi nazwę każdego pliku podpowiedzi **cpp.hint**. Plik wskazówki może się znajdować wiele katalogów, ale tylko jedna wskazówka pliku może wystąpić w określonym katalogu.
+Every hint file is named **cpp.hint**. Many directories can contain a hint file, but only one hint file can occur in a particular directory.
 
-Projekt mogą mieć wpływ na zero lub więcej pliki wskazówki. Jeśli nie ma żadnych plików wskazówkę, analizy system używa technik odzyskiwania błąd ignorowanie kodu źródłowego w ciągu. W przeciwnym razie podczas analizowania system używa następujących strategii do znalezienia i zebrać wskazówek.
+Your project can be affected by zero or more hint files. If there are no hint files, the parsing system uses error recovery techniques to ignore indecipherable source code. Otherwise, the parsing system uses the following strategy to find and gather hints.
 
-### <a name="search-order"></a>Kolejność wyszukiwania
+### <a name="search-order"></a>Search Order
 
-Podczas analizowania system przeszukuje katalogi plików wskazówki, w następującej kolejności.
+The parsing system searches directories for hint files in the following order.
 
-- Katalog, który zawiera pakiet instalacyjny dla języka Visual C++ (**vcpackages**). Ten katalog zawiera plik wbudowanych wskazówki opisujące symboli w systemie często używanych plików, takich jak **windows.h**. W związku z tym projekt automatycznie dziedziczy większość z tych wskazówek, których potrzebuje.
+- The directory that contains the installation package for Visual C++ (**vcpackages**). This directory contains a built-in hint file that describes symbols in frequently used system files, such as **windows.h**. Consequently, your project automatically inherits most of the hints that it needs.
 
-- Ścieżka z katalogu głównego pliku źródłowego do katalogu zawierającego plik źródłowy, sam. W typowym środowisku Visual Studio C++ projekt, katalog główny zawiera plik rozwiązania lub projektu.
+- The path from the root directory of a source file to the directory that contains the source file itself. In a typical Visual Studio C++ project, the root directory contains the solution or project file.
 
-   Wyjątkiem od tej reguły jest Jeśli *pliku stop* znajduje się w ścieżce do pliku źródłowego. Plik zatrzymania jest dowolny plik, który nosi nazwę **cpp.stop**. Plik zatrzymania zapewnia dodatkową kontrolę nad kolejność wyszukiwania. Zamiast począwszy od katalogu głównego, analizowania system przeszukuje z katalogu, który zawiera plik zatrzymania do katalogu, który zawiera plik źródłowy. W typowym projekcie nie jest potrzebny plik zatrzymania.
+   The exception to this rule is if a *stop file* is in the path to the source file. A stop file is any file that is named **cpp.stop**. A stop file provides additional control over the search order. Instead of starting from the root directory, the parsing system searches from the directory that contains the stop file to the directory that contains the source file. In a typical project, you don't need a stop file.
 
-### <a name="hint-gathering"></a>Wskazówka zbieranie
+### <a name="hint-gathering"></a>Hint Gathering
 
-Plik wskazówki zawiera zero lub więcej *wskazówek*. Wskazówką jest zdefiniowany lub usunięta tak samo jak makra języka C/C++. Oznacza to, że `#define` dyrektywy preprocesora tworzy lub ponownie wskazówkę i `#undef` dyrektywy usuwa wskazówką.
+A hint file contains zero or more *hints*. A hint is defined or deleted just like a C/C++ macro. That is, the `#define` preprocessor directive creates or redefines a hint, and the `#undef` directive deletes a hint.
 
-Podczas analizowania system otwiera każdego pliku podpowiedzi w kolejności wyszukiwania opisanej wcześniej. Jego gromadzi wskazówek każdy plik na zestaw *skuteczne wskazówek*, a następnie używa skuteczne wskazówki do interpretacji identyfikatorów w kodzie.
+The parsing system opens each hint file in the search order described earlier. It accumulates each file's hints into a set of *effective hints*, and then uses the effective hints to interpret the identifiers in your code.
 
-Podczas analizowania system używa tych reguł do wskazówek dotyczących serwerów:
+The parsing system uses these rules to accumulate hints:
 
-- Jeśli nowy Wskazówka określa nazwę, która nie jest już zdefiniowany, nową wskazówkę dotyczącą dodaje nazwę do skutecznego wskazówek.
+- If the new hint specifies a name that isn't already defined, the new hint adds the name to the effective hints.
 
-- Jeśli nowy Wskazówka określa nazwę, która jest już zdefiniowany, nową wskazówkę dotyczącą redefiniuje istniejących wskazówki.
+- If the new hint specifies a name that is already defined, the new hint redefines the existing hint.
 
-- Jeśli jest nową wskazówkę dotyczącą `#undef` dyrektywy, który określa skutecznych podpowiedzi, nową wskazówkę dotyczącą usuwa istniejące wskazówki.
+- If the new hint is an `#undef` directive that specifies an existing effective hint, the new hint deletes the existing hint.
 
-Pierwszą regułę oznacza skuteczne wskazówek zostały odziedziczone wskazówka wcześniej otwartych plików. Ostatnie dwie reguły oznacza, że wskazówki w dalszej kolejności wyszukiwania można zastąpić wcześniej wskazówek dotyczących serwerów. Na przykład można zastąpić poprzedniego wskazówek dotyczących po utworzeniu pliku podpowiedzi w katalogu, który zawiera plik źródłowy.
+The first rule means that effective hints are inherited from previously opened hint files. The last two rules mean that hints later in the search order can override earlier hints. For example, you can override any previous hints if you create a hint file in the directory that contains a source file.
 
-Aby uzyskać sceny jak zbierane są wskazówki, zobacz [przykład](#example) sekcji.
+For a depiction of how hints are gathered, see the [Example](#example) section.
 
 ### <a name="syntax"></a>Składnia
 
-Tworzenie i usuwanie wskazówek dotyczących serwerów przy użyciu tej samej składni jako dyrektywy preprocesora do tworzenia i usuwania makra. W rzeczywistości analizy system używa preprocesora C/C++, można obliczyć wskazówek. Aby uzyskać więcej informacji na temat dyrektywy preprocesora, zobacz [#define — dyrektywa (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md) i [#undef — dyrektywa (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md).
+You create and delete hints by using the same syntax as the preprocessor directives to create and delete macros. In fact, the parsing system uses the C/C++ preprocessor to evaluate the hints. For more information about the preprocessor directives, see [#define Directive (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md) and [#undef Directive (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md).
 
-Elementy składni tylko nietypowe są `@<`, `@=`, i `@>` ciągów zastępczych. Te ciągi określone zastąpienia pliku podpowiedzi są używane tylko w *mapy* makra. Mapa jest zestaw makra, które dotyczą danych, funkcji lub zdarzeń innych danych, funkcji lub procedury obsługi zdarzeń. Na przykład `MFC` utworzyć przy użyciu map [komunikatu mapy](../../mfc/reference/message-maps-mfc.md), i `ATL` utworzyć przy użyciu map [obiektu mapy](../../atl/reference/object-map-macros.md). Parametry określone zastąpienia pliku podpowiedzi oznaczyć początkowy, pośrednie i końcowy elementy mapy. Istotne jest tylko nazwa makra mapy. W związku z tym każdy ciąg zastępujący celowo powoduje ukrycie opcji wdrożenia makra.
+The only unusual syntax elements are the `@<`, `@=`, and `@>` replacement strings. These hint-file specific replacement strings are only used in *map* macros. A map is a set of macros that relate data, functions, or events to other data, functions, or event handlers. For example, `MFC` uses maps to create [message maps](../../mfc/reference/message-maps-mfc.md), and `ATL` uses maps to create [object maps](../../atl/reference/object-map-macros.md). The hint-file specific replacement strings mark the starting, intermediate, and ending elements of a map. Only the name of a map macro is significant. Therefore, each replacement string intentionally hides the implementation of the macro.
 
-Wskazówki należy użyć następującej składni:
+Hints use this syntax:
 
 |Składnia|Znaczenie|
 |------------|-------------|
-|`#define` *Wskazówka dotycząca nazwy* *ciąg zastępujący*<br /><br /> `#define` *Wskazówka dotycząca nazwy* `(` *parametru*,... `)` *ciąg zastępujący*|Dyrektywy preprocesora definiuje wskazówkę dotyczącą nowych lub ponownie wskazówką istniejących. Po dyrektywie preprocesora zamienia każde wystąpienie *nazw wskazówka* w kodzie źródłowym za pomocą *ciąg zastępujący*.<br /><br /> Druga forma składni definiuje funkcyjne wskazówkę. W przypadku wskazówką funkcyjne w kodzie źródłowym, preprocesor najpierw zamienia każde wystąpienie *parametru* w *ciąg zastępujący* za pomocą odnośnego argumentu w kodzie źródłowym, a następnie zastępuje *nazw wskazówka* z *ciąg zastępujący*.|
-|`@<`|Określonego pliku podpowiedzi *ciąg zastępujący* oznacza początek zbiór elementów mapy.|
-|`@=`|Określonego pliku podpowiedzi *ciąg zastępujący* oznacza element pośredni mapy. Mapy może mieć wielu elementów mapy.|
-|`@>`|Określonego pliku podpowiedzi *ciąg zastępujący* oznacza koniec zbiór elementów mapy.|
-|`#undef` *Wskazówka dotycząca nazwy*|Dyrektywy preprocesora, który służy do usuwania istniejących wskazówki. Nazwa wskazówka odbywa się przy *nazw wskazówka* identyfikatora.|
-|`//` *Komentarz*|Jednowierszowego komentarza.|
-|`/*` *Komentarz* `*/`|Komentarz wielowierszowy.|
+|`#define` *hint-name* *replacement-string*<br /><br /> `#define` *hint-name* `(` *parameter*, ...`)`*replacement-string*|A preprocessor directive that defines a new hint or redefines an existing hint. After the directive, the preprocessor replaces each occurrence of *hint-name* in source code with *replacement-string*.<br /><br /> The second syntax form defines a function-like hint. If a function-like hint occurs in source code, the preprocessor first replaces each occurrence of *parameter* in *replacement-string* with the corresponding argument in source code, and then replaces *hint-name* with *replacement-string*.|
+|`@<`|A hint-file specific *replacement-string* that indicates the start of a set of map elements.|
+|`@=`|A hint-file specific *replacement-string* that indicates an intermediate map element. A map can have multiple map elements.|
+|`@>`|A hint-file specific *replacement-string* that indicates the end of a set of map elements.|
+|`#undef` *hint-name*|The preprocessor directive that deletes an existing hint. The name of the hint is provided by the *hint-name* identifier.|
+|`//` *comment*|A single-line comment.|
+|`/*` *comment* `*/`|A multiline comment.|
 
 ## <a name="example"></a>Przykład
 
-Ten przykład pokazuje, jak wskazówki są zbierane z pliki wskazówki. Zatrzymaj pliki nie są używane w tym przykładzie.
+This example shows how hints are accumulated from hint files. Stop files aren't used in this example.
 
-Na ilustracji pokazano niektóre z katalogów fizycznych w programie Visual Studio C++ projektu. Istnieją pliki wskazówki w `vcpackages`, `Debug`, `A1`, i `A2` katalogów.
+The illustration shows some of the physical directories in a Visual Studio C++ project. There are hint files in the `vcpackages`, `Debug`, `A1`, and `A2` directories.
 
-### <a name="hint-file-directories"></a>Wskazówka katalogi plików
+### <a name="hint-file-directories"></a>Hint File Directories
 
-![Typowe i projekt&#45;wskazówki określone katalogi plików. ](media/hintfile.png "HintFile")
+![Common and project&#45;specific hint file directories.](media/hintfile.png "HintFile")
 
-### <a name="directories-and-hint-file-contents"></a>Katalogi i zawartość pliku wskazówka
+### <a name="directories-and-hint-file-contents"></a>Directories and Hint File Contents
 
-Ta lista zawiera katalogi, w tym projekcie, zawierających pliki wskazówki i zawartość tych plików wskazówki. Tylko niektóre z wielu wskazówki w `vcpackages` katalogu pliku podpowiedzi należą:
+This list shows the directories in this project that contain hint files, and the contents of those hint files. Only some of the many hints in the `vcpackages` directory hint file are listed:
 
 - vcpackages
 
@@ -210,13 +210,13 @@ Ta lista zawiera katalogi, w tym projekcie, zawierających pliki wskazówki i za
     #undef CBRACE
     ```
 
-### <a name="effective-hints"></a>Skuteczne wskazówki
+### <a name="effective-hints"></a>Effective Hints
 
-Poniższa tabela zawiera listę skuteczne wskazówek dotyczących plików źródłowych, w tym projekcie:
+This table lists the effective hints for the source files in this project:
 
-- Plik źródłowy: A1_A2_B.cpp
+- Source File: A1_A2_B.cpp
 
-- Skuteczne wskazówek:
+- Effective hints:
 
     ```cpp.hint
     // vcpackages (partial list)
@@ -232,19 +232,19 @@ Poniższa tabela zawiera listę skuteczne wskazówek dotyczących plików źród
     #define END_NAMESPACE }
     ```
 
-Te informacje dotyczą powyższej liście:
+These notes apply to the preceding list:
 
-- Skuteczne wskazówki są z `vcpackages`, `Debug`, `A1`, i `A2` katalogów.
+- The effective hints are from the `vcpackages`, `Debug`, `A1`, and `A2` directories.
 
-- **#Undef** dyrektywy w `Debug` pliku podpowiedzi usunięte `#define _In_` podpowiedzi w `vcpackages` pliku podpowiedzi katalogu.
+- The **#undef** directive in the `Debug` hint file removed the `#define _In_` hint in the `vcpackages` directory hint file.
 
-- Pliku podpowiedzi w `A1` redefiniuje katalogu `START_NAMESPACE`.
+- The hint file in the `A1` directory redefines `START_NAMESPACE`.
 
-- `#undef` Podpowiedzi w `A2` wskazówek dotyczących usunąć katalogu `OBRACE` i `CBRACE` w `Debug` pliku podpowiedzi katalogu.
+- The `#undef` hint in the `A2` directory removed the hints for `OBRACE` and `CBRACE` in the `Debug` directory hint file.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Plik typy utworzone dla programu Visual Studio C++ projektów](file-types-created-for-visual-cpp-projects.md)<br>
+[File Types Created for Visual Studio C++ projects](file-types-created-for-visual-cpp-projects.md)<br>
 [#define, dyrektywa (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>
 [#undef, dyrektywa (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br>
 [Adnotacje SAL](../../c-runtime-library/sal-annotations.md)<br>
