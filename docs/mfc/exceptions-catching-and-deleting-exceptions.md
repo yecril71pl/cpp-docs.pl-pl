@@ -1,5 +1,5 @@
 ---
-title: 'Wyjątki: Przechwytywanie i usuwanie wyjątków'
+title: 'Wyjątki: przechwytywanie i usuwanie wyjątków'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exceptions [MFC], deleting
@@ -9,47 +9,47 @@ helpviewer_keywords:
 - catch blocks [MFC], catching and deleting exceptions
 - execution [MFC], returns from within catch block
 ms.assetid: 7c233ff0-89de-4de0-a68a-9e9cdb164311
-ms.openlocfilehash: 511850c3c17a4eb70529202f4b0c2b36132fc8ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0142ffddfb391ae8da878d9e5fe34629cf16cb52
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173297"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246693"
 ---
-# <a name="exceptions-catching-and-deleting-exceptions"></a>Wyjątki: Przechwytywanie i usuwanie wyjątków
+# <a name="exceptions-catching-and-deleting-exceptions"></a>Wyjątki: przechwytywanie i usuwanie wyjątków
 
-Następujące instrukcje i przykłady pokazują, jak przechwytywać i usuwanie wyjątków. Aby uzyskać więcej informacji na temat **spróbuj**, **catch**, i **throw** słów kluczowych, zobacz [Obsługa wyjątków języka C++](../cpp/cpp-exception-handling.md).
+The following instructions and examples show you how to catch and delete exceptions. For more information on the **try**, **catch**, and **throw** keywords, see [Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md).
 
-Inne programy obsługi wyjątków należy usunąć obiekty wyjątków, które obsługują, ponieważ nie można usunąć wyjątku powoduje przeciek pamięci, zawsze wtedy, gdy ten kod przechwytuje wyjątek.
+Your exception handlers must delete exception objects they handle, because failure to delete the exception causes a memory leak whenever that code catches an exception.
 
-Twoje **catch** bloku musi usunąć wyjątek po:
+Your **catch** block must delete an exception when:
 
-- **Catch** bloku zgłasza nowy wyjątek.
+- The **catch** block throws a new exception.
 
-   Nie należy oczywiście usunąć wyjątek, jeśli zgłosić ten sam wyjątek:
+   Of course, you must not delete the exception if you throw the same exception again:
 
    [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
 
-- Wykonywanie powraca z poziomu **catch** bloku.
+- Execution returns from within the **catch** block.
 
 > [!NOTE]
->  Podczas usuwania `CException`, użyj `Delete` funkcja elementu członkowskiego, można usunąć wyjątku. Nie używaj **Usuń** — słowo kluczowe, ponieważ jego może zakończyć się niepowodzeniem, jeśli wyjątek nie znajduje się na stosie.
+>  When deleting a `CException`, use the `Delete` member function to delete the exception. Do not use the **delete** keyword, because it can fail if the exception is not on the heap.
 
-#### <a name="to-catch-and-delete-exceptions"></a>Aby przechwycić i usuwanie wyjątków
+#### <a name="to-catch-and-delete-exceptions"></a>To catch and delete exceptions
 
-1. Użyj **spróbuj** — słowo kluczowe, aby skonfigurować **spróbuj** bloku. Wykonaj wszelkie instrukcje programu, które mogą zgłosić wyjątek w ramach **spróbuj** bloku.
+1. Use the **try** keyword to set up a **try** block. Execute any program statements that might throw an exception within a **try** block.
 
-   Użyj **catch** — słowo kluczowe, aby skonfigurować **catch** bloku. Umieść kod obsługi wyjątków w **catch** bloku. Kod w **catch** blok jest wykonywany tylko wtedy, gdy kod w **spróbuj** bloku zgłasza wyjątek typu określonego w **catch** instrukcji.
+   Use the **catch** keyword to set up a **catch** block. Place exception-handling code in a **catch** block. The code in the **catch** block is executed only if the code within the **try** block throws an exception of the type specified in the **catch** statement.
 
-   Poniższej przedstawiono szkielet jak **spróbuj** i **catch** zwykle ułożone bloków:
+   The following skeleton shows how **try** and **catch** blocks are normally arranged:
 
    [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
 
-   Gdy wyjątek jest zgłaszany, kontrola przechodzi do pierwszej **catch** bloku, w których deklaracji wyjątku jest zgodny z typem wyjątku. Selektywnie mogą obsługiwać różne rodzaje wyjątków za pomocą sekwencyjne **catch** blokuje wymienione poniżej:
+   When an exception is thrown, control passes to the first **catch** block whose exception-declaration matches the type of the exception. You can selectively handle different types of exceptions with sequential **catch** blocks as listed below:
 
    [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
 
-Aby uzyskać więcej informacji, zobacz [wyjątków: Konwertowanie z makr wyjątków MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).
+For more information, see [Exceptions: Converting from MFC Exception Macros](../mfc/exceptions-converting-from-mfc-exception-macros.md).
 
 ## <a name="see-also"></a>Zobacz także
 

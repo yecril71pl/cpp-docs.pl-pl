@@ -1,42 +1,62 @@
 ---
-title: Obsługa wyjątków w MSVC
-ms.date: 05/07/2019
+title: Exception handling in MSVC
+ms.date: 11/19/2019
 helpviewer_keywords:
 - try-catch keyword [C++], exception handling
 ms.assetid: a6aa08de-669d-4ce8-9ec3-ec20d1354fcf
-ms.openlocfilehash: 47443f1b7021aac7755d77f797a4f7b7410281f8
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 6cf71d6e6d0519951a084ebead65003bd363395f
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222067"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246594"
 ---
-# <a name="exception-handling-in-msvc"></a>Obsługa wyjątków w MSVC
+# <a name="exception-handling-in-msvc"></a>Exception handling in MSVC
 
-Wyjątek jest warunkiem błędu, możliwie poza kontrolą programu, który uniemożliwia kontynuowanie wykonywania programu wzdłuż zwykłej ścieżki. Niektóre operacje, w tym tworzenie obiektu, odczyt z/zapis do pliku i wywołania funkcji z innych modułów, są potencjalnymi źródłami wyjątków, nawet wtedy, gdy program działa poprawnie. Niezawodny kod przewiduje wyjątki i je obsługuje.
+Wyjątek jest warunkiem błędu, możliwie poza kontrolą programu, który uniemożliwia kontynuowanie wykonywania programu wzdłuż zwykłej ścieżki. Niektóre operacje, w tym tworzenie obiektu, odczyt z/zapis do pliku i wywołania funkcji z innych modułów, są potencjalnymi źródłami wyjątków, nawet wtedy, gdy program działa poprawnie. Niezawodny kod przewiduje wyjątki i je obsługuje. To detect logic errors, use assertions rather than exceptions (see [Using Assertions](/visualstudio/debugger/c-cpp-assertions)).
 
-Aby wykryć błędy logiczne w ramach pojedynczego programu lub modułu, należy używać asercji zamiast wyjątków (zobacz [wykorzystanie asercji](/visualstudio/debugger/c-cpp-assertions)).
+## <a name="kinds-of-exceptions"></a>Kinds of exceptions
 
-Microsoft C++ kompilator (MSVC) obsługuje trzy rodzaje obsługi wyjątków:
+The Microsoft C++ compiler (MSVC) supports three kinds of exception handling:
 
-- [Obsługa wyjątków języka C++](../cpp/cpp-exception-handling.md)
+- [C++ exception handling](errors-and-exception-handling-modern-cpp.md)
 
    W większości programów, należy używać obsługę wyjątków C++, co jest bezpieczne względem typu i zapewnia wywołanie destruktorów obiektów podczas wykonywania operacji odwijania stosu.
 
-- [Obsługa wyjątków strukturalnych](../cpp/structured-exception-handling-c-cpp.md)
+- [Structured exception handling](structured-exception-handling-c-cpp.md)
 
-   System Windows zawiera własny mechanizm wyjątków, nazywany SEH. Nie zaleca się stosowania tego systemu w programowaniu C++ lub MFC. SEH należy używać tylko w programach innych niż MFC c.
+   System Windows zawiera własny mechanizm wyjątków, nazywany SEH. Nie zaleca się stosowania tego systemu w programowaniu C++ lub MFC. Use SEH only in non-MFC C programs.
 
-- [Wyjątki MFC](../mfc/exception-handling-in-mfc.md)
+- [MFC exceptions](../mfc/exception-handling-in-mfc.md)
 
-   Od wersji 3.0, MFC wykorzystuje wyjątki C++, ale nadal obsługuje jego starsze makra obsługi wyjątków, które mają podobną formę do wyjątków C++. Chociaż wykorzystanie tych makr nie jest zalecane w przypadku nowych programów, nadal są one obsługiwane w celu zapewnienia zgodności z poprzednimi wersjami. W programach, które już używają makr, można bez ograniczeń wykorzystywać również wyjątki C++. Podczas wstępnego przetwarzania, makra szacują do słów kluczowych, zdefiniowane w implementacji MSVC obsługi wyjątków C++ języka, począwszy od Visual C++ w wersji 2.0. Podczas korzystania z języka C++, można pozostawić na miejscu istniejące makra wyjątków.
+Use the [/EH](../build/reference/eh-exception-handling-model.md) compiler option to specify the type of exception handling to use in a project; C++ exception handling is the default. Do not mix the error handling mechanisms; for example, do not use C++ exceptions with structured exception handling. Using C++ exception handling makes your code more portable, and it allows you to handle exceptions of any type. For more information about the drawbacks of structured exception handling, see [Structured Exception Handling](structured-exception-handling-c-cpp.md). For advice about mixing MFC macros and C++ exceptions, see [Exceptions: Using MFC Macros and C++ Exceptions](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).
 
-Użyj [/EH](../build/reference/eh-exception-handling-model.md) opcję kompilatora, aby określić typ obsługi wyjątku do użycia w projekcie; Obsługa wyjątków języka C++ jest ustawieniem domyślnym. Nie należy mieszać mechanizmów; obsługi błędów na przykład nie należy używać wyjątków języka C++ z obsługi wyjątków strukturalnych. Przy użyciu obsługi wyjątków C++ sprawia, że Twój kod bardziej przenośny i pozwala obsługiwać wyjątki dowolnego typu. Aby uzyskać więcej informacji na temat wad strukturalna Obsługa wyjątków, zobacz [obsługi wyjątków strukturalnych](../cpp/structured-exception-handling-c-cpp.md). Aby uzyskać porady na temat mieszania makr MFC i wyjątków języka C++, zobacz [wyjątków: Używanie makr MFC i wyjątków C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).
+## <a name="in-this-section"></a>W tej sekcji
 
-Aby uzyskać informacje dotyczące obsługi wyjątków w aplikacjach CLR, zobacz [obsługi wyjątków (C++sposób niezamierzony i C++/CX)](../extensions/exception-handling-cpp-component-extensions.md).
+- [Modern C++ best practices for exceptions and error handling](errors-and-exception-handling-modern-cpp.md)
 
-Aby uzyskać informacje dotyczące obsługi wyjątków na x64 procesorów, zobacz [x64 wyjątków](../build/exception-handling-x64.md).
+- [How to design for exception safety](how-to-design-for-exception-safety.md)
+
+- [How to interface between exceptional and non-exceptional code](how-to-interface-between-exceptional-and-non-exceptional-code.md)
+
+- [The try, catch, and throw Statements](try-throw-and-catch-statements-cpp.md)
+
+- [Jak są obliczane bloki catch](how-catch-blocks-are-evaluated-cpp.md)
+
+- [Exceptions and Stack Unwinding](exceptions-and-stack-unwinding-in-cpp.md)
+
+- [Exception Specifications](exception-specifications-throw-cpp.md)
+
+- [noexcept](noexcept-cpp.md)
+
+- [Nieobsługiwane wyjątki języka C++](unhandled-cpp-exceptions.md)
+
+- [Połączenie wyjątków języka C (strukturalnych) i C++](mixing-c-structured-and-cpp-exceptions.md)
+
+- [Structured Exception Handling (SEH) (C/C++)](structured-exception-handling-c-cpp.md)
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja języka C++](../cpp/cpp-language-reference.md)
+[Dokumentacja języka C++](cpp-language-reference.md)</br>
+[Obsługa wyjątku x64](../build/exception-handling-x64.md)</br>
+[Exception Handling (C++/CLI and C++/CX)](../extensions/exception-handling-cpp-component-extensions.md)
