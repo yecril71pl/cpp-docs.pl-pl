@@ -26,76 +26,76 @@ helpviewer_keywords:
 - _exception_info keyword [C++]
 - _abnormal_termination keyword [C++]
 ms.assetid: 30d60071-ea49-4bfb-a8e6-7a420de66381
-ms.openlocfilehash: b4dccb58bf63f51e88006b793b8a94bfbe021c73
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: af378f510f11e1fe7d08619b5f33efe92a13d7be
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400548"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245163"
 ---
 # <a name="try-except-statement"></a>try-except — instrukcja
 
 **Microsoft Specific**
 
-**Spróbuj — z wyjątkiem** instrukcja jest rozszerzeniem firmy Microsoft do C i języków C++, które obsługuje obsługę wyjątków strukturalnych.
+The **try-except** statement is a Microsoft extension to the C and C++ languages that supports structured exception handling.
 
 ## <a name="syntax"></a>Składnia
 
-> **\_\_Wypróbuj**<br/>
+> **\_\_try**<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;Kod chronionych<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;// guarded code<br/>
 > }<br/>
-> **\_\_z wyjątkiem** ( *wyrażenie* )<br/>
+> **\_\_except** ( *expression* )<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;Kod obsługi wyjątków<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;// exception handler code<br/>
 > }
 
 ## <a name="remarks"></a>Uwagi
 
-**Spróbuj — z wyjątkiem** instrukcja jest rozszerzeniem firmy Microsoft do C i języków C++, które umożliwiają aplikacji docelowej uzyskanie kontroli, kiedy występują zdarzenia, które normalnie zakończyć wykonywania programu. Takie zdarzenia nazywane są *wyjątki*, a mechanizm, który zajmuje się wyjątkami nazywa się *obsługę wyjątków strukturalnych* (SEH).
+The **try-except** statement is a Microsoft extension to the C and C++ languages that enables target applications to gain control when events that normally terminate program execution occur. Such events are called *exceptions*, and the mechanism that deals with exceptions is called *structured exception handling* (SEH).
 
-Aby uzyskać powiązane informacje, zobacz [try-finally — instrukcja](../cpp/try-finally-statement.md).
+For related information, see the [try-finally statement](../cpp/try-finally-statement.md).
 
 Wyjątki mogą być sprzętowe lub programowe. Nawet wtedy, gdy aplikacje nie mogą całkowicie odzyskać sprawności po wystąpieniu wyjątku sprzętowego lub programowego, strukturalna obsługa wyjątków umożliwia wyświetlenie informacji o błędzie i pozwala na przechwycenie wewnętrznego stanu aplikacji, aby pomóc w zdiagnozowaniu problemu. Jest to szczególnie użyteczne w przypadku sporadycznych problemów, których nie można łatwo odtworzyć.
 
 > [!NOTE]
-> Strukturalna obsługa wyjątków działa z Win32 dla plików źródłowych C i C++. Jednakże nie jest specjalnie zaprojektowana dla języka C++. Można zapewnić, że kod będzie bardziej przenośny przy użyciu obsługi wyjątków C++. Ponadto, obsługa wyjątków C++ jest bardziej elastyczna, gdyż może obsługiwać wyjątki dowolnego typu. Programy w języku C++, zalecane jest używanie mechanizmu obsługi wyjątków C++ ([try, catch i throw](../cpp/try-throw-and-catch-statements-cpp.md) instrukcji).
+> Strukturalna obsługa wyjątków działa z Win32 dla plików źródłowych C i C++. Jednakże nie jest specjalnie zaprojektowana dla języka C++. Można zapewnić, że kod będzie bardziej przenośny przy użyciu obsługi wyjątków C++. Ponadto, obsługa wyjątków C++ jest bardziej elastyczna, gdyż może obsługiwać wyjątki dowolnego typu. For C++ programs, it is recommended that you use the C++ exception-handling mechanism ([try, catch, and throw](../cpp/try-throw-and-catch-statements-cpp.md) statements).
 
-Instrukcja złożona po **__try** klauzula jest ciałem sekcji chronionej. Instrukcja złożona po **__except** klauzula jest program obsługi wyjątków. Kod obsługi wyjątku określa zestaw akcji, które zostaną wykonane, jeśli wystąpi wyjątek w ciele chronionej sekcji. Wykonanie działa w następujący sposób:
+The compound statement after the **__try** clause is the body or guarded section. The compound statement after the **__except** clause is the exception handler. Kod obsługi wyjątku określa zestaw akcji, które zostaną wykonane, jeśli wystąpi wyjątek w ciele chronionej sekcji. Execution proceeds as follows:
 
 1. Sekcja chroniona jest wykonywana.
 
-1. Jeśli nie wystąpi wyjątek podczas wykonywania sekcji chronionej, wykonywanie jest kontynuowane na instrukcji znajdującej się po **__except** klauzuli.
+1. If no exception occurs during execution of the guarded section, execution continues at the statement after the **__except** clause.
 
-1. Jeśli wystąpi wyjątek podczas wykonywania sekcji chronionej lub w dowolnej procedurze, wywołuje sekcję chronioną, **__except** *wyrażenie* (o nazwie *filtru* wyrażenia) jest obliczane i wartość określa sposób obsługi wyjątku. Istnieją trzy możliwe wartości:
+1. If an exception occurs during execution of the guarded section or in any routine the guarded section calls, the **__except** *expression* (called the *filter* expression) is evaluated and the value determines how the exception is handled. There are three possible values:
 
-   - EXCEPTION_CONTINUE_EXECUTION (-1) wyjątek zostaje odrzucony. Kontynuuj wykonywanie w punkcie, w którym wystąpił wyjątek.
+   - EXCEPTION_CONTINUE_EXECUTION (-1) Exception is dismissed. Kontynuuj wykonywanie w punkcie, w którym wystąpił wyjątek.
 
-   - Wyjątek EXCEPTION_CONTINUE_SEARCH (0) nie została rozpoznana. Kontynuuj przeszukiwanie stosu obsługi, najpierw zawierającego wyrażenia **spróbuj — z wyjątkiem** instrukcji, następnie obsługi z następnym największym priorytetem.
+   - EXCEPTION_CONTINUE_SEARCH (0) Exception is not recognized. Continue to search up the stack for a handler, first for containing **try-except** statements, then for handlers with the next highest precedence.
 
-   - EXCEPTION_EXECUTE_HANDLER (1) wyjątek został rozpoznany. Kontrola jest przekazywana do programu obsługi wyjątków przez wykonanie **__except** instrukcja złożona (c), a następnie kontynuuj wykonywanie po **__except** bloku.
+   - EXCEPTION_EXECUTE_HANDLER (1) Exception is recognized. Transfer control to the exception handler by executing the **__except** compound statement, then continue execution after the **__except** block.
 
-Ponieważ **__except** wyrażenie jest obliczane jak wyrażenie C, zatem zostaje ograniczone do pojedynczej wartości, operator wyrażenia warunkowego lub operatora przecinka. Jeśli wymagane jest bardziej rozległe przetwarzanie, wyrażenie może wywołać procedurę, która zwraca jedną z trzech wartości wymienionych powyżej.
+Because the **__except** expression is evaluated as a C expression, it is limited to a single value, the conditional-expression operator, or the comma operator. Jeśli wymagane jest bardziej rozległe przetwarzanie, wyrażenie może wywołać procedurę, która zwraca jedną z trzech wartości wymienionych powyżej.
 
 Każda aplikacja może mieć własną obsługę wyjątków.
 
-Nie jest prawidłową realizowanie **__try** instrukcji, ale dozwolone jest wyjście z niej. Obsługa wyjątków nie jest wywoływana, gdy proces zostanie zakończony w środku wykonywania wyrażenia **spróbuj — z wyjątkiem** instrukcji.
+It is not valid to jump into a **__try** statement, but valid to jump out of one. The exception handler is not called if a process is terminated in the middle of executing a **try-except** statement.
 
-W celu zgodności z poprzednimi wersjami **_try**, **_except**, i **_leave** są synonimy **__try**, **__except** , i **__leave** chyba że — opcja kompilatora [/Za \(Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md) jest określony.
+For compatibility with previous versions, **_try**, **_except**, and **_leave** are synonyms for **__try**, **__except**, and **__leave** unless compiler option [/Za \(Disable language extensions)](../build/reference/za-ze-disable-language-extensions.md) is specified.
 
-### <a name="the-leave-keyword"></a>Słowo kluczowe __leave
+### <a name="the-__leave-keyword"></a>Słowo kluczowe __leave
 
-**__Leave** — słowo kluczowe jest prawidłowy tylko wewnątrz sekcji chronionej **spróbuj — z wyjątkiem** instrukcji, a jego efektem jest przeskoczenie do końca sekcji chronionej. Wykonywanie jest kontynuowane po pierwszej instrukcji następującej po programie obsługi wyjątków.
+The **__leave** keyword is valid only within the guarded section of a **try-except** statement, and its effect is to jump to the end of the guarded section. Wykonywanie jest kontynuowane po pierwszej instrukcji następującej po programie obsługi wyjątków.
 
-A **goto** instrukcji może również przeskoczyć poza sekcję chronioną i nie zmniejsza wydajność co w **try-finally** instrukcji, ponieważ nie występuje odwrócenie stosu. Jednak firma Microsoft zaleca użycie **__leave** — słowo kluczowe zamiast **goto** instrukcji, ponieważ jest mniej prawdopodobne się zdarzyć, jeśli dużej lub złożonej sekcji chronionej.
+A **goto** statement can also jump out of the guarded section, and it does not degrade performance as it does in a **try-finally** statement because stack unwinding does not occur. However, we recommend that you use the **__leave** keyword rather than a **goto** statement because you are less likely to make a programming mistake if the guarded section is large or complex.
 
 ### <a name="structured-exception-handling-intrinsic-functions"></a>Wewnętrzne funkcje strukturalnej obsługi wyjątków
 
-Strukturalna obsługa wyjątków zapewnia dwie funkcje wewnętrzne, które są dostępne do użycia z **spróbuj — z wyjątkiem** instrukcji: `GetExceptionCode` i `GetExceptionInformation`.
+Structured exception handling provides two intrinsic functions that are available to use with the **try-except** statement: `GetExceptionCode` and `GetExceptionInformation`.
 
-`GetExceptionCode` Zwraca kod wyjątku (liczba całkowita 32-bitowe).
+`GetExceptionCode` returns the code (a 32-bit integer) of the exception.
 
-Wewnętrzna funkcja `GetExceptionInformation` zwraca wskaźnik do struktury zawierającej dodatkowe informacje o wyjątku. Za pomocą tego wskaźnika można uzyskać dostęp do stanu maszyny w momencie wystąpienia wyjątku sprzętowego. Struktura jest następująca:
+The intrinsic function `GetExceptionInformation` returns a pointer to a structure containing additional information about the exception. Za pomocą tego wskaźnika można uzyskać dostęp do stanu maszyny w momencie wystąpienia wyjątku sprzętowego. Struktura jest następująca:
 
 ```cpp
 typedef struct _EXCEPTION_POINTERS {
@@ -104,19 +104,19 @@ typedef struct _EXCEPTION_POINTERS {
 } EXCEPTION_POINTERS, *PEXCEPTION_POINTERS;
 ```
 
-Typy wskaźników `PEXCEPTION_RECORD` i `PCONTEXT` są zdefiniowane w dołączanym pliku \<opis pliku winnt.h >, a `_EXCEPTION_RECORD` i `_CONTEXT` są zdefiniowane w dołączanym pliku \<excpt.h >
+The pointer types `PEXCEPTION_RECORD` and `PCONTEXT` are defined in the include file \<winnt.h>, and `_EXCEPTION_RECORD` and `_CONTEXT` are defined in the include file \<excpt.h>
 
-Możesz użyć `GetExceptionCode` w ramach programu obsługi wyjątków. Można jednak użyć `GetExceptionInformation` tylko w wyrażeniu filtru wyjątków. Informacje na które wskazuje są na ogół na stosie i nie są dostępne po przekazaniu kontroli do programu obsługi wyjątków.
+You can use `GetExceptionCode` within the exception handler. However, you can use `GetExceptionInformation` only within the exception filter expression. Informacje na które wskazuje są na ogół na stosie i nie są dostępne po przekazaniu kontroli do programu obsługi wyjątków.
 
-Wewnętrzna funkcja `AbnormalTermination` jest dostępna w ramach programu obsługi zakończenia. Zwraca 0, jeśli treść **try-finally** kończy się sekwencyjnie. We wszystkich pozostałych przypadkach zwraca wartość 1.
+The intrinsic function `AbnormalTermination` is available within a termination handler. It returns 0 if the body of the **try-finally** statement terminates sequentially. We wszystkich pozostałych przypadkach zwraca wartość 1.
 
-excpt.h definiuje kilka nazw alternatywnych dla funkcji wewnętrznych:
+excpt.h defines some alternate names for these intrinsics:
 
-`GetExceptionCode` jest odpowiednikiem `_exception_code`
+`GetExceptionCode` is equivalent to `_exception_code`
 
-`GetExceptionInformation` jest odpowiednikiem `_exception_info`
+`GetExceptionInformation` is equivalent to `_exception_info`
 
-`AbnormalTermination` jest odpowiednikiem `_abnormal_termination`
+`AbnormalTermination` is equivalent to `_abnormal_termination`
 
 ## <a name="example"></a>Przykład
 
@@ -182,10 +182,10 @@ in except
 world
 ```
 
-**END specyficzny dla Microsoft**
+**END Microsoft Specific**
 
 ## <a name="see-also"></a>Zobacz także
 
-[Pisanie programu do obsługi wyjątku](../cpp/writing-an-exception-handler.md)<br/>
+[Writing an exception handler](../cpp/writing-an-exception-handler.md)<br/>
 [Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

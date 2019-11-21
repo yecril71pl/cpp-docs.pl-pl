@@ -3,30 +3,30 @@ title: Okres istnienia obiektów i zarządzanie zasobami (Modern C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 8aa0e1a1-e04d-46b1-acca-1d548490700f
-ms.openlocfilehash: 5964078960a5b241cb5af369aeddba45a06e48ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91229ea1b2d7a85f852138176d8cdb46dfa8c0df
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245026"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246433"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>Okres istnienia obiektów i zarządzanie zasobami (Modern C++)
 
-W odróżnieniu od języków zarządzanych C++ nie ma wyrzucania elementów bezużytecznych (GC), który automatycznie zwalnia wszystkie zasoby pamięci nie dłużej — używane podczas działania programu. W języku C++ zarządzania zasobami bezpośrednio dotyczą okres istnienia obiektu. Ten dokument zawiera opis czynników wpływających na okres istnienia obiektów w języku C++ i sposobu zarządzania nimi.
+Unlike managed languages, C++ doesn’t have garbage collection (GC), which automatically releases no-longer-used memory resources as a program runs. In C++, resource management is directly related to object lifetime. This document describes the factors that affect object lifetime in C++ and how to manage it.
 
-C++ nie ma GC, przede wszystkim, ponieważ jej nie obsługuje zasobów — do pamięci. Tylko deterministyczne destruktory, podobnie jak w języku C++ może równie obsługiwać zasoby pamięci i innych niż ilość pamięci. GC zawiera również inne problemy, takie jak wyższe koszty w użycie procesora CPU i pamięci oraz miejscowości. Ale powszechności podstawowego problemu, nie da się ograniczyć przy użyciu Sprytne optymalizacji.
+C++ doesn’t have GC primarily because it doesn't handle non-memory resources. Only deterministic destructors like those in C++ can handle memory and non-memory resources equally. GC also has other problems, like higher overhead in memory and CPU consumption, and locality. But universality is a fundamental problem that can't be mitigated through clever optimizations.
 
 ## <a name="concepts"></a>Pojęcia
 
-Ważne w okresie istnienia obiektu zarządzania jest hermetyzacja — osoba używa obiektu nie musi wiedzieć, zasoby, które obiekt, do którego należy, lub sposobu ich usuwanie lub nawet tego, czy jest właścicielem wszystkich zasobów w każdym. Po prostu ma do zniszczenia obiektu. Język podstawowy C++ zaprojektowano w celu zapewnienia, że obiekty są niszczone w właściwym czasie, oznacza to, jak bloki są zakończone, w odwrotnej kolejności konstrukcji. Gdy obiekt jest niszczony, jego baz i elementów członkowskich są niszczone w określonej kolejności.  Język automatycznie niszczy obiekty, chyba że użytkownik nadanie specjalne alokacji stosu lub umieszczania nowych.  Na przykład [inteligentne wskaźniki](../cpp/smart-pointers-modern-cpp.md) takich jak `unique_ptr` i `shared_ptr`, i kontenery standardowej biblioteki C++, takich jak `vector`, hermetyzacji **nowe** /  **Usuń** i `new[]` / `delete[]` w obiektach, które mają destruktory. Dlatego tak ważne do używania inteligentnych wskaźników i kontenery standardowej biblioteki języka C++.
+An important thing in object-lifetime management is the encapsulation—whoever's using an object doesn't have to know what resources that object owns, or how to get rid of them, or even whether it owns any resources at all. It just has to destroy the object. The C++ core language is designed to ensure that objects are destroyed at the correct times, that is, as blocks are exited, in reverse order of construction. When an object is destroyed, its bases and members are destroyed in a particular order.  The language automatically destroys objects, unless you do special things like heap allocation or placement new.  For example, [smart pointers](../cpp/smart-pointers-modern-cpp.md) like `unique_ptr` and `shared_ptr`, and C++ Standard Library containers like `vector`, encapsulate **new**/**delete** and `new[]`/`delete[]` in objects, which have destructors. That's why it's so important to use smart pointers and C++ Standard Library containers.
 
-Kolejnym ważnym pojęciem w zarządzanie okresem istnienia: destruktorów. Destruktory hermetyzacji zasobu wersji.  (Często użyty mnemonik jest RRID, zniszczenia jest wersji zasobu).  Zasób jest coś, co można uzyskać od "system" i konieczne jest nadanie ponownie później.  Pamięć jest najbardziej typowych zasobów, ale istnieją również pliki, gniazda, tekstury i inne zasoby bez pamięci. Zasób "właścicielem" oznacza, można go użyć, gdy ich potrzebujesz, ale musisz też zwolnij go po zakończeniu pracy z nim.  Gdy obiekt jest niszczony, jego destruktor zwalnia zasoby, które jego właścicielem.
+Another important concept in lifetime management: destructors. Destructors encapsulate resource release.  (The commonly used mnemonic is RRID, Resource Release Is Destruction.)  A resource is something that you get from "the system" and have to give back later.  Memory is the most common resource, but there are also files, sockets, textures, and other non-memory resources. "Owning" a resource means you can use it when you need it but you also have to release it when you're finished with it.  When an object is destroyed, its destructor releases the resources that it owned.
 
-Końcowe koncepcja jest DAG (przekierowanie acykliczne wykresy).  Struktury własności w programie stanowi grupy DAG. Żaden obiekt nie może należeć do samego siebie — to nie tylko możliwe, ale również natury jest bez znaczenia. Jednak dwa obiekty można współwłaścicielem trzeci obiekt.  Kilka rodzajów łącza są możliwe w grupie DAG w następujący sposób: Element jest elementem członkowskim B (B jest właścicielem A), magazynów C `vector<D>` (C należą do każdego elementu D), magazynów E `shared_ptr<F>` (E udostępnia własności F, prawdopodobnie z innymi obiektami), itd.  Tak długo, jak istnieją żadne cykle i każde łącze na grafie DAG jest reprezentowany przez obiekt ma destruktor (zamiast surowy wskaźnik, dojście lub inny mechanizm), a następnie przeciekom zasobów jest niemożliwe, ponieważ język uniemożliwia ich. Zasoby są zwalniane, natychmiast po zakończeniu nie są już potrzebne, bez modułu zbierającego elementy bezużyteczne uruchomiona. Okres istnienia śledzenia jest bezpłatne obciążenie dla zakresu stosu, podstaw, członków i pokrewnych przypadków i tanią `shared_ptr`.
+The final concept is the DAG (Directed Acyclic Graph).  The structure of ownership in a program forms a DAG. No object can own itself—that's not only impossible but also inherently meaningless. But two objects can share ownership of a third object.  Several kinds of links are possible in a DAG like this: A is a member of B (B owns A), C stores a `vector<D>` (C owns each D element), E stores a `shared_ptr<F>` (E shares ownership of F, possibly with other objects), and so forth.  As long as there are no cycles and every link in the DAG is represented by an object that has a destructor (instead of a raw pointer, handle, or other mechanism), then resource leaks are impossible because the language prevents them. Resources are released immediately after they're no longer needed, without a garbage collector running. The lifetime tracking is overhead-free for stack scope, bases, members, and related cases, and inexpensive for `shared_ptr`.
 
-### <a name="heap-based-lifetime"></a>Oparte na stosie okresu istnienia
+### <a name="heap-based-lifetime"></a>Heap-based lifetime
 
-Okres istnienia obiektów na stosie, można użyć [inteligentne wskaźniki](../cpp/smart-pointers-modern-cpp.md). Użyj `shared_ptr` i `make_shared` jako wskaźnik domyślne oraz alokatorem. Użyj `weak_ptr` Przerwij cykle, czy buforowanie i obserwować obiektów bez wpływu na lub zakładając, że nic o ich życia.
+For heap object lifetime, use [smart pointers](../cpp/smart-pointers-modern-cpp.md). Use `shared_ptr` and `make_shared` as the default pointer and allocator. Use `weak_ptr` to break cycles, do caching, and observe objects without affecting or assuming anything about their lifetimes.
 
 ```cpp
 void func() {
@@ -38,13 +38,13 @@ p->draw();
 } // no delete required, out-of-scope triggers smart pointer destructor
 ```
 
-Użyj `unique_ptr` dla unikatowe własności, na przykład w *pimpl* idiom. (Zobacz [Pimpl hermetyzacji w czasie kompilacji](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md).) Wprowadź `unique_ptr` podstawowym celem wszystkie jawne **nowe** wyrażenia.
+Use `unique_ptr` for unique ownership, for example, in the *pimpl* idiom. (See [Pimpl For Compile-Time Encapsulation](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md).) Make a `unique_ptr` the primary target of all explicit **new** expressions.
 
 ```cpp
 unique_ptr<widget> p(new widget());
 ```
 
-Za stosowanie surowych wskaźników dla braku własności i obserwacji. Wskaźnik nie będący właścicielem może dangle, ale go nie przecieki pamięci.
+You can use raw pointers for non-ownership and observation. A non-owning pointer may dangle, but it can’t leak.
 
 ```cpp
 class node {
@@ -56,11 +56,11 @@ class node {
 node::node() : parent(...) { children.emplace_back(new node(...) ); }
 ```
 
-Gdy Optymalizacja wydajności jest wymagana, użytkownik może być konieczne użycie *dobrze zhermetyzowany* będącej właścicielem, wskaźniki i jawnych wywołań do usunięcia. Przykładem jest podczas implementowania strukturę danych niskiego poziomu.
+When performance optimization is required, you might have to use *well-encapsulated* owning pointers and explicit calls to delete. An example is when you implement your own low-level data structure.
 
-### <a name="stack-based-lifetime"></a>Oparty na stosie okresu istnienia
+### <a name="stack-based-lifetime"></a>Stack-based lifetime
 
-W nowoczesnym C++ *zakres oparty na stosie* jest wydajnym sposobem pisania kodu niezawodne, ponieważ łączy ona automatyczne *okres istnienia stosu* i *okres istnienia element członkowski danych* o wysokiej wydajności — okres istnienia śledzenia jest zasadniczo obciążenie. Okres istnienia obiektu sterty wymaga skrupulatne poprawianie listy ręczne zarządzanie i może być źródłem przeciekom zasobów i niskiej wydajności, szczególnie w przypadku, gdy pracujesz z surowych wskaźników. Rozważmy ten kod, który pokazuje zakres oparty na stosie:
+In modern C++, *stack-based scope* is a powerful way to write robust code because it combines automatic *stack lifetime* and *data member lifetime* with high efficiency—lifetime tracking is essentially free of overhead. Heap object lifetime requires diligent manual management and can be the source of resource leaks and inefficiencies, especially when you are working with raw pointers. Consider this code, which demonstrates stack-based scope:
 
 ```cpp
 class widget {
@@ -81,10 +81,10 @@ void functionUsingWidget () {
   // as if "finally { w.dispose(); w.g.dispose(); }"
 ```
 
-Oszczędnie korzystać statyczny okres istnienia (globalne statyczne, funkcji lokalnej statycznej), ponieważ mogą wystąpić problemy. Co się stanie, gdy Konstruktor dla obiektów globalnych zgłasza wyjątek? Zazwyczaj błędy aplikacji w sposób, który może być trudne do debugowania. Kolejność konstrukcji jest problematyczne statyczny okres istnienia obiektów i nie jest bezpieczna pod kątem współbieżności. Nie tylko jest konstruowanie obiektu problemu, kolejność zniszczenia może być skomplikowane, zwłaszcza w przypadku polimorfizmu. Nawet jeśli zmiennej lub obiektu nie jest polimorficzny, nie ma złożone tworzenie/niszczenie obiektu porządkowanie się nadal istnieje problem współbieżności metodą o bezpiecznych wątkach. Aplikacja wielowątkowa bezpiecznie nie można zmodyfikować danych w obiektach statycznych bez konieczności lokalny magazyn wątków, blokad zasobów i innych specjalne środki ostrożności.
+Use static lifetime sparingly (global static, function local static) because problems can arise. What happens when the constructor of a global object throws an exception? Typically, the app faults in a way that can be difficult to debug. Construction order is problematic for static lifetime objects, and is not concurrency-safe. Not only is object construction a problem, destruction order can be complex, especially where polymorphism is involved. Even if your object or variable isn’t polymorphic and doesn't have complex construction/destruction ordering, there’s still the issue of thread-safe concurrency. A multithreaded app can’t safely modify the data in static objects without having thread-local storage, resource locks, and other special precautions.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Witaj z powrotem w języku C++ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)

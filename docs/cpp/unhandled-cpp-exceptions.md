@@ -8,20 +8,20 @@ helpviewer_keywords:
 - C++ exception handling, unhandled exceptions
 - unhandled exceptions [C++]
 ms.assetid: 13f09c53-9254-4407-9db9-14e730e047cc
-ms.openlocfilehash: 85227e0bd0ca33f925e8fe72b6489fa81305d031
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd5ce722c5159041ba8fb0a4a41b942a1bd4614f
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312213"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246064"
 ---
 # <a name="unhandled-c-exceptions"></a>Nieobsługiwane wyjątki języka C++
 
-Jeśli pasującej klauzuli obsługi (lub wielokropek **catch** obsługi) nie można odnaleźć dla bieżącego wyjątku jest wstępnie zdefiniowane `terminate` nosi nazwę funkcji czasu wykonywania. (Można także jawnie wywołać `terminate` w dowolnym inne programy obsługi.) Domyślną akcję `terminate` jest wywołanie `abort`. Jeśli chcesz `terminate` do wywołania niektórych innych funkcji w programie przed zakończeniem działania aplikacji, należy wywołać `set_terminate` funkcji o nazwie funkcja wywoływana, jako pojedynczy argument. Możesz wywołać `set_terminate` w dowolnym momencie w programach. `terminate` Procedura zawsze wywołuje ostatniej funkcji podawana jako argument do `set_terminate`.
+If a matching handler (or ellipsis **catch** handler) cannot be found for the current exception, the predefined `terminate` run-time function is called. (You can also explicitly call `terminate` in any of your handlers.) The default action of `terminate` is to call `abort`. If you want `terminate` to call some other function in your program before exiting the application, call the `set_terminate` function with the name of the function to be called as its single argument. You can call `set_terminate` at any point in your program. The `terminate` routine always calls the last function given as an argument to `set_terminate`.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje `char *` wyjątku, ale nie zawiera program obsługi wyznaczone do przechwytywania wyjątków typu `char *`. Wywołanie `set_terminate` powoduje, że `terminate` do wywołania `term_func`.
+The following example throws a `char *` exception, but does not contain a handler designated to catch exceptions of type `char *`. The call to `set_terminate` instructs `terminate` to call `term_func`.
 
 ```cpp
 // exceptions_Unhandled_Exceptions.cpp
@@ -52,8 +52,8 @@ int main() {
 term_func was called by terminate.
 ```
 
-`term_func` Funkcji powinna zakończyć działanie programu lub bieżącego wątku, najlepiej przez wywołanie metody `exit`. Jeśli nie, a zamiast tego zwraca do obiektu wywołującego, `abort` jest wywoływana.
+The `term_func` function should terminate the program or current thread, ideally by calling `exit`. If it doesn't, and instead returns to its caller, `abort` is called.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Obsługa wyjątków języka C++](../cpp/cpp-exception-handling.md)
+[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)

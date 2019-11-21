@@ -2,12 +2,12 @@
 title: Kontenery (Modern C++)
 ms.date: 11/12/2019
 ms.topic: conceptual
-ms.openlocfilehash: 41b9d560ce827cee5c90467184ef5b2b729e0639
-ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.openlocfilehash: 7ac2f30c2e7ab91a5f25125ccd07ad84c0116d9c
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74188900"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245892"
 ---
 # <a name="containers-modern-c"></a>Kontenery (Modern C++)
 
@@ -40,6 +40,6 @@ For more information about containers, see [C++ Standard Library Containers](../
 
 ## <a name="see-also"></a>Zobacz także
 
-[Witaj z powrotem w języku C++ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)

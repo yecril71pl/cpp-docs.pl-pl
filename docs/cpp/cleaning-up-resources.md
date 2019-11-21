@@ -9,28 +9,28 @@ helpviewer_keywords:
 - exception handling [C++], cleanup code
 - try-catch keyword [C++], termination handlers
 ms.assetid: 65753efe-6a27-4750-b90c-50635775c1b6
-ms.openlocfilehash: 0db21b20b94dc1a3f347bd848c999a961398759b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 225c3ccaf3342f11ad4eb6d6575ad3ac542acfd2
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386125"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246638"
 ---
 # <a name="cleaning-up-resources"></a>Oczyszczanie zasobów
 
-Podczas wykonywania programu obsługi zakończenia może nie wiedzieć, które zasoby są przydzielane faktycznie, zanim został wywołany program obsługi przerwania. Istnieje możliwość, że **__try** blok instrukcji zostało przerwane przed wszystkie zasoby przydzielone, tak, aby nie wszystkie zasoby zostały otwarte.
+During termination-handler execution, you may not know which resources are actually allocated before the termination handler was called. It is possible that the **__try** statement block was interrupted before all resources were allocated, so that not all resources were opened.
 
-W związku z tym aby zapewnić bezpieczne, należy sprawdzić aby zobaczyć, jakie zasoby są faktycznie otwarte przed kontynuowaniem oczyszczania obsługę przerwania. Jest zalecaną procedurą:
+Therefore, to be safe, you should check to see which resources are actually open before proceeding with termination-handling cleanup. A recommended procedure is to:
 
-1. Inicjowanie dojścia do wartości NULL.
+1. Initialize handles to NULL.
 
-1. W **__try** instrukcji zablokować, przydzielania zasobów. Uchwyty są ustawione na wartości dodatnich, zasób jest przydzielony.
+1. In the **__try** statement block, allocate resources. Handles are set to positive values as the resource is allocated.
 
-1. W **__finally** blok instrukcji wersji każdego zasobu, którego odpowiednie dojścia lub zmiennej flaga jest różna od zera lub not NULL.
+1. In the **__finally** statement block, release each resource whose corresponding handle or flag variable is nonzero or not NULL.
 
 ## <a name="example"></a>Przykład
 
-Na przykład w poniższym kodzie użyto programu obsługi zakończenia Zamknij trzy pliki i blok pamięci, która została przydzielona w **__try** blok instrukcji. Przed Oczyszczanie zasobu, kod najpierw sprawdza, jeśli zasób został przydzielony.
+For example, the following code uses a termination handler to close three files and a memory block that were allocated in the **__try** statement block. Before cleaning up a resource, the code first checks to see if the resource was allocated.
 
 ```cpp
 // exceptions_Cleaning_up_Resources.cpp
@@ -72,5 +72,5 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz także
 
-[Pisanie programu obsługi zakończenia](../cpp/writing-a-termination-handler.md)<br/>
+[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
 [Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

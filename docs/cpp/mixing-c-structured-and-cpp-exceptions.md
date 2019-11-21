@@ -1,5 +1,5 @@
 ---
-title: Mieszanie C (ze strukturą) i wyjątki języka C++
+title: Mixing C (structured) and C++ exceptions
 ms.date: 08/14/2018
 helpviewer_keywords:
 - exceptions [C++], mixed C and C++
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - catch keyword [C++], mixed
 - try-catch keyword [C++], mixed-language
 ms.assetid: a149154e-36dd-4d1a-980b-efde2a563a56
-ms.openlocfilehash: 94d6dc249cb130aaf09d3202b9e8f437d00a9597
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e49731f1c81057002eaae2bef16cda4a5cf86f8d
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345955"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246457"
 ---
-# <a name="mixing-c-structured-and-c-exceptions"></a>Mieszanie C (ze strukturą) i wyjątki języka C++
+# <a name="mixing-c-structured-and-c-exceptions"></a>Mixing C (structured) and C++ exceptions
 
-Korzystanie ze strukturą obsługi wyjątków (SEH) w programie C++ nie jest zalecane, jeśli chcesz tworzyć przenośny kod. Jednak czasami warto skompilować przy użyciu [/eha](../build/reference/eh-exception-handling-model.md) i wymieszać strukturalne wyjątki kodu źródłowego języka C++, a zatem potrzebne są funkcje obsługi obu rodzajów wyjątków. Ponieważ program obsługi wyjątków strukturalnych nie ma koncepcji obiektów lub wyjątków z określonym typem, nie może obsługiwać wyjątki generowane przez kod języka C++. Jednak C++ **catch** obsługi mogą obsługiwać wyjątki strukturalne. C++Składnia obsługi wyjątków (**spróbuj**, **throw**, **catch**) nie jest akceptowana przez kompilator C, natomiast składnia obsługi wyjątków strukturalnych (**__try**, **__except**, **__finally**) jest obsługiwana przez C++ kompilatora.
+If you want to write portable code, the use of structured exception handling (SEH) in a C++ program isn't recommended. However, you may sometimes want to compile using [/EHa](../build/reference/eh-exception-handling-model.md) and mix structured exceptions and C++ source code, and need some facility for handling both kinds of exceptions. Because a structured exception handler has no concept of objects or typed exceptions, it can't handle exceptions thrown by C++ code. However, C++ **catch** handlers can handle structured exceptions. C++ exception handling syntax (**try**, **throw**, **catch**) isn't accepted by the C compiler, but structured exception handling syntax ( **__try**, **__except**, **__finally**) is supported by the C++ compiler.
 
-Zobacz [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) informacji na temat obsługi wyjątków strukturalnych jako C++ wyjątków.
+See [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) for information on how to handle structured exceptions as C++ exceptions.
 
-Po przemieszaniu ze strukturą i wyjątków języka C++, należy pamiętać o tych potencjalnych problemów:
+If you mix structured and C++ exceptions, be aware of these potential issues:
 
 - Wyjątki C++ i wyjątki strukturalne nie mogą być mieszane w obrębie tej samej funkcji.
 
-- Programy obsługi zakończenia (**__finally** bloków) są wykonywane zawsze, nawet w trakcie rozwijania po zgłaszany jest wyjątek.
+- Termination handlers ( **__finally** blocks) are always executed, even during unwinding after an exception is thrown.
 
-- Obsługa wyjątków języka C++ może wychwycić i zachować semantykę operacji unwind we wszystkich modułach skompilowanych z [/EH](../build/reference/eh-exception-handling-model.md) opcje kompilatora, które umożliwiają semantykę operacji unwind.
+- C++ exception handling can catch and preserve unwind semantics in all modules compiled with the [/EH](../build/reference/eh-exception-handling-model.md) compiler options, which enable unwind semantics.
 
-- Istnieją sytuacje, w których funkcje destruktora nie są wywoływane dla wszystkich obiektów. Na przykład jeśli wyjątek strukturalny występuje podczas próby wywołania funkcji przez niezainicjowany wskaźnik funkcji, a funkcja ta przyjmuje jako parametry obiekty, które zostały zbudowane przed wywołaniem, destruktory tych obiektów nie są wywoływane Podczas odwijania stosu.
+- Istnieją sytuacje, w których funkcje destruktora nie są wywoływane dla wszystkich obiektów. For example, if a structured exception occurs while attempting to make a function call through an uninitialized function pointer, and that function takes as parameters objects that were constructed before the call, the destructors of those objects are not called during stack unwind.
 
 ## <a name="next-steps"></a>Następne kroki
 
-- [Wykorzystanie setjmp lub longjmp w programach języka C++](../cpp/using-setjmp-longjmp.md)
+- [Using setjmp or longjmp in C++ programs](../cpp/using-setjmp-longjmp.md)
 
-  Zobacz więcej informacji dotyczących stosowania `setjmp` i `longjmp` w programach języka C++.
+  See more information on the use of `setjmp` and `longjmp` in C++ programs.
 
 - [Obsługa wyjątków strukturalnych w języku C++](../cpp/exception-handling-differences.md)
 
-  Zobacz przykłady sposobów C++ można użyć do uchwytu, ze strukturą wyjątków.
+  See examples of the ways you can use C++ to handle structured exceptions.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Obsługa wyjątków języka C++](../cpp/cpp-exception-handling.md)
+[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)
