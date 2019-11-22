@@ -1,5 +1,5 @@
 ---
-title: '&lt;wyliczenia&gt; systemu plików'
+title: '&lt;Wyliczenie&gt; systemu plików'
 ms.date: 11/04/2016
 f1_keywords:
 - filesystem/std::filesystem::copy_options
@@ -11,14 +11,14 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: dfbcf65462f0bb7bc6ca44f43507efa7b753e7bc
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f148347cd132a604622415c65bb3e0352f5308eb
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457715"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303503"
 ---
-# <a name="ltfilesystemgt-enumerations"></a>&lt;wyliczenia&gt; systemu plików
+# <a name="ltfilesystemgt-enumerations"></a>&lt;Wyliczenie&gt; systemu plików
 
 Ten temat dokumentuje wyliczenia w nagłówku systemu plików.
 
@@ -30,7 +30,7 @@ Ten temat dokumentuje wyliczenia w nagłówku systemu plików.
 
 ## <a name="copy_options"></a>copy_options
 
-Wyliczenie wartości masek bitowych, które są używane z funkcjami [copy](filesystem-functions.md#copy) i [copy_file](filesystem-functions.md#copy_file) , aby określić zachowanie.
+Wyliczenie wartości masek bitowych, które są używane z funkcjami [kopiowania](filesystem-functions.md#copy) i [copy_file](filesystem-functions.md#copy_file) , aby określić zachowanie.
 
 ### <a name="syntax"></a>Składnia
 
@@ -122,7 +122,7 @@ enum class file_type {
 
 ## <a name="perm_options"></a>perm_options
 
-Obejmuje wartości `replace`, `add`, `remove`i .`nofollow`
+Obejmuje wartości `replace`, `add`, `remove`i `nofollow`.
 
 ```cpp
 enum class perm_options;
@@ -130,7 +130,7 @@ enum class perm_options;
 
 ## <a name="perms"></a>uprawnienia
 
-Flagi uprawnień do plików. Obsługiwane wartości są zasadniczo "tylko do odczytu" i wszystkie. Dla pliku tylko do odczytu nie ustawiono żadnego z * _write bitów. W przeciwnym `all` razie jest ustawiona wartość bit (0x0777).
+Flagi uprawnień do plików. Obsługiwane wartości są zasadniczo "tylko do odczytu" i wszystkie. Dla pliku tylko do odczytu nie ustawiono żadnego z * _write bitów. W przeciwnym razie jest ustawiony `all` bit (0x0777).
 
 ### <a name="syntax"></a>Składnia
 
@@ -163,5 +163,5 @@ enum class perms {// names for permissions
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[Odwołania do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
 [\<filesystem>](../standard-library/filesystem.md)

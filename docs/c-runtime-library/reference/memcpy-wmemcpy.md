@@ -27,12 +27,12 @@ helpviewer_keywords:
 - wmemcpy function
 - memcpy function
 ms.assetid: 34abb90b-bffb-46dc-a2f3-a5e9940839d6
-ms.openlocfilehash: e9d947dc4e9ecea654e8cb16e957887fe4360161
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: bf7f12cd00780347f23252764aace449dd6f5722
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951855"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303287"
 ---
 # <a name="memcpy-wmemcpy"></a>memcpy, wmemcpy
 
@@ -61,7 +61,7 @@ Nowy bufor.
 *SRC*<br/>
 Bufor do skopiowania.
 
-*liczbą*<br/>
+{1&gt;count&lt;1}<br/>
 Liczba znaków do skopiowania.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -98,7 +98,7 @@ lub
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**memcpy**|\<> pamięci. h > \<lub String. h|
+|**memcpy**|\<Memory. h > lub \<String. h >|
 |**wmemcpy**|\<WCHAR. h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).

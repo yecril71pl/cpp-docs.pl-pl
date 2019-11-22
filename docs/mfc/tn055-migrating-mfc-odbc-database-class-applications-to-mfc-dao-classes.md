@@ -1,5 +1,5 @@
 ---
-title: 'TN055: Migrowanie aplikacji klas baz danych MFC ODBC do klas MFC DAO'
+title: 'TN055: migrowanie aplikacji klas baz danych MFC ODBC do klas MFC DAO'
 ms.date: 09/17/2019
 helpviewer_keywords:
 - DAO [MFC], migration
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - porting ODBC database applications to DAO
 - migrating database applications [MFC]
 ms.assetid: 0f858bd1-e168-4e2e-bcd1-8debd82856e4
-ms.openlocfilehash: 7107964cc894a0aa45be5de362c9edd166dc0af1
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 744e1c71476ccfbe6ea8f8359dcdb9a29efc995e
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095959"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74305372"
 ---
-# <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055: Migrowanie aplikacji klas baz danych MFC ODBC do klas MFC DAO
+# <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055: migrowanie aplikacji klas baz danych MFC ODBC do klas MFC DAO
 
 > [!NOTE]
-> Obiekty DAO są używane z bazami danych programu Access i są obsługiwane za pomocą pakietu Office 2013. 3,6 jest wersją ostateczną i jest uznawana za przestarzałą. Środowisko i C++ kreatory wizualne nie obsługują obiektów DAO (mimo że klasy DAO są dołączone i nadal można ich używać). Firma Microsoft zaleca korzystanie z [szablonów OLE DB](../data/oledb/ole-db-templates.md) lub [ODBC oraz MFC](../data/odbc/odbc-and-mfc.md) dla nowych projektów. Obiektów DAO należy używać tylko w przypadku zarządzania istniejącymi aplikacjami.
+> Obiekty DAO są używane z bazami danych programu Access i są obsługiwane za pomocą pakietu Office 2013. Element DAO 3,6 jest wersją ostateczną i jest uznawany za przestarzały. Środowisko i C++ kreatory wizualne nie obsługują obiektów DAO (mimo że klasy DAO są dołączone i nadal można ich używać). Firma Microsoft zaleca korzystanie z [szablonów OLE DB](../data/oledb/ole-db-templates.md) lub [ODBC oraz MFC](../data/odbc/odbc-and-mfc.md) dla nowych projektów. Obiektów DAO należy używać tylko w przypadku zarządzania istniejącymi aplikacjami.
 
 ## <a name="overview"></a>Omówienie
 
@@ -74,12 +74,12 @@ Prawdopodobnie najbardziej oczywiste różnice między klasami są zmianami nazw
 ||`DFX_Currency`|
 |`RFX_Single`|`DFX_Single`|
 |`RFX_Double`|`DFX_Double`|
-|`RFX_Date`<sup>1</sup>|`DFX_Date`(`COleDateTime`na podstawie)|
+|`RFX_Date`<sup>1</sup>|`DFX_Date` (oparty na`COleDateTime`ach)|
 |`RFX_Text`|`DFX_Text`|
 |`RFX_Binary`|`DFX_Binary`|
 |`RFX_LongBinary`|`DFX_LongBinary`|
 
-1 funkcja jest oparta na `CTime` i. <sup></sup> `RFX_Date` `TIMESTAMP_STRUCT`
+<sup>1</sup> funkcja `RFX_Date` jest oparta na `CTime` i `TIMESTAMP_STRUCT`.
 
 Poniżej przedstawiono istotne zmiany w funkcjonalności, które mogą mieć wpływ na aplikację i wymagają więcej niż proste zmiany nazw.
 
@@ -87,22 +87,22 @@ Poniżej przedstawiono istotne zmiany w funkcjonalności, które mogą mieć wp�
 
    Za pomocą MFC klas ODBC wymaganych do definiowania tych opcji za pośrednictwem makr lub typów wyliczeniowych.
 
-   Klasy DAO zawierają definicje tych opcji w pliku nagłówkowym (DBDAOINT. H). W ten sposób typem zestawu rekordów jest wyliczany element `CRecordset`członkowski, ale z obiektem DAO jest to stała. Na przykład można użyć **migawki** podczas określania typu `CRecordset` w ODBC, ale **DB_OPEN_SNAPSHOT** podczas określania typu `CDaoRecordset`.
+   Klasy DAO zawierają definicje tych opcji w pliku nagłówkowym (DBDAOINT. H). W ten sposób typem zestawu rekordów jest wyliczany element członkowski `CRecordset`, ale z obiektem DAO jest to stała. Na przykład można użyć **migawki** podczas określania typu `CRecordset` w ODBC, ale **DB_OPEN_SNAPSHOT** podczas określania typu `CDaoRecordset`.
 
-- Domyślny typ zestawu rekordów dla `CRecordset` jest **migawką** , podczas gdy domyślny typ `CDaoRecordset` zestawu rekordów dla to **dynamiczny** (Zobacz uwagi poniżej, aby uzyskać dodatkowy problem dotyczący migawek klas ODBC).
+- Domyślny typ zestawu rekordów dla `CRecordset` jest **migawką** , podczas gdy domyślny typ zestawu rekordów dla `CDaoRecordset` to **dynamiczny** (Zobacz uwagi poniżej, aby uzyskać dodatkowy problem dotyczący migawek klas ODBC).
 
-- Klasa ODBC `CRecordset` ma opcję tworzenia zestawu rekordów tylko do przodu. `CDaoRecordset` W klasie, tylko do przodu nie jest typem zestawu rekordów, ale zamiast właściwości (lub opcji) niektórych typów zestawów rekordów.
+- Klasa `CRecordset` ODBC ma opcję tworzenia zestawu rekordów tylko do przodu. W klasie `CDaoRecordset` tylko do przodu nie jest typem zestawu rekordów, ale zamiast właściwości (lub opcji) niektórych typów zestawów rekordów.
 
-- Zestaw rekordów tylko do dołączenia podczas `CRecordset` otwierania obiektu, w którym można odczytywać i dołączać dane zestawu rekordów. Z `CDaoRecordset` obiektem opcja tylko do dołączania oznacza, że tylko dane zestawu rekordów mogą być dołączane (i nie odczytywane).
+- Zestaw rekordów tylko do dołączenia podczas otwierania obiektu `CRecordset`, co oznacza, że dane zestawu rekordów mogą być odczytywane i dołączane. W przypadku `CDaoRecordset` obiektu opcja tylko do dołączania oznacza, że tylko dane zestawu rekordów mogą być dołączane (i nie odczytywane).
 
-- Funkcje Członkowskie transakcji klas ODBC są członkami `CDatabase` i działają na poziomie bazy danych. W klasach DAO funkcje składowe transakcji są elementami klasy wyższego poziomu (`CDaoWorkspace`), co może mieć wpływ na wiele `CDaoDatabase` obiektów, które współużytkują ten sam obszar roboczy (przestrzeń transakcji).
+- Funkcje Członkowskie transakcji klas ODBC są członkami `CDatabase` i działają na poziomie bazy danych. W klasach DAO funkcje Członkowskie transakcji są członkami klasy wyższego poziomu (`CDaoWorkspace`), co może mieć wpływ na wiele obiektów `CDaoDatabase` współużytkujących ten sam obszar roboczy (przestrzeń transakcji).
 
-- Klasa wyjątku została zmieniona. `CDBExceptions`są generowane w klasach ODBC i `CDaoExceptions` w klasach DAO.
+- Klasa wyjątku została zmieniona. `CDBExceptions` są zgłaszane w klasach ODBC i `CDaoExceptions` w klasach DAO.
 
-- `RFX_Date`używa `CTime` obiektów `TIMESTAMP_STRUCT` i w `DFX_Date` trakcie korzystania`COleDateTime`z nich. Jest niemal identyczny z `CTime`, ale jest oparty na 8-bajtowej **dacie** OLE zamiast 4-bajtowej time_t, dzięki czemu może przechowywać znacznie większy zakres danych. `COleDateTime`
+- `RFX_Date` używa `CTime` i `TIMESTAMP_STRUCT` obiektów, podczas gdy `DFX_Date` używa `COleDateTime`. `COleDateTime` jest niemal identyczny z `CTime`, ale jest oparty na 8-bajtowej **dacie** OLE zamiast 4-bajtowej **time_t** , dzięki czemu może on przechowywać znacznie większy zakres danych.
 
    > [!NOTE]
-   > Migawki DAO`CDaoRecordset`() są tylko do odczytu, a migawki`CRecordset`ODBC () mogą być aktualizowalne w zależności od sterownika i używania biblioteki kursora ODBC. Jeśli używasz biblioteki kursorów, `CRecordset` migawki są aktualizowalne. Jeśli używasz dowolnego ze sterowników firmy Microsoft z pakietu sterowników pulpitu 3,0 bez biblioteki kursora ODBC, migawki są tylko do `CRecordset` odczytu. Jeśli używasz innego sterownika, zapoznaj się z dokumentacją sterownika, aby zobaczyć, czy migawki`STATIC_CURSORS`() są tylko do odczytu.
+   > Migawki DAO (`CDaoRecordset`) są tylko do odczytu, a migawki ODBC (`CRecordset`) mogą być aktualizowalne w zależności od sterownika i używania biblioteki kursora ODBC. Jeśli używasz biblioteki kursorów, `CRecordset` migawki są aktualizowalne. Jeśli używasz dowolnego ze sterowników firmy Microsoft z pakietu sterowników pulpitu 3,0 bez biblioteki kursora ODBC, `CRecordset` migawki są tylko do odczytu. Jeśli używasz innego sterownika, zapoznaj się z dokumentacją sterownika, aby zobaczyć, czy migawki (`STATIC_CURSORS`) są tylko do odczytu.
 
 ## <a name="see-also"></a>Zobacz także
 

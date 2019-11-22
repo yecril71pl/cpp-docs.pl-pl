@@ -1,31 +1,47 @@
 ---
 title: Makra poleceń i makra opcji
-ms.date: 11/04/2016
+description: Opisuje wstępnie zdefiniowane makra NMAKE dla narzędzi do kompilacji i ich opcji.
+ms.date: 11/20/2019
 helpviewer_keywords:
 - options macros
 - command macros in NMAKE
 - macros, options macros
 - macros, command macros
 ms.assetid: 50dff03c-0dc3-4a8a-9a17-57e0e4ea9bac
-ms.openlocfilehash: c6dad7b50d265a1460a98747665d48051078163a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+no-loc:
+- AS
+- AFLAGS
+- CC
+- CFLAGS
+- CPP
+- CPPFLAGS
+- CXX
+- CXXFLAGS
+- RC
+- RFLAGS
+- ias
+- ml
+- ml64
+- cl
+- rc
+ms.openlocfilehash: d5c4477fd97e2a6c48dbac4d0ce83f7fd5f12ad6
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272441"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303180"
 ---
 # <a name="command-macros-and-options-macros"></a>Makra poleceń i makra opcji
 
-Makra poleceń wstępnie zdefiniowanych dla produktów firmy Microsoft. Makra opcji reprezentują opcje do tych produktów, a domyślnie są niezdefiniowane. Obie są używane w regułach wnioskowania wstępnie zdefiniowanych i mogą być używane w bloki opisów lub reguły wnioskowania zdefiniowanych przez użytkownika. Makra poleceń można ponownie zdefiniować do reprezentowania część lub całość wiersza polecenia, włącznie z opcjami. Makra opcji wygenerować ciągu o wartości null, jeśli pozostawione niezdefiniowane.
+Makra poleceń są wstępnie zdefiniowane dla produktów firmy Microsoft. Makra opcji reprezentują opcje tych produktów i są domyślnie niezdefiniowane. Oba są używane we wstępnie zdefiniowanych regułach wnioskowania i mogą być używane w blokach opisu lub regułach wnioskowania zdefiniowanych przez użytkownika. Makra poleceń można ponownie zdefiniować do reprezentowania części lub całości wiersza polecenia, w tym opcji. Makra opcji generują ciąg o wartości null, jeśli został niezdefiniowany.
 
-|Produkt firmy Microsoft|Polecenie — Makro|Zdefiniowane jako|Makra opcji|
+|Produkt firmy Microsoft|Makro polecenia|Zdefiniowane jako|Opcje — makro|
 |-----------------------|-------------------|----------------|-------------------|
-|Macro Assembler|**PODOBNIE JAK**|ml|**AFLAGS**|
-|Basic Compiler|**BC**|bc|**BFLAGS**|
-|C Compiler|**CC**|cl|**CFLAGS**|
+|Asembler makro|**AS**|ml, iaslub ml64|**AFLAGS**|
+|Kompilator języka C|**CC**|cl|**CFLAGS**|
 |Kompilator C++|**CPP**|cl|**CPPFLAGS**|
 |Kompilator C++|**CXX**|cl|**CXXFLAGS**|
-|Kompilator zasobów|**RC**|rc|**RFLAGS**|
+|Kompilator zasobów|**RC**|zwrot|**RFLAGS**|
 
 ## <a name="see-also"></a>Zobacz także
 

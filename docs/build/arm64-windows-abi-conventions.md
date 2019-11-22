@@ -1,12 +1,12 @@
 ---
 title: Przegląd konwencji ABI ARM64
 ms.date: 03/27/2019
-ms.openlocfilehash: 3a3df475b8f814fcecaf2e67a0a62c7267a0de30
-ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
+ms.openlocfilehash: 07d58bbd64795235ad63a7b26b6f18fcffdcd1d2
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74163221"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303261"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Przegląd konwencji ABI ARM64
 
@@ -71,15 +71,15 @@ Domyślne wyrównanie układu dla Globals i statics:
 
 Architektura AArch64 obsługuje rejestry całkowite 32:
 
-| Rejestruj | Volatile? | Roli |
+| Rejestruj | Volatile? | Rola |
 | - | - | - |
-| kolumn | Volatile | Parametr/rejestr wyrejestrowania 1, rejestr wyników |
+| x0 | Volatile | Parametr/rejestr wyrejestrowania 1, rejestr wyników |
 | x1 — 120 | Volatile | Rejestr/Wyrejestrowanie 2-8 |
 | x8 — x15 | Volatile | Rejestry |
 | x16 — x17 | Volatile | Wewnętrzne rejestry wywołań |
 | x18 | Nietrwały | Rejestracja platformy: w trybie jądra wskazuje KPCR dla bieżącego procesora; w trybie użytkownika wskazuje TEB |
 | x19-x28 | Nietrwały | Rejestry |
-| x29/FP | Nietrwały | Wskaźnik ramki |
+| x29/fp | Nietrwały | Wskaźnik ramki |
 | X30/LR | Nietrwały | Rejestry linków |
 
 Do każdej rejestracji można uzyskać dostęp jako pełna wartość 64-bitowa (za pośrednictwem x0-X30) lub jako wartość 32-bitowa (za pośrednictwem W0-W30). 32-bitowe operacje zero — zwiększają ich wyniki do 64 bitów.
@@ -94,9 +94,9 @@ Wskaźnik ramki (x29) jest wymagany w celu zapewnienia zgodności z szybkim pora
 
 Architektura AArch64 obsługuje również 32 rejestrów zmiennoprzecinkowych/SIMD, podsumowujących poniżej:
 
-| Rejestruj | Volatile? | Roli |
+| Rejestruj | Volatile? | Rola |
 | - | - | - |
-| VO | Volatile | Parametr/rejestr wyrejestrowania 1, rejestr wyników |
+| v0 | Volatile | Parametr/rejestr wyrejestrowania 1, rejestr wyników |
 | V1 — wersji 7 | Volatile | Rejestry parametrów/rejestrowania 2-8 |
 | V8 — 15 | Nietrwały | Rejestry wstępne (tylko niskie 64 bitów są nietrwałe) |
 | v16-v31 | Volatile | Rejestry |
@@ -105,11 +105,11 @@ Do każdego rejestru można uzyskać dostęp jako pełna wartość 128-bitowa (z
 
 Rejestr kontroli zmiennoprzecinkowej (FPCR) ma pewne wymagania dotyczące różnych pola bitów w nim:
 
-| Bity | Znaczenie | Volatile? | Roli |
+| Bity | Znaczenie | Volatile? | Rola |
 | - | - | - | - |
-| 25 | AHP | Nietrwały | Alternatywny formant o połówkowej precyzji. |
-| 6,25 | WYRÓŻNIAJĄC | Nietrwały | Domyślna kontrolka trybu NaN. |
-| codzienne | FZ | Nietrwały | Kontrolka trybu opróżniania do zera. |
+| 26 | AHP | Nietrwały | Alternatywny formant o połówkowej precyzji. |
+| 25 | NAZWA WYRÓŻNIAJĄCA | Nietrwały | Domyślna kontrolka trybu NaN. |
+| 24 | FZ | Nietrwały | Kontrolka trybu opróżniania do zera. |
 | 23-22 | RMode | Nietrwały | Kontrolka tryb zaokrąglania. |
 | 15, 12 – 8 | IDE/IXE/etc | Nietrwały | W przypadku usługi BITS pułapki wyjątków musi być zawsze równa 0. |
 
@@ -117,7 +117,7 @@ Rejestr kontroli zmiennoprzecinkowej (FPCR) ma pewne wymagania dotyczące różn
 
 Podobnie jak w przypadku AArch32, Specyfikacja AArch64 zawiera trzy rejestry "Identyfikator wątku" sterowane systemem:
 
-| Rejestruj | Roli |
+| Rejestruj | Rola |
 | - | - |
 | TPIDR_EL0 | Rezerwacj. |
 | TPIDRRO_EL0 | Zawiera liczbę procesorów dla bieżącego procesora. |

@@ -1,5 +1,5 @@
 ---
-title: 'Kontrolki ActiveX MFC: Tematy zaawansowane'
+title: 'Kontrolki ActiveX MFC: tematy zaawansowane'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-ms.openlocfilehash: e0daabf3d236eb7038f22c54ea76d616baf613a0
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 9f1fa862a30a83cbda049fc63bac6c33a101587b
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096003"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74305383"
 ---
-# <a name="mfc-activex-controls-advanced-topics"></a>Kontrolki ActiveX MFC: Tematy zaawansowane
+# <a name="mfc-activex-controls-advanced-topics"></a>Kontrolki ActiveX MFC: tematy zaawansowane
 
-W tym artykule omówiono zaawansowane tematy związane z tworzeniem formantów ActiveX. Należą do nich następujące elementy:
+W tym artykule omówiono zaawansowane tematy związane z tworzeniem formantów ActiveX. Należą do nich:
 
 - [Korzystanie z klas baz danych w kontrolkach ActiveX](#_core_using_database_classes_in_activex_controls)
 
@@ -43,7 +43,7 @@ Ponieważ klasy kontrolek ActiveX są częścią biblioteki klas, można zastoso
 Ogólne omówienie klas baz danych MFC zawiera temat [klasy baz danych MFC (DAO i ODBC)](../data/mfc-database-classes-odbc-and-dao.md). W tym artykule wprowadzono klasy MFC ODBC oraz klasy MFC DAO i kierują do nich więcej szczegółów.
 
 > [!NOTE]
->   Obiekty DAO są obsługiwane przez pakiet Office 2013. Element DAO 3,6 jest wersją ostateczną i jest uznawany za przestarzały. Środowisko i C++ kreatory wizualne nie obsługują obiektów DAO (mimo że klasy DAO są dołączone i nadal można ich używać). Firma Microsoft zaleca korzystanie z [szablonów OLE DB](../data/oledb/ole-db-programming.md) lub [ODBC oraz MFC](../data/odbc/odbc-and-mfc.md) dla nowych projektów. Obiektów DAO należy używać tylko w przypadku zarządzania istniejącymi aplikacjami.
+> Obiekty DAO są obsługiwane przez pakiet Office 2013. Element DAO 3,6 jest wersją ostateczną i jest uznawany za przestarzały. Środowisko i C++ kreatory wizualne nie obsługują obiektów DAO (mimo że klasy DAO są dołączone i nadal można ich używać). Firma Microsoft zaleca korzystanie z [szablonów OLE DB](../data/oledb/ole-db-programming.md) lub [ODBC oraz MFC](../data/odbc/odbc-and-mfc.md) dla nowych projektów. Obiektów DAO należy używać tylko w przypadku zarządzania istniejącymi aplikacjami.
 
 ##  <a name="_core_implementing_a_parameterized_property"></a>Implementowanie właściwości sparametryzowanej
 
@@ -89,13 +89,13 @@ Do klasy Control dodawane są następujące wiersze. Plik H:
 
 [!code-cpp[NVC_MFC_AxUI#35](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_2.h)]
 
-Ten kod deklaruje dwie funkcje `GetArray` o `SetArray` nazwie i zezwala użytkownikowi na żądanie określonego wiersza i kolumny podczas uzyskiwania dostępu do właściwości.
+Ten kod deklaruje dwie funkcje o nazwie `GetArray` i `SetArray`, które umożliwiają użytkownikowi zażądanie określonego wiersza i kolumny podczas uzyskiwania dostępu do właściwości.
 
 Ponadto Kreator dodawania właściwości dodaje następujące wiersze do mapy wysyłania kontrolki, która znajduje się w implementacji klasy formantów (. CPP):
 
 [!code-cpp[NVC_MFC_AxUI#36](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_3.cpp)]
 
-Na koniec implementacje `GetArray` funkcji i `SetArray` są dodawane na końcu. Plik CPP. W większości przypadków zmodyfikujesz funkcję Get, aby zwracała wartość właściwości. Funkcja Set zwykle zawiera kod, który powinien zostać wykonany, przed lub po zmianie właściwości.
+Na koniec do końca działania są dodawane implementacje `GetArray` i `SetArray`. Plik CPP. W większości przypadków zmodyfikujesz funkcję Get, aby zwracała wartość właściwości. Funkcja Set zwykle zawiera kod, który powinien zostać wykonany, przed lub po zmianie właściwości.
 
 Aby ta właściwość była użyteczna, można zadeklarować dwuwymiarową zmienną elementu członkowskiego tablicy w klasie kontrolki typu **Short**, aby przechowywać wartości dla właściwości sparametryzowanej. Następnie można zmodyfikować funkcję Get, aby zwracała wartość przechowywaną w prawidłowym wierszu i kolumnie, zgodnie z parametrami, i zmodyfikować funkcję Set, aby zaktualizować wartość przywoływaną przez parametry wiersza i kolumny.
 
@@ -103,7 +103,7 @@ Aby ta właściwość była użyteczna, można zadeklarować dwuwymiarową zmien
 
 Jeśli w kontrolce wystąpią błędy, może być konieczne zgłoszenie błędu do kontenera kontroli. Istnieją dwie metody raportowania błędów w zależności od sytuacji, w której występuje błąd. Jeśli błąd występuje w funkcji get lub set lub w implementacji metody automatyzacji OLE, formant powinien wywołać [COleControl:: ThrowError](../mfc/reference/colecontrol-class.md#throwerror), który sygnalizuje użytkownikowi kontroli, że wystąpił błąd. Jeśli błąd występuje w dowolnym innym czasie, formant powinien wywołać metodę [COleControl:: FireError —](../mfc/reference/colecontrol-class.md#fireerror), która wyzwala zdarzenie błędu giełdowego.
 
-Aby wskazać rodzaj błędu, który wystąpił, formant musi przekazać kod błędu do `ThrowError` lub. `FireError` Kod błędu to kod stanu OLE, który ma wartość 32-bitową. Jeśli to możliwe, wybierz kod błędu z standardowego zestawu kodów zdefiniowanych w OLECTL. H plik nagłówkowy. Poniższa tabela zawiera podsumowanie tych kodów.
+Aby wskazać rodzaj wystąpienia błędu, formant musi przekazać kod błędu do `ThrowError` lub `FireError`. Kod błędu to kod stanu OLE, który ma wartość 32-bitową. Jeśli to możliwe, wybierz kod błędu z standardowego zestawu kodów zdefiniowanych w OLECTL. H plik nagłówkowy. Poniższa tabela zawiera podsumowanie tych kodów.
 
 ### <a name="activex-control-error-codes"></a>Kody błędów kontrolki ActiveX
 
@@ -176,7 +176,7 @@ Można utworzyć kontrolki okna dialogowego, które nie mają interfejsu użytko
 
      —lub—
 
-- Zadeklaruj zmienną lokalną i podklasę jako element okna dialogowego. Wstaw kod, który przypomina następujący (`CMyCtrl` jest klasą otoki, IDC_MYCTRL1 jest identyfikatorem kontrolki):
+- Zadeklaruj zmienną lokalną i podklasę jako element okna dialogowego. Wstaw kod, który jest podobny do następującego (`CMyCtrl` jest klasą otoki, IDC_MYCTRL1 jest IDENTYFIKATORem kontrolki):
 
    [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]
 

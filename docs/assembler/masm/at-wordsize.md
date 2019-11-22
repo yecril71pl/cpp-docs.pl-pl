@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@WordSize symbol'
 ms.assetid: a4fb3bf1-4f87-4306-ad4d-27d999ce2b3a
-ms.openlocfilehash: b1ce903f4a37707a8563b4f1f0b3e62eaa91a787
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 288ccb7e9e72e7f6b692d8ce172b4170fae1ff1a
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185974"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301956"
 ---
-# <a name="wordsize"></a>@WordSize
+# <a name="wordsize"></a>\@WordSize
 
-Dwóch segment 16-bitowych lub czterech segmentu 32-bitowych (równoważne liczbowe).
+Dwa dla segmentu 16-bitowego lub cztery dla segmentu 32-bitowego (liczbowe równe).
 
 ## <a name="syntax"></a>Składnia
 
-> @WordSize
+> **\@WordSize**
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja symboli](../../assembler/masm/symbols-reference.md)<br/>
+[Dokumentacja symboli](../../assembler/masm/symbols-reference.md)

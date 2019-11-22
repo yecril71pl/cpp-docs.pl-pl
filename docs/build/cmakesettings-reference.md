@@ -4,12 +4,12 @@ ms.date: 10/31/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 6f8301c07f87feee80191f5db14fea5b16f02863
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 2233c0767fb7fac2fe496e744750f380e1c3b698
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624424"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303245"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Pliku cmakesettings. JSON — odwołanie do schematu
 
@@ -39,7 +39,7 @@ Tablica `configurations` zawiera wszystkie konfiguracje dla projektu CMake. Aby 
 - `cacheRoot`: Określa ścieżkę do pamięci podręcznej CMake. Ten katalog powinien zawierać istniejący plik CMakeCache. txt.
 - `clangTidyChecks`: rozdzielona przecinkami lista warnigns, które zostaną przesłane do Clang-uporządkowanego; symbole wieloznaczne są dozwolone, a prefiks "-" usunie testy.
 - `cmakeCommandArgs`: określa dodatkowe opcje wiersza polecenia przenoszone do CMake, gdy zostanie wywołana w celu wygenerowania pamięci podręcznej.
-- `cmakeToolchain`: Określa plik łańcucha narzędzi. Ta wartość jest przenoszona do CMake przy użyciu parametru-DCMAKE_TOOLCHAIN_FILE. "
+- `cmakeToolchain`: Określa plik łańcucha narzędzi. Ta wartość jest przenoszona do CMake przy użyciu-DCMAKE_TOOLCHAIN_FILE ".
 - `codeAnalysisRuleset`: określa zestaw reguł, który ma być używany podczas uruchamiania analizy kodu. Może to być pełna ścieżka lub nazwa pliku zestawu reguł zainstalowanego przez program Visual Studio.
 - `configurationType`: określa konfigurację typu kompilacji dla wybranego generatora. Może być jednym z:
 
@@ -55,17 +55,17 @@ Tablica `configurations` zawiera wszystkie konfiguracje dla projektu CMake. Aby 
 - `generator`: określa Generator CMake, który ma być używany w tej konfiguracji. Może być jednym z:
   
   **Tylko program Visual Studio 2019:**
-  - Program Visual Studio 16 2019
-  - Program Visual Studio 16 2019 Win64
-  - Program Visual Studio 16 2019 ARM
+  - Visual Studio 16 2019
+  - Visual Studio 16 2019 Win64
+  - Visual Studio 16 2019 ARM
 
   **Program Visual Studio 2017 lub nowszy:**
-  - Program Visual Studio 15 2017
+  - Visual Studio 15 2017
   - Program Visual Studio 15 2017 Win64
-  - Program Visual Studio 15 2017 ARM
-  - Program Visual Studio 14 2015
+  - Visual Studio 15 2017 ARM
+  - Visual Studio 14 2015
   - Program Visual Studio 14 2015 Win64
-  - Program Visual Studio 14 2015 ARM
+  - Visual Studio 14 2015 ARM
   - Pliki reguł programu make systemu UNIX
   - Ninja
 
@@ -73,7 +73,7 @@ Ponieważ Ninja jest zaprojektowana dla szybkich szybkości kompilacji, a nie el
 
 Aby określić Generator programu Visual Studio w programie Visual Studio 2017, Otwórz z menu głównego, wybierając **CMAKE | Zmień ustawienia CMake**. Usuń "Ninja" i wpisz "V". Pozwala to aktywować funkcję IntelliSense, która umożliwia wybranie generatora, którego chcesz użyć.
 
-Aby określić Generator programu Visual Studio w programie Visual Studio 2019, kliknij prawym przyciskiem myszy plik *CMakeLists. txt* w **Eksplorator rozwiązań** i wybierz pozycję **CMAKE ustawienia dla projektu** > **Pokaż ustawienia zaawansowane** > **CMAKE Generator**.
+Aby określić Generator programu Visual Studio w programie Visual Studio 2019, kliknij prawym przyciskiem myszy plik *CMakeLists. txt* w **Eksplorator rozwiązań** i wybierz pozycję **CMAKE ustawienia dla projektu** > **Pokaż ustawienia zaawansowane** > **Generator CMAKE**.
 
 Gdy aktywna konfiguracja określa Generator programu Visual Studio, domyślnie program MSBuild. exe jest wywoływany z argumentami `-m -v:minimal`. Aby dostosować kompilację w pliku *pliku cmakesettings. JSON* , można określić dodatkowe [argumenty wiersza polecenia programu MSBuild](../build/reference/msbuild-visual-cpp-overview.md) , które mają być przekazane do systemu kompilacji za pośrednictwem właściwości `buildCommandArgs`:
 
@@ -91,7 +91,7 @@ Gdy aktywna konfiguracja określa Generator programu Visual Studio, domyślnie p
 - `buildRoot`: określa katalog, w którym CMake generuje skrypty kompilacji dla wybranego generatora.  Mapuje do przełącznika **-DCMAKE_BINARY_DIR** i określa, gdzie zostanie utworzony *CMakeCache. txt* . Jeśli folder nie istnieje, zostanie utworzony. Obsługiwane makra obejmują `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
 - `installRoot`: określa katalog, w którym program CMake generuje cele instalacji dla wybranego generatora. Obsługiwane makra obejmują `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
 - `cmakeCommandArgs`: określa dodatkowe opcje wiersza polecenia przenoszone do CMake, gdy zostanie wywołana w celu wygenerowania plików projektu.
-- `cmakeToolchain`: Określa plik łańcucha narzędzi. Ta wartość jest przenoszona do CMake przy użyciu parametru-DCMAKE_TOOLCHAIN_FILE. "
+- `cmakeToolchain`: Określa plik łańcucha narzędzi. Ta wartość jest przenoszona do CMake przy użyciu-DCMAKE_TOOLCHAIN_FILE ".
 - `buildCommandArgs`: określa natywne przełączniki kompilacji przesłane do CMake po--kompilacja--. Na przykład przekazywanie-v przy użyciu generatora Ninja wymusza Ninja do danych wyjściowych wiersza polecenia. Zobacz [argumenty wiersza polecenia Ninja](#ninja) , aby uzyskać więcej informacji na temat poleceń ninja.
 - `ctestCommandArgs`: określa dodatkowe opcje wiersza polecenia, które przechodzą do narzędzia ctest podczas uruchamiania testów ".
 - `codeAnalysisRuleset`: określa zestaw reguł, który ma być używany podczas uruchamiania analizy kodu. Może to być pełna ścieżka lub nazwa pliku zestawu reguł zainstalowanego przez program Visual Studio.
@@ -99,24 +99,24 @@ Gdy aktywna konfiguracja określa Generator programu Visual Studio, domyślnie p
 - `installRoot`: określa katalog, w którym program CMake generuje cele instalacji dla wybranego generatora. Obsługiwane makra obejmują `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
 - `intelliSenseMode`: Określa tryb używany do obliczania informacji IntelliSense. Może być jednym z:
 
-  - Windows-MSVC — x86
-  - Windows-MSVC — x64
-  - Windows-MSVC — ARM
-  - Windows-MSVC-arm64
-  - Android-Clang — x86
-  - Android-Clang — x64
-  - Android-Clang — ARM
-  - Android-Clang-arm64
+  - windows-msvc-x86
+  - windows-msvc-x64
+  - windows-msvc-arm
+  - windows-msvc-arm64
+  - android-clang-x86
+  - android-clang-x64
+  - android-clang-arm
+  - android-clang-arm64
   - iOS — Clang — x86
-  - iOS — Clang — x64
+  - ios-clang-x64
   - iOS — Clang — ARM
   - iOS-Clang-arm64
-  - Windows-Clang — x86
-  - Windows-Clang — x64
-  - Windows-Clang — ARM
-  - Windows-Clang-arm64
-  - Linux — pozarząd — x86
-  - Linux — pozarząd — x64
+  - windows-clang-x86
+  - windows-clang-x64
+  - windows-clang-arm
+  - windows-clang-arm64
+  - linux-gcc-x86
+  - linux-gcc-x64
   - Linux — Zarząd — ARM
 
 - `cacheRoot`: Określa ścieżkę do pamięci podręcznej CMake. Ten katalog powinien zawierać istniejący plik *CMakeCache. txt* .
@@ -131,7 +131,7 @@ Gdy aktywna konfiguracja określa Generator programu Visual Studio, domyślnie p
 - `remoteCopySourcesMethod`: określa metodę kopiowania plików na maszynę zdalną. Może to być "rsync" lub "SFTP".
 - `remoteCMakeListsRoot`: określa katalog na komputerze zdalnym, który zawiera projekt CMake. Obsługiwane makra obejmują `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
 - `remoteBuildRoot`: określa katalog na komputerze zdalnym, w którym CMake generuje skrypty kompilacji dla wybranego generatora. Obsługiwane makra obejmują `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
-- `remoteInstallRoot`: określa katalog na komputerze zdalnym, w którym program CMake generuje cele instalacji dla wybranego generatora. Obsługiwane makra obejmują `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`i `${env.VARIABLE}`, gdzie `VARIABLE` to zmienna środowiskowa zdefiniowana w systemie , użytkownika lub poziomu sesji.
+- `remoteInstallRoot`: określa katalog na komputerze zdalnym, w którym program CMake generuje cele instalacji dla wybranego generatora. Obsługiwane makra obejmują `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`i `${env.VARIABLE}`, gdzie `VARIABLE` to zmienna środowiskowa, która została zdefiniowana na poziomie systemu, użytkownika lub sesji.
 - `remoteCopySources`: `boolean`, który określa, czy program Visual Studio ma kopiować pliki źródłowe na maszynę zdalną. Wartość domyślna to true. Ustaw wartość false, jeśli chcesz samodzielnie zarządzać synchronizacją plików.
 - `remoteCopyBuildOutput`: `boolean`, który określa, czy dane wyjściowe kompilacji mają być kopiowane z systemu zdalnego.
 - `rsyncCommandArgs`: określa zestaw dodatkowych opcji wiersza polecenia przekazaną do rsync.
@@ -163,16 +163,16 @@ Należy pamiętać, że jeśli `"type"`nie zostanie zdefiniowany, domyślnie zos
 
 *Środowisko* hermetyzuje zmienne środowiskowe, które są ustawiane w procesie, którego program Visual Studio używa do wywoływania CMAKE. exe. W przypadku projektów MSVC zmienne są te, które są ustawiane w [wierszu polecenia dewelopera](building-on-the-command-line.md) dla określonej platformy. Na przykład środowisko `msvc_x64_x64` jest takie samo jak uruchamianie **wiersz polecenia dla deweloperów dla programu vs 2017** lub **wiersz polecenia dla deweloperów dla programu vs 2019** z argumentami **-Arch = amd64-host_arch = amd64** . Możesz użyć składni `env.{<variable_name>}` w *pliku cmakesettings. JSON* , aby odwołać się do poszczególnych zmiennych środowiskowych, na przykład w celu skonstruowania ścieżek do folderów.  Dostępne są następujące wstępnie zdefiniowane środowiska:
 
-- linux_arm: Przekieruj system ARM Linux zdalnie.
-- linux_x64: zdalny system x64 Linux.
+- linux_arm: kierowanie do zdalnego systemu ARM Linux.
+- linux_x64: system TARGET x64 Linux zdalnie.
 - linux_x86: zdalny system x86 Linux.
-- msvc_arm: docelowa wersja systemu Windows ARM z kompilatorem MSVC.
-- msvc_arm_x64: docelowa wersja systemu Windows ARM z 64-bitowym kompilatorem MSVC.
-- msvc_arm64: ARM64 system Windows przy użyciu kompilatora MSVC.
-- msvc_arm64_x64: ARM64 system Windows z 64-bitowym kompilatorem MSVC.
+- msvc_arm: docelowa wersja systemu Windows ARM przy użyciu kompilatora MSVC.
+- msvc_arm_x64: docelowa architektura ARM systemu Windows przy użyciu 64-bitowego kompilatora MSVC.
+- msvc_arm64: docelowa ARM64 systemu Windows za pomocą kompilatora MSVC.
+- msvc_arm64_x64: docelowa ARM64 systemu Windows przy użyciu 64-bitowego kompilatora MSVC.
 - msvc_x64: docelowa wersja x64 systemu Windows za pomocą kompilatora MSVC.
 - msvc_x64_x64: docelowa wersja x64 systemu Windows z 64-bitowym kompilatorem MSVC.
-- msvc_x86: docelowa wersja x86 systemu Windows z kompilatorem MSVC.
+- msvc_x86: docelowa wersja architektury x86 systemu Windows przy użyciu kompilatora MSVC.
 - msvc_x86_x64: docelowy system Windows x86 z 64-bitowym kompilatorem MSVC.
 
 ### <a name="accessing-environment-variables-from-cmakeliststxt"></a>Uzyskiwanie dostępu do zmiennych środowiskowych z CMakeLists. txt
@@ -256,7 +256,7 @@ W następnym przykładzie konfiguracja programu x86-Debug definiuje własną war
       "generator": "Ninja",
       "configurationType": "Debug",
       "inheritEnvironments": [ "msvc_x64" ],
-      // Since this configuration doesn’t modify BuildDir, it inherits
+      // Since this configuration doesn't modify BuildDir, it inherits
       // from the one defined globally.
       "buildRoot": "${env.BuildDir}\\${name}"
     }

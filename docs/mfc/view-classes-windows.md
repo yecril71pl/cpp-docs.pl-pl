@@ -8,16 +8,16 @@ helpviewer_keywords:
 - splitter window classes [MFC]
 - view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
-ms.openlocfilehash: f3e9ea2ebf3eb0ce04fde0339aaf0243686248a9
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: a3e0f837bc13c022bec91bfff6e38c1513abaf16
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096041"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302972"
 ---
 # <a name="view-classes-windows"></a>Klasy widoków (Windows)
 
-`CView`i jej klasy pochodne są oknami podrzędnymi, które reprezentują obszar klienta okna ramki. Widoki wyświetlają dane i akceptują dane wejściowe dla dokumentu.
+`CView` i jej klasy pochodne są oknami podrzędnymi, które reprezentują obszar klienta okna ramki. Widoki wyświetlają dane i akceptują dane wejściowe dla dokumentu.
 
 Klasa widoku jest skojarzona z klasą dokumentu i klasą okna ramowego przy użyciu obiektu szablonu dokumentu.
 
@@ -25,7 +25,7 @@ Klasa widoku jest skojarzona z klasą dokumentu i klasą okna ramowego przy uży
 Klasa bazowa dla widoków specyficznych dla aplikacji w danych dokumentu. Wyświetla dane i akceptują dane wejściowe użytkownika w celu edytowania lub zaznaczania danych. Utwórz klasę widoku lub klasy z `CView`.
 
 [CScrollView](../mfc/reference/cscrollview-class.md)<br/>
-Klasa bazowa dla widoków z możliwościami przewijania. Utwórz klasę widoku od `CScrollView` do automatycznego przewijania.
+Klasa bazowa dla widoków z możliwościami przewijania. Utwórz klasę widoku od `CScrollView`, aby przewijać automatyczne.
 
 ## <a name="form-and-record-views"></a>Widoki formularzy i rekordów
 
@@ -34,13 +34,13 @@ Widoki formularzy są również przewijane. Są one oparte na szablonie okna dia
 Widoki rekordów są wyprowadzane z widoków formularza. Oprócz szablonu okna dialogowego mają także połączenie z bazą danych.
 
 [CFormView](../mfc/reference/cformview-class.md)<br/>
-Widok przewijania, którego układ jest zdefiniowany w szablonie okna dialogowego. Utwórz klasę z `CFormView` , aby zaimplementować interfejs użytkownika w oparciu o szablon okna dialogowego.
+Widok przewijania, którego układ jest zdefiniowany w szablonie okna dialogowego. Utwórz klasę z `CFormView`, aby zaimplementować interfejs użytkownika na podstawie szablonu okna dialogowego.
 
 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
-Udostępnia widok formularza bezpośrednio połączony z obiektem zestawu rekordów obiektu dostępu do danych (DAO). Podobnie jak w przypadku wszystkich widoków `CDaoRecordView` formularzy, jest oparty na szablonie okna dialogowego. Obiekty DAO są używane z bazami danych programu Access i są obsługiwane za pomocą pakietu Office 2013. 3,6 jest wersją ostateczną i jest uznawana za przestarzałą.
+Udostępnia widok formularza bezpośrednio połączony z obiektem zestawu rekordów obiektu dostępu do danych (DAO). Podobnie jak w przypadku wszystkich widoków formularzy `CDaoRecordView` jest oparty na szablonie okna dialogowego. Obiekty DAO są używane z bazami danych programu Access i są obsługiwane za pomocą pakietu Office 2013. Element DAO 3,6 jest wersją ostateczną i jest uznawany za przestarzały.
 
 [Formularzy CRecordView](../mfc/reference/crecordview-class.md)<br/>
-Udostępnia widok formularza połączony bezpośrednio z obiektem zestawu rekordów Open Database Connectivity (ODBC). Podobnie jak w przypadku wszystkich widoków `CRecordView` formularzy, jest oparty na szablonie okna dialogowego.
+Udostępnia widok formularza połączony bezpośrednio z obiektem zestawu rekordów Open Database Connectivity (ODBC). Podobnie jak w przypadku wszystkich widoków formularzy `CRecordView` jest oparty na szablonie okna dialogowego.
 
 [CHtmlEditView](../mfc/reference/chtmleditview-class.md)<br/>
 Widok formularza, który zapewnia funkcjonalność platformy edycji HTML przeglądarki WebBrowser.
@@ -66,7 +66,7 @@ Widok, który zawiera kontrolkę drzewa systemu Windows (zobacz [CTreeCtrl](../m
 
 ## <a name="related-classes"></a>Powiązane klasy
 
-`CSplitterWnd`umożliwia korzystanie z wielu widoków w jednym oknie ramek. `CPrintDialog`i `CPrintInfo` obsługują Podgląd drukowania i podglądu wydruku w widokach. `CRichEditDoc`i `CRichEditCntrItem` są używane z `CRichEditView` programem w celu zaimplementowania funkcji kontenera OLE.
+`CSplitterWnd` umożliwia korzystanie z wielu widoków w jednym oknie ramek. `CPrintDialog` i `CPrintInfo` obsługują możliwości widoków drukowanie i Podgląd wydruku. `CRichEditDoc` i `CRichEditCntrItem` są używane z `CRichEditView` do implementowania funkcji kontenera OLE.
 
 [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)<br/>
 Okno, które użytkownik może podzielić na wiele okienek. Rozmiary tych okienek można zmieniać przez użytkownika lub stały rozmiar.
@@ -75,7 +75,7 @@ Okno, które użytkownik może podzielić na wiele okienek. Rozmiary tych okiene
 Udostępnia standardowe okno dialogowe do drukowania pliku.
 
 [CPrintInfo](../mfc/reference/cprintinfo-structure.md)<br/>
-Struktura zawierająca informacje o zadaniu drukowania lub podglądu wydruku. Używany przez `CView`architekturę drukowania.
+Struktura zawierająca informacje o zadaniu drukowania lub podglądu wydruku. Używane przez architekturę drukowania `CView`.
 
 [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)<br/>
 Zachowuje listę elementów klienta OLE, które znajdują się w `CRichEditView`.

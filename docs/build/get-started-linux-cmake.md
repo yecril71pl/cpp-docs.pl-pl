@@ -4,12 +4,12 @@ description: Jak skonfigurować, skompilować i debugować projekt CMake typu Op
 author: mikeblome
 ms.topic: tutorial
 ms.date: 11/08/2019
-ms.openlocfilehash: 05f120335180d27e84a99819ee97c233dd1b39a7
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 269c9e88133a492f66df7c7f81ab35424aff125d
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965103"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303253"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>Samouczek: Tworzenie C++ projektów dla wielu platform w programie Visual Studio
 
@@ -155,7 +155,7 @@ W tym kroku poprowadzimy do debugowania przykładowego programu, który demonstr
 
    Jeśli połączenie zdalne zostało już dodane, możesz otworzyć to okno, przechodząc do **opcji narzędzia > opcje > Międzyplatformowy > Menedżer połączeń**.
 
-1. Podaj [Informacje o połączeniu z maszyną z systemem Linux](/cpp/linux/connect-to-your-remote-linux-computer.md) i wybierz pozycję **Połącz**. Program Visual Studio dodaje tę maszynę do pliku cmakesettings. JSON jako domyślne połączenie dla **systemu Linux-Debug**. Pobiera również nagłówki z komputera zdalnego, dzięki czemu można uzyskać [IntelliSense dla tego połączenia zdalnego](/cpp/linux/configure-a-linux-project?view=vs-2019#remote_intellisense). Następnie program Visual Studio wysyła pliki do maszyny zdalnej i generuje pamięć podręczną CMake w systemie zdalnym. Te kroki mogą zająć trochę czasu, w zależności od szybkości sieci i możliwości komputera zdalnego. Wiadomo, że zostanie ona ukończona, gdy komunikat "zakończenie wyodrębniania informacji Target" zostanie wyświetlony w oknie danych wyjściowych CMake.
+1. Podaj [Informacje o połączeniu z maszyną z systemem Linux](/cpp/linux/connect-to-your-remote-linux-computer) i wybierz pozycję **Połącz**. Program Visual Studio dodaje tę maszynę do pliku cmakesettings. JSON jako domyślne połączenie dla **systemu Linux-Debug**. Pobiera również nagłówki z komputera zdalnego, dzięki czemu można uzyskać [IntelliSense dla tego połączenia zdalnego](/cpp/linux/configure-a-linux-project?view=vs-2019#remote_intellisense). Następnie program Visual Studio wysyła pliki do maszyny zdalnej i generuje pamięć podręczną CMake w systemie zdalnym. Te kroki mogą zająć trochę czasu, w zależności od szybkości sieci i możliwości komputera zdalnego. Wiadomo, że zostanie ona ukończona, gdy komunikat "zakończenie wyodrębniania informacji Target" zostanie wyświetlony w oknie danych wyjściowych CMake.
 
 ## <a name="set-a-breakpoint-build-and-run-on-linux"></a>Ustawianie punktu przerwania, kompilowania i uruchamiania w systemie Linux
 
@@ -191,7 +191,7 @@ Ponieważ jest to aplikacja klasyczna, należy podać dodatkowe informacje konfi
 
 W tym samouczku Sklonowano bazę kodu bezpośrednio z usługi GitHub. Skompilowane, wykonane i debugowane w systemie Windows bez modyfikacji. Następnie użyto tej samej bazy kodu z drobnymi zmianami konfiguracji, aby kompilować, uruchamiać i debugować na zdalnym komputerze z systemem Linux.
 
-## <a name="next-steps"></a>Następne kroki
+## <a name="next-steps"></a>Kolejne kroki
 
 Dowiedz się więcej o konfigurowaniu i debugowaniu projektów CMake w programie Visual Studio:
 

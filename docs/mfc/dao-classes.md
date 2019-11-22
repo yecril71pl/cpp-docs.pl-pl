@@ -7,20 +7,20 @@ helpviewer_keywords:
 - database classes [MFC], DAO
 - DAO [MFC], classes
 ms.assetid: b15d0cd6-328b-4288-9c19-d037a795db57
-ms.openlocfilehash: febd20971fd85275bd7ded0d2216fab0e05adbd1
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: cdd3fd9a733df73d36441693d049724878219df5
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095613"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303391"
 ---
 # <a name="dao-classes"></a>Klasy DAO
 
-Obiekty DAO są używane z bazami danych programu Access i są obsługiwane za pomocą pakietu Office 2013. 3,6 jest wersją ostateczną i jest uznawana za przestarzałą.
+Obiekty DAO są używane z bazami danych programu Access i są obsługiwane za pomocą pakietu Office 2013. Element DAO 3,6 jest wersją ostateczną i jest uznawany za przestarzały.
 
 Te klasy współpracują z innymi klasami struktury aplikacji, aby zapewnić łatwy dostęp do baz danych obiektów dostępu do danych (DAO), które używają tego samego aparatu bazy danych co Microsoft Visual Basic i Microsoft Access. Klasy DAO mogą również uzyskiwać dostęp do wielu baz danych, dla których dostępne są sterowniki Open Database Connectivity (ODBC).
 
-Programy korzystające z baz danych DAO będą mieć co `CDaoDatabase` najmniej obiekt `CDaoRecordset` i obiekt.
+Programy korzystające z baz danych DAO będą mieć co najmniej obiekt `CDaoDatabase` i obiekt `CDaoRecordset`.
 
 > [!NOTE]
 >  Środowisko i C++ kreatory wizualne nie obsługują już obiektów DAO (chociaż klasy DAO są dołączone i nadal można ich używać). Firma Microsoft zaleca używanie ODBC w przypadku nowych projektów MFC. Obiektów DAO należy używać tylko w przypadku zarządzania istniejącymi aplikacjami.
@@ -52,7 +52,7 @@ Obsługuje procedury wymiany pól rekordów DAO (DFX) używane przez klasy bazy 
 ## <a name="related-classes"></a>Powiązane klasy
 
 [CLongBinary](../mfc/reference/clongbinary-class.md)<br/>
-Hermetyzuje dojście do magazynu dla binarnego dużego obiektu (BLOB), takiego jak mapa bitowa. `CLongBinary`obiekty służą do zarządzania dużymi obiektami danych przechowywanymi w tabelach bazy danych.
+Hermetyzuje dojście do magazynu dla binarnego dużego obiektu (BLOB), takiego jak mapa bitowa. obiekty `CLongBinary` są używane do zarządzania dużymi obiektami danych przechowywanymi w tabelach bazy danych.
 
 [COleCurrency](../mfc/reference/colecurrency-class.md)<br/>
 Otoka dla **waluty**typu automatyzacji OLE, typ arytmetyczny stałej z 15 cyfr przed separatorem dziesiętnym i 4 cyfr po.

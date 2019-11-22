@@ -1,118 +1,118 @@
 ---
-title: Dokładnie zapoznaj się C++ kodu w programie Visual Studio
-description: Użyj C++ edytora kodu w programie Visual Studio do formatowania i rozumienie kodu.
+title: Odczytuj i rozumiej C++ kod w programie Visual Studio
+description: Użyj edytora C++ kodu w programie Visual Studio, aby sformatować i zrozumieć swój kod.
 ms.date: 05/28/2019
-ms.openlocfilehash: c5e4d7f3e53ef37649e3635d11cf99b10cb8a7ee
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.openlocfilehash: d4af4c9bc747540bada49de305c45cffc5c44374
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66743382"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303106"
 ---
-# <a name="read-and-understand-c-code-in-visual-studio"></a>Dokładnie zapoznaj się C++ kodu w programie Visual Studio
+# <a name="read-and-understand-c-code-in-visual-studio"></a>Odczytuj i rozumiej C++ kod w programie Visual Studio
 
-C++ Edytora kodu i środowiska IDE programu Visual Studio zapewnia wiele pomoce kodowania. Niektóre są unikatowe dla języka C++, a niektóre są zasadniczo takie same dla wszystkich języków Visual Studio. Aby uzyskać więcej informacji o funkcjach udostępnionych, zobacz [pisanie kodu w edytorze tekstu i kodu](/visualstudio/ide/writing-code-in-the-code-and-text-editor).  
+Edytor C++ kodu i środowisko IDE programu Visual Studio zapewniają wiele narzędzi do kodowania. Niektóre z nich są C++unikatowe dla, a niektóre są zasadniczo takie same dla wszystkich języków programu Visual Studio. Aby uzyskać więcej informacji o funkcjach udostępnionych, zobacz [pisanie kodu w edytorze kodu i tekstu](/visualstudio/ide/writing-code-in-the-code-and-text-editor).  
 
 ## <a name="colorization"></a>Kolorowanie
 
-Program Visual Studio kolorowania składni elementów do rozróżniania między typami symbole, takie jak słowa kluczowe języka, nazwy typów, nazw zmiennych, parametrów funkcji, literały ciągów i tak dalej.
+Program Visual Studio koloruje elementy składni w celu rozróżnienia typów symboli, takich jak słowa kluczowe języka, nazwy typów, nazwy zmiennych, parametry funkcji, literały ciągów i tak dalej.
 
-![Kolorowaniu kodu](../ide/media/code-outline-colorization.png " C++ kolorowania")
+![Kolorowanie kodu](../ide/media/code-outline-colorization.png "C++Kolorowanie")
 
- Nieużywany kod (na przykład kod #if 0) jest bardziej pojawił się kolorów.
+ Nieużywany kod (taki jak kod w #if 0) jest bardziej wyblakły kolorem.
 
- ![Nieaktywny kod](../ide/media/inactive-code-cpp.png " C++ nieaktywnego kodu")
+ ![Nieaktywny kod](../ide/media/inactive-code-cpp.png "C++nieaktywny kod")
 
-Można dostosować kolory, wpisując "Czcionki" **Szybkie uruchamianie**, a następnie wybierając **czcionki i kolory**. W **czcionki i kolory** okna dialogowego przewiń w dół do C /C++ opcje, a następnie wybierz polecenie niestandardowej czcionki i/lub kolor.
+Kolory można dostosować, wpisując "Fonts" ( **Szybkie uruchamianie**), a następnie wybierając **czcionkę i kolory**. W oknie dialogowym **czcionki i kolory** przewiń w dół do opcji CC++ /Options, a następnie wybierz niestandardową czcionkę i/lub kolor.
 
 ## <a name="outlining"></a>Tworzenie konspektu
 
-Kliknij prawym przyciskiem myszy w dowolnym miejscu w pliku kodu źródłowego, a następnie wybierz **konspekt** Aby zwinąć lub rozwinąć bloków kodu i/lub niestandardowych regionów, aby ułatwić przeglądanie kodu, Cię interesuje. Aby uzyskać więcej informacji, zobacz [konspekt](/visualstudio/ide/outlining).
+Kliknij prawym przyciskiem myszy w dowolnym miejscu w pliku kodu źródłowego i wybierz opcję **Konspekt** , aby zwinąć lub rozwinąć bloki kodu i/lub regiony niestandardowe, aby ułatwić przeglądanie tylko kodu, który Cię interesuje. Aby uzyskać więcej informacji, zobacz [Tworzenie konspektu](/visualstudio/ide/outlining).
 
-![C&#43; &#43; konspekt](../ide/media/vs2015_cpp_outlining.png "konspekt")
+![Konspekt&#43; &#43; języka C](../ide/media/vs2015_cpp_outlining.png "Tworzenie konspektu")
 
-Gdy umieścisz kursor przed nawias klamrowy "{" lub "}", Edytor wyróżnia jego odpowiednika dopasowania.
+Gdy umieścisz kursor przed nawiasem klamrowym, "{" lub "}", Edytor wyróżnia swój pasujący odpowiednik.
 
-Inne opcje konspektu znajdują się w obszarze **Edytuj** > **konspekt** w menu głównym.
+Inne opcje tworzenia konspektu znajdują się w obszarze **edytuj** > **Konspekt** w menu głównym.
 
 ## <a name="line-numbers"></a>Numery wierszy
 
-Numery wierszy można dodać do projektu, przechodząc do **narzędzia** > **opcje** > **edytora tekstów** > **wszystkie Języki** > **ogólne** lub wyszukując "numerowanie wierszy" za pomocą **szybkiego uruchamiania (Ctrl + Q)** . Numery wierszy można ustawić dla wszystkich języków lub dla określonych języków, w tym C++.
+Możesz dodać numery wierszy do projektu, przechodząc do opcji **narzędzia** > **Opcje** > **edytorze tekstów** > **wszystkie języki** > **Ogólne** lub przez wyszukanie "wiersz num" przy użyciu opcji **szybkiego uruchamiania (Ctrl + Q)** . Numery wierszy można ustawić dla wszystkich języków lub tylko dla określonych języków, w tym C++.
 
-## <a name="scroll-and-zoom"></a>Przewijanie i powiększanie
+## <a name="scroll-and-zoom"></a>Przewiń i Powiększ
 
-Można powiększyć lub w edytorze, naciskając klawisz **Ctrl** klucz i przewijanie przy użyciu kółka myszy. Ponadto można powiększyć przy użyciu ustawienie powiększenia w lewym dolnym rogu.
+Możesz powiększyć lub pomniejszyć w edytorze, naciskając klawisz **Ctrl** i przewijając kółkiem myszy. Możesz również powiększać, używając ustawienia powiększenia w lewym dolnym rogu.
 
-![C&#43; &#43; powiększenie](../ide/media/zoom-control.png "powiększenia")
+![Kontrolka powiększenia języka C&#43; &#43;](../ide/media/zoom-control.png "Kontrolka powiększenia")
 
-Pasek przewijania **tryb mapy** pozwala szybko przewiń i przeglądać pliku z kodem bez opuszczania Twojej bieżącej lokalizacji. Możesz kliknąć dowolne miejsce na mapie kodu, aby przejść bezpośrednio do tej lokalizacji.
+**Tryb mapy** ScrollBar umożliwia szybkie przewijanie i przeglądanie pliku kodu bez opuszczania bieżącej lokalizacji. Możesz kliknąć w dowolnym miejscu mapy kodu, aby przejść bezpośrednio do tej lokalizacji.
 
-![Mapa w języku C kodu&#43;&#43;](../ide/media/vs2015-cpp-code-map.png "Mapa kodu")
+![Mapa kodu w języku C&#43;&#43;](../ide/media/vs2015-cpp-code-map.png "Mapa kodu")
 
-Aby włączyć **tryb mapy**, wpisz "mapy" **Szybkie uruchamianie** polu wyszukiwania na głównym pasku narzędzi i wybierz polecenie **trybie przewijania mapy**. Aby uzyskać więcej informacji, zobacz [jak: Śledzenie kodu przez dostosowania paska przewijania](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar).
+Aby włączyć **tryb mapowania**, wpisz "map" w polu wyszukiwania **szybkiego uruchamiania** na głównym pasku narzędzi i wybierz opcję **Użyj trybu Scroll map**. Aby uzyskać więcej informacji, zobacz [jak: śledzić kod przez dostosowanie paska przewijania](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar).
 
-Gdy **tryb mapy** jest wyłączone, pasek przewijania wyróżnia nadal zmiany wprowadzone w pliku. Zielony oznacza zapisane zmiany i żółty oznacza niezapisane zmiany.
+Gdy **tryb mapy** jest wyłączony, pasek przewijania nadal wyróżnia zmiany wprowadzone w pliku. Zielony oznacza zapisane zmiany i żółty wskazuje niezapisane zmiany.
 
 ## <a name="quick-info-and-parameter-info"></a>Szybkie informacje i informacje o parametrach
 
-Umieść kursor nad dowolnej zmiennej, funkcji lub innych symboli, aby uzyskać informacje o tym, w tym deklaracji i wszelkie komentarze, znajdujących się po prostu poprzedzającym go.
+Umieść kursor nad dowolną zmienną, funkcją lub innym symbolem, aby uzyskać informacje na jego temat, w tym deklarację i wszelkie komentarze, które znajdują się przed nim.
 
 ::: moniker range="vs-2019"
 
-![Szybkie informacje w języku C&#43;&#43;](../ide/media/quick-info-vs2019.png "szybkie informacje")
+![Szybkie informacje w języku C&#43;&#43;](../ide/media/quick-info-vs2019.png "Szybkie informacje")
 
-**Quick Info** etykietki narzędzia ma **Wyszukaj Online** łącza. Przejdź do **narzędzia** > **opcje** > **edytora tekstów**  >  **C++**  >  **Widoku** Aby określić dostawcę wyszukiwania. 
+Etykietka narzędzia **szybkie informacje** zawiera link **wyszukiwania online** . Przejdź do pozycji **narzędzia** > **Opcje** > **Edytor tekstów** > **C++**  > **widoku** , aby określić dostawcę wyszukiwania. 
 
-Jeśli w kodzie występuje błąd, możesz umieścić kursor go i **Quick Info** wyświetli komunikat o błędzie. Komunikat o błędzie może również znaleźć w oknie Lista błędów.
+Jeśli wystąpi błąd w kodzie, możesz umieścić wskaźnik myszy nad nim, a w oknie **szybkie informacje** zostanie wyświetlony komunikat o błędzie. Komunikat o błędzie można również znaleźć w oknie Lista błędów.
 
-![Szybkie informacje na temat błędu](../ide/media/quickinfo-on-error.png "szybkie informacje na temat błędu")
+![Szybkie informacje o błędzie](../ide/media/quickinfo-on-error.png "Szybkie informacje o błędzie")
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-![Szybkie informacje w języku C&#43;&#43;](../ide/media/quick-info.png "szybkie informacje")
+![Szybkie informacje w języku C&#43;&#43;](../ide/media/quick-info.png "Szybkie informacje")
 
-Jeśli w kodzie występuje błąd, możesz umieścić kursor go i **Quick Info** wyświetli komunikat o błędzie. Możesz również znaleźć komunikat o błędzie w **lista błędów** okna.
+Jeśli wystąpi błąd w kodzie, możesz umieścić wskaźnik myszy nad nim, a w oknie **szybkie informacje** zostanie wyświetlony komunikat o błędzie. Komunikat o błędzie można również znaleźć w oknie **Lista błędów** .
 
-![Szybkie informacje na temat błędu](../ide/media/quickinfo-on-error.png "szybkie informacje na temat błędu")
+![Szybkie informacje o błędzie](../ide/media/quickinfo-on-error.png "Szybkie informacje o błędzie")
 
 ::: moniker-end
 
-Po wywołaniu funkcji, **Parameter Info** Wyświetla typy parametrów i kolejności, w którym są oczekiwane.
+Gdy wywołujesz funkcję, **Informacje o parametrach** przedstawiają typy parametrów i kolejność, w jakiej są oczekiwane.
 
-![Informacje o parametrach w C&#43;&#43;](../ide/media/parameter-info.png "informacje o parametrach")
+![Informacje o parametrach w języku C&#43;&#43;](../ide/media/parameter-info.png "Informacje o parametrach")
 
 ## <a name="peek-definition"></a>Zobacz definicję
 
-Umieść kursor nad zmienną lub funkcję deklaracji, kliknij prawym przyciskiem myszy, następnie wybierz **Peek Definition** Aby wyświetlić widok wbudowane jego definicja bez konieczności opuszczania Twojej bieżącej lokalizacji. Aby uzyskać więcej informacji, zobacz [zobacz definicję (Alt + F12)](/visualstudio/ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12).
+Umieść kursor nad deklaracją zmiennej lub funkcji, kliknij prawym przyciskiem myszy, a następnie wybierz polecenie **wgląd do definicji** , aby wyświetlić wbudowany widok jego definicji bez nawigowania w bieżącej lokalizacji. Aby uzyskać więcej informacji, zobacz [wgląd do definicji (Alt + F12)](/visualstudio/ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12).
 
-![C&#43;&#43; Peek Definition](../ide/media/vs2015_cpp_peek_definition.png "vs2015_cpp_peek_definition")
+![Definicja&#43; &#43; wglądu w C](../ide/media/vs2015_cpp_peek_definition.png "vs2015_cpp_peek_definition")
 
 ##  <a name="f1-help"></a>Pomoc F1
 
-Umieść kursor na lub po prostu po typu, słowo kluczowe lub funkcji i naciśnij klawisz **F1** przechodzić bezpośrednio do temat istotne informacje w witrynie docs.microsoft.com. **F1** działa również na elementy na liście błędów, a wiele okien dialogowych.
+Umieść kursor na lub zaraz po dowolnym typie, słowie kluczowym lub funkcji, a następnie naciśnij klawisz **F1** , aby przejść bezpośrednio do odpowiedniego tematu referencyjnego w witrynie docs.Microsoft.com. **F1** działa również w przypadku elementów na liście błędów i w wielu oknach dialogowych.
 
 ## <a name="class-view"></a>Widok klas
 
-**Widok klas** Wyświetla można wyszukiwać zestaw drzew wszystkie symbole kodu i ich zakres i nadrzędny/podrzędny hierarchie organizowane w poszczególnych projektów. Można skonfigurować, jakie **Widok klas** Wyświetla z **widok klasy: ustawienia** (kliknij ikonę Pole koła zębatego w górnej części okna).
+**Widok klasy** Wyświetla zestaw drzew z możliwością wyszukiwania dla wszystkich symboli kodu oraz ich zakres i hierarchie nadrzędny/podrzędny, zorganizowane na podstawie projektu. Można skonfigurować, jakie **Widok klasy** są wyświetlane z poziomu **Widok klasy ustawień** (kliknij ikonę koła zębatego w górnej części okna).
 
-![Widok w języku C klasy&#43;&#43;](../ide/media/class-view.png "Widok klas")
+![Widok klasy w języku C&#43;&#43;](../ide/media/class-view.png "Widok klas")
 
 ## <a name="generate-graph-of-include-files"></a>Generowanie grafu plików dołączanych
 
-Kliknij prawym przyciskiem myszy plik kodu w projekcie, a następnie wybierz **Generowanie grafu plików dołączanych** wyświetlić wykres, które pliki zostały dołączone przez inne pliki.
+Kliknij prawym przyciskiem myszy plik kodu w projekcie i wybierz polecenie **Generuj Graf plików dołączanych** , aby zobaczyć Graf, które pliki są dołączone przez inne pliki.
 
-![C&#43; &#43; grafu plików dołączanych](../ide/media/vs2015_cpp_include_graph.png "vs2015_cpp_include_graph")
+![Wykres&#43; &#43; C dotyczący plików dołączanych](../ide/media/vs2015_cpp_include_graph.png "vs2015_cpp_include_graph")
 
-## <a name="view-call-hierarchy"></a>Pokaż hierarchię wywołań
+## <a name="view-call-hierarchy"></a>Wyświetl hierarchię wywołań
 
-Kliknij prawym przyciskiem myszy na każde wywołanie funkcji i wyświetlanie listy wszystkich funkcji wywoływanych przez niego, a wszystkie funkcje, które ją wywołują cykliczne. Każda funkcja na liście można rozwijać w taki sam sposób. Aby uzyskać więcej informacji, zobacz [hierarchię wywołań,](/visualstudio/ide/reference/call-hierarchy).
+Kliknij prawym przyciskiem myszy każde wywołanie funkcji i Wyświetl listę cykliczną wszystkich funkcji, które wywołuje, oraz wszystkie funkcje, które je wywołują. Każda funkcja na liście może być rozwinięta w ten sam sposób. Aby uzyskać więcej informacji, zobacz temat [Hierarchia wywołań](/visualstudio/ide/reference/call-hierarchy).
 
-![C&#43;&#43; Call Hierarchy](../ide/media/vs2015_cpp_call_hierarchy.png "vs2015_cpp_call_hierarchy")
+![Hierarchia wywołań języka C&#43; &#43;](../ide/media/vs2015_cpp_call_hierarchy.png "vs2015_cpp_call_hierarchy")
 
 ## <a name="see-also"></a>Zobacz też
 
-[Edytuj i refaktoryzacji kodu (C++)](writing-and-refactoring-code-cpp.md)</br>
-[Przejdź z C++ kodu bazowego w programie Visual Studio](navigate-code-cpp.md)</br>
-[Współpracuj z udziału na żywoC++](live-share-cpp.md)
+[Edytuj i Refaktoryzacja kodu (C++)](writing-and-refactoring-code-cpp.md)</br>
+[Nawigowanie C++ po bazie kodu w programie Visual Studio](navigate-code-cpp.md)</br>
+[Współpracuj z Live Shareami dlaC++](live-share-cpp.md)

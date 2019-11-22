@@ -7,17 +7,16 @@ helpviewer_keywords:
 - CDaoDatabaseInfo structure [MFC]
 - DAO (Data Access Objects), Databases collection
 ms.assetid: 68e9e0da-8382-4fc6-8115-1b1519392ddb
-ms.openlocfilehash: 46d8056ee4ab478b65f3ef0bd59d88bd3af9b28c
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 60972aa3ecaef4d38c9a0d0ecc70477796aa37aa
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096155"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74304255"
 ---
 # <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo — Struktura
 
-`CDaoDatabaseInfo` Struktura zawiera informacje o obiekcie bazy danych zdefiniowanym dla obiektów dostępu do danych (DAO).
-Element DAO 3,6 jest wersją ostateczną i jest uznawany za przestarzały.
+Struktura `CDaoDatabaseInfo` zawiera informacje o obiekcie bazy danych zdefiniowanym dla obiektów dostępu do danych (DAO). Element DAO 3,6 jest wersją ostateczną i jest uznawany za przestarzały.
 
 ## <a name="syntax"></a>Składnia
 
@@ -51,41 +50,41 @@ Wskazuje wersję aparatu bazy danych Microsoft Jet. Aby bezpośrednio pobrać wa
 *m_lCollatingOrder*<br/>
 Określa sekwencję sortowania w tekście dla porównania ciągów lub sortowania. Możliwe wartości obejmują:
 
-- `dbSortGeneral`Użyj porządku sortowania General (angielski, francuski, niemiecki, portugalski, włoski i współczesny).
+- `dbSortGeneral` użyć porządku sortowania General (angielski, francuski, niemiecki, portugalski, włoski i współczesny).
 
-- `dbSortArabic`Użyj arabskiej kolejności sortowania.
+- `dbSortArabic` użyć kolejnooci sortowania w języku arabskim.
 
-- `dbSortCyrillic`Użyj rosyjskiej kolejności sortowania.
+- `dbSortCyrillic` użyć rosyjskiej kolejności sortowania.
 
-- `dbSortCzech`Użyj zastosowanej kolejności sortowania.
+- `dbSortCzech` użyć kolejności sortowania czeskiego.
 
-- `dbSortDutch`Użyj kolejności sortowania holenderskiego.
+- `dbSortDutch` użyć kolejności sortowania holenderskiego.
 
-- `dbSortGreek`Użyj greckiej kolejności sortowania.
+- `dbSortGreek` użyć greckiego porządku sortowania.
 
-- `dbSortHebrew`Użyj porządku sortowania w języku hebrajskim.
+- `dbSortHebrew` użyć porządku sortowania w języku hebrajskim.
 
-- `dbSortHungarian`Użyj kolejności sortowania węgierskiej.
+- `dbSortHungarian` użyć kolejności sortowania węgierskiej.
 
-- `dbSortIcelandic`Użyj porządku sortowania w języku islandzkim.
+- `dbSortIcelandic` użyć porządku sortowania islandzkiego.
 
-- `dbSortNorwdan`Użyj kolejności sortowania w języku norweskim lub duńskim.
+- `dbSortNorwdan` użyć kolejności sortowania norweskiej lub duńskiej.
 
-- `dbSortPDXIntl`Użyj międzynarodowej kolejności sortowania programu Paradox.
+- `dbSortPDXIntl` używać międzynarodowej kolejności sortowania programu Paradox.
 
-- `dbSortPDXNor`Użyj programu Paradox norweski lub duński porządek sortowania.
+- `dbSortPDXNor` użyć w programie Paradox norweski lub duński porządek sortowania.
 
-- `dbSortPDXSwe`Użyj w programie Paradox szwedzki lub fiński porządek sortowania.
+- `dbSortPDXSwe` użyć w programie Paradox szwedzki lub fiński porządek sortowania.
 
-- `dbSortPolish`Użyj porządku sortowania polskiego.
+- `dbSortPolish` użyć porządku sortowania polskiego.
 
-- `dbSortSpanish`Użyj hiszpańskiej kolejności sortowania.
+- `dbSortSpanish` użyć hiszpańskiej kolejności sortowania.
 
-- `dbSortSwedFin`Użyj szwedzkiej lub fińskiej kolejności sortowania.
+- `dbSortSwedFin` użyć szwedzkiej lub fińskiej kolejności sortowania.
 
-- `dbSortTurkish`Użyj tureckiej kolejności sortowania.
+- `dbSortTurkish` używać tureckiej kolejności sortowania.
 
-- `dbSortUndefined`Kolejność sortowania jest niezdefiniowana lub nieznana.
+- `dbSortUndefined` kolejność sortowania jest niezdefiniowana lub nieznana.
 
 Aby uzyskać więcej informacji, zobacz temat "Dostosowywanie ustawień rejestru systemu Windows na potrzeby dostępu do danych" w pomocy DAO.
 
@@ -99,7 +98,7 @@ Zawiera informacje o źródle otwartej bazy danych. Aby uzyskać informacje o ci
 
 Baza danych jest obiektem DAO, który jest obiektem MFC klasy [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md). Odwołania do elementów podstawowych, pomocniczych i wszystkie powyżej wskazują, jak informacje są zwracane przez funkcję członkowską [CDaoWorkspace:: GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) .
 
-Informacje pobierane przez funkcję członkowską [CDaoWorkspace:: GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) są przechowywane w `CDaoDatabaseInfo` strukturze. Wywołanie `GetDatabaseInfo` obiektu, `CDaoWorkspace` w którym jest przechowywany obiekt bazy danych w kolekcji baz danych. `CDaoDatabaseInfo`definiuje również funkcję `Dump` członkowską w kompilacjach debugowania. Możesz użyć `Dump` , aby zrzucić zawartość `CDaoDatabaseInfo` obiektu.
+Informacje pobierane przez funkcję członkowską [CDaoWorkspace:: GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) są przechowywane w strukturze `CDaoDatabaseInfo`. Wywołaj `GetDatabaseInfo` dla obiektu `CDaoWorkspace`, w którym jest przechowywany obiekt bazy danych w kolekcji baz danych. `CDaoDatabaseInfo` również definiuje funkcję członkowską `Dump` w kompilacjach debugowania. Aby zrzucić zawartość obiektu `CDaoDatabaseInfo`, można użyć `Dump`.
 
 ## <a name="requirements"></a>Wymagania
 

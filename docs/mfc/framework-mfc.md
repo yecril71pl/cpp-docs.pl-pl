@@ -12,20 +12,20 @@ helpviewer_keywords:
 - Windows API [MFC], encapsulation by MFC
 - encapsulated Win32 API [MFC]
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
-ms.openlocfilehash: d93d2d50bab4b63258a3e0fe4cd2f24c2fcde4f3
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 387f53e3123b6863fcf218da39c7c5e356eb8219
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095792"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303413"
 ---
 # <a name="framework-mfc"></a>Struktura (MFC)
 
 Twoja współpraca z platformą Microsoft Foundation Class (MFC) jest oparta na kilku najważniejszych klasach i kilku narzędziach wizualnych C++ . Niektóre klasy hermetyzowają znaczną część interfejsu programowania aplikacji Win32 (API). Inne klasy hermetyzowają koncepcje aplikacji, takie jak dokumenty, widoki i sama aplikacja. Inne funkcje OLE i ODBC oraz funkcje dostępu do danych DAO są nadal inne.  (Obiekt DAO jest obsługiwany przez pakiet Office 2013. Element DAO 3,6 jest wersją ostateczną i jest uznawany za przestarzały.
 
-Na przykład Win32's koncepcji okna jest hermetyzowane przez klasę `CWnd`MFC. Oznacza to, że C++ Klasa nazywa `CWnd` się hermetyzacją lub " `HWND` zawija" uchwyt, który reprezentuje okno systemu Windows. Podobnie Klasa `CDialog` hermetyzuje okna dialogowe Win32.
+Na przykład Win32's koncepcji okna jest hermetyzowane przez klasę MFC `CWnd`. Oznacza to, że C++ Klasa o nazwie `CWnd` hermetyzuje lub "zawija" uchwyt `HWND`, który reprezentuje okno systemu Windows. Podobnie Klasa `CDialog` hermetyzuje okna dialogowe Win32.
 
-Hermetyzacja oznacza, że C++ Klasa `CWnd`, na przykład, zawiera zmienną składową typu `HWND`, i funkcje składowe klasy hermetyzują `HWND` wywołania do funkcji Win32, które przyjmują jako parametr. Funkcje składowe klasy zazwyczaj mają taką samą nazwę jak funkcja Win32, która hermetyzuje.
+Hermetyzacja oznacza, że C++ Klasa `CWnd`, na przykład, zawiera zmienną składową typu `HWND`, a funkcje składowe klasy hermetyzują wywołania do funkcji Win32, które pobierają `HWND` jako parametr. Funkcje składowe klasy zazwyczaj mają taką samą nazwę jak funkcja Win32, która hermetyzuje.
 
 ## <a name="in-this-section"></a>W tej sekcji
 

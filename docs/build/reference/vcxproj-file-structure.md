@@ -4,65 +4,65 @@ ms.date: 05/16/2019
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-ms.openlocfilehash: 86c393796b1ce3efdb92d8aefd1f653390619ea4
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: a24349980e9395257f20fcfcc0987883060a7c1d
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837515"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303141"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>Struktura plików vcxproj i props
 
-[MSBuild](../msbuild-visual-cpp.md) jest domyślny system projektu w programie Visual Studio; w przypadku wybrania **pliku** > **nowy projekt** Visual C++ służy do utworzenia projektu programu MSBuild, których ustawienia są przechowywane. w pliku XML projektu, który ma rozszerzenie `.vcxproj`. Plik projektu może również zaimportować pliki .props i plików .targets, w których są przechowywane ustawienia. W większości przypadków nie jest konieczna ręczna Edycja pliku projektu, a w rzeczywistości nie należy edytować go ręcznie, chyba że dysponować dobrą znajomością programu MSBuild. W miarę możliwości należy używać stron właściwości w programie Visual Studio na modyfikowanie ustawień projektu (zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md). Jednak w niektórych przypadkach może być konieczne ręcznie zmodyfikować arkusz pliku lub właściwości projektu. W tych scenariuszach ten artykuł zawiera podstawowe informacje na temat struktury pliku.
+[MSBuild](../msbuild-visual-cpp.md) jest domyślnym systemem projektu w programie Visual Studio; Po wybraniu opcji **plik** > **Nowy projekt** w C++ wizualizacji tworzysz projekt MSBuild, którego ustawienia są przechowywane w pliku projektu XML, który ma `.vcxproj`rozszerzenia. Plik projektu może również importować. props pliki i pliki. targets, w których można przechowywać ustawienia. W większości przypadków nie trzeba ręcznie edytować pliku projektu i w rzeczywistości nie należy edytować go ręcznie, chyba że masz dobre zrozumienie programu MSBuild. Za każdym razem, gdy to możliwe, należy użyć stron właściwości programu Visual Studio do modyfikowania ustawień projektu (zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md). Jednak w niektórych przypadkach może być konieczne ręczne zmodyfikowanie pliku projektu lub arkusza właściwości. W tych scenariuszach ten artykuł zawiera podstawowe informacje o strukturze pliku.
 
 **Ważne:**
 
-Jeśli użytkownik chce ręcznie edytować plik .vcxproj, należy pamiętać o tych zdarzeniach:
+Jeśli zdecydujesz się ręcznie edytować plik. vcxproj, weź pod uwagę następujące fakty:
 
-1. Struktura pliku, należy wykonać realizowania formularza, który jest opisany w tym artykule.
+1. Struktura pliku musi być zgodna z określonym formularzem, który opisano w tym artykule.
 
-1. Visual Studio C++ system projektu aktualnie nie obsługuje symboli wieloznacznych w elementach projektu. Na przykład to nie jest obsługiwana:
+1. System projektu programu C++ Visual Studio obecnie nie obsługuje symboli wieloznacznych w elementach projektu. Na przykład nie jest to obsługiwane:
 
    ```xml
    <ClCompile Include="*.cpp"/>
    ```
 
-1. Visual Studio C++ system projektu aktualnie nie obsługuje makr w ścieżkach elementów projektu. Na przykład to nie jest obsługiwana:
+1. System projektu programu C++ Visual Studio aktualnie nie obsługuje makr w ścieżkach elementów projektu. Na przykład nie jest to obsługiwane:
 
    ```xml
    <ClCompile Include="$(IntDir)\generated.cpp"/>
    ```
 
-   "Nie jest obsługiwane" oznacza, że makra nie musi działać dla wszystkich operacji w środowisku IDE. Makra, które nie zmieniają się ich wartości w różnych konfiguracjach powinna działać, ale nie mogą zostać zachowane, jeśli element zostanie przeniesiony do innego filtru lub projektu. Makra, które zmieniają się ich wartości dla różnych konfiguracji spowoduje problemy, ponieważ IDE nie oczekuje się różnić w przypadku konfiguracji z innego projektu ścieżki elementu projektu.
+   "Nieobsługiwane" oznacza, że makra nie są gwarantowane do pracy w przypadku wszystkich operacji w IDE. Makra, które nie zmieniają ich wartości w różnych konfiguracjach, powinny działać, ale mogą nie być zachowywane, jeśli element zostanie przeniesiony do innego filtru lub projektu. Makra, które zmieniają ich wartości dla różnych konfiguracji, spowodują problemy, ponieważ IDE nie oczekuje, że ścieżki elementów projektu różnią się w zależności od konfiguracji projektu.
 
-1. Aby uzyskać właściwości projektu poprawnie dodane, usunięte lub zmodyfikowane podczas edycji w **właściwości projektu** okno dialogowe, plik musi zawierać osobnych grup dla każdej konfiguracji projektu i warunki muszą być w tym formularzu:
+1. W celu poprawnego dodania, usunięcia lub zmodyfikowania właściwości projektu w oknie dialogowym **właściwości projektu** , plik musi zawierać oddzielne grupy dla każdej konfiguracji projektu, a warunki muszą być w tej formie:
 
    ```xml
    Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"
    ```
 
-1. Każda właściwość należy określić w grupie z poprawną etykiety, jak to określono w pliku reguł właściwości. Aby uzyskać więcej informacji, zobacz [pliki reguł xml strony właściwości](property-page-xml-files.md).
+1. Każda właściwość musi być określona w grupie z poprawną etykietą, jak określono w pliku reguły właściwości. Aby uzyskać więcej informacji, zobacz [pliki reguł XML na stronie właściwości](property-page-xml-files.md).
 
-## <a name="vcxproj-file-elements"></a>elementy w pliku .vcxproj
+## <a name="vcxproj-file-elements"></a>vcxproj — elementy pliku
 
-Za pomocą dowolnego tekstu lub edytorze XML, można sprawdzić zawartość pliku .vcxproj. Można wyświetlić w programie Visual Studio przez kliknięcie prawym przyciskiem myszy projekt w Eksploratorze rozwiązań, wybierając **Zwolnij projekt** , a następnie wybierając **Edytuj Foo.vcxproj**.
+Zawartość pliku. vcxproj można sprawdzić przy użyciu dowolnego edytora tekstu lub XML. Możesz wyświetlić go w programie Visual Studio, klikając prawym przyciskiem myszy projekt w Eksplorator rozwiązań, wybierając pozycję **Zwolnij projekt** , a następnie wybierając pozycję **Edytuj foo. vcxproj**.
 
-Przede wszystkim należy zauważyć to, czy elementy najwyższego poziomu są widoczne w określonej kolejności. Na przykład:
+Pierwszy należy zauważyć, że elementy najwyższego poziomu pojawiają się w określonej kolejności. Na przykład:
 
-- Większość właściwości grup i grupach definicji elementów występować po zaimportowaniu dla pliku Microsoft.Cpp.Default.props.
+- Większość grup właściwości i grup definicji elementów występuje po imporcie dla elementu Microsoft. cpp. default. props.
 
-- Wszystkie elementy docelowe zostały zaimportowane na końcu pliku.
+- Wszystkie elementy docelowe są importowane na końcu pliku.
 
-- Istnieje wiele grup właściwości, z których każda z unikatową etykietę i występują one w określonej kolejności.
+- Istnieje wiele grup właściwości, z których każda ma unikatową etykietę i pojawia się w określonej kolejności.
 
-Kolejność elementów w pliku projektu jest bardzo ważne, ponieważ program MSBuild jest oparty na modelu sekwencyjne oceny.  Jeśli plik projektu, w tym wszystkie zaimportowane, .props i .TARGETS, obejmuje wiele definicji właściwości, ostatnia definicja zastępuje te poprzedniego. W poniższym przykładzie wartość "ciągu xyz" zostanie ustawiona podczas kompilacji, ponieważ MSBUild aparatu napotka jej ostatniego podczas jej obliczania.
+Kolejność elementów w pliku projektu jest bardzo ważna, ponieważ MSBuild bazuje na modelu oceny sekwencyjnej.  Jeśli plik projektu, w tym wszystkie pliki zaimportowane. props i. targets, składa się z wielu definicji właściwości, ostatnia definicja przesłania poprzednie. W poniższym przykładzie wartość "XYZ" zostanie ustawiona podczas kompilacji, ponieważ aparat MSBUild napotka go jako ostatni podczas jego oceny.
 
 ```xml
   <MyProperty>abc</MyProperty>
   <MyProperty>xyz</MyProperty>
 ```
 
-Poniższy fragment kodu przedstawia plik .vcxproj minimalny. Dowolny plik .vcxproj generowane przez program Visual Studio będzie zawierać tych elementów MSBuild najwyższego poziomu i pojawią się one w następującej kolejności (chociaż mogą zawierać wiele kopii każdego elementu najwyższego poziomu). Należy pamiętać, że `Label` atrybuty są dowolne tagi, które są używane tylko przez program Visual Studio jako signposts do edycji, nie mają innych funkcji.
+Poniższy fragment kodu przedstawia plik o minimalnej vcxproj. Każdy plik. vcxproj wygenerowany przez program Visual Studio będzie zawierać te elementy programu MSBuild najwyższego poziomu, które będą wyświetlane w tej kolejności (chociaż mogą zawierać wiele kopii każdego takiego elementu najwyższego poziomu). Należy pamiętać, że atrybuty `Label` są dowolnymi tagami, które są używane tylko przez program Visual Studio jako oznaki do edycji; nie mają żadnej innej funkcji.
 
 ```xml
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns='http://schemas.microsoft.com/developer/msbuild/2003'>
@@ -82,29 +82,29 @@ Poniższy fragment kodu przedstawia plik .vcxproj minimalny. Dowolny plik .vcxpr
 </Project>
 ```
 
-W poniższych sekcjach opisano przeznaczenia każdego z tych elementów i dlaczego są uporządkowane w ten sposób:
+W poniższych sekcjach opisano przeznaczenie każdego z tych elementów i przyczyny ich uporządkowania:
 
-### <a name="project-element"></a>Project — element
+### <a name="project-element"></a>Element projektu
 
 ```xml
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns='http://schemas.microsoft.com/developer/msbuild/2003' >
 ```
 
-`Project` jest węzłem głównym. Określa wersję programu MSBuild do użycia, a także domyślnego obiektu docelowego do wykonania, gdy ten plik jest przekazywany do MSBuild.exe.
+`Project` jest węzłem głównym. Określa wersję programu MSBuild, która ma być używana, a także domyślny cel do wykonania, gdy ten plik jest przesyłany do programu MSBuild. exe.
 
-### <a name="projectconfigurations-itemgroup-element"></a>ProjectConfigurations itemgroup — element
+### <a name="projectconfigurations-itemgroup-element"></a>ProjectConfigurations element elementu
 
 ```xml
 <ItemGroup Label="ProjectConfigurations" />
 ```
 
-`ProjectConfigurations` Zawiera opis konfiguracji projektu. Należą do nich debugowania | Win32, wydanie | Win32, debugowanie | ARM i tak dalej. Wiele ustawień projektu są specyficzne dla danej konfiguracji. Na przykład prawdopodobnie można ustawić właściwości optymalizacji dla kompilacji wydania, ale nie kompilacji debugowania.
+`ProjectConfigurations` zawiera opis konfiguracji projektu. Przykłady są debugowaniem | Win32, wydanie | Win32, Debuguj | ARM i tak dalej. Wiele ustawień projektu jest specyficznych dla danej konfiguracji. Na przykład prawdopodobnie trzeba będzie ustawić właściwości optymalizacji dla kompilacji wydania, ale nie dla kompilacji debugowania.
 
-`ProjectConfigurations` Grupa elementów nie jest używany w czasie kompilacji. Środowiska IDE programu Visual Studio wymagają, aby można było załadować projekt. Ta grupa może być przeniesiony do pliku, .props i importowane do plik .vcxproj. Jednak w takim przypadku, jeśli potrzebujesz dodać lub usunąć konfiguracje, należy ręcznie zmodyfikować plik .props; Nie można użyć środowiska IDE.
+Grupa elementów `ProjectConfigurations` nie jest używana w czasie kompilacji. Środowisko IDE programu Visual Studio wymaga, aby można było załadować projekt. Tę grupę elementów można przenieść do pliku. props i zaimportować do pliku. vcxproj. Jednak w takim przypadku, jeśli trzeba dodać lub usunąć konfiguracje, należy ręcznie edytować plik. props; nie można używać środowiska IDE.
 
 ### <a name="projectconfiguration-elements"></a>Elementy ProjectConfiguration
 
-Poniższy fragment kodu przedstawia konfigurację projektu. W tym przykładzie "Debug | x 64 jest nazwa konfiguracji. Nazwa konfiguracji projektu musi być w $(Configuration)|$(Platform). formatu Węzeł konfiguracji projektu może mieć dwie właściwości: Konfiguracja i platforma. Te właściwości zostaną ustawione automatycznie przy użyciu wartości określone w tym miejscu, gdy konfiguracja jest aktywny.
+Poniższy fragment kodu przedstawia konfigurację projektu. W tym przykładzie "Debugowanie | x64" jest nazwą konfiguracji. Nazwa konfiguracji projektu musi mieć format $ (Configuration) | $ (platforma). Węzeł konfiguracji projektu może mieć dwie właściwości: konfigurację i platformę. Te właściwości zostaną automatycznie ustawione z wartościami określonymi w tym miejscu, gdy konfiguracja jest aktywna.
 
 ```xml
 <ProjectConfiguration Include="Debug|x64">
@@ -113,118 +113,118 @@ Poniższy fragment kodu przedstawia konfigurację projektu. W tym przykładzie "
 </ProjectConfiguration>
 ```
 
-IDE spodziewa się znaleźć plik konfiguracyjny dla dowolnej kombinacji wartości Konfiguracja i platforma, które są używane we wszystkich elementach ProjectConfiguration. Często oznacza to, że projekt może mieć konfiguracje projektu bez znaczenia, aby spełnić to wymaganie. Na przykład jeśli projekt zawiera następujące konfiguracje:
+IDE oczekuje na znalezienie konfiguracji projektu dla dowolnej kombinacji wartości konfiguracji i platformy używanych we wszystkich elementach ProjectConfiguration. Często oznacza to, że projekt może mieć bez znaczenia konfiguracje projektu, aby spełnić to wymaganie. Na przykład, jeśli projekt ma następujące konfiguracje:
 
 - Debug|Win32
 
 - Retail|Win32
 
-- Specjalne optymalizacji 32-bitowych | Win32
+- Specjalna 32-bitowa Optymalizacja | System
 
-następnie musi mieć również te konfiguracje, nawet jeśli "Specjalne optymalizacji 32-bitowy" jest całkowicie nieprzydatna x64:
+następnie musi również mieć te konfiguracje, chociaż "Specjalna Optymalizacja 32-bitowa" ma znaczenie dla architektury x64:
 
 - Debug|x64
 
 - Retail|x64
 
-- Specjalne optymalizacji 32-bitowych | x64
+- Specjalna 32-bitowa Optymalizacja | x64
 
-Można wyłączyć kompilacji i wdrażania poleceń dla żadnej konfiguracji w **Menedżerze konfiguracji rozwiązania**.
+Polecenia Kompiluj i Wdróż można wyłączyć dla każdej konfiguracji w **Configuration Manager rozwiązania**.
 
-### <a name="globals-propertygroup-element"></a>Funkcje globalne PropertyGroup — element
+### <a name="globals-propertygroup-element"></a>Globals — element właściwości
 
 ```xml
 <PropertyGroup Label="Globals" />
 ```
 
-`Globals` zawiera ustawienia poziomu projektu, takich jak ProjectGuid RootNamespace i ApplicationType / ApplicationTypeRevision. Ostatnie dwa często definiują docelowego systemu operacyjnego. Projektu można kierować tylko jednego systemu operacyjnego, na fakt, że odniesienia i elementów projektu nie może mieć warunki obecnie. Te właściwości zwykle nie są zastępowane innym miejscu w pliku projektu. Ta grupa nie jest zależny od konfiguracji i dlatego zwykle istnieje tylko jedna globalne grupa w pliku projektu.
+`Globals` zawiera ustawienia na poziomie projektu, takie jak ProjectGuid, RootNamespace i ApplicationType/ApplicationTypeRevision. Ostatnie dwa często definiują docelowy system operacyjny. Projekt może dotyczyć tylko pojedynczego systemu operacyjnego ze względu na fakt, że odwołania i elementy projektu nie mogą obecnie mieć warunków. Te właściwości nie są zwykle zastępowane w innym miejscu w pliku projektu. Ta grupa nie jest zależna od konfiguracji i dlatego zwykle w pliku projektu istnieje tylko jedna grupa Globals.
 
-### <a name="microsoftcppdefaultprops-import-element"></a>Import pliku Microsoft.Cpp.default.props — element
+### <a name="microsoftcppdefaultprops-import-element"></a>Microsoft. cpp. default. props — element importu
 
 ```xml
 <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
 ```
 
-**Pliku Microsoft.Cpp.default.props** arkusz właściwości jest dostarczany z programem Visual Studio i nie może być modyfikowany. Zawiera ustawienia domyślne dla projektu. Ustawienia domyślne mogą się różnić w zależności od ApplicationType.
+Arkusz właściwości **Microsoft. cpp. default. props** jest dostarczany z programem Visual Studio i nie można go modyfikować. Zawiera ustawienia domyślne dla projektu. Wartości domyślne mogą się różnić w zależności od typu ApplicationType.
 
-### <a name="configuration-propertygroup-elements"></a>Elementy PropertyGroup konfiguracji
+### <a name="configuration-propertygroup-elements"></a>Elementy właściwości konfiguracji
 
 ```xml
 <PropertyGroup Label="Configuration" />
 ```
 
-A `Configuration` grupy właściwości zawiera warunek dołączonych konfiguracji (takich jak `Condition=”'$(Configuration)|$(Platform)'=='Debug|Win32'”`) i jest dostępna w wielu kopii, po jednym w każdym konfiguracji. Ta grupa właściwość udostępnia właściwości, które są ustawiane dla określonej konfiguracji. Właściwości konfiguracji obejmują zestaw narzędzi platformy, a także kontrolować sposób włączenia systemu arkuszy właściwości w **pliku Microsoft.Cpp.props**. Na przykład, jeśli zdefiniowano właściwość `<CharacterSet>Unicode</CharacterSet>`, następnie systemowy arkusz właściwości **firmy microsoft. CPP.unicodesupport.props** zostaną dołączone. Jeśli możesz sprawdzić **pliku Microsoft.Cpp.props**, zostanie wyświetlony wiersz: `<Import Condition=”'$(CharacterSet)' == 'Unicode'”   Project=”$(VCTargetsPath)\microsoft.Cpp.unicodesupport.props”/>`.
+`Configuration` grupy właściwości ma dołączony warunek konfiguracji (na przykład `Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"`) i znajduje się w wielu kopiach, jeden na konfigurację. Ta grupa właściwości zawiera właściwości, które są ustawione dla określonej konfiguracji. Właściwości konfiguracji obejmują PlatformToolset oraz kontrolują dołączenie systemowych arkuszy właściwości do **Microsoft. cpp. props**. Na przykład, jeśli zdefiniujesz Właściwość `<CharacterSet>Unicode</CharacterSet>`, to systemowy arkusz właściwości **Microsoft. Zostaną uwzględnione cpp. unicodesupport. props** . W przypadku inspekcji **Microsoft. cpp. props**zobaczysz wiersz: `<Import Condition="'$(CharacterSet)' == 'Unicode'" Project="$(VCTargetsPath)\microsoft.Cpp.unicodesupport.props" />`.
 
-### <a name="microsoftcppprops-import-element"></a>Import pliku Microsoft.Cpp.props — element
+### <a name="microsoftcppprops-import-element"></a>Microsoft. cpp. props — element importu
 
 ```xml
 <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
 ```
 
-**Pliku Microsoft.Cpp.props** arkusz właściwości (bezpośrednio lub za pośrednictwem Importy) definiuje wartości domyślne dla wielu właściwości specyficzne dla narzędzia, takie jak kompilator optymalizacji i poziom ostrzeżeń właściwości TypeLibraryName narzędzie MIDL właściwości i tak dalej. Importuje różnych arkusze właściwości systemu, oparte na właściwości konfiguracji, które są zdefiniowane w grupie właściwości bezpośrednio powyżej.
+Arkusz właściwości **Microsoft. cpp. props** (bezpośrednio lub za pośrednictwem importu) definiuje wartości domyślne dla wielu właściwości specyficznych dla narzędzia, takich jak właściwości optymalizacji i poziomu ostrzeżeń kompilatora, właściwość TYPELIBRARYNAME narzędzia MIDL i tak dalej. Importuje również różne systemowe arkusze właściwości, na podstawie których właściwości konfiguracji są zdefiniowane w grupie właściwości bezpośrednio powyżej.
 
-### <a name="extensionsettings-importgroup-element"></a>ExtensionSettings importgroup — element
+### <a name="extensionsettings-importgroup-element"></a>Poprawny ExtensionSettings element obiektu
 
 ```xml
 <ImportGroup Label="ExtensionSettings" />
 ```
 
-`ExtensionSettings` Grupa zawiera import dla arkuszy właściwości, które są częścią dostosowania kompilacji. Dostosowanie kompilacji jest definiowany przez maksymalnie trzy pliki: plik .targets, plik .props i pliku XML. Ta grupa importu zawiera polecenie importuje plik .props.
+Grupa `ExtensionSettings` zawiera Importy dla arkuszy właściwości, które są częścią dostosowania kompilacji. Dostosowanie kompilacji jest definiowane przez maksymalnie trzy pliki: plik. targets, plik. props i plik. XML. Ta grupa importu zawiera Importy dla pliku. props.
 
-### <a name="propertysheets-importgroup-elements"></a>Importgroup — PropertySheets elementów
+### <a name="propertysheets-importgroup-elements"></a>PropertySheets elementy obiektu
 
 ```xml
 <ImportGroup Label="PropertySheets" />
 ```
 
-`PropertySheets` Grupa zawiera import dla arkuszy właściwości. Są to arkuszy właściwości, które możesz dodać za pomocą widoku Menedżer właściwości w programie Visual Studio. Kolejność, w którym są wyświetlane te imports jest ważna i znajduje odzwierciedlenie w Menedżerze właściwości. Plik projektu zawiera zazwyczaj wiele wystąpień tego rodzaju grupy importu, jeden dla każdej konfiguracji projektu.
+Grupa `PropertySheets` zawiera Importy dla arkuszy właściwości użytkownika. Są to arkusze właściwości, które można dodać za pomocą widoku Menedżer właściwości w programie Visual Studio. Kolejność, w której wymienione są te Importy, jest ważna i jest odzwierciedlana w Menedżer właściwości. Plik projektu zwykle zawiera wiele wystąpień tego rodzaju grupy importowania, po jednej dla każdej konfiguracji projektu.
 
-### <a name="usermacros-propertygroup-element"></a>UserMacros PropertyGroup — element
+### <a name="usermacros-propertygroup-element"></a>UserMacros — element właściwości
 
 ```xml
 <PropertyGroup Label="UserMacros" />
 ```
 
-`UserMacros` zawiera właściwości jest tworzona jako zmienne, które są używane do dostosowywania procesu kompilacji. Na przykład można zdefiniować makro użytkownika w ścieżce danych wyjściowych niestandardowego jest definiowana jako $(CustomOutputPath) i użyć go do zdefiniowania inne zmienne. Ta grupa właściwość przechowuje tych właściwości. Należy pamiętać, że w programie Visual Studio, ta grupa jest pusta w pliku projektu ponieważ Visual C++ nie obsługuje konfiguracji makra użytkownika. Makra użytkownika są obsługiwane w arkuszach właściwości.
+`UserMacros` zawiera właściwości tworzone jako zmienne, które są używane do dostosowywania procesu kompilacji. Na przykład można zdefiniować makro użytkownika, aby zdefiniować niestandardową ścieżkę wyjściową jako $ (CustomOutputPath) i użyć jej do zdefiniowania innych zmiennych. Ta grupa właściwości przechowuje takie właściwości. Należy pamiętać, że w programie Visual Studio ta grupa nie jest wypełniona w pliku projektu C++ , ponieważ Wizualizacja nie obsługuje makr użytkownika dla konfiguracji. Makra użytkownika są obsługiwane w arkuszach właściwości.
 
-### <a name="per-configuration-propertygroup-elements"></a>Elementy PropertyGroup — Konfiguracja
+### <a name="per-configuration-propertygroup-elements"></a>Elementy właściwości dla każdej konfiguracji
 
 ```xml
 <PropertyGroup />
 ```
 
-Istnieje wiele wystąpień tej grupy właściwości, jeden na konfiguracji w przypadku wszystkich konfiguracji projektu. Każda grupa właściwość musi mieć jeden warunek konfiguracji dołączone. Jeśli brakuje konfiguracji **właściwości projektu** okno dialogowe nie będzie działać poprawnie. W przeciwieństwie do powyższych grup właściwość ta nie ma etykietę. Ta grupa zawiera ustawienia konfiguracji na poziomie projektu. Te ustawienia mają zastosowanie do wszystkich plików, które są częścią grupy określony element. Definicja elementu dostosowania kompilacji metadanych jest inicjowana w tym miejscu.
+Istnieje wiele wystąpień tej grupy właściwości, jedną dla każdej konfiguracji dla wszystkich konfiguracji projektu. Każda grupa właściwości musi mieć dołączony jeden warunek konfiguracji. W przypadku braku konfiguracji okno dialogowe **właściwości projektu** nie będzie działało poprawnie. W przeciwieństwie do powyższych grup właściwości, ten element nie ma etykiety. Ta grupa zawiera ustawienia na poziomie konfiguracji projektu. Te ustawienia mają zastosowanie do wszystkich plików, które są częścią określonej grupy elementów. Metadane definicji elementu dostosowania kompilacji są inicjowane w tym miejscu.
 
-PropertyGroup ten musi być późniejsza `<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />` oraz nie może być nie innych PropertyGroup bez etykiety przed nim (w przeciwnym razie edytowanie właściwości projektu nie będzie działać poprawnie).
+Ta właściwość musi znajdować się po `<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />` i nie może istnieć żadna inna Właściwość bez etykiety (w przeciwnym razie Edytowanie właściwości projektu nie będzie działać poprawnie).
 
-### <a name="per-configuration-itemdefinitiongroup-elements"></a>Elementy ItemDefinitionGroup — na konfiguracji
+### <a name="per-configuration-itemdefinitiongroup-elements"></a>Elementy ItemDefinitionGroup na konfigurację
 
 ```xml
 <ItemDefinitionGroup />
 ```
 
-Zawiera definicje elementu. Te należy wykonać te same reguły warunków jako elementy PropertyGroup bez etykiety na konfiguracji.
+Zawiera definicje elementów. Muszą one być zgodne z tymi samymi regułami, co elementy z właściwością co najmniej etykieta dla każdej konfiguracji.
 
-### <a name="itemgroup-elements"></a>Itemgroup — elementy
+### <a name="itemgroup-elements"></a>Elementy elementu
 
 ```xml
 <ItemGroup />
 ```
 
-Zawiera elementy (pliki źródłowe, itp.) w projekcie. Warunki nie są obsługiwane dla elementów projektu (czyli typów elementów, które są traktowane jako elementy projektu przez definicje zasad).
+Zawiera elementy (pliki źródłowe itp.) w projekcie. Warunki nie są obsługiwane dla elementów projektu (oznacza to, że typy elementów, które są traktowane jako elementy projektu według definicji reguł).
 
-Metadane powinna mieć warunki konfiguracji dla każdej konfiguracji, nawet jeśli są takie same. Na przykład:
+Metadane powinny mieć warunki konfiguracji dla każdej konfiguracji, nawet jeśli są takie same. Na przykład:
 
 ```xml
 <ItemGroup>
   <ClCompile Include="stdafx.cpp">
-    <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">true</TreatWarningAsError>
-    <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|x64’">true</TreatWarningAsError>
+    <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</TreatWarningAsError>
+    <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</TreatWarningAsError>
   </ClCompile>
 </ItemGroup>
 ```
 
-Visual Studio C++ system projektu aktualnie nie obsługuje symboli wieloznacznych w elementach projektu.
+System projektu programu C++ Visual Studio obecnie nie obsługuje symboli wieloznacznych w elementach projektu.
 
 ```xml
 <ItemGroup>
@@ -232,7 +232,7 @@ Visual Studio C++ system projektu aktualnie nie obsługuje symboli wieloznacznyc
 </ItemGroup>
 ```
 
-Visual Studio C++ system projektu aktualnie nie obsługuje makr w elementach projektu.
+System projektu programu C++ Visual Studio aktualnie nie obsługuje makr w elementach projektu.
 
 ```xml
 <ItemGroup>
@@ -240,43 +240,43 @@ Visual Studio C++ system projektu aktualnie nie obsługuje makr w elementach pro
 </ItemGroup>
 ```
 
-Odwołania są określone w ItemGroup i mają następujące ograniczenia:
+Odwołania są określone w elemencie Items i mają następujące ograniczenia:
 
-- Odwołania nie obsługują warunki.
+- Odwołania nie obsługują warunków.
 
-- Odwołuje się do metadanych nie obsługują warunki.
+- Metadane odwołań nie obsługują warunków.
 
-### <a name="microsoftcpptargets-import-element"></a>Microsoft.Cpp.targets Import — element
+### <a name="microsoftcpptargets-import-element"></a>Element Imports Microsoft. cpp. targets
 
 ```xml
 <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
 ```
 
-Definiuje (bezpośrednio lub za pośrednictwem Importy) obiekty docelowe Visual C++, takie jak kompilacja, czyszczenie itd.
+Definiuje elementy wizualne C++ (bezpośrednio lub za pośrednictwem importu), takie jak kompilacja, czyszczenie itp.
 
-### <a name="extensiontargets-importgroup-element"></a>ExtensionTargets importgroup — element
+### <a name="extensiontargets-importgroup-element"></a>ExtensionTargets element obiektu
 
 ```xml
 <ImportGroup Label="ExtensionTargets" />
 ```
 
-Ta grupa zawiera import dla pliki docelowe dostosowania kompilacji.
+Ta grupa zawiera Importy dla plików docelowych dostosowywania kompilacji.
 
-## <a name="impact-of-incorrect-ordering"></a>Wpływ niepoprawnej kolejności
+## <a name="impact-of-incorrect-ordering"></a>Wpływ nieprawidłowej kolejności
 
-Środowiska IDE programu Visual Studio zależy od zainstalowanej projektu pliku, których kolejność opisanych powyżej. Na przykład po zdefiniowaniu wartość właściwości na stronach właściwości IDE ogólnie umieści definicji właściwości w grupie właściwości z pustą etykietę. Daje to gwarancję, że wartości domyślne w arkuszach właściwości systemu są zastępowane przez wartości zdefiniowanej przez użytkownika. Podobnie pliki docelowe są importowane na końcu, ponieważ korzystają z właściwości zdefiniowanych powyżej i ponieważ one zazwyczaj nie definiują właściwości, samodzielnie. Podobnie, arkusz właściwości użytkownika są importowane po arkuszach właściwości systemu (dołączonych przy użyciu **pliku Microsoft.Cpp.props**). Daje to gwarancję, że użytkownik może przesłonić wartości domyślne dołączonych za pomocą arkuszy właściwości systemu.
+Środowisko IDE programu Visual Studio zależy od pliku projektu, który został opisany powyżej. Na przykład po zdefiniowaniu wartości właściwości na stronach właściwości środowisko IDE zazwyczaj umieści definicję właściwości w grupie właściwości z pustą etykietą. Gwarantuje to, że wartości domyślne wprowadzone w arkuszach właściwości systemu zostaną przesłonięte przez wartości zdefiniowane przez użytkownika. Podobnie pliki docelowe są importowane na końcu, ponieważ wykorzystują właściwości zdefiniowane powyżej i ponieważ zazwyczaj nie definiują samych właściwości. Podobnie arkusze właściwości użytkownika są importowane po arkuszach właściwości systemu (zawartych w **Microsoft. cpp. props**). Dzięki temu użytkownik może zastąpić wszystkie wartości domyślne, które są wprowadzane przez systemowe arkusze właściwości.
 
-Jeśli plik .vcxproj nie jest zgodna z ten układ, wyniki kompilacji może nie być, czego oczekiwać. Na przykład jeśli przez pomyłkę importujesz systemowym arkuszem właściwości po arkuszach właściwości zdefiniowane przez użytkownika, ustawienia użytkownika zostaną zastąpione przez arkusze właściwości systemu.
+Jeśli plik. vcxproj nie jest zgodny z tym układem, wyniki kompilacji mogą nie być oczekiwane. Na przykład w przypadku błędnego zaimportowania systemowego arkusza właściwości po arkuszu właściwości zdefiniowanym przez użytkownika ustawienia użytkownika zostaną przesłonięte przez systemowe arkusze właściwości.
 
-Nawet środowiska czasu projektowania IDE zależy do pewnego stopnia poprawne kolejność elementów. Na przykład, jeśli nie ma pliku .vcxproj `PropertySheets` Importuj grupę IDE może nie być możliwe ustalenie, gdzie umieścić nowy arkusz właściwości utworzony w **Menedżer właściwości**. Może to spowodować, że arkusz użytkownika przesłaniana przez arkusz systemu. Mimo, że Algorytm heurystyczny używany przez środowisko IDE może tolerować niewielkie niespójności w układzie plik .vcxproj, zdecydowanie zalecane jest aby nie różni się od struktury przedstawiony we wcześniejszej części tego artykułu.
+Nawet środowisko projektowania IDE jest zależne od pewnego zakresu od prawidłowej kolejności elementów. Na przykład, jeśli plik. vcxproj nie ma grupy importu `PropertySheets`, IDE może nie być w stanie określić, gdzie umieścić nowy arkusz właściwości utworzony przez użytkownika w **Menedżer właściwości**. Może to spowodować przesłanianie arkusza użytkownika przez arkusz systemowy. Chociaż algorytm heurystyczny używany przez IDE może tolerować niewielkie niespójności w układzie pliku. vcxproj, zdecydowanie zaleca się, aby nie odróżnić od struktury pokazanej wcześniej w tym artykule.
 
-## <a name="how-the-ide-uses-element-labels"></a>Jak IDE używa etykiety elementu
+## <a name="how-the-ide-uses-element-labels"></a>Jak środowisko IDE używa etykiet elementów
 
-W środowisku IDE, po ustawieniu **UseOfAtl** właściwości na stronie właściwości ogólnych, jest ona zapisywana w grupy właściwości konfiguracji w pliku projektu, podczas gdy **TargetName** właściwości w tej samej stronie właściwości są zapisywane do grupy właściwości bez etykiety na konfiguracji. Program Visual Studio wygląda informacji o tym, gdzie do zapisania każdej właściwości w pliku xml na stronie właściwości. Aby uzyskać **ogólne** strony właściwości (przy założeniu, masz angielską wersję programu Visual Studio 2019 Enterprise Edition), ten plik jest `%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets\1033\general.xml`. Plik reguł XML strony właściwości definiuje statyczne informacje dotyczące reguły i jego właściwości. Jeden zestaw takich informacji jest preferowany pozycji właściwości reguły w pliku docelowym (plik, w którym zostanie zapisany jego wartość). Pozycja preferowane jest określony przez atrybut etykiety elementów pliku projektu.
+W środowisku IDE, gdy właściwość **UseOfAtl** jest ustawiana na stronie właściwości ogólne, jest zapisywana w grupie Właściwości konfiguracji w pliku projektu, podczas gdy właściwość **TargetName** na tej samej stronie właściwości jest zapisywana w grupie Właściwości "Less" dla określonej konfiguracji. Program Visual Studio analizuje plik XML strony właściwości, aby uzyskać informacje o tym, gdzie należy napisać każdą właściwość. Na stronie właściwości **Ogólne** (przy założeniu, że masz angielską wersję programu Visual Studio 2019 Enterprise Edition), ten plik jest `%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets\1033\general.xml`. Plik reguł XML strony właściwości definiuje statyczne informacje o regule i jej właściwości. Jedną z tych informacji jest preferowane położenie właściwości reguły w pliku docelowym (plik, w którym zostanie zapisywana jego wartość). Preferowana pozycja jest określana przez atrybut Label dla elementów pliku projektu.
 
 ## <a name="property-sheet-layout"></a>Układ arkusza właściwości
 
-Poniższy fragment kodu XML jest minimalny układ pliku (.props) arkusza właściwości. Jest on podobny do plik vcxproj i funkcjonalność, .props elementów można wywnioskować na podstawie wcześniejszych dyskusji.
+Poniższy fragment kodu XML jest minimalnym układem pliku arkusza właściwości (. props). Jest on podobny do pliku. vcxproj, a funkcje elementów. props można wywnioskować na podstawie wcześniejszej dyskusji.
 
 ```xml
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -288,7 +288,7 @@ Poniższy fragment kodu XML jest minimalny układ pliku (.props) arkusza właśc
 </Project>
 ```
 
-Aby utworzyć arkusz właściwości, skopiuj jeden z plikach .props w folderze VCTargets i zmodyfikuj go do własnych celów. Dla programu Visual Studio 2019 r Enterprise edition, jest domyślna ścieżka VCTargets `%ProgramFiles%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets`.
+Aby utworzyć własny arkusz właściwości, skopiuj jeden z plików. props w folderze VCTargets i zmodyfikuj go do własnych potrzeb. W przypadku programu Visual Studio 2019 Enterprise Edition domyślną ścieżką VCTargets jest `%ProgramFiles%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets`.
 
 ## <a name="see-also"></a>Zobacz także
 

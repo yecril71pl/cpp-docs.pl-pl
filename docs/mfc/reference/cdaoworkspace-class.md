@@ -62,16 +62,16 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], SetLoginTimeout
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
-ms.openlocfilehash: 3e4ded466b673bff3c0630e798877b69d1ca384d
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: c1d235035cee9342c8c54c7aaa4e05a96d5a37e3
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096066"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303475"
 ---
 # <a name="cdaoworkspace-class"></a>Klasa CDaoWorkspace
 
-Zarządza nazwaną, chronioną hasłem sesją bazy danych z logowania do wylogowania przez pojedynczego użytkownika.
+Zarządza nazwaną, chronioną hasłem sesją bazy danych z logowania do wylogowania przez pojedynczego użytkownika. Obiekty DAO są obsługiwane przez pakiet Office 2013. Element DAO 3,6 jest wersją ostateczną i jest uznawany za przestarzały.
 
 ## <a name="syntax"></a>Składnia
 
@@ -133,7 +133,7 @@ W większości przypadków nie będziesz potrzebować wielu obszarów roboczych 
 
 ## <a name="capabilities"></a>możliwość
 
-W `CDaoWorkspace` klasie dostępne są następujące elementy:
+`CDaoWorkspace` klasy oferuje następujące elementy:
 
 - Jawny dostęp, w razie potrzeby, do domyślnego obszaru roboczego, tworzony przez inicjowanie aparatu bazy danych. Zwykle używasz domyślnego obszaru roboczego DAO niejawnie przez tworzenie bazy danych i obiektów zestawu rekordów.
 
@@ -163,18 +163,19 @@ Tworzenie nowego obszaru roboczego, który nie istnieje jeszcze w kolekcji obsza
 
 Jawne otworzenie domyślnego obszaru roboczego lub otwarcie istniejącego obszaru roboczego w kolekcji obszarów roboczych jest opisane w obszarze [Otwórz](#open) funkcję członkowską.
 
-Zakończ sesję obszaru roboczego, zamykając obszar roboczy za pomocą funkcji [Zamknij](#close) element członkowski. `Close`zamyka wszystkie bazy danych, które nie zostały wcześniej zamknięte, wycofywanie wszelkich niezatwierdzonych transakcji.
+Zakończ sesję obszaru roboczego, zamykając obszar roboczy za pomocą funkcji [Zamknij](#close) element członkowski. `Close` zamyka wszystkie bazy danych, które nie zostały wcześniej zamknięte, wycofywanie wszelkich niezatwierdzonych transakcji.
 
 ## <a name="transactions"></a>Transakcje
-Element DAO 3,6 jest wersją ostateczną i jest uznawany za przestarzały. zarządza transakcjami na poziomie obszaru roboczego; w związku z tym transakcje w obszarze roboczym z wieloma otwartymi bazami danych mają zastosowanie do wszystkich baz danych. Na przykład jeśli dwie bazy danych mają niezatwierdzone aktualizacje i wywołajesz [CommitTrans](#committrans), wszystkie aktualizacje zostaną zatwierdzone. Jeśli chcesz ograniczyć liczbę transakcji do pojedynczej bazy danych, wymagany jest osobny obiekt obszaru roboczego.
+
+DAO zarządza transakcjami na poziomie obszaru roboczego; w związku z tym transakcje w obszarze roboczym z wieloma otwartymi bazami danych mają zastosowanie do wszystkich baz danych. Na przykład jeśli dwie bazy danych mają niezatwierdzone aktualizacje i wywołajesz [CommitTrans](#committrans), wszystkie aktualizacje zostaną zatwierdzone. Jeśli chcesz ograniczyć liczbę transakcji do pojedynczej bazy danych, wymagany jest osobny obiekt obszaru roboczego.
 
 ## <a name="implicit-use-of-the-default-workspace"></a>Niejawne użycie domyślnego obszaru roboczego
 
 MFC używa domyślnego obszaru roboczego DAO niejawnie w następujących okolicznościach:
 
-- W przypadku utworzenia nowego `CDaoDatabase` obiektu, ale nie jest to możliwe za pomocą istniejącego `CDaoWorkspace` obiektu, MFC tworzy tymczasowy obiekt obszaru roboczego, który odnosi się do domyślnego obszaru roboczego DAO. Jeśli to zrobisz dla wielu baz danych, wszystkie obiekty bazy danych są skojarzone z domyślnym obszarem roboczym. Możesz uzyskać dostęp do obszaru roboczego bazy danych za `CDaoDatabase` pomocą elementu członkowskiego danych.
+- W przypadku utworzenia nowego obiektu `CDaoDatabase`, ale nie do wykonania za pomocą istniejącego obiektu `CDaoWorkspace`, MFC tworzy tymczasowy obiekt obszaru roboczego, który odnosi się do domyślnego obszaru roboczego DAO. Jeśli to zrobisz dla wielu baz danych, wszystkie obiekty bazy danych są skojarzone z domyślnym obszarem roboczym. Możesz uzyskać dostęp do obszaru roboczego bazy danych za pomocą elementu członkowskiego danych `CDaoDatabase`.
 
-- Podobnie, jeśli utworzysz `CDaoRecordset` obiekt bez podawania wskaźnika `CDaoDatabase` do obiektu, MFC tworzy tymczasowy obiekt bazy danych i, według rozszerzenia, tymczasowy obiekt obszaru roboczego. Możesz uzyskać dostęp do bazy danych zestawu rekordów i pośrednio jej obszar roboczy, za `CDaoRecordset` pomocą elementu członkowskiego danych.
+- Podobnie, jeśli utworzysz obiekt `CDaoRecordset` bez podawania wskaźnika do obiektu `CDaoDatabase`, MFC tworzy tymczasowy obiekt bazy danych i, według rozszerzenia, tymczasowy obiekt obszaru roboczego. Możesz uzyskać dostęp do bazy danych zestawu rekordów i pośrednio jej obszaru roboczego za pomocą elementu członkowskiego danych `CDaoRecordset`.
 
 ## <a name="other-operations"></a>Inne operacje
 
@@ -202,7 +203,7 @@ virtual void Append();
 
 ### <a name="remarks"></a>Uwagi
 
-`Append`dołącza nowo utworzony obiekt obszaru roboczego do kolekcji obszarów roboczych aparatu bazy danych. Obszary robocze nie są zachowywane między sesjami aparatu bazy danych; są one przechowywane tylko w pamięci, a nie na dysku. Nie trzeba dołączać obszaru roboczego; Jeśli tego nie zrobisz, można nadal z niej korzystać.
+`Append` dołącza nowo utworzony obiekt obszaru roboczego do kolekcji obszarów roboczych aparatu bazy danych. Obszary robocze nie są zachowywane między sesjami aparatu bazy danych; są one przechowywane tylko w pamięci, a nie na dysku. Nie trzeba dołączać obszaru roboczego; Jeśli tego nie zrobisz, można nadal z niej korzystać.
 
 Dołączany obszar roboczy pozostaje w kolekcji obszarów roboczych w aktywnym stanie otwartym, dopóki nie zostanie wywołana funkcja [zamykającego](#close) elementu członkowskiego.
 
@@ -218,7 +219,7 @@ void BeginTrans();
 
 ### <a name="remarks"></a>Uwagi
 
-Po zakończeniu rozmowy `BeginTrans`aktualizacje wprowadzane do danych lub struktury bazy danych zaczną obowiązywać po zatwierdzeniu transakcji. Ze względu na to, że obszar roboczy definiuje pojedynczy obszar transakcji, transakcja dotyczy wszystkich otwartych baz danych w obszarze roboczym. Istnieją dwa sposoby wykonania transakcji:
+Po podaniu `BeginTrans`aktualizacje wprowadzane do danych lub struktury bazy danych zaczną obowiązywać po zatwierdzeniu transakcji. Ze względu na to, że obszar roboczy definiuje pojedynczy obszar transakcji, transakcja dotyczy wszystkich otwartych baz danych w obszarze roboczym. Istnieją dwa sposoby wykonania transakcji:
 
 - Wywołaj funkcję elementu członkowskiego [CommitTrans](#committrans) , aby zatwierdzić transakcję i zapisać zmiany w źródle danych.
 
@@ -230,7 +231,7 @@ Jeśli konieczne jest odizolowanie transakcji na jednym źródle danych ODBC od 
 
 ##  <a name="cdaoworkspace"></a>CDaoWorkspace::CDaoWorkspace
 
-Konstruuje `CDaoWorkspace` obiekt.
+Konstruuje obiekt `CDaoWorkspace`.
 
 ```
 CDaoWorkspace();
@@ -242,9 +243,9 @@ Po skonstruowaniu C++ obiektu dostępne są dwie opcje:
 
 - Wywołaj funkcję [Open](#open) member obiektu, aby otworzyć domyślny obszar roboczy lub otworzyć istniejący obiekt w kolekcji obszarów roboczych.
 
-- Lub wywołaj funkcję [Utwórz](#create) element członkowski obiektu, aby utworzyć nowy obiekt obszaru roboczego DAO. Ta funkcja jawnie uruchamia nową sesję obszaru roboczego, do której można się odwoływać `CDaoWorkspace` za pośrednictwem obiektu. Po wywołaniu `Create`można wywołać [dołączenie](#append) , jeśli chcesz dodać obszar roboczy do kolekcji obszarów roboczych aparatu bazy danych.
+- Lub wywołaj funkcję [Utwórz](#create) element członkowski obiektu, aby utworzyć nowy obiekt obszaru roboczego DAO. Ta funkcja jawnie uruchamia nową sesję obszaru roboczego, do której można się odwoływać za pośrednictwem obiektu `CDaoWorkspace`. Po wywołaniu `Create`można wywołać [dołączenie](#append) , jeśli chcesz dodać obszar roboczy do kolekcji obszarów roboczych aparatu bazy danych.
 
-Zapoznaj się z omówieniem klasy [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) , aby uzyskać informacje o tym, kiedy należy `CDaoWorkspace` jawnie utworzyć obiekt. Zazwyczaj można używać obszarów roboczych utworzonych niejawnie podczas otwierania obiektu [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) bez określania obszaru roboczego lub po otwarciu obiektu [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) bez określania obiektu bazy danych. Obiekty MFC DAO utworzone w ten sposób używają domyślnego obszaru roboczego DAO, który jest tworzony raz i ponownie używany.
+Zapoznaj się z omówieniem klasy [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) , aby uzyskać informacje o tym, kiedy należy jawnie utworzyć obiekt `CDaoWorkspace`. Zazwyczaj można używać obszarów roboczych utworzonych niejawnie podczas otwierania obiektu [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) bez określania obszaru roboczego lub po otwarciu obiektu [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) bez określania obiektu bazy danych. Obiekty MFC DAO utworzone w ten sposób używają domyślnego obszaru roboczego DAO, który jest tworzony raz i ponownie używany.
 
 Aby zwolnić obszar roboczy i zawarte w nim obiekty, wywołaj funkcję [zamykania](#close) elementu członkowskiego obiektu obszaru roboczego.
 
@@ -277,10 +278,10 @@ void CommitTrans();
 
 ### <a name="remarks"></a>Uwagi
 
-Transakcja składa się z serii zmian danych lub struktury bazy danych, rozpoczynając od wywołania [BeginTrans](#begintrans). Po zakończeniu transakcji Zatwierdź ją lub Wycofaj (Anuluj zmiany) z [wycofywaniem](#rollback). Domyślnie, bez transakcji, aktualizacje rekordów są zatwierdzane natychmiast. Wywołanie `BeginTrans` powoduje, że zobowiązania o aktualizacje są opóźniane do `CommitTrans`momentu wywołania.
+Transakcja składa się z serii zmian danych lub struktury bazy danych, rozpoczynając od wywołania [BeginTrans](#begintrans). Po zakończeniu transakcji Zatwierdź ją lub Wycofaj (Anuluj zmiany) z [wycofywaniem](#rollback). Domyślnie, bez transakcji, aktualizacje rekordów są zatwierdzane natychmiast. Wywołanie `BeginTrans` powoduje, że zobowiązania aktualizacji są opóźniane do momentu wywołania `CommitTrans`.
 
 > [!CAUTION]
->  W ramach jednego obszaru roboczego transakcje są zawsze globalne dla obszaru roboczego i nie są ograniczone tylko do jednej bazy danych lub zestawu rekordów. Jeśli wykonujesz operacje na więcej niż jednej bazie danych lub zestawach rekordów w ramach `CommitTrans` transakcji obszaru roboczego, zatwierdzi wszystkie `Rollback` oczekujące aktualizacje i przywróci wszystkie operacje na tych bazach danych i zestawach rekordów.
+>  W ramach jednego obszaru roboczego transakcje są zawsze globalne dla obszaru roboczego i nie są ograniczone tylko do jednej bazy danych lub zestawu rekordów. Jeśli wykonujesz operacje na więcej niż jednej bazie danych lub zestawach rekordów w ramach transakcji obszaru roboczego, `CommitTrans` zatwierdzi wszystkie oczekujące aktualizacje i `Rollback` przywraca wszystkie operacje na tych bazach danych i zestawach rekordów.
 
 Po zamknięciu bazy danych lub obszaru roboczego z oczekującymi transakcjami są wycofywane wszystkie transakcje.
 
@@ -309,63 +310,63 @@ static void PASCAL CompactDatabase(
 ### <a name="parameters"></a>Parametry
 
 *lpszSrcName*<br/>
-Nazwa istniejącej, zamkniętej bazy danych. Może to być pełna ścieżka i nazwa pliku, na przykład "C:\\\MYDB. MDB ". Jeśli nazwa pliku ma rozszerzenie, należy je określić. Jeśli sieć obsługuje ujednolicone konwencje nazewnictwa (UNC), można również określić ścieżkę sieciową, taką jak "\\\\\\\\\MYSERVER\\\MYSHARE\\\mydir \MYDB. MDB ". (W ciągach ścieżki są wymagane podwójne ukośniki odwrotne,\\ponieważ "" C++ jest znakiem ucieczki).
+Nazwa istniejącej, zamkniętej bazy danych. Może to być pełna ścieżka i nazwa pliku, na przykład "C:\\\MYDB. MDB ". Jeśli nazwa pliku ma rozszerzenie, należy je określić. Jeśli sieć obsługuje ujednolicone konwencje nazewnictwa (UNC), można również określić ścieżkę sieciową, taką jak "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB. MDB ". (W ciągach ścieżki są wymagane podwójne ukośniki odwrotne, ponieważ "\\" C++ jest znakiem ucieczki).
 
 *lpszDestName*<br/>
 Pełna ścieżka kompaktowej bazy danych, która jest tworzona. Możesz również określić ścieżkę sieciową, tak jak w przypadku *lpszSrcName*. Nie można użyć argumentu *lpszDestName* do określenia tego samego pliku bazy danych jako *lpszSrcName*.
 
 *lpszPassword*<br/>
-Hasło używane, gdy chcesz skompaktować chronioną hasłem bazę danych. Należy pamiętać, że w przypadku korzystania z `CompactDatabase` wersji, która pobiera hasło, należy podać wszystkie parametry. Ponadto, ponieważ jest to parametr Connect, wymaga specjalnego formatowania w następujący sposób:; PWD = *lpszPassword*. Na przykład:; PWD = "szczęśliwa". (Wiodący średnik jest wymagany).
+Hasło używane, gdy chcesz skompaktować chronioną hasłem bazę danych. Należy pamiętać, że w przypadku korzystania z wersji `CompactDatabase`, która pobiera hasło, należy podać wszystkie parametry. Ponadto, ponieważ jest to parametr Connect, wymaga specjalnego formatowania w następujący sposób:; PWD = *lpszPassword*. Na przykład:; PWD = "szczęśliwa". (Wiodący średnik jest wymagany).
 
 *lpszLocale*<br/>
-Wyrażenie ciągu używane do określenia kolejności sortowania na potrzeby tworzenia *lpszDestName*. Jeśli ten argument zostanie pominięty przez zaakceptowanie wartości `dbLangGeneral` domyślnej (patrz poniżej), ustawienia regionalne nowej bazy danych są takie same, jak w przypadku starej bazy danych. Możliwe wartości to:
+Wyrażenie ciągu używane do określenia kolejności sortowania na potrzeby tworzenia *lpszDestName*. Jeśli ten argument zostanie pominięty przez zaakceptowanie wartości domyślnej `dbLangGeneral` (patrz poniżej), ustawienia regionalne nowej bazy danych są takie same jak w przypadku starej bazy danych. Możliwe wartości to:
 
-- `dbLangGeneral`Angielski, niemiecki, francuski, portugalski, włoski i nowoczesny hiszpański
+- `dbLangGeneral` angielski, niemiecki, francuski, portugalski, włoski i nowoczesny hiszpański
 
-- `dbLangArabic`Arabski
+- `dbLangArabic` arabski
 
-- `dbLangCyrillic`Rosyjski
+- `dbLangCyrillic` rosyjski
 
-- `dbLangCzech`Czeski
+- `dbLangCzech` Czeska
 
-- `dbLangDutch`Holenderski
+- `dbLangDutch` holenderski
 
-- `dbLangGreek`Grecki
+- `dbLangGreek` grecki
 
-- `dbLangHebrew`Hebrajski
+- `dbLangHebrew` hebrajski
 
-- `dbLangHungarian`Węgierski
+- `dbLangHungarian` węgierski
 
-- `dbLangIcelandic`Islandzki
+- `dbLangIcelandic` islandzki
 
-- `dbLangNordic`Języki nordyckie (tylko aparat bazy danych Microsoft Jet w wersji 1,0)
+- `dbLangNordic` Języki nordyckie (tylko wersja 1,0 aparatu bazy danych Microsoft Jet)
 
-- `dbLangNorwdan`Norweski i duński
+- `dbLangNorwdan` norweski i duński
 
-- `dbLangPolish`Polski
+- `dbLangPolish` Polski
 
-- `dbLangSpanish`Tradycyjny hiszpański
+- `dbLangSpanish` tradycyjny hiszpański
 
-- `dbLangSwedfin`Szwedzki i fiński
+- `dbLangSwedfin` szwedzki i fiński
 
-- `dbLangTurkish`Turecki
+- `dbLangTurkish` turecki
 
 *nOptions*<br/>
-Wskazuje co najmniej jedną opcję dla docelowej bazy danych *lpszDestName*. Jeśli ten argument zostanie pominięty przez zaakceptowanie wartości domyślnej, *lpszDestName* będzie mieć to samo szyfrowanie i taką samą wersję jak *lpszSrcName*. Możesz połączyć `dbEncrypt` opcję lub `dbDecrypt` z jedną z opcji wersji za pomocą operatora bitowego lub. Możliwe wartości, które określają format bazy danych, a nie wersję aparatu bazy danych, to:
+Wskazuje co najmniej jedną opcję dla docelowej bazy danych *lpszDestName*. Jeśli ten argument zostanie pominięty przez zaakceptowanie wartości domyślnej, *lpszDestName* będzie mieć to samo szyfrowanie i taką samą wersję jak *lpszSrcName*. Możesz połączyć opcję `dbEncrypt` lub `dbDecrypt` z jedną z opcji wersji za pomocą operatora bitowego lub. Możliwe wartości, które określają format bazy danych, a nie wersję aparatu bazy danych, to:
 
-- `dbEncrypt`Szyfruj bazę danych podczas kompaktowania.
+- `dbEncrypt` Szyfruj bazę danych podczas kompaktowania.
 
-- `dbDecrypt`Odszyfruj bazę danych podczas kompaktowania.
+- `dbDecrypt` odszyfrować bazy danych podczas kompaktowania.
 
-- `dbVersion10`Utwórz bazę danych, która korzysta z aparatu bazy danych Microsoft Jet w wersji 1,0 podczas kompaktowania.
+- `dbVersion10` utworzyć bazę danych, która korzysta z aparatu bazy danych Microsoft Jet w wersji 1,0 podczas kompaktowania.
 
-- `dbVersion11`Utwórz bazę danych, która korzysta z aparatu bazy danych Microsoft Jet w wersji 1,1 podczas kompaktowania.
+- `dbVersion11` utworzyć bazę danych, która korzysta z aparatu bazy danych Microsoft Jet w wersji 1,1 podczas kompaktowania.
 
-- `dbVersion20`Utwórz bazę danych, która korzysta z aparatu bazy danych Microsoft Jet w wersji 2,0 podczas kompaktowania.
+- `dbVersion20` utworzyć bazę danych, która korzysta z aparatu bazy danych Microsoft Jet w wersji 2,0 podczas kompaktowania.
 
-- `dbVersion30`Utwórz bazę danych, która korzysta z aparatu bazy danych Microsoft Jet w wersji 3,0 podczas kompaktowania.
+- `dbVersion30` utworzyć bazę danych, która korzysta z aparatu bazy danych Microsoft Jet w wersji 3,0 podczas kompaktowania.
 
-Można użyć `dbEncrypt` lub `dbDecrypt` w argumencie Options, aby określić, czy należy szyfrować lub odszyfrować bazę danych w trakcie kompaktowania. W przypadku pominięcia stałej szyfrowania lub dołączenia `dbDecrypt` obu `dbEncrypt`i, *lpszDestName* będzie miało takie samo szyfrowanie jak *lpszSrcName*. Możesz użyć jednej z stałych wersji w argumencie opcji, aby określić wersję formatu danych dla kompaktowej bazy danych. Ta stała ma wpływ tylko na wersję formatu danych *lpszDestName*. Można określić tylko jedną stałą wersji. W przypadku pominięcia stałej wersji *lpszDestName* będzie mieć taką samą wersję jak *lpszSrcName*. *LpszDestName* można skompaktować tylko do wersji, która jest taka sama lub nowsza niż *lpszSrcName*.
+W argumencie opcje można użyć `dbEncrypt` lub `dbDecrypt`, aby określić, czy podczas kompaktowania ma być szyfrowana czy odszyfrowana. W przypadku pominięcia stałej szyfrowania lub dołączenia obu `dbDecrypt` i `dbEncrypt`, *lpszDestName* będzie miało takie samo szyfrowanie jak *lpszSrcName*. Możesz użyć jednej z stałych wersji w argumencie opcji, aby określić wersję formatu danych dla kompaktowej bazy danych. Ta stała ma wpływ tylko na wersję formatu danych *lpszDestName*. Można określić tylko jedną stałą wersji. W przypadku pominięcia stałej wersji *lpszDestName* będzie mieć taką samą wersję jak *lpszSrcName*. *LpszDestName* można skompaktować tylko do wersji, która jest taka sama lub nowsza niż *lpszSrcName*.
 
 > [!CAUTION]
 >  Jeśli baza danych nie jest zaszyfrowana, możliwe jest nawet w przypadku zaimplementowania zabezpieczeń użytkownika/hasła, aby bezpośrednio odczytać plik dysku binarnego stanowiący bazę danych.
@@ -375,16 +376,16 @@ Można użyć `dbEncrypt` lub `dbDecrypt` w argumencie Options, aby określić, 
 Podczas zmieniania danych w bazie danych, plik bazy danych może zostać pofragmentowany i użycie większej ilości miejsca na dysku. Okresowo należy kompaktować bazę danych, aby zdefragmentować plik bazy danych. Kompaktowanie bazy danych jest zazwyczaj mniejsze. Możesz również zmienić kolejność sortowania, szyfrowanie lub wersję formatu danych podczas kopiowania i kompaktowania bazy danych.
 
 > [!CAUTION]
->  Funkcja `CompactDatabase` członkowska nie będzie poprawnie skonwertować kompletnej bazy danych programu Microsoft Access z jednej wersji na inną. Konwertowany jest tylko format danych. Obiekty zdefiniowane przez program Microsoft Access, takie jak formularze i raporty, nie są konwertowane. Jednak dane są poprawnie konwertowane.
+>  Funkcja członkowska `CompactDatabase` nie będzie poprawnie skonwertować kompletnej bazy danych programu Microsoft Access z jednej wersji na inną. Konwertowany jest tylko format danych. Obiekty zdefiniowane przez program Microsoft Access, takie jak formularze i raporty, nie są konwertowane. Jednak dane są poprawnie konwertowane.
 
 > [!TIP]
->  Można również użyć `CompactDatabase` , aby skopiować plik bazy danych.
+>  Możesz również użyć `CompactDatabase`, aby skopiować plik bazy danych.
 
 Aby uzyskać więcej informacji na temat kompaktowania baz danych, zobacz temat "Metoda CompactDatabase" w pomocy DAO.
 
 ##  <a name="create"></a>CDaoWorkspace:: Create
 
-Wywołaj tę funkcję elementu członkowskiego, aby utworzyć nowy obiekt obszaru roboczego DAO i skojarzyć `CDaoWorkspace` go z obiektem MFC.
+Wywołaj tę funkcję elementu członkowskiego, aby utworzyć nowy obiekt obszaru roboczego DAO i skojarzyć go z obiektem MFC `CDaoWorkspace`.
 
 ```
 virtual void Create(
@@ -410,11 +411,11 @@ Ogólny proces tworzenia:
 
 1. Utwórz obiekt [CDaoWorkspace](#cdaoworkspace) .
 
-1. Wywołaj funkcję `Create` członkowską obiektu, aby utworzyć podstawowy obszar roboczy DAO. Należy określić nazwę obszaru roboczego.
+1. Wywołaj funkcję członkowską `Create` obiektu, aby utworzyć podstawowy obszar roboczy DAO. Należy określić nazwę obszaru roboczego.
 
 1. Opcjonalnie możesz wywołać [dołączenie](#append) , jeśli chcesz dodać obszar roboczy do kolekcji obszarów roboczych aparatu bazy danych. Możesz współpracować z obszarem roboczym bez dołączania go.
 
-`Create` Po wywołaniu obiekt obszaru roboczego jest w stanie otwartym, gotowy do użycia. Nie jest wywoływana `Open` po `Create`. Nie jest wywoływana `Create` , jeśli obszar roboczy już istnieje w kolekcji obszarów roboczych. `Create`Inicjuje aparat bazy danych, jeśli nie został jeszcze zainicjowany dla aplikacji.
+Po wywołaniu `Create` obiekt obszaru roboczego jest w stanie otwartym, gotowy do użycia. Nie Wywołaj `Open` po `Create`. Nie dzwonimy `Create`, jeśli obszar roboczy już istnieje w kolekcji obszarów roboczych. `Create` inicjuje aparat bazy danych, jeśli nie został jeszcze zainicjowany dla aplikacji.
 
 ##  <a name="getdatabasecount"></a>CDaoWorkspace::GetDatabaseCount
 
@@ -430,7 +431,7 @@ Liczba otwartych baz danych w obszarze roboczym.
 
 ### <a name="remarks"></a>Uwagi
 
-`GetDatabaseCount`jest przydatne, jeśli trzeba przepętlać się między wszystkimi zdefiniowanymi bazami danych w kolekcji baz danych obszaru roboczego. Aby uzyskać informacje o danej bazie danych w kolekcji, zobacz [GetDatabaseInfo](#getdatabaseinfo). Typowym użyciem jest wywołanie `GetDatabaseCount` liczby otwartych baz danych, a następnie użycie tej liczby jako indeksu pętli dla powtarzających się `GetDatabaseInfo`wywołań.
+`GetDatabaseCount` jest przydatne, jeśli zachodzi potrzeba przepętlenia między wszystkimi zdefiniowanymi bazami danych w kolekcji baz danych obszaru roboczego. Aby uzyskać informacje o danej bazie danych w kolekcji, zobacz [GetDatabaseInfo](#getdatabaseinfo). Typowym zastosowaniem jest wywołanie `GetDatabaseCount` dla liczby otwartych baz danych, a następnie użycie tej liczby jako indeksu pętli dla powtarzających się wywołań do `GetDatabaseInfo`.
 
 ##  <a name="getdatabaseinfo"></a>CDaoWorkspace::GetDatabaseInfo
 
@@ -461,9 +462,9 @@ Opcje określające, które informacje o bazie danych mają zostać pobrane. Dos
 
 - AFX_DAO_PRIMARY_INFO (domyślnie) nazwa, aktualizowalne, transakcje
 
-- AFX_DAO_SECONDARY_INFO podstawowe informacje plus: Wersja, kolejność sortowania, limit czasu zapytania
+- AFX_DAO_SECONDARY_INFO informacje podstawowe oraz: wersja, kolejność sortowania, limit czasu zapytania
 
-- AFX_DAO_ALL_INFO informacje podstawowe i pomocnicze oraz: Łączone
+- AFX_DAO_ALL_INFO informacje podstawowe i pomocnicze oraz: Connect
 
 *lpszName*<br/>
 Nazwa obiektu bazy danych dla wyszukiwania według nazwy. Nazwa jest ciągiem zawierającym maksymalnie 14 znaków, które jednoznacznie nazywają nowym obiektem obszaru roboczego.
@@ -534,7 +535,7 @@ Aby uzyskać powiązane informacje, zobacz temat "Właściwość LoginTimeout" w
 
 ##  <a name="getname"></a>CDaoWorkspace:: GetName
 
-Wywołaj tę funkcję elementu członkowskiego, aby uzyskać zdefiniowaną przez użytkownika nazwę obiektu obszaru roboczego `CDaoWorkspace` DAO należącego do obiektu.
+Wywołaj tę funkcję elementu członkowskiego, aby uzyskać zdefiniowaną przez użytkownika nazwę obiektu obszaru roboczego DAO bazowego obiektu `CDaoWorkspace`.
 
 ```
 CString GetName();
@@ -600,7 +601,7 @@ Liczba otwartych obszarów roboczych w kolekcji obszarów roboczych.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta liczba nie obejmuje żadnych otwartych obszarów roboczych, które nie są dołączane do kolekcji. `GetWorkspaceCount`jest przydatne, jeśli zachodzi potrzeba przepętlenia przez wszystkie zdefiniowane obszary robocze w kolekcji obszarów roboczych. Aby uzyskać informacje na temat danego obszaru roboczego w kolekcji, zobacz [GetWorkspaceInfo](#getworkspaceinfo). Typowym użyciem jest wywołanie `GetWorkspaceCount` liczby otwartych obszarów roboczych, a następnie użycie tej liczby jako indeksu pętli dla powtarzających się `GetWorkspaceInfo`wywołań.
+Ta liczba nie obejmuje żadnych otwartych obszarów roboczych, które nie są dołączane do kolekcji. `GetWorkspaceCount` jest przydatne, jeśli zachodzi potrzeba przepętlenia przez wszystkie zdefiniowane obszary robocze w kolekcji obszarów roboczych. Aby uzyskać informacje na temat danego obszaru roboczego w kolekcji, zobacz [GetWorkspaceInfo](#getworkspaceinfo). Typowym użyciem jest wywołanie `GetWorkspaceCount` dla liczby otwartych obszarów roboczych, a następnie użycie tego numeru jako indeksu pętli dla powtarzających się wywołań do `GetWorkspaceInfo`.
 
 ##  <a name="getworkspaceinfo"></a>CDaoWorkspace::GetWorkspaceInfo
 
@@ -629,9 +630,9 @@ Odwołanie do obiektu [CDaoWorkspaceInfo —](../../mfc/reference/cdaoworkspacei
 *dwInfoOptions*<br/>
 Opcje określające, które informacje o obszarze roboczym mają być pobierane. Dostępne opcje są wymienione tutaj wraz z tym, co powodują, że funkcja zwraca:
 
-- Nazwa AFX_DAO_PRIMARY_INFO (domyślnie)
+- Nazwa AFX_DAO_PRIMARY_INFO (wartość domyślna)
 
-- AFX_DAO_SECONDARY_INFO podstawowe informacje plus: Nazwa użytkownika
+- AFX_DAO_SECONDARY_INFO informacje podstawowe oraz: Nazwa użytkownika
 
 - AFX_DAO_ALL_INFO informacje podstawowe i pomocnicze oraz: Izoluj ODBCTrans
 
@@ -644,7 +645,7 @@ Aby uzyskać opis informacji zwracanych w *wkspcinfo*, zobacz [CDaoWorkspaceInfo
 
 ##  <a name="idle"></a>CDaoWorkspace:: Idle
 
-Wywołaj `Idle` , aby zapewnić aparatowi bazy danych możliwość wykonywania zadań w tle, które mogą nie być aktualne z powodu intensywnego przetwarzania danych.
+Wywołaj `Idle`, aby zapewnić aparatowi bazy danych możliwość wykonywania zadań w tle, które mogą nie być aktualne z powodu intensywnego przetwarzania danych.
 
 ```
 static void PASCAL Idle(int nAction = dbFreeLocks);
@@ -660,17 +661,17 @@ Akcja do wykonania podczas przetwarzania bezczynności. Obecnie jedyną prawidł
 Jest to często prawdziwe w przypadku wielu użytkowników i wielozadaniowych środowisk, w których nie jest wystarczająco dużo czasu przetwarzania w tle, aby zachować wszystkie rekordy w bieżącym zestawie rekordów.
 
 > [!NOTE]
->  Wywoływanie `Idle` nie jest konieczne z bazami danych utworzonymi w wersji 3,0 aparatu bazy danych Microsoft Jet. Używaj `Idle` tylko w przypadku baz danych utworzonych przy użyciu wcześniejszych wersji.
+>  Wywoływanie `Idle` nie jest konieczne w przypadku baz danych utworzonych przy użyciu wersji 3,0 aparatu bazy danych Microsoft Jet. Używaj `Idle` tylko dla baz danych utworzonych przy użyciu wcześniejszych wersji.
 
-Zazwyczaj blokady odczytu są usuwane, a dane w lokalnych zestawach rekordów typu dynamiczny typ są aktualizowane tylko wtedy, gdy nie są wykonywane żadne inne akcje (w tym ruchy myszy). W przypadku okresowego `Idle`wywoływania należy dostarczyć aparat bazy danych z czasem, aby uzyskać informacje na temat zadań przetwarzania w tle, zwalniając niepotrzebne blokady odczytu. `dbFreeLocks` Określanie stałej jako argumentu opóźnia przetwarzanie do momentu wydania wszystkich blokad odczytu.
+Zazwyczaj blokady odczytu są usuwane, a dane w lokalnych zestawach rekordów typu dynamiczny typ są aktualizowane tylko wtedy, gdy nie są wykonywane żadne inne akcje (w tym ruchy myszy). W przypadku okresowego wywoływania `Idle`należy udostępnić aparat bazy danych z czasem, aby uzyskać informacje na temat zadań przetwarzania w tle, zwalniając niepotrzebne blokady odczytu. Określanie stałej `dbFreeLocks` jako argumentu opóźnia przetwarzanie do momentu wydania wszystkich blokad odczytu.
 
-Ta funkcja członkowska nie jest wymagana w środowiskach jednego użytkownika, chyba że jest uruchomionych wiele wystąpień aplikacji. Funkcja `Idle` członkowska może zwiększyć wydajność w środowisku wielodostępnym, ponieważ wymusza, aby aparat bazy danych opróżniał dane do dysku, zwalniając blokady w pamięci. Można również zwolnić blokady odczytu przez utworzenie części operacji transakcji.
+Ta funkcja członkowska nie jest wymagana w środowiskach jednego użytkownika, chyba że jest uruchomionych wiele wystąpień aplikacji. Funkcja członkowska `Idle` może zwiększyć wydajność w środowisku wielodostępnym, ponieważ wymusza, aby aparat bazy danych opróżniał dane na dysk, zwalniając blokady w pamięci. Można również zwolnić blokady odczytu przez utworzenie części operacji transakcji.
 
 Aby uzyskać powiązane informacje, zobacz temat "Metoda bezczynności" w pomocy DAO.
 
 ##  <a name="isopen"></a>CDaoWorkspace:: IsOpen
 
-Wywołaj tę funkcję elementu członkowskiego, `CDaoWorkspace` aby określić, czy obiekt jest otwarty — to znaczy czy obiekt MFC został zainicjowany przez wywołanie do [otwarcia](#open) lub wywołanie metody [Create](#create).
+Wywołaj tę funkcję elementu członkowskiego, aby określić, czy obiekt `CDaoWorkspace` jest otwarty — to znaczy czy obiekt MFC został zainicjowany przez wywołanie do [otwarcia](#open) lub wywołanie do [utworzenia](#create).
 
 ```
 BOOL IsOpen() const;
@@ -684,7 +685,7 @@ Niezerowe, jeśli obiekt obszaru roboczego jest otwarty; w przeciwnym razie 0.
 
 Można wywołać dowolną z funkcji Członkowskich obszaru roboczego, który jest w stanie otwartym.
 
-##  <a name="m_pdaoworkspace"></a>CDaoWorkspace::m_pDAOWorkspace
+##  <a name="m_pdaoworkspace"></a>CDaoWorkspace:: m_pDAOWorkspace
 
 Wskaźnik do bazowego obiektu obszaru roboczego DAO.
 
@@ -709,19 +710,19 @@ Nazwa obiektu obszaru roboczego DAO do otwarcia — ciąg z maksymalnie 14 znaka
 
 ### <a name="remarks"></a>Uwagi
 
-Po skonstruowaniu `CDaoWorkspace` obiektu Wywołaj tę funkcję elementu członkowskiego, aby wykonać jedną z następujących czynności:
+Po skonstruowaniu obiektu `CDaoWorkspace` Wywołaj tę funkcję elementu członkowskiego, aby wykonać jedną z następujących czynności:
 
 - Jawnie Otwórz domyślny obszar roboczy. Przekaż wartość NULL dla *lpszName*.
 
-- Otwórz istniejący `CDaoWorkspace` obiekt, który jest członkiem kolekcji obszarów roboczych według nazwy. Przekaż prawidłową nazwę istniejącego obiektu obszaru roboczego.
+- Otwórz istniejący obiekt `CDaoWorkspace`, składową kolekcji obszarów roboczych według nazwy. Przekaż prawidłową nazwę istniejącego obiektu obszaru roboczego.
 
-`Open`umieszcza obiekt obszaru roboczego w stanie otwartym, a także inicjuje aparat bazy danych, jeśli nie został jeszcze zainicjowany dla aplikacji.
+`Open` umieszcza obiekt obszaru roboczego w stanie otwartym, a także inicjuje aparat bazy danych, jeśli nie został jeszcze zainicjowany dla aplikacji.
 
-Chociaż wiele `CDaoWorkspace` funkcji składowych można wywołać tylko po otwarciu obszaru roboczego, następujące funkcje członkowskie, które działają w aparacie bazy danych, są dostępne po utworzeniu C++ obiektu, ale przed wywołaniem do `Open`:
+Chociaż wiele `CDaoWorkspace` funkcji Członkowskich można wywołać tylko po otwarciu obszaru roboczego, następujące funkcje członkowskie, które działają w aparacie bazy danych, są dostępne po utworzeniu C++ obiektu, ale przed wywołaniem `Open`:
 
 ||||
 |-|-|-|
-|[Tworzenie](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
+|[Utwórz](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
 |[GetIniPath](#getinipath)|[Okresie](#idle)|[SetIniPath](#setinipath)|
 |[GetLoginTimeout](#getlogintimeout)|[SetDefaultPassword](#setdefaultpassword)|[SetLoginTimeout](#setlogintimeout)|
 
@@ -736,7 +737,7 @@ static void PASCAL RepairDatabase(LPCTSTR lpszName);
 ### <a name="parameters"></a>Parametry
 
 *lpszName*<br/>
-Ścieżka i nazwa pliku dla istniejącego pliku bazy danych aparatu Microsoft Jet. Jeśli pominięto ścieżkę, przeszukiwany jest tylko bieżący katalog. Jeśli system obsługuje ujednoliconą konwencję nazewnictwa (UNC), można również określić ścieżkę sieciową, taką jak: "\\\\\\\\\MYSERVER\\\MYSHARE\\\mydir \MYDB. MDB ". (W ciągu ścieżki są wymagane podwójne ukośniki odwrotne, ponieważ\\"" jest C++ znakiem ucieczki).
+Ścieżka i nazwa pliku dla istniejącego pliku bazy danych aparatu Microsoft Jet. Jeśli pominięto ścieżkę, przeszukiwany jest tylko bieżący katalog. Jeśli system obsługuje ujednoliconą konwencję nazewnictwa (UNC), można również określić ścieżkę sieciową, taką jak: "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB. MDB ". (W ciągu ścieżki są wymagane podwójne ukośniki odwrotne, ponieważ "\\" jest C++ znakiem ucieczki).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -760,12 +761,12 @@ void Rollback();
 ### <a name="remarks"></a>Uwagi
 
 > [!CAUTION]
->  W ramach jednego obiektu obszaru roboczego transakcje są zawsze globalne dla obszaru roboczego i nie są ograniczone tylko do jednej bazy danych lub zestawu rekordów. W przypadku wykonywania operacji na więcej niż jednej bazie danych lub zestawach rekordów w ramach `Rollback` transakcji obszaru roboczego program przywraca wszystkie operacje na wszystkich bazach danych i zestawach rekordów.
+>  W ramach jednego obiektu obszaru roboczego transakcje są zawsze globalne dla obszaru roboczego i nie są ograniczone tylko do jednej bazy danych lub zestawu rekordów. Jeśli wykonujesz operacje na więcej niż jednej bazie danych lub zestawach rekordów w ramach transakcji obszaru roboczego, `Rollback` przywraca wszystkie operacje na wszystkich bazach danych i zestawach rekordów.
 
-Jeśli zamkniesz obiekt obszaru roboczego bez zapisywania lub wycofywania oczekujących transakcji, transakcje są automatycznie wycofywane. Jeśli wywołasz [CommitTrans](#committrans) lub `Rollback` bez pierwszego wywołania [BeginTrans](#begintrans), wystąpi błąd.
+Jeśli zamkniesz obiekt obszaru roboczego bez zapisywania lub wycofywania oczekujących transakcji, transakcje są automatycznie wycofywane. Jeśli wywołasz [CommitTrans](#committrans) lub `Rollback` bez uprzedniego wywołania [BeginTrans](#begintrans), wystąpi błąd.
 
 > [!NOTE]
->  Po rozpoczęciu transakcji aparat bazy danych rejestruje jego operacje w pliku przechowywanym w katalogu określonym przez zmienną środowiskową TEMP na stacji roboczej. Jeśli plik dziennika transakcji przekroczy dostępny magazyn na dysku tymczasowym, aparat bazy danych spowoduje zgłoszenie `CDaoException` klasy MFC (błąd DAO 2004). W tym momencie, w przypadku wywołania `CommitTrans`, nieokreślona liczba operacji jest zatwierdzona, ale pozostałe nieukończone operacje zostaną utracone, a operacja musi zostać ponownie uruchomiona. Wywoływanie `Rollback` zwalnia dziennik transakcji i wycofuje wszystkie operacje w transakcji.
+>  Po rozpoczęciu transakcji aparat bazy danych rejestruje jego operacje w pliku przechowywanym w katalogu określonym przez zmienną środowiskową TEMP na stacji roboczej. Jeśli plik dziennika transakcji spowoduje wyczerpanie dostępnego magazynu na dysku TYMCZASOWYm, aparat bazy danych może zgłosić `CDaoException` (błąd DAO 2004). W tym momencie, jeśli wywołasz `CommitTrans`, zostanie zatwierdzona nieokreślona liczba operacji, ale pozostałe nieukończone operacje zostaną utracone, a operacja musi zostać uruchomiona ponownie. Wywołanie `Rollback` zwalnia dziennik transakcji i wycofuje wszystkie operacje w transakcji.
 
 ##  <a name="setdefaultpassword"></a>CDaoWorkspace::SetDefaultPassword
 
@@ -786,11 +787,11 @@ Ustawione domyślne hasło dotyczy nowych obszarów roboczych utworzonych po wyw
 
 Aby użyć tej funkcji elementu członkowskiego:
 
-1. Konstruowanie `CDaoWorkspace` obiektu, ale nie wywoływanie. `Create`
+1. Konstruowanie obiektu `CDaoWorkspace`, ale nie wywoływanie `Create`.
 
 1. Wywołaj `SetDefaultPassword` i, jeśli chcesz, [SetDefaultUser](#setdefaultuser).
 
-1. Wywołaj `Create` ten obiekt obszaru roboczego lub kolejne z nich, bez określania hasła.
+1. Wywołaj `Create` dla tego obiektu obszaru roboczego lub kolejne z nich bez określania hasła.
 
 Domyślnie właściwość DefaultUser jest ustawiona na wartość "admin", a właściwość DefaultPassword jest ustawiona na pusty ciąg ("").
 
@@ -807,7 +808,7 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
 ### <a name="parameters"></a>Parametry
 
 *lpszDefaultUser*<br/>
-Domyślna nazwa użytkownika. Nazwa użytkownika może zawierać od 0 do 1-20 znaków i zawierać znaki alfabetyczne, znaki akcentowane, cyfry, spacje i symbole, z wyjątkiem: "(znaki cudzysłowu),/(ukośnik), \ (ukośnik odwrotny \[ \] ), (nawiasy),: &#124; (dwukropek), ( potok), \< (znak mniejszości), > (znak większości), + (znak plus), = (znak równości); (średnik),, (przecinek), (znak zapytania) \* , (gwiazdka), spacje wiodące i znaki kontrolne (ASCII 00 do ASCII 31). Aby uzyskać powiązane informacje, zobacz temat "UserName Property" w pomocy DAO.
+Domyślna nazwa użytkownika. Nazwa użytkownika może składać się z maksymalnie 1-20 znaków i zawierać znaki alfanumeryczne, znaki akcentowane, cyfry, spacje i symbole z wyjątkiem: "(znaki cudzysłowu),/(ukośnik odwrotny), \ (ukośnik odwrotny), \[ \] (nawias),: &#124; (dwukropek), (potok), \< (znak mniejszości), > (znak większości), + (znak plus), = (znak równości); (średnik),, (przecinek), (znak zapytania), \* (gwiazdka), spacje wiodące i znaki kontrolne (ASCII 00 do ASCII 31). Aby uzyskać powiązane informacje, zobacz temat "UserName Property" w pomocy DAO.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -815,11 +816,11 @@ Wybrana domyślna nazwa użytkownika ma zastosowanie do nowych obszarów roboczy
 
 Aby użyć tej funkcji elementu członkowskiego:
 
-1. Konstruowanie `CDaoWorkspace` obiektu, ale nie wywoływanie. `Create`
+1. Konstruowanie obiektu `CDaoWorkspace`, ale nie wywoływanie `Create`.
 
 1. Wywołaj `SetDefaultUser` i, jeśli chcesz, [SetDefaultPassword](#setdefaultpassword).
 
-1. Wywołaj `Create` ten obiekt obszaru roboczego lub kolejne z nich, bez określania nazwy użytkownika.
+1. Wywołaj `Create` dla tego obiektu obszaru roboczego lub kolejnych z nich, bez określania nazwy użytkownika.
 
 Domyślnie właściwość DefaultUser jest ustawiona na wartość "admin", a właściwość DefaultPassword jest ustawiona na pusty ciąg ("").
 
@@ -843,7 +844,7 @@ Ciąg zawierający nazwę podklucza rejestru systemu Windows dla lokalizacji ust
 Wywołaj `SetIniPath` tylko wtedy, gdy musisz określić ustawienia specjalne. Aby uzyskać więcej informacji, zobacz temat "Właściwość IniPath" w pomocy DAO.
 
 > [!NOTE]
->  Wywołaj `SetIniPath` podczas instalacji aplikacji, a nie w momencie uruchomienia aplikacji. `SetIniPath`musi być wywoływana przed otwarciem obszarów roboczych, baz danych lub zestawów rekordów; w przeciwnym razie MFC zgłasza wyjątek.
+>  Wywołaj `SetIniPath` podczas instalacji aplikacji, a nie w momencie uruchomienia aplikacji. Aby można było otworzyć wszystkie obszary robocze, bazy danych lub zestawy rekordów, należy wywołać `SetIniPath`. w przeciwnym razie MFC zgłasza wyjątek.
 
 Za pomocą tego mechanizmu można skonfigurować aparat bazy danych przy użyciu ustawień rejestru dostarczonych przez użytkownika. Zakres tego atrybutu jest ograniczony do aplikacji i nie można go zmienić bez ponownego uruchomienia aplikacji.
 

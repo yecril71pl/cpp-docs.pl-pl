@@ -1,225 +1,225 @@
 ---
-title: Przegląd Konwencji ABI ARM
+title: Omówienie Konwencji ABI ARM
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-ms.openlocfilehash: 17f2598912879d0eb54fd189e1fae541ba2f874f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 176aaaa17af1ce358255ca94eaccc7d5217f2a87
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295245"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303183"
 ---
-# <a name="overview-of-arm32-abi-conventions"></a>Przegląd Konwencji ABI ARM32
+# <a name="overview-of-arm32-abi-conventions"></a>Omówienie Konwencji ABI ARM32
 
-Interfejsem binarnym aplikacji (ABI) dla kodu skompilowane dla Windows na procesorach ARM opiera się na standardowych EABI ARM. W tym artykule opisano podstawowe różnice między Windows na ARM i standard. W tym dokumencie opisano ARM32 ABI. Aby uzyskać informacji na temat interfejsu ABI ARM64, zobacz [Konwencji ABI Przegląd architektury ARM64](arm64-windows-abi-conventions.md). Aby uzyskać więcej informacji na temat standardowych EABI ARM, zobacz [aplikacji binarny interfejsu (ABI) dla architektury ARM](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html) (link zewnętrzny).
+Interfejs binarny aplikacji (ABI) dla kodu skompilowanego dla systemu Windows w procesorach ARM jest oparty na standardowym EABI ARM. W tym artykule przedstawiono najważniejsze różnice między systemem Windows w systemie ARM a standardem. Ten dokument obejmuje ARM32 ABI. Aby uzyskać informacje na temat ARM64 ABI, zobacz [Omówienie Konwencji ABI arm64](arm64-windows-abi-conventions.md). Aby uzyskać więcej informacji na temat standardowego ARM EABI, zobacz [Application Binary Interface (ABI) dla architektury ARM](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html) (Link zewnętrzny).
 
-## <a name="base-requirements"></a>Wymagania dotyczące podstawowej
+## <a name="base-requirements"></a>Wymagania podstawowe
 
-Windows na ARM zakłada, że działa on architektury ARMv7 przez cały czas. Obsługa modelu zmiennoprzecinkowego w postaci VFPv3 D32 lub nowszy musi być obecny w sprzęcie. Visual FOXPRO musi obsługiwać zarówno pojedynczej precyzji, jak i podwójnej precyzji zmiennoprzecinkowych sprzętu. Środowisko wykonawcze Windows nie obsługuje emulację zmiennoprzecinkową, aby umożliwić wykonywanie na sprzęcie, inne niż Visual FOXPRO.
+System Windows on ARM zakłada, że działa on w architekturze architektury ARMv7 przez cały czas. Obsługa zmiennoprzecinkowa w formie VFPv3-D32 lub nowszej musi być obecna na sprzęcie. Visual FoxPro musi obsługiwać jednocześnie zmiennoprzecinkowe punkty o pojedynczej precyzji i podwójnej precyzji. Środowisko uruchomieniowe systemu Windows nie obsługuje emulacji zmiennoprzecinkowej, aby umożliwić uruchamianie na sprzęcie innym niż Visual FoxPro.
 
-Zaawansowana obsługa rozszerzenia SIMD (NEON) — obejmuje to liczba całkowita i operacji zmiennoprzecinkowych — musi być obecny w sprzęcie. Brak obsługi środowiska wykonawczego emulacji podano.
+Obsługa zaawansowanych rozszerzeń SIMD (NEON) — obejmuje to zarówno liczbę całkowitą, jak i zmiennoprzecinkową — muszą także być obecne na sprzęcie. Nie podano obsługi emulacji w czasie wykonywania.
 
-Obsługa dzielenia liczby całkowitej (UDIV/SDIV) jest zdecydowanie zaleca się, ale nie jest wymagane. Platformy, które nie obsługują dzielenie liczby całkowitej może spowodować zmniejszenie wydajności, ponieważ te operacje mają być zablokował i ewentualnie zastosować poprawki.
+Obsługa dzielenia liczb całkowitych (UDIV/SDIV) jest silnie zalecana, ale nie jest wymagana. Platformy, które nie obsługują dzielenia liczb całkowitych, mogą powodować spadek wydajności, ponieważ te operacje muszą być zalewkowane i prawdopodobnie z poprawkami.
 
-## <a name="endianness"></a>Kolejność bajtów
+## <a name="endianness"></a>Endian
 
-Windows na ARM wykonuje się w trybie little-endian. Kompilator MSVC i środowisko wykonawcze Windows oczekiwać, że dane little-endian przez cały czas. Chociaż ustawić SETEND instrukcji w instrukcji ARM architektura (ISA) umożliwia kod nawet trybu użytkownika, aby zmienić bieżący kolejność bajtów, wykonanie tej tak nie jest zalecane jest niebezpieczny dla aplikacji. Jeśli wyjątek jest generowany w trybie big-endian zachowanie jest nieprzewidywalne i może prowadzić do błędów aplikacji w trybie użytkownika lub operacji wykrywania błędów w trybie jądra.
+System Windows on ARM jest wykonywany w trybie little-endian. Zarówno kompilator MSVC, jak i środowisko uruchomieniowe systemu Windows oczekują, że dane są znacznie little-endian. Mimo że instrukcja SETEND w architekturze zestawu instrukcji ARM (ISA) umożliwia nawet kod trybu użytkownika, aby zmienić bieżącą endian, nie jest to zalecane, ponieważ jest niebezpieczne dla aplikacji. Jeśli wyjątek jest generowany w trybie big-endian, zachowanie jest nieprzewidywalne i może prowadzić do błędu aplikacji w trybie użytkownika lub operacji wykrywania błędów w trybie jądra.
 
 ## <a name="alignment"></a>Wyrównanie
 
-Mimo że Windows umożliwia sprzętu ARM do obsługi liczby całkowitej niewyrównane uzyskuje dostęp do przejrzysty, wyrównanie, które błędy nadal mogą być generowane w niektórych sytuacjach. Należy wykonać następujące czynności dla wyrównania:
+Mimo że system Windows umożliwia sprzętowi ARM obsługę niewidocznych w sposób przezroczysty dostępu do liczby całkowitej, nadal mogą być generowane błędy wyrównania w niektórych sytuacjach. Postępuj zgodnie z następującymi regułami:
 
-- Połowa word o rozmiarze (16-bitowy) o rozmiarze word liczby całkowitej (32-bitowy), ładuje i magazyny nie muszą być wyrównane. Sprzęt obsługuje je, wydajne i w sposób niewidoczny dla użytkownika.
+- Nie trzeba wyrównać liczby liczb całkowitych i magazynów o rozmiarze połówkowym (16-bitowym) i formacie (32-bitowym). Sprzęt obsługuje je wydajnie i w sposób przezroczysty.
 
-- Zmiennoprzecinkowe obciążeń i magazynów, powinno być wyrównane. Jądro obsługuje niewyrównanych obciążenia i są przechowywane w sposób niewidoczny dla użytkownika, ale z znaczne obciążenie.
+- Obciążenia i magazyny zmiennoprzecinkowe powinny być wyrównane. Jądro obsługuje niewyrównane obciążenia i przechowuje je w sposób niewidoczny, ale z znaczącym obciążeniem.
 
-- Ładowanie lub przechowywać podwójnej precyzji (LDRD/STRD) i wiele operacji (LDM/STM) powinno być wyrównane. Jądro obsługuje większość z nich w sposób niewidoczny dla użytkownika, ale z znaczne obciążenie.
+- Należy wyrównać liczbę operacji ładowania lub zapisu podwójnego (LDRD/STRD) i wiele (LDM/STM). Jądro obsługuje większość z nich w sposób niewidoczny, ale z znaczącym obciążeniem.
 
-- Wszystkie dostępy do pamięci bez buforowania muszą być wyrównane, nawet w przypadku uzyskuje dostęp do liczby całkowitej. Niewyrównane dostępy spowodować błąd wyrównania.
+- Wszystkie niebuforowane dostęp do pamięci muszą być wyrównane, nawet w przypadku dostępu do liczby całkowitej. Niewyrównane dostępy powodują błąd wyrównania.
 
 ## <a name="instruction-set"></a>Zestaw instrukcji
 
-Instrukcja dla Windows na ARM jest ograniczone do Thumb-2. Cały kod wykonywany na tej platformie oczekuje się, aby uruchomić i pozostają w trybie podglądu przez cały czas. Próba przełączenia się do starszej wersji zestaw instrukcji ARM może się powieść, ale jeśli tak, wszystkie wyjątki lub przerwania występujących może prowadzić do błędów aplikacji w trybie użytkownika lub operacji wykrywania błędów w trybie jądra.
+Zestaw instrukcji dla systemu Windows w usłudze ARM jest ściśle ograniczony do miniatury 2. Cały kod wykonywany na tej platformie powinien zostać uruchomiony i pozostanie w trybie przewijania przez cały czas. Próba przełączenia się do starszego zestawu instrukcji ARM może się nie powieść, ale jeśli tak się stało, wszelkie wyjątki lub przerwy mogą prowadzić do błędu aplikacji w trybie użytkownika lub operacji wykrywania błędów w trybie jądra.
 
-Efektem ubocznym tego wymagania jest wszystkie wskaźniki kod musi bit niski, wartość. Jest to tak, aby podczas są ładowane i rozgałęziony do za pośrednictwem BLX lub BX, procesor będzie pozostawać w trybie podglądu, a nie podejmie próby wykonania kodu docelowego jako 32-bitowe instrukcje ARM.
+Efektem ubocznym tego wymagania jest to, że wszystkie wskaźniki kodu muszą mieć ustawiony niski bit. Jest tak, że po załadowaniu i rozgałęzieniu do za pośrednictwem BLX lub BX, procesor pozostanie w trybie kciuka i nie spróbuje wykonać kodu docelowego jako 32-bitowe instrukcje ARM.
 
 ### <a name="it-instructions"></a>Instrukcje IT
 
-Użycie IT zgodnie z instrukcjami w kod Thumb-2 jest niedozwolone z wyjątkiem tych określonych przypadków:
+Użycie instrukcji IT w kodzie kciuka 2 jest niedozwolone z wyjątkiem tych szczególnych przypadków:
 
-- Instrukcja IT należy używać tylko do modyfikowania jednej instrukcji docelowej.
+- Instrukcji IT można użyć tylko w celu zmodyfikowania jednej instrukcji docelowej.
 
-- Instrukcji docelowej musi być instrukcja 16-bitowych.
+- Instrukcja Target musi być instrukcją 16-bitową.
 
-- Instrukcji docelowej musi mieć jedną z nich:
+- Docelowa instrukcja musi być jedną z następujących:
 
-   |Rozkazów 16-bitowych|Class|Ograniczenia|
+   |16-bitowe kod operacji|Klasa|Ograniczenia|
    |---------------------|-----------|------------------|
-   |MOV, MVN|Przenieś|Menedżer zasobów! = PC, usług pulpitu zdalnego! = PC|
-   |LDR, LDR[S]B, LDR[S]H|Ładowanie z pamięci|Ale nie LDR literału formularzy|
-   |STR, STRB, STRH|Store pamięci||
-   |ADD, ADC, RSB, SBC, SUB|Dodaj lub Odejmij|Ale nie SP ADD/SUBSKRYBOWANIA, PS, imm7 formularzy<br /><br /> Menedżer zasobów! = PC, Rdn! = PC, od Rdm! = PC|
-   |CMP, CMN|{1&gt;Compare&lt;1}|Menedżer zasobów! = PC, Rn! = PC|
-   |MUL|Mnożenie||
-   |ASR, LSL, LSR, ROR|Przesunięcie bitu||
-   |AND, BIC, EOR, ORR, TST|Bitowe operacje arytmetyczne||
-   |BX|Gałąź do zarejestrowania|Menedżer zasobów! = PC|
+   |MOV, MVN|Przenieś|RM! = PC, RD! = PC|
+   |LDR, LDR[S]B, LDR[S]H|Ładowanie z pamięci|Ale nie są to formy literału LDR|
+   |STR, STRB, STRH|Przechowywanie w pamięci||
+   |ADD, ADC, RSB, SBC, SUB|Dodaj lub Odejmij|Ale nie Dodaj/SUB SP, SP, imm7 Forms<br /><br /> RM! = PC, RDN! = PC, RDM! = PC|
+   |CMP, CMN|Porównaniu|RM! = PC, RN! = PC|
+   |MUL|Mnożenia||
+   |ASR, SKRÓCONO, LSR, ROR|Bit Shift||
+   |I, BIC, EOR, ORR, TST|Arytmetyka bitowa||
+   |BX|Gałąź do zarejestrowania|RM! = komputer|
 
-Mimo że bieżący ARMv7 procesorów CPU, nie można zgłosić użycia formularzy niedozwoloną instrukcję, przyszłych generacji powinny. W przypadku wykrycia tych postaci dowolnego programu, który używa tych może zostać zakończona z powodu wyjątku niezdefiniowane instrukcji.
+Chociaż bieżące procesory architektury ARMv7 nie mogą raportować użycia niedozwolonych formularzy instrukcji, oczekiwane są przyszłe generacje. W przypadku wykrycia tych formularzy każdy program, który z nich korzysta, może zostać zakończony niezdefiniowanym wyjątkiem instrukcji.
 
 ### <a name="sdivudiv-instructions"></a>Instrukcje SDIV/UDIV
 
-Korzystanie z liczbą całkowitą podzielić SDIV i UDIV jest w pełni obsługiwane, nawet na platformach bez natywnego sprzętu do obsługi tych instrukcji. Koszt pojedynczego SDIV lub UDIV dzielenia na procesorze Cortex A9 jest około 80 cykle, oprócz całkowity czas dzielenia 20-250 cykli, w zależności od danych wejściowych.
+Korzystanie z instrukcji dzielenia liczb całkowitych SDIV i UDIV jest w pełni obsługiwane nawet na platformach bez natywnego sprzętu do ich obsługi. Obciążenie przypadające na SDIV lub UDIV dzieli na Procesor Cortex-A9 ma około 80 cykli, a także do całkowitego czasu dzielenia 20-250 cykli, w zależności od danych wejściowych.
 
-## <a name="integer-registers"></a>Rejestruje liczbę całkowitą
+## <a name="integer-registers"></a>Rejestry całkowite
 
-Procesor ARM obsługuje 16 rejestrów liczbą całkowitą:
+Procesor ARM obsługuje 16-całkowite rejestry:
 
-|Rejestruj|Nietrwałe?|Rola|
+|Rejestruj|Volatile?|Rola|
 |--------------|---------------|----------|
-|r0|Volatile|Parametr, wynik, pliki tymczasowe rejestr 1|
-|r1|Volatile|Parametr, wynik, pliki tymczasowe rejestru 2|
-|r2|Volatile|Parametr, pliki tymczasowe rejestru 3|
-|r3|Volatile|Parametr, pliki tymczasowe rejestru 4|
-|R4|Non-volatile||
-|r5|Non-volatile||
-|r6|Non-volatile||
-|r7|Non-volatile||
-|R8|Non-volatile||
-|r9|Non-volatile||
-|R10|Non-volatile||
-|r11|Non-volatile|Wskaźnik ramki|
-|r12|Volatile|Zarejestruj się wewnątrz procedury wywołania pliki tymczasowe|
-|r13 (SP)|Non-volatile|Wskaźnik stosu|
-|R14 (LR)|Non-volatile|Zarejestruj się łącze|
-|r15 (PC)|Non-volatile|Licznik programu|
+|r0|Volatile|Parametr, wynik, rejestr rejestru 1|
+|r1|Volatile|Parametr, wynik, rejestr rejestru 2|
+|r2|Volatile|Parametr, rejestr o rejestracji 3|
+|R3|Volatile|Parametr, rejestr Wyrejestrowanie 4|
+|R4|Nietrwały||
+|r5|Nietrwały||
+|r6|Nietrwały||
+|r7|Nietrwały||
+|R8|Nietrwały||
+|r9|Nietrwały||
+|r10|Nietrwały||
+|r11|Nietrwały|Wskaźnik ramki|
+|r12|Volatile|Rejestr wywołujący wewnątrz procedury|
+|r13 (SP)|Nietrwały|Wskaźnik stosu|
+|R14 (LR)|Nietrwały|Połącz z rejestrem|
+|R15 (komputer)|Nietrwały|Licznik programu|
 
-Aby uzyskać szczegółowe informacje o sposobie używania parametrów i zwracanej wartości w rejestrach, zobacz sekcję przekazywania parametru, w tym artykule.
+Aby uzyskać szczegółowe informacje na temat korzystania z rejestrów i wartości zwracanych, zobacz sekcję przekazywanie parametrów w tym artykule.
 
-Windows używa r11 zalet fast ramki stosu. Aby uzyskać więcej informacji zobacz sekcję stos. Ze względu na to wymaganie r11 musi wskazywać na łącze znajdujące się najwyżej w łańcuchu przez cały czas. Nie używaj r11 do ogólnych celów — kod nie wygeneruje przeszukiwań stosu poprawny podczas analizy.
+System Windows używa R11 do szybkiego przechodzenia do ramki stosu. Aby uzyskać więcej informacji, zobacz sekcję przechodzenie stosu. Ze względu na to wymaganie R11 musi wskazywać górne łącze w łańcuchu przez cały czas. Nie używaj R11 do celów ogólnych — kod nie będzie generował poprawnych przeszukiwań stosu podczas analizy.
 
-## <a name="vfp-registers"></a>Rejestruje Visual FOXPRO
+## <a name="vfp-registers"></a>Rejestry Visual FoxPro
 
-Windows obsługuje tylko wariantów ARM, które mają Koprocesor VFPv3 D32 pomocy technicznej. Oznacza to rejestrów zmiennoprzecinkowych są zawsze obecne i może polegać na przekazywanie parametru i że pełny zestaw rejestrów 32 jest dostępny do użytku. Rejestruje Visual FOXPRO i podsumowanie ich użycia można znaleźć w tej tabeli:
+System Windows obsługuje tylko warianty ARM z obsługą międzyprocesora VFPv3-D32. Oznacza to, że rejestry zmiennoprzecinkowe są zawsze obecne i mogą być używane do przekazywania parametrów oraz że pełny zestaw rejestrów 32 jest dostępny do użycia. Rejestry Visual FoxPro i ich użycie zostały podsumowane w tej tabeli:
 
-|Wybiera|podwojenia|Quads|Nietrwałe?|Rola|
+|Zmiennoprzecinkowych|podwojenia|Cztery|Volatile?|Rola|
 |-------------|-------------|-----------|---------------|----------|
-|s0 s3|d0-d1|q0|Volatile|Parametry, wyniku scratch rejestru|
-|S7 — S4|d2 d3|q1|Volatile|Rejestrowanie parametrów, pliki tymczasowe|
-|s8 s11|D4 d5|q2|Volatile|Rejestrowanie parametrów, pliki tymczasowe|
-|s12-s15|D6 d7|q3|Volatile|Rejestrowanie parametrów, pliki tymczasowe|
-|s16-s19|D8 d9|q4|Non-volatile||
-|s20-s23|D10 d11|q5|Non-volatile||
-|s24-s27|D12 d13|q6|Non-volatile||
-|S28 s31|D14 d15|q7|Non-volatile||
-||D16 d31|q8-q15|Volatile||
+|S0 — S3|d0 — D1|q0|Volatile|Parametry, wynik, rejestr Wyrejestrowanie|
+|S4-S7|D2-D3|q1|Volatile|Parametry, rejestr tymczasowy|
+|S8 — S11|D4-ze|q2|Volatile|Parametry, rejestr tymczasowy|
+|S12 — S15|d6-d7|q3|Volatile|Parametry, rejestr tymczasowy|
+|s16-s19|D8 — D9|q4|Nietrwały||
+|S20 — S23|D10 — D11|q5|Nietrwały||
+|s24-s27|D12 — D13|q6|Nietrwały||
+|s28-s31|D14 — D15|q7|Nietrwały||
+||D16 — D31|q8-q15|Volatile||
 
-W następnej tabeli przedstawiono stanu zmiennoprzecinkowego i kontroli zarejestrować pola bitów (FPSCR):
+Następna tabela ilustruje stan zmiennoprzecinkowy i rejestr kontroli (rejestru FPSCR) pola bitów:
 
-|Bity|Znaczenie|Nietrwałe?|Rola|
+|Bity|Znaczenie|Volatile?|Rola|
 |----------|-------------|---------------|----------|
 |31-28|NZCV|Volatile|Flagi stanu|
-|27|QC|Volatile|Nasycenie zbiorcza|
-|26|AHP|Non-volatile|Alternatywne formant precyzji połowie|
-|25|NAZWA WYRÓŻNIAJĄCA|Non-volatile|Domyślny formant tryb NaN|
-|24|FZ|Non-volatile|Kontrolka trybu opróżniania do zera.|
-|23-22|RMode|Non-volatile|Tryb formant zaokrąglenia|
-|21-20|Pobieżne|Non-volatile|Vector — Stride, zawsze musi mieć wartość 0|
-|18-16|Len|Non-volatile|Długość wektora, zawsze musi mieć wartość 0|
-|15, 12-8|IDE, IXE, etc.|Non-volatile|Wyjątek przechwytywania włączenie usługi bits, zawsze musi mieć wartość 0|
-|7, 4-0|IDC, IXC, etc.|Volatile|Flagi zbiorczą wyjątku|
+|27|SKŁADNIKA|Volatile|Nasycenie skumulowane|
+|26|AHP|Nietrwały|Alternatywna kontrola połówkowa|
+|25|NAZWA WYRÓŻNIAJĄCA|Nietrwały|Domyślna kontrolka trybu NaN|
+|24|FZ|Nietrwały|Kontrolka trybu Flush-to-zero|
+|23-22|RMode|Nietrwały|Kontrolka trybu zaokrąglania|
+|21-20|Tabela|Nietrwały|Krok wektora, musi być zawsze równy 0|
+|18-16|Funkcja|Nietrwały|Długość wektora musi być zawsze równa 0.|
+|15, 12-8|IDE, IXE itp.|Nietrwały|W przypadku usługi BITS pułapki wyjątków musi być zawsze równa 0.|
+|7, 4-0|IDC, IXC itp.|Volatile|Flagi zbiorcze wyjątków|
 
 ## <a name="floating-point-exceptions"></a>Wyjątki zmiennoprzecinkowe
 
-Większość sprzętu ARM nie obsługuje wyjątki zmiennoprzecinkowe IEEE. Na wariantów procesora, które mają wyjątków zmiennoprzecinkowych sprzętu jądra Windows zostaje niezauważenie przechwycony wyjątek i niejawnie wyłącza je do rejestru FPSCR. Dzięki temu znormalizowane zachowanie różnych wariantów procesora. W przeciwnym razie kod opracowany na platformie, która nie ma obsługi wyjątków może otrzymać nieoczekiwane wyjątki uruchamianego na platformie, która ma obsługiwać wyjątek.
+Większość sprzętu ARM nie obsługuje wyjątków zmiennoprzecinkowych IEEE. W przypadku wariantów procesora, które mają wyjątki zmiennoprzecinkowe sprzętowe, jądro systemu Windows dyskretnie przechwytuje wyjątki i niejawnie wyłącza je w rejestrze rejestru FPSCR. Zapewnia to normalne zachowanie różnych wariantów procesora. W przeciwnym razie kod opracowany na platformie, która nie ma obsługi wyjątków, może otrzymać nieoczekiwane wyjątki, gdy jest uruchomiona na platformie z obsługą wyjątków.
 
-## <a name="parameter-passing"></a>Przekazywanie parametru
+## <a name="parameter-passing"></a>Przekazywanie parametrów
 
-W przypadku innych zmiennych funkcji Windows na ARM ABI regułom ARM dla parametru, przekazując — w tym rozszerzenia Visual FOXPRO i SIMD zaawansowane. Wykonaj te reguły [standardowe wywołanie procedury dla architektury ARM](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0042c/IHI0042C_aapcs.pdf)skonsolidowanego z rozszerzeniem Visual FOXPRO. Przez domyślne pierwsze cztery liczby całkowitej argumentów i maksymalnie osiem zmiennoprzecinkowego lub vector argumenty są przekazywane w rejestrach, a dodatkowe argumenty są przekazywane na stosie. Argumenty są przypisane do rejestrów lub stosu przy użyciu tej procedury:
+W przypadku funkcji innych niż wariadyczne w systemie Windows w usłudze ARM ABI obowiązują reguły ARM dotyczące przekazywania parametrów — dotyczy to również rozszerzeń Visual FoxPro i Advanced SIMD. Reguły te są zgodne ze [standardowym wywołaniem procedury dla architektury ARM](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0042c/IHI0042C_aapcs.pdf), skonsolidowanym z rozszerzeniami Visual FoxPro. Domyślnie w rejestrach są przesyłane pierwsze cztery argumenty całkowite i maksymalnie osiem argumentów zmiennoprzecinkowych lub wektorowych, a dodatkowe argumenty są przesyłane na stosie. Argumenty są przypisywane do rejestrów lub stosu przy użyciu tej procedury:
 
-### <a name="stage-a-initialization"></a>Etap Odp.: Inicjalizacja
+### <a name="stage-a-initialization"></a>Etap A: inicjalizacja
 
-Inicjalizacja jest wykonywana tylko raz, przed rozpoczęciem przetwarzania argumentu:
+Inicjalizacja jest wykonywana dokładnie raz, przed rozpoczęciem przetwarzania argumentów:
 
-1. Dalej Core zarejestrować numer (NCRN) jest ustawiona na r0.
+1. Kolejny numer podstawowego rejestru (NCRN) jest ustawiony na R0.
 
-1. Visual FOXPRO rejestrów, które są oznaczone jako nieprzydzielony.
+1. Rejestry Visual FoxPro są oznaczone jako nieprzypisane.
 
-1. Dalej skumulowany Argument adresu (NSAA) jest ustawiona na bieżącą SP.
+1. Następny skumulowany adres argumentu (NSAA) jest ustawiony na bieżący SP.
 
-1. Jeśli zostanie wywołana funkcja, która zwraca wynik w pamięci, adres wynik jest umieszczany w r0 i NCRN jest równa r1.
+1. Jeśli wywoływana jest funkcja zwracająca wynik w pamięci, adres wynikowy zostanie umieszczony w R0, a NCRN jest ustawiony na R1.
 
-### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>Etap B: Rozszerzenie argumentów i wstępne wypełnienie
+### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>Etap B: wstępne uzupełnienie i rozszerzenie argumentów
 
-Dla każdego argumentu na liście jest stosowane pierwsza pasująca reguła z następującej listy:
+Dla każdego argumentu na liście stosowana jest pierwsza reguła dopasowywania z następującej listy:
 
-1. Jeśli argument jest typu złożonego, którego rozmiar nie można ustalić statycznie przez obiekt wywołujący i obiekt wywoływany, argument jest kopiowany do pamięci i zastąpione przez wskaźnik do skopiowania.
+1. Jeśli argument jest typu złożonego, którego rozmiar nie może być statycznie określony przez obiekt wywołujący i wywoływany, argument jest kopiowany do pamięci i zastępowany przez wskaźnik do kopii.
 
-1. Jeśli argument jest bajt lub 16-bitowe pół słowo, następnie jest rozszerzony zero lub znak rozszerzony do programu word pełną 32-bitowe i traktowany jako argument 4-bajtowe.
+1. Jeśli argument jest bajtem lub 16-bitową częścią wyrazu, jego wartość wynosi zero lub zostanie rozszerzona do 32-bitowego pełnego wyrazu i traktowana jako argument 4-bajtowy.
 
-1. Jeśli argument jest typu złożonego, jego rozmiar jest zaokrąglana w górę do najbliższej wielokrotności 4.
+1. Jeśli argument jest typu złożonego, jego rozmiar jest zaokrąglany do najbliższej wielokrotności 4.
 
-### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>Etap C: Przypisanie argumenty do rejestrów i stosu
+### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>Etap C: przypisanie argumentów do rejestrów i stosu
 
-Dla każdego argumentu na liście stosowane są następujące reguły z kolei, dopóki nie została przydzielona argument:
+Dla każdego argumentu na liście są stosowane następujące reguły z kolei do momentu przydzielenia tego argumentu:
 
-1. Jeśli argument jest typu Visual FOXPRO i następujących po sobie nieprzydzielone rejestry Visual FOXPRO odpowiedniego typu, argument jest przydzielany do najniższego numerowane sekwencji takich rejestrów.
+1. Jeśli argument jest typu Visual FoxPro i istnieje wystarczającą liczbę kolejnych przyznanych rejestrów Visual FoxPro odpowiedniego typu, argument jest przypisywany do najniższej numerowanej sekwencji takich rejestrów.
 
-1. Jeśli argument jest typu Visual FOXPRO, wszystkich pozostałych nieprzydzielonych rejestrów zostaną oznaczone jako czas niedostępności. NSAA jest dostosowywany do góry, dopóki nie jest prawidłowo wyrównany dla typu argumentu, a argument jest kopiowany do stosu na skorygowany NSAA. NSAA jest zwiększana o rozmiar argumentu.
+1. Jeśli argument jest typu Visual FoxPro, wszystkie pozostałe nieprzypisane rejestry są oznaczane jako niedostępne. NSAA jest dostosowywany w górę do momentu, aż zostanie prawidłowo wyrównany dla typu argumentu, a argument zostanie skopiowany do stosu w dopasowanym NSAA. Wartość NSAA jest zwiększana o rozmiar argumentu.
 
-1. Jeśli argument wymaga 8-bajtowe wyrównanie, NCRN jest zaokrąglana w górę do najbliższej liczby nawet rejestru.
+1. Jeśli argument wymaga 8-bajtowego wyrównania, NCRN jest zaokrąglany do następnego parzystego numeru rejestru.
 
-1. Jeśli rozmiar argumentu w 32-bitowych słów nie jest więcej niż r4 minus NCRN, argument jest kopiowana do rejestrów core, w NCRN, począwszy od najmniej znaczące bity zajmuje niższych numerach rejestrów. NCRN jest zwiększany przez liczbę rejestry używane.
+1. Jeśli rozmiar argumentu w 32-bitowym słowie nie jest większy niż R4 minus NCRN, argument jest kopiowany do rejestrów podstawowych, rozpoczynając od NCRN, z najmniej znaczącymi bitami w przypadku rejestrów z niższymi numerami. NCRN jest zwiększana o liczbę używanych rejestrów.
 
-1. Jeśli NCRN jest mniejsza niż r4 NSAA jest równy PS, argument jest podzielony między rejestrów podstawowych i stosu. Pierwsza część argument jest kopiowana do rejestrów core, począwszy od NCRN, do i łącznie r3. W pozostałej części argument jest kopiowana na stosie, zaczynając od NSAA. NCRN ustawiono r4 a NSAA jest zwiększany o rozmiar argumentu, minus kwota przekazywane w rejestrach.
+1. Jeśli wartość NCRN jest mniejsza niż R4, a NSAA jest równa SP, argument jest dzielony między rejestrami podstawowymi a stosem. Pierwsza część argumentu jest kopiowana do rejestrów podstawowych, rozpoczynając od NCRN, w tym R3. Pozostała część argumentu jest kopiowana na stos, rozpoczynając od NSAA. NCRN jest ustawiona na R4, a wartość NSAA jest zwiększana o rozmiar argumentu minus kwota przeniesiona w rejestrach.
 
-1. Jeśli argument wymaga 8-bajtowe wyrównanie, NSAA jest zaokrąglana w górę do następnego adresu wyrównany 8-bajtowych.
+1. Jeśli argument wymaga 8-bajtowego wyrównania, NSAA jest zaokrąglany do następnego 8-bajtowego wyrównanego adresu.
 
-1. Argument jest kopiowana do pamięci na NSAA. NSAA jest zwiększany o rozmiar argumentu.
+1. Argument jest kopiowany do pamięci w NSAA. Wartość NSAA jest zwiększana o rozmiar argumentu.
 
-Visual FOXPRO rejestrów, które nie są używane do funkcji ze zmienną liczbą argumentów, a zasady C etap 1 i 2 są ignorowane. Oznacza to, czy funkcji ze zmienną liczbą argumentów można zaczynają się od opcjonalne wypychania {r0 r3} można poprzedzić argumenty Zarejestruj wszelkie dodatkowe argumenty przekazane przez obiekt wywołujący, a następnie przejść do listy argumentów całego bezpośrednio ze stosu.
+Rejestry Visual FoxPro nie są używane dla funkcji wariadyczne, a zasady dotyczące etapu C i 2 są ignorowane. Oznacza to, że funkcja wariadyczne może rozpoczynać się od opcjonalnego wypychania {R0-R3}, aby dołączać argumenty rejestru do wszelkich dodatkowych argumentów przekazana przez obiekt wywołujący, a następnie uzyskiwać dostęp do całej listy argumentów bezpośrednio ze stosu.
 
-Liczba całkowita typu wartości są zwracane w r0, opcjonalnie rozszerzony do r1 dla 64-bitowych wartości zwracanych. Visual FOXPRO/NEON zmiennoprzecinkowego lub SIMD typu wartości są zwracane w s0, d0 lub q0 zgodnie z potrzebami.
+Wartości typu integer są zwracane w R0, opcjonalnie rozszerzone do R1 dla 64-bitowych wartości zwracanych. Wartości typu zmiennoprzecinkowego Visual FoxPro/NEON lub SIMD są zwracane w S0, d0 lub Q0, zgodnie z potrzebami.
 
 ## <a name="stack"></a>Stos
 
-Stos musi pozostać 4-bajtowego wyrównania przez cały czas i musi być 8-bajtowych wyrównany na granicy żadnych funkcji. Jest to wymagane w celu obsługi często są używane operacje blokowane w zmiennych stosu 64-bitowych. ARM EABI stanów, że stos jest 8-bajtowych wyrównane na dowolnego interfejsu publicznego. W celu zapewnienia spójności Windows na ARM ABI uwzględnia wszystkie granicę funkcji jako interfejsu publicznego.
+Stos musi pozostać 4-bajtowy i musi być wyrównany 8-bajtowy w dowolnej granicy funkcji. Jest to wymagane do obsługi częstego używania operacji zablokowanych na 64-bitowych zmiennych stosu. EABI ARM wskazuje, że stos to 8-bajtowy wyrównany do dowolnego interfejsu publicznego. Aby zapewnić spójność, system Windows on ARM ABI traktuje wszystkie granice funkcji jako interfejs publiczny.
 
-Funkcje, które trzeba użyć wskaźnika ramki — na przykład funkcje to wywołanie `alloca` lub wskaźnik stosu, zmieniać dynamicznie — należy zdefiniować wskaźnik ramki w r11 w prologu funkcji i pozostaw je bez zmian do momentu epilogu. Funkcje, które nie wymagają wskaźnik ramki, należy wykonać wszystkie aktualizacje stosu w prologu i pozostaw bez zmian do momentu epilogu wskaźnik stosu.
+Funkcje, które muszą używać wskaźnika ramki — na przykład funkcje, które wywołują `alloca` lub które dynamicznie zmieniają Wskaźnik stosu — muszą skonfigurować wskaźnik klatki w R11 w funkcji prologu i pozostawić go bez zmian do epilogu. Funkcje, które nie wymagają wskaźnika ramki, muszą wykonać wszystkie aktualizacje stosu w prologu i pozostawić Wskaźnik stosu niezmieniony do epilogu.
 
-Funkcje, które alokują 4 KB lub więcej informacji na temat stosu należy się upewnić, że każda strona przed ostatnią stronę jest dotknięciu w kolejności. Daje to gwarancję, że żaden kod nie może "przeć za pośrednictwem" stron ochrony, używane przez program Windows do rozwijania stosu. Zazwyczaj jest to realizowane `__chkstk` pomocnika, która jest przekazywana Alokacja całkowita stosu w bajtach podzielona przez 4 w r4 i zwraca kwoty alokacji stosu końcowe w bajtach w r4.
+Funkcje, które przydzielą 4 KB lub więcej na stosie, muszą mieć pewność, że każda strona przed ostatnią stroną jest w porządku. Gwarantuje to, że żaden kod nie może "przekroczyć" stron ochrony, które są używane przez system Windows do rozszerzenia stosu. Zwykle jest to wykonywane przez pomocnika `__chkstk`, który przekazuje całkowitą alokację stosu w bajtach podzieloną przez 4 w R4 i która zwraca końcową ilość przydziału stosu w bajtach z powrotem w R4.
 
-### <a name="red-zone"></a>Czerwony strefy
+### <a name="red-zone"></a>Czerwona strefa
 
-8-bajtowych obszar bezpośrednio pod bieżący wskaźnik stosu jest zarezerwowany dla analizy i dynamiczne poprawek. Pozwala to na dokładnie wygenerowany kod w celu wstawienia, która przechowuje 2 rejestrów w [sp # 8] oraz tymczasowo są one używane do celów dowolnego. Jądra Windows gwarantuje, że te 8 bajtów nie zostaną zastąpione, jeśli wystąpi wyjątek lub przerwania występuje zarówno w trybie użytkownika, jak i w trybie jądra.
+8-bajtowy obszar bezpośrednio poniżej bieżącego wskaźnika stosu jest zarezerwowany do analizy i stosowania poprawek dynamicznych. Pozwala to na użycie dokładnie wygenerowanego kodu, w którym są przechowywane 2 rejestry w [SP, #-8], a tymczasowo używa ich do dowolnych celów. Jądro systemu Windows gwarantuje, że te 8 bajtów nie zostanie nadpisane, jeśli wystąpi wyjątek lub przerwa w trybie użytkownika i Tryb jądra.
 
 ### <a name="kernel-stack"></a>Stos jądra
 
-Stosu domyślnego trybu jądra w Windows to trzy strony (12 KB). Uważaj, aby nie tworzyć funkcje, które mają duże stosu buforów w trybie jądra. Przerwania może pochodzić za pomocą bardzo mało stosu sporo miejsca i spowodować, że wyniki operacji alarm stosu.
+Domyślny stos trybu jądra w systemie Windows to trzy strony (12 KB). Należy zachować ostrożność, aby nie tworzyć funkcji, które mają duże bufory stosu w trybie jądra. Przerwanie może potrwać z dużą ilością stosu i spowodować awarię stosu awaryjnego.
 
-## <a name="cc-specifics"></a>Szczegóły języka C/C++
+## <a name="cc-specifics"></a>C/C++ charakterystyki
 
-Wyliczenia są typów 32-bitowej liczby całkowitej, chyba że co najmniej jednej wartości w wyliczeniu, wymaga 64-bitowych podwójne słowo magazynu. W takim przypadku wyliczenia jest podnoszony do typu 64-bitową liczbę całkowitą.
+Wyliczenia są 32-bitowymi liczbami całkowitymi, chyba że co najmniej jedna wartość w wyliczeniu wymaga magazynu o wartości 64-bitowej podwójnego tekstu. W takim przypadku Wyliczenie zostanie podwyższone do 64-bitowej liczby całkowitej.
 
-`wchar_t` są zdefiniowane jako równoważne `unsigned short`, w celu zachowania zgodności z innymi platformami.
+`wchar_t` jest zdefiniowane jako równoważne z `unsigned short`, aby zachować zgodność z innymi platformami.
 
-## <a name="stack-walking"></a>Przechodzenie po stosie
+## <a name="stack-walking"></a>Idący stos
 
-Windows kod jest kompilowany za pomocą wskaźników ramek włączone ([/Oy (pominięcie wskaźnika ramki)](reference/oy-frame-pointer-omission.md)) umożliwiające szybkie stos. Ogólnie rzecz biorąc, r11 zarejestrować wskazuje następny link w łańcuchu, czyli {r11, lr} pary, który określa wskaźnik do poprzedniej ramki stosu i adres zwrotny. Zaleca się, że Twój kod również włączyć wskaźników ramek na lepsze profilowania i śledzenia.
+Kod systemu Windows jest kompilowany z włączonymi wskaźnikami ramki ([/Oy (pominięcie wskaźnika ramki)](reference/oy-frame-pointer-omission.md)), aby umożliwić szybkie przechodzenie na stosie. Ogólnie rzecz biorąc, rejestr R11 wskazuje następny link w łańcuchu, czyli parę {R11, LR}, która określa wskaźnik do poprzedniej klatki na stosie i adres zwrotny. Firma Microsoft zaleca, aby kod również włączał wskaźniki klatek do ulepszonego profilowania i śledzenia.
 
-## <a name="exception-unwinding"></a>Odwijanie wyjątków
+## <a name="exception-unwinding"></a>Odwracanie wyjątku
 
-Odwijanie podczas obsługi wyjątku stosu jest włączona przy użyciu kodów unwind. Kody unwind to sekwencja bajtów przechowywanych w sekcji .xdata obrazu pliku wykonywalnego. Opisano w nich wykonać kod prologu i epilogu funkcji w sposób abstrakcyjne tak, aby skutki prologu funkcji można cofnąć w ramach przygotowania do rozwinięcia do obiektu wywołującego ramki stosu.
+Odwinięcie stosu podczas obsługi wyjątków jest włączane przy użyciu kodów wywinięcia. Kody operacji unwind są sekwencją bajtów przechowywanych w sekcji. xdata obrazu wykonywalnego. Opisują one działanie funkcji prologu i epilogu Code w sposób abstrakcyjny, dzięki czemu efekty prologu funkcji mogą być cofnięte w celu odwinięcia ramki stosu obiektu wywołującego.
 
-ARM EABI określa odwijania model wyjątków, który używa kodów odwinięcia. Jednak ta specyfikacja nie wystarcza do rozwinięcia w Windows, który musi obsługiwać przypadki, w którym procesor jest w trakcie prologu i epilogu funkcji. Aby uzyskać więcej informacji na temat Windows na dane wyjątków ARM i odwinięcie zobacz [obsługi wyjątków ARM](arm-exception-handling.md).
+EABI ARM Określa model odwinięcia wyjątku, który używa kodów unwind. Jednakże Ta specyfikacja nie wystarcza do odwinięcia w systemie Windows, co musi obsługiwać przypadki, w których procesor znajduje się w środku prologu lub epilogu funkcji. Aby uzyskać więcej informacji o danych wyjątku ARM i rozwinięcia systemu Windows, zobacz temat [Obsługa wyjątków ARM](arm-exception-handling.md).
 
-Zaleca się, że dynamicznie generowanego kodu można uznać za pomocą funkcji dynamicznego tabel określone w wywołaniach `RtlAddFunctionTable` i skojarzone funkcje, tak aby wygenerowanego kodu mogą uczestniczyć w programie obsługi wyjątków.
+Zaleca się, aby dynamicznie generowany kod został opisany przy użyciu tabel funkcji dynamicznych określonych w wywołaniach do `RtlAddFunctionTable` i skojarzonych funkcji, tak aby wygenerowany kod mógł uczestniczyć w obsłudze wyjątków.
 
 ## <a name="cycle-counter"></a>Licznik cyklu
 
-Procesory ARM z systemem Windows są wymagane do obsługi licznika cyklu, ale bezpośrednio przy użyciu licznik mogą powodować problemy. Aby uniknąć tych problemów, Windows na ARM używa niezdefiniowanego opcode żądania znormalizowaną wartość licznika cyklu 64-bitowych. Z C lub C++, użyj `__rdpmccntr64` nierozerwalnie związane emitować odpowiedni kod operacji; z zestawu, należy użyć `__rdpmccntr64` instrukcji. Odczytywanie licznika cyklu zajmuje około 60 cykli na Cortex – A9.
+Procesory ARM z systemem Windows są wymagane do obsługi licznika cykl, ale użycie licznika bezpośrednio może spowodować problemy. Aby uniknąć tych problemów, system Windows on ARM używa niezdefiniowanego kodu operacji do żądania znormalizowanej wartości licznika 64-bitowego cyklu. W języku C C++lub użyj wewnętrznego `__rdpmccntr64`, aby wyemitować odpowiedni opcode; z zestawu, użyj instrukcji `__rdpmccntr64`. Odczyt licznika cykl trwa około 60 cykli na Cortex-A9.
 
-Ten licznik jest licznikiem true cyklu, nie zegara; w związku z tym zliczania częstotliwość zależy od częstotliwości procesora. Aby zmierzyć zegara Upłynęło czasu, należy użyć `QueryPerformanceCounter`.
+Licznik jest prawdziwym licznikiem cyklu, a nie zegarem; w związku z tym częstotliwość zliczania zależy od częstotliwości procesora. Jeśli chcesz mierzyć czas zegara, użyj `QueryPerformanceCounter`.
 
 ## <a name="see-also"></a>Zobacz także
 

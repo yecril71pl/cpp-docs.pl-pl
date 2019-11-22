@@ -1,27 +1,32 @@
 ---
 title: Makra rekursji
-ms.date: 11/04/2016
+description: Opisuje makra używane do wywoływania NMAKE w sesjach cyklicznych.
+ms.date: 11/20/2019
 helpviewer_keywords:
 - NMAKE program, recursion macros
 - recursion macros
 - macros, recursion
 ms.assetid: c53e5ae7-619e-46b1-bdc2-86d8c7798b1d
-ms.openlocfilehash: 064bc40906bcf3a126c225585a6df43443b5c38e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+no-loc:
+- MAKE
+- MAKEDIR
+- MAKEFLAGS
+ms.openlocfilehash: f2bda23cb079e4fd7d12cea3598d33b3625c088d
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319242"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303152"
 ---
 # <a name="recursion-macros"></a>Makra rekursji
 
-Makra rekursji umożliwia wywołanie NMAKE cyklicznie. Sesje cyklicznego dziedziczyć wiersza polecenia i zmienną środowiskową makr i Tools.ini informacji. Nie dziedziczą reguły wnioskowania zdefiniowane w pliku reguł programu make lub **. SUFIKSY** i **. CENNEGO** specyfikacji. Aby przekazać makra do sesji NMAKE cykliczne, ustawić zmienną środowiskową przy użyciu zestawu przed wywołaniem cykliczne, zdefiniować makro w poleceniu wywołanie cykliczne lub zdefiniować makro w Tools.ini.
+Używaj makr rekursji do wywoływania NMAKE rekursywnie. Sesje cykliczne dziedziczą makra w wierszu polecenia i zmienne środowiskowe oraz informacje Tools. ini. Nie dziedziczą one reguł wnioskowania zdefiniowanych przez plik reguł programu make ani specyfikacji `.SUFFIXES` i `.PRECIOUS`. Istnieją trzy sposoby przekazywania makr do cyklicznej sesji NMAKE: Ustaw zmienną środowiskową z :::no-loc text="SET"::: poleceniem przed wywołaniem cyklicznym. Zdefiniuj makro w poleceniu dla wywołania cyklicznego. Lub Zdefiniuj makro w pliku Tools. ini.
 
 |Macro|Definicja|
 |-----------|----------------|
-|**WPROWADŹ**|Polecenie pierwotnie używana do wywołania NMAKE.<br /><br /> Makra $(MAKE) zapewnia pełną ścieżkę do nmake.exe.|
-|**MAKEDIR**|Bieżący katalog NMAKE została wywołana.|
-|**MAKEFLAGS**|Opcje aktualnie w obiekcie. Użyj jako `/$(MAKEFLAGS)`.  Uwaga: /F nie jest włączony.|
+|**MAKE**|Polecenie użyte pierwotnie do wywołania NMAKE.<br /><br /> Makro `$(MAKE)` zapewnia pełną ścieżkę do NMAKE. exe.|
+|**MAKEDIR**|Bieżący katalog po wywołaniu NMAKE.|
+|**MAKEFLAGS**|Obecnie obowiązujące opcje. Użyj jako `/$(MAKEFLAGS)`. Opcja **/f** nie jest uwzględniona.|
 
 ## <a name="see-also"></a>Zobacz także
 

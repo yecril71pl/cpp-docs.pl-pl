@@ -2,12 +2,12 @@
 title: Obsługa wyjątków ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: a3d1a5f3becefc064c5bb38dc566892ae8da8530
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c55baf453c1879f1e0a857cc746bba7802d69f88
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493364"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303283"
 ---
 # <a name="arm-exception-handling"></a>Obsługa wyjątków ARM
 
@@ -15,7 +15,7 @@ System Windows on ARM używa tego samego mechanizmu obsługi wyjątków struktur
 
 ## <a name="arm-exception-handling"></a>Obsługa wyjątków ARM
 
-System Windows on ARM używa *kodów* operacji unwind do kontrolowania odwinięcia stosu podczas [obsługi wyjątków strukturalnych](/windows/win32/debug/structured-exception-handling) (SEH). Kody operacji unwind są sekwencją bajtów przechowywanych w sekcji. xdata obrazu wykonywalnego. Opisują one operacje prologu i kodu epilogu w sposób abstrakcyjny, dzięki czemu efekty prologu funkcji mogą być cofnięte w celu odwinięcia ramki stosu obiektu wywołującego.
+System Windows on ARM używa *kodów operacji unwind* do kontrolowania odwinięcia stosu podczas [obsługi wyjątków strukturalnych](/windows/win32/debug/structured-exception-handling) (SEH). Kody operacji unwind są sekwencją bajtów przechowywanych w sekcji. xdata obrazu wykonywalnego. Opisują one operacje prologu i kodu epilogu w sposób abstrakcyjny, dzięki czemu efekty prologu funkcji mogą być cofnięte w celu odwinięcia ramki stosu obiektu wywołującego.
 
 EABI ARM (interfejs binarny aplikacji osadzonych) Określa model odwinięcia wyjątku, który używa kodów unwindy, ale nie jest wystarczający do rozwinięcia SEH w systemie Windows, który musi obsługiwać asynchroniczne przypadki, w których procesor jest w środku prologuu lub epilogu funkcji. System Windows oddziela także kontrolę odwracania do niezawijania na poziomie funkcji oraz odwracania zakresu specyficznego dla języka, który jest ujednolicony w EABI ARM. Z tego względu system Windows on ARM określa więcej szczegółów dotyczących odwinięcia danych i procedury.
 
@@ -60,8 +60,8 @@ Każdy rekord pData dla ARM ma długość 8 bajtów. Ogólny format rekordu umie
 |Przesunięcie wyrazu|Bity|Cel|
 |-----------------|----------|-------------|
 |0|0-31|*Początkowy adres RVA funkcji* to 32-bitowy adres RVA początku funkcji. Jeśli funkcja zawiera kod kciuka, musi być ustawiony niski bit tego adresu.|
-|1|0-1|*Flaga* to pole 2-bitowe, które wskazuje, jak interpretować pozostałe 30 bitów drugiego. pdata. Jeśli *Flaga* ma wartość 0, pozostałe bity tworzą *adres RVA informacji o wyjątku* (z niską liczbą bitów niejawnie 0). Jeśli *Flaga* jest różna od zera, pozostałe bity tworzą spakowaną strukturę *danych unwind* .|
-|1|2-31|*Informacje o wyjątku adres RVA* lub *spakowane dane*operacji unwind.<br /><br /> *Informacje o wyjątku adres RVA* jest adresem struktury informacji o wyjątku o zmiennej długości przechowywanej w sekcji. xdata. Te dane muszą być wyrównane 4-bajtowo.<br /><br /> *Spakowane dane unwind* to skompresowany opis operacji wymaganych do odwinięcia od funkcji, przy założeniu, że forma kanoniczna. W takim przypadku nie jest wymagany żaden rekord. xdata.|
+|1|0-1|*Flaga* to pole 2-bitowe, które wskazuje, jak interpretować pozostałe 30 bitów drugiego. pdata. Jeśli *Flaga* ma wartość 0, pozostałe bity tworzą *adres RVA informacji o wyjątku* (z niską liczbą bitów niejawnie 0). Jeśli *Flaga* jest różna od zera, pozostałe bity tworzą *spakowaną strukturę danych unwind* .|
+|1|2-31|*Informacje o wyjątku adres RVA* lub *spakowane dane operacji unwind*.<br /><br /> *Informacje o wyjątku adres RVA* jest adresem struktury informacji o wyjątku o zmiennej długości przechowywanej w sekcji. xdata. Te dane muszą być wyrównane 4-bajtowo.<br /><br /> *Spakowane dane unwind* to skompresowany opis operacji wymaganych do odwinięcia od funkcji, przy założeniu, że forma kanoniczna. W takim przypadku nie jest wymagany żaden rekord. xdata.|
 
 ### <a name="packed-unwind-data"></a>Spakowane dane operacji unwind
 
@@ -113,11 +113,11 @@ Prologues dla funkcji kanonicznych mogą zawierać do 5 instrukcji (należy zauw
 
 Instrukcja 1 jest zawsze obecna, jeśli bit *H* jest ustawiony na 1.
 
-Aby skonfigurować łańcuch ramek, instrukcja 3A lub 3B jest obecna, jeśli ustawiono bit *C* . Jest to 16-bitowa `mov` , jeśli rejestry inne niż R11 i LR są wypychane; w przeciwnym razie jest to 32-bitowe. `add`
+Aby skonfigurować łańcuch ramek, instrukcja 3A lub 3B jest obecna, jeśli ustawiono bit *C* . Jest to 16-bitowa `mov`, jeśli żadne rejestry inne niż R11 i LR są wypychane; w przeciwnym razie jest to 32-bitowa `add`.
 
 Jeśli określono nieskładane dopasowanie, instrukcja 5 jest jawnym dopasowaniem stosu.
 
-Instrukcje 2 i 4 są ustawiane na podstawie tego, czy jest wymagana wypychanie. Ta tabela zawiera podsumowanie, które rejestry są zapisywane w oparciu o pola *C*, *L*, *R*i *PF* . We wszystkich przypadkach *N* jest równa *reg* + 4, *E* jest równe *reg* + 8, a *S* jest równa (~ dopasowuje*stos*) & 3.
+Instrukcje 2 i 4 są ustawiane na podstawie tego, czy jest wymagana wypychanie. Ta tabela zawiera podsumowanie, które rejestry są zapisywane w oparciu o pola *C*, *L*, *R*i *PF* . We wszystkich przypadkach *N* jest równa *reg* + 4, *E* jest równe *reg* + 8, a *S* jest równa (~*dopasowuje stos*) & 3.
 
 |C|L|R|PF|Wypychanie rejestrów liczb całkowitych|Wypchnięcie rejestry Visual FoxPro|
 |-------|-------|-------|--------|------------------------------|--------------------------|
@@ -238,7 +238,7 @@ W poniższej tabeli przedstawiono mapowanie od kodów unwind do opcode. Najbardz
 
 |Bajt 1|Bajt 2|Bajt 3|Bajt 4|Opsize|Wyjaśnienie|
 |------------|------------|------------|------------|------------|-----------------|
-|00 — 7F||||16|`add   sp,sp,#X`<br /><br /> gdzie X jest (Code & 0x7F) \* 4|
+|00 — 7F||||16|`add   sp,sp,#X`<br /><br /> gdzie X jest (kod & 0x7F) \* 4|
 |80-Z|00-FF|||32|`pop   {r0-r12, lr}`<br /><br /> gdzie LR jest zdjęte, jeśli kod & 0x2000 i R0-R12 są zdjęte, jeśli odpowiedni bit jest ustawiony w kodzie & 0x1FFF|
 |C0-CF||||16|`mov   sp,rX`<br /><br /> gdzie X jest kodem & 0x0F|
 |D0 — D7||||16|`pop   {r4-rX,lr}`<br /><br /> gdzie X jest (Code & 0x03) + 4 i LR jest zdjęte, jeśli kod & 0x04|
@@ -267,7 +267,7 @@ Pokazuje zakres wartości szesnastkowych dla każdego bajtu w *kodzie*kodu unwin
 
 Kody operacji unwind są zaprojektowane tak, aby pierwszy bajt kodu nakazuje zarówno całkowity rozmiar w bajtach kodu, jak i rozmiar odpowiedniego kodu w strumieniu instrukcji. Aby obliczyć rozmiar prologu lub epilogu, należy przeszukać kody operacji unwind od początku sekwencji do końca, a następnie użyć tabeli odnośników lub podobnej metody do określenia, jak długo jest odpowiedni opcode.
 
-Kody unwind 0xFD i 0xFE są równoważne zwykłemu kodowi, ale konto dla jednego NOP kodu operacji w przypadku epilogu, 16-bitowy lub 32-bitowy. W przypadku prologues kody 0xFD, 0xFE i 0xFF są dokładnie równoważne. Te konta dla typowych epilogu kończących `bx lr` lub `b <tailcall-target>`, które nie mają równoważnej instrukcji prologu. Zwiększa to prawdopodobieństwo, że sekwencje odwinięcia mogą być współużytkowane przez prologu i epilogues.
+Kody unwind 0xFD i 0xFE są równoważne zwykłemu kodowi, ale konto dla jednego NOP kodu operacji w przypadku epilogu, 16-bitowy lub 32-bitowy. W przypadku prologues kody 0xFD, 0xFE i 0xFF są dokładnie równoważne. Te konta dla typowych epilogu kończących się `bx lr` lub `b <tailcall-target>`, które nie mają równoważnej instrukcji prologu. Zwiększa to prawdopodobieństwo, że sekwencje odwinięcia mogą być współużytkowane przez prologu i epilogues.
 
 W wielu przypadkach powinno być możliwe użycie tego samego zestawu kodów operacji unwind dla prologu i wszystkie epilogues. Jednak aby obsłużyć niewietrzenie częściowo wykonanych prologues i epilogues, może być konieczne posiadanie wielu sekwencji kodu operacji unwind, które różnią się w zależności od kolejności lub zachowania. To dlatego, że każdy epilogu ma swój własny indeks w tablicy unwind, aby pokazać, gdzie rozpocząć wykonywanie.
 
@@ -360,7 +360,7 @@ ShrinkWrappedFunction
     pop    {r4, pc}          ; C:
 ```
 
-Przeważnie funkcje zmniejszania są zwykle oczekiwane w celu wstępnego przydzielenia miejsca na zarejestrowanie dodatkowych zapisów w zwykłych prologu, a następnie przeprowadzenie `stm` rejestracji przy `push`użyciu `str` lub zamiast. Dzięki temu wszystkie operacje na wskaźniku stosu są zachowywane w oryginalnym prologu funkcji.
+Funkcje z otoką są zwykle oczekiwane w celu wstępnego przydzielenia miejsca na zarejestrowanie dodatkowych zapisów w regularnym prologu, a następnie przeprowadzenie rejestracji przy użyciu `str` lub `stm` zamiast `push`. Dzięki temu wszystkie operacje na wskaźniku stosu są zachowywane w oryginalnym prologu funkcji.
 
 Przykładowa funkcja zmniejszania z otoką musi być podzielona na trzy regiony, które są oznaczone jako, B i C w komentarzach. Pierwszy region obejmuje początek funkcji przez koniec dodatkowych, nietrwałych zapisywanych. Aby opisać ten fragment jako prologu i nie epilogues, należy utworzyć rekord. pdata lub. xdata.
 
@@ -410,7 +410,7 @@ Jeśli po epilogues pojedynczej instrukcji nie ma żadnych pozostałych epilogue
 
 W tych przykładach baza obrazu ma 0x00400000.
 
-### <a name="example-1-leaf-function-no-locals"></a>Przykład 1: Leaf — funkcja, brak elementów lokalnych
+### <a name="example-1-leaf-function-no-locals"></a>Przykład 1: funkcja liścia, brak elementów lokalnych
 
 ```asm
 Prologue:
@@ -444,7 +444,7 @@ Epilogue:
 
    - *Dopasowanie stosu* = 0, wskazując brak dopasowania stosu
 
-### <a name="example-2-nested-function-with-local-allocation"></a>Przykład 2: Funkcja zagnieżdżona z przydziałem lokalnym
+### <a name="example-2-nested-function-with-local-allocation"></a>Przykład 2: funkcja zagnieżdżona z przydziałem lokalnym
 
 ```asm
 Prologue:
@@ -479,7 +479,7 @@ Epilogue:
 
    - *Dopasowanie stosu* = 3 (= 0x0c/4)
 
-### <a name="example-3-nested-variadic-function"></a>Przykład 3: Zagnieżdżona funkcja wariadyczne
+### <a name="example-3-nested-variadic-function"></a>Przykład 3: zagnieżdżona funkcja wariadyczne
 
 ```asm
 Prologue:
@@ -514,7 +514,7 @@ Epilogue:
 
    - *Dopasowanie stosu* = 0, wskazując brak dopasowania stosu
 
-### <a name="example-4-function-with-multiple-epilogues"></a>Przykład 4: Funkcja z wieloma epilogues
+### <a name="example-4-function-with-multiple-epilogues"></a>Przykład 4: funkcja z wieloma epilogues
 
 ```asm
 Prologue:
@@ -576,7 +576,7 @@ Epilogues:
 
    - Kod unwind 2 = 0xFF: end
 
-### <a name="example-5-function-with-dynamic-stack-and-inner-epilogue"></a>Przykład 5: Funkcja ze stosem dynamicznym i wewnętrznym epilogu
+### <a name="example-5-function-with-dynamic-stack-and-inner-epilogue"></a>Przykład 5: funkcja ze stosem dynamicznym i wewnętrznym epilogu
 
 ```asm
 Prologue:
@@ -626,7 +626,7 @@ Epilogue:
 
    - *Słowa kodu* = 0x01 wskazujące 1 32-bitowe słowo kodów unwind
 
-- Słowo 1: Epilogu zakres w przesunięciu 0xC6 (= 0x18C/2), początkowy indeks kodu unwindy w 0x00 i z warunkiem 0x0E (zawsze)
+- Word 1: epilogu zakres w przesunięciu 0xC6 (= 0x18C/2), początkowy indeks kodu unwindy w 0x00 i z warunkiem 0x0E (zawsze)
 
 - Kody operacji unwind, zaczynając od słowa 2: (współużytkowane przez prologu/epilogu)
 
@@ -638,7 +638,7 @@ Epilogue:
 
    - Kod unwind 3 = 0xFD: end, liczy jako 16-bitowe instrukcje dla epilogu
 
-### <a name="example-6-function-with-exception-handler"></a>Przykład 6: Funkcja z obsługą wyjątków
+### <a name="example-6-function-with-exception-handler"></a>Przykład 6: funkcja z obsługą wyjątków
 
 ```asm
 Prologue:
@@ -698,7 +698,7 @@ Epilogue:
 
 - Wyrazy 4 i poza są danymi wyjątku w wierszu
 
-### <a name="example-7-funclet"></a>Przykład 7: Polecenie funclet
+### <a name="example-7-funclet"></a>Przykład 7: polecenie funclet
 
 ```asm
 Function:
