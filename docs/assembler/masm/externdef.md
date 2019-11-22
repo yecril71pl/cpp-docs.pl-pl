@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - EXTERNDEF directive
 ms.assetid: 95a10de6-c345-4428-a2f2-90f7d411dc86
-ms.openlocfilehash: 23d34af470e825a8535de8cb28645a7bfb4c4d1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 469b49832c171ee78336a0c457f0d269acd3b59d
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203100"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397540"
 ---
 # <a name="externdef"></a>EXTERNDEF
 
-Określa jeden lub więcej zmiennych zewnętrznych, etykiety lub symbole o nazwie *nazwa* o typie `type`.
+Defines one or more external variables, labels, or symbols called *name* whose type is *type*.
 
 ## <a name="syntax"></a>Składnia
 
-> Typ: Nazwa externdef — [[langtype]] [[, [[langtype]] Nazwa: typ]]...
+> **EXTERNDEF** ⟦*language-type*⟧ *name* __:__ *type* ⟦ __,__ ⟦*language-type*⟧ *name* __:__ *type* ...⟧
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli *nazwa* jest zdefiniowany w module, jest ona traktowana jako [publicznych](../../assembler/masm/public-masm.md). Jeśli *nazwa* o której mowa w module, jest ona traktowana jako [EXTERN](../../assembler/masm/extern-masm.md). Jeśli *nazwa* jest nie odwołania, jest ignorowany. `type` Może być [ABS](../../assembler/masm/operator-abs.md), który importuje *nazwa* jako stała. Zwykle używane Dołącz pliki.
+If *name* is defined in the module, it is treated as [PUBLIC](../../assembler/masm/public-masm.md). If *name* is referenced in the module, it is treated as [EXTERN](../../assembler/masm/extern-masm.md). If *name* is not referenced, it is ignored. The *type* can be [ABS](../../assembler/masm/operator-abs.md), which imports *name* as a constant. Normally used in include files.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

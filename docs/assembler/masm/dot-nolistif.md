@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - .NOLISTIF directive
 ms.assetid: 9243af7a-7221-4531-bbc3-281b6b292bfd
-ms.openlocfilehash: 43cde027f5c909b13e90255efccee3c8dac080c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80a5231d72ba8fe1458aa14c6b555228f8fd968a
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178686"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398066"
 ---
 # <a name="nolistif"></a>.NOLISTIF
 
-Pomija listy bloków warunkowych, której warunek ma wartość FAŁSZ (0).
+Suppresses listing of conditional blocks whose condition evaluates to false (0).
 
 ## <a name="syntax"></a>Składnia
 
-> .NOLISTIF
+> **.NOLISTIF**
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie włączone. Taki sam jak [. SFCOND](../../assembler/masm/dot-sfcond.md).
+Domyślnie włączone. Same as [.SFCOND](../../assembler/masm/dot-sfcond.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

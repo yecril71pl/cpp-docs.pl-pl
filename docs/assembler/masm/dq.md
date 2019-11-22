@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - DQ directive
 ms.assetid: 15de9c41-db90-4bca-affc-426eeb38ebc0
-ms.openlocfilehash: 4aeddc9528c281596501a112cb64184a8feca51b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e81ce4a970c99f69d526871b02120c4a75ccf552
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203407"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397774"
 ---
 # <a name="dq"></a>DQ
 
-Przydziela i opcjonalnie inicjuje 8 bajtów magazynu dla każdego `initializer`. Może również służyć jako specyfikatora typu dowolnym typem jest dozwolony. `DQ` jest synonimem [QWORD](../../assembler/masm/qword.md).
+Allocates and optionally initializes 8 bytes of storage for each *initializer*. Also can be used as a type specifier anywhere a type is legal. **DQ** is a synonym of [QWORD](../../assembler/masm/qword.md).
 
 ## <a name="syntax"></a>Składnia
 
-> [[name]] Inicjator DQ [[, inicjator]]...
+> ⟦*name*⟧ **DQ** *initializer* ⟦ __,__ *initializer* ...⟧
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>
-[QWORD](../../assembler/masm/qword.md)<br/>
+[Directives Reference](../../assembler/masm/directives-reference.md)\
+[QWORD](../../assembler/masm/qword.md)

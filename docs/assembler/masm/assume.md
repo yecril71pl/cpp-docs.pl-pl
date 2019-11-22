@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - ASSUME directive
 ms.assetid: cd162070-aee9-4c65-babc-005c6cc73d7c
-ms.openlocfilehash: 4bf8f0c41e9ce3e296cf201efd4fd9be2033cbdb
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: 73ef8bcc33087a56747b80f94482fcd6c50e3bf6
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73702470"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399268"
 ---
-# <a name="assume-32-bit-masm"></a>Przyjmij (32-bitowy MASM)
+# <a name="assume-32-bit-masm"></a>ASSUME (32-bit MASM)
 
-Włącza sprawdzanie błędów dla wartości rejestru. (tylko 32-bitowy MASM).
+Enables error checking for register values. (32-bit MASM only.)
 
 ## <a name="syntax"></a>Składnia
 
-> Przyjmij *segregister*:*Nazwa* [[, *segregister*:*Nazwa*]]...<br/>
-> Przyjmij *Rejestr*danych:*Typ* [[, *dataregister*:*Typ*]]...<br/>
-> Przyjmij *Rejestr*: błąd [[, *register*: błąd]]...<br/>
-> ZAŁÓŻMY [[*register*:]] Nothing [[, *register*: Nothing]]...
+> **ASSUME**  *segregister* __:__ *name* ⟦ __,__ *segregister* __:__ *name*...⟧\
+> **ASSUME**  *dataregister* __:__ *type* ⟦ __,__ *dataregister* __:__ *type*...⟧\
+> **ASSUME**  *register* __:ERROR__ ⟦ __,__ *register* __:ERROR__...⟧\
+> **ASSUME**  ⟦*register* __:__ ⟧**NOTHING** ⟦ __,__ *register* __:NOTHING__...⟧
 
 ## <a name="remarks"></a>Uwagi
 
-Po rozpoczęciu `ASSUME`, asembler obserwuje zmiany w wartościach danego rejestru. **Błąd** powoduje wygenerowanie błędu, jeśli rejestr jest używany. **Nic nie** usuwa sprawdzania błędów rejestru. Można połączyć różne rodzaje założeń w jednej instrukcji.
+After an **ASSUME** is put into effect, the assembler watches for changes to the values of the given registers. **ERROR** generates an error if the register is used. **NOTHING** removes register error checking. You can combine different kinds of assumptions in one statement.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

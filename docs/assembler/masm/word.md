@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - WORD directive
 ms.assetid: 36f7ac49-480d-4d67-8967-3a62acb8f4df
-ms.openlocfilehash: a707c1623c6aaab854790dccd444e854687b30ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6adae9f04130e3b7bd03d7af9e1ae96855d19f8b
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216959"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74392834"
 ---
 # <a name="word"></a>WORD
 
-Przydziela i opcjonalnie inicjuje programu word (2 bajty) magazynu dla każdego `initializer`. Może również służyć jako specyfikatora typu dowolnym typem jest dozwolony.
+Allocates and optionally initializes a word (2 bytes) of storage for each *initializer*. Can also be used as a type specifier anywhere a type is legal.
 
 ## <a name="syntax"></a>Składnia
 
-> [[*nazwa*]] WORD *inicjatora* [[, *inicjatora*]]...
+> ⟦*name*⟧ **WORD** *initializer* ⟦ __,__ *initializer* ...⟧
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>
-[SWORD](../../assembler/masm/sword.md)<br/>
-[DW](../../assembler/masm/dw.md)<br/>
+[Directives reference](../../assembler/masm/directives-reference.md)\
+[SWORD](../../assembler/masm/sword.md)\
+[DW](../../assembler/masm/dw.md)

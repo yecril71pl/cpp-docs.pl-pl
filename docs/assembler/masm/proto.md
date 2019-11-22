@@ -6,47 +6,47 @@ f1_keywords:
 helpviewer_keywords:
 - PROTO directive
 ms.assetid: 0487ee16-9dc7-43d1-9445-cd1601f5a080
-ms.openlocfilehash: 616b6be2a5c191ebc67d61288cb5fa6c183091fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24ec2a9abc6c8b76fc81f6d412019296c53160f4
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210524"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74394752"
 ---
 # <a name="proto"></a>PROTO
 
-Prototypy funkcji lub procedury. Można wywołać funkcji prototypowej przez PROTO — dyrektywa przy użyciu [INVOKE](invoke.md) dyrektywy.
+Prototypes a function or procedure. You can call the function prototyped by the PROTO directive by using the [INVOKE](invoke.md) directive.
 
 ## <a name="syntax"></a>Składnia
 
-> *Etykieta* **PROTO** \[ *odległość*] \[ *langtype*] \[ __,__ \[ *parametru*]__:__*tag*]...
+> *label* **PROTO** ⟦*distance*⟧ ⟦*language-type*⟧ ⟦ __,__ ⟦*parameter*⟧ __:__ *tag* ...⟧
 
 ### <a name="parameters"></a>Parametry
 
-*Etykieta*<br/>
-Nazwa funkcji prototypowej.
+*label*\
+The name of the prototyped function.
 
-*distance*<br/>
-(Opcjonalnie) Używane w modelach pamięci 16-bitowych można zastąpić to ustawienie domyślne i wskazują **NEAR** lub **DALEKIEGO** wywołania.
+*distance*\
+(Optional) Used in 16-bit memory models to override the default and indicate **NEAR** or **FAR** calls.
 
-*langtype*<br/>
-(Opcjonalnie) Określa Konwencję wywoływania i nazewnictwa dla procedur i symboli publicznych. Konwencje obsługiwane są następujące:
+*language-type*\
+(Optional) Sets the calling and naming convention for procedures and public symbols. Supported conventions are:
 
-- 32-bitowych **PROSTEGO** modelu: **C**, **STDCALL**
+- 32-bit **FLAT** model: **C**, **STDCALL**
 
-- modele 16-bitowych: **C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**
+- 16-bit models: **C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**
 
-*parameter*<br/>
-Opcjonalna nazwa parametru funkcji.
+*parameter*\
+The optional name for a function parameter.
 
-*Tag*<br/>
-Typ parametru funkcji.
+*tag*\
+The type of a function parameter.
 
-*Parametru* i *tag* parametry mogą pojawiać się wielokrotnie, jeden raz dla każdego przekazany argument.
+The *parameter* and *tag* parameters may appear multiple times, once for each passed argument.
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie pokazano **PROTO** deklarację funkcji o nazwie `addup3` , który używa **NEAR** wywołanie, aby zastąpić domyślne modelu 16-bitowych dla wywołań procedur i używa **C**Konwencję wywoływania dla stosu parametry i zwracane wartości. Jego przyjmuje dwa argumenty **WORD** i **VARARG**.
+This sample shows a **PROTO** declaration for a function named `addup3` that uses a **NEAR** call to override the 16-bit model default for procedure calls, and uses the **C** calling convention for stack parameters and return values. It takes two arguments, a **WORD** and a **VARARG**.
 
 ```MASM
 addup3 PROTO NEAR C, argcount:WORD, arg1:VARARG
@@ -54,5 +54,5 @@ addup3 PROTO NEAR C, argcount:WORD, arg1:VARARG
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja dyrektyw](directives-reference.md)<br/>
-[. Dokumentacja modelu](dot-model.md)<br/>
+[Directives Reference](directives-reference.md)\
+[.MODEL Reference](dot-model.md)

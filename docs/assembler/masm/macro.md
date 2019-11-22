@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - MACRO directive
 ms.assetid: 89434f7c-bc2c-4e91-8940-fe2db8785233
-ms.openlocfilehash: 321f8472cd1622716af1114deefbee70e1982724
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 860d538a2f461db1d5fd6bb24d078f644af2156f
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202872"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397243"
 ---
 # <a name="macro"></a>MACRO
 
-Oznacza blok — makro o nazwie *nazwa* i ustanawia *parametru* symbole zastępcze dla argumentów przekazana po wywołaniu makra.
+Marks a macro block called *name* and establishes *parameter* placeholders for arguments passed when the macro is called.
 
 ## <a name="syntax"></a>Składnia
 
-> *Nazwa* — makro [[*parametru* [[: liczba ŻĄDAŃ |: =*domyślne* |: VARARG]]]]...<br/>
-> *Instrukcje*<br/>
-> Endm — [[*wartość*]]
+> *name*  **MACRO** ⟦*parameter* ⟦ **:REQ** | :=*default* |  **:VARARG**⟧ ...⟧\
+> *statements*\
+> **ENDM** ⟦*value*⟧
 
 ## <a name="remarks"></a>Uwagi
 
-Zwraca funkcję makro *wartość* wywoływanie.
+A macro function returns *value* to the calling statement.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)
