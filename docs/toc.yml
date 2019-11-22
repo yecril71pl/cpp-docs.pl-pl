@@ -1115,7 +1115,7 @@
                       href: build/reference/notification-hooks.md
                     - name: Punkty zaczepienia błędów
                       href: build/reference/failure-hooks.md
-                    - name: Wyjątki (C/C++)
+                    - name: Kody wyjątków ładowania bibliotek DLL (C/C++)
                       href: build/reference/exceptions-c-cpp.md
                 - name: Zrzucanie importów załadowanych z opóźnieniem
                   href: build/reference/dumping-delay-loaded-imports.md
@@ -3652,51 +3652,18 @@
               items:
                 - name: Zapraszamy ponownie do języka C++ (Modern C++)
                   href: cpp/welcome-back-to-cpp-modern-cpp.md
-                - name: System typów (Modern C++)
-                  expanded: false
-                  items:
-                    - name: System typów (Modern C++)
-                      href: cpp/cpp-type-system-modern-cpp.md
-                    - name: Typy wartości (Modern C++)
-                      href: cpp/value-types-modern-cpp.md
-                    - name: Konwersje i bezpieczeństwo typów (Modern C++)
-                      href: cpp/type-conversions-and-type-safety-modern-cpp.md
                 - name: Jednolite inicjowanie i delegowanie konstruktorów
                   href: cpp/uniform-initialization-and-delegating-constructors.md
                 - name: Okres istnienia obiektów i zarządzanie zasobami (Modern C++)
                   href: cpp/object-lifetime-and-resource-management-modern-cpp.md
                 - name: Obiekty posiadają zasoby (RAII)
                   href: cpp/objects-own-resources-raii.md
-                - name: Wskaźniki inteligentne (Modern C++)
-                  expanded: false
-                  items:
-                    - name: Wskaźniki inteligentne (Modern C++)
-                      href: cpp/smart-pointers-modern-cpp.md
-                    - name: 'Instrukcje: Tworzenie wystąpień unique_ptr i korzystanie z nich'
-                      href: cpp/how-to-create-and-use-unique-ptr-instances.md
-                    - name: 'Instrukcje: Tworzenie wystąpień shared_ptr i korzystanie z nich'
-                      href: cpp/how-to-create-and-use-shared-ptr-instances.md
-                    - name: 'Instrukcje: Tworzenie wystąpień weak_ptr i korzystanie z nich'
-                      href: cpp/how-to-create-and-use-weak-ptr-instances.md
-                    - name: 'Instrukcje: Tworzenie wystąpień CComPtr i CComQIPtr i korzystanie z nich'
-                      href: cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md
-                - name: Mechanizm pimpl hermetyzacji w czasie kompilacji (Modern C++)
-                  href: cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
                 - name: Kontenery (Modern C++)
                   href: cpp/containers-modern-cpp.md
                 - name: Algorytmy (Modern C++)
                   href: cpp/algorithms-modern-cpp.md
                 - name: Formatowanie ciągów i we/wy (Modern C++)
                   href: cpp/string-and-i-o-formatting-modern-cpp.md
-                - name: Błędy w obsłudze wyjątków (Modern C++)
-                  expanded: false
-                  items:
-                    - name: Błędy w obsłudze wyjątków (Modern C++)
-                      href: cpp/errors-and-exception-handling-modern-cpp.md
-                    - name: 'Instrukcje: Projektowanie pod kątem bezpieczeństwa wyjątków'
-                      href: cpp/how-to-design-for-exception-safety.md
-                    - name: 'Instrukcje: Interfejs między kodem obsługi wyjątków a innym kodem'
-                      href: cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md
                 - name: Przenośność na granicach ABI (Modern C++)
                   href: cpp/portability-at-abi-boundaries-modern-cpp.md
             - name: Konwencje leksykalne
@@ -3737,6 +3704,8 @@
                 - name: Deklaracje i definicje
                   expanded: false
                   items:
+                    - name: System typów języka C++
+                      href: cpp/cpp-type-system-modern-cpp.md
                     - name: Deklaracje i definicje
                       href: cpp/declarations-and-definitions-cpp.md
                     - name: Przegląd deklaratorów
@@ -3880,6 +3849,8 @@
                       href: cpp/floating-limits.md
                 - name: Konwersje standardowe
                   href: cpp/standard-conversions.md
+                - name: Konwersje i bezpieczeństwo typów
+                  href: cpp/type-conversions-and-type-safety-modern-cpp.md
             - name: 'Wbudowane operatory, pierwszeństwo i kojarzenie'
               expanded: false
               items:
@@ -4033,7 +4004,7 @@
                       href: cpp/if-exists-statement.md
                     - name: '__if_not_exists, instrukcja'
                       href: cpp/if-not-exists-statement.md
-                    - name: 'switch, instrukcja'
+                    - name: switch — Instrukcja
                       href: cpp/switch-statement-cpp.md
                 - name: Instrukcje iteracji
                   expanded: false
@@ -4134,7 +4105,7 @@
                       href: cpp/protected-cpp.md
                     - name: public
                       href: cpp/public-cpp.md
-                - name: Inicjowanie klas i struktur bez konstruktorów
+                - name: Inicjowanie nawiasów klamrowych
                   href: cpp/initializing-classes-and-structs-without-constructors-cpp.md
                 - name: Konstruktorów
                   expanded: false
@@ -4145,6 +4116,8 @@
                       href: cpp/copy-constructors-and-copy-assignment-operators-cpp.md
                     - name: Konstruktory przenoszące i przenoszące operatory przypisania
                       href: cpp/move-constructors-and-move-assignment-operators-cpp.md
+                    - name: Delegowanie konstruktorów
+                      href: cpp/delegating-constructors.md
                 - name: Destruktory
                   href: cpp/destructors-cpp.md
                 - name: Przegląd funkcji składowych
@@ -4189,6 +4162,8 @@
                   href: cpp/special-member-functions.md
                 - name: Statyczne składowe
                   href: cpp/static-members-cpp.md
+                - name: Klasy C++ jako typy wartości
+                  href: cpp/value-types-modern-cpp.md
                 - name: Konwersje typów zdefiniowane przez użytkownika
                   href: cpp/user-defined-type-conversions-cpp.md
                 - name: Modyfikowalne składowe danych
@@ -4236,41 +4211,56 @@
               items:
                 - name: Wskaźniki
                   href: cpp/pointers-cpp.md
+                - name: Wskaźniki podstawowe
+                  href: cpp/raw-pointers.md
                 - name: 'const i volatile, wskaźniki'
                   href: cpp/const-and-volatile-pointers.md
                 - name: 'new i delete, operatory'
                   href: cpp/new-and-delete-operators.md
+                - name: Wskaźniki inteligentne
+                  href: cpp/smart-pointers-modern-cpp.md
+                - name: 'Instrukcje: Tworzenie wystąpień unique_ptr i korzystanie z nich'
+                  href: cpp/how-to-create-and-use-unique-ptr-instances.md
+                - name: 'Instrukcje: Tworzenie wystąpień shared_ptr i korzystanie z nich'
+                  href: cpp/how-to-create-and-use-shared-ptr-instances.md
+                - name: 'Instrukcje: Tworzenie wystąpień weak_ptr i korzystanie z nich'
+                  href: cpp/how-to-create-and-use-weak-ptr-instances.md
+                - name: 'Instrukcje: Tworzenie wystąpień CComPtr i CComQIPtr i korzystanie z nich'
+                  href: cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md
+                - name: Mechanizm pimpl hermetyzacji w czasie kompilacji
+                  href: cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
             - name: Obsługa wyjątków w języku C++
               expanded: false
               items:
                 - name: Obsługa wyjątków w języku C++
                   href: cpp/exception-handling-in-visual-cpp.md
-                - name: Obsługa wyjątków
+                - name: Modern C++ — najlepsze rozwiązania
+                  href: cpp/errors-and-exception-handling-modern-cpp.md
+                - name: 'Instrukcje: projektowanie pod kątem bezpieczeństwa wyjątków'
+                  href: cpp/how-to-design-for-exception-safety.md
+                - name: 'Instrukcje: interfejs między kodem obsługi wyjątków a innym kodem'
+                  href: cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md
+                - name: 'try, throw i catch, instrukcje'
+                  href: cpp/try-throw-and-catch-statements-cpp.md
+                - name: Jak są obliczane bloki catch
+                  href: cpp/how-catch-blocks-are-evaluated-cpp.md
+                - name: Wyjątki i odwijanie stosu
+                  href: cpp/exceptions-and-stack-unwinding-in-cpp.md
+                - name: Specyfikacje wyjątków (throw)
+                  href: cpp/exception-specifications-throw-cpp.md
+                - name: noexcept
+                  href: cpp/noexcept-cpp.md
+                - name: Nieobsługiwane wyjątki języka C++
+                  href: cpp/unhandled-cpp-exceptions.md
+                - name: Połączenie wyjątków języka C (strukturalnych) i C++
                   expanded: false
                   items:
-                    - name: Obsługa wyjątków
-                      href: cpp/cpp-exception-handling.md
-                    - name: 'try, throw i catch, instrukcje'
-                      href: cpp/try-throw-and-catch-statements-cpp.md
-                    - name: Jak są obliczane bloki catch
-                      href: cpp/how-catch-blocks-are-evaluated-cpp.md
-                    - name: Wyjątki i odwijanie stosu w języku C++
-                      href: cpp/exceptions-and-stack-unwinding-in-cpp.md
-                    - name: Specyfikacje wyjątków (throw)
-                      href: cpp/exception-specifications-throw-cpp.md
-                    - name: noexcept
-                      href: cpp/noexcept-cpp.md
-                    - name: Nieobsługiwane wyjątki języka C++
-                      href: cpp/unhandled-cpp-exceptions.md
                     - name: Połączenie wyjątków języka C (strukturalnych) i C++
-                      expanded: false
-                      items:
-                        - name: Połączenie wyjątków języka C (strukturalnych) i C++
-                          href: cpp/mixing-c-structured-and-cpp-exceptions.md
-                        - name: Użycie funkcji setjmp-longjmp
-                          href: cpp/using-setjmp-longjmp.md
-                        - name: Obsługa wyjątków strukturalnych w języku C++
-                          href: cpp/exception-handling-differences.md
+                      href: cpp/mixing-c-structured-and-cpp-exceptions.md
+                    - name: Użycie funkcji setjmp-longjmp
+                      href: cpp/using-setjmp-longjmp.md
+                    - name: Obsługa wyjątków strukturalnych w języku C++
+                      href: cpp/exception-handling-differences.md
                 - name: Obsługa wyjątków strukturalnych (SEH) (C/C++)
                   expanded: false
                   items:
@@ -10420,7 +10410,7 @@
                           href: parallel/concrt/reference/target-block-class.md
                         - name: 'task, klasa (środowisko uruchomieniowe współbieżności)'
                           href: parallel/concrt/reference/task-class.md
-                        - name: task_canceled — klasa
+                        - name: 'task_canceled, klasa'
                           href: parallel/concrt/reference/task-canceled-class.md
                         - name: 'task_completion_event, klasa'
                           href: parallel/concrt/reference/task-completion-event-class.md
