@@ -41,7 +41,7 @@ Umożliwia korzystanie z instrukcji 512 dla zaawansowanych rozszerzeń wektorów
 
 ## <a name="remarks"></a>Uwagi
 
-Opcja **/Arch** włącza lub wyłącza korzystanie z niektórych rozszerzeń zestawu instrukcji, szczególnie w przypadku obliczeń wektorowych, dostępnych w procesorach z procesorów Intel i AMD. Ogólnie rzecz biorąc, ostatnio wprowadzone procesory mogą obsługiwać dodatkowe rozszerzenia, które są obsługiwane przez starsze procesory, chociaż należy zapoznać się z dokumentacją dla określonego procesora lub testu w celu obsługi rozszerzenia zestawu instrukcji za pomocą [__ CPUID](../../intrinsics/cpuid-cpuidex.md) przed wykonaniem kodu przy użyciu rozszerzenia zestawu instrukcji.
+Opcja **/Arch** włącza lub wyłącza korzystanie z niektórych rozszerzeń zestawu instrukcji, szczególnie w przypadku obliczeń wektorowych, dostępnych w procesorach z procesorów Intel i AMD. Ogólnie rzecz biorąc, ostatnio wprowadzone procesory mogą obsługiwać dodatkowe rozszerzenia, które są obsługiwane przez starsze procesory, chociaż należy zapoznać się z dokumentacją dla określonego procesora lub testu w celu obsługi rozszerzenia zestawu instrukcji przy użyciu [__cpuid](../../intrinsics/cpuid-cpuidex.md) przed wykonaniem kodu przy użyciu rozszerzenia zestawu instrukcji.
 
 **/Arch** ma wpływ tylko na generowanie kodu dla funkcji natywnych. W przypadku użycia opcji [/CLR](clr-common-language-runtime-compilation.md) do kompilowania **/Arch** nie ma wpływu na generowanie kodu dla funkcji zarządzanych.
 
@@ -63,7 +63,7 @@ Optymalizator wybiera, kiedy i jak używać instrukcji wektorowych w zależnośc
 
 Oprócz wektorów i zmiennoprzecinkowych instrukcji skalarnych każda opcja **/Arch** może także umożliwić użycie innych instrukcji innych niż wektorowe, które są skojarzone z tą opcją. Przykładem jest rodzina instrukcji CMOVcc, która po raz pierwszy pojawiła się na procesorach Intel Pentium Pro. Ponieważ instrukcje SSE zostały wprowadzone wraz z kolejnym procesorem Intel Pentium III, instrukcje CMOVcc można generować z wyjątkiem przypadków, gdy określono **/arch: ia32** .
 
-Operacje zmiennoprzecinkowe są zwykle zaokrąglane do podwójnej precyzji (64-bitowe) w kodzie x87, ale można użyć `_controlfp`, aby zmodyfikować słowo kontroli FP, włącznie z ustawieniem kontroli dokładności na rozszerzoną precyzję (80-bitową) lub pojedynczej precyzji (32-bit). Aby uzyskać więcej informacji, zobacz [_control87, _controlfp, @no__t -1 _control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md). SSE i AVX mają oddzielne instrukcje o pojedynczej precyzji i podwójnej precyzji dla każdej operacji, więc nie istnieje odpowiednik kodu SSE/AVX. Może to zmienić sposób zaokrąglania wyników, gdy wynik operacji zmiennoprzecinkowej jest używany bezpośrednio do dalszej obliczeń zamiast przypisywania go do zmiennej użytkownika. Rozważ następujące opcje:
+Operacje zmiennoprzecinkowe są zwykle zaokrąglane do podwójnej precyzji (64-bitowe) w kodzie x87, ale można użyć `_controlfp`, aby zmodyfikować słowo kontrolne FP, włącznie z ustawieniem kontroli dokładności na rozszerzoną precyzję (80-bitową) lub pojedynczej precyzji (32-bit). Aby uzyskać więcej informacji, zobacz [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md). SSE i AVX mają oddzielne instrukcje o pojedynczej precyzji i podwójnej precyzji dla każdej operacji, więc nie istnieje odpowiednik kodu SSE/AVX. Może to zmienić sposób zaokrąglania wyników, gdy wynik operacji zmiennoprzecinkowej jest używany bezpośrednio do dalszej obliczeń zamiast przypisywania go do zmiennej użytkownika. Rozważ następujące źródła:
 
 ```cpp
 r = f1 * f2 + d;  // Different results are possible on SSE/SSE2.
@@ -89,7 +89,7 @@ int convert_double_to_int(double x) {
 }
 ```
 
-@No__t-0, `__AVX__`, `__AVX2__`, `__AVX512F__`, `__AVX512CD__`, `__AVX512BW__`, `__AVX512DQ__` i `__AVX512VL__` makra wskazują, które, w przypadku użycia opcji kompilatora **/Arch** . Aby uzyskać więcej informacji, zobacz [wstępnie zdefiniowane makra](../../preprocessor/predefined-macros.md). Opcja **/arch: AVX2** i makro `__AVX2__` zostały wprowadzone w Visual Studio 2013 Update 2 w wersji 12.0.34567.1. Ograniczona obsługa **/arch: AVX512** została dodana w programie visual Studio 2017 i rozwinięta w programie visual Studio 2019.
+Makra `_M_IX86_FP`, `__AVX__`, `__AVX2__`, `__AVX512F__`, `__AVX512CD__`, `__AVX512BW__`, `__AVX512DQ__` i `__AVX512VL__` wskazują, które, w przypadku użycia opcji kompilatora **/Arch** . Aby uzyskać więcej informacji, zobacz [wstępnie zdefiniowane makra](../../preprocessor/predefined-macros.md). Opcja **/arch: AVX2** i makro `__AVX2__` zostały wprowadzone w Visual Studio 2013 Update 2 w wersji 12.0.34567.1. Ograniczona obsługa **/arch: AVX512** została dodana w programie visual Studio 2017 i rozwinięta w programie visual Studio 2019.
 
 ### <a name="to-set-this-compiler-option-for-avx-avx2-avx512-ia32-sse-or-sse2-in-visual-studio"></a>Aby ustawić tę opcję kompilatora dla AVX, AVX2, AVX512, IA32, SSE lub SSE2 w programie Visual Studio
 

@@ -24,17 +24,17 @@ Reprezentuje typ [identyfikatora GUID](/previous-versions/cc317743(v%3dmsdn.10))
 public value struct Guid
 ```
 
-### <a name="members"></a>Elementy członkowskie
+### <a name="members"></a>Members
 
-`Platform::Guid` ma metody `Equals()`, `GetHashCode()` i `ToString()` pochodne od [klasy platform:: Object](../cppcx/platform-object-class.md)i `GetTypeCode()` metody pochodnej od [klasy platform:: Type](../cppcx/platform-type-class.md). `Platform::Guid` również ma następujących członków.
+`Platform::Guid` ma metody `Equals()`, `GetHashCode()`i `ToString()` pochodne od [klasy platform:: Object](../cppcx/platform-object-class.md)i metody `GetTypeCode()` pochodnej od [klasy platform:: Type](../cppcx/platform-type-class.md). `Platform::Guid` ma również następujące elementy członkowskie.
 
 |Element członkowski|Opis|
 |------------|-----------------|
 |[Ident](#ctor)|Inicjuje nowe wystąpienie `Platform::Guid`.|
-|[operator = =](#operator-equality)|Equals — operator.|
+|[operator==](#operator-equality)|Equals — operator.|
 |[operator!=](#operator-inequality)|Operator not Equals.|
-|[operator @ no__t-1](#operator-less)|Operator mniejszości.|
-|[operator ()](#operator-call)|Konwertuje `Platform::Guid` na `GUID`.|
+|[&lt; operatora](#operator-less)|Operator mniejszości.|
+|[operator()](#operator-call)|Konwertuje `Platform::Guid` na `GUID`.|
 
 ### <a name="remarks"></a>Uwagi
 
@@ -81,28 +81,28 @@ Guid(
 
 ### <a name="parameters"></a>Parametry
 
-*z*<br/>
+*a*<br/>
 Pierwsze 4 bajty `GUID`.
 
 *b*<br/>
 Następne 2 bajty `GUID`.
 
-*s*<br/>
+*c*<br/>
 Następne 2 bajty `GUID`.
 
-*Wykres*<br/>
+*d*<br/>
 Następny bajt `GUID`.
 
 *e*<br/>
 Następny bajt `GUID`.
 
-*n*<br/>
+*f*<br/>
 Następny bajt `GUID`.
 
 *g*<br/>
 Następny bajt `GUID`.
 
-*c*<br/>
+*h*<br/>
 Następny bajt `GUID`.
 
 *i*<br/>
@@ -115,9 +115,9 @@ Następny bajt `GUID`.
 Następny bajt `GUID`.
 
 *m*<br/>
-@No__t-0 w formie [struktury identyfikatora GUID](/previous-versions/cc317743(v%3dmsdn.10)).
+`GUID` w formie [struktury identyfikatora GUID](/previous-versions/cc317743(v%3dmsdn.10)).
 
-*Azotan*<br/>
+*n*<br/>
 Pozostałe 8 bajtów `GUID`.
 
 ## <a name="operator-equality"></a>GUID:: operator = = — operator
@@ -168,7 +168,7 @@ Druga `Platform::Guid` do porównania.
 
 Ma wartość true, jeśli dwa wystąpienia `Platform::Guid` nie są równe.
 
-## <a name="operator-less"></a>GUID:: operator @ no__t-1 — operator
+## <a name="operator-less"></a>GUID:: operator&lt; — operator
 
 Porównuje dwa wystąpienia `Platform::Guid` na potrzeby porządkowania.
 
@@ -188,9 +188,9 @@ Druga `Platform::Guid` do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość true, jeśli *guid1* jest uporządkowana przed *guid2*. Porządkowanie jest leksykograficznych po przeprowadzeniu każdej `Platform::Guid`, tak jakby była tablicą 4 32-bitowych wartości bez znaku. Nie jest to kolejność używana przez SQL Server lub .NET Framework, ani nie jest taka sama jak lexicographical porządkowanie według ciągu.
+Wartość true, jeśli *guid1* jest uporządkowana przed *guid2*. Porządkowanie jest leksykograficznych po przeprowadzeniu traktowania każdego `Platform::Guid` tak, jakby była tablicą 4 32-bitowych wartości bez znaku. Nie jest to kolejność używana przez SQL Server lub .NET Framework, ani nie jest taka sama jak lexicographical porządkowanie według ciągu.
 
-Ten operator jest dostarczany tak, aby obiekty `Guid` mogły być łatwiej wykorzystane przez bibliotekę C++ standardową.
+Ten operator jest dostarczany w taki sposób, aby obiekty `Guid` mogły być łatwiej wykorzystane C++ przez bibliotekę standardową.
 
 ## <a name="operator-call"></a>GUID:: operator () — operator
 

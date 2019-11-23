@@ -90,7 +90,7 @@ Przycisk paska narzędzi ma następujące właściwości:
 
 |Właściwość|Opis|
 |--------------|-----------------|
-|**Identyfikator**|Definiuje identyfikator przycisku. Lista rozwijana zawiera wspólne nazwy **identyfikatorów** .|
+|**ID**|Definiuje identyfikator przycisku. Lista rozwijana zawiera wspólne nazwy **identyfikatorów** .|
 |**Szerokość**|Ustawia szerokość przycisku. zalecane jest 16 pikseli.|
 |**Proporcj**|Ustawia wysokość przycisku. Wysokość jednego przycisku zmienia wysokość wszystkich przycisków na pasku narzędzi. zalecane 15 pikseli.|
 |**Pytać**|Definiuje komunikat wyświetlany na pasku stanu. Dodanie *\n* i nazwy powoduje dodanie **etykietki narzędzia** do tego przycisku paska narzędzi. Aby uzyskać więcej informacji, zobacz [Tworzenie etykietki narzędzia](../windows/creating-a-tool-tip-for-a-toolbar-button.md).|
@@ -113,7 +113,7 @@ Przycisk paska narzędzi ma następujące właściwości:
 
 1. Otwórz istniejący zasób mapy bitowej w [Edytorze obrazu](../windows/image-editor-for-icons.md). Jeśli mapa bitowa nie znajduje się już w pliku *. RC* , kliknij prawym przyciskiem myszy plik *. RC* , a następnie wybierz pozycję **Importuj**, a następnie przejdź do mapy bitowej, którą chcesz dodać do pliku *. RC* , a następnie wybierz polecenie **Otwórz**.
 
-1. Przejdź do**edytora pasków narzędzi** **obrazu** > menu.
+1. Przejdź do menu **obraz** > **Edytor paska narzędzi**.
 
    Pojawi się okno dialogowe **nowy zasób paska narzędzi** . Można zmienić szerokość i wysokość obrazów ikon, aby dopasować ją do mapy bitowej. Obraz paska narzędzi jest następnie wyświetlany w **Edytorze paska narzędzi**.
 
@@ -145,11 +145,11 @@ Przycisk paska narzędzi ma następujące właściwości:
    > [!NOTE]
    > Jeśli otworzysz obraz w programie Visual Studio, zostanie on otwarty w **Edytorze obrazu**. Możesz również otworzyć obraz w innych programach graficznych.
 
-1. Przejdź do menu **Edycja** > **Kopiuj**.
+1. Przejdź do menu **edytuj** > **Kopiuj**.
 
 1. Przejdź do paska narzędzi, wybierając jego kartę w górnej części okna źródłowego.
 
-1. Przejdź do menu **Edycja** > **Wklej**.
+1. Przejdź do menu **edytuj** > **Wklej**.
 
    Obraz zostanie wyświetlony na pasku narzędzi jako nowy przycisk.
 
@@ -183,17 +183,17 @@ W okienku **widok paska narzędzi** przeciągnij przycisk, który ma zostać prz
 
 1. Wybierz przycisk paska narzędzi.
 
-1. W [oknie właściwości](/visualstudio/ide/reference/properties-window)w polu **monitu** Dodaj opis przycisku dla paska stanu, a następnie po wiadomości, Dodaj `\n` i nazwę etykietki narzędzia.
+1. W [oknie właściwości](/visualstudio/ide/reference/properties-window)w polu **monitu** Dodaj opis przycisku dla paska stanu, a następnie po wiadomości Dodaj `\n` i nazwę etykietki narzędzia.
 
 Na przykład, aby wyświetlić etykietkę narzędzia dla przycisku **Drukuj** w programie **WordPad**:
 
 1. Otwórz program **WordPad**.
 
-1. Umieść wskaźnik myszy nad przyciskiem paska narzędzi **Drukowanie** i Zauważ, że `Print` wyraz teraz jest przepływany pod wskaźnikiem myszy.
+1. Umieść wskaźnik myszy nad przyciskiem paska narzędzi **Drukowanie** i zwróć uwagę na to, że wyraz `Print` teraz jest przepływany pod wskaźnikiem myszy.
 
-1. Spójrz na pasek stanu u dołu okna programu **WordPad** i zwróć uwagę na to, że teraz jest wyświetlany tekst `Prints the active document`.
+1. Spójrz na pasek stanu u dołu okna programu **WordPad** i Zauważ, że teraz zostanie wyświetlony tekst `Prints the active document`.
 
-`Print`jest nazwą etykietki narzędzia i `Prints the active document` jest opisem przycisku dla paska stanu.
+`Print` jest nazwą etykietki narzędzia i `Prints the active document` jest opisem przycisku dla paska stanu.
 
 Jeśli chcesz ten efekt przy użyciu **edytora paska narzędzi**, ustaw właściwość **monit** na `Prints the active document\nPrint`.
 
@@ -203,6 +203,6 @@ MFC lub ATL
 
 ## <a name="see-also"></a>Zobacz także
 
-[Menu edytorów](../windows/resource-editors.md)
-zasobów[i inne zasoby](/windows/win32/menurc/resources)<br/>
+[Edytory zasobów](../windows/resource-editors.md)
+[menu i inne zasoby](/windows/win32/menurc/resources)<br/>
 [Właściwości przycisku paska narzędzi](../windows/toolbar-button-properties.md)<br/>

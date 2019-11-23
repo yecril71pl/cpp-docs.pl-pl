@@ -45,7 +45,7 @@ Typ klucza w parze klucz-wartość.
 Typ wartości w parze klucz-wartość.
 
 *C*<br/>
-Typ, który dostarcza obiekt funkcji, który może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w mapie. Domyślnie [std:: less @ no__t-1k >](../standard-library/less-struct.md).
+Typ, który dostarcza obiekt funkcji, który może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w mapie. Domyślnie [std:: less\<K >](../standard-library/less-struct.md).
 
 *__is_valid_winrt_type ()* Funkcja wygenerowana przez kompilator, która sprawdza poprawność typu *K* i *V* i zapewnia przyjazny komunikat o błędzie, jeśli typ nie może być przechowywany w mapie.
 
@@ -63,21 +63,21 @@ Dozwolone typy to:
 
 - publiczna Klasa enum
 
-Mapa jest zasadniczo otoką dla elementu [std:: map](../standard-library/map-class.md). Jest to C++ konkretna implementacja klasy [Windows:: Foundation:: Collections:: IMAP < Windows:: Foundation:: Collections.: IKeyValuePair @ no__t-2K, V > >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) i [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) , które są przesyłane w systemie Windows Public Interfejsy środowiska uruchomieniowego. Jeśli spróbujesz użyć typu `Platform::Collections::Map` w publicznej wartości zwracanej lub parametru, zostanie zgłoszony błąd kompilatora C3986. Możesz naprawić ten błąd, zmieniając typ parametru lub wartość zwrotną na [Windows:: Foundation:: Collections:: IMAP @ no__t-1K, V >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
+Mapa jest zasadniczo otoką dla elementu [std:: map](../standard-library/map-class.md). Jest to C++ konkretna implementacja klasy [Windows:: Foundation:: Collections:: IMAP < Windows:: Foundation:: Collections.: IKeyValuePair\<K, V > >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) i [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) , które są przesyłane przez publiczne interfejsy środowisko wykonawcze systemu Windows. Jeśli spróbujesz użyć `Platform::Collections::Map` typu w publicznej wartości zwracanej lub parametrze, zostanie zgłoszony błąd kompilatora C3986. Możesz naprawić ten błąd, zmieniając typ parametru lub wartość zwracaną na [Windows:: Foundation:: Collections:: IMap\<K, > V](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
 
 Aby uzyskać więcej informacji, zobacz [kolekcje](../cppcx/collections-c-cx.md).
 
-### <a name="members"></a>Elementy członkowskie
+### <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[Map:: map](#ctor)|Inicjuje nowe wystąpienie klasy map.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[Map:: Clear](#clear)|Usuwa wszystkie pary klucz-wartość z bieżącego obiektu mapy.|
 |[Map:: First](#first)|Zwraca iterator, który określa pierwszy element na mapie.|
@@ -92,7 +92,7 @@ Aby uzyskać więcej informacji, zobacz [kolekcje](../cppcx/collections-c-cx.md)
 
 |||
 |-|-|
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |[Map:: MapChanged](#mapchanged) , zdarzenie|Występuje, gdy mapa zostanie zmieniona.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
@@ -136,7 +136,7 @@ Wygodnym sposobem przechowywania iteratora zwracanego przez pierwsze () jest prz
 
 ## <a name="getview"></a>Map:: GetView — metoda
 
-Zwraca widok tylko do odczytu bieżącej mapy; oznacza to, że [Klasa platform:: Collections:: MapView](../cppcx/platform-collections-mapview-class.md), która implementuje interfejs [Windows:: Foundation:: Collections:: IMapView @ No__t-1K, V >]/UWP/API/Windows.Foundation.Collections.IMapView_K_V_).
+Zwraca widok tylko do odczytu bieżącej mapy; oznacza to, że [Klasa platform:: Collections:: MapView](../cppcx/platform-collections-mapview-class.md), która implementuje interfejs [Windows:: Foundation:: Collections:: IMapView\<K, V >]/UWP/API/Windows.Foundation.Collections. IMapView_K_V_).
 
 ### <a name="syntax"></a>Składnia
 
@@ -146,7 +146,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Obiekt `MapView`.
+Element `MapView` obiektu.
 
 ## <a name="haskey"></a>Map:: Haskey —, Metoda
 
@@ -160,7 +160,7 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>Parametry
 
-*głównych*<br/>
+*Klucz*<br/>
 Klucz służący do lokalizowania elementu mapy. Typ *klucza* to TypeName *K*.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -179,7 +179,7 @@ virtual bool Insert(K key, V value);
 
 ### <a name="parameters"></a>Parametry
 
-*głównych*<br/>
+*Klucz*<br/>
 Część klucza pary klucz-wartość. Typ *klucza* to TypeName *K*.
 
 *value*<br/>
@@ -201,7 +201,7 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>Parametry
 
-*głównych*<br/>
+*Klucz*<br/>
 Klucz służący do lokalizowania elementu na mapie. Typ *klucza* to TypeName *K*.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -240,10 +240,10 @@ Typ, który dostarcza obiekt funkcji, który może porównać dwie wartości ele
 *m*<br/>
 Odwołanie lub [rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) do `map Class`, które jest używane do inicjowania bieżącej mapy.
 
-*pierwszego*<br/>
+*first*<br/>
 Iterator wejściowy pierwszego elementu w zakresie elementów używanych do inicjowania bieżącej mapy.
 
-*ostatniego*<br/>
+*last*<br/>
 Iterator wejściowy pierwszego elementu po zakresie elementów użytych do zainicjowania bieżącej mapy.
 
 ## <a name="mapchanged"></a>Map:: MapChanged, zdarzenie
@@ -258,11 +258,11 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Wartość właściwości/Zwracana wartość
 
-[MapChangedEventHandler @ no__t-1K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) , który zawiera informacje o obiekcie, który spowodował zdarzenie, oraz rodzaju zmiany, które wystąpiły. Zobacz również [IMapChangedEventArgs @ no__t-1k >](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) i [Wyliczenie CollectionChange](/uwp/api/windows.foundation.collections.collectionchange).
+[MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) , który zawiera informacje o obiekcie, który spowodował zdarzenie, oraz o rodzaju zmiany, które wystąpiły. Zobacz też [IMapChangedEventArgs\<K >](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) i [wyliczenia CollectionChange](/uwp/api/windows.foundation.collections.collectionchange).
 
 ## <a name="net-framework-equivalent"></a>Odpowiednik w programie .NET Framework
 
-Środowisko wykonawcze systemu Windows aplikacje używające C# lub Visual Basic projektu IMAP @ No__t-1K, v > jako IDictionary @ No__t-2K, v >.
+Środowisko wykonawcze systemu Windows aplikacje, które C# używają lub Visual Basic projektu IMAP\<k, v > jako IDictionary\<K, v >.
 
 ## <a name="remove"></a>Map:: Remove — Metoda
 
@@ -276,12 +276,12 @@ virtual void Remove(K key);
 
 ### <a name="parameters"></a>Parametry
 
-*głównych*<br/>
+*Klucz*<br/>
 Część klucza pary klucz-wartość. Typ *klucza* to TypeName *K*.
 
 ## <a name="size"></a>Map:: size — Metoda
 
-Zwraca liczbę elementów [Windows:: Foundation:: Collections:: IKeyValuePair @ no__t-1K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) w mapie.
+Zwraca liczbę elementów [Windows:: Foundation:: Collections:: IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) elementy na mapie.
 
 ### <a name="syntax"></a>Składnia
 

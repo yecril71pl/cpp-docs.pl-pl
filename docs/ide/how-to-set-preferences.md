@@ -12,7 +12,7 @@ ms.locfileid: "71816350"
 ---
 # <a name="set-your-c-coding-preferences-in-visual-studio"></a>Ustawianie preferencji C++ kodowania w programie Visual Studio
 
-Dzięki personalizacji programu C++ Visual Studio możesz zwiększyć komfort, produktywność i Pleasurable środowiska programistycznego. Można:
+Dzięki personalizacji programu C++ Visual Studio możesz zwiększyć komfort, produktywność i Pleasurable środowiska programistycznego. Możesz:
 
 - Dostosuj menu i paski narzędzi.
 - Rozmieść układ okna.
@@ -30,21 +30,21 @@ Poniższy zrzut ekranu przedstawia okno **Team Explorer** przeciągane z jego do
 
 ![Zrzut ekranu okna Team Explorer programu Visual Studio z wyróżnioną pozycją zmiany układu](media/window-layout-move-team-explorer.png)
 
-W oknie dokumentu każdy otwarty plik jest zawarty w ramce z kartami. Można przestawiać lub blokować te karty, podobnie jak okna narzędzi. Aby uzyskać więcej informacji, zobacz [Dostosowywanie układów okien w programie Visual Studio](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
+W oknie dokumentu każdy otwarty plik jest zawarty w ramce z kartami. Można przestawiać lub blokować te karty, podobnie jak okna narzędzi. Aby uzyskać więcej informacji, zobacz [dostosowywanie układów okien w programie Visual Studio](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
 
 Aby ukryć wszystkie okna narzędzi i zmaksymalizować okno edytora kodu, naciśnij klawisz **Alt** + **SHIFT** + **Enter** , aby przełączyć *tryb pełnoekranowy*.
 
 ## <a name="set-c-coding-styles-and-formatting"></a>Ustawianie C++ stylów i formatowania kodowania
 
-Można określić wiele opcji formatowania kodu, takich jak wcięcia i położenie nawiasów klamrowych. Aby to zrobić, przejdź do **pozycji narzędzia**@no__t-**1 Options**@no__t-**3 Edytor tekstu** > **CC++/** @no__t-**8 (** lub **naciśnij klawisze CTRL + Q** i wyszukaj ciąg "formatowanie"). Alternatywnie można określić jeden ze stylów [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) (lub własny niestandardowy styl ClangFormat).
+Można określić wiele opcji formatowania kodu, takich jak wcięcia i położenie nawiasów klamrowych. Aby to zrobić, przejdź do pozycji **Narzędzia** > **Opcje** > **edytorze tekstów** > **Formatowanie** **C/C++**  > (lub wpisz ciąg **Ctrl + Q** i wyszukaj "formatowanie"). Alternatywnie można określić jeden ze stylów [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) (lub własny niestandardowy styl ClangFormat).
 
 ![Zrzut ekranu opcji ClangFormat](media/clang-format-ide.png)
 
 Aby uzyskać więcej informacji na temat wszystkich opcji formatowania, zobacz [Opcje, Edytor tekstu, CC++/, formatowanie](/visualstudio/ide/reference/options-text-editor-c-cpp-formatting).
 
-## <a name="set-the-color-theme"></a>Ustawianie motywu kolorów
+## <a name="set-the-color-theme"></a>Ustaw motyw kolorów
 
-Aby ustawić jasne lub ciemne tło, wpisz **Ctrl + Q** i wyszukaj "motyw koloru". Można je również znaleźć, przechodząc do**opcji** **Narzędzia** >  Options  > **Environment**i wybierając **motyw kolorów**.
+Aby ustawić jasne lub ciemne tło, wpisz **Ctrl + Q** i wyszukaj "motyw koloru". Można je również znaleźć, przechodząc do opcji **narzędzia** > **Opcje** > **środowisku**i wybierając pozycję **motyw kolorów**.
 
 ![Zrzut ekranu przedstawiający Motywy kolorów](media/tools-options-color-theme.png)
 
@@ -54,7 +54,7 @@ Na przykład poniżej przedstawiono motyw ciemny:
 
 ## <a name="customize-code-colorization"></a>Dostosuj kolorowanie kodu
 
-W programie Visual Studio 2019 można wybierać spośród trzech wstępnie zdefiniowanych *schematów kolorów*. Określają sposób kolorowania elementów kodu w edytorze. Aby wybrać motyw, przejdź do pozycji **Narzędzia** > **Options** > **Edytor tekstu** > **C/C++**  > **Widok**i wybierz **schemat kolorów**:
+W programie Visual Studio 2019 można wybierać spośród trzech wstępnie zdefiniowanych *schematów kolorów*. Określają sposób kolorowania elementów kodu w edytorze. Aby wybrać motyw, przejdź do pozycji **Narzędzia** > **Opcje** > **Edytor tekstu** > **C/C++**  > **Widok**i wybierz **schemat kolorów**:
 
 ![Zrzut ekranu C++ opcji schematów kolorów z rozszerzonymi wyróżnionymi](media/color-schemes.png)
 
@@ -62,7 +62,7 @@ W schemacie kolorów o nazwie **Visual Studio 2017**większość elementów kodu
 
 ![Zrzut ekranu przedstawiający udoskonalony schemat kolorów](media/color-scheme-enhanced.png)
 
-Niezależnie od tego, który motyw lub schemat kolorów jest aktywny, można dostosować czcionkę i kolory poszczególnych elementów kodu. W tym celu przejdź do pozycji **narzędzia** > **Opcje** > **środowisko**@no__t 5**czcionek i kolorów** (lub wpisz ciąg **Ctrl + Q** i wyszukaj "Fonts"). Przewiń w dół listę elementów wyświetlanych, aby wyświetlić C++ opcje.
+Niezależnie od tego, który motyw lub schemat kolorów jest aktywny, można dostosować czcionkę i kolory poszczególnych elementów kodu. W tym celu przejdź do pozycji **narzędzia** > **opcje** > **środowisko** > **czcionki i kolory** (lub **naciśnij klawisze CTRL + Q** i wyszukaj ciąg "Fonts"). Przewiń w dół listę elementów wyświetlanych, aby wyświetlić C++ opcje.
 
 ![Zrzut ekranu C++ przedstawiający opcje czcionek i kolorów](media/tools-options-cpp-colors.png)
 
@@ -90,4 +90,4 @@ Możesz określić, czy numery wierszy mają być wyświetlane po lewej stronie 
 
 ## <a name="create-keyboard-shortcuts"></a>Utwórz skróty klawiaturowe
 
-Wiele poleceń w programie Visual Studio ma *skróty klawiaturowe*, kombinacje klawiszy z klawiszem Ctrl, Alt i Shift. Można modyfikować te skróty klawiaturowe lub tworzyć nowe własne w programie Visual Studio. Przejdź do pozycji **narzędzia**@no__t-**1 Options** > **środowisko** > **Klawiatura** (lub **naciśnij klawisze CTRL + Q** i wyszukaj frazę "skróty"). Aby uzyskać więcej informacji, zobacz [Identyfikowanie i Dostosowywanie skrótów klawiaturowych w programie Visual Studio](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
+Wiele poleceń w programie Visual Studio ma *skróty klawiaturowe*, kombinacje klawiszy z klawiszem Ctrl, Alt i Shift. Można modyfikować te skróty klawiaturowe lub tworzyć nowe własne w programie Visual Studio. Przejdź do pozycji **narzędzia** > **opcje** > **środowisku** > **klawiaturą** (lub **naciśnij klawisze CTRL + Q** i wyszukaj frazę "skróty"). Aby uzyskać więcej informacji, zobacz [Identyfikowanie i Dostosowywanie skrótów klawiaturowych w programie Visual Studio](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).

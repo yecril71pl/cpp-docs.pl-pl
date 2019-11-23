@@ -35,7 +35,7 @@ Aby uzyskać przykładową aplikację, która zawiera Windows Forms używane z M
 
    W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy węzeł projektu **MFC03** , a następnie wybierz polecenie **Właściwości**. Zostanie wyświetlone okno dialogowe **strony właściwości** .
 
-   W oknie dialogowym **strony właściwości** w kontrolce drzewa **Właściwości konfiguracji** wybierz opcję **Ogólne**, a następnie w sekcji **wartości domyślne projektu** Ustaw **obsługę środowiska uruchomieniowego języka wspólnego** na **obsługę środowiska uruchomieniowego języka wspólnego ( /CLR)** . Kliknij przycisk **OK**.
+   W oknie dialogowym **strony właściwości** w kontrolce drzewa **Właściwości konfiguracji** wybierz opcję **Ogólne**, a następnie w sekcji **wartości domyślne projektu** Ustaw **obsługę środowiska uruchomieniowego języka wspólnego** na **obsługę środowiska uruchomieniowego CLR (/CLR)** . Kliknij przycisk **OK**.
 
 1. Dodaj odwołanie do kontrolki .NET.
 
@@ -60,9 +60,9 @@ Aby uzyskać przykładową aplikację, która zawiera Windows Forms używane z M
     m_HostForWinForm.DoModal();
     ```
 
-1. Skompiluj i Uruchom projekt.
+1. Skompiluj i uruchom projekt.
 
-   W menu **kompilacja** kliknij pozycję **Kompiluj rozwiązanie**.
+   Na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**.
 
    W menu **debugowanie** kliknij polecenie **Uruchom bez debugowania**.
 
@@ -105,7 +105,7 @@ Aby uzyskać przykładową aplikację, która zawiera Windows Forms używane z M
     }
     ```
 
-1. Skompiluj i Uruchom projekt. Po kliknięciu przycisku, który znajduje się w formularzu systemu Windows, zostanie uruchomiony kod w aplikacji MFC.
+1. Skompiluj i uruchom projekt. Po kliknięciu przycisku, który znajduje się w formularzu systemu Windows, zostanie uruchomiony kod w aplikacji MFC.
 
     Następnie dodasz kod do wyświetlania z kodu MFC wartości w polu tekstowym w formularzu systemu Windows.
 
@@ -132,7 +132,7 @@ Aby uzyskać przykładową aplikację, która zawiera Windows Forms używane z M
     System::Windows::Forms::MessageBox::Show(z);
     ```
 
-1. Skompiluj i Uruchom projekt.
+1. Skompiluj i uruchom projekt.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -34,7 +34,7 @@ ms.locfileid: "72445022"
 
 **Edytor okien** dialogowych umożliwia tworzenie i edytowanie zasobów okien dialogowych.
 
-- Aby otworzyć Edytor, kliknij dwukrotnie plik. RC okna dialogowego w oknie **Widok zasobów** lub przejdź do **widoku**menu  >  inne @no__t**Widok zasobów** **systemu Windows**.
+- Aby otworzyć Edytor, kliknij dwukrotnie plik. RC okna dialogowego w oknie **Widok zasobów** lub przejdź do **widoku** menu > **innych** > **Widok zasobów**.
 
 Jednym z pierwszych kroków w tworzeniu nowego okna dialogowego lub szablonu okna dialogowego jest dodawanie kontrolek. W **edytorze okien dialogowych**można rozmieścić kontrolki tak, aby mieściły się w określonym rozmiarze, kształcie lub wyrównaniu, albo przenieść je do pracy w oknie dialogowym. W łatwy sposób można również usunąć formant.
 
@@ -58,16 +58,16 @@ Pasek narzędzi **edytora okien dialogowych** zawiera przyciski służące do or
 |Ikona|Znaczenie|Ikona|Znaczenie|
 |----------|-------------|----------|-------------|
 |![Przycisk okna dialogowego testu](../mfc/media/vcdialogeditortestdialog.png "vcDialogEditorTestDialog")|Okno dialogowe testu|![Odstępy między przyciskami](../mfc/media/vcdialogeditoracross.png "vcDialogEditorAcross")|Całą|
-|![Przycisk wyrównany do lewej](../mfc/media/vcdialogeditoralignlefts.png "vcDialogEditorAlignLefts")|Wyrównaj do lewej|![Przycisk odstępu w dół](../mfc/media/vcdialogeditordown.png "vcDialogEditorDown")|Notuj|
+|![Przycisk wyrównany do lewej](../mfc/media/vcdialogeditoralignlefts.png "vcDialogEditorAlignLefts")|Wyrównaj do lewej|![Przycisk odstępu w dół](../mfc/media/vcdialogeditordown.png "vcDialogEditorDown")|W dół|
 |![Przycisk Wyrównaj prawa](../mfc/media/vcdialogeditoralignrights.png "vcDialogEditorAlignRights")|Wyrównaj prawa|![Przycisk Wyrównaj Szerokość](../mfc/media/vcdialogeditorsamewidth.png "vcDialogEditorSameWidth")|Wyrównaj Szerokość|
 |![Przycisk Wyrównaj do góry](../mfc/media/vcdialogeditoraligntops.png "vcDialogEditorAlignTops")|Wyrównaj do góry|![Przycisk Wyrównaj wysokość](../mfc/media/vcdialogeditormakesameheight.png "vcDialogEditorMakeSameHeight")|Wyrównaj wysokość|
 |![Przycisk Wyrównaj do dołu](../mfc/media/vcdialogeditoralignbottoms.png "vcDialogEditorAlignBottoms")|Wyrównaj do dołu|![Przycisk Utwórz ten sam rozmiar](../mfc/media/vcdialogeditorsamesize.png "vcDialogEditorSameSize")|Wyrównaj rozmiar|
 |![Przycisk Wyśrodkuj w pionie](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|Pionow|![Przycisk przełączania siatki](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|Przełączanie siatki|
 |![Przycisk Wyśrodkuj w poziomie](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|Układ|![Przycisk przełączania prowadnic](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|Przełącz prowadnice|
 
-- Aby pokazać lub ukryć pasek narzędzi **edytora okien dialogowych** , przejdź do **widoku**menu  > **paski narzędzi** > **Edytor okien dialogowych**.
+- Aby pokazać lub ukryć pasek narzędzi **edytora okien dialogowych** , przejdź do **widoku** menu, > **paski narzędzi** > **edytorze okien dialogowych**.
 
-Po otwarciu **edytora okien dialogowych** w C++ projekcie pasek narzędzi **edytora okien dialogowych** automatycznie pojawia się u góry rozwiązania, jednak jeśli jawnie zamknięto ten pasek narzędzi, należy wywołać go przy następnym otwarciu **edytora okien dialogowych** . Możesz przełączać jej wyświetlanie, wybierając ją z listy dostępnych pasków narzędzi i okien.
+Po otwarciu **edytora okien dialogowych** w C++ projekcie pasek narzędzi **edytora okien dialogowych** automatycznie pojawia się u góry rozwiązania, jednak jeśli jawnie zamknięto ten pasek narzędzi, należy wywołać go przy następnym otwarciu **edytora okien dialogowych**. Możesz przełączać jej wyświetlanie, wybierając ją z listy dostępnych pasków narzędzi i okien.
 
 ## <a name="switch-between-dialog-box-controls-and-code"></a>Przełączanie między kontrolkami okna dialogowego i kodem
 
@@ -102,21 +102,21 @@ Poniżej znajdują się domyślne klawisze skrótów dla poleceń **edytora okie
 |Format.AlignTops|**Ctrl** + **SHIFT** + **Strzałka w górę**|Wyrównuje górne krawędzie zaznaczonych kontrolek z kontrolką dominującą.|
 |Format.ButtonBottom|**Ctrl** + **B**|Umieszcza wybrane przyciski wzdłuż środka okna dialogowego.|
 |Format.ButtonRight|**Ctrl** + **R**|Umieszcza wybrane przyciski w prawym górnym rogu okna dialogowego.|
-|Format.CenterHorizontal|**Ctrl** + **SHIFT** + **F9**|Ustawia poziomy formantów w poziomie okna dialogowego.|
-|Format.CenterVertical|**Ctrl** + **F9**|Ustawia kontrolki w pionie wewnątrz okna dialogowego.|
+|Format.CenterHorizontal|**Ctrl** + **Shift** + **F9**|Ustawia poziomy formantów w poziomie okna dialogowego.|
+|Format.CenterVertical|**CTRL** + **F9**|Ustawia kontrolki w pionie wewnątrz okna dialogowego.|
 |Format.CheckMnemonics|**Ctrl** + **M**|Sprawdza unikatowość symboli.|
 |Format. SizeToContent|**Shift** + **F7**|Zmienia rozmiar zaznaczonych kontrolek w celu dopasowania do tekstu podpisu.|
 |Format.SpaceAcross|**Alt** + **Strzałka w lewo**|Równo zaznaczaj zaznaczone kontrolki w poziomie.|
-|Format.SpaceDown|**Alt**@no__t — 1**Strzałka w dół**|Równo zaznaczaj zaznaczone kontrolki w pionie.|
+|Format.SpaceDown|**Alt** + **strzałkę w dół**|Równo zaznaczaj zaznaczone kontrolki w pionie.|
 |Format.TabOrder|**Ctrl** + **D**|Ustawia kolejność formantów w oknie dialogowym.|
-|Format.TestDialog|**Ctrl** + **t**|Uruchamia okno dialogowe, aby przetestować wygląd i zachowanie.|
+|Format.TestDialog|**CTRL** + **T**|Uruchamia okno dialogowe, aby przetestować wygląd i zachowanie.|
 |Format.ToggleGuides|**Ctrl** + **G**|Przełączanie między nie siatką, wskazówkami i siatką w celu edytowania okna dialogowego.|
 
-- Aby zmienić klawisze skrótów, przejdź do menu **narzędzia** > **Opcje**, a następnie wybierz pozycję **Klawiatura** w folderze **Environment (środowisko** ).
+- Aby zmienić klawisze skrótów, przejdź do menu **Narzędzia** , > **Opcje**, a następnie wybierz pozycję **Klawiatura** w obszarze folder **środowiska** .
 
-   Aby uzyskać więcej informacji, zobacz [Identyfikowanie i Dostosowywanie skrótów klawiaturowych](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
+   Aby uzyskać więcej informacji, zobacz [określenie i dostosowywanie skrótów klawiaturowych](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 
-- Aby zmienić ustawienia, przejdź do menu **Narzędzia**,  > **Importowanie i eksportowanie ustawień**.
+- Aby zmienić ustawienia, przejdź do menu **narzędzia** > **Importuj i Eksportuj ustawienia**.
 
    Opcje dostępne w oknach dialogowych oraz nazwy i lokalizacje poleceń menu, które są widoczne, mogą się różnić od tego, co opisano w **pomocy** , w zależności od ustawień aktywnych lub wydania.  Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 

@@ -19,7 +19,7 @@ ms.locfileid: "71685822"
 ---
 # <a name="commonly-overridden-member-functions"></a>Powszechnie zastępowane funkcje członkowskie
 
-W poniższej tabeli wymieniono najbardziej najprawdopodobniej funkcje członkowskie, które mają zostać przesłonięte w @no__t klasie pochodnej -0.
+W poniższej tabeli wymieniono najbardziej prawdopodobną funkcję członkowską do przesłonięcia w klasie pochodnej `CDialog`.
 
 ### <a name="commonly-overridden-member-functions-of-class-cdialog"></a>Powszechnie zastępowane funkcje członkowskie klasy CDialog
 
@@ -29,11 +29,11 @@ W poniższej tabeli wymieniono najbardziej najprawdopodobniej funkcje członkows
 |`OnOK`|**BN_CLICKED** przycisku **IDOK**|Reaguj, gdy użytkownik kliknie przycisk OK.|
 |`OnCancel`|**BN_CLICKED** przycisku **IDCANCEL**|Reaguj, gdy użytkownik kliknie przycisk Anuluj.|
 
-`OnInitDialog`, `OnOK` i `OnCancel` są funkcjami wirtualnymi. Aby je zastąpić, należy zadeklarować funkcję zastępującą w klasie dialogu pochodnego za pomocą [kreatora klas MFC](reference/mfc-class-wizard.md).
+`OnInitDialog`, `OnOK`i `OnCancel` są funkcjami wirtualnymi. Aby je zastąpić, należy zadeklarować funkcję zastępującą w klasie dialogu pochodnego za pomocą [kreatora klas MFC](reference/mfc-class-wizard.md).
 
-`OnInitDialog` jest wywoływana tuż przed wyświetleniem okna dialogowego. Musisz wywołać domyślną procedurę obsługi `OnInitDialog` z przesłonięcia — zwykle jest to pierwsza akcja w programie obsługi. Domyślnie `OnInitDialog` zwraca **wartość true** , aby wskazać, że fokus powinien być ustawiony na pierwszy formant w oknie dialogowym.
+`OnInitDialog` jest wywoływana tuż przed wyświetleniem okna dialogowego. Musisz wywołać domyślną procedurę obsługi `OnInitDialog` z przesłonięcia — zazwyczaj jako pierwszą akcję w programie obsługi. Domyślnie `OnInitDialog` zwraca **wartość true** , aby wskazać, że fokus powinien być ustawiony na pierwszy formant w oknie dialogowym.
 
-`OnOK` jest zwykle zastępowany dla modalnych okien dialogowych, ale nie modalnych. Jeśli zastąpisz tę procedurę obsługi dla modalnego okna dialogowego, wywołaj wersję klasy bazowej z przesłonięcia — aby upewnić się, że `EndDialog` jest wywoływana — lub wywołaj `EndDialog`.
+`OnOK` jest zwykle zastępowany dla modalnych okien dialogowych, ale nie modalnych. Jeśli zastąpisz tę procedurę obsługi dla modalnego okna dialogowego, wywołaj wersję klasy bazowej z przesłonięcia, aby upewnić się, że `EndDialog` jest wywoływana — lub wywołaj `EndDialog` samodzielnie.
 
 `OnCancel` jest zwykle zastępowany dla niemodalnych okien dialogowych.
 
@@ -42,4 +42,4 @@ Aby uzyskać więcej informacji o tych funkcjach składowych, zobacz klasy [CDia
 ## <a name="see-also"></a>Zobacz także
 
 [Okna dialogowe](../mfc/dialog-boxes.md)<br/>
-[Powszechnie dodawane funkcje członkowskie](../mfc/commonly-added-member-functions.md)
+[Powszechnie dodawane funkcje składowe](../mfc/commonly-added-member-functions.md)

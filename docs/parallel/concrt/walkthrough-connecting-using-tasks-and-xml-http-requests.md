@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: Łączenie przy użyciu zadań i żądań HTTP XML'
+title: 'Wskazówki: Łączenie za pomocą zadań i żądań XML HTTP'
 ms.date: 04/25/2019
 helpviewer_keywords:
 - connecting to web services, UWP apps [C++]
@@ -13,7 +13,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 09/25/2019
 ms.locfileid: "69512132"
 ---
-# <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Przewodnik: Łączenie przy użyciu zadań i żądań HTTP XML
+# <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Wskazówki: Łączenie za pomocą zadań i żądań XML HTTP
 
 Ten przykład pokazuje, jak używać interfejsów [IXMLHTTPRequest2](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2) i [IXMLHTTPRequest2Callback](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2callback) wraz z zadaniami do wysyłania żądań HTTP GET i post do usługi sieci Web w aplikacji platforma uniwersalna systemu Windows (platformy UWP). Połączenie interfejsu `IXMLHTTPRequest2` z zadaniami pozwala pisać kod, który komponuje się z innymi zadaniami. Na przykład zadanie pobierania można umieścić w łańcuchu zadań. Zadanie pobierania może być również inicjowane w odpowiedzi na anulowanie pracy.
 
@@ -24,10 +24,10 @@ Aby uzyskać więcej informacji o zadaniach, zobacz [równoległość zadań](..
 
 W tym dokumencie najpierw pokazano, jak utworzyć klasę `HttpRequest` i jej klasy pomocnicze. Następnie pokazano, jak używać tej klasy z aplikacji platformy UWP, która używa C++ i XAML.
 
-Aby zapoznać się z przykładem, który używa `IXMLHTTPRequest2` , ale nie używa zadań, zobacz [szybki start: Nawiązywanie połączenia przy użyciu żądania HTTP XML](/previous-versions/windows/apps/hh770550\(v=win.10\))(IXMLHTTPRequest2).
+Przykład wykorzystujący `IXMLHTTPRequest2`, ale nie korzysta z zadań, zobacz [Szybki Start: Nawiązywanie połączenia za pomocą XML żądanie HTTP (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\)).
 
 > [!TIP]
->  `IXMLHTTPRequest2`i `IXMLHTTPRequest2Callback` są interfejsami zalecanymi do użycia w aplikacji platformy UWP. Niniejszy przykład można również przystosować do aplikacji klasycznej.
+>  `IXMLHTTPRequest2` i `IXMLHTTPRequest2Callback` są interfejsami zalecanymi do użycia w aplikacji platformy UWP. Niniejszy przykład można również przystosować do aplikacji klasycznej.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -39,15 +39,15 @@ Gdy interfejs `IXMLHTTPRequest2` jest używany do tworzenia żądań sieci Web w
 
 Metody `GetAsync` i `PostAsync` klasy `HttpRequest` umożliwiają inicjowanie operacji HTTP odpowiednio GET i POST. Metody te za pomocą klasy `HttpRequestStringCallback` odczytują odpowiedź serwera jako ciąg tekstowy. Metody `SendAsync` i `ReadAsync` umożliwiają strumieniowe przesyłanie dużej ilości treści we fragmentach. Metody te zwracają wartość [concurrency:: Task](../../parallel/concrt/reference/task-class.md) , aby reprezentować operację. Metody `GetAsync` i `PostAsync` generują wartość `task<std::wstring>`, podczas gdy część `wstring` reprezentuje odpowiedź serwera. Metody `SendAsync` i `ReadAsync` generują wartości `task<void>`. Zadania kończą się z chwilą zakończenia operacji wysyłania i odczytu.
 
-Ponieważ interfejsy działają asynchronicznie, w tym przykładzie używa [concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) , aby utworzyć zadanie, które kończy się po zakończeniu obiektu wywołania zwrotnego lub anuluje operację pobierania. `IXMLHTTPRequest2` Klasa `HttpRequest` tworzy na podstawie tego zadania kontynuację opartą na zadaniach, aby wygenerować ostateczny rezultat. Klasa `HttpRequest` wykorzystuje kontynuację opartą na zadaniach do zapewnienia, że kolejne zadania będą wykonywane nawet w przypadku błędu lub anulowania poprzednich zadań. Aby uzyskać więcej informacji dotyczących kontynuacji opartych na zadaniach, zobacz [równoległość zadań](../../parallel/concrt/task-parallelism-concurrency-runtime.md)
+Ponieważ interfejsy `IXMLHTTPRequest2` działają asynchronicznie, w tym przykładzie używane jest [concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) do tworzenia zadania, które kończy się po zakończeniu obiektu wywołania zwrotnego lub anulowania operacji pobierania. Klasa `HttpRequest` tworzy na podstawie tego zadania kontynuację opartą na zadaniach, aby wygenerować ostateczny rezultat. Klasa `HttpRequest` wykorzystuje kontynuację opartą na zadaniach do zapewnienia, że kolejne zadania będą wykonywane nawet w przypadku błędu lub anulowania poprzednich zadań. Aby uzyskać więcej informacji dotyczących kontynuacji opartych na zadaniach, zobacz [równoległość zadań](../../parallel/concrt/task-parallelism-concurrency-runtime.md)
 
-Aby zapewnić obsługę anulowania, klasy `HttpRequest`, `HttpRequestBuffersCallback` i `HttpRequestStringCallback` używają tokenów anulowania. Klasy `HttpRequestBuffersCallback` i`HttpRequestStringCallback` używają metody [concurrency:: cancellation_token:: register_callback](reference/cancellation-token-class.md#register_callback) , aby umożliwić reagowanie zdarzenia na anulowanie przez zdarzenie ukończenia zadania. To zwrotne wywołanie anulowania przerywa operację pobierania. Aby uzyskać więcej informacji na temat anulowania, zobacz [anulowania](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).
+Aby zapewnić obsługę anulowania, klasy `HttpRequest`, `HttpRequestBuffersCallback` i `HttpRequestStringCallback` używają tokenów anulowania. Klasy `HttpRequestBuffersCallback` i `HttpRequestStringCallback` używają metody [concurrency:: cancellation_token:: register_callback](reference/cancellation-token-class.md#register_callback) , aby umożliwić reagowanie zdarzenia zakończenia zadania na anulowanie. To zwrotne wywołanie anulowania przerywa operację pobierania. Aby uzyskać więcej informacji na temat anulowania, zobacz [anulowania](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).
 
 #### <a name="to-define-the-httprequest-class"></a>Aby zdefiniować klasę HttpRequest
 
-1. Z menu głównego wybierz pozycję **plik** > **Nowy** > **projekt**. 
+1. Z menu głównego wybierz kolejno pozycje **plik** > **Nowy** > **projekt**. 
 
-1. C++ Użyj szablonu **pusta aplikacja (uniwersalna systemu Windows)** , aby utworzyć pusty projekt aplikacji XAML. Ten przykład nazywa projekt `UsingIXMLHTTPRequest2`.
+1. C++ Użyj szablonu **pusta aplikacja (uniwersalna systemu Windows)** , aby utworzyć pusty projekt aplikacji XAML. Ten przykład nazywa `UsingIXMLHTTPRequest2`projektu.
 
 1. Dodaj do projektu plik nagłówkowy o nazwie HttpRequest.h oraz plik źródłowy o nazwie HttpRequest.cpp.
 
@@ -65,7 +65,7 @@ Aby zapewnić obsługę anulowania, klasy `HttpRequest`, `HttpRequestBuffersCall
 
 ## <a name="using-the-httprequest-class-in-a-uwp-app"></a>Korzystanie z klasy HttpRequest w aplikacji platformy UWP
 
-W tej sekcji pokazano, `HttpRequest` jak używać klasy w aplikacji platformy UWP. Aplikacja zawiera pole wprowadzania danych definiujące zasób adresu URL, polecenia przycisków wykonujące operacje GET i POST oraz polecenie przycisku, które anuluje bieżącą operację.
+W tej sekcji pokazano, jak używać klasy `HttpRequest` w aplikacji platformy UWP. Aplikacja zawiera pole wprowadzania danych definiujące zasób adresu URL, polecenia przycisków wykonujące operacje GET i POST oraz polecenie przycisku, które anuluje bieżącą operację.
 
 #### <a name="to-use-the-httprequest-class"></a>Aby użyć klasy HttpRequest
 
@@ -94,17 +94,17 @@ W tej sekcji pokazano, `HttpRequest` jak używać klasy w aplikacji platformy UW
    [!code-cpp[concrt-using-ixhr2#A6](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_9.cpp)]
 
    > [!TIP]
-   > Jeśli aplikacja nie wymaga obsługi anulowania, Przekaż [współbieżność:: cancellation_token:: none](reference/cancellation-token-class.md#none) do `HttpRequest::GetAsync` metod i `HttpRequest::PostAsync` .
+   > Jeśli aplikacja nie wymaga obsługi anulowania, Przekaż [współbieżność:: cancellation_token:: brak](reference/cancellation-token-class.md#none) do metody `HttpRequest::GetAsync` i `HttpRequest::PostAsync`.
 
 1. W pliku MainPage.xaml.cpp zaimplementuj metodę `MainPage::ProcessHttpRequest`.
 
    [!code-cpp[concrt-using-ixhr2#A7](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_10.cpp)]
 
-8. We właściwościach projektu w obszarze **konsolidator**, **wejście**, określ `shcore.lib` i `msxml6.lib`.
+8. We właściwościach projektu w obszarze **konsolidator**, **dane wejściowe**Określ `shcore.lib` i `msxml6.lib`.
 
 Oto działająca aplikacja:
 
-![Uruchomiona aplikacja środowisko wykonawcze systemu Windows](../../parallel/concrt/media/concrt_usingixhr2.png "Uruchomiona aplikacja środowisko wykonawcze systemu Windows")
+![Uruchomiona aplikacja środowisko wykonawcze systemu Windows](../../parallel/concrt/media/concrt_usingixhr2.png "uruchomiona aplikacja środowisko wykonawcze systemu Windows")
 
 ## <a name="next-steps"></a>Następne kroki
 
@@ -116,6 +116,6 @@ Oto działająca aplikacja:
 [Anulowanie w PPL](cancellation-in-the-ppl.md)<br/>
 [Programowanie asynchroniczne wC++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)<br/>
 [Tworzenie operacji asynchronicznych w języku C++ dla aplikacji platformy uniwersalnej systemu Windows](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)<br/>
-[Szybki start: Łączenie przy użyciu klasy zadań żądania HTTP (](/previous-versions/windows/apps/hh770550\(v=win.10\))IXMLHTTPRequest2)
-XML[(środowisko uruchomieniowe współbieżności)](../../parallel/concrt/reference/task-class.md)<br/>
+[Szybki Start: Łączenie przy użyciu żądania HTTP XML (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\))
+[klasy zadań (środowisko uruchomieniowe współbieżności)](../../parallel/concrt/reference/task-class.md)<br/>
 [task_completion_event, klasa](../../parallel/concrt/reference/task-completion-event-class.md)

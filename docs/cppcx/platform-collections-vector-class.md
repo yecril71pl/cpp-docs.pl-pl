@@ -41,10 +41,10 @@ template <typename T, typename E>
 
 ### <a name="parameters"></a>Parametry
 
-*&*<br/>
+*T*<br/>
 Typ elementów zawartych w obiekcie Vector.
 
-*Adres*<br/>
+*E*<br/>
 Określa Predykat binarny do testowania równości z wartościami typu *T*. Wartość domyślna to `std::equal_to<T>`.
 
 ### <a name="remarks"></a>Uwagi
@@ -65,17 +65,17 @@ Klasa **Vector** jest C++ konkretną implementacją interfejsu [Windows:: Founda
 
 Jeśli spróbujesz użyć typu **wektora** w publicznej wartości zwracanej lub parametrze, zostanie zgłoszony błąd kompilatora C3986. Błąd można naprawić, zmieniając parametr lub typ wartości zwracanej na [Windows:: Foundation:: Collections:: IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Aby uzyskać więcej informacji, zobacz [kolekcjeC++(/CX)](../cppcx/collections-c-cx.md).
 
-### <a name="members"></a>Elementy członkowskie
+### <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[Vector:: Vector](#ctor)|Inicjuje nowe wystąpienie klasy Vector.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[Vector:: Append](#append)|Wstawia określony element po ostatnim elemencie w bieżącym wektorze.|
 |[Vector:: Clear](#clear)|Usuwa wszystkie elementy w bieżącym wektorze.|
@@ -87,7 +87,7 @@ Jeśli spróbujesz użyć typu **wektora** w publicznej wartości zwracanej lub 
 |[Vector:: InsertAt](#insertat)|Wstawia określony element do bieżącego wektora po elemencie identyfikowanym przez określony indeks.|
 |[Vector:: Zamień wszystkie](#replaceall)|Usuwa elementy z bieżącego wektora, a następnie wstawia elementy z określonej tablicy.|
 |[Vector:: RemoveAt](#removeat)|Usuwa element identyfikowany przez określony indeks z bieżącego wektora.|
-|[Vector:: RemoveAtEnd](#removeatend)|Usuwa element na końcu bieżącego wektora.|
+|[Vector::RemoveAtEnd](#removeatend)|Usuwa element na końcu bieżącego wektora.|
 |[Vector:: SetAt](#setat)|Przypisuje określoną wartość do elementu w bieżącym wektorze, który jest identyfikowany przez określony indeks.|
 |[Vector:: size](#size)|Zwraca liczbę elementów w bieżącym obiekcie wektora.|
 
@@ -95,8 +95,8 @@ Jeśli spróbujesz użyć typu **wektora** w publicznej wartości zwracanej lub 
 
 |||
 |-|-|
-|Nazwa|Opis|
-|Event [Windows:: Foundation:: Collection:: VectorChangedEventHandler @ no__t-1T > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Występuje po zmianie wektora.|
+|Name (Nazwa)|Opis|
+|zdarzenia [Windows:: Foundation:: Collection:: VectorChangedEventHandler\<t > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Występuje po zmianie wektora.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -120,7 +120,7 @@ virtual void Append(T item);
 
 ### <a name="parameters"></a>Parametry
 
-*indeks*<br/>
+*index*<br/>
 Element, który ma zostać wstawiony do wektora. Typ *elementu* jest definiowany przez *T* TypeName.
 
 ## <a name="clear"></a>Vector:: Clear — Metoda
@@ -165,7 +165,7 @@ virtual T GetAt(unsigned int index);
 
 ### <a name="parameters"></a>Parametry
 
-*indeks*<br/>
+*index*<br/>
 Liczba całkowita bez znaku równa zero, która określa konkretny element w obiekcie Vector.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -186,7 +186,7 @@ virtual unsigned int GetMany(
 
 ### <a name="parameters"></a>Parametry
 
-*Indeks*<br/>
+*startIndex*<br/>
 Liczony od zera indeks początku elementów do pobrania.
 
 *dest*<br/>
@@ -198,7 +198,7 @@ Liczba pobranych elementów.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja nie jest przeznaczona do użycia bezpośrednio przez kod klienta. Jest używana wewnętrznie w [funkcji to_vector](../cppcx/to-vector-function.md) , aby umożliwić wydajną konwersję platform:: Vector wystąpienia do std:: Vector Instances.
+Ta funkcja nie jest przeznaczona do użycia bezpośrednio przez kod klienta. Jest używana wewnętrznie w [funkcji to_vector](../cppcx/to-vector-function.md) , aby umożliwić wydajną konwersję platform:: Vector wystąpienia do instancji std:: Vector.
 
 ## <a name="getview"></a>Vector:: GetView — metoda
 
@@ -229,7 +229,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 *value*<br/>
 Element do znalezienia.
 
-*indeks*<br/>
+*index*<br/>
 Indeks (liczony od zera) elementu, jeśli zostanie znaleziona *wartość* parametru; w przeciwnym razie 0.
 
 Parametr *index* ma wartość 0, jeśli element jest pierwszym elementem wektora lub nie znaleziono elementu. Jeśli wartość zwracana ma wartość **true**, element został znaleziony i jest pierwszym elementem; w przeciwnym razie nie znaleziono elementu.
@@ -240,7 +240,7 @@ Parametr *index* ma wartość 0, jeśli element jest pierwszym elementem wektora
 
 ### <a name="remarks"></a>Uwagi
 
-IndexOf używa std:: find_if do znajdowania elementu. Niestandardowe typy elementów powinny w związku z tym przeciążać operator = = i! =, aby umożliwić porównania równości wymagane przez find_if.
+IndexOf używa elementu std:: find_if, aby znaleźć element. Niestandardowe typy elementów powinny w związku z tym przeciążać operator = = i! =, aby umożliwić porównywanie równości wymagane przez find_if.
 
 ##  <a name="insertat"></a>Vector:: InsertAt — Metoda
 
@@ -254,10 +254,10 @@ virtual void InsertAt(unsigned int index, T item)
 
 ### <a name="parameters"></a>Parametry
 
-*indeks*<br/>
+*index*<br/>
 Liczba całkowita bez znaku równa zero, która określa konkretny element w obiekcie Vector.
 
-*elementów*<br/>
+*item*<br/>
 Element, który ma zostać wstawiony do wektora po elemencie określonym za pomocą *indeksu*. Typ *elementu* jest definiowany przez *T* TypeName.
 
 ## <a name="removeat"></a>Vector:: RemoveAt — metoda
@@ -272,7 +272,7 @@ virtual void RemoveAt(unsigned int index);
 
 ### <a name="parameters"></a>Parametry
 
-*indeks*<br/>
+*index*<br/>
 Liczba całkowita bez znaku równa zero, która określa konkretny element w obiekcie Vector.
 
 ## <a name="removeatend"></a>Vector:: RemoveAtEnd — Metoda
@@ -312,10 +312,10 @@ virtual void SetAt(unsigned int index, T item);
 
 ### <a name="parameters"></a>Parametry
 
-*indeks*<br/>
+*index*<br/>
 Liczba całkowita bez znaku równa zero, która określa konkretny element w obiekcie Vector.
 
-*elementów*<br/>
+*item*<br/>
 Wartość do przypisania do określonego elementu. Typ *elementu* jest definiowany przez *T* TypeName.
 
 ## <a name="size"></a>Vector:: size — Metoda
@@ -357,7 +357,7 @@ Vector(std::initializer_list<T> il);
 
 ### <a name="parameters"></a>Parametry
 
-*z*<br/>
+*a*<br/>
 [Std:: Array](../standard-library/array-class-stl.md) , która zostanie użyta do zainicjowania wektora.
 
 *Genotyp*<br/>
@@ -366,7 +366,7 @@ Vector(std::initializer_list<T> il);
 *InIt*<br/>
 Typ kolekcji obiektów, który jest używany do inicjowania bieżącego wektora.
 
-*II*<br/>
+*il*<br/>
 [Std:: initializer_list](../standard-library/initializer-list-class.md) obiektów typu *T* , które będą używane do inicjowania wektora.
 
 *Azotan*<br/>
@@ -384,10 +384,10 @@ Wartość, która jest używana do inicjowania każdego elementu w bieżącym we
 *ptr*<br/>
 Wskaźnik do `std::vector`, który jest używany do inicjowania bieżącego wektora.
 
-*pierwszego*<br/>
+*first*<br/>
 Pierwszy element w sekwencji obiektów, który jest używany do inicjowania bieżącego wektora. Typ *pierwszego* jest przekazywana przy użyciu *doskonałego przekazywania dalej*. Aby uzyskać więcej informacji, zobacz [rvalue Reference deklarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-*ostatniego*<br/>
+*last*<br/>
 Ostatni element w sekwencji obiektów, który jest używany do inicjowania bieżącego wektora. Typ *ostatniego* jest przekazywana przy użyciu *doskonałego przekazywania dalej*. Aby uzyskać więcej informacji, zobacz [rvalue Reference deklarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="see-also"></a>Zobacz także

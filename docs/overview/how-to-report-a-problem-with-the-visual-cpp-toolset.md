@@ -77,7 +77,7 @@ Najlepsze miejsce na znalezienie tych informacji znajduje się w dzienniku kompi
 
 #### <a name="to-report-the-contents-of-the-command-line"></a>Aby zgłosić zawartość wiersza polecenia
 
-1. Znajdź plik **CL. Command. 1. tlog** , a następnie otwórz go. Domyślnie ten plik znajduje się w folderze dokumenty w programie @no__t 0Visual Studio w *wersji*\\Projects @ no__t-3*SolutionName*\\*ProjectName*\\*Configuration*\\*ProjectName*.tlog1CL.command.1.tlog lub w folderze użytkownika w obszarze 2Source @ no__t-13Repos @ no__t-14*SolutionName*6*ProjectName*8*Configuration*0*ProjectName*.tlog2CL.command.1.tlog. Może znajdować się w innej lokalizacji, jeśli używasz innego systemu kompilacji lub zmieniono lokalizację domyślną dla projektu.
+1. Znajdź plik **CL. Command. 1. tlog** , a następnie otwórz go. Domyślnie ten plik znajduje się w folderze dokumenty w \\programu Visual Studio *version*\\projects\\*SolutionName*\\*ProjectName*\\*Configuration*\\*ProjectName*. tlog\\CL. Command. 1. tlog lub w folderze użytkownika w obszarze \\Source\\repozytoria\\*SolutionName*\\*ProjectName*\\*Configuration*\\*ProjectName*. tlog\\CL. Command. 1. tlog. Może znajdować się w innej lokalizacji, jeśli używasz innego systemu kompilacji lub zmieniono lokalizację domyślną dla projektu.
 
    Wewnątrz tego pliku znajdują się nazwy plików kodu źródłowego, a następnie argumenty wiersza polecenia używane do kompilowania, każdy w osobnych wierszach.
 
@@ -93,7 +93,7 @@ Dobry opis zawiera **szczegółowe komunikaty o błędach** dostarczone przez ze
 
 Jeśli problem polega na tym, że kompilator akceptuje nieprawidłowy kod i nie generuje diagnostyki, należy uwzględnić to w raporcie.
 
-Aby zgłosić problem z zachowaniem środowiska uruchomieniowego, należy podać **dokładną kopię** tego, co program drukuje, i oczekiwane informacje. W idealnym przypadku można osadzić go w instrukcji Output, na przykład `printf("This should be 5: %d\n", actual_result);`. Jeśli program ulegnie awarii lub zawiesza się, należy również wspomnieć o tym.
+Aby zgłosić problem z zachowaniem środowiska uruchomieniowego, należy podać **dokładną kopię** tego, co program drukuje, i oczekiwane informacje. Najlepszym rozwiązaniem jest osadzenie go w instrukcji Output, na przykład `printf("This should be 5: %d\n", actual_result);`. Jeśli program ulegnie awarii lub zawiesza się, należy również wspomnieć o tym.
 
 Dodaj inne szczegóły, które mogą pomóc nam w zdiagnozowaniu znalezionego problemu, na przykład w przypadku wszystkich wykrytych działań. Spróbuj nie powtarzać informacji znalezionych w innym miejscu raportu.
 
@@ -107,7 +107,7 @@ Dobrym odtwórzem jest:
 
 - **Mniejsze.** Reprofesjonalisty powinny być tak małe, jak to możliwe, jednak nadal pokazują dokładnie znaleziony problem. Reprofesjonalisty nie muszą być złożone ani realistyczne. Muszą oni tylko wyświetlić kod, który jest zgodny ze standardem lub do udokumentowanej implementacji kompilatora. W przypadku brakującej diagnostyki Odtwórz powinien pokazać kod, który nie jest zgodny. Proste, do-punktowe rozwiązania, które zawierają tylko wystarczającą ilość kodu do zademonstrowania problemu, są najlepsze. Jeśli możesz wyeliminować lub uprościć kod i zachować zgodność, a także pozostawić problem bez zmian, należy to zrobić. Nie trzeba dołączać licznika-przykłady kodu, który działa.
 
-- **Samodzielny.** Reprofesjonalisty powinny unikać niepotrzebnych zależności. Jeśli problem można odtworzyć bez bibliotek innych firm, należy to zrobić. Jeśli problem można odtworzyć bez kodu biblioteki oprócz prostych instrukcji wyjściowych (na przykład `puts("this shouldn't compile");`, `std::cout << value;` i `printf("%d\n", value);`), należy to zrobić. Jest to idealne rozwiązanie, jeśli przykład może zostać skrócony do pojedynczego pliku kodu źródłowego bez odwołania do żadnego nagłówka użytkownika. Zmniejszenie ilości kodu, który należy wziąć pod uwagę jako możliwy współautor problemu, jest w sposób nieużyteczny dla nas.
+- **Self-Contained.** Reprofesjonalisty powinny unikać niepotrzebnych zależności. Jeśli problem można odtworzyć bez bibliotek innych firm, należy to zrobić. Jeśli problem można odtworzyć bez kodu biblioteki oprócz prostych instrukcji wyjściowych (na przykład `puts("this shouldn't compile");`, `std::cout << value;`i `printf("%d\n", value);`), należy to zrobić. Jest to idealne rozwiązanie, jeśli przykład może zostać skrócony do pojedynczego pliku kodu źródłowego bez odwołania do żadnego nagłówka użytkownika. Zmniejszenie ilości kodu, który należy wziąć pod uwagę jako możliwy współautor problemu, jest w sposób nieużyteczny dla nas.
 
 - **Względem najnowszej wersji kompilatora.** Recenty powinny używać najnowszej aktualizacji do najnowszej wersji zestawu narzędzi zawsze wtedy, gdy jest to możliwe. Można też użyć najnowszej wersji wstępnej następnej aktualizacji lub następnego wydania. Problemy, które mogą znajdować się w starszych wersjach zestawu narzędzi, często zostały rozwiązane w nowszych wersjach. Poprawki są przełączone do starszych wersji tylko w wyjątkowych okolicznościach.
 
@@ -149,7 +149,7 @@ INTERNAL COMPILER ERROR in 'd:\o\dev\otools\bin\x64\cl.exe'
 
 #### <a name="backend-code-generation-crash"></a>Awaria zaplecza (generowanie kodu)
 
-Awarie zaplecza występują podczas fazy generowania kodu kompilatora. Zazwyczaj kompilator emituje [błąd krytyczny C1001](../error-messages/compiler-errors-1/fatal-error-c1001.md)i nie odwołuje się do pliku kodu źródłowego i numeru wiersza skojarzonego z problemem. Często wymienia on kompilator plików @ no__t-0utc @ no__t-1src @ no__t-2p2 @ no__t-3main. c, ale można zignorować te szczegóły.
+Awarie zaplecza występują podczas fazy generowania kodu kompilatora. Zazwyczaj kompilator emituje [błąd krytyczny C1001](../error-messages/compiler-errors-1/fatal-error-c1001.md)i nie odwołuje się do pliku kodu źródłowego i numeru wiersza skojarzonego z problemem. Często wymienia on kompilator plików\\UTC\\src\\P2\\Main. c, ale można zignorować te szczegóły.
 
 W przypadku tego rodzaju awarii Podaj [link Odtwórz](#link-repros) , jeśli używasz generowania kodu w czasie konsolidacji (LTCG), który jest włączony przez argument wiersza polecenia **/GL** do CL. exe. W przeciwnym razie zamiast tego Podaj [wstępnie przetworzony Odtwórz](#preprocessed-repros) .
 
@@ -268,7 +268,7 @@ Jeśli używasz C++/CX do kompilowania pliku wykonywalnego, musisz wykonać kilk
 
 1. Przeszukaj plik wygenerowanej _nazwy_pliku. i dla dyrektyw **#using** .
 
-1. Utwórz listę wszystkich plików, do których istnieją odwołania. Pozostaw wszystkie pliki winmd systemu Windows @ no__t-0, pliki. winmd i mscorlib. dll.
+1. Utwórz listę wszystkich plików, do których istnieją odwołania. Pozostaw wszystkie pliki w systemie Windows\*. winmd, pliki platformy. winmd i mscorlib. dll.
 
 Aby przygotować się do zweryfikowania, że wstępnie przetworzony plik nadal powoduje problem,
 
@@ -318,9 +318,9 @@ Na koniec Dołącz wstępnie przetworzone pliki Odtwórz (*filename*. i i *Modul
 
 ### <a name="link-repros"></a>Linki reinformatyków
 
-*Link Odtwórz* to zawartość katalogu wygenerowanego przez konsolidatora, określona przez zmienną środowiskową **link @ no__t-2repro** lub jako argument dla opcji konsolidatora [/LINKREPRO](../build/reference/linkrepro.md) . Zawiera ona artefakty kompilacji, które zbiorczo przedstawiają problem występujący w czasie łączenia. Przykładami mogą być awarie zaplecza obejmujące generowanie kodu w czasie konsolidacji (LTCG) lub awarię konsolidatora. Te artefakty kompilacji są tymi, które są zbędne jako dane wejściowe konsolidatora, aby można było odtworzyć problem. Odtwórz linku można łatwo utworzyć przy użyciu tej zmiennej środowiskowej. Umożliwia wbudowaną funkcję generacji Odtwórz.
+*Link Odtwórz* to zawartość katalogu wygenerowanego przez konsolidatora, określona przez **link\_Odtwórz** zmiennej środowiskowej lub jako argument dla opcji konsolidatora [/LINKREPRO](../build/reference/linkrepro.md) . Zawiera ona artefakty kompilacji, które zbiorczo przedstawiają problem występujący w czasie łączenia. Przykładami mogą być awarie zaplecza obejmujące generowanie kodu w czasie konsolidacji (LTCG) lub awarię konsolidatora. Te artefakty kompilacji są tymi, które są zbędne jako dane wejściowe konsolidatora, aby można było odtworzyć problem. Odtwórz linku można łatwo utworzyć przy użyciu tej zmiennej środowiskowej. Umożliwia wbudowaną funkcję generacji Odtwórz.
 
-#### <a name="to-generate-a-link-repro-using-the-link_repro-environment-variable"></a>Aby wygenerować łącze Odtwórz przy użyciu zmiennej środowiskowej link_repro
+#### <a name="to-generate-a-link-repro-using-the-link_repro-environment-variable"></a>Aby wygenerować Odtwórz łącza przy użyciu zmiennej środowiskowej link_repro
 
 1. Przechwyć argumenty wiersza polecenia używane do kompilowania Odtwórz, zgodnie z opisem w artykule [Aby zgłosić zawartość wiersza polecenia](#to-report-the-contents-of-the-command-line).
 
@@ -330,25 +330,25 @@ Na koniec Dołącz wstępnie przetworzone pliki Odtwórz (*filename*. i i *Modul
 
 1. Wprowadź **mkdir linkrepro** , aby utworzyć katalog o nazwie *linkrepro* dla łącza Odtwórz. Możesz użyć innej nazwy, aby przechwycić inne łącze Odtwórz.
 
-1. Wprowadź polecenie **Set link @ no__t-1repro = linkrepro** , aby ustawić zmienną środowiskową **link @ no__t-3repro** do utworzonego katalogu. Jeśli kompilacja jest uruchamiana z innego katalogu, jak często jest to w przypadku bardziej złożonych projektów, a następnie ustaw **link @ no__t-1repro** na pełną ścieżkę do katalogu link Odtwórz.
+1. Wprowadź link do **zestawu poleceń\_Odtwórz = linkrepro** , aby ustawić\_zmiennej środowiskowej **Odtwórz dla linku** do utworzonego katalogu. Jeśli kompilacja jest uruchamiana z innego katalogu, jak często w przypadku bardziej złożonych projektów, należy ustawić **link\_Odtwórz** na pełną ścieżkę do katalogu linku Odtwórz.
 
-1. Aby skompilować projekt Odtwórz w programie Visual Studio, w oknie konsoli wiersza polecenia dla deweloperów wprowadź polecenie **devenv**. Gwarantuje to, że wartość zmiennej środowiskowej **link @ no__t-1repro** jest widoczna dla programu Visual Studio. Aby skompilować projekt w wierszu polecenia, użyj argumentów wiersza polecenia przechwycone powyżej, aby zduplikować kompilację Odtwórz.
+1. Aby skompilować projekt Odtwórz w programie Visual Studio, w oknie konsoli wiersza polecenia dla deweloperów wprowadź polecenie **devenv**. Gwarantuje to, że wartość **linku\_** zmienna środowiskowa Odtwórz jest widoczna dla programu Visual Studio. Aby skompilować projekt w wierszu polecenia, użyj argumentów wiersza polecenia przechwycone powyżej, aby zduplikować kompilację Odtwórz.
 
 1. Skompiluj projekt Odtwórz i upewnij się, że wystąpił oczekiwany problem.
 
 1. Zamknij program Visual Studio, jeśli został on użyty do wykonania kompilacji.
 
-1. W oknie konsoli wiersza polecenia dla deweloperów wprowadź polecenie **Ustaw link @ no__t-1repro =** , aby wyczyścić zmienną środowiskową **link @ no__t-3repro** .
+1. W oknie konsoli wiersza polecenia dla deweloperów wprowadź **link ustaw\_Odtwórz =** , aby wyczyścić\_zmiennej środowiskowej **Odtwórz** .
 
 Na koniec Spakuj Odtwórz, kompresując cały katalog linkrepro do pliku zip lub podobne i dołącz go do raportu.
 
-Opcja konsolidatora **/LINKREPRO** ma taki sam skutek jak zmienna środowiskowa **link @ no__t-2repro** . Można użyć opcji [/LINKREPROTARGET](../build/reference/linkreprotarget.md) , aby określić nazwę do filtrowania dla wygenerowanego linku Odtwórz. Aby użyć **/LINKREPROTARGET**, należy również określić opcję konsolidatora **/out** .
+Opcja konsolidatora **/LINKREPRO** ma taki sam skutek jak **link\_Odtwórz** zmiennej środowiskowej. Można użyć opcji [/LINKREPROTARGET](../build/reference/linkreprotarget.md) , aby określić nazwę do filtrowania dla wygenerowanego linku Odtwórz. Aby użyć **/LINKREPROTARGET**, należy również określić opcję konsolidatora **/out** .
 
 #### <a name="to-generate-a-link-repro-using-the-linkrepro-option"></a>Aby wygenerować łącze Odtwórz przy użyciu opcji/LINKREPRO
 
 1. Utwórz katalog do przechowywania linku Odtwórz. Odwołujemy się do pełnej ścieżki katalogu, którą utworzysz jako _ścieżkę katalogu_. Użyj podwójnego cudzysłowu wokół ścieżki, jeśli zawiera spacje.
 
-1. Dodaj polecenie **/LINKREPRO:** _Directory-Path_ do wiersza polecenia konsolidatora. W programie Visual Studio Otwórz okno dialogowe **strony właściwości** dla projektu. Wybierz **Właściwości konfiguracji** > **konsolidator** >  Strona właściwości**wiersza polecenia** . Następnie w polu **dodatkowe opcje** wprowadź wartość **/LINKREPRO:** _Directory-Path_ . Wybierz **przycisk OK** , aby zapisać zmiany.
+1. Dodaj polecenie **/LINKREPRO:** _Directory-Path_ do wiersza polecenia konsolidatora. W programie Visual Studio Otwórz okno dialogowe **strony właściwości** dla projektu. Wybierz opcję **Właściwości konfiguracji** > **konsolidator** > strony właściwości **wiersza polecenia** . Następnie w polu **dodatkowe opcje** wprowadź wartość **/LINKREPRO:** _Directory-Path_ . Wybierz **przycisk OK** , aby zapisać zmiany.
 
 1. Skompiluj projekt Odtwórz i upewnij się, że wystąpił oczekiwany problem.
 
@@ -371,7 +371,7 @@ Masz kilka dobrych metod uzyskiwania raportu do nas. Możesz użyć wbudowanego 
 
 Narzędzie **Zgłoś problem** w programie Visual Studio umożliwia użytkownikom programu Visual Studio zgłaszanie problemów za pomocą zaledwie kilku kliknięć. Zostanie wystawiony prosty formularz umożliwiający wysłanie szczegółowych informacji o znalezionym problemie. Następnie można przesłać raport bez opuszczania środowiska IDE.
 
-Raportowanie problemu za pomocą narzędzia **Zgłoś problem** jest łatwe i wygodne w środowisku IDE. Możesz uzyskać do niego dostęp z paska tytułu, wybierając ikonę **Wyślij opinię** obok pola wyszukiwania **Szybkie uruchamianie** . Lub można ją znaleźć na pasku menu w **pomocy** > **Wyślij opinię** > **Zgłoś problem**.
+Raportowanie problemu za pomocą narzędzia **Zgłoś problem** jest łatwe i wygodne w środowisku IDE. Możesz uzyskać do niego dostęp z paska tytułu, wybierając ikonę **Wyślij opinię** obok pola wyszukiwania **Szybkie uruchamianie** . Lub można ją znaleźć na pasku menu w **pomocy** > **wysłania opinii** > **zgłosić problem**.
 
 Gdy zdecydujesz się zgłosić problem, najpierw Przeszukaj społeczność deweloperów pod kątem podobnych problemów. Jeśli Twój problem został zgłoszony wcześniej, przekazanie raportu i dodanie komentarzy z dodatkowymi szczegółami. Jeśli nie widzisz podobnego problemu, wybierz przycisk **zgłoś nowy problem** u dołu okna dialogowego opinii programu Visual Studio i postępuj zgodnie z instrukcjami, aby zgłosić problem.
 

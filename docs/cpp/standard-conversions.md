@@ -69,7 +69,7 @@ C++promocje są "z zachowaniem wartości", ponieważ wartość po podwyższeniu 
 
 Zachowujące wartość promocje i promocje, które zachowują znak zazwyczaj generują te same wyniki. Jednak mogą generować różne wyniki, jeśli podwyższony obiekt jest wyświetlany jako:
 
-- Operand `/`, `%`, `/=`, `%=`, `<`, `<=`, `>` lub `>=`
+- Operand `/`, `%`, `/=`, `%=`, `<`, `<=`, `>`lub `>=`
 
    Operatory te opierają się na znaku w celu określenia wyniku. Zachowywanie wartości i oszczędność z zachowaniem konta daje różne wyniki w przypadku zastosowania do tych operandów.
 
@@ -101,7 +101,7 @@ int main()
 // Output: 65533
 ```
 
-W powyższym przykładzie **podpisana Short**, `i`, jest zdefiniowana i inicjowana jako ujemna. Wyrażenie `(u = i)` powoduje, że `i` mają być konwertowane na **niepodpisane krótko** przed przypisaniem do `u`.
+W powyższym przykładzie ze **znakiem Short**, `i`, jest zdefiniowany i zainicjowany do liczby ujemnej. Wyrażenie `(u = i)` powoduje, że `i` być konwertowane na **krótkie bez znaku** przed przypisaniem do `u`.
 
 ### <a name="unsigned-to-signed"></a>Niepodpisane z podpisem
 
@@ -121,7 +121,7 @@ cout << (i = u) << "\n";
 //Output: -3
 ```
 
-W poprzednim przykładzie `u` jest **niepodpisanym krótkim** obiektem całkowitym, który musi zostać skonwertowany na liczbę ze znakiem, aby oszacować wyrażenie `(i = u)`. Ponieważ jej wartość nie może być poprawnie reprezentowana w formie **krótkiej**, dane są interpretowane jako pokazane.
+W poprzednim przykładzie `u` jest **niepodpisanym krótkim** obiektem całkowitym, który musi zostać skonwertowany na liczbę ze znakiem, aby oszacować `(i = u)`wyrażenia. Ponieważ jej wartość nie może być poprawnie reprezentowana w formie **krótkiej**, dane są interpretowane jako pokazane.
 
 ## <a name="floating-point-conversions"></a>Konwersje zmiennoprzecinkowe
 
@@ -194,23 +194,23 @@ Wykres dziedziczenia dla zilustrowania dostępności klasy podstawowej
 
 W poniższej tabeli przedstawiono dostępność klasy podstawowej dla sytuacji zilustrowanej na rysunku.
 
-|Typ funkcji|Pochodnych|Konwersja z<br /><br /> B * na wartość @ no__t-0 Legal?|
+|Typ funkcji|Pochodnych|Konwersja z<br /><br /> B * na\*ą prawną?|
 |----------------------|----------------|-------------------------------------------|
-|Funkcja zewnętrzna (nieobjęta zakresem klasy)|Private|Nie|
-||Protected|Nie|
-||Public|Tak|
-|B funkcja członkowska (w zakresie B)|Private|Tak|
-||Protected|Tak|
-||Public|Tak|
-|Funkcja członkowska języka c (w zakresie języka C)|Private|Nie|
-||Protected|Tak|
-||Public|Tak|
+|Funkcja zewnętrzna (nieobjęta zakresem klasy)|Prywatna|Nie|
+||Chronione|Nie|
+||Publiczne|Tak|
+|B funkcja członkowska (w zakresie B)|Prywatna|Tak|
+||Chronione|Tak|
+||Publiczne|Tak|
+|Funkcja członkowska języka c (w zakresie języka C)|Prywatna|Nie|
+||Chronione|Tak|
+||Publiczne|Tak|
 
 Drugi przypadek, w którym wskaźnik do klasy może być konwertowany na wskaźnik do klasy bazowej, jest używany w przypadku jawnej konwersji typu. Aby uzyskać więcej informacji na temat jawnych konwersji typów, zobacz [operator Explicit konwersji typu](explicit-type-conversion-operator-parens.md).
 
 Wynikiem takiej konwersji jest wskaźnik do *podobiektu*, część obiektu, która jest całkowicie opisana przez klasę bazową.
 
-Poniższy kod definiuje dwie klasy, `A` i `B`, gdzie `B` pochodzi od `A`. (Aby uzyskać więcej informacji na temat dziedziczenia, zobacz [klasy pochodne](../cpp/inheritance-cpp.md)). Następnie definiuje `bObject`, obiekt typu `B` i dwa wskaźniki (`pA` i `pB`) wskazujące na obiekt.
+Poniższy kod definiuje dwie klasy, `A` i `B`, gdzie `B` pochodzi od `A`. (Aby uzyskać więcej informacji na temat dziedziczenia, zobacz [klasy pochodne](../cpp/inheritance-cpp.md)). Następnie definiuje `bObject`, obiekt typu `B`i dwa wskaźniki (`pA` i `pB`) wskazujące na obiekt.
 
 ```cpp
 // C2039 expected
@@ -239,7 +239,7 @@ int main()
 }
 ```
 
-Wskaźnik `pA` jest typu `A *`, który może być interpretowany jako "wskaźnik do obiektu typu `A`". Elementy członkowskie `bObject` (takie jak `BComponent` i `BMemberFunc`) są unikatowe dla typu `B` i w związku z tym są niedostępne w `pA`. Wskaźnik `pA` zezwala na dostęp tylko do tych cech (funkcji składowych i danych) obiektu, które są zdefiniowane w klasie `A`.
+`pA` wskaźnika jest typu `A *`, który może być interpretowany jako "wskaźnik do obiektu typu `A`". Elementy członkowskie `bObject` (takie jak `BComponent` i `BMemberFunc`) są unikatowe dla typu `B` i w związku z tym są niedostępne za poorednictwem `pA`. Wskaźnik `pA` umożliwia dostęp tylko do tych cech charakterystycznych (funkcje składowe i dane) obiektu, które są zdefiniowane w `A`klas.
 
 ### <a name="pointer-to-function"></a>Wskaźnik do funkcji
 
@@ -311,7 +311,7 @@ Gdy argument operacji po lewej stronie jest wskaźnikiem do elementu członkowsk
 
 Wyrażenie stałej całkowitej, którego wynikiem jest zero, jest konwertowane na wskaźnik o wartości null. Ten wskaźnik zawsze porównuje nierówne wskaźnikiem z dowolnym prawidłowym obiektem lub funkcją. Wyjątek jest wskaźnikiem do obiektów opartych na obiektach, które mogą mieć te same przesunięcie i nadal wskazują na inne obiekty.
 
-Poniższy kod ilustruje definicję wskaźnika do składowej `i` w klasie `A`. Wskaźnik `pai` jest zainicjowany do 0, który jest wskaźnikiem o wartości null.
+Poniższy kod ilustruje definicję wskaźnika do składowej `i` w klasie `A`. Wskaźnik, `pai`, jest zainicjowany do 0, który jest wskaźnikiem o wartości null.
 
 ```cpp
 class A
