@@ -6,23 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - STRUCT directive
 ms.assetid: 70c3ba6b-00db-461e-8dd9-eafd3ae5b3c8
-ms.openlocfilehash: b64e6adbabe847600147dbd773328aadf4225cb2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73f3751f32d8cb2fc3f9daec1ac11c778ee33514
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210292"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74393566"
 ---
 # <a name="struct-masm"></a>STRUCT (MASM)
 
-Deklaruje mających określony typ struktury *deklaracji pól*. Każde pole musi być definicją prawidłowe dane. Taki sam jak [struc —](../../assembler/masm/struc.md).
+Declares a structure type having the specified *field-declarations*. Each field must be a valid data definition. Same as [STRUC](../../assembler/masm/struc.md).
 
 ## <a name="syntax"></a>Składnia
 
-> *Nazwa* — struktura [[*wyrównanie*]] [[, NIEUNIKATOWY]]<br/>
-> *deklaracji pól*<br/>
-> *Nazwa* kończy się
+> *name* **STRUCT** ⟦*alignment*⟧ ⟦ __,__ **NONUNIQUE**⟧ *field-declarations*\
+> *name* **ENDS**
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](../../assembler/masm/directives-reference.md)
