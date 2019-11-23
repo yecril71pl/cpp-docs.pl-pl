@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - .SAVEXMM128 directive
 ms.assetid: 551eb472-b8d0-47b1-8d82-995d1f485723
-ms.openlocfilehash: c29ec47170c5e0f46f02d53f23ab477a79bbdc32
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08bc5ab50e15aa59e0c49992d1810c7de20f364e
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62205228"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397951"
 ---
 # <a name="savexmm128"></a>.SAVEXMM128
 
-Generuje albo `UWOP_SAVE_XMM128` lub `UWOP_SAVE_XMM128_FAR` unwind wejścia kodu dla określonego rejestru XMM i przesunięcie, przy użyciu bieżące przesunięcie prologu. MASM wybierze najbardziej efektywny sposób kodowania.
+Generates either a `UWOP_SAVE_XMM128` or a `UWOP_SAVE_XMM128_FAR` unwind code entry for the specified XMM register and offset using the current prologue offset. MASM will choose the most efficient encoding.
 
 ## <a name="syntax"></a>Składnia
 
-> .savexmm128 — xmmreg, przesunięcie
+> **.SAVEXMM128** *xmmreg* , *offset*
 
 ## <a name="remarks"></a>Uwagi
 
-. SAVEXMM128 umożliwia użytkownikom ml64.exe określające, jak funkcja ramki rozwija i jest dozwolone tylko w prologu, który rozciąga się od [PROC](../../assembler/masm/proc.md) deklaracji ramki [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) dyrektywy. Te dyrektywy nie generują kodu. tylko generują `.xdata` i `.pdata`. . SAVEXMM128 powinien być poprzedzony instrukcji, które faktycznie wykonania akcji, które mają być rozwinięty. Jest dobrą praktyką jest opakowywanie dyrektywy unwind i kodu, które są przeznaczone do rozwinięcie makra do zapewnienia umowy.
+**.SAVEXMM128** allows ml64.exe users to specify how a frame function unwinds, and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) FRAME declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. .SAVEXMM128 should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
 
-*Przesunięcie* musi być wielokrotnością liczby 16.
+*offset* must be a multiple of 16.
 
-Aby uzyskać więcej informacji, zobacz [MASM x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

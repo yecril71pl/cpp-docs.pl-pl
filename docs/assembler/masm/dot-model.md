@@ -6,53 +6,53 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: b341cfaec35c08f5ac16447890c85570e9c9c0df
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: bfc114a6e71c0eb0ae70005c2657871b6c9e9692
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703579"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398109"
 ---
-# <a name="model-32-bit-masm"></a>. MODEL (32-bitowy MASM)
+# <a name="model-32-bit-masm"></a>.MODEL (32-bit MASM)
 
-Inicjuje model pamięci programu. (tylko 32-bitowy MASM).
+Initializes the program memory model. (32-bit MASM only.)
 
 ## <a name="syntax"></a>Składnia
 
-> . MODEL memorymodel [[, langtype]] [[, stackoption]]
+> **.MODEL** *memory-model* ⟦ __,__ *language-type*⟧ ⟦ __,__ *stack-option*⟧
 
 ### <a name="parameters"></a>Parametry
 
-*memorymodel*<br/>
-Wymagany parametr określający rozmiar kodu i wskaźników danych.
+*memory-model*\
+Required parameter that determines the size of code and data pointers.
 
-*langtype*<br/>
-Opcjonalny parametr, który ustawia konwencje wywoływania i nazewnictwa dla procedur i symboli publicznych.
+*language-type*\
+Optional parameter that sets the calling and naming conventions for procedures and public symbols.
 
-*stackoption*<br/>
-Opcjonalny parametr.
+*stack-option*\
+Optional parameter.
 
-*stackoption* nie jest używana, jeśli *memorymodel* jest `FLAT`.
+*stack-option* is not used if *memory-model* is **FLAT**.
 
-Określanie `NEARSTACK` grupuje segment stosu w pojedynczym segmencie fizycznym (`DGROUP`) wraz z danymi. Założono, że rejestr segmentu stosu (`SS`) przechowuje ten sam adres co rejestr segmentu danych (`DS`). `FARSTACK` nie grupuje stosu z `DGROUP`; Tak więc `SS` nie są równe `DS`.
+Specifying **NEARSTACK** groups the stack segment into a single physical segment (**DGROUP**) along with data. The stack segment register (**SS**) is assumed to hold the same address as the data segment register (**DS**). **FARSTACK** does not group the stack with **DGROUP**; thus **SS** does not equal **DS**.
 
 ## <a name="remarks"></a>Uwagi
 
-.`MODEL` nie jest używany w programie [MASM for x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+**.MODEL** is not used in [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
-Poniższa tabela zawiera listę możliwych wartości dla każdego parametru, które są przeznaczone dla platform 16-bitowych i 32-bitowych:
+The following table lists the possible values for each parameter when targeting 16-bit and 32-bit platforms:
 
-|Parametr|32-wartości bitowe|wartości 16-bitowe (obsługa wcześniejszych wersji 16-bitowych)|
+|Parametr|32-bit values|16-bit values (support for earlier 16-bit development)|
 |---------------|--------------------|----------------------------------------------------------------|
-|*memorymodel*|`FLAT`|`TINY`, `SMALL`, `COMPACT`, `MEDIUM`, `LARGE`, `HUGE`, `FLAT`|
-|*langtype*|`C`, `STDCALL`|`C`, `BASIC`, `FORTRAN`, `PASCAL`, `SYSCALL``STDCALL`|
-|*stackoption*|Nieużywane|`NEARSTACK`, `FARSTACK`|
+|*memory-model*|**FLAT**|**TINY**, **SMALL**, **COMPACT**, **MEDIUM**, **LARGE**, **HUGE**, **FLAT**|
+|*language-type*|**C**, **STDCALL**|**C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**|
+|*stack-option*|Nieużywane|**NEARSTACK**, **FARSTACK**|
 
 ## <a name="code"></a>Kod
 
-W przypadku przykładów związanych z MASM Pobierz przykłady kompilatora z [przykładów wizualizacji C++ i powiązanej dokumentacji dla programu Visual Studio 2010](https://go.microsoft.com/fwlink/p/?linkid=178749).
+For MASM-related samples, download the Compiler samples from [Visual C++ Samples and Related Documentation for Visual Studio 2010](https://go.microsoft.com/fwlink/p/?linkid=178749).
 
-Poniższy przykład demonstruje użycie dyrektywy `.MODEL`.
+The following example demonstrates the use of the `.MODEL` directive.
 
 ## <a name="example"></a>Przykład
 
@@ -88,4 +88,4 @@ end
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: Operator kropki
+title: operator dot
 ms.date: 08/30/2018
 f1_keywords:
 - operator .
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - operator .
 - . operator
 ms.assetid: 468ea0c8-5b08-47be-991b-38abacb77611
-ms.openlocfilehash: 75eccec0c65cba093d84e9d71107247e5b697287
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28fe852c7fbba4995905b2d9a42cc02c1d46eb00
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177204"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397011"
 ---
 # <a name="operator-"></a>operator .
 
-Pierwszy operator zwraca *wyrażenie* plus przesunięcie *pola* w ramach jego struktury lub Unii. Drugi operator zwraca wartość w lokalizacji wskazywanej przez *zarejestrować* plus przesunięcie *pola* w ramach jego struktury lub Unii.
+The first operator returns *expression* plus the offset of *field* within its structure or union. The second operator returns value at the location pointed to by *register* plus the offset of *field* within its structure or union.
 
 ## <a name="syntax"></a>Składnia
 
-> *wyrażenie* __.__ *pole* \[ __.__ *pole*]...
+> *expression* __.__ *field*⟦ __.__ *field* ...⟧
 >
-> __\[__*register*__]__ __.__ *pole* \[ __.__ *pole*]...
+> **\[** _register_ **]** __.__ *field*⟦ __.__ *field* ...⟧
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja operatorów](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)
