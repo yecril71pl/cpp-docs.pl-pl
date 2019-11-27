@@ -17,12 +17,12 @@ ms.locfileid: "74396743"
 ---
 # <a name="operator--masm"></a>operator ! (MASM)
 
-Treats *character* as a literal character rather than as an operator or symbol.
+Traktuje *znak* jako znak literału, a nie jako operator lub symbol.
 
 ## <a name="syntax"></a>Składnia
 
-> **!** *character*
+> **!** *Opis*
 
 ## <a name="see-also"></a>Zobacz także
 
-[Operators reference](operators-reference.md)
+[Odwołania operatorów](operators-reference.md)
