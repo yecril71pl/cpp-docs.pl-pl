@@ -1,35 +1,35 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4256
+title: Ostrzeżenie kompilatora (poziom 4) C4256
 ms.date: 11/04/2016
 f1_keywords:
 - C4256
 helpviewer_keywords:
 - C4256
 ms.assetid: a755a32e-895a-4837-a2b5-4ea06b736798
-ms.openlocfilehash: 3e8a3ab1b11c719730016e6a0cd248770cd89af8
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: e087e3cd36ab85d6f3f6b5cfed1b55cac66ea142
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447776"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541697"
 ---
-# <a name="compiler-warning-level-4-c4256"></a>Kompilator ostrzeżenie (poziom 4) C4256
+# <a name="compiler-warning-level-4-c4256"></a>Ostrzeżenie kompilatora (poziom 4) C4256
 
-'Funkcja': konstruktor dla klasy z bazami wirtualnymi ma "..."; wywołania mogą nie być zgodne ze starszymi wersjami programu Visual C++
+"Function": Konstruktor dla klasy z wirtualnymi bazami ma "..."; wywołania mogą nie być zgodne ze starszymi wersjami wizualizacjiC++
 
 Możliwa niezgodność.
 
-Rozważmy następujący przykład kodu. Jeśli definicja Konstruktor S2::S2 (int i...) został skompilowany przy użyciu wersji Microsoft C++ kompilatora przed w wersji 7, ale poniższy przykład jest kompilowany przy użyciu bieżącej wersji, wywołanie konstruktora S3 nie będzie działać poprawnie ze względu na zmiany Konwencja wywoływania szczególny. Jeśli oba zostały skompilowane przy użyciu Visual C++ 6.0, połączenie nie będzie działać końca albo, chyba, że nie parametry zostały przekazane do wielokropka.
+Rozważmy następujący przykład kodu. Jeśli definicja konstruktora S2:: S2 (int i,...) została skompilowana przy użyciu wersji kompilatora firmy Microsoft C++ , która jest wcześniejsza niż wersja 7, ale Poniższy przykład jest kompilowany przy użyciu bieżącej wersji, wywołanie konstruktora dla S3 nie działa poprawnie ze względu na szczególną zmianę w konwencji wywoływania przypadku. Jeśli obie zostały skompilowane przy użyciu C++ języka Visual 6,0, wywołanie nie będzie działało całkowicie po prawej stronie, chyba że żadne parametry nie zostały przesłane dla wielokropka.
 
-Aby rozwiązać tego ostrzeżenia
+Aby usunąć to ostrzeżenie,
 
-1. Nie używaj wielokropek w konstruktorze.
+1. Nie używaj wielokropka w konstruktorze.
 
-1. Upewnij się, że wszystkie składniki we własnym projekcie są tworzone za pomocą bieżącej wersji (w tym wszystkie biblioteki, które może zdefiniować lub odwołaj się do tej klasy), a następnie wyłączone używanie ostrzeżenie [ostrzeżenie](../../preprocessor/warning.md) pragmy.
+1. Upewnij się, że wszystkie składniki w projekcie zostały skompilowane przy użyciu bieżącej wersji (łącznie z bibliotekami, które mogą definiować lub odwoływać się do tej klasy), a następnie Wyłącz ostrzeżenie przy użyciu dyrektywy pragma [ostrzeżenia](../../preprocessor/warning.md) .
 
-Poniższy przykład spowoduje wygenerowanie C4256:
+Poniższy przykład generuje C4256:
 
-```
+```cpp
 // C4256.cpp
 // compile with: /W4
 // #pragma warning(disable : 4256)

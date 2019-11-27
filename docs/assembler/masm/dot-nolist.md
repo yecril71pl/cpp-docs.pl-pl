@@ -15,7 +15,7 @@ ms.locfileid: "74398086"
 ---
 # <a name="nolist"></a>.NOLIST
 
-Suppresses program listing.
+Pomija listę programu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -23,8 +23,8 @@ Suppresses program listing.
 
 ## <a name="remarks"></a>Uwagi
 
-Same as [.XLIST](../../assembler/masm/dot-xlist.md).
+Analogicznie jak [. XLIST](../../assembler/masm/dot-xlist.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

@@ -19,8 +19,8 @@ Ignorowane.
 
 ## <a name="syntax"></a>Składnia
 
-> **NAME**
+> **NAZWIJ**
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

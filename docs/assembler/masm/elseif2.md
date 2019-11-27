@@ -15,7 +15,7 @@ ms.locfileid: "74397679"
 ---
 # <a name="elseif2"></a>ELSEIF2
 
-[ELSEIF](../../assembler/masm/elseif-masm.md) block evaluated on every assembly pass if **OPTION:SETIF2** is **TRUE**.
+Blok [ElseIf](../../assembler/masm/elseif-masm.md) jest obliczany na każdym przebiegu zestawu, jeśli **Opcja: SETIF2** ma **wartość true**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -23,8 +23,8 @@ ms.locfileid: "74397679"
 
 ## <a name="remarks"></a>Uwagi
 
-For more information about 2-pass behavior in MASM 5.1 vs MASM 6.1, see [IF1 and IF2](if2.md).
+Aby uzyskać więcej informacji na temat zachowania 2-Pass w MASM 5,1 vs MASM 6,1, zobacz [IF1 i IF2](if2.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

@@ -15,14 +15,14 @@ ms.locfileid: "74398841"
 ---
 # <a name="comment-masm"></a>COMMENT (MASM)
 
-Treats all *text* between or on the same line as the delimiters as a comment.
+Traktuje cały *tekst* między lub w tym samym wierszu co ogranicznik jako komentarz.
 
 ## <a name="syntax"></a>Składnia
 
-> **COMMENT** *delimiter* ⟦*text*⟧\
-> ⟦*text*⟧\
-> ⟦*text*⟧ *delimiter* ⟦*text*⟧
+> *Ogranicznik* **komentarza** ⟦*Text*⟧ \
+> ⟦*Text*⟧ \
+> ⟦*Text*⟧ *ogranicznik* ⟦*Text*⟧
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)\

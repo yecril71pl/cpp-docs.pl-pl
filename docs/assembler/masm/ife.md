@@ -15,16 +15,16 @@ ms.locfileid: "74397397"
 ---
 # <a name="ife"></a>IFE
 
-Grants assembly if *expression* is false (0).
+Przyznaje zestaw, jeśli *wyrażenie* ma wartość false (0).
 
 ## <a name="syntax"></a>Składnia
 
-> **IFE** *expression*
+> *Wyrażenie* Ife
 
 ## <a name="remarks"></a>Uwagi
 
-See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+Aby uzyskać pełną składnię [, zobacz.](../../assembler/masm/if-masm.md)
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)
