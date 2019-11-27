@@ -13,14 +13,14 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397474"
 ---
-# <a name="group-32-bit-masm"></a>GROUP (32-bit MASM)
+# <a name="group-32-bit-masm"></a>Grupa (32-bitowa MASM)
 
-Add the specified *segments* to the group called *name*. (32-bit MASM only.)
+Dodaj określony *segmenty* do grupy o nazwie *Nazwa*. (tylko 32-bitowy MASM).
 
 ## <a name="syntax"></a>Składnia
 
-> *name* **GROUP** *segment* ⟦ __,__ *segment* ...⟧
+> *Nazwa* *segmentu* grupy ⟦ __,__ *segment* ... ⟧
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

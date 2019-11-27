@@ -222,7 +222,7 @@ int main()
 ## <a name="see-also"></a>Zobacz także
 
 [Auto, słowo kluczowe](../cpp/auto-keyword.md)<br/>
-[słowa kluczowe](../cpp/keywords-cpp.md)<br/>
+[Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
 [/Zc:auto (Dedukuj typ zmiennej)](../build/reference/zc-auto-deduce-variable-type.md)<br/>
 [sizeof, operator](../cpp/sizeof-operator.md)<br/>
 [typeid](../extensions/typeid-cpp-component-extensions.md)<br/>

@@ -12,19 +12,19 @@ ms.locfileid: "74245176"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>Mechanizm pimpl hermetyzacji w czasie kompilacji (Modern C++)
 
-The *pimpl idiom* is a modern C++ technique to hide implementation, to minimize coupling, and to separate interfaces. Pimpl is short for "pointer to implementation." You may already be familiar with the concept but know it by other names like Cheshire Cat or Compiler Firewall idiom.
+*Mechanizm pimpl hermetyzacji idiom* jest nowoczesnym C++ techniką do ukrycia implementacji, minimalizowania sprzęgu i oddzielenia interfejsów. Mechanizm pimpl hermetyzacji jest krótkie dla "wskaźnika do implementacji". Użytkownik może już znać koncepcję, ale znać inne nazwy, takie jak Cheshire Cat lub kompilator idiom.
 
-## <a name="why-use-pimpl"></a>Why use pimpl?
+## <a name="why-use-pimpl"></a>Dlaczego warto używać Mechanizm pimpl hermetyzacji?
 
-Here's how the pimpl idiom can improve the software development lifecycle:
+Oto, jak Mechanizm pimpl hermetyzacji idiom może ulepszyć cykl programowania oprogramowania:
 
-- Minimization of compilation dependencies.
+- Minimalizacja zależności kompilacji.
 
-- Separation of interface and implementation.
+- Rozdzielenie interfejsu i implementacji.
 
-- Portability.
+- Przenośność.
 
-## <a name="pimpl-header"></a>Pimpl header
+## <a name="pimpl-header"></a>Mechanizm pimpl hermetyzacji — nagłówek
 
 ```cpp
 // my_class.h
@@ -35,11 +35,11 @@ private:
 };
 ```
 
-The pimpl idiom avoids rebuild cascades and brittle object layouts. It's well suited for (transitively) popular types.
+Mechanizm pimpl hermetyzacji idiom pozwala uniknąć ponownego kompilowania kaskad i układów obiektów kruchy. Jest to dobrze dostosowane do popularnych typów (przechodnie).
 
-## <a name="pimpl-implementation"></a>Pimpl implementation
+## <a name="pimpl-implementation"></a>Implementacja Mechanizm pimpl hermetyzacji
 
-Define the `impl` class in the .cpp file.
+Zdefiniuj klasę `impl` w pliku CPP.
 
 ```cpp
 // my_class.cpp
@@ -53,12 +53,12 @@ my_class::my_class(): pimpl( new impl )
 }
 ```
 
-## <a name="best-practices"></a>Najlepsze rozwiązania
+## <a name="best-practices"></a>Najlepsze praktyki
 
-Consider whether to add support for non-throwing swap specialization.
+Weź pod uwagę, czy dodać obsługę niezgłaszanej specjalizacji wymiany.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Zapraszamy ponownie doC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)

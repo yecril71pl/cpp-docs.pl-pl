@@ -19,11 +19,11 @@ ms.locfileid: "74397133"
 ---
 # <a name="operator-"></a>operator +
 
-The first operator returns *expression1* plus *expression2*.
+Pierwszy operator zwraca *wyrażenie1* Plus *wyrażenie2*.
 
 ## <a name="syntax"></a>Składnia
 
-> *expression1* + *expression2*
+> *wyrażenie1* + *wyrażenie2*
 
 ## <a name="see-also"></a>Zobacz także
 

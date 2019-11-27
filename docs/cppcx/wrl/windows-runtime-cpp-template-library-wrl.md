@@ -3,12 +3,12 @@ title: Biblioteka szablonów języka C++ środowiska wykonawczego systemu Window
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 7b99f6429f620b56aec5adbc4b8f15d89cc54264
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 7a7b37a32ebaa0bb6ad71c8f710300256589388d
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274674"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541204"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteka szablonów języka C++ środowiska wykonawczego systemu Windows (WRL)
 
@@ -43,37 +43,37 @@ Poniżej przedstawiono niektóre zasoby, które mogą pomóc w rozpoczęciu prac
 [Biblioteka środowisko wykonawcze systemu Windows (WRL)](https://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
 W tym filmie wideo kanału 9 dowiesz się więcej o tym C++ , jak biblioteka szablonów środowisko wykonawcze systemu Windows ułatwia pisanie aplikacji platforma uniwersalna systemu Windows (platformy UWP) oraz sposób tworzenia i używania składników Środowisko wykonawcze systemu Windows.
 
-[Instrukcje: Aktywowanie i używanie składnika środowisko wykonawcze systemu Windows](how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
+[Instrukcje: aktywowanie i używanie składnika środowisko wykonawcze systemu Windows](how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
 Pokazuje, w jaki sposób używać C++ środowisko wykonawcze systemu Windows biblioteki szablonów do inicjowania środowisko wykonawcze systemu Windows i aktywowania i używania składnika Środowisko wykonawcze systemu Windows.
 
-[Instrukcje: Ukończ operacje asynchroniczne](how-to-complete-asynchronous-operations-using-wrl.md)<br/>
+[Instrukcje: Kończenie operacji asynchronicznych](how-to-complete-asynchronous-operations-using-wrl.md)<br/>
 Pokazuje, jak używać biblioteki szablonów C++ środowisko wykonawcze systemu Windows do uruchamiania operacji asynchronicznych i wykonywania pracy po zakończeniu operacji.
 
-[Instrukcje: Obsługa zdarzeń](how-to-handle-events-using-wrl.md)<br/>
+[Instrukcje: obsługa zdarzeń](how-to-handle-events-using-wrl.md)<br/>
 Pokazuje, jak używać biblioteki szablonów C++ środowisko wykonawcze systemu Windows, aby subskrybować i obsłużyć zdarzenia obiektu środowisko wykonawcze systemu Windows.
 
 [Przewodnik: tworzenie aplikacji platformy uniwersalnej systemu Windows z użyciem biblioteki WRL i platformy Media Foundation](walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)<br/>
 Dowiedz się, jak utworzyć aplikację platformy UWP, która używa [Microsoft Media Foundation](/windows/win32/medfound/microsoft-media-foundation-sdk).
 
-[Instrukcje: Tworzenie klasycznego składnika COM](how-to-create-a-classic-com-component-using-wrl.md)<br/>
+[Instrukcje: tworzenie klasycznego składnika COM](how-to-create-a-classic-com-component-using-wrl.md)<br/>
 Pokazuje, jak używać biblioteki szablonów C++ środowisko wykonawcze systemu Windows do tworzenia podstawowego składnika modelu COM i podstawowego sposobu rejestrowania i używania składnika com z poziomu aplikacji klasycznej.
 
 [Instrukcje: bezpośrednie tworzenie wystąpień składników biblioteki WRL](how-to-instantiate-wrl-components-directly.md)<br/>
 Dowiedz się, jak używać funkcji [Microsoft:: WRL:: Make](make-function.md) i [Microsoft:: WRL::D etails:: MakeAndInitialize](makeandinitialize-function.md) , aby utworzyć wystąpienie składnika z modułu, który go definiuje.
 
-[Instrukcje: użycie winmdidl.exe i midlrt.exe w celu utworzenia plików .h z metadanych systemu Windows](use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)<br/>
+[Instrukcje: Użyj winmdidl.exe i midlrt.exe, aby utworzyć pliki .h z metadanych systemu Windows](use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)<br/>
 Pokazuje, jak używać niestandardowych składników środowisko wykonawcze systemu Windows z WRL przez utworzenie pliku IDL z metadanych. winmd.
 
 [Przewodnik: łączenie za pomocą zadań i żądań XML HTTP](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
 Pokazuje, w jaki sposób używać interfejsów [IXMLHTTPRequest2](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2) i [IXMLHTTPRequest2Callback](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2callback) wraz z zadaniami do wysyłania żądań HTTP GET i post do usługi sieci Web w aplikacji platformy UWP.
 
 [Przykład Optymalizatora podróży w usłudze mapy Bing](https://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
-Używa klasy, która jest zdefiniowana w [instruktażu: `HttpRequest` Łączenie przy użyciu zadań i żądań](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) http XML w kontekście kompletnej aplikacji platformy UWP.
+Używa klasy `HttpRequest`, która jest zdefiniowana w [instruktażu: łączenie za pomocą zadań i żądań HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) w kontekście kompletnej aplikacji platformy UWP.
 
 [Tworzenie składnika środowisko wykonawcze systemu Windows DLL z C++ przykładem](https://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
 Pokazuje, jak używać biblioteki szablonów C++ środowisko wykonawcze systemu Windows do tworzenia składnika biblioteki DLL w toku i używania go z C++/CX, JavaScript i. C#
 
-[Przykładowa gra DirectX marmur labiryntu](https://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
+[Przykładowa gra DirectX marmur labiryntu](https://docs.microsoft.com/samples/microsoft/windows-appsample-marble-maze/directx-marble-maze-game-sample/)<br/>
 Pokazuje, jak używać biblioteki szablonów C++ środowisko wykonawcze systemu Windows do zarządzania okresem istnienia składników modelu COM, takich jak DirectX i Platforma Media Foundation w kontekście kompletnej gry trójwymiarowej.
 
 [Przykład wysyłania wyskakujących powiadomień z aplikacji klasycznych](https://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
@@ -85,7 +85,7 @@ Biblioteka C++ szablonów środowisko wykonawcze systemu Windows jest podobna do
 
 Biblioteka C++ szablonów środowisko wykonawcze systemu Windows obsługuje funkcje com wymagane przez aplikacje platformy UWP. W związku z tym różni się od ATL, ponieważ pomija bezpośrednią obsługę funkcji COM, takich jak:
 
-- Agregacji
+- agregacji
 
 - implementacje giełdowe
 
@@ -109,23 +109,23 @@ Biblioteka C++ szablonów środowisko wykonawcze systemu Windows zawiera typy, k
 
 ### <a name="comptr"></a>ComPtr
 
-[ComPtr](comptr-class.md) to *inteligentny typ wskaźnika* , który reprezentuje interfejs, który jest określony przez parametr szablonu. Użyj `ComPtr` , aby zadeklarować zmienną, która może uzyskać dostęp do elementów członkowskich obiektu, który pochodzi z interfejsu. `ComPtr`automatycznie utrzymuje liczbę odwołań dla wskaźnika źródłowego i zwalnia interfejs, gdy liczba odwołań spadnie do zera.
+[ComPtr](comptr-class.md) to *inteligentny typ wskaźnika* , który reprezentuje interfejs, który jest określony przez parametr szablonu. Użyj `ComPtr`, aby zadeklarować zmienną, która może uzyskać dostęp do elementów członkowskich obiektu, który pochodzi z interfejsu. `ComPtr` automatycznie utrzymuje liczbę odwołań dla podstawowego wskaźnika interfejsu i zwalnia interfejs, gdy liczba odwołań spadnie do zera.
 
 ### <a name="runtimeclass"></a>RuntimeClass
 
-[RuntimeClass](runtimeclass-class.md) reprezentuje klasę skonkretyzowany, która dziedziczy zestaw określonych interfejsów. `RuntimeClass` Obiekt może zapewnić kombinację obsługi jednego lub wielu środowisko wykonawcze systemu Windows interfejsów com lub słabe odwołanie do składnika.
+[RuntimeClass](runtimeclass-class.md) reprezentuje klasę skonkretyzowany, która dziedziczy zestaw określonych interfejsów. Obiekt `RuntimeClass` może zapewnić kombinację obsługi dla jednego lub wielu środowisko wykonawcze systemu Windows interfejsów COM lub słabe odwołanie do składnika.
 
 ### <a name="module"></a>Moduł
 
-[Moduł](module-class.md) reprezentuje kolekcję obiektów pokrewnych. `Module` Obiekt zarządza fabrykami klas, które tworzą obiekty i rejestrację, co umożliwia innym aplikacjom korzystanie z obiektu.
+[Moduł](module-class.md) reprezentuje kolekcję obiektów pokrewnych. Obiekt `Module` zarządza fabrykami klas, które tworzą obiekty i rejestrację, co umożliwia innym aplikacjom używanie obiektu.
 
 ### <a name="callback"></a>Wywołania zwrotnego
 
-Funkcja [wywołania zwrotnego](callback-function-wrl.md) tworzy obiekt, którego funkcja członkowska jest procedurą obsługi zdarzeń (metoda wywołania zwrotnego). `Callback` Użyj funkcji do zapisywania operacji asynchronicznych.
+Funkcja [wywołania zwrotnego](callback-function-wrl.md) tworzy obiekt, którego funkcja członkowska jest procedurą obsługi zdarzeń (metoda wywołania zwrotnego). Użyj funkcji `Callback`, aby napisać operacje asynchroniczne.
 
 ### <a name="eventsource"></a>EventSource
 
-Element [EventSource](eventsource-class.md) służy do zarządzania obsługą zdarzeń *delegatów* . Użyj środowisko wykonawcze systemu Windows C++ biblioteki szablonów, aby zaimplementować delegata, i `EventSource` użyć do dodawania, usuwania i wywoływania delegatów.
+Element [EventSource](eventsource-class.md) służy do zarządzania obsługą zdarzeń *delegatów* . Użyj środowisko wykonawcze systemu Windows C++ biblioteki szablonów, aby zaimplementować delegata, a następnie użyj `EventSource` do dodawania, usuwania i wywoływania delegatów.
 
 ### <a name="asyncbase"></a>AsyncBase
 
@@ -133,13 +133,13 @@ Element [EventSource](eventsource-class.md) służy do zarządzania obsługą zd
 
 ### <a name="ftmbase"></a>FtmBase
 
-[FtmBase](ftmbase-class.md) reprezentuje obiekt marshaler o dowolnym wątku. `FtmBase`tworzy globalną tabelę interfejsów (GIT) i pomaga zarządzać kierowaniem obiektów i obiektami proxy.
+[FtmBase](ftmbase-class.md) reprezentuje obiekt marshaler o dowolnym wątku. `FtmBase` tworzy globalną tabelę interfejsów (GIT) i pomaga zarządzać kierowaniem obiektów i obiektami proxy.
 
 ### <a name="weakref"></a>WeakRef
 
-[WeakRef](weakref-class.md) jest typem wskaźnika inteligentnego, który reprezentuje *słabe odwołanie*, które odwołuje się do obiektu, który może lub być niedostępny. `WeakRef` Obiekt może być używany tylko przez środowisko wykonawcze systemu Windows, a nie za pomocą klasycznego modelu com.
+[WeakRef](weakref-class.md) jest typem wskaźnika inteligentnego, który reprezentuje *słabe odwołanie*, które odwołuje się do obiektu, który może lub być niedostępny. Obiekt `WeakRef` może być używany tylko przez środowisko wykonawcze systemu Windows, a nie za pomocą klasycznego modelu COM.
 
-`WeakRef` Obiekt zazwyczaj reprezentuje obiekt, którego istnienie jest kontrolowane przez zewnętrzny wątek lub aplikację. Na przykład `WeakRef` obiekt może odwoływać się do obiektu pliku. Gdy plik jest otwarty, `WeakRef` jest prawidłowy i dostępny jest plik, do którego się odwołuje. Ale gdy plik jest zamknięty, `WeakRef` jest nieprawidłowy, a plik jest niedostępny.
+Obiekt `WeakRef` zazwyczaj reprezentuje obiekt, którego istnienie jest kontrolowane przez zewnętrzny wątek lub aplikację. Na przykład obiekt `WeakRef` może odwoływać się do obiektu pliku. Gdy plik jest otwarty, `WeakRef` jest prawidłowy i dostępny jest dostęp do pliku. Ale gdy plik jest zamknięty, `WeakRef` jest nieprawidłowy, a plik jest niedostępny.
 
 ## <a name="related-topics"></a>Tematy pokrewne
 

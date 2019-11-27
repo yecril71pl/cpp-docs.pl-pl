@@ -15,18 +15,18 @@ ms.locfileid: "74398579"
 ---
 # <a name="code"></a>.CODE
 
-When used with [.MODEL](../../assembler/masm/dot-model.md), indicates the start of a code segment.
+W przypadku użycia z [. MODEL](../../assembler/masm/dot-model.md)wskazuje początek segmentu kodu.
 
 ## <a name="syntax"></a>Składnia
 
-> **.CODE** ⟦*name*⟧
+> **. KOD** ⟦*Nazwa*⟧
 
 ### <a name="parameters"></a>Parametry
 
-*name*\
-Optional parameter that specifies the name of the code segment. The default name is **_TEXT** for tiny, small, compact, and flat [models](../../assembler/masm/dot-model.md). The default name is *modulename*_TEXT for other models.
+\ *nazwy*
+Opcjonalny parametr, który określa nazwę segmentu kodu. Domyślna nazwa jest **_TEXT** dla [modeli](../../assembler/masm/dot-model.md)bardzo mały, mały, kompaktowy i płaski. Nazwa domyślna to *modulename*_TEXT dla innych modeli.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)\
 [.DATA](../../assembler/masm/dot-data.md)

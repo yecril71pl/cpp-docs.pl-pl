@@ -15,7 +15,7 @@ ms.locfileid: "74393477"
 ---
 # <a name="subttl"></a>SUBTTL
 
-See [SUBTITLE](../../assembler/masm/subtitle.md).
+Wyświetl [podtytuł](../../assembler/masm/subtitle.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -23,4 +23,4 @@ See [SUBTITLE](../../assembler/masm/subtitle.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

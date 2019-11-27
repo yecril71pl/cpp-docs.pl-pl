@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4263
+title: Ostrzeżenie kompilatora (poziom 4) C4263
 ms.date: 11/04/2016
 f1_keywords:
 - C4263
 helpviewer_keywords:
 - C4263
 ms.assetid: daabb05d-ab56-460f-ab6c-c74d222ef649
-ms.openlocfilehash: a035646aab2589523adb9eb0b201e2d4d781632c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea41f16420f847616b5bcb2c092ff187a14f7175
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400932"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541653"
 ---
-# <a name="compiler-warning-level-4-c4263"></a>Kompilator ostrzeżenie (poziom 4) C4263
+# <a name="compiler-warning-level-4-c4263"></a>Ostrzeżenie kompilatora (poziom 4) C4263
 
-'Funkcja': funkcja składowa nie zastępuje żadnej funkcji składowej wirtualnej klasy bazowej
+"Function": funkcja członkowska nie przesłania żadnej wirtualnej funkcji składowej klasy bazowej
 
-Definicja funkcji klasa ma taką samą nazwę jak funkcja wirtualna klasa bazowa, ale nie ten sam numer lub typ argumentów. Spowoduje to skutecznie ukrycie funkcji wirtualnej w klasie bazowej.
+Definicja funkcji klasy ma taką samą nazwę jak funkcja wirtualna w klasie bazowej, ale nie ma tej samej liczby lub typu argumentów. Efektywnie ukrywa funkcję wirtualną w klasie bazowej.
 
-To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+To ostrzeżenie jest domyślnie wyłączone. Aby uzyskać więcej informacji [, zobacz ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
-Poniższy przykład spowoduje wygenerowanie C4263:
+Poniższy przykład generuje C4263:
 
-```
+```cpp
 // C4263.cpp
 // compile with: /W4
 #pragma warning(default:4263)

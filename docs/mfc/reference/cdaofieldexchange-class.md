@@ -33,21 +33,21 @@ Obiekty DAO są obsługiwane przez pakiet Office 2013. Element DAO 3,6 jest wers
 class CDaoFieldExchange
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
 |[CDaoFieldExchange::IsValidOperation](#isvalidoperation)|Zwraca wartość różną od zera, jeśli bieżąca operacja jest odpowiednia dla typu aktualizowanego pola.|
-|[CDaoFieldExchange::SetFieldType](#setfieldtype)|Określa typ składowej danych zestawu rekordów — kolumny lub parametru — reprezentowane przez wszystkie kolejne wywołania funkcji DFX do momentu następnego wywołania `SetFieldType`.|
+|[CDaoFieldExchange:: SetFieldType](#setfieldtype)|Określa typ składowej danych zestawu rekordów — kolumny lub parametru — reprezentowane przez wszystkie kolejne wywołania funkcji DFX do momentu następnego wywołania `SetFieldType`.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDaoFieldExchange::m_nOperation](#m_noperation)|Operacja DFX wykonywana przez bieżące wywołanie do funkcji składowej `DoFieldExchange` zestawu rekordów.|
-|[CDaoFieldExchange::m_prs](#m_prs)|Wskaźnik do zestawu rekordów, na którym są wykonywane operacje DFX.|
+|[CDaoFieldExchange:: m_nOperation](#m_noperation)|Operacja DFX wykonywana przez bieżące wywołanie do funkcji składowej `DoFieldExchange` zestawu rekordów.|
+|[CDaoFieldExchange:: m_prs](#m_prs)|Wskaźnik do zestawu rekordów, na którym są wykonywane operacje DFX.|
 
 ## <a name="remarks"></a>Uwagi
 

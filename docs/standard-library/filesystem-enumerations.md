@@ -164,4 +164,4 @@ enum class perms {// names for permissions
 ## <a name="see-also"></a>Zobacz także
 
 [Odwołania do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
-[\<filesystem>](../standard-library/filesystem.md)
+[\<> systemu plików](../standard-library/filesystem.md)

@@ -15,16 +15,16 @@ ms.locfileid: "74397711"
 ---
 # <a name="else-masm"></a>ELSE (MASM)
 
-Marks the beginning of an alternate block within a conditional block.
+Oznacza początek alternatywnego bloku w bloku warunkowym.
 
 ## <a name="syntax"></a>Składnia
 
-> **ELSE**
+> **PRZEJMI**
 
 ## <a name="remarks"></a>Uwagi
 
-See [IF](../../assembler/masm/if-masm.md).
+Sprawdź, [czy](../../assembler/masm/if-masm.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

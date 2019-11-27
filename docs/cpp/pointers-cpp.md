@@ -1,7 +1,7 @@
 ---
-title: Pointers (C++)
+title: Wskaźniki (C++)
 ms.date: 11/19/2019
-description: About raw pointers and smart pointers in Microsoft C++.
+description: Informacje o surowych wskaźnikach i inteligentnych C++wskaźnikach w firmie Microsoft.
 helpviewer_keywords:
 - pointers (C++)
 ms.assetid: 595387c5-8e58-4670-848f-344c7caf985e
@@ -12,28 +12,28 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246423"
 ---
-# <a name="pointers-c"></a>Pointers (C++)
+# <a name="pointers-c"></a>Wskaźniki (C++)
 
-A pointer is a variable that stores the memory address of an object. Pointers are used extensively in both C and C++ for three main purposes:
+Wskaźnik to zmienna, która przechowuje adres pamięci obiektu. Wskaźniki są szeroko używane zarówno w języku C, C++ jak i na trzy główne cele:
 
-- to allocate new objects on the heap,
-- to pass functions to other functions
-- to iterate over elements in arrays or other data structures.
+- Aby przydzielić nowe obiekty na stercie,
+- Aby przekazać funkcje do innych funkcji
+- do iteracji nad elementami w tablicach lub w innych strukturach danych.
 
-In C-style programming, *raw pointers* are used for all these scenarios. However, raw pointers are the source of many serious programming errors. Therefore, their use is strongly discouraged except where they provide a significant performance benefit and there is no ambiguity as to which pointer is the *owning pointer* that is responsible for deleting the object. Modern C++ provides *smart pointers* for allocating objects, *iterators* for traversing data structures, and *lambda expressions* for passing functions. By using these language and library facilities instead of raw pointers, you will make your program safer, easier to debug, and simpler to understand and maintain. See [Smart pointers](smart-pointers-modern-cpp.md), [Iterators](../standard-library/iterators.md), and [Lambda expressions](lambda-expressions-in-cpp.md) for more information.
+W programowaniu w stylu języka C, *surowe wskaźniki* są używane we wszystkich tych scenariuszach. Jednak surowe wskaźniki są źródłem wielu poważnych błędów programistycznych. W związku z tym ich użycie jest zdecydowanie odradzane, z tą różnicą, że zapewniają znaczącą korzyść wydajności i nie ma niejednoznaczności, ponieważ wskaźnik jest *wskaźnikiem będącym właścicielem* , który jest odpowiedzialny za usunięcie obiektu. Nowoczesne C++ oferuje *inteligentne wskaźniki* do alokowania obiektów, *iteratorów* dla przechodzenia struktur danych i *wyrażeń lambda* do przekazywania funkcji. Korzystając z tych funkcji językowych i bibliotek zamiast nieprzetworzonych wskaźników, zapewniasz, że program będzie bezpieczniejszy, łatwiejszy w debugowaniu i łatwiejszy do zrozumienia i utrzymania. Aby uzyskać więcej informacji, zobacz [inteligentne wskaźniki](smart-pointers-modern-cpp.md), [Iteratory](../standard-library/iterators.md)i [wyrażenia lambda](lambda-expressions-in-cpp.md) .
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-- [Raw pointers](raw-pointers.md)
-- [Const and volatile pointers](const-and-volatile-pointers.md)
-- [new and delete operators](new-and-delete-operators.md)
-- [Smart pointers](smart-pointers-modern-cpp.md)
-- [How to: Create and use unique_ptr instances](how-to-create-and-use-unique-ptr-instances.md)
-- [How to: Create and use shared_ptr instances](how-to-create-and-use-shared-ptr-instances.md)
-- [How to: Create and use weak_ptr instances](how-to-create-and-use-weak-ptr-instances.md)
-- [How to: Create and use CComPtr and CComQIPtr instances](how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)
+- [Surowe wskaźniki](raw-pointers.md)
+- [Wskaźniki const i volatile](const-and-volatile-pointers.md)
+- [New i DELETE — operatory](new-and-delete-operators.md)
+- [Inteligentne wskaźniki](smart-pointers-modern-cpp.md)
+- [Instrukcje: Tworzenie wystąpień unique_ptr i korzystanie z nich](how-to-create-and-use-unique-ptr-instances.md)
+- [Instrukcje: Tworzenie wystąpień shared_ptr i korzystanie z nich](how-to-create-and-use-shared-ptr-instances.md)
+- [Instrukcje: Tworzenie wystąpień weak_ptr i korzystanie z nich](how-to-create-and-use-weak-ptr-instances.md)
+- [Instrukcje: Tworzenie wystąpień CComPtr i CComQIPtr oraz korzystanie z nich](how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)
 
 ## <a name="see-also"></a>Zobacz także
 
 [Iteratory](../standard-library/iterators.md)</br>
-[Lambda expressions](lambda-expressions-in-cpp.md)
+[Wyrażenia lambda](lambda-expressions-in-cpp.md)

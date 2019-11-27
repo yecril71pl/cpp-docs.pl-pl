@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4204
+title: Ostrzeżenie kompilatora (poziom 4) C4204
 ms.date: 11/04/2016
 f1_keywords:
 - C4204
 helpviewer_keywords:
 - C4204
 ms.assetid: 298d2880-6737-448e-b711-15572d540200
-ms.openlocfilehash: e16cb9fb59ee6ec24bb9b68dad1be9432d9eee3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ecbe8bddd3f868070470555e79608ac1ecce380a
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401244"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541672"
 ---
-# <a name="compiler-warning-level-4-c4204"></a>Kompilator ostrzeżenie (poziom 4) C4204
+# <a name="compiler-warning-level-4-c4204"></a>Ostrzeżenie kompilatora (poziom 4) C4204
 
-użyto niestandardowego rozszerzenia: Inicjator agregacji nie jest stały
+użyto niestandardowego rozszerzenia: inicjator agregacji niestałej
 
-Rozszerzenia Microsoft (/Ze) należy zainicjować typów agregacji (tablic, struktury, Unii i klasy) z wartościami, które nie są stałe.
+Za pomocą rozszerzeń Microsoft (/ze) można inicjować typy agregacji (tablice, struktury, Unii i klasy) z wartościami, które nie są stałymi.
 
 ## <a name="example"></a>Przykład
 
-```
+```c
 // C4204.c
 // compile with: /W4
 int func1()
@@ -40,4 +40,4 @@ int main()
 }
 ```
 
-Takie inicjalizacje są nieprawidłowe w obszarze zgodności ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Takie inicjalizacje są nieprawidłowe pod kątem zgodności ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)).

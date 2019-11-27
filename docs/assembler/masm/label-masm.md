@@ -15,14 +15,14 @@ ms.locfileid: "74397270"
 ---
 # <a name="label-masm"></a>ETYKIETA (MASM)
 
-Creates a new label by assigning the current location-counter value and the given *type* to *name*.
+Tworzy nową etykietę, przypisując bieżącą wartość Location-Counter i dany *Typ* do *nazwy*.
 
 ## <a name="syntax"></a>Składnia
 
-> *name* **LABEL** *type*
+> *Typ* etykiety nazwy
 >
-> *name* **LABEL** ⟦**NEAR** | **FAR** | **PROC**⟧ **PTR** ⟦*type*⟧
+> *Nazwa* **etykieta** ⟦**blisko** | **daleko** | **proc**⟧ **PTR** ⟦*Type*⟧
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

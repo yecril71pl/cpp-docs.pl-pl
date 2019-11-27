@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4131
+title: Ostrzeżenie kompilatora (poziom 4) C4131
 ms.date: 11/04/2016
 f1_keywords:
 - C4131
 helpviewer_keywords:
 - C4131
 ms.assetid: 7903b3e1-454f-4be2-aa9b-230992f96a2d
-ms.openlocfilehash: 24872bb0b42de77dde358dc29f99826b41638628
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 266d62126d9154cd87706d3124e69e107bbdefde
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401348"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541580"
 ---
-# <a name="compiler-warning-level-4-c4131"></a>Kompilator ostrzeżenie (poziom 4) C4131
+# <a name="compiler-warning-level-4-c4131"></a>Ostrzeżenie kompilatora (poziom 4) C4131
 
-'Funkcja': używa deklaratora w starym stylu
+"Function": używa deklarator starego stylu
 
-Deklaracja określona funkcja nie jest w formie prototypu.
+Określona deklaracja funkcji nie jest w postaci prototypowej.
 
-Deklaracje funkcji w starym stylu powinny być konwertowane do formularza prototypu.
+Deklaracje funkcji starego stylu powinny być konwertowane na formę prototypu.
 
-Poniższy przykład przedstawia deklarację funkcji w starym stylu:
+W poniższym przykładzie pokazano deklarację funkcji starego stylu:
 
-```
+```c
 // C4131.c
 // compile with: /W4 /c
 void addrec( name, id ) // C4131 expected
@@ -32,9 +32,9 @@ int id;
 { }
 ```
 
-Poniższy przykład przedstawia formularz prototypu:
+Poniższy przykład przedstawia formę prototypu:
 
-```
+```c
 void addrec( char *name, int id )
 { }
 ```

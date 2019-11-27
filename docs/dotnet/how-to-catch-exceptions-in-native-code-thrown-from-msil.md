@@ -15,13 +15,13 @@ ms.locfileid: "74246686"
 ---
 # <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>Porady: przechwytywanie wyjątków w kodzie natywnym wygenerowanym w języku MSIL
 
-In native code, you can catch native C++ exception from MSIL.  You can catch CLR exceptions with `__try` and `__except`.
+W kodzie natywnym można wychwycić wyjątek C++ natywny z MSIL.  Wyjątki CLR można przechwycić za pomocą `__try` i `__except`.
 
-For more information, see [Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md) and [Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md).
+Aby uzyskać więcej informacji, zobacz [Obsługa wyjątków strukturalnych (CC++/)](../cpp/structured-exception-handling-c-cpp.md) i [nowoczesne C++ najlepsze rozwiązania dotyczące wyjątków i obsługi błędów](../cpp/errors-and-exception-handling-modern-cpp.md).
 
 ## <a name="example"></a>Przykład
 
-The following sample defines a module with two functions, one that throws a native exception, and another that throws an MSIL exception.
+Poniższy przykład definiuje moduł z dwoma funkcjami, taki, który zgłasza wyjątek macierzysty, i inny, który zgłasza wyjątek MSIL.
 
 ```
 // catch_MSIL_in_native.cpp
@@ -37,7 +37,7 @@ void Test2() {
 
 ## <a name="example"></a>Przykład
 
-The following sample defines a module that catches a native and MSIL exception.
+Poniższy przykład definiuje moduł, który przechwytuje wyjątek natywny i MSIL.
 
 ```
 // catch_MSIL_in_native_2.cpp

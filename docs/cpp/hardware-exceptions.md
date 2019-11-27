@@ -27,7 +27,7 @@ Wyjątki sprzętowe rozpoznawane przez system Windows zestawiono w poniższej ta
 |--------------------|------------------------|
 |STATUS_ACCESS_VIOLATION|Odczyt lub zapis do niedostępnej lokalizacji pamięci.|
 |STATUS_BREAKPOINT|Napotkanie punktu przerwania zdefiniowanego przez sprzęt; używane tylko przez debugery.|
-|STATUS_DATATYPE_MISALIGNMENT|Odczyt lub zapis danych na adres, który jest nieodpowiednio wyrównany; na przykład jednostki 16-bitowe muszą być wyrównane do 2-bajtowych granic. (Not applicable to Intel 80*x*86 processors.)|
+|STATUS_DATATYPE_MISALIGNMENT|Odczyt lub zapis danych na adres, który jest nieodpowiednio wyrównany; na przykład jednostki 16-bitowe muszą być wyrównane do 2-bajtowych granic. (Nie dotyczy procesorów Intel 80*x*86).|
 |STATUS_FLOAT_DIVIDE_BY_ZERO|Dzielenie liczb typu zmiennoprzecinkowego przez 0.0.|
 |STATUS_FLOAT_OVERFLOW|Przekroczenie maksymalnego dodatniego wykładnika typu zmiennoprzecinkowego.|
 |STATUS_FLOAT_UNDERFLOW|Przekroczenie wielkości najmniejszego ujemnego wykładnika typu zmiennoprzecinkowego.|
@@ -38,9 +38,9 @@ Wyjątki sprzętowe rozpoznawane przez system Windows zestawiono w poniższej ta
 |STATUS_INTEGER_OVERFLOW|Podjęcie próby wykonania operacji, która wykracza poza zakres liczby całkowitej.|
 |STATUS_SINGLE_STEP|Wykonywanie pojedynczej instrukcji w trybie pracy krokowej; używane tylko przez debugery.|
 
-Wiele wyjątków wymienionych w powyższej tabeli jest przeznaczonych do obsługi przez debugery, system operacyjny lub inny kod niskiego poziomu. Z wyjątkiem błędów liczb całkowitych i zmiennoprzecinkowych, kod nie powinien obsługiwać tych błędów. Zatem zazwyczaj należy korzystać z filtru obsługi wyjątków w celu ignorowania wyjątków (obliczania do 0). W przeciwnym razie można uniemożliwić prawidłową odpowiedź mechanizmom niskiego poziomu. You can, however, take appropriate precautions against the potential effect of these low-level errors by [writing termination handlers](../cpp/writing-a-termination-handler.md).
+Wiele wyjątków wymienionych w powyższej tabeli jest przeznaczonych do obsługi przez debugery, system operacyjny lub inny kod niskiego poziomu. Z wyjątkiem błędów liczb całkowitych i zmiennoprzecinkowych, kod nie powinien obsługiwać tych błędów. Zatem zazwyczaj należy korzystać z filtru obsługi wyjątków w celu ignorowania wyjątków (obliczania do 0). W przeciwnym razie można uniemożliwić prawidłową odpowiedź mechanizmom niskiego poziomu. Można jednak podjąć odpowiednie środki ostrożności przed potencjalnym efektem tych błędów niskiego poziomu, [pisząc programy obsługi zakończenia](../cpp/writing-a-termination-handler.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Writing an exception handler](../cpp/writing-an-exception-handler.md)<br/>
+[Pisanie procedury obsługi wyjątków](../cpp/writing-an-exception-handler.md)<br/>
 [Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

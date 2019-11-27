@@ -1,5 +1,5 @@
 ---
-title: operator &amp;
+title: '&amp; operatora'
 ms.date: 08/30/2018
 f1_keywords:
 - '&'
@@ -16,13 +16,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397099"
 ---
-# <a name="operator-amp"></a>operator &amp;
+# <a name="operator-amp"></a>&amp; operatora
 
-Bitwise **AND**. Used only within [.IF](../../assembler/masm/dot-if.md), [.WHILE](../../assembler/masm/dot-while.md), or [.REPEAT](../../assembler/masm/dot-repeat.md) blocks and evaluated at run time, not at assembly time.
+Bitowe **i**. Używany tylko w ramach programu [. Jeśli](../../assembler/masm/dot-if.md), [. WHILE](../../assembler/masm/dot-while.md)lub [. POWTARZAj](../../assembler/masm/dot-repeat.md) bloki i oceniaj w czasie wykonywania, a nie w czasie montażu.
 
 ## <a name="syntax"></a>Składnia
 
-> *expression1* **&** *expression2*
+> *wyrażenie1* **&** *wyrażenie2*
 
 ## <a name="see-also"></a>Zobacz także
 

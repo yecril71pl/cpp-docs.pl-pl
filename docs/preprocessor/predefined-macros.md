@@ -455,7 +455,7 @@ Program MSVC obsługuje te dodatkowe wstępnie zdefiniowane makra.
 
 - `_MSC_VER` zdefiniowany jako literał typu Integer, który koduje główne i pomocnicze elementy numeru wersji kompilatora. Numer główny to pierwszy element rozdzielanego kropką numeru wersji, a numer pomocniczy to drugi element. Jeśli na przykład numer wersji pakietu Microsoft C/C++ Compiler to 17.00.51106.1, makro `_MSC_VER` ma wartość 1700. Wprowadź `cl /?` w wierszu polecenia, aby wyświetlić numer wersji kompilatora. To makro jest zawsze definiowane.
 
-   |Wersja programu Visual Studio|`_MSC_VER`|
+   |Visual Studio w wersji|`_MSC_VER`|
    |-|-|
    |Visual Studio 6.0|1200|
    |Visual Studio .NET 2002 (7.0)|1300|

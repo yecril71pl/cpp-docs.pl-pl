@@ -15,7 +15,7 @@ ms.locfileid: "74303141"
 
 [MSBuild](../msbuild-visual-cpp.md) jest domyślnym systemem projektu w programie Visual Studio; Po wybraniu opcji **plik** > **Nowy projekt** w C++ wizualizacji tworzysz projekt MSBuild, którego ustawienia są przechowywane w pliku projektu XML, który ma `.vcxproj`rozszerzenia. Plik projektu może również importować. props pliki i pliki. targets, w których można przechowywać ustawienia. W większości przypadków nie trzeba ręcznie edytować pliku projektu i w rzeczywistości nie należy edytować go ręcznie, chyba że masz dobre zrozumienie programu MSBuild. Za każdym razem, gdy to możliwe, należy użyć stron właściwości programu Visual Studio do modyfikowania ustawień projektu (zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md). Jednak w niektórych przypadkach może być konieczne ręczne zmodyfikowanie pliku projektu lub arkusza właściwości. W tych scenariuszach ten artykuł zawiera podstawowe informacje o strukturze pliku.
 
-**Ważne:**
+**Ważne**
 
 Jeśli zdecydujesz się ręcznie edytować plik. vcxproj, weź pod uwagę następujące fakty:
 

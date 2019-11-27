@@ -15,11 +15,11 @@ ms.locfileid: "74188989"
 ---
 # <a name="arrays-c"></a>Tablice (C++)
 
-An array is a sequence of objects of the same type that occupy a contiguous area of memory. Traditional C-style arrays are the source of many bugs, but are still common, especially in older code bases. In modern C++, we strongly recommend using [std::vector](../standard-library/vector-class.md) or [std::array](../standard-library/array-class-stl.md) instead of C-style arrays described in this section. Both of these standard library types store their elements as a contiguous block of memory but provide much greater type safety along with iterators that are guaranteed to point to a valid location within the sequence. For more information, see [Containers (Modern C++)](containers-modern-cpp.md).
+Tablica jest sekwencją obiektów tego samego typu, które zajmują ciągły obszar pamięci. Tradycyjne tablice języka C są źródłem wielu błędów, ale są nadal wspólne, szczególnie w przypadku starszych baz kodu. W nowoczesnych C++wersjach zdecydowanie zalecamy użycie [std:: Vector](../standard-library/vector-class.md) lub [std:: Array](../standard-library/array-class-stl.md) zamiast tablic w stylu C opisanych w tej sekcji. Oba te standardowe typy bibliotek przechowują swoje elementy jako ciągły blok pamięci, ale zapewniają znacznie większe bezpieczeństwo typów oraz Iteratory, które mają na celu wskazanie prawidłowej lokalizacji w sekwencji. Aby uzyskać więcej informacji, zobacz [kontenery C++(nowoczesne)](containers-modern-cpp.md).
 
-## <a name="stack-declarations"></a>Stack declarations
+## <a name="stack-declarations"></a>Deklaracje stosu
 
-In a C++ array declaration, the array size is specified after the variable name, not after the type name as in some other languages. The following example declares an array of 1000 doubles to be allocated on the stack. The number of elements must be supplied as an integer literal or else as a constant expression because the compiler has to know how much stack space to allocate; it cannot use a value computed at run-time. Each element in the array is assigned a default value of 0. If you do not assign a default value, each element will initially contain whatever random values happen to be at that location.
+W deklaracji C++ tablicy rozmiar tablicy jest określany po nazwie zmiennej, a nie po nazwie typu, tak jak w innych językach. Poniższy przykład deklaruje tablicę 1000 podwaja się do przydzielenia na stosie. Liczba elementów musi być podana jako literał typu Integer lub else jako wyrażenie stałe, ponieważ kompilator musi wiedzieć, ile miejsca na stosie ma przydzielić; nie można użyć wartości obliczanej w czasie wykonywania. Każdy element w tablicy ma przypisaną wartość domyślną 0. Jeśli nie przypiszesz wartości domyślnej, każdy element początkowo będzie zawierał wszystkie losowe wartości, które będą znajdować się w tej lokalizacji.
 
 ```cpp
     constexpr size_t size = 1000;
@@ -44,20 +44,20 @@ In a C++ array declaration, the array size is specified after the variable name,
     }
 ```
 
-The first element in the array is the 0th element, and the last element is the (*n*-1) element, where *n* is the number of elements the array can contain. The number of elements in the declaration must be of an integral type and must be greater than 0. It is your responsibility to ensure that your program never passes a value to the subscript operator that is greater than `(size - 1)`.
+Pierwszy element w tablicy to element 0th, a ostatni element to (*n*-1), gdzie *n* to liczba elementów, które może zawierać tablica. Liczba elementów w deklaracji musi być typu całkowitego i musi być większa niż 0. Użytkownik jest odpowiedzialny za zapewnienie, że program nigdy nie przekaże wartości do operatora indeksu dolnego, który jest większy niż `(size - 1)`.
 
-A zero-sized array is legal only when the array is the last field in a **struct** or **union** and when the Microsoft extensions (/Ze) are enabled.
+Tablica o rozmiarze zerowym jest dozwolona tylko wtedy, gdy tablica jest ostatnim polem w **strukturze** lub **Unii** i gdy włączone są rozszerzenia Microsoft (/ze).
 
-Stack-based arrays are faster to allocate and access than heap-based arrays, but the number of elements can't be so large that it uses up too much stack memory. How much is too much depends on your program. You can use profiling tools to determine whether an array is too large.
+Tablice oparte na stosie są szybsze do przydzielania i uzyskiwania dostępu do tablic opartych na stercie, ale liczba elementów nie może być tak duża, że zużywa zbyt dużo pamięci stosu. Jak dużo jest zbyt wiele zależy od programu. Za pomocą narzędzi profilowania można określić, czy tablica jest zbyt duża.
 
-## <a name="heap-declarations"></a>Heap declarations
+## <a name="heap-declarations"></a>Deklaracje sterty
 
-If you require an array that is too large to be allocated on the stack, or whose size cannot be known at compile time, you can allocate it on the heap with a [new\[\]](new-operator-cpp.md) expression. The operator returns a pointer to the first element. You can use the subscript operator with the pointer variable just as with a stack-based array. You can also use [pointer arithmetic](../c-language/pointer-arithmetic.md) to move the pointer to any arbitrary elements in the array. It is your responsibility to ensure that:
+Jeśli wymagana jest tablica, która jest zbyt duża, aby mogła zostać przydzielona na stosie lub której rozmiar nie może być znany w czasie kompilacji, można przydzielić ją na stercie przy użyciu [nowego wyrażenia \]\[](new-operator-cpp.md) . Operator zwraca wskaźnik do pierwszego elementu. Można użyć operatora indeksu dolnego ze zmienną wskaźnika tak samo jak w przypadku macierzy opartej na stosie. Można również użyć [arytmetyki wskaźnika](../c-language/pointer-arithmetic.md) , aby przenieść wskaźnik do dowolnego elementu w tablicy. Jest odpowiedzialny za zapewnienie, że:
 
-- you always keep a copy of the original pointer address so that you can delete the memory when you no longer need the array.
-- you do not increment or decrement the pointer address past the array bounds.
+- należy zawsze zachować kopię oryginalnego adresu wskaźnika, aby można było usunąć pamięć, gdy nie jest już potrzebna tablica.
+- Nie zwiększaj ani nie zmniejszaj adresu wskaźnika poza granicami tablicy.
 
-The following example shows how to define an array on the heap at run time, and how to access the array elements using the subscript operator or by using pointer arithmetic:
+Poniższy przykład pokazuje, jak zdefiniować tablicę w stercie w czasie wykonywania i jak uzyskać dostęp do elementów tablicy przy użyciu operatora indeksu dolnego lub przy użyciu arytmetycznego wskaźnika:
 
 ```cpp
 
@@ -117,7 +117,7 @@ int main()
 
 ## <a name="initializing-arrays"></a>Inicjowanie tablic
 
-You can initialize an array in a loop, one element at a time, or in a single statement. The contents of the following two arrays are identical:
+Można zainicjować tablicę w pętli, jeden element w czasie lub w pojedynczej instrukcji. Zawartość następujących dwóch tablic jest identyczna:
 
 ```cpp
     int a[10];
@@ -129,11 +129,11 @@ You can initialize an array in a loop, one element at a time, or in a single sta
     int b[10]{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 ```
 
-## <a name="passing-arrays-to-functions"></a>Passing arrays to functions
+## <a name="passing-arrays-to-functions"></a>Przekazywanie tablic do funkcji
 
-When an array is passed to a function, it is passed as a pointer to the first element. This is true for both stack-based and heap-based arrays. The pointer contains no additional size or type information. This behavior is called *pointer decay*. When you pass an array to a function, you must always specify the number of elements in a separate parameter. This behavior also implies that the array elements are not copied when the array is passed to a function. To prevent the function from modifying the elements, specify the parameter as a pointer to **const** elements.
+Gdy tablica jest przenoszona do funkcji, jest ona przenoszona jako wskaźnik do pierwszego elementu. Dotyczy to zarówno macierzy opartych na stosach, jak i opartych na stercie. Wskaźnik nie zawiera dodatkowego rozmiaru ani informacji o typie. Takie zachowanie jest nazywane *wskaźnikiem zanikania*. Gdy przekazujesz tablicę do funkcji, musisz zawsze określić liczbę elementów w osobnym parametrze. Takie zachowanie oznacza również, że elementy tablicy nie są kopiowane, gdy tablica jest przenoszona do funkcji. Aby zapobiec modyfikowaniu elementów przez funkcję, określ parametr jako wskaźnik do elementów **stałych** .
 
-The following example shows a function that accepts an array and a length. The pointer points to the original array, not a copy. Because the parameter is not **const**, the function can modify the array elements.
+Poniższy przykład pokazuje funkcję, która akceptuje tablicę i długość. Wskaźnik wskazuje oryginalną tablicę, a nie kopię. Ponieważ parametr nie jest **stałą**, funkcja może modyfikować elementy tablicy.
 
 ```cpp
 void process(double p*, const size_t len)
@@ -146,13 +146,13 @@ void process(double p*, const size_t len)
 }
 ```
 
-Declare the array as const to make it read-only within the function block:
+Zadeklaruj tablicę jako stałą, aby uczynić ją tylko do odczytu w bloku funkcji:
 
 ```cpp
 void process(const double p*, const size_t len);
 ```
 
-The same function can also be declared in these ways, with no change in behavior. The array is still passed as a pointer to the first element:
+Tę samą funkcję można także zadeklarować w taki sposób, bez zmiany w zachowaniu. Tablica jest nadal przenoszona jako wskaźnik do pierwszego elementu:
 
 ```cpp
 // Unsized array
@@ -162,20 +162,20 @@ void process(const double p[] const size_t len);
 void process(const double p[1000], const size_t len);
 ```
 
-## <a name="multidimensional-arrays"></a>Multidimensional arrays
+## <a name="multidimensional-arrays"></a>Tablice wielowymiarowe
 
-Arrays constructed from other arrays are multidimensional arrays. These multidimensional arrays are specified by placing multiple bracketed constant expressions in sequence. For example, consider this declaration:
+Tablice zbudowane z innych tablic są tablicami wielowymiarowych. Te wielowymiarowe tablice są określane przez umieszczenie w sekwencji wielu wyrażeń stałych w nawiasach kwadratowych. Na przykład rozważmy następującą deklarację:
 
 ```cpp
 int i2[5][7];
 ```
 
-It specifies an array of type **int**, conceptually arranged in a two-dimensional matrix of five rows and seven columns, as shown in the following figure:
+Określa tablicę typu **int**, koncepcyjnie ułożonej w dwuwymiarowej macierzy składającej się z pięciu wierszy i siedmiu kolumn, jak pokazano na poniższej ilustracji:
 
-![Conceptual layout of a multi&#45;dimensional array](../cpp/media/vc38rc1.gif "Conceptual layout of a multi&#45;dimensional array") <br/>
-Conceptual layout of a multi-dimensional array
+![Układ koncepcyjny tablicy&#45;wielowymiarowej](../cpp/media/vc38rc1.gif "Układ koncepcyjny tablicy&#45;wielowymiarowej") <br/>
+Układ koncepcyjny macierzy wielowymiarowej
 
-In declarations of multidimensioned arrays that have an initializer list (as described in [Initializers](../cpp/initializers.md)), the constant expression that specifies the bounds for the first dimension can be omitted. Na przykład:
+W deklaracjach tablic wielowymiarowych, które mają listę inicjatorów (zgodnie z opisem w [inicjatorach](../cpp/initializers.md)), można pominąć wyrażenie stałe określające granice dla pierwszego wymiaru. Na przykład:
 
 ```cpp
 // arrays2.cpp
@@ -189,15 +189,15 @@ double TransportCosts[][cMarkets] = {
 };
 ```
 
-The preceding declaration defines an array that is three rows by four columns. The rows represent factories and the columns represent markets to which the factories ship. The values are the transportation costs from the factories to the markets. The first dimension of the array is left out, but the compiler fills it in by examining the initializer.
+Poprzednia deklaracja definiuje tablicę, która ma trzy wiersze o czterech kolumnach. Wiersze przedstawiają fabryki, a kolumny reprezentują rynki, do których są dostarczane fabryki. Wartości to koszty transportu od fabryk do rynków. Pierwszy wymiar tablicy jest pozostawiony, ale kompilator wypełnia go, sprawdzając inicjator.
 
-Use of the indirection operator (*) on an n-dimensional array type yields an n-1 dimensional array. If n is 1, a scalar (or array element) is yielded.
+Użycie operatora pośredniego (*) dla n-wymiarowego typu tablicy daje w wyniku tablicę n-1. Jeśli n to 1, jest wynikiem wartości skalarnej (lub elementu tablicy).
 
-C++ arrays are stored in row-major order. Row-major order means the last subscript varies the fastest.
+C++Tablice są przechowywane w kolejności najważniejszych wierszy. Wiersz — główne zamówienie oznacza, że ostatni indeks dolny różni się od najszybszego.
 
 ## <a name="example"></a>Przykład
 
-The technique of omitting the bounds specification for the first dimension of a multidimensional array can also be used in function declarations as follows:
+Technika pomijania specyfikacji granic dla pierwszego wymiaru tablicy wielowymiarowej może być również używana w deklaracjach funkcji w następujący sposób:
 
 ```cpp
 // multidimensional_arrays.cpp
@@ -250,13 +250,13 @@ double FindMinToMkt(int Mkt, double myTransportCosts[][cMkts], int mycFacts) {
 The minimum cost to Market 3 is: 17.29
 ```
 
-The function `FindMinToMkt` is written such that adding new factories does not require any code changes, just a recompilation.
+Funkcja `FindMinToMkt` jest zapisywana w taki sposób, że dodanie nowych fabryk nie wymaga żadnych zmian w kodzie, a dopiero ponowna kompilacja.
 
 ## <a name="initializing-arrays"></a>Inicjowanie tablic
 
-If a class has a constructor, arrays of that class are initialized by a constructor. If there are fewer items in the initializer list than elements in the array, the default constructor is used for the remaining elements. If no default constructor is defined for the class, the initializer list must be complete — that is, there must be one initializer for each element in the array.
+Jeśli klasa ma Konstruktor, tablice tej klasy są inicjowane przez konstruktora. Jeśli na liście inicjatorów znajduje się mniej elementów niż elementy w tablicy, Konstruktor domyślny jest używany dla pozostałych elementów. Jeśli nie zdefiniowano domyślnego konstruktora dla klasy, lista inicjatorów musi być kompletna — to znaczy, że dla każdego elementu w tablicy musi istnieć jeden inicjator.
 
-Consider the `Point` class that defines two constructors:
+Rozważmy klasę `Point`, która definiuje dwa konstruktory:
 
 ```cpp
 // initializing_arrays1.cpp
@@ -281,9 +281,9 @@ int main()
 }
 ```
 
-The first element of `aPoint` is constructed using the constructor `Point( int, int )`; the remaining two elements are constructed using the default constructor.
+Pierwszy element `aPoint` jest konstruowany przy użyciu konstruktora `Point( int, int )`; Pozostałe dwa elementy są konstruowane przy użyciu domyślnego konstruktora.
 
-Static member arrays (whether **const** or not) can be initialized in their definitions (outside the class declaration). Na przykład:
+Statyczne tablice członkowskie (bez względu na to, czy **const** lub not) mogą być inicjowane w ich definicjach (poza deklaracją klasy). Na przykład:
 
 ```cpp
 // initializing_arrays2.cpp
@@ -301,9 +301,9 @@ int main()
 }
 ```
 
-## <a name="accessing-array-elements"></a>Accessing array elements
+## <a name="accessing-array-elements"></a>Uzyskiwanie dostępu do elementów tablicy
 
-You can access individual elements of an array by using the array subscript operator (`[ ]`). If a one-dimensional array is used in an expression that has no subscript, the array name evaluates to a pointer to the first element in the array.
+Dostęp do poszczególnych elementów tablicy można uzyskać za pomocą operatora indeksu dolnego (`[ ]`). Jeśli tablica Jednowymiarowa jest używana w wyrażeniu, które nie ma indeksu dolnego, nazwa tablicy zostanie przeznaczona do wskaźnika do pierwszego elementu w tablicy.
 
 ```cpp
 // using_arrays.cpp
@@ -315,7 +315,7 @@ int main() {
 }
 ```
 
-When you use multidimensional arrays, you can use various combinations in expressions.
+W przypadku korzystania z tablic wielowymiarowych można użyć różnych kombinacji w wyrażeniach.
 
 ```cpp
 // using_arrays_2.cpp
@@ -336,30 +336,30 @@ int main() {
 }
 ```
 
-In the preceding code, `multi` is a three-dimensional array of type **double**. The `p2multi` pointer points to an array of type **double** of size three. In this example, the array is used with one, two, and three subscripts. Although it is more common to specify all subscripts, as in the `cout` statement, it is sometimes useful to select a specific subset of array elements, as shown in the statements that follow `cout`.
+W poprzednim kodzie `multi` jest tablicą trójwymiarową typu **Double**. Wskaźnik `p2multi` wskazuje na tablicę typu o **podwójnym** rozmiarze trzech. W tym przykładzie tablica jest używana z jednym, dwoma i trzema indeksami dolnymi. Chociaż jest to bardziej powszechne, aby określić wszystkie indeksy dolne, jak w instrukcji `cout`, czasami warto wybrać konkretny podzbiór elementów tablicy, jak pokazano w instrukcjach, które obserwują `cout`.
 
-## <a name="overloading-subscript-operator"></a>Overloading subscript operator
+## <a name="overloading-subscript-operator"></a>Przeciążanie operatora indeksu dolnego
 
-Like other operators, the subscript operator (`[]`) can be redefined by the user. The default behavior of the subscript operator, if not overloaded, is to combine the array name and the subscript using the following method:
+Podobnie jak w przypadku innych operatorów, Operator indeksu dolnego (`[]`) może zostać ponownie zdefiniowany przez użytkownika. Domyślne zachowanie operatora indeksu dolnego (jeśli nie jest przeciążone) polega na połączeniu nazwy tablicy i indeksu dolnego przy użyciu następującej metody:
 
 `*((array_name) + (subscript))`
 
-As in all addition that involves pointer types, scaling is performed automatically to adjust for the size of the type. Therefore, the resultant value is not *n* bytes from the origin of array-name; rather, it is the *n*th element of the array. For more information about this conversion, see [Additive operators](additive-operators-plus-and.md).
+Podobnie jak w przypadku wszystkich elementów, które obejmują typy wskaźników, skalowanie jest wykonywane automatycznie w celu dostosowania rozmiaru typu. W związku z tym wynikowa wartość nie jest *n* bajtami ze źródła nazwy Array-Name; Zamiast tego jest to *n*-ty element tablicy. Aby uzyskać więcej informacji na temat tej konwersji, zobacz [dodatek operatory](additive-operators-plus-and.md).
 
-Similarly, for multidimensional arrays, the address is derived using the following method:
+Podobnie w przypadku tablic wielowymiarowych adres jest wyprowadzany przy użyciu następującej metody:
 
 `((array_name) + (subscript1 * max2 * max3 * ... * maxn) + (subscript2 * max3 * ... * maxn) + ... + subscriptn))`
 
 ## <a name="arrays-in-expressions"></a>Tablice w wyrażeniach
 
-When an identifier of an array type appears in an expression other than `sizeof`, address-of (`&`), or initialization of a reference, it is converted to a pointer to the first array element. Na przykład:
+Gdy identyfikator typu tablicy pojawia się w wyrażeniu innym niż `sizeof`, adres (`&`) lub Inicjalizacja odwołania, jest konwertowany na wskaźnik do pierwszego elementu tablicy. Na przykład:
 
 ```cpp
 char szError1[] = "Error: Disk drive not ready.";
 char *psz = szError1;
 ```
 
-The pointer `psz` points to the first element of the array `szError1`. Arrays, unlike pointers, are not modifiable l-values. Therefore, the following assignment is illegal:
+Wskaźnik `psz` wskazuje na pierwszy element `szError1`tablicy. Tablice, w przeciwieństwie do wskaźników, nie podlegają modyfikowaniu l-wartości. W związku z tym następujące przypisanie jest niedozwolone:
 
 ```cpp
 szError1 = psz;
@@ -367,4 +367,4 @@ szError1 = psz;
 
 ## <a name="see-also"></a>Zobacz także
 
-[std::array](../standard-library/array-class-stl.md)
+[std:: Array](../standard-library/array-class-stl.md)

@@ -29,72 +29,72 @@ ms.locfileid: "74246302"
 ---
 # <a name="try-finally-statement"></a>try-finally — instrukcja
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-The following syntax describes the **try-finally** statement:
+Następująca składnia opisuje instrukcję **try-finally** :
 
-> **\_\_try**<br/>
+> **\_\_spróbuj**<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;// guarded code<br/>
+> &nbsp;&nbsp;&nbsp;kod &nbsp;//chroniony<br/>
 > }<br/>
 > **\_\_finally**<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;// termination code<br/>
+> &nbsp;&nbsp;&nbsp;kod &nbsp;//zakończenia<br/>
 > }
 
 ## <a name="grammar"></a>Gramatyka
 
-*try-finally-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **\_\_try** *compound-statement* **\_\_finally** *compound-statement*
+*try-finally-Statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **\_\_try** *złożonej instrukcji* **\_\_finally** *złożonej instrukcji*
 
-The **try-finally** statement is a Microsoft extension to the C and C++ languages that enables target applications to guarantee execution of cleanup code when execution of a block of code is interrupted. Cleanup consists of such tasks as deallocating memory, closing files, and releasing file handles. The **try-finally** statement is especially useful for routines that have several places where a check is made for an error that could cause premature return from the routine.
+Instrukcja **try-finally** to rozszerzenie firmy Microsoft do języków C i C++ , które umożliwiają aplikacjom docelowym wykonywanie kodu czyszczącego w przypadku przerwania wykonywania bloku kodu. Oczyszczanie składa się z takich zadań, jak cofanie alokacji pamięci, zamykanie plików i zwalnianie dojść do plików. Instrukcja **try-finally** jest szczególnie przydatna w przypadku procedur, które mają kilka miejsc, w których wystąpiło sprawdzenie błędu, który może spowodować przedwcześnie powrót z procedury.
 
-For related information and a code sample, see [try-except Statement](../cpp/try-except-statement.md). For more information on structured exception handling in general, see [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). For more information on handling exceptions in managed applications with C++/CLI, see [Exception Handling under /clr](../extensions/exception-handling-cpp-component-extensions.md).
-
-> [!NOTE]
-> Strukturalna obsługa wyjątków działa z Win32 dla plików źródłowych C i C++. Jednakże nie jest specjalnie zaprojektowana dla języka C++. Można zapewnić, że kod będzie bardziej przenośny przy użyciu obsługi wyjątków C++. Ponadto, obsługa wyjątków C++ jest bardziej elastyczna, gdyż może obsługiwać wyjątki dowolnego typu. For C++ programs, it is recommended that you use the C++ exception-handling mechanism ([try, catch, and throw](../cpp/try-throw-and-catch-statements-cpp.md) statements).
-
-The compound statement after the **__try** clause is the guarded section. The compound statement after the **__finally** clause is the termination handler. The handler specifies a set of actions that execute when the guarded section is exited, regardless of whether the guarded section is exited by an exception (abnormal termination), or by standard fall through (normal termination).
-
-Control reaches a **__try** statement by simple sequential execution (fall through). When control enters the **__try**, its associated handler becomes active. If the flow of control reaches the end of the try block, execution proceeds as follows:
-
-1. The termination handler is invoked.
-
-1. When the termination handler completes, execution continues after the **__finally** statement. Regardless of how the guarded section ends (for example, via a **goto** out of the guarded body or a **return** statement), the termination handler is executed *before* the flow of control moves out of the guarded section.
-
-   A **__finally** statement does not block searching for an appropriate exception handler.
-
-If an exception occurs in the **__try** block, the operating system must find a handler for the exception or the program will fail. If a handler is found, any and all **__finally** blocks are executed and execution resumes in the handler.
-
-For example, suppose a series of function calls links function A to function D, as shown in the following figure. Each function has one termination handler. If an exception is raised in function D and handled in A, the termination handlers are called in this order as the system unwinds the stack: D, C, B.
-
-![Order of termination&#45;handler execution](../cpp/media/vc38cx1.gif "Order of termination&#45;handler execution") <br/>
-Order of Termination-Handler Execution
+Aby uzyskać informacje pokrewne i przykład kodu, zobacz [Instrukcja try-except](../cpp/try-except-statement.md). Aby uzyskać więcej informacji o ogólnym obsłudze wyjątków, zobacz [strukturalna obsługa wyjątków](../cpp/structured-exception-handling-c-cpp.md). Aby uzyskać więcej informacji na temat obsługi wyjątków w zarządzanych C++aplikacjach za pomocą/CLI, zobacz [Obsługa wyjątków w obszarze/CLR](../extensions/exception-handling-cpp-component-extensions.md).
 
 > [!NOTE]
-> The behavior of try-finally is different from some other languages that support the use of **finally**, such as C#.  A single **__try** may have either, but not both, of **__finally** and **__except**.  If both are to be used together, an outer try-except statement must enclose the inner try-finally statement.  The rules specifying when each block executes are also different.
+> Strukturalna obsługa wyjątków działa z Win32 dla plików źródłowych C i C++. Jednakże nie jest specjalnie zaprojektowana dla języka C++. Można zapewnić, że kod będzie bardziej przenośny przy użyciu obsługi wyjątków C++. Ponadto, obsługa wyjątków C++ jest bardziej elastyczna, gdyż może obsługiwać wyjątki dowolnego typu. W C++ przypadku programów zaleca się użycie mechanizmu obsługi C++ wyjątków (instrukcje[try, catch i throw](../cpp/try-throw-and-catch-statements-cpp.md) ).
 
-For compatibility with previous versions, **_try**, **_finally**, and **_leave** are synonyms for **__try**, **__finally**, and **__leave** unless compiler option [/Za \(Disable language extensions)](../build/reference/za-ze-disable-language-extensions.md) is specified.
+Instrukcja złożona po klauzuli **__try** jest sekcją chronioną. Instrukcja złożona po klauzuli **__finally** to procedura obsługi zakończenia. Procedura obsługi określa zestaw akcji, które są wykonywane, gdy Sekcja chroniona zostanie zakończona, bez względu na to, czy sekcja chroniona została zakończona przez wyjątek (nietypowe zakończenie), czy przez Standard (normalne zakończenie).
+
+Formant dociera do instrukcji **__try** przez proste wykonywanie sekwencyjne (przechodzenie). Gdy kontrolka przejdzie do **__try**, jego skojarzona procedura obsługi zostanie uaktywniona. Jeśli przepływ sterowania osiągnie koniec bloku try, wykonanie przebiega w następujący sposób:
+
+1. Procedura obsługi zakończenia jest wywoływana.
+
+1. Po zakończeniu procedury obsługi zakończenia wykonywanie jest kontynuowane po instrukcji **__finally** . Bez względu na to, jak zakończył się sekcja chroniona (na przykład za pomocą instrukcji **goto** z chronionej treści lub instrukcja **Return** ), program obsługi zakończenia jest wykonywany *przed* przeniesieniem przepływu sterowania z sekcji chronionej.
+
+   Instrukcja **__finally** nie blokuje wyszukiwania odpowiedniego programu obsługi wyjątków.
+
+Jeśli wystąpi wyjątek w bloku **__try** , system operacyjny musi znaleźć procedurę obsługi dla wyjątku lub program zakończy się niepowodzeniem. W przypadku znalezienia programu obsługi, wszystkie bloki **__finally** są wykonywane i wznawiania wykonywania w programie obsługi.
+
+Załóżmy na przykład, że seria wywołań funkcji łączy funkcję A z funkcją D, jak pokazano na poniższej ilustracji. Każda funkcja ma jedną procedurę obsługi zakończenia. Jeśli wyjątek jest wywoływany w funkcji D i obsługiwany w, programy obsługi zakończenia są wywoływane w tej kolejności, w której system rozwinięcia stosu: D, C, B.
+
+![Kolejność wykonywania procedury&#45;obsługi zakończenia](../cpp/media/vc38cx1.gif "Kolejność wykonywania procedury&#45;obsługi zakończenia") <br/>
+Kolejność zakończenia — wykonywanie programu obsługi
+
+> [!NOTE]
+> Zachowanie try-finally różni się od innych języków, które obsługują korzystanie z **finally**, takich jak C#.  Pojedynczy **__try** może mieć jeden, ale nie oba **__finally** i **__except**.  Jeśli oba te elementy mają być używane razem, zewnętrzna Instrukcja try-except musi zawierać wewnętrzną instrukcję try-finally.  Reguły określające, kiedy każdy blok wykonuje się również inaczej.
+
+Aby zapewnić zgodność z poprzednimi wersjami, **_try**, **_finally**i **_leave** są synonimami dla **__try**, **__finally**i **__leave** , chyba że opcja kompilatora [/za \(Disable Extensions)](../build/reference/za-ze-disable-language-extensions.md) jest określona.
 
 ## <a name="the-__leave-keyword"></a>Słowo kluczowe __leave
 
-The **__leave** keyword is valid only within the guarded section of a **try-finally** statement, and its effect is to jump to the end of the guarded section. Execution continues at the first statement in the termination handler.
+Słowo kluczowe **__leave** jest prawidłowe tylko w sekcji chronionej instrukcji **try-finally** , a jej efektem jest przechodzenie do końca sekcji chronionej. Wykonywanie jest kontynuowane na pierwszej instrukcji w programie obsługi zakończenia.
 
-A **goto** statement can also jump out of the guarded section, but it degrades performance because it invokes stack unwinding. The **__leave** statement is more efficient because it does not cause stack unwinding.
+Instrukcja **goto** może również wyskoczyć z chronionej sekcji, ale obniża wydajność, ponieważ wywołuje odwracanie stosu. Instrukcja **__leave** jest wydajniejsza, ponieważ nie powoduje odwinięcia stosu.
 
-## <a name="abnormal-termination"></a>Abnormal Termination
+## <a name="abnormal-termination"></a>Nietypowe zakończenie
 
-Exiting a **try-finally** statement using the [longjmp](../c-runtime-library/reference/longjmp.md) run-time function is considered abnormal termination. It is illegal to jump into a **__try** statement, but legal to jump out of one. All **__finally** statements that are active between the point of departure (normal termination of the **__try** block) and the destination (the **__except** block that handles the exception) must be run. This is called a local unwind.
+Kończenie instrukcji **try-finally** przy użyciu funkcji [longjmp](../c-runtime-library/reference/longjmp.md) Run-Time jest uznawane za nietypowe zakończenie. Przechodzenie do instrukcji **__try** nie jest dozwolone, ale w celu wychodzenia z jednej z nich. Wszystkie instrukcje **__finally** , które są aktywne między punktem wyjścia (normalne zakończenie bloku **__try** ) i miejscem docelowym (blok **__except** obsługujący wyjątek) musi być uruchomiony. Jest to nazywane lokalnym odwinięciem.
 
-If a **try** block is prematurely terminated for any reason, including a jump out of the block, the system executes the associated **finally** block as a part of the process of unwinding the stack. In such cases, the [AbnormalTermination](/windows/win32/Debug/abnormaltermination) function returns **true** if called from within the **finally** block; otherwise, it returns **false**.
+Jeśli blok **try** jest przedwcześnie zakończony z dowolnego powodu, włącznie z skokiem z bloku, system wykonuje skojarzony blok **finally** jako część procesu odwinięcia stosu. W takich przypadkach funkcja [AbnormalTermination](/windows/win32/Debug/abnormaltermination) zwraca **wartość true** , jeśli wywoływana z wewnątrz bloku **finally** ; w przeciwnym razie zwraca **wartość false**.
 
-The termination handler is not called if a process is killed in the middle of executing a **try-finally** statement.
+Procedura obsługi zakończenia nie jest wywoływana, jeśli proces zostanie zamknięty w trakcie wykonywania instrukcji **try-finally** .
 
-**END Microsoft Specific**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 
-[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
+[Pisanie procedury obsługi zakończenia](../cpp/writing-a-termination-handler.md)<br/>
 [Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
-[Termination-Handler Syntax](/windows/win32/Debug/termination-handler-syntax)
+[Zakończenie — składnia programu obsługi](/windows/win32/Debug/termination-handler-syntax)

@@ -15,12 +15,12 @@ ms.locfileid: "74397760"
 ---
 # <a name="dt"></a>DT
 
-Allocates and optionally initializes 10 bytes of storage for each *initializer*. Can also be used as a type specifier anywhere a type is legal. **DT** is a synonym of [TBYTE](../../assembler/masm/tbyte.md).
+Przydziela i opcjonalnie inicjuje 10 bajtów magazynu dla każdego *inicjatora*. Może być również używany jako specyfikator typu, gdziekolwiek typ jest dozwolony. **DT** jest synonimem [TBYTE](../../assembler/masm/tbyte.md).
 
 ## <a name="syntax"></a>Składnia
 
-> ⟦*name*⟧ **DT** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦*Nazwa*⟧ *inicjatora* DT ⟦ __,__ *inicjator* ... ⟧
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

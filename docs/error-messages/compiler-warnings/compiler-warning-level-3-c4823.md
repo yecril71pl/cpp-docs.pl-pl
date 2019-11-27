@@ -1,31 +1,31 @@
 ---
-title: Kompilator ostrzeżenie (poziom 3) C4823
+title: Ostrzeżenie kompilatora (poziom 3) C4823
 ms.date: 11/04/2016
 f1_keywords:
 - C4823
 helpviewer_keywords:
 - C4823
 ms.assetid: 8a77560d-dcea-4cae-aebb-8ebf1b4cef85
-ms.openlocfilehash: 28d490c341c4d14c2e6c03e13007b5a8be423622
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a96877252b0b7699f5e4033f8e695f4d9016a6c9
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401543"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541266"
 ---
-# <a name="compiler-warning-level-3-c4823"></a>Kompilator ostrzeżenie (poziom 3) C4823
+# <a name="compiler-warning-level-3-c4823"></a>Ostrzeżenie kompilatora (poziom 3) C4823
 
-'Funkcja': unieruchamiania wskaźników ale unwind używa semantyki nie są włączone. Rozważ użycie opcji/eha
+"Function": używa przypiętych wskaźników, ale semantyka nieprzewinięcia nie jest włączona. Rozważ użycie/EHa
 
-Aby odpiąć obiektu w zarządzanym stosie, wskazywana przez wskaźnik przypinania, zadeklarowana w zakresie bloku, kompilator symuluje działanie destruktory klas lokalnych "imitujących" przypiętego wskaźnika ma destruktor, który nullifies wskaźnika. Aby włączyć po wywołaniu destruktora po zostanie zgłoszony wyjątek, należy włączyć rozwinięcia obiektu, co można zrobić za pomocą [/ehsc](../../build/reference/eh-exception-handling-model.md).
+Aby odpiąć obiekt na stosie zarządzanym wskazywanym przez przypięty wskaźnik zadeklarowany w zakresie bloku, kompilator symuluje zachowanie destruktorów klas lokalnych, "" przesłanianie "wskaźnik przypięty ma destruktor, który NULLIFIES wskaźnik. Aby włączyć wywołanie do destruktora po występowaniu wyjątku, należy włączyć odrzucanie obiektów, które można wykonać za pomocą [/EHsc](../../build/reference/eh-exception-handling-model.md).
 
-Można też ręcznie Odepnij obiektu i zignorować to ostrzeżenie.
+Można również ręcznie odpiąć obiekt i zignorować ostrzeżenie.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4823.
+Poniższy przykład generuje C4823.
 
-```
+```cpp
 // C4823.cpp
 // compile with: /clr /W3 /EHa-
 using namespace System;

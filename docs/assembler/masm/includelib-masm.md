@@ -15,16 +15,16 @@ ms.locfileid: "74397329"
 ---
 # <a name="includelib-masm"></a>INCLUDELIB (MASM)
 
-Informs the linker that the current module should be linked with *libraryname*.
+Informuje konsolidator, że bieżący moduł powinien być połączony z *biblioteką*.
 
 ## <a name="syntax"></a>Składnia
 
-> **INCLUDELIB** *libraryname*
+> **Includelib —** *LibraryName*
 
 ## <a name="remarks"></a>Uwagi
 
-The *libraryname* must be enclosed in angle brackets if it includes a backslash, semicolon, greater-than symbol, less-than symbol, single quotation mark, or double quotation mark.
+*Biblioteka LibraryName* musi być ujęta w nawiasy kątowe, jeśli zawiera ukośnik odwrotny, średnik, większy niż symbol, znak mniejszości, znak pojedynczego cudzysłowu lub podwójny cudzysłów.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

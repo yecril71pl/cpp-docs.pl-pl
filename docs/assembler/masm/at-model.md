@@ -13,14 +13,14 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398956"
 ---
-# <a name="model"></a>\@Model
+# <a name="model"></a>Model \@
 
-1 for **TINY** model, 2 for **SMALL** model, 3 for **COMPACT** model, 4 for **MEDIUM** model, 5 for **LARGE** model, 6 for **HUGE** model, and 7 for **FLAT** model (numeric equate).
+1 w **przypadku modelu o** małym **rozmiarze** 2 dla **małych** modeli, 3 dla modeli **kompaktowych** , 4 dla **medium** model, 5 dla modeli model, 6 dla modeli **ogromnych** i 7 dla modelu **prostego** (wartość liczbowa równa się).
 
 ## <a name="syntax"></a>Składnia
 
-> **\@Model**
+> **Model \@**
 
 ## <a name="see-also"></a>Zobacz także
 
-[Symbols reference](symbols-reference.md)
+[Odwołanie do symboli](symbols-reference.md)

@@ -38,7 +38,7 @@ Aby ukończyć ten przewodnik, musisz mieć zainstalowany program Visual Studio 
 
 1. Użyj **Kreatora aplikacji MFC** , aby utworzyć aplikację MFC. Zobacz [Przewodnik: używanie nowych formantów powłoki MFC](walkthrough-using-the-new-mfc-shell-controls.md) w celu uzyskania instrukcji dotyczących sposobu otwierania Kreatora dla używanej wersji programu Visual Studio.
 
-1. W polu **Nazwa** wpisz *MFCD2DWalkthrough*. Wybierz **OK**.
+1. W polu **Nazwa** wpisz *MFCD2DWalkthrough*. Wybierz **przycisk OK**.
 
 1. W **Kreatorze aplikacji MFC**wybierz pozycję **Zakończ** bez zmiany jakichkolwiek ustawień.
 

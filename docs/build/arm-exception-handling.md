@@ -57,7 +57,7 @@ Rekordy. pdata w obrazie w formacie PE to uporządkowana Tablica elementów o st
 
 Każdy rekord pData dla ARM ma długość 8 bajtów. Ogólny format rekordu umieszcza względny adres wirtualny (RVA) funkcji uruchamianej w pierwszym słowie 32-bitowym, a następnie drugi wyraz zawierający wskaźnik do zmiennej length. xdata lub spakowany wyraz, który opisuje funkcję kanoniczną Sekwencja odwinięcia, jak pokazano w poniższej tabeli:
 
-|Przesunięcie wyrazu|Bity|Cel|
+|Przesunięcie wyrazu|Bity|Przeznaczenie|
 |-----------------|----------|-------------|
 |0|0-31|*Początkowy adres RVA funkcji* to 32-bitowy adres RVA początku funkcji. Jeśli funkcja zawiera kod kciuka, musi być ustawiony niski bit tego adresu.|
 |1|0-1|*Flaga* to pole 2-bitowe, które wskazuje, jak interpretować pozostałe 30 bitów drugiego. pdata. Jeśli *Flaga* ma wartość 0, pozostałe bity tworzą *adres RVA informacji o wyjątku* (z niską liczbą bitów niejawnie 0). Jeśli *Flaga* jest różna od zera, pozostałe bity tworzą *spakowaną strukturę danych unwind* .|
@@ -69,7 +69,7 @@ W przypadku funkcji, których prologues i epilogues postępują zgodnie z poniż
 
 W tej tabeli przedstawiono format rekordu. pdata, który ma spakowane dane unwind:
 
-|Przesunięcie wyrazu|Bity|Cel|
+|Przesunięcie wyrazu|Bity|Przeznaczenie|
 |-----------------|----------|-------------|
 |0|0-31|*Początkowy adres RVA funkcji* to 32-bitowy adres RVA początku funkcji. Jeśli funkcja zawiera kod kciuka, musi być ustawiony niski bit tego adresu.|
 |1|0-1|*Flaga* to pole 2-bitowe, które ma następujące znaczenie:<br /><br />-00 = spakowane dane operacji unwind nie są używane; pozostałe bity punktu do rekordu. xdata.<br />-01 = spakowane dane operacji unwind.<br />-10 = spakowane dane operacji unwindy, gdy zakłada się, że nie ma żadnych prologu. Jest to przydatne w przypadku opisywania fragmentów funkcji, które są rozłączone z początkiem funkcji.<br />-11 = zarezerwowane.|
@@ -104,7 +104,7 @@ Prologues dla funkcji kanonicznych mogą zawierać do 5 instrukcji (należy zauw
 
 |Instrukcja|Przyjęto, że kod operacji jest obecny, jeśli:|Rozmiar|Kod operacji|Kody operacji unwind|
 |-----------------|-----------------------------------|----------|------------|------------------|
-|1|*H*==1|16|`push {r0-r3}`|04|
+|1|*H*= = 1|16|`push {r0-r3}`|04|
 |2|*C*= = 1 lub *L*= = 1 lub *R*= = 0 lub PF = = 1|16/32|`push {registers}`|80-BF/D0-DF/EC-ED|
 |art|*C*= = 1 i (*L*= = 0 i *R*= = 1 i PF = = 0)|16|`mov r11,sp`|C0-CF/FB|
 |3b|*C*= = 1 i (*L*= = 1 lub *R*= = 0 lub PF = = 1)|32|`add r11,sp,#xx`|FC|
@@ -164,7 +164,7 @@ Gdy spakowany format unwindy jest niewystarczający do opisania odwinięcia funk
 
 1. Nagłówek 1 lub 2-Word, który opisuje ogólny rozmiar struktury. xdata i udostępnia kluczowe dane funkcji. Drugi wyraz jest obecny tylko wtedy, gdy *Liczba epilogu* i *słowa kodu* są ustawione na 0. Pola są rozbite w tej tabeli:
 
-   |Word|Bity|Cel|
+   |Word|Bity|Przeznaczenie|
    |----------|----------|-------------|
    |0|0-17|*Długość funkcji* to pole 18-bitowe, które wskazuje łączną długość funkcji w bajtach podzieloną przez 2. Jeśli funkcja jest większa niż 512 KB, do opisania funkcji należy użyć wielu rekordów. pdata i. xdata. Aby uzyskać szczegółowe informacje, zobacz sekcję duże funkcje w tym dokumencie.|
    |0|18-19|*Verse* to pole 2-bitowe opisujące wersję pozostałej XData. Tylko wersja 0 jest obecnie zdefiniowana; wartości 1-3 są zastrzeżone.|
@@ -179,7 +179,7 @@ Gdy spakowany format unwindy jest niewystarczający do opisania odwinięcia funk
 
 1. Po danych wyjątku (Jeśli bit *E* w nagłówku został ustawiony na 0) jest listą informacji na temat zakresów epilogu, które są pakowane jeden do wyrazu i przechowywane w kolejności rosnącego przesunięcia początkowego. Każdy zakres zawiera następujące pola:
 
-   |Bity|Cel|
+   |Bity|Przeznaczenie|
    |----------|-------------|
    |0-17|*Epilogu rozpoczęcia przesunięcia* to pole 18-bitowe, które opisuje przesunięcie epilogu w bajtach podzielone przez 2, względem początku funkcji.|
    |18-19|*Res* to pole 2-bitowe zarezerwowane do użytku w przyszłości. Wartość musi być równa 0.|

@@ -15,7 +15,7 @@ ms.locfileid: "74398657"
 ---
 # <a name="586p-32-bit-masm"></a>.586P (32-bit MASM)
 
-Enables assembly of all instructions (including privileged) for the Pentium processor. (32-bit MASM only.)
+Włącza zestaw wszystkich instrukcji (w tym Privileged) dla procesora Pentium. (tylko 32-bitowy MASM).
 
 ## <a name="syntax"></a>Składnia
 

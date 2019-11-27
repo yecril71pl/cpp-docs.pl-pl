@@ -15,7 +15,7 @@ ms.locfileid: "74397575"
 ---
 # <a name="exitm"></a>EXITM
 
-Terminates expansion of the current repeat or macro block and begins assembly of the next statement outside the block.
+Kończy rozszerzanie bieżącego bloku powtarzania lub makra i rozpoczyna zestaw następnej instrukcji poza blokiem.
 
 ## <a name="syntax"></a>Składnia
 
@@ -23,8 +23,8 @@ Terminates expansion of the current repeat or macro block and begins assembly of
 
 ## <a name="remarks"></a>Uwagi
 
-In a macro function, *textitem* is the value returned.
+W funkcji makro *element textitem* jest wartością zwracaną.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

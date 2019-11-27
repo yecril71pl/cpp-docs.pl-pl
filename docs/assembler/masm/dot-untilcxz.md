@@ -13,10 +13,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397850"
 ---
-# <a name="untilcxz-32-bit-masm"></a>.UNTILCXZ (32-bit MASM)
+# <a name="untilcxz-32-bit-masm"></a>. UNTILCXZ (32-bitowy MASM)
 
-(32-bit MASM only.) See [.REPEAT](../../assembler/masm/dot-repeat.md).
+(tylko 32-bitowy MASM). Zobacz [. Powtórz](../../assembler/masm/dot-repeat.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4266
+title: Ostrzeżenie kompilatora (poziom 4) C4266
 ms.date: 11/04/2016
 f1_keywords:
 - C4266
 helpviewer_keywords:
 - C4266
 ms.assetid: 90ec5f5b-3451-4c16-bb1b-c30a626bdaa0
-ms.openlocfilehash: c0bfe2c03b1c1e310a341e97013ae1516457f300
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e192f2e138c7e586b0fbd05e83755e686b7749ad
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400945"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541679"
 ---
-# <a name="compiler-warning-level-4-c4266"></a>Kompilator ostrzeżenie (poziom 4) C4266
+# <a name="compiler-warning-level-4-c4266"></a>Ostrzeżenie kompilatora (poziom 4) C4266
 
-'Funkcja': niedostępne zastąpienie dla funkcji wirtualnej składowej z typu podstawowego 'type'; funkcja jest ukryta
+"Function": Brak dostępnego przesłonięcia dla wirtualnej funkcji składowej z elementu Base "Type"; Funkcja jest ukryta
 
-Klasa pochodna nie przesłaniały, wszystkie przeciążenia funkcji wirtualnej.
+Klasa pochodna nie przesłania wszystkich przeciążeń funkcji wirtualnej.
 
-To ostrzeżenie jest domyślnie wyłączona.  Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+To ostrzeżenie jest domyślnie wyłączone.  Aby uzyskać więcej informacji [, zobacz ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
-Poniższy przykład spowoduje wygenerowanie C4266:
+Poniższy przykład generuje C4266:
 
-```
+```cpp
 // C4266.cpp
 // compile with: /W4 /c
 #pragma warning (default : 4266)
@@ -40,7 +40,7 @@ class LocalBinding : private Engine {
 
 Możliwe rozwiązanie:
 
-```
+```cpp
 // C4266b.cpp
 // compile with: /W4 /c
 #pragma warning (default : 4266)

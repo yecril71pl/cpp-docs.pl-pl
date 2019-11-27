@@ -11,20 +11,20 @@ ms.locfileid: "74394834"
 ---
 # <a name="processor-manufacturer-programming-manuals"></a>Podręczniki programowania od producenta procesora
 
-This article provides links to websites that may contain programming information about processors that are not manufactured, sold, or supported by Microsoft. Microsoft does not own or control the websites or the content on them.
+Ten artykuł zawiera linki do witryn sieci Web, które mogą zawierać informacje o programowaniu procesorów, które nie są wytwarzane, sprzedawane ani obsługiwane przez firmę Microsoft. Firma Microsoft nie jest własnością ani nie kontroluje witryn sieci Web ani zawartości na nich.
 
-## <a name="processor-manufacturer-websites"></a>Processor manufacturer websites
+## <a name="processor-manufacturer-websites"></a>Witryny sieci Web producenta procesora
 
-- [AMD Developer Guides, Manuals & ISA Documents](https://developer.amd.com/resources/developer-guides-manuals/)
+- [Przewodniki programistyczne AMD, instrukcje & dokumenty ISA](https://developer.amd.com/resources/developer-guides-manuals/)
 
-- [Intel 64 and IA-32 Architectures Software Developer Manuals](https://software.intel.com/articles/intel-sdm)
+- [Architektury Intel 64 i IA-32 — instrukcje dla deweloperów oprogramowania](https://software.intel.com/articles/intel-sdm)
 
-- [Introduction to Intel Advanced Vector Extensions](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
+- [Wprowadzenie do zaawansowanych rozszerzeń wektorów firmy Intel](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
 ## <a name="remarks"></a>Uwagi
 
-Neither Visual Studio nor the Microsoft Macro Assembler support all processors.
+Program Visual Studio ani asembler programu Microsoft Macro nie obsługują wszystkich procesorów.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Microsoft Macro Assembler reference](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[Dokumentacja asemblera programu Microsoft Macro](../../assembler/masm/microsoft-macro-assembler-reference.md)

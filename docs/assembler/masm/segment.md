@@ -15,53 +15,53 @@ ms.locfileid: "74393730"
 ---
 # <a name="segment"></a>SEGMENT
 
-Defines a program segment called *name* having segment attributes
+Definiuje segment *programu o nazwie* z atrybutami segmentu
 
 ## <a name="syntax"></a>Składnia
 
-> *name* **SEGMENT** ⟦**READONLY**⟧ ⟦*align*⟧ ⟦*combine*⟧ ⟦*use*⟧ ⟦*characteristics*⟧ **ALIAS(** _string_ **)** ⟦ __'__ *class* __'__ ⟧\
-> *statements*\
-> *name* **ENDS**
+> **segment** nazw ⟦**ReadOnly**⟧ ⟦*align*⟧ ⟦*Połącz*⟧ ⟦*Użyj*⟧ ⟦*cechy*⟧ **alias (** _String_ **)** ⟦ __"__ *Class* __"__ ⟧ \
+> *instrukcje*\
+> **koniec** nazwy
 
 #### <a name="parameters"></a>Parametry
 
 *align*<br/>
-The range of memory addresses from which a starting address for the segment can be selected. The alignment type can be any one of the following:
+Zakres adresów pamięci, z którego można wybrać adres początkowy segmentu. Typ wyrównania może mieć jedną z następujących wartości:
 
-|Align Type|Starting Address|
+|Typ wyrównania|Adres początkowy|
 |----------------|----------------------|
-|**BYTE**|Next available byte address.|
-|**WORD**|Next available word address (2 bytes per word).|
-|**DWORD**|Next available double word address (4 bytes per double word).|
-|**PARA**|Next available paragraph address (16 bytes per paragraph).|
-|**PAGE**|Next available page address (256 bytes per page).|
-|**ALIGN**(*n*)|Next available *n*th byte address. See Remarks section for more information.|
+|**BAJC**|Adres następnego dostępnego bajtu.|
+|**WORD**|Adres następnego dostępnego wyrazu (2 bajty na słowo).|
+|**DWORD**|Następny dostępny podwójny adres wyrazu (4 bajty na podwójny wyraz).|
+|**KONTROL**|Adres następnego dostępnego akapitu (16 bajtów na akapit).|
+|**PAGE**|Następny dostępny adres strony (256 bajtów na stronę).|
+|**Wyrównaj**(*n*)|Następny dostępny *n*adres bajtowy. Aby uzyskać więcej informacji, zobacz sekcję Uwagi.|
 
-If this parameter is not specified, **PARA** is used by default.
+Jeśli ten parametr nie jest określony, **para** jest używana domyślnie.
 
-*combine*\
-**PUBLIC**, **STACK**, **COMMON**, **MEMORY**, **AT**<em>address</em>, **PRIVATE**
+*połącz*\
+**Publiczne**, **stos**, **Common**, **pamięć**, **pod**<em>adresem</em>, **prywatny**
 
-*use*\
-**USE16**, **USE32**, **FLAT**
+*użyj*\
+**USE16**, **USE32**, **Flat**
 
-*characteristics*\
-**INFO**, **READ**, **WRITE**, **EXECUTE**, **SHARED**, **NOPAGE**, **NOCACHE**, and **DISCARD**
+*charakterystyka*\
+**Informacje**, **Odczyt**, **zapis**, **wykonywanie**, **udostępnianie**, **nopage**, **nocache**i **DISCARD**
 
-These are supported for COFF only and correspond to the COFF section characteristics of similar name (for example, **SHARED** corresponds to IMAGE_SCN_MEM_SHARED). READ sets the IMAGE_SCN_MEM_READ flag. The obsolete READONLY flag caused the section to clear the IMG_SCN_MEM_WRITE flag. If any *characteristics* are set, the default characteristics are not used and only the programmer-specified flags are in effect.
+Są one obsługiwane tylko w przypadku formatu COFF i odpowiadają charakterystykom sekcji COFF o podobnej nazwie (na przykład **współdzielona** odnosi się do IMAGE_SCN_MEM_SHARED). Odczyt ustawia flagę IMAGE_SCN_MEM_READ. Przestarzała flaga READONLY spowodowała, że sekcja czyści flagę IMG_SCN_MEM_WRITE. Jeśli są ustawione jakiekolwiek *Właściwości* , właściwości domyślne nie są używane i są stosowane tylko flagi określone przez programistę.
 
-_string_\
-This string is used as the section name in the emitted COFF object.  Creates multiple sections with the same external name, with distinct MASM segment names.
+_ciąg_\
+Ten ciąg jest używany jako nazwa sekcji w emitowanym obiekcie COFF.  Tworzy wiele sekcji o tej samej nazwie zewnętrznej z odrębnymi nazwami segmentów MASM.
 
-Not supported with **/omf**.
+Nieobsługiwane w przypadku **/OMF**.
 
-*class*\
-Designates how segments should be combined and ordered in the assembled file. Typical values are, `'DATA'`, `'CODE'`, `'CONST'` and `'STACK'`
+\ *klasy*
+Określa, jak segmenty mają być połączone i uporządkowane w zmontowanym pliku. Typowe wartości to, `'DATA'`, `'CODE'`, `'CONST'` i `'STACK'`
 
 ## <a name="remarks"></a>Uwagi
 
-For `ALIGN(n)`, *n* may be any power of 2 from 1 to 8192; not supported with **/omf**.
+W przypadku `ALIGN(n)`*n* może być dowolną potęgą od 1 do 8192; nieobsługiwane w przypadku **/OMF**.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

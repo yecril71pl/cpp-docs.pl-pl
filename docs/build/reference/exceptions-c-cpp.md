@@ -1,5 +1,5 @@
 ---
-title: DLL loading exception codes (C/C++)
+title: Kody wyjątków ładowania biblioteki DLL (CC++/)
 ms.date: 11/19/2019
 f1_keywords:
 - ERROR_MOD_NOT_FOUND
@@ -21,13 +21,13 @@ ms.locfileid: "74243849"
 ---
 # <a name="exceptions-cc"></a>Wyjątki (C/C++)
 
-Two exception codes can be raised when failures are encountered:
+Po napotkaniu błędów mogą być zgłaszane dwa kody wyjątków:
 
-- For a **LoadLibrary** failure
+- W przypadku błędu funkcji **LoadLibrary**
 
-- For a **GetProcAddress** failure
+- Dla błędu **GetProcAddress**
 
-Here is the exception information:
+Oto informacje o wyjątku:
 
 ```
 //
@@ -37,11 +37,11 @@ Here is the exception information:
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)
 ```
 
-The exception codes thrown are the standard VcppException(ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) and VcppException(ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND) values. The exception passes a pointer to a **DelayLoadInfo** structure in the LPDWORD value that can be retrieved by **GetExceptionInformation** in the [EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record) structure, ExceptionInformation[0] field.
+Zgłoszone kody wyjątków to standardowe wartości VcppException (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) i VcppException (ERROR_SEVERITY_ERROR ERROR_PROC_NOT_FOUND). Wyjątek przekazuje wskaźnik do struktury **DelayLoadInfo** w wartości LPDWORD, która może zostać pobrana przez **GetExceptionInformation** w strukturze [EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record) , ExceptionInformation [0].
 
-Additionally, if the incorrect bits are set in the grAttrs field, the exception ERROR_INVALID_PARAMETER is thrown. This exception is, for all intents and purposes, fatal.
+Ponadto jeśli w polu grAttrs zostanie ustawiona niepoprawna liczba bitów, zostanie zgłoszony wyjątek ERROR_INVALID_PARAMETER. Ten wyjątek dotyczy wszystkich intencji i celów, które są krytyczne.
 
-See [Structure and Constant Definitions](structure-and-constant-definitions.md) for more information.
+Zobacz [struktury i definicje stałe,](structure-and-constant-definitions.md) Aby uzyskać więcej informacji.
 
 ## <a name="see-also"></a>Zobacz także
 

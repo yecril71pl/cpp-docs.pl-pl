@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4245
+title: Ostrzeżenie kompilatora (poziom 4) C4245
 ms.date: 11/04/2016
 f1_keywords:
 - C4245
 helpviewer_keywords:
 - C4245
 ms.assetid: 85083d53-9cc2-4d12-b58c-6dad28f15cbe
-ms.openlocfilehash: 7f22386439803de1b59f3236775aa6cec0254eab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d55226a368f81a9506b38fe9271da4332bd1f5b
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400997"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541720"
 ---
-# <a name="compiler-warning-level-4-c4245"></a>Kompilator ostrzeżenie (poziom 4) C4245
+# <a name="compiler-warning-level-4-c4245"></a>Ostrzeżenie kompilatora (poziom 4) C4245
 
-'conversion': konwersja z 'Typ1' na 'Typ2', niezgodność ze znakiem/bez znaku
+"Conversion": konwersja z "type1" na "type2", niezgodność ze znakiem/bez znaku
 
-Próbował przekonwertować zalogowany **const** zawierający wartości ujemnej spowoduje `unsigned`.
+Próbowano skonwertować podpisaną **stałą** , która ma wartość ujemną do `unsigned`.
 
-Poniższy przykład spowoduje wygenerowanie C4245:
+Poniższy przykład generuje C4245:
 
-```
+```cpp
 // C4245.cpp
 // compile with: /W4 /c
 const int i = -1;

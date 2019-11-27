@@ -14,7 +14,7 @@ ms.locfileid: "74245159"
 ---
 # <a name="restrictions-on-exception-handlers"></a>Ograniczenia dotyczące obsługi wyjątków
 
-The principal limitation to using exception handlers in code is that you cannot use a **goto** statement to jump into a **__try** statement block. Instead, you must enter the statement block through normal flow of control. You can jump out of a **__try** statement block and nest exception handlers as you choose.
+Głównym ograniczeniem do korzystania z obsługi wyjątków w kodzie jest to, że nie można użyć instrukcji **goto** , aby przejść do bloku instrukcji **__try** . Zamiast tego należy wprowadzić blok instrukcji za pomocą normalnego przepływu sterowania. Możesz wyskoczyć z bloku instrukcji **__try** i zagnieździć obsługę wyjątków w miarę zaznaczania.
 
 ## <a name="see-also"></a>Zobacz także
 

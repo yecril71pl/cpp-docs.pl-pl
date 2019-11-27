@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4234
+title: Ostrzeżenie kompilatora (poziom 4) C4234
 ms.date: 11/04/2016
 f1_keywords:
 - C4234
 helpviewer_keywords:
 - C4234
 ms.assetid: f7fecd5c-8248-4fde-8446-502aedc357ca
-ms.openlocfilehash: 314ee068fb2be6148304360b0aaa3bd8029c283b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 63a22fed0832677837eb786268fc92946d295b79
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401075"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541776"
 ---
-# <a name="compiler-warning-level-4-c4234"></a>Kompilator ostrzeżenie (poziom 4) C4234
+# <a name="compiler-warning-level-4-c4234"></a>Ostrzeżenie kompilatora (poziom 4) C4234
 
-użyto niestandardowego rozszerzenia: słowo kluczowe "— słowo kluczowe" zarezerwowane dla przyszłego użytku
+użyto niestandardowego rozszerzenia: słowo kluczowe "Keyword" zarezerwowane do użytku w przyszłości
 
-Kompilator nie implementuje jeszcze użyte słowo kluczowe.
+Kompilator nie implementuje jeszcze użytego słowa kluczowego.
 
-To ostrzeżenie zostanie automatycznie podwyższony do błędu. Jeśli chcesz zmienić to zachowanie, użyj [ostrzeżenie #pragma](../../preprocessor/warning.md). Na przykład, aby przekształcić C4234 ostrzeżenie poziom 4 problem
+To ostrzeżenie jest automatycznie podwyższana do błędu. Jeśli chcesz zmodyfikować to zachowanie, użyj [#pragma ostrzeżenie](../../preprocessor/warning.md). Na przykład, aby C4234 na problem z ostrzeżeniem poziomu 4,
 
-```
+```cpp
 #pragma warning(2:4234)
 ```
 

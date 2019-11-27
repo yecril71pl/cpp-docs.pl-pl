@@ -13,9 +13,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398750"
 ---
-# <a name="dosseg-32-bit-masm"></a>DOSSEG (32-bit MASM)
+# <a name="dosseg-32-bit-masm"></a>DOSSEG — (32-bitowy MASM)
 
-Identical to [.DOSSEG](../../assembler/masm/dot-dosseg.md), which is the preferred form. (32-bit MASM only.)
+Identyczne z [. DOSSEG —](../../assembler/masm/dot-dosseg.md), który jest preferowanym formularzem. (tylko 32-bitowy MASM).
 
 ## <a name="syntax"></a>Składnia
 

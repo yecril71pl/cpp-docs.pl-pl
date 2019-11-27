@@ -71,7 +71,7 @@ Domyślne wyrównanie układu dla Globals i statics:
 
 Architektura AArch64 obsługuje rejestry całkowite 32:
 
-| Rejestruj | Volatile? | Rola |
+| Rejestracja | Volatile? | Rola |
 | - | - | - |
 | x0 | Volatile | Parametr/rejestr wyrejestrowania 1, rejestr wyników |
 | x1 — 120 | Volatile | Rejestr/Wyrejestrowanie 2-8 |
@@ -94,7 +94,7 @@ Wskaźnik ramki (x29) jest wymagany w celu zapewnienia zgodności z szybkim pora
 
 Architektura AArch64 obsługuje również 32 rejestrów zmiennoprzecinkowych/SIMD, podsumowujących poniżej:
 
-| Rejestruj | Volatile? | Rola |
+| Rejestracja | Volatile? | Rola |
 | - | - | - |
 | v0 | Volatile | Parametr/rejestr wyrejestrowania 1, rejestr wyników |
 | V1 — wersji 7 | Volatile | Rejestry parametrów/rejestrowania 2-8 |
@@ -117,7 +117,7 @@ Rejestr kontroli zmiennoprzecinkowej (FPCR) ma pewne wymagania dotyczące różn
 
 Podobnie jak w przypadku AArch32, Specyfikacja AArch64 zawiera trzy rejestry "Identyfikator wątku" sterowane systemem:
 
-| Rejestruj | Rola |
+| Rejestracja | Rola |
 | - | - |
 | TPIDR_EL0 | Rezerwacj. |
 | TPIDRRO_EL0 | Zawiera liczbę procesorów dla bieżącego procesora. |

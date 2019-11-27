@@ -13,14 +13,14 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398901"
 ---
-# <a name="time"></a>\@Time
+# <a name="time"></a>Czas \@
 
-The system time in 24-hour hh:mm:ss format (text macro).
+Czas systemowy w formacie 24-godzinnym hh: mm: SS (makro tekstowe).
 
 ## <a name="syntax"></a>Składnia
 
-> **\@Time**
+> **Czas \@**
 
 ## <a name="see-also"></a>Zobacz także
 
-[Symbols reference](symbols-reference.md)
+[Odwołanie do symboli](symbols-reference.md)

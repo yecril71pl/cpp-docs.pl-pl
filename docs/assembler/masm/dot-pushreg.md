@@ -15,23 +15,23 @@ ms.locfileid: "74398035"
 ---
 # <a name="pushreg"></a>.PUSHREG
 
-Generates a `UWOP_PUSH_NONVOL` unwind code entry for the specified register number using the current offset in the prologue.
+Generuje `UWOP_PUSH_NONVOL` wpis kodu unwind dla określonego numeru rejestru przy użyciu bieżącego przesunięcia w prologu.
 
 ## <a name="syntax"></a>Składnia
 
-> .PUSHREG register
+> . Rejestr PUSHREG
 
 ## <a name="remarks"></a>Uwagi
 
-**.PUSHREG** allows ml64.exe users to specify how a frame function unwinds, and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) **FRAME** declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. **.PUSHREG** should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
+**. PUSHREG** umożliwia użytkownikom ml64. exe określenie, jak działa funkcja ramki, i jest dozwolona tylko w obrębie prologu, która rozciąga się od deklaracji **Frame** [proces](../../assembler/masm/proc.md) do [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) . Dyrektywy te nie generują kodu; generują one tylko `.xdata` i `.pdata`. **. PUSHREG** powinien być poprzedzony instrukcjami, które faktycznie implementują akcje, które mają być odwiązane. Dobrym sposobem jest Zawijanie dyrektyw unwind i kodu, które są przeznaczone do odwinięcia w makrze w celu zapewnienia zgody.
 
-For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+Aby uzyskać więcej informacji, zobacz [MASM for x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 ## <a name="sample"></a>Przykład
 
 ### <a name="description"></a>Opis
 
-The following sample shows how to push non-volatile registers.
+Poniższy przykład przedstawia sposób wypychania rejestrów nietrwałych.
 
 ### <a name="code"></a>Kod
 
@@ -57,4 +57,4 @@ END
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4646
+title: Ostrzeżenie kompilatora (poziom 3) C4646
 ms.date: 11/04/2016
 f1_keywords:
 - C4646
@@ -13,13 +13,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189380"
 ---
-# <a name="compiler-warning-level-3-c4646"></a>Compiler Warning (level 3) C4646
+# <a name="compiler-warning-level-3-c4646"></a>Ostrzeżenie kompilatora (poziom 3) C4646
 
-function declared with __declspec(noreturn) has non-void return type
+Funkcja zadeklarowana z elementem __declspec (noreturn) ma typ inny niż void
 
-A function marked with the [noreturn](../../cpp/noreturn.md) `__declspec` modifier should have a [void](../../cpp/void-cpp.md) return type.
+Funkcja oznaczona modyfikatorem [noreturn](../../cpp/noreturn.md) `__declspec` powinna mieć typ [void](../../cpp/void-cpp.md) Return.
 
-The following sample generates C4646:
+Poniższy przykład generuje C4646:
 
 ```cpp
 // C4646.cpp

@@ -18,19 +18,19 @@ ms.locfileid: "74246638"
 ---
 # <a name="cleaning-up-resources"></a>Oczyszczanie zasobów
 
-During termination-handler execution, you may not know which resources are actually allocated before the termination handler was called. It is possible that the **__try** statement block was interrupted before all resources were allocated, so that not all resources were opened.
+Podczas wykonywania procedury obsługi nie można wiedzieć, które zasoby są faktycznie przydzielono przed wywołaniem procedury obsługi zakończenia. Istnieje możliwość przerwania bloku instrukcji **__try** przed przydzieleniem wszystkich zasobów, dzięki czemu nie wszystkie zasoby zostały otwarte.
 
-Therefore, to be safe, you should check to see which resources are actually open before proceeding with termination-handling cleanup. A recommended procedure is to:
+W związku z tym należy sprawdzić, które zasoby są rzeczywiście otwarte przed kontynuowaniem oczyszczania do obsługi zakończenia. Zalecaną procedurą jest:
 
-1. Initialize handles to NULL.
+1. Zainicjuj uchwyty do wartości NULL.
 
-1. In the **__try** statement block, allocate resources. Handles are set to positive values as the resource is allocated.
+1. W bloku instrukcji **__try** Przydziel zasoby. Dojścia są ustawione na wartości dodatnie w miarę przydzielenia zasobu.
 
-1. In the **__finally** statement block, release each resource whose corresponding handle or flag variable is nonzero or not NULL.
+1. W bloku instrukcji **__finally** Zwolnij każdy zasób, którego odpowiedni uchwyt lub zmienna flagi jest różna od zera lub nie ma wartości null.
 
 ## <a name="example"></a>Przykład
 
-For example, the following code uses a termination handler to close three files and a memory block that were allocated in the **__try** statement block. Before cleaning up a resource, the code first checks to see if the resource was allocated.
+Na przykład poniższy kod używa procedury obsługi zakończenia, aby zamknąć trzy pliki i blok pamięci, który został przydzielony w bloku instrukcji **__try** . Przed oczyszczeniem zasobu, kod najpierw sprawdza, czy zasób został przydzielony.
 
 ```cpp
 // exceptions_Cleaning_up_Resources.cpp
@@ -72,5 +72,5 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz także
 
-[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
+[Pisanie procedury obsługi zakończenia](../cpp/writing-a-termination-handler.md)<br/>
 [Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

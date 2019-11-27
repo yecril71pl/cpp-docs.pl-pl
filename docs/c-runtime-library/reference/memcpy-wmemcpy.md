@@ -61,7 +61,7 @@ Nowy bufor.
 *SRC*<br/>
 Bufor do skopiowania.
 
-{1&gt;count&lt;1}<br/>
+*liczbą*<br/>
 Liczba znaków do skopiowania.
 
 ## <a name="return-value"></a>Wartość zwracana

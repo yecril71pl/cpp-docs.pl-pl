@@ -15,7 +15,7 @@ ms.locfileid: "74397595"
 ---
 # <a name="even"></a>EVEN
 
-Aligns the next variable or instruction on an even byte.
+Wyrównuje następną zmienną lub instrukcję do parzystego bajtu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -23,4 +23,4 @@ Aligns the next variable or instruction on an even byte.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

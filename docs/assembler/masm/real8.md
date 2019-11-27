@@ -15,12 +15,12 @@ ms.locfileid: "74394610"
 ---
 # <a name="real8"></a>REAL8
 
-Allocates and optionally initializes a double-precision (8-byte) floating-point number for each *initializer*.
+Alokuje i opcjonalnie inicjuje liczbę zmiennoprzecinkową podwójnej precyzji (8-bajtową) dla każdego *inicjatora*.
 
 ## <a name="syntax"></a>Składnia
 
-> *name* **REAL8** *initializer* ⟦ __,__ *initializer* ...⟧
+> **REAL8** *inicjatora* nazw ⟦ __,__ *inicjator* ... ⟧
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

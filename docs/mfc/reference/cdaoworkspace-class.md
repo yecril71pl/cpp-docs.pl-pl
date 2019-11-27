@@ -79,7 +79,7 @@ Zarządza nazwaną, chronioną hasłem sesją bazy danych z logowania do wylogow
 class CDaoWorkspace : public CObject
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -107,7 +107,7 @@ class CDaoWorkspace : public CObject
 |[CDaoWorkspace:: GetVersion](#getversion)|Zwraca ciąg zawierający wersję aparatu bazy danych skojarzonego z obszarem roboczym.|
 |[CDaoWorkspace::GetWorkspaceCount](#getworkspacecount)|Zwraca liczbę obiektów obszaru roboczego DAO w kolekcji obszarów roboczych aparatu bazy danych.|
 |[CDaoWorkspace::GetWorkspaceInfo](#getworkspaceinfo)|Zwraca informacje o określonym obszarze roboczym DAO zdefiniowanym w kolekcji obszarów roboczych aparatu bazy danych.|
-|[CDaoWorkspace::Idle](#idle)|Umożliwia aparatowi bazy danych wykonywanie zadań w tle.|
+|[CDaoWorkspace:: Idle](#idle)|Umożliwia aparatowi bazy danych wykonywanie zadań w tle.|
 |[CDaoWorkspace:: IsOpen](#isopen)|Zwraca wartość różną od zera, jeśli obszar roboczy jest otwarty.|
 |[CDaoWorkspace:: Open](#open)|Jawnie otwiera obiekt obszaru roboczego skojarzony z domyślnym obszarem roboczym DAO.|
 |[CDaoWorkspace::RepairDatabase](#repairdatabase)|Podejmuje próbę naprawienia uszkodzonej bazy danych.|
@@ -122,7 +122,7 @@ class CDaoWorkspace : public CObject
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDaoWorkspace::m_pDAOWorkspace](#m_pdaoworkspace)|Wskazuje podstawowy obiekt obszaru roboczego DAO.|
+|[CDaoWorkspace:: m_pDAOWorkspace](#m_pdaoworkspace)|Wskazuje podstawowy obiekt obszaru roboczego DAO.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -131,7 +131,7 @@ W większości przypadków nie będziesz potrzebować wielu obszarów roboczych 
 > [!NOTE]
 >  Klasy bazy danych DAO różnią się od klas baz danych MFC opartych na Open Database Connectivity (ODBC). Wszystkie nazwy klas baz danych DAO mają prefiks "CDao". Ogólnie rzecz biorąc, klasy MFC oparte na obiektach DAO są bardziej możliwością niż klasy MFC oparte na ODBC. Klasy oparte na DAO uzyskują dostęp do danych za pośrednictwem aparatu bazy danych Microsoft Jet, w tym sterowników ODBC. Obsługują one również operacje języka definicji danych (DDL), takie jak tworzenie baz danych i Dodawanie tabel i pól za pośrednictwem klas, bez konieczności bezpośredniego wywoływania obiektów DAO.
 
-## <a name="capabilities"></a>możliwość
+## <a name="capabilities"></a>Możliwości
 
 `CDaoWorkspace` klasy oferuje następujące elementy:
 
@@ -143,11 +143,11 @@ W większości przypadków nie będziesz potrzebować wielu obszarów roboczych 
 
 - Dostęp do kolekcji obszarów roboczych aparatu bazy danych, w której są przechowywane wszystkie aktywne obszary robocze, które zostały do niej dołączone. Możesz również tworzyć i współpracować z obszarami roboczymi bez konieczności dołączania ich do kolekcji.
 
-## <a name="security"></a>Zabezpieczenia
+## <a name="security"></a>Bezpieczeństwo
 
 MFC nie implementuje kolekcji użytkowników i grup w programie DAO, które są używane na potrzeby kontroli zabezpieczeń. Jeśli potrzebujesz tych aspektów obiektów DAO, musisz je zaprogramować przez bezpośrednie wywołania interfejsów DAO. Aby uzyskać więcej informacji, zobacz [Uwagi techniczne 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
 
-## <a name="usage"></a>Użycie
+## <a name="usage"></a>Sposób użycia
 
 Klasy `CDaoWorkspace` można użyć do:
 
@@ -454,7 +454,7 @@ void GetDatabaseInfo(
 *nIndex*<br/>
 Indeks (liczony od zera) obiektu bazy danych w kolekcji baz danych obszaru roboczego dla wyszukiwania według indeksu.
 
-*dbinfo*<br/>
+*dbInfo*<br/>
 Odwołanie do obiektu [CDaoDatabaseInfo —](../../mfc/reference/cdaodatabaseinfo-structure.md) , który zwraca żądane informacje.
 
 *dwInfoOptions*<br/>
@@ -722,7 +722,7 @@ Chociaż wiele `CDaoWorkspace` funkcji Członkowskich można wywołać tylko po 
 
 ||||
 |-|-|-|
-|[Utwórz](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
+|[Create](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
 |[GetIniPath](#getinipath)|[Okresie](#idle)|[SetIniPath](#setinipath)|
 |[GetLoginTimeout](#getlogintimeout)|[SetDefaultPassword](#setdefaultpassword)|[SetLoginTimeout](#setlogintimeout)|
 

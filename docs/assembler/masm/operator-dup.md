@@ -16,12 +16,12 @@ ms.locfileid: "74396992"
 ---
 # <a name="operator-dup"></a>operator DUP
 
-Specifies *count* number of declarations of *initialvalue*.
+Określa *liczbę* deklaracji *InitialValue*.
 
 ## <a name="syntax"></a>Składnia
 
-> *count* **DUP** __(__ *initialvalue* ⟦ __,__ *initialvalue* ...⟧ __)__
+> *Liczba* **DUP** __(__ *InitialValue* ⟦ __,__ *InitialValue* ... ⟧ __)__
 
 ## <a name="see-also"></a>Zobacz także
 
-[Operators reference](../../assembler/masm/operators-reference.md)
+[Odwołania operatorów](../../assembler/masm/operators-reference.md)

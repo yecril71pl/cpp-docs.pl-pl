@@ -13,46 +13,46 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398109"
 ---
-# <a name="model-32-bit-masm"></a>.MODEL (32-bit MASM)
+# <a name="model-32-bit-masm"></a>. MODEL (32-bitowy MASM)
 
-Initializes the program memory model. (32-bit MASM only.)
+Inicjuje model pamięci programu. (tylko 32-bitowy MASM).
 
 ## <a name="syntax"></a>Składnia
 
-> **.MODEL** *memory-model* ⟦ __,__ *language-type*⟧ ⟦ __,__ *stack-option*⟧
+> **. Model** *pamięci* modelu ⟦ __,__ *Language-Type*⟧ ⟦ __,__ *Stack-Option*⟧
 
 ### <a name="parameters"></a>Parametry
 
-*memory-model*\
-Required parameter that determines the size of code and data pointers.
+\ *modelu pamięci*
+Wymagany parametr określający rozmiar kodu i wskaźników danych.
 
-*language-type*\
-Optional parameter that sets the calling and naming conventions for procedures and public symbols.
+\ *typu języka*
+Opcjonalny parametr, który ustawia konwencje wywoływania i nazewnictwa dla procedur i symboli publicznych.
 
-*stack-option*\
-Optional parameter.
+\ *opcji stosu*
+Opcjonalny parametr.
 
-*stack-option* is not used if *memory-model* is **FLAT**.
+*stos-opcja* nie jest używana, jeśli *model pamięci* jest **płaski**.
 
-Specifying **NEARSTACK** groups the stack segment into a single physical segment (**DGROUP**) along with data. The stack segment register (**SS**) is assumed to hold the same address as the data segment register (**DS**). **FARSTACK** does not group the stack with **DGROUP**; thus **SS** does not equal **DS**.
+Określanie grup **NEARSTACK** segment stosu w pojedynczym segmencie fizycznym (**DGROUP**) wraz z danymi. Przyjęto założenie, że rejestr segmentów stosu ma ten sam adres co rejestr segmentu danych (**ds** **).** **FARSTACK** nie grupuje stosu z **DGROUP**; w tym przypadku **SS** nie jest równe **ds**.
 
 ## <a name="remarks"></a>Uwagi
 
-**.MODEL** is not used in [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+**. MODEL** nie jest używany w programie [MASM for x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
-The following table lists the possible values for each parameter when targeting 16-bit and 32-bit platforms:
+Poniższa tabela zawiera listę możliwych wartości dla każdego parametru, które są przeznaczone dla platform 16-bitowych i 32-bitowych:
 
-|Parametr|32-bit values|16-bit values (support for earlier 16-bit development)|
+|Parametr|32-wartości bitowe|wartości 16-bitowe (obsługa wcześniejszych wersji 16-bitowych)|
 |---------------|--------------------|----------------------------------------------------------------|
-|*memory-model*|**FLAT**|**TINY**, **SMALL**, **COMPACT**, **MEDIUM**, **LARGE**, **HUGE**, **FLAT**|
-|*language-type*|**C**, **STDCALL**|**C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**|
-|*stack-option*|Nieużywane|**NEARSTACK**, **FARSTACK**|
+|*model pamięci*|**ZRYCZAŁTOWANY**|**małe**, **małe**, **kompaktowe**, **średnie**, **duże**, **ogromne**, **płaskie**|
+|*typ języka*|**C**, **stdcall**|**C**, **Basic**, **Pascal**, **Pascal**, **syscall**, **stdcall**|
+|*Stack — opcja*|Nieużywane|**NEARSTACK**, **FARSTACK**|
 
 ## <a name="code"></a>Kod
 
-For MASM-related samples, download the Compiler samples from [Visual C++ Samples and Related Documentation for Visual Studio 2010](https://go.microsoft.com/fwlink/p/?linkid=178749).
+W przypadku przykładów związanych z MASM Pobierz przykłady kompilatora z [przykładów wizualizacji C++ i powiązanej dokumentacji dla programu Visual Studio 2010](https://go.microsoft.com/fwlink/p/?linkid=178749).
 
-The following example demonstrates the use of the `.MODEL` directive.
+Poniższy przykład demonstruje użycie dyrektywy `.MODEL`.
 
 ## <a name="example"></a>Przykład
 

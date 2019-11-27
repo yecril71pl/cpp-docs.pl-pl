@@ -15,7 +15,7 @@ ms.locfileid: "74398530"
 ---
 # <a name="data"></a>.DATA?
 
-When used with [.MODEL](../../assembler/masm/dot-model.md), starts a near data segment for uninitialized data (segment name _BSS).
+W przypadku użycia z [. MODEL](../../assembler/masm/dot-model.md), uruchamia bliski segment danych dla niezainicjowanych danych (nazwa segmentu _BSS).
 
 ## <a name="syntax"></a>Składnia
 

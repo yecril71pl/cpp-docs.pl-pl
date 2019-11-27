@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4557
+title: Ostrzeżenie kompilatora (poziom 3) C4557
 ms.date: 11/04/2016
 f1_keywords:
 - C4557
@@ -13,15 +13,15 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74188939"
 ---
-# <a name="compiler-warning-level-3-c4557"></a>Compiler Warning (level 3) C4557
+# <a name="compiler-warning-level-3-c4557"></a>Ostrzeżenie kompilatora (poziom 3) C4557
 
 '__assume' zawiera efekt 'efekt'
 
-The value passed to an [__assume](../../intrinsics/assume.md) statement2 was modified.
+Wartość przeniesiona do [__assume](../../intrinsics/assume.md) instrukcja2 została zmodyfikowana.
 
-This warning is off by default. See [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md) for more information.
+To ostrzeżenie jest domyślnie wyłączone. Aby uzyskać więcej informacji [, zobacz ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
-The following sample generates C4557:
+Poniższy przykład generuje C4557:
 
 ```cpp
 // C4557.cpp

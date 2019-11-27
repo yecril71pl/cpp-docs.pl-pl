@@ -15,7 +15,7 @@ ms.locfileid: "74303253"
 
 Program Visual Studio C C++ i programowanie nie tylko dla systemu Windows. W tym samouczku pokazano, jak używać programu C++ Visual Studio do tworzenia aplikacji międzyplatformowych w systemach Windows i Linux. Jest on oparty na CMake, więc nie trzeba tworzyć ani generować projektów programu Visual Studio. Po otwarciu folderu zawierającego plik CMakeLists. txt program Visual Studio automatycznie konfiguruje ustawienia funkcji IntelliSense i kompilacji. Możesz szybko rozpocząć edytowanie, kompilowanie i debugowanie kodu lokalnie w systemie Windows. Następnie Zmień konfigurację tak, aby była taka sama w systemie Linux, a wszystko to w programie Visual Studio.
 
-Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
+Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 
 > [!div class="checklist"]
 > * Klonowanie projektu CMake Open Source z usługi GitHub

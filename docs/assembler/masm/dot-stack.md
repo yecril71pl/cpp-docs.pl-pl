@@ -13,14 +13,14 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397904"
 ---
-# <a name="stack-32-bit-masm"></a>.STACK (32-bit MASM)
+# <a name="stack-32-bit-masm"></a>. STOS (32-bitowy MASM)
 
-When used with [.MODEL](../../assembler/masm/dot-model.md), defines a stack segment (with segment name **STACK**). The optional *size* specifies the number of bytes for the stack (default 1,024). The **.STACK** directive automatically closes the stack statement. (32-bit MASM only.)
+W przypadku użycia z [. MODEL](../../assembler/masm/dot-model.md)definiuje segment stosu (z **stosem**nazw segmentów). Opcjonalny *rozmiar* określa liczbę bajtów dla stosu (domyślnie 1 024). **. Dyrektywa stosu** automatycznie zamyka instrukcję Stack. (tylko 32-bitowy MASM).
 
 ## <a name="syntax"></a>Składnia
 
-> **.STACK** ⟦*size*⟧
+> **.** ⟦*Rozmiaru*stosu ⟧
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

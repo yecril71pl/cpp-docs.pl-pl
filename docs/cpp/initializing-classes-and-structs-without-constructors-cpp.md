@@ -1,6 +1,6 @@
 ---
-title: Brace initialization for classes, structs, and unions
-description: Use brace initialization with any C++ class, struct or union
+title: Inicjalizacja nawiasów klamrowych dla klas, struktur i Unii
+description: Użyj inicjowania nawiasów klamrowych C++ z dowolną klasą, strukturą lub Unią
 ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
 ms.openlocfilehash: 41ff38bc4bcc9ebca913b5e66b5ac2f395044222
@@ -10,9 +10,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246502"
 ---
-# <a name="brace-initialization"></a>Brace initialization
+# <a name="brace-initialization"></a>Inicjowanie nawiasów klamrowych
 
-It is not always necessary to define a constructor for a class, especially ones that are relatively simple. Users can initialize objects of a class or struct by using uniform initialization, as shown in the following example:
+Nie zawsze jest konieczne zdefiniowanie konstruktora dla klasy, szczególnie, które są stosunkowo proste. Użytkownicy mogą inicjować obiekty klasy lub struktury przy użyciu jednolitej inicjalizacji, jak pokazano w następującym przykładzie:
 
 ```cpp
 // no_constructor.cpp
@@ -61,7 +61,7 @@ int main()
 }
 ```
 
-Note that when a class or struct has no constructor, you provide the list elements in the order that the members are declared in the class. If the class has a constructor, provide the elements in the order of the parameters. If a type has a default constructor, either implicitly or explicitly declared, you can use default brace initialization (with empty braces). For example, the following class may be initialized by using both default and non-default brace initialization:
+Należy pamiętać, że jeśli Klasa lub struktura nie ma konstruktora, należy dostarczyć elementy listy w kolejności, w której elementy członkowskie są zadeklarowane w klasie. Jeśli klasa ma konstruktora, podaj elementy w kolejności parametrów. Jeśli typ ma konstruktora domyślnego, niejawnie lub jawnie zadeklarowane, można użyć domyślnego inicjowania nawiasów klamrowych (z pustymi nawiasami klamrowymi). Na przykład następująca Klasa może zostać zainicjowana przy użyciu domyślnego i niedomyślnego nawiasu klamrowego:
 
 ```cpp
 #include <string>
@@ -90,7 +90,7 @@ int main()
 }
 ```
 
-If a class has non-default constructors, the order in which class members appear in the brace initializer is the order in which the corresponding parameters appear in the constructor, not the order in which the members are declared (as with `class_a` in the previous example). Otherwise, if the type has no declared constructor, the order in which the members appear in the brace initializer is the same as the order in which they are declared; in this case, you can initialize as many of the public members as you wish, but you cannot skip any member. The following example shows the order that's used in brace initialization when there is no declared constructor:
+Jeśli klasa ma konstruktory inne niż domyślne, kolejność, w której elementy członkowskie klasy pojawiają się w inicjatorze nawiasów klamrowych, jest kolejnością, w której są odpowiednie parametry w konstruktorze, a nie kolejność, w której są zadeklarowane elementy członkowskie (jak w poprzednim przykładzie `class_a`). W przeciwnym razie, jeśli typ nie ma zadeklarowanego konstruktora, kolejność, w której elementy członkowskie pojawiają się w inicjatorze nawiasów klamrowych jest taka sama jak kolejność, w jakiej zostały zadeklarowane; w takim przypadku można zainicjować dowolną liczbę publicznych członków, ale nie można pominąć żadnego elementu członkowskiego. Poniższy przykład pokazuje kolejność, która jest używana w inicjacji w nawiasach klamrowych, gdy nie istnieje zadeklarowany Konstruktor:
 
 ```cpp
 class class_d {
@@ -112,7 +112,7 @@ int main()
 }
 ```
 
-If the default constructor is explicitly declared but marked as deleted, default brace initialization cannot be used:
+Jeśli domyślny konstruktor jest zadeklarowany w sposób jawny, ale oznaczony jako usunięty, nie można użyć domyślnego inicjowania nawiasów klamrowych:
 
 ```cpp
 class class_f {
@@ -128,7 +128,7 @@ int main()
 }
 ```
 
-You can use brace initialization anywhere you would typically do initialization—for example, as a function parameter or a return value, or with the **new** keyword:
+Można użyć inicjalizacji nawiasów klamrowych wszędzie tam, gdzie jest to zwykle inicjowane — na przykład jako parametru funkcji lub wartości zwracanej lub za pomocą słowa kluczowego **New** :
 
 ```cpp
 class_d* cf = new class_d{4.5};
@@ -136,18 +136,18 @@ kr->add_d({ 4.5 });
 return { 4.5 };
 ```
 
-## <a name="initializer_list-constructors"></a>initializer_list constructors
+## <a name="initializer_list-constructors"></a>Konstruktory initializer_list
 
-The [initializer_list Class](../standard-library/initializer-list-class.md) represents a list of objects of a specified type that can be used in a constructor, and in other contexts. You can construct an initializer_list by using brace initialization:
+[Klasa initializer_list](../standard-library/initializer-list-class.md) reprezentuje listę obiektów określonego typu, które mogą być używane w konstruktorze, oraz w innych kontekstach. Initializer_list można skonstruować za pomocą inicjowania nawiasów klamrowych:
 
 ```cpp
 initializer_list<int> int_list{5, 6, 7};
 ```
 
 > [!IMPORTANT]
->  To use this class, you must include the [\<initializer_list>](../standard-library/initializer-list.md) header.
+>  Aby użyć tej klasy, należy uwzględnić [\<initializer_list >](../standard-library/initializer-list.md) nagłówku.
 
-An `initializer_list` can be copied. In this case, the members of the new list are references to the members of the original list:
+`initializer_list` można skopiować. W takim przypadku elementy członkowskie nowej listy są odwołaniami do członków oryginalnej listy:
 
 ```cpp
 initializer_list<int> ilist1{ 5, 6, 7 };
@@ -156,7 +156,7 @@ if (ilist1.begin() == ilist2.begin())
     cout << "yes" << endl; // expect "yes"
 ```
 
-The standard library container classes, and also `string`, `wstring`, and `regex`, have `initializer_list` constructors. The following examples show how to do brace initialization with these constructors:
+Klasy kontenerów biblioteki standardowej, a także `string`, `wstring`i `regex`mają konstruktorów `initializer_list`. W poniższych przykładach pokazano, jak wykonać inicjalizację nawiasów klamrowych przy użyciu następujących konstruktorów:
 
 ```cpp
 vector<int> v1{ 9, 10, 11 };

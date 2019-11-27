@@ -15,20 +15,20 @@ ms.locfileid: "74397610"
 ---
 # <a name="equ"></a>EQU
 
-The first directive assigns numeric value of *expression* to *name*.
+Pierwsza dyrektywa przypisuje wartość numeryczną *wyrażenia* do *nazwy*.
 
 ## <a name="syntax"></a>Składnia
 
-> *name* **EQU** *expression*
+> *wyrażenie* EQU Name
 >
-> *name* **EQU** __\<__ *text* __>__
+> *Nazwa* **EQU** __\<__ __>__ tekstu
 
 ## <a name="remarks"></a>Uwagi
 
-The *name* cannot be redefined later.
+Nie można ponownie zdefiniować *nazwy* .
 
-The second directive assigns specified *text* to *name*. The *name* can be assigned a different *text* later. See [TEXTEQU](../../assembler/masm/textequ.md).
+Druga dyrektywa przypisuje określony *tekst* do *nazwy*. *Nazwę* można przypisać do innego *tekstu* później. Zobacz [TEXTEQU](../../assembler/masm/textequ.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: operator &gt; (MASM Run Time)
+title: '&gt; operatora (czas wykonywania MASM)'
 ms.date: 08/30/2018
 f1_keywords:
 - operator >
@@ -14,14 +14,14 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74396934"
 ---
-# <a name="operator-gt-masm-run-time"></a>operator &gt; (MASM Run Time)
+# <a name="operator-gt-masm-run-time"></a>&gt; operatora (czas wykonywania MASM)
 
-Is greater than. Used only within [.IF](../../assembler/masm/dot-if.md), [.WHILE](../../assembler/masm/dot-while.md), or [.REPEAT](../../assembler/masm/dot-repeat.md) blocks and evaluated at run time, not at assembly time.
+Jest większa niż. Używany tylko w ramach programu [. Jeśli](../../assembler/masm/dot-if.md), [. WHILE](../../assembler/masm/dot-while.md)lub [. POWTARZAj](../../assembler/masm/dot-repeat.md) bloki i oceniaj w czasie wykonywania, a nie w czasie montażu.
 
 ## <a name="syntax"></a>Składnia
 
-> *expression1* **>** *expression2*
+> *wyrażenie1* **>** *wyrażenie2*
 
 ## <a name="see-also"></a>Zobacz także
 
-[Operators reference](operators-reference.md)
+[Odwołania operatorów](operators-reference.md)

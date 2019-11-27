@@ -15,12 +15,12 @@ ms.locfileid: "74397630"
 ---
 # <a name="ends-masm"></a>ENDS (MASM)
 
-Marks the end of segment, structure, or union *name* previously begun with [SEGMENT](../../assembler/masm/segment.md), [STRUCT](../../assembler/masm/struct-masm.md), [UNION](../../assembler/masm/union.md), or a simplified segment directive.
+Oznacza koniec segmentu, struktury lub *nazwy* Unii, które zostały wcześniej rozpoczęte przy użyciu dyrektywy [segment](../../assembler/masm/segment.md), [struct](../../assembler/masm/struct-masm.md), [Union](../../assembler/masm/union.md)lub uproszczonej.
 
 ## <a name="syntax"></a>Składnia
 
-> *name* **ENDS**
+> **koniec** nazwy
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

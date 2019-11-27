@@ -15,12 +15,12 @@ ms.locfileid: "74395587"
 ---
 # <a name="org"></a>ORG
 
-Sets the location counter to *expression*.
+Ustawia licznik lokalizacji na *wyrażenie*.
 
 ## <a name="syntax"></a>Składnia
 
-> **ORG** *expression*
+> *Wyrażenie* **organizacyjne**
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

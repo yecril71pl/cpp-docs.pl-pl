@@ -13,14 +13,14 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399220"
 ---
-# <a name="catstr"></a>\@CatStr
+# <a name="catstr"></a>\@catStr —
 
-Macro function that concatenates one or more strings. Returns a string.
+Funkcja makro, która łączy jeden lub więcej ciągów. Zwraca ciąg.
 
 ## <a name="syntax"></a>Składnia
 
-> **\@CatStr(** *string1* ⟦ __,__ *string2*...⟧ **)**
+> **\@catStr — (** *ciąg1* ⟦ __,__ *ciąg2*... ⟧ **)**
 
 ## <a name="see-also"></a>Zobacz także
 
-[Symbols reference](symbols-reference.md)
+[Odwołanie do symboli](symbols-reference.md)

@@ -24,7 +24,7 @@ ms.locfileid: "74305372"
 > [!NOTE]
 > Obiekty DAO są używane z bazami danych programu Access i są obsługiwane za pomocą pakietu Office 2013. Element DAO 3,6 jest wersją ostateczną i jest uznawany za przestarzały. Środowisko i C++ kreatory wizualne nie obsługują obiektów DAO (mimo że klasy DAO są dołączone i nadal można ich używać). Firma Microsoft zaleca korzystanie z [szablonów OLE DB](../data/oledb/ole-db-templates.md) lub [ODBC oraz MFC](../data/odbc/odbc-and-mfc.md) dla nowych projektów. Obiektów DAO należy używać tylko w przypadku zarządzania istniejącymi aplikacjami.
 
-## <a name="overview"></a>Omówienie
+## <a name="overview"></a>Przegląd
 
 W wielu sytuacjach może być pożądane Migrowanie aplikacji, które używają klas baz danych ODBC MFC do klas baz danych DAO MFC. Ta Uwaga techniczna zawiera szczegółowe informacje dotyczące większości różnic między klasami MFC ODBC i DAO. Mając na uwadze różnice, nie powinno być nadmiernie trudne do migrowania aplikacji z klas ODBC do klas MFC w razie potrzeby.
 

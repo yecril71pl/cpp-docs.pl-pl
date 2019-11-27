@@ -76,7 +76,7 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 *nIDC*<br/>
 Identyfikator kontrolki w obiekcie [formularzy CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*index*<br/>
+*indeks*<br/>
 Odwołanie do elementu członkowskiego danych pola w skojarzonym obiekcie `CRecordset` lub `CDaoRecordset`.
 
 *pRecordset*<br/>
@@ -262,7 +262,7 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 *nIDC*<br/>
 Identyfikator kontrolki w obiekcie [formularzy CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*index*<br/>
+*indeks*<br/>
 Odwołanie do elementu członkowskiego danych pola w skojarzonym obiekcie `CRecordset` lub `CDaoRecordset`.
 
 *pRecordset*<br/>

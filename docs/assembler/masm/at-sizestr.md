@@ -13,14 +13,14 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398940"
 ---
-# <a name="sizestr"></a>\@SizeStr
+# <a name="sizestr"></a>\@Sizestr —
 
-A macro function that returns the length of the given string. Returns an integer.
+Funkcja makro, która zwraca długość danego ciągu. Zwraca liczbę całkowitą.
 
 ## <a name="syntax"></a>Składnia
 
-> **\@SizeStr(** *string* **)**
+> **\@sizestr — (** *ciąg* **)**
 
 ## <a name="see-also"></a>Zobacz także
 
-[Symbols reference](symbols-reference.md)
+[Odwołanie do symboli](symbols-reference.md)

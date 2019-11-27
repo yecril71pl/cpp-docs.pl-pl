@@ -59,7 +59,7 @@ Użycie instrukcji IT w kodzie kciuka 2 jest niedozwolone z wyjątkiem tych szcz
    |LDR, LDR[S]B, LDR[S]H|Ładowanie z pamięci|Ale nie są to formy literału LDR|
    |STR, STRB, STRH|Przechowywanie w pamięci||
    |ADD, ADC, RSB, SBC, SUB|Dodaj lub Odejmij|Ale nie Dodaj/SUB SP, SP, imm7 Forms<br /><br /> RM! = PC, RDN! = PC, RDM! = PC|
-   |CMP, CMN|Porównaniu|RM! = PC, RN! = PC|
+   |CMP, CMN|{1&gt;Compare&lt;1}|RM! = PC, RN! = PC|
    |MUL|Mnożenia||
    |ASR, SKRÓCONO, LSR, ROR|Bit Shift||
    |I, BIC, EOR, ORR, TST|Arytmetyka bitowa||
@@ -75,7 +75,7 @@ Korzystanie z instrukcji dzielenia liczb całkowitych SDIV i UDIV jest w pełni 
 
 Procesor ARM obsługuje 16-całkowite rejestry:
 
-|Rejestruj|Volatile?|Rola|
+|Rejestracja|Volatile?|Rola|
 |--------------|---------------|----------|
 |r0|Volatile|Parametr, wynik, rejestr rejestru 1|
 |r1|Volatile|Parametr, wynik, rejestr rejestru 2|

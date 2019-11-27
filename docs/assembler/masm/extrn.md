@@ -21,8 +21,8 @@ ms.locfileid: "74397547"
 
 ## <a name="remarks"></a>Uwagi
 
-See [EXTERN](../../assembler/masm/extern-masm.md).
+Zobacz [extern](../../assembler/masm/extern-masm.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

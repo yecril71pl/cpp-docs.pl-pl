@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (Level 3) C4738
+title: Ostrzeżenie kompilatora (poziom 3) C4738
 ms.date: 11/04/2016
 f1_keywords:
 - C4738
@@ -13,21 +13,21 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189393"
 ---
-# <a name="compiler-warning-level-3-c4738"></a>Compiler Warning (Level 3) C4738
+# <a name="compiler-warning-level-3-c4738"></a>Ostrzeżenie kompilatora (poziom 3) C4738
 
 przechowywanie 32-bitowego wyniku zmiennopozycyjnego w pamięci, możliwa utrata wydajności
 
-C4738 warns that the result of an assignment, cast, passed argument, or other operation may need to be rounded or that the operation ran out of registers and needed to use memory (spilling). This can result in performance loss.
+C4738 ostrzega, że wynik przypisywania, rzutowania, pomyślnego argumentu lub innej operacji może być zaokrąglony lub że operacja została wykonana z rejestrów i jest wymagana do użycia pamięci (rozłożenie). Może to spowodować utratę wydajności.
 
-To resolve this warning and avoid rounding, compile with [/fp:fast](../../build/reference/fp-specify-floating-point-behavior.md) or use `double` instead of `float`.
+Aby rozwiązać to ostrzeżenie i uniknąć zaokrąglania, Kompiluj z [/FP: Fast](../../build/reference/fp-specify-floating-point-behavior.md) lub użyj `double` zamiast `float`.
 
-To resolve this warning and avoid running out of registers, change the order of computation and modify your use of inlining
+Aby rozwiązać to ostrzeżenie i uniknąć braku rejestrów, Zmień kolejność obliczeń i zmodyfikuj użycie funkcji tworzenia konspektu
 
-This warning is off by default. For more information, see [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+To ostrzeżenie jest domyślnie wyłączone. Aby uzyskać więcej informacji, zobacz [ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
 ## <a name="example"></a>Przykład
 
-The following sample generates C4738:
+Poniższy przykład generuje C4738:
 
 ```cpp
 // C4738.cpp

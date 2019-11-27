@@ -41,7 +41,7 @@ Prawdopodobnie uaktualnienie bazy kodu do nowego zestawu narzędzi nie jest opcj
 
 - Automatyczne formatowanie zgodnie z wybranymi nowoczesnymi stylami może pomóc w zwiększeniu czytelności kodu w starszej wersji.
 
-Aby uzyskać więcej informacji, zobacz [Użyj natywnej wielowersyjności kodu w programie Visual Studio do kompilacji starych projektów](use-native-multi-targeting.md).
+Aby uzyskać więcej informacji, zobacz [Używanie natywnego wielu elementów docelowych w programie Visual Studio do kompilowania starych projektów](use-native-multi-targeting.md).
 
 ## <a name="in-this-section"></a>W tej sekcji
 

@@ -15,14 +15,14 @@ ms.locfileid: "74392992"
 ---
 # <a name="union"></a>UNION
 
-Declares a union of one or more data types. The *field-declarations* must be valid data definitions. Omit the [ENDS](../../assembler/masm/ends-masm.md) *name* label on nested **UNION** definitions.
+Deklaruje Unię składającą się z co najmniej jednego typu danych. *Deklaracje pól* muszą być prawidłowymi definicjami danych. Pomiń etykietę [](../../assembler/masm/ends-masm.md) *nazwy* zakończenia dla zagnieżdżonych definicji **Unii** .
 
 ## <a name="syntax"></a>Składnia
 
-> *name* **UNION** ⟦*alignment*⟧ ⟦ __,__ **NONUNIQUE**⟧\
-> *field-declarations*\
-> ⟦*name*⟧ **ENDS**
+> *Nazwa* **Union** ⟦*wyrównanie*⟧ ⟦ __,__ **nieunikatowy**⟧ \
+> \ *deklaracji pola*
+> ⟦*Nazwa*⟧
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

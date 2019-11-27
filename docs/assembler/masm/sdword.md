@@ -15,14 +15,14 @@ ms.locfileid: "74394146"
 ---
 # <a name="sdword"></a>SDWORD
 
-Allocates and optionally initializes a signed double word (4 bytes) of storage for each *initializer*. Also can be used as a type specifier anywhere a type is legal.
+Alokuje i opcjonalnie inicjuje podpisane podwójne słowo (4 bajty) magazynu dla każdego *inicjatora*. Można też użyć jako specyfikatora typu, gdziekolwiek typ jest dozwolony.
 
 ## <a name="syntax"></a>Składnia
 
-> *name* **SDWORD** *initializer* ⟦ __,__ *initializer* ...⟧
+> **SDWORD** *inicjatora* nazw ⟦ __,__ *inicjator* ... ⟧
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
-[DWORD](../../assembler/masm/dword.md)\
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)\
+\ [DWORD](../../assembler/masm/dword.md)
 [DD](../../assembler/masm/dd.md)

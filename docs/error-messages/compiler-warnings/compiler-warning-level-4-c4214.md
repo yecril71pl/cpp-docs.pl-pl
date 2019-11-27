@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4214
+title: Ostrzeżenie kompilatora (poziom 4) C4214
 ms.date: 11/04/2016
 f1_keywords:
 - C4214
 helpviewer_keywords:
 - C4214
 ms.assetid: 9b8db279-1f12-4a6b-a923-2db22acd1947
-ms.openlocfilehash: 31711d3709b7c2ae3658d760f538ea9e841d33a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85f37810708eff43574129f42dd8444fe7dc37c2
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401127"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541902"
 ---
-# <a name="compiler-warning-level-4-c4214"></a>Kompilator ostrzeżenie (poziom 4) C4214
+# <a name="compiler-warning-level-4-c4214"></a>Ostrzeżenie kompilatora (poziom 4) C4214
 
-użyto niestandardowego rozszerzenia: typy pól inne niż int bitowych
+użyto niestandardowego rozszerzenia: typy pól bitowych inne niż int
 
-Za pomocą rozszerzenia Microsoft do domyślnego (/Ze) elementy członkowskie struktury bitfield może być dowolnego typu liczby całkowitej.
+Z domyślnymi rozszerzeniami Microsoft (/ze), składowe struktury pole bitowe mogą być dowolnego typu Integer.
 
 ## <a name="example"></a>Przykład
 
-```
+```c
 // C4214.c
 // compile with: /W4
 struct bitfields
@@ -34,4 +34,4 @@ int main()
 }
 ```
 
-Takie pola bitowe są nieprawidłowe w obszarze zgodności ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Takie pola bitowe są nieprawidłowe pod kątem zgodności ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)).

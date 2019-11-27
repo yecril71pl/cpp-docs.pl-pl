@@ -1,5 +1,5 @@
 ---
-title: 'Timing of exception handling: A summary'
+title: 'Chronometraż obsługi wyjątków: Podsumowanie'
 ms.date: 05/07/2019
 helpviewer_keywords:
 - sequence [C++]
@@ -18,12 +18,12 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246333"
 ---
-# <a name="timing-of-exception-handling-a-summary"></a>Timing of exception handling: A summary
+# <a name="timing-of-exception-handling-a-summary"></a>Chronometraż obsługi wyjątków: Podsumowanie
 
-A termination handler is executed no matter how the **__try** statement block is terminated. Causes include jumping out of the **__try** block, a `longjmp` statement that transfers control out of the block, and unwinding the stack due to exception handling.
+Procedura obsługi zakończenia jest wykonywana niezależnie od sposobu przerwania bloku instrukcji **__try** . Przyczyny obejmują wyskoczenie z bloku **__try** , instrukcję `longjmp`, która przenosi kontrolę z bloku i odblokowuje stos ze względu na obsługę wyjątków.
 
 > [!NOTE]
->  The Microsoft C++ compiler supports two forms of the `setjmp` and `longjmp` statements. Szybka wersja omija obsługę przerwania, ale jest bardziej wydajna. To use this version, include the file \<setjmp.h>. Druga wersja zapewnia obsługę przerwania opisaną w poprzednim akapicie. To use this version, include the file \<setjmpex.h>. Wzrost wydajności z użycia wersji szybkiej zależy od konfiguracji sprzętowej.
+>  Kompilator firmy C++ Microsoft obsługuje dwie formy `setjmp` i `longjmp` instrukcji. Szybka wersja omija obsługę przerwania, ale jest bardziej wydajna. Aby użyć tej wersji, Dołącz plik \<setjmp. h >. Druga wersja zapewnia obsługę przerwania opisaną w poprzednim akapicie. Aby użyć tej wersji, Dołącz plik \<SETJMPEX. h >. Wzrost wydajności z użycia wersji szybkiej zależy od konfiguracji sprzętowej.
 
 System operacyjny wykonuje wszystkie programy obsługi przerwania w odpowiedniej kolejności, zanim wykonany będzie jakikolwiek inny kod, włączając w to treść programu obsługi wyjątków.
 
@@ -35,7 +35,7 @@ Gdy przyczyną przerwania jest wyjątek, system musi najpierw wykonać część 
 
 1. Jeśli filtr przekaże sterowanie (zwróci 0), proces jest kontynuowany, dopóki nie zostanie znaleziony filtr, który nie przekaże sterowania.
 
-1. If this filter returns -1, execution continues where the exception was raised, and no termination takes place.
+1. Jeśli ten filtr zwróci wartość-1, wykonywanie jest kontynuowane, gdy wyjątek został zgłoszony i nie ma żadnych przerw.
 
 1. Jeśli filtr zwróci 1, zachodzą następujące zdarzenia:
 
@@ -49,5 +49,5 @@ Gdy przyczyną przerwania jest wyjątek, system musi najpierw wykonać część 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
+[Pisanie procedury obsługi zakończenia](../cpp/writing-a-termination-handler.md)<br/>
 [Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

@@ -17,12 +17,12 @@ ms.locfileid: "74397009"
 ---
 # <a name="operator-eq"></a>operator EQ
 
-Returns true (-1) if *expression1* equals *expression2*, or returns false (0) if it does not.
+Zwraca wartość true (-1), jeśli *wyrażenie1* równa *wyrażenie2*lub zwraca wartość false (0), jeśli nie.
 
 ## <a name="syntax"></a>Składnia
 
-> *expression1* **EQ** *expression2*
+> *wyrażenie1* **EQ** *wyrażenie2*
 
 ## <a name="see-also"></a>Zobacz także
 
-[Operators reference](operators-reference.md)
+[Odwołania operatorów](operators-reference.md)

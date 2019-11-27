@@ -39,7 +39,7 @@ Struktura informacji o danych unwind służy do rejestrowania efektów funkcji n
 |||
 |-|-|
 |UBYTE: 3|Wersja|
-|UBYTE: 5|Flagi|
+|UBYTE: 5|flagi|
 |UBYTE|Rozmiar prologu|
 |UBYTE|Liczba kodów operacji unwind|
 |UBYTE: 4|Rejestr ramek|
@@ -197,7 +197,7 @@ Kod operacji unwindy jest jedną z następujących wartości:
   |RSP+24|EFLAGS|
   |RSP+16|Rejestr|
   |RSP+8|RPO|
-  |RSP|Kod błędu:|
+  |RSP|Kod błędu|
 
   Ten kod unwind zawsze pojawia się w postaci fikcyjnego prologu, który nigdy nie jest wykonywany, ale zamiast tego występuje przed rzeczywistym punktem wejścia procedury przerwania i istnieje tylko w celu zasymulowania wypychania ramki maszyny. `UWOP_PUSH_MACHFRAME` rejestruje tę symulację, co oznacza, że maszyna ma koncepcyjne działanie:
 

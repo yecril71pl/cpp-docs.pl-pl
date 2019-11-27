@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4130
+title: Ostrzeżenie kompilatora (poziom 4) C4130
 ms.date: 11/04/2016
 f1_keywords:
 - C4130
 helpviewer_keywords:
 - C4130
 ms.assetid: 45e4c7b2-6b51-41c7-ba5e-941aa5c7d3dc
-ms.openlocfilehash: 1b1fb72d68309a4bef56ccd844ad30d967bbadbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b55594608eccc5d1e5e764bffb73ecb3787af1e4
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401321"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541593"
 ---
-# <a name="compiler-warning-level-4-c4130"></a>Kompilator ostrzeżenie (poziom 4) C4130
+# <a name="compiler-warning-level-4-c4130"></a>Ostrzeżenie kompilatora (poziom 4) C4130
 
-'operator': operacja logiczna na adresie ciągu stałych
+"operator": operacja logiczna na adresie ciągu stałej
 
-Adres literału ciągu przy użyciu operatora daje nieoczekiwany kod.
+Użycie operatora z adresem literału ciągu powoduje nieoczekiwany kod.
 
-Poniższy przykład spowoduje wygenerowanie C4130:
+Poniższy przykład generuje C4130:
 
-```
+```cpp
 // C4130.cpp
 // compile with: /W4
 int main()
@@ -34,6 +34,6 @@ int main()
 }
 ```
 
-**Jeśli** instrukcji porównuje wartość przechowywana we wskaźniku `pc` adres ciąg "Hello", który jest przydzielany oddzielnie każdorazowo ciąg występuje w kodzie. **Jeśli** instrukcji nie porównuje ciąg wskazywany przez `pc` z ciągiem "Hello".
+Instrukcja **if** porównuje wartość przechowywaną w wskaźniku `pc` na adres ciągu "Hello", który jest przypisywany oddzielnie za każdym razem, gdy ciąg występuje w kodzie. Instrukcja **if** nie porównuje ciągu wskazywanego przez `pc` z ciągiem "Hello".
 
-Aby porównać ciągi, należy użyć `strcmp` funkcji.
+Aby porównać ciągi, użyj funkcji `strcmp`.

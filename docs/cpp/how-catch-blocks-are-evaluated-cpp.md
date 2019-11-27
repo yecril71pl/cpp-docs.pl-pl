@@ -17,29 +17,29 @@ ms.locfileid: "74245855"
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>Sposób oceniania bloków Catch (C++)
 
-C++ umożliwia wyrzucanie wyjątków dowolnego typu, jednak ogólnie zaleca się wyrzucanie typów, który pochodzą od std::exception. A C++ exception can be caught by a **catch** handler that specifies the same type as the thrown exception, or by a handler that can catch any type of exception.
+C++ umożliwia wyrzucanie wyjątków dowolnego typu, jednak ogólnie zaleca się wyrzucanie typów, który pochodzą od std::exception. Wyjątek może być przechwytywany przez procedurę obsługi catch, która określa ten sam typ co zgłoszony wyjątek lub przez program obsługi, który może przechwytywać dowolny typ wyjątku. C++
 
 Jeśli typ wyrzuconego wyjątku to klasa, która posiada również klasę bazową (lub klasy) wyjątek może zostać przechwycony przez program obsługi, który akceptuje klasy bazowe typu wyjątku, jak również odwołania do klasy bazowej typu wyjątku. Należy zauważyć, że gdy wyjątek zostaje przechwycony przez odwołanie, następuje jego powiązanie z rzeczywistym wyrzuconym obiektem wyjątku; w przeciwnym razie jest kopią (prawie tak samo jak argument do funkcji).
 
-When an exception is thrown, it may be caught by the following types of **catch** handlers:
+Gdy wyjątek jest zgłaszany, może być przechwycony przez następujące typy obsługi **catch** :
 
 - Program obsługi, który może akceptować dowolny typ (przy użyciu składni wielokropka).
 
-- A handler that accepts the same type as the exception object; because it is a copy, **const** and **volatile** modifiers are ignored.
+- Program obsługi, który akceptuje ten sam typ co obiekt wyjątku; ponieważ jest to kopia, Modyfikatory **const** i **volatile** są ignorowane.
 
 - Program obsługi, który akceptuje odwołanie do tego samego typu co obiekt wyjątku.
 
-- A handler that accepts a reference to a **const** or **volatile** form of the same type as the exception object.
+- Program obsługi, który akceptuje odwołanie do formy **const** lub **volatile** tego samego typu co obiekt wyjątku.
 
-- A handler that accepts a base class of the same type as the exception object; since it is a copy, **const** and **volatile** modifiers are ignored. The **catch** handler for a base class must not precede the **catch** handler for the derived class.
+- Program obsługi, który akceptuje klasę bazową tego samego typu co obiekt wyjątku; ponieważ jest to kopia, Modyfikatory **const** i **volatile** są ignorowane. Procedura obsługi **catch** dla klasy bazowej nie może poprzedzać obsługi **catch** dla klasy pochodnej.
 
 - Program obsługi, który akceptuje odwołanie do klasy bazowej tego samego typu co obiekt wyjątku.
 
-- A handler that accepts a reference to a **const** or **volatile** form of a base class of the same type as the exception object.
+- Program obsługi, który akceptuje odwołanie do formy **const** lub **volatile** klasy bazowej tego samego typu co obiekt wyjątku.
 
 - Program obsługi, który akceptuje wskaźnik, do którego można przekonwertować wyrzucony obiekt wskaźnika za pomocą standardowych reguł konwersji wskaźnika.
 
-The order in which **catch** handlers appear is significant, because handlers for a given **try** block are examined in order of their appearance. Na przykład, błędem jest umieszczenie programu obsługi dla klasy bazowej przed programem obsługi dla klasy pochodnej. After a matching **catch** handler is found, subsequent handlers are not examined. As a result, an ellipsis **catch** handler must be the last handler for its **try** block. Na przykład:
+Kolejność, w jakiej są wyświetlane programy obsługi **catch** , jest istotna, ponieważ programy obsługi danego bloku **try** są badane w kolejności ich występowania. Na przykład, błędem jest umieszczenie programu obsługi dla klasy bazowej przed programem obsługi dla klasy pochodnej. Po znalezieniu pasującej obsługi **catch** nie są badane kolejne programy obsługi. W związku z tym program obsługi **catch** w postaci wielokropka musi być ostatnim programem obsługi dla jego bloku **try** . Na przykład:
 
 ```cpp
 // ...
@@ -62,8 +62,8 @@ catch( CExcptClass E )
 }
 ```
 
-In this example, the ellipsis **catch** handler is the only handler that is examined.
+W tym przykładzie procedura obsługi **catch** w postaci wielokropka jest jedyną zbadaną obsługą.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)
+[Nowoczesne C++ najlepsze rozwiązania dotyczące wyjątków i obsługi błędów](../cpp/errors-and-exception-handling-modern-cpp.md)

@@ -15,7 +15,7 @@ ms.locfileid: "74395048"
 ---
 # <a name="out"></a>%OUT
 
-See [ECHO](../../assembler/masm/echo.md).
+Zobacz [echo](../../assembler/masm/echo.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -23,4 +23,4 @@ See [ECHO](../../assembler/masm/echo.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

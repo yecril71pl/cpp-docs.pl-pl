@@ -15,11 +15,11 @@ ms.locfileid: "74398335"
 ---
 # <a name="errnb"></a>.ERRNB
 
-Generates an error if *textitem* is not blank.
+Generuje błąd, jeśli *element textitem* nie jest pusty.
 
 ## <a name="syntax"></a>Składnia
 
-> **.ERRNB** *textitem* ⟦ __,__ *message*⟧
+> **. ERRNB** *textitem* ⟦ __,__ *Message*⟧
 
 ## <a name="see-also"></a>Zobacz także
 

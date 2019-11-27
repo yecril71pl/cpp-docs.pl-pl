@@ -13,14 +13,14 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398923"
 ---
-# <a name="stack"></a>\@stack
+# <a name="stack"></a>stos \@
 
-DGROUP for near stacks or STACK for far stacks (text macro).
+DGROUP dla blisko stosów lub stosu dla daleko stosów (makro tekstu).
 
 ## <a name="syntax"></a>Składnia
 
-> **\@stack**
+> **stos \@**
 
 ## <a name="see-also"></a>Zobacz także
 
-[Symbols reference](symbols-reference.md)
+[Odwołanie do symboli](symbols-reference.md)

@@ -72,6 +72,6 @@ Poniższy kod ilustruje niektóre z funkcji zwiększania formatowania.
 [Zapraszamy ponownie doC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)<br/>
-[\<iostream>](../standard-library/iostream.md)<br/>
-[\<limits>](../standard-library/limits.md)<br/>
+[\<iostream >](../standard-library/iostream.md)<br/>
+[limity \<>](../standard-library/limits.md)<br/>
 [\<iomanip >](../standard-library/iomanip.md)

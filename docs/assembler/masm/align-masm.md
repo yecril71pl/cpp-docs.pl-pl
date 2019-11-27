@@ -15,21 +15,21 @@ ms.locfileid: "74399276"
 ---
 # <a name="align-masm"></a>ALIGN (MASM)
 
-The **ALIGN** directive aligns the next data element or instruction on an address that is a multiple of its parameter. The parameter must be a power of 2 (for example, 1, 2, 4, and so on) that is less than or equal to the segment alignment.
+Dyrektywa **align** wyrównuje następny element danych lub instrukcję na adres, który jest wielokrotnością jego parametru. Parametr musi być potęgą liczby 2 (na przykład 1, 2, 4 itd.), która jest mniejsza lub równa wyrównaniu segmentu.
 
 ## <a name="syntax"></a>Składnia
 
-> **ALIGN** ⟦*number*⟧
+> **Wyrównaj** *numer*⟦ ⟧
 
 ## <a name="remarks"></a>Uwagi
 
-The **ALIGN** directive allows you to specify the beginning offset of a data element or an instruction. Aligned data can improve performance, at the expense of wasted space between data elements. Large performance improvements can be seen when data accesses are on boundaries that fit within cache lines. Accesses on natural boundaries for native types means less time spent in internal hardware realignment microcode.
+Dyrektywa **align** pozwala określić początkowe przesunięcie elementu danych lub instrukcji. Wyrównane dane mogą zwiększyć wydajność, kosztem bezstratnego miejsca między elementami danych. Ulepszenia dużej wydajności mogą być widoczne, gdy dostęp do danych znajduje się w granicach, które pasują do wierszy pamięci podręcznej. Dostęp do naturalnych granic dla typów natywnych oznacza krótszy czas poświęcany na wewnętrzną redopasowanie sprzętu włączenia mikrokodu.
 
-The need for aligned instructions is rare on modern processors that use a flat addressing model, but may be required for jump targets in older code for other addressing models.
+Potrzeba wyrównanych instrukcji jest rzadki w nowoczesnych procesorach, które używają prostego modelu adresowania, ale mogą być wymagane w celu przechodzenia w starszym kodzie dla innych modeli adresowania.
 
-When data is aligned, the skipped space is padded with zeroes. When instructions are aligned, the skipped space is filled with appropriately-sized NOP instructions.
+Gdy dane są wyrównane, pominięte miejsce jest uzupełnione zerami. Gdy instrukcje są wyrównane, pominięte miejsce jest wypełniane odpowiednio NOP instrukcjami.
 
 ## <a name="see-also"></a>Zobacz także
 
-[EVEN](even.md)\
-[Directives reference](directives-reference.md)
+[Nawet](even.md)\
+[Dokumentacja dyrektyw](directives-reference.md)

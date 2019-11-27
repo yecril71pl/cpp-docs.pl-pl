@@ -15,16 +15,16 @@ ms.locfileid: "74397642"
 ---
 # <a name="endp"></a>ENDP
 
-Marks the end of procedure *name* previously begun with **PROC**.
+Oznacza koniec *nazwy* procedury, która została wcześniej rozpoczęta z **procesem**.
 
 ## <a name="syntax"></a>Składnia
 
-> *name* **ENDP**
+> **ENDP** nazwy
 
 ## <a name="remarks"></a>Uwagi
 
-See [PROC](../../assembler/masm/proc.md).
+Zobacz [proces](../../assembler/masm/proc.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

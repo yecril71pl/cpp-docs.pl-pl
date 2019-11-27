@@ -17,12 +17,12 @@ ms.locfileid: "74396863"
 ---
 # <a name="operator-le"></a>operator LE
 
-Returns true (-1) if *expression1* is less than or equal to *expression2*, or returns false (0) if it is not.
+Zwraca wartość true (-1), jeśli element *wyrażenie1* jest mniejszy lub równy *wyrażenie2*lub zwraca wartość false (0), jeśli nie jest.
 
 ## <a name="syntax"></a>Składnia
 
-> *expression1* **LE** *expression2*
+> *wyrażenie1* **Le** *wyrażenie2*
 
 ## <a name="see-also"></a>Zobacz także
 
-[Operators reference](operators-reference.md)
+[Odwołania operatorów](operators-reference.md)

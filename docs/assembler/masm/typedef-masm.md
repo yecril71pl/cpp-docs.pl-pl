@@ -15,12 +15,12 @@ ms.locfileid: "74393166"
 ---
 # <a name="typedef-masm"></a>TYPEDEF (MASM)
 
-Defines a new type called *name*, which is equivalent to *type*.
+Definiuje nowy typ o nazwie *name*, który jest odpowiednikiem *typu*.
 
 ## <a name="syntax"></a>Składnia
 
-> *name* **TYPEDEF** *type*
+> *Nazwa* **typedef** — *Typ*
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

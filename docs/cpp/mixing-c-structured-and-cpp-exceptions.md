@@ -1,5 +1,5 @@
 ---
-title: Mixing C (structured) and C++ exceptions
+title: Mieszanie języka C (Structured) C++ i wyjątków
 ms.date: 08/14/2018
 helpviewer_keywords:
 - exceptions [C++], mixed C and C++
@@ -15,32 +15,32 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246457"
 ---
-# <a name="mixing-c-structured-and-c-exceptions"></a>Mixing C (structured) and C++ exceptions
+# <a name="mixing-c-structured-and-c-exceptions"></a>Mieszanie języka C (Structured) C++ i wyjątków
 
-If you want to write portable code, the use of structured exception handling (SEH) in a C++ program isn't recommended. However, you may sometimes want to compile using [/EHa](../build/reference/eh-exception-handling-model.md) and mix structured exceptions and C++ source code, and need some facility for handling both kinds of exceptions. Because a structured exception handler has no concept of objects or typed exceptions, it can't handle exceptions thrown by C++ code. However, C++ **catch** handlers can handle structured exceptions. C++ exception handling syntax (**try**, **throw**, **catch**) isn't accepted by the C compiler, but structured exception handling syntax ( **__try**, **__except**, **__finally**) is supported by the C++ compiler.
+Jeśli chcesz napisać przenośny kod, użycie obsługi wyjątków strukturalnych (SEH) w C++ programie nie jest zalecane. Czasami jednak może być konieczne skompilowanie przy użyciu [/EHa](../build/reference/eh-exception-handling-model.md) i zamieszanie wyjątków strukturalnych C++ oraz kodu źródłowego i wymaga pewnych funkcji do obsługi obu rodzajów wyjątków. Ponieważ program obsługi wyjątków strukturalnych nie ma koncepcji obiektów lub wyjątków z określonym typem, nie może obsłużyć C++ wyjątków zgłaszanych przez kod. C++ Programy obsługi **catch** mogą jednak obsługiwać wyjątki strukturalne. C++Składnia obsługi wyjątków (**try**, **throw**, **catch**) nie jest akceptowana przez kompilator języka C, ale składnia obsługi wyjątków strukturalnych ( **__try**, **__except**, **__finally**) jest obsługiwana C++ przez kompilator.
 
-See [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) for information on how to handle structured exceptions as C++ exceptions.
+Aby [](../c-runtime-library/reference/set-se-translator.md) uzyskać informacje na temat obsługi wyjątków strukturalnych jako wyjątków, C++ zobacz _set_se_translator.
 
-If you mix structured and C++ exceptions, be aware of these potential issues:
+Jeśli Mieszasz strukturę i C++ wyjątki, weź pod uwagę następujące potencjalne problemy:
 
 - Wyjątki C++ i wyjątki strukturalne nie mogą być mieszane w obrębie tej samej funkcji.
 
-- Termination handlers ( **__finally** blocks) are always executed, even during unwinding after an exception is thrown.
+- Programy obsługi zakończenia (bloki **__finally** ) są zawsze wykonywane, nawet podczas rozwinięcia po wystąpieniu wyjątku.
 
-- C++ exception handling can catch and preserve unwind semantics in all modules compiled with the [/EH](../build/reference/eh-exception-handling-model.md) compiler options, which enable unwind semantics.
+- C++Obsługa wyjątków może przechwycić i zachować semantykę operacji unwind we wszystkich modułach skompilowanych za pomocą opcji kompilatora [/EH](../build/reference/eh-exception-handling-model.md) , które umożliwiają włączenie semantyki unwind.
 
-- Istnieją sytuacje, w których funkcje destruktora nie są wywoływane dla wszystkich obiektów. For example, if a structured exception occurs while attempting to make a function call through an uninitialized function pointer, and that function takes as parameters objects that were constructed before the call, the destructors of those objects are not called during stack unwind.
+- Istnieją sytuacje, w których funkcje destruktora nie są wywoływane dla wszystkich obiektów. Na przykład, jeśli wystąpi wyjątek strukturalny podczas próby wykonania wywołania funkcji przez niezainicjowany wskaźnik funkcji i ta funkcja przyjmuje jako parametry obiekty, które zostały skonstruowane przed wywołaniem, destruktory tych obiektów nie są wywoływane Podczas rozwinięcia stosu.
 
-## <a name="next-steps"></a>Następne kroki
+## <a name="next-steps"></a>Kolejne kroki
 
-- [Using setjmp or longjmp in C++ programs](../cpp/using-setjmp-longjmp.md)
+- [Korzystanie z setjmp lub longjmp C++ w programach](../cpp/using-setjmp-longjmp.md)
 
-  See more information on the use of `setjmp` and `longjmp` in C++ programs.
+  Zobacz więcej informacji na temat używania `setjmp` i `longjmp` w C++ programach.
 
 - [Obsługa wyjątków strukturalnych w języku C++](../cpp/exception-handling-differences.md)
 
-  See examples of the ways you can use C++ to handle structured exceptions.
+  Zobacz przykłady sposobów C++ obsługi wyjątków strukturalnych.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)
+[Nowoczesne C++ najlepsze rozwiązania dotyczące wyjątków i obsługi błędów](../cpp/errors-and-exception-handling-modern-cpp.md)

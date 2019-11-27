@@ -13,7 +13,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398469"
 ---
-# <a name="endif-32-bit-masm"></a>.ENDIF (32-bit MASM)
+# <a name="endif-32-bit-masm"></a>. ENDIF (32-bitowy MASM)
 
 ## <a name="syntax"></a>Składnia
 
@@ -21,7 +21,7 @@ ms.locfileid: "74398469"
 
 ## <a name="remarks"></a>Uwagi
 
-(32-bit MASM only.) See [.IF](../../assembler/masm/dot-if.md).
+(tylko 32-bitowy MASM). Zobacz [. Jeśli](../../assembler/masm/dot-if.md).
 
 ## <a name="see-also"></a>Zobacz także
 

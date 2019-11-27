@@ -15,7 +15,7 @@ ms.locfileid: "74397429"
 ---
 # <a name="ifb"></a>IFB
 
-Grants assembly if *textitem* is blank.
+Przyznaje zestaw, jeśli *element textitem* jest pusty.
 
 ## <a name="syntax"></a>Składnia
 
@@ -23,8 +23,8 @@ Grants assembly if *textitem* is blank.
 
 ## <a name="remarks"></a>Uwagi
 
-See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+Aby uzyskać pełną składnię [, zobacz.](../../assembler/masm/if-masm.md)
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

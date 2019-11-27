@@ -1,5 +1,5 @@
 ---
-title: Type conversions and type safety
+title: Konwersje i bezpieczeństwo typów
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
@@ -10,17 +10,17 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246114"
 ---
-# <a name="type-conversions-and-type-safety"></a>Type conversions and type safety
+# <a name="type-conversions-and-type-safety"></a>Konwersje i bezpieczeństwo typów
 
 W tym dokumencie wymieniono typowe problemy z konwersją typów oraz opisano sposoby ich unikania w kodzie języka C++.
 
-Pisząc program w języku C++, należy dopilnować, aby był on bezpieczny pod względem typów. Oznacza to, że każda zmienna, argument funkcji i wartość zwracana przez funkcję musi zawierać akceptowalny rodzaj danych, a operacje wykorzystujące wartości o różnych typach muszą „mieć sens” i nie mogą powodować utraty danych, nieprawidłowej interpretacji wzorców bitowych ani uszkodzeń pamięci. Program, który nigdy jawnie lub niejawnie nie konwertuje wartości z jednego typu na inny, jest z definicji bezpieczny pod względem typów. Czasami jednak konwersje typów, nawet niebezpieczne, są wymagane. For example, you might have to store the result of a floating point operation in a variable of type **int**, or you might have to pass the value in an unsigned **int** to a function that takes a signed **int**. Both examples illustrate unsafe conversions because they may cause data loss or re-interpretation of a value.
+Pisząc program w języku C++, należy dopilnować, aby był on bezpieczny pod względem typów. Oznacza to, że każda zmienna, argument funkcji i wartość zwracana przez funkcję musi zawierać akceptowalny rodzaj danych, a operacje wykorzystujące wartości o różnych typach muszą „mieć sens” i nie mogą powodować utraty danych, nieprawidłowej interpretacji wzorców bitowych ani uszkodzeń pamięci. Program, który nigdy jawnie lub niejawnie nie konwertuje wartości z jednego typu na inny, jest z definicji bezpieczny pod względem typów. Czasami jednak konwersje typów, nawet niebezpieczne, są wymagane. Na przykład może być konieczne przechowanie wyniku operacji zmiennoprzecinkowej w zmiennej typu **int**lub może być konieczne przekazanie wartości w niepodpisanej liczbie **całkowitej** do funkcji, która pobiera liczbę **całkowitą**ze znakiem. Oba przykłady ilustrują niebezpieczne konwersje, ponieważ mogą spowodować utratę danych lub ponowną interpretację wartości.
 
 Gdy kompilator wykryje niebezpieczną konwersję, zgłasza błąd lub ostrzeżenie. Błąd zatrzymuje kompilację, natomiast ostrzeżenie pozwala na kontynuowanie kompilacji, ale wskazuje możliwy błąd w kodzie. Jednak nawet jeśli program kompiluje się bez ostrzeżeń, może zawierać kod, który prowadzi do niejawnych konwersji typu generujących niepoprawne wyniki. Błędy typu mogą być także wprowadzone przez jawne konwersje (rzutowania) w kodzie.
 
 ## <a name="implicit-type-conversions"></a>Niejawne konwersje typów
 
-When an expression contains operands of different built-in types, and no explicit casts are present, the compiler uses built-in *standard conversions* to convert one of the operands so that the types match. Kompilator próbuje wykonać konwersje w dobrze zdefiniowanej kolejności, aż któraś się powiedzie. Jeśli wybrana konwersja skutkuje podwyższeniem poziomu, kompilator nie generuje ostrzeżenia. Jeśli konwersja powoduje zawężenie, kompilator generuje ostrzeżenie o możliwej utracie danych. To, czy rzeczywiście dojdzie do utraty danych, zależy od faktycznych wartości, jednak zalecamy traktowanie tego ostrzeżenia jako zgłoszenia błędu. Jeśli w operacji uczestniczy typ zdefiniowany przez użytkownika, kompilator podejmuje próbę użycia konwersji określonych w definicji klasy. Jeśli nie jest w stanie znaleźć odpowiedniej konwersji, zgłasza błąd i nie kompiluje programu. For more information about the rules that govern the standard conversions, see [Standard Conversions](../cpp/standard-conversions.md). For more information about user-defined conversions, see [User-Defined Conversions (C++/CLI)](../dotnet/user-defined-conversions-cpp-cli.md).
+Gdy wyrażenie zawiera operandy różnych typów wbudowanych i nie ma żadnych jawnych rzutowania, kompilator używa wbudowanych *konwersji standardowych* do konwersji jednego z operandów, tak aby typy były zgodne. Kompilator próbuje wykonać konwersje w dobrze zdefiniowanej kolejności, aż któraś się powiedzie. Jeśli wybrana konwersja skutkuje podwyższeniem poziomu, kompilator nie generuje ostrzeżenia. Jeśli konwersja powoduje zawężenie, kompilator generuje ostrzeżenie o możliwej utracie danych. To, czy rzeczywiście dojdzie do utraty danych, zależy od faktycznych wartości, jednak zalecamy traktowanie tego ostrzeżenia jako zgłoszenia błędu. Jeśli w operacji uczestniczy typ zdefiniowany przez użytkownika, kompilator podejmuje próbę użycia konwersji określonych w definicji klasy. Jeśli nie jest w stanie znaleźć odpowiedniej konwersji, zgłasza błąd i nie kompiluje programu. Aby uzyskać więcej informacji o regułach, które regulują Konwersje standardowe, zobacz [Konwersje standardowe](../cpp/standard-conversions.md). Aby uzyskać więcej informacji dotyczących konwersji zdefiniowanych przez użytkownika, zobacz [konwersje zdefiniowane przez użytkownikaC++(/CLI)](../dotnet/user-defined-conversions-cpp-cli.md).
 
 ### <a name="widening-conversions-promotion"></a>Konwersje rozszerzające (podwyższające poziom)
 
@@ -28,10 +28,10 @@ W konwersji rozszerzającej wartość mniejszej zmiennej jest przypisywana do wi
 
 |Z|Do|
 |----------|--------|
-|Any signed or unsigned integral type except **long long** or **__int64**|**double**|
-|**bool** or **char**|Każdy inny typ wbudowany|
-|**short** or **wchar_t**|**int**, **long**, **long long**|
-|**int**, **long**|**long long**|
+|Wszystkie podpisane lub niepodpisane typy całkowite z wyjątkiem **Long Long** lub **__int64**|**double**|
+|**bool** lub **char**|Każdy inny typ wbudowany|
+|**krótkie** lub **wchar_t**|**int**, **Long**, **Long Long**|
+|**int**, **Long**|**Long Long**|
 |**float**|**double**|
 
 ### <a name="narrowing-conversions-coercion"></a>Konwersje zawężające (przekształcenia)
@@ -73,7 +73,7 @@ cout << "unsigned val = " << num << " signed val = " << num2 << endl;
 // Prints: unsigned val = 65535 signed val = -1
 ```
 
-Należy zauważyć, że wartości są reinterpretowane w obu kierunkach. Jeśli program generuje wyniki nieparzyste, w których znak wartości jest przeciwny wobec oczekiwanego, należy poszukać niejawnych konwersji między typami całkowitymi ze znakiem i bez znaku. In the following example, the result of the expression ( 0 - 1) is implicitly converted from **int** to **unsigned int** when it's stored in `num`. Powoduje to ponowne interpretowanie wzorca bitowego.
+Należy zauważyć, że wartości są reinterpretowane w obu kierunkach. Jeśli program generuje wyniki nieparzyste, w których znak wartości jest przeciwny wobec oczekiwanego, należy poszukać niejawnych konwersji między typami całkowitymi ze znakiem i bez znaku. W poniższym przykładzie wynik wyrażenia (0-1) jest niejawnie konwertowany z **int** na **unsigned int** , gdy jest przechowywany w `num`. Powoduje to ponowne interpretowanie wzorca bitowego.
 
 ```cpp
 unsigned int u3 = 0 - 1;
@@ -84,7 +84,7 @@ Kompilator nie ostrzega o niejawnych konwersjach między typami całkowitymi ze 
 
 ### <a name="pointer-conversions"></a>Konwersje wskaźników
 
-W wielu wyrażeniach tablica w stylu języka C jest niejawnie konwertowana na wskaźnik do pierwszego elementu w tablicy, a konwersje stałe mogą odbywać się dyskretnie. Takie rozwiązanie jest wygodne, ale powoduje ryzyko błędów. For example, the following badly designed code example seems nonsensical, and yet it will compile and produces a result of 'p'. Najpierw literał będący stałą w postaci ciągu „Help” jest konwertowany na typ `char*`, który wskazuje na pierwszy element tablicy. Następnie wskaźnik jest zwiększany o trzy elementy tak, że teraz wskazuje ostatni element „p”.
+W wielu wyrażeniach tablica w stylu języka C jest niejawnie konwertowana na wskaźnik do pierwszego elementu w tablicy, a konwersje stałe mogą odbywać się dyskretnie. Takie rozwiązanie jest wygodne, ale powoduje ryzyko błędów. Na przykład następujący źle zaprojektowany kod wygląda na bezsensownie, a następnie zostanie skompilowany i wygeneruje wynik "p". Najpierw literał będący stałą w postaci ciągu „Help” jest konwertowany na typ `char*`, który wskazuje na pierwszy element tablicy. Następnie wskaźnik jest zwiększany o trzy elementy tak, że teraz wskazuje ostatni element „p”.
 
 ```cpp
 char* s = "Help" + 3;
@@ -92,7 +92,7 @@ char* s = "Help" + 3;
 
 ## <a name="explicit-conversions-casts"></a>Konwersje jawne (rzutowania)
 
-Za pomocą operacji rzutowania można nakazać kompilatorowi przekształcenie wartości z jednego typu na inny. Jeśli dwa typy są zupełnie z sobą niezwiązane, czasami kompilator zgłosi błąd, ale w innych przypadkach nie zgłosi błędu nawet wtedy, gdy operacja nie jest bezpieczna pod względem typów. Rzutowań należy używać rozważnie, ponieważ każda konwersja z jednego typu na drugi jest potencjalnym źródłem błędów w programie. Czasami jednak rzutowania są konieczne, a nie wszystkim towarzyszy wysokie ryzyko. Jednym z przydatnych zastosowań rzutowania są sytuacje, gdy kod wykonuje konwersję zawężająca, a wiadomo, że nie powoduje ona generowanie błędnych wyników przez program. W efekcie kompilator otrzymuje informację, że użytkownik wie co robi, dlatego nie trzeba mu pokazywać więcej ostrzeżeń. Innym zastosowaniem jest rzutowanie ze wskaźnika prowadzącego do klasy pochodnej na wskaźnik prowadzący do klasy bazowej. Another use is to cast away the **const**-ness of a variable to pass it to a function that requires a non-**const** argument. Większość tych operacji rzutowania niesie z sobą pewne ryzyko.
+Za pomocą operacji rzutowania można nakazać kompilatorowi przekształcenie wartości z jednego typu na inny. Jeśli dwa typy są zupełnie z sobą niezwiązane, czasami kompilator zgłosi błąd, ale w innych przypadkach nie zgłosi błędu nawet wtedy, gdy operacja nie jest bezpieczna pod względem typów. Rzutowań należy używać rozważnie, ponieważ każda konwersja z jednego typu na drugi jest potencjalnym źródłem błędów w programie. Czasami jednak rzutowania są konieczne, a nie wszystkim towarzyszy wysokie ryzyko. Jednym z przydatnych zastosowań rzutowania są sytuacje, gdy kod wykonuje konwersję zawężająca, a wiadomo, że nie powoduje ona generowanie błędnych wyników przez program. W efekcie kompilator otrzymuje informację, że użytkownik wie co robi, dlatego nie trzeba mu pokazywać więcej ostrzeżeń. Innym zastosowaniem jest rzutowanie ze wskaźnika prowadzącego do klasy pochodnej na wskaźnik prowadzący do klasy bazowej. Innym zastosowaniem jest rzutowanie **const**-stałość zmiennej, aby przekazać ją do funkcji, która wymaga argumentu innego niż**const** . Większość tych operacji rzutowania niesie z sobą pewne ryzyko.
 
 W programowaniu w stylu języka C jeden operator rzutowania w stylu C jest używany do różnych rodzajów rzutowań.
 
@@ -101,9 +101,9 @@ W programowaniu w stylu języka C jeden operator rzutowania w stylu C jest używ
 int(x); // old-style cast, functional syntax
 ```
 
-Operator rzutowania w stylu języka C jest identyczny z operatorem wywołania (), dlatego w kodzie nie rzuca się w oczy i łatwo go przegapić. Both are bad because they're difficult to recognize at a glance or search for, and they're disparate enough to invoke any combination of **static**, **const**, and **reinterpret_cast**. Stwierdzenie, co faktycznie wykonuje rzutowanie w starym stylu, może być trudne i obarczone ryzykiem błędów. Z tych powodów w sytuacjach, gdy jest potrzebne rzutowanie, zalecamy użycie jednego następujących z operatorów rzutowania języka C++. Często są one znacznie bezpieczniejsze pod względem typów i lepiej wyrażają cele programistyczne:
+Operator rzutowania w stylu języka C jest identyczny z operatorem wywołania (), dlatego w kodzie nie rzuca się w oczy i łatwo go przegapić. Oba są nieprawidłowe, ponieważ trudno jest rozpoznać lub wyszukać, i są one bardzo małe, aby wywołać dowolną kombinację **statycznych**, **stałych**i **reinterpret_cast**. Stwierdzenie, co faktycznie wykonuje rzutowanie w starym stylu, może być trudne i obarczone ryzykiem błędów. Z tych powodów w sytuacjach, gdy jest potrzebne rzutowanie, zalecamy użycie jednego następujących z operatorów rzutowania języka C++. Często są one znacznie bezpieczniejsze pod względem typów i lepiej wyrażają cele programistyczne:
 
-- **static_cast**, for casts that are checked at compile time only. **static_cast** returns an error if the compiler detects that you are trying to cast between types that are completely incompatible. Może on także służyć do rzutowania między wskaźnikiem prowadzącym do klasy bazowej a wskaźnikiem prowadzącym do klasy pochodnej, jednak kompilator nie zawsze rozpozna, czy takie konwersje będą bezpieczne w czasie wykonywania.
+- **static_cast**, w przypadku rzutowania, które są sprawdzane tylko w czasie kompilacji. **static_cast** zwraca błąd, jeśli kompilator wykryje, że próbujesz rzutować między typami, które są całkowicie niezgodne. Może on także służyć do rzutowania między wskaźnikiem prowadzącym do klasy bazowej a wskaźnikiem prowadzącym do klasy pochodnej, jednak kompilator nie zawsze rozpozna, czy takie konwersje będą bezpieczne w czasie wykonywania.
 
     ```cpp
     double d = 1.58947;
@@ -117,9 +117,9 @@ Operator rzutowania w stylu języka C jest identyczny z operatorem wywołania ()
     Derived* d2 = static_cast<Derived*>(b);
     ```
 
-   For more information, see [static_cast](../cpp/static-cast-operator.md).
+   Aby uzyskać więcej informacji, zobacz [static_cast](../cpp/static-cast-operator.md).
 
-- **dynamic_cast**, for safe, runtime-checked casts of pointer-to-base to pointer-to-derived. A **dynamic_cast** is safer than a **static_cast** for downcasts, but the runtime check incurs some overhead.
+- **dynamic_cast**w celu zapewnienia bezpiecznego, sprawdzonych rzutów wskaźnika do wartości bazowej na wskaźnik do pochodne. **Dynamic_cast** jest bezpieczniejszy niż **static_cast** dla rzutowań, ale Kontrola czasu wykonywania wiąże się z pewnym obciążeniem.
 
     ```cpp
     Base* b = new Base();
@@ -142,9 +142,9 @@ Operator rzutowania w stylu języka C jest identyczny z operatorem wywołania ()
     //Output: d3 is null;
     ```
 
-   For more information, see [dynamic_cast](../cpp/dynamic-cast-operator.md).
+   Aby uzyskać więcej informacji, zobacz [dynamic_cast](../cpp/dynamic-cast-operator.md).
 
-- **const_cast**, for casting away the **const**-ness of a variable, or converting a non-**const** variable to be **const**. Casting away **const**-ness by using this operator is just as error-prone as is using a C-style cast, except that with **const-cast** you are less likely to perform the cast accidentally. Sometimes you have to cast away the **const**-ness of a variable, for example, to pass a **const** variable to a function that takes a non-**const** parameter. W przykładzie poniżej pokazano, jak to zrobić.
+- **const_cast**, w celu odrzucania wartości **const**-stałość zmiennej lub przekonwertowania zmiennej**niestałej** na wartość **stałą**. Rzutowanie **const**-stałość za pomocą tego operatora jest równie podatne na błędy, jak użycie rzutowania w stylu języka C, z tą różnicą, że w przypadku **rzutowania const** nie jest możliwe przypadkowe przeprowadzenie rzutowania. Czasami konieczne jest Rzutowanie wartości **const**-stałość zmiennej, na przykład w celu przekazania zmiennej **const** do funkcji, która przyjmuje parametr inny niż**const** . W przykładzie poniżej pokazano, jak to zrobić.
 
     ```cpp
     void Func(double& d) { ... }
@@ -155,14 +155,14 @@ Operator rzutowania w stylu języka C jest identyczny z operatorem wywołania ()
     }
     ```
 
-   For more information, see [const_cast](../cpp/const-cast-operator.md).
+   Aby uzyskać więcej informacji, zobacz [const_cast](../cpp/const-cast-operator.md).
 
-- **reinterpret_cast**, for casts between unrelated types such as **pointer** to **int**.
+- **reinterpret_cast**, w przypadku rzutowania między niepowiązanymi typami, takimi jak **wskaźnik** do **int**.
 
     > [!NOTE]
     >  Tego operatora rzutowania używa się rzadziej niż innych. Nie ma też gwarancji, że będzie działał w innych kompilatorach.
 
-   The following example illustrates how **reinterpret_cast** differs from **static_cast**.
+   Poniższy przykład ilustruje, jak **reinterpret_cast** różni się od **static_cast**.
 
     ```cpp
     const char* str = "hello";
@@ -174,11 +174,11 @@ Operator rzutowania w stylu języka C jest identyczny z operatorem wywołania ()
                                        // However, it is not 64-bit safe.
     ```
 
-   For more information, see [reinterpret_cast Operator](../cpp/reinterpret-cast-operator.md).
+   Aby uzyskać więcej informacji, zobacz [Reinterpret_cast operator](../cpp/reinterpret-cast-operator.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[C++ type system](../cpp/cpp-type-system-modern-cpp.md)<br/>
-[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[C++System typów](../cpp/cpp-type-system-modern-cpp.md)<br/>
+[Zapraszamy ponownie doC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)

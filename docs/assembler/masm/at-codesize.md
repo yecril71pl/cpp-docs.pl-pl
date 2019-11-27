@@ -15,7 +15,7 @@ ms.locfileid: "74399206"
 ---
 # <a name="codesize"></a>\@CodeSize
 
-0 for **TINY**, **SMALL**, **COMPACT**, and **FLAT** models, and 1 for **MEDIUM**, **LARGE**, and **HUGE** models (numeric equate).
+0 dlamodeli bardzo **niewielkich, małych**, **kompaktowych**i **płaskich** , a 1 dla **średnich**, **dużych**i **ogromnych** modeli (wartość liczbowa jest równa).
 
 ## <a name="syntax"></a>Składnia
 
@@ -23,4 +23,4 @@ ms.locfileid: "74399206"
 
 ## <a name="see-also"></a>Zobacz także
 
-[Symbols reference](symbols-reference.md)
+[Odwołanie do symboli](symbols-reference.md)

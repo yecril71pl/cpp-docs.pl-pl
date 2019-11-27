@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 3) C4995
+title: Ostrzeżenie kompilatora (poziom 3) C4995
 ms.date: 11/04/2016
 f1_keywords:
 - C4995
 helpviewer_keywords:
 - C4995
 ms.assetid: c6b61755-4730-4947-ad4d-d1c2bc82585a
-ms.openlocfilehash: 54bc8931b5eaa3bbb5053e5c21aa2aaaa73126fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c31023fbcb36c53a7d0f5138c280ff12c4d495e
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401517"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541176"
 ---
-# <a name="compiler-warning-level-3-c4995"></a>Kompilator ostrzeżenie (poziom 3) C4995
+# <a name="compiler-warning-level-3-c4995"></a>Ostrzeżenie kompilatora (poziom 3) C4995
 
-'Funkcja': nazwa została oznaczona jako przestarzała #pragma
+"Function": nazwa została oznaczona jako przestarzała #pragma
 
-Kompilator napotkał funkcję oznaczoną jako zaniechana pragma [przestarzałe](../../preprocessor/deprecated-c-cpp.md). Przyszła wersja prawdopodobnie nie będzie obsługiwała tej funkcji. Możesz wyłączyć to ostrzeżenie za pomocą [ostrzeżenie](../../preprocessor/warning.md) pragma (przykład poniżej).
+Kompilator napotkał funkcję, która została oznaczona za pomocą dyrektywy pragma jako [przestarzałą](../../preprocessor/deprecated-c-cpp.md). Przyszła wersja prawdopodobnie nie będzie obsługiwała tej funkcji. To ostrzeżenie można wyłączyć za pomocą dyrektywy pragma [Warning](../../preprocessor/warning.md) (przykład poniżej).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4995:
+Poniższy przykład generuje C4995:
 
-```
+```cpp
 // C4995.cpp
 // compile with: /W3
 #include <stdio.h>

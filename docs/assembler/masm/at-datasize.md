@@ -13,14 +13,14 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399149"
 ---
-# <a name="datasize"></a>\@DataSize
+# <a name="datasize"></a>\@rozmiar DataSize
 
-0 for **TINY**, **SMALL**, **MEDIUM**, and **FLAT** models, 1 for **COMPACT** and **LARGE** models, and 2 for **HUGE** model (numeric equate).
+0 w przypadku modeli **bardzo**dużych, **małych**, **średnich**i **płaskich** , 1 dla modeli **kompaktowych** i **dużych** oraz 2 dla **dużego** modelu (wartość liczbowa równa się).
 
 ## <a name="syntax"></a>Składnia
 
-> **\@DataSize**
+> **\@rozmiar DataSize**
 
 ## <a name="see-also"></a>Zobacz także
 
-[Symbols reference](symbols-reference.md)
+[Odwołanie do symboli](symbols-reference.md)

@@ -15,25 +15,25 @@ ms.locfileid: "74398629"
 ---
 # <a name="allocstack"></a>.ALLOCSTACK
 
-Generates a **UWOP_ALLOC_SMALL** or a **UWOP_ALLOC_LARGE** with the specified size for the current offset in the prologue.
+Generuje **UWOP_ALLOC_SMALL** lub **UWOP_ALLOC_LARGE** o określonym rozmiarze dla bieżącego przesunięcia w prologu.
 
 ## <a name="syntax"></a>Składnia
 
-> **.ALLOCSTACK** *size*
+> **.**  *Rozmiar* ALLOCSTACK
 
 ## <a name="remarks"></a>Uwagi
 
-MASM will choose the most efficient encoding for a given size.
+MASM będzie wybierać najbardziej wydajne kodowanie dla danego rozmiaru.
 
-**.ALLOCSTACK** allows ml64.exe users to specify how a frame function unwinds and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) FRAME declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. **.ALLOCSTACK** should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
+**. ALLOCSTACK** umożliwia użytkownikom ml64. exe określenie sposobu odwinięcia funkcji ramki i jest dozwolony tylko w obrębie prologu, który rozciąga się od deklaracji Frame [proces](../../assembler/masm/proc.md) do [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) . Dyrektywy te nie generują kodu; generują one tylko `.xdata` i `.pdata`. **. ALLOCSTACK** powinien być poprzedzony instrukcjami, które faktycznie implementują akcje, które mają być odwiązane. Dobrym sposobem jest Zawijanie dyrektyw unwind i kodu, które są przeznaczone do odwinięcia w makrze w celu zapewnienia zgody.
 
-The *size* operand must be a multiple of 8.
+Operand *rozmiaru* musi być wielokrotnością liczby 8.
 
-For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+Aby uzyskać więcej informacji, zobacz [MASM for x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 ## <a name="sample"></a>Przykład
 
-The following sample shows how to specify an unwind/exception handler:
+Poniższy przykład pokazuje, jak określić procedurę obsługi operacji unwindy/wyjątek:
 
 ```asm
 ; ml64 ex3.asm /link /entry:Example1  /SUBSYSTEM:Console

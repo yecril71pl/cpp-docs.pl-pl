@@ -1,5 +1,5 @@
 ---
-title: operator &lt;&gt;
+title: '&lt;operatora &gt;'
 ms.date: 08/30/2018
 f1_keywords:
 - <>
@@ -15,14 +15,14 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74396799"
 ---
-# <a name="operator-ltgt"></a>operator &lt;&gt;
+# <a name="operator-ltgt"></a>&lt;operatora &gt;
 
-Treats *text* as a single literal element.
+Traktuje *tekst* jako pojedynczy element literału.
 
 ## <a name="syntax"></a>Składnia
 
-> __\<__ *text* __>__
+> __\<__ __>__ tekstu
 
 ## <a name="see-also"></a>Zobacz także
 
-[Operators reference](operators-reference.md)
+[Odwołania operatorów](operators-reference.md)

@@ -15,12 +15,12 @@ ms.locfileid: "74393189"
 ---
 # <a name="title"></a>TITLE
 
-Defines the program listing title.
+Definiuje tytuł listy programów.
 
 ## <a name="syntax"></a>Składnia
 
-> **TITLE** *text*
+> *Tekst* tytułu
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

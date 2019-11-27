@@ -15,13 +15,13 @@ ms.locfileid: "74246384"
 ---
 # <a name="restrictions-on-termination-handlers"></a>Ograniczenia dotyczące programu obsługi zakończenia
 
-You cannot use a **goto** statement to jump into a **__try** statement block or a **__finally** statement block. Instead, you must enter the statement block through normal flow of control. (You can, however, jump out of a **__try** statement block.) Also, you cannot nest an exception handler or termination handler inside a **__finally** block.
+Nie można użyć instrukcji **goto** , aby przejść do bloku instrukcji **__try** lub bloku instrukcji **__finally** . Zamiast tego należy wprowadzić blok instrukcji za pomocą normalnego przepływu sterowania. (Można jednak wyskoczyć z bloku instrukcji **__try** ). Ponadto nie można zagnieżdżać procedury obsługi wyjątku ani procedury zakończenia w bloku **__finally** .
 
-In addition, some kinds of code permitted in a termination handler produce questionable results, so you should use them with caution, if at all. One is a **goto** statement that jumps out of a **__finally** statement block. If the block is executing as part of normal termination, nothing unusual happens. But if the system is unwinding the stack, that unwinding stops, and the current function gains control as if there were no abnormal termination.
+Ponadto niektóre rodzaje kodu dozwolone w programie obsługi zakończenia dają wyniki z pytaniami, dlatego należy ich używać ostrożnie, jeśli w ogóle. Jednym z nich jest instrukcja **goto** , która przeskakuje z bloku instrukcji **__finally** . Jeśli blok jest wykonywany w ramach normalnego zakończenia, nic się nie dzieje. Ale jeśli system wychodzi z odwinięcia stosu, to odwracanie zostanie zatrzymane, a bieżąca funkcja uzyskuje kontrolę tak, jakby nie było nietypowego zakończenia.
 
-A **return** statement inside a **__finally** statement block presents roughly the same situation. Control returns to the immediate caller of the function containing the termination handler. If the system was unwinding the stack, this process is halted, and the program proceeds as if there had been no exception raised.
+Instrukcja **Return** w bloku instrukcji **__finally** przedstawia przybliżoną taką samą sytuację. Kontrolka powraca do bezpośredniego obiektu wywołującego funkcji, która zawiera procedurę obsługi zakończenia. Jeśli system spowodował odtworzenie stosu, ten proces jest zatrzymany, a program będzie kontynuował działanie tak, jakby nie został zgłoszony wyjątek.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
+[Pisanie procedury obsługi zakończenia](../cpp/writing-a-termination-handler.md)<br/>
 [Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

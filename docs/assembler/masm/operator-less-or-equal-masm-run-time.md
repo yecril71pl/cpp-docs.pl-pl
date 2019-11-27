@@ -16,12 +16,12 @@ ms.locfileid: "74396824"
 ---
 # <a name="operator-lt-masm-run-time"></a>operator &lt;= (MASM Run Time)
 
-Is less than or equal to. Used only within [.IF](../../assembler/masm/dot-if.md), [.WHILE](../../assembler/masm/dot-while.md), or [.REPEAT](../../assembler/masm/dot-repeat.md) blocks and evaluated at run time, not at assembly time.
+Jest mniejsze lub równe. Używany tylko w ramach programu [. Jeśli](../../assembler/masm/dot-if.md), [. WHILE](../../assembler/masm/dot-while.md)lub [. POWTARZAj](../../assembler/masm/dot-repeat.md) bloki i oceniaj w czasie wykonywania, a nie w czasie montażu.
 
 ## <a name="syntax"></a>Składnia
 
-> *expression1* **<=** *expression2*
+> *wyrażenie1* **<=** *wyrażenie2*
 
 ## <a name="see-also"></a>Zobacz także
 
-[Operators reference](operators-reference.md)
+[Odwołania operatorów](operators-reference.md)

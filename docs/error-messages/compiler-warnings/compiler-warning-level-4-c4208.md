@@ -1,25 +1,25 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4208
+title: Ostrzeżenie kompilatora (poziom 4) C4208
 ms.date: 11/04/2016
 f1_keywords:
 - C4208
 helpviewer_keywords:
 - C4208
 ms.assetid: 5cb0a36e-3fb5-422f-a5f9-e40b70776c27
-ms.openlocfilehash: 11c6b1ad50c44ac4ad2a9d014e57efef097d9d8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e15140bd2f0983bde64c89a054fd733d1ab902ac
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401180"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541866"
 ---
-# <a name="compiler-warning-level-4-c4208"></a>Kompilator ostrzeżenie (poziom 4) C4208
+# <a name="compiler-warning-level-4-c4208"></a>Ostrzeżenie kompilatora (poziom 4) C4208
 
-użyto niestandardowego rozszerzenia: delete [exp] - exp obliczono, ale zignorowano
+użyto niestandardowego rozszerzenia: delete [EXP]-EXP oceniono, ale zignorowano
 
-Rozszerzenia Microsoft (/Ze), możesz usunąć tablicy przy użyciu wartości w nawiasach z [delete operator](../../cpp/delete-operator-cpp.md). Wartość jest ignorowana.
+Dzięki rozszerzeniom Microsoft (/ze) można usunąć tablicę przy użyciu wartości w nawiasach kwadratowych przy użyciu [operatora delete](../../cpp/delete-operator-cpp.md). Wartość jest ignorowana.
 
-```
+```cpp
 // C4208.cpp
 // compile with: /W4
 int main()
@@ -31,4 +31,4 @@ int main()
 }
 ```
 
-Wartości te są nieprawidłowe w obszarze zgodności ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Takie wartości są nieprawidłowe pod kątem zgodności ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)).

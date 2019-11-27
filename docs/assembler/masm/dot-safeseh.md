@@ -15,21 +15,21 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397998"
 ---
-# <a name="safeseh-32-bit-masm"></a>.SAFESEH (32-bit MASM)
+# <a name="safeseh-32-bit-masm"></a>. SAFESEH (32-bitowy MASM)
 
-Registers a function as a structured exception handler. (32-bit MASM only.)
+Rejestruje funkcję jako program obsługi wyjątków strukturalnych. (tylko 32-bitowy MASM).
 
 ## <a name="syntax"></a>Składnia
 
-> **.SAFESEH** *identifier*
+> **.**  *Identyfikator* SAFESEH
 
 ## <a name="remarks"></a>Uwagi
 
-*identifier* must be the ID for a locally defined [PROC](../../assembler/masm/proc.md) or [EXTRN](../../assembler/masm/extrn.md) PROC. A [LABEL](../../assembler/masm/label-masm.md) is not allowed. The .SAFESEH directive requires the [/safeseh](../../assembler/masm/ml-and-ml64-command-line-reference.md) ml.exe command-line option.
+*Identyfikator* musi być identyfikatorem [zdefiniowanego](../../assembler/masm/proc.md) lokalnie procedury lub [EXTRN](../../assembler/masm/extrn.md) . [Etykieta](../../assembler/masm/label-masm.md) jest niedozwolona. Polu. Dyrektywa SAFESEH wymaga opcji wiersza polecenia [/SAFESEH](../../assembler/masm/ml-and-ml64-command-line-reference.md) ml. exe.
 
-For more information about structured exception handlers, see [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md).
+Aby uzyskać więcej informacji na temat obsługi wyjątków strukturalnych, zobacz [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md).
 
-For example, to register a safe exception handler, create a new MASM file (as follows), assemble with /safeseh, and add it to the linked objects.
+Na przykład, aby zarejestrować bezpieczną procedurę obsługi wyjątków, Utwórz nowy plik MASM (w następujący sposób), złóż z/SAFESEH i dodaj go do połączonych obiektów.
 
 ```asm
 .386
@@ -41,4 +41,4 @@ end
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

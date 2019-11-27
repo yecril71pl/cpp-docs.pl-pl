@@ -36,7 +36,7 @@ Instrukcje dotyczące tworzenia nowego projektu różnią się w zależności od
 
 ### <a name="to-create-a-uwp-static-library-in-visual-studio-2017-or-visual-studio-2015"></a>Aby utworzyć bibliotekę statyczną platformy UWP w programie Visual Studio 2017 lub Visual Studio 2015
 
-1. Na pasku menu wybierz **pliku** > **New** > **projektu**. W **obszarze C++ Visual** > **system Windows Uniwersalne** Wybieranie **biblioteki statycznej (uniwersalne systemu Windows)** .
+1. Na pasku menu wybierz kolejno pozycje **plik** > **Nowy** > **projekt**. W **obszarze C++ Visual** > **system Windows Uniwersalne** Wybieranie **biblioteki statycznej (uniwersalne systemu Windows)** .
 
 1. W **Eksplorator rozwiązań**Otwórz menu skrótów dla projektu, a następnie wybierz polecenie **Właściwości**. W oknie dialogowym **Właściwości** na stronie **Właściwości konfiguracji** > **CC++ /** wybierz opcję Użyj **rozszerzenia środowisko wykonawcze systemu Windows** na **wartość tak (/zw)** .
 

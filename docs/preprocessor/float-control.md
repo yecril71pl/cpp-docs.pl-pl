@@ -1,5 +1,5 @@
 ---
-title: float_control, pragma
+title: float_control pragma
 description: Opisuje użycie i efekty dyrektywy pragma float_control. Dyrektywa float_control steruje stanem precyzyjnej semantycznej semantyki i semantyki wyjątku w czasie wykonywania.
 ms.date: 11/18/2019
 f1_keywords:
@@ -16,7 +16,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74305498"
 ---
-# <a name="float_control-pragma"></a>float_control, pragma
+# <a name="float_control-pragma"></a>float_control pragma
 
 Określa zachowanie zmiennoprzecinkowe dla funkcji.
 
@@ -37,10 +37,10 @@ Określa, czy włączyć (**Włącz**) Czy wyłączyć (**off**) semantykę wyj�
 
 **chyba że** można ustawić tylko **na wartość włączone** , tylko wtedy, gdy jest również ustawiony **na wartość** **włączone**.
 
-**push**\
+**wypychanie**\
 Wypchnięcie bieżące ustawienie **float_control** do wewnętrznego stosu kompilatora.
 
-**pop**\
+\ **pop**
 Usuwa ustawienie **float_control** z góry wewnętrznego stosu kompilatora i sprawia, że nowe **float_control** ustawienie.
 
 ## <a name="remarks"></a>Uwagi

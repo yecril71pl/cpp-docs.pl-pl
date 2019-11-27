@@ -30,12 +30,12 @@ Pliki nagłówkowe dla C++ standardowej biblioteki i rozszerzeń, według katego
 | Kontenery sekwencji | [\<array >](array.md)<sup>11</sup>, [\<deque >](deque.md), [\<](forward-list.md)forward_list ><sup>11</sup>, [\<listy](list.md)>, [\<wektor >](vector.md) |
 | Uporządkowane Kontenery asocjacyjne| [\<mapowanie >](map.md), [\<ustawić >](set.md) |
 | Nieuporządkowane Kontenery asocjacyjne | [\<unordered_map >](unordered-map.md)<sup>11</sup>, [\<unordered_set >](unordered-set.md)<sup>11</sup> |
-| Adaptery kontenerów | [\<queue>](queue.md), [\<stack>](stack.md) |
+| Adaptery kontenerów | [\<kolejki >](queue.md), [\<stosu >](stack.md) |
 | Widoki kontenerów | \<zakresu ><sup>20</sup> |
 | [Błędy i obsługa wyjątków](../cpp/errors-and-exception-handling-modern-cpp.md) | [\<cassert >](cassert.md), [\<> wyjątków](exception.md), [\<stdexcept >](stdexcept.md), [\<](system-error.md)system_error ><sup>11</sup> |
 | Narzędzia ogólne | \<dowolnych ><sup>17</sup> [](tuple.md)<sup></sup> [\<bitset >](bitset.md), \<charconv ><sup>17</sup>, [\<cstdlib >](cstdlib.md), \<wykonywania ><sup>17</sup>\<> [funkcjonalnej](functional.md) [\<> \<, memory_resource](memory.md)<sup>> \<</sup> [>](scoped-allocator.md)<sup></sup><sup>17</sup> [\<](ratio.md)<sup></sup> [\<type_traits >](type-traits.md)<sup>11</sup> [\<typeindex >](typeindex.md)<sup>11</sup>\<[narzędzi](utility.md)> \<wariant ><sup>17</sup>\<\< |
 | [We/wy i formatowanie](../text/string-and-i-o-formatting-modern-cpp.md) | [\<cinttypes >](cinttypes.md)<sup>11</sup>, [\<cstdio >](cstdio.md), [\<system plików >](filesystem.md)<sup>17</sup>, [\<fstream — >](fstream.md), [\<iomanip >](iomanip.md), [\<iOS](ios.md)> [,\<iosfwd](iosfwd.md) [>,](sstream.md) [\<iostream](iostream.md)> [,\<](istream.md) [IStream](streambuf.md)> [,\<ostream](ostream.md) [>](strstream.md)<sup> </sup>, \<syncstream ><sup>20</sup>\<\<\< |
-| Iteratory | [\<iterator>](iterator.md) |
+| Iteratory | [\<iterator >](iterator.md) |
 | Obsługa języków | [\<cfloat >](cfloat.md), [\<climits >](climits.md), [\<codecvt >](codecvt.md)<sup>11 a</sup>, \<porównać ><sup>20</sup>, \<umowa ><sup>20</sup>\<współpracującej ><sup>20</sup>, [\<csetjmp >](csetjmp.md), [\<](csignal.md)csignal >, [\<](cstdarg.md)cstdarg [>,\<cstddef >](cstddef.md),\<[cstdint >](cstdint.md)<sup>11</sup>, [\<cstdlib >](cstdlib.md), [\<>](exception.md) , [\<initializer_list >](initializer-list.md)<sup>11</sup> [\<limity >](limits.md), [\<nowe >](new.md), [\<](typeinfo.md)><sup></sup>\< |
 | Lokalizacja | [\<clocale >](clocale.md), [\<codecvt >](codecvt.md)<sup>11 a</sup>, [\<CVT/wbuffer >](cvt-wbuffer.md), [\<CVT/wstring >](cvt-wstring.md), [\<ustawienia regionalne >](locale.md) |
 | Obliczenia matematyczne i liczbowe | \<bit ><sup>20</sup>, [\<cfenv >](cfenv.md)<sup>11</sup>, [\<cmath >](cmath.md), [\<złożone >](complex.md), [\<cstdlib >](cstdlib.md), [\<ograniczenia](limits.md)>, [\<liczbowe >](numeric.md), [\<losowo >](random.md)<sup>11</sup>, [współczynnik\<>](ratio.md)<sup>11</sup>\<[valarray >](valarray.md) |
@@ -44,7 +44,7 @@ Pliki nagłówkowe dla C++ standardowej biblioteki i rozszerzeń, według katego
 | Zakresy | zakresy \<><sup>20</sup> |
 | Wyrażenia regularne | [\<wyrażenia regularnego >](regex.md)<sup>11</sup> |
 | Ciągi i dane znakowe | [\<cctype >](cctype.md), [\<cstdlib >](cstdlib.md), [\<cstring >](cstring.md), [\<cuchar >](cuchar.md)<sup>11</sup>, [\<cwchar >](cwchar.md), [\<cwctype >](cwctype.md), [\<wyrażenie regularne >](regex.md)<sup>11</sup>, [\<ciąg >](string.md), [\<string_view](string-view.md)><sup>17</sup> |
-| Godzina | [\<chrono >](chrono.md)<sup>11</sup> [\<CTime >](ctime.md) |
+| Time | [\<chrono >](chrono.md)<sup>11</sup> [\<CTime >](ctime.md) |
 
 <sup>11</sup> dodano w standardzie c++ 11. \
 <sup>14</sup> dodano w standardzie c++ 14. \
@@ -61,15 +61,15 @@ język <sup>c</sup> jest przestarzały w standardzie c++ 98.
 |Kategoria|nagłówka|
 |-|-|
 |[Algorytmy](../cpp/algorithms-modern-cpp.md)|[algorytm \<>](algorithm.md)|
-|Otoki biblioteki C|[\<cassert>](cassert.md), [\<cctype>](cctype.md), [\<cerrno>](cerrno.md), [\<cfenv>](cfenv.md), [\<cfloat>](cfloat.md), [\<cinttypes>](cinttypes.md), [\<ciso646>](ciso646.md), [\<climits>](climits.md), [\<clocale>](clocale.md), [\<cmath>](cmath.md), [\<csetjmp>](csetjmp.md), [\<csignal>](csignal.md), [\<cstdarg>](cstdarg.md), [\<cstdbool>](cstdbool.md), [\<cstddef>](cstddef.md), [\<cstdint>](cstdint.md), [\<cstdio>](cstdio.md), [\<cstdlib>](cstdlib.md), [\<cstring>](cstring.md), [\<ctgmath>](ctgmath.md), [\<ctime>](ctime.md), [\<cwchar>](cwchar.md), [\<cwctype>](cwctype.md)|
+|Otoki biblioteki C|[\<cassert >](cassert.md), [\<cctype >](cctype.md), [\<cerrno >](cerrno.md), [\<cfenv >](cfenv.md), [\<cfloat >](cfloat.md) [](cstdbool.md) [](csignal.md) [](cstdarg.md) [](climits.md) [](ciso646.md) [](clocale.md) [](csetjmp.md) [](cinttypes.md) [](cmath.md) [,\<cinttypes >,\<ciso646 >,\<climits >,\<CLocale >,\<cmath >,\<csetjmp >,\<\<cstddef >](cstddef.md), [\<cstdint >](cstdint.md), [\<cstdio >](cstdio.md), [\<cstdlib >](cstdlib.md), [\<CString >](cstring.md), [\<ctgmath >](ctgmath.md), [\<](ctime.md)CTime >, [\<cwchar](cwchar.md)>, [\<cwctype >](cwctype.md)\<\<|
 |[Kontenery](../cpp/containers-modern-cpp.md)||
 |Kontenery sekwencji|[\<array >](array.md), [\<deque >](deque.md), [\<](forward-list.md)forward_list > [,\<>,](list.md)\<[wektor >](vector.md)|
 |Uporządkowane Kontenery asocjacyjne| [\<mapowanie >](map.md), [\<ustawić >](set.md)|
 |Nieuporządkowane Kontenery asocjacyjne|[\<unordered_map >](unordered-map.md), [\<unordered_set >](unordered-set.md)|
-|Kontenery adaptera|[\<queue>](queue.md), [\<stack>](stack.md)|
+|Kontenery adaptera|[\<kolejki >](queue.md), [\<stosu >](stack.md)|
 |[Błędy i obsługa wyjątków](../cpp/errors-and-exception-handling-modern-cpp.md)|[\<> wyjątków](exception.md), [\<stdexcept >](stdexcept.md), [\<](system-error.md) system_error >|
-|[We/wy i formatowanie](../text/string-and-i-o-formatting-modern-cpp.md)|[\<filesystem>](filesystem.md), [\<fstream>](fstream.md), [\<iomanip>](iomanip.md), [\<ios>](ios.md), [\<iosfwd>](iosfwd.md), [\<iostream>](iostream.md), [\<istream>](istream.md), [\<ostream>](ostream.md), [\<sstream>](sstream.md), [\<streambuf>](streambuf.md), [\<strstream>](strstream.md)|
-|Iteratory|[\<iterator>](iterator.md)|
+|[We/wy i formatowanie](../text/string-and-i-o-formatting-modern-cpp.md)|[\<system plików >](filesystem.md), [\<fstream — >](fstream.md), [\<iomanip >](iomanip.md), [\<ios >](ios.md), [\<iosfwd >](iosfwd.md), [\<iostream >](iostream.md), [\<IStream](istream.md)> [,\<ostream >,\<](ostream.md) [strumienia >,](sstream.md) [\<streambuf](streambuf.md)>,\<[strstream >](strstream.md)|
+|Iteratory|[\<iterator >](iterator.md)|
 |Lokalizacja|[\<codecvt >](codecvt.md), [\<cvt/wbuffer >](cvt-wbuffer.md), [\<cvt/wstring >](cvt-wstring.md), [\<ustawienia regionalne >](locale.md)|
 |Obliczenia matematyczne i liczbowe|[\<złożone >](complex.md), [\<ograniczenia >](limits.md), [\<liczb >](numeric.md), [\<losowego >](random.md),\<[współczynnik](ratio.md)>, [\<valarray >](valarray.md)|
 |[Zarządzanie pamięcią](../cpp/smart-pointers-modern-cpp.md)|[\<przydzielania >](allocators-header.md), [\<> pamięci](memory.md), [\<nowe >](new.md), [\<](scoped-allocator.md) scoped_allocator >|

@@ -24,17 +24,17 @@ ms.locfileid: "74246405"
 
 Niektóre z najczęstszych źródeł błędów programu nie są oflagowane jako wyjątki przez system. Na przykład, jeśli użytkownik spróbuje przydzielić blok pamięci, ale ilość pamięci jest niewystarczająca, czas wykonywania lub funkcja interfejsu API nie zgłosi wyjątku, ale zwróci kod błędu.
 
-However, you can treat any condition as an exception by detecting that condition in your code and then reporting it by calling the [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) function. Flagowanie błędów w ten sposób może przynieść korzyści obsługi wyjątków strukturalnych do wszelkiego rodzaju błędów w czasie wykonywania.
+Można jednak traktować dowolny warunek jako wyjątek, wykrywając [ten warunek](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) w kodzie, a następnie zgłaszając go przez wywołanie funkcjiexception. Flagowanie błędów w ten sposób może przynieść korzyści obsługi wyjątków strukturalnych do wszelkiego rodzaju błędów w czasie wykonywania.
 
 Aby użyć obsługi wyjątków strukturalnych z błędami:
 
 - Zdefiniuj własny kod wyjątku dla zdarzenia.
 
-- Call `RaiseException` when you detect a problem.
+- Wywołaj `RaiseException` po wykryciu problemu.
 
 - Użyj filtrów obsługi wyjątków, aby przetestować zdefiniowany kod wyjątku.
 
-The \<winerror.h> file shows the format for exception codes. Aby upewnić się, że nie zostanie zdefiniowany kod, który powoduje konflikt z istniejącym kodem wyjątku, należy ustawić trzeci najbardziej znaczący bit na 1. Cztery najbardziej znaczące bity powinny być ustawione, jak pokazano w poniższej tabeli.
+Plik \<Winerror. h > pokazuje format kodów wyjątków. Aby upewnić się, że nie zostanie zdefiniowany kod, który powoduje konflikt z istniejącym kodem wyjątku, należy ustawić trzeci najbardziej znaczący bit na 1. Cztery najbardziej znaczące bity powinny być ustawione, jak pokazano w poniższej tabeli.
 
 |Bity|Zalecane ustawienie binarne|Opis|
 |----------|--------------------------------|-----------------|
@@ -44,14 +44,14 @@ The \<winerror.h> file shows the format for exception codes. Aby upewnić się, 
 
 Można ustawić pierwsze dwa bity na ustawienie inne niż 11 binarnie, mimo że ustawienie „błąd” jest odpowiednie dla większości wyjątków. Należy pamiętać o ustawieniu bitów 29 i 28, jak pokazano w poprzedniej tabeli.
 
-The resulting error code should therefore have the highest four bits set to hexadecimal E. For example, the following definitions define exception codes that do not conflict with any Windows exception codes. (Jednak trzeba sprawdzić kody, które są używane przez biblioteki DLL innych firm).
+W związku z tym kod błędu powinien mieć co najwyżej cztery bity ustawione na szesnastkową cyfrę E. Na przykład następujące definicje definiują kody wyjątków, które nie powodują konfliktu z żadnymi kodami wyjątków systemu Windows. (Jednak trzeba sprawdzić kody, które są używane przez biblioteki DLL innych firm).
 
 ```cpp
 #define STATUS_INSUFFICIENT_MEM       0xE0000001
 #define STATUS_FILE_BAD_FORMAT        0xE0000002
 ```
 
-Po zdefiniowaniu kodu wyjątku można go użyć, aby zgłosić wyjątek. For example, the following code raises the `STATUS_INSUFFICIENT_MEM` exception in response to a memory allocation problem:
+Po zdefiniowaniu kodu wyjątku można go użyć, aby zgłosić wyjątek. Na przykład poniższy kod wywołuje wyjątek `STATUS_INSUFFICIENT_MEM` w odpowiedzi na problem z alokacją pamięci:
 
 ```cpp
 lpstr = _malloc( nBufferSize );
@@ -59,7 +59,7 @@ if (lpstr == NULL)
     RaiseException( STATUS_INSUFFICIENT_MEM, 0, 0, 0);
 ```
 
-Jeżeli wystarczy tylko zgłosić wyjątek, ostatnie trzy parametry można ustawić na 0. Trzy ostatnie parametry są przydatne do przekazywania informacji dodatkowych i ustawiania flagi, która uniemożliwia kontynuowanie wykonywania programów obsługi. See the [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) function in the Windows SDK for more information.
+Jeżeli wystarczy tylko zgłosić wyjątek, ostatnie trzy parametry można ustawić na 0. Trzy ostatnie parametry są przydatne do przekazywania informacji dodatkowych i ustawiania flagi, która uniemożliwia kontynuowanie wykonywania programów obsługi. Aby uzyskać więcej informacji, zobacz funkcję [zgłośexception](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) w Windows SDK.
 
 W filtrach obsługi wyjątków można przetestować zdefiniowane kody. Na przykład:
 
@@ -73,5 +73,5 @@ __except (GetExceptionCode() == STATUS_INSUFFICIENT_MEM ||
 
 ## <a name="see-also"></a>Zobacz także
 
-[Writing an exception handler](../cpp/writing-an-exception-handler.md)<br/>
-[Structured exception handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Pisanie procedury obsługi wyjątków](../cpp/writing-an-exception-handler.md)<br/>
+[Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

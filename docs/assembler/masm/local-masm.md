@@ -15,18 +15,18 @@ ms.locfileid: "74397252"
 ---
 # <a name="local-masm"></a>LOCAL (MASM)
 
-In the first directive, within a macro, **LOCAL** defines labels that are unique to each instance of the macro.
+W pierwszej dyrektywie w makrze **lokalna** definiuje etykiety, które są unikatowe dla każdego wystąpienia makra.
 
 ## <a name="syntax"></a>Składnia
 
-> **LOCAL** *localname* ⟦, *localname* ...⟧
+> **Local** *LocalName* ⟦, *LocalName* ... ⟧
 >
-> **LOCAL** *label* ⟦ __\[__ *count* __]__ ⟧ ⟦ __:__ *type*⟧ ⟦ __,__ *label* ⟦ __\[__ *count* __]__ ⟧ ⟦*type*⟧ ...⟧
+> **Lokalna** *etykieta* ⟦ *Liczba*\[ __]__ ⟧ ⟦ __:__ *Typ*⟧ ⟦ __,__ *etykieta* ⟦ __\[__ *Count* __]__ ⟧ ⟦*Type*⟧... ⟧
 
 ## <a name="remarks"></a>Uwagi
 
-In the second directive, within a procedure definition (**PROC**), **LOCAL** creates stack-based variables that exist for the duration of the procedure. The *label* may be a simple variable or an array containing *count* elements.
+W drugiej dyrektywie, w ramach definicji procedury (**proc**), **lokalna** tworzy zmienne oparte na stosie, które istnieją na czas trwania tej procedury. *Etykieta* może być prostą zmienną lub tablicą zawierającą elementy *Count* .
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

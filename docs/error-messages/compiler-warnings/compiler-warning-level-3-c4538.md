@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4538
+title: Ostrzeżenie kompilatora (poziom 3) C4538
 ms.date: 11/04/2016
 f1_keywords:
 - C4538
@@ -13,13 +13,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74188948"
 ---
-# <a name="compiler-warning-level-3-c4538"></a>Compiler Warning (level 3) C4538
+# <a name="compiler-warning-level-3-c4538"></a>Ostrzeżenie kompilatora (poziom 3) C4538
 
-'type' : const/volatile qualifiers on this type are not supported
+"Type": kwalifikatory const/volatile dla tego typu nie są obsługiwane
 
-A qualifier keyword was applied to an array incorrectly. For more information, see [array](../../extensions/arrays-cpp-component-extensions.md).
+Słowo kluczowe kwalifikatora zostało nieprawidłowo zastosowane do tablicy. Aby uzyskać więcej informacji, zobacz [Array](../../extensions/arrays-cpp-component-extensions.md).
 
-The following sample generates C4538:
+Poniższy przykład generuje C4538:
 
 ```cpp
 // C4538.cpp

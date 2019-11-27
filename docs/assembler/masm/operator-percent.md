@@ -17,12 +17,12 @@ ms.locfileid: "74396511"
 ---
 # <a name="operator-"></a>operator %
 
-Treats the value of *expression* in a macro argument as text.
+Traktuje wartość *wyrażenia* w argumencie makro jako tekst.
 
 ## <a name="syntax"></a>Składnia
 
-> **%** *expression*
+> *wyrażenie*%
 
 ## <a name="see-also"></a>Zobacz także
 
-[Operators reference](operators-reference.md)
+[Odwołania operatorów](operators-reference.md)

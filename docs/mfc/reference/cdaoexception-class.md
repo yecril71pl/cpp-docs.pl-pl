@@ -35,7 +35,7 @@ Reprezentuje warunek wyjątku wynikający z klas baz danych MFC opartych na obie
 class CDaoException : public CException
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -54,9 +54,9 @@ class CDaoException : public CException
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDaoException::m_nAfxDaoError](#m_nafxdaoerror)|Zawiera rozszerzony kod błędu dla dowolnego błędu w klasach MFC DAO.|
-|[CDaoException::m_pErrorInfo](#m_perrorinfo)|Wskaźnik do obiektu [CDaoErrorInfo —](../../mfc/reference/cdaoerrorinfo-structure.md) , który zawiera informacje o jednym obiekcie błędu obiektów DAO.|
-|[CDaoException::m_scode](#m_scode)|Wartość [SCODE](#m_scode) skojarzona z błędem.|
+|[CDaoException:: m_nAfxDaoError](#m_nafxdaoerror)|Zawiera rozszerzony kod błędu dla dowolnego błędu w klasach MFC DAO.|
+|[CDaoException:: m_pErrorInfo](#m_perrorinfo)|Wskaźnik do obiektu [CDaoErrorInfo —](../../mfc/reference/cdaoerrorinfo-structure.md) , który zawiera informacje o jednym obiekcie błędu obiektów DAO.|
+|[CDaoException:: m_scode](#m_scode)|Wartość [SCODE](#m_scode) skojarzona z błędem.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -151,9 +151,9 @@ Indeks informacji o błędzie w kolekcji błędów aparatu bazy danych dla wyszu
 
 Wywołaj tę funkcję elementu członkowskiego, aby uzyskać następujące rodzaje informacji o wyjątku:
 
-- Kod błędu:
+- Kod błędu
 
-- Obiekt źródłowy
+- Źródło
 
 - Opis
 
@@ -194,7 +194,7 @@ Ten obiekt zawiera następujące informacje:
 |CDaoErrorInfo — element członkowski|Informacje|Znaczenie|
 |--------------------------|-----------------|-------------|
 |`m_lErrorCode`|Kod błędu|Kod błędu DAO|
-|`m_strSource`|Obiekt źródłowy|Nazwa obiektu lub aplikacji, która pierwotnie wygenerowała błąd|
+|`m_strSource`|Źródło|Nazwa obiektu lub aplikacji, która pierwotnie wygenerowała błąd|
 |`m_strDescription`|Opis|Opisowy ciąg skojarzony z błędem|
 |`m_strHelpFile`|Plik pomocy|Ścieżka do pliku pomocy systemu Windows, w którym użytkownik może uzyskać informacje o problemie|
 |`m_lHelpContext`|Kontekst pomocy|Identyfikator kontekstu tematu w pliku pomocy DAO|

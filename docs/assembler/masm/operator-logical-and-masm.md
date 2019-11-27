@@ -1,5 +1,5 @@
 ---
-title: Substitution operator (MASM)
+title: Operator podstawienia (MASM)
 ms.date: 08/30/2018
 f1_keywords:
 - operator &&
@@ -14,14 +14,14 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74396788"
 ---
-# <a name="substitution-operator-masm"></a>Substitution operator (MASM)
+# <a name="substitution-operator-masm"></a>Operator podstawienia (MASM)
 
-Replaces *parameter* with its corresponding argument value.
+Zamienia *parametr* na odpowiadającą mu wartość argumentu.
 
 ## <a name="syntax"></a>Składnia
 
-> __&__ *parameter* __&__
+> __&__ *parametr* __&__
 
 ## <a name="see-also"></a>Zobacz także
 
-[Operators reference](operators-reference.md)
+[Odwołania operatorów](operators-reference.md)

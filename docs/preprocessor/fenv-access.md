@@ -1,5 +1,5 @@
 ---
-title: fenv_access, pragma
+title: fenv_access pragma
 description: Opisuje użycie i efekty dyrektywy pragma fenv_access. Dyrektywa fenv_access kontroluje dostęp do środowiska zmiennoprzecinkowego w czasie wykonywania.
 ms.date: 11/19/2019
 f1_keywords:
@@ -16,7 +16,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74305857"
 ---
-# <a name="fenv_access-pragma"></a>fenv_access, pragma
+# <a name="fenv_access-pragma"></a>fenv_access pragma
 
 Wyłącza (**włączone**) lub włącza (**wyłączone**) optymalizacje, które mogą zmienić testy flagi środowiska zmiennoprzecinkowego i zmiany trybu.
 

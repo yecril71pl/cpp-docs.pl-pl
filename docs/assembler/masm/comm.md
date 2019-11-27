@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - COMM directive
 ms.assetid: a23548c4-ad04-41fa-91da-945f228de742
-ms.openlocfilehash: 063689087b6114f9a2d544ef0b459bf594da3cc4
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: d36161ba54ca80fc0f576c6f0a7c2a9410bf8075
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398823"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541034"
 ---
 # <a name="comm"></a>COMM
 
-Creates a communal variable with the attributes specified in *definition*.
+Tworzy zmienną gminną z atrybutami określonymi w *definicji*.
 
 ## <a name="syntax"></a>Składnia
 
-> **COMM** *definition* ⟦ __,__ *definition* ...⟧
+> ⟦ *Definicji* komunikacji __,__ *Definicja* ... ⟧
 
 ## <a name="remarks"></a>Uwagi
 
-Communal variables are allocated by the linker, and can't be initialized. This means that you can't depend on the location or sequence of such variables.
+Zmienne gminne są przydzielone przez konsolidator i nie mogą być inicjowane. Oznacza to, że nie można zależeć od lokalizacji lub sekwencji takich zmiennych.
 
-Each *definition* has the following form:
+Każda *Definicja* ma następującą postać:
 
-⟦*langtype*⟧ ⟦⦃**NEAR** &#124; **FAR**⦄⟧ _label_ **:** _type_⟦ **:** _count_⟧
+⟦*Language-Type*⟧ ⟦**blisko** | **dużo**⟧ _etykieta_ **:** _Type_⟦ **:** _Count_⟧
 
-The optional *langtype* sets the naming conventions for the name that follows. It overrides any language specified by the **.MODEL** directive. The optional **NEAR** or **FAR** override the current memory model. The *label* is the name of the variable. The *type* can be any type specifier ([BYTE](../../assembler/masm/byte-masm.md), [WORD](../../assembler/masm/word.md), and so on) or an integer specifying the number of bytes. The optional *count* specifies the number of elements in the declared data object; the default is one.
+Opcjonalny *Typ języka* ustawia konwencje nazewnictwa dla następującej nazwy. Zastępuje dowolny język określony przez **. Dyrektywa modelu** . Opcjonalna, **zbliżona** lub **znacznie** zastąp bieżący model pamięci. *Etykieta* to nazwa zmiennej. *Typ* może być dowolnym specyfikatorem typu ([Byte](../../assembler/masm/byte-masm.md), [Word](../../assembler/masm/word.md)itd.) lub liczbą całkowitą określającą liczbę bajtów. Opcjonalna *Liczba* określa liczbę elementów w zadeklarowanym obiekcie danych. Domyślna *Liczba* to 1.
 
 ## <a name="example"></a>Przykład
 
-This example creates an array of 512 BYTE elements:
+Ten przykład tworzy tablicę elementów bajtów 512:
 
 ```asm
 COMM FAR ByteArray:BYTE:512
@@ -41,4 +41,4 @@ COMM FAR ByteArray:BYTE:512
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

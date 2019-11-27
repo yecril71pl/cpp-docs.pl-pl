@@ -15,7 +15,7 @@ ms.locfileid: "74398186"
 ---
 # <a name="list"></a>.LIST
 
-Starts listing of statements.
+Uruchamia listę instrukcji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,4 +27,4 @@ Domyślnie włączone.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

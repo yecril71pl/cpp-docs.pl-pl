@@ -15,16 +15,16 @@ ms.locfileid: "74397716"
 ---
 # <a name="echo"></a>ECHO
 
-Displays *message* to the standard output device (by default, the screen).
+Wyświetla *komunikat* na standardowym urządzeniu wyjściowym (domyślnie ekranu).
 
 ## <a name="syntax"></a>Składnia
 
-> **ECHO** *message*
+> *Komunikat* ECHA
 
 ## <a name="remarks"></a>Uwagi
 
-Same as [%OUT](../../assembler/masm/percent-out.md).
+Taka sama jak [% out](../../assembler/masm/percent-out.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

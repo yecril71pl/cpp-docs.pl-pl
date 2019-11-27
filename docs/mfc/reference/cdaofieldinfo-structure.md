@@ -80,15 +80,15 @@ Wartość, która wskazuje typ danych pola. Aby uzyskać szczegółowe informacj
 *m_lSize*<br/>
 Wartość wskazująca maksymalny rozmiar (w bajtach) obiektu pola DAO, który zawiera tekst lub stały rozmiar obiektu Field, który zawiera wartości tekstowe lub liczbowe. Aby uzyskać szczegółowe informacje, zobacz temat "size Property" w pomocy DAO. Rozmiary mogą być jedną z następujących wartości:
 
-|Typ|Rozmiar (w bajtach)|Opis|
+|Type|Rozmiar (w bajtach)|Opis|
 |----------|--------------------|-----------------|
 |`dbBoolean`|1 bajt|Tak/nie (wartość taka sama jak true/false)|
 |`dbByte`|1|Bajtów|
-|`dbInteger`|2|Liczba całkowita|
+|`dbInteger`|2|Integer|
 |`dbLong`|4|Długie|
 |`dbCurrency`|8|Waluta ([COleCurrency](../../mfc/reference/colecurrency-class.md))|
-|`dbSingle`|4|Single|
-|`dbDouble`|8|Double|
+|`dbSingle`|4|Pojedyncze|
+|`dbDouble`|8|Podwójne|
 |`dbDate`|8|Data/godzina ([COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|
 |`dbText`|1 - 255|Tekst ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|
 |`dbLongBinary`|0|Long Binary (obiekt OLE; [CByteArray](../../mfc/reference/cbytearray-class.md); Użyj zamiast `CLongBinary`)|
@@ -159,6 +159,6 @@ Informacje pobierane przez `GetFieldInfo` funkcję członkowską (klasy, która 
 ## <a name="see-also"></a>Zobacz także
 
 [Struktury, style, wywołania zwrotne i mapy komunikatów](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
-[CDaoTableDef::GetFieldInfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)<br/>
-[CDaoRecordset::GetFieldInfo](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)<br/>
-[CDaoQueryDef::GetFieldInfo](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)
+[CDaoTableDef:: GetFieldInfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)<br/>
+[CDaoRecordset:: GetFieldInfo](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)<br/>
+[CDaoQueryDef:: GetFieldInfo](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)

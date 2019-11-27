@@ -1,5 +1,5 @@
 ---
-title: Microsoft Macro Assembler reference
+title: Dokumentacja asemblera programu Microsoft Macro
 ms.date: 08/30/2018
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), reference
@@ -14,40 +14,40 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397216"
 ---
-# <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler reference
+# <a name="microsoft-macro-assembler-reference"></a>Dokumentacja asemblera programu Microsoft Macro
 
-The Microsoft Macro Assembler (MASM) provides several advantages over inline assembly. MASM contains a macro language that has features such as looping, arithmetic, and text string processing. MASM also gives you greater control over the hardware because it supports the instruction sets of the 386, 486, and Pentium processors. By using MASM, you also can reduce time and memory overhead.
+Asembler programu Microsoft Macro (MASM) zapewnia kilka korzyści w porównaniu z zestawem wbudowanym. MASM zawiera język makr, który zawiera funkcje takie jak przetwarzanie pętli, operacje arytmetyczne i ciągi tekstowe. MASM zapewnia również większą kontrolę nad sprzętem, ponieważ obsługuje zestawy instrukcji dla procesorów 386, 486 i Pentium. Korzystając z MASM, można również skrócić czas i ilość pamięci.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[ML and ML64 command-line option](../../assembler/masm/ml-and-ml64-command-line-reference.md)\
-Describes the ML.exe and ML64.exe command-line options.
+[Opcja wiersza polecenia ml i ML64](../../assembler/masm/ml-and-ml64-command-line-reference.md)\
+Opisuje opcje wiersza polecenia ML. exe i ML64. exe.
 
-[ML error messages](../../assembler/masm/ml-error-messages.md)\
-Describes ML.exe fatal and nonfatal error messages and warnings.
+[Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)\
+Opisuje krytyczne i niekrytyczne komunikaty o błędach i ostrzeżenia.
 
-[Directives reference](directives-reference.md)\
-Provides links to articles that discuss the use of directives in MASM.
+[Dokumentacja dyrektyw](directives-reference.md)\
+Zawiera łącza do artykułów, które omawiają zastosowanie dyrektyw w MASM.
 
-[Symbols Reference](../../assembler/masm/symbols-reference.md)\
-Provides links to articles that discuss the use of symbols in MASM.
+[Odwołania do symboli](../../assembler/masm/symbols-reference.md)\
+Zawiera łącza do artykułów, które omawiają użycie symboli w MASM.
 
-[Operators Reference](../../assembler/masm/operators-reference.md)\
-Provides links to articles that discuss the use of operators in MASM.
+[Odwołania operatorów](../../assembler/masm/operators-reference.md)\
+Zawiera łącza do artykułów, które omawiają użycie operatorów w MASM.
 
-[Processor Manufacturer Programming Manuals](../../assembler/masm/processor-manufacturer-programming-manuals.md)\
-Provides links to websites that may contain programming information about processors that are not manufactured, sold, or supported by Microsoft.
+[Podręcznik programowania producenta procesora](../../assembler/masm/processor-manufacturer-programming-manuals.md)\
+Zawiera łącza do witryn sieci Web, które mogą zawierać informacje o programowaniu procesorów, które nie są wytwarzane, sprzedawane ani obsługiwane przez firmę Microsoft.
 
-[MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)\
-Information about how to create output files for x64.
+[MASM dla architektury x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)\
+Informacje o sposobach tworzenia plików wyjściowych dla architektury x64.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[C++ in Visual Studio](../../overview/visual-cpp-in-visual-studio.md)\
-Provides links to different areas of the Visual Studio and Visual C++ documentation.
+w programie Visual Studio\ [ C++ ](../../overview/visual-cpp-in-visual-studio.md)
+Oferuje linki do różnych obszarów programu Visual Studio i dokumentacji wizualnej C++ .
 
 ## <a name="see-also"></a>Zobacz także
 
-[Compiler Intrinsics](../../intrinsics/compiler-intrinsics.md)\
+\ [Wewnętrzne kompilatora](../../intrinsics/compiler-intrinsics.md)
 [x86Intrinsics](../../intrinsics/x86-intrinsics-list.md)\
-[x64 (amd64) Intrinsics](../../intrinsics/x64-amd64-intrinsics-list.md)
+[wersje wewnętrzne x64 (amd64)](../../intrinsics/x64-amd64-intrinsics-list.md)

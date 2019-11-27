@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4636
+title: Ostrzeżenie kompilatora (poziom 3) C4636
 ms.date: 11/04/2016
 f1_keywords:
 - C4636
@@ -13,15 +13,15 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189131"
 ---
-# <a name="compiler-warning-level-3-c4636"></a>Compiler Warning (level 3) C4636
+# <a name="compiler-warning-level-3-c4636"></a>Ostrzeżenie kompilatora (poziom 3) C4636
 
-XML document comment applied to 'construct': tag requires non-empty '' attribute.
+Komentarz dokumentu XML zastosowany do "konstrukcja": tag wymaga niepustego atrybutu "".
 
-A tag, such as `cref`, did not have a value.
+Tag, taki jak `cref`, nie miał wartości.
 
 ## <a name="example"></a>Przykład
 
-The following sample generates C4636.
+Poniższy przykład generuje C4636.
 
 ```cpp
 // C4636.cpp

@@ -17,12 +17,12 @@ ms.locfileid: "74396840"
 ---
 # <a name="operator-lengthof"></a>operator LENGTHOF
 
-Returns the number of data objects in *variable*.
+Zwraca liczbę obiektów danych w *zmiennej*.
 
 ## <a name="syntax"></a>Składnia
 
-> **LENGTHOF** *variable*
+> *Zmienna* LENGTHOF
 
 ## <a name="see-also"></a>Zobacz także
 
-[Operators reference](operators-reference.md)
+[Odwołania operatorów](operators-reference.md)

@@ -75,7 +75,7 @@ Reprezentuje połączenie z bazą danych programu Access za pomocą obiektów do
 class CDaoDatabase : public CObject
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -91,12 +91,12 @@ class CDaoDatabase : public CObject
 |[CDaoDatabase:: Update](#canupdate)|Zwraca wartość różną od zera, jeśli obiekt `CDaoDatabase` jest aktualizowalny (nie tylko do odczytu).|
 |[CDaoDatabase:: Close](#close)|Zamyka połączenie z bazą danych.|
 |[CDaoDatabase:: Create](#create)|Tworzy źródłowy obiekt bazy danych DAO i inicjuje obiekt `CDaoDatabase`.|
-|[CDaoDatabase::CreateRelation](#createrelation)|Definiuje nową relację między tabelami w bazie danych.|
-|[CDaoDatabase::DeleteQueryDef](#deletequerydef)|Usuwa obiekt querydef zapisany w kolekcji QueryDefs bazy danych.|
-|[CDaoDatabase::DeleteRelation](#deleterelation)|Usuwa istniejące relacje między tabelami w bazie danych.|
-|[CDaoDatabase::DeleteTableDef](#deletetabledef)|Usuwa definicję tabeli w bazie danych. Spowoduje to usunięcie rzeczywistej tabeli i wszystkich jej danych.|
+|[CDaoDatabase:: isrelation](#createrelation)|Definiuje nową relację między tabelami w bazie danych.|
+|[CDaoDatabase::D eleteQueryDef](#deletequerydef)|Usuwa obiekt querydef zapisany w kolekcji QueryDefs bazy danych.|
+|[CDaoDatabase::D eleteRelation](#deleterelation)|Usuwa istniejące relacje między tabelami w bazie danych.|
+|[CDaoDatabase::D eleteTableDef](#deletetabledef)|Usuwa definicję tabeli w bazie danych. Spowoduje to usunięcie rzeczywistej tabeli i wszystkich jej danych.|
 |[CDaoDatabase:: Execute](#execute)|Wykonuje zapytanie akcji. Wywołanie `Execute` zapytania zwracającego wyniki zgłasza wyjątek.|
-|[CDaoDatabase::GetConnect](#getconnect)|Zwraca parametry połączenia używane do połączenia obiektu `CDaoDatabase` z bazą danych. Używany do ODBC.|
+|[CDaoDatabase:: GetConnect](#getconnect)|Zwraca parametry połączenia używane do połączenia obiektu `CDaoDatabase` z bazą danych. Używany do ODBC.|
 |[CDaoDatabase:: GetName](#getname)|Zwraca nazwę aktualnie używanej bazy danych.|
 |[CDaoDatabase::GetQueryDefCount](#getquerydefcount)|Zwraca liczbę zapytań zdefiniowanych dla bazy danych.|
 |[CDaoDatabase::GetQueryDefInfo](#getquerydefinfo)|Zwraca informacje dotyczące określonego zapytania zdefiniowanego w bazie danych.|
@@ -115,14 +115,14 @@ class CDaoDatabase : public CObject
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDaoDatabase::m_pDAODatabase](#m_pdaodatabase)|Wskaźnik do bazowego obiektu bazy danych DAO.|
-|[CDaoDatabase::m_pWorkspace](#m_pworkspace)|Wskaźnik do obiektu [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) , który zawiera bazę danych i definiuje jego przestrzeń transakcji.|
+|[CDaoDatabase:: m_pDAODatabase](#m_pdaodatabase)|Wskaźnik do bazowego obiektu bazy danych DAO.|
+|[CDaoDatabase:: m_pWorkspace](#m_pworkspace)|Wskaźnik do obiektu [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) , który zawiera bazę danych i definiuje jego przestrzeń transakcji.|
 
 ## <a name="remarks"></a>Uwagi
 
 Aby uzyskać informacje o obsługiwanych formatach bazy danych, zobacz Funkcja elementu członkowskiego [GetName](../../mfc/reference/cdaoworkspace-class.md#getname) . W danym momencie możesz mieć jeden lub więcej `CDaoDatabase` obiektów jednocześnie w danym obszarze roboczym, reprezentowane przez obiekt [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) . Obszar roboczy obsługuje kolekcję otwartych obiektów bazy danych o nazwie kolekcja baz danych.
 
-## <a name="usage"></a>Użycie
+## <a name="usage"></a>Sposób użycia
 
 Obiekty bazy danych można tworzyć niejawnie, podczas tworzenia obiektów zestawu rekordów. Możesz również jawnie tworzyć obiekty bazy danych. Aby jawnie użyć istniejącej bazy danych z `CDaoDatabase`, wykonaj jedną z następujących czynności:
 
@@ -799,7 +799,7 @@ Użyj tego wskaźnika, jeśli musisz bezpośrednio uzyskać dostęp do interfejs
 
 Aby uzyskać informacje dotyczące bezpośredniego wywoływania obiektów DAO, zobacz [Uwagi techniczne 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
 
-##  <a name="m_pworkspace"></a>  CDaoDatabase::m_pWorkspace
+##  <a name="m_pworkspace"></a>CDaoDatabase:: m_pWorkspace
 
 Zawiera wskaźnik do obiektu [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) , który zawiera obiekt bazy danych.
 

@@ -19,12 +19,12 @@ ms.locfileid: "74396630"
 ---
 # <a name="operator-"></a>operator *
 
-Returns *expression1* times *expression2*.
+Zwraca *wyrażenie1* razy *wyrażenie2*.
 
 ## <a name="syntax"></a>Składnia
 
-> *expression1* __\*__ *expression2*
+> *wyrażenie1* __\*__ *wyrażenie2*
 
 ## <a name="see-also"></a>Zobacz także
 
-[Operators reference](operators-reference.md)
+[Odwołania operatorów](operators-reference.md)

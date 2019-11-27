@@ -17,7 +17,7 @@ ms.locfileid: "74397378"
 ---
 # <a name="ifidn-ifidni"></a>IFIDN, IFIDNI
 
-Grants assembly if the text items are identical.
+Przyznaje zestaw, jeśli elementy tekstowe są identyczne.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,8 +26,8 @@ Grants assembly if the text items are identical.
 
 ## <a name="remarks"></a>Uwagi
 
-If **IFIDNI** is given, the comparison is case insensitive. See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+Jeśli **IFIDNI** jest określony, porównanie uwzględnia wielkość liter. Aby uzyskać pełną składnię [, zobacz.](../../assembler/masm/if-masm.md)
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

@@ -15,14 +15,14 @@ ms.locfileid: "74395115"
 ---
 # <a name="page"></a>STRONA
 
-The first directive sets line *length* and character *width* of the program listing. If no arguments are given, generates a page break. The second directive increments the section number and resets the page number to 1.
+Pierwsza dyrektywa ustawia *Długość* wiersza i *Szerokość* znaku na liście programu. Jeśli nie podano argumentów, program generuje podział strony. Druga dyrektywa zwiększa liczbę sekcji i resetuje numer strony na 1.
 
 ## <a name="syntax"></a>Składnia
 
-> **PAGE** ⟦*length*⟧⟦ __,__ *width*⟧
+> ⟦*Długość* **strony** ⟧ ⟦ __,__ *Szerokość*⟧
 
-> **PAGE +**
+> **STRONA +**
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

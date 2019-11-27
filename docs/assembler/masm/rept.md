@@ -15,7 +15,7 @@ ms.locfileid: "74394209"
 ---
 # <a name="rept"></a>REPT
 
-See [REPEAT](../../assembler/masm/repeat.md).
+Zobacz [powtarzanie](../../assembler/masm/repeat.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -23,4 +23,4 @@ See [REPEAT](../../assembler/masm/repeat.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

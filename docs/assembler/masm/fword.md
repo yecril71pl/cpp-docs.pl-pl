@@ -15,17 +15,17 @@ ms.locfileid: "74397492"
 ---
 # <a name="fword"></a>FWORD
 
-Allocates and optionally initializes 6 bytes of storage for each *initializer*.
+Przydziela i opcjonalnie inicjuje 6 bajtów magazynu dla każdego *inicjatora*.
 
 ## <a name="syntax"></a>Składnia
 
-> ⟦*name*⟧ **FWORD** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦*name*⟧ **FWORD** *inicjator* ⟦ __,__ *inicjator* ... ⟧
 
 ## <a name="remarks"></a>Uwagi
 
-Also can be used as a type specifier anywhere a type is legal.
+Można też użyć jako specyfikatora typu, gdziekolwiek typ jest dozwolony.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)\
 [DF](../../assembler/masm/df.md)

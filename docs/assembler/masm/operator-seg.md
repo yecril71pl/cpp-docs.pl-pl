@@ -17,12 +17,12 @@ ms.locfileid: "74396473"
 ---
 # <a name="operator-seg"></a>operator SEG
 
-Returns the segment of *expression*.
+Zwraca segment *wyrażenia*.
 
 ## <a name="syntax"></a>Składnia
 
-> **SEG** *expression*
+> *Wyrażenie* SEG
 
 ## <a name="see-also"></a>Zobacz także
 
-[Operators reference](operators-reference.md)
+[Odwołania operatorów](operators-reference.md)

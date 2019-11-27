@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create and use CComPtr and CComQIPtr instances'
+title: 'Instrukcje: Tworzenie wystąpień CComPtr i CComQIPtr oraz korzystanie z nich'
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
@@ -11,29 +11,29 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246540"
 ---
-# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>How to: Create and use CComPtr and CComQIPtr instances
+# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Instrukcje: Tworzenie wystąpień CComPtr i CComQIPtr oraz korzystanie z nich
 
-In classic Windows programming, libraries are often implemented as COM objects (or more precisely, as COM servers). Many Windows operating system components are implemented as COM servers, and many contributors provide libraries in this form. For information about the basics of COM, see [Component Object Model (COM)](/windows/win32/com/component-object-model--com--portal).
+W klasycznym programowaniu systemu Windows biblioteki są często implementowane jako obiekty COM (lub dokładniej, jako serwery COM). Wiele składników systemu operacyjnego Windows jest implementowanych jako serwery COM, a wiele współautorów udostępnia biblioteki w tym formularzu. Aby uzyskać informacje na temat podstaw modelu COM, zobacz [Component Object Model (com)](/windows/win32/com/component-object-model--com--portal).
 
-When you instantiate a Component Object Model (COM) object, store the interface pointer in a COM smart pointer, which performs the reference counting by using calls to `AddRef` and `Release` in the destructor. If you are using the Active Template Library (ATL) or the Microsoft Foundation Class Library (MFC), then use the `CComPtr` smart pointer. If you are not using ATL or MFC, then use `_com_ptr_t`. Because there is no COM equivalent to `std::unique_ptr`, use these smart pointers for both single-owner and multiple-owner scenarios. Both `CComPtr` and `ComQIPtr` support move operations that have rvalue references.
+Podczas tworzenia wystąpienia obiektu Component Object Model (COM) należy przechowywać wskaźnik interfejsu w inteligentnym wskaźniku COM, który wykonuje zliczanie odwołań przy użyciu wywołań do `AddRef` i `Release` w destruktorze. Jeśli używasz Active Template Library (ATL) lub biblioteka MFC (MFC), Użyj inteligentnego wskaźnika `CComPtr`. Jeśli nie używasz biblioteki ATL ani MFC, użyj `_com_ptr_t`. Ze względu na to, że nie ma modelu COM równoważnego `std::unique_ptr`, Użyj tych inteligentnych wskaźników zarówno dla scenariuszy z jednym właścicielem, jak i wieloma właścicielami. Zarówno `CComPtr`, jak i `ComQIPtr` obsługują operacje przenoszenia, które mają odwołania rvalue.
 
 ## <a name="example"></a>Przykład
 
-The following example shows how to use `CComPtr` to instantiate a COM object and obtain pointers to its interfaces. Notice that the `CComPtr::CoCreateInstance` member function is used to create the COM object, instead of the Win32 function that has the same name.
+Poniższy przykład pokazuje, jak używać `CComPtr` do tworzenia wystąpienia obiektu COM i uzyskiwania wskaźników do interfejsów. Należy zauważyć, że funkcja członkowska `CComPtr::CoCreateInstance` jest używana do tworzenia obiektu COM zamiast funkcji Win32, która ma taką samą nazwę.
 
 [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]
 
-`CComPtr` and its relatives are part of the ATL and are defined in \<atlcomcli.h>. `_com_ptr_t` is declared in \<comip.h>. The compiler creates specializations of `_com_ptr_t` when it generates wrapper classes for type libraries.
+`CComPtr` i jego względne elementy są częścią ATL i są zdefiniowane w \<atlcomcli. h >. `_com_ptr_t` jest zadeklarowana w \<comip. h >. Kompilator tworzy specjalizacje `_com_ptr_t`, gdy generuje klasy otoki dla bibliotek typów.
 
 ## <a name="example"></a>Przykład
 
-ATL also provides `CComQIPtr`, which has a simpler syntax for querying a COM object to retrieve an additional interface. However, we recommend `CComPtr` because it does everything that `CComQIPtr` can do and is semantically more consistent with raw COM interface pointers. If you use a `CComPtr` to query for an interface, the new interface pointer is placed in an out parameter. If the call fails, an HRESULT is returned, which is the typical COM pattern. With `CComQIPtr`, the return value is the pointer itself, and if the call fails, the internal HRESULT return value cannot be accessed. The following two lines show how the error handling mechanisms in `CComPtr` and `CComQIPtr` differ.
+ATL udostępnia również `CComQIPtr`, która ma prostsze składnię do wykonywania zapytań względem obiektu COM w celu pobrania dodatkowego interfejsu. Zaleca się jednak `CComPtr`, ponieważ robi to wszystko, co `CComQIPtr` może zrobić i jest semantycznie bardziej spójny ze wskaźnikami interfejsu COM raw. Jeśli użyjesz `CComPtr` do zapytania o interfejs, Nowy wskaźnik interfejsu zostanie umieszczony w parametrze out. Jeśli wywołanie nie powiedzie się, zwracany jest wynik HRESULT, który jest typowym wzorcem modelu COM. Przy `CComQIPtr`wartość zwracana jest wskaźnikiem, a jeśli wywołanie nie powiedzie się, nie można uzyskać dostępu do wewnętrznej wartości zwracanej HRESULT. W poniższych dwóch wierszach pokazano, jak są różne mechanizmy obsługi błędów w `CComPtr` i `CComQIPtr`.
 
 [!code-cpp[COM_smart_pointers#02](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_2.cpp)]
 
 ## <a name="example"></a>Przykład
 
-`CComPtr` provides a specialization for IDispatch that enables it to store pointers to COM automation components and invoke the methods on the interface by using late binding. `CComDispatchDriver` is a typedef for `CComQIPtr<IDispatch, &IIDIDispatch>`, which is implicitly convertible to `CComPtr<IDispatch>`. Therefore, when any of these three names appears in code, it is equivalent to `CComPtr<IDispatch>`. The following example shows how to obtain a pointer to the Microsoft Word object model by using a `CComPtr<IDispatch>`.
+`CComPtr` zapewnia specjalizację dla elementu IDispatch, który umożliwia przechowywanie wskaźników do składników automatyzacji modelu COM i wywoływanie metod w interfejsie przy użyciu późnego wiązania. `CComDispatchDriver` jest elementem TypeDef dla `CComQIPtr<IDispatch, &IIDIDispatch>`, który jest niejawnie konwertowany na `CComPtr<IDispatch>`. W związku z tym, gdy dowolna z tych trzech nazw pojawia się w kodzie, jest równoważne `CComPtr<IDispatch>`. Poniższy przykład pokazuje, jak uzyskać wskaźnik do modelu obiektów programu Microsoft Word przy użyciu `CComPtr<IDispatch>`.
 
 [!code-cpp[COM_smart_pointers#03](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_3.cpp)]
 

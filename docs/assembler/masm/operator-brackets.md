@@ -1,5 +1,5 @@
 ---
-title: operator brackets
+title: nawiasy kwadratowe
 ms.date: 08/30/2018
 f1_keywords:
 - operator []
@@ -15,13 +15,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397084"
 ---
-# <a name="operator-"></a>operator \[\]
+# <a name="operator-"></a>\[operatora \]
 
-Returns *expression1* plus \[*expression2*\].
+Zwraca wartość *wyrażenie1* Plus \[*wyrażenie2*\].
 
 ## <a name="syntax"></a>Składnia
 
-> *expression1* **[** expression2 **]**
+> *wyrażenie1* **[** wyrażenie2 **]**
 
 ## <a name="see-also"></a>Zobacz także
 

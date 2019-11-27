@@ -17,11 +17,11 @@ ms.locfileid: "74246064"
 ---
 # <a name="unhandled-c-exceptions"></a>Nieobsługiwane wyjątki języka C++
 
-If a matching handler (or ellipsis **catch** handler) cannot be found for the current exception, the predefined `terminate` run-time function is called. (You can also explicitly call `terminate` in any of your handlers.) The default action of `terminate` is to call `abort`. If you want `terminate` to call some other function in your program before exiting the application, call the `set_terminate` function with the name of the function to be called as its single argument. You can call `set_terminate` at any point in your program. The `terminate` routine always calls the last function given as an argument to `set_terminate`.
+Jeśli nie można odnaleźć zgodnego programu obsługi (lub obsługi **catch** ) dla bieżącego wyjątku, zostanie wywołana wstępnie zdefiniowana funkcja czasu wykonywania `terminate`. (Można również jawnie wywołać `terminate` w którymkolwiek z programów obsługi). Domyślną akcją `terminate` jest wywołanie `abort`. Jeśli chcesz, aby `terminate` wywoływać inną funkcję w programie przed zamknięciem aplikacji, wywołaj funkcję `set_terminate` z nazwą funkcji, która ma zostać wywołana jako jej pojedynczy argument. `set_terminate` można wywołać w dowolnym momencie w programie. Procedura `terminate` zawsze wywołuje ostatnią funkcję podaną jako argument do `set_terminate`.
 
 ## <a name="example"></a>Przykład
 
-The following example throws a `char *` exception, but does not contain a handler designated to catch exceptions of type `char *`. The call to `set_terminate` instructs `terminate` to call `term_func`.
+Poniższy przykład zgłasza wyjątek `char *`, ale nie zawiera procedury obsługi wyznaczono do przechwytywania wyjątków typu `char *`. Wywołanie `set_terminate` instruuje `terminate`, aby wywołać `term_func`.
 
 ```cpp
 // exceptions_Unhandled_Exceptions.cpp
@@ -52,8 +52,8 @@ int main() {
 term_func was called by terminate.
 ```
 
-The `term_func` function should terminate the program or current thread, ideally by calling `exit`. If it doesn't, and instead returns to its caller, `abort` is called.
+Funkcja `term_func` powinna kończyć program lub bieżący wątek, najlepiej przez wywoływanie `exit`. Jeśli nie, i zamiast tego powraca do obiektu wywołującego, `abort` jest wywoływana.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)
+[Nowoczesne C++ najlepsze rozwiązania dotyczące wyjątków i obsługi błędów](../cpp/errors-and-exception-handling-modern-cpp.md)

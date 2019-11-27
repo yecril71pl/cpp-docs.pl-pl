@@ -13,9 +13,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397786"
 ---
-# <a name="xmm-32-bit-masm"></a>.XMM (32-bit MASM)
+# <a name="xmm-32-bit-masm"></a>. XMM (32-bitowy MASM)
 
-Enables assembly of Internet Streaming SIMD Extension instructions. (32-bit MASM only.)
+Włącza zestaw instrukcji dotyczących rozszerzenia SIMD przesyłania strumieniowego Internetu. (tylko 32-bitowy MASM).
 
 ## <a name="syntax"></a>Składnia
 
@@ -23,4 +23,4 @@ Enables assembly of Internet Streaming SIMD Extension instructions. (32-bit MASM
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

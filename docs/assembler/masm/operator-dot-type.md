@@ -17,12 +17,12 @@ ms.locfileid: "74397043"
 ---
 # <a name="operator-type"></a>operator .TYPE
 
-See [OPATTR](../../assembler/masm/operator-opattr.md).
+Zobacz [OPATTR](../../assembler/masm/operator-opattr.md).
 
 ## <a name="syntax"></a>Składnia
 
-> **.TYPE** *expression*
+> **.**  *Wyrażenie* typu
 
 ## <a name="see-also"></a>Zobacz także
 
-[Operators reference](operators-reference.md)
+[Odwołania operatorów](operators-reference.md)

@@ -1,6 +1,6 @@
 ---
-title: C++ binary compatibility 2015-2019
-description: Describes how binary compatibility works between compiled C++ files in Visual Studio 2015, 2017, and 2019. One Microsoft Visual C++ Redistributable package works for all three versions.
+title: C++ — zgodność binarna 2015–2019
+description: Opisuje sposób, w jaki zgodność binarna działa między skompilowanymi C++ plikami w programie Visual Studio 2015, 2017 i 2019. Jeden pakiet redystrybucyjny Microsoft Visual C++ działa dla wszystkich trzech wersji.
 ms.date: 11/18/2019
 helpviewer_keywords:
 - binary compatibility, Visual C++
@@ -12,33 +12,33 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74188787"
 ---
-# <a name="c-binary-compatibility-between-visual-studio-2015-2017-and-2019"></a>C++ binary compatibility between Visual Studio 2015, 2017, and 2019
+# <a name="c-binary-compatibility-between-visual-studio-2015-2017-and-2019"></a>C++zgodność binarna między programami Visual Studio 2015, 2017 i 2019
 
-The Microsoft C++ (MSVC) compiler toolsets in Visual Studio 2013 and earlier don't guarantee binary compatibility across versions. You can't link object files, static libraries, dynamic libraries, and executables built by different versions. The ABIs, object formats, and runtime libraries are incompatible.
+Zestawy narzędzi C++ kompilatorów firmy Microsoft (MSVC) w Visual Studio 2013 i starszych nie gwarantują zgodności binarnej w różnych wersjach. Nie można połączyć plików obiektów, bibliotek statycznych, bibliotek dynamicznych i plików wykonywalnych utworzonych przez różne wersje. Interfejsy ABI, formaty obiektów i biblioteki środowiska uruchomieniowego są niezgodne.
 
-We've changed this behavior in Visual Studio 2015, 2017, and 2019. The runtime libraries and apps compiled by any of these versions of the compiler are binary-compatible. It's reflected in the C++ toolset major number, which is 14 for all three versions. (The toolset version is v140 for Visual Studio 2015, v141 for 2017, and v142 for 2019). Say you have third-party libraries built by Visual Studio 2015. You can still use them in an application built by Visual Studio 2017 or 2019. There's no need to recompile with a matching toolset. The latest version of the Microsoft Visual C++ Redistributable package (the Redistributable) works for all of them.
+To zachowanie zostało zmienione w programie Visual Studio 2015, 2017 i 2019. Biblioteki i aplikacje środowiska uruchomieniowego skompilowane przez dowolną z tych wersji kompilatora są zgodne ze standardami binarnymi. Jest on widoczny w numerze głównym zestawu C++ narzędzi, który jest 14 dla wszystkich trzech wersji. (Wersja zestawu narzędzi to wersji 140 dla programu Visual Studio 2015, najnowsze 141 dla 2017 i v142 for 2019). Załóżmy, że masz biblioteki innych firm utworzone przez program Visual Studio 2015. Nadal można z nich korzystać w aplikacji utworzonej przez program Visual Studio 2017 lub 2019. Nie ma potrzeby ponownej kompilacji przy użyciu zgodnego zestawu narzędzi. Najnowsza wersja pakietu redystrybucyjnego Microsoft C++ Visual (redystrybucyjna) działa dla wszystkich z nich.
 
-There are three important restrictions on binary compatibility:
+Istnieją trzy ważne ograniczenia dotyczące zgodności binarnej:
 
-- You can mix binaries built by different versions of the toolset. However, you must use a toolset at least as recent as the most recent binary to link your app. Here's an example: you can link an app compiled using the 2017 toolset to a static library compiled using 2019, if they're linked using the 2019 toolset.
+- Można mieszać pliki binarne utworzone przez różne wersje zestawu narzędzi. Należy jednak użyć zestawu narzędzi co najmniej jako najnowszego pliku binarnego, aby połączyć aplikację. Oto przykład: można połączyć aplikację skompilowaną przy użyciu zestawu narzędzi 2017 do biblioteki statycznej skompilowanej przy użyciu 2019, jeśli są one połączone przy użyciu zestawu narzędzi 2019.
 
-- The Redistributable your app uses has a similar binary-compatibility restriction. When you mix binaries built by different supported versions of the toolset, the Redistributable version must be at least as new as the latest toolset used by any app component.
+- Pakiet redystrybucyjny używany przez aplikację ma podobne ograniczenia zgodności binarnej. Podczas mieszania plików binarnych utworzonych przez różne obsługiwane wersje zestawu narzędzi, wersja redystrybucyjna musi być co najmniej równa nowemu zestawowi narzędzi używanym przez dowolny składnik aplikacji.
 
-- Static libraries or object files compiled using the [/GL (Whole program optimization)](../build/reference/gl-whole-program-optimization.md) compiler switch *aren't* binary-compatible across versions. All object files and libraries compiled using `/GL` must use exactly the same toolset for the compile and the final link.
+- Biblioteki statyczne lub pliki obiektów skompilowane przy użyciu przełącznika kompilatora [/GL (Optymalizacja całego programu)](../build/reference/gl-whole-program-optimization.md) *nie są* zgodne ze standardami binarnymi w różnych wersjach. Wszystkie pliki obiektów i biblioteki skompilowane przy użyciu `/GL` muszą używać dokładnie tego samego zestawu narzędzi do kompilowania i finalnego linku.
 
-## <a name="upgrade-the-microsoft-visual-c-redistributable-from-visual-studio-2015-or-2017-to-visual-studio-2019"></a>Upgrade the Microsoft Visual C++ Redistributable from Visual Studio 2015 or 2017 to Visual Studio 2019
+## <a name="upgrade-the-microsoft-visual-c-redistributable-from-visual-studio-2015-or-2017-to-visual-studio-2019"></a>Uaktualnij pakiet redystrybucyjny Microsoft Visual C++ w programie visual Studio 2015 lub 2017 do programu visual Studio 2019
 
-We've kept the Microsoft Visual C++ Redistributable major version number the same for Visual Studio 2015, 2017, and 2019. That means only one instance of the Redistributable can be installed at a time. A newer version overwrites any older version that's already installed. For example, one app may install the Redistributable from Visual Studio 2015. Then, another app installs the Redistributable from Visual Studio 2019. The 2019 version overwrites the older version, but because they're binary-compatible, the earlier app still works fine. We make sure the latest version of the Redistributable has all the newest features, security updates, and bug fixes. That's why we always recommend you upgrade to the latest available version.
+W przypadku programu Visual Studio 2015 C++ , 2017 i 2019 został pokazany główny numer wersji pakietu redystrybucyjnego Microsoft Visual Oznacza to, że w danym momencie można zainstalować tylko jedno wystąpienie pakietu redystrybucyjnego. Nowsza wersja zastępuje wszystkie starsze wersje, które są już zainstalowane. Na przykład jedna aplikacja może zainstalować pakiet redystrybucyjny z programu Visual Studio 2015. Następnie inna aplikacja instaluje pakiet redystrybucyjny z poziomu programu Visual Studio 2019. Wersja 2019 zastępuje starszą wersję, ale ponieważ są zgodne ze standardem Binary, Starsza aplikacja nadal działa prawidłowo. Upewnij się, że Najnowsza wersja pakietu redystrybucyjnego zawiera wszystkie najnowsze funkcje, aktualizacje zabezpieczeń i poprawki błędów. Dlatego zawsze zalecamy przeprowadzenie uaktualnienia do najnowszej dostępnej wersji.
 
-Similarly, you can't install an older Redistributable when a newer version is already installed. The installer reports an error if you try. You'll see an error like this if you install the 2015 or 2017 Redistributable on a machine that already has the 2019 version:
+Podobnie nie można zainstalować starszego pakietu redystrybucyjnego, gdy nowsza wersja jest już zainstalowana. Instalator zgłasza błąd w przypadku próby. Jeśli zainstalujesz pakiet redystrybucyjny 2015 lub 2017 na komputerze, który ma już wersję 2019, zobaczysz błąd podobny do tego:
 
 ```Output
 0x80070666 - Another version of this product is already installed. Installation of this version cannot continue. To configure or remove the existing version of this product, use Add/Remove Programs on the Control Panel.
 ```
 
-This error is by design. We recommend you keep the newest version installed. Make sure your installer can recover from this error silently.
+Ten błąd jest zaprojektowany. Zalecamy zachowanie najnowszej zainstalowanej wersji. Upewnij się, że Instalator może odzyskać z tego błędu w trybie dyskretnym.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Visual C++ change history](../porting/visual-cpp-change-history-2003-2015.md)\
-[The latest supported Visual C++ Redistributable downloads](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)
+[Historia C++ zmian wizualnych](../porting/visual-cpp-change-history-2003-2015.md)\
+[Najnowsze obsługiwane pliki redystrybucyjne wizualizacji C++](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)

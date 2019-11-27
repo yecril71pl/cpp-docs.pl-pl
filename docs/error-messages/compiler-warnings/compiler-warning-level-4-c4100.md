@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4100
+title: Ostrzeżenie kompilatora (poziom 4) C4100
 ms.date: 11/04/2016
 f1_keywords:
 - C4100
 helpviewer_keywords:
 - C4100
 ms.assetid: 478ed97d-e502-49e4-9afb-ac2a6c61194b
-ms.openlocfilehash: ccb438cf7c80edb1403683ac4817617ffccc690d
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 80794d270b40a8f40d44630da70455c015158423
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447730"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541240"
 ---
-# <a name="compiler-warning-level-4-c4100"></a>Kompilator ostrzeżenie (poziom 4) C4100
+# <a name="compiler-warning-level-4-c4100"></a>Ostrzeżenie kompilatora (poziom 4) C4100
 
-'Identyfikator': parametr formalny nieużywanych
+"Identyfikator": parametr formalny, do którego nie istnieją odwołania
 
-Brak odwołania do parametru formalnego w treści funkcji. Nieużywany parametr jest ignorowany.
+Parametr formalny nie jest przywoływany w treści funkcji. Parametr bez odwołania jest ignorowany.
 
-C4100 również mogą być wydawane, gdy kod wywołuje destruktora w parametrze typu pierwotnego.  Jest to ograniczenie Microsoft C++ kompilatora.
+C4100 może być również wystawiony, gdy kod wywołuje destruktor dla nieodwołanego parametru typu pierwotnego.  Jest to ograniczenie kompilatora firmy Microsoft C++ .
 
 Poniższy przykład generuje C4100:
 
-```
+```cpp
 // C4100.cpp
 // compile with: /W4
 void func(int i) {   // C4100, delete the unreferenced parameter to

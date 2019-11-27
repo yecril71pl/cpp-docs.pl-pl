@@ -15,7 +15,7 @@ ms.locfileid: "74394654"
 ---
 # <a name=""></a>?
 
-In data declarations, a value that the assembler allocates but does not initialize.
+W deklaracjach danych, wartość, która jest przydzielana przez asembler, ale nie jest inicjowana.
 
 ## <a name="syntax"></a>Składnia
 
@@ -23,4 +23,4 @@ In data declarations, a value that the assembler allocates but does not initiali
 
 ## <a name="see-also"></a>Zobacz także
 
-[Symbols reference](symbols-reference.md)
+[Odwołanie do symboli](symbols-reference.md)

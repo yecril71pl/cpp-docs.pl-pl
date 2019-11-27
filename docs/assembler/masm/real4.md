@@ -15,12 +15,12 @@ ms.locfileid: "74394623"
 ---
 # <a name="real4"></a>REAL4
 
-Allocates and optionally initializes a single-precision (4-byte) floating-point number for each *initializer*.
+Alokuje i opcjonalnie inicjuje liczbę zmiennoprzecinkową o pojedynczej precyzji (4-bajtową) dla każdego *inicjatora*.
 
 ## <a name="syntax"></a>Składnia
 
-> *name*  **REAL4** *initializer* ⟦ __,__ *initializer* ...⟧
+> **REAL4** *inicjatora* nazw ⟦ __,__ *inicjator* ... ⟧
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)

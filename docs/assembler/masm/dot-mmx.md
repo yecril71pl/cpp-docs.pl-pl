@@ -13,9 +13,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398132"
 ---
-# <a name="mmx-32-bit-masm"></a>.MMX (32-bit MASM)
+# <a name="mmx-32-bit-masm"></a>. MMX (32-bitowy MASM)
 
-Enables assembly of MMX or single-instruction, multiple data (SIMD) instructions. (32-bit MASM only.)
+Włącza zestaw instrukcji MMX lub pojedynczej instrukcji z wieloma danymi (SIMD). (tylko 32-bitowy MASM).
 
 ## <a name="syntax"></a>Składnia
 
@@ -23,4 +23,4 @@ Enables assembly of MMX or single-instruction, multiple data (SIMD) instructions
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

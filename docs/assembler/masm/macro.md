@@ -15,18 +15,18 @@ ms.locfileid: "74397243"
 ---
 # <a name="macro"></a>MACRO
 
-Marks a macro block called *name* and establishes *parameter* placeholders for arguments passed when the macro is called.
+Oznacza blok makra o nazwie *name* i ustanawia symbole zastępcze *parametru* dla argumentów przewidzianych podczas wywoływania makra.
 
 ## <a name="syntax"></a>Składnia
 
-> *name*  **MACRO** ⟦*parameter* ⟦ **:REQ** | :=*default* |  **:VARARG**⟧ ...⟧\
-> *statements*\
-> **ENDM** ⟦*value*⟧
+> *Nazwij***makro** ⟦*parametr* ⟦ **: REQ** | : =*default* |  **: vararg**⟧... ⟧\
+> *instrukcje*\
+> **ENDM** ⟦*wartość*⟧
 
 ## <a name="remarks"></a>Uwagi
 
-A macro function returns *value* to the calling statement.
+Funkcja makro zwraca *wartość* do instrukcji wywołującej.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Directives reference](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)

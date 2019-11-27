@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4202
+title: Ostrzeżenie kompilatora (poziom 4) C4202
 ms.date: 11/04/2016
 f1_keywords:
 - C4202
 helpviewer_keywords:
 - C4202
 ms.assetid: 253293aa-97a3-4878-a2e8-c6cc9e20b1cb
-ms.openlocfilehash: c66e2243ee5eca55105de27c9824ee8ced338500
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d5e7dd45b58f1231c39565bfd74c5895096a8b7
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401270"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541642"
 ---
-# <a name="compiler-warning-level-4-c4202"></a>Kompilator ostrzeżenie (poziom 4) C4202
+# <a name="compiler-warning-level-4-c4202"></a>Ostrzeżenie kompilatora (poziom 4) C4202
 
-użyto niestandardowego rozszerzenia: "…": parametr prototypu w liście nazw jest niedozwolony
+użyto niestandardowego rozszerzenia: "...": parametr prototypu w liście nazw jest niedozwolony
 
-Definicja w starym stylu funkcji zawiera zmienne argumenty. Te definicje wygenerowanie błędu w obszarze zgodności ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Definicja funkcji starego stylu zawiera argumenty zmiennych. Te definicje generują błędy pod kątem zgodności ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)).
 
 ## <a name="example"></a>Przykład
 
-```
+```c
 // C4202.c
 // compile with: /W4
 void func( a, b, ...)   // C4202
