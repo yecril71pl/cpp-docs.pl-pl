@@ -115,7 +115,7 @@ Biblioteka C++ szablonów środowisko wykonawcze systemu Windows zawiera typy, k
 
 [RuntimeClass](runtimeclass-class.md) reprezentuje klasę skonkretyzowany, która dziedziczy zestaw określonych interfejsów. Obiekt `RuntimeClass` może zapewnić kombinację obsługi dla jednego lub wielu środowisko wykonawcze systemu Windows interfejsów COM lub słabe odwołanie do składnika.
 
-### <a name="module"></a>Moduł
+### <a name="module"></a>Module
 
 [Moduł](module-class.md) reprezentuje kolekcję obiektów pokrewnych. Obiekt `Module` zarządza fabrykami klas, które tworzą obiekty i rejestrację, co umożliwia innym aplikacjom używanie obiektu.
 
@@ -146,6 +146,6 @@ Obiekt `WeakRef` zazwyczaj reprezentuje obiekt, którego istnienie jest kontrolo
 |||
 |-|-|
 |[Najważniejsze interfejsy API według kategorii](key-wrl-apis-by-category.md)|Wyróżnia podstawowe typy, C++ funkcje i makra szablonu Środowisko wykonawcze systemu Windows.|
-|[Dokumentacja](wrl-reference.md)|Zawiera informacje referencyjne dla biblioteki C++ szablonów środowisko wykonawcze systemu Windows.|
+|[Tematy pomocy](wrl-reference.md)|Zawiera informacje referencyjne dla biblioteki C++ szablonów środowisko wykonawcze systemu Windows.|
 |[Krótkie odwołanie C++/CX)](../../cppcx/quick-reference-c-cx.md)|Zwięźle opisuje funkcje C++/CX, które obsługują środowisko wykonawcze systemu Windows.|
 |[Używanie składników środowisko wykonawcze systemu Windows w wizualizacjiC++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|Pokazuje, w jaki C++sposób używać/CX do tworzenia podstawowego składnika Środowisko wykonawcze systemu Windows.|
