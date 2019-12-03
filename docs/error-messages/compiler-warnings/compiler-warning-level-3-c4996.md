@@ -1,95 +1,93 @@
 ---
-title: Kompilator ostrzeżenie (poziom 3) C4996
-ms.date: 11/17/2017
+title: Ostrzeżenie kompilatora (poziom 3) C4996
+description: Wyjaśnia, dlaczego C4996 jest ostrzeżenie kompilatora i zawiera opis czynności, które należy wykonać.
+ms.date: 11/25/2019
 f1_keywords:
 - C4996
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-ms.openlocfilehash: ef1bc46b64ccbe1374fd795a9b5d56e091b47f48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d5b8cc3e3ce6445e021163df5301a38aab2c514
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401504"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683328"
 ---
-# <a name="compiler-warning-level-3-c4996"></a>Kompilator ostrzeżenie (poziom 3) C4996
+# <a name="compiler-warning-level-3-c4996"></a>Ostrzeżenie kompilatora (poziom 3) C4996
 
-Kompilator napotkał przestarzałe deklaracji. **To ostrzeżenie jest zawsze zamierzonego wiadomości od autora biblioteki lub plik nagłówkowy uwzględnione, że przestarzałe symboli nie należy używać bez zrozumienia konsekwencji.** Rzeczywiste komunikat ostrzegawczy jest określony przez modyfikator wycofywania lub atrybut w witrynie deklaracji.
+W kodzie jest używana funkcja, element członkowski klasy, zmienna lub element typedef, który jest oznaczony jako *przestarzały*. Symbole są przestarzałe przy użyciu modyfikatora [__declspec (przestarzały)](../../cpp/deprecated-cpp.md) lub\[c++ 14 [\[przestarzałe\]\]](../../cpp/attributes.md) atrybutu. Rzeczywisty komunikat ostrzegawczy C4996 jest określany przez modyfikator `deprecated` lub atrybut deklaracji.
 
-Oto niektóre typowe komunikaty C4996, które są generowane przez Biblioteka uruchomieniowa C i standardową bibliotekę, ale nie stanowi wyczerpującej listy. Skorzystaj z łączy lub Czytaj dalej sposobów, aby rozwiązać ten problem, lub aby wyłączyć to ostrzeżenie.
-
-- [Nazwa modelu POSIX dla tego elementu jest przestarzały. Zamiast tego należy użyć ISO C i C++ zgodność nazwy: *nowa_nazwa*. Zobacz Pomoc online, aby uzyskać szczegółowe informacje.](#posix-function-names)
-
-- [Ta funkcja lub zmienna może być niebezpieczne. Należy rozważyć użycie *safe_version* zamiast tego. Aby wyłączyć wycofywania, użyj \_CRT\_bezpiecznego\_nie\_ostrzeżenia.  Zobacz Pomoc online, aby uzyskać szczegółowe informacje.](#unsafe-crt-library-functions)
-
-- [' std::*nazwa_funkcji*::\_niezaznaczone\_Iteratory::\_Deprecate "wywołanie std::*nazwa_funkcji*z parametrami, które mogą być niebezpieczne — to wywołanie zależy obiekt wywołujący, aby sprawdzić, czy przekazanych wartości są poprawne. Aby wyłączyć to ostrzeżenie, użyj -D_SCL_SECURE_NO_WARNINGS. Zobacz dokumentację na temat używania 'Sprawdzanych iteratorów' języka Visual C++](#unsafe-standard-library-functions)
-
-- [Ta funkcja lub zmienna została zastąpiona nowsze funkcje biblioteki lub systemu operacyjnego. Należy rozważyć użycie *new_item* zamiast tego. Zobacz Pomoc online, aby uzyskać szczegółowe informacje.](#obsolete-crt-functions-and-variables)
-
-## <a name="cause"></a>Przyczyna
-
-C4996 występuje, gdy kompilator napotka funkcji lub zmienna, która jest oznaczona jako [przestarzałe](../../cpp/deprecated-cpp.md) przy użyciu `__declspec(deprecated)` modyfikator, lub gdy spróbuje uzyskać dostęp do funkcji, elementu członkowskiego klasy lub typedef, który ma C ++ 14 [ \[ \[przestarzałe\] \] ](../../cpp/attributes.md) atrybutu. Możesz użyć `__declspec(deprecated)` modyfikator lub `[[deprecated]]` atrybutu samodzielnie biblioteki lub plików nagłówkowych, aby ostrzec klientów o zaniechanych funkcji, zmiennych, składowych lub definicje typów.
+> [!IMPORTANT]
+> To ostrzeżenie jest zawsze zamierzonym komunikatem z autora pliku nagłówkowego, który deklaruje symbol. Nie należy używać symbolu przestarzałego bez znajomości konsekwencji.
 
 ## <a name="remarks"></a>Uwagi
 
-Wiele funkcji, funkcji składowych, template — funkcje i zmienne globalne w bibliotekach w programie Visual Studio, które są oznaczone jako *przestarzałe*. Te funkcje są przestarzałe, ponieważ może mieć inną nazwę preferowanego, mogą być niebezpieczne lub mieć wariant bardziej bezpieczne, lub mogą być nieaktualne. Komunikaty o zakończeniu obsługi wielu obejmować sugerowane zastępuje zaniechanej funkcji lub zmienna globalna.
+Wiele funkcji, funkcje składowe, funkcje szablonu i zmienne globalne w bibliotekach programu Visual Studio są *przestarzałe*. Niektóre, takie jak funkcje POSIX, są przestarzałe, ponieważ mają inną preferowaną nazwę. Niektóre funkcje biblioteki środowiska uruchomieniowego języka C są przestarzałe, ponieważ są niezabezpieczone i mają bezpieczniejszy wariant. Inne są przestarzałe, ponieważ są przestarzałe. Komunikaty o zaniechaniu zwykle obejmują sugerowaną zastąpienie dla przestarzałej funkcji lub zmiennej globalnej.
 
-Aby rozwiązać ten problem, zazwyczaj zalecamy zmienisz swój kod, aby zamiast tego użyj sugerowanego bezpieczniejsze lub zaktualizowane funkcje i zmienne globalne. Jeśli musisz używać istniejących funkcji lub zmienne powodów przenośność można wyłączyć to ostrzeżenie.
+## <a name="turn-off-the-warning"></a>Wyłącz ostrzeżenie
 
-### <a name="to-turn-the-warning-off-without-fixing-the-issue"></a>Aby wyłączyć ostrzeżenia bez rozwiązywania problemu
+Aby rozwiązać problem z C4996, zwykle zalecamy zmianę kodu. Zamiast tego użyj sugerowanych funkcji i zmiennych globalnych. Jeśli konieczne jest użycie istniejących funkcji lub zmiennych z przyczyn związanych z przenośnością, można wyłączyć ostrzeżenie.
 
-Ostrzeżenie dotyczące konkretnego wiersza kodu można wyłączyć za pomocą [ostrzeżenie](../../preprocessor/warning.md) pragma, `#pragma warning(suppress : 4996)`. Można również wyłączyć ostrzeżenia w pliku za pomocą pragmy ostrzeżenie `#pragma warning(disable : 4996)`.
+Aby wyłączyć Ostrzeżenie dla określonego wiersza kodu, użyj [ostrzeżenia](../../preprocessor/warning.md) pragma `#pragma warning(suppress : 4996)`.
 
-Możesz wyłączyć to ostrzeżenie globalnie w kompilacji z wiersza polecenia przy użyciu **/wd4996** opcji wiersza polecenia.
+Aby wyłączyć ostrzeżenie w pliku, użyj ostrzeżenia pragma `#pragma warning(disable : 4996)`.
 
-Aby wyłączyć ostrzeżenia dla całego projektu w środowisku IDE programu Visual Studio:
+Aby wyłączyć ostrzeżenia globalnie w kompilacjach w wierszu polecenia, użyj opcji wiersza polecenia [/wd4996](../../build/reference/compiler-option-warning-level.md) .
 
-- Otwórz **stron właściwości** okno dialogowe dla Twojego projektu. Aby uzyskać informacje dotyczące sposobu używania okna dialogowego strony właściwości, zobacz [stron właściwości](../../build/reference/property-pages-visual-cpp.md).
-- Wybierz **właściwości konfiguracji**, **C/C++**, **zaawansowane** strony.
-- Edytuj **Wyłącz określone ostrzeżenia** właściwości do dodania `4996`. Wybierz **OK** Aby zastosować zmiany.
+Aby wyłączyć Ostrzeżenie dla całego projektu w środowisku IDE programu Visual Studio:
 
-Makra preprocesora umożliwia również wyłączyć niektórych określonych klas używane w bibliotekach ostrzeżeń dotyczących zakończenia obsługi. Te makra są opisane poniżej.
+1. Otwórz okno dialogowe **strony właściwości** dla projektu. Aby uzyskać informacje na temat korzystania z okna dialogowego strony właściwości, zobacz [strony właściwości](../../build/reference/property-pages-visual-cpp.md).
+
+1. Wybierz **Właściwości konfiguracji** > stronie **Zaawansowane** **CC++ /**  > .
+
+1. Edytuj Właściwość **Wyłącz określone ostrzeżenia** , aby dodać `4996`. Wybierz **przycisk OK** , aby zastosować zmiany.
+
+Makra preprocesora można także użyć do wyłączenia niektórych określonych klas ostrzeżeń o zaniechaniu używanych w bibliotekach. Poniższe makra zostały opisane poniżej.
 
 Aby zdefiniować makro preprocesora w programie Visual Studio:
 
-- Otwórz **stron właściwości** okno dialogowe dla Twojego projektu. Aby uzyskać informacje dotyczące sposobu używania okna dialogowego strony właściwości, zobacz [stron właściwości](../../build/reference/property-pages-visual-cpp.md).
-- Rozwiń **właściwości konfiguracji > C/C++ > preprocesora**.
-- W **definicje preprocesora** właściwości, Dodaj nazwę makra. Wybierz **OK** Zapisz, a następnie ponownie skompiluj projekt.
+1. Otwórz okno dialogowe **strony właściwości** dla projektu. Aby uzyskać informacje na temat korzystania z okna dialogowego strony właściwości, zobacz [strony właściwości](../../build/reference/property-pages-visual-cpp.md).
 
-Aby zdefiniować makro tylko w plikach określonego źródła, Dodaj wiersz takich jak `#define EXAMPLE_MACRO_NAME` przed każdego wiersza, który zawiera plik nagłówkowy.
+1. Rozwiń węzeł **Właściwości konfiguracji > preprocesorze C/C++ >** .
 
-## <a name="specific-c4996-messages"></a>Określone komunikaty C4996
+1. We właściwości **Definicje preprocesora** Dodaj nazwę makra. Wybierz **przycisk OK** , aby zapisać, a następnie Skompiluj ponownie projekt.
 
-Poniżej przedstawiono niektóre typowe źródła C4996 ostrzeżeń i błędów.
+Aby zdefiniować makro tylko w określonych plikach źródłowych, należy dodać wiersz, taki jak `#define EXAMPLE_MACRO_NAME`, przed dowolnym wierszem zawierającym plik nagłówkowy.
 
-### <a name="posix-function-names"></a>POSIX — nazwy funkcji
+Poniżej przedstawiono niektóre typowe źródła ostrzeżeń i błędów C4996:
 
-**Nazwa modelu POSIX dla tego elementu jest przestarzały. Zamiast tego należy użyć ISO C i C++ zgodność nazwy:** *nowa_nazwa*. **Zobacz Pomoc online, aby uzyskać szczegółowe informacje.**
+## <a name="posix-function-names"></a>Nazwy funkcji POSIX
 
-Microsoft zmienił niektórych funkcji CRT, aby były zgodne z C99 C ++ 03 nazw i reguł zdefiniowanych w implementacji funkcja globalna POSIX. Tylko oryginalne nazwy POSIX są przestarzałe, nie same funkcje. W większości przypadków wiodącego podkreślenia dodano nazwę funkcji POSIX, aby utworzyć nazwę standardowego zgodność. Kompilator generuje ostrzeżenie o zakończeniu obsługi w oryginalnej nazwy funkcji, a także sugeruje nazwę preferowanego.
+**Nazwa POSIX dla tego elementu jest przestarzała. Zamiast tego należy użyć wartości ISO C C++ i zgodnej nazwy:** *New-Name*. **Szczegóły można znaleźć w pomocy online.**
 
-Aby rozwiązać ten problem, zazwyczaj zalecamy zmienisz swój kod, aby zamiast tego użyj nazwy funkcji sugerowanej. Jednak zaktualizowano nazwy są specyficzne dla firmy Microsoft. Jeśli musisz użyć istniejącej nazwy funkcji ze względów przenośność, można wyłączyć tych ostrzeżeń. Funkcje POSIX są nadal dostępne w bibliotece w obszarze oryginalne nazwy.
+Firma Microsoft zmieniła niektóre funkcje POSIX w CRT, aby spełniały reguły C99 i C++ 03 dla nazw funkcji globalnych zdefiniowanych przez implementację. Tylko nazwy są przestarzałe, a nie same funkcje. W większości przypadków wiodący znak podkreślenia został dodany do nazwy funkcji POSIX w celu utworzenia zgodnej ze standardami nazw. Kompilator wystawia ostrzeżenie o wycofaniu oryginalnej nazwy funkcji i sugeruje preferowaną nazwę.
 
-Aby wyłączyć ostrzeżeń dotyczących zakończenia obsługi dla tych funkcji, należy zdefiniować makro preprocesora  **\_CRT\_NONSTDC\_nie\_ostrzeżenia**. Możesz zdefiniować tego makra w wierszu polecenia, łącznie z opcją `/D_CRT_NONSTDC_NO_WARNINGS`.
+Aby rozwiązać ten problem, zwykle zalecamy zmianę kodu w celu użycia sugerowanych nazw funkcji. Zaktualizowane nazwy są jednak specyficzne dla firmy Microsoft. Jeśli musisz użyć istniejących nazw funkcji dla powodów związanych z przenośnością, możesz wyłączyć te ostrzeżenia. Funkcje POSIX są nadal dostępne w bibliotece pod ich oryginalnymi nazwami.
 
-### <a name="unsafe-crt-library-functions"></a>Niezabezpieczone funkcje biblioteki CRT
+Aby wyłączyć ostrzeżenia o zaniechaniu dla tych funkcji, zdefiniuj makro preprocesora **\_CRT\_NONSTDC\_nie\_ostrzeżeń**. Możesz zdefiniować to makro w wierszu polecenia, dołączając opcję `/D_CRT_NONSTDC_NO_WARNINGS`.
 
-**Ta funkcja lub zmienna może być niebezpieczne. Należy rozważyć użycie** *safe_version* **zamiast tego. Aby wyłączyć wycofywania, użyj \_CRT\_bezpiecznego\_nie\_ostrzeżenia.  Zobacz Pomoc online, aby uzyskać szczegółowe informacje.**
+## <a name="unsafe-crt-library-functions"></a>Niezabezpieczone funkcje biblioteki CRT
 
-Niektóre funkcje CRT i standardowej biblioteki języka C++ i funkcje globalne na rzecz bardziej bezpieczne wersje jest przestarzała firmy Microsoft. W większości przypadków zaniechanych funkcji umożliwiają unchecked odczytu lub zapisu do buforów, które może prowadzić do problemów z powodu poważnego naruszenia zabezpieczeń. Kompilator generuje ostrzeżenie o zakończeniu obsługi dla tych funkcji, a także sugeruje preferowana funkcja.
+**Ta funkcja lub zmienna może być niebezpieczna. Rozważ użycie w zamian opcji** *Safe-Version* **. Aby wyłączyć przestarzałość, użyj \_CRT\_SECURE\_braku ostrzeżeń\_.  Szczegóły można znaleźć w pomocy online.**
 
-Aby rozwiązać ten problem, zalecane jest użycie funkcji lub zmienna *safe_version* zamiast tego. Upewnieniu się, że nie ma możliwości zastąpienia buforu lub overread wystąpić w kodzie, a nie można zmienić kod przyczyny przenoszenia, można wyłączyć to ostrzeżenie.
+Firma Microsoft zaprzestarzała niektóre C++ funkcje i Globals biblioteki CRT, ponieważ dostępne są bezpieczniejsze wersje. Większość przestarzałych funkcji zezwala na niesprawdzone dostęp do odczytu lub zapisu do buforów. Ich niewłaściwe użycie może prowadzić do poważnych problemów z zabezpieczeniami. Kompilator wystawia ostrzeżenie o wycofaniu tych funkcji i sugeruje funkcję preferowaną.
 
-Aby wyłączyć ostrzeżeń dotyczących zakończenia obsługi dla tych funkcji w CRT, zdefiniuj  **\_CRT\_bezpiecznego\_nie\_ostrzeżenia**. Aby wyłączyć ostrzeżenia dotyczące przestarzałe zmiennych globalnych, zdefiniuj  **\_CRT\_bezpiecznego\_nie\_ostrzeżenia\_GLOBALS**. Aby uzyskać więcej informacji o tych przestarzałe funkcje i zmienne globalne, zobacz [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md) i [bezpieczne biblioteki: Standardowa biblioteka C++](../../standard-library/safe-libraries-cpp-standard-library.md).
+Aby rozwiązać ten problem, zalecamy użycie funkcji lub zmiennej *bezpiecznego-wersji* . Czasami nie jest to możliwe, w przypadku portów lub zgodności z poprzednimi wersjami. Należy uważnie sprawdzić, czy nie jest możliwe zastępowanie buforu lub przeczytanie go w kodzie. Następnie można wyłączyć ostrzeżenie.
 
-### <a name="unsafe-standard-library-functions"></a>Niezabezpieczone funkcje biblioteki standardowej
+Aby wyłączyć ostrzeżenia o zaniechaniu dla tych funkcji w CRT, zdefiniuj **\_crt\_SECURE\_nie\_ostrzeżeń**.
 
-__' std::__*nazwa_funkcji*__::\_niezaznaczone\_Iteratory::\_Deprecate "wywołanie std::__*nazwa_funkcji* **z parametrami, które mogą być niebezpieczne — to wywołanie zależy obiekt wywołujący, aby sprawdzić, czy przekazanych wartości są poprawne. Aby wyłączyć to ostrzeżenie, użyj -D\_SCL\_bezpiecznego\_nie\_ostrzeżenia. Zobacz dokumentację na temat używania 'Sprawdzanych iteratorów' języka Visual C++**
+Aby wyłączyć ostrzeżenia o przestarzałych zmiennych globalnych, zdefiniuj **\_CRT\_SECURE\_nie\_ostrzeżeń\_Globals**.
 
-To ostrzeżenie jest wyświetlane w kompilacjach debugowania, ponieważ niektóre funkcje szablonu standardowej biblioteki języka C++ sprawdza parametry pod kątem poprawności. W większości przypadków jest to, ponieważ nie ma wystarczającej ilości informacji znajduje się w funkcji w celu sprawdź granice kontenera lub Iteratory mogą być używane niepoprawnie za pomocą funkcji. To ostrzeżenie pomaga zidentyfikować te zastosowania funkcji, ponieważ mogą one być źródłem otworów powodu poważnego naruszenia zabezpieczeń w programach. Aby uzyskać więcej informacji, zobacz [Checked Iterators](../../standard-library/checked-iterators.md).
+Aby uzyskać więcej informacji na temat tych przestarzałych funkcji i Globals, zobacz [funkcje zabezpieczeń w](../../c-runtime-library/security-features-in-the-crt.md) bibliotekach CRT i [Safe biblioteki C++ : standardowa](../../standard-library/safe-libraries-cpp-standard-library.md).
 
-Na przykład, to ostrzeżenie jest wyświetlane w trybie debugowania w przypadku przekazania wskaźnika elementu do `std::copy` zamiast zwykłego tablicy. Aby rozwiązać ten problem, użyj tablicy odpowiednio zadeklarowane, więc sprawdza, czy zakresy tablicy i wykonaj sprawdzanie granic biblioteki.
+## <a name="unsafe-standard-library-functions"></a>Niebezpieczne funkcje biblioteki standardowej
+
+__"std::__ *function_name* __::\_unchecked\_Iteratory::\_przestarzałe wywołanie metody std::__ *function_name* **z parametrami, które mogą być niebezpieczne — to wywołanie opiera się na wywołującym, aby sprawdzić, czy przeszukane wartości są poprawne. Aby wyłączyć to ostrzeżenie, użyj-D\_SCL\_SECURE\_nie\_ostrzeżeń. Zapoznaj się z dokumentacją dotyczącą C++ korzystania z Visual "sprawdzonych iteratorów"**
+
+To ostrzeżenie jest wyświetlane w kompilacjach debugowania C++ , ponieważ niektóre funkcje szablonu biblioteki standardowej nie sprawdzają poprawności parametrów. Często jest to spowodowane brakiem wystarczającej ilości informacji do sprawdzenia granic kontenera. Lub, ponieważ Iteratory mogą być używane nieprawidłowo z funkcją. To ostrzeżenie pomaga zidentyfikować te funkcje, ponieważ mogą one być źródłem poważnych luk w zabezpieczeniach w programie. Aby uzyskać więcej informacji, zobacz [sprawdzone Iteratory](../../standard-library/checked-iterators.md).
+
+Na przykład to ostrzeżenie jest wyświetlane w trybie debugowania, Jeśli przekażesz wskaźnik elementu do `std::copy`, zamiast zwykłej tablicy. Aby rozwiązać ten problem, użyj odpowiednio zadeklarowanej tablicy, aby Biblioteka mogła sprawdzać zakresy tablicy i sprawdzać powiązana.
 
 ```cpp
 // C4996_copyarray.cpp
@@ -104,7 +102,7 @@ void example(char const * const src) {
 }
 ```
 
-Kilka algorytmami standardowej biblioteki zostały zaktualizowane, aby "podwójna zakresu" wersja w języku C ++ 14. Jeśli używasz wersji podwójną zakresu, drugi zakres zawiera konieczne sprawdzanie granic:
+Kilka algorytmów standardowej biblioteki zostało zaktualizowanych w taki sposób, aby zawierały wersje "Dual Range" w języku C++ 14. Jeśli używasz wersji z podwójnym zakresem, drugi zakres zapewni wymagane sprawdzanie granic:
 
 ```cpp
 // C4996_containers.cpp
@@ -125,7 +123,7 @@ bool example(
 }
 ```
 
-W przykładzie pokazano kilka sposobów więcej standardowej biblioteki mogą służyć do sprawdzania użycia iteratora i kiedy unchecked użycia może być niebezpieczne:
+W tym przykładzie pokazano kilka sposobów, aby można było użyć standardowej biblioteki do sprawdzenia użycia iteratora i gdy niesprawdzone użycie może być niebezpieczne:
 
 ```cpp
 // C4996_standard.cpp
@@ -210,11 +208,11 @@ int main()
 }
 ```
 
-Jeśli sprawdzono, że Twój kod nie może mieć błąd w funkcji biblioteki standardowej, które mogą powodować to ostrzeżenie przepełnienie buforu, można wyłączyć to ostrzeżenie. Aby wyłączyć ostrzeżenia dla tych funkcji, należy zdefiniować  **\_SCL\_bezpiecznego\_nie\_ostrzeżenia**.
+Jeśli sprawdzono, że kod nie może mieć błędu przepełnienia buforu, można wyłączyć to ostrzeżenie. Aby wyłączyć ostrzeżenia dla tych funkcji, zdefiniuj **\_SCL\_SECURE\_nie\_ostrzeżeń**.
 
-### <a name="checked-iterators-enabled"></a>Iteratory sprawdzane włączone
+## <a name="checked-iterators-enabled"></a>Sprawdzone Iteratory włączone
 
-C4996 może również wystąpić, jeśli nie używasz iteratora sprawdzanego podczas kompilacji z `_ITERATOR_DEBUG_LEVEL` zdefiniowana jako 1 lub 2. Ustawiono na 2 domyślnie dla kompilacji w trybie debugowania, a 0 dla kompilacji detalicznej. Zobacz [Checked Iterators](../../standard-library/checked-iterators.md) Aby uzyskać więcej informacji.
+C4996 może również wystąpić, jeśli nie używasz sprawdzonego iteratora, gdy `_ITERATOR_DEBUG_LEVEL` jest zdefiniowany jako 1 lub 2. Jest ona domyślnie ustawiona na 2 dla kompilacji w trybie debugowania oraz do 0 dla kompilacji detalicznych. Aby uzyskać więcej informacji, zobacz [sprawdzone Iteratory](../../standard-library/checked-iterators.md).
 
 ```cpp
 // C4996_checked.cpp
@@ -236,29 +234,29 @@ int main() {
 }
 ```
 
-### <a name="unsafe-mfc-or-atl-code"></a>Kod niebezpieczny MFC lub ATL
+## <a name="unsafe-mfc-or-atl-code"></a>Niebezpieczny kod MFC lub ATL
 
-C4996 może również wystąpić, jeśli używasz funkcji biblioteki ATL i MFC, które zostały zaniechane ze względów bezpieczeństwa.
+C4996 może wystąpić, jeśli używasz funkcji MFC lub ATL, które były przestarzałe ze względów bezpieczeństwa.
 
-Aby rozwiązać ten problem, zdecydowanie zalecamy zmienisz swój kod, aby zamiast tego użyj zaktualizowanych funkcji.
+Aby rozwiązać ten problem, zdecydowanie zalecamy zmianę kodu w taki sposób, aby korzystał z zaktualizowanych funkcji.
 
-Aby uzyskać informacje na temat pominąć te ostrzeżenia, zobacz [_AFX_SECURE_NO_WARNINGS](../../mfc/reference/diagnostic-services.md#afx_secure_no_warnings).
+Aby uzyskać informacje na temat sposobu pomijania tych ostrzeżeń, zobacz [_AFX_SECURE_NO_WARNINGS](../../mfc/reference/diagnostic-services.md#afx_secure_no_warnings).
 
-### <a name="obsolete-crt-functions-and-variables"></a>Przestarzałe funkcje CRT i zmienne
+## <a name="obsolete-crt-functions-and-variables"></a>Przestarzałe funkcje i zmienne CRT
 
-**Ta funkcja lub zmienna została zastąpiona nowsze funkcje biblioteki lub systemu operacyjnego. Należy rozważyć użycie** *new_item* **zamiast tego. Zobacz Pomoc online, aby uzyskać szczegółowe informacje.**
+**Ta funkcja lub zmienna została zastąpiona przez nowszą funkcjonalność biblioteki lub systemu operacyjnego. Zamiast tego Rozważ użycie** *new_item* **. Szczegóły można znaleźć w pomocy online.**
 
-Niektóre funkcje i zmienne globalne są przestarzałe jako przestarzałe. Te funkcje i zmienne mogą zostać usunięte w przyszłej wersji biblioteki. Kompilator generuje ostrzeżenie o zakończeniu obsługi w przypadku tych elementów i sugeruje preferowana alternatywa.
+Niektóre funkcje biblioteki i zmienne globalne są przestarzałe jako przestarzałe. Te funkcje i zmienne mogą zostać usunięte w przyszłej wersji biblioteki. Kompilator wystawia ostrzeżenie o wycofaniu dla tych elementów i sugeruje preferowaną alternatywę.
 
-Aby rozwiązać ten problem, zalecane jest zmiana kodu, aby użyć sugerowanych funkcji lub zmiennej.
+Aby rozwiązać ten problem, zalecamy zmianę kodu w celu użycia sugerowanej funkcji lub zmiennej.
 
-Aby wyłączyć ostrzeżeń dotyczących zakończenia obsługi dla tych elementów, należy zdefiniować  **\_CRT\_OBSOLETE\_nie\_ostrzeżenia**. Aby uzyskać więcej informacji zobacz temat w dokumentacji zaniechanej funkcji lub zmienna.
+Aby wyłączyć ostrzeżenia o zaniechaniu dla tych elementów, zdefiniuj **\_CRT\_przestarzałe\_nie\_ostrzeżeń**. Aby uzyskać więcej informacji, zapoznaj się z dokumentacją przestarzałej funkcji lub zmiennej.
 
-### <a name="marshalling-errors-in-clr-code"></a>Kierowania błędów w kodzie CLR
+## <a name="marshaling-errors-in-clr-code"></a>Kierowanie błędów w kodzie CLR
 
-C4996 może również wystąpić, gdy używasz Biblioteka dotycząca organizowania CLR. W tym przypadku C4996 jest błędem, a nie ostrzeżeniem. Ten błąd występuje, gdy używasz [marshal_as](../../dotnet/marshal-as.md) do konwersji między dwoma typami danych, które wymagają [marshal_context Class](../../dotnet/marshal-context-class.md). Ten błąd może również występować, gdy biblioteka dotycząca organizowania nie obsługuje konwersji. Aby uzyskać więcej informacji dotyczących biblioteki masrhaling, zobacz [Overview of Marshaling w C++](../../dotnet/overview-of-marshaling-in-cpp.md).
+C4996 może również wystąpić w przypadku korzystania z biblioteki Marshal CLR. W tym przypadku C4996 jest błędem, a nie ostrzeżeniem. Ten błąd występuje, gdy używasz [marshal_as](../../dotnet/marshal-as.md) do konwersji między dwoma typami danych, które wymagają [klasy marshal_context](../../dotnet/marshal-context-class.md). Możesz również otrzymać ten błąd, gdy biblioteka Marshal nie obsługuje konwersji. Aby uzyskać więcej informacji na temat biblioteki Marshaling, zobacz [Omówienie organizowania w programie C++ ](../../dotnet/overview-of-marshaling-in-cpp.md).
 
-Ten przykład generuje C4996, ponieważ biblioteka dotycząca organizowania wymaga kontekstu, aby skonwertować z `System::String` do `const char *`.
+Ten przykład generuje C4996, ponieważ biblioteka Marshal wymaga kontekstu konwersji z `System::String` na `const char *`.
 
 ```cpp
 // C4996_Marshal.cpp
@@ -279,9 +277,9 @@ int main() {
 }
 ```
 
-## <a name="example-user-defined-deprecated-function"></a>Przykład: Przestarzałe funkcji zdefiniowanej przez użytkownika
+## <a name="example-user-defined-deprecated-function"></a>Przykład: funkcja przestarzała zdefiniowana przez użytkownika
 
-Atrybut przestarzałe we własnym kodzie umożliwia Ostrzegaj wywołań, gdy już nie zaleca się użycie niektórych funkcji. W tym przykładzie C4996 jest generowany dla wiersza, w którym zadeklarowano zaniechanej funkcji i dla wiersza, na którym jest używana funkcja.
+Można użyć przestarzałego atrybutu w własnym kodzie, aby ostrzec wywołujących, gdy nie zaleca się już używania niektórych funkcji. W tym przykładzie C4996 jest generowana w dwóch miejscach: jeden dla wiersza, w którym zainstalowano przestarzałą funkcję, i jeden dla wiersza, w którym jest używana funkcja.
 
 ```cpp
 // C4996.cpp
@@ -294,7 +292,8 @@ void func1(void) {
    printf_s("\nIn func1");
 }
 
-__declspec(deprecated) void func1(int) {
+[[deprecated]]
+void func1(int) {
    printf_s("\nIn func2");
 }
 

@@ -1,5 +1,5 @@
 ---
-title: warning, pragma
+title: warning — Wartość dyrektywy pragma
 ms.date: 08/29/2019
 f1_keywords:
 - warning_CPP
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-ms.openlocfilehash: 9a79f0c4a9eed6b62e42f056f9d1994b44b57297
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: c6c9668f614f932b0a96f30ad3e0395e39ddc400
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216476"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683345"
 ---
-# <a name="warning-pragma"></a>warning, pragma
+# <a name="warning-pragma"></a>warning — Wartość dyrektywy pragma
 
 Włącza wybiórczą modyfikację zachowania komunikatów ostrzeżeń kompilatora.
 
 ## <a name="syntax"></a>Składnia
 
-> **Ostrzeżenie #pragma (** \
-> &nbsp;&nbsp;&nbsp;&nbsp;*Ostrzeżenie — specyfikator* **:** *Ostrzeżenie-liczba-lista*\
-> &nbsp;&nbsp;&nbsp;&nbsp;[ **;** *Ostrzeżenie — specyfikator* **:** *Ostrzeżenie-liczba-lista* ...] **)** \
+> **ostrzeżenie #pragma (** \
+> &nbsp;&nbsp;&nbsp;&nbsp;*ostrzegawczy specyfikator* **:** *Warning-Number-list*\
+> &nbsp;&nbsp;&nbsp;&nbsp;[ **;** *ostrzegawczy specyfikator* **:** *Warning-Number-list* ...] **)** \
 > **Ostrzeżenie #pragma (wypychanie** [ **,** *n* ] **)** \
 > **Ostrzeżenie #pragma (pop)**
 
@@ -42,7 +42,7 @@ Dostępne są następujące parametry specyfikatora ostrzegawczego.
 |*once*|Wyświetlaj tylko określone komunikaty tylko raz.|
 |*kół*|Wypchnij bieżący stan dyrektywy pragma na stosie, wyłącza określone Ostrzeżenie dla następnego wiersza, a następnie wyświetla stos ostrzegawczy, tak aby stan dyrektywy pragma został zresetowany.|
 
-Poniższa instrukcja Code ilustruje, że `warning-number-list` parametr może zawierać wiele numerów ostrzeżeń i że można określić `warning-specifier` wiele parametrów w tej samej dyrektywie pragma.
+Poniższa instrukcja Code ilustruje, że parametr `warning-number-list` może zawierać wiele wartości ostrzegawczych, a wiele parametrów `warning-specifier` można określić w tej samej dyrektywie pragma.
 
 ```cpp
 #pragma warning( disable : 4507 34; once : 4385; error : 164 )
@@ -63,7 +63,7 @@ Ta dyrektywa jest funkcjonalnie równoważna z poniższym kodem:
 
 Kompilator dodaje 4000 do dowolnej liczby ostrzeżeń, która jest z zakresu od 0 do 999.
 
-W przypadku numerów ostrzeżeń w zakresie 4700-4999, które są skojarzone z generowaniem kodu, stan ostrzeżenia obowiązuje po napotkaniu przez kompilator otwierającego nawiasu klamrowego funkcji będzie obowiązywać dla reszty funkcji. Użycie dyrektywy pragma **ostrzeżenia** w funkcji w celu zmiany stanu ostrzeżenia o wartości większej niż 4699 zacznie obowiązywać dopiero po zakończeniu funkcji. W poniższym przykładzie pokazano poprawne rozmieszczenie pragm **ostrzeżeń** , aby wyłączyć komunikat ostrzegawczy generowania kodu, a następnie przywrócić go.
+W przypadku numerów ostrzeżeń w zakresie 4700-4999, które są skojarzone z generowaniem kodu, stan ostrzeżenia obowiązuje, gdy kompilator napotka definicję funkcji będzie obowiązywać dla reszty funkcji. Użycie dyrektywy pragma **ostrzeżenia** w funkcji w celu zmiany stanu ostrzeżenia o wartości większej niż 4699 zacznie obowiązywać dopiero po zakończeniu funkcji. W poniższym przykładzie pokazano poprawne rozmieszczenie pragm **ostrzeżeń** , aby wyłączyć komunikat ostrzegawczy generowania kodu, a następnie przywrócić go.
 
 ```cpp
 // pragma_warning.cpp
@@ -91,9 +91,9 @@ Pragma **ostrzeżenia** obsługuje również następującą składnię, gdzie *n
 
 `#pragma warning( pop )`
 
-Pragma `warning( push )` zapisuje bieżący stan ostrzeżenia dla każdego ostrzeżenia. Pragma `warning( push, n )` przechowuje bieżący stan dla każdego ostrzeżenia i ustawia globalny poziom ostrzeżeń na *n*.
+Pragma `warning( push )` zapisuje bieżący stan ostrzeżenia dla każdego ostrzeżenia. Pragma `warning( push, n )` zapisuje bieżący stan dla każdego ostrzeżenia i ustawia globalny poziom ostrzeżeń na *n*.
 
-Pragma `warning( pop )` pokazuje ostatni stan ostrzeżenia wypychanego na stosie. Wszystkie zmiany wprowadzone w stanie ostrzegawczym między wypchnięciem i *pop* są cofnięte. Rozważmy następujący przykład:
+Pragma `warning( pop )` punkty POP z ostatnim stanem ostrzeżenia wypychane na stosie. Wszystkie zmiany wprowadzone w stanie ostrzegawczym między *wypchnięciem* i *pop* są cofnięte. Rozważmy następujący przykład:
 
 ```cpp
 #pragma warning( push )

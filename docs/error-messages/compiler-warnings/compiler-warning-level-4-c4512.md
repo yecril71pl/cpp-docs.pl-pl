@@ -1,43 +1,43 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4512
+title: Ostrzeżenie kompilatora (poziom 4) C4512
 ms.date: 11/04/2016
 f1_keywords:
 - C4512
 helpviewer_keywords:
 - C4512
 ms.assetid: afb68995-684a-4be5-a73a-38d7a16dc030
-ms.openlocfilehash: c5e84fe1d0e558e689e48fba8df112861f81acec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3b8f11b55cf6ef2df601c125a1b6629aa0554da
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220993"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683187"
 ---
-# <a name="compiler-warning-level-4-c4512"></a>Kompilator ostrzeżenie (poziom 4) C4512
+# <a name="compiler-warning-level-4-c4512"></a>Ostrzeżenie kompilatora (poziom 4) C4512
 
-"class": nie można wygenerować operatora przypisania
+"Class": nie można wygenerować operatora przypisania
 
-Kompilator nie można wygenerować operatora przypisania dla danej klasy. Żaden operator przypisywania został utworzony.
+Kompilator nie może wygenerować operatora przypisania dla danej klasy. Nie utworzono operatora przypisania.
 
-Operator przypisania klasy podstawowej, która nie jest dostępna w klasie pochodnej może być przyczyną tego ostrzeżenia.
+Operator przypisania dla klasy podstawowej, która nie jest dostępna w klasie pochodnej, może spowodować to ostrzeżenie.
 
-Aby uniknąć tego ostrzeżenia, należy określić operatora przypisania zdefiniowanego przez użytkownika, dla klasy.
+Aby uniknąć tego ostrzeżenia, określ zdefiniowany przez użytkownika operator przypisania dla klasy.
 
-Kompilator wygeneruje również funkcję operatora przypisania dla klasy, w którym nie zdefiniowano jeden. Ten operator przypisania jest kopią wszystkich elementów członkowskich składowych danych obiektu. Ponieważ `const` elementów danych nie może być modyfikowany po inicjalizacji, jeśli klasa zawiera `const` elementu, operator przypisania domyślne nie będzie działać. Inną przyczyną ostrzeżenie C4512 jest deklaracją niestatycznej składowej danych typu referencyjnego. Jeśli chcesz utworzyć-copyable typu, możesz także zapobiega tworzeniu domyślny Konstruktor kopiujący.
+Kompilator generuje również funkcję operatora przypisania dla klasy, która nie definiuje jednej. Ten operator przypisania jest składowych kopią elementów członkowskich danych obiektu. Ponieważ `const` elementów danych nie można modyfikować po inicjacji, jeśli Klasa zawiera element `const`, domyślny operator przypisania nie będzie działać. Inną przyczyną ostrzeżenia C4512 jest deklaracja niestatycznej składowej danych typu referencyjnego. Jeśli celem jest utworzenie typu bez kopiowania, należy również uniemożliwić utworzenie domyślnego konstruktora kopiującego.
 
-Ostrzeżenie C4512 rozpozna dla kodu w jednym z trzech sposobów:
+Ostrzeżenie C4512 dla kodu można rozwiązać na jeden z trzech sposobów:
 
-- Jawne zdefiniowanie operatora przypisania klasy.
+- Jawnie Zdefiniuj operator przypisania dla klasy.
 
-- Usuń **const** lub operatora odwołania z elementu danych w klasie.
+- Usuń element **const** lub Operator Reference z elementu danych w klasie.
 
-- Użyj #pragma [ostrzeżenie](../../preprocessor/warning.md) instrukcję, aby pominąć to ostrzeżenie.
+- Aby pominąć ostrzeżenie, użyj instrukcji #pragma [Warning](../../preprocessor/warning.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4512.
+Poniższy przykład generuje C4512.
 
-```
+```cpp
 // C4512.cpp
 // compile with: /EHsc /W4
 // processor: x86

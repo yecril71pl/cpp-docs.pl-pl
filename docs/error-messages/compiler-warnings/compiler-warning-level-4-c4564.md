@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4564
+title: Ostrzeżenie kompilatora (poziom 4) C4564
 ms.date: 11/04/2016
 f1_keywords:
 - C4564
 helpviewer_keywords:
 - C4564
 ms.assetid: 555b301b-313e-4262-9f81-eb878674be60
-ms.openlocfilehash: 1948bdec5367fa7943f5a0de4338fd4ecd6c6581
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f5db6bf366c86a716be33539feb0085ac03a9647
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220510"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683165"
 ---
-# <a name="compiler-warning-level-4-c4564"></a>Kompilator ostrzeżenie (poziom 4) C4564
+# <a name="compiler-warning-level-4-c4564"></a>Ostrzeżenie kompilatora (poziom 4) C4564
 
-Metoda "method" klasy "class" definiuje nieobsługiwany parametr domyślny "parametru"
+Metoda "Method" klasy "Class" definiuje nieobsługiwany parametr domyślny "parameter"
 
-Kompilator wykrył metody z co najmniej jeden parametr z wartościami domyślnymi. Wartości domyślne dla parametrów zostanie zignorowany, gdy metoda jest wywoływana; jawnie określić wartości dla tych parametrów. Jeśli nie zostanie jawnie wartości tych parametrów, kompilator języka C++, zostanie wygenerowany błąd.
+Kompilator wykrył metodę z co najmniej jednym parametrem z wartościami domyślnymi. Wartości domyślne parametrów zostaną zignorowane, gdy wywoływana jest metoda; jawnie określ wartości tych parametrów. Jeśli nie określisz jawnie wartości dla tych parametrów, C++ kompilator wygeneruje błąd.
 
-Biorąc pod uwagę następujący plik .dll, utworzony za pomocą Visual Basic, który umożliwia skonfigurowanie parametrów domyślnych argumenty metody:
+Nadana została następująca Biblioteka. dll utworzona przy użyciu Visual Basic, która umożliwia używanie parametrów domyślnych dla argumentów metody:
 
-```
+```vb
 ' C4564.vb
 ' compile with: vbc /t:library C4564.vb
 Public class TestClass
@@ -31,9 +31,9 @@ Public class TestClass
 End class
 ```
 
-I poniższy przykład C++, używającej dll utworzony za pomocą Visual Basic
+I Poniższy C++ przykład, który używa biblioteki. dll utworzonej przy użyciu Visual Basic,
 
-```
+```cpp
 // C4564.cpp
 // compile with: /clr /W4 /WX
 #using <C4564.dll>

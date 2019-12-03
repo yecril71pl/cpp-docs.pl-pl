@@ -1,31 +1,31 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4365
+title: Ostrzeżenie kompilatora (poziom 4) C4365
 ms.date: 11/04/2016
 f1_keywords:
 - C4365
 helpviewer_keywords:
 - C4365
 ms.assetid: af4b4191-bdfd-4dbb-8229-3ba4405df257
-ms.openlocfilehash: 3f9f6df9f72608f0c1197e0602c3f54548f8efcb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 554ead2d26a090eb1ffc86e532841143483b365a
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404003"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683035"
 ---
-# <a name="compiler-warning-level-4-c4365"></a>Kompilator ostrzeżenie (poziom 4) C4365
+# <a name="compiler-warning-level-4-c4365"></a>Ostrzeżenie kompilatora (poziom 4) C4365
 
-"action": konwersja z 'typ_1' na 'typ_2', niezgodność ze znakiem/bez znaku
+"Action": konwersja z "type_1" na "type_2", niezgodność ze znakiem/bez znaku
 
-Na przykład podjęto można przekonwertować wartości bez znaku na wartość ze znakiem.
+Na przykład próbowano skonwertować wartość bez znaku na wartość ze znakiem.
 
-C4365 jest domyślnie wyłączona.  Aby uzyskać więcej informacji, zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+C4365 jest domyślnie wyłączona.  Aby uzyskać więcej informacji, zobacz [ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4365.
+Poniższy przykład generuje C4365.
 
-```
+```cpp
 // C4365.cpp
 // compile with: /W4
 #pragma warning(default:4365)

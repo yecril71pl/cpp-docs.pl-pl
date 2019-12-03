@@ -1,5 +1,5 @@
 ---
-title: /w /W0, / W1, / W2, / W3, / W4, / W1, / W2, / W3, / W4, / Wall / wo, WV, /WX (poziom ostrzegawczy)
+title: /w,/W0,/W1,/W2,/W3,/W4,/W1,/W2,/W3,/W4,/Wall,/WD,/we,/wo,/WV,/WX (poziom ostrzeżeń)
 ms.date: 01/31/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.DisableSpecificWarnings
@@ -57,88 +57,89 @@ helpviewer_keywords:
 - -w compiler option [C++]
 - /W2 compiler option [C++]
 - /Wv compiler option [C++]
-ms.openlocfilehash: 7b5c19c95cff3058bb3dcc6640f8ab07cf01edd6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d2fd21c476ef4346aa86e682047ea644183b2f3
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294242"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683055"
 ---
-# <a name="w-w0-w1-w2-w3-w4-w1-w2-w3-w4-wall-wd-we-wo-wv-wx-warning-level"></a>/w /W0, / W1, / W2, / W3, / W4, / W1, / W2, / W3, / W4, / Wall / wo, WV, /WX (poziom ostrzegawczy)
+# <a name="w-w0-w1-w2-w3-w4-w1-w2-w3-w4-wall-wd-we-wo-wv-wx-warning-level"></a>/w,/W0,/W1,/W2,/W3,/W4,/W1,/W2,/W3,/W4,/Wall,/WD,/we,/wo,/WV,/WX (poziom ostrzeżeń)
 
-Określa, jak kompilator generuje ostrzeżenia dla danej kompilacji.
+Określa sposób, w jaki kompilator generuje ostrzeżenia dla danej kompilacji.
 
 ## <a name="syntax"></a>Składnia
 
-> **/w**
->  **/W0**
->  **/W1**
->  **/W2**
->  **/W3** 
->  **/W4**
->  **/wall**
-> **WV**\[**:**_wersji _] **/WX**
->  **/W1**_ostrzeżenie_
->  **/W2** _ Ostrzeżenie_
->  **/W3**_ostrzeżenie_
->  **/W4**_ostrzeżenie_ 
->  **/wd**_ostrzeżenie_
->  **/we**_ostrzeżenie_ 
->  **/wo**_ostrzeżenie_
+> **/w**\
+> **/W0**\
+> **/W1**\
+> **/W2**\
+> **/W3**\
+> **/W4**\
+> **/Wall**\
+> **/WV**\[ **:** _wersja_] \
+> **/WX**\
+> \_ostrzegawczy_ **/W1**
+> \_ostrzegawczy_ **/W2**
+> \_ostrzegawczy_ **/W3**
+> \_ostrzegawczy_ **/W4**
+> \_ostrzegawczy_ **/WD**
+> \_ostrzegawczy_ **/we**
+> _Ostrzeżenie_ /wo
 
 ## <a name="remarks"></a>Uwagi
 
-Opcje ostrzeżenie określić które ostrzeżenia kompilatora do wyświetlenia i zachowanie ostrzeżeń dla całej kompilacji.
+Opcje ostrzeżeń określają, które ostrzeżenia kompilatora mają być wyświetlane, oraz zachowanie ostrzegawcze dla całej kompilacji.
 
-Ostrzeżenie opcje i argumenty powiązane są opisane w poniższej tabeli:
+Opcje ostrzeżeń i powiązane argumenty są opisane w poniższej tabeli:
 
 |Opcja|Opis|
 ------------|-----------------|
-|**/w**|Wyłącza wszystkie ostrzeżenia kompilatora.|
-|**/W0**<br /><br /> **/W1**<br /><br /> **/W2**<br /><br /> **/W3**<br /><br /> **/W4**|Określa poziom ostrzeżeń generowanej przez kompilator. Prawidłowe ostrzeżenie poziomów z zakresu od 0 do 4:<br />**/ W0** wyłącza wszystkie ostrzeżenia. Jest to równoważne **Wn**.<br />**/ W1** Wyświetla (poważny) ostrzeżenia poziomu 1. **/ W1** jest ustawieniem domyślnym w kompilatorze wiersza polecenia.<br />**/ W2** Wyświetla poziom 1 i poziom 2 (istotne) ostrzeżenia.<br />**/ W3** Wyświetla poziomu 1, na poziomie 2 i 3 ostrzeżenia (jakości produkcyjnej) na poziomie. **/ W3** jest ustawieniem domyślnym w środowisku IDE.<br />**/ W4** Wyświetla poziom 1 i poziom 2, a poziom ostrzeżeń 3 oraz wszystkich poziomu 4 ostrzeżenia (informacyjne), które nie są wyłączane domyślnie. Zalecamy użycie tej opcji zapewnienie lint przypominającej ostrzeżenia. Dla nowego projektu może być najlepiej użyć **/W4** we wszystkich kompilacjach; zapewni najmniejszą liczbą wad możliwe kodu twardych do znalezienia.|
-|**/Wall**|Wyświetla wszystkie ostrzeżenia wyświetlanego przez **/W4** i wszystkie inne ostrzeżenia, **/W4** nie obejmuje — na przykład w przypadku ostrzeżenia, które są domyślnie wyłączone. Aby uzyskać więcej informacji, zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md).|
-|**WV**\[**:**_wersji_]|Wyświetla tylko te ostrzeżenia, które wprowadzonych w wersji kompilatora *wersji* i starszych wersji. Można użyć tej opcji, Pomiń nowe ostrzeżenia w kodzie, w przypadku migracji do nowszej wersji kompilatora i obsługa istniejący proces kompilacji, gdy zostaną naprawione. Opcjonalny parametr *wersji* ma postać *nn*[. *mm*[. *bbbbb*]] gdzie *nn* to główny numer wersji, *mm* jest opcjonalny pomocniczy numer wersji, i *bbbbb* jest numerem kompilacji opcjonalne Kompilator. Na przykład użyć */Wv:17* wyświetlania ostrzeżenia wprowadzone w programie Visual Studio 2012 (czyli dowolna wersja kompilatora, który zawiera główny numer wersji 17) lub wcześniej, ale Pomiń ostrzeżenia wprowadzone w programie Visual Studio 2013 (wersja główna 18) lub nowszy. Domyślnie **WV** używa bieżący numer wersji kompilatora i żadne ostrzeżenia nie są pomijane. Aby uzyskać informacje o tym, które ostrzeżenia są pomijane przez wersję kompilatora, zobacz [ostrzeżenia kompilatora według wersji kompilatora](../../error-messages/compiler-warnings/compiler-warnings-by-compiler-version.md).|
-|**/WX**|Traktuje wszystkie ostrzeżenia kompilatora jako błędy. Dla nowego projektu może być najlepiej użyć **/WX** we wszystkich kompilacjach; rozwiązanie wszystkich ostrzeżeń zapewnia najmniejszą liczbą wad możliwe kodu twardych do znalezienia.<br /><br /> Ma również konsolidator **/WX** opcji. Aby uzyskać więcej informacji, zobacz [/WX (Traktuj ostrzeżenia konsolidatora jak błędy)](wx-treat-linker-warnings-as-errors.md).|
-|**/w1**_nnnn_<br /><br /> **/w2**_nnnn_<br /><br /> **/w3**_nnnn_<br /><br /> **/ W4**_nnnn_|Ustawia poziom ostrzeżeń dla określonego przez numer ostrzeżenia _nnnn_. Dzięki temu można zmienić zachowanie kompilatora tego ostrzeżenia, gdy ustawiono określonego poziomu ostrzeżeń. Te opcje w połączeniu z innymi opcjami ostrzeżenie umożliwia wymuszanie własnych kodowania standardów ostrzeżenia, a nie domyślnej, jednego z dostarczanych przez program Visual Studio.<br /><br /> Na przykład **/w34326** powoduje, że C4326 zostanie wygenerowany jako włączonego ostrzeżenia poziomu 3 zamiast poziomu 1. Jeśli kompilujesz przy użyciu zarówno **/w34326** opcji i **/W2** opcji Ostrzeżenie C4326 nie są generowane.|
-|**/WD**_nnnn_|Umożliwia pominięcie ostrzeżenia kompilatora, który jest określony przez _nnnn_.<br /><br /> Na przykład **/wd4326** pomija C4326 ostrzeżenia kompilatora.|
-|**/we**_nnnn_|Traktuje ostrzeżenia kompilatora, który jest określony przez _nnnn_ jako błąd.<br /><br /> Na przykład **/we4326** powoduje, że numer ostrzeżenia C4326 być traktowane jako błąd przez kompilator.|
-|**/WO**_nnnn_|Raporty kompilatora ostrzeżenie oznacza to określone przez _nnnn_ tylko raz.<br /><br /> Na przykład **/wo4326** powoduje, że ostrzeżenie C4326 należy podać tylko raz, po raz pierwszy jest napotkał przez kompilator.|
+|**/w**|Pomija wszystkie ostrzeżenia kompilatora.|
+|**/W0**<br /><br /> **/W1**<br /><br /> **/W2**<br /><br /> **/W3**<br /><br /> **/W4**|Określa poziom ostrzeżeń generowanych przez kompilator. Prawidłowe poziomy ostrzeżeń mieszczą się w zakresie od 0 do 4:<br />**/W0** pomija wszystkie ostrzeżenia. Jest to odpowiednik **/w**.<br />**/W1** wyświetla ostrzeżenie poziomu 1 (poważny). **/W1** jest domyślnym ustawieniem w kompilator wiersza polecenia.<br />**/W2** Wyświetla ostrzeżenia poziomu 1 i 2 (duże).<br />**/W3** Wyświetla ostrzeżenia poziomu 1, poziomu 2 i 3 (jakość produkcji). **/W3** jest domyślnym ustawieniem w IDE.<br />**/W4** Wyświetla ostrzeżenia poziomów 1, 2 i 3 oraz wszystkie ostrzeżenia poziomu 4 (informacje), które nie są domyślnie wyłączone. Zalecamy użycie tej opcji w celu zapewnienia ostrzeżeń przypominających lint. W przypadku nowego projektu najlepiej jest używać **/W4** we wszystkich kompilacjach. Dzięki temu najmniejsza możliwa trudno znaleźć wady kodu.|
+|**/Wall**|Wyświetla wszystkie ostrzeżenia wyświetlane przez **/W4** i wszystkie inne ostrzeżenia, które nie zawiera **/W4** — na przykład ostrzeżenia, które są domyślnie wyłączone. Aby uzyskać więcej informacji, zobacz [ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md).|
+|**/WV**\[ **:** _wersja_]|Wyświetla tylko ostrzeżenia wprowadzone w *wersji* kompilatora i starszej. Można użyć tej opcji, aby pominąć nowe ostrzeżenia w kodzie podczas migracji do nowszej wersji kompilatora i zachować istniejący proces kompilacji podczas ich usuwania. Opcjonalna *wersja* parametru przyjmuje postać *NN*[. *mm*[. *BBBBB*]] gdzie *NN* jest głównym numerem wersji, *mm* to opcjonalny numer wersji pomocniczej, a *BBBBB* to opcjonalny numer kompilacji kompilatora. Na przykład użyj */WV: 17* do wyświetlania ostrzeżeń wprowadzonych w programie Visual Studio 2012 (oznacza to, że dowolna wersja kompilatora ma wersję główną 17) lub starszą, ale Pomijaj ostrzeżenia wprowadzone w Visual Studio 2013 (wersja główna 18) i nowsze. Domyślnie **/WV** korzysta z bieżącego numeru wersji kompilatora, a żadne ostrzeżenia nie są pomijane. Aby uzyskać informacje o tym, które ostrzeżenia są pomijane przez wersję kompilatora, zobacz [ostrzeżenia kompilatora według wersji kompilatora](../../error-messages/compiler-warnings/compiler-warnings-by-compiler-version.md).|
+|**/WX**|Traktuje wszystkie ostrzeżenia kompilatora jako błędy. W przypadku nowego projektu najlepiej jest używać **/WX** we wszystkich kompilacjach. rozwiązanie wszystkich ostrzeżeń zapewnia możliwie trudne do znalezienia wady kodu.<br /><br /> Konsolidator ma również opcję **/WX** . Aby uzyskać więcej informacji, zobacz [/WX (Traktuj ostrzeżenia konsolidatora jako błędy)](wx-treat-linker-warnings-as-errors.md).|
+|**/W1**_nnnn_<br /><br /> **/W2**_nnnn_<br /><br /> **/W3**_nnnn_<br /><br /> **/W4**_nnnn_|Ustawia poziom ostrzeżeń dla ostrzegawczego numeru określonego przez _nnnn_. Pozwala to zmienić zachowanie kompilatora dla tego ostrzeżenia po ustawieniu określonego poziomu ostrzeżenia. Możesz użyć tych opcji w połączeniu z innymi opcjami ostrzeżenia, aby wymusić własne standardy kodowania dla ostrzeżeń, a nie domyślne, które są udostępniane przez program Visual Studio.<br /><br /> Na przykład **/w34326** powoduje generowanie C4326 jako ostrzeżenia poziomu 3 zamiast poziomu 1. Jeśli kompilujesz przy użyciu opcji **/w34326** i opcji **/W2** , ostrzeżenie C4326 nie jest generowane.|
+|**/WD**_nnnn_|Pomija ostrzeżenie kompilatora określone przez _nnnn_.<br /><br /> Na przykład **/wd4326** pomija ostrzeżenia kompilatora C4326.|
+|**/we**_nnnn_|Traktuje Ostrzeżenie kompilatora, który jest określony przez _nnnn_ jako błąd.<br /><br /> Na przykład **/we4326** powoduje, że numer ostrzeżenia C4326 jest traktowany jako błąd przez kompilator.|
+|**/wo**_nnnn_|Raportuje Ostrzeżenie kompilatora, który jest określony przez _nnnn_ tylko raz.<br /><br /> Na przykład **/wo4326** powoduje, że ostrzeżenie C4326 jest raportowane tylko raz, przy pierwszym napotkaniu przez kompilator.|
 
-Jeśli przy użyciu jednej z opcji ostrzeżenia podczas tworzenia prekompilowanego nagłówka przy użyciu [/Yc](yc-create-precompiled-header-file.md) opcji każde użycie prekompilowanego nagłówka przy użyciu [/Yu](yu-use-precompiled-header-file.md) opcja powoduje, że te same opcje ostrzeżenie obowiązywać ponownie. Można zastąpić opcje ostrzeżenie, ustaw we prekompilowanym nagłówku, używając innej opcji ostrzeżenie w wierszu polecenia.
+Jeśli użyjesz dowolnej opcji ostrzeżenia podczas tworzenia prekompilowanego nagłówka przy użyciu opcji [/YC](yc-create-precompiled-header-file.md) , każde użycie prekompilowanego nagłówka przy użyciu opcji [/Yu](yu-use-precompiled-header-file.md) powoduje, że te same opcje ostrzeżeń będą obowiązywać ponownie. Opcje ostrzeżeń ustawione w prekompilowanym nagłówku można zastąpić przy użyciu innej opcji ostrzegawczej w wierszu polecenia.
 
-Możesz użyć [ostrzeżenie #pragma](../../preprocessor/warning.md) dyrektywy, aby kontrolować poziom ostrzeżenia, to znaczy zgłaszane w czasie kompilacji w plikach określonego źródła.
+Za pomocą dyrektywy [ostrzegawczej #pragma](../../preprocessor/warning.md) można kontrolować poziom ostrzeżeń raportowany w czasie kompilacji w określonych plikach źródłowych.
 
-Dyrektywy pragma ostrzeżeń w kodzie źródłowym nie ma wpływu na **Wn** opcji.
+Opcja **/w** nie ma wpływ na dyrektywy pragma ostrzeżenia w kodzie źródłowym.
 
-[Tworzenie dokumentacji błędy](../../error-messages/compiler-errors-1/c-cpp-build-errors.md) opisuje ostrzeżenia oraz poziomy ostrzeżeń i wskazuje, dlaczego niektóre instrukcje mogą nie można skompilować jako planowane.
+[Dokumentacja dotycząca błędów kompilacji](../../error-messages/compiler-errors-1/c-cpp-build-errors.md) zawiera opis ostrzeżeń i poziomów ostrzeżeń oraz wskazuje, dlaczego niektóre instrukcje mogą nie zostać skompilowane zgodnie z oczekiwaniami.
 
-### <a name="to-set-the-compiler-options-in-the-visual-studio-development-environment"></a>Aby ustawić opcje kompilatora w środowisku programowania Visual Studio
+### <a name="to-set-the-compiler-options-in-the-visual-studio-development-environment"></a>Aby ustawić opcje kompilatora w środowisku deweloperskim programu Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
-1. Aby ustawić **/W0**, **/W1**, **/W2**, **/W3**, **/W4**, **/Wall**, **WV**, **/WX** lub **/WX-** opcje, wybierz opcję **właściwości konfiguracji** > **C / C++**   >  **Ogólne** stronę właściwości.
+1. Aby ustawić opcje **/W0**, **/W1**, **/W2**, **/W3**, **/W4**, **/Wall**, **/WV**, **/WX** lub **/WX-** , wybierz opcję **Właściwości konfiguracji** > **C/C++**  > **Ogólne** Strona właściwości.
 
-   - Aby ustawić **/W0**, **/W1**, **/W2**, **/W3**, **/W4**, lub **/Wall** modyfikowanie opcji **poziom ostrzeżeń** właściwości.
+   - Aby ustawić opcje **/W0**, **/W1**, **/W2**, **/W3**, **/W4**lub **/Wall** , zmodyfikuj Właściwość **poziom ostrzeżeń** .
 
-   - Aby ustawić **/WX** lub **/WX-** zmodyfikować opcje **Traktuj ostrzeżenia jako błędy** właściwości.
+   - Aby ustawić opcje **/WX** lub **/WX-** , zmodyfikuj Właściwość **Traktuj ostrzeżenia jako błędy** .
 
-   - Aby ustawić wersji dla **WV** opcji, należy wprowadzić numer wersji kompilatora w **wersja ostrzeżeń** właściwości.
+   - Aby ustawić wersję dla opcji **/WV** , wprowadź numer wersji kompilatora we właściwości **Ostrzeżenie o wersji** .
 
-1. Aby ustawić **/wd** lub **/we** opcje, wybierz opcję **właściwości konfiguracji** > **C/C++**  >   **Zaawansowane** stronę właściwości.
+1. Aby ustawić opcje **/WD** lub **/we** , wybierz opcję **Właściwości konfiguracji** > **C/C++**  > **zaawansowanej** strony właściwości.
 
-   - Aby ustawić **/wd** wybierz **Wyłącz określone ostrzeżenia** właściwość kontrolka listy rozwijanej, a następnie wybierz **Edytuj**. W polu edycji w **Wyłącz określone ostrzeżenia** okno dialogowe, wprowadź numer ostrzeżenia. Aby wprowadzić więcej niż jeden ostrzeżenie, oddziel wartości przy użyciu średnika (**;**). Na przykład, aby wyłączyć C4001 i C4010, wprowadź **4001; 4010**. Wybierz **OK** Aby zapisać zmiany i powrócić do **stron właściwości** okna dialogowego.
+   - Aby ustawić opcję **/WD** , wybierz kontrolkę **Wyłącz określone ostrzeżenia** , a następnie wybierz pozycję **Edytuj**. W polu edycji okna dialogowego **wyłączanie określonych ostrzeżeń** wprowadź numer ostrzegawczy. Aby wprowadzić więcej niż jedno ostrzeżenie, rozdziel wartości przy użyciu średnika ( **;** ). Na przykład aby wyłączyć zarówno C4001, jak i C4010, wprowadź **4001; 4010**. Wybierz **przycisk OK** , aby zapisać zmiany i powrócić do okna dialogowego **strony właściwości** .
 
-   - Można ustawić **/we** opcji wybierz **Traktuj konkretne ostrzeżenia jako błędy** właściwość kontrolka listy rozwijanej, a następnie wybierz **Edytuj**. W polu edycji w **Traktuj konkretne ostrzeżenia jako błędy** okno dialogowe, wprowadź numer ostrzeżenia. Aby wprowadzić więcej niż jeden ostrzeżenie, oddziel wartości przy użyciu średnika (**;**). Na przykład, aby traktować C4001 i C4010 jako błędy, wprowadź **4001; 4010**. Wybierz **OK** Aby zapisać zmiany i powrócić do **stron właściwości** okna dialogowego.
+   - Aby ustawić opcję **/we** , zaznacz kontrolkę **Traktuj określone ostrzeżenia jako błędy** , a następnie wybierz pozycję **Edytuj**. W polu edycji w oknie dialogowym **Traktuj określone ostrzeżenia jako błędy** wprowadź numer ostrzegawczy. Aby wprowadzić więcej niż jedno ostrzeżenie, rozdziel wartości przy użyciu średnika ( **;** ). Na przykład, aby traktować zarówno C4001, jak i C4010 jako błędy, wprowadź **4001; 4010**. Wybierz **przycisk OK** , aby zapisać zmiany i powrócić do okna dialogowego **strony właściwości** .
 
-1. Aby ustawić **/wo** wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** Strona właściwości. Wpisz opcję kompilatora w **dodatkowe opcje** pole.
+1. Aby ustawić opcję **/wo** , wybierz pozycję **Właściwości konfiguracji** > **CC++ /**  > strony właściwości **wiersza polecenia** . Wprowadź opcję kompilatora w polu **dodatkowe opcje** .
 
-1. Wybierz **OK** Aby zapisać zmiany.
+1. Wybierz **przycisk OK** , aby zapisać zmiany.
 
 ### <a name="to-set-the-compiler-option-programmatically"></a>Aby programowo ustawić opcję kompilatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.WarningLevel%2A>, <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.WarnAsError%2A>, <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DisableSpecificWarnings%2A>, i <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.WarningLevel%2A>, <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.WarnAsError%2A>, <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DisableSpecificWarnings%2A>i <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora MSVC](compiler-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)\
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

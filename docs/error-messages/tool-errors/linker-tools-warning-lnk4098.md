@@ -1,40 +1,41 @@
 ---
 title: Ostrzeżenie LNK4098 narzędzi konsolidatora
-ms.date: 03/26/2019
+description: Opisuje, w jaki sposób niezgodne biblioteki powodują ostrzeżenia narzędzi konsolidatora LNK4098 narzędzi KONSOLIDATORA, oraz sposób używania/NODEFAULTLIB do jego naprawy.
+ms.date: 12/02/2019
 f1_keywords:
 - LNK4098
 helpviewer_keywords:
 - LNK4098
 ms.assetid: 1f1b1408-1316-4e34-80f5-6a02f2db0ac1
-ms.openlocfilehash: 66cf1a1bc75405ffc9bae8158bfc8682776a8228
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d0c7da0614651a98d5ed4f3bd3676c7d837ce67
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408098"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74682940"
 ---
 # <a name="linker-tools-warning-lnk4098"></a>Ostrzeżenie LNK4098 narzędzi konsolidatora
 
-> defaultlib "*biblioteki*" powoduje konflikt z innymi bibliotekami; Użyj/nodefaultlib:*biblioteki*
+> DEFAULTLIB "*Biblioteka*" powoduje konflikt z użyciem innych libs; Użyj/NODEFAULTLIB:*Library*
 
-Próbujesz połączyć się z bibliotekami niezgodne.
+Próbujesz połączyć się z niezgodnymi bibliotekami.
 
 > [!NOTE]
-> Biblioteki wykonawcze zawierają teraz dyrektywy, aby zapobiec mieszaniu różnych typów. W tym samym programie otrzyma tego ostrzeżenia, Jeśli spróbujesz użyć różnych typów lub debugowania i bez debugowania wersji biblioteki wykonawczej. Na przykład, jeśli skompilowany jeden plik, aby użyć jednego rodzaju biblioteki wykonawczej i inny plik używać innego typu (na przykład debug i sprzedaży detalicznej) i próbował łączyć je, otrzymasz ostrzeżenie. Należy skompilować wszystkich plików źródłowych przy użyciu tej samej biblioteki wykonawczej. Aby uzyskać więcej informacji, zobacz [/ / MD, / MT, /LD (Korzystaj z bibliotek wykonawczych)](../../build/reference/md-mt-ld-use-run-time-library.md) opcje kompilatora.
+> Biblioteki czasu wykonywania zawierają teraz dyrektywy, które uniemożliwiają mieszanie różnych typów. To ostrzeżenie zostanie wyświetlone, jeśli spróbujesz użyć różnych typów lub debugowania i niedebugowanych wersji biblioteki wykonawczej w tym samym programie. Na przykład w przypadku skompilowania jednego pliku do użycia jednego rodzaju biblioteki wykonawczej i innego pliku do użycia innego rodzaju (na przykład debugowania i sprzedaży detalicznej) i nastąpiło połączenie, zostanie wyświetlone ostrzeżenie. Należy skompilować wszystkie pliki źródłowe, aby użyć tej samej biblioteki wykonawczej. Aby uzyskać więcej informacji, zobacz Opcje kompilatora [/MD,/MT,/LD (Use Run-Time Library)](../../build/reference/md-mt-ld-use-run-time-library.md) .
 
-Możesz użyć konsolidatora [opisu](../../build/reference/verbose-print-progress-messages.md) przełącznika, aby dowiedzieć się, które biblioteki wyszukiwania konsolidatora. Na przykład gdy plik wykonywalny używa biblioteki wykonawczej wielowątkowych, -debug, lista zgłoszonych powinna zawierać LIBCMT.lib, a nie LIBCMTD.lib, MSVCRT.lib lub biblioteki MSVCRTD.lib. Można stwierdzić, konsolidator, aby Ignoruj nieprawidłowe biblioteki czasu wykonywania przy użyciu [/nodefaultlib](../../build/reference/nodefaultlib-ignore-libraries.md) dla każdej biblioteki, aby zignorować.
+Aby dowiedzieć się, które biblioteki przeszukuje konsolidator, można użyć przełącznika [/verbose: lib](../../build/reference/verbose-print-progress-messages.md) . Na przykład, gdy plik wykonywalny używa wielowątkowych bibliotek czasu uruchomieniowego, lista raportowana powinna zawierać LIBCMT. lib, a nie LIBCMTD. lib, MSVCRT. lib lub MSVCRTD. lib. Możesz powiedzieć konsolidatorowi, aby zignorować niepoprawne biblioteki czasu wykonywania za pomocą [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) dla każdej biblioteki, która ma być ignorowana.
 
-W poniższej tabeli przedstawiono, które biblioteki należy zignorować w zależności od tego, które biblioteki czasu wykonywania, do którego chcesz użyć. W wierszu polecenia, użyj jednej **/nodefaultlib** opcję dla wszystkich bibliotek do zignorowania. W programie Visual Studio IDE, oddzielnych bibliotek do zignorowania średnikami w **Ignoruj określone biblioteki domyślne** właściwości.
+W poniższej tabeli przedstawiono biblioteki, które powinny być ignorowane w zależności od biblioteki wykonawczej, której chcesz użyć. W wierszu polecenia Użyj jednej opcji **/NODEFAULTLIB** dla każdej biblioteki do ignorowania. W środowisku IDE programu Visual Studio oddziel biblioteki do ignorowania przez średnika w właściwości **Ignoruj określone biblioteki domyślne** .
 
 | Aby użyć tej biblioteki wykonawczej | Ignoruj te biblioteki |
 |-----------------------------------|----------------------------|
-| Wielowątkowe (libcmt.lib) | msvcrt.lib; libcmtd.lib; msvcrtd.lib |
-| Wielowątkowe przy użyciu biblioteki DLL (msvcrt.lib) | libcmt.lib; libcmtd.lib; msvcrtd.lib |
-| Debuguj wielowątkowe (libcmtd.lib) | libcmt.lib; msvcrt.lib; msvcrtd.lib |
-| Debuguj wielowątkowe przy użyciu biblioteki DLL (msvcrtd.lib) | libcmt.lib; msvcrt.lib; libcmtd.lib |
+| Wielowątkowy (libcmt. lib) | msvcrt. lib; libcmtd. lib; msvcrtd. lib |
+| Wielowątkowe używanie biblioteki DLL (msvcrt. lib) | libcmt. lib; libcmtd. lib; msvcrtd. lib |
+| Debuguj wielowątkowe (libcmtd. lib) | libcmt. lib; msvcrt. lib; msvcrtd. lib |
+| Debuguj wielowątkowość za pomocą biblioteki DLL (msvcrtd. lib) | libcmt. lib; msvcrt. lib; libcmtd. lib |
 
-Na przykład Odebrano to ostrzeżenie, jeśli chcesz utworzyć plik wykonywalny, korzysta z wersji biblioteki DLL bez debugowania biblioteki wykonawczej, za pomocą konsolidatora, można użyć następujących opcji:
+Na przykład, jeśli otrzymasz to ostrzeżenie i chcesz utworzyć plik wykonywalny, który używa niedebugowanej wersji biblioteki DLL bibliotek czasu wykonywania, można użyć następujących opcji z konsolidatorem:
 
 ```cmd
-/NODEFAULTLIB:libcmt.lib NODEFAULTLIB:libcmtd.lib /NODEFAULTLIB:msvcrtd.lib
+/NODEFAULTLIB:libcmt.lib /NODEFAULTLIB:libcmtd.lib /NODEFAULTLIB:msvcrtd.lib
 ```

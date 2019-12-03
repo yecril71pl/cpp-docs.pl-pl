@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4516
+title: Ostrzeżenie kompilatora (poziom 4) C4516
 ms.date: 11/04/2016
 f1_keywords:
 - C4516
 helpviewer_keywords:
 - C4516
 ms.assetid: 6677bb1f-d26e-4ab9-8644-6b5a2a8f4ff8
-ms.openlocfilehash: 8020103e8e20bf1a5e955cbfdfafc6a328b439e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23e1ec488a661e68d5b53fba50661354182a1015
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221036"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683174"
 ---
-# <a name="compiler-warning-level-4-c4516"></a>Kompilator ostrzeżenie (poziom 4) C4516
+# <a name="compiler-warning-level-4-c4516"></a>Ostrzeżenie kompilatora (poziom 4) C4516
 
-"class::symbol": deklaracje dostępu są przestarzałe; deklaracje using składowej zapewniają lepszą alternatywę
+"Class:: symbol": deklaracje dostępu są przestarzałe; deklaracje using składowej zapewniają lepszą alternatywę
 
-Komitet ANSI C++ zadeklarował deklaracje dostępu (zmienianie dostępu do elementu członkowskiego w klasie pochodnej bez [przy użyciu](../../cpp/using-declaration.md) — słowo kluczowe) będą nieaktualne. Deklaracje dostępu nie mogą być obsługiwane przez przyszłych wersji języka c++.
+Komitet ANSI C++ zadeklaruje deklaracje dostępu (zmiana dostępu elementu członkowskiego w klasie pochodnej bez słowa kluczowego [using](../../cpp/using-declaration.md) ) na przestarzałą. Deklaracje dostępu mogą nie być obsługiwane przez przyszłe C++wersje programu.
 
-Poniższy przykład spowoduje wygenerowanie C4516:
+Poniższy przykład generuje C4516:
 
-```
+```cpp
 // C4516.cpp
 // compile with: /W4
 class A

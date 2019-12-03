@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4339
+title: Ostrzeżenie kompilatora (poziom 4) C4339
 ms.date: 11/04/2016
 f1_keywords:
 - C4339
 helpviewer_keywords:
 - C4339
 ms.assetid: 5b83353d-7777-4afb-8476-3c368349028c
-ms.openlocfilehash: bc9d335b3a09f7953a12b388d5bb40cc4d433969
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fffdaa255f6b8f2259488df610f163bebf8d6dec
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400828"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683291"
 ---
-# <a name="compiler-warning-level-4-c4339"></a>Kompilator ostrzeżenie (poziom 4) C4339
+# <a name="compiler-warning-level-4-c4339"></a>Ostrzeżenie kompilatora (poziom 4) C4339
 
-"type": użycie niezdefiniowanego typu wykryte w WinRT, czy CLR meta-data - użycie tego typu może prowadzić do wyjątku czasu wykonywania
+"Type": użycie niezdefiniowanego typu wykryte w metadanych WinRT lub CLR — użycie tego typu może prowadzić do wyjątku czasu wykonywania
 
-Typ nie został zdefiniowany w kodzie, który został skompilowany dla środowiska uruchomieniowego Windows lub środowisko uruchomieniowe języka wspólnego. Zdefiniuj typ, aby uniknąć wyjątek czasu wykonywania to możliwe.
+Nie zdefiniowano typu w kodzie, który został skompilowany dla środowisko wykonawcze systemu Windows lub środowiska uruchomieniowego języka wspólnego. Zdefiniuj typ, aby uniknąć możliwego wyjątku środowiska uruchomieniowego.
 
-To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+To ostrzeżenie jest domyślnie wyłączone. Aby uzyskać więcej informacji [, zobacz ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
-Poniższy przykład generuje C4339 i pokazuje, jak go naprawić:
+Poniższy przykład generuje C4339 i pokazuje, jak to naprawić:
 
-```
+```cpp
 // C4339.cpp
 // compile with: /W4 /clr /c
 // C4339 expected

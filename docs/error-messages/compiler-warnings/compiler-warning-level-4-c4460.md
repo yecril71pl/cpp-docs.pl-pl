@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4460
+title: Ostrzeżenie kompilatora (poziom 4) C4460
 ms.date: 11/04/2016
 f1_keywords:
 - C4460
 helpviewer_keywords:
 - C4460
 ms.assetid: c97ac1c9-598d-479e-bfff-c993690c4f3d
-ms.openlocfilehash: a42562a2c35bb56de4ce7147e199f4db2dddb684
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f394af9dc0362035b9361981fdca077a3a915d5
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400815"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74682929"
 ---
-# <a name="compiler-warning-level-4-c4460"></a>Kompilator ostrzeżenie (poziom 4) C4460
+# <a name="compiler-warning-level-4-c4460"></a>Ostrzeżenie kompilatora (poziom 4) C4460
 
-WinRT, czy CLR operator 'operator', ma parametr przekazywany przez odwołanie. WinRT, czy CLR operator 'operator' ma semantykę różną od operatora C++ "operator", czy zamierzasz przekazać przez wartość?
+Operator WinRT lub CLR "operator" ma parametr zakończony przez odwołanie. Operator WinRT lub CLR ma inną semantykę z C++ operatora "operator", czy chodziło o wartość?
 
-Wartość jest przekazywany przez odwołanie do operatorów środowiska wykonawczego Windows, czy CLR zdefiniowane przez użytkownika. Jeśli wartość zostanie zmieniona w funkcję, należy pamiętać, że wartość zwracana po wywołaniu funkcji zostanie przypisana wartość zwracaną przez funkcję. W standardzie języka C++ zmieniona wartość jest widoczna po wywołaniu funkcji.
+Wartość została przeniesiona przez odwołanie do zdefiniowanej przez użytkownika środowisko wykonawcze systemu Windows lub operatora CLR. Jeśli wartość zostanie zmieniona wewnątrz funkcji, należy pamiętać, że wartość zwracana po wywołaniu funkcji zostanie przypisana wartość zwracana funkcji. W warstwie C++standardowa zmieniona wartość jest odzwierciedlona po wywołaniu funkcji.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C4460 i pokazuje, jak go naprawić.
+Poniższy przykład generuje C4460 i pokazuje, jak rozwiązać ten problem.
 
-```
+```cpp
 // C4460.cpp
 // compile with: /W4 /clr
 #include <stdio.h>
