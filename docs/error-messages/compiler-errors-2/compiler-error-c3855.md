@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3855
 ms.assetid: ed90f8c0-4154-4243-b066-493913df5727
-ms.openlocfilehash: 12ee1c6aa5f414a9cf3084831c956514593102c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 226f87ad428e9f005e36823834cedc2b3ee0b8c6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265467"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754826"
 ---
 # <a name="compiler-error-c3855"></a>Błąd kompilatora C3855
 
-"class": parametr typu "param" jest niezgodny z deklaracją
+"Class": parametr typu "param" jest niezgodny z deklaracją
 
-Kompilator odnaleźć szablonu nontype lub parametrów ogólnych o różnych nazwach. Taka sytuacja może wystąpić, gdy parametr szablonu określonego w definicji specjalizacja szablonu jest niezgodna z jego deklaracji.
+Kompilator odnalazł szablon bez typu lub parametry ogólne o różnych nazwach. Taka sytuacja może wystąpić, gdy określony parametr szablonu w definicji specjalizacji szablonu jest niezgodny z deklaracją.
 
-Poniższy przykład spowoduje wygenerowanie C3855:
+Poniższy przykład generuje C3855:
 
-```
+```cpp
 // C3855.cpp
 template <int N>
 struct C {
@@ -34,7 +34,7 @@ void C<N>::f() {}   // C3855
 
 Możliwe rozwiązanie:
 
-```
+```cpp
 // C3855b.cpp
 // compile with: /c
 template <int N>
@@ -46,9 +46,9 @@ template <int N>
 void C<N>::f() {}
 ```
 
-C3855 może również wystąpić, gdy za pomocą typów ogólnych:
+C3855 może również wystąpić przy użyciu typów ogólnych:
 
-```
+```cpp
 // C3855c.cpp
 // compile with: /clr
 generic <class T>
@@ -65,7 +65,7 @@ ref struct GC1<T>::GC2 { };   // C3855
 
 Możliwe rozwiązanie:
 
-```
+```cpp
 // C3855d.cpp
 // compile with: /clr /c
 generic <class T>

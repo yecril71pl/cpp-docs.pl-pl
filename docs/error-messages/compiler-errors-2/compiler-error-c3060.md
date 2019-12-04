@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3060
 ms.assetid: 6282bb92-0546-4b59-9435-d3840bf93bdb
-ms.openlocfilehash: c77af7fa1220aa5211d480cddf3bf0979c642ade
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6eba6264caf3e9f443e1b614a62b53708688ab95
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265545"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749558"
 ---
 # <a name="compiler-error-c3060"></a>Błąd kompilatora C3060
 
-"członek": funkcja zaprzyjaźniona nie może być zdefiniowana wewnątrz klasy przy użyciu kwalifikowanej nazwy (go może być tylko zadeklarowana)
+"member": funkcja zaprzyjaźniona nie może być zdefiniowana wewnątrz klasy przy użyciu kwalifikowanej nazwy (może być tylko zadeklarowana)
 
-Funkcja zaprzyjaźniona został zdefiniowany przy użyciu kwalifikowanej nazwy, co jest niedozwolone.
+Funkcja zaprzyjaźniona została zdefiniowana przy użyciu kwalifikowanej nazwy, co jest niedozwolone.
 
-Poniższy przykład spowoduje wygenerowanie C3060:
+Poniższy przykład generuje C3060:
 
-```
+```cpp
 // C3060.cpp
 class A {
 public:

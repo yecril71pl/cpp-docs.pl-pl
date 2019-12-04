@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3206
 ms.assetid: d62995b5-e349-4418-bbe8-8a5e776ca7b0
-ms.openlocfilehash: 665244cbfc87f32274f9eaf9afacfb1caad50659
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a602238ca5a2f2a64eaa601cc6733a897b9fdb4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402687"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738690"
 ---
 # <a name="compiler-error-c3206"></a>Błąd kompilatora C3206
 
-'Funkcja': nieprawidłowy typ argumentu dla "param", po której brakuje listy argumentów typu na typ klasy "typename"
+"Function": nieprawidłowy typ argumentu dla "param", brakująca lista argumentów typu dla klasy typu "typename"
 
-Funkcja szablonu jest zdefiniowany jako biorąc argument typu szablonu. Jednak został przekazany argument szablonu szablonu.
+Funkcja szablonu jest definiowana jako przyjmujący argument typu szablonu. Jednak argument szablonu szablonu został przekazano.
 
-Poniższy przykład spowoduje wygenerowanie C3206:
+Poniższy przykład generuje C3206:
 
-```
+```cpp
 // C3206.cpp
 template <class T>
 void f() {}
@@ -38,7 +38,7 @@ void f1() {
 
 Możliwe rozwiązanie:
 
-```
+```cpp
 // C3206b.cpp
 // compile with: /c
 template <class T>
@@ -52,9 +52,9 @@ void f1() {
 }
 ```
 
-C3206 może również wystąpić, gdy za pomocą typów ogólnych:
+C3206 może również wystąpić przy użyciu typów ogólnych:
 
-```
+```cpp
 // C3206c.cpp
 // compile with: /clr
 generic <class GT1>
@@ -70,7 +70,7 @@ int main() {
 
 Możliwe rozwiązanie:
 
-```
+```cpp
 // C3206d.cpp
 // compile with: /clr
 generic <class GT1>
@@ -84,9 +84,9 @@ int main() {
 }
 ```
 
-Szablon klasy nie jest dozwolona jako argument typu szablonu. Poniższy przykład wywołuje C3206:
+Szablon klasy jest niedozwolony jako argument typu szablonu. Poniższy przykład podnosi C3206:
 
-```
+```cpp
 // C3206e.cpp
 template <class T>
 struct S {};
@@ -103,7 +103,7 @@ int main() {
 
 Możliwe rozwiązanie:
 
-```
+```cpp
 // C3206f.cpp
 template <class T>
 struct S {};
@@ -118,9 +118,9 @@ int main() {
 }
 ```
 
-Jeśli konieczne jest parametru szablonu, następnie należy zabalit funkcja z klasą szablonu, który przyjmuje parametru szablonu:
+Jeśli wymagany jest parametr szablonu szablonu, należy otoczyć funkcję klasą szablonu, która przyjmuje parametr szablonu szablonu:
 
-```
+```cpp
 // C3206g.cpp
 template <class T>
 struct S {};

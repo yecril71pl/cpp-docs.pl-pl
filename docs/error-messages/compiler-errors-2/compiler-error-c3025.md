@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3025
 ms.assetid: 4442f5a3-d9ea-4873-b1fb-e7e5bd3cbe5e
-ms.openlocfilehash: bb3337cb563125ce0329146f64c4da3f33e28ce7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0aac601285d4f345809f805fcccd62b7de7bab1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360076"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741979"
 ---
 # <a name="compiler-error-c3025"></a>Błąd kompilatora C3025
 
-"w klauzuli": Oczekiwano wyrażenia typu całkowitego
+"klauzula": oczekiwano wyrażenia całkowitego
 
-Klauzula wymaga wyrażeniem liczby całkowitej, ale zostało przekazane wyrażenie niebędąca.
+Klauzula wymaga wyrażenia Integer, ale otrzymała wyrażenie niebędące liczbą całkowitą.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3025.
+Poniższy przykład generuje C3025.
 
-```
+```cpp
 // C3025.cpp
 // compile with: /openmp /link vcomps.lib
 #include <stdio.h>

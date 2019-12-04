@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2913
 ms.assetid: c6cf6090-02e8-49a5-913f-5bc6f864b769
-ms.openlocfilehash: deeabdb08f4b0fb3cd722d5d33a4d2cfffb15d61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89f9e9393d0b4ee4075b24c20f0755a5317e94eb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256950"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761075"
 ---
 # <a name="compiler-error-c2913"></a>Błąd kompilatora C2913
 
-jawna specjalizacja; "deklaracją" nie jest specjalizacją szablonu klasy
+Jawna specjalizacja; Deklaracja nie jest specjalizacją szablonu klasy
 
-Nie można specjalizować klasy-template.
+Nie można specjalizacji klasy niebędącej szablonem.
 
-Poniższy przykład spowoduje wygenerowanie C2913:
+Poniższy przykład generuje C2913:
 
-```
+```cpp
 // C2913.cpp
 // compile with: /c
 class X{};

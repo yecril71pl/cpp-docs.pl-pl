@@ -1,39 +1,39 @@
 ---
-title: Compiler Error C3489
+title: Błąd kompilatora C3489
 ms.date: 11/04/2016
 f1_keywords:
 - C3489
 helpviewer_keywords:
 - C3489
 ms.assetid: 47b58d69-459d-4499-abc7-5f0b9303d773
-ms.openlocfilehash: d2ba8d919ab71b566950cc227588e071d24016bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67eaa9806dff96783f391c46c890b34e1ceef5a3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381114"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738417"
 ---
-# <a name="compiler-error-c3489"></a>Compiler Error C3489
+# <a name="compiler-error-c3489"></a>Błąd kompilatora C3489
 
-"var" jest wymagana, gdy domyślny tryb przechwytywania to przez wartość
+element "var" jest wymagany, gdy domyślny tryb przechwytywania jest przez wartość
 
-Po określeniu, że domyślny tryb przechwytywania wyrażenia lambda jest przez wartość, nie można przekazać zmiennej przez wartość do klauzuli przechwytywania, to wyrażenie.
+Po określeniu, że domyślny tryb przechwytywania dla wyrażenia lambda jest przez wartość, nie można przekazać zmiennej przez wartość do klauzuli przechwytywania tego wyrażenia.
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-- Nie jawnie przekazać zmienną do klauzuli przechwytywania, lub
+- Nie przekazuj jawnie zmiennej do klauzuli Capture lub
 
-- Przez wartość nie zostanie podana jako domyślny tryb przechwytywania, lub
+- Nie określaj według wartości jako domyślnego trybu przechwytywania ani
 
-- Określ przez odwołanie jako domyślny tryb przechwytywania, lub
+- Określ jako domyślny tryb przechwytywania, lub
 
-- W odniesieniu do klauzuli przechwytywania, należy przekazać zmienną. (Może to zmienić zachowanie Wyrażenie lambda).
+- Przekaż zmienną przez odwołanie do klauzuli Capture. (Może to spowodować zmianę zachowania wyrażenia lambda).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje zmiennej C3489 `n` pojawia się według wartości w klauzuli capture wyrażenia lambda, której domyślnym trybem jest przez wartość:
+Poniższy przykład generuje zmienną C3489 `n` pojawia się według wartości w klauzuli Capture wyrażenia lambda, którego tryb domyślny ma wartość:
 
-```
+```cpp
 // C3489a.cpp
 
 int main()
@@ -45,9 +45,9 @@ int main()
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład przedstawia cztery możliwych rozwiązań do C3489:
+W poniższym przykładzie przedstawiono cztery możliwe rozwiązania C3489:
 
-```
+```cpp
 // C3489b.cpp
 
 int main()

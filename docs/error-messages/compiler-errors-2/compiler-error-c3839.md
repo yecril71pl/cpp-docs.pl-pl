@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3839
 ms.assetid: 0957faff-1e9f-439b-876b-85bd8d2c578d
-ms.openlocfilehash: b8382213fbe7cc953dafd9610bfb993ba7837947
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19a1055a461d76856cc3bccbd9f8af0f0dcff356
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400074"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754930"
 ---
 # <a name="compiler-error-c3839"></a>Błąd kompilatora C3839
 
-Nie można zmienić wyrównania w zarządzanej lub typu WinRT
+nie można zmienić wyrównania w typie zarządzanym lub WinRT
 
-Wyrównanie zmiennych w zarządzanych lub typów środowiska wykonawczego Windows jest kontrolowany przez CLR lub Windows Runtime i nie można modyfikować za pomocą [wyrównać](../../cpp/align-cpp.md).
+Wyrównanie zmiennych w typach zarządzanych lub środowisko wykonawcze systemu Windows jest kontrolowane przez środowisko CLR lub środowisko wykonawcze systemu Windows i nie można ich modyfikować przy użyciu funkcji [align](../../cpp/align-cpp.md).
 
-Poniższy przykład spowoduje wygenerowanie C3839:
+Poniższy przykład generuje C3839:
 
-```
+```cpp
 // C3839a.cpp
 // compile with: /clr
 ref class C

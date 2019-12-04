@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2385
 ms.assetid: 6d3dd1f2-e56d-49d7-865c-6a9acdb17417
-ms.openlocfilehash: bffb4c1088c41832e69b0c6f161b47f6f9f08d06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1247e4da05d65677f602a82591efd3e0c0c374e0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393704"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745258"
 ---
 # <a name="compiler-error-c2385"></a>Błąd kompilatora C2385
 
-niejednoznaczne dostęp do 'składowa'
+niejednoznaczny dostęp do elementu "member"
 
-Element członkowski może pochodzić z więcej niż jeden obiekt (jest dziedziczone z więcej niż jeden obiekt).  Aby rozwiązać ten problem
+Element członkowski może pochodzić z więcej niż jednego obiektu (jest on Dziedziczony z więcej niż jednego obiektu).  Aby rozwiązać ten problem,
 
-- Element członkowski upewnij się jednoznaczna, zapewniając rzutowania.
+- Ustaw element członkowski jako niejednoznaczny, dostarczając rzutowanie.
 
-- Zmień nazwę niejednoznaczne elementy członkowskie w klasach bazowych.
+- Zmień nazwy niejednoznacznych elementów członkowskich w klasach bazowych.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2385.
+Poniższy przykład generuje C2385.
 
-```
+```cpp
 // C2385.cpp
 // C2385 expected
 #include <stdio.h>

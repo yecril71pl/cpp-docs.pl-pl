@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2208
 ms.assetid: 9ae704bc-bf70-45f1-8e47-0470f21edd4e
-ms.openlocfilehash: 7970ba5d8d2b19bd6e330fad1879880fc5cbf32d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 208e15e98a05089c0e9b1c98400f5267e4f3a48f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400451"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758934"
 ---
 # <a name="compiler-error-c2208"></a>Błąd kompilatora C2208
 
-"type": Brak składowych zdefiniowanych przy użyciu tego typu
+"Type": brak składowych zdefiniowanych przy użyciu tego typu
 
-Identyfikator rozpoznawania nazwy typu znajduje się w deklaracji agregacji, ale kompilator nie może zadeklarować członka.
+Identyfikator rozpoznania nazwy typu jest w deklaracji agregacji, ale kompilator nie może zadeklarować elementu członkowskiego.
 
-Poniższy przykład spowoduje wygenerowanie C2208:
+Poniższy przykład generuje C2208:
 
-```
+```cpp
 // C2208.cpp
 class C {
    C;   // C2208

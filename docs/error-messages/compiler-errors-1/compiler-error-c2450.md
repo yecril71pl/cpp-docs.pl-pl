@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2450
 ms.assetid: 929f1c06-8774-468b-be2a-f428757875a2
-ms.openlocfilehash: 3cbab274f8f7cd04d5fb86db69572e0b7fc1c04e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d015bd165986467a82f33a2ae0dda08c6f6d248
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208974"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744150"
 ---
 # <a name="compiler-error-c2450"></a>Błąd kompilatora C2450
 
-wyrażenie Switch typu "type" jest niedozwolony
+wyrażenie Switch typu "Type" jest niedozwolone
 
-`switch` Wynikiem wyrażenia jest nieprawidłowego typu. Musi być typu całkowitego lub typu klasy za pomocą jednoznaczną konwersję na typ liczby całkowitej. Jeśli był oceniany do typu zdefiniowanego przez użytkownika, musisz podać operatora konwersji.
+Wyrażenie `switch` ma nieprawidłowy typ. Należy oszacować do typu Integer lub typu klasy z niejednoznaczną konwersją na typ Integer. Jeśli zostanie obliczony do typu zdefiniowanego przez użytkownika, należy podać operator konwersji.
 
-Poniższy przykład spowoduje wygenerowanie C2450:
+Poniższy przykład generuje C2450:
 
-```
+```cpp
 // C2450.cpp
 class X {
 public:

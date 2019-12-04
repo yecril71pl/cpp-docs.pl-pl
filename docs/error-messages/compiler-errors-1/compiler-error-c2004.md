@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2004
 ms.assetid: d81526dd-3a00-4593-87b0-d910d3d29bca
-ms.openlocfilehash: fb100d977188cd3a7d5b0ebbb3e29b53942871dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b781e9f81342f35d66eca222bd338252b739096c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208948"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737494"
 ---
 # <a name="compiler-error-c2004"></a>Błąd kompilatora C2004
 
-oczekiwane "określone(ID)"
+Oczekiwano instrukcji "defined (ID)"
 
-Identyfikator musi znajdować się w nawiasach, po słowie kluczowym preprocesora.
+Identyfikator musi występować w nawiasach po słowie kluczowym preprocesora.
 
-Ten błąd może być też wygenerowany w wyniku pracy zgodności kompilatora, która została wykonana dla Visual Studio .NET 2003: Brak nawiasu w dyrektywy preprocesora. Jeśli brakuje nawiasu zamykającego dyrektywy preprocesora, kompilator wygeneruje błąd.
+Ten błąd może być również wygenerowany w wyniku działania kompilatora, który został wykonany dla programu Visual Studio .NET 2003: brak nawiasu w dyrektywie preprocesora. Jeśli brakuje nawiasu zamykającego w dyrektywie preprocesora, kompilator wygeneruje błąd.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2004:
+Poniższy przykład generuje C2004:
 
-```
+```cpp
 // C2004.cpp
 // compile with: /DDEBUG
 #include <stdio.h>
@@ -42,7 +42,7 @@ int main()
 
 Możliwe rozwiązanie:
 
-```
+```cpp
 // C2004b.cpp
 // compile with: /DDEBUG
 #include <stdio.h>

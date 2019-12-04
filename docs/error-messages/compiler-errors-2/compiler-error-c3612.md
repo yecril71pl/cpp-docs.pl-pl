@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3612
 ms.assetid: aa6e3a2b-4afa-481c-98c1-1b6d1f82f869
-ms.openlocfilehash: ab18381d3f263e3207662e1667ac5c835983412f
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 499c31b0c02bd72695cd6118612609a70316f0ae
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344483"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755749"
 ---
 # <a name="compiler-error-c3612"></a>Błąd kompilatora C3612
 
-"type": Klasa zapieczętowana nie może być abstrakcyjny
+"Type": Klasa zapieczętowana nie może być abstrakcyjna
 
-Typy zdefiniowane przy użyciu `value` są zapieczętowane domyślnie i klasa jest klasą abstrakcyjną, o ile nie implementuje wszystkie metody bazowej. Zapieczętowana klasa abstrakcyjna nie może być klasą bazową, ani nie może być utworzone.
+Typy zdefiniowane za pomocą `value` są zapieczętowane domyślnie, a Klasa jest abstrakcyjna, chyba że implementuje wszystkie metody jej bazy. Zapieczętowana Klasa abstrakcyjna nie może być klasą bazową ani nie można jej utworzyć.
 
-Aby uzyskać więcej informacji, zobacz [klas i struktur](../../extensions/classes-and-structs-cpp-component-extensions.md).
+Aby uzyskać więcej informacji, zobacz [klasy i struktury](../../extensions/classes-and-structs-cpp-component-extensions.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3612:
+Poniższy przykład generuje C3612:
 
-```
+```cpp
 // C3612.cpp
 // compile with: /clr /c
 value struct V: public System::ICloneable {};   // C3612

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3048
 ms.assetid: 48e07091-94d9-471d-befe-7e2507631edd
-ms.openlocfilehash: 451ae87f26357f47df4efdaa4393450f660a9000
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bec5921ea3d44c60d5d385da811beb6674c1a8d5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187640"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761315"
 ---
 # <a name="compiler-error-c3048"></a>Błąd kompilatora C3048
 
-Wyrażenie po "#pragma omp niepodzielny" posiada niewłaściwy formularz
+Wyrażenie "#pragma OMP niepodzielny" posiada niewłaściwy formularz
 
-Dyrektywy niepodzielnej został niepoprawnie określony.
+Dyrektywa niepodzielna została niepoprawnie określona.
 
-Poniższy przykład spowoduje wygenerowanie C3048:
+Poniższy przykład generuje C3048:
 
-```
+```cpp
 // C3048.cpp
 // compile with: /openmp vcomps.lib
 #include "omp.h"

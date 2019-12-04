@@ -1,37 +1,37 @@
 ---
-title: Compiler Error C3499
+title: Błąd kompilatora C3499
 ms.date: 11/04/2016
 f1_keywords:
 - C3499
 helpviewer_keywords:
 - C3499
 ms.assetid: 6717de5c-ae0f-4024-bdf2-b5598009e7b6
-ms.openlocfilehash: 381e665745f79f6156350f66e412f0580a06f6fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e50aaeac4a9f02cf3e67c25a08afdc2df0f1c62f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381023"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738014"
 ---
-# <a name="compiler-error-c3499"></a>Compiler Error C3499
+# <a name="compiler-error-c3499"></a>Błąd kompilatora C3499
 
-lambda, która została określona ma zwracać typ void nie może zwracać wartości
+lambda, która została określona jako zwracająca typ void nie może zwracać wartości
 
-Kompilator generuje ten błąd, gdy wyrażenie lambda, które określa `void` jako typ zwracany zwraca wartość lub wyrażenie lambda zawiera więcej niż jedną instrukcję i zwraca wartość, ale nie określa jego typem zwracanym.
+Kompilator generuje ten błąd, gdy wyrażenie lambda, które określa `void` jako zwracany typ zwraca wartość; lub gdy wyrażenie lambda zawiera więcej niż jedną instrukcję i zwraca wartość, ale nie określa jej typu zwracanego.
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-- Zwraca wartość z wyrażenia lambda lub
+- Nie zwracaj wartości z wyrażenia lambda lub
 
-- Podaj typ zwracany wyrażenia lambda lub
+- Podaj zwracany typ wyrażenia lambda lub
 
-- Połącz instrukcji, które tworzą treść wyrażenia lambda w pojedynczej instrukcji.
+- Połącz instrukcje tworzące treść wyrażenia lambda w pojedynczej instrukcji.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C3499, ponieważ treść wyrażenia lambda zawiera wiele instrukcji i zwraca wartość, ale wyrażenia lambda nie określa typ zwracany:
+Poniższy przykład generuje C3499, ponieważ treść wyrażenia lambda zawiera wiele instrukcji i zwraca wartość, ale wyrażenie lambda nie określa zwracanego typu:
 
-```
+```cpp
 // C3499a.cpp
 
 int main()
@@ -42,9 +42,9 @@ int main()
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład przedstawia dwa możliwe rozwiązania do C3499. Pierwsze rozwiązanie zapewnia zwracany typ wyrażenia lambda. Drugie rozwiązanie łączy instrukcji, które tworzą treść wyrażenia lambda w pojedynczej instrukcji.
+Poniższy przykład przedstawia dwa możliwe rozwiązania do C3499. Pierwsze rozwiązanie zapewnia zwracany typ wyrażenia lambda. Druga rozdzielczość łączy instrukcje, które tworzą treść wyrażenia lambda w pojedynczej instrukcji.
 
-```
+```cpp
 // C3499b.cpp
 
 int main()

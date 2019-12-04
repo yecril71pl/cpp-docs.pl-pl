@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3761
 ms.assetid: 0c16f093-7a78-4838-b90b-0c67ef6e9270
-ms.openlocfilehash: c78709acfafabbc6d6bc24979432a93e899c3208
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f3ac54b7f72cbcc8107aeaebaac4b8e824d3c315
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400282"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757270"
 ---
 # <a name="compiler-error-c3761"></a>Błąd kompilatora C3761
 
-'Funkcja': "retval" może wystąpić tylko jako ostatni argument funkcji
+"Function": "retval" może występować tylko na ostatnim argumencie funkcji
 
-[Retval](../../windows/retval.md) zastosowano atrybut argumentu funkcji, który nie był ostatni argument na liście.
+Atrybut [retval](../../windows/retval.md) został użyty w argumencie funkcji, który nie był ostatnim argumentem na liście.
 
-Poniższy przykład spowoduje wygenerowanie C3761:
+Poniższy przykład generuje C3761:
 
-```
+```cpp
 // C3761.cpp
 #define _ATL_ATTRIBUTES 1
 #include <atlbase.h>

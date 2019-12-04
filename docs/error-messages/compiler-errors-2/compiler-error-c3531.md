@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3531
 ms.assetid: 2bdb9fdc-9ddf-403e-8b92-02763d434487
-ms.openlocfilehash: 6961d99d1a0d7d0ea063aee5544a1009af2547c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7da9da2daedc79db619f82848dc864d1cb7bd1f1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397409"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750094"
 ---
 # <a name="compiler-error-c3531"></a>Błąd kompilatora C3531
 
-'symbol': symbol, którego typ zawiera "auto" musi mieć inicjator
+"symbol": symbol, którego typ zawiera "Auto", musi mieć inicjator
 
 Określona zmienna nie ma wyrażenia inicjatora.
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-1. Określ wyrażenie inicjatora, takich jak przypisanie proste, w której używana jest składnia znaku równości, kiedy Deklarujesz zmienną.
+1. Określ wyrażenie inicjatora, takie jak proste przypisanie, które używa składni znaku równości, podczas deklarowania zmiennej.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład daje C3531, ponieważ zmienne `x1`, `y1, y2, y3`, i `z2` nie jest zainicjowany.
+Poniższy przykład daje C3531, ponieważ zmienne `x1`, `y1, y2, y3`i `z2` nie zostały zainicjowane.
 
-```
+```cpp
 // C3531.cpp
 // Compile with /Zc:auto
 int main()

@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C3491
 ms.assetid: 7f0e71b2-46a0-4d25-bd09-6158a280f509
-ms.openlocfilehash: 12f50e48fc18fc23d078b6dbc7d21d05efa06d43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78f90ee1c44a0d42e529a027b1e7fc90a0da3cdb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381088"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738326"
 ---
 # <a name="compiler-error-c3491"></a>Błąd kompilatora C3491
 
-"var": nie można zmodyfikować przechwytywania przez wartość w niemodyfikowalnym wyrażeniu lambda
+"var": nie można zmodyfikować przechwycenia przez wartość w niemodyfikowalnym wyrażeniu lambda
 
-Wyrażenie niemodyfikowalnym wyrażeniu lambda nie można zmodyfikować wartość zmiennej, która jest przechwytywana przez wartość.
+Niemodyfikowalne wyrażenie lambda nie może zmodyfikować wartości zmiennej, która jest przechwytywana przez wartość.
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-- Zadeklaruj Wyrażenie lambda z `mutable` — słowo kluczowe, lub
+- Zadeklaruj wyrażenie lambda za pomocą słowa kluczowego `mutable` lub
 
-- Przekazanie zmiennej w odniesieniu do listy przechwytywania wyrażenia lambda.
+- Przekaż zmienną przez odwołanie do listy przechwytywania wyrażenia lambda.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C3491, ponieważ treść wyrażenia niemodyfikowalnym wyrażeniu lambda modyfikuje zmienną przechwytywania `m`:
+Poniższy przykład generuje C3491, ponieważ treść niemodyfikowalnego wyrażenia lambda modyfikuje zmienną przechwytywania `m`:
 
-```
+```cpp
 // C3491a.cpp
 
 int main()
@@ -41,9 +41,9 @@ int main()
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład usuwa C3491 przez zadeklarowanie wyrażenia lambda z `mutable` — słowo kluczowe:
+Poniższy przykład rozwiązuje C3491 przez zadeklarowanie wyrażenia lambda za pomocą słowa kluczowego `mutable`:
 
-```
+```cpp
 // C3491b.cpp
 
 int main()

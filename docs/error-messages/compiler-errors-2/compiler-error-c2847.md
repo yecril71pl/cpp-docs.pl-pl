@@ -1,27 +1,27 @@
 ---
-title: Compiler Error C2847
+title: Błąd kompilatora C2847
 ms.date: 11/04/2016
 f1_keywords:
 - C2847
 helpviewer_keywords:
 - C2847
 ms.assetid: 9ad9a0e0-8b16-49d9-a5be-f8eda2372aa9
-ms.openlocfilehash: 99c49be746cea6fb80c5e24667bcd97556a0ad04
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8b31dc461c1d589151701c6946f6ac1a95c5517
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161046"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738989"
 ---
-# <a name="compiler-error-c2847"></a>Compiler Error C2847
+# <a name="compiler-error-c2847"></a>Błąd kompilatora C2847
 
-Nie można zastosować operatora sizeof do zarządzanych lub typu WinRT "class"
+nie można zastosować operatora sizeof do typu zarządzanego lub WinRT "Class"
 
-[Sizeof](../../cpp/sizeof-operator.md) operator pobiera wartości obiektu w czasie kompilacji. Rozmiar zarządzanej lub klasa WinRT, interfejsu lub typu wartości jest dynamiczny, a więc nie może być znane w czasie kompilacji.
+Operator [sizeof](../../cpp/sizeof-operator.md) Pobiera wartość obiektu w czasie kompilacji. Rozmiar klasy zarządzanej lub WinRT, interfejs lub typ wartości jest dynamiczny i dlatego nie może być znany w czasie kompilacji.
 
-Na przykład poniższy przykład spowoduje wygenerowanie C2847:
+Na przykład poniższy przykład generuje C2847:
 
-```
+```cpp
 // C2847.cpp
 // compile with: /clr
 ref class A {};

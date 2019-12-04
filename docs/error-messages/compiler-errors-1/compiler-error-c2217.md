@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2217
 ms.assetid: 1ce1e3f5-4171-4376-804d-967f7e612935
-ms.openlocfilehash: f178f969afa189910c9d23d70226ecc6c15876a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7417c651fde6bef781bb6eb2e081cd3ad8ecc3a0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353543"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741303"
 ---
 # <a name="compiler-error-c2217"></a>Błąd kompilatora C2217
 
-"attribute1" wymaga "attribute2"
+element "Attribute1" wymaga "attribute2"
 
-Pierwszy atrybut funkcja wymaga drugiego atrybutu.
+Pierwszy atrybut funkcji wymaga drugiego atrybutu.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać ten problem, sprawdzając następujące możliwe przyczyny
 
-1. Przerwań (`__interrupt`) funkcja zadeklarowana jako `near`. Przerwania funkcji musi być `far`.
+1. Funkcja przerwania (`__interrupt`) została zadeklarowana jako `near`. Funkcje przerwania muszą być `far`.
 
-1. Przerwanie funkcja zadeklarowana ze `__stdcall`, lub `__fastcall`. Przerwań funkcje muszą używają Konwencje wywoływania.
+1. Funkcja Interrupt została zadeklarowana przy użyciu `__stdcall`lub `__fastcall`. Funkcje przerwania muszą używać konwencji wywoływania języka C.
 
 ## <a name="example"></a>Przykład
 
-C2217 może również wystąpić, jeśli użytkownik podejmie próbę powiązać delegata funkcji CLR, która przyjmuje zmienną liczbę argumentów. Jeśli funkcja ma również e param tablicy przeciążenia, który zamiast tego użyj. Poniższy przykład spowoduje wygenerowanie C2217.
+C2217 może również wystąpić, jeśli podejmiesz próbę powiązania delegata z funkcją CLR, która przyjmuje zmienną liczbę argumentów. Jeśli funkcja ma także Przeciążenie tablic parametrów, zamiast tego użyj. Poniższy przykład generuje C2217.
 
-```
+```cpp
 // C2217.cpp
 // compile with: /clr
 using namespace System;

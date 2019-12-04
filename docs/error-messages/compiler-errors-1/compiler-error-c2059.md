@@ -1,27 +1,27 @@
 ---
-title: Compiler Error C2059
+title: Błąd kompilatora C2059
 ms.date: 03/26/2019
 f1_keywords:
 - C2059
 helpviewer_keywords:
 - C2059
 ms.assetid: 2be4eb39-3f37-4b32-8e8d-75835e07c78a
-ms.openlocfilehash: 2fb2aa86a1fd8f8e0710d787682fdd44abd941ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d51d4c7873d43a655dc11fa8e0fa297b8a69bff
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408670"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735947"
 ---
-# <a name="compiler-error-c2059"></a>Compiler Error C2059
+# <a name="compiler-error-c2059"></a>Błąd kompilatora C2059
 
 Błąd składniowy: "token"
 
-Token spowodował błąd składni.
+Token spowodował błąd składniowy.
 
 Poniższy przykład generuje komunikat o błędzie dla wiersza, który deklaruje `j`.
 
-```
+```cpp
 // C2059e.cpp
 // compile with: /c
 // C2143 expected
@@ -29,11 +29,11 @@ Poniższy przykład generuje komunikat o błędzie dla wiersza, który deklaruje
    int j*; // C2059
 ```
 
-Aby ustalić przyczynę tego błędu, sprawdź nie tylko wiersz, który znajduje się w komunikacie o błędzie, ale także linie nad nim. Jeśli badanie wiersze daje nie sugeruje o problemie, spróbuj zakomentowując wiersza, który znajduje się w komunikacie o błędzie i może być kilka wierszy nad nim.
+Aby określić przyczynę błędu, sprawdź nie tylko wiersz, który znajduje się w komunikacie o błędzie, ale również wiersze znajdujące się powyżej. Jeśli badanie wierszy nie daje wskazówki o problemie, spróbuj dodać komentarz do wiersza, który jest wymieniony w komunikacie o błędzie i być może kilka wierszy powyżej.
 
-Jeśli komunikat o błędzie pojawia się na symbol, który poprzedza `typedef` zmiennej, upewnij się, że zmienna jest zdefiniowana w kodzie źródłowym.
+Jeśli komunikat o błędzie występuje w symbolu, który bezpośrednio następuje po zmiennej `typedef`, upewnij się, że zmienna jest zdefiniowana w kodzie źródłowym.
 
-C2059 jest wywoływane, gdy nazwa symbol preprocesora jest ponownie używane jako identyfikator. W poniższym przykładzie, kompilator będzie widział `DIGITS.ONE` jako numer 1, która jest nieprawidłowa jako nazwa elementu typu wyliczeniowego:
+C2059 jest wywoływane, gdy nazwa symbolu preprocesora jest ponownie używana jako identyfikator. W poniższym przykładzie kompilator widzi `DIGITS.ONE` jako liczbę 1, która nie jest prawidłowa jako nazwa elementu wyliczenia:
 
 ```cpp
 #define ONE 1
@@ -44,9 +44,9 @@ enum class DIGITS {
 };
 ```
 
-C2059 może wystąpić, jeśli symbol daje w wyniku nic, co może mieć miejsce, gdy **/D**_symbol_ **=** jest używana do kompilowania.
+Możesz uzyskać C2059, jeśli symbol zwróci wartość Nothing, co może wystąpić, gdy **/d**_symbol_ **=** jest używany do kompilowania.
 
-```
+```cpp
 // C2059a.cpp
 // compile with: /DTEST=
 #include <stdio.h>
@@ -60,11 +60,11 @@ int main() {
 }
 ```
 
-Inny przypadek, w których może wystąpić C2059 jest podczas kompilowania aplikacji, która określa strukturę w domyślne argumenty dla funkcji. Wartość domyślna argumentu musi być wyrażeniem. Lista inicjalizatora — na przykład taki, który jest używany do inicjowania struktury — nie jest wyrażeniem.  Aby rozwiązać ten problem, należy zdefiniować Konstruktor do przeprowadzenia wymaganych inicjowania.
+Innym przypadkiem, w którym może wystąpić C2059, jest Kompilowanie aplikacji, która określa strukturę w domyślnych argumentach dla funkcji. Wartość domyślna argumentu musi być wyrażeniem. Lista inicjalizatora — na przykład, która użyta do zainicjowania struktury — nie jest wyrażeniem.  Aby rozwiązać ten problem, zdefiniuj konstruktora, aby wykonywał wymaganą inicjalizację.
 
 Poniższy przykład generuje C2059:
 
-```
+```cpp
 // C2059b.cpp
 // compile with: /c
 struct ag_type {
@@ -78,11 +78,11 @@ void func(ag_type arg = {5, 7.0});   // C2059
 void func(ag_type arg = ag_type(5, 7.0));   // OK
 ```
 
-C2059 może wystąpić CAST źle sformułowane.
+C2059 może następować nieprawidłowo sformułowane rzutowanie.
 
-Poniższy przykład spowoduje wygenerowanie C2059:
+Poniższy przykład generuje C2059:
 
-```
+```cpp
 // C2059c.cpp
 // compile with: /clr
 using namespace System;
@@ -96,11 +96,11 @@ int main() {
 }
 ```
 
-C2059 może również wystąpić, jeśli próba utworzenia nazwy przestrzeni nazw, która zawiera znak kropki.
+C2059 może również wystąpić w przypadku próby utworzenia nazwy przestrzeni nazw zawierającej kropkę.
 
-Poniższy przykład spowoduje wygenerowanie C2059:
+Poniższy przykład generuje C2059:
 
-```
+```cpp
 // C2059d.cpp
 // compile with: /c
 namespace A.B {}   // C2059
@@ -111,7 +111,7 @@ namespace A  {
 }
 ```
 
-C2059 może wystąpić, gdy operator, który może kwalifikować się nazwę (`::`, `->`, i `.`) musi następować słowo kluczowe `template`, jak pokazano w poniższym przykładzie:
+C2059 może wystąpić, gdy operator, który może kwalifikować się do nazwy (`::`, `->`i `.`), musi następować słowo kluczowe `template`, jak pokazano w tym przykładzie:
 
 ```cpp
 template <typename T> struct Allocator {
@@ -125,7 +125,7 @@ template <typename X, typename AY> struct Container {
 };
 ```
 
-Domyślnie C++ założono, że `AY::Rebind` nie jest szablonem; w związku z tym, że `<` jest interpretowany jako mniej-niż logowania.  Musisz poinformować kompilator jawnie, `Rebind` jest szablon, aby go można poprawnie przeanalizować nawiasu ostrego. Aby rozwiązać ten problem, należy użyć `template` słów kluczowych dotyczących nazwy typ zależny, jak pokazano poniżej:
+Domyślnie zakłada się C++ , że `AY::Rebind` nie jest szablonem. w związku z tym następujące `<` są interpretowane jako znak mniejszości.  Musisz powiadomić kompilator jawnie, że `Rebind` jest szablonem, aby mógł prawidłowo przeanalizować nawias ostry. Aby naprawić ten błąd, użyj słowa kluczowego `template` dla nazwy typu zależnego, jak pokazano poniżej:
 
 ```cpp
 template <typename T> struct Allocator {

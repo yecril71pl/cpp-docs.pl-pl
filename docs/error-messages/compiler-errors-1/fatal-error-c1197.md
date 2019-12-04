@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C1197
 ms.assetid: 22b801b7-e792-41f6-a461-973c03c69f25
-ms.openlocfilehash: e1c00a001c807b0cc6a5946b61ca4e9d5dc0167a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f698262c73f0b311a92a8940107b552430919bb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62229125"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747244"
 ---
 # <a name="fatal-error-c1197"></a>Błąd krytyczny C1197
 
-Nie można odwołać "mscorlib.dll_1", ponieważ program istnieje już odwołanie do "mscorlib.dll_2"
+nie można odwołać się do pliku "mscorlib. dll_1", ponieważ istnieje już odwołanie do programu "mscorlib. dll_2"
 
-Kompilator jest dopasowany do wersji środowiska uruchomieniowego języka wspólnego.  Jednak podjęto próbę odwołania wersję pliku środowiska uruchomieniowego języka wspólnego z poprzedniej wersji.
+Kompilator jest zgodny z wersją środowiska uruchomieniowego języka wspólnego.  Jednak podjęto próbę odwołania się do wersji pliku środowiska uruchomieniowego języka wspólnego z poprzedniej wersji.
 
-Aby rozwiązać ten problem, odwoływać się tylko pliki z wersji środowiska uruchomieniowego języka wspólnego dostarczanej z wersją programu Visual C++ są kompilowania za pomocą.
+Aby rozwiązać ten problem, należy tylko odwoływać się do plików z wersji środowiska uruchomieniowego języka wspólnego, która została dostarczona z wersją wizualizacji C++ , która jest kompiluje.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C1197:
+Poniższy przykład generuje C1197:
 
-```
+```cpp
 // C1197.cpp
 // compile with: /clr /c
 // processor: x86

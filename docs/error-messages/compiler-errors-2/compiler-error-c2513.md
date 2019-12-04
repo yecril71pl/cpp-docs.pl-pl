@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2513
 ms.assetid: ab5b21d3-61e2-4df7-8eea-6f14d6ba8620
-ms.openlocfilehash: 13840246a5dc6a1c1bdbcb55dc47f212ee353d81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 093a5856fdcfa6311fcef93214672b035c91b4fc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165219"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746529"
 ---
 # <a name="compiler-error-c2513"></a>Błąd kompilatora C2513
 
-"type": Brak deklaracji zmiennej przed "="
+"Type": Brak deklaracji zmiennej przed "="
 
-Specyfikator typu pojawia się w deklaracji z nie zmiennej identyfikatora.
+Specyfikator typu pojawia się w deklaracji bez identyfikatora zmiennej.
 
-Poniższy przykład spowoduje wygenerowanie C2513:
+Poniższy przykład generuje C2513:
 
-```
+```cpp
 // C2513.cpp
 int main() {
    int = 9;   // C2513
@@ -29,9 +29,9 @@ int main() {
 }
 ```
 
-Ten błąd może być też wygenerowany w wyniku pracy zgodność kompilatora Visual Studio .NET 2003: inicjowanie typedef nie są już dozwolone. Inicjowanie typedef nie jest dozwolona przez standardowe i generuje błąd kompilatora.
+Ten błąd może być również wygenerowany jako wynik zgodności kompilatora wykonane dla programu Visual Studio .NET 2003: inicjalizacja typedef nie jest już dozwolona. Inicjalizacja elementu typedef nie jest dozwolona przez Standard i teraz generuje błąd kompilatora.
 
-```
+```cpp
 // C2513b.cpp
 // compile with: /c
 typedef struct S {
@@ -41,4 +41,4 @@ typedef struct S {
 // } S;
 ```
 
-Alternatywą jest nieusuwanie `typedef` do definiujemy zmienną z listy inicjatorów agregacji, ale nie jest zalecane, ponieważ spowoduje to utworzenie zmiennej o nazwie identycznej z nazwą typu i ukryć nazwę typu.
+Alternatywą jest usunięcie `typedef`, aby zdefiniować zmienną z listą inicjatora agregacji, ale nie jest to zalecane, ponieważ spowoduje to utworzenie zmiennej o takiej samej nazwie jak typ i ukrycie nazwy typu.

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2256
 ms.assetid: 171fa2bc-8c72-49cd-afe5-d723b7acd3c5
-ms.openlocfilehash: 56c4df338feb2c0f406835c1ef2ffeeb7caf8bca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b362a236953701278c57d2b738a6303e83b7637c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387063"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758817"
 ---
 # <a name="compiler-error-c2256"></a>Błąd kompilatora C2256
 
-niedozwolone użycie zaprzyjaźnionego specyfikatora na "function"
+niedozwolone użycie specyfikatora zaprzyjaźnionego dla elementu "Function"
 
-Destruktor lub konstruktora, nie można określić jako [friend](../../cpp/friend-cpp.md).
+Nie można określić destruktora lub konstruktora jako [przyjaciela](../../cpp/friend-cpp.md).
 
-Poniższy przykład spowoduje wygenerowanie C2256:
+Poniższy przykład generuje C2256:
 
-```
+```cpp
 // C2256.cpp
 // compile with: /c
 class C {

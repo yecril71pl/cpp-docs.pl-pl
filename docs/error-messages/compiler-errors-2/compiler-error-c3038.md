@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3038
 ms.assetid: 140ada3e-5636-43ef-a4ee-22a9f66a771f
-ms.openlocfilehash: 0baceeec9911181d9b21c53edf55b73686801316
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26fee4f5d636ac56ae01499f6b600d38f56bbe46
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350156"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754969"
 ---
 # <a name="compiler-error-c3038"></a>Błąd kompilatora C3038
 
-"var": zmienna w klauzuli "private" nie może być zmienną redukcyjną w załączonym kontekście
+"var": zmienna w klauzuli "Private" nie może być zmienną redukcyjną w załączonym kontekście
 
-Zmienne, które pojawiają się w [redukcji](../../parallel/openmp/reference/reduction.md) nie można określić klauzuli równoległe dyrektywy w [prywatnej](../../parallel/openmp/reference/private-openmp.md) klauzuli w dyrektywie podziału pracy, która jest powiązywana z konstrukcja równoległa.
+Zmienne, które pojawiają się w klauzuli [redukcyjnej](../../parallel/openmp/reference/reduction.md) dyrektywy równoległej, nie mogą być określone w [prywatnej](../../parallel/openmp/reference/private-openmp.md) klauzuli w dyrektywie dotyczącej udostępniania pracy, która jest powiązana z konstrukcją równoległą.
 
-Poniższy przykład spowoduje wygenerowanie C3038:
+Poniższy przykład generuje C3038:
 
-```
+```cpp
 // C3038.cpp
 // compile with: /openmp /c
 int g_i, g_i2;

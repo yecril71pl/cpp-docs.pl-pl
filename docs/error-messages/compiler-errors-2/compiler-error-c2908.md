@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2908
 ms.assetid: 49cd2a21-cad8-4ba0-9a0b-3a0190d9344c
-ms.openlocfilehash: f798be5ef93eb3f072036888b800fa4008fa2de9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca07ef3c8240e6a55137e07bccbfc61ca8d96636
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408566"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750562"
 ---
 # <a name="compiler-error-c2908"></a>Błąd kompilatora C2908
 
-jawna specjalizacja; Utworzono już wystąpienie "template"
+Jawna specjalizacja; element "template" został już skonkretyzowany
 
-Specjalizacja szablonu podstawowego jest wcześniejsza niż jawnej specjalizacji.
+Specjalizacja szablonu podstawowego występuje przed jawną specjalizacją.
 
-Poniższy przykład spowoduje wygenerowanie C2908:
+Poniższy przykład generuje C2908:
 
-```
+```cpp
 // C2908.cpp
 // compile with: /c
 template<class T> class X {};

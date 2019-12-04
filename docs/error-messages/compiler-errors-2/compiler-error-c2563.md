@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2563
 ms.assetid: 54abba68-6458-4ca5-894d-3babdb7b3552
-ms.openlocfilehash: 04a10c82fa6aa39bcf1098d6d4aabfc2f769e7c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 983788f041651fcd313c0707a4a7c64cc6e33c5a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257858"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755541"
 ---
 # <a name="compiler-error-c2563"></a>Błąd kompilatora C2563
 
-niezgodność w liście formalnych parametrów
+niezgodność w formalnej liście parametrów
 
-Lista parametrów formalnych funkcji (lub wskaźnik do funkcji) nie odpowiadają innej funkcji (lub wskaźnika do funkcji składowej). W rezultacie nie można wykonać przypisania funkcji lub wskaźników.
+Formalna lista parametrów funkcji (lub wskaźnika do funkcji) nie jest zgodna z innymi funkcjami (lub wskaźnikiem do funkcji składowej). W związku z tym nie można wykonać przypisania funkcji ani wskaźników.
 
-Poniższy przykład spowoduje wygenerowanie C2563:
+Poniższy przykład generuje C2563:
 
-```
+```cpp
 // C2563.cpp
 void func( int );
 void func( int, int );

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3224
 ms.assetid: 129be22f-8f3e-4fc6-9ccd-d27d8ef91251
-ms.openlocfilehash: dc64ca1aeef66eeb554be1316bf9433145b50cc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23a83a90c5583a427ffae9a7e69e531981ddd7cc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174058"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757634"
 ---
 # <a name="compiler-error-c3224"></a>Błąd kompilatora C3224
 
-"type": Brak przeciążonej klasy generycznej przyjmuje argumenty typu ogólnego "liczba"
+"Type": brak przeciążonej klasy generycznej przyjmującej argumenty typu ogólnego "number"
 
-Kompilator nie można odnaleźć odpowiedniej przeciążenia.
+Kompilator nie może znaleźć odpowiedniego przeciążenia.
 
-Poniższy przykład spowoduje wygenerowanie C3224:
+Poniższy przykład generuje C3224:
 
 ```
 // C3224.cs
@@ -28,9 +28,9 @@ public class C<T> {}
 public class C<T,U> {}
 ```
 
-Następnie wyszukaj maszynę
+A następnie
 
-```
+```cpp
 // C3224b.cpp
 // compile with: /clr
 #using "C3224.dll"

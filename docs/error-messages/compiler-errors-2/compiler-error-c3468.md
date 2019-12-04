@@ -1,33 +1,33 @@
 ---
-title: Compiler Error C3468
+title: Błąd kompilatora C3468
 ms.date: 11/04/2016
 f1_keywords:
 - C3468
 helpviewer_keywords:
 - C3468
 ms.assetid: cfd320db-2f6e-4e0d-ba02-e79ece87e1e0
-ms.openlocfilehash: e3870fa21e2b4a932937edd49091980406a5ff0d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4a507dad1d795e703e8db7f8704aad959c95b6f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173187"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757310"
 ---
-# <a name="compiler-error-c3468"></a>Compiler Error C3468
+# <a name="compiler-error-c3468"></a>Błąd kompilatora C3468
 
-"type": można tylko przekazać dalej typ do zestawu:
+"Type": można tylko przesłać dalej typ do zestawu:
 
 "`file`" nie jest zestawem
 
-Może być przekazywany tylko typy w zestawie.
+Można przesłać dalej tylko typy w zestawie.
 
-Aby uzyskać więcej informacji, zobacz [Type Forwarding (C++sposób niezamierzony)](../../extensions/type-forwarding-cpp-cli.md).
+Aby uzyskać więcej informacji, zobacz [przekazywanie typuC++(/CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Przykład
 
 Poniższy przykład tworzy moduł.
 
-```
+```cpp
 // C3468.cpp
 // compile with: /LN /clr
 public ref class R {};
@@ -35,9 +35,9 @@ public ref class R {};
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3468.
+Poniższy przykład generuje C3468.
 
-```
+```cpp
 // C3468_b.cpp
 // compile with: /clr /c
 #using "C3468.netmodule"

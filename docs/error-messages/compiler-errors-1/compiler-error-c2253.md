@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2253
 ms.assetid: bd6445ae-b2c1-4669-9657-a8f4acf80b16
-ms.openlocfilehash: 847c37c6ae5edf14205d3d46ca624a572c8d6b6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89acfd8a03dc0ee2dc25e14e0b3a63ab25151cc6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397565"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758856"
 ---
 # <a name="compiler-error-c2253"></a>Błąd kompilatora C2253
 
-'Funkcja': czysty specyfikator lub abstrakcyjny specyfikator override dozwolony tylko dla wirtualnej funkcji
+"Function": czysty specyfikator lub abstrakcyjny specyfikator override dozwolony tylko dla funkcji wirtualnej
 
-Funkcji niewirtualnej jest określony jako czysty `virtual`.
+Funkcja niewirtualna jest określona jako czysty `virtual`.
 
-Poniższy przykład spowoduje wygenerowanie C2253:
+Poniższy przykład generuje C2253:
 
-```
+```cpp
 // C2253.cpp
 // compile with: /c
 class A {
@@ -31,9 +31,9 @@ public:
 };
 ```
 
-Poniższy przykład spowoduje wygenerowanie C2253:
+Poniższy przykład generuje C2253:
 
-```
+```cpp
 // C2253_2.cpp
 // compile with: /clr /c
 ref struct A {

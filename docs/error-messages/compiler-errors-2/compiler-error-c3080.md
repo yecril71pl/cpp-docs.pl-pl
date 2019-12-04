@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3080
 ms.assetid: ff62a3f7-9b3b-44bd-b8d9-f3a8e5354560
-ms.openlocfilehash: 5b610d54331349c53ff01f5c09bb53ff52216c26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74a5f33a3b6b6524b53b15067c722c19c0e3f04e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406668"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756711"
 ---
 # <a name="compiler-error-c3080"></a>Błąd kompilatora C3080
 
-"finalizer_function": finalizator nie może mieć storage-class-specifier
+"finalizer_function": finalizator nie może mieć specyfikatora klasy magazynu
 
-Aby uzyskać więcej informacji, zobacz [destruktory i finalizatory w sposób: Definiowanie oraz stosowanie klas i struktur (C++sposób niezamierzony)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Aby uzyskać więcej informacji, zobacz [destruktory i finalizatory w instrukcje: Definiowanie i korzystanie z klas i struktur (C++/CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3080.
+Poniższy przykład generuje C3080.
 
-```
+```cpp
 // C3080.cpp
 // compile with: /clr /c
 ref struct rs {

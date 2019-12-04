@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3264
 ms.assetid: 94ece687-2364-4f7a-8ebb-7afd3ae9d63d
-ms.openlocfilehash: 2f5a58335a36affc73deb490c9423284852ecbab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b7645daf59aea97efaaffac83b751bbe29f1940b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366254"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754189"
 ---
 # <a name="compiler-error-c3264"></a>Błąd kompilatora C3264
 
-"class": konstruktor klasy nie może posiadać typu zwracanego
+"Class": Konstruktor klasy nie może mieć zwracanego typu
 
-Konstruktory klasy nie może mieć zwracanych typów.
+Konstruktory klas nie mogą mieć typów zwracanych.
 
-Poniższy przykład spowoduje wygenerowanie C3264:
+Poniższy przykład generuje C3264:
 
-```
+```cpp
 // C3264_2.cpp
 // compile with: /clr
 

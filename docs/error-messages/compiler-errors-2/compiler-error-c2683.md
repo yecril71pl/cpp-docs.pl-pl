@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2683
 ms.assetid: db605e4f-601b-4d05-92a1-c43ca24de08d
-ms.openlocfilehash: 49e4897ad5db866aa1ca42589859bedff12718df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8526dc1fe3cacc872aa91ca058677d15318fd703
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266871"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760273"
 ---
 # <a name="compiler-error-c2683"></a>Błąd kompilatora C2683
 
-Instrukcja "cast": "type" nie jest typem polimorficznym
+"CAST": "Type" nie jest typem polimorficznym
 
-Nie można użyć [dynamic_cast](../../cpp/dynamic-cast-operator.md) do konwersji z klasą polimorficzny (klasa żadnych funkcji wirtualnych).
+Nie można użyć [dynamic_cast](../../cpp/dynamic-cast-operator.md) do konwersji z klasy niepolimorficznej (Klasa bez funkcji wirtualnych).
 
-Możesz użyć [static_cast](../../cpp/static-cast-operator.md) do wykonywania konwersji-polimorficzne typy. Jednak `static_cast` nie wykonuje sprawdzanie w czasie wykonania.
+Za pomocą [static_cast](../../cpp/static-cast-operator.md) można wykonać konwersje typów niepolimorficznych. Jednak `static_cast` nie wykonuje sprawdzenia w czasie wykonywania.
 
-Poniższy przykład spowoduje wygenerowanie C2683:
+Poniższy przykład generuje C2683:
 
-```
+```cpp
 // C2683.cpp
 // compile with: /c
 class B { };

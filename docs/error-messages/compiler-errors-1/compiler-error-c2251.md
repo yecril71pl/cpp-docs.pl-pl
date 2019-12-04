@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2251
 ms.assetid: fefe050c-f8d3-4316-b237-8007dbcdd3bf
-ms.openlocfilehash: b7ffb5b8d425e74523e491827ffb8878b8e03b38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d44ed7af3552f0a7c9cc9b5b2b0d14a468713254
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301386"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759701"
 ---
 # <a name="compiler-error-c2251"></a>Błąd kompilatora C2251
 
-przestrzeń nazw "namespace" nie ma składowej 'składowa' — czy chodziło Ci o "członek"?
+Przestrzeń nazw "namespace" nie ma składowej "member" — Czy chodziło o "member"?
 
-Kompilator nie mógł znaleźć identyfikatora w określonej przestrzeni nazw.
+Kompilator nie może odnaleźć identyfikatora w określonej przestrzeni nazw.
 
-Poniższy przykład spowoduje wygenerowanie C2251:
+Poniższy przykład generuje C2251:
 
-```
+```cpp
 // C2251.cpp
 // compile with: /c
 namespace A {

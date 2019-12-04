@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3052
 ms.assetid: 87480c42-1ceb-4775-8d20-88c54a7bb6a6
-ms.openlocfilehash: ed9c27e1602f9372cb9137615ef66932a8df960c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 618fac69078987b0322739733c403e5b2cd36486
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265779"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761221"
 ---
 # <a name="compiler-error-c3052"></a>Błąd kompilatora C3052
 
-"var": zmienna nie pojawia się w klauzuli udostępniania danych pod klauzulą default(none)
+"var": zmienna nie pojawia się w klauzuli udostępniania danych pod klauzulą default (None)
 
-Jeśli [default(none)](../../parallel/openmp/reference/default-openmp.md) jest używany, dowolnej zmiennej używane w strukturze bloku muszą być jawnie określone jako [udostępnionego](../../parallel/openmp/reference/shared-openmp.md) lub [prywatnej](../../parallel/openmp/reference/private-openmp.md).
+Jeśli jest używana [wartość domyślna (brak)](../../parallel/openmp/reference/default-openmp.md) , Każda zmienna użyta w bloku strukturalnym musi być jawnie określona jako [udostępniona](../../parallel/openmp/reference/shared-openmp.md) lub [prywatna](../../parallel/openmp/reference/private-openmp.md).
 
-Poniższy przykład spowoduje wygenerowanie C3052:
+Poniższy przykład generuje C3052:
 
-```
+```cpp
 // C3052.cpp
 // compile with: /openmp /c
 int main() {

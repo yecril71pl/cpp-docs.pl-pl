@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3375
 ms.assetid: f1df78c6-e6ca-48f3-8b29-4e1710002bf3
-ms.openlocfilehash: ba1dbf08fb56364d2ab5b8c40847ab89484dc005
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf92f0fabecfa7292a4d6a8644746c489cbf139f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328801"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759753"
 ---
 # <a name="compiler-error-c3375"></a>Błąd kompilatora C3375
 
-'Funkcja': niejednoznaczna funkcja delegata
+"Function": niejednoznaczna funkcja delegata
 
-Podczas tworzenia wystąpienia delegata mogło być do statycznej funkcji członkowskiej lub jako niezwiązanego delegata do funkcji wystąpienia, kompilator wydany tego błędu.
+Utworzenie wystąpienia delegata może być elementem statycznej funkcji członkowskiej lub jako niepowiązanego delegata funkcji wystąpienia, przez co kompilator wygenerował ten błąd.
 
-Aby uzyskać więcej informacji, zobacz [delegate (C++ Component Extensions)](../../extensions/delegate-cpp-component-extensions.md).
+Aby uzyskać więcej informacji, zobacz [DelegatC++ (rozszerzenia składników)](../../extensions/delegate-cpp-component-extensions.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3375.
+Poniższy przykład generuje C3375.
 
-```
+```cpp
 // C3375.cpp
 // compile with: /clr
 ref struct R {

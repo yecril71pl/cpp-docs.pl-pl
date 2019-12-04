@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3536
 ms.assetid: 8d866075-866b-49eb-9979-ee27b308f7e3
-ms.openlocfilehash: a16c5bd46d806d09861d5734b637c2c9d9b2f9d0
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: a140847b642ac2437b67aa957328c3b8fbfc592d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345490"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761572"
 ---
 # <a name="compiler-error-c3536"></a>Błąd kompilatora C3536
 
-'symbol': nie można użyć, zanim zostanie zainicjowany
+"symbol": nie można użyć, zanim zostanie zainicjowany
 
-Nie można użyć symbol koła wskazane, zanim zostanie zainicjowany. W praktyce oznacza to, że zmienna nie może służyć do zainicjowania.
+Nie można użyć wskazanego symbolu przed jego zainicjowaniem. W tym przypadku oznacza to, że zmienna nie może zostać użyta do zainicjowania siebie.
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-1. Nie Inicjuj zmienną z samym sobą.
+1. Nie Inicjuj inicjacji zmiennej.
 
 ## <a name="example"></a>Przykład
 
 Poniższy przykład daje C3536, ponieważ każda zmienna jest inicjowana z samym sobą.
 
-```
+```cpp
 // C3536.cpp
 // Compile with /Zc:auto
 int main()

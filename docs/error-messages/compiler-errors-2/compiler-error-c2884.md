@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2884
 ms.assetid: 8b4d43e3-3fb5-4360-86c8-de59d8736d4f
-ms.openlocfilehash: d920629dc0697d0f2fdd05ac5aca6118b89b88cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0e283c7cd6116655a56f8df67ab4eecf9923b68
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378859"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760944"
 ---
 # <a name="compiler-error-c2884"></a>Błąd kompilatora C2884
 
-"name": wprowadzone za pomocą deklaracji koliduje z lokalnej funkcji "function"
+"name": wprowadzono za pomocą deklaracji using powoduje konflikt z funkcją lokalną "Function"
 
-Próbowano zdefiniować funkcję więcej niż jeden raz. Pierwsza definicja jest lokalnej definicji. Druga jest z przestrzeni nazw za pomocą `using` deklaracji.
+Podjęto próbę zdefiniowania funkcji więcej niż jeden raz. Pierwsza definicja jest definicją lokalną. Sekunda pochodzi z przestrzeni nazw z deklaracją `using`.
 
-Poniższy przykład spowoduje wygenerowanie C2884:
+Poniższy przykład generuje C2884:
 
-```
+```cpp
 // C2884.cpp
 namespace A {
    void z(int);

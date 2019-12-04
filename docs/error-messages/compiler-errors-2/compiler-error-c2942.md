@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2942
 ms.assetid: 13abf744-8fa1-450d-886d-e5717c04956e
-ms.openlocfilehash: 8a594b9d1d8374caa972f6bfdafe5d691e634a9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 98bb0d9945068042e00c7c48c0304314e281fa8f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366644"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758362"
 ---
 # <a name="compiler-error-c2942"></a>Błąd kompilatora C2942
 
-"class": typ klasy identyfikator ponownie definiowana jako argument formalny funkcji
+"Class": Identyfikator klasy typu jest ponownie zdefiniowany jako formalny argument funkcji
 
-Generyczny lub szablonu klasy nie można użyć jako argumentu formalnego. Nie można przekazać argument bezpośrednio do konstruktora ogólnego lub klasą szablonu.
+Nie można użyć klasy generycznej ani szablonu jako argumentu formalnego. Nie można przekazać argumentu bezpośrednio do konstruktora klasy generycznej lub szablonu.
 
-Poniższy przykład spowoduje wygenerowanie C2942:
+Poniższy przykład generuje C2942:
 
 ```
 
@@ -34,9 +34,9 @@ struct TC2 {};
 void f(TC2 i) {}
 ```
 
-C2942 może również wystąpić, gdy za pomocą typów ogólnych:
+C2942 może również wystąpić przy użyciu typów ogólnych:
 
-```
+```cpp
 // C2942b.cpp
 // compile with: /clr /c
 generic<class T>

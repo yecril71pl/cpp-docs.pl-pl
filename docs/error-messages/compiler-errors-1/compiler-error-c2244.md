@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2244
 ms.assetid: d9911c12-ceb5-4f93-ac47-b44a485215c2
-ms.openlocfilehash: 7cfa0cd7ff4290ca5f07fb712bbcac7dabf55f29
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97ff469c6f3f766bd1b5412133003bae2acaddfc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301399"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759480"
 ---
 # <a name="compiler-error-c2244"></a>Błąd kompilatora C2244
 
-'Identyfikator': nie można dopasować definicji funkcji do istniejącej deklaracji
+"Identyfikator": nie można dopasować definicji funkcji do istniejącej deklaracji
 
-Nietypowe użycie operatora jednoargumentowego + był używany przed wywołaniem funkcji, które nie mają nawiasu.
+Nietypowe użycie operatora jednoargumentowego + zostało użyte przed wywołaniem funkcji, które nie ma nawiasów.
 
-Ten błąd występuje tylko w projektach C++.
+Ten błąd występuje tylko w C++ projektach.
 
-Poniższy przykład spowoduje wygenerowanie C2244:
+Poniższy przykład generuje C2244:
 
-```
+```cpp
 // C2244.cpp
 int func(char) {
    return 0;
@@ -38,9 +38,9 @@ int main() {
 }
 ```
 
-C2244 może również wystąpić, gdy Niepoprawna funkcja podpis ma być używany dla funkcji członkowskiej szablonu klasy.
+C2244 może również wystąpić, gdy do funkcji składowej szablonu klasy jest używany nieprawidłowy podpis funkcji.
 
-```
+```cpp
 // C2244b.cpp
 // compile with: /c
 template<class T>
@@ -54,9 +54,9 @@ void XYZ<T>::func(int i) {}   // C2244 wrong function signature
 // void XYZ<T>::func(T t) {}
 ```
 
-C2244 może również wystąpić, gdy podpisu Niepoprawna funkcja jest używana do szablonem funkcji elementu członkowskiego.
+C2244 może również wystąpić, gdy dla szablonu funkcji składowej użyto nieprawidłowej sygnatury funkcji.
 
-```
+```cpp
 // C2244c.cpp
 // compile with: /c
 class ABC {
@@ -70,9 +70,9 @@ void ABC::func(int i) {}   // C2244 wrong signature
 // void ABC::func(int i, T t) {}
 ```
 
-Częściowo nie można specjalizować szablonu funkcji.
+Nie można częściowo specjalizacji szablonu funkcji.
 
-```
+```cpp
 // C2244d.cpp
 template<class T, class U>
 class QRS {

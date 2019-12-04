@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2073
 ms.assetid: 57908234-be7a-4ce9-b0a7-8b1ad621865e
-ms.openlocfilehash: 2b45d512224ec32459e6da040a6abb0211278e78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 545b2b24d3bfe5a36c5554dfa898d17b05067c3d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303323"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757738"
 ---
 # <a name="compiler-error-c2073"></a>Błąd kompilatora C2073
 
-'Identyfikator': elementy częściowo zainicjowanej tablicy muszą mieć domyślnego konstruktora
+"Identyfikator": elementy częściowo zainicjowanej tablicy muszą mieć domyślny Konstruktor
 
-Zbyt mało inicjatory zostały określone w tablicy, typy zdefiniowane przez użytkownika lub stałych. Jeśli jawna inicjatora i jego odpowiedniego konstruktora, nie są określone dla elementu członkowskiego tablicy, należy podać domyślnego konstruktora.
+Określono zbyt mało inicjatorów dla tablicy typów lub stałych zdefiniowanych przez użytkownika. Jeśli jawny inicjator i odpowiadający mu Konstruktor nie są określone dla elementu członkowskiego tablicy, należy dostarczyć konstruktora domyślnego.
 
-Poniższy przykład spowoduje wygenerowanie C2073:
+Poniższy przykład generuje C2073:
 
-```
+```cpp
 // C2073.cpp
 class A {
 public:
@@ -30,7 +30,7 @@ public:
 A a[3] = { A(1), A(2) };   // C2073, no default constructor
 ```
 
-```
+```cpp
 // C2073b.cpp
 // compile with: /c
 class B {

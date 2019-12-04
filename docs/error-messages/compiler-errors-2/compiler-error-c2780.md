@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2780
 ms.assetid: 423793d8-a3b2-4f35-85f8-ae1d043e2b69
-ms.openlocfilehash: 9a427bbd79570a2646447d5326e034035306fac6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf327852da325940b1090e4f6199ac10c83ea09b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257455"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739964"
 ---
 # <a name="compiler-error-c2780"></a>Błąd kompilatora C2780
 
-"deklaracją": oczekuje argumentów N - M podane
+"Deklaracja": oczekuje N argumentów-podano M
 
-Szablon funkcji jest zbyt mało lub zbyt wiele argumentów.
+Szablon funkcji ma za mało lub zbyt wiele argumentów.
 
-Poniższy przykład generuje C2780 i pokazuje, jak go naprawić:
+Poniższy przykład generuje C2780 i pokazuje, jak to naprawić:
 
-```
+```cpp
 // C2780.cpp
 template<typename T>
 void f(T, T){}

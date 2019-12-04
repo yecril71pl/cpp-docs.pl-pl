@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C3904
 ms.assetid: 08297605-e4f2-4c6c-b637-011f1fd40631
-ms.openlocfilehash: 4675bf95012c8e6662d7dba281c38ed2d684c448
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1861810f4598fa81d1b7662a57651b1648de1317
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406772"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749051"
 ---
 # <a name="compiler-error-c3904"></a>Błąd kompilatora C3904
 
-"property_accessor": należy określić numer następującą liczbą parametrów:
+"property_accessor": należy określić liczbę parametrów
 
-Sprawdź liczbę parametrów w swojej `get` i `set` metody względem właściwości wymiarów.
+Sprawdź liczbę parametrów w `get` i `set` metodach względem wymiarów właściwości.
 
-- Liczba parametrów `get` metody musi być równa liczbie wymiarów właściwości lub mieć wartość zero dla właściwości nieindeksowanych.
+- Liczba parametrów dla metody `get` musi być równa liczbie wymiarów właściwości lub zero dla nieindeksowanych właściwości.
 
-- Liczba parametrów `set` metody musi być większa niż liczba wymiarów właściwości.
+- Liczba parametrów metody `set` musi być większa niż liczba wymiarów właściwości.
 
-Aby uzyskać więcej informacji, zobacz [właściwość](../../extensions/property-cpp-component-extensions.md).
+Aby uzyskać więcej informacji, zobacz [Właściwość](../../extensions/property-cpp-component-extensions.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3904.
+Poniższy przykład generuje C3904.
 
-```
+```cpp
 // C3904.cpp
 // compile with: /clr /c
 ref class X {
@@ -49,9 +49,9 @@ ref class X {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3904.
+Poniższy przykład generuje C3904.
 
-```
+```cpp
 // C3904b.cpp
 // compile with: /clr /c
 ref struct X {

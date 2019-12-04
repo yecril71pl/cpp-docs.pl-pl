@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2755
 ms.assetid: 8ee4eeb6-4757-4efe-9100-38ff4a96f1de
-ms.openlocfilehash: c2238058dc4b7df6bbe33e98d6ccde996f36b782
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcd4bb5d49f6f6e807ad240c377debb220138c93
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227975"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759558"
 ---
 # <a name="compiler-error-c2755"></a>Błąd kompilatora C2755
 
-"param": parametr typu innego niż stała parametryzująca składowej specjalizacji musi być prostym identyfikatorem
+"param": parametr niebędący typem częściowej specjalizacji musi być prostym identyfikatorem
 
-Parametr-type musi być prostym identyfikatorem, przez kompilator może rozpoznać w czasie kompilacji do jednego identyfikatora lub wartości stałej.
+Parametr niebędący typem musi być prostym identyfikatorem, co kompilator może rozpoznać w czasie kompilacji do jednego identyfikatora lub wartości stałej.
 
-Poniższy przykład spowoduje wygenerowanie C2755:
+Poniższy przykład generuje C2755:
 
-```
+```cpp
 // C2755.cpp
 template<int I, int J>
 struct A {};

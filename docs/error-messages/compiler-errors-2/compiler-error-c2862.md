@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2862
 ms.assetid: c04d8499-b799-48a1-9fb4-7902a0b0ac8e
-ms.openlocfilehash: a3e2dba20c5283d87b6e98c2f8c9aba83c2d3cb9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd14f310a00202dce73f091dee46a4605858b698
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227692"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755086"
 ---
 # <a name="compiler-error-c2862"></a>Błąd kompilatora C2862
 
-"interface": interfejs może mieć tylko publiczne elementy członkowskie
+"Interface": interfejs może mieć tylko publiczne składowe
 
-Chronione i prywatnych składowych można uzyskać dostęp tylko z innych funkcji Członkowskich. Takich elementów członkowskich są użycia w interfejsie, ponieważ nie może dostarczać implementacje dla każdego z jej członków.
+Dostęp do chronionych i prywatnych członków można uzyskać tylko z innych funkcji Członkowskich. Takie składowe nie są używane w interfejsie, ponieważ nie mogą zapewnić implementacji dla żadnego z jej elementów członkowskich.
 
-Poniższy przykład spowoduje wygenerowanie C2862:
+Poniższy przykład generuje C2862:
 
-```
+```cpp
 // C2862.cpp
 // compile with: /c
 #include <unknwn.h>

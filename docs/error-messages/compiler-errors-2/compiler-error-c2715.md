@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2715
 ms.assetid: c81567a7-5b65-468f-aaf9-835f91e468e4
-ms.openlocfilehash: 0f0df136952e09d26fbf43104bbf13b001c87255
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24f972452f9c823d2082e1c29758b39f088021d0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386762"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760533"
 ---
 # <a name="compiler-error-c2715"></a>Błąd kompilatora C2715
 
-"type": nie można zgłosić lub przechwycić tego typu
+"Type": nie można zgłosić lub przechwycić tego typu
 
-Typy wartości nie są prawidłowe argumenty, przy użyciu obsługi wyjątków w kodzie zarządzanym (zobacz [wyjątków](../../extensions/exception-handling-cpp-component-extensions.md) Aby uzyskać więcej informacji).
+Typy wartości nie są prawidłowymi argumentami w przypadku korzystania z obsługi wyjątków w kodzie zarządzanym (zobacz [Obsługa wyjątków](../../extensions/exception-handling-cpp-component-extensions.md) , aby uzyskać więcej informacji).
 
-```
+```cpp
 // C2715a.cpp
 // compile with: /clr
 using namespace System;

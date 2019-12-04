@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2784
 ms.assetid: 3d761fe2-881c-48bd-afae-e2e714e20473
-ms.openlocfilehash: 906cb5d8df9fb8ac57c5d4289d77ac662ac26a92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ff91135f6a6207921aa1f83d42ebd1689e711a1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208187"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739639"
 ---
 # <a name="compiler-error-c2784"></a>Błąd kompilatora C2784
 
-"deklaracją": nie można wywnioskować argumentu szablonu dla "type" z "type"
+"Deklaracja": nie można wywnioskować argumentu szablonu dla elementu "Type" z typu "Type"
 
-Kompilator nie może określić argument szablonu z argumentów funkcji podana.
+Kompilator nie może określić argumentu szablonu na podstawie podanych argumentów funkcji.
 
-Poniższy przykład generuje C2784 i pokazuje, jak go naprawić:
+Poniższy przykład generuje C2784 i pokazuje, jak to naprawić:
 
-```
+```cpp
 // C2784.cpp
 template<class T> class X {};
 template<class T> void f(X<T>) {}

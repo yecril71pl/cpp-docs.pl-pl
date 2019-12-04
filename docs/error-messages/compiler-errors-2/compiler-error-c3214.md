@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3214
 ms.assetid: 49ee4a9a-2549-4adb-9d3a-38e154303c2e
-ms.openlocfilehash: e4f271ec4abdc05b5cf148e40a752b4d62cc884c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4eda0abd0bbfb3bf5757e39062fa3c229f698624
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182551"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756191"
 ---
 # <a name="compiler-error-c3214"></a>Błąd kompilatora C3214
 
-"type": nieprawidłowy typ argumentu dla parametru generycznego param, z ogólnego "generic_type" nie spełnia ograniczenia "ograniczenia"
+"Type": nieprawidłowy typ argumentu dla parametru generycznego "param" generycznego "generic_type", nie spełnia ograniczenia "Constraint"
 
-Typ określono podczas tworzenia wystąpienia klasy generycznej, która nie spełnia ograniczenia klasy ogólnej.
+Typ został określony dla tworzenia wystąpienia klasy generycznej, która nie spełnia ograniczenia klasy ogólnej.
 
-Poniższy przykład spowoduje wygenerowanie C3214:
+Poniższy przykład generuje C3214:
 
-```
+```cpp
 // C3214.cpp
 // compile with: /clr
 interface struct A {};

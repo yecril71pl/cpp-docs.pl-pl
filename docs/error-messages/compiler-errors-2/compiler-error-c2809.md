@@ -1,27 +1,27 @@
 ---
-title: Compiler Error C2809
+title: Błąd kompilatora C2809
 ms.date: 11/04/2016
 f1_keywords:
 - C2809
 helpviewer_keywords:
 - C2809
 ms.assetid: ce796b8e-1a8c-4074-995d-1ad09afd0e93
-ms.openlocfilehash: d9dffabf318d51a97c172ecee2e4b2d4183a81f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04f875d4ff32cfad425be5bb28bea8ef92c508eb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281901"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758999"
 ---
-# <a name="compiler-error-c2809"></a>Compiler Error C2809
+# <a name="compiler-error-c2809"></a>Błąd kompilatora C2809
 
-"operator operator" nie ma formalnych parametrów
+"operator operatora" nie ma formalnych parametrów
 
 Operator nie ma wymaganych parametrów.
 
-Poniższy przykład spowoduje wygenerowanie C2809:
+Poniższy przykład generuje C2809:
 
-```
+```cpp
 // C2809.cpp
 // compile with: /c
 class A{};

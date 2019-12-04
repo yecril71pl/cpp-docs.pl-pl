@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3203
 ms.assetid: 6356770e-22c1-434c-91fe-f60b0aa23b91
-ms.openlocfilehash: c55160c855a6188a616f957acee43e409b751b62
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 1d0ed5ec717efecb9fbea4a9451836c0471522b6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447801"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738716"
 ---
 # <a name="compiler-error-c3203"></a>Błąd kompilatora C3203
 
-"type": szablon klasy Niewyspecjalizowana lub typ ogólny nie może służyć jako szablon lub argument rodzajowy dla szablonu lub parametru ogólnego "param", oczekiwano typu rzeczywistego
+"Type": Niewyspecjalizowany szablon klasy ani ogólny nie można użyć jako szablonu lub argumentu ogólnego dla szablonu lub parametru generycznego "param", oczekiwano typu rzeczywistego
 
-Nieprawidłowy argument jest przekazywany do szablonu klasy lub ogólny. Szablon klasy lub typ ogólny oczekuje, że typ jako parametr.
+Przeszedł nieprawidłowy argument do szablonu klasy lub generycznego. Szablon klasy lub generyczny oczekuje typu jako parametru.
 
-Ten błąd można wygenerować w wyniku pracy zgodności kompilatora, która została wykonana dla programu Visual Studio 2005: nie można użyć szablonu klasy Niewyspecjalizowana jako argument szablonu na liście klas bazowych. Aby rozwiązać C3203, jawnie dodać parametry typu szablonu do nazwę klasy szablonu w przypadku używania go jako parametr szablonu na liście klas bazowych.
+Ten błąd może zostać wygenerowany w wyniku działania kompilatora, który został wykonany dla programu Visual Studio 2005: Niewyspecjalizowany szablon klasy nie może być używany jako argument szablonu na liście klas bazowych. Aby rozwiązać C3203, jawnie Dodaj parametry typu szablonu do nazwy klasy szablonu podczas używania jej jako parametru szablonu na liście klas bazowych.
 
-```
+```cpp
 // C3203.cpp
 template< typename T >
 struct X {
@@ -40,9 +40,9 @@ int main() {
 }
 ```
 
-Poniższy przykład generuje C3203 i pokazuje, jak go naprawić:
+Poniższy przykład generuje C3203 i pokazuje, jak to naprawić:
 
-```
+```cpp
 // C3203_b.cpp
 // compile with: /c
 template <class T>
@@ -65,9 +65,9 @@ class C3 {};
 typedef C3<S1<int> > MyC12;
 ```
 
-C3203 może również wystąpić, gdy za pomocą typów ogólnych:
+C3203 może również wystąpić przy użyciu typów ogólnych:
 
-```
+```cpp
 // C3203_c.cpp
 // compile with: /clr /c
 generic <class T>

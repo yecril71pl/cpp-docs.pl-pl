@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - C3354
 ms.assetid: 185de401-231e-4999-a149-172ee4c69d84
-ms.openlocfilehash: 1ff2967f602722c99b58b679324bd4f50575f109
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5945b2112d1d03e4f18944d15028229cce4b668
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402609"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738599"
 ---
 # <a name="compiler-error-c3354"></a>Błąd kompilatora C3354
 
-'Funkcja': funkcja używana do utworzenia delegata nie może posiadać typu zwracanego "type"
+"Function": funkcja użyta do utworzenia delegata nie może mieć zwracanego typu "Type"
 
-Nieprawidłowy, ponieważ zwracanych typów są następujące typy `delegate`:
+Następujące typy są nieprawidłowe jako typy zwracane dla `delegate`:
 
 - Wskaźnik do funkcji
 
-- Wskaźnik do składowej
+- Wskaźnik do elementu członkowskiego
 
 - Wskaźnik do funkcji składowej
 
 - Odwołanie do funkcji
 
-- Odwołanie do funkcji składowej
+- Odwołanie do funkcji członkowskiej
 
-Poniższy przykład spowoduje wygenerowanie C3354:
+Poniższy przykład generuje C3354:
 
-```
+```cpp
 // C3354_2.cpp
 // compile with: /clr /c
 using namespace System;

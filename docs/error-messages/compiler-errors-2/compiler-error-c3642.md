@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3642
 ms.assetid: 429790c2-9614-4d85-b31c-687c8d8f83ff
-ms.openlocfilehash: d524c49075c400caa345dd26ed681734ea0cfb94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c3f9f05bf04c9a1c20fff7910836e7b50468a8e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385624"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742460"
 ---
 # <a name="compiler-error-c3642"></a>Błąd kompilatora C3642
 
-Parametr "Typ_wyniku/args": nie można wywołać funkcji w Konwencji wywołania __clrcall z natywnego kodu
+"return_type/args": nie można wywołać funkcji z konwencją wywoływania __clrcall z kodu natywnego
 
-Funkcja, która jest oznaczona za pomocą [__clrcall](../../cpp/clrcall.md) konwencji wywoływania, nie można wywoływać z kodu natywnego (niezarządzanego).
+Funkcja oznaczona przy użyciu konwencji wywoływania [__clrcall](../../cpp/clrcall.md) nie może być wywoływana z kodu natywnego (niezarządzanego).
 
-*Typ_wyniku/args* nazwę funkcji lub typ `__clrcall` próby wywołania funkcji.  Typ jest używany w przypadku wywoływania za pomocą wskaźnika funkcji.
+*return_type/args* jest nazwą funkcji lub typem funkcji `__clrcall`, którą próbujesz wywołać.  Typ jest używany, gdy jest wywoływany przez wskaźnik funkcji.
 
-Do wywołania funkcji zarządzanej z kontekstu natywnej, można dodać funkcji "otoki", który będzie wybierany `__clrcall` funkcji. Ewentualnie można wykorzystać mechanizm kierujące CLR; zobacz [jak: Przeprowadzanie marshalingu wskaźników funkcji za pomocą funkcji PInvoke](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md) Aby uzyskać więcej informacji.
+Aby wywołać funkcję zarządzaną z kontekstu natywnego, można dodać funkcję "otoki", która wywoła funkcję `__clrcall`. Można też użyć mechanizmu Marshaling środowiska CLR. Zobacz [jak: kierowanie wskaźników funkcji za pomocą PInvoke,](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md) Aby uzyskać więcej informacji.
 
-Poniższy przykład spowoduje wygenerowanie C3642:
+Poniższy przykład generuje C3642:
 
-```
+```cpp
 // C3642.cpp
 // compile with: /clr
 using namespace System;

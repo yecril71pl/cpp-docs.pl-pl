@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2425
 ms.assetid: 0ce59404-9aff-4e01-aa8d-27d23e92eb30
-ms.openlocfilehash: fcbcf06df3330320bf014c132abc543e2e2e8087
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b723ecdc3544865aa4adb63c4fb21db62f4b726
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402843"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744657"
 ---
 # <a name="compiler-error-c2425"></a>Błąd kompilatora C2425
 
 "token": niestałe wyrażenie w "context"
 
-Token stanowi część niestałe wyrażenie w tym kontekście.
+Token stanowi część wyrażenia niestałego w tym kontekście.
 
-Aby rozwiązać ten problem, Zamień token literał stałej lub z obliczeń.
+Aby rozwiązać ten problem, Zastąp token słowem stałym lub wyliczeniem.
 
-Poniższy przykład spowoduje wygenerowanie C2425:
+Poniższy przykład generuje C2425:
 
-```
+```cpp
 // C2425.cpp
 // processor: x86
 int main() {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2974
 ms.assetid: 1b444260-f2bf-48d7-ab1e-35573d8c4a0e
-ms.openlocfilehash: 2fa0fae07435f3ab63398b7b3f02f9c662e7b436
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb66a4f1edb40c107a094fea4e1ab61d74f0c7ac
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256573"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757660"
 ---
 # <a name="compiler-error-c2974"></a>Błąd kompilatora C2974
 
-Nieprawidłowy typ argumentu "number", typ oczekiwany
+Nieprawidłowy typ argumentu "number", oczekiwano typu
 
-Argument generyczny lub szablonu jest niezgodna z deklaracją generyczny lub szablonu. Typ powinny być wyświetlane w nawiasach kątowych. Sprawdź definicję generyczny lub szablonu, aby znaleźć poprawne typy.
+Argument generyczny lub szablon jest niezgodny z deklaracją generyczną lub szablonem. Typ powinien pojawić się w nawiasach kątowych. Sprawdź definicję ogólny lub szablon, aby znaleźć prawidłowe typy.
 
-Poniższy przykład spowoduje wygenerowanie C2974:
+Poniższy przykład generuje C2974:
 
-```
+```cpp
 // C2974.cpp
 // C2974 expected
 template <class T>
@@ -40,9 +40,9 @@ int main() {
 }
 ```
 
-C2974 może również wystąpić, gdy za pomocą typów ogólnych:
+C2974 może również wystąpić przy użyciu typów ogólnych:
 
-```
+```cpp
 // C2974b.cpp
 // compile with: /clr
 // C2974 expected

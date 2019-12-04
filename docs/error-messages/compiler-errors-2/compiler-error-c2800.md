@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2800
 ms.assetid: a2f1a590-9fe6-44cb-ad09-b4505ef47c6a
-ms.openlocfilehash: e893866a28c124e9e6cbc9663a488f89ac2d291b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c73ef05894f4f9e08c51ca074de40813ef35616
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408553"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739203"
 ---
 # <a name="compiler-error-c2800"></a>Błąd kompilatora C2800
 
-"operator operator" nie mogą być przeciążone.
+nie można obciążać operatora "operator"
 
-Następujące operatory nie mogą być przeciążone: dostęp do elementu członkowskiego klasy (`.`), wskaźnik do składowej (`.*`), zakres rozdzielczości (`::`), wyrażenie warunkowe (`? :`), a `sizeof`.
+Następujące operatory nie mogą być przeciążone: dostęp do składowej klasy (`.`), wskaźnik do składowej (`.*`), rozpoznawanie zakresu (`::`), wyrażenie warunkowe (`? :`) i `sizeof`.
 
-Poniższy przykład spowoduje wygenerowanie od C2800 do:
+Poniższy przykład generuje C2800:
 
-```
+```cpp
 // C2800.cpp
 // compile with: /c
 class C {

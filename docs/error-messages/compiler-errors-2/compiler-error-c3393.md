@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3393
 ms.assetid: d57f7c69-0a02-4fe3-9e45-bc62644fd77c
-ms.openlocfilehash: 5147e3e406fde73a05b7069e2a9336f27b3db622
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f6952de20c27a811b85694ae13892eff9231f83
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328669"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757543"
 ---
 # <a name="compiler-error-c3393"></a>Błąd kompilatora C3393
 
-Błąd składni w klauzuli ograniczenia: 'Identyfikator' nie jest typem
+Błąd składniowy w klauzuli ograniczenia: element "identifier" nie jest typem
 
-Identyfikator przekazany do ograniczenia, który musi być typem, nie jest typem.  Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące parametrów typu ogólnego (C++sposób niezamierzony)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
+Identyfikator przekazano do ograniczenia, które musi być typem, nie jest typem.  Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące parametrów typu ogólnegoC++(/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3393:
+Poniższy przykład generuje C3393:
 
-```
+```cpp
 // C3393.cpp
 // compile with: /clr /c
 void MyInterface() {}

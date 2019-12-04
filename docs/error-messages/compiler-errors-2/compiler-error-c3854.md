@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3854
 ms.assetid: 32a9ead0-c6c7-485a-8802-c7b1fe921d3a
-ms.openlocfilehash: 3b48e2c65003537102864fdafe7db70b06ade029
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c62117e9437233f614aa0e57a3848fcb8dd0c79
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265532"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754852"
 ---
 # <a name="compiler-error-c3854"></a>Błąd kompilatora C3854
 
-Wyrażenie po lewej stronie "=" daje w wyniku funkcji. Nie można przypisać do funkcji (funkcja nie jest wartością l)
+wyrażenie po lewej stronie "=" daje w wyniku funkcję. Nie można przypisać do funkcji (funkcja nie jest l-wartością)
 
-Nie można ponownie zainicjować odwołanie. Wyłuskanie odwołanie do funkcji daje funkcji, która r-wartości, do którego nie można przypisać. W związku z tym nie można przypisać za pomocą odwołanie do funkcji.
+Nie można ponownie zainicjować odwołania. Odwołanie do odwołania do funkcji daje funkcję, która jest rvalue, do której nie można przypisać. W związku z tym nie można przypisać przez odwołanie do funkcji.
 
-Poniższy przykład spowoduje wygenerowanie C3854:
+Poniższy przykład generuje C3854:
 
-```
+```cpp
 // C3854.cpp
 int afunc(int i)
 {

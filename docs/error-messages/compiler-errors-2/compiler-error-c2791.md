@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2791
 ms.assetid: 938ad1fb-75d9-4ce2-ad92-83d6249005b5
-ms.openlocfilehash: 66a111ea6fe2ca5acfbc473d19da62d9de67372a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d589094f117135474d1a8788867d2d571bbb5f5d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360167"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739548"
 ---
 # <a name="compiler-error-c2791"></a>Błąd kompilatora C2791
 
-niedozwolone użycie "super": "class" nie ma żadnych klas bazowych
+niedozwolone użycie elementu "Super": "Class" nie ma żadnych klas bazowych
 
-Słowo kluczowe [super](../../cpp/super.md) została użyta w kontekście funkcji składowej klasy, która nie ma żadnych klas bazowych.
+Słowo kluczowe [Super](../../cpp/super.md) zostało użyte w kontekście funkcji składowej klasy, która nie ma żadnych klas bazowych.
 
-Poniższy przykład spowoduje wygenerowanie C2791:
+Poniższy przykład generuje C2791:
 
-```
+```cpp
 // C2791.cpp
 struct D {
    void mf() {

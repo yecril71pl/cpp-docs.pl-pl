@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2275
 ms.assetid: c1eafa71-48de-46e0-82f3-b575538ef205
-ms.openlocfilehash: debf8779014badab69ffca13f3795f7e004b292a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e929adaf90c32cd489975057791a2866b6ba3e0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182785"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759740"
 ---
 # <a name="compiler-error-c2275"></a>Błąd kompilatora C2275
 
-'Identyfikator': niedozwolone użycie tego typu jako wyrażenia
+"Identyfikator": niedozwolone użycie tego typu jako wyrażenia
 
-Korzysta z wyrażenia `->` operator `typedef` identyfikatora.
+Wyrażenie używa operatora `->` z identyfikatorem `typedef`.
 
-Poniższy przykład spowoduje wygenerowanie C2275:
+Poniższy przykład generuje C2275:
 
-```
+```cpp
 // C2275.cpp
 typedef struct S {
     int mem;

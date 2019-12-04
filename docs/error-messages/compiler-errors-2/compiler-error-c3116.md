@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3116
 ms.assetid: 597463e1-a5cc-4ed3-a917-eae9a61d3312
-ms.openlocfilehash: 3f587bc677d64bda0fb5eea0b7ebc8d5761a2e75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0c8e7cab936171f89b33c90b4134a97c40b2c81
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376071"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741186"
 ---
 # <a name="compiler-error-c3116"></a>Błąd kompilatora C3116
 
-"specyfikatora magazynu": nieprawidłowa klasa magazynu dla metody interfejsu
+"specyfikator magazynu": nieprawidłowa Klasa magazynu dla metody interfejsu
 
-Użyte `typedef`, `register`, lub `static` jako klasa magazynu dla metody interfejsu. Te klasy magazynu nie są dozwolone w składowych interfejsu.
+Użyto `typedef`, `register`lub `static` jako klasy magazynu dla metody interfejsu. Te klasy magazynu są niedozwolone w składowych interfejsu.
 
-Poniższy przykład spowoduje wygenerowanie C3116:
+Poniższy przykład generuje C3116:
 
-```
+```cpp
 // C3116.cpp
 __interface ImyInterface
 {

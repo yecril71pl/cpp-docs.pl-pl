@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2728
 ms.assetid: 65635f91-1cd1-46e4-9ad7-14726d0546af
-ms.openlocfilehash: 1fbbc3d63386ebe98a447de8b7166a5263d2168f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac9efa88fc4ab17a656172c44de2e49e82108108
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208418"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755671"
 ---
 # <a name="compiler-error-c2728"></a>Błąd kompilatora C2728
 
-"type": natywna tablica nie może zawierać tego typu
+"Type": natywna tablica nie może zawierać tego typu
 
-Składni tworzenia tablicy został użyty do utworzenia tablicy zarządzanych lub obiekty WinRT. Nie można utworzyć tablicę zarządzanych lub obiekty WinRT, za pomocą składni tablicy natywnej.
+Składnia tworzenia tablicy została użyta do utworzenia tablicy obiektów zarządzanych lub WinRT. Nie można utworzyć tablicy obiektów zarządzanych lub WinRT przy użyciu natywnej składni tablicy.
 
-Aby uzyskać więcej informacji, zobacz [tablicy](../../extensions/arrays-cpp-component-extensions.md).
+Aby uzyskać więcej informacji, zobacz [Array](../../extensions/arrays-cpp-component-extensions.md).
 
-Poniższy przykład generuje C2728 i pokazuje, jak go naprawić:
+Poniższy przykład generuje C2728 i pokazuje, jak to naprawić:
 
-```
+```cpp
 // C2728.cpp
 // compile with: /clr
 

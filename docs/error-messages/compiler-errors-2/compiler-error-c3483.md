@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3483
 ms.assetid: 18b3a2c5-dfc9-4661-9653-08a5798474cf
-ms.openlocfilehash: acbe89b5183d0991fb8d4a571a9595d6f6bafc6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d6c1467575e7fae7d5e4862f36e733a68210f8e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381358"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743097"
 ---
 # <a name="compiler-error-c3483"></a>Błąd kompilatora C3483
 
-"var" jest już częścią listy przechwytów lambdy
+element "var" jest już częścią listy przechwytywania lambda
 
-Tę samą zmienną jest przekazywane do listy przechwytywania wyrażenia lambda więcej niż jeden raz.
+Ta sama zmienna została przeniesiona na listę przechwytywania wyrażenia lambda więcej niż jeden raz.
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-- Z listy przechwytywania, należy usunąć wszystkie dodatkowe wystąpienia w zmiennej.
+- Usuń wszystkie dodatkowe wystąpienia zmiennej z listy przechwytywania.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C3483, ponieważ zmienna `n` pojawia się więcej niż jeden raz na liście przechwytywania wyrażenia lambda:
+Poniższy przykład generuje C3483, ponieważ zmienna `n` występuje więcej niż jeden raz na liście przechwytywania wyrażenia lambda:
 
-```
+```cpp
 // C3483.cpp
 
 int main()

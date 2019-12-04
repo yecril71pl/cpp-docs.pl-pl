@@ -1,27 +1,27 @@
 ---
-title: Compiler Error C3059
+title: Błąd kompilatora C3059
 ms.date: 11/04/2016
 f1_keywords:
 - C3059
 helpviewer_keywords:
 - C3059
 ms.assetid: 57220324-8286-4cab-a1ab-45385eb1eae0
-ms.openlocfilehash: df1f65f231f72f2efa90458fe9b21339dda80080
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 897ed2beb7634cec787f0776616d9a60596a979f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404250"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756464"
 ---
-# <a name="compiler-error-c3059"></a>Compiler Error C3059
+# <a name="compiler-error-c3059"></a>Błąd kompilatora C3059
 
-"var": symbolu "threadprivate" nie można używać w klauzuli "klauzula"
+"var": symbol "threadprivate" nie może być używany w klauzuli "klauzula"
 
-A [threadprivate](../../parallel/openmp/reference/threadprivate.md) symbol został użyty w klauzuli.
+W klauzuli użyto symbolu [threadprivate](../../parallel/openmp/reference/threadprivate.md) .
 
-Poniższy przykład spowoduje wygenerowanie C3059:
+Poniższy przykład generuje C3059:
 
-```
+```cpp
 // C3059.cpp
 // compile with: /openmp
 #include "omp.h"
@@ -38,7 +38,7 @@ int main() {
 
 Możliwe rozwiązanie:
 
-```
+```cpp
 // C3059b.cpp
 // compile with: /openmp
 #include "omp.h"

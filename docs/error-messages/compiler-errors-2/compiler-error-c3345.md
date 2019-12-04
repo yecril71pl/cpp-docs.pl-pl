@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3345
 ms.assetid: 1dda4c79-73bb-441b-b939-746154c3afba
-ms.openlocfilehash: eb1d15a12bfebbf44f7335a848d68c367c285586
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6962e5c127a92acc5dfdad580c7bc89fa134751
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300599"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753448"
 ---
 # <a name="compiler-error-c3345"></a>Błąd kompilatora C3345
 
-'Identyfikator': nieprawidłowy identyfikator dla nazwy modułu
+"Identyfikator": nieprawidłowy identyfikator dla nazwy modułu
 
-*Identyfikator* moduł zawiera jeden lub więcej znaków nie do przyjęcia. Identyfikator jest prawidłowy, jeśli pierwszy znak jest znakiem alfabetycznym, podkreślenia, lub wysokie ANSI (0x80 FF), wszystkie kolejne znaków i litery, cyfry, podkreślenia ani znaków ANSI wysoka.
+*Identyfikator* modułu zawiera jeden lub więcej nieakceptowalnych znaków. Identyfikator jest prawidłowy, jeśli pierwszy znak jest znakiem alfabetycznym, podkreśleniem lub High ANSI (0x80-FF), a każdy kolejny znak jest znakiem alfanumerycznym, podkreśleniem lub dużą ANSI.
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-1. Upewnij się, że *identyfikator* nie zawiera spacje lub znaki nie do przyjęcia.
+1. Upewnij się, że *Identyfikator* nie zawiera pustych lub innych nieakceptowalnych znaków.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykładowy kod powoduje komunikat o błędzie C3345, ponieważ `name` parametru `module` atrybut zawiera puste.
+Poniższy przykład kodu powoduje, że komunikat o błędzie C3345, ponieważ parametr `name` atrybutu `module` zawiera pustą wartość.
 
-```
+```cpp
 // cpp_attr_name_module.cpp
 // compile with: /LD /link /OPT:NOREF
 #include <atlbase.h>

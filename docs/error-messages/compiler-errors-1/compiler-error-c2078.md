@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2078
 ms.assetid: 9bead850-4123-46cf-a634-5c77ba974b2b
-ms.openlocfilehash: a800a6efa6e02f323b4b6597f1aa983f13674e83
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 514776c0feb12c46dea56dd8e85043345754a229
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182811"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756451"
 ---
 # <a name="compiler-error-c2078"></a>Błąd kompilatora C2078
 
 zbyt wiele inicjatorów
 
-Inicjatory przekracza liczbę obiektów do zainicjowania.
+Liczba inicjatorów przekracza liczbę obiektów, które mają zostać zainicjowane.
 
-Kompilator może wywnioskować prawidłowe przypisanie inicjatory obiektów i obiektów wewnętrznych, gdy wewnętrzny nawiasy klamrowe są czy opuszczony na liście inicjatora. Pełne tężników również eliminuje niejednoznaczności i powoduje przypisanie poprawne. Częściowe tężników może spowodować C2078 z powodu niejednoznaczności w przypisaniu inicjatorów obiektów.
+Kompilator może wywnioskować poprawne przypisanie inicjatorów do obiektów i obiektów wewnętrznych, gdy wewnętrzne nawiasy klamrowe są opuszczony Konstruktor kopiujący z listy inicjatorów. Pełna klamra eliminuje również niejednoznaczność i skutkuje prawidłowym przypisaniem. Częściowe nawiasy klamrowe mogą spowodować C2078 z powodu niejednoznaczności w przypisaniu inicjatorów do obiektów.
 
-Poniższy przykład generuje C2078 i pokazuje, jak go naprawić:
+Poniższy przykład generuje C2078 i pokazuje, jak to naprawić:
 
-```
+```cpp
 // C2078.cpp
 // Compile by using: cl /c /W4 C2078.cpp
 struct S {

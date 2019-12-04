@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2627
 ms.assetid: 7fc6c5ac-c7c9-4f0b-ad52-f52252526458
-ms.openlocfilehash: dc976a0c16d19d1fd2340676e43eb71903163aa5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b0471aaead1b56f51e4393784306aa6ed928eec
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222861"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754735"
 ---
 # <a name="compiler-error-c2627"></a>Błąd kompilatora C2627
 
-'Funkcja': funkcja składowa nie jest dozwolona w anonimowej Unii
+"Function": funkcja członkowska nie jest dozwolona w anonimowej Unii
 
-[Anonimowej Unii](../../cpp/unions.md#anonymous_unions) nie może mieć elementów członkowskich.
+[Anonimowa Unia](../../cpp/unions.md#anonymous_unions) nie może mieć funkcji Członkowskich.
 
-Poniższy przykład spowoduje wygenerowanie C2627:
+Poniższy przykład generuje C2627:
 
-```
+```cpp
 // C2627.cpp
 int main() {
    union { void f(){} };   // C2627

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3103
 ms.assetid: 7984bd3e-d51d-43e4-b6f4-08c1e9fb9704
-ms.openlocfilehash: 6a68e39ac92433eadacd666861f9e00431e4a34a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ecbbb3f7e9d173957c35e76cbec407aab9ebfafe
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404185"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749938"
 ---
 # <a name="compiler-error-c3103"></a>Błąd kompilatora C3103
 
-"argument": powtarzający się nazwany argument
+"argument": powtórzony nazwany argument
 
-Atrybut nie można powtórzyć argumenty nazwane.
+Atrybut nie może powtarzać nazwanych argumentów.
 
 Aby uzyskać więcej informacji, zobacz [atrybuty zdefiniowane przez użytkownika](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3103.
+Poniższy przykład generuje C3103.
 
-```
+```cpp
 // C3103.cpp
 // compile with: /clr /c
 using namespace System;

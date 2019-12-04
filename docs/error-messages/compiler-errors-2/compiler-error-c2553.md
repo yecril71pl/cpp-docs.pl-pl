@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2553
 ms.assetid: 64bc1e9a-627f-4ce9-b7bc-dc911bdb9180
-ms.openlocfilehash: 11cb2b83d958f0c59d05034a716a022f00b326ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa3e97d576e994878ab5b080363c4c09b79f42ed
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353201"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756789"
 ---
 # <a name="compiler-error-c2553"></a>Błąd kompilatora C2553
 
-"base_function": przesłanianie wirtualnej funkcji zwraca typ różni się od "override_function"
+"base_function": przesłanianie typu zwracanego funkcji wirtualnej różni się od "override_function"
 
-Funkcja w klasie pochodnej próbował zastępują funkcję wirtualną w klasie bazowej, ale funkcja klasy pochodnej nie miał taki sam zwracany typ funkcji klasy podstawowej.  Sygnatura funkcji zastąpienie musi odpowiadać podpisowi przesłaniana funkcja.
+Funkcja w klasie pochodnej próbowała zastąpić funkcję wirtualną w klasie bazowej, ale funkcja klasy pochodnej nie ma tego samego typu zwracanego co funkcja klasy bazowej.  Sygnatura funkcji przesłaniania musi być zgodna z sygnaturą zastępowanej funkcji.
 
-Poniższy przykład spowoduje wygenerowanie C2553:
+Poniższy przykład generuje C2553:
 
-```
+```cpp
 // C2553.cpp
 // compile with: /clr /c
 ref struct C {

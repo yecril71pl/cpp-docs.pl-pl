@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2227
 ms.assetid: d470e8b8-7e15-468b-84fa-37d1a0132271
-ms.openlocfilehash: 8f9fc435682eb400574eea61a6f90392fa679233
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: affc500208644cebbef1da93a0eafabd4aeaa094
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404328"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759298"
 ---
 # <a name="compiler-error-c2227"></a>Błąd kompilatora C2227
 
-po lewej "-> elementu członkowskiego" musi wskazywać typ klasy/struct/union/generic
+po lewej stronie elementu "-> member" musi wskazywać typ Class/struct/Union/Generic
 
-Argument operacji po lewej stronie `->` nie jest wskaźnik do klasy, struktury lub Unii.
+Operand z lewej strony `->` nie jest wskaźnikiem do klasy, struktury lub związku.
 
-Poniższy przykład spowoduje wygenerowanie C2227:
+Poniższy przykład generuje C2227:
 
-```
+```cpp
 // C2227.cpp
 int *pInt;
 struct S {

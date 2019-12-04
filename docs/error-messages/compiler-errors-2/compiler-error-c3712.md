@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3712
 ms.assetid: 65b1fcaf-be89-4c55-9e40-25ec03457253
-ms.openlocfilehash: 0b84f4562dcc0dd5dcc3ecb647316772efab6b38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51772f22f83cff5c602bd2310d7913c0d317ba66
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328409"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753370"
 ---
 # <a name="compiler-error-c3712"></a>Błąd kompilatora C3712
 
-"method": metoda obsługi zdarzeń musi zwracać taki sam typ jak źródło "method"
+"Metoda": metoda obsługi zdarzeń musi zwracać ten sam typ co Źródło "Metoda"
 
-Zdefiniowane metody obsługi zdarzeń, która nie zwróciła tego samego typu co metoda źródła zdarzeń. Aby naprawić ten błąd, należy podać metodę programu obsługi zdarzeń taki sam zwracany typ jak metoda źródła zdarzeń.
+Zdefiniowano metodę procedury obsługi zdarzeń, która nie zwróciła tego samego typu co źródłowa Metoda zdarzenia. Aby naprawić ten błąd, nadaj metodzie obsługi zdarzeń ten sam zwracany typ co Metoda źródłowa zdarzenia.
 
-Poniższy przykład spowoduje wygenerowanie C3712:
+Poniższy przykład generuje C3712:
 
-```
+```cpp
 // C3712.cpp
 // compile with: /c
 [event_source(native)]

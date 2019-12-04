@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3168
 ms.assetid: 4c36fcfb-c351-48ff-b4eb-78d2aa1b4d55
-ms.openlocfilehash: f39160cc09825c6d87d56ff5ba80d21a35f41e12
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f09c7e250b4c2b02ba2db582f92d54336bed673
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174163"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761793"
 ---
 # <a name="compiler-error-c3168"></a>Błąd kompilatora C3168
 
-"type": niedozwolony typ podstawowy dla wyliczenia
+"Type": niedozwolony typ podstawowy dla wyliczenia
 
-Bazowy typ określony dla `enum` typ nie jest prawidłowy. Typ podstawowy musi być typu całkowitoliczbowego C++ lub odpowiedni typ CLR.
+Typ podstawowy określony dla typu `enum` jest nieprawidłowy. Typ podstawowy musi być typem całkowitym C++ lub odpowiadającym mu typem CLR.
 
-Poniższy przykład spowoduje wygenerowanie C3168:
+Poniższy przykład generuje C3168:
 
-```
+```cpp
 // C3168.cpp
 // compile with: /clr /c
 ref class G{};

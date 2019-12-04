@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3732
 ms.assetid: 2d55a7e1-9c39-4379-a093-2f7beb27e2ca
-ms.openlocfilehash: c71cca3643f6337060de6e4bb56ac64d8f0d6e4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30ade41ae463923cc5cc9911469e587decacbc64
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327993"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752928"
 ---
 # <a name="compiler-error-c3732"></a>Błąd kompilatora C3732
 
-"interface": niestandardowy interfejs wyzwalający zdarzenia COM nie można dziedziczyć interfejsu IDispatch
+"Interface": niestandardowy interfejs wyzwalający zdarzenia COM nie może dziedziczyć z IDispatch
 
-Interfejs, który obsługuje zdarzenia COM nie może dziedziczyć z `IDispatch`. Aby uzyskać więcej informacji, zobacz [zdarzenie obsługi w modelu COM](../../cpp/event-handling-in-com.md).
+Interfejs obsługujący zdarzenia COM nie może dziedziczyć po `IDispatch`. Aby uzyskać więcej informacji, zobacz [Obsługa zdarzeń w modelu COM](../../cpp/event-handling-in-com.md).
 
 Następujący błąd generuje C3732:
 
-```
+```cpp
 // C3732.cpp
 #define _ATL_ATTRIBUTES 1
 #include "atlbase.h"

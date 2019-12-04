@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3421
 ms.assetid: b52050c6-17a4-424a-8894-337b0cec7010
-ms.openlocfilehash: 399224a3d091a26066a03df0c77511997ae2403c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 39a57aa7b85b9f8a8aae0b93e2b346584edef8de
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182427"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756243"
 ---
 # <a name="compiler-error-c3421"></a>Błąd kompilatora C3421
 
-"type": nie można wywołać finalizatora dla tej klasy, ponieważ jest on niedostępny lub nie istnieje
+"Type": nie można wywołać finalizatora dla tej klasy, ponieważ jest on niedostępny lub nie istnieje
 
-Finalizator jest niejawnie prywatne, dlatego nie można wywołać z poza jego typie otaczającym.
+Finalizator jest niejawnie prywatny, dlatego nie można go wywołać spoza jego typu otaczającego.
 
-Aby uzyskać więcej informacji, zobacz [destruktory i finalizatory w sposób: Definiowanie oraz stosowanie klas i struktur (C++sposób niezamierzony)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Aby uzyskać więcej informacji, zobacz [destruktory i finalizatory w instrukcje: Definiowanie i korzystanie z klas i struktur (C++/CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3421.
+Poniższy przykład generuje C3421.
 
-```
+```cpp
 // C3421.cpp
 // compile with: /clr
 ref class A {};

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2993
 ms.assetid: 4ffd2b78-654b-46aa-95a6-b62101cf91c8
-ms.openlocfilehash: 5be4836332f67f2064f60a3b058db159a18ca1e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5aa0d27b2d469f53ec521f587172398b7d4c2d1b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160890"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761234"
 ---
 # <a name="compiler-error-c2993"></a>Błąd kompilatora C2993
 
-'Identyfikator': niedozwolony typ dla parametru szablonu bez typu "parametru"
+"Identyfikator": niedozwolony typ dla parametru szablonu bez typu "parameter"
 
-Nie można zadeklarować szablon ze struktury lub Unii argumentu. Użycie wskaźników do przekazywania struktur i Unii jako parametry szablonu.
+Nie można zadeklarować szablonu ze strukturą lub argumentem Union. Użyj wskaźników, aby przekazać struktury i związki jako parametry szablonu.
 
-Poniższy przykład spowoduje wygenerowanie C2993:
+Poniższy przykład generuje C2993:
 
-```
+```cpp
 // C2993.cpp
 // compile with: /c
 // C2993 expected
@@ -36,11 +36,11 @@ template <class T, struct MyStruct S>   // C2993
 class CMyClass {};
 ```
 
-Ten błąd będzie też można wygenerować w wyniku pracy zgodności kompilatora, która została wykonana w Visual Studio .NET 2003: zmiennoprzecinkowa parametry szablonu bez typu nie są już dozwolone. C++ standard nie zezwala na zmiennoprzecinkowej parametrów szablonu-typu.
+Ten błąd zostanie również wygenerowany w wyniku działania kompilatora, który został wykonany w programie Visual Studio .NET 2003: parametry szablonu bez typu zmiennoprzecinkowego nie są już dozwolone. C++ Standard nie zezwala na zmiennoprzecinkowe parametry szablonu bez typu.
 
-Jeśli jest szablonem funkcji, użyj argumentu funkcji do przekazania w zmeinnoprzecinkowych punktu parametru szablonu bez typu (ten kod będzie prawidłowy w wersjach programu Visual Studio .NET 2003 i Visual Studio .NET, Visual c++). Jeśli szablon klasy, nie ma łatwego sposobu obejścia.
+Jeśli jest to szablon funkcji, należy użyć argumentu funkcji, aby przekazać parametr szablonu bez typu zmiennoprzecinkowego (ten kod będzie prawidłowy w Visual Studio .NET 2003 i Visual Studio .NET wersjach wizualizacji C++). Jeśli jest to szablon klasy, nie ma żadnego prostego obejścia.
 
-```
+```cpp
 // C2993b.cpp
 // compile with: /c
 template<class T, float f> void func(T) {}   // C2993

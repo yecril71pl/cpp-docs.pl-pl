@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3020
 ms.assetid: f625c7a3-afaa-4bd8-9c1b-51891b832f36
-ms.openlocfilehash: 0e2d8e70dcc9b23c56a321487cd4b933a1086387
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b066e813203f10b902e49a62af97a9a041874752
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386684"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742122"
 ---
 # <a name="compiler-error-c3020"></a>Błąd kompilatora C3020
 
-"var": zmienna index OpenMP pętli "for" nie może być modyfikowana w ciele pętli
+"var": zmienna index pętli "for" OpenMP nie może być modyfikowana w treści pętli
 
-OpenMP `for` pętli nie mogą być modyfikowane indeksu (licznika pętli) w treści `for` pętli.
+Pętla `for` OpenMP nie może modyfikować indeksu (licznik pętli) w treści pętli `for`.
 
-Poniższy przykład spowoduje wygenerowanie C3020:
+Poniższy przykład generuje C3020:
 
-```
+```cpp
 // C3020.cpp
 // compile with: /openmp
 int main() {
@@ -38,11 +38,11 @@ int main() {
 }
 ```
 
-Zmienna zadeklarowana ze [lastprivate](../../parallel/openmp/reference/lastprivate.md) nie można użyć jako indeks wewnątrz pętli, równoległego.
+Zmienna zadeklarowana przy użyciu elementu [lastprivate](../../parallel/openmp/reference/lastprivate.md) nie może być używana jako indeks wewnątrz pętli równoległej.
 
-Poniższy przykład zapewni C3020 dla drugiego lastprivate, ponieważ ten lastprivate wyzwoli zapisu idx_a w najbardziej zewnętrznej pętli for. Pierwszy lastprivate nie wyświetli błąd, ponieważ tego lastprivate wyzwala zapisu idx_a poza najbardziej zewnętrzna dla pętli (z technicznego punktu widzenia. na końcu w ostatniej iteracji). Poniższy przykład spowoduje wygenerowanie C3020.
+Poniższy przykład daje C3020 dla drugiego lastprivateu, ponieważ ten lastprivate wywoła zapis do idx_a w obrębie zewnętrznej pętli for. Pierwszy lastprivate nie daje błędu, ponieważ lastprivate wyzwala zapis do idx_a poza najbardziej zewnętrznym pętlą for (technicznie, na końcu ostatniej iteracji). Poniższy przykład generuje C3020.
 
-```
+```cpp
 // C3020b.cpp
 // compile with: /openmp /c
 float a[100][100];
@@ -59,9 +59,9 @@ void test(int first, int last)
 }
 ```
 
-W poniższym przykładzie pokazano możliwe rozwiązania:
+Poniższy przykład demonstruje możliwe rozwiązanie:
 
-```
+```cpp
 // C3020c.cpp
 // compile with: /openmp /c
 float a[100][100];

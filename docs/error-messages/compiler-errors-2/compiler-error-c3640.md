@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3640
 ms.assetid: fcc56894-0f98-48af-8561-3bf7c7b2b93f
-ms.openlocfilehash: 5d9becbdfad2afc8940a9e1ded08a15842607e4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73f353aff42afdee649104d9f578c9061d236d1f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385930"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742486"
 ---
 # <a name="compiler-error-c3640"></a>Błąd kompilatora C3640
 
-"członek": odwołanie lub wirtualna składowa lokalnej klasy musi być zdefiniowany.
+"member": odwołanie lub wirtualna funkcja członkowska klasy lokalnej musi być zdefiniowana
 
-Kompilator wymaga pewnych funkcji, należy zdefiniować.
+Kompilator wymaga zdefiniowania określonych funkcji.
 
-Poniższy przykład spowoduje wygenerowanie C3640:
+Poniższy przykład generuje C3640:
 
-```
+```cpp
 // C3640.cpp
 void f()
 {

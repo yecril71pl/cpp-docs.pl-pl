@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2356
 ms.assetid: 84d5a816-9a61-4d45-9978-38e485bbf767
-ms.openlocfilehash: 0166cce6011017b8a18821666083f7c47f58b7a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e306c5a8f9175bc3c7902b20263aa2e451944182
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302543"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759935"
 ---
 # <a name="compiler-error-c2356"></a>Błąd kompilatora C2356
 
-segment inicjalizacyjny nie może ulec zmianie podczas tłumaczenia jednostki
+segment inicjalizacji nie może ulec zmianie podczas jednostki tłumaczenia
 
 Możliwe przyczyny:
 
-- `#pragma init_seg` poprzedzony przez kod inicjujący segmentu
+- `#pragma init_seg` poprzedzony kodem inicjalizacji segmentu
 
-- `#pragma init_seg` poprzedzony przez inny `#pragma init_seg`
+- `#pragma init_seg` poprzedzany przez inny `#pragma init_seg`
 
-Aby rozwiązać problem, należy przenieść kod inicjujący segment na początku tego modułu. Jeśli wiele obszarów, musi zostać zainicjowany, należy przenieść ich w oddzielnych modułów.
+Aby rozwiązać ten problem, Przenieś kod inicjalizacji segmentu na początek modułu. Jeśli trzeba zainicjować wiele obszarów, przenieś je do oddzielnych modułów.
 
-Poniższy przykład spowoduje wygenerowanie C2356:
+Poniższy przykład generuje C2356:
 
-```
+```cpp
 // C2356.cpp
 #pragma warning(disable : 4075)
 

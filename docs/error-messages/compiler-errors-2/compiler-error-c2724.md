@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2724
 ms.assetid: 4e4664bc-8c96-4156-b79f-03436f532ea8
-ms.openlocfilehash: 3014a12767cb9a73dc65852c544b7ac9574b9a52
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f48bf45eeed491469b161ac1edcdb57d04eb5863
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383064"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760689"
 ---
 # <a name="compiler-error-c2724"></a>Błąd kompilatora C2724
 
-'Identyfikator': "static" nie powinna być używana w funkcji składowej zdefiniowanej w zakresie pliku
+"Identyfikator": element "static" nie powinien być używany w funkcjach członkowskich zdefiniowanych w zakresie pliku
 
-Statyczne funkcje Członkowskie powinien być zadeklarowany za pomocą zewnętrznego powiązania.
+Statyczne funkcje składowe powinny być zadeklarowane za pomocą zewnętrznego powiązania.
 
-Poniższy przykład spowoduje wygenerowanie C2724:
+Poniższy przykład generuje C2724:
 
-```
+```cpp
 // C2724.cpp
 class C {
    static void func();

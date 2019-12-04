@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3865
 ms.assetid: 9bc62bb0-4fb8-4856-a5cf-c7cb4029a596
-ms.openlocfilehash: 846657d3598e268d78ff3c39f2bfc901756ad370
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 960c795fe934433e4e3cf79e4c01c49d00205b9b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302023"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761494"
 ---
 # <a name="compiler-error-c3865"></a>Błąd kompilatora C3865
 
-"calling_convention": należy używać tylko w natywnych funkcjach składowych
+"calling_convention": mogą być używane tylko w natywnych funkcjach składowych
 
-Konwencja wywoływania był używany w funkcji, która została każda funkcja globalna lub funkcji składowej zarządzanej. Konwencja wywoływania należy używać tylko w funkcji natywnej (niezarządzane) elementu członkowskiego.
+Konwencja wywoływania została użyta w funkcji, która była funkcją globalną lub zarządzaną funkcją składową. Konwencji wywoływania można używać tylko w natywnej (nie zarządzanej) funkcji składowej.
 
-Aby uzyskać więcej informacji, zobacz [Konwencje wywoływania](../../cpp/calling-conventions.md).
+Aby uzyskać więcej informacji, zobacz [konwencje wywoływania](../../cpp/calling-conventions.md).
 
-Poniższy przykład spowoduje wygenerowanie C3865:
+Poniższy przykład generuje C3865:
 
-```
+```cpp
 // C3865.cpp
 // compile with: /clr
 // processor: x86

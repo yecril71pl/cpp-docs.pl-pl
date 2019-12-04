@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3656
 ms.assetid: 88965d85-73b0-4b35-8020-0650c9c94cd8
-ms.openlocfilehash: 9709f3105e957012c05111ea818890b6d1df8259
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 312fc4311120819fe6621d03e5ab6f7cab13cac9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227060"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758284"
 ---
 # <a name="compiler-error-c3656"></a>Błąd kompilatora C3656
 
-"override": Zastąp specyfikator nie może powtarzać się
+"override": specyfikator przesłonięcia nie może być powtórzony
 
-Słowo kluczowe jawnego przesłaniania można określić tylko raz. Aby uzyskać więcej informacji, zobacz [jawne zastępowanie](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Jawne słowo kluczowe override można określić tylko raz. Aby uzyskać więcej informacji, zobacz [jawne zastąpienia](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
-Poniższy przykład spowoduje wygenerowanie C3656:
+Poniższy przykład generuje C3656:
 
-```
+```cpp
 // C3656.cpp
 // compile with: /clr /c
 public interface struct O {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2990
 ms.assetid: 674e9f6a-6743-4af0-a7ed-cbe11103a2f8
-ms.openlocfilehash: 16c111a0fb8608615abaee495680fa38920b6c77
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 1c58c2d5da0049ec670e11c930b397caec3cbbee
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447345"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751524"
 ---
 # <a name="compiler-error-c2990"></a>Błąd kompilatora C2990
 
-"class": typ klasy korporacyjnej jako już został zadeklarowany jako typ klasy
+"Class": typ inny niż Klasa jako zadeklarowany jako typ klasy
 
-Inne niż ogólne lub klasą szablonu redefiniuje generyczny lub szablonu klasy. Sprawdź pliki nagłówkowe dla konfliktów.
+Klasa niegeneryczna lub szablonu ponownie definiuje klasę generyczną lub szablonową. Sprawdź pliki nagłówkowe pod kątem konfliktów.
 
-Poniższy przykład spowoduje wygenerowanie C2990:
+Poniższy przykład generuje C2990:
 
-```
+```cpp
 // C2990.cpp
 // compile with: /c
 template <class T>
@@ -29,9 +29,9 @@ class C{};
 class C{};   // C2990
 ```
 
-C2990 może również wystąpić, gdy za pomocą typów ogólnych:
+C2990 może również wystąpić przy użyciu typów ogólnych:
 
-```
+```cpp
 // C2990b.cpp
 // compile with: /clr /c
 generic <class T>
@@ -40,11 +40,11 @@ ref struct GC;
 ref struct GC {};   // C2990
 ```
 
-C2990 może również wystąpić z powodu istotnej zmiany w programie Microsoft C++ kompilator programu Visual Studio 2005; Kompilator teraz wymaga wielu deklaracji dla tego samego typu identyczne w odniesieniu do specyfikacji szablonu.
+C2990 może również wystąpić ze względu na nieprzerwaną zmianę C++ w kompilatorze Microsoft dla programu Visual Studio 2005; kompilator wymaga teraz, aby wiele deklaracji tego samego typu były identyczne z uwzględnieniem specyfikacji szablonu.
 
-Poniższy przykład spowoduje wygenerowanie C2990:
+Poniższy przykład generuje C2990:
 
-```
+```cpp
 // C2990c.cpp
 // compile with: /c
 template<class T>

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3363
 ms.assetid: 41aa922f-608e-4f7a-ba66-451fc1161935
-ms.openlocfilehash: eca598233dbe4cae4730e952b45945653ec8ffaa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44b41dd706c7eb290c71d7312464d688cbcf08d3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363638"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757361"
 ---
 # <a name="compiler-error-c3363"></a>Błąd kompilatora C3363
 
-"type": "typeid" można stosować tylko do typu
+"Type": "typeid" może być stosowany tylko do typu
 
-[Typeid](../../extensions/typeid-cpp-component-extensions.md) operator zostało niepoprawnie użyte.
+Operator [typeid](../../extensions/typeid-cpp-component-extensions.md) został niepoprawnie użyty.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3363.
+Poniższy przykład generuje C3363.
 
-```
+```cpp
 // C3363.cpp
 // compile with: /clr
 int main() {

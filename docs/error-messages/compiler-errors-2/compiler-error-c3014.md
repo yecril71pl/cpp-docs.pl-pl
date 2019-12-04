@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3014
 ms.assetid: af1c5b0c-dbf9-4274-b06a-c6c2cdcf2a52
-ms.openlocfilehash: c87c63641fc8071f7a1f29874ae7ae6dbffd4f70
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 08b8fc2eef4aa3a94ec615ad236cd3f9bebc4883
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344675"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749886"
 ---
 # <a name="compiler-error-c3014"></a>Błąd kompilatora C3014
 
-Oczekiwano pętli po dyrektywie "w dyrektywie" OpenMP
+Oczekiwano pętli for po dyrektywie dyrektywy OpenMP
 
-Występuje błąd dla żadnych innych niż `for` pętli, aby natychmiast wykonać `#pragma omp for` dyrektywy.
+Jest to błąd dla wszystkiego innego niż pętla `for`, aby natychmiast wykonać `#pragma omp for` dyrektywie.
 
-Poniższy przykład spowoduje wygenerowanie C3014:
+Poniższy przykład generuje C3014:
 
-```
+```cpp
 // C3014.cpp
 // compile with: /openmp
 int main()

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3353
 ms.assetid: 5699c04b-d504-46ce-bf71-c200318fed71
-ms.openlocfilehash: c38642d7abd4f2fd50792c548c9a5521b2da10ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 332e0b253aed53f2adadf448b6a9c0681abc825e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402648"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747454"
 ---
 # <a name="compiler-error-c3353"></a>Błąd kompilatora C3353
 
-"delegowanie": delegat można tworzyć tylko z globalnej funkcji lub funkcji składowej typu zarządzanego lub typu WinRT
+"delegat": delegat może być utworzony tylko z globalnej funkcji lub funkcji składowej typu zarządzanego lub WinRT
 
-Delegatów, zadeklarowany za pomocą [delegować](../../extensions/delegate-cpp-component-extensions.md) — słowo kluczowe, mogą być deklarowane tylko w zakresie globalnym.
+Delegaty zadeklarowane za pomocą słowa kluczowego [delegata](../../extensions/delegate-cpp-component-extensions.md) mogą być deklarowane tylko w zakresie globalnym.
 
-Poniższy przykład spowoduje wygenerowanie C3353:
+Poniższy przykład generuje C3353:
 
-```
+```cpp
 // C3353.cpp
 // compile with: /clr
 delegate int f;   // C3353

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2614
 ms.assetid: a550c1d5-8718-4e17-a888-b2619e00fe11
-ms.openlocfilehash: 71f0fe3211ce253bcf30347658692651e84ab608
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 202d7f4caec3aabfde5d69adeaafa3da5dd67623
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344747"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737676"
 ---
 # <a name="compiler-error-c2614"></a>Błąd kompilatora C2614
 
-'klasa1': niedozwolone inicjowanie składowej: 'klasa2' nie jest obiektem bazowym ani składową
+"Class1": niedozwolona Inicjalizacja elementu członkowskiego: "'klasa" nie jest elementem podstawowym ani składową
 
-Tylko składowej lub klasy bazowe mogą być wyświetlane na liście inicjowania klasy lub struktury.
+Na liście inicjalizacji klasy lub struktury mogą znajdować się tylko klasy Członkowskie lub podstawowe.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2614.
+Poniższy przykład generuje C2614.
 
-```
+```cpp
 // C2614.cpp
 // compile with: /c
 struct A {

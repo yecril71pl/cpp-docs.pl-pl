@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2662
 ms.assetid: e172c2a4-f29e-4034-8232-e7dc6f83689f
-ms.openlocfilehash: fefd523ca3b9a3406afc307150322f9d431aa730
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2fa2643898fed510aa7cf0f483b538ebb33b033
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360353"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760455"
 ---
 # <a name="compiler-error-c2662"></a>Błąd kompilatora C2662
 
-'Funkcja': nie można konwertować wskaźnika "this" z 'Typ1' na 'type2'
+"Function": nie można skonwertować wskaźnika "This" z "type1" na "type2"
 
-Kompilator nie może przekonwertować `this` wskaźnika z `type1` do `type2`.
+Kompilator nie może skonwertować wskaźnika `this` z `type1` na `type2`.
 
-Ten błąd może być spowodowany przez wywołanie innej niż`const` funkcja elementu członkowskiego na `const` obiektu.  Możliwe rozwiązania:
+Ten błąd może być spowodowany wywołaniem funkcji członkowskiej innej niż`const` na obiekcie `const`.  Możliwe rozwiązania:
 
-- Usuń `const` z deklaracja obiektu.
+- Usuń `const` z deklaracji obiektu.
 
-- Dodaj `const` do funkcji składowej.
+- Dodaj `const` do funkcji członkowskiej.
 
-Poniższy przykład spowoduje wygenerowanie C2662:
+Poniższy przykład generuje C2662:
 
-```
+```cpp
 // C2662.cpp
 class C {
 public:
@@ -41,9 +41,9 @@ int main() {
 }
 ```
 
-Podczas kompilowania za pomocą **/CLR**, nie można wywołać funkcję w `const` lub `volatile` kwalifikowaną typu zarządzanego. Nie można zadeklarować stała składowa klasy zarządzanej, więc nie można wywoływać metod dla stałych zarządzanych obiektów.
+Podczas kompilowania z **/CLR**nie można wywołać funkcji na `const` lub `volatile` kwalifikowanego typu zarządzanego. Nie można zadeklarować stałej funkcji składowej klasy zarządzanej, więc nie można wywoływać metod w zarządzanych obiektach const.
 
-```
+```cpp
 // C2662_b.cpp
 // compile with: /c /clr
 ref struct M {
@@ -67,9 +67,9 @@ ref struct N {
 };
 ```
 
-Poniższy przykład spowoduje wygenerowanie C2662:
+Poniższy przykład generuje C2662:
 
-```
+```cpp
 // C2662_c.cpp
 // compile with: /c
 // C2662 expected

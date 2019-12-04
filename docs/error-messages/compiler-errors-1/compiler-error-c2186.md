@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2186
 ms.assetid: 284bfb7e-ab85-4fcb-9864-1ddf7f6c94ae
-ms.openlocfilehash: 191b7109640fd253b24d00d86021d909891a4f95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f60dd02a8325cd04f05e53bc3cee998e8dc83148
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379008"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758570"
 ---
 # <a name="compiler-error-c2186"></a>Błąd kompilatora C2186
 
-'operator': niedozwolony operand typu "void"
+"operator": niedozwolony operand typu "void"
 
 Operator ma `void` operand.
 
-Poniższy przykład spowoduje wygenerowanie C2186:
+Poniższy przykład generuje C2186:
 
-```
+```cpp
 // C2186.cpp
 // compile with: /c
 void func1( void );

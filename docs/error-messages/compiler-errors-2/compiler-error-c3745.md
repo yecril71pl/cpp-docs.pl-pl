@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3745
 ms.assetid: 1e64aec5-7e53-47e5-bc7d-3905230cfc66
-ms.openlocfilehash: da80a10cbf7246ad0aeaecffe20992d2050abb3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7e6bde7ce07edf7a75f38c37f3e4cbb3c6c3486
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208259"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752460"
 ---
 # <a name="compiler-error-c3745"></a>Błąd kompilatora C3745
 
-'Funkcja': tylko zdarzenie może być "raised"
+"Function": tylko zdarzenie może być "wywoływane"
 
-Tylko funkcji zdefiniowanej przy użyciu [__event](../../cpp/event.md) — słowo kluczowe może być przekazywany do [__raise](../../cpp/raise.md) — słowo kluczowe.
+Tylko funkcję zdefiniowaną za pomocą słowa kluczowego [__event](../../cpp/event.md) można przesłać do słowa kluczowego [__raise](../../cpp/raise.md) .
 
-Poniższy przykład spowoduje wygenerowanie C3745:
+Poniższy przykład generuje C3745:
 
-```
+```cpp
 // C3745.cpp
 struct E {
    __event void func();

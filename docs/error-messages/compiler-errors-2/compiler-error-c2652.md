@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2652
 ms.assetid: 6e3d1a90-a989-4088-8afd-dc82f6a2d66f
-ms.openlocfilehash: 9c9772052b690ad87de1d408c06478d82d48e724
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cedee3f1e3289aaf0ea38d75b6c812b61f891435
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282117"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756126"
 ---
 # <a name="compiler-error-c2652"></a>Błąd kompilatora C2652
 
-'Identyfikator': niedozwolony Konstruktor kopiujący: pierwszy parametr nie może być 'Identyfikator'
+"Identyfikator": niedozwolony Konstruktor kopiujący: pierwszy parametr nie może być identyfikatorem
 
-Pierwszy parametr w Konstruktorze kopiowania ma taki sam jak klasy, struktury lub Unii, dla którego zdefiniowano. Pierwszy parametr może być odwołanie do typu, ale nie samego typu.
+Pierwszy parametr w konstruktorze kopiującym ma ten sam typ, który jest klasą, strukturą lub Unią, dla której jest zdefiniowany. Pierwszy parametr może być odwołaniem do typu, ale nie do samego typu.
 
-Poniższy przykład spowoduje wygenerowanie C2651:
+Poniższy przykład generuje C2651:
 
-```
+```cpp
 // C2652.cpp
 // compile with: /c
 class A {

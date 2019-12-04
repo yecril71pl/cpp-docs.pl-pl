@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3029
 ms.assetid: 655eb04d-504a-468d-8c0c-bda1e5f297b7
-ms.openlocfilehash: a003a0b8fcba3609c355ae467a11b4024a0529d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 12c06757ed6ec7560f7dd647e241ddd08a0484d5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385813"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736753"
 ---
 # <a name="compiler-error-c3029"></a>Błąd kompilatora C3029
 
-'symbol': może wystąpić tylko raz w udostępnianie danych klauzule OpenMP — dyrektywa
+"symbol": może wystąpić tylko raz w klauzulach udostępniania danych w dyrektywie OpenMP
 
-Symbol został użyty więcej niż jeden raz w jedną lub więcej klauzul w dyrektywie. Symbol należy używać tylko raz w dyrektywie.
+Symbol został użyty więcej niż raz w jednej lub większej liczbie klauzul w dyrektywie. Symbol może być używany tylko raz w dyrektywie.
 
-Poniższy przykład spowoduje wygenerowanie C3029:
+Poniższy przykład generuje C3029:
 
-```
+```cpp
 // C3029.cpp
 // compile with: /openmp /link vcomps.lib
 #include "omp.h"

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3461
 ms.assetid: bd66833a-545d-445a-bdfe-dee771a450a4
-ms.openlocfilehash: a674ce7819c88dd4e26355c0129a6c181da5c276
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1bf4af63bac2aaee1da4bb98f23c3b15e98c671
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222309"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756633"
 ---
 # <a name="compiler-error-c3461"></a>Błąd kompilatora C3461
 
-"type": tylko typ zarządzany może być przekazywany
+"Type": tylko typ zarządzany może być przekazywany
 
-Przekazywanie dalej typu może występować tylko w typach CLR.  Zobacz [klas i struktur](../../extensions/classes-and-structs-cpp-component-extensions.md) Aby uzyskać więcej informacji.
+Przekazywanie typu może wystąpić tylko w przypadku typów CLR.  Aby uzyskać więcej informacji [, zobacz klasy i struktury](../../extensions/classes-and-structs-cpp-component-extensions.md) .
 
-Aby uzyskać więcej informacji, zobacz [Type Forwarding (C++sposób niezamierzony)](../../extensions/type-forwarding-cpp-cli.md).
+Aby uzyskać więcej informacji, zobacz [przekazywanie typuC++(/CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Przykład
 
 Poniższy przykład tworzy składnik.
 
-```
+```cpp
 // C3461.cpp
 // compile with: /clr /LD
 public ref class R {};
@@ -33,9 +33,9 @@ public ref class R {};
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3461.
+Poniższy przykład generuje C3461.
 
-```
+```cpp
 // C3461b.cpp
 // compile with: /clr /c
 #using "C3461.dll"

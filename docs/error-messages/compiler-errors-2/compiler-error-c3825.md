@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3825
 ms.assetid: 18e204a1-f26e-42c6-8d74-2b49cc95f940
-ms.openlocfilehash: ddb665dab303b3133d4018910c2142a20a889bb0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 98d9dbee8b3d290af0ddd1851380758290a21d4a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390584"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741719"
 ---
 # <a name="compiler-error-c3825"></a>Błąd kompilatora C3825
 
-"class": zarządzane lub WinRTclass można tylko zarządzane pomocy technicznej lub WinRTevents
+"Class": zarządzany lub WinRTclass obsługuje tylko zarządzane lub WinRTevents
 
-W zarządzanych klas obsługiwane są tylko zdarzenia platformy .NET. Tylko zdarzenia środowiska uruchomieniowego Windows są obsługiwane w klasy środowiska wykonawczego Windows. Aby naprawić ten błąd w kodzie zarządzanym, Zmień parametr typu `event_source` i `event_receiver` z `native` do `managed`. Możesz też usunąć ten atrybut.
+Klasy zarządzane są obsługiwane tylko dla zdarzeń platformy .NET. W klasach środowisko wykonawcze systemu Windows są obsługiwane tylko zdarzenia środowisko wykonawcze systemu Windows. Aby naprawić ten błąd w kodzie zarządzanym, należy zmienić parametr typu `event_source` i `event_receiver` z `native` na `managed`. Alternatywnie Usuń atrybut.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C3825 i pokazuje, jak go naprawić:
+Poniższy przykład generuje C3825 i pokazuje, jak to naprawić:
 
-```
+```cpp
 // C3825a.cpp
 // compile with: /clr
 public delegate void del1();

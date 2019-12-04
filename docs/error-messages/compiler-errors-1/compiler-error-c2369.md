@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2369
 ms.assetid: 2a3933f6-2313-40ff-800f-921b296fdbbf
-ms.openlocfilehash: 8abb9a7b8d15fa2dd9999612551a0d0da1e34e30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed7bcbf24ec7ef88ec12d83af4f08b12d56b347b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230356"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745762"
 ---
 # <a name="compiler-error-c2369"></a>Błąd kompilatora C2369
 
-"array": zmiana definicji; różne indeksy
+"Array": zmiana definicji; różne indeksy dolne
 
-Tablica jest już zadeklarowany za pomocą różnych indeks dolny.
+Tablica jest już zadeklarowana z innym indeksem dolnym.
 
-Poniższy przykład spowoduje wygenerowanie C2369:
+Poniższy przykład generuje C2369:
 
-```
+```cpp
 // C2369.cpp
 // compile with: /c
 int a[10];

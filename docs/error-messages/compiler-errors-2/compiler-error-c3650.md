@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3650
 ms.assetid: ca4d8de4-b027-4d13-9b9f-03ca62905c33
-ms.openlocfilehash: 54543225144ed0187f6c1e68e7236d886c026860
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b1b769ed7e27e9c8c3edbe6b08452f3ec964727
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385605"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756360"
 ---
 # <a name="compiler-error-c3650"></a>Błąd kompilatora C3650
 
-"interface_method": nie można użyć jako jawnego przesłaniania, musi być wirtualną składową klasy bazowej
+"interface_method": nie można użyć jako jawnego przesłaniania, musi być wirtualną funkcją członkowską klasy bazowej
 
-Próbowano wykonać jawnego przesłaniania na element członkowski, który nie jest wirtualny.
+Podjęto próbę wykonania jawnego przesłaniania elementu członkowskiego, który nie jest wirtualny.
 
-Aby uzyskać więcej informacji, zobacz [jawne zastępowanie](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Aby uzyskać więcej informacji, zobacz [jawne zastąpienia](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
-Poniższy przykład spowoduje wygenerowanie C3650:
+Poniższy przykład generuje C3650:
 
-```
+```cpp
 // C3650.cpp
 // compile with: /clr
 public interface struct I {

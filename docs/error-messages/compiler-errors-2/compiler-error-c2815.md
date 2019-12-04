@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2815
 ms.assetid: d0256fd6-0721-4c99-b03c-52d96e77a613
-ms.openlocfilehash: ab6708e7ae0a56bd71adebad4fb42d6ea9abe116
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 579fc94f3b16056b5f26dd0b9ea16b5fc36fda22
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175410"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750718"
 ---
 # <a name="compiler-error-c2815"></a>Błąd kompilatora C2815
 
-"operator delete": pierwszy formalny parametr musi być "void *", ale zostało użyte "param"
+"operator delete": pierwszy formalny parametr musi być "void *", ale został użyty "param"
 
-Dowolny zdefiniowany przez użytkownika [operatora delete](../../standard-library/new-operators.md#op_delete) funkcji, należy wykonać pierwszy formalny parametr typu `void *`.
+Każda funkcja [usuwania operatora](../../standard-library/new-operators.md#op_delete) zdefiniowanego przez użytkownika musi przyjmować pierwszy parametr formalny typu `void *`.
 
-Poniższy przykład spowoduje wygenerowanie C2815:
+Poniższy przykład generuje C2815:
 
-```
+```cpp
 // C2815.cpp
 // compile with: /c
 class CMyClass {

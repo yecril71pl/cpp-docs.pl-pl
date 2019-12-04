@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2633
 ms.assetid: a7aceb65-4255-42d6-a8fb-e3cb6c4d2270
-ms.openlocfilehash: 746f01706c7c0ec09a64c5faee748f9582ac9a14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2e4ca81194968fb50a5442cab3d229a25b8be1b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367762"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754683"
 ---
 # <a name="compiler-error-c2633"></a>Błąd kompilatora C2633
 
-'Identyfikator': "inline" jest jedyną dozwoloną klasą magazynu dla konstruktorów
+"Identyfikator": "inline" jest jedyną dozwoloną klasą magazynu dla konstruktorów
 
-Konstruktor jest zadeklarowany jako klasy magazynu innym niż wbudowany.
+Konstruktor jest zadeklarowany jako Klasa magazynu inna niż inline.
 
-Poniższy przykład spowoduje wygenerowanie C2633:
+Poniższy przykład generuje C2633:
 
-```
+```cpp
 // C2633.cpp
 // compile with: /c
 class C {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2635
 ms.assetid: 9deca2a8-2d61-42eb-9783-6578132ee3fb
-ms.openlocfilehash: 0c31bcc4062aec1d939c801f9b5ee420f2f4fcb7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90bc30460cb578d1ed2812e40907a361eeb3b039
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367853"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748427"
 ---
 # <a name="compiler-error-c2635"></a>Błąd kompilatora C2635
 
-Nie można przekonwertować "identifier1*" na "identifier2\*"; technicznego konwersję z wirtualnej klasy podstawowej
+nie można skonwertować elementu "Identifier1 *" na "identifier2\*"; Konwersja z wirtualnej klasy bazowej jest implikowana
 
-Konwersja wymaga rzutowania z `virtual` podstawowej klasy do klasy pochodnej, która nie jest dozwolona.
+Konwersja wymaga rzutowania z klasy bazowej `virtual` na klasę pochodną, co jest niedozwolone.
 
-Poniższy przykład spowoduje wygenerowanie C2635:
+Poniższy przykład generuje C2635:
 
-```
+```cpp
 // C2635.cpp
 class B {};
 class D : virtual public B {};

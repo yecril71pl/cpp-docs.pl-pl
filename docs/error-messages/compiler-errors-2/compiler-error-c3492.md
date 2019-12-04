@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3492
 ms.assetid: b1dc6342-9133-4b1f-a9c3-e8c65d20d121
-ms.openlocfilehash: facd8c78e775945924d77b09f9dc754bdc301ddd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37129c198096be91a8104aedcb508732d79e3630
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381127"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738313"
 ---
 # <a name="compiler-error-c3492"></a>Błąd kompilatora C3492
 
-"var": nie można dokonać przechwytu składowej z anonimowej Unii
+"var": nie można przechwycić elementu członkowskiego Unii anonimowej
 
-Nie można dokonać przechwytu składowej Unii, bez nazwy.
+Nie można przechwycić elementu członkowskiego nienazwanej Unii.
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-- Nazwij Unii i przekazać pełną strukturę złożenia do listy przechwytywania wyrażenia lambda.
+- Nadaj Unii nazwę i przekaż kompletną strukturę Union do listy przechwytywania wyrażenia lambda.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C3492, ponieważ to przechwycenie składowej z anonimowej Unii:
+Poniższy przykład generuje C3492, ponieważ przechwytuje element członkowski anonimowej Unii:
 
-```
+```cpp
 // C3492a.cpp
 
 int main()
@@ -45,9 +45,9 @@ int main()
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład usuwa C3492, nadając nazwę Unii i przekazując pełną strukturę złożenia do listy przechwytywania wyrażenia lambda:
+Poniższy przykład rozwiązuje C3492 przez nadanie nazwy Unii i przekazanie kompletnej struktury Union do listy przechwytywania wyrażenia lambda:
 
-```
+```cpp
 // C3492b.cpp
 
 int main()

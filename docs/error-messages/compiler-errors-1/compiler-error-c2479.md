@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2479
 ms.assetid: c74c7869-e65b-4ca1-b6fa-eb39fed4458a
-ms.openlocfilehash: 8b3b226ccbe42ec88ed92c64b97256d80a983254
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7bddd21faab8c55f349c6e03fbcd3db42c3fa7d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383265"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743565"
 ---
 # <a name="compiler-error-c2479"></a>Błąd kompilatora C2479
 
-'Identyfikator': "ALLOCATE()" jest prawidłowy tylko dla elementów danych statycznego obszaru
+"Identyfikator": element "allocate ()" jest prawidłowy tylko dla elementów danych statycznego zakresu
 
-`__declspec( allocate())` Statycznego tylko do danych można używać składni.
+Składni `__declspec( allocate())` można używać tylko w przypadku danych statycznych.
 
-Poniższy przykład spowoduje wygenerowanie C2479:
+Poniższy przykład generuje C2479:
 
-```
+```cpp
 // C2479.cpp
 // compile with: /c
 #pragma section("mycode", read)

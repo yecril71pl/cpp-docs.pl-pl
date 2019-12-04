@@ -11,12 +11,12 @@ helpviewer_keywords:
 - coding conventions, C++ Standard Library
 - naming conventions [C++], C++ library
 ms.assetid: bf41b79a-2d53-4f46-8d05-779358335146
-ms.openlocfilehash: 8747ef490c0997b1fa3fd5186618b7189fa00970
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d92636a7ed63e09396ff68749560cde9d1f8639c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450695"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755710"
 ---
 # <a name="c-library-conventions"></a>Konwencje biblioteki C++
 
@@ -24,7 +24,7 @@ C++ Biblioteka przestrzega wielu tych samych konwencji co standardowa biblioteka
 
 Implementacja ma pewną szerokość geograficzną w sposobie deklarowania typów i funkcji C++ w bibliotece:
 
-- Nazwy funkcji w standardowej bibliotece C mogą mieć połączenie extern # "C++" lub extern "C". Dołącz odpowiedni standardowy nagłówek C zamiast deklarować jednostkę biblioteki jako wbudowaną.
+- Nazwy funkcji w standardowej bibliotece C mogą mieć połączenie extern "C++" lub extern "C". Dołącz odpowiedni standardowy nagłówek C zamiast deklarować jednostkę biblioteki jako wbudowaną.
 
 - Nazwa funkcji składowej w klasie biblioteki może mieć dodatkowe sygnatury funkcji w odniesieniu do tych wymienionych w tym dokumencie. Można upewnić się, że opisane tutaj wywołanie funkcji działa zgodnie z oczekiwaniami, ale nie można w sposób niezawodny przyjąć adresu funkcji składowej biblioteki. (Typ nie może być oczekiwany przez użytkownika).
 
@@ -32,7 +32,7 @@ Implementacja ma pewną szerokość geograficzną w sposobie deklarowania typów
 
 - Typ zdefiniowany jako synonim dla niektórych typów całkowitych może być taki sam jak jeden z kilku różnych typów całkowitych.
 
-- Typ maski bitowej można zaimplementować jako typ Integer lub Wyliczenie. W obu przypadkach można wykonywać operacje bitowe (takie jak `AND` i `OR`) dla wartości tego samego typu maski bitowej. Elementy `A`  &  i `B` typy masek bitowych są wartościami niezerowymi, `A` `B` takimi jak zero.
+- Typ maski bitowej można zaimplementować jako typ Integer lub Wyliczenie. W obu przypadkach można wykonywać operacje bitowe (takie jak `AND` i `OR`) dla wartości tego samego typu maski bitów. Elementy `A` i `B` typu maski bitowej są wartościami niezerowymi, takimi jak `A` & `B` równa zero.
 
 - Funkcja biblioteki, która nie ma specyfikacji wyjątku, może zgłosić dowolny wyjątek, chyba że jego definicja wyraźnie ogranicza taką możliwość.
 
@@ -46,9 +46,9 @@ Z drugiej strony istnieją pewne ograniczenia:
 
 - Dwa typy zdefiniowane przez C++ bibliotekę są zawsze różne, chyba że ten dokument jawnie sugeruje inaczej.
 
-- Funkcje dostarczone przez bibliotekę, w tym domyślne wersje funkcji wymiennych, mogą zgłaszać najwyżej  te wyjątki wymienione we wszystkich specyfikacjach wyjątków. Brak destruktorów dostarczonych przez bibliotekę zgłasza wyjątki. Funkcje w standardowej bibliotece C mogą propagować wyjątek, tak jak w przypadku `qsort` wywołania funkcji porównania, która zgłasza wyjątek, ale nie zgłasza wyjątków w inny sposób.
+- Funkcje dostarczone przez bibliotekę, w tym domyślne wersje funkcji wymiennych, mogą *zgłaszać najwyżej* te wyjątki wymienione we wszystkich specyfikacjach wyjątków. Brak destruktorów dostarczonych przez bibliotekę zgłasza wyjątki. Funkcje w standardowej bibliotece C mogą propagować wyjątek, tak jak wtedy, gdy `qsort` wywołuje funkcję porównania, która zgłasza wyjątek, ale w przeciwnym razie nie zgłasza wyjątków.
 
 ## <a name="see-also"></a>Zobacz także
 
-[C++Omówienie biblioteki standardowej](../standard-library/cpp-standard-library-overview.md)\
+Omówienie biblioteki standardowej\ [ C++ ](../standard-library/cpp-standard-library-overview.md)
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2299
 ms.assetid: d001c2bc-f6fd-47aa-8e42-0eb824d6441d
-ms.openlocfilehash: 39659baebf7dc1859a69021f60ed452964ae61af
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 009a441ec610053176e79126d9f2663f29b26bc6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447960"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759051"
 ---
 # <a name="compiler-error-c2299"></a>Błąd kompilatora C2299
 
-'Funkcja': Zmiana zachowania: jawną specjalizacją nie może być Konstruktor kopiujący lub kopia operatora przypisania
+"Function": zmiana zachowania: Jawna specjalizacja nie może być konstruktorem kopiującym ani operatorem przypisania kopiowania
 
-Ten błąd może być też wygenerowany w wyniku pracy zgodności kompilatora, która została wykonana dla programu Visual Studio 2005: poprzednie wersje Visual C++ Konstruktor kopiujący i operator przypisania kopiowania można używać jawne specjalizacje.
+Ten błąd może być również wygenerowany jako wynik zgodności kompilatora, który został wykonany dla programu Visual Studio 2005: poprzednie wersje wizualizacji C++ dopuszczają jawne specjalizacje dla konstruktora kopiującego lub operatora przypisania kopiowania.
 
-Aby rozwiązać C2299, nie należy wprowadzać Konstruktor kopiujący i operator przypisania funkcji szablonu, ale zamiast funkcji inne niż szablonu, która przyjmuje typ klasy. Wszelki kod, który wywołuje Konstruktor kopiujący i operator przypisania przez jawne określenie argumentów szablonu, musi usunąć argumentów szablonu.
+Aby rozwiązać C2299, nie należy tworzyć konstruktora kopiującego ani operatora przypisania jako funkcji szablonu, ale raczej nie jest funkcją szablonu, która przyjmuje typ klasy. Każdy kod, który wywołuje Konstruktor kopiujący lub operator przypisania przez jawne określenie argumentów szablonu, musi usunąć argumenty szablonu.
 
-Poniższy przykład spowoduje wygenerowanie C2299:
+Poniższy przykład generuje C2299:
 
-```
+```cpp
 // C2299.cpp
 // compile with: /c
 class C {

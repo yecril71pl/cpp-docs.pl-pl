@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2757
 ms.assetid: 421f102f-8a32-4d47-a109-811ddf2c909d
-ms.openlocfilehash: 98b43a2f3c0888fc385226cd80889b9911c84690
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9f4661495e0fa5219a517b6f6ca410323a77269
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227917"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759532"
 ---
 # <a name="compiler-error-c2757"></a>Błąd kompilatora C2757
 
-'symbol': symbol o tej nazwie już istnieje, a w związku z tym ta nazwa nie może służyć jako nazwę przestrzeni nazw
+"symbol": symbol o tej nazwie już istnieje i dlatego nazwa ta nie może być używana jako nazwa przestrzeni nazw
 
-Symbol, używany w bieżącej kompilacji, jako identyfikator przestrzeni nazw jest już używana w przywoływanym zestawie.
+Symbol użyty w bieżącej kompilacji jako identyfikator przestrzeni nazw jest już używany w przywoływanym zestawie.
 
-Poniższy przykład spowoduje wygenerowanie C2757:
+Poniższy przykład generuje C2757:
 
-```
+```cpp
 // C2757a.cpp
 // compile with: /clr /LD
 public ref class Nes {};
 ```
 
-Następnie wyszukaj maszynę
+A następnie
 
-```
+```cpp
 // C2757b.cpp
 // compile with: /clr /c
 #using <C2757a.dll>

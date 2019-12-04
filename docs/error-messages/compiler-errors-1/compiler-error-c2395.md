@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2395
 ms.assetid: 2d9e3b28-8c2c-4f41-a57f-61ef88fc2af0
-ms.openlocfilehash: dd3bd922e2bfa61da2da87d368bb4b28237161f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ac59856770b04dd3c4ea14360e0a83dd99f2150
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303665"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744943"
 ---
 # <a name="compiler-error-c2395"></a>Błąd kompilatora C2395
 
-"your_type::operator'op": CLR WinRT operatora lub nie jest prawidłowy. Co najmniej jeden parametr musi być następujących typów: T ", t %", t & ", t ^', t ^ %", t ^ & ", gdzie T ="your_type"
+"your_type:: operator'op" ": nieprawidłowy operator CLR lub WinRT. Co najmniej jeden parametr musi mieć następujące typy: "t", "t%", "&", "^", "^%", "^ &", gdzie T = "your_type"
 
-Operator w Windows Runtime lub typ zarządzany nie miał co najmniej jeden parametr, którego typ jest taki sam jak typ wartości zwracanej operatora.
+Operator w środowisko wykonawcze systemu Windows lub typie zarządzanym nie ma co najmniej jednego parametru, którego typ jest taki sam jak typ zwracanej wartości operatora.
 
-Poniższy przykład generuje C2395 i pokazuje, jak go naprawić:
+Poniższy przykład generuje C2395 i pokazuje, jak to naprawić:
 
-```
+```cpp
 // C2395.cpp
 // compile with: /clr /c
 value struct V {

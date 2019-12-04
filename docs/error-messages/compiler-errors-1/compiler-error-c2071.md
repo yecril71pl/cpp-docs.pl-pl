@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2071
 ms.assetid: f8c09255-a5c4-47e3-8089-3d875ae43cc5
-ms.openlocfilehash: 95344b5ef675f566f433dfeaed9dee5c38ef77d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1dc9781bc0cf1bc6c7f879cc3971828983471c6f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303350"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757751"
 ---
 # <a name="compiler-error-c2071"></a>Błąd kompilatora C2071
 
-'Identyfikator': niedozwolona Klasa magazynu
+"Identyfikator": niedozwolona Klasa magazynu
 
-`identifier` zadeklarowano z nieprawidłowym [klasę magazynu](../../c-language/c-storage-classes.md). Ten błąd może być spowodowany, gdy więcej niż jedną klasę magazynu jest określone dla identyfikatora, lub gdy definicja jest niezgodny z deklaracją klasy magazynowania.
+`identifier` został zadeklarowany przy użyciu nieprawidłowej [klasy magazynu](../../c-language/c-storage-classes.md). Ten błąd może być spowodowany tym, że dla identyfikatora określono więcej niż jedną klasę magazynu, lub gdy definicja jest niezgodna z deklaracją klasy magazynu.
 
-Aby rozwiązać ten problem, należy zrozumieć klasy magazynu zamierzony identyfikatora — na przykład `static` lub `extern`— i popraw deklarację do dopasowania.
+Aby rozwiązać ten problem, zapoznaj się z zamierzoną klasą magazynu identyfikatora — na przykład `static` lub `extern`— i popraw deklarację do dopasowania.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2071.
+Poniższy przykład generuje C2071.
 
-```
+```cpp
 // C2071.cpp
 // compile with: /c
 struct C {
@@ -38,9 +38,9 @@ struct D {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2071.
+Poniższy przykład generuje C2071.
 
-```
+```cpp
 // C2071_b.cpp
 // compile with: /c
 typedef int x(int i) { return i; }   // C2071

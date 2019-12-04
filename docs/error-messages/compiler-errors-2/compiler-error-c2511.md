@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2511
 ms.assetid: df999efe-fe2b-418b-bb55-4af6a0592631
-ms.openlocfilehash: 9d9ba48b0607e7a30b8748d4e9ae4f7025f11dea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff78cb50b274fe40d513739264bd7e9894bbed9d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165024"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746568"
 ---
 # <a name="compiler-error-c2511"></a>Błąd kompilatora C2511
 
-"identyfikator": przeciążona funkcja składowa nie znaleziono w "class"
+"Identyfikator": przeciążona Funkcja składowa nie została znaleziona w "Class"
 
-Brak wersji funkcja jest zadeklarowana z określonymi parametrami.  Możliwe przyczyny:
+Żadna wersja funkcji nie jest zadeklarowana z określonymi parametrami.  Możliwe przyczyny:
 
-1. Nieprawidłowe parametry przekazane do funkcji.
+1. Do funkcji przeszedł nieprawidłowe parametry.
 
-1. Parametry są przekazywane w nieprawidłowej kolejności.
+1. Parametry zostały przesłane w złej kolejności.
 
-1. Niepoprawne pisownię nazwy parametrów.
+1. Niepoprawna pisownia nazw parametrów.
 
-Poniższy przykład spowoduje wygenerowanie C2511:
+Poniższy przykład generuje C2511:
 
-```
+```cpp
 // C2511.cpp
 // compile with: /c
 class C {

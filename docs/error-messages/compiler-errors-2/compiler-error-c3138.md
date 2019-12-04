@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3138
 ms.assetid: 364ee9e8-9358-410e-bd35-9c4a226a3753
-ms.openlocfilehash: d812c14c2f364681fe28a58bdaed68fe3ed8ad30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3980bebdae0301dfbbb3cea91d6631053a118995
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374992"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761257"
 ---
 # <a name="compiler-error-c3138"></a>Błąd kompilatora C3138
 
-"interface": musi dziedziczyć interfejsu "attribute", z interfejsu IDispatch lub interfejs, który dziedziczy z IDispatch
+"Interface": interfejs "Attribute" musi dziedziczyć z IDispatch lub z interfejsu, który dziedziczy z IDispatch
 
-Interfejs z [podwójną](../../windows/dual.md) lub [dispinterface](../../windows/dispinterface.md) nie ma atrybutów `IDispatch` jako podstawowy interfejs bezpośrednich lub pośrednich.
+Interfejs z atrybutami [Dual](../../windows/dual.md) lub [dispinterface](../../windows/dispinterface.md) nie ma `IDispatch` jako bezpośredniego lub pośredniego interfejsu podstawowego.
 
 Poniższy przykład generuje C3138:
 
-```
+```cpp
 // C3138.cpp
 #include <unknwn.h>
 

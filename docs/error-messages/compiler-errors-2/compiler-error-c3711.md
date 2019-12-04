@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3711
 ms.assetid: 26d581cc-2153-4ee0-b814-a371184be3e1
-ms.openlocfilehash: 391b78077ea526ebbaf99552b3220f85928a9096
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f2414a51321bf249e3ac049a7048f41b71cb856
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328396"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753409"
 ---
 # <a name="compiler-error-c3711"></a>Błąd kompilatora C3711
 
-"method": metoda źródłowej niezarządzanej zdarzeń musi zwrócić void lub typ całkowity
+"Metoda": Metoda niezarządzanego źródła zdarzeń musi zwracać typ void lub całkowity
 
-Metoda jest zdefiniowana w źródło zdarzenia, który nie został zwrócony typ void lub typ całkowity. Aby naprawić ten błąd, upewnij się zdarzenia, a program obsługi zdarzeń, które mają zwracany typ `void` lub typem całkowitym, takie jak `int` lub `long`.
+Zdefiniowano metodę w źródle zdarzeń, która nie zwróciła typu void lub całkowitego. Aby naprawić ten błąd, upewnij się, że program obsługi zdarzeń i zdarzeń ma zwracany typ `void` lub typ całkowity, taki jak `int` lub `long`.
 
-Poniższy przykład spowoduje wygenerowanie C3711:
+Poniższy przykład generuje C3711:
 
-```
+```cpp
 // C3711.cpp
 #include <atlbase.h>
 #include <atlcom.h>

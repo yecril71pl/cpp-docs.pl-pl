@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2348
 ms.assetid: 4c4d701f-ccf1-46fe-9ddb-3f341684f269
-ms.openlocfilehash: 379bcc7f37ff8942e4e45c6a6188438400937875
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7bded618c481e59f60c5528510c757dec7226acc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187909"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760000"
 ---
 # <a name="compiler-error-c2348"></a>Błąd kompilatora C2348
 
-'Nazwa typu': nie jest agregacji stylu C, nie można wyeksportować w osadzonym IDL
+"type name": nie jest agregacją w stylu C, nie może być eksportowana w osadzonych IDL
 
-Aby umieścić `struct` w pliku .idl, o [wyeksportować](../../windows/export.md) atrybutu `struct` musi zawierać tylko dane.
+Aby umieścić `struct` w pliku IDL z atrybutem [Export](../../windows/export.md) , `struct` musi zawierać tylko dane.
 
-Poniższy przykład spowoduje wygenerowanie C2348:
+Poniższy przykład generuje C2348:
 
-```
+```cpp
 // C2348.cpp
 // C2348 error expected
 [ module(name="SimpleMidlTest") ];

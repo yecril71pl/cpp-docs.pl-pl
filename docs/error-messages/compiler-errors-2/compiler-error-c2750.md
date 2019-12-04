@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2750
 ms.assetid: 30450034-feb5-448c-9655-b8c5f3639695
-ms.openlocfilehash: 34d19e8e9f51c90c48ec0d429f98bb82e3d829d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56f4e6e1d6c392fc377fe5fdf11643ae8a2e503a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228541"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759610"
 ---
 # <a name="compiler-error-c2750"></a>Błąd kompilatora C2750
 
-"type": nie można użyć "new" dla typu odwołania; Zamiast tego użyj "gcnew"
+"Type": nie można użyć "New" dla typu referencyjnego; Zamiast tego użyj "gcnew"
 
-Aby utworzyć wystąpienia typu CLR, co powoduje, że wystąpienie, które mają być umieszczane w stercie zebranych elementów bezużytecznych, należy użyć [gcnew](../../extensions/ref-new-gcnew-cpp-component-extensions.md).
+Aby utworzyć wystąpienie typu CLR, które powoduje umieszczenie wystąpienia na stosie zebranych elementów bezużytecznych, należy użyć [gcnew](../../extensions/ref-new-gcnew-cpp-component-extensions.md).
 
-Poniższy przykład spowoduje wygenerowanie C2750:
+Poniższy przykład generuje C2750:
 
-```
+```cpp
 // C2750.cpp
 // compile with: /clr
 ref struct Y1 {};

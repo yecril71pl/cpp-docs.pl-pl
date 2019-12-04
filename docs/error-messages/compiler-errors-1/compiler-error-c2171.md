@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2171
 ms.assetid: a80343b5-ab3f-4413-b6f1-3ce9d7e519e5
-ms.openlocfilehash: 9b51a3793f7ada131ef409ece05b866eb635b9b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d74cec63c0fb74ed8d6589a43c3b82c94633002
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174695"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758401"
 ---
 # <a name="compiler-error-c2171"></a>Błąd kompilatora C2171
 
-'operator': niedozwolone na operandach typu "type"
+"operator": niedozwolone w przypadku operandów typu "Type"
 
-Jednoargumentowy operator jest używany z typem nieprawidłowy operand.
+Operator jednoargumentowy jest używany z nieprawidłowym typem operandu.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2171.
+Poniższy przykład generuje C2171.
 
-```
+```cpp
 // C2171.cpp
 int main() {
    double d, d1;
@@ -37,9 +37,9 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2171.
+Poniższy przykład generuje C2171.
 
-```
+```cpp
 // C2171_b.cpp
 // compile with: /c
 class A {

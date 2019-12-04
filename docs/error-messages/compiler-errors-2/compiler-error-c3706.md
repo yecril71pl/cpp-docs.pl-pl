@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3706
 ms.assetid: d20a33eb-d625-46c5-ac87-32075a590d07
-ms.openlocfilehash: 2d474db5a4d50aed7b59e6f48fb5a3e8165f10c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 810ec59a814b04349913648fb49a03eb63912cd9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400295"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757985"
 ---
 # <a name="compiler-error-c3706"></a>Błąd kompilatora C3706
 
-'Funkcja': musi być interfejsem COM żeby wyzwalać zdarzenia COM
+"Function": musi być interfejsem COM, aby uruchamiać zdarzenia COM
 
-Interfejs zdarzeń, którego używasz do wyzwalać zdarzenia COM musi być interfejsem COM. W takiej sytuacji interfejsu powinny albo można zdefiniować przy użyciu wizualizacji C++ atrybutu lub importowane przy użyciu [#import](../../preprocessor/hash-import-directive-cpp.md) z biblioteki typów, przy użyciu atrybutu embedded_idl #import firmy.
+Interfejs zdarzenia używany do wyzwalania zdarzeń COM musi być interfejsem COM. W takiej sytuacji interfejs powinien być zdefiniowany przy użyciu atrybutu wizualizacji C++ lub importowany przy użyciu [#import](../../preprocessor/hash-import-directive-cpp.md) z biblioteki typów z atrybutem embedded_idl #import.
 
-Należy pamiętać, że `#include` wierszy plików nagłówkowych ATL. pokazano w poniższym przykładzie są wymagane do używania zdarzenia COM. Aby naprawić ten błąd, należy `IEvents` (interfejsu obsługi zdarzeń) interfejsu COM, stosując jedną z następujących atrybutów do definicji interfejsu: [obiektu](../../windows/object-cpp.md), [podwójną](../../windows/dual.md), lub [ dispinterface](../../windows/dispinterface.md).
+Należy pamiętać, że w przypadku korzystania z zdarzeń COM wymagane są `#include` wierszy plików nagłówkowych ATL przedstawionych w poniższym przykładzie. Aby naprawić ten błąd, należy wprowadzić `IEvents` (interfejs zdarzenia) interfejsu COM, stosując jeden z następujących atrybutów do definicji interfejsu: [Object](../../windows/object-cpp.md), [Dual](../../windows/dual.md)lub [dispinterface](../../windows/dispinterface.md).
 
-Jeśli interfejs pochodzą z pliku nagłówka wygenerowano przez MIDL, kompilator nie rozpoznaje je jako interfejs COM.
+Jeśli interfejs pochodzi z pliku nagłówka wygenerowanego przez MIDL, kompilator nie rozpoznaje go jako interfejsu COM.
 
-Poniższy przykład spowoduje wygenerowanie C3706:
+Poniższy przykład generuje C3706:
 
-```
+```cpp
 // C3706.cpp
 // compile with: /c
 // C3706 expected

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2584
 ms.assetid: 836e2c0a-86c0-4742-b432-beb0191ad20e
-ms.openlocfilehash: b61ad65555b5d5232468206f6170223c5f160a34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c3b10ecd6808ccd864ecf877fe9f1d0e9f30a3a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360479"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748635"
 ---
 # <a name="compiler-error-c2584"></a>Błąd kompilatora C2584
 
-"Class": bezpośrednie podstawowej "base2 —" jest niedostępny; już podstawowej "Base1 —"
+"Klasa": bezpośrednia baza "Base2 —" jest niedostępna; jest już podstawą elementu "Base1 —"
 
-`Class` już pochodzi bezpośrednio z `Base1`. `Base2` Ponadto pochodzi od klasy `Base1`. `Class` nie może pochodzić od `Base2` ponieważ oznacza to dziedziczenie (pośrednio) z `Base1` ponownie, który jest niedozwolone. ponieważ `Base1` jest już bezpośrednią klasą bazową.
+`Class` już bezpośrednio z `Base1`. `Base2` również pochodzi z `Base1`. `Class` nie może pochodzić od `Base2`, ponieważ spowodowałoby to, że dziedziczy (pośrednio) od `Base1` ponownie, co nie jest dozwolone, ponieważ `Base1` jest już bezpośrednią klasą bazową.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2584.
+Poniższy przykład generuje C2584.
 
-```
+```cpp
 // C2584.cpp
 // compile with: /c
 struct A1 {

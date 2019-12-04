@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3241
 ms.assetid: 2ca14879-bba0-4a23-b22a-72cfff92d6a4
-ms.openlocfilehash: 6eab22a8627b817b7a31e4bd34aad86d1f274615
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a618a9c538558d2aa4b995cbc9071bb8e94a5bc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173508"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754581"
 ---
 # <a name="compiler-error-c3241"></a>Błąd kompilatora C3241
 
-"method": Ta metoda nie została wprowadzona przez "interface"
+"Metoda": Ta metoda nie została wprowadzona przez "Interface"
 
-Jawne przesłonięcia funkcji sygnatury funkcji musi dokładnie odpowiadać deklarację dla funkcji, która jest zastąpienie.
+Gdy jawnie przesłaniasz funkcję, sygnatura funkcji musi być dokładnie zgodna z deklaracją dla zastępowanej funkcji.
 
-Poniższy przykład spowoduje wygenerowanie C3241:
+Poniższy przykład generuje C3241:
 
-```
+```cpp
 // C3241.cpp
 #pragma warning(disable:4199)
 

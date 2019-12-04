@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - C2041
 ms.assetid: c9a33bb1-f9cf-47d6-bd21-7d867a8c37d5
-ms.openlocfilehash: 37d32285f9c01efb981c5f02acba21f2d6fe3dc2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e148ced19e34a57172e3d606c6efdb2f5d012d6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165673"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740458"
 ---
 # <a name="compiler-error-c2041"></a>Błąd kompilatora C2041
 
-niedozwolony znak "character" dla podstawowego numeru
+niedozwolony cyfra "Character" dla podstawowego elementu "number"
 
-Określony znak nie jest prawidłową cyfrą dla podstawowego (na przykład ósemkowa i szesnastkowa).
+Określony znak nie jest prawidłową cyfrą dla bazy (na przykład ósemkową lub szesnastkową).
 
-Poniższy przykład spowoduje wygenerowanie C2041:
+Poniższy przykład generuje C2041:
 
-```
+```cpp
 // C2041.cpp
 int i = 081;   // C2041  8 is not a base 8 digit
 ```
 
 Możliwe rozwiązanie:
 
-```
+```cpp
 // C2041b.cpp
 // compile with: /c
 int j = 071;

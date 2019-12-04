@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3911
 ms.assetid: b786da59-0e99-479d-bc0d-551126e940f2
-ms.openlocfilehash: 25bf8def4e0a8085e20dc6ba9a04dc7f27cee651
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f803d6f575d78fd7a9a9157f06b3f64c4eeb3d77
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406584"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748791"
 ---
 # <a name="compiler-error-c3911"></a>Błąd kompilatora C3911
 
-"event_accessor_method": funkcja musi mieć typ "podpis"
+"event_accessor_method": funkcja musi mieć typ "Signature"
 
-Metody dostępu zdarzeń nie został prawidłowo zadeklarowany.
+Metoda dostępu do zdarzenia nie została prawidłowo zadeklarowana.
 
-Aby uzyskać więcej informacji, zobacz [zdarzeń](../../extensions/event-cpp-component-extensions.md).
+Aby uzyskać więcej informacji, zobacz [zdarzenie](../../extensions/event-cpp-component-extensions.md).
 
-Poniższy przykład spowoduje wygenerowanie C3911:
+Poniższy przykład generuje C3911:
 
-```
+```cpp
 // C3911.cpp
 // compile with: /clr
 using namespace System;

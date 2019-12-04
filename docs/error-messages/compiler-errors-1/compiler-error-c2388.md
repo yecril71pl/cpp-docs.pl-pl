@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2388
 ms.assetid: 764ad2d7-cb04-425f-ba30-70989488c4a4
-ms.openlocfilehash: 62afcb1fafc19d3d61a86f2fbc10cb99e095afc5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21658a659468a6e2a0d911af70eefdaed320446c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393665"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745060"
 ---
 # <a name="compiler-error-c2388"></a>Błąd kompilatora C2388
 
-'symbol': nie można zadeklarować symbolu z __declspec(appdomain) zarówno i \__declspec(process)
+"symbol": nie można zadeklarować symbolu z zarówno __declspec (AppDomain), jak i \__declspec (proces)
 
-`appdomain` i `process` `__declspec` modyfikatorów nie można używać w tym samym symbolu. Magazyn dla zmiennej istnieje dla procesu lub dla domeny aplikacji.
+Modyfikatory `appdomain` i `process` `__declspec` nie mogą być używane dla tego samego symbolu. Magazyn dla zmiennej istnieje dla procesu lub dla domeny aplikacji.
 
-Aby uzyskać więcej informacji, zobacz [appdomain](../../cpp/appdomain.md) i [procesu](../../cpp/process.md).
+Aby uzyskać więcej informacji, zobacz temat [AppDomain](../../cpp/appdomain.md) i [Process](../../cpp/process.md).
 
-Poniższy przykład spowoduje wygenerowanie C2388:
+Poniższy przykład generuje C2388:
 
-```
+```cpp
 // C2388.cpp
 // compile with: /clr /c
 __declspec(process) __declspec(appdomain) int i;   // C2388

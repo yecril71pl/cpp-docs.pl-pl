@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2111
 ms.assetid: 38fd42ec-1480-4a44-aaca-ae4593ed5f50
-ms.openlocfilehash: 9545e44518a7a377378929d684bf08573a214b18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 193fa787c8e6beb0d4a45f419d3af3baf7988cc1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364418"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757816"
 ---
 # <a name="compiler-error-c2111"></a>Błąd kompilatora C2111
 
-"+": Dodawanie wskaźników wymaga całkowitego operandu
+' + ': Dodawanie wskaźników wymaga całkowitego operandu
 
-Próbowano dodać wartość nonintegral do wskaźnika za pomocą plus ( `+` ) — operator.
+Podjęto próbę dodania niecałkowitej wartości do wskaźnika przy użyciu operatora plus (`+`).
 
-Poniższy przykład spowoduje wygenerowanie C2111:
+Poniższy przykład generuje C2111:
 
-```
+```cpp
 // C2111.cpp
 int main() {
    int *a = 0, *pa = 0, b = 0;

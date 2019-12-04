@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3352
 ms.assetid: f233bed7-474e-425f-aad2-7801578169d4
-ms.openlocfilehash: 6641f05c8daa5ad505c0bcb8d29a369ad5fd9a9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b679a89bb768ad7a50d0bbaa7b814c7a72f9f4c5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402635"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740432"
 ---
 # <a name="compiler-error-c3352"></a>Błąd kompilatora C3352
 
-'Funkcja': określona funkcja jest niezgodna z typem obiektu delegowanego "type"
+"Function": określona funkcja jest niezgodna z typem delegata "Type"
 
-Parametr, który wyświetla listę dla `function` i delegata nie są zgodne.
+Listy parametrów dla `function` i delegata nie pasują do siebie.
 
-Aby uzyskać więcej informacji, zobacz [delegate (C++ Component Extensions)](../../extensions/delegate-cpp-component-extensions.md).
+Aby uzyskać więcej informacji, zobacz [DelegatC++ (rozszerzenia składników)](../../extensions/delegate-cpp-component-extensions.md).
 
-Poniższy przykład spowoduje wygenerowanie C3352:
+Poniższy przykład generuje C3352:
 
-```
+```cpp
 // C3352.cpp
 // compile with: /clr
 delegate int D( int, int );

@@ -1,29 +1,29 @@
 ---
-title: Compiler Error C3894
+title: Błąd kompilatora C3894
 ms.date: 11/04/2016
 f1_keywords:
 - C3894
 helpviewer_keywords:
 - C3894
 ms.assetid: 6d5ac903-1dea-431d-8e3a-cebca4342983
-ms.openlocfilehash: 4d935e140d89cb5c3714450597677a7a02a245e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c08a7eca473a4ae043879b49266efec6b8afe7b1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385488"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749441"
 ---
-# <a name="compiler-error-c3894"></a>Compiler Error C3894
+# <a name="compiler-error-c3894"></a>Błąd kompilatora C3894
 
-"var": wykorzystanie wartości l składowej danych initonly jest dozwolone tylko w konstruktorze wystąpienia klasy "class"
+"var": użycie wartości l elementu członkowskiego danych initonly jest dozwolone tylko w konstruktorze klasy klasy "Class"
 
-Statyczne [initonly](../../dotnet/initonly-cpp-cli.md) elementy członkowskie danych można używać tylko jako l wartości, ich w punkcie deklaracji lub w konstruktorze statycznym.
+Statyczne składowe danych [initonly](../../dotnet/initonly-cpp-cli.md) mogą być używane tylko jako l-wartości w ich punkcie deklaracji lub w konstruktorze statycznym.
 
-Składowe danych initonly (niestatycznych) wystąpienia należy używać tylko jako l wartości, ich w punkcie deklaracji lub w konstruktorach (niestatycznych) wystąpienia.
+Elementy członkowskie danych initonly wystąpienia (niestatyczne) mogą być używane tylko jako l-wartości w ich punkcie deklaracji lub w konstruktorach wystąpień (niestatycznych).
 
-Poniższy przykład spowoduje wygenerowanie C3894:
+Poniższy przykład generuje C3894:
 
-```
+```cpp
 // C3894.cpp
 // compile with: /clr
 ref struct Y1 {

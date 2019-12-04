@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2139
 ms.assetid: 31e047c0-5bf9-46c2-b6de-b627ea6a5768
-ms.openlocfilehash: 15813216399c0f00fea036cd95443235e7acf4c3
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 38e2fd090f3a2b2222658c5fd491c84dd70fd5ea
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344903"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756425"
 ---
 # <a name="compiler-error-c2139"></a>Błąd kompilatora C2139
 
-"type": Niezdefiniowana klasa nie jest dozwolona jako argument typu wewnętrznej cechy kompilatora "cechy"
+"Type": niezdefiniowana Klasa nie jest dozwolona jako argument dla cechy wewnętrznego typu "cecha" kompilatora
 
 Do cechy typu przekazano nieprawidłowy argument.
 
-Aby uzyskać więcej informacji, zobacz [Obsługa cech typu w kompilatorze](../../extensions/compiler-support-for-type-traits-cpp-component-extensions.md).
+Aby uzyskać więcej informacji, zobacz [Obsługa kompilatora dla cech typu](../../extensions/compiler-support-for-type-traits-cpp-component-extensions.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2139.
+Poniższy przykład generuje C2139.
 
-```
+```cpp
 // C2139.cpp
 // compile with: /EHsc
 #include <iostream>

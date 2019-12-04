@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3163
 ms.assetid: 17dcafa3-f416-4e04-a232-f9569218ba75
-ms.openlocfilehash: eda3910c99f4c8ea96568f2d475c5d6a1e4cdc7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 436fb112758dfdec9997ff7e6dd7ef8f9dcdc66e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174228"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761780"
 ---
 # <a name="compiler-error-c3163"></a>Błąd kompilatora C3163
 
-"konstruowania": atrybuty niespójne z poprzednią deklaracją
+"konstrukcja": atrybuty niespójne z poprzednią deklaracją
 
-Atrybuty, które są stosowane do definicji w konflikcie z atrybutów, które są stosowane do deklaracji.
+Atrybuty, które są stosowane do definicji, powodują konflikt z atrybutami, które są stosowane do deklaracji.
 
-Jednym ze sposobów rozwiązania C3163 jest, aby wyeliminować atrybuty deklaracją do przodu. Wszelkie atrybuty w deklaracji do przodu powinna być mniejsza niż atrybuty w definicji lub co najwyżej równa się do nich.
+Jednym ze sposobów na rozwiązanie C3163 jest wyeliminowanie atrybutów deklaracji do przodu. Wszelkie atrybuty deklaracji przesyłania dalej powinny być mniejsze niż atrybuty w definicji lub, w większości, równe.
 
-Możliwe przyczyny błędu C3163 obejmuje Microsoft język kodu źródłowego adnotacji (SAL). Makra SAL rozwija się, chyba że Kompilowanie projektu przy użyciu **/ analyze** flagi. Program, który kompiluje nie pozostawia żadnych śladów bez / analyze może zgłosić C3163, Jeśli spróbujesz ponownie skompilować ją za pomocą / analyze — opcja. Aby uzyskać więcej informacji na temat SAL, zobacz [adnotacji SAL](../../c-runtime-library/sal-annotations.md).
+Możliwa przyczyna błędu C3163 dotyczy języka adnotacji kodu źródłowego firmy Microsoft (SAL). Makra SAL nie są rozwijane, chyba że kompilujesz projekt przy użyciu flagi **/analyze** . Program, który jest kompilowany w sposób czysty bez/analyze może zgłosić C3163, jeśli spróbujesz ponownie skompilować go przy użyciu opcji/analyze. Aby uzyskać więcej informacji na temat SAL, zobacz [Adnotacje sal](../../c-runtime-library/sal-annotations.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3163.
+Poniższy przykład generuje C3163.
 
-```
+```cpp
 // C3163.cpp
 // compile with: /clr /c
 using namespace System;

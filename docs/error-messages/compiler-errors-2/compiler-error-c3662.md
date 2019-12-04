@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3662
 ms.assetid: 61bd3e41-a86b-42c0-be89-d992d3906ff1
-ms.openlocfilehash: 28d8df02d63fc1b16a392a2df83524cd616d5ab3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48fe8bd4a6872ff214d185ac77553debab78ab20
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400308"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758193"
 ---
 # <a name="compiler-error-c3662"></a>Błąd kompilatora C3662
 
-"członek": specyfikator przesłonięcia "specyfikatora" dozwolone tylko dla funkcji składowych zarządzanych lub klasach WinRT
+"member": specyfikator przesłonięcia "Only" jest dozwolony tylko dla funkcji składowych klas zarządzanych lub WinRT
 
-Specyfikator przesłonięcia została użyta w składowej typu natywnego, co jest niedozwolone.
+Użyto specyfikatora przesłonięcia dla elementu członkowskiego typu natywnego, co jest niedozwolone.
 
-Aby uzyskać więcej informacji, zobacz [jawne zastępowanie](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Aby uzyskać więcej informacji, zobacz [jawne zastąpienia](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3662.
+Poniższy przykład generuje C3662.
 
-```
+```cpp
 // C3662.cpp
 // compile with: /clr /c
 struct S {

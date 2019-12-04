@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3016
 ms.assetid: 3423467e-e8bb-4f35-b4db-7925cafa74c1
-ms.openlocfilehash: edb83c210ca7e3f6c648522b893e9ed90cea1874
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea552a987863207e708d3fd98bc64b1e99a34b51
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350286"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742239"
 ---
 # <a name="compiler-error-c3016"></a>Błąd kompilatora C3016
 
-"var": zmienna index w OpenMP instrukcji "for" musi mieć typ całkowitoliczbowy ze znakiem
+"var": zmienna index w instrukcji "for" OpenMP musi mieć podpisany typ całkowity
 
-Zmienna index w OpenMP `for` instrukcja musi być typ całkowity ze znakiem.
+Zmienna index w instrukcji `for` OpenMP musi być podpisanym typem całkowitym.
 
-Poniższy przykład spowoduje wygenerowanie C3016:
+Poniższy przykład generuje C3016:
 
-```
+```cpp
 // C3016.cpp
 // compile with: /openmp
 int main()

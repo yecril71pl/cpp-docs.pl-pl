@@ -1,27 +1,27 @@
 ---
-title: Compiler Error C2199
+title: Błąd kompilatora C2199
 ms.date: 11/04/2016
 f1_keywords:
 - C2199
 helpviewer_keywords:
 - C2199
 ms.assetid: 6a92a1b7-7906-49e6-a31f-e8bffbc7706a
-ms.openlocfilehash: e5892a537cbf337b23ff2356583cec4bf5925677
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8bd6d587d28b8e7c190f7d3d58448fda501796cf
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368490"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758986"
 ---
-# <a name="compiler-error-c2199"></a>Compiler Error C2199
+# <a name="compiler-error-c2199"></a>Błąd kompilatora C2199
 
-Błąd składniowy: znaleziono "identyfikator (" w zakresie globalnym (była deklaracja jest zamierzona?)
+Błąd składniowy: znaleziono "identifier" w zakresie globalnym (czy deklaracja była zamierzona?)
 
-Określony kontekst spowodował błąd składni. Może to być Składnia deklaracji niepoprawne.
+Określony kontekst spowodował błąd składniowy. Może istnieć nieprawidłowa składnia deklaracji.
 
-Poniższy przykład spowoduje wygenerowanie C2199:
+Poniższy przykład generuje C2199:
 
-```
+```cpp
 // C2199.cpp
 // compile with: /c
 int j = int(1) int(1);   // C2199

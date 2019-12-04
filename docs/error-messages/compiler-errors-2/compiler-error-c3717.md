@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3717
 ms.assetid: ae4fceb1-2583-4577-b2f1-40971a017055
-ms.openlocfilehash: f7e60b4f1b6a1337ef93088e4f36ce2a1b34dc47
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd9a97f1b0d9c9eecfa6a42f735f21a42fd846e9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328279"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753240"
 ---
 # <a name="compiler-error-c3717"></a>Błąd kompilatora C3717
 
-"method": metoda wyzwalająca zdarzenia nie może być zdefiniowana
+"Metoda": metoda, która wyzwala zdarzenia nie może być zdefiniowana
 
-Możesz zadeklarować metodę zdarzeń, który zawiera implementację. [__Event](../../cpp/event.md) deklaracji metody nie może mieć definicji. Aby naprawić ten błąd, zapewnić nie deklaracje metody zdarzeń definicje. Na przykład w poniższym kodzie usunąć treści funkcji z `event1` deklaracji, wskazane przez komentarze.
+Zadeklarowano metodę zdarzenia, która zawiera implementację. Deklaracja metody [__event](../../cpp/event.md) nie może mieć definicji. Aby naprawić ten błąd, upewnij się, że żadne deklaracje metody zdarzeń nie mają definicji. Na przykład, w poniższym kodzie, Usuń treść funkcji z deklaracji `event1`, jak wskazano w komentarzach.
 
-Poniższy przykład spowoduje wygenerowanie C3717:
+Poniższy przykład generuje C3717:
 
-```
+```cpp
 // C3717.cpp
 [event_source(native)]
 class CEventSrc {

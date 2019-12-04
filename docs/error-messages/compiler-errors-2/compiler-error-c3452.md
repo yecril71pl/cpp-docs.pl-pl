@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3452
 ms.assetid: e5293dcf-cb70-4133-ae2a-0bb496950ba0
-ms.openlocfilehash: 165c031f23f3b317300900970b30414da42e7840
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c491217f01d8e78375401b54faa48d9db410ccad
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397448"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756724"
 ---
 # <a name="compiler-error-c3452"></a>Błąd kompilatora C3452
 
-składowa listy argumentów nie jest stałą
+członek argumentu listy nie jest stałą
 
-Przekazano argument atrybut, który oczekuje stałą wartość, które mogą być obliczane w czasie kompilacji.
+Argument został przekazano do atrybutu, który oczekiwał stałej, wartość, która może być oceniona w czasie kompilacji.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3452.
+Poniższy przykład generuje C3452.
 
-```
+```cpp
 // C3452.cpp
 // compile with: /c
 int i;

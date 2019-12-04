@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3192
 ms.assetid: 8b0083d4-706f-46f6-858a-e1d9af464cf8
-ms.openlocfilehash: 685657857b2ed41c29c704633b07dc677fc32fc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 977987c0c4a6d3ba86eaad2a0c1b4ff2664ce37c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382310"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761598"
 ---
 # <a name="compiler-error-c3192"></a>Błąd kompilatora C3192
 
-Błąd składniowy: "^" nie jest operatorem prefiksowym (Czy chodziło Ci o "*"?)
+Błąd składniowy: "^" nie jest operatorem prefiksowym (Czy chodziło o "*"?)
 
-Dojście nie może służyć jako operator wyłuskania.
+Nie można użyć dojścia jako operatora dereferencji.
 
-Poniższy przykład spowoduje wygenerowanie C3192:
+Poniższy przykład generuje C3192:
 
-```
+```cpp
 // C3192.cpp
 // compile with: /clr
 using namespace System;

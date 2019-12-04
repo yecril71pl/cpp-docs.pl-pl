@@ -1,27 +1,27 @@
 ---
-title: Compiler Error C3809
+title: Błąd kompilatora C3809
 ms.date: 11/04/2016
 f1_keywords:
 - C3809
 helpviewer_keywords:
 - C3809
 ms.assetid: 37eca584-c20c-464e-8e45-a987214b7ce4
-ms.openlocfilehash: 5ff57050980ddb770ea2fcfa4d0be4f42f5ee834
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 889d9a108ab0dfb0101fb9ec9c367db9378b1128
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391897"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757140"
 ---
-# <a name="compiler-error-c3809"></a>Compiler Error C3809
+# <a name="compiler-error-c3809"></a>Błąd kompilatora C3809
 
-"class": zarządzanej lub typu WinRT nie może mieć żadnych friend funkcji/klas/interfejsów
+"Class": typ zarządzany lub WinRT nie może mieć żadnych zaprzyjaźnionych funkcji/klas/interfejsów
 
-Typy zarządzane i typów środowiska wykonawczego Windows nie zezwalaj na znajomych. Aby naprawić ten błąd nie deklaruj znajomych w zarządzanych lub typów środowiska wykonawczego Windows.
+Typy zarządzane i typy środowisko wykonawcze systemu Windows nie pozwalają na korzystanie z znajomych. Aby naprawić ten błąd, nie deklaruj znajomych w typach zarządzanych lub środowisko wykonawcze systemu Windows.
 
-Poniższy przykład spowoduje wygenerowanie C3809:
+Poniższy przykład generuje C3809:
 
-```
+```cpp
 // C3809a.cpp
 // compile with: /clr
 ref class A {};

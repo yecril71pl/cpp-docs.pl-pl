@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3893
 ms.assetid: 90d52eae-6ef2-4db1-b7ad-92f9e8b140fb
-ms.openlocfilehash: 45a140d3fd5f510ee2434950ca3c4b47c0756d75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20c17eaa6555b5511ecbc930eacdb2ec92475b23
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385501"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749506"
 ---
 # <a name="compiler-error-c3893"></a>Błąd kompilatora C3893
 
 "var": wykorzystanie wartości l składowej danych initonly jest dozwolone tylko w konstruktorze wystąpienia klasy "type_name"
 
-Statyczne [initonly](../../dotnet/initonly-cpp-cli.md) elementy członkowskie danych może mieć tylko adresu pobranego w konstruktorze statycznym.
+Statyczne składowe danych [initonly](../../dotnet/initonly-cpp-cli.md) mogą mieć tylko adresy wykonywane w konstruktorze statycznym.
 
-Składowe danych initonly (niestatycznych) wystąpienie może mieć tylko adresu pobranego w konstruktory wystąpień (niestatycznych).
+Elementy członkowskie danych initonly wystąpienia (niestatyczne) mogą mieć tylko ich adresy w konstruktorach wystąpień (niestatycznych).
 
-Poniższy przykład spowoduje wygenerowanie C3893:
+Poniższy przykład generuje C3893:
 
-```
+```cpp
 // C3893.cpp
 // compile with: /clr
 ref struct Y1 {

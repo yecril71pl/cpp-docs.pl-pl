@@ -1,31 +1,31 @@
 ---
-title: Compiler Error C3099
+title: Błąd kompilatora C3099
 ms.date: 11/04/2016
 f1_keywords:
 - C3099
 helpviewer_keywords:
 - C3099
 ms.assetid: b3dded0f-76c9-42c1-991b-532eb8619661
-ms.openlocfilehash: 0f3eac1c232ef159d220a347d6b6dc3aed2fdd9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81f508c47c678d86f8f95303861b42f8a70daa57
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324782"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750055"
 ---
-# <a name="compiler-error-c3099"></a>Compiler Error C3099
+# <a name="compiler-error-c3099"></a>Błąd kompilatora C3099
 
-"— słowo kluczowe": Użyj [System::AttributeUsageAttribute] dla atrybutów zarządzanych; na użytek [Windows::Foundation::Metadata::AttributeUsageAttribute] atrybuty WinRT
+"słowo kluczowe": Użyj [System:: AttributeUsageAttribute] dla atrybutów zarządzanych; Użyj [Windows:: Foundation:: Metadata:: AttributeUsageAttribute] dla atrybutów WinRT
 
-Użyj <xref:System.AttributeUsageAttribute> do deklarowania **/CLR** atrybutów. Użyj `Windows::Foundation::Metadata::AttributeUsageAttribute` można zadeklarować atrybutów środowiska wykonawczego Windows.
+Użyj <xref:System.AttributeUsageAttribute>, aby zadeklarować atrybuty **/CLR** . Użyj `Windows::Foundation::Metadata::AttributeUsageAttribute`, aby zadeklarować atrybuty środowisko wykonawcze systemu Windows.
 
-Aby uzyskać więcej informacji na temat atrybutów/CLR, zobacz [atrybuty zdefiniowane przez użytkownika](../../extensions/user-defined-attributes-cpp-component-extensions.md). W przypadku obsługiwanych atrybutów środowiska wykonawczego Windows, zobacz [Windows.Foundation.Metadata przestrzeni nazw](/uwp/api/windows.foundation.metadata)
+Aby uzyskać więcej informacji na temat atrybutów/CLR, zobacz [atrybuty zdefiniowane przez użytkownika](../../extensions/user-defined-attributes-cpp-component-extensions.md). Aby uzyskać obsługiwane atrybuty w środowisko wykonawcze systemu Windows, zobacz [przestrzeń nazw Windows. Foundation. Metadata](/uwp/api/windows.foundation.metadata)
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C3099 i pokazuje, jak go naprawić.
+Poniższy przykład generuje C3099 i pokazuje, jak rozwiązać ten problem.
 
-```
+```cpp
 // C3099.cpp
 // compile with: /clr /c
 using namespace System;

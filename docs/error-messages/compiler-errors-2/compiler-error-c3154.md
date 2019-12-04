@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3154
 ms.assetid: 78005c74-eaaf-4ac2-88ae-6c25d01a302a
-ms.openlocfilehash: 9f7af4e19fab5f5a0539e9fc3bf9dbeffb5c6fbf
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e40b0c2a56c36b92465fb3bb3451a48c88b5822e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344644"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745931"
 ---
 # <a name="compiler-error-c3154"></a>Błąd kompilatora C3154
 
-Oczekiwano "," przed wielokropkiem. Non-przecinkami wielokropka nie jest obsługiwany przez funkcje tablicy parametrów.
+Oczekiwano znaku "," przed wielokropkiem. Wielokropek rozdzielonych przecinkami nie jest obsługiwany w funkcjach tablicy parametrów.
 
-Funkcja zmiennych argumentów nie został zadeklarowany poprawnie.
+Funkcja argumentu zmiennej nie została prawidłowo zadeklarowana.
 
-Aby uzyskać więcej informacji, zobacz [zmiennej listy argumentów (...) (C++Sposób niezamierzony) ](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+Aby uzyskać więcej informacji, zobacz [listę zmiennych argumentów (...)C++(/CLI)](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3154.
+Poniższy przykład generuje C3154.
 
-```
+```cpp
 // C3154.cpp
 // compile with: /clr
 ref struct R {

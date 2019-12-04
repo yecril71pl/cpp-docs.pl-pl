@@ -1,29 +1,29 @@
 ---
-title: Compiler Error C3289
+title: Błąd kompilatora C3289
 ms.date: 11/04/2016
 f1_keywords:
 - C3289
 helpviewer_keywords:
 - C3289
 ms.assetid: 3c1c623b-7fcf-43ab-a89a-8722532a8d29
-ms.openlocfilehash: d234ad4b7c48a66352e52d3517dfd675f27b002c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee80fb2c917281163156ef148403088cef8e8545
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222622"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760169"
 ---
-# <a name="compiler-error-c3289"></a>Compiler Error C3289
+# <a name="compiler-error-c3289"></a>Błąd kompilatora C3289
 
-"właściwość": właściwość prosta nie może być indeksowane.
+"Property": Właściwość prosta nie może być indeksowana
 
-Właściwość została zadeklarowana niepoprawnie. Metod dostępu muszą być zdefiniowane właściwości indeksowanych. Zobacz [właściwość](../../extensions/property-cpp-component-extensions.md) Aby uzyskać więcej informacji.
+Właściwość została zadeklarowana nieprawidłowo. Metody dostępu muszą być zdefiniowane dla właściwości indeksowanej. Aby uzyskać więcej informacji, zobacz [Właściwość](../../extensions/property-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3289.
+Poniższy przykład generuje C3289.
 
-```
+```cpp
 // C3289.cpp
 // compile with: /clr
 public ref struct C {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3230
 ms.assetid: 5ec53f25-59f6-4801-81e7-7b68bf04994d
-ms.openlocfilehash: a4d5edeb5898a57b99839b7e044f909cea1ec199
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69ea279ac5e11c03f366711484ba0c250fc50225
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173889"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743318"
 ---
 # <a name="compiler-error-c3230"></a>Błąd kompilatora C3230
 
-'Funkcja': argument typu szablonu dla "template" nie może zawierać parametru typu generycznego: "param"
+"Function": argument typu szablonu dla elementu "template" nie może zawierać parametru typu generycznego: "param"
 
-Szablony są tworzone w czasie kompilacji, ale typy ogólne są tworzone w czasie wykonywania. W związku z tym nie jest możliwe wygenerować kod ogólny, który można wywołać tego szablonu, ponieważ nie można utworzyć wystąpienia szablonu w czasie wykonywania, gdy na koniec jest znany typ ogólny.
+Szablony są tworzone w czasie kompilacji, ale typy ogólne są tworzone w czasie wykonywania. W związku z tym nie jest możliwe generowanie kodu generycznego, który może wywołać szablon, ponieważ nie można utworzyć wystąpienia szablonu w czasie wykonywania, gdy typ ogólny jest znany.
 
-Poniższy przykład spowoduje wygenerowanie C3230:
+Poniższy przykład generuje C3230:
 
-```
+```cpp
 // C3230.cpp
 // compile with: /clr /LD
 template <class S>

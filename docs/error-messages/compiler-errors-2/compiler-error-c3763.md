@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3763
 ms.assetid: 58b1f079-cd1d-46e0-9431-ea18210106b7
-ms.openlocfilehash: e7dc73334cedda27b82f79b1d2b7a8fc38a8098d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5db0f709bceca82d8d3af2c3220fb61d98c1ba8e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400269"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757257"
 ---
 # <a name="compiler-error-c3763"></a>Błąd kompilatora C3763
 
-"type": "retval" i "out" może występować tylko w typie wskaźnikowych danych
+"Type": "retval" i "out" może występować tylko w typie wskaźnika danych
 
-[Się](../../windows/out-cpp.md) lub [retval](../../windows/retval.md) atrybutów może się pojawić tylko parametry typu wskaźnika. Usuń atrybut lub wprowadzić parametr typu wskaźnika.
+Atrybuty [out](../../windows/out-cpp.md) lub [retval](../../windows/retval.md) mogą występować tylko w parametrach typu wskaźnik. Usuń atrybut lub ustaw parametr typu wskaźnika.
 
-Poniższy przykład spowoduje wygenerowanie C3763:
+Poniższy przykład generuje C3763:
 
-```
+```cpp
 // C3763.cpp
 #define _ATL_ATTRIBUTES 1
 #include <atlbase.h>

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3040
 ms.assetid: 29e857ac-74f0-4ec6-becf-9026e38c160e
-ms.openlocfilehash: b0bc4956cfc08ae50026827d78136a70b82d568e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a7ee7b814be1963e2d98b54e547cc5965eef9d3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350000"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754956"
 ---
 # <a name="compiler-error-c3040"></a>Błąd kompilatora C3040
 
-"var": typ zmiennej w klauzuli "reduction" jest niezgodny z operatorem redukcji "operator"
+"var": typ zmiennej w klauzuli "redukcyjn" jest niezgodny z operatorem redukcji "operator"
 
-Zmienna w [redukcji](../../parallel/openmp/reference/reduction.md) nie można używać klauzuli z operatorem redukcji.
+Zmienna w klauzuli [redukcyjnej](../../parallel/openmp/reference/reduction.md) nie może być używana z operatorem redukcji.
 
-Poniższy przykład spowoduje wygenerowanie C3040:
+Poniższy przykład generuje C3040:
 
-```
+```cpp
 // C3040.cpp
 // compile with: /openmp /c
 #include "omp.h"

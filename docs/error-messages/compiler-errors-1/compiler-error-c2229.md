@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2229
 ms.assetid: 933c7cf2-a463-4e74-b0b4-59dedad987fb
-ms.openlocfilehash: 998067e9af178c1898c3443c4e84da965c22fa81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d974c4f0630a592daad956448bf21cea21efb7c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301737"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759272"
 ---
 # <a name="compiler-error-c2229"></a>Błąd kompilatora C2229
 
-Typ 'Identyfikator' ma niedozwolony zerowy rozmiar tablicy
+Typ "identifier" ma niedozwoloną tablicę o rozmiarze zerowym
 
-Element członkowski pola struktury lub bitowego zawiera zerowy rozmiar tablicy, który nie jest ostatni element członkowski.
+Składowa struktury lub pola bitowego zawiera tablicę o rozmiarze zerowym, która nie jest ostatnią składową.
 
-Ponieważ może mieć zero wielkości tablicy ostatni element członkowski struktury, należy określić jego rozmiar podczas alokowania struktury.
+Ponieważ można mieć tablicę o rozmiarze zerowym jako ostatni element członkowski struktury, należy określić jej rozmiar podczas przydzielania struktury.
 
-Jeśli tablicy o rozmiarze zero nie jest ostatniego członka struktury, kompilator nie może obliczyć przesunięcie dla pozostałych pól.
+Jeśli tablica o rozmiarze zerowym nie jest ostatnią składową struktury, kompilator nie może obliczyć przesunięcia dla pozostałych pól.
 
-Poniższy przykład spowoduje wygenerowanie C2229:
+Poniższy przykład generuje C2229:
 
-```
+```cpp
 // C2229.cpp
 struct S {
    int a[0];  // C2229  zero-sized array

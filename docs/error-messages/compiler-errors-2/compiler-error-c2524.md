@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2524
 ms.assetid: e71d17f5-2fc2-416b-8dbd-e9bed85eb33a
-ms.openlocfilehash: 369aa5f21c072472808ffba06c3bc5c5e608ac22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e53a0c08f07bf69378fbb7603f63c596f641355
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282186"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758661"
 ---
 # <a name="compiler-error-c2524"></a>Błąd kompilatora C2524
 
 "destruktor": destruktor/finalizator musi mieć listę parametrów "void"
 
-Destruktora lub finalizatora ma listę parametrów, który nie jest [void](../../cpp/void-cpp.md). Inne typy parametrów nie są dozwolone.
+Destruktor lub finalizator ma listę parametrów, która nie jest typu [void](../../cpp/void-cpp.md). Inne typy parametrów są niedozwolone.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod powoduje wygenerowanie C2524.
+Poniższy kod reprodukuje C2524.
 
-```
+```cpp
 // C2524.cpp
 // compile with: /c
 class A {
@@ -36,9 +36,9 @@ class A {
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod powoduje wygenerowanie C2524.
+Poniższy kod reprodukuje C2524.
 
-```
+```cpp
 // C2524_b.cpp
 // compile with: /clr /c
 ref struct I1 {

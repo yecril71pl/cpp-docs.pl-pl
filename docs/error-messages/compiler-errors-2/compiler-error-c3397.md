@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3397
 ms.assetid: a8536e87-79c4-4ed7-bd96-42704d06391f
-ms.openlocfilehash: c6ca48eb53cf1c6d661a201fa8c4d2539669b9bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e00b5cb63d97e023c092f675dbe07a68d9a2548
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328617"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737533"
 ---
 # <a name="compiler-error-c3397"></a>Błąd kompilatora C3397
 
-Inicjalizacja agregacji jest niedozwolona w domyślnych argumentów
+Inicjalizacja agregacji jest niedozwolona w domyślnych argumentach
 
-Tablica zadeklarowano niepoprawnie.  Zobacz [tablic](../../extensions/arrays-cpp-component-extensions.md) Aby uzyskać więcej informacji.
+Tablica została zadeklarowana nieprawidłowo.  Aby uzyskać więcej informacji, zobacz [tablice](../../extensions/arrays-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3397.
+Poniższy przykład generuje C3397.
 
-```
+```cpp
 // C3397.cpp
 // compile with: /clr
 // /clr /c

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2254
 ms.assetid: 49bb3d7e-3bdf-4af6-937c-fa627be412a9
-ms.openlocfilehash: da89741811bbb9055f3f6793d115a357d80ab79a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38220575a48720a9df0e232ef74c8743e7e056c7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397539"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758843"
 ---
 # <a name="compiler-error-c2254"></a>Błąd kompilatora C2254
 
-'Funkcja': czysty specyfikator lub abstrakcyjny specyfikator override nie dozwolony dla funkcji zaprzyjaźnionej
+"Function": czysty specyfikator lub abstrakcyjny specyfikator override nie jest dozwolony dla funkcji zaprzyjaźnionej
 
-A `friend` funkcji jest określony jako czysty `virtual`.
+Funkcja `friend` jest określana jako czysta `virtual`.
 
-Poniższy przykład spowoduje wygenerowanie C2254:
+Poniższy przykład generuje C2254:
 
-```
+```cpp
 // C2254.cpp
 // compile with: /c
 class A {

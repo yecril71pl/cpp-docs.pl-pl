@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2783
 ms.assetid: 1ce94a11-bb8b-4be3-a222-f1f105da74b3
-ms.openlocfilehash: 539eeebc39fa7fc061cc615f29d87d3e6bcfc5c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: adba87853bac764d4975d6b6fa9aa44940ced03c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408436"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739678"
 ---
 # <a name="compiler-error-c2783"></a>Błąd kompilatora C2783
 
-"deklaracją": nie można wywnioskować argumentu szablonu dla 'Identyfikator'
+"Deklaracja": nie można wywnioskować argumentu szablonu dla elementu "identifier"
 
-Kompilator nie może określić argument szablonu. Argumenty domyślne nie można wywnioskować argumentu szablonu.
+Kompilator nie może określić argumentu szablonu. Argumentów domyślnych nie można używać do wywnioskowania argumentu szablonu.
 
-Poniższy przykład spowoduje wygenerowanie C2783:
+Poniższy przykład generuje C2783:
 
-```
+```cpp
 // C2783.cpp
 template<typename T1, typename T2>
 T1 f(T2) {
@@ -35,9 +35,9 @@ int main() {
 }
 ```
 
-C2783 może również wystąpić, gdy za pomocą typów ogólnych:
+C2783 może również wystąpić przy użyciu typów ogólnych:
 
-```
+```cpp
 // C2783b.cpp
 // compile with: /clr
 using namespace System;

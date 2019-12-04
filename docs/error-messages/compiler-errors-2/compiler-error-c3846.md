@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3846
 ms.assetid: c470f8a5-106b-4efb-b8dc-e1319e04130f
-ms.openlocfilehash: 788f03e4364404ad5c30b7edcba8b743c7f201ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4c51ccfc724cf8309044812b287677f0f1a2ff0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152426"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754904"
 ---
 # <a name="compiler-error-c3846"></a>Błąd kompilatora C3846
 
-'symbol': nie można zaimportować symbolu z "assembly2": ponieważ "symbol" został już zaimportowany z innego zestawu "assembly1"
+"symbol": nie można zaimportować symbolu z "Assembly2": ponieważ "symbol" został już zaimportowany z innego zestawu "assembly1"
 
-Nie można zaimportować symbolu z przywoływanego zestawu, ponieważ nie zostały wcześniej zaimportowane z przywoływanego zestawu.
+Nie można zaimportować symbolu z przywoływanego zestawu, ponieważ został on poprzednio zaimportowany z przywoływanego zestawu.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3846:
+Poniższy przykład generuje C3846:
 
-```
+```cpp
 // C3846a.cpp
 // compile with: /LD /clr
 public ref struct G
@@ -31,9 +31,9 @@ public ref struct G
 };
 ```
 
-A następnie skompilować to:
+A następnie Skompiluj:
 
-```
+```cpp
 // C3846b.cpp
 // compile with: /clr
 #using "c3846a.dll"

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3181
 ms.assetid: 5d450f8b-6cef-4452-a0c4-2076e967451d
-ms.openlocfilehash: dc848d4108ed4a1a7b6646647a1bbb1ec8dcadf7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e30ed7016ca3a4d4948a08c5c09268e52c9a407d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382402"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761676"
 ---
 # <a name="compiler-error-c3181"></a>Błąd kompilatora C3181
 
-"type": nieprawidłowy operand dla operatora
+"Type": nieprawidłowy operand dla operatora
 
-Nieprawidłowy parametr został przekazany do [typeid](../../extensions/typeid-cpp-component-extensions.md) operatora. Parametr musi być typu zarządzanego.
+Do operatora [typeid](../../extensions/typeid-cpp-component-extensions.md) przekazano nieprawidłowy parametr. Parametr musi być typem zarządzanym.
 
-Należy pamiętać, że kompilator używa aliasów dla natywnych typów, które mapują do typów w środowisko uruchomieniowe języka wspólnego.
+Należy zauważyć, że kompilator używa aliasów dla typów natywnych, które są mapowane na typy w środowisku uruchomieniowym języka wspólnego.
 
-Poniższy przykład spowoduje wygenerowanie C3181:
+Poniższy przykład generuje C3181:
 
-```
+```cpp
 // C3181a.cpp
 // compile with: /clr
 using namespace System;

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3149
 ms.assetid: cf6e2616-2f06-46da-8a8a-d449cb481c51
-ms.openlocfilehash: 8238dcec821256dad8101cd7ad59b2d85882c218
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 263eb03b7a9f45458f8d8b586adc6f1cfc5805be
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345515"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745983"
 ---
 # <a name="compiler-error-c3149"></a>Błąd kompilatora C3149
 
-"type": nie można użyć tego typu, w tym miejscu bez najwyższego poziomu "char"
+"Type": nie można użyć tego typu w tym miejscu bez znaku "char" najwyższego poziomu
 
-Deklaracja nie został poprawnie określony.
+Deklaracja nie została określona prawidłowo.
 
-Na przykład możesz mieć zdefiniowane typu CLR w zakresie globalnym i nastąpiła próba utworzenia zmiennej typu jako część definicji. Ponieważ zmienne globalne, typy CLR nie są dozwolone, kompilator wygeneruje C3149.
+Na przykład można zdefiniować typ CLR w zakresie globalnym i próbować utworzyć zmienną typu w ramach definicji. Ponieważ zmienne globalne typów CLR są niedozwolone, kompilator generuje C3149.
 
-Aby rozwiązać ten problem, należy zadeklarować zmienne typy CLR wewnątrz definicji funkcji lub typu.
+Aby rozwiązać ten problem, należy zadeklarować zmienne typów CLR wewnątrz funkcji lub definicji typu.
 
-Poniższy przykład spowoduje wygenerowanie C3149:
+Poniższy przykład generuje C3149:
 
-```
+```cpp
 // C3149.cpp
 // compile with: /clr
 using namespace System;
@@ -36,9 +36,9 @@ int main() {
 }
 ```
 
-Poniższy przykład spowoduje wygenerowanie C3149:
+Poniższy przykład generuje C3149:
 
-```
+```cpp
 // C3149b.cpp
 // compile with: /clr /c
 delegate int MyDelegate(const int, int);

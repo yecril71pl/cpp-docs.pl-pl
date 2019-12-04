@@ -1,29 +1,29 @@
 ---
-title: Compiler Error C2296
+title: Błąd kompilatora C2296
 ms.date: 11/04/2016
 f1_keywords:
 - C2296
 helpviewer_keywords:
 - C2296
 ms.assetid: 47d270f4-13ce-4c16-81e2-7d67c6c4a540
-ms.openlocfilehash: ab9c9450b6e906a47a66f6c28c42ca016c98381b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 020f046648488ca67923b7035acaa6c79ce495e4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182681"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759077"
 ---
-# <a name="compiler-error-c2296"></a>Compiler Error C2296
+# <a name="compiler-error-c2296"></a>Błąd kompilatora C2296
 
-'operator': Nieprawidłowy lewy operand
+"operator": zły lewy argument operacji
 
-Lewy operand używane z `operator` jest nieprawidłowy.
+Lewy operand używany z `operator` jest nieprawidłowy.
 
-Na przykład kompilator może zostać wyświetlony deklarację zamierzonego wywołania funkcji.
+Na przykład kompilator może zobaczyć deklarację, w której zaplanowano wywołanie funkcji.
 
-Poniższy przykład spowoduje wygenerowanie C2296:
+Poniższy przykład generuje C2296:
 
-```
+```cpp
 // C2296.cpp
 struct MyStruct {
    struct Help {

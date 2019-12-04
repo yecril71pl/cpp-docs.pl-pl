@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2101
 ms.assetid: 42f0136f-8cc1-4f2b-be1c-721ec9278e66
-ms.openlocfilehash: 68fa83f3325a2a7b91d32495aa9b6924e5ca8c0f
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 8bea258bd3e20cba1dbfabdd3a669a44414b89f8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344944"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752343"
 ---
 # <a name="compiler-error-c2101"></a>Błąd kompilatora C2101
 
-"&" na — stała
+"&" w stałej
 
-Operator address-of ( `&` ) musi mieć wartość l, jako argument operacji.
+Operator address-of (`&`) musi mieć wartość l-wartości jako argument operacji.
 
-Poniższy przykład spowoduje wygenerowanie C2101:
+Poniższy przykład generuje C2101:
 
-```
+```cpp
 // C2101.cpp
 int main() {
    char test;

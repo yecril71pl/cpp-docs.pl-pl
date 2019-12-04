@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2360
 ms.assetid: 51bfd2ee-8108-4777-aa93-148b9cebfa83
-ms.openlocfilehash: 6e956ccb021dc3bce4d107e4aa6e0bbe4356283b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 226fcd8a27c9abdb789b8191a5cf4e59cc4a66cc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364730"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759909"
 ---
 # <a name="compiler-error-c2360"></a>Błąd kompilatora C2360
 
-Inicjowanie 'Identyfikator' jest pomijana przy etykiecie "case"
+Inicjalizacja elementu "identifier" jest pomijana w etykiecie "Case"
 
-Inicjowanie `identifier` może być pominięty w `switch` instrukcji. Nie można przeskoczyć poza deklaracją za pomocą inicjatora, chyba że deklaracja jest ujęty w bloku. (Chyba że zostanie ona zadeklarowana w bloku, zmienna znajduje się w zakresie aż do końca `switch` instrukcja.)
+Inicjalizację `identifier` można pominąć w instrukcji `switch`. Nie można przeskoczyć do wcześniejszej deklaracji z inicjatorem, chyba że deklaracja jest ujęta w bloku. (Chyba że jest zadeklarowany w bloku, zmienna jest w zakresie do końca instrukcji `switch`).
 
-Poniższy przykład spowoduje wygenerowanie C2360:
+Poniższy przykład generuje C2360:
 
-```
+```cpp
 // C2360.cpp
 int main() {
    int x = 0;
@@ -37,7 +37,7 @@ int main() {
 
 Możliwe rozwiązanie:
 
-```
+```cpp
 // C2360b.cpp
 int main() {
    int x = 0;

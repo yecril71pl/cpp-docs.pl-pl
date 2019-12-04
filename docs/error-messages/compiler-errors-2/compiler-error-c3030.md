@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3030
 ms.assetid: de92fd7e-29ba-46e8-b43b-f4b985cd74de
-ms.openlocfilehash: 31ae3f55cd0bf7a15dbea2cf941b00dc048d825d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9f22c01eb60ead22027cad2f59d9d2e95e01521
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375538"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757322"
 ---
 # <a name="compiler-error-c3030"></a>Błąd kompilatora C3030
 
-"var": zmienna w klauzuli/dyrektywie "reduction" nie może mieć typu referencyjnego
+"var": zmienna w klauzuli/dyrektywie "redukcyjna" nie może mieć typu referencyjnego
 
-Wartości parametrów można przekazywać tylko do niektórych klauzul, takich jak klauzuli reduction.
+Parametry wartości można przekazać tylko do niektórych klauzul, takich jak klauzula redukcji.
 
-Poniższy przykład spowoduje wygenerowanie C3030:
+Poniższy przykład generuje C3030:
 
-```
+```cpp
 // C3030.cpp
 // compile with: /openmp /link vcomps.lib
 #include "omp.h"

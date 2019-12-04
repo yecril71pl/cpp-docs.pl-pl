@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3891
 ms.assetid: 6e1a9458-97f5-4580-bc0f-aa97a1bfd20d
-ms.openlocfilehash: 74b8802a165ab3265cc0f1c6a0b33b31d3db401d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b5ef8b837033a149455c040f748f479aa3f424d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281563"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736402"
 ---
 # <a name="compiler-error-c3891"></a>Błąd kompilatora C3891
 
-"var": literał składowej danych nie można użyć jako wartościowanie lewostronne
+"var": literał składowej danych nie może być używany jako wartość l
 
-A [literału](../../extensions/literal-cpp-component-extensions.md) zmiennej jest stała i nie można zmienić jego wartości, po inicjalizacji w deklaracji.
+Zmienna [literału](../../extensions/literal-cpp-component-extensions.md) jest stała i jej wartość nie może zostać zmieniona po zainicjowaniu jej w deklaracji.
 
-Poniższy przykład spowoduje wygenerowanie C3891:
+Poniższy przykład generuje C3891:
 
-```
+```cpp
 // C3891.cpp
 // compile with: /clr
 ref struct Y1 {

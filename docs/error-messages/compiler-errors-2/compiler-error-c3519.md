@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3519
 ms.assetid: ca24b2bc-7e90-4448-ae84-3fedddf9bca7
-ms.openlocfilehash: e9a998e1c3a6c2fb770fb9d26d97b8a24e5554d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e56ff814b1a2dd6ec3cb41db2cbcc21d7dcf2d9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360037"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750172"
 ---
 # <a name="compiler-error-c3519"></a>Błąd kompilatora C3519
 
-"invalid_param": nieprawidłowy parametr dla atrybutu embedded_idl
+"invalid_param": nieprawidłowy parametr embedded_idl atrybutu
 
-Parametr został przekazany do `embedded_idl` atrybutu [#import](../../preprocessor/hash-import-directive-cpp.md), ale kompilator nie rozpoznał parametru.
+Parametr został przekazano do `embedded_idl` atrybutu [#import](../../preprocessor/hash-import-directive-cpp.md), ale kompilator nie rozpoznał parametru.
 
-Tylko parametry, które są dozwolone w przypadku `embedded_idl` są `emitidl` i `no_emitidl`.
+Jedyne parametry, które są dozwolone dla `embedded_idl` są `emitidl` i `no_emitidl`.
 
-Poniższy przykład spowoduje wygenerowanie C3519:
+Poniższy przykład generuje C3519:
 
-```
+```cpp
 // C3519.cpp
 // compile with: /LD
 [module(name="MyLib2")];

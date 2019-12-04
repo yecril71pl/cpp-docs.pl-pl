@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3066
 ms.assetid: 226f6de5-c4c5-41e2-b31a-2e30a37fbbeb
-ms.openlocfilehash: 126175b44bf0e6f4a58bc0e675cfd0cac1acc1ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80468f4e35ffd9d09706b8bb8fc2fdc6eb8e679e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182616"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738859"
 ---
 # <a name="compiler-error-c3066"></a>Błąd kompilatora C3066
 
-istnieje wiele sposobów obiektu tego typu można wywołać z tymi argumentami
+Istnieje wiele sposobów, aby obiekt tego typu mógł zostać wywołany z tymi argumentami
 
-Kompilator wykrył wywołanie niejednoznaczną funkcję obejmujące surogaty.
+Kompilator wykrył niejednoznaczne wywołanie funkcji obejmujące surogaty.
 
-Poniższy przykład spowoduje wygenerowanie C3066:
+Poniższy przykład generuje C3066:
 
-```
+```cpp
 // C3066.cpp
 template <class T, class U> void func(T*, U*){}
 
@@ -53,9 +53,9 @@ int main() {
 }
 ```
 
-## <a name="copy-list-initialization"></a>Copy-list-initialization
+## <a name="copy-list-initialization"></a>Inicjalizacja kopiowania listy
 
-W programie Visual Studio 2015 kompilator błędnie traktowane listy Inicjalizacja kopiowania na w taki sam sposób, jak regularne Inicjowanie kopiowania; uznaje się jedynie konwertowanie konstruktory przeciążeń z późnym wiązaniem. W poniższym przykładzie Visual Studio 2015 wybiera MyInt(23), ale Visual Studio 2017 niepoprawnie zgłasza błąd.
+W programie Visual Studio 2015 kompilator błędnie traktował inicjalizację listy kopiowania w taki sam sposób jak regularne inicjowanie kopiowania; jest on uważany tylko za konwersję konstruktorów w celu rozpoznania przeciążenia. W poniższym przykładzie program Visual Studio 2015 wybiera MyInt (23), ale program Visual Studio 2017 poprawnie zgłosi błąd.
 
 ```
 // From http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_closed.html#1228

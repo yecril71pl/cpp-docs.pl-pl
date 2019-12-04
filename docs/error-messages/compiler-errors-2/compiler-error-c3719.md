@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3719
 ms.assetid: d0d59d4e-babb-4480-9ef7-70cf1a28165c
-ms.openlocfilehash: 3ead2f18cdc8b76a0bb3da30e7086bdc80b49d43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4fca5bfd944514bf2658a8af5cbbd58efe5b39fc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328292"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753188"
 ---
 # <a name="compiler-error-c3719"></a>Błąd kompilatora C3719
 
-"interface": źródło zdarzeń bazujące na interfejsie należy używać tylko dla zdarzeń COM
+"Interface": Źródło zdarzeń oparte na interfejsie może być używane tylko dla zdarzeń COM
 
-Interfejs w kontekście COM nie została zadeklarowana.
+Zadeklarowano interfejs w kontekście innym niż COM.
 
-Poniższy przykład spowoduje wygenerowanie C3719:
+Poniższy przykład generuje C3719:
 
-```
+```cpp
 // C3719a.cpp
 #define _ATL_ATTRIBUTES 1
 #include "atlbase.h"
@@ -46,9 +46,9 @@ int main() {
 }
 ```
 
-Aby naprawić ten błąd, należy zastosować [obiektu](../../windows/object-cpp.md), [coclass](../../windows/coclass.md), [event_source](../../windows/event-source.md), i [event_receiver](../../windows/event-receiver.md) atrybuty odpowiednio się klasy, w których korzysta z klas interfejsu COM. Na przykład:
+Aby naprawić ten błąd, należy odpowiednio zastosować atrybuty [Object](../../windows/object-cpp.md), [coclass](../../windows/coclass.md), [event_source](../../windows/event-source.md)i [event_receiver](../../windows/event-receiver.md) , aby uczynić klasy, w których są używane klasy interfejsów com. Na przykład:
 
-```
+```cpp
 // C3719b.cpp
 #define _ATL_ATTRIBUTES 1
 #include <atlbase.h>

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2804
 ms.assetid: b066e563-cca4-450c-8ba7-3b0d7a89f3ea
-ms.openlocfilehash: 1ebcfdc2f2555fa694ab8dfeabe77e5140ddace2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62af8cca5131a5cb21df45f09c55ee5beb3fc718
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408423"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760650"
 ---
 # <a name="compiler-error-c2804"></a>Błąd kompilatora C2804
 
-plik binarny "operator operator" ma zbyt wiele parametrów
+binarny operator "operator" ma zbyt wiele parametrów
 
-Funkcja elementu członkowskiego Przeciążony operator binarny jest zadeklarowana z więcej niż jeden parametr. Pierwszy parametr operand operatora binarnego funkcji członkowskiej, którego typ jest operatorem typ otaczający, jest domyślna.
+Funkcja składowej przeciążonego operatora binarnego jest zadeklarowana z więcej niż jednym parametrem. Pierwszy operand funkcji składowej operatora binarnego, którego typem jest typ otaczający operatora, jest implikowany.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C2804 i pokazuje, jak go naprawić.
+Poniższy przykład generuje C2804 i pokazuje, jak rozwiązać ten problem.
 
-```
+```cpp
 // C2804.cpp
 // compile by using: cl /c /W4 C2804.cpp
 class X {
@@ -40,9 +40,9 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C2804 i pokazuje, jak go naprawić.
+Poniższy przykład generuje C2804 i pokazuje, jak rozwiązać ten problem.
 
-```
+```cpp
 // C2804_2.cpp
 // compile with: /clr /c
 ref struct Y {

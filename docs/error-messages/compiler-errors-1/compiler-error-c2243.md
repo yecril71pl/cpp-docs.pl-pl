@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2243
 ms.assetid: b90065bb-d251-4ba9-8b4c-280ee13fa9c0
-ms.openlocfilehash: ded5a3d459e4b5d1412998aadbaa385864f505a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f5a62b1c12b94735d0383697bf7a92d12d64b21f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388874"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757803"
 ---
 # <a name="compiler-error-c2243"></a>Błąd kompilatora C2243
 
-'conversion type' konwersja z 'Typ1' na 'Typ2' istnieje, ale jest niedostępna
+Konwersja "typ konwersji" z "type1" na "type2" istnieje, ale jest niedostępna
 
-Dostęp do ochrony (`protected` lub `private`) uniemożliwił konwersja ze wskaźnika do klasy pochodnej na wskaźnik do klasy bazowej.
+Ochrona dostępu (`protected` lub `private`) uniemożliwiła konwersję ze wskaźnika do klasy pochodnej na wskaźnik do klasy bazowej.
 
-Poniższy przykład spowoduje wygenerowanie C2243:
+Poniższy przykład generuje C2243:
 
-```
+```cpp
 // C2243.cpp
 // compile with: /c
 class B {};
@@ -35,4 +35,4 @@ E e;
 B *p2 = &e;
 ```
 
-Podstawowa klasach z atrybutem `protected` lub `private` dostępu nie są dostępne dla klientów w klasie pochodnej. Te poziomy kontroli dostępu są używane do wskazania, że klasy bazowej jest szczegół implementacji, które powinny być niewidoczne na klientach. Użyj publicznego pochodnym, jeśli chcesz, aby klienci klasy pochodnej na dostęp do niejawna konwersja wskaźnika klasy pochodnej na wskaźnik do klasy bazowej.
+Klasy bazowe z dostępem `protected` lub `private` są niedostępne dla klientów klasy pochodnej. Te poziomy kontroli dostępu są używane do wskazywania, że klasa podstawowa jest szczegółami implementacji, które powinny być niewidoczne dla klientów. Użyj publicznej metody tworzenia, jeśli chcesz, aby klienci klasy pochodnej mieli dostęp do niejawnej konwersji wskaźnika klasy pochodnej na wskaźnik do klasy bazowej.

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2283
 ms.assetid: 8a5b3175-b480-4598-a1f7-0b50504c5caa
-ms.openlocfilehash: 1113236680241a80c462e382c8c9c7de342b5463
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f3568aa5dfee116a225256a4452465c05f72f6f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388751"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759155"
 ---
 # <a name="compiler-error-c2283"></a>Błąd kompilatora C2283
 
-'Identyfikator': czysty specyfikator lub abstrakcyjny specyfikator override nie dozwolony dla struktury nienazwane
+"Identyfikator": czysty specyfikator lub abstrakcyjny specyfikator override nie jest dozwolony dla nienazwanej struktury
 
-Funkcji składowej bez nazwy klasy lub struktury jest zadeklarowany za pomocą czysty specyfikator jest niedozwolony.
+Funkcja członkowska nienazwanej klasy lub struktury jest zadeklarowana za pomocą czystego specyfikatora, co jest niedozwolone.
 
-Poniższy przykład spowoduje wygenerowanie C2283:
+Poniższy przykład generuje C2283:
 
-```
+```cpp
 // C2283.cpp
 // compile with: /c
 struct {

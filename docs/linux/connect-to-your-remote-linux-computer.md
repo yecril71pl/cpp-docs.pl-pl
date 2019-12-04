@@ -3,12 +3,12 @@ title: Nawiązywanie połączenia z docelowym systemem Linux w programie Visual 
 description: Jak nawiązać połączenie ze zdalnym komputerem z systemem Linux lub podsystemem Windows dla systemu Linux C++ z wnętrza projektu programu Visual Studio.
 ms.date: 11/09/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 6f7116ab5dc6c77f88d0787beac32d1c1e0a4716
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 4069979100c3b71a32e90ad72fb334d21a226e64
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966571"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755281"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Nawiązywanie połączenia z docelowym systemem Linux w programie Visual Studio
 
@@ -82,7 +82,7 @@ Aby skonfigurować to połączenie zdalne:
 
 ## <a name="tcp-port-forwarding"></a>Przekazywanie portów TCP
 
-Obsługa systemu Linux w programie Visual Studio ma zależność od przekazywania portów TCP. Jeśli przekazywanie portów TCP jest wyłączone w systemie zdalnym, wpłynie to na **rsync** i **serwera gdbserver** . 
+Obsługa systemu Linux w programie Visual Studio ma zależność od przekazywania portów TCP. Jeśli przekazywanie portów TCP jest wyłączone w systemie zdalnym, wpłynie to na **rsync** i **serwera gdbserver** . Jeśli ma to wpływ na tę zależność, możesz przegłosować ten [bilet sugestii](https://developercommunity.visualstudio.com/idea/840265/dont-rely-on-ssh-tcp-port-forwarding-for-c-remote.html) w społeczności deweloperów.
 
 rsync jest używany przez projekty systemu Linux oparte na programie MSBuild i projekty CMake do [kopiowania nagłówków z zdalnego komputera do systemu Windows do użycia przez funkcję IntelliSense](configure-a-linux-project.md#remote_intellisense). Gdy nie można włączyć przekazywania portów TCP, wyłącz automatyczne pobieranie nagłówków zdalnych. Aby go wyłączyć, użyj **narzędzi > opcje > Międzyplatformowe > Menedżer połączeń > zdalnych nagłówków IntelliSense**. Jeśli system zdalny nie ma włączonego przekazywania portów TCP, zobaczysz ten błąd, jeśli pobieranie zdalnych nagłówków dla funkcji IntelliSense rozpocznie się:
 

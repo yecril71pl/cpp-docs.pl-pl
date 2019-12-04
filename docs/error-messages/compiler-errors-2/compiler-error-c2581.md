@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2581
 ms.assetid: 24a4e4c1-24d3-4e42-b760-7dcaf9740b16
-ms.openlocfilehash: edfab092c82f9dc1d4b9dfe5d21daa2b2ab98d08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03fc7e9da8a9b3a2e2c445f5b06395c2616f0d98
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385865"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755437"
 ---
 # <a name="compiler-error-c2581"></a>Błąd kompilatora C2581
 
-"type": statyczne "operator =" funkcji jest niedozwolone
+"Type": statyczna funkcja "operator =" jest niedozwolona
 
-Przypisanie (`=`) — operator niepoprawnie jest zadeklarowany jako `static`. Operatory przypisania nie może być `static`. Aby uzyskać więcej informacji, zobacz [operatory zdefiniowane przez użytkownika (C++sposób niezamierzony)](../../dotnet/user-defined-operators-cpp-cli.md).
+Operator przypisania (`=`) jest niepoprawnie zadeklarowany jako `static`. Operatory przypisania nie mogą być `static`. Aby uzyskać więcej informacji, zobacz [Operatory zdefiniowane przez użytkownikaC++(/CLI)](../../dotnet/user-defined-operators-cpp-cli.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2581.
+Poniższy przykład generuje C2581.
 
-```
+```cpp
 // C2581.cpp
 // compile with: /clr /c
 ref struct Y {

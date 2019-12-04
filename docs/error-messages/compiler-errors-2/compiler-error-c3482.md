@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C3482
 ms.assetid: bf99558e-bef4-421c-bb16-dcd9c54c1011
-ms.openlocfilehash: 6ff269d719dd354932ef79946ae99a9b60490199
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d775551d0f4955dc4eda9b0d418ea31e065714f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173226"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743136"
 ---
 # <a name="compiler-error-c3482"></a>Błąd kompilatora C3482
 
-"this" należy używać tylko jako przechwyt lambdy w obrębie funkcji niestatycznego elementu członkowskiego
+elementu "This" można użyć tylko jako przechwytywania lambda w obrębie niestatycznej funkcji składowej
 
-Nie można przekazać `this` do listy przechwytywania wyrażenia lambda, które są zadeklarowane w statycznej metody lub funkcją globalną.
+Nie można przekazać `this` do listy przechwytywania wyrażenia lambda, która jest zadeklarowana w metodzie statycznej lub funkcji globalnej.
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-- Konwertuj funkcji otaczającej metody niestatyczna, lub
+- Przekonwertuj otaczającą funkcję na niestatyczną metodę lub
 
-- Usuń `this` wskaźnika z listy przechwytywania wyrażenia lambda.
+- Usuń wskaźnik `this` z listy przechwytywania wyrażenia lambda.
 
 ## <a name="example"></a>Przykład
 
 Poniższy przykład generuje C3482:
 
-```
+```cpp
 // C3482.cpp
 // compile with: /c
 

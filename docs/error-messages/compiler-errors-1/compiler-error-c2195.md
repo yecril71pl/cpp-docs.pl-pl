@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2195
 ms.assetid: 9f9f035c-9c51-4173-a8ea-c6f907fc5c63
-ms.openlocfilehash: 9d0fdb3623a86adb07e910b186305f3e468d24b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 748516dbcdf5e135964e720d6215f31091bfed9e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174539"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758531"
 ---
 # <a name="compiler-error-c2195"></a>Błąd kompilatora C2195
 
-'Identyfikator': jest segmentem danych
+"Identyfikator": jest segmentem danych
 
-`code_seg` Pragma korzysta z nazwą segmentu, w ramach `data_seg` pragmy.
+`code_seg` pragma używa nazwy segmentu używanej z `data_seg` pragma.
 
-Poniższy przykład spowoduje wygenerowanie C2195:
+Poniższy przykład generuje C2195:
 
-```
+```cpp
 // C2195.cpp
 #pragma data_seg("MYDATA")
 #pragma code_seg("MYDATA")   // C2195

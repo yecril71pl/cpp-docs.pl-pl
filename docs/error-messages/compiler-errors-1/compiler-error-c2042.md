@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - C2042
 ms.assetid: e111788f-41ce-405a-9824-a4c1c26059e6
-ms.openlocfilehash: 3302b3a529ad8af054bb29bced66bc939abcc060
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6bc66f5b3a7bd669ef06cac3b53631ff7948e8ad
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384442"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740393"
 ---
 # <a name="compiler-error-c2042"></a>Błąd kompilatora C2042
 
-ze znakiem/bez znaku słowa kluczowe wzajemnie się wykluczają
+podpisane i niepodpisane słowa kluczowe wzajemnie się wykluczają
 
 Słowa kluczowe `signed` i `unsigned` są używane w jednej deklaracji.
 
-Poniższy przykład spowoduje wygenerowanie C2042:
+Poniższy przykład generuje C2042:
 
-```
+```cpp
 // C2042.cpp
 unsigned signed int i;   // C2042
 ```
 
 Możliwe rozwiązanie:
 
-```
+```cpp
 // C2042b.cpp
 // compile with: /c
 unsigned int i;

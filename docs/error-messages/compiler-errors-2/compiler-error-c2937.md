@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2937
 ms.assetid: 95671ca3-79f7-4b56-a5f2-a92296da1629
-ms.openlocfilehash: 8ad25dbcec4ee8a8ed49449cf9e64ebae4af1321
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f682cd6346d214f4173226d78301f563083ef607
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366528"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758375"
 ---
 # <a name="compiler-error-c2937"></a>Błąd kompilatora C2937
 
-"class": typ klasy identyfikator ponownie definiowana jako globalne — typedef
+"Class": Identyfikator klasy typu został ponownie zdefiniowany jako globalny element typedef
 
-Generyczny lub szablonu klasy nie można użyć jako globalne `typedef`.
+Nie można użyć klasy generycznej ani szablonu jako globalnego `typedef`.
 
-Poniższy przykład spowoduje wygenerowanie C2937:
+Poniższy przykład generuje C2937:
 
-```
+```cpp
 // C2937.cpp
 // compile with: /c
 template<class T>
@@ -30,9 +30,9 @@ typedef int TC<int>;   // C2937
 typedef TC<int> c;   // OK
 ```
 
-C2937 może również wystąpić, gdy za pomocą typów ogólnych:
+C2937 może również wystąpić przy użyciu typów ogólnych:
 
-```
+```cpp
 // C2937b.cpp
 // compile with: /clr
 generic<class T>

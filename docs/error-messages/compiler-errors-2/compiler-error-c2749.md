@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2749
 ms.assetid: a81aef36-cdca-4d78-89d5-b72eff2500b2
-ms.openlocfilehash: 80ac01eaba8e5291ee5558d226ebea2c3d8ff47e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71c2f3d3a297d70501c675ac6a9f750cbdf0d421
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360219"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759623"
 ---
 # <a name="compiler-error-c2749"></a>Błąd kompilatora C2749
 
-"type": może tylko zgłosić lub przechwycić uchwyt do zarządzanej klasy z/CLR: Safe
+"Type": może zgłosić lub przechwycić uchwyt do zarządzanej klasy z/CLR: Safe
 
-Korzystając z **/CLR: Safe**, może tylko zgłosić lub przechwycić typu odwołania.
+W przypadku korzystania z **/CLR: Safe**można zgłosić lub przechwycić typ referencyjny.
 
-Aby uzyskać więcej informacji, zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md).
+Aby uzyskać więcej informacji, zobacz [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2749:
+Poniższy przykład generuje C2749:
 
-```
+```cpp
 // C2749.cpp
 // compile with: /clr:safe
 ref struct MyStruct {

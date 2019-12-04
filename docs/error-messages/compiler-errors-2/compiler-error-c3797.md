@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3797
 ms.assetid: ab27ff34-8c1d-4297-b004-9e39bd3a4f25
-ms.openlocfilehash: 76206cdffce3f551ff472cbd83df486eb41ae80b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7236cb75aef4250440a1e992415df07fb5b7da3f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400139"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757179"
 ---
 # <a name="compiler-error-c3797"></a>Błąd kompilatora C3797
 
-"override": deklaracja zdarzenia nie może posiadać specyfikatora przesłonięcia (powinna być umieszczona dla metod dodawania/usuwania/podbicia zdarzeń zamiast)
+"override": Deklaracja zdarzenia nie może posiadać specyfikatora przesłonięcia (powinna być umieszczona dla zdarzenia Dodaj/Usuń/Zgłoś zamiast niego)
 
-Nie można zastąpić trivial zdarzeń (zdarzenia bez metody dostępu jawnie zdefiniowanych) z innym zdarzeniem prosta. Zdarzenie nadrzędne należy zdefiniować jego zachowanie za pomocą funkcji dostępu.
+Nie można zastąpić zdarzenia uproszczonego (zdarzenia bez jawnie zdefiniowanych metod dostępu) z innym zdarzeniem prostym. Zdarzenie przesłaniania musi definiować zachowanie z funkcjami dostępu.
 
-Aby uzyskać więcej informacji, zobacz [zdarzeń](../../extensions/event-cpp-component-extensions.md).
+Aby uzyskać więcej informacji, zobacz [zdarzenie](../../extensions/event-cpp-component-extensions.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3797.
+Poniższy przykład generuje C3797.
 
-```
+```cpp
 // C3797.cpp
 // compile with: /clr /c
 delegate void MyDel();

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3915
 ms.assetid: 2b0a5e5f-3aec-4a4b-9157-233031817084
-ms.openlocfilehash: 85654e266c3157ab145e7ac7aab454a0d4f6c102
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26fdcd3b7989d9030249133e6dc1d277aa1a9f44
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406447"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756282"
 ---
 # <a name="compiler-error-c3915"></a>Błąd kompilatora C3915
 
-"type" nie ma domyślnie indeksowanej właściwości (klasa indeksatora)
+Typ "Type" nie ma domyślnej właściwości indeksowanej (indeksator klasy)
 
-Typ nie ma domyślnych, indeksowanej właściwości.
+Typ nie ma domyślnej właściwości indeksowanej.
 
-Aby uzyskać więcej informacji, zobacz [właściwość](../../extensions/property-cpp-component-extensions.md).
+Aby uzyskać więcej informacji, zobacz [Właściwość](../../extensions/property-cpp-component-extensions.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3915.
+Poniższy przykład generuje C3915.
 
-```
+```cpp
 // C3915.cpp
 // compile with: /clr
 ref class X {
@@ -48,11 +48,11 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-C3915 może również wystąpić, jeśli użytkownik podejmie próbę konsumowanie indeksatora domyślny, w tym samym compiland —, gdzie został zdefiniowany z użyciem <xref:System.Reflection.DefaultMemberAttribute>.
+C3915 może również wystąpić, jeśli próbujesz użyć domyślnego indeksatora w tym samym jednostka kompilacji, gdzie został on zdefiniowany przy użyciu <xref:System.Reflection.DefaultMemberAttribute>.
 
-Poniższy przykład spowoduje wygenerowanie C3915.
+Poniższy przykład generuje C3915.
 
-```
+```cpp
 // C3915_b.cpp
 // compile with: /clr
 using namespace System;

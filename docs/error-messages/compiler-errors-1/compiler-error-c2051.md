@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2051
 ms.assetid: 81c0469a-78e2-49fa-bd76-97cdb135e3ea
-ms.openlocfilehash: e6b0d95628a1b4e7f9707202d57d29b906b1b96d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51bf9b9bcde7f02210dd0e381f1239507ac56bdb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408761"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739106"
 ---
 # <a name="compiler-error-c2051"></a>Błąd kompilatora C2051
 
 wyrażenie CASE nie jest stałą
 
-Wyrażenia CASE muszą być stałe całkowite.
+Wyrażenia case muszą być stałymi całkowitymi.
 
-Poniższy przykład spowoduje wygenerowanie C2051:
+Poniższy przykład generuje C2051:
 
-```
+```cpp
 // C2051.cpp
 class X {};
 
@@ -40,7 +40,7 @@ int main() {
 
 Możliwe rozwiązanie:
 
-```
+```cpp
 // C2051b.cpp
 class X {};
 

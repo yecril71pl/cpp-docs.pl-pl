@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3132
 ms.assetid: d54a3d12-336a-4ed0-ad4e-43cddac33b5e
-ms.openlocfilehash: 1a97e04747cb92909380e66d1f4ea8ca62183054
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3ef68e693b77b72c1e4cc2590a404b09b38ab04
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349883"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760208"
 ---
 # <a name="compiler-error-c3132"></a>Błąd kompilatora C3132
 
-"parametr funkcji": tablice parametrów można stosować tylko do formalnego argumentu typu "single-dimensional tablicy zarządzanej"
+"Function-Parameter": tablice parametrów mogą być stosowane tylko do formalnego argumentu typu "tablica zarządzana Jednowymiarowa"
 
-<xref:System.ParamArrayAttribute> Atrybut został zastosowany do parametru, który nie był tablicy jednowymiarowej.
+Atrybut <xref:System.ParamArrayAttribute> został zastosowany do parametru, który nie jest tablicą o pojedynczym wymiarze.
 
-Poniższy przykład spowoduje wygenerowanie C3132:
+Poniższy przykład generuje C3132:
 
-```
+```cpp
 // C3132.cpp
 // compile with: /clr /c
 using namespace System;

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2680
 ms.assetid: d6f7129e-dd17-4661-b680-18d6b925b1cc
-ms.openlocfilehash: 7a0f58ae16baee00a86038c633f996a7d27a1019
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37535c9ffbafd0d312646d5f3cfdb0c4411bc790
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386814"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760312"
 ---
 # <a name="compiler-error-c2680"></a>Błąd kompilatora C2680
 
-"type": nieprawidłowy typ docelowy dla nazwy
+"Type": nieprawidłowy typ docelowy dla nazwy
 
-Operator rzutowania próbował przekonwertować na typ, który nie jest wskaźnikiem lub odwołaniem. [Dynamic_cast](../../cpp/dynamic-cast-operator.md) operator może być używany tylko w przypadku wskaźników lub odwołań.
+Operator rzutowania próbował skonwertować na typ, który nie jest wskaźnikiem ani odwołaniem. Operatora [dynamic_cast](../../cpp/dynamic-cast-operator.md) można używać tylko w przypadku wskaźników lub odwołań.
 
-Poniższy przykład spowoduje wygenerowanie C2680:
+Poniższy przykład generuje C2680:
 
-```
+```cpp
 // C2680.cpp
 // compile with: /c
 class A { virtual void f(); };
@@ -34,9 +34,9 @@ void g(B b) {
 }
 ```
 
-C2680 może również wystąpić, gdy nie jest zdefiniowany obiekt docelowy:
+C2680 może również wystąpić, gdy element docelowy nie jest zdefiniowany:
 
-```
+```cpp
 // C2680b.cpp
 // compile with: /clr /c
 // C2680 expected

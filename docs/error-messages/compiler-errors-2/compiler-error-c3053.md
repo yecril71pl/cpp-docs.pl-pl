@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3053
 ms.assetid: ab9a25f3-e341-4f6e-8e69-069b4a963a64
-ms.openlocfilehash: cb01207be15a628fb0c6206df3e6a673067f568a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07514dfb931dcb5bf45bb8526cd19cf19103a56f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265649"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761207"
 ---
 # <a name="compiler-error-c3053"></a>Błąd kompilatora C3053
 
-'symbol': "threadprivate" jest tylko prawidłowy dla globalnych lub statycznych elementów danych
+"symbol": "threadprivate" jest prawidłowy tylko dla elementów danych globalnych lub statycznych
 
-Symbole są przekazywane do [threadprivate](../../parallel/openmp/reference/threadprivate.md) musi mieć globalnych lub statycznych.
+Symbole przesyłane do [threadprivate](../../parallel/openmp/reference/threadprivate.md) muszą być globalne lub statyczne.
 
-Poniższy przykład spowoduje wygenerowanie C3053:
+Poniższy przykład generuje C3053:
 
-```
+```cpp
 // C3053.cpp
 // compile with: /openmp
 void Test() {
@@ -36,7 +36,7 @@ void Test() {
 
 Możliwe rozwiązanie:
 
-```
+```cpp
 // C3053b.cpp
 // compile with: /openmp /LD
 int x, y;

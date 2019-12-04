@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3736
 ms.assetid: 579b773c-41e7-40ea-8382-2e3ce2667f4c
-ms.openlocfilehash: e31d68a13ebd9c5267fd285d43ebc66ae8b53182
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c4626164fe8fe3fb932fba3ae8e87c774f5aeec
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328019"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752850"
 ---
 # <a name="compiler-error-c3736"></a>Błąd kompilatora C3736
 
-"event": musi być metodą lub, w przypadku zarządzanych zdarzeń, opcjonalnie składową danych
+"Event": musi być metodą lub, w przypadku zarządzanych zdarzeń, opcjonalnie składową danych
 
-Natywne i zdarzenia COM muszą być metody. Zdarzenia .NET może być również elementy członkowskie danych.
+Zdarzenia natywne i COM muszą być metodami. Zdarzenia platformy .NET mogą być również elementami członkowskimi danych.
 
-Poniższy przykład spowoduje wygenerowanie C3736:
+Poniższy przykład generuje C3736:
 
-```
+```cpp
 // C3736.cpp
 struct A {
    __event int e();

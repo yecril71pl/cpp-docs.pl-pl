@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3364
 ms.assetid: 98654741-60fe-4472-a6af-e580f8c0a6e1
-ms.openlocfilehash: e99ab3919edcfb883701c08c52cd7aad60cd4591
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eae1e7ddbc34d36b55d7afa424c137db00ef047d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400360"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757348"
 ---
 # <a name="compiler-error-c3364"></a>Błąd kompilatora C3364
 
-"delegowanie": Konstruktor delegata: argument musi być wskaźnikiem do funkcji składowej klasy zarządzanej lub funkcja globalna
+"delegat": delegat konstruktora: argument musi być wskaźnikiem do funkcji składowej klasy zarządzanej lub funkcji globalnej
 
-Drugi parametr konstruktora delegata przyjmuje adresu funkcji składowej lub adres statycznej funkcji członkowskiej dowolnej klasy. Oba są traktowane jako prosty adresów.
+Drugi parametr konstruktora delegata Pobiera adres funkcji składowej lub adres statycznej funkcji składowej dowolnej klasy. Oba są traktowane jako adresy proste.
 
-Poniższy przykład spowoduje wygenerowanie C3364:
+Poniższy przykład generuje C3364:
 
-```
+```cpp
 // C3364_2.cpp
 // compile with: /clr
 

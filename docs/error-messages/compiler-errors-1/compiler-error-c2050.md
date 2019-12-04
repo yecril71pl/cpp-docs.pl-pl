@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2050
 ms.assetid: 66aaed7d-00db-4ce1-a9d6-4447c1cf07ce
-ms.openlocfilehash: 99091452c2fc845ba396d7a8b290c2c857146257
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3d100387264af4a3f9bba8b9934fc6ca1d0d5a6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408904"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739183"
 ---
 # <a name="compiler-error-c2050"></a>Błąd kompilatora C2050
 
-wyrażenie Switch nie jest spójne
+wyrażenie Switch nie jest integralne
 
-`switch` Wyrażenie ma wartość niebędąca. Aby naprawić błąd, należy użyć wartości całkowitych tylko w instrukcji switch.
+Wyrażenie `switch` daje w wyniku wartość niecałkowitą. Aby rozwiązać ten problem, użyj tylko wartości całkowitych w instrukcjach Switch.
 
-Poniższy przykład spowoduje wygenerowanie C2050:
+Poniższy przykład generuje C2050:
 
-```
+```cpp
 // C2050.cpp
 int main() {
    int a = 1;
@@ -36,7 +36,7 @@ int main() {
 
 Możliwe rozwiązanie:
 
-```
+```cpp
 // C2050b.cpp
 int main() {
    int a = 1;

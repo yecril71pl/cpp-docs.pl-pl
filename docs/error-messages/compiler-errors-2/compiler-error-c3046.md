@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3046
 ms.assetid: 2e53d835-faa1-4ec0-9807-41f3dc552635
-ms.openlocfilehash: 56fffc0e9aab19f8ad8510ad886ec255a327249d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4af29ff6a5267dc80c52e8a3ea9d92cad8d8f7d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404263"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761341"
 ---
 # <a name="compiler-error-c3046"></a>Błąd kompilatora C3046
 
-Brak bloku strukturalnego w regionie "#pragma omp sections" OpenMP
+Brak bloku strukturalnego w regionie "#pragma OMP sekcji" OpenMP
 
-A [sekcje](../../parallel/openmp/reference/sections-openmp.md) dyrektywa ma blok kodu puste.
+Dyrektywa [](../../parallel/openmp/reference/sections-openmp.md) sections ma pusty blok kodu.
 
-Poniższy przykład spowoduje wygenerowanie C3046:
+Poniższy przykład generuje C3046:
 
-```
+```cpp
 // C3046.cpp
 // compile with: /openmp /c
 #include "omp.h"

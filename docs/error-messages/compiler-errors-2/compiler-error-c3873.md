@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3873
 ms.assetid: e68fd3be-2391-492b-ac3f-d2428901b2e9
-ms.openlocfilehash: ca70af12ef3223c8c5950f0fa98b1c63a2dd3a4c
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: e63c3870a60194b72f1be8e1b401bbdef8fa47be
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450824"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736727"
 ---
 # <a name="compiler-error-c3873"></a>Błąd kompilatora C3873
 
-"char": ten znak nie jest dozwolona jako pierwszy znak identyfikatora
+"char": ten znak nie jest dozwolony jako pierwszy znak identyfikatora
 
-Kompilator języka C++ następuje standard C ++ 11 na znaki są dozwolone w identyfikatorze. Tylko określone zakresy znaków i uniwersalne nazwy znaków są dozwolone w identyfikatorze. Dodatkowe ograniczenia dotyczą znak początkowy identyfikatora. Więcej informacji oraz listę dozwolonych znaków i znaki uniwersalne nazwy zakresów, zobacz [identyfikatory](../../cpp/identifiers-cpp.md).
+C++ Kompilator postępuje zgodnie ze standardem c++ 11 w przypadku znaków, które są dozwolone w identyfikatorze. W identyfikatorze są dozwolone tylko niektóre zakresy znaków i uniwersalne nazwy znaków. Dodatkowe ograniczenia dotyczą początkowego znaku identyfikatora. Aby uzyskać więcej informacji i listę dozwolonych znaków i zakresów uniwersalnej nazwy znaków, zobacz [identyfikatory](../../cpp/identifiers-cpp.md).
 
-Zakres znaków dozwolonych w identyfikatorze jest mniej restrykcyjna, podczas kompilowania C++sposób niezamierzony kodu. Identyfikatory w kodzie skompilowanym za pomocą/CLR powinien być zgodny [Standard ECMA-335: Common Language Infrastructure (CLI)](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
+Zakres znaków dozwolony w identyfikatorze jest mniej restrykcyjny podczas kompilowania C++kodu/CLI. Identyfikatory w kodzie skompilowane przy użyciu/CLR powinny być zgodne ze [standardem ECMA-335: Common Language Infrastructure (CLI)](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
-Poniższy przykład spowoduje wygenerowanie C3873:
+Poniższy przykład generuje C3873:
 
-```
+```cpp
 // C3873.cpp
 int main() {
    int \u036F_abc;   // C3873, not in allowed range for initial character

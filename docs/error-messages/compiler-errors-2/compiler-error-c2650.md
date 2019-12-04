@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2650
 ms.assetid: 49a8ac6e-aa6d-4616-917c-a3cfcdbad5a4
-ms.openlocfilehash: c7cbc12bff4e00613032a9d28b5be7533dce9612
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f71996c6d04d8be2101762fb0fb17634e6b25a1a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152569"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756139"
 ---
 # <a name="compiler-error-c2650"></a>Błąd kompilatora C2650
 
-'operator': nie może być wirtualną funkcją
+"operator": nie może być funkcją wirtualną
 
-A `new` lub `delete` operator jest zadeklarowany `virtual`. Te operatory mają `static` element członkowski funkcji i nie może być `virtual`.
+`virtual`jest zadeklarowany operator `new` lub `delete`. Te operatory są `static` funkcjami składowymi i nie mogą być `virtual`.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2650:
+Poniższy przykład generuje C2650:
 
-```
+```cpp
 // C2650.cpp
 // compile with: /c
 class A {

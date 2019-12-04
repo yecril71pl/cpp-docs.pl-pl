@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3628
 ms.assetid: 0ff5a4a4-fcc9-47a0-a4d8-8af9cf2815f6
-ms.openlocfilehash: 581aae7e1f979b3dd39caf2ce3d263fdb856c56a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9976cb2425f8f855ffb2903c07de22822c781e20
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221688"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755827"
 ---
 # <a name="compiler-error-c3628"></a>Błąd kompilatora C3628
 
-"klasa bazowa": zarządzane lub WinRTclasses obsługują tylko publiczne dziedziczenie
+"Klasa bazowa": zarządzana lub WinRTclasses obsługuje tylko publiczne dziedziczenie
 
-Próbowano użyć zarządzanej lub WinRT klasy [prywatnej](../../cpp/private-cpp.md) lub [chronione](../../cpp/protected-cpp.md) klasy bazowej. A zarządzany lub klasa WinRT należy używać tylko jako klasa bazowa z [publicznych](../../cpp/public-cpp.md) dostępu.
+Podjęto próbę użycia klasy zarządzanej lub WinRT jako [prywatnej](../../cpp/private-cpp.md) lub [chronionej](../../cpp/protected-cpp.md) klasy podstawowej. Klasa Managed lub WinRT może być używana tylko jako klasa bazowa z dostępem [publicznym](../../cpp/public-cpp.md) .
 
-Poniższy przykład generuje C3628 i pokazuje, jak go naprawić:
+Poniższy przykład generuje C3628 i pokazuje, jak to naprawić:
 
-```
+```cpp
 // C3628a.cpp
 // compile with: /clr
 ref class B {

@@ -1,29 +1,29 @@
 ---
-title: Compiler Error C3908
+title: Błąd kompilatora C3908
 ms.date: 11/04/2016
 f1_keywords:
 - C3908
 helpviewer_keywords:
 - C3908
 ms.assetid: 3c322482-c79e-4197-a578-2ad9bc379d1a
-ms.openlocfilehash: e11d830c3d662ea424caadeb50df669700f8c78f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b57f3346427ff548d11fe776e909eca99433a81
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406557"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749038"
 ---
-# <a name="compiler-error-c3908"></a>Compiler Error C3908
+# <a name="compiler-error-c3908"></a>Błąd kompilatora C3908
 
-poziom dostępu mniej restrykcyjny niż "konstrukcji"
+poziom dostępu mniej restrykcyjny niż "konstrukcja"
 
-Metoda dostępu właściwości (get lub set) nie może mieć dostęp mniej restrykcyjny niż dostępu określone na samej właściwości.  Podobnie dla metod dostępu zdarzeń.
+Metoda dostępu do właściwości (get lub Set) nie może mieć mniej restrykcyjnego dostępu niż określony we właściwości.  Podobnie, w przypadku metod metody dostępu do zdarzeń.
 
-Aby uzyskać więcej informacji, zobacz [właściwość](../../extensions/property-cpp-component-extensions.md) i [zdarzeń](../../extensions/event-cpp-component-extensions.md).
+Aby uzyskać więcej informacji, zobacz [Właściwości](../../extensions/property-cpp-component-extensions.md) i [zdarzenia](../../extensions/event-cpp-component-extensions.md).
 
-Poniższy przykład spowoduje wygenerowanie C3908:
+Poniższy przykład generuje C3908:
 
-```
+```cpp
 // C3908.cpp
 // compile with: /clr
 ref class X {

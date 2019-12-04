@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3880
 ms.assetid: b0e05d1e-32d0-4034-9246-f37d23573ea9
-ms.openlocfilehash: 0b169309db88291f8a83b6d1192787b6396e84a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54fd65fb4fe23a5c493a4e9ac83a5e44b0596362
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338470"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736675"
 ---
 # <a name="compiler-error-c3880"></a>Błąd kompilatora C3880
 
-"var": nie może być literał składowej danych
+"var": nie może być literałem składowej danych
 
-Typ [literału](../../extensions/literal-cpp-component-extensions.md) musi mieć atrybut, lub w czasie kompilacji można przekonwertować na jednym z następujących typów:
+Typ atrybutu [literału](../../extensions/literal-cpp-component-extensions.md) musi być lub być konwertowany w czasie kompilacji na jeden z następujących typów:
 
-- Typ całkowity
+- typ całkowity
 
 - string
 
-- wyliczenia z typem liczby całkowitej lub podstawowej
+- Wyliczenie z typem całkowitym lub podstawowym
 
-Poniższy przykład spowoduje wygenerowanie C3880:
+Poniższy przykład generuje C3880:
 
-```
+```cpp
 // C3880.cpp
 // compile with: /clr /c
 ref struct Y1 {

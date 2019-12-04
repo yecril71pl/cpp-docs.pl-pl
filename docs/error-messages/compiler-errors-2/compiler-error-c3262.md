@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3262
 ms.assetid: 3e74b9aa-de3c-4492-9331-ee73012b958b
-ms.openlocfilehash: 1b6f9c1cd8ed983ba0784a49b8972325047c8d9b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f810cb300ab6db61cc6188aa5e9427ed2141338
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366189"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754202"
 ---
 # <a name="compiler-error-c3262"></a>Błąd kompilatora C3262
 
-Nieprawidłowe indeksowanie tablicy: wymiar(y) '#', określony dla '#'-wymiarowej "typu tablicy"
+nieprawidłowe indeksowanie tablicy: dla "#" określono wymiary "#" dla typu tablicy "#"
 
-Tablica została nieprawidłowo indeksem. Liczba indeksów może być niezgodna liczba wymiarów w tablicy.
+Tablica była nieprawidłowo w indeksie. Liczba indeksów może nie odpowiadać liczbie wymiarów w tablicy.
 
-Poniższy przykład spowoduje wygenerowanie C3262:
+Poniższy przykład generuje C3262:
 
-```
+```cpp
 // C3262.cpp
 // compile with: /clr
 #using <mscorlib.dll>

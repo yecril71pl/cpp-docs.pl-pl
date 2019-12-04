@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3487
 ms.assetid: 39bda474-4418-4a79-98bf-2b22fa92eaaa
-ms.openlocfilehash: 01f8a1bd74ed2b7a3150afae5b46128c6f5b0ca2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b38755470e3746066711382b2ed471badc8e197
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381153"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738443"
 ---
 # <a name="compiler-error-c3487"></a>Błąd kompilatora C3487
 
-"typ zwracany": wszystkie zwracać wyrażenia muszą być ustalane do tego samego typu: wcześniej było to "typ zwracany"
+"typ zwracany": wszystkie wyrażenia Return muszą być ustalane dla tego samego typu: poprzednio był to "typ zwracany"
 
-Wyrażenie lambda, należy określić jego typem zwracanym, chyba że zawiera pojedynczą instrukcję return. Jeśli wyrażenie lambda zawiera wiele instrukcji return, muszą mieć tego samego typu.
+Wartość lambda musi określać jej typ zwracany, chyba że zawiera pojedynczą instrukcję return. Jeśli wyrażenie lambda zawiera wiele instrukcji return, muszą one mieć ten sam typ.
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-- Określ końcowym typem zwracanym dla wyrażenia lambda. Sprawdź, czy wszystkie zwraca z wyrażenia lambda są tego samego typu, lub może być niejawnie konwertowane na typ zwracany.
+- Określ końcowy typ zwracany dla wyrażenia lambda. Upewnij się, że wszystkie zwroty z wyrażenia lambda są tego samego typu lub mogą być niejawnie konwertowane na typ zwracany.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C3487, ponieważ typy zwracane, wyrażenia lambda nie są zgodne:
+Poniższy przykład generuje C3487, ponieważ zwracane typy lambda nie są zgodne:
 
-```
+```cpp
 // C3487.cpp
 // Compile by using: cl /c /W4 C3487.cpp
 

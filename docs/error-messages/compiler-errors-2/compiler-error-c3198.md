@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3198
 ms.assetid: ec4ecf61-0067-4aa4-b443-a91013a1e59d
-ms.openlocfilehash: 61a3d14f9ad47edaa1e9b9f2b25d38b8dae7165c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b9e0ce4a84b312e3a9277898b3fc264ea3ae22bb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243225"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739158"
 ---
 # <a name="compiler-error-c3198"></a>Błąd kompilatora C3198
 
-Nieprawidłowe użycie zmiennoprzecinkowych pragm: fenv_access pragma działa tylko w trybie ścisłym
+nieprawidłowe użycie zmiennoprzecinkowych pragm: fenv_access pragma działa tylko w trybie precyzyjnym
 
-[fenv_access](../../preprocessor/fenv-access.md) pragma została użyta w obszarze [/FP](../../build/reference/fp-specify-floating-point-behavior.md) ustawienie inne niż **/FP: precise**.
+[fenv_access](../../preprocessor/fenv-access.md) pragma została użyta w ustawieniu [/FP](../../build/reference/fp-specify-floating-point-behavior.md) innym niż **/FP: precyzyjne**.
 
-Poniższy przykład spowoduje wygenerowanie C3198:
+Poniższy przykład generuje C3198:
 
-```
+```cpp
 // C3198.cpp
 // compile with: /fp:fast
 #pragma fenv_access(on)   // C3198

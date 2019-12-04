@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3043
 ms.assetid: 0ef55e63-e82b-48eb-9d44-690950ac34c6
-ms.openlocfilehash: 75ab43576a3b2135e174ba512ad8a46aa330f750
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95f11f50ad263b716694014753956a46fa9d1751
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386671"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761380"
 ---
 # <a name="compiler-error-c3043"></a>Błąd kompilatora C3043
 
-Dyrektywa "critical" OpenMP nie może być zagnieżdżona w dyrektywie "critical" o takiej samej nazwie
+Dyrektywa "krytyczna" OpenMP nie może być zagnieżdżona w dyrektywie "krytyczna" o tej samej nazwie
 
-A [krytyczne](../../parallel/openmp/reference/critical.md) dyrektywy nie może być zagnieżdżona w `critical` dyrektywę, który używa tej samej nazwie.
+Dyrektywa [krytyczna](../../parallel/openmp/reference/critical.md) nie może być zagnieżdżona w dyrektywie `critical`, która używa tej samej nazwy.
 
-Poniższy przykład spowoduje wygenerowanie C3043:
+Poniższy przykład generuje C3043:
 
-```
+```cpp
 // C3043.cpp
 // compile with: /openmp /c
 #include "omp.h"

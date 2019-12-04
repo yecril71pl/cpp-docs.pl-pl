@@ -1,27 +1,27 @@
 ---
-title: Compiler Error C3284
+title: Błąd kompilatora C3284
 ms.date: 11/04/2016
 f1_keywords:
 - C3284
 helpviewer_keywords:
 - C3284
 ms.assetid: e582f316-e9db-4d27-9c70-fdfa737a9d5f
-ms.openlocfilehash: acefcac849b9ce36bcf24d45f3ce85ba220b3698
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9606ff5916e4c6971ec44a9d277bb980701ed169
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381374"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757556"
 ---
-# <a name="compiler-error-c3284"></a>Compiler Error C3284
+# <a name="compiler-error-c3284"></a>Błąd kompilatora C3284
 
-ograniczenia dla parametru ogólnego "parametru" funkcji "function" musi być zgodne z ograniczeniami dla parametru ogólnego "parametru" funkcji "function"
+ograniczenia dla parametru generycznego "Function" funkcji muszą być zgodne z ograniczeniami dla parametru generycznego "parameter" funkcji "Function"
 
-Ogólna funkcja wirtualna musi używać tych samych ograniczeń co funkcja wirtualna o tej samej nazwie i zestawu argumentów w klasie bazowej.
+Wirtualna funkcja ogólna musi używać tych samych ograniczeń co funkcja wirtualna o tej samej nazwie i zestawie argumentów w klasie bazowej.
 
-Poniższy przykład spowoduje wygenerowanie C3284:
+Poniższy przykład generuje C3284:
 
-```
+```cpp
 // C3284.cpp
 // compile with: /clr /c
 // C3284 expected

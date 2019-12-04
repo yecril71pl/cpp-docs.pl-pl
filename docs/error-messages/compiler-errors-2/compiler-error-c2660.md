@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2660
 ms.assetid: 2e01a1db-4f00-4df6-a04d-cb6f70a6922b
-ms.openlocfilehash: 3f236f18faa92df660ed677df293373fe9f0800c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: febeb75cbde6738bd9079b7bd86f88c521c29e40
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360375"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756061"
 ---
 # <a name="compiler-error-c2660"></a>Błąd kompilatora C2660
 
-'Funkcja': funkcja nie przyjmuje parametrów liczb
+"Function": funkcja nie przyjmuje parametrów liczbowych
 
-Funkcja jest wywoływana z niepoprawną liczbę parametrów.
+Funkcja jest wywoływana z nieprawidłową liczbą parametrów.
 
-C2660 może wystąpić, jeśli przypadkowo wywołania funkcji Windows API, a nie funkcją MFC element członkowski o takiej samej nazwie. Aby rozwiązać ten problem:
+C2660 może wystąpić, jeśli przypadkowo wywoła funkcję interfejsu API systemu Windows, a nie funkcję elementu członkowskiego MFC o tej samej nazwie. Aby rozwiązać ten problem:
 
-- Dostosuj wywołanie funkcji, aby były zgodne z formatem wywołanie funkcji elementu członkowskiego.
+- Dostosuj wywołanie funkcji tak, aby była zgodna z formatem wywołania funkcji składowej.
 
-- Użyj operatora rozpoznawania zakresu (`::`) aby poinformować kompilator do wyszukania nazwy funkcji w przestrzeni nazw globalnego.
+- Użyj operatora rozpoznawania zakresu (`::`), aby poinformować kompilator, aby przeszukał nazwę funkcji w globalnej przestrzeni nazw.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2660.
+Poniższy przykład generuje C2660.
 
-```
+```cpp
 // C2660.cpp
 void func( int, int ) {}
 
@@ -41,9 +41,9 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-C2660 może również wystąpić, jeśli użytkownik podejmie próbę bezpośrednio wywołać metodę Dispose typu zarządzanego. Aby uzyskać więcej informacji, zobacz [destruktory i finalizatory](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers). Poniższy przykład spowoduje wygenerowanie C2660.
+C2660 może również wystąpić, jeśli próbujesz bezpośrednio wywołać metodę Dispose typu zarządzanego. Aby uzyskać więcej informacji, zobacz [destruktory i finalizatory](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers). Poniższy przykład generuje C2660.
 
-```
+```cpp
 // C2660_a.cpp
 // compile with: /clr
 using namespace System;
@@ -63,9 +63,9 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-C2660 występuje, jeśli w klasie pochodnej ukrywa funkcję.
+C2660 pojawi się, jeśli Klasa pochodna ukryje funkcję.
 
-```
+```cpp
 // C2660b.cpp
 // C2660 expected
 #include <stdio.h>
@@ -94,9 +94,9 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-C2660 może wystąpić, jeśli wywołania z właściwości indeksowanej.
+C2660 może wystąpić w przypadku nieprawidłowego wywołania właściwości indeksowanej.
 
-```
+```cpp
 // C2660c.cpp
 // compile with: /clr
 ref class X {
@@ -119,9 +119,9 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-C2660 może wystąpić, jeśli wywołania z właściwości indeksowanej.
+C2660 może wystąpić w przypadku nieprawidłowego wywołania właściwości indeksowanej.
 
-```
+```cpp
 // C2660d.cpp
 // compile with: /clr
 ref class A{
@@ -142,9 +142,9 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-C2660 może wystąpić, jeśli zdefiniujesz nowy operator w klasą szablonu, ale w przypadku, gdy new operator tworzy obiekt, którego typ jest inny niż typ otaczający.
+C2660 może wystąpić w przypadku zdefiniowania nowego operatora w klasie szablonu, ale gdzie New Operator tworzy obiekt, którego typ jest inny niż typ otaczający.
 
-```
+```cpp
 // C2660e.cpp
 // compile with: /c
 #include <malloc.h>

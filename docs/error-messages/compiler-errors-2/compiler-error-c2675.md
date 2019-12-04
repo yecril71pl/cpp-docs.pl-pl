@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2675
 ms.assetid: 4b92a12b-bff8-4dd5-a109-620065fc146c
-ms.openlocfilehash: aea79509d0e1ae5c31fcf0cf369c28af39a21154
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b7b81ce7314fbad02d6873403fc5cf1bdd54709
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367931"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760377"
 ---
 # <a name="compiler-error-c2675"></a>Błąd kompilatora C2675
 
-Jednoargumentowy "operator": "type" nie definiuje tego operatora lub konwersji do typu akceptowalnego dla wstępnie zdefiniowanego operatora
+jednoargumentowy "operator": "Type" nie definiuje tego operatora lub konwersji do typu akceptowalnego dla wstępnie zdefiniowanego operatora
 
-C2675 może również wystąpić, gdy za pomocą operatora jednoargumentowego, a typ nie posiada zdefiniowanego operatora lub konwersji do typu akceptowalnego dla wstępnie zdefiniowanego operatora. Użycie operatora, możesz go przeciążenia dla określonego typu lub zdefiniuj konwersji na typ, dla którego zdefiniowano operator.
+C2675 może również wystąpić podczas używania operatora jednoargumentowego, a typ nie definiuje operatora lub konwersji do typu akceptowalnego dla wstępnie zdefiniowanego operatora. Aby użyć operatora, należy przeciążyć go dla określonego typu lub zdefiniować konwersję do typu, dla którego zdefiniowano operator.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2675.
+Poniższy przykład generuje C2675.
 
-```
+```cpp
 // C2675.cpp
 struct C {
    C(){}

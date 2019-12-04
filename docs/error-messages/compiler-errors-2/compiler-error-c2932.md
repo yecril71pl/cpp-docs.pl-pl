@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2932
 ms.assetid: c28e88d9-e654-4367-bfb4-13c780bca9bd
-ms.openlocfilehash: 004767d4adbd87a2a21ec73fa720d6992eb31044
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1afe47e27cb38b2a3886854ce6efe34273c9132
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386073"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750107"
 ---
 # <a name="compiler-error-c2932"></a>Błąd kompilatora C2932
 
-"class": typ klasy identyfikator ponownie definiowana jako składowa danych klasy 'Identyfikator'
+"Class": Identyfikator klasy typu został ponownie zdefiniowany jako element członkowski danych "identifier"
 
-Generyczny lub szablonu klasy nie można użyć jako element członkowski danych.
+Nie można użyć klasy generycznej ani szablonu jako elementu członkowskiego danych.
 
-Poniższy przykład spowoduje wygenerowanie C2932:
+Poniższy przykład generuje C2932:
 
-```
+```cpp
 // C2932.cpp
 // compile with: /c
 template<class T>
@@ -33,9 +33,9 @@ struct MyStruct {
 };
 ```
 
-C2932 może również wystąpić, gdy za pomocą typów ogólnych:
+C2932 może również wystąpić przy użyciu typów ogólnych:
 
-```
+```cpp
 // C2932b.cpp
 // compile with: /clr /c
 generic<class T>

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2657
 ms.assetid: f7cf29a9-684a-4605-9469-ecfee9ba4b03
-ms.openlocfilehash: 4e2816092b3c0c210ae2c544e9bf9a823a9c5d18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e060c2b9a38866a898a3c5ada9e595464050877e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360440"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756100"
 ---
 # <a name="compiler-error-c2657"></a>Błąd kompilatora C2657
 
-"klasa:: *" znaleziono w chwili rozpoczęcia instrukcji (Czy pamiętasz o określeniu typu?)
+"Class::*" znaleziono na początku instrukcji (Czy pamiętasz o określeniu typu?)
 
-Wiersz rozpoczęło się o identyfikatorze wskaźników do elementów członkowskich.
+Linia została rozpoczęta z identyfikatorem wskaźnika do elementu członkowskiego.
 
-Ten błąd może być spowodowany przez brak specyfikatora typu w deklaracji wskaźnika do elementu członkowskiego.
+Ten błąd może być spowodowany brakiem specyfikatora typu w deklaracji wskaźnika do składowej.
 
-Poniższy przykład spowoduje wygenerowanie C2657:
+Poniższy przykład generuje C2657:
 
-```
+```cpp
 // C2657.cpp
 class C {};
 int main() {

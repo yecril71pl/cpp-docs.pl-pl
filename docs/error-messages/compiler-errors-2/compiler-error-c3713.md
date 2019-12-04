@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3713
 ms.assetid: 75c6b9b6-955b-49bd-9bc8-ced88b496a1f
-ms.openlocfilehash: 8c8c3b5e6016c7f4af471a163463c91d478fea91
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d78d1fb3028e8618035c1c6f7bb3eb0f65409dd2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328383"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753357"
 ---
 # <a name="compiler-error-c3713"></a>Błąd kompilatora C3713
 
-"method": metoda obsługi zdarzeń musi mieć te same parametry funkcji jako źródło "method"
+"Metoda": metoda obsługi zdarzeń musi mieć te same parametry funkcji co Źródło "Metoda"
 
-Zdefiniowane metody obsługi zdarzeń, które nie było używane te same parametry jako metoda źródła zdarzeń. Aby naprawić ten błąd, należy podać metodę programu obsługi zdarzeń te same parametry, jak te metody źródła zdarzeń.
+Zdefiniowano metodę procedury obsługi zdarzeń, która nie korzystała z tych samych parametrów co źródłowa Metoda zdarzenia. Aby naprawić ten błąd, nadaj metodzie obsługi zdarzeń te same parametry jak te, które są źródłowe metody zdarzenia.
 
-Poniższy przykład spowoduje wygenerowanie C3713:
+Poniższy przykład generuje C3713:
 
-```
+```cpp
 // C3713.cpp
 // compile with: /c
 [event_source(native)]

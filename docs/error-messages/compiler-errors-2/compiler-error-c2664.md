@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2664
 ms.assetid: 3595d66e-cf87-4fda-a896-c0cd81f95db4
-ms.openlocfilehash: cffd178e1736358333ee27d4572d3531de23f527
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93bdac489dea0356ce3da3298cd8ed6bcb6f623c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360323"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756009"
 ---
 # <a name="compiler-error-c2664"></a>Błąd kompilatora C2664
 
-'Funkcja': nie można przekonwertować argumentu n z 'Typ1' na 'type2'
+"Function": nie można skonwertować argumentu n z "type1" na "type2"
 
-Ten problem z konwersją parametru może się zdarzyć, jeśli tworzone jest wystąpienie klasy i jest próba niejawnej konwersji w odniesieniu do konstruktora oznaczonego przy użyciu `explicit` — słowo kluczowe. Aby uzyskać więcej informacji dotyczących jawnych konwersji, zobacz [konwersje typów zdefiniowane przez użytkownika](../../cpp/user-defined-type-conversions-cpp.md).
+Ten problem konwersji parametrów może wystąpić w przypadku utworzenia wystąpienia klasy i próby niejawnej konwersji na Konstruktor oznaczony za pomocą słowa kluczowego `explicit`. Aby uzyskać więcej informacji na temat konwersji jawnych, zobacz [konwersje typów zdefiniowane przez użytkownika](../../cpp/user-defined-type-conversions-cpp.md).
 
-Jeśli obiekt tymczasowy jest przekazywany do funkcji, która przyjmuje odwołanie do obiektu jako parametr, to odwołanie musi być `const` odwołania.
+Jeśli obiekt tymczasowy jest przekazanie do funkcji, która pobiera odwołanie do obiektu jako parametr, to odwołanie musi być `const` odwołaniem.
 
 Jeśli do funkcji jest przekazywany parametr, który jest typu innego niż ten, którego oczekuje funkcja, tymczasowy obiekt jest tworzony za pomocą odpowiedniego konstruktora. Ten tymczasowy obiekt jest następnie przekazywany do funkcji. W tym przypadku tymczasowy obiekt jest używany do zainicjowania odwołania. We wcześniejszych wersjach języka wszystkie odwołania można było zainicjować przez obiekty tymczasowe.
 
@@ -31,13 +31,13 @@ Aby rozwiązać C2664,
 
 C2664 może być też wygenerowany, jeśli klasa ukrywa składową w jednej z jej klas podstawowych.
 
-Aby uzyskać więcej informacji, zobacz [jak: Konwertowanie obiektu System::String na wchar_t * lub char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md).
+Aby uzyskać więcej informacji, zobacz [How to: Convert system:: String to wchar_t * lub char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C2664 i pokazuje, jak go naprawić.
+Poniższy przykład generuje C2664 i pokazuje, jak rozwiązać ten problem.
 
-```
+```cpp
 // C2664.cpp
 // C2664
 struct A {
@@ -59,9 +59,9 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Ten przykład również generuje C2664 i pokazuje, jak go naprawić.
+Ten przykład generuje również C2664 i pokazuje, jak rozwiązać ten problem.
 
-```
+```cpp
 // C2664b.cpp
 // C2664 expected
 struct A {
@@ -78,9 +78,9 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Następny przykład ilustruje C2664 poprzez użycie literału ciągu do wywołania `Test`i pokazuje, jak go naprawić. Ponieważ wartość parametru jest `szString` odwołania, obiekt musi być utworzony przez odpowiedni konstruktor. W wyniku powstaje tymczasowy obiekt, którego nie można użyć do zainicjowania odwołania.
+Następny przykład demonstruje C2664 za pomocą literału ciągu do wywołania `Test`i pokazuje, jak rozwiązać ten problem. Ponieważ parametr jest odwołaniem `szString`, obiekt musi być utworzony przez odpowiedni Konstruktor. W wyniku powstaje tymczasowy obiekt, którego nie można użyć do zainicjowania odwołania.
 
-```
+```cpp
 // C2664c.cpp
 // compile with: /EHsc
 // C2664 expected
@@ -119,9 +119,9 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Kompilator wymusza standardowe wymagania C++ dotyczące stosowania `const`. Ten przykład generuje C2664:
+Kompilator wymusza C++ standardowe wymagania dotyczące stosowania `const`. Ten przykład generuje C2664:
 
-```
+```cpp
 // C2664d.cpp
 // C2664 expected
 #include <windows.h>
@@ -144,9 +144,9 @@ int main()
 
 ## <a name="example"></a>Przykład
 
-Oto bardziej złożona sytuacja, w której jest generowany C2664, w tym kierunkach jak go naprawić:
+Poniżej przedstawiono bardziej skomplikowaną sytuację, w której jest generowany C2664, w tym wskazówki dotyczące sposobu jej naprawy:
 
-```
+```cpp
 // C2664e.cpp
 // compile with: /EHsc
 // C2664 expected
@@ -189,9 +189,9 @@ int main( ) {
 
 ## <a name="example"></a>Przykład
 
-Zmienna enum nie jest konwertowana na jej typ podstawowy, tak aby wywołanie funkcji zostało spełnione. Aby uzyskać więcej informacji, zobacz [klasa wyliczeniowa](../../extensions/enum-class-cpp-component-extensions.md). Poniższy przykład generuje C2664 i pokazuje, jak go naprawić.
+Zmienna enum nie jest konwertowana na jej typ podstawowy, tak aby wywołanie funkcji zostało spełnione. Aby uzyskać więcej informacji, zobacz [enum Class](../../extensions/enum-class-cpp-component-extensions.md). Poniższy przykład generuje C2664 i pokazuje, jak rozwiązać ten problem.
 
-```
+```cpp
 // C2664f.cpp
 // compile with: /clr
 using namespace System;
@@ -232,13 +232,13 @@ library myproj1 {
 }
 ```
 
-C2664 jest także generowany za pomocą `wchar_t` portowaniu kodu z Visual C++ 6.0 do nowszych wersji. W Visual C++ 6.0 i starszych `wchar_t` został `typedef` dla `unsigned short` i dlatego został niejawnie skonwertowany do tego typu. Po Visual C++ 6.0 `wchar_t` jest własnym wbudowanym typem, jak to określono w standardzie C++ i nie jest już niejawnie konwertowany na `unsigned short`. Zobacz [/Zc: wchar_t (wchar_t jest typem natywnym)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+C2664 jest również uruchamiany przy użyciu `wchar_t` podczas przenoszenia kodu z programu Visual C++ 6,0 do nowszych wersji. W programie C++ Visual 6,0 i starszych `wchar_t` była `typedef` dla `unsigned short` i dlatego została niejawnie przekonwertowana na ten typ. Po Visual C++ 6,0, `wchar_t` jest własnym wbudowanym typem, określonym w C++ standardzie i nie jest już niejawnie konwertowany na `unsigned short`. Zobacz [/Zc: wchar_t (Wchar_t jest typem natywnym)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C2664 i pokazuje, jak go naprawić.
+Poniższy przykład generuje C2664 i pokazuje, jak rozwiązać ten problem.
 
-```
+```cpp
 // C2664h.cpp
 #import "C2664g.tlb"
 using namespace myproj1;
@@ -260,7 +260,7 @@ int main() {
 
 Jeśli kompilator nie może wywnioskować argumentów szablonu, również jest generowany C2664.
 
-```
+```cpp
 // C2664i.cpp
 #include <stdio.h>
 template <class T, int iType=0>

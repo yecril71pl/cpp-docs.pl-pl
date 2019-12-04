@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3539
 ms.assetid: 34a33a0f-d1b6-498f-b312-ffad2d4799b3
-ms.openlocfilehash: be1051859ebbcbdc22a9b71f8c5adba2e75c4e92
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 85381b237480b86b59c33f02601a1b9dc644a5a4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344658"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761533"
 ---
 # <a name="compiler-error-c3539"></a>Błąd kompilatora C3539
 
-"type": argument szablonu nie może być typem zawierającym "auto"
+"Type": argument szablonu nie może być typem zawierającym wartość "Auto"
 
-Typ argumentu wskazanego szablonu nie może zawierać użycie `auto` — słowo kluczowe.
+Wskazany typ argumentu szablonu nie może zawierać użycia słowa kluczowego `auto`.
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-1. Nie określaj argument szablonu, za pomocą `auto` — słowo kluczowe.
+1. Nie określaj argumentu szablonu za pomocą słowa kluczowego `auto`.
 
 ## <a name="example"></a>Przykład
 
 Poniższy przykład daje C3539.
 
-```
+```cpp
 // C3539.cpp
 // Compile with /Zc:auto
 template<class T> class C{};

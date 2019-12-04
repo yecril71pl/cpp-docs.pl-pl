@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2247
 ms.assetid: 72efa03e-615e-4ef9-aede-0a98654b20fd
-ms.openlocfilehash: ab1f83e2075128441cbffd2d939e3b99b45be4c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e82b406b20d77a824b62207b1766fec55ac65c5c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301373"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758908"
 ---
 # <a name="compiler-error-c2247"></a>Błąd kompilatora C2247
 
-'Identyfikator' nie jest dostępna, ponieważ "class" użyto "specyfikatora" dziedziczy po "class"
+element "identifier" jest niedostępny, ponieważ Klasa "Class" używa specyfikatora "do dziedziczenia" klasy "
 
-`identifier` jest dziedziczona z klasy zadeklarowane za pomocą dostępu do prywatnych lub chronionych.
+`identifier` jest dziedziczona z klasy zadeklarowanej z dostępem prywatnym lub chronionym.
 
-Poniższy przykład spowoduje wygenerowanie C2247:
+Poniższy przykład generuje C2247:
 
-```
+```cpp
 // C2247.cpp
 class A {
 public:
@@ -32,11 +32,11 @@ class C : public B {} c;   // so even though C's B is public
 int j = c.i;               // C2247, i not accessible
 ```
 
-Ten błąd może być też wygenerowany w wyniku pracy zgodności kompilatora, która została wykonana dla Visual Studio .NET 2003: dostęp do kontrolki z chronionych elementów członkowskich. Chroniony element członkowski (n) jest możliwy tylko za pośrednictwem funkcji składowej klasy (B), która dziedziczy z klasy (A), w której (n) jest członkiem.
+Ten błąd może również zostać wygenerowany w wyniku działania kompilatora, który został wykonany dla programu Visual Studio .NET 2003: Kontrola dostępu z chronionymi elementami członkowskimi. Dostęp do chronionej składowej (n) można uzyskać tylko za pośrednictwem funkcji składowej klasy (B), która dziedziczy z klasy (A), z której jest członkiem.
 
-Kod, który jest prawidłowy w Visual Studio .NET 2003 i wersji programu Visual Studio .NET, Visual c++ należy zadeklarować element członkowski może być zaprzyjaźniona z typu. Można również użyć publiczne dziedziczenie.
+W przypadku kodu, który jest prawidłowy zarówno w programie Visual Studio .NET 2003, jak i w wersji C++Visual Studio .NET, deklaruj element członkowski jako zaprzyjaźniony typ. Można również użyć publicznego dziedziczenia.
 
-```
+```cpp
 // C2247b.cpp
 // compile with: /c
 // C2247 expected
@@ -57,11 +57,11 @@ void A::f() {
 }
 ```
 
-C2247 mogą być też generowane w wyniku pracy zgodności kompilatora, która została wykonana dla Visual Studio .NET 2003: podstawowy prywatny klasy teraz niedostępny. Jest prywatny klasą bazową do typu klasy (A) nie (B) powinny być dostępne do typu (C), który używa B jako klasę bazową.
+C2247 można również wygenerować w wyniku zgodności kompilatora, który został wykonany dla programu Visual Studio .NET 2003: prywatne klasy bazowe są teraz niedostępne. Klasa (A), która jest prywatną klasą bazową do typu (B), nie powinna być dostępna dla typu (C), który używa B jako klasy bazowej.
 
-Kod, który jest prawidłowy w Visual Studio .NET 2003 i wersji programu Visual Studio .NET, Visual c++ użyj operatora zakresu.
+W przypadku kodu, który jest prawidłowy w wersji Visual Studio .NET 2003 i Visual Studio .NET C++, użyj operatora Scope.
 
-```
+```cpp
 // C2247c.cpp
 // compile with: /c
 struct A {};

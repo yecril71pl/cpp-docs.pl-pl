@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3420
 ms.assetid: 99b53c77-f36b-4574-9199-b53111becccb
-ms.openlocfilehash: 3db109598ce0741ca34a230d8925994543bcb5ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e165a0c181bc27adebe75111050f49130305693
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182460"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756256"
 ---
 # <a name="compiler-error-c3420"></a>Błąd kompilatora C3420
 
-"finalizator": finalizator nie może być wirtualny
+"Finalizer": finalizator nie może być wirtualny
 
-Finalizator może zostać wywołana tylko-niemal z jego typie otaczającym. Dlatego jest błędem jest deklaracja finalizatora wirtualnego.
+Finalizator może być wywołany tylko jako niepraktycznie od jego typu otaczającego. W związku z tym jest to błąd w celu zadeklarowania wirtualnego finalizatora.
 
-Aby uzyskać więcej informacji, zobacz [destruktory i finalizatory w sposób: Definiowanie oraz stosowanie klas i struktur (C++sposób niezamierzony)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Aby uzyskać więcej informacji, zobacz [destruktory i finalizatory w instrukcje: Definiowanie i korzystanie z klas i struktur (C++/CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3420.
+Poniższy przykład generuje C3420.
 
-```
+```cpp
 // C3420.cpp
 // compile with: /clr /c
 ref class R {

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2430
 ms.assetid: 07c20f76-63e1-4d22-b2a9-98b0d45c5cac
-ms.openlocfilehash: 754758e652539e4f2d9b12e568b8ef5ccf41d8db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f82eb4914ec36aa513822964f551a05fbb77aa97
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165700"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744579"
 ---
 # <a name="compiler-error-c2430"></a>Błąd kompilatora C2430
 
-więcej niż jednego indeksu zarejestrować się w 'Identyfikator'
+więcej niż jeden rejestr indeksu w "identifier"
 
-Więcej niż jeden rejestr jest skalowany. Kompilator obsługuje indeksowanie skalowanych, ale można skalować tylko jednego rejestru.
+Trwa skalowanie więcej niż jednego rejestru. Kompilator obsługuje skalowanie w poziomie, ale można skalować tylko jeden rejestr.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2430.
+Poniższy przykład generuje C2430.
 
-```
+```cpp
 // C2430.cpp
 // processor: x86
 int main() {

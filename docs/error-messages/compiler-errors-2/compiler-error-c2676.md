@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2676
 ms.assetid: 838a5e34-c92f-4f65-a597-e150bf8cf737
-ms.openlocfilehash: 1a3eab8d1df7534f2bfbed42db5c1a660942eacc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c25593df27f7c4e742eb109aeb5e94ba6fdba8c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165000"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760364"
 ---
 # <a name="compiler-error-c2676"></a>Błąd kompilatora C2676
 
-plik binarny 'operator': 'type' nie definiuje tego operatora lub konwersji do typu akceptowalnego dla wstępnie zdefiniowanego operatora
+element binarny "operator": "Type" nie definiuje tego operatora lub konwersji do typu akceptowalnego dla wstępnie zdefiniowanego operatora
 
-Użycie operatora, możesz go przeciążenia dla określonego typu lub zdefiniuj konwersji na typ, dla którego zdefiniowano operator.
+Aby użyć operatora, należy przeciążyć go dla określonego typu lub zdefiniować konwersję do typu, dla którego zdefiniowano operator.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2676.
+Poniższy przykład generuje C2676.
 
-```
+```cpp
 // C2676.cpp
 // C2676 expected
 struct C {
@@ -53,13 +53,13 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-C2676 może również wystąpić, Jeśli spróbujesz wykonać arytmetyki wskaźnika na `this` wskaźnika typu referencyjnego.
+C2676 może również wystąpić, jeśli podejmiesz próbę przeprowadzenia arytmetycznego wskaźnika na `this` wskaźniku typu odwołania.
 
-`this` Wskaźnik jest typu uchwytu typu odwołania. Aby uzyskać więcej informacji, zobacz [semantyka wskaźnika](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).
+`this` wskaźnik jest typu dojścia w typie referencyjnym. Aby uzyskać więcej informacji, zobacz [semantyka tego wskaźnika](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).
 
-Poniższy przykład spowoduje wygenerowanie C2676.
+Poniższy przykład generuje C2676.
 
-```
+```cpp
 // C2676_a.cpp
 // compile with: /clr
 using namespace System;

@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - C3535
 ms.assetid: 24449c98-f681-484d-a00b-32533dca3a88
-ms.openlocfilehash: e80fa62db9795838980c63e113300a554afabef3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b487c0f94a00ec64e0c2178265c5a8c27544a51
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376240"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761559"
 ---
 # <a name="compiler-error-c3535"></a>Błąd kompilatora C3535
 
-Nie można ustalić typu 'Typ1' od 'type2'
+nie można wywnioskować typu dla elementu "type1" z elementu "type2"
 
-Typ zmiennej zadeklarowanej przez `auto` — słowo kluczowe nie można wywnioskować z typu wyrażenia inicjowania. Na przykład ten błąd występuje, jeśli wynikiem obliczenia wyrażenia inicjowania jest `void`, która nie jest typem.
+Nie można wywnioskować typu zmiennej zadeklarowanej za pomocą słowa kluczowego `auto` na podstawie typu wyrażenia inicjującego. Na przykład ten błąd występuje, gdy wyrażenie inicjacji szacuje się na `void`, który nie jest typem.
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-1. Upewnij się, że typ wyrażenia inicjowania nie `void`.
+1. Upewnij się, że typ wyrażenia inicjowania nie jest `void`.
 
-1. Upewnij się, że deklaracja nie jest wskaźnik do typu podstawowych. Aby uzyskać więcej informacji, zobacz [podstawowych typów](../../cpp/fundamental-types-cpp.md).
+1. Upewnij się, że deklaracja nie jest wskaźnikiem do typu podstawowego. Aby uzyskać więcej informacji, zobacz [podstawowe typy](../../cpp/fundamental-types-cpp.md).
 
-1. Upewnij się, że jeśli deklaracja znajduje się wskaźnik do typu wyrażenia inicjowania jest typem wskaźnika.
+1. Upewnij się, że jeśli deklaracja jest wskaźnikiem do typu, wyrażenie inicjacji jest typem wskaźnika.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład daje C3535, ponieważ daje w wyniku wyrażenia inicjowania `void`.
+Poniższy przykład daje C3535, ponieważ wyrażenie inicjacji szacuje się `void`.
 
-```
+```cpp
 // C3535a.cpp
 // Compile with /Zc:auto
 void f(){}
@@ -44,9 +44,9 @@ int main()
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład daje C3535, ponieważ instrukcja deklaruje zmienną `x` jako wskaźnik do typu wywnioskowane, ale typ inicjatora wyrażenie jest podwójny. W związku z tym kompilator nie można wywnioskować typu zmiennej.
+Poniższy przykład daje C3535, ponieważ instrukcja deklaruje zmienną `x` jako wskaźnik do typu wywnioskowanego, ale typ wyrażenia inicjatora jest podwójny. W związku z tym kompilator nie może wywnioskować typu zmiennej.
 
-```
+```cpp
 // C3535b.cpp
 // Compile with /Zc:auto
 int main()
@@ -58,9 +58,9 @@ int main()
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład daje C3535, ponieważ zmienna `p` deklaruje wskaźnik do typu wywnioskowane, ale wyrażenia inicjowania, nie jest typem wskaźnika.
+Poniższy przykład daje C3535, ponieważ zmienna `p` deklaruje wskaźnik do typu wywnioskowanego, ale wyrażenie inicjacji nie jest typem wskaźnika.
 
-```
+```cpp
 // C3535c.cpp
 // Compile with /Zc:auto
 class A { };

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3653
 ms.assetid: 316549d7-f7ef-4578-a2ba-57adc8aac527
-ms.openlocfilehash: 75e2c061190b24019491db7a625ecafb5ac82b6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69fc6fa9303b2256172dd079028050823f053246
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227516"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756336"
 ---
 # <a name="compiler-error-c3653"></a>Błąd kompilatora C3653
 
-'Funkcja': nie można użyć jako nazwanego przesłaniania: przesłaniana funkcja nie znaleziono; użytkownik zapomniał nadaj funkcji nazwę jawnie, przy użyciu:: operator?
+"Function": nie można użyć jako nazwanego przesłonięcia: nie można odnaleźć przesłanianej funkcji; Czy pamiętasz o nazwie funkcji jawnie, przy użyciu operatora::?
 
-Jawne przesłanianie określona funkcja, która nie została odnaleziona w dowolnym interfejsie. Aby uzyskać więcej informacji, zobacz [jawne zastępowanie](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Jawne przesłonięcie określiło funkcję, która nie została znaleziona w żadnym interfejsie. Aby uzyskać więcej informacji, zobacz [jawne zastąpienia](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
-Poniższy przykład spowoduje wygenerowanie C3653:
+Poniższy przykład generuje C3653:
 
-```
+```cpp
 // C3653.cpp
 // compile with: /clr
 public interface struct I {

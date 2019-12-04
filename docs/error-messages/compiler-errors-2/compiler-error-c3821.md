@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3821
 ms.assetid: 2b327c7a-5faf-443c-ae82-944fae25b4df
-ms.openlocfilehash: 248431afb25aa4b9480818f76388f6ad56d8e006
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25023277258d33ab77bde18f6cdfabc862f50a63
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384234"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741745"
 ---
 # <a name="compiler-error-c3821"></a>Błąd kompilatora C3821
 
-'Funkcja': typ zarządzany lub funkcja nie można używać w funkcji niezarządzanej
+"Function": typ zarządzany lub funkcja nie może być użyta w funkcji niezarządzanej
 
-Funkcji w zestawie wbudowanym lub [setjmp](../../c-runtime-library/reference/setjmp.md) nie może zawierać typy wartości ani klas zarządzanych. Aby naprawić ten błąd, należy usunąć zestaw wbudowany i `setjmp` lub Usuń obiekty zarządzane.
+Funkcje z zestawem wbudowanym lub [setjmp](../../c-runtime-library/reference/setjmp.md) nie mogą zawierać typów wartości ani klas zarządzanych. Aby naprawić ten błąd, Usuń Wbudowany zestaw i `setjmp` lub Usuń obiekty zarządzane.
 
-C3821 może również wystąpić, Jeśli spróbujesz użyć automatycznego przechowywania w funkcji vararg.  Aby uzyskać więcej informacji, zobacz [zmiennej listy argumentów (...) (C++Sposób niezamierzony) ](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md) i [ C++ stosu semantyki dla typów odwołań](../../dotnet/cpp-stack-semantics-for-reference-types.md).
+C3821 może również wystąpić, jeśli spróbujesz użyć automatycznego magazynu w funkcji vararg.  Aby uzyskać więcej informacji, zobacz [listę zmiennych argumentów (...)C++(/CLI)](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md) i [ C++ semantykę stosu dla typów referencyjnych](../../dotnet/cpp-stack-semantics-for-reference-types.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3821.
+Poniższy przykład generuje C3821.
 
-```
+```cpp
 // C3821a.cpp
 // compile with: /clr /c
 public ref struct R {};
@@ -36,9 +36,9 @@ void test1(...) {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3821.
+Poniższy przykład generuje C3821.
 
-```
+```cpp
 // C3821b.cpp
 // compile with: /clr
 // processor: /x86

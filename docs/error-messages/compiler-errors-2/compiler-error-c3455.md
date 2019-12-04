@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3455
 ms.assetid: 218e5cfe-5391-4eeb-81c2-85c47e3a6cd2
-ms.openlocfilehash: 4451ddbd8d5a7125112ef8e1c58e8843095bffd4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e016105a53b4020ca8ed83a95b0c9b96036b1884
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328580"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756672"
 ---
 # <a name="compiler-error-c3455"></a>Błąd kompilatora C3455
 
-"attribute": żaden z konstruktorów atrybutu odpowiada tym argumentom
+"Attribute": żaden z konstruktorów atrybutu nie pasuje do argumentów
 
-Nieprawidłowa wartość został użyty do deklarowania atrybutu.  Zobacz [atrybut](../../windows/attributes/attribute.md) Aby uzyskać więcej informacji.
+Nieprawidłowa wartość została użyta do zadeklarowania atrybutu.  Aby uzyskać więcej informacji, zobacz [atrybut](../../windows/attributes/attribute.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3455.
+Poniższy przykład generuje C3455.
 
-```
+```cpp
 // C3455.cpp
 // compile with: /clr /c
 using namespace System;

@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C1071
 ms.assetid: 489f1786-370e-4ecd-af67-538fe6e5bd4e
-ms.openlocfilehash: 8fe6b0f3bb1253f72c97f29070ba81cdbdf80508
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f39359d55b5564c6379c84f07e942cf3484e011
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166662"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747413"
 ---
 # <a name="fatal-error-c1071"></a>Błąd krytyczny C1071
 
-Nieoczekiwany koniec pliku w komentarzu
+znaleziono nieoczekiwany koniec pliku w komentarzu
 
-Kompilator osiągnięto koniec pliku podczas skanowania komentarz.
+Kompilator osiągnął koniec pliku podczas skanowania komentarza.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać ten problem, sprawdzając następujące możliwe przyczyny
 
-1. Brak komentarza terminator (* /).
+1. Brak terminatora komentarza (*/).
 
-1. Brak znaku nowego wiersza po komentarz w ostatnim wierszu pliku źródłowego.
+1. Brak znaku nowego wiersza po komentarzu w ostatnim wierszu pliku źródłowego.
 
-Poniższy przykład spowoduje wygenerowanie C1071:
+Poniższy przykład generuje C1071:
 
-```
+```cpp
 // C1071.cpp
 int main() {
 }

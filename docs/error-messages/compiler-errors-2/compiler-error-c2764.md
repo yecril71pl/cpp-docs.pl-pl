@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2764
 ms.assetid: 3754f5af-e094-4425-be20-d0c9a9b5baec
-ms.openlocfilehash: ba16431fc71a0e594b77dcc6dab62ed6c49c9137
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d318742a367487f3688717046a6a798c2add87a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257494"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759844"
 ---
 # <a name="compiler-error-c2764"></a>Błąd kompilatora C2764
 
-"param": parametr szablonu nieużywany lub dający się wywieźć w składowej specjalizacji "specjalizacja"
+"param": parametr szablonu nie został użyty lub dający się wywieźć w częściowej specjalizacji "
 
-Parametr szablonu nie jest używany w częściowej specjalizacji. Częściowa specjalizacja temu bezużyteczny, ponieważ nie można wywnioskować parametru szablonu.
+Parametr szablonu nie jest używany w częściowej specjalizacji. To sprawia, że Częściowa specjalizacja jest bezużyteczna, ponieważ nie można wywnioskować parametru szablonu.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2764:
+Poniższy przykład generuje C2764:
 
-```
+```cpp
 // C2764.cpp
 #include <stdio.h>
 template <class T1, class T2>

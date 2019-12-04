@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3451
 ms.assetid: a4897a69-e3e7-40bb-bb1c-598644904012
-ms.openlocfilehash: 07cfda76af26ddb285be4f77131aaf48a20a761f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 2e0122dd53ba5318077dd33f22a07492c52db26b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447857"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756217"
 ---
 # <a name="compiler-error-c3451"></a>Błąd kompilatora C3451
 
-"attribute": nie można zastosować niezarządzanego atrybutu "type"
+"Attribute": nie można zastosować niezarządzanego atrybutu do "Type"
 
-Atrybut C++ nie można zastosować do typu CLR. Zobacz [dokumentacja atrybutów C++](../../windows/attributes/attributes-alphabetical-reference.md) Aby uzyskać więcej informacji.
+Nie C++ można zastosować atrybutu do typu CLR. Aby uzyskać więcej informacji, zobacz [ C++ odwołania do atrybutów](../../windows/attributes/attributes-alphabetical-reference.md) .
 
 Aby uzyskać więcej informacji, zobacz [atrybuty zdefiniowane przez użytkownika](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
-Ten błąd można wygenerować w wyniku pracy zgodności kompilatora, która została wykonana dla programu Visual Studio 2005: [uuid](../../windows/uuid-cpp-attributes.md) atrybut nie jest dozwolony dla atrybutu użytkownika przy użyciu CLR — programowanie. Zamiast nich należy używać słów kluczowych <xref:System.Runtime.InteropServices.GuidAttribute>.
+Ten błąd może zostać wygenerowany w wyniku działania kompilatora, który został wykonany dla programu Visual Studio 2005: atrybut [UUID](../../windows/uuid-cpp-attributes.md) nie jest już dozwolony w atrybucie zdefiniowanym przez użytkownika przy użyciu programowania środowiska CLR. Zamiast nich należy używać słów kluczowych <xref:System.Runtime.InteropServices.GuidAttribute>.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3451.
+Poniższy przykład generuje C3451.
 
-```
+```cpp
 // C3451.cpp
 // compile with: /clr /c
 using namespace System;

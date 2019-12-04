@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2870
 ms.assetid: 80523ee9-1fd3-4dc4-8a77-5083deb99066
-ms.openlocfilehash: f61281da23e46236e7fce496a4d89086e5d6c0ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b006592723df1222d05e39b3bc9e5729efc8aa6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165048"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755034"
 ---
 # <a name="compiler-error-c2870"></a>Błąd kompilatora C2870
 
-"name": definicja przestrzeni nazw musi znajdować się w zakresie pliku albo natychmiast w innej definicji przestrzeni nazw
+"name": definicja przestrzeni nazw musi znajdować się w zakresie pliku lub bezpośrednio w innej definicji przestrzeni nazw
 
-Definicja przestrzeni nazw `name` niepoprawnie. Przestrzenie nazw musi być zdefiniowany w zakresie pliku (na zewnątrz wszystkich bloków i klasy) lub bezpośrednio w innej przestrzeni nazw.
+Przestrzeń nazw zdefiniowana `name` nieprawidłowa. Przestrzenie nazw muszą być zdefiniowane w zakresie pliku (poza wszystkimi blokami i klasami) lub bezpośrednio w innej przestrzeni nazw.
 
-Poniższy przykład spowoduje wygenerowanie C2870:
+Poniższy przykład generuje C2870:
 
-```
+```cpp
 // C2870.cpp
 // compile with: /c
 int main() {

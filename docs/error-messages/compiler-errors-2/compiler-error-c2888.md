@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2888
 ms.assetid: 244f593e-ff25-4dad-b31f-84dafa3bc84a
-ms.openlocfilehash: c5b547f1c4d62a6f48b6c5f8f901be309e81a67c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93fe37c72a04e8c942f910ed3a631e5ba2a542bc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311908"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760918"
 ---
 # <a name="compiler-error-c2888"></a>Błąd kompilatora C2888
 
-'Identyfikator': symbol nie może być zdefiniowany w przestrzeni nazw "namespace"
+"Identyfikator": symbol nie może być zdefiniowany w przestrzeni nazw "namespace"
 
-Symbol należące do przestrzeni nazw, A musi być zdefiniowany w przestrzeni nazw, która obejmuje A.
+Symbol należący do przestrzeni nazw A musi być zdefiniowany w przestrzeni nazw, która jest ujęta w.
 
-Poniższy przykład spowoduje wygenerowanie C2888:
+Poniższy przykład generuje C2888:
 
-```
+```cpp
 // C2888.cpp
 // compile with: /c
 namespace M {

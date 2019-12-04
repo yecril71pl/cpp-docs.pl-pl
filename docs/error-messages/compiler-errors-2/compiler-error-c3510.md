@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3510
 ms.assetid: c48387bc-0300-4a4d-97f7-3fb90f82a451
-ms.openlocfilehash: dbb65628aa6e0da94a91a59724ca8e1cd5b56491
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f9dea77b739aa59474e60cf852fff2577ab6ba9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187355"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753630"
 ---
 # <a name="compiler-error-c3510"></a>Błąd kompilatora C3510
 
-Nie można zlokalizować biblioteki zależnego typu "type_lib"
+nie można zlokalizować biblioteki typów zależnych "type_lib"
 
-[no_registry](../../preprocessor/no-registry.md) i [auto_search —](../../preprocessor/auto-search.md) zostały przekazane do `#import` , ale kompilator nie mógł odnaleźć przywoływanej biblioteki typów.
+[no_registry](../../preprocessor/no-registry.md) i [auto_search](../../preprocessor/auto-search.md) zostały przesłane do `#import` ale kompilator nie mógł odnaleźć przywoływanej biblioteki typów.
 
-Aby rozwiązać ten problem, upewnij się, że wszystkie biblioteki typów i bibliotek typu odwołania są dostępne dla kompilatora.
+Aby rozwiązać ten problem, upewnij się, że wszystkie biblioteki typów i biblioteki typów, do których istnieją odwołania, są dostępne dla kompilatora.
 
-Poniższy przykład spowoduje wygenerowanie C3510:
+Poniższy przykład generuje C3510:
 
-Założono, że zostały zbudowane następujące dwa typy biblioteki i że C3510a.tlb został usunięty lub nie w ścieżce.
+Załóżmy, że zostały skompilowane następujące dwie biblioteki typów i że C3510a. tlb został usunięty z ścieżki.
 
 ```
 // C3510a.idl
@@ -38,7 +38,7 @@ library C3510aLib
 };
 ```
 
-A następnie kod źródłowy dla drugiego biblioteki typów:
+A następnie kod źródłowy dla drugiej biblioteki typów:
 
 ```
 // C3510b.idl
@@ -56,7 +56,7 @@ library C3510bLib
 
 A następnie kod klienta:
 
-```
+```cpp
 // C3510.cpp
 #import "c3510b.tlb" no_registry auto_search   // C3510
 int main() {

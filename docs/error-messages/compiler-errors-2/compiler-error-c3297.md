@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3297
 ms.assetid: 2a718b4c-6cdb-4418-92c0-fc3a259431c4
-ms.openlocfilehash: e4661119680dff34dfaa43fb9ce71bf97150a8bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6fed01b0dcf50a657b6eb457ab8e546d0648beec
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222495"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760100"
 ---
 # <a name="compiler-error-c3297"></a>Błąd kompilatora C3297
 
-"constraint_2": nie można użyć "constraint_1" jako ograniczenie, ponieważ 'constraint_1' posiada wartość ograniczenia
+"constraint_2": nie można użyć "constraint_1" jako ograniczenia, ponieważ element "constraint_1" ma ograniczenie wartości
 
-Klasy wartości są zamknięte. Jeśli ograniczenie jest klasą wartości, kolejne ograniczenia może nigdy nie dziedziczyć po nim.
+Klasy wartości są zapieczętowane. Jeśli ograniczenie jest klasą wartości, inne ograniczenie nigdy nie może pochodzić od niego.
 
-Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące parametrów typu ogólnego (C++sposób niezamierzony)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
+Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące parametrów typu ogólnegoC++(/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3297.
+Poniższy przykład generuje C3297.
 
-```
+```cpp
 // C3297.cpp
 // compile with: /clr /c
 generic<class T, class U>

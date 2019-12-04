@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2663
 ms.assetid: 1e93e368-fd52-42bf-9908-9b6df467c8c9
-ms.openlocfilehash: d74326e49edd980896276e2c6e67526d8d769cb7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f07b63202d8f171dfb69f4bb294b392152b9290b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360297"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756035"
 ---
 # <a name="compiler-error-c2663"></a>Błąd kompilatora C2663
 
-'Funkcja': liczba przeciążenia mają prawne konwersji dla wskaźnika "this"
+"Function": przeciążenia numerów nie mają żadnych dozwolonych konwersji dla wskaźnika "This"
 
-Kompilator nie może przekonwertować `this` do dowolnego przeciążone wersje funkcji elementu członkowskiego.
+Kompilator nie może skonwertować `this` na żadne przeciążone wersje funkcji składowej.
 
-Ten błąd może być spowodowany przez wywołanie innej niż`const` funkcja elementu członkowskiego na `const` obiektu.  Możliwe rozwiązania:
+Ten błąd może być spowodowany wywołaniem funkcji członkowskiej innej niż`const` na obiekcie `const`.  Możliwe rozwiązania:
 
-1. Usuń `const` z deklaracja obiektu.
+1. Usuń `const` z deklaracji obiektu.
 
-1. Dodaj `const` do jednego z przeciążeń funkcji elementu członkowskiego.
+1. Dodaj `const` do jednego z przeciążeń funkcji składowych.
 
-Poniższy przykład spowoduje wygenerowanie C2663:
+Poniższy przykład generuje C2663:
 
-```
+```cpp
 // C2663.cpp
 struct C {
    void f() volatile {}

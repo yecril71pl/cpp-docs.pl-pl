@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3836
 ms.assetid: 254f851b-7b7d-4c34-a740-fcf72f6a636a
-ms.openlocfilehash: 33860273db07894a9a4d15ba6d578598a18819ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c8a7e761f2ece046d5de5c0e74ee911e5ee550d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208060"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741407"
 ---
 # <a name="compiler-error-c3836"></a>Błąd kompilatora C3836
 
-Konstruktor statyczny nie może mieć listy inicjatorów składowej
+Konstruktor statyczny nie może mieć listy inicjatorów składowych
 
-Klasa zarządzana nie może mieć statyczny Konstruktor, który zawiera także listę inicjowania elementu członkowskiego. Klasa statyczna konstruktory są wywoływane przez środowisko uruchomieniowe języka wspólnego do klasy inicjowania i Inicjowanie elementów członkowskich danych statycznych.
+Klasa zarządzana nie może mieć konstruktora statycznego, który ma także listę inicjalizacji składowej. Konstruktory klas statycznych są wywoływane przez środowisko uruchomieniowe języka wspólnego do inicjowania klasy, inicjując statyczne składowe danych.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3836:
+Poniższy przykład generuje C3836:
 
-```
+```cpp
 // C3836a.cpp
 // compile with: /clr
 ref class M

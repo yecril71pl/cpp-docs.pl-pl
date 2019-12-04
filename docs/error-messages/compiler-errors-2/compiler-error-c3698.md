@@ -1,27 +1,27 @@
 ---
-title: Compiler Error C3698
+title: Błąd kompilatora C3698
 ms.date: 11/04/2016
 f1_keywords:
 - C3698
 helpviewer_keywords:
 - C3698
 ms.assetid: 3c02fb08-7ba4-4637-a06f-19926cb2b5f1
-ms.openlocfilehash: 78cded92c8f73c77f7871278443bd3dfd4dbe686
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29c1df618d6a8a14f441c09a6db0f9457133910b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325185"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758050"
 ---
-# <a name="compiler-error-c3698"></a>Compiler Error C3698
+# <a name="compiler-error-c3698"></a>Błąd kompilatora C3698
 
-"type": nie można użyć tego typu jako argumentu 'operator'
+"Type": nie można użyć tego typu jako argumentu "operator"
 
-Obiekt zarządzany zadeklarowano niepoprawnie.
+Obiekt zarządzany został niepoprawnie zadeklarowany.
 
-Poniższy przykład spowoduje wygenerowanie C3698:
+Poniższy przykład generuje C3698:
 
-```
+```cpp
 // C3698.cpp
 // compile with: /clr
 

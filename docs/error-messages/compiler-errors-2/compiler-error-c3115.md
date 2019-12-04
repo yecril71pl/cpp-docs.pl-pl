@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3115
 ms.assetid: 51726145-9782-4ec9-84b9-286f366d9cbd
-ms.openlocfilehash: e334836986548d4f854dd9a5760bd8315b769d03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c03361f08ffd54396d307ed8c075a327c576d49b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404094"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760742"
 ---
 # <a name="compiler-error-c3115"></a>Błąd kompilatora C3115
 
-"attribute": ten atrybut nie jest dozwolona na "konstrukcji"
+"Attribute": ten atrybut jest niedozwolony w konstrukcji "
 
-Atrybut została zastosowana do konstrukcji, dla którego nie zamierzony.  Zobacz [atrybuty w zależności od użycia](../../windows/attributes/attributes-by-usage.md) Aby uzyskać więcej informacji.
+Atrybut został zastosowany do konstrukcji, dla której nie został przewidziany.  Aby uzyskać więcej informacji [, zobacz atrybuty według użycia](../../windows/attributes/attributes-by-usage.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3115.
+Poniższy przykład generuje C3115.
 
-```
+```cpp
 // C3115.cpp
 // compile with: /c
 #include <unknwn.h>

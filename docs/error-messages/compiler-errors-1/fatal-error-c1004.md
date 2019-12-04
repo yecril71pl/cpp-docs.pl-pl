@@ -6,38 +6,38 @@ f1_keywords:
 helpviewer_keywords:
 - C1004
 ms.assetid: dbe034b0-6eb0-41b4-a50c-2fccf9e78ad4
-ms.openlocfilehash: 13fb8963b33569facf62ccedfe9ce8b7bbbbfdc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82a1a3e410505be53d4356e46d5521aebb72763c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383209"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756971"
 ---
 # <a name="fatal-error-c1004"></a>Błąd krytyczny C1004
 
-Nieoczekiwany koniec pliku
+znaleziono nieoczekiwany koniec pliku
 
-Kompilator osiągnięto koniec pliku źródłowego bez rozwiązywania konstrukcję. Kod może brakować jedną z następujących elementów:
+Kompilator osiągnął koniec pliku źródłowego bez rozpoznawania konstrukcji. Kod może nie zawierać jednego z następujących elementów:
 
 - Zamykający nawias klamrowy
 
 - Nawias zamykający
 
-- Zamykania komentarza znacznika (* /)
+- Znacznik zamykającego komentarza (*/)
 
-- Średnikami
+- Średnik
 
-Aby rozwiązać ten problem, sprawdź, czy następujące czynności:
+Aby rozwiązać ten problem, sprawdź następujące kwestie:
 
-- Dysk domyślny ma za mało miejsca na pliki tymczasowe, które wymagają o dwa razy więcej miejsca, co plik źródłowy.
+- Na domyślnym dysku nie ma wystarczającej ilości miejsca na pliki tymczasowe, które wymagają około dwukrotnie większej ilości miejsca jako pliku źródłowego.
 
-- `#if` Dyrektywę, który daje w wyniku wartość false nie ma zamykający `#endif` dyrektywy.
+- Dyrektywa `#if`, która ma wartość false, nie ma dyrektywy zamykającej `#endif`.
 
-- Plik źródłowy nie może kończyć powrotu karetki i wysuwu wiersza.
+- Plik źródłowy nie kończy się znakiem powrotu karetki i wysuwu wiersza.
 
-Poniższy przykład spowoduje wygenerowanie C1004:
+Poniższy przykład generuje C1004:
 
-```
+```cpp
 // C1004.cpp
 #if TEST
 int main() {}
@@ -46,7 +46,7 @@ int main() {}
 
 Możliwe rozwiązanie:
 
-```
+```cpp
 // C1004b.cpp
 #if TEST
 #endif

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2810
 ms.assetid: f63e8f24-d7f6-42ac-904f-72ff49592ba6
-ms.openlocfilehash: 171b9d1b3b09b793c55756500cafed1db7eb9d99
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c598065fb6d5965f92504019275a921d12acb27
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281784"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760585"
 ---
 # <a name="compiler-error-c2810"></a>Błąd kompilatora C2810
 
-"interface": interfejs może dziedziczyć tylko z innego interfejsu
+"Interface": interfejs może dziedziczyć tylko po innym interfejsie
 
-[Interfejsu](../../cpp/interface.md) może dziedziczyć tylko z innego interfejsu i nie może dziedziczyć z klasy lub struktury.
+[Interfejs](../../cpp/interface.md) może dziedziczyć tylko po innym interfejsie i może nie dziedziczyć z klasy lub struktury.
 
-Poniższy przykład spowoduje wygenerowanie C2810:
+Poniższy przykład generuje C2810:
 
-```
+```cpp
 // C2810.cpp
 #include <unknwn.h>
 class CBase1 {

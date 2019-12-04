@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3892
 ms.assetid: 83fff42c-ea48-442f-bc2e-b33a6b99d890
-ms.openlocfilehash: 07f34efa4ecf1445665fccf60dba10ea12dbff3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73d96c61e918da3aabbfc00b83213fa79a2eedf9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281589"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736389"
 ---
 # <a name="compiler-error-c3892"></a>Błąd kompilatora C3892
 
 "var": nie można przypisać do zmiennej, która jest stałą
 
-Const zmiennej nie można zmienić po jego jest deklarowane i inicjowane.
+Nie można zmienić zmiennej const po jej zadeklarowaniu i zainicjowaniu.
 
-Poniższy przykład spowoduje wygenerowanie C3892:
+Poniższy przykład generuje C3892:
 
-```
+```cpp
 // C3892.cpp
 // compile with: /clr
 ref struct Y1 {

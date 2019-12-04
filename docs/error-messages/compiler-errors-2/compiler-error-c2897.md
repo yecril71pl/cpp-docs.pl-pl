@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2897
 ms.assetid: a88349e2-823f-42a0-8660-0653b677afa4
-ms.openlocfilehash: 264ad52a10c6cf19d1105561f1140cf2d3e2f8e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1433faade0a41ad8b63a3b40cb5d02f724bde658
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378846"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760777"
 ---
 # <a name="compiler-error-c2897"></a>Błąd kompilatora C2897
 
 destruktor/finalizator nie może być szablonem funkcji
 
-Destruktory i finalizatory nie mogą być przeciążone, więc zadeklarowanie destruktora jako szablon (który zdefiniuje zbiór destruktory) nie jest dozwolone.
+Destruktory i finalizatory nie mogą być przeciążone, dlatego deklarując destruktor jako szablon (który definiuje zestaw destruktorów) jest niedozwolony.
 
-Poniższy przykład spowoduje wygenerowanie C2897:
+Poniższy przykład generuje C2897:
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2897.
+Poniższy przykład generuje C2897.
 
-```
+```cpp
 // C2897.cpp
 // compile with: /c
 class X {
@@ -36,9 +36,9 @@ public:
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2897.
+Poniższy przykład generuje C2897.
 
-```
+```cpp
 // C2897_b.cpp
 // compile with: /c /clr
 ref struct R2 {

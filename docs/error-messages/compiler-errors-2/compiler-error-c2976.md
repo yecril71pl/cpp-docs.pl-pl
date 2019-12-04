@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2976
 ms.assetid: d9bf9836-325e-4f72-a7e3-a67cf19d32e7
-ms.openlocfilehash: 02771d7419c58ee4f0b6d7db46ba91fde253d9a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76fd2363b6139bc1bc04aa4d4949a12522e31aa6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395368"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751797"
 ---
 # <a name="compiler-error-c2976"></a>Błąd kompilatora C2976
 
-'Identyfikator': za mało argumentów typu
+"Identyfikator": za mało argumentów typu
 
-Brak co najmniej jeden rzeczywisty argument generyczny lub szablonu. Sprawdź deklaracji generyczny lub szablonu, aby znaleźć prawidłowej liczby parametrów.
+Brak jednego lub więcej argumentów rzeczywistych przez ogólny lub szablon. Sprawdź deklarację generyczną lub szablonową, aby znaleźć poprawną liczbę parametrów.
 
-Ten błąd może być spowodowany przez brak argumentów szablonu w składnikach standardowej biblioteki języka C++.
+Ten błąd może być spowodowany brakiem argumentów szablonu C++ w składnikach biblioteki standardowej.
 
-Poniższy przykład spowoduje wygenerowanie C2976:
+Poniższy przykład generuje C2976:
 
-```
+```cpp
 // C2976.cpp
 template <class T>
 struct TC {
@@ -35,9 +35,9 @@ int main() {
 }
 ```
 
-C2976 może również wystąpić, gdy za pomocą typów ogólnych:
+C2976 może również wystąpić przy użyciu typów ogólnych:
 
-```
+```cpp
 // C2976b.cpp
 // compile with: /clr
 generic <class T>

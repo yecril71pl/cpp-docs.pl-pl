@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2327
 ms.assetid: 95278c95-d1f9-4487-ad27-53311f5e8112
-ms.openlocfilehash: abc9aa92c41947a2536e53108c1fb646792a8202
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36222b8469f5a51254c6a6172e20384ebafc89ab
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300852"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747777"
 ---
 # <a name="compiler-error-c2327"></a>Błąd kompilatora C2327
 
-'symbol': nie jest nazwą typu, statycznym lub modułu wyliczającego
+"symbol": nie jest nazwą typu, statycznym lub modułem wyliczającym
 
-Kodu w ramach klasy zagnieżdżonej próbuje uzyskać dostępu do członka otaczającej klasy, która nie jest nazwa typu, statyczny element członkowski lub moduł wyliczający.
+Kod w obrębie klasy zagnieżdżonej próbuje uzyskać dostęp do elementu członkowskiego otaczającej klasy, która nie jest nazwą typu, statycznym elementem członkowskim lub modułem wyliczającym.
 
-Podczas kompilowania za pomocą **/CLR**, typową przyczyną C2327 to właściwość o tej samej nazwie, ponieważ typ właściwości.
+Podczas kompilowania z **/CLR**częstą przyczyną dla C2327 jest właściwość o tej samej nazwie co typ właściwości.
 
-Poniższy przykład spowoduje wygenerowanie C2327:
+Poniższy przykład generuje C2327:
 
-```
+```cpp
 // C2327.cpp
 int x;
 class enclose {
@@ -42,7 +42,7 @@ public:
 
 C2327 może również wystąpić, jeśli nazwa typu jest ukryta przez nazwę elementu członkowskiego:
 
-```
+```cpp
 // C2327b.cpp
 class X {};
 
@@ -54,9 +54,9 @@ class S {
 };
 ```
 
-C2327 można również wyzwalać w takiej sytuacji, w których należy określić pełny typ danych parametru:
+C2327 może również uruchamiać w tej sytuacji, gdzie należy w pełni określić typ danych parametru:
 
-```
+```cpp
 // C2327c.cpp
 // compile with: /c
 struct A {};
@@ -69,9 +69,9 @@ struct B {
 };
 ```
 
-Poniższy przykład spowoduje wygenerowanie C2327:
+Poniższy przykład generuje C2327:
 
-```
+```cpp
 // C2327d.cpp
 // compile with: /clr /c
 using namespace System;
@@ -103,9 +103,9 @@ namespace NA {
 }
 ```
 
-Poniższy przykład pokazuje C2327, gdy właściwość ma taką samą nazwę jak typ właściwości:
+Poniższy przykład pokazuje C2327, gdy właściwość ma taką samą nazwę co typ właściwości:
 
-```
+```cpp
 // C2327f.cpp
 // compile with: /clr /c
 public value class Address {};

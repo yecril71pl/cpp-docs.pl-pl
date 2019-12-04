@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3462
 ms.assetid: 56b75f35-9fad-42d9-a969-eeca5d709bec
-ms.openlocfilehash: 020556be73f0bad8bea6836c9ec0dd0b92dd7f39
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56227f124d49630d8776f291ada302bd6cd6e983
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222374"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756607"
 ---
 # <a name="compiler-error-c3462"></a>Błąd kompilatora C3462
 
-"type": tylko typu zaimportowany może być przekazywany
+"Type": tylko typ importowany może być przekazywany
 
-Atrybutu TypeForwardedTo musi dotyczyć typów w przywoływanych metadanych.
+Atrybut TypeForwardedTo musi zostać zastosowany do typu w metadanych, do którego się odwołuje.
 
-Aby uzyskać więcej informacji, zobacz [Type Forwarding (C++sposób niezamierzony)](../../extensions/type-forwarding-cpp-cli.md).
+Aby uzyskać więcej informacji, zobacz [przekazywanie typuC++(/CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Przykład
 
 Poniższy przykład tworzy składnik.
 
-```
+```cpp
 // C3462.cpp
 // compile with: /clr /LD
 public ref class R {};
@@ -33,9 +33,9 @@ public ref class R {};
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3462.
+Poniższy przykład generuje C3462.
 
-```
+```cpp
 // C3462b.cpp
 // compile with: /clr /c
 #using "C3462.dll"

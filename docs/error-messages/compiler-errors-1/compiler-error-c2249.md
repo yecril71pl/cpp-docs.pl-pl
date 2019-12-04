@@ -1,29 +1,29 @@
 ---
-title: Compiler Error C2249
+title: Błąd kompilatora C2249
 ms.date: 11/04/2016
 f1_keywords:
 - C2249
 helpviewer_keywords:
 - C2249
 ms.assetid: bdd6697c-e04b-49b9-8e40-d9eb6d74f2b6
-ms.openlocfilehash: f3f82549cf5d9230adfee7e83248e92f8e93e769
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24db84c9205173f098e493c4ea6393fb96592276
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301347"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758895"
 ---
-# <a name="compiler-error-c2249"></a>Compiler Error C2249
+# <a name="compiler-error-c2249"></a>Błąd kompilatora C2249
 
-"członek": Brak dostępnej ścieżki, uzyskania dostępu do składowej zadeklarowanej w wirtualnej podstawowej "class"
+"member": brak dostępnej ścieżki umożliwiającej dostęp do składowej zadeklarowanej w wirtualnej podstawowej "Class"
 
-`member` Jest dziedziczony z nonpublic `virtual` klasy bazowej lub struktury.
+`member` jest dziedziczona z niepublicznej `virtual` klasy bazowej lub struktury.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2249.
+Poniższy przykład generuje C2249.
 
-```
+```cpp
 // C2249.cpp
 class A {
 private:
@@ -42,9 +42,9 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-C2249 może również wystąpić, jeśli użytkownik próbuje przypisać strumień od standardowej biblioteki języka C++ do innego strumienia.  Poniższy przykład spowoduje wygenerowanie C2249.
+C2249 może również wystąpić, jeśli spróbujesz przypisać strumień z biblioteki C++ standardowej do innego strumienia.  Poniższy przykład generuje C2249.
 
-```
+```cpp
 // C2249_2.cpp
 #include <iostream>
 using namespace std;

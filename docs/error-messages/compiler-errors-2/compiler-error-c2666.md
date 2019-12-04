@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2666
 ms.assetid: 78364d15-c6eb-439a-9088-e04a0176692b
-ms.openlocfilehash: 4a1d46f3b000b5054564b05ca2c3c94a9e7b6398
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca779269d573e3e5d270fccad6afe6220083fa42
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386879"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755996"
 ---
 # <a name="compiler-error-c2666"></a>Błąd kompilatora C2666
 
-'Identyfikator': liczba przeciążenia mają podobne konwersje
+"Identyfikator": przeciążenia liczb mają podobne konwersje
 
-Operator or przeciążonej funkcji jest niejednoznaczny.   Listy parametrów formalnych może być zbyt podobne dla kompilatora rozstrzygnąć niejednoznaczność.  Aby rozwiązać ten problem, jawnie rzutowane co najmniej jeden z parametrów rzeczywistych.
+Przeciążona funkcja lub operator jest niejednoznaczny.   Formalne listy parametrów mogą być zbyt podobne, aby kompilator mógł rozwiązać niejednoznaczność.  Aby rozwiązać ten błąd, należy jawnie rzutować co najmniej jeden z rzeczywistych parametrów.
 
-Poniższy przykład spowoduje wygenerowanie C2666:
+Poniższy przykład generuje C2666:
 
-```
+```cpp
 // C2666.cpp
 struct complex {
    complex(double);
@@ -35,19 +35,19 @@ int main() {
 }
 ```
 
-Ten błąd można wygenerować w taki sposób, w wyniku pracy zgodności kompilatora, która została wykonana dla Visual Studio .NET 2003:
+Ten błąd może również zostać wygenerowany w wyniku działania kompilatora, który został wykonany dla programu Visual Studio .NET 2003:
 
-- operatory binarne i zdefiniowane przez użytkownika konwersje typów wskaźnika
+- Operatory binarne i konwersje zdefiniowane przez użytkownika do typów wskaźnika
 
 - Konwersja kwalifikacji nie jest taka sama jak konwersja tożsamości
 
-Dla operatorów binarnych \<, >, \<= i > =, przekazany parametr teraz jest niejawnie konwertowany na typ operandu w przypadku parametru typ definiuje operator konwersji zdefiniowanej przez użytkownika, który ma być przekonwertować na typ operandu. Istnieje teraz możliwość niejednoznaczności.
+W przypadku operatorów binarnych \<, >, \<=, i > =, przesłany parametr jest teraz niejawnie konwertowany na typ operandu, jeśli typ parametru definiuje zdefiniowany przez użytkownika Operator konwersji do przekonwertowania na typ operandu. Istnieje teraz potencjalne niejednoznaczność.
 
-Kod, który jest prawidłowy w Visual Studio .NET 2003 i wersji programu Visual Studio .NET, Visual c++ należy wywołać operator klasy jawnie przy użyciu składni funkcji.
+W przypadku kodu, który jest prawidłowy w wersji Visual Studio .NET 2003 i Visual Studio .NET C++, wywołaj operator klasy jawnie za pomocą składni funkcji.
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // C2666b.cpp
 #include <string.h>
 #include <stdio.h>
@@ -104,9 +104,9 @@ int main()
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2666
+Poniższy przykład generuje C2666
 
-```
+```cpp
 // C2666c.cpp
 // compile with: /c
 

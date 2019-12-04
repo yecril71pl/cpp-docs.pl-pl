@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3342
 ms.assetid: 5c6d784f-bebe-4f7e-8615-44ca6f78bfba
-ms.openlocfilehash: 822da2a04446938e49b3190d01c6252585b90ce6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 511271db9651e4274f7e0838917c5aac639eae2c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300586"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753461"
 ---
 # <a name="compiler-error-c3342"></a>Błąd kompilatora C3342
 
-"attribute": niejednoznaczny atrybut
+"Attribute": niejednoznaczny atrybut
 
-Kompilator znaleziono więcej niż jedną definicję atrybutu.
+Kompilator znalazł więcej niż jedną definicję atrybutu.
 
-Atrybut został zdefiniowany więcej niż jeden raz.
+Atrybut został zdefiniowany więcej niż raz.
 
 Aby uzyskać więcej informacji, zobacz [atrybuty zdefiniowane przez użytkownika](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3342.
+Poniższy przykład generuje C3342.
 
-```
+```cpp
 // C3342.cpp
 // compile with: /clr /c
 using namespace System;

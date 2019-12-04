@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2723
 ms.assetid: 86925601-2297-4cfd-94e2-2caf27c474c4
-ms.openlocfilehash: bc07a99f12ed0e447427990969e54f7f3d3d3b7f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9b169f856dba7a76e5f67e1980c4ca47ba912de
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383025"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737455"
 ---
 # <a name="compiler-error-c2723"></a>Błąd kompilatora C2723
 
-'Funkcja': "specyfikatora" niedozwolony specyfikator w definicji funkcji
+"Function": specyfikator "specyfikator" jest niedozwolony w definicji funkcji
 
-Specyfikator nie może występować poza deklaracją klasy definicje funkcji. `virtual` Specyfikator może być określony tylko na deklarację funkcji członkowskiej w obrębie deklaracji klasy.
+Specyfikator nie może występować z definicją funkcji poza deklaracją klasy. Specyfikator `virtual` można określić tylko w deklaracji funkcji składowej w deklaracji klasy.
 
-Poniższy przykład generuje C2723 i pokazuje, jak go naprawić:
+Poniższy przykład generuje C2723 i pokazuje, jak to naprawić:
 
-```
+```cpp
 // C2723.cpp
 struct X {
    virtual void f();

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2876
 ms.assetid: 8b674bf1-f9f4-4a8e-8127-e884c1d1708f
-ms.openlocfilehash: e7fcdeaf79728ee99498c69de0205619d16612d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb242c889d924612b5349ea06c19db954261b245
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390675"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736350"
 ---
 # <a name="compiler-error-c2876"></a>Błąd kompilatora C2876
 
-"class::symbol": nie wszystkie przeciążenia są dostępne
+"Class:: symbol": nie wszystkie przeciążenia są dostępne
 
-Wszystkie formularze przeciążonej funkcji w klasie podstawowej musi być dostępna dla klasy pochodnej.
+Wszystkie przeciążone formularze funkcji w klasie bazowej muszą być dostępne dla klasy pochodnej.
 
-Poniższy przykład spowoduje wygenerowanie C2876:
+Poniższy przykład generuje C2876:
 
-```
+```cpp
 // C2876.cpp
 // compile with: /c
 class A {

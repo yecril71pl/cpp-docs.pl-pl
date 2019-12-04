@@ -1,31 +1,31 @@
 ---
-title: Compiler Error C2259
+title: Błąd kompilatora C2259
 ms.date: 11/04/2016
 f1_keywords:
 - C2259
 helpviewer_keywords:
 - C2259
 ms.assetid: e458236f-bdea-4786-9aa6-a98d8bffa5f4
-ms.openlocfilehash: 562882f50edfe2d44ab1f08ee9dbe88fe468af63
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 403d674eae696eb42a837aef9d6e97c4b5b8f6c2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447383"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758791"
 ---
-# <a name="compiler-error-c2259"></a>Compiler Error C2259
+# <a name="compiler-error-c2259"></a>Błąd kompilatora C2259
 
-"class": nie można utworzyć wystąpienia klasy abstrakcyjnej
+"Class": nie można utworzyć wystąpienia klasy abstrakcyjnej
 
-Kod deklaruje wystąpienia abstrakcyjnej klasy lub struktury.
+Kod deklaruje wystąpienie klasy abstrakcyjnej lub struktury.
 
-Nie można utworzyć wystąpienia klasy lub struktury z co najmniej jeden czystych funkcji wirtualnych. Do tworzenia wystąpień obiektów klasy pochodnej, klasy pochodne muszą przesłaniać każdego czystą funkcję wirtualną.
+Nie można utworzyć wystąpienia klasy lub struktury przy użyciu co najmniej jednej czystej funkcji wirtualnej. Aby utworzyć wystąpienie obiektów klasy pochodnej, Klasa pochodna musi zastępować każdą czystą funkcję wirtualną.
 
-Aby uzyskać więcej informacji, zobacz [klasy niejawnie abstrakcyjne](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Implicitly_abstract_classes).
+Aby uzyskać więcej informacji, zobacz [klasy abstrakcyjne niejawnie](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Implicitly_abstract_classes).
 
-Poniższy przykład spowoduje wygenerowanie C2259:
+Poniższy przykład generuje C2259:
 
-```
+```cpp
 // C2259.cpp
 // compile with: /c
 class V {
@@ -42,19 +42,19 @@ A a;  // C2259, A inherits func() as pure virtual
 B b;  // OK, B defines func()
 ```
 
-Za każdym razem pochodzi z interfejsu i implementować metody interfejsu w klasie pochodnej z uprawnieniami dostępu do innych niż publicznego, może pojawić się C2259.  Dzieje się tak, ponieważ kompilator oczekuje metod interfejsu zaimplementowana w klasie pochodnej, aby mieć dostęp publiczny. Podczas implementowania funkcji elementów członkowskich w przypadku interfejsu o bardziej restrykcyjne uprawnienia dostępu kompilator nie bierze pod uwagę stawiany implementacje dla metody interfejsu zdefiniowane w interfejsie, co z kolei sprawia, że klasy pochodnej klasy abstrakcyjnej.
+Za każdym razem, gdy pochodzą z interfejsu i Implementuj metody interfejsu w klasie pochodnej z uprawnieniami dostępu innym niż Public, może się pojawić C2259.  Dzieje się tak, ponieważ kompilator oczekuje, że metody interfejsu zaimplementowane w klasie pochodnej mają dostęp publiczny. Po zaimplementowaniu funkcji Członkowskich dla interfejsu z bardziej restrykcyjnymi uprawnieniami dostępu kompilator nie uważa ich za implementacje dla metod interfejsu zdefiniowanych w interfejsie, co z kolei powoduje, że Klasa pochodna jest klasą abstrakcyjną.
 
-Istnieją dwa możliwe obejścia tego problemu:
+Istnieją dwa możliwe obejście problemu:
 
-- Upublicznić uprawnienia dostępu dla metody implementowane.
+- Udostępnij uprawnienia dostępu publicznie dla zaimplementowanych metod.
 
-- Użyj operatora rozpoznawania zakresu dla metod interfejsu zaimplementowana w klasie pochodnej nazwy metody implementowane za pomocą nazwy interfejsu.
+- Użyj operatora rozpoznawania zakresu dla metod interfejsu zaimplementowanych w klasie pochodnej, aby zakwalifikować zaimplementowaną nazwę metody z nazwą interfejsu.
 
-C2259 może również wystąpić w wyniku pracy zgodności, która została wykonana w programie Visual Studio 2005, **/Zc:** jest teraz domyślnie włączona. W takiej sytuacji można rozwiązać, albo przez kompilowanie za pomocą C2599 **/Zc:wchar_t-**, aby uzyskać zachowanie z poprzednich wersji, lub najlepiej, aktualizując typów, dzięki czemu są one zgodne. Aby uzyskać więcej informacji, zobacz [/Zc: wchar_t (wchar_t jest typem natywnym)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+C2259 może również wystąpić w wyniku zgodności z zadaniami, które zostały wykonane w programie Visual Studio 2005, **/Zc: wchar_t** jest teraz domyślnie włączone. W takiej sytuacji C2599 można rozwiązać przez skompilowanie z **/Zc: wchar_t-** , aby uzyskać zachowanie z poprzednich wersji lub raczej przez zaktualizowanie typów, aby były zgodne. Aby uzyskać więcej informacji, zobacz [/Zc: wchar_t (Wchar_t jest typem natywnym)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
-Poniższy przykład spowoduje wygenerowanie C2259:
+Poniższy przykład generuje C2259:
 
-```
+```cpp
 // C2259b.cpp
 // compile with: /c
 #include <windows.h>
@@ -90,9 +90,9 @@ public:
 MyClass4 y;
 ```
 
-Poniższy przykład spowoduje wygenerowanie C2259:
+Poniższy przykład generuje C2259:
 
-```
+```cpp
 // C2259c.cpp
 // compile with: /clr
 interface class MyInterface {

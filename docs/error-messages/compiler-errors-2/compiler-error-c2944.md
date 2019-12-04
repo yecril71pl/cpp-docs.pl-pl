@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2944
 ms.assetid: f209e668-e72f-442a-a438-8c4ff43a404a
-ms.openlocfilehash: bed23b7d9117d1d1acad80f4f3d81e8b0b9d0252
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 542f7def550632a29fcb7ae28825b32b8c26f17d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366423"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755385"
 ---
 # <a name="compiler-error-c2944"></a>Błąd kompilatora C2944
 
-"class": typ klasy identyfikator ponownie definiowana jako wartość argumentu szablonu
+"Class": Identyfikator klasy typu, który został ponownie zdefiniowany jako argument wartości szablonu
 
-Generyczny lub szablonu klasy nie można użyć zamiast symbol, jako wartość argumentu szablonu.
+Nie można użyć klasy generycznej lub szablonu zamiast symbolu jako argumentu wartości szablonu.
 
-Poniższy przykład spowoduje wygenerowanie C2944:
+Poniższy przykład generuje C2944:
 
-```
+```cpp
 // C2944.cpp
 // compile with: /c
 template<class T>
@@ -32,9 +32,9 @@ template <int TC<int> > struct X1 { };   // C2944
 template <class T > struct X2 {};
 ```
 
-C2944 może również wystąpić, gdy za pomocą typów ogólnych:
+C2944 może również wystąpić przy użyciu typów ogólnych:
 
-```
+```cpp
 // C2944b.cpp
 // compile with: /clr /c
 generic<class T>

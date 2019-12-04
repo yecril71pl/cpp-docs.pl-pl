@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2612
 ms.assetid: 6faacfd6-4455-41a2-808e-0f6799f84d6d
-ms.openlocfilehash: b2d4888c1be39c4f48f0ca674426c7af612b9bb7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 630e5b1cc6e99ffda28f50c09bccbbc2fea07172
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379028"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737702"
 ---
 # <a name="compiler-error-c2612"></a>Błąd kompilatora C2612
 
-końcowe "char" niedozwolony na liście inicjatora bazowych/składowych
+znak "char" jest niedozwolony na liście inicjatora podstawowego/składowej
 
-Znak pojawia się po ostatnim podstawowy lub element członkowski na liście inicjatora.
+Znak pojawia się po ostatnim elemencie bazowym lub na liście inicjatorów.
 
-Poniższy przykład spowoduje wygenerowanie C2612:
+Poniższy przykład generuje C2612:
 
-```
+```cpp
 // C2612.cpp
 class A {
 public:

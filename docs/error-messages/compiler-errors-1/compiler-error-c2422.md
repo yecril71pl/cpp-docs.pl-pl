@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2422
 ms.assetid: ef0ec302-4028-4778-b134-0b8cea4bcad9
-ms.openlocfilehash: 524eeadb6cf066d3eba3a7e88c45a9e2b993c0ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 39f779ee846cf4f328f9c7af59ae394d97d7a3ca
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402895"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744735"
 ---
 # <a name="compiler-error-c2422"></a>Błąd kompilatora C2422
 
-niedozwolone przesłonięcie segmentu w "operandu"
+niedozwolone przesłonięcie segmentu w "operandzie"
 
-Wbudowany kod asemblera niepoprawnie użyto operatora przesłonięcie segmentu (dwukropek) dla argumentu operacji.  Możliwe przyczyny:
+Wbudowany kod asemblera niepoprawnie używa operatora przesłaniania segmentu (dwukropek) dla operandu.  Możliwe przyczyny:
 
-- Zarejestruj poprzedzających operator nie jest rejestru segmentu.
+- Rejestr poprzedzający operator nie jest rejestrem segmentów.
 
-- Zarejestruj poprzedzających operator nie jest tylko rejestru segmentu w argumencie operacji.
+- Rejestr poprzedzający operator nie jest jedynym rejestrem segmentów w argumencie operacji.
 
-- Operator przesłonięcie segmentu pojawia się w obrębie operatora pośredniego (nawiasy kwadratowe).
+- Operator przesłonięcia segmentu pojawia się w operatorze pośrednim (nawiasy).
 
-- Wyrażenie po operatorze przesłonięcie segmentu nie jest bezpośredni argument lub argument pamięci.
+- Wyrażenie następujące po przesłonięciu segmentu nie jest bezpośrednim operandem lub operandem pamięci.
 
-Poniższy przykład spowoduje wygenerowanie C2422:
+Poniższy przykład generuje C2422:
 
-```
+```cpp
 // C2422.cpp
 // processor: x86
 int main() {

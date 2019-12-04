@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2646
 ms.assetid: 92ff1f02-5eaf-40a5-8b7a-a682f149e967
-ms.openlocfilehash: c02d7216df42681ae2ec733ae932d22861c1f0ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a5c4dbc967c304fc6b13eb00e2c7093380ec8be9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282212"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758219"
 ---
 # <a name="compiler-error-c2646"></a>Błąd kompilatora C2646
 
-anonimowej struktury lub Unii, globalnie lub zakresie przestrzeni nazw musi być zadeklarowane jako statyczne
+anonimowa struktura lub Unia w zakresie globalnym lub przestrzeni nazw musi być zadeklarowana jako statyczna
 
-Anonimowej struktury lub Unii ma globalne lub zakresie przestrzeni nazw ale nie jest zadeklarowana `static`.
+Anonimowa struktura lub Unia ma zakres globalny lub przestrzeni nazw, ale nie jest zadeklarowana `static`.
 
-Poniższy przykład generuje C2646 i pokazuje, jak go naprawić:
+Poniższy przykład generuje C2646 i pokazuje, jak to naprawić:
 
-```
+```cpp
 // C2646.cpp
 // compile with: /c
 union { int i; };   // C2646 not static

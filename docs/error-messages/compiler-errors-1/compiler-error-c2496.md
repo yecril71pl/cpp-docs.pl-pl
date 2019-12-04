@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2496
 ms.assetid: 9a25237d-5bbb-4112-98f3-29cd99d3f89f
-ms.openlocfilehash: 258012fdefed877558f122790954d830095d5026
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9236876e636e88f193d32ef2e33a817fa52e1bd2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360584"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757010"
 ---
 # <a name="compiler-error-c2496"></a>Błąd kompilatora C2496
 
-'Identyfikator': "selectany" może być stosowany tylko do elementów danych za pomocą zewnętrznego powiązania
+"Identyfikator": "selectany" może być stosowany tylko do elementów danych z zewnętrznym powiązaniem
 
-[Selectany](../../cpp/selectany.md) atrybut można stosować tylko do elementów danych globalnych i widoczny zewnętrznie.
+Atrybut [selectany](../../cpp/selectany.md) może być stosowany tylko do widocznych zewnętrznie i globalnych elementów danych.
 
-Poniższy przykład spowoduje wygenerowanie C2496:
+Poniższy przykład generuje C2496:
 
-```
+```cpp
 // C2496.cpp
 // compile with: /c
 __declspec(selectany) int x1 = 1;

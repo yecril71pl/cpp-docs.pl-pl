@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3485
 ms.assetid: d67536f9-67a1-4ad9-9a94-d8bbbca3d0dc
-ms.openlocfilehash: 2fcaecd6be35e2ae6822133930b48b6bbf02aafe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0eacb6ce6426674d23fc78596ead3730f46ae370
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381146"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743045"
 ---
 # <a name="compiler-error-c3485"></a>Błąd kompilatora C3485
 
-Definicja lambdy nie może mieć żadnych kwalifikatorów cv
+Definicja lambda nie może mieć żadnych kwalifikatorów CV
 
-Nie można użyć `const` lub `volatile` kwalifikator jako część definicji wyrażenia lambda.
+Nie można użyć kwalifikatora `const` ani `volatile` jako części definicji wyrażenia lambda.
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-- Usuń `const` lub `volatile` kwalifikator z definicji w wyrażeniu lambda.
+- Usuń kwalifikator `const` lub `volatile` z definicji wyrażenia lambda.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C3485, ponieważ używa ona `const` kwalifikator jako część definicji wyrażenia lambda:
+Poniższy przykład generuje C3485, ponieważ używa kwalifikatora `const` jako części definicji wyrażenia lambda:
 
-```
+```cpp
 // C3485.cpp
 
 int main()

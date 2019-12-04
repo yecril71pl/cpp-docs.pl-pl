@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3136
 ms.assetid: c77103cd-00f7-408e-b74b-4f8562039d31
-ms.openlocfilehash: e32ffca067c3b25120301527e7a708d53001d541
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75862f3b80d617b607a7b3e735cb3e16e9a40bb7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376253"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757387"
 ---
 # <a name="compiler-error-c3136"></a>Błąd kompilatora C3136
 
-"interface": interfejs COM może dziedziczyć tylko z innego interfejsu COM, "interface" nie jest interfejsem COM
+"Interface": interfejs COM może dziedziczyć tylko po innym interfejsie COM, interfejs nie jest interfejsem COM
 
-Interfejs, do której zastosowano [atrybut interfejsu](../../windows/attributes/interface-attributes.md) dziedziczy interfejs, który nie jest interfejsem COM. Interfejs COM, ale ostatecznie dziedziczy `IUnknown`. Dowolny interfejs poprzedzony przez atrybut interfejsu jest interfejsem COM.
+Interfejs, do którego zastosowano [atrybut interfejsu](../../windows/attributes/interface-attributes.md) , dziedziczy z interfejsu, który nie jest interfejsem com. Interfejs COM ostatecznie dziedziczy po `IUnknown`. Każdy interfejs poprzedzony atrybutem interfejsu jest interfejsem COM.
 
 Poniższy przykład generuje C3136:
 
-```
+```cpp
 // C3136.cpp
 #include "unknwn.h"
 

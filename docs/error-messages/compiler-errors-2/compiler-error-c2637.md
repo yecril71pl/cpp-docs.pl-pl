@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2637
 ms.assetid: 58d94447-eb96-4d8f-a690-dd78d322462e
-ms.openlocfilehash: 4231a811911fdf600b47962e929f6f3cff1f1bca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a17bd95cf1727d058e0cbd9e3dfb93c500da9fb5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395459"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758258"
 ---
 # <a name="compiler-error-c2637"></a>Błąd kompilatora C2637
 
-'Identyfikator': nie można modyfikować wskaźników do składowych danych
+"Identyfikator": nie można modyfikować wskaźników do składowych danych
 
-Wskaźnik do składowej danych nie może mieć konwencji wywoływania. Aby rozwiązać problem, Usuń konwencji wywołania lub deklarowany jest wskaźnik do funkcji składowej.
+Wskaźnik do składowej danych nie może mieć konwencji wywoływania. Aby rozwiązać ten problem, Usuń konwencję wywoływania lub Zadeklaruj wskaźnik do funkcji składowej.
 
-Poniższy przykład spowoduje wygenerowanie C2637:
+Poniższy przykład generuje C2637:
 
-```
+```cpp
 // C2637.cpp
 // compile with: /c
 struct S {};

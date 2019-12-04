@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3675
 ms.assetid: 87461613-6633-430b-b95d-c7cb1bb63776
-ms.openlocfilehash: e29e536bf89aef887dc043327e4b4596703d0538
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6772572d29765370d6cdbf52ed8470ff2f3f054e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363898"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758076"
 ---
 # <a name="compiler-error-c3675"></a>Błąd kompilatora C3675
 
-'Funkcja': jest zarezerwowana, ponieważ "właściwość" jest zdefiniowana.
+"Function": jest zarezerwowana, ponieważ zdefiniowano Właściwość "Property"
 
-Kiedy Deklarujesz właściwości prostej, kompilator generuje get i metody dostępu set, a te nazwy są obecne w zakresie programu.  Nazwy generowane przez kompilator są tworzone przez dołączenie rzeczoznawcy i Pobierz nazwę właściwości.  W związku z tym nie można zadeklarować funkcji z taką samą nazwę jak metodach dostępu generowanych przez kompilator.
+Gdy deklarujesz prostą właściwość, kompilator generuje metody dostępu get i Set, a te nazwy są obecne w zakresie programu.  Nazwy wygenerowane przez kompilator są tworzone przez oczekujące get_ i set_ do nazwy właściwości.  W związku z tym nie można zadeklarować funkcji o takiej samej nazwie jak dla metod dostępu generowanych przez kompilator.
 
-Zobacz [właściwość](../../extensions/property-cpp-component-extensions.md) Aby uzyskać więcej informacji.
+Aby uzyskać więcej informacji, zobacz [Właściwość](../../extensions/property-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3675.
+Poniższy przykład generuje C3675.
 
-```
+```cpp
 // C3675.cpp
 // compile with: /clr /c
 ref struct C {

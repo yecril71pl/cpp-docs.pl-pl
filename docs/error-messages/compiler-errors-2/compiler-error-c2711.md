@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2711
 ms.assetid: 9df9f808-7419-4e63-abdd-e6538ff0871f
-ms.openlocfilehash: 568128d6199d16380b6a540173eded25f5588d23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65612e4a7d19295a8fa49576fb1d72c852a76b82
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160942"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757439"
 ---
 # <a name="compiler-error-c2711"></a>Błąd kompilatora C2711
 
-'Funkcja': Ta funkcja nie może być skompilowana jako zarządzana, należy rozważyć użycie niezarządzanej funkcji #pragma
+"Function": Ta funkcja nie może być skompilowana jako zarządzana, rozważ użycie #pragma niezarządzane
 
-Dodatkowe instrukcje uniemożliwi kompilatorowi Generowanie MSIL dla funkcji otaczającej.
+Niektóre instrukcje uniemożliwią kompilatorowi generowanie MSIL dla otaczającej funkcji.
 
-Poniższy przykład spowoduje wygenerowanie C2711:
+Poniższy przykład generuje C2711:
 
-```
+```cpp
 // C2711.cpp
 // compile with: /clr
 // processor: x86

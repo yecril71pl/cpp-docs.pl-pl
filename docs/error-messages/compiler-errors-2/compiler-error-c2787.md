@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2787
 ms.assetid: 34cb57e6-cafe-4ce7-bcc6-53d194629bd0
-ms.openlocfilehash: 656fcd8a1a0429546189de8c3f01ab928c6333ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 00f2097dc556055f0becf1d81d784c9126c66f63
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256870"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739600"
 ---
 # <a name="compiler-error-c2787"></a>Błąd kompilatora C2787
 
-'Identyfikator': Brak GUID nie został skojarzony z tym obiektem
+"Identyfikator": żaden identyfikator GUID nie został skojarzony z tym obiektem
 
-[__Uuidof](../../cpp/uuidof-operator.md) operator ma typ zdefiniowany przez użytkownika z identyfikatorem GUID dołączone lub obiektu takiego typu zdefiniowanego przez użytkownika. Ten błąd występuje, gdy argument jest typu zdefiniowanego przez użytkownika, za pomocą żaden identyfikator GUID.
+Operator [__uuidof](../../cpp/uuidof-operator.md) przyjmuje zdefiniowany przez użytkownika typ z DOŁĄCZONYm identyfikatorem GUID lub obiektem takiego typu zdefiniowanego przez użytkownika. Ten błąd występuje, gdy argument jest typem zdefiniowanym przez użytkownika bez identyfikatora GUID.
 
-Poniższy przykład spowoduje wygenerowanie C2787:
+Poniższy przykład generuje C2787:
 
-```
+```cpp
 // C2787.cpp
 #include <windows.h>
 struct F {};

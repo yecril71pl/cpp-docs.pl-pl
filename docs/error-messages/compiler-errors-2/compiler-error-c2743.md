@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2743
 ms.assetid: 644cd444-21d2-471d-a176-f5f52c5a0b73
-ms.openlocfilehash: 03cd7c13e093be5073b3df7e7cf29dda870bc47a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d679ce0df0d43772a6c32aa8e00869ac1a4a082b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228933"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759649"
 ---
 # <a name="compiler-error-c2743"></a>Błąd kompilatora C2743
 
-"type": nie można przechwycić natywnego typu destruktorem __clrcall lub konstruktorem kopiującym
+"Type": nie można przechwycić natywnego typu z __clrcall destruktorem lub konstruktorem kopiującym
 
-Moduł skompilowany z **/CLR** podjęto próbę wykrycia tego typu natywnego i gdzie używa typu destruktorem lub konstruktorem kopiującym `__clrcall` konwencji wywoływania.
+Moduł skompilowany za pomocą **/CLR** próbował przechwycić wyjątek typu natywnego i gdzie destruktor lub Konstruktor kopiujący typu używa `__clrcall` konwencji wywoływania.
 
-Gdy skompilowano z opcją **/CLR**, obsługa wyjątków oczekuje, że funkcje elementów członkowskich w typie natywnym za [__cdecl](../../cpp/cdecl.md) i nie [__clrcall](../../cpp/clrcall.md). Typy natywne za pomocą funkcji elementów członkowskich przy użyciu `__clrcall` konwencji wywoływania, nie można przechwycić w module, który został skompilowany przy użyciu **/CLR**.
+Podczas kompilowania z **/CLR**obsługa wyjątków oczekuje, że funkcje składowe w typie natywnym mają być [__cdecl](../../cpp/cdecl.md) , a nie [__clrcall](../../cpp/clrcall.md). Typy natywne z funkcjami składowymi używającymi konwencji wywoływania `__clrcall` nie mogą być przechwytywane w module skompilowanym za pomocą **/CLR**.
 
-Aby uzyskać więcej informacji, zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md).
+Aby uzyskać więcej informacji, zobacz [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2743.
+Poniższy przykład generuje C2743.
 
-```
+```cpp
 // C2743.cpp
 // compile with: /clr
 public struct S {

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2786
 ms.assetid: 6676d8c0-86dd-4a39-bdda-b75a35f4d137
-ms.openlocfilehash: b03155ad1a209ae59327dd31d432f5623f380ac9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba5d05e9c7cc702509144fb876a1301bfc8bf3d4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266000"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739613"
 ---
 # <a name="compiler-error-c2786"></a>Błąd kompilatora C2786
 
-"type": nieprawidłowy operand dla __uuidof
+"Type": nieprawidłowy operand dla __uuidof
 
-[__Uuidof](../../cpp/uuidof-operator.md) operator ma typ zdefiniowany przez użytkownika z identyfikatorem GUID dołączone lub obiektu takiego typu zdefiniowanego przez użytkownika.  Możliwe przyczyny:
+Operator [__uuidof](../../cpp/uuidof-operator.md) przyjmuje zdefiniowany przez użytkownika typ z DOŁĄCZONYm identyfikatorem GUID lub obiektem takiego typu zdefiniowanego przez użytkownika.  Możliwe przyczyny:
 
 1. Argument nie jest typem zdefiniowanym przez użytkownika.
 
-1. `__uuidof` Nie można wyodrębnić identyfikator GUID w argumencie.
+1. `__uuidof` nie może wyodrębnić identyfikatora GUID z argumentu.
 
-Poniższy przykład spowoduje wygenerowanie C2786:
+Poniższy przykład generuje C2786:
 
-```
+```cpp
 // C2786.cpp
 struct __declspec(uuid("00000000-0000-0000-0000-000000000000")) A {};
 

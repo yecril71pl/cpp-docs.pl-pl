@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2739
 ms.assetid: 5b63e435-7631-43d7-805e-f2adefb7e517
-ms.openlocfilehash: f7e7b20f64c8975e747fe84138cbcb18c3fd14fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18cece8d9630aa93e867329acc7cefea30da3286
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258027"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759662"
 ---
 # <a name="compiler-error-c2739"></a>Błąd kompilatora C2739
 
-"numer": jawna zarządzane lub wymiary tablicy WinRT musi należeć do zakresu od 1 do 32
+"number": Wymiary jawnie zarządzane lub tablica WinRT muszą zawierać się w przedziale od 1 do 32
 
-Wymiar tablicy nie od 1 do 32.
+Wymiar tablicy nie ma zakresu od 1 do 32.
 
-Poniższy przykład generuje C2739 i pokazuje, jak go naprawić:
+Poniższy przykład generuje C2739 i pokazuje, jak to naprawić:
 
-```
+```cpp
 // C2739.cpp
 // compile with: /clr
 int main() {

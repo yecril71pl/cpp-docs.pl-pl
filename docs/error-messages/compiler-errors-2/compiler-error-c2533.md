@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2533
 ms.assetid: 5b335652-076c-4824-87c8-a741f64a3ce0
-ms.openlocfilehash: 00cb13d1999b00dfcaa5a2bc7bfb3b8eb16af5f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b111448e7e9d8260a5101d05996a670013936894
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386983"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746412"
 ---
 # <a name="compiler-error-c2533"></a>Błąd kompilatora C2533
 
-'Identyfikator': konstruktorom niedozwolony typ zwracany
+"Identyfikator": konstruktory nie mogą być typem zwracanym
 
-Konstruktor nie może posiadać typu zwracanego (nie jest jeszcze `void` zwracany typ).
+Konstruktor nie może mieć zwracanego typu (nawet `void` zwracanego typu).
 
-Wspólne źródło wystąpienia tego błędu jest Brak średnika między końcem definicji klasy, a pierwszy implementacji konstruktora. Kompilator uznaje klasy definicję typ zwracany dla funkcji konstruktora, a następnie generuje C2533.
+Typowym źródłem tego błędu jest brak średnika między końcem definicji klasy a pierwszą implementacją konstruktora. Kompilator widzi klasę jako definicję zwracanego typu dla funkcji konstruktora i generuje C2533.
 
 Poniższy przykład generuje C2533 i pokazuje, jak go naprawić:
 
-```
+```cpp
 // C2533.cpp
 // compile with: /c
 class X {

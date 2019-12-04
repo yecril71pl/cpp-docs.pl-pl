@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3382
 ms.assetid: a7603abd-ac4e-4ae6-a02b-3bdc6d1908a6
-ms.openlocfilehash: c262ea963ae739fbb76211aae2622e98d5a9b6f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 419577ddd5b5d7d2d21a91f500070cb190c72117
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328786"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760468"
 ---
 # <a name="compiler-error-c3382"></a>Błąd kompilatora C3382
 
-"sizeof" nie jest obsługiwany z/CLR: Safe
+element "sizeof" nie jest obsługiwany z/CLR: Safe
 
-Plik wyjściowy **/CLR: Safe** kompilacja jest plik, który jest weryfikowalny pod kątem bezpieczeństwa typów i sizeof nie jest obsługiwana, ponieważ wartość zwracana przez sizeof operator jest size_t, którego rozmiar różni się zależnie od systemu operacyjnego.
+Plik wyjściowy **/CLR: Safe** kompilacja jest plikiem, który jest typu "bezpieczna", a sizeof nie jest obsługiwana, ponieważ zwracana wartość operatora sizeof jest size_t, którego rozmiar zmienia się w zależności od systemu operacyjnego.
 
 Aby uzyskać więcej informacji, zobacz,
 
@@ -29,9 +29,9 @@ Aby uzyskać więcej informacji, zobacz,
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3382.
+Poniższy przykład generuje C3382.
 
-```
+```cpp
 // C3382.cpp
 // compile with: /clr:safe
 int main() {

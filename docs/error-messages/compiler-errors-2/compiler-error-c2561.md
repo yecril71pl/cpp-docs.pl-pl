@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2561
 ms.assetid: 0abe955b-53a6-4a3c-8362-b1a8eb40e8d1
-ms.openlocfilehash: 8350c5baf129b88c178be280d2da7fe856c6cf57
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4a14be9cd32c752e2ab889417494e80b935e31b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368425"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755567"
 ---
 # <a name="compiler-error-c2561"></a>Błąd kompilatora C2561
 
-'Identyfikator': funkcja musi zwracać wartość
+"Identyfikator": funkcja musi zwracać wartość
 
-Funkcja została zadeklarowana jako zwracanie wartości, ale nie zawiera definicji funkcji `return` instrukcji.
+Funkcja została zadeklarowana jako zwracająca wartość, ale definicja funkcji nie zawiera instrukcji `return`.
 
-Ten błąd może być spowodowany przez prototypu funkcji niepoprawne:
+Ten błąd może być spowodowany przez nieprawidłowy prototyp funkcji:
 
-1. Jeśli funkcja nie zwraca wartości, Zadeklaruj funkcję z typem zwracanym [void](../../cpp/void-cpp.md).
+1. Jeśli funkcja nie zwraca wartości, zadeklaruj funkcję z typem zwracanym [void](../../cpp/void-cpp.md).
 
-1. Upewnij się, że wszystkie możliwe gałęzie funkcji zwrócić wartość typem zadeklarowanym w prototypie.
+1. Sprawdź, czy wszystkie możliwe gałęzie funkcji zwracają wartość typu zadeklarowanego w prototypie.
 
-1. Funkcje języka C++, zawierające wbudowanego zestawu procedur, które będą przechowywać wartość zwracaną w `AX` rejestru może być konieczne instrukcji return. Skopiuj wartość w `AX` do zmiennej tymczasowej i zwraca tę zmienną z funkcji.
+1. C++funkcje zawierające wbudowane procedury asemblera, które przechowują wartość zwracaną w rejestrze `AX` mogą potrzebować instrukcji return. Skopiuj wartość w `AX` do zmiennej tymczasowej i zwróć tę zmienną z funkcji.
 
-Poniższy przykład spowoduje wygenerowanie C2561:
+Poniższy przykład generuje C2561:
 
-```
+```cpp
 // C2561.cpp
 int Test(int x) {
    if (x) {

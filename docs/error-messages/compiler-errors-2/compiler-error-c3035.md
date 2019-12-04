@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3035
 ms.assetid: af34fad2-2b45-42d0-a9ff-04eab3e91c37
-ms.openlocfilehash: e6d42c53407e1047d299e82566c7fadeb639641d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0064d07d0e6d8adaa41d81272e315685dd32a74f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393574"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755021"
 ---
 # <a name="compiler-error-c3035"></a>Błąd kompilatora C3035
 
-"Ordered" OpenMP — dyrektywa musi powiązać bezpośrednio do "For" lub "parallel for" z klauzulą "ordered" w dyrektywie
+Dyrektywa "ordered" OpenMP musi powiązać bezpośrednio z dyrektywą "for" lub "Parallel for" z klauzulą "ordered"
 
-Klauzulę uporządkowane został niewłaściwie sformatowany.
+Klauzula uporządkowana jest źle sformułowana.
 
-Poniższy przykład spowoduje wygenerowanie C3035:
+Poniższy przykład generuje C3035:
 
-```
+```cpp
 // C3035.cpp
 // compile with: /openmp /link vcomps.lib
 int main() {

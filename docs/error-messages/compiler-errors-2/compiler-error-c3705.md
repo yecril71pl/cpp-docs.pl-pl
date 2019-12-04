@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3705
 ms.assetid: 8361017d-5782-4214-a9d7-e9825fd29bc8
-ms.openlocfilehash: 8a1a5a7c3c54742f6952f6885a70fd5c1dcf6e0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c4f77457be95ae22b2a67214207d361ca105811d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227073"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757933"
 ---
 # <a name="compiler-error-c3705"></a>Błąd kompilatora C3705
 
-'Funkcja': nie można odnaleźć interfejsu zdarzeń
+"Function": nie można odnaleźć interfejsu zdarzeń
 
-Zdefiniuj interfejs zdarzenia korzystanie ze zdarzeń COM. Należy pamiętać, że `#include` wierszy plików nagłówkowych ATL. pokazano w poniższym przykładzie są wymagane do używania zdarzenia COM. Aby naprawić ten błąd, Usuń komentarz definicję `IEvents` interfejsu w przykładowym kodzie.
+Należy zdefiniować interfejs zdarzenia do używania zdarzeń COM. Należy pamiętać, że w przypadku korzystania z zdarzeń COM wymagane są `#include` wierszy plików nagłówkowych ATL przedstawionych w poniższym przykładzie. Aby naprawić ten błąd, Usuń komentarz z definicji interfejsu `IEvents` w przykładowym kodzie.
 
-Poniższy przykład spowoduje wygenerowanie C3705:
+Poniższy przykład generuje C3705:
 
-```
+```cpp
 // C3705.cpp
 // compile with: /c
 #define _ATL_ATTRIBUTES 1

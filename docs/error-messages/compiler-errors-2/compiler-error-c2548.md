@@ -1,29 +1,29 @@
 ---
-title: Compiler Error C2548
+title: Błąd kompilatora C2548
 ms.date: 11/04/2016
 f1_keywords:
 - C2548
 helpviewer_keywords:
 - C2548
 ms.assetid: 01e9c835-9bf3-4020-9295-5ee448c519f3
-ms.openlocfilehash: 2c680d86a0ea69d67f9e53a481f2f096f4cc7878
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f89208314c1d2e8ddb5100da72aa600a411b4608
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353472"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756802"
 ---
-# <a name="compiler-error-c2548"></a>Compiler Error C2548
+# <a name="compiler-error-c2548"></a>Błąd kompilatora C2548
 
-"class::member": Brak domyślnego parametru dla parametru parametru
+"Class:: member": Brak domyślnego parametru dla parametru parametru
 
-Brak parametru w liście parametrów domyślnych. Jeśli podasz domyślnego parametru w dowolnym miejscu na liście parametrów, należy zdefiniować parametry domyślne dla wszystkich kolejnych parametrów.
+Brak parametru w liście parametrów domyślnych. W przypadku podania domyślnego parametru w dowolnym miejscu listy parametrów należy zdefiniować domyślne parametry dla wszystkich kolejnych parametrów.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2548:
+Poniższy przykład generuje C2548:
 
-```
+```cpp
 // C2548.cpp
 // compile with: /c
 void func( int = 1, int, int = 3);  // C2548

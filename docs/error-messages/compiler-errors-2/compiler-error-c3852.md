@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3852
 ms.assetid: 194e5c5e-0dfb-414e-86db-791c11eb610c
-ms.openlocfilehash: 4ad7718f4efbeb3b0bc481755fd239615ab796cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f264333d802967d0350caa8ab4ba4925ffe019af
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380932"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754878"
 ---
 # <a name="compiler-error-c3852"></a>Błąd kompilatora C3852
 
-"członek" o typie "type": inicjowanie agregacji nie może zainicjować tej składowej
+Typ "member" typu ": inicjalizacja agregująca nie może zainicjować tego elementu członkowskiego
 
-Próbowano przypisać inicjowanie domyślne jako część agregacji element członkowski danych, który nie może otrzymać inicjowanie domyślne podczas inicjowania agregacji.
+Podjęto próbę przypisania domyślnej inicjalizacji w ramach inicjalizacji agregacji do elementu członkowskiego danych, który nie może odebrać domyślnej inicjalizacji w ramach inicjalizacji agregacji.
 
-Poniższe przykłady generują C3852:
+Następujące przykłady generują C3852:
 
-```
+```cpp
 // C3852.cpp
 struct S
 {

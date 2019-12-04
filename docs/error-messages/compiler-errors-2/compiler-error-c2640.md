@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2640
 ms.assetid: e4d137ab-ed1d-457c-9eec-b70d97f1b0b4
-ms.openlocfilehash: d0dc2dd514186a94811b816c5f3f470a057186f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75acfa4d702b31052b7113117c71bf66ed9de149
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182603"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758245"
 ---
 # <a name="compiler-error-c2640"></a>Błąd kompilatora C2640
 
-"identyfikator": modyfikator __based niedozwolony dla odwołania
+"Identyfikator": modyfikator __based niedozwolony dla odwołania
 
-`__based` Modyfikatora można używać na wskaźnikach tylko.
+Modyfikator `__based` może być używany tylko w przypadku wskaźników.
 
-Poniższy przykład spowoduje wygenerowanie C2640:
+Poniższy przykład generuje C2640:
 
-```
+```cpp
 // C2640.cpp
 void f(int i) {
     void *vp;

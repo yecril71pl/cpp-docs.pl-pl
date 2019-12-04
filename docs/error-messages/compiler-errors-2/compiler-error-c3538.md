@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3538
 ms.assetid: ef3698a5-7356-4c62-b9af-5d3a4baed958
-ms.openlocfilehash: e8b97c8c6e5d23c406bf2d5831279810e7de0902
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1bd287c6b7e0b07938db55c282c69cd00fd25df
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376188"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761546"
 ---
 # <a name="compiler-error-c3538"></a>Błąd kompilatora C3538
 
-na liście deklaratorów "auto" należy zawsze ustalać do tego samego typu
+na liście deklarator "Auto" musi być zawsze wywnioskowanie tego samego typu
 
-Wszystkie zmienne zadeklarowane na liście deklaracji nie rozwiązują tego samego typu.
+Wszystkie zadeklarowane zmienne na liście deklaracji nie są rozpoznawane jako tego samego typu.
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-1. Upewnij się, że wszystkie `auto` deklaracje na liście ustalane do tego samego typu.
+1. Upewnij się, że wszystkie deklaracje `auto` na liście ustalają ten sam typ.
 
 ## <a name="example"></a>Przykład
 
-Poniższe instrukcje yield C3538. Każda instrukcja deklaruje wiele zmiennych, ale każde użycie `auto` — słowo kluczowe nie być ustalane do tego samego typu.
+Poniższe instrukcje zwracają C3538. Każda instrukcja deklaruje wiele zmiennych, ale każde użycie słowa kluczowego `auto` nie powoduje tego samego typu.
 
-```
+```cpp
 // C3538.cpp
 // Compile with /Zc:auto
 // C3538 expected

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2930
 ms.assetid: f07eecd1-e5d1-4518-bd89-b1fd2a003a17
-ms.openlocfilehash: 20fa3e81e66bb30bd63e579a863b6071de4ef871
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b30e614236298cf9a07cbc29e028039903f9748f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385761"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760983"
 ---
 # <a name="compiler-error-c2930"></a>Błąd kompilatora C2930
 
-"class": typ klasy identyfikator ponownie definiowana jako moduł wyliczający 'Identyfikator enum'
+"Class": Identyfikator klasy typu został ponownie zdefiniowany jako moduł wyliczający "enum identifier"
 
-Nie można użyć klasy generyczny lub szablonu jest członkiem wyliczenia.
+Nie można użyć klasy generycznej ani szablonu jako elementu członkowskiego wyliczenia.
 
-Ten błąd może być spowodowany nawiasy klamrowe są nieprawidłowo dopasowywane.
+Ten błąd może być spowodowany nieprawidłowym dopasowaniem nawiasów klamrowych.
 
-Poniższy przykład spowoduje wygenerowanie C2930:
+Poniższy przykład generuje C2930:
 
-```
+```cpp
 // C2930.cpp
 // compile with: /c
 template<class T>
@@ -34,9 +34,9 @@ class y{};
 enum SomeEnum { y };
 ```
 
-C2930 może również wystąpić, gdy za pomocą typów ogólnych:
+C2930 może również wystąpić przy użyciu typów ogólnych:
 
-```
+```cpp
 // C2930c.cpp
 // compile with: /clr /c
 generic<class T>

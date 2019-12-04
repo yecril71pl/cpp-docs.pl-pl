@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3101
 ms.assetid: 4f673766-d4f7-4632-94a5-d36a83f7f4b5
-ms.openlocfilehash: d39afc548010df95bdf31b2c7708bc4fa0310bcd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dca91b9359417b8c4cce9329e2aa25107016c086
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404198"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750003"
 ---
 # <a name="compiler-error-c3101"></a>Błąd kompilatora C3101
 
-Niedozwolone wyrażenie argumentu atrybutu nazwanego "field"
+niedozwolone wyrażenie nazwanego argumentu atrybutu "pole"
 
-Podczas inicjowania nazwany argument atrybutu, wartość musi być stałą czasu kompilacji.
+Podczas inicjowania nazwanego argumentu atrybutu wartość musi być stałą czasu kompilacji.
 
 Aby uzyskać więcej informacji na temat atrybutów, zobacz [atrybuty zdefiniowane przez użytkownika](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3101.
+Poniższy przykład generuje C3101.
 
-```
+```cpp
 // C3101.cpp
 // compile with: /clr /c
 ref class AAttribute : System::Attribute {

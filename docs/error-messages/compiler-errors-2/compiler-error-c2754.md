@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2754
 ms.assetid: 1cab66c5-da9d-4b81-b7fb-9cdc48ff1ccc
-ms.openlocfilehash: cfe6f8faa1b00faf32ae53e6c25c23532c9f3a3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 179cbaf65bf6440a13da6b35c073af981b074c71
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228528"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759571"
 ---
 # <a name="compiler-error-c2754"></a>Błąd kompilatora C2754
 
-"specjalizacja": składowa specjalizacji nie może mieć parametru szablonu bez typu zależnego
+"specjalizacja": Częściowa specjalizacja nie może mieć zależnego parametru szablonu bez typu
 
-Nastąpiła próba częściowo specjalizacja klasy szablonu, która ma parametr zależne szablonu bez typu. Jest to niedozwolone.
+Podjęto próbę częściowej specjalizacji klasy szablonu, która ma zależny parametr szablonu, który nie jest typem. Jest to niedozwolone.
 
-Poniższy przykład spowoduje wygenerowanie C2754:
+Poniższy przykład generuje C2754:
 
-```
+```cpp
 // C2754.cpp
 // compile with: /c
 

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3023
 ms.assetid: 89dcce98-3cd7-4931-a50f-87df1d2ebc9b
-ms.openlocfilehash: 397a68db2b97adc07ae2a22c9cf909f77a125725
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 546f8bafb4e30919600dfce84d6c84ffa819367e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382437"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742044"
 ---
 # <a name="compiler-error-c3023"></a>Błąd kompilatora C3023
 
-"value": Napotkano nieoczekiwany token w argumencie OpenMP — klauzula "klauzula"
+"value": napotkano nieoczekiwany token w argumencie klauzuli "klauzula" OpenMP
 
-Wartość przekazywana do klauzuli były nieprawidłowe.
+Wartości przesłane do klauzuli są nieprawidłowe.
 
-Poniższy przykład spowoduje wygenerowanie C3023:
+Poniższy przykład generuje C3023:
 
-```
+```cpp
 // C3023.cpp
 // compile with: /openmp /link vcomps.lib
 #include <stdio.h>

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3071
 ms.assetid: 69879e66-a60e-4058-9bbd-d5c5e2d8ee37
-ms.openlocfilehash: 1debe431711681a98b9472c85864d84373ec42d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26a95b18970aef450c6fdf718910aa3f816fd778
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406642"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759415"
 ---
 # <a name="compiler-error-c3071"></a>Błąd kompilatora C3071
 
-operator "operator" można stosować tylko do wystąpienia klasy ref lub typu wartościowego
+operator "operator" może być stosowany tylko do wystąpienia klasy ref lub typu wartościowego
 
-Nie można używać operatora CLR na typ macierzysty. Operator może służyć klasy referencyjnej lub struktury ref (typu wartości), ale nie: Typ macierzysty takie jak int lub alias dla typu macierzystego, takich jak System::Int32. Te typy nie może zostać opakowany z kodu C++ w sposób, który odwołuje się do zmiennej natywnych, więc nie można używać operatora.
+Nie można użyć operatora CLR w typie natywnym. Operatora można używać w klasie ref lub ref struct (typu wartości), ale nie typu natywnego, takiego jak int czy alias dla typu natywnego, takiego jak system:: Int32. Te typy nie mogą być opakowane z C++ kodu w sposób, który odwołuje się do zmiennej macierzystej, dlatego nie można użyć operatora.
 
-Aby uzyskać więcej informacji, zobacz [Tracking Reference Operator](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
+Aby uzyskać więcej informacji, zobacz [śledzenie operatora odwołania](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3071.
+Poniższy przykład generuje C3071.
 
-```
+```cpp
 // C3071.cpp
 // compile with: /clr
 class N {};

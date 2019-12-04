@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2679
 ms.assetid: 1a5f9d00-9190-4aa6-bc72-949f68ec136f
-ms.openlocfilehash: de5613c306eb12bc11d45e868f502ca04d0a62e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b9238493e7925f2786df2acb7ecad80eb6ca2eb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386827"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760325"
 ---
 # <a name="compiler-error-c2679"></a>Błąd kompilatora C2679
 
-plik binarny 'operator': znaleziono żadnego operatora, który przyjmuje prawostronny operand typu "type" (lub nie jest dopuszczalne konwersja)
+Binary "operator": nie znaleziono żadnego operatora, który pobiera operand z prawej strony typu "Type" (lub nie istnieje akceptowalna konwersja)
 
-Użycie operatora, możesz go przeciążenia dla określonego typu lub zdefiniuj konwersji na typ, dla którego zdefiniowano operator.
+Aby użyć operatora, należy przeciążyć go dla określonego typu lub zdefiniować konwersję do typu, dla którego zdefiniowano operator.
 
-Poniższy przykład spowoduje wygenerowanie C2679:
+Poniższy przykład generuje C2679:
 
-```
+```cpp
 // C2679.cpp
 class C {
 public:

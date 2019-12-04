@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2384
 ms.assetid: 8145f7ad-31b1-406d-ac43-0d557feab635
-ms.openlocfilehash: 1909fb999dd0f60224029b726f773c11fa69ee40
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ce5c2f2540fbd2aca3509fa1dac55073a002abb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347158"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745268"
 ---
 # <a name="compiler-error-c2384"></a>Błąd kompilatora C2384
 
-'składowa': nie można zastosować __declspec(thread) do członkiem zarządzanej lub klasa WinRT
+"member": nie można zastosować __declspec (thread) do składowej klasy zarządzanej lub WinRT
 
-[Wątku](../../cpp/thread.md) `__declspec` modyfikatora nie można używać na członkiem zarządzanej lub klasy środowiska wykonawczego Windows.
+Nie można użyć modyfikatora `__declspec` [wątku](../../cpp/thread.md) dla elementu członkowskiego klasy zarządzanej lub środowisko wykonawcze systemu Windows.
 
-Statyczne wątku Magazyn lokalny w kodzie zarządzanym można używać tylko dla statycznie ładowanych bibliotek DLL — biblioteki DLL muszą być statycznie ładowane podczas uruchamiania procesu. Środowisko uruchomieniowe Windows nie obsługuje pamięci lokalnej wątku.
+Lokalny magazyn wątków statycznych w kodzie zarządzanym może być używany tylko dla bibliotek DLL ładowanych statycznie — Biblioteka DLL musi być załadowana statycznie podczas uruchamiania procesu. Środowisko wykonawcze systemu Windows nie obsługuje lokalnego magazynu wątków.
 
-Następujące polecenie generuje C2384 i pokazuje, jak to naprawić w C++kodu w sposób niezamierzony:
+Poniższy wiersz generuje C2384 i pokazuje, jak rozwiązać ten problem w C++kodzie/CLI:
 
-```
+```cpp
 // C2384.cpp
 // compile with: /clr /c
 public ref class B {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3901
 ms.assetid: 19af4141-39ad-4c16-a68f-3ae76f648186
-ms.openlocfilehash: 31fbb1e89a0619b4dc8b3f6c86f7f6bc748b80d6
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 43dc5e6e4e515bf5fea867ee61de00f98a60a602
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344581"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749090"
 ---
 # <a name="compiler-error-c3901"></a>Błąd kompilatora C3901
 
-"accessor_function": musi mieć typ zwracany "type"
+"accessor_function": musi być typem zwracanym "Type"
 
-Zwracany typ metody get co najmniej jeden musi być zgodna z typem właściwości. Aby uzyskać więcej informacji, zobacz [właściwość](../../extensions/property-cpp-component-extensions.md).
+Co najmniej jeden typ zwracany metody get musi być zgodny z typem właściwości. Aby uzyskać więcej informacji, zobacz [Właściwość](../../extensions/property-cpp-component-extensions.md).
 
-Poniższy przykład spowoduje wygenerowanie C3901:
+Poniższy przykład generuje C3901:
 
-```
+```cpp
 // C3901.cpp
 // compile with: /clr /c
 using namespace System;

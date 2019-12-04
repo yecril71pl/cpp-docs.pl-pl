@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3709
 ms.assetid: d5576b04-2f93-420a-8f3e-8b8e987e8dab
-ms.openlocfilehash: 3eb2963916cbbcbd925f755f9162ce59e9bff569
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47320c79dbbfc2152c126c80d1eb8c061f3ceb3a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328435"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757920"
 ---
 # <a name="compiler-error-c3709"></a>Błąd kompilatora C3709
 
-'Funkcja': Niewłaściwa składnia określająca zdarzenie w __hook /\__unhook
+"Function": Niewłaściwa składnia określająca zdarzenie w __hook/\__unhook
 
-Podczas określania źródła zdarzeń za pomocą [__hook](../../cpp/hook.md) lub [__unhook](../../cpp/unhook.md), pierwszy parametr musi być metodą ważnego zdarzenia i drugi parametr musi być obiektem źródłowym ważnego zdarzenia (nie metoda).
+Po określeniu źródła zdarzenia z [__hook](../../cpp/hook.md) lub [__unhook](../../cpp/unhook.md), pierwszy parametr musi być prawidłową metodą zdarzenia, a drugi parametr musi być prawidłowym obiektem źródłowym zdarzenia (nie metodą).
 
-Poniższy przykład spowoduje wygenerowanie C3709:
+Poniższy przykład generuje C3709:
 
-```
+```cpp
 // C3709.cpp
 // compile with: /LD
 [event_source(native)]

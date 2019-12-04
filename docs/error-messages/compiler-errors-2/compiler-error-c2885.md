@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
-ms.openlocfilehash: ff5e770052301e95f694d3712f95b82732c2faba
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: e60f3fff2ef61f4d6374072c05a2ad3e64a57031
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447699"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760931"
 ---
 # <a name="compiler-error-c2885"></a>Błąd kompilatora C2885
 
-"class::identifier": nie Nieprawidłowa deklaracja using w zakresie nieklasowym
+"Class:: identifier": nie jest prawidłową deklaracją Using w zakresie nieklasowym
 
-Użyte [przy użyciu](../../cpp/using-declaration.md) deklaracji niepoprawnie.
+Użyto nieprawidłowej deklaracji [using](../../cpp/using-declaration.md) .
 
 ## <a name="example"></a>Przykład
 
-Ten błąd można wygenerować w wyniku pracy zgodności kompilatora, która została wykonana dla programu Visual Studio 2005: nie jest już może być `using` deklaracji typu zagnieżdżonego; kwalifikuj musi jawnie każde odwołanie dokonać typu zagnieżdżonego, umieść typu w n amespace, lub Utwórz element typedef.
+Ten błąd może być wygenerowany jako wynik zgodności kompilatora, który został wykonany dla programu Visual Studio 2005: nie jest już prawidłowym elementem deklaracji `using` dla typu zagnieżdżonego; należy jawnie zakwalifikować każde odwołanie do typu zagnieżdżonego, umieścić typ w przestrzeni nazw lub utworzyć typedef.
 
-Poniższy przykład spowoduje wygenerowanie C2885.
+Poniższy przykład generuje C2885.
 
-```
+```cpp
 // C2885.cpp
 namespace MyNamespace {
    class X1 {};
@@ -54,11 +54,11 @@ int main () {
 
 ## <a name="example"></a>Przykład
 
-Jeśli używasz `using` — słowo kluczowe z elementem członkowskim klasy C++ wymaga zdefiniowania elementu wewnątrz innej klasy (klasy pochodnej).
+Użycie słowa kluczowego `using` z elementem członkowskim klasy C++ wymaga zdefiniowania tego elementu członkowskiego wewnątrz innej klasy (klasy pochodnej).
 
-Poniższy przykład spowoduje wygenerowanie C2885.
+Poniższy przykład generuje C2885.
 
-```
+```cpp
 // C2885_b.cpp
 // compile with: /c
 class A {

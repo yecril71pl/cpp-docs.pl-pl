@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3373
 ms.assetid: 6e7586c3-1a15-4773-ad20-f90090a400dc
-ms.openlocfilehash: 2f279d602d5023c2981f49ff088fec49a1c14c76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cbf6b19e6ae5e5278d7536ba8ec1cfc28483f753
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329000"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758583"
 ---
 # <a name="compiler-error-c3373"></a>Błąd kompilatora C3373
 
-atrybut "attribute" nie przyjmuje żadnych argumentów, z wyjątkiem coclass
+atrybut "Attribute" nie przyjmuje żadnych argumentów z wyjątkiem klasy coclass
 
-Niektóre atrybuty można zastosować do więcej niż jedna konstrukcji języka C++, ale argumentów atrybutu może być dozwolone tylko w niektórych konstrukcji.
+Niektóre atrybuty mogą być stosowane do więcej niż jednej C++ konstrukcji, ale argumenty do atrybutu mogą być dozwolone tylko w niektórych konstrukcjach.
 
-Poniższy przykład spowoduje wygenerowanie C3373:
+Poniższy przykład generuje C3373:
 
-```
+```cpp
 // C3373.cpp
 #include <windows.h>
 

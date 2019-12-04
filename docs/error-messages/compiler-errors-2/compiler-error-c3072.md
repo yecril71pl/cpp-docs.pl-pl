@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3072
 ms.assetid: cdd5cb6b-c478-4698-adfa-c40188d34a18
-ms.openlocfilehash: 2b76fa91d739e9cc89251aaf56aa9b196e62a68d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8fe0802a7529551fce1c0b7242c867db52d8842
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406733"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756763"
 ---
 # <a name="compiler-error-c3072"></a>Błąd kompilatora C3072
 
-Nie można zastosować operatora "operator" do wystąpienia klasy ref
+nie można zastosować operatora "operator" do wystąpienia klasy ref
 
-Użyj jednoargumentowego "`operator` " operator do konwertowania wystąpienia klasy ref dla typu uchwytu
+Użyj jednoargumentowego operatora "`operator`", aby skonwertować wystąpienie klasy ref do typu dojścia
 
-Typ CLR wymaga operatorów CLR, nie Operatorzy lokalny (lub standardowa).  Aby uzyskać więcej informacji, zobacz [Tracking Reference Operator](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
+Typ CLR wymaga operatorów CLR, nienatywnych (lub standardowych).  Aby uzyskać więcej informacji, zobacz [śledzenie operatora odwołania](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3072.
+Poniższy przykład generuje C3072.
 
-```
+```cpp
 // C3072.cpp
 // compile with: /clr
 ref class R {};

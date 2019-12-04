@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2001
 ms.assetid: 0c3a7821-d8e5-4398-ab5a-4116d46e8dda
-ms.openlocfilehash: 03b54fe2373063c8c0f9905da93822928392998d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2bf9bd322812764b2f63493d4b22b58d853a25fa
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209026"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756841"
 ---
 # <a name="compiler-error-c2001"></a>Błąd kompilatora C2001
 
-Nowy wiersz w stałej
+stała nowego wiersza
 
-Stała typu string nie mogą być kontynuowane w drugim wierszu, chyba, że wykonano następujące czynności:
+Stała ciągu nie może być kontynuowana w drugim wierszu, chyba że wykonasz następujące czynności:
 
-- Koniec pierwszego wiersza znakiem kreski ułamkowej odwróconej.
+- Zakończ pierwszy wiersz za pomocą ukośnika odwrotnego.
 
-- Zamknij ciąg znaków w pierwszym wierszu za pomocą podwójnego cudzysłowu i otwórz ciągu w następnym wierszu za pomocą innego podwójny cudzysłów.
+- Zamknij ciąg w pierwszym wierszu ze znakiem podwójnego cudzysłowu i Otwórz ciąg w następnym wierszu z innym znakiem podwójnego cudzysłowu.
 
-Kończenie pierwszy wiersz z \n jest niewystarczająca.
+Zakończenie pierwszego wiersza za pomocą \n nie jest wystarczające.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2001:
+Poniższy przykład generuje C2001:
 
-```
+```cpp
 // C2001.cpp
 // C2001 expected
 #include <stdio.h>
@@ -45,9 +45,9 @@ int main()
 
 ## <a name="example"></a>Przykład
 
-Miejsca do magazynowania na początku następnego wiersza po znaku kontynuacji wiersza są objęte stała typu string. Żaden z przykładów pokazanych powyżej osadzić znak nowego wiersza w stała typu string. Możesz osadzić znak nowego wiersza, jak pokazano poniżej:
+Spacje na początku następnego wiersza po znaku kontynuacji wiersza są uwzględniane w stałej ciągu. Żaden z przykładów pokazanych powyżej nie osadzi znaku nowego wiersza do stałej ciągu. Możesz osadzić znak nowego wiersza, jak pokazano poniżej:
 
-```
+```cpp
 // C2001b.cpp
 #include <stdio.h>
 

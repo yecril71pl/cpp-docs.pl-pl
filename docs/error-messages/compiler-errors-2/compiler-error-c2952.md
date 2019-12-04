@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2952
 ms.assetid: a40e18a2-d02c-4511-854f-6c6fd6789a1a
-ms.openlocfilehash: e0d48c7ce52a87a0d33d2407ef0188ef37b3b9f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a76fc1718941ec5043f14064fa8c2609829ede3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395355"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755970"
 ---
 # <a name="compiler-error-c2952"></a>Błąd kompilatora C2952
 
-"deklaracją": Brak lista parametrów szablonu deklaracji typu
+"Deklaracja": Brak listy parametrów szablonu w deklaracji typu
 
-Deklaracja szablonu został niewłaściwie sformatowany.
+Deklaracja szablonu została źle sformułowana.
 
-Poniższy przykład spowoduje wygenerowanie C2952:
+Poniższy przykład generuje C2952:
 
-```
+```cpp
 // C2952.cpp
 // compile with: /c
 template <class T>
@@ -40,9 +40,9 @@ template <class T1>
 void S<T>::S1<T1>::f() {}
 ```
 
-C2952 może również wystąpić, gdy za pomocą typów ogólnych:
+C2952 może również wystąpić przy użyciu typów ogólnych:
 
-```
+```cpp
 // C2952b.cpp
 // compile with: /clr /c
 generic <class T>

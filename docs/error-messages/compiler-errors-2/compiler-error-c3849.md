@@ -1,29 +1,29 @@
 ---
-title: Compiler Error C3849
+title: Błąd kompilatora C3849
 ms.date: 11/04/2016
 f1_keywords:
 - C3849
 helpviewer_keywords:
 - C3849
 ms.assetid: 5347140e-1a81-4841-98c0-b63d98264b64
-ms.openlocfilehash: ec6725472d31b0b2ade0cd73da4440036239fde3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8492f108b57fbc63bd171276b1aa601f96a28b24
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381062"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754891"
 ---
-# <a name="compiler-error-c3849"></a>Compiler Error C3849
+# <a name="compiler-error-c3849"></a>Błąd kompilatora C3849
 
-Wywołanie w stylu funkcji na wyrażeniu typu "type" spowoduje utratę kwalifikatorów const i/lub volatile dla wszystkich liczba dostępnych przeciążeń operatora
+Wywołanie w stylu funkcji na wyrażeniu typu "Type" spowoduje utratę kwalifikatorów const i/lub volatile dla wszystkich dostępnych przeciążeń operatora liczbowego
 
-Zmienna przy użyciu określonego typu const-volatile może wywołać tylko elementu członkowskiego funkcje zdefiniowane przy użyciu tej samej lub większej kwalifikacji const-volatile.
+Zmienna z określonym nietrwałym typem const może wywołać tylko funkcje członkowskie zdefiniowane z tymi samymi lub większymi nietrwałymi atrybutami const.
 
-Aby naprawić ten błąd, zapewnia funkcja właściwego członka. Nie można wykonać konwersji na typu const ani volatile obiektów kwalifikowaną, jeśli konwersja powoduje utratę kwalifikacji. Możesz uzyskać kwalifikatorów, ale nie utratę kwalifikatorów, podczas konwersji.
+Aby naprawić ten błąd, podaj odpowiednią funkcję członkowską. Nie można wykonać konwersji na obiekt kwalifikowany const lub volatile, gdy konwersja powoduje utratę kwalifikacji. Można uzyskać kwalifikatory, ale nie można utracić kwalifikatorów w konwersji.
 
-Poniższe przykłady generują C3849:
+Następujące przykłady generują C3849:
 
-```
+```cpp
 // C3849.cpp
 void glbFunc3(int i, char c)
 {

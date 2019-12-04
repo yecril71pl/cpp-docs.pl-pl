@@ -1,27 +1,27 @@
 ---
-title: C2687 błąd kompilatora
+title: Błąd kompilatora C2687
 ms.date: 11/04/2016
 f1_keywords:
 - C2687
 helpviewer_keywords:
 - C2687
 ms.assetid: 1d24b24a-cd0f-41cc-975c-b08dcfb7f402
-ms.openlocfilehash: a30efa264a4e7be387c3c2363940bd5ceca1bcc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f3e728033a3230d628242aab341377be2f6670ca
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266195"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760260"
 ---
-# <a name="compiler-error-c2687"></a>C2687 błąd kompilatora
+# <a name="compiler-error-c2687"></a>Błąd kompilatora C2687
 
-"type": zgłoszenie wyjątku nie może być "void" lub oznaczeniem typu niekompletnego lub wskaźnikiem bądź odwołaniem do niekompletnego typu
+"Type": Deklaracja wyjątku nie może być typu "void" lub wskazuje niekompletny typ lub wskaźnik lub odwołanie do niekompletnego typu
 
-Dla typu jako część deklaracji wyjątku musi być zdefiniowane i nie void.
+Dla typu, który będzie częścią deklaracji wyjątku, musi być zdefiniowana, a nie void.
 
-Poniższy przykład spowoduje wygenerowanie C2687:
+Poniższy przykład generuje C2687:
 
-```
+```cpp
 // C2687.cpp
 class C;
 
@@ -33,7 +33,7 @@ int main() {
 
 Możliwe rozwiązanie:
 
-```
+```cpp
 // C2687b.cpp
 // compile with: /EHsc
 class C {};

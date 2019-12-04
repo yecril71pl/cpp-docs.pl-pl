@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3918
 ms.assetid: a8b3a90a-3fe1-4244-a5ff-a31cdae97d98
-ms.openlocfilehash: 2c2d2f2598d06ca228a96f2786fcb02888e29a1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff2b59338c707767fa1d3c382feaa1bfcdf29ce2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386619"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758492"
 ---
 # <a name="compiler-error-c3918"></a>Błąd kompilatora C3918
 
-użycie wymaga członka, jako element członkowski danych
+Użycie wymaga elementu "member" jako elementu członkowskiego danych
 
-C3918 może wystąpić z kilku powodów związanych ze zdarzeniami.
+C3918 może wystąpić z kilku powodów związanych z zdarzeniami.
 
 ## <a name="example"></a>Przykład
 
-C3918 może wystąpić, ponieważ element członkowski klasy jest wymagana w bieżącym kontekście. Poniższy przykład spowoduje wygenerowanie C3918.
+C3918 może wystąpić, ponieważ element członkowski klasy jest wymagany w bieżącym kontekście. Poniższy przykład generuje C3918.
 
-```
+```cpp
 // C3918.cpp
 // compile with: /clr /c
 public ref class C {
@@ -43,11 +43,11 @@ public:
 
 ## <a name="example"></a>Przykład
 
-C3918 przyczyną jest również, jeśli zostanie podjęta próba Sprawdź trivial zdarzeń w przypadku wartości null (Nazwa zdarzenia nie będzie już zapewniać bezpośredni dostęp do magazynu pomocniczego delegata zdarzenia).
+C3918 jest również wynikiem próby sprawdzenia uproszczonego zdarzenia dla wartości null (Nazwa zdarzenia nie będzie już zapewniać bezpośredniego dostępu do delegata magazynu zapasowego dla zdarzenia).
 
-Poniższy przykład spowoduje wygenerowanie C3918.
+Poniższy przykład generuje C3918.
 
-```
+```cpp
 // C3918_2.cpp
 // compile with: /clr /c
 using namespace System;
@@ -68,9 +68,9 @@ ref struct EventSource : public IEFace {
 
 ## <a name="example"></a>Przykład
 
-C3918 może również wystąpić, jeśli niepoprawnie subskrybować zdarzenie. Poniższy przykład spowoduje wygenerowanie C3918.
+C3918 może również wystąpić, jeśli użytkownik nieprawidłowo subskrybuje zdarzenie. Poniższy przykład generuje C3918.
 
-```
+```cpp
 // C3918_3.cpp
 // compile with: /clr /c
 using namespace System;

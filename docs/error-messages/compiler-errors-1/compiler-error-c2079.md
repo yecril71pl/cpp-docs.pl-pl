@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2079
 ms.assetid: ca58d6d5-eccd-40b7-ba14-c003223c5bc7
-ms.openlocfilehash: 68435610680e3b21415a1d9439a8133fd1e2557f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea158d8dada013f6b90d0fbe1e7502665c1c24da
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391962"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757725"
 ---
 # <a name="compiler-error-c2079"></a>Błąd kompilatora C2079
 
-'Identyfikator' używa Niezdefiniowana klasa/struct/union "name"
+element "identifier" używa niezdefiniowanej klasy/struktury/Unii "name"
 
-Określony identyfikator jest niezdefiniowany klasy, struktury lub Unii.
+Określony identyfikator jest niezdefiniowaną klasą, strukturą lub Unią.
 
-Ten błąd może być spowodowany przez inicjowanie anonimowej Unii.
+Ten błąd może być spowodowany inicjalizacją anonimowej Unii.
 
-Poniższy przykład spowoduje wygenerowanie C2079:
+Poniższy przykład generuje C2079:
 
-```
+```cpp
 // C2079.cpp
 // compile with: /EHsc
 #include <iostream>
@@ -34,7 +34,7 @@ int main() {
 
 Możliwe rozwiązanie:
 
-```
+```cpp
 // C2079b.cpp
 // compile with: /EHsc
 #include <fstream>
@@ -43,9 +43,9 @@ int main( ) {
 }
 ```
 
-C2079 może również wystąpić, jeśli użytkownik podejmie próbę zadeklarować obiekt na stosie typu, w których deklaracją do przodu, który znajduje się tylko w zakresie.
+C2079 może również wystąpić, jeśli próbujesz zadeklarować obiekt na stosie typu, którego deklaracja do przodu jest tylko w zakresie.
 
-```
+```cpp
 // C2079c.cpp
 class A;
 
@@ -58,7 +58,7 @@ class A {};
 
 Możliwe rozwiązanie:
 
-```
+```cpp
 // C2079d.cpp
 // compile with: /c
 class A;

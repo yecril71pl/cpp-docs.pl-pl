@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3379
 ms.assetid: a66c2c4e-091c-4426-9cde-7c4cfb2ffce1
-ms.openlocfilehash: 5bf4e2e42b4534d47a2a7d3c9a838c404a99ba68
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d99214f3ad7e7db1edc215d94c98e9cf9ec4ca2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328883"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742902"
 ---
 # <a name="compiler-error-c3379"></a>Błąd kompilatora C3379
 
-"class": zagnieżdżona klasa nie może mieć specyfikatora dostępu do zestawu jako części swojej deklaracji
+"Class": zagnieżdżona Klasa nie może mieć specyfikatora dostępu do zestawu jako części swojej deklaracji
 
-W przypadku zastosowania do typu zarządzanego, takich jak klasy lub struktury, [publicznych](../../cpp/public-cpp.md) i [prywatnej](../../cpp/private-cpp.md) słowa kluczowe wskazuje, czy klasa będzie udostępniana przez metadane zestawu. `public` lub `private` nie można zastosować do klasy zagnieżdżonej, która odziedziczy dostęp do zestawu otaczającej klasy.
+W przypadku zastosowania do typu zarządzanego, takiego jak Klasa lub struktura, słowa kluczowe [Public](../../cpp/public-cpp.md) i [Private](../../cpp/private-cpp.md) wskazują, czy Klasa zostanie udostępniona za pomocą metadanych zestawu. nie można zastosować `public` lub `private` do klasy zagnieżdżonej, która odziedziczy dostęp do zestawu klasy otaczającej.
 
-Gdy jest używane z [/CLR](../../build/reference/clr-common-language-runtime-compilation.md), `ref` i `value` słowa kluczowe wskazują, że klasa jest zarządzana (zobacz [klas i struktur](../../extensions/classes-and-structs-cpp-component-extensions.md)).
+W przypadku użycia z [/CLR](../../build/reference/clr-common-language-runtime-compilation.md)słowa kluczowe `ref` i `value` wskazują, że Klasa jest zarządzana (zobacz [klasy i struktury](../../extensions/classes-and-structs-cpp-component-extensions.md)).
 
-Poniższy przykład spowoduje wygenerowanie C3379:
+Poniższy przykład generuje C3379:
 
-```
+```cpp
 // C3379a.cpp
 // compile with: /clr
 using namespace System;

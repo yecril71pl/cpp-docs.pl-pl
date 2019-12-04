@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3270
 ms.assetid: 70e6e76b-7415-48f5-a61e-2ed50caf08e4
-ms.openlocfilehash: 91656ee893f2ad7b3f0c53cb157cd9faf129e4c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52c4f8d320d3b6ac66e702d03346af0f84b664e1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366046"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754007"
 ---
 # <a name="compiler-error-c3270"></a>Błąd kompilatora C3270
 
-"field": atrybut FieldOffset należy używać tylko w kontekście StructLayout(Explicit), w tym przypadku jest wymagana
+"Field": atrybut FieldOffset może być używany tylko w kontekście StructLayout (Explicit), w tym przypadku jest to wymagane
 
-Pole zostało oznaczone **FieldOffset**, który jest dozwolony tylko w przypadku **StructLayout(Explicit)** jest aktywna.
+Pole zostało oznaczone atrybutem **FieldOffset**, który jest dozwolony tylko wtedy, gdy **StructLayout (Explicit)** jest w efekcie.
 
-Poniższy przykład spowoduje wygenerowanie C3270:
+Poniższy przykład generuje C3270:
 
-```
+```cpp
 // C3270_2.cpp
 // compile with: /clr /c
 using namespace System::Runtime::InteropServices;

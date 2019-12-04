@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2843
 ms.assetid: 9d3f2ac4-eea5-4fed-abeb-e752f442bfcc
-ms.openlocfilehash: 9c45e0d95565d0aec1753c6e7b10659e9a8b5714
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d6ab867323e629695e161f3ac001a3fb2174775e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329572"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752005"
 ---
 # <a name="compiler-error-c2843"></a>Błąd kompilatora C2843
 
-'składowa': nie można przyjąć adresu element członkowski danych niestatycznych lub zarządzanej metody lub typu WinRT
+"member": nie można przyjąć adresu niestatycznej składowej danych lub metody typu zarządzanego lub WinRT
 
-Wystąpienie jest potrzebnych do wykonania adres niestatycznych elementów członkowskich danych zarządzanej lub WinRT klasę lub interfejs.
+Wystąpienie jest konieczne do uzyskania adresu niestatycznych elementów członkowskich danych klasy zarządzanej lub lub interfejsu WinRT.
 
-Poniższy przykład generuje C2843 i pokazuje, jak go naprawić:
+Poniższy przykład generuje C2843 i pokazuje, jak to naprawić:
 
-```
+```cpp
 // C2843_2.cpp
 // compile with: /clr
 public ref class C {

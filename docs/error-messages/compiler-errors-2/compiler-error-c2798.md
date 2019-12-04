@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2798
 ms.assetid: fb0cd861-b228-4f81-8090-e28344a727e0
-ms.openlocfilehash: f3e8f0ac260e49866d1c654f89d34bf57a8ffbc1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6eed1f1aad0783f9e1d5f4126847b54f6b7278e0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152478"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739209"
 ---
 # <a name="compiler-error-c2798"></a>Błąd kompilatora C2798
 
-"super::member" jest niejednoznaczny
+element "Super:: member" jest niejednoznaczny
 
-Wiele struktur dziedziczone zawierają elementu członkowskiego, do którego odwołuje się [super](../../cpp/super.md). Można naprawić błąd, wybierając:
+Wiele dziedziczonych struktur zawiera element członkowski, do którego odwołuje się [Super](../../cpp/super.md). Błąd można naprawić, wykonując jedną z:
 
-- Usuwanie z listy dziedziczenia d. B1 i B2
+- Usuwanie B1 lub B2 z listy dziedziczenia D.
 
-- Zmiana nazwy elementu członkowskiego danych w B1 i B2.
+- Zmiana nazwy elementu członkowskiego danych w B1 lub B2.
 
-Poniższy przykład spowoduje wygenerowanie C2798:
+Poniższy przykład generuje C2798:
 
-```
+```cpp
 // C2798.cpp
 struct B1 {
    int i;

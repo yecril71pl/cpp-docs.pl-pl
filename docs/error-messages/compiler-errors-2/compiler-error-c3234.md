@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3234
 ms.assetid: ebefc15a-e40d-424b-a3dd-d7e185d0ed7b
-ms.openlocfilehash: fd6e918c115ed121dda5d589a62b1a94d14184a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: acfbd44444270f90ae79f498724fcec14aa408ac
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175268"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751095"
 ---
 # <a name="compiler-error-c3234"></a>Błąd kompilatora C3234
 
@@ -21,9 +21,9 @@ Klasa generyczna nie może dziedziczyć z parametru typu ogólnego.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3234.
+Poniższy przykład generuje C3234.
 
-```
+```cpp
 // C3234.cpp
 // compile with: /clr /c
 generic <class T>

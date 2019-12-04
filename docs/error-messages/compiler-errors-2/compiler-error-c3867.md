@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
-ms.openlocfilehash: 9a5094b6c3d914c2f66ee8ed94bcdcce5827f130
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 7e3f52b2b69058549cb8aa3e14d2a4b4048fc4e4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447190"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756854"
 ---
 # <a name="compiler-error-c3867"></a>Błąd kompilatora C3867
 
-"func": wywołanie funkcji brakuje listy argumentów; Użyj "& func" Aby utworzyć wskaźnik do składowej
+"Func": wywołanie funkcji nie ma listy argumentów; Użyj funkcji "& Func", aby utworzyć wskaźnik do składowej
 
-Próbowano pobrać adresu funkcji składowej bez kwalifikowania funkcja elementu członkowskiego przy użyciu nazwy klasy i operatora address-of.
+Podjęto próbę pobrania adresu funkcji składowej bez kwalifikowania funkcji składowej przy użyciu nazwy klasy i operatora address-of.
 
-Ten błąd może być też wygenerowany w wyniku pracy zgodności kompilatora, która została wykonana dla programu Visual Studio 2005: rozszerzoną zgodność wskaźników do elementów członkowskich. Kod, który jest skompilowany przed Visual Studio 2005 teraz wygeneruje C3867.
+Ten błąd może również zostać wygenerowany w wyniku działania kompilatora, który został wykonany dla programu Visual Studio 2005: Ulepszona zgodność wskaźnika do składowej. Kod, który został skompilowany przed Visual Studio 2005, będzie teraz generował C3867.
 
 ## <a name="example"></a>Przykład
 
-Mogą być wystawiane C3867 z kompilatora mylący sugerowane rozwiązanie problemu dotyczącego. Jeśli to możliwe, należy użyć najbardziej pochodnej klasy.
+C3867 może być wystawiony przez kompilator z mylącą zalecaną rozdzielczością. Jeśli to możliwe, użyj klasy najbardziej pochodnej.
 
-Poniższy przykład generuje C3867 i pokazuje, jak go naprawić.
+Poniższy przykład generuje C3867 i pokazuje, jak rozwiązać ten problem.
 
-```
+```cpp
 // C3867_1.cpp
 // compile with: /c
 struct Base {
@@ -47,9 +47,9 @@ void Derived::Bar() {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C3867 i pokazuje, jak go naprawić.
+Poniższy przykład generuje C3867 i pokazuje, jak rozwiązać ten problem.
 
-```
+```cpp
 // C3867_2.cpp
 #include<stdio.h>
 
@@ -79,9 +79,9 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C3867 i pokazuje, jak go naprawić.
+Poniższy przykład generuje C3867 i pokazuje, jak rozwiązać ten problem.
 
-```
+```cpp
 // C3867_3.cpp
 class X {
 public:
@@ -98,9 +98,9 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3867.
+Poniższy przykład generuje C3867.
 
-```
+```cpp
 // C3867_4.cpp
 // compile with: /c
 class A {
@@ -122,9 +122,9 @@ public:
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3867.
+Poniższy przykład generuje C3867.
 
-```
+```cpp
 // C3867_5.cpp
 // compile with: /EHsc
 #include <iostream>

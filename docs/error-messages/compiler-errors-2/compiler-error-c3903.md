@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3903
 ms.assetid: cf47d7ad-a3bd-4f75-a253-71586e7a3be6
-ms.openlocfilehash: bed6561d1e8d4281cd57e78808744d018c3cc9b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 585fb82c2838b2bc8aebbfbab7bdda744ba38da8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406590"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749077"
 ---
 # <a name="compiler-error-c3903"></a>Błąd kompilatora C3903
 
-"właściwość": jest nie zostały ustawione lub get, metoda
+"Property": nie ma metody Set lub Get
 
-Właściwość musi mieć co najmniej jeden `get` lub `set` metody. Aby uzyskać więcej informacji, zobacz [właściwość](../../extensions/property-cpp-component-extensions.md).
+Właściwość musi mieć co najmniej `get` lub metodę `set`. Aby uzyskać więcej informacji, zobacz [Właściwość](../../extensions/property-cpp-component-extensions.md).
 
-Poniższy przykład spowoduje wygenerowanie C3903:
+Poniższy przykład generuje C3903:
 
-```
+```cpp
 // C3903.cpp
 // compile with: /clr
 ref class X {

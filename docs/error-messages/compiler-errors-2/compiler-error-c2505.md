@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2505
 ms.assetid: b19f5c53-399d-425e-90db-fe3ca9b40858
-ms.openlocfilehash: bf5ffb9b6bad3db1d264941a6aefa391be521c98
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94a6f180c93839646d771509145b2f65a00780fd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165045"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746867"
 ---
 # <a name="compiler-error-c2505"></a>Błąd kompilatora C2505
 
-'symbol': "__declspec(modifer)" będzie stosowany tylko do deklaracji lub definicji obiektów globalnych albo statycznych składowych danych
+"symbol": "__declspec (modifer)" można stosować tylko do deklaracji lub definicji obiektów globalnych lub statycznych elementów członkowskich danych
 
-A `__declspec` modyfikatory, które mają być używane tylko w zakresie globalnym był używany w funkcji.
+Modyfikator `__declspec`, który jest przeznaczony do użycia tylko w zakresie globalnym, został użyty w funkcji.
 
-Aby uzyskać więcej informacji, zobacz [appdomain](../../cpp/appdomain.md) i [procesu](../../cpp/process.md).
+Aby uzyskać więcej informacji, zobacz temat [AppDomain](../../cpp/appdomain.md) i [Process](../../cpp/process.md).
 
-Poniższy przykład spowoduje wygenerowanie C2505:
+Poniższy przykład generuje C2505:
 
-```
+```cpp
 // C2505.cpp
 // compile with: /clr
 

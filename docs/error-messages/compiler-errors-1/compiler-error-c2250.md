@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2250
 ms.assetid: f990986f-5c7d-4af4-a25c-b35540f1e217
-ms.openlocfilehash: ea426e071eecb09359c3a99a6f569f628595784a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 472aabf00fecd000f274d97b5753ed8460ff867f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301360"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758869"
 ---
 # <a name="compiler-error-c2250"></a>Błąd kompilatora C2250
 
-'Identyfikator': niejednoznaczne dziedziczenie "class::member"
+"Identyfikator": niejednoznaczne dziedziczenie elementu "Class:: member"
 
-Klasa pochodna dziedziczy więcej niż jeden przesłonięcie funkcji wirtualnej z wirtualnej klasy bazowej. Te zastąpienia są niejednoznaczne w klasie pochodnej.
+Klasa pochodna dziedziczy więcej niż jedno przesłonięcie funkcji wirtualnej wirtualnej klasy bazowej. Te zastąpienia są niejednoznaczne w klasie pochodnej.
 
-Poniższy przykład spowoduje wygenerowanie C2286:
+Poniższy przykład generuje C2286:
 
-```
+```cpp
 // C2250.cpp
 // compile with: /c
 // C2250 expected

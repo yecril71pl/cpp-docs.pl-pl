@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2061
 ms.assetid: b0e61c0c-a205-4820-b9aa-301d6c6fe6eb
-ms.openlocfilehash: 85357d94c7bc2d709e852daa60caf269949ad1b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc64852523b6b56bc506260576e3c79164628340
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408696"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735934"
 ---
 # <a name="compiler-error-c2061"></a>Błąd kompilatora C2061
 
-Błąd składniowy: identyfikator 'Identyfikator'
+Błąd składniowy: Identyfikator "Identyfikator"
 
-Kompilator znaleźć identyfikator, gdy nie był oczekiwany. Upewnij się, że `identifier` jest zadeklarowana, zanim go użyjesz.
+Kompilator znalazł identyfikator, którego nie oczekiwano. Upewnij się, że `identifier` jest zadeklarowany przed użyciem.
 
-Inicjator mogą być ujęte w nawiasy. Aby uniknąć tego problemu, należy umieścić specyfikator w nawiasach lub Przekształć go w `typedef`.
+Inicjator może być ujęty w nawiasy. Aby uniknąć tego problemu, umieść deklarator w nawiasach lub Przekształć go w `typedef`.
 
-Również być przyczyną tego błędu, gdy kompilator wykryje wyrażenie jako argument szablonu klasy; Użyj [typename](../../cpp/typename.md) aby poinformować kompilator jest typem.
+Ten błąd może być również spowodowany tym, że kompilator wykrywa wyrażenie jako argument szablonu klasy; Użyj parametru [TypeName](../../cpp/typename.md) , aby poinformować kompilator, że jest typem.
 
-Poniższy przykład spowoduje wygenerowanie C2061:
+Poniższy przykład generuje C2061:
 
-```
+```cpp
 // C2061.cpp
 // compile with: /c
 template < A a >   // C2061
@@ -34,9 +34,9 @@ template < A a >   // C2061
 class c{};
 ```
 
-C2061 może wystąpić w przypadku przekazania nazwy wystąpienia [typeid](../../extensions/typeid-cpp-component-extensions.md):
+C2061 może wystąpić w przypadku przekazania nazwy wystąpienia do elementu [typeid](../../extensions/typeid-cpp-component-extensions.md):
 
-```
+```cpp
 // C2061b.cpp
 // compile with: /clr
 ref struct G {

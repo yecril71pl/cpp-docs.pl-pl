@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2914
 ms.assetid: fc6a0592-f53e-4f5a-88cb-780bbed4acf2
-ms.openlocfilehash: 2500736f799032aea71173931139404b4406a16a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bed9e31d7d1de069ee708f8f482d26b37bc16833
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384351"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761061"
 ---
 # <a name="compiler-error-c2914"></a>Błąd kompilatora C2914
 
-'Identyfikator': nie można wywnioskować argumentów typu jako argumentu funkcji jest niejednoznaczny
+"Identyfikator": nie można wywnioskować argumentu typu, ponieważ argument funkcji jest niejednoznaczny
 
-Kompilator nie może określić, które przeciążone funkcje, aby użyć argumentu generyczny lub szablonu.
+Kompilator nie może określić, które przeciążone funkcje mają być używane dla argumentu generycznego lub szablonu.
 
-Poniższy przykład spowoduje wygenerowanie C2914:
+Poniższy przykład generuje C2914:
 
-```
+```cpp
 // C2914.cpp
 // compile with: /c
 void f(int);
@@ -32,9 +32,9 @@ void h() { g(f); }   // C2914
 // void h() { g<int>(f); }
 ```
 
-C2914 może również wystąpić, gdy za pomocą typów ogólnych.  Poniższy przykład spowoduje wygenerowanie C2914:
+C2914 może również wystąpić podczas korzystania z typów ogólnych.  Poniższy przykład generuje C2914:
 
-```
+```cpp
 // C2914b.cpp
 // compile with: /clr /c
 void f(int);

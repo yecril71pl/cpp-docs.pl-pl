@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2352
 ms.assetid: 0efad8cb-659f-4b3e-8f6f-9f8ec44d345c
-ms.openlocfilehash: 387738faa5b55e60cbb9df2185efcb94098011d7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33fdaff31fc9e3fcde1a7101c7858704773ae74c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388803"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759987"
 ---
 # <a name="compiler-error-c2352"></a>Błąd kompilatora C2352
 
-"class::function": niedozwolone wywołanie niestatycznej składowej — funkcja
+"Class:: Function": niedozwolone wywołanie niestatycznej funkcji składowej
 
-A `static` funkcji składowej wywołać funkcję niestatycznej składowej. Lub funkcja niestatycznej składowej została wywołana z poza klasy jako funkcję statyczną.
+`static` funkcja członkowska o nazwie niestatycznej funkcji członkowskiej. Lub niestatyczna funkcja członkowska została wywołana spoza klasy jako funkcji statycznej.
 
-Poniższy przykład generuje C2352 i pokazuje, jak go naprawić:
+Poniższy przykład generuje C2352 i pokazuje, jak to naprawić:
 
-```
+```cpp
 // C2352.cpp
 // compile with: /c
 class CMyClass {
@@ -35,9 +35,9 @@ public:
 };
 ```
 
-Poniższy przykład generuje C2352 i pokazuje, jak go naprawić:
+Poniższy przykład generuje C2352 i pokazuje, jak to naprawić:
 
-```
+```cpp
 // C2352b.cpp
 class MyClass {
 public:

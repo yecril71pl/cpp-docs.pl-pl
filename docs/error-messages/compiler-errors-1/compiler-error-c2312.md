@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2312
 ms.assetid: c8bcfd06-12c1-4323-bb53-ba392d36daa4
-ms.openlocfilehash: 2c8d360be43c46b1a26c833dbb8aa95a7e3740e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a0fbefcb1122e5c3395580a2508420b1ccea17c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302049"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748141"
 ---
 # <a name="compiler-error-c2312"></a>Błąd kompilatora C2312
 
-"exception1": zostanie przechwycony przez "exception2" w wierszu o numerze
+"exception1": został przechwycony przez "exception2" w numerze wiersza
 
-Dwie procedury obsługi catch ten sam typ wyjątku.
+Dwa programy obsługi przechwytują ten sam typ wyjątku.
 
-Poniższy przykład spowoduje wygenerowanie C2312:
+Poniższy przykład generuje C2312:
 
-```
+```cpp
 // C2312.cpp
 // compile with: /EHsc
 #include <eh.h>

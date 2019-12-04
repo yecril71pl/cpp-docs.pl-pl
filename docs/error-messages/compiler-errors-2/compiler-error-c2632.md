@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - C2632
 ms.assetid: b15a6b1b-42d2-4e1b-8660-e6bfde61052d
-ms.openlocfilehash: b92d44bcfd04d4de7b39c5bdab5ee146d9b6693b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f69d43bf50f5f13957e49d1e9ffa798a3db5a7b3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257637"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754696"
 ---
 # <a name="compiler-error-c2632"></a>Błąd kompilatora C2632
 
-'Typ1', po której następuje 'Typ2' jest niedozwolony
+element "type1", po którym następuje wyrażenie "type2", jest niedozwolony
 
-Ten błąd może być spowodowany, jeśli brak kodu między dwoma specyfikatory typu.
+Ten błąd może być spowodowany brakiem kodu między dwoma specyfikatorami typu.
 
-Poniższy przykład spowoduje wygenerowanie C2632:
+Poniższy przykład generuje C2632:
 
-```
+```cpp
 // C2632.cpp
 int float i;   // C2632
 ```
 
-Ten błąd można wygenerować w taki sposób, w wyniku pracy zgodności kompilatora, która została wykonana dla Visual Studio .NET 2003. `bool` jest teraz odpowiedniego typu. W poprzednich wersjach `bool` został element typedef i identyfikatory można utworzyć przy użyciu tej nazwy.
+Ten błąd może być również wygenerowany w wyniku działania kompilatora, który został wykonany dla programu Visual Studio .NET 2003. `bool` jest teraz odpowiednim typem. W poprzednich wersjach `bool` była elementem TypeDef i można utworzyć identyfikatory o tej nazwie.
 
-Poniższy przykład spowoduje wygenerowanie C2632:
+Poniższy przykład generuje C2632:
 
-```
+```cpp
 // C2632_2.cpp
 // compile with: /LD
 void f(int bool);   // C2632
 ```
 
-Aby rozwiązać ten problem, tak aby dany kod jest prawidłowy w wersjach Visual Studio .NET 2003 i Visual Studio .NET, Visual c++, zmień identyfikator.
+Aby rozwiązać ten problem, aby kod był prawidłowy w wersji Visual Studio .NET 2003 i Visual Studio .NET C++, Zmień nazwę identyfikatora.

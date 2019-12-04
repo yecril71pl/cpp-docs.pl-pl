@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2571
 ms.assetid: c6522616-dee9-4d7d-9bf8-30a7e1deaadf
-ms.openlocfilehash: d7d4898e5f0b55c50a4c18cef053cc150394d7e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7bd87f0732e1a632b8c86cc57fab1a0f104b2c77
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408585"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755502"
 ---
 # <a name="compiler-error-c2571"></a>Błąd kompilatora C2571
 
-'Funkcja': funkcja wirtualna nie może być w Unii "union"
+"Function": funkcja wirtualna nie może być w Unii "Union"
 
-Unii jest zadeklarowana za pomocą funkcji wirtualnej. Można zadeklarować funkcję wirtualną tylko w klasie lub strukturze.  Możliwe rozwiązania:
+Unia jest zadeklarowana za pomocą funkcji wirtualnej. Funkcję wirtualną można zadeklarować tylko w klasie lub strukturze.  Możliwe rozwiązania:
 
-1. Zmień Unii klasy lub struktury.
+1. Zmień Unię na klasę lub strukturę.
 
-1. Ustaw funkcję niewirtualne.
+1. Ustaw niewirtualną funkcję.
 
-Poniższy przykład spowoduje wygenerowanie C2571:
+Poniższy przykład generuje C2571:
 
-```
+```cpp
 // C2571.cpp
 // compile with: /c
 union A {

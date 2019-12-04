@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3225
 ms.assetid: f5f66973-256e-4298-ac46-c87819cbde34
-ms.openlocfilehash: cae0572002c849fb5aed771993d3a89ed82c726a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1caa1e7ce787ffc14e615c946b5d670c75e0332a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174019"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757621"
 ---
 # <a name="compiler-error-c3225"></a>Błąd kompilatora C3225
 
-argument Typ generycznego dla "arg" nie może być "type", musi on być typem wartościowym lub typem uchwytu
+argument typu generycznego dla elementu "ARG" nie może być typem "Type", musi być typem wartościowym lub typem dojścia
 
-Argument typu ogólnego nie jest poprawnego typu.
+Nieprawidłowy typ argumentu typu ogólnego.
 
-Aby uzyskać więcej informacji, zobacz [ogólne](../../extensions/generics-cpp-component-extensions.md).
+Aby uzyskać więcej informacji, zobacz [Ogólne](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Przykład
 
-Nie można utworzyć wystąpienia typu ogólnego z typu natywnego. Poniższy przykład spowoduje wygenerowanie C3225.
+Nie można utworzyć wystąpienia typu ogólnego z typem natywnym. Poniższy przykład generuje C3225.
 
-```
+```cpp
 // C3225.cpp
 // compile with: /clr
 class A {};
@@ -43,7 +43,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład tworzy składnik przy użyciu języka C#. Należy zauważyć, że ograniczenia Określa typ ogólny tylko mogą być utworzone z typem wartości.
+Poniższy przykład tworzy składnik przy użyciu C#. Należy zauważyć, że ograniczenie określa, że typ ogólny można utworzyć tylko przy użyciu typu wartości.
 
 ```
 // C3225_b.cs
@@ -54,9 +54,9 @@ public class MyList<T> where T: struct {}
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie używa języka C# — utworzone składnika i narusza ograniczenie, które mogą być tylko MyList utworzone za pomocą typu wartości innych niż <xref:System.Nullable>. Poniższy przykład spowoduje wygenerowanie C3225.
+Ten przykład zużywa składnik C#--------------Author i narusza ograniczenia, które można utworzyć tylko przy użyciu typu wartości innego niż <xref:System.Nullable>. Poniższy przykład generuje C3225.
 
-```
+```cpp
 // C3225_c.cpp
 // compile with: /clr
 #using "C3225_b.dll"

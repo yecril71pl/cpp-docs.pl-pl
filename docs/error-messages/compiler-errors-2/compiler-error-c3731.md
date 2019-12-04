@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3731
 ms.assetid: 45f89fcd-464c-4bc8-8a42-edcb5416d26c
-ms.openlocfilehash: 5acc33869648f83cd44bc557128c685f521ddf88
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9acf80eec0d36db64fa070d691533e7085754ac0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328071"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752954"
 ---
 # <a name="compiler-error-c3731"></a>Błąd kompilatora C3731
 
-niezgodne zdarzenie "function1" i procedury obsługi 'function2'; Źródło zdarzenia i procedury obsługi zdarzeń muszą być tego samego typu
+niezgodne zdarzenie "function1" i obsługa "function2"; Źródło zdarzeń i procedura obsługi zdarzeń muszą być tego samego typu
 
-Źródło zdarzeń i odbiorcę zdarzeń musi mieć tego samego typu (na przykład `native` a `com` typy). Aby naprawić ten błąd, należy typów źródła zdarzeń i dopasowania procedury obsługi zdarzeń.
+Źródło zdarzeń i odbiorca zdarzenia muszą mieć ten sam typ (na przykład `native` a `com` typy). Aby naprawić ten błąd, upewnij się, że typy źródła zdarzeń i programu obsługi zdarzeń pasują do siebie.
 
-Poniższy przykład spowoduje wygenerowanie C3731:
+Poniższy przykład generuje C3731:
 
-```
+```cpp
 // C3731.cpp
 // compile with: /clr
 #using <mscorlib.dll>

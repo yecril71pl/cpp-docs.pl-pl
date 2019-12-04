@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3415
 ms.assetid: fa2db8ab-2820-4ec3-a740-fb5e2adcfb29
-ms.openlocfilehash: 3d4163fac83e24d30f29aed92e7a1ec1fc9e362f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da7b49d30866b9fa5ab27a93357fd2812aaa2806
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242867"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742928"
 ---
 # <a name="compiler-error-c3415"></a>Błąd kompilatora C3415
 
-"section_name" znaleziono wiele sekcji z różnymi atrybutami (wartość)
+znaleziono wiele sekcji "section_name" z różnymi atrybutami ("value")
 
-Wartości powodujące konflikt zostały określone w [sekcji](../../preprocessor/section.md) pragmy.
+W [sekcjach](../../preprocessor/section.md) pragma określono wartości powodujące konflikt.
 
-`value` jest to ustawienie bieżącej sekcji, jak to określono w ntimage.h. Na przykład:
+`value` jest bieżącym ustawieniem dla sekcji, jak określono w ntimage. h. Na przykład:
 
 ```
 // Section contains extended relocations.
@@ -40,9 +40,9 @@ Wartości powodujące konflikt zostały określone w [sekcji](../../preprocessor
 #define IMAGE_SCN_MEM_WRITE                  0x80000000
 ```
 
-Poniższy przykład spowoduje wygenerowanie C3415:
+Poniższy przykład generuje C3415:
 
-```
+```cpp
 // C3415.cpp
 #pragma section("mysec1",write)
 #pragma section("mysec1",read)   // C3415

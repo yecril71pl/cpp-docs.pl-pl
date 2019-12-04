@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3467
 ms.assetid: e2b844d0-4920-412f-99fd-cd8051c4aa41
-ms.openlocfilehash: 70375950543b9525fca10fff3084c923095fa35e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bba505b01df8eb1b253fbecb0db93d94ae62d5ac
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173490"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756373"
 ---
 # <a name="compiler-error-c3467"></a>Błąd kompilatora C3467
 
-"type": ten typ został już przekazany
+"Type": ten typ został już przekazany
 
-Kompilator znaleziono więcej niż jedna deklaracja typu do przodu dla tego samego typu. Dozwolone jest tylko jedna deklaracja według typu.
+Kompilator znalazł więcej niż jedną deklarację typu forward dla tego samego typu. Dozwolona jest tylko jedna deklaracja na typ.
 
-Aby uzyskać więcej informacji, zobacz [Type Forwarding (C++sposób niezamierzony)](../../extensions/type-forwarding-cpp-cli.md).
+Aby uzyskać więcej informacji, zobacz [przekazywanie typuC++(/CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Przykład
 
 Poniższy przykład tworzy składnik.
 
-```
+```cpp
 // C3467.cpp
 // compile with: /LD /clr
 public ref class R {};
@@ -33,9 +33,9 @@ public ref class R {};
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3467.
+Poniższy przykład generuje C3467.
 
-```
+```cpp
 // C3467_b.cpp
 // compile with: /clr /c
 #using "C3467.dll"

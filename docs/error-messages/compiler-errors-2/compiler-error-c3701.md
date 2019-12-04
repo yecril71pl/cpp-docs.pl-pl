@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3701
 ms.assetid: a7faaa87-d2f5-4d6a-9a2f-5cab2d24a648
-ms.openlocfilehash: 2efbf3c48b7c366d262facac9cebb4f72d9f1513
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 6852d130b0f10282b8c22b0053760eca120252c7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344558"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758024"
 ---
 # <a name="compiler-error-c3701"></a>Błąd kompilatora C3701
 
-'Funkcja': event_source — nie ma żadnych zdarzeń
+"Function": event_source nie ma żadnych zdarzeń
 
-Podjęto próbę użycia [event_source](../../windows/event-source.md) dla klasy, która nie ma żadnych metod zdarzeń. Aby naprawić ten błąd, należy dodać jeden lub więcej zdarzeń do klasy.
+Podjęto próbę użycia [event_source](../../windows/event-source.md) na klasie, która nie ma metod zdarzeń. Aby naprawić ten błąd, Dodaj co najmniej jedno zdarzenie do klasy.
 
-Poniższy przykład spowoduje wygenerowanie C3701:
+Poniższy przykład generuje C3701:
 
-```
+```cpp
 // C3701.cpp
 [ event_source(native) ]
 class CEventSrc {

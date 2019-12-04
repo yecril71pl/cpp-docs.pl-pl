@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3703
 ms.assetid: 7e3677d9-f2be-4c26-998f-423564e9023c
-ms.openlocfilehash: 0b34760bc3f5b23148ce84cf590685efad2008df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1071623c8dbaef52a6a391d8858e7502de9c74b4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324639"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757998"
 ---
 # <a name="compiler-error-c3703"></a>Błąd kompilatora C3703
 
-"program obsługi zdarzeń": metoda obsługi zdarzeń musi mieć tą samą klasę magazynu jako źródła "event"
+"Obsługa zdarzeń": metoda obsługi zdarzeń musi mieć tę samą klasę magazynu co Źródło "Event"
 
-[Zdarzeń](../../cpp/event-handling.md) ma klasę magazynu innego niż program obsługi zdarzeń, do którego jest podłączone. Na przykład ten błąd występuje, jeśli procedura obsługi zdarzeń jest statyczną funkcją składową, a zdarzenie nie jest statyczne. Aby naprawić ten błąd, zapewniają zdarzenia i tą samą klasę magazynu programu obsługi zdarzeń.
+[Zdarzenie](../../cpp/event-handling.md) ma inną klasę magazynu niż program obsługi zdarzeń, do którego jest podłączany. Na przykład ten błąd występuje, jeśli program obsługi zdarzeń jest statyczną funkcją składową, a zdarzenie nie jest statyczne. Aby naprawić ten błąd, nadaj zdarzeniu i obsłudze zdarzeń tę samą klasę magazynu.
 
-Poniższy przykład spowoduje wygenerowanie C3703:
+Poniższy przykład generuje C3703:
 
-```
+```cpp
 // C3703.cpp
 // C3703 expected
 #include <stdio.h>

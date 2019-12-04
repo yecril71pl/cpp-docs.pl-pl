@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3913
 ms.assetid: a678bfce-9524-470d-9f23-7d08ecb972c8
-ms.openlocfilehash: 3a38f7bffd56f025510e092ad37b5f810cb11a9b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0dfe8274c2b9ee5d2861239c8bb1464d9642ebc9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406564"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741264"
 ---
 # <a name="compiler-error-c3913"></a>Błąd kompilatora C3913
 
-Domyślna właściwość musi być indeksowana
+domyślna właściwość musi być indeksowana
 
-Domyślna właściwość został niepoprawnie zdefiniowany.
+Właściwość domyślna została nieprawidłowo zdefiniowana.
 
-Aby uzyskać więcej informacji, zobacz [właściwość](../../extensions/property-cpp-component-extensions.md).
+Aby uzyskać więcej informacji, zobacz [Właściwość](../../extensions/property-cpp-component-extensions.md).
 
-Poniższy przykład spowoduje wygenerowanie C3913:
+Poniższy przykład generuje C3913:
 
-```
+```cpp
 // C3913.cpp
 // compile with: /clr /c
 ref struct X {

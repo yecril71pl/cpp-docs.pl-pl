@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3652
 ms.assetid: 15d68737-177e-41f1-80e0-7c3e2afdf0fc
-ms.openlocfilehash: 350edcf409cf2a890a8f83147ce0ae13e9992694
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3290b1e4b40a63a69911452b845bf1ea0ddf3223
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385566"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756347"
 ---
 # <a name="compiler-error-c3652"></a>Błąd kompilatora C3652
 
 "override": funkcja, która jawnie przesłania, musi być wirtualna
 
-Funkcję, która nie jawnego przesłaniania, musi być wirtualne. Aby uzyskać więcej informacji, zobacz [jawne zastępowanie](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Funkcja, która ma jawne przesłonięcie, musi być wirtualna. Aby uzyskać więcej informacji, zobacz [jawne zastąpienia](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
-Poniższy przykład spowoduje wygenerowanie C3652:
+Poniższy przykład generuje C3652:
 
-```
+```cpp
 // C3652.cpp
 // compile with: /clr /c
 public interface class I {

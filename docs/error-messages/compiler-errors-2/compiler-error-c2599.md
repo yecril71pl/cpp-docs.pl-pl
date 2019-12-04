@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2599
 ms.assetid: 88515f36-7589-47e2-862e-0de8b18d6668
-ms.openlocfilehash: 872c3a66d4738c1a69990dffdbbc59cee9e90002
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c722335660653df7e533ec25d4708f42c16846ef
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395472"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740770"
 ---
 # <a name="compiler-error-c2599"></a>Błąd kompilatora C2599
 
-"enum": deklaracja typu wyliczenia jest niedozwolone.
+"enum": Deklaracja przekazująca typu enum jest niedozwolona
 
-Kompilator nie obsługuje już deklaracją do przodu zarządzanych wyliczenia.
+Kompilator nie obsługuje już deklaracji do przesyłania dalej zarządzanej.
 
-Deklaracja typu wyliczeniowego jest niedozwolona w [/Za](../../build/reference/za-ze-disable-language-extensions.md).
+Deklaracja przekazująca typu Enum nie jest dozwolona w obszarze [/za](../../build/reference/za-ze-disable-language-extensions.md).
 
-Poniższy przykład spowoduje wygenerowanie C2599:
+Poniższy przykład generuje C2599:
 
-```
+```cpp
 // C2599.cpp
 // compile with: /clr /c
 enum class Status;   // C2599

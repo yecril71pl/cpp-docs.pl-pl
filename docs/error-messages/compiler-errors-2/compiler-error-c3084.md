@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3084
 ms.assetid: 0362cb70-e24e-476f-a24d-8f5bb97c3afd
-ms.openlocfilehash: 01e229fe0ae5bf9e04c577bb653ff1ed7fdb33bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 337cd7f37bf94c7a3d5cffe6b167d4661e3b0a81
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243287"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751459"
 ---
 # <a name="compiler-error-c3084"></a>Błąd kompilatora C3084
 
-'Funkcja': finalizator/destruktor nie może być "— słowo kluczowe"
+"Function": finalizator/destruktor nie może być "słowo kluczowe"
 
-Nieprawidłowo zadeklarowano finalizator lub destruktor.
+Finalizator lub destruktor został niepoprawnie zadeklarowany.
 
-Na przykład, destruktor nie powinien być oznaczony jako zapieczętowany.  Destruktor jest niedostępna dla typów pochodnych.  Aby uzyskać więcej informacji, zobacz [jawne zastępowanie](../../extensions/explicit-overrides-cpp-component-extensions.md) i [destruktory i finalizatory w sposób: Definiowanie oraz stosowanie klas i struktur (C++sposób niezamierzony)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Na przykład destruktor nie powinien być oznaczony jako zapieczętowany.  Destruktor będzie niedostępny dla typów pochodnych.  Aby uzyskać więcej informacji, zobacz [jawne zastąpienia](../../extensions/explicit-overrides-cpp-component-extensions.md) i [destruktory oraz finalizatory w instrukcje: Definiowanie i korzystanie z klas i struktur (C++/CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3084.
+Poniższy przykład generuje C3084.
 
-```
+```cpp
 // C3084.cpp
 // compile with: /clr /c
 ref struct R {

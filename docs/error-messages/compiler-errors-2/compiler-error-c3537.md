@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3537
 ms.assetid: f537ebd1-4fb0-4e09-a453-4f38db2c6881
-ms.openlocfilehash: 50a06180dabfa192292fae7ba1962b6b7455bb89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef3e954987b84ea128342b38307769903df4b346
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375928"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740484"
 ---
 # <a name="compiler-error-c3537"></a>Błąd kompilatora C3537
 
-"type": nie można rzutować na typ, który zawiera "auto"
+"Type": nie można rzutować na typ, który zawiera wartość "Auto"
 
-Nie można rzutować zmienną do wskazanego typu, ponieważ zawiera typ `auto` — słowo kluczowe i domyślnego [/Zc: Auto](../../build/reference/zc-auto-deduce-variable-type.md) — opcja kompilatora jest aktywna.
+Nie można rzutować zmiennej do wskazanego typu, ponieważ typ zawiera słowo kluczowe `auto` i domyślna opcja [/Zc:](../../build/reference/zc-auto-deduce-variable-type.md) autocompiler.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod daje C3537, ponieważ zmienne są rzutowane na typ, który zawiera `auto` — słowo kluczowe.
+Poniższy kod daje C3537, ponieważ zmienne są rzutowane na typ, który zawiera słowo kluczowe `auto`.
 
-```
+```cpp
 // C3537.cpp
 // Compile with /Zc:auto
 int main()

@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2146
 ms.assetid: 6bfb7de6-6723-4486-9350-c66ef88d7a64
-ms.openlocfilehash: f00de0ce491d517da11f251b89ccb9a7ae66b77d
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 8dc7b521243c4eafdc22fab851812b6c12b004cf
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447266"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755918"
 ---
 # <a name="compiler-error-c2146"></a>Błąd kompilatora C2146
 
-Błąd składniowy: brakuje tokenu, przed identyfikatorem 'Identyfikator'
+Błąd składniowy: Brak tokenu "token" przed identyfikatorem "identifier"
 
-Kompilator oczekuje `token` i znaleźć `identifier` zamiast tego.  Możliwe przyczyny:
+Kompilator oczekiwał `token` i znaleziono `identifier`.  Możliwe przyczyny:
 
-1. Błąd pisowni i wielkości liter.
+1. Błąd pisowni lub wielkości liter.
 
 1. Brak specyfikatora typu w deklaracji identyfikatora.
 
-Ten błąd może być spowodowane błędem typograficzne. Błąd [C2065](../../error-messages/compiler-errors-1/compiler-error-c2065.md) poprzedza zazwyczaj ten błąd.
+Ten błąd może być spowodowany przez błąd typograficzne. Błąd [C2065](../../error-messages/compiler-errors-1/compiler-error-c2065.md) zazwyczaj poprzedza ten błąd.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2146.
+Poniższy przykład generuje C2146.
 
-```
+```cpp
 // C2146.cpp
 class CDeclaredClass {};
 
@@ -46,11 +46,11 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Ten błąd może być też wygenerowany w wyniku pracy zgodności kompilatora, która została wykonana dla Visual Studio .NET 2003: Brak `typename` — słowo kluczowe.
+Ten błąd może być również wygenerowany jako wynik zgodności kompilatora, który został wykonany dla programu Visual Studio .NET 2003: brak słowa kluczowego `typename`.
 
-Poniższy przykład kompiluje w Visual Studio .NET 2002, ale zakończy się niepowodzeniem w programie Visual Studio .NET 2003:
+Poniższy przykład kompiluje w programie Visual Studio .NET 2002, ale zakończy się niepowodzeniem w programie Visual Studio .NET 2003:
 
-```
+```cpp
 // C2146b.cpp
 // compile with: /c
 template <typename T>
@@ -71,13 +71,13 @@ typename X<T>::Y func() { }
 
 ## <a name="example"></a>Przykład
 
-Zostanie również wyświetlony ten błąd w wyniku pracy zgodności kompilatora, która została wykonana dla Visual Studio .NET 2003: jawne specjalizacje nie są już znaleźć parametry szablonu z szablonu podstawowego.
+Ten błąd zostanie również wyświetlony w wyniku działania kompilatora, który został wykonany dla programu Visual Studio .NET 2003: jawne specjalizacje nie szukają już parametrów szablonu z szablonu podstawowego.
 
-Korzystanie z `T` z szablonu podstawowego nie jest dozwolona w jawnej specjalizacji. Aby kod był prawidłowy w Visual Studio .NET 2003 i Visual Studio .NET należy zastąpić wszystkie wystąpienia parametru szablonu w specjalizacji jawnie specjalistyczną odmianą.
+Użycie `T` z szablonu podstawowego nie jest dozwolone w jawnej specjalizacji. Aby kod był prawidłowy w Visual Studio .NET 2003 i Visual Studio .NET, Zamień wszystkie wystąpienia parametru szablonu w specjalizacji z jawnie wyspecjalizowanym typem.
 
-Poniższy przykład powoduje kompilację w programie Visual Studio .NET, ale zakończy się niepowodzeniem w programie Visual Studio .NET 2003:
+Poniższy przykład kompiluje w programie Visual Studio .NET, ale zakończy się niepowodzeniem w programie Visual Studio .NET 2003:
 
-```
+```cpp
 // C2146_c.cpp
 // compile with: /c
 template <class T>

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2556
 ms.assetid: fc4399ad-45b3-49fd-be1f-0b13956a595a
-ms.openlocfilehash: 4a2b4dc9dcd71d518845651dee97c566b778eb0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b6f08ac52eff355f0857968817a681818e3c3dc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353069"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756776"
 ---
 # <a name="compiler-error-c2556"></a>Błąd kompilatora C2556
 
-'Identyfikator': przeciążonych funkcji różnią się tylko typem zwracanym
+"Identyfikator": przeciążone funkcje różnią się tylko zwracanym typem
 
-Przeciążone funkcje mają różne typy zwracane, ale tę samą listę parametrów. Każdy przeciążonej funkcji musi mieć różne formalnej listy parametrów.
+Przeciążone funkcje mają różne typy zwracane, ale te same listy parametrów. Każda przeciążona funkcja musi mieć odrębną formalną listę parametrów.
 
-Poniższy przykład spowoduje wygenerowanie C2556:
+Poniższy przykład generuje C2556:
 
-```
+```cpp
 // C2556.cpp
 // compile with: /c
 class C {

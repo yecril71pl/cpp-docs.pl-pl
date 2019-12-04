@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2492
 ms.assetid: 8c44c9bb-c366-4fe5-a0ab-882e38608aaa
-ms.openlocfilehash: e2b08ef3e46681147c4efd77cbffadb096bbfc16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd52b434f86bdc93124c6005bbf7fadad3cb56b2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360713"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757062"
 ---
 # <a name="compiler-error-c2492"></a>Błąd kompilatora C2492
 
-"*zmiennej*": dane z okresem magazynu wątku nie mogą mieć interfejsu biblioteki dll
+"*zmienna*": dane z czasem trwania magazynu wątku mogą nie mieć interfejsu biblioteki DLL
 
-Zmienna jest zadeklarowana za pomocą [wątku](../../cpp/thread.md) atrybutu i z biblioteki DLL interfejsu. Adres `thread` zmienna jest nieznany do czasu wykonywania, więc nie można połączyć do biblioteki DLL importu lub eksportu.
+Zmienna jest zadeklarowana przy użyciu atrybutu [Thread](../../cpp/thread.md) i z interfejsem dll. Adres zmiennej `thread` nie jest znany do czasu uruchomienia, dlatego nie można go połączyć z importem lub eksportem biblioteki DLL.
 
-Poniższy przykład spowoduje wygenerowanie C2492:
+Poniższy przykład generuje C2492:
 
-```
+```cpp
 // C2492.cpp
 // compile with: /c
 class C {

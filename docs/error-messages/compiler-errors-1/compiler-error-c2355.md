@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2355
 ms.assetid: 0a947881-d61f-4f98-8409-32140f39500b
-ms.openlocfilehash: 80871a73a7c3b4ad04b475539015f85d21ae88b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e44501f7df05a8b277cd52107ff35c4c4d30578f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302647"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759948"
 ---
 # <a name="compiler-error-c2355"></a>Błąd kompilatora C2355
 
-"this": można tworzyć odwołania wyłącznie wewnątrz niestatycznych elementów członkowskich lub danych niestatycznych inicjatorów składowych
+"This": można odwoływać się tylko wewnątrz niestatycznych funkcji składowych lub niestatycznych inicjatorów składowych danych
 
-`this` Wskaźnik jest prawidłowy tylko wewnątrz niestatycznych elementów członkowskich lub w danych niestatycznych inicjatorów składowych. Ten błąd może spowodować, gdy zakres klasy definicji funkcji składowej, poza deklaracją klasy nie jest prawidłowo kwalifikowana. Ten błąd może również wystąpić, gdy `this` wskaźnik jest używany w funkcji, która nie jest zadeklarowana w klasie.
+Wskaźnik `this` jest prawidłowy tylko wewnątrz niestatycznych funkcji składowych lub niestatycznych inicjatorów składowych danych. Ten błąd może wynikać z tego, że zakres klasy definicji funkcji składowej poza deklaracją klasy nie jest prawidłowo kwalifikowany. Ten błąd może również wystąpić, gdy `this` wskaźnik jest używany w funkcji, która nie jest zadeklarowana w klasie.
 
-Aby rozwiązać ten problem, upewnij się, definicji funkcji składowej dopasowuje deklarację funkcji członkowskiej klasy i że jego nie jest zadeklarowany jako statyczny. Dla inicjatorów składowych danych upewnij się, że składowa danych nie jest zadeklarowany jako statyczny.
+Aby rozwiązać ten problem, upewnij się, że definicja funkcji składowej pasuje do deklaracji funkcji składowej w klasie i że nie jest ona zadeklarowana jako statyczna. W przypadku inicjatorów składowych danych upewnij się, że element członkowski danych nie jest zadeklarowany jako statyczny.
 
-Poniższy przykład generuje C2355 i pokazuje, jak go naprawić:
+Poniższy przykład generuje C2355 i pokazuje, jak to naprawić:
 
-```
+```cpp
 // C2355.cpp
 // compile with: /c
 class MyClass {};

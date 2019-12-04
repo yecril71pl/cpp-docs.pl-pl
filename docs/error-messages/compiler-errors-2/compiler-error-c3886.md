@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3886
 ms.assetid: 485f6c12-cc1b-4146-9034-409a0a5e615e
-ms.openlocfilehash: e9e9d4b478d5b53e50203d1f009295e1da444f2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e7ba0fcc76d723cebb5b82315faf36313b1d7db
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402544"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736636"
 ---
 # <a name="compiler-error-c3886"></a>Błąd kompilatora C3886
 
-"var": literał składowej danych musi zostać zainicjowany
+"var": literał składowej danych musi być zainicjowany
 
-A [literału](../../extensions/literal-cpp-component-extensions.md) zmiennej musi być inicjowana, gdy jest declaraed.
+Zmienna [literału](../../extensions/literal-cpp-component-extensions.md) musi zostać zainicjowana, gdy jest declaraed.
 
-Poniższy przykład spowoduje wygenerowanie C3886:
+Poniższy przykład generuje C3886:
 
-```
+```cpp
 // C3886.cpp
 // compile with: /clr /c
 ref struct Y1 {

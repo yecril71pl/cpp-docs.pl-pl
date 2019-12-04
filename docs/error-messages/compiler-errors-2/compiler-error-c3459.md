@@ -1,31 +1,31 @@
 ---
-title: Compiler Error C3459
+title: Błąd kompilatora C3459
 ms.date: 11/04/2016
 f1_keywords:
 - C3459
 helpviewer_keywords:
 - C3459
 ms.assetid: 3d290a20-d313-4c07-9bd8-c5c159cb169f
-ms.openlocfilehash: aaad9610ffec3efc73b1ff5650472689a2d2e82a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fe21414fcadef13b7af3acf4f8e1635fb12802e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363742"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756646"
 ---
-# <a name="compiler-error-c3459"></a>Compiler Error C3459
+# <a name="compiler-error-c3459"></a>Błąd kompilatora C3459
 
-"attribute": atrybut dozwolone tylko w indeksatorze klasy (Właściwość indeksowana domyślnie)
+"Attribute": atrybut dozwolony tylko w indeksatorze klasy (Właściwość indeksowana domyślnie)
 
-Atrybut, który jest przeznaczony do można zastosować do właściwości indeksatora klasy zostało niepoprawnie użyte.
+Atrybut, który jest przeznaczony do zastosowania do właściwości indeksatora klasy, został użyty nieprawidłowo.
 
-Aby uzyskać więcej informacji, zobacz [jak: Korzystanie z właściwości w C++sposób niezamierzony](../../dotnet/how-to-use-properties-in-cpp-cli.md).
+Aby uzyskać więcej informacji, zobacz [How to: use Properties C++in/CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3459.
+Poniższy przykład generuje C3459.
 
-```
+```cpp
 // C3459.cpp
 // compile with: /clr /c
 public ref class MyString {

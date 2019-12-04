@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2160
 ms.assetid: a1f694a7-fb16-4437-b7f5-a1af6da94bc5
-ms.openlocfilehash: bd0c49f44bce09958541a47db0c66bc22d7f2b76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0cfc0822ab790a456c6fa56142047c1826257477
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174838"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740861"
 ---
 # <a name="compiler-error-c2160"></a>Błąd kompilatora C2160
 
-' ##' nie może występować na początku definicji makra
+"# #" nie może wystąpić na początku definicji makra
 
-Definicja makra rozpoczął się operator wklejania tokenu (##).
+Definicja makra została rozpoczęta z operatorem wklejania tokenu (# #).
 
-Poniższy przykład spowoduje wygenerowanie C2160:
+Poniższy przykład generuje C2160:
 
-```
+```cpp
 // C2160.cpp
 // compile with: /c
 #define mac(a,b) #a   // OK

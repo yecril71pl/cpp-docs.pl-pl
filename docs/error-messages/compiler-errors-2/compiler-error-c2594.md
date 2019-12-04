@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2594
 ms.assetid: 68cd708f-266e-44b0-a211-3e3ab63b11bf
-ms.openlocfilehash: 75e3b438dd69f8879fdc2273a8f0357229941340
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ade657f9ada2a2249d2f96b7caada7b9719195d1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386905"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759337"
 ---
 # <a name="compiler-error-c2594"></a>Błąd kompilatora C2594
 
-'operator': Niejednoznaczne konwersje z 'Typ1' na 'type2'
+"operator": niejednoznaczne konwersje z "type1" na "type2"
 
-Brak konwersji z *type1* do *type2* był bardziej bezpośrednie niż inne. Sugerujemy dwa możliwe rozwiązania do konwertowania z *type1* do *type2*. Pierwsza opcja jest zdefiniowanie to bezpośrednia konwersji z *type1* do *type2*, i drugą opcją jest określić kombinację konwersje z *type1* do  *type2*.
+Konwersja z *Type1* na *Type2* była większa od innych. Sugerujemy dwa możliwe rozwiązania do konwersji z *Type1* na *Type2*. Pierwsza opcja polega na zdefiniowaniu bezpośredniej konwersji z *Type1* na *Type2*, a drugiej opcji jest określenie sekwencji konwersji z *Type1* do *Type2*.
 
-Poniższy przykład spowoduje wygenerowanie C2594. Sugerowane rozwiązanie błędu jest sekwencją konwersje:
+Poniższy przykład generuje C2594. Sugerowana rozdzielczość do błędu to sekwencja konwersji:
 
-```
+```cpp
 // C2594.cpp
 // compile with: /c
 struct A{};

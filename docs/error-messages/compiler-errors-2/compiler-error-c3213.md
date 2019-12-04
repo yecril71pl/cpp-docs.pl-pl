@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3213
 ms.assetid: 1f079e36-b3e9-40f8-8e95-08eeba3adc82
-ms.openlocfilehash: 1b08b0ef5b8fefcfa1dd55ef3a16ee4ef5d027e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c172ebbc133690eabe5ca25e4427c2c22e8221bf
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182512"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756204"
 ---
 # <a name="compiler-error-c3213"></a>Błąd kompilatora C3213
 
-Klasa bazowa "base_type" jest mniej dostępny niż "derived_type"
+Klasa bazowa "base_type" jest mniej dostępna niż "derived_type"
 
-Typ, który będzie widoczny z zestawu, należy użyć klas bazowych publicznie widoczne.
+Typ, który będzie widoczny z zestawu, musi używać publicznie widocznych klas podstawowych.
 
-Poniższy przykład spowoduje wygenerowanie C3213:
+Poniższy przykład generuje C3213:
 
-```
+```cpp
 // C3213.cpp
 // compile with: /clr
 private ref struct privateG {

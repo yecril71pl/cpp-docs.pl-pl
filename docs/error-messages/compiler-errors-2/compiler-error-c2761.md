@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2761
 ms.assetid: 38c79a05-b56d-485b-820f-95e8c0cb926f
-ms.openlocfilehash: 1236cfaf70781b6ca80db1a317a0c1b01b0f2740
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fbe2b3089d387d356073febf2b27bbb44b6be7e3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228235"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759506"
 ---
 # <a name="compiler-error-c2761"></a>Błąd kompilatora C2761
 
-'Funkcja': ponowna deklaracja funkcji składowej nie jest dozwolone
+"Function": Ponowna deklaracja funkcji składowej nie jest dozwolona
 
-Nie można ponownie zadeklarować funkcji składowej. Możesz zdefiniować go, ale nie ponownie zadeklarować.
+Nie można ponownie zadeklarować funkcji członkowskiej. Można ją zdefiniować, ale nie należy jej ponownie deklarować.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2761.
+Poniższy przykład generuje C2761.
 
-```
+```cpp
 // C2761.cpp
 class a {
    int t;
@@ -36,9 +36,9 @@ void a::test;  // C2761
 
 ## <a name="example"></a>Przykład
 
-Nie można zdefiniować niestatycznych elementów członkowskich klasy lub struktury.  Poniższy przykład spowoduje wygenerowanie C2761.
+Nie można zdefiniować niestatycznych elementów członkowskich klasy lub struktury.  Poniższy przykład generuje C2761.
 
-```
+```cpp
 // C2761_b.cpp
 // compile with: /c
 struct C {

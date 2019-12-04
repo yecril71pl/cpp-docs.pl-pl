@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2955
 ms.assetid: 77709fb6-d69b-46fd-a62f-e8564563d01b
-ms.openlocfilehash: c012e5189b9ca1d0b0e786cbddacedee7c6728d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8afdeaf43c0c9789753b9165f1e8a8287aaac76d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300742"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742876"
 ---
 # <a name="compiler-error-c2955"></a>Błąd kompilatora C2955
 
-'Identyfikator': użycie szablonu klasy lub alias ogólny wymaga szablon lub listy argumentów ogólnych
+"Identyfikator": użycie szablonu klasy lub aliasu generycznego wymaga szablonu lub listy argumentów ogólnych
 
-Nie można użyć szablonu klasy lub klas ogólnych jako identyfikator bez szablon lub listy argumentów ogólnych.
+Nie można użyć szablonu klasy ani klasy generycznej jako identyfikatora bez szablonu lub listy argumentów ogólnych.
 
-Aby uzyskać więcej informacji, zobacz [szablony klas](../../cpp/class-templates.md).
+Aby uzyskać więcej informacji, zobacz [Szablony klas](../../cpp/class-templates.md).
 
-Poniższy przykład generuje C2955 i pokazuje, jak go naprawić:
+Poniższy przykład generuje C2955 i pokazuje, jak to naprawić:
 
-```
+```cpp
 // C2955.cpp
 // compile with: /c
 template<class T>
@@ -33,9 +33,9 @@ X x1;   // C2955
 X<int> x2;   // OK - this is how to fix it.
 ```
 
-C2955 może również wystąpić podczas próby definicji poza wierszem funkcja zadeklarowana w szablonie klasy:
+C2955 może również wystąpić przy próbie zdefiniowania poza wierszem funkcji zadeklarowanej w szablonie klasy:
 
-```
+```cpp
 // C2955_b.cpp
 // compile with: /c
 template <class T>
@@ -52,9 +52,9 @@ template <class T>
 void CT<T>::CTFunc2() {}
 ```
 
-C2955 może również wystąpić, gdy za pomocą typów ogólnych:
+C2955 może również wystąpić przy użyciu typów ogólnych:
 
-```
+```cpp
 // C2955_c.cpp
 // compile with: /clr
 generic <class T>
@@ -70,7 +70,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-**Visual Studio 2017 i nowszym:** Kompilator poprawnie diagnozuje brakuje listy argumentów szablonu, gdy szablon jest wyświetlany na liście parametrów szablonu (na przykład jako część domyślnego argumentu szablonu lub parametru szablonu bez typu). Poniższy kod kompilowany w programie Visual Studio 2015, ale generuje błąd w programie Visual Studio 2017.
+**Program Visual Studio 2017 lub nowszy:** Kompilator prawidłowo diagnozuje brakujące listy argumentów szablonu, gdy szablon pojawia się na liście parametrów szablonu (na przykład jako część argumentu szablonu domyślnego lub parametru szablonu bez typu). Poniższy kod kompiluje się w programie Visual Studio 2015, ale powoduje wystąpienie błędu w programie Visual Studio 2017.
 
 ```
 template <class T> class ListNode;

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2507
 ms.assetid: f102aff5-de7d-4c3f-9cac-2ddf9ce02b14
-ms.openlocfilehash: 63f9594eb9ee8a251faafe7323418b343c03063c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23433dccd7fc4f86c2e848359ac50c796fcccab0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165232"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746802"
 ---
 # <a name="compiler-error-c2507"></a>Błąd kompilatora C2507
 
-'Identyfikator': zbyt wiele modyfikatorów virtual dla klasy bazowej
+"Identyfikator": zbyt wiele modyfikatorów wirtualnych w klasie bazowej
 
-Klasy lub struktury jest zadeklarowany jako `virtual` więcej niż jeden raz. Tylko jeden `virtual` modyfikator mogą być wyświetlane dla każdej klasy na liście klas bazowych.
+Klasa lub struktura jest zadeklarowana jako `virtual` więcej niż raz. Dla każdej klasy na liście klas bazowych może być wyświetlany tylko jeden modyfikator `virtual`.
 
-Poniższy przykład spowoduje wygenerowanie C2507:
+Poniższy przykład generuje C2507:
 
-```
+```cpp
 // C2507.cpp
 // compile with: /c
 class A {};

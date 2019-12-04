@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2086
 ms.assetid: 4329bf72-90c8-444c-8524-4ef75e6b2139
-ms.openlocfilehash: 094a794627b886abc7db5ba4d74c6fe97ff82461
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 417763e8c26918d3cd83702b283244d1c13d9d1f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216129"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735752"
 ---
 # <a name="compiler-error-c2086"></a>Błąd kompilatora C2086
 
-'Identyfikator': zmiana definicji
+"Identyfikator": zmiana definicji
 
-Identyfikator jest zdefiniowany więcej niż jeden raz lub deklaracji kolejnych różni się od poprzedniego.
+Identyfikator jest zdefiniowany więcej niż raz lub kolejna deklaracja różni się od poprzedniej.
 
-C2086 może być również wynik kompilacji przyrostowych dla przywoływanego zestawu języka C#. Ponownie skompiluj zestawu języka C#, aby rozwiązać ten problem.
+C2086 może być również wynikiem kompilowania przyrostowego dla przywoływanego C# zestawu. Skompiluj ponownie C# zestaw, aby rozwiązać ten problem.
 
-Poniższy przykład spowoduje wygenerowanie C2086:
+Poniższy przykład generuje C2086:
 
-```
+```cpp
 // C2086.cpp
 main() {
   int a;

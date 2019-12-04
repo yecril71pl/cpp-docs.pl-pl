@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2387
 ms.assetid: 6847b8e1-ffac-458d-ab88-0c92f72f2527
-ms.openlocfilehash: df9e92bfa333be88e860bbdecd5acaa64ec80440
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a884099c7407113d7ef7604f4eec28e0fa86d87e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393678"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745103"
 ---
 # <a name="compiler-error-c2387"></a>Błąd kompilatora C2387
 
-"type": niejednoznaczna klasa bazowa
+"Type": niejednoznaczna Klasa bazowa
 
-Kompilator nie można jednoznacznie rozpoznać wywołania funkcji, ponieważ funkcja istnieje w więcej niż jednej klasy bazowej.
+Kompilator nie może jednoznacznie rozpoznać wywołania funkcji, ponieważ funkcja istnieje w więcej niż jednej klasie bazowej.
 
-Aby rozwiązać ten problem, usuń jedną z klas bazowych z dziedziczenia lub kwalifikuj jawnie wywołania funkcji.
+Aby rozwiązać ten problem, Usuń jedną z klas podstawowych z dziedziczenia lub jawnie Zakwalifikuj wywołanie funkcji.
 
-Poniższy przykład spowoduje wygenerowanie C2387:
+Poniższy przykład generuje C2387:
 
-```
+```cpp
 // C2387.cpp
 namespace N1 {
    struct B {

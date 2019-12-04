@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3767
 ms.assetid: 5247cdcd-639c-4527-bd37-37e74c4e8fab
-ms.openlocfilehash: 61f7479986cccfa3851d85bf8e7bc0e9da3d1cea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 994b235b4775c28126d92c241a7e42dc837d4493
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400204"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757205"
 ---
 # <a name="compiler-error-c3767"></a>Błąd kompilatora C3767
 
-'Funkcja' kandydujące nie jest dostępny
+funkcje kandydujące "Function" są niedostępne
 
-Funkcja zaprzyjaźniona zdefiniowana w klasie nie powinien być traktowany tak, jakby zostały zdefiniowane i zadeklarowana w zakresie globalnej przestrzeni nazw. Jest to możliwe, jednak można znaleźć przez wyszukiwanie zależne od argumentów.
+Funkcja zaprzyjaźniona zdefiniowana w klasie nie powinna być traktowana jakby została zdefiniowana i zadeklarowana w globalnym zakresie przestrzeni nazw. Można go jednak znaleźć za pomocą wyszukiwania zależnego od argumentów.
 
-C3767 może również być spowodowane istotnej zmiany: typy natywne są teraz domyślnie w prywatny **/CLR** kompilacji; zobacz [typ widoczności](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) Aby uzyskać więcej informacji.
+C3767 może również być spowodowany zmianą istotną: typy natywne są teraz domyślnie prywatne w kompilacji **/CLR** ; Aby uzyskać więcej informacji, zobacz [widoczność typu](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3767:
+Poniższy przykład generuje C3767:
 
-```
+```cpp
 // C3767a.cpp
 // compile with: /clr
 using namespace System;
@@ -54,9 +54,9 @@ int main() {
 };
 ```
 
-Poniższy przykład spowoduje wygenerowanie C3767:
+Poniższy przykład generuje C3767:
 
-```
+```cpp
 // C3767c.cpp
 // compile with: /clr /c
 

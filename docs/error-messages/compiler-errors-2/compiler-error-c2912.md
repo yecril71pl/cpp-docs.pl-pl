@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2912
 ms.assetid: bd55cecd-ab1a-4636-ab8a-a00393fe7b3d
-ms.openlocfilehash: b7f87ae2df5350fcfb2b7a662f517d8d7bd51ef8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 254252bfd21aa28c87810f1e21b4864e2775a71b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408397"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761088"
 ---
 # <a name="compiler-error-c2912"></a>Błąd kompilatora C2912
 
-jawna specjalizacja "deklaracją" nie jest specjalizacją szablonu funkcji
+Jawna specjalizacja "Deklaracja" nie jest specjalizacją szablonu funkcji
 
-Nie można specjalizować funkcji inne niż szablonu.
+Nie można specjalizacji funkcji niebędącej szablonem.
 
-Poniższy przykład spowoduje wygenerowanie C2912:
+Poniższy przykład generuje C2912:
 
-```
+```cpp
 // C2912.cpp
 // compile with: /c
 void f(char);
@@ -29,9 +29,9 @@ template<> void f(char);   // C2912
 template<class T> void f(T);   // OK
 ```
 
-Ten błąd będzie też można wygenerować w wyniku pracy zgodności kompilatora, która została wykonana w Visual Studio .NET 2003: dla każdej jawna specjalizacja, musisz wybrać parametry jawna specjalizacja taki sposób, że są zgodne z parametrami podstawową szablon.
+Ten błąd zostanie również wygenerowany w wyniku działania kompilatora, który został wykonany w programie Visual Studio .NET 2003: dla każdej jawnej specjalizacji należy wybrać parametry jawnej specjalizacji, tak aby pasowały do parametrów podstawowego formularza.
 
-```
+```cpp
 // C2912b.cpp
 class CF {
 public:
