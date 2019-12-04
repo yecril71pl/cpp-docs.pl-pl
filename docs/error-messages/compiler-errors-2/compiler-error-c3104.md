@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
-ms.openlocfilehash: fee023809246634f2f3da266a718e45861eae76e
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: b92a6eade137a1d319ec286afa08f8477ff029d8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447835"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755873"
 ---
 # <a name="compiler-error-c3104"></a>Błąd kompilatora C3104
 
-Niedozwolony argument atrybutu
+niedozwolony argument atrybutu
 
-Określono nieprawidłowy argument do atrybutu.
+Określono nieprawidłowy argument dla atrybutu.
 
-Zobacz [typy parametrów atrybutu](../../extensions/attribute-parameter-types-cpp-component-extensions.md) Aby uzyskać więcej informacji.
+Aby uzyskać więcej informacji, zobacz [typy parametrów atrybutów](../../extensions/attribute-parameter-types-cpp-component-extensions.md) .
 
-Ten błąd można wygenerować w wyniku pracy zgodności kompilatora, która została wykonana dla programu Visual Studio 2005: podczas przekazywania tablic do atrybutów niestandardowych, typ tablicy nie jest już jest wyprowadzony z listy inicjowania agregacji. Kompilator teraz wymaga określenia typu tablicy, jak również lista inicjatora.
+Ten błąd może zostać wygenerowany w wyniku działania kompilatora, który został wykonany dla programu Visual Studio 2005: podczas przekazywania tablic zarządzanych do atrybutów niestandardowych typ tablicy nie jest już określany na podstawie listy inicjalizacji agregacji. Kompilator wymaga teraz, aby określić typ tablicy oraz listę inicjatorów.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3104.
+Poniższy przykład generuje C3104.
 
-```
+```cpp
 // C3104a.cpp
 // compile with: /clr /c
 using namespace System;
@@ -46,9 +46,9 @@ ref struct AStruct{};
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3104.
+Poniższy przykład generuje C3104.
 
-```
+```cpp
 // C3104b.cpp
 // compile with: /clr /c
 // C3104 expected

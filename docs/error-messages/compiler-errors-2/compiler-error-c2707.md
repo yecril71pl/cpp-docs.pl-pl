@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - C2707
 ms.assetid: 3deaf45c-74da-4c9d-acc6-b82412720b74
-ms.openlocfilehash: ce86f69b36b915b3e757b5d18430c99cb288e4e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e29812563ef1d4d7f6612ea2516f2f6327e90e1b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161007"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760442"
 ---
 # <a name="compiler-error-c2707"></a>Błąd kompilatora C2707
 
-'Identyfikator': zły kontekst dla wewnętrznej funkcji
+"Identyfikator": zły kontekst dla funkcji wewnętrznej
 
-Strukturalne wewnętrzne obsługi wyjątków są nieprawidłowe w pewnych kontekstach:
+Elementy wewnętrzne obsługi wyjątków strukturalnych są nieprawidłowe w niektórych kontekstach:
 
-- `_exception_code()` poza filtrem wyjątków lub `__except` bloku
+- `_exception_code()` poza filtrem wyjątków lub blokiem `__except`
 
 - `_exception_info()` poza filtrem wyjątków
 
-- `_abnormal_termination()` poza `__finally` bloku
+- `_abnormal_termination()` poza blokiem `__finally`
 
-Aby naprawić błąd, upewnij się, że funkcje wewnętrzne obsługi wyjątków są umieszczane w odpowiedniego kontekstu.
+Aby rozwiązać ten problem, upewnij się, że wewnętrzne elementy obsługi wyjątków są umieszczane w odpowiednim kontekście.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2707.
+Poniższy przykład generuje C2707.
 
-```
+```cpp
 // C2707.cpp
 #include <windows.h>
 #include <stdio.h>

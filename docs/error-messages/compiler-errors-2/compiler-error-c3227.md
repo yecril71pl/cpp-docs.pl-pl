@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3227
 ms.assetid: 7939c23a-96c8-43c2-89e9-f217d132d155
-ms.openlocfilehash: b175b14af55a9a462e040f064cc6e38d13fffb94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 460000531dba77e42379199f276c9e2e02f43a9b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173993"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743422"
 ---
 # <a name="compiler-error-c3227"></a>Błąd kompilatora C3227
 
-"parametru": nie można użyć "— słowo kluczowe", aby alokować typ generyczny
+"parameter": nie można użyć słowa kluczowego "Keyword" do przydzielenia typu ogólnego
 
-Aby utworzyć wystąpienia typu, odpowiedniego konstruktora jest wymagany. Jednak kompilator nie jest w stanie upewnić się, że odpowiedniego konstruktora jest dostępny.
+Aby utworzyć wystąpienie typu, wymagany jest odpowiedni Konstruktor. Jednak kompilator nie jest w stanie zapewnić, że jest dostępny odpowiedni Konstruktor.
 
-Szablony można użyć zamiast ogólnych, aby rozwiązać ten problem, możesz też jedną z kilku metod do utworzenia wystąpienia typu.
+Aby rozwiązać ten problem, można użyć szablonów zamiast typów ogólnych lub użyć jednej z kilku metod tworzenia wystąpienia typu.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C3227.
+Poniższy przykład generuje C3227.
 
-```
+```cpp
 // C3227.cpp
 // compile with: /clr /c
 generic<class T> interface class ICreate {
