@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3351
 ms.assetid: c021bbbe-1067-4f51-af4f-940d2b792eb5
-ms.openlocfilehash: 3935acc645403efcd579a80340ebb9794bc1052a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d93d6b08268aa8d6a7a7ad2e2086f4799417bbb4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402661"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737468"
 ---
 # <a name="compiler-error-c3351"></a>Błąd kompilatora C3351
 
-"object": Konstruktor delegata: drugi argument musi być adres statyczny element członkowski funkcja lub funkcja globalna
+"Object": Konstruktor delegata: drugi argument musi być adresem statycznej funkcji składowej lub funkcji globalnej
 
-Kompilator oczekiwany adres funkcja zadeklarowana `static`.
+Kompilator oczekiwał adresu funkcji zadeklarowanej `static`.
 
-Poniższy przykład spowoduje wygenerowanie C3351:
+Poniższy przykład generuje C3351:
 
-```
+```cpp
 // C3351a.cpp
 // compile with: /clr
 delegate int D(int, int);

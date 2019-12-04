@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3914
 ms.assetid: 8f3190e6-ee50-4916-9ecc-3b8748b2e1e7
-ms.openlocfilehash: e7c04da2b7574d3af0e1c05ae4adc3ad513faa0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f7da67871b5e6b9d7da9a9aa4eebeb761f8cc50
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406616"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738001"
 ---
 # <a name="compiler-error-c3914"></a>Błąd kompilatora C3914
 
-Domyślna właściwość nie może być statyczna
+domyślna właściwość nie może być statyczna
 
-Domyślna właściwość została zadeklarowana niepoprawnie.  Aby uzyskać więcej informacji, zobacz [jak: Korzystanie z właściwości w C++sposób niezamierzony](../../dotnet/how-to-use-properties-in-cpp-cli.md).
+Właściwość domyślna została zadeklarowana nieprawidłowo.  Aby uzyskać więcej informacji, zobacz [How to: use Properties C++in/CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C3914 i pokazuje, jak go naprawić.
+Poniższy przykład generuje C3914 i pokazuje, jak rozwiązać ten problem.
 
-```
+```cpp
 // C3914.cpp
 // compile with: /clr /c
 ref struct X {
