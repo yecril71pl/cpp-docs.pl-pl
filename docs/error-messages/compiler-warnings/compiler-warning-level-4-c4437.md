@@ -1,35 +1,39 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4437
+title: Ostrzeżenie kompilatora (poziom 4) C4437
 ms.date: 11/04/2016
+f1_keywords:
+- C4437
+helpviewer_keywords:
+- C4437
 ms.assetid: dc07e350-20eb-474c-a7ad-f841ae7ec339
-ms.openlocfilehash: 9ff52ae6d10f7d4ba429bbf3457a2a6b969998d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6cd50d5c4d79b82c135ab4e84ec390dee9e906ef
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391468"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810657"
 ---
-# <a name="compiler-warning-level-4-c4437"></a>Kompilator ostrzeżenie (poziom 4) C4437
+# <a name="compiler-warning-level-4-c4437"></a>Ostrzeżenie kompilatora (poziom 4) C4437
 
-dynamic_cast z podstawowej wirtualnej 'klasa1' na 'klasa2' może zakończyć się niepowodzeniem w niektórych kontekstach kompilacji z opcją/vd2 lub zdefiniować 'klasa2' przy użyciu #pragma vtordisp(2) w efekcie
+dynamic_cast z wirtualnej bazy "Class1" do "'klasa" może zakończyć się niepowodzeniem w niektórych kontekstach kompilowanych przy użyciu/VD2 zmieni lub Zdefiniuj "'klasa" z #pragma vtordisp (2) w efekcie
 
-To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+To ostrzeżenie jest domyślnie wyłączone. Aby uzyskać więcej informacji [, zobacz ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
-Kompilator napotkał `dynamic_cast` operację, podając następujące właściwości.
+Kompilator napotkał `dynamic_cast` operacji z następującymi charakterystykami.
 
-- Rzutowanie jest ze wskaźnika do klasy bazowej na wskaźnik klasy pochodnej.
+- Rzutowanie pochodzi ze wskaźnika klasy bazowej do wskaźnika klasy pochodnej.
 
-- Klasa pochodna dziedziczy praktycznie klasy bazowej.
+- Klasa pochodna praktycznie dziedziczy klasę bazową.
 
-- Klasa pochodna nie ma `vtordisp` pole bazy wirtualnej.
+- Klasa pochodna nie ma pola `vtordisp` dla bazy wirtualnej.
 
-- Rzutowanie nie zostanie znaleziony w Konstruktor lub destruktor klasy pochodnej lub niektóre klasy, która dalsze dziedziczy z klasy pochodnej (ostrzeżenie w przeciwnym razie, kompilatora, który pojawi się C4436).
+- Rzutowanie nie znajduje się w konstruktorze lub destruktorze klasy pochodnej lub Klasa, która dodatkowo dziedziczy z klasy pochodnej (w przeciwnym razie zostanie wygenerowane Ostrzeżenie kompilatora C4436).
 
-To ostrzeżenie wskazuje, że `dynamic_cast` nie może działać prawidłowo, jeśli jest zasilany z częściowo skonstruowanym obiektem.  Ta sytuacja występuje, gdy otaczającej funkcja jest wywoływana z konstruktora lub destruktora klasy, która dziedziczy z klasy pochodnej, która nosi nazwę ostrzeżenie.  Jeśli klasa pochodna, która nosi nazwę ostrzeżenie nigdy nie jest dalsze pochodzi, lub funkcji otaczającej nie jest wywoływany podczas obiektu utworzenia lub zniszczenia, można zignorować to ostrzeżenie.
+Ostrzeżenie wskazuje, że `dynamic_cast` może nie działać prawidłowo, jeśli działa na obiekt częściowo skonstruowany.  Ta sytuacja występuje, gdy funkcja otaczająca jest wywoływana z konstruktora lub destruktora klasy, która dziedziczy klasę pochodną o nazwie w ostrzeżeniu.  Jeśli klasa pochodna o nazwie w ostrzeżeniu nigdy nie będzie bardziej pochodna lub otaczająca funkcja nie jest wywoływana podczas konstruowania lub niszczenia obiektu, ostrzeżenie można zignorować.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C4437 i demonstruje problem dotyczący generowania kodu, która wynika z brakujący `vtordisp` pola.
+Poniższy przykład generuje C4437 i demonstruje problem z generowaniem kodu, który powstał z brakujących pola `vtordisp`.
 
 ```cpp
 // C4437.cpp

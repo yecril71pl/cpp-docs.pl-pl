@@ -1,20 +1,24 @@
 ---
 title: Ostrzeżenie kompilatora C4746
 ms.date: 11/04/2016
+f1_keywords:
+- C4746
+helpviewer_keywords:
+- C4746
 ms.assetid: 5e79ab46-6031-499a-a986-716c866b6c0e
-ms.openlocfilehash: 1b79eed2134b8c6310e508e56b3388c6f38fe4b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e761deb1b8c1b00e025f49775a845d07985fd2c
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311114"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810568"
 ---
 # <a name="compiler-warning-c4746"></a>Ostrzeżenie kompilatora C4746
 
-nietrwały dostęp "\<wyrażenia >" podlega/volatile: [iso&#124;ms]; Rozważ użycie funkcji wewnętrznych __iso_volatile_load/store funkcje wewnętrzne.
+nietrwały dostęp elementu "\<expression >" podlega ustawieniu/volatile: [&#124;ISO MS]; Rozważ __iso_volatile_load użycie funkcji wewnętrznych/Store.
 
-C4746 jest emitowane zawsze wtedy, gdy zmienna volatile odbywa się bezpośrednio. Mają ułatwić deweloperom zidentyfikowanie, lokalizacji kodu, które dotyczą określonych model nietrwały aktualnie określone (mogą być kontrolowane za pomocą [/volatile](../../build/reference/volatile-volatile-keyword-interpretation.md) — opcja kompilatora). W szczególności może być pomocne w odnalezieniu generowanych przez kompilator sprzętowych barier pamięci, gdy /volatile:ms jest używany.
+C4746 jest emitowany za każdym razem, gdy jest uzyskiwany bezpośredni dostęp do zmiennej lotnej. Ma ona ułatwić deweloperom zidentyfikowanie lokalizacji kodu, na które ma wpływ określony model nietrwały, który jest aktualnie określony (który może być kontrolowany przy użyciu opcji kompilatora [/volatile](../../build/reference/volatile-volatile-keyword-interpretation.md) ). W szczególności może to być przydatne podczas lokalizowania barier pamięci sprzętowej generowanych przez kompilator, gdy jest używany/volatile: MS.
 
-Funkcje wewnętrzne funkcji wewnętrznych __iso_volatile_load/store może służyć jawnie uzyskiwać dostęp do pamięci volatile bez wpływowi model nietrwały. Za pomocą funkcji wewnętrznych nie spowodują uruchomienia C4746.
+W celu jawnego uzyskiwania dostępu do pamięci lotnej bez wpływu na nietrwały model, można użyć funkcji wewnętrznych __iso_volatile_load/Store. Użycie tych elementów wewnętrznych nie spowoduje wyzwolenia C4746.
 
-To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+To ostrzeżenie jest domyślnie wyłączone. Aby uzyskać więcej informacji [, zobacz ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .

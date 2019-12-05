@@ -3,31 +3,33 @@ title: Ostrzeżenie kompilatora C4868
 ms.date: 10/26/2017
 f1_keywords:
 - C4868
+helpviewer_keywords:
+- C4868
 ms.assetid: fc6aa7e5-34dd-4ec2-88bd-16e430361dc7
-ms.openlocfilehash: 72700091fcd22271e6913228a1206b3d5efcbdef
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: c1d49eb61a5c7c47fa83dacb39ed50f42e0fb147
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447177"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810481"
 ---
-# <a name="compiler-warning-level-4-c4868"></a>Ostrzeżenie (poziom 4) kompilatora C4868
+# <a name="compiler-warning-level-4-c4868"></a>Ostrzeżenie kompilatora (poziom 4) C4868
 
-> "_pliku_(*line_number*)" kompilator może nie wymusić kolejności oceny od lewej do prawej na liście inicjatora w nawiasach klamrowych
+> Kompilator "_File_(*line_number*)" nie może wymusić kolejności oceny od lewej do prawej na liście inicjalizatora w nawiasach klamrowych
 
-Elementy listy inicjatora w nawiasach klamrowych mają być obliczane w kolejności od lewej do prawej. Istnieją dwa przypadki, w których kompilator nie może zagwarantować to zamówienie: pierwszy to umieszczenie niektóre elementy są przekazywane przez wartość; obiekty drugi to podczas kompilowania za pomocą `/clr` i niektóre elementy są pola obiektów lub elementów tablicy. Gdy kompilator nie może zagwarantować oceny od lewej do prawej emituje ostrzeżenie C4868.
+Elementy listy inicjalizatora w nawiasach klamrowych są oceniane w kolejności od lewej do prawej. Istnieją dwa przypadki, w których kompilator nie może zagwarantowania tej kolejności: pierwszy to, gdy niektóre elementy są obiektami przekazaną przez wartość; druga jest podczas kompilowania z `/clr`, a niektóre elementy są polami obiektów lub są elementami tablicy. Gdy kompilator nie może zagwarantować oceny od lewej do prawej, emituje ostrzeżenie C4868.
 
-To ostrzeżenie, mogą być generowane w wyniku pracy zgodności kompilatora, która została wykonana dla programu Visual Studio 2015 Update 2. Kod, który jest skompilowany przed Visual Studio 2015 Update 2 można teraz wygenerować C4868.
+To ostrzeżenie może być generowane w wyniku działania kompilatora, który został wykonany dla programu Visual Studio 2015 Update 2. Kod, który został skompilowany przed Visual Studio 2015 Update 2, może teraz generować C4868.
 
-To ostrzeżenie jest domyślnie wyłączona. Użyj `/Wall` można aktywować tego ostrzeżenia.
+To ostrzeżenie jest domyślnie wyłączone. Użyj `/Wall`, aby aktywować to ostrzeżenie.
 
-Aby rozwiązać tego ostrzeżenia, najpierw należy wziąć pod uwagę czy oceny od lewej do prawej elementów listy inicjatorów są niezbędne, np. podczas oceny elementów może powodować generowanie efekty uboczne zależnych od kolejności. W wielu przypadkach kolejność, w jakiej są oceniane elementów nie ma efektu zauważalne.
+Aby rozwiązać ten problem, należy najpierw rozważyć, czy konieczne jest oszacowanie wartości z listy inicjatorów od lewej do prawej, na przykład wtedy, gdy oceny elementów mogą generować efekty uboczne zależne od kolejności. W wielu przypadkach kolejność, w której elementy są oceniane, nie ma zauważalnego efektu.
 
-Jeśli kolejność obliczania musi mieć od lewej do prawej, weź pod uwagę, jeśli istnieje możliwość przekazywania elementów `const` zamiast tego odwołania. Zmiany, takie jak ta eliminuje ostrzeżenie w następującym przykładzie kodu.
+Jeśli kolejność obliczeń musi być od lewej do prawej, należy rozważyć, czy można przekazać elementy przez `const` odwołanie. Zmiana taka, jak eliminuje to ostrzeżenie, w poniższym przykładzie kodu.
 
 ## <a name="example"></a>Przykład
 
-Ten przykład generuje C4868 i pokazuje sposób, aby rozwiązać ten problem:
+Ten przykład generuje C4868 i przedstawia sposób jego rozwiązania:
 
 ```cpp
 // C4868.cpp

@@ -1,33 +1,37 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4436
+title: Ostrzeżenie kompilatora (poziom 1) C4436
 ms.date: 11/04/2016
+f1_keywords:
+- C4436
+helpviewer_keywords:
+- C4436
 ms.assetid: 2b54a1fc-c9c6-4cc9-90be-faa44fc715d5
-ms.openlocfilehash: 487fb8c804ac34ba52661774c2552199c764f6b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 762a458072a0a1104cd1af55ef1f61772485b6c9
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408189"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810612"
 ---
-# <a name="compiler-warning-level-1-c4436"></a>Kompilator ostrzeżenie (poziom 1) C4436
+# <a name="compiler-warning-level-1-c4436"></a>Ostrzeżenie kompilatora (poziom 1) C4436
 
-dynamic_cast z podstawowej wirtualnej 'klasa1' na 'klasa2' w konstruktorze lub destruktorze może zakończyć się niepowodzeniem z częściowo skonstruowanym obiektem kompilacji z opcją/vd2 lub zdefiniować 'klasa2' przy użyciu #pragma vtordisp(2) w efekcie
+dynamic_cast z wirtualnej bazy "Class1" do "'klasa" w konstruktorze lub destruktorze może zakończyć się niepowodzeniem z zakompilowaniem częściowo skompilowanego obiektu przy użyciu/VD2 zmieni lub Zdefiniuj "'klasa" z #pragma vtordisp (2) w efekcie
 
-Kompilator napotkał `dynamic_cast` operację, podając następujące właściwości.
+Kompilator napotkał `dynamic_cast` operacji z następującymi charakterystykami.
 
-- Rzutowanie jest ze wskaźnika do klasy bazowej na wskaźnik klasy pochodnej.
+- Rzutowanie pochodzi ze wskaźnika klasy bazowej do wskaźnika klasy pochodnej.
 
-- Klasa pochodna dziedziczy praktycznie klasy bazowej.
+- Klasa pochodna praktycznie dziedziczy klasę bazową.
 
-- Klasa pochodna nie ma `vtordisp` pole bazy wirtualnej.
+- Klasa pochodna nie ma pola `vtordisp` dla bazy wirtualnej.
 
-- Rzutowanie znajduje się w konstruktorze lub destruktor klasy pochodnej lub niektóre klasy, która dalsze dziedziczy z klasy pochodnej.
+- Rzutowanie jest dostępne w konstruktorze lub destruktorze klasy pochodnej lub pewnej klasie, która dodatkowo dziedziczy z klasy pochodnej.
 
-To ostrzeżenie wskazuje `dynamic_cast` nie może działać poprawnie, jeśli jest zasilany z częściowo skonstruowanym obiektem.  Tak się stanie, jeśli działa pochodnej konstruktora/destruktora w podobiekcie dalsze pochodnego obiektu.  Jeśli klasa pochodna o nazwie ostrzeżenie nigdy nie jest dalsze derived, można je zignorować.
+Ostrzeżenie wskazuje, że `dynamic_cast` może nie działać prawidłowo, jeśli działa na obiekt częściowo skonstruowany.  Dzieje się tak, jeśli Konstruktor pochodny/destruktor działa na obiekcie podrzędnym innego obiektu pochodnego.  Jeśli klasa pochodna o nazwie w ostrzeżeniu nigdy nie będzie bardziej pochodna, ostrzeżenie można zignorować.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C4436 i demonstruje problem dotyczący generowania kodu, która wynika z brakujący `vtordisp` pola.
+Poniższy przykład generuje C4436 i demonstruje problem z generowaniem kodu, który powstał z brakujących pola `vtordisp`.
 
 ```cpp
 // C4436.cpp

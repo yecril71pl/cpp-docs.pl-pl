@@ -1,6 +1,6 @@
 ---
 title: Obsługiwane platformy (Visual C++)
-ms.date: 05/14/2019
+ms.date: 12/02/2019
 ms.technology: cpp-tools
 helpviewer_keywords:
 - Visual C++, platforms supported
@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: 0d893056-4008-411a-b3d1-5f57fd7da95c
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 950f62b4cbf1255af97f1f4950bab03c58c2ceba
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: eb2a258a73e69ef032576f5b42e8071fd27439a1
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174854"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810601"
 ---
 # <a name="supported-platforms-visual-c"></a>Obsługiwane platformy (Visual C++)
 
-Aplikacje utworzone przy użyciu programu Visual Studio mogą być kierowane do różnych platform, w następujący sposób.
+Aplikacje utworzone za pomocą programu Visual Studio mogą być przeznaczone dla różnych platform w następujący sposób.
 
 |System operacyjny|x86|X64|ARM|ARM64\*\*\*\*|
 |----------------------|---------|---------|---------|---------|
@@ -26,23 +26,23 @@ Aplikacje utworzone przy użyciu programu Visual Studio mogą być kierowane do 
 |Windows Vista|X|X|||
 |Windows Server 2008|X|X|||
 |Windows 7|X|X|||
-|Windows Server 2012 R2|X|X|||
+|Windows Server 2012 z dodatkiem R2|X|X|||
 |Windows 8|X|X|X||
 |Windows 8.1|X|X|X||
 |Windows 10|X|X|X|X|
-|Android \*\*|X|X|X|X|
-|iOS \*\*|X|X|X|X|
-|Linux \*\*\*|X|X|X|X|
+|\* \*systemu Android|X|X|X|X|
+|\* \*systemu iOS|X|X|X|X|
+|\*\*systemu Linux \*|X|X|X|X|
 
-\* Możesz użyć zestawu narzędzi platformy Windows XP, które zostały zawarte w Visual Studio 2017, Visual Studio 2015, Visual Studio 2013 i Visual Studio 2012 Update 1 lub nowszej, aby kompilować projekty Windows XP i Windows Server 2003. Aby uzyskać informacje na temat korzystania z tego zestawu narzędzi platformy, zobacz [Konfigurowanie programów systemu Windows XP](../build/configuring-programs-for-windows-xp.md). Aby uzyskać dodatkowe informacje na temat Zmiana zestawu narzędzi platformy, zobacz [jak: Modyfikowanie platformy docelowej i zestawu narzędzi platformy](../build/how-to-modify-the-target-framework-and-platform-toolset.md).
+\* można użyć zestawu narzędzi platformy systemu Windows XP zawartego w programie Visual Studio 2017, Visual Studio 2015, Visual Studio 2013 i Visual Studio 2012 Update 1 w celu utworzenia projektów systemu Windows XP i Windows Server 2003. Aby uzyskać informacje na temat korzystania z tego zestawu narzędzi platformy, zobacz [Konfigurowanie programów dla systemu Windows XP](../build/configuring-programs-for-windows-xp.md). Aby uzyskać dodatkowe informacje na temat zmiany zestawu narzędzi platformy, zobacz [How to: Modify The Target Framework and platform zestaw narzędzi](../build/how-to-modify-the-target-framework-and-platform-toolset.md).
 
-\*\* Możesz zainstalować **aplikacji mobilnych za pomocą C++**  obciążeniem w Instalatorze programu Visual Studio 2017 i nowszych. W Instalatorze programu Visual Studio 2015 wybierz opcjonalne **Visual C++ for Cross Platform Mobile Development** do platformy docelowej, iOS lub Android. Aby uzyskać instrukcje, zobacz [zainstalować Visual C++ for Cross-Platform Mobile Development](/visualstudio/cross-platform/install-visual-cpp-for-cross-platform-mobile-development). Aby utworzyć kod dla systemu iOS, konieczne jest posiadanie komputera Mac oraz on spełniać inne wymagania. Aby uzyskać listę wymagań wstępnych i instrukcje dotyczące instalacji, zobacz [Instalowanie i Konfigurowanie narzędzi do kompilacji przy użyciu systemu iOS](/visualstudio/cross-platform/install-and-configure-tools-to-build-using-ios). Możesz tworzyć x86 lub kodu ARM, aby dopasować sprzętu docelowego. Użyj x86 konfiguracje do skompilowania symulatora systemu iOS, programu Microsoft Visual Studio Emulator for Android i niektóre urządzenia z systemem Android. Użyj konfiguracji ARM, aby tworzyć dla urządzeń z systemem iOS i większość urządzeń z systemem Android.
+\*\* można zainstalować **Programowanie aplikacji mobilnych przy użyciu C++**  obciążenia w Instalatorze programu Visual Studio 2017 i nowszych. W Instalatorze programu Visual Studio 2015 wybierz opcjonalną **wizualizację C++ dla wieloplatformowego programu do tworzenia aplikacji mobilnych** , która będzie ukierunkowana na platformy z systemem iOS lub Android. Aby uzyskać instrukcje, zobacz [Instalowanie C++ wizualizacji na potrzeby tworzenia aplikacji mobilnych na wiele platform](/visualstudio/cross-platform/install-visual-cpp-for-cross-platform-mobile-development). Aby skompilować kod dla systemu iOS, musisz mieć komputer Mac i spełnić inne wymagania. Aby uzyskać listę wymagań wstępnych i instrukcji instalacji, zobacz [Instalowanie i Konfigurowanie narzędzi do kompilowania przy użyciu systemu iOS](/visualstudio/cross-platform/install-and-configure-tools-to-build-using-ios). Można skompilować kod x86 lub ARM w celu dopasowania go do sprzętu docelowego. Użyj konfiguracji x86, aby skompilować symulatory systemu iOS, Microsoft Visual Studio Emulator for Android i niektóre urządzenia z systemem Android. Użyj konfiguracji usługi ARM do kompilowania urządzeń z systemem iOS i większości urządzeń z systemem Android.
 
-\*\*\* Możesz zainstalować **Linux development przy użyciu C++**  obciążeniem w Instalatorze programu Visual Studio 2017 i nowszych, aby platform firmy Microsoft w systemie Linux. Aby uzyskać instrukcje, zobacz [pobieranie, instalowanie i konfigurowanie obciążenia Linux](../linux/download-install-and-setup-the-linux-development-workload.md). Ten zestaw narzędzi kompiluje plik wykonywalny na komputerze docelowym, dzięki czemu można tworzyć dla dowolnej obsługiwanej architektury.
+\*\*\* można zainstalować Programowanie dla systemu **Linux przy C++ użyciu** obciążenia w Instalatorze programu Visual Studio 2017 lub nowszego dla docelowych platform systemu Linux. Aby uzyskać instrukcje, zobacz [pobieranie, Instalowanie i Konfigurowanie obciążenia systemu Linux](../linux/download-install-and-setup-the-linux-development-workload.md). Ten zestaw narzędzi kompiluje plik wykonywalny na komputerze docelowym, aby można było utworzyć dowolną obsługiwaną architekturę.
 
-\*\*\*\* Obsługa architektury ARM64 jest dostępne w programie Visual Studio 2017 i nowszych wersjach.
+\*\*\*\* ARM64 jest dostępna w programie Visual Studio 2017 i nowszych.
 
-Aby uzyskać informacje o tym, jak ustawić konfigurację platformy docelowej, zobacz [jak: Konfigurowanie projektów Visual C++ pod kątem 64-bitowy, x64 platform](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md).
+Aby uzyskać informacje na temat sposobu ustawiania konfiguracji platformy docelowej, zobacz [How to: Configure Visual C++ projects to target 64-bit i x64 platform](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md).
 
 ## <a name="see-also"></a>Zobacz także
 

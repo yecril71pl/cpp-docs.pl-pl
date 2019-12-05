@@ -1,25 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4435
+title: Ostrzeżenie kompilatora (poziom 4) C4435
 ms.date: 11/04/2016
+f1_keywords:
+- C4435
+helpviewer_keywords:
+- C4435
 ms.assetid: a04524af-2b71-4ff9-9729-d9d1d1904ed7
-ms.openlocfilehash: 43c13c484d6e9accee7c4d2c58b72a4539a75c4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ff545d3de3ef173cdbfd99d7714890e8631ce7a
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391481"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810661"
 ---
-# <a name="compiler-warning-level-4-c4435"></a>Kompilator ostrzeżenie (poziom 4) C4435
+# <a name="compiler-warning-level-4-c4435"></a>Ostrzeżenie kompilatora (poziom 4) C4435
 
-'klasa1': Układ obiektu pod/vd2 zmieni się ze względu na wirtualną klasę podstawową 'klasa2'
+'klasa1': Układ obiektu pod /vd2 zmieni się ze względu na wirtualną klasę podstawową 'klasa2'
 
-To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+To ostrzeżenie jest domyślnie wyłączone. Aby uzyskać więcej informacji [, zobacz ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
-W domyślnym skompilować opcji/vd1 i Klasa pochodna nie jest objęta `vtordisp` pole wskazany bazy wirtualnej.  Jeśli/vd2 lub `#pragma vtordisp(2)` – `vtordisp` pola będą obecne, zmieniając układ obiektu.  Może to prowadzić do problemów ze zgodnością binarne, jeśli moduły interakcje są kompilowane z różnymi `vtordisp` ustawienia.
+W obszarze domyślna opcja kompilacji elementu/vd1 Klasa pochodna nie ma pola `vtordisp` dla wskazanej bazy wirtualnej.  Jeśli/VD2 zmieni lub `#pragma vtordisp(2)` obowiązuje, `vtordisp` pole będzie obecne, zmieniając układ obiektu.  Może to prowadzić do problemów ze zgodnością binarną, jeśli korzystanie z modułów jest kompilowane z różnymi ustawieniami `vtordisp`.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4435.
+Poniższy przykład generuje C4435.
 
 ```cpp
 // C4435.cpp
