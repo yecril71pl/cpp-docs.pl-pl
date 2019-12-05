@@ -51,12 +51,12 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-ms.openlocfilehash: c56c9f8032c9af2ed4404428abe3b9ee26b4b603
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c6b100fb24d879a16780650d8a374ec26f28c048
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951352"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857726"
 ---
 # <a name="nextafter-nextafterf-nextafterl-_nextafter-_nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 
@@ -93,17 +93,17 @@ Wartość zmiennoprzecinkowa do rozpoczęcia.
 *y*<br/>
 Wartość zmiennoprzecinkowa do osiągnięcia.
 
-## <a name="return-value"></a>Wartość zwracana
+## <a name="return-value"></a>Wartość zwrócona
 
-Zwraca następną reprezentację wartości zmiennoprzecinkowej zwracanego typu po *x* w kierunku wartości *y*. Jeśli *x* i *y* są równe, funkcja zwraca *y*, przekonwertowane na typ zwracany, bez wyzwolonego wyjątku. Jeśli *x* nie jest równa *y*, a wynik jest nienormalny lub równy zero, ustawiany jest stan wyjątek zmiennoprzecinkowy **FE_UNDERFLOW** i **FE_INEXACT** i zwracany jest prawidłowy wynik. Jeśli parametr *x* lub *y* jest NaN, wartość zwracana jest jednym z NANs danych wejściowych. Jeśli wartość *x* jest skończona, a wynik jest nieskończony lub nie można go zaprezentować w typie, jest zwracana prawidłowo zapisana nieskończoność lub NaN, **FE_OVERFLOW** i **FE_INEXACT** Stany wyjątków zmiennoprzecinkowych są ustawione, a **errno** jest ustawiona na **ERANGE** .
+Zwraca następną reprezentację wartości zmiennoprzecinkowej zwracanego typu po *x* w kierunku wartości *y*. Jeśli *x* i *y* są równe, funkcja zwraca *y*, przekonwertowane na typ zwracany, bez wyzwolonego wyjątku. Jeśli *x* nie jest równa *y*, a wynik jest nienormalny lub równy zero, ustawiana jest **FE_UNDERFLOW** i **FE_INEXACT** Stany wyjątków zmiennoprzecinkowych i zwracany jest prawidłowy wynik. Jeśli parametr *x* lub *y* jest NaN, wartość zwracana jest jednym z NANs danych wejściowych. Jeśli wartość *x* jest skończona, a wynik jest nieskończony lub nie można go zaprezentować w typie, zostanie zwrócona prawidłowo podpisana nieskończoność lub NAN, **FE_OVERFLOW** i **FE_INEXACT** Stany wyjątków zmiennoprzecinkowych są ustawione, a **errno** jest ustawiony na **ERANGE**.
 
 ## <a name="remarks"></a>Uwagi
 
 Rodziny funkcji **nextafter —** i **nexttoward** są równoważne, z wyjątkiem typu parametru *y*. Jeśli *x* i *y* są równe, zwrócona wartość to *y* konwertowana na typ zwracany.
 
-Ponieważ C++ umożliwia przeciążanie, jeśli dołączysz \<cmath > można wywoływać przeciążenia **nextafter —** i **nexttoward** , które zwracają **zmiennoprzecinkowe** i **długie** **podwójne** typy. W programie w języku C **nextafter —** i **nexttoward** zawsze zwracają wartość **Double**.
+Ponieważ C++ umożliwia Przeciążenie, w przypadku uwzględnienia \<cmath > można wywoływać przeciążenia **nextafter —** i **nexttoward** , które zwracają **zmiennoprzecinkowe** i **długie** **podwójne** typy. W programie w języku C **nextafter —** i **nexttoward** zawsze zwracają wartość **Double**.
 
-Funkcje **_nextafter** i **_nextafterf** są specyficzne dla firmy Microsoft. Funkcja **_nextafterf** jest dostępna tylko w przypadku kompilowania dla architektury x64.
+**_Nextafter** i **_nextafterf** funkcje są specyficzne dla firmy Microsoft. Funkcja **_nextafterf** jest dostępna tylko w przypadku kompilowania dla architektury x64.
 
 ## <a name="requirements"></a>Wymagania
 

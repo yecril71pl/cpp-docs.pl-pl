@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: 2e561cff956ca51707834bf869a1c114f0c99a3e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: db95453a44f6a55d4bf98638351dcda4bd8377c9
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957044"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857843"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass, _fpclassf
 
@@ -61,9 +61,9 @@ int _fpclassf(
 *x*<br/>
 Wartość zmiennoprzecinkowa do przetestowania.
 
-## <a name="return-value"></a>Wartość zwracana
+## <a name="return-value"></a>Wartość zwrócona
 
-Funkcje **_fpclass** i **_fpclassf** zwracają liczbę całkowitą, która wskazuje na klasyfikację zmiennoprzecinkową argumentu *x*. Klasyfikacja może mieć jedną z następujących wartości zdefiniowanych w \<> float. h.
+Funkcje **_fpclass** i **_fpclassf** zwracają liczbę całkowitą, która wskazuje na klasyfikację zmiennoprzecinkową argumentu *x*. Klasyfikacja może mieć jedną z następujących wartości zdefiniowanych w \<float. h >.
 
 |Wartość|Opis|
 |-----------|-----------------|
@@ -80,7 +80,7 @@ Funkcje **_fpclass** i **_fpclassf** zwracają liczbę całkowitą, która wskaz
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje **_fpclass** i **_fpclassf** są specyficzne dla firmy Microsoft. Są one podobne do [fpclassify —](fpclassify.md), ale zwracają więcej szczegółowych informacji na temat argumentu. Funkcja **_fpclassf** jest dostępna tylko po skompilowaniu dla platformy x64.
+**_Fpclass** i **_fpclassf** funkcje są specyficzne dla firmy Microsoft. Są one podobne do [fpclassify —](fpclassify.md), ale zwracają więcej szczegółowych informacji na temat argumentu. Funkcja **_fpclassf** jest dostępna tylko po skompilowaniu dla platformy x64.
 
 ## <a name="requirements"></a>Wymagania
 

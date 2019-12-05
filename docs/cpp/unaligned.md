@@ -8,26 +8,26 @@ f1_keywords:
 helpviewer_keywords:
 - __unaligned keyword [C++]
 ms.assetid: 0cd83aad-1840-47e3-ad33-59bfcbe6375b
-ms.openlocfilehash: 8eb1b93aa55601125600b6c69d9bff3d9ca43aa3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1090a0f3345f749a2afbd80566a9af7b9ea32d53
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244119"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857258"
 ---
-# <a name="unaligned"></a>__unaligned
+# <a name="__unaligned"></a>__unaligned
 
-**Specyficzne dla firmy Microsoft**. Kiedy Deklarujesz wskaźnika za pomocą **__unaligned** modyfikator, kompilator zakłada, że wskaźnik adresów danych, który nie jest wyrównany. W związku z tym odpowiednich platform kod jest generowany w celu obsługi niewyrównanych odczytuje i zapisuje za pomocą wskaźnika.
+**Specyficzne dla firmy Microsoft**. Gdy deklarujesz wskaźnik z modyfikatorem **__unaligned** , kompilator zakłada, że wskaźnik adresuje dane, które nie są wyrównane. W związku z tym jest generowany kod odpowiedni dla platformy w celu obsługi niewyrównanych odczytów i zapisów za pomocą wskaźnika.
 
 ## <a name="remarks"></a>Uwagi
 
-Ten modyfikator opisuje wyrównanie danych adresowany przez wskaźnik; wskaźnik, sama zakłada się, że można wyrównać.
+Ten modyfikator opisuje wyrównanie danych rozmieszczonych przez wskaźnik; przyjmuje się, że sam wskaźnik jest wyrównany.
 
-Konieczność **__unaligned** — słowo kluczowe jest zależna od platformy i środowiska. Nie można oznaczyć odpowiednio danych może spowodować problemy z zakresu od spadku wydajności na awarie sprzętu. **__Unaligned** modyfikator nie jest prawidłowa dla x86 platformy.
+Konieczność słowa kluczowego **__unaligned** zależy od platformy i środowiska. Niepowodzenie oznaczania danych może spowodować problemy z wydajnością przed awariami sprzętowymi. Modyfikator **__unaligned** jest nieprawidłowy dla platformy x86.
 
-W celu zgodności z poprzednimi wersjami **_unaligned** jest synonimem dla **__unaligned** chyba że — opcja kompilatora [/Za \(Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md) został określony.
+W celu zapewnienia zgodności z poprzednimi wersjami **_unaligned** jest synonimem dla **__unaligned** , chyba że opcja kompilatora [/za \(Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md) .
 
-Aby uzyskać więcej informacji na temat wyrównania zobacz:
+Aby uzyskać więcej informacji na temat wyrównania, zobacz:
 
 - [align](../cpp/align-cpp.md)
 

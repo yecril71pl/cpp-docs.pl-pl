@@ -45,12 +45,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: 72870c3548f0fd6972183b0c090708c6eddc591e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c7831842eb4d3c1eef9c4c9e83bbddb557cec0e3
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953129"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857752"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -105,11 +105,11 @@ long long int llrintl(
 *x*<br/>
 Wartość do zaokrąglenia.
 
-## <a name="return-value"></a>Wartość zwracana
+## <a name="return-value"></a>Wartość zwrócona
 
 Jeśli to się powiedzie, zwraca zaokrągloną wartość całkowitą z *x*.
 
-|Problem|przesłać|
+|Problem|Zwrot|
 |-----------|------------|
 |*x* jest poza zakresem typu zwracanego<br /><br /> *x* = ± ∞<br /><br /> *x* = NaN|Podnosi **FE_INVALID** i zwraca zero (0).|
 
@@ -119,7 +119,7 @@ Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **lri
 
 Jeśli *x* nie reprezentuje równoważnej wartości całkowitej, te funkcje zgłaszają **FE_INEXACT**.
 
-**Specyficzne dla firmy Microsoft**: Gdy wynik znajduje się poza zakresem zwracanego typu lub gdy parametr jest NaN lub nieskończoności, wartość zwracana jest zdefiniowana implementacja. Kompilator firmy Microsoft zwraca wartość zero (0).
+**Specyficzne dla firmy Microsoft**: kiedy wynik znajduje się poza zakresem typu zwracanego lub gdy parametr jest NaN lub nieskończoności, wartość zwracana jest zdefiniowana przez implementację. Kompilator firmy Microsoft zwraca wartość zero (0).
 
 ## <a name="requirements"></a>Wymagania
 

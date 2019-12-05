@@ -14,46 +14,46 @@ helpviewer_keywords:
 - typedef names, used in __asm blocks
 - __asm keyword [C++], C/C++ elements in
 ms.assetid: ae8b2b52-6b75-42e3-ac0c-ad02d922ed97
-ms.openlocfilehash: 0949eba769bed33da8fe39bb41500a2ba02af224
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16b298b92a4ba40d9091499a1821ad4f3c413d6c
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166558"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74854527"
 ---
-# <a name="using-c-or-c-in-asm-blocks"></a>Korzystanie z C lub C++ w blokach __asm
+# <a name="using-c-or-c-in-__asm-blocks"></a>Korzystanie z C lub C++ w blokach __asm
 
-** Specyficzne dla firmy Microsoft **
+**Microsoft Specific**
 
-Ponieważ instrukcje montażu w tekście mogą być mieszane w instrukcjach języka C lub C++, mogą odwoływać się do zmiennych C lub C++ według nazwy i korzystać z wielu elementów z tych języków.
+Ponieważ instrukcje wbudowanego zestawu mogą być mieszane z C C++ lub instrukcjami, mogą odwoływać się C++ do c lub zmienne według nazwy i używać wielu innych elementów języków.
 
-`__asm` Bloku można użyć następujących elementów języka:
+Blok `__asm` może używać następujących elementów języka:
 
 - Symbole, w tym etykiety i nazwy zmiennych i funkcji
 
-- Stałe łącznie ze stałymi symbolicznymi i `enum` elementy członkowskie
+- Stałe, w tym stałe symboliczne i `enum` elementy członkowskie
 
 - Makra i dyrektywy preprocesora
 
-- Komentarze (zarówno __/ \* \* /__ i __//__ )
+- Komentarze (zarówno __/\* \*/__ i __//__ )
 
-- Wpisz nazwy użytkowników (wszędzie tam, gdzie typ MASM będą prawne)
+- Nazwy typów (wszędzie tam, gdzie typ MASM byłby dozwolony)
 
-- `typedef` nazwy, ogólnie takie jak używane z operatorów **PTR** i **typu** lub określić elementy członkowskie struktury lub Unii
+- nazwy `typedef`, zwykle używane z operatorami, takimi jak **PTR** i **Type** , lub w celu określenia struktury lub składowych Unii
 
-W ramach `__asm` bloku, można określić stałe całkowite przy użyciu notacji języka C lub notacji podstawy asemblera (0x100 do 100 h są równoważne, na przykład). Dzięki temu można zdefiniować (przy użyciu `#define`) stałą w języku C, a następnie użyj w C lub C++ i zestawu części programu. Można również określić stałe w ósemkowej poprzedzając je z 0. Na przykład 0777 określa stałą ósemkową.
+W bloku `__asm` można określić stałe całkowite przy użyciu notacji C lub asemblera podstawy (0x100 i 100h są równoważne, na przykład). Pozwala to definiować (przy użyciu `#define`) stałą w C, a następnie używać jej zarówno w części C, C++ jak i w zestawie. Możesz również określić stałe w liczbie ósemkowej, poprzedzając je wartością 0. Na przykład 0777 określa stałą ósemkową.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
+## <a name="what-do-you-want-to-know-more-about"></a>O czym chcesz się dowiedzieć więcej?
 
 - [Używanie operatorów w blokach __asm](../../assembler/inline/using-operators-in-asm-blocks.md)
 
-- [Przy użyciu języka C lub C++ Symbols_in blokach __asm](../../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)
+- [Korzystanie z bloków C++ __asm C lub Symbols_in](../../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)
 
 - [Uzyskiwanie dostępu do danych C lub C++ w blokach __asm](../../assembler/inline/accessing-c-or-cpp-data-in-asm-blocks.md)
 
 - [Pisanie funkcji w zestawie wbudowanym](../../assembler/inline/writing-functions-with-inline-assembly.md)
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

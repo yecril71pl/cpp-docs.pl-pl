@@ -13,12 +13,12 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-ms.openlocfilehash: 2cf075e4ff8049593a1e77c5d2c1c259b224877b
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6cfbcd325dc895719bad5dccc9c19bcda90cdaa0
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222300"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74858077"
 ---
 # <a name="pragma-directives-and-the-__pragma-keyword"></a>Dyrektywy pragma i słowo kluczowe __pragma
 
@@ -26,26 +26,26 @@ Dyrektywy pragma określają funkcje kompilatora specyficzne dla maszyny lub sys
 
 ## <a name="syntax"></a>Składnia
 
-> **#pragma** *token — ciąg*\
-> **__pragma (** *token-String* **)**
+> **#pragma** *ciąg tokenów*\
+> **__pragma (** *ciąg tokenu* **)**
 
 ## <a name="remarks"></a>Uwagi
 
-Każda implementacja języka C i C++ obsługuje pewne funkcje, które są unikatowe dla jego komputera lub systemu operacyjnego. Niektóre programy, na przykład, muszą mieć precyzyjną kontrolę nad lokalizacją danych w pamięci lub kontrolować sposób, w jaki niektóre funkcje odbierają parametry. Dyrektywy **#pragma** oferują sposób, w jaki każdy kompilator oferuje funkcje specyficzne dla maszyn i systemu operacyjnego, jednocześnie zachowując ogólną zgodność z językami C i C++ .
+Każda implementacja C i C++ obsługuje niektóre funkcje unikatowe dla jego komputera hosta lub systemu operacyjnego. Niektóre programy, na przykład, muszą mieć precyzyjną kontrolę nad lokalizacją danych w pamięci lub kontrolować sposób, w jaki niektóre funkcje odbierają parametry. Dyrektywy **#pragma** oferują sposób, w jaki każdy kompilator oferuje funkcje specyficzne dla maszyn i systemu operacyjnego, jednocześnie zachowując ogólną zgodność z językami C i C++ .
 
 Dyrektywy pragma są specyficzne dla maszyny lub systemu operacyjnego według definicji i są zwykle różne dla każdego kompilatora. Dyrektywy pragma mogą być używane w dyrektywach warunkowych, aby zapewnić nową funkcję preprocesora lub dostarczyć do kompilatora informacje zdefiniowane przez implementację.
 
-*Token-String* to seria znaków, które dają konkretną instrukcję i argumenty kompilatora, jeśli istnieją. Numer ( **#** ) musi być pierwszym znakiem niebiałym w wierszu zawierającym pragmę. Znaki odstępu mogą oddzielić znak numeru i słowo "pragma". Poniżej **#pragma**Napisz dowolny tekst, który tłumaczy może analizować jako wstępnie przetworzony tokeny. Argument **#pragma** podlega rozwinięciu makra.
+*Token-String* to seria znaków, które dają konkretną instrukcję i argumenty kompilatora, jeśli istnieją. Znak numeru ( **#** ) musi być pierwszym niebiałym znakiem w wierszu, który zawiera pragmę. Znaki odstępu mogą oddzielić znak numeru i słowo "pragma". Poniżej **#pragma**Napisz dowolny tekst, który tłumaczy może analizować jako wstępnie przetworzony tokeny. Argument **#pragma** podlega rozwinięciu makra.
 
 Kompilator generuje ostrzeżenie, gdy znajdzie pragma, że nie rozpoznaje i kontynuuje Kompilowanie.
 
-Microsoft C i C++ kompilatory rozpoznają następujące dyrektywy pragma:
+Kompilatory Microsoft C i C++ rozpoznają następujące pragmy:
 
 ||||
 |-|-|-|
 |[alloc_text](../preprocessor/alloc-text.md)|[auto_inline](../preprocessor/auto-inline.md)|[bss_seg](../preprocessor/bss-seg.md)|
 |[check_stack](../preprocessor/check-stack.md)|[code_seg](../preprocessor/code-seg.md)|[komentować](../preprocessor/comment-c-cpp.md)|
-|[składnik](../preprocessor/component.md)|[zgodne](../preprocessor/conform.md) <sup>1</sup>|[const_seg](../preprocessor/const-seg.md)|
+|[składnik](../preprocessor/component.md)|[zgodność](../preprocessor/conform.md) <sup>1</sup>|[const_seg](../preprocessor/const-seg.md)|
 |[data_seg](../preprocessor/data-seg.md)|[deprecated](../preprocessor/deprecated-c-cpp.md)|[detect_mismatch](../preprocessor/detect-mismatch.md)|
 |[fenv_access](../preprocessor/fenv-access.md)|[float_control](../preprocessor/float-control.md)|[fp_contract](../preprocessor/fp-contract.md)|
 |[funkcyjn](../preprocessor/function-c-cpp.md)|[hdrstop](../preprocessor/hdrstop.md)|[include_alias](../preprocessor/include-alias.md)|
@@ -62,7 +62,7 @@ Microsoft C i C++ kompilatory rozpoznają następujące dyrektywy pragma:
 
 ## <a name="pragmas-and-compiler-options"></a>Dyrektywy pragma i opcje kompilatora
 
-Niektóre dyrektywy pragma zapewniają te same funkcje co opcje kompilatora. W przypadku napotkania dyrektywy pragma w kodzie źródłowym zastępuje ona zachowanie określone przez opcję kompilatora. Na przykład jeśli określono [/ZP8](../build/reference/zp-struct-member-alignment.md), można zastąpić to ustawienie kompilatora dla określonych sekcji kodu z [pakietem](../preprocessor/pack.md):
+Niektóre informacje pragmatyczne zapewniają taką samą funkcjonalność jak opcje kompilatora. Kiedy w kodzie źródłowym odnaleziono pragmę, zastępuje ona zachowanie określone przez opcję kompilatora. Na przykład jeśli określono [/ZP8](../build/reference/zp-struct-member-alignment.md), można zastąpić to ustawienie kompilatora dla określonych sekcji kodu z [pakietem](../preprocessor/pack.md):
 
 ```cmd
 cl /Zp8 some_file.cpp
@@ -79,11 +79,9 @@ cl /Zp8 some_file.cpp
 
 ## <a name="the-__pragma-keyword"></a>Słowo kluczowe __pragma ()
 
-**Microsoft specific**
+Kompilator obsługuje także słowo kluczowe **__pragma** specyficzne dla firmy Microsoft, które ma takie same funkcje jak dyrektywy **#pragma** . Różnica polega na tym, że słowo kluczowe **__pragma** jest możliwe do użycia w definicji makra. Dyrektywa **#pragma** nie jest użyteczna w definicji makra, ponieważ kompilator interpretuje znak znaku cyfry ("#") w dyrektywie jako [operator tworzenia ciągu (#)](../preprocessor/stringizing-operator-hash.md).
 
-Kompilator obsługuje także słowo kluczowe **__pragma** , które ma takie same funkcje jak dyrektywa **#pragma** . Różnica polega na tym, że słowo kluczowe **__pragma** jest możliwe do użycia w definicji makra. Dyrektywa **#pragma** nie jest użyteczna w definicji makra, ponieważ kompilator interpretuje znak znaku cyfry ("#") w dyrektywie jako [operator tworzenia ciągu (#)](../preprocessor/stringizing-operator-hash.md).
-
-Poniższy przykład kodu demonstruje, jak słowo kluczowe **__pragma** może być używane w makrze. Ten kod jest pochodzący z nagłówka MFCDUAL. h w próbce ACDUAL w "Przykłady obsługi kompilatora COM":
+Poniższy przykład kodu demonstruje, jak słowo kluczowe **__pragma** może być używane w makrze. Ten kod jest wyszczególniony z nagłówka mfcdual.h w przykładzie ACDUAL w „Przykładach obsługi kompilatora COM”:
 
 ```cpp
 #define CATCH_ALL_DUAL \
@@ -103,10 +101,8 @@ END_CATCH_ALL \
 return _hr; \
 ```
 
-**Zakończenie określonych przez firmę Microsoft**
-
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja językaC++ C/preprocesora](../preprocessor/c-cpp-preprocessor-reference.md)\
-[Dyrektywy pragma języka C](../c-language/c-pragmas.md)\
+\ [odwołaniaC++ w języku C/preprocesora](../preprocessor/c-cpp-preprocessor-reference.md)
+\ [pragmy języka C](../c-language/c-pragmas.md)
 [Słowa kluczowe](../cpp/keywords-cpp.md)

@@ -1,24 +1,24 @@
 ---
 title: Błąd niekrytyczny ML A2010
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2010
 helpviewer_keywords:
 - A2010
 ms.assetid: 8bcd57f4-1e3f-421f-9ef8-e702daf57fcb
-ms.openlocfilehash: 0fff8e7cafe8e6165f44e7d0fd7b0e51d8bbe3f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3865580239b71bc1d3f5cc7f925897a835f25427
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177932"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856743"
 ---
 # <a name="ml-nonfatal-error-a2010"></a>Błąd niekrytyczny ML A2010
 
-**Nieprawidłowy typ wyrażenia**
+**nieprawidłowe wyrażenie typu**
 
-Argument operacji do [niniejszej](../../assembler/masm/operator-this.md) lub [PTR](../../assembler/masm/operator-ptr.md) nie jest prawidłowym typem wyrażenia.
+Argument operacji [tego](../../assembler/masm/operator-this.md) elementu lub [PTR](../../assembler/masm/operator-ptr.md) nie jest prawidłowym wyrażeniem typu.
 
 ## <a name="see-also"></a>Zobacz także
 

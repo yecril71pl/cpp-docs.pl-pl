@@ -1,32 +1,32 @@
 ---
 title: Błąd niekrytyczny ML A2050
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2050
 helpviewer_keywords:
 - A2050
 ms.assetid: 16f3a58f-4bde-48f1-b0e3-2ed9612780a5
-ms.openlocfilehash: 59d08b9c2743a3b45633527bcc54b3e1c4d6a58c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15c6449ff4207c92dee28120d4f61be641cf01c8
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177555"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856580"
 ---
 # <a name="ml-nonfatal-error-a2050"></a>Błąd niekrytyczny ML A2050
 
-**rzeczywiste lub nie jest dozwoloną liczbę BCD**
+**Liczba rzeczywistych lub BCD nie jest dozwolona**
 
-Liczba zmiennoprzecinkowa (rzeczywiste) lub stałej dziesiętnej kodowany plik binarny (BCD) użyto innej niż jako inicjator danych.
+Stała liczba zmiennoprzecinkowa (rzeczywista) lub zakodowana cyfra dziesiętna (BCD) została użyta inna niż inicjator danych.
 
-Wystąpił jeden z następujących czynności:
+Wystąpił jeden z następujących:
 
-- Liczba rzeczywista lub BCD był używany w wyrażeniu.
+- W wyrażeniu użyto liczby rzeczywistej lub BCD.
 
-- Liczba rzeczywista został użyty do zainicjowania dyrektywy innych niż [DWORD](../../assembler/masm/dword.md), [QWORD](../../assembler/masm/qword.md), lub [tbyte —](../../assembler/masm/tbyte.md).
+- Liczba rzeczywista została użyta do zainicjowania dyrektywy innej niż [DWORD](../../assembler/masm/dword.md), [Qword](../../assembler/masm/qword.md)lub [TBYTE](../../assembler/masm/tbyte.md).
 
-- BCD został użyty do zainicjowania dyrektywy innych niż `TBYTE`.
+- Wykryto BCD do zainicjowania dyrektywy innej niż `TBYTE`.
 
 ## <a name="see-also"></a>Zobacz także
 

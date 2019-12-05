@@ -9,65 +9,65 @@ helpviewer_keywords:
 - references, declaring
 - referencing objects, declarator syntax
 ms.assetid: 68156f7f-97a0-4b66-b26d-b25ade5e3bd8
-ms.openlocfilehash: aafc582299402eabab2736ac7d07b6c4c397413c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2353f0861f0f249416d0bb84a7a951b1cb6d64bc
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244224"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857336"
 ---
 # <a name="references-c"></a>Odwołania (C++)
 
-Odwołania, jak wskaźnik, przechowuje adres obiektu, który znajduje się w innym miejscu w pamięci. W przeciwieństwie do wskaźnika, odwołania po jego zainicjowaniu nie można wprowadzać odnoszą się do innego obiektu lub ustawiona na wartość null. Istnieją dwa rodzaje odwołań: odwołania lvalue, które odnoszą się do nazwanej odwołania zmiennej i r-wartości, które odnoszą się do [tymczasowy obiekt](../cpp/temporary-objects.md). & — Operator oznacza odwołanie lvalue i & & — operator oznacza odwołanie rvalue lub odwołaniem universal (rvalue lub l-wartości) w zależności od kontekstu.
+Odwołanie, takie jak wskaźnik, przechowuje adres obiektu, który znajduje się w innym miejscu w pamięci. W przeciwieństwie do wskaźnika, odwołanie po jego zainicjowaniu nie może zostać wykonane w celu odwoływania się do innego obiektu lub ustawione na wartość null. Istnieją dwa rodzaje odwołań: odwołania lvalue, które odwołują się do nazwanej zmiennej i odwołania rvalue, które odwołują się do [obiektu tymczasowego](../cpp/temporary-objects.md). Operator & oznacza odwołanie lvalue, a operator & & oznacza odwołanie rvalue lub uniwersalne odwołanie (rvalue lub lvalue) w zależności od kontekstu.
 
-Odwołania może być zadeklarowana przy użyciu następującej składni:
+Odwołania mogą być deklarowane przy użyciu następującej składni:
 
-> \[*storage-class-specifiers*] \[*cv-qualifiers*] *type-specifiers* \[*ms-modifier*] *declarator* \[**=** *expression*]**;**
+> \[*specyfikatory klasy magazynu*] \[*kwalifikatory CV*] *Specyfikatory typu* \[*MS-modyfikator*] *deklarator* \[ **=** *Expression*] **;**
 
-Wszystkie prawidłowe deklaratora, określając odwołanie mogą być używane. Chyba, że odwołanie jest odwołanie do typu funkcji lub tablicy, mają zastosowanie następujące uproszczoną składnię:
+Może zostać użyty dowolny prawidłowy deklarator określający odwołanie. O ile odwołanie nie jest odwołaniem do typu funkcji lub tablicy, stosowana jest następująca uproszczona Składnia:
 
-> \[*Specyfikatory klas magazynu*] \[ *kwalifikatory cv*] *specyfikatory typu* \[ **&** lub **&&**] \[ *kwalifikatory cv*] *identyfikator* \[ **=** *wyrażenie*]**;**
+> \[*specyfikatory klasy magazynu*] \[*kwalifikatory CV*] *Specyfikatory typu* \[ **&** lub **&&** ] \[*kwalifikatory CV*] *Identyfikator* \[ **=** *wyrażenie*] **;**
 
-Odwołania są zadeklarowane za pomocą następującej sekwencji:
+Odwołania są deklarowane przy użyciu następującej sekwencji:
 
 1. Specyfikatory deklaracji:
 
-   - Specyfikator klasy magazynowania opcjonalne.
+   - Opcjonalna specyfikator urządzenia klasy magazynowania.
 
-   - Opcjonalnie **const** i/lub **volatile** kwalifikatorów.
+   - Opcjonalne kwalifikatory **const** i/lub **volatile** .
 
-   - Specyfikator typu: Nazwa typu.
+   - Specyfikator typu: nazwa typu.
 
 1. Specyfikator:
 
-   - Opcjonalny modyfikator właściwy dla Microsoft. Aby uzyskać więcej informacji, zobacz [Modyfikatory specyficzne dla Microsoft](../cpp/microsoft-specific-modifiers.md).
+   - Opcjonalny modyfikator właściwy dla Microsoft. Aby uzyskać więcej informacji, zobacz [Modyfikatory specyficzne dla firmy Microsoft](../cpp/microsoft-specific-modifiers.md).
 
-   - **&** Operatora lub **&&** operatora.
+   - Operator **&** lub operator **&&** .
 
-   - Opcjonalnie **const** i/lub **volatile** qualifers.
+   - Opcjonalna **stała** i/lub **volatile** kwalifikatorów.
 
    - Identyfikator.
 
 1. Opcjonalny inicjator.
 
-Formularze deklaratorów bardziej złożonych wskaźniki do tablic i funkcji mają zastosowanie również do odwołań do tablic i funkcji. Aby uzyskać więcej informacji, zobacz [wskaźniki](../cpp/pointers-cpp.md).
+Bardziej złożone formularze deklarator dla wskaźników do tablic i funkcji stosują się również do odwołań do tablic i funkcji. Aby uzyskać więcej informacji, zobacz [wskaźniki](../cpp/pointers-cpp.md).
 
-Wiele deklaratorów i inicjatory mogą występować w rozdzielana przecinkami lista specyfikator jednej deklaracji. Na przykład:
+Wiele Deklaratory i inicjatorów mogą znajdować się na liście rozdzielanej przecinkami po pojedynczym specyfikatorze deklaracji. Na przykład:
 
 ```cpp
 int &i;
 int &i, &j;
 ```
 
-Odwołania, wskaźniki i obiekty mogą być zadeklarowane jednocześnie:
+Odwołania, wskaźniki i obiekty mogą być deklarowane razem:
 
 ```cpp
 int &ref, *ptr, k;
 ```
 
-Odwołanie przechowuje adres obiektu, ale składniowo zachowuje się jak obiekt.
+Odwołanie zawiera adres obiektu, ale zachowuje składnię jako obiekt.
 
-W następujący program, zwróć uwagę, że nazwa obiektu, `s`i odwołania do obiektu, `SRef`, mogą być używane tak samo w programach:
+W poniższym programie należy zauważyć, że nazwa obiektu, `s`i odwołania do obiektu `SRef`, może być używana identycznie w programach:
 
 ## <a name="example"></a>Przykład
 

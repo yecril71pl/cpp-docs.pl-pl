@@ -11,20 +11,20 @@ helpviewer_keywords:
 - naked keyword [C++]
 - naked keyword [C++], storage-class attribute
 ms.assetid: 2a66847a-a43f-4541-a7be-c9f5f29b5fdb
-ms.openlocfilehash: f9d8a8747d4a808d040b814005782ed8187bf274
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 242fe83807c6608a09492d0f1f817e3b6e50e530
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301581"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857401"
 ---
 # <a name="naked-function-calls"></a>Wywołania funkcji Naked
 
-## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft
+**Microsoft Specific**
 
-Funkcje zadeklarowane za pomocą **"naked"** atrybutu są emitowane bez konieczności pisania kodu prologu i epilogu, dzięki któremu można napisać własne sekwencje niestandardowego kodu prologu/epilogu przy użyciu [asemblera wbudowanego](../assembler/inline/inline-assembler.md). Funkcje naked są dostarczane jako to zaawansowana funkcja. Umożliwiają deklarowanie funkcji, która jest wywoływana w kontekście innej niż C/C++ i dlatego zakładają różnych gdzie parametry są lub rejestrujący zostaną zachowane. Przykłady obejmują procedury, takich jak programy obsługi przerwań. Ta funkcja jest szczególnie użyteczna w przypadku autorzy sterowniki urządzeń wirtualnych (urządzenia vxd).
+Funkcje zadeklarowane z atrybutem " **owies** " są emitowane bez kodu prologu lub epilogu, dzięki czemu można pisać własne niestandardowe sekwencje Prolog/epilogu przy użyciu [wbudowanego asemblera](../assembler/inline/inline-assembler.md). Funkcje wykorzystające są dostępne jako funkcja zaawansowana. Umożliwiają one zadeklarować funkcję, która jest wywoływana z kontekstu innego niż C/C++, i w ten sposób wprowadzić różne założenia dotyczące lokalizacji parametrów lub rejestrów, które są zachowywane. Przykłady obejmują procedury, takie jak programy obsługi przerwań. Ta funkcja jest szczególnie przydatna w przypadku składników zapisywania sterowników urządzeń wirtualnych (VxDs).
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
+## <a name="what-do-you-want-to-know-more-about"></a>O czym chcesz się dowiedzieć więcej?
 
 - [naked](../cpp/naked-cpp.md)
 
@@ -32,7 +32,7 @@ Funkcje zadeklarowane za pomocą **"naked"** atrybutu są emitowane bez konieczn
 
 - [Zagadnienia dotyczące pisania kodu prologu/epilogu](../cpp/considerations-for-writing-prolog-epilog-code.md)
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

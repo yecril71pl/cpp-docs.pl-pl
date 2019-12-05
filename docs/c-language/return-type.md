@@ -10,50 +10,50 @@ helpviewer_keywords:
 - return keyword [C++], function return types
 - functions [C++], return types
 ms.assetid: 3e5b8a97-b341-48c5-8be8-8986980ef586
-ms.openlocfilehash: 3f781e59672764dc518f3c6fad61d4021720362a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe9280f434dd6267b03764df2ee663c494f007d8
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158377"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857037"
 ---
 # <a name="return-type"></a>Typ zwracany
 
-Zwracany typ funkcji ustanawia rozmiar i typ wartości zwracanej przez funkcję i odpowiada specyfikatorowi typu w poniższej składni:
+Zwracany typ funkcji ustala rozmiar i typ wartości zwracanej przez funkcję i odpowiada specyfikatorowi typu w składni poniżej:
 
 ## <a name="syntax"></a>Składnia
 
-*Definicja funkcji*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikatory deklaracji*<sub>zoptymalizowany pod kątem</sub> *atrybutu seq*<sub>zoptymalizowany pod kątem</sub> *deklaratora* *lista deklaracji*  <sub>zoptymalizowany pod kątem</sub> *compound-statement*
+*definicja funkcji*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;deklarator, *specyfikatory deklaracji*<sub>opt</sub> *-SEQ*<sub>opt</sub> *deklaracji-list*<sub>opt</sub> *złożonej-instrukcja*
 
-/\* *Atrybut seq* jest Specific dla Microsoft \*/
+atrybut \* / *-SEQ* jest \*em specyficznym dla firmy Microsoft /
 
-*Specyfikatory deklaracji*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Storage-class-specifier* *specyfikatory deklaracji*<sub>zoptymalizowany pod kątem</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikator typu* *specyfikatory deklaracji*<sub>zoptymalizowany pod kątem</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Kwalifikator typu* *specyfikatory deklaracji*<sub>zoptymalizowany pod kątem</sub>
+*specyfikatory deklaracji*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklaracji*<sub></sub> *specyfikatora klasy magazynu*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklaracji*<sub></sub> *specyfikatora typu*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklaracji*<sub></sub> *kwalifikatora typu*
 
-*Specyfikator typu*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Void**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Char**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Int**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int8**  / \* specyficzne dla firmy Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int16**  / \* specyficzne dla firmy Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int32**  / \* specyficzne dla firmy Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int64**  / \* specyficzne dla firmy Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**długi**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**double**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Podpisany**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Bez znaku**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikator typu wyliczeniowego*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*
+*specyfikator typu*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**void**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Short**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int8** /\* \*firmy Microsoft /<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int16** /\* \*firmy Microsoft /<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int32** /\* \*firmy Microsoft /<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int64** /\* \*firmy Microsoft /<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**długa**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**zmiennoprzecinkowe**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Double**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**podpisane**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**bez znaku**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-lub-Union-specyfikator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Wyliczenie*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*typedef-Name*
 
-*Specyfikator typu* można określić wszelkie podstawowego, struktury lub Unii. Jeśli nie dołączysz *Specyfikator typu*, zwracany typ `int` zakłada, że.
+*Specyfikator typu* może określać dowolny typ podstawowy, struktura lub związek. Jeśli nie dołączysz *specyfikatora typu*, przyjmuje się typ zwracany `int`.
 
-Zwracany typ podany w definicji funkcji musi odpowiadać zwracanej w deklaracjach funkcji w programie. Funkcja zwraca wartość po `return` zostaje wykonana instrukcja zawiera wyrażenie. Wyrażenie jest obliczane konwertowane na typ zwracanej wartości, jeśli niezbędne i zwrócony do punktu, w którym funkcja została wywołana. Jeśli funkcja jest zadeklarowana z typem zwracanym `void`wyrażenie nie jest obliczane i instrukcję return, która zawiera wyrażenie generuje ostrzeżenie.
+Zwracany typ określony w definicji funkcji musi być zgodny z typem zwracanym w deklaracjach funkcji w innym miejscu programu. Funkcja zwraca wartość, gdy zostanie wykonana instrukcja `return` zawierająca wyrażenie. Wyrażenie jest oceniane, konwertowane na typ wartości zwracanej w razie potrzeby i zwracane do punktu, w którym funkcja została wywołana. Jeśli funkcja jest zadeklarowana z typem zwracanym `void`, instrukcja return zawierająca wyrażenie generuje ostrzeżenie i wyrażenie nie jest oceniane.
 
 Poniższe przykłady ilustrują wartości zwracane przez funkcję.
 
@@ -73,10 +73,10 @@ STUDENT sortstu( STUDENT a, STUDENT b )
 }
 ```
 
-Ten przykład definiuje `STUDENT` to typ `typedef` deklaracji i definiuje funkcję `sortstu` mieć `STUDENT` typ zwracany. Funkcja wybiera i zwraca jedną z jej argumentów dwie struktury. W kolejnych wywołaniach funkcji, kompilator sprawdza typy argumentów są `STUDENT`.
+Ten przykład definiuje typ `STUDENT` za pomocą deklaracji `typedef` i definiuje funkcję `sortstu`, aby `STUDENT` typ zwracany. Funkcja wybiera i zwraca jeden z dwóch argumentów struktury. W kolejnych wywołaniach funkcji kompilator sprawdza, czy typy argumentów są `STUDENT`.
 
 > [!NOTE]
-> Wydajność można rozszerzyć za przekazywanie wskaźników do struktury, a nie całą strukturę.
+> Wydajność zostałaby ulepszona poprzez przekazanie wskaźników do struktury, a nie całej struktury.
 
 ```C
 char *smallstr( char s1[], char s2[] )
@@ -93,9 +93,9 @@ char *smallstr( char s1[], char s2[] )
 }
 ```
 
-W tym przykładzie definiuje funkcji zwracającej wskaźnik do tablicy znaków. Funkcja przyjmuje dwie tablice znaków (parametry) jako argumenty i zwraca wskaźnik do krótszego dwóch ciągów. Wskaźnik do tablicy wskazuje na pierwszy elementów tablicy, a jego typ; ma w związku z tym, zwracany typ funkcji jest wskaźnikiem do typu `char`.
+Ten przykład definiuje funkcję zwracającą wskaźnik do tablicy znaków. Funkcja przyjmuje dwie tablice znakowe (ciągi) jako argumenty i zwraca wskaźnik do krótszych dwóch ciągów. Wskaźnik do tablicy wskazuje pierwszy element tablicy i ma jego typ; w ten sposób zwracany typ funkcji jest wskaźnikiem do typu `char`.
 
-Nie należy deklarować funkcji z `int` zwracany typ przed wywołaniem, mimo że prototypy są zalecane, tak aby był włączony poprawny typ sprawdzania argumentów i zwracanych wartości.
+Nie musisz deklarować funkcji z typem zwracanym `int` przed ich wywołaniem, chociaż prototypy są zalecane, aby sprawdzać poprawność typu dla argumentów i zwracanych wartości.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,24 +1,24 @@
 ---
 title: Błąd niekrytyczny ML A2069
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2069
 helpviewer_keywords:
 - A2069
 ms.assetid: 57dbf072-da61-4306-8d41-a4d9c97fec1a
-ms.openlocfilehash: 42402af411852325c605f82744e345c33313bf3d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4fb648f4bc7e9166eba8d1e537de5819f7dcd57
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62201914"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74855839"
 ---
 # <a name="ml-nonfatal-error-a2069"></a>Błąd niekrytyczny ML A2069
 
-**nie argumentów dozwolone dla tej instrukcji**
+**dla tej instrukcji nie można używać argumentów operacji**
 
-Jeden lub więcej argumentów została określona w instrukcji, która przyjmuje nie argumentów.
+Określono co najmniej jeden operand z instrukcją, która nie przyjmuje operandów.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,5 +1,5 @@
 ---
-title: złożone &lt;long podwójne &gt;
+title: złożone&lt;long double&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - std::complex<long double>
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-ms.openlocfilehash: afd85321ee443359f17850384b06b854dfe89985
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 978be97484a259d7ae8f3fd24fecf07d50c4c844
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688230"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857973"
 ---
-# <a name="complexltlong-doublegt"></a>złożone &lt;long podwójne &gt;
+# <a name="complexltlong-doublegt"></a>złożone&lt;long double&gt;
 
 Ten jawnie wyspecjalizowany szablon klasy opisuje obiekt, który przechowuje uporządkowaną parę obiektów, obie typu **Long Double**, pierwsze reprezentujące rzeczywistą część liczby zespolonej i sekundę reprezentującą część urojoną.
 
@@ -38,16 +38,16 @@ complex(
 
 ### <a name="parameters"></a>Parametry
 
-*_RealVal* \
+*_RealVal*\
 Wartość typu **Long Double** dla rzeczywistej części konstruowanej liczby zespolonej.
 
-*_ImagVal* \
+*_ImagVal*\
 Wartość typu **Long Double** dla części urojonej konstruowanej liczby zespolonej.
 
-*complexNum* \
+*complexNum*\
 Liczba zespolona typu **Double** lub typu **zmiennoprzecinkowego** , których elementy rzeczywiste i urojone są używane do zainicjowania złożonej liczby typu **Long Double** .
 
-## <a name="return-value"></a>Wartość zwracana
+## <a name="return-value"></a>Wartość zwrócona
 
 Złożona liczba typu **Long Double**.
 
@@ -117,11 +117,11 @@ arg( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek**: \<complex >
+**Nagłówek**: \<złożone >
 
 **Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[Klasa złożona](../standard-library/complex-class.md) \
+[Klasa złożona](../standard-library/complex-class.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

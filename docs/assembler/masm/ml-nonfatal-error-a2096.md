@@ -1,30 +1,30 @@
 ---
 title: Błąd niekrytyczny ML A2096
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2096
 helpviewer_keywords:
 - A2096
 ms.assetid: bab0b5ee-b39f-4e44-a41a-3f949fab4297
-ms.openlocfilehash: e6b31afeff801e7128b5a76576e9eaa3398f68e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14fb30214cf7badf51368672dc52635d50a067f1
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202499"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74855477"
 ---
 # <a name="ml-nonfatal-error-a2096"></a>Błąd niekrytyczny ML A2096
 
-**Segment, grupy lub rejestru segmentu oczekiwano**
+**Oczekiwano rejestru segmentów, grup lub segmentów**
 
-Segment lub grupy był oczekiwany, ale nie został znaleziony.
+Oczekiwano segmentu lub grupy, ale nie znaleziono tego elementu.
 
-Wystąpił jeden z następujących czynności:
+Wystąpił jeden z następujących:
 
-- Lewy operand określony segment zastąpienia operatora (**:**) nie była segmentu rejestru (CS, DS, SS, ES, FS lub GS), nazwa grupy, nazwą segmentu lub wyrażenie segmentu.
+- Lewy argument operacji określony za pomocą operatora przesłonięcia segmentu ( **:** ) nie jest rejestrem segmentu (CS, DS, SS, ES, FS lub GS), nazwą grupy, nazwą segmentu ani wyrażeniem segmentu.
 
-- [PRZYJMIJ](../../assembler/masm/assume.md) dyrektywy podano rejestru segmentu, bez adresu nieprawidłowy segment, rejestr segmentu, grupy lub specjalne **PROSTEGO** grupy.
+- [Przyjęto](../../assembler/masm/assume.md) , że dyrektywa przyjmuje rejestr segmentu bez prawidłowego adresu segmentu, rejestru segmentów, grupy lub specjalnej grupy **prostej** .
 
 ## <a name="see-also"></a>Zobacz także
 

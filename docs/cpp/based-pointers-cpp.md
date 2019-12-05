@@ -10,23 +10,20 @@ helpviewer_keywords:
 - based pointers
 - pointers, based
 ms.assetid: 1e5f2e96-c52e-4738-8e14-87278681205e
-ms.openlocfilehash: 0a0435aa89e4cf744a5bc3c6dc72a715ed55f954
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 393fe8f8d12266650740942d0605152b6548d146
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498787"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857700"
 ---
 # <a name="based-pointers-c"></a>Wskaźniki bazowe (C++)
 
-**Microsoft Specific**
-
-Słowo kluczowe **__based** umożliwia deklarowanie wskaźników na podstawie wskaźników (wskaźników, które są przesunięciami z istniejących wskaźników).
+Słowo kluczowe **__based** umożliwia deklarowanie wskaźników na podstawie wskaźników (wskaźników, które są przesunięciami z istniejących wskaźników). Słowo kluczowe **__based** jest zależne od firmy Microsoft.
 
 ## <a name="syntax"></a>Składnia
 
 ```
-
 type __based( base ) declarator
 ```
 
@@ -34,7 +31,7 @@ type __based( base ) declarator
 
 Wskaźniki oparte na adresach wskaźnika są jedyną formą słowa kluczowego **__based** , które są prawidłowe w kompilacjach 32-bitowych lub 64-bitowych. Dla Microsoft 32-bitowego języka C/C++ kompilator wskaźnik oparty jest 32-bitowym przesunięciem w bazie wskaźnika 32-bitowego. Podobne ograniczenie jest przechowywane w środowiskach 64-bitowych, gdzie wskaźnik oparty jest 64-bitowym przesunięciem od 64-bitowego bazy.
 
-Jednym z nich użycia dla wskaźników opartych na wskaźnikach jest dla trwałych identyfikatorów, które zawierają wskaźniki. Lista połączona, która składa się ze wskaźników opartych na wskaźniku, może zostać zapisana na dysku, a następnie ponownie załadowana do innego miejsca w pamięci, przy czym pozostałe wskaźniki są prawidłowe. Przykład:
+Jednym z nich użycia dla wskaźników opartych na wskaźnikach jest dla trwałych identyfikatorów, które zawierają wskaźniki. Lista połączona, która składa się ze wskaźników opartych na wskaźniku, może zostać zapisana na dysku, a następnie ponownie załadowana do innego miejsca w pamięci, przy czym pozostałe wskaźniki są prawidłowe. Na przykład:
 
 ```cpp
 // based_pointers1.cpp
@@ -46,14 +43,14 @@ struct llist_t {
 };
 ```
 
-Do wskaźnika `vpBuffer` przypisano adres pamięci przydzielonej w późniejszym czasie w programie. Połączona lista zostanie przeniesiona względem wartości `vpBuffer`.
+`vpBuffer` wskaźnika ma przypisany adres pamięci przydzielonej w późniejszym czasie w programie. Połączona lista zostanie przeniesiona względem wartości `vpBuffer`.
 
 > [!NOTE]
 >  Identyfikatory utrwalane zawierające wskaźniki można także wykonać przy użyciu [plików mapowanych na pamięć](/windows/win32/Memory/file-mapping).
 
 W przypadku wyłuskania wskaźnika bazowego należy jawnie określić lub niejawnie znany przez deklarację.
 
-Aby zapewnić zgodność z poprzednimi wersjami, **_based** jest synonimem dla **__based** , chyba że jest określona opcja kompilatora [/za \(Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
+W celu zapewnienia zgodności z poprzednimi wersjami **_based** jest synonimem dla **__based** , chyba że opcja kompilatora [/za \(Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md) .
 
 ## <a name="example"></a>Przykład
 

@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: f7d46cc90c9925a49948da488c2ed7ede7bdee8f
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: f6b256ff1551eea4d0b362e78c9780fce29a8513
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217677"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857921"
 ---
 # <a name="_interlockeddecrement-intrinsic-functions"></a>Funkcje wewnętrzne _InterlockedDecrement
 
@@ -109,23 +109,23 @@ Wartość zwracana jest wynikową wartością zmniejszaną.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrznej|Architektura|
+|Wewnętrzne|Architektura|
 |---------------|------------------|
 |`_InterlockedDecrement`, `_InterlockedDecrement16`|x86, ARM, x64, ARM64|
 |`_InterlockedDecrement64`|ARM, x64, ARM64|
 |`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM, ARM64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówkowy** \<intrin. h >
 
 ## <a name="remarks"></a>Uwagi
 
-Istnieją różne różnice `_InterlockedDecrement` , które różnią się w zależności od typów danych, których dotyczą, oraz od tego, czy jest używana specyficzna dla procesora wersja semantyki.
+Istnieje kilka zmian w `_InterlockedDecrement`, które różnią się w zależności od typów danych, których dotyczą, oraz tego, czy używana jest semantyka pozyskiwania lub wydawania.
 
-Chociaż funkcja działa na 32-bitowych liczb całkowitych, `_InterlockedDecrement16` działa na 16-bitowych wartościach całkowitych i `_InterlockedDecrement64` działa na 64-bitowych liczb całkowitych. `_InterlockedDecrement`
+Mimo że funkcja `_InterlockedDecrement` działa na 32-bitowych liczb całkowitych, `_InterlockedDecrement16` operuje na 16-bitowych wartościach całkowitych i `_InterlockedDecrement64` działa na 64-bitowych liczb całkowitych.
 
-Na platformach ARM Użyj funkcji wewnętrznych z `_acq` i `_rel` sufiksów, jeśli potrzebujesz uzyskiwania i wydawania semantyki, na przykład na początku i na końcu sekcji krytycznej. Elementy wewnętrzne z `_nf` sufiksem ("No ogrodzeni") nie działają jako bariera pamięci.
+Na platformach ARM Użyj elementów wewnętrznych z sufiksami `_acq` i `_rel`, jeśli potrzebujesz uzyskać semantyki pobierania i wydawania, na przykład na początku i na końcu sekcji krytycznej. Elementy wewnętrzne z sufiksem `_nf` ("No ogrodzeni") nie działają jako bariera pamięci.
 
-Zmienna wskazywana przez `lpAddend` parametr musi być wyrównana do 32-bitowej granicy; w przeciwnym razie ta funkcja kończy się niepowodzeniem w systemach wieloprocesorowych x86 i w systemach innych niż x86. Aby uzyskać więcej informacji, zobacz [align](../cpp/align-cpp.md).
+Zmienna wskazywana przez parametr `lpAddend` musi być wyrównana na granicy 32-bitowej; w przeciwnym razie ta funkcja kończy się niepowodzeniem w systemach wieloprocesorowych x86 i w systemach innych niż x86. Aby uzyskać więcej informacji, zobacz [align](../cpp/align-cpp.md).
 
 Te procedury są dostępne tylko jako elementy wewnętrzne.
 
@@ -197,8 +197,10 @@ void __cdecl SimpleThread(void* pParam) {
 }
 ```
 
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
+
 ## <a name="see-also"></a>Zobacz także
 
-[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)\
+\ [Wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)
 [Keywords](../cpp/keywords-cpp.md)\
 [Konflikty z kompilatorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

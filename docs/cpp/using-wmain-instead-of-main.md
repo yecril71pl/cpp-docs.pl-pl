@@ -7,28 +7,28 @@ helpviewer_keywords:
 - main function, vs. wmain
 - wmain function
 ms.assetid: 7abb1257-b85c-413a-b913-d45b1582a71d
-ms.openlocfilehash: 8cdc986d1582d2b26f137e3147ce78bc83e9daca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f47d7219a54b197ec59f109cf08879774b48e6f7
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257975"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857219"
 ---
 # <a name="using-wmain-instead-of-main"></a>Korzystanie z wmain zamiast main
 
-## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft
+**Microsoft Specific**
 
-W modelu programowania Unicode, można zdefiniować wersja znaków dwubajtowych `main` funkcji. Użyj **wmain** zamiast `main` Jeśli chcesz tworzyć przenośny kod, który jest zgodna ze specyfikacją Unicode.
+W modelu programowania Unicode można zdefiniować wersję o szerokim znaku funkcji `main`. Użyj **wmain** zamiast `main`, jeśli chcesz napisać kod przenośny, który jest zgodny ze specyfikacją Unicode.
 
-Możesz deklarować Parametry formalne dla **wmain** formacie podobne do `main`. Możesz następnie przekazać argumenty znaków dwubajtowych i, opcjonalnie, wskaźnik znaku dwubajtowego środowiska do programu. *Argv* i *envp* parametry **wmain** typu `wchar_t*`.
+Należy zadeklarować formalne parametry do **wmain** przy użyciu podobnego formatu do `main`. Następnie można przekazywać argumenty o szerokim znaku oraz, opcjonalnie, wskaźnik środowiska do programu. Parametry *argv* i *envp* do **wmain** są typu `wchar_t*`.
 
-Jeśli program używa `main` funkcji środowiska znak wielobajtowy jest tworzony przez system operacyjny w momencie uruchamiania programu. Tworzona jest kopia znaków dwubajtowych, środowiska, tylko wtedy, gdy jest to wymagane (na przykład przez wywołanie [_wgetenv —](../c-runtime-library/reference/getenv-wgetenv.md) lub [_wputenv —](../c-runtime-library/reference/putenv-wputenv.md) funkcji). W pierwszym wywołaniu `_wputenv`, lub na pierwsze wywołanie `_wgetenv` Jeśli istnieje już środowisko MBCS, odpowiednie środowisko ciąg znaków dwubajtowych jest tworzony i następnie jest wskazywany przez `_wenviron` zmiennej globalnej, czyli znaków dwubajtowych Wersja `_environ` zmiennej globalnej. W tym momencie dwie kopie środowiska (MBCS i Unicode) mogły współistnieć i są obsługiwane przez system operacyjny w całym cyklu życia programu.
+Jeśli program używa funkcji `main`, środowisko znaków wielobajtowych jest tworzone przez system operacyjny podczas uruchamiania programu. Dwubajtowa kopia środowiska jest tworzona tylko wtedy, gdy jest to konieczne (na przykład przez wywołanie [_wgetenv](../c-runtime-library/reference/getenv-wgetenv.md) lub funkcji [_wputenv](../c-runtime-library/reference/putenv-wputenv.md) ). Podczas pierwszego wywołania do `_wputenv`lub pierwszego wywołania `_wgetenv`, jeśli środowisko MBCS już istnieje, jest tworzone odpowiednie środowisko ciągu znaków dwubajtowych, a następnie wskazywane przez `_wenviron` zmienną globalną, która jest wersją znaku dwubajtowego `_environ` zmiennej globalnej. W tym momencie dwie kopie środowiska (MBCS i Unicode) istnieją jednocześnie i są obsługiwane przez system operacyjny przez cały czas trwania programu.
 
-Podobnie jeśli program używa **wmain** , środowisko MBCS (ASCII) zostanie utworzona funkcja w pierwszym wywołaniu `_putenv` lub `getenv`i jest wskazywany przez `_environ` zmiennej globalnej.
+Podobnie, jeśli program używa funkcji **wmain** , środowisko MBCS (ASCII) jest tworzone podczas pierwszego wywołania do `_putenv` lub `getenv`i jest wskazywane przez zmienną globalną `_environ`.
 
-Aby uzyskać więcej informacji na temat środowiska MBCS, zobacz [zestawów znaków wielobajtowych i jednobajtowych](../c-runtime-library/single-byte-and-multibyte-character-sets.md) w *odwołanie do biblioteki wykonawczej.*
+Aby uzyskać więcej informacji na temat środowiska MBCS, zobacz [zestawy znaków jednobajtowych i](../c-runtime-library/single-byte-and-multibyte-character-sets.md) wielobajtowych w *dokumentacji biblioteki wykonawczej.*
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

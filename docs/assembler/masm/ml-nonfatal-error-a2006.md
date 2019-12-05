@@ -1,38 +1,38 @@
 ---
 title: Błąd niekrytyczny ML A2006
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2006
 helpviewer_keywords:
 - A2006
 ms.assetid: b8a8f096-95df-42b5-85ed-d2530560a84c
-ms.openlocfilehash: 80283bde4dff36e32d276c998f6797b6eeed8160
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c55cb66d6eaeaf620aeedc1dd924f6618cbf817
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202326"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856786"
 ---
 # <a name="ml-nonfatal-error-a2006"></a>Błąd niekrytyczny ML A2006
 
-**Niezdefiniowany symbol: identyfikator**
+**Niezdefiniowany symbol: Identyfikator**
 
-Próbowano użyć symbolu, który nie został zdefiniowany.
+Podjęto próbę użycia niezdefiniowanego symbolu.
 
-Jedną z następujących przyczyn:
+Może wystąpić jedna z następujących czynności:
 
-- Nie zdefiniowano symbolu.
+- Symbol nie został zdefiniowany.
 
-- Pole nie jest członkiem określonej struktury.
+- Pole nie jest elementem członkowskim określonej struktury.
 
-- Symbol został zdefiniowany w pliku dołączonego, który nie został dołączony.
+- Symbol został zdefiniowany w pliku dołączanym, który nie został uwzględniony.
 
-- Zewnętrzny symbol został użyty bez [EXTERN](../../assembler/masm/extern-masm.md) lub [externdef —](../../assembler/masm/externdef.md) dyrektywy.
+- Symbol zewnętrzny został użyty bez dyrektywy [extern](../../assembler/masm/extern-masm.md) lub [EXTERNDEF](../../assembler/masm/externdef.md) .
 
-- Nazwa symbolu została wpisana z błędem.
+- Nazwa symbolu jest błędna.
 
-- Etykieta kod lokalny odwoływano się poza zakres.
+- Przywoływano lokalna etykieta kodu poza jej zakresem.
 
 ## <a name="see-also"></a>Zobacz także
 

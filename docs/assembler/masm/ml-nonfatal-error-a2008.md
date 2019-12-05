@@ -1,38 +1,38 @@
 ---
 title: Błąd niekrytyczny ML A2008
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2008
 helpviewer_keywords:
 - A2008
 ms.assetid: ca24157f-c88a-4678-ae06-3bc3cd956001
-ms.openlocfilehash: 7f85a3aabb7b1955cede912168dfc04618b8f2b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 192d82186a58d4e6b534ab5ec65b696d4d7ce3ee
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62201982"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856756"
 ---
 # <a name="ml-nonfatal-error-a2008"></a>Błąd niekrytyczny ML A2008
 
-**Błąd składni:**
+**Błąd składniowy:**
 
-Token w bieżącej lokalizacji spowodował błąd składni.
+Token w bieżącej lokalizacji spowodował błąd składniowy.
 
-Jedną z następujących przyczyn:
+Może wystąpić jedna z następujących czynności:
 
-- Prefiks kropka zostało dodane do lub pominięte dyrektywy.
+- Prefiks kropki został dodany do lub pominięty z dyrektywy.
 
-- Słowa zarezerwowanego (takie jak **C** lub **rozmiar**) została użyta jako identyfikator.
+- Jako identyfikator użyto słowa zastrzeżonego (takiego jak **C** lub **size**).
 
-- Instrukcję był używany, które nie były dostępne z bieżącego zaznaczenia procesor lub Koprocesor.
+- Użyto instrukcji, która była niedostępna z bieżącym procesorem lub wybranym współprocesorem.
 
-- Operator porównania czasu wykonywania (takie jak `==`) został użyty w instrukcji warunkowej zestawu, zamiast operator relacyjny (takie jak [EQ](../../assembler/masm/operator-eq.md)).
+- Porównanie operatora czasu wykonywania (takiego jak `==`) zostało użyte w instrukcji zestawu warunkowego zamiast operatora relacyjnego (na przykład [EQ](../../assembler/masm/operator-eq.md)).
 
-- Za mało argumentów zostało przekazane z instrukcji lub dyrektywy.
+- Instrukcja lub dyrektywa otrzymała zbyt mało argumentów operacji.
 
-- Przestarzała dyrektywa został użyty.
+- Użyto przestarzałej dyrektywy.
 
 ## <a name="see-also"></a>Zobacz także
 

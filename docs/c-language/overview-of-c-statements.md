@@ -8,40 +8,40 @@ helpviewer_keywords:
 - statements, about statements
 - Visual C, statements
 ms.assetid: 0d49837a-5399-4881-b60c-af5f4e9720de
-ms.openlocfilehash: 1b5863a021fd74bb80162d589af7c2a1a5b36f9b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfa6840553055202f26f55e1dc5971bfd047b2de
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232472"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857076"
 ---
 # <a name="overview-of-c-statements"></a>Przegląd instrukcji C
 
-Instrukcji C składają się z tokenów, wyrażenia i inne instrukcje. Instrukcja, który wchodzi w skład składnikiem innej instrukcji jest nazywany "treść" otaczającej instrukcji. W tej sekcji omówiono każdy typ instrukcji podanych w następującej składni.
+Instrukcje języka C składają się z tokenów, wyrażeń i innych instrukcji. Instrukcja, która tworzy składnik innej instrukcji, nosi nazwę "Body" otaczającej instrukcji. Każdy typ instrukcji określony przez następującą składnię został omówiony w tej sekcji.
 
 ## <a name="syntax"></a>Składnia
 
-*Instrukcja*: [etykietą instrukcji](../c-language/goto-and-labeled-statements-c.md)
+*instrukcja*: [labeled-Statement](../c-language/goto-and-labeled-statements-c.md)
 
-[compound-statement](../c-language/compound-statement-c.md)
+[instrukcja złożona](../c-language/compound-statement-c.md)
 
 [expression-statement](../c-language/expression-statement-c.md)
 
-[selection-statement](../c-language/if-statement-c.md)
+[SELECT — instrukcja](../c-language/if-statement-c.md)
 
-[iteration-statement](../c-language/do-while-statement-c.md)
+[iteracja — instrukcja](../c-language/do-while-statement-c.md)
 
-[Instrukcja skoku](../c-language/break-statement-c.md)
+[skoku — instrukcja](../c-language/break-statement-c.md)
 
-[try-except-statement](../c-language/try-except-statement-c.md)
+[try-except-Statement](../c-language/try-except-statement-c.md) /* \*specyficzne dla firmy Microsoft /
 
-/ * Microsoft Specific \* / [try finally instrukcji](../c-language/try-finally-statement-c.md)  / \* Specific firmy Microsoft \*/
+[try-finally-statement](../c-language/try-finally-statement-c.md) /\* specyficzne dla firmy Microsoft \*/
 
-Często treść instrukcji jest "instrukcję złożonego". Instrukcja złożona składa się z innych instrukcji, które może zawierać słowa kluczowe. Instrukcja złożona sterujący jest ujęty w nawiasy klamrowe (**{}**). Inne instrukcje C zakończona średnikiem (**;**). Średnik jest terminator instrukcji.
+Często treść instrukcji to "złożona instrukcja". Złożona instrukcja składa się z innych instrukcji, które mogą zawierać słowa kluczowe. Złożona instrukcja jest rozdzielana nawiasami klamrowymi ( **{}** ). Wszystkie inne instrukcje języka C kończą się średnikiem ( **;** ). Średnik jest terminatorem instrukcji.
 
-Instrukcja wyrażeń zawiera wyrażenie C, który może zawierać operacji arytmetycznych lub operatorów logicznych wprowadzona w [wyrażenia i przydziały](../c-language/expressions-and-assignments.md). Instrukcja o wartości null jest pustą instrukcję.
+Instrukcja Expression zawiera wyrażenie C, które może zawierać operatory arytmetyczne lub logiczne wprowadzone w [wyrażeniach i przypisaniach](../c-language/expressions-and-assignments.md). Instrukcja o wartości null jest pustą instrukcją.
 
-Każda instrukcja języka C można rozpocząć etykietą identyfikujące składający się z nazwy i dwukropka. Ponieważ tylko `goto` instrukcji rozpoznaje etykiety instrukcji, etykiet instrukcji zostały omówione z `goto`. Zobacz [goto i Labeled — instrukcje](../c-language/goto-and-labeled-statements-c.md) Aby uzyskać więcej informacji.
+Każda instrukcja języka C może rozpoczynać się od etykiety identyfikującej składającej się z nazwy i dwukropka. Ponieważ tylko instrukcja `goto` rozpoznaje etykiety instrukcji, etykiety instrukcji są omawiane z `goto`. Aby uzyskać więcej informacji [, zobacz instrukcje goto i labeled](../c-language/goto-and-labeled-statements-c.md) .
 
 ## <a name="see-also"></a>Zobacz także
 

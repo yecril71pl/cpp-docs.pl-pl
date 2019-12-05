@@ -7,30 +7,30 @@ helpviewer_keywords:
 - function definitions, function body
 - function body
 ms.assetid: f7e74822-fac8-4dc8-8f3a-2b1611da4640
-ms.openlocfilehash: c227640e45943fb57b1029a4f03329241d1d6b34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d2e04572de91b161237d999bb95cfda26256c54
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233457"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857102"
 ---
 # <a name="function-body"></a>Treść funkcji
 
-A *funkcji treści* jest instrukcji złożonej zawierającej instrukcje, które określają, jak działa funkcja.
+*Treść funkcji* jest złożonym wyrażeniem zawierającym instrukcje określające działanie funkcji.
 
 ## <a name="syntax"></a>Składnia
 
-*Definicja funkcji*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikatory deklaracji*<sub>zoptymalizowany pod kątem</sub> *atrybutu seq*<sub>zoptymalizowany pod kątem</sub> *deklaratora* *lista deklaracji*  <sub>zoptymalizowany pod kątem</sub> *compound-statement*
+*definicja funkcji*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;deklarator, *specyfikatory deklaracji*<sub>opt</sub> *-SEQ*<sub>opt</sub> *deklaracji-list*<sub>opt</sub> *złożonej-instrukcja*
 
-/\* *Atrybut seq* jest Specific dla Microsoft \*/
+atrybut \* / *-SEQ* jest \*em specyficznym dla firmy Microsoft /
 
-*Compound-statement*: /\* treści funkcji \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{** *lista deklaracji*<sub>zoptymalizowany pod kątem</sub> *listy instrukcji*<sub>zoptymalizowany pod kątem</sub> **}**
+*instrukcja złożona*:/\* treść funkcji \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;instrukcji **{** *Deklaracja-list*<sub>opt</sub> *-list*<sub>opt</sub> **}**
 
-Zmienne zadeklarowane w treści funkcji, znane jako *zmienne lokalne*, mają **automatycznie** klasy magazynu, chyba że określono inaczej. Po wywołaniu funkcji magazynu jest tworzony dla zmiennych lokalnych i lokalne inicjalizacje są wykonywane. Kontrola wykonywania przechodzi do pierwszej instrukcji w *compound-statement* i jest kontynuowane do **zwracają** zostaje wykonana instrukcja lub zostanie osiągnięty koniec treści funkcji. Formant powraca do punktu, w którym funkcja została wywołana.
+Zmienne zadeklarowane w treści funkcji, znane jako *zmienne lokalne* **, mają klasy** magazynu autostorage, chyba że określono inaczej. Po wywołaniu funkcji magazyn jest tworzony dla zmiennych lokalnych i są wykonywane lokalne inicjalizacje. Kontrola wykonywania przechodzi do pierwszej instrukcji w *instrukcji złożonej* i kontynuuje do momentu wykonania instrukcji **Return** lub napotkania końca treści funkcji. Następnie formant wraca do punktu, w którym wywołano funkcję.
 
-A **zwracają** instrukcji zawierającej wyrażenie musi zostać wykonana, jeśli funkcja znajduje się w celu zwrócenia wartości. Wartość zwracana przez funkcję jest niezdefiniowana, jeśli nie **zwracają** zostaje wykonana instrukcja lub jeśli **zwracają** instrukcji nie zawiera wyrażenia.
+Instrukcja **Return** zawierająca wyrażenie musi być wykonana, jeśli funkcja ma zwracać wartość. Wartość zwracana funkcji jest niezdefiniowana, jeśli instrukcja **Return** nie jest wykonywana lub instrukcja **Return** nie zawiera wyrażenia.
 
 ## <a name="see-also"></a>Zobacz także
 

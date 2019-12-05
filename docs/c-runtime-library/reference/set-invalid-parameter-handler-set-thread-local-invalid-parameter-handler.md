@@ -30,12 +30,12 @@ helpviewer_keywords:
 - _set_invalid_parameter_handler function
 - _set_thread_local_invalid_parameter_handler function
 ms.assetid: c0e67934-1a41-4016-ad8e-972828f3ac11
-ms.openlocfilehash: 090eb43289313f12b900e671df61f74e7b464872
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d2e8dab92c70189533656bac359c794de2ad8002
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948499"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857778"
 ---
 # <a name="_set_invalid_parameter_handler-_set_thread_local_invalid_parameter_handler"></a>_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
 
@@ -57,13 +57,13 @@ _invalid_parameter_handler _set_thread_local_invalid_parameter_handler(
 *pNew*<br/>
 Wskaźnik funkcji do nowego nieprawidłowego parametru procedury obsługi.
 
-## <a name="return-value"></a>Wartość zwracana
+## <a name="return-value"></a>Wartość zwrócona
 
 Wskaźnik do procedury obsługi nieprawidłowego parametru przed wywołaniem.
 
 ## <a name="remarks"></a>Uwagi
 
-Wiele funkcji środowiska uruchomieniowego języka C sprawdza poprawność argumentów przekazane do nich. Jeśli przeszedł nieprawidłowy argument, funkcja może ustawić numer błędu **errno** lub zwrócić kod błędu. W takich przypadkach jest również wywoływana procedura obsługi nieprawidłowego parametru. Środowisko uruchomieniowe języka C udostępnia domyślną globalną procedurę obsługi nieprawidłowego parametru, która kończy program i wyświetla komunikat o błędzie środowiska uruchomieniowego. Możesz użyć **_set_invalid_parameter_handler** , aby ustawić własną funkcję jako procedurę obsługi nieprawidłowego parametru. Środowisko uruchomieniowe języka C obsługuje również procedurę obsługi nieprawidłowego parametru w wątku. Jeśli program obsługi parametrów lokalnych wątku jest ustawiony w wątku przy użyciu **_set_thread_local_invalid_parameter_handler**, funkcja środowiska uruchomieniowego języka C wywołana z wątku używa tego programu obsługi zamiast globalnego programu obsługi. Tylko jedną funkcję można określić jako globalną procedurę obsługi nieprawidłowego argumentu. Tylko jedną funkcję można określić jako procedurę obsługi nieprawidłowego argumentu w wątku dla wątku, ale różne wątki mogą mieć różne procedury obsługi wątków lokalnych. Pozwala to na zmianę procedury obsługi używanej w jednej części kodu bez wpływu na zachowanie innych wątków.
+Wiele funkcji środowiska uruchomieniowego języka C sprawdza poprawność argumentów przekazane do nich. Jeśli przeszedł nieprawidłowy argument, funkcja może ustawić numer błędu **errno** lub zwrócić kod błędu. W takich przypadkach jest również wywoływana procedura obsługi nieprawidłowego parametru. Środowisko uruchomieniowe języka C udostępnia domyślną globalną procedurę obsługi nieprawidłowego parametru, która kończy program i wyświetla komunikat o błędzie środowiska uruchomieniowego. Za pomocą **_set_invalid_parameter_handler** można ustawić własną funkcję jako procedurę obsługi nieprawidłowego parametru. Środowisko uruchomieniowe języka C obsługuje również procedurę obsługi nieprawidłowego parametru w wątku. Jeśli program obsługi parametrów lokalnych wątku jest ustawiony w wątku przy użyciu **_set_thread_local_invalid_parameter_handler**, funkcja środowiska uruchomieniowego języka C wywołana z wątku używa tego programu obsługi zamiast globalnego programu obsługi. Tylko jedną funkcję można określić jako globalną procedurę obsługi nieprawidłowego argumentu. Tylko jedną funkcję można określić jako procedurę obsługi nieprawidłowego argumentu w wątku dla wątku, ale różne wątki mogą mieć różne procedury obsługi wątków lokalnych. Pozwala to na zmianę procedury obsługi używanej w jednej części kodu bez wpływu na zachowanie innych wątków.
 
 Gdy środowisko uruchomieniowe wywołuje nieprawidłową funkcję parametru, zazwyczaj oznacza to, że wystąpił nieodwracalny błąd. Podaną funkcję procedury obsługi nieprawidłowego parametru należy zapisać wszystkie dane, które mogą, a następnie przerwać. Nie powinna zwracać kontroli do funkcji Main, chyba że masz pewność, że błąd jest możliwy do odzyskania.
 
@@ -87,7 +87,7 @@ Argument *Expression* jest dwuciągową reprezentacją wyrażenia argumentu, kt�
 |-------------|---------------------|
 |**_set_invalid_parameter_handler**, **_set_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib > lub \<STDLIB. h >|
 
-Funkcje **_set_invalid_parameter_handler** i **_set_thread_local_invalid_parameter_handler** są specyficzne dla firmy Microsoft. Aby uzyskać informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+**_Set_invalid_parameter_handler** i **_set_thread_local_invalid_parameter_handler** funkcje są specyficzne dla firmy Microsoft. Aby uzyskać informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

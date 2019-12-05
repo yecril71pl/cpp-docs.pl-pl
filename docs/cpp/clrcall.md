@@ -6,36 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - __clrcall keyword [C++]
 ms.assetid: 92096695-683a-40ed-bf65-0c8443572152
-ms.openlocfilehash: bc44feb97223de47f45734f75777ee040d0ebdd8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6eb1a05eaf6669daa4cb7142ff16a57f7caf39cd
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364574"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857609"
 ---
-# <a name="clrcall"></a>__clrcall
+# <a name="__clrcall"></a>__clrcall
 
-**Microsoft Specific**
+Określa, że funkcja może zostać wywołana tylko z kodu zarządzanego.  Użyj **__clrcall** dla wszystkich funkcji wirtualnych, które będą wywoływane tylko z kodu zarządzanego. Jednakże tej konwencji wywoływania nie można używać w przypadku funkcji, które będą wywoływane z kodu natywnego. Modyfikator **__clrcall** jest specyficzny dla firmy Microsoft.
 
-Określa, że funkcja może zostać wywołana tylko z kodu zarządzanego.  Użyj **__clrcall** dla wszystkich funkcji wirtualnych, które będą wywoływane tylko z kodu zarządzanego. Jednak ta konwencja wywołania nie można użyć funkcji, które zostaną wywołane z kodu natywnego.
+Użyj **__clrcall** , aby zwiększyć wydajność podczas wywoływania funkcji zarządzanej przez wirtualną funkcję zarządzaną lub z funkcji zarządzanej do funkcji zarządzanej przez wskaźnik.
 
-Użyj **__clrcall** aby poprawić wydajność podczas wywoływania funkcji zarządzanej funkcji wirtualnej zarządzanych lub funkcji zarządzanej funkcji zarządzanych za pomocą wskaźnika.
+Punkty wejścia są oddzielnymi funkcjami wygenerowanymi przez kompilator. Jeśli funkcja ma natywne i zarządzane punkty wejścia, jedna z nich będzie rzeczywistą funkcją z implementacją funkcji. Druga funkcja będzie oddzielną funkcją (thunk), która wywołuje funkcję rzeczywistą i umożliwia wykonywanie w środowisku uruchomieniowym języka wspólnego PInvoke. Gdy oznaczasz funkcję jako **__clrcall**, oznacza to, że implementacja funkcji musi być MSIL i że funkcja natywnego punktu wejścia nie zostanie wygenerowana.
 
-Punkty wejścia są oddzielne, generowane przez kompilator funkcje. Jeśli funkcja ma zarówno punkty wejścia natywnych i zarządzanych, jeden z nich będzie rzeczywiste funkcji z implementacją funkcji. Innych funkcji, będzie to oddzielna funkcja (wywołanie), wywołuje funkcję rzeczywiste, która umożliwia środowiska uruchomieniowego języka wspólnego wykonywania funkcji PInvoke. Kiedy oznaczanie funkcję jako **__clrcall**, wskazujesz, implementacja funkcji musi być MSIL i funkcję punktu wejścia natywne nie będą generowane.
+Podczas pobierania adresu funkcji natywnej, jeśli nie określono **__clrcall** , kompilator używa natywnego punktu wejścia. **__clrcall** wskazuje, że funkcja jest zarządzana i nie ma potrzeby przechodzenia przez przejście z zarządzanego do natywnego. W takim przypadku kompilator używa zarządzanego punktu wejścia.
 
-Gdy przełącza adresu w funkcji natywnej, jeśli **__clrcall** nie zostanie określony, kompilator używa natywnego punktu wejścia. **Wywołanie __clrcall** wskazuje, że funkcja jest zarządzana i ma, nie trzeba przechodzić przez przejście z zarządzanego do kodu natywnego. W takim przypadku kompilator używa zarządzany punkt wejścia.
+Gdy jest używane `/clr` (nie `/clr:pure` lub `/clr:safe`) i **__clrcall** nie są używane, pobieranie adresu funkcji zawsze zwraca adres natywnej funkcji punktu wejścia. Gdy **__clrcall** jest używany, funkcja natywnego punktu wejścia nie zostanie utworzona, więc otrzymujesz adres funkcji zarządzanej, a nie funkcję thunk punktu wejścia. Aby uzyskać więcej informacji, zobacz [podwójny podwójna](../dotnet/double-thunking-cpp.md). **/CLR: Pure** i **/CLR:** opcje kompilatora bezpiecznego są przestarzałe w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017.
 
-Gdy `/clr` (nie `/clr:pure` lub `/clr:safe`) jest używany i **__clrcall** jest nieużywane, biorąc adresu funkcji zawsze zwraca adres funkcję punktu wejścia natywnych. Gdy **__clrcall** jest używany, funkcja punktu wejścia natywne nie zostało utworzone, dzięki czemu możesz uzyskać adresu funkcji zarządzanej nie funkcję punktu wejścia thunk. Aby uzyskać więcej informacji, zobacz [podwójna](../dotnet/double-thunking-cpp.md). **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
+[/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../build/reference/clr-common-language-runtime-compilation.md) oznacza, że wszystkie funkcje i wskaźniki funkcji są **__clrcall** i kompilator nie zezwoli na użycie funkcji wewnątrz jednostka kompilacji jako innej niż **__clrcall**. Gdy jest używany **/CLR: Pure** , **__clrcall** można określić tylko dla wskaźników funkcji i deklaracji zewnętrznych.
 
-[/ CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md) oznacza, że wszystkie funkcje i wskaźniki funkcji mają **__clrcall** i kompilator nie pozwoli na funkcji wewnątrz compiland — był oznaczony jako coś innego niż **__clrcall**. Gdy **/CLR: pure** jest używany, **__clrcall** można określić tylko dla wskaźników funkcji i deklaracje zewnętrzne.
+Można bezpośrednio wywoływać **__clrcall** funkcje z istniejącego C++ kodu, który został skompilowany przy użyciu **/CLR** , o ile ta funkcja ma implementację MSIL. **__clrcall** funkcje nie mogą być wywoływane bezpośrednio z funkcji, które mają wbudowaną metodę ASM i wywołują intrinisics specyficzne dla procesora CPU, na przykład nawet jeśli te funkcje są kompilowane przy użyciu `/clr`.
 
-Można bezpośrednio wywoływać **__clrcall** funkcje z istniejących C++ kod, który został skompilowany przy użyciu **/CLR** tak długo, jak ta funkcja zawiera implementację MSIL. **Wywołanie __clrcall** funkcji nie można wywołać bezpośrednio z funkcji, które mają wbudowanego asm i wywołać intrinisics specyficznych dla procesora CPU, na przykład, nawet jeśli te funkcje są kompilowane przy użyciu `/clr`.
-
-**Wywołanie __clrcall** wskaźników funkcji są przeznaczone tylko do użycia w domenie aplikacji, w którym zostały utworzone.  Zamiast **__clrcall** wskaźniki funkcji w różnych domenach aplikacji, należy użyć <xref:System.CrossAppDomainDelegate>. Aby uzyskać więcej informacji, zobacz [domeny aplikacji i programu Visual C++](../dotnet/application-domains-and-visual-cpp.md).
+**__clrcall** wskaźników funkcji można używać tylko w domenie aplikacji, w której zostały utworzone.  Zamiast przekazywać **__clrcall** wskaźniki funkcji w różnych domenach aplikacji, należy użyć <xref:System.CrossAppDomainDelegate>. Aby uzyskać więcej informacji, zobacz [domeny i wizualizacja C++aplikacji ](../dotnet/application-domains-and-visual-cpp.md).
 
 ## <a name="example"></a>Przykład
 
-Należy pamiętać, że gdy funkcja jest zadeklarowana za pomocą **__clrcall**, kod zostanie wygenerowany, gdy potrzebne; na przykład, gdy funkcja jest wywoływana.
+Należy pamiętać, że gdy funkcja jest zadeklarowana przy użyciu **__clrcall**, kod zostanie wygenerowany w razie konieczności; na przykład, gdy funkcja jest wywoływana.
 
 ```cpp
 // clrcall2.cpp
@@ -74,7 +72,7 @@ in Func1
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, czy można zdefiniować wskaźnik funkcji tak, aby zadeklarować, że wskaźnik funkcji będzie można wywołać tylko z kodu zarządzanego. Dzięki temu kompilator, aby bezpośrednio wywołać funkcji zarządzanej i uniknąć natywnego punktu wejścia (podwójny thunk problem).
+Poniższy przykład pokazuje, że można zdefiniować wskaźnik funkcji, na przykład, deklaruje, że wskaźnik funkcji będzie wywoływany tylko z kodu zarządzanego. Dzięki temu kompilator może bezpośrednio wywołać funkcję zarządzaną i uniknąć natywnego punktu wejścia (podwójny thunk problemu).
 
 ```cpp
 // clrcall3.cpp

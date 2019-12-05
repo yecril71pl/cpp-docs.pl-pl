@@ -4,18 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - _set_com_error_handler function
 ms.assetid: 49fe4fca-5e37-4d83-abaf-15be5ce37f94
-ms.openlocfilehash: 864236e86b4aeb6ce7b3315df57af1b577693c26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 226dce24de68edd66ca68c43e41ce0cb5b8a1b48
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267235"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857297"
 ---
-# <a name="setcomerrorhandler"></a>_set_com_error_handler
+# <a name="_set_com_error_handler"></a>_set_com_error_handler
 
-**Microsoft Specific**
-
-Zastępuje funkcja domyślnej, która służy do obsługi błędów COM.
+Zastępuje domyślną funkcję, która jest używana do obsługi błędów COM. **_set_com_error_handler** to specyficzny dla firmy Microsoft.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,19 +29,19 @@ void __stdcall _set_com_error_handler(
 #### <a name="parameters"></a>Parametry
 
 *pHandler*<br/>
-Wskaźnik do funkcji zastępowania.
+Wskaźnik do funkcji zastępczej.
 
-*godz.*<br/>
+*wysoki*<br/>
 Informacje o HRESULT.
 
 *perrinfo*<br/>
-`IErrorInfo` obiekt.
+`IErrorInfo` obiektu.
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie [_com_raise_error —](../cpp/com-raise-error.md) obsługuje wszystkie błędy COM. To zachowanie można zmienić za pomocą **_set_com_error_handler —** do wywołania funkcji obsługi błędów.
+Domyślnie [_com_raise_error](../cpp/com-raise-error.md) obsługuje wszystkie błędy com. Można zmienić to zachowanie przy użyciu **_set_com_error_handler** do wywołania własnej funkcji obsługi błędów.
 
-Funkcja zastąpienie musi mieć podpis, który jest odpowiednikiem w przypadku `_com_raise_error`.
+Funkcja zastępująca musi mieć sygnaturę odpowiadającą wartości `_com_raise_error`.
 
 ## <a name="example"></a>Przykład
 
@@ -88,9 +86,9 @@ Exception raised: Unable to establish the connection!
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<comdef.h >
+**Nagłówek:** \<comdef. h >
 
-**Biblioteki:** Jeśli **/Zc:** określono opcję kompilatora (ustawienie domyślne), użyj comsuppw.lib lub comsuppwd.lib. Jeśli **/Zc:wchar_t-** — opcja kompilatora jest określony, użyj comsupp.lib. Aby uzyskać więcej informacji, w tym jak ustawić tę opcję w IDE, zobacz [/Zc: wchar_t (wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+**Lib:** Jeśli określono opcję kompilatora **/Zc: wchar_t** (wartość domyślna), użyj comsuppw. lib lub comsuppwd. lib. Jeśli jest określona opcja **/Zc: wchar_t-** Compiler, użyj comsupp. lib. Aby uzyskać więcej informacji, w tym o sposobie ustawiania tej opcji w IDE, zobacz [/Zc: wchar_t (Wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 ## <a name="see-also"></a>Zobacz także
 

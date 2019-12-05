@@ -1,18 +1,18 @@
 ---
 title: /NOPDB
 description: Opcja/NOPDB zachowuje polecenia DUMPBIN ładowania i wyszukiwania plików PDB w celu uzyskania informacji o symbolach.
-ms.date: 10/29/2019
+ms.date: 12/04/2019
 f1_keywords:
 - /NOPDB
 helpviewer_keywords:
 - /NOPDB dumpbin option
 - /NOPDB
-ms.openlocfilehash: 3b745049517888d13de245d4e29be3985c122ada
-ms.sourcegitcommit: 6ed1bc5b26dc60a780c1fc5f2f19d57ba1dc47d8
+ms.openlocfilehash: 7b0c01e59b52bcec6ddf09416dd6aac9999527a6
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73145736"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856972"
 ---
 # <a name="nopdb"></a>/NOPDB
 
@@ -24,7 +24,7 @@ Informuje polecenia DUMPBIN o konieczności załadowania i przeszukiwania plikó
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie polecenia DUMPBIN próbuje załadować pliki PDB dla swoich docelowych plików obiektów, bibliotek lub pliku wykonywalnego. POLECENIA DUMPBIN używa tych informacji, aby dopasować adresy do nazw symboli. Proces ten może być czasochłonny, jeśli pliki PDB są duże lub muszą zostać załadowane z serwera zdalnego. Opcja **/NOPDB** informuje polecenia DUMPBIN o tym, aby pominąć ten krok. Drukuje tylko informacje o adresach i symbolach dostępne w pliku obiektu, bibliotece lub pliku wykonywalnym.
+Domyślnie polecenia DUMPBIN próbuje załadować pliki PDB dla swoich docelowych plików wykonywalnych. POLECENIA DUMPBIN używa tych informacji, aby dopasować adresy do nazw symboli. Proces ten może być czasochłonny, jeśli pliki PDB są duże lub muszą zostać załadowane z serwera zdalnego. Opcja **/NOPDB** informuje polecenia DUMPBIN o tym, aby pominąć ten krok. Drukuje tylko informacje o adresach i symbolach dostępne w pliku wykonywalnym.
 
 ### <a name="to-set-the-nopdb-linker-option-in-visual-studio"></a>Aby ustawić opcję konsolidatora/NOPDB w programie Visual Studio
 

@@ -7,43 +7,43 @@ helpviewer_keywords:
 - extended storage-class attributes
 - storage class specifiers, C storage classes
 ms.assetid: 2580735c-f5bf-46ab-9468-0696893d82be
-ms.openlocfilehash: 9b0c8b60dab3229d5d5c162f7bafc959fa2558f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c2e372ebe93b9240ac6f489e8b1aefc1fbbded80
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325887"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857154"
 ---
 # <a name="c-extended-storage-class-attributes"></a>Rozszerzone atrybuty klasy magazynu języka C
 
 **Microsoft Specific**
 
-Bardziej aktualnych informacji na ten temat można znaleźć w obszarze [__declspec (C++ odwołania)](../cpp/declspec.md).
+Więcej informacji na ten temat można znaleźć w obszarze [__declspec (C++ odwołanie)](../cpp/declspec.md).
 
-Składnia atrybutu rozszerzonego upraszcza i standaryzuje rozszerzenia specyficzne dla firmy Microsoft dla języka C. Atrybuty klasy magazynowania korzystających ze składni atrybutów rozszerzonych obejmują wątku "naked", dllimport i dllexport.
+Składnia atrybutu rozszerzonego upraszcza i standaryzacj rozszerzenia specyficzne dla firmy Microsoft w języku C. Atrybuty klasy magazynowania, które używają składni atrybutów rozszerzonych, obejmują Thread, owies, dllimport i dllexport.
 
-Składnia atrybutów rozszerzonych służących do określania informacji klasy magazynowania wykorzystuje słowo kluczowe __declspec, który określa, czy wystąpienie danego typu ma być przechowywane z atrybutem klasy magazynowania specyficzne dla firmy Microsoft (wątek "naked" dllimport i dllexport). Przykłady innych modyfikatorów klasy magazynowania słów statyczne i zewnętrzne. Jednak te słowa kluczowe są częścią standardu ANSI C i jako takie nie są objęte składnią atrybutów rozszerzonych.
+Składnia atrybutu rozszerzonego określająca informacje klasy magazynu używa słowa kluczowego __declspec, które określa, że wystąpienie danego typu ma być przechowywane z atrybutem klasy magazynowania specyficznym dla firmy Microsoft (wątek, niezależny, dllimport lub dllexport). Przykłady innych modyfikatorów klasy magazynu obejmują słowa kluczowe static i extern. Jednak te słowa kluczowe są częścią standardu ANSI C i nie są objęte składnią atrybutów rozszerzonych.
 
 ## <a name="syntax"></a>Składnia
 
 *storage-class-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *extended-decl modyfikator seq* **)**  / \* Specific firmy Microsoft \*/
+&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *rozszerzony-decl-modyfikator-SEQ* **)**  /\* \*/
 
-*extended-decl-modifier-seq*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Specyficzne dla firmy Microsoft \*/<br/>
+*Extended-decl-modyfikator-SEQ*:&nbsp;&nbsp;&nbsp;&nbsp;/\* \*firmy Microsoft /<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
 
-*extended-decl-modifier*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Specyficzne dla firmy Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Wątek**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
+*Extended-decl-modyfikator*:&nbsp;&nbsp;&nbsp;&nbsp;/\* specyficzne dla Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;**wątku** &nbsp;<br/>
+&nbsp;&nbsp; **&nbsp;&nbsp;**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**
 
-Spacja oddziela Modyfikatory deklaracji. Należy pamiętać, że *extended-decl modyfikator seq* może być pusta; w takim przypadku __declspec nie ma wpływu.
+Biały znak oddziela Modyfikatory deklaracji. Należy zauważyć, że *rozszerzony-decl-modyfikator-SEQ* może być pusty; w takim przypadku __declspec nie ma żadnego wpływu.
 
-Wątek "naked" dllimport i dllexport atrybuty klasy magazynu są właściwości tylko dla deklaracji danych lub funkcji, do której są stosowane; nie są ponownie zdefiniować atrybuty typu sama funkcja. Atrybut wątku wpływa na tylko dane. Atrybut "naked" dotyczy tylko funkcji. Atrybuty dllimport i dllexport wpływają na funkcje i dane.
+Atrybuty klasy magazynu "threaded, dllimport" i "dllexport" są właściwością tylko deklaracji danych lub funkcji, do których są stosowane; nie definiują one atrybutów typu samej funkcji. Atrybut Thread ma wpływ tylko na dane. Atrybut owies ma wpływ tylko na funkcje. Atrybuty dllimport i dllexport mają wpływ na funkcje i dane.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

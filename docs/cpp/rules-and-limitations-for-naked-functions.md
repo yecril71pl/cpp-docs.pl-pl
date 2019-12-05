@@ -4,36 +4,36 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
-ms.openlocfilehash: c813b97b85469165aae892b0a4cce888112e3dc5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec5c7d635dbbb63af7177395c5ad08356e1a26f0
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267380"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857310"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Reguły i ograniczenia dotyczące używania funkcji Naked
 
-## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft
+**Microsoft Specific**
 
-Poniższe reguły i ograniczenia dotyczą funkcji "naked":
+Następujące reguły i ograniczenia mają zastosowanie do funkcji niezwiązanych z wypełnieniem:
 
-- **Zwracają** instrukcja nie jest dozwolone.
+- Instrukcja **Return** jest niedozwolona.
 
-- Konstrukcje obsługi wyjątków strukturalnych i obsługa wyjątków języka C++ nie są dozwolone, ponieważ one muszą operacji unwind WE ramki stosu.
+- Konstrukcje strukturalne obsługujące wyjątki i C++ obsługa wyjątków są niedozwolone, ponieważ muszą być rozwinięcia między ramką stosu.
 
-- Z tego samego powodu jakiejkolwiek formy `setjmp` jest zabronione.
+- Z tego samego powodu dowolna forma `setjmp` jest zabroniona.
 
-- Korzystanie z `_alloca` funkcji jest zabronione.
+- Użycie funkcji `_alloca` jest zabronione.
 
-- Aby upewnić się, że żaden kod inicjowania dla zmiennych lokalnych jest umieszczany przed sekwencji prologu, zainicjować zmienne lokalne są niedozwolone w zakresie funkcji. W szczególności deklaracja obiektów C++ nie jest dozwolona w zakresie funkcji. W zakresie zagnieżdżonych jednak może być zainicjowany danych.
+- Aby upewnić się, że żaden kod inicjujący dla zmiennych lokalnych nie występuje przed sekwencją prologu, zainicjowane zmienne lokalne nie są dozwolone w zakresie funkcji. W szczególności deklaracja C++ obiektów nie jest dozwolona w zakresie funkcji. Można jednak inicjować dane w zakresie zagnieżdżonym.
 
-- Optymalizacja wskaźnik ramki (/Oy — opcja kompilatora) nie jest zalecane, ale nie jest automatycznie wyświetlany dla funkcji "naked".
+- Optymalizacja wskaźnika ramki (opcja kompilatora/Oy) nie jest zalecana, ale jest automatycznie pomijana dla funkcji wydzielania.
 
-- Nie można zadeklarować obiektów klasy języka C++ w zakresie leksykalnym funkcji. Możesz jednak zadeklarować obiekty zagnieżdżony blok.
+- Nie można zadeklarować C++ obiektów klasy w zakresie leksykalnym funkcji. Można jednak zadeklarować obiekty w bloku zagnieżdżonym.
 
-- **"Naked"** — słowo kluczowe jest ignorowany podczas kompilowania za pomocą [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
+- Słowo kluczowe " **owies** " jest ignorowane podczas kompilowania z [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
 
-- Aby uzyskać [__fastcall](../cpp/fastcall.md) funkcji "naked" zawsze wtedy, gdy istnieje odwołanie w C /C++ kodu do jednego z argumentów rejestru kod prologu należy przechowywać wartości rejestru do lokalizacji stosu dla tej zmiennej. Na przykład:
+- W przypadku [__fastcall](../cpp/fastcall.md) , gdy istnieje odwołanie w C/C++ Code do jednego z argumentów rejestru, kod prologu powinien przechowywać wartości rejestru w lokalizacji stosu dla tej zmiennej. Na przykład:
 
 ```cpp
 // nkdfastcl.cpp
@@ -70,7 +70,7 @@ __declspec(naked) int __fastcall  power(int i, int j) {
 }
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

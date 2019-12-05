@@ -1,24 +1,24 @@
 ---
 title: Błąd niekrytyczny ML A2189
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2189
 helpviewer_keywords:
 - A2189
 ms.assetid: 39649f39-57bc-4ceb-ab16-53f9b2a8d2d5
-ms.openlocfilehash: 16ab4373bfc2996176c190f536928171ba67e2ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc2d4911f2e08025927329d68a9574d844bc5b85
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203054"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74854605"
 ---
 # <a name="ml-nonfatal-error-a2189"></a>Błąd niekrytyczny ML A2189
 
 **Nieprawidłowa kombinacja z wyrównaniem segmentu**
 
-Wyrównanie określone przez **WYRÓWNAJ** lub `EVEN` dyrektywy była większa niż bieżące wyrównanie segmentu określony przez **segmentu** dyrektywy.
+Wyrównanie określone przez dyrektywę **align** lub `EVEN` było większe niż bieżące wyrównanie segmentu określone przez dyrektywę **segmentu** .
 
 ## <a name="see-also"></a>Zobacz także
 

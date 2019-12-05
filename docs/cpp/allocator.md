@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - __declspec keyword [C++], allocator
 - allocator __declspec keyword
-ms.openlocfilehash: f9c8de7c8686b89a2ab9570a2558e3f649e545b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e2615829f6491bf660859fbc86ebcd07a56c5fe
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155241"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857687"
 ---
 # <a name="allocator"></a>allocator
 
 **Microsoft Specific**
 
-**Alokatora** Specyfikator deklaracji może odnosić się do funkcji niestandardowych alokacji pamięci, aby uwidocznić alokacje za pośrednictwem śledzenie zdarzeń dla Windows (ETW).
+Specyfikator deklaracji **alokatora** można zastosować do funkcji niestandardowych alokacji pamięci, aby udostępnić alokacje za pośrednictwem śledzenia zdarzeń dla systemu Windows (ETW).
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,10 +27,12 @@ ms.locfileid: "62155241"
 
 ## <a name="remarks"></a>Uwagi
 
-Profiler pamięci natywnej w programie Visual Studio polega na zbieranie alokacji dane zdarzeń ETW wyemitowane przez w czasie wykonywania. Puli buforów w CRT i zestaw Windows SDK ma została oznaczona na poziomie źródła przechwycić swoje dane alokacji. Jeśli piszesz własnego puli buforów, a następnie wszystkie funkcje, które zwracają wskaźnik do nowo przydzielonego stosu pamięci może być dekorowane za pomocą `__declspec(allocator)`, jak pokazano w następującym przykładzie myMalloc:
+Profiler pamięci natywnej w programie Visual Studio działa przez zbieranie danych zdarzeń ETW alokacji emitowanych przez środowisko uruchomieniowe. Puli buforów w CRT i zestaw Windows SDK ma została oznaczona na poziomie źródła przechwycić swoje dane alokacji. W przypadku pisania własnych przydziałów, wszystkie funkcje, które zwracają wskaźnik do nowo przydzieloną pamięci sterty, mogą być dekoracyjne `__declspec(allocator)`, jak pokazano w tym przykładzie dla elementu malloc:
 
 ```cpp
 __declspec(allocator) void* myMalloc(size_t size)
 ```
 
-Aby uzyskać więcej informacji, zobacz [pomiaru wykorzystania pamięci w programie Visual Studio](/visualstudio/profiling/memory-usage) i [niestandardowe zdarzenia ETW sterty natywnej](/visualstudio/profiling/custom-native-etw-heap-events).
+Aby uzyskać więcej informacji, zobacz [miary użycie pamięci w Visual Studio](/visualstudio/profiling/memory-usage) i [niestandardowe zdarzenia sterty ETW](/visualstudio/profiling/custom-native-etw-heap-events).
+
+**ZAKOŃCZENIE określonych przez firmę Microsoft**

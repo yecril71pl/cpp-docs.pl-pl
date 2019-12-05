@@ -1,6 +1,6 @@
 ---
 title: 'Platform:: Collections:: Vector, Klasa'
-ms.date: 10/01/2019
+ms.date: 12/04/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: a70856be04a63cad1c700cb3cc52711dde410265
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.openlocfilehash: b7774c2cdab7b9abcb3ebac1453779055eacf897
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816578"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857895"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform:: Collections:: Vector, Klasa
 
@@ -65,17 +65,17 @@ Klasa **Vector** jest C++ konkretną implementacją interfejsu [Windows:: Founda
 
 Jeśli spróbujesz użyć typu **wektora** w publicznej wartości zwracanej lub parametrze, zostanie zgłoszony błąd kompilatora C3986. Błąd można naprawić, zmieniając parametr lub typ wartości zwracanej na [Windows:: Foundation:: Collections:: IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Aby uzyskać więcej informacji, zobacz [kolekcjeC++(/CX)](../cppcx/collections-c-cx.md).
 
-### <a name="members"></a>Members
+### <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[Vector:: Vector](#ctor)|Inicjuje nowe wystąpienie klasy Vector.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[Vector:: Append](#append)|Wstawia określony element po ostatnim elemencie w bieżącym wektorze.|
 |[Vector:: Clear](#clear)|Usuwa wszystkie elementy w bieżącym wektorze.|
@@ -84,7 +84,7 @@ Jeśli spróbujesz użyć typu **wektora** w publicznej wartości zwracanej lub 
 |[Vector:: getwiele](#getmany)|Pobiera sekwencję elementów z bieżącego wektora, rozpoczynając od określonego indeksu.|
 |[Vector:: GetView](#getview)|Zwraca widok tylko do odczytu wektora; oznacza to, że [platform:: Collections:: VectorView](../cppcx/platform-collections-vectorview-class.md).|
 |[Vector:: IndexOf](#indexof)|Wyszukuje określony element w bieżącym wektorze, a jeśli go znaleziono, zwraca indeks elementu.|
-|[Vector:: InsertAt](#insertat)|Wstawia określony element do bieżącego wektora po elemencie identyfikowanym przez określony indeks.|
+|[Vector:: InsertAt](#insertat)|Wstawia określony element do bieżącego wektora w elemencie identyfikowanym przez określony indeks.|
 |[Vector:: Zamień wszystkie](#replaceall)|Usuwa elementy z bieżącego wektora, a następnie wstawia elementy z określonej tablicy.|
 |[Vector:: RemoveAt](#removeat)|Usuwa element identyfikowany przez określony indeks z bieżącego wektora.|
 |[Vector::RemoveAtEnd](#removeatend)|Usuwa element na końcu bieżącego wektora.|
@@ -95,7 +95,7 @@ Jeśli spróbujesz użyć typu **wektora** w publicznej wartości zwracanej lub 
 
 |||
 |-|-|
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |zdarzenia [Windows:: Foundation:: Collection:: VectorChangedEventHandler\<t > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Występuje po zmianie wektora.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
@@ -143,7 +143,7 @@ Zwraca iterator, który wskazuje na pierwszy element w wektorze.
 virtual Windows::Foundation::Collections::IIterator <T>^ First();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Iterator, który wskazuje na pierwszy element w wektorze.
 
@@ -168,7 +168,7 @@ virtual T GetAt(unsigned int index);
 *index*<br/>
 Liczba całkowita bez znaku równa zero, która określa konkretny element w obiekcie Vector.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Element określony przez parametr *index* . Typ elementu jest definiowany przez *T* TypeName.
 
@@ -192,7 +192,7 @@ Liczony od zera indeks początku elementów do pobrania.
 *dest*<br/>
 Przypisana przez wywołujący Tablica elementów, które zaczynają się od elementu określonego przez *startIndex* i kończą na ostatnim elemencie w wektorze.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba pobranych elementów.
 
@@ -210,7 +210,7 @@ Zwraca widok tylko do odczytu wektora; oznacza to, że IVectorView.
 Windows::Foundation::Collections::IVectorView<T>^ GetView();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt IVectorView.
 
@@ -234,7 +234,7 @@ Indeks (liczony od zera) elementu, jeśli zostanie znaleziona *wartość* parame
 
 Parametr *index* ma wartość 0, jeśli element jest pierwszym elementem wektora lub nie znaleziono elementu. Jeśli wartość zwracana ma wartość **true**, element został znaleziony i jest pierwszym elementem; w przeciwnym razie nie znaleziono elementu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli znaleziono określony element; w przeciwnym razie **false**.
 
@@ -244,7 +244,7 @@ IndexOf używa elementu std:: find_if, aby znaleźć element. Niestandardowe typ
 
 ##  <a name="insertat"></a>Vector:: InsertAt — Metoda
 
-Wstawia określony element do bieżącego wektora po elemencie identyfikowanym przez określony indeks.
+Wstawia określony element do bieżącego wektora w elemencie identyfikowanym przez określony indeks.
 
 ### <a name="syntax"></a>Składnia
 
@@ -258,7 +258,7 @@ virtual void InsertAt(unsigned int index, T item)
 Liczba całkowita bez znaku równa zero, która określa konkretny element w obiekcie Vector.
 
 *item*<br/>
-Element, który ma zostać wstawiony do wektora po elemencie określonym za pomocą *indeksu*. Typ *elementu* jest definiowany przez *T* TypeName.
+Element do wstawienia do wektora w elemencie określonym przez *indeks*. Typ *elementu* jest definiowany przez *T* TypeName.
 
 ## <a name="removeat"></a>Vector:: RemoveAt — metoda
 
@@ -328,7 +328,7 @@ Zwraca liczbę elementów w bieżącym obiekcie wektora.
 virtual property unsigned int Size;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba elementów w bieżącym wektorze.
 

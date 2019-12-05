@@ -5,16 +5,16 @@ f1_keywords:
 - _udiv128
 helpviewer_keywords:
 - _udiv128 intrinsic
-ms.openlocfilehash: 0e66bbe978199f47134aa288bdd2bac4eb3e332a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e8cc9ca3dbf19a04d07edb1d73df84f2e29a5c3
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390168"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857986"
 ---
-# <a name="udiv128"></a>_udiv128
+# <a name="_udiv128"></a>_udiv128
 
-`_udiv128` Wewnętrzne dzieli 128-bitowej nieoznaczonej liczby całkowitej przez 64-bitowej nieoznaczonej liczby całkowitej. Wartość zwracana zawiera iloraz, a funkcja zwraca resztę z dzielenia za pomocą parametru wskaźnika. `_udiv128` jest **specyficzne dla firmy Microsoft**.
+`_udiv128` wewnętrznie dzieli 128-bitową liczbę całkowitą bez znaku przez 64-bitową liczbę całkowitą bez znaku. Wartość zwracana utrzymuje iloraz, a wewnętrzna Zwraca resztę za pomocą parametru wskaźnika. `_udiv128` to **specyficzny dla firmy Microsoft**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,26 +30,26 @@ unsigned __int64 _udiv128(
 ### <a name="parameters"></a>Parametry
 
 *highDividend* \
-[in] Wysoka 64 bity dzielna.
+podczas Wysoka 64 bitów dywidendy.
 
 *lowDividend* \
-[in] Niski 64 bity dzielna.
+podczas Niska 64 bitów dywidendy.
 
-*dzielnik.* \
-[in] 64-bitową liczbę całkowitą dzielnikiem.
+*dzielnik* \
+podczas 64-bitowa liczba całkowita do podzielenia przez.
 
-*Pozostała* \
-[out] Bity 64-bitową liczbę całkowitą resztę.
+*pozostała* \
+określoną 64-bitowe całkowite bity reszty.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-64-bitowy ilorazu.
+64 bitów ilorazu.
 
 ## <a name="remarks"></a>Uwagi
 
-Przekaż górny 64-bitowy dzielna 128-bitowego w *highDividend*i niższych 64-bitowy w *lowDividend*. Wewnętrzne dzieli tę wartość przez *dzielnik*. Przechowuje w 64-bitowej nieoznaczonej liczby całkowitej wskazywany przez resztę *resztę*i zwraca 64-bitowy ilorazu.
+Przekaż górne 64 bitów z 128-bitowej dywidendy w *highDividend*i niższą 64 bity w *lowDividend*. Wewnętrznie dzieli tę wartość przez *dzielnik*. Przechowuje resztę z 64-bitowej liczby całkowitej bez znaku wskazywanej przez *resztę*i zwraca 64 bitów ilorazu.
 
-`_udiv128` Wewnętrzne są dostępne począwszy od programu Visual Studio 2019 RTM.
+`_udiv128` wewnętrzna jest dostępna od wersji Visual Studio 2019 RTM.
 
 ## <a name="requirements"></a>Wymagania
 

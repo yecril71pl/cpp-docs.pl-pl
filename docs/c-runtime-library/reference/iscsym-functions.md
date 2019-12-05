@@ -65,12 +65,12 @@ helpviewer_keywords:
 - iscsym function
 - iscsymf function
 ms.assetid: 944dfb99-f2b8-498c-9f55-dbcf370d0a2c
-ms.openlocfilehash: ef5b2487fb49739f9a073adbc87546fb5d49d542
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: bc38e72818446a94a51a37b8df5c8c8582971b3f
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954413"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857765"
 ---
 # <a name="iscsym-iscsymf-__iscsym-__iswcsym-__iscsymf-__iswcsymf-_iscsym_l-_iswcsym_l-_iscsymf_l-_iswcsymf_l"></a>iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l
 
@@ -114,18 +114,18 @@ int _iswcsymf_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Liczba całkowita do przetestowania. język *c* powinien mieścić się w zakresie od 0-255 do wersji wąskich znaków funkcji.
+Liczba całkowita to testowania. język *c* powinien mieścić się w zakresie od 0-255 do wersji wąskich znaków funkcji.
 
 *ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
-## <a name="return-value"></a>Wartość zwracana
+## <a name="return-value"></a>Wartość zwrócona
 
 Zarówno **__iscsym** , jak i **__iswcsym** zwracają wartość różną od zera, jeśli *c* jest literą, podkreśleniem lub cyfrą. Zarówno **__iscsymf** , jak i **__iswcsymf** zwracają wartość różną od zera, jeśli *c* jest literą lub podkreśleniem. Każda z tych procedur zwraca wartość 0, jeśli *c* nie spełnia warunku testu. Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że używają *ustawień regionalnych* przewidzianych zamiast bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Te procedury są definiowane jako makra, chyba że jest zdefiniowany _CTYPE_DISABLE_MACROS makra preprocesora. W przypadku korzystania z wersji makr tych procedur, argumenty mogą być oceniane więcej niż raz. Należy zachować ostrożność w przypadku używania wyrażeń, które mają efekty uboczne na liście argumentów.
+Te procedury są definiowane jako makra, chyba że zostanie zdefiniowane _CTYPE_DISABLE_MACROS makro preprocesora. W przypadku korzystania z wersji makr tych procedur, argumenty mogą być oceniane więcej niż raz. Należy zachować ostrożność w przypadku używania wyrażeń, które mają efekty uboczne na liście argumentów.
 
 W celu zapewnienia zgodności z poprzednimi wersjami **iscsym** i **iscsymf** są zdefiniowane jako makra tylko wtedy, gdy [ &#95; &#95;STDC&#95; ](../../preprocessor/predefined-macros.md) nie jest zdefiniowany lub jest zdefiniowany jako 0; w przeciwnym razie są one niezdefiniowane.
 

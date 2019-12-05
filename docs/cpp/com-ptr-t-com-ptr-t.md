@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: 5a3923ee488771e807600069855299fc240b3212
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c169e454029a28f644a2aabc8d3089bf3069c8c5
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498709"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857596"
 ---
 # <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
@@ -21,7 +21,7 @@ Konstruuje obiekt **_com_ptr_t** .
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 // Default constructor.
 // Constructs a NULL smart pointer.
 _com_ptr_t() throw();
@@ -133,13 +133,13 @@ explicit _com_ptr_t(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
 *pInterface*<br/>
 Pierwotny wskaźnik interfejsu.
 
 *fAddRef*<br/>
-Jeśli wartość jest `AddRef` równa true, jest wywoływana, aby zwiększyć liczbę odwołań wskaźnika interfejsu hermetyzowanego.
+W przypadku wartości TRUE `AddRef` jest wywoływana, aby zwiększyć liczbę odwołań wskaźnika interfejsu hermetyzowanego.
 
 *CP*<br/>
 Obiekt **_com_ptr_t** .
@@ -151,16 +151,18 @@ Wskaźnik interfejsu RAW, jego typ różni się od typu inteligentnego wskaźnik
 Element `_variant_t` obiektu.
 
 *Identyfikator*<br/>
-`CLSID` Klasy coclass.
+`CLSID` klasy coclass.
 
 *dwClsContext*<br/>
 Kontekst do uruchamiania kodu wykonywalnego.
 
 *lpcStr*<br/>
-Ciąg wielobajtowy, który zawiera `CLSID` (Zaczynając od " **{** `ProgID`") lub.
+Ciąg wielobajtowy, który zawiera `CLSID` (Zaczynając od " **{** ") lub `ProgID`.
 
 *pOuter*<br/>
 Nieznana zewnętrzna do [agregacji](/windows/win32/com/aggregation).
+
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

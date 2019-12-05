@@ -4,34 +4,34 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - based addressing
 ms.assetid: a68ff750-c7fa-4c0c-8d5f-2df76e4686c5
-ms.openlocfilehash: 8dec9b0bcc7db25e2ec4c39b9d907922691bfc05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8c923b5a111144c539b5bea1b2f47eb58dd1fbd
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393951"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857648"
 ---
-# <a name="based-grammar"></a>__based — Gramatyka
+# <a name="__based-grammar"></a>__based — Gramatyka
 
-## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft
+**Microsoft Specific**
 
-Adresowanie na podstawie jest przydatne, gdy będziesz potrzebować precyzyjną kontrolę nad tym segment, w których obiekty są przydzielane (statycznych i dynamicznych na podstawie danych).
+Adresowanie na podstawie jest przydatne, gdy potrzebujesz precyzyjnej kontroli nad segmentem, w którym są przydzielane obiekty (dane statyczne i dynamiczne).
 
-Tylko formularza na podstawie adresowania dopuszczalne w kompilacjach kodu 32-bitowych i 64-bitowy "opiera się na wskaźnik", który definiuje typ, który zawiera 32-bitową lub 64-bitowe przesunięcie podstawowy 32-bitową lub 64-bitowe lub oparte na **void**.
+Jedyną formą dopuszczalną w oparciu o 32-bitowe i 64-bitowe kompilacje jest "na podstawie wskaźnika", który definiuje typ, który zawiera 32-bit lub 64-bit przemieszczenia do bazy danych 32-bit lub 64-bit lub na podstawie typu **void**.
 
 ## <a name="grammar"></a>Gramatyka
 
-*na podstawie zakresu — modyfikator*: **__based (***base-expression***)** 
+*modyfikator zakresu z zakresem*: **__based (**  *wyrażenie podstawowe*  **)**
 
-*wyrażenie Base*: *based-variablebased-abstract-declaratorsegment-namesegment-cast*
+*wyrażenie podstawowe*: *based-variablebased-abstract-declaratorsegment-namesegment-Cast*
 
-*na podstawie zmiennej*: *identyfikator*
+*zmienna*: *Identyfikator*
 
-*based-abstract-declarator*: *abstract-declarator*
+*oparta na deklarator*: *abstract-deklarator*
 
-*typem podstawowym*: *Nazwa typu*
+*Typ podstawowy*: *type-name*
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

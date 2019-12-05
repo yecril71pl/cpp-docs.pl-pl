@@ -9,46 +9,46 @@ helpviewer_keywords:
 - storage class specifiers, C storage classes
 - storage duration
 ms.assetid: 893fb929-f7a9-43dc-a0b3-29cb1ef845c1
-ms.openlocfilehash: 85eb11397b2336363fe4f55da26623fac720faf3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77aefe41fecf003218343710ef090eebf99446a8
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313244"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857115"
 ---
 # <a name="c-storage-classes"></a>Klasy magazynu w języku C
 
-"Klasa magazynu" zmiennej określa, czy element ma okres istnienia "global" lub "local". C wywołuje te dwa okresy istnienia "statyczne" i "Automatyczny". Element z globalnym okresem istnienia istnieje i ma wartość podczas wykonywania programu. Wszystkie funkcje mają globalne okresy istnienia.
+"Klasa magazynu" zmiennej określa, czy element ma okres istnienia "globalny", czy "lokalny". C wywołuje te dwa okresy istnienia "static" i "Automatic". Element z globalnym okresem istnienia istnieje i ma wartość w trakcie wykonywania programu. Wszystkie funkcje mają globalne okresy istnienia.
 
-Automatyczne zmienne lub zmienne lokalne okresy istnienia, są przydzielane nowego magazynu, każdy czas wykonywania kontrola przechodzi do bloku, w którym są zdefiniowane. Po powrocie wykonywania, zmiennych już istotne wartości.
+Zmienne automatyczne lub zmienne z lokalnymi okresami istnienia są przypisywanych nowych magazynów po każdym przekroczeniu przez Sterowanie wykonywaniem do bloku, w którym są zdefiniowane. Po powrocie wykonywania zmienne nie mają już wartości znaczących.
 
-C, oferuje następujące specyfikatory klasy magazynowania:
+C zawiera następujące specyfikatory klasy magazynowania:
 
 ## <a name="syntax"></a>Składnia
 
 *storage-class-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**auto**<br/>
+&nbsp;&nbsp; **&nbsp;&nbsp;**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**register**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Statyczne**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**static**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**extern**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Element TypeDef**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *extended-decl modyfikator seq* **)**  / \* Specific firmy Microsoft \*/
+&nbsp;&nbsp;&nbsp;&nbsp;**typedef**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *rozszerzony-decl-modyfikator-SEQ* **)**  /\* \*/
 
-Z wyjątkiem `__declspec`, można użyć tylko jednej *storage-class-specifier* w *Specyfikator deklaracji* w deklaracji. Jeśli nie specyfikacja klasy magazynowania, deklaracje w bloku tworzenia obiektów automatycznych.
+Z wyjątkiem `__declspec`, można użyć tylko jednego *specyfikatora klasy magazynu* w deklaracji *-specyfikatora deklaracji* . Jeśli nie zostanie utworzona Specyfikacja klasy magazynu, deklaracje w bloku tworzą obiekty automatyczne.
 
-Elementy zadeklarowane za pomocą **automatycznie** lub **zarejestrować** specyfikator okresy istnienia lokalnego. Elementy zadeklarowane za pomocą **statyczne** lub `extern` specyfikator okresy istnienia globalnego.
+Elementy zadeklarowane ze specyfikatorem **Autotekstu** lub **rejestru** mają lokalne okresy istnienia. Elementy zadeklarowane ze specyfikatorem **static** lub `extern` mają globalne okresy istnienia.
 
-Ponieważ `typedef` i `__declspec` są semantycznie różne od innych cztery *storage-class-specifier* terminali, zostały omówione oddzielnie. Aby uzyskać szczegółowe informacje dotyczące `typedef`, zobacz [deklaracje Typedef](../c-language/typedef-declarations.md). Aby uzyskać szczegółowe informacje dotyczące `__declspec`, zobacz [rozszerzone atrybuty klasy magazynowania](../c-language/c-extended-storage-class-attributes.md).
+Ze względu na to, że `typedef` i `__declspec` są semantycznie inne niż pozostałe cztery zaciski *specyfikatora klasy magazynu* , są one omawiane osobno. Aby uzyskać szczegółowe informacje na temat `typedef`, zobacz [deklaracje typedef](../c-language/typedef-declarations.md). Aby uzyskać szczegółowe informacje na temat `__declspec`, zobacz [atrybuty klasy magazynu rozszerzonego](../c-language/c-extended-storage-class-attributes.md).
 
-Położenie deklaracje zmiennych i funkcji w obrębie pliki źródłowe wpływa również na klasę magazynu i widoczności. Deklaracje poza wszystkie definicje funkcji są określane jako pojawiają się na poziomie"zewnętrzne." Deklaracje w obrębie definicje funkcji są wyświetlane na poziomie"wewnętrzny."
+Umieszczenie deklaracji zmiennej i funkcji w plikach źródłowych wpływa również na klasę i widoczność magazynu. Deklaracje poza wszystkimi definicjami funkcji są wyświetlane na stronie "poziom zewnętrzny". Deklaracje w ramach definicji funkcji są wyświetlane na "poziomie wewnętrznym".
 
-Dokładne znaczenie każdy Specyfikator klasy magazynowania zależy od dwa czynniki:
+Dokładne znaczenie każdego specyfikatora klasy magazynu zależy od dwóch czynników:
 
-- Czy deklaracja jest wyświetlane na poziomie zewnętrznym lub wewnętrznym
+- Czy deklaracja pojawia się na poziomie zewnętrznym, czy wewnętrznym
 
-- Czy element został zadeklarowany jest zmienna lub funkcja
+- Czy zadeklarowany element jest zmienną lub funkcją
 
-[Specyfikatory klasy magazynowania dla deklaracji na poziomie zewnętrznym](../c-language/storage-class-specifiers-for-external-level-declarations.md) i [specyfikatory klasy magazynowania dla deklaracji na poziomie wewnętrznym](../c-language/storage-class-specifiers-for-internal-level-declarations.md) opisują *storage-class-specifier* terminali w Każdy rodzaj elementu deklaracji i wyjaśnić zachowanie domyślne podczas *storage-class-specifier* pominięto w zmiennej. [Specyfikatory klasy magazynowania z deklaracjami funkcji](../c-language/storage-class-specifiers-with-function-declarations.md) opisano specyfikatory klasy magazynowania używana z usługą functions.
+[Specyfikatory klasy magazynowania dla deklaracji na poziomie zewnętrznym](../c-language/storage-class-specifiers-for-external-level-declarations.md) i [specyfikatory klasy magazynowania dla deklaracji na poziomie wewnętrznym](../c-language/storage-class-specifiers-for-internal-level-declarations.md) opisują terminale *specyfikatora klasy magazynu* w każdym rodzaju deklaracji i objaśniają zachowanie domyślne, gdy *specyfikator klasy magazynu* został pominięty ze zmiennej. [Specyfikatory klasy magazynowania z deklaracjami funkcji](../c-language/storage-class-specifiers-with-function-declarations.md) omawiają specyfikatory klasy magazynu używane z funkcjami.
 
 ## <a name="see-also"></a>Zobacz także
 

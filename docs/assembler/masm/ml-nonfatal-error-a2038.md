@@ -1,24 +1,24 @@
 ---
 title: Błąd niekrytyczny ML A2038
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2038
 helpviewer_keywords:
 - A2038
 ms.assetid: 001bf60a-58ac-4654-97eb-b734f2999f8e
-ms.openlocfilehash: af25b4c58b3b8853dc8f57b3c0b5fcda1b554094
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: caeb6a94ac74f07ba173e38d66ddfa3859b64f56
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62201926"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856665"
 ---
 # <a name="ml-nonfatal-error-a2038"></a>Błąd niekrytyczny ML A2038
 
-**brakujący argument makra operatora**
+**Brak operandu dla operatora makra**
 
-Asembler znaleźliśmy koniec listy parametrów makra natychmiast po [!](../../assembler/masm/operator-logical-not-masm-run-time.md) lub [ % ](../../assembler/masm/operator-percent.md) operatora.
+Asembler znalazł koniec listy parametrów makra bezpośrednio po [!](../../assembler/masm/operator-logical-not-masm-run-time.md) lub operator [%](../../assembler/masm/operator-percent.md) .
 
 ## <a name="see-also"></a>Zobacz także
 

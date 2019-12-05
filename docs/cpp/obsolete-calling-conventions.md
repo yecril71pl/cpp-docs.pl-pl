@@ -12,22 +12,22 @@ helpviewer_keywords:
 - __fortran keyword [C++]
 - calling conventions, obsolete
 ms.assetid: a91fc665-034a-48ce-b6bd-d27125f308a7
-ms.openlocfilehash: 86c75c779158d9f191dd015410cf16c9ce25690d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f059afe02cbbad77920fd8c4a0e6cb7c958e992
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245037"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857362"
 ---
 # <a name="obsolete-calling-conventions"></a>Przestarzałe konwencje wywoływania
 
-## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft
+**Microsoft Specific**
 
-**__Pascal**, **__fortran**, i **__syscall** konwencji wywoływania nie są już obsługiwane. Przy użyciu jednego z obsługiwanych Konwencje wywoływania i opcje konsolidatora w odpowiednie, może emulować ich funkcje.
+Konwencje wywoływania **__pascal**, **__fortran**i **__syscall** nie są już obsługiwane. Można emulować ich funkcje przy użyciu jednej z obsługiwanych konwencji wywoływania i odpowiednich opcji konsolidatora.
 
-\<Windows.h > obsługuje teraz makro WINAPI, co przekłada się na odpowiednie konwencja wywołania dla obiektu docelowego. Użyj WINAPI, na którym wcześniej używano PASCAL lub **__far \__pascal**.
+\<Windows. h > obsługuje teraz makro WINAPI, które tłumaczy do odpowiedniej konwencji wywoływania dla elementu docelowego. Użyj WINAPI, w której wcześniej użyto języka PASCALa lub **__far \__pascal**.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

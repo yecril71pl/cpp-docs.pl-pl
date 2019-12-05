@@ -1,26 +1,26 @@
 ---
 title: Błąd niekrytyczny ML A2066
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2066
 helpviewer_keywords:
 - A2066
 ms.assetid: 58220fdf-fb8f-47fc-a36d-737867361185
-ms.openlocfilehash: 10285c65437bdaaed24fb818e6c1eb3996d0deec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8dc3000b2edc2b1ecda7cc3952b554296de19aa3
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177347"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74855882"
 ---
 # <a name="ml-nonfatal-error-a2066"></a>Błąd niekrytyczny ML A2066
 
-**niezgodne rozmiar tryb i segmentów procesora CPU**
+**niezgodny tryb procesora CPU i rozmiar segmentu**
 
-Próbowano otworzyć segment o **USE16**, **USE32**, lub **PROSTEGO** atrybut, który nie jest zgodny z określonym procesora CPU lub zmienić na 16-bitowego Procesora w 32-bitowa Segment.
+Podjęto próbę otwarcia segmentu z atrybutem **USE16**, **USE32**lub **flatem** , który nie jest zgodny z określonym procesorem CPU, lub aby zmienić na 16-bitowy procesor w ramach segmentu 32-bitowego.
 
-**USE32** i **PROSTEGO** atrybuty muszą być poprzedzone.386 lub większa procesora dyrektywy.
+Atrybuty **USE32** i **Flat** muszą być poprzedzone dyrektywą procesora. 386 lub większą.
 
 ## <a name="see-also"></a>Zobacz także
 

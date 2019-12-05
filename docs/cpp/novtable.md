@@ -7,22 +7,22 @@ helpviewer_keywords:
 - novtable __declspec keyword
 - __declspec keyword [C++], novtable
 ms.assetid: cfef09c5-8c1e-4b14-8a72-7d726ded4484
-ms.openlocfilehash: 9dcca6ec07a19d53da238020805299b652cbf919
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a147af8f536923082df3a2d6d332150a57d6af1b
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245157"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857388"
 ---
 # <a name="novtable"></a>novtable
 
-## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft
+**Microsoft Specific**
 
-Jest to **__declspec** atrybutów rozszerzonych.
+Jest to **__declspec** rozszerzony atrybut.
 
-Ta forma **__declspec** mogą być stosowane do dowolnej deklaracji klasy, ale tylko stosuje się do klasy interfejsu czystego, oznacza to, klas, które nigdy nie zostać utworzone samodzielnie. **__Declspec** zatrzymuje kompilator generuje kod, aby zainicjować vfptr constructor(s) i destruktor klasy. W wielu przypadkach spowoduje to usunięcie tylko odwołania do vtable, które są skojarzone z klasy i w związku z tym, konsolidator spowoduje usunięcie go. Przy użyciu tej formy **__declspec** może doprowadzić do znacznego zmniejszenia rozmiaru kodu.
+Ten formularz **__declspec** można zastosować do dowolnej deklaracji klasy, ale powinien być stosowany tylko do czystych klas interfejsów, czyli klas, które nigdy nie będą tworzone samodzielnie. **__Declspec** uniemożliwia kompilatorowi generowanie kodu w celu zainicjowania vfptr w konstruktorach i destruktorze klasy. W wielu przypadkach powoduje to usunięcie tylko odwołań do tablic wirtualnych, które są skojarzone z klasą, a w rezultacie konsolidator usunie. Użycie tej formy **__declspec** może spowodować znaczne zmniejszenie rozmiaru kodu.
 
-Jeśli użytkownik podejmie próbę utworzenia wystąpienia klasy oznaczone **novtable** i następnie uzyskać dostęp do składowej klasy, zostanie wyświetlony naruszenie zasad dostępu (pliki audio i wideo).
+Jeśli spróbujesz utworzyć wystąpienie klasy oznaczonej jako Nostatic **, a następnie** uzyskać dostęp do elementu członkowskiego klasy, otrzymasz naruszenie dostępu (AV).
 
 ## <a name="example"></a>Przykład
 
@@ -53,7 +53,7 @@ int main() {
 In Y
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

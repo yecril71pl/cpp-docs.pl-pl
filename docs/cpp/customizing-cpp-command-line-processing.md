@@ -14,24 +14,24 @@ helpviewer_keywords:
 - suppressing environment processing
 - _setenvp function
 ms.assetid: aae01cbb-892b-48b8-8e1f-34f22421f263
-ms.openlocfilehash: da1b3bdd6392b144f9315add4c19de14c1d14d41
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1541840521695658b5c4d809ba7e11767b1330a2
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154694"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857557"
 ---
 # <a name="customizing-c-command-line-processing"></a>Dostosowywanie przetwarzania w wierszu polecenia języka C++
 
-## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft
+**Microsoft Specific**
 
-Jeśli program nie przyjmuje argumentów wiersza polecenia, można zapisać małej ilości miejsca, z pominięciem użyj procedury biblioteki, która wykonuje przetwarzania w wierszu polecenia. Ta procedura jest wywoływana `_setargv` i jest opisany w [rozwijanie symbolu wieloznacznego](../cpp/wildcard-expansion.md). Aby pominąć jego użycia, należy zdefiniować procedurę, która nie wykonuje żadnych działań w pliku zawierającego `main` funkcji i nadaj mu nazwę `_setargv`. Wywołanie `_setargv` następnie jest spełniony, definicja `_setargv`, oraz wersji biblioteki nie jest załadowany.
+Jeśli program nie przyjmuje argumentów wiersza polecenia, można zaoszczędzić małą ilość miejsca, pomijając użycie procedury biblioteki, która wykonuje przetwarzanie wiersza polecenia. Ta procedura jest nazywana `_setargv` i jest opisana w [rozwinięciu symboli wieloznacznych](../cpp/wildcard-expansion.md). Aby pominąć jego użycie, zdefiniuj procedurę, która nie wykonuje żadnych operacji w pliku zawierającym funkcję `main` i nadaj jej nazwę `_setargv`. Wywołanie `_setargv` jest następnie spełnione przez definicję `_setargv`, a wersja biblioteki nie została załadowana.
 
-Podobnie jeśli nigdy nie dostępu do tabeli środowiska za pomocą `envp` argument, możesz podać własne pusty procedura ma być używany zamiast `_setenvp`, procedura przetwarzania w środowisku. Podobnie jak `_setargv` funkcji `_setenvp` musi być zadeklarowany jako **extern "C"**.
+Podobnie, jeśli nie masz dostępu do tabeli środowiska za pomocą argumentu `envp`, możesz podać własną pustą procedurę, która będzie używana zamiast `_setenvp`, procedury przetwarzania środowiska. Podobnie jak w przypadku funkcji `_setargv`, `_setenvp` musi być zadeklarowany jako **extern "C"** .
 
-Program może wykonywać wywołania `spawn` lub `exec` rodziny procedury biblioteki wykonawczej C. Jeśli jest to możliwe, nie ma pomijać procedura przetwarzania w środowisku, ponieważ ta procedura służy do przekazywania środowisko z procesu nadrzędnego do procesu podrzędnego.
+Program może nawiązywać wywołania do `spawn` lub `exec` z rodziny procedur w bibliotece wykonawczej C. W takim przypadku nie należy pomijać procedury przetwarzania środowiska, ponieważ ta procedura jest używana do przekazywania środowiska z procesu nadrzędnego do procesu podrzędnego.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

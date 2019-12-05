@@ -9,12 +9,12 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-ms.openlocfilehash: 942a7e48e4315454476bfe93c68169f461b006b2
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 3282f98f48f7e416857ef2f766563ab6038ca41a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245130"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857271"
 ---
 # <a name="structured-exception-handling-cc"></a>Obsługa wyjątków strukturalnych (C/C++)
 
@@ -56,7 +56,7 @@ Program obsługi wyjątków, który rozpoznaje wyjątek, może nie znajdować si
 
 Po odłączeniu stosu system operacyjny wywołuje wszystkie programy obsługi zakończenia, które zostały zapisaną dla każdej funkcji. Za pomocą procedury obsługi zakończenia można wyczyścić zasoby, które w przeciwnym razie pozostaną otwarte ze względu na nietypowe zakończenie. Jeśli wprowadzono sekcję krytyczną, możesz ją zamknąć w programie obsługi zakończenia. Jeśli program zostanie zamknięty, można wykonywać inne zadania dla gospodarstw domowych, takie jak zamykanie i usuwanie plików tymczasowych.
 
-## <a name="next-steps"></a>Kolejne kroki
+## <a name="next-steps"></a>Następne kroki
 
 - [Pisanie procedury obsługi wyjątków](../cpp/writing-an-exception-handler.md)
 
@@ -140,7 +140,7 @@ Executing SEH __except block
 
 Aby uzyskać więcej informacji, zobacz [/EH (model obsługi wyjątków)](../build/reference/eh-exception-handling-model.md).
 
-**ZAKOŃCZENIE określonych przez firmę Microsoft**
+**ZAKOŃCZENIE specyficzne dla firmy Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

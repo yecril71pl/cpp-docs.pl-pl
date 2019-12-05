@@ -43,12 +43,12 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: 99c30eeb942eb3ab57518cc63ce353cfeff0bec9
-ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
+ms.openlocfilehash: daa2ad2680a9d7d0239a70ed37ec1d90a3d96d97
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74810545"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857544"
 ---
 # <a name="fundamental-types--c"></a>Typy podstawowe (C++)
 
@@ -77,7 +77,7 @@ W poniższej tabeli opisano ograniczenia dla rozmiarów typu. Te ograniczenia s�
 ||**Long Long**|Większe niż **znak bez znaku**.<br /><br /> Obiekty typu **Long Long** mogą być deklarowane jako **podpisane o długim** długim lub **bez znaku**long long. **podpisana long long** jest synonimem dla **długiej**długości.|
 ||**wchar_t**, **__wchar_t**|Zmienna typu **wchar_t** wyznacza typ dwubajtowy lub znak wieloznaczny. Domyślnie **wchar_t** jest typem natywnym, ale można użyć [/Zc: wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) , aby **wchar_t** typedef dla **niepodpisanego Short**. Typ **__wchar_t** jest synonimem specyficznym dla firmy Microsoft dla natywnego typu **wchar_t** .<br /><br /> Użyj prefiksu L przed znakiem lub literałem ciągu, aby wyznaczyć typ szerokich znaków.|
 |Liczba zmiennoprzecinkowa|**float**|Typ **float** jest najmniejszym typem zmiennoprzecinkowym.|
-||**double**|Typ **Double** to typ zmiennoprzecinkowy, który jest większy niż lub równy typowi **zmiennoprzecinkowej**, ale krótszy niż lub równy rozmiarowi typu **Long Double**.<br /><br /> Specyficzne dla firmy Microsoft: reprezentacja **Long Double** i **Double** jest taka sama. Jednak **długie podwójne** i **podwójne** są oddzielnymi typami.|
+||**double**|Typ **Double** to typ zmiennoprzecinkowy, który jest większy niż lub równy typowi **zmiennoprzecinkowej**, ale krótszy niż lub równy rozmiarowi typu **Long Double**.<br /><br /> Specyficzne dla firmy Microsoft: reprezentacja typu **Long Double** i **Double** jest taka sama. Jednak **długie podwójne** i **podwójne** są oddzielnymi typami.|
 ||**Long Double**|Typ **Long Double** jest typem zmiennoprzecinkowym, który jest większy niż lub równy typ **Double**.|
 
 **Microsoft Specific**

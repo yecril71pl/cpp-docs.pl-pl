@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-ms.openlocfilehash: 40ff315c179a6b62a3073d4f07e4e6a6d1c1acab
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 07c8a79e0a9569db80607e1ec1e16cd4b502783c
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941128"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857830"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -46,7 +46,7 @@ int feraiseexcept(
 *Oprócz*<br/>
 Wyjątki zmiennoprzecinkowe do podniesienia.
 
-## <a name="return-value"></a>Wartość zwracana
+## <a name="return-value"></a>Wartość zwrócona
 
 Jeśli wszystkie określone wyjątki są zgłaszane pomyślnie, zwraca wartość 0.
 
@@ -63,11 +63,11 @@ Funkcja **feraiseexcept** próbuje podnieść wyjątki zmiennoprzecinkowe okreś
 |FE_UNDERFLOW|Wcześniejszy wynik operacji zmiennoprzecinkowej był zbyt mały, aby mógł być reprezentowany z pełną dokładnością; utworzono nienormalną wartość.|
 |FE_ALLEXCEPT|Bitowe lub wszystkie obsługiwane wyjątki zmiennoprzecinkowe.|
 
-Argument *except* może mieć wartość zero, jedną z wartości makra wyjątku lub bitową lub dwa lub więcej obsługiwanych makr wyjątków. Jeśli jednym z określonych makr wyjątków jest FE_OVERFLOW lub FE_UNDERFLOW, wyjątek FE_INEXACT może być podniesiony jako efekt uboczny.
+Argument *except* może mieć wartość zero, jedną z wartości makra wyjątku lub bitową lub dwa lub więcej obsługiwanych makr wyjątków. Jeśli jedno z określonych makr wyjątków jest FE_OVERFLOW lub FE_UNDERFLOW, wyjątek FE_INEXACT może być podniesiony jako efekt uboczny.
 
-Aby użyć tej funkcji, należy wyłączyć optymalizacje zmiennoprzecinkowe, które mogą uniemożliwić dostęp przy użyciu `#pragma fenv_access(on)` dyrektywy przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).
+Aby użyć tej funkcji, należy wyłączyć optymalizacje zmiennoprzecinkowe, które mogą uniemożliwić dostęp przy użyciu dyrektywy `#pragma fenv_access(on)` przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).
 
-**Specyficzne dla firmy Microsoft:** Wyjątki określone w wyjątkach są *wywoływane w kolejności* FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. Jednak FE_INEXACT może być zgłaszane, gdy zostanie wywołane FE_OVERFLOW lub FE_UNDERFLOW, nawet jeśli nie zostanie określony w *z wyjątkiem*. **Zakończenie określonych przez firmę Microsoft**
+**Specyficzne dla firmy Microsoft:** Wyjątki określone w wyjątkach są *wywoływane w kolejności* FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. Jednakże FE_INEXACT mogą być wywoływane, gdy zostanie zgłoszony FE_OVERFLOW lub FE_UNDERFLOW, nawet jeśli nie zostanie określony w *z wyjątkiem*.
 
 ## <a name="requirements"></a>Wymagania
 

@@ -5,16 +5,16 @@ f1_keywords:
 - _div64
 helpviewer_keywords:
 - _div64 intrinsic
-ms.openlocfilehash: 1d05c5d6e25540a5de1b2f8231697c9a738759ce
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 59c5eae66f9e93cb88f9512e405376f2ef5f1ceb
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216766"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74858025"
 ---
 # <a name="_div64"></a>_div64
 
-`_div64` Wewnętrznie dzieli 64-bitową liczbę całkowitą przez 32-bitową liczbę całkowitą. Wartość zwracana utrzymuje iloraz, a wewnętrzna Zwraca resztę za pomocą parametru wskaźnika. `_div64`jest **specyficzny dla firmy Microsoft**.
+`_div64` wewnętrznie dzieli 64-bitową liczbę całkowitą przez 32-bitową liczbę całkowitą. Wartość zwracana utrzymuje iloraz, a wewnętrzna Zwraca resztę za pomocą parametru wskaźnika. `_div64` to **specyficzny dla firmy Microsoft**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,13 +28,13 @@ int _div64(
 
 ### <a name="parameters"></a>Parametry
 
-*płacone* \
+ \ *dywidendy*
 podczas 64-bitowa liczba całkowita do podzielenia.
 
 *dzielnik* \
 podczas 32-bitowa liczba całkowita do podzielenia przez.
 
-*pozostałej części* \
+*pozostała* \
 określoną 32-bitowe całkowite bity reszty.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -43,13 +43,13 @@ określoną 32-bitowe całkowite bity reszty.
 
 ## <a name="remarks"></a>Uwagi
 
-Wewnętrznie dzieli *dzielną* przez *dzielnik.* `_div64` Przechowuje resztę z 32-bitowej liczby całkowitej wskazywanej przez *resztę*i zwraca 32 bitów ilorazu.
+`_div64` wewnętrzna dzieli *dzielną* przez *dzielnik*. Przechowuje resztę z 32-bitowej liczby całkowitej wskazywanej przez *resztę*i zwraca 32 bitów ilorazu.
 
-Funkcja `_div64` wewnętrzna jest dostępna od wersji Visual Studio 2019 RTM.
+`_div64` wewnętrzna jest dostępna od wersji Visual Studio 2019 RTM.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrznej|Architektura|nagłówek|
+|Wewnętrzne|Architektura|nagłówek|
 |---------------|------------------|------------|
 |`_div64`|x86, x64|\<immintrin.h>|
 

@@ -2,22 +2,22 @@
 title: Ograniczenia i reguły ogólne
 ms.date: 11/04/2016
 ms.assetid: 6c48902d-4259-4761-95d4-e421d69aa050
-ms.openlocfilehash: 931ae04ef47262f15d037a2b5eeb35bd01a8419d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3bd8956b08d3e5f2109c5574802a3a8a72fba537
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153778"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857531"
 ---
 # <a name="general-rules-and-limitations"></a>Ograniczenia i reguły ogólne
 
-## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft
+**Microsoft Specific**
 
-- W przypadku deklarowania funkcji lub obiektu bez **dllimport** lub **dllexport** atrybutu, funkcji lub obiektu nie jest uważany za część interfejsu biblioteki DLL. W związku z tym definicja funkcji lub obiektu musi być obecny, w tym module lub w innym module tego samego programu. Aby funkcji lub obiektu częścią interfejsu biblioteki DLL, należy zadeklarować definicji funkcji lub obiektu w module jako **dllexport**. W przeciwnym razie zostanie wygenerowany błąd konsolidatora.
+- Jeśli zadeklarujesz funkcję lub obiekt bez atrybutu **dllimport** lub **dllexport** , funkcja lub obiekt nie jest uważany za część interfejsu dll. W związku z tym definicja funkcji lub obiektu musi być obecna w tym module lub w innym module tego samego programu. Aby uczynić funkcję lub obiektem w interfejsie DLL, należy zadeklarować definicję funkcji lub obiektu w innym module jako **dllexport**. W przeciwnym wypadku zostanie wygenerowany błąd konsolidatora.
 
-   W przypadku deklarowania funkcji lub obiekt z **dllexport** atrybutu, jego definicja musi znajdować się w niektórych module tego samego programu. W przeciwnym razie zostanie wygenerowany błąd konsolidatora.
+   Jeśli deklarujesz funkcję lub obiekt z atrybutem **dllexport** , jego definicja musi znajdować się w pewnym module tego samego programu. W przeciwnym wypadku zostanie wygenerowany błąd konsolidatora.
 
-- Jeśli pojedynczy moduł w programie zawiera zarówno **dllimport** i **dllexport** deklaracje dla tej samej funkcji lub obiektu, **dllexport** pierwszeństwo atrybutów za pośrednictwem **dllimport** atrybutu. Jednak kompilator wygeneruje ostrzeżenie. Na przykład:
+- Jeśli pojedynczy moduł w programie zawiera deklaracje **dllimport** i **dllexport** dla tej samej funkcji lub obiektu, atrybut **dllexport** ma pierwszeństwo przed atrybutem **dllimport** . Jest jednak generowane ostrzeżenie kompilatora. Na przykład:
 
     ```cpp
     __declspec( dllimport ) int i;
@@ -25,7 +25,7 @@ ms.locfileid: "62153778"
                                      // dllexport takes precedence.
     ```
 
-- W języku C++, można zainicjować wskaźnik globalnie zadeklarowane lub statycznych danych lokalnych lub przy użyciu adresu obiektu danych zadeklarowane za pomocą **dllimport** atrybut, który generuje błąd w C. Ponadto można zainicjować wskaźnik statycznych funkcji lokalnych przy użyciu adresu funkcja zadeklarowana za pomocą **dllimport** atrybutu. W języku C takie przypisania ustawia wskaźnik na adres thunk importu biblioteki DLL (kod odcinek, który przekazuje sterowanie do funkcji) zamiast adresu funkcji. W języku C++ ustawia wskaźnik do adresu funkcji. Na przykład:
+- W C++programie można zainicjować globalnie zadeklarowany lub statyczny wskaźnik danych lokalnych lub z adresem obiektu danych zadeklarowanego za pomocą atrybutu **dllimport** , który generuje błąd w C. Ponadto można zainicjować statyczny wskaźnik funkcji lokalnych przy użyciu adresu funkcji zadeklarowanej z atrybutem **dllimport** . W języku C takie przypisanie ustawia wskaźnik na adres biblioteki DLL thunk (Kod zastępczy, który przekazuje kontrolę do funkcji), a nie adres funkcji. W C++programie ustawia wskaźnik na adres funkcji. Na przykład:
 
     ```cpp
     __declspec( dllimport ) void func1( void );
@@ -43,7 +43,7 @@ ms.locfileid: "62153778"
     }
     ```
 
-   Jednak ponieważ program, który zawiera **dllexport** atrybutu w deklaracji obiektu, należy podać definicję dla tego obiektu gdzieś w programie, można zainicjować wskaźnik statycznej funkcji globalnych lub lokalnych za pomocą adres **dllexport** funkcji. Podobnie, można zainicjować wskaźnik globalnych lub lokalnych danych statycznych, adresem **dllexport** obiektu danych. Na przykład poniższy kod generuje błędy w C lub C++:
+   Jednak ponieważ program, który zawiera atrybut **dllexport** w deklaracji obiektu, musi podać definicję dla tego obiektu w programie, można zainicjować globalny lub lokalny wskaźnik funkcji statycznej przy użyciu adresu funkcji **dllexport** . Analogicznie, można zainicjować globalny lub lokalny wskaźnik danych statycznych z adresem obiektu danych **dllexport** . Na przykład następujący kod nie generuje błędów w C lub C++:
 
     ```cpp
     __declspec( dllexport ) void func1( void );
@@ -59,9 +59,9 @@ ms.locfileid: "62153778"
     }
     ```
 
-- Jeśli zastosujesz **dllexport** do regularnego klasy, która ma klasę bazową, która nie jest oznaczona jako **dllexport**, kompilator wygeneruje C4275.
+- Jeśli zastosujesz **dllexport** do zwykłej klasy, która ma klasę bazową, która nie jest oznaczona jako **dllexport**, kompilator wygeneruje C4275.
 
-   Kompilator generuje ostrzeżenie o tym samym, jeśli klasa bazowa jest specjalizacją szablonu klasy. Aby obejść ten problem, należy oznaczyć klasy podstawowej za pomocą **dllexport**. Problem z specjalizacji szablonu klasy jest gdzie umieścić **__declspec(dllexport)**; oznaczyć szablon klasy jest niedozwolone. Zamiast tego należy jawnie tworzenia wystąpienia szablonu klasy i oznaczyć to jawne utworzenie wystąpienia z **dllexport**. Na przykład:
+   Kompilator generuje to samo ostrzeżenie, jeśli klasa bazowa jest specjalizacją szablonu klasy. Aby obejść ten krok, Oznacz klasę bazową **dllexport**. Problem z specjalizacją szablonu klasy znajduje się w lokalizacji, w której ma zostać umieszczony **__declspec (dllexport)** ; nie można oznaczyć szablonu klasy. Zamiast tego należy jawnie utworzyć wystąpienie szablonu klasy i oznaczyć to jawne wystąpienie z **dllexport**. Na przykład:
 
     ```cpp
     template class __declspec(dllexport) B<int>;
@@ -69,21 +69,21 @@ ms.locfileid: "62153778"
     // ...
     ```
 
-   To rozwiązanie nie powiedzie się, jeśli argument szablonu jest klasa pochodna. Na przykład:
+   To obejście nie powiedzie się, jeśli argument szablonu jest klasą pochodną. Na przykład:
 
     ```cpp
     class __declspec(dllexport) D : public B<D> {
     // ...
     ```
 
-   Ponieważ jest to typowy wzorzec przy użyciu szablonów, kompilator zmienione semantykę **dllexport** po zastosowaniu do klasy, która ma jeden lub więcej klas podstawowych i co najmniej jedna z klas bazowych jest specjalizacją szablonu klasy . W tym przypadku kompilator stosuje niejawnie **dllexport** aby specjalizacje szablonów klas. Można wykonać następujące czynności i nie wyświetlone ostrzeżenie:
+   Ponieważ jest to typowy wzorzec z szablonami, kompilator zmienił semantykę **dllexport** , gdy jest stosowany do klasy, która ma co najmniej jedną klasę bazową, a co najmniej jedna z klas bazowych jest specjalizacją szablonu klasy. W takim przypadku kompilator niejawnie stosuje **dllexport** do specjalizacji szablonów klas. Można wykonać następujące czynności i nie otrzymać ostrzeżenia:
 
     ```cpp
     class __declspec(dllexport) D : public B<D> {
     // ...
     ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

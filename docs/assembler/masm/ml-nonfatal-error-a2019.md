@@ -1,26 +1,26 @@
 ---
 title: Błąd niekrytyczny ML A2019
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2019
 helpviewer_keywords:
 - A2019
 ms.assetid: 7dff209b-6d91-4e39-88a3-5d6329bac537
-ms.openlocfilehash: 48a80c643bb42ce39df00297c7f5579445c99df9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23412ccd6dc84d889b62acfb4ba09cb1bde8b82a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62201939"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856730"
 ---
 # <a name="ml-nonfatal-error-a2019"></a>Błąd niekrytyczny ML A2019
 
-**operand musi być typu REKORDU lub pola**
+**argument operacji musi być typem rekordu lub polem**
 
-Następujący argument [SZEROKOŚĆ](../../assembler/masm/operator-width.md) lub [MASKI](../../assembler/masm/operator-mask.md) operator nie jest prawidłowy.
+Operand następujący po [szerokości](../../assembler/masm/operator-width.md) lub operatorze [maski](../../assembler/masm/operator-mask.md) jest nieprawidłowy.
 
-[SZEROKOŚĆ](../../assembler/masm/operator-width.md) operator przyjmuje argument operacji, która jest nazwą pola lub rekordu. [MASKI](../../assembler/masm/operator-mask.md) operator przyjmuje argument operacji, która jest nazwą pola lub typ rekordu.
+Operator [Width](../../assembler/masm/operator-width.md) przyjmuje operand, który jest nazwą pola lub rekordem. Operator [Mask](../../assembler/masm/operator-mask.md) przyjmuje operand, który jest nazwą pola lub typu rekordu.
 
 ## <a name="see-also"></a>Zobacz także
 
