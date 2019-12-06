@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-ms.openlocfilehash: 9d5b8cc3e3ce6445e021163df5301a38aab2c514
-ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
+ms.openlocfilehash: 98662dc0b5439c1f8857e4f2ad259793a4d03e41
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74683328"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898777"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Ostrzeżenie kompilatora (poziom 3) C4996
 
@@ -23,7 +23,7 @@ W kodzie jest używana funkcja, element członkowski klasy, zmienna lub element 
 
 ## <a name="remarks"></a>Uwagi
 
-Wiele funkcji, funkcje składowe, funkcje szablonu i zmienne globalne w bibliotekach programu Visual Studio są *przestarzałe*. Niektóre, takie jak funkcje POSIX, są przestarzałe, ponieważ mają inną preferowaną nazwę. Niektóre funkcje biblioteki środowiska uruchomieniowego języka C są przestarzałe, ponieważ są niezabezpieczone i mają bezpieczniejszy wariant. Inne są przestarzałe, ponieważ są przestarzałe. Komunikaty o zaniechaniu zwykle obejmują sugerowaną zastąpienie dla przestarzałej funkcji lub zmiennej globalnej.
+Wiele funkcji, funkcje składowe, funkcje szablonu i zmienne globalne w bibliotekach programu Visual Studio są *przestarzałe*. Niektóre, takie jak POSIX i funkcje specyficzne dla firmy Microsoft, są przestarzałe, ponieważ teraz mają inną preferowaną nazwę. Niektóre funkcje biblioteki środowiska uruchomieniowego języka C są przestarzałe, ponieważ są niezabezpieczone i mają bezpieczniejszy wariant. Inne są przestarzałe, ponieważ są przestarzałe. Komunikaty o zaniechaniu zwykle obejmują sugerowaną zastąpienie dla przestarzałej funkcji lub zmiennej globalnej.
 
 ## <a name="turn-off-the-warning"></a>Wyłącz ostrzeżenie
 
@@ -61,9 +61,9 @@ Poniżej przedstawiono niektóre typowe źródła ostrzeżeń i błędów C4996:
 
 **Nazwa POSIX dla tego elementu jest przestarzała. Zamiast tego należy użyć wartości ISO C C++ i zgodnej nazwy:** *New-Name*. **Szczegóły można znaleźć w pomocy online.**
 
-Firma Microsoft zmieniła niektóre funkcje POSIX w CRT, aby spełniały reguły C99 i C++ 03 dla nazw funkcji globalnych zdefiniowanych przez implementację. Tylko nazwy są przestarzałe, a nie same funkcje. W większości przypadków wiodący znak podkreślenia został dodany do nazwy funkcji POSIX w celu utworzenia zgodnej ze standardami nazw. Kompilator wystawia ostrzeżenie o wycofaniu oryginalnej nazwy funkcji i sugeruje preferowaną nazwę.
+Firma Microsoft zmieniła nazwy niektórych funkcji opartych na systemie POSIX i określonej przez firmę Microsoft w ramach platformy CRT, aby zapewnić zgodność z ograniczeniami C99 i C++ 03 dla zarezerwowanych i globalnych nazw zdefiniowanych przez implementację. *Tylko nazwy są przestarzałe, a nie same funkcje*. W większości przypadków wiodący znak podkreślenia został dodany do nazwy funkcji w celu utworzenia zgodnej nazwy. Kompilator wystawia ostrzeżenie o wycofaniu oryginalnej nazwy funkcji i sugeruje preferowaną nazwę.
 
-Aby rozwiązać ten problem, zwykle zalecamy zmianę kodu w celu użycia sugerowanych nazw funkcji. Zaktualizowane nazwy są jednak specyficzne dla firmy Microsoft. Jeśli musisz użyć istniejących nazw funkcji dla powodów związanych z przenośnością, możesz wyłączyć te ostrzeżenia. Funkcje POSIX są nadal dostępne w bibliotece pod ich oryginalnymi nazwami.
+Aby rozwiązać ten problem, zwykle zalecamy zmianę kodu w celu użycia sugerowanych nazw funkcji. Zaktualizowane nazwy są jednak specyficzne dla firmy Microsoft. Jeśli musisz użyć istniejących nazw funkcji dla powodów związanych z przenośnością, możesz wyłączyć te ostrzeżenia. Funkcje są nadal dostępne w bibliotece pod ich oryginalnymi nazwami.
 
 Aby wyłączyć ostrzeżenia o zaniechaniu dla tych funkcji, zdefiniuj makro preprocesora **\_CRT\_NONSTDC\_nie\_ostrzeżeń**. Możesz zdefiniować to makro w wierszu polecenia, dołączając opcję `/D_CRT_NONSTDC_NO_WARNINGS`.
 

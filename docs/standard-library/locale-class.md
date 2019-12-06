@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: a11f5bf7e8c280da3ba2cae82cf355a3b28c0577
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 551bca93a30bee52dc4c838864df28cb747d91df
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890160"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898841"
 ---
 # <a name="locale-class"></a>locale — Klasa
 
@@ -50,14 +50,14 @@ Można zdefiniować nieograniczony zbiór tych zestawów reguł. Można także s
 
 Wstępnie zdefiniowane grupy tych aspektów reprezentują [Kategorie ustawień regionalnych](#category) tradycyjnie zarządzane w standardowej bibliotece C przez funkcję `setlocale`.
 
-Kategoria `collate` (LC_COLLATE) obejmuje zestawy reguł:
+Kategoria `collate` (LC_COLLATE) zawiera aspekty:
 
 ```cpp
 collate<char>
 collate<wchar_t>
 ```
 
-Kategoria `ctype` (LC_CTYPE) obejmuje zestawy reguł:
+Kategoria `ctype` (LC_CTYPE) zawiera aspekty:
 
 ```cpp
 ctype<char>
@@ -68,7 +68,7 @@ codecvt<char16_t, char, mbstate_t>
 codecvt<char32_t, char, mbstate_t>
 ```
 
-Kategoria `monetary` (LC_MONETARY) obejmuje zestawy reguł:
+Kategoria `monetary` (LC_MONETARY) zawiera aspekty:
 
 ```cpp
 moneypunct<char, false>
@@ -81,7 +81,7 @@ money_put<char, ostreambuf_iterator<char>>
 money_put<wchar_t, ostreambuf_iterator<wchar_t>>
 ```
 
-Kategoria `numeric` (LC_NUMERIC) obejmuje zestawy reguł:
+Kategoria `numeric` (LC_NUMERIC) zawiera aspekty:
 
 ```cpp
 num_get<char, istreambuf_iterator<char>>
@@ -92,7 +92,7 @@ numpunct<char>
 numpunct<wchar_t>
 ```
 
-Kategoria `time` (LC_TIME) obejmuje zestawy reguł:
+Kategoria `time` (LC_TIME) zawiera aspekty:
 
 ```cpp
 time_get<char, istreambuf_iterator<char>>
@@ -101,14 +101,14 @@ time_put<char, ostreambuf_iterator<char>>
 time_put<wchar_t, ostreambuf_iterator<wchar_t>>
 ```
 
-Kategoria `messages` (LC_MESSAGES) obejmuje zestawy reguł:
+Kategoria `messages` (LC_MESSAGES) zawiera aspekty:
 
 ```cpp
 messages<char>
 messages<wchar_t>
 ```
 
-(Ostatnia kategoria jest wymagana przez Posix, ale nie przez standard C).
+(Ostatnia kategoria jest wymagana przez POSIX, ale nie standard C).
 
 Niektóre z tych wstępnie zdefiniowanych zestawów są używane przez klasy `iostream` do sterowania konwersją wartości numerycznych do i z sekwencji tekstu.
 
@@ -138,7 +138,7 @@ cout.imbue(loc);
 
 Reguły formatowania liczb dla kolejnych wstawek `cout` pozostają takie same jak w ustawieniach regionalnych języka C, nawet jeśli globalne ustawienia regionalne dostarczają zmiany reguł do wstawiania dat i kwot pieniężnych.
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |Konstruktor|Opis|
 |-|-|
@@ -148,14 +148,14 @@ Reguły formatowania liczb dla kolejnych wstawek `cout` pozostają takie same ja
 
 |Nazwa typu|Opis|
 |-|-|
-|[kategorii](#category)|Typ całkowitoliczbowy, który zawiera wartości masek bitowych dla oznaczenia standardowych rodzin zestawów reguł.|
+|[category](#category)|Typ całkowitoliczbowy, który zawiera wartości masek bitowych dla oznaczenia standardowych rodzin zestawów reguł.|
 
 ### <a name="member-functions"></a>Funkcje członkowskie
 
 |Funkcja członkowska|Opis|
 |-|-|
 |[żądany](#combine)|Wstawia zestaw reguł z określonych ustawień regionalnych do docelowych ustawień regionalnych.|
-|[Nazwij](#name)|Zwraca przechowywaną nazwę ustawień regionalnych.|
+|[Nazwa](#name)|Zwraca przechowywaną nazwę ustawień regionalnych.|
 
 ### <a name="static-functions"></a>Funkcje statyczne
 
@@ -168,14 +168,14 @@ Reguły formatowania liczb dla kolejnych wstawek `cout` pozostają takie same ja
 
 |Operator|Opis|
 |-|-|
-|[operator =](#op_eq)|Przypisuje ustawienia regionalne.|
+|[operator=](#op_eq)|Przypisuje ustawienia regionalne.|
 |[operator!=](#op_neq)|Testuje dwa ustawienia lokalne pod kątem nierówności.|
-|[operator ()](#op_call)|Porównuje dwa obiekty `basic_string`.|
-|[operator = =](#op_eq_eq)|Testuje dwa ustawienia lokalne pod kątem równości.|
+|[operator( )](#op_call)|Porównuje dwa obiekty `basic_string`.|
+|[operator==](#op_eq_eq)|Testuje dwa ustawienia lokalne pod kątem równości.|
 
 ### <a name="classes"></a>Klasy
 
-|Class|Opis|
+|Klasa|Opis|
 |-|-|
 |[aspekt](#facet_class)|Klasa, która służy jako klasa bazowa dla wszystkich zestawów reguł ustawień regionalnych.|
 |[`id`](#id_class)|Klasa składowej zapewnia unikatową identyfikację zestawu reguł używaną jako indeks do wyszukiwania zestawów reguł w ustawieniach regionalnych.|
@@ -224,7 +224,7 @@ Dwie bardziej przydatne wartości to:
 
 - `all`, odpowiadające Unii C wszystkich kategorii LC_ALL
 
-Można reprezentować dowolną grupę kategorii za pomocą `OR` z tymi stałymi, jak w `monetary` &#124;`time`.
+Można reprezentować dowolną grupę kategorii za pomocą `OR` z tymi stałymi, jak w `monetary` &#124; `time`.
 
 ## <a name="classic"></a>locale:: klasyczny
 
@@ -234,7 +234,7 @@ Funkcja statycznej składowej zwraca obiekt ustawień regionalnych, który repre
 static const locale& classic();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do ustawień regionalnych języka C.
 
@@ -295,7 +295,7 @@ locale combine(const locale& source_locale) const;
 *source_locale*\
 Ustawienia regionalne zawierające zestaw reguł, który ma zostać wstawiony do docelowego ustawienia regionalnego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Funkcja członkowska zwraca obiekt ustawień regionalnych, który zastępuje lub dodaje do **\*ten** aspekt `Facet` wymieniony w *source_locale*.
 
@@ -363,7 +363,7 @@ static locale global(const locale& new_default_locale);
 *new_default_locale*\
 Ustawienia regionalne, które mają być używane jako domyślne ustawienia regionalne programu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Poprzednie ustawienia regionalne przed zresetowaniem domyślnych ustawień regionalnych.
 
@@ -443,7 +443,7 @@ Nazwa ustawień regionalnych.
 *from_locale*\
 Ustawienia regionalne, które mają zostać skopiowane podczas konstruowania nowych ustawień regionalnych.
 
-*Inne* \
+*Inne*\
 Ustawienia regionalne, z których należy wybrać kategorię.
 
 *new_category*\
@@ -454,11 +454,11 @@ Zestaw reguł, który ma zostać zastąpiony przez skonstruowane ustawienia regi
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor inicjuje obiekt, aby odpowiadał globalnym ustawieniom regionalnym. Drugi i trzeci konstruktorzy inicjują wszystkie kategorie ustawień regionalnych, aby mieć zachowanie spójne z nazwą ustawień regionalnych *locale_name*. Pozostałe konstruktory kopiują *from_locale*z wyjątkami:
+Pierwszy Konstruktor inicjuje obiekt, aby odpowiadał globalnym ustawieniom regionalnym. Drugi i trzeci konstruktorzy inicjują wszystkie kategorie ustawień regionalnych, aby mieć zachowanie spójne z nazwą ustawień regionalnych *locale_name*. Pozostałe konstruktory są kopiowane *from_locale*z wyjątkami:
 
 `locale(const locale& from_locale, const locale& Other, category new_category);`
 
-zastępuje z *innych* aspektów, które odpowiadają kategorii c, dla których & *new_category* jest różna od zera.
+zastępuje z *innych* aspektów odpowiadających kategorii c, dla których *new_category* & jest różna od zera.
 
 `locale(const locale& from_locale, const char* locale_name, category new_category);`
 
@@ -468,7 +468,7 @@ zastępuje `locale(locale_name, all)` tych aspektów odpowiadających kategorii 
 
 `template<class Facet> locale(const locale& from_locale, Facet* new_facet);`
 
-zamienia w (lub dodaje do) *from_locale* aspekt *new_facet*, jeśli *new_facet* nie jest wskaźnikiem o wartości null.
+zamienia w (lub dodaje do) *from_locale* zestawu reguł *new_facet*, jeśli *new_facet* nie jest pustym wskaźnikiem.
 
 Jeśli nazwa ustawień regionalnych *locale_name* jest wskaźnikiem typu null lub jest nieprawidłowa, funkcja zgłasza [runtime_error](../standard-library/runtime-error-class.md).
 
@@ -520,7 +520,7 @@ Zwraca przechowywaną nazwę ustawień regionalnych.
 string name() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ciąg określający nazwę ustawień regionalnych.
 
@@ -569,10 +569,10 @@ bool operator!=(const locale& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
+*prawa*\
 Jedno z wartości lokalnych do przetestowania pod kątem nierówności.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość logiczna **prawda** , jeśli ustawienia regionalne nie są kopiami tych samych ustawień regionalnych. Jest to **wartość FAŁSZ** , jeśli ustawienia regionalne są kopiami tych samych ustawień regionalnych.
 
@@ -636,10 +636,10 @@ bool operator()(
 \ *lewo*
 Lewy ciąg.
 
-*prawa* \
+*prawa*\
 Prawidłowy ciąg.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Funkcja członkowska zwraca:
 
@@ -702,10 +702,10 @@ bool operator==(const locale& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
+*prawa*\
 Jeden z ustawień regionalnych, które mają być testowane pod kątem równości.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość logiczna **prawda** , jeśli ustawienia regionalne są kopiami tych samych ustawień regionalnych. Ma **wartość FAŁSZ** , jeśli ustawienia regionalne nie są kopiami tych samych ustawień regionalnych.
 
@@ -759,7 +759,7 @@ and loc3 (English_United States.1252) are not equal.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<locale >](../standard-library/locale.md) \
-[Strony kodowe](../c-runtime-library/code-pages.md) \
-[Nazwy lokalne, Języki i ciągi kraju/regionu](../c-runtime-library/locale-names-languages-and-country-region-strings.md) \
+[\<locale>](../standard-library/locale.md)\
+[Strony kodowe](../c-runtime-library/code-pages.md)\
+[Nazwy lokalne, Języki i ciągi kraju/regionu](../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

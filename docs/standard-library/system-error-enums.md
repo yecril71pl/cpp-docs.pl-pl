@@ -1,22 +1,22 @@
 ---
-title: '&lt;system_error —&gt; Typy wyliczeniowe'
+title: '&lt;system_error&gt; Wyliczenie'
 ms.date: 11/04/2016
 f1_keywords:
 - system_error/std::errc
 - system_error/std::io_errc
 ms.assetid: b21321b7-404a-40de-8777-a85b77c6fa58
-ms.openlocfilehash: d870101c80c8a1f6164e7c89dfbb452fb0a3f9a2
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7587261c81739bf19aa0dc4bb80459efa617ad6a
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246230"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898766"
 ---
-# <a name="ltsystemerrorgt-enums"></a>&lt;system_error —&gt; Typy wyliczeniowe
+# <a name="ltsystem_errorgt-enums"></a>&lt;system_error&gt; Wyliczenie
 
-## <a name="errc"></a> errc —
+## <a name="errc"></a>ERRC —
 
-Dostarcza symbolicznych nazw dla wszystkich makr kod błędu zdefiniowany przez Posix w `<errno.h>`.
+Zawiera nazwy symboliczne dla wszystkich makr kodu błędu zdefiniowanych przez POSIX w `<errno.h>`.
 
 ```
 class errc {
@@ -103,9 +103,9 @@ class errc {
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="io_errc"></a> io_errc —
+## <a name="io_errc"></a>io_errc
 
-Dostarcza symbolicznych nazw dla warunków błędu w \<iostream >. Może służyć do tworzenia [error_condition](../standard-library/error-condition-class.md) obiektów, które ma być porównywana z wartością, która jest zwracana przez [ios_base::failure](../standard-library/ios-base-class.md#failure) `code()` funkcji.
+Zawiera nazwy symboliczne dla warunków błędów w \<iostream >. Może służyć do tworzenia [error_condition](../standard-library/error-condition-class.md) obiektów do porównania z wartością zwracaną przez funkcję [ios_base:: Failure](../standard-library/ios-base-class.md#failure)`code()`.
 
 ```
 class io_errc {
@@ -115,9 +115,9 @@ class io_errc {
 
 ### <a name="remarks"></a>Uwagi
 
-Zarówno [std::make_error_code()](../standard-library/system-error-functions.md#make_error_code) i [std::make_error_condition()](../standard-library/system-error-functions.md#make_error_condition) są przeciążone dla tego wyliczenia.
+Wartości [std:: make_error_code ()](../standard-library/system-error-functions.md#make_error_code) i [std:: make_error_condition ()](../standard-library/system-error-functions.md#make_error_condition) są przeciążone dla tego wyliczenia.
 
-`ios_base::failure` kategorie kody błędów mogą zawierać inne niż `error_condition`.
+`ios_base::failure` mogą zawierać kategorie kodów błędów innych niż `error_condition`.
 
 ### <a name="example"></a>Przykład
 

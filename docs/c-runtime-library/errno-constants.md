@@ -41,12 +41,12 @@ helpviewer_keywords:
 - EXDEV constant
 - EILSEQ constant
 ms.assetid: 47089258-d5a5-4cd8-b193-223894dea0cf
-ms.openlocfilehash: 0e11c11b468ff6e058ccf5c75b000396e0473bfa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34f92bedfa9606c90196f2e3a5e47dc341b23aea
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62343839"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898745"
 ---
 # <a name="errno-constants"></a>errno — Stałe
 
@@ -58,36 +58,36 @@ ms.locfileid: "62343839"
 
 ## <a name="remarks"></a>Uwagi
 
-**Errno** wartości są przypisane do stałych [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) w przypadku różnych warunków błędów.
+Wartości **errno** są stałymi przypisanymi do [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) w przypadku różnych warunków błędu.
 
-NUMER BŁĘDU. H zawiera definicje **errno** wartości. Jednakże, nie wszystkie definicje, które są podane w numer błędu. H są używane w 32-bitowych systemach operacyjnych Windows. Niektóre wartości w numer błędu. H znajdują się zachować zgodność z systemów operacyjnych z rodziny systemu UNIX.
+ERRNO. H zawiera definicje wartości **errno** . Jednak nie wszystkie definicje zawarte w ERRNO. H są używane w 32-bitowych systemach operacyjnych Windows. Niektóre wartości w ERRNO. H jest obecny, aby zachować zgodność z rodziną systemów operacyjnych UNIX.
 
-**Errno** wartości w 32-bitowym systemie operacyjnym Windows stanowią podzestaw wartości **errno** w systemach XENIX. W efekcie **errno** wartość niekoniecznie jest taka sama jak faktyczny kod błędu zwrócony przez wywołanie systemowe z systemów operacyjnych Windows. Aby uzyskać dostęp do kod błędu systemu operacyjnego, należy użyć [_doserrno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) zmienną, która zawiera tę wartość.
+**Errno** wartości w 32-bitowym systemie operacyjnym Windows są podzbiorem wartości **errno** w systemach XENIX. W ten sposób wartość **errno** nie musi być taka sama jak rzeczywisty kod błędu zwracany przez wywołanie systemowe z systemów operacyjnych Windows. Aby uzyskać dostęp do rzeczywistego kodu błędu systemu operacyjnego, użyj zmiennej [_doserrno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) , która zawiera tę wartość.
 
-Następujące **errno** wartości są obsługiwane:
+Obsługiwane są następujące wartości **errno** :
 
 |Stała|Opis|
 |-|-|
-|**ECHILD**|Brak procesów zduplikowanych.|
-|**EAGAIN**|Brak procesów. Próba utworzenia nowego procesu nie powiodło się, ponieważ nie ma żadnych kolejnych gniazd procesu, nie ma wystarczającej ilości pamięci lub osiągnięto maksymalny poziom zagnieżdżenia.|
+|**ECHILD**|Brak procesów duplikowanych.|
+|**EAGAIN**|Nie ma więcej procesów. Próba utworzenia nowego procesu nie powiodła się, ponieważ nie ma więcej miejsc przetwarzania lub nie ma wystarczającej ilości pamięci lub Osiągnięto maksymalny poziom zagnieżdżenia.|
 |**E2BIG**|Lista argumentów jest za długa.|
-|**EACCES**|Odmowa uprawnień. Ustawienie uprawnienia pliku zezwalają na dostęp określonym. Ten błąd oznacza, że podjęto próbę uzyskania dostępu do pliku (lub w niektórych przypadkach katalogu) w sposób niezgodny z atrybutami plików.<br/><br/>Na przykład ten błąd może wystąpić, gdy podejmowana jest próba odczytu z pliku, który nie jest otwarty, otwórz istniejący plik tylko do odczytu do zapisu lub otwórz katalog, a nie plikiem. W obszarze MS-DOS systemu operacyjnego wersji 3.0 lub nowszej **EACCES** może również wskazywać blokowanie lub naruszenie zasad współużytkowania.<br/><br/>Ten błąd może również wystąpić podczas próby zmiany nazwy pliku lub katalogu lub usuń istniejący katalog.|
-|**EBADF**|Zły numer pliku. Istnieją dwie możliwe przyczyny: (1) w deskryptorze określony plik nie jest prawidłową wartością lub odwołuje się do otwartego pliku. (2) podjęto można zapisać do pliku lub urządzenia, na dostęp tylko do odczytu.|
-|**EDEADLOCK**|Wystąpiłoby zakleszczenie zasobu. Argument funkcji matematycznych, nie znajduje się w domenie funkcji.|
+|**EACCES**|Odmowa uprawnień. Ustawienie uprawnienia pliku nie zezwala na określony dostęp. Ten błąd oznacza, że podjęto próbę uzyskania dostępu do pliku (lub w niektórych przypadkach katalog) w taki sposób, który jest niezgodny z atrybutami pliku.<br/><br/>Na przykład błąd może wystąpić, gdy podjęto próbę odczytu z pliku, który nie jest otwarty, aby otworzyć istniejący plik tylko do odczytu do zapisu lub otworzyć katalog, a nie plik. W systemie operacyjnym MS-DOS w wersji 3,0 i nowszych **EACCES** może także wskazywać na naruszenie zasad blokowania lub udostępniania.<br/><br/>Ten błąd może również wystąpić podczas próby zmiany nazwy pliku lub katalogu lub usunięcia istniejącego katalogu.|
+|**EBADF**|Zły numer pliku. Istnieją dwie możliwe przyczyny: 1) określony deskryptor pliku nie jest prawidłową wartością lub nie odwołuje się do otwartego pliku. 2) podjęto próbę zapisu w pliku lub urządzeniu otwartym na potrzeby dostępu tylko do odczytu.|
+|**EDEADLOCK**|Wystąpił zakleszczenie zasobu. Argument funkcji matematycznej nie znajduje się w domenie funkcji.|
 |**EDOM**|Argument matematyczny.|
-|**EEXIST**|Pliki istnieją. Podjęta próba utworzenia pliku, który już istnieje. Na przykład **_O_CREAT** i **_O_EXCL** flagi są określone w **_otwórz** wywołanie, ale plik o nazwie już istnieje.|
-|**EILSEQ**|Nieprawidłowa sekwencja bajtów (na przykład w postaci ciągu MBCS).|
-|**EINVAL**|Nieprawidłowy argument. Dla jednego z argumentów funkcji podano nieprawidłową wartość. Na przykład, wartość podana dla oryginalnej operacji, podczas pozycjonowania wskaźnik pliku (za pomocą wywołania **fseek**) jest wcześniejsza od początku pliku.|
-|**EMFILE**|Zbyt wiele otwartych plików. Więcej deskryptorów plików nie są dostępne, więc nie ma więcej plików można otworzyć.|
-|**ENOENT**|Nie ma takiego pliku lub katalogu. Określony plik lub katalog nie istnieje lub nie można odnaleźć. Ten komunikat może zostać określony plik nie istnieje lub składnika ścieżki nie określono istniejącego katalogu.|
-|**ENOEXEC**|Błąd formatu pliku wykonywalnego. Próbowano wykonać pliku, który nie jest wykonywalny lub ma nieprawidłowy format pliku wykonywalnego.|
-|**ENOMEM**|Nie ma wystarczającej liczby rdzeni. Nie ma wystarczającej ilości pamięci dostępnej dla operatora próba. Na przykład, ten komunikat może wystąpić, gdy ma wystarczającej ilości pamięci do wykonania procesu podrzędnego, lub gdy przydział zażądać **_getcwd —** wywołania nie mogą zostać spełnione.|
-|**ENOSPC**|Nie miejsca na urządzeniu. Mało miejsca do zapisu jest dostępna na urządzeniu (na przykład, gdy dysk jest pełny).|
-|**ERANGE**|Wynik jest za duży. Argument funkcji matematycznych jest zbyt duży, wynikiem częściowego lub całkowita utrata znaczenia w wyniku. Ten błąd może również wystąpić w innych funkcjach, gdy argument jest większy, niż oczekiwano (na przykład, gdy *buforu* argument **_getcwd —** trwa dłużej niż oczekiwano).|
-|**EXDEV**|Łącze między urządzeniami. Nastąpiła próba można przenieść pliku do innego urządzenia (przy użyciu **Zmień nazwę** funkcji).|
-|**STRUNCATE**|Kopia ciągu lub łączenia w wyniku ciągu obcięte. Zobacz [_TRUNCATE](../c-runtime-library/truncate.md).
+|**EEXIST**|Istnieją pliki. Podjęto próbę utworzenia pliku, który już istnieje. Na przykład flagi **_O_CREAT** i **_O_EXCL** są określone w wywołaniu **_open** , ale nazwany plik już istnieje.|
+|**EILSEQ**|Niedozwolona sekwencja bajtów (na przykład w ciągu MBCS).|
+|**EINVAL**|Nieprawidłowy argument. Podano nieprawidłową wartość dla jednego z argumentów funkcji. Na przykład wartość podaną dla źródła podczas pozycjonowania wskaźnika pliku (za pomocą wywołania **fseek**) jest przed początkiem pliku.|
+|**EMFILE**|Zbyt wiele otwartych plików. Nie ma więcej dostępnych deskryptorów plików, więc nie można otworzyć więcej plików.|
+|**ENOENT**|Nie ma takiego pliku lub katalogu. Określony plik lub katalog nie istnieje lub nie można go znaleźć. Ten komunikat może wystąpić, gdy określony plik nie istnieje lub składnik ścieżki nie określa istniejącego katalogu.|
+|**ENOEXEC**|Błąd formatu exec. Podjęto próbę wykonania pliku, który nie jest wykonywalny lub ma nieprawidłowy format pliku wykonywalnego.|
+|**ENOMEM**|Brak wystarczającej liczby rdzeni. Za mało dostępnej pamięci dla podjętych operatorów. Na przykład ten komunikat może wystąpić, gdy dostępna jest niewystarczająca ilość pamięci do wykonania procesu podrzędnego lub gdy nie można spełnić żądania alokacji w wywołaniu **_getcwd** .|
+|**ENOSPC**|Brak miejsca na urządzeniu. Na urządzeniu nie ma więcej miejsca do zapisu (na przykład gdy dysk jest pełny).|
+|**ERANGE**|Wynik jest za duży. Argument funkcji matematycznej jest zbyt duży, co spowoduje częściowe lub całkowite utratę istotności w wyniku. Ten błąd może również wystąpić w innych funkcjach, gdy argument jest większy niż oczekiwany (na przykład, gdy argument *buforu* do **_getcwd** jest dłuższy niż oczekiwany).|
+|**EXDEV**|Łącze między urządzeniami. Podjęto próbę przeniesienia pliku do innego urządzenia (przy użyciu funkcji **zmiany nazwy** ).|
+|**STRUNCATE**|Kopiowanie ciągu lub łączenie spowodowało przecięcie ciągu. Zobacz [_TRUNCATE](../c-runtime-library/truncate.md).
 
-Następujące wartości są obsługiwane na potrzeby utrzymywania zgodności z modelem Posix. Są one wymagane wartości w systemach innych Posix.
+Poniższe wartości są obsługiwane w celu zapewnienia zgodności z systemem POSIX. Są to wymagane wartości w systemach innych niż POSIX.
 
 ```C
 #define E2BIG /* argument list too long */

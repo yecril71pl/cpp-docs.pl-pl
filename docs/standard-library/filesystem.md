@@ -9,16 +9,16 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: 6f97ad75dcf3f01406f305b713b9d14cbe527c52
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0f2c90bd7c1d88a94d1dab05b98442111faa71a2
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457022"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898814"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
-Dołącz do > &lt;plików nagłówkowych, aby uzyskać dostęp do klas i funkcji, które manipulują i pobierają informacje o ścieżkach, plikach i katalogach.
+Dołącz nagłówek &lt;systemu plików >, aby uzyskać dostęp do klas i funkcji, które manipulują i pobierają informacje o ścieżkach, plikach i katalogach.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,19 +29,19 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> W przypadku wydania programu Visual Studio 2017 \<nagłówek > systemu plików nie był jeszcze C++ standardem. C++w programie Visual Studio 2017 (MSVC najnowsze 141) jest zaimplementowany ostatni projekt Standard, który znajduje się w [normie ISO/IEC JTC 1/SC 22/+ 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
+> Począwszy od wersji programu Visual Studio 2017, nagłówek > systemu plików \<nie był C++ standardem. C++w programie Visual Studio 2017 (MSVC najnowsze 141) jest zaimplementowany ostatni projekt Standard, który znajduje się w [normie ISO/IEC JTC 1/SC 22/+ 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
 
 Ten nagłówek obsługuje systemy plików dla jednej z dwóch szerokich klas systemów operacyjnych hosta: Microsoft Windows i POSIX.
 
 Chociaż większość funkcji jest wspólna dla obu systemów operacyjnych, ten dokument określa, gdzie występują różnice. Na przykład:
 
-- System Windows obsługuje wiele nazw głównych, takich jak c: \\lub \network_name. System plików składa się z lasu drzew z własnym katalogiem głównym, na przykład c:\ lub \\\network_name\\oraz z własnym bieżącym katalogiem, aby zakończyć względną nazwę ścieżki (taką, która nie jest bezwzględną nazwą ścieżki).
+- System Windows obsługuje wiele nazw głównych, takich jak c: lub \\\ network_name. System plików składa się z lasu drzew z własnym katalogiem głównym, na przykład c:\ lub \\\ network_name\\oraz z własnym bieżącym katalogiem, aby zakończyć względną nazwę ścieżki (taką, która nie jest bezwzględną nazwą ścieżki).
 
 - POSIX obsługuje pojedyncze drzewo bez nazwy głównej, jednego katalogu głównego/i jednego bieżącego katalogu.
 
 Kolejną znaczącą różnicą jest natywna reprezentacja nazw ścieżek:
 
-- System Windows używa sekwencji wchar_t o wartości null zakodowanej jako UTF-16 (jeden lub dwa elementy dla każdego znaku).
+- System Windows używa sekwencji wchar_tej o wartości null zakodowanej jako UTF-16 (jeden lub dwa elementy dla każdego znaku).
 
 - W modelu POSIX jest stosowana sekwencja znaków zakończona wartością null, zakodowana jako UTF-8 (co najmniej jeden element dla każdego znaku).
 
@@ -51,13 +51,13 @@ Kolejną znaczącą różnicą jest natywna reprezentacja nazw ścieżek:
 
 - Sekwencja znaków zakończona znakiem null, zakodowana jako UTF-8.
 
-- Sekwencja wchar_t zakończyła się wartością null, zakodowana zgodnie z systemem operacyjnym.
+- Sekwencja wchar_t zakończona wartością null, zakodowana zgodnie z systemem operacyjnym.
 
-- Sekwencja char16_t zakończona wartością null w formacie UTF-16.
+- Sekwencja char16_t zakończona wartością null, zakodowana jako UTF-16.
 
-- Sekwencja char32_t zakończyła się zerem, zakodowana jako UTF-32.
+- Sekwencja char32_t zakończona wartością null zakodowana jako UTF-32.
 
-Przekształcenie między tymi reprezentacjami jest korygowane w razie konieczności przy użyciu co najmniej jednego `codecvt` aspektu. Jeśli określony obiekt ustawień regionalnych nie jest wyznaczono, te zestawy są uzyskiwane z globalnych ustawień regionalnych.
+Przekształcenie między tymi reprezentacjami jest korygowane w razie konieczności przy użyciu co najmniej jednego zestawu reguł `codecvt`. Jeśli określony obiekt ustawień regionalnych nie jest wyznaczono, te zestawy są uzyskiwane z globalnych ustawień regionalnych.
 
 Kolejną różnicą jest to, że każdy system operacyjny pozwala określić uprawnienia dostępu do pliku lub katalogu:
 
@@ -83,9 +83,9 @@ Wspólne dla obu systemów jest strukturą nałożoną na nazwę ścieżki po po
 
 - Rozszerzenie to. ext.
 
-Niewielka różnica to **preferowany separator**między sekwencją katalogów w nazwie ścieżki. Oba systemy operacyjne pozwalają napisać ukośnik/, ale w niektórych kontekstach okna preferują ukośnik odwrotny \\.
+Niewielka różnica to **preferowany separator**między sekwencją katalogów w nazwie ścieżki. Oba systemy operacyjne pozwalają napisać ukośnik/, ale w niektórych kontekstach okna preferuje \\ukośnika odwrotnego.
 
-Na koniec ważna funkcja obiektów Path polega na tym, że można ich używać wszędzie tam, gdzie argument filename jest wymagany w klasach zdefiniowanych w \<nagłówku fstream — >.
+Na koniec ważna funkcja obiektów Path polega na tym, że można ich używać wszędzie tam, gdzie argument filename jest wymagany w klasach zdefiniowanych w nagłówku \<fstream — >.
 
 Aby uzyskać więcej informacji i przykładów kodu, zobacz [Nawigacja systemu plikówC++()](../standard-library/file-system-navigation.md).
 
@@ -95,12 +95,12 @@ Aby uzyskać więcej informacji i przykładów kodu, zobacz [Nawigacja systemu p
 
 |||
 |-|-|
-|[directory_entry, klasa](../standard-library/directory-entry-class.md)|Opisuje obiekt, który jest zwracany przez `directory_iterator` `recursive_directory_iterator` lub a i zawiera ścieżkę.|
+|[directory_entry, klasa](../standard-library/directory-entry-class.md)|Opisuje obiekt, który jest zwracany przez `directory_iterator` lub `recursive_directory_iterator` i zawiera ścieżkę.|
 |[directory_iterator, klasa](../standard-library/directory-iterator-class.md)|Opisuje iterator danych wejściowych, który przechodzi przez nazwy plików w katalogu systemu plików.|
 |[filesystem_error, klasa](../standard-library/filesystem-error-class.md)|Klasa bazowa dla wyjątków zgłaszanych w celu zgłaszania przepełnienia systemu niskiego poziomu.|
-|[path, klasa](../standard-library/path-class.md)|Definiuje klasę, która przechowuje obiekt typu `String` szablonu, który jest odpowiedni do użycia jako nazwa pliku.|
+|[path, klasa](../standard-library/path-class.md)|Definiuje klasę, która przechowuje obiekt typu szablonu `String`, który jest odpowiedni do użycia jako nazwa pliku.|
 |[recursive_directory_iterator, klasa](../standard-library/recursive-directory-iterator-class.md)|Opisuje iterator danych wejściowych, który przechodzi przez nazwy plików w katalogu systemu plików. Iterator może również przydolnać do podkatalogów.|
-|[file_status, klasa](../standard-library/file-status-class.md)|`file_type`Zawija.|
+|[file_status, klasa](../standard-library/file-status-class.md)|Zawija `file_type`.|
 
 ### <a name="structs"></a>Struktury
 
@@ -110,11 +110,11 @@ Aby uzyskać więcej informacji i przykładów kodu, zobacz [Nawigacja systemu p
 
 ## <a name="functions"></a>Funkcje
 
-[\<Funkcje > systemu plików](../standard-library/filesystem-functions.md)
+[\<funkcje > systemu plików](../standard-library/filesystem-functions.md)
 
 ## <a name="operators"></a>Operatory
 
-[\<Operatory > systemu plików](../standard-library/filesystem-operators.md)
+[\<operatory > systemu plików](../standard-library/filesystem-operators.md)
 
 ## <a name="enumerations"></a>Wyliczenia
 

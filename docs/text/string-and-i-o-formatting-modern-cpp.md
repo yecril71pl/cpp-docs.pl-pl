@@ -4,12 +4,12 @@ description: Opcje dla sformatowanego ciągu we/wy dostępne w C++nowoczesnej.
 ms.date: 05/30/2019
 ms.topic: conceptual
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-ms.openlocfilehash: facb0b62cc1e92ed09a9ba729d766e5db7404282
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 7ea858a8a8126d3754783edee0dd3ea5409e5f73
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74308176"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898827"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Formatowanie ciągów i we/wy (Modern C++)
 
@@ -49,13 +49,13 @@ Niektóre zalety `Boost.Format` są następujące:
 
 - Bezpieczny: bezpieczny dla typów i zgłasza wyjątek dla błędów, na przykład specyfikacja zbyt mała lub zbyt wiele elementów.
 
-- Rozszerzalne: działa dla dowolnego typu, który może być przesyłany strumieniowo.
+- Rozszerzalne: działa z każdym typem, który może być przesyłany strumieniowo.
 
 - Wygodne: standardowa wersja POSIX i podobne ciągi formatujące.
 
-Chociaż `Boost.Format` jest oparta na C++ [\<iostream >](../standard-library/iostream-programming.md) , które są bezpieczne i rozszerzalne, nie są zoptymalizowane pod kątem wydajności. Gdy wymagasz optymalizacji wydajności, rozważ użycie języka C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) i [sprintf —](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), które są szybkie i łatwe w użyciu. Jednak nie są one rozszerzalne ani bezpieczne przed lukami w zabezpieczeniach. (Istnieją bezpieczne wersje, ale wiążą się one z niewielkimi karami za wydajność. Aby uzyskać więcej informacji, zobacz [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) i [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).
+Chociaż `Boost.Format` jest oparta na C++ [\<iostream >](../standard-library/iostream-programming.md) , które są bezpieczne i rozszerzalne, nie są zoptymalizowane pod kątem wydajności. Gdy wymagasz optymalizacji wydajności, rozważ użycie języka C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) i [sprintf —](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), które są szybkie i łatwe w użyciu. Jednak nie są one rozszerzalne ani bezpieczne przed lukami w zabezpieczeniach. (Istnieją wersje bezpieczne, ale one powoduje niewielką karę wydajności. Aby uzyskać więcej informacji, zobacz [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) i [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).
 
-Poniższy kod ilustruje niektóre z funkcji zwiększania formatowania.
+Poniższy kod ilustruje część zwiększenia funkcji formatowania.
 
 ```cpp
     string s = str( format("%2% %2% %1%\n") % "world" % "hello" );
@@ -72,6 +72,6 @@ Poniższy kod ilustruje niektóre z funkcji zwiększania formatowania.
 [Zapraszamy ponownie doC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)<br/>
-[\<iostream >](../standard-library/iostream.md)<br/>
-[limity \<>](../standard-library/limits.md)<br/>
+[\<iostream>](../standard-library/iostream.md)<br/>
+[\<limits>](../standard-library/limits.md)<br/>
 [\<iomanip >](../standard-library/iomanip.md)
