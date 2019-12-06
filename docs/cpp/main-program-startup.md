@@ -1,5 +1,5 @@
 ---
-title: 'główne: Uruchamianie programu'
+title: 'main: uruchamianie programu'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.main.startup
@@ -12,52 +12,52 @@ helpviewer_keywords:
 - startup code, main function
 - main function, program startup
 ms.assetid: f9581cd6-93f7-4bcd-99ec-d07c3c107dd4
-ms.openlocfilehash: 358ae8ec88281bab741393b1196ee2a1e615e896
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 29e1b77c2e36c66e4e6fc4ec30a73af4d57654a0
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345049"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857440"
 ---
-# <a name="main-program-startup"></a>główne: Uruchamianie programu
+# <a name="main-program-startup"></a>main: uruchamianie programu
 
-Specjalną funkcję o nazwie **głównego** jest punktem początkowym wykonanie wszystkich programów C i C++. Jeśli jesteś pisanie kodu, która jest zgodna z modelu programowania Unicode, możesz użyć `wmain`, która jest wersją znaków dwubajtowych z **głównego**.
+Funkcja specjalna o nazwie **Main** jest punktem początkowym wykonywania dla wszystkich języków C i C++ programów. Jeśli piszesz kod, który jest zgodny z modelem programowania Unicode, możesz użyć `wmain`, który jest wersją typu szerokiego **znaku.**
 
-**Głównego** funkcja nie jest wstępnie zdefiniowana przez kompilator. Wymagane jest podanie tekstu programu.
+Funkcja **Main** nie jest wstępnie zdefiniowana przez kompilator. Musi być podana w tekście programu.
 
-Składnia deklaracji **głównego** jest
+Składnia deklaracji dla **Main** to
 
 ```cpp
 int main();
 ```
 
-lub, opcjonalnie,
+lub opcjonalnie,
 
 ```cpp
 int main(int argc, char *argv[], char *envp[]);
 ```
 
-## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft
+**Microsoft Specific**
 
-Składnia deklaracji `wmain` jest następująca:
+Składnia deklaracji dla `wmain` jest następująca:
 
 ```cpp
 int wmain( );
 ```
 
-lub, opcjonalnie,
+lub opcjonalnie,
 
 ```cpp
 int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);
 ```
 
-Można również użyć `_tmain`, która została zdefiniowana w tchar.h. `_tmain` jest rozpoznawana jako **głównego** , chyba że _UNICODE zdefiniowano. W takim przypadku `_tmain` jest rozpoznawana jako `wmain`.
+Można również użyć `_tmain`, który jest zdefiniowany w używanie TCHAR. h. `_tmain` jest rozpoznawana jako **Main** , chyba że _UNICODE jest zdefiniowany. W takim przypadku `_tmain` jest rozpoznawana jako `wmain`.
 
-Alternatywnie **głównego** i `wmain` funkcje mogą być zadeklarowane jako zwracanie **void** (nie zwraca wartości). Jeśli zadeklarujesz **głównego** lub `wmain` powrotu **void**, nie można zwrócić kod wyjścia procesu nadrzędnego lub systemu operacyjnego za pomocą [zwracają](../cpp/return-statement-in-program-termination-cpp.md) instrukcji. Do zwrócenia wyjście kodu, gdy **głównego** lub `wmain` jest zadeklarowany jako **void**, należy użyć [wyjść](../cpp/exit-function.md) funkcji.
+Alternatywnie można zadeklarować funkcje **Main** i `wmain` jako zwracające **typ void** (brak wartości zwracanej). Jeśli zadeklarujesz **Main** lub `wmain` jako zwraca **void**, nie można zwrócić kodu zakończenia do procesu nadrzędnego lub systemu operacyjnego za pomocą instrukcji [Return](../cpp/return-statement-in-program-termination-cpp.md) . Aby zwrócić kod zakończenia, gdy **główny** lub `wmain` jest zadeklarowany jako **void**, należy użyć funkcji [Exit](../cpp/exit-function.md) .
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-Typy dla `argc` i `argv` są definiowane przez język. Nazwy `argc`, `argv`, i `envp` są tradycyjne, ale nie są wymagane przez kompilator. Aby uzyskać więcej informacji i obejrzeć przykład, zobacz [definicje argumentu](../cpp/argument-definitions.md).
+Typy dla `argc` i `argv` są definiowane przez język. Nazwy `argc`, `argv`i `envp` są tradycyjne, ale nie są wymagane przez kompilator. Aby uzyskać więcej informacji i zapoznać się z przykładem, zobacz [definicje argumentów](../cpp/argument-definitions.md).
 
 ## <a name="see-also"></a>Zobacz także
 

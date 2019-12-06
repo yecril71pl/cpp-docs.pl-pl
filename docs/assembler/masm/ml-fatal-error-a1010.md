@@ -1,38 +1,38 @@
 ---
 title: Błąd krytyczny ML A1010
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A1010
 helpviewer_keywords:
 - A1010
 ms.assetid: 9e0b5241-67f4-4740-8701-3b2d2d1ad9e4
-ms.openlocfilehash: eb4d77b856e93a8d64ee6c51bec63ceae59b22e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ec82f7f6d559d977a9aa039ed91689a0ef4d49a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202068"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856881"
 ---
 # <a name="ml-fatal-error-a1010"></a>Błąd krytyczny ML A1010
 
-**Zagnieżdżanie niedopasowane bloku:**
+**niedopasowane zagnieżdżenie bloków:**
 
-Początek bloku nie ma pasującego zakończenia lub koniec bloku nie ma pasującego początku. Może być zaangażowany jedną z następujących czynności:
+Początek bloku nie ma pasującego końca lub zakończenie bloku nie ma pasującego początku. Może być uwzględniona jedna z następujących elementów:
 
-- Dyrektywy wysokiego poziomu, takie jak [. Jeśli](../../assembler/masm/dot-if.md), [. Powtórz](../../assembler/masm/dot-repeat.md), lub [. GDY](../../assembler/masm/dot-while.md).
+- Dyrektywa wysokiego poziomu, taka jak [. Jeśli](../../assembler/masm/dot-if.md), [. Powtórz](../../assembler/masm/dot-repeat.md)lub [. WHILE](../../assembler/masm/dot-while.md).
 
-- Dyrektywa zestawu warunkowego, takich jak [IF](../../assembler/masm/if-masm.md), [Powtórz](../../assembler/masm/repeat.md), lub **podczas**.
+- Dyrektywa zestawu warunkowego, taka jak [if](../../assembler/masm/if-masm.md), [REPEAT](../../assembler/masm/repeat.md)lub **while**.
 
-- Definicja struktury lub Unii.
+- Struktura lub definicja związku.
 
 - Definicja procedury.
 
 - Definicja segmentu.
 
-- A [popcontext —](../../assembler/masm/popcontext.md) dyrektywy.
+- Dyrektywa [POPCONTEXT](../../assembler/masm/popcontext.md) .
 
-- Zestaw warunkowe dyrektywy, takie jak [ELSE](../../assembler/masm/else-masm.md), [ELSEIF](../../assembler/masm/elseif-masm.md), lub **ENDIF** bez odpowiadającego mu [IF](../../assembler/masm/if-masm.md).
+- Dyrektywa zestawu warunkowego, taka jak [else](../../assembler/masm/else-masm.md), [ElseIf](../../assembler/masm/elseif-masm.md)lub **endif** bez dopasowania [if](../../assembler/masm/if-masm.md).
 
 ## <a name="see-also"></a>Zobacz także
 
