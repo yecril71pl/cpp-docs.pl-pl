@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4764
+title: Ostrzeżenie kompilatora (poziom 4) C4764
 ms.date: 11/04/2016
 f1_keywords:
 - C4764
 helpviewer_keywords:
 - C4764
 ms.assetid: 7bd4296f-966b-484c-bf73-8dbc8e85b4a9
-ms.openlocfilehash: dd16b3f6e6591ec5b079f421fb199eb201c64483
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28672d2271e380f6a8240bff98326d5334a0f98f
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388556"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74989178"
 ---
-# <a name="compiler-warning-level-4-c4764"></a>Kompilator ostrzeżenie (poziom 4) C4764
+# <a name="compiler-warning-level-4-c4764"></a>Ostrzeżenie kompilatora (poziom 4) C4764
 
 Nie można wyrównać obiektów przechwytywania do więcej niż 16 bajtów
 
-Wyrównanie, które są większe niż 16 został określony, ale na niektórych platformach, jeśli funkcja zgłosi wyjątek, stos spowoduje to wymuszenie wyrównanie nie więcej niż 16.
+Określono wyrównanie większe niż 16, ale na niektórych platformach, jeśli funkcja zgłasza wyjątek, stos wymusi wyrównanie nie większe niż 16.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4764:
+Poniższy przykład generuje C4764:
 
-```
+```cpp
 // C4764.cpp
 // compile with: /W4 /EHsc
 // processor: x64 IPF

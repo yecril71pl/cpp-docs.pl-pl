@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Ładowanie zasobów niezarządzanych do tablicy typu Byte'
+title: 'Porady: ładowanie zasobów niezarządzanych do tablicy typu Byte'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - unmanaged resources, loading into Byte array
 - native resources
 ms.assetid: cdada6cd-6d42-437a-a90f-44a0b18d6a93
-ms.openlocfilehash: 641bdf4429bca35800e3fbbbb7622f2651bb3fee
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 425def1cd0557298985148d7bb9f74da489643e8
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344969"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988205"
 ---
-# <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>Instrukcje: Ładowanie zasobów niezarządzanych do tablicy typu Byte
+# <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>Porady: ładowanie zasobów niezarządzanych do tablicy typu Byte
 
-W tym temacie omówiono kilka sposobów na ładowanie zasobów niezarządzanych do <xref:System.Byte> tablicy.
+W tym temacie omówiono kilka sposobów ładowania niezarządzanych zasobów do tablicy <xref:System.Byte>.
 
 ## <a name="example"></a>Przykład
 
-Jeśli znasz rozmiar niezarządzany zasób, można wstępnie Przydziel tablicy CLR i następnie załaduj zasób do tablicy za pomocą wskaźnika do tablicy bloku tablicy CLR.
+Jeśli znasz rozmiar niezarządzanego zasobu, możesz wstępnie przydzielić tablicę CLR, a następnie załadować zasób do tablicy za pomocą wskaźnika do bloku tablicy tablicy CLR.
 
-```
+```cpp
 // load_unmanaged_resources_into_Byte_array.cpp
 // compile with: /clr
 using namespace System;
@@ -56,9 +56,9 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Ten przykład pokazuje, jak skopiować dane z blokiem pamięci niezarządzanych do tablicy zarządzanej.
+Ten przykład pokazuje, jak skopiować dane z bloku pamięci niezarządzanej do tablicy zarządzanej.
 
-```
+```cpp
 // load_unmanaged_resources_into_Byte_array_2.cpp
 // compile with: /clr
 using namespace System;

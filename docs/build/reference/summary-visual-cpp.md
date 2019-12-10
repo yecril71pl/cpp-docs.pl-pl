@@ -1,5 +1,5 @@
 ---
-title: '&lt;Podsumowanie > (komentarze dokumentacji C++)'
+title: '> podsumowania &lt;C++ (Komentarze do dokumentacji)'
 ms.date: 11/04/2016
 f1_keywords:
 - <summary>
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - <summary> C++ XML tag
 - summary C++ XML tag
 ms.assetid: cdeeefbb-1339-45d6-9002-10042a9a2726
-ms.openlocfilehash: 68bb8b7c269b3406438e5cf21dde7179f7e67646
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0620273f24573539897809b7892d46ad49b7aa57
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318189"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988586"
 ---
-# <a name="ltsummarygt"></a>&lt;Podsumowanie&gt;
+# <a name="ltsummarygt"></a>&gt; &lt;podsumowania
 
-\<Podsumowania > tag powinien być używany do opisu typu lub składowej typu. Użyj [ \<Uwagi >](remarks-visual-cpp.md) można dodać dodatkowe informacje do opisu typu.
+Aby opisać typ lub element członkowski typu, należy użyć tagu \<Summary >. Użyj [\<uwagi >](remarks-visual-cpp.md) , aby dodać informacje uzupełniające do opisu typu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,18 +27,18 @@ ms.locfileid: "62318189"
 
 #### <a name="parameters"></a>Parametry
 
-*description*<br/>
+*zharmonizowan*<br/>
 Podsumowanie obiektu.
 
 ## <a name="remarks"></a>Uwagi
 
-Tekst dla \<podsumowania > tag to jedyne źródło informacji o typie w technologii IntelliSense i jest wyświetlany na [przeglądarki obiektów](/visualstudio/ide/viewing-the-structure-of-code) i w raporcie Web komentarzy kodu.
+Tekst dla tagu \<Summary > jest jedynym źródłem informacji o typie w technologii IntelliSense i jest również wyświetlany w [Przeglądarka obiektów](/visualstudio/ide/viewing-the-structure-of-code) i w raporcie w sieci Web komentarza do kodu.
 
-Kompiluj przy użyciu [/doc](doc-process-documentation-comments-c-cpp.md) do Przetwarzaj komentarze dokumentacji do pliku.
+Kompiluj z [/doc](doc-process-documentation-comments-c-cpp.md) , aby przetwarzać komentarze dokumentacji do pliku.
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // xml_summary_tag.cpp
 // compile with: /LD /clr /doc
 // post-build command: xdcmake xml_summary_tag.dll

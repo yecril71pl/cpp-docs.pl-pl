@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - call_in_appdomain function
 ms.assetid: 9a1a5026-b76b-4cae-a3d4-29badeb9db9c
-ms.openlocfilehash: a7ee0ef9c98ee940ab810abd82f6220da95d7346
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da0f2bc1a503226e41198871e6dc48ace7a86854
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351498"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988538"
 ---
-# <a name="callinappdomain-function"></a>call_in_appdomain — Funkcja
+# <a name="call_in_appdomain-function"></a>call_in_appdomain — Funkcja
 
-Wykonuje funkcję w domenie określonej aplikacji.
+Wykonuje funkcję w określonej domenie aplikacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,28 +42,28 @@ RetType call_in_appdomain(
 #### <a name="parameters"></a>Parametry
 
 *appdomainId*<br/>
-Appdomain, w którym w wywołaniu funkcji.
+Domena aplikacji, w której ma zostać wywołana funkcja.
 
 *voidFunc*<br/>
-Wskaźnik do `void` funkcji, która przyjmuje parametry N (0 < = N < = 15).
+Wskaźnik do funkcji `void`, która pobiera N parametrów (0 < = N < = 15).
 
 *nonvoidFunc*<br/>
-Wskaźnik do non -`void` funkcji, która przyjmuje parametry N (0 < = N < = 15).
+Wskaźnik do funkcji innej niż`void`, która pobiera N parametrów (0 < = N < = 15).
 
 *arg1...argN*<br/>
-Zero do 15 parametry do przekazania do `voidFunc` lub `nonvoidFunc` w innym elemencie appdomain.
+Od zera do 15 parametrów do przesłania do `voidFunc` lub `nonvoidFunc` w innej domenie aplikacji.
 
-## <a name="return-value"></a>Wartość zwracana
+## <a name="return-value"></a>Wartość zwrócona
 
-Wynik wykonania `voidFunc` lub `nonvoidFunc` w domenie określonej aplikacji.
+Wynik wykonywania `voidFunc` lub `nonvoidFunc` w określonej domenie aplikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Argumenty funkcji są przekazywane do `call_in_appdomain` nie może być typy CLR.
+Argumenty funkcji przekazane do `call_in_appdomain` nie mogą być typami CLR.
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // msl_call_in_appdomain.cpp
 // compile with: /clr
 
@@ -118,6 +118,6 @@ appDomain1 id = 2
 
 ## <a name="requirements"></a>Wymagania
 
-**Plik nagłówkowy** \<msclr\appdomain.h >
+**Plik nagłówka** \<msclr\appdomain.h >
 
-**Namespace** msclr
+Msclr **przestrzeni nazw**

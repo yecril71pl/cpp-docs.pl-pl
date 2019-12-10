@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4706
+title: Ostrzeżenie kompilatora (poziom 4) C4706
 ms.date: 11/04/2016
 f1_keywords:
 - C4706
 helpviewer_keywords:
 - C4706
 ms.assetid: 89cd3f4f-812c-4a4b-9426-65a5a6d1b99c
-ms.openlocfilehash: e57470fcd8e7b014084b094c9ca5e39f0a86d85e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ff8794dcf29539b492f53bfdf6f0810988c0f72
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395225"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74989908"
 ---
-# <a name="compiler-warning-level-4-c4706"></a>Kompilator ostrzeżenie (poziom 4) C4706
+# <a name="compiler-warning-level-4-c4706"></a>Ostrzeżenie kompilatora (poziom 4) C4706
 
-Przypisanie wewnątrz wyrażenia warunkowego
+przypisanie w wyrażeniu warunkowym
 
-Wartość testu w wyrażeniu warunkowym był wynik przypisania.
+Wartość testowa w wyrażeniu warunkowym była wynikiem przypisania.
 
-Przypisania ma wartość (wartość po lewej stronie przypisania), który może służyć prawnie w innego wyrażenia, w tym wyrażeniu testowym.
+Przypisanie ma wartość (wartość po lewej stronie przypisania), która może być używana legalnie w innym wyrażeniu, łącznie z wyrażeniem testowym.
 
-Poniższy przykład spowoduje wygenerowanie C4706:
+Poniższy przykład generuje C4706:
 
-```
+```cpp
 // C4706a.cpp
 // compile with: /W4
 int main()
@@ -35,9 +35,9 @@ int main()
 }
 ```
 
-To ostrzeżenie wystąpi nawet wtedy, gdy dwukrotnie nawiasów wokół warunek testu:
+Ostrzeżenie zostanie przeprowadzone nawet w przypadku podwójnego nawiasu otaczającego warunek testu:
 
-```
+```cpp
 // C4706b.cpp
 // compile with: /W4
 int main()
@@ -49,9 +49,9 @@ int main()
 }
 ```
 
-Jeśli masz zamiar do testowania relacji i przypisywanie, aby nie używać `==` operatora. Na przykład poniższy wiersz testów czy i b są takie same:
+Jeśli zamiarem jest przetestowanie relacji, a nie przypisanie, użyj operatora `==`. Na przykład poniższy wiersz testuje, czy a i b są równe:
 
-```
+```cpp
 // C4706c.cpp
 // compile with: /W4
 int main()
@@ -63,9 +63,9 @@ int main()
 }
 ```
 
-Jeśli zamierzasz utworzyć test wartość wynik przypisania test, aby upewnić się, że przydział jest różna od zera lub nie ma wartości null. Na przykład poniższy kod nie generuje to ostrzeżenie:
+Jeśli zamierzasz, aby wartość testowa była wynikiem przypisania, przetestuj test, aby upewnić się, że przypisanie jest inne niż zero lub nie ma wartości null. Na przykład następujący kod nie spowoduje wygenerowania tego ostrzeżenia:
 
-```
+```cpp
 // C4706d.cpp
 // compile with: /W4
 int main()

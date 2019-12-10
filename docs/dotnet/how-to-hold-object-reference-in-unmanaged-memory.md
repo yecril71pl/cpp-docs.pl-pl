@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Utrzymywanie odwołania do obiektu w pamięci niezarządzanej'
+title: 'Porady: utrzymywanie odwołania do obiektu w pamięci niezarządzanej'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - references, to objects in native functions
 - gcroot keyword [C++], object reference in native function
 ms.assetid: a61eb8ce-3982-477d-8d3d-2173fd57166d
-ms.openlocfilehash: 0d8dc341d1fe2c61eba098abec9258a2c6dade79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f2471e36d7551cab9edb68d7babeb1419e8e20c
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387295"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988208"
 ---
-# <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>Instrukcje: Utrzymywanie odwołania do obiektu w pamięci niezarządzanej
+# <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>Porady: utrzymywanie odwołania do obiektu w pamięci niezarządzanej
 
-Możesz użyć gcroot.h, który otacza <xref:System.Runtime.InteropServices.GCHandle>, aby pomieścić odwołanie do obiektu CLR w pamięci niezarządzanej. Alternatywnie, można użyć `GCHandle` bezpośrednio.
+Można użyć gcroot. h, który zawija <xref:System.Runtime.InteropServices.GCHandle>, aby pomieścić odwołanie do obiektu CLR w pamięci niezarządzanej. Alternatywnie możesz użyć `GCHandle` bezpośrednio.
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // hold_object_reference.cpp
 // compile with: /clr
 #include "gcroot.h"
@@ -57,9 +57,9 @@ StringWrapper::x == ManagedString
 
 ## <a name="example"></a>Przykład
 
-`GCHandle` zapewnia sposób utrzymywanie odwołania do obiektu zarządzanego w niezarządzanej pamięci.  Możesz użyć <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> metodę w celu utworzenia nieprzezroczyste dojścia do obiektu zarządzanego i <xref:System.Runtime.InteropServices.GCHandle.Free%2A> do jego zwolnienia. Ponadto <xref:System.Runtime.InteropServices.GCHandle.Target%2A> metoda pozwala uzyskać odwołanie do obiektu powrót po awarii z dojście w kodzie zarządzanym.
+`GCHandle` zapewnia sposób przechowywania odwołania do obiektu zarządzanego w pamięci niezarządzanej.  Metoda <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> służy do tworzenia nieprzezroczystego uchwytu do obiektu zarządzanego i <xref:System.Runtime.InteropServices.GCHandle.Free%2A> w celu jego zwolnienia. Ponadto Metoda <xref:System.Runtime.InteropServices.GCHandle.Target%2A> pozwala uzyskać odwołanie do obiektu z dojścia w kodzie zarządzanym.
 
-```
+```cpp
 // hold_object_reference_2.cpp
 // compile with: /clr
 using namespace System;

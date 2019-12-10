@@ -11,16 +11,16 @@ helpviewer_keywords:
 - /Zl compiler option [C++]
 - default libraries, omitting names
 ms.assetid: b27d39d0-44d6-498c-84ae-27c1326fee59
-ms.openlocfilehash: cb8083d874abe17add1d27096ebce143d03a04cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1bcb90dbf071253dc0561845e3bd713dc42d5aef
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315550"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988556"
 ---
 # <a name="zl-omit-default-library-name"></a>/Zl (Pomiń domyślną nazwę biblioteki)
 
-Pomija domyślną nazwę biblioteki środowiska uruchomieniowego języka C z pliku .obj. Domyślnie kompilator umieszcza nazwę biblioteki z pliku .obj, aby nakazać konsolidator odpowiedniej biblioteki.
+Pomija domyślną nazwę biblioteki środowiska uruchomieniowego C z pliku. obj. Domyślnie kompilator umieszcza nazwę biblioteki w pliku. obj, aby skierować konsolidator do odpowiedniej biblioteki.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,19 +30,19 @@ Pomija domyślną nazwę biblioteki środowiska uruchomieniowego języka C z pli
 
 ## <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji na temat domyślnej biblioteki, zobacz [korzystaj z bibliotek wykonawczych](md-mt-ld-use-run-time-library.md).
+Aby uzyskać więcej informacji na temat biblioteki domyślnej, zobacz [Korzystanie z biblioteki wykonawczej](md-mt-ld-use-run-time-library.md).
 
-Możesz użyć **/Zl** do kompilowania plików .obj, które ma być umieszczony w bibliotece. Mimo że pomijając nazwę biblioteki zapisuje tylko małej ilości miejsca dla pliku obj pojedynczy, całkowita ilość miejsca, zapisane jest znaczący bibliotekę, która zawiera wiele modułów obiektu.
+Za pomocą **/zl** można kompilować pliki. obj, które planujesz umieścić w bibliotece. Mimo że pominięcie nazwy biblioteki powoduje zaoszczędzenie tylko niewielkiej ilości miejsca dla pojedynczego pliku. obj, zapisana przestrzeń jest istotna w bibliotece zawierającej wiele modułów obiektów.
 
-Ta opcja jest to opcja zaawansowana. Ustawienie tej opcji spowoduje usunięcie niektórych Obsługa bibliotek środowiska uruchomieniowego C, które mogą być wymagane przez aplikację, co powoduje błędy w czasie konsolidacji w przypadku aplikacji zależy od tej obsługi. Jeśli używasz tej opcji należy podać wymagane składniki w inny sposób.
+Ta opcja jest opcją zaawansowaną. Ustawienie tej opcji spowoduje usunięcie pewnej obsługi biblioteki środowiska uruchomieniowego C, która może być wymagana przez aplikację, co spowoduje błędy w czasie połączenia, jeśli aplikacja zależy od tej obsługi. W przypadku korzystania z tej opcji należy udostępnić wymagane składniki w inny sposób.
 
-Użyj [/nodefaultlib (Ignoruj biblioteki)](nodefaultlib-ignore-libraries.md). Aby nakazać konsolidator, aby zignorować odwołań do biblioteki we wszystkich plikach .obj.
+Użyj [/NODEFAULTLIB (Ignoruj biblioteki)](nodefaultlib-ignore-libraries.md). Aby skierować konsolidator do ignorowania odwołań do bibliotek we wszystkich plikach. obj.
 
 Aby uzyskać więcej informacji, zobacz [funkcje biblioteki CRT](../../c-runtime-library/crt-library-features.md).
 
-Podczas kompilowania za pomocą **/Zl**, `_VC_NODEFAULTLIB` jest zdefiniowana.  Na przykład:
+Podczas kompilowania z **/zl**jest zdefiniowany `_VC_NODEFAULTLIB`.  Na przykład:
 
-```
+```cpp
 // vc_nodefaultlib.cpp
 // compile with: /Zl
 void Test() {
@@ -56,13 +56,13 @@ void Test() {
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
-1. Kliknij przycisk **C/C++** folderu.
+1. Kliknij folder **C/C++**  .
 
-1. Kliknij przycisk **zaawansowane** stronę właściwości.
+1. Kliknij stronę właściwości **Zaawansowane** .
 
-1. Modyfikowanie **Pomiń domyślne nazwy bibliotek** właściwości.
+1. Zmodyfikuj właściwość **pomijanie domyślnych nazw bibliotek** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 

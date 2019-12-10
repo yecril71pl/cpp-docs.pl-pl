@@ -6370,6 +6370,8 @@
                   expanded: false
                   items:
                     - name: Pliki i strumienie
+                      href: c-runtime-library/files-and-streams.md
+                    - name: Strumienie binarne i tekstowe
                       href: c-runtime-library/text-and-binary-streams.md
                     - name: Strumienie byte oraz szerokie
                       href: c-runtime-library/byte-and-wide-streams.md
@@ -10418,7 +10420,7 @@
                           href: parallel/concrt/reference/task-continuation-context-class.md
                         - name: 'task_group, klasa'
                           href: parallel/concrt/reference/task-group-class.md
-                        - name: 'task_handle, klasa'
+                        - name: task_handle — klasa
                           href: parallel/concrt/reference/task-handle-class.md
                         - name: 'task_options, klasa (środowisko uruchomieniowe współbieżności)'
                           href: parallel/concrt/reference/task-options-class-concurrency-runtime.md

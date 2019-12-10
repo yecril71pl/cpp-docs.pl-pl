@@ -12,12 +12,12 @@ helpviewer_keywords:
 - c compiler option [C++]
 - /c compiler option [C++]
 ms.assetid: 944567ca-16bc-4728-befe-d414a7787f26
-ms.openlocfilehash: c5854fd1255ab509d8778828de25638dd821d74b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d0cf8e5f628f3f5301f54d7c853bfc2ab63cb7e
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272835"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988357"
 ---
 # <a name="c-preserve-comments-during-preprocessing"></a>/C (Zachowaj komentarze podczas przetwarzania wstępnego)
 
@@ -31,11 +31,11 @@ Zachowuje komentarze podczas przetwarzania wstępnego.
 
 ## <a name="remarks"></a>Uwagi
 
-Ta opcja kompilatora wymaga **/E**, **/P**, lub **/EP** opcji.
+Ta opcja kompilatora wymaga opcji **/e**, **/p**lub **/EP** .
 
-Poniższy przykładowy kod wyświetli komentarz do kodu źródłowego.
+Poniższy przykład kodu wyświetli komentarz do kodu źródłowego.
 
-```
+```cpp
 // C_compiler_option.cpp
 // compile with: /E /C /c
 int i;   // a variable
@@ -50,13 +50,13 @@ int i;   // a variable
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
-1. Kliknij przycisk **C/C++** folderu.
+1. Kliknij folder **C/C++**  .
 
-1. Kliknij przycisk **preprocesora** stronę właściwości.
+1. Kliknij stronę właściwości **preprocesora** .
 
-1. Modyfikowanie **Zachowaj komentarze** właściwości.
+1. Zmodyfikuj właściwość **Zachowaj Komentarze** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 

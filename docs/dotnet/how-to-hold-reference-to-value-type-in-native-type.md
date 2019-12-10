@@ -1,25 +1,25 @@
 ---
-title: 'Instrukcje: Utrzymywanie odwołania do typu wartości w typie natywnym'
+title: 'Porady: utrzymywanie odwołania do typu wartości w typie natywnym'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - value type reference in native type
 - reference to value type in native type
 ms.assetid: 1eabf8be-7d4f-4339-9027-48d5c4244483
-ms.openlocfilehash: 3b1dfdc5a519bf51f16b7afbc25d49dc38b8f076
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b71701c771f6f49bae172284e23dd9eba2aeded
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324964"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988482"
 ---
-# <a name="how-to-hold-reference-to-value-type-in-native-type"></a>Instrukcje: Utrzymywanie odwołania do typu wartości w typie natywnym
+# <a name="how-to-hold-reference-to-value-type-in-native-type"></a>Porady: utrzymywanie odwołania do typu wartości w typie natywnym
 
-Użyj `gcroot` na typ spakowany, aby pomieścić odwołanie do typu wartości w typie natywnym.
+Użyj `gcroot` w typie opakowanym, aby przechowywać odwołanie do typu wartości w typie natywnym.
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // reference_to_value_in_native.cpp
 // compile with: /clr
 #using <mscorlib.dll>

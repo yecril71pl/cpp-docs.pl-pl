@@ -1,10 +1,13 @@
 ---
-title: _outp, _outpw, _outpd
-ms.date: 11/04/2016
+title: Outp, outpw, _outp, _outpw _outpd
+description: Opisuje przestarzałe i usunięte funkcje Outp, outpw, _outp, _outpw i _outpd biblioteki środowiska uruchomieniowego języka Microsoft C (CRT).
+ms.date: 12/09/2019
 api_name:
 - _outpd
 - _outp
 - _outpw
+- outp
+- outpw
 api_location:
 - msvcrt.dll
 - msvcr100.dll
@@ -21,6 +24,8 @@ f1_keywords:
 - _outpw
 - _outpd
 - _outp
+- outp
+- outpw
 - outpd
 helpviewer_keywords:
 - outpw function
@@ -36,57 +41,57 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: d1e7028ae833e1358ce3199b7e7079535c84d135
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 03d3df0bae9c2fa3cdd107f3c0de65105077c401
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944131"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988371"
 ---
-# <a name="_outp-_outpw-_outpd"></a>_outp, _outpw, _outpd
+# <a name="outp-outpw-_outp-_outpw-_outpd"></a>Outp, outpw, _outp, _outpw _outpd
 
-Dane wyjściowe, w porcie, bajt (`_outp`), słowo (`_outpw`) lub podwójne słowo (`_outpd`).
-
-> [!IMPORTANT]
->  Te funkcje są przestarzałe. Począwszy od programu Visual Studio 2015, nie są one dostępne w CRT.
+Dane wyjściowe, w porcie, bajt (`outp`, `_outp`), słowo (`outpw`, `_outpw`) lub podwójne słowo (`_outpd`).
 
 > [!IMPORTANT]
->  Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Te funkcje są przestarzałe. Począwszy od programu Visual Studio 2015, nie są one dostępne w CRT.  
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
-```
-
-      int _outp(
-unsigned short port,
-int databyte
+```cpp
+int _outp(
+   unsigned short port,
+   int databyte
 );
 unsigned short _outpw(
-unsigned short port,
-unsigned short dataword
+   unsigned short port,
+   unsigned short dataword
 );
 unsigned long _outpd(
-unsigned short port,
-unsigned long dataword
+   unsigned short port,
+   unsigned long dataword
 );
 ```
 
-#### <a name="parameters"></a>Parametry
-*przewożąc*<br/>
+### <a name="parameters"></a>Parametry
+
+\ *portów*
 Numer portu.
 
-*databyte, dataword*<br/>
+*databyte,\ dataword*
 Wartości wyjściowe.
 
-## <a name="return-value"></a>Wartość zwracana
+## <a name="return-value"></a>Wartość zwrócona
 
-Funkcje zwracają dane wyjściowe. Brak powrotu błędu.
+Funkcje zwracają dane wyjściowe. Nie będzie zwrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-`_outp`, ,`_outpw` I`_outpd` funkcje zapisują bajt, wyraz i podwójne słowo odpowiednio do określonego portu wyjściowego. Argument *portu* może być dowolną liczbą całkowitą bez znaku z zakresu 0 – 65 535; *databyte* może być dowolną liczbą całkowitą z zakresu 0-255; i *dataword* może być dowolną wartością z zakresu liczb całkowitych, niepodpisanej krótkiej liczby całkowitej i niepodpisanej Long Integer.
+`_outp`, `_outpw`, i `_outpd` funkcje zapisują bajt, wyraz i podwójne słowo, odpowiednio, z określonego portu wyjściowego. Argument *portu* może być dowolną liczbą całkowitą bez znaku z zakresu 0 – 65 535; *databyte* może być dowolną liczbą całkowitą z zakresu 0-255; i *dataword* może być dowolną wartością z zakresu liczb całkowitych, niepodpisanej krótkiej liczby całkowitej i niepodpisanej Long Integer.
 
-Ponieważ te funkcje zapisują bezpośrednio do portu we/wy, nie można ich używać w kodzie użytkownika. Aby uzyskać informacje o korzystaniu z portów we/wy w tych systemach operacyjnych, wyszukaj frazę "komunikacja szeregowa w systemie Win32" w witrynie MSDN.
+Ponieważ te funkcje zapisują bezpośrednio do portu we/wy, nie można ich używać w kodzie użytkownika. Aby uzyskać informacje dotyczące korzystania z portów We/Wy w tych systemach operacyjnych wyszukaj ciąg „Komunikacja szeregowa w Win32” w witrynie MSDN.
+
+Nazwy `outp` i `outpw` są starsze, przestarzałe nazwy dla funkcji `_outp` i `_outpw`. Aby uzyskać więcej informacji, zobacz [nazwy funkcji POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -104,5 +109,5 @@ Wszystkie wersje [bibliotek uruchomieniowych języka C](../c-runtime-library/crt
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/wy konsoli i portu](../c-runtime-library/console-and-port-i-o.md)<br/>
-[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)
+\ [we/wy konsoli i portu](../c-runtime-library/console-and-port-i-o.md)
+[INP, inpw, _inp, _inpw _inpd](../c-runtime-library/inp-inpw-inpd.md)

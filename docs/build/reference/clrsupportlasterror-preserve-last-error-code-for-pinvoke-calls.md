@@ -7,16 +7,16 @@ helpviewer_keywords:
 - /CLRSUPPORTLASTERROR linker option
 - -CLRSUPPORTLASTERROR linker option
 ms.assetid: b7057990-4154-4b1d-9fc9-6236f7be7575
-ms.openlocfilehash: 5e4a5c86e53d74c8b704ee3780991d496fc1802a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64948d81759d415245e741bc6152d56bb35480d2
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273589"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988352"
 ---
 # <a name="clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls"></a>/CLRSUPPORTLASTERROR (Zachowaj kod ostatniego błędu dla wywołań PInvoke)
 
-**/ CLRSUPPORTLASTERROR**, która jest domyślnie włączona, zachowuje kod ostatniego błędu funkcji wywoływanym za pośrednictwem mechanizmu P/Invoke, dzięki czemu można wywoływać funkcje natywne w bibliotekach DLL, z kodu skompilowanego z **/CLR**.
+**/CLRSUPPORTLASTERROR**, która jest domyślnie włączona, zachowuje ostatni kod błędu funkcji wywoływanych za pośrednictwem mechanizmu P/Invoke, który umożliwia wywoływanie natywnych funkcji w bibliotekach DLL, z kodu skompilowanego z **/CLR**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,55 +26,55 @@ ms.locfileid: "62273589"
 
 ## <a name="remarks"></a>Uwagi
 
-Zachowywanie kod ostatniego błędu oznacza spadek wydajności.  Jeśli nie chcesz ponosić wpływ na wydajność zachowania kod ostatniego błędu, połączyć z **/CLRSUPPORTLASTERROR:NO**.
+Zachowanie ostatniego kodu błędu oznacza spadek wydajności.  Jeśli nie chcesz ponosić wpływu na wydajność, aby zachować kod ostatniego błędu, Połącz się z **/CLRSUPPORTLASTERROR: No**.
 
-Można zminimalizować wpływ na wydajność dzięki połączeniu z **/CLRSUPPORTLASTERROR:SYSTEMDLL**, który tylko zachowuje kod ostatniego błędu dla funkcji w systemie biblioteki dll.  Biblioteki DLL systemu jest zdefiniowany jako jeden z następujących czynności:
+Możesz zminimalizować wpływ na wydajność przez łączenie z **/CLRSUPPORTLASTERROR: SYSTEMDLL**, która zachowuje tylko kod ostatniego błędu dla funkcji w bibliotekach DLL systemu.  Systemowa biblioteka DLL jest definiowana jako jeden z następujących:
 
 |||||
 |-|-|-|-|
-|ACLUI.DLL|ACTIVEDS.DLL|ADPTIF.DLL|ADVAPI32.DLL|
+|ACLUI.DLL|ACTIVEDS. BIBLIOTEKI DLL|ADPTIF.DLL|ADVAPI32.DLL|
 |ASYCFILT.DLL|AUTHZ.DLL|AVICAP32.DLL|AVIFIL32.DLL|
-|PLIK CABINET. BIBLIOTEKI DLL|CLUSAPI.DLL|COMCTL32.DLL|COMDLG32.DLL|
-|COMSVCS.DLL|CREDUI.DLL|CRYPT32.DLL|CRYPTNET.DLL|
-|CRYPTUI.DLL|D3D8THK.DLL|DBGENG. BIBLIOTEKI DLL|DBGHELP.DLL|
+|Typu. BIBLIOTECE|CLUSAPI.DLL|COMCTL32.DLL|COMDLG32.DLL|
+|COMSVCS. BIBLIOTECE|CREDUI.DLL|CRYPT32.DLL|CRYPTNET. BIBLIOTECE|
+|CRYPTUI.DLL|D3D8THK.DLL|DBGENG. BIBLIOTECE|DBGHELP. BIBLIOTECE|
 |DCIMAN32.DLL|DNSAPI.DLL|DSPROP.DLL|DSUIEXT.DLL|
-|GDI32.DLL|GLU32.DLL|HLINK.DLL|ICM32.DLL|
+|GDI32.DLL|GLU32.DLL|Plik. BIBLIOTECE|ICM32.DLL|
 |IMAGEHLP.DLL|IMM32.DLL|IPHLPAPI.DLL|IPROP.DLL|
 |KERNEL32.DLL|KSUSER.DLL|LOADPERF.DLL|LZ32.DLL|
-|MAPI32.DLL|MGMTAPI.DLL|MOBSYNC.DLL|MPR.DLL|
+|MAPI32.DLL|MGMTAPI.DLL|MOBSYNC. BIBLIOTECE|MPR.DLL|
 |MPRAPI.DLL|MQRT.DLL|MSACM32.DLL|MSCMS.DLL|
-|MSI.DLL|MSIMG32.DLL|MSRATING. BIBLIOTEKI DLL|MSTASK.DLL|
+|MSI.DLL|MSIMG32.DLL|MSRATING. BIBLIOTECE|MSTASK.DLL|
 |MSVFW32.DLL|MSWSOCK.DLL|MTXEX.DLL|NDDEAPI.DLL|
-|NETAPI32.DLL|NPPTOOLS. BIBLIOTEKI DLL|NTDSAPI.DLL|NTDSBCLI.DLL|
+|NETAPI32.DLL|NPPTOOLS. BIBLIOTECE|NTDSAPI.DLL|NTDSBCLI. BIBLIOTECE|
 |NTMSAPI.DLL|ODBC32.DLL|ODBCBCP.DLL|OLE32.DLL|
-|OLEACC.DLL|OLEAUT32.DLL|OLEDLG.DLL|OPENGL32.DLL|
-|PDH.DLL|POWRPROF.DLL|QOSNAME.DLL|ZAPYTANIE. BIBLIOTEKI DLL|
-|RASAPI32.DLL|RASDLG.DLL|RASSAPI.DLL|RESUTILS. BIBLIOTEKI DLL|
+|OLEACC. BIBLIOTECE|OLEAUT32. BIBLIOTEKI DLL|OLEDLG.DLL|OPENGL32.DLL|
+|PDH.DLL|POWRPROF.DLL|QOSNAME.DLL|Dotyczących. BIBLIOTECE|
+|RASAPI32.DLL|RASDLG.DLL|RASSAPI.DLL|RESUTILS. BIBLIOTECE|
 |RICHED20.DLL|RPCNS4.DLL|RPCRT4.DLL|RTM.DLL|
-|RTUTILS.DLL|SCARDDLG.DLL|SECUR32.DLL|SENSAPI.DLL|
+|RTUTILS. BIBLIOTECE|SCARDDLG.DLL|SECUR32.DLL|SENSAPI.DLL|
 |SETUPAPI.DLL|SFC.DLL|SHELL32.DLL|SHFOLDER.DLL|
-|SHLWAPI.DLL|SISBKUP.DLL|SNMPAPI.DLL|SRCLIENT. BIBLIOTEKI DLL|
-|STI.DLL|TAPI32.DLL|TRAFFIC.DLL|ADRES URL. BIBLIOTEKI DLL|
-|URLMON. BIBLIOTEKI DLL|USER32.DLL|USERENV.DLL|USP10.DLL|
-|UXTHEME. BIBLIOTEKI DLL|VDMDBG.DLL|WERSJA. BIBLIOTEKI DLL|WINFAX.DLL|
-|WINHTTP.DLL|WININET. BIBLIOTEKI DLL|WINMM.DLL|WINSCARD.DLL|
+|SHLWAPI. BIBLIOTEKI DLL|SISBKUP.DLL|SNMPAPI.DLL|SRCLIENT. BIBLIOTECE|
+|STI.DLL|TAPI32.DLL|TRAFFIC.DLL|Adres URL. BIBLIOTECE|
+|Urlmon. BIBLIOTECE|USER32.DLL|USERENV. BIBLIOTEKI DLL|USP10.DLL|
+|UXTHEME. BIBLIOTECE|VDMDBG.DLL|WERSJA. BIBLIOTEKI DLL|WINFAX. BIBLIOTECE|
+|WINHTTP.DLL|Oprogramowanie. BIBLIOTECE|WINMM. BIBLIOTECE|WINSCARD.DLL|
 |WINTRUST.DLL|WLDAP32.DLL|WOW32.DLL|WS2_32.DLL|
 |WSNMP32.DLL|WSOCK32.DLL|WTSAPI32.DLL|XOLEHLP.DLL|
 
 > [!NOTE]
->  Zachowywanie ostatni błąd nie jest obsługiwana dla niezarządzanych funkcji, które są używane przez kod CLR, w tym samym module.
+>  Zachowanie ostatniego błędu nie jest obsługiwane dla niezarządzanych funkcji, które są używane przez kod CLR, w tym samym module.
 
-- Aby uzyskać więcej informacji, zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](clr-common-language-runtime-compilation.md).
+- Aby uzyskać więcej informacji, zobacz [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](clr-common-language-runtime-compilation.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
-1. Kliknij przycisk **konsolidatora** folderu.
+1. Kliknij folder **konsolidator** .
 
-1. Kliknij przycisk **wiersza polecenia** stronę właściwości.
+1. Kliknij stronę właściwości **wiersza polecenia** .
 
-1. Wpisz opcje w **dodatkowe opcje** pole.
+1. Wpisz opcję w polu **dodatkowe opcje** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
@@ -82,9 +82,9 @@ Można zminimalizować wpływ na wydajność dzięki połączeniu z **/CLRSUPPOR
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład definiuje natywnej biblioteki DLL za pomocą jednego eksportowanych funkcji, która modyfikuje ostatniego błędu.
+Poniższy przykład definiuje natywną bibliotekę DLL z jedną wyeksportowaną funkcją, która modyfikuje ostatni błąd.
 
-```
+```cpp
 // CLRSUPPORTLASTERROR_dll.cpp
 // compile with: /LD
 #include <windows.h>
@@ -99,9 +99,9 @@ __declspec(dllexport) double MySqrt(__int64 n) {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład wykorzystuje bibliotekę DLL, pokazuje sposób użycia studia **/CLRSUPPORTLASTERROR**.
+Poniższy przykład korzysta z biblioteki DLL, pokazując, jak używać **/CLRSUPPORTLASTERROR**.
 
-```
+```cpp
 // CLRSUPPORTLASTERROR_client.cpp
 // compile with: /clr CLRSUPPORTLASTERROR_dll.lib /link /clrsupportlasterror:systemdll
 // processor: x86

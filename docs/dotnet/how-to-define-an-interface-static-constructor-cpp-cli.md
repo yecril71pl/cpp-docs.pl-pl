@@ -1,25 +1,25 @@
 ---
-title: 'Instrukcje: Definiowanie statycznego konstruktora interfejsu (C++sposób niezamierzony)'
+title: 'Porady: definiowanie statycznego konstruktora interfejsu (C++/CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - constructors [C++]
 - static constructors, interface
 - interface static constructor
 ms.assetid: 1f031cb2-e94f-43dc-819b-44cf2faaaa49
-ms.openlocfilehash: 326b315e1e6c4defbef3ab6e487c78635e0aa50f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 562605a579ac372e4a69953853a6e32668357565
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378984"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988239"
 ---
-# <a name="how-to-define-an-interface-static-constructor-ccli"></a>Instrukcje: Definiowanie statycznego konstruktora interfejsu (C++sposób niezamierzony)
+# <a name="how-to-define-an-interface-static-constructor-ccli"></a>Porady: definiowanie statycznego konstruktora interfejsu (C++/CLI)
 
-Interfejs może mieć statyczny Konstruktor, który może służyć do zainicjowania elementów członkowskich danych statycznych.  Konstruktor statyczny będzie wywoływana co najwyżej jeden raz i zostanie wywołana przed metodą uzyskiwania dostępu do składowej interfejsu statycznego po raz pierwszy.
+Interfejs może mieć Konstruktor statyczny, który może służyć do inicjowania statycznych elementów członkowskich danych.  Konstruktor statyczny zostanie wywołany najwyżej raz i zostanie wywołany przed pierwszym uzyskaniem dostępu do statycznego elementu członkowskiego.
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // mcppv2_interface_class2.cpp
 // compile with: /clr
 using namespace System;

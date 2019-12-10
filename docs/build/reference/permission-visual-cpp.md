@@ -1,5 +1,5 @@
 ---
-title: '&lt;uprawnienie > (komentarze dokumentacji C++)'
+title: '> uprawnień &lt;(C++ Komentarze do dokumentacji)'
 ms.date: 11/04/2016
 f1_keywords:
 - permission
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - <permission> C++ XML tag
 - permission C++ XML tag
 ms.assetid: 537ee2bc-95bd-48e4-9ce6-3420c3da87f4
-ms.openlocfilehash: 764048f7bc579afa6862bdff40968588955dc307
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7f0a59c85e3fa28d24e44953e207151c3afa0f4
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319944"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988680"
 ---
-# <a name="ltpermissiongt"></a>&lt;permission&gt;
+# <a name="ltpermissiongt"></a>&gt; uprawnień &lt;
 
-\<Uprawnienia > znacznik umożliwia dokumentowanie dostępu do elementu członkowskiego. <xref:System.Security.PermissionSet> Umożliwia określenie dostęp do elementu członkowskiego.
+Tag > uprawnień \<umożliwia dokumentowanie dostępu do elementu członkowskiego. <xref:System.Security.PermissionSet> pozwala określić dostęp do elementu członkowskiego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,25 +27,25 @@ ms.locfileid: "62319944"
 
 #### <a name="parameters"></a>Parametry
 
-*Element członkowski*<br/>
-Odwołanie do elementu członkowskiego lub pola, które są dostępne do wywoływania z bieżącym środowisku kompilacji. Kompilator sprawdza, czy dany element kodu istnieje i wykonuje translację `member` nazwę kanoniczną element w danych wyjściowych XML.  Nazwę należy ująć w pojedyncze lub podwójne znaki cudzysłowu.
+*członkiem*<br/>
+Odwołanie do elementu członkowskiego lub pola, które jest dostępne do wywołania z bieżącego środowiska kompilacji. Kompilator sprawdza, czy dany element kodu istnieje i tłumaczy `member` na nazwę elementu kanonicznego w wyjściowym kodzie XML.  Ujmij nazwę w pojedyncze lub podwójne cudzysłowy.
 
 Kompilator generuje ostrzeżenie, jeśli nie znajdzie `member`.
 
-Aby uzyskać informacje na temat tworzenia cref odwołanie do typu ogólnego, zobacz [ \<zobacz >](see-visual-cpp.md).
+Aby uzyskać informacje na temat sposobu tworzenia odwołania cref do typu ogólnego, zobacz [\<see >](see-visual-cpp.md).
 
-*description*<br/>
+*zharmonizowan*<br/>
 Opis dostępu do elementu członkowskiego.
 
 ## <a name="remarks"></a>Uwagi
 
-Kompiluj przy użyciu [/doc](doc-process-documentation-comments-c-cpp.md) do Przetwarzaj komentarze dokumentacji do pliku.
+Kompiluj z [/doc](doc-process-documentation-comments-c-cpp.md) , aby przetwarzać komentarze dokumentacji do pliku.
 
-Za pomocą kompilatora MSVC będzie próbował rozpoznać odwołania cref w jednym przebiegu za pomocą komentarzy dokumentacji.  W związku z tym, jeśli przy użyciu reguł wyszukiwania C++, symbolu nie można odnaleźć kompilatora odwołania zostaną oznaczone jako nierozwiązane. Zobacz [ \<SeeAlso — >](seealso-visual-cpp.md) Aby uzyskać więcej informacji.
+Kompilator MSVC podejmie próbę rozpoznania odwołań cref w jednym przejściu poprzez Komentarze do dokumentacji.  W związku z tym, C++ w przypadku używania reguł odnośników nie znaleziono symbolu przez kompilator, odwołanie zostanie oznaczone jako nierozwiązane. Aby uzyskać więcej informacji, zobacz [\<seealso — >](seealso-visual-cpp.md) .
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // xml_permission_tag.cpp
 // compile with: /clr /doc /LD
 // post-build command: xdcmake xml_permission_tag.dll

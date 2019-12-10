@@ -1,5 +1,5 @@
 ---
-title: '&lt;przykład > (komentarze dokumentacji C++)'
+title: '> &lt;przykład (C++ Komentarze do dokumentacji)'
 ms.date: 11/04/2016
 f1_keywords:
 - <example>
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - <example> C++ XML tag
 - example C++ XML tag
 ms.assetid: c821aaa7-7ea7-4bee-9922-6705ad57f877
-ms.openlocfilehash: 69e4ad8315948c9c77e99f6ebece4debbe3831b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 384e9b9808a49770887eeda69b1d24fdd3f06027
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272536"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988317"
 ---
-# <a name="ltexamplegt"></a>&lt;Przykład&gt;
+# <a name="ltexamplegt"></a>przykład &lt;&gt;
 
-\<Przykład > należy określić przykładem przedstawiającym sposób użycia metody lub innego członka biblioteki. Często również wymagałoby to użycia [ \<kodu >](code-visual-cpp.md) tagu.
+\<przykład > tag pozwala określić przykład użycia metody lub innego elementu członkowskiego biblioteki. Zwykle obejmuje to również użycie tagu [> code\<](code-visual-cpp.md) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,16 +27,16 @@ ms.locfileid: "62272536"
 
 #### <a name="parameters"></a>Parametry
 
-*description*<br/>
-Opis przykładowego kodu.
+*zharmonizowan*<br/>
+Opis przykładu kodu.
 
 ## <a name="remarks"></a>Uwagi
 
-Kompiluj przy użyciu [/doc](doc-process-documentation-comments-c-cpp.md) do Przetwarzaj komentarze dokumentacji do pliku.
+Kompiluj z [/doc](doc-process-documentation-comments-c-cpp.md) , aby przetwarzać komentarze dokumentacji do pliku.
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // xml_example_tag.cpp
 // compile with: /clr /doc /LD
 // post-build command: xdcmake xml_example_tag.dll

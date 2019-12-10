@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Przeprowadzanie marshalingu wskaźników osadzonych za pomocą międzyoperacyjności języka C++'
+title: 'Porady: kierowanie wskaźników osadzonych za pomocą międzyoperacyjności języka C++'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - pointers [C++], marshaling
 - data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-ms.openlocfilehash: c6d622060aaf700b6ea1a3bfe797ab3190eee797
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 972d7a9c09100c35cb0bf527efbd0884c909c46d
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345737"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988184"
 ---
-# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Instrukcje: Przeprowadzanie marshalingu wskaźników osadzonych za pomocą międzyoperacyjności języka C++
+# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Porady: kierowanie wskaźników osadzonych za pomocą międzyoperacyjności języka C++
 
-Poniższy kod przykłady użycia [zarządzane, niezarządzane](../preprocessor/managed-unmanaged.md) #pragma — dyrektywy do zaimplementowania zarządzanych i niezarządzanych funkcji w tym samym pliku, ale te funkcje współpracować w taki sam sposób, jeśli zdefiniowany w oddzielnych plikach. Pliki zawierające tylko funkcji niezarządzanych nie muszą być skompilowana przy użyciu [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md).
+W poniższych przykładach kodu użyto [zarządzanych, niezarządzanych](../preprocessor/managed-unmanaged.md) #pragma dyrektyw, aby zaimplementować funkcje zarządzane i niezarządzane w tym samym pliku, ale te funkcje współdziałają w taki sam sposób, jeśli zostały zdefiniowane w oddzielnych plikach. Pliki zawierające tylko funkcje niezarządzane nie muszą być kompilowane z [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak niezarządzanej funkcji, która przyjmuje struktury zawierającej wskaźniki, można wywołać z funkcji zarządzanej. Funkcji zarządzanej tworzenia wystąpienia struktury i inicjuje osadzone wskaźnika za pomocą słowa kluczowego new (zamiast [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) — słowo kluczowe). Ponieważ to przydziela pamięć na natywnej stercie, nie ma potrzeby przypinanie tablicy, aby pominąć wyrzucania elementów bezużytecznych. Jednak pamięć muszą zostać jawnie usunięte w celu uniknięcia wycieku pamięci.
+W poniższym przykładzie pokazano, jak niezarządzana funkcja, która przyjmuje strukturę zawierającą wskaźniki, może być wywoływana z funkcji zarządzanej. Funkcja zarządzana tworzy wystąpienie struktury i inicjuje osadzony wskaźnik za pomocą słowa kluczowego new (zamiast słowa [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) ). Ponieważ spowoduje to przydzielenie pamięci na stercie natywnym, nie ma potrzeby przypinania tablicy, aby pominąć odzyskiwanie pamięci. Należy jednak jawnie usunąć pamięć, aby uniknąć wycieku pamięci.
 
-```
+```cpp
 // marshal_embedded_pointer.cpp
 // compile with: /clr
 #include <iostream>

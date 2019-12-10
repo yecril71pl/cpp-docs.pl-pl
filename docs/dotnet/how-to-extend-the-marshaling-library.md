@@ -1,42 +1,42 @@
 ---
-title: 'Instrukcje: Rozszerzanie biblioteki Marshalingu'
+title: 'Porady: rozszerzanie biblioteki kierowania'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-ms.openlocfilehash: f289539807b1e9499cef51427d3f6a494545cc60
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ab3b17638e07a54189803c83163db67c5ebf82a5
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387308"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988489"
 ---
-# <a name="how-to-extend-the-marshaling-library"></a>Instrukcje: Rozszerzanie biblioteki Marshalingu
+# <a name="how-to-extend-the-marshaling-library"></a>Porady: rozszerzanie biblioteki kierowania
 
-W tym temacie wyjaśniono, jak rozszerzanie biblioteki marshalingu, aby zapewnić więcej konwersje między typami danych. Użytkownicy mogą rozszerzanie biblioteki marshalingu podczas konwersji wszelkie dane, nie są obecnie obsługiwane przez bibliotekę.
+W tym temacie wyjaśniono, jak zwiększyć bibliotekę organizowania, aby zapewnić więcej konwersji między typami danych. Użytkownicy mogą rozszerać bibliotekę Marshal dla wszystkich konwersji danych, które nie są obecnie obsługiwane przez bibliotekę.
 
-Możesz rozszerzyć Biblioteka dotycząca organizowania w jeden z dwóch sposobów - z lub bez [marshal_context Class](../dotnet/marshal-context-class.md). Przegląd [Overview of Marshaling w C++](../dotnet/overview-of-marshaling-in-cpp.md) tematu, aby określić, czy nowe konwersja wymaga kontekstu.
+Bibliotekę Marshal można rozłożyć na dwa sposoby — z [klasą marshal_context](../dotnet/marshal-context-class.md)lub bez niej. Zapoznaj się z [omówieniem organizowania w C++ ](../dotnet/overview-of-marshaling-in-cpp.md) temacie, aby określić, czy nowa konwersja wymaga kontekstu.
 
-W obu przypadkach należy najpierw utworzyć plik dla nowych konwersji organizowania. Możesz to zrobić w celu zachowania spójności standardowe szeregowanie pliki biblioteki. Jeśli chcesz przenieść projektu do innego komputera lub do innego programisty, należy skopiować nowy plik organizowania wraz z resztą projektu. W ten sposób otrzymania projektu przez użytkownika będą miały zagwarantowane, aby otrzymać nowy konwersji i nie trzeba modyfikować dowolnych plikach bibliotek.
+W obu przypadkach należy najpierw utworzyć plik dla nowych konwersji do organizowania. Należy to zrobić, aby zachować integralność standardowych plików biblioteki do organizowania. Jeśli chcesz przenieść projekt na inny komputer lub do innego programisty, musisz skopiować nowy plik kierujący razem z resztą projektu. W ten sposób użytkownik otrzymujący projekt będzie zagwarantować otrzymywanie nowych konwersji i nie będzie musiał modyfikować żadnych plików biblioteki.
 
-### <a name="to-extend-the-marshaling-library-with-a-conversion-that-does-not-require-a-context"></a>Aby rozszerzyć Marshaling biblioteki za pomocą konwersji, która nie wymaga kontekstu
+### <a name="to-extend-the-marshaling-library-with-a-conversion-that-does-not-require-a-context"></a>Aby rozwinąć bibliotekę organizowania przy użyciu konwersji, która nie wymaga kontekstu
 
-1. Utwórz plik do przechowywania z nowych funkcji organizowania, na przykład MyMarshal.h.
+1. Utwórz plik do przechowywania nowych funkcji kierujących, na przykład Marshal. h.
 
-1. Obejmują jeden lub więcej plików biblioteki marshal:
+1. Uwzględnij co najmniej jeden plik biblioteki Marshal:
 
-   - Marshal.h dla typów podstawowych.
+   - Marshaling. h dla typów podstawowych.
 
-   - marshal_windows.h dla typów danych systemu windows.
+   - marshal_windows. h dla typów danych systemu Windows.
 
-   - marshal_cppstd.h dla C++ standardowej biblioteki typów danych.
+   - marshal_cppstd. h dla C++ typów danych biblioteki standardowej.
 
-   - marshal_atl.h ATL typów danych.
+   - marshal_atl. h dla typów danych ATL.
 
-1. Użyj kodu po wykonaniu tych kroków, aby zapisać funkcji konwersji. W tym kodzie jest typ docelowy konwersji, FROM na typ docelowy konwersji, a `from` jest parametr, który ma zostać przekonwertowany.
+1. Użyj kodu na końcu tych kroków, aby napisać funkcję konwersji. W tym kodzie, do jest typem do przekonwertowania na, z jest typem, z którego ma zostać wykonana konwersja, a `from` jest parametrem do przekonwertowania.
 
-1. Zamień na kod konwertujący komentarz dotyczący logiki konwersji `from` parametru w obiekt na typ i zwraca obiekt przekonwertowany.
+1. Zastąp komentarz dotyczący logiki konwersji za pomocą kodu, aby przekonwertować parametr `from` na obiekt typu i zwrócić przekonwertowany obiekt.
 
 ```
 namespace msclr {
@@ -49,29 +49,29 @@ namespace msclr {
 }
 ```
 
-### <a name="to-extend-the-marshaling-library-with-a-conversion-that-requires-a-context"></a>Aby rozszerzyć Biblioteka dotycząca organizowania za pomocą konwersji, która wymaga kontekstu
+### <a name="to-extend-the-marshaling-library-with-a-conversion-that-requires-a-context"></a>Aby rozwinąć bibliotekę organizowania z konwersją wymagającą kontekstu
 
-1. Utwórz plik do przechowywania z nowych funkcji organizowania, na przykład MyMarshal.h
+1. Utwórz plik do przechowywania nowych funkcji kierujących, na przykład Marshal. h
 
-1. Obejmują jeden lub więcej plików biblioteki marshal:
+1. Uwzględnij co najmniej jeden plik biblioteki Marshal:
 
-   - Marshal.h dla typów podstawowych.
+   - Marshaling. h dla typów podstawowych.
 
-   - marshal_windows.h dla typów danych systemu windows.
+   - marshal_windows. h dla typów danych systemu Windows.
 
-   - marshal_cppstd.h dla C++ standardowej biblioteki typów danych.
+   - marshal_cppstd. h dla C++ typów danych biblioteki standardowej.
 
-   - marshal_atl.h ATL typów danych.
+   - marshal_atl. h dla typów danych ATL.
 
-1. Użyj kodu po wykonaniu tych kroków, aby zapisać funkcji konwersji. W tym kodzie jest typ docelowy konwersji, FROM na typ docelowy konwersji, `toObject` jest wskaźnikiem do przechowywania wyników, a `fromObject` jest parametr, który ma zostać przekonwertowany.
+1. Użyj kodu na końcu tych kroków, aby napisać funkcję konwersji. W tym kodzie, na jest typem do przekonwertowania, z jest typem, z którego ma zostać wykonana konwersja, `toObject` jest wskaźnikiem, w którym ma być przechowywany wynik, a `fromObject` jest parametrem do przekonwertowania.
 
-1. Zastąp komentarz dotyczący inicjowanie przy użyciu kodu w celu zainicjowania `toPtr` odpowiednią wartość pusta. Na przykład, jeśli jest to wskaźnik, ustaw ją na `NULL`.
+1. Zastąp komentarz dotyczący inicjowania przy użyciu kodu, aby zainicjować `toPtr` do odpowiedniej pustej wartości. Na przykład, jeśli jest wskaźnikiem, ustaw dla niego wartość `NULL`.
 
-1. Zamień na kod konwertujący komentarz dotyczący logiki konwersji `from` parametru w obiekt *na* typu. Ten obiekt przekonwertowany będą przechowywane w `toPtr`.
+1. Zastąp komentarz dotyczący logiki konwersji z kodem, aby przekonwertować parametr `from` na obiekt typu *do* . Ten przekonwertowany obiekt będzie przechowywany w `toPtr`.
 
-1. Zastąp komentarz dotyczący ustawienie `toObject` kodem, aby ustawić `toObject` obiektowi przekonwertowana.
+1. Zamień komentarz dotyczący ustawienia `toObject` z kodem, aby ustawić `toObject` do konwertowanego obiektu.
 
-1. Zastąp komentarzy dotyczących usuwania zasobów natywnych z kodu, aby zwolnić wszystkie pamięci przydzielonej przez `toPtr`. Jeśli `toPtr` przydzieloną pamięć przy użyciu `new`, użyj `delete` zwolnienie pamięci.
+1. Zastąp komentarz dotyczący czyszczenia natywnych zasobów za pomocą kodu, aby zwolnić pamięć przydzieloną przez `toPtr`. Jeśli `toPtr` przydzielonej pamięci przy użyciu `new`, użyj `delete` do zwolnienia pamięci.
 
 ```
 namespace msclr {
@@ -104,9 +104,9 @@ namespace msclr {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład rozszerza Biblioteka dotycząca organizowania za pomocą konwersji, która nie wymaga kontekstu. W tym przykładzie kodu konwertuje informacje dotyczące pracowników z typem danych natywnych z typem danych zarządzanych.
+Poniższy przykład rozszerza bibliotekę organizowania z konwersją, która nie wymaga kontekstu. W tym przykładzie kod konwertuje informacje o pracowniku z typu danych natywnych na typ danych zarządzanych.
 
-```
+```cpp
 // MyMarshalNoContext.cpp
 // compile with: /clr
 #include <msclr/marshal.h>
@@ -156,7 +156,7 @@ int main() {
 }
 ```
 
-W poprzednim przykładzie `marshal_as` funkcja zwraca uchwyt do przekonwertowanego danych. Zostało to zrobione, aby uniknąć tworzenia dodatkowych kopię danych. Bezpośrednio przekazujących zmiennej może być spadek wydajności niepotrzebne skojarzony z.
+W poprzednim przykładzie funkcja `marshal_as` zwraca dojście do przekonwertowanych danych. Zostało to zrobione w celu uniemożliwienia tworzenia dodatkowej kopii danych. Zwrócenie zmiennej bezpośrednio spowodowałoby konieczność ponoszenia niepotrzebnego kosztu wydajności.
 
 ```Output
 Managed name: Jeff Smith
@@ -166,9 +166,9 @@ Managed zip code: 98111
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład konwertuje informacje dotyczące pracowników z typem danych zarządzanych z typem danych natywnych. Ta konwersja wymaga organizowania kontekstu.
+Poniższy przykład konwertuje informacje o pracownikach z zarządzanego typu danych na natywny typ danych. Ta konwersja wymaga kontekstu organizowania.
 
-```
+```cpp
 // MyMarshalContext.cpp
 // compile with: /clr
 #include <stdlib.h>

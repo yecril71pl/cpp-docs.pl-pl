@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4938
+title: Ostrzeżenie kompilatora (poziom 4) C4938
 ms.date: 11/04/2016
 f1_keywords:
 - C4938
 helpviewer_keywords:
 - C4938
 ms.assetid: 6acac81a-9d23-465e-b700-ed4b6e8edcd0
-ms.openlocfilehash: da2725a398a99b5943e128038e75622115a9e34f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c752b5daea42eac7c7dd0e14581d9e781aac9c96
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280207"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988738"
 ---
-# <a name="compiler-warning-level-4-c4938"></a>Kompilator ostrzeżenie (poziom 4) C4938
+# <a name="compiler-warning-level-4-c4938"></a>Ostrzeżenie kompilatora (poziom 4) C4938
 
-"var": Zmiennoprzecinkowe zmiennej redukcji punktu może spowodować niespójne wyniki w obszarze/FP: strict lub #pragma fenv_access
+"var": zmienna redukcji zmiennoprzecinkowej może spowodować niespójne wyniki w obszarze/FP: Strict lub #pragma fenv_access
 
-Nie należy używać [/FP: strict](../../build/reference/fp-specify-floating-point-behavior.md) lub [fenv_access](../../preprocessor/fenv-access.md) z OpenMP redukcji zmiennoprzecinkowych, ponieważ suma jest obliczana w innej kolejności. W związku z tym wyniki mogą różnić się od wyników, bez/OpenMP.
+Nie należy używać [/FP: Strict](../../build/reference/fp-specify-floating-point-behavior.md) ani [fenv_access](../../preprocessor/fenv-access.md) ze zmniejszeniem liczby zmiennoprzecinkowej OpenMP, ponieważ suma jest obliczana w innej kolejności. W rezultacie wyniki mogą różnić się od wyników bez/OpenMP.
 
-Poniższy przykład spowoduje wygenerowanie C4938:
+Poniższy przykład generuje C4938:
 
-```
+```cpp
 // C4938.cpp
 // compile with: /openmp /W4 /fp:strict /c
 // #pragma fenv_access(on)
@@ -36,13 +36,13 @@ double test(int first, int last) {
 }
 ```
 
-Bez jawna paralelizacja suma jest obliczana w następujący sposób:
+Bez jawnego przetwarzanie równoległe, suma jest obliczana w następujący sposób:
 
 ```
 sum = a[first] + a[first + 1] + ... + a[last];
 ```
 
-Jawna paralelizacja (i dwoma wątkami) suma jest obliczana w następujący sposób:
+W przypadku jawnego przetwarzanie równoległe (i dwóch wątków) suma jest obliczana w następujący sposób:
 
 ```
 sum1 = a[first] + ... a[first + last / 2];

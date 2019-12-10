@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Przeprowadzanie marshalingu tablic za pomocą — międzyoperacyjności języka C++'
+title: 'Porady: kierowanie tablic za pomocą międzyoperacyjności języka C++'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - C++ Interop, arrays
 - data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
-ms.openlocfilehash: 91fd86a547a0241f0cfcca7cfc36c204429d80ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fddb8b4fa645d6fee3597d098fc67a3006603b9f
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324925"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988193"
 ---
-# <a name="how-to-marshal-arrays-using-c-interop"></a>Instrukcje: Przeprowadzanie marshalingu tablic za pomocą — międzyoperacyjności języka C++
+# <a name="how-to-marshal-arrays-using-c-interop"></a>Porady: kierowanie tablic za pomocą międzyoperacyjności języka C++
 
-W tym temacie przedstawiono jeden zestaw reguł współdziałania Visual C++. Aby uzyskać więcej informacji, zobacz [za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
+Ten temat przedstawia jeden aspekt współdziałania wizualnego C++ . Aby uzyskać więcej informacji, [Zobacz C++ using Interop (niejawny PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
-Poniższy kod przykłady użycia [zarządzane, niezarządzane](../preprocessor/managed-unmanaged.md) #pragma — dyrektywy do zaimplementowania zarządzanych i niezarządzanych funkcji w tym samym pliku, ale te funkcje współpracować w taki sam sposób, jeśli zdefiniowany w oddzielnych plikach. Pliki zawierające tylko funkcji niezarządzanych nie muszą być skompilowana przy użyciu [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md).
+W poniższych przykładach kodu użyto [zarządzanych, niezarządzanych](../preprocessor/managed-unmanaged.md) #pragma dyrektyw, aby zaimplementować funkcje zarządzane i niezarządzane w tym samym pliku, ale te funkcje współdziałają w taki sam sposób, jeśli zostały zdefiniowane w oddzielnych plikach. Pliki zawierające tylko funkcje niezarządzane nie muszą być kompilowane z [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak przekazać tablicy zarządzanej do niezarządzanej funkcji. Używa funkcji zarządzanej [pin_ptr (C++sposób niezamierzony)](../extensions/pin-ptr-cpp-cli.md) do pomijania wyrzucania elementów bezużytecznych dla tablicy przed wywołaniem funkcji niezarządzanej. Dostarczając niezarządzanej funkcji za pomocą przypiętego wskaźnika do sterty GC, należy unikać obciążenie skopiowanie elementu tablicy. Wykazanie, że niezarządzanej funkcji uzyskuje dostęp do pamięci sterty GC, modyfikuje zawartości tablicy, a zmiany zostaną uwzględnione podczas funkcji zarządzanej wznawia kontroli.
+W poniższym przykładzie pokazano, jak przekazać zarządzaną tablicę do funkcji niezarządzanej. Funkcja zarządzana używa [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) , aby pominąć odzyskiwanie pamięci dla tablicy przed wywołaniem funkcji niezarządzanej. Dostarczając niezarządzaną funkcję z przypiętym wskaźnikiem do sterty GC, można uniknąć narzutu na tworzenie kopii tablicy. Aby zademonstrować, że niezarządzana funkcja uzyskuje dostęp do pamięci sterty GC, modyfikuje zawartość tablicy, a zmiany są uwzględniane, gdy zarządzana funkcja wznawia kontrolę.
 
-```
+```cpp
 // PassArray1.cpp
 // compile with: /clr
 #ifndef _CRT_RAND_S
@@ -83,9 +83,9 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, przekazując tablicę niezarządzanych do funkcji zarządzanej. Funkcji zarządzanej uzyskuje dostęp do pamięci tablica bezpośrednio (w przeciwieństwie do tworzenia tablicy zarządzanej i kopiowanie zawartości tablicy), co umożliwia zmiany wprowadzone przez funkcję zarządzanych zostaną odzwierciedlone w funkcji niezarządzanej, gdy go przez formant.
+W poniższym przykładzie pokazano przekazywanie niezarządzanej tablicy do funkcji zarządzanej. Funkcja zarządzana uzyskuje bezpośredni dostęp do pamięci tablicy (w przeciwieństwie do tworzenia zarządzanej tablicy i kopiowania zawartości tablicy), co pozwala na odzwierciedlenie zmian wprowadzonych przez funkcję zarządzaną w funkcji zarządzanej, gdy odzyska ona kontrolę.
 
-```
+```cpp
 // PassArray2.cpp
 // compile with: /clr
 #include <iostream>

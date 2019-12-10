@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Przeprowadzanie marshalingu ciągów ANSI za pomocą międzyoperacyjności języka C++'
+title: 'Porady: kierowanie ciągów ANSI za pomocą międzyoperacyjności języka C++'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,28 +9,28 @@ helpviewer_keywords:
 - C++ Interop, strings
 - data marshaling [C++], strings
 ms.assetid: 5eda2eb6-5140-40f0-82cf-7ce171fffb45
-ms.openlocfilehash: b73d8ed403ab0bbad7703f66f0d8d4ac23bb7766
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 6987b23311354cfe6fd095e0e811d043e9b9692e
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345752"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988467"
 ---
-# <a name="how-to-marshal-ansi-strings-using-c-interop"></a>Instrukcje: Przeprowadzanie marshalingu ciągów ANSI za pomocą międzyoperacyjności języka C++
+# <a name="how-to-marshal-ansi-strings-using-c-interop"></a>Porady: kierowanie ciągów ANSI za pomocą międzyoperacyjności języka C++
 
-W tym temacie pokazano, jak można ciągów ANSI przekazywane za pomocą międzyoperacyjności języka C++, ale programu .NET Framework <xref:System.String> reprezentuje ciągi w formacie Unicode, więc konwersji do ANSI jest dodatkowego kroku. Do współpracy z innymi typami parametrów, zobacz następujące tematy:
+W tym temacie pokazano, jak ciągi ANSI mogą być C++ przesyłane za pomocą międzyoperacyjności, ale <xref:System.String> .NET Framework reprezentuje ciągi w formacie Unicode, dlatego konwersja na ANSI jest dodatkowym krokiem. Aby współdziałać z innymi typami ciągów, zobacz następujące tematy:
 
 - [Instrukcje: przeprowadzanie marshalingu ciągów Unicode za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)
 
 - [Instrukcje: przeprowadzanie marshalingu ciągów COM za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)
 
-Poniższy kod przykłady użycia [zarządzane, niezarządzane](../preprocessor/managed-unmanaged.md) #pragma — dyrektywy do zaimplementowania zarządzanych i niezarządzanych funkcji w tym samym pliku, ale te funkcje współpracować w taki sam sposób, jeśli zdefiniowany w oddzielnych plikach. Ponieważ pliki zawierające tylko funkcji niezarządzanych nie muszą być kompilowane z [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md), zachowują ich charakterystyk wydajności.
+W poniższych przykładach kodu użyto [zarządzanych, niezarządzanych](../preprocessor/managed-unmanaged.md) #pragma dyrektyw, aby zaimplementować funkcje zarządzane i niezarządzane w tym samym pliku, ale te funkcje współdziałają w taki sam sposób, jeśli zostały zdefiniowane w oddzielnych plikach. Ponieważ pliki zawierające tylko funkcje niezarządzane nie muszą być kompilowane z [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../build/reference/clr-common-language-runtime-compilation.md), mogą zachować ich charakterystykę wydajności.
 
 ## <a name="example"></a>Przykład
 
-W przykładzie pokazano, przekazując ciąg ANSI z zarządzanej do niezarządzanej funkcji przy użyciu <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A>. Ta metoda przydziela pamięć na stosie niezarządzanym i zwraca adres po przeprowadzeniu konwersji. Oznacza to, że brak możliwości przypinania jest konieczne (pamięci na stercie GC nie został przekazany do funkcji niezarządzanych) i czy IntPtr zwrócone z <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> musi jawnie zwolnione lub pamięci, przecieków wyników.
+W przykładzie pokazano przekazywanie ciągu ANSI z zarządzanej do niezarządzanej funkcji przy użyciu <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A>. Ta metoda przydziela pamięć na stercie niezarządzanym i zwraca adres po przeprowadzeniu konwersji. Oznacza to, że nie jest wymagane Przypinanie (ponieważ pamięć na stercie GC nie jest przesyłana do funkcji niezarządzanej) i że element IntPtr zwrócony z <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> musi być jawnie wydawany lub mieć wyniki przecieków pamięci.
 
-```
+```cpp
 // MarshalANSI1.cpp
 // compile with: /clr
 #include <iostream>
@@ -62,9 +62,9 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, organizowanie danych wymagane do uzyskania dostępu na ciąg ANSI w funkcji zarządzanej, która jest wywoływana przez niezarządzanej funkcji. Funkcji zarządzanej, po odebraniu natywnych ciągu, można bezpośrednio korzystać lub przekonwertować na ciąg zarządzane za pośrednictwem <xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A> metodzie, jak pokazano.
+Poniższy przykład demonstruje kierowanie danych wymagane do uzyskania dostępu do ciągu ANSI w zarządzanej funkcji, która jest wywoływana przez niezarządzaną funkcję. Funkcja zarządzana, na odebranie ciągu natywnego, może użyć go bezpośrednio lub przekonwertować na ciąg zarządzany przy użyciu metody <xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A>, jak pokazano.
 
-```
+```cpp
 // MarshalANSI2.cpp
 // compile with: /clr
 #include <iostream>

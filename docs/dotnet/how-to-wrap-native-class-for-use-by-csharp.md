@@ -1,25 +1,25 @@
 ---
-title: 'Instrukcje: OPAKOWYWANIE klasy natywnej do użycia przezC#'
+title: 'Porady: opakowywanie klasy natywnej do użycia w języku C#'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - native code [C++], Visual C# and
 - classes [C++], Visual C# and
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
-ms.openlocfilehash: e58530577fdcc87f4ca168b6976a848cba29b372
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65a1b11578565e08f0be7aa04f96d3da4cbfbf7a
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387126"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988124"
 ---
-# <a name="how-to-wrap-native-class-for-use-by-c"></a>Instrukcje: OPAKOWYWANIE klasy natywnej do użycia przezC#
+# <a name="how-to-wrap-native-class-for-use-by-c"></a>Porady: opakowywanie klasy natywnej do użycia w języku C#
 
-Niniejszy przykład pokazuje, jak opakowywać natywnych klasy języka C++, dzięki czemu mogą być używane przez kod w języku C# lub innym języku .NET.
+Ten przykład pokazuje sposób zawijania klasy natywnej C++ , dzięki czemu może być używana przez kod utworzony w C#lub w innym języku .NET.
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // wrap_native_class_for_mgd_consumption.cpp
 // compile with: /clr /LD
 #include <windows.h>

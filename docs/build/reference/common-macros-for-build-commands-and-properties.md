@@ -93,12 +93,12 @@ helpviewer_keywords:
 - $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: 0de96306e645ec85562e414a96283923e93a00ad
-ms.sourcegitcommit: af4ab63866ed09b5988ed53f1bb6996a54f02484
+ms.openlocfilehash: e2c7fe6f2ea63f2cbd259e4114843fcfc28fcd84
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787099"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988329"
 ---
 # <a name="common-macros-for-msbuild-commands-and-properties"></a>Typowe makra dla poleceń i właściwości programu MSBuild
 
@@ -122,7 +122,7 @@ W tej tabeli opisano często używany podzbiór dostępnych makr; w tym miejscu 
 |**$ (FrameworkSDKDir)**|Katalog, w którym zainstalowano .NET Framework. .NET Framework można zainstalować jako część programu Visual Studio lub oddzielnie.|
 |**$ (FrameworkVersion)**|Wersja .NET Framework używana przez program Visual Studio. W połączeniu z **$ (FrameworkDir)** pełna ścieżka do wersji .NET Framework używana przez program Visual Studio.|
 |**$ (FxCopDir)**|Ścieżka do pliku FxCop. cmd. Plik FxCop. cmd nie jest instalowany ze wszystkimi wersjami programu Visual Studio.|
-|**$ (IntDir)**|Ścieżka do katalogu określonego dla plików pośrednich. Jeśli jest ścieżką względną, pliki pośrednie przechodzą do tej ścieżki dołączone do katalogu projektu. Ta ścieżka powinna mieć końcowy ukośnik. Jest on rozpoznawany jako wartość właściwości **katalogu** pośredniego. Nie używaj **$ (OutDir)** do definiowania tej właściwości.|
+|**$ (IntDir)**|Ścieżka do katalogu określonego dla plików pośrednich. Jeśli jest ścieżką względną, pliki pośrednie przechodzą do tej ścieżki dołączone do katalogu projektu. Ta ścieżka powinna mieć końcowy ukośnik. Jest on rozpoznawany jako wartość właściwości **katalogu pośredniego** . Nie używaj **$ (OutDir)** do definiowania tej właściwości.|
 |**$(OutDir)**|Ścieżka do katalogu pliku wyjściowego. Jeśli jest ścieżką względną, pliki wyjściowe przejdą do tej ścieżki dołączenia do katalogu projektu. Ta ścieżka powinna mieć końcowy ukośnik. Jest on rozpoznawany jako wartość właściwości **katalogu wyjściowego** . Nie używaj **$ (IntDir)** do definiowania tej właściwości.|
 |**$ (Platforma)**|Nazwa bieżącej platformy projektu, na przykład "Win32".|
 |**$ (Nazwaskróconaplatformy)**|Krótka nazwa bieżącej architektury, na przykład "x86" lub "x64".|
@@ -131,7 +131,7 @@ W tej tabeli opisano często używany podzbiór dostępnych makr; w tym miejscu 
 |**$(ProjectFileName)**|Nazwa pliku projektu (zdefiniowana jako nazwa podstawowa + rozszerzenie pliku).|
 |**$ (ProjectName)**|Podstawowa nazwa projektu.|
 |**$ (ProjectPath)**|Nazwa ścieżki bezwzględnej projektu (zdefiniowana jako dysk + ścieżka + nazwa podstawowa + rozszerzenie pliku).|
-|**$ (PublishDir)**|Lokalizacja wyjściowa dla elementu docelowego publikowania; zawiera końcowy ukośnik odwrotny "\\". Domyślnie jest to folder **$ (OutDir) App.\\ Publish** .|
+|**$ (PublishDir)**|Lokalizacja wyjściowa dla elementu docelowego publikowania; zawiera końcowy ukośnik odwrotny "\\". Domyślnie jest to folder **$ (OutDir) App.\\Publish** .|
 |**$ (RemoteMachine)**|Ustaw wartość właściwości **maszyna zdalna** na stronie właściwości debugowania. Aby uzyskać więcej informacji [, zobacz Zmiana ustawieńC++ projektu dla konfiguracji C/Debug](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration) .|
 |**$ (RootNameSpace)**|Przestrzeń nazw (jeśli istnieje) zawierająca aplikację.|
 |**$ (SolutionDir)**|Katalog rozwiązania (zdefiniowany jako Drive + Path); zawiera końcowy ukośnik odwrotny "\\". Zdefiniowane tylko w przypadku kompilowania rozwiązania w środowisku IDE.|
@@ -146,12 +146,12 @@ W tej tabeli opisano często używany podzbiór dostępnych makr; w tym miejscu 
 |**$ (TargetPath)**|Nazwa ścieżki bezwzględnej podstawowego pliku wyjściowego dla kompilacji (zdefiniowana jako dysk + ścieżka + nazwa podstawowa + rozszerzenie pliku).|
 |**$ (VCInstallDir)**|Katalog zawierający C++ zawartość instalacji programu Visual Studio. Ta właściwość zawiera wersję zestawu narzędzi firmy Microsoft C++ (MSVC), który może być inny niż host Visual Studio. Na przykład podczas kompilowania z `$(PlatformToolset) = v140`, **$ (VCInstallDir)** zawiera ścieżkę do instalacji programu Visual Studio 2015.|
 |**$ (VSInstallDir)**|Katalog, w którym zainstalowano program Visual Studio. Ta właściwość zawiera wersję zestawu narzędzi programu Visual Studio, który może być inny niż host programu Visual Studio. Na przykład podczas kompilowania z `$(PlatformToolset) = v110`, **$ (VSInstallDir)** zawiera ścieżkę do instalacji programu Visual Studio 2012.|
-|**$(WebDeployPath)**|Ścieżka względna od elementu głównego wdrożenia sieci Web do lokalizacji, do której należą dane wyjściowe projektu. Zwraca tę samą wartość, <xref:Microsoft.VisualStudio.VCProjectEngine.VCWebDeploymentTool.RelativePath%2A>co.|
-|**$(WebDeployRoot)**|Ścieżka bezwzględna do lokalizacji  **\<hosta lokalnego >** . Na przykład c:\inetpub\wwwroot.|
+|**$(WebDeployPath)**|Ścieżka względna od elementu głównego wdrożenia sieci Web do lokalizacji, do której należą dane wyjściowe projektu.|
+|**$(WebDeployRoot)**|Ścieżka bezwzględna do lokalizacji **\<localhost >** . Na przykład c:\inetpub\wwwroot.|
 
 ## <a name="obsolete-macros"></a>Przestarzałe makra
 
-System kompilacji dla programu C++ został znacząco zmieniony między programem visual Studio 2008 i visual Studio 2010. Wiele makr używanych we wcześniejszych typach projektów zostało zmienionych na nowe. Te makra nie są już używane lub zostały zastąpione przez jedną lub więcej wartości równoważnych lub [makr metadanych elementu](/visualstudio/msbuild/itemmetadata-element-msbuild) (_Nazwa_ **%(** **)** ). Makra oznaczone jako "zmigrowane" można aktualizować za pomocą narzędzia migracji projektu. Jeśli projekt zawierający makro jest migrowany z programu Visual Studio 2008 lub starszego do programu Visual Studio 2010, program Visual Studio konwertuje makro na równoważne bieżące makro. Nowsze wersje programu Visual Studio nie mogą konwertować projektów z programu Visual Studio 2008 i wcześniej do nowego typu projektu. Należy przekonwertować te projekty w dwóch krokach; najpierw przekonwertuj je na program Visual Studio 2010, a następnie Przekształć wynik na nowszą wersję programu Visual Studio. Aby uzyskać więcej informacji, zobacz [Omówienie potencjalnych problemów](../../porting/overview-of-potential-upgrade-issues-visual-cpp.md)z uaktualnianiem.
+System kompilacji dla programu C++ został znacząco zmieniony między programem visual Studio 2008 i visual Studio 2010. Wiele makr używanych we wcześniejszych typach projektów zostało zmienionych na nowe. Te makra nie są już używane lub zostały zastąpione przez jedną lub więcej wartości równoważnych lub [makr metadanych elementu](/visualstudio/msbuild/itemmetadata-element-msbuild) (_Nazwa_ **%(** **)** ). Makra oznaczone jako "zmigrowane" można aktualizować za pomocą narzędzia migracji projektu. Jeśli projekt zawierający makro jest migrowany z programu Visual Studio 2008 lub starszego do programu Visual Studio 2010, program Visual Studio konwertuje makro na równoważne bieżące makro. Nowsze wersje programu Visual Studio nie mogą konwertować projektów z programu Visual Studio 2008 i wcześniej do nowego typu projektu. Należy przekonwertować te projekty w dwóch krokach; najpierw przekonwertuj je na program Visual Studio 2010, a następnie Przekształć wynik na nowszą wersję programu Visual Studio. Aby uzyskać więcej informacji, zobacz [Omówienie potencjalnych problemów z uaktualnianiem](../../porting/overview-of-potential-upgrade-issues-visual-cpp.md).
 
 |Macro|Opis|
 |-----------|-----------------|
@@ -167,6 +167,6 @@ System kompilacji dla programu C++ został znacząco zmieniony między programem
 
 ## <a name="see-also"></a>Zobacz także
 
-[Projekty programu Visual Studio —C++](../creating-and-managing-visual-cpp-projects.md)\
-[Wizualne C++ przenoszenie i uaktualnianie przewodnika](../../porting/visual-cpp-porting-and-upgrading-guide.md)\
+[Projekty programu Visual Studio C++ —](../creating-and-managing-visual-cpp-projects.md)\
+[Wizualne C++ przenoszenie i uaktualnianie](../../porting/visual-cpp-porting-and-upgrading-guide.md)\
 [Omówienie potencjalnych problemów z uaktualnianiem](../../porting/overview-of-potential-upgrade-issues-visual-cpp.md)

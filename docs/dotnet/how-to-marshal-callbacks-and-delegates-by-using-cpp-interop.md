@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Kierowanie wywołań zwrotnych i delegatów za pomocą międzyoperacyjności języka C++'
+title: 'Porady: kierowanie wywołań zwrotnych i delegatów za pomocą międzyoperacyjności języka C++'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,28 +10,28 @@ helpviewer_keywords:
 - marshaling [C++], callbacks and delegates
 - callbacks [C++], marshaling
 ms.assetid: 2313e9eb-5df9-4367-be0f-14b4712d8d2d
-ms.openlocfilehash: f8088bf90162fd2177599c252b0eee6332d61289
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 592eae0ff59baddb79b810d46669b78ecc801155
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344958"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988189"
 ---
-# <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Instrukcje: Kierowanie wywołań zwrotnych i delegatów za pomocą międzyoperacyjności języka C++
+# <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Porady: kierowanie wywołań zwrotnych i delegatów za pomocą międzyoperacyjności języka C++
 
-W tym temacie przedstawiono kierowania wywołań zwrotnych i delegatów (zarządzanej wersji wywołanie zwrotne) między kodem zarządzanym i niezarządzanym przy użyciu języka Visual C++.
+W tym temacie przedstawiono kierowanie wywołań zwrotnych i delegatów (zarządzanej wersji wywołania zwrotnego) między zarządzanym i niezarządzanym kodem przy użyciu wizualizacji C++.
 
-Poniższy kod przykłady użycia [zarządzane, niezarządzane](../preprocessor/managed-unmanaged.md) #pragma — dyrektywy do zaimplementowania zarządzanych i niezarządzanych funkcji w tym samym pliku, ale można również zdefiniować funkcje w oddzielnych plikach. Pliki zawierające tylko funkcji niezarządzanych nie muszą być skompilowana przy użyciu [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md).
+W poniższych przykładach kodu użyto [zarządzanych, niezarządzanych](../preprocessor/managed-unmanaged.md) #pragma dyrektyw, aby zaimplementować funkcje zarządzane i niezarządzane w tym samym pliku, ale funkcje te można również zdefiniować w oddzielnych plikach. Pliki zawierające tylko funkcje niezarządzane nie muszą być kompilowane z [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak skonfigurować niezarządzanego interfejsu API do wyzwolenia zarządzanych delegata. Zarządzane delegata jest tworzony i jednej z metod międzyoperacyjny <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>, służy do pobierania podstawowego punktu wejścia dla delegata. Ten adres jest następnie przekazywany do niezarządzanej funkcji, który ją wywołuje nie znajomości fakt, że jest implementowana jako funkcji zarządzanej.
+Poniższy przykład pokazuje, jak skonfigurować niezarządzany interfejs API do wyzwalania zarządzanego delegata. Zarządzany delegat jest tworzony i jedna z metod międzyoperacyjnych, <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>, służy do pobrania bazowego punktu wejścia dla delegata. Ten adres jest następnie przesyłany do niezarządzanej funkcji, która wywołuje ją bez znajomości faktu, że jest zaimplementowana jako funkcja zarządzana.
 
-Należy zauważyć, że jest to możliwe, ale nie jest to konieczne, aby przypiąć delegata za pomocą [pin_ptr (C++sposób niezamierzony)](../extensions/pin-ptr-cpp-cli.md) aby zapobiec jej się ponownie lub usuwane przez moduł odśmiecania pamięci. Konieczna jest ochrona z przedwczesne wyrzucania elementów bezużytecznych, ale przypinanie chroni więcej niż jest to konieczne, ponieważ zapobiega kolekcji, ale także zapobiega relokacji.
+Należy zauważyć, że jest to możliwe, ale nie jest to konieczne, aby przypiąć delegata przy użyciu [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) , aby zapobiec jego ponownej lokalizacji lub usunięciu przez moduł wyrzucania elementów bezużytecznych. Wymagana jest ochrona przed niedojrzałym odzyskiwaniem pamięci, ale Przypinanie zapewnia większą ochronę niż jest to konieczne, ponieważ uniemożliwia zbieranie danych, ale również zapobiega relokacji.
 
-Jeśli delegat znajduje się ponownie, wyrzucanie elementów bezużytecznych, nie wpłynie to wywołanie zwrotne underlaying zarządzane, dlatego <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> służy do dodawania odwołania do delegata, umożliwiając przenoszenia obiektu delegowanego, ale uniemożliwia usuwania. Za pomocą GCHandle — zamiast pin_ptr zmniejsza ryzyko fragmentację sterty zarządzanej.
+Jeśli delegat jest ponownie zlokalizowany przez wyrzucanie elementów bezużytecznych, nie wpłynie na podwyższenie poziomu zarządzanego wywołania zwrotnego, dlatego <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> jest używany do dodawania odwołania do delegata, co pozwala na relokację delegata, ale uniemożliwianie usuwania. Użycie GCHandle zamiast pin_ptr zmniejsza możliwości fragmentacji zarządzanej sterty.
 
-```
+```cpp
 // MarshalDelegate1.cpp
 // compile with: /clr
 #include <iostream>
@@ -79,9 +79,9 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład jest podobny do poprzedniego przykładu, ale w tym przypadku wskaźnika określona funkcja jest przechowywany przez niezarządzanego interfejsu API, dzięki czemu może być wywoływany w dowolnym momencie wymagające pomijane wyrzucania elementów bezużytecznych dla dowolnego określonego czasu. W rezultacie, w poniższym przykładzie użyto globalnego wystąpienia <xref:System.Runtime.InteropServices.GCHandle> uniemożliwi delegata przenoszone, niezależne od zakresu funkcji. Zgodnie z opisem w pierwszym przykładzie, za pomocą pin_ptr nie jest konieczne w poniższych przykładach, ale w takim przypadku nie działa mimo to, jak zakres pin_ptr jest ograniczona do jednej funkcji.
+Poniższy przykład jest podobny do poprzedniego przykładu, ale w tym przypadku dostarczony wskaźnik funkcji jest przechowywany przez niezarządzany interfejs API, dzięki czemu można go wywołać w dowolnym momencie, wymagając, aby wyrzucanie elementów bezużytecznych było pomijane przez długi czas. W związku z tym Poniższy przykład używa wystąpienia globalnego <xref:System.Runtime.InteropServices.GCHandle>, aby zapobiec przeniesieniu delegata, niezależnie od zakresu funkcji. Zgodnie z opisem w pierwszym przykładzie używanie pin_ptr nie jest wymagane dla tych przykładów, ale w tym przypadku nie będzie działać, ponieważ zakres pin_ptr jest ograniczony do pojedynczej funkcji.
 
-```
+```cpp
 // MarshalDelegate2.cpp
 // compile with: /clr
 #include <iostream>

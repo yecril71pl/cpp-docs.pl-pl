@@ -8,36 +8,36 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-ms.openlocfilehash: f34af20ed3dd2c48659bdbf7794c443920dbb4e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89cca9ef42910d295cbae8bb677fb51927dbcdd2
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404484"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988535"
 ---
 # <a name="double-thunking-c"></a>Podwójna konwersja bitowa adresów (C++)
 
-Podwójna konwersja bitowa odnosi się do utraty wydajności występujący podczas wywołania funkcji w wywołaniach kontekście zarządzanych, Visual C++ zarządzane funkcji i których wykonywania programu wywołuje — funkcja natywnego punktu wejścia w celu wywołania funkcji zarządzanej. W tym temacie omówiono, gdzie występuje podwójna i jak można uniknąć, aby zwiększyć wydajność.
+Podwójny podwójna odnosi się do utraty wydajności, które można napotkać, gdy wywołanie funkcji w kontekście zarządzanym wywołuje C++ funkcję zarządzaną wizualną i gdzie wykonywanie programu wywołuje natywny punkt wejścia funkcji w celu wywołania funkcji zarządzanej. W tym temacie omówiono, gdzie występuje podwójny podwójna oraz jak można uniknąć poprawy wydajności.
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie podczas kompilowania za pomocą **/CLR**, definicja funkcji zarządzanej powoduje, że kompilator do generowania punktem wejścia zarządzanego i natywnego punktu wejścia. Dzięki temu funkcji zarządzanej do wywoływania z wywołania natywnego i zarządzanego. Jednak jeśli istnieje natywnego punktu wejścia, może być punkt wejścia dla wszystkich wywołań funkcji. Jeśli funkcja wywołująca jest zarządzany, natywnego punktu wejścia zostanie następnie wywołać zarządzany punkt wejścia. W efekcie dwóch wywołań są wymagane do wywołania funkcji (z tego powodu podwójna konwersja bitowa adresów). Na przykład funkcje wirtualne zawsze są wywoływane za pośrednictwem natywnego punktu wejścia.
+Domyślnie podczas kompilowania z **/CLR**, definicja funkcji zarządzanej powoduje, że kompilator generuje zarządzany punkt wejścia i natywny punkt wejścia. Umożliwia to wywoływanie funkcji zarządzanej z natywnych i zarządzanych lokacji wywołań. Jeśli jednak istnieje natywny punkt wejścia, może to być punkt wejścia dla wszystkich wywołań funkcji. W przypadku zarządzania funkcją wywołującą, natywny punkt wejścia będzie wywoływał zarządzany punkt wejścia. W efekcie dwa wywołania są wymagane do wywołania funkcji (w związku z tym podwójne podwójna). Na przykład funkcje wirtualne są zawsze wywoływane za pomocą natywnego punktu wejścia.
 
-Można poinformować kompilator, aby nie generować natywnego punktu wejścia dla funkcji zarządzanych, czy funkcja będzie zostać wywołana tylko z zarządzanych kontekstu przy użyciu [__clrcall](../cpp/clrcall.md) konwencji wywoływania.
+Jednym z rozwiązań jest informowanie kompilatora, aby nie generował natywnego punktu wejścia dla funkcji zarządzanej, że funkcja zostanie wywołana tylko z kontekstu zarządzanego, przy użyciu konwencji wywoływania [__clrcall](../cpp/clrcall.md) .
 
-Podobnie jeśli eksportujesz ([dllexport i dllimport](../cpp/dllexport-dllimport.md)) funkcji zarządzanej, generowany jest natywnego punktu wejścia i wywoła żadnej funkcji, które importuje i wywołuje tę funkcję za pomocą natywnego punktu wejścia. Aby uniknąć podwójna w takiej sytuacji, należy używać importu/eksportu natywny semantyki; po prostu odwoływać się do metadanych za pomocą `#using` (zobacz [# dyrektywa using](../preprocessor/hash-using-directive-cpp.md)).
+Podobnie, Jeśli eksportujesz ([dllexport, dllimport](../cpp/dllexport-dllimport.md)) funkcję zarządzaną, zostanie wygenerowany natywny punkt wejścia i każda funkcja, która importuje i wywołuje tę funkcję, będzie wywoływała za pomocą natywnego punktu wejścia. Aby uniknąć podwójnego podwójna w tej sytuacji, nie używaj natywnej semantyki eksportu/importu; po prostu Odwołuj się do metadanych za pośrednictwem `#using` (patrz [#using dyrektywy](../preprocessor/hash-using-directive-cpp.md)).
 
-Kompilator został zaktualizowany tak, aby ograniczyć niepotrzebne podwójna konwersja bitowa. Na przykład dowolnej funkcji z zarządzanym typem w sygnaturze (łącznie z typem zwracanym) zostanie niejawnie oznaczone jako `__clrcall`.
+Kompilator został zaktualizowany, aby zmniejszyć niepotrzebne podwójne podwójna. Na przykład każda funkcja z typem zarządzanym w sygnaturze (łącznie z typem zwracanym) zostanie niejawnie oznaczona jako `__clrcall`.
 
 ## <a name="example"></a>Przykład
 
 ### <a name="description"></a>Opis
 
-W poniższym przykładzie pokazano, Podwójna. Podczas kompilowania natywne (bez **/CLR**), wywołanie funkcji wirtualnej w `main` generuje jedno wywołanie `T`firmy kopiowanie konstruktora i jedno wywołanie destruktora. Podobne zachowanie jest osiągana, gdy funkcja wirtualna jest zadeklarowana za pomocą **/CLR** i `__clrcall`. Jednak gdy tylko skompilowano z opcją **/CLR**, wywołanie funkcji generuje wywołanie konstruktora kopiującego, ale ma inne wywołanie konstruktora kopiującego, ze względu na thunk native zarządzane.
+Poniższy przykład ilustruje podwójny podwójna. W przypadku skompilowania natywnego (bez **/CLR**) wywołanie funkcji wirtualnej w `main` generuje jedno wywołanie do konstruktora kopiującego `T`i jedno wywołanie do destruktora. Podobne zachowanie jest realizowane, gdy funkcja wirtualna jest zadeklarowana z **/CLR** i `__clrcall`. Jednak po prostu skompilowane z **/CLR**wywołanie funkcji generuje wywołanie konstruktora kopiującego, ale istnieje inne wywołanie konstruktora kopiującego ze względu na natywny thunk.
 
 ### <a name="code"></a>Kod
 
-```
+```cpp
 // double_thunking.cpp
 // compile with: /clr
 #include <stdio.h>
@@ -91,11 +91,11 @@ __thiscall T::~T(void)
 
 ### <a name="description"></a>Opis
 
-Poprzedni przykład przedstawione na istnienie podwójna. Niniejszy przykład pokazuje jego wpływu. `for` Pętli wywołuje funkcję wirtualną i czas wykonywania raportów programu. Najwolniejsze czas jest zgłaszany, gdy program jest skompilowany przy użyciu **/CLR**. Najszybszy czas, w którym są zgłaszane podczas kompilowania kodu bez **/CLR** lub jeśli funkcja wirtualna jest zadeklarowana za pomocą `__clrcall`.
+W poprzednim przykładzie przedstawiono istnienie podwójnej podwójna. Ten przykład pokazuje jego efekt. Pętla `for` wywołuje funkcję wirtualną, a program zgłasza czas wykonywania. Najwolniejszy czas jest raportowany, gdy program jest kompilowany z **/CLR**. Najszybsze czasy są raportowane w przypadku kompilacji bez **/CLR** lub jeśli funkcja wirtualna jest zadeklarowana przy użyciu `__clrcall`.
 
 ### <a name="code"></a>Kod
 
-```
+```cpp
 // double_thunking_2.cpp
 // compile with: /clr
 #include <time.h>

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dostęp do znaków w obiekcie System::String'
+title: 'Porady: dostęp do znaków w obiekcie System::String'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,26 +7,26 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: 6b9e30a18ab1d2b8463ccccae0b265bc20904020
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c44c5e7651bb1c5b4c28654b896cbe64bd5bec7
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222939"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988645"
 ---
-# <a name="how-to-access-characters-in-a-systemstring"></a>Instrukcje: Dostęp do znaków w obiekcie System::String
+# <a name="how-to-access-characters-in-a-systemstring"></a>Porady: dostęp do znaków w obiekcie System::String
 
-Możesz uzyskać dostęp znaków <xref:System.String> obiektu dla połączeń o wysokiej wydajności do niezarządzanych funkcji o `wchar_t*` ciągów. Metoda daje posługiwanie się nimi wskaźnik do pierwszego znaku <xref:System.String> obiektu. Tego wskaźnika można modyfikować bezpośrednio lub przypięty i przekazany do funkcji, oczekiwano zwykłej `wchar_t` ciągu.
+Do funkcji niezarządzanych, które pobierają ciągi `wchar_t*`, można uzyskać dostęp do znaków obiektu <xref:System.String>. Metoda daje wskaźnik wewnętrzny do pierwszego znaku obiektu <xref:System.String>. Ten wskaźnik może być manipulowany bezpośrednio lub przypięty i przesłany do funkcji, oczekiwany jest zwykły ciąg `wchar_t`.
 
 ## <a name="example"></a>Przykład
 
-`PtrToStringChars` Zwraca <xref:System.Char>, czyli wskaźnika wewnętrznego (znany także jako `byref`). W efekcie podlega wyrzucania elementów bezużytecznych. Nie masz przypiąć ten wskaźnik, chyba że zamierzasz przekazać go do funkcji macierzystej.
+`PtrToStringChars` zwraca <xref:System.Char>, który jest wskaźnikiem wnętrza (znanym także jako `byref`). W związku z tym podlega wyrzucaniu elementów bezużytecznych. Nie musisz przypinać tego wskaźnika, chyba że zamierzasz przekazać go do funkcji natywnej.
 
-Rozważmy poniższy kod.  Przypinanie nie jest potrzebna, ponieważ `ppchar` jest wskaźnika wewnętrznego, a jeśli moduł odśmiecania pamięci przenosi ciąg wskazuje on, również spowoduje zaktualizowanie `ppchar`. Bez [pin_ptr (C++sposób niezamierzony)](../extensions/pin-ptr-cpp-cli.md), ten kod będzie działać i nie ma potencjalnych wpływający na wydajność powodowane przez przypinanie.
+Rozważmy następujący kod.  Przypinanie nie jest potrzebne, ponieważ `ppchar` jest wskaźnikiem wnętrza, a jeśli moduł wyrzucania elementów bezużytecznych przenosi do niego ciąg, spowoduje również zaktualizowanie `ppchar`. Bez [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md)kod będzie działał i nie zostanie osiągnięty potencjalny wpływ na wydajność spowodowany przez Przypinanie.
 
-W przypadku przekazania `ppchar` funkcji macierzystej, następnie musi być przypiętego wskaźnika; moduł odśmiecania pamięci nie będzie można zaktualizować wszystkie wskaźniki w ramce stosu w niezarządzanym.
+Jeśli przejdziesz `ppchar` do funkcji natywnej, musi to być przypięty wskaźnik; Moduł wyrzucania elementów bezużytecznych nie będzie mógł zaktualizować żadnych wskaźników w niezarządzanej ramce stosu.
 
-```
+```cpp
 // PtrToStringChars.cpp
 // compile with: /clr
 #include<vcclr.h>
@@ -48,9 +48,9 @@ abcdefg
 
 ## <a name="example"></a>Przykład
 
-Przykładzie pokazano, gdy potrzebne są przypinania.
+Ten przykład pokazuje, gdzie jest wymagany Przypinanie.
 
-```
+```cpp
 // PtrToStringChars_2.cpp
 // compile with: /clr
 #include <string.h>
@@ -77,9 +77,9 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Wskaźnika wewnętrznego ma wszystkie właściwości wskaźnika natywnego języka C++. Na przykład umożliwia on zaprezentuje struktury połączonych danych, a następnie wykonaj wstawienia i usunięcia przy użyciu tylko jednego wskaźnika:
+Wewnętrzny wskaźnik ma wszystkie właściwości wskaźnika natywnego C++ . Na przykład można użyć go do przeprowadzenia połączonej struktury danych i wykonania operacji wstawiania i usuwania przy użyciu tylko jednego wskaźnika:
 
-```
+```cpp
 // PtrToStringChars_3.cpp
 // compile with: /clr /LD
 using namespace System;

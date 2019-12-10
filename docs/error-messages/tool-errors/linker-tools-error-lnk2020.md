@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2020
 ms.assetid: 4dd017d0-5e83-471b-ac8a-538ac1ed6870
-ms.openlocfilehash: 7290a90dfd92d84c4632e7f9dd38d36eccd4ac27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c6be2548e277af08f1069a70b26cd761db835bc
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386333"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988762"
 ---
 # <a name="linker-tools-error-lnk2020"></a>Błąd narzędzi konsolidatora LNK2020
 
-Nierozpoznany token 'token'
+nierozpoznany token "token"
 
-Podobnie jak Wystąpił niezdefiniowany błąd zewnętrzny, z tą różnicą, że odwołanie jest za pomocą metadanych. W metadanych muszą być zdefiniowane wszystkie funkcje i dane.
+Podobnie jak w przypadku niezdefiniowanego błędu zewnętrznego, z tą różnicą, że odwołanie jest realizowane za pośrednictwem metadanych. W metadanych należy zdefiniować wszystkie funkcje i dane.
 
-Aby rozwiązać problem:
+Aby rozwiązać:
 
-- Zdefiniuj Brak funkcję lub dane, lub
+- Zdefiniuj brakującą funkcję lub dane lub
 
-- W tym pliku obiektu biblioteki, w którym brakuje funkcję lub dane jest już zdefiniowany.
+- Dołącz plik lub bibliotekę obiektu, w której jest już zdefiniowana brakująca funkcja lub dane.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie LNK2020.
+Poniższy przykład generuje LNK2020.
 
-```
+```cpp
 // LNK2020.cpp
 // compile with: /clr /LD
 ref struct A {
@@ -46,11 +46,11 @@ ref struct B {
 
 ## <a name="example"></a>Przykład
 
-LNK2020 również wystąpi utworzyć zmienną typu zarządzanego szablonu, ale również tworzy wystąpienia typu.
+LNK2020 również będzie miała miejsce w przypadku utworzenia zmiennej typu szablonu zarządzanego, ale nie wystąpienia tego typu.
 
-Poniższy przykład spowoduje wygenerowanie LNK2020.
+Poniższy przykład generuje LNK2020.
 
-```
+```cpp
 // LNK2020_b.cpp
 // compile with: /clr
 

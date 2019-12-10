@@ -1,5 +1,5 @@
 ---
-title: Zagadnienia dotyczące pisania kodu prologu/epilogu
+title: Zagadnienia dotyczące pisania kodu prologu epilogu
 ms.date: 11/04/2016
 helpviewer_keywords:
 - stack frame layout
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - __LOCAL_SIZE constant
 - stack, stack frame layout
 ms.assetid: c7814de2-bb5c-4f5f-96d0-bcfd2ad3b182
-ms.openlocfilehash: a70c444af9e1622b3f46837fcfa2d5e8856abf30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a598ddbdd1b5f91c97e32905202e264b444c05d0
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399138"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988702"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>Zagadnienia dotyczące pisania kodu prologu/epilogu
 
 **Microsoft Specific**
 
-Przed napisaniem własnej sekwencji kodu prologu i epilogu należy zrozumieć ułożenie ramki stosu. Warto też wiedzieć, jak używać `__LOCAL_SIZE` symboli.
+Przed zapisaniem własnych sekwencji kodu prologu i epilogu ważne jest, aby zrozumieć, jak Ramka stosu jest rozłożone. Warto również wiedzieć, jak używać symbolu `__LOCAL_SIZE`.
 
-##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a> Układ ramki stosu
+##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a>Układ ramki stosu
 
 W tym przykładzie pokazano standardowy kod prologu, który może pojawić się w 32-bitowej funkcji:
 
@@ -41,22 +41,22 @@ pop         ebp           ; Restore ebp
 ret                       ; Return from function
 ```
 
-Stos zawsze powiększa się w dół (od najwyższego do najniższego adresu pamięci). Podstawowy wskaźnik (`ebp`) wskazuje na umieszczoną wartość `ebp`. Obszar zmiennych lokalnych rozpoczyna się od `ebp-4`. Aby uzyskać dostęp do zmiennych lokalnych, należy obliczyć przesunięcie z `ebp` przez odjęcie odpowiedniej wartości od `ebp`.
+Stos zawsze powiększa się w dół (od najwyższego do najniższego adresu pamięci). Podstawowy wskaźnik (`ebp`) wskazuje na umieszczoną wartość `ebp`. Obszar zmiennych lokalnych rozpoczyna się o `ebp-4`. Aby uzyskać dostęp do zmiennych lokalnych, należy obliczyć przesunięcie z `ebp` przez odjęcie odpowiedniej wartości od `ebp`.
 
-##  <a name="_pluslang___local_size"></a> __LOCAL_SIZE
+##  <a name="_pluslang___local_size"></a>__LOCAL_SIZE
 
-Kompilator zapewnia symbol, `__LOCAL_SIZE`, do użycia w bloku asemblera wbudowanego w kodzie prologu funkcji. Ten symbol jest używany do alokowania miejsca dla zmiennych lokalnych na ramce stosu w niestandardowym kodzie prologu.
+Kompilator udostępnia symbol `__LOCAL_SIZE`, do użycia w bloku asemblera wbudowanego kodu prologu funkcji. Ten symbol służy do przydzielania przestrzeni dla zmiennych lokalnych w ramce stosu w niestandardowym kodzie prologu.
 
-Kompilator określa wartość `__LOCAL_SIZE`. Jego wartość to całkowita liczba bajtów wszystkich zmiennych lokalnych zdefiniowanych przez użytkownika i zmiennych tymczasowych wygenerowanych przez kompilator. `__LOCAL_SIZE` może być używana tylko jako bezpośredni argument; Nie można użyć w wyrażeniu. Nie musisz zmienić lub ponownie definiować wartości tego symbolu. Na przykład:
+Kompilator określa wartość `__LOCAL_SIZE`. Wartość jest całkowitą liczbą bajtów wszystkich zdefiniowanych przez użytkownika zmiennych lokalnych i zmiennych tymczasowych generowanych przez kompilator. `__LOCAL_SIZE` można używać tylko jako bezpośredniego operandu; nie można jej użyć w wyrażeniu. Nie należy zmieniać ani ponownie definiować wartości tego symbolu. Na przykład:
 
 ```
 mov        eax, __LOCAL_SIZE           ;Immediate operand--Okay
 mov        eax, [ebp - __LOCAL_SIZE]   ;Error
 ```
 
-Poniższy przykład funkcji "naked", zawierający niestandardową sekwencję prologu i epilogu sekwencji używa `__LOCAL_SIZE` symboli w sekwencji prologu:
+Poniższy przykład funkcji owies, która zawiera niestandardowe wartości prologu i sekwencji epilogu używa symbolu `__LOCAL_SIZE` w sekwencji prologu:
 
-```
+```cpp
 // the__local_size_symbol.cpp
 // processor: x86
 __declspec ( naked ) int main() {
@@ -78,7 +78,7 @@ __declspec ( naked ) int main() {
 }
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

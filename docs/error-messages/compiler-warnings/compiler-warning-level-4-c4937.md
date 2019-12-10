@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4937
+title: Ostrzeżenie kompilatora (poziom 4) C4937
 ms.date: 11/04/2016
 f1_keywords:
 - C4937
 helpviewer_keywords:
 - C4937
 ms.assetid: 2bb9f0e7-bbd6-4697-84de-95955e32ae29
-ms.openlocfilehash: 64565ad37c965aa0af3b912988586b37270be6a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dd7a7f9ac3d0ce0798a88f753cb0ccb4addbd5bc
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280272"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988751"
 ---
-# <a name="compiler-warning-level-4-c4937"></a>Kompilator ostrzeżenie (poziom 4) C4937
+# <a name="compiler-warning-level-4-c4937"></a>Ostrzeżenie kompilatora (poziom 4) C4937
 
-"text1" i "Tekst2" są nierozróżnialne jako argumenty "dyrektywa"
+"Tekst1" i "Tekst2" są nierozróżniane jako argumenty dyrektywy "
 
-Ze względu na sposób kompilator przetwarza argumenty dyrektywy, nazw, które mają znaczenie dla kompilatora, takich jak słowa kluczowe w wielu liczbami w postaci tekstu (podkreślenia jedno- i formularze), nie może być wyodrębnione.
+Ze względu na sposób, w jaki kompilator przetwarza argumenty do dyrektyw, nazwy, które mają znaczenie dla kompilatora, takie jak słowa kluczowe z wieloma reprezentacjami tekstowymi (Formularze z pojedynczym i podwójnym podkreśleniem), nie można wyróżnić.
 
-Przykłady takich ciągów są __cdecl i \__forceinline.  Uwaga: w obszarze/za, są włączone tylko formularze podwójnym podkreśleniem.
+Przykładami takich ciągów są __cdecl i \__forceinline.  Uwaga w obszarze/za są włączone tylko formularze podwójnego podkreślenia.
 
-Poniższy przykład spowoduje wygenerowanie C4937:
+Poniższy przykład generuje C4937:
 
-```
+```cpp
 // C4937.cpp
 // compile with: /openmp /W4
 #include "omp.h"

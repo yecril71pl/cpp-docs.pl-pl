@@ -1,6 +1,7 @@
 ---
 title: Zgodność
-ms.date: 11/04/2016
+description: Opisuje zgodność biblioteki uniwersalnego środowiska uruchomieniowego języka Microsoft (UCRT) w standardowym języku C, POSIX, bezpieczny CRT i aplikacje ze sklepu.
+ms.date: 12/06/2019
 f1_keywords:
 - c.programs
 helpviewer_keywords:
@@ -8,32 +9,32 @@ helpviewer_keywords:
 - compatibility, C run-time libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-ms.openlocfilehash: 5e9d2edca8da128343bd14ea86a8c1c0023a244b
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: a3bc6f53d1c86268cae95e60a93576c4ac8e3e14
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446667"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988731"
 ---
 # <a name="compatibility"></a>Zgodność
 
-Uniwersalne biblioteki wykonawczej języka C (UCRT) obsługuje większość standardowej biblioteki C wymagane dla zgodności języka C++. Implementuje C99 (ISO/IEC 9899:1999) biblioteki, z wyjątkiem makra typu ogólnego, zdefiniowane w pliku \<tgmath.h >, a zgodność typów ścisłych w \<complex.h >. UCRT implementuje również dużego podzbioru POSIX.1 (ISO/IEC 9945-1:1996, interfejs aplikacji systemu POSIX) biblioteki C, ale nie jest w pełni zgodność na dowolnym określonym standard POSIX.  Ponadto UCRT implementuje kilka funkcji specyficznych dla firmy Microsoft i makra, które nie są częścią standardowej.
+Uniwersalna biblioteka uruchomieniowa C (UCRT) obsługuje większość standardowej biblioteki języka C, która jest wymagana C++ do zgodności. Implementuje bibliotekę C99 (ISO/IEC 9899:1999) z pewnymi wyjątkami: makra ogólne typu zdefiniowane w \<tgmath. h > i zgodność typu ścisłego w \<złożonym. h >. UCRT implementuje również duży Podzestaw systemu POSIX. 1 (ISO/IEC 9945-1:1996, systemowy interfejs programu aplikacji systemu POSIX) Biblioteka C. Nie jest to jednak w pełni zgodne z żadnym konkretnym standardem POSIX. UCRT implementuje także kilka funkcji i makr specyficznych dla firmy Microsoft, które nie są częścią standardu.
 
-Funkcje specyficzne dla implementacji Microsoft Visual C++ znajdują się w bibliotece vcruntime.  Wiele z tych funkcji są przeznaczone do użytku wewnętrznego i nie może być wywoływany przez kod użytkownika. Niektóre opisano do użytku w zgodności debugowania i wdrażania.
+Funkcje specyficzne dla implementacji wizualizacji C++ firmy Microsoft są dostępne w bibliotece vcruntime.  Wiele z tych funkcji służy do użytku wewnętrznego i nie może zostać wywołane przez kod użytkownika. Niektóre z nich są udokumentowane pod kątem zgodności z debugowaniem i implementacją.
 
-C++ standard zastrzega sobie nazwy rozpoczynające się od znaku podkreślenia w globalnej przestrzeni nazw do implementacji. Ponieważ funkcje POSIX znajdują się w globalnej przestrzeni nazw, ale nie są częścią standardowej biblioteki C w czasie wykonywania, implementacje specyficzne dla firmy Microsoft z tych funkcji ma wiodącego podkreślenia. Do celów przenośności, UCRT obsługuje również domyślne nazwy, ale Microsoft C++ kompilator generuje ostrzeżenie wycofywania, gdy kompilowany jest kod, który używa tych. Nazwy POSIX domyślne są przestarzałe, nie funkcji. Aby pominąć to ostrzeżenie, należy zdefiniować `_CRT_NONSTDC_NO_WARNINGS` przed dołączeniem żadnych nagłówków w kodzie, który używa oryginalnej nazwy POSIX.
+C++ Standardowe nazwy rezerw, które zaczynają się od znaku podkreślenia w globalnej przestrzeni nazw, do implementacji. Zarówno funkcje POSIX, jak i biblioteki środowiska uruchomieniowego specyficzne dla firmy Microsoft znajdują się w globalnej przestrzeni nazw, ale nie są częścią standardowej biblioteki środowiska uruchomieniowego C. Dlatego preferowane implementacje firmy Microsoft tych funkcji mają wiodący znak podkreślenia. W przypadku przenośności UCRT obsługuje również nazwy domyślne, ale kompilator firmy Microsoft C++ wystawia ostrzeżenie o zaniechaniu, gdy kod, który używa tych danych jest kompilowany. Tylko nazwy domyślne są przestarzałe, a nie same funkcje. Aby pominąć ostrzeżenie, zdefiniuj `_CRT_NONSTDC_NO_WARNINGS` przed dołączeniem nagłówków w kodzie, które używają oryginalnych nazw POSIX.
 
-Niektórych funkcji w standardowej biblioteki C ma historię użycia niebezpieczne, ze względu na parametry użyte i bufory niezaznaczone. Funkcje te są często źródła problemów z zabezpieczeniami w kodzie. Firma Microsoft utworzyła zbiór bezpieczniejsze wersje tych funkcji, które sprawdzają użycia parametrów i wywołać procedurę obsługi nieprawidłowego parametru, gdy problem zostanie wykryty w czasie wykonywania.  Domyślnie program Microsoft C++ kompilator generuje ostrzeżenia wycofywania, gdy używana jest funkcja, zawierającej bezpieczniejsze wariant dostępne. Podczas kompilowania kodu jako języka C++, można zdefiniować `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` jako 1, aby wyeliminować ostrzeżenia większość. Ta metoda korzysta przeciążenia szablonu do wywoływania wariantów bezpieczniejsze przy zachowaniu kod przenośny źródła. Aby pominąć to ostrzeżenie, należy zdefiniować `_CRT_SECURE_NO_WARNINGS` przed dołączeniem żadnych nagłówków w kodzie, który korzysta z tych funkcji. Aby uzyskać więcej informacji, zobacz [funkcje zabezpieczeń w CRT](../c-runtime-library/security-features-in-the-crt.md).
+Niektóre funkcje w standardowej bibliotece C mają historię niebezpiecznego użycia z powodu nieużywanych parametrów i niesprawdzonych buforów. Te funkcje są często źródłem problemów z zabezpieczeniami w kodzie. Firma Microsoft stworzyła zestaw bezpieczniejszych wersji tych funkcji, które weryfikują użycie parametrów. Wywołują procedurę obsługi nieprawidłowego parametru w przypadku wykrycia problemu w czasie wykonywania.  Domyślnie kompilator firmy Microsoft C++ wystawia ostrzeżenie o zaniechaniu, gdy jest używana funkcja, która ma dostęp do bezpieczniejszej wariantu. Podczas kompilowania kodu jako C++można zdefiniować `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` jako 1 w celu wyeliminowania większości ostrzeżeń. To makro umożliwia przeciążenia szablonów wywoływanie bezpieczniejszych wariantów przy zachowaniu przenośnego kodu źródłowego. Aby pominąć ostrzeżenie, zdefiniuj `_CRT_SECURE_NO_WARNINGS` przed dołączeniem nagłówków w kodzie, które korzystają z tych funkcji. Aby uzyskać więcej informacji, zobacz [funkcje zabezpieczeń w CRT](../c-runtime-library/security-features-in-the-crt.md).
 
-Z wyjątkiem wymienionych w dokumentacji dla określonych funkcji UCRT jest zgodny z interfejsu API Windows.  Niektóre funkcje nie są obsługiwane w aplikacjach systemu Windows 8 Store lub w aplikacjach Windows platformy Uniwersalnej systemu Windows 10. Te funkcje są wymienione w [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md), która wylicza funkcje nie są obsługiwane przez środowisko wykonawcze Windows i [platformy uniwersalnej systemu Windows](/uwp).
+Z wyjątkiem sytuacji, w której zaznaczono w dokumentacji dotyczącej określonych funkcji, UCRT jest zgodny z interfejsem API systemu Windows.  Niektóre funkcje nie są obsługiwane w aplikacjach Windows Store i platforma uniwersalna systemu Windows ([platformy UWP](/uwp)). Te funkcje są wymienione w [funkcjach CRT nieobsługiwanych w aplikacjach platforma uniwersalna systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="related-articles"></a>Powiązane artykuły
 
 |Tytuł|Opis|
 |-----------|-----------------|
-|[Aplikacje platformy uniwersalnej systemu Windows, środowisko uruchomieniowe systemu Windows i środowisko wykonawcze języka C](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|Opisuje, kiedy procedury UCRT nie są zgodne z aplikacji Universal Windows lub aplikacji Microsoft Store.|
-|[Zgodność ANSI-C](../c-runtime-library/ansi-c-compliance.md)|W tym artykule opisano, zgodne standard nazewnictwa w UCRT.|
-|[UNIX](../c-runtime-library/unix.md)|Zawiera wskazówki dotyczące przenoszenia programów do systemu UNIX.|
-|[Platformy systemu Windows (CRT)](../c-runtime-library/windows-platforms-crt.md)|Wyświetla listę systemów operacyjnych, które są obsługuje CRT.|
-|[Zgodność ze starszymi wersjami](../c-runtime-library/backward-compatibility.md)|W tym artykule opisano sposób mapowania starych nazw CRT na nowe licencje.|
-|[Biblioteka CRT, funkcje](../c-runtime-library/crt-library-features.md)|Zawiera omówienie plików biblioteki (.lib) CRT i opcje kompilatora skojarzone.|
+|[Aplikacje platformy uniwersalnej systemu Windows, środowisko uruchomieniowe systemu Windows i środowisko wykonawcze języka C](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|Opisuje, kiedy procedury UCRT są niezgodne z aplikacjami uniwersalnymi systemu Windows lub aplikacjami Microsoft Store.|
+|[Zgodność ANSI-C](../c-runtime-library/ansi-c-compliance.md)|Opisuje zgodne ze standardami nazewnictwo w UCRT.|
+|[UNIX](../c-runtime-library/unix.md)|Zawiera wytyczne dotyczące przenoszenia programów do systemu UNIX.|
+|[Platformy systemu Windows (CRT)](../c-runtime-library/windows-platforms-crt.md)|Zawiera listę systemów operacyjnych obsługiwanych przez technologię CRT.|
+|[Zgodność ze starszymi wersjami](../c-runtime-library/backward-compatibility.md)|Opisuje sposób mapowania starych nazw CRT na nowe.|
+|[Biblioteka CRT, funkcje](../c-runtime-library/crt-library-features.md)|Zawiera omówienie plików biblioteki CRT (. lib) i skojarzonych z nimi opcji kompilatora.|

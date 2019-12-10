@@ -1,27 +1,27 @@
 ---
-title: 'Instrukcje: Modyfikowanie klasy odwołań w funkcji natywnej'
+title: 'Porady: modyfikowanie klasy odwołań w funkcji natywnej'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - platform invoke, reference class
 - reference types, modifying in a C++ native function
 ms.assetid: c701145b-62a0-4c4b-b32a-db8d69a59720
-ms.openlocfilehash: c24bca5269cc924482c727d921fd24310f016824
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3368c8cde3d48be1c72fcc0d7b99f2d0ecb10d7
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404393"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988230"
 ---
-# <a name="how-to-modify-reference-class-in-a-native-function"></a>Instrukcje: Modyfikowanie klasy odwołań w funkcji natywnej
+# <a name="how-to-modify-reference-class-in-a-native-function"></a>Porady: modyfikowanie klasy odwołań w funkcji natywnej
 
-Możesz przekazać klasy odwołania z tablicą CLR funkcji macierzystej i Modyfikuj klasę, za pomocą usług PInvoke.
+Można przekazać klasę referencyjną z tablicą CLR do funkcji natywnej i zmodyfikować klasę przy użyciu usługi PInvoke.
 
 ## <a name="example"></a>Przykład
 
-Skompiluj następujący natywnej biblioteki.
+Skompiluj poniższą bibliotekę natywną.
 
-```
+```cpp
 // modify_ref_class_in_native_function.cpp
 // compile with: /LD
 #include <stdio.h>
@@ -49,9 +49,9 @@ extern "C"  {
 
 ## <a name="example"></a>Przykład
 
-Kompilowanie następującego zestawu.
+Kompiluj następujący zestaw.
 
-```
+```cpp
 // modify_ref_class_in_native_function_2.cpp
 // compile with: /clr
 using namespace System;

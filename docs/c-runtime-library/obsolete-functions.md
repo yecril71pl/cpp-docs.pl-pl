@@ -1,6 +1,7 @@
 ---
 title: Przestarzałe funkcje
-ms.date: 01/22/2019
+description: Wyświetla listę przestarzałych funkcji, które zostały wycofane i usunięte z biblioteki środowiska uruchomieniowego Microsoft C (CRT).
+ms.date: 12/09/2019
 api_name:
 - _beep
 - _sleep
@@ -53,16 +54,16 @@ helpviewer_keywords:
 - _sleep function
 - _seterrormode function
 ms.assetid: 8e14c2d4-1481-4240-8586-47eb43db02b0
-ms.openlocfilehash: da5bd0569e7116bfd45e6112da8231d6fc2c9b44
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c913e44a4f0d06813e877645bd01855baa6fd4dc
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940144"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988774"
 ---
 # <a name="obsolete-functions"></a>Przestarzałe funkcje
 
-Niektóre funkcje biblioteki są przestarzałe i mają nowsze odpowiedniki. Zalecamy zmianę tych wersji na zaktualizowane. Inne przestarzałe funkcje zostały usunięte z CRT. W tym temacie wymieniono funkcje przestarzałe jako przestarzałe i funkcje usunięte w określonej wersji programu Visual Studio.
+Niektóre funkcje biblioteki są przestarzałe i mają nowsze odpowiedniki. Zalecamy zmianę tych funkcji do zaktualizowanych wersji. Inne przestarzałe funkcje zostały usunięte z CRT. W tym artykule wymieniono funkcje przestarzałe jako przestarzałe oraz funkcje usunięte w określonej wersji programu Visual Studio.
 
 ## <a name="deprecated-as-obsolete-in-visual-studio-2015"></a>Przestarzałe jako przestarzałe w programie Visual Studio 2015
 
@@ -87,10 +88,8 @@ Niektóre funkcje biblioteki są przestarzałe i mają nowsze odpowiedniki. Zale
 |[_get_output_format](../c-runtime-library/get-output-format.md)|Brak|
 |[_heapadd](../c-runtime-library/heapadd.md)|Brak|
 |[_heapset](../c-runtime-library/heapset.md)|Brak|
-|[inp, inpw](../c-runtime-library/inp-inpw.md)|Brak|
-|[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|Brak|
-|[outp, outpw](../c-runtime-library/outp-outpw.md)|Brak|
-|[_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|Brak|
+|[INP, inpw, _inp, _inpw _inpd](../c-runtime-library/inp-inpw-inpd.md)|Brak|
+|[Outp, outpw, _outp, _outpw _outpd](../c-runtime-library/outp-outpw-outpd.md)|Brak|
 |[_set_output_format](../c-runtime-library/set-output-format.md)|Brak|
 
 ## <a name="removed-from-the-crt-in-earlier-versions-of-visual-studio"></a>Usunięte z CRT we wcześniejszych wersjach programu Visual Studio

@@ -1,5 +1,5 @@
 ---
-title: '&lt;wyjątek > (komentarze dokumentacji C++)'
+title: '> &lt;wyjątku (C++ Komentarze do dokumentacji)'
 ms.date: 11/04/2016
 f1_keywords:
 - exception
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - <exception> C++ XML tag
 - exception C++ XML tag
 ms.assetid: 24451e79-9b89-4b77-98fb-702c6516b818
-ms.openlocfilehash: 327c1bc27f4ae71aa214e09f375f963dad5b33d7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ddfe647fa2db55b3ca606265011896a66398a8a2
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292968"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988296"
 ---
 # <a name="ltexceptiongt"></a>&lt;wyjątek&gt;
 
-\<Wyjątku > należy określić, które wyjątki mogą zostać wygenerowane. Ten tag jest stosowany do definicji metody.
+Tag \<Exception > pozwala określić, które wyjątki mogą być zgłaszane. Ten tag jest stosowany do definicji metody.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,25 +27,25 @@ ms.locfileid: "62292968"
 
 #### <a name="parameters"></a>Parametry
 
-*Element członkowski*<br/>
-Odwołanie do wyjątek, który jest dostępny w bieżącym środowisku kompilacji. Przy użyciu reguł wyszukiwania nazwy, kompilator sprawdza, czy dany wyjątek istnieje i tłumaczy `member` nazwę kanoniczną element w danych wyjściowych XML.  Kompilator generuje ostrzeżenie, jeśli nie znajdzie `member`.
+*członkiem*<br/>
+Odwołanie do wyjątku, które jest dostępne w bieżącym środowisku kompilacji. Przy użyciu reguł wyszukiwania nazw kompilator sprawdza, czy dany wyjątek istnieje i tłumaczy `member` na nazwę elementu kanonicznego w wyjściowym kodzie XML.  Kompilator generuje ostrzeżenie, jeśli nie znajdzie `member`.
 
-Nazwę należy ująć w pojedyncze lub podwójne znaki cudzysłowu.
+Ujmij nazwę w pojedyncze lub podwójne cudzysłowy.
 
-Aby uzyskać informacje na temat tworzenia cref odwołanie do typu ogólnego, zobacz [ \<zobacz >](see-visual-cpp.md).
+Aby uzyskać informacje na temat sposobu tworzenia odwołania cref do typu ogólnego, zobacz [\<see >](see-visual-cpp.md).
 
-*description*<br/>
+*zharmonizowan*<br/>
 Opis.
 
 ## <a name="remarks"></a>Uwagi
 
-Kompiluj przy użyciu [/doc](doc-process-documentation-comments-c-cpp.md) do Przetwarzaj komentarze dokumentacji do pliku.
+Kompiluj z [/doc](doc-process-documentation-comments-c-cpp.md) , aby przetwarzać komentarze dokumentacji do pliku.
 
-Za pomocą kompilatora MSVC będzie próbował rozpoznać odwołania cref w jednym przebiegu za pomocą komentarzy dokumentacji.  W związku z tym, jeśli przy użyciu reguł wyszukiwania C++, symbolu nie można odnaleźć kompilatora odwołania zostaną oznaczone jako nierozwiązane. Zobacz [ \<SeeAlso — >](seealso-visual-cpp.md) Aby uzyskać więcej informacji.
+Kompilator MSVC podejmie próbę rozpoznania odwołań cref w jednym przejściu poprzez Komentarze do dokumentacji.  W związku z tym, C++ w przypadku używania reguł odnośników nie znaleziono symbolu przez kompilator, odwołanie zostanie oznaczone jako nierozwiązane. Aby uzyskać więcej informacji, zobacz [\<seealso — >](seealso-visual-cpp.md) .
 
 ## <a name="example"></a>Przykład
 
-```
+```cpp
 // xml_exception_tag.cpp
 // compile with: /clr /doc /LD
 // post-build command: xdcmake xml_exception_tag.dll

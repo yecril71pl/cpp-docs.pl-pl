@@ -9,16 +9,16 @@ helpviewer_keywords:
 - calling native functions from managed code
 - interop [C++], calling native functions from managed code
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
-ms.openlocfilehash: 285bfabbd5935df303a39ada11c388713ae24f34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50f40cc147daaa26a7fa4e607f0d4dd42cf22d61
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209194"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988665"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Wywoływanie funkcji natywnych z kodu zarządzanego
 
-Środowisko uruchomieniowe języka wspólnego zapewnia platformę wywołania usług lub jako PInvoke, które umożliwia zarządzanemu kodowi można wywoływać funkcje w stylu języka C z macierzystych bibliotek łączonych dynamicznie (dll). Takie samo szeregowanie danych jest używany jak dla współdziałania COM ze środowiskiem uruchomieniowym i dla "It Just Works", lub mechanizmu IJW.
+Środowisko uruchomieniowe języka wspólnego (CLR) zapewnia platformę wywołania usług lub jako PInvoke, które umożliwia zarządzanemu kodowi wywoływanie funkcji w stylu C z macierzystych bibliotek łączonych dynamicznie (DLL). Takie samo szeregowanie danych jak dla współdziałania COM jest zastosowane dla środowiska uruchomieniowego dla „It Just Works,” lub mechanizmu IJW.
 
 Aby uzyskać więcej informacji, zobacz:
 
@@ -26,16 +26,16 @@ Aby uzyskać więcej informacji, zobacz:
 
 - [Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
 
-Przykłady w tym rozdziale jedynie ilustrują jak `PInvoke` mogą być używane. `PInvoke` może uprościć serializację dostosowanych danych, ponieważ użytkownik podaje informacje dotyczące serializacji deklaratywnie w atrybutach zamiast wpisywać kod procedury.
+Przykłady w tym rozdziale jedynie ilustrują jak `PInvoke` może być zastosowany. `PInvoke` może uprościć serializację dostosowanych danych, ponieważ użytkownik podaje informacje dotyczące serializacji deklaratywnie w atrybutach zamiast wpisywać kod procedury serializacji.
 
 > [!NOTE]
->  Biblioteka organizowania zawiera alternatywny sposób organizowania danych między środowiskami macierzystymi i zarządzanymi w sposób zoptymalizowany. Zobacz [Overview of Marshaling w C++](../dotnet/overview-of-marshaling-in-cpp.md) Aby uzyskać więcej informacji dotyczących biblioteki masrhaling. Biblioteka organizatora jest przydatna, tylko do danych, a nie funkcji.
+>  Biblioteka organizowania zawiera alternatywny sposób organizowania danych między środowiskami macierzystymi i zarządzanymi w sposób zoptymalizowany. Zobacz [Omówienie organizowania w programie C++ ](../dotnet/overview-of-marshaling-in-cpp.md) , aby uzyskać więcej informacji na temat biblioteki organizowania. Biblioteka organizatora jest przydatna tylko do danych, nie dla funkcji.
 
 ## <a name="pinvoke-and-the-dllimport-attribute"></a>Funkcja PInvoke i atrybut DllImport
 
-Poniższy przykład pokazuje użycie `PInvoke` w programie Visual C++. Funkcji macierzystej jest zdefiniowane w msvcrt.dll. Atrybut DllImport służy do deklaracji umieszczania.
+Poniższy przykład pokazuje użycie klasy `PInvoke` w programie Visual C++. Umieszczenie funkcji macierzystej jest zdefiniowane w msvcrt.dll. Atrybut DllImport służy do deklaracji umieszczania.
 
-```
+```cpp
 // platform_invocation_services.cpp
 // compile with: /clr
 using namespace System;
@@ -52,7 +52,7 @@ int main() {
 
 Poniższy przykład jest równoważny poprzedniemu, ale używa IJW.
 
-```
+```cpp
 // platform_invocation_services_2.cpp
 // compile with: /clr
 using namespace System;
@@ -71,29 +71,29 @@ int main() {
 
 ### <a name="advantages-of-ijw"></a>Zalety IJW
 
-- Nie ma konieczności zapisywania `DLLImport` atrybutu deklaracji dla niezarządzanych API używanych przez program. Po prostu Dołącz plik nagłówkowy i łącze z biblioteką importu.
+- Nie ma konieczności zapisywania deklaracji atrybutów `DLLImport` dla niezarządzanych API używanych przez program. Po prostu dołącz plik nagłówkowy i łącze z biblioteką importu.
 
-- Mechanizm IJW jest trochę szybszy (na przykład wycinków IJW nie musi sprawdzać konieczności przypięcie lub skopiowania elementów danych ponieważ jawnie wykonywane przez dewelopera).
+- Mechanizm IJW jest trochę szybszy (na przykład fragmenty IJW nie muszą sprawdzać konieczności przypięcie lub skopiowania elementów danych, gdyż jest to jawnie wykonywane przez programistę).
 
-- Wyraźnie pokazuje problemy z wydajnością. W tym przypadku fakt, że tłumaczy z ciągu Unicode na ciąg ANSI i mieć towarzyszącej alokacji i dezalokacji pamięci. W tym przypadku Projektant wpisujący kod za pomocą IJW zda sobie sprawę, że wywołanie `_putws` i przy użyciu `PtrToStringChars` byłoby lepsze dla wydajności.
+- Wyraźnie pokazuje problemy z wydajnością. W tym przypadku użytkownik tłumaczy z ciągu Unicode na ciąg ANSI i posiada funkcję alokacji i dezalokacji pamięci pomocniczej. W tym przypadku projektant wpisujący kod za pomocą IJW zda sobie sprawę, że wywołanie `_putws` i wykorzystanie `PtrToStringChars` byłoby lepsze dla wydajności.
 
-- Jeśli wywołasz wiele niezarządzanych interfejsów API przy użyciu tych samych danych zorganizowanie ich raz i przesłanie kopii zorganizowanej jest znacznie bardziej efektywne niż powtórne organizowanie za każdym razem.
+- Jeśli wywołasz wiele niezarządzanych interfejsów programowania aplikacji (API) przy użyciu tych samych danych, to zorganizowanie ich raz i przesłanie kopii zorganizowanej jest znacznie bardziej efektywne niż powtórne organizowanie za każdym razem.
 
 ### <a name="disadvantages-of-ijw"></a>Wady IJW
 
 - Kierowanie musi być określona wyraźnie w kodzie, a nie przez atrybuty (które często mają odpowiednie wartości domyślne).
 
-- Organizowanie kodu jest w tekście, gdzie jest bardziej inwazyjne w procesie logiki aplikacji.
+- Organizowanie kodu odbywa się wewnętrznie, gdzie jest bardziej inwazyjne w procesie logiki aplikacji.
 
-- Ponieważ jawne organizowania interfejsy API zwracają `IntPtr` typów przenośności 32-bitowej do 64-bitowych, należy użyć dodatkowych `ToPointer` wywołania.
+- Ponieważ jawne kierujący interfejs API zwraca `IntPtr` typy przenośne 32-bitowej do 64-bitowe, należy użyć dodatkowych `ToPointer` wywołań.
 
-Określonej metody udostępnianych przez C++ jest bardziej wydajną metodą, kosztem dodatkowej złożoności.
+Specjalna metoda eksponowana przez C++ jest bardziej wydajną metodą zewnętrzną kosztem dodatkowej złożoności.
 
-Jeśli aplikacja wykorzystuje głównie niezarządzane typy danych lub jeśli wywołuje więcej niezarządzanych interfejsów API niż interfejsów API programu .NET Framework, zalecane jest użycie funkcji IJW. Aby wywołać przypadkowy niezarządzany API w większości zarządzanej aplikacji, wybór jest bardziej subtelny.
+Jeśli aplikacja wykorzystuje głównie niezarządzane typy danych lub jeśli wywołuje więcej niezarządzanych interfejsów API niż interfejsów API .NET Framework, zalecamy użycie funkcji IJW. Aby wywołać przypadkowy niezarządzany API w większości zarządzanej aplikacji, wybór jest bardziej subtelny.
 
-## <a name="pinvoke-with-windows-apis"></a>Mechanizm PInvoke z interfejsami API Windows
+## <a name="pinvoke-with-windows-apis"></a>Mechanizm PInvoke z interfejsami API systemu Windows
 
-Mechanizm PInvoke jest wygodny w przypadku wywołania funkcji w Windows.
+Mechanizm PInvoke jest wygodny w przypadku wywołania funkcji w systemie Windows.
 
 W tym przykładzie program Visual C++ współdziała z funkcją MessageBox, która jest częścią interfejsu Win32 API.
 
@@ -113,28 +113,28 @@ int main() {
 }
 ```
 
-Wynik to okno komunikatu, tytułem PInvoke Test, który zawiera tekst Witaj, świecie!.
+Wynik to okno komunikatu z tytułem PInvoke Test zawierające tekst Witaj Świecie!
 
-Informacje dotyczące organizowania jest również używane przez PInvoke do wyszukiwania funkcji w bibliotece DLL. W bibliotece user32.dll nie jest w rzeczywistości nie funkcji MessageBox, ale CharSet = Charset:: ANSI umożliwia funkcji PInvoke w celu użycia MessageBoxA, wersji ANSI zamiast MessageBoxW, która jest wersją Unicode. Ogólnie rzecz biorąc zaleca się używanie wersje Unicode niezarządzanych interfejsów API, ponieważ eliminuje to narzut tłumaczenia z natywnego formatu Unicode obiektów ciągu .NET Framework do ANSI.
+Informacje dotyczące organizowania są również używane przez PInvoke do wyszukiwania funkcji w bibliotece DLL. W bibliotece user32.dll nie ma w rzeczywistości funkcji MessageBox, ale element CharSet=CharSet::Ansi umożliwia włączenie funkcji PInvoke w celu użycia MessageBoxA, wersji ANSI zamiast MessageBoxW, która jest wersją Unicode. Ogólnie rzecz biorąc, zaleca się używanie wersje Unicode niezarządzanych interfejsów API, ponieważ eliminuje to narzut tłumaczenia z natywnego formatu Unicode obiektów ciągu .NET Framework do ANSI.
 
 ## <a name="when-not-to-use-pinvoke"></a>Kiedy nie należy używać PInvoke
 
-Za pomocą funkcji PInvoke nie jest odpowiednie dla wszystkich funkcji stylu C w dll. Na przykład załóżmy, że jest funkcja MakeSpecial w mylib.dll zadeklarowana w następujący sposób:
+korzystanie z PInvoke nie jest odpowiednie dla wszystkich funkcji stylu C w DLL. Załóżmy na przykład, że w bibliotece mylib.dll jest funkcja MakeSpecial, zadeklarowana w następujący sposób:
 
 `char * MakeSpecial(char * pszString);`
 
-Jeśli używamy funkcji PInvoke w aplikacji Visual C++, możemy napisać coś podobnego do następującego:
+Jeśli używamy funkcji PInvoke w aplikacji Visual C++, możemy napisać coś podobnego do:
 
 ```cpp
 [DllImport("mylib")]
 extern "C" String * MakeSpecial([MarshalAs(UnmanagedType::LPStr)] String ^);
 ```
 
-Trudności w tym miejscu jest, że firma Microsoft nie można usunąć pamięci dla niezarządzanego ciągu zwracanego przez MakeSpecial. Inne funkcje wywoływane za pośrednictwem funkcji PInvoke zwracają wskaźnik do wewnętrznego buforu, którego nie będzie musiał zostać cofnięta przez użytkownika. W tym przypadku korzystanie z funkcji IJW jest oczywistym wyborem.
+Trudność polega na tym, że firma Microsoft nie można usunąć pamięci dla niezarządzanego ciągu zwracanego przez MakeSpecial. Inne funkcje wywoływane za pośrednictwem funkcji PInvoke zwracają wskaźnik do wewnętrznego buforu, którego użytkownik nie musi odwołać. W tym przypadku korzystanie z funkcji IJW jest oczywistym wyborem.
 
 ## <a name="limitations-of-pinvoke"></a>Ograniczenia funkcji PInvoke
 
-Nie można zwrócić dokładnie tego samego wskaźnika z funkcji natywnej, która została przyjęta jako parametr. Jeśli funkcja natywna zwraca wskaźnik, który został przekazany do niego przez PInvoke, może nastąpić uszkodzenie pamięci i wyjątków.
+Nie można przywrócić dokładnie tego samego wskaźnika z funkcji natywnej, która została przyjęta jako parametr. Jeśli funkcja natywna zwraca wskaźnik, który został przekazany przez PInvoke, może pojawić się uszkodzenie pamięci i wyjątki.
 
 ```cpp
 __declspec(dllexport)
@@ -143,9 +143,9 @@ char* fstringA(char* param) {
 }
 ```
 
-Poniższy przykład ukazuje ten problem, a mimo że program może wydawać się, aby zapewnić poprawne dane wyjściowe, dane wyjściowe pochodzą z pamięci, która zostały uwolniona.
+Poniższy przykład ukazuje ten problem, a nawet, jeśli wydaje się, że program podaje poprawne dane wyjściowe, dane wyjściowe pochodzą z pamięci, która zostały uwolniona.
 
-```
+```cpp
 // platform_invocation_services_5.cpp
 // compile with: /clr /c
 using namespace System;
@@ -168,39 +168,39 @@ int main() {
 
 ## <a name="marshaling-arguments"></a>Kierowanie argumentami
 
-Za pomocą `PInvoke`, nie jest konieczne szeregowanie między zarządzanymi i natywnymi prymitywnymi typami C++ za pomocą tego samego formularza. Na przykład zarządzanie nie jest wymagane między Int32 a int lub między Double a double.
+Dzięki `PInvoke`, nie jest konieczne szeregowanie między zarządzanymi i natywnymi prymitywnymi typami C++ o tej samej formie. Na przykład zarządzanie nie jest wymagane między Int32 a int lub między Double a double.
 
-Jednakże musisz zarządzać typami, które nie mają tego samego formularza. Obejmuje to typy char, string i struktury. W poniższej tabeli przedstawiono mapowania używane przez organizatora dla różnych typów:
+Jednakże musisz zarządzać typami, które nie mają tego samego formularza. Obejmuje to znaki, ciągi typy struktury. W poniższej tabeli przedstawiono mapowania używane przez organizatora dla różnych typów:
 
-|wtypes.h|Visual C++|Visual C++ z/CLR|Środowisko uruchomieniowe języka wspólnego|
+|wtypes.h|Visual C++|Visual C++ z /clr|Środowisko uruchomieniowe języka wspólnego|
 |--------------|------------------|-----------------------------|-----------------------------|
-|UCHWYT|Void \*|Void \*|IntPtr, UIntPtr|
+|HANDLE|\* void|\* void|IntPtr, UIntPtr|
 |BYTE|unsigned char|unsigned char|Byte|
-|KRÓTKA|short|short|Int16|
+|KRÓTKI|short|short|Int16|
 |WORD|unsigned short|unsigned short|UInt16|
 |INT|int|int|Int32|
 |UINT|unsigned int|unsigned int|UInt32|
-|DŁUGI|long|long|Int32|
-|WARTOŚĆ LOGICZNA|long|bool|Boolean|
+|LONG|long|long|Int32|
+|BOOL|long|bool|Boolean|
 |DWORD|unsigned long|unsigned long|UInt32|
 |ULONG|unsigned long|unsigned long|UInt32|
 |CHAR|char|char|Char|
-|LPCSTR|Char \*|String ^ [in], StringBuilder ^ [w, zewnętrzne]|String ^ [in], StringBuilder ^ [w, zewnętrzne]|
-|LPCSTR|Const char \*|String ^|String|
-|LPWSTR|wchar_t \*|String ^ [in], StringBuilder ^ [w, zewnętrzne]|String ^ [in], StringBuilder ^ [w, zewnętrzne]|
-|LPCWSTR|Const wchar_t \*|String ^|String|
-|FLOAT|float|float|Single|
-|DOUBLE|double|double|Double|
+|LPCSTR|\* char|String ^ [in], StringBuilder ^ [in, out]|String ^ [in], StringBuilder ^ [in, out]|
+|LPCSTR|stała char \*|Ciąg ^|String|
+|LPWSTR|wchar_t \*|String ^ [in], StringBuilder ^ [in, out]|String ^ [in], StringBuilder ^ [in, out]|
+|LPCWSTR|stała wchar_t \*|Ciąg ^|String|
+|ZWOLNIJ|float|float|Single|
+|WARTOŚĆ DWUBAJTOWA|double|double|Double|
 
-Organizator niestandardowy automatycznie Przypina pamięć przydzieloną na stosie uruchomieniowym, jeśli adres jest przekazywany do niezarządzanej funkcji. Przypinanie Zapobiega przenoszeniu przydzielonego bloku pamięci podczas kompaktowania przez mechanizmu moduł odśmiecania pamięci.
+Organizator niestandardowy automatycznie przypina pamięć przydzieloną na stosie uruchomieniowym, jeśli adres jest przekazywany do niezarządzanej funkcji. Przypinanie zapobiega przenoszeniu przydzielonego bloku pamięci podczas kompaktowania przez mechanizmu odśmiecacza.
 
-W przykładzie przedstawionym wcześniej w tym temacie, parametr CharSet elementu DllImport określa sposób zarządzane ciągi powinny być wprowadzane; w tym przypadku powinny być wprowadzane do ciągów ANSI do strony natywnej.
+W przykładzie przedstawionym wcześniej w tym temacie, parametr CharSet elementu DllImport określa sposób, w jaki ciągi zarządzane powinny być wprowadzane; w tym przypadku powinny być wprowadzane do ciągów ANSI do strony natywnej.
 
-Możesz określić szeregowanie informacji dla indywidualnych argumentów funkcji natywnej, używając atrybutu MarshalAs. Istnieje kilka możliwości ciągu \* argumentu: BStr, ANSIBStr, TBStr, LPStr, LPWStr oraz LPTStr. Domyślna wartość to LPStr.
+Możesz określić szeregowanie informacji dla indywidualnych argumentów funkcji natywnej, używając atrybutu MarshalAs. Istnieje kilka opcji organizowania ciągu \* argument: BStr, ANSIBStr, TBStr, LPStr, LPWStr i LPTStr. Domyślna wartość to LPStr.
 
-W tym przykładzie ciąg jest przekazywany jako ciąg znaków dwubajtowych Unicode, LPWStr. Dane wyjściowe to pierwsza litera Witaj, świecie! ponieważ drugi bajt uszeregowanego ciągu ma wartość null, a następnie umieszcza interpretuje to jako znacznik koniec ciągu.
+W tym przykładzie ciąg jest przekazywany jako ciąg dwubajtowych znaków Unicode, LPWStr. Dane wyjściowe są pierwszą literą Hello world! ponieważ drugi bajt ciągu organizowanego ma wartość null, a wartości są interpretowane jako znacznik końca ciągu.
 
-```
+```cpp
 // platform_invocation_services_3.cpp
 // compile with: /clr
 using namespace System;
@@ -215,15 +215,15 @@ int main() {
 }
 ```
 
-Atrybut MarshalAs jest w obszarze nazw System::Runtime:: InteropServices. Ten atrybut może służyć z innymi typami danych, takich jak tablice.
+Atrybut MarshalAs jest w obszarze nazw System::Runtime::InteropServices. Atrybut może być używany z innymi typami danych, takimi jak tablice.
 
-Jak wspomniano wcześniej w temacie, kierująca biblioteka zawiera nową, zoptymalizowaną metodę przekazywania międzyprocesowego danych między środowiskami macierzystymi i zarządzanymi. Aby uzyskać więcej informacji, zobacz [Overview of Marshaling w C++](../dotnet/overview-of-marshaling-in-cpp.md).
+Jak wspomniano wcześniej w temacie, kierująca biblioteka zawiera nową, zoptymalizowaną metodę przekazywania międzyprocesowego danych między środowiskami macierzystymi i zarządzanymi. Aby uzyskać więcej informacji, zobacz [Omówienie organizowania w programie C++ ](../dotnet/overview-of-marshaling-in-cpp.md).
 
-## <a name="performance-considerations"></a>Zagadnienia dotyczące wydajności
+## <a name="performance-considerations"></a>Uwagi dotyczące wydajności
 
-Mechanizm PInvoke ma obciążenie z zakresu od 10 do 30 x86 instrukcji przypadających na wywołanie. Oprócz tego kosztu stałego, przekazywania międzyprocesowe tworzą dodatkowe obciążenie. Nie ma kosztu szeregowania między danymi kopiowalnymi, które mają tę samą reprezentację w kodzie zarządzanym i niezarządzanym. Na przykład jest bezpłatne tłumaczenie z int i Int32.
+Mechanizm PInvoke ma obciążenie ok. 10 i 30 x86 instrukcji przypadających na wywołanie. Oprócz tego kosztu stałego, przekazywania międzyprocesowe tworzą dodatkowe obciążenie. Nie ma kosztu szeregowania między danymi kopiowalnymi, które posiadają tę samą reprezentację w zarządzanym i niezarządzanym kodzie. Na przykład tłumaczenie z int na Int32 nie pociąga za sobą żadnych kosztów.
 
-Lepszą wydajność należy mieć mniejszej liczby wywołań funkcji PInvoke zarządzających jak najwięcej danych, jak to możliwe, zamiast większej liczby wywołań, które zarządzają mniejszą ilością danych na wywołanie.
+Aby poprawić wydajność, używaj mniejszej liczby wywołań funkcji PInvoke zarządzających jak największą ilością danych, zamiast większej liczby wywołań, które zarządzają mniejszą ilością danych na wywołanie.
 
 ## <a name="see-also"></a>Zobacz także
 
