@@ -1,31 +1,31 @@
 ---
-title: 'Instrukcje: Używanie typu natywnego w kompilacji / clr'
+title: 'Instrukcje: korzystanie z typu natywnego w kompilacji środowiska CLR'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - compilation, native types in /clr
 - /clr compiler option [C++], using native types
 ms.assetid: 3a505c90-4adb-4942-9cf9-7d1fdcbc01e7
-ms.openlocfilehash: 9979113ac4ffc062ddfe8654279af03036984f38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b506c3d825c4c26236a4ac3fc9682067a011315a
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387204"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988424"
 ---
-# <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>Instrukcje: Używanie typu natywnego w kompilacji/CLR
+# <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>Porady: używanie typu natywnego w kompilacji /clr
 
-Można zdefiniować typu natywnego w **/CLR** kompilacji i każde użycie tego typu natywnego z w obrębie zestawu jest nieprawidłowa. Jednak natywnych typów nie będzie dostępny do użytku z przywoływanych metadanych.
+Można zdefiniować typ natywny w kompilacji **/CLR** i każde użycie tego typu natywnego z zestawu jest prawidłowe. Jednak typy natywne nie będą dostępne do użycia z metadanych, do których się odwołuje.
 
-Każdy zestaw musi zawierać definicję każdego typu macierzystego, który będzie używany.
+Każdy zestaw musi zawierać definicję każdego typu natywnego, który będzie używany.
 
-Aby uzyskać więcej informacji, zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md).
+Aby uzyskać więcej informacji, zobacz [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie tworzy składnik, który definiuje i korzysta z typu natywnego.
+Ten przykład tworzy składnik, który definiuje i używa typu natywnego.
 
-```
+```cpp
 // use_native_type_in_clr.cpp
 // compile with: /clr /LD
 public struct NativeClass {
@@ -42,9 +42,9 @@ public ref struct ManagedClass {
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie definiuje klienta, który wykorzystuje składnika. Należy zauważyć, że jest błąd, aby uzyskiwać dostęp do natywnego typu, chyba że jest on zdefiniowany w compiland —.
+Ten przykład definiuje klienta, który zużywa składnik. Zwróć uwagę, że jest to błąd w celu uzyskania dostępu do typu natywnego, chyba że jest on zdefiniowany w jednostka kompilacji.
 
-```
+```cpp
 // use_native_type_in_clr_2.cpp
 // compile with: /clr
 #using "use_native_type_in_clr.dll"

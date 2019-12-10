@@ -1,7 +1,10 @@
 ---
-title: _inp, _inpw, _inpd
-ms.date: 11/04/2016
+title: INP, _inp, inpw, _inpw, _inpd
+description: Opisuje funkcje INP, _inp, inpw, _inpw i _inpd w bibliotece środowiska uruchomieniowego języka Microsoft C (CRT).
+ms.date: 12/09/2019
 api_name:
+- inp
+- inpw
 - _inp
 - _inpw
 - _inpd
@@ -18,7 +21,8 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- inpd
+- inp
+- inpw
 - _inp
 - _inpw
 - _inpd
@@ -32,26 +36,24 @@ helpviewer_keywords:
 - I/O [CRT], port
 - _inpw function
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
-ms.openlocfilehash: 4668002fdf709e3e425ac379f136e228250896d4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 48e0e58d2886c5a8bb90a86c81cb785d364666e8
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944983"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988715"
 ---
-# <a name="_inp-_inpw-_inpd"></a>_inp, _inpw, _inpd
+# <a name="inp-_inp-inpw-_inpw-_inpd"></a>INP, _inp, inpw, _inpw, _inpd
 
-Dane wejściowe, z portu, bajt (`_inp`), słowo (`_inpw`) lub podwójne słowo (`_inpd`).
-
-> [!IMPORTANT]
->  Te funkcje są przestarzałe. Począwszy od programu Visual Studio 2015, nie są one dostępne w CRT.
+Dane wejściowe, z portu, bajtu (`inp`, `_inp`), wyrazu (`inpw`, `_inpw`) lub podwójnego wyrazu (`_inpd`).
 
 > [!IMPORTANT]
->  Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Te funkcje są przestarzałe. Począwszy od programu Visual Studio 2015, nie są one dostępne w CRT.  
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 int _inp(
    unsigned short port
 );
@@ -63,20 +65,22 @@ unsigned long _inpd(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*przewożąc*<br/>
-Numer portu we/wy.
+\ *portów*
+Numer portu We/Wy.
 
-## <a name="return-value"></a>Wartość zwracana
+## <a name="return-value"></a>Wartość zwrócona
 
-Funkcje zwracają bajt, wyraz lub podwójne odczytywanie `port`wyrazów. Brak powrotu błędu.
+Funkcje zwracają wartość bajtu, słowa lub podwójnego słowa odczytanego z `port`. Nie będzie zwrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-`_inp`, ,`_inpw` I`_inpd` funkcje odczytują bajt, wyraz i podwójne słowo, odpowiednio, z określonego portu wejściowego. Wartością wejściową może być każda nieoznaczona krótka liczba całkowita z zakresu od 0 do 65 535.
+`_inp`, `_inpw`, i `_inpd` funkcje odczytują bajt, wyraz i podwójne słowo, odpowiednio, z określonego portu wejściowego. Wartością wejściową może być każda nieoznaczona krótka liczba całkowita z zakresu od 0 do 65 535.
 
 Ponieważ te funkcje odczytują się bezpośrednio z portu we/wy, nie można ich używać w kodzie użytkownika.
+
+Nazwy `inp` i `inpw` są starsze, przestarzałe nazwy dla funkcji `_inp` i `_inpw`. Aby uzyskać więcej informacji, zobacz [nazwy funkcji POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -94,5 +98,5 @@ Wszystkie wersje [bibliotek uruchomieniowych języka C](../c-runtime-library/crt
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/wy konsoli i portu](../c-runtime-library/console-and-port-i-o.md)<br/>
-[_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)
+\ [we/wy konsoli i portu](../c-runtime-library/console-and-port-i-o.md)
+[Outp, outpw, _outp, _outpw _outpd](../c-runtime-library/outp-outpw-outpd.md)

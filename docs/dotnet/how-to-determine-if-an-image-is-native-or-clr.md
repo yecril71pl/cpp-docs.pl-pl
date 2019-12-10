@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Określić, czy obraz jest obrazem natywnym, czy CLR'
+title: 'Porady: ustalanie, czy obraz jest obrazem natywnym, czy CLR'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - /clr compiler option [C++], detecting use in compilation
 - common language runtime, /clr compiler option
 ms.assetid: 5a854822-6172-4b22-b236-320165412568
-ms.openlocfilehash: 541581e0f172c8ce2601e2e476ccd03a49757f80
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5149440e172b764278c5ee816827c2d13e2b4c0e
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387347"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988507"
 ---
-# <a name="how-to-determine-if-an-image-is-native-or-clr"></a>Instrukcje: Określić, czy obraz jest obrazem natywnym, czy CLR
+# <a name="how-to-determine-if-an-image-is-native-or-clr"></a>Porady: ustalanie, czy obraz jest obrazem natywnym, czy CLR
 
-Jednym ze sposobów, aby ustalić, czy obraz został zbudowany dla środowiska uruchomieniowego języka wspólnego, jest użycie **dumpbin**[/CLRHEADER](../build/reference/clrheader.md).
+Jednym ze sposobów ustalenia, czy obraz został skompilowany dla środowiska uruchomieniowego języka wspólnego, jest użycie **polecenia DUMPBIN**[/CLRHEADER](../build/reference/clrheader.md).
 
-Można także programowo sprawdzać, czy obraz został zbudowany dla środowiska uruchomieniowego języka wspólnego. Aby uzyskać więcej informacji, zobacz [jak: Wykrywanie kompilacji/CLR](../dotnet/how-to-detect-clr-compilation.md).
+Można również programowo sprawdzić, czy obraz został skompilowany dla środowiska uruchomieniowego języka wspólnego. Aby uzyskać więcej informacji, zobacz [How to: Detect kompilacja/CLR](../dotnet/how-to-detect-clr-compilation.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład określa, czy obraz został skompilowany do uruchamiania w środowisku uruchomieniowym języka wspólnego.
+Poniższy przykład określa, czy obraz został skompilowany do uruchomienia w środowisku uruchomieniowym języka wspólnego.
 
-```
+```cpp
 // detect_image_type.cpp
 // compile with: /clr
 using namespace System;
