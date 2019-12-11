@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1107
 ms.assetid: a37a893d-5efa-4eba-8f40-6c5518b4b9d0
-ms.openlocfilehash: 68048d9f824283d002a4ea8b64d88f37bbeefc48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c75966d9c6c22f1bd2123fb30282bb2bed467130
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255395"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991029"
 ---
 # <a name="linker-tools-error-lnk1107"></a>Błąd narzędzi konsolidatora LNK1107
 
-nieprawidłowy lub uszkodzony plik: nie można odczytać lokalizacji
+nieprawidłowy lub uszkodzony plik: nie można odczytać w lokalizacji
 
 Narzędzie nie może odczytać pliku. Utwórz ponownie plik.
 
-LNK1107 mógł także wystąpić, Jeśli spróbujesz przekazać modułu (rozszerzenie .dll lub moduł .netmodule utworzone za pomocą [/clr:noAssembly](../../build/reference/clr-common-language-runtime-compilation.md) lub [/noassembly](../../build/reference/noassembly-create-a-msil-module.md)) do konsolidatora; Przekaż plik .obj zamiast tego.
+LNK1107 może również wystąpić, jeśli spróbujesz przekazać moduł (. dll lub rozszerzenie modułu utworzonego za pomocą [/CLR: noAssembly](../../build/reference/clr-common-language-runtime-compilation.md) lub [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)) do konsolidatora; Zamiast tego Przekaż plik. obj.
 
-Jeśli kompilujesz z poniższego przykładu:
+Jeśli kompilujesz następujący przykład:
 
-```
+```cpp
 // LNK1107.cpp
 // compile with: /clr /LD
 public ref class MyClass {
@@ -32,4 +32,4 @@ public:
 };
 ```
 
-a następnie określ **link LNK1107.dll** w wierszu polecenia zostanie wyświetlony LNK1107.  Aby naprawić błąd, należy określić **link LNK1107.obj** zamiast tego.
+a następnie określ **link LNK1107. dll** w wierszu polecenia, uzyskasz LNK1107.  Aby rozwiązać ten problem, należy zamiast tego określić **link LNK1107. obj** .

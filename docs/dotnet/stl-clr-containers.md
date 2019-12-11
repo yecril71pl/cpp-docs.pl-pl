@@ -6,44 +6,44 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-ms.openlocfilehash: dc2e5ce3263c61839a1ba434ab0d2a39e6a9078f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfdbbeb735f98f77046790e21c19dd2d21b9d5c6
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384598"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988110"
 ---
 # <a name="stlclr-containers"></a>Kontenery STL/CLR
 
-Biblioteki STL/CLR składa się z kontenerów, które są podobne do tych znajdują się w standardowej biblioteki języka C++, ale działa w środowisku zarządzanym programu .NET Framework. Go nie stale aktualizowane przy użyciu rzeczywistego standardowej biblioteki języka C++ i jest zachowywana na potrzeby obsługi starszej wersji.
+Biblioteka STL/CLR składa się z kontenerów, które są podobne do tych C++ , które znajdują się w bibliotece standardowej, ale działają w środowisku zarządzanym .NET Framework. Nie jest on aktualizowany za pomocą rzeczywistej C++ biblioteki standardowej i jest obsługiwany dla starszej obsługi.
 
-Ten dokument zawiera omówienie kontenery w STL/CLR, takie jak wymagania dotyczące elementów kontenera, typów elementów, że można wstawiać do kontenerów i własność problemy z elementami w kontenerach. Ile to możliwe, są wymienione różnice między natywny standardowej biblioteki języka C++ i STL/CLR.
+Ten dokument zawiera omówienie kontenerów w STL/CLR, takich jak wymagania dotyczące elementów kontenera, typy elementów, które można wstawić do kontenerów, i problemy własności z elementami w kontenerach. W razie potrzeby różnice między natywną C++ biblioteką standardową i STL/CLR są wymienione.
 
 ## <a name="requirements-for-container-elements"></a>Wymagania dotyczące elementów kontenera
 
-Wszystkie elementy wstawione do kontenerów STL/CLR musi przestrzegać określonych wytycznych. Aby uzyskać więcej informacji, zobacz [wymagania dotyczące elementów kontenera STL/CLR](../dotnet/requirements-for-stl-clr-container-elements.md).
+Wszystkie elementy wstawione do kontenerów STL/CLR muszą przestrzegać pewnych wytycznych. Aby uzyskać więcej informacji, zobacz [wymagania dotyczące elementów kontenera STL/CLR](../dotnet/requirements-for-stl-clr-container-elements.md).
 
-## <a name="valid-container-elements"></a>Prawidłowy kontener elementów
+## <a name="valid-container-elements"></a>Prawidłowe elementy kontenera
 
 Kontenery STL/CLR mogą zawierać jeden z dwóch typów elementów:
 
-- Obsługuje na typy odwołań.
+- Obsługuje typy odwołań.
 
 - Typy odwołań.
 
-- Typy wartości rozpakowany.
+- Nieopakowane typy wartości.
 
-Spakowane typy wartości nie można wstawić do dowolnego kontenery STL/CLR.
+Nie można wstawić opakowanych typów wartości do żadnego kontenera STL/CLR.
 
-### <a name="handles-to-reference-types"></a>Uchwyty na typy odwołań
+### <a name="handles-to-reference-types"></a>Uchwyty do typów referencyjnych
 
-Dojście do typu referencyjnego można wstawić do kontenera STL/CLR. Dojście w języku C++, przeznaczonego dla CLR jest porównywalna ze wskaźnikiem w natywnym kodzie C++. Aby uzyskać więcej informacji, zobacz [Operator uchwytu do obiektu (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md).
+Dojście do typu odwołania można wstawić do kontenera STL/CLR. Dojście w C++ tym elemencie docelowym CLR jest analogiczne do wskaźnika w trybie C++macierzystym. Aby uzyskać więcej informacji, zobacz [uchwyt do operatora obiektu (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md).
 
 #### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak wstawić dojścia do obiektu pracowników na [cliext::set](../dotnet/set-stl-clr.md).
+Poniższy przykład pokazuje, jak wstawić uchwyt do obiektu Employee do elementu [cliext:: Set](../dotnet/set-stl-clr.md).
 
-```
+```cpp
 // cliext_container_valid_reference_handle.cpp
 // compile with: /clr
 
@@ -132,13 +132,13 @@ int main()
 
 ### <a name="reference-types"></a>Typy odwołań
 
-Istnieje również możliwość Wstawianie kontenera STL/CLR typu odwołania (zamiast dojścia do typu odwołania). Główną różnicą jest to, że po usunięciu kontenera typu referencyjnego destruktor jest wywoływany dla wszystkich elementów w tym kontenerze. W kontenerze uchwytów na typy odwołań nie będzie wywoływana destruktory dla tych elementów.
+Można również wstawić typ referencyjny (zamiast dojścia do typu referencyjnego) do kontenera STL/CLR. Główną różnicą jest to, że po usunięciu kontenera typów odwołań destruktor jest wywoływany dla wszystkich elementów wewnątrz tego kontenera. W kontenerze dojść do typów referencyjnych destruktory dla tych elementów nie będą wywoływane.
 
 #### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak wstawianie obiektu pracowników do `cliext::set`.
+Poniższy przykład pokazuje, jak wstawić obiekt Employee do `cliext::set`.
 
-```
+```cpp
 // cliext_container_valid_reference.cpp
 // compile with: /clr
 
@@ -225,17 +225,17 @@ int main()
 }
 ```
 
-### <a name="unboxed-value-types"></a>Typy wartości rozpakowany
+### <a name="unboxed-value-types"></a>Nieopakowane typy wartości
 
-Można także wstawić rozpakowany typ wartościowy do kontenera STL/CLR. Rozpakowany typ wartościowy jest typem wartości, która nie została *opakowany* do typu odwołania.
+Możesz również wstawić nieopakowany typ wartości do kontenera STL/CLR. Nieopakowany typ wartości jest typem wartości, który nie został *opakowany* na typ referencyjny.
 
-Element typu wartości może być jednym z typów wartości standardowej, takich jak `int`, lub może być typem wartości zdefiniowanej przez użytkownika, takie jak `value class`. Aby uzyskać więcej informacji, zobacz [klasy i struktury](../extensions/classes-and-structs-cpp-component-extensions.md)
+Element typu wartości może być jednym z standardowych typów wartości, takich jak `int`, lub może być typem wartości zdefiniowanym przez użytkownika, np. `value class`. Aby uzyskać więcej informacji, zobacz [klasy i struktury](../extensions/classes-and-structs-cpp-component-extensions.md)
 
 #### <a name="example"></a>Przykład
 
-Poniższy przykład modyfikuje pierwszego przykładu, wprowadzając pracowników klasy typu wartości. Ten typ wartości zostanie wstawiony na `cliext::set` podobnie jak w pierwszym przykładzie.
+Poniższy przykład modyfikuje pierwszy przykład, tworząc klasę Employee jako typ wartości. Ten typ wartości jest następnie wstawiany do `cliext::set` tak jak w pierwszym przykładzie.
 
-```
+```cpp
 // cliext_container_valid_valuetype.cpp
 // compile with: /clr
 
@@ -296,19 +296,19 @@ int main()
 }
 ```
 
-Jeśli użytkownik podejmie próbę wstawienia dojścia do typu wartości w kontenerze, [błąd kompilatora C3225](../error-messages/compiler-errors-2/compiler-error-c3225.md) jest generowany.
+Jeśli podjęto próbę wstawienia dojścia do typu wartości do kontenera, generowany jest [błąd kompilatora C3225](../error-messages/compiler-errors-2/compiler-error-c3225.md) .
 
-### <a name="performance-and-memory-implications"></a>Wydajność i skutki pamięci
+### <a name="performance-and-memory-implications"></a>Wpływ na wydajność i pamięć
 
-Podczas ustalania, czy należy odwoływać się do typów lub wartości jako elementy kontenera za pomocą uchwytów, należy wziąć pod uwagę kilka czynników. Jeśli zdecydujesz się używać typów wartości, należy pamiętać, że kopię elementu jest nawiązywane za każdym razem, gdy element jest wstawiany do kontenera. W przypadku małych obiektów to nie powinna być problemem, ale w przypadku dużych obiektów, jest wstawiany może to spowodować obniżenie wydajności. Ponadto jeśli używasz typów wartości, jest niemożliwe do przechowywania jeden element w wielu kontenerach w tym samym czasie, ponieważ każdy kontener będzie mieć własną kopię elementu.
+Należy wziąć pod uwagę kilka czynników przy określaniu, czy należy używać dojść do typów referencyjnych lub typów wartości jako elementów kontenera. Jeśli zdecydujesz się używać typów wartościowych, pamiętaj, że kopia elementu jest wykonywana za każdym razem, gdy element zostanie wstawiony do kontenera. W przypadku małych obiektów nie powinno to być problemem, ale jeśli wstawiane obiekty są duże, może to mieć wpływ na wydajność. Ponadto, jeśli używasz typów wartościowych, nie jest możliwe przechowywanie jednego elementu w wielu kontenerach w tym samym czasie, ponieważ każdy kontener będzie miał własną kopię elementu.
 
-Jeśli zdecydujesz się na typy odwołań w zamian za pomocą uchwytów wydajności może zwiększyć, ponieważ nie jest to niezbędne do zapewnienia kopię elementu, gdy znajduje się w kontenerze. Ponadto w odróżnieniu od z typami wartości tego samego elementu w może istnieć wiele kontenerów. Jednak jeśli użytkownik zdecyduje się za pomocą uchwytów, możesz należy uważać, aby upewnij się, że uchwyt jest prawidłowy oraz że odwołuje się do obiektu nie został usunięty gdzie indziej w taki sposób, w programie.
+Jeśli zdecydujesz się użyć dojść do typów referencyjnych, wydajność może wzrosnąć, ponieważ nie jest konieczne tworzenie kopii elementu, gdy zostanie wstawiony do kontenera. Ponadto, w przeciwieństwie do typów wartości, ten sam element może istnieć w wielu kontenerach. Jeśli jednak zdecydujesz się używać uchwytów, musisz mieć pewność, że dojście jest prawidłowe i że obiekt, do którego się odwołuje, nie został usunięty w innym miejscu programu.
 
-## <a name="ownership-issues-with-containers"></a>Kwestie własnościowe z kontenerami
+## <a name="ownership-issues-with-containers"></a>Problemy z własnością przy użyciu kontenerów
 
-Kontenery w STL/CLR działają na semantyce wartość. Za każdym razem, gdy należy wstawić element do kontenera, jest wstawiany kopię tego elementu. Jeśli chcesz pobrać semantyka odwołań podobne, można wstawić dojścia do obiektu, a nie samego obiektu.
+Kontenery w STL/CLR pracują z semantyką wartości. Za każdym razem, gdy wstawisz element do kontenera, zostanie wstawiona kopia tego elementu. Jeśli chcesz uzyskać semantykę przypominającą odwołanie, możesz wstawić uchwyt do obiektu, a nie sam obiekt.
 
-Podczas wywołania niezaszyfrowane lub erase — metoda kontenera obiektów dojście do obiektów, które dotyczą uchwyty nie są zwalniane z pamięci. Użytkownik musi jawnie usunąć obiekt albo, ponieważ obiekty te znajdują się na zarządzanym stosie, Zezwalaj na moduł odśmiecania pamięci zwolnić pamięć, gdy ustali, że obiekt jest już używana.
+Gdy wywoływana jest metoda Clear lub Erase kontenera obiektów dojścia, obiekty, do których odwołuje się dojścia, nie są zwalniane z pamięci. Należy jawnie usunąć obiekt lub, ponieważ te obiekty znajdują się na stercie zarządzanym, zezwolić modułowi wyrzucania elementów bezużytecznych na zwolnienie pamięci po ustaleniu, że obiekt nie jest już używany.
 
 ## <a name="see-also"></a>Zobacz także
 

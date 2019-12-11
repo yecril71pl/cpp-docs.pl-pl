@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4221
 ms.assetid: 8e2eb2de-9532-4b85-908a-8c9ff5c4cccb
-ms.openlocfilehash: 299c3ef76006b347d6770d45ca317ff0eb941ffa
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: fb355b6d004d9488abac89ef44c9ec38c791ffda
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630802"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988040"
 ---
 # <a name="linker-tools-warning-lnk4221"></a>Ostrzeżenie LNK4221 narzędzi konsolidatora
 
@@ -19,12 +19,12 @@ Ten plik obiektu nie definiuje żadnych wcześniej niezdefiniowanych symboli pub
 
 Rozważ następujące dwa fragmenty kodu.
 
-```
+```cpp
 // a.cpp
 #include <atlbase.h>
 ```
 
-```
+```cpp
 // b.cpp
 #include <atlbase.h>
 int function()
@@ -39,13 +39,13 @@ W drugim scenariuszu nie jest wyświetlane żadne ostrzeżenie, ponieważ konsol
 
 ::: moniker range=">=vs-2019"
 
-Typową przyczyną tego błędu jest to, że dwa pliki źródłowe określają opcję [/YC (Utwórz prekompilowany plik nagłówkowy)](../../build/reference/yc-create-precompiled-header-file.md) o tej samej nazwie pliku nagłówkowego określonej w polu prekompilowanego **nagłówka** . Typową przyczyną tego problemu jest usługa *PCH. h* , ponieważ domyślnie *PCH. cpp* zawiera plik *PCH. h* i nie dodaje żadnych nowych symboli. Jeśli inny plik źródłowy zawiera *PCH. h* z **/YC** i skojarzony plik. obj jest przetwarzany przed PCH. obj, konsolidator będzie generować LNK4221 narzędzi konsolidatora.
+Typową przyczyną tego błędu jest to, że dwa pliki źródłowe określają opcję [/YC (Utwórz prekompilowany plik nagłówkowy)](../../build/reference/yc-create-precompiled-header-file.md) o tej samej nazwie pliku nagłówkowego określonej w polu **prekompilowanego nagłówka** . Typową przyczyną tego problemu jest usługa *PCH. h* , ponieważ domyślnie *PCH. cpp* zawiera plik *PCH. h* i nie dodaje żadnych nowych symboli. Jeśli inny plik źródłowy zawiera *PCH. h* z **/YC** i skojarzony plik. obj jest przetwarzany przed PCH. obj, konsolidator będzie generować LNK4221 narzędzi konsolidatora.
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-Typową przyczyną tego błędu jest to, że dwa pliki źródłowe określają opcję [/YC (Utwórz prekompilowany plik nagłówkowy)](../../build/reference/yc-create-precompiled-header-file.md) o tej samej nazwie pliku nagłówkowego określonej w polu prekompilowanego **nagłówka** . Typową przyczyną tego problemu jest *stdafx. h* , ponieważ domyślnie *stdafx. cpp* zawiera *stdafx. h* i nie dodaje żadnych nowych symboli. Jeśli inny plik źródłowy zawiera *stdafx. h* z **/YC** , a skojarzony plik. obj jest przetwarzany przed stdafx. obj, KONSOLIDATOR będzie zgłaszać LNK4221 narzędzi konsolidatora.
+Typową przyczyną tego błędu jest to, że dwa pliki źródłowe określają opcję [/YC (Utwórz prekompilowany plik nagłówkowy)](../../build/reference/yc-create-precompiled-header-file.md) o tej samej nazwie pliku nagłówkowego określonej w polu **prekompilowanego nagłówka** . Typową przyczyną tego problemu jest *stdafx. h* , ponieważ domyślnie *stdafx. cpp* zawiera *stdafx. h* i nie dodaje żadnych nowych symboli. Jeśli inny plik źródłowy zawiera *stdafx. h* z **/YC** , a skojarzony plik. obj jest przetwarzany przed stdafx. obj, KONSOLIDATOR będzie zgłaszać LNK4221 narzędzi konsolidatora.
 
 ::: moniker-end
 

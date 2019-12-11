@@ -1,17 +1,17 @@
 ---
 title: COMM
-ms.date: 08/30/2018
+ms.date: 12/06/2019
 f1_keywords:
 - COMM
 helpviewer_keywords:
 - COMM directive
 ms.assetid: a23548c4-ad04-41fa-91da-945f228de742
-ms.openlocfilehash: d36161ba54ca80fc0f576c6f0a7c2a9410bf8075
-ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
+ms.openlocfilehash: 93e7c891b1c964eca5b3ff7fd15956ef25ea05e6
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74541034"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74987940"
 ---
 # <a name="comm"></a>COMM
 
@@ -28,6 +28,8 @@ Zmienne gminne są przydzielone przez konsolidator i nie mogą być inicjowane. 
 Każda *Definicja* ma następującą postać:
 
 ⟦*Language-Type*⟧ ⟦**blisko** | **dużo**⟧ _etykieta_ **:** _Type_⟦ **:** _Count_⟧
+
+Argumenty *typu Language*, **Near**i **daleko** są prawidłowe tylko w 32-bitowym MASM.
 
 Opcjonalny *Typ języka* ustawia konwencje nazewnictwa dla następującej nazwy. Zastępuje dowolny język określony przez **. Dyrektywa modelu** . Opcjonalna, **zbliżona** lub **znacznie** zastąp bieżący model pamięci. *Etykieta* to nazwa zmiennej. *Typ* może być dowolnym specyfikatorem typu ([Byte](../../assembler/masm/byte-masm.md), [Word](../../assembler/masm/word.md)itd.) lub liczbą całkowitą określającą liczbę bajtów. Opcjonalna *Liczba* określa liczbę elementów w zadeklarowanym obiekcie danych. Domyślna *Liczba* to 1.
 

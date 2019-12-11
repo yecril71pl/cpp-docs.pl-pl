@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - marshal_as template [C++]
 ms.assetid: 2ed717da-2b11-41e5-981d-47d251771989
-ms.openlocfilehash: 6ab4962f18368f0d896f8b7343baf54e8f59ac52
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: 2b2cacb0acf04aa40b3e299bffd7357e04916b16
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861096"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988131"
 ---
-# <a name="marshalas"></a>marshal_as
+# <a name="marshal_as"></a>marshal_as
 
 Ta metoda konwertuje dane między środowiskami macierzystymi i zarządzanymi.
 
@@ -30,28 +30,28 @@ To_Type marshal_as<To_Type>(
 
 #### <a name="parameters"></a>Parametry
 
-*Dane wejściowe*<br/>
-[in] Wartość, którą chcesz kierować do `To_Type` zmiennej.
+*klawiatur*<br/>
+podczas Wartość, którą chcesz zorganizować na zmienną `To_Type`.
 
-## <a name="return-value"></a>Wartość zwracana
+## <a name="return-value"></a>Wartość zwrócona
 
-Zmienna typu `To_Type` oznacza to przekonwertowana wartości `input`.
+Zmienna typu `To_Type`, która jest przekonwertowaną wartością `input`.
 
 ## <a name="remarks"></a>Uwagi
 
-Ta metoda jest uproszczony sposób konwertowania danych między typami macierzystym i zarządzanym. Aby określić, jakie typy danych są obsługiwane, zobacz [Overview of Marshaling w C++](../dotnet/overview-of-marshaling-in-cpp.md). Konwersje niektórych danych wymaga kontekstu. Te typy danych można przekonwertować, używając [marshal_context Class](../dotnet/marshal-context-class.md).
+Ta metoda stanowi uproszczony sposób konwersji danych między typami natywnymi i zarządzanymi. Aby określić, jakie typy danych są obsługiwane, zobacz [Omówienie organizowania w programie C++ ](../dotnet/overview-of-marshaling-in-cpp.md). Niektóre konwersje danych wymagają kontekstu. Te typy danych można skonwertować przy użyciu [klasy marshal_context](../dotnet/marshal-context-class.md).
 
-Jeśli zostanie podjęta próba kierować dwa typy danych, które nie są obsługiwane, `marshal_as` spowoduje wygenerowanie błędu [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) w czasie kompilacji. Przeczytaj wiadomości podano dotyczącą tego błędu, aby uzyskać więcej informacji. `C4996` Błędu mogą być generowane dla więcej niż tylko przestarzałych funkcji. Przykładem takiej próby kierować dwa typy danych, które nie są obsługiwane.
+Jeśli spróbujesz zorganizować parę typów danych, które nie są obsługiwane, `marshal_as` generuje błąd [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) w czasie kompilacji. Przeczytaj komunikat dostarczony z tym błędem, aby uzyskać więcej informacji. Błąd `C4996` może być wygenerowany dla więcej niż tylko przestarzałych funkcji. Przykładem tej próby jest zorganizowanie pary typów danych, które nie są obsługiwane.
 
-Biblioteka dotycząca organizowania składa się z kilku plików nagłówkowych. Każda konwersja wymaga tylko jednego pliku, ale może zawierać dodatkowe pliki, jeśli potrzebujesz, w przypadku innych konwersji. Aby zobaczyć, jakie konwersje są skojarzone z plików, Szukaj w tabeli w `Marshaling Overview`. Niezależnie od tego konwersji, jakie chcesz zrobić, wymaganie przestrzeni nazw jest zawsze w obiekcie.
+Biblioteka organizowania składa się z kilku plików nagłówkowych. Każda konwersja wymaga tylko jednego pliku, ale można dołączyć dodatkowe pliki, jeśli zachodzi potrzeba przeprowadzenia innych konwersji. Aby sprawdzić, które konwersje są skojarzone z tymi plikami, należy poszukać w tabeli w `Marshaling Overview`. Bez względu na to, jaką konwersję chcesz wykonać, wymaganie przestrzeni nazw jest zawsze włączone.
 
-Zgłasza `System::ArgumentNullException(_EXCEPTION_NULLPTR)` Jeśli parametr wejściowy ma wartość null.
+Zgłasza `System::ArgumentNullException(_EXCEPTION_NULLPTR)`, jeśli parametr wejściowy ma wartość null.
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie kieruje z `const char*` do `System::String` typ zmiennej.
+Ten przykład ma kierowanie z `const char*` do `System::String` typu zmiennej.
 
-```
+```cpp
 // marshal_as_test.cpp
 // compile with: /clr
 #include <stdlib.h>
@@ -71,9 +71,9 @@ int main() {
 
 ## <a name="requirements"></a>Wymagania
 
-**Plik nagłówka:** \<msclr\marshal.h >, \<msclr\marshal_windows.h >, \<msclr\marshal_cppstd.h >, lub \<msclr\marshal_atl.h >
+**Plik nagłówkowy:** \<msclr\marshal.h >, \<msclr \ marshal_windows. h >, \<msclr \ marshal_cppstd. h > lub \<msclr \ marshal_atl. h >
 
-**Namespace:** msclr::interop
+**Przestrzeń nazw:** msclr:: Interop
 
 ## <a name="see-also"></a>Zobacz także
 

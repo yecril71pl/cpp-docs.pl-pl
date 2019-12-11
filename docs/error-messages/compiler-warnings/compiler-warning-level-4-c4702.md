@@ -1,31 +1,31 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4702
+title: Ostrzeżenie kompilatora (poziom 4) C4702
 ms.date: 11/04/2016
 f1_keywords:
 - C4702
 helpviewer_keywords:
 - C4702
 ms.assetid: d8198c1e-8762-42a6-9e6b-cb568b7a1686
-ms.openlocfilehash: 96ae3a0742db5e3a5006f031ce62beb281c38ccd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e46bfef925f999ed7f04b5bbe7c88800209ed14
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395251"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990649"
 ---
-# <a name="compiler-warning-level-4-c4702"></a>Kompilator ostrzeżenie (poziom 4) C4702
+# <a name="compiler-warning-level-4-c4702"></a>Ostrzeżenie kompilatora (poziom 4) C4702
 
 nieosiągalny kod
 
-To ostrzeżenie jest wynikiem pracy zgodności kompilatora, która została wykonana dla Visual Studio .NET 2003: nieosiągalnego kodu. Gdy kompilator (zaplecza) wykryje nieosiągalny kod, wygeneruje C4702, ostrzeżenie poziom 4.
+To ostrzeżenie jest wynikiem działania kompilatora, który został wykonany dla programu Visual Studio .NET 2003: nieosiągalny kod. Gdy kompilator (zaplecza) wykryje nieosiągalny kod, generuje C4702, ostrzeżenie poziomu 4.
 
-Kod, który jest prawidłowy w wersjach Visual Studio .NET 2003 i Visual Studio .NET, Visual c++ usuwanie nieosiągalnego kodu lub zapewnić, że każdy kod źródłowy jest dostępny za pomocą niektórych przepływem wykonania.
+W przypadku kodu, który jest prawidłowy zarówno w programie Visual Studio .NET 2003, jak i w wersji C++Visual Studio .NET, Usuń nieosiągalny kod lub zagwarantowania, że cały kod źródłowy jest dostępny dla pewnego przepływu wykonania.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4702.
+Poniższy przykład generuje C4702.
 
-```
+```cpp
 // C4702.cpp
 // compile with: /W4
 #include <stdio.h>
@@ -38,13 +38,13 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Podczas kompilowania za pomocą **/GX**, **opcja/ehc**, **/ehsc**, lub **/EHac** i za pomocą funkcji extern C, kod może stać się niedostępne ponieważ extern C funkcje są zakłada się, że nie zgłosi wyjątku, dlatego blok catch nie jest osiągalny.  Jeśli uważasz, że to ostrzeżenie jest nieprawidłowa, ponieważ funkcja może zgłosić, skompilować z **/eha** lub **/EHS**, w zależności od wyjątku.
+W przypadku kompilowania z **/GX**, **/EHC**, **/EHsc**lub **/EHac** i używania funkcji extern c kod może stać się nieosiągalny, ponieważ nie są zakładane funkcje extern c, w związku z czym blok catch nie jest dostępny.  Jeśli uważasz, że to ostrzeżenie jest nieprawidłowe, ponieważ funkcja może zgłosić, skompilować przy użyciu **/EHa** lub **/EHS**, w zależności od zgłoszonego wyjątku.
 
-Aby uzyskać więcej informacji, zobacz [/EH (Model obsługi wyjątku)](../../build/reference/eh-exception-handling-model.md) Aby uzyskać więcej informacji.
+Aby uzyskać więcej informacji, zobacz [/EH (model obsługi wyjątków)](../../build/reference/eh-exception-handling-model.md) , aby uzyskać więcej informacji.
 
-Poniższy przykład spowoduje wygenerowanie C4702.
+Poniższy przykład generuje C4702.
 
-```
+```cpp
 // C4702b.cpp
 // compile with: /W4 /EHsc
 #include <iostream>

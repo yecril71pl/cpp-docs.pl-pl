@@ -1,31 +1,31 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4623
+title: Ostrzeżenie kompilatora (poziom 4) C4623
 ms.date: 11/04/2016
 f1_keywords:
 - C4623
 helpviewer_keywords:
 - C4623
 ms.assetid: e630d8d0-f6ea-469c-a74f-07b027587225
-ms.openlocfilehash: d1b659a6aed593a2e3f01ac1b82e60878cb09c80
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d0dd9aec19fb21870a1233cd3b713337fa15aaa
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220471"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990634"
 ---
-# <a name="compiler-warning-level-4-c4623"></a>Kompilator ostrzeżenie (poziom 4) C4623
+# <a name="compiler-warning-level-4-c4623"></a>Ostrzeżenie kompilatora (poziom 4) C4623
 
-"`derived class`": Konstruktor domyślny został niejawnie zdefiniowany jako usunięty, ponieważ domyślny konstruktor klasy bazowej jest niedostępny lub usunięty
+"`derived class`": Konstruktor domyślny został niejawnie zdefiniowany jako usunięty, ponieważ domyślny Konstruktor klasy bazowej jest niedostępny lub usunięty
 
-Konstruktor nie jest dostępna w klasie bazowej i nie został wygenerowany dla klasy pochodnej. Błąd kompilatora spowoduje, że każda próba utworzenia obiektu tego typu na stosie.
+Konstruktor nie był dostępny w klasie podstawowej i nie został wygenerowany dla klasy pochodnej. Każda próba utworzenia obiektu tego typu na stosie spowoduje błąd kompilatora.
 
-To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+To ostrzeżenie jest domyślnie wyłączone. Aby uzyskać więcej informacji [, zobacz ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4623.
+Poniższy przykład generuje C4623.
 
-```
+```cpp
 // C4623.cpp
 // compile with: /W4
 #pragma warning(default : 4623)

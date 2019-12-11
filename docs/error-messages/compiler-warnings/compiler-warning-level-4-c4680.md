@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4680
+title: Ostrzeżenie kompilatora (poziom 4) C4680
 ms.date: 11/04/2016
 f1_keywords:
 - C4680
 helpviewer_keywords:
 - C4680
 ms.assetid: 6e043f4c-c601-4b77-8130-920cff1d912e
-ms.openlocfilehash: 9130fa2665452b85c5ec83eef0b3d1d618c995a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21ea9bf54a493a72dc24c607812eaed69f9ef71b
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226872"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990457"
 ---
-# <a name="compiler-warning-level-4-c4680"></a>Kompilator ostrzeżenie (poziom 4) C4680
+# <a name="compiler-warning-level-4-c4680"></a>Ostrzeżenie kompilatora (poziom 4) C4680
 
-"class": klasa coclass nie określa domyślnego interfejsu
+"Class": Klasa coclass nie określa domyślnego interfejsu
 
-A [domyślne](../../windows/default-cpp.md) interfejs nie został określony dla klasy, która została oznaczona za pomocą [coclass](../../windows/coclass.md) atrybutu. Aby obiekt były przydatne jego musi implementować interfejs.
+Nie określono interfejsu [domyślnego](../../windows/default-cpp.md) dla klasy, która została oznaczona przy użyciu atrybutu [coclass](../../windows/coclass.md) . Aby obiekt był użyteczny, musi implementować interfejs.
 
-Poniższy przykład spowoduje wygenerowanie C4680:
+Poniższy przykład generuje C4680:
 
-```
+```cpp
 // C4680.cpp
 // compile with: /W4
 #include <windows.h>

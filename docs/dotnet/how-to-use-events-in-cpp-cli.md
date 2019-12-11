@@ -1,25 +1,25 @@
 ---
-title: 'Instrukcje: Korzystanie ze zdarzeń w C++sposób niezamierzony'
+title: 'Porady: korzystanie ze zdarzeń w języku C++/interfejsie wiersza polecenia'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - events [C++], accessing in interfaces
 ms.assetid: fbf452dc-2dd7-4322-adc0-656512d654d1
-ms.openlocfilehash: 6b4ecbba5651341965d2cf4df5b5ad2ead7f9f26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dbaffaa42b5cfaf60c41694653651ce0bb0fc199
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387178"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988412"
 ---
-# <a name="how-to-use-events-in-ccli"></a>Instrukcje: Korzystanie ze zdarzeń w C++sposób niezamierzony
+# <a name="how-to-use-events-in-ccli"></a>Porady: korzystanie ze zdarzeń w języku C++/interfejsie wiersza polecenia
 
-W tym artykule pokazano, jak używać interfejsu, który deklaruje zdarzenie i funkcji do wywołania tego zdarzenia i procedury obsługi klasy i zdarzeń, który implementuje interfejs.
+W tym artykule pokazano, jak używać interfejsu, który deklaruje zdarzenie i funkcję do wywołania tego zdarzenia, a procedura obsługi klasy i zdarzenia implementująca interfejs.
 
 ## <a name="interface-events"></a>Zdarzenia interfejsu
 
-Poniższy przykład kodu dodaje procedurę obsługi zdarzeń, wywołuje zdarzenie — co powoduje, że program obsługi zdarzeń zapisać jego nazwę konsoli — a następnie usuwa programu obsługi zdarzeń.
+Poniższy przykład kodu dodaje procedurę obsługi zdarzeń, wywołuje zdarzenie, które powoduje, że program obsługi zdarzeń zapisuje jego nazwę w konsoli programu, a następnie usuwa procedurę obsługi zdarzeń.
 
-```
+```cpp
 // mcppv2_events2.cpp
 // compile with: /clr
 using namespace System;
@@ -71,11 +71,11 @@ int main () {
 EventReceiver::Handler
 ```
 
-## <a name="custom-accessor-methods"></a>Metody niestandardowej metody dostępu
+## <a name="custom-accessor-methods"></a>Niestandardowe metody dostępu
 
-Poniższy przykład pokazuje sposób definiowania zachowania zdarzenia podczas dodawania lub usuwania programów obsługi i wydarzenie jest podniesione.
+Poniższy przykład pokazuje, jak zdefiniować zachowanie zdarzenia, gdy programy obsługi są dodawane lub usuwane, oraz gdy zdarzenie jest zgłaszane.
 
-```
+```cpp
 // mcppv2_events6.cpp
 // compile with: /clr
 using namespace System;
@@ -163,11 +163,11 @@ In event handler H1
 In event handler H2 with args 1 and 2.2
 ```
 
-## <a name="override-default-access-on-add-remove-and-raise-accessors"></a>Zastępowanie domyślnego dostępu na dodawania, usuwania i wywoływanie metod dostępu
+## <a name="override-default-access-on-add-remove-and-raise-accessors"></a>Zastąp domyślny dostęp przy metodach dodawania, usuwania i wywoływania
 
-Ten przykład przedstawia sposób przesłonięcia dostęp do domyślnej na Dodaj, Usuń i zgłoś zdarzenia metod:
+Ten przykład pokazuje, jak zastąpić domyślny dostęp w metodach dodawania, usuwania i wywoływania zdarzeń:
 
-```
+```cpp
 // mcppv2_events3.cpp
 // compile with: /clr
 public delegate void f(int);
@@ -221,11 +221,11 @@ int main() {
 17
 ```
 
-## <a name="multiple-event-handlers"></a>Wiele procedur obsługi zdarzeń
+## <a name="multiple-event-handlers"></a>Obsługa wielu zdarzeń
 
-Odbiorca zdarzenia lub inny kod klienta, można dodać jeden lub więcej programów obsługi na zdarzenie.
+Odbiorca zdarzeń lub inny kod klienta może dodać jeden lub więcej programów obsługi do zdarzenia.
 
-```
+```cpp
 // mcppv2_events4.cpp
 // compile with: /clr
 using namespace System;
@@ -302,9 +302,9 @@ DblClickAgain(s=System.Char[])
 
 ## <a name="static-events"></a>Zdarzenia statyczne
 
-Poniższy przykład pokazuje jak zdefiniować i korzystanie ze zdarzeń statycznych.
+Poniższy przykład pokazuje, jak definiować i używać zdarzeń statycznych.
 
-```
+```cpp
 // mcppv2_events7.cpp
 // compile with: /clr
 using namespace System;
@@ -390,11 +390,11 @@ In event handler H1
 In event handler H2 with args 22 and 22.22
 ```
 
-## <a name="virtual-events"></a>Zdarzeń wirtualnych
+## <a name="virtual-events"></a>Wirtualne zdarzenia
 
-W tym przykładzie implementuje wirtualnych, zarządzanych zdarzeń w interfejsie i klasy:
+Ten przykład implementuje wirtualne, zarządzane zdarzenia w interfejsie i klasie:
 
-```
+```cpp
 // mcppv2_events5.cpp
 // compile with: /clr
 using namespace System;
@@ -476,9 +476,9 @@ In handler H1
 In handler H2 with args 1 and 2.2
 ```
 
-Nie można określić zdarzenie proste do nadpisania lub ukryć zdarzeń klasy podstawowej.  Należy zdefiniować wszystkie funkcje metod dostępu zdarzeń, a następnie określ `new` lub `override` słowo kluczowe w każdej funkcji dostępu.
+Nie można określić prostego zdarzenia w celu przesłonięcia lub ukrycia zdarzenia klasy bazowej.  Należy zdefiniować wszystkie funkcje dostępu zdarzenia, a następnie określić słowo kluczowe `new` lub `override` dla każdej funkcji metody dostępu.
 
-```
+```cpp
 // mcppv2_events5_a.cpp
 // compile with: /clr /c
 delegate void Del();
@@ -508,11 +508,11 @@ ref struct C : B {
 };
 ```
 
-## <a name="abstract-events"></a>Zdarzeń abstrakcyjnych
+## <a name="abstract-events"></a>Zdarzenia abstrakcyjne
 
-Poniższy przykład pokazuje sposób implementacji zdarzenia abstrakcyjnego.
+Poniższy przykład pokazuje, jak zaimplementować zdarzenie abstrakcyjne.
 
-```
+```cpp
 // mcppv2_events10.cpp
 // compile with: /clr /W1
 using namespace System;
@@ -593,11 +593,11 @@ hi
 hello from Event2
 ```
 
-## <a name="raising-events-that-are-defined-in-a-different-assembly"></a>Wywoływanie zdarzeń, które są zdefiniowane w innym zestawie
+## <a name="raising-events-that-are-defined-in-a-different-assembly"></a>Wywoływanie zdarzeń zdefiniowanych w innym zestawie
 
-Zdarzenia i procedury obsługi zdarzeń można zdefiniowane w jednym zestawie i wykorzystane przez innego zestawu.
+Obsługa zdarzeń i zdarzeń może być zdefiniowana w jednym zestawie i zużywana przez inny zestaw.
 
-```
+```cpp
 // mcppv2_events8.cpp
 // compile with: /LD /clr
 using namespace System;
@@ -613,9 +613,9 @@ public:
 };
 ```
 
-Ten kod klienta zużywa zdarzenia:
+Ten kod klienta korzysta ze zdarzenia:
 
-```
+```cpp
 // mcppv2_events9.cpp
 // compile with: /clr
 #using "mcppv2_events8.dll"

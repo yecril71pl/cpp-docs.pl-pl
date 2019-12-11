@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4256
 ms.assetid: a755a32e-895a-4837-a2b5-4ea06b736798
-ms.openlocfilehash: e087e3cd36ab85d6f3f6b5cfed1b55cac66ea142
-ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
+ms.openlocfilehash: 1ec3e64548cead53cea906cdf2abd3dd25ee06d4
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74541697"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991385"
 ---
 # <a name="compiler-warning-level-4-c4256"></a>Ostrzeżenie kompilatora (poziom 4) C4256
 
@@ -19,7 +19,7 @@ ms.locfileid: "74541697"
 
 Możliwa niezgodność.
 
-Rozważmy następujący przykład kodu. Jeśli definicja konstruktora S2:: S2 (int i,...) została skompilowana przy użyciu wersji kompilatora firmy Microsoft C++ , która jest wcześniejsza niż wersja 7, ale Poniższy przykład jest kompilowany przy użyciu bieżącej wersji, wywołanie konstruktora dla S3 nie działa poprawnie ze względu na szczególną zmianę w konwencji wywoływania przypadku. Jeśli obie zostały skompilowane przy użyciu C++ języka Visual 6,0, wywołanie nie będzie działało całkowicie po prawej stronie, chyba że żadne parametry nie zostały przesłane dla wielokropka.
+Spójrz na poniższy przykład kodu. Jeśli definicja konstruktora S2:: S2 (int i,...) została skompilowana przy użyciu wersji kompilatora firmy Microsoft C++ , która jest wcześniejsza niż wersja 7, ale Poniższy przykład jest kompilowany przy użyciu bieżącej wersji, wywołanie konstruktora dla S3 nie działa poprawnie ze względu na szczególną zmianę w konwencji wywoływania przypadku. Jeśli obie zostały skompilowane przy użyciu C++ języka Visual 6,0, wywołanie nie będzie działało całkowicie po prawej stronie, chyba że żadne parametry nie zostały przesłane dla wielokropka.
 
 Aby usunąć to ostrzeżenie,
 

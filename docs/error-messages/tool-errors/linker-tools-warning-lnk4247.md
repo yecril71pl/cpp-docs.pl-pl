@@ -6,36 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4247
 ms.assetid: 085d7fdf-9eaf-4641-8473-6eaadd073c7b
-ms.openlocfilehash: cd4108f8bd06ec7a0b2d2eb9fab13917174b797b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 344c219fa1f3daa1e5f9c31431e608f5e7036400
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346963"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991153"
 ---
 # <a name="linker-tools-warning-lnk4247"></a>Ostrzeżenie LNK4247 narzędzi konsolidatora
 
-punkt wejścia "decorated_function_name" ma już atrybut wątku; "attribute" zignorowany
+punkt wejścia "decorated_function_name" ma już atrybut wątku; Zignorowano element "Attribute"
 
-Punkt wejścia określony za pomocą [/Entry (Symbol punktu wejścia)](../../build/reference/entry-entry-point-symbol.md), ma atrybut wątkowości, ale [/CLRTHREADATTRIBUTE (Ustaw wątku atrybut CLR)](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md) również została określona za pomocą innego modelu wątkowości.
+Punkt wejścia określony za pomocą elementu [/entry (symbol punktu wejścia)](../../build/reference/entry-entry-point-symbol.md)ma atrybut Threading, ale określono również [/CLRTHREADATTRIBUTE (ustaw atrybut wątku CLR)](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md) z innym modelem wątkowości.
 
-Konsolidator ignorowana wartość określony za pomocą /CLRTHREADATTRIBUTE.
+Konsolidator zignorował wartość określoną za pomocą/CLRTHREADATTRIBUTE.
 
-Aby rozwiązać tego ostrzeżenia:
+Aby usunąć to ostrzeżenie:
 
-- Usuń /CLRTHREADATTRIBUTE z kompilacji.
+- Usuń/CLRTHREADATTRIBUTE z kompilacji.
 
 - Usuń atrybut z pliku kodu źródłowego.
 
-- Usuń zarówno atrybut ze źródła i /CLRTHREADATTRIBUTE z kompilacji, a następnie zaakceptuj domyślny model wątkowości CLR.
+- Usuń atrybut ze źródła i/CLRTHREADATTRIBUTE z kompilacji i Zaakceptuj domyślny model wątkowości CLR.
 
-- Zmień wartość przekazana do /CLRTHREADATTRIBUTE, w taki sposób, że zgadza się z atrybutem w źródle.
+- Zmień wartość przekazaną do/CLRTHREADATTRIBUTE, tak aby była ona zgodna z atrybutem w źródle.
 
-- Taki sposób, że zgadza się z wartością przekazywaną do /CLRTHREADATTRIBUTE, należy zmienić atrybutu w lokalizacji źródłowej.
+- Zmień atrybut w elemencie source, tak aby zgadzał się z wartością przekazaną do/CLRTHREADATTRIBUTE.
 
-Poniższy przykład spowoduje wygenerowanie LNK4247
+Poniższy przykład generuje LNK4247 narzędzi KONSOLIDATORA
 
-```
+```cpp
 // LNK4247.cpp
 // compile with: /clr /c
 // post-build command: link /CLRTHREADATTRIBUTE:STA LNK4247.obj /entry:functionTitle /SUBSYSTEM:Console

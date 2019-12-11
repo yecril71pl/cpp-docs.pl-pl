@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Deklarowanie dojść w typach natywnych'
+title: 'Porady: deklarowanie dojść w typach natywnych'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,26 +9,26 @@ helpviewer_keywords:
 - gcroot keyword [C++]
 - types [C++], declaring handles in
 ms.assetid: b8c0eead-17e5-4003-b21f-b673f997d79f
-ms.openlocfilehash: f5d6d31be9f3c10e1a56639ccf20663ce59d7941
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11dbc196a89a224afe02312fbe4dff99d8467f4c
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387412"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988247"
 ---
-# <a name="how-to-declare-handles-in-native-types"></a>Instrukcje: Deklarowanie dojść w typach natywnych
+# <a name="how-to-declare-handles-in-native-types"></a>Porady: deklarowanie dojść w typach natywnych
 
-Nie można zadeklarować na typ dojścia w typie natywnym. vcclr.h oferuje szablon bezpieczny otoki `gcroot` do odwoływania się do obiektu CLR ze stosu C++. Ten szablon umożliwia osadzania wirtualnego dojście w typie natywnym i traktować je tak, jakby był to typ podstawowy. W większości przypadków można użyć `gcroot` obiektu jako osadzonego typu, bez żadnych rzutowania. Jednak w przypadku [dla poszczególnych usług, w](../dotnet/for-each-in.md), trzeba użyć `static_cast` do pobrania podstawowego odwołania zarządzane.
+Nie można zadeklarować typu dojścia w typie natywnym. Vcclr. h udostępnia szablon otoki bezpiecznego typu `gcroot`, aby odwołać się do obiektu CLR ze C++ sterty. Ten szablon umożliwia osadzenie dojścia wirtualnego w typie natywnym i traktuje go tak, jakby był typem podstawowym. W większości przypadków można użyć obiektu `gcroot` jako typu osadzonego bez rzutowania. Jednak [w przypadku każdego programu w programie](../dotnet/for-each-in.md)należy użyć `static_cast`, aby pobrać bazowe odwołanie zarządzane.
 
-`gcroot` Szablonu jest implementowany przy użyciu funkcji klasy wartości System::Runtime::InteropServices::GCHandle, co zapewnia "obsługuje" na stercie zebranych elementów bezużytecznych. Należy pamiętać, że uchwyty sami nie są bezużyteczne i są zwalniane, gdy nie jest już w użyciu przez destruktora w `gcroot` klasy (ten destruktor nie można wywołać ręcznie). W przypadku tworzenia wystąpienia `gcroot` obiektu na natywnej stercie, należy wywołać usuwanie na taki zasób.
+Szablon `gcroot` jest implementowany przy użyciu obiektów klasy wartości system:: Runtime:: InteropServices:: GCHandle, która zapewnia "uchwyty" w stercie zebranych elementów bezużytecznych. Należy zauważyć, że same uchwyty nie są zbierane jako elementy bezużyteczne i są zwalniane, gdy nie są już używane przez destruktor w klasie `gcroot` (tego destruktora nie można wywołać ręcznie). Jeśli utworzysz wystąpienie obiektu `gcroot` na stercie natywnym, musisz wywołać metodę Delete dla tego zasobu.
 
-Środowisko uruchomieniowe zachowają skojarzenie między obiektu CLR, który odwołuje się do uchwytu. Gdy przenosi obiekt CLR za pomocą stosu odśmieconej pamięci, uchwyt zwróci nowy adres obiektu. Zmienna nie będzie musiał przypięty, zanim zostanie on przypisany do `gcroot` szablonu.
+Środowisko uruchomieniowe będzie zachować skojarzenie między uchwytem a obiektem CLR, do którego się odwołuje. Gdy obiekt CLR jest przenoszony z sterty zebranych elementów bezużytecznych, uchwyt zwróci nowy adres obiektu. Zmienna nie musi być przypięta, zanim zostanie przypisana do szablonu `gcroot`.
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie przedstawiono sposób tworzenia `gcroot` obiektów na stosie natywnych.
+Ten przykład pokazuje, jak utworzyć obiekt `gcroot` na stosie natywnym.
 
-```
+```cpp
 // mcpp_gcroot.cpp
 // compile with: /clr
 #include <vcclr.h>
@@ -53,9 +53,9 @@ hello
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie przedstawiono sposób tworzenia `gcroot` obiekt sterty natywnej.
+Ten przykład pokazuje, jak utworzyć obiekt `gcroot` na stercie natywnym.
 
-```
+```cpp
 // mcpp_gcroot_2.cpp
 // compile with: /clr
 // compile with: /clr
@@ -83,9 +83,9 @@ hello
 
 ## <a name="example"></a>Przykład
 
-Ten przykład ilustruje sposób używania `gcroot` do przechowywania odwołań do typów wartości (nie typy referencyjne) w polu typu natywnego za pomocą `gcroot` na typ spakowany.
+Ten przykład pokazuje, jak używać `gcroot` do przechowywania odwołań do typów wartości (nie typów odwołań) w typie natywnym przy użyciu `gcroot` w typie opakowanym.
 
-```
+```cpp
 // mcpp_gcroot_3.cpp
 // compile with: /clr
 #include < vcclr.h >

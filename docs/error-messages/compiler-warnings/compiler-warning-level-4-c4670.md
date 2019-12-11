@@ -1,27 +1,27 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4670
+title: Ostrzeżenie kompilatora (poziom 4) C4670
 ms.date: 11/04/2016
 f1_keywords:
 - C4670
 helpviewer_keywords:
 - C4670
 ms.assetid: e172b134-b1fb-4dfe-8e9d-209ea08b73c7
-ms.openlocfilehash: 1ce32ef4d07ea5e2c6f328578837f805eed5c897
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ea32e8693fbe310b82eeeb87b1e97f2281ddf04
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408137"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990751"
 ---
-# <a name="compiler-warning-level-4-c4670"></a>Kompilator ostrzeżenie (poziom 4) C4670
+# <a name="compiler-warning-level-4-c4670"></a>Ostrzeżenie kompilatora (poziom 4) C4670
 
-'Identyfikator': Ta klasa bazowa jest niedostępna
+"Identyfikator": Ta klasa bazowa jest niedostępna
 
-Określonej klasy bazowej obiektu, aby były generowane w **spróbuj** blok nie jest dostępny. Nie można utworzyć wystąpienia obiektu, jeśli zostanie on zgłoszony. Sprawdź, czy klasa bazowa jest dziedziczony ze specyfikatorem prawidłowy dostęp.
+Określona klasa bazowa obiektu, który ma zostać zgłoszony w bloku **try** , jest niedostępna. Nie można utworzyć wystąpienia obiektu, jeśli został zgłoszony. Sprawdź, czy klasa bazowa jest dziedziczona z prawidłowym specyfikatorem dostępu.
 
-Poniższy przykład spowoduje wygenerowanie C4670:
+Poniższy przykład generuje C4670:
 
-```
+```cpp
 // C4670.cpp
 // compile with: /EHsc /W4
 class A

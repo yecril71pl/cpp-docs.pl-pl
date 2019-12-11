@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4682
+title: Ostrzeżenie kompilatora (poziom 4) C4682
 ms.date: 11/04/2016
 f1_keywords:
 - C4682
 helpviewer_keywords:
 - C4682
 ms.assetid: 858ea157-1244-4a61-85df-97b3de43d418
-ms.openlocfilehash: 6566c27999f218b7a214e32dde96bd1cf96fbb12
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6af1bf2d27c04efb58e7f1af0439ed3d16b7491a
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395277"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990127"
 ---
-# <a name="compiler-warning-level-4-c4682"></a>Kompilator ostrzeżenie (poziom 4) C4682
+# <a name="compiler-warning-level-4-c4682"></a>Ostrzeżenie kompilatora (poziom 4) C4682
 
-"parametru": nie określono atrybutu kierunkowego parametru, domyślnie na [in]
+"parameter": brak określonego atrybutu parametru kierunkowego, wartość domyślna to [in]
 
-Metoda dla parametru w interfejsie opartego na atrybutach nie ma jednego atrybuty kierunkowe: [w](../../windows/in-cpp.md) lub [się](../../windows/out-cpp.md). Parametr w.
+Metoda w parametrze w interfejsie z atrybutem nie ma jednego z atrybutów kierunkowych: [w](../../windows/in-cpp.md) ani [out](../../windows/out-cpp.md). Parametr domyślnie jest w.
 
-To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+To ostrzeżenie jest domyślnie wyłączone. Aby uzyskać więcej informacji [, zobacz ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
-Poniższy przykład spowoduje wygenerowanie C4682:
+Poniższy przykład generuje C4682:
 
-```
+```cpp
 // C4682.cpp
 // compile with: /W4
 #pragma warning(default : 4682)

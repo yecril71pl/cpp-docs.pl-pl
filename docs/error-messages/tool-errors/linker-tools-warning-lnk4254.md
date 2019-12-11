@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4254
 ms.assetid: 6f41dfb3-ca21-40d3-bac7-b637e578efa4
-ms.openlocfilehash: 2c68e49d58b0fd6b28607eb0ba78c092441f6f4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8431bd2d89fd5df5cf076ad006ab04006f552c4c
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352492"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988063"
 ---
 # <a name="linker-tools-warning-lnk4254"></a>Ostrzeżenie LNK4254 narzędzi konsolidatora
 
-w sekcji 'sekcja ' 1 (przesunięciem) została scalona z "Sekcja2" (przesunięcie), z różnymi atrybutami
+sekcja "Section1" (offset) została scalona z elementem "section2" (offset) z różnymi atrybutami
 
-Zawartość jednej sekcji zostały scalone w innej, ale atrybuty dwie sekcje są różne. Program może dać nieoczekiwane wyniki. Na przykład dane, które ma być odczytywane tylko mogą teraz znajdować się w zapisywalna sekcja.
+Zawartość jednej sekcji została scalona w innej, ale atrybuty obu sekcji są różne. Program może dać nieoczekiwane wyniki. Na przykład dane, które mają być tylko do odczytu, mogą teraz znajdować się w sekcji możliwej do zapisu.
 
-Aby rozwiązać LNK4254, należy zmodyfikować lub usunąć żądanie scalania.
+Aby rozwiązać LNK4254 narzędzi KONSOLIDATORA, zmodyfikuj lub Usuń żądanie scalenia.
 
-Podczas określania wartości x86 maszyn i elementy docelowe Windows CE (ARM, MIPS, SH4 i przycisku przewijania) z programem Visual C++. Sekcja CRT jest tylko do odczytu. Jeśli Twój kod jest zależna od poprzedniego zachowania (. Sekcje CRT są odczytu/zapisu), można uzyskać nieoczekiwane zachowanie.
+W przypadku komputerów z procesorem x86 i elementów docelowych Windows CE (ARM, MIPS, SH4 i kciuk C++) z wizualizacją. Sekcja CRT jest tylko do odczytu. Jeśli kod zależy od poprzedniego zachowania (. Sekcje CRT są do odczytu/zapisu, ale można zobaczyć nieoczekiwane zachowanie.
 
 Aby uzyskać więcej informacji, zobacz,
 
@@ -31,9 +31,9 @@ Aby uzyskać więcej informacji, zobacz,
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie LNK4254.
+Poniższy przykład generuje LNK4254 narzędzi KONSOLIDATORA.
 
-```
+```cpp
 // LNK4254.cpp
 // compile with: /W1 /link /WX
 // LNK4254 expected

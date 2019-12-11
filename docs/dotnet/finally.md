@@ -4,28 +4,28 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - finally keyword [C++]
 ms.assetid: b55f3c8e-1af0-43e8-bcfb-99c3685d2578
-ms.openlocfilehash: f7db4320cf901412e3a9e3de682d0cfbcc9f23bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2574ba5a10bbf5eddc68d6e0265d5dfc99c6d8fc
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223017"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988337"
 ---
 # <a name="finally"></a>finally
 
-Oprócz `try` i `catch` klauzul, obsługa obsługuje wyjątków CLR `finally` klauzuli. Semantyka są takie same jak `__finally` bloku wyjątków strukturalnych (SEH) obsługi. A `__finally` skorzystać z bloku `try` lub `catch` bloku.
+Oprócz klauzul `try` i `catch`, obsługa wyjątków CLR obsługuje klauzulę `finally`. Semantyka jest identyczna z blokiem `__finally` w obsłudze wyjątków strukturalnych (SEH). Blok `__finally` może następować po bloku `try` lub `catch`.
 
 ## <a name="remarks"></a>Uwagi
 
-Celem `finally` bloku jest Oczyść wszystkie zasoby w lewo po wystąpieniu wyjątku. Należy pamiętać, że `finally` bloku jest wykonywane zawsze, nawet wtedy, gdy żaden wyjątek został zgłoszony. `catch` Bloku jest wykonywana tylko w przypadku zarządzanych wyjątku w obrębie skojarzonej `try` bloku.
+Celem bloku `finally` jest wyczyszczenie wszystkich zasobów pozostawionych po wystąpieniu wyjątku. Należy zauważyć, że blok `finally` jest zawsze wykonywany, nawet jeśli nie zgłoszono żadnego wyjątku. Blok `catch` jest wykonywany tylko wtedy, gdy w skojarzonym bloku `try` zostanie zgłoszony wyjątek zarządzany.
 
-`finally` jest kontekstowej słowem kluczowym; zobacz [Context-Sensitive Keywords](../extensions/context-sensitive-keywords-cpp-component-extensions.md) Aby uzyskać więcej informacji.
+`finally` to kontekstowe słowo kluczowe; Aby uzyskać więcej informacji, zobacz [kontekstowe słowa kluczowe](../extensions/context-sensitive-keywords-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano prosty `finally` bloku:
+Poniższy przykład ilustruje prosty blok `finally`:
 
-```
+```cpp
 // keyword__finally.cpp
 // compile with: /clr
 using namespace System;

@@ -1,17 +1,17 @@
 ---
 title: PROTO
-ms.date: 10/22/2018
+ms.date: 12/06/2019
 f1_keywords:
 - PROTO
 helpviewer_keywords:
 - PROTO directive
 ms.assetid: 0487ee16-9dc7-43d1-9445-cd1601f5a080
-ms.openlocfilehash: 24ec2a9abc6c8b76fc81f6d412019296c53160f4
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 9df66b6c89498a2cc1a1864a668b7addfbaf593c
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74394752"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74987874"
 ---
 # <a name="proto"></a>PROTO
 
@@ -26,10 +26,10 @@ Prototypuje funkcję lub procedurę. Można wywołać funkcję prototypową prze
 *etykieta*\
 Nazwa funkcji prototypowej.
 
-\ *odległości*
+*odległość* (32-bitowa MASM). \
 Obowiązkowe Używane w 16-bitowych modelach pamięci do przesłonięcia domyślnego i wskazuje **niemal** lub **daleko** wywołań.
 
-\ *typu języka*
+*Typ języka* (tylko 32-bitowy MASM). \
 Obowiązkowe Ustawia konwencję wywoływania i nazewnictwa dla procedur i symboli publicznych. Obsługiwane konwencje to:
 
 - 32-bitowy model **płaski** : **C**, **stdcall**

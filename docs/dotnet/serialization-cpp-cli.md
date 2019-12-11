@@ -9,30 +9,30 @@ helpviewer_keywords:
 - .NET Framework [C++], serialization
 - serialization [C++], about serialization
 ms.assetid: 869010ca-74e1-4989-b409-4643cdb94084
-ms.openlocfilehash: 794a71ae9a146b691ba6a4377a7fdf2c3ddd3501
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2dfdcaf1a1f33e89d106d4529ffc9af2d08376b
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384676"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988407"
 ---
 # <a name="serialization-ccli"></a>Serializacja (C++/CLI)
 
-Serializacja (proces przechowywania stanu obiektu lub elementu członkowskiego na stałe średni) klas zarządzanych (w tym poszczególne pola lub właściwości) jest obsługiwana przez <xref:System.SerializableAttribute> i <xref:System.NonSerializedAttribute> klasy.
+Serializacja (proces przechowywania stanu obiektu lub elementu członkowskiego na stałe medium) zarządzanych klas (w tym poszczególnych pól lub właściwości) jest obsługiwana przez klasy <xref:System.SerializableAttribute> i <xref:System.NonSerializedAttribute>.
 
 ## <a name="remarks"></a>Uwagi
 
-Zastosuj **SerializableAttribute** atrybut niestandardowy do zarządzanej klasy do serializacji całej klasy lub zastosować tylko do określonych pól lub właściwości, aby serializować części klasy zarządzanej. Użyj **NonSerializedAttribute** niestandardowego atrybutu w celu zwolnienia pól lub właściwości klasy zarządzanej z serializacji.
+Zastosuj atrybut niestandardowy **SerializableAttribute** do zarządzanej klasy, aby serializować całą klasę lub zastosować tylko do określonych pól lub właściwości do serializacji części klasy zarządzanej. Użyj **Nieserializowanego** atrybutu niestandardowegoattribute do wykluczenia pól lub właściwości klasy zarządzanej z serializowania.
 
 ## <a name="example"></a>Przykład
 
 ### <a name="description"></a>Opis
 
-W poniższym przykładzie klasa `MyClass` (i właściwość `m_nCount`) jest oznaczony jako możliwy do serializacji. Jednak `m_nData` właściwość nie jest serializowana, wskazane przez **NonSerialized** atrybutów niestandardowych:
+W poniższym przykładzie Klasa `MyClass` (i Właściwość `m_nCount`) jest oznaczona jako możliwy do serializacji. Jednak Właściwość `m_nData` nie jest serializowana zgodnie z oznaczeniem **Nieserializowanego** atrybutu niestandardowego:
 
 ### <a name="code"></a>Kod
 
-```
+```cpp
 // serialization_and_mcpp.cpp
 // compile with: /LD /clr
 using namespace System;
@@ -49,7 +49,7 @@ private:
 
 ### <a name="comments"></a>Komentarze
 
-Należy pamiętać, że oba atrybuty można odwoływać się za pomocą "krótkiej nazwy" (**Serializable** i **NonSerialized**). Dodatkowo jest to wyjaśnione w [stosowanie atrybutów](/dotnet/standard/attributes/applying-attributes).
+Należy pamiętać, że obydwa atrybuty mogą być przywoływane przy użyciu "krótkiej nazwy" (**serializować** i **nieszeregowane**). Jest to dokładniej wyjaśnione w temacie [stosowanie atrybutów](/dotnet/standard/attributes/applying-attributes).
 
 ## <a name="see-also"></a>Zobacz także
 

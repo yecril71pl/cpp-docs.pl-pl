@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - lock_when enum
 ms.assetid: 6b87bbe9-63cd-450d-a02e-bb91ffd0dcea
-ms.openlocfilehash: be75ec497dff79d75c22bda3b7d24389db2c9c59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af4e4472a33ef3d083f54da74e306562af1867a1
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153242"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988120"
 ---
-# <a name="lockwhen-enum"></a>Wyliczenie lock_when
+# <a name="lock_when-enum"></a>Wyliczenie lock_when
 
-Określa odroczonego blokowania.
+Określa blokadę odroczoną.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,13 +30,13 @@ enum lock_when {
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy przekazywane do [lock::lock](../dotnet/lock-lock.md), `lock_later` Określa, czy blokada nie uwzględnia się teraz.
+Po przekazaniu do [blokady:: Lock](../dotnet/lock-lock.md), `lock_later` określa, że blokada nie zostanie teraz podjęta.
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie użycie pojedynczego wystąpienia klasy przez wiele wątków.  Klasa stosowana jest blokada na siebie, aby upewnić się, że dostęp do jego wewnętrznych danych są spójne dla każdego wątku.  Głównego wątku aplikacji stosowana jest blokada na tym samym wystąpieniu klasy mogą okresowo sprawdzać, czy wszystkie wątki robocze nadal istnieje, i czeka, aby zakończyć pracę, dopóki wszystkie wątki robocze zostały wykonane ich zadań.
+W tym przykładzie jest stosowane pojedyncze wystąpienie klasy w wielu wątkach.  Klasa używa blokady, aby zapewnić, że dostęp do jego danych wewnętrznych jest spójny dla każdego wątku.  Wątek aplikacji głównej używa blokady w tym samym wystąpieniu klasy, aby okresowo sprawdzać, czy istnieją wątki robocze nadal istnieją i czy czekają na zakończenie, dopóki wszystkie wątki robocze nie ukończyą swoich zadań.
 
-```
+```cpp
 // msl_lock_lock_when.cpp
 // compile with: /clr
 #include <msclr/lock.h>
@@ -124,9 +124,9 @@ All threads completed.
 
 ## <a name="requirements"></a>Wymagania
 
-**Plik nagłówkowy** \<msclr\lock.h >
+**Plik nagłówka** \<msclr\lock.h >
 
-**Namespace** msclr
+Msclr **przestrzeni nazw**
 
 ## <a name="see-also"></a>Zobacz także
 

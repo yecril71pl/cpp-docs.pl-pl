@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1301
 ms.assetid: 760da428-7182-4b25-b20a-de90d4b9a9cd
-ms.openlocfilehash: 6a82d7756f1460c56d87a3d7b1360c140de19827
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe64eecfbc9fed57c3748afd5804b76d6e4284a4
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160610"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990939"
 ---
 # <a name="linker-tools-error-lnk1301"></a>Błąd narzędzi konsolidatora LNK1301
 
-Znaleziono niezgodne z /LTCG:parameter moduły LTCG clr
+Znaleziono moduły CLR LTCG, niezgodne z/LTCG: Parameter
 
-Moduł skompilowany z/CLR i /GL został przekazany do konsolidatora razem z jedną optymalizacje profilowe z przewodnikiem parametrów (PGO) opcję/LTCG.
+Moduł skompilowany z/CLR i/GL został przekierowany do konsolidatora wraz z jednym z parametrów profilowanych optymalizacji (PGO)/LTCG.
 
-Optymalizacje profilowe z przewodnikiem nie są obsługiwane dla modułów/CLR.
+Profilowana Optymalizacja nie jest obsługiwana w przypadku modułów/CLR.
 
 Aby uzyskać więcej informacji, zobacz:
 
@@ -33,13 +33,13 @@ Aby uzyskać więcej informacji, zobacz:
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-1. Nie można skompilować z/CLR lub nie należy przeprowadzać konsolidacji z jednego z parametrów funkcji optymalizacji PGO do opcję/LTCG.
+1. Nie Kompiluj z opcją/CLR lub nie łącz z jednym z parametrów PGO na/LTCG.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie LNK1301:
+Poniższy przykład generuje LNK1301:
 
-```
+```cpp
 // LNK1301.cpp
 // compile with: /clr /GL /link /LTCG:PGI LNK1301.obj
 // LNK1301 expected

@@ -1,40 +1,40 @@
 ---
-title: 'Instrukcje: Konwertowanie kolekcji .NET na kontener STL/CLR'
+title: 'Porady: konwertowanie kolekcji .NET na kontener STL/CLR'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - STL/CLR, converting from .NET collections
 - STL/CLR Containers [STL/CLR]
 ms.assetid: bb927c48-78e8-4150-bd0b-787c651f4a87
-ms.openlocfilehash: 836623f6d539b7b28765763a3dc36d477f8c1499
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 156b4162f742915939ebdfaec6a84d77afaad8cd
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387555"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988279"
 ---
-# <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>Instrukcje: Konwertowanie kolekcji .NET na kontener STL/CLR
+# <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>Porady: konwertowanie kolekcji .NET na kontener STL/CLR
 
-W tym temacie przedstawiono sposób konwertowania kolekcji .NET do ich równoważne kontenery STL/CLR. Jako przykład przedstawiono, jak przekonwertować .NET <xref:System.Collections.Generic.List%601> do STL/CLR [wektor](../dotnet/vector-stl-clr.md) oraz sposobach przekształcania .NET <xref:System.Collections.Generic.Dictionary%602> do STL/CLR [mapy](../dotnet/map-stl-clr.md), ale procedura jest podobna do wszystkich kolekcji i kontenery .
+W tym temacie pokazano, jak skonwertować kolekcje .NET do ich odpowiedników kontenerów STL/CLR. Przykład pokazuje, jak przekonwertować <xref:System.Collections.Generic.List%601> .NET na [wektor](../dotnet/vector-stl-clr.md) STL/CLR oraz jak skonwertować <xref:System.Collections.Generic.Dictionary%602> .NET na [mapę](../dotnet/map-stl-clr.md)STL/CLR, ale procedura jest podobna dla wszystkich kolekcji i kontenerów.
 
 ### <a name="to-create-a-container-from-a-collection"></a>Aby utworzyć kontener z kolekcji
 
-1. Aby przekonwertować całą kolekcję, Tworzenie kontenera STL/CLR i przekazać kolekcji do konstruktora.
+1. Aby przekonwertować całą kolekcję, Utwórz kontener STL/CLR i przekaż kolekcję do konstruktora.
 
-   W pierwszym przykładzie pokazano tej procedury.
+   Pierwszy przykład ilustruje tę procedurę.
 
 -LUB-
 
-1. Tworzenie ogólnych kontenera STL/CLR, tworząc [collection_adapter —](../dotnet/collection-adapter-stl-clr.md) obiektu. Tej klasy szablonu przyjmuje kolekcji interfejs platformy .NET jako argument. Aby sprawdzić, interfejsy, które są obsługiwane, zobacz [collection_adapter — (STL/CLR)](../dotnet/collection-adapter-stl-clr.md).
+1. Utwórz ogólny kontener STL/CLR przez utworzenie obiektu [collection_adapter](../dotnet/collection-adapter-stl-clr.md) . Ta klasa szablonu przyjmuje jako argument interfejs kolekcji .NET. Aby sprawdzić, które interfejsy są obsługiwane, zobacz [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md).
 
-1. Skopiuj zawartość kolekcji .NET do kontenera. Można to zrobić przy użyciu STL/CLR [algorytm](../dotnet/algorithm-stl-clr.md), lub przez Iterowanie przez kolekcję .NET i wstawianie kopię każdy element do kontenera STL/CLR.
+1. Skopiuj zawartość kolekcji .NET do kontenera. Można to zrobić za pomocą [algorytmu](../dotnet/algorithm-stl-clr.md)STL/CLR lub przez iterację kolekcji .NET i wstawianie kopii każdego elementu do kontenera STL/CLR.
 
-   W drugim przykładzie pokazano tej procedury.
+   Drugi przykład ilustruje tę procedurę.
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie tworzymy ogólnego <xref:System.Collections.Generic.List%601> i dodać elementy 5 do niego. Następnie tworzymy `vector` przy użyciu konstruktora, który przyjmuje <xref:System.Collections.Generic.IEnumerable%601> jako argument.
+W tym przykładzie utworzysz ogólny <xref:System.Collections.Generic.List%601> i dodamy do niej 5 elementów. Następnie tworzymy `vector` przy użyciu konstruktora, który przyjmuje <xref:System.Collections.Generic.IEnumerable%601> jako argument.
 
-```
+```cpp
 // cliext_convert_list_to_vector.cpp
 // compile with: /clr
 
@@ -78,9 +78,9 @@ The contents of the cliext::vector are:
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie tworzymy ogólnego <xref:System.Collections.Generic.Dictionary%602> i dodać elementy 5 do niego. Następnie tworzymy `collection_adapter` opakowywać <xref:System.Collections.Generic.Dictionary%602> jako prosty kontener STL/CLR. Na koniec utworzymy `map` i skopiuj zawartość <xref:System.Collections.Generic.Dictionary%602> do `map` przez Iterowanie `collection_adapter`. W trakcie tego procesu, możemy utworzyć nowej pary za pomocą `make_pair` funkcji i Wstaw nową parę bezpośrednio do `map`.
+W tym przykładzie utworzysz ogólny <xref:System.Collections.Generic.Dictionary%602> i dodamy do niej 5 elementów. Następnie tworzymy `collection_adapter` do zawijania <xref:System.Collections.Generic.Dictionary%602> jako prostego kontenera STL/CLR. Na koniec tworzymy `map` i skopiujemy zawartość <xref:System.Collections.Generic.Dictionary%602> do `map` przez iterację w `collection_adapter`. W trakcie tego procesu tworzymy nową parę przy użyciu funkcji `make_pair` i Wstaw nową parę bezpośrednio do `map`.
 
-```
+```cpp
 // cliext_convert_dictionary_to_map.cpp
 // compile with: /clr
 

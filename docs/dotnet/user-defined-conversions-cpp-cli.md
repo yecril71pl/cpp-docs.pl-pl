@@ -4,26 +4,26 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - user-defined conversions [C++]
 ms.assetid: 8010fd59-2775-4e9a-a6ed-58055032d66f
-ms.openlocfilehash: 8f168582e56e77f1ec848928b7ffd36879ba341a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb7a30382bc586f4d324d47ef6e6757fac83f5ae
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384533"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988387"
 ---
 # <a name="user-defined-conversions-ccli"></a>Konwersje zdefiniowane przez użytkownika (C++/CLI)
 
-W tej sekcji omówiono konwersje zdefiniowane przez użytkownika (UDC), gdy jeden z typów w konwersji jest odwołanie lub wystąpienia typu wartości lub typem referencyjnym.
+W tej sekcji omówiono konwersje zdefiniowane przez użytkownika (UDC), gdy jeden z typów w konwersji jest odwołaniem lub wystąpieniem typu wartości lub typu odwołania.
 
-## <a name="implicit-and-explicit-conversions"></a>Konwersje jawne i niejawne
+## <a name="implicit-and-explicit-conversions"></a>Konwersje niejawne i jawne
 
-Konwersja zdefiniowana przez użytkownika, może to być jawne lub niejawne.  UDC powinna być niejawne, jeśli konwersja nie powoduje utraty informacji. W przeciwnym razie UDC jawne powinna być zdefiniowana.
+Zdefiniowana przez użytkownika konwersja może być niejawna lub jawna.  Element UDC powinien być niejawny, jeśli konwersja nie powoduje utraty informacji. W przeciwnym razie należy zdefiniować jawne UDC.
 
-Konstruktor klasy natywnej, można przekonwertować typu odwołania lub wartość klasy natywnej.
+Konstruktor klasy natywnej może służyć do konwersji typu odwołania lub wartości na klasę natywną.
 
-Aby uzyskać więcej informacji dotyczących konwersji, zobacz [pakowania](../extensions/boxing-cpp-component-extensions.md) i [konwersje standardowe](../cpp/standard-conversions.md).
+Aby uzyskać więcej informacji na temat konwersji, zobacz [przepakowywanie](../extensions/boxing-cpp-component-extensions.md) i [standardowe konwersje](../cpp/standard-conversions.md).
 
-```
+```cpp
 // mcpp_User_Defined_Conversions.cpp
 // compile with: /clr
 #include "stdio.h"
@@ -78,25 +78,25 @@ in N::N
 
 ## <a name="convert-from-operators"></a>Konwersja z operatorów
 
-Konwersja z operatorów utworzyć obiekt klasy, w którym zdefiniowano operator obiektu inna klasa.
+Operatory Convert-from tworzą obiekt klasy, w której operator jest zdefiniowany na podstawie obiektu innej klasy.
 
-Standard C++ nie obsługuje konwersja z operatorów; Standard C++ używa konstruktorów, w tym celu. Jednak korzystając z typami CLR, Visual C++ zapewnia składni obsługę wywoływania konwersja z operatorów.
+Standard C++ nie obsługuje operatorów Convert-from; w C++ tym celu Standard używa konstruktorów. Jednak w przypadku korzystania z typów CLR Wizualizacja C++ zapewnia obsługę składni dla wywoływania operatorów Convert-from.
 
-Pod kątem współdziałania dobrze z innymi językami zgodne ze specyfikacją CLS, warto opakowywanie każdego Konstruktor jednoargumentowe zdefiniowanych przez użytkownika dla danej klasy przy użyciu odpowiedniego operatora konwersji z.
+Aby dobrze współdziałać z innymi językami zgodnymi ze specyfikacją CLS, warto otoczyć każdy zdefiniowany przez użytkownika Konstruktor jednoargumentowy dla danej klasy z odpowiednim operatorem konwersji.
 
-Konwersja z operatorów:
+Operatory konwersji z:
 
-- Określa się jako statyczne funkcje.
+- Muszą być zdefiniowane jako funkcje statyczne.
 
-- Albo można (w przypadku konwersji, które nie tracić dokładność, takie jak krótko int) jawnych lub niejawnych, gdy mogą być utratę dokładności.
+- Może być niejawny (w przypadku konwersji, które nie tracą precyzji, takiej jak Short-to-int) lub Explicit, w przypadku utraty dokładności.
 
-- Zwraca obiekt zawierający klasy.
+- Zwraca obiekt klasy zawierającej.
 
-- Może mieć typu "z", jako jedyny parametr typu.
+- Ma typ "od" jako jedyny typ parametru.
 
-Poniższy przykład pokazuje jawne i niejawne "Konwersja z", operator konwersji zdefiniowanej przez użytkownika (UDC).
+Poniższy przykład pokazuje niejawny i jawny operator "Convert-from", konwersja zdefiniowana przez użytkownika (UDC).
 
-```
+```cpp
 // clr_udc_convert_from.cpp
 // compile with: /clr
 value struct MyDouble {
@@ -142,11 +142,11 @@ in constructor
 1
 ```
 
-## <a name="convert-to-operators"></a>Konwersja na operatory
+## <a name="convert-to-operators"></a>Operatory konwersji do
 
-Konwersja na operatory konwersji obiektu klasy, w którym zdefiniowano operator do innego obiektu. Poniższy przykład pokazuje niejawny, konwersja na, operator konwersji zdefiniowany przez użytkownika:
+Operatory Konwertuj-do konwertują obiekt klasy, w której operator jest zdefiniowany dla innego obiektu. Poniższy przykład pokazuje niejawny operator konwersji zdefiniowany przez użytkownika:
 
-```
+```cpp
 // clr_udc_convert_to.cpp
 // compile with: /clr
 using namespace System;
@@ -174,9 +174,9 @@ int main() {
 10
 ```
 
-Operator konwersji jawnej zdefiniowanych przez użytkownika konwersja na jest odpowiednia dla konwersji, które może spowodować utratę danych w jakiś sposób. Aby wywołać operator jawnej konwersji na, należy użyć rzutowania.
+Zdefiniowany przez użytkownika Operator konwersji na konwersję jest odpowiedni dla konwersji, które w jakiś sposób mogą utracić dane. Aby wywołać jawny Operator konwersji, należy użyć rzutowania.
 
-```
+```cpp
 // clr_udc_convert_to_2.cpp
 // compile with: /clr
 value struct MyDouble {
@@ -204,11 +204,11 @@ int main() {
 10
 ```
 
-## <a name="to-convert-generic-classes"></a>Aby konwertowanie klas ogólnych
+## <a name="to-convert-generic-classes"></a>Aby skonwertować klasy ogólne
 
-Klasa generyczna można przekonwertować na T.
+Klasy generycznej można przekonwertować na T.
 
-```
+```cpp
 // clr_udc_generics.cpp
 // compile with: /clr
 generic<class T>
@@ -238,9 +238,9 @@ int main() {
 True
 ```
 
-Konwertowanie Konstruktor przyjmuje typ i używa go do utworzenia obiektu.  Konwertowanie Konstruktor jest wywoływana z inicjalizacji bezpośredniej. rzutowania nie wywoła konstruktory konwersji. Domyślnie jawnych typów CLR są konstruktory konwersji.
+Konstruktor konwersji przyjmuje typ i używa go do utworzenia obiektu.  Konstruktor konwertowany jest wywoływany tylko z bezpośrednią inicjalizacją; rzutowania nie wywoła konwersji konstruktorów. Domyślnie konwersja konstruktorów jest jawna dla typów CLR.
 
-```
+```cpp
 // clr_udc_converting_constructors.cpp
 // compile with: /clr
 public ref struct R {
@@ -274,7 +274,7 @@ int main() {
 R
 ```
 
-W tym przykładowym kodzie niejawne statyczna funkcja konwersji działa tak samo jak Konstruktor jawnej konwersji.
+W tym przykładzie kodu niejawna funkcja konwersji statycznej jest taka sama jak jawny Konstruktor konwersji.
 
 ```
 public value struct V {

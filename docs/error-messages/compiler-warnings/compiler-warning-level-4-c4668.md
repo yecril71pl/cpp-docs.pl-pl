@@ -1,31 +1,31 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4668
+title: Ostrzeżenie kompilatora (poziom 4) C4668
 ms.date: 11/04/2016
 f1_keywords:
 - C4668
 helpviewer_keywords:
 - C4668
 ms.assetid: c6585460-bc4a-4a15-9242-4cbfce53c961
-ms.openlocfilehash: 11d96941a1efddde87068af8829e24259f2fa312
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 84834ce0f980502e16a8398d35da85d1a005c9cb
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408163"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990549"
 ---
-# <a name="compiler-warning-level-4-c4668"></a>Kompilator ostrzeżenie (poziom 4) C4668
+# <a name="compiler-warning-level-4-c4668"></a>Ostrzeżenie kompilatora (poziom 4) C4668
 
 'symbol' nie jest zdefiniowany jako makro preprocesora, zastępowanie przez '0' dla 'dyrektywy'
 
-Symbol, który nie został zdefiniowany był używany za pomocą dyrektywy preprocesora. Symbol ocenia się na wartość false. Aby zdefiniować symbol, można użyć albo [#define — dyrektywa](../../preprocessor/hash-define-directive-c-cpp.md) lub [/D](../../build/reference/d-preprocessor-definitions.md) — opcja kompilatora.
+Symbol, który nie został zdefiniowany, został użyty z dyrektywą preprocesora. Symbol zostanie obliczony na wartość false. Aby zdefiniować symbol, można użyć [dyrektywy #define](../../preprocessor/hash-define-directive-c-cpp.md) lub [/d](../../build/reference/d-preprocessor-definitions.md) kompilatora.
 
-To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+To ostrzeżenie jest domyślnie wyłączone. Aby uzyskać więcej informacji [, zobacz ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4668:
+Poniższy przykład generuje C4668:
 
-```
+```cpp
 // C4668.cpp
 // compile with: /W4
 #include <stdio.h>

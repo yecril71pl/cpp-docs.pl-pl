@@ -6,36 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4248
 ms.assetid: e40523ff-e3cb-4ba6-ab79-23f0f339f6cf
-ms.openlocfilehash: db9432c505b7348c9bef5ed34aac1cb4edecb17b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4ba05ef067c539dc9c0aca6dc2a395748fd217a2
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352527"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988101"
 ---
 # <a name="linker-tools-warning-lnk4248"></a>Ostrzeżenie LNK4248 narzędzi konsolidatora
 
-Nierozpoznany token typeref (token) dla 'type'; Obraz może nie działać.
+nierozpoznany token TypeRef (token) dla elementu "Type"; nie można uruchomić obrazu
 
-Typ nie ma definicji metadanych MSIL.
+Typ nie ma definicji w metadanych MSIL.
 
-LNK4248 może wystąpić, gdy jest tylko do przodu deklaracji typu w moduł MSIL (skompilowany przy użyciu **/CLR**), gdzie typ odwołuje się moduł MSIL, a moduł MSIL jest połączony z modułu macierzystego, który zawiera definicję dla Typ.
+LNK4248 narzędzi KONSOLIDATORA może wystąpić, gdy istnieje tylko Deklaracja do przodu dla typu w module MSIL (skompilowane z **/CLR**), gdzie w module MSIL jest przywoływany typ, a moduł MSIL jest połączony z modułem macierzystym, który ma definicję dla tego typu.
 
-W takiej sytuacji konsolidator zapewni definicji typu natywnego w metadanych MSIL, a to zapewnienia poprawnego zachowania.
+W takiej sytuacji konsolidator udostępni definicję typu natywnego w metadanych MSIL i może zapewnić poprawne zachowanie.
 
-Jednak jeśli deklaracji typu do przodu jest typem CLR, następnie definicji typu natywnego konsolidator posiada może nie być poprawna
+Jednakże jeśli deklaracja typu do przodu jest typem CLR, definicja typu natywnego konsolidatora może być niepoprawna
 
-Aby uzyskać więcej informacji, zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md).
+Aby uzyskać więcej informacji, zobacz [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-1. Należy podać definicję typu w moduł MSIL.
+1. Podaj definicję typu w module MSIL.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie LNK4248. Zdefiniuj A struktury do rozwiązania.
+Poniższy przykład generuje LNK4248 narzędzi KONSOLIDATORA. Zdefiniuj strukturę A, aby rozwiązać ten problem.
 
-```
+```cpp
 // LNK4248.cpp
 // compile with: /clr /W1
 // LNK4248 expected
@@ -49,9 +49,9 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład zawiera do przodu definicji typu.
+Poniższy przykład zawiera definicję typu.
 
-```
+```cpp
 // LNK4248_2.cpp
 // compile with: /clr /c
 class A;   // provide a definition for A here to resolve
@@ -66,9 +66,9 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie LNK4248.
+Poniższy przykład generuje LNK4248 narzędzi KONSOLIDATORA.
 
-```
+```cpp
 // LNK4248_3.cpp
 // compile with: /c
 // post-build command: link LNK4248_2.obj LNK4248_3.obj

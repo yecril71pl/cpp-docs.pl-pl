@@ -1,6 +1,7 @@
 ---
 title: '&lt;atomic&gt;'
-ms.date: 11/04/2016
+description: Opisuje typy i funkcje dostępne w oddzielnym nagłówku biblioteki standardowej C++ .
+ms.date: 12/06/2019
 f1_keywords:
 - <atomic>
 - atomic/std::atomic_int_least32_t
@@ -48,12 +49,12 @@ f1_keywords:
 - atomic/std::atomic_int64_t
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
-ms.openlocfilehash: b33ec1e7fdc7f93062248a9ad42c78c3b30801fe
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: d11e8bf2067c1c8525725ae74e713ac834d89ec4
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688447"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991168"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -68,13 +69,13 @@ Definiuje klasy i szablony klas, które mają być używane do tworzenia typów,
 ## <a name="remarks"></a>Uwagi
 
 > [!NOTE]
-> W kodzie, który jest kompilowany przy użyciu **/CLR**, ten nagłówek jest zablokowany.
+> W kodzie, który jest kompilowany za pomocą [/CLR: Pure](../build/reference/clr-common-language-runtime-compilation.md), ten nagłówek jest zablokowany. Oba **/CLR: Pure** i **/CLR: Safe** są przestarzałe w programie Visual Studio 2017 i nowszych wersjach.
 
 Operacja niepodzielna ma dwie właściwości klucza, które ułatwiają poprawne manipulowanie obiektem bez użycia blokad muteksów.
 
-- Ze względu na to, że operacja niepodzielna jest nierozdzielna, druga niepodzielna operacja na tym samym obiekcie z innego wątku może uzyskać stan obiektu tylko przed pierwszą operacją niepodzielną.
+- Ponieważ operacja niepodzielna jest nierozdzielna, druga niepodzielna operacja na tym samym obiekcie z innego wątku może uzyskać stan obiektu tylko przed pierwszą operacją niepodzielną.
 
-- Na podstawie jego argumentu [memory_order](../standard-library/atomic-enums.md#memory_order_enum) , niepodzielna operacja ustala wymagania dotyczące porządkowania dla widoczności efektów innych operacji niepodzielnych w tym samym wątku. W związku z tym wstrzymuje optymalizacje kompilatora, które naruszają wymagania dotyczące porządkowania.
+- W oparciu o jego [memory_order](../standard-library/atomic-enums.md#memory_order_enum) , niepodzielna operacja ustala wymagania dotyczące porządkowania dla widoczności efektów innych operacji niepodzielnych w tym samym wątku. W związku z tym wstrzymuje optymalizacje kompilatora, które naruszają wymagania dotyczące porządkowania.
 
 Na niektórych platformach może nie być możliwe wydajne implementowanie niepodzielnych operacji dla niektórych typów bez używania blokad `mutex`. Typ niepodzielny jest *zablokowany* , jeśli żadna niepodzielna operacja na tym typie nie używa blokad.
 
@@ -94,7 +95,7 @@ Częściowe specjalizacje `atomic<T *>` stosują się do wszystkich typów wska�
 
 Specjalizacje `atomic<integral>` stosują się do wszystkich typów całkowitych. Zapewniają one dodatkowe operacje, które nie są dostępne za pomocą szablonu podstawowego.
 
-Każdy typ `atomic<integral>` ma odpowiednie makro, którego można użyć w `if directive`, aby określić w czasie kompilacji, czy operacje na tym typie są wolne od blokady. Jeśli wartość makra jest równa zero, operacje na tym typie nie są wolne od blokady. Jeśli wartość wynosi 1, operacje mogą być wolne od blokady i wymagane jest sprawdzenie środowiska uruchomieniowego. Jeśli wartość jest równa 2, operacje są wolne od blokady. Korzystając z funkcji `atomic_is_lock_free`, można określić, czy w czasie wykonywania operacje na typie są wolne od blokady.
+Każdy typ `atomic<integral>` ma odpowiednie makro, którego można użyć w `if directive`, aby określić w czasie kompilacji, czy operacje na tym typie są wolne od blokady. Jeśli wartość makra jest równa zero, operacje na typie nie są wolne od blokady. Jeśli wartość wynosi 1, operacje mogą być wolne od blokady i wymagane jest sprawdzenie środowiska uruchomieniowego. Jeśli wartość jest równa 2, operacje są wolne od blokady. Korzystając z funkcji `atomic_is_lock_free`, można określić, czy w czasie wykonywania operacje na typie są wolne od blokady.
 
 Dla każdego z typów całkowitych istnieje odpowiedni nazwany typ niepodzielny, który zarządza obiektem tego typu całkowitego. Każdy typ `atomic_integral` ma ten sam zestaw funkcji członkowskich co odpowiadające mu wystąpienie `atomic<T>` i może być przesłany do którejkolwiek z elementów niebędących członkami niepodzielnymi.
 
@@ -161,11 +162,11 @@ Nazwy typedef istnieją dla specjalizacji szablonu niepodzielnego dla niektóryc
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Wyliczenie memory_order](../standard-library/atomic-enums.md#memory_order_enum)|Dostarcza symboliczne nazwy dla operacji synchronizacji w lokalizacjach pamięci. Te operacje wpływają na sposób, w jaki przypisania w jednym wątku stają się widoczne w innym.|
+|[memory_order Enum](../standard-library/atomic-enums.md#memory_order_enum)|Dostarcza symbolicznych nazw dla operacji synchronizacji w lokalizacjach pamięci. Operacje te wpływają na jak przydziały w jednym wątku stają się widoczne w innym.|
 
 ## <a name="functions"></a>Funkcje
 
-Na poniższej liście funkcje, które nie kończą się w `_explicit` mają semantykę odpowiednich `_explicit`, z tą różnicą, że mają niejawnie [memory_order](../standard-library/atomic-enums.md#memory_order_enum) argumenty `memory_order_seq_cst`.
+Na poniższej liście funkcje, które nie kończą się w `_explicit` mają semantykę odpowiednich `_explicit`, z tą różnicą, że mają niejawne argumenty [memory_order](../standard-library/atomic-enums.md#memory_order_enum) `memory_order_seq_cst`.
 
 |Nazwa|Opis|
 |----------|-----------------|
@@ -201,5 +202,5 @@ Na poniższej liście funkcje, które nie kończą się w `_explicit` mają sema
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołania do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md) \
+[Odwołania do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
 [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
