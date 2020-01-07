@@ -1,17 +1,17 @@
 ---
 title: .LIST
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .LIST
 helpviewer_keywords:
 - .LIST directive
 ms.assetid: f7e134de-6039-4343-b921-f70aea5e1c96
-ms.openlocfilehash: a74034b82a109c12836189b657cceffbfeaab4a6
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 63cf695a1ecf0c2e43322c9d10d832a261185695
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398186"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317698"
 ---
 # <a name="list"></a>.LIST
 
@@ -23,8 +23,9 @@ Uruchamia listę instrukcji.
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie włączone.
+Jest to domyślne ustawienie.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja dyrektyw](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)\
+[MASM BNF, gramatyka](masm-bnf-grammar.md)

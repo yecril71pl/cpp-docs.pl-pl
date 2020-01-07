@@ -1,6 +1,6 @@
 ---
 title: flushall
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - flushall
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - flushall function
 ms.assetid: 481429ae-3980-4233-9495-a3ee56e7c838
-ms.openlocfilehash: f601929ddbce2a1beeaab13a6d564e4c8966c22d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 68e09a02bdf098bdefe61779293864a3fa68a70f
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950743"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301135"
 ---
 # <a name="flushall"></a>flushall
 
-Ta funkcja POSIX jest przestarzała. Zamiast tego użyj C++ zgodnej z normą ISO [_flushall](flushall.md) .
+Nazwa funkcji specyficznej dla firmy Microsoft `flushall` jest przestarzałym aliasem dla funkcji [_flushall](flushall.md) . Domyślnie generuje [Ostrzeżenie kompilatora (poziom 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Nazwa jest przestarzała, ponieważ nie jest zgodna z regułami standard C dla nazw specyficznych dla implementacji. Jednak funkcja jest nadal obsługiwana.
+
+Zalecamy używanie [_flushall](flushall.md) . Możesz również nadal używać tej nazwy funkcji i wyłączyć ostrzeżenie. Aby uzyskać więcej informacji, zobacz Wyłączanie [nazw funkcji](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names) [Warning](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) i POSIX.

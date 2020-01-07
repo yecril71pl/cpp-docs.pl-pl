@@ -8,16 +8,16 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-ms.openlocfilehash: aafd3be3b27fbe134b380a29083b4ca36177e702
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da30d647947e98146cd89f255c2e05991c1be562
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154143"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301512"
 ---
 # <a name="functions-c"></a>Funkcje (C++)
 
-Funkcja jest blokiem kodu, który wykonuje pewne operacje. Funkcja Opcjonalnie możesz zdefiniować parametry wejściowe, które umożliwiają wywołań przekazać argumenty do funkcji. Funkcja opcjonalnie może zwrócić wartość jako dane wyjściowe. Funkcje są przydatne do hermetyzowania typowych operacji w jednym bloku wielokrotnego użytku, najlepiej z nazwą, która wyraźnie opisano, jak działa funkcja. Następująca funkcja akceptuje dwóch liczb całkowitych od wywołującego i zwraca ich suma; *a* i *b* są *parametry* typu **int**.
+Funkcja jest blokiem kodu, który wykonuje pewne operacje. Funkcja może opcjonalnie definiować parametry wejściowe, które umożliwiają wywołującym przekazywanie argumentów do funkcji. Funkcja może opcjonalnie zwrócić wartość jako dane wyjściowe. Funkcje są przydatne do hermetyzacji typowych operacji w jednym bloku wielokrotnego użytku, najlepiej z nazwą, która jasno opisuje działanie funkcji. Następująca funkcja akceptuje dwóch liczb całkowitych od wywołującego i zwraca ich suma; *a* i *b* są *parametry* typu **int**.
 
 ```cpp
 int sum(int a, int b)
@@ -26,7 +26,7 @@ int sum(int a, int b)
 }
 ```
 
-Funkcję można wywołać, lub *o nazwie*, z dowolną liczbę miejsc w programie. Wartości, które są przekazywane do funkcji *argumenty*, których typy muszą być zgodne z typami parametrów w definicji funkcji.
+Funkcja może być wywoływana lub *wywoływana*z dowolnej liczby miejsc w programie. Wartości, które są przekazane do funkcji, są *argumentami*, których typy muszą być zgodne z typami parametrów w definicji funkcji.
 
 ```cpp
 int main()
@@ -37,21 +37,21 @@ int main()
 }
 ```
 
-Nie ma żadnego limitu praktycznego do długości funkcji, ale dobry projekt ma dla funkcji, które wykonują pojedynczego zadania dobrze zdefiniowane. Złożonych algorytmów powinny być dzielone w łatwych do zrozumienia funkcje prostsze zawsze, gdy jest to możliwe.
+Nie ma praktycznego limitu długości funkcji, ale dobry projekt dotyczy funkcji, które wykonują jedno dobrze zdefiniowane zadanie. Złożone algorytmy należy podzielić na łatwe w obsłudze prostsze funkcje, jeśli jest to możliwe.
 
-Funkcje, które są zdefiniowane w zakresie klasy są nazywane funkcji elementów członkowskich. W języku C++ w przeciwieństwie do innych języków, funkcję można także definiować w zakresie przestrzeni nazw (w tym niejawne globalnej przestrzeni nazw). Takie funkcje są nazywane *bezpłatne funkcje* lub *funkcje nieczłonkowskie*; są często używane w standardowej bibliotece.
+Funkcje, które są zdefiniowane w zakresie klasy, są nazywane funkcjami składowymi. W C++, w przeciwieństwie do innych języków, funkcja może być również zdefiniowana w zakresie przestrzeni nazw (łącznie z niejawną globalną przestrzenią nazw). Takie funkcje są nazywane *funkcjami bezpłatnymi* lub nienależącymi *do elementów członkowskich*. są one używane w szerokim stopniu w standardowej bibliotece.
 
-Funkcje mogą być *przeciążone*, co oznacza, że różne wersje funkcji mogą udostępnić taką samą nazwę, jeśli różnią się liczbą i/lub typu parametrów formalnych. Aby uzyskać więcej informacji, zobacz [przeciążanie funkcji](../cpp/function-overloading.md).
+Funkcje mogą być *przeciążone*, co oznacza, że różne wersje funkcji mogą współużytkować tę samą nazwę, jeśli różnią się one liczbą i/lub typem parametrów formalnych. Aby uzyskać więcej informacji, zobacz [przeciążanie funkcji](../cpp/function-overloading.md).
 
 ## <a name="parts-of-a-function-declaration"></a>Części deklaracji funkcji
 
-Funkcja minimalnej *deklaracji* składa się z typem zwracanym, nazwa funkcji i listą parametrów (które mogą być puste), oraz opcjonalne słowa kluczowe, które zapewniają dodatkowe instrukcje dla kompilatora. Poniższy przykład przedstawia deklarację funkcji:
+*Deklaracja* minimalnej funkcji składa się z typu zwracanego, nazwy funkcji i listy parametrów (które mogą być puste) wraz z opcjonalnymi słowami kluczowymi, które zawierają dodatkowe instrukcje do kompilatora. Poniższy przykład jest deklaracją funkcji:
 
 ```cpp
 int sum(int a, int b);
 ```
 
-Definicja funkcji składa się z deklaracji, a także *treści*, czyli cały kod między nawiasami klamrowymi:
+Definicja funkcji składa się z deklaracji oraz *treści*, która jest wszystkimi kodami między nawiasami klamrowymi:
 
 ```cpp
 int sum(int a, int b)
@@ -60,19 +60,19 @@ int sum(int a, int b)
 }
 ```
 
-Deklaracja funkcji, a następnie średnikami może pojawić się w wielu miejscach w programie. Musi znajdować się przed wszelkie wywołania tej funkcji w każdej jednostce translacji. Definicja funkcji musi znajdować się tylko raz w programie, zgodnie z jedną regułę definicji (ODR).
+Deklaracja funkcji, a po niej średnik może pojawić się w wielu miejscach w programie. Musi występować przed dowolnymi wywołaniami tej funkcji w każdej jednostce translacji. Definicja funkcji musi wystąpić tylko raz w programie, zgodnie z jedną z reguł definicji (ODR).
 
-Wymagane elementy deklarację funkcji są następujące:
+Wymagane części deklaracji funkcji są:
 
-1. Zwracany typ, który określa typ wartości, która zwraca funkcję, lub **void** Jeśli jest zwracana żadna wartość. W języku C ++ 11 **automatycznie** jest prawidłowym typem zwracanym, który nakazuje kompilatorowi wywnioskowania typu z instrukcji return. W języku C ++ 14 decltype(auto) jest również dozwolony. Aby uzyskać więcej informacji zobacz wnioskowanie typu w Return Types poniżej.
+1. Zwracany typ, który określa typ wartości zwracanej przez funkcję, lub **void** , jeśli żadna wartość nie jest zwracana. W języku C++ 11, autojest prawidłowym zwracanym **typem, który** instruuje kompilator, aby wywnioskować typ z instrukcji return. W języku C++ 14 jest również dozwolone decltype (Auto). Aby uzyskać więcej informacji, zobacz Typ odejmowania w poniższych typach zwracanych poniżej.
 
-1. Nazwy funkcji, która musi zaczynać się literą lub znakiem podkreślenia i nie może zawierać spacji. Ogólnie rzecz biorąc podkreśleniami wiodącymi w nazwach funkcji biblioteki standardowej wskazywać prywatnych elementów członkowskich lub funkcje nieczłonkowskie, które nie są przeznaczone do użycia w kodzie.
+1. Nazwa funkcji, która musi zaczynać się literą lub podkreśleniem i nie może zawierać spacji. Ogólnie rzecz biorąc, wiodące znaki podkreślenia w nazwach funkcji biblioteki standardowej wskazują prywatne funkcje Członkowskie lub funkcje nieczłonkowskie, które nie są przeznaczone do użytku w kodzie.
 
-1. Lista parametrów nawiasu klamrowego ogranicznik, oddzielone przecinkami zbiór zero lub więcej parametrów, które określają typ i opcjonalnie lokalna nazwa, w którym wartości mogą być używane wewnątrz treści funkcji.
+1. Lista parametrów, rozdzielana przecinkami, zestaw oddzielony przecinkiem zero lub więcej parametrów, które określają typ i opcjonalnie nazwę lokalną, do której można uzyskać dostęp do wartości wewnątrz treści funkcji.
 
-Opcjonalnych części deklaracji funkcji są następujące:
+Opcjonalne części deklaracji funkcji są:
 
-1. `constexpr`, co oznacza, że wartość zwracana przez funkcję jest wartością stałą, może zostać obliczony w czasie kompilacji.
+1. `constexpr`, co oznacza, że wartość zwracana przez funkcję jest wartością stałą można obliczyć w czasie kompilacji.
 
     ```cpp
     constexpr float exp(float x, int n)
@@ -83,7 +83,7 @@ Opcjonalnych części deklaracji funkcji są następujące:
     };
     ```
 
-1. Jego Specyfikacja powiązania **extern** lub **statyczne**.
+1. Jej Specyfikacja powiązania, **extern** lub **static**.
 
     ```cpp
     //Declare printf with C linkage.
@@ -91,9 +91,9 @@ Opcjonalnych części deklaracji funkcji są następujące:
 
     ```
 
-   Aby uzyskać więcej informacji, zobacz [Program i połączenie](../cpp/program-and-linkage-cpp.md).
+   Aby uzyskać więcej informacji, zobacz [jednostki translacji i powiązania](../cpp/program-and-linkage-cpp.md).
 
-1. **wbudowane**, które nakazuje kompilatorowi Zastąp każde wywołanie funkcji sam kod funkcji. wbudowanie umożliwia poprawę wydajności w scenariuszach, gdzie funkcja wykonuje szybko i jest wywoływany kilkakrotnie w wydajność krytycznych części kodu.
+1. **inline**, która instruuje kompilator, aby zamieniać każde wywołanie funkcji z samym kodem funkcji. Funkcja tworzenia konspektu może pomóc w wykonywaniu takich operacji w scenariuszach, w których funkcje są wykonywane szybko i są wywoływane wielokrotnie w sekcji krytycznej dla wydajności kodu.
 
     ```cpp
     inline double Account::GetBalance()
@@ -102,9 +102,9 @@ Opcjonalnych części deklaracji funkcji są następujące:
     }
     ```
 
-   Aby uzyskać więcej informacji, zobacz [funkcji śródwierszowych](../cpp/inline-functions-cpp.md).
+   Aby uzyskać więcej informacji, zobacz [funkcje wbudowane](../cpp/inline-functions-cpp.md).
 
-1. A `noexcept` wyrażenie, które określa, czy funkcja może zgłosić wyjątek. W poniższym przykładzie funkcja nie zgłasza wyjątku Jeśli `is_pod` wyrażenie daje w wyniku **true**.
+1. Wyrażenie `noexcept`, które określa, czy funkcja może zgłosić wyjątek. W poniższym przykładzie funkcja nie zgłasza wyjątku, jeśli wyrażenie `is_pod` ma **wartość true**.
 
     ```cpp
     #include <type_traits>
@@ -115,22 +115,22 @@ Opcjonalnych części deklaracji funkcji są następujące:
 
    Aby uzyskać więcej informacji, zobacz [noexcept](../cpp/noexcept-cpp.md).
 
-1. (Tylko w przypadku funkcji elementów członkowskich) Kwalifikatory cv, które określają, czy funkcja jest **const** lub **volatile**.
+1. (Tylko funkcje członkowskie) Kwalifikatory CV, które określają, czy funkcja jest **stała** , czy **nietrwała**.
 
-1. (Tylko w przypadku funkcji elementów członkowskich) **wirtualnego**, `override`, lub `final`. **wirtualne** Określa, czy funkcja może zostać przesłonięta w klasie pochodnej. `override` oznacza to, że funkcja w klasie pochodnej zastępują funkcję wirtualną. `final` oznacza, że funkcja nie może być zastąpiona we wszystkich dalszych klasy pochodnej. Aby uzyskać więcej informacji, zobacz [funkcji wirtualnych](../cpp/virtual-functions.md).
+1. (Tylko funkcje członkowskie) **Virtual**, `override`lub `final`. **wirtualne** określa, że funkcja może zostać przesłonięta w klasie pochodnej. `override` oznacza, że funkcja w klasie pochodnej zastępuje funkcję wirtualną. `final` oznacza, że funkcja nie może zostać zastąpiona w żadnej dalszej klasie pochodnej. Aby uzyskać więcej informacji, zobacz [funkcje wirtualne](../cpp/virtual-functions.md).
 
-1. (tylko w przypadku funkcji elementów członkowskich) **statyczne** stosowany do składowej funkcji oznacza, że funkcja nie jest skojarzony z dowolnego wystąpienia obiektu klasy.
+1. (tylko funkcje członkowskie) **statyczna** zastosowana do funkcji składowej oznacza, że funkcja nie jest skojarzona z żadnym wystąpieniem obiektu klasy.
 
-1. (Tylko w przypadku funkcji niestatycznych członka) Kwalifikator ref, który określa kompilatorowi które przeciążenia funkcji, aby wybrać, kiedy parametr obiektu niejawne (\*to) jest odwołaniem rvalue, a odwołanie lvalue. Aby uzyskać więcej informacji, zobacz [przeciążanie funkcji](function-overloading.md#ref-qualifiers).
+1. (Tylko niestatyczne funkcje członkowskie) Kwalifikator ref, który określa kompilator, który przeciążać funkcję do wyboru, gdy parametr obiektu niejawnego (\*to) jest odwołaniem rvalue a odwołaniem do lvalue. Aby uzyskać więcej informacji, zobacz [przeciążanie funkcji](function-overloading.md#ref-qualifiers).
 
-Poniższa ilustracja ukazuje części definicji funkcji. Zacieniony obszar stanowi treści funkcji.
+Na poniższej ilustracji przedstawiono części definicji funkcji. Zacieniony obszar to treść funkcji.
 
-![Części definicji funkcji](../cpp/media/vc38ru1.gif "części definicji funkcji") <br/>
+![Części definicji funkcji](../cpp/media/vc38ru1.gif "Części definicji funkcji") <br/>
 Części definicji funkcji
 
 ## <a name="function-definitions"></a>Definicje funkcji
 
-A *funkcji definicji* składa się z deklaracji i treści funkcji, ujęte w nawiasy klamrowe, który zawiera deklaracje zmiennych, instrukcji i wyrażeń. Poniższy przykład przedstawia definicją pełne funkcji:
+*Definicja funkcji* składa się z deklaracji i treści funkcji ujętej w nawiasy klamrowe, która zawiera deklaracje zmiennych, instrukcje i wyrażenia. Poniższy przykład przedstawia pełną definicję funkcji:
 
 ```cpp
     int foo(int i, std::string s)
@@ -145,7 +145,7 @@ A *funkcji definicji* składa się z deklaracji i treści funkcji, ujęte w nawi
     }
 ```
 
-Zmienne zadeklarowane wewnątrz treści są nazywane, zmienne lokalne lub zmiennych lokalnych. Jeśli funkcja kończy działanie; wykraczają poza zakres w związku z tym funkcja nigdy nie powinna zwrócić odwołanie do lokalnego!
+Zmienne zadeklarowane wewnątrz treści są nazywane zmiennymi lokalnymi lub elementami lokalnymi. Wykraczają poza zakres, gdy funkcja kończy działanie; w związku z tym funkcja nigdy nie powinna zwracać odwołania do lokalnego.
 
 ```cpp
     MyClass& boom(int i, std::string s)
@@ -157,15 +157,15 @@ Zmienne zadeklarowane wewnątrz treści są nazywane, zmienne lokalne lub zmienn
     }
 ```
 
-## <a name="const-and-constexpr-functions"></a>Funkcje Const i constexpr
+## <a name="const-and-constexpr-functions"></a>funkcje const i constexpr
 
-Można zadeklarować funkcji składowej jako **const** do określenia, że funkcja nie może zmienić wartości żadnych składowych danych klasy. DEKLARUJĄC funkcji składowej jako **const**, pomoc kompilator, aby wymusić *poprawność const*. Jeśli ktoś przez pomyłkę próbuje zmodyfikować obiekt przy użyciu funkcji deklarowane jako **const**, zgłaszany jest błąd kompilatora. Aby uzyskać więcej informacji, zobacz [const](const-cpp.md).
+Można zadeklarować funkcję członkowską jako **stałą** , aby określić, że funkcja nie może zmienić wartości żadnych elementów członkowskich danych w klasie. Deklarując funkcję członkowską jako **stałą**, możesz pomóc kompilatorowi wymusić *prawidłowość stałych*. Jeśli ktoś omyłkowo próbuje zmodyfikować obiekt przy użyciu funkcji zadeklarowanej jako **const**, zostanie zgłoszony błąd kompilatora. Aby uzyskać więcej informacji, zobacz [const](const-cpp.md).
 
-Zadeklarować funkcję jako `constexpr` kiedy wartość generuje prawdopodobnie można określić w czasie kompilacji. Funkcja constexpr zwykle wykonuje szybciej niż normalne działanie. Aby uzyskać więcej informacji, zobacz [constexpr](constexpr-cpp.md).
+Zadeklaruj funkcję jako `constexpr`, gdy wartość, którą produkuje, może być ustalona w czasie kompilacji. Funkcja constexpr zazwyczaj wykonuje się szybciej niż zwykła funkcja. Aby uzyskać więcej informacji, zobacz [constexpr](constexpr-cpp.md).
 
 ## <a name="function-templates"></a>Szablony funkcji
 
-Szablon funkcji jest podobny do szablonu klasy; generuje on konkretne funkcje, w zależności od argumentów szablonu. W wielu przypadkach szablonu jest w stanie wywnioskować argumentów typu, i w związku z tym nie trzeba jawnie określić je.
+Szablon funkcji jest podobny do szablonu klasy; generuje konkretne funkcje na podstawie argumentów szablonu. W wielu przypadkach szablon może wywnioskować argumenty typu i w związku z tym nie jest konieczne jawne określenie ich.
 
 ```cpp
 template<typename Lhs, typename Rhs>
@@ -178,31 +178,31 @@ auto a = Add2(3.13, 2.895); // a is a double
 auto b = Add2(string{ "Hello" }, string{ " World" }); // b is a std::string
 ```
 
-Aby uzyskać więcej informacji, zobacz [szablonów funkcji](../cpp/function-templates.md)
+Aby uzyskać więcej informacji, zobacz [Szablony funkcji](../cpp/function-templates.md)
 
-## <a name="function-parameters-and-arguments"></a>Funkcja parametrami i argumentami
+## <a name="function-parameters-and-arguments"></a>Parametry i argumenty funkcji
 
-Funkcja ma parametr rozdzielaną przecinkami listę zero lub więcej typów, z których każdy ma nazwę, za pomocą którego jest dostępny w treści funkcji. Szablon funkcji może określić dodatkowe parametry typu lub wartości. Obiekt wywołujący przekazuje argumenty, które są konkretne wartości, których typy są zgodne z listą parametrów.
+Funkcja ma listę parametrów z wartościami rozdzielanymi przecinkami (zero lub więcej), z których każdy ma nazwę, za pomocą której można uzyskać dostęp w treści funkcji. Szablon funkcji może określać dodatkowe parametry typu lub wartości. Obiekt wywołujący przekazuje argumenty, które są konkretnymi wartościami, których typy są zgodne z listą parametrów.
 
-Domyślnie argumenty są przekazywane do funkcji przez wartość, co oznacza, że funkcja otrzymuje kopię obiektu przekazywana. W przypadku dużych obiektów, skopiowanie może być kosztowne i nie zawsze jest konieczne. Aby spowodować, że argumenty przekazywane przez odwołanie (w szczególności odwołanie l-wartości), należy dodać kwantyfikator odwołania do parametru:
+Domyślnie argumenty są przekazywane do funkcji przez wartość, co oznacza, że funkcja otrzymuje kopię przekazanego obiektu. W przypadku dużych obiektów wykonywanie kopii może być kosztowne i nie zawsze jest konieczne. Aby sprawić, że argumenty mają być przekazane przez odwołanie (w przypadku odwołania lvalue), Dodaj kwantyfikator referencyjny do parametru:
 
 ```cpp
 void DoSomething(std::string& input){...}
 ```
 
-Gdy funkcja zmodyfikuje argument, który jest przekazywany przez odwołanie, modyfikuje oryginalnego obiektu nie kopię lokalną. Aby uniemożliwić modyfikowanie takich argumentu funkcji, kwalifikują się jako const parametr &:
+Gdy funkcja modyfikuje argument, który jest przesyłany przez odwołanie, modyfikuje oryginalny obiekt, a nie kopię lokalną. Aby zapobiec modyfikowaniu takiego argumentu przez funkcję, Zakwalifikuj parametr jako const &:
 
 ```cpp
 void DoSomething(const std::string& input){...}
 ```
 
-**C++ 11:**  Aby jawnie obsługiwać argumenty, które są przekazywane przez odwołanie rvalue lub odwołanie lvalue, należy użyć double-handlowe "i" w parametrze aby wskazać uniwersalny odwołania:
+**C++ 11:**  Aby jawnie obsługiwać argumenty, które są przekazane przez rvalue-Reference lub lvalue-Reference, należy użyć podwójnego znaku "w parametrze", aby wskazać uniwersalne odwołanie:
 
 ```cpp
 void DoSomething(const std::string&& input){...}
 ```
 
-Funkcja zadeklarowana za pomocą jednego słowa kluczowego **void** w deklaracji parametru listy nie przyjmuje żadnych argumentów, tak długo, jak słowo kluczowe **void** jest pierwszym i tylko członek lista deklaracji argumentów. Argumenty typu **void** innym miejscu na liście generuje błędy. Na przykład:
+Funkcja zadeklarowana za pomocą słowa kluczowego Single o wartości **void** na liście deklaracji parametrów nie przyjmuje żadnych argumentów, o ile słowo kluczowe **void** jest pierwszym i jedynym członkiem listy deklaracji argumentów. Argumenty typu **void** w innym miejscu na liście powodują błędy. Na przykład:
 
 ```cpp
 
@@ -210,11 +210,11 @@ Funkcja zadeklarowana za pomocą jednego słowa kluczowego **void** w deklaracji
 long GetTickCount( void );
 ```
 
-Należy zauważyć, że, mimo że jest niedozwolone w celu określenia **void** argumentu z wyjątkiem sytuacji, jak podkreślono, typy pochodne typu **void** (takich jak wskaźniki do **void** i tablice **void**) mogą występować w dowolnym miejscu na liście deklaracji argumentów.
+Należy pamiętać, że chociaż nie jest dozwolone określenie argumentu **void** , z wyjątkiem sytuacji, typy pochodne od typu **void** (takie jak wskaźniki do **void** i tablice **void**) mogą pojawić się w dowolnym miejscu listy deklaracji argumentów.
 
 ### <a name="default-arguments"></a>Argumenty domyślne
 
-Ostatni parametr lub parametry w sygnaturze funkcji może być przypisana domyślnego argumentu, co oznacza, że obiekt wywołujący może opuścić się argument podczas wywoływania funkcji, jeśli nie chcą określić inną wartość.
+Ostatni parametr lub parametry w sygnaturze funkcji może mieć przypisany argument domyślny, co oznacza, że obiekt wywołujący może opuścić argument podczas wywoływania funkcji, chyba że chcą określić inną wartość.
 
 ```cpp
 int DoSomething(int num,
@@ -239,11 +239,11 @@ Aby uzyskać więcej informacji, zobacz [argumenty domyślne](../cpp/default-arg
 
 ## <a name="function-return-types"></a>Zwracane typy funkcji
 
-Funkcja nie może zwracać innej funkcji lub tablicą wbudowane; jednak może zwracać wskaźniki do tych typów lub *lambda*, która tworzy obiekt funkcyjny. Z wyjątkiem w takich przypadkach funkcja może zwrócić wartość dowolnego typu, który znajduje się w zakresie lub aplikacja może zwracać żadnej wartości, w którym to przypadku typ zwracany jest **void**.
+Funkcja nie może zwracać innej funkcji ani wbudowanej tablicy; może jednak zwracać wskaźniki do tych typów lub *wyrażenia lambda*, które tworzy obiekt Function. Z wyjątkiem tych przypadków funkcja może zwrócić wartość dowolnego typu, który znajduje się w zakresie lub nie może zwracać żadnej wartości, w tym przypadku typ zwracany to **void**.
 
-### <a name="trailing-return-types"></a>Śledzenie typów zwracanych
+### <a name="trailing-return-types"></a>Końcowe zwracane typy
 
-Typ zwracany "zwykłej" znajduje się po lewej stronie sygnatury funkcji. A *końcowym typem zwracanym* znajduje się na większości prawego boku podpisu i jest poprzedzony przez operator ->. Końcowe zwracane typy są szczególnie użyteczne w szablonów funkcji, gdy typ wartości zwracanej zależy od parametrów szablonu.
+"Zwykły" typ zwracany znajduje się po lewej stronie sygnatury funkcji. *Końcowy typ zwracany* znajduje się po prawej stronie podpisu i jest poprzedzony operatorem->. Końcowe typy zwracane są szczególnie przydatne w szablonach funkcji, gdy typ wartości zwracanej zależy od parametrów szablonu.
 
 ```cpp
 template<typename Lhs, typename Rhs>
@@ -253,19 +253,19 @@ auto Add(const Lhs& lhs, const Rhs& rhs) -> decltype(lhs + rhs)
 }
 ```
 
-Gdy **automatycznie** jest używany w połączeniu z końcowym typem zwracanym, po prostu służy jako symbol zastępczy dla dowolnego wyrażenia decltype tworzy i sam nie powoduje wykonania wnioskowanie typu.
+Gdy **Funkcja** autojest używana w połączeniu z końcowym typem zwracanym, pełni funkcję jako symbol zastępczy dla dowolnego wyrażenia decltype i nie wykonuje odejmowania typu.
 
-## <a name="function-local-variables"></a>Zmienne lokalne — funkcja
+## <a name="function-local-variables"></a>Zmienne lokalne funkcji
 
-Nosi nazwę zmiennej, która jest zadeklarowana wewnątrz treści funkcji *zmienna lokalna* lub po prostu *lokalnego*. Niestatycznych zmienne lokalne są tylko widoczne wewnątrz treści funkcji, a jeśli są one zadeklarowane na stosie wykraczają poza zakres, gdy funkcja kończy działanie. Podczas konstruowania zmiennej lokalnej, a następnie przywrócić go przez wartość, kompilator będzie mógł zwykle wykonać Optymalizacja zwracanej wartości, aby uniknąć niepotrzebnego kopiowania operacji. Jeśli zmienna lokalna można zwrócić przez odwołanie, kompilator wyświetli ostrzeżenie, ponieważ każda próba użycia tego odwołania przez obiekt wywołujący nastąpi po zniszczeniu lokalnej.
+Zmienna zadeklarowana wewnątrz treści funkcji jest nazywana *zmienną lokalną* lub po prostu *lokalną*. Niestatyczne elementy lokalne są widoczne tylko wewnątrz treści funkcji i, jeśli są zadeklarowane na stosie, wykraczają poza zakres, gdy funkcja kończy działanie. Gdy tworzysz zmienną lokalną i zwracasz ją przez wartość, kompilator może zazwyczaj wykonać *optymalizację nazwanej wartości zwracanej* , aby uniknąć niepotrzebnych operacji kopiowania. Jeśli zmienna lokalna zostanie zwrócona przez odwołanie, kompilator wygeneruje ostrzeżenie, ponieważ jakakolwiek próba użycia tego odwołania przez obiekt wywołujący będzie miała miejsce po zniszczeniu elementu lokalnego.
 
-W języku C++ zmienna lokalna może być zadeklarowane jako statyczne. Zmienna jest widoczna tylko w wewnątrz treści funkcji, ale istnieje jego kopia jednej zmiennej dla wszystkich wystąpień funkcji. Lokalnych obiektów statycznych są niszczone podczas przerywania określony przez `atexit`. Jeśli nie można skonstruować obiekt statyczny, ponieważ przepływ sterowania w programie pomijane swojej deklaracji, jest podejmowana próba do zniszczenia obiektu.
+W C++ zmiennej lokalnej może być zadeklarowany jako statyczny. Zmienna jest widoczna tylko wewnątrz treści funkcji, ale jedna kopia zmiennej istnieje dla wszystkich wystąpień funkcji. Lokalne obiekty statyczne są niszczone podczas kończenia określonego przez `atexit`. Jeśli obiekt statyczny nie został skonstruowany, ponieważ przepływ sterowania programu został pominięty w jego deklaracji, nie podjęto próby zniszczenia tego obiektu.
 
-##  <a name="type_deduction"></a> Wnioskowanie typu w typy zwracane (C ++ 14)
+##  <a name="type_deduction"></a>Typ odejmowania w typach zwracanych (C++ 14)
 
-W języku C ++ 14, można użyć **automatycznie** aby poinstruować kompilator wywnioskuje typ zwracany w treści funkcji bez konieczności podawania końcowym typem zwracanym. Należy pamiętać, że **automatycznie** zawsze wywnioskowuje, że zwracany przez wartość. Użyj `auto&&` można nakazać kompilatorowi na wywnioskowanie odwołania.
+W języku C++ 14 **można użyć funkcji** Auto, aby nakazać kompilatorowi wywnioskowanie typu zwracanego z treści funkcji bez konieczności podawania końcowego typu zwracanego. Należy pamiętać, że **Funkcja autowypełnia** zawsze wartość zwracaną przez. Użyj `auto&&`, aby nakazać kompilatorowi wywnioskowanie odwołania.
 
-W tym przykładzie **automatycznie** zostanie wywnioskowany; dotyczy to jako suma lhs i rhs kopię wartości innej niż stała wartość.
+W tym przykładzie **Funkcja Autokorekty** zostanie wywnioskowana jako kopia niebędąca wartością stałą sumy wartości LHS i Rhs.
 
 ```cpp
 template<typename Lhs, typename Rhs>
@@ -275,9 +275,9 @@ auto Add2(const Lhs& lhs, const Rhs& rhs)
 }
 ```
 
-Należy pamiętać, że **automatycznie** stałość typu go wywnioskowuje, że nie zostaną zachowane. W przypadku przekazywania funkcje, których zwracana wartość musi zachować stałość ref-ness argumentów, można użyć **decltype(auto)** — słowo kluczowe, która używa **decltype** reguły wnioskowania typu i zachowuje wszystkie informacje o typie. **Element decltype(auto)** może służyć jako wartości zwracane zwykłych po lewej stronie lub końcową wartość zwracaną.
+Należy pamiętać, że **Funkcja** autostałość nie zachowuje typu const-deargumentd. W przypadku funkcji przekazywania, których wartość zwracana musi zachować stałą-stałość lub ref-stałość argumentów, można użyć słowa kluczowego **decltype (Auto)** , w którym są używane reguły wnioskowania typu **decltype** i zachowuje wszystkie informacje o typie. **decltype (Auto)** może być używana jako zwykła wartość zwrotna po lewej stronie lub jako końcowa wartość zwracana.
 
-Poniższy przykład (na podstawie kodu z [N3493](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2013/n3493.html)), zawiera **decltype(auto)** używane do włączania Perfekcyjne przekazywanie argumentów funkcji w zwracany typ, który nie jest znany, aż do szablonu wystąpienia.
+Poniższy przykład (oparty na kodzie z [N3493](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2013/n3493.html)) pokazuje, że **decltype (Auto)** służy do włączania doskonałego przekazywania argumentów funkcji w zwracanym typie, który nie jest znany do momentu wystąpienia szablonu.
 
 ```cpp
 template<typename F, typename Tuple = tuple<T...>, int... I>
@@ -293,14 +293,13 @@ template<typename F, typename Tuple = tuple<T...>,
 {
     return apply_(std::forward<F>(f), std::forward<Tuple>(args), Indices());
 }
-}
 ```
 
-## <a name="multi_val"></a> Zwracanie wielu wartości z funkcji
+## <a name="multi_val"></a>Zwracanie wielu wartości z funkcji
 
-Istnieją różne sposoby, aby zwrócić więcej niż jedną wartość z funkcji:
+Istnieją różne sposoby zwracania więcej niż jednej wartości z funkcji:
 
-1. Hermetyzuj wartości w obiekcie o nazwie klasy lub struktury. Wymaga definicji klasy lub struktury były widoczne dla obiektu wywołującego:
+1. Hermetyzuj wartości w nazwanej klasie lub obiekcie struktury. Wymaga widoczności klasy lub struktury dla obiektu wywołującego:
 
     ```cpp
     #include <string>
@@ -329,7 +328,7 @@ Istnieją różne sposoby, aby zwrócić więcej niż jedną wartość z funkcji
     }
     ```
 
-1. Zwraca obiekt std::tuple lub std::pair:
+1. Zwróć obiekt powietrza std:: krotek lub std::p:
 
     ```cpp
     #include <tuple>
@@ -363,7 +362,7 @@ Istnieją różne sposoby, aby zwrócić więcej niż jedną wartość z funkcji
     }
     ```
 
-1. **Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Użyj powiązań strukturalnych. Zalet powiązań strukturalnych to, że zmienne, które przechowują wartości zwracane są inicjowane w tym samym czasie, które są deklarowane, co w niektórych przypadkach może być znacznie bardziej efektywne. W niniejszych zasadach--`auto[x, y, z] = f();`--nawiasy wprowadzają i zainicjuj nazw, które znajdują się w zakresie bloku całej funkcji.
+1. **Visual Studio 2017 w wersji 15,3 lub nowszej** (dostępny w [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): Użyj powiązań strukturalnych. Zalety powiązań strukturalnych polega na tym, że zmienne, które przechowują wartości zwracane są inicjowane w tym samym czasie, które są zgłaszane, co w niektórych przypadkach może być znacznie bardziej wydajne. W tej instrukcji--`auto[x, y, z] = f();`--nawiasy wprowadzają i inicjują nazwy, które są w zakresie dla całego bloku funkcji.
 
     ```cpp
     #include <tuple>
@@ -403,13 +402,13 @@ Istnieją różne sposoby, aby zwrócić więcej niż jedną wartość z funkcji
     }
     ```
 
-1. Tylko samą wartość zwracana, użytkownik może "return" wartości, definiując dowolna liczba parametrów do użycia przekazywany przez odwołanie, aby zmodyfikować lub zainicjować wartości obiektów, które zapewnia obiekt wywołujący funkcję. Aby uzyskać więcej informacji, zobacz [argumenty funkcji typu odwołania](reference-type-function-arguments.md).
+1. Oprócz używania wartości zwracanej można "zwrócić" wartości przez zdefiniowanie dowolnej liczby parametrów do użycia przekazywania przez odwołanie, aby funkcja mogła modyfikować lub inicjować wartości obiektów, które zapewnia obiekt wywołujący. Aby uzyskać więcej informacji, zobacz [argumenty funkcji typu odwołania](reference-type-function-arguments.md).
 
 ## <a name="function-pointers"></a>Wskaźniki funkcji
 
-Język C++ obsługuje wskaźników funkcji w taki sam sposób, jak język C. Jednak bardziej bezpieczny alternatywą jest zwykle użyć obiektu funkcyjnego.
+C++obsługuje wskaźniki funkcji w taki sam sposób, jak język C. Jednak bardziej bezpieczny dla typu alternatywą jest zwykle użycie obiektu Function.
 
-Zalecane jest, **typedef** być wykorzystywane do deklarowania aliasu dla typu wskaźnika funkcji, jeśli deklarowana jest funkcja, która zwraca typ wskaźnika funkcji.  Na przykład
+Zaleca się, aby **element typedef** był używany do deklarowania aliasu dla typu wskaźnika funkcji, jeśli deklaruje funkcję, która zwraca typ wskaźnika funkcji.  Na przykład
 
 ```cpp
 typedef int (*fp)(int);

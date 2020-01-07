@@ -1,14 +1,14 @@
 ---
 title: Pliki nagłówkowe (C++)
-ms.date: 04/20/2018
+ms.date: 12/11/2019
 helpviewer_keywords:
 - header files [C++]
-ms.openlocfilehash: 98d37944f8c037f3ba25d80c7d35b3560ad11d40
-ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
+ms.openlocfilehash: ca5036ee53372f44e53b5a6452d4ab220fc3977d
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980471"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301486"
 ---
 # <a name="header-files-c"></a>Pliki nagłówkowe (C++)
 
@@ -23,9 +23,12 @@ Deklaracja instruuje kompilator, czy element jest typu **int**, **Double**, **fu
 
 Aby zminimalizować potencjalną liczbę błędów, C++ przyjęto Konwencję używania *plików nagłówkowych* do zawierania deklaracji. Należy wprowadzić deklaracje w pliku nagłówkowym, a następnie użyć dyrektywy #include w każdym pliku. cpp lub w innym pliku nagłówkowym, który wymaga tej deklaracji. Dyrektywa #include wstawia kopię pliku nagłówkowego bezpośrednio do pliku. cpp przed kompilacją.
 
+> [!NOTE]
+> W programie Visual Studio 2019 funkcja *modułów* c++ 20 została wprowadzona jako udoskonalenie i ostateczne zastąpienie dla plików nagłówkowych. Aby uzyskać więcej informacji, zobacz [Omówienie modułów w C++ ](modules-cpp.md)temacie.
+
 ## <a name="example"></a>Przykład
 
-Poniższy przykład przedstawia typowy sposób deklarowania klasy, a następnie używania jej w innym pliku źródłowym. Zaczniemy od pliku `my_class.h`nagłówkowego. Zawiera definicję klasy, ale należy pamiętać, że definicja jest niekompletna; nie zdefiniowano `do_something` funkcji składowej:
+Poniższy przykład przedstawia typowy sposób deklarowania klasy, a następnie używania jej w innym pliku źródłowym. Zaczniemy od pliku nagłówkowego, `my_class.h`. Zawiera definicję klasy, ale należy pamiętać, że definicja jest niekompletna; nie zdefiniowano funkcji składowej `do_something`:
 
 ```cpp
 // my_class.h
@@ -40,9 +43,9 @@ namespace N
 }
 ```
 
-Następnie utwórz plik implementacji (zazwyczaj z rozszerzeniem. cpp lub podobnego rozszerzenia). Wywołajemy plik my_class. cpp i podasz definicję dla deklaracji elementu członkowskiego. Dodajemy `#include` dyrektywę dla pliku "my_class. h", aby w tym momencie wstawiona została deklaracja my_class w pliku. cpp, a `<iostream>` my dodaliśmy, aby `std::cout`ściągnąć w deklaracji. Należy zauważyć, że cudzysłowy są używane dla plików nagłówkowych w tym samym katalogu, co plik źródłowy, a nawiasy ostre są używane dla nagłówków biblioteki standardowej. Ponadto wiele nagłówków biblioteki standardowej nie ma. h ani żadnego innego rozszerzenia pliku.
+Następnie utwórz plik implementacji (zazwyczaj z rozszerzeniem. cpp lub podobnego rozszerzenia). Wywołajemy plik my_class. cpp i podaj definicję deklaracji elementu członkowskiego. Do pliku "my_class. h" dodawana jest dyrektywa `#include`, która będzie zawierała deklarację my_class wstawioną w tym momencie w pliku. cpp, a my dodaliśmy `<iostream>` do ściągnięcia w deklaracji dla `std::cout`. Należy zauważyć, że cudzysłowy są używane dla plików nagłówkowych w tym samym katalogu, co plik źródłowy, a nawiasy ostre są używane dla nagłówków biblioteki standardowej. Ponadto wiele nagłówków biblioteki standardowej nie ma. h ani żadnego innego rozszerzenia pliku.
 
-W pliku implementacji można opcjonalnie użyć instrukcji **using** , aby uniknąć konieczności zakwalifikowania się każdego wzmianki o wartości "my_class" lub "cout" z "N::" lub "std::".  Nie należy umieszczać instrukcji **using** w plikach nagłówkowych.
+W pliku implementacji można opcjonalnie użyć instrukcji **using** , aby uniknąć konieczności zakwalifikowania się każdego "my_class" lub "cout" z "N::" lub "std::".  Nie należy umieszczać instrukcji **using** w plikach nagłówkowych.
 
 ```cpp
 // my_class.cpp
@@ -58,7 +61,7 @@ void my_class::do_something()
 }
 ```
 
-Teraz możemy użyć `my_class` innego pliku. cpp. #Include pliku nagłówkowego, aby kompilator ściągał deklarację. Wszystkie kompilatora muszą wiedzieć, że my_class jest klasą, która ma wywołaną `do_something()`publiczną funkcję członkowską.
+Teraz możemy używać `my_class` w innym pliku CPP. #Include pliku nagłówkowego, aby kompilator ściągał deklarację. Wszystkie kompilatora muszą wiedzieć, że my_class jest klasą, która ma publiczną funkcję członkowską o nazwie `do_something()`.
 
 ```cpp
 // my_program.cpp
@@ -78,7 +81,7 @@ Gdy kompilator zakończy Kompilowanie każdego pliku. cpp do plików. obj, przek
 
 ## <a name="include-guards"></a>Dołącz osłony
 
-Zazwyczaj pliki nagłówkowe mają osłonę *include* lub `#pragma once` dyrektywę, aby upewnić się, że nie są one wstawiane wielokrotnie do jednego pliku. cpp.
+Zazwyczaj pliki nagłówkowe mają *ochronę* lub `#pragma once` dyrektywy, aby upewnić się, że nie są one wstawiane wielokrotnie do jednego pliku. cpp.
 
 ```cpp
 // my_class.h

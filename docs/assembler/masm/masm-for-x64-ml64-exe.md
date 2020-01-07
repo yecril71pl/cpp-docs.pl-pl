@@ -1,17 +1,17 @@
 ---
 title: MASM dla wersji x64 (ml64.exe)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 helpviewer_keywords:
 - ml64
 - ml64.exe
 - masm for x64
 ms.assetid: 89059103-f372-4968-80ea-0c7f90bb9c91
-ms.openlocfilehash: 68f5a14b092109a647e7a81ed6c3fef148a5571b
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 5e324414a0d4d7e74bb28d54c1d858ef6fb9793c
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397224"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75312745"
 ---
 # <a name="masm-for-x64-ml64exe"></a>MASM dla wersji x64 (ml64.exe)
 
@@ -19,7 +19,7 @@ Program Visual Studio zawiera zarówno 32-bitowe, jak i 64-bitowe obsługiwane w
 
 Aby użyć MASM do kompilowania kodu dla obiektów docelowych x64 w wierszu polecenia, należy użyć wiersza polecenia dewelopera dla obiektów docelowych x64, które ustawia wymaganą ścieżkę i inne zmienne środowiskowe. Aby uzyskać informacje na temat sposobu uruchamiania wiersza polecenia dewelopera, zobacz [kompilacja CC++ /Code w wierszu polecenia](../../build/building-on-the-command-line.md).
 
-Aby uzyskać informacje na temat opcji wiersza polecenia ml64. exe, zobacz [informacje dotyczące wiersza polecenia ml i ML64](../../assembler/masm/ml-and-ml64-command-line-reference.md).
+Aby uzyskać informacje na temat opcji wiersza polecenia ml64. exe, zobacz [informacje dotyczące wiersza polecenia ml i ML64](ml-and-ml64-command-line-reference.md).
 
 Wbudowane asembler lub użycie słowa kluczowego ASM nie jest obsługiwane dla elementów docelowych x64 i ARM. Aby przenieść kod x86, który używa asemblera wbudowanego do architektury x64 lub ARM, Możesz skonwertować swój kod C++na, użyć wewnętrznych kompilatorów lub utworzyć pliki źródłowe języka asemblera. Kompilator firmy C++ Microsoft obsługuje funkcje wewnętrzne, aby umożliwić korzystanie z instrukcji specjalnych, na przykład uprzywilejowanego, skanowania bitowego/testowania, blokowania, i tak dalej, w sposób zbliżony do obsługiwanej przez wiele platform. Aby uzyskać informacje o dostępnych funkcjach wewnętrznych, zobacz [wewnętrzne kompilatory](../../intrinsics/compiler-intrinsics.md).
 
@@ -29,7 +29,7 @@ System projektu programu Visual Studio obsługuje pliki języka asemblera skompi
 
 ### <a name="to-add-an-assembler-language-file-to-an-existing-visual-studio-c-project"></a>Aby dodać plik programu asemblera do istniejącego projektu programu Visual Studio C++
 
-1. Wybierz projekt w **Eksplorator rozwiązań**. Na pasku menu wybierz **projekt**, a następnie pozycję **dostosowania kompilacji**.
+1. Wybierz projekt w **Eksploratora rozwiązań**. Na pasku menu wybierz **projekt**, a następnie pozycję **dostosowania kompilacji**.
 
 1. W oknie **dialogowym C++ pliki dostosowania kompilacji wizualizacji** zaznacz pole wyboru obok pozycji **MASM (. targets,. props)** . Wybierz **przycisk OK** , aby zapisać wybór i zamknąć okno dialogowe.
 
@@ -43,21 +43,21 @@ Utwórz kod języka asemblera w pliku. ASM, który został dodany. Podczas kompi
 
 W kodzie źródłowym języka asemblera, który jest przeznaczony dla architektury x64, można użyć następujących dyrektyw specyficznych dla ML64:
 
-- [.ALLOCSTACK](../../assembler/masm/dot-allocstack.md)
+- [.ALLOCSTACK](dot-allocstack.md)
 
-- [.ENDPROLOG](../../assembler/masm/dot-endprolog.md)
+- [.ENDPROLOG](dot-endprolog.md)
 
-- [.PUSHFRAME](../../assembler/masm/dot-pushframe.md)
+- [.PUSHFRAME](dot-pushframe.md)
 
-- [.PUSHREG](../../assembler/masm/dot-pushreg.md)
+- [.PUSHREG](dot-pushreg.md)
 
-- [.SAVEREG](../../assembler/masm/dot-savereg.md)
+- [.SAVEREG](dot-savereg.md)
 
-- [.SAVEXMM128](../../assembler/masm/dot-savexmm128.md)
+- [.SAVEXMM128](dot-savexmm128.md)
 
-- [.SETFRAME](../../assembler/masm/dot-setframe.md)
+- [.SETFRAME](dot-setframe.md)
 
-Ponadto dyrektywa [proc](../../assembler/masm/proc.md) została zaktualizowana do użycia z ml64. exe.
+Ponadto dyrektywa [proc](proc.md) została zaktualizowana do użycia z ml64. exe.
 
 ## <a name="32-bit-address-mode-address-size-override"></a>32 — tryb adresu bitowego (przesłonięcie rozmiaru adresu)
 
@@ -82,4 +82,4 @@ mov eax, DWORD PTR [ecx*2+r10+0100h]
 
 ## <a name="see-also"></a>Zobacz także
 
-[Microsoft Macro Assembler — dokumentacja](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[Microsoft Macro Assembler — dokumentacja](microsoft-macro-assembler-reference.md)

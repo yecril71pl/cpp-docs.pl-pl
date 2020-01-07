@@ -8,16 +8,16 @@ helpviewer_keywords:
 - TRUNCATE constant
 - _TRUNCATE constant
 ms.assetid: ad093dbf-1aa5-4bd2-9268-efc68afd8434
-ms.openlocfilehash: e5a341f1828bad9f5562c10036779245ac88c79e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b472fceffa6284baaaf4dc1780ab54399fdd42c7
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62304335"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301681"
 ---
-# <a name="truncate"></a>_TRUNCATE
+# <a name="_truncate"></a>_TRUNCATE
 
-Określa zachowanie obcięcie ciągu.
+Określa zachowanie obcinania ciągów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,7 +27,7 @@ Określa zachowanie obcięcie ciągu.
 
 ## <a name="remarks"></a>Uwagi
 
-`_TRUNCATE` Włącza zachowanie obcinania, gdy dane są przekazywane jako `count` parametru tych funkcji:
+`_TRUNCATE` włącza zachowanie obcinania po przekazaniu jako parametr `count` do tych funkcji:
 
 [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)
 
@@ -45,9 +45,9 @@ Określa zachowanie obcięcie ciągu.
 
 [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)
 
-Jeśli bufor docelowy jest zbyt mały, aby pomieścić cały ciąg, normalnego zachowania tych funkcji jest jej traktowała jako wystąpienia błędu (zobacz [Parameter Validation](../c-runtime-library/parameter-validation.md)). Jednak jeśli włączono obcięcie ciągu, przekazując `_TRUNCATE`, te funkcje zostaną skopiowane tylko tyle parametrów pasujące, pozostawiając bufor docelowy zakończony wartością null i zwraca pomyślnie.
+Jeśli bufor docelowy jest zbyt mały, aby pomieścić cały ciąg, normalne zachowanie tych funkcji jest traktowane jako błąd (zobacz [Walidacja parametrów](../c-runtime-library/parameter-validation.md)). Jeśli jednak obcinanie ciągów jest włączone przez przekazanie `_TRUNCATE`, te funkcje skopiują tylko tyle ciągów, ile będzie to dopasować, pozostawiając bufor docelowy zakończony zerem i powrócisz pomyślnie.
 
-Obcięcie ciągu powoduje zmianę wartości zwracanej funkcji, których to dotyczy. Następujące funkcje zwracają 0 Jeśli nie zostanie obcięte, lub `STRUNCATE` przypadku obcięcie:
+Obcinanie ciągu zmienia wartości zwracane funkcji. Poniższe funkcje zwracają 0 w przypadku braku obcinania lub `STRUNCATE`, jeśli wystąpi obcinanie:
 
 [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)
 
@@ -57,7 +57,7 @@ Obcięcie ciągu powoduje zmianę wartości zwracanej funkcji, których to dotyc
 
 [mbstowcs_s, _mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)
 
-Następujące funkcje zwracają liczbę znaków, jeśli nie zostanie obcięte kopiowany lub wartość -1, ewentualnych obcięcie (pasujące do zachowania, oryginalnym funkcji snprintf —):
+Poniższe funkcje zwracają liczbę znaków kopiowanych w przypadku braku obcinania lub-1, jeśli występuje obcinanie (zgodne z zachowaniem oryginalnych funkcji snprintf):
 
 [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)
 
@@ -65,7 +65,7 @@ Następujące funkcje zwracają liczbę znaków, jeśli nie zostanie obcięte ko
 
 ## <a name="example"></a>Przykład
 
-```
+```c
 // crt_truncate.c
 #include <stdlib.h>
 #include <errno.h>

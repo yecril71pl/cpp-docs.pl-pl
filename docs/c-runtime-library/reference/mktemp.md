@@ -1,6 +1,6 @@
 ---
 title: mktemp
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - mktemp
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - mktemp function
 ms.assetid: b58cba60-034f-4e63-b312-ccbcd489d0a7
-ms.openlocfilehash: 93301a42ce70c0a688d244ba17c5c369402cbcd3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c9efd79111c000764561ba415db79a13a34c46fe
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951560"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301018"
 ---
 # <a name="mktemp"></a>mktemp
 
-Ta funkcja POSIX jest przestarzała. Zamiast tego użyj C++ [_mktemp_s](mktemp-s-wmktemp-s.md) zgodnego ze standardem ISO [_mktemp](mktemp-wmktemp.md) lub zabezpieczeń.
+Nazwa funkcji specyficznej dla firmy Microsoft `mktemp` jest przestarzałym aliasem dla funkcji [_mktemp](mktemp-wmktemp.md) . Domyślnie generuje [Ostrzeżenie kompilatora (poziom 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Nazwa jest przestarzała, ponieważ nie jest zgodna z regułami standard C dla nazw specyficznych dla implementacji. Jednak funkcja jest nadal obsługiwana.
+
+Zalecamy używanie [_mktemp](mktemp-wmktemp.md) lub funkcji [_mktemp_s](mktemp-s-wmktemp-s.md) ulepszonych z zabezpieczeniami. Możesz również nadal używać tej nazwy funkcji i wyłączyć ostrzeżenie. Aby uzyskać więcej informacji, zobacz Wyłączanie [nazw funkcji](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names) [Warning](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) i POSIX.

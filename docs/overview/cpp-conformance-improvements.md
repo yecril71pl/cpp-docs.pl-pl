@@ -5,12 +5,12 @@ description: Firma C++ Microsoft w programie Visual Studio postępuje w kierunku
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 06fa060b674e51a3352a9a928bccdbfa6c63aae4
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: de31c2e61f0a10c785d610d3227a659c59b56d38
+ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74858038"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546435"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Ulepszenia zgodności języka C++ w programie Visual Studio
 
@@ -1241,13 +1241,11 @@ Aby uzyskać więcej informacji, zobacz [konstruktory](../cpp/constructors-cpp.m
 
 [P0017R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0017r1.html)
 
-Jeśli Konstruktor klasy bazowej jest niepubliczny, ale jest dostępny dla klasy pochodnej, wówczas w obszarze **/std: tryb c++ 17** w programie Visual Studio w wersji 15,7 nie można już używać pustych nawiasów klamrowych w celu zainicjowania obiektu typu pochodnego.
-
+Jeśli Konstruktor klasy bazowej jest niepubliczny, ale jest dostępny dla klasy pochodnej, a następnie w obszarze **/std: tryb c++ 17** w programie Visual Studio 2017 w wersji 15,7 nie można już używać pustych nawiasów klamrowych w celu zainicjowania obiektu typu pochodnego.
 W poniższym przykładzie przedstawiono zachowanie zgodne z językiem C++ 14:
 
 ```cpp
 struct Derived;
-
 struct Base {
     friend struct Derived;
 private:
@@ -1255,32 +1253,26 @@ private:
 };
 
 struct Derived : Base {};
-
 Derived d1; // OK. No aggregate init involved.
 Derived d2 {}; // OK in C++14: Calls Derived::Derived()
                // which can call Base ctor.
 ```
 
 W języku C++ 17 `Derived` jest teraz uznawany za typ zagregowany. Oznacza to, że inicjalizacja `Base` za pośrednictwem prywatnego konstruktora domyślnego odbywa się bezpośrednio w ramach rozszerzonej reguły inicjowania agregacji. Wcześniej Konstruktor prywatny `Base` został wywołany za pośrednictwem konstruktora `Derived` i pomyślnie powiódł się z powodu deklaracji zaprzyjaźnionej.
-
 W poniższym przykładzie przedstawiono zachowanie języka C++ 17 w programie Visual Studio w wersji 15,7 w **/std: c++ 17** :
 
 ```cpp
 struct Derived;
-
 struct Base {
     friend struct Derived;
 private:
     Base() {}
 };
-
 struct Derived : Base {
     Derived() {} // add user-defined constructor
                  // to call with {} initialization
 };
-
 Derived d1; // OK. No aggregate init involved.
-
 Derived d2 {}; // error C2248: 'Base::Base': cannot access
                // private member declared in class 'Base'
 ```

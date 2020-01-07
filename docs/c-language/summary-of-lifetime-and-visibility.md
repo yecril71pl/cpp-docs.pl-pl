@@ -5,38 +5,38 @@ helpviewer_keywords:
 - lifetime, and visibility
 - visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
-ms.openlocfilehash: 438dd855fbbfec01a31a8d4a1a53078e3c44658c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f364c3c0b558c00e3d411ab5b697ed01ec395cbd
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345282"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299081"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>Podsumowanie okresu istnienia i widoczności
 
-Poniższa tabela znajduje się podsumowanie właściwości okresu istnienia i widoczności dla większości identyfikatorów. Pierwsze trzy kolumny zapewniają atrybutów, które definiują okres istnienia i widoczności. Identyfikator o atrybuty określone przez pierwsze trzy kolumny ma okres istnienia i widoczności wyświetlane w kolumnach czwarty i piąty. Jednak tabeli nie obejmują wszystkich możliwych przypadków. Zapoznaj się [klasy magazynu](../c-language/c-storage-classes.md) Aby uzyskać więcej informacji.
+Poniższa tabela zawiera podsumowanie okresu istnienia i cech charakterystycznych widoczności dla większości identyfikatorów. Pierwsze trzy kolumny zawierają atrybuty, które definiują okres istnienia i widoczność. Identyfikator o atrybutach przyznanych przez pierwsze trzy kolumny ma okres istnienia i widoczność pokazywany w czwartej i piątej kolumnie. Jednak tabela nie obejmuje wszystkich możliwych przypadków. Aby uzyskać więcej informacji, zapoznaj się z [klasami magazynu](../c-language/c-storage-classes.md) .
 
 ### <a name="summary-of-lifetime-and-visibility"></a>Podsumowanie okresu istnienia i widoczności
 
-|Atrybuty:<br /><br /> Poziom|Element|Klasa magazynu<br /><br /> Specyfikator|Wynik:<br /><br /> Okres istnienia|Widoczność|
+|Atrybuty:<br /><br /> Poziom|Element|Storage — Klasa<br /><br /> Specyfikator|Wynik:<br /><br /> Okres istnienia|Widoczność|
 |---------------------------|----------|----------------------------------|--------------------------|----------------|
-|Zakres pliku|Definicja zmiennej|**static**|Global|Pozostała część pliku źródłowego, w której występuje|
-||Deklaracja zmiennej|**extern**|Global|Pozostała część pliku źródłowego, w której występuje|
-||Prototyp funkcji lub definicja|**static**|Global|Plik źródłowy|
-||Prototyp funkcji|**extern**|Global|Pozostała część pliku źródłowego|
-|Zakres bloku|Deklaracja zmiennej|**extern**|Global|Blok|
-||Definicja zmiennej|**static**|Global|Blok|
-||Definicja zmiennej|**automatyczne** lub **zarejestrować**|Lokalny|Blok|
+|Zakres pliku|Definicja zmiennej|**static**|Globalne|Pozostała część pliku źródłowego, w którym występuje|
+||Deklaracja zmiennej|**extern**|Globalne|Pozostała część pliku źródłowego, w którym występuje|
+||Prototyp lub definicja funkcji|**static**|Globalne|Pojedynczy plik źródłowy|
+||Prototyp funkcji|**extern**|Globalne|Pozostała część pliku źródłowego|
+|Zakres bloku|Deklaracja zmiennej|**extern**|Globalne|Blok|
+||Definicja zmiennej|**static**|Globalne|Blok|
+||Definicja zmiennej|**Autofiltr** lub **Rejestruj**|Lokalny|Blok|
 
 ## <a name="example"></a>Przykład
 
 ### <a name="description"></a>Opis
 
-W poniższym przykładzie pokazano bloki, zagnieżdżanie i widoczność zmiennych:
+Poniższy przykład ilustruje bloki, zagnieżdżanie i widoczność zmiennych:
 
 ### <a name="code"></a>Kod
 
-```
+```c
 // Lifetime_and_Visibility.c
 
 #include <stdio.h>
@@ -64,7 +64,7 @@ int main()  // main function defined at external level
 
 ### <a name="comments"></a>Komentarze
 
-W tym przykładzie istnieją cztery poziomy widoczności: poziomie zewnętrznym i blok trzy poziomy. Wartości są drukowane na ekranie, jak wspomniano w komentarzach po każdej instrukcji.
+W tym przykładzie istnieją cztery poziomy widoczności: poziom zewnętrzny i trzy poziomy blokowania. Wartości są drukowane na ekranie zgodnie z opisem w komentarzach po każdej instrukcji.
 
 ## <a name="see-also"></a>Zobacz także
 

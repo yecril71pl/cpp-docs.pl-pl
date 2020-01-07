@@ -1,6 +1,6 @@
 ---
 title: tell
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - tell
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - tell function
 ms.assetid: 3a92a40d-f472-4545-a493-f57c340ee798
-ms.openlocfilehash: 5723df73c79a7eb0b388b9d81a4a43586fec56c9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 18d793ad5fc26cd5f8a4906c160db7c7d25c0607
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957511"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300355"
 ---
 # <a name="tell"></a>tell
 
-Ta funkcja POSIX jest przestarzała. Zamiast tego użyj C++ zgodnej z normą ISO [_tell](tell-telli64.md) .
+Nazwa funkcji specyficznej dla firmy Microsoft `tell` jest przestarzałym aliasem dla funkcji [_tell](tell-telli64.md) . Domyślnie generuje [Ostrzeżenie kompilatora (poziom 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Nazwa jest przestarzała, ponieważ nie jest zgodna z regułami standard C dla nazw specyficznych dla implementacji. Jednak funkcja jest nadal obsługiwana.
+
+Zalecamy używanie [_tell](tell-telli64.md) . Możesz również nadal używać tej nazwy funkcji i wyłączyć ostrzeżenie. Aby uzyskać więcej informacji, zobacz Wyłączanie [nazw funkcji](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names) [Warning](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) i POSIX.

@@ -1,6 +1,6 @@
 ---
 title: strnset, wcsnset
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - strnset
 - wcsnset
@@ -26,13 +26,15 @@ helpviewer_keywords:
 - strnset function
 - wcsnset function
 ms.assetid: e7868ac9-dc34-4606-bd3c-0fb2e7c51631
-ms.openlocfilehash: ab509e14df9defbb7bf17d373a27069263ab66df
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c1f00410dc15a329d6381af893eab44bb938f248
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946944"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301096"
 ---
 # <a name="strnset-wcsnset"></a>strnset, wcsnset
 
-Te funkcje POSIX są przestarzałe. Użyj ISO C++ zgodne [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset,](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) _mbsnset_l lub Security-Enhanced [_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md) zamiast.
+Nazwy funkcji specyficznych dla firmy Microsoft `strnset` i `wcsnset` są przestarzałe aliasy dla funkcji [_strnset i _wcsnset](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) . Domyślnie generują [ostrzeżenia kompilatora (poziom 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Nazwy są przestarzałe, ponieważ nie przestrzegają standardowych reguł języka C dla nazw specyficznych dla implementacji. Jednak funkcje są nadal obsługiwane.
+
+Zalecamy używanie [_strnset i _wcsnset](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) lub [_strnset_s oraz funkcji _wcsnset_s](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md) ulepszonych z zabezpieczeniami. Możesz również nadal używać tych nazw funkcji i wyłączyć ostrzeżenie. Aby uzyskać więcej informacji, zobacz Wyłączanie [nazw funkcji](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names) [Warning](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) i POSIX.

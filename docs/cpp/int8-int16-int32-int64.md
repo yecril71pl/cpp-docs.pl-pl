@@ -22,20 +22,20 @@ helpviewer_keywords:
 - __int8 keyword [C++]
 - __int64 keyword [C++]
 ms.assetid: 8e384602-2578-4980-8cc8-da63842356b2
-ms.openlocfilehash: b765eabcac3f9643c0cae78fefb6ce8231669ffc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e793f23581f7dc62a39fcd8c5c504fb5a2ccbc9
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183457"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301473"
 ---
-# <a name="int8-int16-int32-int64"></a>__int8, __int16, __int32, __int64
+# <a name="__int8-__int16-__int32-__int64"></a>__int8, __int16, __int32, __int64
 
 **Microsoft Specific**
 
-Funkcje Microsoft C/C++ obsługuje typy wielkości liczb całkowitych. 8-, 16-, 32- lub 64-bitową liczbę całkowitą zmiennych można zadeklarować za pomocą **__int**<em>n</em> wpisz specyfikator, gdzie *n* jest 8, 16, 32 lub 64.
+Obsługa typów całkowitych o rozmiarze w języku Microsoft C/C++ features. Można zadeklarować 8-, 16-, 32-lub 64-bitowe zmienne całkowite przy użyciu specyfikatora typu **__int**<em>n</em> , gdzie *n* to 8, 16, 32 lub 64.
 
-Poniższy przykład deklaruje jedną zmienną dla każdego z tych typów całkowitych o rozmiarze:
+Poniższy przykład deklaruje jedną zmienną dla każdego z tych typów liczb całkowitych:
 
 ```cpp
 __int8 nSmall;      // Declares 8-bit integer
@@ -44,13 +44,13 @@ __int32 nLarge;     // Declares 32-bit integer
 __int64 nHuge;      // Declares 64-bit integer
 ```
 
-Typy **__int8**, **__int16**, i **__int32** są synonimy typy ANSI, które mają taki sam rozmiar i są przydatne przy pisaniu przenośny kod, który zachowuje się tak samo na wielu platformach. **__Int8** typ danych jest synonimem typu **char**, **__int16** jest synonimem typu **krótki**, i **__int32**  jest synonimem typu **int**. **__Int64** typ jest synonimem typu **long long**.
+Typy **__int8**, **__int16**i **__int32** są synonimami dla typów ANSI, które mają taki sam rozmiar i są przydatne do pisania kodu przenośnego, który działa identycznie na wielu platformach. Typ danych **__int8** jest synonimem typu **char**, **__int16** jest synonimem typu **Short**, a **__int32** jest synonimem typu **int**. Typ **__int64** jest równoznaczny z typem **długim długim**.
 
-W celu zgodności z poprzednimi wersjami **_int8**, **_int16**, **_int32**, i **_int64** są synonimy **__int8** , **__int16**, **__int32**, i **__int64** chyba że — opcja kompilatora [/Za \(wyłączyć język rozszerzenia)](../build/reference/za-ze-disable-language-extensions.md) jest określony.
+W celu zapewnienia zgodności z poprzednimi wersjami, **_int8**, **_int16**, **_int32**i **_int64** są synonimami dla **__int8**, **__int16**, **__int32**i **__int64** , chyba że opcja kompilatora [/za \(Disable Extensions)](../build/reference/za-ze-disable-language-extensions.md) jest określona.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, że __int*xx* parametr zostanie podniesiony do **int**:
+Poniższy przykład pokazuje, że parametr __int*XX* zostanie podwyższony do **int**:
 
 ```cpp
 // sized_int_types.cpp
@@ -73,10 +73,10 @@ int main()
 func
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
-[Typy podstawowe](../cpp/fundamental-types-cpp.md)<br/>
+[Typy wbudowane](../cpp/fundamental-types-cpp.md)<br/>
 [Zakresy typu danych](../cpp/data-type-ranges.md)<br/>

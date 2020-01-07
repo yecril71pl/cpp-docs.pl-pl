@@ -1,6 +1,6 @@
 ---
 title: fdopen
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - fdopen
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - fdopen function
 ms.assetid: 3243c1d2-2826-4d2d-bfa2-a2da45f9cc7a
-ms.openlocfilehash: c38a23d42b60567ae320054cf952bf17e42d6234
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8abbea2efde0fe5724f995c9791029c2fc26ff46
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941276"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299497"
 ---
 # <a name="fdopen"></a>fdopen
 
-Ta funkcja POSIX jest przestarzała. Zamiast tego użyj C++ zgodnej z normą ISO [_fdopen](fdopen-wfdopen.md) .
+Nazwa funkcji platformy POSIX wdrożonej przez firmę Microsoft `fdopen` jest przestarzałym aliasem dla funkcji [_fdopen](fdopen-wfdopen.md) . Domyślnie generuje [Ostrzeżenie kompilatora (poziom 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Nazwa jest przestarzała, ponieważ nie jest zgodna z regułami standard C dla nazw specyficznych dla implementacji. Jednak funkcja jest nadal obsługiwana.
+
+Zalecamy używanie [_fdopen](fdopen-wfdopen.md) . Możesz również nadal używać tej nazwy funkcji i wyłączyć ostrzeżenie. Aby uzyskać więcej informacji, zobacz Wyłączanie [nazw funkcji](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names) [Warning](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) i POSIX.

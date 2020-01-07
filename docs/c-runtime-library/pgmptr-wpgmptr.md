@@ -12,16 +12,16 @@ helpviewer_keywords:
 - _pgmptr function
 - pgmptr function
 ms.assetid: 4d44b515-0eff-4136-8bc4-684195f218f5
-ms.openlocfilehash: 6991dfe90e58352b26d7c914e1601a68674b8a5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: beff0401d0aa2aa21819e58618ef4c02795d4393
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62289081"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300160"
 ---
-# <a name="pgmptr-wpgmptr"></a>_pgmptr, _wpgmptr
+# <a name="_pgmptr-_wpgmptr"></a>_pgmptr, _wpgmptr
 
-Ścieżka pliku wykonywalnego. Przestarzałe; Użyj [_get_pgmptr —](../c-runtime-library/reference/get-pgmptr.md) i [_get_wpgmptr —](../c-runtime-library/reference/get-wpgmptr.md).
+Ścieżka pliku wykonywalnego. Przestarzałe Użyj [_get_pgmptr](../c-runtime-library/reference/get-pgmptr.md) i [_get_wpgmptr](../c-runtime-library/reference/get-wpgmptr.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,15 +32,15 @@ extern wchar_t *_wpgmptr;
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy program jest uruchamiany z interpreter poleceń (Cmd.exe), `_pgmptr` jest inicjowana automatycznie do pełnej ścieżki pliku wykonywalnego. Na przykład, jeśli Hello.exe C:\BIN i C:\BIN znajduje się w ścieżce, `_pgmptr` ustawiono C:\BIN\Hello.exe podczas wykonywania:
+Gdy program jest uruchamiany z interpretera poleceń (cmd. exe), `_pgmptr` zostanie automatycznie zainicjowany do pełnej ścieżki pliku wykonywalnego. Na przykład jeśli Hello. exe znajduje się w C:\BIN i C:\BIN znajduje się w ścieżce, `_pgmptr` jest ustawiona na C:\BIN\Hello.exe podczas wykonywania:
 
 ```
 C> hello
 ```
 
-Jeśli program nie zostanie uruchomiony z wiersza polecenia `_pgmptr` może być zainicjowana, nazwę programu (nazwa podstawowa dla pliku bez rozszerzenia nazwy pliku) lub nazwę pliku, ścieżka względna lub pełną ścieżkę.
+Gdy program nie jest uruchamiany z wiersza polecenia, `_pgmptr` może zostać zainicjowany do nazwy programu (nazwa podstawowa pliku bez rozszerzenia nazwy pliku) lub do nazwy pliku, ścieżki względnej lub pełnej ścieżki.
 
-`_wpgmptr` jest odpowiednikiem znaku dwubajtowego `_pgmptr` do użytku z programem programy używające `wmain`.
+`_wpgmptr` jest znakiem dwubajtowym `_pgmptr` do użycia z programami, które używają `wmain`.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -56,9 +56,9 @@ Jeśli program nie zostanie uruchomiony z wiersza polecenia `_pgmptr` może być
 
 ## <a name="example"></a>Przykład
 
-Następujący program pokazuje użycie `_pgmptr`.
+Poniższy program ilustruje użycie `_pgmptr`.
 
-```
+```c
 // crt_pgmptr.c
 // compile with: /W3
 // The following program demonstrates the use of _pgmptr.
@@ -73,7 +73,7 @@ int main( void )
 }
 ```
 
-Można użyć `_wpgmptr` , zmieniając `%Fs` do `%S` i `main` do `wmain`.
+`_wpgmptr` można użyć, zmieniając `%Fs` `%S` i `main` na `wmain`.
 
 ## <a name="see-also"></a>Zobacz także
 

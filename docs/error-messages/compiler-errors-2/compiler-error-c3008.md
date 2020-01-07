@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3008
 ms.assetid: 04d93201-28e5-4be0-945c-aad616376f4b
-ms.openlocfilehash: 4f3b0e8ec935a4425977ea89993677704681a9e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6af62620fcc25abbe69062256938656781437252
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165167"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298873"
 ---
 # <a name="compiler-error-c3008"></a>Błąd kompilatora C3008
 
-"argument": argumencie brakuje zamykającego ")" w dyrektywie OpenMP "dyrektywa"
+"ARG": w argumencie brakuje zamykającego ")" dyrektywy "dyrektywy" OpenMP
 
-Dyrektywy OpenMP, która przyjmuje argument nie miał nawias zamykający.
+Dyrektywa OpenMP, która przyjmuje argument, nie ma nawiasu zamykającego.
 
-Poniższy przykład spowoduje wygenerowanie C3008:
+Poniższy przykład generuje C3008:
 
-```
+```c
 // C3008.c
 // compile with: /openmp
 int main()

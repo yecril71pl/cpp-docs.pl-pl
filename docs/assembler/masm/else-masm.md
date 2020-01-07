@@ -1,17 +1,17 @@
 ---
 title: ELSE (MASM)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - else
 helpviewer_keywords:
 - ELSE directive
 ms.assetid: c43af707-4567-4489-97ca-f14982d84e88
-ms.openlocfilehash: de162bfda80f659dc477d7cbb003a36de60c2328
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: e7098cb5be7f39458410e48507a4aea675974724
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397711"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318153"
 ---
 # <a name="else-masm"></a>ELSE (MASM)
 
@@ -19,12 +19,13 @@ Oznacza początek alternatywnego bloku w bloku warunkowym.
 
 ## <a name="syntax"></a>Składnia
 
-> **PRZEJMI**
+> **ELSE**
 
 ## <a name="remarks"></a>Uwagi
 
-Sprawdź, [czy](../../assembler/masm/if-masm.md).
+Sprawdź, [czy](if-masm.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja dyrektyw](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)\
+[MASM BNF, gramatyka](masm-bnf-grammar.md)

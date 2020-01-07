@@ -1,6 +1,6 @@
 ---
 title: operator SECTIONREL
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator SECTIONREL
 - SECTIONREL
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - SECTIONREL operator
 - operator SECTIONREL
 ms.assetid: db033a9d-b029-48dd-a010-d19e3a9d1af2
-ms.openlocfilehash: ac8f99758541d975a1a2e505a6a7fcf3482a4432
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 761452e44d1e860a67601122a886ecdc68dcfe58
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74396481"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318998"
 ---
 # <a name="operator-sectionrel"></a>operator SECTIONREL
 
@@ -29,4 +29,5 @@ Zwraca względną sekcję przesunięcia wyrażenia względem sekcji zawierające
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołania operatorów](operators-reference.md)
+[Odwołania operatorów](operators-reference.md)\
+[MASM BNF, gramatyka](masm-bnf-grammar.md)

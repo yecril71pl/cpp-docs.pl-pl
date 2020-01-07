@@ -1,6 +1,6 @@
 ---
-title: Typy podstawowe (C++)
-ms.date: 11/04/2016
+title: Typy wbudowane (C++)
+ms.date: 12/11/2019
 f1_keywords:
 - __int128_cpp
 - __wchar_t_cpp
@@ -43,33 +43,33 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: daa2ad2680a9d7d0239a70ed37ec1d90a3d96d97
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: f6bfc72bf279d09e89423866d9cb46ad3496b49c
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857544"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301499"
 ---
-# <a name="fundamental-types--c"></a>Typy podstawowe (C++)
+# <a name="built-in-types-c"></a>Typy wbudowane (C++)
 
-Podstawowe typy w C++ programie są podzielone na trzy kategorie: Całka, liczba zmiennoprzecinkowa i typ void. Typy zintegrowane są zdolne do obsługi liczb całkowitych. Typy zmiennoprzecinkowe mogą określać wartości, które mogą mieć części ułamkowe.
+Typy wbudowane (zwane również *typami podstawowymi*) są określane przez standard C++ języka i są wbudowane w kompilator. Wbudowane typy nie są zdefiniowane w żadnym pliku nagłówkowym. Wbudowane typy są podzielone na trzy kategorie: całek, zmiennoprzecinkowe i void. Typy całkowite mogą obsługiwać liczbę całkowitą. Typy zmiennoprzecinkowe mogą określać wartości, które mogą mieć części ułamkowe.
 
-Typ [void](../cpp/void-cpp.md) opisuje pusty zestaw wartości. Nie można określić żadnej zmiennej typu **void** — jest ona używana głównie do deklarowania funkcji, które nie zwracają żadnych wartości lub deklarują ogólne wskaźniki do niewpisanych lub arbitralnie wpisanych danych. Każde wyrażenie może być jawnie konwertowane lub rzutowane na typ **void**. Jednakże takie wyrażenia są ograniczone do następujących zastosowań:
+Typ [void](void-cpp.md) opisuje pusty zestaw wartości. Nie można określić żadnej zmiennej typu **void** — jest ona używana głównie do deklarowania funkcji, które nie zwracają żadnych wartości lub deklarują ogólne wskaźniki do niewpisanych lub arbitralnie wpisanych danych. Każde wyrażenie może być jawnie konwertowane lub rzutowane na typ **void**. Jednakże takie wyrażenia są ograniczone do następujących celów:
 
-- Instrukcja wyrażenia. (Zobacz [wyrażenia](../cpp/expressions-cpp.md), aby uzyskać więcej informacji.)
+- Instrukcja wyrażenia. (Aby uzyskać więcej informacji, zobacz [Expressions](expressions-cpp.md)).
 
-- Lewy operator operatora przecinka. (Zobacz [operator przecinkiem](../cpp/comma-operator.md) , aby uzyskać więcej informacji).
+- Lewy operand operatora przecinka. (Aby uzyskać więcej informacji, zobacz [operator przecinka](comma-operator.md)).
 
-- Drugi lub trzeci operand operatora warunkowego (`? :`). (Aby uzyskać więcej informacji, zobacz [wyrażenia z operatorem warunkowym](../cpp/conditional-operator-q.md) ).
+- Drugi lub trzeci operand operatora warunkowego (`? :`). (Aby uzyskać więcej informacji, zobacz [wyrażenia z operatorem warunkowym](conditional-operator-q.md)).
 
-W poniższej tabeli opisano ograniczenia dla rozmiarów typu. Te ograniczenia są niezależne od implementacji Microsoft.
+W poniższej tabeli opisano ograniczenia dotyczące rozmiarów typów w zależności od siebie. Ograniczenia te są wymagane przez C++ Standard i są niezależne od implementacji firmy Microsoft. Rozmiar bezwzględny niektórych typów wbudowanych nie jest określony w standardzie.
 
-### <a name="fundamental-types-of-the-c-language"></a>Podstawowe typy w języku C++
+### <a name="built-in-type-size-restrictions"></a>Ograniczenia rozmiaru typu wbudowanego
 
 |Kategoria|Typ|Spis treści|
 |--------------|----------|--------------|
-|Typ całkowity|**char**|Typ **char** jest typem całkowitym, który zwykle zawiera elementy członkowskie podstawowego zestawu znaków wykonywania — domyślnie jest to ASCII w firmie Microsoft C++.<br /><br /> Kompilator traktuje zmienne typu **char** **, ze znakiem**znaku i **unsigned char** jako mające różne typy. C++ Zmienne typu **char** są podwyższane do wartości **int** , tak jakby były typu ze znakiem **podpisane** domyślnie, chyba że zostanie użyta opcja/j kompilacja. W tym przypadku są one traktowane jako **znaki typu unsigned** i są podwyższane do **int** bez rozszerzenia znaku.|
-||**bool**|Typ **bool** jest typem całkowitym, który może mieć jedną z dwóch wartości **true** lub **false**. Jego rozmiar jest nieokreślony.|
+|Integraln|**char**|Typ **char** jest typem całkowitym, który zwykle zawiera elementy członkowskie podstawowego zestawu znaków wykonywania — domyślnie jest to ASCII w firmie Microsoft C++.<br /><br /> Kompilator traktuje zmienne typu **char** **, ze znakiem**znaku i **unsigned char** jako mające różne typy. C++ Zmienne typu **char** są podwyższane do wartości **int** , tak jakby były typu ze znakiem **podpisane** domyślnie, chyba że zostanie użyta opcja/j kompilacja. W tym przypadku są one traktowane jako znaki typu **unsigned** i są promowane jako **int** bez rozszerzenia.|
+||**bool**|Typ **bool** jest typem całkowitym, który może mieć jedną z dwóch wartości **true** lub **false**. Nie określono jego rozmiaru.|
 ||**short**|Typ **short int** (lub po prostu **Short**) jest typem całkowitym, który jest większy niż lub równy rozmiarowi typu **char**, i krótszy niż lub równy rozmiarowi typu **int**.<br /><br /> Obiekty typu **Short** mogą być deklarowane jako **krótkie** lub **niepodpisane**. **Krótka ze znakiem** jest synonimem dla **krótkiej**.|
 ||**int**|Typ **int** jest typem całkowitym, który jest większy niż lub równy rozmiarowi typu **short int**i krótszy niż lub równy rozmiarowi typu **Long**.<br /><br /> Obiekty typu **int** mogą być deklarowane jako liczba całkowita ze **znakiem int** lub **unsigned int**. **Cyfra ze znakiem int** jest synonimem dla **int**.|
 ||**__int8**, **__int16**, **__int32** **__int64**|Liczba całkowita o rozmiarze `__int n`, gdzie `n` jest rozmiar w bitach zmiennej całkowitej. **__int8**, **__int16**, **__int32** i **__int64** są słowami kluczowymi specyficznymi dla firmy Microsoft. Nie wszystkie typy są dostępne we wszystkich architekturach. ( **__int128** nie jest obsługiwana).|
@@ -82,9 +82,9 @@ W poniższej tabeli opisano ograniczenia dla rozmiarów typu. Te ograniczenia s�
 
 **Microsoft Specific**
 
-Poniższa lista zawiera ilość miejsca wymaganego dla podstawowych typów w Microsoft C++.
+W poniższej tabeli przedstawiono ilość pamięci wymaganej dla wbudowanych typów w firmie Microsoft C++. W szczególności należy zauważyć, że **Long** to 4 bajty nawet w 64-bitowych systemach operacyjnych.
 
-### <a name="sizes-of-fundamental-types"></a>Rozmiary typów podstawowych
+### <a name="sizes-of-built-in-types"></a>Rozmiary typów wbudowanych
 
 |Typ|Rozmiar|
 |----------|----------|
@@ -95,10 +95,10 @@ Poniższa lista zawiera ilość miejsca wymaganego dla podstawowych typów w Mic
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-Zobacz [zakresy typów danych](../cpp/data-type-ranges.md) , aby uzyskać podsumowanie zakresu wartości poszczególnych typów.
+Zobacz [zakresy typów danych](data-type-ranges.md) , aby uzyskać podsumowanie zakresu wartości poszczególnych typów.
 
-Aby uzyskać więcej informacji na temat konwersji typów, zobacz [Konwersje standardowe](../cpp/standard-conversions.md).
+Aby uzyskać więcej informacji na temat konwersji typów, zobacz [Konwersje standardowe](standard-conversions.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Zakresy typu danych](../cpp/data-type-ranges.md)
+[Zakresy typu danych](data-type-ranges.md)

@@ -1,6 +1,6 @@
 ---
 title: blokowanie
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - locking
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - locking function
 ms.assetid: 1db15308-543e-44cf-a26f-5539f8e4fb2f
-ms.openlocfilehash: 94149cedd1fabff9387398532dfba52cfdc62b73
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a573789ba3b836a39683e2f0f6c96cd36530adc5
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950522"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300927"
 ---
 # <a name="locking"></a>blokowanie
 
-Ta funkcja POSIX jest przestarzała. Zamiast tego użyj C++ zgodnej z normą ISO [_locking](locking.md) .
+Nazwa funkcji specyficznej dla firmy Microsoft `locking` jest przestarzałym aliasem dla funkcji [_locking](locking.md) . Domyślnie generuje [Ostrzeżenie kompilatora (poziom 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Nazwa jest przestarzała, ponieważ nie jest zgodna z regułami standard C dla nazw specyficznych dla implementacji. Jednak funkcja jest nadal obsługiwana.
+
+Zalecamy używanie [_locking](locking.md) . Możesz również nadal używać tej nazwy funkcji i wyłączyć ostrzeżenie. Aby uzyskać więcej informacji, zobacz Wyłączanie [nazw funkcji](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names) [Warning](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) i POSIX.

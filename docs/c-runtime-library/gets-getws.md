@@ -31,16 +31,16 @@ helpviewer_keywords:
 - gets function
 - standard input, reading from
 ms.assetid: 1ec2dd4b-f801-48ea-97c2-892590f16024
-ms.openlocfilehash: 722d67336e11250f6a5459078dcea173f69bc2af
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f4e052f91dd2b4adfd5fd7e1ad7c81e0e5b07a11
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944343"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300277"
 ---
 # <a name="gets-_getws"></a>gets, _getws
 
-Pobiera wiersz ze `stdin` strumienia. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).
+Pobiera wiersz ze strumienia `stdin`. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).
 
 > [!IMPORTANT]
 >  Te funkcje są przestarzałe. Począwszy od programu Visual Studio 2015, nie są one dostępne w CRT. Bezpieczne wersje tych funkcji, gets_s i _getws_s, są nadal dostępne. Aby uzyskać informacje na temat tych funkcji alternatywnych, zobacz [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).
@@ -72,13 +72,13 @@ wchar_t *_getws(
 *buffer*<br/>
 Lokalizacja magazynu dla ciągu wejściowego.
 
-## <a name="return-value"></a>Wartość zwracana
+## <a name="return-value"></a>Wartość zwrócona
 
-Zwraca swój argument, jeśli powodzenie. Wskaźnik o **wartości null** wskazuje błąd lub stan końca pliku. Użyjelement lub [feof](../c-runtime-library/reference/feof.md) [, aby](../c-runtime-library/reference/ferror.md) określić, który z nich wystąpił. Jeśli `buffer` ma **wartość null**, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **wartość null** i ustawiają errno `EINVAL`na.
+Zwraca swój argument, jeśli powodzenie. Wskaźnik o **wartości null** wskazuje błąd lub stan końca pliku. Użyjelement lub [feof](../c-runtime-library/reference/feof.md) [, aby](../c-runtime-library/reference/ferror.md) określić, który z nich wystąpił. Jeśli `buffer` ma **wartość null**, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **wartość null** i ustawiają errno na `EINVAL`.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja odczytuje wiersz ze standardowego strumienia `stdin` wejściowego i zapisuje go w `buffer`. `gets` Wiersz składa się ze wszystkich znaków do i łącznie z pierwszym znakiem nowego wiersza ("\n"). `gets`następnie zastępuje znak nowego wiersza znakiem null (' \ 0 ') przed zwróceniem wiersza. W przeciwieństwie `fgets` funkcja zachowuje znak nowego wiersza. `_getws`jest wersją `gets`znaków dwubajtowych; jej argument i wartość zwracana są ciągami znaków dwubajtowych.
+Funkcja `gets` odczytuje wiersz ze standardowego strumienia wejściowego `stdin` i zapisuje go w `buffer`. Wiersz składa się ze wszystkich znaków do i łącznie z pierwszym znakiem nowego wiersza ("\n"). `gets` następnie zastępuje znak nowego wiersza znakiem null (' \ 0 ') przed zwróceniem wiersza. W przeciwieństwie funkcja `fgets` zachowuje znak nowego wiersza. `_getws` to dwubajtowa wersja `gets`; jego argument i wartość zwracana są ciągami znaków dwubajtowych.
 
 > [!IMPORTANT]
 >  Ponieważ nie ma możliwości ograniczenia liczby znaków odczytywanych przez pobranie, niezaufane dane wejściowe mogą łatwo spowodować przepełnienie buforu. Zamiast nich należy używać słów kluczowych `fgets`.
@@ -87,7 +87,7 @@ W C++programie te funkcje mają przeciążenia szablonu, które wywołują nowsz
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |`_getts`|`gets`|`gets`|`_getws`|
 
@@ -102,7 +102,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../c-runtime
 
 ## <a name="example"></a>Przykład
 
-```
+```c
 // crt_gets.c
 // compile with: /WX /W3
 

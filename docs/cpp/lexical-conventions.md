@@ -1,42 +1,35 @@
 ---
 title: Konwencje leksykalne
+description: Opisuje podstawowe elementy C++ programów, takich jak słowa kluczowe, identyfikatory, literały i zestawy znaków.
 ms.custom: index-page
-ms.date: 11/04/2016
+ms.date: 12/10/2019
 helpviewer_keywords:
 - lexical conventions
 - conventions, lexical
 ms.assetid: 03f9efff-bb95-45ef-9157-0a3fac809ccf
-ms.openlocfilehash: 92ab9319ece7ed995cf8a2e49983e0ab92ef83cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a96878b2c1f3ca34ab69147d53b0108b3f8363aa
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216398"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301447"
 ---
 # <a name="lexical-conventions"></a>Konwencje leksykalne
 
 Ten rozdział przedstawia główne elementy programu C++. Te elementy, zwane „elementami leksykalnymi” lub „tokenami”, są używane do konstruowania instrukcji, definicji, deklaracji i tak dalej, które z kolei są wykorzystywane do konstruowania całych programów. W tej sekcji omówiono następujące elementy leksykalne:
 
-- [Przegląd tłumaczenia pliku](overview-of-file-translation.md)
-- [Zestawy znaków](../cpp/character-sets.md)
-
-- [Tokeny](../cpp/tokens-cpp.md)
-
+- [Tokeny i zestawy znaków](../cpp/character-sets.md)
 - [Komentarze](../cpp/comments-cpp.md)
-
 - [Identyfikatory](../cpp/identifiers-cpp.md)
-
 - [Słowa kluczowe](../cpp/keywords-cpp.md)
-
 - [Znaki interpunkcyjne](../cpp/punctuators-cpp.md)
+- [Literały numeryczne, wartości logicznych i wskaźników](../cpp/numeric-boolean-and-pointer-literals-cpp.md)
+- [Literały ciągów i znaków](../cpp/string-and-character-literals-cpp.md)
+- [Literały zdefiniowane przez użytkownika](../cpp/user-defined-literals-cpp.md)
 
-- [Literały numeryczne, atrybut typu wartość logiczna i wskaźnik](../cpp/numeric-boolean-and-pointer-literals-cpp.md)
-
-- [Literały ciągów i znakowe](../cpp/string-and-character-literals-cpp.md)
-
-- [Literały definiowane przez użytkownika](../cpp/user-defined-literals-cpp.md)
+Aby uzyskać więcej informacji na C++ temat sposobu analizowania plików źródłowych, zobacz [etapy tłumaczenia](../preprocessor/phases-of-translation.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
-[Program i połączenie](program-and-linkage-cpp.md)
+[Jednostki tłumaczenia i powiązania](program-and-linkage-cpp.md)

@@ -1,6 +1,6 @@
 ---
 title: Operator NE
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - NE
 - operator NE
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - NE operator
 - operator NE
 ms.assetid: 0364a3aa-e2f1-499d-8cc7-1fbec318715c
-ms.openlocfilehash: 4accdc038273647197051df719ac408cb76e0c44
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 7e3dc423cf4f6e96f2ae3e6df6f0034b2355068d
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74396616"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75310991"
 ---
 # <a name="operator-ne"></a>Operator NE
 
@@ -25,4 +25,5 @@ Zwraca wartość true (-1), jeśli element *wyrażenie1* nie jest równy *wyraż
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołania operatorów](operators-reference.md)
+[Odwołania operatorów](operators-reference.md)\
+[MASM BNF, gramatyka](masm-bnf-grammar.md)

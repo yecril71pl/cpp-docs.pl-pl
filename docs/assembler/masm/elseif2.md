@@ -1,21 +1,21 @@
 ---
 title: ELSEIF2
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - ELSEIF2
 helpviewer_keywords:
 - ELSEIF2 directive
 ms.assetid: 6e6a1020-1dc2-45a9-a42c-e08442fb4071
-ms.openlocfilehash: 7ba3708cf06d3511fc34bac2b6c3e235b08770f2
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 65bb02bd65531ab0d4f591ca9435c3f3aa6d6bae
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397679"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318140"
 ---
 # <a name="elseif2"></a>ELSEIF2
 
-Blok [ElseIf](../../assembler/masm/elseif-masm.md) jest obliczany na każdym przebiegu zestawu, jeśli **Opcja: SETIF2** ma **wartość true**.
+Blok [ElseIf](elseif-masm.md) jest obliczany na każdym przebiegu zestawu, jeśli **Opcja: SETIF2** ma **wartość true**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,4 +27,5 @@ Aby uzyskać więcej informacji na temat zachowania 2-Pass w MASM 5,1 vs MASM 6,
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja dyrektyw](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)\
+[MASM BNF, gramatyka](masm-bnf-grammar.md)

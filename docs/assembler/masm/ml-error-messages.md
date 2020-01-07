@@ -1,18 +1,18 @@
 ---
 title: Komunikaty o błędach ML
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 ms.custom: error-reference
 f1_keywords:
 - vc.errors.ml
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), ML error messages
 ms.assetid: e7e164b3-6d65-4b5b-8925-bfbebc043523
-ms.openlocfilehash: 2db928d22219d33f89396bb29530680d4b3c8dba
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 1b065433a1a6baf9bf2631aeb2f53421f8efb83b
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856946"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75312628"
 ---
 # <a name="ml-error-messages"></a>Komunikaty o błędach ML
 
@@ -50,4 +50,4 @@ Krótki i ogólny opis warunku błędu.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja asemblera programu Microsoft Macro](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[Dokumentacja asemblera programu Microsoft Macro](microsoft-macro-assembler-reference.md)

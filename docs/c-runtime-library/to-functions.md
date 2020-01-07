@@ -23,12 +23,12 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: f7a898d70e506ed4707ea718faa0ed618682c2c7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: df8f59088cd402503fe31f768557e3ed936b31ec
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944822"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301694"
 ---
 # <a name="to-functions"></a>do funkcji
 
@@ -49,37 +49,37 @@ Funkcje **do** i konwersje makr są następujące.
 |`tolower`|`tolower`|Konwertuje `c` na małe litery, jeśli jest to konieczne|
 |`_tolower`|`_tolower`|Konwertuje `c` na małe litery|
 |`towlower`|Brak|Konwertuje `c` na odpowiadającą małą literę o szerokim znaku|
-|`toupper`|`toupper`|Konwertuje `c` na wielkie litery, jeśli jest to konieczne|
+|`toupper`|`toupper`|Konwertuje `c` na wielkie litery, jeśli są odpowiednie|
 |`_toupper`|`_toupper`|Konwertuje `c` na wielkie litery|
 |`towupper`|Brak|Konwertuje znak c na odpowiadającą wielką literę litery|
 
-Aby użyć wersji funkcji **do** procedur, które są również zdefiniowane jako makra, Usuń definicje makr z `#undef` dyrektywami lub nie dodawaj CType. C. Jeśli używasz opcji kompilatora/za, kompilator używa wersji `toupper` funkcji lub. `tolower` Deklaracje `tolower` i funkcji są w STDLIB. `toupper` C.
+Aby użyć wersji funkcji **do** procedur, które są również zdefiniowane jako makra, Usuń definicje makr z dyrektywami `#undef` lub nie dodawaj CType. C. Jeśli używasz opcji kompilatora/za, kompilator używa wersji funkcji `toupper` lub `tolower`. Deklaracje `toupper` i `tolower` funkcje są w STDLIB. C.
 
-Procedura ustawia wszystkie poza kolejnością 7 bitów o wartości `c` 0, tak aby przekonwertowana wartość reprezentuje znak w zestawie znaków ASCII. `__toascii` Jeśli `c` już reprezentuje znak ASCII, `c` jest niezmieniony.
+Procedura `__toascii` ustawia wszystkie, ale minimalna liczba 7 bitów z `c` na 0, tak że przekonwertowana wartość reprezentuje znak w zestawie znaków ASCII. Jeśli `c` już reprezentuje znak ASCII, `c` nie zmieni się.
 
-Procedury `tolower` i `toupper` :
+Procedury `tolower` i `toupper`:
 
-- Są `LC_CTYPE` zależne od kategorii bieżących ustawień regionalnych (`tolower` wywołań `isupper` i `toupper` wywołań `islower`).
+- Są zależne od kategorii `LC_CTYPE` bieżących ustawień regionalnych (`tolower` wywołań `isupper` i `toupper` wywołań `islower`).
 
-- Convert `c` if`c` reprezentuje literę do konwersji odpowiedniego przypadku w bieżących ustawieniach regionalnych i odwrotnie istnieje dla tych ustawień regionalnych. W przeciwnym razie jest niezmienione. `c`
+- Konwertuj `c`, jeśli `c` reprezentuje literę do przekonwertowania odpowiedniego przypadku w bieżących ustawieniach regionalnych i odwrotnym przypadku dla tych ustawień regionalnych. W przeciwnym razie `c` nie zmieni się.
 
-Procedury `_tolower` i `_toupper` :
+Procedury `_tolower` i `_toupper`:
 
-- Są niezależne od ustawień regionalnych, znacznie szybszymi `tolower` wersjami i **ToUpper.**
+- Są niezależne od ustawień regionalnych, znacznie szybsze wersje `tolower` i **ToUpper.**
 
 - Mogą być używane tylko wtedy, gdy **isascii (** `c` **)** i **IsUpper (** `c` **)** lub **IsLower (** `c` **)** , które są odpowiednio niezerowe.
 
-- Mają niezdefiniowane wyniki `c` , jeśli nie jest literą ASCII odpowiedniej wielkości dla konwersji.
+- Mają niezdefiniowane wyniki, jeśli `c` nie jest literą ASCII odpowiedniej wielkości dla konwersji.
 
-Funkcje `towlower` i `towupper` zwracająprzekonwertowanekopieifitylkowtedy,gdyobaponiższewarunkisą`c` inne niż zero. W przeciwnym razie jest niezmienione. `c`
+Funkcje `towlower` i `towupper` zwracają przekonwertowane kopie `c` Jeśli i tylko wtedy, gdy oba poniższe warunki mają wartość różną od zera. W przeciwnym razie `c` nie zmieni się.
 
-- `c`jest znakiem dwubajtowym odpowiedniego przypadku (to jest, dla którego `iswupper` odpowiednio lub **iswlower** jest różna od zera).
+- `c` jest znakiem dwubajtowym odpowiedniego przypadku (czyli dla którego `iswupper` lub **iswlower,** odpowiednio, jest różna od zera).
 
-- Istnieje odpowiedni znak dwubajtowy przypadku docelowego (to jest, dla którego `iswlower` odpowiednio lub **iswupper,** jest różny od zera).
+- Istnieje odpowiedni znak dwubajtowy przypadku docelowego (to jest, dla którego odpowiednio `iswlower` lub **iswupper,** jest różna od zera).
 
 ## <a name="example"></a>Przykład
 
-```
+```c
 // crt_toupper.c
 /* This program uses toupper and tolower to
  * analyze all characters between 0x0 and 0x7F. It also

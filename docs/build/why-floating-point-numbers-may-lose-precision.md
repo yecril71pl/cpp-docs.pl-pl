@@ -6,30 +6,30 @@ helpviewer_keywords:
 - FLT_EPSILON constant
 - floating-point numbers, precision
 ms.assetid: 1acb1add-ac06-4134-a2fd-aff13d8c4c15
-ms.openlocfilehash: 387b2f4a7156e42e59bd70c5a6f747943fb54ca7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 373ce9fa2c2c96fac349940076873a4a637a9dbe
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313587"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298717"
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>Dlaczego liczby zmiennoprzecinkowe mogą tracić dokładność
 
-Zmiennoprzecinkowe wartości dziesiętnej zwykle nie mają dokładnie reprezentacja binarna. To jest efektem jak procesor CPU reprezentuje zmiennoprzecinkową punktu danych. Z tego powodu może wystąpić pewną utratą dokładności i niektórych operacji zmiennoprzecinkowych może powodować nieoczekiwane rezultaty.
+Wartości dziesiętne zmiennoprzecinkowe zwykle nie mają dokładnej reprezentacji binarnej. Jest to efekt uboczny przedstawiający sposób, w jaki procesor CPU reprezentuje dane zmiennoprzecinkowe. Z tego powodu może wystąpić pewna utrata dokładności, a niektóre operacje zmiennoprzecinkowe mogą spowodować nieoczekiwane wyniki.
 
-To zachowanie jest wynik jednego z następujących czynności:
+To zachowanie jest wynikiem jednego z następujących elementów:
 
-- Reprezentacja binarna liczba dziesiętna, która może nie być dokładna.
+- Reprezentacja binarna liczby dziesiętnej może być niedokładna.
 
-- Wystąpiła niezgodność typu między liczbami używana (na przykład. mieszanie zmiennoprzecinkowe i podwójne).
+- Występuje niezgodność typów między używanymi liczbami (na przykład mieszanie zmiennoprzecinkowe i podwójne).
 
-Aby rozwiązać problem, większość programistów, albo upewnij się, że wartość jest większa lub mniejsza niż co jest potrzebne, lub pobrać i użyć biblioteki Binary Coded Decimal (BCD), która będzie utrzymywać dokładność.
+Aby rozwiązać ten problem, większość programistów upewnia się, że wartość jest większa lub mniejsza niż to, co jest potrzebne, lub uzyskuje i używa biblioteki binarnej kodowanej dziesiętnej (BCD), która będzie zachować precyzję.
 
-Binarna reprezentacja wartości zmiennoprzecinkowych ma wpływ na dokładność wykonywania obliczeń zmiennopozycyjnych. Microsoft Visual C++ używa [formatu zmiennoprzecinkowego IEEE](ieee-floating-point-representation.md).
+Reprezentacja binarna wartości zmiennoprzecinkowych ma wpływ na precyzję i dokładność obliczeń zmiennoprzecinkowych. Microsoft Visual C++ używa [formatu IEEE zmiennoprzecinkowej](ieee-floating-point-representation.md).
 
 ## <a name="example"></a>Przykład
 
-```
+```c
 // Floating-point_number_precision.c
 // Compile options needed: none. Value of c is printed with a decimal
 // point precision of 10 and 6 (printf rounded value by default) to
@@ -60,7 +60,7 @@ They are not equal! The value of c is  2.4679999352 or 2.468000
 
 ## <a name="comments"></a>Komentarze
 
-EPSILON, można użyć stałe FLT_EPSILON, która jest zdefiniowana float jako 1.192092896e-07F, lub DBL_EPSILON, która jest zdefiniowana dla podwójnej precyzji jako 2.2204460492503131e-016. Konieczne jest uwzględnienie float.h dla tych stałych. Te stałe są zdefiniowane jako najmniejsza dodatnia liczba x, na przykład x + 1.0 nie jest równa 1.0. Ponieważ jest to bardzo małej liczby, powinny zostać zdefiniowane przez użytkownika na uszkodzenia w obliczeniach obejmujących bardzo dużych liczb.
+W przypadku wartości EPSILON można użyć stałych FLT_EPSILON, które są zdefiniowane dla wartości zmiennoprzecinkowych jako 1.192092896 e-07F lub DBL_EPSILON, które są zdefiniowane dla podwójnego 2.2204460492503131 e-016. Musisz dołączyć wartości zmiennoprzecinkowe. h dla tych stałych. Te stałe są definiowane jako najmniejszy dodatnia liczba x, tak że x + 1.0 nie jest równe 1,0. Ponieważ jest to bardzo mała liczba, należy zastosować tolerancję zdefiniowaną przez użytkownika dla obliczeń obejmujących bardzo duże liczby.
 
 ## <a name="see-also"></a>Zobacz także
 

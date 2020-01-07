@@ -1,18 +1,18 @@
 ---
 title: Błąd krytyczny ML A1011
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 ms.custom: error-reference
 f1_keywords:
 - A1011
 helpviewer_keywords:
 - A1011
 ms.assetid: 7fbf092d-4189-4330-a884-dfa2268fc3dd
-ms.openlocfilehash: 0d8d3896f7788aa3f51605651ee1b728b0e1d60a
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 5607d6d56e0b3889332dcf2624d519529819b1c9
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856855"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318084"
 ---
 # <a name="ml-fatal-error-a1011"></a>Błąd krytyczny ML A1011
 
@@ -20,20 +20,20 @@ ms.locfileid: "74856855"
 
 Asembler znalazł dyrektywę wysokiego poziomu, której nie oczekiwano. Znaleziono jedną z następujących dyrektyw:
 
-- [. INACZEJ](../../assembler/masm/dot-else.md) bez [. Jeśli](../../assembler/masm/dot-if.md)
+- [. INACZEJ](dot-else.md) bez [. Jeśli](dot-if.md)
 
-- [. ENDIF](../../assembler/masm/dot-endif.md) bez [. Jeśli](../../assembler/masm/dot-if.md)
+- [. ENDIF](dot-endif.md) bez [. Jeśli](dot-if.md)
 
-- [. ENDW](../../assembler/masm/dot-endw.md) bez [. WHILE](../../assembler/masm/dot-while.md)
+- [. ENDW](dot-endw.md) bez [. WHILE](dot-while.md)
 
-- [. UNTILCXZ](../../assembler/masm/dot-untilcxz.md) bez [. Powtórz](../../assembler/masm/dot-repeat.md)
+- [. UNTILCXZ](dot-untilcxz.md) bez [. Powtórz](dot-repeat.md)
 
-- [. Kontynuuj](../../assembler/masm/dot-continue.md) bez [. WHILE](../../assembler/masm/dot-while.md) lub [. Powtórz](../../assembler/masm/dot-repeat.md)
+- [. Kontynuuj](dot-continue.md) bez [. WHILE](dot-while.md) lub [. Powtórz](dot-repeat.md)
 
-- [. Przerwij](../../assembler/masm/dot-break.md) bez [. WHILE](../../assembler/masm/dot-while.md) lub [. Powtórz](../../assembler/masm/dot-repeat.md)
+- [. Przerwij](dot-break.md) bez [. WHILE](dot-while.md) lub [. Powtórz](dot-repeat.md)
 
-- [. ELSE](../../assembler/masm/dot-else.md) `.ELSE`
+- [. ELSE](dot-else.md) `.ELSE`
 
 ## <a name="see-also"></a>Zobacz także
 
-[Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)<br/>
+[Komunikaty o błędach ML](ml-error-messages.md)

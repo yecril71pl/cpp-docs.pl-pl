@@ -1,5 +1,5 @@
 ---
-title: Wprowadzenie do C++ usługi Build Insights
+title: Wprowadzenie do szczegółowych informacji o kompilowaniu w języku C++
 description: Ogólne omówienie sposobu korzystania z narzędzi do analizy wydajności czasu kompilacji, które są częścią usługi C++ Build Insights.
 ms.date: 11/03/2019
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 9c31d317cd7b9c6465362e3e532db2128303f602
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 862bfae3bdb27812306dcd356aecab812ea5181c
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73633106"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298743"
 ---
-# <a name="get-started-with-c-build-insights"></a>Wprowadzenie do C++ usługi Build Insights
+# <a name="get-started-with-c-build-insights"></a>Wprowadzenie do szczegółowych informacji o kompilowaniu w języku C++
 
 ::: moniker range="<=vs-2017"
 
@@ -39,7 +39,9 @@ Wersja usługi WPA, która obsługuje C++ usługi Build Insights, jest obecnie d
 
 ### <a name="to-download-and-install-wpa"></a>Aby pobrać i zainstalować protokół WPA
 
-1. Przejdź do [strony pobierania](https://www.microsoft.com/software-download/windowsinsiderpreviewADK)wersji zapoznawczej podglądu zestawu Windows ADK.
+Uwaga: Aby zainstalować Analizator wydajności systemu Windows, wymagany jest system Windows 8 lub nowszy.
+
+1. Przejdź do [strony pobierania](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewADK)wersji zapoznawczej podglądu zestawu Windows ADK.
 
 1. Pobierz wersję zapoznawczą programu Windows ADK. Jest to obraz dysku.
 

@@ -1,28 +1,28 @@
 ---
-title: Materiał referencyjny na temat języka C++
+title: C++ Language Reference
 ms.custom: index-page
-ms.date: 05/06/2019
+ms.date: 12/10/2019
 helpviewer_keywords:
 - C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 1790f5d7ecf834c97a9242e8f42d1fb402604ac6
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 8d828c1b151e37380c123003c245f6b83243f84a
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222482"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301590"
 ---
-# <a name="c-language-reference"></a>Materiał referencyjny na temat języka C++
+# <a name="c-language-reference"></a>C++ Language Reference
 
-To źródło odniesienia wyjaśnia C++ języka programowania, zaimplementowany w Microsoft C++ kompilatora. Organizacja jest oparta na [ *The Annotated C++ Reference Manual* ](http://www.stroustrup.com/arm.html) autorstwa Margaret Ellis i Bjarne'a Stroustrupa oraz na ANSI/ISO C++ Międzynarodowy Standard (ISO/IEC FDIS 14882). Implementacje funkcji języka C++ specyficzne dla Microsoft są uwzględnione.
+To odwołanie wyjaśnia język C++ programowania wdrożony w kompilatorze firmy C++ Microsoft. Organizacja jest oparta na [*podręczniku C++ dokumentacji z adnotacjami*](http://www.stroustrup.com/arm.html) Margaret Ellis i Bjarne'a Stroustrupa oraz w standardzie międzynarodowym ANSI/ C++ ISO (ISO/IEC FDIS 14882). Implementacje funkcji języka C++ specyficzne dla Microsoft są uwzględnione.
 
-Omówienie rozwiązania w zakresie programowania nowoczesnym języku C++, zobacz [powitalnej zwrotnie do C++](welcome-back-to-cpp-modern-cpp.md).
+Aby zapoznać się z omówieniem C++ nowoczesnych praktyk programistycznych, zobacz [Witamy w C++ ](welcome-back-to-cpp-modern-cpp.md)programie.
 
 Zobacz następujące tabele, aby szybko znaleźć słowo kluczowe lub operator:
 
-- [Słowa kluczowe języka C++](../cpp/keywords-cpp.md)
+- [C++Służąc](../cpp/keywords-cpp.md)
 
-- [Operatory języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+- [C++Zainteresowanych](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
 
 ## <a name="in-this-section"></a>W tej sekcji
 
@@ -32,10 +32,14 @@ Podstawowe elementy leksykalne w programie C++: tokeny, komentarze, operatory, s
 [Podstawowe pojęcia](../cpp/basic-concepts-cpp.md)<br/>
 Zakres, powiązanie, uruchamianie i kończenie programu, klasy magazynów i typy.
 
-[Konwersje standardowe](../cpp/standard-conversions.md)<br/>
-Konwersje typu między typami wbudowanymi lub „podstawowymi”. Ponadto konwersje arytmetyczne i konwersje między wskaźnikiem, odwołaniem i typem wskaźnika do elementu członkowskiego.
+[Typy wbudowane](fundamental-types-cpp.md) Podstawowe typy, które są wbudowane w C++ kompilator i ich zakresy wartości.
 
-[Operatory, pierwszeństwo i kojarzenie](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Konwersje standardowe](../cpp/standard-conversions.md)<br/>
+Konwersje typu między typami wbudowanymi. Ponadto konwersje arytmetyczne i konwersje między wskaźnikiem, odwołaniem i typem wskaźnika do elementu członkowskiego.
+
+[Deklaracje i definicje](declarations-and-definitions-cpp.md) Deklarowanie i Definiowanie zmiennych, typów i funkcji.
+
+[Operatory, pierwszeństwo i łączność](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 Operatory w języku C++.
 
 [Wyrażenia](../cpp/expressions-cpp.md)<br/>
@@ -47,55 +51,55 @@ Technika programowania, która niejawnie definiuje klasę obiektu funkcji i kons
 [Instrukcje](../cpp/statements-cpp.md)<br/>
 Instrukcje wyrażeń, wartości null, złożeń, wyboru, iteracji, skoku i deklaracji.
 
-[Deklaracje i definicje](declarations-and-definitions-cpp.md)<br/>
-Specyfikatory klasy magazynowej, definicje funkcji, inicjalizacje, wyliczenia, **klasy**, **struktury**, i **Unii** deklaracji, i **— typedef**  deklaracji. Ponadto **wbudowane** funkcji **const** — słowo kluczowe, przestrzenie nazw.
+[Klasy i struktury](../cpp/classes-and-structs-cpp.md)<br/>
+Wprowadzenie do klas, struktur i unii. Ponadto funkcje członkowskie, specjalne funkcje składowe, elementy członkowskie danych, pola bitowe, **ten** wskaźnik, klasy zagnieżdżone.
 
-[Klas, struktur i Unii](../cpp/classes-and-structs-cpp.md)<br/>
-Wprowadzenie do klas, struktur i unii. Ponadto funkcje Członkowskie, specjalnych funkcji składowych, składowe danych, pola bitowe, **to** wskaźnika, klasy zagnieżdżone.
+[Unie](unions.md)<br/>
+Typy zdefiniowane przez użytkownika, w których wszyscy członkowie mają tę samą lokalizację w pamięci.
 
 [Klasy pochodne](../cpp/inheritance-cpp.md)<br/>
-Dziedziczenie pojedyncze lub wielokrotne, **wirtualnego** funkcje, wiele klas bazowych, **abstrakcyjne** klasy, reguły zakresu. Ponadto **__super** i **__interface** słów kluczowych.
+Pojedyncze i wielokrotne dziedziczenie, funkcje **wirtualne** , wiele klas podstawowych, klasy **abstrakcyjne** , reguły zakresu. Ponadto **__super** i **__interface** słowa kluczowe.
 
-[Kontrola dostępu do elementu członkowskiego](../cpp/member-access-control-cpp.md)<br/>
-Kontrolowanie dostępu do składowych klasy: **publicznych**, **prywatnej**, i **chronione** słów kluczowych. Funkcje i klasy zaprzyjaźnione.
+[Access Control elementu członkowskiego](../cpp/member-access-control-cpp.md)<br/>
+Kontrolowanie dostępu do składowych klasy: **publiczne**, **prywatne**i **chronione** słowa kluczowe. Funkcje i klasy zaprzyjaźnione.
 
-[Przeciążenie](operator-overloading.md)<br/>
-Przeciążone operatory, zasady dotyczące przeciążania operatorów.
+[Przeciążania](operator-overloading.md)<br/>
+Przeciążone operatory, reguły dotyczące przeciążania operatora.
 
 [Obsługa wyjątków](../cpp/exception-handling-in-visual-cpp.md)<br/>
 Obsługa wyjątków C++, obsługa wyjątków strukturalnych (SEH), słowa kluczowe używane w pisaniu instrukcji obsługi wyjątków.
 
 [Potwierdzenia i komunikaty dostarczane przez użytkownika](../cpp/assertion-and-user-supplied-messages-cpp.md)<br/>
-`#error` dyrektywy, **static_assert** — słowo kluczowe, `assert` makra.
+`#error` dyrektywie, słowo kluczowe **static_assert** , makro `assert`.
 
 [Szablony](../cpp/templates-cpp.md)<br/>
-Specyfikacje szablonu, funkcja szablonów, szablony klas **typename** — słowo kluczowe, szablony a makra, szablony i inteligentne wskaźniki.
+Specyfikacje szablonów, szablony funkcji, szablony klas, słowo kluczowe **TypeName** , szablony a makra, szablony i inteligentne wskaźniki.
 
 [Obsługa zdarzeń](../cpp/event-handling.md)<br/>
 Deklarowanie zdarzeń i programów obsługi zdarzeń.
 
 [Modyfikatory specyficzne dla firmy Microsoft](../cpp/microsoft-specific-modifiers.md)<br/>
-Modyfikatory specyficzne dla Microsoft C++. Pamięć adresowania, Konwencje wywoływania, **"naked"** funkcje, rozszerzone atrybuty klasy magazynu (**__declspec**), **__w64**.
+Modyfikatory specyficzne dla Microsoft C++. Adresowanie pamięci, konwencje wywoływania **, funkcje bez** dodatków, rozszerzone atrybuty klasy magazynu ( **__declspec**), **__w64**.
 
 [Wbudowany asembler](../assembler/inline/inline-assembler.md)<br/>
-Korzystanie z języka asembler i C++ w **__asm** bloków.
+Używanie języka asemblera C++ i bloków **__asm** .
 
 [Obsługa kompilatora COM](../cpp/compiler-com-support.md)<br/>
 Odwołanie do klas specyficznych dla Microsoft i globalne funkcje używane do obsługi typów modelu COM.
 
 [Rozszerzenia Microsoft](../cpp/microsoft-extensions.md)<br/>
-Rozszerzenia Microsoft do C++.
+Rozszerzenia firmy Microsoft C++do programu.
 
 [Niestandardowe zachowanie](../cpp/nonstandard-behavior.md)<br/>
-Informacje na temat niestandardowe zachowanie Microsoft C++ kompilatora.
+Informacje o niestandardowym zachowaniu kompilatora C++ firmy Microsoft.
 
-[Witamy z powrotem w C++](welcome-back-to-cpp-modern-cpp.md)<br/>
-Omówienie nowoczesnego języka c++, programowanie wskazówki dotyczące pisania bezpiecznych, prawidłowego i efektywnego programów.
+[Zapraszamy ponownie doC++](welcome-back-to-cpp-modern-cpp.md)<br/>
+Omówienie nowoczesnych C++ praktyk programistycznych służących do pisania bezpiecznych, prawidłowych i wydajnych programów.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
 [Component Extensions dla platform środowiska uruchomieniowego](../extensions/component-extensions-for-runtime-platforms.md)<br/>
-Odwołanie materiał na korzystanie z programu Microsoft C++ kompilatora do obiektu docelowego .NET.
+Materiały referencyjne na temat używania C++ kompilatora Microsoft do celów .NET.
 
 [Dokumentacja kompilacji w języku C/C++](../build/reference/c-cpp-building-reference.md)<br/>
 Opcje kompilatora, opcje konsolidatora i inne narzędzia kompilacji.
@@ -103,8 +107,8 @@ Opcje kompilatora, opcje konsolidatora i inne narzędzia kompilacji.
 [Dokumentacja preprocesora języka C/C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
 Materiał referencyjny na temat pragm, dyrektyw preprocesora, wstępnie zdefiniowanych makr i preprocesora.
 
-[Biblioteki Visual C++](../standard-library/cpp-standard-library-reference.md)<br/>
-Lista łączy do referencyjnych Rozpocznij strony dla różnych Microsoft C++ bibliotek.
+[Biblioteki C++ wizualne](../standard-library/cpp-standard-library-reference.md)<br/>
+Lista linków do stron początkowych odwołań dla różnych bibliotek firmy Microsoft C++ .
 
 ## <a name="see-also"></a>Zobacz także
 

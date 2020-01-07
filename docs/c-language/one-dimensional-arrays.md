@@ -10,24 +10,24 @@ helpviewer_keywords:
 - square brackets [ ], arrays
 - subscript expressions
 ms.assetid: e28536e5-3b77-46b5-97fd-9b938c771816
-ms.openlocfilehash: bd3b495483a460f01fe1951ee4c8b5ac3b447701
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ac57a65d575ba6a9134f3c4474103735411847d
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232349"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299107"
 ---
 # <a name="one-dimensional-arrays"></a>Tablice jednowymiarowe
 
-Wyrażenie przyrostkowe następują wyrażenia w nawiasach kwadratowych (**[**) jest indeksem reprezentacja elementu tablicy obiektów. Wyrażenie indeksu dolnego reprezentuje wartość pod adresem, który jest *wyrażenie* umieszcza poza *wyrażeniem przyrostkowym* wyrażone jako
+Wyrażenie przyrostkowe, a po nim wyrażenie w nawiasach kwadratowych ( **[]** ) jest reprezentacją indeksu elementu obiektu tablicy. Wyrażenie indeksu dolnego reprezentuje wartość w adresie, który jest pozycjami *wyrażenia* poza *wyrażeniem przyrostkowym* , gdy jest wyrażona jako
 
 ```
 postfix-expression [ expression ]
 ```
 
-Zwykle reprezentowany przez wartość *wyrażeniem przyrostkowym* jest wartością wskaźnika, takich jak identyfikator tablicy, a *wyrażenie* jest wartością całkowitą. Jednakże, wszystko co jest wymagane składniowo tego jednego z wyrażeń jest typu wskaźnika i innych być typu całkowitego. Ten sposób może być wartością typu całkowitego *wyrażeniem przyrostkowym* położenie i wartość wskaźnika można w nawiasach w *wyrażenie*, lub pozycji "indeksu dolnego,". Na przykład ten kod jest dozwolony:
+Zazwyczaj wartość reprezentowana przez *wyrażenie przyrostkowe* jest wartością wskaźnika, taką jak identyfikator tablicy, a *wyrażenie* jest wartością całkowitą. Jednakże wszystkie wymagane syntaktycznie to, że jedno z wyrażeń jest typu wskaźnika, a drugi jako typ całkowity. W ten sposób wartość całkowita może znajdować się w pozycji *wyrażenia przyrostkowego* , a wartość wskaźnika może być w nawiasach w *wyrażeniu*lub "indeks dolny". Na przykład ten kod jest dozwolony:
 
-```
+```c
 // one_dimensional_arrays.c
 int sum, *ptr, a[10];
 int main() {
@@ -36,9 +36,9 @@ int main() {
 }
 ```
 
-Wyrażenia indeksu dolnego są zazwyczaj używane do odwoływania się do elementów tablicy, ale można zastosować indeks dolny dowolny wskaźnik. Niezależnie od kolejności wartości *wyrażenie* muszą być ujęte w nawiasy kwadratowe (**[**).
+Wyrażenia indeksu dolnego są zwykle używane do odwoływania się do elementów tablicy, ale można zastosować indeks dolny do dowolnego wskaźnika. Niezależnie od kolejności wartości *wyrażenie* musi być ujęte w nawiasy kwadratowe ( **[]** ).
 
-Wyrażenie indeksu dolnego jest oceniany przez dodanie wartość całkowitą wartość wskaźnika, a następnie zastosowanie operatora pośredniego (<strong>\*</strong>) do wyniku. (Zobacz [pośredni i Address-of operatory](../c-language/indirection-and-address-of-operators.md) dyskusję na temat operatora pośredniego.) W efekcie Jednowymiarowa tablica następujących czterech wyrażeń są równoważne przy założeniu, że `a` jest wskaźnikiem typu i `b` jest liczbą całkowitą:
+Wyrażenie indeksu dolnego jest oceniane przez dodanie wartości całkowitej do wartości wskaźnika, a następnie zastosowanie operatora pośredniego (<strong>\*</strong>) do wyniku. (Zobacz [Operatory pośrednie i Address-of](../c-language/indirection-and-address-of-operators.md) dla dyskusji operatora operator pośredni). W efekcie dla jednowymiarowej tablicy następujące cztery wyrażenia są równoważne, przy założeniu, że `a` jest wskaźnikiem, a `b` jest liczbą całkowitą:
 
 ```
 a[b]
@@ -47,17 +47,17 @@ a[b]
 b[a]
 ```
 
-Zgodnie z regułami konwersji, operator dodawania (podano [operatory addytywne](../c-language/c-additive-operators.md)), wartość całkowitą jest konwertowany na przesunięcie adresu mnożąc długość typ adresowany przez wskaźnik myszy.
+Zgodnie z regułami konwersji dla operatora dodawania (biorąc pod uwagę [Operatory addytywne](../c-language/c-additive-operators.md)), wartość całkowita jest konwertowana na przesunięcie adresu przez pomnożenie jej przez długość typu, w którym znajduje się wskaźnik.
 
-Na przykład, załóżmy, że identyfikator `line` odwołuje się do tablicy `int` wartości. Poniższa procedura służy do obliczenia wyrażenia indeksu dolnego `line[ i ]`:
+Na przykład, Załóżmy, że identyfikator `line` odwołuje się do tablicy wartości `int`. Poniższa procedura służy do obliczania wyrażenia indeksu dolnego `line[ i ]`:
 
-1. Wartość całkowita `i` jest mnożony przez liczbę bajtów zdefiniowane jako długość `int` elementu. Przekonwertowana wartości `i` reprezentuje `i` `int` pozycji.
+1. Wartość całkowita `i` jest mnożona przez liczbę bajtów zdefiniowaną jako długość elementu `int`. Przekonwertowana wartość `i` reprezentuje pozycje `int` `i`.
 
-1. Ta wartość przekonwertowanego jest dodawana do oryginalnej wartości wskaźnika (`line`) umożliwiające uzyskanie adres który jest przesunięty `i` `int` umieszcza z `line`.
+1. Ta przekonwertowana wartość jest dodawana do pierwotnej wartości wskaźnika (`line`), aby uzyskać adres, który jest przesunięty `i` `int` pozycji z `line`.
 
-1. Operator pośredni jest stosowany do nowego adresu. Wynik jest wartością elementu tablicy, w tym miejscu (intuicyjnie `line [ i ]`).
+1. Operator pośredni jest stosowany do nowego adresu. Wynik jest wartością elementu tablicy w tym miejscu (intuicyjnie, `line [ i ]`).
 
-Wyrażenie indeksu dolnego `line[0]` reprezentuje wartość pierwszego elementu wiersza, ponieważ przesunięcie z adresu reprezentowanego przez `line` wynosi 0. Podobnie, wyrażenie, takie jak `line[5]` odwołuje się do pozycji przesunięcia pięciu elementu z wiersza lub szóstego elementu tablicy.
+Wyrażenie indeksu dolnego `line[0]` reprezentuje wartość pierwszego elementu wiersza, ponieważ przesunięcie od adresu reprezentowanego przez `line` wynosi 0. Analogicznie, wyrażenie takie jak `line[5]` odnosi się do elementu przesunięte pięć pozycji z wiersza lub szóstego elementu tablicy.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,16 +1,16 @@
 ---
 title: Omówienie modułów w języku C++
-ms.date: 07/23/2019
+ms.date: 12/13/2019
 helpviewer_keywords:
 - modules [C++]
 - modules [C++], overview
 description: Moduły w języku C++ 20 zapewniają nowoczesne alternatywy dla plików nagłówkowych.
-ms.openlocfilehash: 17495aa3e295b26fcfa5c489ff6793bb75d13d68
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: 28e1824250ad4fb404c528aa9511745abb001f31
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273672"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301382"
 ---
 # <a name="overview-of-modules-in-c"></a>Omówienie modułów w języku C++
 
@@ -20,7 +20,7 @@ Moduły mogą być używane obok plików nagłówkowych. Plik C++ źródłowy mo
 
 ## <a name="enable-modules-in-the-microsoft-c-compiler"></a>Włączanie modułów w kompilatorze C++ Microsoft
 
-W programie Visual Studio 2019 w wersji 16,2 moduły nie są w pełni zaimplementowane w kompilatorze firmy Microsoft C++ . Za pomocą funkcji modułów można tworzyć moduły z jedną partycją i importować moduły biblioteki standardowej udostępniane przez firmę Microsoft. Aby włączyć obsługę modułów, skompiluj z [/Experimental: module](../build/reference/experimental-module.md) i [/std: c + + Najnowsza](../build/reference/std-specify-language-standard-version.md). W projekcie programu Visual Studio kliknij prawym przyciskiem myszy węzeł projektu w **Eksplorator rozwiązań** i wybierz polecenie **Właściwości**. Ustaw listę rozwijaną **Konfiguracja** na **wszystkie konfiguracje**, a następnie wybierz pozycję **Właściwości** > konfiguracji**CC++/**  > **Języki** >  **C++ Włącz moduły ( eksperymentalne)** .
+W programie Visual Studio 2019 w wersji 16,2 moduły nie są w pełni zaimplementowane w kompilatorze firmy Microsoft C++ . Za pomocą funkcji modułów można tworzyć moduły z jedną partycją i importować moduły biblioteki standardowej udostępniane przez firmę Microsoft. Aby włączyć obsługę modułów, skompiluj z [/Experimental: module](../build/reference/experimental-module.md) i [/std: c + + Najnowsza](../build/reference/std-specify-language-standard-version.md). W projekcie programu Visual Studio kliknij prawym przyciskiem myszy węzeł projektu w **Eksplorator rozwiązań** i wybierz polecenie **Właściwości**. Ustaw listę rozwijaną **Konfiguracja** na **wszystkie konfiguracje**, a następnie wybierz pozycję **Właściwości konfiguracji** > **Język** **C/C++**  >  >  **C++ włączyć moduły (eksperymentalne)** .
 
 Moduł i kod, który go zużywa, muszą być kompilowane z tymi samymi opcjami kompilatora.
 
@@ -28,24 +28,24 @@ Moduł i kod, który go zużywa, muszą być kompilowane z tymi samymi opcjami k
 
 Mimo że nie jest to określone przez standard C++ 20, firma Microsoft umożliwia zaimportowanie jej implementacji jako modułów z biblioteki C++ standardowej. Przez zaimportowanie C++ standardowej biblioteki jako modułów zamiast #including jej za pomocą plików nagłówkowych, można skrócić czas kompilacji w zależności od wielkości projektu. Biblioteka jest podzielona na następujące moduły:
 
-- STD. wyrażenie regularne zapewnia zawartość wyrażenia regularnego nagłówka \<>
-- STD. FileSystem udostępnia zawartość nagłówka \<systemu plików >
-- wartość std. Memory zapewnia zawartość > pamięci \<nagłówka
-- \<STD. Threading udostępnia zawartość nagłówków > niepodzielne, \<condition_variable >, \<przyszłe >, \<mutex > \<, shared_mutex > i \<wątku >
+- STD. wyrażenie regularne zapewnia zawartość nagłówka \<wyrażenie regularne >
+- STD. FileSystem udostępnia zawartość nagłówka \<systemie plików >
+- wartość std. Memory zapewnia zawartość nagłówka \<pamięci >
+- STD. Threading zapewnia zawartość nagłówków \<niepodzielne >, \<condition_variable >, \<przyszłości >, \<
 - STD. Core zapewnia wszystkie inne elementy w C++ standardowej bibliotece
 
-Aby korzystać z tych modułów, po prostu Dodaj instrukcję import na początku pliku kodu źródłowego. Na przykład:
+Aby korzystać z tych modułów, po prostu Dodaj deklarację importu na początku pliku kodu źródłowego. Na przykład:
 
 ```cpp
 import std.core;
 import std.regex;
 ```
 
-Aby korzystać z modułu standardowej biblioteki firmy Microsoft, należy skompilować program z opcjami [/EHsc](../build/reference/eh-exception-handling-model.md) i [/MD](../build/reference/md-mt-ld-use-run-time-library.md) .
+Aby korzystać z modułu standardowej biblioteki firmy Microsoft, skompiluj program przy użyciu opcji [/EHsc](../build/reference/eh-exception-handling-model.md) i [/MD](../build/reference/md-mt-ld-use-run-time-library.md) .
 
 ## <a name="basic-example"></a>Podstawowy przykład
 
-Poniższy przykład pokazuje prostą definicję modułu w pliku źródłowym o nazwie **foo. IXX**. Rozszerzenie **. IXX** jest wymagane dla plików interfejsu modułu w programie Visual Studio. W tym przykładzie plik interfejsu zawiera definicję funkcji oraz deklarację. Jednakże definicje można także umieścić w jednym lub kilku oddzielnych plikach (jak pokazano w późniejszym przykładzie). Instrukcja **Export module foo** wskazuje, że ten plik jest interfejsem podstawowym dla modułu o nazwie `Foo`. `Foo` Modyfikator **eksportu** wskazuje, że ta funkcja będzie widoczna, gdy zostanie zaimportowana przez inny program lub moduł. `f()` Należy zauważyć, że moduł odwołuje `Bar`się do przestrzeni nazw.
+Poniższy przykład pokazuje prostą definicję modułu w pliku źródłowym o nazwie **foo. IXX**. Rozszerzenie **. IXX** jest wymagane dla plików interfejsu modułu w programie Visual Studio. W tym przykładzie plik interfejsu zawiera definicję funkcji oraz deklarację. Jednakże definicje można także umieścić w jednym lub kilku oddzielnych plikach (jak pokazano w późniejszym przykładzie). Instrukcja **Export module foo** wskazuje, że ten plik jest interfejsem podstawowym dla modułu o nazwie `Foo`. Modyfikator **eksportu** na `f()` wskazuje, że ta funkcja będzie widoczna, gdy `Foo` zostanie zaimportowana przez inny program lub moduł. Należy zauważyć, że moduł odwołuje się do przestrzeni nazw `Bar`.
 
 ```cpp
 export module Foo;
@@ -64,7 +64,7 @@ namespace Bar
 }
 ```
 
-Plik **. cpp** używa instrukcji **Import** w celu uzyskania dostępu do nazwy, która została wyeksportowana `Foo`przez. Należy zauważyć, że `Bar` nazwa jest widoczna w tym miejscu, ale nie dla wszystkich jej elementów członkowskich. Należy również zauważyć, że `ANSWER` makro nie jest widoczne.
+Plik **. cpp** używa deklaracji **Import** w celu uzyskania dostępu do nazwy, która została wyeksportowana przez `Foo`. Należy zauważyć, że nazwa `Bar` jest widoczna w tym miejscu, ale nie wszystkich jej elementów członkowskich. Należy również zauważyć, że makro `ANSWER` nie jest widoczne.
 
 ```cpp
 
@@ -132,7 +132,7 @@ Podstawowa jednostka interfejsu może importować pliki implementacji partycji, 
 
 ## <a name="modules-and-header-files"></a>Moduły i pliki nagłówkowe
 
-Pliki nagłówkowe można dołączać do pliku źródłowego modułu przez umieszczenie `#include` dyrektywy przed deklaracją modułu. Te pliki są uważane za znajdujące się w *fragmencie modułu globalnego*. W module można zobaczyć tylko nazwy w *fragmencie modułu globalnego* , które znajdują się w nagłówkach, które jawnie zawiera. Fragment modułu globalnego zawiera tylko symbole, które są rzeczywiście używane.
+Pliki nagłówkowe można dołączać do pliku źródłowego modułu przez umieszczenie dyrektywy `#include` przed deklaracją modułu. Te pliki są uważane za znajdujące się w *fragmencie modułu globalnego*. W module można zobaczyć tylko nazwy w *fragmencie modułu globalnego* , które znajdują się w nagłówkach, które jawnie zawiera. Fragment modułu globalnego zawiera tylko symbole, które są rzeczywiście używane.
 
 ```cpp
 // MyModuleA.cpp

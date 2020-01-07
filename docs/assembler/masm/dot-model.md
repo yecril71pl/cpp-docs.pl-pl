@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: bfc114a6e71c0eb0ae70005c2657871b6c9e9692
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 92f14a352e5c177d767232eed36a7e705fd155ce
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398109"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317633"
 ---
 # <a name="model-32-bit-masm"></a>. MODEL (32-bitowy MASM)
 
@@ -30,7 +30,7 @@ Wymagany parametr określający rozmiar kodu i wskaźników danych.
 Opcjonalny parametr, który ustawia konwencje wywoływania i nazewnictwa dla procedur i symboli publicznych.
 
 \ *opcji stosu*
-Opcjonalny parametr.
+Parametr opcjonalny.
 
 *stos-opcja* nie jest używana, jeśli *model pamięci* jest **płaski**.
 
@@ -38,7 +38,7 @@ Określanie grup **NEARSTACK** segment stosu w pojedynczym segmencie fizycznym (
 
 ## <a name="remarks"></a>Uwagi
 
-**. MODEL** nie jest używany w programie [MASM for x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+**. MODEL** nie jest używany w programie [MASM for x64 (ml64. exe)](masm-for-x64-ml64-exe.md).
 
 Poniższa tabela zawiera listę możliwych wartości dla każdego parametru, które są przeznaczone dla platform 16-bitowych i 32-bitowych:
 
@@ -88,4 +88,5 @@ end
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)\
+[MASM BNF, gramatyka](masm-bnf-grammar.md)

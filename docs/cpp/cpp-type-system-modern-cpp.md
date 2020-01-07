@@ -3,12 +3,12 @@ title: System typów języka C++
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 1f12f7505438dc995aaf8a045fd903488e9ff092
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 5755c7818182c5e26c5b3df6407fbe259bfdbcf3
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246605"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301577"
 ---
 # <a name="c-type-system"></a>System typów języka C++
 
@@ -24,9 +24,7 @@ Koncepcja *typu* jest bardzo ważna w C++. Zwracana wartość każdej zmiennej, 
 
 ## <a name="specifying-variable-and-function-types"></a>Określanie typów zmiennych i funkcji
 
-C++jest *jednoznacznie określonym* językiem i jest również *statycznie wpisana*; Każdy obiekt ma typ i ten typ nigdy nie ulega zmianie (nie należy mylić z obiektami danych statycznych).
-W **przypadku deklarowania zmiennej** w kodzie należy określić jawnie jej typ lub użyć słowa kluczowego autosłowo kluczowe **, aby** nakazać kompilatorowi wywnioskowanie typu z inicjatora.
-**Kiedy deklarujesz funkcję** w kodzie, musisz określić typ każdego argumentu i jego wartość zwracaną, lub **void** , jeśli żadna wartość nie jest zwracana przez funkcję. Wyjątek występuje podczas korzystania z szablonów funkcji, które pozwalają na argumenty dowolnego typu.
+C++jest *jednoznacznie określonym* językiem i jest również *statycznie wpisana*; Każdy obiekt ma typ i ten typ nigdy nie ulega zmianie (nie należy mylić z obiektami danych statycznych). W przypadku deklarowania zmiennej w kodzie należy określić jawnie jej typ lub użyć słowa kluczowego autosłowo kluczowe **, aby** nakazać kompilatorowi wywnioskowanie typu z inicjatora. Kiedy deklarujesz funkcję w kodzie, musisz określić typ każdego argumentu i jego wartość zwracaną, lub **void** , jeśli żadna wartość nie jest zwracana przez funkcję. Wyjątek występuje podczas korzystania z szablonów funkcji, które pozwalają na argumenty dowolnego typu.
 
 Po pierwszym zdeklarowaniu zmiennej nie można później zmienić jej typu. Możesz jednak skopiować wartość zmiennej lub wartość zwracaną przez funkcję do innej zmiennej innego typu. Operacje te są nazywane *konwersjemi typu*, które są czasami niezbędne, ale również są potencjalnymi źródłami utraty lub nieprawidłowego działania danych.
 
@@ -55,7 +53,7 @@ int maxValue;                // Not recommended! maxValue contains
 
 W odróżnieniu do innych języków, C++ nie ma uniwersalnego typu bazowego, z którego wywodzą się wszystkie inne typy. Język zawiera wiele *typów podstawowych*, znanych również jako *typy wbudowane*. Obejmuje to typy liczbowe, takie jak **int**, **Double**, **Long**, **bool** **oraz typy znaków i** **wchar_t** dla znaków ASCII i Unicode. Najbardziej podstawowe typy (z wyjątkiem **bool**, **Double**, **wchar_t** i powiązane typy) mają wszystkie niepodpisane wersje, które modyfikują zakres wartości, które mogą być przechowywane w zmiennej. Na przykład **int**, która przechowuje 32-bitową liczbę całkowitą ze znakiem, może reprezentować wartość z-2 147 483 648 do 2 147 483 647. Liczba **całkowita bez znaku**, która jest również przechowywana jako 32-bitów, może przechowywać wartość z przestawu od 0 do 4 294 967 295. Całkowita liczba możliwych wartości w każdym przypadku jest taka sama, zmienia się tylko zakres.
 
-Podstawowe typy są rozpoznawane przez kompilator, który posiada wbudowane reguły rządzące tym, jakie operacje można na nich wykonywać i jak mogą być konwertowane na inne typy podstawowe. Aby zapoznać się z pełną listą wbudowanych typów i ich rozmiaru i limitów liczbowych, zobacz [podstawowe typy](../cpp/fundamental-types-cpp.md).
+Podstawowe typy są rozpoznawane przez kompilator, który posiada wbudowane reguły rządzące tym, jakie operacje można na nich wykonywać i jak mogą być konwertowane na inne typy podstawowe. Aby uzyskać pełną listę typów wbudowanych oraz ich rozmiar i limity liczbowe, zobacz [typy wbudowane](../cpp/fundamental-types-cpp.md).
 
 Na poniższej ilustracji przedstawiono względne wielkości typów wbudowanych:
 
@@ -63,7 +61,7 @@ Na poniższej ilustracji przedstawiono względne wielkości typów wbudowanych:
 
 Poniższa tabela wymienia najczęściej używane typy podstawowe:
 
-|Type|Rozmiar|Komentarz|
+|Typ|Rozmiar|Komentarz|
 |----------|----------|-------------|
 |int|4 bajty|Wybór domyślny dla wartości całkowitych.|
 |double|8 bajtów|Wybór domyślny dla wartości zmiennopozycyjnych.|
@@ -72,7 +70,7 @@ Poniższa tabela wymienia najczęściej używane typy podstawowe:
 |wchar_t|2 bajty|Przedstawia wartości znaku „szerokiego”, które mogą być zakodowane w formacie UNICODE (UTF-16 w systemie Windows, inne systemy operacyjne mogą się różnić). Jest to typ znaku używany w ciągach typu `std::wstring`.|
 |bez znaku&nbsp;znak|1 bajt|C++nie ma wbudowanego typu `byte`.  Używaj unsigned char, aby reprezentować wartość bajtową.|
 |unsigned int|4 bajty|Wybór domyślny dla flag bitowych.|
-|long long|8 bajtów|Przedstawia bardzo duże wartości całkowitoliczbowe.|
+|{1&gt;{2&gt;long long&lt;2}&lt;1}|8 bajtów|Przedstawia bardzo duże wartości całkowitoliczbowe.|
 
 ## <a name="the-void-type"></a>Typ void (pusty).
 

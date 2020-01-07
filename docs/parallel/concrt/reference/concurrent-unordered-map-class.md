@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_map class
 ms.assetid: b2d879dd-87ef-4af9-a266-a5443fd538b8
-ms.openlocfilehash: 43ad777b0dfb1285a82d662f37329c079410c78d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a43e52edfe223dae51737d7d2cde37e3b8238f08
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262570"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298691"
 ---
-# <a name="concurrentunorderedmap-class"></a>concurrent_unordered_map — Klasa
+# <a name="concurrent_unordered_map-class"></a>concurrent_unordered_map — Klasa
 
-`concurrent_unordered_map` Klasa jest kontenerem bezpieczne pod względem współbieżności, który kontroluje różnej długości sekwencje elementów typu `std::pair<const K, _Element_type>`. Sekwencja jest reprezentowana w sposób umożliwiający bezpieczne pod względem współbieżności dołączyć element dostępu, dostępu do iteratora i operacji przechodzenia iteratora.
+Klasa `concurrent_unordered_map` jest bezpiecznym pod kątem współbieżności kontenerem, który kontroluje różnej długości sekwencje elementów typu `std::pair<const K, _Element_type>`. Sekwencja jest reprezentowana w sposób umożliwiający bezpieczne wykonywanie operacji dołączania, dostęp do elementów, dostęp iteratora i przechodzenie iteratora. W tym miejscu są zawsze ważne wskaźniki lub Iteratory, które są bezpieczne. Nie jest to gwarancja inicjalizacji elementu lub konkretnej kolejności przechodzenia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -61,7 +61,7 @@ Typ obiektu funkcji mieszania. Ten argument jest opcjonalny, a wartość domyśl
 Typ obiektu funkcji porównywania równości. Ten argument jest opcjonalny, a wartość domyślna to `std::equal_to<K>`.
 
 *_Allocator_type*<br/>
-Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i dezalokacji pamięci współbieżnej mapy nieuporządkowanej. Ten argument jest opcjonalny, a wartość domyślna to `std::allocator<std::pair<K`, `_Element_type>>`.
+Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i cofania alokacji pamięci dla współbieżnej mapy nieuporządkowanej. Ten argument jest opcjonalny, a wartość domyślna to `std::allocator<std::pair<K`, `_Element_type>>`.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -90,29 +90,29 @@ Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegó�
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[concurrent_unordered_map](#ctor)|Przeciążone. Tworzy równoczesna mapę nieuporządkowaną.|
+|[concurrent_unordered_map](#ctor)|Przeciążone. Konstruuje współbieżną mapę nieuporządkowaną.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[at](#at)|Przeciążone. Wyszukuje element w `concurrent_unordered_map` z określoną wartością klucza... Ta metoda jest bezpieczna pod kątem współbieżności.|
+|[at](#at)|Przeciążone. Znajduje element w `concurrent_unordered_map` z określoną wartością klucza.. Ta metoda jest bezpieczna pod kątem współbieżności.|
 |[hash_function](#hash_function)|Pobiera przechowywany obiekt funkcji mieszania.|
-|[insert](#insert)|Przeciążone. Dodaje elementy do `concurrent_unordered_map` obiektu.|
-|[key_eq](#key_eq)|Pobiera obiekt funkcji porównywania równości przechowywanych.|
-|[swap](#swap)|Zamienia zawartości dwóch `concurrent_unordered_map` obiektów. Ta metoda nie jest bezpieczna pod kątem współbieżności.|
-|[unsafe_erase](#unsafe_erase)|Przeciążone. Usuwa elementy z `concurrent_unordered_map` określonych pozycji. Ta metoda nie jest bezpieczna pod kątem współbieżności.|
+|[wstawienia](#insert)|Przeciążone. Dodaje elementy do obiektu `concurrent_unordered_map`.|
+|[key_eq](#key_eq)|Pobiera przechowywany obiekt funkcji porównywania równości.|
+|[swap](#swap)|Zamienia zawartość dwóch `concurrent_unordered_map` obiektów. Ta metoda nie jest bezpieczna pod kątem współbieżności.|
+|[unsafe_erase](#unsafe_erase)|Przeciążone. Usuwa elementy z `concurrent_unordered_map` w określonych położeniach. Ta metoda nie jest bezpieczna pod kątem współbieżności.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Operator\[\]](#operator_at)|Przeciążone. Znajduje lub wstawia element z określonym kluczem. Ta metoda jest bezpieczna pod kątem współbieżności.|
-|[operator=](#operator_eq)|Przeciążone. Przypisuje zawartość innego `concurrent_unordered_map` obiektu do wskazanego. Ta metoda nie jest bezpieczna pod kątem współbieżności.|
+|[\[operatora \]](#operator_at)|Przeciążone. Znajduje lub wstawia element z określonym kluczem. Ta metoda jest bezpieczna pod kątem współbieżności.|
+|[operator=](#operator_eq)|Przeciążone. Przypisuje do niego zawartość innego obiektu `concurrent_unordered_map`. Ta metoda nie jest bezpieczna pod kątem współbieżności.|
 
 ## <a name="remarks"></a>Uwagi
 
-Aby uzyskać szczegółowe informacje na temat `concurrent_unordered_map` klasy, zobacz [równoległe kontenery oraz obiekty](../../../parallel/concrt/parallel-containers-and-objects.md).
+Aby uzyskać szczegółowe informacje na temat klasy `concurrent_unordered_map`, zobacz [Parallel Containers and Objects](../../../parallel/concrt/parallel-containers-and-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -124,13 +124,13 @@ Aby uzyskać szczegółowe informacje na temat `concurrent_unordered_map` klasy,
 
 ## <a name="requirements"></a>Wymagania
 
-**Header:** concurrent_unordered_map.h
+**Nagłówek:** concurrent_unordered_map. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="at"></a> w
+##  <a name="at"></a>w
 
-Wyszukuje element w `concurrent_unordered_map` z określoną wartością klucza... Ta metoda jest bezpieczna pod kątem współbieżności.
+Znajduje element w `concurrent_unordered_map` z określoną wartością klucza.. Ta metoda jest bezpieczna pod kątem współbieżności.
 
 ```
 mapped_type& at(const key_type& KVal);
@@ -141,19 +141,19 @@ const mapped_type& at(const key_type& KVal) const;
 ### <a name="parameters"></a>Parametry
 
 *KVal*<br/>
-Wartość klucza do znalezienia.
+Wartość klucza do wyszukania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Odwołanie do wartości danych znalezionego elementu.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wartość klucza argumentu nie zostanie znaleziony, funkcja zgłasza obiekt klasy `out_of_range`.
+Jeśli wartość klucza argumentu nie zostanie znaleziona, funkcja generuje obiekt klasy `out_of_range`.
 
-##  <a name="begin"></a> Rozpocznij
+##  <a name="begin"></a>zaczną
 
-Zwraca iterator, który wskazuje na pierwszy element w kontenerze współbieżnych. Ta metoda jest bezpieczny dla współbieżności.
+Zwraca iterator wskazujący na pierwszy element w kontenerze współbieżnym. Ta metoda jest bezpieczna pod względem współbieżności.
 
 ```
 iterator begin();
@@ -161,45 +161,45 @@ iterator begin();
 const_iterator begin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Iterator do pierwszego elementu w kontenerze współbieżnych.
+Iterator do pierwszego elementu w kontenerze współbieżnym.
 
-##  <a name="cbegin"></a> cbegin —
+##  <a name="cbegin"></a>cbegin
 
-Zwraca iterator const, wskazuje na pierwszy element w kontenerze współbieżnych. Ta metoda jest bezpieczny dla współbieżności.
+Zwraca iterator const wskazujący na pierwszy element w kontenerze współbieżnym. Ta metoda jest bezpieczna pod względem współbieżności.
 
 ```
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Iterator const do pierwszego elementu w kontenerze współbieżnych.
+Iterator const do pierwszego elementu w kontenerze współbieżnym.
 
-##  <a name="cend"></a> cend
+##  <a name="cend"></a>cend
 
-Zwraca iterator const, która wskazuje lokalizację po ostatnim elemencie w kontenerze współbieżnych. Ta metoda jest bezpieczny dla współbieżności.
+Zwraca iterator const wskazujący lokalizację, która kończy się ostatnim elementem w kontenerze współbieżnym. Ta metoda jest bezpieczna pod względem współbieżności.
 
 ```
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Iterator const do lokalizacji następującej po ostatnim elemencie w kontenerze współbieżnych.
+Iterator const do lokalizacji po ostatnim elemencie w kontenerze współbieżnym.
 
-##  <a name="clear"></a> Usuń zaznaczenie
+##  <a name="clear"></a>Wyczyść
 
-Usuwa wszystkie elementy w kontenerze współbieżnych. Ta funkcja nie jest bezpieczny dla współbieżności.
+Usuwa wszystkie elementy w kontenerze współbieżnym. Ta funkcja nie jest bezpieczna pod kątem współbieżności.
 
 ```
 void clear();
 ```
 
-##  <a name="ctor"></a> concurrent_unordered_map
+##  <a name="ctor"></a>concurrent_unordered_map
 
-Tworzy równoczesna mapę nieuporządkowaną.
+Konstruuje współbieżną mapę nieuporządkowaną.
 
 ```
 explicit concurrent_unordered_map(
@@ -236,43 +236,43 @@ concurrent_unordered_map(
 Typ iteratora wejściowego.
 
 *_Number_of_buckets*<br/>
-Początkowa liczba zasobników dla tej mapy nieuporządkowanej.
+Początkowa liczba przedziałów dla tej mapy nieuporządkowanej.
 
 *_Hasher*<br/>
-Funkcja wyznaczania wartości skrótu dla tej mapy nieuporządkowanej.
+Funkcja skrótu dla tej mapy nieuporządkowanej.
 
 *key_equality*<br/>
-Funkcja porównywania równości tej mapy nieuporządkowanej.
+Funkcja porównywania równości dla tej mapy nieuporządkowanej.
 
 *_Allocator*<br/>
-Alokator dla tej mapy nieuporządkowanej.
+Program przydzielający dla tej mapy nieuporządkowanej.
 
-*_Rozpocznij*<br/>
+*_Begin*<br/>
 Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.
 
-*_Zakończ*<br/>
+*_End*<br/>
 Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.
 
 *_Umap*<br/>
-Źródło `concurrent_unordered_map` obiektu do kopiowania lub przenoszenia elementów z.
+Obiekt źródłowy `concurrent_unordered_map` do kopiowania lub przenoszenia elementów.
 
 ### <a name="remarks"></a>Uwagi
 
-Wszystkie konstruktory zapisują obiekt programu przydzielania `_Allocator` i zainicjuj mapy nieuporządkowanej.
+Wszystkie konstruktory przechowują obiekt alokatora `_Allocator` i inicjują mapę nieuporządkowaną.
 
-Pierwszy Konstruktor określa pustą mapę początkowej i wyraźnie określa liczbę przedziałów, typ funkcji mieszania, funkcją porównania oraz alokatorem ma być używany.
+Pierwszy Konstruktor określa pustą mapę początkową i jawnie określa liczbę przedziałów, funkcję mieszania, funkcję równości i typ alokatora, który ma być używany.
 
-Drugi Konstruktor określa alokatora do mapy nieuporządkowanej.
+Drugi Konstruktor Określa Alokator dla mapy nieuporządkowanej.
 
-Trzeci Konstruktor określa wartości dostarczone przez zakres iteratora [ `_Begin`, `_End`).
+Trzeci konstruktor określa wartości dostarczone przez zakres iteratora [`_Begin`, `_End`).
 
-Czwarty i piąty Konstruktor określają kopię równoczesna mapę nieuporządkowaną `_Umap`.
+Czwarty i piąty konstruktory określają kopię współbieżnej mapy nieuporządkowanej `_Umap`.
 
-Ostatni Konstruktor Określa przeniesienie równoczesna mapę nieuporządkowaną `_Umap`.
+Ostatni konstruktor określa przenoszenie współbieżnie nieuporządkowanej mapy `_Umap`.
 
-##  <a name="count"></a> Liczba
+##  <a name="count"></a>liczbą
 
-Zlicza liczbę elementów pasujących do określonego klucza. Ta funkcja jest bezpieczny dla współbieżności.
+Zlicza elementy pasujące do określonego klucza. Ta funkcja jest bezpieczna pod względem współbieżności.
 
 ```
 size_type count(const key_type& KVal) const;
@@ -281,31 +281,31 @@ size_type count(const key_type& KVal) const;
 ### <a name="parameters"></a>Parametry
 
 *KVal*<br/>
-Klucz do wyszukania.
+Klucz, który ma zostać wyszukany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Liczba razy liczba przypadków, gdy klucz jest wyświetlany w kontenerze.
+Liczba przypadków, gdy klucz pojawia się w kontenerze.
 
-##  <a name="empty"></a> pusty
+##  <a name="empty"></a>ciągiem
 
-Sprawdza, czy nie ma żadnych elementów. Ta metoda jest bezpieczny dla współbieżności.
+Sprawdza, czy nie ma żadnych elementów. Ta metoda jest bezpieczna pod względem współbieżności.
 
 ```
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-**wartość true,** Jeśli współbieżnych kontener jest pusty, **false** inaczej.
+**prawda** , jeśli kontener współbieżny jest pusty, w przeciwnym razie **zwraca wartość false** .
 
 ### <a name="remarks"></a>Uwagi
 
-Czy współbieżnych kontener jest pusty mogą ulec zmianie w obecności równoczesnych operacji wstawiania, natychmiast po wywołaniu tej funkcji, zanim wartość zwracana jest nawet do odczytu.
+W obecności współbieżnych operacji wstawiania, niezależnie od tego, czy współbieżny kontener jest pusty, może ulec zmianie natychmiast po wywołaniu tej funkcji, zanim zwracana wartość zostanie odczytana.
 
-##  <a name="end"></a> koniec
+##  <a name="end"></a>punktów
 
-Zwraca iterator wskazujący lokalizację po ostatnim elemencie w kontenerze współbieżnych. Ta metoda jest bezpieczny dla współbieżności.
+Zwraca iterator wskazujący lokalizację, która kończy się ostatnim elementem w kontenerze współbieżnym. Ta metoda jest bezpieczna pod względem współbieżności.
 
 ```
 iterator end();
@@ -313,13 +313,13 @@ iterator end();
 const_iterator end() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Iterator do lokalizacji następującej po ostatnim elemencie w kontenerze współbieżnych.
+Iterator do lokalizacji po ostatnim elemencie w kontenerze współbieżnym.
 
-##  <a name="equal_range"></a> equal_range —
+##  <a name="equal_range"></a>equal_range
 
-Wyszukuje zakres, który odpowiada określonemu kluczowi. Ta funkcja jest bezpieczny dla współbieżności.
+Znajduje zakres pasujący do określonego klucza. Ta funkcja jest bezpieczna pod względem współbieżności.
 
 ```
 std::pair<iterator,
@@ -336,17 +336,17 @@ std::pair<const_iterator,
 *KVal*<br/>
 Wartość klucza do wyszukania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-A [pary](../../../standard-library/pair-structure.md) gdzie pierwszy element jest iterację do początku, a drugi element stanowi iterator do końca zakresu.
+[Para](../../../standard-library/pair-structure.md) , w której pierwszy element jest iteratorem do początku, a drugi element jest iteratorem do końca zakresu.
 
 ### <a name="remarks"></a>Uwagi
 
-Istnieje możliwość współbieżnych operacji wstawienia powodować dodatkowych kluczy, które ma zostać wstawiony po iteratora begin i przed iteratora zakończenia.
+Możliwe jest jednoczesne wstawianie, aby spowodować Wstawianie dodatkowych kluczy po iteratoru BEGIN i przed iteratorem końcowym.
 
-##  <a name="find"></a> Znajdź
+##  <a name="find"></a>wyświetlić
 
-Wyszukuje element, który odpowiada określonemu kluczowi. Ta funkcja jest bezpieczny dla współbieżności.
+Wyszukuje element, który odpowiada określonemu kluczowi. Ta funkcja jest bezpieczna pod względem współbieżności.
 
 ```
 iterator find(const key_type& KVal);
@@ -359,23 +359,23 @@ const_iterator find(const key_type& KVal) const;
 *KVal*<br/>
 Wartość klucza do wyszukania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Iterator wskazuje lokalizację pierwszego elementu, który pasuje do klucza dostarczonego lub iteratora `end()` jeśli taki element nie istnieje.
+Iterator wskazujący lokalizację pierwszego elementu, który pasuje do podanego klucza lub iterator `end()`, jeśli taki element nie istnieje.
 
-##  <a name="get_allocator"></a> get_allocator
+##  <a name="get_allocator"></a>get_allocator
 
-Zwraca przechowywany obiekt alokatora dla tego kontenera współbieżnych. Ta metoda jest bezpieczny dla współbieżności.
+Zwraca przechowywany obiekt alokatora dla tego współbieżnego kontenera. Ta metoda jest bezpieczna pod względem współbieżności.
 
 ```
 allocator_type get_allocator() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Przechowywany obiekt alokatora dla tego kontenera współbieżnych.
+Przechowywany obiekt alokatora dla tego współbieżnego kontenera.
 
-##  <a name="hash_function"></a> hash_function —
+##  <a name="hash_function"></a>hash_function
 
 Pobiera przechowywany obiekt funkcji mieszania.
 
@@ -383,13 +383,13 @@ Pobiera przechowywany obiekt funkcji mieszania.
 hasher hash_function() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Przechowywany obiekt funkcji mieszania.
+Przechowywany obiekt funkcji skrótu.
 
-##  <a name="insert"></a> Wstaw
+##  <a name="insert"></a>wstawienia
 
-Dodaje elementy do `concurrent_unordered_map` obiektu.
+Dodaje elementy do obiektu `concurrent_unordered_map`.
 
 ```
 std::pair<iterator,
@@ -420,64 +420,64 @@ typename std::enable_if<!std::is_same<const_iterator,
 ### <a name="parameters"></a>Parametry
 
 *_Iterator*<br/>
-Typ iteratora, używany do wstawienia.
+Typ iteratora używany do wstawiania.
 
 *V*<br/>
-Typ wartości do mapy.
+Typ wartości wstawionej do mapy.
 
 *value*<br/>
-Wartość, która ma zostać wstawiony.
+Wartość, która ma zostać wstawiona.
 
 *_Where*<br/>
-Począwszy od lokalizacji do wyszukiwania punkt wstawiania.
+Początkowa lokalizacja, w której ma zostać wyszukany punkt wstawiania.
 
-*pierwszy*<br/>
+*first*<br/>
 Początek zakresu do wstawienia.
 
 *last*<br/>
 Koniec zakresu do wstawienia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Parą, która zawiera iteratora i wartość logiczną. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.
+Para, która zawiera iterator i wartość logiczną. Zobacz sekcję Uwagi, aby uzyskać więcej szczegółów.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja elementu członkowskiego Określa, czy element X istnieje w kolejności, w których klucz ma równoważną kolejność, tak aby w przypadku `value`. Jeśli nie, tworzy takiego elementu X i inicjuje ją za pomocą `value`. Funkcja następnie określa iterator `where` który wyznacza X. Jeśli wystąpił wstawieniem, funkcja zwraca `std::pair(where, true)`. W przeciwnym razie zwraca `std::pair(where, false)`.
+Pierwsza funkcja członkowska określa, czy element X istnieje w sekwencji, którego klucz ma równoważne porządkowanie do `value`. W przeciwnym razie tworzy taki element X i inicjuje go `value`. Następnie funkcja określa `where` iteratora, który wyznacza X. Jeśli nastąpiło wstawienie, funkcja zwraca `std::pair(where, true)`. W przeciwnym razie zwraca `std::pair(where, false)`.
 
-Druga funkcja elementu członkowskiego zwraca wstawiania ( `value`) przy użyciu `_Where` jako punkt wyjścia w kontrolowanej sekwencji, aby wyszukać punkt wstawiania.
+Druga funkcja członkowska zwraca Insert (`value`), używając `_Where` jako początku w kontrolowanej sekwencji, aby wyszukać punkt wstawiania.
 
-Trzecia funkcja członkowska wstawia sekwencję wartości elementu z zakresu [ `first`, `last`).
+Trzecia funkcja członkowska wstawia sekwencję wartości elementów z zakresu [`first`, `last`).
 
-Ostatnie dwie funkcje Członkowskie, działa tak samo jako pierwsze dwa, chyba że `value` służy do konstruowania wstawiona wartość.
+Ostatnie dwie funkcje członkowskie zachowują się tak samo jak pierwsze dwa, z wyjątkiem tego, że `value` jest używany do konstruowania wstawionej wartości.
 
-##  <a name="key_eq"></a> key_eq —
+##  <a name="key_eq"></a>key_eq
 
-Pobiera obiekt funkcji porównywania równości przechowywanych.
+Pobiera przechowywany obiekt funkcji porównywania równości.
 
 ```
 key_equal key_eq() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Obiekt funkcji porównywania równości przechowywanych.
+Przechowywany obiekt funkcji porównywania równości.
 
-##  <a name="load_factor"></a> load_factor —
+##  <a name="load_factor"></a>load_factor
 
-Oblicza i zwraca bieżący współczynnik obciążenia kontenera. Współczynnik obciążenia jest liczba elementów w kontenerze dzielona przez liczbę przedziałów.
+Oblicza i zwraca bieżący współczynnik obciążenia kontenera. Współczynnik obciążenia to liczba elementów w kontenerze podzielona przez liczbę przedziałów.
 
 ```
 float load_factor() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Współczynnik obciążenia kontenera.
+Współczynnik obciążenia dla kontenera.
 
-##  <a name="max_load_factor"></a> max_load_factor —
+##  <a name="max_load_factor"></a>max_load_factor
 
-Pobiera lub ustawia współczynnik maksymalnego obciążenia kontenera. Współczynnik maksymalnego obciążenia jest największą liczbę elementów, nie może być w dowolnym zasobniku, zanim kontenera rozwoju swojej wewnętrznej tabeli.
+Pobiera lub ustawia maksymalny współczynnik obciążenia kontenera. Maksymalny współczynnik obciążenia to największą liczbę elementów, która może znajdować się w dowolnym zasobniku, zanim kontener zostanie powiększony do swojej wewnętrznej tabeli.
 
 ```
 float max_load_factor() const;
@@ -489,27 +489,27 @@ void max_load_factor(float _Newmax);
 
 `_Newmax`
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Pierwsza funkcja elementu członkowskiego zwraca współczynnik przechowywanych maksymalnego obciążenia. Funkcja drugiego członka nie zwraca wartości, ale zgłasza [out_of_range —](../../../standard-library/out-of-range-class.md) wyjątek, jeśli współczynnik podane obciążenia jest nieprawidłowy.
+Pierwsza funkcja członkowska zwraca przechowywany maksymalny współczynnik obciążenia. Druga funkcja członkowska nie zwraca wartości, ale zgłasza wyjątek [out_of_range](../../../standard-library/out-of-range-class.md) , jeśli podany współczynnik obciążenia jest nieprawidłowy.
 
-##  <a name="max_size"></a> max_size —
+##  <a name="max_size"></a>max_size
 
-Zwraca maksymalny rozmiar kontenera współbieżnych, określane przez alokator. Ta metoda jest bezpieczny dla współbieżności.
+Zwraca maksymalny rozmiar kontenera współbieżnego, który jest określany przez Alokator. Ta metoda jest bezpieczna pod względem współbieżności.
 
 ```
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Maksymalna liczba elementów, które mogą być wstawiane do tego kontenera współbieżnych.
+Maksymalna liczba elementów, które można wstawić do tego współbieżnego kontenera.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta wartość górna granica faktycznie może być wyższy niż co faktycznie może zawierać kontenera.
+Ta Górna granica może być w rzeczywistości wyższa niż wartość kontenera, w której ma zostać wstrzymana.
 
-##  <a name="operator_at"></a> Operator]
+##  <a name="operator_at"></a>operator []
 
 Znajduje lub wstawia element z określonym kluczem. Ta metoda jest bezpieczna pod kątem współbieżności.
 
@@ -522,25 +522,25 @@ mapped_type& operator[](key_type&& kval);
 ### <a name="parameters"></a>Parametry
 
 *KVal*<br/>
-Wartość klucza
+Wartość klucza do
 
-znaleziona lub wstawiona.
+Znajdź lub Wstaw.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Odwołanie do wartości danych elementu znaleziona lub wstawiona.
+Odwołanie do wartości danych znalezionego lub wstawionego elementu.
 
 ### <a name="remarks"></a>Uwagi
 
 Jeśli wartość klucza argumentu nie zostanie znaleziona, zostanie ona wstawiona wraz z wartością domyślną typu danych.
 
-`operator[]` może służyć do wstawienia elementów do mapy `m` przy użyciu `m[key] = DataValue;`, gdzie `DataValue` jest wartością `mapped_type` elementu o wartości klucza `key`.
+`operator[]` może służyć do wstawiania elementów do mapy `m` przy użyciu `m[key] = DataValue;`, gdzie `DataValue` jest wartością `mapped_type` elementu z wartością klucza `key`.
 
-Korzystając z `operator[]` do wstawienia elementów, zwracane odwołanie nie wskazuje, czy wstawienie jest zmiana istniejący element lub tworzenia nowej. Funkcje elementów członkowskich `find` i [Wstaw](#insert) może służyć do określenia, czy element z określonym kluczem już występuje przed wstawieniem.
+W przypadku używania `operator[]` do wstawiania elementów, zwrócone odwołanie nie wskazuje, czy wstawienie zmienia istniejący element lub tworzy nowy. Funkcje składowe `find` i [INSERT](#insert) mogą służyć do określenia, czy element z określonym kluczem jest już obecny przed wstawieniem.
 
-##  <a name="operator_eq"></a> operator =
+##  <a name="operator_eq"></a>operator =
 
-Przypisuje zawartość innego `concurrent_unordered_map` obiektu do wskazanego. Ta metoda nie jest bezpieczna pod kątem współbieżności.
+Przypisuje do niego zawartość innego obiektu `concurrent_unordered_map`. Ta metoda nie jest bezpieczna pod kątem współbieżności.
 
 ```
 concurrent_unordered_map& operator= (const concurrent_unordered_map& _Umap);
@@ -551,17 +551,17 @@ concurrent_unordered_map& operator= (concurrent_unordered_map&& _Umap);
 ### <a name="parameters"></a>Parametry
 
 *_Umap*<br/>
-Źródło `concurrent_unordered_map` obiektu.
+Obiekt źródłowy `concurrent_unordered_map`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Odwołanie do `concurrent_unordered_map` obiektu.
+Odwołanie do tego obiektu `concurrent_unordered_map`.
 
 ### <a name="remarks"></a>Uwagi
 
-Po wymazaniu wszelkie elementy istniejących współbieżnego wektora `operator=` kopiuje lub przenosi zawartość `_Umap` do współbieżnego wektora.
+Po wymazaniu wszystkich istniejących elementów jako współbieżnych wektorów `operator=` kopiuje lub przenosi zawartość `_Umap` do współbieżnego wektora.
 
-##  <a name="rehash"></a> rehash —
+##  <a name="rehash"></a>rehash —
 
 Przebudowuje tabelę mieszania.
 
@@ -572,33 +572,33 @@ void rehash(size_type _Buckets);
 ### <a name="parameters"></a>Parametry
 
 *_Buckets*<br/>
-Żądaną liczbę przedziałów.
+Wymagana liczba zasobników.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zmienia liczbę przedziałów, na co najmniej `_Buckets` i odbudowuje tabelę mieszania, stosownie do potrzeb. Liczba przedziałów musi być potęgą liczby 2. Jeśli nie potęgą liczby 2, jego kopia zapasowa zostanie zaokrąglona do następną największą potęgą liczby 2.
+Funkcja członkowska zmienia liczbę przedziałów, które mają być co najmniej `_Buckets` i ponownie kompiluje tabelę skrótów zgodnie z wymaganiami. Liczba przedziałów musi być potęgą liczby 2. Jeśli nie jest potęgą liczby 2, będzie zaokrąglana do najbliższej największej potęgi 2.
 
-Wyniku weryfikacji zgłasza wyjątek [out_of_range —](../../../standard-library/out-of-range-class.md) wyjątek, jeśli liczba przedziałów jest nieprawidłowy (0 lub większa niż maksymalna liczba zasobników).
+Zgłasza wyjątek [out_of_range](../../../standard-library/out-of-range-class.md) , jeśli liczba przedziałów jest nieprawidłowa (0 lub większa niż maksymalna liczba przedziałów).
 
-##  <a name="size"></a> Rozmiar
+##  <a name="size"></a>zmienia
 
-Zwraca liczbę elementów w tym kontenerze współbieżnych. Ta metoda jest bezpieczny dla współbieżności.
+Zwraca liczbę elementów w tym współbieżnym kontenerze. Ta metoda jest bezpieczna pod względem współbieżności.
 
 ```
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba elementów w kontenerze.
 
 ### <a name="remarks"></a>Uwagi
 
-W obecności równoczesnych operacji wstawiania liczba elementów w kontenerze współbieżnych, które mogą ulec zmianie natychmiast po wywołaniu tej funkcji, zanim wartość zwracana jest nawet do odczytu.
+W przypadku występowania równoczesnych operacji wstawiania liczba elementów w kontenerze współbieżnym może ulec zmianie natychmiast po wywołaniu tej funkcji, zanim zwracana wartość zostanie odczytana.
 
-##  <a name="swap"></a> swap
+##  <a name="swap"></a>wymiany
 
-Zamienia zawartości dwóch `concurrent_unordered_map` obiektów. Ta metoda nie jest bezpieczna pod kątem współbieżności.
+Zamienia zawartość dwóch `concurrent_unordered_map` obiektów. Ta metoda nie jest bezpieczna pod kątem współbieżności.
 
 ```
 void swap(concurrent_unordered_map& _Umap);
@@ -607,7 +607,7 @@ void swap(concurrent_unordered_map& _Umap);
 ### <a name="parameters"></a>Parametry
 
 *_Umap*<br/>
-`concurrent_unordered_map` Zamień na obiekt.
+Obiekt `concurrent_unordered_map` do zamiany na.
 
 ##  <a name="unsafe_begin"></a> unsafe_begin
 
@@ -624,13 +624,13 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 *_Bucket*<br/>
 Indeks przedziału.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Iterator wskazuje początek przedziału.
+Iterator wskazujący początek zasobnika.
 
-##  <a name="unsafe_bucket"></a> unsafe_bucket —
+##  <a name="unsafe_bucket"></a>unsafe_bucket
 
-Zwraca indeks przedział, który mapuje określonego klucza w tym kontenerze.
+Zwraca indeks zasobnika, do którego określony klucz jest mapowany w tym kontenerze.
 
 ```
 size_type unsafe_bucket(const key_type& KVal) const;
@@ -639,27 +639,27 @@ size_type unsafe_bucket(const key_type& KVal) const;
 ### <a name="parameters"></a>Parametry
 
 *KVal*<br/>
-Klucz elementu wyszukane.
+Wyszukiwany klucz elementu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Zasobnik indeks klucza, w tym kontenerze.
+Indeks zasobnika klucza w tym kontenerze.
 
 ##  <a name="unsafe_bucket_count"></a> unsafe_bucket_count
 
-Zwraca bieżącą liczbę zasobników, w tym kontenerze.
+Zwraca bieżącą liczbę przedziałów w tym kontenerze.
 
 ```
 size_type unsafe_bucket_count() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Bieżąca liczba zasobników, w tym kontenerze.
+Bieżąca liczba przedziałów w tym kontenerze.
 
 ##  <a name="unsafe_bucket_size"></a> unsafe_bucket_size
 
-Zwraca liczbę elementów w określonym zasobniku tego kontenera.
+Zwraca liczbę elementów w określonym przedziale tego kontenera.
 
 ```
 size_type unsafe_bucket_size(size_type _Bucket);
@@ -668,13 +668,13 @@ size_type unsafe_bucket_size(size_type _Bucket);
 ### <a name="parameters"></a>Parametry
 
 *_Bucket*<br/>
-Zasobnik do wyszukania.
+Zasobnik, który ma zostać wyszukany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Bieżąca liczba zasobników, w tym kontenerze.
+Bieżąca liczba przedziałów w tym kontenerze.
 
-##  <a name="unsafe_cbegin"></a> unsafe_cbegin —
+##  <a name="unsafe_cbegin"></a>unsafe_cbegin
 
 Zwraca iterator do pierwszego elementu w tym kontenerze dla określonego przedziału.
 
@@ -687,13 +687,13 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 *_Bucket*<br/>
 Indeks przedziału.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Iterator wskazuje początek przedziału.
+Iterator wskazujący początek zasobnika.
 
-##  <a name="unsafe_cend"></a> unsafe_cend
+##  <a name="unsafe_cend"></a>unsafe_cend
 
-Zwraca iterator do lokalizacji następującej po ostatnim elemencie w określonym zasobniku.
+Zwraca iterator do lokalizacji, która kończy ostatni element w określonym przedziale.
 
 ```
 const_local_iterator unsafe_cend(size_type _Bucket) const;
@@ -704,11 +704,11 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
 *_Bucket*<br/>
 Indeks przedziału.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Iterator wskazuje początek przedziału.
+Iterator wskazujący początek zasobnika.
 
-##  <a name="unsafe_end"></a> unsafe_end —
+##  <a name="unsafe_end"></a>unsafe_end
 
 Zwraca iterator do ostatniego elementu w tym kontenerze dla określonego przedziału.
 
@@ -723,13 +723,13 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 *_Bucket*<br/>
 Indeks przedziału.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Iterator wskazuje koniec przedziału.
+Iterator wskazujący koniec przedziału.
 
-##  <a name="unsafe_erase"></a> unsafe_erase —
+##  <a name="unsafe_erase"></a>unsafe_erase
 
-Usuwa elementy z `concurrent_unordered_map` określonych pozycji. Ta metoda nie jest bezpieczna pod kątem współbieżności.
+Usuwa elementy z `concurrent_unordered_map` w określonych położeniach. Ta metoda nie jest bezpieczna pod kątem współbieżności.
 
 ```
 iterator unsafe_erase(
@@ -746,38 +746,38 @@ size_type unsafe_erase(
 ### <a name="parameters"></a>Parametry
 
 *_Where*<br/>
-Pozycja sterująca do wymazania z.
+Pozycja iteratora, z której można wymazać.
 
-*_Rozpocznij*<br/>
-Pozycja pierwszego elementu w zakresie elementów, które mają zostać wymazane.
+*_Begin*<br/>
+Pozycja pierwszego elementu w zakresie elementów, które mają być wymazane.
 
-*_Zakończ*<br/>
-Pozycja pierwszego elementu poza zakresem elementów, które mają zostać wymazane.
+*_End*<br/>
+Pozycja pierwszego elementu poza zakresem elementów, które mają być wymazane.
 
 *KVal*<br/>
 Wartość klucza do wymazania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Pierwsze dwie funkcje Członkowskie zwracają iterator opisujący pierwszy element pozostający poza wszelkimi elementami usuniętymi lub `concurrent_unordered_map::end`(), jeśli taki element nie istnieje. Trzecia funkcji członkowska zwraca liczbę elementów, które usuwa.
+Pierwsze dwie funkcje członkowskie zwracają iterator, który wyznacza pierwszy element, który nie został usunięty, lub `concurrent_unordered_map::end`(), jeśli taki element nie istnieje. Trzecia funkcja członkowska zwraca liczbę elementów, które usuwa.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja członkostwa usuwa element kontrolowanej sekwencji wskazywany przez `_Where`. Funkcja drugiego członka usuwa elementy z zakresu [ `_Begin`, `_End`).
+Pierwsza funkcja członkowska usuwa element kontrolowanej sekwencji wskazywany przez `_Where`. Druga funkcja członkowska usuwa elementy z zakresu [`_Begin`, `_End`).
 
-Trzecia funkcja członkowska usuwa elementy z zakresu rozdzielone `concurrent_unordered_map::equal_range`(KVal).
+Trzecia funkcja członkowska usuwa elementy z zakresu oddzielone `concurrent_unordered_map::equal_range`(KVal).
 
 ##  <a name="unsafe_max_bucket_count"></a> unsafe_max_bucket_count
 
-Zwraca maksymalną liczbę przedziałów, w tym kontenerze.
+Zwraca maksymalną liczbę przedziałów w tym kontenerze.
 
 ```
 size_type unsafe_max_bucket_count() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Maksymalna liczba zasobników, w tym kontenerze.
+Maksymalna liczba przedziałów w tym kontenerze.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,18 +1,18 @@
 ---
 title: Błąd krytyczny ML A1010
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 ms.custom: error-reference
 f1_keywords:
 - A1010
 helpviewer_keywords:
 - A1010
 ms.assetid: 9e0b5241-67f4-4740-8701-3b2d2d1ad9e4
-ms.openlocfilehash: 6ec82f7f6d559d977a9aa039ed91689a0ef4d49a
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: b3141f8819a33281c70e34bd7772d4475886e557
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856881"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75312589"
 ---
 # <a name="ml-fatal-error-a1010"></a>Błąd krytyczny ML A1010
 
@@ -20,9 +20,9 @@ ms.locfileid: "74856881"
 
 Początek bloku nie ma pasującego końca lub zakończenie bloku nie ma pasującego początku. Może być uwzględniona jedna z następujących elementów:
 
-- Dyrektywa wysokiego poziomu, taka jak [. Jeśli](../../assembler/masm/dot-if.md), [. Powtórz](../../assembler/masm/dot-repeat.md)lub [. WHILE](../../assembler/masm/dot-while.md).
+- Dyrektywa wysokiego poziomu, taka jak [. Jeśli](dot-if.md), [. Powtórz](dot-repeat.md)lub [. WHILE](dot-while.md).
 
-- Dyrektywa zestawu warunkowego, taka jak [if](../../assembler/masm/if-masm.md), [REPEAT](../../assembler/masm/repeat.md)lub **while**.
+- Dyrektywa zestawu warunkowego, taka jak [if](if-masm.md), [REPEAT](repeat.md)lub **while**.
 
 - Struktura lub definicja związku.
 
@@ -30,10 +30,10 @@ Początek bloku nie ma pasującego końca lub zakończenie bloku nie ma pasując
 
 - Definicja segmentu.
 
-- Dyrektywa [POPCONTEXT](../../assembler/masm/popcontext.md) .
+- Dyrektywa [POPCONTEXT](popcontext.md) .
 
-- Dyrektywa zestawu warunkowego, taka jak [else](../../assembler/masm/else-masm.md), [ElseIf](../../assembler/masm/elseif-masm.md)lub **endif** bez dopasowania [if](../../assembler/masm/if-masm.md).
+- Dyrektywa zestawu warunkowego, taka jak [else](else-masm.md), [ElseIf](elseif-masm.md)lub **endif** bez dopasowania [if](if-masm.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)<br/>
+[Komunikaty o błędach ML](ml-error-messages.md)

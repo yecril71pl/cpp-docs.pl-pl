@@ -1,6 +1,6 @@
 ---
 title: rozłącz
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - unlink
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - unlink function
 ms.assetid: 2cd82055-5770-48be-88ee-4b2c70541c46
-ms.openlocfilehash: 8c2bf5638132af4743dcd37bceb228730749cce3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5d8251c77a3c4d16ec6328c1c8e6d73d935db139
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945759"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301044"
 ---
 # <a name="unlink"></a>rozłącz
 
-Ta funkcja POSIX jest przestarzała. Zamiast tego użyj C++ zgodnej z normą ISO [_unlink](unlink-wunlink.md) .
+Nazwa funkcji platformy POSIX wdrożonej przez firmę Microsoft `unlink` jest przestarzałym aliasem dla funkcji [_unlink](unlink-wunlink.md) . Domyślnie generuje [Ostrzeżenie kompilatora (poziom 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Nazwa jest przestarzała, ponieważ nie jest zgodna z regułami standard C dla nazw specyficznych dla implementacji. Jednak funkcja jest nadal obsługiwana.
+
+Zalecamy używanie [_unlink](unlink-wunlink.md) . Możesz również nadal używać tej nazwy funkcji i wyłączyć ostrzeżenie. Aby uzyskać więcej informacji, zobacz Wyłączanie [nazw funkcji](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names) [Warning](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) i POSIX.

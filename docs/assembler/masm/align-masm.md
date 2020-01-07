@@ -1,25 +1,25 @@
 ---
 title: ALIGN (MASM)
-ms.date: 01/02/2019
+ms.date: 12/17/2019
 f1_keywords:
 - align
 helpviewer_keywords:
 - ALIGN directive
 ms.assetid: 1c386b23-439f-4ec3-a6de-74427b25e47f
-ms.openlocfilehash: 22b18f2e238c780377b84fc2be3eb6678686bb73
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 700721768deaf92e88b32a97e68c6e017219d19d
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74399276"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316593"
 ---
-# <a name="align-masm"></a>ALIGN (MASM)
+# <a name="align"></a>ALIGN
 
 Dyrektywa **align** wyrównuje następny element danych lub instrukcję na adres, który jest wielokrotnością jego parametru. Parametr musi być potęgą liczby 2 (na przykład 1, 2, 4 itd.), która jest mniejsza lub równa wyrównaniu segmentu.
 
 ## <a name="syntax"></a>Składnia
 
-> **Wyrównaj** *numer*⟦ ⟧
+> **Wyrównaj** ⟦*constantExpression*⟧
 
 ## <a name="remarks"></a>Uwagi
 
@@ -32,4 +32,5 @@ Gdy dane są wyrównane, pominięte miejsce jest uzupełnione zerami. Gdy instru
 ## <a name="see-also"></a>Zobacz także
 
 [Nawet](even.md)\
-[Dokumentacja dyrektyw](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)\
+[MASM BNF, gramatyka](masm-bnf-grammar.md)

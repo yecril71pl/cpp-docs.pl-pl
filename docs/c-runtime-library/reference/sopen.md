@@ -1,6 +1,6 @@
 ---
 title: sopen
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - sopen
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - sopen function
 ms.assetid: 1ce0b707-0c9e-4942-8467-ce7f6cd68acc
-ms.openlocfilehash: 4fce6ed0ef02787f80062e1aba2435b464deded2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 83ec3ee87f16d37d651b2e7a37e0f7eaebe0f46d
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947806"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300719"
 ---
 # <a name="sopen"></a>sopen
 
-Ta funkcja POSIX jest przestarzała. Zamiast tego użyj C++ [_sopen_s](sopen-s-wsopen-s.md) zgodnego ze standardem ISO [_sopen](sopen-wsopen.md) lub zabezpieczeń.
+Nazwa funkcji specyficznej dla firmy Microsoft `sopen` jest przestarzałym aliasem dla funkcji [_sopen](sopen-wsopen.md) . Domyślnie generuje [Ostrzeżenie kompilatora (poziom 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Nazwa jest przestarzała, ponieważ nie jest zgodna z regułami standard C dla nazw specyficznych dla implementacji. Jednak funkcja jest nadal obsługiwana.
+
+Zalecamy używanie [_sopen](sopen-wsopen.md) lub funkcji [_sopen_s](sopen-s-wsopen-s.md) ulepszonych z zabezpieczeniami. Możesz również nadal używać tej nazwy funkcji i wyłączyć ostrzeżenie. Aby uzyskać więcej informacji, zobacz Wyłączanie [nazw funkcji](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names) [Warning](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) i POSIX.
