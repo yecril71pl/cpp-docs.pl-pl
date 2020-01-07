@@ -1,6 +1,6 @@
 ---
 title: lseek
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - lseek
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - lseek function
 ms.assetid: 137d7741-5c2e-443e-811a-6a01417fcae7
-ms.openlocfilehash: d817deb996439e722dfd2890b24bf3c82a64e93b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1d497f8a7a379191b20262043299e6bcc9c5b3a0
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952959"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299133"
 ---
 # <a name="lseek"></a>lseek
 
-Ta funkcja POSIX jest przestarzała. Zamiast tego użyj C++ zgodnej z normą ISO [_lseek](lseek-lseeki64.md) .
+Nazwa funkcji platformy POSIX wdrożonej przez firmę Microsoft `lseek` jest przestarzałym aliasem dla funkcji [_lseek](lseek-lseeki64.md) . Domyślnie generuje [Ostrzeżenie kompilatora (poziom 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Nazwa jest przestarzała, ponieważ nie jest zgodna z regułami standard C dla nazw specyficznych dla implementacji. Jednak funkcja jest nadal obsługiwana.
+
+Zalecamy używanie [_lseek](lseek-lseeki64.md) . Możesz również nadal używać tej nazwy funkcji i wyłączyć ostrzeżenie. Aby uzyskać więcej informacji, zobacz Wyłączanie [nazw funkcji](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names) [Warning](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) i POSIX.

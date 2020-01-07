@@ -8,38 +8,38 @@ helpviewer_keywords:
 - statements, labeled
 - goto keyword [C]
 ms.assetid: 3d0473dc-4b18-4fcc-9616-31a38499d7d7
-ms.openlocfilehash: b23e7e6310ba4ed968e2eac8e6d07d81ee4e79ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5e0d602332c87510b1fe5f59db3e497b88f0acb
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233076"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299120"
 ---
 # <a name="goto-and-labeled-statements-c"></a>goto i Labeled — instrukcje (C)
 
-`goto` Instrukcji przekazuje sterowanie do etykiety. Etykieta danego musi znajdować się w tej samej funkcji i może następować przed elementem tylko jednej instrukcji w tej samej funkcji.
+Instrukcja `goto` przenosi formant do etykiety. Dana etykieta musi znajdować się w tej samej funkcji i może występować przed tylko jedną instrukcją w tej samej funkcji.
 
 ## <a name="syntax"></a>Składnia
 
-*Instrukcja*:<br/>
+*instrukcja*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*labeled-statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Instrukcja skoku*
+&nbsp;&nbsp;&nbsp;&nbsp;*skoku-instrukcja*
 
-*Instrukcja skoku*:<br/>
+*skok-instrukcja*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Przejdź do** *identyfikator* **;**
 
-*labeled-statement*:<br/>
+*etykieta — instrukcja*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator* **:** *— instrukcja*
 
-Etykieta instrukcji jest istotny tylko `goto` instrukcję w dowolnym kontekście instrukcji oznaczonej etykietą jest wykonywane, bez względu na etykietę.
+Etykieta instrukcji jest istotna tylko dla instrukcji `goto`; w każdym innym kontekście wyrażenie z etykietą jest wykonywane bez względu na etykietę.
 
-A *instrukcja skoku* musi znajdować się w tej samej funkcji i może następować przed elementem tylko jednej instrukcji w tej samej funkcji. Zbiór *identyfikator* następujące nazwy `goto` ma swój własny obszar nazw, więc nazwy kolidują z innymi identyfikatorami. Nie można ponownie zadeklarować etykiety. Zobacz [przestrzenie nazw](../c-language/name-spaces.md) Aby uzyskać więcej informacji.
+*Instrukcja skoku* musi znajdować się w tej samej funkcji i może wystąpić przed tylko jedną instrukcją w tej samej funkcji. Zestaw nazw *identyfikatorów* po `goto` ma własną przestrzeń nazw, więc nazwy nie zakłócają innych identyfikatorów. Nie można ponownie zadeklarować etykiet. Aby uzyskać więcej informacji, zobacz [spacje nazw](../c-language/name-spaces.md) .
 
-Jest dobrą programowania stylu **podziału**, **nadal**, i `return` instrukcję preference do `goto` zawsze, gdy jest to możliwe. Ponieważ **podziału** instrukcja kończy się tylko z poziomu pętli, `goto` może być konieczne wyjścia z pętli w pętli głęboko zagnieżdżonych.
+Jest dobrym stylem programowania, aby użyć instrukcji **Break**, **Continue**i `return` w preferencjach, aby `goto`, gdy jest to możliwe. Ponieważ instrukcja **Break** jest zamykana tylko z jednego poziomu pętli, `goto` może być konieczne do wykończenia pętli z głęboko zagnieżdżonej pętli.
 
-W tym przykładzie przedstawiono `goto` instrukcji:
+Ten przykład ilustruje instrukcję `goto`:
 
-```
+```c
 // goto.c
 #include <stdio.h>
 
@@ -65,7 +65,7 @@ int main()
 }
 ```
 
-W tym przykładzie `goto` instrukcji przekazuje sterowanie do punktu z etykietą `stop` podczas `i` jest równa 5.
+W tym przykładzie instrukcja `goto` przenosi formant do punktu oznaczonego etykietą `stop`, gdy `i` jest równa 5.
 
 ## <a name="see-also"></a>Zobacz także
 

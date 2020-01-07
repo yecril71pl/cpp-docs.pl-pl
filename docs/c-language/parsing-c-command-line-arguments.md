@@ -8,34 +8,34 @@ helpviewer_keywords:
 - parsing, command-line arguments
 - startup code, parsing command-line arguments
 ms.assetid: ffce8037-2811-45c4-8db4-1ed787859c80
-ms.openlocfilehash: da8a21ac9ff7ce4fd6bde4d2d1e50d8f30806b78
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: ace6d1b8295d0901ef22f3c354b32ad17e296e87
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343172"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299094"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analizowanie argumentów wiersza polecenia języka C
 
 **Microsoft Specific**
 
-Kod uruchamiający Microsoft C używa następujących reguł interpretując argumenty podane w wierszu polecenia systemu operacyjnego:
+Kod uruchamiania języka Microsoft C używa następujących reguł podczas interpretacji argumentów podanych w wierszu polecenia systemu operacyjnego:
 
-- Argumenty są rozdzielone biały znak, który jest spacja lub tabulator.
+- Argumenty są rozdzielane znakami odstępu, który jest spacją lub tabulatorem.
 
-- W ciąg ujęty w znaki podwójnego cudzysłowu jest interpretowana jako jeden argument, niezależnie od tego, biały znak zawarty w. Ciąg w cudzysłowach można osadzać w argumencie. Należy pamiętać, że karetki (**^**) nie jest rozpoznawany jako znak ucieczki lub ogranicznik.
+- Ciąg ujęty w znaki podwójnego cudzysłowu jest interpretowany jako pojedynczy argument, bez względu na biały znak zawarty w. Ciąg w cudzysłowie może być osadzony w argumencie. Należy zauważyć, że karetka ( **^** ) nie jest rozpoznawana jako znak ucieczki ani ogranicznik.
 
-- Podwójny cudzysłów poprzedzony znakiem ukośnika odwrotnego  **\\"**, jest interpretowany jako literał podwójny cudzysłów (**"**).
+- Podwójny cudzysłów poprzedzony ukośnikiem odwrotnym, **\\"** , jest interpretowany jako literał podwójnego cudzysłowu ( **"** ).
 
-- Ukośników odwrotnych jest interpretowany dosłownie, chyba że bezpośrednio poprzedzać znak podwójnego cudzysłowu.
+- Ukośniki odwrotne są interpretowane dosłownie, chyba że od razu poprzedzają podwójny cudzysłów.
 
-- Jeśli parzysta liczba ukośników odwrotnych następuje podwójny cudzysłów, a następnie jednej kreski ułamkowej odwróconej (**\\**) jest umieszczany w `argv` tablicy dla każdej pary ukośniki odwrotne (**\\ \\**) i podwójnego cudzysłowu (**"**) jest interpretowany jako ogranicznik ciągu.
+- Jeśli parzysta liczba kresek ułamkowych jest poprzedzona znakiem podwójnego cudzysłowu, to jeden ukośnik odwrotny ( **\\** ) jest umieszczany w tablicy `argv` dla każdej pary ukośników odwrotnych ( **\\\\** ) i podwójny cudzysłów ( **"** ) jest interpretowany jako ogranicznik ciągu.
 
-- Jeśli nieparzysta liczba ukośników odwrotnych następuje podwójny cudzysłów, a następnie jednej kreski ułamkowej odwróconej (**\\**) jest umieszczany w `argv` tablicy dla każdej pary ukośniki odwrotne (**\\ \\**) i podwójnego cudzysłowu jest interpretowany jako sekwencja unikowa przez pozostałe ukośnik odwrotny powoduje literał podwójny cudzysłów (**"**) mają być umieszczone w `argv`.
+- Jeśli po parzystej liczbie ukośników odwrotnych następuje znak podwójnego cudzysłowu, to jeden ukośnik odwrotny ( **\\** ) jest umieszczany w tablicy `argv` dla każdej pary ukośników odwrotnych ( **\\\\** ) i podwójny cudzysłów jest interpretowany jako sekwencja ucieczki przez resztę ukośnika odwrotnego ("), co powoduje umieszczenie literału podwójnego cudzysłowu ( **"** ) w `argv`.
 
-Ta lista ilustruje reguły powyżej, pokazując interpretowanych wynik przekazany do `argv` kilka przykładów dotyczących argumenty wiersza polecenia. Dane wyjściowe są wyświetlane w drugim, trzeci, a czwarty kolumn jest argumenty. Program C, który następuje po liście.
+Na tej liście przedstawiono reguły opisane powyżej, pokazując interpretowany wynik przekazane do `argv` dla kilku przykładów argumentów wiersza polecenia. Dane wyjściowe wymienione w drugiej, trzeciej i czwartej kolumnie pochodzą z ARGUMENTÓW. Program C, który znajduje się na liście.
 
-|Dane wejściowe wiersza polecenia|ARGV [1]|argv[2]|argv[3]|
+|Wprowadzanie w wierszu polecenia|argv [1]|argv [2]|argv [3]|
 |-------------------------|---------------|---------------|---------------|
 |`"a b c" d e`|`a b c`|`d`|`e`|
 |`"ab\"c" "\\" d`|`ab"c`|`\`|`d`|
@@ -47,7 +47,7 @@ Ta lista ilustruje reguły powyżej, pokazując interpretowanych wynik przekazan
 
 ### <a name="code"></a>Kod
 
-```
+```c
 // Parsing_C_Commandline_args.c
 // ARGS.C illustrates the following variables used for accessing
 // command-line arguments and environment variables:
@@ -78,7 +78,7 @@ char **envp )      // Array of environment variable strings
 
 ## <a name="comments"></a>Komentarze
 
-Przykład danych wyjściowych z tego programu jest:
+Przykładem danych wyjściowych z tego programu jest:
 
 ```
 Command-line arguments:
@@ -95,7 +95,7 @@ Environment variables:
   WINDIR=c:\nt
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,6 +1,6 @@
 ---
 title: getch
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - getch
 api_location:
@@ -23,16 +23,18 @@ f1_keywords:
 helpviewer_keywords:
 - getch function
 ms.assetid: d3a0b744-d63c-4f71-960e-24e619dccd01
-ms.openlocfilehash: 6ba00b8016719cf673c41b556b4cd9016538722e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8684eba26cb67ab5756922a535c5de586bd40f90
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955449"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299393"
 ---
 # <a name="getch"></a>getch
 
-Ta funkcja POSIX jest przestarzała. Zamiast tego użyj C++ zgodnej z normą ISO [_getch](getch-getwch.md) .
+Nazwa funkcji specyficznej dla firmy Microsoft `getch` jest przestarzałym aliasem dla funkcji [_getch](getch-getwch.md) . Domyślnie generuje [Ostrzeżenie kompilatora (poziom 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Nazwa jest przestarzała, ponieważ nie jest zgodna z regułami standard C dla nazw specyficznych dla implementacji. Jednak funkcja jest nadal obsługiwana.
+
+Zalecamy używanie [_getch](getch-getwch.md) . Możesz również nadal używać tej nazwy funkcji i wyłączyć ostrzeżenie. Aby uzyskać więcej informacji, zobacz Wyłączanie [nazw funkcji](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names) [Warning](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) i POSIX.
 
 > [!IMPORTANT]
 > Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
