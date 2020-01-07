@@ -1,17 +1,17 @@
 ---
 title: '@Model'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '@Model'
 helpviewer_keywords:
 - '@Model symbol'
 ms.assetid: a67c04ac-6ba7-458c-8138-0346e5b85eb6
-ms.openlocfilehash: d62026b02f476a19defc9ae6c8e9c83500bfe067
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: fc72293d2379b9f9e692f87dd3b11ac92fabbae1
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398956"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75315527"
 ---
 # <a name="model"></a>Model \@
 
@@ -19,8 +19,9 @@ ms.locfileid: "74398956"
 
 ## <a name="syntax"></a>Składnia
 
-> **Model \@**
+> **\@Model**
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do symboli](symbols-reference.md)
+[Odwołania do symboli](symbols-reference.md)\
+[MASM BNF, gramatyka](masm-bnf-grammar.md)
