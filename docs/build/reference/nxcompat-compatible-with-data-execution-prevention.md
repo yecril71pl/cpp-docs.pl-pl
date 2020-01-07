@@ -1,18 +1,19 @@
 ---
 title: /NXCOMPAT (Zgodny z zapobieganiem wykonywaniu danych)
-ms.date: 12/29/2017
+description: Opisuje opcję konsolidatora MicrosoftC++ C/(MSVC)/NXCOMPAT, która oznacza plik wykonywalny jako zgodny z funkcją zapobiegania wykonywaniu danych (DEP).
+ms.date: 12/17/2019
 f1_keywords:
 - /NXCOMPAT
 helpviewer_keywords:
 - /NXCOMPAT linker option
 - -NXCOMPAT linker option
 - NXCOMPAT linker option
-ms.openlocfilehash: 7c788f5ec499f0edf0c44f1ff269af9767af6c08
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f3a0906a49e3524fff3e1ef1643d1eceee28f169
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492663"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298990"
 ---
 # <a name="nxcompat-compatible-with-data-execution-prevention"></a>/NXCOMPAT (Zgodny z zapobieganiem wykonywaniu danych)
 
@@ -30,8 +31,6 @@ Domyślnie **/NXCOMPAT** jest włączone.
 
 Aby uzyskać więcej informacji na temat zapobiegania wykonywaniu danych, zobacz następujące artykuły:
 
-- [Szczegółowy opis funkcji zapobiegania wykonywaniu danych (DEP)](https://support.microsoft.com/help/875352/a-detailed-description-of-the-data-execution-prevention-dep-feature-in)
-
 - [Zapobieganie wykonywaniu danych](/windows/win32/Memory/data-execution-prevention)
 
 - [Zapobieganie wykonywaniu danych (Windows Embedded)](/previous-versions/windows/embedded/ms913190\(v=winembedded.5\))
@@ -40,7 +39,7 @@ Aby uzyskać więcej informacji na temat zapobiegania wykonywaniu danych, zobacz
 
 1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz stronę właściwości **Konfiguracja właściwości** > **wiersza polecenia** **konsolidatora** > .
+1. Wybierz opcję **Właściwości konfiguracji** > **konsolidator** > strony właściwości **wiersza polecenia** .
 
 1. Wprowadź opcję w polu **dodatkowe opcje** . Wybierz **przycisk OK** lub **Zastosuj** , aby zastosować zmianę.
 
@@ -50,5 +49,5 @@ Aby uzyskać więcej informacji na temat zapobiegania wykonywaniu danych, zobacz
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja konsolidatora MSVC](linking.md)<br/>
+[Odwołanie\ konsolidatora MSVC](linking.md)
 [Opcje konsolidatora MSVC](linker-options.md)
