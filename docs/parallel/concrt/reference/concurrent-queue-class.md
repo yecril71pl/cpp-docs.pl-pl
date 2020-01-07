@@ -16,16 +16,16 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
-ms.openlocfilehash: d5bbd361dc2dedc24c2a59050ffa680517186494
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f87ead486d635c933ad356f9868c22344601eda
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263090"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298626"
 ---
-# <a name="concurrentqueue-class"></a>concurrent_queue — Klasa
+# <a name="concurrent_queue-class"></a>concurrent_queue — Klasa
 
-`concurrent_queue` Klasa jest klasą kontenera sekwencji, umożliwiającym w pierwszym, first-out dostęp do jego elementów. Umożliwia ona ograniczony zestaw operacji bezpieczne pod względem współbieżności, takich jak `push` i `try_pop`.
+Klasa `concurrent_queue` jest klasą kontenera sekwencji, która umożliwia pierwszy i pierwszy dostęp do jego elementów. Umożliwia ograniczony zestaw operacji związanych z współbieżnością, takich jak `push` i `try_pop`. W tym miejscu są zawsze ważne wskaźniki lub Iteratory, które są bezpieczne. Nie jest to gwarancja inicjalizacji elementu lub konkretnej kolejności przechodzenia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,7 +40,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 Typ danych elementów, które mają być przechowywane w kolejce.
 
 *_Ax*<br/>
-Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i dezalokacji pamięci dla tej kolejki współbieżnych. Ten argument jest opcjonalny, a wartość domyślna to `allocator<T>`.
+Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i cofania alokacji pamięci dla tej współbieżnej kolejki. Ten argument jest opcjonalny, a wartość domyślna to `allocator<T>`.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -48,38 +48,38 @@ Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegó�
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`allocator_type`|Typ, który reprezentuje klasę alokatora dla kolejka współbieżna.|
-|`const_iterator`|Typ, który reprezentuje bez wątkowo `const` iteratora za pośrednictwem elementów w kolejce współbieżnych.|
-|`const_reference`|Typ, który zawiera odwołanie do `const` elementu przechowywanego w kolejka współbieżna do odczytu i wykonywania `const` operacji.|
-|`difference_type`|Typ, który dostarcza podpisem odległość między dwoma elementami w kolejka współbieżna.|
-|`iterator`|Typ, która reprezentuje iterator bez wątkowo nad elementami w kolejka współbieżna.|
-|`reference`|Typ, który zawiera odwołanie do elementu przechowywanego w kolejce współbieżnych.|
-|`size_type`|Typ, który zlicza liczbę elementów w kolejce współbieżnych.|
-|`value_type`|Typ, który reprezentuje typ danych przechowywanych w kolejce współbieżnych.|
+|`allocator_type`|Typ, który reprezentuje klasę alokatora dla kolejki współbieżnej.|
+|`const_iterator`|Typ, który reprezentuje niewątkowo bezpieczny `const` iterator dla elementów w kolejce współbieżnej.|
+|`const_reference`|Typ, który zawiera odwołanie do `const` elementu przechowywanego w współbieżnej kolejce do odczytu i wykonywania `const` operacji.|
+|`difference_type`|Typ, który zawiera podpisaną odległość między dwoma elementami w kolejce współbieżnej.|
+|`iterator`|Typ, który reprezentuje iterator niebezpieczny dla wątków dla elementów w kolejce współbieżnej.|
+|`reference`|Typ, który zawiera odwołanie do elementu przechowywanego w kolejce współbieżnej.|
+|`size_type`|Typ, który zlicza liczbę elementów w kolejce współbieżnej.|
+|`value_type`|Typ, który reprezentuje typ danych przechowywany w kolejce współbieżnej.|
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[concurrent_queue](#ctor)|Przeciążone. Tworzy kolejka współbieżna.|
-|[~concurrent_queue Destructor](#dtor)|Niszczy kolejka współbieżna.|
+|[concurrent_queue](#ctor)|Przeciążone. Konstruuje kolejkę współbieżną.|
+|[~concurrent_queue Destructor](#dtor)|Niszczy współbieżną kolejkę.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Usuń zaznaczenie](#clear)|Czyści kolejka współbieżna, niszczenie dowolnego aktualnie elementów umieszczonych w kolejce. Ta metoda nie jest bezpieczna pod kątem współbieżności.|
-|[pusty](#empty)|Sprawdza, czy kolejka współbieżna jest pusty w tej chwili ta metoda jest wywoływana. Ta metoda jest bezpieczna pod kątem współbieżności.|
-|[get_allocator](#get_allocator)|Zwraca kopię obiektu programu przydzielania użytego do stworzenia kolejka współbieżna. Ta metoda jest bezpieczna pod kątem współbieżności.|
-|[push](#push)|Przeciążone. Element na końcu tail kolejka współbieżna umieszczeniu. Ta metoda jest bezpieczna pod kątem współbieżności.|
-|[try_pop](#try_pop)|Dequeues elementu z kolejki, jeśli jest dostępny. Ta metoda jest bezpieczna pod kątem współbieżności.|
-|[unsafe_begin](#unsafe_begin)|Przeciążone. Zwraca iterator typu `iterator` lub `const_iterator` na początku kolejka współbieżna. Ta metoda nie jest bezpieczna pod kątem współbieżności.|
-|[unsafe_end](#unsafe_end)|Przeciążone. Zwraca iterator typu `iterator` lub `const_iterator` na końcu kolejka współbieżna. Ta metoda nie jest bezpieczna pod kątem współbieżności.|
+|[Wyczyść](#clear)|Czyści kolejkę współbieżną, zniszczyć wszystkie elementy znajdujące się w kolejce. Ta metoda nie jest bezpieczna pod kątem współbieżności.|
+|[empty](#empty)|Testuje, czy kolejka współbieżna jest pusta w chwili, gdy ta metoda jest wywoływana. Ta metoda jest bezpieczna pod kątem współbieżności.|
+|[get_allocator](#get_allocator)|Zwraca kopię alokatora używaną do konstruowania kolejki współbieżnej. Ta metoda jest bezpieczna pod kątem współbieżności.|
+|[push](#push)|Przeciążone. Enqueues element na końcu końca kolejki współbieżnej. Ta metoda jest bezpieczna pod kątem współbieżności.|
+|[try_pop](#try_pop)|Usuwa element z kolejki, jeśli jest dostępny. Ta metoda jest bezpieczna pod kątem współbieżności.|
+|[unsafe_begin](#unsafe_begin)|Przeciążone. Zwraca iterator typu `iterator` lub `const_iterator` do początku kolejki współbieżnej. Ta metoda nie jest bezpieczna pod kątem współbieżności.|
+|[unsafe_end](#unsafe_end)|Przeciążone. Zwraca iterator typu `iterator` lub `const_iterator` do końca kolejki współbieżnej. Ta metoda nie jest bezpieczna pod kątem współbieżności.|
 |[unsafe_size](#unsafe_size)|Zwraca liczbę elementów w kolejce. Ta metoda nie jest bezpieczna pod kątem współbieżności.|
 
 ## <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [równoległe kontenery oraz obiekty](../../../parallel/concrt/parallel-containers-and-objects.md).
+Aby uzyskać więcej informacji, zobacz [Parallel Containers and Objects](../../../parallel/concrt/parallel-containers-and-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -87,21 +87,21 @@ Aby uzyskać więcej informacji, zobacz [równoległe kontenery oraz obiekty](..
 
 ## <a name="requirements"></a>Wymagania
 
-**Header:** concurrent_queue.h
+**Nagłówek:** concurrent_queue. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="clear"></a> Usuń zaznaczenie
+##  <a name="clear"></a>Wyczyść
 
-Czyści kolejka współbieżna, niszczenie dowolnego aktualnie elementów umieszczonych w kolejce. Ta metoda nie jest bezpieczna pod kątem współbieżności.
+Czyści kolejkę współbieżną, zniszczyć wszystkie elementy znajdujące się w kolejce. Ta metoda nie jest bezpieczna pod kątem współbieżności.
 
 ```
 void clear();
 ```
 
-##  <a name="ctor"></a> concurrent_queue
+##  <a name="ctor"></a>concurrent_queue
 
-Tworzy kolejka współbieżna.
+Konstruuje kolejkę współbieżną.
 
 ```
 explicit concurrent_queue(
@@ -123,71 +123,71 @@ concurrent_queue(_InputIterator _Begin,
 ### <a name="parameters"></a>Parametry
 
 *_InputIterator*<br/>
-Typ iteratora danych wejściowych, która określa zakres wartości.
+Typ iteratora wejściowego, który określa zakres wartości.
 
 *_Al*<br/>
 Klasa alokatora do wykorzystania z tym obiektem.
 
 *_OtherQ*<br/>
-Źródło `concurrent_queue` obiektu do kopiowania lub przenoszenia elementów z.
+Obiekt źródłowy `concurrent_queue` do kopiowania lub przenoszenia elementów.
 
-*_Rozpocznij*<br/>
+*_Begin*<br/>
 Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.
 
-*_Zakończ*<br/>
+*_End*<br/>
 Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.
 
 ### <a name="remarks"></a>Uwagi
 
-Wszystkie konstruktory zapisują obiekt programu przydzielania `_Al` i zainicjować kolejki.
+Wszystkie konstruktory przechowują obiekt alokatora `_Al` i inicjują kolejkę.
 
-Pierwszy Konstruktor określa pustej kolejce początkowej i wyraźnie określa typ alokatora, który ma być używany.
+Pierwszy Konstruktor określa pustą kolejkę początkową i jawnie określa typ alokatora, który ma być używany.
 
-Drugi Konstruktor Określa kopię kolejka współbieżna `_OtherQ`.
+Drugi Konstruktor określa kopię współbieżnej kolejki `_OtherQ`.
 
-Trzeci Konstruktor Określa przeniesienie kolejka współbieżna `_OtherQ`.
+Trzeci konstruktor określa przechodzenie współbieżnej kolejki `_OtherQ`.
 
-Czwarty Konstruktor określa wartości dostarczone przez zakres iteratora [ `_Begin`, `_End`).
+Czwarty Konstruktor Określa wartości dostarczone przez zakres iteratora [`_Begin`, `_End`).
 
 ##  <a name="dtor"></a> ~concurrent_queue
 
-Niszczy kolejka współbieżna.
+Niszczy współbieżną kolejkę.
 
 ```
 ~concurrent_queue();
 ```
 
-##  <a name="empty"></a> pusty
+##  <a name="empty"></a>ciągiem
 
-Sprawdza, czy kolejka współbieżna jest pusty w tej chwili ta metoda jest wywoływana. Ta metoda jest bezpieczna pod kątem współbieżności.
+Testuje, czy kolejka współbieżna jest pusta w chwili, gdy ta metoda jest wywoływana. Ta metoda jest bezpieczna pod kątem współbieżności.
 
 ```
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-**wartość true,** Jeśli kolejka współbieżna był pusty w tej chwili analizujemy, **false** inaczej.
+**prawda** , jeśli kolejka współbieżna była pusta w momencie wyszukanej, w przeciwnym razie **zwraca wartość false** .
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy ta metoda jest bezpieczna pod kątem współbieżności w odniesieniu do wywołania metody `push`, `try_pop`, i `empty`, wartość zwracana może być niepoprawny według czasu sprawdzana jest przez wywołującego wątku.
+Chociaż ta metoda jest bezpieczna pod kątem współbieżności w odniesieniu do wywołań metod `push`, `try_pop`i `empty`, zwracana wartość może być niepoprawna przez czas, który jest sprawdzany przez wątek wywołujący.
 
-##  <a name="get_allocator"></a> get_allocator
+##  <a name="get_allocator"></a>get_allocator
 
-Zwraca kopię obiektu programu przydzielania użytego do stworzenia kolejka współbieżna. Ta metoda jest bezpieczna pod kątem współbieżności.
+Zwraca kopię alokatora używaną do konstruowania kolejki współbieżnej. Ta metoda jest bezpieczna pod kątem współbieżności.
 
 ```
 allocator_type get_allocator() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Kopia alokator używany do budowy kolejka współbieżna.
+Kopia alokatora użyta do skonstruowania kolejki współbieżnej.
 
-##  <a name="push"></a> wypychania
+##  <a name="push"></a>wydajności
 
-Element na końcu tail kolejka współbieżna umieszczeniu. Ta metoda jest bezpieczna pod kątem współbieżności.
+Enqueues element na końcu końca kolejki współbieżnej. Ta metoda jest bezpieczna pod kątem współbieżności.
 
 ```
 void push(const T& _Src);
@@ -198,15 +198,15 @@ void push(T&& _Src);
 ### <a name="parameters"></a>Parametry
 
 *_Src*<br/>
-Element które mają zostać dodane do kolejki.
+Element, który ma zostać dodany do kolejki.
 
 ### <a name="remarks"></a>Uwagi
 
-`push` jest bezpieczna pod względem współbieżności w odniesieniu do wywołania metody `push`, `try_pop`, i `empty`.
+`push` jest bezpieczny dla współbieżności w odniesieniu do wywołań metod `push`, `try_pop`i `empty`.
 
-##  <a name="try_pop"></a> try_pop —
+##  <a name="try_pop"></a>try_pop
 
-Dequeues elementu z kolejki, jeśli jest dostępny. Ta metoda jest bezpieczna pod kątem współbieżności.
+Usuwa element z kolejki, jeśli jest dostępny. Ta metoda jest bezpieczna pod kątem współbieżności.
 
 ```
 bool try_pop(T& _Dest);
@@ -215,21 +215,21 @@ bool try_pop(T& _Dest);
 ### <a name="parameters"></a>Parametry
 
 *_Dest*<br/>
-Odwołanie do lokalizację do zapisania elementu dequeued.
+Odwołanie do lokalizacji do przechowywania podkolejki elementu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-**wartość true,** Jeśli element został pomyślnie dequeued **false** inaczej.
+**ma wartość true** , jeśli element został pomyślnie usunięty z kolejki, w przeciwnym razie **zwraca wartość false** .
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli element został pomyślnie dequeued parametru `_Dest` otrzymuje wartość dequeued oryginalnej wartości, które są przechowywane w kolejce jest niszczony, a funkcja zwraca **true**. Jeśli nie było żadnych elementów do usuwania z kolejki, ta funkcja zwraca `false` bez blokowania i zawartość `_Dest` parametru są niezdefiniowane.
+Jeśli element został pomyślnie usunięty z kolejki, parametr `_Dest` otrzymuje wartość unqueued, oryginalna wartość przechowywana w kolejce zostanie zniszczona, a funkcja zwraca **wartość true**. Jeśli nie ma żadnego elementu do wygenerowania z kolejki, ta funkcja zwraca `false` bez blokowania, a zawartość parametru `_Dest` jest niezdefiniowana.
 
-`try_pop` jest bezpieczna pod względem współbieżności w odniesieniu do wywołania metody `push`, `try_pop`, i `empty`.
+`try_pop` jest bezpieczny dla współbieżności w odniesieniu do wywołań metod `push`, `try_pop`i `empty`.
 
 ##  <a name="unsafe_begin"></a> unsafe_begin
 
-Zwraca iterator typu `iterator` lub `const_iterator` na początku kolejka współbieżna. Ta metoda nie jest bezpieczna pod kątem współbieżności.
+Zwraca iterator typu `iterator` lub `const_iterator` do początku kolejki współbieżnej. Ta metoda nie jest bezpieczna pod kątem współbieżności.
 
 ```
 iterator unsafe_begin();
@@ -237,17 +237,17 @@ iterator unsafe_begin();
 const_iterator unsafe_begin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Iterator typu `iterator` lub `const_iterator` na początku tego obiektu kolejka współbieżna.
+Iterator typu `iterator` lub `const_iterator` do początku współbieżnego obiektu kolejki.
 
 ### <a name="remarks"></a>Uwagi
 
-Iteratory for `concurrent_queue` klasy są przeznaczona głównie do debugowania, jak powolne i iteracji nie jest bezpieczna pod kątem współbieżności w odniesieniu do innych operacji kolejki.
+Iteratory dla klasy `concurrent_queue` są przeznaczone głównie do debugowania, ponieważ są wolne, a iteracja nie jest bezpieczna pod względem współbieżności w odniesieniu do innych operacji w kolejce.
 
-##  <a name="unsafe_end"></a> unsafe_end —
+##  <a name="unsafe_end"></a>unsafe_end
 
-Zwraca iterator typu `iterator` lub `const_iterator` na końcu kolejka współbieżna. Ta metoda nie jest bezpieczna pod kątem współbieżności.
+Zwraca iterator typu `iterator` lub `const_iterator` do końca kolejki współbieżnej. Ta metoda nie jest bezpieczna pod kątem współbieżności.
 
 ```
 iterator unsafe_end();
@@ -255,15 +255,15 @@ iterator unsafe_end();
 const_iterator unsafe_end() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Iterator typu `iterator` lub `const_iterator` na końcu kolejka współbieżna.
+Iterator typu `iterator` lub `const_iterator` do końca kolejki współbieżnej.
 
 ### <a name="remarks"></a>Uwagi
 
-Iteratory for `concurrent_queue` klasy są przeznaczona głównie do debugowania, jak powolne i iteracji nie jest bezpieczna pod kątem współbieżności w odniesieniu do innych operacji kolejki.
+Iteratory dla klasy `concurrent_queue` są przeznaczone głównie do debugowania, ponieważ są wolne, a iteracja nie jest bezpieczna pod względem współbieżności w odniesieniu do innych operacji w kolejce.
 
-##  <a name="unsafe_size"></a> unsafe_size —
+##  <a name="unsafe_size"></a>unsafe_size
 
 Zwraca liczbę elementów w kolejce. Ta metoda nie jest bezpieczna pod kątem współbieżności.
 
@@ -271,13 +271,13 @@ Zwraca liczbę elementów w kolejce. Ta metoda nie jest bezpieczna pod kątem ws
 size_type unsafe_size() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Rozmiar kolejki współbieżnych.
+Rozmiar kolejki współbieżnej.
 
 ### <a name="remarks"></a>Uwagi
 
-`unsafe_size` nie jest bezpieczna pod kątem współbieżności i może wygenerować niepoprawne wyniki, jeśli wywołania będą równocześnie z wywołaniami metod `push`, `try_pop`, i `empty`.
+`unsafe_size` nie jest bezpieczna pod kątem współbieżności i może generować nieprawidłowe wyniki, jeśli są wywoływane współbieżnie przy użyciu wywołań metod `push`, `try_pop`i `empty`.
 
 ## <a name="see-also"></a>Zobacz także
 
