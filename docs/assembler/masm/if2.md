@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IF2 directive
 - IF2 directive
 ms.assetid: a0f75564-b51b-4e39-ad3b-f7421e7ecad6
-ms.openlocfilehash: f1b5126d9294c229d773acd29af463164bb46536
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 60f8b0dcedb61ac06de929aff300845e342d7cfc
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397449"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317321"
 ---
 # <a name="if1-and-if2"></a>IF1 i IF2
 
@@ -29,7 +29,7 @@ Blok **IF2** jest obliczany na każdym przebiegu zestawu, jeśli **Opcja: SETIF2
 
 ## <a name="remarks"></a>Uwagi
 
-Aby uzyskać pełną składnię [, zobacz.](../../assembler/masm/if-masm.md)
+Aby uzyskać pełną składnię [, zobacz.](if-masm.md)
 
 W przeciwieństwie do wersji 5,1, MASM 6,1 i nowszych większość pracy z pierwszego przebiegu, a następnie wykonuje tyle kolejnych przebiegów w razie potrzeby. Z kolei MASM 5,1 zawsze składa się z dwóch przebiegów źródłowych. W związku z tym może zajść potrzeba zmiany lub usunięcia niektórych konstrukcji zależnych od przebiegu w ramach MASM 6,1 i nowszych.
 
@@ -45,4 +45,5 @@ MASM 6,1 i nowsze dojście pierwszego przebiegu w inny sposób. Traktuje **. Dyr
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja dyrektyw](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)\
+[MASM BNF, gramatyka](masm-bnf-grammar.md)

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - .BREAK directive
 ms.assetid: 4f55dfce-ff41-4a68-9423-b0077dfc9206
-ms.openlocfilehash: e4692e38cbbdda4ad09bdfa248c9bc386c27dd3d
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 3096aaf827eecb4e297e5a1d04f5e982294053de
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398594"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314136"
 ---
 # <a name="break-32-bit-masm"></a>. Przerwij (32-bitowy MASM)
 
-Generuje kod, aby zakończyć [. WHILE](../../assembler/masm/dot-while.md) lub [. Powtórz](../../assembler/masm/dot-repeat.md) blok, jeśli *warunek* ma wartość true. (tylko 32-bitowy MASM).
+Generuje kod, aby zakończyć [. WHILE](dot-while.md) lub [. Powtórz](dot-repeat.md) blok, jeśli *warunek* ma wartość true. (tylko 32-bitowy MASM).
 
 ## <a name="syntax"></a>Składnia
 
@@ -23,4 +23,5 @@ Generuje kod, aby zakończyć [. WHILE](../../assembler/masm/dot-while.md) lub [
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)\
+[MASM BNF, gramatyka](masm-bnf-grammar.md)

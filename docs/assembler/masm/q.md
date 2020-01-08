@@ -1,17 +1,17 @@
 ---
 title: '? (MASM)'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '?'
 helpviewer_keywords:
 - '? symbol, macro assembler character'
 ms.assetid: 0bea8cb1-9d69-4833-a62c-9e4d062cd551
-ms.openlocfilehash: 6206a62bd5569f287066bbb99bbf1d3938d8688b
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 4fbb0ff6f86ee6db2b5d1c87b18fefffe6c2127c
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74394654"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318595"
 ---
 # <a name=""></a>?
 
@@ -23,4 +23,5 @@ W deklaracjach danych, wartość, która jest przydzielana przez asembler, ale n
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do symboli](symbols-reference.md)
+[Odwołania do symboli](symbols-reference.md)\
+[MASM BNF, gramatyka](masm-bnf-grammar.md)

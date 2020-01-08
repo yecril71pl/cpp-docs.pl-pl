@@ -1,6 +1,6 @@
 ---
 title: Informacje w wierszu polecenia programu ML i ML64
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - ML
 helpviewer_keywords:
@@ -54,18 +54,18 @@ helpviewer_keywords:
 - command line, reference [ML]
 - /Ta MASM compiler option
 ms.assetid: 712623c6-f77e-47ea-a945-089e57c50b40
-ms.openlocfilehash: 470cad1be6fe314fde89ee144a8935664ead5953
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 77385317ab7f90a646b7f552e471d0f434e72bfb
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397197"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317165"
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>Informacje w wierszu polecenia programu ML i ML64
 
 Tworzy i łączy jeden lub więcej plików źródłowych języka asemblera. W opcjach wiersza polecenia jest rozróżniana wielkość liter.
 
-Aby uzyskać więcej informacji na temat ml64. exe, zobacz [MASM for x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+Aby uzyskać więcej informacji na temat ml64. exe, zobacz [MASM for x64 (ml64. exe)](masm-for-x64-ml64-exe.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -80,13 +80,13 @@ Opcje wymienione w poniższej tabeli.
 
 |Opcja|Akcja|
 |------------|------------|
-|**/AT**|Włącza obsługę modelu z niewielką ilością pamięci. Włącza komunikaty o błędach dla konstrukcji kodu, które naruszają wymagania dotyczące plików w formacie. com. Należy zauważyć, że nie jest to odpowiednik [. ](../../assembler/masm/dot-model.md) **Niewielka** dyrektywa modelu.<br /><br /> Niedostępne w ml64. exe.|
+|**/AT**|Włącza obsługę modelu z niewielką ilością pamięci. Włącza komunikaty o błędach dla konstrukcji kodu, które naruszają wymagania dotyczące plików w formacie. com. Należy zauważyć, że nie jest to odpowiednik [. ](dot-model.md) **Niewielka** dyrektywa modelu.<br /><br /> Niedostępne w ml64. exe.|
 |*Nazwa pliku* /BL|Wybiera alternatywny konsolidator.|
 |**/c**|Tylko składowe. Nie łączy.|
-|**/COFF**|Generuje typ modułu obiektów Common File Format (COFF). Zwykle wymagane do tworzenia języka zestawu Win32.<br /><br /> Niedostępne w ml64. exe.|
+|**/coff**|Generuje typ modułu obiektów Common File Format (COFF). Zwykle wymagane do tworzenia języka zestawu Win32.<br /><br /> Niedostępne w ml64. exe.|
 |**/CP**|Zachowuje wielkość liter wszystkich identyfikatorów użytkowników.|
 |**/Cu**|Mapuje wszystkie identyfikatory na wielkie litery (domyślnie).<br /><br /> Niedostępne w ml64. exe.|
-|**/CX**|Zachowuje wielkość liter w publicznych i zewnętrznych symbolach.|
+|**/Cx**|Zachowuje wielkość liter w publicznych i zewnętrznych symbolach.|
 |**/D** *symbol*⟦ =*Value*⟧|Definiuje makro tekstowe o podaną nazwę. Jeśli brakuje *wartości* , jest ona pusta. Wiele tokenów rozdzielonych spacjami musi być ujęte w cudzysłów.|
 |**/EP**|Generuje listę wstępnie przetworzonych źródeł (wysyłanych do STDOUT). Zobacz **/SF**.|
 |**/errorreport** [ **Brak** &#124; **monitu o potwierdzenie** &#124; **kolejki** &#124; **]**|Jeśli program ml. exe lub ml64. exe kończy się niepowodzeniem w czasie wykonywania, można użyć **/errorreport** do wysłania informacji o tych błędach wewnętrznych do firmy Microsoft.<br /><br /> Aby uzyskać więcej informacji na temat **/errorreport**, zobacz [/errorreport (zgłaszaj wewnętrzne błędy kompilatora)](../../build/reference/errorreport-report-internal-compiler-errors.md).|
@@ -98,22 +98,22 @@ Opcje wymienione w poniższej tabeli.
 |**/FPi**|Generuje rozwiązanie emulatora dla operacji arytmetycznych zmiennoprzecinkowych (tylko w języku mieszanym).<br /><br /> Niedostępne w ml64. exe.|
 |**/Fr**⟦*filename*⟧|Generuje plik źródłowy przeglądarki. sbr.|
 |**/Fr**⟦*filename*⟧|Generuje rozszerzoną postać pliku źródłowego Browser. sbr.|
-|**/GC**|Określa użycie funkcji w stylu języka Pascala Pascal lub konwencji nazewnictwa. Analogicznie jak **Język opcji: Pascal**.<br /><br /> Niedostępne w ml64. exe.|
-|**/GD**|Określa użycie funkcji w stylu języka C i konwencji nazewnictwa. Analogicznie jak **Język opcji: C**.<br /><br /> Niedostępne w ml64. exe.|
+|**/Gc**|Określa użycie funkcji w stylu języka Pascala Pascal lub konwencji nazewnictwa. Analogicznie jak **Język opcji: Pascal**.<br /><br /> Niedostępne w ml64. exe.|
+|**/Gd**|Określa użycie funkcji w stylu języka C i konwencji nazewnictwa. Analogicznie jak **Język opcji: C**.<br /><br /> Niedostępne w ml64. exe.|
 |**/GZ**|Określa użycie funkcji __stdcall wywoływania i konwencji nazewnictwa.  Analogicznie jak **Język opcji: STCALL**.<br /><br /> Niedostępne w ml64. exe.|
 |*Numer* /h|Ogranicza nazwy zewnętrzne do liczby znaków znaczących. Wartość domyślna to 31 znaków.<br /><br /> Niedostępne w ml64. exe.|
-|**/Help**|Wywołuje QuickHelp w celu uzyskania pomocy dotyczącej ML.|
+|**/help**|Wywołuje QuickHelp w celu uzyskania pomocy dotyczącej ML.|
 |**/I** *Nazwa ścieżki*|Ustawia ścieżkę dla pliku dołączanego. Dozwolone są **maksymalnie 10 opcji** .|
 |**/nologo**|Pomija komunikaty dla pomyślnego zestawu.|
 |**/omf**|Generuje typ modułu obiektu w formacie pliku modułu obiektów (OMF).  **/OMF** oznacza **/c**; Program ML. exe nie obsługuje łączenia obiektów OMF.<br /><br /> Niedostępne w ml64. exe.|
 |**/Sa**|Włącza listę wszystkich dostępnych informacji.|
-|**/SAFESEH**|Oznacza obiekt jako zawierający brak obsługi wyjątków lub zawierający programy obsługi wyjątków, które są zadeklarowane z [. SAFESEH](../../assembler/masm/dot-safeseh.md).<br /><br /> Niedostępne w ml64. exe.|
+|**/SAFESEH**|Oznacza obiekt jako zawierający brak obsługi wyjątków lub zawierający programy obsługi wyjątków, które są zadeklarowane z [. SAFESEH](dot-safeseh.md).<br /><br /> Niedostępne w ml64. exe.|
 |**/Sf**|Dodaje listę pierwszego przebiegu, aby wyświetlić listę plików.|
-|*Szerokość* /SL|Ustawia szerokość linii listy źródłowej w znakach na wiersz. Zakresem jest 60 do 255 lub 0. Wartość domyślna to 0. Taka sama jak szerokość [strony](../../assembler/masm/page.md) .|
+|*Szerokość* /SL|Ustawia szerokość linii listy źródłowej w znakach na wiersz. Zakresem jest 60 do 255 lub 0. Wartość domyślna to 0. Taka sama jak szerokość [strony](page.md) .|
 |**/Sn**|Wyłącza tabelę symboli podczas tworzenia listy.|
-|*Długość* /Sp|Ustawia długość strony listy źródłowej w wierszach na stronę. Zakresem jest 10 do 255 lub 0. Wartość domyślna to 0. Taka sama jak długość [strony](../../assembler/masm/page.md) .|
-|**/SS** *tekst*|Określa tekst dla listy źródłowej. Taki sam jak tekst [podtytułu](../../assembler/masm/subtitle.md) .|
-|*Tekst* /St|Określa tytuł dla listy źródłowej. Taki sam jak tekst [tytułu](../../assembler/masm/title.md) .|
+|*Długość* /Sp|Ustawia długość strony listy źródłowej w wierszach na stronę. Zakresem jest 10 do 255 lub 0. Wartość domyślna to 0. Taka sama jak długość [strony](page.md) .|
+|**/SS** *tekst*|Określa tekst dla listy źródłowej. Taki sam jak tekst [podtytułu](subtitle.md) .|
+|*Tekst* /St|Określa tytuł dla listy źródłowej. Taki sam jak tekst [tytułu](title.md) .|
 |**/Sx**|Włącza na liście wartość false.|
 |*Nazwa pliku* /ta|Składa plik źródłowy, którego nazwa nie kończy się rozszerzeniem. asm.|
 |**/w**|Analogicznie jak **/W0/WX**.|
@@ -121,11 +121,11 @@ Opcje wymienione w poniższej tabeli.
 |**/WX**|Zwraca kod błędu, jeśli są generowane ostrzeżenia.|
 |**/X**|Ignoruj ścieżkę środowiska INCLUDE.|
 |**/Zd**|Generuje informacje o liczbie wierszy w pliku obiektu.|
-|**/ZF**|Sprawia, że wszystkie symbole są publiczne.|
+|**/Zf**|Sprawia, że wszystkie symbole są publiczne.|
 |**/Zi**|Generuje informacje CodeView w pliku obiektu.|
 |**/Zm**|Włącza opcję**M510** dla maksymalnej zgodności z MASM 5,1.<br /><br /> Niedostępne w ml64. exe.|
 |**/ZP**⟦*wyrównania*⟧|Struktury pakietów na określonej granicy bajtów. *Wyrównanie* może mieć wartość 1, 2 lub 4.|
-|**/ZS**|Wykonuje tylko sprawdzanie składni.|
+|**/Zs**|Wykonuje tylko sprawdzanie składni.|
 |**/?**|Wyświetla podsumowanie składni wiersza polecenia ML.|
 
 *Nazwa pliku*\
@@ -138,7 +138,7 @@ Opcje łącza.  Aby uzyskać więcej informacji, zobacz [Opcje konsolidatora](..
 
 Niektóre opcje wiersza polecenia do ML i ML64 są zależne od położenia. Na przykład, ponieważ ML i ML64 mogą akceptować kilka **/c** opcji, wszystkie odpowiednie opcje **/fo** muszą zostać określone przed **/c**. Poniższy przykład wiersza polecenia ilustruje specyfikację pliku obiektu dla każdej specyfikacji pliku zestawu:
 
-**ml. exe/fo a1. obj/c a. asm/fo B1. obj/c b. asm**
+**ml.exe /Fo a1.obj /c a.asm /Fo b1.obj /c b.asm**
 
 ## <a name="environment-variables"></a>Zmienne środowiskowe
 
@@ -150,5 +150,5 @@ Niektóre opcje wiersza polecenia do ML i ML64 są zależne od położenia. Na p
 
 ## <a name="see-also"></a>Zobacz także
 
-[Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)\
-[Microsoft Macro Assembler — dokumentacja](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[Komunikaty o błędach ML](ml-error-messages.md)\
+[Microsoft Macro Assembler — dokumentacja](microsoft-macro-assembler-reference.md)

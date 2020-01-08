@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .ELSE directive
 ms.assetid: ebfec69d-7107-47d1-9cb3-87c99cc8dff7
-ms.openlocfilehash: f048901a3958066880665b76d865f926a26ffb24
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 08d3d3d6dbf423d25081cfd9c866bba717c50d29
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398496"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313837"
 ---
 # <a name="else-32-bit-masm"></a>. ELSE (32-bitowy MASM)
 
@@ -21,8 +21,9 @@ ms.locfileid: "74398496"
 
 ## <a name="remarks"></a>Uwagi
 
-(tylko 32-bitowy MASM). Zobacz [. Jeśli](../../assembler/masm/dot-if.md).
+(tylko 32-bitowy MASM). Zobacz [. Jeśli](dot-if.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)\
+[MASM BNF, gramatyka](masm-bnf-grammar.md)

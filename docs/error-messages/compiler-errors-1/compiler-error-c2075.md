@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2075
 ms.assetid: 8b1865d2-540b-4117-b982-e7a58a0b6cf7
-ms.openlocfilehash: d53ef6f34b061a04f2c136b4e349d4951529b94b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 630c5cf2e90ae3373ef28b1388f06cd3fc069425
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303180"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302006"
 ---
 # <a name="compiler-error-c2075"></a>Błąd kompilatora C2075
 
-'Identyfikator': inicjowanie tablicy wymaga nawiasów klamrowych
+"Identyfikator": Inicjowanie tablicy wymaga nawiasów klamrowych
 
-Nie było żadnych nawiasów klamrowych otaczających inicjator określonej tablicy.
+Brak nawiasów klamrowych wokół określonego inicjatora tablicy.
 
-Poniższy przykład spowoduje wygenerowanie C2075:
+Poniższy przykład generuje C2075:
 
-```
+```c
 // C2075.c
 int main() {
    int i[] = 1, 2, 3 };   // C2075
@@ -30,7 +30,7 @@ int main() {
 
 Możliwe rozwiązanie:
 
-```
+```c
 // C2075b.c
 int main() {
    int j[] = { 1, 2, 3 };

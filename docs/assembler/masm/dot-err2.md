@@ -1,21 +1,21 @@
 ---
 title: .ERR2
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .ERR2
 helpviewer_keywords:
 - .ERR2 directive
 ms.assetid: ea8e0f14-cbdd-4576-9268-846527c27870
-ms.openlocfilehash: 623a13ee8f5b2333f6e4b5278f1fa246110d596d
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 376af80bf3886702b37383a08beffed4c221ec8a
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398422"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313785"
 ---
 # <a name="err2"></a>.ERR2
 
-[. Blok ERR](../../assembler/masm/dot-err.md) obliczany na każdym przebiegu zestawu, jeśli **Opcja: SETIF2** ma **wartość true.**
+[. Blok ERR](dot-err.md) obliczany na każdym przebiegu zestawu, jeśli **Opcja: SETIF2** ma **wartość true.**
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,4 +27,5 @@ Aby uzyskać więcej informacji na temat zachowania 2-Pass w MASM 5,1 vs MASM 6,
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)\
+[MASM BNF, gramatyka](masm-bnf-grammar.md)

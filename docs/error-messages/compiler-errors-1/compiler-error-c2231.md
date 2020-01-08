@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2231
 ms.assetid: 677c5c66-d30f-4c3b-bbb9-760858d56477
-ms.openlocfilehash: 0d6519bd12cdb5ee5a86fa4a6915b51b0dc59fc5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50230b3a9b609d281cddf996783287c270f844d5
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383311"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301824"
 ---
 # <a name="compiler-error-c2231"></a>Błąd kompilatora C2231
 
-".": lewy argument operacji wskazuje "klucz klasy", użyj opcji "->"
+".": Lewy argument operacji wskazuje na "Class-Key", użyj "->"
 
-Argument operacji po lewej stronie operacji wyboru elementów członkowskich (.) jest wskaźnikiem typu zamiast klasy, struktury lub Unii.
+Operand po lewej stronie operacji wyboru elementu członkowskiego (.) jest wskaźnikiem, a nie klasą, strukturą lub Unią.
 
-Poniższy przykład spowoduje wygenerowanie C2231:
+Poniższy przykład generuje C2231:
 
-```
+```c
 // C2231.c
 struct S {
    int member;

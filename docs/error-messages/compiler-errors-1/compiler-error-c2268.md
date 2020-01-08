@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2268
 ms.assetid: 0ed055c9-3c6f-4df2-a5b6-85cf0e01a249
-ms.openlocfilehash: cfdb22be92e0d80cddbaca74b12b7af60b2e302d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11e0c2c81e9bcd2249321e83a506aeaa832c2ee8
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152608"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301798"
 ---
 # <a name="compiler-error-c2268"></a>Błąd kompilatora C2268
 
-'Funkcja' jest pomocnika biblioteki kompilatora wstępnie zdefiniowane. Biblioteka pomocników nie jest obsługiwana z opcją /GL; Skompiluj plik obiektu 'Plik' bez/GL.
+"Function" to pomocnik biblioteki wstępnie zdefiniowanej przez kompilator. Pomocniki biblioteki nie są obsługiwane w programie/GL; Kompiluj plik obiektu "File" bez/GL.
 
-Funkcja zdefiniowana w kodzie źródłowym ma taką samą nazwę jak funkcji wewnętrznych kompilatora. Skompiluj moduł zawierający funkcję bez [/GL](../../build/reference/gl-whole-program-optimization.md).
+Funkcja zdefiniowana w kodzie źródłowym ma taką samą nazwę jak wewnętrzna funkcja kompilatora. Kompiluj moduł zawierający funkcję bez [/GL](../../build/reference/gl-whole-program-optimization.md).
 
-Poniższy przykład spowoduje wygenerowanie C2268:
+Poniższy przykład generuje C2268:
 
-```
+```c
 // C2268.c
 // compile with: /c
 // processor: x86
@@ -39,9 +39,9 @@ void* mainCRTStartup(void* p) {
 }
 ```
 
-następnie wyszukaj:
+a następnie:
 
-```
+```c
 // C2268b.c
 // compile with: C2268.c /EHsc /GL /Ob0 /O2 /Fa /GS- /link /nodefaultlib
 // processor: x86

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2142
 ms.assetid: d0dbe10e-0952-49a4-8b33-e82fb7558b19
-ms.openlocfilehash: eda60204e07fd025a8c62b19de70e8204f9f80f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1345fbb44558db01b19eec04b64cf7aa036931a
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353589"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301928"
 ---
 # <a name="compiler-error-c2142"></a>Błąd kompilatora C2142
 
-deklaracje funkcji różnią się, parametry zmiennej określone tylko w jednej z nich
+Deklaracje funkcji różnią się, parametry zmiennej określone tylko w jednej z nich
 
-Jedna deklaracja funkcji zawiera zmiennej listy parametrów. Nie ma innej deklaracji. ANSI C ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) tylko.
+Jedna deklaracja funkcji zawiera listę parametrów zmiennych. Inna deklaracja nie jest. Tylko ANSI C ([/za](../../build/reference/za-ze-disable-language-extensions.md)).
 
-Poniższy przykład spowoduje wygenerowanie C2142:
+Poniższy przykład generuje C2142:
 
-```
+```c
 // C2142.c
 // compile with: /Za /c
 void func();

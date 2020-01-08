@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2085
 ms.assetid: 0a86785c-8e6f-481b-8c7b-412220c1950d
-ms.openlocfilehash: a65e3c0ea622950b99b9ba83fc168b4718d13e46
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 7dbf7266a6330a1fdb46d7f2df90e7684f026d9a
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345706"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301967"
 ---
 # <a name="compiler-error-c2085"></a>Błąd kompilatora C2085
 
-'Identyfikator': nie znajduje się na liście parametrów formalnych
+"Identyfikator": nie należy do formalnej listy parametrów
 
-Identyfikator został zadeklarowany w definicji funkcji, ale nie na liście parametrów formalnych. (Tylko ANSI C)
+Identyfikator został zadeklarowany w definicji funkcji, ale nie znajduje się na liście parametrów formalnych. (Tylko ANSI C)
 
-Poniższy przykład spowoduje wygenerowanie C2085:
+Poniższy przykład generuje C2085:
 
-```
+```c
 // C2085.c
 void func1( void )
 int main( void ) {}   // C2085
@@ -29,10 +29,10 @@ int main( void ) {}   // C2085
 
 Możliwe rozwiązanie:
 
-```
+```c
 // C2085b.c
 void func1( void );
 int main( void ) {}
 ```
 
-Z brakującymi średnik `func1()` wygląda jak definicja funkcji nie prototyp, więc `main` jest zdefiniowana w `func1()`, generowanie błędu C2085 dla identyfikatora `main`.
+Gdy brakuje średnika, `func1()` wygląda jak definicja funkcji, a nie prototyp, więc `main` jest zdefiniowany w `func1()`, generując C2085 błędów dla `main`identyfikatora.

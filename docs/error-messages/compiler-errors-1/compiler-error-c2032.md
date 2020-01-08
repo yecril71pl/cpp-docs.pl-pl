@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2032
 ms.assetid: 625d7c83-70b6-42c2-a558-81fbc0026324
-ms.openlocfilehash: 5743aba880f23d7706940936fc4a3a1973a84ca1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d20bc61df2d0bab9115768b3bc0589f11a9bcdb9
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400516"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302097"
 ---
 # <a name="compiler-error-c2032"></a>Błąd kompilatora C2032
 
-'Identyfikator': funkcja nie może być składową "structorunion" struct/union
+"Identyfikator": funkcja nie może być elementem członkowskim elementu struct/Union "structorunion"
 
-Struktura lub Unia miała funkcją składową, która jest dozwolona w języku C++, ale nie w C. Aby naprawić błąd, skompiluj jako program w języku C++ lub Usuń tę funkcję elementu członkowskiego.
+Struktura lub Unia ma funkcję członkowską, która jest dozwolona w C++ , ale nie w C. Aby rozwiązać ten problem, skompiluj jako C++ program lub Usuń funkcję członkowską.
 
-Poniższy przykład spowoduje wygenerowanie C2032:
+Poniższy przykład generuje C2032:
 
-```
+```c
 // C2032.c
 struct z {
    int i;
@@ -31,7 +31,7 @@ struct z {
 
 Możliwe rozwiązanie:
 
-```
+```c
 // C2032b.c
 // compile with: /c
 struct z {

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .DOSSEG directive
 ms.assetid: 175ad470-0a2b-4e2b-b078-65e224fec040
-ms.openlocfilehash: 17edea122afc03a8c3a2fdc86ee6c06c2ccf3c85
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: e27b0ae185542c11ee29119575d5c8225501f71e
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398486"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313850"
 ---
 # <a name="dosseg-32-bit-masm"></a>. DOSSEG — (32-bitowy MASM)
 
@@ -23,8 +23,9 @@ Porządkuje segmenty zgodnie z Konwencją segmentu MS-DOS: najpierw kod, następ
 
 ## <a name="remarks"></a>Uwagi
 
-Segmenty w DGROUP są zgodne z następującą kolejnością: segmenty nie są w BSS lub STOSie, a następnie segmenty BSS i wreszcie segmenty stosu. Używane przede wszystkim do zapewnienia obsługi CodeView w programach autonomicznych MASM. Analogicznie jak [dosseg —](../../assembler/masm/dosseg.md).
+Segmenty w DGROUP są zgodne z następującą kolejnością: segmenty nie są w BSS lub STOSie, a następnie segmenty BSS i wreszcie segmenty stosu. Używane przede wszystkim do zapewnienia obsługi CodeView w programach autonomicznych MASM. Analogicznie jak [dosseg —](dosseg.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)\
+[MASM BNF, gramatyka](masm-bnf-grammar.md)
