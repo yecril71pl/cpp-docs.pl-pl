@@ -1,17 +1,17 @@
 ---
 title: ENDP
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - ENDP
 helpviewer_keywords:
 - ENDP directive
 ms.assetid: 31fc8040-8c49-43e2-8885-a20ba3b69551
-ms.openlocfilehash: a904b26e8bc1b7c4d3b158089cae208d0f83cfbc
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: c3c5ef6f8853569272706f76f61104dba477c9a3
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397642"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317360"
 ---
 # <a name="endp"></a>ENDP
 
@@ -23,8 +23,9 @@ Oznacza koniec *nazwy* procedury, która została wcześniej rozpoczęta z **pro
 
 ## <a name="remarks"></a>Uwagi
 
-Zobacz [proces](../../assembler/masm/proc.md).
+Zobacz [proces](proc.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja dyrektyw](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)\
+[MASM BNF, gramatyka](masm-bnf-grammar.md)

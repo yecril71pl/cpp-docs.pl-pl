@@ -1,13 +1,13 @@
 ---
 title: Podręczniki programowania od producenta procesora
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 ms.assetid: 61844163-de2f-419a-808e-04de39dfdddf
-ms.openlocfilehash: bd1cba8378a8b173d36e9cc8975b171cd58d388c
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 3e1f1d32c50d86ac1df271add10936f572a59c20
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74394834"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318660"
 ---
 # <a name="processor-manufacturer-programming-manuals"></a>Podręczniki programowania od producenta procesora
 
@@ -27,4 +27,5 @@ Program Visual Studio ani asembler programu Microsoft Macro nie obsługują wszy
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja asemblera programu Microsoft Macro](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[Odwołanie do asemblera programu Microsoft Macro](microsoft-macro-assembler-reference.md)\
+[MASM BNF, gramatyka](masm-bnf-grammar.md)

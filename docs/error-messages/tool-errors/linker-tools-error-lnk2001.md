@@ -1,105 +1,112 @@
 ---
 title: Błąd narzędzi konsolidatora LNK2001
-ms.date: 05/17/2017
+ms.date: 12/19/2019
 f1_keywords:
 - LNK2001
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-ms.openlocfilehash: 916c37e3283f40ff5ded865a573ff45839de6e2a
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: b6d1e53d8f057ddc93e2dfde65cb951d247dfcc0
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449617"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302136"
 ---
 # <a name="linker-tools-error-lnk2001"></a>Błąd narzędzi konsolidatora LNK2001
 
-Nierozpoznany symbol zewnętrzny "*symbol*"
+> nierozpoznany symbol zewnętrzny "*symbol*"
 
-Skompilowany kod sprawia, że odwołanie lub wywołanie *symbol*, ale ta symbol nie jest zdefiniowany w żadnym z biblioteki lub określono konsolidatora plików obiektów.
+Skompilowany kod wykonuje odwołanie lub wywołanie do *symbolu*. Symbol nie jest zdefiniowany w żadnych bibliotekach ani plikach obiektów przeszukanych przez konsolidator.
 
-Ten komunikat o błędzie następuje błąd krytyczny [LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md). Należy naprawić wszystkie LNK2001 i LNK2019 błędów, aby naprawić błąd LNK1120.
+Ten komunikat o błędzie następuje po błędzie krytycznym [LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md). Aby naprawić błąd LNK1120, najpierw Napraw wszystkie błędy LNK2001 i LNK2019.
 
-## <a name="possible-causes"></a>Możliwe przyczyny
-
-Istnieje wiele sposobów, aby uzyskać ten błąd, ale wszystkie z nich obejmują odwołania do funkcji lub zmienna, która nie konsolidator *rozwiązać*, lub znaleźć definicję. Kompilator może wskazywać, gdy nie jest symbolem *zadeklarowana*, ale nie Jeśli nie zostanie *zdefiniowane*, ponieważ definicja może znajdować się w innym plikiem źródłowym lub biblioteki. Jeśli symbol jest określone, ale nigdy nie jest zdefiniowany, konsolidator generuje błąd.
-
-### <a name="coding-issues"></a>Występujące problemy z kodem
-
-Ten błąd może być spowodowany przez przypadek niezgodnego kodu źródłowego lub definicji modułu (.def) pliku. Na przykład, jeśli nazwa zmiennej `var1` w języku C++ w jednym pliku źródłowego, a następnie spróbuj dostępu do niego jako `VAR1` w innym, ten błąd jest generowany. Aby rozwiązać ten problem, użyj spójnie Pisownia i z uwzględnieniem wielkości liter nazwy.
-
-Przyczyną tego błędu może być w projekcie, który używa [ze śródwierszowaniem funkcji](../../error-messages/tool-errors/function-inlining-problems.md) po zdefiniowaniu funkcji w pliku źródłowym, a nie w pliku nagłówkowym. Funkcje śródwierszowe nie są widoczne poza pliku źródłowego, który definiuje je. Aby rozwiązać ten problem, należy zdefiniować funkcje śródwierszowe w nagłówkach, gdzie są one zgłoszone.
-
-Przyczyną tego błędu może być wywołanie funkcji C z program w języku C++, bez korzystania z `extern "C"` deklaracji pod kątem funkcji C. Kompilator używa innego symbolu wewnętrzne konwencje nazewnictwa dla kodu C i C++, a jest to nazwa wewnętrznego symboli, konsolidator szuka podczas rozpoznawania symboli. Aby rozwiązać ten problem, należy użyć `extern "C"` otokę wszystkie deklaracje funkcji języka C, używany w kodzie języka C++, który powoduje, że kompilator języka C Konwencja nazewnictwa wewnętrznego na użytek tych symboli. Opcje kompilatora [/Tp](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) i [TP](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) powodować, że kompilator do kompilowania plików jako C++ lub C, odpowiednio, niezależnie od rozszerzenia nazwy pliku. Te opcje mogą powodować nazwy wewnętrznej funkcji, które różni się od oczekiwań.
-
-Ten błąd może być spowodowany przez próba odwoływać się do funkcji lub dane, które nie mają powiązania zewnętrzne. W języku C++, funkcje śródwierszowe a `const` dane mają wewnętrzne łączenie, chyba że wyraźnie określono jako `extern`. Aby rozwiązać ten problem, należy użyć jawnej `extern` deklaracje symboli określonych poza definiujące pliku źródłowego.
-
-Ten błąd może być spowodowany przez [Brak treść funkcji lub zmienna](../../error-messages/tool-errors/missing-function-body-or-variable.md) definicji. Ten błąd jest typowa, gdy deklarowania, ale nie Definiuj, zmiennych, funkcji lub klasy w kodzie. Kompilator musi jedynie prototyp funkcji lub `extern` deklaracja zmiennej, aby wygenerować plik obiektu bez błędów, ale konsolidator nie można rozpoznać wywołania funkcji lub odwołanie do zmiennej, ponieważ nie ma już miejsca kodu lub zmienna — funkcja zastrzeżone. Aby rozwiązać ten problem, upewnij się, że każdego odwołania funkcji i zmiennych jest w pełni zdefiniowana w pliku źródłowym lub biblioteki uwzględnione w linku.
-
-Ten błąd może być spowodowany przez wywołanie funkcji, korzystającą z typy zwracane i parametru lub konwencji wywoływania, które nie pasują do definicji funkcji. W plikach obiektowych C++ [nazwij dekorację](../../error-messages/tool-errors/name-decoration.md) dołącza do nazwy końcowego dekorowane — funkcja, która jest używana jako symbol do dopasowania, gdy wywołuje w celu konwencji wywoływania, zakres klasą lub przestrzenią nazw i typy zwracane i parametru funkcji Funkcja z innych plików obiektu są rozpoznawane. Aby rozwiązać ten problem, należy upewnić się czy deklaracji, definicji i wywołania funkcji wszystkich tymi samymi zakresami, typy i Konwencje wywoływania.
-
-Ten błąd może być spowodowany w przypadku kodu C++, gdy zawierają prototypu funkcji w definicji klasy, ale nie można [obejmują implementacji](../../error-messages/tool-errors/missing-function-body-or-variable.md) funkcji, a następnie wywołaj ją. Aby rozwiązać ten problem, należy podać definicję dla wszystkich o nazwie zadeklarowane elementy członkowskie klasy.
-
-Ten błąd może być spowodowany przez próba wywołania czystej funkcji wirtualnej z abstrakcyjną klasę bazową. Czysta funkcja wirtualna nie ma klasy podstawowej implementacji. Aby rozwiązać ten problem, upewnij się, że wszystkie funkcje wirtualne nazywane są implementowane.
-
-Ten błąd może być spowodowany przez próby użycia Zmienna zadeklarowana wewnątrz funkcji ([zmienną lokalną](../../error-messages/tool-errors/automatic-function-scope-variables.md)) poza zakresem tej funkcji. Aby rozwiązać ten problem, Usuń odwołanie do zmiennej, która nie znajduje się w zakresie lub przenieść zmienną do wyższych zakresu.
-
-Ten błąd może wystąpić, gdy tworzenie dystrybucyjnej wersji projektu ATL produkujących komunikat, że kod uruchamiający CRT jest wymagana. Aby rozwiązać ten problem, wykonaj jedną z następujących pozycji,
-
-- Usuń `_ATL_MIN_CRT` z listy preprocesora definiuje CRT uruchamiania kodu do uwzględnienia. Zobacz [strona właściwości ogólnych (projekt)](../../build/reference/general-property-page-project.md) Aby uzyskać więcej informacji.
-
-- Jeśli to możliwe Usuń wywołania funkcji CRT, które wymagają CRT uruchamiania kodu. Zamiast tego należy użyć ich odpowiedników Win32. Na przykład użyć `lstrcmp` zamiast `strcmp`. Znane funkcje, które wymagają CRT uruchamiania kodu przedstawiono niektóre ciągu i zmiennoprzecinkowy funkcje punktu.
-
-### <a name="compilation-and-link-issues"></a>Problemy związane z kompilacji i link
-
-Ten błąd może wystąpić, gdy w projekcie brakuje odwołania do biblioteki (. LIB) lub obiekt (. Plik OBJ). Aby rozwiązać ten problem, Dodaj odwołanie do obiektu pliku lub biblioteki wymaganej do projektu. Aby uzyskać więcej informacji, zobacz [pliki .lib — wejście konsolidatora](../../build/reference/dot-lib-files-as-linker-input.md).
-
-Ten błąd może wystąpić, jeśli używasz [/nodefaultlib](../../build/reference/nodefaultlib-ignore-libraries.md) lub [/Zl](../../build/reference/zl-omit-default-library-name.md) opcje. Po określeniu tych opcji, bibliotek, które zawierają kod wymagany nie są połączone z projektem, chyba że jawnie zostały uwzględnione. Aby rozwiązać ten problem, należy jawnie dołączyć wszystkie biblioteki używane w wierszu polecenia łącza. Jeśli widzisz wiele Brak CRT i standardowej biblioteki nazwy funkcji, korzystając z tych opcji, należy jawnie dołączyć plików CRT i standardowe biblioteki DLL lub biblioteki w linku.
-
-Jeśli kompilujesz przy użyciu **/CLR** opcji, może być brak odwołania do .cctor. Aby rozwiązać ten problem, zobacz [inicjowanie zestawów mieszanych](../../dotnet/initialization-of-mixed-assemblies.md) Aby uzyskać więcej informacji.
-
-Ten błąd może wystąpić, jeśli łączysz się do bibliotek tryb wersji podczas kompilowania wersji debugowania aplikacji. Podobnie jeśli używasz opcji **/mtd** lub **/mdd** lub zdefiniować `_DEBUG` i następnie łączyć się z bibliotekami wersji, możesz spodziewać się wielu potencjalnych nierozpoznane obiekty zewnętrzne, wśród innych problemów. Łączenie kompilacji tryb wydania z biblioteki debugowania również powoduje, że podobne problemy. Aby rozwiązać ten problem, upewnij się, użyj biblioteki debugowania w kompilacjach do debugowania i kompilacji detalicznej biblioteki w sieci sprzedaży detalicznej.
-
-Ten błąd może wystąpić, jeśli kod odwołuje się do określonego symbolu z jednej wersji biblioteki, ale Podaj inną wersję biblioteki do konsolidatora. Ogólnie rzecz biorąc nie można mieszać plików obiektu lub bibliotek, które są tworzone dla różnych wersji kompilatora. Biblioteki, które są dostarczane w nowej wersji mogą zawierać symbole, których nie można znaleźć w bibliotekach dołączone do poprzednich wersji i na odwrót. Aby rozwiązać ten problem, tworzy plików obiektów i bibliotek w tej samej wersji kompilatora przed łącząc je ze sobą.
-
-- Narzędzia &#124; opcje &#124; projektów &#124; katalogi VC ++ okno dialogowe, w obszarze Wybór plików biblioteki umożliwia zmianę kolejności przeszukiwania bibliotek. Folder łączący strony właściwości projektu w oknie dialogowym może również zawierać ścieżek, które mogą być nieaktualne.
-
-- Ten problem może występować, gdy nowy zestaw SDK jest zainstalowany (być może do innej lokalizacji), a kolejność wyszukiwania nie jest aktualizowana, aby wskazywał nową lokalizację. Zazwyczaj należy umieścić ścieżki do nowego zestawu SDK obejmują i lib katalogów przed domyślna lokalizacja Visual C++. Ponadto projektu zawierającego ścieżek osadzonych nadal mogą wskazywać na starej ścieżki, które są prawidłowe, ale jest zgodna z nowych funkcji dodanych przez nową wersję, który jest zainstalowany w innej lokalizacji.
-
-- Jeśli kompilujesz w wierszu polecenia i w związku z tym zostały utworzone własne zmienne środowiskowe, sprawdź, czy ścieżki do narzędzia, biblioteki i pliki nagłówkowe, przejdź do wersji spójne. Aby uzyskać więcej informacji, zobacz [Ustawianie ścieżki i zmiennych środowiskowych dla kompilacji wiersza polecenia](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)
-
-Obecnie nie istnieje standard dla [nazewnictwa C++](../../error-messages/tool-errors/name-decoration.md) między dostawcami kompilatora lub nawet między różnymi wersjami kompilatora. W związku z tym konsolidacji plików obiektu skompilowany za pomocą innych kompilatorów może nie generuje ten sam schemat nazewnictwa, powodując błąd LNK2001.
-
-[Mieszanie wbudowane i innych niż inline opcji kompilacji](../../error-messages/tool-errors/function-inlining-problems.md) różnych modułów mogą powodować LNK2001. Jeśli biblioteka języka C++ jest tworzony za pomocą funkcji wbudowanie włączona ( **/Ob1** lub **/ob2**), ale odpowiedni plik nagłówkowy opisujących funkcje wbudowanie wyłączone (nie `inline` — słowo kluczowe), ten błąd występuje. Aby rozwiązać ten problem, należy zdefiniować funkcje `inline` w pliku nagłówkowym, należy uwzględnić w innych plikach źródłowych.
-
-Jeśli używasz `#pragma inline_depth` kompilatora dyrektywy, upewnij się, że masz [wartości 2 lub nowszy zestaw](../../error-messages/tool-errors/function-inlining-problems.md)i upewnij się, możesz także użyć [/Ob1](../../build/reference/ob-inline-function-expansion.md) lub [/ob2](../../build/reference/ob-inline-function-expansion.md) — opcja kompilatora.
-
-Ten błąd może wystąpić, jeśli pominięto łącze opcja/noentry, tworząc DLL tylko dla zasobów. Aby rozwiązać ten problem, należy dodać opcję/noentry polecenia łącza.
-
-Ten błąd może wystąpić, jeśli używasz ustawienia/Entry lub nieprawidłowa/Subsystem w projekcie. Na przykład, jeśli napisanie aplikacji konsolowej, a następnie określ/Subsystem: Windows, nierozpoznane zewnętrznych zostanie wygenerowany błąd dla `WinMain`. Aby rozwiązać ten problem, upewnij się, że zgodne z opcjami typu projektu. Aby uzyskać więcej informacji na temat tych opcji i punkty wejścia, zobacz [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) i [/Entry](../../build/reference/entry-entry-point-symbol.md) opcje konsolidatora.
-
-### <a name="exported-symbol-issues"></a>Problemy z wyeksportowanego symbolu
-
-Ten błąd występuje, gdy Eksport wymienione w pliku .def nie zostanie znaleziony. Być może on nie istnieje, jest wpisany niepoprawnie lub korzysta z nazw ozdobionych języka C++. Plik .def nie przyjmuje nazwy dekorowane. Aby rozwiązać ten problem, usuń zbędne eksporty i użyj `extern "C"` deklaracje dla eksportowanego symboli.
+Istnieje wiele sposobów uzyskiwania błędów LNK2001. Wszystkie z nich obejmują *odwołanie* do funkcji lub zmiennej, których konsolidator nie może *rozpoznać*, lub znaleźć definicję dla. Kompilator może określić, kiedy kod nie *deklaruje* symbolu, ale nie *definiuje* go. Dzieje się tak, ponieważ definicja może znajdować się w innym pliku lub bibliotece źródłowej. Jeśli kod odwołuje się do symbolu, ale nigdy nie jest zdefiniowany, konsolidator generuje błąd.
 
 ## <a name="what-is-an-unresolved-external-symbol"></a>Co to jest nierozpoznany symbol zewnętrzny?
 
-A *symbol* jest nazwą funkcji lub zmienna globalna używane wewnętrznie pliku obiektu skompilowanego lub biblioteki. Symbol jest *zdefiniowane* w pliku obiektu której Magazyn jest przydzielany zmienną globalną lub funkcji, gdzie znajduje się skompilowany kod w treści funkcji. *Symbol zewnętrzny* jest symbolem to *odwołania*, oznacza to, że używane lub o nazwie w jeden obiekt pliku, ale zdefiniowane w innym pliku biblioteki lub obiektu. *Wyeksportowane symbol* to taki, który został udostępniony publicznie przez plik obiektu lub biblioteki, który go definiuje. Konsolidator musi *rozwiązać*, lub znaleźć pasujących definicji dla każdego symbol zewnętrzny przywoływane przez plik obiektu, gdy jest on połączony do aplikacji lub biblioteki DLL. Konsolidator generuje błąd, gdy nie można rozpoznać zewnętrzny symbol znajdując pasujące do wyeksportowanego symbolu w dowolnym z połączonych plików.
+*Symbol* to wewnętrzna nazwa dla funkcji lub zmiennej globalnej. Jest to forma nazwy używana lub zdefiniowana w skompilowanym pliku lub bibliotece obiektu. Zmienna globalna jest zdefiniowana w pliku obiektu, w którym jest przypisywany magazyn. Funkcja jest zdefiniowana w pliku obiektu, w którym jest umieszczany skompilowany kod dla treści funkcji. *Symbol zewnętrzny* jest przywoływany w jednym pliku obiektu, ale zdefiniowany w innej bibliotece lub pliku obiektu. *Wyeksportowany symbol* jest taki, który jest udostępniany publicznie przez plik lub bibliotekę obiektów, która go definiuje.
 
-## <a name="use-the-decorated-name-to-find-the-error"></a>Użyj nazwy dekorowane, aby znaleźć błąd
+Aby utworzyć aplikację lub bibliotekę DLL, każdy używany symbol musi mieć definicję. Konsolidator musi *rozwiązać*lub znaleźć definicję dopasowania dla, każdy symbol zewnętrzny, do którego odwołuje się każdy plik obiektu. Konsolidator generuje błąd, gdy nie może rozpoznać symbolu zewnętrznego. Oznacza to, że konsolidator nie może znaleźć pasującej definicji symbolu wyeksportowanego w żadnym z połączonych plików.
 
-Użyj kompilatora i konsolidatora C++ [nazwij Dekorację](../../error-messages/tool-errors/name-decoration.md), znane również jako *dekorowanie nazw*, aby zakodować dodatkowych informacji na temat typu zmiennej lub zwracany typ, typy parametrów, zakresu i wywoływania Konwencja funkcji w nazwę symbolu. To również nazwę uzupełnioną jest nazwa symbolu, konsolidator szuka Aby rozwiązać zewnętrzne symbole.
+## <a name="compilation-and-link-issues"></a>Kompilacja i łączenie problemów
 
-Ponieważ dodatkowych informacji staje się częścią nazwy symbolu, może spowodować błąd łącza, jeśli deklaracja funkcji lub zmienna nie jest dokładnie dopasowana definicji funkcji lub zmiennej. Można to zrobić, nawet jeśli ten sam plik nagłówkowy ma zarówno kod wywołujący, jak i kod definiujący, jeśli flagi kompilatora różnych są używane podczas kompilowania plików źródłowych. Na przykład możesz ten błąd może wystąpić, jeśli kod jest kompilowany do użycia `__vectorcall` konwencji wywoływania, ale łącze do biblioteki, który oczekuje, że klienci w celu wywołania go przy użyciu domyślnego `__cdecl` lub `__fastcall` konwencji wywoływania. W tym przypadku symbole nie są zgodne, ponieważ różnią się Konwencje wywoływania
+Ten błąd może wystąpić:
 
-Aby pomóc w znalezieniu przyczyny tego rodzaju błąd, komunikat o błędzie konsolidatora pokazuje zarówno "przyjaznej nazwy," Nazwa używana w kodzie źródłowym, a nazwę z atrybutami (w nawiasach) dla nierozpoznany symbol zewnętrzny. Nie musisz wiedzieć, jak przekształcać nazwę uzupełnioną, aby można było porównać je z innymi nazwy dekorowane. Można użyć narzędzia wiersza polecenia, które są dołączone przez kompilator, aby porównać nazwę oczekiwany symbol i nazwę rzeczywisty symbol:
+- Gdy projekt nie zawiera odwołania do biblioteki (. LIB) lub obiekt (. OBJ). Aby rozwiązać ten problem, Dodaj odwołanie do wymaganej biblioteki lub pliku obiektu do projektu. Aby uzyskać więcej informacji, zobacz [lib plików jako dane wejściowe konsolidatora](../../build/reference/dot-lib-files-as-linker-input.md).
 
-- [/EKSPORTUJE](../../build/reference/dash-exports.md) i [/symbole](../../build/reference/symbols.md) opcje narzędzia wiersza polecenia DUMPBIN może pomóc odkryć, w której symbole są zdefiniowane w plikach dll i obiektu lub biblioteki. Możesz użyć tego, aby sprawdzić wyeksportowany dekorowane odpowiada nazwy dekoracyjne konsolidator nazwy wyszukuje.
+- Gdy projekt zawiera odwołanie do biblioteki (. LIB) lub obiekt (. OBJ) plik, który z kolei wymaga symboli z innej biblioteki. Może się to zdarzyć nawet wtedy, gdy nie wywołasz funkcji, które powodują zależność. Aby rozwiązać ten problem, Dodaj odwołanie do innej biblioteki do projektu. Aby uzyskać więcej informacji, zobacz temat [Omówienie klasycznego modelu łączenia: Tworzenie symboli na potrzeby jazdy](https://devblogs.microsoft.com/oldnewthing/20130108-00/?p=5623).
 
-W niektórych przypadkach konsolidator może zgłaszać tylko nazwę z atrybutami symbolu. Narzędzia wiersza polecenia UNDNAME umożliwia pobieranie niedekorowanego formularza dekorowaną nazwę.
+- Jeśli używasz opcji [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) lub [/zl](../../build/reference/zl-omit-default-library-name.md) . Po określeniu tych opcji biblioteki zawierające wymagany kod nie są łączone do projektu, chyba że zostały jawnie dołączone. Aby rozwiązać ten problem, należy jawnie uwzględnić wszystkie biblioteki używane w wierszu polecenia linku. Jeśli podczas korzystania z tych opcji widzisz wiele brakujących nazw funkcji biblioteki CRT lub standardowej, jawnie Uwzględnij pliki bibliotek CRT i biblioteki standardowa w łączu.
+
+- W przypadku kompilowania przy użyciu opcji **/CLR** . Brak odwołania do `.cctor`. Aby uzyskać więcej informacji na temat sposobu rozwiązania tego problemu, zobacz [Inicjowanie zestawów mieszanych](../../dotnet/initialization-of-mixed-assemblies.md).
+
+- W przypadku łączenia się z bibliotekami trybu wydania podczas kompilowania wersji debugowania aplikacji. Podobnie, jeśli używasz opcji **/MTD** lub **/MDd** lub Zdefiniuj `_DEBUG` a następnie połącz się z bibliotekami wersji, należy oczekiwać wielu potencjalnych nierozwiązanych elementów zewnętrznych, między innymi problemami. Łączenie kompilacji w trybie wydania z bibliotekami debugowania powoduje także podobne problemy. Aby rozwiązać ten problem, upewnij się, że używasz bibliotek debugowania w kompilacjach do debugowania oraz w bibliotekach detalicznych w kompilacjach detalicznych.
+
+- Jeśli Twój kod odwołuje się do symbolu z jednej wersji biblioteki, ale zostanie połączona inna wersja biblioteki. Ogólnie rzecz biorąc, nie można mieszać plików obiektów lub bibliotek, które są skompilowane dla różnych wersji kompilatora. Biblioteki dostarczane w jednej wersji mogą zawierać symbole, których nie można znaleźć w bibliotekach dołączonych do innych wersji. Aby rozwiązać ten problem, skompiluj wszystkie pliki obiektów i biblioteki z tą samą wersją kompilatora przed połączeniem ich ze sobą. Aby uzyskać więcej informacji, zobacz [ C++ zgodność binarna 2015-2019](../../porting/binary-compat-2015-2017.md).
+
+- Jeśli ścieżki biblioteki są nieaktualne. **Narzędzia > opcje > projekty > okna dialogowe katalogów VC + +** , w obszarze Wybieranie **plików biblioteki** , umożliwiają zmianę kolejności wyszukiwania biblioteki. Folder konsolidatora w oknie dialogowym strony właściwości projektu może również zawierać ścieżki, które mogą być nieaktualne.
+
+- Po zainstalowaniu nowego Windows SDK (prawdopodobnie z inną lokalizacją). Kolejność wyszukiwania biblioteki musi zostać zaktualizowana, aby wskazywała nową lokalizację. Zwykle należy umieścić ścieżkę do nowego zestawu SDK dołączania i katalogów lib przed domyślną lokalizacją wizualną C++ . Ponadto projekt zawierający osadzone ścieżki może nadal wskazywać na stare ścieżki, które są prawidłowe, ale nieaktualne. Zaktualizuj ścieżki nowych funkcji dodanych przez nową wersję, która została zainstalowana w innej lokalizacji.
+
+- Jeśli kompilujesz w wierszu polecenia i utworzysz własne zmienne środowiskowe. Sprawdź, czy ścieżki do narzędzi, bibliotek i plików nagłówkowych przechodzą do spójnej wersji. Aby uzyskać więcej informacji, zobacz [Ustawianie zmiennych dotyczących ścieżki i środowiska dla kompilacji z wiersza polecenia](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)
+
+## <a name="coding-issues"></a>Problemy z kodowaniem
+
+Ten błąd może być spowodowany przez:
+
+- Niezgodna wielkość liter w kodzie źródłowym lub pliku definicji modułu (. def). Na przykład, jeśli nazwasz zmienną `var1` w jednym C++ pliku źródłowym i spróbujesz uzyskać do niej dostęp jako `VAR1` w innym, ten błąd zostanie wygenerowany. Aby rozwiązać ten problem, użyj spójnie wpisanej nazwy i wielkości liter.
+
+- Projekt korzystający z [funkcji wykreślania](../../error-messages/tool-errors/function-inlining-problems.md). Może wystąpić, gdy zdefiniujesz funkcje jako `inline` w pliku źródłowym, a nie w pliku nagłówkowym. Wbudowane funkcje nie mogą być widoczne poza plikiem źródłowym, który je definiuje. Aby rozwiązać ten problem, zdefiniuj wbudowane funkcje w nagłówkach, w których są one deklarowane.
+
+- Wywoływanie funkcji C z C++ programu bez użycia deklaracji `extern "C"` dla funkcji języka c. Kompilator używa różnych wewnętrznych konwencji nazewnictwa symboli dla języków C C++ i Code. Wewnętrzna nazwa symbolu to element łączący, który jest wyszukiwany podczas rozpoznawania symboli. Aby rozwiązać ten problem, należy użyć otoki `extern "C"` wokół wszystkich deklaracji funkcji języka C używanych w C++ kodzie, co powoduje, że kompilator używa wewnętrznej konwencji nazewnictwa języka c dla tych symboli. Opcje kompilatora [/TP](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) i [/TC](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) powodują, że kompilator kompiluje pliki C++ odpowiednio lub C, niezależnie od tego, czym jest rozszerzenie nazwy pliku. Te opcje mogą spowodować, że wewnętrzne nazwy funkcji różnią się od oczekiwanych.
+
+- Próba odwołująca się do funkcji lub danych, które nie mają powiązania zewnętrznego. W C++programie funkcje wbudowane i dane `const` mają połączenie wewnętrzne, chyba że są jawnie określone jako `extern`. Aby rozwiązać ten problem, użyj jawnych deklaracji `extern` w odniesieniu do symboli, do których odwołuje się poza Definiowanie pliku źródłowego.
+
+- [Brakująca treść funkcji lub definicja zmiennej](../../error-messages/tool-errors/missing-function-body-or-variable.md) . Ten błąd jest typowy w przypadku deklarowania, ale nie definiowania zmiennych, funkcji ani klas w kodzie. Kompilator wymaga tylko prototypu funkcji lub `extern` deklaracji zmiennej do wygenerowania pliku obiektu bez błędu, ale konsolidator nie może rozpoznać wywołania funkcji ani odwołania do zmiennej, ponieważ nie istnieje kod funkcji ani zarezerwowane miejsce na zmiennej. Aby rozwiązać ten problem, upewnij się, że zdefiniowano każdą przywoływaną funkcję i zmienną w połączonym pliku źródłowym lub bibliotece.
+
+- Wywołanie funkcji, które używa typów zwracanych i parametrów lub konwencji wywoływania, które nie pasują do tych w definicji funkcji. W C++ plikach obiektów [dekoracja nazwa](../../error-messages/tool-errors/name-decoration.md) koduje konwencję wywoływania, zakres klasy lub przestrzeni nazw oraz zwraca i typy parametrów funkcji. Zakodowany ciąg wchodzi w skład ostatniej nazwy funkcji dekoracyjnej. Ta nazwa jest używana przez konsolidator do rozpoznawania lub dopasowywania wywołań funkcji z innych plików obiektów. Aby rozwiązać ten problem, upewnij się, że w deklaracji funkcji, definicji i wywołań wszystkie używają tych samych zakresów, typów i konwencji wywoływania.
+
+- C++kod wywoływany, gdy dołączysz prototyp funkcji w definicji klasy, ale nie [dołączysz implementacji](../../error-messages/tool-errors/missing-function-body-or-variable.md) funkcji. Aby rozwiązać ten problem, należy podać definicję wszystkich członków klasy, które są wywoływane.
+
+- Próba wywołania czystej funkcji wirtualnej z abstrakcyjnej klasy podstawowej. Czysta funkcja wirtualna nie ma implementacji klasy bazowej. Aby rozwiązać ten problem, upewnij się, że są zaimplementowane wszystkie wywołane funkcje wirtualne.
+
+- Próba użycia zmiennej zadeklarowanej w funkcji ([zmiennej lokalnej](../../error-messages/tool-errors/automatic-function-scope-variables.md)) poza zakresem tej funkcji. Aby rozwiązać ten problem, usuń odwołanie do zmiennej, która nie znajduje się w zakresie, lub Przenieś zmienną do wyższego zakresu.
+
+- Podczas kompilowania wersji wydania projektu ATL, należy utworzyć komunikat, że wymagany jest kod uruchomienia CRT. Aby rozwiązać ten problem, wykonaj jedną z następujących czynności:
+
+  - Usuń `_ATL_MIN_CRT` z listy preprocesora definiuje się, aby umożliwić dołączenie kodu uruchamiania CRT. Aby uzyskać więcej informacji, zobacz [Ogólne strony właściwości (projekt)](../../build/reference/general-property-page-project.md).
+
+  - Jeśli to możliwe, Usuń wywołania funkcji CRT, które wymagają kodu uruchomienia CRT. Zamiast tego należy użyć ich odpowiedników Win32. Na przykład użyj `lstrcmp`, a nie `strcmp`. Znane funkcje, które wymagają kodu uruchomieniowego CRT, to niektóre funkcje ciągów i zmiennoprzecinkowych.
+
+## <a name="consistency-issues"></a>Problemy ze spójnością
+
+Obecnie nie ma standardowej [ C++ dekoracji nazw](../../error-messages/tool-errors/name-decoration.md) między dostawcami kompilatora, a nawet między różnymi wersjami tego samego kompilatora. Pliki obiektów skompilowane z różnymi kompilatorami mogą nie używać tego samego schematu nazewnictwa. Łączenie ich może spowodować wystąpienie błędu LNK2001.
+
+[Mieszanie wbudowanych i niewbudowanych opcji kompilacji](../../error-messages/tool-errors/function-inlining-problems.md) w różnych modułach może spowodować wystąpienie LNK2001. Jeśli C++ biblioteka jest tworzona z włączonym wykreśleniem funkcji ( **/OB1** lub **/Ob2**), ale odpowiedni plik nagłówkowy opisujący funkcje ma wyłączone wyłączenie (bez słowa kluczowego `inline`), ten błąd wystąpi. Aby rozwiązać ten problem, zdefiniuj `inline` funkcji w pliku nagłówkowym, który znajduje się w innych plikach źródłowych.
+
+Jeśli używasz dyrektywy kompilatora `#pragma inline_depth`, upewnij się, że ustawiono [wartość 2 lub większą](../../error-messages/tool-errors/function-inlining-problems.md), i upewnij się, że użyto również opcji kompilatora [/OB1](../../build/reference/ob-inline-function-expansion.md) lub [/Ob2](../../build/reference/ob-inline-function-expansion.md) .
+
+Ten błąd może wystąpić, jeśli pominięto opcję łącza/NOENTRY podczas tworzenia biblioteki DLL tylko dla zasobów. Aby rozwiązać ten problem, Dodaj opcję/NOENTRY do polecenia link.
+
+Ten błąd może wystąpić, jeśli w projekcie użyto nieprawidłowych ustawień/SUBSYSTEM lub/ENTRY. Przykładowo, jeśli piszesz aplikację konsolową i określisz/SUBSYSTEM: WINDOWS, zostanie wygenerowany nierozpoznany błąd zewnętrzny dla `WinMain`. Aby rozwiązać ten problem, upewnij się, że opcje są zgodne z opcjami typu projektu. Aby uzyskać więcej informacji na temat tych opcji i punktów wejścia, zobacz Opcje konsolidatora [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) i [/entry](../../build/reference/entry-entry-point-symbol.md) .
+
+## <a name="exported-def-file-symbol-issues"></a>Problemy ze znakiem wyeksportowanego pliku. def
+
+Ten błąd występuje, gdy nie znaleziono eksportu wymienionego w pliku. def. Może to być spowodowane faktem, że eksportowanie nie istnieje, jest napisane niepoprawnie lub C++ używa dekoracyjnych nazw. Plik. def nie przyjmuje nazw. Aby rozwiązać ten problem, Usuń niepotrzebne Eksporty i użyj deklaracji `extern "C"` w przypadku eksportowanych symboli.
+
+## <a name="use-the-decorated-name-to-find-the-error"></a>Użyj nazwy dekoracyjnej, aby znaleźć błąd
+
+C++ Kompilator i konsolidator używają [dekoracji nazw](../../error-messages/tool-errors/name-decoration.md), znanego również jako *name-dekorowanie*. Dekoracja nazw koduje dodatkowe informacje o typie zmiennej w nazwie symbolu. Nazwa symbolu funkcji koduje jej typ zwracany, typy parametrów, zakres i konwencję wywoływania. Ta dekoracyjna nazwa jest symbolem, który wyszukuje za pomocą konsolidatora, aby rozpoznać symbole zewnętrzne.
+
+Błąd łącza może wynikać, jeśli deklaracja funkcji lub zmiennej nie jest *dokładnie* zgodna z definicją funkcji lub zmiennej. Wynika to z faktu, że jakakolwiek różnica będzie częścią nazwy symbolu do dopasowania. Ten błąd może wystąpić, nawet jeśli ten sam plik nagłówka jest używany zarówno w kodzie wywołującym, jak i w kodzie. Jeden ze sposobów może wystąpić w przypadku skompilowania plików źródłowych przy użyciu różnych flag kompilatora. Na przykład, jeśli kod jest kompilowany do użycia konwencji wywoływania `__vectorcall`, ale łączysz się z biblioteką, która oczekuje, że klienci będą wywoływać ją przy użyciu domyślnej `__cdecl` lub konwencji wywoływania `__fastcall`. W takim przypadku symbole nie są zgodne, ponieważ Konwencje wywoływania są różne.
+
+Aby ułatwić znalezienie przyczyny problemu, komunikat o błędzie pokazuje dwie wersje nazwy. Wyświetla zarówno "przyjazną nazwę", nazwę używaną w kodzie źródłowym i nazwę dekoracyjną (w nawiasach). Nie musisz wiedzieć, jak interpretować nazwę dekoracyjną. Nadal można wyszukać i porównać z innymi nazwami dekoracyjnymi. Narzędzia wiersza polecenia mogą pomóc znaleźć i porównać oczekiwaną nazwę symbolu i rzeczywistą nazwę symbolu:
+
+- Opcje [/exports](../../build/reference/dash-exports.md) i [/Symbols](../../build/reference/symbols.md) narzędzia wiersza polecenia polecenia DUMPBIN są przydatne w tym miejscu. Mogą one pomóc w ustaleniu, które symbole są zdefiniowane w pliku dll i plikach biblioteki. Możesz użyć listy symboli, aby sprawdzić, czy eksportowane dekoracyjne nazwy pasują do dekoracyjnych nazw, które wyszukuje konsolidator.
+
+- W niektórych przypadkach konsolidator może zgłosić tylko dekoracyjną nazwę symbolu. Możesz użyć narzędzia wiersza polecenia UNDNAME, aby uzyskać niedekoracyjną postać nazwy dekoracyjnej.
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
-Aby uzyskać więcej informacji na temat możliwych przyczyn i rozwiązań dla LNK2001 zobacz pytanie dotyczące przepełnienia stosu [co to jest błąd zewnętrzny symbol Niezdefiniowany odwołania/nierozpoznanych i jak go naprawić?](https://stackoverflow.com/q/12573816/2002113).
-
+Aby uzyskać więcej informacji, zobacz pytanie Stack Overflow ["co to jest błąd niezdefiniowanego odwołania/nierozpoznany symbol zewnętrzny i jak go naprawić?"](https://stackoverflow.com/q/12573816/2002113).

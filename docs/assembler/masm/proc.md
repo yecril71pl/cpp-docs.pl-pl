@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
-ms.openlocfilehash: e68a7fc9814ba1ca07095e036e88fb5917220086
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 85d9a1e82eebcd83cb0f12f5ca751ec9415af18d
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74987935"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318673"
 ---
 # <a name="proc"></a>PROC
 
-Oznacza początek i koniec bloku procedury o nazwie *Label*. Instrukcje w bloku mogą być wywoływane przy użyciu instrukcji **call** lub [Invoke](../../assembler/masm/invoke.md) dyrektywy.
+Oznacza początek i koniec bloku procedury o nazwie *Label*. Instrukcje w bloku mogą być wywoływane przy użyciu instrukcji **call** lub [Invoke](invoke.md) dyrektywy.
 
 ## <a name="syntax"></a>Składnia
 
-> *etykieta* **proc** ⟦*Distance*⟧ ⟦*Language-Type*⟧ ⟦*Visibility*⟧ ⟦ __\<__ *prologuearg* __>__ ⟧ ⟦**używa** *reglist*⟧ ⟦ __,__ *Parameter* ⟦ __:__ *tag*⟧... ⟧\
+> *etykieta* **proc** ⟦*Distance*⟧ ⟦*Language-Type*⟧ ⟦ **Public** | **Private** | **Export** ⟧ ⟦ __\<__ *prologuearg* __>__ ⟧ ⟦**używa** *reglist*⟧ ⟦ __,__ *Parameter* ⟦ __:__ *tag*⟧... ⟧\
 > ⟦**Frame** ⟦ __:__ *ehandler-Address*⟧ ⟧ \
 > *instrukcje*\
 > *etykieta* **ENDP**
@@ -30,9 +30,9 @@ Argumenty *⟧ ⟦* *odległości*⟧ i ⟦ są prawidłowe tylko w 32-bitowym M
 
 ⟦**Frame** ⟦ __:__ *ehandler-Address*⟧ ⟧ jest prawidłowa tylko z ml64. exe i powoduje, że MASM generuje wpis tabeli funkcji w. pdata i unwind in
 
-Gdy atrybut **Frame** jest używany, musi następować po nim [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) .
+Gdy atrybut **Frame** jest używany, musi następować po nim [. ENDPROLOG](dot-endprolog.md) .
 
-Zobacz [MASM for x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) , aby uzyskać więcej informacji na temat korzystania z programu ml64. exe.
+Zobacz [MASM for x64 (ml64. exe)](masm-for-x64-ml64-exe.md) , aby uzyskać więcej informacji na temat korzystania z programu ml64. exe.
 
 ## <a name="example"></a>Przykład
 
@@ -81,4 +81,5 @@ Dumping Unwind Information for file ex2.exe
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)\
+[MASM BNF, gramatyka](masm-bnf-grammar.md)

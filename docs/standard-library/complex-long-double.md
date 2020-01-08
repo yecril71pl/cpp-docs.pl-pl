@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-ms.openlocfilehash: 978be97484a259d7ae8f3fd24fecf07d50c4c844
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 5de4fc2305ef2ac6e523dcb02782455245b99429
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857973"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302344"
 ---
 # <a name="complexltlong-doublegt"></a>złożone&lt;long double&gt;
 
@@ -57,7 +57,7 @@ Jawna specjalizacja szablonu klasy `complex` do złożonej klasy typu **Long Dou
 
 Aby uzyskać więcej informacji na temat szablonu klasy `complex` i jego składowych, zobacz [Klasa złożona](../standard-library/complex-class.md).
 
-**Specyficzne dla firmy Microsoft**: typy **Long Double** i **Double** mają tę samą reprezentację, ale są to różne typy. Aby uzyskać więcej informacji, zobacz [podstawowe typy](../cpp/fundamental-types-cpp.md).
+**Specyficzne dla firmy Microsoft**: typy **Long Double** i **Double** mają tę samą reprezentację, ale są to różne typy. Aby uzyskać więcej informacji, zobacz [typy wbudowane](../cpp/fundamental-types-cpp.md).
 
 ## <a name="example"></a>Przykład
 

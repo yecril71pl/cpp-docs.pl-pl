@@ -1,17 +1,17 @@
 ---
 title: .NOCREF
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .NOCREF
 helpviewer_keywords:
 - .NOCREF directive
 ms.assetid: 696a6a71-7e88-4b60-8550-7857d772ed20
-ms.openlocfilehash: 4a79591db0cb5e6b05d5d7f927bcb0b1a3c8bf0e
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 05eafa1718c17930a974eb44b704835e750f1bf6
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398096"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317620"
 ---
 # <a name="nocref"></a>.NOCREF
 
@@ -23,8 +23,9 @@ Pomija listę symboli w tabeli symboli i pliku przeglądarki.
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli określono nazwy, tylko podane nazwy są pomijane. Analogicznie jak [. XCREF](../../assembler/masm/dot-xcref.md).
+Jeśli określono nazwy, tylko podane nazwy są pomijane. Analogicznie jak [. XCREF](dot-xcref.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)\
+[MASM BNF, gramatyka](masm-bnf-grammar.md)

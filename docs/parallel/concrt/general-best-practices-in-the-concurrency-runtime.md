@@ -4,46 +4,46 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, general best practices
 ms.assetid: ce5c784c-051e-44a6-be84-8b3e1139c18b
-ms.openlocfilehash: e25011e2466d76c946cc55421ed228c8ea174161
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb00c3ddb9a50a159174deccf8954f1e3bf1689d
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413921"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302227"
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>Współbieżność środowiska wykonawczego — Najlepsze praktyki ogólne
 
-W tym dokumencie opisano najlepsze rozwiązania, które mają zastosowanie do wielu obszarów w czasie wykonywania współbieżności.
+W tym dokumencie opisano najlepsze rozwiązania dotyczące wielu obszarów środowisko uruchomieniowe współbieżności.
 
-##  <a name="top"></a> Sekcje
+##  <a name="top"></a>Poszczególne
 
 Ten dokument zawiera następujące sekcje:
 
-- [Użyj Konstruktów Kooperatywnej synchronizacji, gdy jest to możliwe](#synchronization)
+- [Jeśli jest to możliwe, używaj konstrukcji synchronizacji z spółdzielni](#synchronization)
 
-- [Unikaj długich zadań, które nie dają wyniku](#yield)
+- [Unikaj długotrwałych zadań, które nie są wynikiem](#yield)
 
-- [Używanie Nadsubskrypcji operacji przesunięcia, która blokuje lub odznacza duże opóźnienie](#oversubscription)
+- [Używanie nadsubskrypcji do operacji przesunięcia, które blokują lub mają duże opóźnienia](#oversubscription)
 
-- [Użyj funkcji zarządzania pamięcią Współbieżną, jeśli jest to możliwe](#memory)
+- [Używanie współbieżnych funkcji zarządzania pamięcią, gdy jest to możliwe](#memory)
 
-- [Użyj RAII, aby zarządzać okresem istnienia obiektów współbieżnych](#raii)
+- [Zarządzanie okresem istnienia obiektów współbieżności za pomocą RAII](#raii)
 
 - [Nie twórz obiektów współbieżności w zakresie globalnym](#global-scope)
 
-- [Nie używaj obiektów współbieżności w segmentach współdzielonych danych](#shared-data)
+- [Nie używaj obiektów współbieżności w wspólnych segmentach danych](#shared-data)
 
-##  <a name="synchronization"></a> Użyj Konstruktów Kooperatywnej synchronizacji, gdy jest to możliwe
+##  <a name="synchronization"></a>Jeśli jest to możliwe, używaj konstrukcji synchronizacji z spółdzielni
 
-Środowisko uruchomieniowe współbieżności udostępnia wiele konstrukcji bezpieczne pod względem współbieżności, które nie wymagają obiektu zewnętrznego synchronizacji. Na przykład [concurrency::concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) klasa udostępnia bezpieczne pod względem współbieżności dołączania i element dostęp do operacji. W przypadkach, gdy wymagają wyłącznego dostępu do zasobu, środowisko wykonawcze zapewnia jednak [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md), [concurrency::reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md), i [współbieżności :: zdarzeń](../../parallel/concrt/reference/event-class.md) klasy. Te typy zachowują się wspólne; Harmonogram zadań może alokację zasoby przetwarzania do innego kontekstu, ponieważ pierwsze zadanie czeka na dane. Jeśli to możliwe, należy użyć tych typów synchronizacji, zamiast innych mechanizmów synchronizacji, np. udostępnianych przez interfejs API Windows, które nie działają wspólnie. Aby uzyskać więcej informacji na temat tych typów synchronizacji i przykładowy kod, zobacz [struktury danych synchronizacji](../../parallel/concrt/synchronization-data-structures.md) i [porównywanie struktur danych synchronizacji z interfejsu API Windows](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md).
+Środowisko uruchomieniowe współbieżności udostępnia wiele konstrukcji bezpiecznych z współbieżnością, które nie wymagają zewnętrznego obiektu synchronizacji. Na przykład Klasa [concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) zapewnia bezpieczne współbieżność operacji dołączania i dostępu do elementów. W tym miejscu są zawsze ważne wskaźniki lub Iteratory, które są bezpieczne. Nie jest to gwarancja inicjalizacji elementu lub konkretnej kolejności przechodzenia. Jednakże w przypadku, gdy wymagany jest wyłączny dostęp do zasobu, środowisko uruchomieniowe udostępnia klasy [concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md), [concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)i [concurrency:: Event](../../parallel/concrt/reference/event-class.md) Classes. Te typy działają wspólnie; w związku z tym harmonogram zadań może ponownie przydzielić zasoby przetwarzania do innego kontekstu, gdy pierwsze zadanie czeka na dane. Jeśli jest to możliwe, należy używać tych typów synchronizacji zamiast innych mechanizmów synchronizacji, takich jak te udostępniane przez interfejs API systemu Windows, które nie są współdziałać ze sobą. Aby uzyskać więcej informacji na temat tych typów synchronizacji i przykładu kodu, zobacz [struktury danych synchronizacji](../../parallel/concrt/synchronization-data-structures.md) i [Porównywanie struktur danych synchronizacji z interfejsem API systemu Windows](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md).
 
-[[Górnej](#top)]
+[[Top](#top)]
 
-##  <a name="yield"></a> Unikaj długich zadań, które nie dają wyniku
+##  <a name="yield"></a>Unikaj długotrwałych zadań, które nie są wynikiem
 
-Ponieważ wspólne działa w harmonogramie zadań, nie zapewnia sprawiedliwe spośród zadań. W związku z tym zadanie może uniemożliwić innym zadaniom uruchamiania. Mimo że jest to dopuszczalne w niektórych przypadkach, w innych przypadkach może to spowodować zakleszczenia lub zablokowania.
+Ze względu na to, że harmonogram zadań działa wspólnie, nie zapewnia godziwych zadań. W związku z tym zadanie może uniemożliwić uruchomienie innych zadań. Chociaż jest to dopuszczalne w niektórych przypadkach, może to spowodować zakleszczenie lub przetrzymanie.
 
-Poniższy przykład wykonuje więcej niż liczba przydzielonych przetwarzania zasobów. Pierwsze zadanie przekazuje do harmonogramu zadań i w związku z tym drugie zadanie podrzędne uruchamia, dopóki zakończeniu pierwszego zadania.
+Poniższy przykład wykonuje więcej zadań niż liczba przydzieloną zasobów przetwarzania. Pierwsze zadanie nie zwraca harmonogramu zadań, a w związku z tym drugie zadanie nie zostanie uruchomione do momentu zakończenia pierwszego zadania.
 
 [!code-cpp[concrt-cooperative-tasks#1](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_1.cpp)]
 
@@ -51,7 +51,7 @@ Ten przykład generuje następujące wyniki:
 
 1: 250000000 1: 500000000 1: 750000000 1: 1000000000 2: 250000000 2: 500000000 2: 750000000 2: 1000000000
 
-Istnieje kilka sposobów, aby umożliwić współpracę między dwa zadania. Jednym ze sposobów jest od czasu do czasu podania harmonogramu zadań w zadaniu długoterminowych. Poniższy przykład modyfikuje `task` funkcji do wywołania [concurrency::Context::Yield](reference/context-class.md#yield) metody umożliwiające uzyskanie wykonywania do harmonogramu zadań, aby uruchomić inne zadanie.
+Istnieje kilka sposobów na włączenie współpracy między tymi dwoma zadaniami. Jednym ze sposobów jest sporadyczne przekazanie harmonogramu zadań w długotrwałym zadaniu. Poniższy przykład modyfikuje funkcję `task`, aby wywołać metodę [concurrency:: Context:: Yield](reference/context-class.md#yield) , aby zapewnić wykonywanie do harmonogramu zadań, tak aby można było uruchomić inne zadanie.
 
 [!code-cpp[concrt-cooperative-tasks#2](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_2.cpp)]
 
@@ -68,47 +68,47 @@ Ten przykład generuje następujące wyniki:
 2: 1000000000
 ```
 
-`Context::Yield` Metoda daje tylko inny wątek aktywny w harmonogramie, do której należy dany bieżącego wątku, lekkie zadanie lub inny wątek systemu operacyjnego. Ta metoda nie przekazuje do pracy, które jest zaplanowane do uruchomienia [concurrency::task_group](reference/task-group-class.md) lub [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) obiektu, ale nie została jeszcze uruchomiona.
+Metoda `Context::Yield` daje na harmonogramie tylko inny aktywny wątek, do którego należy bieżący wątek, zadanie lekkie lub inny wątek systemu operacyjnego. Ta metoda nie jest obsługiwana w przypadku pracy zaplanowanej do uruchomienia w obiekcie [concurrency:: task_group](reference/task-group-class.md) lub [concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) , ale jeszcze nie została uruchomiona.
 
-Istnieją inne sposoby umożliwiające współpracę między długotrwałych zadań. Dużych zadań można podzielić mniejszych podzadania. Można również włączyć nadsubskrypcję podczas długich zadań. Nadsubskrypcja umożliwia utworzenie większej liczby wątków niż liczba dostępnych wątków sprzętu. Nadsubskrypcja jest szczególnie przydatne, gdy długie zadanie zawiera dużej ilości opóźnienia, na przykład odczytywania danych z dysku lub połączenia sieciowego. Aby uzyskać więcej informacji na temat lekkie zadanie i nadsubskrypcji zobacz [harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
+Istnieją inne sposoby włączania współpracy między długotrwałymi zadaniami. Duże zadanie można podzielić na mniejsze podzadania. Można również włączyć nadsubskrypcję podczas długotrwałego zadania. Nadsubskrypcja umożliwia tworzenie większej liczby wątków niż dostępna liczba wątków sprzętowych. Nadpłata jest szczególnie przydatna, gdy długotrwałe zadanie zawiera duże opóźnienie, na przykład odczytanie danych z dysku lub z połączenia sieciowego. Aby uzyskać więcej informacji na temat uproszczonych zadań i nadmiarowych, zobacz [harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
 
-[[Górnej](#top)]
+[[Top](#top)]
 
-##  <a name="oversubscription"></a> Używanie Nadsubskrypcji operacji przesunięcia, która blokuje lub odznacza duże opóźnienie
+##  <a name="oversubscription"></a>Używanie nadsubskrypcji do operacji przesunięcia, które blokują lub mają duże opóźnienia
 
-Środowisko uruchomieniowe współbieżności zawiera podstawowych synchronizacji, takich jak [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md), umożliwiające zadania wspólne zablokować, a uzyskanie do siebie nawzajem. Gdy jedno zadanie wspólne blokuje lub daje, harmonogram zadań można ponownie przydzielić zasoby przetwarzania kontekst jako pierwsze zadanie czeka na dane.
+Środowisko uruchomieniowe współbieżności zawiera elementy pierwotne synchronizacji, takie jak [concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md), które umożliwiają wykonywanie zadań wspólnie ze sobą. Po przeniesieniu lub przeniesieniu jednego zadania w górę, harmonogram zadań może ponownie przydzielić zasoby przetwarzania do innego kontekstu, gdy pierwsze zadanie czeka na dane.
 
-Istnieją przypadki, w których nie można używać wspólnych mechanizm blokowania, który znajduje się w czasie wykonywania współbieżności. Na przykład zewnętrznej biblioteki, którego używasz może być używany był mechanizm różnych synchronizacji. Innym przykładem jest podczas wykonywania operacji, która może mieć dużej ilości opóźnienia, na przykład, korzystając z interfejsu API Windows `ReadFile` funkcji w celu odczytania danych z połączeniem sieciowym. W takich przypadkach nadsubskrypcji można włączyć inne zadania do uruchamiania, gdy inne zadanie jest w stanie bezczynności. Nadsubskrypcja umożliwia utworzenie większej liczby wątków niż liczba dostępnych wątków sprzętu.
+Istnieją przypadki, w których nie można używać wspólnego mechanizmu blokowania, który jest dostarczany przez środowisko uruchomieniowe współbieżności. Na przykład biblioteka zewnętrzna, z której korzystasz, może korzystać z innego mechanizmu synchronizacji. Innym przykładem jest wykonanie operacji, która może mieć duże opóźnienie, na przykład w przypadku korzystania z funkcji `ReadFile` API systemu Windows w celu odczytu danych z połączenia sieciowego. W takich przypadkach nadsubskrybowanie może umożliwić uruchomienie innych zadań, gdy inne zadanie jest w stanie bezczynności. Nadsubskrypcja umożliwia tworzenie większej liczby wątków niż dostępna liczba wątków sprzętowych.
 
-Należy wziąć pod uwagę następującą funkcję `download`, co spowoduje pobranie pliku na podany adres URL. W tym przykładzie użyto [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) metodę, aby tymczasowo zwiększyć liczbę aktywnych wątków.
+Rozważmy następującą funkcję, `download`, która pobiera plik pod podanym adresem URL. W tym przykładzie zastosowano metodę [concurrency:: Context:: subsubskrybuj](reference/context-class.md#oversubscribe) , aby tymczasowo zwiększyć liczbę aktywnych wątków.
 
 [!code-cpp[concrt-download-oversubscription#4](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_3.cpp)]
 
-Ponieważ `GetHttpFile` funkcja wykonuje operację potencjalnie ukryte, nadsubskrypcji włączyć inne zadania do uruchomienia, ponieważ bieżące zadanie czeka na dane. Aby uzyskać pełną wersję tego przykładu, zobacz [jak: Używanie Nadsubskrypcji do opóźnienia](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Ponieważ funkcja `GetHttpFile` wykonuje potencjalnie operację ukrytego, nadsubskrypcja może umożliwić uruchomienie innych zadań, ponieważ bieżące zadanie czeka na dane. Aby zapoznać się z pełną wersją tego przykładu, zobacz [How to: use resubscription to offset](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
-[[Górnej](#top)]
+[[Top](#top)]
 
-##  <a name="memory"></a> Użyj funkcji zarządzania pamięcią Współbieżną, jeśli jest to możliwe
+##  <a name="memory"></a>Używanie współbieżnych funkcji zarządzania pamięcią, gdy jest to możliwe
 
-Funkcje zarządzania pamięcią, użyj [concurrency::Alloc](reference/concurrency-namespace-functions.md#alloc) i [concurrency::Free](reference/concurrency-namespace-functions.md#free), gdy masz szczegółowe zadania, które często przydzielania małych obiektów, które mają relatywnie krótkiego okresu istnienia. Środowisko uruchomieniowe współbieżności przechowuje w oddzielnych pamięci podręcznej dla każdego uruchomionego wątku. `Alloc` i `Free` funkcje alokują i zwalniają pamięć z tych pamięci podręcznych bez użycia blokad lub barier pamięci.
+Użyj funkcji zarządzania pamięcią [concurrency:: Alloc](reference/concurrency-namespace-functions.md#alloc) i [concurrency:: Free](reference/concurrency-namespace-functions.md#free), gdy masz szczegółowe zadania, które często przydzielają małe obiekty, które mają stosunkowo krótki okres istnienia. Środowisko uruchomieniowe współbieżności przechowuje osobną pamięć podręczną pamięci dla każdego działającego wątku. Funkcje `Alloc` i `Free` przydzielają i zwalniają pamięć z tych pamięci podręcznych bez użycia blokad ani barier pamięci.
 
-Aby uzyskać więcej informacji o tych funkcje zarządzania pamięcią, zobacz [harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md). Na przykład, który używa tych funkcji, zobacz [jak: Używanie z funkcji Alloc i Free do poprawiania wydajności pamięci](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
+Aby uzyskać więcej informacji na temat tych funkcji zarządzania pamięcią, zobacz [harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md). Aby zapoznać się z przykładem korzystającym z tych funkcji, zobacz [How to: use a free by zwiększyć wydajność pamięci](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
 
-[[Górnej](#top)]
+[[Top](#top)]
 
-##  <a name="raii"></a> Użyj RAII, aby zarządzać okresem istnienia obiektów współbieżnych
+##  <a name="raii"></a>Zarządzanie okresem istnienia obiektów współbieżności za pomocą RAII
 
-Środowisko uruchomieniowe współbieżności używa obsługi wyjątków, aby zaimplementować funkcje, takie jak anulowania. W związku z tym należy napisać kod, bezpieczne pod względem wyjątków, gdy wywołanie środowiska uruchomieniowego lub wywołania innej biblioteki, która wywołuje w czasie wykonywania.
+Środowisko uruchomieniowe współbieżności używa obsługi wyjątków do implementowania funkcji, takich jak anulowanie. W związku z tym napisz kod bezpieczny przed wyjątkami podczas wywoływania do środowiska uruchomieniowego lub wywołać inną bibliotekę, która wywołuje środowisko uruchomieniowe.
 
-*Inicjowania jest pozyskiwanie zasobów* wzorca (RAII) jest jednym ze sposobów bezpiecznego zarządzania okresem istnienia obiektów współbieżności w danym zakresie. W obszarze wzór RAII to struktura danych jest przydzielany na stosie. Tej struktury danych inicjuje lub uzyskuje zasobu, gdy jest tworzony i niszczy lub zwalnia tego zasobu, kiedy niszczony jest struktury danych. Wzór RAII gwarantuje, że destruktor jest wywoływany przed zasięgu kończy działanie. Ten wzorzec jest przydatny, gdy funkcja zawiera wiele `return` instrukcji. Ten wzorzec pomaga także napisać kod bezpieczne pod względem wyjątków. Gdy `throw` instrukcja powoduje stosu na odpoczynek, destruktor obiektu RAII jest nazywana; w związku z tym, zasób jest zawsze poprawnie usunięty lub wydania.
+Wzorzec *pozyskiwania zasobów jest inicjalizacją* (RAII) jest jednym ze sposobów na bezpieczne zarządzanie okresem istnienia obiektu współbieżności w danym zakresie. Pod wzorcem RAII, struktura danych jest przypisana na stosie. Ta struktura danych inicjuje lub uzyskuje zasób podczas jego tworzenia i niszczy lub zwalnia ten zasób, gdy struktura danych zostanie zniszczona. Wzorzec RAII gwarantuje, że destruktor jest wywoływany przed wyjściem z otaczającego zakresu. Ten wzorzec jest przydatny, gdy funkcja zawiera wiele instrukcji `return`. Ten wzorzec pomaga również napisać kod zabezpieczony przed wyjątkami. Gdy instrukcja `throw` powoduje odwinięcie stosu, destruktor dla obiektu RAII jest wywoływany; w związku z tym zasób jest zawsze poprawnie usunięty lub wydano.
 
-Środowisko uruchomieniowe definiuje kilka klas, które na przykład użyć wzór RAII [concurrency::critical_section::scoped_lock](../../parallel/concrt/reference/critical-section-class.md#critical_section__scoped_lock_class) i [concurrency::reader_writer_lock::scoped_lock](reference/reader-writer-lock-class.md#scoped_lock_class). Te klasy pomocy są znane jako *zakres blokady*. Te klasy oferują wiele zalet, podczas pracy z [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md) lub [concurrency::reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) obiektów. Konstruktor klasy te uzyskuje dostęp do udostępnionych `critical_section` lub `reader_writer_lock` obiekt; dostęp do wersji destruktora do tego obiektu. Ponieważ blokady o określonym zakresie wydaje dostęp do jego obiektu wzajemne wykluczenie automatycznie, kiedy niszczony jest, możesz nie ręcznie odblokować obiektu źródłowego.
+Środowisko uruchomieniowe definiuje kilka klas, które używają wzorca RAII, na przykład [concurrency:: critical_section:: scoped_lock](../../parallel/concrt/reference/critical-section-class.md#critical_section__scoped_lock_class) i [concurrency:: reader_writer_lock:: scoped_lock](reference/reader-writer-lock-class.md#scoped_lock_class). Te klasy pomocnika są nazywane *blokadami objętymi zakresem*. Klasy te oferują kilka korzyści podczas pracy z obiektami [concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) lub [concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) . Konstruktor tych klas uzyskuje dostęp do podanego `critical_section` lub `reader_writer_lock` obiektu; destruktor zwalnia dostęp do tego obiektu. Ponieważ blokada zakresu zwalnia dostęp do jego wzajemnego wykluczenia, gdy zostanie zniszczony, nie należy ręcznie odblokować bazowego obiektu.
 
-Należy wziąć pod uwagę następujące klasy `account`, który jest definiowany przez zewnętrznej biblioteki i nie może być modyfikowany.
+Rozważmy następujące klasy `account`, które są zdefiniowane przez bibliotekę zewnętrzną, dlatego nie można ich modyfikować.
 
 [!code-cpp[concrt-account-transactions#1](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_4.h)]
 
-Poniższy przykład wykonuje wiele transakcji na `account` obiektu równolegle. W przykładzie użyto `critical_section` obiektu do synchronizowania dostępu do `account` obiektu, ponieważ `account` klasa nie jest bezpieczna pod kątem współbieżności. Używa każdej operacji równoległej `critical_section::scoped_lock` obiekt, aby zagwarantować, że `critical_section` obiektu jest odblokowany, gdy operacja powiedzie się lub kończy się niepowodzeniem. Kiedy saldo konta jest ujemna, `withdraw` operacja zakończy się niepowodzeniem, zostanie zgłoszony wyjątek.
+Poniższy przykład wykonuje jednocześnie wiele transakcji na obiekcie `account`. W przykładzie używany jest obiekt `critical_section` do synchronizowania dostępu do obiektu `account`, ponieważ Klasa `account` nie jest bezpieczna pod kątem współbieżności. Każda operacja równoległa używa obiektu `critical_section::scoped_lock` w celu zagwarantowania, że obiekt `critical_section` jest odblokowany, gdy operacja zakończy się powodzeniem lub niepowodzeniem. Gdy saldo konta jest ujemne, operacja `withdraw` nie powiedzie się, zwracając wyjątek.
 
 [!code-cpp[concrt-account-transactions#2](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_5.cpp)]
 
@@ -124,36 +124,36 @@ Error details:
     negative balance: -76
 ```
 
-Aby uzyskać więcej przykładów, które umożliwiają zarządzanie okresem istnienia obiektów współbieżnych wzór RAII, zobacz [instruktażu: Usuwanie pracy z wątku interfejsu użytkownika](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md), [jak: Korzystanie z klasy kontekstu do wdrażania Kooperatywnego semafora](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md), i [jak: Używanie Nadsubskrypcji do opóźnienia](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Aby uzyskać dodatkowe przykłady, które wykorzystują wzorzec RAII do zarządzania okresem istnienia obiektów współbieżności, zobacz [Przewodnik: usuwanie pracy z wątku interfejsu użytkownika](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md), [instrukcje: użycie klasy kontekstu w celu zaimplementowania semafora](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)i [instrukcje: Użyj nadsubskrypcji, aby przesunięty czas oczekiwania](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
-[[Górnej](#top)]
+[[Top](#top)]
 
-##  <a name="global-scope"></a> Nie twórz obiektów współbieżności w zakresie globalnym
+##  <a name="global-scope"></a>Nie twórz obiektów współbieżności w zakresie globalnym
 
-Podczas tworzenia obiektów współbieżności w zakresie globalnym może spowodować problemy, takie jak zakleszczenia lub pamięci naruszenia zasad dostępu w aplikacji.
+Podczas tworzenia obiektu współbieżności w zakresie globalnym można spowodować problemy, takie jak zakleszczenie lub naruszenie dostępu do pamięci w aplikacji.
 
-Na przykład podczas tworzenia obiektu środowisko uruchomieniowe współbieżności środowiska wykonawczego tworzy domyślnego harmonogramu dla Ciebie, jeśli nie została jeszcze utworzona. Obiekt środowiska uruchomieniowego, który jest tworzony podczas tworzenia obiektów globalnych odpowiednio spowoduje, że środowisko uruchomieniowe do utworzenia tego domyślnego harmonogramu. Jednak ten proces trwa blokady wewnętrznych, które mogą zakłócać inicjowania inne obiekty, które obsługują infrastrukturę współbieżność środowiska wykonawczego. Ta blokada wewnętrznego, mogą być wymagane przez inny obiekt infrastruktury, która nie została jeszcze zainicjowana i dlatego może spowodować zakleszczenia występuje w aplikacji.
+Na przykład podczas tworzenia obiektu środowisko uruchomieniowe współbieżności środowisko uruchomieniowe tworzy domyślny harmonogram, jeśli nie został jeszcze utworzony. Obiekt środowiska uruchomieniowego tworzony podczas konstruowania obiektu globalnego będzie odpowiednio powodował, że środowisko uruchomieniowe utworzy ten domyślny harmonogram. Jednak ten proces korzysta z blokady wewnętrznej, co może zakłócać inicjalizację innych obiektów, które obsługują infrastrukturę środowisko uruchomieniowe współbieżności. Ta wewnętrzna blokada może być wymagana przez inny obiekt infrastruktury, który nie został jeszcze zainicjowany i w rezultacie może spowodować zakleszczenie w aplikacji.
 
-W poniższym przykładzie pokazano tworzenie globalnych [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) obiektu. Ten wzorzec dotyczy nie tylko `Scheduler` klasy, ale wszystkie inne typy, które są dostarczane przez środowisko uruchomieniowe współbieżności. Zaleca się, że nie podlegają tego wzorca, ponieważ może to spowodować nieoczekiwane zachowanie w aplikacji.
+Poniższy przykład ilustruje tworzenie globalnego obiektu [concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) . Ten wzorzec dotyczy nie tylko klasy `Scheduler`, ale wszystkie inne typy, które są dostarczane przez środowisko uruchomieniowe współbieżności. Zalecamy, aby nie przestrzegać tego wzorca, ponieważ może to spowodować nieoczekiwane zachowanie aplikacji.
 
 [!code-cpp[concrt-global-scheduler#1](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_6.cpp)]
 
-Przykłady prawidłowy sposób do utworzenia `Scheduler` obiekty, zobacz [harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
+Przykłady poprawnego sposobu tworzenia obiektów `Scheduler` można znaleźć w temacie [harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
 
-[[Górnej](#top)]
+[[Top](#top)]
 
-##  <a name="shared-data"></a> Nie używaj obiektów współbieżności w segmentach współdzielonych danych
+##  <a name="shared-data"></a>Nie używaj obiektów współbieżności w wspólnych segmentach danych
 
-Środowisko uruchomieniowe współbieżności nie obsługuje obiektów współbieżności w sekcji danych udostępnionych, na przykład sekcji danych, który jest tworzony przez [data_seg](../../preprocessor/data-seg.md) `#pragma` dyrektywy. Obiekt współbieżności, który jest współużytkowany przez granice procesu umieścić środowiska uruchomieniowego w niespójny lub ma nieprawidłowy stan.
+Środowisko uruchomieniowe współbieżności nie obsługuje używania obiektów współbieżności w sekcji danych udostępnionych, na przykład sekcji danych utworzonej przez [data_seg](../../preprocessor/data-seg.md)`#pragma` dyrektywie. Obiekt współbieżności współużytkowany przez granice procesu może spowodować, że środowisko uruchomieniowe jest w niespójnym lub nieprawidłowym stanie.
 
-[[Górnej](#top)]
+[[Top](#top)]
 
 ## <a name="see-also"></a>Zobacz także
 
 [Środowisko uruchomieniowe współbieżności — najlepsze praktyki](../../parallel/concrt/concurrency-runtime-best-practices.md)<br/>
 [Biblioteka równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
 [Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)<br/>
-[Task Scheduler](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
+[Harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Struktury danych synchronizacji](../../parallel/concrt/synchronization-data-structures.md)<br/>
 [Porównywanie struktur danych synchronizacji z Windows API](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)<br/>
 [Instrukcje: używanie z funkcji Alloc i Free do poprawiania wydajności pamięci](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)<br/>
