@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3006
 ms.assetid: 449082ec-fd45-4c47-8ab3-ba6a719e4dc4
-ms.openlocfilehash: 7200d0ab3b14a1f9faa310f466963d74f7c98985
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a851c9b84a858cd4ac5cee11f0da90f99200c789
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350376"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301772"
 ---
 # <a name="compiler-error-c3006"></a>Błąd kompilatora C3006
 
-"w klauzuli": klauzula w "dyrektywa" Brak oczekiwanego argumentu w dyrektywie OpenMP
+Brak oczekiwanego argumentu klauzuli "klauzula": w dyrektywie OpenMP "dyrektywa"
 
-OpenMP — dyrektywa nie ma oczekiwanego argumentu.
+Dyrektywa OpenMP nie ma oczekiwanego argumentu.
 
-Poniższy przykład spowoduje wygenerowanie C3006:
+Poniższy przykład generuje C3006:
 
-```
+```c
 // C3006.c
 // compile with: /openmp
 int main()
