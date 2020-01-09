@@ -1,17 +1,17 @@
 ---
 title: .PUSHREG
-ms.date: 08/30/2018
+ms.date: 12/16/2019
 f1_keywords:
 - .PUSHREG
 helpviewer_keywords:
 - .PUSHREG directive
 ms.assetid: e0c83758-dfed-40ea-afe6-cb833c8d2d30
-ms.openlocfilehash: 2190bd05667de82dada34a63f11647c653f97247
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: de6ffd3668f47732144e8c632410f6dfde6b2f31
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398035"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318296"
 ---
 # <a name="pushreg"></a>.PUSHREG
 
@@ -19,13 +19,16 @@ Generuje `UWOP_PUSH_NONVOL` wpis kodu unwind dla określonego numeru rejestru pr
 
 ## <a name="syntax"></a>Składnia
 
-> . Rejestr PUSHREG
+> . *Rejestr* PUSHREG
 
 ## <a name="remarks"></a>Uwagi
 
-**. PUSHREG** umożliwia użytkownikom ml64. exe określenie, jak działa funkcja ramki, i jest dozwolona tylko w obrębie prologu, która rozciąga się od deklaracji **Frame** [proces](../../assembler/masm/proc.md) do [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) . Dyrektywy te nie generują kodu; generują one tylko `.xdata` i `.pdata`. **. PUSHREG** powinien być poprzedzony instrukcjami, które faktycznie implementują akcje, które mają być odwiązane. Dobrym sposobem jest Zawijanie dyrektyw unwind i kodu, które są przeznaczone do odwinięcia w makrze w celu zapewnienia zgody.
+**. PUSHREG** umożliwia użytkownikom ml64. exe określenie, jak działa funkcja ramki, i jest dozwolona tylko w obrębie prologu, która rozciąga się od deklaracji **Frame** [proces](proc.md) do [. ENDPROLOG](dot-endprolog.md) . Dyrektywy te nie generują kodu; generują one tylko `.xdata` i `.pdata`. **. PUSHREG** powinien być poprzedzony instrukcjami, które faktycznie implementują akcje, które mają być odwiązane. Dobrym sposobem jest Zawijanie dyrektyw unwind i kodu, które są przeznaczone do odwinięcia w makrze w celu zapewnienia zgody.
 
-Aby uzyskać więcej informacji, zobacz [MASM for x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+*Rejestr* może być jednym z: \
+RAX | RCX | RDX | RBX | RDI | RSI | RBP | R8 | R9 | R10 | R11 | R12 | R13 | R14 | R15.
+
+Aby uzyskać więcej informacji, zobacz [MASM for x64 (ml64. exe)](masm-for-x64-ml64-exe.md).
 
 ## <a name="sample"></a>Przykład
 
@@ -57,4 +60,5 @@ END
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja dyrektyw](directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)\
+[MASM BNF, gramatyka](masm-bnf-grammar.md)
