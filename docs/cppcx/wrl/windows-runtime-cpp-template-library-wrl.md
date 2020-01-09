@@ -3,12 +3,12 @@ title: Biblioteka szablonów języka C++ środowiska wykonawczego systemu Window
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 7a7b37a32ebaa0bb6ad71c8f710300256589388d
-ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
+ms.openlocfilehash: 41b8b45f89e94b8de2ddcb9c87bfd72122db8e1a
+ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74541204"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75676941"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteka szablonów języka C++ środowiska wykonawczego systemu Windows (WRL)
 
@@ -85,7 +85,7 @@ Biblioteka C++ szablonów środowisko wykonawcze systemu Windows jest podobna do
 
 Biblioteka C++ szablonów środowisko wykonawcze systemu Windows obsługuje funkcje com wymagane przez aplikacje platformy UWP. W związku z tym różni się od ATL, ponieważ pomija bezpośrednią obsługę funkcji COM, takich jak:
 
-- agregacji
+- Agregacja
 
 - implementacje giełdowe
 
@@ -147,5 +147,5 @@ Obiekt `WeakRef` zazwyczaj reprezentuje obiekt, którego istnienie jest kontrolo
 |-|-|
 |[Najważniejsze interfejsy API według kategorii](key-wrl-apis-by-category.md)|Wyróżnia podstawowe typy, C++ funkcje i makra szablonu Środowisko wykonawcze systemu Windows.|
 |[Tematy pomocy](wrl-reference.md)|Zawiera informacje referencyjne dla biblioteki C++ szablonów środowisko wykonawcze systemu Windows.|
-|[Krótkie odwołanie C++/CX)](../../cppcx/quick-reference-c-cx.md)|Zwięźle opisuje funkcje C++/CX, które obsługują środowisko wykonawcze systemu Windows.|
+|[Krótki przewodnik (C++/CX)](../../cppcx/quick-reference-c-cx.md)|Zwięźle opisuje funkcje C++/CX, które obsługują środowisko wykonawcze systemu Windows.|
 |[Używanie składników środowisko wykonawcze systemu Windows w wizualizacjiC++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|Pokazuje, w jaki C++sposób używać/CX do tworzenia podstawowego składnika Środowisko wykonawcze systemu Windows.|

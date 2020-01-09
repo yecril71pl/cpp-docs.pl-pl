@@ -20,46 +20,46 @@ helpviewer_keywords:
 - C++ COM Interop
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-ms.openlocfilehash: aaa07373b7dd22807290ceefa9197b4013c61fe5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d26fbefd87b3ba6d6ca7e183be78608777f383b5
+ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384520"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75676930"
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)
 
-W przeciwieństwie do innych języków .NET, Visual C++ obsługuje współdziałanie umożliwiająca kodem zarządzanym i niezarządzanym istnieć w tej samej aplikacji, a nawet w tym samym pliku (z [zarządzane, niezarządzane](../preprocessor/managed-unmanaged.md) pragm). Dzięki temu Visual C++ deweloperom na integrowanie funkcji .NET istniejących aplikacji Visual C++ bez naruszania pozostałe części aplikacji.
+W przeciwieństwie do innych języków .NET C++ , Wizualizacja ma obsługę współdziałania, która umożliwia kod zarządzany i niezarządzany w tej samej aplikacji, a nawet w tym samym pliku (z [zarządzanymi, niezarządzanymi](../preprocessor/managed-unmanaged.md) pragmami). Dzięki temu deweloperzy C++ wizualni mogą zintegrować funkcje platformy .NET C++ z istniejącymi aplikacjami wizualnymi bez zakłócania pozostałej części aplikacji.
 
-Można również wywołać funkcji niezarządzanych z zarządzanego compiland — za pomocą [dllexport i dllimport](../cpp/dllexport-dllimport.md).
+Można również wywołać funkcje niezarządzane z zarządzanego jednostka kompilacji przy użyciu [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
-Niejawna funkcja PInvoke jest przydatne, gdy potrzebujesz określić, jak będą przekazywane parametry funkcji lub dowolne inne szczegóły, które można określić podczas wywoływania jawnie DllImportAttribute.
+Niejawny PInvoke jest przydatny, gdy nie trzeba określać, jak będą organizowane parametry funkcji lub inne szczegóły, które można określić podczas jawnego wywoływania elementu DllImportAttribute.
 
-Visual C++ zapewnia dwa sposoby zarządzanych i niezarządzanych funkcji pod kątem współdziałania:
+Wizualizacja C++ zapewnia dwa sposoby współdziałania z funkcjami zarządzanymi i niezarządzanymi:
 
 - [Używanie jawnej funkcji PInvoke w języku C++ (atrybut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
 
-Jawnej funkcji PInvoke jest obsługiwana przez program .NET Framework i jest dostępna w większości języków platformy .NET. Ale jak sugeruje jej nazwa, międzyoperacyjności języka C++ jest specyficzny dla języka Visual C++.
+Jawna wartość PInvoke jest obsługiwana przez .NET Framework i jest dostępna w większości języków .NET. Ale jako że jego nazwa oznacza, C++ międzyoperacyjność jest specyficzna dla wizualizacji C++.
 
 ## <a name="c-interop"></a>międzyoperacyjność C++
 
-Ponieważ zapewnia lepsze bezpieczeństwo typów, jest zwykle było mniej uciążliwe do wdrożenia, jest bardziej forgiving, jeśli niezarządzanego interfejsu API jest modyfikowany i sprawia, że możliwe ulepszenia wydajności, która nie jest możliwa za pomocą jawnego międzyoperacyjności języka C++ zaleca się za pośrednictwem jawnej funkcji PInvoke Mechanizm PInvoke. Jednak międzyoperacyjności języka C++ nie jest możliwe, jeśli kod źródłowy niezarządzane nie jest dostępna.
+C++Międzyoperacyjność zapewnia lepszą bezpieczeństwo typów i jest zazwyczaj mniej żmudnym do wdrożenia. Jednak C++ międzyoperacyjność nie jest opcją, jeśli niezarządzany kod źródłowy jest niedostępny lub dla projektów międzyplatformowych.
 
 ## <a name="c-com-interop"></a>współdziałanie języka C++ z modelem COM
 
-Funkcje współpracy, obsługiwane przez Visual C++ oferuje określonego przewagę nad innymi językami .NET, jeśli chodzi o współpracy ze składnikami modelu COM. W przeciwieństwie do ograniczenia dotyczące programu .NET Framework [Tlbimp.exe (Importer biblioteki typów)](/dotnet/framework/tools/tlbimp-exe-type-library-importer), takich jak ograniczoną obsługę typów danych i wymagane ujawnienia każdy członek każdego interfejsu COM, międzyoperacyjności języka C++ umożliwia COM składniki, które były dostępne w będzie i nie jest wymagane oddzielne zestawy międzyoperacyjne. W przeciwieństwie do języka Visual Basic i C#, Visual C++ można użyć obiektów COM bezpośrednio przy użyciu zwykłych mechanizmów COM (takie jak **CoCreateInstance** i **QueryInterface**). Jest to możliwe z powodu cechy międzyoperacyjności języka C++, które powodują automatyczne wstawianie kodu przejścia, aby przenieść z zarządzanych w niezarządzanych funkcji i z powrotem przez kompilator.
+Funkcje współdziałania obsługiwane przez C++ wizualizację zapewniają konkretną korzyść w porównaniu z innymi językami .NET, gdy chodzi o współdziałanie ze składnikami modelu com. Zamiast ograniczać się do ograniczeń .NET Framework [Tlbimp. exe (Importer biblioteki typów)](/dotnet/framework/tools/tlbimp-exe-type-library-importer), takich jak ograniczona obsługa typów danych i obowiązkowe narażenie każdego członka każdego z interfejsów COM, C++ międzyoperacyjność umożliwia dostęp do składników com w programie i nie wymaga oddzielnych zestawów międzyoperacyjnych. W przeciwieństwie do C#Visual Basic i C++ , Wizualizacja może używać obiektów com bezpośrednio przy użyciu standardowych mechanizmów com (takich jak funkcja **CoCreateInstance** i polecenie **QueryInterface**). Jest to możliwe z powodu C++ funkcji międzyoperacyjnych, które powodują, że kompilator automatycznie wstawi kod przejścia do przenoszenia z zarządzanych do funkcji niezarządzanych i ponownie z powrotem.
 
-Za pomocą międzyoperacyjności języka C++, składników COM może służyć jako są zwykle używane lub może zostać zawinięty wewnątrz klasy C++. Te klasy otoki są nazywane wywoływanych otok środowiska uruchomieniowego niestandardowych lub CRCWs, dlatego ma dwie korzyści za pośrednictwem za pomocą modelu COM bezpośrednio w kodzie aplikacji:
+Za C++ pomocą międzyoperacyjności można używać składników com, ponieważ są one zwykle używane lub mogą być opakowane wewnątrz C++ klas. Te klasy otoki są nazywane niestandardowymi otokami w środowisku uruchomieniowym lub CRCWs i mają dwie zalety użycia modelu COM bezpośrednio w kodzie aplikacji:
 
-- Klasa wynikowa może służyć w językach innych niż Visual C++.
+- Klasa będąca wynikiem może być używana z języków innych niż C++Visual.
 
-- Szczegóły interfejsu COM mogą być ukrywane z kodu zarządzanego klienta. Typy danych .NET można użyć zamiast natywnych typów i szczegóły przekazywania danych mogą być wykonywane w sposób niewidoczny dla użytkownika wewnątrz CRCW.
+- Szczegóły interfejsu COM można ukryć w kodzie zarządzanego klienta. Typy danych platformy .NET mogą być używane zamiast typów natywnych, a szczegółowe informacje o kierowaniu danych mogą być wykonywane w sposób przezroczysty wewnątrz CRCW.
 
-Niezależnie od tego, czy COM jest używany, bezpośrednio lub za pośrednictwem CRCW można zorganizować typy argumentów niż prosty, typy danych kopiowalnych.
+Bez względu na to, czy COM jest używany bezpośrednio, czy za pomocą CRCW, typy argumentów inne niż proste, typy danych kopiowalnych muszą być organizowane.
 
-## <a name="blittable-types"></a>Typy Kopiowalne
+## <a name="blittable-types"></a>Typy danych kopiowalnych
 
-Do niezarządzanych interfejsów API Użyj typów prostych, wewnętrzne (zobacz [Kopiowalne i typy danych Kopiowalnych inne niż](/dotnet/framework/interop/blittable-and-non-blittable-types)), bez kodowania jest wymagana, ponieważ te typy danych mają tę samą reprezentację w pamięci, ale wymagają bardziej złożone typy danych marshaling danych jawnego. Aby uzyskać przykład, zobacz [jak: Wywoływanie natywnych bibliotek DLL z kodu zarządzanego za pomocą funkcji PInvoke](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md).
+W przypadku niezarządzanych interfejsów API, które używają prostych typów wewnętrznych (zobacz [typy danych kopiowalnych i inne niż danych kopiowalnych](/dotnet/framework/interop/blittable-and-non-blittable-types)), nie jest wymagane żadne specjalne kodowanie, ponieważ te typy danych mają tę samą reprezentację w pamięci, ale bardziej złożone typy danych wymagają jawnego organizowania danych. Aby zapoznać się z przykładem, zobacz [jak: wywoływanie natywnych bibliotek DLL z kodu zarządzanego za pomocą funkcji PInvoke](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md).
 
 ## <a name="example"></a>Przykład
 
@@ -111,7 +111,7 @@ Done
 
 - [Instrukcje: konwertowanie ciągu char * na tablicę System::Byte](../dotnet/how-to-convert-char-star-string-to-system-byte-array.md)
 
-- [Instrukcje: Konwertowanie obiektu System::String na wchar_t * lub char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)
+- [Instrukcje: konwertowanie system:: String na wchar_t * lub char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)
 
 - [Instrukcje: konwertowanie obiektu System::String na ciąg standardowy](../dotnet/how-to-convert-system-string-to-standard-string.md)
 
@@ -137,13 +137,13 @@ Done
 
 - [Instrukcje: określanie parametru wyjściowego](../dotnet/how-to-specify-an-out-parameter.md)
 
-- [Instrukcje: Używanie typu natywnego w kompilacji/CLR](../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md)
+- [Instrukcje: korzystanie z typu natywnego w kompilacji/CLR](../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md)
 
 - [Instrukcje: deklarowanie dojść w typach natywnych](../dotnet/how-to-declare-handles-in-native-types.md)
 
 - [Instrukcje: opakowywanie klasy natywnej do użycia w języku C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
-Aby uzyskać informacji dotyczących używania delegatów w scenariuszu międzyoperacyjnych, zobacz [delegate (C++ Component Extensions)](../extensions/delegate-cpp-component-extensions.md).
+Aby uzyskać informacje na temat korzystania z delegatów w scenariuszu międzyoperacyjnym, zobacz [Delegat (C++ Component Extensions)](../extensions/delegate-cpp-component-extensions.md).
 
 ## <a name="see-also"></a>Zobacz także
 
