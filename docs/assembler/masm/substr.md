@@ -1,17 +1,17 @@
 ---
 title: SUBSTR
-ms.date: 08/30/2018
+ms.date: 12/16/2019
 f1_keywords:
 - substr
 helpviewer_keywords:
 - SUBSTR directive
 ms.assetid: d1aa9a7d-a03a-4213-93ad-ee92635fd58a
-ms.openlocfilehash: b284ca80bc2db195c35af3e5ca45441e97d9b7f1
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 42c11d8b2d4691553b55836bb64ac697a41f8a4c
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74393510"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318413"
 ---
 # <a name="substr"></a>SUBSTR
 
@@ -23,4 +23,5 @@ Zwraca podciąg *elementu textitem*, rozpoczynając od *pozycji*. *Element texti
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+[Dokumentacja dyrektyw](directives-reference.md)\
+[MASM BNF, gramatyka](masm-bnf-grammar.md)
