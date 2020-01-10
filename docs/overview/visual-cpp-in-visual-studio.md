@@ -5,14 +5,12 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: ea047aca90b03179c0a39cb653e0b9bc08306c64
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 74e1b34549a8e8d0f1e22e6f40aacbd4429b272f
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626218"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75793793"
 ---
 # <a name="c-in-visual-studio"></a>Język C++ w programie Visual Studio
 
@@ -21,7 +19,7 @@ ms.locfileid: "73626218"
 >
 > Jeśli szukasz pakietu redystrybucyjnego C++ Visual w taki sposób, aby można było uruchomić program, przejdź do [Centrum pobierania Microsoft](https://www.microsoft.com/download/) i wprowadź **wizualizację C++**  w polu wyszukiwania.
 
-Program Microsoft C++Visual, zwykle skrócony do C++ wizualizacji lub MSVC, jest nazwą dla C++narzędzi deweloperskich i bibliotek języka asemblera, dostępnych w ramach programu Visual Studio w systemie Windows. Te narzędzia i biblioteki pozwalają tworzyć aplikacje platforma uniwersalna systemu Windows (platformy UWP), natywne aplikacje pulpitu i serwera systemu Windows, biblioteki i aplikacje dla wielu platform, które działają w systemach Windows, Linux, Android i iOS, a także zarządzane aplikacje i biblioteki korzystające z platformy .NET Architektura. Możesz użyć wizualizacji C++ , aby napisać coś z prostych aplikacji konsolowych do najbardziej zaawansowanych i złożonych aplikacji dla komputerów z systemem Windows, ze sterowników urządzeń i składników systemu operacyjnego do gier wieloplatformowych dla urządzeń przenośnych oraz od najmniejszych urządzeń IoT do obliczeń o wysokiej wydajności na serwerze w chmurze platformy Azure.
+Program Microsoft C++Visual, zwykle skrócony do C++ wizualizacji lub MSVC, jest nazwą dla C++narzędzi deweloperskich i bibliotek języka asemblera, dostępnych w ramach programu Visual Studio w systemie Windows. Te narzędzia i biblioteki pozwalają tworzyć aplikacje platforma uniwersalna systemu Windows (platformy UWP), natywne aplikacje pulpitu i serwera systemu Windows, biblioteki i aplikacje dla wielu platform, które działają w systemach Windows, Linux, Android i iOS, a także zarządzane aplikacje i biblioteki korzystające z platformy .NET Architektura. Możesz użyć wizualizacji C++ , aby napisać coś z prostych aplikacji konsolowych do najbardziej zaawansowanych i złożonych aplikacji dla komputerów z systemem Windows, ze sterowników urządzeń i składników systemu operacyjnego do wieloplatformowych gier dla urządzeń przenośnych oraz od najmniejszych urządzeń IoT do obliczeń o wysokiej wydajności na wielu serwerach w chmurze platformy Azure.
 
 Program Visual Studio 2015, 2017 i 2019 można zainstalować obok siebie. Do edytowania i kompilowania programów przy użyciu zestawu narzędzi z programu Visual Studio 2015 (wersji 140) i Visual Studio 2017 (najnowsze 141) można użyć programu Visual Studio 2019 (zestawu narzędzi kompilatora v142).
 
@@ -87,7 +85,7 @@ Użyj debugera programu Visual Studio z C++ projektami.
 [Analiza kodu dla języka CC++ /przegląd](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
 Użyj adnotacji SAL lub C++ głównych wytycznych do sprawdzania, aby przeprowadzić analizę statyczną.
 
-[Zapisz testy jednostkowe dla CC++ /w Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
+[Pisanie testów jednostkowych dla języka C/C++ w programie Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
 Tworzenie testów jednostkowych przy użyciu struktury testów jednostkowych C++firmy Microsoft dla, Google test, zwiększanie. Testowanie lub narzędzia ctest.
 
 ## <a name="write-applications-in-c"></a>Zapisz aplikacje wC++

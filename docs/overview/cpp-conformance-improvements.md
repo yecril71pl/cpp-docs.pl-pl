@@ -3,14 +3,12 @@ title: C++ulepszenia zgodności
 ms.date: 12/04/2019
 description: Firma C++ Microsoft w programie Visual Studio postępuje w kierunku pełnej zgodności ze standardem języka c++ 20.
 ms.technology: cpp-language
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: de31c2e61f0a10c785d610d3227a659c59b56d38
-ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
+ms.openlocfilehash: e9c2a69c8d33ea692a76a5642a15b581567c2c63
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75546435"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75793846"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Ulepszenia zgodności języka C++ w programie Visual Studio
 

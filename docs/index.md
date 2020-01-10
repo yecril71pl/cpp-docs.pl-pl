@@ -2,15 +2,13 @@
 layout: HubPage
 title: Dokumentacja C++ wizualna
 description: Dowiedz się, C++ jak używać programu do tworzenia aplikacji, usług i narzędzi dla Twoich platform i urządzeń.
-author: mikeblome
-ms.author: mblome
 ms.topic: hub-page
-ms.openlocfilehash: 204571952b7da922ddaac29949568cac3e69d616
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: 2a54776149bef58656380f6f03351083189ea6c1
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177502"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75793803"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -75,10 +73,10 @@ ms.locfileid: "70177502"
         <h1>Dokumentacja C++ wizualna</h1>
         <ul class="pivots">
             <li>
-                <a href="#workloads">Obciążeń</a>
+                <a href="#workloads">Obciążenia</a>
                 <ul id="workloads">
                     <li>
-                        <a href="#workloads1">Obciążeń</a>
+                        <a href="#workloads1">Obciążenia</a>
                         <ul id="workloads1" class="cardsC">
                             <li>
                                 <a href="/cpp/cppcx/universal-windows-apps-cpp">
@@ -199,10 +197,10 @@ ms.locfileid: "70177502"
                 </ul>
             </li>
             <li>
-                <a href="#features">Oferowanych</a>
+                <a href="#features">Funkcje</a>
                 <ul id="features">
                     <li>
-                        <a href="#features1">Oferowanych</a>
+                        <a href="#features1">Funkcje</a>
                         <ul id="features1" class="cardsC">
                             <li>
                                 <a href="/cpp/ide/writing-and-refactoring-code-cpp">
@@ -234,7 +232,7 @@ ms.locfileid: "70177502"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Kompilacja</h3>
+                                                    <h3>{1&gt;Kompilacja&lt;1}</h3>
                                                     <p>Kompiluj i łącz swój kod i Optymalizuj pod kątem maksymalnej przepływności.</p>
                                                 </div>
                                             </div>
@@ -272,7 +270,7 @@ ms.locfileid: "70177502"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Test</h3>
+                                                    <h3>{1&gt;Test&lt;1}</h3>
                                                     <p>Utwórz testy jednostkowe dla C++ kodu.</p>
                                                 </div>
                                             </div>
@@ -291,7 +289,7 @@ ms.locfileid: "70177502"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Deploy</h3>
+                                                    <h3>Wdrażanie programu</h3>
                                                     <p>Dystrybuuj gotowy program do użytkowników końcowych.</p>
                                                 </div>
                                             </div>
@@ -329,7 +327,7 @@ ms.locfileid: "70177502"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Eksportowanie i uaktualnianie</h3>
+                                                    <h3>przenoszenie i uaktualnianie</h3>
                                                     <p>Uaktualnij do najnowszej wersji programu Visual Studio i Migruj starsze aplikacje na nowoczesne platformy.</p>
                                                 </div>
                                             </div>
@@ -378,7 +376,7 @@ ms.locfileid: "70177502"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Rozszerzenia składników</h3>
-                                                    <p>Rozszerzenia składników C++: C++/CLI dla programowania .NET i C++/CX dla programowania platformy UWP.</p>
+                                                    <p>Rozszerzenia składników C++: C++/CLI for .NET Programming i C++/CX for platformy UWP Programming.</p>
                                                 </div>
                                             </div>
                                         </div>

@@ -1,16 +1,16 @@
 ---
-title: 'Instrukcje: Użycie winmdidl.exe i midlrt.exe w celu utworzenia plików .h z metadanych systemu Windows'
+title: 'Porady: Użyj winmdidl.exe i midlrt.exe, aby utworzyć pliki .h z metadanych systemu Windows'
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-ms.openlocfilehash: 8288fc11fd53fdef423a57d0faefbaa7c06326aa
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3aa7cd28a37ec7187cc3c87927a83e45eeda2a4e
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500429"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75791726"
 ---
-# <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Instrukcje: Użycie winmdidl.exe i midlrt.exe w celu utworzenia plików .h z metadanych systemu Windows
+# <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Porady: Użyj winmdidl.exe i midlrt.exe, aby utworzyć pliki .h z metadanych systemu Windows
 
 Winmdidl. exe i midlrt. exe umożliwiają interakcję na poziomie COM między C++ kodem natywnym i składnikami środowisko wykonawcze systemu Windows. Winmdidl. exe przyjmuje jako wejściowy plik. winmd zawierający metadane dla składnika środowisko wykonawcze systemu Windows i wyprowadza plik IDL. Midlrt. exe konwertuje ten plik IDL do plików nagłówkowych, C++ które może zużywać kod. Oba narzędzia działają w wierszu polecenia.
 
@@ -24,7 +24,7 @@ Te narzędzia są wymagane tylko do analizowania niestandardowych plików WinMD.
 
 ## <a name="location-of-the-tools"></a>Lokalizacja narzędzi
 
-Domyślnie w [Windows 8.1, winmdidl. exe i midlrt. exe znajdują się w folderze C:\Program Files (x86) \Windows\\Kits\8.1. Wersje narzędzi są również dostępne w folderach \bin\x86\ i \bin\x64\.
+Domyślnie w [Windows 8.1, winmdidl. exe i midlrt. exe znajdują się w folderze C:\Program Files (x86) \Windows Kits\8.1\\. Wersje narzędzi są również dostępne w folderach \bin\x86\ i \bin\x64\.
 
 ## <a name="winmdidl-command-line-arguments"></a>Winmdidl argumenty wiersza polecenia
 
@@ -36,13 +36,13 @@ Winmdidl.exe [/nologo] [/suppressversioncheck] [/time] [/outdir:dir] [/banner:fi
 Zapobiega wyświetlaniu przez konsolę komunikatu o prawach autorskich winmdidl i numer wersji.
 
 **/suppressversioncheck**<br/>
-Nie używany.
+Nie jest używany.
 
 **/Time**<br/>
 Wyświetla łączny czas wykonywania w danych wyjściowych konsoli.
 
-**/OutDir:** <em>katalog</em><br/>
-Określa katalog wyjściowy. Jeśli ścieżka zawiera spacje, użyj cudzysłowów. Domyślny katalog wyjściowy to  *\<dysk >* : \Users\\ *\<username >* \AppData\Local\VirtualStore\Program Files (x86) \Microsoft Visual Studio 12,0\\.
+**/OutDir:** <em>dir</em><br/>
+Określa katalog wyjściowy. Jeśli ścieżka zawiera spacje, użyj cudzysłowów. Domyślny katalog wyjściowy jest *\<dysku >* : \users\\ *\<username >* \AppData\Local\VirtualStore\Program Files (x86) \microsoft Visual Studio 12,0\\.
 
 **/banner:** <em>plik</em><br/>
 Określa plik, który zawiera niestandardowy tekst do dołączania do domyślnego komunikatu o prawach autorskich i numer wersji winmdidl w górnej części wygenerowanego pliku IDL. Jeśli ścieżka zawiera spacje, użyj cudzysłowów.
@@ -65,11 +65,11 @@ Poniższy przykład przedstawia polecenie winmdidl w wierszu polecenia programu 
 
 W następnym przykładzie przedstawiono wyświetlanie konsoli z winmdidl, która wskazuje, że operacja zakończyła się pomyślnie.
 
-**Generowanie c:\users\giraffe\documents\\\Test_for_winmdidl.idl**
+**Generowanie c:\users\giraffe\documents\\\ Test_for_winmdidl. idl**
 
 Następnie midlrt jest uruchamiany w wygenerowanym pliku IDL. Zwróć uwagę, że argument **metadata_dir** jest określony po nazwie pliku IDL. Ścieżka \WinMetadata\ jest wymagana — jest to lokalizacja dla systemu Windows. winmd.
 
-`C:\Program Files (x86)\Microsoft Visual Studio 12.0> midlrt "c:\users\mblome\documents\test_for_winmdidl.idl" /metadata_dir "C:\Windows\System32\WinMetadata"`
+`C:\Program Files (x86)\Microsoft Visual Studio 12.0> midlrt "c:\users\username\documents\test_for_winmdidl.idl" /metadata_dir "C:\Windows\System32\WinMetadata"`
 
 ## <a name="remarks"></a>Uwagi
 

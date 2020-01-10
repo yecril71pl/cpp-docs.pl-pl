@@ -1,21 +1,20 @@
 ---
 title: Tworzenie międzyplatformowych projektów w języku C++ w programie Visual Studio
 description: Jak skonfigurować, skompilować i debugować projekt CMake typu Open C++ Source w programie Visual Studio, który jest przeznaczony dla systemów Linux i Windows.
-author: mikeblome
 ms.topic: tutorial
-ms.date: 11/08/2019
-ms.openlocfilehash: 269c9e88133a492f66df7c7f81ab35424aff125d
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.date: 01/08/2020
+ms.openlocfilehash: 83d71d3078e892a51aef159b225fecec2b581f20
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303253"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75791766"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>Samouczek: Tworzenie C++ projektów dla wielu platform w programie Visual Studio
 
 Program Visual Studio C C++ i programowanie nie tylko dla systemu Windows. W tym samouczku pokazano, jak używać programu C++ Visual Studio do tworzenia aplikacji międzyplatformowych w systemach Windows i Linux. Jest on oparty na CMake, więc nie trzeba tworzyć ani generować projektów programu Visual Studio. Po otwarciu folderu zawierającego plik CMakeLists. txt program Visual Studio automatycznie konfiguruje ustawienia funkcji IntelliSense i kompilacji. Możesz szybko rozpocząć edytowanie, kompilowanie i debugowanie kodu lokalnie w systemie Windows. Następnie Zmień konfigurację tak, aby była taka sama w systemie Linux, a wszystko to w programie Visual Studio.
 
-Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
+Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 
 > [!div class="checklist"]
 > * Klonowanie projektu CMake Open Source z usługi GitHub
@@ -44,10 +43,10 @@ Ten samouczek zawiera informacje na temat wykonywania następujących czynności
     chmod +x cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh
     ```
 
-  * Możesz wyświetlić opcje uruchamiania skryptu z `-–help`. Zalecamy użycie opcji `–prefix`, aby określić instalację w ścieżce **/usr/local** , ponieważ jest to domyślna lokalizacja, w której program Visual Studio szuka CMAKE. Poniższy przykład przedstawia skrypt z systemem Linux x86_64. Zmień go zgodnie z potrzebami, jeśli używasz innej platformy docelowej.
+  * Możesz wyświetlić opcje uruchamiania skryptu z `-–help`. Zalecamy użycie opcji `–prefix`, aby określić instalację w ścieżce **/usr** , ponieważ **/usr/bin** jest domyślną lokalizacją, w której program Visual Studio szuka CMAKE. Poniższy przykład przedstawia skrypt z systemem Linux x86_64. Zmień go zgodnie z potrzebami, jeśli używasz innej platformy docelowej.
 
     ```cmd
-    sudo ./cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh --skip-license --prefix=/usr/local
+    sudo ./cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh --skip-license --prefix=/usr
     ```
 
 * Narzędzie git dla systemu Windows zainstalowane na komputerze z systemem Windows.
@@ -187,11 +186,11 @@ Ponieważ jest to aplikacja klasyczna, należy podać dodatkowe informacje konfi
 
    ![Okno stosu wywołań przedstawiające stos wywołań systemu Linux](media/cmake-bullet3-linux-callstack.png)
 
-## <a name="what-you-learned"></a>Zdobyte informacje
+## <a name="what-you-learned"></a>Podsumowanie
 
 W tym samouczku Sklonowano bazę kodu bezpośrednio z usługi GitHub. Skompilowane, wykonane i debugowane w systemie Windows bez modyfikacji. Następnie użyto tej samej bazy kodu z drobnymi zmianami konfiguracji, aby kompilować, uruchamiać i debugować na zdalnym komputerze z systemem Linux.
 
-## <a name="next-steps"></a>Kolejne kroki
+## <a name="next-steps"></a>Następne kroki
 
 Dowiedz się więcej o konfigurowaniu i debugowaniu projektów CMake w programie Visual Studio:
 

@@ -3,14 +3,12 @@ title: Co nowego w języku C++ w programie Visual Studio
 ms.date: 07/02/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: bde8b8e17c3186d22493f099a5f7d1b5a2646a67
-ms.sourcegitcommit: 2362d15b5eb18d27773c3f7522da3d0eed9e2571
+ms.openlocfilehash: 04cf4ecf447120302125c797bd70c00c62b5def9
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73754135"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75793974"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Co nowego w języku C++ w programie Visual Studio
 
@@ -184,7 +182,7 @@ Rozszerzenia intellicode teraz dostarcza jako składnik opcjonalny do **tworzeni
 
 IncrediBuild jest dołączany jako składnik opcjonalny do **tworzenia aplikacji klasycznych z C++**  obciążeniem. Monitor kompilacji IncrediBuild jest w pełni zintegrowany w środowisku IDE programu Visual Studio. Aby uzyskać więcej informacji, zobacz [Wizualizacja kompilacji za pomocą monitora kompilacji IncrediBuild i programu Visual Studio 2019](https://devblogs.microsoft.com/cppblog/visualize-your-build-with-incredibuilds-build-monitor-and-visual-studio-2019/).
 
-## <a name="debugging"></a>Debugowanie
+## <a name="debugging"></a>debugowanie
 
 - W C++ przypadku aplikacji uruchamianych w systemie Windows pliki PDB są teraz ładowane w osobnym procesie 64-bitowym. Ta zmiana dotyczy zakresu awarii spowodowanych przez debuger z uruchomioną pamięcią w przypadku debugowania aplikacji zawierających dużą liczbę modułów i plików PDB.
 
@@ -249,7 +247,7 @@ Program Visual Studio 2017 oferuje wiele aktualizacji i poprawek do C++ środowi
 
 W tej wersji zaktualizowaliśmy standardową bibliotekę i kompilator języka C++ o rozszerzoną obsługę funkcji języka C ++ 11 i C ++ 14, a także wstępną obsługę niektórych funkcji, które mają zostać uwzględnione w standardowym języku C ++ 17. Aby uzyskać szczegółowe informacje, zobacz [ C++ ulepszenia zgodności w programie Visual Studio 2017](cpp-conformance-improvements.md).
 
-##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15,5
+##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15.5
 
 Kompilator obsługuje około 75% funkcji, które są nowe w języku C++ 17, w tym powiązania strukturalne, `constexpr` wyrażeń lambda, `if constexpr`, zmiennych wbudowanych, składania wyrażeń i dodawania `noexcept` do systemu typów. Te funkcje są dostępne w opcji **/std: c++ 17** . Aby uzyskać więcej informacji, zobacz [ C++ ulepszenia zgodności w programie Visual Studio 2017](cpp-conformance-improvements.md)
 
@@ -257,7 +255,7 @@ Kompilator obsługuje około 75% funkcji, które są nowe w języku C++ 17, w ty
 
 Zestaw narzędzi kompilatora MSVC w programie Visual Studio w wersji 15,7 jest teraz zgodny ze C++ standardem. Aby uzyskać więcej informacji, zobacz temat [ogłaszanie: MSVC jest C++ zgodny z normą](https://devblogs.microsoft.com/cppblog/announcing-msvc-conforms-to-the-c-standard/) i [zgodnością języka firmy Microsoft C++ ](../visual-cpp-language-conformance.md).
 
-##### <a name="visual-studio-2017-version-158"></a>Visual Studio 2017 w wersji 15,8
+##### <a name="visual-studio-2017-version-158"></a>Visual Studio 2017 w wersji 15.8
 
 Przełącznik kompilatora [/Experimental: preprocesora](../build/reference/experimental-preprocessor.md) włącza nowy eksperymentalny preprocesor MSVC, który ostatecznie będzie zgodny ze wszystkimi mającymi zastosowanie C i C++ standardami. Aby uzyskać więcej informacji, zobacz [MSVC eksperymentalny preprocesora — Omówienie](../preprocessor/preprocessor-experimental-overview.md).
 
@@ -292,7 +290,7 @@ W tej wersji wprowadzono kilka ulepszeń optymalizacji, generowania kodu, przech
 
 Dodatkowe ulepszenia diagnostyki w kompilatorze. Aby uzyskać więcej informacji, zobacz [udoskonalenia diagnostyczne w programie Visual Studio 2017 15.3.0](https://devblogs.microsoft.com/cppblog/diagnostic-improvements-in-vs2017-15-3-0/).
 
-##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15,5
+##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15.5
 
 Wydajność C++ środowiska uruchomieniowego Visual w dalszym ciągu ulepsza się z powodu lepszej wygenerowanej jakości kodu. Teraz możesz po prostu ponownie skompilować kod i aplikacja działała szybciej. Niektóre optymalizacje kompilatora są zupełnie nowe, takie jak wektoryzacji warunkowych magazynów skalarnych, łączenie wywołań `sin(x)` i `cos(x)` do nowego `sincos(x)`oraz Usuwanie nadmiarowych instrukcji z Optymalizatora usługi SSA. Inne optymalizacje kompilatora to ulepszenia istniejących funkcji, takie jak heurystyka wektoryzator dla wyrażeń warunkowych, lepsza Optymalizacja pętli i zmiennoprzecinkowa minimalna/maksymalna codegena. Konsolidator ma nową i szybszą **/OPT: implementację zapory ICF** , co może skutkować do 9% czasu konsolidacji przyspieszenia i innych poprawek wydajności w konsolidacji przyrostowej. Aby uzyskać więcej informacji, zobacz [/opt (optymalizacje)](../build/reference/opt-optimizations.md) i [/Incremental (łączenie przyrostowo)](../build/reference/incremental-link-incrementally.md).
 
@@ -348,7 +346,7 @@ Aby zapoznać się z pełną listą ulepszeń biblioteki standardowej w programi
 - Udoskonalone testy debugowania `std::list`. Iteratory list sprawdzają teraz `operator->()`i `list::unique()` teraz oznacza Iteratory jako unieważnione.
 - Stałe zastosowania-Programowanie dla programu przydzielające w `tuple`.
 
-##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15,5
+##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15.5
 
 - `std::partition` teraz wywołuje predykat N razy zamiast N + 1 razy, zgodnie z wymaganiami standardowymi.
 - Program podejmie próbę uniknięcia, że w wersji 15,3 został na15,5 prawiony Magiczna liczba statycznych.
@@ -381,7 +379,7 @@ Aby uzyskać więcej informacji, [Zobacz C++ tabela zgodność z językiem Micro
 - Wyodrębniono SFINAE do domyślnych argumentów szablonu, które zmniejszają bałagan w porównaniu z typami zwracanymi i typami argumentów funkcji.
 - Testy debugowania w \<losowo\> teraz używają zwykłych maszyn w standardowej bibliotece zamiast wewnętrznej funkcji `_Rng_abort()`, która nazywa `fputs()` do **stderr**. Implementacja tej funkcji jest zachowywana na potrzeby zgodności binarnej, ale została usunięta w następnej binarnej niezgodnej wersji biblioteki standardowej.
 
-##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15,5
+##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15.5
 
 - Kilka standardowych funkcji biblioteki zostało dodanych, przestarzałe lub usunięte zgodnie ze standardem C++ 17. Aby uzyskać więcej informacji, zobacz [ C++ ulepszenia zgodności w programie Visual Studio](cpp-conformance-improvements.md#improvements_155).
 - Eksperymentalna obsługa następujących algorytmów równoległych:
@@ -406,7 +404,7 @@ Aby uzyskać więcej informacji, [Zobacz C++ tabela zgodność z językiem Micro
   - `rotate_copy`
   - `swap_ranges`
 
-##### <a name="visual-studio-2017-version-156"></a>Visual Studio 2017 w wersji 15,6
+##### <a name="visual-studio-2017-version-156"></a>Visual Studio 2017 wersja 15.6
 
 - \<memory_resource >
 - Podstawowe informacje o bibliotece v1
@@ -433,7 +431,7 @@ Aby uzyskać więcej informacji, [Zobacz C++ tabela zgodność z językiem Micro
 - `basic_string::find(char)` przeciążenia `traits::find` tylko raz. Wcześniej była zaimplementowana jako ogólne wyszukiwanie ciągu dla ciągu o długości 1.
 - `basic_string::operator==` teraz sprawdza rozmiar ciągu przed porównaniem zawartości ciągów znaków.
 - Usunięto sprzężenie kontrolne w `basic_string`, które było trudne do analizowania przez optymalizator kompilatora. W przypadku wszystkich krótkich ciągów wywołanie `reserve` nadal ma koszt różny od zera.
-- `std::vector` został przekroczony w celu poprawienia i wydajności: aliasowanie podczas operacji INSERT i emplace jest teraz prawidłowo obsługiwane zgodnie z wymaganiami Standard, silna gwarancja wyjątku jest teraz dostępna, gdy jest to wymagane przez standard za pośrednictwem `move_if_noexcept()` i innych logika i Insert i emplace wykonują mniejszą liczbę operacji elementu.
+- `std::vector` został przekroczony w celu poprawienia i wydajności: aliasowanie podczas operacji INSERT i emplace jest teraz prawidłowo obsługiwane zgodnie z wymaganiami Standard, silna gwarancja wyjątku jest teraz dostępna, gdy jest to wymagane przez standard za pośrednictwem `move_if_noexcept()` i innych logiki, a następnie INSERT i emplace wykonywanie mniejszej liczby operacji elementów.
 - Biblioteka C++ standardowa pozwala teraz uniknąć odwołujących się do pustych wskaźników ozdobnych.
 - Ulepszona wydajność `weak_ptr::lock()`.
 - Aby zwiększyć przepływność kompilatora C++ , nagłówki biblioteki standardowej można teraz uniknąć, włączając deklaracje dla zbędnych funkcji wewnętrznych kompilatora.
@@ -449,7 +447,7 @@ Aby uzyskać więcej informacji, [Zobacz C++ tabela zgodność z językiem Micro
 - `conjunction` i `disjunction` teraz tworzy wystąpienia N + 1 typów, a nie typy 2N + 2.
 - nie `std::function` już tworzy wystąpienia maszyn obsługi programu przydzielania dla każdego typu, który został wymazany, zwiększając przepływność i zmniejszając rozmiar. obj w programach, które przechodzą wiele różnych wyrażeń lambda do `std::function`.
 - `allocator_traits<std::allocator>` zawiera ręcznie wbudowane operacje `std::allocator`, skracając rozmiar kodu w kodzie, który współdziała z `std::allocator` przez `allocator_traits` (to jest w większości kodu).
-- Interfejs języka C++ 11 minimalnego alokatora jest teraz obsługiwany przez standardową bibliotekę wywołującą `allocator_traits` bezpośrednio, zamiast pakowania alokatora w wewnętrznej klasie `_Wrap_alloc`. Ta zmiana zmniejsza rozmiar kodu wygenerowanego na potrzeby obsługi alokatora, usprawnia w niektórych przypadkach możliwość optymalizacji w przypadku kontenerów biblioteki standardowej, a także udostępnia lepsze środowisko debugowania (ponieważ teraz można zobaczyć typ alokatora, a nie `_Wrap_alloc<your_allocator_type>` w Debuger).
+- Interfejs języka C++ 11 minimalnego alokatora jest teraz obsługiwany przez standardową bibliotekę wywołującą `allocator_traits` bezpośrednio, zamiast pakowania alokatora w wewnętrznej klasie `_Wrap_alloc`. Ta zmiana powoduje zmniejszenie rozmiaru kodu wygenerowanego na potrzeby obsługi alokatora, a także zwiększenie możliwości Optymalizatora w niektórych przypadkach o Kontenery biblioteki standardowej i zapewnia lepsze środowisko debugowania (ponieważ teraz zamiast `_Wrap_alloc<your_allocator_type>` w debugerze zobaczysz typ alokatora).
 - Usunięto Programowanie dla dostosowanych `allocator::reference`, które nie są faktycznie dozwolone do dostosowania. (Przydzielenie mogą sprawić, że kontenery korzystają z ozdobnych wskaźników, ale nie są to odwołania ozdobne).
 - Fronton kompilatora był sposobem na odwinięcie iteratorów debugowania w oparciu o pętle, zwiększając wydajność kompilacji debugowania.
 - `basic_string` wewnętrzna ścieżka zmniejszania dla `shrink_to_fit()` i `reserve()` nie znajduje się już w ścieżce ponownych alokacji operacji, co zmniejsza rozmiar kodu dla wszystkich elementów członkowskich.
@@ -463,7 +461,7 @@ Aby uzyskać więcej informacji, [Zobacz C++ tabela zgodność z językiem Micro
 - Stałe ostrzeżenia obcinania w przypadku korzystania z 32-bitowych przystawek w systemach 64-bitowych.
 - `std::vector` przenoszenie przydziału jest teraz bardziej wydajne w przypadku niePOCMAego przypadku alokatora, gdy jest to możliwe.
 
-##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15,5
+##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15.5
 
 - `basic_string<char16_t>` teraz korzysta z tych samych `memcmp`, `memcpy`i podobnych optymalizacji, które `basic_string<wchar_t>` zaangażują się.
 - Ograniczenie Optymalizatora, które uniemożliwiło wbudowanie wskaźników funkcji, uwidocznionych przez nasze działania "Unikaj kopiowania funkcji" w programie Visual Studio 2015 Update 3, obejść, przywracając wydajność `lower_bound(iter, iter, function pointer)`.
@@ -483,13 +481,13 @@ Aby uzyskać więcej informacji, [Zobacz C++ tabela zgodność z językiem Micro
 
 ### <a name="cpprest-sdk-290"></a>CPPRest SDK 2.9.0
 
-##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15,5
+##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15.5
 
 CPPRestSDK, Międzyplatformowy interfejs API sieci Web dla C++programu, został zaktualizowany do wersji 2.9.0. Aby uzyskać więcej informacji, zobacz [CppRestSDK 2.9.0 jest dostępny w witrynie GitHub](https://devblogs.microsoft.com/cppblog/cpprestsdk-2-9-0-is-available-on-github/).
 
 ### <a name="atl"></a>ATL
 
-##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15,5
+##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15.5
 
 - Jeszcze inny zestaw poprawek zgodności z wyszukiwaniem nazw
 - Istniejące konstruktory przenoszenia i operatory przypisania przenoszenia są teraz prawidłowo oznaczone jako niezgłaszane
@@ -511,7 +509,7 @@ CPPRestSDK, Międzyplatformowy interfejs API sieci Web dla C++programu, został 
 - Projekty Win32 znajdują się teraz w kategorii **pulpitu systemu Windows** w oknie dialogowym **Nowy projekt** .
 - Szablony **konsoli systemu Windows** i **aplikacji klasycznych** teraz tworzą projekty bez wyświetlania kreatora. W tej samej kategorii jest dostępny nowy **Kreator pulpitu systemu Windows** , w którym są wyświetlane te same opcje, co w przypadku starego kreatora **aplikacji konsolowej Win32** .
 
-##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15,5
+##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15.5
 
 Kilka C++ operacji, które używają aparatu IntelliSense do refaktoryzacji i nawigowania po kodzie działa znacznie szybciej. Następujące numery opierają się na rozwiązaniu Visual Studio chrom z projektami 3500:
 
@@ -580,11 +578,11 @@ Program Visual Studio 2017 wprowadza obsługę projektów CMake bez konwertowani
 
 - Dodano obsługę generatora Ninja CMake.
 
-##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15,5
+##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15.5
 
 - Dodano obsługę importowania istniejących pamięci podręcznych CMake.
 
-##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15,5
+##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15.5
 
 - Dodano wsparcie dla CMake 3,11, analiza kodu w projektach CMake, widok obiektów docelowych w Eksplorator rozwiązań, opcje generacji pamięci podręcznej i kompilowanie pojedynczego pliku. Aby uzyskać więcej informacji, zobacz [CMAKE Support in Visual Studio](https://devblogs.microsoft.com/cppblog/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) and [CMAKE projects in Visual Studio](../build/cmake-projects-in-visual-studio.md).
 
@@ -594,11 +592,11 @@ Zapewniamy obecnie bardziej zaawansowane środowisko instalacji oryginalnego obc
 
 Aby pomyślnie tworzyć projekty Win32 w obciążeniu C++ dla komputerów stacjonarnych, musisz zainstalować zarówno zestaw narzędzi, jak i zestaw SDK systemu Windows. Zainstaluj zalecane (wybrane) składniki programu **VC + + 2017 najnowsze 141 zestaw narzędzi (x86, x64)** i **Windows 10 SDK (10.0. nnnnn)** , aby upewnić się, że działa. Jeśli niezbędne narzędzia nie są zainstalowane, projekty nie zostaną utworzone pomyślnie, a Kreator przestanie działać.
 
-##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15,5
+##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15.5
 
 Narzędzia do C++ kompilacji wizualizacji (wcześniej dostępne jako produkt autonomiczny) są teraz uwzględniane jako obciążenie w Instalator programu Visual Studio. To obciążenie powoduje zainstalowanie tylko tych narzędzi, które C++ są wymagane do kompilowania projektów bez instalowania środowiska IDE programu Visual Studio. Dostępne są zarówno zestawy narzędzi wersji 140, jak i najnowsze 141. Zestaw narzędzi najnowsze 141 zawiera najnowsze ulepszenia programu Visual Studio 2017 w wersji 15,5. Aby uzyskać więcej informacji, zobacz [Visual Studio Build Tools teraz obejmują zestawy narzędzi program VS2017 i programu VS2015 MSVC](https://devblogs.microsoft.com/cppblog/visual-studio-build-tools-now-include-the-vs2017-and-vs2015-msvc-toolsets/).
 
-## <a name="linux-development-with-c"></a>Programowanie dla systemu Linux za pomocąC++
+## <a name="linux-development-with-c"></a>Programowanie dla systemu Linux przy użyciu języka C++
 
 Popularne rozszerzenie [Visual C++ for Linux Development](https://visualstudiogallery.msdn.microsoft.com/725025cf-7067-45c2-8d01-1e0fd359ae6e) stanowi obecnie cześć programu Visual Studio. Ta instalacja zawiera wszystko, czego potrzebujesz do tworzenia i debugowania aplikacji w języku C++ działających w środowisku systemu Linux.
 
@@ -606,7 +604,7 @@ Popularne rozszerzenie [Visual C++ for Linux Development](https://visualstudioga
 
 Wprowadzono ulepszenia w zakresie udostępniania kodu dla wielu platform i wizualizacji typów. Aby uzyskać więcej informacji, [Zobacz C++ udoskonalenia systemu Linux dla międzyplatformowego udostępniania kodu i wizualizacji typów](https://devblogs.microsoft.com/cppblog/linux-cross-platform-and-type-visualization/).
 
-##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15,5
+##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15.5
 
 - W obciążeniu systemu Linux dodano obsługę **rsync** jako alternatywę dla protokołu **SFTP** do synchronizowania plików na zdalnych maszynach z systemem Linux.
 - Dodano obsługę dla mikrokontrolerów ARM dla kompilacji krzyżowej. Aby włączyć ją w instalacji, wybierz pozycję Programowanie dla systemu **Linux C++ przy użyciu** obciążenia i wybierz opcję **Programowanie dla urządzeń osadzonych i IoT**. Ta opcja umożliwia dodanie narzędzi do kompilacji krzyżowej ARM i dokonanie instalacji. Aby uzyskać więcej informacji, zobacz [kompilacja między różnymi platformami w programie Visual Studio](https://devblogs.microsoft.com/cppblog/arm-gcc-cross-compilation-in-visual-studio/).
@@ -619,7 +617,7 @@ Aby uzyskać więcej informacji, zobacz [Konfigurowanie projektu systemu Linux C
 - Różne ulepszenia scenariuszy obciążeń systemu Linux. Aby uzyskać więcej informacji, [Zobacz C++ udoskonalenia obciążeń systemu Linux w systemie projektu, oknie konsoli Linux, rsync i dołączanie do procesu](https://devblogs.microsoft.com/cppblog/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/).
 - Funkcja IntelliSense dla nagłówków w zdalnych połączeniach systemu Linux. Aby uzyskać więcej informacji, zobacz [IntelliSense dla zdalnych nagłówków systemu Linux](https://devblogs.microsoft.com/cppblog/intellisense-for-remote-linux-headers/) i [Konfigurowanie projektu systemu Linux CMAKE](../linux/cmake-linux-project.md).
 
-## <a name="game-development-with-c"></a>Programowanie gier za pomocąC++
+## <a name="game-development-with-c"></a>Programowanie gier w języku C++
 
 Pełnych możliwości języka C++ można użyć do tworzenia profesjonalnych gier obsługiwanych przy użyciu zestawu funkcji DirectX lub Cocos2d.
 
@@ -633,9 +631,9 @@ Język C++ stanowi składnik opcjonalny obciążenia Aplikacja uniwersalna syste
 
 ## <a name="new-options-for-c-on-universal-windows-platform-uwp"></a>Nowe opcje dla C++ platforma uniwersalna systemu Windows (platformy UWP)
 
-Dostępne są teraz nowe opcje zapisywania i pakowania C++ aplikacji dla platforma uniwersalna systemu Windows i sklepu Windows: można użyć infrastruktury mostka programu Desktop do spakowania istniejącej aplikacji klasycznej lub obiektu com na potrzeby wdrożenia za pomocą Sklep Windows lub za pośrednictwem istniejących kanałów za pośrednictwem ładowania bezpośredniego. Nowe funkcje w systemie Windows 10 umożliwiają dodawanie funkcji platformy UWP do aplikacji klasycznych na różne sposoby. Aby uzyskać więcej informacji, zobacz [mostek Desktop](/windows/uwp/porting/desktop-to-uwp-root).
+Dostępne są teraz nowe opcje zapisywania i pakowania C++ aplikacji dla platforma uniwersalna systemu Windows i sklepu Windows: możesz użyć infrastruktury mostka programu Desktop do spakowania istniejącej aplikacji klasycznej lub obiektu com do wdrożenia za pośrednictwem sklepu Windows lub za pośrednictwem istniejących kanałów za pośrednictwem ładowania bezpośredniego. Nowe funkcje w systemie Windows 10 umożliwiają dodawanie funkcji platformy UWP do aplikacji klasycznych na różne sposoby. Aby uzyskać więcej informacji, zobacz [mostek Desktop](/windows/uwp/porting/desktop-to-uwp-root).
 
-##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15,5
+##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15.5
 
 Zostanie dodany szablon projektu **pakietu aplikacji systemu Windows** , który znacznie upraszcza pakowanie aplikacji klasycznych za pomocą mostka programu Desktop. Jest on dostępny w **pliku | Nowy | Projekt | Zainstalowane | Wizualizacja C++ | Platforma uniwersalna systemu Windows**. Aby uzyskać więcej informacji, zobacz [pakowanie aplikacji za pomocą programu Visual Studio (mostek Desktop)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
@@ -657,13 +655,13 @@ Podstawowe narzędzia do sprawdzania kodu C++ wymuszające stosowanie [podstawow
 
 - Dodano obsługę reguł związanych z zarządzaniem zasobami.
 
-##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15,5
+##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15.5
 
 - Nowe C++ wskazówki podstawowe sprawdzają poprawność wskaźnika inteligentnego, poprawnego zastosowania inicjatorów globalnych i oflagowania użycia konstrukcji, takich jak `goto` i złe rzutowanie.
 
 - Niektóre numery ostrzeżeń, które można znaleźć w wersji 15.3, nie są już dostępne w wersji 15.5. Ostrzeżenia te zostały zastąpione bardziej szczegółowymi operacjami sprawdzania.
 
-##### <a name="visual-studio-2017-version-156"></a>Visual Studio 2017 w wersji 15,6
+##### <a name="visual-studio-2017-version-156"></a>Visual Studio 2017 wersja 15.6
 
 - Dodano obsługę analizy pojedynczych plików i ulepszenia wydajności w czasie wykonywania analizy. Aby uzyskać więcej informacji, zobacz [ C++ udoskonalenia analizy statycznej dla programu Visual Studio 2017 15,6 (wersja zapoznawcza 2)](https://devblogs.microsoft.com/cppblog/c-static-analysis-improvements-for-visual-studio-2017-15-6-preview-2/)
 
@@ -674,11 +672,11 @@ Podstawowe narzędzia do sprawdzania kodu C++ wymuszające stosowanie [podstawow
 
 ## <a name="unit-testing"></a>Testowanie jednostek
 
-##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15,5
+##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15.5
 
-Google test adapter i zwiększanie wydajności. Adapter testowy jest teraz dostępny jako składniki **rozwoju pulpitu z C++**  obciążeniem i są zintegrowane z **Eksploratorem testów**. Obsługa narzędzia ctest jest dodawana do projektów CMAKE (przy użyciu otwartego folderu), ale pełna integracja z **Eksploratorem testów** nie jest jeszcze dostępna. Aby uzyskać więcej informacji, zobacz [pisanie testów jednostkowych dlaC++języka C/](/visualstudio/test/writing-unit-tests-for-c-cpp).
+Google test adapter i zwiększanie wydajności. Adapter testowy jest teraz dostępny jako składniki **rozwoju pulpitu z C++**  obciążeniem i są zintegrowane z **Eksploratorem testów**. Obsługa narzędzia ctest jest dodawana do projektów CMAKE (przy użyciu otwartego folderu), ale pełna integracja z **Eksploratorem testów** nie jest jeszcze dostępna. Aby uzyskać więcej informacji, zobacz [pisanie testów jednostkowych dla języka C/C++](/visualstudio/test/writing-unit-tests-for-c-cpp).
 
-##### <a name="visual-studio-2017-version-156"></a>Visual Studio 2017 w wersji 15,6
+##### <a name="visual-studio-2017-version-156"></a>Visual Studio 2017 wersja 15.6
 
 - Dodano obsługę w celu zwiększenia wydajności. Przetestuj obsługę bibliotek dynamicznych.
 - Szablon elementu zwiększania wydajności. test jest teraz dostępny w środowisku IDE.
