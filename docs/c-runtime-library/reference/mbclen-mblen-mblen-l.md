@@ -1,6 +1,7 @@
 ---
 title: _mbclen, mblen, _mblen_l, _mbclen_l
-ms.date: 01/22/2019
+description: Opisuje funkcje _mbclen, mblen, _mblen_l i _mbclen_l w bibliotece środowiska uruchomieniowego Microsoft C (CRT).
+ms.date: 01/08/2020
 api_name:
 - _mbclen
 - mblen
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-ms.openlocfilehash: 96775f513b33eb407981480c17cb609dd85383f6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4676d850448af386a5aface69f616a4ac6f85cbf
+ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952566"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75755068"
 ---
 # <a name="_mbclen-mblen-_mblen_l-_mbclen_l"></a>_mbclen, mblen, _mblen_l, _mbclen_l
 
@@ -79,29 +80,33 @@ int _mblen_l(
 
 ### <a name="parameters"></a>Parametry
 
-*c*<br/>
+\ *c*
 Znak wielobajtowy.
 
-*mbstr*<br/>
+*mbstr*\
 Adres sekwencji bajtów znaków wielobajtowych.
 
-*liczbą*<br/>
+*liczba*\
 Liczba bajtów do sprawdzenia.
 
-*ustawienie*<br/>
+\ *ustawień regionalnych*
 Ustawienia regionalne do użycia.
 
-## <a name="return-value"></a>Wartość zwracana
+## <a name="return-value"></a>Wartość zwrócona
 
-**_mbclen** zwraca wartość 1 lub 2, zależnie od tego, czy znak wielobajtowy *c* ma długość 1 lub 2 bajtów. Brak powrotu błędu dla **_mbclen**. Jeśli *mbstr* nie ma **wartości null**, **mblen** zwraca długość (w bajtach) znaku wielobajtowego. Jeśli *mbstr* ma **wartość null** lub wskazuje znak dwubajtowy o wartości null, **mblen** zwraca wartość 0. Gdy obiekt, który *mbstr* wskazuje, nie tworzy prawidłowego znaku wielobajtowego w ciągu pierwszych znaków *Count* , **mblen** zwraca-1.
+**_mbclen** i **_mbclen_l** zwracać 1 lub 2, zgodnie z długością znaku wielobajtowego *c*. Funkcje zawsze zwracają wartość 1 dla UTF-8, niezależnie od tego, czy *c* jest wielobajtowy, czy nie. Nie ma żadnego powrotu błędu dla **_mbclen**.
+
+Jeśli *mbstr* nie ma **wartości null**, **mblen** i **_mblen_l** zwracają Długość (w bajtach) znaku wielobajtowego. Funkcje **mblen** i **_mblen_l** działają poprawnie w kodowaniu UTF-8 i mogą zwracać wartość z zakresu od 1 do 3. Gdy *mbstr* ma **wartość null** (lub wskazuje znak dwubajtowy o wartości null), **mblen** i **_mblen_l** zwracają 0. Obiekt, który *mbstr* wskazuje, musi tworzyć prawidłowy znak wielobajtowy w obrębie pierwszych znaków *Count* , lub **mblen** i **_mblen_l** zwracać-1.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_mbclen** zwraca długość w bajtach znaku wielobajtowego *c*. Jeśli *c* nie wskazuje bajtu wiodącego znaku wielobajtowego, który jest określony przez niejawne wywołanie **_ismbblead**, wynik **_mbclen** jest nieprzewidywalny.
+Funkcja **_mbclen** zwraca długość w bajtach znaku wielobajtowego *c*. Jeśli *c* nie wskazuje bajtu wiodącego znaku wielobajtowego (zgodnie z niejawnym wywołaniem [_ismbblead](ismbblead-ismbblead-l.md), wynik **_mbclen** jest nieprzewidywalny.
 
-**mblen** zwraca długość w bajtach *mbstr* , jeśli jest prawidłowym znakiem wielobajtowym i określa ważność znaków wielobajtowych skojarzonych ze stroną kodową. **mblen** bada *liczbę* lub mniejszą liczbę bajtów zawartych w *mbstr*, ale nie więcej niż **MB_CUR_MAX** bajtów.
+**mblen** zwraca długość w bajtach *mbstr* , jeśli jest prawidłowym znakiem wielobajtowym. Określa również ważność znaków wielobajtowych skojarzonych ze stroną kodową. **mblen** bada *liczbę* lub mniejszą liczbę bajtów zawartych w *mbstr*, ale nie więcej niż **MB_CUR_MAX** bajtów.
 
-Wartość wyjściowa jest zależna od ustawienia kategorii **LC_CTYPE** ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocals](setlocale-wsetlocale.md) . Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. **_L** wersje sufiksów działają tak samo, ale w zamian używają parametru ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia kategorii **LC_CTYPE** ustawień regionalnych. Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. **_L** wersje sufiksów zachowują się tak samo, ale w zamian używają parametru ustawień regionalnych. Aby uzyskać więcej informacji, zobacz sekcję [setlocale](setlocale-wsetlocale.md) i [locale](../../c-runtime-library/locale.md).
+
+**_mbclen**, **_mblen_l**i **_Mbclen_l** są charakterystyczne dla firmy Microsoft, a nie częścią standardowej biblioteki C. Nie zalecamy korzystania z nich w przypadku, gdy potrzebny jest kod przenośny. W przypadku standardowej zgodności C zamiast tego należy użyć **mblen** lub **mbrlen** .
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -160,8 +165,9 @@ Length in bytes of NULL multibyte character 0: 0
 
 ## <a name="see-also"></a>Zobacz także
 
-[Klasyfikacja znaków](../../c-runtime-library/character-classification.md)<br/>
-[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[_mbccpy, _mbccpy_l](mbccpy-mbccpy-l.md)<br/>
-[strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)<br/>
+\ [klasyfikacji znaków](../../c-runtime-library/character-classification.md)
+\ [ustawień regionalnych](../../c-runtime-library/locale.md)
+[Interpretacja sekwencji znaków Wielobajtowych](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)\
+[_mbccpy, _mbccpy_l](mbccpy-mbccpy-l.md)\
+[mbrlen](mbrlen.md)\
+[strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)

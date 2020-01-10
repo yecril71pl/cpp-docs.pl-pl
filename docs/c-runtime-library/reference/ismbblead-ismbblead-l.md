@@ -1,6 +1,7 @@
 ---
 title: _ismbblead, _ismbblead_l
-ms.date: 11/04/2016
+description: Opisuje funkcje _ismbblead i _ismbblead_l biblioteki środowiska uruchomieniowego Microsoft C (CRT).
+ms.date: 01/08/2020
 api_name:
 - _ismbblead_l
 - _ismbblead
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - ismbblead_l function
 - _istlead function
 ms.assetid: 2abc6f75-ed5c-472e-bfd0-e905a1835ccf
-ms.openlocfilehash: c0f9ec748a86d5d1413cf4f881234d786c2a2d78
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6a7bb992eeeb9c66a7cbdea0ed34cf797d374617
+ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954065"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75755038"
 ---
 # <a name="_ismbblead-_ismbblead_l"></a>_ismbblead, _ismbblead_l
 
@@ -60,10 +61,10 @@ int _ismbblead_l(
 
 ### <a name="parameters"></a>Parametry
 
-*c*<br/>
+\ *c*
 Liczba całkowita do przetestowania.
 
-*ustawienie*<br/>
+\ *ustawień regionalnych*
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -76,7 +77,11 @@ Znaki wielobajtowe składają się z bajtu wiodącego, po którym następuje baj
 
 **_ismbblead** używa bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych. **_ismbblead_l** jest identyczny, z tą różnicą, że w zamian korzysta z przekazaną ustawieniami regionalnymi. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
+Jeśli ustawienia regionalne to UTF-8, **_ismbblead** i **_ismbblead_l** zawsze zwracają wartość 0 (false), niezależnie od tego, czy *c* jest bajtem wiodącym, czy nie.
+
+**_ismbblead** i **_ismbblead_l** są charakterystyczne dla firmy Microsoft, a nie częścią standardowej biblioteki C. Nie zalecamy korzystania z nich w przypadku, gdy potrzebny jest kod przenośny. W przypadku standardowej zgodności C zamiast tego należy użyć **mbrlen** .
+
+### <a name="generic-text-routine-mappings"></a>Mapowania procedury tekstu ogólnego
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -89,11 +94,12 @@ Znaki wielobajtowe składają się z bajtu wiodącego, po którym następuje baj
 |**_ismbblead**|\<Mbctype. h > lub \<mbstring. h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
 |**_ismbblead_l**|\<Mbctype. h > lub \<mbstring. h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
 
-\*Dla stałych manifestu dla warunków testowych.
+\* dla stałych manifestu dla warunków testowych.
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Klasyfikacja bajtów](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb, procedury](../../c-runtime-library/ismbb-routines.md)<br/>
+\ [klasyfikacji bajtów](../../c-runtime-library/byte-classification.md)
+[_ismbb procedury](../../c-runtime-library/ismbb-routines.md)\
+[mbrlen](mbrlen.md)
