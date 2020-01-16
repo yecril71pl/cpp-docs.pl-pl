@@ -2,12 +2,12 @@
 title: Konfigurowanie projektu C++ systemu Linux w programie Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 1cfaeb6611a27af498325739271d4dba38581dd6
-ms.sourcegitcommit: c53a3efcc5d51fc55fa57ac83cca796b33ae888f
+ms.openlocfilehash: 5d42ca587946d3b5adcbd3b6fe35a6c1e1bb9ae8
+ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71960662"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031372"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurowanie projektu systemu Linux
 
@@ -51,13 +51,13 @@ Aby zmienić ustawienia odnoszące się do zdalnego komputera z systemem Linux, 
 
    ::: moniker range="vs-2019"
 
-   **Visual Studio 2019 w wersji 16,1**: aby kierować podsystem Windows dla systemu Linux, kliknij strzałkę w dół dla zestawu **narzędzi platformy** i wybierz pozycję **WSL_1_0**. Inne opcje zdalne znikną, a ścieżka do domyślnej powłoki WSL pojawi się w ich miejscu:
+   **Visual Studio 2019 w wersji 16,1**: aby kierować podsystem Windows dla systemu Linux, kliknij strzałkę w dół dla zestawu **narzędzi platformy** i wybierz **WSL_1_0**. Inne opcje zdalne znikną, a ścieżka do domyślnej powłoki WSL pojawi się w ich miejscu:
 
    ![Maszyna kompilacji WSL](media/wsl-remote-vs2019.png)
 
    W przypadku równoległych instalacji WSL można tutaj określić inną ścieżkę. Więcej informacji o zarządzaniu wieloma dystrybucjemi znajduje się w temacie [Zarządzanie i Konfigurowanie podsystemu systemu Windows w systemie Linux](/windows/wsl/wsl-config#set-a-default-distribution).
 
-   Na stronie **debugowanie** **Właściwości** > można określić inny cel dla debugowania.
+   Możesz określić inny cel dla debugowania na stronie **Właściwości konfiguracji** > **debugowanie** .
 
    ::: moniker-end
 
@@ -78,7 +78,7 @@ Ta sekcja nie ma zastosowania, jeśli celem jest WSL.
 
 Podczas kompilowania w systemach zdalnych pliki źródłowe na komputerze deweloperskim są kopiowane do komputera z systemem Linux i kompilowane w tym miejscu. Domyślnie wszystkie źródła w projekcie programu Visual Studio są kopiowane do lokalizacji ustawionych w powyższych ustawieniach. Można jednak również dodać do listy dodatkowe źródła lub skopiować źródła, które są domyślnie wyłączone dla projektu reguł programu make.
 
-- **Źródła do skopiowania** określają, które źródła są kopiowane do komputera zdalnego. Domyślnie **\@ (SourcesToCopyRemotely)** jest wartością domyślną dla wszystkich plików kodu źródłowego w projekcie, ale nie zawiera żadnych plików zasobów/zasobu, takich jak obrazy.
+- **Źródła do skopiowania** określają, które źródła są kopiowane do komputera zdalnego. Domyślnie **\@(SourcesToCopyRemotely)** jest wartością domyślną dla wszystkich plików kodu źródłowego w projekcie, ale nie zawiera żadnych plików zasobów/zasobu, takich jak obrazy.
 
 - **Źródła kopiowania** można włączać i wyłączać w celu włączenia i wyłączenia kopiowania plików źródłowych na komputer zdalny.
 
@@ -95,6 +95,9 @@ Ponieważ cała kompilacja odbywa się na komputerze zdalnym (lub WSL), kilka do
 ## <a name="remote_intellisense"></a>Funkcja IntelliSense dla nagłówków w systemach zdalnych
 
 Po dodaniu nowego połączenia w **Menedżerze połączeń**program Visual Studio automatycznie wykrywa katalogi dołączania dla kompilatora w systemie zdalnym. Program Visual Studio następnie Zips pliki i skopiuje je do katalogu na lokalnym komputerze z systemem Windows. Po wykonaniu tej operacji, za każdym razem, gdy korzystasz z tego połączenia w projekcie programu Visual Studio lub CMake, nagłówki w tych katalogach są używane do udostępniania technologii IntelliSense.
+
+> [!NOTE]
+> W programie Visual Studio 2019 w wersji 16,5 lub nowszej, zdalna kopia nagłówka została zoptymalizowana. Nagłówki są teraz kopiowane na żądanie podczas otwierania projektu systemu Linux lub konfigurowania CMake dla docelowego systemu Linux. Kopia odbywa się w tle dla każdego projektu, na podstawie określonych kompilatorów projektu. Aby uzyskać więcej informacji, zobacz [ulepszenia dokładności i wydajności funkcji IntelliSense systemu Linux](https://devblogs.microsoft.com/cppblog/improvements-to-accuracy-and-performance-of-linux-intellisense/).
 
 Ta funkcja jest zależna od komputera z systemem Linux z zainstalowanym zip. Plik zip można zainstalować za pomocą tego polecenia apt-get:
 

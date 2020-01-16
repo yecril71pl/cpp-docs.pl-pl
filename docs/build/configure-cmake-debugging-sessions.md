@@ -4,12 +4,12 @@ description: Opisuje sposób używania programu Visual Studio do konfigurowania 
 ms.date: 01/13/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: ff1de8241c2489e675f82f469f1cf697a72f5034
-ms.sourcegitcommit: 275b71219d2a8bd5d78f87e21dd909e9968c2f44
+ms.openlocfilehash: 5e627f02b5245baede6e92268cedfc43957f3abc
+ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75946811"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031325"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Konfigurowanie sesji debugowania narzędzia CMake
 
@@ -73,7 +73,7 @@ Istnieje wiele właściwości *uruchamiania. vs. JSON* , które obsługują wszy
 
 ## <a name="launchvsjson-reference-for-remote-linux-projects"></a>Dokumentacja uruchamiania. vs. JSON dla zdalnych projektów systemu Linux
 
-Następujące właściwości są specyficzne dla **konfiguracji debugowania zdalnego**. Możesz również [wysyłać polecenia bezpośrednio do GDB](https://github.com/microsoft/MIEngine/wiki/Executing-custom-gdb-lldb-commands) i [włączać rejestrowanie MIEngine](https://github.com/microsoft/MIEngine/wiki/Logging). Te właściwości pozwalają zobaczyć, jakie polecenia są wysyłane do GDB, jakie wyjściowe GDB zwraca i jak długo trwa każde polecenie.
+Następujące właściwości są specyficzne dla **konfiguracji debugowania zdalnego**. Możesz również [wykonać niestandardowe polecenia GDB](https://github.com/microsoft/MIEngine/wiki/Executing-custom-gdb-lldb-commands) , aby wysyłać polecenia bezpośrednio do źródłowego debugera, i [włączyć rejestrowanie MIEngine](https://github.com/microsoft/MIEngine/wiki/Logging) , aby zobaczyć, jakie polecenia są wysyłane do GDB, jakie dane wyjściowe GDB zwraca i jak długo trwa każde polecenie.
 
 - `cwd`: bieżący katalog roboczy na potrzeby znajdowania zależności i innych plików na maszynie zdalnej. `${debugInfo.defaultWorkingDirectory}` można użyć makra. Wartość domyślna to zdalny element główny obszaru roboczego, chyba że zostanie zastąpiony w *CMakeLists. txt*. Ta właściwość jest używana tylko w przypadku konfiguracji zdalnych; `currentDir` służy do ustawiania bieżącego katalogu uruchamiania aplikacji dla projektu lokalnego.
 
