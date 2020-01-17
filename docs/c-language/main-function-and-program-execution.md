@@ -9,16 +9,16 @@ helpviewer_keywords:
 - main function
 - programs [C++], terminating
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
-ms.openlocfilehash: d16f8a5b7b6b23ad90aad886bbb9654e706549cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28b0d826dc02376f952d3522f2f037eacd298b8e
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325822"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123945"
 ---
 # <a name="main-function-and-program-execution"></a>Funkcja main i wykonywanie programu
 
-Każdy program języka C ma funkcję (główną) podstawowy musi mieć nazwę **głównego**. Jeśli w swoim kodzie przestrzegasz modelu programowania Unicode, możesz użyć wersja znaków dwubajtowych **głównego**, **wmain**. **Głównego** funkcji służy jako punkt początkowy podczas wykonywania programu. Zwykle kontroluje wykonywanie programu przez kierowanie wywołań do innych funkcji programu. Program zwykle zatrzymuje wykonywanie na końcu **głównego**, chociaż może zostać przerwany w innych punktach programu różnych powodów. Niekiedy po wykryciu określonego błędu, możesz chcieć wymusić przerwanie programu. Aby to zrobić, należy użyć **wyjść** funkcji. Zobacz *odwołanie do biblioteki wykonawczej* informacji na temat i przykłady dotyczące używania [wyjść](../c-runtime-library/reference/exit-exit-exit.md) funkcji.
+Każdy program C ma podstawową (główną) funkcję, która musi mieć nazwę **Main**. Jeśli kod jest zgodny z modelem programowania **Unicode, można**użyć szerokiej wersji **wmain**. Funkcja **Main** służy jako punkt wyjścia do wykonywania programu. Zwykle kontroluje wykonywanie programu przez kierowanie wywołań do innych funkcji programu. Program zwykle zatrzymuje wykonywanie na końcu **głównej**, chociaż może zakończyć się w innych punktach w programie z różnych powodów. Niekiedy po wykryciu określonego błędu, możesz chcieć wymusić przerwanie programu. Aby to zrobić, użyj funkcji **Exit** . Zobacz *odwołanie do biblioteki wykonawczej* , aby uzyskać informacje na temat i przykład przy użyciu funkcji [Exit](../c-runtime-library/reference/exit-exit-exit.md) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,15 +28,15 @@ main( int argc, char *argv[ ], char *envp[ ] )
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje w kodzie źródłowym programu wykonują co najmniej jedno określone zadanie. **Głównego** funkcja może wywołać te funkcje, aby wykonać poszczególne zadania. Gdy **głównego** wywołuje inną funkcję, przekazuje jej sterowanie wykonaniem funkcji, dzięki czemu zaczyna się od pierwszej instrukcji danej funkcji. Funkcja zwraca sterowanie do **głównego** podczas `return` zostaje wykonana instrukcja lub po osiągnięciu końca funkcji.
+Funkcje w kodzie źródłowym programu wykonują co najmniej jedno określone zadanie. Funkcja **Main** może wywoływać te funkcje, aby wykonać odpowiednie zadania. Gdy **Główne** wywołuje inną funkcję, przekazuje sterowanie wykonywaniem do funkcji, tak aby wykonywanie rozpoczyna się od pierwszej instrukcji w funkcji. Funkcja zwraca sterowanie do elementu **głównego** , gdy zostanie wykonana instrukcja `return` lub gdy zostanie osiągnięty koniec funkcji.
 
-Można zadeklarować dowolną funkcję, w tym **głównego**, aby miała parametry. Termin „parametr” lub „parametr formalny” dotyczy identyfikatora, który otrzymuje wartość przekazaną do funkcji. Zobacz [parametry](../c-language/parameters.md) instrukcje dotyczące przekazywania argumentów do parametrów. Gdy jedna funkcja wywołuje drugą, wywoływana funkcja otrzymuje wartości swoich parametrów od funkcji wywołującej. Wartości te są nazywane „argumentami”. Możesz deklarować Parametry formalne dla **głównego** tak, że może ona otrzymywać argumenty z wiersza polecenia, używając następującego formatu:
+Można zadeklarować dowolną funkcję, w tym **Main**, w celu posiadania parametrów. Termin „parametr” lub „parametr formalny” dotyczy identyfikatora, który otrzymuje wartość przekazaną do funkcji. Aby uzyskać informacje na temat przekazywania argumentów do parametrów, zobacz [Parametry](../c-language/parameters.md) . Gdy jedna funkcja wywołuje drugą, wywoływana funkcja otrzymuje wartości swoich parametrów od funkcji wywołującej. Wartości te są nazywane „argumentami”. Można zadeklarować formalne parametry do **Main** , aby można było odbierać argumenty z wiersza polecenia przy użyciu tego formatu:
 
-Jeśli chcesz przekazać informacje do **głównego** funkcji, parametry są tradycyjnie nazywane `argc` i `argv`, mimo że kompilator języka C nie wymaga tych nazw. Typy dla `argc` i `argv` są zdefiniowane przez język C. Tradycyjnie, jeśli trzeci parametr jest przekazywany do **głównego**, ten parametr nosi nazwę `envp`. Przykłady w dalszej części sekcji pokazują, w jaki sposób używać tych trzech parametrów, aby uzyskać dostęp do argumentów wiersza polecenia. W poniższych sekcjach opisano te parametry.
+Gdy chcesz przekazać informacje do funkcji **Main** , parametry są tradycyjnie nazwane `argc` i `argv`, chociaż kompilator języka C nie wymaga tych nazw. Typy dla `argc` i `argv` są zdefiniowane przez język C. Tradycyjnie, jeśli trzeci parametr jest przesyłany do **Main**, ten parametr ma nazwę `envp`. Przykłady w dalszej części sekcji pokazują, w jaki sposób używać tych trzech parametrów, aby uzyskać dostęp do argumentów wiersza polecenia. W poniższych sekcjach opisano te parametry.
 
-Zobacz [korzystanie z wmain](../c-language/using-wmain.md) opis wersja znaków dwubajtowych **głównego**.
+Aby uzyskać opis szerokiej **wersji programu,** zobacz [using wmain](../c-language/using-wmain.md) .
 
 ## <a name="see-also"></a>Zobacz także
 
-[main: uruchamianie programu](../cpp/main-program-startup.md)<br/>
+[Funkcja Main i argumenty wiersza poleceniaC++()](../cpp/main-function-command-line-args.md)\
 [Analizowanie argumentów wiersza polecenia języka C](../c-language/parsing-c-command-line-arguments.md)

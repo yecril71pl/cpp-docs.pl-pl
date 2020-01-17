@@ -1,26 +1,42 @@
 ---
-title: Funkcja Main i argumenty wiersza polecenia (C++)
-description: Funkcja Main jest punktem wejścia dla C++ programu.
-ms.date: 12/10/2019
+title: argumenty funkcji main i wiersza polecenia (C++)
+description: Funkcja main jest punktem wejścia dla C++ programu.
+ms.date: 01/15/2019
 ms.assetid: c6568ee6-40ab-4ae8-aa44-c99e232f64ac
-ms.openlocfilehash: 95e774700c63dc815f6d814bfda84a38a38d4e6e
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+no-loc:
+- main
+- wmain
+- inline
+- static
+- _tmain
+- void
+- exit
+- argc
+- argv
+- envp
+- CreateProcess
+- GetModuleFileName
+- char
+- wchar_t
+- extern
+ms.openlocfilehash: 33753e30304a9bb63c135979d3f20098e6b6401a
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302399"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123906"
 ---
-# <a name="main-function-and-command-line-arguments"></a>Funkcja Main i argumenty wiersza polecenia
+# <a name="opno-locmain-function-and-command-line-arguments"></a>main funkcje i argumenty wiersza polecenia
 
-Wszystkie C++ programy muszą mieć funkcję `main`. Jeśli spróbujesz skompilować C++ projekt *. exe* bez funkcji Main, kompilator zgłosi błąd. (Biblioteki dołączane dynamicznie i biblioteki statyczne nie mają funkcji `main`). Funkcja `main` to miejsce, w którym kod źródłowy rozpoczyna wykonywanie, ale zanim program przejdzie do funkcji `main`, wszystkie elementy statycznej klasy bez jawnych inicjatorów mają ustawioną wartość zero. W firmie C++Microsoft, globalne obiekty statyczne są również inicjowane przed wprowadzeniem do `main`. Kilka ograniczeń dotyczy funkcji `main`, która nie ma zastosowania do innych C++ funkcji. Funkcja `main`:
+Wszystkie C++ programy muszą mieć funkcję `main`. Jeśli spróbujesz skompilować C++ projekt *. exe* bez funkcji main, kompilator zgłosi błąd. (Biblioteki dołączane dynamicznie i biblioteki static nie mają funkcji `main`). Funkcja `main` to miejsce, w którym kod źródłowy rozpoczyna wykonywanie, ale zanim program przejdzie do funkcji `main`, wszyscy członkowie klasy static bez jawnych inicjatorów mają ustawioną wartość zero. W firmie C++Microsoft obiekty globalne static są również inicjowane przed wprowadzeniem do `main`. Kilka ograniczeń dotyczy funkcji `main`, która nie ma zastosowania do innych C++ funkcji. Funkcja `main`:
 
 - Nie może być przeciążony (zobacz [przeciążanie funkcji](function-overloading.md)).
-- Nie można zadeklarować jako **inline**.
-- Nie można zadeklarować jako **static**.
+- Nie można zadeklarować jako **inline** .
+- Nie można zadeklarować jako **static** .
 - Nie można pobrać adresu.
 - Nie można wywołać.
 
-Składnia deklaracji dla `main` jest następująca:
+Funkcja main nie ma deklaracji, ponieważ jest wbudowana w język. Jeśli tak, Składnia deklaracji dla `main` wyglądać następująco:
 
 ```cpp
 int main();
@@ -38,7 +54,7 @@ int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);
 
 Można również użyć `_tmain`, który jest zdefiniowany w używanie TCHAR. h. `_tmain` jest rozpoznawana jako `main`, chyba że _UNICODE jest zdefiniowany. W takim przypadku `_tmain` jest rozpoznawana jako `wmain`.
 
-Jeśli nie określono wartości zwracanej, kompilator dostarcza wartość zwracaną zero. Alternatywnie można zadeklarować `main` i `wmain` funkcje jako zwraca **void** (brak wartości zwracanej). Jeśli zadeklarujesz `main` lub `wmain` jako zwraca **void**, nie można zwrócić kodu zakończenia do procesu nadrzędnego lub systemu operacyjnego za pomocą instrukcji [Return](../cpp/return-statement-in-program-termination-cpp.md) . Aby zwrócić kod zakończenia, gdy `main` lub `wmain` jest zadeklarowana jako **void**, należy użyć funkcji [Exit](../cpp/exit-function.md) .
+Jeśli nie określono wartości zwracanej, kompilator dostarcza wartość zwracaną zero. Alternatywnie można zadeklarować `main` i `wmain` funkcje jako zwracające **void** (brak wartości zwracanej). Jeśli zadeklarujesz `main` lub `wmain` jako zwracające **void** , nie można zwrócić kodu exit do procesu nadrzędnego lub systemu operacyjnego za pomocą instrukcji [Return](../cpp/return-statement-in-program-termination-cpp.md) . Aby zwrócić kod exit, gdy `main` lub `wmain` jest zadeklarowana jako **void** , należy użyć funkcji [exit](../cpp/exit-function.md) .
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
@@ -54,7 +70,7 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
 Definicje argumentów są następujące:
 
 *argc*<br/>
-Liczba całkowita, która zawiera liczbę argumentów, które obserwują w *argv*. Parametr *argc* jest zawsze większy lub równy 1.
+Liczba całkowita, która zawiera liczbę argumentów, które obowiązują w *argv* . Parametr *argc* jest zawsze większy lub równy 1.
 
 *argv*<br/>
 Tablica ciągów zakończonych znakiem null, która reprezentuje argumenty wiersza polecenia wprowadzone przez użytkownika programu. Zgodnie z Konwencją `argv[0]` jest poleceniem, z którym wywoływany jest program, `argv[1]` jest pierwszym argumentem wiersza polecenia i tak dalej, aż do `argv[argc]`, który ma zawsze wartość NULL. Zobacz [Dostosowywanie przetwarzania wiersza polecenia](../cpp/customizing-cpp-command-line-processing.md) , aby uzyskać informacje dotyczące pomijania przetwarzania w wierszu polecenia.
@@ -62,18 +78,18 @@ Tablica ciągów zakończonych znakiem null, która reprezentuje argumenty wiers
 Pierwszy argument wiersza polecenia jest zawsze `argv[1]`, a ostatni z nich jest `argv[argc - 1]`.
 
 > [!NOTE]
-> Zgodnie z Konwencją `argv[0]` jest poleceniem, z którym wywoływany jest program. Istnieje jednak możliwość duplikowania procesu przy użyciu metody [CreateProcess](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew) , a jeśli używasz zarówno pierwszego, jak i drugiego argumentu (*lpApplicationName* i *lpCommandLine*), `argv[0]` nie może być nazwą pliku wykonywalnego; Użyj [Funkcja GetModuleFileName](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew) , aby pobrać nazwę pliku wykonywalnego i jego w pełni kwalifikowaną ścieżkę.
+> Zgodnie z Konwencją `argv[0]` jest poleceniem, z którym wywoływany jest program. Istnieje jednak możliwość duplikowania procesu przy użyciu [CreateProcess](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew) , a jeśli używasz zarówno pierwszego, jak i drugiego argumentu (*lpApplicationName* i *lpCommandLine*), `argv[0]` nie może być nazwą pliku wykonywalnego; Użyj [GetModuleFileName](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew) , aby pobrać nazwę pliku wykonywalnego i jego w pełni kwalifikowaną ścieżkę.
 
 **Microsoft Specific**
 
 *envp*<br/>
-Tablica *envp* , która jest typowym rozszerzeniem w wielu systemach UNIX, jest używana w firmie Microsoft C++. Jest to tablica ciągów reprezentujących zestaw zmiennych w środowisku użytkownika. Tablica jest zakończona wpisem o NULL. Może być zadeklarowany jako tablica wskaźników do **char** (`char *envp[]`) lub jako wskaźnik do wskaźników do **char** (`char **envp`). Jeśli program używa `wmain` zamiast `main`, użyj typu danych **wchar_t** zamiast **char**. Blok środowiska przeszedł do `main` i `wmain` jest kopią zamrożoną bieżącego środowiska. Jeśli następnie zmienisz środowisko za pośrednictwem wywołania do `putenv` lub `_wputenv`, bieżące środowisko (zwracane przez `getenv` lub `_wgetenv` oraz zmienna `_environ` lub `_wenviron`) ulegnie zmianie, ale blok wskazywany przez envp nie zmieni się. Zobacz [Dostosowywanie przetwarzania wiersza polecenia](../cpp/customizing-cpp-command-line-processing.md) , aby uzyskać informacje dotyczące pomijania przetwarzania środowiska. Ten argument jest zgodny ze standardem ANSI w języku C, ale nie w języku C++.
+Tablica *envp* , która jest typowym rozszerzeniem w wielu systemach UNIX, jest używana w firmie Microsoft C++. Jest to tablica ciągów reprezentujących zestaw zmiennych w środowisku użytkownika. Tablica jest zakończona wpisem o NULL. Może być zadeklarowany jako tablica wskaźników do **char** (`char *envp[]`) lub jako wskaźnik do wskaźników do **char** (`char **envp`). Jeśli program używa `wmain` zamiast `main`, użyj typu danych **wchar_t** zamiast **char** . Blok środowiska przeszedł do `main` i `wmain` jest kopią zamrożoną bieżącego środowiska. Jeśli następnie zmienisz środowisko za pośrednictwem wywołania do `putenv` lub `_wputenv`, bieżące środowisko (zwracane przez `getenv` lub `_wgetenv` oraz zmienna `_environ` lub `_wenviron`) ulegnie zmianie, ale blok wskazywany przez envp nie ulegnie zmianie. Zobacz [Dostosowywanie przetwarzania wiersza polecenia](../cpp/customizing-cpp-command-line-processing.md) , aby uzyskać informacje dotyczące pomijania przetwarzania środowiska. Ten argument jest zgodny ze standardem ANSI w języku C, ale nie w języku C++.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak używać argumentów *argc*, *argv*i *envp* do `main`:
+Poniższy przykład pokazuje, jak używać argumentów *argc* , *argv* i *envp* do `main`:
 
 ```cpp
 // argument_definitions.cpp
@@ -147,7 +163,7 @@ W poniższej tabeli przedstawiono przykładowe dane wejściowe i oczekiwane dane
 
 ### <a name="results-of-parsing-command-lines"></a>Wyniki analizy wierszy poleceń
 
-|Wprowadzanie w wierszu polecenia|argv [1]|argv [2]|argv [3]|
+|Wprowadzanie w wierszu polecenia|argv[1]|argv[2]|argv[3]|
 |-------------------------|---------------|---------------|---------------|
 |`"abc" d e`|`abc`|`d`|`e`|
 |`a\\b d"e f"g h`|`a\\b`|`de fg`|`h`|
@@ -174,7 +190,7 @@ Jeśli program nie przyjmuje argumentów wiersza polecenia, można zaoszczędzi�
 
 Podobnie, jeśli nie masz dostępu do tabeli środowiska za pomocą argumentu `envp`, możesz podać własną pustą procedurę, która będzie używana zamiast `_setenvp`, procedury przetwarzania środowiska. Podobnie jak w przypadku funkcji `_setargv`, `_setenvp` musi być zadeklarowany jako **extern "C"** .
 
-Program może nawiązywać wywołania do `spawn` lub `exec` z rodziny procedur w bibliotece wykonawczej C. W takim przypadku nie należy pomijać procedury przetwarzania środowiska, ponieważ ta procedura jest używana do przekazywania środowiska z procesu nadrzędnego do procesu podrzędnego.
+Program może nawiązywać wywołania do `spawn` lub `exec` z rodziny procedur w bibliotece wykonawczej C. Jeśli tak nie jest, nie należy pomijać procedury przetwarzania środowiska, ponieważ ta procedura jest używana do przekazywania środowiska z procesu nadrzędnego do procesu podrzędnego.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 

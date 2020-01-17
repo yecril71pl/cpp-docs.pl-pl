@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arrays [C++], array-element initializers
 - aggregate initializers [C++]
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-ms.openlocfilehash: fd926177dd7540d8dc1e8512e9f17e20a0b8238c
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.openlocfilehash: 2cc68f2384402ce1eb3ac06b414f597a6b3951f0
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661614"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123971"
 ---
 # <a name="initializers"></a>Inicjatory
 
@@ -81,11 +81,11 @@ Inicjalizacja wartością zerową to ustawienie zmiennej na wartość zero nieja
 
 - Zmienne liczbowe są inicjowane na wartość 0 (lub 0,0 lub 0,0000000000 itp.).
 
-- Zmienne char są inicjowane `'\0'`do.
+- Zmienne char są inicjowane w celu `'\0'`.
 
 - Wskaźniki są inicjowane do **nullptr**.
 
-- W tablicach [, klasach](../standard-library/is-pod-class.md) , strukturach i związkach ich składowe zostały zainicjowane do wartości zerowej.
+- W tablicach [, klasach,](../standard-library/is-pod-class.md) strukturach i związkach ich składowe zostały zainicjowane do wartości zerowej.
 
 Inicjalizacja z wartością zerową odbywa się w różnym czasie:
 
@@ -173,7 +173,7 @@ int main() {
 }
 ```
 
-Aby uzyskać więcej informacji na temat inicjowania globalnych obiektów statycznych, zobacz [dodatkowe zagadnienia dotyczące uruchamiania](../cpp/additional-startup-considerations.md).
+Aby uzyskać więcej informacji na temat inicjowania globalnych obiektów statycznych, zobacz [Główne funkcje i argumenty wiersza polecenia](main-function-command-line-args.md).
 
 ### <a name="value-initialization"></a>Inicjowanie wartości
 
@@ -224,7 +224,7 @@ Inicjalizacja kopiowania jest inicjalizacją jednego obiektu przy użyciu innego
 
 - niestatyczny element członkowski danych jest inicjowany przy użyciu znaku równości
 
-- elementy członkowskie klasy, struktury i Unii są inicjowane przez inicjalizację kopiowania podczas inicjowania agregacji. Przykłady [](#agginit) można znaleźć w temacie Inicjalizacja agregacji.
+- elementy członkowskie klasy, struktury i Unii są inicjowane przez inicjalizację kopiowania podczas inicjowania agregacji. Przykłady można znaleźć w temacie [Inicjalizacja agregacji](#agginit) .
 
 Poniższy kod pokazuje kilka przykładów inicjalizacji kopiowania:
 
@@ -427,7 +427,7 @@ myArr3: 8 9 10 0 0
 ```
 
 > [!IMPORTANT]
-> Elementy członkowskie tablicy, które są zadeklarowane, ale nie są jawnie inicjowane podczas inicjowania agregacji `myArr3` , są inicjowane od zera, jak powyżej.
+> Elementy członkowskie tablicy, które są zadeklarowane, ale nie są jawnie inicjowane podczas inicjowania agregacji, są inicjowane od zera, jak w `myArr3` powyżej.
 
 #### <a name="initializing-unions-and-structs"></a>Inicjowanie Unii i struktur
 
@@ -511,7 +511,7 @@ Zmienna typu odwołania może być deklarowana bez inicjatorów tylko w następu
     int func( int& );
     ```
 
-- Deklaracje typu funkcji zwracanej. Przykład:
+- Deklaracje typu funkcji zwracanej. Na przykład:
 
     ```cpp
     int& func( int& );
@@ -523,7 +523,7 @@ Zmienna typu odwołania może być deklarowana bez inicjatorów tylko w następu
     class c {public:   int& i;};
     ```
 
-- Deklaracja zmiennej jawnie określona jako **extern**. Przykład:
+- Deklaracja zmiennej jawnie określona jako **extern**. Na przykład:
 
     ```cpp
     extern int& iVal;
@@ -534,7 +534,7 @@ Podczas inicjowania zmiennej typu odwołania, kompilator używa wykresu decyzji 
 ![Wykres decyzyjny na potrzeby inicjalizacji typów referencyjnych](../cpp/media/vc38s71.gif "Wykres decyzyjny na potrzeby inicjalizacji typów referencyjnych") <br/>
 Wykres decyzyjny na potrzeby inicjalizacji typów referencyjnych
 
-Odwołania do typów nietrwałych ( zadeklarowanych jako nietrwały *Identyfikator* *TypeName* <strong>&</strong> ) mogą być inicjowane za pomocą obiektów **lotnych** tego samego typu lub obiektów, które nie zostały zadeklarowane jako nietrwałe . Nie mogą jednak być inicjowane z obiektami **const** tego typu. Podobnie odwołania do typów **stałych** (zadeklarowanych jako *Identyfikator* *TypeName* <strong>&</strong> **const** ) mogą być inicjowane za pomocą obiektów **const** tego samego typu (lub dowolnego elementu, który ma konwersję na ten typ lub z obiektami , które nie zostały zadeklarowane jako **const**). Nie mogą jednak być inicjowane z obiektami nietrwałymi tego typu.
+Odwołania do typów **nietrwałych** (zadeklarowanych jako **volatile** *TypeName* <strong>&</strong> *Identyfikator*) można zainicjować przy użyciu obiektów **nietrwałych** tego samego typu lub obiektów, które nie zostały zadeklarowane jako **nietrwałe**. Nie mogą jednak być inicjowane z obiektami **const** tego typu. Podobnie odwołania do typów **stałych** (zadeklarowanych jako **const** *TypeName* <strong>&</strong> *Identifier*) mogą być inicjowane przy użyciu obiektów **const** tego samego typu (lub wszystkich elementów, które mają konwersję tego typu lub z obiektami, które nie zostały zadeklarowane jako **const**). Nie mogą jednak być inicjowane z obiektami **nietrwałymi** tego typu.
 
 Odwołania, które nie są kwalifikowane za pomocą słowa kluczowego **const** lub **volatile** , mogą być inicjowane tylko z obiektami zadeklarowanymi jako ani **const** lub **volatile**.
 
