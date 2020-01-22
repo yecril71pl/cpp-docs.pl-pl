@@ -1,21 +1,21 @@
 ---
-title: Atrybuty w języku C++
+title: Atrybuty wC++
 ms.date: 05/06/2019
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-ms.openlocfilehash: bc92e5f3e279edc6fbea7f99d52c469f9fdf04f8
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 5967974d419299778e4aadaa235ee21c62e16d34
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222306"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518299"
 ---
-# <a name="attributes-in-c"></a>Atrybuty w języku C++
+# <a name="attributes-in-c"></a>Atrybuty wC++
 
-C++ Standard definiuje zestaw atrybutów, a także umożliwia dostawcom kompilatora zdefiniować własne atrybuty (w przestrzeni nazw specyficzne dla dostawcy), ale kompilatory są wymagane do rozpoznaje tylko te atrybuty, które są zdefiniowane w standardzie.
+C++ Standard definiuje zestaw atrybutów, a także umożliwia dostawcom kompilatora Definiowanie własnych atrybutów (w obszarze nazw specyficznych dla dostawcy), ale kompilatory są wymagane do rozpoznawania tylko atrybutów zdefiniowanych w standardzie.
 
-W niektórych przypadkach standardowe atrybuty pokrywają się z parametrami declspec specyficznych dla kompilatora. W programie Visual C++, można użyć `[[deprecated]]` atrybutu zamiast `declspec(deprecated)` i atrybut zostanie rozpoznane przez kompilator wszelkie zgodność. Wszystkie inne declspec parametrów, takich jak dllimport i dllexport nie ma jeszcze atrybut odpowiednika, należy nadal używać składni declspec. Atrybuty nie ma wpływu na system typów, a nie zmieniają znaczenie programu. Kompilatory ignorują wartości atrybutów, które ich nie rozpoznają.
+W niektórych przypadkach standardowe atrybuty nakładają się na specyficzne dla kompilatora parametry declspec. W wizualizacji C++, można użyć atrybutu `[[deprecated]]` zamiast używać `declspec(deprecated)` i atrybut zostanie rozpoznany przez dowolny kompilator zgodny. Dla wszystkich innych parametrów declspec, takich jak dllimport i dllexport, nie istnieje jeszcze odpowiednik atrybutu, dlatego należy nadal używać składni declspec. Atrybuty nie wpływają na system typów i nie zmieniają znaczenia programu. Kompilatory ignorują wartości atrybutów, które nie są rozpoznawane.
 
-**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Przestrzeń nazw dla wszystkich nazw w zakresie listę atrybutów, można określić za pomocą jednego **przy użyciu** introducer:
+**Visual Studio 2017 w wersji 15,3 i nowszej** (dostępne w [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): w zakresie listy atrybutów można określić przestrzeń nazw dla wszystkich nazw przy **użyciu** jednego z:
 
 ```cpp
 void g() {
@@ -24,26 +24,26 @@ void g() {
 }
 ```
 
-## <a name="c-standard-attributes"></a>Atrybuty C++ Standard
+## <a name="c-standard-attributes"></a>C++Atrybuty standardowe
 
-W języku C ++ 11 atrybuty zapewnić standardowy sposób dodawać adnotacje do konstrukcji języka C++ (w tym między innymi klasy, funkcje, zmienne i bloków) z dodatkowymi informacjami, które mogą lub nie jest specyficzne dla dostawcy. Kompilator może dzięki tym informacjom można wygenerować komunikaty informacyjne lub aby zastosować logikę specjalną, podczas kompilowania kodu opartego na atrybutach. Kompilator ignoruje wszelkie atrybuty, które nie rozpoznaje, co oznacza, że nie można zdefiniować własne niestandardowe atrybuty przy użyciu tej składni. Atrybuty są ujęte w nawiasy kwadratowe podwójne:
+W języku C++ 11 atrybuty zapewniają ustandaryzowany sposób dodawania adnotacji C++ (w tym między innymi klas, funkcji, zmiennych i bloków) z dodatkowymi informacjami, które mogą lub nie mogą być specyficzne dla dostawcy. Kompilator może używać tych informacji do generowania komunikatów informacyjnych lub do stosowania logiki specjalnej podczas kompilowania kodu z atrybutami. Kompilator ignoruje wszystkie atrybuty, które nie są rozpoznawane, co oznacza, że nie można definiować własnych atrybutów niestandardowych przy użyciu tej składni. Atrybuty są ujęte w podwójne nawiasy kwadratowe:
 
 ```cpp
 [[deprecated]]
 void Foo(int);
 ```
 
-Atrybuty reprezentują standardowych alternatywa specyficzne dla dostawcy rozszerzeń, takich jak dyrektywy #pragma __declspec() (Visual C++), lub &#95; &#95;atrybut&#95; &#95; (GNU). Jednakże nadal należy użyć konstrukcji specyficzne dla dostawcy w większości przypadków. Standardowa obecnie określa następujące atrybuty rozpoznających odpowiadające kompilatora:
+Atrybuty przedstawiają ustandaryzowaną alternatywę dla rozszerzeń specyficznych dla dostawcy, takich jak dyrektywy #pragma, __declspec ( C++) (wizualizacja) &#95; &#95;lub atrybutu&#95; &#95; (GNU). Jednak w większości przypadków nadal trzeba będzie używać konstrukcji specyficznych dla dostawcy. Standard obecnie określa następujące atrybuty, które powinny być rozpoznawane przez kompilator zgodny:
 
-- `[[noreturn]]` Określa, że funkcja nigdy nie zwraca; innymi słowy go zawsze zgłasza wyjątek. Kompilator może dostosowywać jego zasady kompilacji `[[noreturn]]` jednostek.
+- `[[noreturn]]` określa, że funkcja nigdy nie zwraca; Innymi słowy, zawsze zgłasza wyjątek. Kompilator może dostosować reguły kompilacji dla jednostek `[[noreturn]]`.
 
-- `[[carries_dependency]]` Określa, że funkcja propaguje zależności danych kolejność w odniesieniu do synchronizacji wątków. Atrybut można stosować do co najmniej jeden parametr, aby określić, że argument przekazany w niesie ze sobą zależności w treści funkcji. Ten atrybut można zastosować do samej funkcji, aby określić, że wartość zwracana niesie ze sobą zależności z funkcji. Kompilator można użyć tych informacji do generowania kodu bardziej wydajne.
+- `[[carries_dependency]]` określa, że funkcja propaguje porządkowanie zależności danych w odniesieniu do synchronizacji wątków. Ten atrybut może być stosowany do jednego lub kilku parametrów, aby określić, że argument, który przekazuje zależność do treści funkcji. Ten atrybut może być stosowany do samej funkcji, aby określić, że wartość zwracana wykonuje zależność od funkcji. Kompilator może używać tych informacji do generowania bardziej wydajnego kodu.
 
-- `[[deprecated]]` **Visual Studio 2015 i nowszych:** Określa, że funkcja nie ma ma być używany i może nie istnieć w przyszłych wersjach interfejsu biblioteki. Kompilator użyć tej funkcji do generowania komunikat informacyjny, gdy kod klienta podejmuje próbę wywołania funkcji. Można zastosować do deklaracji klasy, nazwę typedef, zmienną, element członkowski danych niestatyczna, funkcji, przestrzeni nazw, wyliczenia, moduł wyliczający lub specjalizacji szablonu.
+- `[[deprecated]]` **program Visual Studio 2015 lub nowszy:** określa, że funkcja nie jest przeznaczona do użycia i może nie istnieć w przyszłych wersjach interfejsu biblioteki. Kompilator może użyć tego do wygenerowania komunikatu informacyjnego, gdy kod klienta próbuje wywołać funkcję. Można zastosować do deklaracji klasy, typedef-Name, Variable, niestatycznej składowej danych, funkcji, przestrzeni nazw, wyliczenia, modułu wyliczającego lub specjalizacji szablonu.
 
-- `[[fallthrough]]` **Visual Studio 2017 i nowszym:** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)) `[[fallthrough]]` atrybut może być używany w kontekście [Przełącz](switch-statement-cpp.md) sprawozdań jako wskazówkę kompilator (lub kto czyta Kod:) przeznaczonej zachowanie fallthrough. Microsoft C++ kompilatora obecnie nie ostrzegaj przed witrynami dla fallthrough zachowania, więc ten atrybut nie ma żadnych zachowanie kompilatora efekt.
+- `[[fallthrough]]` **program Visual Studio 2017 lub nowszy:** (dostępny w [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)) atrybut `[[fallthrough]]` może być używany w kontekście instrukcji [Switch](switch-statement-cpp.md) jako wskazówkę kompilatora (lub każda osoba odczytująca kod), że zachowanie fallthrough jest zamierzone. Kompilator firmy C++ Microsoft obecnie nie ostrzega w przypadku zachowania fallthrough, więc ten atrybut nie ma wpływu na działanie kompilatora.
 
-- `[[nodiscard]]` **Visual Studio 2017 w wersji 15.3 lub nowszej:** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)) określa, że wartość zwracaną przez funkcję nie jest przeznaczony do usunięcia. Generuje ostrzeżenia C4834, jak pokazano w poniższym przykładzie:
+- `[[nodiscard]]` **program Visual Studio 2017 w wersji 15,3 lub nowszej:** (dostępny w [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)) określa, że wartość zwracana przez funkcję nie jest przeznaczona do odrzucania. Podnosi C4834 ostrzegawczy, jak pokazano w tym przykładzie:
 
     ```cpp
     [[nodiscard]]
@@ -56,14 +56,14 @@ Atrybuty reprezentują standardowych alternatywa specyficzne dla dostawcy rozsze
     }
     ```
 
-- `[[maybe_unused]]` **Visual Studio 2017 w wersji 15.3 lub nowszej:** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)) określa, że zmiennej, funkcji, klasy, — typedef, element członkowski danych niestatyczna, enum lub specjalizacja szablonu celowo nie mogą być używane. Kompilator nie ostrzega, gdy jednostki oznaczone `[[maybe_unused]]` nie jest używany. Później można ponownie zadeklarować jednostki, która jest zadeklarowana bez atrybutu, za pomocą atrybutu i na odwrót. Jednostki jest traktowany jako oznaczony po jego pierwszej deklaracji, która jest oznaczona są analizowane, a w pozostałej części tłumaczenia w bieżącej jednostce tłumaczenia.
+- `[[maybe_unused]]` **program Visual Studio 2017 w wersji 15,3 lub nowszej:** (dostępny w [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)) określa, że nie można użyć zmiennej, funkcji, klasy, typedef, niestatycznej składowej danych, wyliczenia lub specjalizacji szablonu. Kompilator nie ostrzega, gdy jednostka oznaczona `[[maybe_unused]]` nie jest używana. Jednostka zadeklarowana bez atrybutu może być później ponownie zadeklarowana z atrybutem i na odwrót. Jednostka jest traktowana jako oznaczona po pierwszej deklaracji oznaczonej jako przeanalizowanej, a w przypadku pozostałej translacji bieżącej jednostki tłumaczenia.
 
 ## <a name="microsoft-specific-attributes"></a>Atrybuty specyficzne dla firmy Microsoft
 
-- `[[gsl::suppress(rules)]]` Ten atrybut specyficzne dla firmy Microsoft jest używany w sytuacji pominięcia ostrzeżenia z programy, które wymuszają [wytyczne dotyczące obsługi biblioteki (GSL)](https://github.com/Microsoft/GSL) reguł w kodzie. Na przykład rozważmy następujący fragment kodu:
+- `[[gsl::suppress(rules)]]` ten atrybut specyficzny dla firmy Microsoft służy do pomijania ostrzeżeń od sprawdzających, które wymuszają reguły [biblioteki obsługi (GSL)](https://github.com/Microsoft/GSL) w kodzie. Na przykład rozważmy następujący fragment kodu:
 
     ```cpp
-    void main()
+    int main()
     {
         int arr[10]; // GSL warning 26494 will be fired
         int* p = arr; // GSL warning 26485 will be fired
@@ -75,12 +75,13 @@ Atrybuty reprezentują standardowych alternatywa specyficzne dla dostawcy rozsze
     }
     ```
 
-  Przykład wywołuje te ostrzeżenia:
+  Przykład wywołuje następujące ostrzeżenia:
 
-  - 26494 (typ reguły 5: Zawsze Inicjuj obiekt.)
+  - 26494 (reguła typu 5: zawsze Inicjuj obiekt).
 
-  - 26485 (granice reguła 3: Brak zanikania tablicy do wskaźnika.)
+  - 26485 (reguła związana z regułą 3): brak tablicy do wskaźnika.
 
-  - 26481 (granice reguła 1: Nie używaj arytmetyki wskaźnika. Użyj zakresu.)
+  - 26481 (reguła dotycząca granic 1: nie używaj arytmetyki wskaźnika. Użyj zamiast tego zakresu.)
 
-  Pierwsze dwa ostrzeżenia uruchamiał się po skompilować ten kod za pomocą narzędzia analizy kodu CppCoreCheck zainstalowane i aktywowane. Ale trzecie ostrzeżenie nie zostanie wyzwolony, ze względu na ten atrybut. Cały profil granic można pominąć, pisząc [[gsl::suppress(bounds)]] bez uwzględniania numer określonej reguły. Podstawowych wytycznych dotyczących języka C++ mają na celu pomóc w pisaniu lepiej i bezpieczniejszego kodu. Ten atrybut Pomiń ułatwia wyłączyć ostrzeżenia, gdy nie chcieli.
+  Pierwsze dwa ostrzeżenia są wyzwalane podczas kompilowania tego kodu z zainstalowanym i aktywowanym narzędziem CppCoreCheck Code Analysis. Ale trzecie ostrzeżenie nie jest wyzwalane z powodu atrybutu. Możesz pominąć profil całego ograniczenia, pisząc [[GSL:: pomijanie (Bounds)]] bez dołączania określonego numeru reguły. C++ Podstawowe wytyczne zostały zaprojektowane w celu ułatwienia pisania lepszego i bezpieczniejszego kodu. Atrybut pomijania ułatwia wyłączenie ostrzeżeń, gdy nie są one potrzebne.
+  

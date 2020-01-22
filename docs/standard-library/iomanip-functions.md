@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 995ad9ae21d7f00a74a912436d599dfead2c9ebb
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 944834e40a399622b5c85d95100d4ca3c3c2da93
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890145"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518468"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;funkcje&gt; iomanip
 
@@ -61,7 +61,7 @@ W przypadku **wartości true**należy użyć formatu międzynarodowego. Wartoś�
 
 ### <a name="remarks"></a>Uwagi
 
-Manipulator zwraca obiekt, który po wyodrębnieniu z `str`strumienia zachowuje jako `formatted input function`, który wywołuje funkcję członkowską `get` zestawu reguł ustawień regionalnych `money_get` skojarzone z `str`, przy użyciu *use_intl* do wskazania formatu międzynarodowego . Jeśli to się powiedzie, magazyny wywołań mają *kwotę* wyodrębnioną wartość pieniężną. Manipulator następnie zwraca `str`.
+Manipulator zwraca obiekt, który po wyodrębnieniu z `str`strumienia zachowuje jako `formatted input function`, który wywołuje funkcję członkowską `get` zestawu reguł ustawień regionalnych `money_get` skojarzone z `str`, przy użyciu *use_intl* do wskazania formatu międzynarodowego. Jeśli to się powiedzie, magazyny wywołań mają *kwotę* wyodrębnioną wartość pieniężną. Manipulator następnie zwraca `str`.
 
 `Money` musi być typu `long double` lub wystąpienia `basic_string` z tym samym elementem i parametrami cech co `str`.
 
@@ -84,7 +84,7 @@ Godzina w postaci struktury czasowej.
 
 ### <a name="remarks"></a>Uwagi
 
-Manipulator zwraca obiekt, który po wyodrębnieniu z `str`strumienia zachowuje się jako `formatted input function`, który wywołuje funkcję członkowską `get` zestawu reguł ustawień regionalnych `time_get` skojarzone z `str`, przy użyciu `tptr` do wskazywania struktury czasu i `fmt`, aby wskazać początek ciągu formatu zakończony wartością null. Jeśli to się powiedzie, w strukturze czasu są przechowywane wartości skojarzone z dowolnym wyodrębnionym polem czasu. Manipulator następnie zwraca `str`.
+Manipulator zwraca obiekt, który po wyodrębnieniu z `str`strumienia zachowuje jako `formatted input function`, który wywołuje funkcję elementu członkowskiego `get` zestaw reguł ustawień regionalnych `time_get` skojarzony z `str`, przy użyciu `tptr`, aby wskazać strukturę czasową i `fmt` do wskazania początku ciągu formatu zakończony wartością null. Jeśli to się powiedzie, w strukturze czasu są przechowywane wartości skojarzone z dowolnym wyodrębnionym polem czasu. Manipulator następnie zwraca `str`.
 
 ## <a name="iomanip_put_money"></a>put_money
 
@@ -103,13 +103,13 @@ Kwota pieniężna do wstawienia do strumienia.
 *use_intl*\
 Ustaw **wartość true** , jeśli Manipulator powinien używać formatu międzynarodowego, **Fałsz** , jeśli nie powinien.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Zwraca `str`.
+Zwraca wartość `str`.
 
 ### <a name="remarks"></a>Uwagi
 
-Manipulator zwraca obiekt, który po wstawieniu do strumienia `str`zachowuje się jako sformatowana funkcja wyjściowa, która wywołuje funkcję członkowską `put` dla zestawu reguł ustawień regionalnych `money_put` skojarzone z `str`. Jeśli to się powiedzie, wywołanie wstawia `amount` odpowiednio sformatowane, przy użyciu *use_intl* , aby wskazać międzynarodowy format i `str.fill()`, jako element Fill. Manipulator następnie zwraca `str`.
+Manipulator zwraca obiekt, który po wstawieniu do strumienia `str`zachowuje się jako sformatowana funkcja wyjściowa, która wywołuje funkcję członkowską `put` dla zestawu reguł ustawień regionalnych `money_put` skojarzone z `str`. Jeśli to się powiedzie, wywołanie wstawia `amount` odpowiednio sformatowane, używając *use_intl* do wskazania międzynarodowego formatu i `str.fill()`jako elementu Fill. Manipulator następnie zwraca `str`.
 
 `Money` musi być typu `long double` lub wystąpienia `basic_string` z tym samym elementem i parametrami cech co `str`.
 
@@ -147,7 +147,7 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 
 ### <a name="parameters"></a>Parametry
 
-*str* \
+*str*\
 Std:: String, char\*, literał ciągu lub nieprzetworzony literał ciągu lub szeroka wersja któregokolwiek z tych (np. std:: wstring, wchar_t\*).
 
 \ *ogranicznika*
@@ -195,7 +195,7 @@ void show_quoted_v_nonquoted()
     cout << "Quoted          : " << extracted_quoted << endl;
 }
 
-void main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
     show_quoted_v_nonquoted();
 
@@ -271,7 +271,7 @@ void show_custom_escape()
     // after round-tripping.
 }
 
-void main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
     cout << "Custom delimiter:" << endl;
     show_custom_delimiter();
@@ -314,7 +314,7 @@ T1 resetiosflags(ios_base::fmtflags mask);
 \ *masek*
 Flagi do wyczyszczenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Manipulator zwraca obiekt, który w przypadku wyodrębnienia z lub wstawienia do `str`strumienia wywołuje `str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)`, mask)`, a następnie zwraca `str`.
 
@@ -335,7 +335,7 @@ T3 setbase(int base);
 \ *podstawowe*
 Podstawa liczby.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Manipulator zwraca obiekt, który w przypadku wyodrębnienia z lub wstawienia do `str`strumienia wywołuje `str.setf(mask, `[ios_base:: basefield](../standard-library/ios-base-class.md#fmtflags)`)`, a następnie zwraca `str`. W tym miejscu `mask` jest określany w następujący sposób:
 
@@ -362,10 +362,10 @@ T4 setfill(Elem Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*Ch* \
+*Ch*\
 Znak, który będzie używany do wypełniania spacji w wyświetlaniu wyrównanym do prawej strony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Manipulator szablonu zwraca obiekt, który w przypadku wyodrębnienia z lub wstawienia do `str`strumienia wywołuje `str.`[wypełnienia](../standard-library/basic-ios-class.md#fill)`(Ch)`, a następnie zwraca `str`. Typ `Elem` musi być taki sam jak typ elementu `str`strumienia.
 
@@ -386,7 +386,7 @@ T2 setiosflags(ios_base::fmtflags mask);
 \ *masek*
 Flagi do ustawienia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Manipulator zwraca obiekt, który w przypadku wyodrębnienia z lub wstawienia do `str`strumienia wywołuje `str.`[setf](../standard-library/ios-base-class.md#setf)`(mask)`, a następnie zwraca `str`.
 
@@ -407,7 +407,7 @@ T5 setprecision(streamsize Prec);
 *Prec*\
 Precyzja wartości zmiennoprzecinkowych.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Manipulator zwraca obiekt, który w przypadku wyodrębnienia z lub wstawienia do `str`strumienia wywołuje `str.`[dokładności](../standard-library/ios-base-class.md#precision)`(Prec)`, a następnie zwraca `str`.
 
@@ -428,7 +428,7 @@ T6 setw(streamsize Wide);
 *Szerokie*\
 Szerokość pola wyświetlania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Manipulator zwraca obiekt, który w przypadku wyodrębnienia z lub wstawienia do `str`strumienia wywołuje `str.`[width](../standard-library/ios-base-class.md#width)`(Wide)`, a następnie zwraca `str`.
 

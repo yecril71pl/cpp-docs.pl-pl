@@ -1,6 +1,7 @@
 ---
-title: this — wskaźnik
-ms.date: 11/04/2016
+title: this wskaźnik
+description: this wskaźnik jest generowanym przez kompilator wskaźnikiem do bieżącego obiektu w niestatycznych funkcjach składowych.
+ms.date: 01/22/2020
 f1_keywords:
 - this_cpp
 helpviewer_keywords:
@@ -8,16 +9,24 @@ helpviewer_keywords:
 - pointers, to class instance
 - this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
-ms.openlocfilehash: c90a843ba978a98c1c61d9e096d62b85256ab0c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+no-loc:
+- this
+- class
+- struct
+- union
+- sizeof
+- const
+- volatile
+ms.openlocfilehash: 58bba2edd7a457c624b747b5a65d209995852848
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330482"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518338"
 ---
-# <a name="this-pointer"></a>this — wskaźnik
+# <a name="opno-locthis-pointer"></a>this wskaźnik
 
-**To** wskaźnik jest dostępny tylko w niestatycznej składowej funkcje wskaźnik **klasy**, **struktury**, lub **Unii** typu. Wskazuje na obiekt, dla którego funkcja członkowska jest wywoływana. Statyczne funkcje Członkowskie nie mają **to** wskaźnika.
+Wskaźnik **this** jest dostępny tylko w obrębie niestatycznych funkcji składowych typu **class** , **struct** lub **union** . Wskazuje obiekt, dla którego wywoływana jest funkcja członkowska. Statyczne funkcje członkowskie nie mają wskaźnika **this** .
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,19 +37,19 @@ this->member-identifier
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekt **to** wskaźnik nie jest częścią obiektu; nie jest odzwierciedlana w wyniku **sizeof** instrukcji w obiekcie. Zamiast tego po wywołaniu funkcji niestatycznej składowej obiektu adres obiektu, jest przekazywany przez kompilator jako ukryty argument do funkcji. Na przykład poniższe wywołanie funkcji:
+Wskaźnik **this** obiektu nie jest częścią samego obiektu. Nie jest to odzwierciedlone w wyniku instrukcji **sizeof** w obiekcie. Gdy niestatyczna funkcja członkowska jest wywoływana dla obiektu, kompilator przekazuje adres obiektu do funkcji jako argument ukryty. Na przykład następujące wywołanie funkcji:
 
 ```cpp
 myDate.setMonth( 3 );
 ```
 
-może być interpretowany w ten sposób:
+można interpretować jako:
 
 ```cpp
 setMonth( &myDate, 3 );
 ```
 
-Adres obiektu jest dostępne z poziomu funkcji składowej jako **to** wskaźnika. Większości zastosowań **to** są niejawne. Jest legalne, chociaż trzeba jawnie użyć **to** przy odwoływaniu się do elementów członkowskich klasy. Na przykład:
+Adres obiektu jest dostępny z poziomu funkcji składowej jako wskaźnika **this** . Większość **thisych** użycia wskaźników jest niejawna. W przypadku odwoływania się do członków classmożna używać jawnej **this** . Na przykład:
 
 ```cpp
 void Date::setMonth( int mn )
@@ -51,13 +60,13 @@ void Date::setMonth( int mn )
 }
 ```
 
-Wyrażenie `*this` jest najczęściej używany do zwracania bieżącego obiektu z funkcji składowej:
+Wyrażenie `*this` jest często używane do zwracania bieżącego obiektu z funkcji składowej:
 
 ```cpp
 return *this;
 ```
 
-**To** wskaźnik jest również używane do ochrony przed odwołanie do samego siebie:
+**this** wskaźnik jest również używany do ochrony przed odwołaniem do samego siebie:
 
 ```cpp
 if (&Object != this) {
@@ -65,9 +74,9 @@ if (&Object != this) {
 ```
 
 > [!NOTE]
->  Ponieważ **to** wskaźnik jest niemodyfikowalnymi, przydziały, aby **to** nie są dozwolone. Wcześniejszych implementacji C++ mogą przypisania do **to**.
+> Ponieważ wskaźnik **this** nie jest modyfikowany, przypisania do wskaźnika **this** są niedozwolone. Starsze implementacje C++ dozwolonego przypisania do **this** .
 
-Od czasu do czasu **to** bezpośrednio służy wskaźnika — na przykład, można manipulować danymi relacją struktury, gdy wymagany jest adres bieżący obiekt.
+Czasami wskaźnik **this** jest używany bezpośrednio — na przykład w celu manipulowania strukturami danych, w których jest wymagany adres bieżącego obiektu.
 
 ## <a name="example"></a>Przykład
 
@@ -139,11 +148,11 @@ my buffer
 your buffer
 ```
 
-## <a name="type-of-the-this-pointer"></a>Typ tego wskaźnika
+## <a name="type-of-the-opno-locthis-pointer"></a>Typ wskaźnika this
 
-**To** w deklaracji funkcji, można zmodyfikować typu wskaźnika **const** i **volatile** słów kluczowych. Aby zadeklarować funkcję jako mające atrybuty co najmniej jednego z tych słów kluczowych, Dodaj słowa po liście argumentów funkcji.
+Typ wskaźnika **this** można modyfikować w deklaracji funkcji za pomocą słów kluczowych **const** i **volatile** . Aby zadeklarować funkcję, która ma jeden z tych atrybutów, należy dodać słowa kluczowe po liście argumentów funkcji.
 
-Rozważmy następujący przykład:
+Rozważmy przykład:
 
 ```cpp
 // type_of_this_pointer1.cpp
@@ -156,7 +165,7 @@ int main()
 }
 ```
 
-W poprzednim kodzie zadeklarowano funkcję członkowską `X`, w którym **to** wskaźnik jest traktowany jako **const** wskaźnik do **const** obiektu. Kombinacje *cv mod listy* opcje mogą być używane, ale zawsze zmodyfikować obiekt wskazywany przez **to**, a nie **to** wskaźnika jako takiego. W związku z tym, następująca deklaracja deklaruje funkcję `X`; **to** wskaźnik jest **const** wskaźnik do **const** obiektu:
+Poprzedni kod deklaruje funkcję elementu członkowskiego, `X`, w której wskaźnik **this** jest traktowany jako wskaźnik **const** do obiektu **const** . Można używać kombinacji opcji *OKS-mod-list* , ale zawsze modyfikuje obiekt wskazywany przez wskaźnik **this** , a nie sam wskaźnik. Poniższa deklaracja deklaruje funkcję `X`, gdzie wskaźnik **this** jest **constm** wskaźnikiem do obiektu **const** :
 
 ```cpp
 // type_of_this_pointer2.cpp
@@ -169,27 +178,29 @@ int main()
 }
 ```
 
-Typ **to** w składowej funkcji opisano przy użyciu następującej składni, gdzie *cv kwalifikator listy* jest określana na podstawie deklaratora funkcji elementu członkowskiego i może być **const**lub **volatile** (lub obie), a *typu klasy* jest nazwa klasy:
+Typ **this** w funkcji składowej jest opisywany przez następującą składnię. *Lista kwalifikatorów CV* jest określana na podstawie deklarator funkcji składowej. Może być **const** lub **volatile** (lub oba te elementy). *class-Type* jest nazwą class:
 
-*Typ klasy [cv kwalifikator list]* **&#42; stała tym**
+[*CV-kwalifikator-list*] *classtypu* **\* const this**
 
-Innymi słowy **to** jest zawsze wskaźnika elementu const; nie może zostać przypisany.  **Const** lub **volatile** kwalifikatory użyty w deklaracji funkcji elementu członkowskiego dotyczy wskazywany przez wystąpienie klasy **to** w zakresie tej funkcji.
+Innymi słowy, **this** wskaźnik jest zawsze const wskaźnikiem. Nie można go ponownie przypisać.  Kwalifikatory **const** lub **volatile** używane w deklaracji funkcji składowej stosują się do class wystąpienia **this** wskaźnik wskazuje w, w zakresie tej funkcji.
 
-W poniższej tabeli opisano więcej informacji na temat działania tych modyfikatorów.
+W poniższej tabeli opisano więcej informacji o tym, jak działają te modyfikatory.
 
-### <a name="semantics-of-this-modifiers"></a>Semantyka tej modyfikatorów
+### <a name="semantics-of-opno-locthis-modifiers"></a>Semantyka this modyfikatorów
 
 |Modyfikator|Znaczenie|
 |--------------|-------------|
-|**const**|Nie można zmienić element członkowski danych; Nie można wywołać funkcji elementów członkowskich, które nie są **const**.|
-|**volatile**|Element członkowski danych jest ładowany z pamięci, każdym razem, gdy jest on dostępny; wyłącza niektóre optymalizację.|
+|**const**|Nie można zmienić danych elementu członkowskiego; nie można wywołać funkcji Członkowskich, które nie są **const** .|
+|**volatile**|Dane elementu członkowskiego są ładowane z pamięci za każdym razem, gdy są dostępne; wyłącza pewne optymalizacje.|
 
-Jest to błąd, aby przekazać **const** obiektu do funkcji składowej, która nie jest **const**. Podobnie, występuje błąd do przekazania **volatile** obiektu do funkcji składowej, która nie jest **volatile**.
+Wystąpił błąd podczas przekazywania obiektu **const** do funkcji członkowskiej, która nie jest **const** .
 
-Funkcje składowe są deklarowane jako **const** nie można zmienić element członkowski danych — w takie funkcje **to** wskaźnik jest wskaźnikiem do **const** obiektu.
+Podobnie jest również błąd przekazywania obiektu **volatile** do funkcji członkowskiej, która nie jest **volatile** .
+
+Funkcje składowe zadeklarowane jako **const** nie mogą zmieniać danych elementu członkowskiego — w takich funkcjach wskaźnik **this** jest wskaźnikiem do obiektu **const** .
 
 > [!NOTE]
->  Konstruktory i destruktory nie można zadeklarować jako **const** lub **volatile**. Jednak mogą być wywoływane na **const** lub **volatile** obiektów.
+> Konstruktory i destruktory nie mogą być deklarowane jako **const** ani **volatile** . Mogą jednak być wywoływane dla obiektów **const** lub **volatile** .
 
 ## <a name="see-also"></a>Zobacz także
 

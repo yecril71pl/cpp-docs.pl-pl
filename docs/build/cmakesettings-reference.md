@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 08ecb5bc55ead207d6e4a0029a21e737d447143b
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.openlocfilehash: fb7dc81648ae301962b952b0440d8a24b397c0d8
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556737"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518208"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Pliku cmakesettings. JSON — odwołanie do schematu
 
@@ -146,6 +146,7 @@ Gdy aktywna konfiguracja określa Generator programu Visual Studio, domyślnie p
 ```
 
 Należy pamiętać, że jeśli `"type"`nie zostanie zdefiniowany, domyślnie zostanie przyjęty typ `"STRING"`.
+- `remoteCopyOptimizations`: **program Visual Studio 2019 w wersji 16,5 lub nowszej** służący do kontrolowania kopiowania źródła do zdalnego obiektu docelowego. Optymalizacje są domyślnie włączone. Zawiera `remoteCopyUseOptimizations`, `rsyncSingleDirectoryCommandArgs`i `remoteCopySourcesMaxSmallChange`.
 
 ## <a name="environments"></a>Wiejski
 

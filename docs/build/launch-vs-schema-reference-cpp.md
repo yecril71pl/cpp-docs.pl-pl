@@ -3,16 +3,16 @@ title: Uruchom. vs. JSON — odwołanie doC++schematu ()
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: 49b4f4e6c4359837e820684c29b0e102a08c3fd5
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.openlocfilehash: 5d8f657dda58d581ccc3441a777fdf31470ef25f
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556646"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518234"
 ---
 # <a name="launchvsjson-schema-reference-c"></a>Uruchom. vs. JSON — odwołanie doC++schematu ()
 
-Aby skonfigurować parametry debugowania, użyj pliku *Launch. vs. JSON* . , Aby utworzyć plik. Kliknij prawym przyciskiem myszy plik wykonywalny w **Eksplorator rozwiązań** i wybierz polecenie **Debuguj i Uruchom ustawienia**. Wybierz opcję, która najlepiej pasuje do Twojego projektu, a następnie użyj następujących właściwości, aby zmodyfikować konfigurację zgodnie z potrzebami:
+Aby skonfigurować parametry debugowania, użyj pliku *Launch. vs. JSON* . , Aby utworzyć plik. Kliknij prawym przyciskiem myszy plik wykonywalny w **Eksplorator rozwiązań** i wybierz polecenie **Debuguj i Uruchom ustawienia**. Wybierz opcję, która najlepiej pasuje do Twojego projektu, a następnie użyj następujących właściwości, aby zmodyfikować konfigurację zgodnie z potrzebami. Aby uzyskać więcej informacji na temat debugowania projektów CMake, zobacz [Konfigurowanie CMAKE debugowania sesji](/cpp/build/configure-cmake-debugging-sessions).
 
 ## <a name="default-properties"></a>Właściwości domyślne
 

@@ -1,31 +1,31 @@
 ---
-title: Kompilator ostrzeżenie (poziom 3) C4373
+title: Ostrzeżenie kompilatora (poziom 3) C4373
 ms.date: 11/04/2016
 f1_keywords:
 - C4373
 helpviewer_keywords:
 - C4373
 ms.assetid: 670c0ba3-b7d6-4aed-b207-1cb84da3bcde
-ms.openlocfilehash: 031b32a03d93a51f6fa00041a5b0bdf99e6eacf1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5891d4679b74695f187fb50bb24fe941882fdcc7
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401998"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518351"
 ---
-# <a name="compiler-warning-level-3-c4373"></a>Kompilator ostrzeżenie (poziom 3) C4373
+# <a name="compiler-warning-level-3-c4373"></a>Ostrzeżenie kompilatora (poziom 3) C4373
 
-> "*funkcja*": przesłonięcia funkcji wirtualnych*base_function*", poprzednie wersje kompilatora nie przesłaniały, gdy parametry różnił się tylko przez kwalifikatory const/volatile
+> "*Function*": funkcja wirtualna przesłania element "*base_function*", poprzednie wersje kompilatora nie przesłonili, gdy parametry różnią się tylko kwalifikatorami const/volatile
 
 ## <a name="remarks"></a>Uwagi
 
-Aplikacja zawiera metody w klasie pochodnej, która zastępuje metodę wirtualną w klasie bazowej, a parametry w metoda przesłaniania różnią się tylko [const](../../cpp/const-cpp.md) lub [volatile](../../cpp/volatile-cpp.md) kwalifikator z Parametry metody wirtualnej. Oznacza to, kompilator musi być powiązany odwołanie do funkcji do metody w jednej bazie lub klasy pochodnej.
+Aplikacja zawiera metodę w klasie pochodnej, która zastępuje metodę wirtualną w klasie bazowej, a parametry w metodzie przesłaniania różnią się tylko kwalifikatorem [const](../../cpp/const-cpp.md) lub [volatile](../../cpp/volatile-cpp.md) z parametrów metody wirtualnej. Oznacza to, że kompilator musi powiązać odwołanie do funkcji z metodą w klasie podstawowej lub pochodnej.
 
-Wersje kompilatora przed Visual Studio 2008 powiązanie funkcji metodą w klasie bazowej, a następnie wydać komunikat ostrzegawczy. Ignoruj kolejne wersje kompilatora `const` lub `volatile` kwalifikatora, powiązania funkcji do metody w klasie pochodnej, a następnie wydać ostrzeżenie **C4373**. To zachowanie ostatnim jest zgodna ze standardem C++.
+Wersje kompilatora przed Visual Studio 2008 wiążą funkcję z metodą w klasie bazowej, a następnie generują komunikat ostrzegawczy. Kolejne wersje kompilatora ignorują kwalifikator `const` lub `volatile`, powiązać funkcję z metodą w klasie pochodnej, a następnie wystawić ostrzeżenie **C4373**. To ostatnie zachowanie jest zgodne ze C++ standardem.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod generuje ostrzeżenie C4373. Aby rozwiązać ten problem, możesz ustalić zastąpienie, użyj tego samego kwalifikatory CV jako podstawowy element członkowski funkcji lub jeśli zamierzasz utworzyć przesłonięcie, zapewnić funkcji w klasie pochodnej inną nazwę.
+Poniższy przykład kodu generuje ostrzeżenie C4373. Aby rozwiązać ten problem, można wykonać przesłonięcie przy użyciu tych samych kwalifikatorów OKS co podstawowa funkcja członkowska lub jeśli nie zamierzasz utworzyć przesłonięcia, można nadać funkcji w klasie pochodnej inną nazwę.
 
 ```cpp
 // c4373.cpp
@@ -45,7 +45,7 @@ struct Derived : Base
     }
 };
 
-void main()
+int main()
 {
     Derived d;
     Base* p = &d;
