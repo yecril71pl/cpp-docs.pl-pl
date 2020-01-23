@@ -3,7 +3,14 @@
 - name: 'Pobieranie, instalowanie i konfigurowanie obciążenia Projektowanie systemu Linux'
   href: download-install-and-setup-the-linux-development-workload.md
 - name: Nawiązywanie połączenia ze zdalnym komputerem z systemem Linux
-  href: connect-to-your-remote-linux-computer.md
+  expanded: true
+  items:
+    - name: Nawiązywanie połączenia ze zdalnym komputerem z systemem Linux
+      href: connect-to-your-remote-linux-computer.md
+    - name: 'Konfigurowanie zgodnego ze standardem FIPS, bezpiecznego i zdalnego środowiska tworzenia dla systemu Linux'
+      href: set-up-fips-compliant-secure-remote-linux-development.md
+    - name: ConnectionManager — dokumentacja
+      href: connectionmanager-reference.md
 - name: Tworzenie nowego projektu systemu Linux
   href: create-a-new-linux-project.md
 - name: Konfigurowanie projektu systemu Linux
