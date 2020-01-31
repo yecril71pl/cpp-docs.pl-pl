@@ -1,6 +1,7 @@
 ---
 title: _popen, _wpopen
-ms.date: 11/04/2016
+description: Odwołanie do funkcji biblioteki środowiska uruchomieniowego języka Microsoft C (CRT) _popen i _wpopen.
+ms.date: 01/28/2020
 api_name:
 - _popen
 - _wpopen
@@ -36,12 +37,21 @@ helpviewer_keywords:
 - wpopen function
 - _wpopen function
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
-ms.openlocfilehash: 0e58ffd523c6919d70c68454f3547736afdef565
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+no-loc:
+- _popen
+- _wpopen
+- _tpopen
+- _doserrno
+- errno
+- _sys_errlist
+- _sys_nerr
+- EINVAL
+ms.openlocfilehash: 68531256fd688b50b659c885635ffa17d17773a5
+ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950998"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76894323"
 ---
 # <a name="_popen-_wpopen"></a>_popen, _wpopen
 
@@ -65,21 +75,21 @@ FILE *_wpopen(
 
 ### <a name="parameters"></a>Parametry
 
-*dotyczące*<br/>
+\ *polecenia*
 Polecenie do wykonania.
 
-*wyst*<br/>
+\ *trybu*
 Tryb zwróconego strumienia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca strumień skojarzony z jednym końcem utworzonego potoku. Drugi koniec potoku jest skojarzony ze zduplikowanym wyjściem polecenia lub standardowym danymi wyjściowymi. Funkcje zwracają **wartość null** w przypadku błędu. Jeśli błąd jest nieprawidłowym parametrem, na przykład jeśli *polecenie* lub *tryb* jest wskaźnikiem typu null, lub *tryb* nie jest prawidłowym trybem, **errno** jest ustawiona na **EINVAL**. Zobacz sekcję Uwagi, aby uzyskać prawidłowe tryby.
+Zwraca strumień skojarzony z jednym końcem utworzonego potoku. Drugi koniec potoku jest skojarzony ze zduplikowanym wyjściem polecenia lub standardowym danymi wyjściowymi. Funkcje zwracają **wartość null** w przypadku błędu. Jeśli błąd jest spowodowany przez nieprawidłowy parametr, **errno** jest ustawiona na **EINVAL**. Zobacz sekcję Uwagi, aby uzyskać prawidłowe tryby.
 
 Aby uzyskać informacje o tych i innych kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_popen** tworzy potok i asynchronicznie wykonuje zduplikowaną kopię procesora poleceń z określonym *poleceniem*String. *Tryb* ciągu znaków określa typ żądanego dostępu w następujący sposób.
+Funkcja **_popen** tworzy potok. Następnie asynchronicznie wykonuje zduplikowaną kopię procesora poleceń i używa *polecenia* jako wiersza polecenia. *Tryb* ciągu znaków określa typ żądanego dostępu w następujący sposób.
 
 |Tryb dostępu|Opis|
 |-|-|
@@ -91,7 +101,7 @@ Funkcja **_popen** tworzy potok i asynchronicznie wykonuje zduplikowaną kopię 
 > [!NOTE]
 > Jeśli jest używany w programie systemu Windows, funkcja **_popen** zwraca nieprawidłowy wskaźnik pliku, który powoduje, że program przestaje odpowiadać przez czas nieokreślony. **_popen** działa prawidłowo w aplikacji konsolowej. Aby utworzyć aplikację systemu Windows, która przekierowuje dane wejściowe i wyjściowe, zobacz [Tworzenie procesu podrzędnego z przekierowanymi danymi wejściowymi i wyjściowymi](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output) w Windows SDK.
 
-**_wpopen** to dwubajtowa wersja **_popen**; argument *Path* **_wpopen** jest ciągiem znaków dwubajtowych. **_wpopen** i **_popen** zachowują się identycznie w inny sposób.
+**_wpopen** to dwubajtowa wersja **_popen**; argument *ścieżki* **_wpopen** jest ciągiem znaków dwubajtowych. **_wpopen** i **_popen** zachowują się identycznie w inny sposób.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -141,7 +151,7 @@ int main( void )
 
    while(fgets(psBuffer, 128, pPipe))
    {
-      printf(psBuffer);
+      puts(psBuffer);
    }
 
    /* Close pipe and print return value of pPipe. */
@@ -156,9 +166,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>Przykładowe dane wyjściowe
-
-W danych wyjściowych przyjęto założenie, że w bieżącym katalogu istnieje tylko jeden plik z rozszerzeniem nazwy pliku c.
+W danych wyjściowych założono, że w bieżącym katalogu znajduje się tylko jeden plik z rozszerzeniem nazwy pliku `.c`.
 
 ```Output
 Volume in drive C is CDRIVE
@@ -175,6 +183,6 @@ Process returned 0
 
 ## <a name="see-also"></a>Zobacz także
 
-[Procedury kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_pclose](pclose.md)<br/>
-[_pipe](pipe.md)<br/>
+[Proces i kontrola środowiska](../../c-runtime-library/process-and-environment-control.md)\
+[_pclose](pclose.md)\
+[_pipe](pipe.md)
