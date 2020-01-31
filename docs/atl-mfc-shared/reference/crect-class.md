@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: 2c84ce888e37b2a8985ca63cf3544205bc61f69f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 13f86c411cca98f5817d1b3b2d9162ae8af8b734
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491533"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821372"
 ---
 # <a name="crect-class"></a>Klasa CRect
 
@@ -57,7 +57,7 @@ class CRect : public tagRECT
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CRect::CRect](#crect)|Konstruuje `CRect` obiekt.|
+|[CRect::CRect](#crect)|Konstruuje obiekt `CRect`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -65,25 +65,25 @@ class CRect : public tagRECT
 |----------|-----------------|
 |[CRect::BottomRight](#bottomright)|Zwraca prawy dolny punkt `CRect`.|
 |[CRect::CenterPoint](#centerpoint)|Zwraca Centerpoint `CRect`.|
-|[CRect::CopyRect](#copyrect)|Kopiuje wymiary prostokąta źródłowego do `CRect`programu.|
+|[CRect::CopyRect](#copyrect)|Kopiuje wymiary prostokąta źródłowego do `CRect`.|
 |[CRect::DeflateRect](#deflaterect)|Zmniejsza szerokość i wysokość `CRect`.|
-|[CRect::EqualRect](#equalrect)|Określa, `CRect` czy jest równa danego prostokąta.|
+|[CRect::EqualRect](#equalrect)|Określa, czy `CRect` jest równa danego prostokąta.|
 |[CRect:: Height](#height)|Oblicza wysokość `CRect`.|
 |[CRect::InflateRect](#inflaterect)|Zwiększa szerokość i wysokość `CRect`.|
-|[CRect::IntersectRect](#intersectrect)|Zestawy `CRect` równe przecięciu dwóch prostokątów.|
-|[CRect::IsRectEmpty](#isrectempty)|Określa, `CRect` czy jest pusta. `CRect`jest puste, jeśli szerokość i/lub wysokość są równe 0.|
-|[CRect::IsRectNull](#isrectnull)|Określa `top`, czy zmienne `bottom`składowe, `right` , `left`i są równe 0.|
+|[CRect::IntersectRect](#intersectrect)|Ustawia `CRect` równe przecięcia dwóch prostokątów.|
+|[CRect::IsRectEmpty](#isrectempty)|Określa, czy `CRect` jest puste. `CRect` jest puste, jeśli szerokość i/lub wysokość są równe 0.|
+|[CRect::IsRectNull](#isrectnull)|Określa, czy zmienne składowe `top`, `bottom`, `left`i `right` są równe 0.|
 |[CRect::MoveToX](#movetox)|Przenosi `CRect` do określonej współrzędnej x.|
 |[CRect::MoveToXY](#movetoxy)|Przenosi `CRect` do określonych współrzędnych x i y.|
 |[CRect:: MoveTo](#movetoy)|Przenosi `CRect` do określonej współrzędnej y.|
 |[CRect::NormalizeRect](#normalizerect)|Standaryzacja wysokości i szerokości `CRect`.|
 |[CRect::OffsetRect](#offsetrect)|Przenosi `CRect` według określonych przesunięć.|
-|[CRect::P tInRect](#ptinrect)|Określa, czy określony punkt leży w `CRect`elemencie.|
+|[CRect::P tInRect](#ptinrect)|Określa, czy określony punkt leży w `CRect`.|
 |[CRect:: SetRect](#setrect)|Ustawia wymiary `CRect`.|
-|[CRect::SetRectEmpty](#setrectempty)|Ustawia `CRect` pusty prostokąt (wszystkie współrzędne równe 0).|
+|[CRect::SetRectEmpty](#setrectempty)|Ustawia `CRect` do pustego prostokąta (wszystkie współrzędne równe 0).|
 |[CRect:: size](#size)|Oblicza rozmiar `CRect`.|
 |[CRect::SubtractRect](#subtractrect)|Odejmuje jeden prostokąt od innego.|
-|[CRect::TopLeft](#topleft)|Zwraca punkt `CRect`w lewym górnym rogu.|
+|[CRect::TopLeft](#topleft)|Zwraca punkt w lewym górnym rogu `CRect`.|
 |[CRect::UnionRect](#unionrect)|Ustawia `CRect` równe Unii dwóch prostokątów.|
 |[CRect:: Width](#width)|Oblicza szerokość `CRect`.|
 
@@ -91,36 +91,36 @@ class CRect : public tagRECT
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CRect:: operator-](#operator_-)|Odejmuje przesunięcia z lub `CRect` `CRect` w dół i zwraca wynik `CRect`.|
-|[CRect:: operator LPCRECT](#operator_lpcrect)|`CRect` Konwertuje`LPCRECT`do.|
-|[CRect:: operator LPRECT](#operator_lprect)|`CRect` Konwertuje`LPRECT`do.|
-|[CRect:: operator! =](#operator_neq)|Określa, `CRect` czy nie jest równy prostokątowi.|
-|[CRect:: operator&amp;](#operator_amp)|Tworzy część wspólną `CRect` i prostokąt i zwraca wynik `CRect`.|
-|[CRect:: operator&amp;=](#operator_amp_eq)|Zestawy `CRect` równe`CRect` przecięciu i prostokąta.|
-|[CRect:: operator&#124;](#operator_or)|Tworzy Unię `CRect` i prostokąt i zwraca wynik `CRect`.|
-|[CRect:: operator &#124;=](#operator_or_eq)|Ustawia `CRect` równe`CRect` Unii i prostokąt.|
-|[CRect:: operator +](#operator_add)|Dodaje przesunięcia do `CRect` lub `CRect` niepłaskich i zwraca wynik `CRect`.|
-|[CRect:: operator + =](#operator_add_eq)|Dodaje określone przesunięcia do lub `CRect` do postaci `CRect`zryczałtowanej.|
+|[CRect:: operator-](#operator_-)|Odejmuje przesunięcia z `CRect` lub deflate `CRect` i zwraca wynikowy `CRect`.|
+|[CRect:: operator LPCRECT](#operator_lpcrect)|Konwertuje `CRect` na `LPCRECT`.|
+|[CRect:: operator LPRECT](#operator_lprect)|Konwertuje `CRect` na `LPRECT`.|
+|[CRect:: operator! =](#operator_neq)|Określa, czy `CRect` nie jest równa prostokątowi.|
+|[CRect:: operator &amp;](#operator_amp)|Tworzy część wspólną `CRect` i prostokąta i zwraca wynikowy `CRect`.|
+|[CRect:: operator &amp;=](#operator_amp_eq)|Ustawia `CRect` równe przecięcia `CRect` i prostokąta.|
+|[CRect:: operator&#124;](#operator_or)|Tworzy Unię `CRect` i prostokąta i zwraca wynikowy `CRect`.|
+|[CRect:: operator &#124;=](#operator_or_eq)|Ustawia `CRect` równe Unii `CRect` i prostokąta.|
+|[CRect:: operator +](#operator_add)|Dodaje określone przesunięcia do `CRect` lub niepłaskich `CRect` i zwraca wynikowy `CRect`.|
+|[CRect:: operator + =](#operator_add_eq)|Dodaje określone przesunięcia do `CRect` lub niepłaskich `CRect`.|
 |[CRect:: operator =](#operator_eq)|Kopiuje wymiary prostokąta do `CRect`.|
-|[CRect:: operator-=](#operator_-_eq)|Odejmuje określone przesunięcia z lub `CRect` `CRect`w dół.|
-|[CRect:: operator = =](#operator_eq_eq)|Określa, `CRect` czy jest równy prostokątowi.|
+|[CRect:: operator-=](#operator_-_eq)|Odejmuje określone przesunięcia od `CRect` lub rozliczeń `CRect`.|
+|[CRect:: operator = =](#operator_eq_eq)|Określa, czy `CRect` jest równa prostokątowi.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CRect`zawiera również funkcje członkowskie do manipulowania `CRect` obiektami i strukturami systemu Windows. `RECT`
+`CRect` obejmuje również funkcje elementów członkowskich do manipulowania obiektami `CRect` i strukturą `RECT` systemu Windows.
 
-Obiekt może być przesłany jako parametr funkcji wszędzie tam, `RECT` gdzie jest `LPCRECT`to struktura `LPRECT` , lub można go przekazywać. `CRect`
+Obiekt `CRect` można przesłać jako parametr funkcji wszędzie tam, gdzie `RECT` struktura, `LPCRECT`lub `LPRECT`.
 
 > [!NOTE]
-> Ta klasa jest pochodną `tagRECT` struktury. (Nazwa `tagRECT` jest mniej często używanej nazwy `RECT` dla struktury). Oznacza to, że elementy członkowskie danych`left`( `top`, `right`, i `bottom`) `RECT` struktury są dostępnymi elementami członkowskimi `CRect`.
+> Ta klasa pochodzi od struktury `tagRECT`. (Nazwa `tagRECT` jest mniej często używanej nazwy dla struktury `RECT`). Oznacza to, że członkowie danych (`left`, `top`, `right`i `bottom`) struktury `RECT` są dostępnymi elementami członkowskimi `CRect`.
 
-`CRect` Zawiera zmienne składowe, które definiują górny lewy i prawy dolny punkt prostokąta.
+`CRect` zawiera zmienne składowe, które definiują górny lewy i prawy dolny punkt prostokąta.
 
-Podczas określania `CRect`należy zachować ostrożność, aby skonstruować ją w taki sposób, aby była znormalizowana — innymi słowy, aby wartość lewej współrzędnej była mniejsza od prawej, a górna jest mniejsza niż Dolna. Na przykład w lewym górnym rogu (10, 10) i u dołu z prawej strony (20, 20) definiuje znormalizowany prostokąt, ale u góry z lewej strony (20, 20) i z prawej strony (10, 10) definiuje prostokąt nieznormalizowany. Jeśli prostokąt nie jest znormalizowany, wiele `CRect` funkcji Członkowskich może zwracać nieprawidłowe wyniki. (Zobacz [CRect:: NormalizeRect](#normalizerect) , aby zapoznać się z listą tych funkcji). Przed wywołaniem funkcji, która wymaga znormalizowanych prostokątów, można znormalizować prostokąty nieznormalizowane przez wywołanie `NormalizeRect` funkcji.
+Podczas określania `CRect`należy zachować ostrożność, aby skonstruować ją w taki sposób, aby była znormalizowana — innymi słowy, aby wartość lewej współrzędnej była mniejsza od prawej, a górna jest mniejsza niż Dolna. Na przykład w lewym górnym rogu (10, 10) i u dołu z prawej strony (20, 20) definiuje znormalizowany prostokąt, ale u góry z lewej strony (20, 20) i z prawej strony (10, 10) definiuje prostokąt nieznormalizowany. Jeśli prostokąt nie jest znormalizowany, wiele funkcji Członkowskich `CRect` może zwracać nieprawidłowe wyniki. (Zobacz [CRect:: NormalizeRect](#normalizerect) , aby zapoznać się z listą tych funkcji). Przed wywołaniem funkcji wymagającej znormalizowanych prostokątów można znormalizować prostokąty nieznormalizowane, wywołując funkcję `NormalizeRect`.
 
-Należy zachować ostrożność podczas manipulowania `CRect` programem przy użyciu funkcji [przechwytywania::D ptolp](../../mfc/reference/cdc-class.md#dptolp) i [przechwytywania:: LPtoDP](../../mfc/reference/cdc-class.md#lptodp) . Jeśli tryb mapowania kontekstu wyświetlania jest taki, że zakres y ma wartość ujemną, `MM_LOENGLISH`a następnie `CDC::DPtoLP` zostanie przekształcony `CRect` w taki sposób, aby jego góra była większa od dołu. Funkcje takie jak `Height` i `Size` zwracają wartości ujemne dla wysokości przekształconej `CRect`, a prostokąt nie będzie znormalizowany.
+Należy zachować ostrożność podczas manipulowania `CRect` przy użyciu funkcji [przechwytywania::D ptolp](../../mfc/reference/cdc-class.md#dptolp) i [przechwytywania:: LPtoDP](../../mfc/reference/cdc-class.md#lptodp) . Jeśli tryb mapowania kontekstu wyświetlania jest taki, że zakres y jest ujemny, jak w `MM_LOENGLISH`, wówczas `CDC::DPtoLP` przekształci `CRect` tak, aby jego góra była większa niż Dolna. Funkcje, takie jak `Height` i `Size`, będą zwracały wartości ujemne dla wysokości przekształconych `CRect`, a prostokąt nie będzie znormalizowany.
 
-W przypadku używania `CRect` przeciążonych operatorów pierwszy operand musi być, `CRect`a drugi może być strukturą lub [](/windows/win32/api/windef/ns-windef-rect) `CRect` obiektem.
+Gdy używane są przeciążone operatory `CRect`, pierwszy operand musi być `CRect`; drugi może [być strukturą](/windows/win32/api/windef/ns-windef-rect) lub obiektem `CRect`.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -141,7 +141,7 @@ CPoint& BottomRight() throw();
 const CPoint& BottomRight() const throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Współrzędne prawego dolnego rogu prostokąta.
 
@@ -177,15 +177,15 @@ ASSERT(rect2 == CRect(10, 10, 180, 180));
 
 ##  <a name="centerpoint"></a>CRect::CenterPoint
 
-Oblicza Centerpoint `CRect` przez dodanie wartości lewej i prawej oraz podział przez dwa i dodanie wartości górnych i dolnych i dzielenie przez dwa.
+Oblicza Centerpoint `CRect`, dodając lewe i prawe wartości i dzieląc je przez dwa, a następnie dodając wartości górne i dolne i dzieląc je na dwa.
 
 ```
 CPoint CenterPoint() const throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Obiekt, który jest `CRect`Centerpoint. `CPoint`
+Obiekt `CPoint`, który jest centerpointem `CRect`.
 
 ### <a name="example"></a>Przykład
 
@@ -240,7 +240,7 @@ void CMyDlg::OnPaint()
 
 ##  <a name="copyrect"></a>CRect::CopyRect
 
-Kopiuje prostokąt do `CRect`. `lpSrcRect`
+Kopiuje prostokąt `lpSrcRect` do `CRect`.
 
 ```
 void CopyRect(LPCRECT lpSrcRect) throw();
@@ -249,7 +249,7 @@ void CopyRect(LPCRECT lpSrcRect) throw();
 ### <a name="parameters"></a>Parametry
 
 *lpSrcRect*<br/>
-Wskazuje strukturę lub [](/windows/win32/api/windef/ns-windef-rect) `CRect` obiekt prostokąta, który ma zostać skopiowany.
+Wskazuje strukturę [Rect](/windows/win32/api/windef/ns-windef-rect) lub obiekt `CRect`, który ma zostać skopiowany.
 
 ### <a name="example"></a>Przykład
 
@@ -275,7 +275,7 @@ rectDest.CopyRect(&rectSource2);
 
 ##  <a name="crect"></a>CRect::CRect
 
-Konstruuje `CRect` obiekt.
+Konstruuje obiekt `CRect`.
 
 ```
 CRect() throw();
@@ -292,19 +292,19 @@ CRect(POINT topLeft, POINT bottomRight) throw();
 Określa lewą pozycję `CRect`.
 
 *t*<br/>
-Określa górę elementu `CRect`.
+Określa początek `CRect`.
 
 *r*<br/>
-Określa odpowiednią pozycję `CRect`.
+Określa prawą pozycję `CRect`.
 
 *b*<br/>
-Określa dolną część `CRect`.
+Określa dolną `CRect`.
 
 *srcRect*<br/>
-Odwołuje się do struktury [Rect](/windows/win32/api/windef/ns-windef-rect) ze współrzędnymi `CRect`.
+Odwołuje się do struktury [Rect](/windows/win32/api/windef/ns-windef-rect) ze współrzędnymi dla `CRect`.
 
 *lpSrcRect*<br/>
-Wskazuje strukturę ze współrzędnymi dla `CRect`. `RECT`
+Wskazuje strukturę `RECT` ze współrzędnymi `CRect`.
 
 *moment*<br/>
 Określa punkt początkowy prostokąta, który ma być skonstruowany. Odnosi się do lewego górnego rogu.
@@ -320,9 +320,9 @@ Określa prawą dolną pozycję `CRect`.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli nie podano argumentów, `left` `right`, `top`,, i `bottom` elementy członkowskie nie są inicjowane.
+Jeśli nie podano argumentów, `left`, `top`, `right`i składowe `bottom` nie są inicjowane.
 
-[](#copyrect)Konstruktory`const RECT&` `CRect`() i(`LPCRECT`) wykonują CopyRect. `CRect` Inne konstruktory inicjują zmienne składowe obiektu bezpośrednio.
+Konstruktory `CRect`(`const RECT&`) i `CRect`(`LPCRECT`) wykonują [CopyRect](#copyrect). Inne konstruktory inicjują zmienne składowe obiektu bezpośrednio.
 
 ### <a name="example"></a>Przykład
 
@@ -335,7 +335,7 @@ CRect rect(0, 0, 100, 50);
 ASSERT(rect.Width() == 100);
 ASSERT(rect.Height() == 50);
 
-// Initialize from RECT stucture
+// Initialize from RECT structure
 RECT sdkRect;
 sdkRect.left = 0;
 sdkRect.top = 0;
@@ -364,7 +364,7 @@ ASSERT(rect5 == rect4);
 
 ##  <a name="deflaterect"></a>CRect::D eflateRect
 
-`DeflateRect``CRect` powoduje, że przesuwanie jej stron na środek.
+`DeflateRect` jest rozsunięty `CRect` przez przeniesienie stron na swoje centrum.
 
 ```
 void DeflateRect(int x, int y) throw();
@@ -382,16 +382,16 @@ Określa liczbę jednostek do skorygowania lewej i prawej strony `CRect`.
 Określa liczbę jednostek do skorygowania u góry i u dołu `CRect`.
 
 *zmienia*<br/>
-[Rozmiar](/windows/win32/api/windef/ns-windef-size) lub [CSize](csize-class.md) , który określa liczbę jednostek do skorygowania `CRect`. Wartość określa liczbę jednostek do skorygowania lewej i prawej strony `cy` , a wartość określa liczbę jednostek do skorygowania do góry i u dołu. `cx`
+[Rozmiar](/windows/win32/api/windef/ns-windef-size) lub [CSize](csize-class.md) , który określa liczbę jednostek do skorygowania `CRect`. Wartość `cx` określa liczbę jednostek do skorygowania lewej i prawej strony, a wartość `cy` określa liczbę jednostek do skorygowania do góry i u dołu.
 
 *lpRect*<br/>
-Wskazuje strukturę [Rect](/windows/win32/api/windef/ns-windef-rect) lub `CRect` , która określa liczbę jednostek do skorygowania każdej strony.
+Wskazuje strukturę [prostokąta](/windows/win32/api/windef/ns-windef-rect) lub `CRect`, która określa liczbę jednostek do skorygowania po każdej stronie.
 
 *l*<br/>
 Określa liczbę jednostek do skorygowania po lewej stronie `CRect`.
 
 *t*<br/>
-Określa liczbę jednostek, które mają zostać skorygowane do `CRect`góry.
+Określa liczbę jednostek do skorygowania do góry `CRect`.
 
 *r*<br/>
 Określa liczbę jednostek do skorygowania po prawej stronie `CRect`.
@@ -401,9 +401,9 @@ Określa liczbę jednostek do skorygowania do dołu `CRect`.
 
 ### <a name="remarks"></a>Uwagi
 
-W tym celu program `DeflateRect` dodaje jednostki do lewej i górnej i odejmuje jednostki od prawej i dolnej. Parametry `DeflateRect` są podpisywane wartości; `CRect` wartości dodatnie są porzucane i wartości ujemne.
+Aby to zrobić, `DeflateRect` dodaje jednostki z lewej i góry i odejmuje jednostki od prawej i dołu. Parametry `DeflateRect` są podpisywane wartości; wartości dodatnie skorygowane `CRect` i wartości ujemne wzrosnąmy.
 
-Pierwsze dwa przeciążenia są korygowane przy użyciu obu par przeciw `CRect` siebie, tak aby łączna szerokość była mniejsza o dwa razy *x* ( `cx`lub), a jej łączna wysokość została zmniejszona o dwie godziny `cy` *y* (lub). Pozostałe dwa przeciążenia są korygowane `CRect` niezależnie od siebie.
+Pierwsze dwa przeciążenia są korygowane z obu par stron `CRect` tak, aby łączna szerokość była mniejsza o dwa razy *x* (lub `cx`), a jego łączna wysokość została obniżona o dwie godziny *y* (lub `cy`). Pozostałe dwa przeciążenia są korygowane po każdej stronie `CRect` niezależnie od innych.
 
 ### <a name="example"></a>Przykład
 
@@ -422,7 +422,7 @@ ASSERT(rect2.top == 12 && rect2.bottom == 46);
 
 ##  <a name="equalrect"></a>CRect::EqualRect
 
-Określa, `CRect` czy jest równa danego prostokąta.
+Określa, czy `CRect` jest równa danego prostokąta.
 
 ```
 BOOL EqualRect(LPCRECT lpRect) const throw();
@@ -431,9 +431,9 @@ BOOL EqualRect(LPCRECT lpRect) const throw();
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Wskazuje strukturę lub [](/windows/win32/api/windef/ns-windef-rect) `CRect` obiekt prostokąta, który zawiera współrzędne górnego lewego i prawego górnego rogu prostokąta.
+Wskazuje na strukturę [Rect](/windows/win32/api/windef/ns-windef-rect) lub `CRect` obiekt, który zawiera współrzędne górnego lewego i prawego dolnego prostokąta.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli dwa prostokąty mają te same wartości górne, lewe, dolne i prawe; w przeciwnym razie 0.
 
@@ -461,13 +461,13 @@ ASSERT(rect1.EqualRect(&test));
 
 ##  <a name="height"></a>CRect:: Height
 
-Oblicza wysokość `CRect` w wyniku odejmowania górnej wartości od dolnej wartości.
+Oblicza wysokość `CRect`, odejmując górną wartość od wartości dolnej.
 
 ```
 int Height() const throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wysokość `CRect`.
 
@@ -490,7 +490,7 @@ ASSERT(nHt == 40);
 
 ##  <a name="inflaterect"></a>CRect::InflateRect
 
-`InflateRect`jest płaskie `CRect` przez przesuwanie jej stron od orodka do środka.
+`InflateRect` rozflate `CRect` przez przesuwanie ich stron od centrum.
 
 ```
 void InflateRect(int x, int y) throw();
@@ -502,34 +502,34 @@ void InflateRect(int l, int t, int r,  int b) throw();
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Określa liczbę jednostek, które mają zostać poddaną lewej i prawej strony `CRect`.
+Określa liczbę jednostek, które mają zostać pożądane po lewej stronie i po prawej stronie `CRect`.
 
 *y*<br/>
-Określa liczbę jednostek, które mają zostać podwyższenie górnego `CRect`i dolnej krawędzi.
+Określa liczbę jednostek do podwyższenia górnego i dolnego `CRect`.
 
 *zmienia*<br/>
-Rozmiar lub [CSize](csize-class.md) określający liczbę `CRect`jednostek do rozbudowania. [](/windows/win32/api/windef/ns-windef-size) Wartość określa liczbę jednostek, które mają zostać poddaną lewą i prawą stronę `cy` , a wartość określa liczbę jednostek, które mają zostać podwyższenie i dół. `cx`
+Rozmiar lub [CSize](csize-class.md) określający liczbę jednostek do [rozbudowanego](/windows/win32/api/windef/ns-windef-size) `CRect`. Wartość `cx` określa liczbę jednostek, które mają zostać podwyższenie i po prawej stronie, a wartość `cy` określa liczbę jednostek, które mają być pogórne i dolne.
 
 *lpRect*<br/>
-Wskazuje strukturę [prostokąta](/windows/win32/api/windef/ns-windef-rect) lub `CRect` określa liczbę jednostek, które mają zostać rozbudowane po każdej stronie.
+Wskazuje strukturę [prostokąta](/windows/win32/api/windef/ns-windef-rect) lub `CRect`, która określa liczbę jednostek do rozbudowy każdej strony.
 
 *l*<br/>
-Określa liczbę jednostek, które mają zostać podstawione po `CRect`lewej stronie.
+Określa liczbę jednostek, która ma zostać poddana lewej stronie `CRect`.
 
 *t*<br/>
 Określa liczbę jednostek do podwyższenia poziomu `CRect`.
 
 *r*<br/>
-Określa liczbę jednostek, które mają być podłączane po `CRect`prawej stronie.
+Określa liczbę jednostek, które mają być podłączane po prawej stronie `CRect`.
 
 *b*<br/>
-Określa liczbę jednostek, które mają zostać poddaną dolną część `CRect`.
+Określa liczbę jednostek do obdzienia dołu `CRect`.
 
 ### <a name="remarks"></a>Uwagi
 
-W tym `InflateRect` celu odejmuje jednostki od lewej i górnej i dodaje jednostki z prawej strony i u dołu. Parametry `InflateRect` są podpisywane wartości; wartości dodatnie `CRect` i wartości ujemne są korygowane.
+W tym celu `InflateRect` odejmuje jednostki od lewej i górnej i dodaje jednostki z prawej strony i u dołu. Parametry `InflateRect` są podpisywane wartości; wartości dodatnie są rozdęcie `CRect` i wartości ujemne są korygowane.
 
-Pierwsze dwa przeciążenia rozszerą obie `CRect` pary przeciw siebie, tak aby łączna szerokość została zwiększona o dwa razy *x* (lub `cx`), a jego łączna wysokość została zwiększona o dwie godziny *y* (lub `cy`). Pozostałe dwa przeciążenia są rozczytane z `CRect` każdej strony niezależnie od innych.
+Pierwsze dwa przeciążenia rozszerą obie pary stron `CRect` tak, aby łączna szerokość była zwiększona o dwa razy *x* (lub `cx`) i jego łączna wysokość została zwiększona o dwa razy *y* (lub `cy`). Pozostałe dwa przeciążenia rozciążą każdą stronę `CRect` niezależnie od innych.
 
 ### <a name="example"></a>Przykład
 
@@ -543,7 +543,7 @@ ASSERT(rect == CRect(-50, -200, 350, 500));
 
 ##  <a name="intersectrect"></a>CRect::IntersectRect
 
-Sprawia, `CRect` że jest równe przecięcia dwóch istniejących prostokątów.
+Sprawia, że `CRect` jest równa przecięciu dwóch istniejących prostokątów.
 
 ```
 BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
@@ -552,12 +552,12 @@ BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 ### <a name="parameters"></a>Parametry
 
 *lpRect1*<br/>
-Wskazuje strukturę lub [](/windows/win32/api/windef/ns-windef-rect) `CRect` obiekt Recta, który zawiera prostokąt źródłowy.
+Wskazuje [strukturę](/windows/win32/api/windef/ns-windef-rect) prostokąta lub obiekt `CRect`, który zawiera prostokąt źródłowy.
 
 *lpRect2*<br/>
-Wskazuje strukturę lub `CRect` obiekt, który zawiera prostokąt źródłowy. `RECT`
+Wskazuje strukturę `RECT` lub obiekt `CRect`, który zawiera prostokąt źródłowy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli część wspólna nie jest pusta; 0, jeśli część wspólna jest pusta.
 
@@ -586,19 +586,19 @@ ASSERT(rectInter2 == CRect(125, 75, 150, 95));
 
 ##  <a name="isrectempty"></a>CRect::IsRectEmpty
 
-Określa, `CRect` czy jest pusta.
+Określa, czy `CRect` jest puste.
 
 ```
 BOOL IsRectEmpty() const throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Wartość różna od `CRect` zera, jeśli jest pusta `CRect` ; 0 Jeśli nie jest pusta.
+Wartość różna od zera, jeśli `CRect` jest pusta; 0, jeśli `CRect` nie jest pusty.
 
 ### <a name="remarks"></a>Uwagi
 
-Prostokąt jest pusty, jeśli szerokość i/lub wysokość są równe 0 lub negatywnie. Różni się `IsRectNull`od, który określa, czy wszystkie współrzędne prostokąta są równe zero.
+Prostokąt jest pusty, jeśli szerokość i/lub wysokość są równe 0 lub negatywnie. Różni się od `IsRectNull`, który określa, czy wszystkie współrzędne prostokąta są równe zero.
 
 > [!NOTE]
 >  Prostokąt musi być znormalizowany lub ta funkcja może się nie powieść. Możesz wywołać [NormalizeRect](#normalizerect) , aby znormalizować prostokąt przed wywołaniem tej funkcji.
@@ -616,19 +616,19 @@ ASSERT(rectEmpty.IsRectEmpty());
 
 ##  <a name="isrectnull"></a>CRect::IsRectNull
 
-Określa, czy wartości `CRect` górnego, lewego, dolnego i prawego są równe 0.
+Określa, czy wartości górnego, lewego, dolnego i prawego `CRect` są równe 0.
 
 ```
 BOOL IsRectNull() const throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Wartość różna od `CRect`zera, jeśli wartości Top, Left, Bottom i Right są równe 0; w przeciwnym razie 0.
+Różna od zera, jeśli `CRect`wartości górnych, lewych, dolnych i prawych są równe 0; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Różni się `IsRectEmpty`od, który określa, czy prostokąt jest pusty.
+Różni się od `IsRectEmpty`, który określa, czy prostokąt jest pusty.
 
 ### <a name="example"></a>Przykład
 
@@ -684,7 +684,7 @@ Bezwzględna Współrzędna x dla lewego górnego rogu prostokąta.
 Bezwzględna Współrzędna y dla lewego górnego rogu prostokąta.
 
 *moment*<br/>
-`POINT` Struktura określająca bezwzględny górny róg prostokąta.
+Struktura `POINT`a określająca bezwzględny górny róg prostokąta.
 
 ### <a name="example"></a>Przykład
 
@@ -719,7 +719,7 @@ ASSERT(rect == CRect(0, 10, 100, 110));
 
 ##  <a name="normalizerect"></a>CRect::NormalizeRect
 
-Normalizuje `CRect` w taki sposób, że wysokość i szerokość są dodatnie.
+Normalizuje `CRect` tak, aby wysokość i szerokość były dodatnie.
 
 ```
 void NormalizeRect() throw();
@@ -727,10 +727,10 @@ void NormalizeRect() throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Prostokąt jest znormalizowany dla pozycjonowania z czwartą ćwiartką, który jest zazwyczaj używany przez system Windows do współrzędnych. `NormalizeRect`porównuje wartości górne i dolne i zamienia je, jeśli Górna wartość jest większa od dołu. Podobnie zamienia wartości lewej i prawej, jeśli po lewej stronie jest większy od prawej strony. Ta funkcja jest przydatna podczas rozpatrywania różnych trybów mapowania i odwróconych prostokątów.
+Prostokąt jest znormalizowany dla pozycjonowania z czwartą ćwiartką, który jest zazwyczaj używany przez system Windows do współrzędnych. `NormalizeRect` porównuje wartości górne i dolne i zamienia je, jeśli Górna wartość jest większa od dołu. Podobnie zamienia wartości lewej i prawej, jeśli po lewej stronie jest większy od prawej strony. Ta funkcja jest przydatna podczas rozpatrywania różnych trybów mapowania i odwróconych prostokątów.
 
 > [!NOTE]
-> Następujące `CRect` funkcje Członkowskie wymagają znormalizowanych prostokątów, aby działały prawidłowo: [Height](#height), [Width](#width), [size](#size), [IsRectEmpty](#isrectempty), [PtInRect](#ptinrect), [EqualRect](#equalrect), [UnionRect](#unionrect), [IntersectRect](#intersectrect), [SubtractRect](#subtractrect), [operator = =](#operator_eq_eq), [operator! =](#operator_neq), [operator &#124; ](#operator_or), [operator &#124;=](#operator_or_eq), [& operatora](#operator_amp)i [operator & =](#operator_amp_eq).
+> Następujące `CRect` funkcje Członkowskie wymagają znormalizowanych prostokątów, aby działały prawidłowo: [Height](#height), [Width](#width), [size](#size), [IsRectEmpty](#isrectempty), [PtInRect](#ptinrect), [EqualRect](#equalrect), [UnionRect](#unionrect), [IntersectRect](#intersectrect), [SubtractRect](#subtractrect), [operator = =](#operator_eq_eq), operator [! =](#operator_neq), [operator &#124; ](#operator_or), [operator &#124;=](#operator_or_eq), [operator &](#operator_amp)i [operator & =](#operator_amp_eq).
 
 ### <a name="example"></a>Przykład
 
@@ -768,7 +768,7 @@ Zawiera strukturę [rozmiaru](/windows/win32/api/windef/ns-windef-size) lub obie
 
 ### <a name="remarks"></a>Uwagi
 
-Przenosi `CRect` *x* jednostek wzdłuż osi x i *y* wzdłuż osi y. Parametry *x* i *y* są podpisywane wartości, więc `CRect` można je przenieść w lewo lub w prawo, w górę lub w dół.
+Przenosi `CRect`*x* jednostek wzdłuż osi x i *y* wzdłuż osi y. Parametry *x* i *y* są podpisywane wartości, dlatego `CRect` można przenieść w lewo lub w prawo, w górę lub w dół.
 
 ### <a name="example"></a>Przykład
 
@@ -780,7 +780,7 @@ rect.OffsetRect(230, 230);
 ASSERT(rect == CRect(230, 230, 265, 265));
 ```
 
-##  <a name="operator_lpcrect"></a>CRect:: operator LPCRECT konwertuje element `CRect` na [LPCRECT](../../mfc/reference/data-types-mfc.md).
+##  <a name="operator_lpcrect"></a>CRect:: operator LPCRECT konwertuje `CRect` na [LPCRECT](../../mfc/reference/data-types-mfc.md).
 
 ```
 operator LPCRECT() const throw();
@@ -788,11 +788,11 @@ operator LPCRECT() const throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Korzystając z tej funkcji, nie jest potrzebny operator address-of ( **&** ). Ten operator zostanie automatycznie użyty podczas przekazywania `CRect` obiektu do funkcji, która oczekuje. `LPCRECT`
+Korzystając z tej funkcji, nie jest potrzebny operator address-of ( **&** ). Ten operator zostanie automatycznie użyty podczas przekazywania obiektu `CRect` do funkcji, która oczekuje `LPCRECT`.
 
 ##  <a name="operator_lprect"></a>CRect:: operator LPRECT
 
-Konwertuje do lpRect. [](../../mfc/reference/data-types-mfc.md) `CRect`
+Konwertuje `CRect` na [lpRect](../../mfc/reference/data-types-mfc.md).
 
 ```
 operator LPRECT() throw();
@@ -800,7 +800,7 @@ operator LPRECT() throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Korzystając z tej funkcji, nie jest potrzebny operator address-of ( **&** ). Ten operator zostanie automatycznie użyty podczas przekazywania `CRect` obiektu do funkcji, która oczekuje. `LPRECT`
+Korzystając z tej funkcji, nie jest potrzebny operator address-of ( **&** ). Ten operator zostanie automatycznie użyty podczas przekazywania obiektu `CRect` do funkcji, która oczekuje `LPRECT`.
 
 ### <a name="example"></a>Przykład
 
@@ -831,7 +831,7 @@ ASSERT(rect2 == CRect(0, 0, 127, 168));
 
 ##  <a name="operator_eq_eq"></a>CRect:: operator = =
 
-Określa, `rect` czy jest `CRect` równe, porównując współrzędne ich lewego górnego i prawego dolnego rogu.
+Określa, czy `rect` jest równa `CRect`, porównując współrzędne ich lewego górnego i prawego dolnego rogu.
 
 ```
 BOOL operator==(const RECT& rect) const throw();
@@ -842,7 +842,7 @@ BOOL operator==(const RECT& rect) const throw();
 *cinania*<br/>
 Odwołuje się do prostokąta źródłowego. Może to być [prostokąt](/windows/win32/api/windef/ns-windef-rect) lub `CRect`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość różna od zera, jeśli jest równa; w przeciwnym razie 0.
 
@@ -871,7 +871,7 @@ ASSERT(rect1 == test);
 
 ##  <a name="operator_neq"></a>CRect:: operator! =
 
-Określa, czy element *Rect* nie jest `CRect` równy, porównując współrzędne ich lewego górnego i prawego dolnego rogu.
+Określa, czy element *Rect* nie jest równy `CRect`, porównując współrzędne ich lewego górnego i prawego dolnego rogu.
 
 ```
 BOOL operator!=(const RECT& rect) const throw();
@@ -882,7 +882,7 @@ BOOL operator!=(const RECT& rect) const throw();
 *cinania*<br/>
 Odwołuje się do prostokąta źródłowego. Może to być [prostokąt](/windows/win32/api/windef/ns-windef-rect) lub `CRect`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość różna od zera, jeśli nie równa się; w przeciwnym razie 0.
 
@@ -911,7 +911,7 @@ ASSERT(rect3 != test);
 
 ##  <a name="operator_add_eq"></a>CRect:: operator + =
 
-Pierwsze dwa przeciążenia są przenoszone `CRect` przez określone przesunięcia.
+Pierwsze dwa przeciążenia przechodzą `CRect` przez określone przesunięcia.
 
 ```
 void operator+=(POINT point) throw();
@@ -928,13 +928,13 @@ Struktura [punktu](/windows/win32/api/windef/ns-windef-point) lub obiekt [CPoint
 Struktura [rozmiaru](/windows/win32/api/windef/ns-windef-size) lub obiekt [CSize](csize-class.md) , który określa liczbę jednostek do przeniesienia prostokąta.
 
 *lpRect*<br/>
-Wskazuje strukturę lub [](/windows/win32/api/windef/ns-windef-rect) `CRect` obiekt prostokąta zawierający liczbę jednostek, które mają być rozbudowane po każdej `CRect`stronie.
+Wskazuje na strukturę [Rect](/windows/win32/api/windef/ns-windef-rect) lub `CRect` obiekt zawierający liczbę jednostek, które mają być rozbudowane po obu stronach `CRect`.
 
 ### <a name="remarks"></a>Uwagi
 
 Wartości *x* i *y* (lub `cx` i `cy`) parametru są dodawane do `CRect`.
 
-Trzecie Przeciążenie jest zawyżone `CRect` według liczby jednostek określonych w każdym elemencie członkowskim parametru.
+Trzecie Przeciążenie jest rozliczane `CRect` przez liczbę jednostek określonych w każdym elemencie członkowskim parametru.
 
 ### <a name="example"></a>Przykład
 
@@ -949,7 +949,7 @@ ASSERT(rect1 == rect2);
 
 ##  <a name="operator_-_eq"></a>CRect:: operator-=
 
-Pierwsze dwa przeciążenia są przenoszone `CRect` przez określone przesunięcia.
+Pierwsze dwa przeciążenia przechodzą `CRect` przez określone przesunięcia.
 
 ```
 void operator-=(POINT point) throw();
@@ -966,13 +966,13 @@ Struktura [punktu](/windows/win32/api/windef/ns-windef-point) lub obiekt [CPoint
 Struktura [rozmiaru](/windows/win32/api/windef/ns-windef-size) lub obiekt [CSize](csize-class.md) , który określa liczbę jednostek do przeniesienia prostokąta.
 
 *lpRect*<br/>
-Wskazuje strukturę lub [](/windows/win32/api/windef/ns-windef-rect) `CRect` obiekt prostokąta, który zawiera liczbę jednostek do `CRect`skorygowania po obu stronach.
+Wskazuje strukturę [Rect](/windows/win32/api/windef/ns-windef-rect) lub obiekt `CRect`, który zawiera liczbę jednostek do skorygowania po każdej stronie `CRect`.
 
 ### <a name="remarks"></a>Uwagi
 
 Wartości *x* i *y* (lub `cx` i `cy`) parametru są odejmowane od `CRect`.
 
-Trzecie Przeciążenie jest rozliczane `CRect` według liczby jednostek określonych w każdym elemencie członkowskim parametru. Należy zauważyć, że te funkcje przeciążenia, takie jak [DeflateRect](#deflaterect).
+Trzecie Przeciążenie jest rozliczane `CRect` przez liczbę jednostek określonych w każdym elemencie członkowskim parametru. Należy zauważyć, że te funkcje przeciążenia, takie jak [DeflateRect](#deflaterect).
 
 ### <a name="example"></a>Przykład
 
@@ -985,9 +985,9 @@ CRect   rectResult(65, 170, 165, 270);
 ASSERT(rect1 == rectResult);
 ```
 
-##  <a name="operator_amp_eq"></a>CRect:: operator&amp;=
+##  <a name="operator_amp_eq"></a>CRect:: operator &amp;=
 
-Zestawy `CRect` równe `rect`przecięciu i. `CRect`
+Ustawia `CRect` równe przecięcia `CRect` i `rect`.
 
 ```
 void operator&=(const RECT& rect) throw();
@@ -1011,7 +1011,7 @@ Zobacz przykład dla [CRect:: IntersectRect](#intersectrect).
 
 ##  <a name="operator_or_eq"></a>CRect:: operator &#124;=
 
-Zestawy `CRect` równe `CRect` Unii i `rect`.
+Ustawia `CRect` równe Unii `CRect` i `rect`.
 
 ```
 void operator|=(const RECT& rect) throw();
@@ -1020,7 +1020,7 @@ void operator|=(const RECT& rect) throw();
 ### <a name="parameters"></a>Parametry
 
 *cinania*<br/>
-Zawiera element `CRect` lub [](/windows/win32/api/windef/ns-windef-rect).
+Zawiera `CRect` lub [Rect](/windows/win32/api/windef/ns-windef-rect).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1042,7 +1042,7 @@ ASSERT(rectResult == rect1);
 
 ##  <a name="operator_add"></a>CRect:: operator +
 
-Pierwsze dwa przeciążenia zwracają `CRect` obiekt, który jest `CRect` równy przesunięciu przez określone przesunięcia.
+Pierwsze dwa przeciążenia zwracają obiekt `CRect`, który jest równy `CRect` przesunięty przez określone przesunięcia.
 
 ```
 CRect operator+(POINT point) const throw();
@@ -1059,17 +1059,17 @@ Struktura [punktu](/windows/win32/api/windef/ns-windef-point) lub obiekt [CPoint
 Struktura [rozmiaru](/windows/win32/api/windef/ns-windef-size) lub obiekt [CSize](csize-class.md) , który określa liczbę jednostek do przeniesienia wartości zwracanej.
 
 *lpRect*<br/>
-Wskazuje strukturę lub [](/windows/win32/api/windef/ns-windef-rect) `CRect` obiekt prostokąta zawierający liczbę jednostek, które mają być rozbudowane po każdej stronie wartości zwracanej.
+Wskazuje strukturę [Rect](/windows/win32/api/windef/ns-windef-rect) lub obiekt `CRect`, który zawiera liczbę jednostek, które mają zostać rozbudowane po każdej stronie wartości zwracanej.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Wyniki z przesunięcia lub `CRect` nieflata według liczby jednostek określonej w parametrze. `CRect`
+`CRect` wynikający z przeniesień lub niepłaskich `CRect` według liczby jednostek określonych w parametrze.
 
 ### <a name="remarks"></a>Uwagi
 
-Parametry *x* i *y* (lub `cx` i `cy`) parametru są dodawane do `CRect`pozycji.
+Parametry *x* i *y* (lub `cx` i `cy`) parametru są dodawane do pozycji `CRect`.
 
-Trzecie Przeciążenie zwraca nową `CRect` , która jest `CRect` równa liczbie jednostek określonych w poszczególnych elementach członkowskich parametru.
+Trzecie Przeciążenie zwraca nowe `CRect`, które jest równe `CRect` nierównomiernie według liczby jednostek określonych w każdym elemencie członkowskim parametru.
 
 ### <a name="example"></a>Przykład
 
@@ -1085,7 +1085,7 @@ ASSERT(rectResult == rect2);
 
 ##  <a name="operator_-"></a>CRect:: operator-
 
-Pierwsze dwa przeciążenia zwracają `CRect` obiekt, który jest `CRect` równy przesunięciu przez określone przesunięcia.
+Pierwsze dwa przeciążenia zwracają obiekt `CRect`, który jest równy `CRect` przesunięty przez określone przesunięcia.
 
 ```
 CRect operator-(POINT point) const throw();
@@ -1102,17 +1102,17 @@ Struktura [punktu](/windows/win32/api/windef/ns-windef-point) lub `CPoint` obiek
 Struktura [rozmiaru](/windows/win32/api/windef/ns-windef-size) lub `CSize` obiekt, który określa liczbę jednostek do przeniesienia wartości zwracanej.
 
 *lpRect*<br/>
-Wskazuje strukturę lub [](/windows/win32/api/windef/ns-windef-rect) `CRect` obiekt prostokąta, który zawiera liczbę jednostek do skorygowania po każdej stronie wartości zwracanej.
+Wskazuje strukturę [Rect](/windows/win32/api/windef/ns-windef-rect) lub obiekt `CRect`, który zawiera liczbę jednostek do skorygowania po każdej stronie wartości zwracanej.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Wynikiem przesunięcia lub `CRect` rozliczania liczby jednostek określonych w parametrze. `CRect`
+`CRect` wynikający z przesunięcia lub rozliczania `CRect` według liczby jednostek określonych w parametrze.
 
 ### <a name="remarks"></a>Uwagi
 
-Parametry *x* i *y* (lub `cx` i `cy`) parametru są odejmowane od `CRect`położenia.
+Parametry *x* i *y* (lub `cx` i `cy`) parametru są odejmowane od pozycji `CRect`.
 
-Trzecie Przeciążenie zwraca nową `CRect` , która jest `CRect` równa stałej liczbie jednostek określonych w każdym elemencie członkowskim parametru. Należy zauważyć, że te funkcje przeciążenia takie jak [DeflateRect](#deflaterect), a nie [SubtractRect](#subtractrect).
+Trzecie Przeciążenie zwraca nową `CRect`, która jest równa `CRect` stałej liczbie jednostek określonych w każdym elemencie członkowskim parametru. Należy zauważyć, że te funkcje przeciążenia takie jak [DeflateRect](#deflaterect), a nie [SubtractRect](#subtractrect).
 
 ### <a name="example"></a>Przykład
 
@@ -1126,9 +1126,9 @@ CRect   rectResult(65, 170, 165, 270);
 ASSERT(rect2 == rectResult);
 ```
 
-##  <a name="operator_amp"></a>CRect:: operator&amp;
+##  <a name="operator_amp"></a>CRect:: operator &amp;
 
-Zwraca wartość `CRect` , która jest częścią wspólną i *rect2.* `CRect`
+Zwraca `CRect`, która jest częścią przecięcia `CRect` i *rect2*.
 
 ```
 CRect operator&(const RECT& rect2) const throw();
@@ -1139,9 +1139,9 @@ CRect operator&(const RECT& rect2) const throw();
 *rect2*<br/>
 Zawiera [prostokąt](/windows/win32/api/windef/ns-windef-rect) lub `CRect`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-To jest część wspólna elementów `CRect` i rect2. `CRect`
+`CRect` jest częścią wspólną `CRect` i *rect2*.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1164,7 +1164,7 @@ ASSERT(rectResult == rect3);
 
 ##  <a name="operator_or"></a>CRect:: operator&#124;
 
-Zwraca element `CRect` , który jest `CRect` złożeniem i *rect2*.
+Zwraca `CRect`, która jest Unią `CRect` i *rect2*.
 
 ```
 CRect operator|(const RECT&
@@ -1176,9 +1176,9 @@ rect2) const throw();
 *rect2*<br/>
 Zawiera [prostokąt](/windows/win32/api/windef/ns-windef-rect) lub `CRect`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Jest to Unia i *rect2.* `CRect` `CRect`
+`CRect`, która jest Unią `CRect` i *rect2*.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1201,7 +1201,7 @@ ASSERT(rectResult == rect3);
 
 ##  <a name="ptinrect"></a>CRect::P tInRect
 
-Określa, czy określony punkt leży w `CRect`elemencie.
+Określa, czy określony punkt leży w `CRect`.
 
 ```
 BOOL PtInRect(POINT point) const throw();
@@ -1212,13 +1212,13 @@ BOOL PtInRect(POINT point) const throw();
 *moment*<br/>
 Zawiera strukturę [punktu](/windows/win32/api/windef/ns-windef-point) lub obiekt [CPoint](cpoint-class.md) .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Niezerowe, jeśli punkt leży w `CRect`; w przeciwnym razie 0.
+Różne od zera, jeśli punkt leży w `CRect`; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Punkt znajduje się w `CRect` zakresie, w którym znajduje się po lewej lub górnej stronie lub znajduje się w obrębie wszystkich czterech boków. Punkt po prawej stronie lub u dołu znajduje się poza `CRect`.
+Punkt znajduje się w `CRect`, jeśli znajduje się on w lewej lub górnej części lub znajduje się w obrębie wszystkich czterech boków. Punkt po prawej stronie lub u dołu znajduje się na zewnątrz `CRect`.
 
 > [!NOTE]
 >  Prostokąt musi być znormalizowany lub ta funkcja może się nie powieść. Możesz wywołać [NormalizeRect](#normalizerect) , aby znormalizować prostokąt przed wywołaniem tej funkcji.
@@ -1283,7 +1283,7 @@ ASSERT(rect == CRect(256, 256, 512, 512));
 
 ##  <a name="setrectempty"></a>CRect::SetRectEmpty
 
-Tworzy `CRect` prostokąt o wartości null, ustawiając wszystkie współrzędne na zero.
+Sprawia, `CRect` prostokąt o wartości null, ustawiając wszystkie współrzędne na zero.
 
 ```
 void SetRectEmpty() throw();
@@ -1301,13 +1301,13 @@ ASSERT(rect.IsRectEmpty());
 
 ##  <a name="size"></a>CRect:: SIZE
 
-Elementy członkowskie wartości zwracanej zawierają wysokość i szerokość `CRect`. `cx` `cy`
+`cx` i `cy` elementy członkowskie wartości zwracanej zawierają wysokość i szerokość `CRect`.
 
 ```
 CSize Size() const throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt [CSize](csize-class.md) , który zawiera rozmiar `CRect`.
 
@@ -1337,12 +1337,12 @@ BOOL SubtractRect(LPCRECT lpRectSrc1, LPCRECT lpRectSrc2) throw();
 ### <a name="parameters"></a>Parametry
 
 *lpRectSrc1*<br/>
-Wskazuje strukturę lub [](/windows/win32/api/windef/ns-windef-rect) `CRect` obiekt, z którego ma zostać odjęty prostokąt.
+Wskazuje strukturę [Rect](/windows/win32/api/windef/ns-windef-rect) lub `CRect` obiektu, z którego ma zostać odjęty prostokąt.
 
 *lpRectSrc2*<br/>
-Wskazuje strukturę lub `CRect` obiekt, który ma zostać odjęty od prostokąta wskazywanego przez parametr lpRectSrc1. `RECT`
+Wskazuje strukturę `RECT` lub obiekt `CRect`, który ma zostać odjęty od prostokąta wskazywanego przez parametr *lpRectSrc1* .
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
@@ -1354,7 +1354,7 @@ Prostokąt określony przez *lpRectSrc1* będzie niezmieniony, jeśli prostokąt
 
 Na przykład jeśli *lpRectSrc1* były (10, 10, 100 100) i *lpRectSrc2* były (50, 50, 150 150), prostokąt wskazywany przez *lpRectSrc1* byłby niezmieniony, gdy zwracana jest funkcja. Jeśli *lpRectSrc1* były (10, 10, 100 100) i *lpRectSrc2* były (50, 10, 150 150), jednak prostokąt wskazywany przez *lpRectSrc1* będzie zawierać współrzędne (10, 10, 50 100), gdy zwracana jest funkcja.
 
-`SubtractRect`nie jest taki sam jak [operator-](#operator_-) or [operator-=](#operator_-_eq). Żaden z tych operatorów nigdy nie `SubtractRect`wywołuje.
+`SubtractRect` nie jest taka sama jak [operator-](#operator_-) lub [operator-=](#operator_-_eq). Żaden z tych operatorów nigdy nie wywołuje `SubtractRect`.
 
 > [!NOTE]
 >  Oba prostokąty muszą być znormalizowane lub ta funkcja może się nie powieść. Możesz wywołać [NormalizeRect](#normalizerect) , aby znormalizować prostokąty przed wywołaniem tej funkcji.
@@ -1402,7 +1402,7 @@ CPoint& TopLeft() throw();
 const CPoint& TopLeft() const throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Współrzędne lewego górnego rogu prostokąta.
 
@@ -1416,7 +1416,7 @@ Zobacz przykład dla [CRect:: Centerpoint](#centerpoint).
 
 ##  <a name="unionrect"></a>CRect::UnionRect
 
-Sprawia, że wymiary `CRect` równe Unii dwóch prostokątów źródła.
+Sprawia, że wymiary `CRect` są równe Unii dwóch prostokątów źródła.
 
 ```
 BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
@@ -1425,12 +1425,12 @@ BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 ### <a name="parameters"></a>Parametry
 
 *lpRect1*<br/>
-Wskazuje na prostokąt [](/windows/win32/api/windef/ns-windef-rect) lub `CRect` zawierający znacznik źródłowy.
+Wskazuje obiekt [Rect](/windows/win32/api/windef/ns-windef-rect) lub `CRect`, który zawiera prostokąt źródłowy.
 
 *lpRect2*<br/>
-Wskazuje na `RECT` lub `CRect` , który zawiera prostokąt źródłowy.
+Wskazuje na `RECT` lub `CRect`, który zawiera prostokąt źródłowy.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli Unia nie jest pusta; 0, jeśli Unia jest pusta.
 
@@ -1457,13 +1457,13 @@ ASSERT(rectResult == rect3);
 
 ##  <a name="width"></a>CRect:: Width
 
-Oblicza szerokość `CRect` przez odjęcie lewej wartości od prawej wartości.
+Oblicza szerokość `CRect`, odejmując lewą wartość od prawej wartości.
 
 ```
 int Width() const throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Szerokość `CRect`.
 

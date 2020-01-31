@@ -26,12 +26,12 @@ helpviewer_keywords:
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-ms.openlocfilehash: 2c483df8e07b9496a0a22c1a1ebccf2b40d129cb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5eaee64c1bf6ad4b4d59c3a7b1a1434741e74454
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944856"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821795"
 ---
 # <a name="_write"></a>_write
 
@@ -58,15 +58,15 @@ Dane do zapisania.
 *liczbą*<br/>
 Liczba bajtów.
 
-## <a name="return-value"></a>Wartość zwracana
+## <a name="return-value"></a>Wartość zwrócona
 
-W przypadku powodzenia funkcja **_write** zwraca liczbę zapisanych bajtów. Jeśli rzeczywiste miejsce pozostało na dysku jest mniejsze niż rozmiar buforu, który funkcja próbuje zapisać na dysku, **_write** kończy się niepowodzeniem i nie opróżnia żadnego z zawartości buforu na dysk. Zwracana wartość-1 wskazuje na błąd. Jeśli przechodzą nieprawidłowe parametry, ta funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1, a **errno** jest ustawiona na jedną z trzech wartości: **EBADF**, co oznacza, że deskryptor pliku jest nieprawidłowy lub plik nie jest otwierany do zapisu; **ENOSPC**, co oznacza, że na urządzeniu nie ma wystarczającej ilości miejsca na operację; lub **EINVAL**, co oznacza, że *bufor* był wskaźnikiem typu null lub że nieparzysta *Liczba* bajtów została przeniesiona do zapisu w pliku w trybie Unicode.
+Jeśli się powiedzie, **_write** zwraca liczbę zapisanych bajtów. Jeśli rzeczywiste miejsce pozostało na dysku jest mniejsze niż rozmiar buforu, który funkcja próbuje zapisać na dysku, **_write** kończy się niepowodzeniem i nie opróżnia żadnego z zawartości buforu na dysku. Zwracana wartość-1 wskazuje na błąd. Jeśli przechodzą nieprawidłowe parametry, ta funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1, a **errno** jest ustawiona na jedną z trzech wartości: **EBADF**, co oznacza, że deskryptor pliku jest nieprawidłowy lub plik nie jest otwierany do zapisu; **ENOSPC**, co oznacza, że na urządzeniu nie ma wystarczającej ilości miejsca na operację; lub **EINVAL**, co oznacza, że *bufor* był wskaźnikiem typu null lub że nieparzysta *Liczba* bajtów została przeniesiona do zapisu w pliku w trybie Unicode.
 
 Aby uzyskać więcej informacji na temat tych i innych kodów powrotnych, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Jeśli plik jest otwarty w trybie tekstowym, każdy znak wysuwu wiersza zostanie zastąpiony parą wysuwu wiersza powrotu karetki w danych wyjściowych. Zastąpienie nie ma wpływu na wartość zwracaną.
 
-Gdy plik zostanie otwarty w trybie translacji Unicode — na przykład, jeśli *FD* zostanie otwarty przy użyciu **_open** lub **_sopen** i parametru trybu, który obejmuje **_O_WTEXT**, **_O_U16TEXT**lub **_O_U8TEXT**, lub jeśli zostanie otwarty za pomocą **fopen** i parametr trybu, który obejmuje **CCS = Unicode**, **CCS = UTF-16LE**lub **CCS = UTF-8**, lub jeśli tryb zostanie zmieniony na tryb tłumaczenia Unicode przy użyciu **_setmode**—*bufor* jest interpretowany jako wskaźnik do Tablica **wchar_t** , która zawiera dane w **formacie UTF-16** . Próba zapisania nieparzystej liczby bajtów w tym trybie powoduje błąd walidacji parametru.
+Gdy plik zostanie otwarty w trybie translacji Unicode — na przykład jeśli *FD* zostanie otwarty przy użyciu **_open** lub **_sopen** i parametru trybu, który zawiera **_O_WTEXT**, **_O_U16TEXT**lub **_O_U8TEXT**, lub jeśli zostanie otwarty przy użyciu **FOPEN** i parametru trybu, który zawiera **CCS = Unicode**, **CCS = UTF-16LE**lub **CCS = UTF-8**, lub jeśli tryb zostanie zmieniony na tryb tłumaczenia Unicode przy użyciu **_setmode**—*bufor* jest interpretowany jako wskaźnik do Tablica **wchar_t** , która zawiera dane w **formacie UTF-16** . Próba zapisania nieparzystej liczby bajtów w tym trybie powoduje błąd walidacji parametru.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -124,7 +124,7 @@ int main( void )
             perror("Invalid parameter: buffer was NULL!");
             break;
          default:
-            // An unrelated error occured
+            // An unrelated error occurred
             perror("Unexpected error!");
       }
    }

@@ -1,5 +1,5 @@
 ---
-title: AgileEventSource, klasa
+title: Klasa AgileEventSource
 ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
@@ -7,16 +7,16 @@ f1_keywords:
 - event/Microsoft::WRL::InvokeModeOptions
 helpviewer_keywords:
 - AgileEventSource class
-ms.openlocfilehash: 095c61dcef208028bf1c0f4b3443ba10110da8ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa1e0a72d865b2993e149f6e4d2b57fe13463a61
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223043"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821743"
 ---
-# <a name="agileeventsource-class"></a>AgileEventSource, klasa
+# <a name="agileeventsource-class"></a>Klasa AgileEventSource
 
-Przedstawia zdarzenie, który jest wywoływany przez agile składnik, który jest składnikiem, który jest możliwy z żadnym z wątków. Dziedziczy [EventSource](eventsource-class.md) i zastępuje `Add` funkcji składowej z parametrem typu dodatkowe do określania opcji sposobu wywoływania zdarzeń agile.
+Reprezentuje zdarzenie, które jest zgłaszane przez składnik Agile, który jest składnikiem, do którego można uzyskać dostęp z dowolnego wątku. Dziedziczy po elemencie [EventSource](eventsource-class.md) i przesłania funkcję składowej `Add` z dodatkowym parametrem typu w celu określenia opcji wywoływania zdarzenia Agile.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,14 +33,14 @@ class AgileEventSource :
 ## <a name="parameters"></a>Parametry
 
 *TDelegateInterface*<br/>
-Interfejs do delegata, który reprezentuje program obsługi zdarzeń.
+Interfejs do delegata, który reprezentuje procedurę obsługi zdarzeń.
 
 *TEventSourceOptions*<br/>
-[InvokeModeOptions](invokemodeoptions-structure.md) stucture, w których pole invokeMode jest równa `InvokeMode::StopOnFirstError` lub `InvokeMode::FireAll`.
+Struktura [InvokeModeOptions](invokemodeoptions-structure.md) , której pole invokemode ma wartość `InvokeMode::StopOnFirstError` lub `InvokeMode::FireAll`.
 
 ## <a name="remarks"></a>Uwagi
 
-Większość składników środowiska wykonawczego Windows są składnikami agile. Aby uzyskać więcej informacji, zobacz [wątkowość i Marshaling (C++/CX)](../../cppcx/threading-and-marshaling-c-cx.md).
+Większość składników w środowisko wykonawcze systemu Windows są składniki Agile. Aby uzyskać więcej informacji, zobacz [wątkowość i kierowanieC++(/CX)](../../cppcx/threading-and-marshaling-c-cx.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -50,9 +50,9 @@ Większość składników środowiska wykonawczego Windows są składnikami agil
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** event.h
+**Nagłówek:** Event. h
 
-**Namespace:** Microsoft::WRL
+**Przestrzeń nazw:** Microsoft:: WRL
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -60,11 +60,11 @@ Większość składników środowiska wykonawczego Windows są składnikami agil
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Metoda AgileEventSource::Add](#add)|Dołącza program obsługi zdarzeń agile, reprezentowane przez interfejs określonego delegata do zestawu programów obsługi zdarzeń dla bieżącego **AgileEventSource** obiektu.|
+|[AgileEventSource:: Add — Metoda](#add)|Dołącza obsługę zdarzeń Agile reprezentowane przez określony interfejs delegata do zestawu obsługi zdarzeń dla bieżącego obiektu **AgileEventSource** .|
 
-## <a name="add"></a> Metoda AgileEventSource::Add
+## <a name="add"></a>AgileEventSource:: Add — Metoda
 
-Dołącza program obsługi zdarzeń, reprezentowane przez interfejs określonego delegata do zestawu programów obsługi zdarzeń dla bieżącego [EventSource](eventsource-class.md) obiektu.
+Dołącza obsługę zdarzeń reprezentowane przez określony interfejs delegata do zestawu obsługi zdarzeń dla bieżącego obiektu [EventSource](eventsource-class.md) .
 
 ### <a name="syntax"></a>Składnia
 
@@ -78,14 +78,14 @@ HRESULT Add(
 ### <a name="parameters"></a>Parametry
 
 *delegateInterface*<br/>
-Interfejs do obiektu delegowanego, który reprezentuje program obsługi zdarzeń.
+Interfejs do obiektu delegata, który reprezentuje procedurę obsługi zdarzeń.
 
-*token*<br/>
-Po zakończeniu tej operacji, uchwyt, który reprezentuje zdarzenie. Używanie tego tokenu jako parametr do `Remove()` metodę, aby odrzucić programu obsługi zdarzeń.
+*klucza*<br/>
+Po zakończeniu tej operacji, dojście, które reprezentuje zdarzenie. Użyj tego tokenu jako parametru do metody `Remove()`, aby odrzucić procedurę obsługi zdarzeń.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, która wskazuje błąd.
+S_OK, jeśli się to powiedzie; w przeciwnym razie wynik HRESULT wskazuje na błąd.
 
 ## <a name="see-also"></a>Zobacz także
 

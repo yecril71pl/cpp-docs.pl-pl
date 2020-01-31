@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ArgTraits structure
 - Microsoft::WRL::Details::ArgTraits::args constant
 ms.assetid: 58ae4115-c1bc-48c8-b01b-e60554841c30
-ms.openlocfilehash: 17109508cf99888ccde79be39a41c5361da24c6e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c13e7fec3289b66b40e44f91404a50cba7a473b1
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398813"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821717"
 ---
 # <a name="argtraits-structure"></a>ArgTraits — Struktura
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -130,41 +130,41 @@ struct ArgTraits<
 ### <a name="parameters"></a>Parametry
 
 *TMemberFunction*<br/>
-Parametr TypeName argtraits — struktura, która nie pasuje do żadnego `Invoke` podpis metody.
+Parametr TypeName struktury ArgTraits, który nie jest zgodny z żadną sygnaturą metody `Invoke`.
 
 *TDelegateInterface*<br/>
 Interfejs delegata.
 
 *TArg1*<br/>
-Typ pierwszego argumentu `Invoke` metody.
+Typ pierwszego argumentu metody `Invoke`.
 
 *TArg2*<br/>
-Typ drugiego argumentu `Invoke` metody.
+Typ drugiego argumentu metody `Invoke`.
 
 *TArg3*<br/>
-Typ trzeciego argumentu `Invoke` metody.
+Typ trzeciego argumentu metody `Invoke`.
 
 *TArg4*<br/>
-Typ czwartego argumentu `Invoke` metody.
+Typ czwartego argumentu metody `Invoke`.
 
 *TArg5*<br/>
-Typ piątego argumentu `Invoke` metody.
+Typ piątego argumentu metody `Invoke`.
 
 *TArg6*<br/>
-Typ szóstego argumentu `Invoke` metody.
+Typ szóstego argumentu metody `Invoke`.
 
 *TArg7*<br/>
-Typ siódmego argumentu `Invoke` metody.
+Typ siódmego argumentu metody `Invoke`.
 
 *TArg8*<br/>
-Typ ósmego argumentu `Invoke` metody.
+Typ ósmego argumentu metody `Invoke`.
 
 *TArg9*<br/>
-Typ dziewiątego argumentu `Invoke` metody.
+Typ dziewiątego argumentu metody `Invoke`.
 
 ## <a name="remarks"></a>Uwagi
 
-`ArgTraits` Struktury deklaruje określonego delegata interfejsu i funkcji anonimowej składowej, która ma określoną liczbę parametrów.
+Struktura `ArgTraits` deklaruje określony interfejs delegata i anonimową funkcję członkowską, która ma określoną liczbę parametrów.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -182,11 +182,11 @@ Nazwa       | Opis
 `Arg8Type` | Element typedef dla TArg8.
 `Arg9Type` | Element typedef dla TArg9.
 
-### <a name="public-constants"></a>Publiczne stałe
+### <a name="public-constants"></a>Stałe publiczne
 
 Nazwa                     | Opis
 ------------------------ | ---------------------------------------------------------------------------------------
-[ArgTraits::args](#args) | Śledzi liczbę parametrów `Invoke` metodę interfejsu delegata.
+[ArgTraits:: args](#args) | Zachowuje liczbę parametrów w metodzie `Invoke` interfejsu delegata.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -194,13 +194,13 @@ Nazwa                     | Opis
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** event.h
+**Nagłówek:** Event. h
 
-**Namespace:** Microsoft::WRL::Details
+**Przestrzeń nazw:** Microsoft:: WRL::D etails
 
-## <a name="args"></a>ArgTraits::args
+## <a name="args"></a>ArgTraits:: args
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ```cpp
 static const int args = -1;
@@ -208,4 +208,4 @@ static const int args = -1;
 
 ### <a name="remarks"></a>Uwagi
 
-Śledzi liczbę parametrów `Invoke` metodę interfejsu delegata. Gdy `args` jest równa -1, może wystąpić w przypadku niezgodności `Invoke` podpis metody.
+Zachowuje liczbę parametrów w metodzie `Invoke` interfejsu delegata. Gdy `args` jest równe-1, nie może istnieć dopasowanie dla sygnatury metody `Invoke`.

@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 6d994ca3af1386d9c2f94dbf6b9f972ee139613f
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: b7a18354257333bb71fff6aedb3cf623c47c2d5c
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778528"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821808"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ — historia zmian w latach 2003–2015
 
@@ -309,7 +309,7 @@ Aby włączyć nowe optymalizacje i kontrole debugowania, implementacja standard
 
 - **C++Pliki dołączane biblioteki standardowej**
 
-   Wprowadzono pewne zmiany w strukturze include w nagłówkach biblioteki C++ standardowej. C++Nagłówki biblioteki standardowej mogą zawierać siebie nawzajem w nieokreślony sposób. Ogólnie rzecz biorąc, należy napisać swój kod, tak aby uważnie uwzględniał wszystkie nagłówki, których potrzebuje, zgodnie ze C++ standardem, i nie polega na tym, C++ które nagłówki biblioteki standardowej zawierają inne C++ nagłówki biblioteki standardowej. Sprawia to, że kod jest przenośny między wersjami i platformami. Co najmniej dwie zmiany nagłówka w programie Visual Studio 2015 wpływają na kod użytkownika. Najpierw ciąg \<nie > już zawiera \<iterator >. Po drugie, \<krotka > teraz deklaruje `std::array` bez uwzględnienia wszystkich \<tablicy >, które mogą przerwać kod za pośrednictwem następującej kombinacji konstrukcji kodu: kod ma zmienną o nazwie "Array" i masz dyrektywę Using "Using namespace;", a następnie dołączysz C++ standardowy nagłówek biblioteki (na przykład \<funkcjonalne >), który zawiera \<spójnej kolekcji, która teraz deklaruje >.`std::array`
+   Wprowadzono pewne zmiany w strukturze include w nagłówkach biblioteki C++ standardowej. C++Nagłówki biblioteki standardowej mogą zawierać siebie nawzajem w nieokreślony sposób. Ogólnie rzecz biorąc, należy napisać swój kod, tak aby uważnie uwzględniał wszystkie nagłówki, których potrzebuje, zgodnie ze C++ standardem, i nie polega na tym, C++ które nagłówki biblioteki standardowej zawierają inne C++ nagłówki biblioteki standardowej. Sprawia to, że kod jest przenośny między wersjami i platformami. Co najmniej dwie zmiany nagłówka w programie Visual Studio 2015 wpływają na kod użytkownika. Najpierw ciąg \<nie > już zawiera \<iterator >. Po drugie, \<krotka > teraz deklaruje `std::array` bez uwzględnienia wszystkich \<tablicy >, które mogą przerwać kod za pośrednictwem następującej kombinacji konstrukcji kodu: kod ma zmienną o nazwie "Array" i masz dyrektywę Using "Using namespace;", a następnie dołączysz C++ standardowy nagłówek biblioteki (na przykład \<funkcjonalne >), który zawiera \<spójnej kolekcji, która teraz deklaruje >.
 
 - **steady_clock**
 
@@ -1335,7 +1335,7 @@ Chociaż różnice te mogą mieć wpływ na kod źródłowy lub inne artefakty k
 
 - **Napraw nieprawidłowe inicjalizacje kopiowania w inicjalizacji niestatycznej składowej danych (NSDMI)**
 
-   Poniższy kod generuje teraz błąd C2664: :: S1 (S1 & &) ': nie można skonwertować argumentu 1 z "bool" na "const S1 &":
+   Poniższy kod generuje teraz błąd C2664: {0}:: S1 (S1 & &) ': nie można skonwertować argumentu 1 z "bool" na "const S1 &":
 
     ```cpp
     struct S1 {

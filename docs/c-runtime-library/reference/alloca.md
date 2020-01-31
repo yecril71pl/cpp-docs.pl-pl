@@ -26,12 +26,12 @@ helpviewer_keywords:
 - alloca function
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
-ms.openlocfilehash: 2212f9e40c78932b63eebfc221ad2f07fa3d3f9d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 77ce6e0cdb5e1ad3f5317989c7804abc5aed4e69
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943695"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821437"
 ---
 # <a name="_alloca"></a>_alloca
 
@@ -50,21 +50,21 @@ void *_alloca(
 *zmienia*<br/>
 Bajty do przydzielenia ze stosu.
 
-## <a name="return-value"></a>Wartość zwracana
+## <a name="return-value"></a>Wartość zwrócona
 
-Procedura **_alloca** zwraca wskaźnik **void** do przydzieloną miejsce, co gwarantuje, że jest odpowiednio wyrównany do przechowywania dowolnego typu obiektu. Jeśli *size* ma wartość 0, **_alloca** przydziela element o zerowej długości i zwraca prawidłowy wskaźnik do tego elementu.
+Procedura **_alloca** zwraca wskaźnik **void** do przydzieloną miejsce, który jest gwarantowany odpowiednio wyrównany do przechowywania dowolnego typu obiektu. Jeśli *size* ma wartość 0, **_alloca** przydziela element o zerowej długości i zwraca prawidłowy wskaźnik do tego elementu.
 
 Wyjątek przepełnienia stosu jest generowany, jeśli nie można przydzielyć miejsca. Wyjątek przepełnienia stosu nie jest C++ wyjątkiem; jest to wyjątek strukturalny. Zamiast korzystać C++ z obsługi wyjątków, należy użyć [obsługi wyjątków strukturalnych](../../cpp/structured-exception-handling-c-cpp.md) (SEH).
 
 ## <a name="remarks"></a>Uwagi
 
-**_alloca** przydziela bajty *rozmiaru* ze stosu programu. Przydzielone miejsce jest automatycznie zwalniane, gdy wywoływana funkcja zostanie zakończona (nie gdy przydział jedynie przejdzie poza zakres). W związku z tym nie przekazuj wartości wskaźnika zwracanej przez **_alloca** jako argument do [zwolnienia](free.md).
+**_alloca** przydziela bajtów *rozmiaru* ze stosu programu. Przydzielone miejsce jest automatycznie zwalniane, gdy wywoływana funkcja zostanie zakończona (nie gdy przydział jedynie przejdzie poza zakres). W związku z tym nie przekazuj wartości wskaźnika zwracanej przez **_alloca** jako argument do [zwolnienia](free.md).
 
-Istnieją ograniczenia dotyczące jawnego wywoływania **_alloca** w obsłudze wyjątków (EH). Procedury EH uruchamiane na procesorach klasy x86 działają w ich własnych ramkach pamięci: Wykonują swoje zadania w przestrzeni pamięci, które nie są oparte na bieżącej lokalizacji wskaźnika stosu otaczającej funkcji. Najpopularniejsze implementacje obejmują obsługę wyjątków strukturalnych systemu Windows NT (SEH) C++ i wyrażenia klauzuli catch. W związku z tym jawne wywołanie **_alloca** w jednym z następujących scenariuszy powoduje niepowodzenie programu podczas powrotu do procedury wywołującej EH:
+Istnieją ograniczenia dotyczące jawnego wywoływania **_alloca** w programie obsługi wyjątków (EH). Procedury EH uruchamiane na procesorach klasy x86 działają w ich własnej ramce pamięci: wykonują swoje zadania w przestrzeni pamięci, które nie są oparte na bieżącej lokalizacji wskaźnika stosu otaczającej funkcji. Najpopularniejsze implementacje obejmują obsługę wyjątków strukturalnych systemu Windows NT (SEH) C++ i wyrażenia klauzuli catch. W związku z tym jawne wywołanie **_alloca** w jednym z następujących scenariuszy powoduje błąd programu podczas powrotu do procedury wywołującej EH:
 
-- Wyrażenie filtru wyjątków SEH systemu Windows NT:`__except ( _alloca() )`
+- Wyrażenie filtru wyjątków SEH systemu Windows NT: `__except ( _alloca() )`
 
-- Końcowy program obsługi wyjątków SEH systemu Windows NT:`__finally { _alloca() }`
+- Końcowy program obsługi wyjątków SEH systemu Windows NT: `__finally { _alloca() }`
 
 - C++Wyrażenie klauzuli catch w instrukcji EH
 
@@ -119,7 +119,7 @@ int main()
         }
     }
 
-    // If an exception occured with the _alloca function
+    // If an exception occurred with the _alloca function
     __except( GetExceptionCode() == STATUS_STACK_OVERFLOW )
     {
         printf_s("_alloca failed!\n");

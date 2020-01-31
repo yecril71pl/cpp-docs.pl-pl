@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Callback
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-ms.openlocfilehash: d37e6fdd2521f07728305bfbf5441cebb363030a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10fb053ed97aaca0f4a31e3843d96aa194d8949d
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398904"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821691"
 ---
 # <a name="callback-function-wrl"></a>Funkcja wywołania zwrotnego (WRL)
 
@@ -192,13 +192,13 @@ ComPtr<TDelegateInterface> Callback(
 ### <a name="parameters"></a>Parametry
 
 *TDelegateInterface*<br/>
-Parametr szablonu, który określa interfejs pełnomocnika do wywołania po wystąpieniu zdarzenia.
+Parametr szablonu, który określa interfejs delegata do wywołania w przypadku wystąpienia zdarzenia.
 
 *TCallback*<br/>
 Parametr szablonu, który określa typ obiektu, który reprezentuje obiekt i jego funkcję członkowską wywołania zwrotnego.
 
 *TCallbackObject*<br/>
-Parametr szablonu, który określa obiekt, którego funkcja członkowska jest metodą do wywołania po wystąpieniu zdarzenia.
+Parametr szablonu, który określa obiekt, którego funkcja członkowska jest metodą do wywołania w przypadku wystąpienia zdarzenia.
 
 *TArg1*<br/>
 Parametr szablonu, który określa typ pierwszego argumentu metody wywołania zwrotnego.
@@ -227,28 +227,28 @@ Parametr szablonu, który określa typ ósmego argumentu metody wywołania zwrot
 *TArg9*<br/>
 Parametr szablonu, który określa typ dziewiątego argumentu metody wywołania zwrotnego.
 
-*callback*<br/>
-Obiekt, który reprezentuje obiekt wywołania zwrotnego i jej funkcji członkowskiej.
+*wywołania zwrotnego*<br/>
+Obiekt, który reprezentuje obiekt wywołania zwrotnego i jego funkcję członkowską.
 
 *object*<br/>
-Obiekt, którego funkcja członkowska jest wywoływana, gdy wystąpi zdarzenie.
+Obiekt, którego funkcja członkowska jest wywoływana w przypadku wystąpienia zdarzenia.
 
-*— Metoda*<br/>
-Funkcja elementu członkowskiego do wywołania po wystąpieniu zdarzenia.
+*method*<br/>
+Funkcja członkowska do wywołania po wystąpieniu zdarzenia.
 
-## <a name="return-value"></a>Wartość zwracana
+## <a name="return-value"></a>Wartość zwrócona
 
-Obiekt, którego funkcja członkowska jest metodą określonego wywołania zwrotnego.
+Obiekt, którego funkcja członkowska jest określoną metodą wywołania zwrotnego.
 
 ## <a name="remarks"></a>Uwagi
 
-Podstawą obiektu delegowanego musi być `IUnknown`, a nie `IInspectable`.
+Podstawą obiektu delegata musi być `IUnknown`, a nie `IInspectable`.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** event.h
+**Nagłówek:** Event. h
 
-**Namespace:** Microsoft::WRL
+**Przestrzeń nazw:** Microsoft:: WRL
 
 ## <a name="see-also"></a>Zobacz także
 

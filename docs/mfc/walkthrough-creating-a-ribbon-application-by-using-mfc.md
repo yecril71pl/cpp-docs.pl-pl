@@ -1,18 +1,18 @@
 ---
-title: 'Przewodnik: Tworzenie aplikacji wstążki za pomocą MFC'
+title: 'Wskazówki: tworzenie aplikacji wstążki za pomocą MFC'
 ms.date: 09/09/2019
 helpviewer_keywords:
 - ribbon application, creating (MFC)
-- creating a ribbon aplication (MFC)
+- creating a ribbon application (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-ms.openlocfilehash: 41084a78287521610ba400deab32d1052c9217c1
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 0f81b27d479b15864302b21a467bff9489ba465a
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907390"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821925"
 ---
-# <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Przewodnik: Tworzenie aplikacji wstążki za pomocą MFC
+# <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Wskazówki: tworzenie aplikacji wstążki za pomocą MFC
 
 W tym instruktażu pokazano, jak za pomocą **Kreatora aplikacji MFC** utworzyć aplikację, która domyślnie ma Wstążkę. Następnie można rozwinąć Wstążkę, dodając **niestandardową** kategorię wstążki, która ma panel wstążki **ulubionych** , a następnie dodając kilka często używanych poleceń do panelu.
 
@@ -22,7 +22,7 @@ W tym przewodniku przyjęto założenie, że ustawiono program Visual Studio do 
 
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>Tworzenie aplikacji MFC zawierającej wstążkę
 
-1. Użyj **Kreatora aplikacji MFC** , aby utworzyć aplikację MFC, która ma Wstążkę. Zobacz [Przewodnik: Aby uzyskać instrukcje dotyczące sposobu otwierania](walkthrough-using-the-new-mfc-shell-controls.md) kreatora dla używanej wersji programu Visual Studio, użyj nowych formantów powłoki MFC.
+1. Użyj **Kreatora aplikacji MFC** , aby utworzyć aplikację MFC, która ma Wstążkę. Zobacz [Przewodnik: używanie nowych formantów powłoki MFC](walkthrough-using-the-new-mfc-shell-controls.md) w celu uzyskania instrukcji dotyczących sposobu otwierania Kreatora dla używanej wersji programu Visual Studio.
 
 1. W **Kreatorze aplikacji MFC**ustaw następujące opcje:
 
@@ -54,7 +54,7 @@ W tym przewodniku przyjęto założenie, że ustawiono program Visual Studio do 
 
     Kliknij prawym przyciskiem myszy pozycję **Category1** , a następnie kliknij pozycję **Właściwości**. W oknie **Właściwości** Zmień **napis** na *niestandardowy*.
 
-    Właściwości **duże obrazy** i **małe obrazy** określają mapy bitowe, które są używane jako ikony dla elementów wstążki w tej kategorii. Ponieważ tworzenie niestandardowych map bitowych wykracza poza zakres tego instruktażu, należy po prostu użyć map bitowych utworzonych przez kreatora. Małe mapy bitowe mają rozmiar 16 x 16 pikseli. W przypadku małych obrazów Użyj map bitowych, do których uzyskuje się `IDB_FILESMALL` dostęp za pomocą identyfikatora zasobu. Duże mapy bitowe mają rozmiar 32 x 32 piksele. W przypadku dużych obrazów Użyj map bitowych, do których uzyskuje się `IDB_FILELARGE` dostęp za pomocą identyfikatora zasobu.
+    Właściwości **duże obrazy** i **małe obrazy** określają mapy bitowe, które są używane jako ikony dla elementów wstążki w tej kategorii. Ponieważ tworzenie niestandardowych map bitowych wykracza poza zakres tego instruktażu, należy po prostu użyć map bitowych utworzonych przez kreatora. Małe mapy bitowe mają rozmiar 16 x 16 pikseli. W przypadku małych obrazów Użyj map bitowych, do których uzyskuje się dostęp `IDB_FILESMALL` IDENTYFIKATORem zasobu. Duże mapy bitowe mają rozmiar 32 x 32 piksele. W przypadku dużych obrazów Użyj map bitowych, do których uzyskuje się dostęp `IDB_FILELARGE` IDENTYFIKATORem zasobu.
 
     > [!NOTE]
     > Na ekranach o dużej liczbie punktów na cal (HDPI) automatycznie są używane wersje HDPI obrazów.
@@ -75,7 +75,7 @@ W tym przewodniku przyjęto założenie, że ustawiono program Visual Studio do 
 
     W oknie **Właściwości** Zmień wartość właściwości **ID** na **ID_FILE_PRINT**, która powinna być już zdefiniowana. Zmień **podpis** , aby *drukować*. Zmień **indeks obrazu** na *4*.
 
-    Aby utworzyć przycisk **szybkiego drukowania** , kliknij kolumnę wartość właściwości obok **pozycji menu elementy**, a następnie kliknij przycisk wielokropka ( **...** ). W **Edytorze elementów**kliknij przycisk **Dodaj** bez etykiety, aby utworzyć element menu. W oknie **Właściwości** Zmień **napis** na *szybkie drukowanie*, **Identyfikator** na *ID_FILE_PRINT_DIRECT*i **obraz** na *5*. Właściwość obrazu określa ikonę **szybkiego drukowania** w `IDB_FILESMALL` zasobie mapy bitowej.
+    Aby utworzyć przycisk **szybkiego drukowania** , kliknij kolumnę wartość właściwości obok **pozycji menu elementy**, a następnie kliknij przycisk wielokropka ( **...** ). W **Edytorze elementów**kliknij przycisk **Dodaj** bez etykiety, aby utworzyć element menu. W oknie **Właściwości** Zmień **napis** na *szybkie drukowanie*, **Identyfikator** do *ID_FILE_PRINT_DIRECT*i **obraz** na *5*. Właściwość obrazu określa ikonę **szybkiego drukowania** w zasobie mapy bitowej `IDB_FILESMALL`.
 
 1. Aby sprawdzić, czy przyciski zostały dodane do panelu wstążki, skompiluj aplikację i ją uruchom. Aby skompilować aplikację, w menu **kompilacja** kliknij polecenie **Kompiluj rozwiązanie**. Jeśli aplikacja zostanie pomyślnie skompilowana, uruchom aplikację, klikając polecenie **Rozpocznij debugowanie** w menu **debugowanie** . Na Wstążce powinna zostać wyświetlona przycisk **Drukuj** oraz pole kombi w panelu **Ulubione** .
 

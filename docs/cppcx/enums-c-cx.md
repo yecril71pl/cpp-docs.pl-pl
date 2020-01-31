@@ -2,22 +2,22 @@
 title: Wyliczenia (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 99fbbe28-c1cd-43af-9ead-60f90eba6e68
-ms.openlocfilehash: 3bdcff03872dcfe83f0be5752cec4f567fbc6b72
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: be11d8d8f38a92fbe4be00eed53dd5226bab0b59
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740212"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821756"
 ---
 # <a name="enums-ccx"></a>Wyliczenia (C++/CX)
 
-C++/CX obsługuje `public enum class` słowo kluczowe, które jest analagous do warstwy Standardowa C++ `scoped  enum`. W przypadku użycia modułu wyliczającego, który jest zadeklarowany za pomocą `public enum class` słowa kluczowego, należy użyć identyfikatora wyliczenia do określania zakresu każdej wartości modułu wyliczającego.
+C++/CX obsługuje słowo kluczowe `public enum class`, które jest analogiczne do `scoped  enum`C++ standardowego. W przypadku korzystania z modułu wyliczającego, który jest zadeklarowany za pomocą słowa kluczowego `public enum class`, należy użyć identyfikatora wyliczenia do określania zakresu każdej wartości modułu wyliczającego.
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekt `public enum class` , który nie ma specyfikatora dostępu, `public`na przykład, jest traktowany jako standardowe C++ [Wyliczenie w zakresie objętym zakresem](../cpp/enumerations-cpp.md).
+`public enum class`, która nie ma specyfikatora dostępu, takiego jak `public`, jest traktowana jako standardowe C++ [Wyliczenie w zakresie](../cpp/enumerations-cpp.md).
 
-Deklaracja `public enum class` or`public enum struct` może mieć typ podstawowy dowolnego typu całkowitego, chociaż środowisko wykonawcze systemu Windows sam wymaga, aby typ miał wartość Int32, lub UInt32 dla wyliczenia flag. Poniższa składnia opisuje części `public enum class` klasy lub. `public enum struct`
+Deklaracja `public enum class` lub `public enum struct` może mieć typ podstawowy dowolnego typu całkowitego, chociaż środowisko wykonawcze systemu Windows samo wymaga, aby typ miał wartość Int32, lub UInt32 dla wyliczenia flag. Poniższa składnia opisuje części `public enum class` lub `public enum struct`.
 
 Ten przykład pokazuje, jak zdefiniować publiczną klasę wyliczeniową:
 
@@ -33,7 +33,7 @@ W następnych przykładach pokazano, jak zadeklarować Wyliczenie,
 
 [!code-cpp[cx_enums#03](../cppcx/codesnippet/CPP/cpp/class1.h#03)]
 
-W następnym przykładzie pokazano, jak rzutować na równoważne wartości liczbowe i wykonać porównania. Należy zauważyć, że użycie modułu `One` wyliczającego jest ograniczone `Enum1` przez identyfikator wyliczenia, a `First` `Enum2`moduł wyliczający jest objęty zakresem.
+W następnym przykładzie pokazano, jak rzutować na równoważne wartości liczbowe i wykonać porównania. Należy zauważyć, że użycie modułu wyliczającego `One` jest objęte zakresem `Enum1` identyfikatorem wyliczenia, a moduł wyliczający `First` jest objęty zakresem `Enum2`.
 
 [!code-cpp[cx_enums#04](../cppcx/codesnippet/CPP/cpp/class1.h#04)]
 

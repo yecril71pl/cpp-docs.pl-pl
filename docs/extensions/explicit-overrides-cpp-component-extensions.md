@@ -1,20 +1,20 @@
 ---
-title: Jawne przesłonięcia (C++sposób niezamierzony i C++/CX)
+title: Jawne zastąpienia (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-ms.openlocfilehash: 7d36793e4467f9454aca1eb207f3c3dfbd483bff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b80e49489c0b0d26469ba9f8b77e80a962668e35
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403966"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821638"
 ---
-# <a name="explicit-overrides--ccli-and-ccx"></a>Jawne przesłonięcia (C++sposób niezamierzony i C++/CX)
+# <a name="explicit-overrides--ccli-and-ccx"></a>Jawne zastąpienia (C++/CLI i C++/CX)
 
-W tym temacie omówiono sposób jawnie przesłonić składowej klasy bazowej lub interfejsu. Nazwanego przesłaniania (jawne) należy używać tylko aby przesłonić metodę z metodą pochodnej, która ma inną nazwę.
+W tym temacie omówiono sposób jawnego przesłaniania elementu członkowskiego klasy bazowej lub interfejsu. Zastępowanie nazwane (jawne) powinno być używane tylko w celu przesłaniania metody z użyciem metody pochodnej, która ma inną nazwę.
 
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze
 
@@ -27,43 +27,43 @@ overriding-function-declarator = function { overriding-function-definition }
 
 ### <a name="parameters"></a>Parametry
 
-*overriding-function-declarator*<br/>
-Zwracany typ, nazwa i argument lista przesłanianie funkcji.  Pamiętaj, że funkcja pomijania muszą mieć taką samą nazwę jak przesłaniana funkcja.
+*przesłanianie-funkcja-deklarator*<br/>
+Typ zwracany, nazwa i lista argumentów funkcji przesłaniania.  Należy zauważyć, że funkcja przesłaniania nie musi mieć takiej samej nazwy jak zastępowana funkcja.
 
 *type*<br/>
-Typ podstawowy, zawierającego funkcję, aby zastąpić.
+Typ podstawowy, który zawiera funkcję, która ma zostać przesłonięta.
 
-*— Funkcja*<br/>
-Rozdzielana przecinkami lista co najmniej jedną nazwę funkcji do zastąpienia.
+*funkcyjn*<br/>
+Rozdzielana przecinkami lista nazw jednej lub więcej funkcji, które mają zostać przesłonięte.
 
-*overriding-function-definition*<br/>
-Instrukcje treści funkcji, które definiują przesłanianie funkcji.
+*Zastępowanie-funkcja-definicja*<br/>
+Instrukcje treści funkcji, które definiują funkcję zastępującą.
 
 ### <a name="remarks"></a>Uwagi
 
-Używać jawnych zastąpień w utworzenie aliasu dla sygnatury metody lub dostarczać różne implementacje dla metod witht taki sam podpis.
+Użyj jawnych zastąpień, aby utworzyć alias dla sygnatury metody lub podać różne implementacje metod o tej samej sygnaturze.
 
-Aby dowiedzieć się, jak modyfikowanie zachowania typy dziedziczone i członkowie typów dziedziczonych, zobacz [zastąpienie specyfikatorów](override-specifiers-cpp-component-extensions.md).
+Aby uzyskać informacje o modyfikowaniu zachowania dziedziczonych typów i dziedziczonych elementów członkowskich typu, zobacz [specyfikatory przesłonięć](override-specifiers-cpp-component-extensions.md).
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/ZW`
+Opcja kompilatora: `/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
 ### <a name="remarks"></a>Uwagi
 
-W przypadku przesłania informacji na temat jawne, w kodzie natywnym lub kodu skompilowanego z `/clr:oldSyntax`, zobacz [jawne zastępowanie](../cpp/explicit-overrides-cpp.md).
+Aby uzyskać informacje o jawnych zastąpień w kodzie natywnym lub kodzie skompilowanym za pomocą `/clr:oldSyntax`, zobacz [jawne zastąpienia](../cpp/explicit-overrides-cpp.md).
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/clr`
+Opcja kompilatora: `/clr`
 
 ### <a name="examples"></a>Przykłady
 
-Poniższy przykład kodu pokazuje prosty, niejawne zastąpienia i implementacji elementu członkowskiego w interfejsie zgodnym podstawowego nie przy użyciu jawne przesłonięcia.
+Poniższy przykład kodu pokazuje proste, niejawne przesłonięcie i implementację elementu członkowskiego w interfejsie podstawowym, a nie używa jawnych zastąpień.
 
 ```cpp
 // explicit_override_1.cpp
@@ -89,7 +89,7 @@ int main() {
 X::f override of I1::f
 ```
 
-Poniższy przykład kodu pokazuje sposób implementacji wszystkich członków interfejsu za pomocą wspólnego podpisu przy użyciu składnia jawnego przesłaniania.
+Poniższy przykład kodu pokazuje, jak zaimplementować wszystkie elementy członkowskie interfejsu ze wspólnym podpisem przy użyciu składni jawnego przesłaniania.
 
 ```cpp
 // explicit_override_2.cpp
@@ -121,7 +121,7 @@ X::f override of I1::f and I2::f
 X::f override of I1::f and I2::f
 ```
 
-Poniższy przykład kodu pokazuje, jak zastąpienia funkcji może mieć inną nazwę funkcji, które implementuje.
+Poniższy przykład kodu pokazuje, jak przesłonięcie funkcji może mieć inną nazwę niż implementująca funkcja.
 
 ```cpp
 // explicit_override_3.cpp
@@ -147,7 +147,7 @@ int main() {
 X::g
 ```
 
-Poniższy przykład kodu pokazuje implementacja interfejsu jawnego, który implementuje zbiór bezpiecznego typu.
+Poniższy przykład kodu pokazuje jawną implementację interfejsu implementującą bezpieczną kolekcję typów.
 
 ```cpp
 // explicit_override_4.cpp
