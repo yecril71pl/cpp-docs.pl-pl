@@ -1,5 +1,5 @@
 ---
-title: literał (C++sposób niezamierzony i C++/CX)
+title: Literal (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -8,50 +8,50 @@ f1_keywords:
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-ms.openlocfilehash: c0de82d0d1d102f02ea79a4245f2e393439f2e0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d567f8270dcb8965ed2f882c9a0c005f295fc619
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254488"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912831"
 ---
-# <a name="literal-ccli-and-ccx"></a>literał (C++sposób niezamierzony i C++/CX)
+# <a name="literal-ccli-and-ccx"></a>Literal (C++/CLI i C++/CX)
 
-Zmienna (element członkowski danych) jest oznaczony jako **literału** w **/CLR** kompilacji odpowiada natywnych **statyczna stała** zmiennej.
+Zmienna (składowa danych) oznaczona jako **literał** w kompilacji **/CLR** jest natywnym odpowiednikiem zmiennej **static const** .
 
 ## <a name="all-platforms"></a>Wszystkie platformy
 
 ### <a name="remarks"></a>Uwagi
 
-(Nie ma żadnych uwag dla tej funkcji języka, które są stosowane do wszystkich środowisk uruchomieniowych).
+(Nie ma żadnych uwag dla tej funkcji języka, które mają zastosowanie do wszystkich środowisk uruchomieniowych).
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
 ### <a name="remarks"></a>Uwagi
 
-(Nie ma żadnych uwag dla tej funkcji języka, które dotyczą tylko środowiska uruchomieniowego Windows).
+(Nie ma żadnych uwag dla tej funkcji języka, które mają zastosowanie tylko do środowisko wykonawcze systemu Windows).
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/ZW`
+Opcja kompilatora: `/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
 ## <a name="remarks"></a>Uwagi
 
-Element członkowski danych oznaczone jako **literału** musi być inicjowana, gdy zadeklarowana i wartość musi być stałe całkowite, enum lub typu string. Konwersja z typu wyrażenia inicjowania na typ statyczny const-składowej danych nie może wymagać konwersji zdefiniowanej przez użytkownika.
+Element członkowski danych oznaczony jako **Literal** musi być zainicjowany, gdy jest zadeklarowany, a wartość musi być stałym typem całkowitym, wyliczeniem lub ciągiem. Konwersja z typu wyrażenia inicjującego na typ składowej danych static const nie może wymagać konwersji zdefiniowanej przez użytkownika.
 
-Nie pamięć została przydzielona dla pola literal w czasie wykonywania; Kompilator wstawia tylko jego wartości w metadanych dla tej klasy.
+Nie przydzielono pamięci dla pola literału w czasie wykonywania; kompilator wstawia tylko swoją wartość w metadanych dla klasy.
 
-Oznaczone jako zmienną **statyczna stała** nie będą dostępne w metadanych innych kompilatorach.
+Zmienna oznaczona jako **static const** nie będzie dostępna w metadanych do innych kompilatorów.
 
-Aby uzyskać więcej informacji, zobacz [statyczne](../cpp/storage-classes-cpp.md) i [const](../cpp/const-cpp.md).
+Aby uzyskać więcej informacji, zobacz [static](../cpp/storage-classes-cpp.md) and [const](../cpp/const-cpp.md).
 
-**Literał** jest kontekstowej słowem kluczowym. Zobacz [Context-Sensitive Keywords](context-sensitive-keywords-cpp-component-extensions.md) Aby uzyskać więcej informacji.
+**Literal** jest kontekstowym słowem kluczowym. Aby uzyskać więcej informacji, zobacz [kontekstowe słowa kluczowe](context-sensitive-keywords-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Przykład
 
-Ten przykład pokazuje, że **literału** zmienna oznacza **statyczne**.
+Ten przykład pokazuje, że zmienna **literału** oznacza **statyczny**.
 
 ```cpp
 // mcppv2_literal.cpp
@@ -78,7 +78,7 @@ public ref struct A {
 };
 ```
 
-Należy zauważyć różnicę w metadanych dla `sc` i `lit`: `modopt` dyrektywa jest stosowana do `sc`, czyli można zignorować przez inne kompilatory.
+Zwróć uwagę na różnice w metadanych dla `sc` i `lit`: dyrektywa `modopt` jest stosowana do `sc`, co oznacza, że może być ignorowana przez inne kompilatory.
 
 ```
 .field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)
@@ -90,9 +90,9 @@ Należy zauważyć różnicę w metadanych dla `sc` i `lit`: `modopt` dyrektywa 
 
 ## <a name="example"></a>Przykład
 
-Odwołuje się do metadanych utworzony w poprzednim przykładzie poniższego przykładu, utworzone w języku C# i prezentuje wpływ **literału** i **statyczna stała** zmiennych:
+Poniższy przykład, który został utworzony w C#, odwołuje się do metadanych utworzonych w poprzednim przykładzie i pokazuje wpływ **literału** i **statyczne zmienne stałe** :
 
-```cs
+```csharp
 // mcppv2_literal3.cs
 // compile with: /reference:mcppv2_literal2.dll
 // A C# program
@@ -123,7 +123,7 @@ class B {
 
 ## <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: `/clr`
+Opcja kompilatora: `/clr`
 
 ## <a name="see-also"></a>Zobacz także
 

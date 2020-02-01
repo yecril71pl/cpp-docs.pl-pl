@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3391
 ms.assetid: c32532b9-7db4-4ccd-84b9-479e5a1a19d1
-ms.openlocfilehash: 32ba1ca63a3a6fafa3290946a976e6845385126f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7590ba9431892c07a32c27fdc97604c8b005fe33
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328695"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912859"
 ---
 # <a name="compiler-error-c3391"></a>Błąd kompilatora C3391
 
-"type_arg": nieprawidłowy typ argumentu dla parametru generycznego param, z ogólnego "generic_type" musi być typem wartości niedopuszczającym wartości
+"type_arg": nieprawidłowy typ argumentu dla parametru generycznego "param" generycznego "generic_type", musi być typem wartości niedopuszczających wartości null
 
-Niepoprawnie wystąpienia typu ogólnego. Sprawdź definicję typu. Aby uzyskać więcej informacji, zobacz <xref:System.Nullable> i [ogólne](../../extensions/generics-cpp-component-extensions.md).
+Wystąpienie typu ogólnego zostało nieprawidłowo utworzone. Sprawdź definicję typu. Aby uzyskać więcej informacji, zobacz <xref:System.Nullable> i [typy ogólne](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Przykład
 
-Następujące przykładowe używa C# tworzenia składnika, który zawiera typ ogólny, który ma pewne ograniczenia, które nie są obsługiwane w przypadku tworzenia typów ogólnych w C++sposób niezamierzony. Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące parametrów typu](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
+Poniższy przykład używa C# do tworzenia składnika, który zawiera typ ogólny, który ma pewne ograniczenia, które nie są obsługiwane podczas tworzenia typów ogólnych w C++/CLI. Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące parametrów typu](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
 
-```cs
+```csharp
 // C3391.cs
 // Compile by using: csc /target:library C3391.cs
 // a C# program
@@ -31,7 +31,7 @@ public class GR<N>
 where N : struct {}
 ```
 
-Po udostępnieniu składnika C3391.dll poniższy przykład spowoduje wygenerowanie C3391.
+Gdy składnik C3391. dll jest dostępny, Poniższy przykład generuje C3391.
 
 ```cpp
 // C3391_b.cpp
