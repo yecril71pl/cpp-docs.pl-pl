@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - fetestexept function
 ms.assetid: ca4dc43f-5573-440d-bc19-ead7571b13dc
-ms.openlocfilehash: 61a68b4569d52b550da3fad12c077b82bb067fa9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e70ae1b74420b8186cccd8fc8a817423df618adf
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941013"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972160"
 ---
 # <a name="fetestexcept"></a>fetestexcept
 
@@ -49,7 +49,7 @@ int fetestexcept(
 *Oprócz*<br/>
 Bitowe lub zmiennoprzecinkowe flagi stanu do przetestowania.
 
-## <a name="return-value"></a>Wartość zwracana
+## <a name="return-value"></a>Wartość zwrócona
 
 Po powodzeniu funkcja zwraca maskę bitów zawierającą bitowe lub zmiennoprzecinkowe makra wyjątków, które odpowiadają aktualnie ustawionymi flagami stanu wyjątku. Zwraca wartość 0, jeśli żaden z wyjątków nie jest ustawiony.
 
@@ -64,11 +64,11 @@ Użyj funkcji fetestexcept, aby określić, które wyjątki zostały zgłoszone 
 |FE_INVALID|Wystąpił błąd domeny w poprzedniej operacji zmiennoprzecinkowej.|
 |FE_OVERFLOW|Wystąpił błąd zakresu; wcześniejszy wynik operacji zmiennoprzecinkowej był zbyt duży, aby można było go przedstawić.|
 |FE_UNDERFLOW|Wcześniejszy wynik operacji zmiennoprzecinkowej był zbyt mały, aby mógł być reprezentowany z pełną dokładnością; utworzono nienormalną wartość.|
-|FE_ALLEXCEPT|Bitowe lub wszystkie obsługiwane wyjątki zmiennoprzecinkowe.|
+|FE_ALL_EXCEPT|Bitowe lub wszystkie obsługiwane wyjątki zmiennoprzecinkowe.|
 
 Określony argument *except* może mieć wartość 0, jedno z obsługiwanych makr wyjątków zmiennoprzecinkowych lub bitowe lub dwa lub więcej makr. Efekt każdej innej *z wyjątkiem* wartości argumentu jest niezdefiniowany.
 
-Aby użyć tej funkcji, należy wyłączyć optymalizacje zmiennoprzecinkowe, które mogą uniemożliwić dostęp przy użyciu `#pragma fenv_access(on)` dyrektywy przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).
+Aby użyć tej funkcji, należy wyłączyć optymalizacje zmiennoprzecinkowe, które mogą uniemożliwić dostęp przy użyciu dyrektywy `#pragma fenv_access(on)` przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).
 
 ## <a name="requirements"></a>Wymagania
 

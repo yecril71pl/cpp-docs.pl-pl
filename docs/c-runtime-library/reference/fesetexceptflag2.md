@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - fesetexceptflag function
 ms.assetid: 2f7dad77-9e54-4097-a3e3-35176ace4de5
-ms.openlocfilehash: 29a6b36b0744bec30463fe55df05fe26180b93fe
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b16de7ea54b5f1df21b6626febe773c8cef556f5
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941090"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972145"
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
 
@@ -53,13 +53,13 @@ Wskaźnik do obiektu **fexcept_t** zawierającego wartości, do których mają z
 *Oprócz*<br/>
 Flagi stanu wyjątku zmiennoprzecinkowego do ustawienia.
 
-## <a name="return-value"></a>Wartość zwracana
+## <a name="return-value"></a>Wartość zwrócona
 
 Jeśli wszystkie określone flagi stanu wyjątku zostały pomyślnie ustawione, zwraca wartość 0. W przeciwnym razie zwraca wartość różną od zera.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **fesetexceptflag** ustawia stan wyjątków zmiennoprzecinkowych, określonych przez, *z wyjątkiem* odpowiednich wartości ustawionych w obiekcie **fexcept_t** wskazanym przez *pstatus*.  Nie zgłasza wyjątków. Wskaźnik *pstatus* musi wskazywać prawidłowy obiekt **fexcept_t** , a następne zachowanie jest niezdefiniowane. Funkcja **fesetexceptflag** obsługuje te wartości makr wyjątków w programie, *z wyjątkiem*zdefiniowanych w \<fenv. h >:
+Funkcja **fesetexceptflag** ustawia stan wyjątków zmiennoprzecinkowych, określonych przez, *z wyjątkiem* odpowiednich wartości ustawionych w obiekcie **fexcept_t** wskazywanym przez *pstatus*.  Nie zgłasza wyjątków. Wskaźnik *pstatus* musi wskazywać prawidłowy obiekt **fexcept_t** lub kolejne zachowanie jest niezdefiniowane. Funkcja **fesetexceptflag** obsługuje te wartości makr wyjątków w programie, *z wyjątkiem*zdefiniowanych w \<fenv. h >:
 
 |Makro wyjątku|Opis|
 |---------------------|-----------------|
@@ -68,11 +68,11 @@ Funkcja **fesetexceptflag** ustawia stan wyjątków zmiennoprzecinkowych, okreś
 |FE_INVALID|Wystąpił błąd domeny w poprzedniej operacji zmiennoprzecinkowej.|
 |FE_OVERFLOW|Wystąpił błąd zakresu; wcześniejszy wynik operacji zmiennoprzecinkowej był zbyt duży, aby można było go przedstawić.|
 |FE_UNDERFLOW|Wcześniejszy wynik operacji zmiennoprzecinkowej był zbyt mały, aby mógł być reprezentowany z pełną dokładnością; utworzono nienormalną wartość.|
-|FE_ALLEXCEPT|Bitowe lub wszystkie obsługiwane wyjątki zmiennoprzecinkowe.|
+|FE_ALL_EXCEPT|Bitowe lub wszystkie obsługiwane wyjątki zmiennoprzecinkowe.|
 
 Argument *except* może mieć wartość zero, jedno z obsługiwanych makr wyjątków zmiennoprzecinkowych lub bitowe lub dwa lub więcej makr. Wynik innej wartości argumentu jest niezdefiniowany.
 
-Aby użyć tej funkcji, należy wyłączyć optymalizacje zmiennoprzecinkowe, które mogą uniemożliwić dostęp przy użyciu `#pragma fenv_access(on)` dyrektywy przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).
+Aby użyć tej funkcji, należy wyłączyć optymalizacje zmiennoprzecinkowe, które mogą uniemożliwić dostęp przy użyciu dyrektywy `#pragma fenv_access(on)` przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).
 
 ## <a name="requirements"></a>Wymagania
 

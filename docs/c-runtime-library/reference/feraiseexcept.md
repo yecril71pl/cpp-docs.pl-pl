@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-ms.openlocfilehash: 07c8a79e0a9569db80607e1ec1e16cd4b502783c
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: e98c402169ed0f35ab1bdf0b8221a2248f252f21
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857830"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972208"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -61,7 +61,7 @@ Funkcja **feraiseexcept** próbuje podnieść wyjątki zmiennoprzecinkowe okreś
 |FE_INVALID|Wystąpił błąd domeny w poprzedniej operacji zmiennoprzecinkowej.|
 |FE_OVERFLOW|Wystąpił błąd zakresu; wcześniejszy wynik operacji zmiennoprzecinkowej był zbyt duży, aby można było go przedstawić.|
 |FE_UNDERFLOW|Wcześniejszy wynik operacji zmiennoprzecinkowej był zbyt mały, aby mógł być reprezentowany z pełną dokładnością; utworzono nienormalną wartość.|
-|FE_ALLEXCEPT|Bitowe lub wszystkie obsługiwane wyjątki zmiennoprzecinkowe.|
+|FE_ALL_EXCEPT|Bitowe lub wszystkie obsługiwane wyjątki zmiennoprzecinkowe.|
 
 Argument *except* może mieć wartość zero, jedną z wartości makra wyjątku lub bitową lub dwa lub więcej obsługiwanych makr wyjątków. Jeśli jedno z określonych makr wyjątków jest FE_OVERFLOW lub FE_UNDERFLOW, wyjątek FE_INEXACT może być podniesiony jako efekt uboczny.
 
