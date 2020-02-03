@@ -1,48 +1,55 @@
 ---
-title: Pliki .netmodule — Wejście konsolidatora
-ms.date: 05/16/2019
+title: .netmodule pliki jako dane wejściowe konsolidatora
+description: Opisuje sposób korzystania z mieszanej.obj lub.netmodule pliki jako dane wejściowe konsolidatora podczas tworzenia zestawów .NET.
+ms.date: 01/30/2020
 helpviewer_keywords:
 - MSIL linking
 - linking [C++], modules
-- .netmodules
+- .netmodule files
 - modules, Visual C++
 ms.assetid: a4bcbe8a-4255-451d-853b-f88cfd82f4e1
-ms.openlocfilehash: 50a0f0a1ff5f65a7512e8372de2fe5296c866dca
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+no-loc:
+- obj
+- netmodule
+- clr
+- pure
+- safe
+ms.openlocfilehash: 83eab25624bdb81ba9191e4efe6a774551502ee0
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837426"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912828"
 ---
-# <a name="netmodule-files-as-linker-input"></a>Pliki .netmodule — Wejście konsolidatora
+# <a name="opno-locnetmodule-files-as-linker-input"></a>.netmodule pliki jako dane wejściowe konsolidatora
 
-Link.exe akceptuje teraz obj MSIL i modułów .netmodule jako dane wejściowe. Plik wyjściowy, generowany przez konsolidator jest zestaw lub moduł .netmodule z Brak zależności środowiska wykonawczego na każdym .obj lub modułów .netmodule, że dane wejściowe do konsolidatora.
+link. exe akceptuje pliki MSIL *`.obj`* i *`.netmodule`* jako dane wejściowe. Plik wyjściowy utworzony przez konsolidatora jest zestawem lub *`.netmodule`* plikiem bez zależności czasu wykonywania na żadnym z *`.obj`* lub *`.netmodule`* plików, które zostały wprowadzone do konsolidatora.
 
-modułów .netmodule są tworzone za pomocą kompilatora MSVC z [/LN (Utwórz moduł MSIL)](ln-create-msil-module.md) lub przez narzędzie konsolidacji z [/noassembly (Utwórz moduł MSIL)](noassembly-create-a-msil-module.md). .objs są zawsze tworzone w kompilacji Visual C++. W przypadku innych kompilatorów programu Visual Studio użyj **/target: module** — opcja kompilatora.
+## <a name="remarks"></a>Uwagi
 
-Trzeba przekazać do konsolidatora pliku .obj z kompilacji Visual C++, który utworzony .netmodule. Przekazywanie w .netmodule już nie jest obsługiwana, ponieważ **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017 i nowszych wersjach.
+pliki *`.netmodule`* są tworzone przez kompilator MSVC z [/ln (Utwórz moduł MSIL)](ln-create-msil-module.md) lub przez konsolidator przy użyciu [/NOASSEMBLY (Utwórz moduł MSIL)](noassembly-create-a-msil-module.md). pliki *`.obj`* są zawsze tworzone w C++ kompilacji. W przypadku innych kompilatorów programu Visual Studio Użyj opcji " **/target: module** kompilator".
 
-Aby uzyskać informacje na temat sposobu wywoływanie konsolidatora z wiersza polecenia, zobacz [składnia wiersza polecenia konsolidatora](linking.md), [możesz używać zestawu narzędzi MSVC z wiersza polecenia](../building-on-the-command-line.md), i [Ustawianie ścieżki i zmiennych środowiskowych dla kompilacji z wiersza polecenia](../setting-the-path-and-environment-variables-for-command-line-builds.md).
+Konsolidator musi przekazywać plik *`.obj`* z C++ kompilacji, która utworzyła *`.netmodule`* . Przekazywanie w *`.netmodule`* nie jest już obsługiwane, ponieważ **/clr:pure** i **/clr:** opcje kompilatorasafesą przestarzałe w programie Visual Studio 2015 i nie są obsługiwane w programie Visual Studio 2017 lub nowszym.
 
-Przekazywanie pliku modułu .netmodule lub dll do konsolidatora został skompilowany za pomocą kompilatora MSVC z **/CLR** może spowodować błąd konsolidatora. Aby uzyskać więcej informacji, zobacz [Wybieranie formatu plików wejściowych .netmodule](choosing-the-format-of-netmodule-input-files.md).
+Aby uzyskać informacje na temat wywoływania konsolidatora z wiersza polecenia, zobacz [składnia wiersza polecenia konsolidatora](linking.md), [Używanie zestawu narzędzi MSVC z wiersza polecenia](../building-on-the-command-line.md)i [Ustawianie zmiennych środowiskowych dla kompilacji w wierszu](../setting-the-path-and-environment-variables-for-command-line-builds.md)polecenia.
 
-Program łączący akceptuje pliki .obj natywnego, a także pliki .obj MSIL skompilowany przy użyciu **/CLR**. Przy przekazywaniu mieszane .objs w tej samej kompilacji, możliwość weryfikacji wynikowej pliku wyjściowego domyślnie będzie równa najniższego poziomu możliwość weryfikacji modułów wejściowych.
+Przekazywanie *`.netmodule`* lub *`.dll`* pliku do konsolidatora skompilowanego przez kompilator MSVC z **/clr** może spowodować błąd konsolidatora. Aby uzyskać więcej informacji, zobacz [Wybieranie formatu plików wejściowych.netmodule ](choosing-the-format-of-netmodule-input-files.md).
 
-Jeśli masz już aplikację, która składa się z dwóch lub więcej zestawów i aplikacja muszą być zawarte w jednym zestawie, należy ponownie skompilować zestawy, a następnie połącz .objs lub modułów .netmodule do wyprodukowania jednego zestawu.
+Konsolidator akceptuje zarówno pliki macierzyste *`.obj`* , jak i pliki *`.obj`* MSIL skompilowane przy użyciu **/clr** . W tej samej kompilacji można przekazać pliki mieszane *`.obj`* . Domyślne sprawdzanie poprawności wynikowego pliku wyjściowego jest takie samo jak najniższy możliwy do sprawdzenia Moduł wejściowy.
 
-Należy określić punkt wejścia przy użyciu [/Entry (Symbol punktu wejścia)](entry-entry-point-symbol.md) podczas tworzenia obrazu wykonywalnego.
+Można zmienić aplikację, która składa się z co najmniej dwóch zestawów, które mają być zawarte w jednym zestawie. Skompiluj ponownie źródła zestawów, a następnie połącz pliki *`.obj`* lub *`.netmodule`* w celu utworzenia jednego zestawu.
 
-Podczas łączenia się z plikiem obj lub moduł .netmodule MSIL, użyj [opcję/LTCG (Generowanie kodu Link-time)](ltcg-link-time-code-generation.md), w przeciwnym razie jeśli konsolidator napotka MSIL .obj lub moduł .netmodule, zostanie ponownie uruchomiony łącze z opcją/LTCG.
+Określ punkt wejścia przy użyciu [/entry (symbol punktu wejścia)](entry-entry-point-symbol.md) podczas tworzenia obrazu wykonywalnego.
 
-Pliki .obj lub moduł .netmodule MSIL również mogą być przekazywane do cl.exe.
+Podczas łączenia z plikiem MSIL *`.obj`* lub *`.netmodule`* , użyj [/LTCG (generowanie kodu w czasie konsolidacji)](ltcg-link-time-code-generation.md), w przeciwnym razie, gdy konsolidator napotka *`.obj`* MSIL lub *`.netmodule`* , spowoduje ponowne uruchomienie linku z **/LTCG**. Zobaczysz komunikat informacyjny, że link jest uruchamiany ponownie. Możesz zignorować ten komunikat, ale aby poprawić wydajność konsolidatora, jawnie określ **/LTCG**.
 
-Wejściowy pliki .obj lub moduł .netmodule MSIL nie zostały osadzone zasoby. Zasób jest osadzony w pliku danych wyjściowych (moduł lub zestawu) z [linkowany (Osadź zarządzany zasób)](assemblyresource-embed-a-managed-resource.md) — opcja konsolidatora lub **/Resource** — opcja kompilatora w innych kompilatorach Visual Studio.
+Pliki MSIL *`.obj`* lub *`.netmodule`* można również przekazywać do programu cl. exe.
 
-Podczas przeprowadzania Konsolidacja MSIL, a także nie określisz [opcję/LTCG (Generowanie kodu Link-time)](ltcg-link-time-code-generation.md), zostanie wyświetlony komunikat informacyjny, raportowanie, że łącze jest uruchamiana ponownie. Ten komunikat można zignorować, ale w celu podwyższenia wydajności konsolidatora z Konsolidacja MSIL, jawnie określ **opcję/LTCG**.
+Wejściowe *`.obj`* MSIL lub pliki *`.netmodule`* nie mogą mieć zasobów osadzonych. Osadź zasoby w module wyjściowym lub pliku zestawu za pomocą [/ASSEMBLYRESOURCE (Osadź zarządzany zasób)](assemblyresource-embed-a-managed-resource.md) opcji konsolidatora. Lub użyj opcji kompilatora **/Resource** w innych kompilatorach programu Visual Studio.
 
-## <a name="example"></a>Przykład
+## <a name="examples"></a>Przykłady
 
-W przypadku kodu C++ **catch** odpowiedni blok **spróbuj** zostanie wywołany, dla wyjątku typu innego niż System. Jednak domyślnie środowisko CLR opakowuje niesystemowe wyjątków za pomocą <xref:System.Runtime.CompilerServices.RuntimeWrappedException>. Gdy zestaw jest tworzony z modułów języka Visual C++ i inne niż Visual C++ i chcesz **catch** bloku kodu C++ do wywołania z odpowiadającymi mu dostawcami **spróbuj** klauzuli podczas **spróbuj**bloku wyjątek-System, należy dodać `[assembly:System::Runtime::CompilerServices::RuntimeCompatibility(WrapNonExceptionThrows=false)]` atrybutu do kodu źródłowego dla modułów innego niż C++.
+W C++ kodzie **`catch`** bloku odpowiadającego **`try`** zostanie wywołana dla wyjątku nie`System`. Jednak domyślnie środowisko CLR otacza wyjątki nie`System` z <xref:System.Runtime.CompilerServices.RuntimeWrappedException>. Gdy C++ zestaw jest tworzony z i bezC++ modułów, i chcesz, aby blok **`catch`** w C++ kodzie był wywoływany z odpowiadającej jej klauzuli **`try`** , gdy blok **`try`** zgłasza wyjątek nie`System`, należy dodać atrybut `[assembly:System::Runtime::CompilerServices::RuntimeCompatibility(WrapNonExceptionThrows=false)]` do kodu źródłowego dlaC++ modułów innych niż moduły.
 
 ```cpp
 // MSIL_linking.cpp
@@ -67,11 +74,9 @@ int main() {
 */
 ```
 
-## <a name="example"></a>Przykład
+Zmieniając wartość `Boolean` atrybutu `WrapNonExceptionThrows`, można zmodyfikować zdolność C++ kodu do przechwycenia wyjątku nie`System`.
 
-Zmieniając wartość logiczna `WrapNonExceptionThrows` atrybutu, możesz zmodyfikować możliwość przechwytywanie wyjątku typu innego niż System kodu języka Visual C++.
-
-```cpp
+```csharp
 // MSIL_linking_2.cs
 // compile with: /target:module /addmodule:MSIL_linking.obj
 // post-build command: link /LTCG MSIL_linking.obj MSIL_linking_2.netmodule /entry:MLinkTest.Main /out:MSIL_linking_2.exe /subsystem:console
