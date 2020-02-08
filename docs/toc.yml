@@ -702,6 +702,10 @@
                           href: build/reference/qsafe-fp-loads.md
                         - name: /Qspectre
                           href: build/reference/qspectre.md
+                        - name: /Qspectre-load
+                          href: build/reference/qspectre-load.md
+                        - name: /Qspectre-load-cf
+                          href: build/reference/qspectre-load-cf.md
                         - name: /Qvec-raport (Poziom raportowania automatycznej wektoryzacji)
                           href: build/reference/qvec-report-auto-vectorizer-reporting-level.md
                     - name: /RTC (Sprawdzanie błędów czasu wykonywania)
@@ -5891,7 +5895,7 @@
               href: extensions/delegate-cpp-component-extensions.md
             - name: 'enum, klasa'
               href: extensions/enum-class-cpp-component-extensions.md
-            - name: zdarzenie
+            - name: event
               href: extensions/event-cpp-component-extensions.md
             - name: Obsługa wyjątków
               href: extensions/exception-handling-cpp-component-extensions.md
