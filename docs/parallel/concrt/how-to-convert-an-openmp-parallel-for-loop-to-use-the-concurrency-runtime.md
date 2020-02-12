@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Konwertowanie paraleli OpenMP dla pętli do korzystania ze współbieżności środowiska wykonawczego'
+title: 'Porady: konwertowanie paraleli OpenMP dla pętli do korzystania ze współbieżności środowiska wykonawczego'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, parallel for loops
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - parallel for loops, converting from OpenMP to the Concurrency Runtime
 - parallel loops, converting from OpenMP to the Concurrency Runtime
 ms.assetid: d8a7b656-f86c-456e-9c5d-a7d52f94646e
-ms.openlocfilehash: bc408465f34f0558e9f426ae35b83d4610898414
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d96ba23582368fe72e61003823826a6f3ab807a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413895"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141766"
 ---
-# <a name="how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime"></a>Instrukcje: Konwertowanie paraleli OpenMP dla pętli do korzystania ze współbieżności środowiska wykonawczego
+# <a name="how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime"></a>Porady: konwertowanie paraleli OpenMP dla pętli do korzystania ze współbieżności środowiska wykonawczego
 
-W tym przykładzie opisano sposób konwertowania podstawowe pętli, która używa OpenMP [równoległe](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) i [dla](../../parallel/openmp/reference/for-openmp.md) dyrektywy do korzystania ze współbieżności środowiska wykonawczego [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorytm.
+W tym przykładzie pokazano, jak przekonwertować pętlę podstawową, która używa algorytmu "OpenMP [Parallel](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) and [for](../../parallel/openmp/reference/for-openmp.md) ", aby użyć algorytmu środowisko uruchomieniowe współbieżności [concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) .
 
-## <a name="example"></a>Przykład
+## <a name="example---prime-count"></a>Przykład — liczba podstawowa
 
-W tym przykładzie używa OpenMP i środowisku uruchomieniowym współbieżności: do obliczenia liczby liczb pierwszych, w tablicy wartości losowych.
+W tym przykładzie używamy OpenMP i środowisko uruchomieniowe współbieżności, aby obliczyć liczbę pierwszych numerów w tablicy wartości losowych.
 
 [!code-cpp[concrt-openmp#1](../../parallel/concrt/codesnippet/cpp/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime_1.cpp)]
 
@@ -33,25 +33,25 @@ Using the Concurrency Runtime...
 found 107254 prime numbers.
 ```
 
-`parallel_for` Algorytmu i OpenMP 3.0 umożliwiają dla typu indeksu jako typ całkowity ze znakiem lub nieoznaczoną liczbę całkowitą. `parallel_for` Algorytm również sprawdza, czy określony zakres nie przepełnienia typ ze znakiem. OpenMP w wersji 2.0 i 2.5 Zezwalaj na podpisane indeksu typu całkowitego tylko dla typów. OpenMP również nie można zweryfikować z zakresem indeksu.
+Algorytm `parallel_for` i OpenMP 3,0 Zezwalaj na typ indeksu jako typ całkowity ze znakiem lub bez typu całkowitego. Algorytm `parallel_for` sprawdza również, czy określony zakres nie przepełnił typu ze znakiem. Wersje OpenMP 2,0 i 2,5 zezwalają tylko na podpisane typy indeksów całkowitych. OpenMP nie sprawdza także zakresu indeksu.
 
-Używa także wersja tego przykładu, który korzysta ze współbieżności środowiska wykonawczego [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) obiektu zamiast [atomic](../../parallel/openmp/reference/atomic.md) dyrektywy, aby zwiększyć wartość licznika, bez konieczności Synchronizacja.
+Wersja tego przykładu, która używa środowisko uruchomieniowe współbieżności używa również obiektu [concurrency::Binding](../../parallel/concrt/reference/combinable-class.md) zamiast dyrektywy [atomowej](../../parallel/openmp/reference/atomic.md) , aby zwiększyć wartość licznika bez konieczności synchronizacji.
 
-Aby uzyskać więcej informacji na temat `parallel_for` i innych równoległych algorytmów, zobacz [algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md). Aby uzyskać więcej informacji na temat `combinable` klasy, zobacz [równoległe kontenery oraz obiekty](../../parallel/concrt/parallel-containers-and-objects.md).
+Aby uzyskać więcej informacji na temat `parallel_for` i innych algorytmów równoległych, zobacz [algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md). Aby uzyskać więcej informacji na temat klasy `combinable`, zobacz [Parallel Containers and Objects](../../parallel/concrt/parallel-containers-and-objects.md).
 
-## <a name="example"></a>Przykład
+## <a name="example---use-stdarray"></a>Przykład — użyj std:: Array
 
-Ten przykład modyfikuje poprzedni, aby działać na [std::array](../../standard-library/array-class-stl.md) zamiast obiektu na tablicy natywnej. OpenMP w wersji 2.0 i 2.5 jest dozwolone dla podpisanej typów całkowitych indeksu tylko w `parallel_for` konstrukcji, nie można użyć Iteratory do dostępu do elementów kontenera standardowej biblioteki języka C++ w sposób równoległy. Biblioteka równoległych wzorców (PPL) zapewnia [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algorytmu, który wykonuje zadania, w sposób równoległy, iteracyjne kontenera, takie jak te oferowane przez C++ biblioteki standardowej. Używa ona tę samą logikę partycjonowania, `parallel_for` używa algorytmu. `parallel_for_each` Przypomina algorytm C++ biblioteki standardowej [std::for_each](../../standard-library/algorithm-functions.md#for_each) algorytmu, chyba że `parallel_for_each` algorytm wykonuje zadania jednocześnie.
+Ten przykład modyfikuje poprzednią wartość, aby działać na obiekcie [std:: Array](../../standard-library/array-class-stl.md) zamiast w tablicy natywnej. Ze względu na to, że wersje OpenMP 2,0 i 2,5 zezwalają na podpisane typy indeksów całkowitych tylko w konstrukcji `parallel_for` nie można użyć iteratorów C++ , aby uzyskać dostęp do elementów kontenera biblioteki standardowej równolegle. Biblioteka równoległych wzorców (PPL) zapewnia algorytm [concurrency::p arallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) , który wykonuje zadania równolegle, w kontenerze iteracyjnym, takim jak te dostarczone przez bibliotekę C++ standardową. Używa tej samej logiki partycjonowania, której używa algorytm `parallel_for`. Algorytm `parallel_for_each` jest podobny do C++ algorytmu standardowej biblioteki [std:: for_each](../../standard-library/algorithm-functions.md#for_each) , z tą różnicą, że algorytm `parallel_for_each` wykonuje zadania współbieżnie.
 
 [!code-cpp[concrt-openmp#10](../../parallel/concrt/codesnippet/cpp/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime_2.cpp)]
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
-Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `concrt-omp-count-primes.cpp` , a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
+Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `concrt-omp-count-primes.cpp` a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
 
-**cl.exe /EHsc /openmp concrt-omp-count-primes.cpp**
+> **CL. exe/EHsc/OpenMP ConcRT-OMP-Count-primes. cpp**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Migrowanie z OpenMP do środowiska uruchomieniowego współbieżności](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
 [Algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md)<br/>

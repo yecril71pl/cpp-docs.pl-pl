@@ -16,65 +16,65 @@ f1_keywords:
 helpviewer_keywords:
 - join class
 ms.assetid: d2217119-70a1-40b6-809f-c1c13a571c3f
-ms.openlocfilehash: d04ef90750c609d77fc8bf963bb996a90444f079
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f75cf8483e7d6d65d118cc8f0ea756302d1b1d7c
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343864"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139851"
 ---
 # <a name="join-class"></a>join — Klasa
 
-A `join` blok komunikatów jest docelowy pojedynczego wielu źródeł, uporządkowanych `propagator_block` które łączy ze sobą komunikaty typu `T` z każdej z jej źródła.
+Blok komunikatów `join` to Jednoelementowy, uporządkowany `propagator_block`, który łączy razem komunikaty typu `T` z każdego ze źródeł.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 template<class T,
     join_type _Jtype = non_greedy>
 class join : public propagator_block<single_link_registry<ITarget<std::vector<T>>>,
     multi_link_registry<ISource<T>>>;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Typ ładunku komunikatów przyłączone i rozprowadzane przez blok.
+*&*<br/>
+Typ ładunku komunikatów przyłączonych i rozpropagowanych przez blok.
 
 *_Jtype*<br/>
-Rodzaj elementu `join` bloku jest, albo `greedy` lub `non_greedy`
+Rodzaj bloku `join` to `greedy` lub `non_greedy`
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[join](#ctor)|Przeciążone. Konstruuje `join` Blok obsługi wiadomości.|
-|[~ join — destruktor](#dtor)|Niszczy `join` bloku.|
+|[join](#ctor)|Przeciążone. Tworzy blok komunikatów `join`.|
+|[~ Join — destruktor](#dtor)|Niszczy blok `join`.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[accept_message](#accept_message)|Akceptuje wiadomości, które było oferowane przez to `join` Blok obsługi wiadomości, transfer praw własności do obiektu wywołującego.|
-|[consume_message](#consume_message)|Wykorzystuje komunikat, który został poprzednio oferowana przez `join` bloku komunikatów i zastrzeżona przez element docelowy przenoszenia własności do obiektu wywołującego.|
-|[link_target_notification](#link_target_notification)|Wywołanie zwrotne, które informuje, że nowy obiekt docelowy została połączona z tym `join` Blok obsługi wiadomości.|
-|[propagate_message](#propagate_message)|Asynchronicznie przekazuje komunikat z `ISource` bloku, aby to `join` Blok obsługi wiadomości. Zostanie wywołany przez `propagate` metody, gdy zostanie wywołana przez blok źródłowy.|
-|[propagate_to_any_targets](#propagate_to_any_targets)|Tworzy komunikat wyjściowy zawierający komunikat wejściowy z każdego źródła po ich wykonaniu wszystkich propagacji wiadomość. Wysyła wiadomość dane wyjściowe do każdego z jego elementów docelowych.|
-|[release_message](#release_message)|Zwalnia poprzedniej wiadomości rezerwacji. (Przesłania [source_block::release_message —](source-block-class.md#release_message).)|
-|[reserve_message](#reserve_message)|Zarezerwowaniu wiadomości przez oferowane wcześniej to `join` Blok obsługi wiadomości. (Przesłania [source_block::reserve_message —](source-block-class.md#reserve_message).)|
-|[resume_propagation](#resume_propagation)|Wznawia działanie propagacji, po udostępnieniu rezerwacji. (Przesłania [source_block::resume_propagation —](source-block-class.md#resume_propagation).)|
+|[accept_message](#accept_message)|Akceptuje komunikat, który był oferowany przez ten blok komunikatów `join`, przekazując własność do obiektu wywołującego.|
+|[consume_message](#consume_message)|Wykorzystuje komunikat wcześniej oferowany przez blok komunikatów `join` i zastrzeżony przez element docelowy, przekazując własność do obiektu wywołującego.|
+|[link_target_notification](#link_target_notification)|Wywołanie zwrotne, które powiadamia, że nowy element docelowy został połączony z tym blokiem komunikatów `join`.|
+|[propagate_message](#propagate_message)|Asynchronicznie przekazuje komunikat z bloku `ISource` do tego bloku komunikatów `join`. Jest wywoływany przez metodę `propagate`, gdy jest wywoływana przez blok źródłowy.|
+|[propagate_to_any_targets](#propagate_to_any_targets)|Konstruuje komunikat wyjściowy zawierający komunikat wejściowy z każdego źródła, gdy ma on propagowany komunikat. Wysyła ten komunikat wyjściowy do każdego z jego obiektów docelowych.|
+|[release_message](#release_message)|Zwalnia poprzednią rezerwację wiadomości. (Zastępuje [source_block:: release_message](source-block-class.md#release_message).)|
+|[reserve_message](#reserve_message)|Rezerwuje komunikat wcześniej oferowany przez ten blok komunikatów `join`. (Zastępuje [source_block:: reserve_message](source-block-class.md#reserve_message).)|
+|[resume_propagation](#resume_propagation)|Wznawia propagację po wydaniu rezerwacji. (Zastępuje [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|
 
 ## <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [bloki komunikatów asynchronicznych](../../../parallel/concrt/asynchronous-message-blocks.md).
+Aby uzyskać więcej informacji, zobacz [asynchroniczne bloki komunikatów](../../../parallel/concrt/asynchronous-message-blocks.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Isource —](isource-class.md)
+[ISource](isource-class.md)
 
-[Itarget —](itarget-class.md)
+[ITarget](itarget-class.md)
 
 [source_block](source-block-class.md)
 
@@ -84,53 +84,53 @@ Aby uzyskać więcej informacji, zobacz [bloki komunikatów asynchronicznych](..
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** agents.h
+**Nagłówek:** agenci. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="accept_message"></a> accept_message
+## <a name="accept_message"></a>accept_message
 
-Akceptuje wiadomości, które było oferowane przez to `join` Blok obsługi wiadomości, transfer praw własności do obiektu wywołującego.
+Akceptuje komunikat, który był oferowany przez ten blok komunikatów `join`, przekazując własność do obiektu wywołującego.
 
-```
+```cpp
 virtual message<_OutputType>* accept_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` z oferowane `message` obiektu.
+`runtime_object_identity` oferowanego obiektu `message`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Wskaźnik do `message` obiektu, że obiekt wywołujący ma teraz własności.
+Wskaźnik do obiektu `message`, do którego obiekt wywołujący ma teraz własność.
 
-##  <a name="consume_message"></a> consume_message
+## <a name="consume_message"></a>consume_message
 
-Wykorzystuje komunikat, który został poprzednio oferowana przez `join` bloku komunikatów i zastrzeżona przez element docelowy przenoszenia własności do obiektu wywołującego.
+Wykorzystuje komunikat wcześniej oferowany przez blok komunikatów `join` i zastrzeżony przez element docelowy, przekazując własność do obiektu wywołującego.
 
-```
+```cpp
 virtual message<_OutputType>* consume_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` z `message` obiektu są używane.
+`runtime_object_identity` zużywanego obiektu `message`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Wskaźnik do `message` obiektu, że obiekt wywołujący ma teraz własności.
+Wskaźnik do obiektu `message`, do którego obiekt wywołujący ma teraz własność.
 
 ### <a name="remarks"></a>Uwagi
 
-Podobnie jak `accept`, ale zawsze jest poprzedzony przez wywołanie `reserve`.
+Podobnie jak `accept`, ale jest zawsze poprzedzone wywołaniem `reserve`.
 
-##  <a name="ctor"></a> sprzężenia
+## <a name="ctor"></a>Złącza
 
-Konstruuje `join` Blok obsługi wiadomości.
+Tworzy blok komunikatów `join`.
 
-```
+```cpp
 join(
     size_t _NumInputs);
 
@@ -160,44 +160,44 @@ join(
 ### <a name="parameters"></a>Parametry
 
 *_NumInputs*<br/>
-Liczba danych wejściowych to `join` bloku będzie możliwe.
+Liczba danych wejściowych tego bloku `join` będzie dozwolona.
 
 *_Filter*<br/>
-Funkcja filtrowania, określający, czy powinna być akceptowana oferowane wiadomości.
+Funkcja filtru, która określa, czy proponowane komunikaty powinny być akceptowane.
 
 *_PScheduler*<br/>
-`Scheduler` Obiekt, w którym zadanie propagacji dla `join` zaplanowano Blok obsługi wiadomości.
+Obiekt `Scheduler`, w ramach którego zaplanowano zadanie propagacji dla bloku obsługi komunikatów `join`.
 
 *_PScheduleGroup*<br/>
-`ScheduleGroup` Obiekt, w którym zadanie propagacji dla `join` zaplanowano Blok obsługi wiadomości. `Scheduler` Obiekt używany jest implikowany przez grupę harmonogramów.
+Obiekt `ScheduleGroup`, w ramach którego zaplanowano zadanie propagacji dla bloku obsługi komunikatów `join`. Używany obiekt `Scheduler` jest implikowany przez grupę harmonogramów.
 
 ### <a name="remarks"></a>Uwagi
 
-Środowisko wykonawcze używa domyślnego harmonogramu, jeśli nie określisz `_PScheduler` lub `_PScheduleGroup` parametrów.
+Środowisko uruchomieniowe używa domyślnego harmonogramu, jeśli nie określisz parametrów `_PScheduler` lub `_PScheduleGroup`.
 
-Typ `filter_method` jest funktor za pomocą podpisu `bool (T const &)` który zostanie wywołany przez to `join` Blok obsługi wiadomości, aby ustalić, czy nie powinien akceptować wiadomości oferowane.
+Typ `filter_method` to Funktor z sygnaturą `bool (T const &)`, która jest wywoływana przez ten blok komunikatów `join` do określenia, czy powinien on akceptować oferowany komunikat.
 
-##  <a name="dtor"></a> ~ join
+## <a name="dtor"></a>~ Join
 
-Niszczy `join` bloku.
+Niszczy blok `join`.
 
-```
+```cpp
 ~join();
 ```
 
-##  <a name="link_target_notification"></a> link_target_notification —
+## <a name="link_target_notification"></a>link_target_notification
 
-Wywołanie zwrotne, które informuje, że nowy obiekt docelowy została połączona z tym `join` Blok obsługi wiadomości.
+Wywołanie zwrotne, które powiadamia, że nowy element docelowy został połączony z tym blokiem komunikatów `join`.
 
-```
+```cpp
 virtual void link_target_notification(_Inout_ ITarget<std::vector<T>> *);
 ```
 
-##  <a name="propagate_message"></a> propagate_message
+## <a name="propagate_message"></a>propagate_message
 
-Asynchronicznie przekazuje komunikat z `ISource` bloku, aby to `join` Blok obsługi wiadomości. Zostanie wywołany przez `propagate` metody, gdy zostanie wywołana przez blok źródłowy.
+Asynchronicznie przekazuje komunikat z bloku `ISource` do tego bloku komunikatów `join`. Jest wywoływany przez metodę `propagate`, gdy jest wywoływana przez blok źródłowy.
 
-```
+```cpp
 message_status propagate_message(
     _Inout_ message<T>* _PMessage,
     _Inout_ ISource<T>* _PSource);
@@ -206,66 +206,66 @@ message_status propagate_message(
 ### <a name="parameters"></a>Parametry
 
 *_PMessage*<br/>
-Wskaźnik do `message` obiektu.
+Wskaźnik do obiektu `message`.
 
 *_PSource*<br/>
-Wskaźnik do blok źródłowy oferty wiadomości.
+Wskaźnik do bloku źródłowego oferującego komunikat.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-A [message_status —](concurrency-namespace-enums.md) sygnał docelowy postanowiła zrobić z komunikatem.
+[Message_status](concurrency-namespace-enums.md) wskazanie elementu docelowego, który zdecydował się wykonać wraz z wiadomością.
 
-##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets
+## <a name="propagate_to_any_targets"></a>propagate_to_any_targets
 
-Tworzy komunikat wyjściowy zawierający komunikat wejściowy z każdego źródła po ich wykonaniu wszystkich propagacji wiadomość. Wysyła wiadomość dane wyjściowe do każdego z jego elementów docelowych.
+Konstruuje komunikat wyjściowy zawierający komunikat wejściowy z każdego źródła, gdy ma on propagowany komunikat. Wysyła ten komunikat wyjściowy do każdego z jego obiektów docelowych.
 
-```
+```cpp
 void propagate_to_any_targets(_Inout_opt_ message<_OutputType> *);
 ```
 
-##  <a name="release_message"></a> release_message
+## <a name="release_message"></a>release_message
 
-Zwalnia poprzedniej wiadomości rezerwacji.
+Zwalnia poprzednią rezerwację wiadomości.
 
-```
+```cpp
 virtual void release_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` z `message` obiektu, zostały udostępnione.
+`runtime_object_identity` wydawany `message` obiektu.
 
-##  <a name="reserve_message"></a> reserve_message
+## <a name="reserve_message"></a>reserve_message
 
-Zarezerwowaniu wiadomości przez oferowane wcześniej to `join` Blok obsługi wiadomości.
+Rezerwuje komunikat wcześniej oferowany przez ten blok komunikatów `join`.
 
-```
+```cpp
 virtual bool reserve_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` z oferowane `message` obiektu.
+`runtime_object_identity` oferowanego obiektu `message`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-**wartość true,** Jeśli komunikat został pomyślnie zarezerwowany, **false** inaczej.
+**prawda** , jeśli komunikat został pomyślnie zarezerwowany, w przeciwnym razie **zwraca wartość false** .
 
 ### <a name="remarks"></a>Uwagi
 
-Po `reserve` jest wywoływana, jeśli zwróci ona **true**, albo `consume` lub `release` musi zostać wywołana wersji własności wiadomości lub wykonać.
+Po wywołaniu `reserve`, jeśli zwraca **wartość true**, należy wywołać `consume` lub `release`, aby przejąć lub zwolnić własność wiadomości.
 
-##  <a name="resume_propagation"></a> resume_propagation
+## <a name="resume_propagation"></a>resume_propagation
 
-Wznawia działanie propagacji, po udostępnieniu rezerwacji.
+Wznawia propagację po wydaniu rezerwacji.
 
-```
+```cpp
 virtual void resume_propagation();
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [choice, klasa](choice-class.md)<br/>

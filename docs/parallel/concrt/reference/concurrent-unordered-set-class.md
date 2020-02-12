@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_set class
 ms.assetid: c61f9a9a-4fd9-491a-9251-e300737ecf4b
-ms.openlocfilehash: 9dc5b37730742e7deec20b12232de672679e956f
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 0671a3c1996ca85a9c2cf5a386821c3d52c1bf50
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75297482"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143153"
 ---
 # <a name="concurrent_unordered_set-class"></a>concurrent_unordered_set — Klasa
 
@@ -26,7 +26,7 @@ Klasa `concurrent_unordered_set` jest bezpiecznym pod kątem współbieżności 
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 template <typename K,
     typename _Hasher = std::hash<K>,
     typename key_equality = std::equal_to<K>,
@@ -41,7 +41,7 @@ _Allocator_type,
     false>>;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
 *K*<br/>
 Typ klucza.
@@ -55,11 +55,11 @@ Typ obiektu funkcji porównywania równości. Ten argument jest opcjonalny, a wa
 *_Allocator_type*<br/>
 Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i cofania alokacji pamięci dla współbieżnego zestawu nieuporządkowanego. Ten argument jest opcjonalny, a wartość domyślna to `std::allocator<K>`.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |`allocator_type`|Typ alokatora do zarządzania pamięcią.|
 |`const_iterator`|Typ iteratora stałego dla kontrolowanej sekwencji.|
@@ -79,25 +79,25 @@ Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegó�
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[concurrent_unordered_set](#ctor)|Przeciążone. Konstruuje współbieżny zestaw nieuporządkowany.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[hash_function](#hash_function)|Zwraca przechowywany obiekt funkcji skrótu.|
 |[wstawienia](#insert)|Przeciążone. Dodaje elementy do obiektu `concurrent_unordered_set`.|
 |[key_eq](#key_eq)|Zwraca przechowywany obiekt funkcji porównywania równości.|
-|[swap](#swap)|Zamienia zawartość dwóch `concurrent_unordered_set` obiektów. Ta metoda nie jest bezpieczna pod kątem współbieżności.|
+|[wymiany](#swap)|Zamienia zawartość dwóch `concurrent_unordered_set` obiektów. Ta metoda nie jest bezpieczna pod kątem współbieżności.|
 |[unsafe_erase](#unsafe_erase)|Przeciążone. Usuwa elementy z `concurrent_unordered_set` w określonych położeniach. Ta metoda nie jest bezpieczna pod kątem współbieżności.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[operator=](#operator_eq)|Przeciążone. Przypisuje do niego zawartość innego obiektu `concurrent_unordered_set`. Ta metoda nie jest bezpieczna pod kątem współbieżności.|
+|[operator =](#operator_eq)|Przeciążone. Przypisuje do niego zawartość innego obiektu `concurrent_unordered_set`. Ta metoda nie jest bezpieczna pod kątem współbieżności.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -117,11 +117,11 @@ Aby uzyskać szczegółowe informacje na temat klasy `concurrent_unordered_set`,
 
 **Przestrzeń nazw:** współbieżność
 
-##  <a name="begin"></a>zaczną
+## <a name="begin"></a>zaczną
 
 Zwraca iterator wskazujący na pierwszy element w kontenerze współbieżnym. Ta metoda jest bezpieczna pod względem współbieżności.
 
-```
+```cpp
 iterator begin();
 
 const_iterator begin() const;
@@ -131,11 +131,11 @@ const_iterator begin() const;
 
 Iterator do pierwszego elementu w kontenerze współbieżnym.
 
-##  <a name="cbegin"></a>cbegin
+## <a name="cbegin"></a>cbegin
 
 Zwraca iterator const wskazujący na pierwszy element w kontenerze współbieżnym. Ta metoda jest bezpieczna pod względem współbieżności.
 
-```
+```cpp
 const_iterator cbegin() const;
 ```
 
@@ -143,11 +143,11 @@ const_iterator cbegin() const;
 
 Iterator const do pierwszego elementu w kontenerze współbieżnym.
 
-##  <a name="cend"></a>cend
+## <a name="cend"></a>cend
 
 Zwraca iterator const wskazujący lokalizację, która kończy się ostatnim elementem w kontenerze współbieżnym. Ta metoda jest bezpieczna pod względem współbieżności.
 
-```
+```cpp
 const_iterator cend() const;
 ```
 
@@ -155,19 +155,19 @@ const_iterator cend() const;
 
 Iterator const do lokalizacji po ostatnim elemencie w kontenerze współbieżnym.
 
-##  <a name="clear"></a>Wyczyść
+## <a name="clear"></a>Wyczyść
 
 Usuwa wszystkie elementy w kontenerze współbieżnym. Ta funkcja nie jest bezpieczna pod kątem współbieżności.
 
-```
+```cpp
 void clear();
 ```
 
-##  <a name="ctor"></a>concurrent_unordered_set
+## <a name="ctor"></a>concurrent_unordered_set
 
 Konstruuje współbieżny zestaw nieuporządkowany.
 
-```
+```cpp
 explicit concurrent_unordered_set(
     size_type _Number_of_buckets = 8,
     const hasher& _Hasher = hasher(),
@@ -213,8 +213,8 @@ Funkcja porównywania równości dla tego nieuporządkowanego zestawu.
 *_Allocator*<br/>
 Program przydzielający dla tego nieuporządkowanego zestawu.
 
-*first*<br/>
-*last*<br/>
+*pierwszego*<br/>
+*ostatniego*<br/>
 *_Uset*<br/>
 Obiekt źródłowy `concurrent_unordered_set` do kopiowania lub przenoszenia elementów.
 
@@ -232,11 +232,11 @@ Czwarty i piąty konstruktory określają kopię współbieżnego zestawu nieupo
 
 Ostatni konstruktor określa przeniesienie współbieżnego zestawu nieuporządkowanego `_Uset`.
 
-##  <a name="count"></a>liczbą
+## <a name="count"></a>liczbą
 
 Zlicza elementy pasujące do określonego klucza. Ta funkcja jest bezpieczna pod względem współbieżności.
 
-```
+```cpp
 size_type count(const key_type& KVal) const;
 ```
 
@@ -249,11 +249,11 @@ Klucz, który ma zostać wyszukany.
 
 Liczba przypadków, gdy klucz pojawia się w kontenerze.
 
-##  <a name="empty"></a>ciągiem
+## <a name="empty"></a>ciągiem
 
 Sprawdza, czy nie ma żadnych elementów. Ta metoda jest bezpieczna pod względem współbieżności.
 
-```
+```cpp
 bool empty() const;
 ```
 
@@ -265,11 +265,11 @@ bool empty() const;
 
 W obecności współbieżnych operacji wstawiania, niezależnie od tego, czy współbieżny kontener jest pusty, może ulec zmianie natychmiast po wywołaniu tej funkcji, zanim zwracana wartość zostanie odczytana.
 
-##  <a name="end"></a>punktów
+## <a name="end"></a>punktów
 
 Zwraca iterator wskazujący lokalizację, która kończy się ostatnim elementem w kontenerze współbieżnym. Ta metoda jest bezpieczna pod względem współbieżności.
 
-```
+```cpp
 iterator end();
 
 const_iterator end() const;
@@ -279,11 +279,11 @@ const_iterator end() const;
 
 Iterator do lokalizacji po ostatnim elemencie w kontenerze współbieżnym.
 
-##  <a name="equal_range"></a>equal_range
+## <a name="equal_range"></a>equal_range
 
 Znajduje zakres pasujący do określonego klucza. Ta funkcja jest bezpieczna pod względem współbieżności.
 
-```
+```cpp
 std::pair<iterator,
     iterator> equal_range(
     const key_type& KVal);
@@ -306,11 +306,11 @@ Wartość klucza do wyszukania.
 
 Możliwe jest jednoczesne wstawianie, aby spowodować Wstawianie dodatkowych kluczy po iteratoru BEGIN i przed iteratorem końcowym.
 
-##  <a name="find"></a>wyświetlić
+## <a name="find"></a>wyświetlić
 
 Wyszukuje element, który odpowiada określonemu kluczowi. Ta funkcja jest bezpieczna pod względem współbieżności.
 
-```
+```cpp
 iterator find(const key_type& KVal);
 
 const_iterator find(const key_type& KVal) const;
@@ -325,11 +325,11 @@ Wartość klucza do wyszukania.
 
 Iterator wskazujący lokalizację pierwszego elementu, który pasuje do podanego klucza lub iterator `end()`, jeśli taki element nie istnieje.
 
-##  <a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a>get_allocator
 
 Zwraca przechowywany obiekt alokatora dla tego współbieżnego kontenera. Ta metoda jest bezpieczna pod względem współbieżności.
 
-```
+```cpp
 allocator_type get_allocator() const;
 ```
 
@@ -337,11 +337,11 @@ allocator_type get_allocator() const;
 
 Przechowywany obiekt alokatora dla tego współbieżnego kontenera.
 
-##  <a name="hash_function"></a>hash_function
+## <a name="hash_function"></a>hash_function
 
 Zwraca przechowywany obiekt funkcji skrótu.
 
-```
+```cpp
 hasher hash_function() const;
 ```
 
@@ -349,11 +349,11 @@ hasher hash_function() const;
 
 Przechowywany obiekt funkcji skrótu.
 
-##  <a name="insert"></a>wstawienia
+## <a name="insert"></a>wstawienia
 
 Dodaje elementy do obiektu `concurrent_unordered_set`.
 
-```
+```cpp
 std::pair<iterator,
     bool> insert(
     const value_type& value);
@@ -393,10 +393,10 @@ Wartość, która ma zostać wstawiona.
 *_Where*<br/>
 Początkowa lokalizacja, w której ma zostać wyszukany punkt wstawiania.
 
-*first*<br/>
+*pierwszego*<br/>
 Początek zakresu do wstawienia.
 
-*last*<br/>
+*ostatniego*<br/>
 Koniec zakresu do wstawienia.
 
 ### <a name="return-value"></a>Wartość zwrócona
@@ -413,11 +413,11 @@ Trzecia funkcja członkowska wstawia sekwencję wartości elementów z zakresu [
 
 Ostatnie dwie funkcje członkowskie zachowują się tak samo jak pierwsze dwa, z wyjątkiem tego, że `value` jest używany do konstruowania wstawionej wartości.
 
-##  <a name="key_eq"></a>key_eq
+## <a name="key_eq"></a>key_eq
 
 Zwraca przechowywany obiekt funkcji porównywania równości.
 
-```
+```cpp
 key_equal key_eq() const;
 ```
 
@@ -425,11 +425,11 @@ key_equal key_eq() const;
 
 Przechowywany obiekt funkcji porównywania równości.
 
-##  <a name="load_factor"></a>load_factor
+## <a name="load_factor"></a>load_factor
 
 Oblicza i zwraca bieżący współczynnik obciążenia kontenera. Współczynnik obciążenia to liczba elementów w kontenerze podzielona przez liczbę przedziałów.
 
-```
+```cpp
 float load_factor() const;
 ```
 
@@ -437,11 +437,11 @@ float load_factor() const;
 
 Współczynnik obciążenia dla kontenera.
 
-##  <a name="max_load_factor"></a>max_load_factor
+## <a name="max_load_factor"></a>max_load_factor
 
 Pobiera lub ustawia maksymalny współczynnik obciążenia kontenera. Maksymalny współczynnik obciążenia to największą liczbę elementów, która może znajdować się w dowolnym zasobniku, zanim kontener zostanie powiększony do swojej wewnętrznej tabeli.
 
-```
+```cpp
 float max_load_factor() const;
 
 void max_load_factor(float _Newmax);
@@ -455,11 +455,11 @@ void max_load_factor(float _Newmax);
 
 Pierwsza funkcja członkowska zwraca przechowywany maksymalny współczynnik obciążenia. Druga funkcja członkowska nie zwraca wartości, ale zgłasza wyjątek [out_of_range](../../../standard-library/out-of-range-class.md) , jeśli podany współczynnik obciążenia jest nieprawidłowy.
 
-##  <a name="max_size"></a>max_size
+## <a name="max_size"></a>max_size
 
 Zwraca maksymalny rozmiar kontenera współbieżnego, który jest określany przez Alokator. Ta metoda jest bezpieczna pod względem współbieżności.
 
-```
+```cpp
 size_type max_size() const;
 ```
 
@@ -471,11 +471,11 @@ Maksymalna liczba elementów, które można wstawić do tego współbieżnego ko
 
 Ta Górna granica może być w rzeczywistości wyższa niż wartość kontenera, w której ma zostać wstrzymana.
 
-##  <a name="operator_eq"></a>operator =
+## <a name="operator_eq"></a>operator =
 
 Przypisuje do niego zawartość innego obiektu `concurrent_unordered_set`. Ta metoda nie jest bezpieczna pod kątem współbieżności.
 
-```
+```cpp
 concurrent_unordered_set& operator= (const concurrent_unordered_set& _Uset);
 
 concurrent_unordered_set& operator= (concurrent_unordered_set&& _Uset);
@@ -494,11 +494,11 @@ Odwołanie do tego obiektu `concurrent_unordered_set`.
 
 Po wymazaniu wszystkich istniejących elementów w współbieżnym zestawie nieuporządkowanym `operator=` kopiuje lub przenosi zawartość `_Uset` do współbieżnego zestawu nieuporządkowanego.
 
-##  <a name="rehash"></a>rehash —
+## <a name="rehash"></a>rehash —
 
 Przebudowuje tabelę mieszania.
 
-```
+```cpp
 void rehash(size_type _Buckets);
 ```
 
@@ -513,11 +513,11 @@ Funkcja członkowska zmienia liczbę przedziałów, które mają być co najmnie
 
 Zgłasza wyjątek [out_of_range](../../../standard-library/out-of-range-class.md) , jeśli liczba przedziałów jest nieprawidłowa (0 lub większa niż maksymalna liczba przedziałów).
 
-##  <a name="size"></a>zmienia
+## <a name="size"></a>zmienia
 
 Zwraca liczbę elementów w tym współbieżnym kontenerze. Ta metoda jest bezpieczna pod względem współbieżności.
 
-```
+```cpp
 size_type size() const;
 ```
 
@@ -529,11 +529,11 @@ Liczba elementów w kontenerze.
 
 W przypadku występowania równoczesnych operacji wstawiania liczba elementów w kontenerze współbieżnym może ulec zmianie natychmiast po wywołaniu tej funkcji, zanim zwracana wartość zostanie odczytana.
 
-##  <a name="swap"></a>wymiany
+## <a name="swap"></a>wymiany
 
 Zamienia zawartość dwóch `concurrent_unordered_set` obiektów. Ta metoda nie jest bezpieczna pod kątem współbieżności.
 
-```
+```cpp
 void swap(concurrent_unordered_set& _Uset);
 ```
 
@@ -542,11 +542,11 @@ void swap(concurrent_unordered_set& _Uset);
 *_Uset*<br/>
 Obiekt `concurrent_unordered_set` do zamiany na.
 
-##  <a name="unsafe_begin"></a> unsafe_begin
+## <a name="unsafe_begin"></a>unsafe_begin
 
 Zwraca iterator do pierwszego elementu w tym kontenerze dla określonego przedziału.
 
-```
+```cpp
 local_iterator unsafe_begin(size_type _Bucket);
 
 const_local_iterator unsafe_begin(size_type _Bucket) const;
@@ -561,11 +561,11 @@ Indeks przedziału.
 
 Iterator wskazujący początek zasobnika.
 
-##  <a name="unsafe_bucket"></a>unsafe_bucket
+## <a name="unsafe_bucket"></a>unsafe_bucket
 
 Zwraca indeks zasobnika, do którego określony klucz jest mapowany w tym kontenerze.
 
-```
+```cpp
 size_type unsafe_bucket(const key_type& KVal) const;
 ```
 
@@ -578,11 +578,11 @@ Wyszukiwany klucz elementu.
 
 Indeks zasobnika klucza w tym kontenerze.
 
-##  <a name="unsafe_bucket_count"></a> unsafe_bucket_count
+## <a name="unsafe_bucket_count"></a>unsafe_bucket_count
 
 Zwraca bieżącą liczbę przedziałów w tym kontenerze.
 
-```
+```cpp
 size_type unsafe_bucket_count() const;
 ```
 
@@ -590,11 +590,11 @@ size_type unsafe_bucket_count() const;
 
 Bieżąca liczba przedziałów w tym kontenerze.
 
-##  <a name="unsafe_bucket_size"></a> unsafe_bucket_size
+## <a name="unsafe_bucket_size"></a>unsafe_bucket_size
 
 Zwraca liczbę elementów w określonym przedziale tego kontenera.
 
-```
+```cpp
 size_type unsafe_bucket_size(size_type _Bucket);
 ```
 
@@ -607,11 +607,11 @@ Zasobnik, który ma zostać wyszukany.
 
 Bieżąca liczba przedziałów w tym kontenerze.
 
-##  <a name="unsafe_cbegin"></a>unsafe_cbegin
+## <a name="unsafe_cbegin"></a>unsafe_cbegin
 
 Zwraca iterator do pierwszego elementu w tym kontenerze dla określonego przedziału.
 
-```
+```cpp
 const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 ```
 
@@ -624,11 +624,11 @@ Indeks przedziału.
 
 Iterator wskazujący początek zasobnika.
 
-##  <a name="unsafe_cend"></a>unsafe_cend
+## <a name="unsafe_cend"></a>unsafe_cend
 
 Zwraca iterator do lokalizacji, która kończy ostatni element w określonym przedziale.
 
-```
+```cpp
 const_local_iterator unsafe_cend(size_type _Bucket) const;
 ```
 
@@ -641,11 +641,11 @@ Indeks przedziału.
 
 Iterator wskazujący początek zasobnika.
 
-##  <a name="unsafe_end"></a>unsafe_end
+## <a name="unsafe_end"></a>unsafe_end
 
 Zwraca iterator do ostatniego elementu w tym kontenerze dla określonego przedziału.
 
-```
+```cpp
 local_iterator unsafe_end(size_type _Bucket);
 
 const_local_iterator unsafe_end(size_type _Bucket) const;
@@ -660,11 +660,11 @@ Indeks przedziału.
 
 Iterator wskazujący koniec przedziału.
 
-##  <a name="unsafe_erase"></a>unsafe_erase
+## <a name="unsafe_erase"></a>unsafe_erase
 
 Usuwa elementy z `concurrent_unordered_set` w określonych położeniach. Ta metoda nie jest bezpieczna pod kątem współbieżności.
 
-```
+```cpp
 iterator unsafe_erase(
     const_iterator _Where);
 
@@ -684,8 +684,8 @@ Pozycja iteratora, z której można wymazać.
 *KVal*<br/>
 Wartość klucza do wymazania.
 
-*first*<br/>
-*last*<br/>
+*pierwszego*<br/>
+*ostatniego*<br/>
 Iteratory.
 
 ### <a name="return-value"></a>Wartość zwrócona
@@ -698,11 +698,11 @@ Pierwsza funkcja członkowska usuwa element wskazywany przez `_Where`. Druga fun
 
 Trzecia funkcja członkowska usuwa elementy z zakresu oddzielone [equal_range](#equal_range)(KVal).
 
-##  <a name="unsafe_max_bucket_count"></a> unsafe_max_bucket_count
+## <a name="unsafe_max_bucket_count"></a>unsafe_max_bucket_count
 
 Zwraca maksymalną liczbę przedziałów w tym kontenerze.
 
-```
+```cpp
 size_type unsafe_max_bucket_count() const;
 ```
 
@@ -710,7 +710,7 @@ size_type unsafe_max_bucket_count() const;
 
 Maksymalna liczba przedziałów w tym kontenerze.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Równoległe kontenery oraz obiekty](../../../parallel/concrt/parallel-containers-and-objects.md)

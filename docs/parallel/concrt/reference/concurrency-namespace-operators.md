@@ -5,12 +5,12 @@ f1_keywords:
 - concrt/concurrency::operator!=
 - concrt/concurrency:[operator&amp;&amp
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
-ms.openlocfilehash: 00accee4f28167b94b9193aec6d90f32ed242dbe
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 676e1936af317a6ab19959f8fd09b1de06dfaf69
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821131"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143245"
 ---
 # <a name="concurrency-namespace-operators"></a>Operatory przestrzeni nazw współbieżności
 
@@ -18,13 +18,13 @@ ms.locfileid: "76821131"
 |-|-|-|
 |[operator!=](#operator_neq)|[&amp;operatora &amp;](#operator_amp_amp)|[&gt; operatora](#operator_gt)|
 |[&gt;operatora =](#operator_gt_eq)|[&lt; operatora](#operator_lt)|[&lt;operatora =](#operator_lt_eq)|
-|[operator==](#operator_eq_eq)|[operator&#124;&#124;](#operator_lor)| |
+|[operator = =](#operator_eq_eq)|[zakład&#124;&#124;](#operator_lor)| |
 
-##  <a name="operator_lor"></a>operator&#124; &#124; operator
+## <a name="operator_lor"></a>operator&#124; &#124; operator
 
 Tworzy zadanie, które zostanie ukończone pomyślnie, gdy jedno z zadań dostarczonych jako argumenty zakończy się pomyślnie.
 
-```
+```cpp
 template<typename ReturnType>
 task<ReturnType> operator||(
     const task<ReturnType>& lhs,
@@ -64,11 +64,11 @@ Zadanie, które zakończyło się pomyślnie, gdy jedno z zadań wejściowych za
 
 Jeśli oba zadania są anulowane lub zgłaszają wyjątki, zwrócone zadanie zostanie ukończone w stanie anulowane, a jedno z wyjątków, jeśli wystąpi, zostanie zgłoszone podczas wywołania `get()` lub `wait()` w tym zadaniu.
 
-##  <a name="operator_amp_amp"></a>operator&amp;operatora &amp;
+## <a name="operator_amp_amp"></a>operator&amp;operatora &amp;
 
 Tworzy zadanie, które zostanie ukończone pomyślnie, gdy oba zadania dostarczone jako argumenty zakończą się pomyślnie.
 
-```
+```cpp
 template<typename ReturnType>
 task<std::vector<ReturnType>>  operator&&(
     const task<ReturnType>& lhs,
@@ -111,13 +111,13 @@ Zadanie, które zakończy się pomyślnie, gdy oba zadania wejściowe zostały w
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli jedno z zadań zostanie anulowane lub zgłasza wyjątek, zwrócone zadanie zostanie wykonane wcześnie, w stanie anulowanym, a wyjątek, jeśli wystąpi, zostanie zgłoszony w przypadku wywołania `get()` lub `wait()` w tym zadaniu.
+Jeśli jedno z zadań zostanie anulowane lub zgłosi wyjątek, zwrócone zadanie zostanie wykonane wcześnie, w stanie anulowanym, a wyjątek, jeśli wystąpi, zostanie zgłoszony, jeśli wywoła `get()` lub `wait()` w tym zadaniu.
 
-##  <a name="operator_eq_eq"></a>operator = = — operator
+## <a name="operator_eq_eq"></a>operator = = — operator
 
 Testuje, czy obiekt `concurrent_vector` po lewej stronie operatora jest równy obiektowi `concurrent_vector` po prawej stronie.
 
-```
+```cpp
 template<typename T, class A1, class A2>
 inline bool operator== (
     const concurrent_vector<T, A1>& _A,
@@ -126,7 +126,7 @@ inline bool operator== (
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&*<br/>
 Typ danych elementów przechowywanych w wektorach współbieżnych.
 
 *A1*<br/>
@@ -151,11 +151,11 @@ Dwa współbieżne wektory są równe, jeśli mają taką samą liczbę element�
 
 Ta metoda nie jest bezpieczna pod kątem współbieżności w odniesieniu do innych metod, które mogą zmodyfikować jeden z współbieżnych wektorów `_A` lub `_B`.
 
-##  <a name="operator_neq"></a>operator! = — operator
+## <a name="operator_neq"></a>operator! = — operator
 
 Testuje, czy obiekt `concurrent_vector` po lewej stronie operatora nie jest równy obiektowi `concurrent_vector` po prawej stronie.
 
-```
+```cpp
 template<typename T, class A1, class A2>
 inline bool operator!= (
     const concurrent_vector<T, A1>& _A,
@@ -164,7 +164,7 @@ inline bool operator!= (
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&*<br/>
 Typ danych elementów przechowywanych w wektorach współbieżnych.
 
 *A1*<br/>
@@ -189,11 +189,11 @@ Dwa współbieżne wektory są równe, jeśli mają taką samą liczbę element�
 
 Ta metoda nie jest bezpieczna pod kątem współbieżności w odniesieniu do innych metod, które mogą zmodyfikować jeden z współbieżnych wektorów `_A` lub `_B`.
 
-##  <a name="operator_lt"></a>operator&lt; operatora
+## <a name="operator_lt"></a>operator&lt; operatora
 
 Testuje, czy obiekt `concurrent_vector` po lewej stronie operatora jest mniejszy niż obiekt `concurrent_vector` po prawej stronie.
 
-```
+```cpp
 template<typename T, class A1, class A2>
 inline bool operator<(
     const concurrent_vector<T, A1>& _A,
@@ -202,7 +202,7 @@ inline bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&*<br/>
 Typ danych elementów przechowywanych w wektorach współbieżnych.
 
 *A1*<br/>
@@ -227,11 +227,11 @@ Zachowanie tego operatora jest identyczne z operatorem równoważnym dla klasy `
 
 Ta metoda nie jest bezpieczna pod kątem współbieżności w odniesieniu do innych metod, które mogą zmodyfikować jeden z współbieżnych wektorów `_A` lub `_B`.
 
-##  <a name="operator_lt_eq"></a>operator&lt;= — operator
+## <a name="operator_lt_eq"></a>operator&lt;= — operator
 
 Testuje, czy obiekt `concurrent_vector` po lewej stronie operatora jest mniejszy niż lub równy obiektowi `concurrent_vector` po prawej stronie.
 
-```
+```cpp
 template<typename T, class A1, class A2>
 inline bool operator<= (
     const concurrent_vector<T, A1>& _A,
@@ -240,7 +240,7 @@ inline bool operator<= (
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&*<br/>
 Typ danych elementów przechowywanych w wektorach współbieżnych.
 
 *A1*<br/>
@@ -265,11 +265,11 @@ Zachowanie tego operatora jest identyczne z operatorem równoważnym dla klasy `
 
 Ta metoda nie jest bezpieczna pod kątem współbieżności w odniesieniu do innych metod, które mogą zmodyfikować jeden z współbieżnych wektorów `_A` lub `_B`.
 
-##  <a name="operator_gt"></a>operator&gt; operatora
+## <a name="operator_gt"></a>operator&gt; operatora
 
 Testuje, czy obiekt `concurrent_vector` po lewej stronie operatora jest większy niż obiekt `concurrent_vector` po prawej stronie.
 
-```
+```cpp
 template<typename T, class A1, class A2>
 inline bool operator>(
     const concurrent_vector<T, A1>& _A,
@@ -278,7 +278,7 @@ inline bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&*<br/>
 Typ danych elementów przechowywanych w wektorach współbieżnych.
 
 *A1*<br/>
@@ -303,11 +303,11 @@ Zachowanie tego operatora jest identyczne z operatorem równoważnym dla klasy `
 
 Ta metoda nie jest bezpieczna pod kątem współbieżności w odniesieniu do innych metod, które mogą zmodyfikować jeden z współbieżnych wektorów `_A` lub `_B`.
 
-##  <a name="operator_gt_eq"></a>operator&gt;= — operator
+## <a name="operator_gt_eq"></a>operator&gt;= — operator
 
 Testuje, czy obiekt `concurrent_vector` po lewej stronie operatora jest większy niż lub równy obiektowi `concurrent_vector` po prawej stronie.
 
-```
+```cpp
 template<typename T, class A1, class A2>
 inline bool operator>= (
     const concurrent_vector<T, A1>& _A,
@@ -316,7 +316,7 @@ inline bool operator>= (
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&*<br/>
 Typ danych elementów przechowywanych w wektorach współbieżnych.
 
 *A1*<br/>
@@ -341,6 +341,6 @@ Zachowanie tego operatora jest identyczne z operatorem równoważnym dla klasy `
 
 Ta metoda nie jest bezpieczna pod kątem współbieżności w odniesieniu do innych metod, które mogą zmodyfikować jeden z współbieżnych wektorów `_A` lub `_B`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

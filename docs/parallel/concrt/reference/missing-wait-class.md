@@ -8,34 +8,34 @@ f1_keywords:
 helpviewer_keywords:
 - missing_wait class
 ms.assetid: ff981875-bd43-47e3-806f-b03c9f418b18
-ms.openlocfilehash: 68d24d710eec4fd602e64cc3cbde810db2b1a495
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf81d1ee6c144da210da5b1f37aca7910ae37bc8
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409970"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142390"
 ---
-# <a name="missingwait-class"></a>missing_wait — Klasa
+# <a name="missing_wait-class"></a>missing_wait — Klasa
 
-Ta klasa opisuje wyjątek generowany, gdy istnieją zadania zaplanowane nadal `task_group` lub `structured_task_group` obiektu w czasie tego obiektu wykonuje destruktora. Ten wyjątek nigdy nie zostanie zgłoszony, jeśli zostanie osiągnięty destruktor, ze względu na stosie rozwinięcia jako wynik wyjątku.
+Ta klasa opisuje wyjątek zgłoszony, gdy istnieją zadania, które są nadal zaplanowane do `task_group` lub `structured_task_group` obiektu w czasie wykonywania destruktora obiektu. Ten wyjątek nigdy nie zostanie wygenerowany, jeśli destruktor zostanie osiągnięty z powodu odwinięcia stosu w wyniku wyjątku.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class missing_wait : public std::exception;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[missing_wait](#ctor)|Przeciążone. Konstruuje `missing_wait` obiektu.|
+|[missing_wait](#ctor)|Przeciążone. Konstruuje obiekt `missing_wait`.|
 
 ## <a name="remarks"></a>Uwagi
 
-Nieobecny przepływu wyjątek odpowiedzialność za wywołanie dowolnej `wait` lub `run_and_wait` metody `task_group` lub `structured_task_group` obiektu przed zezwoleniem na ten obiekt do niszczenia. Środowisko wykonawcze zgłasza ten wyjątek w celu wskazania, że pamiętasz wywołać `wait` lub `run_and_wait` metody.
+Nieobecny przepływ wyjątku, użytkownik jest odpowiedzialny za wywoływanie metody `wait` lub `run_and_wait` obiektu `task_group` lub `structured_task_group` przed umożliwieniem temu obiektowi. Środowisko uruchomieniowe zgłasza ten wyjątek jako wskazanie, że nie można wywołać metody `wait` lub `run_and_wait`.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -45,15 +45,15 @@ Nieobecny przepływu wyjątek odpowiedzialność za wywołanie dowolnej `wait` l
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concrt.h
+**Nagłówek:** ConcRT. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="ctor"></a> missing_wait —
+## <a name="ctor"></a>missing_wait
 
-Konstruuje `missing_wait` obiektu.
+Konstruuje obiekt `missing_wait`.
 
-```
+```cpp
 explicit _CRTIMP missing_wait(_In_z_ const char* _Message) throw();
 
 missing_wait() throw();
@@ -62,12 +62,12 @@ missing_wait() throw();
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Opisowy komunikat dotyczący błędu.
+Opisowy komunikat o błędzie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [task_group, klasa](task-group-class.md)<br/>
-[Czekaj](task-group-class.md)<br/>
+[trwa](task-group-class.md)<br/>
 [run_and_wait](task-group-class.md)<br/>
 [structured_task_group, klasa](structured-task-group-class.md)

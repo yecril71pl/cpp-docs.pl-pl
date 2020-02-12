@@ -74,40 +74,40 @@ f1_keywords:
 helpviewer_keywords:
 - amp_short_vectors/Concurrency::graphics::float_3
 ms.assetid: 209df7a5-08d7-48b4-8ba5-77603642cdd8
-ms.openlocfilehash: ff9d9391efaeef5051424675dacf1f14c35b30df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 259d008c9819eed631026fd106c01644bb1179cc
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180313"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126685"
 ---
-# <a name="float3-class"></a>float_3 — Klasa
+# <a name="float_3-class"></a>float_3 — Klasa
 
-Reprezentuje krótki Wektor trzech wartości zmiennoprzecinkowych.
+Reprezentuje krótki wektor trzech zmiennoprzecinkowych.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class float_3;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[float_3 Constructor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.|
+|[Konstruktor float_3](#ctor)|Przeciążone. Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |float_3::get_x||
 |float_3::get_xy||
@@ -115,7 +115,7 @@ class float_3;
 |float_3::get_xz||
 |float_3::get_xzy||
 |float_3::get_y||
-|float_3::get_yx||
+|float_3:: get_yx||
 |float_3::get_yxz||
 |float_3::get_yz||
 |float_3::get_yzx||
@@ -127,17 +127,17 @@ class float_3;
 |float_3::ref_b||
 |float_3::ref_g||
 |float_3::ref_r||
-|float_3::ref_x||
-|float_3::ref_y||
+|float_3:: ref_x||
+|float_3:: ref_y||
 |float_3::ref_z||
-|float_3::set_x||
+|float_3:: set_x||
 |float_3::set_xy||
 |float_3::set_xyz||
 |float_3::set_xz||
 |float_3::set_xzy||
-|float_3::set_y||
-|float_3::set_yx||
-|float_3::set_yxz||
+|float_3:: set_y||
+|float_3:: set_yx||
+|float_3:: set_yxz||
 |float_3::set_yz||
 |float_3::set_yzx||
 |float_3::set_z||
@@ -148,57 +148,57 @@ class float_3;
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|float_3::operator-||
-|float_3::operator--||
-|float_3::operator * =||
-|float_3::operator / =||
-|float_3::operator ++||
-|float_3::operator +=||
-|float_3::operator =||
-|float_3::operator-=||
+|float_3:: operator-||
+|float_3:: operator--||
+|float_3:: operator * =||
+|float_3:: operator/=||
+|float_3:: operator + +||
+|float_3:: operator + =||
+|float_3:: operator =||
+|float_3:: operator-=||
 
-### <a name="public-constants"></a>Publiczne stałe
+### <a name="public-constants"></a>Stałe publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[rozmiar — stała](#float_3__size)||
+|[Stała rozmiaru](#float_3__size)||
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|float_3::b||
+|float_3:: b||
 |float_3::bg||
-|float_3::bgr||
-|float_3::br||
+|float_3:: BGR||
+|float_3:: br||
 |float_3::brg||
-|float_3::g||
-|float_3::GB||
-|float_3::GBR||
-|float_3::GR||
-|float_3::grb||
-|float_3::r||
-|float_3::rb||
+|float_3:: g||
+|float_3:: GB||
+|float_3:: GBR||
+|float_3:: GR||
+|float_3:: GRB||
+|float_3:: r||
+|float_3:: RB||
 |float_3::rbg||
-|float_3::rg||
-|float_3::rgb||
-|float_3::x||
-|float_3::xy||
-|float_3::xyz||
-|float_3::xz||
-|float_3::xzy||
-|float_3::y||
-|float_3::yx||
-|float_3::yxz||
-|float_3::yz||
-|float_3::yzx||
-|float_3::z||
-|float_3::zx||
-|float_3::zxy||
-|float_3::zy||
-|float_3::zyx||
+|float_3:: RG||
+|float_3:: RGB||
+|float_3:: x||
+|float_3:: XY||
+|float_3:: XYZ||
+|float_3:: XZ||
+|float_3:: xzy||
+|float_3:: y||
+|float_3:: yx||
+|float_3:: YXZ||
+|float_3:: YZ||
+|float_3:: YZX||
+|float_3:: z||
+|float_3:: ZX||
+|float_3:: zxy||
+|float_3:: zy||
+|float_3:: ZYX||
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -206,15 +206,15 @@ class float_3;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** amp_short_vectors.h
+**Nagłówek:** amp_short_vectors. h
 
-**Namespace:** CONCURRENCY::Graphics
+**Przestrzeń nazw:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> float_3
+## <a name="ctor"></a>float_3
 
-Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.
+Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.
 
-```
+```cpp
 float_3() restrict(amp,
     cpu);
 
@@ -256,26 +256,26 @@ explicit inline float_3(
 ### <a name="parameters"></a>Parametry
 
 *_V0*<br/>
-Wartość do zainicjowania elementu 0.
+Wartość, aby zainicjować element 0.
 
 *_V1*<br/>
 Wartość do zainicjowania elementu 1.
 
 *_V2*<br/>
-Wartość można zainicjować element 2.
+Wartość do zainicjowania elementu 2.
 
 *_V*<br/>
-Wartość inicjalizacji.
+Wartość dla inicjalizacji.
 
-*_Inne*<br/>
+*_Other*<br/>
 Obiekt używany do inicjowania.
 
-##  <a name="float_3__size"></a> Rozmiar
+## <a name="float_3__size"></a>zmienia
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

@@ -1,6 +1,7 @@
 ---
-title: vector, klasa
-ms.date: 01/04/2020
+title: vector — Klasa
+description: Dokumentacja dotycząca implementacji C++ standardowej biblioteki firmy Microsoft klasy Vector.
+ms.date: 02/07/2020
 f1_keywords:
 - vector/std::vector::allocator_type
 - vector/std::vector::const_iterator
@@ -86,14 +87,14 @@ helpviewer_keywords:
 - std::vector [C++], size
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
-ms.openlocfilehash: 8c4284fecf09044ceab326d858d6ffccccdeaf45
-ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
+ms.openlocfilehash: ed987409dc99ea9b1dade632a5fa5deeb322347a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75676967"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126230"
 ---
-# <a name="vector-class"></a>vector, klasa
+# <a name="vector-class"></a>vector — Klasa
 
 Klasa C++ wektora standardowej biblioteki to szablon klasy dla kontenerów sekwencji. Wektor przechowuje elementy danego typu w rozmieszczeniu liniowym i umożliwia szybki dostęp losowy do dowolnego elementu. Wektor jest preferowanym kontenerem dla sekwencji, gdy wydajność dostępu swobodnego jest w warstwie Premium.
 
@@ -122,7 +123,7 @@ Ponowna alokacja wektora występuje, gdy funkcja członkowska musi zwiększyć s
 
 [Klasa referencyjna vector\<bool >](../standard-library/vector-bool-class.md#reference_class) jest klasą zagnieżdżoną, której obiekty mogą dostarczać odwołania do elementów (pojedynczych bitów) w wektorowej\<logicznej > obiektu.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="constructors"></a>Konstruktorzy
 
@@ -140,9 +141,9 @@ Ponowna alokacja wektora występuje, gdy funkcja członkowska musi zwiększyć s
 |[const_reference](#const_reference)|Typ, który dostarcza odwołanie do elementu **const** przechowywanego w wektorze. Jest on używany do odczytywania i wykonywania operacji **const** .|
 |[const_reverse_iterator](#const_reverse_iterator)|Typ, który dostarcza Iterator dostępu swobodnego, który może odczytać dowolny element **const** w wektorze.|
 |[difference_type](#difference_type)|Typ, który zawiera różnicę między adresami dwóch elementów w wektorze.|
-|[iterator](#iterator)|Typ, który dostarcza Iterator dostępu swobodnego, który może odczytać lub zmodyfikować dowolny element w wektorze.|
-|[pointer](#pointer)|Typ, który dostarcza wskaźnik do elementu w wektorze.|
-|[Odwołanie](#reference)|Typ, który zawiera odwołanie do elementu przechowywanego w wektorze.|
+|[Iterator](#iterator)|Typ, który dostarcza Iterator dostępu swobodnego, który może odczytać lub zmodyfikować dowolny element w wektorze.|
+|[przytrzymaj](#pointer)|Typ, który dostarcza wskaźnik do elementu w wektorze.|
+|[odwoła](#reference)|Typ, który zawiera odwołanie do elementu przechowywanego w wektorze.|
 |[reverse_iterator](#reverse_iterator)|Typ, który dostarcza Iterator dostępu swobodnego, który może odczytać lub zmodyfikować dowolny element w odwróconym wektorze.|
 |[size_type](#size_type)|Typ, który zlicza liczbę elementów w wektorze.|
 |[value_type](#value_type)|Typ, który reprezentuje typ danych przechowywany w wektorze.|
@@ -152,19 +153,19 @@ Ponowna alokacja wektora występuje, gdy funkcja członkowska musi zwiększyć s
 |||
 |-|-|
 |[ponownie](#assign)|Wymazuje wektor i kopiuje określone elementy do pustego wektora.|
-|[at](#at)|Zwraca odwołanie do elementu w określonej lokalizacji wektora.|
-|[back](#back)|Zwraca odwołanie do ostatniego elementu wektora.|
-|[begin](#begin)|Zwraca iterator dostępu swobodnego do pierwszego elementu w wektorze.|
+|[w](#at)|Zwraca odwołanie do elementu w określonej lokalizacji wektora.|
+|[Wstecz](#back)|Zwraca odwołanie do ostatniego elementu wektora.|
+|[zaczną](#begin)|Zwraca iterator dostępu swobodnego do pierwszego elementu w wektorze.|
 |[pojemności](#capacity)|Zwraca liczbę elementów, które może zawierać wektor bez przydziału większej ilości miejsca w magazynie.|
 |[cbegin](#cbegin)|Zwraca iterator const dostępu swobodnego do pierwszego elementu w wektorze.|
 |[cend](#cend)|Zwraca iterator const dostępu swobodnego, który wskazuje tuż poza końcem wektora.|
-|[crbegin](#crbegin)|Zwraca iterator const do pierwszego elementu w odwróconym wektorze.|
+|[crbegin —](#crbegin)|Zwraca iterator const do pierwszego elementu w odwróconym wektorze.|
 |[crend](#crend)|Zwraca iterator const do końca odwróconego wektora.|
 |[Wyczyść](#clear)|Wymazuje elementy wektora.|
-|[data](#data)|Zwraca wskaźnik do pierwszego elementu w wektorze.|
+|[Data](#data)|Zwraca wskaźnik do pierwszego elementu w wektorze.|
 |[emplace](#emplace)|Wstawia element skonstruowany w miejscu do wektora w określonym położeniu.|
 |[emplace_back](#emplace_back)|Dodaje element skonstruowany w miejscu do końca wektora.|
-|[empty](#empty)|Testuje, czy kontener wektora jest pusty.|
+|[ciągiem](#empty)|Testuje, czy kontener wektora jest pusty.|
 |[punktów](#end)|Zwraca iterator dostępu swobodnego, który wskazuje na koniec wektora.|
 |[Wyłączanie](#erase)|Usuwa element lub zakres elementów w wektorze z określonych pozycji.|
 |[FSB](#front)|Zwraca odwołanie do pierwszego elementu w wektorze.|
@@ -175,18 +176,18 @@ Ponowna alokacja wektora występuje, gdy funkcja członkowska musi zwiększyć s
 |[push_back](#push_back)|Dodaj element na końcu wektora.|
 |[rbegin](#rbegin)|Zwraca iterator do pierwszego elementu w odwróconym wektorze.|
 |[rend](#rend)|Zwraca iterator do końca odwróconego wektora.|
-|[reserve](#reserve)|Rezerwuje minimalną długość magazynu dla obiektu Vector.|
+|[zarezerwować](#reserve)|Rezerwuje minimalną długość magazynu dla obiektu Vector.|
 |[Zmień rozmiar](#resize)|Określa nowy rozmiar wektora.|
 |[shrink_to_fit](#shrink_to_fit)|Odrzuca nadmiarową pojemność.|
 |[zmienia](#size)|Zwraca liczbę elementów w wektorze.|
-|[swap](#swap)|Wymienia elementy dwóch wektorów.|
+|[wymiany](#swap)|Wymienia elementy dwóch wektorów.|
 
 ### <a name="operators"></a>Operatory
 
 |||
 |-|-|
-|[operator&#91;&#93;](#op_at)|Zwraca odwołanie do elementu wektora na określonej pozycji.|
-|[operator=](#op_eq)|Zastępuje elementy wektora kopią innego wektora.|
+|[zakład&#91;&#93;](#op_at)|Zwraca odwołanie do elementu wektora na określonej pozycji.|
+|[operator =](#op_eq)|Zastępuje elementy wektora kopią innego wektora.|
 
 ## <a name="allocator_type"></a>allocator_type
 
@@ -790,7 +791,7 @@ int main()
 {
     using namespace std;
     vector<int> c1;
-    vector<int>::pointer c1 ptr;
+    vector<int>::pointer c1_ptr;
     vector<int>::const_pointer c1_cPtr;
 
     c1.push_back(1);
@@ -805,11 +806,11 @@ int main()
     cout << endl;
 
     cout << "The vector c1 now contains elements:";
-    c1 ptr = c1.data();
-    *c1 ptr = 20;
-    for (size_t n = c1.size(); 0 < n; --n, c1 ptr++)
+    c1_ptr = c1.data();
+    *c1_ptr = 20;
+    for (size_t n = c1.size(); 0 < n; --n, c1_ptr++)
     {
-        cout << " " << *c1 ptr;
+        cout << " " << *c1_ptr;
     }
     cout << endl;
 }
@@ -2233,7 +2234,7 @@ int main()
 v1 = 0 0 0v2 = 2 2 2 2 2v3 = 1 1 1v4 = 2 2 2 2 2v5 = 0 1 2 3 4v6 = 1 2v7 = 2 2 2 2 21 2 3 4
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)

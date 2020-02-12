@@ -3,69 +3,69 @@ title: Dodawanie zdarzenia (ALT — Samouczek, część 5)
 ms.custom: get-started-article
 ms.date: 09/27/2018
 ms.assetid: 2de12022-3148-4ce3-8606-8a9d4274f0e9
-ms.openlocfilehash: 57fc2adaadcca52cfc25736b5f9010fcb65a2ff0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9a7c6f38a2f47ec808081e440a200737ad1928a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252566"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127577"
 ---
 # <a name="adding-an-event-atl-tutorial-part-5"></a>Dodawanie zdarzenia (ALT — Samouczek, część 5)
 
-W tym kroku dodasz `ClickIn` i `ClickOut` zdarzeń do formantu biblioteki ATL. Zostanie uruchomiony `ClickIn` zdarzeń, jeśli użytkownik kliknie w ramach wielokąta i fire `ClickOut` Jeśli użytkownik kliknie poza. Dostępne są następujące zadania, aby dodać zdarzenie:
+W tym kroku dodasz `ClickIn` i zdarzenie `ClickOut` do formantu ATL. Jeśli użytkownik kliknie na zewnątrz i `ClickOut`, zostanie wyzwolone zdarzenie `ClickIn`. Zadania umożliwiające dodanie zdarzenia są następujące:
 
-- Dodawanie `ClickIn` i `ClickOut` metody
+- Dodawanie `ClickIn` i `ClickOut` metod
 
 - Generowanie biblioteki typów
 
-- Implementacja interfejsów punktu połączenia
+- Implementowanie interfejsów punktu połączenia
 
-## <a name="adding-the-clickin-and-clickout-methods"></a>Dodawanie metody clickin — i ClickOut
+## <a name="adding-the-clickin-and-clickout-methods"></a>Dodawanie metod klikania i ClickOut
 
-Gdy kontrolka ATL jest utworzony w kroku 2, wybrania **punkty połączenia** pole wyboru. Spowodowało to `_IPolyCtlEvents` interfejsu w pliku Polygon.idl. Pamiętaj, że nazwa interfejsu, który rozpoczyna się od znaku podkreślenia. Jest to Konwencji, aby wskazać, że interfejs jest wewnętrzny. W związku z tym wybrać programy, które umożliwiają przeglądanie obiektów COM nie wyświetlić interfejs użytkownika. Należy również zauważyć, że wybranie **punkty połączenia** dodano następujący wiersz w pliku Polygon.idl, aby wskazać, że `_IPolyCtlEvents` jest domyślnym interfejsie źródła:
+Po utworzeniu kontrolki ATL w kroku 2, należy zaznaczyć pole wyboru **punkty połączenia** . W pliku wielokąt. idl został utworzony interfejs `_IPolyCtlEvents`. Należy pamiętać, że nazwa interfejsu zaczyna się od znaku podkreślenia. Jest to Konwencja wskazująca, że interfejs jest interfejsem wewnętrznym. W ten sposób programy, które umożliwiają przeglądanie obiektów COM, mogą nie wyświetlać interfejsu użytkownika. Należy również zauważyć, że wybranie **punktów połączenia** dodaliśmy następujący wiersz w pliku wielokąt. idl, aby wskazać, że `_IPolyCtlEvents` jest domyślnym interfejsem źródłowym:
 
 `[default, source] dispinterface _IPolyCtlEvents;`
 
-Atrybut źródłowy wskazuje, czy kontrolka jest źródło powiadomienia, dzięki czemu będzie on wywołać ten interfejs w kontenerze.
+Atrybut source wskazuje, że formant jest źródłem powiadomień, więc wywoła ten interfejs w kontenerze.
 
-Teraz Dodaj `ClickIn` i `ClickOut` metody `_IPolyCtlEvents` interfejsu.
+Teraz Dodaj `ClickIn` i `ClickOut` metody do interfejsu `_IPolyCtlEvents`.
 
-### <a name="to-add-the-clickin-and-clickout-methods"></a>Aby dodać metody clickin — i ClickOut
+### <a name="to-add-the-clickin-and-clickout-methods"></a>Aby dodać metody klikania i ClickOut
 
-1. W **Eksploratora rozwiązań**, otwórz Polygon.idl i Dodaj następujący kod w obszarze `methods:` w `dispInterface_IPolyCtlEvents` deklaracji biblioteki PolygonLib:
+1. W **Eksplorator rozwiązań**Otwórz wielokąt. idl i Dodaj następujący kod w obszarze `methods:` w deklaracji `dispInterface_IPolyCtlEvents` biblioteki PolygonLib:
 
     ```cpp
    [id(1), helpstring("method ClickIn")] void ClickIn([in] LONG x,[in] LONG y);
    [id(2), helpstring("method ClickOut")] void ClickOut([in] LONG x,[in] LONG y);
     ```
 
-`ClickIn` i `ClickOut` metody podjęcie x i współrzędne y punktu kliknięto jako parametry.
+Metody `ClickIn` i `ClickOut` przyjmują współrzędne x i y klikniętego punktu jako parametry.
 
 ## <a name="generating-the-type-library"></a>Generowanie biblioteki typów
 
-Generuj bibliotekę typów w tym momencie, ponieważ projekt będzie używać go do uzyskania informacji wymaganych do utworzenia punktu połączenia i interfejsem kontenera punktu połączenia dla kontrolki.
+Wygeneruj bibliotekę typów w tym momencie, ponieważ projekt będzie używać jej do uzyskiwania informacji potrzebnych do konstruowania interfejsu punktu połączenia i interfejsu kontenera punktu połączenia dla kontrolki.
 
 ### <a name="to-generate-the-type-library"></a>Aby wygenerować bibliotekę typów
 
 1. Ponownie skompiluj projekt.
 
-     —lub—
+     — lub —
 
-1. Kliknij prawym przyciskiem myszy plik Polygon.idl **Eksploratora rozwiązań** i kliknij przycisk **skompilować** w menu skrótów.
+1. Kliknij prawym przyciskiem myszy plik wielokąta. idl w **Eksplorator rozwiązań** i kliknij polecenie **Kompiluj** w menu skrótów.
 
-Spowoduje to utworzenie pliku Polygon.tlb, czyli bibliotece typu. Plik Polygon.tlb nie jest on widoczny **Eksploratora rozwiązań**, ponieważ ona jest plikiem binarnym i nie można wyświetlić lub edytować bezpośrednio.
+Spowoduje to utworzenie wielokąta pliku TLB, który jest biblioteką typów. Plik wielokąt. tlb nie jest widoczny w **Eksplorator rozwiązań**, ponieważ jest plikiem binarnym i nie można go wyświetlać ani edytować bezpośrednio.
 
-## <a name="implementing-the-connection-point-interfaces"></a>Implementacja interfejsów punktu połączenia
+## <a name="implementing-the-connection-point-interfaces"></a>Implementowanie interfejsów punktu połączenia
 
-Implementowanie interfejsu punktu połączenia oraz interfejs kontenera punktu połączenia dla kontrolki. W modelu COM zdarzenia są implementowane za pośrednictwem mechanizmu punkty połączenia. Aby odbierać zdarzenia z obiektem COM, kontener, ustanawia połączenie porad dotyczących punktu połączenia, który implementuje obiekt COM. Ponieważ obiekt COM może mieć wiele punktów połączenia, obiekt COM implementuje również interfejs kontenera punktu połączenia. Za pomocą tego interfejsu kontenera można określić punktów połączenia, które są obsługiwane.
+Implementowanie interfejsu punktu połączenia i interfejsu kontenera punktu połączenia dla kontrolki. W modelu COM zdarzenia są implementowane za pomocą mechanizmu punktów połączenia. Aby odbierać zdarzenia z obiektu COM, kontener ustanawia doradcę połączenie z punktem połączenia, który implementuje obiekt COM. Ponieważ obiekt COM może mieć wiele punktów połączenia, obiekt COM również implementuje interfejs kontenera punktu połączenia. Za pomocą tego interfejsu kontener może określić, które punkty połączenia są obsługiwane.
 
-Interfejs, który implementuje punkt połączenia jest nazywany `IConnectionPoint`, i wywoływany jest interfejs, który implementuje kontener punktu połączenia `IConnectionPointContainer`.
+Interfejs implementujący punkt połączenia nosi nazwę `IConnectionPoint`, a interfejs implementujący kontener punktu połączenia jest nazywany `IConnectionPointContainer`.
 
-Pomagających w realizacji `IConnectionPoint`, użyje Kreator implementacji punktu połączenia. Ten kreator generuje `IConnectionPoint` interfejsu, odczytując biblioteki typu i implementacja funkcji dla każdego zdarzenia, które mogą być uruchamiane.
+Aby pomóc w zaimplementowaniu `IConnectionPoint`, użyj Kreatora implementacji punktu połączenia. Ten Kreator generuje interfejs `IConnectionPoint`, odczytując bibliotekę typów i implementując funkcję dla każdego zdarzenia, które może zostać wyzwolone.
 
 ### <a name="to-implement-the-connection-points"></a>Aby zaimplementować punkty połączenia
 
-1. W **Eksploratora rozwiązań**, otwórz _IPolyCtlEvents_CP.h i Dodaj następujący kod w obszarze `public:` instrukcji w `CProxy_IPolyCtlEvents` klasy:
+1. W **Eksplorator rozwiązań**Otwórz _IPolyCtlEvents_CP. h i Dodaj następujący kod do instrukcji `public:` w klasie `CProxy_IPolyCtlEvents`:
 
     ```cpp
     VOID Fire_ClickIn(LONG x, LONG y)
@@ -122,40 +122,40 @@ Pomagających w realizacji `IConnectionPoint`, użyje Kreator implementacji punk
     }
     ```
 
-Zobaczysz, że ten plik zawiera klasę o nazwie `CProxy_IPolyCtlEvents` który pochodzi od klasy `IConnectionPointImpl`. _IPolyCtlEvents_CP.h teraz definiuje dwie metody `Fire_ClickIn` i `Fire_ClickOut`, które przyjmują dwa parametry współrzędnych. Możesz wywołać te metody, jeśli chcesz wyzwolić zdarzenie z usługi kontroli.
+Zobaczysz, że ten plik ma klasę o nazwie `CProxy_IPolyCtlEvents`, która pochodzi z `IConnectionPointImpl`. _IPolyCtlEvents_CP. h definiuje teraz dwie metody `Fire_ClickIn` i `Fire_ClickOut`, które przyjmują dwa parametry współrzędnych. Te metody są wywoływane, gdy chcesz uruchomić zdarzenie z formantu.
 
-Tworząc kontrolki z **punkty połączenia** opcja jest zaznaczona, plik _IPolyCtlEvents_CP.h został wygenerowany dla Ciebie. Dodano również `CProxy_PolyEvents` i `IConnectionPointContainerImpl` do kontroli nad wieloma listy dziedziczenia i ujawnione `IConnectionPointContainer` dla Ciebie, dodając odpowiednie wpisy do mapy COM.
+Po wybraniu opcji sterowanie z opcjami **punkty połączenia** zostanie wygenerowany plik _IPolyCtlEvents_CP. h. Dodano również `CProxy_PolyEvents` i `IConnectionPointContainerImpl` do listy dziedziczenia dla wielu kontrolek i `IConnectionPointContainer` uwidocznione przez dodanie odpowiednich wpisów do mapy COM.
 
-Po zakończeniu wdrażania kodu do obsługi zdarzeń. Teraz Dodaj kod wyzwolenie zdarzenia w odpowiedniej chwili. Należy pamiętać, że zamierzasz uruchomić `ClickIn` lub `ClickOut` zdarzenie, kiedy użytkownik kliknie przycisk myszy po lewej stronie w formancie. Aby dowiedzieć się, gdy użytkownik kliknie przycisk, Dodaj program obsługi `WM_LBUTTONDOWN` wiadomości.
+Zakończono implementowanie kodu w celu obsługi zdarzeń. Teraz możesz dodać jakiś kod, aby wyzwolić zdarzenia w odpowiednim momencie. Pamiętaj, że po kliknięciu lewym przyciskiem myszy w kontrolce zostanie wyzwolone zdarzenie `ClickIn` lub `ClickOut`. Aby dowiedzieć się, kiedy użytkownik kliknie przycisk, Dodaj procedurę obsługi dla komunikatu `WM_LBUTTONDOWN`.
 
-### <a name="to-add-a-handler-for-the-wmlbuttondown-message"></a>Aby dodać program obsługi komunikatów WM_LBUTTONDOWN
+### <a name="to-add-a-handler-for-the-wm_lbuttondown-message"></a>Aby dodać procedurę obsługi dla komunikatu WM_LBUTTONDOWN
 
-1. W **Widok klas**, kliknij prawym przyciskiem myszy `CPolyCtl` klasy, a następnie kliknij przycisk **właściwości** w menu skrótów.
+1. W **Widok klasy**kliknij prawym przyciskiem myszy klasę `CPolyCtl` i kliknij polecenie **Właściwości** w menu skrótów.
 
-1. W **właściwości** okna, kliknij przycisk **wiadomości** ikonę, a następnie kliknij przycisk `WM_LBUTTONDOWN` z listy po lewej stronie.
+1. W oknie **Właściwości** kliknij ikonę **komunikaty** , a następnie kliknij pozycję `WM_LBUTTONDOWN` z listy po lewej stronie.
 
-1. Z listy rozwijanej, która zostanie wyświetlona, kliknij przycisk  **\<Dodaj > onlbuttondown —**. `OnLButtonDown` Deklaracja procedury obsługi, które zostaną dodane do PolyCtl.h i implementację obsługi zostanie dodany do PolyCtl.cpp.
+1. Z wyświetlonej listy rozwijanej kliknij pozycję **\<dodaj > OnLButtonDown**. Deklaracja obsługi `OnLButtonDown` zostanie dodana do PolyCtl. h, a implementacja programu obsługi zostanie dodana do PolyCtl. cpp.
 
-Następnie zmodyfikuj program obsługi.
+Następnie zmodyfikuj procedurę obsługi.
 
-### <a name="to-modify-the-onlbuttondown-method"></a>Aby zmodyfikować onlbuttondown — metoda
+### <a name="to-modify-the-onlbuttondown-method"></a>Aby zmodyfikować metodę OnLButtonDown
 
-1. Zmień kod, który składa się z `OnLButtonDown` metody w PolyCtl.cpp (usuwanie każdy kod umieszczony przez kreatora), aby wygląda następująco:
+1. Zmień kod, który obejmuje metodę `OnLButtonDown` w PolyCtl. cpp (usunięcie dowolnego kodu umieszczonego przez kreatora) w taki sposób, aby wyglądał następująco:
 
     [!code-cpp[NVC_ATL_Windowing#57](../atl/codesnippet/cpp/adding-an-event-atl-tutorial-part-5_2.cpp)]
 
-To sprawia, że kod użycie punktów obliczane w `OnDraw` funkcji, aby utworzyć obszar, który wykrywa kliknięcia myszą przez użytkownika z wywołaniem `PtInRegion`.
+Ten kod wykorzystuje punkty obliczone w funkcji `OnDraw`, aby utworzyć region, który wykrywa kliknięcia myszą przez użytkownika z wywołaniem do `PtInRegion`.
 
-*UMsg* parametr jest identyfikator komunikatu Windows jest obsługiwany. Dzięki temu można mieć jedną funkcję, która obsługuje szeroką gamę wiadomości. *WParam* i *lParam* są standardowe wartości dla komunikatu przetwarzanego przez parametry. Parametr *bHandled* pozwala określić, czy funkcja obsługi wiadomości. Domyślnie wartość jest równa TRUE wskazują, że funkcja obsługi wiadomości, ale zostanie ustawiona na wartość FALSE. Spowoduje to ATL kontynuować wyszukiwanie innej funkcji obsługi wiadomości, można wysłać wiadomości do.
+Parametr *uMsg* jest identyfikatorem obsługiwanego komunikatu systemu Windows. Dzięki temu można mieć jedną funkcję, która obsługuje zakres komunikatów. Parametry *wParam* i *lParam* są standardowymi wartościami komunikatów, które są obsługiwane. Parametr *bHandled* pozwala określić, czy funkcja obsłuży komunikat, czy nie. Domyślnie wartość jest równa TRUE, aby wskazać, że funkcja obsłuży komunikat, ale można ją ustawić na wartość FALSE. Spowoduje to, że ATL będzie kontynuował wyszukiwanie kolejnej funkcji obsługi komunikatów do wysłania wiadomości.
 
-## <a name="building-and-testing-the-control"></a>Tworzenie i testowanie formantu
+## <a name="building-and-testing-the-control"></a>Kompilowanie i testowanie kontrolki
 
-Wypróbuj teraz zdarzeń. Kompiluj wersję i ponownie uruchomić kontener testu kontrolki ActiveX. Tym razem wyświetlić okno Dziennik zdarzeń. Aby kierowanie zdarzeń w oknie danych wyjściowych, kliknij przycisk **rejestrowania** z **opcje** menu, a następnie wybierz **dziennika w oknie danych wyjściowych**. Wstaw kontrolkę i spróbuj kliknąć w oknie. Należy pamiętać, że `ClickIn` jest wywoływane po kliknięciu w ramach wypełniony wielokąt i `ClickOut` uruchamiane, gdy klikniesz poza nią.
+Wypróbuj teraz Twoje zdarzenia. Skompiluj formant i ponownie uruchom kontener testów kontrolki ActiveX. Tym razem Wyświetl okno Dziennik zdarzeń. Aby skierować zdarzenia do okna danych wyjściowych, kliknij pozycję **Rejestrowanie** w menu **Opcje** i wybierz polecenie **Rejestruj do okna danych wyjściowych**. Wstaw kontrolkę i spróbuj kliknąć w oknie. Należy pamiętać, że `ClickIn` jest uruchamiany po kliknięciu w obrębie wypełnionego wielokąta, a `ClickOut` jest uruchamiany po kliknięciu poza nim.
 
-Następnie można dodać strony właściwości.
+Następnie dodasz stronę właściwości.
 
-[Wróć do kroku 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md) &#124; [do kroku 6](../atl/adding-a-property-page-atl-tutorial-part-6.md)
+[Wróć do kroku 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md) &#124; [w kroku 6](../atl/adding-a-property-page-atl-tutorial-part-6.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Samouczek](../atl/active-template-library-atl-tutorial.md)

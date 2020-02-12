@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-ms.openlocfilehash: 0793c1cecf07ddab8de93e9e5a2bc3af3513be97
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: cfdde6aea42ff96957c18ef73f62a4e4f49292ff
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504858"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127447"
 ---
 # <a name="cmfctoolbarbutton-class"></a>Klasa CMFCToolBarButton
 
@@ -177,25 +177,25 @@ Oferuje funkcje przycisków dla pasków narzędzi.
 class CMFCToolBarButton : public CObject
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[CMFCToolBarButton::CMFCToolBarButton](#cmfctoolbarbutton)|Konstruuje i inicjuje `CMFCToolBarButton` obiekt.|
+|[CMFCToolBarButton::CMFCToolBarButton](#cmfctoolbarbutton)|Tworzy i inicjuje obiekt `CMFCToolBarButton`.|
 |`CMFCToolBarButton::~CMFCToolBarButton`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[CMFCToolBarButton::CanBeDropped](#canbedropped)|Określa, czy użytkownik może umieścić przycisk na pasku narzędzi lub w menu podczas dostosowywania.|
 |[CMFCToolBarButton::CanBeStored](#canbestored)|Określa, czy przycisk może być przechowywany.|
 |[CMFCToolBarButton::CanBeStretched](#canbestretched)|Określa, czy użytkownik może rozciągnąć przycisk podczas dostosowywania.|
-|[CMFCToolBarButton:: CompareWith —](#comparewith)|Porównuje to wystąpienie z podanym `CMFCToolBarButton` obiektem.|
+|[CMFCToolBarButton:: CompareWith —](#comparewith)|Porównuje to wystąpienie z podanym obiektem `CMFCToolBarButton`.|
 |[CMFCToolBarButton::CopyFrom](#copyfrom)|Kopiuje właściwości innego przycisku paska narzędzi do bieżącego przycisku.|
-|[CMFCToolBarButton::CreateFromOleData](#createfromoledata)|Tworzy obiekt z podanego `COleDataObject`obiektu. `CMFCToolBarButton`|
+|[CMFCToolBarButton::CreateFromOleData](#createfromoledata)|Tworzy obiekt `CMFCToolBarButton` na podstawie podanego obiektu `COleDataObject`.|
 |`CMFCToolBarButton::CreateObject`|Używane przez platformę do tworzenia wystąpienia dynamicznego tego typu klasy.|
 |[CMFCToolBarButton::EnableWindow](#enablewindow)|Włącza lub wyłącza dane wejściowe myszy i klawiatury.|
 |[CMFCToolBarButton::ExportToMenuButton](#exporttomenubutton)|Kopiuje tekst z przycisku paska narzędzi do menu.|
@@ -226,7 +226,7 @@ class CMFCToolBarButton : public CObject
 |[CMFCToolBarButton::OnBeforeDrag](#onbeforedrag)|Określa, czy przycisk może być przeciągany.|
 |[CMFCToolBarButton::OnBeforeDrop](#onbeforedrop)|Określa, czy użytkownik może porzucić przycisk na docelowym pasku narzędzi.|
 |[CMFCToolBarButton::OnCalculateSize](#oncalculatesize)|Wywoływane przez platformę, by obliczyć rozmiar przycisku dla określonego kontekstu urządzenia i stanu dokowania.|
-|[CMFCToolBarButton:: oncancelmode](#oncancelmode)|Wywoływane przez platformę, aby obsłużyć komunikat [WM_CANCELMODE](/windows/win32/winmsg/wm-cancelmode) .|
+|[CMFCToolBarButton:: oncancelmode](#oncancelmode)|Wywoływane przez platformę, aby obsłużyć [WM_CANCELMODE](/windows/win32/winmsg/wm-cancelmode) komunikat.|
 |[CMFCToolBarButton::OnChangeParentWnd](#onchangeparentwnd)|Wywoływane przez platformę, gdy przycisk zostanie wstawiony do nowego paska narzędzi.|
 |[CMFCToolBarButton:: onkliknięcia](#onclick)|Wywoływane przez platformę, gdy użytkownik kliknie przycisk myszy.|
 |[CMFCToolBarButton::OnClickUp](#onclickup)|Wywoływane przez platformę, gdy użytkownik zwolni przycisk myszy.|
@@ -248,7 +248,7 @@ class CMFCToolBarButton : public CObject
 |[CMFCToolBarButton::ResetImageToDefault](#resetimagetodefault)|Ustawia wartość domyślną obrazu, który jest skojarzony z przyciskiem.|
 |[CMFCToolBarButton::SaveBarState](#savebarstate)|Zapisuje stan przycisku paska narzędzi.|
 |[CMFCToolBarButton:: serializować](#serialize)|Odczytuje ten obiekt z archiwum lub zapisuje je w archiwum. (Przesłania [CObject:: serializować](../../mfc/reference/cobject-class.md#serialize)).|
-|[CMFCToolBarButton::SetACCData](#setaccdata)|Wypełnia udostępniony `CAccessibilityData` obiekt z danymi dostępności za pomocą przycisku paska narzędzi.|
+|[CMFCToolBarButton::SetACCData](#setaccdata)|Wypełnia podany `CAccessibilityData` obiekt z danymi dostępności z poziomu przycisku paska narzędzi.|
 |[CMFCToolBarButton::SetClipboardFormatName](#setclipboardformatname)|Zmienia nazwę formatu Schowka globalnego.|
 |[CMFCToolBarButton:: SetImage](#setimage)|Ustawia indeks obrazu przycisku.|
 |[CMFCToolBarButton::SetProtectedCommands](#setprotectedcommands)|Ustawia listę poleceń, których użytkownik nie może dostosować.|
@@ -260,34 +260,34 @@ class CMFCToolBarButton : public CObject
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[CMFCToolBarButton::m_bImage](#m_bimage)|Określa, czy obraz jest wyświetlany na przycisku.|
-|[CMFCToolBarButton::m_bText](#m_btext)|Określa, czy na przycisku ma być wyświetlana etykieta tekstu.|
-|[CMFCToolBarButton::m_bTextBelow](#m_btextbelow)|Określa, czy etykieta tekstowa jest wyświetlana pod obrazem przycisku.|
-|[CMFCToolBarButton::m_bUserButton](#m_buserbutton)|Określa, czy przycisk ma obraz zdefiniowany przez użytkownika.|
-|[CMFCToolBarButton::m_bWholeText](#m_bwholetext)|Określa, czy przycisk wyświetla pełną etykietę tekstową, nawet jeśli nie mieści się w prostokącie obwiedni.|
-|[CMFCToolBarButton::m_bWrap](#m_bwrap)|Określa, czy przycisk obok separatora zostanie umieszczony w następnym wierszu.|
-|[CMFCToolBarButton::m_bWrapText](#m_bwraptext)|Określa, czy są włączone etykiety tekstu wielowierszowego.|
-|[CMFCToolBarButton::m_nID](#m_nid)|Identyfikator polecenia przycisku.|
-|[CMFCToolBarButton::m_nStyle](#m_nstyle)|Styl przycisku.|
-|[CMFCToolBarButton::m_strText](#m_strtext)|Etykieta tekstowa przycisku.|
+|[CMFCToolBarButton:: m_bImage](#m_bimage)|Określa, czy obraz jest wyświetlany na przycisku.|
+|[CMFCToolBarButton:: m_bText](#m_btext)|Określa, czy na przycisku ma być wyświetlana etykieta tekstu.|
+|[CMFCToolBarButton:: m_bTextBelow](#m_btextbelow)|Określa, czy etykieta tekstowa jest wyświetlana pod obrazem przycisku.|
+|[CMFCToolBarButton:: m_bUserButton](#m_buserbutton)|Określa, czy przycisk ma obraz zdefiniowany przez użytkownika.|
+|[CMFCToolBarButton:: m_bWholeText](#m_bwholetext)|Określa, czy przycisk wyświetla pełną etykietę tekstową, nawet jeśli nie mieści się w prostokącie obwiedni.|
+|[CMFCToolBarButton:: m_bWrap](#m_bwrap)|Określa, czy przycisk obok separatora zostanie umieszczony w następnym wierszu.|
+|[CMFCToolBarButton:: m_bWrapText](#m_bwraptext)|Określa, czy są włączone etykiety tekstu wielowierszowego.|
+|[CMFCToolBarButton:: m_nID](#m_nid)|Identyfikator polecenia przycisku.|
+|[CMFCToolBarButton:: m_nStyle](#m_nstyle)|Styl przycisku.|
+|[CMFCToolBarButton:: m_strText](#m_strtext)|Etykieta tekstowa przycisku.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CMFCToolbarButton` Obiekt jest formantem, który znajduje się na pasku narzędzi. Zachowanie jest podobne do zwykłego przycisku. Do tego obiektu można przypisać obraz i etykietę tekstową. Przycisk paska narzędzi może również mieć identyfikator polecenia. Gdy użytkownik kliknie przycisk paska narzędzi, struktura wykonuje polecenie, które określa ten identyfikator.
+Obiekt `CMFCToolbarButton` jest formantem, który znajduje się na pasku narzędzi. Zachowanie jest podobne do zwykłego przycisku. Do tego obiektu można przypisać obraz i etykietę tekstową. Przycisk paska narzędzi może również mieć identyfikator polecenia. Gdy użytkownik kliknie przycisk paska narzędzi, struktura wykonuje polecenie, które określa ten identyfikator.
 
-Zazwyczaj można dostosować przyciski paska narzędzi: użytkownik może przeciągać przyciski z jednego paska narzędzi do innego, a następnie kopiować, wklejać, usuwać i edytować etykiety tekstowe i obrazy. Aby uniemożliwić użytkownikowi Dostosowywanie paska narzędzi, można zablokować pasek narzędzi na jeden z dwóch sposobów. Ustaw `bLocked` flagę na wartość true w przypadku wywołania [CMFCToolBar:: LoadToolBar](../../mfc/reference/cmfctoolbar-class.md#loadtoolbar)lub Dodaj identyfikator polecenia pojedynczego przycisku do globalnej listy chronionych poleceń przy użyciu metody [CMFCToolBarButton:: SetProtectedCommands](#setprotectedcommands) .
+Zazwyczaj można dostosować przyciski paska narzędzi: użytkownik może przeciągać przyciski z jednego paska narzędzi do innego, a następnie kopiować, wklejać, usuwać i edytować etykiety tekstowe i obrazy. Aby uniemożliwić użytkownikowi Dostosowywanie paska narzędzi, można zablokować pasek narzędzi na jeden z dwóch sposobów. Ustaw flagę `bLocked` na TRUE w przypadku wywołania [CMFCToolBar:: LoadToolBar](../../mfc/reference/cmfctoolbar-class.md#loadtoolbar)lub Dodaj identyfikator polecenia pojedynczego przycisku do globalnej listy chronionych poleceń przy użyciu metody [CMFCToolBarButton:: SetProtectedCommands](#setprotectedcommands) .
 
-`CMFCToolBarButton`obiekty wyświetlają obrazy z kolekcji globalnych obrazów pasków narzędzi w aplikacji. Te kolekcje są obsługiwane przez nadrzędny pasek narzędzi, [Klasa CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md). Aby uzyskać więcej informacji, zobacz [Klasa CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md).
+obiekty `CMFCToolBarButton` wyświetlają obrazy z kolekcji globalnych obrazów pasków narzędzi w aplikacji. Te kolekcje są obsługiwane przez nadrzędny pasek narzędzi, [Klasa CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md). Aby uzyskać więcej informacji, zobacz [Klasa CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md).
 
 Gdy użytkownik kliknie przycisk paska narzędzi, jego nadrzędny pasek narzędzi przetwarza komunikat myszy i komunikuje odpowiednie działania z przyciskiem. Jeśli przycisk ma prawidłowy identyfikator polecenia, nadrzędny pasek narzędzi wysyła komunikat WM_COMMAND do ramki nadrzędnej.
 
-Klasa jest klasą bazową dla innych klas przycisków paska narzędzi, takich jak [Klasa CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md), [Klasa CMFCToolBarEditBoxButton](../../mfc/reference/cmfctoolbareditboxbutton-class.md)i [Klasa CMFCToolBarComboBoxButton.](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) `CMFCToolBarButton`
+Klasa `CMFCToolBarButton` jest klasą bazową dla innych klas przycisków paska narzędzi, takich jak [Klasa CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md), [Klasa CMFCToolBarEditBoxButton](../../mfc/reference/cmfctoolbareditboxbutton-class.md)i [Klasa CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje sposób konfigurowania `CMFCToolBarButton` obiektu przy użyciu różnych metod `CMFCToolBarButton` w klasie. W przykładzie pokazano, jak włączyć mysz i wprowadzanie klawiatury, ustawić indeks obrazu przycisku, ustawić prostokąt ograniczający przycisku i uczynić przycisk widoczny. Ten fragment kodu jest częścią [przykładu kontrolki karta](../../overview/visual-cpp-samples.md).
+Poniższy przykład ilustruje sposób konfigurowania obiektu `CMFCToolBarButton` przy użyciu różnych metod klasy `CMFCToolBarButton`. W przykładzie pokazano, jak włączyć mysz i wprowadzanie klawiatury, ustawić indeks obrazu przycisku, ustawić prostokąt ograniczający przycisku i uczynić przycisk widoczny. Ten fragment kodu jest częścią [przykładu kontrolki karta](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_TabControl#1](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_TabControl#2](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_2.cpp)]
@@ -315,7 +315,7 @@ virtual BOOL CanBeDropped(CMFCToolBar* pToolbar);
 *pToolbar*<br/>
 podczas Przestrzeń.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ta metoda zwraca wartość TRUE.
 
@@ -333,7 +333,7 @@ Określa, czy przycisk może być przechowywany.
 virtual BOOL CanBeStored() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ta metoda zwraca wartość TRUE.
 
@@ -341,7 +341,7 @@ Ta metoda zwraca wartość TRUE.
 
 Struktura używa tej metody do określenia, czy przycisk może uczestniczyć w operacji przeciągania i upuszczania.
 
-Domyślna implementacja zwraca wartość TRUE. Zastąp tę metodę, jeśli przycisk nie może być przechowywany jako część operacji przeciągania i upuszczania. Aby uzyskać więcej informacji na temat operacji przeciągania i upuszczania, zobacz [Przeciąganie i upuszczanie (OLE)](../../mfc/drag-and-drop-ole.md).
+Domyślna implementacja zwraca wartość TRUE. Zastąp tę metodę, jeśli przycisk nie może być przechowywany jako część operacji przeciągania i upuszczania. Aby uzyskać więcej informacji na temat operacji przeciągania i upuszczania, zobacz [OLE przeciąganie i upuszczanie](../../mfc/drag-and-drop-ole.md).
 
 ##  <a name="canbestretched"></a>CMFCToolBarButton::CanBeStretched
 
@@ -351,7 +351,7 @@ Określa, czy użytkownik może rozciągnąć przycisk podczas dostosowywania.
 virtual BOOL CanBeStretched() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ta metoda zwraca wartość FALSE.
 
@@ -361,11 +361,11 @@ Ta metoda jest używana przez platformę do określenia, czy przycisk może być
 
 Domyślna implementacja tej metody zwraca wartość FALSE. Przesłoń tę metodę, aby zwrócić wartość TRUE dla kontrolki o zmiennej szerokości, takiej jak pole kombi lub suwak.
 
-Aby uzyskać więcej informacji na temat trybu dostosowywania, zobacz [CMFCToolBar::](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode)setdostosowywaniemode.
+Aby uzyskać więcej informacji na temat trybu dostosowywania, zobacz [CMFCToolBar:: Setdostosowywaniemode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode).
 
 ##  <a name="cmfctoolbarbutton"></a>CMFCToolBarButton::CMFCToolBarButton
 
-Konstruuje i inicjuje `CMFCToolBarButton` obiekt.
+Tworzy i inicjuje obiekt `CMFCToolBarButton`.
 
 ```
 CMFCToolBarButton(
@@ -395,7 +395,7 @@ podczas Wartość logiczna określająca, czy przycisk może być dostosowany. J
 
 ##  <a name="comparewith"></a>CMFCToolBarButton:: CompareWith —
 
-Porównuje to wystąpienie z podanym `CMFCToolBarButton` obiektem.
+Porównuje to wystąpienie z podanym obiektem `CMFCToolBarButton`.
 
 ```
 virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
@@ -403,16 +403,16 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 
 ### <a name="parameters"></a>Parametry
 
-*other*<br/>
+*różnych*<br/>
 podczas Odwołanie do obiektu, który ma zostać porównany z tym wystąpieniem.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli podany obiekt jest równy wartości tego wystąpienia; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja określa, czy identyfikator polecenia podanego obiektu jest równy IDENTYFIKATORowi polecenia tego wystąpienia. Zastąp tę metodę, jeśli musisz wykonać dodatkowe przetwarzanie, aby określić `CMFCToolBarButton` , czy dwa obiekty są równe.
+Domyślna implementacja określa, czy identyfikator polecenia podanego obiektu jest równy IDENTYFIKATORowi polecenia tego wystąpienia. Zastąp tę metodę, jeśli musisz wykonać dodatkowe przetwarzanie, aby określić, czy dwa obiekty `CMFCToolBarButton` są równe.
 
 ##  <a name="copyfrom"></a>CMFCToolBarButton::CopyFrom
 
@@ -433,7 +433,7 @@ Wywołaj tę metodę, aby skopiować kolejny przycisk paska narzędzi do tego pr
 
 ##  <a name="createfromoledata"></a>CMFCToolBarButton::CreateFromOleData
 
-Tworzy obiekt z podanego `COleDataObject`obiektu. `CMFCToolBarButton`
+Tworzy obiekt `CMFCToolBarButton` na podstawie podanego obiektu `COleDataObject`.
 
 ```
 static CMFCToolBarButton* __stdcall CreateFromOleData(COleDataObject* pDataObject);
@@ -444,13 +444,13 @@ static CMFCToolBarButton* __stdcall CreateFromOleData(COleDataObject* pDataObjec
 *pDataObject*<br/>
 podczas Źródłowy obiekt danych OLE.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Utworzony `CMFCToolBarButton` obiekt.
+Utworzony obiekt `CMFCToolBarButton`.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest używana przez platformę do wykonywania transferu danych w różnych formatach. Na przykład `CMFCOutlookBarPane::OnDragOver` Metoda używa tej metody do wykonywania operacji przeciągania i upuszczania.
+Ta metoda jest używana przez platformę do wykonywania transferu danych w różnych formatach. Na przykład Metoda `CMFCOutlookBarPane::OnDragOver` używa tej metody do wykonywania operacji przeciągania i upuszczania.
 
 ##  <a name="enablewindow"></a>CMFCToolBarButton::EnableWindow
 
@@ -467,7 +467,7 @@ podczas Ustaw ten parametr na wartość TRUE, aby włączyć dane wejściowe, lu
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wywołuje `EnableWindow` funkcję do włączania lub wyłączania danych wejściowych. Aby uzyskać więcej informacji, zobacz [EnableWindow](/windows/win32/api/winuser/nf-winuser-enablewindow) w Windows SDK.
+Ta metoda wywołuje funkcję `EnableWindow`, aby włączyć lub wyłączyć wprowadzanie danych wejściowych. Aby uzyskać więcej informacji, zobacz [EnableWindow](/windows/win32/api/winuser/nf-winuser-enablewindow) w Windows SDK.
 
 ##  <a name="exporttomenubutton"></a>CMFCToolBarButton::ExportToMenuButton
 
@@ -482,7 +482,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 *menuButton*<br/>
 podczas Odwołanie do przycisku menu docelowego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ta metoda zwraca wartość TRUE.
 
@@ -500,7 +500,7 @@ Pobiera globalny format schowka dla aplikacji.
 static CLIPFORMAT __stdcall GetClipboardFormat();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Globalna wartość CLIPFORMAT dla aplikacji.
 
@@ -522,7 +522,7 @@ Pobiera uchwyt okna skojarzony z przyciskiem paska narzędzi.
 virtual HWND GetHwnd();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt okna, który jest skojarzony z przyciskiem paska narzędzi lub ma wartość NULL, jeśli przycisk paska narzędzi nie ma skojarzonego z nim uchwytu okna.
 
@@ -538,13 +538,13 @@ Pobiera indeks obrazu przycisku.
 int GetImage() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Indeks obrazu skojarzonego z tym przyciskiem.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli przycisk ma obraz zdefiniowany przez użytkownika (oznacza to, że jeśli w konstruktorze *bUserButton* było prawdziwe), zwracany indeks określa obraz w kolekcji obrazów zdefiniowanych przez użytkownika (zobacz [CMFCToolBar:: GetUserImages](../../mfc/reference/cmfctoolbar-class.md#getuserimages)). W przeciwnym razie indeks określa obraz w kolekcji obrazów, które są ładowane z pliku zasobów (zobacz [CMFCToolBar::](../../mfc/reference/cmfctoolbar-class.md#getimages)getimages). Aby uzyskać więcej informacji na temat plików zasobów, zobacz [Praca z plikami zasobów](../../windows/working-with-resource-files.md).
+Jeśli przycisk ma obraz zdefiniowany przez użytkownika (oznacza to, że jeśli w konstruktorze *bUserButton* było prawdziwe), zwracany indeks określa obraz w kolekcji obrazów zdefiniowanych przez użytkownika (zobacz [CMFCToolBar:: GetUserImages](../../mfc/reference/cmfctoolbar-class.md#getuserimages)). W przeciwnym razie indeks określa obraz w kolekcji obrazów, które są ładowane z pliku zasobów (zobacz [CMFCToolBar:: Getimages](../../mfc/reference/cmfctoolbar-class.md#getimages)). Aby uzyskać więcej informacji na temat plików zasobów, zobacz [Praca z plikami zasobów](../../windows/working-with-resource-files.md).
 
 ##  <a name="getinvalidaterect"></a>CMFCToolBarButton::GetInvalidateRect
 
@@ -554,9 +554,9 @@ Pobiera region obszaru klienckiego przycisku, który musi zostać narysowany pon
 virtual const CRect GetInvalidateRect() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-`CRect` Obiekt, który określa region, który musi być rysowany ponownie.
+Obiekt `CRect` określający region, który musi zostać narysowany ponownie.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -570,7 +570,7 @@ Pobiera okno nadrzędne przycisku.
 CWnd* GetParentWnd() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Okno nadrzędne przycisku.
 
@@ -582,7 +582,7 @@ Pobiera listę poleceń, których użytkownik nie może dostosować.
 static const CList<UINT,UINT>& GetProtectedCommands();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Lista chronionych poleceń.
 
@@ -600,7 +600,7 @@ Pobiera rozmiar tekstu przycisku.
 SIZE GetTextSize() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Obiekt rozmiaru, który zawiera rozmiar tekstu przycisku (w pikselach).
 
@@ -612,7 +612,7 @@ Określa, czy przycisk ma bieżący fokus wprowadzania.
 virtual BOOL HasFocus() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli przycisk ma fokus wprowadzania; w przeciwnym razie 0.
 
@@ -628,7 +628,7 @@ Określa, czy obramowanie przycisku ma być wyświetlane, gdy użytkownik wybier
 virtual BOOL HaveHotBorder() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ta metoda zwraca wartość TRUE.
 
@@ -646,13 +646,13 @@ Określa, czy obraz jest wyświetlany na przycisku.
 BOOL IsDrawImage() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli na przycisku zostanie wyświetlony obraz. w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda zwraca wartość FALSE, jeśli przycisk paska narzędzi nie ma skojarzonego obrazu ( [CMFCToolBarButton:: GetImage](#getimage) zwróci wartość-1) lub jeśli [CMFCToolBarButton:: M_BIMAGE](#m_bimage) ma wartość false.
+Ta metoda zwraca wartość FALSE, jeśli przycisk paska narzędzi nie ma skojarzonego obrazu ( [CMFCToolBarButton:: GetImage](#getimage) zwróci wartość-1) lub jeśli [CMFCToolBarButton:: m_bImage](#m_bimage) jest ustawiona na wartość false.
 
 ##  <a name="isdrawtext"></a>CMFCToolBarButton::IsDrawText
 
@@ -662,7 +662,7 @@ Określa, czy na przycisku ma być wyświetlana etykieta tekstu.
 BOOL IsDrawText() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Wartość różna od zera, jeśli jest wyświetlana etykieta tekstowa; w przeciwnym razie 0.
 
@@ -678,7 +678,7 @@ Określa, czy przycisk powoduje wyświetlenie podmenu.
 virtual BOOL IsDroppedDown() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ta metoda zwraca wartość FALSE.
 
@@ -694,7 +694,7 @@ Określa, czy przycisk może być dostosowany.
 virtual BOOL IsEditable() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli przycisk może być dostosowany przez użytkownika; w przeciwnym razie 0.
 
@@ -702,7 +702,7 @@ Niezerowe, jeśli przycisk może być dostosowany przez użytkownika; w przeciwn
 
 Struktura wywołuje tę metodę, aby określić, czy użytkownik może dostosować przycisk paska narzędzi, używając operacji przeciągania i upuszczania lub edycji.
 
-Domyślna implementacja zwraca wartość false, jeśli identyfikator polecenia przycisku jest poleceniem standardowym (można to określić, wywołując `IsStandardCommand` funkcję) lub jeśli identyfikator polecenia znajduje się na liście chronionych poleceń. Aby uzyskać więcej informacji na temat chronionych poleceń, zobacz [CMFCToolBarButton:: GetProtectedCommands](#getprotectedcommands) i [CMFCToolBarButton:: SetProtectedCommands](#setprotectedcommands).
+Domyślna implementacja zwraca wartość FALSE, jeśli identyfikator polecenia przycisku jest poleceniem standardowym (można to określić, wywołując funkcję `IsStandardCommand`) lub jeśli identyfikator polecenia znajduje się na liście chronionych poleceń. Aby uzyskać więcej informacji na temat chronionych poleceń, zobacz [CMFCToolBarButton:: GetProtectedCommands](#getprotectedcommands) i [CMFCToolBarButton:: SetProtectedCommands](#setprotectedcommands).
 
 Zastąp tę metodę, aby dostosować jej zachowanie.
 
@@ -714,7 +714,7 @@ Określa, czy przycisk może być wyświetlany z rozszerzonym obramowaniem.
 virtual BOOL IsExtraSize() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli przycisk paska narzędzi może być wyświetlany z rozszerzoną krawędzią; w przeciwnym razie 0.
 
@@ -732,7 +732,7 @@ Określa, czy przycisk znajduje się w pierwszej pozycji w grupie przycisków.
 virtual BOOL IsFirstInGroup() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli przycisk jest pierwszym przyciskiem w grupie przycisków. w przeciwnym razie FALSE.
 
@@ -750,7 +750,7 @@ Określa, czy przycisk jest ukryty.
 BOOL IsHidden() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli przycisk jest ukryty (niewidoczny); w przeciwnym razie 0.
 
@@ -770,7 +770,7 @@ Określa, czy przycisk znajduje się na poziomie paska narzędzi.
 BOOL IsHorizontal() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli przycisk paska narzędzi znajduje się na poziomie paska narzędzi; w przeciwnym razie 0.
 
@@ -778,7 +778,7 @@ Niezerowe, jeśli przycisk paska narzędzi znajduje się na poziomie paska narz�
 
 Struktura wywołuje tę metodę, aby określić układ przycisków paska narzędzi.
 
-Ta metoda zwraca `m_bHorz` element członkowski danych. Wartość `m_bHorz` domyślna elementu członkowskiego danych jest prawdziwa; jest resetowana dla każdego wywołania metody [CMFCToolBarButton:: OnDraw](#ondraw) .
+Ta metoda zwraca element członkowski danych `m_bHorz`. Wartość domyślna elementu członkowskiego danych `m_bHorz` ma wartość TRUE; jest resetowany dla każdego wywołania metody [CMFCToolBarButton:: OnDraw](#ondraw) .
 
 ##  <a name="islastingroup"></a>CMFCToolBarButton::IsLastInGroup
 
@@ -788,13 +788,13 @@ Określa, czy przycisk znajduje się na ostatniej pozycji w grupie przycisków.
 virtual BOOL IsLastInGroup() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 TRUE, jeśli przycisk jest ostatnim przyciskiem w swojej grupie przycisków; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda definiuje *grupę przycisków* jako sąsiedni zestaw przycisków, które są rozmieszczone w tym samym wierszu i są ograniczone przez separatory lub obramowanie paska narzędzi ta metoda zwraca wartość false, jeśli przycisk paska narzędzi nie ma nadrzędnego paska narzędzi lub przycisk paska narzędzi odwołuje się do przycisk **Dostosuj** . Aby uzyskać więcej informacji na temat przycisku **Dostosuj** , zobacz [CMFCToolBar:: GetCustomizeButton](../../mfc/reference/cmfctoolbar-class.md#getcustomizebutton).
+Ta metoda definiuje *grupę przycisków* jako sąsiedni zestaw przycisków, które są rozmieszczone w tym samym wierszu i są ograniczone przez separatory lub obramowanie paska narzędzi ta metoda zwraca wartość false, jeśli przycisk paska narzędzi nie ma nadrzędnego paska narzędzi lub przycisk paska narzędzi odwołuje się do przycisku **Dostosuj** . Aby uzyskać więcej informacji na temat przycisku **Dostosuj** , zobacz [CMFCToolBar:: GetCustomizeButton](../../mfc/reference/cmfctoolbar-class.md#getcustomizebutton).
 
 Wywołaj metodę [CMFCToolBarButton:: IsFirstInGroup](#isfirstingroup) , aby określić, czy przycisk znajduje się w pierwszej pozycji w grupie przycisków.
 
@@ -806,7 +806,7 @@ Określa, czy przycisk znajduje się na zablokowanym (niedostosowywalnym) pasku 
 BOOL IsLocked() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli przycisk znajduje się na zablokowanym pasku narzędzi; w przeciwnym razie 0.
 
@@ -827,7 +827,7 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 *Właściwość*<br/>
 podczas Uchwyt okna.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli przycisk jest właścicielem podanego uchwytu okna; w przeciwnym razie 0.
 
@@ -843,7 +843,7 @@ Określa, czy przycisk paska narzędzi jest widoczny.
 BOOL IsVisible() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli przycisk paska narzędzi jest widoczny; w przeciwnym razie 0.
 
@@ -859,7 +859,7 @@ Określa, czy uchwyt okna bazowego przycisku jest widoczny.
 virtual BOOL IsWindowVisible();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Różne od zera, jeśli uchwyt okna bazowego przycisku jest widoczny; w przeciwnym razie 0.
 
@@ -867,7 +867,7 @@ Różne od zera, jeśli uchwyt okna bazowego przycisku jest widoczny; w przeciwn
 
 Ta metoda zwraca wartość różną od zera, jeśli atrybut style uchwytu okna bazowego zawiera styl WS_VISIBLE. Ta metoda zwraca wartość FALSE, jeśli podstawowe uchwyt okna przycisku ma wartość NULL.
 
-##  <a name="m_bimage"></a>CMFCToolBarButton::m_bImage
+##  <a name="m_bimage"></a>CMFCToolBarButton:: m_bImage
 
 Określa, czy obraz jest wyświetlany na przycisku.
 
@@ -879,7 +879,7 @@ BOOL m_bImage;
 
 Jeśli ten element członkowski danych ma wartość TRUE, w strukturze zostanie wyświetlony obraz skojarzony z przyciskiem paska narzędzi. w przeciwnym razie Struktura nie wyświetla obrazu. Ten element członkowski ma wpływ na wartość zwracaną przez metodę [CMFCToolBarButton:: m_bImage](#m_bimage) .
 
-##  <a name="m_btext"></a>CMFCToolBarButton::m_bText
+##  <a name="m_btext"></a>CMFCToolBarButton:: m_bText
 
 Określa, czy na przycisku ma być wyświetlana etykieta tekstu.
 
@@ -891,7 +891,7 @@ BOOL m_bText;
 
 Jeśli ten element członkowski danych ma wartość TRUE, w strukturze zostanie wyświetlona etykieta tekst przycisku paska narzędzi. w przeciwnym razie Struktura nie wyświetla etykiety tekstowej. Ten element członkowski ma wpływ na wartość zwracaną przez metodę [CMFCToolBarButton:: m_bText](#m_btext) .
 
-##  <a name="m_btextbelow"></a>CMFCToolBarButton::m_bTextBelow
+##  <a name="m_btextbelow"></a>CMFCToolBarButton:: m_bTextBelow
 
 Określa, czy etykieta tekstowa jest wyświetlana pod obrazem przycisku.
 
@@ -903,7 +903,7 @@ BOOL m_bTextBelow;
 
 Jeśli ta zmienna elementu członkowskiego ma wartość TRUE, w strukturze zostanie wyświetlony tekst przycisku poniżej obrazu. Wartość domyślna tego elementu członkowskiego to FALSE.
 
-##  <a name="m_buserbutton"></a>CMFCToolBarButton::m_bUserButton
+##  <a name="m_buserbutton"></a>CMFCToolBarButton:: m_bUserButton
 
 Określa, czy przycisk ma obraz zdefiniowany przez użytkownika
 
@@ -915,7 +915,7 @@ BOOL m_bUserButton;
 
 Ten element członkowski danych ma ustawioną wartość TRUE, gdy przycisk ma skojarzony z nim obraz zdefiniowany przez użytkownika.
 
-##  <a name="m_bwholetext"></a>CMFCToolBarButton::m_bWholeText
+##  <a name="m_bwholetext"></a>CMFCToolBarButton:: m_bWholeText
 
 Określa, czy przycisk wyświetla pełną etykietę tekstową, nawet jeśli nie mieści się w prostokącie obwiedni.
 
@@ -927,7 +927,7 @@ BOOL m_bWholeText;
 
 Jeśli ten element członkowski danych ma wartość TRUE, w strukturze zostanie wyświetlona pełna etykieta tekstowa przez powiększenie przycisku. W przeciwnym razie Struktura obcina i dołącza wielokropek ( **...** ) do etykiety tekstowej.
 
-##  <a name="m_bwrap"></a>CMFCToolBarButton::m_bWrap
+##  <a name="m_bwrap"></a>CMFCToolBarButton:: m_bWrap
 
 Określa, czy przycisk obok separatora zostanie umieszczony w następnym wierszu.
 
@@ -943,7 +943,7 @@ Struktura umieszcza ten przycisk w następnym wierszu, jeśli ten element człon
 
 Wartość domyślna tego elementu członkowskiego danych to FALSE.
 
-##  <a name="m_bwraptext"></a>CMFCToolBarButton::m_bWrapText
+##  <a name="m_bwraptext"></a>CMFCToolBarButton:: m_bWrapText
 
 Określa, czy są włączone etykiety tekstu wielowierszowego.
 
@@ -957,7 +957,7 @@ Jeśli ta zmienna statycznego elementu członkowskiego ma wartość TRUE, platfo
 
 Wartość domyślna tego elementu członkowskiego danych to FALSE.
 
-##  <a name="m_nid"></a>CMFCToolBarButton::m_nID
+##  <a name="m_nid"></a>CMFCToolBarButton:: m_nID
 
 Identyfikator polecenia przycisku.
 
@@ -969,7 +969,7 @@ UINT m_nID;
 
 Identyfikator polecenia-1 wskazuje, że przycisk jest separatorem. Wszystkie separatory przycisków mają styl TBBS_SEPARATOR. Aby uzyskać więcej informacji na temat stylów przycisków, zobacz [CMFCToolBarButton:: m_nStyle](#m_nstyle) .
 
-##  <a name="m_nstyle"></a>CMFCToolBarButton::m_nStyle
+##  <a name="m_nstyle"></a>CMFCToolBarButton:: m_nStyle
 
 Styl przycisku.
 
@@ -981,7 +981,7 @@ UINT m_nStyle;
 
 Zobacz [Style formantów paska narzędzi](../../mfc/reference/toolbar-control-styles.md) , aby wyświetlić listę dostępnych stylów przycisków paska narzędzi.
 
-##  <a name="m_strtext"></a>CMFCToolBarButton::m_strText
+##  <a name="m_strtext"></a>CMFCToolBarButton:: m_strText
 
 Etykieta tekstowa przycisku.
 
@@ -1006,13 +1006,13 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 *iNotifyCode*<br/>
 podczas Komunikat z powiadomieniem, który jest skojarzony z poleceniem.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ta metoda zwraca wartość FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura wywołuje tę metodę, gdy zostanie wysłana wiadomość [WM_COMMAND](/windows/win32/menurc/wm-command) do okna nadrzędnego.
+Struktura wywołuje tę metodę, gdy zostanie wysłana [WM_COMMAND](/windows/win32/menurc/wm-command) komunikat do okna nadrzędnego.
 
 Domyślnie ta metoda zwraca wartość FALSE. Przesłoń tę metodę, aby zwrócić wartość TRUE, jeśli chcesz przetworzyć komunikat WM_COMMAND lub wartość FALSE, aby wskazać, że nadrzędny pasek narzędzi powinien obsługiwać komunikat.
 
@@ -1036,7 +1036,7 @@ Określa, czy przycisk może być przeciągany.
 virtual BOOL OnBeforeDrag() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 PRAWDA, jeśli przycisk może być przeciągany; w przeciwnym razie FALSE.
 
@@ -1059,7 +1059,7 @@ virtual BOOL OnBeforeDrop(CMFCToolBar* pTarget);
 *pTarget*<br/>
 podczas Obiekt docelowy operacji przeciągania i upuszczania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli przycisk można porzucić na podanym docelowym pasku narzędzi; w przeciwnym razie FALSE.
 
@@ -1082,7 +1082,7 @@ virtual SIZE OnCalculateSize(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Kontekst urządzenia, który wyświetla przycisk.
 
 *sizeDefault*<br/>
@@ -1091,9 +1091,9 @@ podczas Domyślny rozmiar przycisku.
 *bHorz*<br/>
 podczas Stan dokowania nadrzędnego paska narzędzi. Ten parametr ma wartość TRUE, jeśli pasek narzędzi jest zadokowany w poziomie lub jest przenoszony lub FAŁSZ, jeśli pasek narzędzi jest zadokowany w pionie.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-`SIZE` Struktura, która zawiera wymiary przycisku (w pikselach).
+Struktura `SIZE`, która zawiera wymiary przycisku (w pikselach).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1105,7 +1105,7 @@ Zastąp tę metodę, jeśli chcesz podać rozmiar przycisku niestandardowym (na 
 
 ##  <a name="oncancelmode"></a>CMFCToolBarButton:: oncancelmode
 
-Wywoływane przez platformę, aby obsłużyć komunikat [WM_CANCELMODE](/windows/win32/winmsg/wm-cancelmode) .
+Wywoływane przez platformę, aby obsłużyć [WM_CANCELMODE](/windows/win32/winmsg/wm-cancelmode) komunikat.
 
 ```
 virtual void OnCancelMode();
@@ -1113,7 +1113,7 @@ virtual void OnCancelMode();
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja tej metody nie wykonuje żadnych operacji. Zastąp tę metodę, jeśli chcesz obsłużyć komunikat [WM_CANCELMODE](/windows/win32/winmsg/wm-cancelmode) .
+Domyślna implementacja tej metody nie wykonuje żadnych operacji. Zastąp tę metodę, jeśli chcesz obsłużyć [WM_CANCELMODE](/windows/win32/winmsg/wm-cancelmode) komunikat.
 
 ##  <a name="onchangeparentwnd"></a>CMFCToolBarButton::OnChangeParentWnd
 
@@ -1152,7 +1152,7 @@ podczas Okno nadrzędne przycisku paska narzędzi.
 *bDelay*<br/>
 podczas Ma wartość TRUE, jeśli komunikat powinien być obsłużony z opóźnieniem.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ta metoda zwraca wartość FALSE.
 
@@ -1170,7 +1170,7 @@ Wywoływane przez platformę, gdy użytkownik zwolni przycisk myszy.
 virtual BOOL OnClickUp();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ta metoda zwraca wartość FALSE.
 
@@ -1193,7 +1193,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 *pWnd*<br/>
 podczas Okno nadrzędne przycisku paska narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ta metoda zwraca wartość FALSE.
 
@@ -1201,7 +1201,7 @@ Ta metoda zwraca wartość FALSE.
 
 Domyślna implementacja tej metody nie wykonuje żadnych operacji i zwraca wartość FALSE. Przesłoń tę metodę, aby zwrócić wartość różną od zera, jeśli przycisk przetwarza komunikat pomocy.
 
-Aby uzyskać więcej informacji o komunikacie WM_HELPHITTEST, [Zobacz TN028: Obsługa](../../mfc/tn028-context-sensitive-help-support.md)pomocy kontekstowej.
+Aby uzyskać więcej informacji na temat komunikatu WM_HELPHITTEST, zobacz [TN028: obsługa pomocy kontekstowej](../../mfc/tn028-context-sensitive-help-support.md).
 
 ##  <a name="onctlcolor"></a>CMFCToolBarButton::OnCtlColor
 
@@ -1215,13 +1215,13 @@ virtual HBRUSH OnCtlColor(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Kontekst urządzenia, który wyświetla przycisk.
 
 *nCtlColor*<br/>
 podczas Powiadomienie o określonym kolorze.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Uchwyt do obiektu pędzla, który jest wykorzystywany przez platformę do rysowania tła przycisku.
 
@@ -1229,7 +1229,7 @@ Uchwyt do obiektu pędzla, który jest wykorzystywany przez platformę do rysowa
 
 Struktura wywołuje tę metodę, gdy nadrzędny pasek narzędzi przetwarza komunikat WM_CTLCOLOR dla przycisku paska narzędzi zawierającego formant systemu Windows. Struktura nie wywołuje tej metody, jeśli przycisk paska narzędzi jest bezokienkowy.
 
-Struktura wywołuje tę metodę, gdy struktura paska narzędzi jest w trybie dostosowywania, a przycisk paska narzędzi jest odblokowany. Aby uzyskać więcej informacji na temat trybu dostosowywania, zobacz [CMFCToolBar::](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode)setdostosowywaniemode. Aby uzyskać więcej informacji na temat blokowania przycisków paska narzędzi, zobacz [CMFCToolBarButton::](#islocked)IsLocked.
+Struktura wywołuje tę metodę, gdy struktura paska narzędzi jest w trybie dostosowywania, a przycisk paska narzędzi jest odblokowany. Aby uzyskać więcej informacji na temat trybu dostosowywania, zobacz [CMFCToolBar:: Setdostosowywaniemode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode). Aby uzyskać więcej informacji na temat blokowania przycisków paska narzędzi, zobacz [CMFCToolBarButton:: IsLocked](#islocked).
 
 Implementacja domyślna nie robi niczego i zwraca wartość NULL.
 
@@ -1246,7 +1246,7 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 *pMenu*<br/>
 podczas Menu do dostosowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ta metoda zwraca wartość FALSE.
 
@@ -1269,7 +1269,7 @@ virtual void OnDblClk(CWnd* pWnd);
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest wywoływana przez `CMFCToolBar::OnLButtonDblClk` metodę, gdy nadrzędny pasek narzędzi obsługuje komunikat [WM_LBUTTONDBLCLK](/windows/win32/inputdev/wm-lbuttondblclk) .
+Ta metoda jest wywoływana przez metodę `CMFCToolBar::OnLButtonDblClk`, gdy nadrzędny pasek narzędzi obsługuje komunikat [WM_LBUTTONDBLCLK](/windows/win32/inputdev/wm-lbuttondblclk) .
 
 Domyślna implementacja tej metody nie wykonuje żadnych operacji.
 
@@ -1291,7 +1291,7 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Kontekst urządzenia, który wyświetla przycisk.
 
 *cinania*<br/>
@@ -1332,7 +1332,7 @@ virtual int OnDrawOnCustomizeList(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Domeny*<br/>
 podczas Kontekst urządzenia, który wyświetla przycisk.
 
 *cinania*<br/>
@@ -1341,7 +1341,7 @@ podczas Prostokąt ograniczający przycisku.
 *bSelected*<br/>
 podczas Określa, czy przycisk jest zaznaczony. Jeśli ten parametr ma wartość TRUE, przycisk jest zaznaczony. Jeśli ten parametr ma wartość FALSE, przycisk nie jest zaznaczony.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Szerokość przycisku w określonym kontekście urządzenia (w pikselach).
 
@@ -1364,9 +1364,9 @@ virtual BOOL OnGetCustomToolTipText(CString& strToolTip);
 ### <a name="parameters"></a>Parametry
 
 *strToolTip*<br/>
-określoną `CString` Obiekt, który odbiera niestandardowy tekst etykietki narzędzia.
+określoną Obiekt `CString`, który odbiera niestandardowy tekst etykietki narzędzia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ta metoda zwraca wartość FALSE.
 
@@ -1450,11 +1450,11 @@ virtual BOOL OnToolHitTest(
 podczas Okno nadrzędne przycisku. Może mieć wartość NULL.
 
 *pTI*<br/>
-podczas `TOOLINFO` Struktura, która zawiera informacje o narzędziu w kontrolce etykietki narzędzia.
+podczas Struktura `TOOLINFO`, która zawiera informacje o narzędziu w kontrolce etykietki narzędzia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Wynik `OnMenuButtonToolHitTest` , jeśli przycisk może pobrać wskaźnik do okna ramki nadrzędnej; w przeciwnym razie false.
+Wynik `OnMenuButtonToolHitTest`, jeśli przycisk może pobrać wskaźnik do okna ramki nadrzędnej; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1490,9 +1490,9 @@ podczas Indeks (liczony od zera) przycisku w kolekcji przycisków nadrzędnych.
 podczas Kontrolka wyświetlająca tekst etykietki narzędzia.
 
 *str*<br/>
-określoną `CString` Obiekt, który odbiera zaktualizowany tekst etykietki narzędzia.
+określoną Obiekt `CString`, który odbiera zaktualizowany tekst etykietki narzędzia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ta metoda zwraca wartość FALSE.
 
@@ -1511,19 +1511,19 @@ virtual BOOL PrepareDrag(COleDataSource& srcItem);
 ### <a name="parameters"></a>Parametry
 
 *srcItem*<br/>
-podczas `COleDataSource` Obiekt, który przechowuje informacje o stanie dotyczące operacji przeciągania i upuszczania.
+podczas Obiekt `COleDataSource`, który przechowuje informacje o stanie dotyczące operacji przeciągania i upuszczania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ma wartość TRUE, jeśli operacja się powiedzie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura wywołuje tę metodę, aby przygotować przycisk paska narzędzi do przechowywania jego stanu w podanym `COleDataSource` obiekcie. Ta metoda zapisuje swój stan przez serializację do udostępnionego pliku, a następnie przekazanie tego pliku do metody [by uzyskać COleDataSource:: CacheGlobalData](../../mfc/reference/coledatasource-class.md#cacheglobaldata) . Aby uzyskać więcej informacji na temat serializacji przycisku paska narzędzi, zobacz [CMFCToolBarButton:: serializować](#serialize).
+Struktura wywołuje tę metodę, aby przygotować przycisk paska narzędzi do przechowywania jego stanu w podanym obiekcie `COleDataSource`. Ta metoda zapisuje swój stan przez serializację do udostępnionego pliku, a następnie przekazanie tego pliku do metody [by uzyskać COleDataSource:: CacheGlobalData](../../mfc/reference/coledatasource-class.md#cacheglobaldata) . Aby uzyskać więcej informacji na temat serializacji przycisku paska narzędzi, zobacz [CMFCToolBarButton:: serializować](#serialize).
 
 Ta metoda nie wykonuje żadnych operacji i zwraca wartość TRUE, jeśli nie można zapisać przycisku (Metoda [CMFCToolBarButton:: CanBeStored](#canbestored) zwraca wartość false). Zwraca wartość FALSE, jeśli wystąpi wyjątek podczas serializacji obiektu.
 
-Aby uzyskać więcej informacji na temat operacji przeciągania i upuszczania OLE, zobacz [przeciągnij i upuść (OLE)](../../mfc/drag-and-drop-ole.md).
+Aby uzyskać więcej informacji na temat operacji przeciągania i upuszczania OLE, zobacz [OLE przeciąganie i upuszczanie](../../mfc/drag-and-drop-ole.md).
 
 ##  <a name="rect"></a>CMFCToolBarButton:: Rect
 
@@ -1533,9 +1533,9 @@ Pobiera prostokąt związany z przyciskiem.
 const CRect& Rect() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-`CRect` Obiekt, który zawiera prostokąt ograniczający przycisku.
+Obiekt `CRect`, który zawiera prostokąt ograniczenia przycisku.
 
 ##  <a name="resetimagetodefault"></a>CMFCToolBarButton::ResetImageToDefault
 
@@ -1561,7 +1561,7 @@ virtual void SaveBarState();
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura wywołuje tę metodę, gdy tworzy `CMFCToolBarButton` obiekt jako wynik operacji przeciągania i upuszczania.
+Struktura wywołuje tę metodę, gdy tworzy obiekt `CMFCToolBarButton` w wyniku operacji przeciągania i upuszczania.
 
 Domyślna implementacja tej metody nie wykonuje żadnych operacji. Zastąp tę metodę, aby zapisać stan przycisku paska narzędzi w zewnętrznym źródle danych.
 
@@ -1576,17 +1576,17 @@ virtual void Serialize(CArchive& ar);
 ### <a name="parameters"></a>Parametry
 
 *ty*<br/>
-podczas `CArchive` Obiekt, z którego lub do serializacji.
+podczas Obiekt `CArchive`, z którego lub do serializacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda obsługuje procesy transferu danych, takie jak schowek lub operacje przeciągania i upuszczania. Odczytuje lub zapisuje właściwości przycisku, takie jak identyfikator, etykieta tekstowa i identyfikator obrazu z lub do podanego `CArchive` obiektu.
+Ta metoda obsługuje procesy transferu danych, takie jak schowek lub operacje przeciągania i upuszczania. Odczytuje lub zapisuje właściwości przycisku, takie jak identyfikator, etykieta tekstowa i identyfikator obrazu z lub do podanego obiektu `CArchive`.
 
-Aby zapoznać się z przykładami serializacji, zobacz [serializacji: Serializacja obiektu](../../mfc/serialization-serializing-an-object.md).
+Aby zapoznać się z przykładami serializacji, zobacz [serializacji: serializacji obiektu](../../mfc/serialization-serializing-an-object.md).
 
 ##  <a name="setaccdata"></a>CMFCToolBarButton::SetACCData
 
-Wypełnia udostępniony `CAccessibilityData` obiekt z danymi dostępności za pomocą przycisku paska narzędzi.
+Wypełnia podany `CAccessibilityData` obiekt z danymi dostępności z poziomu przycisku paska narzędzi.
 
 ```
 virtual BOOL SetACCData(
@@ -1600,9 +1600,9 @@ virtual BOOL SetACCData(
 podczas Okno nadrzędne przycisku paska narzędzi.
 
 *Data*<br/>
-podczas `CAccessibilityData` Obiekt, który jest wypełniony danymi dostępności przycisku paska narzędzi.
+podczas Obiekt `CAccessibilityData`, który jest wypełniony danymi dostępności przycisku paska narzędzi.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Ta metoda zwraca wartość TRUE.
 
@@ -1751,7 +1751,7 @@ Użyj metody [CMFCToolBarButton:: setVisible](#setvisible) , aby ustawić ogóln
 
 Ta metoda wywołuje metodę [CMFCToolBarButton:: OnShow](#onshow) po aktualizacji stanu widoczności przycisku.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

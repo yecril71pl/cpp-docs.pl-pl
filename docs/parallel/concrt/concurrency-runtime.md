@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: a96c54a01788f03158b9fcdcd0bf72eb2b1ce84d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a17b4439baaec9caacfeca08983d0255b5a145de
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510554"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141620"
 ---
 # <a name="concurrency-runtime"></a>Współbieżność środowiska wykonawczego
 
@@ -20,7 +20,7 @@ ms.locfileid: "69510554"
 Dokumentacja referencyjna znajduje się w temacie [Reference](../../parallel/concrt/reference/reference-concurrency-runtime.md).
 
 > [!TIP]
->  Środowisko uruchomieniowe współbieżności opiera się na funkcjach C++ 11 i wdraża bardziej nowoczesny C++ styl. Aby dowiedzieć się więcej, przeczytaj temat [Witamy z powrotem do C++ ](../../cpp/welcome-back-to-cpp-modern-cpp.md).
+> Środowisko uruchomieniowe współbieżności opiera się na funkcjach C++ 11 i wdraża bardziej nowoczesny C++ styl. Aby dowiedzieć się więcej, przeczytaj temat [Witamy z powrotem do C++ ](../../cpp/welcome-back-to-cpp-modern-cpp.md).
 
 ## <a name="choosing-concurrency-runtime-features"></a>Wybieranie funkcji współbieżnych środowiska wykonawczego
 
@@ -37,7 +37,7 @@ Dokumentacja referencyjna znajduje się w temacie [Reference](../../parallel/con
 
 |||
 |-|-|
-|[Równoległość zadań](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br /><br /> [Instrukcje: używanie parallel_invoke do napisania procedury sortowania równoległego](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)<br /><br /> [Instrukcje: wykonywanie operacji równoległych za pomocą elementu Parallel.Invoke](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)<br /><br /> [Instrukcje: tworzenie zadania kończonego po opóźnieniu](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|Opisuje zadania i grupy zadań, które mogą ułatwić pisanie kodu asynchronicznego i rozkładanie pracy równoległej na mniejsze części.|
+|[Równoległość zadań](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br /><br /> [Instrukcje: używanie parallel_invoke do napisania procedury sortowania równoległego](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)<br /><br /> [Instrukcje: korzystanie z parallel_invoke podczas przeprowadzania operacji równoległych](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)<br /><br /> [Instrukcje: tworzenie zadania kończonego po opóźnieniu](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|Opisuje zadania i grupy zadań, które mogą ułatwić pisanie kodu asynchronicznego i rozkładanie pracy równoległej na mniejsze części.|
 |[Przewodnik: wdrażanie przyszłych operacji](../../parallel/concrt/walkthrough-implementing-futures.md)|Pokazuje, jak połączyć funkcje środowisko uruchomieniowe współbieżności, aby zrobić coś więcej.|
 |[Przewodnik: usuwanie pracy z wątku interfejs użytkownika](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)|Pokazuje, w jaki sposób przenieść zadania wykonywane przez wątek interfejsu użytkownika w aplikacji MFC do wątku roboczego.|
 |[Biblioteka wzorów równoległych — najlepsze praktyki](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br /><br /> [Środowisko uruchomieniowe współbieżności — najlepsze praktyki ogólne](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)|Zawiera wskazówki i najlepsze rozwiązania dotyczące pracy z PPL.|
@@ -46,8 +46,8 @@ Dokumentacja referencyjna znajduje się w temacie [Reference](../../parallel/con
 
 |||
 |-|-|
-|[Algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md)<br /><br /> [Instrukcje: pisanie pętli parallel_for](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)<br /><br /> [Instrukcje: pisanie pętli parallel_for_each](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)<br /><br /> [Instrukcje: równoległe wykonywanie operacji mapowania i zmniejszania](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)|Opisuje `parallel_for` ,`parallel_for_each`, i inne algorytmy równoległe. `parallel_invoke` Algorytmy równoległe służą do rozwiązywania problemów równoległych dotyczących *danych* , które obejmują kolekcje danych.|
-|[Równoległe kontenery oraz obiekty](../../parallel/concrt/parallel-containers-and-objects.md)<br /><br /> [Instrukcje: korzystanie z kontenerów równoległych do zwiększania wydajności](../../parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md)<br /><br /> [Instrukcje: korzystanie z wyników połączonych do poprawiania wydajności](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br /><br /> [Instrukcje: korzystanie z wyników połączonych w celu łączenia zestawów](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)|Zawiera opis `combinable` klasy, `concurrent_vector` `concurrent_queue` ,`concurrent_unordered_map`i innych kontenerów równoległych. Używaj kontenerów równoległych i obiektów, gdy wymagane są kontenery zapewniające bezpieczny wątkowy dostęp do ich elementów.|
+|[Algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md)<br /><br /> [Instrukcje: pisanie pętli parallel_for](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)<br /><br /> [Instrukcje: pisanie pętli parallel_for_each](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)<br /><br /> [Instrukcje: równoległe wykonywanie operacji mapowania i zmniejszania](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)|Opisuje `parallel_for`, `parallel_for_each`, `parallel_invoke`i innych algorytmów równoległych. Algorytmy równoległe służą do rozwiązywania problemów *równoległych dotyczących danych* , które obejmują kolekcje danych.|
+|[Równoległe kontenery oraz obiekty](../../parallel/concrt/parallel-containers-and-objects.md)<br /><br /> [Instrukcje: korzystanie z kontenerów równoległych do zwiększania wydajności](../../parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md)<br /><br /> [Instrukcje: korzystanie z wyników połączonych do poprawiania wydajności](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br /><br /> [Instrukcje: korzystanie z wyników połączonych w celu łączenia zestawów](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)|Opisuje klasę `combinable`, a także `concurrent_vector`, `concurrent_queue`, `concurrent_unordered_map`i innych kontenerów równoległych. Używaj kontenerów równoległych i obiektów, gdy wymagane są kontenery zapewniające bezpieczny wątkowy dostęp do ich elementów.|
 |[Biblioteka wzorów równoległych — najlepsze praktyki](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br /><br /> [Środowisko uruchomieniowe współbieżności — najlepsze praktyki ogólne](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)|Zawiera wskazówki i najlepsze rozwiązania dotyczące pracy z PPL.|
 
 ## <a name="canceling-tasks-and-parallel-algorithms"></a>Anulowanie zadań i algorytmów równoległych
@@ -62,7 +62,7 @@ Dokumentacja referencyjna znajduje się w temacie [Reference](../../parallel/con
 |||
 |-|-|
 |[Tworzenie operacji asynchronicznych w języku C++ dla aplikacji platformy uniwersalnej systemu Windows](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|W tym artykule opisano niektóre kluczowe kwestie, które należy wziąć pod uwagę podczas tworzenia asynchronicznych operacji w aplikacji platformy UWP przy użyciu środowisko uruchomieniowe współbieżności.|
-|[Przewodnik: łączenie za pomocą zadań i żądań XML HTTP](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Pokazuje, w jaki sposób połączyć zadania PPL `IXMLHTTPRequest2` z `IXMLHTTPRequest2Callback` interfejsami i, aby wysyłać żądania HTTP GET i post do usługi sieci Web w aplikacji platformy UWP.|
+|[Przewodnik: łączenie za pomocą zadań i żądań XML HTTP](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Pokazuje, w jaki sposób połączyć zadania PPL z interfejsami `IXMLHTTPRequest2` i `IXMLHTTPRequest2Callback`, aby wysyłać żądania HTTP GET i POST do usługi sieci Web w aplikacji platformy UWP.|
 |[Przykłady aplikacji środowisko wykonawcze systemu Windows](https://code.msdn.microsoft.com/windowsapps)|Zawiera przykłady kodu do pobrania i aplikacje demonstracyjne dla systemu Windows 8. x. C++ Przykłady wykorzystują środowisko uruchomieniowe współbieżności funkcje, takie jak zadania PPL do przetwarzania danych w tle, aby zapewnić REAGOWANIe środowiska pracy.|
 
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>Programowanie przepływu danych w bibliotece agentów asynchronicznych
@@ -103,6 +103,6 @@ Dokumentacja referencyjna znajduje się w temacie [Reference](../../parallel/con
 |[Przetwarzanie równoległe C++ na forum i w kodzie natywnym](https://go.microsoft.com/fwlink/p/?linkid=183874)|Umożliwia uczestnictwo w dyskusjach społeczności dotyczących środowisko uruchomieniowe współbieżności.|
 |[Programowanie równoległe](/dotnet/standard/parallel-programming/index)|Uczy o modelu programowania równoległego, który jest dostępny w .NET Framework.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja](../../parallel/concrt/reference/reference-concurrency-runtime.md)

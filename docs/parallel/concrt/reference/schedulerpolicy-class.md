@@ -11,49 +11,49 @@ f1_keywords:
 helpviewer_keywords:
 - SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
-ms.openlocfilehash: 2eff40b11e4e9a5981ad85c37c8345abefb13fed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fed33c198502b75e824bcaf698227d283f4b85f9
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337332"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142749"
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy — Klasa
 
-`SchedulerPolicy` Klasa zawiera zestaw pary klucz/wartość, jeden dla każdego elementu zasad, które kontrolują zachowanie wystąpienia harmonogramu.
+Klasa `SchedulerPolicy` zawiera zestaw par klucz/wartość, jeden dla każdego elementu zasad, kontrolujący zachowanie wystąpienia harmonogramu.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class SchedulerPolicy;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[SchedulerPolicy](#ctor)|Przeciążone. Tworzy nową zasadę harmonogramu i wypełnia ją wartościami dla [klucze zasad](concurrency-namespace-enums.md) obsługiwane transfery danych w środowisku uruchomieniowym współbieżności: a Resource Manager.|
-|[~ SchedulerPolicy — destruktor](#dtor)|Niszczy zasadę harmonogramu.|
+|[SchedulerPolicy](#ctor)|Przeciążone. Konstruuje nowe zasady harmonogramu i wypełnia je wartościami [kluczy zasad](concurrency-namespace-enums.md) obsługiwanymi przez środowisko uruchomieniowe współbieżności harmonogramy i Menedżer zasobów.|
+|[~ SchedulerPolicy destruktor](#dtor)|Niszczy zasady usługi Scheduler.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[GetPolicyValue](#getpolicyvalue)|Pobiera wartość klucza zasad podana jako `key` parametru.|
-|[Setconcurrencylimits —](#setconcurrencylimits)|Jednocześnie ustawia `MinConcurrency` i `MaxConcurrency` zasad na `SchedulerPolicy` obiektu.|
-|[SetPolicyValue](#setpolicyvalue)|Ustawia wartość klucza zasad podana jako `key` parametr i zwraca starą wartość.|
+|[GetPolicyValue —](#getpolicyvalue)|Pobiera wartość klucza zasad podanego jako parametr `key`.|
+|[SetConcurrencyLimits —](#setconcurrencylimits)|Jednocześnie ustawia zasady `MinConcurrency` i `MaxConcurrency` w obiekcie `SchedulerPolicy`.|
+|[SetPolicyValue —](#setpolicyvalue)|Ustawia wartość klucza zasad podaną jako parametr `key` i zwraca starą wartość.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[operator=](#operator_eq)|Przypisuje zasady harmonogramu z innych zasad harmonogramu.|
+|[operator =](#operator_eq)|Przypisuje zasady harmonogramu z innych zasad usługi Scheduler.|
 
 ## <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji na temat zasad, które mogą być kontrolowane za pomocą `SchedulerPolicy` klasy, zobacz [policyelementkey —](concurrency-namespace-enums.md).
+Aby uzyskać więcej informacji na temat zasad, które mogą być kontrolowane za pomocą klasy `SchedulerPolicy`, zobacz [PolicyElementKey —](concurrency-namespace-enums.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -61,57 +61,57 @@ Aby uzyskać więcej informacji na temat zasad, które mogą być kontrolowane z
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concrt.h, concrtrm.h
+**Nagłówek:** ConcRT. h, concrtrm. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="getpolicyvalue"></a> Getpolicyvalue —
+## <a name="getpolicyvalue"></a>GetPolicyValue —
 
-Pobiera wartość klucza zasad podana jako `key` parametru.
+Pobiera wartość klucza zasad podanego jako parametr `key`.
 
-```
+```cpp
 unsigned int GetPolicyValue(PolicyElementKey key) const;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
-Klucz zasad w celu pobrania wartości.
+Klucz zasad, dla którego ma zostać pobrana wartość.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Jeśli klucz określony przez `key` parametr jest obsługiwany, rzutować wartość zasady dla klucza `unsigned int`.
+Jeśli klucz określony przez parametr `key` jest obsługiwany, wartość zasad dla klucza rzutowania na `unsigned int`.
 
 ### <a name="remarks"></a>Uwagi
 
-Metoda zgłosi [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) dla klucza nieprawidłowe zasady.
+Metoda zgłosi [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) dla nieprawidłowego klucza zasad.
 
-##  <a name="operator_eq"></a> operator =
+## <a name="operator_eq"></a>operator =
 
-Przypisuje zasady harmonogramu z innych zasad harmonogramu.
+Przypisuje zasady harmonogramu z innych zasad usługi Scheduler.
 
-```
+```cpp
 SchedulerPolicy& operator= (const SchedulerPolicy& _RhsPolicy);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_RhsPolicy*<br/>
-Zasady można przypisać do tych zasad.
+Zasady do przypisania do tych zasad.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Odwołanie do zasad harmonogramu.
+Odwołanie do zasad usługi Scheduler.
 
 ### <a name="remarks"></a>Uwagi
 
-Często Najwygodniejszym sposobem zdefiniowania nowej zasady harmonogramu jest skopiowanie istniejącej zasady i modyfikować za pomocą `SetPolicyValue` lub `SetConcurrencyLimits` metody.
+Często Najwygodniejszym sposobem zdefiniowania nowych zasad harmonogramu jest skopiowanie istniejących zasad i zmodyfikowanie ich przy użyciu metod `SetPolicyValue` lub `SetConcurrencyLimits`.
 
-##  <a name="ctor"></a> Schedulerpolicy —
+## <a name="ctor"></a>SchedulerPolicy
 
-Tworzy nową zasadę harmonogramu i wypełnia ją wartościami dla [klucze zasad](concurrency-namespace-enums.md) obsługiwane transfery danych w środowisku uruchomieniowym współbieżności: a Resource Manager.
+Konstruuje nowe zasady harmonogramu i wypełnia je wartościami [kluczy zasad](concurrency-namespace-enums.md) obsługiwanymi przez środowisko uruchomieniowe współbieżności harmonogramy i Menedżer zasobów.
 
-```
+```cpp
 SchedulerPolicy();
 
 SchedulerPolicy(
@@ -125,32 +125,32 @@ SchedulerPolicy(
 ### <a name="parameters"></a>Parametry
 
 *_PolicyKeyCount*<br/>
-Liczba klucz/wartość pary poniżej `_PolicyKeyCount` parametru.
+Liczba par klucz/wartość, które są zgodne z parametrem `_PolicyKeyCount`.
 
 *_SrcPolicy*<br/>
 Zasady źródłowe do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor tworzy nową zasadę harmonogramu, gdzie wszystkie zasady zostaną zainicjowane do ich wartości domyślnych.
+Pierwszy Konstruktor tworzy nowe zasady harmonogramu, w przypadku których wszystkie zasady zostaną zainicjowane do ich wartości domyślnych.
 
-Drugi Konstruktor tworzy nową zasadę harmonogramu, który używa stylu o nazwie parametru inicjalizacji. Wartości po `_PolicyKeyCount` parametrze są dostarczane jako pary klucz/wartość. Każdy klucz polityki, który nie jest określony w tym konstruktorze będzie mieć wartość domyślną. Ten konstruktor może wyrzucić [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md), [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) lub [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md).
+Drugi Konstruktor tworzy nowe zasady harmonogramu, które używają stylu parametru inicjującego. Wartości po parametrze `_PolicyKeyCount` są podawane jako pary klucz/wartość. Każdy klucz zasad, który nie jest określony w tym konstruktorze, będzie miał jego wartość domyślną. Ten konstruktor może zgłosić wyjątki [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md), [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) lub [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md).
 
-Trzeci Konstruktor jest konstruktorem kopiującym. Często Najwygodniejszym sposobem zdefiniowania nowej zasady harmonogramu jest skopiowanie istniejącej zasady i modyfikować za pomocą `SetPolicyValue` lub `SetConcurrencyLimits` metody.
+Trzeci konstruktor jest konstruktorem kopiującym. Często Najwygodniejszym sposobem zdefiniowania nowych zasad harmonogramu jest skopiowanie istniejących zasad i zmodyfikowanie ich przy użyciu metod `SetPolicyValue` lub `SetConcurrencyLimits`.
 
-##  <a name="dtor"></a> ~SchedulerPolicy
+## <a name="dtor"></a>~ SchedulerPolicy
 
-Niszczy zasadę harmonogramu.
+Niszczy zasady usługi Scheduler.
 
-```
+```cpp
 ~SchedulerPolicy();
 ```
 
-##  <a name="setconcurrencylimits"></a> Setconcurrencylimits —
+## <a name="setconcurrencylimits"></a>SetConcurrencyLimits —
 
-Jednocześnie ustawia `MinConcurrency` i `MaxConcurrency` zasad na `SchedulerPolicy` obiektu.
+Jednocześnie ustawia zasady `MinConcurrency` i `MaxConcurrency` w obiekcie `SchedulerPolicy`.
 
-```
+```cpp
 void SetConcurrencyLimits(
     unsigned int _MinConcurrency,
     unsigned int _MaxConcurrency = MaxExecutionResources);
@@ -159,22 +159,22 @@ void SetConcurrencyLimits(
 ### <a name="parameters"></a>Parametry
 
 *_MinConcurrency*<br/>
-Wartość `MinConcurrency` klucz zasad.
+Wartość klucza zasad `MinConcurrency`.
 
 *_MaxConcurrency*<br/>
-Wartość `MaxConcurrency` klucz zasad.
+Wartość klucza zasad `MaxConcurrency`.
 
 ### <a name="remarks"></a>Uwagi
 
-Metoda zgłosi [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md) Jeśli wartość określona dla `MinConcurrency` zasad jest większy niż określony dla `MaxConcurrency` zasad.
+Metoda spowoduje zgłoszenie [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md) , jeśli wartość określona dla zasad `MinConcurrency` jest większa niż określona dla zasad `MaxConcurrency`.
 
-Metoda może również zgłosić [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) inne nieprawidłowe wartości.
+Metoda może również generować [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) dla innych nieprawidłowych wartości.
 
-##  <a name="setpolicyvalue"></a> Setpolicyvalue —
+## <a name="setpolicyvalue"></a>SetPolicyValue —
 
-Ustawia wartość klucza zasad podana jako `key` parametr i zwraca starą wartość.
+Ustawia wartość klucza zasad podaną jako parametr `key` i zwraca starą wartość.
 
-```
+```cpp
 unsigned int SetPolicyValue(
     PolicyElementKey key,
     unsigned int value);
@@ -183,27 +183,27 @@ unsigned int SetPolicyValue(
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
-Klucz zasad można ustawić wartości.
+Klucz zasad, dla którego ma zostać ustawiona wartość.
 
 *value*<br/>
-Wartość do ustawienia klucza zasad.
+Wartość, dla której ma zostać ustawiony klucz zasad.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Jeśli klucz określony przez `key` parametr jest obsługiwany, stara wartość zasady dla klucza rzutowane na `unsigned int`.
+Jeśli klucz określony przez parametr `key` jest obsługiwany, stara wartość zasad dla klucza rzutowania na `unsigned int`.
 
 ### <a name="remarks"></a>Uwagi
 
-Metoda zgłosi [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) dla klucza nieprawidłowe zasady lub każdy klucz polityki, którego wartość nie może ustawić `SetPolicyValue` metody.
+Metoda zgłosi [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) dla nieprawidłowego klucza zasad lub dowolnego klucza zasad, którego wartość nie może być ustawiona przez metodę `SetPolicyValue`.
 
-Metoda zgłosi [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) dla wartości, która nie jest obsługiwana dla klucza określonego przez `key` parametru.
+Metoda zgłosi [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) dla wartości, która nie jest obsługiwana dla klucza określonego przez parametr `key`.
 
-Należy zauważyć, że ta metoda nie można ustawić `MinConcurrency` lub `MaxConcurrency` zasad. Aby ustawić te wartości, należy użyć [setconcurrencylimits —](#setconcurrencylimits) metody.
+Należy zauważyć, że ta metoda nie jest dozwolona do ustawiania zasad `MinConcurrency` lub `MaxConcurrency`. Aby ustawić te wartości, użyj metody [SetConcurrencyLimits —](#setconcurrencylimits) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
-[PolicyElementKey](concurrency-namespace-enums.md)<br/>
+[PolicyElementKey —](concurrency-namespace-enums.md)<br/>
 [CurrentScheduler, klasa](currentscheduler-class.md)<br/>
 [Scheduler, klasa](scheduler-class.md)<br/>
-[Task Scheduler](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
+[Harmonogram zadań](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)

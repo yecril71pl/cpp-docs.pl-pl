@@ -14,40 +14,40 @@ f1_keywords:
 helpviewer_keywords:
 - IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
-ms.openlocfilehash: 54db5d664a48f95a952eb1b409839d8ac3421e30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd7b04b0dc5ca1bc496ce87a6459d00ed5813bf7
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337508"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142322"
 ---
 # <a name="ischeduler-structure"></a>Struktura IScheduler
 
-Interfejs abstrakcję harmonogram pracy. Menedżer zasobów w środowisku uruchomieniowym współbieżności używa ten interfejs do komunikacji z harmonogramów pracy.
+Interfejs do abstrakcji harmonogramu pracy. Menedżer zasobów środowisko uruchomieniowe współbieżności używa tego interfejsu do komunikowania się z harmonogramami służbowymi.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 struct IScheduler;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[IScheduler::AddVirtualProcessors](#addvirtualprocessors)|Udostępnia harmonogramu z zestawem korzeni procesora wirtualnego do jego użycia. Każdy `IVirtualProcessorRoot` interfejs reprezentuje prawo do wykonania jednego wątku, które może wykonywać pracę w imieniu usługi scheduler.|
-|[IScheduler::GetId](#getid)|Zwraca unikatowy identyfikator dla harmonogramu.|
-|[IScheduler::GetPolicy](#getpolicy)|Zwraca kopię obiektu zasadę harmonogramu. Aby uzyskać więcej informacji na temat zasad harmonogramu, zobacz [SchedulerPolicy](schedulerpolicy-class.md).|
-|[IScheduler::NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|Powiadamia ten harmonogram, który wątków sprzętu reprezentowany przez zestaw korzeni procesora wirtualnego w tablicy `ppVirtualProcessorRoots` są obecnie używane przez inne transfery danych.|
-|[IScheduler::NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|Powiadamia ten harmonogram, który wątków sprzętu reprezentowany przez zestaw korzeni procesora wirtualnego w tablicy `ppVirtualProcessorRoots` nie są używane przez inne transfery danych.|
-|[IScheduler::RemoveVirtualProcessors](#removevirtualprocessors)|Powoduje zainicjowanie usuwania głównych procesorów wirtualnych, które wcześniej zostały przydzielone do tego harmonogramu.|
-|[Ischeduler::statistics —](#statistics)|Zawiera informacje dotyczące stawek przybycia i ukończenia zadania w celu zmiany długości kolejki dla harmonogramu.|
+|[IScheduler:: AddVirtualProcessors —](#addvirtualprocessors)|Udostępnia harmonogram z zestawem katalogów głównych procesorów wirtualnych do użytku. Każdy interfejs `IVirtualProcessorRoot` reprezentuje prawo do wykonania pojedynczego wątku, który może wykonywać pracę w imieniu harmonogramu.|
+|[IScheduler:: GetId —](#getid)|Zwraca unikatowy identyfikator dla harmonogramu.|
+|[IScheduler:: GetPolicy](#getpolicy)|Zwraca kopię zasad harmonogramu. Aby uzyskać więcej informacji na temat zasad usługi Scheduler, zobacz [SchedulerPolicy](schedulerpolicy-class.md).|
+|[IScheduler:: NotifyResourcesExternallyBusy —](#notifyresourcesexternallybusy)|Powiadamia ten harmonogram, że wątki sprzętowe reprezentowane przez zestaw katalogów głównych procesorów wirtualnych w tablicy `ppVirtualProcessorRoots` są teraz używane przez innych harmonogramów.|
+|[IScheduler:: NotifyResourcesExternallyIdle —](#notifyresourcesexternallyidle)|Powiadamia ten harmonogram, że wątki sprzętowe reprezentowane przez zbiór katalogów głównych procesorów wirtualnych w tablicy `ppVirtualProcessorRoots` nie są używane przez inne harmonogramy.|
+|[IScheduler:: RemoveVirtualProcessors —](#removevirtualprocessors)|Inicjuje Usuwanie katalogów głównych procesorów wirtualnych, które zostały wcześniej przydzielono do tego harmonogramu.|
+|[IScheduler:: Statistics](#statistics)|Zawiera informacje dotyczące szybkości przybycia i ukończenia zadania oraz zmiany długości kolejki dla harmonogramu.|
 
 ## <a name="remarks"></a>Uwagi
 
-Przed zaimplementowaniem Niestandardowy harmonogram, który komunikuje się z usługą Resource Manager, należy podać implementacja `IScheduler` interfejsu. Ten interfejs jest jeden z punktów końcowych dwukierunkowy kanał komunikacji między harmonogramu i Menedżera zasobów. Drugi punkt końcowy jest reprezentowany przez `IResourceManager` i `ISchedulerProxy` interfejsów, które są implementowane przez Menedżera zasobów.
+W przypadku wdrażania niestandardowego harmonogramu, który komunikuje się z Menedżer zasobów, należy podać implementację interfejsu `IScheduler`. Ten interfejs jest jednym końcem dwukierunkowego kanału komunikacji między harmonogramem i Menedżer zasobów. Druga końcowa jest reprezentowana przez `IResourceManager` i `ISchedulerProxy` interfejsów, które są implementowane przez Menedżer zasobów.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -55,15 +55,15 @@ Przed zaimplementowaniem Niestandardowy harmonogram, który komunikuje się z us
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concrtrm.h
+**Nagłówek:** concrtrm. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="addvirtualprocessors"></a>  Ischeduler::addvirtualprocessors — metoda
+## <a name="addvirtualprocessors"></a>IScheduler:: AddVirtualProcessors —, Metoda
 
-Udostępnia harmonogramu z zestawem korzeni procesora wirtualnego do jego użycia. Każdy `IVirtualProcessorRoot` interfejs reprezentuje prawo do wykonania jednego wątku, które może wykonywać pracę w imieniu usługi scheduler.
+Udostępnia harmonogram z zestawem katalogów głównych procesorów wirtualnych do użytku. Każdy interfejs `IVirtualProcessorRoot` reprezentuje prawo do wykonania pojedynczego wątku, który może wykonywać pracę w imieniu harmonogramu.
 
-```
+```cpp
 virtual void AddVirtualProcessors(
     _In_reads_(count) IVirtualProcessorRoot** ppVirtualProcessorRoots,
     unsigned int count) = 0;
@@ -72,50 +72,50 @@ virtual void AddVirtualProcessors(
 ### <a name="parameters"></a>Parametry
 
 *ppVirtualProcessorRoots*<br/>
-Tablica `IVirtualProcessorRoot` interfejsów reprezentujący Procesor wirtualny obiektów głównych dodawany do harmonogramu.
+Tablica interfejsów `IVirtualProcessorRoot` reprezentujących katalogi główne procesora wirtualnego dodawane do harmonogramu.
 
-*Liczba*<br/>
-Liczba `IVirtualProcessorRoot` interfejsów w tablicy.
+*count*<br/>
+Liczba interfejsów `IVirtualProcessorRoot` w tablicy.
 
 ### <a name="remarks"></a>Uwagi
 
-Menedżer zasobów wywołuje `AddVirtualProcessor` metodę, aby udzielić początkowy zestaw głównych procesorów wirtualnych do harmonogramu. Można go również wywoływać metody w celu dodania do harmonogramu korzeni procesora wirtualnego, podczas jego rebalances zasobów między transfery danych.
+Menedżer zasobów wywołuje metodę `AddVirtualProcessor` w celu przyznania wstępnego zestawu katalogów głównych procesorów wirtualnych do harmonogramu. Może również wywołać metodę dodawania katalogów głównych procesorów wirtualnych do harmonogramu w przypadku zrównoważenia zasobów między harmonogramami.
 
-##  <a name="getid"></a>  Ischeduler::getid — metoda
+## <a name="getid"></a>IScheduler:: GetId —, Metoda
 
 Zwraca unikatowy identyfikator dla harmonogramu.
 
-```
+```cpp
 virtual unsigned int GetId() const = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Identyfikator unikatowy liczby całkowitej.
+Unikatowy identyfikator liczby całkowitej.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy używać [getschedulerid —](concurrency-namespace-functions.md) funkcję, aby uzyskać unikatowy identyfikator obiektu, który implementuje `IScheduler` interfejsu, zanim użyjesz interfejsu jako parametr do metody dostarczone przez Menedżera zasobów. Powinna zwrócić element tego samego identyfikatora po `GetId` wywołaniu funkcji.
+Należy użyć funkcji [GetSchedulerId —](concurrency-namespace-functions.md) , aby uzyskać unikatowy identyfikator obiektu, który implementuje interfejs `IScheduler`, przed użyciem interfejsu jako parametru do metod dostarczonych przez Menedżer zasobów. Po wywołaniu funkcji `GetId` należy zwrócić ten sam identyfikator.
 
-Identyfikator pochodzi z innego źródła może spowodować niezdefiniowane zachowanie.
+Identyfikator uzyskany z innego źródła może spowodować niezdefiniowane zachowanie.
 
-##  <a name="getpolicy"></a>  Ischeduler::getpolicy — metoda
+## <a name="getpolicy"></a>IScheduler:: GetPolicy — Metoda
 
-Zwraca kopię obiektu zasadę harmonogramu. Aby uzyskać więcej informacji na temat zasad harmonogramu, zobacz [SchedulerPolicy](schedulerpolicy-class.md).
+Zwraca kopię zasad harmonogramu. Aby uzyskać więcej informacji na temat zasad usługi Scheduler, zobacz [SchedulerPolicy](schedulerpolicy-class.md).
 
-```
+```cpp
 virtual SchedulerPolicy GetPolicy() const = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Kopia zasadę harmonogramu.
+Kopia zasad usługi Scheduler.
 
-##  <a name="notifyresourcesexternallybusy"></a>  Ischeduler::notifyresourcesexternallybusy — metoda
+## <a name="notifyresourcesexternallybusy"></a>IScheduler:: NotifyResourcesExternallyBusy —, Metoda
 
-Powiadamia ten harmonogram, który wątków sprzętu reprezentowany przez zestaw korzeni procesora wirtualnego w tablicy `ppVirtualProcessorRoots` są obecnie używane przez inne transfery danych.
+Powiadamia ten harmonogram, że wątki sprzętowe reprezentowane przez zestaw katalogów głównych procesorów wirtualnych w tablicy `ppVirtualProcessorRoots` są teraz używane przez innych harmonogramów.
 
-```
+```cpp
 virtual void NotifyResourcesExternallyBusy(
     _In_reads_(count) IVirtualProcessorRoot** ppVirtualProcessorRoots,
     unsigned int count) = 0;
@@ -124,26 +124,26 @@ virtual void NotifyResourcesExternallyBusy(
 ### <a name="parameters"></a>Parametry
 
 *ppVirtualProcessorRoots*<br/>
-Tablica `IVirtualProcessorRoot` interfejsów skojarzonych z wątków sprzętu, na których inne transfery danych stały się zajęty.
+Tablica interfejsów `IVirtualProcessorRoot` skojarzonych ze wątkami sprzętowymi, w których inne harmonogramy stają się zajęte.
 
-*Liczba*<br/>
-Liczba `IVirtualProcessorRoot` interfejsów w tablicy.
+*count*<br/>
+Liczba interfejsów `IVirtualProcessorRoot` w tablicy.
 
 ### <a name="remarks"></a>Uwagi
 
-Istnieje możliwość dla wątku określonego sprzętu, który ma być przypisane do wielu harmonogramów w tym samym czasie. Jedną z przyczyn tego może być, że nie istnieją mała liczba wątków sprzętu w systemie, aby spełniać minimalne współbieżności dla wszystkich harmonogramów bez udostępniania zasobów. Inną możliwością jest, że zasoby tymczasowo są przypisywane do inne transfery danych, podczas będąca właścicielem harmonogram nie używa ich, za pomocą jego korzeni procesora wirtualnego wątek sprzętu dezaktywowane.
+Istnieje możliwość przypisania określonego wątku sprzętowego do wielu harmonogramów w tym samym czasie. Jedną z przyczyn tego problemu może być brak wystarczającej liczby wątków sprzętowych w systemie w celu zaspokojenia minimalnych współbieżności dla wszystkich harmonogramów bez udostępniania zasobów. Kolejną możliwością jest to, że zasoby są tymczasowo przypisywane do innych harmonogramów, gdy nie są one używane przez tego samego procesora wirtualnego w ramach tego wątku sprzętowego.
 
-Poziom subskrypcji wątku sprzętu jest oznaczona liczba wątków subskrybowanego i aktywowane korzeni procesora wirtualnego skojarzonego z tym wątkiem sprzętu. Z punktu widzenia określonego harmonogramu poziom subskrypcji zewnętrzny wątek sprzętu jest częścią subskrypcji, którą Współtworzenie inne transfery danych. Powiadomienia, że zasoby są zajęte zewnętrznie są wysyłane do harmonogramu, gdy poziom subskrypcji zewnętrzny wątek sprzętu porusza się od zera dodatnia terytorium.
+Poziom subskrypcji wątku sprzętowego jest określany na podstawie liczby wątków subskrybowanych i aktywowanych katalogów głównych procesora wirtualnego skojarzonych z tym wątkiem sprzętowym. Z punktu widzenia określonego harmonogramu, zewnętrzny poziom subskrypcji wątku sprzętowego jest częścią subskrypcji, do której należy program. Powiadomienia, które zasoby są zajęte zewnętrznie, są wysyłane do harmonogramu, gdy poziom subskrypcji zewnętrznej dla wątku sprzętowego przesunie się z zera na pozytywne terytorium.
 
-Powiadomienia za pośrednictwem tej metody są wysyłane tylko do których mają zasady gdzie wartość `MinConcurrency` klucz zasad jest równa wartości dla `MaxConcurrency` klucz zasad. Aby uzyskać więcej informacji na temat zasad harmonogramu, zobacz [SchedulerPolicy](schedulerpolicy-class.md).
+Powiadomienia za pośrednictwem tej metody są wysyłane tylko do harmonogramów mających zasady, w których wartość klucza zasad `MinConcurrency` jest równa wartości klucza zasad `MaxConcurrency`. Aby uzyskać więcej informacji na temat zasad usługi Scheduler, zobacz [SchedulerPolicy](schedulerpolicy-class.md).
 
-Harmonogram, który jest uprawniony do powiadomienia pobiera zestaw powiadomień w początkowej podczas jego tworzenia, powiadamiając go, czy zasoby, które właśnie zostało przypisane zewnętrznie zajęta lub bezczynności.
+Harmonogram, który kwalifikuje się do powiadomień, Pobiera zestaw początkowych powiadomień podczas jego tworzenia, informując o tym, czy zasoby, które zostały właśnie przypisane, są z zewnątrz zajęte lub bezczynne.
 
-##  <a name="notifyresourcesexternallyidle"></a>  Ischeduler::notifyresourcesexternallyidle — metoda
+## <a name="notifyresourcesexternallyidle"></a>IScheduler:: NotifyResourcesExternallyIdle —, Metoda
 
-Powiadamia ten harmonogram, który wątków sprzętu reprezentowany przez zestaw korzeni procesora wirtualnego w tablicy `ppVirtualProcessorRoots` nie są używane przez inne transfery danych.
+Powiadamia ten harmonogram, że wątki sprzętowe reprezentowane przez zbiór katalogów głównych procesorów wirtualnych w tablicy `ppVirtualProcessorRoots` nie są używane przez inne harmonogramy.
 
-```
+```cpp
 virtual void NotifyResourcesExternallyIdle(
     _In_reads_(count) IVirtualProcessorRoot** ppVirtualProcessorRoots,
     unsigned int count) = 0;
@@ -152,26 +152,26 @@ virtual void NotifyResourcesExternallyIdle(
 ### <a name="parameters"></a>Parametry
 
 *ppVirtualProcessorRoots*<br/>
-Tablica `IVirtualProcessorRoot` interfejsów skojarzonych z wątków sprzętu, na których inne transfery danych mają przejdzie w stan bezczynności.
+Tablica interfejsów `IVirtualProcessorRoot` skojarzonych ze wątkami sprzętowymi, w których inne harmonogramy staną się bezczynne.
 
-*Liczba*<br/>
-Liczba `IVirtualProcessorRoot` interfejsów w tablicy.
+*count*<br/>
+Liczba interfejsów `IVirtualProcessorRoot` w tablicy.
 
 ### <a name="remarks"></a>Uwagi
 
-Istnieje możliwość dla wątku określonego sprzętu, który ma być przypisane do wielu harmonogramów w tym samym czasie. Jedną z przyczyn tego może być, że nie istnieją mała liczba wątków sprzętu w systemie, aby spełniać minimalne współbieżności dla wszystkich harmonogramów bez udostępniania zasobów. Inną możliwością jest, że zasoby tymczasowo są przypisywane do inne transfery danych, podczas będąca właścicielem harmonogram nie używa ich, za pomocą jego korzeni procesora wirtualnego wątek sprzętu dezaktywowane.
+Istnieje możliwość przypisania określonego wątku sprzętowego do wielu harmonogramów w tym samym czasie. Jedną z przyczyn tego problemu może być brak wystarczającej liczby wątków sprzętowych w systemie w celu zaspokojenia minimalnych współbieżności dla wszystkich harmonogramów bez udostępniania zasobów. Kolejną możliwością jest to, że zasoby są tymczasowo przypisywane do innych harmonogramów, gdy nie są one używane przez tego samego procesora wirtualnego w ramach tego wątku sprzętowego.
 
-Poziom subskrypcji wątku sprzętu jest oznaczona liczba wątków subskrybowanego i aktywowane korzeni procesora wirtualnego skojarzonego z tym wątkiem sprzętu. Z punktu widzenia określonego harmonogramu poziom subskrypcji zewnętrzny wątek sprzętu jest częścią subskrypcji, którą Współtworzenie inne transfery danych. Powiadomienia, że zasoby są zajęte zewnętrznie są wysyłane do harmonogramu, gdy poziom subskrypcji zewnętrzny wątek sprzętu znajduje się na wartość zero z poprzednią wartość dodatnią.
+Poziom subskrypcji wątku sprzętowego jest określany na podstawie liczby wątków subskrybowanych i aktywowanych katalogów głównych procesora wirtualnego skojarzonych z tym wątkiem sprzętowym. Z punktu widzenia określonego harmonogramu, zewnętrzny poziom subskrypcji wątku sprzętowego jest częścią subskrypcji, do której należy program. Powiadomienia, które zasoby są zajęte zewnętrznie, są wysyłane do harmonogramu, gdy poziom subskrypcji zewnętrznej dla wątku sprzętowego przypada na zero od poprzedniej wartości dodatniej.
 
-Powiadomienia za pośrednictwem tej metody są wysyłane tylko do których mają zasady gdzie wartość `MinConcurrency` klucz zasad jest równa wartości dla `MaxConcurrency` klucz zasad. Aby uzyskać więcej informacji na temat zasad harmonogramu, zobacz [SchedulerPolicy](schedulerpolicy-class.md).
+Powiadomienia za pośrednictwem tej metody są wysyłane tylko do harmonogramów mających zasady, w których wartość klucza zasad `MinConcurrency` jest równa wartości klucza zasad `MaxConcurrency`. Aby uzyskać więcej informacji na temat zasad usługi Scheduler, zobacz [SchedulerPolicy](schedulerpolicy-class.md).
 
-Harmonogram, który jest uprawniony do powiadomienia pobiera zestaw powiadomień w początkowej podczas jego tworzenia, powiadamiając go, czy zasoby, które właśnie zostało przypisane zewnętrznie zajęta lub bezczynności.
+Harmonogram, który kwalifikuje się do powiadomień, Pobiera zestaw początkowych powiadomień podczas jego tworzenia, informując o tym, czy zasoby, które zostały właśnie przypisane, są z zewnątrz zajęte lub bezczynne.
 
-##  <a name="removevirtualprocessors"></a>  Ischeduler::removevirtualprocessors — metoda
+## <a name="removevirtualprocessors"></a>IScheduler:: RemoveVirtualProcessors —, Metoda
 
-Powoduje zainicjowanie usuwania głównych procesorów wirtualnych, które wcześniej zostały przydzielone do tego harmonogramu.
+Inicjuje Usuwanie katalogów głównych procesorów wirtualnych, które zostały wcześniej przydzielono do tego harmonogramu.
 
-```
+```cpp
 virtual void RemoveVirtualProcessors(
     _In_reads_(count) IVirtualProcessorRoot** ppVirtualProcessorRoots,
     unsigned int count) = 0;
@@ -180,22 +180,22 @@ virtual void RemoveVirtualProcessors(
 ### <a name="parameters"></a>Parametry
 
 *ppVirtualProcessorRoots*<br/>
-Tablica `IVirtualProcessorRoot` interfejsów reprezentujący korzeni procesora wirtualnego, który ma zostać usunięty.
+Tablica interfejsów `IVirtualProcessorRoot` reprezentujących katalogi główne procesora wirtualnego do usunięcia.
 
-*Liczba*<br/>
-Liczba `IVirtualProcessorRoot` interfejsów w tablicy.
+*count*<br/>
+Liczba interfejsów `IVirtualProcessorRoot` w tablicy.
 
 ### <a name="remarks"></a>Uwagi
 
-Menedżer zasobów wywołuje `RemoveVirtualProcessors` metody, aby odzyskać zbiór korzeni procesora wirtualnego z harmonogramu. Harmonogram oczekuje się, aby wywołać [Usuń](iexecutionresource-structure.md#remove) metoda dla każdego interfejsu, gdy wszystko będzie gotowe, za pomocą korzeni procesora wirtualnego. Nie używaj `IVirtualProcessorRoot` interfejsu po wywołanych `Remove` metody na nim.
+Menedżer zasobów wywołuje metodę `RemoveVirtualProcessors` w celu przywrócenia zestawu katalogów głównych procesorów wirtualnych z harmonogramu. Harmonogram powinien wywołać metodę [Remove](iexecutionresource-structure.md#remove) dla każdego interfejsu, gdy zostanie on wykonany przy użyciu katalogów głównych procesora wirtualnego. Nie należy używać interfejsu `IVirtualProcessorRoot` po wywołaniu metody `Remove`.
 
-Parametr `ppVirtualProcessorRoots` wskazuje na tablicy interfejsów. Między zestawem głównych procesorów wirtualnych do usunięcia obiektów głównych nigdy nie został aktywowany mogą być zwrócone bezpośrednio za pomocą `Remove` metody. Elementy główne, które zostały aktywowane i są albo wykonywanej pracy, lub został zdezaktywowany i oczekuje na pracy zostanie dostarczona, ma zostać zwrócony asynchronicznie. Harmonogram musi zapewnić każda próba usunięcia procesora wirtualnego katalogu głównego tak szybko, jak to możliwe. Opóźniania usuwania głównych procesorów wirtualnych może spowodować niezamierzone nadsubskrypcji w obrębie harmonogramu.
+Parametr `ppVirtualProcessorRoots` wskazuje tablicę interfejsów. Poza zestawem katalogów głównych procesorów wirtualnych, które mają zostać usunięte, elementy główne nigdy nie zostały aktywowane mogą być zwracane natychmiast przy użyciu metody `Remove`. Elementy główne, które zostały aktywowane i są wykonywane w pracy lub zostały zdezaktywowane i oczekują na nadejście pracy, powinny być zwracane asynchronicznie. Harmonogram musi wykonać każdą próbę usunięcia katalogu głównego wirtualnego procesora tak szybko, jak to możliwe. Opóźnienie usunięcia katalogów głównych procesorów wirtualnych może skutkować niezamierzoną subskrypcją w ramach harmonogramu.
 
-##  <a name="statistics"></a>  Ischeduler::statistics — metoda
+## <a name="statistics"></a>IScheduler:: Statistics — Metoda
 
-Zawiera informacje dotyczące stawek przybycia i ukończenia zadania w celu zmiany długości kolejki dla harmonogramu.
+Zawiera informacje dotyczące szybkości przybycia i ukończenia zadania oraz zmiany długości kolejki dla harmonogramu.
 
-```
+```cpp
 virtual void Statistics(
     _Out_ unsigned int* pTaskCompletionRate,
     _Out_ unsigned int* pTaskArrivalRate,
@@ -205,26 +205,26 @@ virtual void Statistics(
 ### <a name="parameters"></a>Parametry
 
 *pTaskCompletionRate*<br/>
-Liczba zadań wykonanych przez harmonogram od czasu ostatniego wywołania tej metody.
+Liczba zadań ukończonych przez harmonogram od momentu ostatniego wywołania tej metody.
 
 *pTaskArrivalRate*<br/>
-Liczba zadań, które zostały dostarczone w ramach harmonogramu zadań od momentu ostatniego wywołania tej metody.
+Liczba zadań, które dotarły do harmonogramu od momentu ostatniego wywołania tej metody.
 
 *pNumberOfTasksEnqueued*<br/>
 Całkowita liczba zadań we wszystkich kolejkach harmonogramu.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest wywoływana przez Menedżera zasobów w celu zbierania statystyk dla harmonogramu. Dane statystyczne zebrane w tym miejscu będzie służyć do kierowania algorytmy dynamiczne opinii można określić, kiedy należy przypisać więcej zasobów do harmonogramu i natychmiast wykonać zasobów. Wartości podane przez harmonogram może być optymistyczne i nie musisz dokładnie odzwierciedlają bieżącą liczbę.
+Ta metoda jest wywoływana przez Menedżer zasobów w celu zbierania statystyk dla harmonogramu. Przedstawione tutaj dane statystyczne zostaną użyte do określenia dynamicznych algorytmów przesyłania opinii, aby określić, kiedy należy przypisać więcej zasobów do harmonogramu i kiedy należy zająć się zasobami. Wartości podane w harmonogramie mogą być optymistyczne i niekoniecznie odzwierciedlać aktualną liczbę.
 
-Należy zaimplementować tę metodę, jeśli chcesz, aby Menedżer zasobów na potrzeby swoją opinię na temat takich zadań jako zadanie przybycia ustalić sposób równoważenia zasobów między harmonogramu i innych harmonogramów zarejestrowane przy użyciu usługi Resource Manager. Jeśli wybierzesz nie zebrać dane statystyczne, można ustawić klucza zasad `DynamicProgressFeedback` wartość `DynamicProgressFeedbackDisabled` w zasady usługi harmonogramu i zasobów Manager nie będzie wywołania tej metody na harmonogramu.
+Ta metoda powinna zostać zaimplementowana, jeśli chcesz, aby Menedżer zasobów do przesyłania opinii na temat takich czynności jak w przypadku przybycia zadania, aby określić, jak zrównoważyć zasób między harmonogramem i innymi harmonogramami zarejestrowanymi w Menedżer zasobów. Jeśli zdecydujesz się nie zbierać statystyk, możesz ustawić klucz zasad `DynamicProgressFeedback` na wartość `DynamicProgressFeedbackDisabled` w zasadach harmonogramu, a Menedżer zasobów nie wywoła tej metody w harmonogramie.
 
-W przypadku braku informacji statystycznych Menedżer zasobów użyje poziomy subskrypcji wątków sprzętu podjąć decyzje dotyczące zasobów alokacji i migracji. Aby uzyskać więcej informacji na temat poziomów subskrypcji, zobacz [iexecutionresource::currentsubscriptionlevel —](iexecutionresource-structure.md#currentsubscriptionlevel).
+W przypadku braku informacji statystycznych, Menedżer zasobów będzie używać poziomów subskrypcji wątków sprzętowych do podejmowania decyzji dotyczących alokacji zasobów i migracji. Aby uzyskać więcej informacji na temat poziomów subskrypcji, zobacz [IExecutionResource:: CurrentSubscriptionLevel —](iexecutionresource-structure.md#currentsubscriptionlevel).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
-[PolicyElementKey](concurrency-namespace-enums.md)<br/>
+[PolicyElementKey —](concurrency-namespace-enums.md)<br/>
 [SchedulerPolicy, klasa](schedulerpolicy-class.md)<br/>
 [IExecutionContext, struktura](iexecutioncontext-structure.md)<br/>
 [IThreadProxy, struktura](ithreadproxy-structure.md)<br/>

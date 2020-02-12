@@ -1,5 +1,5 @@
 ---
-title: 'Obiekty danych i źródeł danych: Tworzenie i likwidacja'
+title: 'Obiekty danych i źródła danych: tworzenie i likwidacja'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - destroying data objects [MFC]
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - destruction [MFC], data objects
 - data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
-ms.openlocfilehash: 68ee5fbfec554df8865ca50c265ca2fa2f226a29
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c5bbc2b3e19278a397e13c9b936d2434570c581c
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241161"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127423"
 ---
-# <a name="data-objects-and-data-sources-creation-and-destruction"></a>Obiekty danych i źródeł danych: Tworzenie i likwidacja
+# <a name="data-objects-and-data-sources-creation-and-destruction"></a>Obiekty danych i źródła danych: tworzenie i likwidacja
 
-Zgodnie z opisem w artykule [obiekty danych i źródeł danych (OLE)](../mfc/data-objects-and-data-sources-ole.md), obiekty danych i źródeł danych reprezentują obie strony transferu danych. W tym artykule wyjaśniono, kiedy należy tworzyć i niszczyć te obiekty i źródeł, aby prawidłowo, wykonaj usługi transfery danych w tym:
+Zgodnie z opisem w temacie [obiekty danych artykułu i źródła danych (OLE)](../mfc/data-objects-and-data-sources-ole.md), obiekty danych i źródła danych reprezentują obie strony transferu danych. W tym artykule wyjaśniono, kiedy należy utworzyć i zniszczyć te obiekty i źródła w celu prawidłowego przeprowadzenia transferów danych, w tym:
 
 - [Tworzenie obiektów danych](#_core_creating_data_objects)
 
@@ -34,55 +34,55 @@ Zgodnie z opisem w artykule [obiekty danych i źródeł danych (OLE)](../mfc/dat
 
 - [Niszczenie źródeł danych](#_core_destroying_data_sources)
 
-##  <a name="_core_creating_data_objects"></a> Tworzenie obiektów danych
+##  <a name="_core_creating_data_objects"></a>Tworzenie obiektów danych
 
-Obiekty danych są używane przez aplikację docelową — klienta lub serwera. Obiekt danych w aplikacji docelowej jest jednym końcu połączenie między usługą aplikacji źródłowej i docelowej. Obiekt danych w aplikacji docelowej służy do dostępu i interakcję z danymi w źródle danych.
+Obiekty danych są używane przez aplikację docelową — klienta lub serwera. Obiekt danych w aplikacji docelowej jest jednym końcem połączenia między aplikacją źródłową a aplikacją docelową. Obiekt danych w aplikacji docelowej służy do uzyskiwania dostępu do danych w źródle danych i korzystania z nich.
 
-Istnieją dwie typowe sytuacje, w których wymagane jest obiekt danych. Pierwszy sytuacja po upuszczeniu danych w aplikacji za pomocą przeciągania i upuszczania. Druga sytuacja jest po wybraniu z menu Edycja Wklej lub Wklej specjalne.
+Istnieją dwie typowe sytuacje, w których obiekt danych jest wymagany. Pierwsza sytuacja polega na tym, że dane są porzucane w aplikacji za pomocą przeciągania i upuszczania. Druga sytuacja polega na wybraniu opcji Wklej lub Wklej specjalnie z menu Edycja.
 
-W sytuacji, przeciągnij i upuść nie trzeba utworzyć obiekt danych. Wskaźnik do istniejącego obiektu danych, które zostaną przekazane do usługi `OnDrop` funkcji. Ten obiekt danych jest tworzony przez strukturę w ramach operacji przeciągania i upuszczania oraz zostaną również usunięte przez nią. Nie zawsze jest to wymagane podczas wklejania odbywa się przy użyciu innej metody. Aby uzyskać więcej informacji, zobacz [niszczenie obiektów danych](#_core_destroying_data_objects).
+W przypadku przeciągania i upuszczania nie trzeba tworzyć obiektu danych. Wskaźnik do istniejącego obiektu danych zostanie przesłany do funkcji `OnDrop`. Ten obiekt danych jest tworzony przez platformę jako część operacji przeciągania i upuszczania, a także zostanie zniszczony przez nią. Nie zawsze jest to przypadek, gdy wklejanie jest wykonywane przez inną metodę. Aby uzyskać więcej informacji, zobacz [niszczenie obiektów danych](#_core_destroying_data_objects).
 
-Jeśli aplikacja działa, wklejanie lub Wklej specjalnej operacji, należy utworzyć `COleDataObject` obiektu, a następnie wywołać jej `AttachClipboard` funkcja elementu członkowskiego. Spowoduje to skojarzenie obiektu danych przy użyciu danych w Schowku. Następnie można ten obiekt danych w funkcji Wklej.
+Jeśli aplikacja wykonuje operację wklejania lub wklejania, należy utworzyć obiekt `COleDataObject` i wywołać jego funkcję składową `AttachClipboard`. Spowoduje to skojarzenie obiektu danych z danymi w Schowku. Następnie można użyć tego obiektu danych w funkcji wklejania.
 
-##  <a name="_core_destroying_data_objects"></a> Niszczenie obiektów danych
+##  <a name="_core_destroying_data_objects"></a>Niszczenie obiektów danych
 
-Jeśli stosujesz schematu, opisanego w [tworzenia obiektów danych](#_core_creating_data_objects), niszczenie obiektów danych jest prosta aspektem transferów danych. Obiekt danych, który został utworzony w funkcji Wklej jest niszczony, MFC, po powrocie funkcji Wklej.
+Jeśli zastosujesz schemat opisany w temacie [Tworzenie obiektów danych](#_core_creating_data_objects), niszczenie obiektów danych jest prostym aspektem transferów danych. Obiekt danych, który został utworzony w funkcji wklejania, zostanie zniszczony przez MFC, gdy funkcja wklejania zwróci wartość.
 
-Jeśli wykonasz innej metody obsługi operacji wklejania, upewnij się, że obiekt jest niszczony, po zakończeniu operacji wklejania. Do momentu zniszczenia obiektu danych nie było możliwe dla każdej aplikacji pomyślnie skopiować dane do Schowka.
+Jeśli korzystasz z innej metody obsługi operacji wklejania, upewnij się, że obiekt danych został zniszczony po zakończeniu operacji wklejania. Dopóki obiekt danych nie zostanie zniszczony, nie będzie możliwe, aby każda aplikacja pomyślnie skopiował dane do Schowka.
 
-##  <a name="_core_creating_data_sources"></a> Tworzenie źródeł danych
+##  <a name="_core_creating_data_sources"></a>Tworzenie źródeł danych
 
-Źródła danych są używane przez źródło transfer danych, która może być klienta lub po stronie serwera, transferu danych. Źródło danych w aplikacji źródłowej jest jeden z końców połączenia między aplikacji źródłowej i docelowej. Obiekt danych w aplikacji docelowej służy do interakcji z danymi w źródle danych.
+Źródła danych są używane przez źródło transferu danych, które mogą być klientem lub po stronie serwera transferu danych. Źródło danych w aplikacji źródłowej jest jednym końcem połączenia między aplikacją źródłową a aplikacją docelową. Obiekt danych w aplikacji docelowej jest używany do korzystania z danych w źródle danych.
 
-Źródła danych są tworzone, gdy aplikacja potrzebuje do kopiowania danych do Schowka. Typowy scenariusz uruchamia się następująco:
+Źródła danych są tworzone, gdy aplikacja wymaga kopiowania danych do Schowka. Typowy scenariusz działa następująco:
 
-1. Gdy użytkownik wybierze niektórych danych.
+1. Użytkownik wybiera pewne dane.
 
-1. Użytkownik wybierze **kopiowania** (lub **Wytnij**) z **Edytuj** menu lub rozpoczyna się operacja przeciągania i upuszczania.
+1. Użytkownik wybiera polecenie **Kopiuj** (lub **Wytnij**) z menu **Edytuj** lub rozpoczyna operację przeciągania i upuszczania.
 
-1. W zależności od projektu program, aplikacja tworzy albo `COleDataSource` lub obiektu z klasą pochodną `COleDataSource`.
+1. W zależności od projektu programu aplikacja tworzy obiekt `COleDataSource` lub obiekt z klasy pochodnej z `COleDataSource`.
 
-1. Wybrane dane są wstawiane do źródła danych, wywołując jedną z funkcji w `COleDataSource::CacheData` lub `COleDataSource::DelayRenderData` grup.
+1. Wybrane dane są wstawiane do źródła danych przez wywołanie jednej z funkcji w grupach `COleDataSource::CacheData` lub `COleDataSource::DelayRenderData`.
 
-1. Wywołania aplikacji `SetClipboard` funkcji składowej (lub `DoDragDrop` funkcja elementu członkowskiego, jeśli jest to operacja przeciągania i upuszczania) należące do obiektu, który został utworzony w kroku 3.
+1. Aplikacja wywołuje funkcję elementu członkowskiego `SetClipboard` (lub `DoDragDrop` funkcji członkowskiej, jeśli jest to operacja przeciągania i upuszczania) należących do obiektu utworzonego w kroku 3.
 
-1. Jeśli jest to **Wytnij** operacji lub `DoDragDrop` zwraca **DROPEFFECT_MOVE**, wybrane w kroku 1 dane są usuwane z dokumentu.
+1. Jeśli jest to operacja **wycinania** lub `DoDragDrop` zwraca **DROPEFFECT_MOVE**, dane wybrane w kroku 1 zostaną usunięte z dokumentu.
 
-Ten scenariusz jest implementowany przez przykłady MFC OLE [OCLIENT](../overview/visual-cpp-samples.md) i [HIERSVR](../overview/visual-cpp-samples.md). Przyjrzyj się źródła dla każdej aplikacji `CView`-klasy dla wszystkie elementy oprócz `GetClipboardData` i `OnGetClipboardData` funkcji. Te dwie funkcje są albo `COleClientItem` lub `COleServerItem`-implementacji klasy pochodnej. Te przykładowe programy zapewniają dobrym przykładem sposobu wdrożenia tych pojęć.
+Ten scenariusz jest implementowany przez przykłady MFC OLE [OCLIENT](../overview/visual-cpp-samples.md) i [HIERSVR](../overview/visual-cpp-samples.md). Przyjrzyj się źródłu dla każdej klasy pochodnej `CView`dla wszystkich, ale funkcji `GetClipboardData` i `OnGetClipboardData`. Te dwie funkcje są w implementacjach klasy `COleClientItem` lub `COleServerItem`. Te przykładowe programy zapewniają dobry przykład implementacji tych koncepcji.
 
-Jeden innej sytuacji, w których warto utworzyć `COleDataSource` obiekt występuje w przypadku modyfikowania domyślne zachowanie operacji przeciągania i upuszczania. Aby uzyskać więcej informacji, zobacz [przeciąganie i upuszczanie: Dostosowywanie](../mfc/drag-and-drop-customizing.md) artykułu.
+Jedną inną sytuacją, w której można utworzyć obiekt `COleDataSource`, występuje w przypadku modyfikowania domyślnego zachowania operacji przeciągania i upuszczania. Aby uzyskać więcej informacji, zobacz [Przeciąganie i upuszczanie OLE: Dostosowywanie artykułu przeciągnij i upuść](../mfc/drag-and-drop-ole.md#customize-drag-and-drop) .
 
-##  <a name="_core_destroying_data_sources"></a> Niszczenie źródeł danych
+##  <a name="_core_destroying_data_sources"></a>Niszczenie źródeł danych
 
-Źródła danych musi zostać zniszczona przez aplikację, która jest obecnie odpowiedzialnych za. W sytuacjach, w którym przekazać źródła danych do OLE, takich jak wywoływanie [COleDataSource::DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop), należy wywołać `pDataSrc->InternalRelease`. Na przykład:
+Źródła danych muszą zostać zniszczone przez aplikację, która jest aktualnie odpowiedzialna za nie. W sytuacjach, w których Źródło danych jest dostępne dla OLE, takie jak wywołanie [by uzyskać COleDataSource::D odragdrop](../mfc/reference/coledatasource-class.md#dodragdrop), należy wywołać `pDataSrc->InternalRelease`. Na przykład:
 
 [!code-cpp[NVC_MFCListView#1](../atl/reference/codesnippet/cpp/data-objects-and-data-sources-creation-and-destruction_1.cpp)]
 
-Jeśli masz nie przekazywane źródła danych OLE, a następnie odpowiedzialność za zniszczenie, podobnie jak w przypadku dowolnego typowego obiektu języka C++.
+Jeśli źródło danych nie zostało przekazane do OLE, użytkownik jest odpowiedzialny za ich zniszczenie, podobnie jak w przypadku każdego typowego C++ obiektu.
 
-Aby uzyskać więcej informacji, zobacz [przeciąganie i upuszczanie](../mfc/drag-and-drop-ole.md), [Schowka](../mfc/clipboard.md), i [manipulowanie obiekty danych i źródeł danych](../mfc/data-objects-and-data-sources-manipulation.md).
+Aby uzyskać więcej informacji, zobacz [Przeciąganie i upuszczanie](../mfc/drag-and-drop-ole.md), [schowek](../mfc/clipboard.md)i [manipulowanie obiektami danych i źródłami danych](../mfc/data-objects-and-data-sources-manipulation.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obiekty danych i źródła danych (OLE)](../mfc/data-objects-and-data-sources-ole.md)<br/>
 [Klasa COleDataObject](../mfc/reference/coledataobject-class.md)<br/>

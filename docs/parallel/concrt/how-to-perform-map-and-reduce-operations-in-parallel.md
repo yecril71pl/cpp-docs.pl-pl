@@ -1,47 +1,47 @@
 ---
-title: 'Instrukcje: Wykonywanie mapowania i zmniejszanie operacji wykonywane równolegle'
+title: 'Porady: wykonywanie mapowania i zmniejszanie operacji wykonywane równolegle'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - parallel_transform function, example
 - parallel map and reduce, example
 - parallel_reduce function, example
 ms.assetid: 9d19fac0-4ab6-4380-a375-3b18eeb87720
-ms.openlocfilehash: ba3ffb5cdae7dcc6f108f005fab33f9a1fee6a6f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 599e46c05a91a1f2ea6e317fe024d3c98a78977f
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412712"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141710"
 ---
-# <a name="how-to-perform-map-and-reduce-operations-in-parallel"></a>Instrukcje: Wykonywanie mapowania i zmniejszanie operacji wykonywane równolegle
+# <a name="how-to-perform-map-and-reduce-operations-in-parallel"></a>Porady: wykonywanie mapowania i zmniejszanie operacji wykonywane równolegle
 
-W tym przykładzie pokazano, jak używać [concurrency::parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform) i [concurrency::parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce) algorytmów i [concurrency::concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md)klasy Liczenie wystąpień słowa w plikach.
+W tym przykładzie pokazano, jak używać algorytmów [concurrency::p arallel_transform](reference/concurrency-namespace-functions.md#parallel_transform) i [concurrency::p arallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce) , a klasa [concurrency:: concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md) , aby zliczyć wystąpienia wyrazów w plikach.
 
-A *mapy* operacja dotyczy funkcji każdej wartości w sekwencji. A *zmniejszyć* operacji łączy elementy sekwencji w jedną wartość. Możesz użyć standardowej biblioteki C++ [std::transform](../../standard-library/algorithm-functions.md#transform) i [std::accumulate](../../standard-library/numeric-functions.md#accumulate) funkcji wykonywanie mapowania i zmniejszanie operacji. Jednak aby zwiększyć wydajność wiele problemów, można użyć `parallel_transform` algorytmu do wykonania tej operacji mapy równolegle i `parallel_reduce` algorytmu do wykonania tej operacji Zmniejsz równolegle. W niektórych przypadkach można użyć `concurrent_unordered_map` do wykonania w ramach jednej operacji mapowania i redukcji.
+Operacja *mapy* stosuje funkcję do każdej wartości w sekwencji. Operacja *redukcji* łączy elementy sekwencji w jedną wartość. Można użyć C++ standardowych bibliotek [std:: Transform](../../standard-library/algorithm-functions.md#transform) i [std:: akumulacji](../../standard-library/numeric-functions.md#accumulate) do wykonywania map i zmniejszania operacji. Jednak aby zwiększyć wydajność wielu problemów, można użyć algorytmu `parallel_transform`, aby wykonać operację mapowania równolegle i algorytmem `parallel_reduce`, aby wykonać operację zmniejszania równolegle. W niektórych przypadkach można użyć `concurrent_unordered_map` do przeprowadzenia mapy i zmniejszenia w jednej operacji.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład zlicza wystąpienia słów w plikach. Używa ona [std::vector](../../standard-library/vector-class.md) do reprezentowania zawartości dwóch plików. Operacja mapy oblicza wystąpień poszczególnych wyrazów w przypadku każdego wektora. Operacja Zmniejsz gromadzi liczba znaków w obu wektorów.
+Poniższy przykład zlicza wystąpienia wyrazów w plikach. Używa [std:: Vector](../../standard-library/vector-class.md) do reprezentowania zawartości dwóch plików. Operacja mapy oblicza wystąpienia każdego wyrazu w każdym wektorze. Operacja zmniejszania sumuje wyrazy w obu wektorach.
 
 [!code-cpp[concrt-parallel-map-reduce#1](../../parallel/concrt/codesnippet/cpp/how-to-perform-map-and-reduce-operations-in-parallel_1.cpp)]
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
-Aby skompilować ten kod, skopiuj go a następnie wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `parallel-map-reduce.cpp` , a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
+Aby skompilować kod, skopiuj go, a następnie wklej w projekcie programu Visual Studio lub wklej go w pliku o nazwie `parallel-map-reduce.cpp` a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
 
-**Cl.exe/ehsc równoległych map-reduce.cpp**
+> **CL. exe/EHsc Parallel-Map-Reduce. cpp**
 
-## <a name="robust-programming"></a>Niezawodne programowanie
+## <a name="robust-programming"></a>Skuteczne programowanie
 
-W tym przykładzie można użyć `concurrent_unordered_map` klasy, który jest zdefiniowany w concurrent_unordered_map.h—to wykonywanie mapowania i zmniejszenie w ramach jednej operacji.
+W tym przykładzie można użyć klasy `concurrent_unordered_map`, która jest zdefiniowana w concurrent_unordered_map. h — do przeprowadzenia mapy i zmniejszenia w jednej operacji.
 
 [!code-cpp[concrt-parallel-map-reduce#2](../../parallel/concrt/codesnippet/cpp/how-to-perform-map-and-reduce-operations-in-parallel_2.cpp)]
 
-Zazwyczaj zrównoleglić tylko zewnętrznego lub wewnętrznego pętli. Jeśli masz stosunkowo niewielką liczbą plików, a każdy plik zawiera wiele słów, zrównoleglić wewnętrzną pętlę. Jeśli posiadasz stosunkowo wiele plików, a każdy plik zawiera kilka słów, zrównoleglić zewnętrzna pętla.
+Zazwyczaj zrównoleglanie jest tylko zewnętrzna lub wewnętrzna pętla. Zrównoleglanie wewnętrzną pętlę, jeśli masz stosunkowo mało plików, a każdy plik zawiera wiele wyrazów. Zrównoleglanie pętlę zewnętrzną, jeśli masz stosunkowo wiele plików, a każdy plik zawiera kilka wyrazów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md)<br/>
-[parallel_transform Function](reference/concurrency-namespace-functions.md#parallel_transform)<br/>
-[parallel_reduce Function](reference/concurrency-namespace-functions.md#parallel_reduce)<br/>
+[Funkcja parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform)<br/>
+[Funkcja parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce)<br/>
 [concurrent_unordered_map, klasa](../../parallel/concrt/reference/concurrent-unordered-map-class.md)

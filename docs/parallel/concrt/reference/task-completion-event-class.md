@@ -10,20 +10,20 @@ f1_keywords:
 helpviewer_keywords:
 - task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-ms.openlocfilehash: 9d0ab271b20eb02c1dc4cb8e54cf2632eead4325
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3e3093cb76df507f8c707e497c9aec75a065057
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212888"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142597"
 ---
-# <a name="taskcompletionevent-class"></a>task_completion_event — Klasa
+# <a name="task_completion_event-class"></a>task_completion_event — Klasa
 
-`task_completion_event` Klasa umożliwia opóźnienie wykonania zadania, dopóki nie zostanie spełniony jakiś warunek, lub uruchomić zadanie w odpowiedzi na zdarzenie zewnętrzne.
+Klasa `task_completion_event` pozwala opóźniać wykonywanie zadania do momentu spełnienia warunku lub uruchomić zadanie w odpowiedzi na zdarzenie zewnętrzne.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 template<typename _ResultType>
 class task_completion_event;
 
@@ -31,33 +31,33 @@ template<>
 class task_completion_event<void>;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
 *_ResultType*<br/>
-Typ wyniku `task_completion_event` klasy.
+Typ wyniku tej klasy `task_completion_event`.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[task_completion_event](#ctor)|Konstruuje `task_completion_event` obiektu.|
+|[task_completion_event](#ctor)|Konstruuje obiekt `task_completion_event`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[set](#set)|Przeciążone. Ustawia zdarzenie zakończenia zadania.|
-|[set_exception](#set_exception)|Przeciążone. Propaguje wyjątek wszystkie zadań skojarzonych z tym zdarzeniem.|
+|[set](#set)|Przeciążone. Ustawia zdarzenie ukończenia zadania.|
+|[set_exception](#set_exception)|Przeciążone. Propaguje wyjątek do wszystkich zadań skojarzonych z tym zdarzeniem.|
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj zadania utworzonego z zdarzenie zakończenia zadania w przypadku danego scenariusza należy utworzyć zadanie, które zostanie ukończone, a tym samym mają jego kontynuacje zostaną zaplanowane do wykonania w pewnym momencie w przyszłości. `task_completion_event` Muszą mieć taki sam jak zadania, tworzenie i wywoływanie metody set na zdarzenie zakończenia zadania z wartością tego typu będą spowodować zakończenie zadania skojarzonego i w efekcie dostarczy tę wartość do jego kontynuacji.
+Użyj zadania utworzonego na podstawie zdarzenia ukończenia zadania, gdy scenariusz wymaga utworzenia zadania, które zostanie ukończone, a tym samym zaplanowano kontynuację wykonywania w pewnym momencie w przyszłości. `task_completion_event` musi mieć ten sam typ co zadanie, które tworzysz, i wywołanie metody Set dla zdarzenia ukończenia zadania o wartości tego typu spowoduje zakończenie skojarzonego zadania i podanie tej wartości w wyniku kontynuacji.
 
-Jeśli nigdy nie jest sygnalizowane zdarzenie zakończenia zadania, każde zadanie utworzone na jego podstawie zostanie anulowane, gdy jest usuwane.
+Jeśli zdarzenie ukończenia zadania nigdy nie zostanie sygnalizowane, wszystkie zadania utworzone na podstawie tego zdarzenia zostaną anulowane po jego zarejestrowaniu.
 
-`task_completion_event` zachowuje się jak inteligentny wskaźnik i powinien być przekazywany przez wartość.
+`task_completion_event` zachowuje się jak inteligentny wskaźnik i powinny być przesyłane przez wartość.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -65,15 +65,15 @@ Jeśli nigdy nie jest sygnalizowane zdarzenie zakończenia zadania, każde zadan
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** ppltasks.h
+**Nagłówek:** ppltasks. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="set"></a> Zestaw
+## <a name="set"></a>zbiór
 
-Ustawia zdarzenie zakończenia zadania.
+Ustawia zdarzenie ukończenia zadania.
 
-```
+```cpp
 bool set(_ResultType _Result) const ;
 
 bool set() const ;
@@ -82,21 +82,21 @@ bool set() const ;
 ### <a name="parameters"></a>Parametry
 
 *_Result*<br/>
-Wynik, który ma ustawione to zdarzenie z.
+Wynik do ustawienia dla tego zdarzenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Metoda ta zwraca **true** Jeśli pomyślnie ustawiła zdarzenie. Zwraca **false** Jeśli zdarzenie jest już ustawiona.
+Metoda zwraca **wartość true** , jeśli w ustawieniu zdarzenia zakończyło się pomyślnie. Zwraca **wartość false** , jeśli zdarzenie jest już ustawione.
 
 ### <a name="remarks"></a>Uwagi
 
-Obecności wielu lub współbieżnych wywołań `set`, tylko pierwsze wywołanie zostanie wykonane pomyślnie i jego wynik (jeśli istnieje), które będą przechowywane na zdarzenie zakończenia zadania. Pozostałe zestawy są ignorowane, a metoda zwróci wartość false. Po ustawieniu zdarzenia zakończenia zadania, wszystkie zadania utworzone na podstawie że zdarzenia zostaną natychmiast ukończone, a jego kontynuacje, jeśli istnieje, zostanie zaplanowana. Obiekty ukończenia, które mają zadań `_ResultType` innych niż **void** przekazują wartość do ich kontynuacji.
+W obecności wielu lub współbieżnych wywołań do `set`tylko pierwsze wywołanie powiedzie się, a jego wynik (jeśli istnieje) będzie przechowywany w zdarzeniu ukończenia zadania. Pozostałe zestawy są ignorowane, a metoda zwróci wartość false. Po ustawieniu zdarzenia ukończenia zadania wszystkie zadania utworzone na podstawie tego zdarzenia zostaną wykonane natychmiast, a jego kontynuacje (jeśli istnieją) zostaną zaplanowane. Obiekty uzupełniania zadań, które mają `_ResultType` inne niż **void** , będą przekazywać wartość do ich kontynuacji.
 
-##  <a name="set_exception"></a> set_exception
+## <a name="set_exception"></a>set_exception
 
-Propaguje wyjątek wszystkie zadań skojarzonych z tym zdarzeniem.
+Propaguje wyjątek do wszystkich zadań skojarzonych z tym zdarzeniem.
 
-```
+```cpp
 template<typename _E>
 __declspec(noinline) bool set_exception(_E _Except) const;
 
@@ -109,21 +109,21 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
 Typ wyjątku.
 
 *_Except*<br/>
-Wyjątek, aby ustawić.
+Wyjątek do ustawienia.
 
 *_ExceptionPtr*<br/>
-Wskaźnik wyjątek, aby ustawić.
+Wskaźnik wyjątku do ustawienia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-##  <a name="ctor"></a> task_completion_event —
+## <a name="ctor"></a>task_completion_event
 
-Konstruuje `task_completion_event` obiektu.
+Konstruuje obiekt `task_completion_event`.
 
-```
+```cpp
 task_completion_event();
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

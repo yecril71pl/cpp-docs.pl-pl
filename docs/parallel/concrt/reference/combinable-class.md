@@ -12,56 +12,56 @@ f1_keywords:
 helpviewer_keywords:
 - combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-ms.openlocfilehash: 05256516c0a693a282b8d0de56d6c9e7465f2740
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1954cd3a69233deed053da5b5fdef0dbc183b80
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252974"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141433"
 ---
 # <a name="combinable-class"></a>combinable — Klasa
 
-`combinable<T>` Obiektu mają na celu dostarczenie prywatnego wątku kopie danych w celu wykonywania obliczeń podrzędnych wolne od blokady wątków lokalnych podczas algorytmy równoległe. Na koniec operacji równoległej obliczeń podrzędnych prywatnego wątku może następnie zostać scalony wynik końcowy. Ta klasa można używać zamiast udostępnionej zmiennej i może spowodować zwiększenie wydajności, jeśli w przeciwnym razie będzie wiele rywalizacji o zasoby w tej zmiennej udostępnionych.
+Obiekt `combinable<T>` jest przeznaczony do dostarczania prywatnych kopii wątku danych w celu wykonania niezależnych od siebie podobliczeń wątku podczas równoległych algorytmów. Na końcu operacji równoległej podobliczenia wątku i prywatnego mogą zostać następnie scalone w wynik końcowy. Ta klasa może być używana zamiast zmiennej udostępnionej i może skutkować zwiększeniem wydajności, jeśli w przeciwnym razie będzie wiele rywalizacji dotyczących tej zmiennej udostępnionej.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 template<typename T>
 class combinable;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Typ danych scalonych wynik końcowy. Typ musi mieć Konstruktor kopiujący i domyślnego konstruktora.
+*&*<br/>
+Typ danych końcowego scalonego wyniku. Typ musi mieć konstruktora kopiującego i domyślnego konstruktora.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[combinable —](#ctor)|Przeciążone. Tworzy nowy `combinable` obiektu.|
-|[~ combinable — destruktor](#dtor)|Niszczy `combinable` obiektu.|
+|[combinable](#ctor)|Przeciążone. Tworzy nowy obiekt `combinable`.|
+|[~ Destruktor z kombinacją](#dtor)|Niszczy obiekt `combinable`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[Usuń zaznaczenie](#clear)|Czyści wszystkie wyniki pośrednie obliczeniową podczas korzystania z poprzedniego.|
-|[combine](#combine)|Oblicza wartość końcową z zestawu obliczeń podrzędnych lokalnej wątku, wywołując funkcję łączenia podane.|
-|[combine_each](#combine_each)|Oblicza wartość końcową z zestawu obliczeń podrzędnych lokalnej wątku, wywołując funkcję łączenia podane raz na obliczenie podrzędnych lokalnej wątku. Wynik końcowy są zbierane przez obiekt funkcji.|
-|[local](#local)|Przeciążone. Zwraca odwołanie do obliczeń podrzędnych prywatnego wątku.|
+|[Wyczyść](#clear)|Czyści wszystkie pośrednie wyniki obliczeniowe z poprzedniego użycia.|
+|[żądany](#combine)|Oblicza wartość końcową z zestawu podobliczeń wątku lokalnego przez wywołanie dostarczonego Funktor łączenia.|
+|[combine_each](#combine_each)|Oblicza wartość końcową z zestawu podobliczeń wątku lokalnego przez wywołanie dostarczonego Funktor, gdy podobliczanie wątku jest podręczne. Końcowy wynik jest kumulowany przez obiekt Function.|
+|[local](#local)|Przeciążone. Zwraca odwołanie do podobliczenia wątku-Private.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[operator=](#operator_eq)|Przypisuje `combinable` obiektu z innego `combinable` obiektu.|
+|[operator =](#operator_eq)|Przypisuje do obiektu `combinable` z innego obiektu `combinable`.|
 
 ## <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [równoległe kontenery oraz obiekty](../../../parallel/concrt/parallel-containers-and-objects.md).
+Aby uzyskać więcej informacji, zobacz [Parallel Containers and Objects](../../../parallel/concrt/parallel-containers-and-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -69,23 +69,23 @@ Aby uzyskać więcej informacji, zobacz [równoległe kontenery oraz obiekty](..
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** ppl.h
+**Nagłówek:** PPL. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="clear"></a> Usuń zaznaczenie
+## <a name="clear"></a>Wyczyść
 
-Czyści wszystkie wyniki pośrednie obliczeniową podczas korzystania z poprzedniego.
+Czyści wszystkie pośrednie wyniki obliczeniowe z poprzedniego użycia.
 
-```
+```cpp
 void clear();
 ```
 
-##  <a name="ctor"></a> combinable —
+## <a name="ctor"></a>combinable
 
-Tworzy nowy `combinable` obiektu.
+Tworzy nowy obiekt `combinable`.
 
-```
+```cpp
 combinable();
 
 template <typename _Function>
@@ -97,35 +97,35 @@ combinable(const combinable& _Copy);
 ### <a name="parameters"></a>Parametry
 
 *_Function*<br/>
-Typ obiektu funktor inicjowania.
+Typ obiektu inicjującego Funktor.
 
 *_FnInitialize*<br/>
-Funkcja, która zostanie wywołana w celu zainicjowania każdej nowej wartości prywatnego wątku typu `T`. Sieć VPN musi obsługiwać operatorem wywołania funkcji z podpisem `T ()`.
+Funkcja, która zostanie wywołana w celu zainicjowania każdej nowej wartości Private wątku typu `T`. Musi obsługiwać operator wywołania funkcji z podpisem `T ()`.
 
 *_Copy*<br/>
-Istniejące `combinable` obiektu do skopiowania do tego.
+Istniejący obiekt `combinable` do skopiowania do tego obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor inicjuje nowe elementy przy użyciu domyślnego konstruktora dla typu `T`.
+Pierwszy Konstruktor inicjuje nowe elementy z konstruktorem domyślnym dla typu `T`.
 
-Drugi Konstruktor inicjuje nowe elementy przy użyciu funktor inicjowania podana jako `_FnInitialize` parametru.
+Drugi Konstruktor inicjuje nowe elementy przy użyciu Funktor inicjacji dostarczonego jako parametr `_FnInitialize`.
 
-Trzeci Konstruktor jest konstruktorem kopiowania.
+Trzeci konstruktor jest konstruktorem kopiującym.
 
-##  <a name="dtor"></a> ~ combinable —
+## <a name="dtor"></a>~ z kombinacją
 
-Niszczy `combinable` obiektu.
+Niszczy obiekt `combinable`.
 
-```
+```cpp
 ~combinable();
 ```
 
-##  <a name="combine"></a> Łączenie
+## <a name="combine"></a>żądany
 
-Oblicza wartość końcową z zestawu obliczeń podrzędnych lokalnej wątku, wywołując funkcję łączenia podane.
+Oblicza wartość końcową z zestawu podobliczeń wątku lokalnego przez wywołanie dostarczonego Funktor łączenia.
 
-```
+```cpp
 template<typename _Function>
 T combine(_Function _FnCombine) const;
 ```
@@ -133,20 +133,20 @@ T combine(_Function _FnCombine) const;
 ### <a name="parameters"></a>Parametry
 
 *_Function*<br/>
-Typ obiektu funkcji, która zostanie wywołana połączyć dwa obliczeń podrzędnych lokalnej wątku.
+Typ obiektu funkcji, który zostanie wywołany w celu połączenia dwóch podobliczeń wątku lokalnego.
 
 *_FnCombine*<br/>
-Funktorem, który jest używany do łączenia podrzędnego obliczeń. Jego podpis jest `T (T, T)` lub `T (const T&, const T&)`, i musi być asocjacyjna i przemiennego.
+Funktor, który jest używany do łączenia obliczeń podrzędnych. Jego podpis jest `T (T, T)` lub `T (const T&, const T&)`i musi być asocjacyjny i komutatywna.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Wynik końcowy łączenia wszystkich obliczeń podrzędnych prywatnego wątku.
+Końcowy wynik łączenia wszystkich podobliczeń wątku-Private.
 
-##  <a name="combine_each"></a> combine_each —
+## <a name="combine_each"></a>combine_each
 
-Oblicza wartość końcową z zestawu obliczeń podrzędnych lokalnej wątku, wywołując funkcję łączenia podane raz na obliczenie podrzędnych lokalnej wątku. Wynik końcowy są zbierane przez obiekt funkcji.
+Oblicza wartość końcową z zestawu podobliczeń wątku lokalnego przez wywołanie dostarczonego Funktor, gdy podobliczanie wątku jest podręczne. Końcowy wynik jest kumulowany przez obiekt Function.
 
-```
+```cpp
 template<typename _Function>
 void combine_each(_Function _FnCombine) const;
 ```
@@ -154,16 +154,16 @@ void combine_each(_Function _FnCombine) const;
 ### <a name="parameters"></a>Parametry
 
 *_Function*<br/>
-Typ obiektu funkcji, która będzie wywoływana w celu łączenia jednej obliczeń podrzędnych lokalnej wątku.
+Typ obiektu funkcji, który zostanie wywołany w celu połączenia pojedynczego podobliczenia wątku lokalnego.
 
 *_FnCombine*<br/>
-Funktorem, który jest używany do łączenia jednej obliczeń podrzędnych. Jego podpis jest `void (T)` lub `void (const T&)`i musi być asocjacyjna i przemiennego.
+Funktor, który jest używany do łączenia jednego obliczenia podrzędnego. Jego podpis jest `void (T)` lub `void (const T&)`i musi być asocjacyjny i komutatywna.
 
-##  <a name="local"></a> lokalne
+## <a name="local"></a>LAN
 
-Zwraca odwołanie do obliczeń podrzędnych prywatnego wątku.
+Zwraca odwołanie do podobliczenia wątku-Private.
 
-```
+```cpp
 T& local();
 
 T& local(bool& _Exists);
@@ -172,29 +172,29 @@ T& local(bool& _Exists);
 ### <a name="parameters"></a>Parametry
 
 *_Exists*<br/>
-Odwołanie na wartość logiczną. Wartość logiczna, odwołuje się ten argument jest równa **true** Jeśli obliczenie podrzędne już istnieje w tym wątku i ustaw **false** , jakby to była pierwszym obliczeń podrzędnych w tym wątku.
+Odwołanie do wartości logicznej. Wartość logiczna, do której odwołuje się ten argument, zostanie ustawiona na **wartość true** , jeśli podobliczenia, które już istniały w tym wątku, i ustawione na **wartość false** , jeśli było to pierwsze obliczenie podrzędne w tym wątku.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Odwołanie do obliczeń podrzędnych prywatnego wątku.
+Odwołanie do podobliczenia wątku-Private.
 
-##  <a name="operator_eq"></a> operator =
+## <a name="operator_eq"></a>operator =
 
-Przypisuje `combinable` obiektu z innego `combinable` obiektu.
+Przypisuje do obiektu `combinable` z innego obiektu `combinable`.
 
-```
+```cpp
 combinable& operator= (const combinable& _Copy);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Copy*<br/>
-Istniejące `combinable` obiektu do skopiowania do tego.
+Istniejący obiekt `combinable` do skopiowania do tego obiektu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Odwołanie do `combinable` obiektu.
+Odwołanie do tego obiektu `combinable`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

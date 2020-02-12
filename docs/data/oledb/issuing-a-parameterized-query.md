@@ -4,16 +4,16 @@ ms.date: 10/19/2018
 helpviewer_keywords:
 - parameter queries, running using CCommand class
 ms.assetid: aedb0fce-52a4-4c97-a5c9-b2114be6c3b0
-ms.openlocfilehash: 1ac029d954fc6cefaae6349e01af7728ca0886fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4964d63846e14c0eaf4ff7c7fc80e14237673f69
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390662"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127638"
 ---
 # <a name="issuing-a-parameterized-query"></a>Uruchamianie zapytania parametrycznego
 
-Poniższy przykład generuje proste zapytanie parametryczne, które pobiera rekordy z polem wiek, (która jest większa niż 30) z tabeli w bazie danych programu Microsoft Access. Aby zapewnić obsługę parametru, rekord użytkownika musi mieć dodatkowe mapy. W poniższym kodzie w projekcie ATL, użyto `CCommand` klasy zamiast `CTable` klasa używana w poprzednim przykładzie [przechodzenie przez prosty zestaw wierszy](../../data/oledb/traversing-a-simple-rowset.md).
+W poniższym przykładzie występują proste zapytania sparametryzowane, które pobiera rekordy z polem wiek (większym niż 30) z tabeli w bazie danych programu Microsoft Access. Aby można było obsługiwać parametr, rekord użytkownika musi mieć dodatkową mapę. Poniższy kod w projekcie ATL używa klasy `CCommand` zamiast klasy `CTable` używanej w poprzednim przykładzie, [przechodząc do prostego zestawu wierszy](../../data/oledb/traversing-a-simple-rowset.md).
 
 ```cpp
 #include <atldbcli.h>
@@ -51,7 +51,7 @@ int main()
 }
 ```
 
-Rekord użytkownika `CArtists`, wygląda następująco:
+Rekord użytkownika, `CArtists`, wygląda podobnie do tego przykładu:
 
 ```cpp
 class CArtists
@@ -77,6 +77,6 @@ END_PARAM_MAP()
 };
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Praca z szablonami konsumentów OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;Operatory&gt; string_view'
+title: '&lt;string_view operatory&gt;'
 ms.date: 04/19/2019
 f1_keywords:
 - xstring/basic_string_view::operator!=
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: caa6e515428cc0ea767eef20e819753c8f7ff8f9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 699b1f1bddeb71ecbf03297d162a7e45ebd39609
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459221"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127741"
 ---
-# <a name="ltstringviewgt-operators"></a>&lt;Operatory&gt; string_view
+# <a name="ltstring_viewgt-operators"></a>&lt;string_view operatory&gt;
 
-Te operatory służą do porównywania dwóch obiektów string_view lub string_view i niektórych innych obiektów String (na przykład [std:: String](basic-string-class.md)lub **char\*** ), dla których podano niejawną konwersję. 
+Te operatory służą do porównywania dwóch string_view obiektów lub string_view i niektórych innych obiektów String (na przykład [std:: String](basic-string-class.md)lub **char\*** ), dla których podano niejawną konwersję. 
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[zakład&gt;](#op_gt)|[zakład&gt;=](#op_gt_eq)|
-|[zakład&lt;](#op_lt)|[zakład&lt;&lt;](#op_lt_lt)|[zakład&lt;=](#op_lt_eq)|
-|[operator==](#op_eq_eq)|[operator "" SV](#op_sv)|
+|[operator!=](#op_neq)|[&gt; operatora](#op_gt)|[&gt;operatora =](#op_gt_eq)|
+|[&lt; operatora](#op_lt)|[&lt;operatora &lt;](#op_lt_lt)|[&lt;operatora =](#op_lt_eq)|
+|[operator = =](#op_eq_eq)|[operator "" SV](#op_sv)|
 
 ## <a name="op_neq"></a>operator! =
 
@@ -57,19 +57,19 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*lewym*\
-Dowolny typ ciągu z konwersją lub obiekt typu `basic_string_view` , który ma zostać porównany.
+\ *lewo*
+Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównania.
 
-*Kliknij*\
-Dowolny typ ciągu z konwersją lub obiekt typu `basic_string_view` , który ma zostać porównany.
+*prawa*\
+Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli obiekt po lewej stronie operatora nie jest lexicographically równy obiektowi po prawej stronie; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Niejawna konwersja musi istnieć z *convertible_string_type* do string_view po drugiej stronie. 
+Niejawna konwersja musi istnieć w *convertible_string_type* do string_view po drugiej stronie. 
 
 Porównanie jest oparte na lexicographical parowania sekwencji znaków. Jeśli mają taką samą liczbę elementów, a wszystkie elementy są równe, te dwa obiekty są równe. W przeciwnym razie są one nierówne.
 
@@ -96,26 +96,26 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*lewym*\
-Dowolny typ ciągu z konwersją lub obiekt typu `basic_string_view` , który ma zostać porównany.
+\ *lewo*
+Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównania.
 
-*Kliknij*\
-Dowolny typ ciągu z konwersją lub obiekt typu `basic_string_view` , który ma zostać porównany.
+*prawa*\
+Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **ma wartość true** , jeśli obiekt po lewej stronie operatora jest lexicographically równy obiektowi po prawej stronie; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Niejawna konwersja musi istnieć z *convertible_string_type* do string_view po drugiej stronie. 
+Niejawna konwersja musi istnieć w *convertible_string_type* do string_view po drugiej stronie. 
 
 Porównanie jest oparte na lexicographical parowania sekwencji znaków. Jeśli mają taką samą liczbę elementów, a wszystkie elementy są równe, te dwa obiekty są równe.
 
 
-## <a name="op_lt"></a>zakład&lt;
+## <a name="op_lt"></a>&lt; operatora
 
-Testuje, czy obiekt po lewej stronie operatora jest mniejszy od obiektu po prawej stronie sidestring_view
+Testuje, czy obiekt po lewej stronie operatora jest mniejszy niż obiekt z prawej strony sidestring_view
 ```cpp
 template <class CharType, class Traits>
 bool operator<(
@@ -135,19 +135,19 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*lewym*\
-Dowolny typ ciągu z konwersją lub obiekt typu `basic_string_view` , który ma zostać porównany.
+\ *lewo*
+Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównania.
 
-*Kliknij*\
-Dowolny typ ciągu z konwersją lub obiekt typu `basic_string_view` , który ma zostać porównany.
+*prawa*\
+Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **true** , jeśli obiekt po lewej stronie operatora jest lexicographically mniejszy niż obiekt po prawej stronie; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Niejawna konwersja musi istnieć z *convertible_string_type* do string_view po drugiej stronie. 
+Niejawna konwersja musi istnieć w *convertible_string_type* do string_view po drugiej stronie. 
 
 Porównanie jest oparte na lexicographical parowania sekwencji znaków. Po napotkaniu pierwszej nierównej pary znaków jest zwracany wynik tego porównania. Jeśli nie zostaną znalezione żadne nierówne znaki, ale jedna sekwencja jest krótsza, krótsza sekwencja jest mniejsza niż dłuższa. Inaczej mówiąc, "Cat" jest mniejszy niż "koty".
 
@@ -173,7 +173,7 @@ int main()
 }
 ```
 
-## <a name="op_lt_eq"></a>zakład&lt;=
+## <a name="op_lt_eq"></a>&lt;operatora =
 
 Testuje, czy obiekt po lewej stronie operatora jest mniejszy od lub równy obiektowi po prawej stronie.
 
@@ -196,21 +196,21 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*lewym*\
-Dowolny typ ciągu z konwersją lub obiekt typu `basic_string_view` , który ma zostać porównany.
+\ *lewo*
+Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównania.
 
-*Kliknij*\
-Dowolny typ ciągu z konwersją lub obiekt typu `basic_string_view` , który ma zostać porównany.
+*prawa*\
+Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **true** , jeśli obiekt po lewej stronie operatora jest lexicographically mniejszy lub równy obiektowi po prawej stronie; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [operator&lt;](#op_lt).
+Zobacz [&lt;operatora ](#op_lt).
 
-## <a name="op_lt_lt"></a>zakład&lt;&lt;
+## <a name="op_lt_lt"></a>&lt;operatora &lt;
 
 Zapisuje string_view w strumieniu wyjściowym.
 
@@ -226,9 +226,9 @@ inline basic_ostream<CharType, Traits>& operator<<(
 strumień wyjściowy, w którym jest zapisywane.
 
 *Str*\
-String_view do wprowadzenia do strumienia wyjściowego.
+String_view, które mają zostać wprowadzone do strumienia wyjściowego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 strumień wyjściowy, w którym jest zapisywane.
 
@@ -236,7 +236,7 @@ strumień wyjściowy, w którym jest zapisywane.
 
 Użyj tego operatora, aby wstawić zawartość string_view do strumienia wyjściowego, na przykład używając [std:: cout](iostream.md#cout).
 
-## <a name="op_gt"></a>zakład&gt;
+## <a name="op_gt"></a>&gt; operatora
 
 Testuje, czy obiekt po lewej stronie operatora jest większy niż obiekt po prawej stronie.
 
@@ -259,21 +259,21 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*lewym*\
-Dowolny typ ciągu z konwersją lub obiekt typu `basic_string_view` , który ma zostać porównany.
+\ *lewo*
+Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównania.
 
-*Kliknij*\
-Dowolny typ ciągu z konwersją lub obiekt typu `basic_string_view` , który ma zostać porównany.
+*prawa*\
+Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **true** , jeśli obiekt po lewej stronie operatora jest lexicographically większy niż obiekt string_view po prawej stronie; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [operator&lt;](#op_lt).
+Zobacz [&lt;operatora ](#op_lt).
 
-## <a name="op_gt_eq"></a>zakład&gt;=
+## <a name="op_gt_eq"></a>&gt;operatora =
 
 Testuje, czy obiekt po lewej stronie operatora jest większy niż lub równy obiektowi po prawej stronie.
 
@@ -296,23 +296,23 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*lewym*\
-Dowolny typ ciągu z konwersją lub obiekt typu `basic_string_view` , który ma zostać porównany.
+\ *lewo*
+Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównania.
 
-*Kliknij*\
-Dowolny typ ciągu z konwersją lub obiekt typu `basic_string_view` , który ma zostać porównany.
+*prawa*\
+Każdy typ ciągu z konwersją lub obiekt typu `basic_string_view` do porównania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 **true** , jeśli obiekt po lewej stronie operatora jest lexicographically większy lub równy obiektowi po prawej stronie; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [operator&lt;](#op_lt).
+Zobacz [&lt;operatora ](#op_lt).
 
-## <a name="op_sv"></a>operator "" SV (string_view literal)
+## <a name="op_sv"></a>operator "" OHR (string_view literal)
 
-Konstruuje string_view z literału ciągu. Wymaga przestrzeni `std::literals::string_view_literals`nazw. 
+Konstruuje string_view z literału ciągu. Wymaga `std::literals::string_view_literals`przestrzeni nazw. 
 
 ### <a name="example"></a>Przykład
 
@@ -327,6 +327,6 @@ using namespace literals::string_view_literals;
     u32string_view sv32{ U"Hello"sv };
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<string_view >](../standard-library/string-view.md)

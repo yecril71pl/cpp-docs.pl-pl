@@ -1,34 +1,34 @@
 ---
-title: 'Instrukcje: Określanie specjalnych zasad harmonogramu'
+title: 'Porady: określanie specjalnych zasad harmonogramu'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - specifying scheduler policies [Concurrency Runtime]
 - scheduler policies, specifying [Concurrency Runtime]
 ms.assetid: 9c5149f9-ac34-4ff3-9e79-0bad103e4e6b
-ms.openlocfilehash: 3c03ef6661ebefe0bfe9fab62938ce9987a4bca1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd5edfbdf6b0fda9c7e327dab9538bbf6b5e4b12
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410035"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142454"
 ---
-# <a name="how-to-specify-specific-scheduler-policies"></a>Instrukcje: Określanie specjalnych zasad harmonogramu
+# <a name="how-to-specify-specific-scheduler-policies"></a>Porady: określanie specjalnych zasad harmonogramu
 
-Zasady harmonogramu pozwalają na kontrolę strategii, używany w harmonogramie podczas zarządzania zadaniami. W tym temacie pokazano, jak używać zasadę harmonogramu umożliwia podwyższenie priorytetu wątku zadania, które wyświetla wskaźnik postępu do konsoli.
+Zasady usługi Scheduler umożliwiają sterowanie strategią używaną przez harmonogram podczas zarządzania zadaniami. W tym temacie pokazano, jak za pomocą zasad harmonogramu zwiększyć priorytet wątku zadania, które drukuje wskaźnik postępu w konsoli programu.
 
-Na przykład, który używa zasad harmonogramu niestandardowego wraz z agentów asynchronicznych, zobacz [jak: Tworzenie agentów korzystających ze specjalnych zasad harmonogramu](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).
+Aby zapoznać się z przykładem korzystającym z niestandardowych zasad harmonogramu razem z agentami asynchronicznymi, zobacz [How to: Create Agents, który korzysta z określonych zasad usługi Scheduler](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład wykonuje dwa zadania. Pierwsze zadanie oblicza n<sup>th</sup> Fibonacci numer. Drugie zadanie wyświetla wskaźnik postępu do konsoli.
+Poniższy przykład wykonuje równolegle dwa zadania. Pierwsze zadanie oblicza n-<sup>ty</sup> numer Fibonacci. Drugie zadanie drukuje wskaźnik postępu do konsoli.
 
-Pierwsze zadanie używa dekompozycji cykliczne do obliczenia liczby Fibonacci. Oznacza to każdy rekursywnie zadanie tworzy podzadania do obliczenia ogólny wynik. Zadanie, które używa dekompozycji cyklicznego mogą używać wszystkich dostępnych zasobów, a tym samym blokować innych zadań. W tym przykładzie zadanie, które wyświetla wskaźnik postępu może nie odbierać szybki dostęp do zasobów obliczeniowych.
+Pierwsze zadanie używa dekompozycji cyklicznej w celu obliczenia numeru Fibonacci. Oznacza to, że każde zadanie rekurencyjnie tworzy podzadania w celu obliczenia całkowitego wyniku. Zadanie, które korzysta z dekompozycji cyklicznej, może korzystać ze wszystkich dostępnych zasobów, a tym samym zablokować dostęp inne zadania. W tym przykładzie zadanie, które drukuje wskaźnik postępu, może nie uzyskać czasu dostępu do zasobów obliczeniowych.
 
-Aby zapewnić zadanie, które wyświetla postęp komunikat uczciwego dostępu do zasobów obliczeniowych, w tym przykładzie użyto kroki, które są opisane w [jak: Zarządzanie wystąpieniem harmonogramu](../../parallel/concrt/how-to-manage-a-scheduler-instance.md) można utworzyć wystąpienia harmonogramu, zawierającej zasady niestandardowe. Zasady niestandardowe określa priorytet wątku za najwyższy priorytet.
+Aby zapewnić zadanie, które drukuje komunikat o postępie z uczciwym dostępem do zasobów obliczeniowych, w tym przykładzie są używane kroki opisane w artykule [How to: Manage a Scheduler instance](../../parallel/concrt/how-to-manage-a-scheduler-instance.md) to Create a Scheduler Policy instance. Zasady niestandardowe określają priorytet wątku, który jest klasą o najwyższym priorytecie.
 
-W tym przykładzie użyto [concurrency::call](../../parallel/concrt/reference/call-class.md) i [concurrency::timer](../../parallel/concrt/reference/timer-class.md) klasy, aby wydrukować wskaźnik postępu. Te klasy mają wersji ich konstruktory, które przyjmują odwołania do [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) obiektu, która planuje je. W przykładzie użyto domyślnego harmonogramu, aby zaplanować zadanie, które oblicza liczbę Fibonacci i wystąpieniem harmonogramu, aby zaplanować zadanie, które wyświetla wskaźnik postępu.
+W tym przykładzie zastosowano klasy [concurrency:: Call](../../parallel/concrt/reference/call-class.md) i [concurrency:: Timer](../../parallel/concrt/reference/timer-class.md) do drukowania wskaźnika postępu. Te klasy mają wersje konstruktorów, które przyjmują odwołanie do obiektu [concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) , który je planuje. W przykładzie używa się domyślnego harmonogramu do zaplanowania zadania, które oblicza numer Fibonacci i wystąpienie harmonogramu, aby zaplanować zadanie, które drukuje wskaźnik postępu.
 
-Aby zilustrować korzyści z używania harmonogram, który ma zasady niestandardowe, w tym przykładzie wykonuje całego zadania dwa razy. W przykładzie najpierw użyto domyślnego harmonogramu można zaplanować zarówno do zadań. Następnie w przykładzie wykorzystano domyślnego harmonogramu, aby zaplanować uruchamianie pierwszego zadania i harmonogram, który ma zasady niestandardowe, aby zaplanować drugie zadanie podrzędne.
+Aby zilustrować zalety korzystania z harmonogramu, który ma zasady niestandardowe, ten przykład wykonuje ogólne zadanie dwa razy. W przykładzie najpierw jest planowane zaplanowanie obu zadań przy użyciu domyślnego harmonogramu. W przykładzie zostanie użyty domyślny harmonogram w celu zaplanowania pierwszego zadania i harmonogram, który ma zasady niestandardowe, aby zaplanować drugie zadanie.
 
 [!code-cpp[concrt-scheduler-policy#1](../../parallel/concrt/codesnippet/cpp/how-to-specify-specific-scheduler-policies_1.cpp)]
 
@@ -41,15 +41,15 @@ Scheduler that has a custom policy:
 ...........................................................................done
 ```
 
-Mimo że oba zestawy zadań daje ten sam wynik, wersji, która używa niestandardowych zasad włącza zadanie, które wyświetla wskaźnik postępu uruchomienie priorytetem z podwyższonym poziomem uprawnień, tak, aby zachowuje się bardziej elastycznie zmieniać.
+Mimo że oba zestawy zadań tworzą ten sam wynik, wersja, która używa zasad niestandardowych, umożliwia zadanie, które drukuje wskaźnik postępu do uruchamiania z podwyższonym priorytetem, dzięki czemu będzie bardziej reagować.
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
-Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `scheduler-policy.cpp` , a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
+Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `scheduler-policy.cpp` a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
 
-**Usługa scheduler-policy.cpp dla cl.exe/ehsc**
+> **CL. exe/EHsc Scheduler-Policy. cpp**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zasady harmonogramu](../../parallel/concrt/scheduler-policies.md)<br/>
 [Instrukcje: zarządzanie wystąpieniem harmonogramu](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br/>

@@ -8,30 +8,30 @@ f1_keywords:
 helpviewer_keywords:
 - message_not_found class
 ms.assetid: a96b9995-5ad7-4600-83c8-c15e329ff10e
-ms.openlocfilehash: da0a44b90346959756c1ef7c685bef234fe6e46a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 63b921e47b01e3be7dfc060cbb41e5fd9016d04f
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394419"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139574"
 ---
-# <a name="messagenotfound-class"></a>message_not_found — Klasa
+# <a name="message_not_found-class"></a>message_not_found — Klasa
 
-Ta klasa opisuje wyjątek generowany, gdy blok komunikatów jest nie można odnaleźć żądanej wiadomości.
+Ta klasa opisuje wyjątek zgłoszony, gdy blok komunikatów nie może znaleźć żądanego komunikatu.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class message_not_found : public std::exception;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[message_not_found](#ctor)|Przeciążone. Konstruuje `message_not_found` obiektu.|
+|[message_not_found](#ctor)|Przeciążone. Konstruuje obiekt `message_not_found`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -41,15 +41,15 @@ class message_not_found : public std::exception;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concrt.h
+**Nagłówek:** ConcRT. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="ctor"></a> message_not_found —
+## <a name="ctor"></a>message_not_found
 
-Konstruuje `message_not_found` obiektu.
+Konstruuje obiekt `message_not_found`.
 
-```
+```cpp
 explicit _CRTIMP message_not_found(_In_z_ const char* _Message) throw();
 
 message_not_found() throw();
@@ -58,9 +58,9 @@ message_not_found() throw();
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Opisowy komunikat dotyczący błędu.
+Opisowy komunikat o błędzie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Bloki komunikatów asynchronicznych](../../../parallel/concrt/asynchronous-message-blocks.md)

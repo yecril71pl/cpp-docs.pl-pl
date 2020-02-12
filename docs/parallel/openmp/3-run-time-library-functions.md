@@ -2,12 +2,12 @@
 title: 3. Funkcje bibliotek środowiska uruchomieniowego
 ms.date: 05/13/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 553c9ff2ceff02dc7b72e9f11899dac9d1f0f612
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6155eb87bd7a1a0533caf99afb3db8417854df30
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857960"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142956"
 ---
 # <a name="3-run-time-library-functions"></a>3. funkcje biblioteki wykonawczej
 
@@ -96,13 +96,9 @@ int omp_get_max_threads(void);
 
 Poniżej przedstawiono dolną granicę wartości `omp_get_max_threads`:
 
-```
+> *wątki — używane <= w następnym zespole* `omp_get_max_threads`
 
-threads-used-for-next-team
-<= omp_get_max_threads
-```
-
-Należy zauważyć, że jeśli inny region równoległy używa klauzuli `num_threads`, aby zażądać określonej liczby wątków, gwarancja w dolnej granicy wyniku `omp_get_max_threads` nie jest długi.
+Należy pamiętać, że jeśli inny region równoległy używa klauzuli `num_threads`, aby zażądać określonej liczby wątków, gwarancja dotycząca dolnej granicy wyniku `omp_get_max_threads` nie jest już przechowywana.
 
 Wartość zwracana przez funkcję `omp_get_max_threads` może służyć do dynamicznego przydzielania wystarczającej ilości miejsca dla wszystkich wątków w zespole utworzonych w następnym regionie równoległym.
 
@@ -171,7 +167,7 @@ Wartość domyślna dla dynamicznego dostosowania wątków jest definiowana prze
 
 #### <a name="microsoft-specific"></a>specyficzne dla firmy Microsoft
 
-Bieżąca obsługa `omp_get_dynamic` i `omp_set_dynamic` jest następująca: 
+Bieżąca obsługa `omp_get_dynamic` i `omp_set_dynamic` jest następująca:
 
 Parametr wejściowy, który ma `omp_set_dynamic` nie ma wpływu na zasady wątkowości i nie zmienia liczby wątków. `omp_get_num_threads` zawsze zwraca numer zdefiniowany przez użytkownika, jeśli jest ustawiony, lub domyślny numer wątku. W bieżącej implementacji firmy Microsoft `omp_set_dynamic(0)` powoduje wyłączenie wątku dynamicznego, dzięki czemu istniejący zestaw wątków może być ponownie używany przez następujący równoległy region. `omp_set_dynamic(1)` włącza wielowątkowość dynamiczną przez odrzucenie istniejącego zestawu wątków i utworzenie nowego zestawu dla nadchodzącego regionu równoległego. Liczba wątków w nowym zestawie jest taka sama jak w starym zestawie i jest oparta na wartości zwracanej `omp_get_num_threads`. W związku z tym w celu uzyskania najlepszej wydajności Użyj `omp_set_dynamic(0)`, aby ponownie wykorzystać istniejące wątki.
 

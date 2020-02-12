@@ -6,43 +6,43 @@ f1_keywords:
 - AMP_SHORT_VECTORS/unorm
 - AMP_SHORT_VECTORS/Concurrency::graphics::unorm Constructor
 ms.assetid: bc30bd20-6452-4d5f-9158-3b11c4c16ed2
-ms.openlocfilehash: 059cd3a388d67e540a91146f2a287c375fb02bd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c9ec967be8be618e5f8ab3bad1bfd940bfeaef4
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405433"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126308"
 ---
 # <a name="unorm-class"></a>unorm — Klasa
 
-Reprezentuje liczby unorm. Każdy element jest zmiennoprzecinkowy numer punktu z zakresu [0.0f, 1,0 f].
+Przedstawia numer unorm. Każdy element jest liczbą zmiennoprzecinkową z zakresu [0.0 f, 1.0 f].
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class unorm;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[unorm konstruktora](#ctor)|Przeciążone. Domyślny konstruktor. Zainicjuj 0,0.|
+|[Konstruktor unorm](#ctor)|Przeciążone. Konstruktor domyślny. Zainicjuj do 0.0 f.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|unorm::operator--||
-|unorm::operator float|Operator konwersji. Konwertowanie liczby unorm zmiennoprzecinkowej wartości.|
-|unorm::operator*=||
-|unorm::operator / =||
-|unorm::operator ++||
-|unorm::operator+=||
-|unorm::operator =||
-|unorm::operator-=||
+|unorm:: operator--||
+|unorm:: operator float|Operator konwersji. Przekonwertuj liczbę unorm na wartość zmiennoprzecinkową.|
+|unorm:: operator * =||
+|unorm:: operator/=||
+|unorm:: operator + +||
+|unorm:: operator + =||
+|unorm:: operator =||
+|unorm:: operator-=||
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -50,15 +50,15 @@ class unorm;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** amp_short_vectors.h
+**Nagłówek:** amp_short_vectors. h
 
-**Namespace:** CONCURRENCY::Graphics
+**Przestrzeń nazw:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> unorm
+## <a name="ctor"></a>unorm
 
-Domyślny konstruktor. Zainicjuj 0,0.
+Konstruktor domyślny. Zainicjuj do 0.0 f.
 
-```
+```cpp
 unorm(
     void) restrict(amp,
     cpu);
@@ -91,11 +91,11 @@ inline explicit unorm(
 ### <a name="parameters"></a>Parametry
 
 *_V*<br/>
-Wartość wykorzystana do zainicjowania.
+Wartość używana do inicjowania.
 
-*_Inne*<br/>
-Norm obiekt używany do inicjowania.
+*_Other*<br/>
+Obiekt normy używany do inicjowania.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

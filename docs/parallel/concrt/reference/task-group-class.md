@@ -7,45 +7,45 @@ f1_keywords:
 - PPL/concurrency::task_group::task_group
 helpviewer_keywords:
 - task_group class
-ms.openlocfilehash: 545b368b3042da74a42db5a6ea30e97054d5fd03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60c147f38ddc3936f47aea0cfd1ab1548b382441
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180183"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142566"
 ---
-# <a name="taskgroup-class"></a>task_group — Klasa
+# <a name="task_group-class"></a>task_group — Klasa
 
-`task_group` Klasa reprezentuje kolekcję równoległą pracę, która może być oczekiwany lub anulowane.
+Klasa `task_group` reprezentuje kolekcję równoległych zadań, które mogą być oczekiwane lub anulowane.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class task_group;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[task_group](#ctor)|Przeciążone. Tworzy nowy `task_group` obiektu.|
-|[~ task_group — destruktor](#dtor)|Niszczy `task_group` obiektu. Powinny wywoływać jednego z tych `wait` lub `run_and_wait` metody na obiekcie przed wykonaniem destruktora, chyba że destruktor jest wykonywany w wyniku odwijanie ze względu na wyjątek stosu.|
+|[task_group](#ctor)|Przeciążone. Tworzy nowy obiekt `task_group`.|
+|[~ task_group destruktor](#dtor)|Niszczy obiekt `task_group`. Oczekiwane jest wywołanie metody `wait` lub `run_and_wait` w obiekcie przed wykonaniem destruktora, chyba że destruktor jest wykonywany jako wynik odwinięcia stosu z powodu wyjątku.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[cancel](#cancel)|Stara podjęto próbę anulowania poddrzewie pracy na tej grupy zadań. Każde zadanie zaplanowane w grupie zadań będzie uzyskać anulowane przechodni, jeśli jest to możliwe.|
-|[is_canceling](#is_canceling)|Informuje obiekt wywołujący, czy grupa zadań jest obecnie w środku anulowania. Musi to oznaczać, że `cancel` metoda została wywołana na `task_group` obiektu (mimo że takie kwalifikuje się bez obaw tę metodę, aby zwrócić `true`). Może być tak, `task_group` obiektu jest wykonywana i wbudowana i grupy zadań, który jest dalsze się w drzewie pracy zostało anulowane. W przypadkach, takich jak tych usług, środowisko uruchomieniowe można określić anulowania będą przepływać przez to wcześniej `task_group` obiektu `true` zostanie zwrócona, jak również.|
-|[run](#run)|Przeciążone. Planuje zadanie na `task_group` obiektu. Jeśli `task_handle` obiekt jest przekazywany jako parametr do `run`, obiekt wywołujący jest odpowiedzialny za zarządzanie okresem istnienia `task_handle` obiektu. Wersja metody, która przyjmuje odwołanie do obiektu funkcyjnego, ponieważ parametr obejmuje Alokacja sterty wewnątrz środowiska uruchomieniowego, które mogą być wykonać dobrze, mniej niż wersja, która przyjmuje odwołanie do `task_handle` obiektu. Wersja, która przyjmuje parametr `_Placement` powoduje ukierunkowane wykonywania w lokalizacji określonej przez parametr tego zadania.|
-|[run_and_wait](#run_and_wait)|Przeciążone. Planuje zadania do uruchomienia wbudowanego w kontekście wywoływania przy pomocy `task_group` obiekt do obsługi pełnego anulowania. Funkcja następnie czeka, aż wszystkie pracować nad `task_group` obiektu zostało ukończone lub zostało anulowane. Jeśli `task_handle` obiekt jest przekazywany jako parametr do `run_and_wait`, obiekt wywołujący jest odpowiedzialny za zarządzanie okresem istnienia `task_handle` obiektu.|
-|[Czekaj](#wait)|Czeka, aż wszystkie pracować nad `task_group` obiektu zostało ukończone lub zostało anulowane.|
+|[Anuluj](#cancel)|W ramach tej grupy zadań najlepszym etapem jest próba anulowania poddrzewa pracy z odblokowanym dostępem. Każde zadanie zaplanowane w grupie zadań zostanie anulowane przechodniie, jeśli jest to możliwe.|
+|[is_canceling](#is_canceling)|Informuje obiekt wywołujący niezależnie od tego, czy grupa zadań jest obecnie w pośrodku anulowania. Nie musi to oznaczać, że metoda `cancel` została wywołana w obiekcie `task_group` (mimo że na pewno ta metoda jest zgodna z `true`). Może tak być, że obiekt `task_group` wykonuje wbudowaną, a grupa zadań została anulowana w drzewie roboczym. W takich przypadkach, w których środowisko uruchomieniowe może ustalić przed czasem, gdy anulowanie będzie przepływać przez ten obiekt `task_group`, `true` również zostanie zwrócone.|
+|[wykonane](#run)|Przeciążone. Planuje zadanie na obiekcie `task_group`. Jeśli obiekt `task_handle` jest przenoszona jako parametr do `run`, obiekt wywołujący jest odpowiedzialny za zarządzanie okresem istnienia obiektu `task_handle`. Wersja metody, która pobiera odwołanie do obiektu funkcji jako parametr, obejmuje alokację sterty wewnątrz środowiska uruchomieniowego, co może być wykonane mniej dobrze niż przy użyciu wersji, która pobiera odwołanie do obiektu `task_handle`. Wersja, która przyjmuje parametr `_Placement` powoduje, że zadanie zostanie rozdzielone na wykonanie w lokalizacji określonej przez ten parametr.|
+|[run_and_wait](#run_and_wait)|Przeciążone. Planuje uruchamianie zadania w sposób wbudowany w kontekście wywołania z pomocą obiektu `task_group` w celu uzyskania pełnej obsługi anulowania. Funkcja czeka, aż wszystkie prace na obiekcie `task_group` zostaną zakończone lub anulowane. Jeśli obiekt `task_handle` jest przenoszona jako parametr do `run_and_wait`, obiekt wywołujący jest odpowiedzialny za zarządzanie okresem istnienia obiektu `task_handle`.|
+|[trwa](#wait)|Czeka, aż wszystkie prace na obiekcie `task_group` zostaną zakończone lub anulowane.|
 
 ## <a name="remarks"></a>Uwagi
 
-W przeciwieństwie do silnie ograniczeniami `structured_task_group` klasy `task_group` klasa jest znacznie bardziej ogólne konstrukcji. Go nie ma żadnych ograniczeń, opisane przez [structured_task_group](structured-task-group-class.md). `task_group` obiekty mogą bezpiecznie używane w wątkach i wykorzystywane w dowolny sposób. Wadą `task_group` konstrukcja jest, że nie można wykonać, jak również `structured_task_group` konstruowania dla zadań, które wykonują niewielką ilość pracy.
+W przeciwieństwie do mocno ograniczonej klasy `structured_task_group`, Klasa `task_group` jest znacznie bardziej ogólna konstrukcja. Nie ma żadnych ograniczeń opisanych przez [structured_task_group](structured-task-group-class.md). obiekty `task_group` mogą być bezpiecznie używane między wątkami i wykorzystane w sposób niezależny. Wadą konstrukcji `task_group` jest to, że może nie działać, a także konstrukcja `structured_task_group` dla zadań, które wykonują niewielkie ilości pracy.
 
 Aby uzyskać więcej informacji, zobacz [równoległość zadań](../task-parallelism-concurrency-runtime.md).
 
@@ -55,15 +55,15 @@ Aby uzyskać więcej informacji, zobacz [równoległość zadań](../task-parall
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** ppl.h
+**Nagłówek:** PPL. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="cancel"></a> Anuluj
+## <a name="cancel"></a>Anuluj
 
-Stara podjęto próbę anulowania poddrzewie pracy na tej grupy zadań. Każde zadanie zaplanowane w grupie zadań będzie uzyskać anulowane przechodni, jeśli jest to możliwe.
+W ramach tej grupy zadań najlepszym etapem jest próba anulowania poddrzewa pracy z odblokowanym dostępem. Każde zadanie zaplanowane w grupie zadań zostanie anulowane przechodniie, jeśli jest to możliwe.
 
-```
+```cpp
 void cancel();
 ```
 
@@ -71,27 +71,27 @@ void cancel();
 
 Aby uzyskać więcej informacji, zobacz [anulowania](../cancellation-in-the-ppl.md).
 
-##  <a name="is_canceling"></a> is_canceling —
+## <a name="is_canceling"></a>is_canceling
 
-Informuje obiekt wywołujący, czy grupa zadań jest obecnie w środku anulowania. Musi to oznaczać, że `cancel` metoda została wywołana na `task_group` obiektu (mimo że takie kwalifikuje się bez obaw tę metodę, aby zwrócić `true`). Może być tak, `task_group` obiektu jest wykonywana i wbudowana i grupy zadań, który jest dalsze się w drzewie pracy zostało anulowane. W przypadkach, takich jak tych usług, środowisko uruchomieniowe można określić anulowania będą przepływać przez to wcześniej `task_group` obiektu `true` zostanie zwrócona, jak również.
+Informuje obiekt wywołujący niezależnie od tego, czy grupa zadań jest obecnie w pośrodku anulowania. Nie musi to oznaczać, że metoda `cancel` została wywołana w obiekcie `task_group` (mimo że na pewno ta metoda jest zgodna z `true`). Może tak być, że obiekt `task_group` wykonuje wbudowaną, a grupa zadań została anulowana w drzewie roboczym. W takich przypadkach, w których środowisko uruchomieniowe może ustalić przed czasem, gdy anulowanie będzie przepływać przez ten obiekt `task_group`, `true` również zostanie zwrócone.
 
-```
+```cpp
 bool is_canceling();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Wskazanie, czy `task_group` obiekt jest w środku anulowania (lub może być wkrótce).
+Wskazanie, czy `task_group` obiektu znajduje się w pośrodku anulowania (lub jest to wkrótce zagwarantowane).
 
 ### <a name="remarks"></a>Uwagi
 
 Aby uzyskać więcej informacji, zobacz [anulowania](../cancellation-in-the-ppl.md).
 
-##  <a name="run"></a> Uruchom
+## <a name="run"></a>wykonane
 
-Planuje zadanie na `task_group` obiektu. Jeśli `task_handle` obiekt jest przekazywany jako parametr do `run`, obiekt wywołujący jest odpowiedzialny za zarządzanie okresem istnienia `task_handle` obiektu. Wersja metody, która przyjmuje odwołanie do obiektu funkcyjnego, ponieważ parametr obejmuje Alokacja sterty wewnątrz środowiska uruchomieniowego, które mogą być wykonać dobrze, mniej niż wersja, która przyjmuje odwołanie do `task_handle` obiektu. Wersja, która przyjmuje parametr `_Placement` powoduje ukierunkowane wykonywania w lokalizacji określonej przez parametr tego zadania.
+Planuje zadanie na obiekcie `task_group`. Jeśli obiekt `task_handle` jest przenoszona jako parametr do `run`, obiekt wywołujący jest odpowiedzialny za zarządzanie okresem istnienia obiektu `task_handle`. Wersja metody, która pobiera odwołanie do obiektu funkcji jako parametr, obejmuje alokację sterty wewnątrz środowiska uruchomieniowego, co może być wykonane mniej dobrze niż przy użyciu wersji, która pobiera odwołanie do obiektu `task_handle`. Wersja, która przyjmuje parametr `_Placement` powoduje, że zadanie zostanie rozdzielone na wykonanie w lokalizacji określonej przez ten parametr.
 
-```
+```cpp
 template<
    typename _Function
 >
@@ -126,30 +126,30 @@ void run(
 ### <a name="parameters"></a>Parametry
 
 *_Function*<br/>
-Typ obiektu funkcji, która będzie wywoływana w celu wykonania treści obsługi zadań.
+Typ obiektu funkcji, który zostanie wywołany w celu wykonania treści uchwytu zadania.
 
 *_Func*<br/>
-Funkcja, która zostanie wywołana w celu wywołania treści zadania. Może to być wyrażenie lambda lub inny obiekt, który obsługuje wersję operator wywołania funkcji z podpisem `void operator()()`.
+Funkcja, która zostanie wywołana w celu wywołania treści zadania. Może to być wyrażenie lambda lub inny obiekt, który obsługuje wersję operatora wywołania funkcji z sygnaturą `void operator()()`.
 
-*_Umieszczenia.*<br/>
-Odwołanie do lokalizacji, w którym zadanie jest reprezentowane przez `_Func` parametr powinien zostać wykonany.
+*_Placement*<br/>
+Odwołanie do lokalizacji, w której należy wykonać zadanie reprezentowane przez parametr `_Func`.
 
 *_Task_handle*<br/>
-Dojście do pracy, zaplanowane. Należy pamiętać, że obiekt wywołujący odpowiada za okres istnienia tego obiektu. Środowisko uruchomieniowe będzie w dalszym ciągu będzie się na żywo do momentu `wait` lub `run_and_wait` na ten zostanie wywołana metoda `task_group` obiektu.
+Dojście do zaplanowanych zadań. Należy zauważyć, że obiekt wywołujący odpowiada za okres istnienia tego obiektu. Środowisko uruchomieniowe będzie nadal oczekiwać na żywo do momentu wywołania metody `wait` lub `run_and_wait` w tym obiekcie `task_group`.
 
 ### <a name="remarks"></a>Uwagi
 
-Środowisko uruchomieniowe planuje podana funkcja pracy do uruchamiania w późniejszym czasie, który może być po powrocie funkcji wywołującej. Ta metoda używa [task_handle](task-handle-class.md) obiekt, aby przechowywać kopię podana funkcja pracy. W związku z tym wszelkie zmiany stanu, które występują w obiekt funkcji, które przechodzą do tej metody nie pojawi się w kopii tego obiektu funkcji. Ponadto upewnij się, okres istnienia obiektów przekazywane przez wskaźnik lub odwołanie do funkcji pracy pozostają ważne, dopóki ta funkcja pracy zwróci.
+Środowisko uruchomieniowe planuje uruchomienie podanej funkcji roboczej w późniejszym czasie, która może być po powrocie funkcji wywołującej. Ta metoda używa obiektu [task_handle](task-handle-class.md) do przechowywania kopii podanej funkcji służbowej. W związku z tym wszelkie zmiany stanu, które występują w obiekcie funkcji przekazywanym do tej metody, nie będą wyświetlane w kopii tego obiektu funkcji. Ponadto należy się upewnić, że okres istnienia wszystkich obiektów przekazywanych przez wskaźnik lub przez odwołanie do funkcji służbowej pozostanie ważny do momentu, gdy funkcja pracy zwróci wartość.
 
-Jeśli `task_group` destructs wyniku odwijanie z wyjątku stosu, nie trzeba gwarantuje, że nawiązano połączenie na `wait` lub `run_and_wait` metody. W tym przypadku destruktor zostanie odpowiednio Anuluj i poczekaj, aż zadanie reprezentowany przez `_Task_handle` parametr w celu ukończenia.
+Jeśli `task_group` destruktory jako wynik odwinięcia stosu z wyjątku, nie ma potrzeby zagwarantowania, że wywołanie zostało wykonane do metody `wait` lub `run_and_wait`. W takim przypadku destruktor zostanie odpowiednio anulowany i poczeka na zakończenie zadania reprezentowanego przez `_Task_handle` parametr.
 
-Metoda zgłasza [invalid_multiple_scheduling —](invalid-multiple-scheduling-class.md) wyjątek, jeśli zadanie obsługi przez `_Task_handle` parametru została zaplanowana na obiekt grupy zadań, za pośrednictwem `run` metody i że została nie Wywołanie interwencyjne na `wait` lub `run_and_wait` metody dla tej grupy zadań.
+Metoda zgłasza wyjątek [invalid_multiple_scheduling](invalid-multiple-scheduling-class.md) , jeśli uchwyt zadania określony przez parametr `_Task_handle` został już zaplanowany do obiektu grupy zadań za pośrednictwem metody `run` i nie istnieje wywołanie wywołujące do metody `wait` lub `run_and_wait` w tej grupie zadań.
 
-##  <a name="run_and_wait"></a> run_and_wait —
+## <a name="run_and_wait"></a>run_and_wait
 
-Planuje zadania do uruchomienia wbudowanego w kontekście wywoływania przy pomocy `task_group` obiekt do obsługi pełnego anulowania. Funkcja następnie czeka, aż wszystkie pracować nad `task_group` obiektu zostało ukończone lub zostało anulowane. Jeśli `task_handle` obiekt jest przekazywany jako parametr do `run_and_wait`, obiekt wywołujący jest odpowiedzialny za zarządzanie okresem istnienia `task_handle` obiektu.
+Planuje uruchamianie zadania w sposób wbudowany w kontekście wywołania z pomocą obiektu `task_group` w celu uzyskania pełnej obsługi anulowania. Funkcja czeka, aż wszystkie prace na obiekcie `task_group` zostaną zakończone lub anulowane. Jeśli obiekt `task_handle` jest przenoszona jako parametr do `run_and_wait`, obiekt wywołujący jest odpowiedzialny za zarządzanie okresem istnienia obiektu `task_handle`.
 
-```
+```cpp
 template<
    class _Function
 >
@@ -168,33 +168,33 @@ task_group_status run_and_wait(
 ### <a name="parameters"></a>Parametry
 
 *_Function*<br/>
-Typ obiektu funkcji, która będzie wywoływana w celu wykonania treści zadania.
+Typ obiektu funkcji, który zostanie wywołany, aby wykonać treść zadania.
 
 *_Task_handle*<br/>
-Dojście do zadania, które jest uruchamiane wbudowane Kontekst wywołania. Należy pamiętać, że obiekt wywołujący odpowiada za okres istnienia tego obiektu. Środowisko uruchomieniowe będzie w dalszym ciągu będzie się na żywo do momentu `run_and_wait` metoda kończy działanie.
+Dojście do zadania, które zostanie uruchomione w tekście w kontekście wywołującym. Należy zauważyć, że obiekt wywołujący odpowiada za okres istnienia tego obiektu. Środowisko uruchomieniowe będzie nadal oczekiwać na żywo do momentu zakończenia wykonywania metody `run_and_wait`.
 
 *_Func*<br/>
-Funkcja, która zostanie wywołana w celu wywołania jednostkę pracy. Może to być wyrażenie lambda lub inny obiekt, który obsługuje wersję operator wywołania funkcji z podpisem `void operator()()`.
+Funkcja, która zostanie wywołana w celu wywołania treści pracy. Może to być wyrażenie lambda lub inny obiekt, który obsługuje wersję operatora wywołania funkcji z sygnaturą `void operator()()`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Wskazanie, czy czas oczekiwania był zadawalający lub grupy zadań zostało anulowane z powodu operacji anulowania jawne lub wyjątek z jednego z jego zadań podrzędnych. Aby uzyskać więcej informacji, zobacz [task_group_status —](concurrency-namespace-enums.md#task_group_status).
+Wskazanie, czy oczekiwano oczekiwania, czy grupa zadań została anulowana z powodu jawnej operacji anulowania lub zgłaszania wyjątku z jednego z jego zadań. Aby uzyskać więcej informacji, zobacz [task_group_status](concurrency-namespace-enums.md#task_group_status).
 
 ### <a name="remarks"></a>Uwagi
 
-Należy pamiętać, jednego lub więcej zadań zaplanowanych do tego `task_group` obiektu może zostać wykonany wbudowane na kontekst wywołania.
+Należy zauważyć, że co najmniej jedno z zadań zaplanowanych do tego obiektu `task_group` może zostać wykonane w tekście w kontekście wywołującym.
 
-Jeśli co najmniej jednego zadania zaplanowane do tego `task_group` obiektu zgłasza wyjątek, środowisko uruchomieniowe zaznaczy jeden taki wyjątek, jego zalety i propagowanie go poza wywołanie `run_and_wait` metody.
+Jeśli co najmniej jedno z zadań zaplanowanych do tego obiektu `task_group` zgłosi wyjątek, środowisko uruchomieniowe wybierze jeden z tych wyjątków i propaguje go z wywołania metody `run_and_wait`.
 
-Po powrocie z `run_and_wait` metody `task_group` obiektu, środowisko uruchomieniowe przywraca obiekt stanu czystego, gdzie może zostać użyte. W tym przypadku gdzie `task_group` obiektu zostało anulowane.
+Po powrocie z metody `run_and_wait` na obiekcie `task_group` środowisko uruchomieniowe resetuje obiekt do stanu czystego, gdzie można go ponownie użyć. Obejmuje to przypadek, w którym obiekt `task_group` został anulowany.
 
-W ścieżce niewyjątkowego wykonywania masz upoważnienia do obu tę metodę należy wywołać lub `wait` metody przed destruktor `task_group` wykonuje.
+W niewyjątkowej ścieżce wykonywania użytkownik ma mandat do wywołania tej metody lub metody `wait` przed wykonaniem destruktora `task_group`.
 
-##  <a name="ctor"></a> task_group —
+## <a name="ctor"></a>task_group
 
-Tworzy nowy `task_group` obiektu.
+Tworzy nowy obiekt `task_group`.
 
-```
+```cpp
 task_group();
 
 task_group(
@@ -205,47 +205,47 @@ task_group(
 ### <a name="parameters"></a>Parametry
 
 *_CancellationToken*<br/>
-Token anulowania do skojarzenia z tą grupą zadań. Grupy zadań zostanie anulowane, gdy token zostanie anulowany.
+Token anulowania, który ma zostać skojarzony z tą grupą zadań. Po anulowaniu tokenu grupa zadań zostanie anulowana.
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruktor, który pobiera token anulowania, tworzy `task_group` , zostanie anulowane, gdy źródło skojarzone z tokenem zostało anulowane. Również zapewnienie token anulowania jawne izoluje ta grupa zadaniowa z uczestnictwa w anulowanie niejawne z grupy nadrzędnej z inny token lub brak tokenu.
+Konstruktor, który pobiera token anulowania, tworzy `task_group`, który zostanie anulowany, gdy źródło skojarzone z tokenem zostanie anulowane. Dostarczenie jawnego tokenu anulowania spowoduje również wyodrębnienie tej grupy zadań z uczestnictwa w niejawnym anulowaniu z grupy nadrzędnej z innym tokenem lub bez tokenu.
 
-##  <a name="dtor"></a> ~ task_group
+## <a name="dtor"></a>~ task_group
 
-Niszczy `task_group` obiektu. Powinny wywoływać jednego z tych `wait` lub `run_and_wait` metody na obiekcie przed wykonaniem destruktora, chyba że destruktor jest wykonywany w wyniku odwijanie ze względu na wyjątek stosu.
+Niszczy obiekt `task_group`. Oczekiwane jest wywołanie metody `wait` lub `run_and_wait` w obiekcie przed wykonaniem destruktora, chyba że destruktor jest wykonywany jako wynik odwinięcia stosu z powodu wyjątku.
 
-```
+```cpp
 ~task_group();
 ```
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli destruktor jest uruchomiony w wyniku normalnego wykonania (na przykład nie odwijanie stosu ze względu na wyjątek), a żaden z nich nie `wait` ani `run_and_wait` wywołaniu metody, destruktor może zgłaszać [missing_wait —](missing-wait-class.md) wyjątek.
+Jeśli destruktor działa w wyniku normalnego wykonywania (na przykład nie powoduje odwinięcia stosu z powodu wyjątku) i nie wywołano `wait` ani `run_and_wait` metod, destruktor może zgłosić wyjątek [missing_wait](missing-wait-class.md) .
 
-##  <a name="wait"></a> Czekaj
+## <a name="wait"></a>trwa
 
-Czeka, aż wszystkie pracować nad `task_group` obiektu zostało ukończone lub zostało anulowane.
+Czeka, aż wszystkie prace na obiekcie `task_group` zostaną zakończone lub anulowane.
 
-```
+```cpp
 task_group_status wait();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Wskazanie, czy czas oczekiwania był zadawalający lub grupy zadań zostało anulowane z powodu operacji anulowania jawne lub wyjątek z jednego z jego zadań podrzędnych. Aby uzyskać więcej informacji, zobacz [task_group_status —](concurrency-namespace-enums.md#task_group_status).
+Wskazanie, czy oczekiwano oczekiwania, czy grupa zadań została anulowana z powodu jawnej operacji anulowania lub zgłaszania wyjątku z jednego z jego zadań. Aby uzyskać więcej informacji, zobacz [task_group_status](concurrency-namespace-enums.md#task_group_status).
 
 ### <a name="remarks"></a>Uwagi
 
-Należy pamiętać, jednego lub więcej zadań zaplanowanych do tego `task_group` obiektu może zostać wykonany wbudowane na kontekst wywołania.
+Należy zauważyć, że co najmniej jedno z zadań zaplanowanych do tego obiektu `task_group` może zostać wykonane w tekście w kontekście wywołującym.
 
-Jeśli co najmniej jednego zadania zaplanowane do tego `task_group` obiektu zgłasza wyjątek, środowisko uruchomieniowe zaznaczy jeden taki wyjątek, jego zalety i propagowanie go poza wywołanie `wait` metody.
+Jeśli co najmniej jedno z zadań zaplanowanych do tego obiektu `task_group` zgłosi wyjątek, środowisko uruchomieniowe wybierze jeden z tych wyjątków i propaguje go z wywołania metody `wait`.
 
-Wywoływanie `wait` na `task_group` obiektu Ponadto resetuje go do stanu czystego, gdzie może zostać użyte. W tym przypadku gdzie `task_group` obiektu zostało anulowane.
+Wywołanie `wait` na obiekcie `task_group` powoduje zresetowanie go do stanu czystego, w którym można go ponownie użyć. Obejmuje to przypadek, w którym obiekt `task_group` został anulowany.
 
-W ścieżce niewyjątkowego wykonywania masz upoważnienia do obu tę metodę należy wywołać lub `run_and_wait` metody przed destruktor `task_group` wykonuje.
+W niewyjątkowej ścieżce wykonywania użytkownik ma mandat do wywołania tej metody lub metody `run_and_wait` przed wykonaniem destruktora `task_group`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [structured_task_group, klasa](structured-task-group-class.md)<br/>

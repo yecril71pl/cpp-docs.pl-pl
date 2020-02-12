@@ -8,30 +8,30 @@ f1_keywords:
 helpviewer_keywords:
 - default_scheduler_exists class
 ms.assetid: f6e575e2-4e0f-455a-9e06-54f462ce0c1c
-ms.openlocfilehash: 326a2dfc6837665adb4d46a6aaa8780052ad2b22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eed5dd242beb4c4cd481f22635e0d5f71c28d7e6
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296101"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139191"
 ---
-# <a name="defaultschedulerexists-class"></a>default_scheduler_exists — Klasa
+# <a name="default_scheduler_exists-class"></a>default_scheduler_exists — Klasa
 
-Ta klasa opisuje wyjątek generowany, gdy `Scheduler::SetDefaultSchedulerPolicy` metoda jest wywoływana, gdy domyślnego harmonogramu już istnieje w ramach procesu.
+Ta klasa opisuje wyjątek zgłoszony w przypadku wywołania metody `Scheduler::SetDefaultSchedulerPolicy`, gdy domyślny harmonogram już istnieje w ramach procesu.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class default_scheduler_exists : public std::exception;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[default_scheduler_exists](#ctor)|Przeciążone. Konstruuje `default_scheduler_exists` obiektu.|
+|[default_scheduler_exists](#ctor)|Przeciążone. Konstruuje obiekt `default_scheduler_exists`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -41,15 +41,15 @@ class default_scheduler_exists : public std::exception;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concrt.h
+**Nagłówek:** ConcRT. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="ctor"></a> default_scheduler_exists —
+## <a name="ctor"></a>default_scheduler_exists
 
-Konstruuje `default_scheduler_exists` obiektu.
+Konstruuje obiekt `default_scheduler_exists`.
 
-```
+```cpp
 explicit _CRTIMP default_scheduler_exists(_In_z_ const char* _Message) throw();
 
 default_scheduler_exists() throw();
@@ -58,8 +58,8 @@ default_scheduler_exists() throw();
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Opisowy komunikat dotyczący błędu.
+Opisowy komunikat o błędzie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

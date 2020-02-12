@@ -8,30 +8,30 @@ f1_keywords:
 helpviewer_keywords:
 - improper_scheduler_attach class
 ms.assetid: 5a76da0a-091b-4748-8f62-b3a28f674f9e
-ms.openlocfilehash: 2d6a7b53269d305c976bcc596fe85dc018442332
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85adf3f919d94a82f5a68a5cd9e5f44cdca10006
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262479"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141226"
 ---
-# <a name="improperschedulerattach-class"></a>improper_scheduler_attach — Klasa
+# <a name="improper_scheduler_attach-class"></a>improper_scheduler_attach — Klasa
 
-Ta klasa opisuje wyjątek generowany, gdy `Attach` wywoływana jest metoda `Scheduler` obiektu, który jest już dołączony do bieżącego kontekstu.
+Ta klasa opisuje wyjątek zgłoszony, gdy metoda `Attach` jest wywoływana w obiekcie `Scheduler`, który jest już dołączony do bieżącego kontekstu.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class improper_scheduler_attach : public std::exception;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[improper_scheduler_attach](#ctor)|Przeciążone. Konstruuje `improper_scheduler_attach` obiektu.|
+|[improper_scheduler_attach](#ctor)|Przeciążone. Konstruuje obiekt `improper_scheduler_attach`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -41,15 +41,15 @@ class improper_scheduler_attach : public std::exception;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concrt.h
+**Nagłówek:** ConcRT. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="ctor"></a> improper_scheduler_attach —
+## <a name="ctor"></a>improper_scheduler_attach
 
-Konstruuje `improper_scheduler_attach` obiektu.
+Konstruuje obiekt `improper_scheduler_attach`.
 
-```
+```cpp
 explicit _CRTIMP improper_scheduler_attach(_In_z_ const char* _Message) throw();
 
 improper_scheduler_attach() throw();
@@ -58,9 +58,9 @@ improper_scheduler_attach() throw();
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Opisowy komunikat dotyczący błędu.
+Opisowy komunikat o błędzie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Scheduler, klasa](scheduler-class.md)

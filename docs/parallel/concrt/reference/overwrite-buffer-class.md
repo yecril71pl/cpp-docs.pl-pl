@@ -20,71 +20,71 @@ f1_keywords:
 helpviewer_keywords:
 - overwrite_buffer class
 ms.assetid: 5cc428fe-3697-419c-9fb2-78f6181c9293
-ms.openlocfilehash: adac6e220a60a49a2b9bfa9463f16f8956b08d2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b222170112f43ae9700054f42e1368545612d00
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394354"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77138800"
 ---
-# <a name="overwritebuffer-class"></a>Klasa overwrite_buffer
+# <a name="overwrite_buffer-class"></a>Klasa overwrite_buffer
 
-`overwrite_buffer` Blok komunikatów jest ona lokalizacją docelową wielu, wielu źródeł, uporządkowanych `propagator_block` można przechowywać pojedynczej wiadomości w czasie. Nowe komunikaty zastąpienie wcześniej konsekwencje na gruncie z nich.
+Blok komunikatów `overwrite_buffer` to wiele obiektów, które mają uporządkowane `propagator_block` z możliwością jednoczesnego przechowywania pojedynczej wiadomości. Nowe wiadomości zastępują wcześniej przechowywane.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 template<class T>
 class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>, multi_link_registry<ISource<T>>>;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Typ ładunku komunikatów przechowywane i rozprowadzane przez bufor.
+*&*<br/>
+Typ ładunku komunikatów przechowywanych i propagowanych przez bufor.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[overwrite_buffer](#ctor)|Przeciążone. Konstruuje `overwrite_buffer` Blok obsługi wiadomości.|
-|[~overwrite_buffer Destructor](#dtor)|Niszczy `overwrite_buffer` Blok obsługi wiadomości.|
+|[overwrite_buffer](#ctor)|Przeciążone. Tworzy blok komunikatów `overwrite_buffer`.|
+|[~ overwrite_buffer destruktor](#dtor)|Niszczy blok komunikatów `overwrite_buffer`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[has_value](#has_value)|Sprawdza, czy to `overwrite_buffer` Blok obsługi wiadomości nie został jeszcze wartość.|
-|[value](#value)|Pobiera referencję do bieżącego ładunku komunikatów znajdujących się w `overwrite_buffer` Blok obsługi wiadomości.|
+|[has_value](#has_value)|Sprawdza, czy ten blok `overwrite_buffer` Messaging ma jeszcze wartość.|
+|[value](#value)|Pobiera odwołanie do bieżącego ładunku wiadomości przechowywanej w bloku komunikatów `overwrite_buffer`.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[accept_message](#accept_message)|Akceptuje wiadomości, które było oferowane przez to `overwrite_buffer` Blok obsługi wiadomości, zwracając kopię wiadomości do obiektu wywołującego.|
-|[consume_message](#consume_message)|Wykorzystuje komunikat, który został poprzednio oferowana przez `overwrite_buffer` bloku komunikatów i zastrzeżona przez element docelowy, zwracając kopię wiadomości do obiektu wywołującego.|
-|[link_target_notification](#link_target_notification)|Wywołanie zwrotne, które informuje, że nowy obiekt docelowy została połączona z tym `overwrite_buffer` Blok obsługi wiadomości.|
-|[propagate_message](#propagate_message)|Asynchronicznie przekazuje komunikat z `ISource` bloku, aby to `overwrite_buffer` Blok obsługi wiadomości. Zostanie wywołany przez `propagate` metody, gdy zostanie wywołana przez blok źródłowy.|
-|[propagate_to_any_targets](#propagate_to_any_targets)|Umieszcza `message _PMessage` w tym `overwrite_buffer` bloku komunikatów i oferuje go do wszystkich połączonych elementów docelowych.|
-|[release_message](#release_message)|Zwalnia poprzedniej wiadomości rezerwacji. (Przesłania [source_block::release_message —](source-block-class.md#release_message).)|
-|[reserve_message](#reserve_message)|Zarezerwowaniu wiadomości przez oferowane wcześniej to `overwrite_buffer` Blok obsługi wiadomości. (Przesłania [source_block::reserve_message —](source-block-class.md#reserve_message).)|
-|[resume_propagation](#resume_propagation)|Wznawia działanie propagacji, po udostępnieniu rezerwacji. (Przesłania [source_block::resume_propagation —](source-block-class.md#resume_propagation).)|
-|[send_message](#send_message)|Synchronicznie przekazuje komunikat z `ISource` bloku, aby to `overwrite_buffer` Blok obsługi wiadomości. Zostanie wywołany przez `send` metody, gdy zostanie wywołana przez blok źródłowy.|
-|[supports_anonymous_source](#supports_anonymous_source)|Zastępuje `supports_anonymous_source` metodę w celu wskazania, że ten blok może akceptować komunikaty oferowane przez źródło, który nie jest połączony. (Przesłania [itarget::supports_anonymous_source —](itarget-class.md#supports_anonymous_source).)|
+|[accept_message](#accept_message)|Akceptuje komunikat, który był oferowany przez ten blok komunikatów `overwrite_buffer`, zwracając kopię komunikatu do obiektu wywołującego.|
+|[consume_message](#consume_message)|Wykorzystuje komunikat wcześniej oferowany przez blok komunikatów `overwrite_buffer` i zarezerwowany przez obiekt docelowy, zwracając kopię komunikatu do obiektu wywołującego.|
+|[link_target_notification](#link_target_notification)|Wywołanie zwrotne, które powiadamia, że nowy element docelowy został połączony z tym blokiem komunikatów `overwrite_buffer`.|
+|[propagate_message](#propagate_message)|Asynchronicznie przekazuje komunikat z bloku `ISource` do tego bloku komunikatów `overwrite_buffer`. Jest wywoływany przez metodę `propagate`, gdy jest wywoływana przez blok źródłowy.|
+|[propagate_to_any_targets](#propagate_to_any_targets)|Umieszcza `message _PMessage` w tym bloku komunikatów `overwrite_buffer` i oferuje go wszystkim połączonym obiektom docelowym.|
+|[release_message](#release_message)|Zwalnia poprzednią rezerwację wiadomości. (Zastępuje [source_block:: release_message](source-block-class.md#release_message).)|
+|[reserve_message](#reserve_message)|Rezerwuje komunikat wcześniej oferowany przez ten blok komunikatów `overwrite_buffer`. (Zastępuje [source_block:: reserve_message](source-block-class.md#reserve_message).)|
+|[resume_propagation](#resume_propagation)|Wznawia propagację po wydaniu rezerwacji. (Zastępuje [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|
+|[send_message](#send_message)|Synchronicznie przekazuje komunikat z bloku `ISource` do tego bloku komunikatów `overwrite_buffer`. Jest wywoływany przez metodę `send`, gdy jest wywoływana przez blok źródłowy.|
+|[supports_anonymous_source](#supports_anonymous_source)|Zastępuje metodę `supports_anonymous_source`, aby wskazać, że ten blok może akceptować komunikaty, które są do niego udostępniane przez źródło, które nie jest połączone. (Przesłania [ITarget:: supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|
 
 ## <a name="remarks"></a>Uwagi
 
-`overwrite_buffer` Blok obsługi wiadomości propaguje kopii przechowywanej komunikat do każdego z jego elementów docelowych.
+Blok `overwrite_buffer` Messaging propaguje kopie przechowywanych komunikatów do każdego z jego obiektów docelowych.
 
-Aby uzyskać więcej informacji, zobacz [bloki komunikatów asynchronicznych](../../../parallel/concrt/asynchronous-message-blocks.md).
+Aby uzyskać więcej informacji, zobacz [asynchroniczne bloki komunikatów](../../../parallel/concrt/asynchronous-message-blocks.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Isource —](isource-class.md)
+[ISource](isource-class.md)
 
-[Itarget —](itarget-class.md)
+[ITarget](itarget-class.md)
 
 [source_block](source-block-class.md)
 
@@ -94,90 +94,90 @@ Aby uzyskać więcej informacji, zobacz [bloki komunikatów asynchronicznych](..
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** agents.h
+**Nagłówek:** agenci. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="accept_message"></a> accept_message
+## <a name="accept_message"></a>accept_message
 
-Akceptuje wiadomości, które było oferowane przez to `overwrite_buffer` Blok obsługi wiadomości, zwracając kopię wiadomości do obiektu wywołującego.
+Akceptuje komunikat, który był oferowany przez ten blok komunikatów `overwrite_buffer`, zwracając kopię komunikatu do obiektu wywołującego.
 
-```
+```cpp
 virtual message<T>* accept_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` z oferowane `message` obiektu.
+`runtime_object_identity` oferowanego obiektu `message`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Wskaźnik do `message` obiektu, że obiekt wywołujący ma teraz własności.
+Wskaźnik do obiektu `message`, do którego obiekt wywołujący ma teraz własność.
 
 ### <a name="remarks"></a>Uwagi
 
-`overwrite_buffer` Komunikatów bloku kopie zwraca komunikat do jego obiekty docelowe, zamiast przenoszenia własności obecnie konsekwencje na gruncie komunikatu.
+Blok komunikatów `overwrite_buffer` zwraca kopie wiadomości do jej obiektów docelowych, a nie transferuje własność aktualnie przechowywanego komunikatu.
 
-##  <a name="consume_message"></a> consume_message
+## <a name="consume_message"></a>consume_message
 
-Wykorzystuje komunikat, który został poprzednio oferowana przez `overwrite_buffer` bloku komunikatów i zastrzeżona przez element docelowy, zwracając kopię wiadomości do obiektu wywołującego.
+Wykorzystuje komunikat wcześniej oferowany przez blok komunikatów `overwrite_buffer` i zarezerwowany przez obiekt docelowy, zwracając kopię komunikatu do obiektu wywołującego.
 
-```
+```cpp
 virtual message<T>* consume_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` z `message` obiektu są używane.
+`runtime_object_identity` zużywanego obiektu `message`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Wskaźnik do `message` obiektu, że obiekt wywołujący ma teraz własności.
+Wskaźnik do obiektu `message`, do którego obiekt wywołujący ma teraz własność.
 
 ### <a name="remarks"></a>Uwagi
 
-Podobnie jak `accept`, ale zawsze jest poprzedzony przez wywołanie `reserve`.
+Podobnie jak `accept`, ale jest zawsze poprzedzone wywołaniem `reserve`.
 
-##  <a name="has_value"></a> has_value —
+## <a name="has_value"></a>has_value
 
-Sprawdza, czy to `overwrite_buffer` Blok obsługi wiadomości nie został jeszcze wartość.
+Sprawdza, czy ten blok `overwrite_buffer` Messaging ma jeszcze wartość.
 
-```
+```cpp
 bool has_value() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-**wartość true,** odebranie bloku ma wartość **false** inaczej.
+**prawda** , jeśli blok odebrał wartość, w przeciwnym razie **false** .
 
-##  <a name="link_target_notification"></a> link_target_notification —
+## <a name="link_target_notification"></a>link_target_notification
 
-Wywołanie zwrotne, które informuje, że nowy obiekt docelowy została połączona z tym `overwrite_buffer` Blok obsługi wiadomości.
+Wywołanie zwrotne, które powiadamia, że nowy element docelowy został połączony z tym blokiem komunikatów `overwrite_buffer`.
 
-```
+```cpp
 virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_PTarget*<br/>
-Wskaźnik do nowo połączone obiektu docelowego.
+Wskaźnik do nowo połączonego obiektu docelowego.
 
-##  <a name="dtor"></a> ~overwrite_buffer
+## <a name="dtor"></a>~ overwrite_buffer
 
-Niszczy `overwrite_buffer` Blok obsługi wiadomości.
+Niszczy blok komunikatów `overwrite_buffer`.
 
-```
+```cpp
 ~overwrite_buffer();
 ```
 
-##  <a name="ctor"></a> overwrite_buffer
+## <a name="ctor"></a>overwrite_buffer
 
-Konstruuje `overwrite_buffer` Blok obsługi wiadomości.
+Tworzy blok komunikatów `overwrite_buffer`.
 
-```
+```cpp
 overwrite_buffer();
 
 overwrite_buffer(
@@ -201,25 +201,25 @@ overwrite_buffer(
 ### <a name="parameters"></a>Parametry
 
 *_Filter*<br/>
-Funkcja filtrowania, określający, czy powinna być akceptowana oferowane wiadomości.
+Funkcja filtru, która określa, czy proponowane komunikaty powinny być akceptowane.
 
 *_PScheduler*<br/>
-`Scheduler` Obiekt, w którym zadanie propagacji dla `overwrite_buffer` zaplanowano Blok obsługi wiadomości.
+Obiekt `Scheduler`, w ramach którego zaplanowano zadanie propagacji dla bloku obsługi komunikatów `overwrite_buffer`.
 
 *_PScheduleGroup*<br/>
-`ScheduleGroup` Obiekt, w którym zadanie propagacji dla `overwrite_buffer` zaplanowano Blok obsługi wiadomości. `Scheduler` Obiekt używany jest implikowany przez grupę harmonogramów.
+Obiekt `ScheduleGroup`, w ramach którego zaplanowano zadanie propagacji dla bloku obsługi komunikatów `overwrite_buffer`. Używany obiekt `Scheduler` jest implikowany przez grupę harmonogramów.
 
 ### <a name="remarks"></a>Uwagi
 
-Środowisko wykonawcze używa domyślnego harmonogramu, jeśli nie określisz `_PScheduler` lub `_PScheduleGroup` parametrów.
+Środowisko uruchomieniowe używa domyślnego harmonogramu, jeśli nie określisz parametrów `_PScheduler` lub `_PScheduleGroup`.
 
-Typ `filter_method` jest funktor za pomocą podpisu `bool (T const &)` który zostanie wywołany przez to `overwrite_buffer` Blok obsługi wiadomości, aby ustalić, czy nie powinien akceptować wiadomości oferowane.
+Typ `filter_method` to Funktor z sygnaturą `bool (T const &)`, która jest wywoływana przez ten blok komunikatów `overwrite_buffer` do określenia, czy powinien on akceptować oferowany komunikat.
 
-##  <a name="propagate_message"></a> propagate_message
+## <a name="propagate_message"></a>propagate_message
 
-Asynchronicznie przekazuje komunikat z `ISource` bloku, aby to `overwrite_buffer` Blok obsługi wiadomości. Zostanie wywołany przez `propagate` metody, gdy zostanie wywołana przez blok źródłowy.
+Asynchronicznie przekazuje komunikat z bloku `ISource` do tego bloku komunikatów `overwrite_buffer`. Jest wywoływany przez metodę `propagate`, gdy jest wywoływana przez blok źródłowy.
 
-```
+```cpp
 virtual message_status propagate_message(
     _Inout_ message<T>* _PMessage,
     _Inout_ ISource<T>* _PSource);
@@ -228,37 +228,37 @@ virtual message_status propagate_message(
 ### <a name="parameters"></a>Parametry
 
 *_PMessage*<br/>
-Wskaźnik do `message` obiektu.
+Wskaźnik do obiektu `message`.
 
 *_PSource*<br/>
-Wskaźnik do blok źródłowy oferty wiadomości.
+Wskaźnik do bloku źródłowego oferującego komunikat.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-A [message_status —](concurrency-namespace-enums.md) sygnał docelowy postanowiła zrobić z komunikatem.
+[Message_status](concurrency-namespace-enums.md) wskazanie elementu docelowego, który zdecydował się wykonać wraz z wiadomością.
 
-##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets
+## <a name="propagate_to_any_targets"></a>propagate_to_any_targets
 
-Umieszcza `message _PMessage` w tym `overwrite_buffer` bloku komunikatów i oferuje go do wszystkich połączonych elementów docelowych.
+Umieszcza `message _PMessage` w tym bloku komunikatów `overwrite_buffer` i oferuje go wszystkim połączonym obiektom docelowym.
 
-```
+```cpp
 virtual void propagate_to_any_targets(_Inout_ message<T>* _PMessage);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_PMessage*<br/>
-Wskaźnik do `message` obiektu że `overwrite_buffer` miało własności.
+Wskaźnik do obiektu `message`, do którego `overwrite_buffer` przejąć własność.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda zastępuje do bieżącej wiadomości w `overwrite_buffer` komunikatem nowo odebrane `_PMessage`.
+Ta metoda zastępuje bieżący komunikat w `overwrite_buffer` przy użyciu nowo zaakceptowanego `_PMessage`komunikatów.
 
-##  <a name="send_message"></a> send_message
+## <a name="send_message"></a>send_message
 
-Synchronicznie przekazuje komunikat z `ISource` bloku, aby to `overwrite_buffer` Blok obsługi wiadomości. Zostanie wywołany przez `send` metody, gdy zostanie wywołana przez blok źródłowy.
+Synchronicznie przekazuje komunikat z bloku `ISource` do tego bloku komunikatów `overwrite_buffer`. Jest wywoływany przez metodę `send`, gdy jest wywoływana przez blok źródłowy.
 
-```
+```cpp
 virtual message_status send_message(
     _Inout_ message<T>* _PMessage,
     _Inout_ ISource<T>* _PSource);
@@ -267,86 +267,86 @@ virtual message_status send_message(
 ### <a name="parameters"></a>Parametry
 
 *_PMessage*<br/>
-Wskaźnik do `message` obiektu.
+Wskaźnik do obiektu `message`.
 
 *_PSource*<br/>
-Wskaźnik do blok źródłowy oferty wiadomości.
+Wskaźnik do bloku źródłowego oferującego komunikat.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-A [message_status —](concurrency-namespace-enums.md) sygnał docelowy postanowiła zrobić z komunikatem.
+[Message_status](concurrency-namespace-enums.md) wskazanie elementu docelowego, który zdecydował się wykonać wraz z wiadomością.
 
-##  <a name="supports_anonymous_source"></a> supports_anonymous_source —
+## <a name="supports_anonymous_source"></a>supports_anonymous_source
 
-Zastępuje `supports_anonymous_source` metodę w celu wskazania, że ten blok może akceptować komunikaty oferowane przez źródło, który nie jest połączony.
+Zastępuje metodę `supports_anonymous_source`, aby wskazać, że ten blok może akceptować komunikaty, które są do niego udostępniane przez źródło, które nie jest połączone.
 
-```
+```cpp
 virtual bool supports_anonymous_source();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-**wartość true,** ponieważ bloku nie odłożyć dostępne komunikaty.
+**prawda** , ponieważ blok nie odkłada proponowanych komunikatów.
 
-##  <a name="release_message"></a> release_message
+## <a name="release_message"></a>release_message
 
-Zwalnia poprzedniej wiadomości rezerwacji.
+Zwalnia poprzednią rezerwację wiadomości.
 
-```
+```cpp
 virtual void release_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` z `message` obiektu, zostały udostępnione.
+`runtime_object_identity` wydawany `message` obiektu.
 
-##  <a name="reserve_message"></a> reserve_message
+## <a name="reserve_message"></a>reserve_message
 
-Zarezerwowaniu wiadomości przez oferowane wcześniej to `overwrite_buffer` Blok obsługi wiadomości.
+Rezerwuje komunikat wcześniej oferowany przez ten blok komunikatów `overwrite_buffer`.
 
-```
+```cpp
 virtual bool reserve_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` z `message` obiektu pozostaje zarezerwowane.
+`runtime_object_identity` obiektu `message`, który jest zarezerwowany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-**wartość true,** Jeśli komunikat został pomyślnie zarezerwowany, **false** inaczej.
+**prawda** , jeśli komunikat został pomyślnie zarezerwowany, w przeciwnym razie **zwraca wartość false** .
 
 ### <a name="remarks"></a>Uwagi
 
-Po `reserve` jest wywoływana, jeśli zwróci ona **true**, albo `consume` lub `release` musi zostać wywołana wersji własności wiadomości lub wykonać.
+Po wywołaniu `reserve`, jeśli zwraca **wartość true**, należy wywołać `consume` lub `release`, aby przejąć lub zwolnić własność wiadomości.
 
-##  <a name="resume_propagation"></a> resume_propagation
+## <a name="resume_propagation"></a>resume_propagation
 
-Wznawia działanie propagacji, po udostępnieniu rezerwacji.
+Wznawia propagację po wydaniu rezerwacji.
 
-```
+```cpp
 virtual void resume_propagation();
 ```
 
-##  <a name="value"></a> Wartość
+## <a name="value"></a>wartościami
 
-Pobiera referencję do bieżącego ładunku komunikatów znajdujących się w `overwrite_buffer` Blok obsługi wiadomości.
+Pobiera odwołanie do bieżącego ładunku wiadomości przechowywanej w bloku komunikatów `overwrite_buffer`.
 
-```
+```cpp
 T value();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Obciążenie komunikatu aktualnie przechowywana.
+Ładunek obecnie przechowywanego komunikatu.
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość przechowywana we `overwrite_buffer` można zmienić natychmiast, po powrocie z tej metody. Ta metoda czeka na zakończenie nadejścia wiadomości, jeśli żaden komunikat nie jest obecnie przechowywanych w `overwrite_buffer`.
+Wartość przechowywana w `overwrite_buffer` może ulec zmianie natychmiast po powrocie tej metody. Ta metoda będzie czekać, aż zostanie wyświetlony komunikat, jeśli w `overwrite_buffer`nie zostanie zapisany żaden komunikat.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [unbounded_buffer, klasa](unbounded-buffer-class.md)<br/>

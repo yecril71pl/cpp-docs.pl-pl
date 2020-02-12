@@ -28,40 +28,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_2::operator++
 - amp_short_vectors/Concurrency::graphics::uint_2::rg
 ms.assetid: 9fcc9129-72b1-4da7-9012-4d3be15f1c52
-ms.openlocfilehash: 42c4f238e7277174a5f6b04a9e692f541b32a3e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f01e4d50dc3fab8d7cb909d1ea2f3d1801f0db0
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405537"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126213"
 ---
-# <a name="uint2-class"></a>uint_2 — Klasa
+# <a name="uint_2-class"></a>uint_2 — Klasa
 
 Reprezentuje krótki wektor dwóch liczb całkowitych bez znaku.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class uint_2;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[uint_2 Constructor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.|
+|[Konstruktor uint_2](#ctor)|Przeciążone. Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |uint_2::get_x||
 |uint_2::get_xy||
@@ -69,7 +69,7 @@ class uint_2;
 |uint_2::get_yx||
 |uint_2::ref_g_Method||
 |uint_2::ref_r_Method||
-|uint_2::ref_x_Method||
+|uint_2:: ref_x_Method||
 |uint_2::ref_y_Method||
 |uint_2::set_x||
 |uint_2::set_xy||
@@ -78,32 +78,32 @@ class uint_2;
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|uint_2::operator--||
-|uint_2::operator % =||
+|uint_2:: operator--||
+|uint_2:: operator% =||
 |uint_2::operator&=||
-|uint_2::operator * =||
-|uint_2::operator/=||
+|uint_2:: operator * =||
+|uint_2:: operator/=||
 |uint_2::operator^=||
 |uint_2::operator&#124;=||
-|uint_2::operator ~||
-|uint_2::operator++||
-|uint_2::operator +=||
-|uint_2::operator <\<=||
+|uint_2:: operator ~||
+|uint_2:: operator + +||
+|uint_2:: operator + =||
+|uint_2:: operator <\<=||
 |uint_2::operator=||
-|uint_2::operator-=||
-|uint_2::operator>>=||
+|uint_2:: operator-=||
+|uint_2:: operator > > =||
 
-### <a name="public-constants"></a>Publiczne stałe
+### <a name="public-constants"></a>Stałe publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[rozmiar — stała](#uint_2__size)||
+|[Stała rozmiaru](#uint_2__size)||
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |uint_2::g||
 |uint_2::gr||
@@ -111,7 +111,7 @@ class uint_2;
 |uint_2::rg||
 |uint_2::x||
 |uint_2::xy||
-|uint_2::y||
+|uint_2:: y||
 |uint_2::yx||
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
@@ -120,15 +120,15 @@ class uint_2;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** amp_short_vectors.h
+**Nagłówek:** amp_short_vectors. h
 
-**Namespace:** CONCURRENCY::Graphics
+**Przestrzeń nazw:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> uint_2
+## <a name="ctor"></a>uint_2
 
-Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.
+Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.
 
-```
+```cpp
 uint_2() restrict(amp,
     cpu);
 
@@ -169,23 +169,23 @@ explicit inline uint_2(
 ### <a name="parameters"></a>Parametry
 
 *_V0*<br/>
-Wartość do zainicjowania elementu 0.
+Wartość, aby zainicjować element 0.
 
 *_V1*<br/>
 Wartość do zainicjowania elementu 1.
 
 *_V*<br/>
-Wartość inicjalizacji.
+Wartość dla inicjalizacji.
 
-*_Inne*<br/>
+*_Other*<br/>
 Obiekt używany do inicjowania.
 
-##  <a name="uint_2__size"></a> Rozmiar
+## <a name="uint_2__size"></a>zmienia
 
-```
+```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

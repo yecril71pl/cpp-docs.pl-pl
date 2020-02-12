@@ -1,30 +1,30 @@
 ---
-title: 'Instrukcje: Używanie Nadsubskrypcji do przesuwania opóźnienia'
+title: 'Porady: używanie nadsubskrypcji do przesuwania opóźnienia'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - oversubscription, using [Concurrency Runtime]
 - using oversubscription [Concurrency Runtime]
 ms.assetid: a1011329-2f0a-4afb-b599-dd4043009a10
-ms.openlocfilehash: d74a081f71f044cab90a8e6fdc64530eaaf87ed8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02c72e7b7f0e3ec9727504d62341d945dcd0d957
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159941"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141938"
 ---
-# <a name="how-to-use-oversubscription-to-offset-latency"></a>Instrukcje: Używanie Nadsubskrypcji do przesuwania opóźnienia
+# <a name="how-to-use-oversubscription-to-offset-latency"></a>Porady: używanie nadsubskrypcji do przesuwania opóźnienia
 
-Nadsubskrypcja może zwiększyć ogólną wydajność niektórych aplikacji, które zawiera zadania, które mają dużej ilości opóźnienia. W tym temacie pokazano, jak używanie nadsubskrypcji do opóźnienia, które jest spowodowany przez odczytywanie danych z połączeniem sieciowym.
+Nadpłata może zwiększyć ogólną wydajność niektórych aplikacji, które zawierają zadania o dużej ilości opóźnienia. W tym temacie przedstawiono sposób użycia nadsubskrypcji w celu przesunięcia opóźnienia, który jest spowodowany odczytem danych z połączenia sieciowego.
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie użyto [bibliotekę asynchronicznych agentów](../../parallel/concrt/asynchronous-agents-library.md) pobierać pliki z serwerami HTTP. `http_reader` Klasa pochodzi od [concurrency::agent](../../parallel/concrt/reference/agent-class.md) i używa komunikatów przekazywania do asynchronicznego odczytu nazwy adresu URL, których można pobrać.
+Ten przykład używa [biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md) do pobierania plików z serwerów HTTP. Klasa `http_reader` dziedziczy z [concurrency:: Agent](../../parallel/concrt/reference/agent-class.md) i używa komunikatów przekazujących do asynchronicznego odczytywania nazw adresów URL do pobrania.
 
-`http_reader` Klasy używa [concurrency::task_group](reference/task-group-class.md) klasy, które można jednocześnie odczytać każdego pliku. Każde zadanie wywołuje [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) metody z `_BeginOversubscription` parametr **true** Aby włączyć nadsubskrypcję w bieżącym kontekście. Każde zadanie wykorzystuje następnie Microsoft Foundation Classes (MFC) [CInternetSession](../../mfc/reference/cinternetsession-class.md) i [CHttpFile](../../mfc/reference/chttpfile-class.md) klasy, aby pobrać plik. Na koniec każdego zadania wywołuje `Context::Oversubscribe` z `_BeginOversubscription` parametr **false** wyłączyć nadsubskrypcji.
+Klasa `http_reader` używa klasy [concurrency:: task_group](reference/task-group-class.md) do równoczesnego odczytywania każdego pliku. Każde zadanie wywołuje metodę [concurrency:: Context::](reference/context-class.md#oversubscribe) presubscription z parametrem `_BeginOversubscription` ustawionym na **wartość true** , aby włączyć nadsubskrypcji w bieżącym kontekście. Każde zadanie następnie używa klasy Microsoft Foundation Classes (MFC) [CInternetSession](../../mfc/reference/cinternetsession-class.md) i [CHttpFile](../../mfc/reference/chttpfile-class.md) , aby pobrać plik. Na koniec każde zadanie wywołuje `Context::Oversubscribe` z parametrem `_BeginOversubscription` ustawionym na **wartość false** , aby wyłączyć nadsubskrypcje.
 
-Po włączeniu nadsubskrypcji środowisko uruchomieniowe tworzy jeden dodatkowy wątek do uruchamiania zadań. Każdy z tych wątków również oversubscribe bieżącego kontekstu, a tym samym utworzyć dodatkowe wątki. `http_reader` Klasy używa [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) obiektu, aby ograniczyć liczbę wątków, z których korzysta aplikacja. Agent inicjuje buforu ze stałą liczbą wartości tokenu. Dla każdej operacji pobierania agenta odczytuje wartość tokenu z buforu, zanim operacja rozpoczyna się, a następnie zapisuje wartości powrót do buforu po zakończeniu operacji. Jeśli bufor jest pusty, agent będzie czekał jednej z operacji pobierania do zapisania wartości z powrotem do buforu.
+Gdy subskrypcja jest włączona, środowisko uruchomieniowe tworzy jeden dodatkowy wątek, w którym będą uruchamiane zadania podrzędne. Każdy z tych wątków może również zasubskrybować bieżący kontekst i w efekcie utworzyć dodatkowe wątki. Klasa `http_reader` używa obiektu [concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) , aby ograniczyć liczbę wątków używanych przez aplikację. Agent inicjuje bufor ze stałą liczbą wartości tokenu. Dla każdej operacji pobierania Agent odczytuje wartość tokenu z buforu przed rozpoczęciem operacji, a następnie zapisuje tę wartość z powrotem do buforu po zakończeniu operacji. Gdy bufor jest pusty, Agent czeka na jedną z operacji pobierania, aby zapisać wartość z powrotem do buforu.
 
-Poniższy przykład ogranicza liczbę jednoczesnych zadań dwa razy liczba wątków sprzętu. Ta wartość jest dobry punkt wyjścia do użycia podczas eksperymentować nadsubskrypcji. Można użyć wartość, która mieści się w środowisku przetwarzania lub dynamicznie zmieniać tej wartości, aby odpowiedzieć na rzeczywistego obciążenia.
+Poniższy przykład ogranicza liczbę równoczesnych zadań do dwóch razy większej liczby dostępnych wątków sprzętowych. Ta wartość jest dobrym punktem wyjścia do użycia podczas eksperymentowania z nadsubskrypcją. Można użyć wartości, która pasuje do określonego środowiska przetwarzania lub dynamicznie zmienić tę wartość, aby odpowiadały rzeczywistemu obciążeniu.
 
 [!code-cpp[concrt-download-oversubscription#1](../../parallel/concrt/codesnippet/cpp/how-to-use-oversubscription-to-offset-latency_1.cpp)]
 
@@ -54,31 +54,32 @@ Downloading http://www.tailspintoys.com/...
 Downloaded 1801040 bytes in 3276 ms.
 ```
 
-Przykład mogą działać szybciej po włączeniu nadsubskrypcji, ponieważ dodatkowe zadania są uruchamiane podczas gdy inne zadania, poczekaj na zakończenie operacji ukrytego.
+Przykład może działać szybciej, gdy subskrypcja jest włączona, ponieważ zadania podrzędne są uruchamiane, podczas gdy inne zadania oczekują na zakończenie operacji ukrytego.
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
-Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `download-oversubscription.cpp` i następnie uruchom jeden z następujących poleceń w **Visual Studio Command Prompt** okna.
+Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `download-oversubscription.cpp` a następnie Uruchom jedno z następujących poleceń w oknie **wiersza polecenia programu Visual Studio** .
 
-**cl.exe /EHsc /MD /D "_AFXDLL" download-oversubscription.cpp**
+```cmd
+cl.exe /EHsc /MD /D "_AFXDLL" download-oversubscription.cpp
+cl.exe /EHsc /MT download-oversubscription.cpp
+```
 
-**Cl.exe/ehsc/MT pobierania oversubscription.cpp**
+## <a name="robust-programming"></a>Skuteczne programowanie
 
-## <a name="robust-programming"></a>Niezawodne programowanie
+Zawsze należy wyłączyć nadsubskrypcji, gdy nie są już potrzebne. Rozważmy funkcję, która nie obsługuje wyjątku, który jest generowany przez inną funkcję. Jeśli nie wyłączysz nadsubskrypcji przed zwróceniem przez funkcję, wszelkie dodatkowe równoległe zadania również zasubskrybują bieżący kontekst.
 
-Zawsze wyłączaj nadsubskrypcji po nie są już potrzebne. Należy wziąć pod uwagę funkcja, która nie obsługuje wyjątek, który jest generowany przez inną funkcję. Jeśli nie wyłączysz nadsubskrypcji zanim funkcja zwróci, wykonywania dodatkowej pracy równolegle będzie również oversubscribe bieżącego kontekstu.
+Możesz użyć wzorca *pozyskiwania zasobów* (RAII), aby ograniczyć nadsubskrypcję do danego zakresu. Pod wzorcem RAII, struktura danych jest przypisana na stosie. Ta struktura danych inicjuje lub uzyskuje zasób podczas jego tworzenia i niszczy lub zwalnia ten zasób, gdy struktura danych zostanie zniszczona. Wzorzec RAII gwarantuje, że destruktor jest wywoływany przed wyjściem z otaczającego zakresu. W związku z tym zasób jest prawidłowo zarządzany, gdy wyjątek jest zgłaszany lub funkcja zawiera wiele instrukcji `return`.
 
-Możesz użyć *inicjowania jest pozyskiwanie zasobów* wzorca (RAII), aby ograniczyć nadsubskrypcji do podanego zakresu. W obszarze wzór RAII to struktura danych jest przydzielany na stosie. Tej struktury danych inicjuje lub uzyskuje zasobu, gdy jest tworzony i niszczy lub zwalnia tego zasobu, kiedy niszczony jest struktury danych. Wzór RAII gwarantuje, że destruktor jest wywoływany przed zasięgu kończy działanie. W związku z tym, gdy wyjątek jest zgłaszany, lub gdy funkcja zawiera wiele zasobu jest poprawnie zarządzany `return` instrukcji.
-
-W poniższym przykładzie zdefiniowano strukturę, która nosi nazwę `scoped_blocking_signal`. Konstruktor obiektu `scoped_blocking_signal` struktury włącza nadsubskrypcji i destruktor wyłącza nadsubskrypcji.
+W poniższym przykładzie zdefiniowano strukturę o nazwie `scoped_blocking_signal`. Konstruktor struktury `scoped_blocking_signal` umożliwia nadsubskrypcji i destruktor wyłącza nadsubskrypcji.
 
 [!code-cpp[concrt-download-oversubscription#2](../../parallel/concrt/codesnippet/cpp/how-to-use-oversubscription-to-offset-latency_2.cpp)]
 
-Poniższy przykład modyfikuje treści `download` metody Użyj RAII, aby upewnić się, że nadsubskrypcja jest wyłączone, zanim funkcja zwróci. Ta metoda zapewnia, że `download` metoda jest bezpieczna pod względem wyjątków.
+Poniższy przykład modyfikuje treść metody `download`, aby użyć RAII, aby upewnić się, że nadsubskrypcja jest wyłączona przed zwróceniem funkcji. Ta technika zapewnia, że metoda `download` jest bezpieczna przed wyjątkami.
 
 [!code-cpp[concrt-download-oversubscription#3](../../parallel/concrt/codesnippet/cpp/how-to-use-oversubscription-to-offset-latency_3.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konteksty](../../parallel/concrt/contexts.md)<br/>
-[Context::oversubscribe — metoda](reference/context-class.md#oversubscribe)
+[Context:: subsubskrybuj — Metoda](reference/context-class.md#oversubscribe)

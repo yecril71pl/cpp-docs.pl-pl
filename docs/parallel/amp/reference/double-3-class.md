@@ -72,40 +72,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::rbg
 - amp_short_vectors/Concurrency::graphics::double_3::get_yxz
 ms.assetid: baeb3ff0-2862-4c81-857e-b1a4c085be25
-ms.openlocfilehash: 6423220d8203b0d0fba73a4888f967e159db26de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 981b3026e1efb6c3b4e06457a0eb1f986cdcaafa
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180365"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126698"
 ---
-# <a name="double3-class"></a>double_3 — Klasa
+# <a name="double_3-class"></a>double_3 — Klasa
 
-Reprezentuje krótki Wektor trzech liczb typu Double.
+Reprezentuje krótki wektor trzech podwojonych.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class double_3;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |value_type||
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[double_3 — Konstruktor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.|
+|[Konstruktor double_3](#ctor)|Przeciążone. Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |double_3::get_x||
 |double_3::get_xy||
@@ -126,7 +126,7 @@ class double_3;
 |double_3::ref_g||
 |double_3::ref_r||
 |double_3::ref_x||
-|double_3::ref_y||
+|double_3:: ref_y||
 |double_3::ref_z||
 |double_3::set_x||
 |double_3::set_xy||
@@ -146,26 +146,26 @@ class double_3;
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|double_3::operator-||
-|double_3::operator--||
-|double_3::operator * =||
-|double_3::operator / =||
-|double_3::operator ++||
-|double_3::operator +=||
-|double_3::operator =||
-|double_3::operator-=||
+|double_3:: operator-||
+|double_3:: operator--||
+|double_3:: operator * =||
+|double_3:: operator/=||
+|double_3:: operator + +||
+|double_3:: operator + =||
+|double_3:: operator =||
+|double_3:: operator-=||
 
-### <a name="public-constants"></a>Publiczne stałe
+### <a name="public-constants"></a>Stałe publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[rozmiar — stała](#double_3__size)||
+|[Stała rozmiaru](#double_3__size)||
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |double_3::b||
 |double_3::bg||
@@ -177,18 +177,18 @@ class double_3;
 |double_3::gbr||
 |double_3::gr||
 |double_3::grb||
-|double_3::r||
+|double_3:: r||
 |double_3::rb||
 |double_3::rbg||
 |double_3::rg||
 |double_3::rgb||
 |double_3::x||
-|double_3::xy||
+|double_3:: XY||
 |double_3::xyz||
 |double_3::xz||
 |double_3::xzy||
-|double_3::y||
-|double_3::yx||
+|double_3:: y||
+|double_3:: yx||
 |double_3::yxz||
 |double_3::yz||
 |double_3::yzx||
@@ -204,15 +204,15 @@ class double_3;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** amp_short_vectors.h
+**Nagłówek:** amp_short_vectors. h
 
-**Namespace:** CONCURRENCY::Graphics
+**Przestrzeń nazw:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> double_3
+## <a name="ctor"></a>double_3
 
-Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.
+Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.
 
-```
+```cpp
 double_3() restrict(amp,
     cpu);
 
@@ -254,26 +254,26 @@ explicit inline double_3(
 ### <a name="parameters"></a>Parametry
 
 *_V0*<br/>
-Wartość do zainicjowania elementu 0.
+Wartość, aby zainicjować element 0.
 
 *_V1*<br/>
 Wartość do zainicjowania elementu 1.
 
 *_V2*<br/>
-Wartość można zainicjować element 2.
+Wartość do zainicjowania elementu 2.
 
 *_V*<br/>
-Wartość inicjalizacji.
+Wartość dla inicjalizacji.
 
-*_Inne*<br/>
+*_Other*<br/>
 Obiekt używany do inicjowania.
 
-##  <a name="double_3__size"></a> Rozmiar
+## <a name="double_3__size"></a>zmienia
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

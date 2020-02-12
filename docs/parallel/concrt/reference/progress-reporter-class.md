@@ -9,46 +9,46 @@ f1_keywords:
 helpviewer_keywords:
 - progress_reporter class
 ms.assetid: b836efab-2d05-4649-b6fa-d15236f1f813
-ms.openlocfilehash: dac74085278418153ddec502f6257ce13885704d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd8f50a8c9829ff9de3e2412b89aa4de88d90db6
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394380"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77138775"
 ---
-# <a name="progressreporter-class"></a>progress_reporter — Klasa
+# <a name="progress_reporter-class"></a>progress_reporter — Klasa
 
-Klasa reportera postępu pozwala raportowania powiadomienia o postępie określonego typu. Każdy obiekt progress_reporter jest powiązany z określoną akcją lub operacją asynchroniczną.
+Klasa raportów postępu umożliwia raportowanie powiadomień o postępie określonego typu. Każdy obiekt progress_reporter jest powiązany z określoną akcją asynchroniczną lub operacją.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 template<typename _ProgressType>
 class progress_reporter;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
 *_ProgressType*<br/>
-Typ ładunku każdego powiadomienia o postępie zgłoszonego za pomocą reportera postępu.
+Typ ładunku każdej powiadomienia o postępie raportowany przez raport postępu.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[progress_reporter](#ctor)||
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[report](#report)|Wysyła raport o postępie do akcji lub operacji asynchronicznej z którym powiązany jest ten program raportujący postęp.|
+|[Raport](#report)|Wysyła raport postępu do akcji asynchronicznej lub operacji, do której jest powiązany ten raport postępu.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ten typ jest dostępny tylko dla aplikacji środowiska wykonawczego Windows.
+Ten typ jest dostępny tylko dla aplikacji środowisko wykonawcze systemu Windows.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -56,29 +56,29 @@ Ten typ jest dostępny tylko dla aplikacji środowiska wykonawczego Windows.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** ppltasks.h
+**Nagłówek:** ppltasks. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="ctor"></a> progress_reporter —
+## <a name="ctor"></a>progress_reporter
 
-```
+```cpp
 progress_reporter();
 ```
 
-##  <a name="report"></a> Raport
+## <a name="report"></a>Raport
 
-Wysyła raport o postępie do akcji lub operacji asynchronicznej z którym powiązany jest ten program raportujący postęp.
+Wysyła raport postępu do akcji asynchronicznej lub operacji, do której jest powiązany ten raport postępu.
 
-```
+```cpp
 void report(const _ProgressType& val) const;
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Val*<br/>
-Ładunek do zgłoszenia poprzez powiadomienie o postępie.
+*użyte*<br/>
+Ładunek do zgłoszenia w ramach powiadomienia o postępie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

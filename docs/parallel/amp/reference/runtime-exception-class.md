@@ -9,43 +9,43 @@ f1_keywords:
 helpviewer_keywords:
 - runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-ms.openlocfilehash: 8ed3fb5edd861eaecd0bf9a39687a2a63fdfe695
-ms.sourcegitcommit: a61d17cffdd50f1c3c6e082a01bbcbc85b6cc5a7
+ms.openlocfilehash: 6ad784720833d2ae5de7d653d132ba144aec2677
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65975179"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126384"
 ---
-# <a name="runtimeexception-class"></a>runtime_exception — Klasa
+# <a name="runtime_exception-class"></a>runtime_exception — Klasa
 
-Typ podstawowy dla wyjątków w bibliotece C++ Accelerated Massive Parallelism (AMP).
+Typ podstawowy dla wyjątków w przyspieszonej C++ bibliotece o dużej współbieżności (amp).
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 class runtime_exception : public std::exception;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[runtime_exception — Konstruktor](#ctor)|Inicjuje nowe wystąpienie klasy `runtime_exception` klasy.|
-|[~ runtime_exception — destruktor](#dtor)|Niszczy `runtime_exception` obiektu.|
+|[Konstruktor runtime_exception](#ctor)|Inicjuje nowe wystąpienie klasy `runtime_exception`.|
+|[~ runtime_exception destruktor](#dtor)|Niszczy obiekt `runtime_exception`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[get_error_code](#get_error_code)|Zwraca kod błędu, który spowodował wyjątek.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[operator=](#operator_eq)|Kopiuje zawartość określonego `runtime_exception` obiektu do wskazanego.|
+|[operator =](#operator_eq)|Kopiuje zawartość określonego obiektu `runtime_exception` do tego.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -55,17 +55,17 @@ class runtime_exception : public std::exception;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** amprt.h
+**Nagłówek:** amprt. h
 
-**Namespace:** Współbieżność
+**Przestrzeń nazw:** Współbieżności
 
-## <a name="ctor"></a>  runtime_exception — Konstruktor
+## <a name="ctor"></a>Konstruktor runtime_exception
 
 Inicjuje nowe wystąpienie klasy.
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 runtime_exception(
     const char * _Message,
     HRESULT _Hresult ) throw();
@@ -83,57 +83,57 @@ runtime_exception(
 Opis błędu, który spowodował wyjątek.
 
 *_Hresult*<br/>
-HRESULT błędu, który spowodował wyjątek.
+WYNIK HRESULT błędu, który spowodował wyjątek.
 
-*_Inne*<br/>
-`runtime_exception` Obiektu do skopiowania.
+*_Other*<br/>
+Obiekt `runtime_exception` do skopiowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-`runtime_exception` Obiektu.
+Obiekt `runtime_exception`.
 
-## <a name="dtor"></a>  ~ runtime_exception — destruktor
+## <a name="dtor"></a>~ runtime_exception destruktor
 
 Niszczy obiekt.
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 virtual ~runtime_exception() throw();
 ```
 
-## <a name="get_error_code"></a> get_error_code
+## <a name="get_error_code"></a>get_error_code
 
 Zwraca kod błędu, który spowodował wyjątek.
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 HRESULT get_error_code() const throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-HRESULT błędu, który spowodował wyjątek.
+WYNIK HRESULT błędu, który spowodował wyjątek.
 
-## <a name="operator_eq"></a>  operator =
-  Kopiuje zawartość określonego `runtime_exception` obiektu do wskazanego.
+## <a name="operator_eq"></a>operator =
+  Kopiuje zawartość określonego obiektu `runtime_exception` do tego.
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 runtime_exception & operator= (    const runtime_exception & _Other ) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Inne*<br/>
-`runtime_exception` Obiektu do skopiowania.
+*_Other*<br/>
+Obiekt `runtime_exception` do skopiowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Odwołanie do `runtime_exception` obiektu.
+Odwołanie do tego obiektu `runtime_exception`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

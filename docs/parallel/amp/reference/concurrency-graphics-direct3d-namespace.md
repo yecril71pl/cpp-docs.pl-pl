@@ -5,41 +5,41 @@ f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d
 - amp_short_vectors/Concurrency::graphics::direct3d
 ms.assetid: be283331-07cf-46e4-91a1-e8aa85d4ec8e
-ms.openlocfilehash: 8fb03edd63c612fd070e50e2f5d229cd8e207812
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4911787fd17877769eb723cf1e61e29fe626a783
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405693"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139435"
 ---
 # <a name="concurrencygraphicsdirect3d-namespace"></a>Concurrency::graphics::direct3d — Przestrzeń nazw
 
-Udostępnia [get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture) i [make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture) metody.
+Zapewnia metody [get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture) i [make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture) .
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 namespace direct3d;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="functions"></a>Funkcje
 
-|Nazwa<br /><br /> Opis|
+|Name (Nazwa)<br /><br /> Opis|
 |--------------------------|
-|[get_sampler](concurrency-graphics-direct3d-namespace-functions.md#get_sampler)<br /><br /> Pobierz interfejsu stanu Direct3D próbnika w akceleratorze danego widoku, który reprezentuje określony obiekt próbnika.|
-|[get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture)<br /><br /> Pobiera interfejs tekstur Direct3D podstaw określonego [tekstury](texture-class.md) obiektu.|
-|[make_sampler](concurrency-graphics-direct3d-namespace-functions.md#make_sampler)<br /><br /> Utwórz przykład ze wskaźnika interfejsu stanu Direct3D próbnika.|
-|[make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture)<br /><br /> Tworzy [tekstury](texture-class.md) obiektu przy użyciu określonych parametrów.|
-|[msad4](concurrency-graphics-direct3d-namespace-functions.md#msad4)<br /><br /> Porównuje 4-bajtową wartość odniesienia i 8-bajtową wartość źródłową i gromadzi wektor 4 sum.|
+|[get_sampler](concurrency-graphics-direct3d-namespace-functions.md#get_sampler)<br /><br /> Pobierz interfejs stanu próbnika Direct3D w danym widoku akceleratora, który reprezentuje określony obiekt próbnika.|
+|[get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture)<br /><br /> Pobiera interfejs tekstury Direct3D stanowiący podstawę określonego obiektu [tekstury](texture-class.md) .|
+|[make_sampler](concurrency-graphics-direct3d-namespace-functions.md#make_sampler)<br /><br /> Utwórz próbnik ze wskaźnika interfejsu stanu próbnika Direct3D.|
+|[make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture)<br /><br /> Tworzy obiekt [tekstury](texture-class.md) przy użyciu określonych parametrów.|
+|[msad4](concurrency-graphics-direct3d-namespace-functions.md#msad4)<br /><br /> Porównuje 4-bajtową wartość odniesienia i 8-bajtową wartość źródła i gromadzi wektor 4 sum.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** amp_graphics.h
+**Nagłówek:** amp_graphics. h
 
-**Namespace:** CONCURRENCY::Graphics
+**Przestrzeń nazw:** Concurrency:: Graphics
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_4::bag
 - amp_short_vectors/Concurrency::graphics::double_4::zwy
 ms.assetid: a81c1595-24c6-4b3f-9574-d5942275e5e8
-ms.openlocfilehash: 14e85a2c9ff21ed451cc6141ab7940f9c614c662
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9ca413573ebd741ea2a9a813a25ec2679aff5b7
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180326"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139355"
 ---
-# <a name="double4-class"></a>double_4 — Klasa
+# <a name="double_4-class"></a>double_4 — Klasa
 
-Reprezentuje krótki wektor czterech wartości podwójnej precyzji.
+Reprezentuje krótki wektor czterech podwójnej precyzji.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class double_4;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[double_4 — Konstruktor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.|
+|[Konstruktor double_4](#ctor)|Przeciążone. Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |double_4::get_w||
 |double_4::get_wx||
@@ -373,7 +373,7 @@ class double_4;
 |double_4::ref_r||
 |double_4::ref_w||
 |double_4::ref_x||
-|double_4::ref_y||
+|double_4:: ref_y||
 |double_4::ref_z||
 |double_4::set_w||
 |double_4::set_wx||
@@ -442,49 +442,49 @@ class double_4;
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|double_4::operator-||
-|double_4::operator--||
-|double_4::operator * =||
-|double_4::operator / =||
-|double_4::operator ++||
-|double_4::operator +=||
+|double_4:: operator-||
+|double_4:: operator--||
+|double_4:: operator * =||
+|double_4:: operator/=||
+|double_4:: operator + +||
+|double_4:: operator + =||
 |double_4::operator=||
-|double_4::operator-=||
+|double_4:: operator-=||
 
-### <a name="public-constants"></a>Publiczne stałe
+### <a name="public-constants"></a>Stałe publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[rozmiar — stała](#double_4__size)||
+|[Stała rozmiaru](#double_4__size)||
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |double_4::a||
 |double_4::ab||
 |double_4::abg||
-|double_4::abgr||
-|double_4::ABR||
+|double_4:: abgr||
+|double_4:: ABR||
 |double_4::abrg||
 |double_4::ag||
 |double_4::agb||
 |double_4::agbr||
-|double_4::AGR||
+|double_4:: AGR||
 |double_4::agrb||
-|double_4::AR||
-|double_4::arb||
+|double_4:: AR||
+|double_4:: ARB||
 |double_4::arbg||
-|double_4::ARG||
-|double_4::ARGB||
+|double_4:: ARG||
+|double_4:: ARGB||
 |double_4::b||
 |double_4::ba||
 |double_4::bag||
-|double_4::bagr||
-|double_4::bar||
-|double_4::barg||
+|double_4:: bagr||
+|double_4:: bar||
+|double_4:: barki||
 |double_4::bg||
 |double_4::bga||
 |double_4::bgar||
@@ -499,16 +499,16 @@ class double_4;
 |double_4::ga||
 |double_4::gab||
 |double_4::gabr||
-|double_4::gar||
+|double_4:: Gar||
 |double_4::garb||
 |double_4::gb||
 |double_4::gba||
-|double_4::gbar||
+|double_4:: gbar||
 |double_4::gbr||
 |double_4::gbra||
 |double_4::gr||
 |double_4::gra||
-|double_4::grab||
+|double_4:: Weź||
 |double_4::grb||
 |double_4::grba||
 |double_4::r||
@@ -527,13 +527,13 @@ class double_4;
 |double_4::rgab||
 |double_4::rgb||
 |double_4::rgba||
-|double_4::w||
+|double_4:: w||
 |double_4::wx||
-|double_4::wxy||
+|double_4:: wxy||
 |double_4::wxyz||
 |double_4::wxz||
 |double_4::wxzy||
-|double_4::Wy||
+|double_4:: wy||
 |double_4::wyx||
 |double_4::wyxz||
 |double_4::wyz||
@@ -549,32 +549,32 @@ class double_4;
 |double_4::xwyz||
 |double_4::xwz||
 |double_4::xwzy||
-|double_4::xy||
-|double_4::xyw||
+|double_4:: XY||
+|double_4:: XYW||
 |double_4::xywz||
 |double_4::xyz||
-|double_4::xyzw||
+|double_4:: xyzw||
 |double_4::xz||
-|double_4::xzw||
+|double_4:: xzw||
 |double_4::xzwy||
 |double_4::xzy||
 |double_4::xzyw||
-|double_4::y||
-|double_4::yw||
+|double_4:: y||
+|double_4:: yw||
 |double_4::ywx||
 |double_4::ywxz||
 |double_4::ywz||
 |double_4::ywzx||
 |double_4::yx||
-|double_4::yxw||
+|double_4:: yxw||
 |double_4::yxwz||
 |double_4::yxz||
-|double_4::yxzw||
+|double_4:: yxzw||
 |double_4::yz||
-|double_4::yzw||
+|double_4:: yzw||
 |double_4::yzwx||
 |double_4::yzx||
-|double_4::yzxw||
+|double_4:: yzxw||
 |double_4::z||
 |double_4::zw||
 |double_4::zwx||
@@ -598,15 +598,15 @@ class double_4;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** amp_short_vectors.h
+**Nagłówek:** amp_short_vectors. h
 
-**Namespace:** CONCURRENCY::Graphics
+**Przestrzeń nazw:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> double_4
+## <a name="ctor"></a>double_4
 
-Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.
+Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.
 
-```
+```cpp
 double_4() restrict(amp,
     cpu);
 
@@ -649,29 +649,29 @@ explicit inline double_4(
 ### <a name="parameters"></a>Parametry
 
 *_V0*<br/>
-Wartość do zainicjowania elementu 0.
+Wartość, aby zainicjować element 0.
 
 *_V1*<br/>
 Wartość do zainicjowania elementu 1.
 
 *_V2*<br/>
-Wartość można zainicjować element 2.
+Wartość do zainicjowania elementu 2.
 
 *_V3*<br/>
 Wartość do zainicjowania elementu 3.
 
 *_V*<br/>
-Wartość inicjalizacji.
+Wartość dla inicjalizacji.
 
-*_Inne*<br/>
+*_Other*<br/>
 Obiekt używany do inicjowania.
 
-##  <a name="double_4__size"></a> Rozmiar
+## <a name="double_4__size"></a>zmienia
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

@@ -8,30 +8,30 @@ f1_keywords:
 helpviewer_keywords:
 - task_canceled class
 ms.assetid: c3f0b234-2cc1-435f-a48e-995f45b190be
-ms.openlocfilehash: caef1c62ff09ffb76f74d4a1453e9d59dcb7d45b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1436f921343843ee2b50888f00b6d470e513329
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385248"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142604"
 ---
-# <a name="taskcanceled-class"></a>task_canceled — Klasa
+# <a name="task_canceled-class"></a>task_canceled — Klasa
 
-Ta klasa opisuje wyjątek generowany przez warstwę zadań PPL, aby wymusić anulowanie bieżącego zadania. Jest to również generowane przez `get()` metody [zadań](/visualstudio/extensibility/debugger/task-class-internal-members), dla anulowanych zadań.
+Ta klasa opisuje wyjątek zgłoszony przez warstwę zadań PPL w celu wymuszenia anulowania bieżącego zadania. Jest on również generowany przez metodę `get()` w [zadaniu](/visualstudio/extensibility/debugger/task-class-internal-members)dla anulowanego zadania.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class task_canceled : public std::exception;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[task_canceled](#ctor)|Przeciążone. Konstruuje `task_canceled` obiektu.|
+|[task_canceled](#ctor)|Przeciążone. Konstruuje obiekt `task_canceled`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -41,15 +41,15 @@ class task_canceled : public std::exception;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concrt.h
+**Nagłówek:** ConcRT. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="ctor"></a> task_canceled —
+## <a name="ctor"></a>task_canceled
 
-Konstruuje `task_canceled` obiektu.
+Konstruuje obiekt `task_canceled`.
 
-```
+```cpp
 explicit _CRTIMP task_canceled(_In_z_ const char* _Message) throw();
 
 task_canceled() throw();
@@ -58,8 +58,8 @@ task_canceled() throw();
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Opisowy komunikat dotyczący błędu.
+Opisowy komunikat o błędzie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

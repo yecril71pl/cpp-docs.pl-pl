@@ -8,30 +8,30 @@ f1_keywords:
 helpviewer_keywords:
 - improper_scheduler_reference class
 ms.assetid: 434a7512-7796-4255-92a7-f3bf71c6a7a7
-ms.openlocfilehash: 121e61447775cdcb5d7f5f1187c5d4cc6b7d68b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18536043b0d46a6f27f1e5c60778a22af82ad2d3
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262908"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141109"
 ---
-# <a name="improperschedulerreference-class"></a>improper_scheduler_reference — Klasa
+# <a name="improper_scheduler_reference-class"></a>improper_scheduler_reference — Klasa
 
-Ta klasa opisuje wyjątek generowany, gdy `Reference` wywoływana jest metoda `Scheduler` obiekt, który jest zamykana, z kontekstu, który nie jest częścią tego harmonogramu.
+Ta klasa opisuje wyjątek zgłoszony, gdy metoda `Reference` jest wywoływana w obiekcie `Scheduler`, który jest zamykany, z kontekstu, który nie jest częścią tego harmonogramu.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class improper_scheduler_reference : public std::exception;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[improper_scheduler_reference](#ctor)|Przeciążone. Konstruuje `improper_scheduler_reference` obiektu.|
+|[improper_scheduler_reference](#ctor)|Przeciążone. Konstruuje obiekt `improper_scheduler_reference`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -41,15 +41,15 @@ class improper_scheduler_reference : public std::exception;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concrt.h
+**Nagłówek:** ConcRT. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="ctor"></a> improper_scheduler_reference —
+## <a name="ctor"></a>improper_scheduler_reference
 
-Konstruuje `improper_scheduler_reference` obiektu.
+Konstruuje obiekt `improper_scheduler_reference`.
 
-```
+```cpp
 explicit _CRTIMP improper_scheduler_reference(_In_z_ const char* _Message) throw();
 
 improper_scheduler_reference() throw();
@@ -58,9 +58,9 @@ improper_scheduler_reference() throw();
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Opisowy komunikat dotyczący błędu.
+Opisowy komunikat o błędzie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Scheduler, klasa](scheduler-class.md)

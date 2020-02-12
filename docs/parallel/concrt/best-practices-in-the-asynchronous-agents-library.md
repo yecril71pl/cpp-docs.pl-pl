@@ -7,74 +7,74 @@ helpviewer_keywords:
 - Asynchronous Agents Library, practices to avoid
 - practices to avoid, Asynchronous Agents Library
 ms.assetid: 85f52354-41eb-4b0d-98c5-f7344ee8a8cf
-ms.openlocfilehash: c61393957a63895a9ecbdaaae8d83a5fbd710de3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1cd6b54a014d35d17c732ed52f8529b05274585b
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236563"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142097"
 ---
 # <a name="best-practices-in-the-asynchronous-agents-library"></a>Biblioteka agentów asynchronicznych — Najlepsze praktyki
 
-W tym dokumencie opisano sposób efektywny używać bibliotekę asynchronicznych agentów. Biblioteka agentów promuje model programowania oparty na aktora i komunikatów w trakcie przekazywania dla gruboziarnistych przepływu danych i ich przetwarzanie potokowe zadania.
+W tym dokumencie opisano sposób efektywnego korzystania z biblioteki agentów asynchronicznych. Biblioteka agenci wspiera model programowania oparty na aktorze i przetwarza komunikaty w procesie, które są przekazywane do przepływu danych i zadań potokowych.
 
-Aby uzyskać więcej informacji na temat biblioteki agentów, zobacz [bibliotekę asynchronicznych agentów](../../parallel/concrt/asynchronous-agents-library.md).
+Aby uzyskać więcej informacji na temat biblioteki Agents, zobacz [Biblioteka agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md).
 
-##  <a name="top"></a> Sekcje
+## <a name="top"></a>Poszczególne
 
 Ten dokument zawiera następujące sekcje:
 
-- [Użycie agentów, aby odizolować stan](#isolation)
+- [Użyj agentów do izolowania stanu](#isolation)
 
-- [Użyj mechanizmu Dławiącego, aby ograniczyć liczbę komunikatów w potoku danych](#throttling)
+- [Użyj mechanizmu ograniczania przepustowości, aby ograniczyć liczbę komunikatów w potoku danych](#throttling)
 
 - [Nie wykonuj szczegółowych prac w potoku danych](#fine-grained)
 
-- [Nie przekazuj ładunków dużych bloków komunikatów według wartości](#large-payloads)
+- [Nie przekazuj dużych ładunków komunikatów według wartości](#large-payloads)
 
-- [Użyj shared_ptr w danych sieciowych gdy nie określono własności](#ownership)
+- [Użyj shared_ptr w sieci danych, gdy własność jest niezdefiniowana](#ownership)
 
-##  <a name="isolation"></a> Użycie agentów, aby odizolować stan
+## <a name="isolation"></a>Użyj agentów do izolowania stanu
 
-Biblioteka agentów zawiera alternatywy dla udostępnionego stanu, umożliwiając łączenie izolowane składniki za pomocą mechanizmu przekazywania komunikatów asynchronicznych. Agenci asynchroniczni są najbardziej efektywne, gdy ich izolowanie ich stan wewnętrzny od innych składników. Przez izolowanie stanu, wiele składników zazwyczaj działa we współdzielonych danych. Stan izolacji można włączyć aplikacji do skalowania, ponieważ pozwala uniknąć rywalizacji o pamięć współużytkowaną. Stan izolacji również zmniejsza ryzyko, warunki zakleszczenia i sytuacji wyścigu, ponieważ nie ma składników do synchronizowania dostępu do udostępnionych danych.
+Biblioteka agenci zapewnia alternatywy dla udostępnionego stanu przez umożliwienie łączenia składników izolowanych za pomocą mechanizmu asynchronicznego przekazywania komunikatów. Agenci asynchroniczni są najbardziej efektywni, gdy izolują swój wewnętrzny stan z innych składników. Przez izolację stanu wiele składników zazwyczaj nie działa na danych udostępnionych. Izolacja stanu może umożliwić skalowanie aplikacji, ponieważ zmniejsza rywalizację do pamięci współdzielonej. Izolacja stanu zmniejsza również prawdopodobieństwo zakleszczenia i warunków wyścigu, ponieważ składniki nie muszą synchronizować dostępu do udostępnionych danych.
 
-Zazwyczaj odizolować stan agenta poprzez posiadanie elementów członkowskich danych w `private` lub `protected` sekcje klasy agenta i przy użyciu buforów komunikatów do komunikowania się zmiany stanu. W poniższym przykładzie przedstawiono `basic_agent` klasy, która jest pochodną [concurrency::agent](../../parallel/concrt/reference/agent-class.md). `basic_agent` Klasa używa dwóch buforów komunikatów do komunikowania się z składników zewnętrznych. Jeden buforu komunikatów przechowuje komunikaty przychodzące; buforu komunikatu zawiera wiadomości wychodzące.
+Zazwyczaj izolowany jest stan w agencie przez utrzymywanie składowych danych w `private` lub `protected` sekcjach klasy agenta oraz przy użyciu buforów komunikatów do przekazywania zmian stanu. Poniższy przykład przedstawia klasę `basic_agent`, która pochodzi od [concurrency:: Agent](../../parallel/concrt/reference/agent-class.md). Klasa `basic_agent` używa dwóch buforów komunikatów do komunikacji ze składnikami zewnętrznymi. Jeden bufor komunikatów zawiera komunikaty przychodzące; drugi bufor komunikatów zawiera komunikaty wychodzące.
 
 [!code-cpp[concrt-simple-agent#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-asynchronous-agents-library_1.cpp)]
 
-Aby uzyskać kompletny przykład o tym, jak zdefiniować i korzystania z agentów, zobacz [instruktażu: Tworzenie aplikacji opartej o agentów](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md) i [instruktażu: Tworzenie agenta przepływu danych](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md).
+Aby zapoznać się z kompletnymi przykładami dotyczącymi definiowania agentów i korzystania z nich, zobacz [Przewodnik: Tworzenie aplikacji opartej na agencie](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md) i [Przewodnik: tworzenie agenta przepływu danych](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md).
 
-[[Górnej](#top)]
+[[Top](#top)]
 
-##  <a name="throttling"></a> Użyj mechanizmu Dławiącego, aby ograniczyć liczbę komunikatów w potoku danych
+## <a name="throttling"></a>Użyj mechanizmu ograniczania przepustowości, aby ograniczyć liczbę komunikatów w potoku danych
 
-Wiele typów buforu komunikatów, takie jak [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md), może zawierać nieograniczoną liczbę komunikatów. Producent komunikatu szybciej, niż odbiorcy mogą przetworzyć te komunikaty wysyła komunikaty do potoku danych, aplikacja może przejść w stan małej ilości pamięci lub braku pamięci. Za pomocą mechanizmu dławiącego, na przykład semafor, aby ograniczyć liczbę wiadomości, które są jednocześnie aktywne w potoku danych.
+Wiele typów buforów komunikatów, takich jak [concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md), może zawierać nieograniczoną liczbę komunikatów. Gdy producent komunikatu wysyła komunikaty do potoku danych szybciej niż odbiorca może przetworzyć te komunikaty, aplikacja może wprowadzić stan niskiej lub wolnej pamięci. Można użyć mechanizmu ograniczania przepustowości, na przykład semafora, aby ograniczyć liczbę komunikatów współbieżnie aktywnych w potoku danych.
 
-Poniższy przykład podstawowy pokazuje, jak użyć semafor, aby ograniczyć liczbę komunikatów w potoku danych. Dane potok używa [concurrency::wait](reference/concurrency-namespace-functions.md#wait) funkcję, aby symulować operacji, która zajmuje co najmniej 100 milisekund. Ponieważ nadawca generuje komunikaty szybciej, niż odbiorcy mogą przetworzyć te komunikaty, w tym przykładzie definiuje `semaphore` klasy, aby umożliwić aplikacji ograniczyć liczbę aktywnych komunikatów.
+Poniższy przykład podstawowy pokazuje, jak używać semafora, aby ograniczyć liczbę komunikatów w potoku danych. Potok danych używa funkcji [concurrency:: wait](reference/concurrency-namespace-functions.md#wait) do symulowania operacji, która trwa co najmniej 100 milisekund. Ponieważ nadawca generuje komunikaty szybciej niż odbiorca może przetworzyć te komunikaty, w tym przykładzie zdefiniowano klasę `semaphore`, aby umożliwić aplikacji ograniczenie liczby aktywnych komunikatów.
 
 [!code-cpp[concrt-message-throttling#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-asynchronous-agents-library_2.cpp)]
 
-`semaphore` Obiektu ogranicza potok przetwarzania co najwyżej dwa komunikaty, w tym samym czasie.
+Obiekt `semaphore` ogranicza potok do przetworzenia maksymalnie dwóch komunikatów w tym samym czasie.
 
-Producent, w tym przykładzie wysyła komunikaty relatywnie mało konsumenta. W związku z tym w tym przykładzie nie przedstawiono tu potencjalnych warunków małej ilości pamięci lub braku pamięci. Jednak ten mechanizm jest przydatne, gdy potoku danych zawiera stosunkowo dużej liczby komunikatów.
+Producent w tym przykładzie wysyła stosunkowo kilka komunikatów do konsumenta. W związku z tym ten przykład nie pokazuje potencjalnego stanu niskiej ilości pamięci lub braku pamięci. Jednak ten mechanizm jest przydatny, gdy Potok danych zawiera stosunkowo dużą liczbę komunikatów.
 
-Aby uzyskać więcej informacji na temat tworzenia klasę semafora, która jest używana w tym przykładzie, zobacz [jak: Korzystanie z klasy kontekstu do wdrażania Kooperatywnego semafora](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
+Aby uzyskać więcej informacji na temat sposobu tworzenia klasy semaforów, która jest używana w tym przykładzie, zobacz [How to: Use the Context Class to Implement The Spółdzielczy semafor](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
 
-[[Górnej](#top)]
+[[Top](#top)]
 
-##  <a name="fine-grained"></a> Nie wykonuj szczegółowych prac w potoku danych
+## <a name="fine-grained"></a>Nie wykonuj szczegółowych prac w potoku danych
 
-Biblioteka agentów jest najbardziej użyteczna, gdy pracę wykonywaną przez potok danych jest dość gruboziarnistych. Na przykład jeden składnik aplikacji może odczytywać dane z pliku lub połączenie sieciowe i od czasu do czasu wysyłania danych do innego składnika. Protokół, który używa biblioteki agentów Propagacja komunikatów powoduje, że masz większe obciążenie niż konstrukcje równoległych zadań, które są dostarczane przez mechanizm przekazywania komunikatów [biblioteki wzorców równoległych](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL). W związku z tym upewnij się, że pracę wykonywaną przez potok danych jest wystarczająco długi, o które zostanie przesunięte to obciążenie.
+Biblioteka agentów jest najbardziej użyteczna, gdy prace wykonywane przez potok danych są dość duże. Na przykład jeden składnik aplikacji może odczytywać dane z pliku lub połączenia sieciowego i okazjonalnie wysyłać je do innego składnika. Protokół, który jest wykorzystywany przez bibliotekę agentów do propagowania komunikatów, sprawia, że mechanizm przekazywania komunikatów jest bardziej narzutem niż konstrukcje równoległe zadań, które są dostarczane przez [bibliotekę wzorców równoległych](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL). W związku z tym upewnij się, że prace wykonywane przez potok danych są wystarczająco długie, aby można było przesunąć to obciążenie.
 
-Mimo że potoku danych jest najbardziej efektywne, gdy jego zadania podrzędne są gruboziarnistych, każdy etap potoku danych można użyć konstrukcje PPL, takich jak grupy zadań i algorytmów równoległych do wykonywania bardziej szczegółowych prac. Na przykład sieci gruboziarnistych danych, który używa równoległość drobnoziarnistą na każdym etapie przetwarzania zobacz [instruktażu: Tworzenie sieci przetwarzania obrazów](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+Mimo że Potok danych jest najbardziej skuteczny, gdy jego zadania są bardzo duże, każdy etap potoku danych może używać konstrukcji PPL, takich jak grupy zadań i algorytmy równoległe, aby wykonywać bardziej szczegółowe zadania. Aby zapoznać się z przykładem wieloskładnikowej sieci danych, która korzysta z precyzyjnej równoległości na każdym etapie przetwarzania, zobacz [Przewodnik: tworzenie sieci przetwarzania obrazów](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
-[[Górnej](#top)]
+[[Top](#top)]
 
-##  <a name="large-payloads"></a> Nie przekazuj ładunków dużych bloków komunikatów według wartości
+## <a name="large-payloads"></a>Nie przekazuj dużych ładunków komunikatów według wartości
 
-W niektórych przypadkach środowisko uruchomieniowe tworzy kopię każdego komunikatu przesyłanego z buforu komunikatu do innego buforu komunikatu. Na przykład [concurrency::overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md) klasa oferuje kopii każdej wiadomości, które otrzymuje do każdego z jego elementów docelowych. Podczas korzystania z przekazywania komunikatów funkcji takich jak środowisko uruchomieniowe również tworzy kopię danych komunikatu [concurrency::send](reference/concurrency-namespace-functions.md#send) i [concurrency::receive](reference/concurrency-namespace-functions.md#receive) zapisywanie komunikatów i odczytywać komunikaty z komunikatu bufor. Mimo że ten mechanizm, pomaga wyeliminować ryzyko jednocześnie zapisywania udostępnionych danych, gdy ładunek komunikatu jest stosunkowo dużej ilości może prowadzić do pamięci niskiej wydajności.
+W niektórych przypadkach środowisko uruchomieniowe tworzy kopię wszystkich komunikatów przesyłanych z jednego buforu komunikatów do innego buforu komunikatów. Na przykład Klasa [concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md) zawiera kopię każdego komunikatu, który otrzymuje do każdego z jego obiektów docelowych. Środowisko uruchomieniowe tworzy również kopię danych komunikatów w przypadku korzystania z funkcji przekazywania komunikatów, takich jak [concurrency:: Send](reference/concurrency-namespace-functions.md#send) i [concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) do zapisu komunikatów w buforze komunikatów i odczytywania komunikatów. Mimo że ten mechanizm pozwala wyeliminować ryzyko współbieżnego zapisu danych udostępnionych, może to doprowadzić do niskiej wydajności pamięci, gdy ładunek wiadomości jest stosunkowo duży.
 
-Można użyć wskaźników lub odwołań do poprawiania wydajności pamięci podczas przekazywania wiadomości ma duże ładunku. W poniższym przykładzie porównano przekazywanie dużych komunikatów według wartości do przekazywania wskaźników do tego samego typu komunikatu. W przykładzie zdefiniowano dwa typy agenta, `producer` i `consumer`, które działają na `message_data` obiektów. W przykładzie porównano czasu, która jest wymagana dla producentów do wysyłania kilka `message_data` obiektów użytkownika do czasu, która jest wymagana dla agenta producenta do wysyłania wielu wskaźników do `message_data` obiekty do konsumenta.
+Możesz użyć wskaźników lub odwołań, aby zwiększyć wydajność pamięci podczas przekazywania wiadomości z dużym ładunkiem. Poniższy przykład porównuje przekazywanie dużych komunikatów przez wartość, aby przekazywać wskaźniki do tego samego typu wiadomości. W przykładzie zdefiniowano dwa typy agentów, `producer` i `consumer`, które działają na `message_data` obiektów. Przykład porównuje czas wymagany przez producenta do wysłania kilku `message_data` obiektów do konsumenta do czasu wymaganego przez agenta produkcyjnego do wysłania kilku wskaźników do `message_data` obiektów do konsumenta.
 
 [!code-cpp[concrt-message-payloads#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-asynchronous-agents-library_3.cpp)]
 
@@ -87,17 +87,17 @@ Using message_data*...
 took 47ms.
 ```
 
-Wersja, która używa wskaźników działa lepiej, ponieważ eliminuje potrzebę środowiska uruchomieniowego utworzyć pełną kopię każdego `message_data` obiekt, który przekazuje od producenta do konsumenta.
+Wersja, która korzysta ze wskaźników, jest lepsza, ponieważ eliminuje wymagania dla środowiska uruchomieniowego, aby utworzyć pełną kopię każdego obiektu `message_data`, który przekazuje od producenta do konsumenta.
 
-[[Górnej](#top)]
+[[Top](#top)]
 
-##  <a name="ownership"></a> Użyj shared_ptr w danych sieciowych gdy nie określono własności
+## <a name="ownership"></a>Użyj shared_ptr w sieci danych, gdy własność jest niezdefiniowana
 
-Podczas wysyłania wiadomości przez wskaźnik za pośrednictwem potoku przekazywania komunikatów lub sieci, są zazwyczaj przydzielić pamięci dla każdego komunikatu z przodu sieci i zwolnić pamięć, że na końcu sieci. Mimo że ten mechanizm często działa dobrze, istnieją przypadki, w których jest trudne lub niemożliwe z niego korzystać. Na przykład rozważmy przypadek, w której wiele węzłów końcowych zawiera sieci danych. W tym przypadku jest nie wyczyść lokalizacji, aby zwolnić pamięć dla wiadomości.
+Po wysłaniu komunikatów przez wskaźnik przez potok przekazywania komunikatów lub sieć zazwyczaj przydzielana jest pamięć dla każdej wiadomości na początku sieci i wolna pamięć na końcu sieci. Chociaż ten mechanizm często działa prawidłowo, istnieją przypadki, w których jest trudne lub niemożliwe do użycia. Rozważmy na przykład przypadek, w którym sieć danych zawiera wiele węzłów końcowych. W takim przypadku nie istnieje czyszczenie lokalizacji do zwolnienia pamięci dla komunikatów.
 
-Aby rozwiązać ten problem, można użyć mechanizmu, na przykład [std::shared_ptr](../../standard-library/shared-ptr-class.md), umożliwiającej wskaźnika należy do wielu składników. Gdy końcowe `shared_ptr` niszczony jest obiekt, który posiada zasób, zasób zostanie również zwolniony.
+Aby rozwiązać ten problem, można użyć mechanizmu, na przykład [std:: shared_ptr](../../standard-library/shared-ptr-class.md), który umożliwia przeznaczenie wskaźnika przez wiele składników. Gdy końcowy obiekt `shared_ptr`, który jest właścicielem zasobu, jest również zwolniony.
 
-Poniższy przykład pokazuje sposób użycia `shared_ptr` udostępnianie wartości wskaźnika wśród wielu buforów komunikatów. W przykładzie nawiązano połączenie [concurrency::overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md) obiektu do trzech [concurrency::call](../../parallel/concrt/reference/call-class.md) obiektów. `overwrite_buffer` Klasa oferuje wiadomości do każdego z jego elementów docelowych. Ponieważ istnieje wielu właścicielom danych na końcu sieć danych, w tym przykładzie użyto `shared_ptr` włączyć `call` obiekt do udostępniania uprawnień własności wiadomości.
+W poniższym przykładzie pokazano, jak używać `shared_ptr` do udostępniania wartości wskaźników między wieloma buforami komunikatów. Przykład łączy obiekt [concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md) do trzech obiektów [concurrency:: Call](../../parallel/concrt/reference/call-class.md) . Klasa `overwrite_buffer` oferuje komunikaty do każdego z jego obiektów docelowych. Ponieważ istnieje wielu właścicieli danych znajdujących się na końcu sieci danych, w tym przykładzie używa `shared_ptr`, aby umożliwić każdemu obiektowi `call` udostępnianie własności komunikatów.
 
 [!code-cpp[concrt-message-sharing#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-asynchronous-agents-library_4.cpp)]
 
@@ -114,7 +114,7 @@ receiver2: received resource 64
 Destroying resource 64...
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Środowisko uruchomieniowe współbieżności — najlepsze praktyki](../../parallel/concrt/concurrency-runtime-best-practices.md)<br/>
 [Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)<br/>

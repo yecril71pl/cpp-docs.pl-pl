@@ -16,60 +16,60 @@ f1_keywords:
 helpviewer_keywords:
 - ISource class
 ms.assetid: c7b73463-42f6-4dcc-801a-81379b12d35a
-ms.openlocfilehash: 5b0704f3d666eca08bafb33f9236709478d347d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9ef9990db6376536f2f2a15c053b3b1d4ed12cf
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301880"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139319"
 ---
 # <a name="isource-class"></a>ISource — Klasa
 
-`ISource` Klasy to interfejs dla wszystkich źródłowych bloków. Bloków źródła Propagacja komunikatów `ITarget` bloków.
+Klasa `ISource` jest interfejsem dla wszystkich bloków źródłowych. Bloki źródłowe propagują komunikaty do bloków `ITarget`.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 template<class T>
 class ISource;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Typ danych ładunku w komunikaty generowane przez blok źródłowy.
+*&*<br/>
+Typ danych ładunku w komunikatach wygenerowanych przez blok źródłowy.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|`source_type`|Alias typu `T`.|
+|`source_type`|Alias typu dla `T`.|
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[~ ISource — destruktor](#dtor)|Niszczy `ISource` obiektu.|
+|[~ ISource destruktor](#dtor)|Niszczy obiekt `ISource`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[Zaakceptuj](#accept)|W przypadku przesłonięcia w klasie pochodnej, akceptuje wiadomości, które było oferowane przez to `ISource` bloku, przenoszenia własności do obiektu wywołującego.|
-|[acquire_ref](#acquire_ref)|W przypadku przesłonięcia w klasie pochodnej, uzyskuje licznik odwołań, w tym `ISource` bloku, aby zapobiec usunięciu.|
-|[Używanie](#consume)|W przypadku przesłonięcia w klasie pochodnej, zużywa komunikat oferowane wcześniej to `ISource` blokowania i pomyślnie zarezerwowany przez element docelowy przenoszenia własności do obiektu wywołującego.|
-|[link_target](#link_target)|W przypadku przesłonięcia w klasie pochodnej, łączy blok docelowy to `ISource` bloku.|
-|[Wydania](#release)|W przypadku przesłonięcia w klasie pochodnej, zwalnia poprzedniego zastrzeżenie komunikatu pomyślnie.|
-|[release_ref](#release_ref)|W przypadku przesłonięcia w klasie pochodnej, zwalnia licznik odwołań, w tym `ISource` bloku.|
-|[reserve](#reserve)|W przypadku przesłonięcia w klasie pochodnej, rezerwuje komunikat oferowane wcześniej to `ISource` bloku.|
-|[unlink_target](#unlink_target)|W przypadku przesłonięcia w klasie pochodnej, rozłączysz blok docelowy z tego `ISource` zablokować, jeśli znaleziono wcześniej połączenie.|
-|[unlink_targets](#unlink_targets)|W przypadku przesłonięcia w klasie pochodnej, odłączenie wszystkich bloków docelowych z tego `ISource` bloku.|
+|[odebrać](#accept)|Gdy jest zastępowany w klasie pochodnej, akceptuje komunikat, który został zaoferowany przez ten blok `ISource`, przenoszący własność do obiektu wywołującego.|
+|[acquire_ref](#acquire_ref)|Gdy jest zastępowany w klasie pochodnej, uzyskuje liczbę odwołań w tym bloku `ISource`, aby zapobiec usunięciu.|
+|[wykorzystania](#consume)|Gdy jest zastępowany w klasie pochodnej, wykorzystuje komunikat wcześniej oferowany przez ten blok `ISource` i został pomyślnie zarezerwowany przez obiekt docelowy, przekazując własność do obiektu wywołującego.|
+|[link_target](#link_target)|Gdy jest zastępowany w klasie pochodnej, łączy blok docelowy z tym blokiem `ISource`.|
+|[Usuwanie](#release)|Gdy jest zastępowany w klasie pochodnej, zwalnia poprzednie pomyślne rezerwacje komunikatów.|
+|[release_ref](#release_ref)|Gdy jest zastępowany w klasie pochodnej, zwalnia liczbę odwołań w tym bloku `ISource`.|
+|[zarezerwować](#reserve)|Gdy jest zastępowany w klasie pochodnej, rezerwuje komunikat wcześniej oferowany przez ten blok `ISource`.|
+|[unlink_target](#unlink_target)|Gdy jest zastępowany w klasie pochodnej, odłącza blok docelowy z tego bloku `ISource`, jeśli został znaleziony wcześniej połączony.|
+|[unlink_targets](#unlink_targets)|Gdy jest zastępowany w klasie pochodnej, odłącza wszystkie bloki docelowe z tego bloku `ISource`.|
 
 ## <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [bloki komunikatów asynchronicznych](../../../parallel/concrt/asynchronous-message-blocks.md).
+Aby uzyskać więcej informacji, zobacz [asynchroniczne bloki komunikatów](../../../parallel/concrt/asynchronous-message-blocks.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -77,15 +77,15 @@ Aby uzyskać więcej informacji, zobacz [bloki komunikatów asynchronicznych](..
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** agents.h
+**Nagłówek:** agenci. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="accept"></a> Zaakceptuj
+## <a name="accept"></a>odebrać
 
-W przypadku przesłonięcia w klasie pochodnej, akceptuje wiadomości, które było oferowane przez to `ISource` bloku, przenoszenia własności do obiektu wywołującego.
+Gdy jest zastępowany w klasie pochodnej, akceptuje komunikat, który został zaoferowany przez ten blok `ISource`, przenoszący własność do obiektu wywołującego.
 
-```
+```cpp
 virtual message<T>* accept(
     runtime_object_identity _MsgId,
     _Inout_ ITarget<T>* _PTarget) = 0;
@@ -94,41 +94,41 @@ virtual message<T>* accept(
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` z oferowane `message` obiektu.
+`runtime_object_identity` oferowanego obiektu `message`.
 
 *_PTarget*<br/>
-Wskaźnik do bloku docelowego, która wywołuje `accept` metody.
+Wskaźnik do bloku docelowego, który wywołuje metodę `accept`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Wskaźnik do wiadomości, że obiekt wywołujący ma teraz własności.
+Wskaźnik do komunikatu, którego obiekt wywołujący ma teraz własność.
 
 ### <a name="remarks"></a>Uwagi
 
-`accept` Metoda jest wywoływana przez obiekt docelowy, gdy komunikat jest oferowana przez to `ISource` bloku. Zwrócony wskaźnik komunikat może być inny niż ten, który został przekazany do `propagate` metody `ITarget` zablokować, jeśli to źródło zdecyduje się na kopię wiadomości.
+Metoda `accept` jest wywoływana przez obiekt docelowy, podczas gdy komunikat jest oferowany przez ten blok `ISource`. Zwrócony wskaźnik komunikatu może być inny niż przekazana do metody `propagate` bloku `ITarget`, jeśli to źródło zdecyduje się wykonać kopię wiadomości.
 
-##  <a name="acquire_ref"></a> acquire_ref —
+## <a name="acquire_ref"></a>acquire_ref
 
-W przypadku przesłonięcia w klasie pochodnej, uzyskuje licznik odwołań, w tym `ISource` bloku, aby zapobiec usunięciu.
+Gdy jest zastępowany w klasie pochodnej, uzyskuje liczbę odwołań w tym bloku `ISource`, aby zapobiec usunięciu.
 
-```
+```cpp
 virtual void acquire_ref(_Inout_ ITarget<T>* _PTarget) = 0;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_PTarget*<br/>
-Wskaźnik do bloku docelowego, która wywołuje tę metodę.
+Wskaźnik do bloku docelowego, który wywołuje tę metodę.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest wywoływana `ITarget` obiekt, który jest kojarzony z tym źródłem podczas `link_target` metody.
+Ta metoda jest wywoływana przez obiekt `ITarget`, który jest połączony z tym źródłem podczas `link_target` metody.
 
-##  <a name="consume"></a> Używanie
+## <a name="consume"></a>wykorzystania
 
-W przypadku przesłonięcia w klasie pochodnej, zużywa komunikat oferowane wcześniej to `ISource` blokowania i pomyślnie zarezerwowany przez element docelowy przenoszenia własności do obiektu wywołującego.
+Gdy jest zastępowany w klasie pochodnej, wykorzystuje komunikat wcześniej oferowany przez ten blok `ISource` i został pomyślnie zarezerwowany przez obiekt docelowy, przekazując własność do obiektu wywołującego.
 
-```
+```cpp
 virtual message<T>* consume(
     runtime_object_identity _MsgId,
     _Inout_ ITarget<T>* _PTarget) = 0;
@@ -137,45 +137,45 @@ virtual message<T>* consume(
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` z zarezerwowanego `message` obiektu.
+`runtime_object_identity` zarezerwowanych obiektów `message`.
 
 *_PTarget*<br/>
-Wskaźnik do bloku docelowego, która wywołuje `consume` metody.
+Wskaźnik do bloku docelowego, który wywołuje metodę `consume`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Wskaźnik do `message` obiektu, że obiekt wywołujący ma teraz własności.
+Wskaźnik do obiektu `message`, do którego obiekt wywołujący ma teraz własność.
 
 ### <a name="remarks"></a>Uwagi
 
-`consume` Metoda jest podobna do `accept`, ale zawsze musi być poprzedzony przez wywołanie `reserve` zwróconą **true**.
+Metoda `consume` jest podobna do `accept`, ale zawsze musi być poprzedzona wywołaniem `reserve` zwracającym **wartość true**.
 
-##  <a name="dtor"></a> ~ ISource
+## <a name="dtor"></a>~ ISource
 
-Niszczy `ISource` obiektu.
+Niszczy obiekt `ISource`.
 
-```
+```cpp
 virtual ~ISource();
 ```
 
-##  <a name="link_target"></a> link_target —
+## <a name="link_target"></a>link_target
 
-W przypadku przesłonięcia w klasie pochodnej, łączy blok docelowy to `ISource` bloku.
+Gdy jest zastępowany w klasie pochodnej, łączy blok docelowy z tym blokiem `ISource`.
 
-```
+```cpp
 virtual void link_target(_Inout_ ITarget<T>* _PTarget) = 0;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_PTarget*<br/>
-Wskaźnik do bloku docelowego jest połączona z tym `ISource` bloku.
+Wskaźnik do bloku docelowego, który jest połączony z tym blokiem `ISource`.
 
-##  <a name="release"></a> Wydania
+## <a name="release"></a>Usuwanie
 
-W przypadku przesłonięcia w klasie pochodnej, zwalnia poprzedniego zastrzeżenie komunikatu pomyślnie.
+Gdy jest zastępowany w klasie pochodnej, zwalnia poprzednie pomyślne rezerwacje komunikatów.
 
-```
+```cpp
 virtual void release(
     runtime_object_identity _MsgId,
     _Inout_ ITarget<T>* _PTarget) = 0;
@@ -184,33 +184,33 @@ virtual void release(
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` z zarezerwowanego `message` obiektu.
+`runtime_object_identity` zarezerwowanych obiektów `message`.
 
 *_PTarget*<br/>
-Wskaźnik do bloku docelowego, która wywołuje `release` metody.
+Wskaźnik do bloku docelowego, który wywołuje metodę `release`.
 
-##  <a name="release_ref"></a> release_ref —
+## <a name="release_ref"></a>release_ref
 
-W przypadku przesłonięcia w klasie pochodnej, zwalnia licznik odwołań, w tym `ISource` bloku.
+Gdy jest zastępowany w klasie pochodnej, zwalnia liczbę odwołań w tym bloku `ISource`.
 
-```
+```cpp
 virtual void release_ref(_Inout_ ITarget<T>* _PTarget) = 0;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_PTarget*<br/>
-Wskaźnik do bloku docelowego, która wywołuje tę metodę.
+Wskaźnik do bloku docelowego, który wywołuje tę metodę.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest wywoływana `ITarget` obiekt, który jest jest rozłączony z tego źródła. Blok źródłowy może zwolnić wszystkie zasoby, które są zarezerwowane dla blok docelowy.
+Ta metoda jest wywoływana przez obiekt `ITarget`, który jest odłączany od tego źródła. Blok źródłowy może zwolnić wszystkie zasoby zarezerwowane dla bloku docelowego.
 
-##  <a name="reserve"></a> Zarezerwuj
+## <a name="reserve"></a>zarezerwować
 
-W przypadku przesłonięcia w klasie pochodnej, rezerwuje komunikat oferowane wcześniej to `ISource` bloku.
+Gdy jest zastępowany w klasie pochodnej, rezerwuje komunikat wcześniej oferowany przez ten blok `ISource`.
 
-```
+```cpp
 virtual bool reserve(
     runtime_object_identity _MsgId,
     _Inout_ ITarget<T>* _PTarget) = 0;
@@ -219,41 +219,41 @@ virtual bool reserve(
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` z oferowane `message` obiektu.
+`runtime_object_identity` oferowanego obiektu `message`.
 
 *_PTarget*<br/>
-Wskaźnik do bloku docelowego, która wywołuje `reserve` metody.
+Wskaźnik do bloku docelowego, który wywołuje metodę `reserve`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-**wartość true,** Jeśli komunikat został pomyślnie zarezerwowany, **false** inaczej. Rezerwacji może się nie powieść z wielu powodów, takich jak: komunikat został już zarezerwowany lub zaakceptowane przez inny obiekt docelowy, źródła można odmówić rezerwacji i tak dalej.
+**prawda** , jeśli komunikat został pomyślnie zarezerwowany, w przeciwnym razie **zwraca wartość false** . Rezerwacje mogą się nie powieść z wielu powodów, takich jak: komunikat został już zarezerwowany lub zaakceptowany przez inny obiekt docelowy, źródło może odmówić rezerwacji i tak dalej.
 
 ### <a name="remarks"></a>Uwagi
 
-Po wywołaniu metody `reserve`, jeśli się powiedzie, należy wywołać albo `consume` lub `release` aby można było podjąć lub zrezygnować z posiadania wiadomości, odpowiednio.
+Po wywołaniu `reserve`, jeśli zakończy się powodzeniem, należy wywołać `consume` lub `release` w celu podjęcia lub zadawania wiadomości odpowiednio.
 
-##  <a name="unlink_target"></a> unlink_target —
+## <a name="unlink_target"></a>unlink_target
 
-W przypadku przesłonięcia w klasie pochodnej, rozłączysz blok docelowy z tego `ISource` zablokować, jeśli znaleziono wcześniej połączenie.
+Gdy jest zastępowany w klasie pochodnej, odłącza blok docelowy z tego bloku `ISource`, jeśli został znaleziony wcześniej połączony.
 
-```
+```cpp
 virtual void unlink_target(_Inout_ ITarget<T>* _PTarget) = 0;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_PTarget*<br/>
-Wskaźnik do bloku docelowego jest rozłączony z tego `ISource` bloku.
+Wskaźnik prowadzący do odłączenia bloku docelowego z tego bloku `ISource`.
 
-##  <a name="unlink_targets"></a> unlink_targets —
+## <a name="unlink_targets"></a>unlink_targets
 
-W przypadku przesłonięcia w klasie pochodnej, odłączenie wszystkich bloków docelowych z tego `ISource` bloku.
+Gdy jest zastępowany w klasie pochodnej, odłącza wszystkie bloki docelowe z tego bloku `ISource`.
 
-```
+```cpp
 virtual void unlink_targets() = 0;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [ITarget, klasa](itarget-class.md)

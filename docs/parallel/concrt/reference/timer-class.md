@@ -18,65 +18,65 @@ f1_keywords:
 helpviewer_keywords:
 - timer class
 ms.assetid: 4f4dea51-de9f-40f9-93f5-dd724c567b49
-ms.openlocfilehash: e36441f53c9b53c9826ee92b2892142a522d7243
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c39afc565a7ec775600b9c9fb6f15a89acdef57b
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180124"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142527"
 ---
 # <a name="timer-class"></a>Klasa czasomierza
 
-A `timer` blok komunikatów jest celu pojedynczego `source_block` zdolne do wysyłania komunikatu do jego element docelowy po określonym okresie czasu lub w określonych odstępach czasu.
+Blok komunikatów `timer` jest `source_block`, który umożliwia wysyłanie wiadomości do jej obiektu docelowego po upływie określonego czasu lub w określonych odstępach czasu.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 template<class T>
 class timer : public Concurrency::details::_Timer, public source_block<single_link_registry<ITarget<T>>>;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Typ ładunku komunikatów wyjściowych w tym bloku.
+*&*<br/>
+Typ ładunku komunikatów wyjściowych tego bloku.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[Czasomierz](#ctor)|Przeciążone. Konstruuje `timer` blok komunikatów, który zostanie uruchomiony z podanym komunikatem po upływie określonego czasu.|
-|[~ timer — destruktor](#dtor)|Niszczy `timer` Blok obsługi wiadomości.|
+|[licz](#ctor)|Przeciążone. Konstruuje blok `timer` Messaging, który będzie uruchamiał dany komunikat po upływie określonego interwału.|
+|[~ Timer — destruktor](#dtor)|Niszczy blok komunikatów `timer`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[pause](#pause)|Zatrzymuje `timer` Blok obsługi wiadomości. Jeśli jest powtarzanej `timer` komunikatów bloku, je można ponownie uruchomić z kolejnej `start()` wywołania. Powtarzalnych czasomierze, ma taki sam skutek jak `stop` wywołania.|
-|[start](#start)|Uruchamia `timer` Blok obsługi wiadomości. Nosi nazwę określoną liczbę milisekund, po to, określona wartość będzie propagowane podrzędnego jako `message`.|
-|[Zatrzymaj](#stop)|Zatrzymuje `timer` Blok obsługi wiadomości.|
+|[została](#pause)|Kończy blok komunikatów `timer`. Jeśli jest to powtarzalny blok komunikatów `timer`, można go uruchomić ponownie przy użyciu kolejnego wywołania `start()`. W przypadku niepowtarzalnych czasomierzy ma to taki sam skutek jak wywołanie `stop`.|
+|[start](#start)|Uruchamia blok komunikatów `timer`. Określona liczba milisekund po wywołaniu tej wartości zostanie przepropagowana w dół jako `message`.|
+|[komunikat](#stop)|Kończy blok komunikatów `timer`.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[accept_message](#accept_message)|Akceptuje wiadomości, które było oferowane przez to `timer` Blok obsługi wiadomości, transfer praw własności do obiektu wywołującego.|
-|[consume_message](#consume_message)|Wykorzystuje komunikat, który został poprzednio oferowana przez `timer` i zastrzeżonych przez element docelowy przenoszenia własności do obiektu wywołującego.|
-|[link_target_notification](#link_target_notification)|Wywołanie zwrotne, które informuje, że nowy obiekt docelowy została połączona z tym `timer` Blok obsługi wiadomości.|
-|[propagate_to_any_targets](#propagate_to_any_targets)|Zaoferować komunikat generowany przez `timer` bloku do wszystkich połączonych elementów docelowych.|
-|[release_message](#release_message)|Zwalnia poprzedniej wiadomości rezerwacji. (Przesłania [source_block::release_message —](source-block-class.md#release_message).)|
-|[reserve_message](#reserve_message)|Zarezerwowaniu wiadomości przez oferowane wcześniej to `timer` Blok obsługi wiadomości. (Przesłania [source_block::reserve_message —](source-block-class.md#reserve_message).)|
-|[resume_propagation](#resume_propagation)|Wznawia działanie propagacji, po udostępnieniu rezerwacji. (Przesłania [source_block::resume_propagation —](source-block-class.md#resume_propagation).)|
+|[accept_message](#accept_message)|Akceptuje komunikat, który był oferowany przez ten blok komunikatów `timer`, przekazując własność do obiektu wywołującego.|
+|[consume_message](#consume_message)|Wykorzystuje komunikat wcześniej oferowany przez `timer` i zastrzeżony przez element docelowy, przekazując własność do obiektu wywołującego.|
+|[link_target_notification](#link_target_notification)|Wywołanie zwrotne, które powiadamia, że nowy element docelowy został połączony z tym blokiem komunikatów `timer`.|
+|[propagate_to_any_targets](#propagate_to_any_targets)|Próbuje zaoferować komunikat utworzony przez blok `timer` do wszystkich połączonych obiektów docelowych.|
+|[release_message](#release_message)|Zwalnia poprzednią rezerwację wiadomości. (Zastępuje [source_block:: release_message](source-block-class.md#release_message).)|
+|[reserve_message](#reserve_message)|Rezerwuje komunikat wcześniej oferowany przez ten blok komunikatów `timer`. (Zastępuje [source_block:: reserve_message](source-block-class.md#reserve_message).)|
+|[resume_propagation](#resume_propagation)|Wznawia propagację po wydaniu rezerwacji. (Zastępuje [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|
 
 ## <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [bloki komunikatów asynchronicznych](../../../parallel/concrt/asynchronous-message-blocks.md).
+Aby uzyskać więcej informacji, zobacz [asynchroniczne bloki komunikatów](../../../parallel/concrt/asynchronous-message-blocks.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Isource —](isource-class.md)
+[ISource](isource-class.md)
 
 [source_block](source-block-class.md)
 
@@ -84,140 +84,140 @@ Aby uzyskać więcej informacji, zobacz [bloki komunikatów asynchronicznych](..
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** agents.h
+**Nagłówek:** agenci. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="accept_message"></a> accept_message
+## <a name="accept_message"></a>accept_message
 
-Akceptuje wiadomości, które było oferowane przez to `timer` Blok obsługi wiadomości, transfer praw własności do obiektu wywołującego.
+Akceptuje komunikat, który był oferowany przez ten blok komunikatów `timer`, przekazując własność do obiektu wywołującego.
 
-```
+```cpp
 virtual message<T>* accept_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` z oferowane `message` obiektu.
+`runtime_object_identity` oferowanego obiektu `message`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Wskaźnik do `message` obiektu, że obiekt wywołujący ma teraz własności.
+Wskaźnik do obiektu `message`, do którego obiekt wywołujący ma teraz własność.
 
-##  <a name="consume_message"></a> consume_message
+## <a name="consume_message"></a>consume_message
 
-Wykorzystuje komunikat, który został poprzednio oferowana przez `timer` i zastrzeżonych przez element docelowy przenoszenia własności do obiektu wywołującego.
+Wykorzystuje komunikat wcześniej oferowany przez `timer` i zastrzeżony przez element docelowy, przekazując własność do obiektu wywołującego.
 
-```
+```cpp
 virtual message<T>* consume_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` z `message` obiektu są używane.
+`runtime_object_identity` zużywanego obiektu `message`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Wskaźnik do `message` obiektu, że obiekt wywołujący ma teraz własności.
+Wskaźnik do obiektu `message`, do którego obiekt wywołujący ma teraz własność.
 
 ### <a name="remarks"></a>Uwagi
 
-Podobnie jak `accept`, ale zawsze jest poprzedzony przez wywołanie `reserve`.
+Podobnie jak `accept`, ale jest zawsze poprzedzone wywołaniem `reserve`.
 
-##  <a name="link_target_notification"></a> link_target_notification —
+## <a name="link_target_notification"></a>link_target_notification
 
-Wywołanie zwrotne, które informuje, że nowy obiekt docelowy została połączona z tym `timer` Blok obsługi wiadomości.
+Wywołanie zwrotne, które powiadamia, że nowy element docelowy został połączony z tym blokiem komunikatów `timer`.
 
-```
+```cpp
 virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_PTarget*<br/>
-Wskaźnik do nowo połączone obiektu docelowego.
+Wskaźnik do nowo połączonego obiektu docelowego.
 
-##  <a name="pause"></a> Wstrzymaj
+## <a name="pause"></a>została
 
-Zatrzymuje `timer` Blok obsługi wiadomości. Jeśli jest powtarzanej `timer` komunikatów bloku, je można ponownie uruchomić z kolejnej `start()` wywołania. Powtarzalnych czasomierze, ma taki sam skutek jak `stop` wywołania.
+Kończy blok komunikatów `timer`. Jeśli jest to powtarzalny blok komunikatów `timer`, można go uruchomić ponownie przy użyciu kolejnego wywołania `start()`. W przypadku niepowtarzalnych czasomierzy ma to taki sam skutek jak wywołanie `stop`.
 
-```
+```cpp
 void pause();
 ```
 
-##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets
+## <a name="propagate_to_any_targets"></a>propagate_to_any_targets
 
-Zaoferować komunikat generowany przez `timer` bloku do wszystkich połączonych elementów docelowych.
+Próbuje zaoferować komunikat utworzony przez blok `timer` do wszystkich połączonych obiektów docelowych.
 
-```
+```cpp
 virtual void propagate_to_any_targets(_Inout_opt_ message<T> *);
 ```
 
-##  <a name="release_message"></a> release_message
+## <a name="release_message"></a>release_message
 
-Zwalnia poprzedniej wiadomości rezerwacji.
+Zwalnia poprzednią rezerwację wiadomości.
 
-```
+```cpp
 virtual void release_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` z `message` obiektu, zostały udostępnione.
+`runtime_object_identity` wydawany `message` obiektu.
 
-##  <a name="reserve_message"></a> reserve_message
+## <a name="reserve_message"></a>reserve_message
 
-Zarezerwowaniu wiadomości przez oferowane wcześniej to `timer` Blok obsługi wiadomości.
+Rezerwuje komunikat wcześniej oferowany przez ten blok komunikatów `timer`.
 
-```
+```cpp
 virtual bool reserve_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` z `message` obiektu pozostaje zarezerwowane.
+`runtime_object_identity` obiektu `message`, który jest zarezerwowany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-**wartość true,** Jeśli komunikat został pomyślnie zarezerwowany, **false** inaczej.
+**prawda** , jeśli komunikat został pomyślnie zarezerwowany, w przeciwnym razie **zwraca wartość false** .
 
 ### <a name="remarks"></a>Uwagi
 
-Po `reserve` jest wywoływana, jeśli zwróci ona **true**, albo `consume` lub `release` musi zostać wywołana wersji własności wiadomości lub wykonać.
+Po wywołaniu `reserve`, jeśli zwraca **wartość true**, należy wywołać `consume` lub `release`, aby przejąć lub zwolnić własność wiadomości.
 
-##  <a name="resume_propagation"></a> resume_propagation
+## <a name="resume_propagation"></a>resume_propagation
 
-Wznawia działanie propagacji, po udostępnieniu rezerwacji.
+Wznawia propagację po wydaniu rezerwacji.
 
-```
+```cpp
 virtual void resume_propagation();
 ```
 
-##  <a name="start"></a> Rozpocznij
+## <a name="start"></a>Start
 
-Uruchamia `timer` Blok obsługi wiadomości. Nosi nazwę określoną liczbę milisekund, po to, określona wartość będzie propagowane podrzędnego jako `message`.
+Uruchamia blok komunikatów `timer`. Określona liczba milisekund po wywołaniu tej wartości zostanie przepropagowana w dół jako `message`.
 
-```
+```cpp
 void start();
 ```
 
-##  <a name="stop"></a> Zatrzymaj
+## <a name="stop"></a>komunikat
 
-Zatrzymuje `timer` Blok obsługi wiadomości.
+Kończy blok komunikatów `timer`.
 
-```
+```cpp
 void stop();
 ```
 
-##  <a name="ctor"></a> Czasomierz
+## <a name="ctor"></a>licz
 
-Konstruuje `timer` blok komunikatów, który zostanie uruchomiony z podanym komunikatem po upływie określonego czasu.
+Konstruuje blok `timer` Messaging, który będzie uruchamiał dany komunikat po upływie określonego interwału.
 
-```
+```cpp
 timer(
     unsigned int _Ms,
     T const& value,
@@ -242,35 +242,35 @@ timer(
 ### <a name="parameters"></a>Parametry
 
 *_Ms*<br/>
-Liczba milisekund, które muszą upłynąć od wywołanie metody start do podrzędne propagowane określonej wiadomości.
+Liczba milisekund, które muszą upłynąć po wywołaniu dla określonego komunikatu, który ma zostać propagowany.
 
 *value*<br/>
-Wartość, która będzie propagowane podrzędne po upływie czasomierza.
+Wartość, która zostanie propagowana po upływie czasu czasomierza.
 
 *_PTarget*<br/>
-Obiekt docelowy, do którego czasomierza rozpropaguje komunikat.
+Obiekt docelowy, do którego czasomierz będzie propagowany wiadomości.
 
 *_Repeating*<br/>
-W przypadku opcji true wskazuje, że uruchomienie czasomierza nastąpi okresowo co `_Ms` milisekund.
+W przypadku wartości true wskazuje, że czasomierz będzie okresowo uruchamiać co `_Ms` milisekund.
 
 *_Scheduler*<br/>
-`Scheduler` Obiekt, w którym zadanie propagacji dla `timer` zaplanowano blok komunikatów jest zaplanowane.
+Zaplanowano `Scheduler` obiektu, w ramach którego zaplanowano zadanie propagacji dla bloku obsługi komunikatów `timer`.
 
 *_ScheduleGroup*<br/>
-`ScheduleGroup` Obiekt, w którym zadanie propagacji dla `timer` zaplanowano Blok obsługi wiadomości. `Scheduler` Obiekt używany jest implikowany przez grupę harmonogramów.
+Obiekt `ScheduleGroup`, w ramach którego zaplanowano zadanie propagacji dla bloku obsługi komunikatów `timer`. Używany obiekt `Scheduler` jest implikowany przez grupę harmonogramów.
 
 ### <a name="remarks"></a>Uwagi
 
-Środowisko wykonawcze używa domyślnego harmonogramu, jeśli nie określisz `_Scheduler` lub `_ScheduleGroup` parametrów.
+Środowisko uruchomieniowe używa domyślnego harmonogramu, jeśli nie określisz parametrów `_Scheduler` lub `_ScheduleGroup`.
 
-##  <a name="dtor"></a> ~ czasomierza
+## <a name="dtor"></a>~ Czasomierz
 
-Niszczy `timer` Blok obsługi wiadomości.
+Niszczy blok komunikatów `timer`.
 
-```
+```cpp
 ~timer();
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

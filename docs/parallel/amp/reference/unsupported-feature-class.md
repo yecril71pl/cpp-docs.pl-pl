@@ -8,30 +8,30 @@ f1_keywords:
 helpviewer_keywords:
 - unsupported_feature class
 ms.assetid: 6b1ab917-df13-48c7-9648-7cb2465a0ff5
-ms.openlocfilehash: 451318bfbcfb9c5e002677556944e3499c0ed5fb
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 561f0a258943f6d7e1c0f1b5cae716592c931fbc
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525413"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127715"
 ---
-# <a name="unsupportedfeature-class"></a>unsupported_feature — Klasa
+# <a name="unsupported_feature-class"></a>unsupported_feature — Klasa
 
-Wyjątek, który jest zgłaszany, gdy używana jest nieobsługiwana funkcja.
+Wyjątek, który jest generowany w przypadku użycia nieobsługiwanej funkcji.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class unsupported_feature : public runtime_exception;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[unsupported_feature Constructor](#unsupported_feature)|Tworzy nowe wystąpienie klasy `unsupported_feature` wyjątku.|
+|[Konstruktor unsupported_feature](#unsupported_feature)|Tworzy nowe wystąpienie wyjątku `unsupported_feature`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -41,13 +41,13 @@ class unsupported_feature : public runtime_exception;
 
 `unsupported_feature`
 
-## <a name="unsupported_feature"></a> unsupported_feature
+## <a name="unsupported_feature"></a>unsupported_feature
 
-  Tworzy nowe wystąpienie klasy `unsupported_feature` wyjątku.
+  Tworzy nowe wystąpienie wyjątku `unsupported_feature`.
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 explicit unsupported_feature(
     const char * _Message ) throw();
 
@@ -59,16 +59,16 @@ unsupported_feature() throw();
 *_Message*<br/>
 Opis błędu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-`unsupported_feature` Obiektu.
+Obiekt `unsupported_feature`.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** amprt.h
+**Nagłówek:** amprt. h
 
-**Namespace:** Współbieżność
+**Przestrzeń nazw:** Współbieżności
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

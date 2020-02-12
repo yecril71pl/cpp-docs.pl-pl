@@ -11,50 +11,50 @@ f1_keywords:
 helpviewer_keywords:
 - message_processor class
 ms.assetid: 23afb052-daa7-44ed-bf24-d2513db748da
-ms.openlocfilehash: be6cb1c614a41919663a4cc063da66679556e498
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88944b2d935eebd0e031be1431c2a0f4efa3d760
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409957"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139468"
 ---
-# <a name="messageprocessor-class"></a>message_processor — Klasa
+# <a name="message_processor-class"></a>message_processor — Klasa
 
-`message_processor` Klasa jest abstrakcyjna klasa bazowa dla przetwarzania `message` obiektów. Nie ma żadnej gwarancji, w kolejności wiadomości.
+Klasa `message_processor` jest abstrakcyjną klasą bazową do przetwarzania obiektów `message`. Nie ma gwarancji dotyczącej kolejności komunikatów.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 template<class T>
 class message_processor;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Typ danych ładunku w komunikatach obsługiwanych przez to `message_processor` obiektu.
+*&*<br/>
+Typ danych ładunku w komunikatach obsłużonych przez ten obiekt `message_processor`.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|`type`|Alias typu `T`.|
+|`type`|Alias typu dla `T`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[async_send](#async_send)|W przypadku przesłonięcia w klasie pochodnej, umieszcza komunikaty w bloku asynchronicznie.|
-|[sync_send](#sync_send)|W przypadku przesłonięcia w klasie pochodnej, umieszcza komunikaty w bloku synchronicznie.|
-|[Czekaj](#wait)|W przypadku przesłonięcia w klasie pochodnej, czeka na zakończenie wszystkich operacji asynchronicznych.|
+|[async_send](#async_send)|Gdy jest zastępowany w klasie pochodnej, umieszcza komunikaty w bloku asynchronicznie.|
+|[sync_send](#sync_send)|Gdy jest zastępowany w klasie pochodnej, umieszcza komunikaty w bloku synchronicznie.|
+|[trwa](#wait)|Gdy jest zastępowany w klasie pochodnej, czeka na zakończenie wszystkich operacji asynchronicznych.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[process_incoming_message](#process_incoming_message)|W przypadku przesłonięcia w klasie pochodnej, wykonuje przetwarzanie komunikatów w bloku do przodu. Volat pouze jednou za każdym razem, gdy nowy komunikat zostanie dodany i kolejki pozostaje puste.|
+|[process_incoming_message](#process_incoming_message)|W przypadku zastąpienia w klasie pochodnej program wykonuje przetwarzanie komunikatów do przodu w bloku. Wywoływana raz za każdym razem, gdy zostanie dodany nowy komunikat, a kolejka jest pusta.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -62,69 +62,69 @@ Typ danych ładunku w komunikatach obsługiwanych przez to `message_processor` o
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** agents.h
+**Nagłówek:** agenci. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="async_send"></a> async_send —
+## <a name="async_send"></a>async_send
 
-W przypadku przesłonięcia w klasie pochodnej, umieszcza komunikaty w bloku asynchronicznie.
+Gdy jest zastępowany w klasie pochodnej, umieszcza komunikaty w bloku asynchronicznie.
 
-```
+```cpp
 virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Msg*<br/>
-A `message` obiekt do wysyłania asynchronicznie.
+Obiekt `message` do wysłania asynchronicznie.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacji procesora, powinny przesłaniać tę metodę.
+Implementacje procesora powinny przesłaniać tę metodę.
 
-##  <a name="process_incoming_message"></a> process_incoming_message —
+## <a name="process_incoming_message"></a>process_incoming_message
 
-W przypadku przesłonięcia w klasie pochodnej, wykonuje przetwarzanie komunikatów w bloku do przodu. Volat pouze jednou za każdym razem, gdy nowy komunikat zostanie dodany i kolejki pozostaje puste.
+W przypadku zastąpienia w klasie pochodnej program wykonuje przetwarzanie komunikatów do przodu w bloku. Wywoływana raz za każdym razem, gdy zostanie dodany nowy komunikat, a kolejka jest pusta.
 
-```
+```cpp
 virtual void process_incoming_message() = 0;
 ```
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacji bloku komunikatu powinny przesłaniać tę metodę.
+Implementacje bloku komunikatów powinny przesłaniać tę metodę.
 
-##  <a name="sync_send"></a> sync_send —
+## <a name="sync_send"></a>sync_send
 
-W przypadku przesłonięcia w klasie pochodnej, umieszcza komunikaty w bloku synchronicznie.
+Gdy jest zastępowany w klasie pochodnej, umieszcza komunikaty w bloku synchronicznie.
 
-```
+```cpp
 virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Msg*<br/>
-A `message` obiekt do wysyłania synchronicznie.
+Obiekt `message` do wysłania synchronicznie.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacji procesora, powinny przesłaniać tę metodę.
+Implementacje procesora powinny przesłaniać tę metodę.
 
-##  <a name="wait"></a> Czekaj
+## <a name="wait"></a>trwa
 
-W przypadku przesłonięcia w klasie pochodnej, czeka na zakończenie wszystkich operacji asynchronicznych.
+Gdy jest zastępowany w klasie pochodnej, czeka na zakończenie wszystkich operacji asynchronicznych.
 
-```
+```cpp
 virtual void wait() = 0;
 ```
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacji procesora, powinny przesłaniać tę metodę.
+Implementacje procesora powinny przesłaniać tę metodę.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [ordered_message_processor, klasa](ordered-message-processor-class.md)

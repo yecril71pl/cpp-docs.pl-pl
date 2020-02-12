@@ -1,43 +1,43 @@
 ---
-title: CONCURRENCY::Graphics, wyliczenia przestrzeni nazw
+title: Concurrency::graphics, wyliczenia przestrzeni nazw
 ms.date: 11/04/2016
 f1_keywords:
 - amp_graphics/concurrency::graphics::address_mode
 - amp_graphics/concurrency::graphics::filter_mode
 ms.assetid: 1d2e1859-a3d7-4d3d-8e03-1a877a86b3e0
-ms.openlocfilehash: 15499de29c70a4015f1412cab8e803d0a7fb043c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 504de780a5db70def61fb47c7805b32e7de780b4
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375655"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126900"
 ---
-# <a name="concurrencygraphics-namespace-enums"></a>CONCURRENCY::Graphics, wyliczenia przestrzeni nazw
+# <a name="concurrencygraphics-namespace-enums"></a>Concurrency::graphics, wyliczenia przestrzeni nazw
 
 |||
 |-|-|
-|[_tryb, wyliczenie](#address_mode)|[filter_mode — wyliczenie](#filter_mode)|
+|[_mode, Wyliczenie](#address_mode)|[filter_mode, Wyliczenie](#filter_mode)|
 
-##  <a name="address_mode"></a>  address_mode — wyliczenie
+## <a name="address_mode"></a>address_mode, Wyliczenie
 
-Typ wyliczeniowy służy do określenia trybów adresu obsługiwanych dla pobierania próbek tekstury.
+Typ wyliczenia służy do określenia trybów adresów obsługiwanych w przypadku próbkowania tekstury.
 
-```
+```cpp
 enum address_mode;
 ```
 
-##  <a name="filter_mode"></a>  filter_mode — wyliczenie
+## <a name="filter_mode"></a>filter_mode, Wyliczenie
 
-Typ wyliczeniowy służy do określenia trybów filtrowania obsługiwanych dla pobierania próbek tekstury.
+Typ wyliczenia służy do określenia trybów filtrowania obsługiwanych w przypadku próbkowania tekstury.
 
-```
+```cpp
 enum filter_mode;
 ```
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** amp_graphics.h **Namespace:** CONCURRENCY::Graphics
+**Nagłówek:** amp_graphics. h **przestrzeń nazw:** concurrency:: Graphics
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

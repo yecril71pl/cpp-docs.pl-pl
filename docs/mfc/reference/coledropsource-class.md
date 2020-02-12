@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-ms.openlocfilehash: 3a1e27ca6c1019eb8716194b3b7711238d015d6d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d93eb3de87b50f337f0d3edad65f5dc3013e8327
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504001"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127460"
 ---
 # <a name="coledropsource-class"></a>Klasa COleDropSource
 
@@ -31,29 +31,29 @@ Umożliwia przeciąganie danych do miejsca docelowego upuszczania.
 class COleDropSource : public CCmdTarget
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[COleDropSource::COleDropSource](#coledropsource)|Konstruuje `COleDropSource` obiekt.|
+|[COleDropSource::COleDropSource](#coledropsource)|Konstruuje obiekt `COleDropSource`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[COleDropSource:: GiveFeedback](#givefeedback)|Zmienia kursor w trakcie operacji przeciągania i upuszczania.|
 |[COleDropSource::OnBeginDrag](#onbegindrag)|Obsługuje przechwytywanie myszy podczas operacji przeciągania i upuszczania.|
-|[COleDropSource::QueryContinueDrag](#querycontinuedrag)|Sprawdza, czy przeciąganie ma być kontynuowane.|
+|[COleDropSource:: QueryContinueDrag](#querycontinuedrag)|Sprawdza, czy przeciąganie ma być kontynuowane.|
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa [COleDropTarget](../../mfc/reference/coledroptarget-class.md) obsługuje część otrzymującą operacji przeciągania i upuszczania. `COleDropSource` Obiekt jest odpowiedzialny za określenie, kiedy rozpoczyna się operacja przeciągania, dostarczając opinię podczas operacji przeciągania i określając, kiedy się skończy.
+Klasa [COleDropTarget](../../mfc/reference/coledroptarget-class.md) obsługuje część otrzymującą operacji przeciągania i upuszczania. Obiekt `COleDropSource` jest odpowiedzialny za określenie, kiedy rozpoczyna się operacja przeciągania, dostarczając opinię podczas operacji przeciągania i określając, kiedy się skończy.
 
-Aby użyć `COleDropSource` obiektu, po prostu Wywołaj konstruktora. Upraszcza to proces określania zdarzeń, takich jak kliknięcie myszą, rozpoczęcie operacji przeciągania przy użyciu [by uzyskać COleDataSource::D odragdrop](../../mfc/reference/coledatasource-class.md#dodragdrop), [COleClientItem::D odragdrop](../../mfc/reference/coleclientitem-class.md#dodragdrop)lub [COleServerItem::D odragdrop](../../mfc/reference/coleserveritem-class.md#dodragdrop) funkcji. Te funkcje spowodują utworzenie `COleDropSource` obiektu. Możesz chcieć zmodyfikować domyślne zachowanie `COleDropSource` funkcji. Te funkcje członkowskie będą wywoływane w odpowiednim czasie przez platformę.
+Aby użyć obiektu `COleDropSource`, należy wywołać konstruktora. Upraszcza to proces określania zdarzeń, takich jak kliknięcie myszą, rozpoczęcie operacji przeciągania przy użyciu [by uzyskać COleDataSource::D odragdrop](../../mfc/reference/coledatasource-class.md#dodragdrop), [COleClientItem::D odragdrop](../../mfc/reference/coleclientitem-class.md#dodragdrop)lub [COleServerItem::D odragdrop](../../mfc/reference/coleserveritem-class.md#dodragdrop) funkcji. Te funkcje spowodują utworzenie obiektu `COleDropSource`. Możesz chcieć zmodyfikować domyślne zachowanie funkcji `COleDropSource`. Te funkcje członkowskie będą wywoływane w odpowiednim czasie przez platformę.
 
-Aby uzyskać więcej informacji na temat operacji przeciągania i upuszczania za pomocą technologii OLE, zobacz artykuł przeciąganie [i upuszczanie (OLE)](../../mfc/drag-and-drop-ole.md).
+Aby uzyskać więcej informacji na temat operacji przeciągania i upuszczania przy użyciu technologii OLE, zobacz artykuł [OLE przeciągnij i upuść](../../mfc/drag-and-drop-ole.md).
 
 Aby uzyskać więcej informacji, zobacz [IDropSource](/windows/win32/api/oleidl/nn-oleidl-idropsource) w Windows SDK.
 
@@ -71,7 +71,7 @@ Aby uzyskać więcej informacji, zobacz [IDropSource](/windows/win32/api/oleidl/
 
 ##  <a name="coledropsource"></a>COleDropSource::COleDropSource
 
-Konstruuje `COleDropSource` obiekt.
+Konstruuje obiekt `COleDropSource`.
 
 ```
 COleDropSource();
@@ -90,23 +90,23 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
 *dropEffect*<br/>
 Efekt, który ma być wyświetlany użytkownikowi, zwykle wskazujący, co się stanie, Jeśli pozostało w tym punkcie z wybranymi danymi. Zwykle jest to wartość zwrócona przez ostatnie wywołanie [CView:: OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) lub [CView:: OnDragOver](../../mfc/reference/cview-class.md#ondragover). Może to być jeden lub więcej z następujących elementów:
 
-- DROPEFFECT_NONE nie jest dozwolone.
+- DROPEFFECT_NONE upuszczenie nie jest dozwolone.
 
-- DROPEFFECT_COPY operacji kopiowania.
+- DROPEFFECT_COPY zostanie wykonana operacja kopiowania.
 
-- DROPEFFECT_MOVE operacji przenoszenia.
+- DROPEFFECT_MOVE zostanie wykonana operacja przenoszenia.
 
-- DROPEFFECT_LINK połączenie z usuniętych danych na oryginalne dane.
+- Zostanie ustanowione DROPEFFECT_LINK łącze z usuniętych danych do oryginalnych danych.
 
-- DROPEFFECT_SCROLL operację przewijania przeciągnij lub występuje w elemencie docelowym.
+- DROPEFFECT_SCROLL operacja przewijania przeciągnij ma miejsce lub występuje w elemencie docelowym.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Zwraca DRAGDROP_S_USEDEFAULTCURSORS, jeśli przeciąganie jest w toku, NOERROR, jeśli nie jest.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę funkcję, aby przekazać użytkownikowi opinię na temat tego, co się stanie, jeśli w tym punkcie Wystąpił błąd. Domyślna implementacja używa domyślnych kursorów OLE. Aby uzyskać więcej informacji na temat operacji przeciągania i upuszczania za pomocą technologii OLE, zobacz artykuł przeciąganie [i upuszczanie (OLE)](../../mfc/drag-and-drop-ole.md).
+Zastąp tę funkcję, aby przekazać użytkownikowi opinię na temat tego, co się stanie, jeśli w tym punkcie Wystąpił błąd. Domyślna implementacja używa domyślnych kursorów OLE. Aby uzyskać więcej informacji na temat operacji przeciągania i upuszczania przy użyciu technologii OLE, zobacz artykuł [OLE przeciągnij i upuść](../../mfc/drag-and-drop-ole.md).
 
 Aby uzyskać więcej informacji, zobacz [IDropSource:: GiveFeedback](/windows/win32/api/oleidl/nf-oleidl-idropsource-givefeedback), [IDropTarget::D ragover](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragover)i [IDropTarget::D ragenter](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragenter) w Windows SDK.
 
@@ -123,7 +123,7 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 *pWnd*<br/>
 Wskazuje okno, które zawiera wybrane dane.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Niezerowe, jeśli przeciąganie jest dozwolone, w przeciwnym razie 0.
 
@@ -144,14 +144,14 @@ virtual SCODE QueryContinueDrag(
 ### <a name="parameters"></a>Parametry
 
 *bEscapePressed*<br/>
-Wskazuje, czy klawisz ESC został naciśnięty od czasu ostatniego wywołania do `COleDropSource::QueryContinueDrag`.
+Określa, czy klawisz ESC został naciśnięty od czasu ostatniego wywołania do `COleDropSource::QueryContinueDrag`.
 
 *dwKeyState*<br/>
 Zawiera stan klawiszy modyfikujących na klawiaturze. Jest to kombinacja dowolnej liczby następujących elementów: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON i MK_RBUTTON.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-DRAGDROP_S_CANCEL Jeśli klawisz ESC lub prawy przycisk jest wciśnięty, lub przycisk lewy jest uruchamiany przed rozpoczęciem przeciągania. DRAGDROP_S_DROP, jeśli operacja drop powinna wystąpić. W przeciwnym razie S_OK.
+DRAGDROP_S_CANCEL, jeśli klawisz ESC lub prawy przycisk jest wciśnięty, lub przycisk lewy jest uruchamiany przed rozpoczęciem przeciągania. DRAGDROP_S_DROP, jeśli operacja upuszczania powinna wystąpić. W przeciwnym razie S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -161,7 +161,7 @@ Implementacja domyślna inicjuje upuszczenie lub anuluje przeciąganie w następ
 
 Ponieważ ta funkcja jest wywoływana często, należy ją zoptymalizować jak najwięcej.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykład HIERSVR MFC](../../overview/visual-cpp-samples.md)<br/>
 [Przykład OCLIENT MFC](../../overview/visual-cpp-samples.md)<br/>

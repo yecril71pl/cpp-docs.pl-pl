@@ -4,73 +4,73 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - contexts [Concurrency Runtime]
 ms.assetid: 10c1d861-8fbb-4ba0-b2ec-61876b11176e
-ms.openlocfilehash: d511f8fa751d61c3c490a184dae660096dd9f76f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9eaf21a3d65ae891a48657de9d3e7aff78ce12b9
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148344"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142189"
 ---
 # <a name="contexts"></a>Konteksty
 
-W tym dokumencie opisano rolę kontekstów w środowisku uruchomieniowym współbieżności. Wątek, który jest dołączony do harmonogramu jest znany jako *kontekstu wykonania*, lub po prostu *kontekstu*. [Concurrency::wait](reference/concurrency-namespace-functions.md#wait) funkcji i współbieżność::[klasy kontekstu](../../parallel/concrt/reference/context-class.md) pozwalają na kontrolę zachowania kontekstów. Użyj `wait` funkcję, aby zawiesić bieżącego kontekstu przez wyznaczony czas. Użyj `Context` klasy, gdy jest potrzebna większa kontrola nad po kontekstów block odblokowania i uzyskanie lub gdy zachodzi potrzeba oversubscribe bieżącego kontekstu.
+W tym dokumencie opisano rolę kontekstów w środowisko uruchomieniowe współbieżności. Wątek, który jest dołączony do harmonogramu, jest znany jako *kontekst wykonywania*lub po prostu *kontekst*. Funkcja [concurrency:: wait](reference/concurrency-namespace-functions.md#wait) oraz Klasa concurrency::[Context](../../parallel/concrt/reference/context-class.md) umożliwiają sterowanie zachowaniem kontekstów. Użyj funkcji `wait`, aby zawiesić bieżący kontekst przez określony czas. Użyj klasy `Context`, gdy potrzebujesz większej kontroli nad tym, kiedy konteksty blokują, odblokują i implikują, lub gdy chcesz zasubskrybować bieżący kontekst.
 
 > [!TIP]
->  Środowisko uruchomieniowe współbieżności zawiera domyślnego harmonogramu, a w związku z tym nie należy utworzyć w aplikacji. Ponieważ Harmonogram zadań ułatwia dostrajania wydajności aplikacji, zalecamy rozpoczęcie od [biblioteki wzorców równoległych (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) lub [bibliotekę asynchronicznych agentów](../../parallel/concrt/asynchronous-agents-library.md) przypadku jesteś nowym użytkownikiem w czasie wykonywania współbieżności.
+> Środowisko uruchomieniowe współbieżności udostępnia domyślny harmonogram i dlatego nie jest konieczne tworzenie go w aplikacji. Ponieważ Harmonogram zadań ułatwia dostosowanie wydajności aplikacji, zalecamy rozpoczęcie od [biblioteki równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) lub [biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md) , jeśli są one nowe dla środowisko uruchomieniowe współbieżności.
 
-## <a name="the-wait-function"></a>Wait — funkcja
+## <a name="the-wait-function"></a>Funkcja oczekiwania
 
-[Concurrency::wait](reference/concurrency-namespace-functions.md#wait) funkcja daje wspólne wykonywanie bieżącego kontekstu określoną liczbę milisekund. Środowisko uruchomieniowe czas yield jest używany do wykonywania innych zadań. Po upływie określonego czasu, środowisko uruchomieniowe zmieni ustalony kontekstu wykonywania. W związku z tym `wait` funkcji może zawiesić dłużej niż wartość podana dla bieżącego kontekstu `milliseconds` parametru.
+Funkcja [concurrency:: wait](reference/concurrency-namespace-functions.md#wait) wspólnie daje wykonywanie bieżącego kontekstu przez określoną liczbę milisekund. Środowisko uruchomieniowe używa czasu Yield do wykonywania innych zadań. Po upływie określonego czasu środowisko uruchomieniowe ponownie planuje kontekst wykonania. W związku z tym funkcja `wait` może zawiesić bieżący kontekst dłużej niż wartość podana dla parametru `milliseconds`.
 
-Przekazywanie 0 (zero) dla `milliseconds` parametru powoduje, że środowisko uruchomieniowe do zawieszenia bieżącego kontekstu, dopóki wszystkie konteksty active są możliwość wykonywania pracy. Umożliwia to uzyskanie zadania do innych aktywnych zadań.
+Przekazanie wartości 0 (zero) dla parametru `milliseconds` powoduje zawieszenie przez środowisko uruchomieniowe bieżącego kontekstu do momentu, gdy wszystkie inne aktywne konteksty będą miały możliwość wykonania pracy. Dzięki temu można uzyskać zadanie dla wszystkich innych aktywnych zadań.
 
 ### <a name="example"></a>Przykład
 
-Aby uzyskać przykład, który używa `wait` funkcji umożliwiające uzyskanie bieżącego kontekstu, a zatem umożliwiają innych kontekstach uruchomić, zobacz [jak: Używanie grup harmonogramu do wywierania wpływu na kolejność wykonywania](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
+Przykład, który używa funkcji `wait`, aby uzyskać bieżący kontekst i w związku z tym zezwolić na uruchamianie innych kontekstów, zobacz [jak: używanie grup harmonogramu do wywierania wpływu na kolejność wykonywania](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
 
-## <a name="the-context-class"></a>Context — klasa
+## <a name="the-context-class"></a>Klasa kontekstu
 
-Współbieżność::[klasy kontekstu](../../parallel/concrt/reference/context-class.md) zapewnia programowania abstrakcji dla kontekstu wykonywania i oferuje dwie ważne funkcje: możliwość wspólne Blokuj odblokowywanie i uzyskanie bieżącego kontekstu i możliwość oversubscribe bieżącego kontekstu.
+Klasa concurrency::[Context](../../parallel/concrt/reference/context-class.md) zapewnia abstrakcję programowania dla kontekstu wykonywania i oferuje dwie ważne funkcje: zdolność do współblokowania, odblokowywania i przekazywania bieżącego kontekstu oraz możliwość zasubskrybowania bieżącego kontekstu.
 
 ### <a name="cooperative-blocking"></a>Blokowanie współpracy
 
-`Context` Klasa pozwala zablokować, lub yield bieżącego kontekstu wykonywania. Blokowanie lub reaguje jest przydatne, gdy bieżącym kontekście nie można kontynuować, ponieważ zasób jest niedostępny.
+Klasa `Context` pozwala zablokować lub uzyskać bieżący kontekst wykonania. Blokowanie lub przekazanie jest przydatne, gdy bieżący kontekst nie może być kontynuowany, ponieważ zasób nie jest dostępny.
 
-[Concurrency::Context::Block](reference/context-class.md#block) metoda blokuje bieżący kontekst. Kontekst, który jest zablokowany daje swoich zasobów do przetwarzania, aby środowisko uruchomieniowe można wykonywać inne zadania. [Concurrency::Context::Unblock](reference/context-class.md#unblock) metoda odblokowuje kontekst zablokowane. `Context::Unblock` Metoda musi zostać wywołana w innym kontekście niż ta, która wywołała `Context::Block`. Środowisko wykonawcze zgłasza [concurrency::context_self_unblock](../../parallel/concrt/reference/context-self-unblock-class.md) kontekst Próba odblokowania sam.
+Metoda [concurrency:: Context:: Block](reference/context-class.md#block) blokuje bieżący kontekst. Zablokowany kontekst zapewnia zasoby przetwarzania, aby środowisko uruchomieniowe mogły wykonywać inne zadania. Metoda [concurrency:: Context:: Unblock](reference/context-class.md#unblock) blokuje zablokowany kontekst. Metoda `Context::Unblock` musi być wywołana z innego kontekstu niż ten, który został wywołany `Context::Block`. Środowisko uruchomieniowe zgłasza [współbieżność:: context_self_unblock](../../parallel/concrt/reference/context-self-unblock-class.md) , jeśli kontekst próbuje odblokować siebie.
 
-Wspólne zablokować i odblokować kontekst zazwyczaj wywołujesz [concurrency::Context::CurrentContext](reference/context-class.md#currentcontext) wskaźnik, aby pobrać `Context` obiektu, który jest skojarzony z bieżącym wątkiem, a następnie zapisz wynik. Następnie wywołaj `Context::Block` metodę, aby zablokować bieżącego kontekstu. Później, wywołaj `Context::Unblock` z oddzielnych kontekstu można odblokować zablokowanego kontekstu.
+Aby wspólnie blokować i odblokować kontekst, zazwyczaj wywołuje się [concurrency:: Context:: CurrentContext](reference/context-class.md#currentcontext) , aby pobrać wskaźnik do obiektu `Context`, który jest skojarzony z bieżącym wątkiem i zapisać wynik. Następnie należy wywołać metodę `Context::Block`, aby zablokować bieżący kontekst. Później Wywołaj `Context::Unblock` z oddzielnego kontekstu, aby odblokować zablokowany kontekst.
 
-Musi odpowiadać każdej pary wywołania `Context::Block` i `Context::Unblock`. Środowisko wykonawcze zgłasza [concurrency::context_unblock_unbalanced](../../parallel/concrt/reference/context-unblock-unbalanced-class.md) podczas `Context::Block` lub `Context::Unblock` metoda jest wywoływana po kolei bez dopasowania wywołania do innej metody. Jednakże, nie trzeba wywoływać `Context::Block` przed wywołaniem `Context::Unblock`. Na przykład, jeśli w jednym kontekście wywołuje `Context::Unblock` przed innym wywołania kontekstowego `Context::Block` ten sam kontekst tego kontekstu nie zmieniają odblokowane.
+Należy dopasować każdą parę wywołań do `Context::Block` i `Context::Unblock`. Środowisko uruchomieniowe zgłasza [współbieżność:: context_unblock_unbalanced](../../parallel/concrt/reference/context-unblock-unbalanced-class.md) , gdy metoda `Context::Block` lub `Context::Unblock` jest wywoływana po kolei, bez pasującego wywołania do innej metody. Nie trzeba jednak wywoływać `Context::Block` przed wywołaniem `Context::Unblock`. Na przykład jeśli jeden kontekst wywołuje `Context::Unblock` przed wywołaniem innego kontekstu `Context::Block` dla tego samego kontekstu, ten kontekst pozostaje odblokowany.
 
-[Concurrency::Context::Yield](reference/context-class.md#yield) metoda przekazuje wykonywanie kodu, tak, aby środowisko uruchomieniowe może wykonywać inne zadania, a następnie ponownie kontekstu wykonywania. Gdy wywołujesz `Context::Block` metody, środowisko wykonawcze nie zmienić termin egzaminu kontekstu.
+Metoda [concurrency:: Context:: Yield](reference/context-class.md#yield) daje wykonanie, tak aby środowisko uruchomieniowe mogły wykonywać inne zadania, a następnie ponownie zaplanować wykonywanie. Po wywołaniu metody `Context::Block` środowisko uruchomieniowe nie ponownie planuje kontekstu.
 
 #### <a name="example"></a>Przykład
 
-Aby uzyskać przykład, który używa `Context::Block`, `Context::Unblock`, i `Context::Yield` metody służące do implementacji klasy kooperatywnego semafora, zobacz [jak: Korzystanie z klasy kontekstu do wdrażania Kooperatywnego semafora](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
+Aby zapoznać się z przykładem korzystającym z metod `Context::Block`, `Context::Unblock`i `Context::Yield` w celu zaimplementowania wspólnej klasy semafora, zobacz [How to: Use the Context Class to Implement The Spółdzielczy semafor](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
 
-##### <a name="oversubscription"></a>Nadsubskrypcja
+##### <a name="oversubscription"></a>Nadsubskrypcji
 
-Domyślnego harmonogramu tworzy taką samą liczbę wątków, ponieważ wątków sprzętu. Możesz użyć *nadsubskrypcji* do tworzenia dodatkowych wątków sprzętu danego wątku.
+Domyślny harmonogram tworzy tę samą liczbę wątków, ponieważ dostępne są wątki sprzętowe. Można użyć *nadsubskrypcji* , aby utworzyć dodatkowe wątki dla danego wątku sprzętowego.
 
-W przypadku operacji wymaga dużej mocy obliczeniowej nadsubskrypcji zazwyczaj Skaluj ponieważ wprowadza dodatkowe obciążenie. Jednak dla zadania, które mają dużej ilości opóźnienia, na przykład, odczytywanie danych z dysku lub połączenie sieciowe nadsubskrypcja może zwiększyć ogólną wydajność niektórych aplikacji.
-
-> [!NOTE]
->  Włączyć nadsubskrypcję tylko z wątku, który został utworzony w czasie wykonywania współbieżności. Nadsubskrypcja nie obowiązuje, gdy jest wywoływana z wątku, który nie został utworzony w czasie wykonywania (w tym wątku głównego).
-
-Aby włączyć nadsubskrypcję w bieżącym kontekście, należy wywołać [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) metody z `_BeginOversubscription` parametr **true**. Po włączeniu nadsubskrypcji w wątku, który został utworzony przez środowisko uruchomieniowe współbieżności powoduje środowiska uruchomieniowego utworzyć jeden dodatkowy wątek. Po wszystkich zadań, które wymagają zakończenia nadsubskrypcji wywołania `Context::Oversubscribe` z `_BeginOversubscription` parametr **false**.
-
-Można włączyć nadsubskrypcję, wiele razy z bieżącego kontekstu, ale należy wyłączyć taką samą liczbę prób ją włączyć. Nadsubskrypcja może być też zagnieżdżona; oznacza to zadanie, które jest tworzony przez inne zadanie, które używa nadsubskrypcja może również nadsubskrybować kontekst. Jednakże jeśli zarówno zagnieżdżone zadanie, a jego elementem nadrzędnym należy na tym samym kontekście wywołanie prowadzące do `Context::Oversubscribe` powoduje utworzenie dodatkowy wątek.
+W przypadku operacji intensywnie korzystających z obliczeń nadmiarowe przeważnie nie są skalowane, ponieważ wprowadzają dodatkowe koszty. Jednak w przypadku zadań z dużą ilością opóźnień, na przykład odczytywania danych z dysku lub z połączenia sieciowego, nadpłata może zwiększyć ogólną wydajność niektórych aplikacji.
 
 > [!NOTE]
->  Środowisko wykonawcze zgłasza [concurrency::invalid_oversubscribe_operation](../../parallel/concrt/reference/invalid-oversubscribe-operation-class.md) wyłączenie nadsubskrypcji przed jego włączeniem.
+> Włącz nadsubskrypcję tylko z wątku, który został utworzony przez środowisko uruchomieniowe współbieżności. Nadsubskrypcja nie działa, gdy jest wywoływana z wątku, który nie został utworzony przez środowisko uruchomieniowe (w tym główny wątek).
+
+Aby włączyć nadsubskrypcje w bieżącym kontekście, wywołaj metodę [concurrency:: Context::](reference/context-class.md#oversubscribe) Subscription z parametrem `_BeginOversubscription` ustawionym na **wartość true**. Po włączeniu nadsubskrypcji w wątku, który został utworzony przez środowisko uruchomieniowe współbieżności, powoduje to utworzenie jednego dodatkowego wątku przez środowisko uruchomieniowe. Po wszystkich zadaniach, które wymagają zakończenia nadsubskrypcji, wywołaj `Context::Oversubscribe` z parametrem `_BeginOversubscription` ustawionym na **wartość false**.
+
+Można włączyć nadsubskrypcję wiele razy z bieżącego kontekstu, ale należy wyłączyć tę samą liczbę razy. Nadsubskrypcja może być również zagnieżdżona; oznacza to, że zadanie tworzone przez inne zadanie, które korzysta z nadmiarowej subskrypcji, może również zasubskrybować jego kontekst. Jeśli jednak zarówno zadanie zagnieżdżone, jak i jego element nadrzędny należą do tego samego kontekstu, tylko zewnętrzne wywołanie do `Context::Oversubscribe` powoduje utworzenie dodatkowego wątku.
+
+> [!NOTE]
+> Środowisko uruchomieniowe zgłasza [współbieżność:: invalid_oversubscribe_operation](../../parallel/concrt/reference/invalid-oversubscribe-operation-class.md) , jeśli subskrypcja jest wyłączona, zanim zostanie włączona.
 
 ###### <a name="example"></a>Przykład
 
-Na przykład, który używa nadsubskrypcji do przesuwania opóźnienia, które jest spowodowany przez odczytywanie danych z połączenia sieciowego, zobacz [jak: Używanie Nadsubskrypcji do opóźnienia](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Aby zapoznać się z przykładem, który używa nadsubskrypcji w celu przesunięcia opóźnienia, który jest spowodowany odczytem danych z połączenia sieciowego, zobacz [jak: używanie nadsubskrypcji w celu przesunięcia opóźnienia](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Task Scheduler](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
+[Harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Instrukcje: używanie grup harmonogramu do wywierania wpływu na kolejność wykonywania](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)<br/>
 [Instrukcje: korzystanie z klasy kontekstu do wdrażania a kooperatywnego semafora](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
 [Instrukcje: używanie nadsubskrypcji do przesuwania opóźnienia](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)

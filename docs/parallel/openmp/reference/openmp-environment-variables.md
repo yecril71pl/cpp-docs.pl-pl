@@ -14,153 +14,153 @@ helpviewer_keywords:
 - OMP_NUM_THREADS OpenMP environment variable
 - OMP_SCHEDULE OpenMP environment variable
 ms.assetid: 2178ce2b-ffa1-45ec-a455-64437711d15d
-ms.openlocfilehash: 73fb11db14df22e5df95fdec556ccdfc16a935e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 838427320fcb68cedb97b36156fc18002ed962d8
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362637"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143275"
 ---
 # <a name="openmp-environment-variables"></a>Zmienne środowiskowe OpenMP
 
-Zawiera łącza do zmiennych środowiskowych, używany w interfejsie API OpenMP.
+Oferuje linki do zmiennych środowiskowych używanych w interfejsie API OpenMP.
 
-Implementacja języka Visual C++ OpenMP standardowa obejmuje następujące zmienne środowiskowe. Te zmienne środowiskowe są odczytywane w momencie uruchamiania programu, a modyfikacji wartości są ignorowane w czasie wykonywania (na przykład za pomocą [_putenv, _wputenv —](../../../c-runtime-library/reference/putenv-wputenv.md)).
+Wizualna C++ implementacja standardu OpenMP obejmuje następujące zmienne środowiskowe. Te zmienne środowiskowe są odczytywane przy uruchamianiu programu, a modyfikacje w ich wartości są ignorowane w czasie wykonywania (na przykład przy użyciu [_putenv, _wputenv](../../../c-runtime-library/reference/putenv-wputenv.md)).
 
 |Zmienna środowiskowa|Opis|
 |--------------------|-----------|
-|[OMP_SCHEDULE](#omp-schedule)|Modyfikuje zachowanie [harmonogram](openmp-clauses.md#schedule) klauzuli podczas `schedule(runtime)` została określona w `for` lub `parallel for` dyrektywy.|
-|[OMP_NUM_THREADS](#omp-num-threads)|Ustawia maksymalną liczbę wątków w równoległego regionu, chyba że zostaną zastąpione [omp_set_num_threads](openmp-functions.md#omp-set-num-threads) lub [num_threads](openmp-clauses.md#num-threads).|
-|[OMP_DYNAMIC](#omp-dynamic)|Określa, czy OpenMP, w czasie wykonywania można dostosować liczbę wątków w równoległego regionu.|
-|[OMP_NESTED](#omp-nested)|Określa, czy zagnieżdżonych równoległości jest włączona, chyba że zagnieżdżone równoległości jest włączone lub wyłączone przy użyciu `omp_set_nested`.|
+|[OMP_SCHEDULE](#omp-schedule)|Modyfikuje zachowanie klauzuli [Schedule](openmp-clauses.md#schedule) , gdy `schedule(runtime)` jest określony w dyrektywie `for` lub `parallel for`.|
+|[OMP_NUM_THREADS](#omp-num-threads)|Ustawia maksymalną liczbę wątków w regionie równoległym, chyba że zostaną zastąpione przez [omp_set_num_threads](openmp-functions.md#omp-set-num-threads) lub [num_threads](openmp-clauses.md#num-threads).|
+|[OMP_DYNAMIC](#omp-dynamic)|Określa, czy czas uruchomienia OpenMP może dostosować liczbę wątków w regionie równoległym.|
+|[OMP_NESTED](#omp-nested)|Określa, czy zagnieżdżona równoległość jest włączona, chyba że zagnieżdżone równoległe jest włączone lub wyłączone przy użyciu `omp_set_nested`.|
 
 ## <a name="omp-dynamic"></a>OMP_DYNAMIC
 
-Określa, czy OpenMP, w czasie wykonywania można dostosować liczbę wątków w równoległego regionu.
+Określa, czy czas uruchomienia OpenMP może dostosować liczbę wątków w regionie równoległym.
 
-```
+```cmd
 set OMP_DYNAMIC[=TRUE | =FALSE]
 ```
 
 ### <a name="remarks"></a>Uwagi
 
-`OMP_DYNAMIC` Zmiennej środowiskowej, może zostać przesłonięta przez [omp_set_dynamic](openmp-functions.md#omp-set-dynamic) funkcji.
+Zmienna środowiskowa `OMP_DYNAMIC` może być zastąpiona przez funkcję [omp_set_dynamic](openmp-functions.md#omp-set-dynamic) .
 
-Wartość domyślna w implementacji Visual C++ OpenMP standard to `OMP_DYNAMIC=FALSE`.
+Wartość domyślna w implementacji wizualizacji C++ w standardzie OpenMP jest `OMP_DYNAMIC=FALSE`.
 
-Aby uzyskać więcej informacji, zobacz [4.3 OMP_DYNAMIC](../../../parallel/openmp/4-3-omp-dynamic.md).
+Aby uzyskać więcej informacji, zobacz [4,3 OMP_DYNAMIC](../../../parallel/openmp/4-3-omp-dynamic.md).
 
 ### <a name="example"></a>Przykład
 
-Następujące polecenie ustawia `OMP_DYNAMIC` zmiennej środowiskowej na wartość TRUE:
+Następujące polecenie ustawia zmienną środowiskową `OMP_DYNAMIC` na TRUE:
 
-```
+```cmd
 set OMP_DYNAMIC=TRUE
 ```
 
-Następujące polecenie wyświetla bieżące ustawienie `OMP_DYNAMIC` zmienną środowiskową:
+Następujące polecenie wyświetla bieżące ustawienie zmiennej środowiskowej `OMP_DYNAMIC`:
 
-```
+```cmd
 set OMP_DYNAMIC
 ```
 
 ## <a name="omp-nested"></a>OMP_NESTED
 
-Określa, czy zagnieżdżonych równoległości jest włączona, chyba że zagnieżdżone równoległości jest włączone lub wyłączone przy użyciu `omp_set_nested`.
+Określa, czy zagnieżdżona równoległość jest włączona, chyba że zagnieżdżone równoległe jest włączone lub wyłączone przy użyciu `omp_set_nested`.
 
-```
+```cmd
 set OMP_NESTED[=TRUE | =FALSE]
 ```
 
 ### <a name="remarks"></a>Uwagi
 
-`OMP_NESTED` Zmiennej środowiskowej, może zostać przesłonięta przez [omp_set_nested](openmp-functions.md#omp-set-nested) funkcji.
+Zmienna środowiskowa `OMP_NESTED` może być zastąpiona przez funkcję [omp_set_nested](openmp-functions.md#omp-set-nested) .
 
-Wartość domyślna w implementacji Visual C++ OpenMP standard to `OMP_DYNAMIC=FALSE`.
+Wartość domyślna w implementacji wizualizacji C++ w standardzie OpenMP jest `OMP_DYNAMIC=FALSE`.
 
-Aby uzyskać więcej informacji, zobacz [4.4 OMP_NESTED](../../../parallel/openmp/4-4-omp-nested.md).
+Aby uzyskać więcej informacji, zobacz [4,4 OMP_NESTED](../../../parallel/openmp/4-4-omp-nested.md).
 
 ### <a name="example"></a>Przykład
 
-Następujące polecenie ustawia `OMP_NESTED` zmiennej środowiskowej na wartość TRUE:
+Następujące polecenie ustawia zmienną środowiskową `OMP_NESTED` na TRUE:
 
-```
+```cmd
 set OMP_NESTED=TRUE
 ```
 
-Następujące polecenie wyświetla bieżące ustawienie `OMP_NESTED` zmienną środowiskową:
+Następujące polecenie wyświetla bieżące ustawienie zmiennej środowiskowej `OMP_NESTED`:
 
-```
+```cmd
 set OMP_NESTED
 ```
 
 ## <a name="omp-num-threads"></a>OMP_NUM_THREADS
 
-Ustawia maksymalną liczbę wątków w równoległego regionu, chyba że zostaną zastąpione [omp_set_num_threads](openmp-functions.md#omp-set-num-threads) lub [num_threads](openmp-clauses.md#num-threads).
+Ustawia maksymalną liczbę wątków w regionie równoległym, chyba że zostaną zastąpione przez [omp_set_num_threads](openmp-functions.md#omp-set-num-threads) lub [num_threads](openmp-clauses.md#num-threads).
 
-```
+```cmd
 set OMP_NUM_THREADS[=num]
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*num*<br/>
-Maksymalna liczba wątków w równoległego regionu, maksymalnie 64 w implementacji Visual C++.
+*numerowan*<br/>
+Maksymalna liczba wątków w regionie równoległym, do 64 w implementacji wizualizacji C++ .
 
 ### <a name="remarks"></a>Uwagi
 
-`OMP_NUM_THREADS` Zmiennej środowiskowej, może zostać przesłonięta przez [omp_set_num_threads](openmp-functions.md#omp-set-num-threads) funkcji lub [num_threads](openmp-clauses.md#num-threads).
+Zmienna środowiskowa `OMP_NUM_THREADS` może zostać przesłonięta przez funkcję [omp_set_num_threads](openmp-functions.md#omp-set-num-threads) lub [num_threads](openmp-clauses.md#num-threads).
 
-Wartość domyślna `num` w programie Visual C++ implementacja standardu OpenMP jest liczba procesorów wirtualnych, w tym procesory CPU wielowątkowość.
+Wartość domyślna `num` w implementacji wizualizacji C++ w standardzie OpenMP to liczba procesorów wirtualnych, w tym procesorów wielowątkowości.
 
-Aby uzyskać więcej informacji, zobacz [4.2 OMP_NUM_THREADS](../../../parallel/openmp/4-2-omp-num-threads.md).
+Aby uzyskać więcej informacji, zobacz [4,2 OMP_NUM_THREADS](../../../parallel/openmp/4-2-omp-num-threads.md).
 
 ### <a name="example"></a>Przykład
 
-Następujące polecenie ustawia `OMP_NUM_THREADS` zmiennej środowiskowej, aby `16`:
+Następujące polecenie ustawia zmienną środowiskową `OMP_NUM_THREADS` na `16`:
 
-```
+```cmd
 set OMP_NUM_THREADS=16
 ```
 
-Następujące polecenie wyświetla bieżące ustawienie `OMP_NUM_THREADS` zmienną środowiskową:
+Następujące polecenie wyświetla bieżące ustawienie zmiennej środowiskowej `OMP_NUM_THREADS`:
 
-```
+```cmd
 set OMP_NUM_THREADS
 ```
 
 ## <a name="omp-schedule"></a>OMP_SCHEDULE
 
-Modyfikuje zachowanie [harmonogram](openmp-clauses.md#schedule) klauzuli podczas `schedule(runtime)` została określona w `for` lub `parallel for` dyrektywy.
+Modyfikuje zachowanie klauzuli [Schedule](openmp-clauses.md#schedule) , gdy `schedule(runtime)` jest określony w dyrektywie `for` lub `parallel for`.
 
-```
+```cmd
 set OMP_SCHEDULE[=type[,size]]
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Rozmiar*<br/>
-(Opcjonalnie) Określa rozmiar iteracji. *rozmiar* musi być dodatnią liczbą całkowitą. Wartość domyślna to `1`, z wyjątkiem kiedy *typu* jest statyczna. Jeśli *typu* jest `runtime`.
+*zmienia*<br/>
+Obowiązkowe Określa rozmiar iteracji. *rozmiar* musi być dodatnią liczbą całkowitą. Wartość domyślna to `1`, z wyjątkiem sytuacji, gdy *Typ* jest statyczny. Nieprawidłowy, gdy *Typ* jest `runtime`.
 
 *type*<br/>
-Rodzaj planowania albo `dynamic`, `guided`, `runtime`, lub `static`.
+Rodzaj planowania, `dynamic`, `guided`, `runtime`lub `static`.
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość domyślna w implementacji Visual C++ OpenMP standard to `OMP_SCHEDULE=static,0`.
+Wartość domyślna w implementacji wizualizacji C++ w standardzie OpenMP jest `OMP_SCHEDULE=static,0`.
 
-Aby uzyskać więcej informacji, zobacz [4.1 OMP_SCHEDULE](../../../parallel/openmp/4-1-omp-schedule.md).
+Aby uzyskać więcej informacji, zobacz [4,1 OMP_SCHEDULE](../../../parallel/openmp/4-1-omp-schedule.md).
 
 ### <a name="example"></a>Przykład
 
-Następujące polecenie ustawia `OMP_SCHEDULE` zmienną środowiskową:
+Następujące polecenie ustawia zmienną środowiskową `OMP_SCHEDULE`:
 
-```
+```cmd
 set OMP_SCHEDULE="guided,2"
 ```
 
-Następujące polecenie wyświetla bieżące ustawienie `OMP_SCHEDULE` zmienną środowiskową:
+Następujące polecenie wyświetla bieżące ustawienie zmiennej środowiskowej `OMP_SCHEDULE`:
 
-```
+```cmd
 set OMP_SCHEDULE
 ```

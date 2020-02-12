@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-ms.openlocfilehash: 5449362454c5899e544ed370f13d28471a59bd13
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 06134838494e38c182d7c8328497666862f40fd6
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821847"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143225"
 ---
 # <a name="concurrency-namespace"></a>concurrency — Przestrzeń nazwy
 
@@ -33,15 +33,15 @@ Przestrzeń nazw `Concurrency` zawiera klasy i funkcje, które zapewniają dost�
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 namespace concurrency;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |`runtime_object_identity`|Każde wystąpienie komunikatu ma tożsamość, która następuje po jej sklonowaniu i przekazaniu między składnikami obsługi komunikatów. Nie może to być adres obiektu wiadomości.|
 |`task_status`|Typ, który reprezentuje stan terminalu zadania. Prawidłowe wartości to `completed` i `canceled`.|
@@ -50,11 +50,11 @@ namespace concurrency;
 
 ### <a name="classes"></a>Klasy
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[affinity_partitioner, klasa](affinity-partitioner-class.md)|Klasa `affinity_partitioner` jest podobna do klasy `static_partitioner`, ale zwiększa koligację pamięci podręcznej przez wybór zakresu mapowania na wątki robocze. Może znacząco poprawić wydajność, gdy pętla jest ponownie wykonywana nad tym samym zestawem danych, a dane pasują do pamięci podręcznej. Należy zauważyć, że ten sam obiekt `affinity_partitioner` musi być używany z kolejnymi iteracjami pętli równoległej, który jest wykonywany w określonym zestawie danych, aby można było korzystać z lokalizacji danych.|
 |[agent, klasa](agent-class.md)|Klasa przeznaczona do użycia jako klasa bazowa dla wszystkich niezależnych agentów. Służy do ukrycia stanu od innych agentów i korzystania z przekazywania komunikatów.|
-|[auto_partitioner, klasa](auto-partitioner-class.md)|Klasa `auto_partitioner` reprezentuje domyślną metodę `parallel_for`, `parallel_for_each` i `parallel_transform` użyć do partycjonowania zakresu, w którym się powtarza. Ta metoda partycjonowania wykorzystuje funkcję kradzieży zakresu dla równoważenia obciążenia, a także anulowania dla iteracji.|
+|[auto_partitioner, klasa](auto-partitioner-class.md)|Klasa `auto_partitioner` reprezentuje domyślną metodę `parallel_for`, `parallel_for_each` i `parallel_transform` użyć do partycjonowania zakresu, w którym się powtarza. Ta metoda partycjonowania wykorzystuje funkcję kradzieży zakresu na potrzeby równoważenia obciążenia, a także anulowania dla iteracji.|
 |[bad_target, klasa](bad-target-class.md)|Ta klasa opisuje wyjątek zgłoszony, gdy blok komunikatów otrzymuje wskaźnik do obiektu docelowego, który jest nieprawidłowy dla wykonywanej operacji.|
 |[call, klasa](call-class.md)|Blok komunikatów `call` to wiele źródeł uporządkowanych `target_block`, które wywołuje określoną funkcję podczas otrzymywania wiadomości.|
 |[cancellation_token, klasa](cancellation-token-class.md)|Klasa `cancellation_token` reprezentuje możliwość ustalenia, czy żądana operacja została anulowana. Dany token może być skojarzony z `task_group`, `structured_task_group`lub `task` w celu zapewnienia niejawnego anulowania. Może być również sondowany w celu anulowania lub mieć zarejestrowane wywołanie zwrotne dla if i po anulowaniu skojarzonego `cancellation_token_source`.|
@@ -116,7 +116,7 @@ namespace concurrency;
 |[single_link_registry, klasa](single-link-registry-class.md)|Obiekt `single_link_registry` jest `network_link_registry`, który zarządza tylko pojedynczym blokiem źródłowym lub docelowym.|
 |[source_block, klasa](source-block-class.md)|Klasa `source_block` jest abstrakcyjną klasą bazową dla bloków tylko do źródła. Klasa zawiera podstawowe funkcje zarządzania łączami oraz typowe kontrole błędów.|
 |[source_link_manager, klasa](source-link-manager-class.md)|Obiekt `source_link_manager` zarządza łączami sieci bloku komunikatów do bloków `ISource`.|
-|[static_partitioner, klasa](static-partitioner-class.md)|Klasa `static_partitioner` reprezentuje statyczne partycjonowanie zakresu powtarzanego przez `parallel_for`. Partycja dzieli zakres na dowolną liczbę fragmentów, ponieważ dostępne są pracownicy usługi underyling Scheduler.|
+|[static_partitioner, klasa](static-partitioner-class.md)|Klasa `static_partitioner` reprezentuje statyczne partycjonowanie zakresu powtarzanego przez `parallel_for`. Partycja dzieli zakres na tyle fragmentów, ile jest dostępnych dla pracowników w źródłowym harmonogramie.|
 |[structured_task_group, klasa](structured-task-group-class.md)|Klasa `structured_task_group` reprezentuje wysoce strukturalną kolekcję równoległych zadań. Można kolejkować poszczególne równoległe zadania do `structured_task_group` przy użyciu obiektów `task_handle` i poczekać na ich zakończenie lub anulować grupę zadań przed zakończeniem wykonywania, co spowoduje przerwanie wszystkich zadań, które nie rozpoczęły wykonania.|
 |[target_block, klasa](target-block-class.md)|Klasa `target_block` jest abstrakcyjną klasą bazową, która zapewnia podstawowe funkcje zarządzania łączami i sprawdzanie błędów tylko dla bloków docelowych.|
 |[task, klasa (środowisko uruchomieniowe współbieżności)](task-class.md)|Biblioteka równoległych wzorców (PPL) — Klasa `task`. Obiekt `task` reprezentuje zadanie, które może być wykonywane asynchronicznie i współbieżnie z innymi zadaniami i równoległą działaniem tworzonym przez algorytmy równoległe w środowisko uruchomieniowe współbieżności. Generuje wynik typu `_ResultType` po pomyślnym zakończeniu. Zadania typu `task<void>` nie generują żadnego wyniku. Zadanie może być odczekane i anulowane niezależnie od innych zadań. Może być również tworzony z innymi zadaniami przy użyciu wzorców kontynuacji (`then`) i sprzężeń (`when_all`) i wyboru (`when_any`).|
@@ -133,7 +133,7 @@ namespace concurrency;
 
 ### <a name="structures"></a>Struktury
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[DispatchState, struktura](dispatchstate-structure.md)|Struktura `DispatchState` jest używana do transferowania stanu do metody `IExecutionContext::Dispatch`. Opisano w nim sytuacje, w których Metoda `Dispatch` jest wywoływana w interfejsie `IExecutionContext`.|
 |[IExecutionContext, struktura](iexecutioncontext-structure.md)|Interfejs do kontekstu wykonywania, który może być uruchamiany w danym procesorze wirtualnym i być przełączany w ramach współdziałania z podsiecią.|
@@ -154,26 +154,26 @@ namespace concurrency;
 
 ### <a name="enumerations"></a>Wyliczenia
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[agent_status](concurrency-namespace-enums.md#agent_status)|Prawidłowe Stany `agent`.|
 |[Agents_EventType](concurrency-namespace-enums.md#agents_eventtype)|Typy zdarzeń, które mogą być śledzone przy użyciu funkcji śledzenia oferowanej przez bibliotekę agentów|
 |[ConcRT_EventType](concurrency-namespace-enums.md#concrt_eventtype)|Typy zdarzeń, które mogą być śledzone przy użyciu funkcji śledzenia oferowanej przez środowisko uruchomieniowe współbieżności.|
 |[Concrt_TraceFlags](concurrency-namespace-enums.md#concrt_traceflags)|Flagi śledzenia dla typów zdarzeń|
-|[CriticalRegionType](concurrency-namespace-enums.md#criticalregiontype)|Typ regionu krytycznego, w którym znajduje się kontekst.|
-|[DynamicProgressFeedbackType](concurrency-namespace-enums.md#dynamicprogressfeedbacktype)|Używane przez zasady `DynamicProgressFeedback` do opisywania, czy zasoby dla harmonogramu będą ponownie równoważone zgodnie z informacjami statystycznymi zebranymi na podstawie harmonogramu, czy tylko na podstawie procesorów wirtualnych przechodzących i z stanu bezczynności przez wywołania do `Activate` i `Deactivate` metod w interfejsie `IVirtualProcessorRoot`. Aby uzyskać więcej informacji na temat dostępnych zasad harmonogramu, zobacz [PolicyElementKey —](concurrency-namespace-enums.md#policyelementkey).|
+|[CriticalRegionType —](concurrency-namespace-enums.md#criticalregiontype)|Typ regionu krytycznego, w którym znajduje się kontekst.|
+|[DynamicProgressFeedbackType —](concurrency-namespace-enums.md#dynamicprogressfeedbacktype)|Używane przez zasady `DynamicProgressFeedback` do opisywania, czy zasoby dla harmonogramu będą ponownie równoważone zgodnie z informacjami statystycznymi zebranymi na podstawie harmonogramu, czy tylko na podstawie procesorów wirtualnych przechodzących i z stanu bezczynności przez wywołania do `Activate` i `Deactivate` metod w interfejsie `IVirtualProcessorRoot`. Aby uzyskać więcej informacji na temat dostępnych zasad harmonogramu, zobacz [PolicyElementKey —](concurrency-namespace-enums.md#policyelementkey).|
 |[join_type](concurrency-namespace-enums.md#join_type)|Typ bloku komunikatów `join`.|
 |[message_status](concurrency-namespace-enums.md#message_status)|Prawidłowe odpowiedzi dla oferty `message` obiektu na blok.|
-|[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)|Klucze zasad opisujące aspekty zachowania usługi Scheduler. Każdy element zasad jest opisywany przez parę klucz-wartość. Aby uzyskać więcej informacji na temat zasad harmonogramu i ich wpływu na harmonogramy, zobacz [harmonogram zadań](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).|
+|[PolicyElementKey —](concurrency-namespace-enums.md#policyelementkey)|Klucze zasad opisujące aspekty zachowania usługi Scheduler. Każdy element zasad jest opisywany przez parę klucz-wartość. Aby uzyskać więcej informacji na temat zasad harmonogramu i ich wpływu na harmonogramy, zobacz [harmonogram zadań](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).|
 |[SchedulerType —](concurrency-namespace-enums.md#schedulertype)|Używane przez zasady `SchedulerKind` do opisywania typu wątków, których harmonogram ma używać dla podstawowych kontekstów wykonywania. Aby uzyskać więcej informacji na temat dostępnych zasad harmonogramu, zobacz [PolicyElementKey —](concurrency-namespace-enums.md#policyelementkey).|
-|[SchedulingProtocolType](concurrency-namespace-enums.md#schedulingprotocoltype)|Używane przez zasady `SchedulingProtocol` do opisywania, który algorytm planowania będzie używany do harmonogramu. Aby uzyskać więcej informacji na temat dostępnych zasad harmonogramu, zobacz [PolicyElementKey —](concurrency-namespace-enums.md#policyelementkey).|
-|[SwitchingProxyState](concurrency-namespace-enums.md#switchingproxystate)|Służy do oznaczania stanu, w którym znajduje się serwer proxy wątku, gdy wykonuje przełączenie kontekstu do innego serwera proxy wątku.|
+|[SchedulingProtocolType —](concurrency-namespace-enums.md#schedulingprotocoltype)|Używane przez zasady `SchedulingProtocol` do opisywania, który algorytm planowania będzie używany do harmonogramu. Aby uzyskać więcej informacji na temat dostępnych zasad harmonogramu, zobacz [PolicyElementKey —](concurrency-namespace-enums.md#policyelementkey).|
+|[SwitchingProxyState —](concurrency-namespace-enums.md#switchingproxystate)|Służy do oznaczania stanu, w którym znajduje się serwer proxy wątku, gdy wykonuje przełączenie kontekstu do innego serwera proxy wątku.|
 |[task_group_status](concurrency-namespace-enums.md#task_group_status)|Opisuje stan wykonywania obiektu `task_group` lub `structured_task_group`. Wartość tego typu jest zwracana przez wiele metod, które oczekują na ukończenie zadań zaplanowanych dla grupy zadań.|
-|[WinRTInitializationType](concurrency-namespace-enums.md#winrtinitializationtype)|Używane przez zasady `WinRTInitialization` do opisywania, czy i w jaki sposób środowisko wykonawcze systemu Windows zostanie zainicjowany w wątkach usługi Scheduler dla aplikacji działającej w systemach operacyjnych z wersją systemu Windows 8 lub nowszą. Aby uzyskać więcej informacji na temat dostępnych zasad harmonogramu, zobacz [PolicyElementKey —](concurrency-namespace-enums.md#policyelementkey).|
+|[WinRTInitializationType —](concurrency-namespace-enums.md#winrtinitializationtype)|Używane przez zasady `WinRTInitialization` do opisywania, czy i w jaki sposób środowisko wykonawcze systemu Windows zostanie zainicjowany w wątkach usługi Scheduler dla aplikacji działającej w systemach operacyjnych z wersją systemu Windows 8 lub nowszą. Aby uzyskać więcej informacji na temat dostępnych zasad harmonogramu, zobacz [PolicyElementKey —](concurrency-namespace-enums.md#policyelementkey).|
 
 ### <a name="functions"></a>Funkcje
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[Alloc — funkcja](concurrency-namespace-functions.md#alloc)|Przydziela blok pamięci o rozmiarze określonym na podstawie podprzydziału buforowania środowisko uruchomieniowe współbieżności.|
 |[asend, funkcja](concurrency-namespace-functions.md#asend)|Przeciążone. Asynchroniczna operacja wysyłania, która planuje zadanie propagacji danych do docelowego bloku.|
@@ -185,22 +185,22 @@ namespace concurrency;
 |[EnableTracing —, funkcja](concurrency-namespace-functions.md#enabletracing)|Włącza śledzenie w środowisko uruchomieniowe współbieżności. Ta funkcja jest przestarzała, ponieważ śledzenie ETW jest teraz domyślnie włączone.|
 |[Free — funkcja](concurrency-namespace-functions.md#free)|Zwalnia blok pamięci, który został wcześniej przydzielony przez metodę `Alloc` do podprzydzielania środowisko uruchomieniowe współbieżności buforowania.|
 |[Funkcja get_ambient_scheduler (środowisko uruchomieniowe współbieżności)](concurrency-namespace-functions.md#get_ambient_scheduler)||
-|[GetExecutionContextId Function](concurrency-namespace-functions.md#getexecutioncontextid)|Zwraca unikatowy identyfikator, który można przypisać do kontekstu wykonywania implementującego interfejs `IExecutionContext`.|
+|[GetExecutionContextId —, funkcja](concurrency-namespace-functions.md#getexecutioncontextid)|Zwraca unikatowy identyfikator, który można przypisać do kontekstu wykonywania implementującego interfejs `IExecutionContext`.|
 |[GetOSVersion —, funkcja](concurrency-namespace-functions.md#getosversion)|Zwraca wersję systemu operacyjnego.|
-|[GetProcessorCount Function](concurrency-namespace-functions.md#getprocessorcount)|Zwraca liczbę wątków sprzętowych w źródłowym systemie.|
+|[GetProcessorCount —, funkcja](concurrency-namespace-functions.md#getprocessorcount)|Zwraca liczbę wątków sprzętowych w źródłowym systemie.|
 |[GetProcessorNodeCount —, funkcja](concurrency-namespace-functions.md#getprocessornodecount)|Zwraca liczbę węzłów NUMA lub pakietów procesorów w źródłowym systemie.|
 |[GetSchedulerId —, funkcja](concurrency-namespace-functions.md#getschedulerid)|Zwraca unikatowy identyfikator, który można przypisać do harmonogramu implementującego interfejs `IScheduler`.|
-|[interruption_point Function](concurrency-namespace-functions.md#interruption_point)|Tworzy punkt przerwania do anulowania. Jeśli anulowanie jest w toku w kontekście, w którym ta funkcja jest wywoływana, spowoduje to zgłoszenie wyjątku wewnętrznego, który przerywa wykonywanie aktualnie wykonywanej pracy równoległej. Jeśli anulowanie nie jest w toku, funkcja nic nie robi.|
-|[is_current_task_group_canceling Function](concurrency-namespace-functions.md#is_current_task_group_canceling)|Zwraca wskazanie, czy grupa zadań, która jest aktualnie uruchamiana w bieżącym kontekście, znajduje się w pośrodku aktywnego anulowania (lub będzie wkrótce). Należy pamiętać, że jeśli w bieżącym kontekście nie ma obecnie uruchomionej grupy zadań, `false` zostanie zwrócona.|
+|[Funkcja interruption_point](concurrency-namespace-functions.md#interruption_point)|Tworzy punkt przerwania do anulowania. Jeśli anulowanie jest w toku w kontekście, w którym ta funkcja jest wywoływana, spowoduje to zgłoszenie wyjątku wewnętrznego, który przerywa wykonywanie aktualnie wykonywanej pracy równoległej. Jeśli anulowanie nie jest w toku, funkcja nic nie robi.|
+|[Funkcja is_current_task_group_canceling](concurrency-namespace-functions.md#is_current_task_group_canceling)|Zwraca wskazanie, czy grupa zadań, która jest aktualnie uruchamiana w bieżącym kontekście, znajduje się w pośrodku aktywnego anulowania (lub będzie wkrótce). Należy pamiętać, że jeśli w bieżącym kontekście nie ma obecnie uruchomionej grupy zadań, `false` zostanie zwrócona.|
 |[Funkcja make_choice](concurrency-namespace-functions.md#make_choice)|Przeciążone. Konstruuje blok `choice` Messaging z opcjonalnego `Scheduler` lub `ScheduleGroup` oraz co najmniej dwóch źródeł danych wejściowych.|
-|[make_greedy_join Function](concurrency-namespace-functions.md#make_greedy_join)|Przeciążone. Konstruuje blok `greedy multitype_join` Messaging z opcjonalnego `Scheduler` lub `ScheduleGroup` oraz co najmniej dwóch źródeł danych wejściowych.|
+|[Funkcja make_greedy_join](concurrency-namespace-functions.md#make_greedy_join)|Przeciążone. Konstruuje blok `greedy multitype_join` Messaging z opcjonalnego `Scheduler` lub `ScheduleGroup` oraz co najmniej dwóch źródeł danych wejściowych.|
 |[Funkcja make_join](concurrency-namespace-functions.md#make_join)|Przeciążone. Konstruuje blok `non_greedy multitype_join` Messaging z opcjonalnego `Scheduler` lub `ScheduleGroup` oraz co najmniej dwóch źródeł danych wejściowych.|
 |[Funkcja make_task](concurrency-namespace-functions.md#make_task)|Metoda fabryki służąca do tworzenia obiektu `task_handle`.|
 |[Funkcja parallel_buffered_sort](concurrency-namespace-functions.md#parallel_buffered_sort)|Przeciążone. Rozmieszcza elementy w określonym zakresie w kolejności niemalejącej lub zgodnie z kryterium porządkowania określonym przez Predykat binarny równolegle. Ta funkcja jest semantycznie podobna do `std::sort` w tym, że jest to porównanie, niestabilne, w miejscu, z wyjątkiem sytuacji, gdy wymaga `O(n)` dodatkowe miejsce, i wymaga domyślnej inicjalizacji dla sortowanych elementów.|
 |[Funkcja parallel_for](concurrency-namespace-functions.md#parallel_for)|Przeciążone. `parallel_for` wykonuje iterację w zakresie indeksów i wykonuje funkcję dostarczoną przez użytkownika w każdej iteracji równolegle.|
 |[Funkcja parallel_for_each](concurrency-namespace-functions.md#parallel_for_each)|Przeciążone. `parallel_for_each` stosuje określoną funkcję do każdego elementu w obrębie zakresu równolegle. Jest semantycznie odpowiednikiem funkcji `for_each` w przestrzeni nazw `std`, z tą różnicą, że iteracja w elementach jest wykonywana równolegle, a kolejność iteracji nie została określona. Argument `_Func` musi obsługiwać operator wywołania funkcji w formularzu `operator()(T)` gdzie `T` jest typem elementu kontenera, w którym jest wykonywane powtarzanie.|
 |[Funkcja parallel_invoke](concurrency-namespace-functions.md#parallel_invoke)|Przeciążone. Wykonuje obiekty funkcji dostarczone jako parametry równolegle i bloki do momentu zakończenia wykonywania. Każdy obiekt funkcji może być wyrażeniem lambda, wskaźnikiem do funkcji lub dowolnym obiektem, który obsługuje operator wywołania funkcji z sygnaturą `void operator()()`.|
-|[parallel_radixsort Function](concurrency-namespace-functions.md#parallel_radixsort)|Przeciążone. Rozmieszcza elementy w określonym zakresie w niemalejącej kolejności przy użyciu algorytmu sortowania podstawy. Jest to stabilna funkcja sortowania, która wymaga funkcji projekcji, która może projektować elementy do posortowania na klucze podobne do liczby całkowitej. Dla elementów, które są sortowane, wymagana jest Inicjalizacja domyślna.|
+|[Funkcja parallel_radixsort](concurrency-namespace-functions.md#parallel_radixsort)|Przeciążone. Rozmieszcza elementy w określonym zakresie w niemalejącej kolejności przy użyciu algorytmu sortowania podstawy. Jest to stabilna funkcja sortowania, która wymaga funkcji projekcji, która może projektować elementy do posortowania na klucze podobne do liczby całkowitej. Dla elementów, które są sortowane, wymagana jest Inicjalizacja domyślna.|
 |[Funkcja parallel_reduce](concurrency-namespace-functions.md#parallel_reduce)|Przeciążone. Oblicza sumę wszystkich elementów w określonym zakresie przez Obliczanie kolejnych sum częściowych lub oblicza wynik kolejnych częściowe wyniki, podobnie jak w przypadku użycia określonej operacji binarnej innej niż suma, równolegle. `parallel_reduce` jest semantycznie podobna do `std::accumulate`, z tą różnicą, że wymaga skojarzenia operacji binarnej i wymaga wartości tożsamości zamiast początkowej wartości.|
 |[Funkcja parallel_sort](concurrency-namespace-functions.md#parallel_sort)|Przeciążone. Rozmieszcza elementy w określonym zakresie w kolejności niemalejącej lub zgodnie z kryterium porządkowania określonym przez Predykat binarny równolegle. Ta funkcja jest semantycznie podobna do `std::sort` w tym, że jest to porównanie, niestabilne i w miejscu.|
 |[Funkcja parallel_transform](concurrency-namespace-functions.md#parallel_transform)|Przeciążone. Stosuje określony obiekt Function do każdego elementu w zakresie źródłowym lub do pary elementów z dwóch zakresów źródłowych i kopiuje wartości zwracane obiektu Function do zakresu docelowego równolegle. Ta funkcjonalność jest semantycznie równoważna z `std::transform`.|
@@ -208,11 +208,11 @@ namespace concurrency;
 |[Funkcja run_with_cancellation_token](concurrency-namespace-functions.md#run_with_cancellation_token)|Wykonuje obiekt funkcji natychmiast i synchronicznie w kontekście danego tokenu anulowania.|
 |[send — Funkcja](concurrency-namespace-functions.md#send)|Przeciążone. Synchroniczna operacja wysyłania, która czeka, aż obiekt docelowy zaakceptuje lub odrzuci komunikat.|
 |[Funkcja set_ambient_scheduler (środowisko uruchomieniowe współbieżności)](concurrency-namespace-functions.md#set_ambient_scheduler)||
-|[set_task_execution_resources Function](concurrency-namespace-functions.md#set_task_execution_resources)|Przeciążone. Ogranicza zasoby wykonywania używane przez środowisko uruchomieniowe współbieżności wewnętrznych wątków roboczych do określonego zestawu koligacji.<br /><br /> Ta metoda jest prawidłowa do wywołania tej metody tylko przed utworzeniem Menedżer zasobów lub między dwoma Menedżer zasobów okresów istnienia. Może być wywoływana wiele razy, dopóki Menedżer zasobów nie istnieje w czasie wywołania. Po ustawieniu limitu koligacji nadal obowiązuje do następnego prawidłowego wywołania metody `set_task_execution_resources`.<br /><br /> Podana maska koligacji nie musi być podzbiorem maski koligacji procesu. Koligacja procesu będzie aktualizowana w razie potrzeby.|
+|[Funkcja set_task_execution_resources](concurrency-namespace-functions.md#set_task_execution_resources)|Przeciążone. Ogranicza zasoby wykonywania używane przez środowisko uruchomieniowe współbieżności wewnętrznych wątków roboczych do określonego zestawu koligacji.<br /><br /> Ta metoda jest prawidłowa do wywołania tej metody tylko przed utworzeniem Menedżer zasobów lub między dwoma Menedżer zasobów okresów istnienia. Może być wywoływana wiele razy, dopóki Menedżer zasobów nie istnieje w czasie wywołania. Po ustawieniu limitu koligacji nadal obowiązuje do następnego prawidłowego wywołania metody `set_task_execution_resources`.<br /><br /> Podana maska koligacji nie musi być podzbiorem maski koligacji procesu. Koligacja procesu będzie aktualizowana w razie potrzeby.|
 |[Swap — Funkcja](concurrency-namespace-functions.md#swap)|Wymienia elementy dwóch `concurrent_vector` obiektów.|
 |[Funkcja task_from_exception (środowisko uruchomieniowe współbieżności)](concurrency-namespace-functions.md#task_from_exception)||
 |[Funkcja task_from_result (środowisko uruchomieniowe współbieżności)](concurrency-namespace-functions.md#task_from_result)||
-|[Trace_agents_register_name Function](concurrency-namespace-functions.md#trace_agents_register_name)|Kojarzy daną nazwę z blokiem komunikatów lub agentem w śledzeniu ETW.|
+|[Funkcja Trace_agents_register_name](concurrency-namespace-functions.md#trace_agents_register_name)|Kojarzy daną nazwę z blokiem komunikatów lub agentem w śledzeniu ETW.|
 |[Funkcja try_receive](concurrency-namespace-functions.md#try_receive)|Przeciążone. Ogólna implementacja try-Receive, umożliwiająca kontekstowi wyszukiwanie danych z dokładnie jednego źródła i filtrowanie wartości, które są akceptowane. Jeśli dane nie są gotowe, metoda zwróci wartość false.|
 |[wait — Funkcja](concurrency-namespace-functions.md#wait)|Wstrzymuje bieżący kontekst przez określony czas.|
 |[Funkcja when_all](concurrency-namespace-functions.md#when_all)|Tworzy zadanie, które zostanie ukończone pomyślnie, gdy wszystkie zadania dostarczone jako argumenty zakończą się pomyślnie.|
@@ -220,44 +220,44 @@ namespace concurrency;
 
 ### <a name="operators"></a>Operatory
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[operator!=](concurrency-namespace-operators.md#operator_neq)|Testuje, czy obiekt `concurrent_vector` po lewej stronie operatora nie jest równy obiektowi `concurrent_vector` po prawej stronie.|
 |[& operatora &](concurrency-namespace-operators.md#operator_amp_amp)|Przeciążone. Tworzy zadanie, które zostanie ukończone pomyślnie, gdy oba zadania dostarczone jako argumenty zakończą się pomyślnie.|
-|[operator&#124;&#124;](concurrency-namespace-operators.md#operator_lor)|Przeciążone. Tworzy zadanie, które zostanie ukończone pomyślnie, gdy jedno z zadań dostarczonych jako argumenty zakończy się pomyślnie.|
+|[zakład&#124;&#124;](concurrency-namespace-operators.md#operator_lor)|Przeciążone. Tworzy zadanie, które zostanie ukończone pomyślnie, gdy jedno z zadań dostarczonych jako argumenty zakończy się pomyślnie.|
 |[< operatora](concurrency-namespace-operators.md#operator_lt)|Testuje, czy obiekt `concurrent_vector` po lewej stronie operatora jest mniejszy niż obiekt `concurrent_vector` po prawej stronie.|
 |[< operatora =](concurrency-namespace-operators.md#operator_lt_eq)|Testuje, czy obiekt `concurrent_vector` po lewej stronie operatora jest mniejszy niż lub równy obiektowi `concurrent_vector` po prawej stronie.|
-|[operator==](concurrency-namespace-operators.md#operator_eq_eq)|Testuje, czy obiekt `concurrent_vector` po lewej stronie operatora jest równy obiektowi `concurrent_vector` po prawej stronie.|
-|[operator>](concurrency-namespace-operators.md#operator_gt)|Testuje, czy obiekt `concurrent_vector` po lewej stronie operatora jest większy niż obiekt `concurrent_vector` po prawej stronie.|
+|[operator = =](concurrency-namespace-operators.md#operator_eq_eq)|Testuje, czy obiekt `concurrent_vector` po lewej stronie operatora jest równy obiektowi `concurrent_vector` po prawej stronie.|
+|[> operatora](concurrency-namespace-operators.md#operator_gt)|Testuje, czy obiekt `concurrent_vector` po lewej stronie operatora jest większy niż obiekt `concurrent_vector` po prawej stronie.|
 |[operator>=](concurrency-namespace-operators.md#operator_lt_eq)|Testuje, czy obiekt `concurrent_vector` po lewej stronie operatora jest większy niż lub równy obiektowi `concurrent_vector` po prawej stronie.|
 
 ### <a name="constants"></a>{1&gt;Stałe&lt;1}
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[AgentEventGuid —](concurrency-namespace-constants1.md#agenteventguid)|Identyfikator GUID kategorii ({B9B5B78C-0713-4898-A21A-C67949DCED07}) opisujący zdarzenia ETW wywoływane przez bibliotekę agentów w środowisko uruchomieniowe współbieżności.|
-|[ChoreEventGuid](concurrency-namespace-constants1.md#choreeventguid)|Identyfikator GUID kategorii opisujący zdarzenia ETW wywoływane przez środowisko uruchomieniowe współbieżności, które są bezpośrednio związane z zadaniami lub zadań.|
+|[ChoreEventGuid —](concurrency-namespace-constants1.md#choreeventguid)|Identyfikator GUID kategorii opisujący zdarzenia ETW wywoływane przez środowisko uruchomieniowe współbieżności, które są bezpośrednio związane z zadaniami lub zadań.|
 |[ConcRT_ProviderGuid](concurrency-namespace-constants1.md#concrt_providerguid)|Identyfikator GUID dostawcy ETW dla środowisko uruchomieniowe współbieżności.|
 |[CONCRT_RM_VERSION_1](concurrency-namespace-constants1.md#concrt_rm_version_1)|Wskazuje obsługę interfejsu Menedżer zasobów zdefiniowanego w programie Visual Studio 2010.|
-|[ConcRTEventGuid](concurrency-namespace-constants1.md#concrteventguid)|Identyfikator GUID kategorii opisujący zdarzenia ETW wywoływane przez środowisko uruchomieniowe współbieżności, które nie są dokładniej opisane przez inną kategorię.|
+|[ConcRTEventGuid —](concurrency-namespace-constants1.md#concrteventguid)|Identyfikator GUID kategorii opisujący zdarzenia ETW wywoływane przez środowisko uruchomieniowe współbieżności, które nie są dokładniej opisane przez inną kategorię.|
 |[ContextEventGuid —](concurrency-namespace-constants1.md#contexteventguid)|Identyfikator GUID kategorii opisujący zdarzenia ETW wywoływane przez środowisko uruchomieniowe współbieżności, które są bezpośrednio powiązane z kontekstami.|
 |[COOPERATIVE_TIMEOUT_INFINITE](concurrency-namespace-constants1.md#cooperative_timeout_infinite)|Wartość wskazująca, że oczekiwania nigdy nie powinien przekraczać limitu czasu.|
 |[COOPERATIVE_WAIT_TIMEOUT](concurrency-namespace-constants1.md#cooperative_wait_timeout)|Wartość wskazująca, że upłynął limit czasu oczekiwania.|
 |[INHERIT_THREAD_PRIORITY](concurrency-namespace-constants1.md#inherit_thread_priority)|Specjalna wartość dla klucza zasad `ContextPriority` wskazujący, że priorytet wątku dla wszystkich kontekstów w harmonogramie powinien być taki sam jak w przypadku wątku, który utworzył harmonogram.|
 |[LockEventGuid —](concurrency-namespace-constants1.md#lockeventguid)|Identyfikator GUID kategorii opisujący zdarzenia ETW wywoływane przez środowisko uruchomieniowe współbieżności, które są bezpośrednio powiązane z blokadami.|
-|[MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources)|Specjalna wartość dla kluczy zasad `MinConcurrency` i `MaxConcurrency`. Wartość domyślna to liczba wątków sprzętowych na komputerze w przypadku braku innych ograniczeń.|
-|[PPLParallelForeachEventGuid](concurrency-namespace-constants1.md#pplparallelforeacheventguid)|Identyfikator GUID kategorii opisujący zdarzenia ETW wywoływane przez środowisko uruchomieniowe współbieżności, które są bezpośrednio związane z użyciem funkcji `parallel_for_each`.|
-|[PPLParallelForEventGuid](concurrency-namespace-constants1.md#pplparallelforeventguid)|Identyfikator GUID kategorii opisujący zdarzenia ETW wywoływane przez środowisko uruchomieniowe współbieżności, które są bezpośrednio związane z użyciem funkcji `parallel_for`.|
-|[PPLParallelInvokeEventGuid](concurrency-namespace-constants1.md#pplparallelinvokeeventguid)|Identyfikator GUID kategorii opisujący zdarzenia ETW wywoływane przez środowisko uruchomieniowe współbieżności, które są bezpośrednio związane z użyciem funkcji `parallel_invoke`.|
-|[ResourceManagerEventGuid](concurrency-namespace-constants1.md#resourcemanagereventguid)|Identyfikator GUID kategorii opisujący zdarzenia ETW wywoływane przez środowisko uruchomieniowe współbieżności, które są bezpośrednio powiązane z Menedżerem zasobów.|
-|[ScheduleGroupEventGuid](concurrency-namespace-constants1.md#schedulegroupeventguid)|Identyfikator GUID kategorii opisujący zdarzenia ETW wywoływane przez środowisko uruchomieniowe współbieżności, które są bezpośrednio związane z grupami harmonogramu.|
-|[SchedulerEventGuid](concurrency-namespace-constants1.md#schedulereventguid)|Identyfikator GUID kategorii opisujący zdarzenia ETW wywoływane przez środowisko uruchomieniowe współbieżności, które są bezpośrednio związane z działaniem usługi Scheduler.|
-|[VirtualProcessorEventGuid](concurrency-namespace-constants1.md#virtualprocessoreventguid)|Identyfikator GUID kategorii opisujący zdarzenia ETW wywoływane przez środowisko uruchomieniowe współbieżności, które są bezpośrednio związane z procesorami wirtualnymi.|
+|[MaxExecutionResources —](concurrency-namespace-constants1.md#maxexecutionresources)|Specjalna wartość dla kluczy zasad `MinConcurrency` i `MaxConcurrency`. Wartość domyślna to liczba wątków sprzętowych na komputerze w przypadku braku innych ograniczeń.|
+|[PPLParallelForeachEventGuid —](concurrency-namespace-constants1.md#pplparallelforeacheventguid)|Identyfikator GUID kategorii opisujący zdarzenia ETW wywoływane przez środowisko uruchomieniowe współbieżności, które są bezpośrednio związane z użyciem funkcji `parallel_for_each`.|
+|[PPLParallelForEventGuid —](concurrency-namespace-constants1.md#pplparallelforeventguid)|Identyfikator GUID kategorii opisujący zdarzenia ETW wywoływane przez środowisko uruchomieniowe współbieżności, które są bezpośrednio związane z użyciem funkcji `parallel_for`.|
+|[PPLParallelInvokeEventGuid —](concurrency-namespace-constants1.md#pplparallelinvokeeventguid)|Identyfikator GUID kategorii opisujący zdarzenia ETW wywoływane przez środowisko uruchomieniowe współbieżności, które są bezpośrednio związane z użyciem funkcji `parallel_invoke`.|
+|[ResourceManagerEventGuid —](concurrency-namespace-constants1.md#resourcemanagereventguid)|Identyfikator GUID kategorii opisujący zdarzenia ETW wywoływane przez środowisko uruchomieniowe współbieżności, które są bezpośrednio powiązane z Menedżerem zasobów.|
+|[ScheduleGroupEventGuid —](concurrency-namespace-constants1.md#schedulegroupeventguid)|Identyfikator GUID kategorii opisujący zdarzenia ETW wywoływane przez środowisko uruchomieniowe współbieżności, które są bezpośrednio związane z grupami harmonogramu.|
+|[SchedulerEventGuid —](concurrency-namespace-constants1.md#schedulereventguid)|Identyfikator GUID kategorii opisujący zdarzenia ETW wywoływane przez środowisko uruchomieniowe współbieżności, które są bezpośrednio związane z działaniem usługi Scheduler.|
+|[VirtualProcessorEventGuid —](concurrency-namespace-constants1.md#virtualprocessoreventguid)|Identyfikator GUID kategorii opisujący zdarzenia ETW wywoływane przez środowisko uruchomieniowe współbieżności, które są bezpośrednio związane z procesorami wirtualnymi.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Header:** agents.h, concrt.h, concrtrm.h, concurrent_priority_queue.h, concurrent_queue.h, concurrent_unordered_map.h, concurrent_unordered_set.h, concurrent_vector.h, internal_concurrent_hash.h, internal_split_ordered_list.h, ppl.h, pplcancellation_token.h, pplconcrt.h, pplinterface.h, ppltasks.h
+**Nagłówek:** agenci. h, ConcRT. h, concrtrm. h, concurrent_priority_queue. h, concurrent_queue. h, concurrent_unordered_map. h, concurrent_unordered_set. h, concurrent_vector. h, internal_concurrent_hash. h, internal_split_ordered_list. h, PPL. h, pplcancellation_token. h, pplconcrt. h, pplinterface. h, ppltasks. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Tematy pomocy](reference-concurrency-runtime.md)
+[Dokumentacja](reference-concurrency-runtime.md)

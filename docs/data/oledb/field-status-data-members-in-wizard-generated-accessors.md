@@ -5,26 +5,26 @@ helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: a6623cb02f14650d92e4adabed749b0b37725d45
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 41be62627d79c7207816818f09956a60e8b3facc
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707559"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127652"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Elementy członkowskie dotyczące stanu pola w metodach dostępu generowanych przez kreatora
 
 ::: moniker range="vs-2019"
 
-Kreator OLE DB konsumenta ATL nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach. Można nadal ręcznie dodawać funkcje. Aby uzyskać więcej informacji, zobacz [tworzenie konsumenta bez przy użyciu kreatora](creating-a-consumer-without-using-a-wizard.md).
+Kreator użytkownika ATL OLE DB nie jest dostępny w programie Visual Studio 2019 i nowszych. Można nadal ręcznie dodawać funkcje. Aby uzyskać więcej informacji, zobacz [Tworzenie klienta bez korzystania z Kreatora](creating-a-consumer-without-using-a-wizard.md).
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-Kiedy używasz **OLE DB Kreator konsumenta ATL** Aby utworzyć odbiorcę, Kreator generuje element członkowski danych w klasie rekordu użytkownika dla każdego pola, które określisz w mapie kolumny. Każdy element członkowski danych jest typu `DWORD` i zawiera wartość stanu, odpowiadający jej odpowiednich pól.
+W przypadku utworzenia konsumenta przy użyciu **kreatora ATL OLE DB** User, Kreator generuje element członkowski danych w klasie rekordu użytkownika dla każdego pola określonego w mapie kolumn. Każdy element członkowski danych jest typu `DWORD` i zawiera wartość stanu odpowiadającą jej odpowiedniemu polu.
 
-Na przykład element członkowski danych *m_OwnerID*, Kreator generuje elementu członkowskiego dodatkowe dane dotyczące stanu pola (*dwOwnerIDStatus*) a innym, długość pola (*dwOwnerIDLength*). Generuje mapę kolumny z wpisy COLUMN_ENTRY_LENGTH_STATUS.
+Na przykład dla elementu członkowskiego danych *m_OwnerID*Kreator generuje dodatkowy element członkowski danych dla stanu pola (*dwOwnerIDStatus*), a drugi dla długości pola (*dwOwnerIDLength*). Generuje również mapę kolumn zawierającą COLUMN_ENTRY_LENGTH_STATUS wpisów.
 
 Jest to pokazane w poniższym kodzie:
 
@@ -44,39 +44,39 @@ public:
    DBLENGTH m_dwAuthorLength;
    DBLENGTH m_dwYearBornLength;
 
-    DEFINE_COMMAND_EX(CAuthorsAccessor, L" \
-    SELECT \
-        AuID, \
-        Author, \
-        YearBorn \
-        FROM dbo.Authors")
+   DEFINE_COMMAND_EX(CAuthorsAccessor, L" \
+   SELECT \
+      AuID, \
+      Author, \
+      YearBorn \
+      FROM dbo.Authors")
 
-    BEGIN_COLUMN_MAP(CAuthorsAccessor)
-       COLUMN_ENTRY_LENGTH_STATUS(1, m_AuID, dwAuIDLength, dwAuIDStatus)
-       COLUMN_ENTRY_LENGTH_STATUS(2, m_Author, dwAuthorLength, dwAuthorStatus)
-       COLUMN_ENTRY_LENGTH_STATUS(3, m_YearBorn, dwYearBornLength, dwYearBornStatus)
-    END_COLUMN_MAP()
+   BEGIN_COLUMN_MAP(CAuthorsAccessor)
+      COLUMN_ENTRY_LENGTH_STATUS(1, m_AuID, dwAuIDLength, dwAuIDStatus)
+      COLUMN_ENTRY_LENGTH_STATUS(2, m_Author, dwAuthorLength, dwAuthorStatus)
+      COLUMN_ENTRY_LENGTH_STATUS(3, m_YearBorn, dwYearBornLength, dwYearBornStatus)
+   END_COLUMN_MAP()
 ...
 ```
 
 > [!NOTE]
-> Jeśli modyfikujesz klasy rekordu użytkownika lub napisać własny konsumenta, zmiennych danych musi występować przed zmienne stanu i długości.
+> W przypadku modyfikacji klasy rekordu użytkownika lub napisania własnego odbiorcy zmienne danych muszą występować przed zmiennymi stan i długość.
 
-Wartości stanu można użyć na potrzeby debugowania. Jeśli kod wygenerowany przez **OLE DB Kreator konsumenta ATL** generuje błędy kompilacji takich jak DB_S_ERRORSOCCURRED lub DB_E_ERRORSOCCURRED, należy najpierw przyjrzymy się bieżących wartości pól elementy członkowskie dotyczące stanu. Te, które mają różną od zera wartości odpowiadają naruszającym kolumn.
+Wartości stanu można użyć do celów debugowania. Jeśli kod wygenerowany przez **kreatora ATL OLE DB użytkownika** generuje błędy kompilacji, takie jak DB_S_ERRORSOCCURRED lub DB_E_ERRORSOCCURRED, należy najpierw przejrzeć bieżące wartości elementów członkowskich danych stanu pola. Te, które mają wartość różną od zera, odpowiadają kolumnom, które są nieprawidłowe.
 
-Można również użyć wartości stanu, można ustawić wartości NULL dla określonego pola. Pomoże w przypadkach, w których chcesz rozróżnienie wartości pola jako wartość NULL, a nie wartość zero. Jest podjęcie decyzji o wartości NULL, jest prawidłową wartością lub wartością specjalną, i zdecyduj, jak aplikacja powinna obsługiwać go. OLE DB definiuje DBSTATUS_S_ISNULL jako prawidłowy sposób określania ogólnej wartości NULL. Jeśli odbiorca odczytuje dane i ma wartość null, w polu stanu jest równa DBSTATUS_S_ISNULL. Jeśli użytkownik chce, aby ustawić wartość NULL, użytkownik ustawia wartość stanu DBSTATUS_S_ISNULL przed wywołaniem dostawcy.
+Można również użyć wartości stanu, aby ustawić wartość NULL dla określonego pola. Dzięki temu można w przypadkach, w których chcesz odróżnić wartość pola jako wartość NULL, a nie zero. Istnieje możliwość określenia, czy wartość NULL jest prawidłowa, czy wartość specjalna i decyduje o tym, jak aplikacja powinna ją obsłużyć. OLE DB definiuje DBSTATUS_S_ISNULL jako poprawna Metoda określania ogólnej wartości NULL. Jeśli konsument odczytuje dane, a wartość jest równa null, pole stanu ma wartość DBSTATUS_S_ISNULL. Jeśli odbiorca chce ustawić wartość NULL, konsument ustawi wartość stanu na DBSTATUS_S_ISNULL przed wywołaniem dostawcy.
 
-Następnie otwórz Oledb.h i wyszukaj DBSTATUSENUM. Następnie można dopasować liczbową wartość różną od zera stanu dla DBSTATUSENUM wartości wyliczenia. Jeśli nazwa wyliczenia nie są wystarczające do informujące o tym, czym jest problem, zobacz **stan** tematu w **powiązania wartości danych** części [OLE DB przewodnik](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming). Ten temat zawiera tabele wartości stanu używany podczas pobierania lub ustawiania danych. Aby uzyskać informacji na temat wartości długości, zobacz **długość** tematu w tej samej sekcji.
+Następnie otwórz OLEDB. h i wyszukaj ciąg DBSTATUSENUM. Następnie można dopasować wartość numeryczną stanu niezerowego do wartości wyliczenia DBSTATUSENUM. Jeśli nazwa wyliczenia nie jest wystarczająca do poinformowania o błędach, zobacz temat **stan** w sekcji **wartości danych powiązania** w [przewodniku OLE DB programisty](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming). Ten temat zawiera tabele wartości stanu używanych podczas pobierania lub ustawiania danych. Aby uzyskać informacje na temat długości wartości, zobacz temat **Długość** w tej samej sekcji.
 
-## <a name="retrieving-the-length-or-status-of-a-column"></a>Pobieranie długości lub stan kolumny
+## <a name="retrieving-the-length-or-status-of-a-column"></a>Pobieranie długości lub stanu kolumny
 
-Możesz pobrać długość kolumny zmiennej długości lub stan kolumny (w celu sprawdzania DBSTATUS_S_ISNULL, na przykład):
+Można pobrać długość kolumny o zmiennej długości lub stanu kolumny (na przykład w celu sprawdzenia, czy DBSTATUS_S_ISNULL):
 
-- Aby uzyskać długości, użyj COLUMN_ENTRY_LENGTH — makro.
+- Aby uzyskać długość, użyj makra COLUMN_ENTRY_LENGTH.
 
-- Aby uzyskać stan, użyj COLUMN_ENTRY_STATUS — makro.
+- Aby uzyskać stan, użyj makra COLUMN_ENTRY_STATUS.
 
-- Aby uzyskać zarówno, należy użyć COLUMN_ENTRY_LENGTH_STATUS, jak pokazano:
+- Aby skorzystać z obu tych metod, użyj COLUMN_ENTRY_LENGTH_STATUS, jak pokazano poniżej:
 
     ```cpp
     class CProducts
@@ -94,7 +94,7 @@ Możesz pobrać długość kolumny zmiennej długości lub stan kolumny (w celu 
     };
     ```
 
-- Następnie uzyskać dostęp do długości i/lub stan jak pokazano:
+- Następnie uzyskaj dostęp do podanej długości i/lub stanu:
 
     ```cpp
     CTable<CAccessor<CProducts >> product;
@@ -110,10 +110,10 @@ Możesz pobrać długość kolumny zmiennej długości lub stan kolumny (w celu 
     }
     ```
 
-Kiedy używasz `CDynamicAccessor`, długość i stanu są powiązane dla Ciebie automatycznie. Aby pobrać wartości długości i stanu, użyj `GetLength` i `GetStatus` funkcji elementów członkowskich.
+W przypadku używania `CDynamicAccessor`długość i stan są powiązane automatycznie. Aby pobrać wartości długości i stanu, użyj `GetLength` i `GetStatus` funkcji Członkowskich.
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Praca z szablonami konsumentów OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

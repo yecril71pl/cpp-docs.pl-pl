@@ -8,31 +8,31 @@ f1_keywords:
 helpviewer_keywords:
 - affinity_partitioner class
 ms.assetid: 31bf7bb1-bd01-491c-9760-d9d60edfccad
-ms.openlocfilehash: dac25755c388e5297ce671da09b7938f09f1ef03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ae6bbee49d1b8873190a7054e55f65b40b31b13
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337664"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142872"
 ---
-# <a name="affinitypartitioner-class"></a>affinity_partitioner — Klasa
+# <a name="affinity_partitioner-class"></a>affinity_partitioner — Klasa
 
-`affinity_partitioner` Klasa jest podobna do `static_partitioner` klasy, ale zwiększa koligacji pamięci podręcznej przez siebie mapowania podzakresów na wątki robocze. Go może znacząco zwiększyć wydajność pętli jest ponownie wykonane przez tego samego zestawu danych, gdy dane są dopasowane do pamięci podręcznej. Należy pamiętać, że takie same `affinity_partitioner` obiektu musi być używany z kolejnych iteracjach pętli równoległej, który jest wykonywany dla określonego zestawu danych, aby korzystać z lokalizacja danych.
+Klasa `affinity_partitioner` jest podobna do klasy `static_partitioner`, ale zwiększa koligację pamięci podręcznej przez wybór zakresu mapowania na wątki robocze. Może znacząco poprawić wydajność, gdy pętla jest ponownie wykonywana nad tym samym zestawem danych, a dane pasują do pamięci podręcznej. Należy zauważyć, że ten sam obiekt `affinity_partitioner` musi być używany z kolejnymi iteracjami pętli równoległej, który jest wykonywany w określonym zestawie danych, aby można było korzystać z lokalizacji danych.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class affinity_partitioner;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[affinity_partitioner](#ctor)|Konstruuje `affinity_partitioner` obiektu.|
-|[~affinity_partitioner Destructor](#dtor)|Niszczy `affinity_partitioner` obiektu.|
+|[affinity_partitioner](#ctor)|Konstruuje obiekt `affinity_partitioner`.|
+|[~ affinity_partitioner destruktor](#dtor)|Niszczy obiekt `affinity_partitioner`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -40,26 +40,26 @@ class affinity_partitioner;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** ppl.h
+**Nagłówek:** PPL. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="dtor"></a> ~ affinity_partitioner
+## <a name="dtor"></a>~ affinity_partitioner
 
-Niszczy `affinity_partitioner` obiektu.
+Niszczy obiekt `affinity_partitioner`.
 
-```
+```cpp
 ~affinity_partitioner();
 ```
 
-##  <a name="ctor"></a> affinity_partitioner —
+## <a name="ctor"></a>affinity_partitioner
 
-Konstruuje `affinity_partitioner` obiektu.
+Konstruuje obiekt `affinity_partitioner`.
 
-```
+```cpp
 affinity_partitioner();
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

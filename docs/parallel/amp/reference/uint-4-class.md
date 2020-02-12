@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::rba
 - amp_short_vectors/Concurrency::graphics::uint_4::set_yzx
 ms.assetid: 1cda9e2c-5970-4ced-ae54-d7ff3c6746f4
-ms.openlocfilehash: 413edb5c83dba465aff804658afc6931c7181e73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a795ed3c04f114b6e15d5d9161605988bab2778a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405446"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142415"
 ---
-# <a name="uint4-class"></a>uint_4 — Klasa
+# <a name="uint_4-class"></a>uint_4 — Klasa
 
 Reprezentuje krótki wektor czterech liczb całkowitych bez znaku.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class uint_4;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[uint_4 Constructor](#uint_4__ctor) |Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.|
+|[Konstruktor uint_4](#uint_4__ctor) |Przeciążone. Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |uint_4::get_w||
 |uint_4::get_wx||
@@ -442,26 +442,26 @@ class uint_4;
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|uint_4::operator-||
-|uint_4::operator--||
-|uint_4::operator*=||
-|uint_4::operator/=||
-|uint_4::operator++||
-|uint_4::operator+=||
+|uint_4:: operator-||
+|uint_4:: operator--||
+|uint_4:: operator * =||
+|uint_4:: operator/=||
+|uint_4:: operator + +||
+|uint_4:: operator + =||
 |uint_4::operator=||
-|uint_4::operator-=||
+|uint_4:: operator-=||
 
-### <a name="public-constants"></a>Publiczne stałe
+### <a name="public-constants"></a>Stałe publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[rozmiar — stała](#size)||
+|[Stała rozmiaru](#size)||
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |uint_4::a||
 |uint_4::ab||
@@ -477,7 +477,7 @@ class uint_4;
 |uint_4::ar||
 |uint_4::arb||
 |uint_4::arbg||
-|uint_4::arg||
+|uint_4:: ARG||
 |uint_4::argb||
 |uint_4::b||
 |uint_4::ba||
@@ -503,7 +503,7 @@ class uint_4;
 |uint_4::garb||
 |uint_4::gb||
 |uint_4::gba||
-|uint_4::gbar||
+|uint_4:: gbar||
 |uint_4::gbr||
 |uint_4::gbra||
 |uint_4::gr||
@@ -566,7 +566,7 @@ class uint_4;
 |uint_4::ywz||
 |uint_4::ywzx||
 |uint_4::yx||
-|uint_4::yxw||
+|uint_4:: yxw||
 |uint_4::yxwz||
 |uint_4::yxz||
 |uint_4::yxzw||
@@ -598,17 +598,17 @@ class uint_4;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** amp_short_vectors.h
+**Nagłówek:** amp_short_vectors. h
 
-**Namespace:** CONCURRENCY::Graphics
+**Przestrzeń nazw:** Concurrency:: Graphics
 
-## <a name="uint_4__ctor"></a> uint_4
+## <a name="uint_4__ctor"></a>uint_4
 
-Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.
+Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 uint_4() restrict(amp,cpu);
 uint_4(
    unsigned int _V0,
@@ -639,34 +639,34 @@ explicit inline uint_4(
 ) restrict(amp,cpu);
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
 *_V0*<br/>
-Wartość do zainicjowania elementu 0.
+Wartość, aby zainicjować element 0.
 
 *_V1*<br/>
 Wartość do zainicjowania elementu 1.
 
 *_V2*<br/>
-Wartość można zainicjować element 2.
+Wartość do zainicjowania elementu 2.
 
 *_V3*<br/>
 Wartość do zainicjowania elementu 3.
 
 *_V*<br/>
-Wartość inicjalizacji.
+Wartość dla inicjalizacji.
 
-*_Inne*<br/>
+*_Other*<br/>
 Obiekt używany do inicjowania.
 
 ## <a name="size"></a>size
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-ms.openlocfilehash: 5e90dd3b23b33f6699f2df4ce0df9178f95816b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f45ff6d3092bd7c27e81adddca72c9411f752d1
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375460"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139826"
 ---
 # <a name="location-class"></a>location — Klasa
 
@@ -23,33 +23,33 @@ Abstrakcja fizycznej lokalizacji na sprzęcie.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class location;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[location](#ctor)|Przeciążone. Konstruuje `location` obiektu.|
-|[~ location — destruktor](#dtor)|Niszczy `location` obiektu.|
+|[location](#ctor)|Przeciążone. Konstruuje obiekt `location`.|
+|[~ Location — destruktor](#dtor)|Niszczy obiekt `location`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[bieżący](#current)|Zwraca `location` obiekt reprezentujący miejscu bardziej konkretny od pozostałych, wykonywany jest wątek wywołujący.|
-|[from_numa_node —](#from_numa_node)|Zwraca `location` obiekt, który reprezentuje dany Węzeł NUMA.|
+|[obecne](#current)|Zwraca obiekt `location` reprezentujący najbardziej charakterystyczne miejsce wykonywane przez wątek wywołujący.|
+|[from_numa_node](#from_numa_node)|Zwraca obiekt `location`, który reprezentuje dany węzeł NUMA.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[operator!=](#operator_neq)|Określa, czy dwa `location` obiekty reprezentują inną lokalizację.|
-|[operator=](#operator_eq)|Przypisuje zawartość innego `location` obiektu do wskazanego.|
-|[operator==](#operator_eq_eq)|Określa, czy dwa `location` obiekty reprezentują tej samej lokalizacji.|
+|[operator!=](#operator_neq)|Określa, czy dwa obiekty `location` reprezentują różne lokalizacje.|
+|[operator =](#operator_eq)|Przypisuje do niego zawartość innego obiektu `location`.|
+|[operator = =](#operator_eq_eq)|Określa, czy dwa obiekty `location` reprezentują tę samą lokalizację.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -57,52 +57,52 @@ class location;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concrt.h
+**Nagłówek:** ConcRT. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="dtor"></a> ~ lokalizacji
+## <a name="dtor"></a>~ Lokalizacja
 
-Niszczy `location` obiektu.
+Niszczy obiekt `location`.
 
-```
+```cpp
 ~location();
 ```
 
-##  <a name="current"></a> bieżący
+## <a name="current"></a>obecne
 
-Zwraca `location` obiekt reprezentujący miejscu bardziej konkretny od pozostałych, wykonywany jest wątek wywołujący.
+Zwraca obiekt `location` reprezentujący najbardziej charakterystyczne miejsce wykonywane przez wątek wywołujący.
 
-```
+```cpp
 static location __cdecl current();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Lokalizację reprezentujący bardziej konkretny od pozostałych miejscu wykonywanie wątku wywołującego.
+Lokalizacja reprezentująca najbardziej charakterystyczne miejsce wykonywane przez wątek wywołujący.
 
-##  <a name="from_numa_node"></a> from_numa_node —
+## <a name="from_numa_node"></a>from_numa_node
 
-Zwraca `location` obiekt, który reprezentuje dany Węzeł NUMA.
+Zwraca obiekt `location`, który reprezentuje dany węzeł NUMA.
 
-```
+```cpp
 static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_NumaNodeNumber*<br/>
-Numer węzła NUMA do konstruowania lokalizację.
+Numer węzła NUMA służący do konstruowania lokalizacji.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Reprezentujący Węzeł NUMA, określone przez lokalizację `_NumaNodeNumber` parametru.
+Lokalizacja reprezentująca węzeł NUMA określony przez parametr `_NumaNodeNumber`.
 
-##  <a name="ctor"></a> Lokalizacja
+## <a name="ctor"></a>przeniesienie
 
-Konstruuje `location` obiektu.
+Konstruuje obiekt `location`.
 
-```
+```cpp
 location();
 
 location(
@@ -126,61 +126,61 @@ location(
 *_BindingId*<br/>
 
 *_PBinding*<br/>
-(Opcjonalnie) Wskaźnik powiązania.
+Obowiązkowe Wskaźnik powiązania.
 
 ### <a name="remarks"></a>Uwagi
 
-Lokalizacja domyślne reprezentuje system jako całość.
+Domyślna lokalizacja skonstruowana reprezentuje system jako całość.
 
-##  <a name="operator_neq"></a> operator! =
+## <a name="operator_neq"></a>operator! =
 
-Określa, czy dwa `location` obiekty reprezentują inną lokalizację.
+Określa, czy dwa obiekty `location` reprezentują różne lokalizacje.
 
-```
+```cpp
 bool operator!= (const location& _Rhs) const;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
-Operand `location`.
+`location`operandu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-**wartość true,** Jeśli dwiema lokalizacjami są różne, **false** inaczej.
+**ma wartość true** , jeśli dwie lokalizacje są różne, w przeciwnym razie **false** .
 
-##  <a name="operator_eq"></a> operator =
+## <a name="operator_eq"></a>operator =
 
-Przypisuje zawartość innego `location` obiektu do wskazanego.
+Przypisuje do niego zawartość innego obiektu `location`.
 
-```
+```cpp
 location& operator= (const location& _Rhs);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
-Źródło `location` obiektu.
+Obiekt źródłowy `location`.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-##  <a name="operator_eq_eq"></a> operator ==
+## <a name="operator_eq_eq"></a>operator = =
 
-Określa, czy dwa `location` obiekty reprezentują tej samej lokalizacji.
+Określa, czy dwa obiekty `location` reprezentują tę samą lokalizację.
 
-```
+```cpp
 bool operator== (const location& _Rhs) const;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
-Operand `location`.
+`location`operandu.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-**wartość true,** Jeśli dwiema lokalizacjami są identyczne, i **false** inaczej.
+**ma wartość true** , jeśli dwie lokalizacje są identyczne i w przeciwnym razie ma **wartość false** .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

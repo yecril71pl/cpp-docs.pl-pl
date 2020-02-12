@@ -12,39 +12,39 @@ f1_keywords:
 helpviewer_keywords:
 - tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
-ms.openlocfilehash: 89e6d972fbecb2674e6343bf6d11f9972c25c63d
-ms.sourcegitcommit: a61d17cffdd50f1c3c6e082a01bbcbc85b6cc5a7
+ms.openlocfilehash: 757309a10da3e6d1c9c053430cce2cf603380b1f
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65975035"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127767"
 ---
-# <a name="tilebarrier-class"></a>tile_barrier — Klasa
+# <a name="tile_barrier-class"></a>tile_barrier — Klasa
 
-Synchronizuje wykonywanie wątków uruchomionych w grupie wątku (fragment) za pomocą `wait` metod. Tylko środowisko uruchomieniowe może utworzyć wystąpienie tej klasy.
+Synchronizuje wykonywanie wątków, które są uruchomione w grupie wątków (kafelek) przy użyciu metod `wait`. Tylko środowisko uruchomieniowe może utworzyć wystąpienie tej klasy.
 
-### <a name="syntax"></a>Składnia
+## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class tile_barrier;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[tile_barrier Constructor](#ctor)|Inicjuje nowe wystąpienie klasy `tile_barrier` klasy.|
+|[Konstruktor tile_barrier](#ctor)|Inicjuje nowe wystąpienie klasy `tile_barrier`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[Czekaj](#wait)|Powoduje, że wszystkie wątki w grupie wątku (fragment), aby zatrzymać wykonywanie, dopóki wszystkie wątki we fragmencie zakończą oczekiwanie.|
-|[wait_with_all_memory_fence](#wait_with_all_memory_fence)|Blokuje wykonanie wszystkich wątków we fragmencie do momentu zakończenia wszystkich dostępów do pamięci oraz gdy wszystkie wątki we fragmencie osiągną to wywołanie.|
-|[wait_with_global_memory_fence](#wait_with_global_memory_fence)|Blokuje wykonanie wszystkich wątków we fragmencie do momentu zakończenia wszystkich dostępów do pamięci globalnej oraz wszystkie wątki we fragmencie osiągną to wywołanie.|
-|[wait_with_tile_static_memory_fence](#wait_with_tile_static_memory_fence)|Blokuje wykonanie wszystkich wątków we fragmencie, aż wszystkie `tile_static` dostępy do pamięci oraz gdy wszystkie wątki we fragmencie osiągną to wywołanie.|
+|[trwa](#wait)|Instruuje wszystkie wątki w grupie wątków (kafelek), aby zatrzymać wykonywanie do momentu zakończenia wszystkich wątków na kafelku.|
+|[wait_with_all_memory_fence](#wait_with_all_memory_fence)|Blokuje wykonywanie wszystkich wątków we fragmencie do momentu zakończenia wszystkich operacji dostępu do pamięci, a wszystkie wątki we fragmencie osiągną to wywołanie.|
+|[wait_with_global_memory_fence](#wait_with_global_memory_fence)|Blokuje wykonywanie wszystkich wątków we fragmencie do momentu zakończenia wszystkich operacji dostępu do pamięci globalnej, a wszystkie wątki we fragmencie osiągną to wywołanie.|
+|[wait_with_tile_static_memory_fence](#wait_with_tile_static_memory_fence)|Blokuje wykonywanie wszystkich wątków we fragmencie do momentu zakończenia wszystkich `tile_static` dostępu do pamięci, a wszystkie wątki we fragmencie osiągną to wywołanie.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -52,66 +52,66 @@ class tile_barrier;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** amp.h
+**Nagłówek:** amp. h
 
-**Namespace:** Współbieżność
+**Przestrzeń nazw:** Współbieżności
 
-## <a name="ctor"></a>  tile_barrier — Konstruktor
+## <a name="ctor"></a>Konstruktor tile_barrier
 
-Inicjuje nowe wystąpienie klasy przez skopiowanie istniejącego.
+Inicjuje nowe wystąpienie klasy przez skopiowanie istniejącej.
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 tile_barrier(
     const tile_barrier& _Other ) restrict(amp,cpu);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Inne*<br/>
-`tile_barrier` Obiektu do skopiowania.
+*_Other*<br/>
+Obiekt `tile_barrier` do skopiowania.
 
-## <a name="wait"></a>Czekaj
+## <a name="wait"></a>trwa
 
-Powoduje, że wszystkie wątki w grupie wątku (fragment), aby zatrzymać wykonywanie, dopóki wszystkie wątki we fragmencie zakończą oczekiwanie.
+Instruuje wszystkie wątki w grupie wątków (kafelek), aby zatrzymać wykonywanie do momentu zakończenia wszystkich wątków na kafelku.
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 void wait() const restrict(amp);
 ```
 
-## <a name="wait_with_all_memory_fence"></a> wait_with_all_memory_fence —
+## <a name="wait_with_all_memory_fence"></a>wait_with_all_memory_fence
 
-Blokuje wykonanie wszystkich wątków we fragmencie do momentu wszystkie wątki we fragmencie osiągną to wywołanie. Zapewnia to, że wszystkie dostępy do pamięci są widoczne dla innych wątków w pliku wątku i zostały wykonane w porządku program.
+Blokuje wykonywanie wszystkich wątków we fragmencie, dopóki wszystkie wątki we fragmencie osiągną to wywołanie. Daje to pewność, że wszystkie dostępy do pamięci są widoczne dla innych wątków w kafelku wątku i zostały wykonane w kolejności programu.
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 void wait_with_all_memory_fence() const restrict(amp);
 ```
 
-## <a name="a-namewaitwithglobalmemoryfence-waitwithglobalmemoryfence"></a><a name="wait_with_global_memory_fence"> wait_with_global_memory_fence —
+## <a name="a-namewait_with_global_memory_fence-wait_with_global_memory_fence"></a><a name="wait_with_global_memory_fence"> wait_with_global_memory_fence
 
-Blokuje wykonanie wszystkich wątków we fragmencie do momentu wszystkie wątki we fragmencie osiągną to wywołanie. Zapewnia to, że wszystkie dostępy do pamięci globalnej są widoczne dla innych wątków w pliku wątku i zostały wykonane w porządku program.
+Blokuje wykonywanie wszystkich wątków we fragmencie, dopóki wszystkie wątki we fragmencie osiągną to wywołanie. Gwarantuje to, że wszystkie dostępy do pamięci globalnej są widoczne dla innych wątków w kafelku wątku i zostały wykonane w kolejności programu.
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 void wait_with_global_memory_fence() const  restrict(amp);
 ```
 
-## <a name="a-namewaitwithtilestaticmemoryfence-waitwithtilestaticmemoryfence"></a><a name="wait_with_tile_static_memory_fence"> wait_with_tile_static_memory_fence —
+## <a name="a-namewait_with_tile_static_memory_fence-wait_with_tile_static_memory_fence"></a><a name="wait_with_tile_static_memory_fence"> wait_with_tile_static_memory_fence
 
-Blokuje wykonanie wszystkich wątków we fragmencie do momentu wszystkie wątki we fragmencie osiągną to wywołanie. Gwarantuje to, że `tile_static` pamięci uzyskuje dostęp do są widoczne dla innych wątków w pliku wątku i zostały wykonane w porządku program.
+Blokuje wykonywanie wszystkich wątków we fragmencie, dopóki wszystkie wątki we fragmencie osiągną to wywołanie. Zapewnia to, że `tile_static` dostępy do pamięci są widoczne dla innych wątków w kafelku wątku i zostały wykonane w kolejności programu.
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 void wait_with_tile_static_memory_fence() const restrict(amp);
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

@@ -1,54 +1,56 @@
 ---
-title: 'Instrukcje: Korzystanie z klasy kontekstu do wdrażania Kooperatywnego semafora'
+title: 'Porady: korzystanie z klasy kontekstu do wdrażania a kooperatywnego semafora'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - cooperative semaphore implementing
 - context class
 ms.assetid: 22f4b9c0-ca22-4a68-90ba-39e99ea76696
-ms.openlocfilehash: 92f77fade972bff1528bc9a22416670354c70f34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5075052592993f413290242e70206b1e227064aa
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366709"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141906"
 ---
-# <a name="how-to-use-the-context-class-to-implement-a-cooperative-semaphore"></a>Instrukcje: Korzystanie z klasy kontekstu do wdrażania Kooperatywnego semafora
+# <a name="how-to-use-the-context-class-to-implement-a-cooperative-semaphore"></a>Porady: korzystanie z klasy kontekstu do wdrażania a kooperatywnego semafora
 
-W tym temacie pokazano, jak korzystać z concurrency::Context klasy do zaimplementowania klasy kooperatywnego semafora.
+W tym temacie pokazano, jak używać klasy concurrency:: Context do implementowania wspólnej klasy semafora.
 
-`Context` Klasa pozwala zablokować, lub yield bieżącego kontekstu wykonywania. Blokowanie lub reaguje bieżącego kontekstu jest przydatne, gdy nie można kontynuować bieżącego kontekstu, ponieważ zasób jest niedostępny. A *semafora* jest przykładem jedna sytuacja, gdy bieżący kontekst wykonywania muszą czekać zasób stanie się dostępny. Semafor, takich jak obiekt sekcję krytyczną jest obiektem synchronizacji umożliwiającym kodu w jednym kontekście wyłącznego dostępu do zasobu. W przeciwieństwie do obiektu sekcję krytyczną semafor umożliwia więcej niż jednym kontekście jednocześnie dostęp do zasobu. Jeśli maksymalną liczbę kontekstów posiada blokadę semafor, każdy dodatkowy kontekst musi czekać na innego kontekstu, aby zwolnić blokadę.
+## <a name="remarks"></a>Uwagi
+
+Klasa `Context` pozwala zablokować lub uzyskać bieżący kontekst wykonania. Blokowanie lub pozyskanie bieżącego kontekstu jest przydatne, gdy nie można wykonać bieżącego kontekstu, ponieważ zasób nie jest dostępny. *Semafor* to przykład jednej sytuacji, w której bieżący kontekst wykonywania musi oczekiwać na udostępnienie zasobu. Semafor, taki jak obiekt sekcji krytycznej, jest obiektem synchronizacji, który umożliwia kod w jednym kontekście, aby mieć wyłączny dostęp do zasobu. Jednak, w przeciwieństwie do obiektu sekcji krytycznej, semafor umożliwia jednocześnie dostęp do zasobu w więcej niż jednym kontekście. Jeśli maksymalna liczba kontekstów ma blokadę semafora, każdy dodatkowy kontekst musi czekać na inny kontekst, aby zwolnić blokadę.
 
 ### <a name="to-implement-the-semaphore-class"></a>Aby implementować klasę semafora
 
-1. Deklarowanie klasy, który nosi nazwę `semaphore`. Dodaj `public` i `private` sekcji do tej klasy.
+1. Zadeklaruj klasę o nazwie `semaphore`. Dodaj `public` i `private` sekcje do tej klasy.
 
 [!code-cpp[concrt-cooperative-semaphore#1](../../parallel/concrt/codesnippet/cpp/how-to-use-the-context-class-to-implement-a-cooperative-semaphore_1.cpp)]
 
-1. W `private` części `semaphore` klasy, Zadeklaruj [std::atomic](../../standard-library/atomic-structure.md) zmienna, która zawiera liczbę semafor i [concurrency::concurrent_queue](../../parallel/concrt/reference/concurrent-queue-class.md) obiekt, który przechowuje kontekstów który należy poczekać do uzyskania semafora.
+1. W sekcji `private` klasy `semaphore` Zadeklaruj zmienną [std::](../../standard-library/atomic-structure.md) Variable, która przechowuje liczbę semaforów i obiekt [concurrency:: concurrent_queue](../../parallel/concrt/reference/concurrent-queue-class.md) , który zawiera konteksty, które muszą oczekiwać na uzyskanie semafora.
 
 [!code-cpp[concrt-cooperative-semaphore#2](../../parallel/concrt/codesnippet/cpp/how-to-use-the-context-class-to-implement-a-cooperative-semaphore_2.cpp)]
 
-1. W `public` części `semaphore` klasy, należy zaimplementować konstruktora. Konstruktor przyjmuje liczbę `long long` wartość, która określa maksymalną liczbę kontekstów, które może jednocześnie zawierać blokady.
+1. W sekcji `public` klasy `semaphore` Zaimplementuj konstruktora. Konstruktor przyjmuje wartość `long long`, która określa maksymalną liczbę kontekstów, które mogą jednocześnie blokować blokadę.
 
 [!code-cpp[concrt-cooperative-semaphore#3](../../parallel/concrt/codesnippet/cpp/how-to-use-the-context-class-to-implement-a-cooperative-semaphore_3.cpp)]
 
-1. W `public` części `semaphore` klasy, implementować `acquire` metody. Zmniejsza to metoda semafora liczone jako operację niepodzielną. Jeśli liczba semafora staje się ujemna, Dodaj bieżącego kontekstu do końca okresu oczekiwania kolejki i wywołanie [concurrency::Context::Block](reference/context-class.md#block) metodę, aby zablokować bieżącego kontekstu.
+1. W sekcji `public` klasy `semaphore` Zaimplementuj metodę `acquire`. Ta metoda zmniejsza liczbę semaforów jako operację niepodzielną. Jeśli liczba semaforów przestała być ujemna, Dodaj bieżący kontekst do końca kolejki oczekiwania i Wywołaj metodę [concurrency:: Context:: Block](reference/context-class.md#block) , aby zablokować bieżący kontekst.
 
 [!code-cpp[concrt-cooperative-semaphore#4](../../parallel/concrt/codesnippet/cpp/how-to-use-the-context-class-to-implement-a-cooperative-semaphore_4.cpp)]
 
-1. W `public` części `semaphore` klasy, implementować `release` metody. Ta metoda zwiększa liczbę semafora jako operację niepodzielną. Liczba semafora jest ujemna przed wykonaniem operacji inkrementacji, czy istnieje co najmniej jeden kontekst, który jest oczekujący na blokadę. W tym przypadku odblokować kontekst, który znajduje się na wierzchu kolejki oczekiwania.
+1. W sekcji `public` klasy `semaphore` Zaimplementuj metodę `release`. Ta metoda zwiększa liczbę semaforów jako operację niepodzielną. Jeśli liczba semaforów jest ujemna przed operacją przyrostu, istnieje co najmniej jeden kontekst, który oczekuje na blokadę. W takim przypadku należy odblokować kontekst, który znajduje się na początku kolejki oczekiwania.
 
 [!code-cpp[concrt-cooperative-semaphore#5](../../parallel/concrt/codesnippet/cpp/how-to-use-the-context-class-to-implement-a-cooperative-semaphore_5.cpp)]
 
 ## <a name="example"></a>Przykład
 
-`semaphore` Klasy, w tym przykładzie zachowuje się wspólne, ponieważ `Context::Block` i `Context::Yield` metody uzyskanie wykonywania, dzięki czemu środowisko uruchomieniowe można wykonywać inne zadania.
+Klasa `semaphore` w tym przykładzie działa wspólnie, ponieważ metody `Context::Block` i `Context::Yield` umożliwiają wykonywanie innych zadań.
 
-`acquire` Zmniejsza metoda licznika, ale nie może zakończyć dodawanie kontekstu do kolejki oczekiwania przed innym wywołania kontekstowego `release` metody. Do konta w tym celu `release` metoda używa pętli pokrętła, który wywołuje [concurrency::Context::Yield](reference/context-class.md#yield) metodę, aby czekać na `acquire` metodę, aby zakończyć dodawanie kontekstu.
+Metoda `acquire` zmniejsza licznik, ale może nie zakończyć dodawania kontekstu do kolejki oczekiwania przed wywołaniem metody `release` przez inny kontekst. Aby obsłużyć to konto, Metoda `release` używa pętli pokrętła, która wywołuje metodę [concurrency:: Context:: Yield](reference/context-class.md#yield) , aby poczekać na zakończenie przez metodę `acquire` Dodawanie kontekstu.
 
-`release` Można wywołać metody `Context::Unblock` metody przed `acquire` wywołania metody `Context::Block` metody. Nie trzeba chronić przed sytuacja wyścigu, ponieważ środowisko uruchomieniowe umożliwia dotyczącej tych metod, które ma zostać wywołana w dowolnej kolejności. Jeśli `release` wywołania metody `Context::Unblock` przed `acquire` wywołania metody `Context::Block` ten sam kontekst tego kontekstu nie zmieniają odblokowane. Środowisko uruchomieniowe wymaga jedynie, że każdy wywołanie `Context::Block` jest dopasowywany do odpowiedniego wywołania `Context::Unblock`.
+Metoda `release` może wywołać metodę `Context::Unblock`, zanim metoda `acquire` wywoła metodę `Context::Block`. Nie ma potrzeby ochrony przed tym sytuacją wyścigu, ponieważ środowisko uruchomieniowe umożliwia wywoływanie tych metod w dowolnej kolejności. Jeśli metoda `release` wywoła `Context::Unblock` przed wywołaniem metody `acquire` `Context::Block` dla tego samego kontekstu, ten kontekst pozostaje odblokowany. Środowisko uruchomieniowe wymaga, aby każde wywołanie `Context::Block` zostało dopasowane przy użyciu odpowiedniego wywołania do `Context::Unblock`.
 
-W poniższym przykładzie pokazano pełne `semaphore` klasy. `wmain` Funkcji pokazuje podstawowe użycie tej klasy. `wmain` Używa funkcji [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorytmu, aby utworzyć kilka zadań, które wymagają dostępu do semafora. Ponieważ trzech wątków może zawierać blokady w dowolnym momencie, niektóre zadania musi czekać na inne zadanie zakończyć i zwalnia blokadę.
+Poniższy przykład pokazuje kompletną klasę `semaphore`. Funkcja `wmain` pokazuje podstawowe użycie tej klasy. Funkcja `wmain` używa algorytmu [concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) do tworzenia kilku zadań, które wymagają dostępu do semafora. Ponieważ trzy wątki mogą utrzymywać blokadę w dowolnym momencie, niektóre zadania muszą oczekiwać na zakończenie innego zadania i zwolnić blokadę.
 
 [!code-cpp[concrt-cooperative-semaphore#6](../../parallel/concrt/codesnippet/cpp/how-to-use-the-context-class-to-implement-a-cooperative-semaphore_6.cpp)]
 
@@ -67,26 +69,26 @@ In loop iteration 9...
 In loop iteration 4...
 ```
 
-Aby uzyskać więcej informacji na temat `concurrent_queue` klasy, zobacz [równoległe kontenery oraz obiekty](../../parallel/concrt/parallel-containers-and-objects.md). Aby uzyskać więcej informacji na temat `parallel_for` algorytmu, zobacz [algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md).
+Aby uzyskać więcej informacji na temat klasy `concurrent_queue`, zobacz [Parallel Containers and Objects](../../parallel/concrt/parallel-containers-and-objects.md). Aby uzyskać więcej informacji na temat algorytmu `parallel_for`, zobacz [algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md).
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
-Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `cooperative-semaphore.cpp` , a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
+Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `cooperative-semaphore.cpp` a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
 
-**Cl.exe/ehsc cooperative-semaphore.cpp**
+> **CL. exe/EHsc Cooperative-Semaphore. cpp**
 
-## <a name="robust-programming"></a>Niezawodne programowanie
+## <a name="robust-programming"></a>Skuteczne programowanie
 
-Możesz użyć *inicjowania jest pozyskiwanie zasobów* wzorca (RAII), aby ograniczyć dostęp do `semaphore` obiektu do danego zakresu. W obszarze wzór RAII to struktura danych jest przydzielany na stosie. Tej struktury danych inicjuje lub uzyskuje zasobu, gdy jest tworzony i niszczy lub zwalnia tego zasobu, kiedy niszczony jest struktury danych. Wzór RAII gwarantuje, że destruktor jest wywoływany przed zasięgu kończy działanie. W związku z tym, gdy wyjątek jest zgłaszany, lub gdy funkcja zawiera wiele zasobu jest poprawnie zarządzany `return` instrukcji.
+Aby ograniczyć dostęp do obiektu `semaphore` do danego zakresu, można użyć wzorca *pozyskiwania zasobów* (RAII). Pod wzorcem RAII, struktura danych jest przypisana na stosie. Ta struktura danych inicjuje lub uzyskuje zasób podczas jego tworzenia i niszczy lub zwalnia ten zasób, gdy struktura danych zostanie zniszczona. Wzorzec RAII gwarantuje, że destruktor jest wywoływany przed wyjściem z otaczającego zakresu. W związku z tym zasób jest prawidłowo zarządzany, gdy wyjątek jest zgłaszany lub funkcja zawiera wiele instrukcji `return`.
 
-W poniższym przykładzie zdefiniowano klasę, która nosi nazwę `scoped_lock`, który jest zdefiniowany w `public` części `semaphore` klasy. `scoped_lock` Klasa przypomina [concurrency::critical_section::scoped_lock](reference/critical-section-class.md#critical_section__scoped_lock_class) i [concurrency::reader_writer_lock::scoped_lock](reference/reader-writer-lock-class.md#scoped_lock_class) klasy. Konstruktor obiektu `semaphore::scoped_lock` klasy uzyskuje dostęp do danego `semaphore` obiektu i destruktor zwalnia dostęp do tego obiektu.
+W poniższym przykładzie zdefiniowano klasę o nazwie `scoped_lock`, która jest zdefiniowana w sekcji `public` klasy `semaphore`. Klasa `scoped_lock` jest podobna do klas [concurrency:: critical_section:: scoped_lock](reference/critical-section-class.md#critical_section__scoped_lock_class) i [concurrency:: reader_writer_lock:: scoped_lock](reference/reader-writer-lock-class.md#scoped_lock_class) . Konstruktor klasy `semaphore::scoped_lock` uzyskuje dostęp do danego obiektu `semaphore` i destruktor zwalnia dostęp do tego obiektu.
 
 [!code-cpp[concrt-cooperative-semaphore#7](../../parallel/concrt/codesnippet/cpp/how-to-use-the-context-class-to-implement-a-cooperative-semaphore_7.cpp)]
-Poniższy przykład modyfikuje treści funkcji pracy, który jest przekazywany do `parallel_for` algorytmu, tak że używa RAII, aby zapewnić jest zwolnienie semafora zanim funkcja zwróci. Ta technika gwarantuje, że funkcja pracy jest bezpieczna pod względem wyjątków.
+Poniższy przykład modyfikuje treść funkcji pracy przekazanej do algorytmu `parallel_for` tak, aby korzystała z RAII, aby zapewnić, że semafor zostanie wyliczony przed zwróceniem funkcji. Ta technika gwarantuje, że funkcja pracy jest bezpieczna przed wyjątkami.
 
 [!code-cpp[concrt-cooperative-semaphore#8](../../parallel/concrt/codesnippet/cpp/how-to-use-the-context-class-to-implement-a-cooperative-semaphore_8.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konteksty](../../parallel/concrt/contexts.md)<br/>
 [Równoległe kontenery oraz obiekty](../../parallel/concrt/parallel-containers-and-objects.md)

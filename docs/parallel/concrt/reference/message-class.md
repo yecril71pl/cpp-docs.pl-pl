@@ -12,61 +12,61 @@ f1_keywords:
 helpviewer_keywords:
 - message class
 ms.assetid: 3e1f3505-6c0c-486c-8191-666d0880ec62
-ms.openlocfilehash: 83cfdb5807581f7092709691a1839052abdd657c
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 700d052b6f22c970387a3ab45d299538a5b74e1b
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343852"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139542"
 ---
 # <a name="message-class"></a>message — Klasa
 
-Koperty wiadomości podstawowe zawierającego ładunek danych przekazywany pomiędzy blokami obsługi komunikatów.
+Podstawowa koperta komunikatów zawierająca ładunek danych przesyłanych między blokami obsługi komunikatów.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 template<class T>
 class message : public ::Concurrency::details::_Runtime_object;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*&*<br/>
 Typ danych ładunku w komunikacie.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|`type`|Alias typu `T`.|
+|`type`|Alias typu dla `T`.|
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[komunikat](#ctor)|Przeciążone. Konstruuje `message` obiektu.|
-|[~ message — destruktor](#dtor)|Niszczy `message` obiektu.|
+|[komunikat](#ctor)|Przeciążone. Konstruuje obiekt `message`.|
+|[~ Message — destruktor](#dtor)|Niszczy obiekt `message`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[add_ref](#add_ref)|Dodaje do licznika odwołań do `message` obiektu. Używane dla bloków komunikatów, wymagających zliczania odniesień, by określić okres istnienia komunikatu.|
-|[msg_id](#msg_id)|Zwraca identyfikator `message` obiektu.|
-|[remove_ref](#remove_ref)|Odejmuje z licznikiem odwołań do `message` obiektu. Używane dla bloków komunikatów, wymagających zliczania odniesień, by określić okres istnienia komunikatu.|
+|[add_ref](#add_ref)|Dodaje do liczby odwołań dla obiektu `message`. Używany dla bloków komunikatów, które wymagają zliczania odwołań, aby określić okresy istnienia wiadomości.|
+|[msg_id](#msg_id)|Zwraca identyfikator obiektu `message`.|
+|[remove_ref](#remove_ref)|Odejmuje od liczby odwołań dla obiektu `message`. Używany dla bloków komunikatów, które wymagają zliczania odwołań, aby określić okresy istnienia wiadomości.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[payload](#payload)|Ładunek `message` obiektu.|
+|[ładunku](#payload)|Ładunek obiektu `message`.|
 
 ## <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [bloki komunikatów asynchronicznych](../../../parallel/concrt/asynchronous-message-blocks.md).
+Aby uzyskać więcej informacji, zobacz [asynchroniczne bloki komunikatów](../../../parallel/concrt/asynchronous-message-blocks.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -74,27 +74,27 @@ Aby uzyskać więcej informacji, zobacz [bloki komunikatów asynchronicznych](..
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** agents.h
+**Nagłówek:** agenci. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="add_ref"></a> add_ref —
+## <a name="add_ref"></a>add_ref
 
-Dodaje do licznika odwołań do `message` obiektu. Używane dla bloków komunikatów, wymagających zliczania odniesień, by określić okres istnienia komunikatu.
+Dodaje do liczby odwołań dla obiektu `message`. Używany dla bloków komunikatów, które wymagają zliczania odwołań, aby określić okresy istnienia wiadomości.
 
-```
+```cpp
 long add_ref();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Nowa wartość licznika odwołań.
+Nowa wartość liczby odwołań.
 
-##  <a name="ctor"></a> Komunikat
+## <a name="ctor"></a>Komunikat
 
-Konstruuje `message` obiektu.
+Konstruuje obiekt `message`.
 
-```
+```cpp
 message(
     T const& _P);
 
@@ -112,58 +112,58 @@ message(
 ### <a name="parameters"></a>Parametry
 
 *_P*<br/>
-Obciążenie tego komunikatu.
+Ładunek tej wiadomości.
 
 *_Id*<br/>
-Unikatowy identyfikator tego komunikatu.
+Unikatowy identyfikator tej wiadomości.
 
 *_Msg*<br/>
-Odwołanie lub wskaźnik do `message` obiektu.
+Odwołanie lub wskaźnik do obiektu `message`.
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruktor, który pobiera wskaźnik do `message` obiekt jako argument zgłasza [invalid_argument](../../../standard-library/invalid-argument-class.md) wyjątek Jeśli parametr `_Msg` jest `NULL`.
+Konstruktor, który Pobiera wskaźnik do obiektu `message` jako argument zgłasza wyjątek [invalid_argument](../../../standard-library/invalid-argument-class.md) , jeśli `_Msg` parametr jest `NULL`.
 
-##  <a name="dtor"></a> ~ wiadomości
+## <a name="dtor"></a>komunikat ~
 
-Niszczy `message` obiektu.
+Niszczy obiekt `message`.
 
-```
+```cpp
 virtual ~message();
 ```
 
-##  <a name="msg_id"></a> msg_id
+## <a name="msg_id"></a>msg_id
 
-Zwraca identyfikator `message` obiektu.
+Zwraca identyfikator obiektu `message`.
 
-```
+```cpp
 runtime_object_identity msg_id() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-`runtime_object_identity` z `message` obiektu.
+`runtime_object_identity` obiektu `message`.
 
-##  <a name="payload"></a> ładunek
+## <a name="payload"></a>ładunku
 
-Ładunek `message` obiektu.
+Ładunek obiektu `message`.
 
-```
+```cpp
 T const payload;
 ```
 
-##  <a name="remove_ref"></a> remove_ref —
+## <a name="remove_ref"></a>remove_ref
 
-Odejmuje z licznikiem odwołań do `message` obiektu. Używane dla bloków komunikatów, wymagających zliczania odniesień, by określić okres istnienia komunikatu.
+Odejmuje od liczby odwołań dla obiektu `message`. Używany dla bloków komunikatów, które wymagają zliczania odwołań, aby określić okresy istnienia wiadomości.
 
-```
+```cpp
 long remove_ref();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Nowa wartość licznika odwołań.
+Nowa wartość liczby odwołań.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

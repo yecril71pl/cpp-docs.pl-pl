@@ -4,22 +4,22 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 9cc48687eb083ea4fab53380f62856b747c9d86a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5bc6691f6d0b166bb3084091ee6af70474937568
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512813"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141332"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Porównywanie współbieżności środowiska wykonawczego z innymi modelami współbieżności
 
 W tym dokumencie opisano różnice między funkcjami i modelami programowania środowisko uruchomieniowe współbieżności i innymi technologiami. Zrozumienie, jak korzyści z środowisko uruchomieniowe współbieżności porównać z korzyściami z innych modeli programowania, można wybrać technologię, która najlepiej spełnia wymagania aplikacji.
 
-Jeśli obecnie używasz innego modelu programowania, takiego jak Pula wątków systemu Windows lub OpenMP, istnieją sytuacje, w których może być odpowiednie do migracji do środowisko uruchomieniowe współbieżności. Na przykład temat Migrowanie [z OpenMP do środowisko uruchomieniowe współbieżności opisuje,](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md) kiedy może być odpowiednie do migracji z openmp do środowisko uruchomieniowe współbieżności. Jednak w przypadku spełnienia wymagań dotyczących wydajności aplikacji i bieżącej obsługi debugowania migracja nie jest wymagana.
+Jeśli obecnie używasz innego modelu programowania, takiego jak Pula wątków systemu Windows lub OpenMP, istnieją sytuacje, w których może być odpowiednie do migracji do środowisko uruchomieniowe współbieżności. Na przykład temat [Migrowanie z OpenMP do środowisko uruchomieniowe współbieżności opisuje,](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md) kiedy może być odpowiednie do migracji z openmp do środowisko uruchomieniowe współbieżności. Jednak w przypadku spełnienia wymagań dotyczących wydajności aplikacji i bieżącej obsługi debugowania migracja nie jest wymagana.
 
 Korzystając z funkcji i korzyści związanych z produktywnością środowisko uruchomieniowe współbieżności, można uzupełnić istniejącą aplikację, która korzysta z innego modelu współbieżności. Środowisko uruchomieniowe współbieżności nie może zagwarantować równoważenia obciążenia, gdy wiele harmonogramów zadań jest konkurujących dla tych samych zasobów obliczeniowych. Jeśli jednak obciążenia nie nakładają się na siebie, ten efekt jest minimalny.
 
-##  <a name="top"></a>Poszczególne
+## <a name="top"></a>Poszczególne
 
 - [Porównywanie planowania z przeznaczeniem do wspólnego planowania](#models)
 
@@ -27,13 +27,13 @@ Korzystając z funkcji i korzyści związanych z produktywnością środowisko u
 
 - [Porównywanie środowisko uruchomieniowe współbieżności ze OpenMP](#openmp)
 
-##  <a name="models"></a>Porównywanie planowania z przeznaczeniem do wspólnego planowania
+## <a name="models"></a>Porównywanie planowania z przeznaczeniem do wspólnego planowania
 
 Model zastępujący i wspólne modele planowania są dwa typowe sposoby na umożliwienie wielu zadań współdzielenia zasobów obliczeniowych, na przykład procesorów lub wątków sprzętowych.
 
 ### <a name="preemptive-and-cooperative-scheduling"></a>Planowanie zastępujące i wspólne
 
-*Planowanie* zastępujące to mechanizm okrężny, oparty na priorytetach, który zapewnia każdemu użytkownikowi wyłączny dostęp do zasobu obliczeniowego w danym okresie, a następnie przełącza się do innego zadania. Planowanie zastępujące jest wspólne w przypadku wielozadańowych systemów operacyjnych, takich jak Windows. *Planowanie wspólne* jest mechanizmem, który zapewnia każdemu użytkownikowi wyłączny dostęp do zasobów obliczeniowych do momentu zakończenia zadania lub do momentu uzyskania przez zadanie dostępu do zasobu. Środowisko uruchomieniowe współbieżności korzysta z planowania wspólnego wraz z zaplanowanym harmonogramem systemu operacyjnego w celu osiągnięcia maksymalnego użycia zasobów przetwarzania.
+*Planowanie zastępujące* to mechanizm okrężny, oparty na priorytetach, który zapewnia każdemu użytkownikowi wyłączny dostęp do zasobu obliczeniowego w danym okresie, a następnie przełącza się do innego zadania. Planowanie zastępujące jest wspólne w przypadku wielozadańowych systemów operacyjnych, takich jak Windows. *Planowanie wspólne* jest mechanizmem, który zapewnia każdemu użytkownikowi wyłączny dostęp do zasobów obliczeniowych do momentu zakończenia zadania lub do momentu uzyskania przez zadanie dostępu do zasobu. Środowisko uruchomieniowe współbieżności korzysta z planowania wspólnego wraz z zaplanowanym harmonogramem systemu operacyjnego w celu osiągnięcia maksymalnego użycia zasobów przetwarzania.
 
 ### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>Różnice między programami zastępujące i spółdzielnie
 
@@ -51,7 +51,7 @@ W ramach planowania wspólnego nie są rozwiązywane wszystkie problemy związan
 
 [[Top](#top)]
 
-##  <a name="winapi"></a>Porównywanie środowisko uruchomieniowe współbieżności z interfejsem API systemu Windows
+## <a name="winapi"></a>Porównywanie środowisko uruchomieniowe współbieżności z interfejsem API systemu Windows
 
 Interfejs programowania aplikacji systemu Microsoft Windows, który jest zwykle określany jako interfejs API systemu Windows (i dawniej znany jako Win32), zapewnia model programowania, który umożliwia współbieżność aplikacji. Środowisko uruchomieniowe współbieżności kompiluje się w interfejsie API systemu Windows w celu zapewnienia dodatkowych modeli programistycznych, które nie są dostępne w podstawowym systemie operacyjnym.
 
@@ -63,7 +63,7 @@ Interfejs API systemu Windows używa języka programowania C, aby uwidocznić mo
 
 ### <a name="threads-and-thread-pools"></a>Wątki i pule wątków
 
-Centralny mechanizm współbieżności w interfejsie API systemu Windows jest wątkiem. Zwykle funkcja myFunction służy [](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) do tworzenia wątków. Chociaż wątki są stosunkowo łatwe do utworzenia i używania, system operacyjny przydziela znaczną ilość czasu i inne zasoby do zarządzania nimi. Ponadto, chociaż każdy wątek ma mieć taki sam czas wykonywania jak każdy inny wątek na tym samym poziomie priorytetu, skojarzone obciążenie wymaga utworzenia wystarczająco dużych zadań. W przypadku mniejszych lub bardziej szczegółowych zadań narzuty skojarzone z współbieżnością mogą wznieść korzyści wynikające z równoczesnego uruchamiania zadań.
+Centralny mechanizm współbieżności w interfejsie API systemu Windows jest wątkiem. Zwykle [Funkcja myFunction służy do tworzenia](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) wątków. Chociaż wątki są stosunkowo łatwe do utworzenia i używania, system operacyjny przydziela znaczną ilość czasu i inne zasoby do zarządzania nimi. Ponadto, chociaż każdy wątek ma mieć taki sam czas wykonywania jak każdy inny wątek na tym samym poziomie priorytetu, skojarzone obciążenie wymaga utworzenia wystarczająco dużych zadań. W przypadku mniejszych lub bardziej szczegółowych zadań narzuty skojarzone z współbieżnością mogą wznieść korzyści wynikające z równoczesnego uruchamiania zadań.
 
 Pule wątków są jednym ze sposobów zmniejszenia kosztów zarządzania wątkami. Pule wątków niestandardowych i implementacja puli wątków zapewniane przez interfejs API systemu Windows umożliwiają wydajną pracę w małych elementach roboczych. Pula wątków systemu Windows przechowuje elementy robocze w kolejce First-In, First-Out (FIFO). Każdy element roboczy jest uruchamiany w kolejności, w której został dodany do puli.
 
@@ -77,11 +77,11 @@ W systemach Windows XP i Windows Vista aplikacje używające środowisko uruchom
 
 W systemach Windows 7 i Windows Server 2008 R2 system operacyjny obsługuje współbieżność i skalowalność. Na przykład te systemy operacyjne obsługują komputery, które mają ponad 64 wątków sprzętowych. Istniejąca aplikacja, która korzysta z interfejsu API systemu Windows, musi zostać zmodyfikowana, aby można było korzystać z tych nowych funkcji. Jednak aplikacja, która używa środowisko uruchomieniowe współbieżności automatycznie korzysta z tych funkcji i nie wymaga modyfikacji.
 
-[base.user-mode_scheduling](/windows/win32/procthread/user-mode-scheduling)
+[Base. User-mode_scheduling](/windows/win32/procthread/user-mode-scheduling)
 
 [[Top](#top)]
 
-##  <a name="openmp"></a>Porównywanie środowisko uruchomieniowe współbieżności ze OpenMP
+## <a name="openmp"></a>Porównywanie środowisko uruchomieniowe współbieżności ze OpenMP
 
 Środowisko uruchomieniowe współbieżności włącza różne modele programowania. Modele te mogą nakładać się lub uzupełniać modele innych bibliotek. W tej sekcji porównano środowisko uruchomieniowe współbieżności ze [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp).
 
@@ -95,7 +95,7 @@ Aby uzyskać więcej informacji na temat porównuje środowisko uruchomieniowe w
 
 [[Top](#top)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Środowisko uruchomieniowe współbieżności](../../parallel/concrt/concurrency-runtime.md)<br/>
 [Omówienie](../../parallel/concrt/asynchronous-message-blocks.md)<br/>

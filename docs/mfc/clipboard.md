@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Clipboard, programming
 - transferring data
 ms.assetid: a71b2824-1f14-4914-8816-54578d73ad4e
-ms.openlocfilehash: d405a7bbe15d2658380e19c1c908e57f2e40a574
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1db089110904ab88eb9c0c111d9da4e4e6869c82
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508932"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127910"
 ---
 # <a name="clipboard"></a>Schowek
 
@@ -21,7 +21,7 @@ W tej rodzinie artykułów wyjaśniono, jak zaimplementować obsługę Schowka s
 
 - Implementowanie standardowych poleceń menu edycji, takich jak wycinanie, kopiowanie i wklejanie.
 
-- Implementowanie jednolitego transferu danych za pomocą przeciągania i upuszczania (OLE).
+- Implementowanie jednolitego transferu danych przy użyciu przeciągania i upuszczania OLE.
 
 Schowek jest standardową metodą transferu danych między źródłem a miejscem docelowym. Może być również bardzo przydatne w operacjach OLE. W przypadku pojawieniu OLE istnieją dwa mechanizmy w systemie Windows. Standardowy interfejs API Schowka systemu Windows jest nadal dostępny, ale został uzupełniony mechanizmem transferu danych OLE. Funkcja OLE Uniform Data Transfer (UDT) obsługuje wycinanie, kopiowanie i wklejanie ze schowka i przeciąganie i upuszczanie.
 
@@ -41,8 +41,8 @@ Schowek jest usługą systemową udostępnioną przez całą sesję systemu Wind
 
 - [Schowek systemu Windows](/windows/win32/dataxchg/clipboard)
 
-- [Implementujące przeciąganie i upuszczanie (OLE)](../mfc/drag-and-drop-ole.md)
+- [Przeciąganie i upuszczanie OLE](../mfc/drag-and-drop-ole.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)

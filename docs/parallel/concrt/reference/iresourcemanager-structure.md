@@ -14,45 +14,45 @@ f1_keywords:
 helpviewer_keywords:
 - IResourceManager structure
 ms.assetid: 3dd5ec2c-fe53-4121-ae77-1bc1d1167ff4
-ms.openlocfilehash: 7afb37fb35040975d6e9471a1d12465e5163fafc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ce5b07f5eb4272db1b00b7f0105b790ddbb28fe
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301932"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142985"
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager — Struktura
 
-Interfejs do Menedżera zasobów Runtime współbieżności. Jest to interfejs, za pomocą którego lotów komunikować się z usługą Resource Manager.
+Interfejs Menedżer zasobów środowisko uruchomieniowe współbieżności. Jest to interfejs, za pomocą którego harmonogramy komunikują się z Menedżer zasobów.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 struct IResourceManager;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-enumerations"></a>Wyliczenia publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[IResourceManager::OSVersion](#osversion)|Typ wyliczany reprezentujący wersję systemu operacyjnego.|
+|[IResourceManager:: OSVersion](#osversion)|Typ wyliczany reprezentujący wersję systemu operacyjnego.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[IResourceManager::CreateNodeTopology](#createnodetopology)|Obecnie tylko podczas debugowania kompilacji środowiska uruchomieniowego, ta metoda jest hook testu, zaprojektowany w celu ułatwienia badania Menedżera zasobów na różnych topologii sprzętu, bez konieczności rzeczywistego sprzętu zgodnego konfiguracji sprzętu. Za pomocą kompilacji detalicznej środowiska uruchomieniowego ta metoda zwróci bez wykonywania żadnych czynności.|
-|[IResourceManager::GetAvailableNodeCount](#getavailablenodecount)|Zwraca liczbę węzłów, które są dostępne do usługi Resource Manager.|
-|[IResourceManager::GetFirstNode](#getfirstnode)|Zwraca pierwszy węzeł w kolejności wyliczenia, zgodnie z definicją przez Menedżera zasobów.|
-|[Iresourcemanager::Reference —](#reference)|Zwiększa liczbę odwołań w wystąpieniu usługi Resource Manager.|
-|[IResourceManager::RegisterScheduler](#registerscheduler)|Rejestruje harmonogramu przy użyciu usługi Resource Manager. Po zarejestrowaniu harmonogram powinien komunikować się przy użyciu usługi Resource Manager `ISchedulerProxy` interfejsu, który jest zwracany.|
-|[IResourceManager::Release](#release)|Dekrementuje liczbę odwołań w wystąpieniu usługi Resource Manager. Menedżer zasobów jest niszczony, kiedy jego licznik odwołań zbliża się do `0`.|
+|[IResourceManager:: CreateNodeTopology —](#createnodetopology)|Ta metoda jest dostępna tylko w kompilacjach debugowania środowiska uruchomieniowego, ponieważ jest to punkt zaczepienia testu zaprojektowany w celu ułatwienia testowania Menedżer zasobów w różnych topologiach sprzętowych, bez konieczności faktycznego sprzętu zgodnego z konfiguracją. W przypadku kompilacji detalicznych środowiska uruchomieniowego ta metoda zwróci wartość bez wykonywania żadnej akcji.|
+|[IResourceManager:: GetAvailableNodeCount —](#getavailablenodecount)|Zwraca liczbę węzłów dostępnych dla Menedżer zasobów.|
+|[IResourceManager:: GetFirstNode —](#getfirstnode)|Zwraca pierwszy węzeł w kolejności wyliczania zgodnie z definicją Menedżer zasobów.|
+|[IResourceManager:: Reference](#reference)|Zwiększa liczbę odwołań w wystąpieniu Menedżer zasobów.|
+|[IResourceManager:: RegisterScheduler —](#registerscheduler)|Rejestruje harmonogram z Menedżer zasobów. Po zarejestrowaniu harmonogramu powinien on komunikować się z Menedżer zasobów przy użyciu zwróconego interfejsu `ISchedulerProxy`.|
+|[IResourceManager:: Release](#release)|Zmniejsza liczbę odwołań w wystąpieniu Menedżer zasobów. Menedżer zasobów jest niszczona, gdy jej liczba odwołań przejdzie do `0`.|
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj [createresourcemanager —](concurrency-namespace-functions.md) funkcji można uzyskać interfejsu na pojedyncze wystąpienie usługi Resource Manager. Metoda zwiększa licznik odwołań w Menedżerze zasobów i należy wywołać [IResourceManager::Release](#release) metodę, aby zwolnić odwołania, gdy są wykonywane przy użyciu usługi Resource Manager. Zazwyczaj każdego harmonogramu, tworzonych wywołać tę metodę podczas tworzenia i zwolnij odwołanie do usługi Resource Manager, po jego zamknięciu.
+Użyj funkcji [Serviceresourcemanager](concurrency-namespace-functions.md) , aby uzyskać interfejs do wystąpienia pojedynczego Menedżer zasobów. Metoda zwiększa liczbę odwołań na Menedżer zasobów i należy wywołać metodę [IResourceManager:: Release](#release) , aby zwolnić odwołanie po zakończeniu z Menedżer zasobów. Zazwyczaj każdy utworzony harmonogram wywoła tę metodę podczas tworzenia i zwolni odwołanie do Menedżer zasobów po jego zamknięciu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -60,15 +60,15 @@ Użyj [createresourcemanager —](concurrency-namespace-functions.md) funkcji mo
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concrtrm.h
+**Nagłówek:** concrtrm. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="createnodetopology"></a>  Iresourcemanager::createnodetopology — metoda
+## <a name="createnodetopology"></a>IResourceManager:: CreateNodeTopology —, Metoda
 
-Obecnie tylko podczas debugowania kompilacji środowiska uruchomieniowego, ta metoda jest hook testu, zaprojektowany w celu ułatwienia badania Menedżera zasobów na różnych topologii sprzętu, bez konieczności rzeczywistego sprzętu zgodnego konfiguracji sprzętu. Za pomocą kompilacji detalicznej środowiska uruchomieniowego ta metoda zwróci bez wykonywania żadnych czynności.
+Ta metoda jest dostępna tylko w kompilacjach debugowania środowiska uruchomieniowego, ponieważ jest to punkt zaczepienia testu zaprojektowany w celu ułatwienia testowania Menedżer zasobów w różnych topologiach sprzętowych, bez konieczności faktycznego sprzętu zgodnego z konfiguracją. W przypadku kompilacji detalicznych środowiska uruchomieniowego ta metoda zwróci wartość bez wykonywania żadnej akcji.
 
-```
+```cpp
 virtual void CreateNodeTopology(
     unsigned int nodeCount,
     _In_reads_(nodeCount) unsigned int* pCoreCount,
@@ -79,72 +79,72 @@ virtual void CreateNodeTopology(
 ### <a name="parameters"></a>Parametry
 
 *nodeCount*<br/>
-Liczba węzłów procesora jest symulowane.
+Liczba symulowanych węzłów procesora.
 
 *pCoreCount*<br/>
 Tablica, która określa liczbę rdzeni w każdym węźle.
 
 *pNodeDistance*<br/>
-Macierzy, określając węzła odległość między dwoma węzłami, wszystkie. Ten parametr może mieć wartość `NULL`.
+Macierz określająca odległość między dwoma węzłami. Ten parametr może mieć wartość `NULL`.
 
 *pProcessorGroups*<br/>
-Tablica, która określa grupę procesora należy każdego węzła.
+Tablica, która określa grupę procesorów, do której należy każdy węzeł.
 
 ### <a name="remarks"></a>Uwagi
 
-[invalid_argument](../../../standard-library/invalid-argument-class.md) jest generowany, jeśli parametr `nodeCount` ma wartość `0` został przekazany, lub jeśli parametr `pCoreCount` ma wartość `NULL`.
+[invalid_argument](../../../standard-library/invalid-argument-class.md) jest generowany, jeśli parametr `nodeCount` ma wartość, `0` została przeniesiona, lub jeśli parametr `pCoreCount` ma wartość `NULL`.
 
-[invalid_operation](invalid-operation-class.md) jest generowany, jeśli ta metoda jest wywoływana, gdy inne transfery danych istnieje w procesie.
+[invalid_operation](invalid-operation-class.md) jest generowany, jeśli ta metoda jest wywoływana, gdy istnieją inne harmonogramy w procesie.
 
-##  <a name="getavailablenodecount"></a>  Iresourcemanager::getavailablenodecount — metoda
+## <a name="getavailablenodecount"></a>IResourceManager:: GetAvailableNodeCount —, Metoda
 
-Zwraca liczbę węzłów, które są dostępne do usługi Resource Manager.
+Zwraca liczbę węzłów dostępnych dla Menedżer zasobów.
 
-```
+```cpp
 virtual unsigned int GetAvailableNodeCount() const = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Liczba węzłów jest dostępny dla Menedżera zasobów.
+Liczba węzłów dostępnych dla Menedżer zasobów.
 
-##  <a name="getfirstnode"></a>  Iresourcemanager::getfirstnode — metoda
+## <a name="getfirstnode"></a>IResourceManager:: GetFirstNode —, Metoda
 
-Zwraca pierwszy węzeł w kolejności wyliczenia, zgodnie z definicją przez Menedżera zasobów.
+Zwraca pierwszy węzeł w kolejności wyliczania zgodnie z definicją Menedżer zasobów.
 
-```
+```cpp
 virtual ITopologyNode* GetFirstNode() const = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Pierwszego węzła w kolejności wyliczenia, zgodnie z definicją przez Menedżera zasobów.
+Pierwszy węzeł w kolejności wyliczania zgodnie z definicją Menedżer zasobów.
 
-##  <a name="osversion"></a>  Iresourcemanager::OSVersion — wyliczenie
+## <a name="osversion"></a>IResourceManager:: OSVersion, Wyliczenie
 
 Typ wyliczany reprezentujący wersję systemu operacyjnego.
 
-```
+```cpp
 enum OSVersion;
 ```
 
-##  <a name="reference"></a>  Iresourcemanager::Reference — metoda
+## <a name="reference"></a>IResourceManager:: Reference — Metoda
 
-Zwiększa liczbę odwołań w wystąpieniu usługi Resource Manager.
+Zwiększa liczbę odwołań w wystąpieniu Menedżer zasobów.
 
-```
+```cpp
 virtual unsigned int Reference() = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Wynikowa liczba odwołań.
+Wynikowy licznik odwołań.
 
-##  <a name="registerscheduler"></a>  Iresourcemanager::registerscheduler — metoda
+## <a name="registerscheduler"></a>IResourceManager:: RegisterScheduler —, Metoda
 
-Rejestruje harmonogramu przy użyciu usługi Resource Manager. Po zarejestrowaniu harmonogram powinien komunikować się przy użyciu usługi Resource Manager `ISchedulerProxy` interfejsu, który jest zwracany.
+Rejestruje harmonogram z Menedżer zasobów. Po zarejestrowaniu harmonogramu powinien on komunikować się z Menedżer zasobów przy użyciu zwróconego interfejsu `ISchedulerProxy`.
 
-```
+```cpp
 virtual ISchedulerProxy *RegisterScheduler(
     _Inout_ IScheduler* pScheduler,
     unsigned int version) = 0;
@@ -153,34 +153,34 @@ virtual ISchedulerProxy *RegisterScheduler(
 ### <a name="parameters"></a>Parametry
 
 *pScheduler*<br/>
-`IScheduler` Interfejs harmonogram, który ma zostać zarejestrowany.
+`IScheduler` interfejs do harmonogramu do zarejestrowania.
 
 *version*<br/>
-Wersja interfejsu komunikacji harmonogram używa do komunikowania się z usługą Resource Manager. Przy użyciu wersji umożliwia rozwój interfejsu komunikacji, zapewniając transfery danych w celu uzyskania dostępu do starszych funkcji Menedżera zasobów. Transfery danych, które chcą korzystać z funkcji usługi Resource Manager w programie Visual Studio 2010 należy użyć wersji `CONCRT_RM_VERSION_1`.
+Wersja interfejsu komunikacyjnego, która jest używana przez harmonogram do komunikowania się z Menedżer zasobów. Użycie wersji pozwala Menedżer zasobów na rozwijanie interfejsu komunikacyjnego, umożliwiając programom Scheduler uzyskanie dostępu do starszych funkcji. Harmonogramy, którzy chcą korzystać z funkcji Menedżer zasobów dostępnych w programie Visual Studio 2010, powinny używać `CONCRT_RM_VERSION_1`wersji.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-`ISchedulerProxy` Interfejsu Menedżera zasobów jest skojarzona z harmonogramu. Harmonogramu, należy używać tego interfejsu, komunikować się z usługą Resource Manager z tego punktu.
+`ISchedulerProxy` interfejs Menedżer zasobów powiązany z harmonogramem. Harmonogram powinien używać tego interfejsu, aby komunikować się z Menedżer zasobów od tego momentu.
 
 ### <a name="remarks"></a>Uwagi
 
-Metoda ta jest przydatna w celu zainicjowania komunikacji z usługą Resource Manager. Metoda kojarzy `IScheduler` interfejs dla harmonogramu za pomocą `ISchedulerProxy` interfejsu i ręce je z powrotem do Ciebie. Zwrócony interfejs można użyć, aby zażądać wykonania zasobów do użycia przez harmonogramu lub do subskrybowania wątków przy użyciu usługi Resource Manager. Resource Manager będzie używać elementów zasad z zasad harmonogramu zwrócony przez [ischeduler::getpolicy —](ischeduler-structure.md#getpolicy) metodę pozwala ustalić, jaki typ wątki harmonogram będzie konieczne wykonanie pracy. Jeśli Twoje `SchedulerKind` klucz zasad ma wartość `UmsThreadDefault` i wartość jest do odczytu z zasad z wartością `UmsThreadDefault`, `IScheduler` przekazywany do metody interfejsu muszą być `IUMSScheduler` interfejsu.
+Użyj tej metody, aby zainicjować komunikację z Menedżer zasobów. Metoda kojarzy interfejs `IScheduler` dla harmonogramu z interfejsem `ISchedulerProxy` i przekazuje go z powrotem do użytkownika. Możesz użyć zwróconego interfejsu, aby zażądać zasobów wykonawczych do użycia przez harmonogram lub subskrybować wątki przy użyciu Menedżer zasobów. Menedżer zasobów będzie używać elementów zasad z zasad usługi Scheduler zwracanych przez metodę [IScheduler:: GetPolicy](ischeduler-structure.md#getpolicy) , aby określić, jaki typ wątków ma być wykonywany przez harmonogram. Jeśli klucz zasad `SchedulerKind` ma wartość `UmsThreadDefault` i wartość zostanie odczytana z zasad jako `UmsThreadDefault`wartość, interfejs `IScheduler` przeszedł do metody musi być interfejsem `IUMSScheduler`.
 
-Metoda zgłasza `invalid_argument` wyjątek Jeśli parametr `pScheduler` ma wartość `NULL` lub, jeśli parametr `version` nie jest prawidłową wersją interfejsu komunikacji.
+Metoda zgłasza wyjątek `invalid_argument`, jeśli parametr `pScheduler` ma wartość `NULL` lub jeśli parametr `version` nie jest prawidłową wersją interfejsu komunikacyjnego.
 
-##  <a name="release"></a>  Iresourcemanager::Release — metoda
+## <a name="release"></a>IResourceManager:: Release — Metoda
 
-Dekrementuje liczbę odwołań w wystąpieniu usługi Resource Manager. Menedżer zasobów jest niszczony, kiedy jego licznik odwołań zbliża się do `0`.
+Zmniejsza liczbę odwołań w wystąpieniu Menedżer zasobów. Menedżer zasobów jest niszczona, gdy jej liczba odwołań przejdzie do `0`.
 
-```
+```cpp
 virtual unsigned int Release() = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Wynikowa liczba odwołań.
+Wynikowy licznik odwołań.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [ISchedulerProxy, struktura](ischedulerproxy-structure.md)<br/>

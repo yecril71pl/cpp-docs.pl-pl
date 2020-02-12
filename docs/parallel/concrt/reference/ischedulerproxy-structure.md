@@ -13,39 +13,39 @@ f1_keywords:
 helpviewer_keywords:
 - ISchedulerProxy structure
 ms.assetid: af416973-7a1c-4c30-aa3b-4161c2aaea54
-ms.openlocfilehash: 0dddd43a5b3e68992e41f0b95893303e57e7c7ff
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 776f70f9b93eb2e38151ceb5e84b4664420cf954
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346289"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77140334"
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy — Struktura
 
-Interfejs, za pomocą którego lotów komunikować się z Menedżerem zasobów w środowisku uruchomieniowym współbieżności do negocjowania alokacji zasobów.
+Interfejs, za pomocą którego program Schedules komunikuje się z Menedżer zasobów środowisko uruchomieniowe współbieżności w celu negocjowania alokacji zasobów.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 struct ISchedulerProxy;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[ISchedulerProxy::BindContext](#bindcontext)|Kojarzy kontekstu wykonania za pomocą serwera proxy wątku, jeśli nie jest już skojarzony z jednym.|
-|[ISchedulerProxy::CreateOversubscriber](#createoversubscriber)|Tworzy nowego procesora wirtualnego katalogu głównego wątku sprzętu skojarzony z istniejącym zasobem wykonywania.|
-|[ISchedulerProxy::RequestInitialVirtualProcessors](#requestinitialvirtualprocessors)|Żądania wstępnego przyznawania korzeni procesora wirtualnego. Każdy procesora wirtualnego katalogu głównego reprezentuje zdolności do jej realizacji jeden wątek, który można wykonać pracę dla harmonogramu.|
-|[ISchedulerProxy::Shutdown](#shutdown)|Powiadamia menedżera zasobów, że harmonogram jest zamykana. Spowoduje to Menedżera zasobów, aby natychmiast odzyskać wszystkie zasoby przyznane do harmonogramu.|
-|[ISchedulerProxy::SubscribeCurrentThread](#subscribecurrentthread)|Rejestruje bieżącego wątku za pomocą Menedżera zasobów, kojarząc ją za pomocą tego harmonogramu.|
-|[ISchedulerProxy::UnbindContext](#unbindcontext)|Powoduje usunięcie z kontekstu wykonania określonego przez wątek serwera proxy `pContext` parametr i zwraca go do puli bezpłatnej fabryki serwera proxy wątku. Ta metoda lze volat pouze w kontekście wykonywania, który został powiązany za pośrednictwem [ischedulerproxy::bindcontext —](#bindcontext) metody i nie zostało jeszcze uruchomione za pośrednictwem trwa `pContext` parametru [ithreadproxy::switchto — ](ithreadproxy-structure.md#switchto) wywołania metody.|
+|[ISchedulerProxy:: BindContext —](#bindcontext)|Kojarzy kontekst wykonywania z serwerem proxy wątku, jeśli nie został jeszcze skojarzony z jednym.|
+|[ISchedulerProxy:: CreateOversubscriber —](#createoversubscriber)|Tworzy nowy rdzeń wirtualnego procesora w wątku sprzętowym skojarzonym z istniejącym zasobem wykonania.|
+|[ISchedulerProxy:: RequestInitialVirtualProcessors —](#requestinitialvirtualprocessors)|Żąda początkowej alokacji katalogów głównych procesora wirtualnego. Każdy główny wirtualny procesor reprezentuje możliwość wykonywania jednego wątku, który może wykonywać pracę w harmonogramie.|
+|[ISchedulerProxy:: Shutdown](#shutdown)|Powiadamia Menedżer zasobów o zamknięciu harmonogramu. Spowoduje to, że Menedżer zasobów natychmiast Odbierz wszystkie zasoby przydzielone do harmonogramu.|
+|[ISchedulerProxy:: SubscribeCurrentThread —](#subscribecurrentthread)|Rejestruje bieżący wątek w Menedżer zasobów, kojarząc go z tym harmonogramem.|
+|[ISchedulerProxy:: UnbindContext —](#unbindcontext)|Odkojarzy serwer proxy wątku z kontekstu wykonywania określonego przez parametr `pContext` i zwraca go do puli wolnych dla fabryki proxy wątku. Tę metodę można wywołać tylko w kontekście wykonywania, który został powiązany przez metodę [ISchedulerProxy:: BindContext —](#bindcontext) i nie został jeszcze uruchomiony za pośrednictwem `pContext` parametru wywołania metody [IThreadProxy:: SwitchTo —](ithreadproxy-structure.md#switchto) .|
 
 ## <a name="remarks"></a>Uwagi
 
-Resource Manager przekazuje `ISchedulerProxy` interfejs do każdej harmonogram, który rejestruje go za pomocą [iresourcemanager::registerscheduler —](iresourcemanager-structure.md#registerscheduler) metody.
+Menedżer zasobów to interfejs `ISchedulerProxy` do każdego harmonogramu, który rejestruje się za pomocą metody [IResourceManager:: RegisterScheduler —](iresourcemanager-structure.md#registerscheduler) .
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -53,131 +53,131 @@ Resource Manager przekazuje `ISchedulerProxy` interfejs do każdej harmonogram, 
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concrtrm.h
+**Nagłówek:** concrtrm. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="bindcontext"></a>  Ischedulerproxy::bindcontext — metoda
+## <a name="bindcontext"></a>ISchedulerProxy:: BindContext —, Metoda
 
-Kojarzy kontekstu wykonania za pomocą serwera proxy wątku, jeśli nie jest już skojarzony z jednym.
+Kojarzy kontekst wykonywania z serwerem proxy wątku, jeśli nie został jeszcze skojarzony z jednym.
 
-```
+```cpp
 virtual void BindContext(_Inout_ IExecutionContext* pContext) = 0;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *pContext*<br/>
-Interfejs do kontekstu wykonania do skojarzenia z serwerem proxy wątku.
+Interfejs do kontekstu wykonywania, który ma zostać skojarzony z serwerem proxy wątku.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwykle [ithreadproxy::switchto —](ithreadproxy-structure.md#switchto) metoda powiąże wątek serwera proxy do kontekstu wykonania na żądanie. Istnieją, jednak okoliczności, w którym należy go powiązać kontekstu z wyprzedzeniem, aby upewnić się, że `SwitchTo` metoda przełącza się do kontekstu już powiązane. Dotyczy to na UMS, kontekst harmonogramu, ponieważ nie można wywoływać metody, które przydzielają pamięć i powiązania serwera proxy wątku może obejmować alokacji pamięci, jeśli serwer proxy wątku nie jest jeszcze dostępna w wolnej puli fabryki serwera proxy wątku.
+Zwykle Metoda [IThreadProxy:: SwitchTo —](ithreadproxy-structure.md#switchto) będzie powiązać serwer proxy wątku z kontekstem wykonywania na żądanie. Istnieją jednak sytuacje, w których konieczne jest powiązanie kontekstu z wyprzedzeniem, aby upewnić się, że metoda `SwitchTo` przełączy się już z kontekstem. Dzieje się tak w przypadku kontekstu planowania UMS, ponieważ nie może on wywołać metod przynoszących pamięć, a powiązanie serwera proxy wątków może wiązać się z alokacją pamięci, jeśli serwer proxy wątku nie jest łatwo dostępny w bezpłatnej puli fabryki proxy wątków.
 
 `invalid_argument` jest generowany, jeśli parametr `pContext` ma wartość `NULL`.
 
-##  <a name="createoversubscriber"></a>  Ischedulerproxy::createoversubscriber — metoda
+## <a name="createoversubscriber"></a>ISchedulerProxy:: CreateOversubscriber —, Metoda
 
-Tworzy nowego procesora wirtualnego katalogu głównego wątku sprzętu skojarzony z istniejącym zasobem wykonywania.
+Tworzy nowy rdzeń wirtualnego procesora w wątku sprzętowym skojarzonym z istniejącym zasobem wykonania.
 
-```
+```cpp
 virtual IVirtualProcessorRoot* CreateOversubscriber(_Inout_ IExecutionResource* pExecutionResource) = 0;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *pExecutionResource*<br/>
-`IExecutionResource` Interfejs, który reprezentuje wątek sprzętu, aby oversubscribe.
+Interfejs `IExecutionResource` reprezentujący wątek sprzętowy, który chcesz zasubskrybować.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-`IVirtualProcessorRoot` Interfejsu.
+Interfejs `IVirtualProcessorRoot`.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda harmonogramu chce oversubscribe wątku określonego sprzętu przez ograniczony czas. Po wykonaniu procesora wirtualnego katalogu głównego, powinna zwracać je do usługi resource manager przez wywołanie metody [Usuń](iexecutionresource-structure.md#remove) metody `IVirtualProcessorRoot` interfejsu.
+Użyj tej metody, jeśli harmonogram chce zasubskrybować określony wątek sprzętowy przez ograniczoną ilość czasu. Po zakończeniu pracy z głównym procesorem wirtualnym należy zwrócić go do Menedżera zasobów, wywołując metodę [Remove](iexecutionresource-structure.md#remove) w interfejsie `IVirtualProcessorRoot`.
 
-Możesz nawet jest nadsubskrybowanie istniejącego katalogu głównego procesora wirtualnego, ponieważ `IVirtualProcessorRoot` interfejs dziedziczy z `IExecutionResource` interfejsu.
+Można nawet zasubskrybować istniejący rdzeń wirtualnego procesora, ponieważ interfejs `IVirtualProcessorRoot` dziedziczy po interfejsie `IExecutionResource`.
 
-##  <a name="requestinitialvirtualprocessors"></a>  ISchedulerProxy::RequestInitialVirtualProcessors Method
+## <a name="requestinitialvirtualprocessors"></a>ISchedulerProxy:: RequestInitialVirtualProcessors —, Metoda
 
-Żądania wstępnego przyznawania korzeni procesora wirtualnego. Każdy procesora wirtualnego katalogu głównego reprezentuje zdolności do jej realizacji jeden wątek, który można wykonać pracę dla harmonogramu.
+Żąda początkowej alokacji katalogów głównych procesora wirtualnego. Każdy główny wirtualny procesor reprezentuje możliwość wykonywania jednego wątku, który może wykonywać pracę w harmonogramie.
 
-```
+```cpp
 virtual IExecutionResource* RequestInitialVirtualProcessors(bool doSubscribeCurrentThread) = 0;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *doSubscribeCurrentThread*<br/>
-Określa, czy subskrypcja bieżący wątek i uwzględnić go podczas alokacji zasobów.
+Czy zasubskrybować bieżący wątek i konto podczas alokacji zasobów.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-`IExecutionResource` Interfejsu dla bieżącego wątku, jeśli parametr `doSubscribeCurrentThread` ma wartość **true**. Jeśli wartość jest **false**, metoda zwraca wartość NULL.
+Interfejs `IExecutionResource` bieżącego wątku, jeśli parametr `doSubscribeCurrentThread` ma wartość **true**. Jeśli wartość to **false**, metoda zwraca wartość null.
 
 ### <a name="remarks"></a>Uwagi
 
-Przed harmonogramu wykonuje żadnych działań, ta metoda powinna korzystać do żądania korzeni procesora wirtualnego, Menedżera zasobów. Menedżer zasobów będą miały dostęp zasadę harmonogramu przy użyciu [ischeduler::getpolicy —](ischeduler-structure.md#getpolicy) i użyj wartości kluczy zasad `MinConcurrency`, `MaxConcurrency` i `TargetOversubscriptionFactor` ustalenie, jak wiele wątków sprzętu, aby przypisać do Harmonogram początkowo i jak wiele głównych procesorów wirtualnych, aby utworzyć dla każdego wątku sprzętu. Aby uzyskać więcej informacji na temat używania zasad harmonogramu do ustalenia harmonogramu początkowego przydziału, zobacz [policyelementkey —](concurrency-namespace-enums.md).
+Aby harmonogram wykonał jakąkolwiek pracę, należy użyć tej metody do żądania katalogów głównych procesora wirtualnego z Menedżer zasobów. Menedżer zasobów będzie uzyskiwać dostęp do zasad harmonogramu za pomocą [IScheduler:: GetPolicy](ischeduler-structure.md#getpolicy) i używania wartości kluczy zasad `MinConcurrency`, `MaxConcurrency` i `TargetOversubscriptionFactor`, aby określić, ile wątków sprzętowych ma być przypisywanych do harmonogramu początkowo i ile katalogów głównych procesorów wirtualnych do utworzenia dla każdego wątku sprzętowego. Aby uzyskać więcej informacji na temat sposobu używania zasad harmonogramu do określenia początkowej alokacji harmonogramu, zobacz [PolicyElementKey —](concurrency-namespace-enums.md).
 
-Menedżer zasobów przyznaje zasobów do harmonogramu przez wywołanie metody [ischeduler::addvirtualprocessors —](ischeduler-structure.md#addvirtualprocessors) listę głównych procesorów wirtualnych. Metoda jest wywoływana jako wywołanie zwrotne w ramach harmonogramu zadań, zanim ta metoda zwraca wartość.
+Menedżer zasobów przyznaje zasoby do harmonogramu, wywołując metodę [IScheduler:: AddVirtualProcessors —](ischeduler-structure.md#addvirtualprocessors) z listą katalogów głównych procesora wirtualnego. Metoda jest wywoływana jako wywołanie zwrotne do harmonogramu przed zwróceniem tej metody.
 
-Jeśli harmonogram żądane subskrypcji dla bieżącego wątku przez ustawienie dla parametru `doSubscribeCurrentThread` do **true**, metoda zwraca `IExecutionResource` interfejsu. Subskrypcja musi być zakończona w dowolnym momencie za pomocą [iexecutionresource::REMOVE —](iexecutionresource-structure.md#remove) metody.
+Jeśli harmonogram zażądał subskrypcji bieżącego wątku przez ustawienie parametru `doSubscribeCurrentThread` na **true**, metoda zwraca interfejs `IExecutionResource`. Subskrypcję należy zakończyć w późniejszym czasie za pomocą metody [IExecutionResource:: Remove](iexecutionresource-structure.md#remove) .
 
-Podczas określania, które wątków sprzętu są zaznaczone, Menedżer zasobów będzie podejmować próby Optymalizuj dla procesora koligacji węzłów. Jeśli subskrypcja jest wymagany dla bieżącego wątku, jest wskazanie, że bieżący wątek nie chce uczestniczyć w pracach przypisane do tego harmonogramu. W takim przypadku przydzielone procesory wirtualne katalogi główne znajdują się w węźle procesora, do którego bieżący wątek jest wykonywany, jeśli jest to możliwe.
+Podczas określania, które wątki sprzętowe są wybrane, Menedżer zasobów będzie próbować zoptymalizować dla koligacji węzła procesora. Jeśli zażądano subskrypcji bieżącego wątku, oznacza to, że bieżący wątek zamierza wziąć udział w pracy przypisanej do tego harmonogramu. W takim przypadku elementy główne przydzielonych procesorów wirtualnych znajdują się w węźle procesora, w którym jest wykonywany bieżący wątek, jeśli jest to możliwe.
 
-Czynność subskrybowania wątku zwiększa się o jeden poziom subskrypcji w podstawowym wątku sprzętu. Poziom subskrypcji jest ograniczone przez jeden, gdy subskrypcja jest zakończony. Aby uzyskać więcej informacji na temat poziomów subskrypcji, zobacz [iexecutionresource::currentsubscriptionlevel —](iexecutionresource-structure.md#currentsubscriptionlevel).
+Czynność subskrybowania wątku zwiększa poziom subskrypcji bazowego wątku sprzętowego o jeden. Poziom subskrypcji jest zmniejszany o jeden, gdy subskrypcja zostanie przerwana. Aby uzyskać więcej informacji na temat poziomów subskrypcji, zobacz [IExecutionResource:: CurrentSubscriptionLevel —](iexecutionresource-structure.md#currentsubscriptionlevel).
 
-##  <a name="shutdown"></a>  Ischedulerproxy::Shutdown — metoda
+## <a name="shutdown"></a>ISchedulerProxy:: Shutdown — Metoda
 
-Powiadamia menedżera zasobów, że harmonogram jest zamykana. Spowoduje to Menedżera zasobów, aby natychmiast odzyskać wszystkie zasoby przyznane do harmonogramu.
+Powiadamia Menedżer zasobów o zamknięciu harmonogramu. Spowoduje to, że Menedżer zasobów natychmiast Odbierz wszystkie zasoby przydzielone do harmonogramu.
 
-```
+```cpp
 virtual void Shutdown() = 0;
 ```
 
 ### <a name="remarks"></a>Uwagi
 
-Wszystkie `IExecutionContext` interfejsy harmonogramu otrzymane w wyniku subskrybowania zewnętrzny wątek przy użyciu metod `ISchedulerProxy::RequestInitialVirtualProcessors` lub `ISchedulerProxy::SubscribeCurrentThread` musi zostać zwrócone do usługi Resource Manager przy użyciu `IExecutionResource::Remove` przed harmonogramu kończy pracę.
+Wszystkie `IExecutionContext` interfejsy, które zostały odebrane przez harmonogram w wyniku subskrybowania wątku zewnętrznego przy użyciu metod `ISchedulerProxy::RequestInitialVirtualProcessors` lub `ISchedulerProxy::SubscribeCurrentThread` należy zwrócić do Menedżer zasobów przy użyciu `IExecutionResource::Remove`, zanim harmonogram zamknie się w dół.
 
-Jeśli próba zawierała harmonogramu dowolnej dezaktywowane korzeni procesora wirtualnego, należy je włączyć za pomocą [IVirtualProcessorRoot::Activate](ivirtualprocessorroot-structure.md#activate)i mają proxy wątku wykonywania na nich pozostaw `Dispatch` metody wykonywania konteksty muszą być wysyłki przed wywołujesz `Shutdown` na serwer proxy usługi scheduler.
+Jeśli w harmonogramie zostały zdezaktywowane katalogi główne procesora wirtualnego, należy je aktywować przy użyciu [IVirtualProcessorRoot:: Activate](ivirtualprocessorroot-structure.md#activate)i mieć wykonywane przez niego serwery proxy wątków, pozostawiając `Dispatch`ą metodę kontekstów wykonywania, które są wysyłane przed wywołaniem `Shutdown` na serwerze proxy usługi Scheduler.
 
-Nie jest konieczne usługi scheduler do indywidualnie zwrócenia wszystkich głównych procesorów wirtualnych Menedżera zasobów udzielone za pośrednictwem wywołania `Remove` metody, ponieważ wszystkie procesory wirtualne katalogi główne zostaną zwrócone do usługi Resource Manager podczas zamykania systemu.
+Nie jest konieczne, aby harmonogram zwracał pojedynczo wszystkie elementy główne wirtualnego procesora Menedżer zasobów przyznane do niego za pośrednictwem wywołań metody `Remove`, ponieważ wszystkie katalogi wirtualne procesorów wirtualnych zostaną zwrócone do Menedżer zasobów przy zamykaniu.
 
-##  <a name="subscribecurrentthread"></a>  Ischedulerproxy::subscribecurrentthread — metoda
+## <a name="subscribecurrentthread"></a>ISchedulerProxy:: SubscribeCurrentThread —, Metoda
 
-Rejestruje bieżącego wątku za pomocą Menedżera zasobów, kojarząc ją za pomocą tego harmonogramu.
+Rejestruje bieżący wątek w Menedżer zasobów, kojarząc go z tym harmonogramem.
 
-```
+```cpp
 virtual IExecutionResource* SubscribeCurrentThread() = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-`IExecutionResource` Komunikowanie się reprezentujący bieżącego wątku w środowisku uruchomieniowym.
+`IExecutionResource`, który reprezentuje bieżący wątek w środowisku uruchomieniowym.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tej metody, jeśli chcesz, aby konto dla bieżącego wątku podczas przydzielania zasobów do harmonogramu i inne transfery danych za pomocą Menedżera zasobów. Może to być szczególnie przydatne, gdy uczestniczy w pracach plany wątku w kolejce do harmonogramu, wraz z korzeni procesora wirtualnego, który harmonogram otrzymuje z usługi Resource Manager. Menedżer zasobów używa informacji, aby uniknąć niepotrzebnych nadsubskrypcję wątków sprzętu w systemie.
+Użyj tej metody, jeśli chcesz, aby Menedżer zasobów do konta bieżącego wątku podczas alokowania zasobów do harmonogramu i innych harmonogramów. Jest on szczególnie przydatny, gdy wątek planuje uczestnictwo w pracy w kolejce do harmonogramu, wraz z głównymi procesorami wirtualnymi, które usługa Scheduler odbiera z Menedżer zasobów. Menedżer zasobów używa informacji, aby zapobiegać niepotrzebnym nadsubskrypcji wątków sprzętowych w systemie.
 
-Zasób wykonywania odebraną za pomocą tej metody powinna zostać zwrócona do usługi Resource Manager przy użyciu [iexecutionresource::REMOVE —](iexecutionresource-structure.md#remove) metody. Wątek, który wywołuje `Remove` metoda musi być tym samym wątku, który wcześniej nazywane `SubscribeCurrentThread` metody.
+Zasób wykonywania otrzymany za pośrednictwem tej metody powinien zostać zwrócony do Menedżer zasobów przy użyciu metody [IExecutionResource:: Remove](iexecutionresource-structure.md#remove) . Wątek, który wywołuje metodę `Remove`, musi być tym samym wątkiem, który wcześniej wezwał metodę `SubscribeCurrentThread`.
 
-Czynność subskrybowania wątku zwiększa się o jeden poziom subskrypcji w podstawowym wątku sprzętu. Poziom subskrypcji jest ograniczone przez jeden, gdy subskrypcja jest zakończony. Aby uzyskać więcej informacji na temat poziomów subskrypcji, zobacz [iexecutionresource::currentsubscriptionlevel —](iexecutionresource-structure.md#currentsubscriptionlevel).
+Czynność subskrybowania wątku zwiększa poziom subskrypcji bazowego wątku sprzętowego o jeden. Poziom subskrypcji jest zmniejszany o jeden, gdy subskrypcja zostanie przerwana. Aby uzyskać więcej informacji na temat poziomów subskrypcji, zobacz [IExecutionResource:: CurrentSubscriptionLevel —](iexecutionresource-structure.md#currentsubscriptionlevel).
 
-##  <a name="unbindcontext"></a>  ISchedulerProxy::UnbindContext Method
+## <a name="unbindcontext"></a>ISchedulerProxy:: UnbindContext —, Metoda
 
-Powoduje usunięcie z kontekstu wykonania określonego przez wątek serwera proxy `pContext` parametr i zwraca go do puli bezpłatnej fabryki serwera proxy wątku. Ta metoda lze volat pouze w kontekście wykonywania, który został powiązany za pośrednictwem [ischedulerproxy::bindcontext —](#bindcontext) metody i nie zostało jeszcze uruchomione za pośrednictwem trwa `pContext` parametru [ithreadproxy::switchto — ](ithreadproxy-structure.md#switchto) wywołania metody.
+Odkojarzy serwer proxy wątku z kontekstu wykonywania określonego przez parametr `pContext` i zwraca go do puli wolnych dla fabryki proxy wątku. Tę metodę można wywołać tylko w kontekście wykonywania, który został powiązany przez metodę [ISchedulerProxy:: BindContext —](#bindcontext) i nie został jeszcze uruchomiony za pośrednictwem `pContext` parametru wywołania metody [IThreadProxy:: SwitchTo —](ithreadproxy-structure.md#switchto) .
 
-```
+```cpp
 virtual void UnbindContext(_Inout_ IExecutionContext* pContext) = 0;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *pContext*<br/>
-Kontekst wykonywania, aby usunąć skojarzenie z jego agent proxy wątku.
+Kontekst wykonywania do skojarzenia z jego serwerem proxy wątków.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [IScheduler, struktura](ischeduler-structure.md)<br/>

@@ -72,40 +72,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_3::xz
 - amp_short_vectors/Concurrency::graphics::int_3::set_yz
 ms.assetid: d4af182f-30f1-455c-b16d-aa99cd314038
-ms.openlocfilehash: c7cef5c8d6750ba6e971be14aafce65020d05c10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc35562466ee33585be03739695d24da043415c2
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180248"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127819"
 ---
-# <a name="int3-class"></a>int_3 — Klasa
+# <a name="int_3-class"></a>int_3 — Klasa
 
-Reprezentuje krótki Wektor trzech liczb całkowitych.
+Reprezentuje krótki wektor trzech liczb całkowitych.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class int_3;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[int_3 Constructor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.|
+|[Konstruktor int_3](#ctor)|Przeciążone. Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |int_3::get_x||
 |int_3::get_xy||
@@ -146,33 +146,33 @@ class int_3;
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|int_3::operator-||
-|int_3::operator--||
-|int_3::operator % =||
+|int_3:: operator-||
+|int_3:: operator--||
+|int_3:: operator% =||
 |int_3::operator&=||
-|int_3::operator * =||
-|int_3::operator / =||
+|int_3:: operator * =||
+|int_3:: operator/=||
 |int_3::operator^=||
 |int_3::operator&#124;=||
-|int_3::operator ~||
-|int_3::operator ++||
-|int_3::operator +=||
-|int_3::operator <\<=||
+|int_3:: operator ~||
+|int_3:: operator + +||
+|int_3:: operator + =||
+|int_3:: operator <\<=||
 |int_3::operator=||
-|int_3::operator-=||
-|int_3::operator >> =||
+|int_3:: operator-=||
+|int_3:: operator > > =||
 
-### <a name="public-constants"></a>Publiczne stałe
+### <a name="public-constants"></a>Stałe publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[rozmiar — stała](#size)||
+|[Stała rozmiaru](#size)||
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |int_3::b||
 |int_3::bg||
@@ -194,7 +194,7 @@ class int_3;
 |int_3::xyz||
 |int_3::xz||
 |int_3::xzy||
-|int_3::y||
+|int_3:: y||
 |int_3::yx||
 |int_3::yxz||
 |int_3::yz||
@@ -211,17 +211,17 @@ class int_3;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** amp_short_vectors.h
+**Nagłówek:** amp_short_vectors. h
 
-**Namespace:** CONCURRENCY::Graphics
+**Przestrzeń nazw:** Concurrency:: Graphics
 
-## <a name="ctor"></a> int_3
+## <a name="ctor"></a>int_3
 
-Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.
+Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.
 
-## <a name="syntax"></a>Składnia
+### <a name="syntax"></a>Składnia
 
-```
+```cpp
 int_3() restrict(amp,cpu);
 int_3(
    int _V0,
@@ -254,28 +254,28 @@ explicit inline int_3(
 ### <a name="parameters"></a>Parametry
 
 *_V0*<br/>
-Wartość do zainicjowania elementu 0.
+Wartość, aby zainicjować element 0.
 
 *_V1*<br/>
 Wartość do zainicjowania elementu 1.
 
 *_V2*<br/>
-Wartość można zainicjować element 2.
+Wartość do zainicjowania elementu 2.
 
 *_V*<br/>
-Wartość inicjalizacji.
+Wartość dla inicjalizacji.
 
-*_Inne*<br/>
+*_Other*<br/>
 Obiekt używany do inicjowania.
 
-## <a name="size"></a> Rozmiar
+## <a name="size"></a>zmienia
 
-## <a name="syntax"></a>Składnia
+### <a name="syntax"></a>Składnia
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

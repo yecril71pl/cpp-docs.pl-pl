@@ -12,34 +12,34 @@ f1_keywords:
 helpviewer_keywords:
 - task_continuation_context class
 ms.assetid: 1fb5a76a-3682-45c2-a615-8b6b527741f0
-ms.openlocfilehash: 5d7d92fcd1bb00513b9e05030afa56726e87183b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae8ac425f035839cdddc0b19f4f40d3b6369202a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212860"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142576"
 ---
-# <a name="taskcontinuationcontext-class"></a>task_continuation_context — Klasa
+# <a name="task_continuation_context-class"></a>task_continuation_context — Klasa
 
-`task_continuation_context` Klasy pozwala określić, gdzie chcesz kontynuacji do wykonania. Ta jest przydatna tylko używanie tej klasy z aplikacji środowiska wykonawczego Windows. W przypadku aplikacji innych niż Windows Runtime Kontekst wykonywania kontynuacji zadania jest ustalony w czasie wykonywania i nie można konfigurować.
+Klasa `task_continuation_context` pozwala określić, gdzie mają być kontynuowane. Jest to przydatne tylko w przypadku używania tej klasy z poziomu aplikacji środowisko wykonawcze systemu Windows. W przypadku aplikacji innych niż środowisko wykonawcze systemu Windows kontekst wykonywania kontynuacji zadania jest określany przez środowisko uruchomieniowe i nie można go konfigurować.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class task_continuation_context : public details::_ContextCallback;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[get_current_winrt_context](#get_current_winrt_context)|Zwraca obiekt kontekstu kontynuacji zadania, który reprezentuje bieżący kontekst wątku winrt.|
-|[use_arbitrary](#use_arbitrary)|Tworzy kontekst kontynuacji zadania, co pozwala środowisko uruchomieniowe może wybierać kontekst wykonania dla kontynuacji.|
-|[use_current](#use_current)|Zwraca obiekt kontekstu kontynuacji zadania, który reprezentuje bieżący kontekst wykonywania.|
+|[get_current_winrt_context](#get_current_winrt_context)|Zwraca obiekt kontekstu kontynuacji zadania, który reprezentuje bieżący kontekst wątku WinRT.|
+|[use_arbitrary](#use_arbitrary)|Tworzy kontekst kontynuacji zadania, który umożliwia środowisko uruchomieniowe Wybieranie kontekstu wykonywania w celu kontynuacji.|
+|[use_current](#use_current)|Zwraca obiekt kontekstu kontynuacji zadania, który reprezentuje bieżący kontekst wykonania.|
 |[use_default](#use_default)|Tworzy domyślny kontekst kontynuacji zadania.|
-|[use_synchronous_execution](#use_synchronous_execution)|Zwraca obiekt kontekstu kontynuacji zadania, który reprezentuje Kontekst wykonywania synchronicznych.|
+|[use_synchronous_execution](#use_synchronous_execution)|Zwraca obiekt kontekstu kontynuacji zadania, który reprezentuje kontekst wykonania synchronicznego.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -49,112 +49,114 @@ class task_continuation_context : public details::_ContextCallback;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** ppltasks.h
+**Nagłówek:** ppltasks. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-## <a name="get_current_winrt_context"></a> get_current_winrt_context
+## <a name="get_current_winrt_context"></a>get_current_winrt_context
 
 Zwraca obiekt kontekstu kontynuacji zadania, który reprezentuje bieżący kontekst wątku WinRT.
 
-## <a name="syntax"></a>Składnia
+### <a name="syntax"></a>Składnia
 
-```
+```cpp
 static task_continuation_context get_current_winrt_context();
 ```
 
-## <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Bieżący kontekst wątku środowiska wykonawczego Windows. Zwraca pusty task_continuation_context, jeśli wywołano z kontekstu innych niż Windows Runtime.
+Bieżący kontekst wątku środowisko wykonawcze systemu Windows. Zwraca puste task_continuation_context, jeśli wywołano z kontekstu nieśrodowisko wykonawcze systemu Windowsowego.
 
-## <a name="remarks"></a>Uwagi
+### <a name="remarks"></a>Uwagi
 
-`get_current_winrt_context` Metoda przechwytuje kontekst wątku środowiska uruchomieniowego Windows obiektu wywołującego. Zwraca pustego kontekstu do wywoływania innego niż Windows Runtime.
+Metoda `get_current_winrt_context` przechwytuje kontekst wątku środowisko wykonawcze systemu Windows obiektu wywołującego. Zwraca pusty kontekst do obiektów wywołujących innych niż środowisko wykonawcze systemu Windows.
 
-Wartość zwrócona przez obiekt `get_current_winrt_context` może służyć do wskazania, kontynuacja powinna zostać wykonana w modelu typu apartment w kontekście przechwyconym (STA vs MTA), niezależnie od tego, czy zadanie poprzedzające jest rozpoznające. Rozpoznające zadanie jest zadaniem, które dekoduje środowiska uruchomieniowego Windows `IAsyncInfo` interfejs lub klasę task, która wywodzi się z takiego zadania.
+Wartość zwracana przez `get_current_winrt_context` może służyć do wskazania, że środowisko uruchomieniowe powinno być wykonywane w modelu apartamentu przechwyconego kontekstu (STA vs MTA), bez względu na to, czy zadanie poprzedzające jest oparte na komórce. Zadanie z obsługą apartamentu to zadanie, które odpakuje środowisko wykonawcze systemu Windows interfejs `IAsyncInfo`, lub zadanie, które jest z tego zadania podrzędnego.
 
-Ta metoda jest podobna do `use_current` metody, ale jest także dostępny dla natywnych C++ kodu bez C++/CX rozszerzenie obsługi. Służy ona używana przez zaawansowanych użytkowników pisania C++/CX-agnostic kod biblioteki dla natywnych i wywołań środowiska wykonawczego Windows. Jeśli nie potrzebujesz tej funkcji, firma Microsoft zaleca `use_current` metody, która jest dostępna tylko dla C++/CX klientów.
+Ta metoda jest podobna do metody `use_current`, ale jest również dostępna dla kodu natywnego C++ bez C++obsługi rozszerzenia/CX. Jest ona przeznaczona do użycia przez zaawansowanych użytkowników, C++pisząc kod biblioteki/CX-agnostic zarówno dla obiektów wywołujących natywnych, jak i środowisko wykonawcze systemu Windows. Jeśli ta funkcja jest niezbędna, zalecamy metodę `use_current`, która jest dostępna tylko dla C++klientów/CX.
 
-##  <a name="use_arbitrary"></a> use_arbitrary —
+## <a name="use_arbitrary"></a>use_arbitrary
 
-Tworzy kontekst kontynuacji zadania, co pozwala środowisko uruchomieniowe może wybierać kontekst wykonania dla kontynuacji.
+Tworzy kontekst kontynuacji zadania, który umożliwia środowisko uruchomieniowe Wybieranie kontekstu wykonywania w celu kontynuacji.
 
-```
+### <a name="syntax"></a>Składnia
+
+```cpp
 static task_continuation_context use_arbitrary();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Kontekst kontynuacji zadania, który reprezentuje dowolne miejsce.
+Kontekst kontynuacji zadania, który reprezentuje arbitralną lokalizację.
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy używany jest ten kontekst kontynuacji, kontynuacja będzie wykonywana w kontekście wybranym przez środowisko wykonawcze, nawet jeśli zadanie poprzedzające jest rozpoznające.
+Gdy jest używany ten kontekst kontynuacji, kontynuacja będzie wykonywana w kontekście wybranym przez środowisko uruchomieniowe, nawet jeśli zadanie poprzedzające jest zgodne z komórkami.
 
-`use_arbitrary` można wyłączyć to zachowanie domyślne dla kontynuacji w zadaniu rozpoznawania komórki utworzonym w STA.
+`use_arbitrary` można użyć, aby wyłączyć domyślne zachowanie dla kontynuacji w zadaniu typu Apartment, które zostało utworzone w STA.
 
-Ta metoda jest dostępna tylko dla aplikacji środowiska wykonawczego Windows.
+Ta metoda jest dostępna tylko dla aplikacji środowisko wykonawcze systemu Windows.
 
-##  <a name="use_current"></a> use_current —
+## <a name="use_current"></a>use_current
 
-Zwraca obiekt kontekstu kontynuacji zadania, który reprezentuje bieżący kontekst wykonywania.
+Zwraca obiekt kontekstu kontynuacji zadania, który reprezentuje bieżący kontekst wykonania.
 
-```
+```cpp
 static task_continuation_context use_current();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Bieżący kontekst wykonywania.
+Bieżący kontekst wykonania.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda przechwytuje kontekst środowiska wykonawczego Windows obiektu wywołującego tak, aby kontynuacje mogły być wykonywane we właściwej komórce.
+Ta metoda przechwytuje kontekst środowisko wykonawcze systemu Windows obiektu wywołującego, aby kontynuacje mogły być wykonywane w odpowiedniej apartamentie.
 
-Wartość zwrócona przez obiekt `use_current` może służyć do wskazania środowiska uruchomieniowego, że kontynuacja powinna zostać wykonana w kontekście przechwyconym (STA vs MTA) niezależnie od tego, czy zadanie poprzedzające rozpoznające. Rozpoznające zadanie jest zadaniem, które dekoduje środowiska uruchomieniowego Windows `IAsyncInfo` interfejs lub klasę task, która wywodzi się z takiego zadania.
+Wartość zwracana przez `use_current` może służyć do wskazania, że środowisko uruchomieniowe powinno zostać wykonane w przechwyconym kontekście (STA vs MTA), niezależnie od tego, czy zadanie poprzedzające jest zgodne z komórkami. Zadanie z obsługą apartamentu to zadanie, które odpakuje środowisko wykonawcze systemu Windows interfejs `IAsyncInfo`, lub zadanie, które jest z tego zadania podrzędnego.
 
-Ta metoda jest dostępna tylko dla aplikacji środowiska wykonawczego Windows.
+Ta metoda jest dostępna tylko dla aplikacji środowisko wykonawcze systemu Windows.
 
-##  <a name="use_default"></a> use_default —
+## <a name="use_default"></a>use_default
 
 Tworzy domyślny kontekst kontynuacji zadania.
 
-```
+```cpp
 static task_continuation_context use_default();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Domyślny kontekst kontynuacji.
 
 ### <a name="remarks"></a>Uwagi
 
-W przeciwnym razie Określ kontekst kontynuacji po wywołaniu, używany jest kontekst domyślny `then` metody. W aplikacji Windows, Windows 7 i poniżej, a także aplikacji pulpitu w systemie Windows 8 lub nowszym środowisko wykonawcze określa, gdzie będzie wykonywać zadania kontynuacji. Jednak w aplikacji środowiska wykonawczego Windows domyślny kontekst kontynuacji dla kontynuacji w zadaniu rozpoznającym komórkę jest komórka gdzie `then` jest wywoływana.
+Domyślny kontekst jest używany, jeśli nie określisz kontekstu kontynuacji podczas wywoływania metody `then`. W aplikacjach systemu Windows dla systemu Windows 7 i nowszych, a także aplikacji klasycznych w systemie Windows 8 lub nowszym, środowisko uruchomieniowe określa, gdzie będą wykonywane kontynuacje zadań. Jednak w aplikacji środowisko wykonawcze systemu Windows domyślny kontekst kontynuacji dla kontynuacji w zadaniu typu Apartment jest obiektem komórkowym, w którym `then` jest wywoływana.
 
-Rozpoznające zadanie jest zadaniem, które dekoduje środowiska uruchomieniowego Windows `IAsyncInfo` interfejs lub klasę task, która wywodzi się z takiego zadania. W związku z tym jeśli zaplanujesz kontynuację w zadaniu rozpoznającym komórkę w STA środowiska wykonawczego Windows, kontynuacja zostanie wykonana w tej komórce STA.
+Zadanie z obsługą apartamentu to zadanie, które odpakuje środowisko wykonawcze systemu Windows interfejs `IAsyncInfo`, lub zadanie, które jest z tego zadania podrzędnego. W związku z tym w przypadku zaplanowania kontynuacji w zadaniu typu Apartment w środowisko wykonawcze systemu Windows STA, kontynuacja zostanie wykonana w tym STA.
 
-Kontynuacja na zadaniu apartamentu będzie wykonywany w kontekście wybranym przez środowisko wykonawcze.
+Kontynuacja w zadaniu niezależnym od apartamentu zostanie wykonana w kontekście wybranym przez środowisko uruchomieniowe.
 
-## <a name="use_synchronous_execution"></a> task_continuation_context::use_synchronous_execution
+## <a name="use_synchronous_execution"></a>task_continuation_context:: use_synchronous_execution
 
-Zwraca obiekt kontekstu kontynuacji zadania, który reprezentuje Kontekst wykonywania synchronicznych.
+Zwraca obiekt kontekstu kontynuacji zadania, który reprezentuje kontekst wykonania synchronicznego.
 
-## <a name="syntax"></a>Składnia
+### <a name="syntax"></a>Składnia
 
-```
+```cpp
 static task_continuation_context use_synchronous_execution();
 ```
 
-## <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Kontekst wykonywania synchronicznych.
+Kontekst wykonywania synchronicznego.
 
-## <a name="remarks"></a>Uwagi
+### <a name="remarks"></a>Uwagi
 
-`use_synchronous_execution` Metoda wymusza zadanie kontynuacji, aby były uruchamiane synchronicznie w kontekście, co powoduje zakończenia jej zadania poprzedzającego.
+Metoda `use_synchronous_execution` wymusza, aby zadanie kontynuacji zostało uruchomione synchronicznie w kontekście, co powoduje ukończenie zadania poprzedzającego.
 
-Jeśli zadanie poprzedzające została już zakończona, gdy jest dołączony kontynuacji, kontynuacja jest uruchamiana synchronicznie w kontekście, który dołącza kontynuacji.
+Jeśli zadanie poprzedzające zostało już zakończone po dołączeniu kontynuacji, kontynuacja przebiega synchronicznie w kontekście, który dołącza kontynuację.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

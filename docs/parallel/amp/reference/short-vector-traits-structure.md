@@ -7,20 +7,20 @@ f1_keywords:
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::size Constant
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
-ms.openlocfilehash: c407c42e5c6a7035e911218ecb41c2da62967787
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7531a57dddcc85392380029afc6edd577bbc5cf3
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351147"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126381"
 ---
-# <a name="shortvectortraits-structure"></a>short_vector_traits — Struktura
+# <a name="short_vector_traits-structure"></a>short_vector_traits — Struktura
 
-short_vector_traits umożliwia retrival bazowego długość wektora i typowi krótkiego wektora typie skalarnym lub typem skalarnym
+short_vector_traits umożliwia pobieranie podstawowej długości wektora i typu skalarnego krótkiego typu wektora lub typu skalarnego
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 template<
     typename T
 >
@@ -75,29 +75,29 @@ template<>
 struct short_vector_traits<double_4>;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
 `T`
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[short_vector_traits::short_vector_traits Constructor](#ctor)||
+|[short_vector_traits:: short_vector_traits, Konstruktor](#ctor)||
 
-### <a name="public-constants"></a>Publiczne stałe
+### <a name="public-constants"></a>Stałe publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[short_vector_traits::size — stała](#size)||
+|[short_vector_traits:: size — stała](#size)||
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -105,22 +105,22 @@ struct short_vector_traits<double_4>;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** amp_short_vectors.h
+**Nagłówek:** amp_short_vectors. h
 
-**Namespace:** CONCURRENCY::Graphics
+**Przestrzeń nazw:** Concurrency:: Graphics
 
-##  <a name="ctor"></a>  short_vector_traits::short_vector_traits — Konstruktor
+## <a name="ctor"></a>short_vector_traits:: short_vector_traits, Konstruktor
 
-```
+```cpp
 short_vector_traits();
 ```
 
-##  <a name="size"></a>  short_vector_traits::size — stała
+## <a name="size"></a>short_vector_traits:: size — stała
 
-```
+```cpp
 static int const size = 1;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

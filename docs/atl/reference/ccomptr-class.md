@@ -1,6 +1,7 @@
 ---
 title: Klasa CComPtr
-ms.date: 11/04/2016
+description: Przewodnik referencyjny do klasy C++ Microsoft Active Template Library (ATL) CComPtr.
+ms.date: 02/07/2020
 f1_keywords:
 - CComPtr
 - ATLBASE/ATL::CComPtr
@@ -8,54 +9,54 @@ f1_keywords:
 helpviewer_keywords:
 - CComPtr class
 ms.assetid: 22d9ea8d-ed66-4c34-940f-141db11e83bd
-ms.openlocfilehash: 5e3e510291daa50ddcf5d63451edef0428d66ed1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74a12b460f55a782fa2747b02f7d00287786fae6
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259108"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127408"
 ---
 # <a name="ccomptr-class"></a>Klasa CComPtr
 
-Klasa inteligentnego wskaźnika do zarządzania wskaźniki interfejsu COM.
+Klasa inteligentnego wskaźnika do zarządzania wskaźnikami interfejsu COM.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 template<class T>
 class CComPtr
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Interfejs COM, określając typ wskaźnika, które mają być przechowywane.
+*&*<br/>
+Interfejs COM określający typ wskaźnika, który ma być przechowywany.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[CComPtr::CComPtr](#ccomptr)|Konstruktor.|
+|[CComPtr:: CComPtr](#ccomptr)|Konstruktor.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[CComPtr::operator =](#operator_eq)|Przypisuje wskaźnik do wskaźnika elementu członkowskiego.|
+|[CComPtr:: operator =](#operator_eq)|Przypisuje wskaźnik do wskaźnika elementu członkowskiego.|
 
 ## <a name="remarks"></a>Uwagi
 
-Używa ATL `CComPtr` i [CComQIPtr](../../atl/reference/ccomqiptr-class.md) Zarządzanie wskaźniki interfejsu COM. Oba są uzyskiwane z [CComPtrBase](../../atl/reference/ccomptrbase-class.md), i jednocześnie wykonywać automatyczne liczenie odwołań.
+ATL używa `CComPtr` i [CComQIPtr](../../atl/reference/ccomqiptr-class.md) do zarządzania wskaźnikami interfejsu com. Oba są wyprowadzane z [CComPtrBase](../../atl/reference/ccomptrbase-class.md)i oba są automatycznie zliczane odwołania.
 
-`CComPtr` i [CComQIPtr](../../atl/reference/ccomqiptr-class.md) klas mogą pomóc wyeliminować przecieki pamięci, wykonując automatyczne liczenie odwołań.  Następujące funkcje zarówno wykonywania tej samej operacji logicznej; należy jednak zauważyć, jak druga wersja może być mniej podatne na błędy przy użyciu `CComPtr` klasy:
+Klasy `CComPtr` i [CComQIPtr](../../atl/reference/ccomqiptr-class.md) mogą pomóc wyeliminować przecieki pamięci, wykonując automatyczne zliczanie odwołań.  Poniższe funkcje wykonują te same operacje logiczne. Jednak druga wersja może być mniej podatna na błędy, ponieważ używa klasy `CComPtr`:
 
 [!code-cpp[NVC_ATL_Utilities#130](../../atl/codesnippet/cpp/ccomptr-class_1.cpp)]
 
 [!code-cpp[NVC_ATL_Utilities#131](../../atl/codesnippet/cpp/ccomptr-class_2.cpp)]
 
-W kompilacjach do debugowania link atlsd.lib śledzenia kodu.
+W kompilacjach debugowania Połącz atlsd. lib na potrzeby śledzenia kodu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -65,13 +66,13 @@ W kompilacjach do debugowania link atlsd.lib śledzenia kodu.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlbase.h
+**Nagłówek:** atlbase. h
 
-##  <a name="ccomptr"></a>  CComPtr::CComPtr
+## <a name="ccomptr"></a>CComPtr:: CComPtr
 
 Konstruktor.
 
-```
+```cpp
 CComPtr() throw ();
 CComPtr(T* lp) throw ();
 CComPtr (const CComPtr<T>& lp) throw ();
@@ -80,30 +81,34 @@ CComPtr (const CComPtr<T>& lp) throw ();
 ### <a name="parameters"></a>Parametry
 
 *LP*<br/>
-Używane do zainicjowania wskaźnika interfejsu.
+Służy do inicjowania wskaźnika interfejsu.
 
-*T*<br/>
+*&*<br/>
 Interfejs COM.
 
-##  <a name="operator_eq"></a>  CComPtr::operator =
+### <a name="remarks"></a>Uwagi
+
+Konstruktory, które przyjmują argument `AddRef` na *LP*, jeśli nie jest to wskaźnik o wartości null. Obiekt posiadający wartość inną niż null pobiera `Release` wywołanie na zniszczeniu obiektu CComPtr lub, jeśli nowy obiekt jest przypisany do obiektu CComPtr.
+
+## <a name="operator_eq"></a>CComPtr:: operator =
 
 Operator przypisania.
 
-```
+```cpp
 T* operator= (T* lp) throw ();
 T* operator= (const CComPtr<T>& lp) throw ();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Zwraca wskaźnik do zaktualizowanego `CComPtr` obiektu
+Zwraca wskaźnik do zaktualizowanego obiektu `CComPtr`
 
 ### <a name="remarks"></a>Uwagi
 
-Ta operacja AddRefs nowego obiektu i wersji istniejącego obiektu, jeśli taki istnieje.
+Ta operacja służy do AddRefs nowego obiektu i zwalnia istniejący obiekt, jeśli taki istnieje.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[CComPtr::CComPtr](#ccomptr)<br/>
-[CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[CComPtr:: CComPtr](#ccomptr)<br/>
+[CComQIPtr:: CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)<br/>
+[Przegląd klas](../../atl/atl-class-overview.md)

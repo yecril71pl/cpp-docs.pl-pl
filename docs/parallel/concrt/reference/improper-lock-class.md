@@ -8,34 +8,34 @@ f1_keywords:
 helpviewer_keywords:
 - improper_lock class
 ms.assetid: 8f494942-7748-4a2a-8de2-23414bfe6346
-ms.openlocfilehash: c10a7f302b63c33869425c4e5bddb36a15373ea8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 886444f3e856234be010715a8ee0c707cf919bb4
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262596"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142398"
 ---
-# <a name="improperlock-class"></a>improper_lock — Klasa
+# <a name="improper_lock-class"></a>improper_lock — Klasa
 
-Ta klasa opisuje wyjątek generowany, gdy jest blokada nieprawidłowo.
+Ta klasa opisuje wyjątek zgłoszony, gdy blokada jest pobrana nieprawidłowo.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class improper_lock : public std::exception;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[improper_lock](#ctor)|Przeciążone. Konstruuje `improper_lock exception`.|
 
 ## <a name="remarks"></a>Uwagi
 
-Zazwyczaj ten wyjątek jest zgłaszany, gdy podejmowana jest próba uzyskania rekursywnie blokady nie obsługującą, w tym samym kontekście.
+Zazwyczaj ten wyjątek jest zgłaszany, gdy podejmowana jest próba uzyskania blokady niewspółpracującej cyklicznie w tym samym kontekście.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -45,15 +45,15 @@ Zazwyczaj ten wyjątek jest zgłaszany, gdy podejmowana jest próba uzyskania re
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concrt.h
+**Nagłówek:** ConcRT. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="ctor"></a> improper_lock —
+## <a name="ctor"></a>improper_lock
 
 Konstruuje `improper_lock exception`.
 
-```
+```cpp
 explicit _CRTIMP improper_lock(_In_z_ const char* _Message) throw();
 
 improper_lock() throw();
@@ -62,9 +62,9 @@ improper_lock() throw();
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Opisowy komunikat dotyczący błędu.
+Opisowy komunikat o błędzie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [critical_section, klasa](critical-section-class.md)<br/>

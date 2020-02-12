@@ -11,47 +11,47 @@ f1_keywords:
 helpviewer_keywords:
 - cancellation_token_source class
 ms.assetid: 3548b1a0-12b0-4334-95db-4bf57141c066
-ms.openlocfilehash: 330473db1011af661e2cfa2c5861987bce786e40
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 131c4155ad902221d14f90f750f89c31479e2067
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391028"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142231"
 ---
-# <a name="cancellationtokensource-class"></a>cancellation_token_source — Klasa
+# <a name="cancellation_token_source-class"></a>cancellation_token_source — Klasa
 
-`cancellation_token_source` Klasa reprezentuje możliwości anulowania pewnej operacji.
+Klasa `cancellation_token_source` reprezentuje możliwość anulowania niektórych operacji do anulowania.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class cancellation_token_source;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[cancellation_token_source](#ctor)|Przeciążone. Tworzy nowy `cancellation_token_source`. Źródło może służyć do oflagowania anulowania pewnej operacji.|
-|[~cancellation_token_source Destructor](#dtor)||
+|[cancellation_token_source](#ctor)|Przeciążone. Tworzy nowy `cancellation_token_source`. Źródło może służyć do flagi anulowania niektórych operacji do anulowania.|
+|[~ cancellation_token_source destruktor](#dtor)||
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[cancel](#cancel)|Anuluje token. Wszelkie `task_group`, `structured_task_group`, lub `task` które wykorzystują token będą anulowane po tym wywołaniu i zgłoszą wyjątek w następnym punkcie przerwania.|
-|[create_linked_source](#create_linked_source)|Przeciążone. Tworzy `cancellation_token_source` anulowany, gdy dostarczony token zostaje anulowany.|
-|[get_token](#get_token)|Zwraca token anulowania skojarzony z tym źródłem. Zwrócony token może być sondowany w celu anulowania lub wygenerowania wywołania zwrotnego, wtedy, gdy następuje anulowanie.|
+|[Anuluj](#cancel)|Anuluje token. Wszelkie `task_group`, `structured_task_group`lub `task` korzystające z tokenu zostanie anulowane dla tego wywołania i zgłosić wyjątek w następnym punkcie przerwania.|
+|[create_linked_source](#create_linked_source)|Przeciążone. Tworzy `cancellation_token_source`, która została anulowana po anulowaniu podanego tokenu.|
+|[get_token](#get_token)|Zwraca token anulowania skojarzony z tym źródłem. Zwrócony token może być sondowany w celu anulowania lub podania wywołania zwrotnego, jeśli i gdy następuje anulowanie.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[operator!=](#operator_neq)||
-|[operator=](#operator_eq)||
-|[operator==](#operator_eq_eq)||
+|[operator =](#operator_eq)||
+|[operator = =](#operator_eq_eq)||
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -59,29 +59,29 @@ class cancellation_token_source;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** pplcancellation_token.h
+**Nagłówek:** pplcancellation_token. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="dtor"></a> ~ cancellation_token_source —
+## <a name="dtor"></a>~ cancellation_token_source
 
-```
+```cpp
 ~cancellation_token_source();
 ```
 
-##  <a name="cancel"></a> Anuluj
+## <a name="cancel"></a>Anuluj
 
-Anuluje token. Wszelkie `task_group`, `structured_task_group`, lub `task` które wykorzystują token będą anulowane po tym wywołaniu i zgłoszą wyjątek w następnym punkcie przerwania.
+Anuluje token. Wszelkie `task_group`, `structured_task_group`lub `task` korzystające z tokenu zostanie anulowane dla tego wywołania i zgłosić wyjątek w następnym punkcie przerwania.
 
-```
+```cpp
 void cancel() const;
 ```
 
-##  <a name="ctor"></a> cancellation_token_source —
+## <a name="ctor"></a>cancellation_token_source
 
-Tworzy nowy `cancellation_token_source`. Źródło może służyć do oflagowania anulowania pewnej operacji.
+Tworzy nowy `cancellation_token_source`. Źródło może służyć do flagi anulowania niektórych operacji do anulowania.
 
-```
+```cpp
 cancellation_token_source();
 
 cancellation_token_source(const cancellation_token_source& _Src);
@@ -92,13 +92,13 @@ cancellation_token_source(cancellation_token_source&& _Src);
 ### <a name="parameters"></a>Parametry
 
 *_Src*<br/>
-Obiekt, aby skopiować lub przenieść.
+Obiekt do skopiowania lub przeniesienia.
 
-##  <a name="create_linked_source"></a> create_linked_source —
+## <a name="create_linked_source"></a>create_linked_source
 
-Tworzy `cancellation_token_source` anulowany, gdy dostarczony token zostaje anulowany.
+Tworzy `cancellation_token_source`, która została anulowana po anulowaniu podanego tokenu.
 
-```
+```cpp
 static cancellation_token_source create_linked_source(
     cancellation_token& _Src);
 
@@ -112,46 +112,46 @@ static cancellation_token_source create_linked_source(_Iter _Begin, _Iter _End);
 Typ iteratora.
 
 *_Src*<br/>
-Token, którego Anulowanie spowoduje anulowanie zwróconego źródła tokenu. Należy pamiętać, że zwracane źródłowego tokenu może być anulowane niezależnie od źródła zawartego w tym parametrze.
+Token, którego anulowanie spowoduje anulowanie zwróconego źródła tokenu. Zwróć uwagę, że zwrócone Źródło tokenu może być również anulowane niezależnie od źródła zawartego w tym parametrze.
 
-*_Rozpocznij*<br/>
-Standardowa biblioteka C++ iterator odpowiadający początkowi zakresu tokenów do nasłuchiwania anulowania.
+*_Begin*<br/>
+Iterator C++ biblioteki standardowej odpowiadający początkowi zakresu tokenów do nasłuchiwania na potrzeby anulowania.
 
-*_Zakończ*<br/>
-Standardowa biblioteka C++ iterator odpowiadający końcowi zakresu tokenów do nasłuchiwania anulowania.
+*_End*<br/>
+C++ Wzorzec standardowej biblioteki odpowiadający końcowi zakresu tokenów do nasłuchiwania na potrzeby anulowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-A `cancellation_token_source` anulowany, gdy token dostarczony przez `_Src` zostaje anulowany.
+`cancellation_token_source`, która została anulowana, gdy token dostarczony przez parametr `_Src` zostanie anulowany.
 
-##  <a name="get_token"></a> get_token —
+## <a name="get_token"></a>get_token
 
-Zwraca token anulowania skojarzony z tym źródłem. Zwrócony token może być sondowany w celu anulowania lub wygenerowania wywołania zwrotnego, wtedy, gdy następuje anulowanie.
+Zwraca token anulowania skojarzony z tym źródłem. Zwrócony token może być sondowany w celu anulowania lub podania wywołania zwrotnego, jeśli i gdy następuje anulowanie.
 
-```
+```cpp
 cancellation_token get_token() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Token anulowania skojarzony z tym źródłem.
 
-##  <a name="operator_neq"></a> operator! =
+## <a name="operator_neq"></a>operator! =
 
-```
+```cpp
 bool operator!= (const cancellation_token_source& _Src) const;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Src*<br/>
-Argument operacji.
+Parametru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-##  <a name="operator_eq"></a> operator =
+## <a name="operator_eq"></a>operator =
 
-```
+```cpp
 cancellation_token_source& operator= (const cancellation_token_source& _Src);
 
 cancellation_token_source& operator= (cancellation_token_source&& _Src);
@@ -160,23 +160,23 @@ cancellation_token_source& operator= (cancellation_token_source&& _Src);
 ### <a name="parameters"></a>Parametry
 
 *_Src*<br/>
-Argument operacji.
+Parametru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-##  <a name="operator_eq_eq"></a> operator ==
+## <a name="operator_eq_eq"></a>operator = =
 
-```
+```cpp
 bool operator== (const cancellation_token_source& _Src) const;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Src*<br/>
-Argument operacji.
+Parametru.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

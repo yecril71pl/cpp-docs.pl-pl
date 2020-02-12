@@ -2,12 +2,12 @@
 title: Użycie fragmentów
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: 6c935134e033d12fc140c8d377ef59d0b47265fc
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: e5cedde255846f61ed0aaadacbd9966c00a03c9d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518260"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126269"
 ---
 # <a name="using-tiles"></a>Użycie fragmentów
 
@@ -15,7 +15,7 @@ Możesz użyć dzielenia, aby zmaksymalizować przyspieszenie aplikacji. Dzielen
 
 - zmienne `tile_static`. Główną zaletą dzielenia jest wzrost wydajności `tile_static` dostępu. Dostęp do danych w pamięci `tile_static` może być znacznie szybszy niż dostęp do danych w obszarze globalnym (`array` lub `array_view` obiektów). Wystąpienie zmiennej `tile_static` jest tworzone dla każdego kafelka, a wszystkie wątki na kafelku mają dostęp do zmiennej. W typowym algorytmie rozdzielonym dane są kopiowane do `tile_static` pamięci z pamięci globalnej, a następnie dostępne wiele razy z pamięci `tile_static`.
 
-- [tile_barrier:: wait — Metoda](reference/tile-barrier-class.md#wait). Wywołanie `tile_barrier::wait` zawiesza wykonywanie bieżącego wątku do momentu, aż wszystkie wątki w tym samym kafelku osiągną wywołanie do `tile_barrier::wait`. Nie można zagwarantowania kolejności, w której wątki będą działać, tylko wtedy, gdy żadne wątki na kafelku nie zostaną wykonane przed wywołaniem `tile_barrier::wait`, dopóki wszystkie wątki nie osiągną wywołania. Oznacza to, że za pomocą metody `tile_barrier::wait` można wykonać zadania na podstawie kafelka na kafelku, a nie na podstawie wątku. Typowy algorytm rozmieszczania ma kod służący do inicjowania `tile_static` pamięci dla całego kafelka, po którym następuje wywołanie `tile_barrer::wait`. Kod, który następuje `tile_barrier::wait` zawiera obliczenia, które wymagają dostępu do wszystkich wartości `tile_static`.
+- [tile_barrier:: wait — Metoda](reference/tile-barrier-class.md#wait). Wywołanie `tile_barrier::wait` zawiesza wykonywanie bieżącego wątku do momentu, aż wszystkie wątki w tym samym kafelku osiągną wywołanie do `tile_barrier::wait`. Nie można zagwarantowania kolejności, w której wątki będą działać, tylko wtedy, gdy żadne wątki na kafelku nie zostaną wykonane przed wywołaniem `tile_barrier::wait`, dopóki wszystkie wątki nie osiągną wywołania. Oznacza to, że za pomocą metody `tile_barrier::wait` można wykonać zadania na podstawie kafelka na kafelku, a nie na podstawie wątku. Typowy algorytm rozmieszczania ma kod służący do inicjowania `tile_static` pamięci dla całego kafelka, po którym następuje wywołanie `tile_barrier::wait`. Kod, który następuje `tile_barrier::wait` zawiera obliczenia, które wymagają dostępu do wszystkich wartości `tile_static`.
 
 - Indeksowanie lokalne i globalne. Masz dostęp do indeksu wątku względem całego `array_view` lub obiektu `array` i indeksu względem kafelka. Użycie lokalnego indeksu może ułatwić odczytywanie i debugowanie kodu. Zwykle do uzyskiwania dostępu do zmiennych `tile_static` i globalnego indeksowania w celu uzyskania dostępu do zmiennych `array` i `array_view` służy funkcja indeksowania lokalnego.
 
@@ -234,7 +234,7 @@ void SamplingExample() {
         }
         std::cout << "\n";
     }
-    // Output for SAMPLESSIZE = 2 is:
+    // Output for SAMPLESIZE = 2 is:
     //  4.5  6.5  8.5 10.5
     // 20.5 22.5 24.5 26.5
     // 36.5 38.5 40.5 42.5
@@ -329,7 +329,7 @@ parallel_for_each(matrix.extent.tile<SAMPLESIZE, SAMPLESIZE>(),
 });
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [tile_static, słowo kluczowe](../../cpp/tile-static-keyword.md)

@@ -1,69 +1,69 @@
 ---
-title: 'Instrukcje: Korzystanie z filtra bloku komunikatów'
+title: 'Porady: korzystanie z filtra bloku komunikatów'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - message-block filters, using [Concurrency Runtime]
 - using message-block filters [Concurrency Runtime]
 ms.assetid: db6b99fb-288d-4477-96dc-b9751772ebb2
-ms.openlocfilehash: 1bfa11953d27dc7e013e715b3f58111f124caeaf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 074d3989ce48b0b6d69206e3f83c374a2ec65c93
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321945"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142818"
 ---
-# <a name="how-to-use-a-message-block-filter"></a>Instrukcje: Korzystanie z filtra bloku komunikatów
+# <a name="how-to-use-a-message-block-filter"></a>Porady: korzystanie z filtra bloku komunikatów
 
-W tym dokumencie przedstawiono sposób użycia funkcji filtru umożliwiające blokiem komunikatów asynchronicznych akceptowanie lub odrzucanie wiadomość na podstawie ładunku tego komunikatu.
+W tym dokumencie przedstawiono sposób użycia funkcji filtru w celu włączenia asynchronicznego bloku komunikatów do akceptowania lub odrzucania komunikatu na podstawie ładunku tego komunikatu.
 
-Podczas tworzenia obiektu bloku komunikatu takich jak [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md), [concurrency::call](../../parallel/concrt/reference/call-class.md), lub [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md), możesz podać *funkcja filtrowania* określający, czy blok komunikatów akceptuje lub odrzuca komunikat. Funkcję filtru jest to wygodny sposób, aby zagwarantować, że blok komunikatów odbiera tylko niektóre wartości.
+Podczas tworzenia obiektu bloku komunikatów, takiego jak [concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md), [concurrency:: Call](../../parallel/concrt/reference/call-class.md)lub [concurrency:: Transformer](../../parallel/concrt/reference/transformer-class.md), można dostarczyć *funkcję filtru* , która określa, czy blok komunikatów akceptuje lub odrzuca komunikat. Funkcja filtru jest użytecznym sposobem zagwarantowania, że blok komunikatów odbiera tylko niektóre wartości.
 
-Funkcje filtra są ważne, ponieważ umożliwiają one nawiązanie połączenia bloki komunikatów do formularza *przepływu danych sieci*. W przypadku sieci przepływu danych bloki komunikatów sterowania przepływem danych przez przetwarzanie tylko tych wiadomości, które spełniają określone kryteria. To porównać do modelu przepływ sterowania, gdy przepływ danych jest regulowany przy użyciu struktury sterujące przykład instrukcje warunkowe, pętle i tak dalej.
+Funkcja filters jest ważna, ponieważ umożliwia łączenie bloków komunikatów z *sieciami przepływu danych*. W sieci przepływu danych bloki komunikatów sterują przepływem danych przez przetwarzanie tylko tych komunikatów, które spełniają określone kryteria. Porównaj to z modelem przepływu sterowania, gdzie przepływ danych jest regulowany przy użyciu struktur kontroli, takich jak instrukcje warunkowe, pętle i tak dalej.
 
-Ten dokument zawiera prosty przykład sposobu użycia filtr komunikatu. Dodatkowe przykłady, używające filtry komunikatów i model przepływu danych do łączenia bloków komunikatów, zobacz [instruktażu: Tworzenie agenta przepływu danych](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md) i [instruktażu: Tworzenie sieci przetwarzania obrazów](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+Ten dokument zawiera podstawowy przykład użycia filtru komunikatów. Aby uzyskać dodatkowe przykłady, które używają filtrów komunikatów i modelu przepływu danych do łączenia bloków komunikatów, zobacz [Przewodnik: tworzenie agenta przepływu danych](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md) i [Przewodnik: tworzenie sieci przetwarzania obrazów](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 ## <a name="example"></a>Przykład
 
-Należy wziąć pod uwagę następującą funkcję `count_primes`, która przedstawia podstawy używania Blok komunikatów, który nie filtruje wiadomości przychodzących. Blok komunikatów dołącza liczb pierwszych do [std::vector](../../standard-library/vector-class.md) obiektu. `count_primes` Funkcji wysyła kilka liczb do bloku komunikatów odbiera wartości danych wyjściowych z bloku komunikatów i drukuje tych dwóch liczb znajdujących się na pierwsze do konsoli.
+Rozważmy następującą funkcję `count_primes`, która ilustruje podstawowe użycie bloku komunikatów, który nie filtruje komunikatów przychodzących. Blok komunikatów dołącza podstawowe numery do obiektu [wektora std:: Vector](../../standard-library/vector-class.md) . Funkcja `count_primes` wysyła kilka liczb do bloku komunikatów, odbiera wartości wyjściowe z bloku komunikatów i drukuje te liczby, które są dostępne w konsoli programu.
 
 [!code-cpp[concrt-primes-filter#1](../../parallel/concrt/codesnippet/cpp/how-to-use-a-message-block-filter_1.cpp)]
 
-`transformer` Obiektu przetwarza wszystkie wartości wejściowe; wymaga to jednak tylko te wartości, które są Północnej. Mimo że mogłyby być zapisywane aplikacji, tak aby nadawca wysyła tylko liczb pierwszych, nie zawsze znane wymagania odbiorcom wiadomości.
+Obiekt `transformer` przetwarza wszystkie wartości wejściowe; jednak wymaga to tylko tych wartości, które są podstawowe. Mimo że aplikacja może zostać zapisywana w taki sposób, aby nadawca wiadomości wysyłał tylko numery podstawowe, wymagania odbiorcy wiadomości nie zawsze są znane.
 
 ## <a name="example"></a>Przykład
 
-Poniższa funkcja `count_primes_filter`, wykonuje to samo zadanie `count_primes` funkcji. Jednak `transformer` obiekt w tej wersji używa funkcji filtru, aby akceptować tylko tych wartości, które są prime. Funkcja, która wykonuje akcję odbiera tylko liczby pierwsze; w związku z tym, nie ma do wywołania `is_prime` funkcji.
+Następująca funkcja `count_primes_filter`, wykonuje to samo zadanie co funkcja `count_primes`. Jednak obiekt `transformer` w tej wersji używa funkcji filtru, aby akceptować tylko te wartości, które są podstawowe. Funkcja wykonująca akcję tylko otrzymuje numery podstawowe; w związku z tym nie musi wywoływać funkcji `is_prime`.
 
-Ponieważ `transformer` obiekt otrzymuje tylko liczby pierwsze `transformer` sam obiekt może zawierać liczb pierwszych. Innymi słowy `transformer` obiekt w tym przykładzie nie jest wymagane do dodawania liczb pierwszych, aby `vector` obiektu.
+Ponieważ obiekt `transformer` otrzymuje tylko cyfry podstawowe, obiekt `transformer` może zawierać liczby pierwszych. Innymi słowy, obiekt `transformer` w tym przykładzie nie jest wymagany do dodawania numerów pierwszych do obiektu `vector`.
 
 [!code-cpp[concrt-primes-filter#2](../../parallel/concrt/codesnippet/cpp/how-to-use-a-message-block-filter_2.cpp)]
 
-`transformer` Obiektu przetwarza teraz tylko tych wartości, które są Północnej. W poprzednim przykładzie `transformer` obiektów są przetwarzane wszystkie komunikaty. Dlatego taką samą liczbę wiadomości, które wysyła musi otrzymać bit poprzedniego przykładu. W tym przykładzie użyto wynik [concurrency::send](reference/concurrency-namespace-functions.md#send) funkcję, aby określić, ile komunikatów można otrzymywać `transformer` obiektu. `send` Funkcja zwraca **true** po buforu komunikatu zaakceptuje wiadomość i **false** po buforu komunikatu odrzuca komunikat. W związku z tym ile razy czy buforu komunikatu zaakceptuje wiadomość jest zgodna z liczbą, liczb pierwszych.
+Obiekt `transformer` teraz przetwarza tylko te wartości, które są podstawowe. W poprzednim przykładzie `transformer` obiekt przetwarza wszystkie komunikaty. W związku z tym poprzedni przykład musi otrzymać taką samą liczbę wysyłanych komunikatów. W tym przykładzie jest używany wynik funkcji [concurrency:: Send](reference/concurrency-namespace-functions.md#send) , aby określić, ile komunikatów ma być odbieranych z obiektu `transformer`. Funkcja `send` zwraca **wartość true** , jeśli bufor komunikatów akceptuje komunikat i ma **wartość false** , gdy bufor komunikatów odrzuci komunikat. W związku z tym, ile razy bufor komunikatów akceptuje komunikat jest zgodny z liczbą pierwszych wartości.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod przedstawia kompletny przykład. Przykład wywołuje zarówno `count_primes` funkcji i `count_primes_filter` funkcji.
+Poniższy kod przedstawia kompletny przykład. Przykład wywołuje zarówno funkcję `count_primes`, jak i funkcję `count_primes_filter`.
 
 [!code-cpp[concrt-primes-filter#3](../../parallel/concrt/codesnippet/cpp/how-to-use-a-message-block-filter_3.cpp)]
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
-Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `primes-filter.cpp` , a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
+Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `primes-filter.cpp` a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
 
-**Cl.exe/ehsc blokad filter.cpp**
+> **CL. exe/EHsc primes-Filter. cpp**
 
-## <a name="robust-programming"></a>Niezawodne programowanie
+## <a name="robust-programming"></a>Skuteczne programowanie
 
-Funkcja filtru może być funkcji lambda, wskaźnika funkcji lub obiektu funkcji. Każdej funkcji filtru ma jedną z następujących form:
+Funkcja filtru może być funkcją lambda, wskaźnikiem funkcji lub obiektem funkcji. Każda funkcja filtru przyjmuje jedną z następujących form:
 
 ```Output
 bool (T)
 bool (T const &)
 ```
 
-Aby wyeliminować niepotrzebnego kopiowania danych, użyj drugiego formularza, jeśli masz typ agregacji, który jest przekazywany przez wartość.
+Aby wyeliminować niepotrzebne kopiowanie danych, należy użyć drugiego formularza w przypadku typu agregacji, który jest przesyłany przez wartość.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Przewodnik: tworzenie agenta przepływu danych](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>

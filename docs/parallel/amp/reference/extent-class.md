@@ -12,20 +12,20 @@ f1_keywords:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-ms.openlocfilehash: 46af59708ef3f0d91883c52502bce4d09676ca77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e8dae7b76ea2efc852486a19f5d298cda477012
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181947"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126724"
 ---
 # <a name="extent-class-c-amp"></a>extent — Klasa (C++ AMP)
 
-Reprezentuje wektor *N* wartości całkowitych, które określają granice przestrzeni *N*-wymiarowej, która pochodzi od 0. Wartości w wektorze są uporządkowane od najbardziej do najmniej znaczących.
+Reprezentuje wektora *n* wartości całkowitych, które określają granice przestrzeni *n*-wymiarowej, która ma początek 0. Wartości w wektorze są uporządkowane od najbardziej do najmniej znaczących.
 
-### <a name="syntax"></a>Składnia
+## <a name="syntax"></a>Składnia
 
-```
+```cpp
 template <int _Rank>
 class extent;
 ```
@@ -33,82 +33,82 @@ class extent;
 ### <a name="parameters"></a>Parametry
 
 *_Rank*<br/>
-Ranga `extent` obiektu.
+Ranga obiektu `extent`.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** amp.h
+**Nagłówek:** amp. h
 
-**Namespace:** Współbieżność
+**Przestrzeń nazw:** Współbieżności
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[Konstruktor zakresu](#ctor)|Inicjuje nowe wystąpienie klasy `extent` klasy.|
+|[Konstruktor zakresów](#ctor)|Inicjuje nowe wystąpienie klasy `extent`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[zawiera](#contains)|Sprawdza, czy określony `extent` obiekt ma określony stopień.|
-|[Rozmiar](#size)|Zwraca całkowity rozmiar liniowy zakresu (w jednostkach elementów).|
-|[tile](#tile)|Tworzy `tiled_extent` obiektu z fragmentów zadanych przez określone wymiary.|
+|[wyświetlana](#contains)|Sprawdza, czy określony obiekt `extent` ma określoną rangę.|
+|[zmienia](#size)|Zwraca łączny rozmiar liniowy zakresu (w jednostkach elementów).|
+|[tabliczek](#tile)|Tworzy obiekt `tiled_extent` z zakresami kafelków podanymi przez określone wymiary.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[operator-](#operator_min)|Zwraca nowy `extent` obiektu, który jest tworzony przez odjęcie `index` elementów od odpowiadających im `extent` elementów.|
-|[operator--](#operator_min_min)|Zmniejsza o jeden każdy element obiektu `extent` obiektu.|
-|[operator%=](#operator_mod_eq)|Oblicza moduł (resztę) każdego elementu w `extent` obiektu, gdy ten element jest dzielona przez liczbę.|
-|[operator*=](#operator_star_eq)|Mnoży każdy element obiektu `extent` przez liczbę.|
+|[zakład](#operator_min)|Zwraca nowy obiekt `extent`, który jest tworzony przez odjęcie elementów `index` z odpowiednich `extent` elementów.|
+|[operator--](#operator_min_min)|Zmniejsza każdy element obiektu `extent`.|
+|[operator% =](#operator_mod_eq)|Oblicza moduł (resztę) każdego elementu w obiekcie `extent`, gdy ten element jest dzielony przez liczbę.|
+|[operator * =](#operator_star_eq)|Mnoży każdy element obiektu `extent` przez liczbę.|
 |[operator/=](#operator_min_eq)|Dzieli każdy element obiektu `extent` przez liczbę.|
-|[Extent::operator\[\]](#operator_at)|Zwraca element, który jest umieszczony pod określonym indeksem.|
-|[operator +](#operator_add)|Zwraca nowy `extent` obiektu, który jest tworzony przez dodanie odpowiadających im `index` i `extent` elementów.|
-|[operator++](#operator_add_add)|Zwiększa każdy element obiektu `extent` obiektu.|
-|[operator+=](#operator_add_eq)|Dodaje określoną liczbę do każdego elementu `extent` obiektu.|
-|[operator=](#operator_eq)|Kopiuje zawartość innego `extent` obiektu do wskazanego.|
-|[operator-=](#operator_min_eq)|Odejmuje określoną liczbę od każdego elementu obiektu `extent` obiektu.|
+|[zakres:: operator\[\]](#operator_at)|Zwraca element, który znajduje się w określonym indeksie.|
+|[operator +](#operator_add)|Zwraca nowy obiekt `extent`, który jest tworzony przez dodanie odpowiednich `index` i `extent` elementów.|
+|[operator + +](#operator_add_add)|Zwiększa każdy element obiektu `extent`.|
+|[operator + =](#operator_add_eq)|Dodaje określoną liczbę do każdego elementu obiektu `extent`.|
+|[operator =](#operator_eq)|Kopiuje zawartość innego obiektu `extent` do tego.|
+|[operator-=](#operator_min_eq)|Odejmuje określoną liczbę od każdego elementu `extent` obiektu.|
 
-### <a name="public-constants"></a>Publiczne stałe
+### <a name="public-constants"></a>Stałe publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[rank Constant](#rank_constant)|Zwraca rangę obiektu `extent` obiektu.|
+|[Stała rangi](#rank_constant)|Pobiera rangę obiektu `extent`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
 `extent`
 
-## <a name="contains"></a> zawiera
+## <a name="contains"></a>wyświetlana
 
-Wskazuje, czy określony [indeksu](index-class.md) wartość znajduje się w obiekcie "zakresu".
+Wskazuje, czy określona wartość [indeksu](index-class.md) jest zawarta w obiekcie "zakres".
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 bool contains(const index<rank>& _Index) const restrict(amp,cpu);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Parametr _Index*<br/>
-`index` Wartość do sprawdzenia.
+*_Index*<br/>
+Wartość `index` do przetestowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-**wartość true,** Jeśli określony *indeksu* wartość jest zawarta w `extent` obiektu; w przeciwnym razie **false**.
+**wartość true** , jeśli określona wartość *indeksu* jest zawarta w obiekcie `extent`; w przeciwnym razie **false**.
 
-##  <a name="ctor"></a> zakres
+## <a name="ctor"></a>rozmiaru
 
-Inicjuje nowe wystąpienie klasy "zakresu".
+Inicjuje nowe wystąpienie klasy "zakres".
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 extent() restrict(amp,cpu);
 extent(const extent<_Rank>& _Other) restrict(amp,cpu);
 explicit extent(int _I) restrict(amp,cpu);
@@ -120,7 +120,7 @@ explicit extent(const int _Array[_Rank])restrict(amp,cpu);
 ### <a name="parameters"></a>Parametry
 
 *_Array*<br/>
-Tablica `_Rank` liczb całkowitych, które służy do tworzenia nowego `extent` obiektu.
+Tablica `_Rank` liczb całkowitych, która jest używana do tworzenia nowego obiektu `extent`.
 
 *_I*<br/>
 Długość zakresu.
@@ -129,99 +129,99 @@ Długość zakresu.
 Długość najbardziej znaczącego wymiaru.
 
 *_I1*<br/>
-Długość następnego do najbardziej znaczący wymiar.
+Długość kolejnego najbardziej znaczącego wymiaru.
 
 *_I2*<br/>
 Długość najmniej znaczącego wymiaru.
 
-*_Inne*<br/>
-`extent` Obiektu, na którym nowym `extent` opiera się obiekt.
+*_Other*<br/>
+Obiekt `extent`, na którym jest oparty nowy obiekt `extent`.
 
 ## <a name="remarks"></a>Uwagi
 
-Konstruktor bezparametrowy inicjuje `extent` obiekt, który ma trójwymiarowy.
+Konstruktor domyślny inicjuje obiekt `extent`, który ma rangę trzech.
 
-Jeśli tablica jest używana do konstruowania `extent` obiektu, długość tablicy musi odpowiadać randze obiektu `extent` obiektu.
+Jeśli tablica jest używana do konstruowania obiektu `extent`, Długość tablicy musi być zgodna z rangą `extent` obiektu.
 
-##  <a name="operator_mod_eq"></a> operator % =
+## <a name="operator_mod_eq"></a>operator% =
 
-Oblicza moduł (resztę) każdego elementu w zakresie, gdy ten element jest dzielona przez liczbę.
+Oblicza moduł (resztę) każdego elementu w zakresie, gdy ten element jest podzielony przez liczbę.
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 extent<_Rank>& operator%=(int _Rhs) restrict(cpu, direct3d);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
-Numer, aby znaleźć moduł.
+Liczba, w której ma zostać znaleziony moduł.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-`extent` Obiektu.
+Obiekt `extent`.
 
-##  <a name="operator_star_eq"></a> operator * =
+## <a name="operator_star_eq"></a>operator * =
 
 Mnoży każdy element w obiekcie "zakres" przez określoną liczbę.
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 extent<_Rank>& operator*=(int _Rhs) restrict(amp,cpu);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
-Liczbę Aby pomnożyć.
+Liczba do pomnożenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-`extent` Obiektu.
+Obiekt `extent`.
 
-## <a name="operator_add"></a> operator +
+## <a name="operator_add"></a>operator +
 
-Zwraca nowy `extent` obiekt utworzony przez dodanie odpowiadających im `index` i `extent` elementów.
+Zwraca nowy obiekt `extent` utworzony przez dodanie odpowiednich `index` i `extent` elementów.
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 extent<_Rank> operator+(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
-`index` Obiekt, który zawiera elementy do dodania.
+Obiekt `index`, który zawiera elementy do dodania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Nowy `extent` obiektu.
+Nowy obiekt `extent`.
 
-##  <a name="operator_add_add"></a> operator ++
+## <a name="operator_add_add"></a>operator + +
 
 Zwiększa każdy element obiektu "zakres".
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 extent<_Rank>& operator++() restrict(amp,cpu);
 extent<_Rank> operator++(int)restrict(amp,cpu);
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Dla operatora prefiksowego `extent` obiektu (`*this`). Dla operatora sufiksowego nowy `extent` obiektu.
+Dla operatora prefiksu obiekt `extent` (`*this`). Dla operatora sufiksu nowy obiekt `extent`.
 
-##  <a name="operator_add_eq"></a> += — operator
+## <a name="operator_add_eq"></a>operator + =
 
 Dodaje określoną liczbę do każdego elementu obiektu "zakres".
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 extent<_Rank>& operator+=(const extent<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator+=(const index<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator+=(int _Rhs) restrict(amp,cpu);
@@ -232,70 +232,70 @@ extent<_Rank>& operator+=(int _Rhs) restrict(amp,cpu);
 *_Rhs*<br/>
 Liczba, indeks lub zakres do dodania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Wartość wynikowa `extent` obiektu.
+Otrzymany `extent` obiekt.
 
-##  <a name="operator_min"></a> operator-
+## <a name="operator_min"></a>zakład
 
-Tworzy nową `extent` obiektu przez odjęcie każdego elementu w określonym `index` obiekt odpowiadający mu element w tym `extent` obiektu.
+Tworzy nowy obiekt `extent` poprzez odjęcie każdego elementu w określonym obiekcie `index` z odpowiedniego elementu w tym obiekcie `extent`.
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 extent<_Rank> operator-(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
-`index` Obiekt, który zawiera elementy do odjęcia.
+Obiekt `index`, który zawiera elementy do odejmowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Nowy `extent` obiektu.
+Nowy obiekt `extent`.
 
-##  <a name="operator_min_min"></a> operator--
+## <a name="operator_min_min"></a>operator--
 
-Zmniejsza o jeden każdy element w obiekcie "zakresu".
+Zmniejsza każdy element w obiekcie "zakres".
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 extent<_Rank>& operator--() restrict(amp,cpu);
 extent<_Rank> operator--(int)restrict(amp,cpu);
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Dla operatora prefiksowego `extent` obiektu (`*this`). Dla operatora sufiksowego nowy `extent` obiektu.
+Dla operatora prefiksu obiekt `extent` (`*this`). Dla operatora sufiksu nowy obiekt `extent`.
 
-##  <a name="operator_div_eq"></a> operator / =
+## <a name="operator_div_eq"></a>operator/=
 
 Dzieli każdy element w obiekcie "zakres" przez określoną liczbę.
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 extent<_Rank>& operator/=(int _Rhs) restrict(amp,cpu);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
-Liczba do podzielenia przez.
+Liczba, przez którą ma zostać podzielona wartość.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-`extent` Obiektu.
+Obiekt `extent`.
 
-##  <a name="operator_min_eq"></a> operator-=
+## <a name="operator_min_eq"></a>operator-=
 
 Odejmuje określoną liczbę od każdego elementu obiektu "zakres".
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 extent<_Rank>& operator-=(const extent<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator-=(const index<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator-=(int _Rhs) restrict(amp,cpu);
@@ -304,76 +304,76 @@ extent<_Rank>& operator-=(int _Rhs) restrict(amp,cpu);
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
-Liczba odejmowana.
+Liczba do odjęcia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Wartość wynikowa `extent` obiektu.
+Otrzymany `extent` obiekt.
 
-##  <a name="operator_eq"></a> operator =
+## <a name="operator_eq"></a>operator =
 
-Kopiuje zawartość innego obiektu "zakres" do tego.
+Kopiuje zawartość innego obiektu "zakres" do tego elementu.
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 extent<_Rank>& operator=(const extent<_Rank>& _Other) restrict(amp,cpu);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Inne*<br/>
-`extent` Obiektu do skopiowania.
+*_Other*<br/>
+Obiekt `extent`, z którego ma być kopiowany.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Odwołanie do `extent` obiektu.
+Odwołanie do tego obiektu `extent`.
 
-##  <a name="operator_at"></a> Extent::operator \[\]
+## <a name="operator_at"></a>zakres:: operator \[\]
 
-Zwraca element, który jest umieszczony pod określonym indeksem.
+Zwraca element, który znajduje się w określonym indeksie.
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 int operator[](unsigned int _Index) const restrict(amp,cpu);
 int& operator[](unsigned int _Index) restrict(amp,cpu);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Parametr _Index*<br/>
+*_Index*<br/>
 Liczba całkowita z zakresu od 0 do rangi minus 1.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Element, który jest umieszczony pod określonym indeksem.
+Element o określonym indeksie.
 
-##  <a name="rank_constant"></a> Ranga
+## <a name="rank_constant"></a>stopni
 
 Przechowuje rangę obiektu "zakres".
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 static const int rank = _Rank;
 ```
 
-##  <a name="size"></a> Rozmiar
+## <a name="size"></a>zmienia
 
-Zwraca całkowity rozmiar liniowy `extent` obiektu (w jednostkach elementów).
+Zwraca łączny rozmiar liniowy obiektu `extent` (w jednostkach elementów).
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 unsigned int size() const restrict(amp,cpu);
 ```
 
-## <a name="tile"></a> Kafelek
+## <a name="tile"></a>tabliczek
 
-Tworzy obiekt tiled_extent z wymiary określonego fragmentu.
+Tworzy obiekt tiled_extent o określonym wymiarze kafelka.
 
-```
+```cpp
 template <int _Dim0>
 tiled_extent<_Dim0> tile() const ;
 
@@ -387,12 +387,12 @@ tiled_extent<_Dim0, _Dim1, _Dim2> tile() const ;
 ### <a name="parameters"></a>Parametry
 
 *_Dim0*<br/>
-Najbardziej znaczący składnik w zakresie poddanym fragmentacji.
+Najbardziej znaczący składnik zakresu.
 *_Dim1*<br/>
-Dalej do najbardziej znaczący składnik w zakresie poddanym fragmentacji.
+Najbardziej znaczący składnik najbardziej znaczącego fragmentu.
 *_Dim2*<br/>
-Najmniej znaczący składnik w zakresie poddanym fragmentacji.
+Najmniej znaczący składnik w zakresie rozpiętym.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

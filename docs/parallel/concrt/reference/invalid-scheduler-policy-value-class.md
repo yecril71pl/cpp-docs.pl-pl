@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_scheduler_policy_value class
 ms.assetid: 8c533e3f-2774-4192-8616-b2313b859bf7
-ms.openlocfilehash: 8b8e233769d859aac102d0554a6987e9b7201473
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 6a66b2b303a4b3b0cb8c2c7a3c515ac8cd1b33a0
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341059"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142990"
 ---
-# <a name="invalidschedulerpolicyvalue-class"></a>invalid_scheduler_policy_value — Klasa
+# <a name="invalid_scheduler_policy_value-class"></a>invalid_scheduler_policy_value — Klasa
 
-Ta klasa opisuje wyjątek generowany, gdy klucz zasad `SchedulerPolicy` obiekt jest ustawiony na nieprawidłową wartość dla tego klucza.
+Ta klasa opisuje wyjątek zgłoszony, gdy klucz zasad obiektu `SchedulerPolicy` jest ustawiony na nieprawidłową wartość dla tego klucza.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class invalid_scheduler_policy_value : public std::exception;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[invalid_scheduler_policy_value](invalid-scheduler-policy-thread-specification-class.md#ctor|Przeciążone. Konstruuje `invalid_scheduler_policy_value` obiektu.|
+|[invalid_scheduler_policy_value](invalid-scheduler-policy-thread-specification-class.md#ctor|Przeciążone. Konstruuje obiekt `invalid_scheduler_policy_value`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -39,15 +39,15 @@ class invalid_scheduler_policy_value : public std::exception;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concrt.h
+**Nagłówek:** ConcRT. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="ctor"></a> invalid_scheduler_policy_value
+## <a name="ctor"></a>invalid_scheduler_policy_value
 
-Konstruuje `invalid_scheduler_policy_value` obiektu.
+Konstruuje obiekt `invalid_scheduler_policy_value`.
 
-```
+```cpp
 explicit _CRTIMP invalid_scheduler_policy_value(_In_z_ const char* _Message) throw();
 
 invalid_scheduler_policy_value() throw();
@@ -56,9 +56,9 @@ invalid_scheduler_policy_value() throw();
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Opisowy komunikat dotyczący błędu.
+Opisowy komunikat o błędzie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [SchedulerPolicy, klasa](schedulerpolicy-class.md)

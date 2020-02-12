@@ -1,57 +1,57 @@
 ---
-title: 'Instrukcje: Korzystanie z kontenerów równoległych do zwiększania wydajności'
+title: 'Porady: korzystanie z kontenerów równoległych do zwiększania wydajności'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - increasing efficiency with parallel containers [Concurrency Runtime]
 - concurrent_queue class, examples
 - concurrent_vector class, examples
 ms.assetid: bd00046d-e9b6-4ae1-b661-3995f671b867
-ms.openlocfilehash: 2479915b167ee3dbc2ce43d9c2733efc74818bbe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd120d1fbe0f73ed0974efda5a1aa643a1afde9d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394445"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143012"
 ---
-# <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>Instrukcje: Korzystanie z kontenerów równoległych do zwiększania wydajności
+# <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>Porady: korzystanie z kontenerów równoległych do zwiększania wydajności
 
-W tym temacie pokazano, jak za pomocą kontenerów równoległych wydajne magazynowanie i uzyskać dostęp do danych w sposób równoległy.
+W tym temacie pokazano, jak używać kontenerów równoległych do wydajnego przechowywania i uzyskiwania dostępu do danych.
 
-Przykładowy kod oblicza zestawu iloczyn i numery Carmichael równolegle. Następnie dla każdego numeru Carmichael kod oblicza główne czynniki tej liczby.
+Przykładowy kod oblicza zestaw wbudowanych i Carmichael numerów równoległych. Następnie dla każdego numeru Carmichael kod oblicza podstawowe czynniki tej liczby.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie przedstawiono `is_prime` funkcji, która określa, czy wartości wejściowej jest liczba pierwsza, a `is_carmichael` funkcji, która określa, czy wartość wejściowa jest liczbą Carmichael.
+W poniższym przykładzie pokazano funkcję `is_prime`, która określa, czy wartość wejściowa jest liczbą główną, i funkcję `is_carmichael`, która określa, czy wartość wejściowa jest liczbą Carmichael.
 
 [!code-cpp[concrt-carmichael-primes#1](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_1.cpp)]
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie użyto `is_prime` i `is_carmichael` funkcji do obliczenia zestawy prime i Carmichael liczb. W przykładzie użyto [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) i [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorytmów w celu obliczenia każdego zestawu równoległego. Aby uzyskać więcej informacji dotyczących algorytmów równoległych, zobacz [algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md).
+Poniższy przykład używa funkcji `is_prime` i `is_carmichael`, aby obliczyć zestawy Carmichael i numery. W przykładzie zastosowano algorytmy [concurrency::p arallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) i [concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) do obliczenia każdego zestawu równolegle. Aby uzyskać więcej informacji na temat algorytmów równoległych, zobacz [algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md).
 
-W tym przykładzie użyto [concurrency::concurrent_queue](../../parallel/concrt/reference/concurrent-queue-class.md) obiekt do przechowywania zbiór Carmichael liczby, ponieważ później będą używać tego obiektu jako kolejki. Używa ona [concurrency::concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) obiekt zawiera zbiór liczb pierwszych, ponieważ później będą Iterowanie za pomocą tego ustawienia, aby znaleźć główne czynniki.
+W tym przykładzie użyto obiektu [concurrency:: concurrent_queue](../../parallel/concrt/reference/concurrent-queue-class.md) do przechowywania zestawu Carmichael Numbers, ponieważ będzie on później używał tego obiektu jako kolejki roboczej. Używa obiektu [concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) do przechowywania zestawu numerów pierwszych, ponieważ będzie on później powtarzał się w tym zestawie, aby znaleźć podstawowe czynniki.
 
 [!code-cpp[concrt-carmichael-primes#2](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_2.cpp)]
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie przedstawiono `prime_factors_of` funkcji, która korzysta z wersji próbnej dzielenia można znaleźć wszystkie główne czynniki danej wartości.
+Poniższy przykład pokazuje funkcję `prime_factors_of`, która używa dzielenia wersji próbnej, aby znaleźć wszystkie podstawowe czynniki danej wartości.
 
-Ta funkcja używa [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algorytmu do iterowania po kolekcji liczby pierwsze. `concurrent_vector` Obiekt umożliwia pętli równoległej jednocześnie dodać główne czynniki do wyniku.
+Ta funkcja używa algorytmu [concurrency::p arallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) do iteracji zbioru numerów pierwszych. Obiekt `concurrent_vector` umożliwia pętlę równoległą, aby jednocześnie dodać podstawowe czynniki do wyniku.
 
 [!code-cpp[concrt-carmichael-primes#3](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_3.cpp)]
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie przetwarza każdy element w kolejce Carmichael liczb, wywołując `prime_factors_of` funkcji do obliczania jego główne czynniki. Używa grupy zadań, aby wykonać tę pracę równolegle. Aby uzyskać więcej informacji o grupach zadań, zobacz [równoległość zadań](../../parallel/concrt/task-parallelism-concurrency-runtime.md).
+Ten przykład przetwarza każdy element w kolejce numerów Carmichael przez wywołanie funkcji `prime_factors_of`, aby obliczyć jej podstawowe czynniki. Używa grupy zadań do równoległego wykonywania tej pracy. Aby uzyskać więcej informacji na temat grup zadań, zobacz [równoległość zadań](../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
-Jeśli ta liczba ma więcej niż cztery podstawowe czynniki, w tym przykładzie drukuje główne czynniki dla każdego numeru Carmichael.
+Ten przykład drukuje podstawowe czynniki dla każdego numeru Carmichael, jeśli ten numer ma więcej niż cztery podstawowe czynniki.
 
 [!code-cpp[concrt-carmichael-primes#4](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_4.cpp)]
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod przedstawia kompletny przykład, który używa kontenerów równoległych do obliczenia główne czynniki liczb Carmichael.
+Poniższy kod przedstawia kompletny przykład, który używa kontenerów równoległych do obliczania zasadniczych czynników numerów Carmichael.
 
 [!code-cpp[concrt-carmichael-primes#5](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_5.cpp)]
 
@@ -65,16 +65,16 @@ Prime factors of 1050985 are: 5 13 19 23 37.
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
-Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `carmichael-primes.cpp` , a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
+Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `carmichael-primes.cpp` a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
 
-**Cl.exe/ehsc carmichael-primes.cpp**
+> **CL. exe/EHsc Carmichael-primes. cpp**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Równoległe kontenery oraz obiekty](../../parallel/concrt/parallel-containers-and-objects.md)<br/>
-[Równoległość zadania](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
+[Równoległość zadań](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [concurrent_vector, klasa](../../parallel/concrt/reference/concurrent-vector-class.md)<br/>
 [concurrent_queue, klasa](../../parallel/concrt/reference/concurrent-queue-class.md)<br/>
-[parallel_invoke Function](reference/concurrency-namespace-functions.md#parallel_invoke)<br/>
-[parallel_for Function](reference/concurrency-namespace-functions.md#parallel_for)<br/>
+[Funkcja parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)<br/>
+[Funkcja parallel_for](reference/concurrency-namespace-functions.md#parallel_for)<br/>
 [task_group, klasa](reference/task-group-class.md)

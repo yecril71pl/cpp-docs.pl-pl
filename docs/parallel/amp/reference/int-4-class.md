@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_4::bg
 - amp_short_vectors/Concurrency::graphics::int_4::yxz
 ms.assetid: 01768c28-23a8-4965-8267-96834864f4eb
-ms.openlocfilehash: 7bcdd005ab5f530e08fc6e5326404d19f85faf4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ca8eb4c93b3e9cd9108712727d1f83421c9d679
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180215"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126672"
 ---
-# <a name="int4-class"></a>int_4 — Klasa
+# <a name="int_4-class"></a>int_4 — Klasa
 
 Reprezentuje krótki wektor czterech liczb całkowitych.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class int_4;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[int_4 Constructor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.|
+|[Konstruktor int_4](#ctor)|Przeciążone. Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |int_4::get_w||
 |int_4::get_wx||
@@ -442,33 +442,33 @@ class int_4;
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|int_4::operator-||
-|int_4::operator--||
-|int_4::operator%=||
+|int_4:: operator-||
+|int_4:: operator--||
+|int_4:: operator% =||
 |int_4::operator&=||
 |int_4::operator*=||
-|int_4::operator/=||
+|int_4:: operator/=||
 |int_4::operator^=||
 |int_4::operator&#124;=||
-|int_4::operator~||
-|int_4::operator++||
-|int_4::operator+=||
-|int_4::operator <\<=||
+|int_4:: operator ~||
+|int_4:: operator + +||
+|int_4:: operator + =||
+|int_4:: operator <\<=||
 |int_4::operator=||
-|int_4::operator-=||
-|int_4::operator>>=||
+|int_4:: operator-=||
+|int_4:: operator > > =||
 
-### <a name="public-constants"></a>Publiczne stałe
+### <a name="public-constants"></a>Stałe publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[rozmiar — stała](#int_4__size)||
+|[Stała rozmiaru](#int_4__size)||
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |int_4::a||
 |int_4::ab||
@@ -484,7 +484,7 @@ class int_4;
 |int_4::ar||
 |int_4::arb||
 |int_4::arbg||
-|int_4::arg||
+|int_4:: ARG||
 |int_4::argb||
 |int_4::b||
 |int_4::ba||
@@ -605,15 +605,15 @@ class int_4;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** amp_short_vectors.h
+**Nagłówek:** amp_short_vectors. h
 
-**Namespace:** CONCURRENCY::Graphics
+**Przestrzeń nazw:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> int_4
+## <a name="ctor"></a>int_4
 
-Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.
+Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.
 
-```
+```cpp
 int_4() restrict(amp,
     cpu);
 
@@ -656,29 +656,29 @@ explicit inline int_4(
 ### <a name="parameters"></a>Parametry
 
 *_V0*<br/>
-Wartość do zainicjowania elementu 0.
+Wartość, aby zainicjować element 0.
 
 *_V1*<br/>
 Wartość do zainicjowania elementu 1.
 
 *_V2*<br/>
-Wartość można zainicjować element 2.
+Wartość do zainicjowania elementu 2.
 
 *_V3*<br/>
 Wartość do zainicjowania elementu 3.
 
 *_V*<br/>
-Wartość inicjalizacji.
+Wartość dla inicjalizacji.
 
-*_Inne*<br/>
+*_Other*<br/>
 Obiekt używany do inicjowania.
 
-##  <a name="int_4__size"></a> Rozmiar
+## <a name="int_4__size"></a>zmienia
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

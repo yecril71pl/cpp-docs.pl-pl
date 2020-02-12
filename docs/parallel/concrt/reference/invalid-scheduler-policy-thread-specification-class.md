@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_scheduler_policy_thread_specification class
 ms.assetid: 2d0fafb2-18f8-4284-8040-3db640d33303
-ms.openlocfilehash: 26d09610c6bb9e0c87852c9804e094617b021273
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: b6c2fd853ae19c48ae04d6601eb47e5afcb71944
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341087"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143033"
 ---
-# <a name="invalidschedulerpolicythreadspecification-class"></a>invalid_scheduler_policy_thread_specification — Klasa
+# <a name="invalid_scheduler_policy_thread_specification-class"></a>invalid_scheduler_policy_thread_specification — Klasa
 
-Ta klasa opisuje wyjątek generowany, gdy podejmowana jest próba można ustawić limity współbieżności `SchedulerPolicy` obiektu taki sposób, że wartość `MinConcurrency` klucz jest mniejsza niż wartość `MaxConcurrency` klucza.
+Ta klasa opisuje wyjątek zgłoszony, gdy podejmowana jest próba ustawienia limitów współbieżności obiektu `SchedulerPolicy` w taki sposób, że wartość klucza `MinConcurrency` jest mniejsza niż wartość klucza `MaxConcurrency`.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class invalid_scheduler_policy_thread_specification : public std::exception;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-value-class.md#ctor|Przeciążone. Konstruuje `invalid_scheduler_policy_value` obiektu.|
+|[invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-value-class.md#ctor|Przeciążone. Konstruuje obiekt `invalid_scheduler_policy_value`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -39,14 +39,15 @@ class invalid_scheduler_policy_thread_specification : public std::exception;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concrt.h
+**Nagłówek:** ConcRT. h
 
-**Namespace:** współbieżności
-##  <a name="ctor"></a> invalid_scheduler_policy_thread_specification
+**Przestrzeń nazw:** współbieżność
 
-Konstruuje `invalid_scheduler_policy_value` obiektu.
+## <a name="ctor"></a>invalid_scheduler_policy_thread_specification
 
-```
+Konstruuje obiekt `invalid_scheduler_policy_value`.
+
+```cpp
 explicit _CRTIMP invalid_scheduler_policy_thread_specification(_In_z_ const char* _Message) throw();
 
 invalid_scheduler_policy_thread_specification() throw();
@@ -55,9 +56,9 @@ invalid_scheduler_policy_thread_specification() throw();
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Opisowy komunikat dotyczący błędu.
+Opisowy komunikat o błędzie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [SchedulerPolicy, klasa](schedulerpolicy-class.md)

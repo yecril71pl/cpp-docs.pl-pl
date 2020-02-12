@@ -28,85 +28,85 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_2
 - amp_short_vectors/Concurrency::graphics::norm_2::operator--
 ms.assetid: 80703f9b-61f4-414a-93fd-bc774f7d3393
-ms.openlocfilehash: c48e6dd573e3303307cc8a0247a955aba62d809e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09bd33b5a8d9148c7959f69fcab4a260fe05c332
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353056"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126503"
 ---
-# <a name="norm2-class"></a>norm_2 — Klasa
+# <a name="norm_2-class"></a>norm_2 — Klasa
 
-Reprezentuje krótki wektor dwóch normalnych liczb.
+Reprezentuje krótki wektor dwóch liczb normalnych.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class norm_2;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[norm_2 Constructor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.|
+|[Konstruktor norm_2](#ctor)|Przeciążone. Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |norm_2::get_x||
 |norm_2::get_xy||
-|norm_2::get_y||
+|norm_2:: get_y||
 |norm_2::get_yx||
 |norm_2::ref_g||
-|norm_2::ref_r||
+|norm_2:: ref_r||
 |norm_2::ref_x||
-|norm_2::ref_y||
+|norm_2:: ref_y||
 |norm_2::set_x||
 |norm_2::set_xy||
-|norm_2::set_y||
-|norm_2::set_yx||
+|norm_2:: set_y||
+|norm_2:: set_yx||
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|norm_2::operator-||
-|norm_2::operator--||
-|norm_2::operator * =||
-|norm_2::operator / =||
-|norm_2::operator ++||
-|norm_2::operator +=||
-|norm_2::operator =||
-|norm_2::operator-=||
+|norm_2:: operator-||
+|norm_2:: operator--||
+|norm_2:: operator * =||
+|norm_2:: operator/=||
+|norm_2:: operator + +||
+|norm_2:: operator + =||
+|norm_2:: operator =||
+|norm_2:: operator-=||
 
-### <a name="public-constants"></a>Publiczne stałe
+### <a name="public-constants"></a>Stałe publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[rozmiar — stała](#norm_2__size)||
+|[Stała rozmiaru](#norm_2__size)||
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|norm_2::g||
-|norm_2::GR||
-|norm_2::r||
+|norm_2:: g||
+|norm_2:: GR||
+|norm_2:: r||
 |norm_2::rg||
-|norm_2::x||
-|norm_2::xy||
-|norm_2::y||
-|norm_2::yx||
+|norm_2:: x||
+|norm_2:: XY||
+|norm_2:: y||
+|norm_2:: yx||
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -114,15 +114,15 @@ class norm_2;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** amp_short_vectors.h
+**Nagłówek:** amp_short_vectors. h
 
-**Namespace:** CONCURRENCY::Graphics
+**Przestrzeń nazw:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> norm_2
+## <a name="ctor"></a>norm_2
 
-Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.
+Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.
 
-```
+```cpp
 norm_2() restrict(amp,
     cpu);
 
@@ -177,23 +177,23 @@ explicit inline norm_2(
 ### <a name="parameters"></a>Parametry
 
 *_V0*<br/>
-Wartość do zainicjowania elementu 0.
+Wartość, aby zainicjować element 0.
 
 *_V1*<br/>
 Wartość do zainicjowania elementu 1.
 
 *_V*<br/>
-Wartość inicjalizacji.
+Wartość dla inicjalizacji.
 
-*_Inne*<br/>
+*_Other*<br/>
 Obiekt używany do inicjowania.
 
-##  <a name="norm_2__size"></a> Rozmiar
+## <a name="norm_2__size"></a>zmienia
 
-```
+```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

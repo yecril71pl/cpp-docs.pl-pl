@@ -8,31 +8,31 @@ f1_keywords:
 helpviewer_keywords:
 - simple_partitioner class
 ms.assetid: d7e997af-54d1-43f5-abe0-def72df6edb3
-ms.openlocfilehash: 372773926903da32f1690904b34cd143a04940dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 503f36b90c5eb3319f9aa2d56528172ffa95bb11
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337248"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142499"
 ---
-# <a name="simplepartitioner-class"></a>simple_partitioner — Klasa
+# <a name="simple_partitioner-class"></a>simple_partitioner — Klasa
 
-`simple_partitioner` Klasa reprezentuje partycjonowania statycznego zakresu postanowiliśmy za pośrednictwem przez `parallel_for`. Partycjonera dzieli zakres na fragmenty w taki sposób, że każdy fragment ma co najmniej liczba iteracji, określony przez rozmiar fragmentu.
+Klasa `simple_partitioner` reprezentuje statyczne partycjonowanie zakresu powtarzanego przez `parallel_for`. Program Partitioner dzieli zakres na fragmenty w taki sposób, że każdy fragment ma co najmniej liczbę iteracji określoną przez rozmiar fragmentu.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class simple_partitioner;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[simple_partitioner](#ctor)|Konstruuje `simple_partitioner` obiektu.|
-|[~ simple_partitioner — destruktor](#dtor)|Niszczy `simple_partitioner` obiektu.|
+|[simple_partitioner](#ctor)|Konstruuje obiekt `simple_partitioner`.|
+|[~ simple_partitioner destruktor](#dtor)|Niszczy obiekt `simple_partitioner`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -40,23 +40,23 @@ class simple_partitioner;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** ppl.h
+**Nagłówek:** PPL. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="dtor"></a> ~ simple_partitioner
+## <a name="dtor"></a>~ simple_partitioner
 
-Niszczy `simple_partitioner` obiektu.
+Niszczy obiekt `simple_partitioner`.
 
-```
+```cpp
 ~simple_partitioner();
 ```
 
-##  <a name="ctor"></a> simple_partitioner —
+## <a name="ctor"></a>simple_partitioner
 
-Konstruuje `simple_partitioner` obiektu.
+Konstruuje obiekt `simple_partitioner`.
 
-```
+```cpp
 explicit simple_partitioner(_Size_type _Chunk_size);
 ```
 
@@ -65,6 +65,6 @@ explicit simple_partitioner(_Size_type _Chunk_size);
 *_Chunk_size*<br/>
 Minimalny rozmiar partycji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

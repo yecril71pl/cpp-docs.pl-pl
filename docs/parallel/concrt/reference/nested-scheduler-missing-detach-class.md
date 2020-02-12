@@ -8,34 +8,34 @@ f1_keywords:
 helpviewer_keywords:
 - nested_scheduler_missing_detach class
 ms.assetid: 65d3f277-6d43-4160-97ef-caf8b26c1641
-ms.openlocfilehash: db51f7b083cc0cbd9337fbbe5c672d190208f328
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c9553b036890c4ce28f1060bfe2f58ee1904935
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394393"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77138858"
 ---
-# <a name="nestedschedulermissingdetach-class"></a>nested_scheduler_missing_detach — Klasa
+# <a name="nested_scheduler_missing_detach-class"></a>nested_scheduler_missing_detach — Klasa
 
-Ta klasa opisuje wyjątek generowany, gdy w środowisku uruchomieniowym współbieżności: wykrywa, czy możesz zwrócenia przez niego do wywołania `CurrentScheduler::Detach` metody na poziomie kontekstu, który dołączony do drugiego za pomocą harmonogramu `Attach` metody `Scheduler` obiektu.
+Ta klasa opisuje wyjątek zgłoszony, gdy środowisko uruchomieniowe współbieżności wykryje, że wywołała metodę `CurrentScheduler::Detach` w kontekście dołączonym do drugiego harmonogramu przy użyciu metody `Attach` obiektu `Scheduler`.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class nested_scheduler_missing_detach : public std::exception;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[nested_scheduler_missing_detach](#ctor)|Przeciążone. Konstruuje `nested_scheduler_missing_detach` obiektu.|
+|[nested_scheduler_missing_detach](#ctor)|Przeciążone. Konstruuje obiekt `nested_scheduler_missing_detach`.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ten wyjątek jest zgłaszany tylko wtedy, gdy zagnieździć jednego harmonogramu wewnątrz innego przez wywołanie metody `Attach` metody `Scheduler` obiektów na poziomie kontekstu, który jest już właścicielem lub dołączone do innej usługi scheduler. Środowisko uruchomieniowe współbieżności zgłosi wyjątek, ten wyjątek tylko wtedy kiedy scenariusz może wykryć jako pomoc do lokalizowania problem. Nie każde wystąpienie pominięcie wywołać `CurrentScheduler::Detach` metody jest gwarantowane, generują ten wyjątek.
+Ten wyjątek jest zgłaszany tylko w przypadku zagnieżdżania jednego harmonogramu w innym, wywołując metodę `Attach` obiektu `Scheduler` w kontekście, który jest już własnością lub jest dołączony do innego harmonogramu. Środowisko uruchomieniowe współbieżności zgłasza ten wyjątek odpowiednio Uzgodnij, gdy może wykryć scenariusz jako pomoc w celu zlokalizowania problemu. Nie każde wystąpienie zaniedbania wywołania metody `CurrentScheduler::Detach` jest gwarantowane wygenerowanie tego wyjątku.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -45,15 +45,15 @@ Ten wyjątek jest zgłaszany tylko wtedy, gdy zagnieździć jednego harmonogramu
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concrt.h
+**Nagłówek:** ConcRT. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="ctor"></a> nested_scheduler_missing_detach
+## <a name="ctor"></a>nested_scheduler_missing_detach
 
-Konstruuje `nested_scheduler_missing_detach` obiektu.
+Konstruuje obiekt `nested_scheduler_missing_detach`.
 
-```
+```cpp
 explicit _CRTIMP nested_scheduler_missing_detach(_In_z_ const char* _Message) throw();
 
 nested_scheduler_missing_detach() throw();
@@ -62,9 +62,9 @@ nested_scheduler_missing_detach() throw();
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Opisowy komunikat dotyczący błędu.
+Opisowy komunikat o błędzie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Scheduler, klasa](scheduler-class.md)

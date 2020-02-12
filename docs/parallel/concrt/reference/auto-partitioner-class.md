@@ -8,31 +8,31 @@ f1_keywords:
 helpviewer_keywords:
 - auto_partitioner class
 ms.assetid: 7cc08e5d-20b4-47a4-b4b5-c214a78f5a9e
-ms.openlocfilehash: 2d8bbb8e8af17dd19953487c47e5fd40343fe349
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d1d8f19069412240de8e9d69cdcfb34618f2796
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391091"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142863"
 ---
-# <a name="autopartitioner-class"></a>auto_partitioner — Klasa
+# <a name="auto_partitioner-class"></a>auto_partitioner — Klasa
 
-`auto_partitioner` Klasa reprezentuje domyślną metodę `parallel_for`, `parallel_for_each` i `parallel_transform` służy do partycjonowania zakresu iteruje po nich. Ta metoda partycjonowania employes kradzież do równoważenia obciążenia w zakresie także na iteracji anulowania.
+Klasa `auto_partitioner` reprezentuje domyślną metodę `parallel_for`, `parallel_for_each` i `parallel_transform` użyć do partycjonowania zakresu, w którym się powtarza. Ta metoda partycjonowania wykorzystuje funkcję kradzieży zakresu na potrzeby równoważenia obciążenia, a także anulowania dla iteracji.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class auto_partitioner;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[auto_partitioner](#ctor)|Konstruuje `auto_partitioner` obiektu.|
-|[~auto_partitioner Destructor](#dtor)|Niszczy `auto_partitioner` obiektu.|
+|[auto_partitioner](#ctor)|Konstruuje obiekt `auto_partitioner`.|
+|[~ auto_partitioner destruktor](#dtor)|Niszczy obiekt `auto_partitioner`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -40,26 +40,26 @@ class auto_partitioner;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** ppl.h
+**Nagłówek:** PPL. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="dtor"></a> ~ auto_partitioner
+## <a name="dtor"></a>~ auto_partitioner
 
-Niszczy `auto_partitioner` obiektu.
+Niszczy obiekt `auto_partitioner`.
 
-```
+```cpp
 ~auto_partitioner();
 ```
 
-##  <a name="ctor"></a> auto_partitioner —
+## <a name="ctor"></a>auto_partitioner
 
-Konstruuje `auto_partitioner` obiektu.
+Konstruuje obiekt `auto_partitioner`.
 
-```
+```cpp
 auto_partitioner();
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

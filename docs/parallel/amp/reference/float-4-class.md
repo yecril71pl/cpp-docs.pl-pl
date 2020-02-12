@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_z
 - amp_short_vectors/Concurrency::graphics::float_4::set_xyzw
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
-ms.openlocfilehash: 63dbc38fd4c5c6d668dda525416ec4ff2f05b50f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efff4e2263704dab35e5c212f6ef5d906e3f7c72
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180287"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142177"
 ---
-# <a name="float4-class"></a>float_4 — Klasa
+# <a name="float_4-class"></a>float_4 — Klasa
 
-Reprezentuje krótki wektor czterech wartości zmiennoprzecinkowe.
+Reprezentuje krótki wektor czterech liczb zmiennoprzecinkowych.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class float_4;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[float_4 Constructor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.|
+|[Konstruktor float_4](#ctor)|Przeciążone. Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |float_4::get_w||
 |float_4::get_wx||
@@ -373,7 +373,7 @@ class float_4;
 |float_4::ref_r||
 |float_4::ref_w||
 |float_4::ref_x||
-|float_4::ref_y||
+|float_4:: ref_y||
 |float_4::ref_z||
 |float_4::set_w||
 |float_4::set_wx||
@@ -413,16 +413,16 @@ class float_4;
 |float_4::set_ywxz||
 |float_4::set_ywz||
 |float_4::set_ywzx||
-|float_4::set_yx||
+|float_4:: set_yx||
 |float_4::set_yxw||
 |float_4::set_yxwz||
 |float_4::set_yxz||
-|float_4::set_yxzw||
+|float_4:: set_yxzw||
 |float_4::set_yz||
 |float_4::set_yzw||
 |float_4::set_yzwx||
 |float_4::set_yzx||
-|float_4::set_yzxw||
+|float_4:: set_yzxw||
 |float_4::set_z||
 |float_4::set_zw||
 |float_4::set_zwx||
@@ -442,28 +442,28 @@ class float_4;
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|float_4::operator-||
-|float_4::operator--||
-|float_4::operator * =||
-|float_4::operator / =||
-|float_4::operator ++||
-|float_4::operator +=||
-|float_4::operator =||
-|float_4::operator-=||
+|float_4:: operator-||
+|float_4:: operator--||
+|float_4:: operator * =||
+|float_4:: operator/=||
+|float_4:: operator + +||
+|float_4:: operator + =||
+|float_4:: operator =||
+|float_4:: operator-=||
 
-### <a name="public-constants"></a>Publiczne stałe
+### <a name="public-constants"></a>Stałe publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[rozmiar — stała](#float_4__size)||
+|[Stała rozmiaru](#float_4__size)||
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|float_4::a||
+|float_4:: a||
 |float_4::ab||
 |float_4::abg||
 |float_4::abgr||
@@ -472,51 +472,51 @@ class float_4;
 |float_4::ag||
 |float_4::agb||
 |float_4::agbr||
-|float_4::agr||
+|float_4:: AGR||
 |float_4::agrb||
-|float_4::ar||
-|float_4::arb||
-|float_4::arbg||
-|float_4::arg||
-|float_4::argb||
+|float_4:: AR||
+|float_4:: ARB||
+|float_4:: arbg||
+|float_4:: ARG||
+|float_4:: ARGB||
 |float_4::b||
 |float_4::ba||
 |float_4::bag||
-|float_4::bagr||
-|float_4::bar||
-|float_4::barg||
+|float_4:: bagr||
+|float_4:: bar||
+|float_4:: barki||
 |float_4::bg||
 |float_4::bga||
-|float_4::bgar||
-|float_4::bgr||
+|float_4:: bgar||
+|float_4:: BGR||
 |float_4::bgra||
-|float_4::br||
-|float_4::bra||
-|float_4::brag||
+|float_4:: br||
+|float_4:: Bra||
+|float_4:: Brag||
 |float_4::brg||
 |float_4::brga||
-|float_4::g||
-|float_4::ga||
+|float_4:: g||
+|float_4:: ga||
 |float_4::gab||
-|float_4::gabr||
-|float_4::gar||
-|float_4::garb||
+|float_4:: Gabr||
+|float_4:: Gar||
+|float_4:: garb||
 |float_4::gb||
 |float_4::gba||
-|float_4::gbar||
-|float_4::gbr||
+|float_4:: gbar||
+|float_4:: GBR||
 |float_4::gbra||
-|float_4::gr||
-|float_4::gra||
-|float_4::grab||
-|float_4::grb||
+|float_4:: GR||
+|float_4:: gra||
+|float_4:: Weź||
+|float_4:: GRB||
 |float_4::grba||
-|float_4::r||
-|float_4::ra||
+|float_4:: r||
+|float_4:: RA||
 |float_4::rab||
 |float_4::rabg||
-|float_4::rag||
-|float_4::ragb||
+|float_4:: RAG||
+|float_4:: ragb||
 |float_4::rb||
 |float_4::rba||
 |float_4::rbag||
@@ -527,67 +527,67 @@ class float_4;
 |float_4::rgab||
 |float_4::rgb||
 |float_4::rgba||
-|float_4::w||
-|float_4::wx||
-|float_4::wxy||
+|float_4:: w||
+|float_4:: WX||
+|float_4:: wxy||
 |float_4::wxyz||
-|float_4::wxz||
-|float_4::wxzy||
-|float_4::wy||
-|float_4::wyx||
+|float_4:: wxz||
+|float_4:: wxzy||
+|float_4:: wy||
+|float_4:: wyx||
 |float_4::wyxz||
 |float_4::wyz||
 |float_4::wyzx||
-|float_4::wz||
-|float_4::wzx||
-|float_4::wzxy||
-|float_4::wzy||
+|float_4:: WZ||
+|float_4:: wzx||
+|float_4:: wzxy||
+|float_4:: wzy||
 |float_4::wzyx||
-|float_4::x||
-|float_4::xw||
-|float_4::xwy||
+|float_4:: x||
+|float_4:: XW||
+|float_4:: xwy||
 |float_4::xwyz||
 |float_4::xwz||
-|float_4::xwzy||
-|float_4::xy||
-|float_4::xyw||
+|float_4:: xwzy||
+|float_4:: XY||
+|float_4:: XYW||
 |float_4::xywz||
-|float_4::xyz||
-|float_4::xyzw||
+|float_4:: XYZ||
+|float_4:: xyzw||
 |float_4::xz||
-|float_4::xzw||
-|float_4::xzwy||
-|float_4::xzy||
-|float_4::xzyw||
-|float_4::y||
-|float_4::yw||
-|float_4::ywx||
+|float_4:: xzw||
+|float_4:: xzwy||
+|float_4:: xzy||
+|float_4:: xzyw||
+|float_4:: y||
+|float_4:: yw||
+|float_4:: ywx||
 |float_4::ywxz||
 |float_4::ywz||
 |float_4::ywzx||
-|float_4::yx||
-|float_4::yxw||
+|float_4:: yx||
+|float_4:: yxw||
 |float_4::yxwz||
-|float_4::yxz||
-|float_4::yxzw||
-|float_4::yz||
-|float_4::yzw||
-|float_4::yzwx||
-|float_4::yzx||
-|float_4::yzxw||
+|float_4:: YXZ||
+|float_4:: yxzw||
+|float_4:: YZ||
+|float_4:: yzw||
+|float_4:: yzwx||
+|float_4:: YZX||
+|float_4:: yzxw||
 |float_4::z||
 |float_4::zw||
-|float_4::zwx||
+|float_4:: zwx||
 |float_4::zwxy||
 |float_4::zwy||
 |float_4::zwyx||
 |float_4::zx||
-|float_4::zxw||
+|float_4:: zxw||
 |float_4::zxwy||
-|float_4::zxy||
+|float_4:: zxy||
 |float_4::zxyw||
-|float_4::zy||
-|float_4::zyw||
+|float_4:: zy||
+|float_4:: zyw||
 |float_4::zywx||
 |float_4::zyx||
 |float_4::zyxw||
@@ -598,15 +598,15 @@ class float_4;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** amp_short_vectors.h
+**Nagłówek:** amp_short_vectors. h
 
-**Namespace:** CONCURRENCY::Graphics
+**Przestrzeń nazw:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> float_4
+## <a name="ctor"></a>float_4
 
-Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.
+Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.
 
-```
+```cpp
 float_4() restrict(amp,
     cpu);
 
@@ -649,29 +649,29 @@ explicit inline float_4(
 ### <a name="parameters"></a>Parametry
 
 *_V0*<br/>
-Wartość do zainicjowania elementu 0.
+Wartość, aby zainicjować element 0.
 
 *_V1*<br/>
 Wartość do zainicjowania elementu 1.
 
 *_V2*<br/>
-Wartość można zainicjować element 2.
+Wartość do zainicjowania elementu 2.
 
 *_V3*<br/>
 Wartość do zainicjowania elementu 3.
 
 *_V*<br/>
-Wartość inicjalizacji.
+Wartość dla inicjalizacji.
 
-*_Inne*<br/>
+*_Other*<br/>
 Obiekt używany do inicjowania.
 
-##  <a name="float_4__size"></a> Rozmiar
+## <a name="float_4__size"></a>zmienia
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

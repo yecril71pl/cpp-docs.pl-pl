@@ -7,12 +7,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: 7bc0cb58cbbe995aa9d74e3ccb627ddc442bd4fb
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 37dc59dfb77af9fff240c0d44b21de84b17d073b
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "70026024"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127845"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Przewodnik: Tworzenie własnej biblioteki dołączanej dynamicznie (C++) i korzystanie z niej
 
@@ -48,7 +48,7 @@ Aby uzyskać linki do dodatkowych informacji o bibliotekach DLL, zobacz [Tworzen
 
 - Kopia programu Visual Studio. Aby uzyskać informacje na temat pobierania i instalowania programu Visual Studio, zobacz [Instalowanie programu Visual Studio](/visualstudio/install/install-visual-studio). Po uruchomieniu Instalatora upewnij się, że jest zaznaczone pole **programowanie opracowywania C++ aplikacji klasycznych** . Nie martw się, jeśli to obciążenie nie zostało zainstalowane podczas instalacji programu Visual Studio. Możesz ponownie uruchomić Instalatora i zainstalować go teraz.
 
-   ![Programowanie aplikacji C++ klasycznych](media/desktop-development-with-cpp.png "Programowanie aplikacji C++ klasycznych")
+   ![Programowanie aplikacji klasycznychC++](media/desktop-development-with-cpp.png "Programowanie aplikacji klasycznych w języku C++")
 
 ::: moniker-end
 
@@ -77,11 +77,11 @@ W tym zestawie zadań można utworzyć projekt dla biblioteki DLL, dodać kod i 
 
 ### <a name="to-create-a-dll-project-in-visual-studio-2019"></a>Aby utworzyć projekt DLL w programie Visual Studio 2019
 
-1. Na pasku menu wybierz pozycję **plik** > **Nowy** > **projekt** , aby otworzyć okno dialogowe **Tworzenie nowego projektu** .
+1. Na pasku menu wybierz kolejno opcje **plik** > **Nowy** > **projekt** , aby otworzyć okno dialogowe **Utwórz nowy projekt** .
 
    ![Utwórz nowy projekt DLL](media/create-new-dll-project-2019.png "Tworzenie projektu MathLibrary")
 
-1. W górnej części okna dialogowego Ustaw **Język** na **C++** , ustaw platformę na **system Windows**i ustaw **Typ projektu** na **Biblioteka**.
+1. W górnej części okna dialogowego Ustaw **Język** na **C++** , ustaw **platformę** na **system Windows**i ustaw **Typ projektu** na **Biblioteka**.
 
 1. Z listy filtrowane typy projektów wybierz **bibliotekę dołączaną dynamicznie (dll)** , a następnie wybierz **dalej**.
 
@@ -99,9 +99,9 @@ Po utworzeniu rozwiązania można zobaczyć wygenerowany projekt i pliki źród�
 
 ### <a name="to-create-a-dll-project-in-visual-studio-2017"></a>Aby utworzyć projekt DLL w programie Visual Studio 2017
 
-1. Na pasku menu wybierz pozycję **plik** > **Nowy** > **projekt** , aby otworzyć okno dialogowe **Nowy projekt** .
+1. Na pasku menu wybierz kolejno opcje **plik** > **Nowy** > **projekt** , aby otworzyć okno dialogowe **Nowy projekt** .
 
-1. W lewym okienku okna dialogowego **Nowy projekt** wybierz pozycję **zainstalowany** >   > **program Visual C++**  **Windows Desktop**. W środkowym okienku wybierz **bibliotekę dołączaną dynamicznie (dll)** . Wprowadź *MathLibrary* w polu **Nazwa** , aby określić nazwę projektu. Pozostaw domyślne wartości **lokalizacji** i **nazwy rozwiązania** . Ustaw **rozwiązanie** , aby **utworzyć nowe rozwiązanie**. Zaznacz opcję **Utwórz katalog dla rozwiązania** , jeśli nie jest zaznaczone.
+1. W lewym okienku okna dialogowego **Nowy projekt** wybierz pozycję **zainstalowane** >  **C++ Visual** > **Windows Desktop**. W środkowym okienku wybierz **bibliotekę dołączaną dynamicznie (dll)** . Wprowadź *MathLibrary* w polu **Nazwa** , aby określić nazwę projektu. Pozostaw domyślne wartości **lokalizacji** i **nazwy rozwiązania** . Ustaw **rozwiązanie** , aby **utworzyć nowe rozwiązanie**. Zaznacz opcję **Utwórz katalog dla rozwiązania** , jeśli nie jest zaznaczone.
 
    ![Nazwij projekt MathLibrary](media/mathlibrary-new-project-name-159.png "Nazwij projekt MathLibrary")
 
@@ -117,9 +117,9 @@ Po utworzeniu rozwiązania można zobaczyć wygenerowany projekt i pliki źród�
 
 ### <a name="to-create-a-dll-project-in-visual-studio-2015-and-older-versions"></a>Aby utworzyć projekt DLL w programie Visual Studio 2015 i starszych wersjach
 
-1. Na pasku menu wybierz pozycję **plik** > **Nowy** > **projekt**.
+1. Na pasku menu wybierz kolejno pozycje **plik** > **Nowy** > **projekt**.
 
-1. W lewym okienku okna dialogowego **Nowy projekt** rozwiń węzeł **zainstalowane** > **Szablony**, wybierz pozycję **C++Wizualizacja**, a następnie w środkowym okienku wybierz pozycję **aplikacja konsoli Win32**. Wprowadź *MathLibrary* w polu tekstowym **Nazwa** , aby określić nazwę projektu. Pozostaw domyślne wartości **lokalizacji** i **nazwy rozwiązania** . Ustaw **rozwiązanie** , aby **utworzyć nowe rozwiązanie**. Zaznacz opcję **Utwórz katalog dla rozwiązania** , jeśli nie jest zaznaczone.
+1. W lewym okienku okna dialogowego **Nowy projekt** rozwiń węzeł **zainstalowane** > **Szablony**i wybierz pozycję **Wizualizacja C++** , a następnie w środkowym okienku wybierz pozycję **aplikacja konsoli Win32**. Wprowadź *MathLibrary* w polu tekstowym **Nazwa** , aby określić nazwę projektu. Pozostaw domyślne wartości **lokalizacji** i **nazwy rozwiązania** . Ustaw **rozwiązanie** , aby **utworzyć nowe rozwiązanie**. Zaznacz opcję **Utwórz katalog dla rozwiązania** , jeśli nie jest zaznaczone.
 
    ![Nazwij projekt MathLibrary](media/mathlibrary-project-name.png "Nazwij projekt MathLibrary")
 
@@ -127,7 +127,7 @@ Po utworzeniu rozwiązania można zobaczyć wygenerowany projekt i pliki źród�
 
    ![Omówienie Kreatora aplikacji Win32](media/mathlibrary-project-wizard-1.png "Omówienie Kreatora aplikacji Win32")
 
-1. Wybierz **dalej** przycisku. Na stronie **Ustawienia aplikacji** w obszarze **Typ aplikacji**wybierz pozycję **Biblioteka DLL**.
+1. Wybierz przycisk **dalej** . Na stronie **Ustawienia aplikacji** w obszarze **Typ aplikacji**wybierz pozycję **Biblioteka DLL**.
 
    ![Kreator tworzenia biblioteki DLL w aplikacji Win32](media/mathlibrary-project-wizard-2.png "Kreator tworzenia biblioteki DLL w aplikacji Win32")
 
@@ -143,7 +143,7 @@ Teraz ta biblioteka DLL nie działa znacznie. Następnie utworzysz plik nagłów
 
 ### <a name="to-add-a-header-file-to-the-dll"></a>Aby dodać plik nagłówka do biblioteki DLL
 
-1. Aby utworzyć plik nagłówkowy dla funkcji, na pasku menu wybierz **projekt** > **Dodaj nowy element**.
+1. Aby utworzyć plik nagłówka dla funkcji, na pasku menu wybierz **projekt** > **Dodaj nowy element**.
 
 1. W oknie dialogowym **Dodaj nowy element** w okienku po lewej stronie wybierz pozycję **Wizualizacja C++** . W środkowym okienku wybierz pozycję **plik nagłówka (. h)** . Określ *MathLibrary. h* jako nazwę pliku nagłówkowego.
 
@@ -192,11 +192,11 @@ Teraz ta biblioteka DLL nie działa znacznie. Następnie utworzysz plik nagłów
    extern "C" MATHLIBRARY_API unsigned fibonacci_index();
    ```
 
-Ten plik nagłówkowy deklaruje pewne funkcje, aby utworzyć uogólnioną sekwencję Fibonacci, uwzględniając dwie wartości początkowe. Wywołanie w celu `fibonacci_init(1, 1)` wygenerowania znanej sekwencji Fibonacci Number.
+Ten plik nagłówkowy deklaruje pewne funkcje, aby utworzyć uogólnioną sekwencję Fibonacci, uwzględniając dwie wartości początkowe. Wywołanie `fibonacci_init(1, 1)` generuje znaną sekwencję numerów Fibonacci.
 
-Zwróć uwagę na instrukcje preprocesora w górnej części pliku. Nowy szablon projektu dla projektu DLL dodaje **eksporty _ProjectName_&#95;eksport** do zdefiniowanych makr preprocesora. W tym przykładzie program Visual Studio definiuje **eksporty MATHLIBRARY&#95;** podczas kompilowania projektu DLL MATHLIBRARY.
+Zwróć uwagę na instrukcje preprocesora w górnej części pliku. Nowy szablon projektu dla projektu DLL dodaje **eksporty _ProjectName_&#95;** do zdefiniowanych makr preprocesora. W tym przykładzie program Visual Studio definiuje **eksporty MATHLIBRARY&#95;** podczas kompilowania projektu DLL MATHLIBRARY.
 
-Po zdefiniowaniu makra **MATHLIBRARY&#95;exports** makro **interfejsu API&#95;MATHLIBRARY** ustawia `__declspec(dllexport)` modyfikator dla deklaracji funkcji. Ten modyfikator instruuje kompilator i konsolidator, aby wyeksportować funkcję lub zmienną z biblioteki DLL do użytku przez inne aplikacje. Gdy **eksporty MATHLIBRARY&#95;** są niezdefiniowane, na przykład gdy plik nagłówkowy jest dołączany przez aplikację kliencką, interfejs `__declspec(dllimport)` **API MATHLIBRARY&#95;** stosuje modyfikator do deklaracji. Ten modyfikator optymalizuje Importowanie funkcji lub zmiennej w aplikacji. Aby uzyskać więcej informacji, zobacz [dllexport, dllimport](../cpp/dllexport-dllimport.md).
+Po zdefiniowaniu makra **&#95;MATHLIBRARY exports** makro **interfejsu API&#95;MATHLIBRARY** ustawia modyfikator `__declspec(dllexport)` dla deklaracji funkcji. Ten modyfikator instruuje kompilator i konsolidator, aby wyeksportować funkcję lub zmienną z biblioteki DLL do użytku przez inne aplikacje. Gdy **eksporty MATHLIBRARY&#95;** są niezdefiniowane, na przykład gdy plik nagłówkowy jest dołączany przez aplikację kliencką, **&#95;interfejs API MATHLIBRARY** stosuje modyfikator `__declspec(dllimport)` do deklaracji. Ten modyfikator optymalizuje Importowanie funkcji lub zmiennej w aplikacji. Aby uzyskać więcej informacji, zobacz [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
 ### <a name="to-add-an-implementation-to-the-dll"></a>Aby dodać implementację do biblioteki DLL
 
@@ -336,7 +336,7 @@ Po zdefiniowaniu makra **MATHLIBRARY&#95;exports** makro **interfejsu API&#95;MA
 
 ::: moniker-end
 
-Aby sprawdzić, czy wszystko działa tak dalej, skompiluj bibliotekę dołączaną dynamicznie. Aby skompilować, wybierz opcję **Kompiluj** > **rozwiązanie** kompilacji na pasku menu. Biblioteka DLL i pokrewne dane wyjściowe kompilatora są umieszczane w folderze o nazwie *Debug* bezpośrednio pod folderem rozwiązania. Jeśli utworzysz kompilację wydania, dane wyjściowe są umieszczane w folderze o nazwie *Release*. Dane wyjściowe powinny wyglądać następująco:
+Aby sprawdzić, czy wszystko działa tak dalej, skompiluj bibliotekę dołączaną dynamicznie. Aby skompilować, wybierz opcję **kompiluj** > **Kompiluj rozwiązanie** na pasku menu. Biblioteka DLL i pokrewne dane wyjściowe kompilatora są umieszczane w folderze o nazwie *Debug* bezpośrednio pod folderem rozwiązania. Jeśli utworzysz kompilację wydania, dane wyjściowe są umieszczane w folderze o nazwie *Release*. Dane wyjściowe powinny wyglądać następująco:
 
 ::: moniker range=">=vs-2019"
 
@@ -397,9 +397,9 @@ Aby uniknąć braku synchronizacji kodu, zalecamy ustawienie ścieżki include w
 
 ### <a name="to-create-a-client-app-in-visual-studio"></a>Aby utworzyć aplikację kliencką w programie Visual Studio
 
-1. Na pasku menu wybierz pozycję **plik** > **Nowy** > **projekt** , aby otworzyć okno dialogowe **Tworzenie nowego projektu** .
+1. Na pasku menu wybierz kolejno opcje **plik** > **Nowy** > **projekt** , aby otworzyć okno dialogowe **Utwórz nowy projekt** .
 
-1. W górnej części okna dialogowego Ustaw **Język** na **C++** , ustaw platformę na **system Windows**i ustaw **Typ projektu** na **Console**.
+1. W górnej części okna dialogowego Ustaw **Język** na **C++** , ustaw **platformę** na **system Windows**i ustaw **Typ projektu** na **Console**.
 
 1. Z listy filtrowane typy projektów wybierz pozycję **Aplikacja konsolowa** , a następnie wybierz przycisk **dalej**.
 
@@ -417,9 +417,9 @@ Zostanie utworzony projekt minimalnej aplikacji konsolowej. Nazwa głównego pli
 
 ### <a name="to-create-a-client-app-in-visual-studio-2017"></a>Aby utworzyć aplikację kliencką w programie Visual Studio 2017
 
-1. C++ Aby utworzyć aplikację, która używa utworzonej biblioteki DLL, na pasku menu wybierz pozycję **plik** > **Nowy** > **projekt**.
+1. Aby C++ utworzyć aplikację, która używa utworzonej biblioteki DLL, na pasku menu wybierz kolejno opcje **plik** > **Nowy** > **projekt**.
 
-1. W lewym okienku okna dialogowego **Nowy projekt** wybierz pozycję **pulpit systemu Windows** w obszarze **zainstalowane** > **C++wizualizacje**. W środkowym okienku wybierz pozycję **Aplikacja konsolowa systemu Windows**. Określ nazwę projektu, *MathClient*, w polu **Nazwa** .  Pozostaw domyślne wartości **lokalizacji** i **nazwy rozwiązania** . Ustaw **rozwiązanie** , aby **utworzyć nowe rozwiązanie**. Zaznacz opcję **Utwórz katalog dla rozwiązania** , jeśli nie jest zaznaczone.
+1. W lewym okienku okna dialogowego **Nowy projekt** wybierz pozycję **pulpit systemu Windows** w obszarze **zainstalowane** > **Wizualizacja C++** . W środkowym okienku wybierz pozycję **Aplikacja konsolowa systemu Windows**. Określ nazwę projektu, *MathClient*, w polu **Nazwa** .  Pozostaw domyślne wartości **lokalizacji** i **nazwy rozwiązania** . Ustaw **rozwiązanie** , aby **utworzyć nowe rozwiązanie**. Zaznacz opcję **Utwórz katalog dla rozwiązania** , jeśli nie jest zaznaczone.
 
    ![Nadaj nazwę projektowi klienta](media/mathclient-new-project-name-159.png "Nadaj nazwę projektowi klienta")
 
@@ -433,9 +433,9 @@ Zostanie utworzony projekt minimalnej aplikacji konsolowej. Nazwa głównego pli
 
 ### <a name="to-create-a-client-app-in-visual-studio-2015"></a>Aby utworzyć aplikację kliencką w programie Visual Studio 2015
 
-1. C++ Aby utworzyć aplikację, która używa utworzonej biblioteki DLL, na pasku menu wybierz pozycję **plik** > **Nowy** > **projekt**.
+1. Aby C++ utworzyć aplikację, która używa utworzonej biblioteki DLL, na pasku menu wybierz kolejno opcje **plik** > **Nowy** > **projekt**.
 
-1. W lewym okienku okna dialogowego **Nowy projekt** wybierz pozycję **Win32** w obszarze **zainstalowane** > **Szablony** > **Visual C++** . W środkowym okienku wybierz pozycję **aplikacja konsoli Win32**. Określ nazwę projektu, *MathClient*, w polu **Nazwa** . Pozostaw domyślne wartości **lokalizacji** i **nazwy rozwiązania** . Ustaw **rozwiązanie** , aby **utworzyć nowe rozwiązanie**. Zaznacz opcję **Utwórz katalog dla rozwiązania** , jeśli nie jest zaznaczone.
+1. W lewym okienku okna dialogowego **Nowy projekt** wybierz pozycję **Win32** w obszarze **zainstalowane** > **Szablony** > **Wizualizacja C++** . W środkowym okienku wybierz pozycję **aplikacja konsoli Win32**. Określ nazwę projektu, *MathClient*, w polu **Nazwa** . Pozostaw domyślne wartości **lokalizacji** i **nazwy rozwiązania** . Ustaw **rozwiązanie** , aby **utworzyć nowe rozwiązanie**. Zaznacz opcję **Utwórz katalog dla rozwiązania** , jeśli nie jest zaznaczone.
 
    ![Nadaj nazwę projektowi klienta](media/mathclient-project-name.png "Nadaj nazwę projektowi klienta")
 
@@ -457,13 +457,13 @@ Następnie, aby wywołać funkcje MathLibrary w kodzie źródłowym, projekt mus
 
 1. W polu listy rozwijanej **Konfiguracja** wybierz opcję **wszystkie konfiguracje** , jeśli nie została jeszcze wybrana.
 
-1. W lewym okienku wybierz pozycję **Właściwości** > konfiguracji**C/C++**  > ogólne.
+1. W lewym okienku wybierz pozycję **Właściwości konfiguracji** > **C/C++**  > **Ogólne**.
 
-1. W okienku właściwości wybierz kontrolkę listy rozwijanej obok pola **Dodatkowe katalogi** dołączane, a następnie wybierz pozycję **Edytuj**.
+1. W okienku właściwości wybierz kontrolkę listy rozwijanej obok pola **Dodatkowe katalogi dołączane** , a następnie wybierz pozycję **Edytuj**.
 
    ![Edytuj Właściwość dodatkowe katalogi dołączane](media/mathclient-additional-include-directories-property.png "Edytuj Właściwość dodatkowe katalogi dołączane")
 
-1. Kliknij dwukrotnie w górnym okienku okna dialogowego **Dodatkowe katalogi** dołączane, aby włączyć kontrolkę edycji. Lub wybierz ikonę folderu, aby utworzyć nowy wpis.
+1. Kliknij dwukrotnie w górnym okienku okna dialogowego **Dodatkowe katalogi dołączane** , aby włączyć kontrolkę edycji. Lub wybierz ikonę folderu, aby utworzyć nowy wpis.
 
 1. W kontrolce Edycja określ ścieżkę do lokalizacji pliku nagłówkowego **MathLibrary. h** . Możesz wybrać kontrolkę wielokropka ( **...** ), aby przejść do odpowiedniego folderu.
 
@@ -505,7 +505,7 @@ int main()
 }
 ```
 
-Ten kod może być skompilowany, ale nie połączony. Jeśli aplikacja kliencka zostanie utworzona teraz, lista błędów zawiera kilka błędów LNK2019. Dzieje się tak, ponieważ w projekcie brakuje pewnych informacji: Nie określono, że projekt ma zależność od jeszcze *MathLibrary. lib* biblioteki. I nie otrzymasz od Ciebie wskazówek, jak znaleźć plik *MathLibrary. lib* .
+Ten kod może być skompilowany, ale nie połączony. Jeśli aplikacja kliencka zostanie utworzona teraz, lista błędów zawiera kilka błędów LNK2019. Dzieje się tak, ponieważ w projekcie brakuje pewnych informacji: nie określono, że projekt ma zależność od jeszcze *MathLibrary. lib* . I nie otrzymasz od Ciebie wskazówek, jak znaleźć plik *MathLibrary. lib* .
 
 Aby rozwiązać ten problem, można skopiować plik biblioteki bezpośrednio do projektu aplikacji klienckiej. Konsolidator odnajdzie i użyje go automatycznie. Jeśli jednak biblioteka i aplikacja kliencka są opracowywane, co może prowadzić do zmian w jednej kopii, która nie jest wyświetlana w drugim. Aby uniknąć tego problemu, można ustawić właściwość **dodatkowe zależności** , aby poinformować system kompilacji, że projekt jest zależny od *MathLibrary. lib*. I można ustawić **dodatkową ścieżkę katalogów bibliotek** w projekcie, aby uwzględnić ścieżkę do oryginalnej biblioteki podczas łączenia.
 
@@ -515,7 +515,7 @@ Aby rozwiązać ten problem, można skopiować plik biblioteki bezpośrednio do 
 
 1. W polu listy rozwijanej **Konfiguracja** wybierz opcję **wszystkie konfiguracje** , jeśli nie została jeszcze wybrana. Gwarantuje to, że wszelkie zmiany właściwości mają zastosowanie zarówno do kompilacji debugowania, jak i wydania.
 
-1. W lewym okienku wybierz kolejno pozycje **Właściwości** > konfiguracji**dane wejściowe** **konsolidatora** > . W okienku właściwości wybierz kontrolkę listy rozwijanej obok pola Edytuj **dodatkowe zależności** , a następnie wybierz polecenie **Edytuj**.
+1. W lewym okienku wybierz **Właściwości konfiguracji** > **konsolidator** > **dane wejściowe**. W okienku właściwości wybierz kontrolkę listy rozwijanej obok pola Edytuj **dodatkowe zależności** , a następnie wybierz polecenie **Edytuj**.
 
    ![Edytuj Właściwość dodatkowe zależności](media/mathclient-additional-dependencies-property.png "Edytuj Właściwość dodatkowe zależności")
 
@@ -525,17 +525,15 @@ Aby rozwiązać ten problem, można skopiować plik biblioteki bezpośrednio do 
 
 1. Wybierz **przycisk OK** , aby wrócić do okna dialogowego **strony właściwości** .
 
-1. W lewym okienku wybierz kolejno pozycje **Właściwości** > konfiguracji**konsolidator** > **Ogólne**. W okienku właściwości wybierz kontrolkę listy rozwijanej obok pola edycji **Dodatkowe katalogi biblioteki** , a następnie wybierz polecenie **Edytuj**.
+1. W lewym okienku wybierz pozycję **Właściwości konfiguracji** > **konsolidator** > **Ogólne**. W okienku właściwości wybierz kontrolkę listy rozwijanej obok pola edycji **Dodatkowe katalogi biblioteki** , a następnie wybierz polecenie **Edytuj**.
 
    ![Edytuj Właściwość dodatkowe katalogi biblioteki](media/mathclient-additional-library-directories-property.png "Edytuj Właściwość dodatkowe katalogi biblioteki")
 
-1. Kliknij dwukrotnie w górnym okienku okna dialogowego **Dodatkowe katalogi biblioteki** , aby włączyć kontrolkę edycji. W kontrolce Edycja określ ścieżkę do lokalizacji pliku **MathLibrary. lib** . Domyślnie znajduje się on w folderze o nazwie *Debug* bezpośrednio w folderze rozwiązania biblioteki DLL. Jeśli utworzysz kompilację wydania, plik zostanie umieszczony w folderze o nazwie *Release*. Możesz użyć `$(IntDir)` makra, aby konsolidator mógł znaleźć bibliotekę DLL, niezależnie od tego, jakiego rodzaju kompilacja została utworzona. Jeśli zawarto instrukcje umieszczania projektu klienta w oddzielnym rozwiązaniu od projektu DLL, ścieżka względna powinna wyglądać następująco:
+1. Kliknij dwukrotnie w górnym okienku okna dialogowego **Dodatkowe katalogi biblioteki** , aby włączyć kontrolkę edycji. W kontrolce Edycja określ ścieżkę do lokalizacji pliku **MathLibrary. lib** . Domyślnie znajduje się on w folderze o nazwie *Debug* bezpośrednio w folderze rozwiązania biblioteki DLL. Jeśli utworzysz kompilację wydania, plik zostanie umieszczony w folderze o nazwie *Release*. Możesz użyć makra `$(IntDir)`, aby konsolidator mógł znaleźć bibliotekę DLL, niezależnie od tego, jakiego rodzaju kompilacja została utworzona. Jeśli zawarto instrukcje umieszczania projektu klienta w oddzielnym rozwiązaniu od projektu DLL, ścieżka względna powinna wyglądać następująco:
 
    `..\..\MathLibrary\$(IntDir)`
 
-   Jeśli biblioteka DLL i projekty klienta znajdują się w tym samym rozwiązaniu, ścieżka względna powinna wyglądać następująco:
-
-   `..\MathLibrary\$(IntDir)`
+   Jeśli biblioteka DLL i projekty klienta znajdują się w innych lokalizacjach, Dostosuj ścieżkę względną do dopasowania.
 
    ![Dodaj katalog biblioteki](media/mathclient-additional-library-directories.png "Dodaj katalog biblioteki")
 
@@ -553,21 +551,19 @@ Jednym ze sposobów uniknięcia tego problemu jest skopiowanie biblioteki DLL do
 
 1. W polu listy rozwijanej **Konfiguracja** wybierz opcję **wszystkie konfiguracje** , jeśli nie została jeszcze wybrana.
 
-1. W okienku po lewej stronie wybierz pozycję **Właściwości** > konfiguracji**kompilacja zdarzenia** > **po kompilacji**.
+1. W lewym okienku wybierz **Właściwości konfiguracji** > **zdarzenia kompilacji** > **zdarzenie po kompilacji**.
 
 1. W okienku właściwości wybierz kontrolkę Edycja w polu **wiersz polecenia** . Jeśli zawarto instrukcje dotyczące umieszczania projektu klienta w oddzielnym rozwiązaniu z projektu DLL, wprowadź następujące polecenie:
 
    `xcopy /y /d "..\..\MathLibrary\$(IntDir)MathLibrary.dll" "$(OutDir)"`
 
-   Jeśli biblioteka DLL i projekty klienta znajdują się w tym samym katalogu rozwiązania, wprowadź następujące polecenie:
-
-   `xcopy /y /d "..\MathLibrary\$(IntDir)MathLibrary.dll" "$(OutDir)"`
+   Jeśli biblioteka DLL i projekty klienta znajdują się w innych katalogach, zmień ścieżkę względną do biblioteki DLL, aby była zgodna.
 
    ![Dodaj polecenie po kompilacji](media/mathclient-post-build-command-line.png "Dodaj polecenie po kompilacji")
 
 1. Wybierz przycisk **OK** , aby zapisać zmiany właściwości projektu.
 
-Teraz aplikacja kliencka ma wszystko, czego potrzebuje do skompilowania i uruchomienia. Skompiluj aplikację, wybierając pozycję **Kompiluj** > **kompilację** na pasku menu. Okno **danych wyjściowych** w programie Visual Studio powinno wyglądać podobnie do poniższego przykładu, w zależności od używanej wersji programu Visual Studio:
+Teraz aplikacja kliencka ma wszystko, czego potrzebuje do skompilowania i uruchomienia. Skompiluj aplikację, wybierając opcję **kompiluj** > **Kompiluj rozwiązanie** na pasku menu. Okno **danych wyjściowych** w programie Visual Studio powinno wyglądać podobnie do poniższego przykładu, w zależności od używanej wersji programu Visual Studio:
 
 ```Output
 1>------ Build started: Project: MathClient, Configuration: Debug Win32 ------
@@ -577,7 +573,7 @@ Teraz aplikacja kliencka ma wszystko, czego potrzebuje do skompilowania i urucho
 ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
 ```
 
-Gratulacje, utworzono aplikację, która wywołuje funkcje w bibliotece DLL. Teraz uruchom aplikację, aby zobaczyć, co robi. Na pasku menu wybierz **Debuguj** > **Uruchom bez debugowania**. Program Visual Studio otwiera okno poleceń, które zostanie uruchomione w programie. Ostatnia część danych wyjściowych powinna wyglądać następująco:
+Gratulacje, utworzono aplikację, która wywołuje funkcje w bibliotece DLL. Teraz uruchom aplikację, aby zobaczyć, co robi. Na pasku menu wybierz **debuguj** > **Uruchom bez debugowania**. Program Visual Studio otwiera okno poleceń, które zostanie uruchomione w programie. Ostatnia część danych wyjściowych powinna wyglądać następująco:
 
 ![Uruchom aplikację kliencką bez debugowania](media/mathclient-run-without-debugging.png "Uruchom aplikację kliencką bez debugowania")
 
@@ -587,6 +583,6 @@ Po utworzeniu biblioteki DLL i aplikacji klienckiej można eksperymentować. Spr
 
 Podczas wdrażania aplikacji należy również wdrożyć biblioteki DLL, z których korzysta. Najprostszym sposobem utworzenia bibliotek DLL, które można utworzyć, lub dołączenia ich od stron trzecich, jest umieszczenie ich w tym samym katalogu, w którym znajduje się aplikacja. Nazywa się to *wdrożeniem lokalnym aplikacji*. Aby uzyskać więcej informacji o wdrażaniu, zobacz [wdrażanie C++w programie Visual ](../windows/deployment-in-visual-cpp.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wywoływanie funkcji DLL z aplikacji języka Visual Basic](calling-dll-functions-from-visual-basic-applications.md)

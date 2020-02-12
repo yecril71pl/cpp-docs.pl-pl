@@ -8,38 +8,38 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSScheduler structure
 ms.assetid: 3a500225-4e02-4849-bb56-d744865f5870
-ms.openlocfilehash: f377d6079017266630434ce71602a7e70e58ae21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45df744a9850510006e4bf887c8ed61b000a8e5c
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301867"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139995"
 ---
 # <a name="iumsscheduler-structure"></a>Struktura IUMSScheduler
 
-Interfejs abstrakcję harmonogram pracy, który chce ze współbieżności środowiska wykonawczego usługi Resource Manager do ręcznego go wątków (UMS) ustalonych w harmonogramie trybu użytkownika. Menedżer zasobów używa tego interfejsu do komunikacji z harmonogramów wątku UMS. `IUMSScheduler` Interfejs dziedziczy z `IScheduler` interfejsu.
+Interfejs służący do abstrakcji harmonogramu pracy, który chce, aby środowisko uruchomieniowe współbieżności Menedżer zasobów do harmonogramie wątków w trybie użytkownika (UMS). Menedżer zasobów używa tego interfejsu do komunikowania się z harmonogramami wątków UMS. Interfejs `IUMSScheduler` dziedziczy po interfejsie `IScheduler`.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 struct IUMSScheduler : public IScheduler;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[Iumsscheduler::setcompletionlist —](#setcompletionlist)|Przypisuje `IUMSCompletionList` interfejsu do harmonogramu UMS wątku.|
+|[IUMSScheduler:: SetCompletionList —](#setcompletionlist)|Przypisuje interfejs `IUMSCompletionList` do harmonogramu wątków UMS.|
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli w przypadku wdrażania Niestandardowy harmonogram, który komunikuje się z usługą Resource Manager i chcesz, aby UMS wątki były przekazywane do harmonogramu zamiast zwykłych wątków Win32, należy podać implementacja `IUMSScheduler` interfejsu. Ponadto należy ustawić wartość klucza zasad harmonogramu `SchedulerKind` jako `UmsThreadDefault`. Jeśli zasady określają wątku UMS `IScheduler` interfejsu, który jest przekazywany jako parametr do [iresourcemanager::registerscheduler —](iresourcemanager-structure.md#registerscheduler) metoda musi być `IUMSScheduler` interfejsu.
+W przypadku wdrażania niestandardowego harmonogramu, który komunikuje się z Menedżer zasobów, i chcesz, aby wątki UMS były przekazywane do harmonogramu zamiast zwykłych wątków Win32, należy zapewnić implementację interfejsu `IUMSScheduler`. Ponadto należy ustawić wartość zasad dla klucza zasad usługi Scheduler, `SchedulerKind` ma być `UmsThreadDefault`. Jeśli zasady określają wątek UMS, interfejs `IScheduler`, który jest przesyłany jako parametr do metody [IResourceManager:: RegisterScheduler —](iresourcemanager-structure.md#registerscheduler) , musi być interfejsem `IUMSScheduler`.
 
-Menedżer zasobów jest w stanie do ręcznego przypadku wątków UMS tylko w systemach operacyjnych, z funkcją UMS. 64-bitowych systemach operacyjnych z wersji Windows 7 lub nowszej obsługują UMS wątków. Jeśli tworzysz zasadę harmonogramu za pomocą `SchedulerKind` klucz ustawiony na wartość `UmsThreadDefault` i podstawowej platformy nie obsługuje UMS, wartość `SchedulerKind` klucz te zasady zostaną zmienione na wartość `ThreadScheduler`. Należy zawsze przeczytać ponownie tę wartość zasad przed oczekuje UMS wątków.
+Menedżer zasobów jest w stanie UMS wątki tylko w systemach operacyjnych, które mają funkcję UMS. 64-bitowe systemy operacyjne z wersją Windows 7 i nowsze obsługują wątki UMS. Jeśli utworzysz zasady harmonogramu z ustawionym kluczem `SchedulerKind` wartość `UmsThreadDefault` a bazowa platforma nie obsługuje UMS, wartość klucza `SchedulerKind` dla tych zasad zostanie zmieniona na `ThreadScheduler`wartość. Należy zawsze odczytać tę wartość zasad przed oczekiwaniem na otrzymywanie wątków UMS.
 
-`IUMSScheduler` Interfejs jest jeden z punktów końcowych dwukierunkowy kanał komunikacji między harmonogramu i Menedżera zasobów. Drugi punkt końcowy jest reprezentowany przez `IResourceManager` i `ISchedulerProxy` interfejsów, które są implementowane przez Menedżera zasobów.
+Interfejs `IUMSScheduler` jest jednym końcem dwukierunkowego kanału komunikacji między harmonogramem i Menedżer zasobów. Druga końcowa jest reprezentowana przez `IResourceManager` i `ISchedulerProxy` interfejsów, które są implementowane przez Menedżer zasobów.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -49,31 +49,31 @@ Menedżer zasobów jest w stanie do ręcznego przypadku wątków UMS tylko w sys
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concrtrm.h
+**Nagłówek:** concrtrm. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="setcompletionlist"></a>  Iumsscheduler::setcompletionlist — metoda
+## <a name="setcompletionlist"></a>IUMSScheduler:: SetCompletionList —, Metoda
 
-Przypisuje `IUMSCompletionList` interfejsu do harmonogramu UMS wątku.
+Przypisuje interfejs `IUMSCompletionList` do harmonogramu wątków UMS.
 
-```
+```cpp
 virtual void SetCompletionList(_Inout_ IUMSCompletionList* pCompletionList) = 0;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *pCompletionList*<br/>
-Interfejs listy uzupełniania dla harmonogramu. Brak jednej liście według harmonogramu.
+Interfejs listy uzupełniania dla harmonogramu. Istnieje jedna lista na harmonogram.
 
 ### <a name="remarks"></a>Uwagi
 
-Menedżer zasobów spowoduje wywołanie tej metody w harmonogramie, określający, że chce wątków UMS po harmonogram zażądał początkowej alokacji zasobów. Harmonogram można użyć `IUMSCompletionList` interfejsu, aby określić, kiedy serwery proxy wątku UMS ma odblokowany. Jest on prawidłowy tylko dostęp do tego interfejsu z serwera proxy wątku działającego w głównym procesorze wirtualnym, przypisany do harmonogramu UMS.
+Menedżer zasobów wywoła tę metodę zgodnie z harmonogramem, który określa, że chce UMS wątki, po zażądaniu przez harmonogram początkowej alokacji zasobów. Harmonogram może użyć interfejsu `IUMSCompletionList`, aby określić, kiedy serwery proxy wątków UMS zostały odblokowane. Jest on prawidłowy tylko w celu uzyskania dostępu do tego interfejsu z serwera proxy wątku działającego w katalogu głównym wirtualnego procesora przypisanego do usługi UMS Scheduler.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
-[PolicyElementKey](concurrency-namespace-enums.md)<br/>
+[PolicyElementKey —](concurrency-namespace-enums.md)<br/>
 [IScheduler, struktura](ischeduler-structure.md)<br/>
 [IUMSCompletionList, struktura](iumscompletionlist-structure.md)<br/>
 [IResourceManager, struktura](iresourcemanager-structure.md)

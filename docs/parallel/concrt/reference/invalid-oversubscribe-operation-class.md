@@ -8,30 +8,30 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_oversubscribe_operation class
 ms.assetid: 0a9c5f08-d5e6-4ad0-90a9-517472b3ac28
-ms.openlocfilehash: 200743d41c1c45f2a957dba0716dd7aa07e3de76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a879fc2da2f963cd4b5ea5fcd7e9506f86ce051
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405316"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77140834"
 ---
-# <a name="invalidoversubscribeoperation-class"></a>invalid_oversubscribe_operation — Klasa
+# <a name="invalid_oversubscribe_operation-class"></a>invalid_oversubscribe_operation — Klasa
 
-Ta klasa opisuje wyjątek generowany, gdy `Context::Oversubscribe` metoda jest wywoływana z `_BeginOversubscription` parametr **false** bez uprzedniego wywołania do `Context::Oversubscribe` metody z `_BeginOversubscription` parametr wartość **true**.
+Ta klasa opisuje wyjątek zgłoszony, gdy metoda `Context::Oversubscribe` jest wywoływana z parametrem `_BeginOversubscription` ustawionym na **wartość false** bez wcześniejszego wywołania metody `Context::Oversubscribe` z parametrem `_BeginOversubscription` ustawionym na **wartość true**.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class invalid_oversubscribe_operation : public std::exception;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[invalid_oversubscribe_operation](#ctor)|Przeciążone. Konstruuje `invalid_oversubscribe_operation` obiektu.|
+|[invalid_oversubscribe_operation](#ctor)|Przeciążone. Konstruuje obiekt `invalid_oversubscribe_operation`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -41,15 +41,15 @@ class invalid_oversubscribe_operation : public std::exception;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concrt.h
+**Nagłówek:** ConcRT. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="ctor"></a> invalid_oversubscribe_operation —
+## <a name="ctor"></a>invalid_oversubscribe_operation
 
-Konstruuje `invalid_oversubscribe_operation` obiektu.
+Konstruuje obiekt `invalid_oversubscribe_operation`.
 
-```
+```cpp
 explicit _CRTIMP invalid_oversubscribe_operation(_In_z_ const char* _Message) throw();
 
 invalid_oversubscribe_operation() throw();
@@ -58,8 +58,8 @@ invalid_oversubscribe_operation() throw();
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Opisowy komunikat dotyczący błędu.
+Opisowy komunikat o błędzie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

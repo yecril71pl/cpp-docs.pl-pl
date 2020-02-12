@@ -1,5 +1,5 @@
 ---
-title: scheduler_ptr, struktura
+title: Struktura scheduler_ptr
 ms.date: 11/04/2016
 f1_keywords:
 - scheduler_ptr
@@ -8,43 +8,43 @@ f1_keywords:
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::get
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::operator bool
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
-ms.openlocfilehash: 2373fe3bc8cac501d1b6b32ca66996eff47ba6f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd044a6255a17882c26183223f71564f98c9f7b2
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180736"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142771"
 ---
-# <a name="schedulerptr-structure"></a>scheduler_ptr, struktura
+# <a name="scheduler_ptr-structure"></a>Struktura scheduler_ptr
 
-Reprezentuje wskaźnik do harmonogramu. Ta klasa istnieje, aby zezwolić na specyfikację wspólnego okresu istnienia przy użyciu wskaźnika shared_ptr lub zwykłe odwołanie za pomocą wskaźnika raw.
+Reprezentuje wskaźnik do harmonogramu. Ta klasa istnieje, aby zezwolić na specyfikację wspólnego okresu istnienia przy użyciu shared_ptr lub tylko zwykłego odwołania przy użyciu wskaźnika RAW.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 struct scheduler_ptr;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[scheduler_ptr::scheduler_ptr](#ctor)|Przeciążone. Tworzy wskaźnik harmonogramu z shared_ptr do harmonogramu|
+|[scheduler_ptr:: scheduler_ptr](#ctor)|Przeciążone. Tworzy wskaźnik harmonogramu z shared_ptr do harmonogramu|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[scheduler_ptr::get](#get)|Zwraca surowy wskaźnik do harmonogramu|
+|[scheduler_ptr:: Get](#get)|Zwraca surowy wskaźnik do harmonogramu|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[scheduler_ptr::operator bool](#operator_bool)|Sprawdź, czy wskaźnik harmonogramu jest różna od null|
-|[scheduler_ptr::operator-&gt;](#operator_ptr)|Zachowują się jak wskaźnik|
+|[scheduler_ptr:: operator — bool](#operator_bool)|Sprawdź, czy wskaźnik harmonogramu ma wartość różną od null|
+|[scheduler_ptr:: operator-&gt;](#operator_ptr)|Zachowuje się jak wskaźnik|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -52,55 +52,55 @@ struct scheduler_ptr;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** pplinterface.h
+**Nagłówek:** pplinterface. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="get"></a>  scheduler_ptr::Get — metoda
+## <a name="get"></a>scheduler_ptr:: Get — Metoda
 
 Zwraca surowy wskaźnik do harmonogramu.
 
-```
+```cpp
 scheduler_interface* get() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-##  <a name="operator_bool"></a>  scheduler_ptr::operator bool
+## <a name="operator_bool"></a>scheduler_ptr:: operator — bool
 
-Sprawdza, czy wskaźnik harmonogramu jest różna od null.
+Testuje, czy wskaźnik harmonogramu jest inny niż null.
 
-```
+```cpp
 operator bool() const;
 ```
 
-##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;
+## <a name="operator_ptr"></a>scheduler_ptr:: operator-&gt;
 
 Zachowuje się jak wskaźnik.
 
-```
+```cpp
 scheduler_interface* operator->() const;
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-##  <a name="ctor"></a>  scheduler_ptr::scheduler_ptr — Konstruktor
+## <a name="ctor"></a>scheduler_ptr:: scheduler_ptr, Konstruktor
 
 Tworzy wskaźnik harmonogramu z shared_ptr do harmonogramu.
 
-```
+```cpp
 explicit scheduler_ptr(std::shared_ptr<scheduler_interface> scheduler);
 explicit scheduler_ptr(_In_opt_ scheduler_interface* pScheduler);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*scheduler*<br/>
+*pracę*<br/>
 Harmonogram do przekonwertowania.
 
 *pScheduler*<br/>
 Wskaźnik harmonogramu do przekonwertowania.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

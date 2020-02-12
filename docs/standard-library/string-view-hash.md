@@ -1,20 +1,20 @@
 ---
-title: skrót&lt;string_view&gt; specjalizacji
+title: '&lt;skrótu string_view&gt; specjalizacji'
 ms.date: 04/19/2019
 f1_keywords:
 - xstring/basic_string_view::hash
 helpviewer_keywords:
 - std::basic_string_view::hash
-ms.openlocfilehash: 60b6fdecc371ee950532dee3f69cc8dd07b8b5eb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 7a69473b6fe39655e7cf3154671017c39c453e29
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346642"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126178"
 ---
-# <a name="hashltstringviewgt-specialization"></a>skrót&lt;string_view&gt; specjalizacji
+# <a name="hashltstring_viewgt-specialization"></a>&lt;skrótu string_view&gt; specjalizacji
 
-Specjalizacja szablonu, który generuje wartość skrótu, biorąc pod uwagę string_view.
+Specjalizacja szablonu generująca wartość skrótu podaną string_view.
 
 ```cpp
 template <class CharType, class Traits>
@@ -29,7 +29,7 @@ struct hash<basic_string_view<CharType, Traits>>
 ```
 ### <a name="remarks"></a>Uwagi
 
-Skrót string_view jest równa wyznaczania wartości skrótu obiektu ciągu bazowego.
+Wartość skrótu string_view jest równa wartości skrótu obiektu ciągu bazowego.
 
 ### <a name="example"></a>Przykład
 

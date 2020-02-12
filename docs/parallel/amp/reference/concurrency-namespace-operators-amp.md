@@ -2,26 +2,26 @@
 title: Operatory przestrzeni nazw współbieżności (AMP)
 ms.date: 11/04/2016
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-ms.openlocfilehash: e2957aa84ffbf420dcf2672359a442b754866649
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b536f75e4ef6405b60d45e89290a7d97a01707d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180417"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126925"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Operatory przestrzeni nazw współbieżności (AMP)
 
 ||||
 |-|-|-|
-|[operator!=](#operator_neq)|[operator%](#operator_mod)|[operator*](#operator_star)|
-|[operator +](#operator_add)|[operator-](#operator-)|[operator/](#operator_div)|
-|[operator==](#operator_eq_eq)|
+|[operator!=](#operator_neq)|[zakład](#operator_mod)|[zakład](#operator_star)|
+|[operator +](#operator_add)|[zakład](#operator-)|[zakład](#operator_div)|
+|[operator = =](#operator_eq_eq)|
 
-##  <a name="operator_eq_eq"></a>  operator ==
+## <a name="operator_eq_eq"></a>operator = =
 
-Określa, czy określone argumenty są takie same.
+Określa, czy określone argumenty są równe.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -34,7 +34,7 @@ bool operator== (
 ### <a name="parameters"></a>Parametry
 
 *_Rank*<br/>
-Ranga argumentów krotek.
+Ranga argumentów krotki.
 
 *_Lhs*<br/>
 Jedna z krotek do porównania.
@@ -42,15 +42,15 @@ Jedna z krotek do porównania.
 *_Rhs*<br/>
 Jedna z krotek do porównania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-**wartość true,** Jeśli kolekcje są równe; w przeciwnym razie **false**.
+**prawda** , jeśli krotki są równe; w przeciwnym razie **false**.
 
-##  <a name="operator_neq"></a>  operator! =
+## <a name="operator_neq"></a>operator! =
 
-Określa, czy określone argumenty są równe.
+Określa, czy określone argumenty nie są równe.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -63,7 +63,7 @@ bool operator!= (
 ### <a name="parameters"></a>Parametry
 
 *_Rank*<br/>
-Ranga argumentów krotek.
+Ranga argumentów krotki.
 
 *_Lhs*<br/>
 Jedna z krotek do porównania.
@@ -71,15 +71,15 @@ Jedna z krotek do porównania.
 *_Rhs*<br/>
 Jedna z krotek do porównania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-**wartość true,** Jeśli kolekcje nie są równe; w przeciwnym razie **false**.
+**prawda** , jeśli krotki nie są równe; w przeciwnym razie **false**.
 
-##  <a name="operator_add"></a>  operator +
+## <a name="operator_add"></a>operator +
 
-Oblicza sumę dotyczącą składnika dla określonych argumentów.
+Oblicza sumę elementów dla określonych argumentów.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -108,7 +108,7 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 ### <a name="parameters"></a>Parametry
 
 *_Rank*<br/>
-Ranga argumentów krotek.
+Ranga argumentów krotki.
 
 *_Lhs*<br/>
 Jeden z argumentów do dodania.
@@ -116,15 +116,15 @@ Jeden z argumentów do dodania.
 *_Rhs*<br/>
 Jeden z argumentów do dodania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Dotycząca składników Suma określonych argumentów.
+Suma składnika dla określonych argumentów.
 
-##  <a name="operator-"></a>  operator-
+## <a name="operator-"></a>zakład
 
-Oblicza różnicę dotyczącą składnika między określonymi argumentami.
+Oblicza różnicę składnika między określonymi argumentami.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -153,23 +153,23 @@ _Tuple_type<_Rank>   operator-(
 ### <a name="parameters"></a>Parametry
 
 *_Rank*<br/>
-Ranga argumentów krotek.
+Ranga argumentów krotki.
 
 *_Lhs*<br/>
-Argument do odjęcia od.
+Argument, z którego ma zostać odjęta wartość.
 
 *_Rhs*<br/>
-Argument do odjęcia.
+Argument odejmowania.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Różnicę dotyczącą składnika między określonymi argumentami.
+Różnica składnika między określonymi argumentami.
 
-##  <a name="operator_star"></a>  operator *
+## <a name="operator_star"></a>zakład
 
-Oblicza iloczyn dotyczący składnika dla określonych argumentów.
+Oblicza produkt ze składnikami dla określonych argumentów.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -190,23 +190,23 @@ _Tuple_type<_Rank>   operator*(
 ### <a name="parameters"></a>Parametry
 
 *_Rank*<br/>
-Ranga argumentów krotek.
+Ranga argumentów krotki.
 
 *_Lhs*<br/>
-Jedna ze spójnych kolekcji do pomnożenia.
+Jedna z krotek do pomnożenia.
 
 *_Rhs*<br/>
-Jedna ze spójnych kolekcji do pomnożenia.
+Jedna z krotek do pomnożenia.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Iloczyn dotyczący składnika dla określonych argumentów.
+Iloczyn dotyczący składnika określonych argumentów.
 
-##  <a name="operator_div"></a>  operator /
+## <a name="operator_div"></a>zakład
 
-Oblicza iloraz dotyczący składnika dla określonych argumentów.
+Oblicza iloraz składnika dla określonych argumentów.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -227,23 +227,23 @@ _Tuple_type<_Rank>   operator/(
 ### <a name="parameters"></a>Parametry
 
 *_Rank*<br/>
-Ranga argumentów krotek.
+Ranga argumentów krotki.
 
 *_Lhs*<br/>
-Krotka można podzielić.
+Krotka, która ma zostać podzielona.
 
 *_Rhs*<br/>
-Spójna kolekcja znajdująca się dzielnikiem.
+Krotka, według której ma zostać podzielona wartość.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Oblicza iloraz dotyczący składnika dla określonych argumentów.
+Iloraz składnika dla określonych argumentów.
 
-##  <a name="operator_mod"></a>  operator %
+## <a name="operator_mod"></a>zakład
 
 Oblicza moduł pierwszego określonego argumentu przez drugi określony argument.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -264,18 +264,18 @@ _Tuple_type<_Rank>   operator%(
 ### <a name="parameters"></a>Parametry
 
 *_Rank*<br/>
-Ranga argumentów krotek.
+Ranga argumentów krotki.
 
 *_Lhs*<br/>
-Krotka, z której oblicza się modulo.
+Krotka, z której jest obliczane modulo.
 
 *_Rhs*<br/>
 Krotka do modulo przez.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Wynik pierwszego argumentu określonego moduł drugi określony argument.
+Wynik pierwszego określonego argumentu, który został określony dla drugiego określonego argumentu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Współbieżność Namespace ](concurrency-namespace-cpp-amp.md)
+[Przestrzeń nazw współbieżności](concurrency-namespace-cpp-amp.md)

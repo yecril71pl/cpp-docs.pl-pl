@@ -9,40 +9,40 @@ f1_keywords:
 helpviewer_keywords:
 - scheduler_resource_allocation_error class
 ms.assetid: 8b40449a-7abb-4d0a-bb85-c0e9a495ae97
-ms.openlocfilehash: 7f7254306253aabc33f46694f3da16734e6efccf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2955320b443fb61f26d9f07ca336a45c620e2aa9
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160055"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143338"
 ---
-# <a name="schedulerresourceallocationerror-class"></a>scheduler_resource_allocation_error — Klasa
+# <a name="scheduler_resource_allocation_error-class"></a>scheduler_resource_allocation_error — Klasa
 
-Ta klasa opisuje wyjątek generowany z powodu błędu można uzyskać krytycznym zasobem w środowisku uruchomieniowym współbieżności.
+Ta klasa opisuje wyjątek zgłoszony z powodu niepowodzenia uzyskania zasobu krytycznego w środowisko uruchomieniowe współbieżności.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class scheduler_resource_allocation_error : public std::exception;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[scheduler_resource_allocation_error](#ctor)|Przeciążone. Konstruuje `scheduler_resource_allocation_error` obiektu.|
+|[scheduler_resource_allocation_error](#ctor)|Przeciążone. Konstruuje obiekt `scheduler_resource_allocation_error`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |[get_error_code](#get_error_code)|Zwraca kod błędu, który spowodował wyjątek.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ten wyjątek zazwyczaj jest zgłaszany, gdy system operacyjny z w środowisku uruchomieniowym współbieżności: wywołanie zakończy się niepowodzeniem. Kod błędu, który normalnie zostałyby zwrócone w wyniku wywołania metody Win32 `GetLastError` jest konwertowana na wartość typu `HRESULT` i mogą być pobierane przy użyciu `get_error_code` metody.
+Ten wyjątek jest zazwyczaj generowany w przypadku niepowodzenia wywołania systemu operacyjnego z środowisko uruchomieniowe współbieżności. Kod błędu, który zwykle jest zwracany z wywołania metody Win32 `GetLastError` jest konwertowany na wartość typu `HRESULT` i można go pobrać przy użyciu metody `get_error_code`.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -52,27 +52,27 @@ Ten wyjątek zazwyczaj jest zgłaszany, gdy system operacyjny z w środowisku ur
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concrt.h
+**Nagłówek:** ConcRT. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="get_error_code"></a> get_error_code
+## <a name="get_error_code"></a>get_error_code
 
 Zwraca kod błędu, który spowodował wyjątek.
 
-```
+```cpp
 HRESULT get_error_code() const throw();
 ```
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-`HRESULT` Wartości błędu, który spowodował wyjątek.
+Wartość `HRESULT` błędu, który spowodował wyjątek.
 
-##  <a name="ctor"></a> scheduler_resource_allocation_error
+## <a name="ctor"></a>scheduler_resource_allocation_error
 
-Konstruuje `scheduler_resource_allocation_error` obiektu.
+Konstruuje obiekt `scheduler_resource_allocation_error`.
 
-```
+```cpp
 scheduler_resource_allocation_error(
     _In_z_ const char* _Message,
     HRESULT _Hresult) throw();
@@ -84,11 +84,11 @@ explicit _CRTIMP scheduler_resource_allocation_error(
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Opisowy komunikat dotyczący błędu.
+Opisowy komunikat o błędzie.
 
 *_Hresult*<br/>
-`HRESULT` Wartości błędu, który spowodował wyjątek.
+Wartość `HRESULT` błędu, który spowodował wyjątek.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

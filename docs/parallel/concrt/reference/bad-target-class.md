@@ -8,34 +8,34 @@ f1_keywords:
 helpviewer_keywords:
 - bad_target class
 ms.assetid: e6dcddbf-9217-4fac-ac7f-7b8b4781d2f5
-ms.openlocfilehash: 04489151cedf1a47aeebd883e76b8d26b51031ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 023607ff142b7fa39165cc9b5280a8e9345a3645
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337768"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142857"
 ---
-# <a name="badtarget-class"></a>bad_target — Klasa
+# <a name="bad_target-class"></a>bad_target — Klasa
 
-Ta klasa opisuje wyjątek generowany, gdy blok obsługi wiadomości podano wskaźnik do obiektu docelowego, która jest nieprawidłowa dla wykonywanej operacji.
+Ta klasa opisuje wyjątek zgłoszony, gdy blok komunikatów otrzymuje wskaźnik do obiektu docelowego, który jest nieprawidłowy dla wykonywanej operacji.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class bad_target : public std::exception;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[bad_target](#ctor)|Przeciążone. Konstruuje `bad_target` obiektu.|
+|[bad_target](#ctor)|Przeciążone. Konstruuje obiekt `bad_target`.|
 
 ## <a name="remarks"></a>Uwagi
 
-To jest zwykle wyjątek powodów, takich jak docelowy próby używanie komunikat, który jest zarezerwowana w innej docelowej lub zwalnianiu zliczania rezerwacji, który przechowuje.
+Ten wyjątek jest zazwyczaj generowany z powodów, takich jak obiekt docelowy próbujący wykorzystać komunikat, który jest zarezerwowany dla innego obiektu docelowego lub zwalnia rezerwację, która nie została wstrzymana.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -45,15 +45,15 @@ To jest zwykle wyjątek powodów, takich jak docelowy próby używanie komunikat
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concrt.h
+**Nagłówek:** ConcRT. h
 
-**Namespace:** współbieżności
+**Przestrzeń nazw:** współbieżność
 
-##  <a name="ctor"></a> bad_target —
+## <a name="ctor"></a>bad_target
 
-Konstruuje `bad_target` obiektu.
+Konstruuje obiekt `bad_target`.
 
-```
+```cpp
 explicit _CRTIMP bad_target(_In_z_ const char* _Message) throw();
 
 bad_target() throw();
@@ -62,9 +62,9 @@ bad_target() throw();
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Opisowy komunikat dotyczący błędu.
+Opisowy komunikat o błędzie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Bloki komunikatów asynchronicznych](../../../parallel/concrt/asynchronous-message-blocks.md)

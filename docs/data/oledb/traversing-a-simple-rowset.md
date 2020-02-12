@@ -8,16 +8,16 @@ helpviewer_keywords:
 - OLE DB consumers [C++], database attributes
 - accessors [C++], rowsets
 ms.assetid: b45acf16-4029-429d-ab8d-b7fba98b9740
-ms.openlocfilehash: 88a027a24f8ab817f793f101f9f128e1fc0c61c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 874c8372074838cd614d1fe17727871ca6e5f21a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389154"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127645"
 ---
 # <a name="traversing-a-simple-rowset"></a>Przechodzenie przez prosty zestaw wierszy
 
-Poniższy przykład pokazuje dostęp szybkie i łatwe bazy danych, która nie zawiera polecenia. Poniższy kod konsumenta w projekcie ATL, pobiera rekordy z tabeli o nazwie *artystów* w programie Microsoft Access bazy danych przy użyciu dostawcy Microsoft OLE DB dla ODBC. Ten kod tworzy [CTable](../../data/oledb/ctable-class.md) obiektu tabeli za pomocą metody dostępu na podstawie użytkownika rekordu klasy `CArtists`. Otwiera połączenie, otwiera sesji na połączenie i otwiera tabelę w sesji.
+Poniższy przykład pokazuje szybki i łatwy dostęp do bazy danych, który nie obejmuje poleceń. Poniższy kod klienta w projekcie ATL pobiera rekordy z tabeli o nazwie *artyści* w bazie danych programu Microsoft Access za pomocą dostawcy OLE DB firmy Microsoft dla ODBC. Kod tworzy obiekt tabeli [CTable](../../data/oledb/ctable-class.md) z akcesorem opartym na klasie rekordu użytkownika `CArtists`. Spowoduje to otwarcie połączenia, otwarcie sesji w ramach połączenia i otwarcie tabeli w sesji.
 
 ```cpp
 #include <atldbcli.h>
@@ -54,7 +54,7 @@ int main()
 }
 ```
 
-Rekord użytkownika `CArtists`, wygląda następująco:
+Rekord użytkownika, `CArtists`, wygląda podobnie do tego przykładu:
 
 ```cpp
 class CArtists
@@ -74,6 +74,6 @@ END_COLUMN_MAP()
 };
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Praca z szablonami konsumentów OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

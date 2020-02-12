@@ -6,44 +6,44 @@ f1_keywords:
 - AMP_SHORT_VECTORS/norm
 - AMP_SHORT_VECTORS/Concurrency::graphics::norm Constructor
 ms.assetid: 73002f3d-c25e-4119-bcd3-4c46c9b6abf1
-ms.openlocfilehash: 56f879ef2fc0d3010ab4f64fedaf2570dac565d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 272ac3685539eb03f773c8bc60d5938ed6c53876
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351566"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126516"
 ---
 # <a name="norm-class"></a>norm — Klasa
 
-Reprezentuje liczby normy. Każdy element jest zmiennoprzecinkowy numer punktu z zakresu [-1.0f, 1.0f].
+Reprezentuje numer norm. Każdy element jest liczbą zmiennoprzecinkową z zakresu [-1.0 f, 1.0 f].
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class norm;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[norm konstruktora](#ctor)|Przeciążone. Domyślny konstruktor. Zainicjuj 0,0.|
+|[Konstruktor norm](#ctor)|Przeciążone. Konstruktor domyślny. Zainicjuj do 0.0 f.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|norm::operator-||
-|norm::operator--||
-|norm::operator float|Operator konwersji. Konwertowanie liczby norm zmiennoprzecinkowej wartości.|
-|norm::operator*=||
-|norm::operator/=||
-|norm::operator ++||
-|norm::operator+=||
-|norm::operator=||
-|norm::operator-=||
+|Norma:: operator-||
+|Norma:: operator--||
+|Norma:: operator float|Operator konwersji. Przekonwertuj numer normy na wartość zmiennoprzecinkową.|
+|Norma:: operator * =||
+|Norma:: operator/=||
+|Norma:: operator + +||
+|Norma:: operator + =||
+|Norma:: operator =||
+|Norma:: operator-=||
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -51,15 +51,15 @@ class norm;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** amp_short_vectors.h
+**Nagłówek:** amp_short_vectors. h
 
-**Namespace:** CONCURRENCY::Graphics
+**Przestrzeń nazw:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> norm
+## <a name="ctor"></a>oblicza
 
-Domyślny konstruktor. Zainicjuj 0,0.
+Konstruktor domyślny. Zainicjuj do 0.0 f.
 
-```
+```cpp
 norm(
     void) restrict(amp,
     cpu);
@@ -92,11 +92,11 @@ norm(
 ### <a name="parameters"></a>Parametry
 
 *_V*<br/>
-Wartość wykorzystana do zainicjowania.
+Wartość używana do inicjowania.
 
-*_Inne*<br/>
+*_Other*<br/>
 Obiekt używany do inicjowania.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

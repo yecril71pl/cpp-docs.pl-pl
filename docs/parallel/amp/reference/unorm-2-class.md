@@ -28,84 +28,84 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unnorm_2::g
 - amp_short_vectors/Concurrency::graphics::unnorm_2::operator++
 ms.assetid: 62e88ea7-e29f-4f62-95ce-61a1f39f5e34
-ms.openlocfilehash: 33411511809fc9798f6fdf65f5331e2e587990ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 325a1532a079c8eff9c8dcdc5410dcbfe58fb914
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405498"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126217"
 ---
-# <a name="unorm2-class"></a>unorm_2 — Klasa
+# <a name="unorm_2-class"></a>unorm_2 — Klasa
 
-Reprezentuje krótki wektor dwóch liczb normalnych bez znaku.
+Reprezentuje krótki wektor dwóch nieoznaczonych liczb zwykłych.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class unorm_2;
 ```
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|[unorm_2 — Konstruktor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.|
+|[Konstruktor unorm_2](#ctor)|Przeciążone. Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |unorm_2::get_x||
 |unorm_2::get_xy||
-|unorm_2::get_y||
+|unorm_2:: get_y||
 |unorm_2::get_yx||
 |unorm_2::ref_g||
-|unorm_2::ref_r||
+|unorm_2:: ref_r||
 |unorm_2::ref_x||
-|unorm_2::ref_y||
+|unorm_2:: ref_y||
 |unorm_2::set_x||
-|unorm_2::set_xy||
-|unorm_2::set_y||
-|unorm_2::set_yx||
+|unorm_2:: set_xy||
+|unorm_2:: set_y||
+|unorm_2:: set_yx||
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|unorm_2::operator--||
-|unorm_2::operator * =||
-|unorm_2::operator / =||
-|unorm_2::operator ++||
-|unorm_2::operator +=||
-|unorm_2::operator =||
-|unorm_2::operator-=||
+|unorm_2:: operator--||
+|unorm_2:: operator * =||
+|unorm_2:: operator/=||
+|unorm_2:: operator + +||
+|unorm_2:: operator + =||
+|unorm_2:: operator =||
+|unorm_2:: operator-=||
 
-### <a name="public-constants"></a>Publiczne stałe
+### <a name="public-constants"></a>Stałe publiczne
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
 |unorm_2::size — Stała||
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
+|Name (Nazwa)|Opis|
 |----------|-----------------|
-|unorm_2::g||
-|unorm_2::GR||
-|unorm_2::r||
+|unorm_2:: g||
+|unorm_2:: GR||
+|unorm_2:: r||
 |unorm_2::rg||
-|unorm_2::x||
-|unorm_2::xy||
-|unorm_2::y||
-|unorm_2::yx||
+|unorm_2:: x||
+|unorm_2:: XY||
+|unorm_2:: y||
+|unorm_2:: yx||
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -113,15 +113,15 @@ class unorm_2;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** amp_short_vectors.h
+**Nagłówek:** amp_short_vectors. h
 
-**Namespace:** CONCURRENCY::Graphics
+**Przestrzeń nazw:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> unorm_2
+## <a name="ctor"></a>unorm_2
 
-Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.
+Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.
 
-```
+```cpp
 unorm_2() restrict(amp,
     cpu);
 
@@ -171,23 +171,23 @@ explicit inline unorm_2(
 ### <a name="parameters"></a>Parametry
 
 *_V0*<br/>
-Wartość do zainicjowania elementu 0.
+Wartość, aby zainicjować element 0.
 
 *_V1*<br/>
 Wartość do zainicjowania elementu 1.
 
 *_V*<br/>
-Wartość inicjalizacji.
+Wartość dla inicjalizacji.
 
-*_Inne*<br/>
+*_Other*<br/>
 Obiekt używany do inicjowania.
 
-##  <a name="unorm_2__size"></a> Rozmiar
+## <a name="unorm_2__size"></a>zmienia
 
-```
+```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)
