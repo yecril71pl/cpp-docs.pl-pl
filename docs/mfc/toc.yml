@@ -323,7 +323,7 @@
           items:
             - name: Automatyzacja
               href: automation.md
-            - name: Klienci automatyzacji
+            - name: klienci automatyzacji
               expanded: false
               items:
                 - name: Klienci automatyzacji
@@ -333,7 +333,7 @@
             - name: Serwery automatyzacji
               expanded: false
               items:
-                - name: Serwery automatyzacji
+                - name: serwery automatyzacji
                   href: automation-servers.md
                 - name: 'Serwery automatyzacji: problemy z okresem istnienia obiektu'
                   href: automation-servers-object-lifetime-issues.md
@@ -428,17 +428,8 @@
               href: data-objects-and-data-sources-creation-and-destruction.md
             - name: 'Obiekty danych i źródła danych: manipulowanie'
               href: data-objects-and-data-sources-manipulation.md
-        - name: Przeciąganie i upuszczanie (OLE)
-          expanded: false
-          items:
-            - name: Przeciąganie i upuszczanie (OLE)
-              href: drag-and-drop-ole.md
-            - name: 'Przeciąganie i upuszczanie: implementowanie miejsca źródłowego'
-              href: drag-and-drop-implementing-a-drop-source.md
-            - name: 'Przeciąganie i upuszczanie: implementowanie miejsca docelowego'
-              href: drag-and-drop-implementing-a-drop-target.md
-            - name: 'Przeciąganie i upuszczanie: dostosowywanie'
-              href: drag-and-drop-customizing.md
+        - name: Przeciąganie i upuszczanie elementów OLE
+          href: drag-and-drop-ole.md
         - name: Menu i zasoby (OLE)
           expanded: false
           items:
@@ -523,7 +514,7 @@
             - name: Kontrolki ActiveX MFC
               expanded: false
               items:
-                - name: Kontrolki ActiveX MFC
+                - name: kontrolki ActiveX MFC
                   href: mfc-activex-controls.md
                 - name: 'Kontrolki ActiveX MFC: optymalizacja'
                   expanded: false
@@ -1304,7 +1295,7 @@
                 - name: Niszczenie obiektów okien
                   expanded: false
                   items:
-                    - name: Niszczenie obiektów okien
+                    - name: niszczenie obiektów okien
                       href: destroying-window-objects.md
                     - name: Sekwencja niszczenia okna
                       href: window-destruction-sequence.md
@@ -1666,7 +1657,7 @@
     - name: Klasy OLE
       expanded: false
       items:
-        - name: Klasy OLE
+        - name: klasy OLE
           href: ole-classes.md
         - name: Klasy kontenerów OLE
           href: ole-container-classes.md
@@ -1711,7 +1702,7 @@
     - name: Klasy MFC
       expanded: false
       items:
-        - name: Klasy MFC
+        - name: MFC — Klasy
           href: reference/mfc-classes.md
         - name: 'CAccelerateDecelerateTransition, klasa'
           href: reference/cacceleratedeceleratetransition-class.md
@@ -2749,7 +2740,7 @@
               href: reference/cdaoquerydefinfo-structure.md
             - name: 'CDaoRelationInfo, struktura'
               href: reference/cdaorelationinfo-structure.md
-            - name: CDaoRelationFieldInfo — struktura
+            - name: 'CDaoRelationFieldInfo, struktura'
               href: reference/cdaorelationfieldinfo-structure.md
             - name: 'CDaoTableDefInfo, struktura'
               href: reference/cdaotabledefinfo-structure.md
