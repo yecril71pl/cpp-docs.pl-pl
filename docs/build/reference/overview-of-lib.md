@@ -1,20 +1,20 @@
 ---
-title: Omówienie biblioteki LIB
+title: Informacje o LIB
 description: Omówienie użycia i opcji narzędzia biblioteki lib. exe.
-ms.date: 09/25/2019
+ms.date: 02/09/2020
 f1_keywords:
 - Lib
 helpviewer_keywords:
 - LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-ms.openlocfilehash: 7223ef0a624cf15c43bd067db8a7919efd27df17
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 5829a65ab0dc4ef193236c9ae480856a17c5874c
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685492"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257615"
 ---
-# <a name="overview-of-lib"></a>Omówienie biblioteki LIB
+# <a name="overview-of-lib"></a>Informacje o LIB
 
 LIB (lib. exe) tworzy biblioteki standardowe, Importuj biblioteki i pliki eksportu, których można używać z [linkiem](linker-options.md) podczas kompilowania programu. LIB jest uruchamiany z wiersza polecenia.
 
@@ -35,7 +35,7 @@ W poniższej tabeli wymieniono opcje biblioteki lib. exe z linkiem do dodatkowyc
 |Opcja|Opis|
 |-|-|
 |**/DEF**|Utwórz bibliotekę importu i plik eksportu.<br/><br/>Aby uzyskać więcej informacji, zobacz [Kompilowanie biblioteki importowania i eksportowanie pliku](building-an-import-library-and-export-file.md).|
-|**/ERRORREPORT**|   Wyślij do firmy Microsoft informacje o błędach wewnętrznych w programie lib. exe.<br/><br/>Aby uzyskać więcej informacji, zobacz [Uruchamianie lib](running-lib.md).|
+|**/ERRORREPORT**| Przestarzałe. Aby uzyskać więcej informacji, zobacz [Uruchamianie lib](running-lib.md).|
 |**/EXPORT**|   Eksportuje funkcję z programu.<br/><br/>Aby uzyskać więcej informacji, zobacz [Kompilowanie biblioteki importowania i eksportowanie pliku](building-an-import-library-and-export-file.md).|
 |**/EXTRACT**|   Utwórz plik obiektu (. obj), który zawiera kopię elementu członkowskiego istniejącej biblioteki.<br/><br/>Aby uzyskać więcej informacji, zobacz [wyodrębnianie elementu członkowskiego biblioteki](extracting-a-library-member.md).|
 |**/INCLUDE**|   Dodaje symbol do tabeli symboli.<br/><br/>Aby uzyskać więcej informacji, zobacz [Kompilowanie biblioteki importowania i eksportowanie pliku](building-an-import-library-and-export-file.md).|
@@ -54,10 +54,10 @@ W poniższej tabeli wymieniono opcje biblioteki lib. exe z linkiem do dodatkowyc
 |**/VERBOSE**|   Wyświetla szczegółowe informacje o postępie sesji, w tym nazwy plików. obj, które są dodawane.<br/><br/>Aby uzyskać więcej informacji, zobacz [Uruchamianie lib](running-lib.md).|
 |**/WX**|   Traktuj ostrzeżenia jako błędy.<br/><br/>Aby uzyskać więcej informacji, zobacz [Uruchamianie lib](running-lib.md).|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Dokumentacja biblioteki LIB](lib-reference.md)<br/>
-[Pliki wejściowe LIB](lib-input-files.md)<br/>
-[Pliki wyjściowe LIB](lib-output-files.md)<br/>
-[Inne dane wyjściowe LIB](other-lib-output.md)<br/>
+[Dokumentacja biblioteki LIB](lib-reference.md)\
+[Pliki wejściowe LIB](lib-input-files.md)\
+[Pliki wyjściowe LIB](lib-output-files.md)\
+[Inne dane wyjściowe LIB](other-lib-output.md)\
 [Struktura biblioteki](structure-of-a-library.md)

@@ -1,18 +1,18 @@
 ---
-title: Odwołanie ConnectionManager
+title: ConnectionManager — dokumentacja
 ms.date: 01/17/2020
 f1_keywords:
 - ConnectionManager
 helpviewer_keywords:
 - ConnectionManager program
-ms.openlocfilehash: 2b01bfbcd81984e7ddf32cd5ab0485fff17b3d2b
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 1c6236cedba88714e9918dd2c096b5e78d2f08ce
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76520901"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258036"
 ---
-# <a name="connectionmanager-reference"></a>Odwołanie ConnectionManager
+# <a name="connectionmanager-reference"></a>ConnectionManager — dokumentacja
 
 ::: moniker range="<=vs-2017"
 
@@ -22,7 +22,7 @@ ConnectionManager. exe jest dostępny w programie Visual Studio 2019 w wersji 16
 
 ::: moniker range="vs-2019"
 
-ConnectionManager. exe to narzędzie wiersza polecenia do zarządzania połączeniami zdalnego tworzenia poza programem Visual Studio. Jest to przydatne w przypadku zadań, takich jak inicjowanie obsługi nowej maszyny deweloperskiej. Można też użyć go do skonfigurowania programu Visual Studio na potrzeby ciągłej integracji. Można go użyć w oknie wiersz polecenia dla deweloperów. Aby uzyskać więcej informacji na temat wiersz polecenia dla deweloperów, zobacz [Korzystanie z C++ zestawu narzędzi firmy Microsoft w wierszu polecenia](..\build\building-on-the-command-line.md).
+ConnectionManager. exe to narzędzie wiersza polecenia do zarządzania połączeniami zdalnego tworzenia poza programem Visual Studio. Jest to przydatne w przypadku zadań, takich jak inicjowanie obsługi nowej maszyny deweloperskiej. Można też użyć go do skonfigurowania programu Visual Studio na potrzeby ciągłej integracji. Można go użyć w oknie wiersz polecenia dla deweloperów. Aby uzyskać więcej informacji na temat wiersz polecenia dla deweloperów, zobacz [Korzystanie z C++ zestawu narzędzi firmy Microsoft w wierszu polecenia](../build/building-on-the-command-line.md).
 
 ConnectionManager. exe jest dostępny w programie Visual Studio 2019 w wersji 16,5 lub nowszej. Jest to część rozwoju systemu **Linux z C++**  obciążeniem w Instalator programu Visual Studio. Jest ona również instalowana automatycznie po wybraniu składnika **Menedżera połączeń** w instalatorze. Jest on instalowany w systemie *% VCIDEInstallDir%\\Linux\\bin\\ConnectionManagerExe\\ConnectionManager. exe*.
 
@@ -106,7 +106,7 @@ To polecenie usuwa połączenie z IDENTYFIKATORem 1975957870 z listy połączeń
 ConnectionManager.exe remove 1975957870
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Nawiązywanie połączenia z docelowym systemem Linux w programie Visual Studio](connect-to-your-remote-linux-computer.md)
 

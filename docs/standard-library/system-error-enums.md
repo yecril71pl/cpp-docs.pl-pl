@@ -5,12 +5,12 @@ f1_keywords:
 - system_error/std::errc
 - system_error/std::io_errc
 ms.assetid: b21321b7-404a-40de-8777-a85b77c6fa58
-ms.openlocfilehash: 7587261c81739bf19aa0dc4bb80459efa617ad6a
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.openlocfilehash: cff8a58545409c4358cd303e41d27520edd5d552
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898766"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257783"
 ---
 # <a name="ltsystem_errorgt-enums"></a>&lt;system_error&gt; Wyliczenie
 
@@ -18,7 +18,7 @@ ms.locfileid: "74898766"
 
 Zawiera nazwy symboliczne dla wszystkich makr kodu błędu zdefiniowanych przez POSIX w `<errno.h>`.
 
-```
+```cpp
 class errc {
    address_family_not_supported = EAFNOSUPPORT,
    address_in_use = EADDRINUSE,
@@ -107,7 +107,7 @@ class errc {
 
 Zawiera nazwy symboliczne dla warunków błędów w \<iostream >. Może służyć do tworzenia [error_condition](../standard-library/error-condition-class.md) obiektów do porównania z wartością zwracaną przez funkcję [ios_base:: Failure](../standard-library/ios-base-class.md#failure)`code()`.
 
-```
+```cpp
 class io_errc {
    stream = 1
 };

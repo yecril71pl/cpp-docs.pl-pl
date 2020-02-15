@@ -1,23 +1,24 @@
 ---
 title: Opcje kompilatora w rozbiciu na kategorie
-ms.date: 01/08/2020
+description: Lista odwołań według kategorii opcji wiersza polecenia języka MicrosoftC++ C/kompilatora.
+ms.date: 02/09/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 191ea3d5d6f4647f7130757a4657820483d212b5
-ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
+ms.openlocfilehash: d29076e6eae4bcbd15a4bc50bb48477e3f93152d
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77034587"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257718"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opcje kompilatora w rozbiciu na kategorie
 
 Ten artykuł zawiera listę kategorii opcji kompilatora. Aby zapoznać się z listą alfabetyczną, zobacz [Opcje kompilatora w porządku alfabetycznym](compiler-options-listed-alphabetically.md).
 
-## <a name="optimization"></a>optymalizacja
+## <a name="optimization"></a>Optymalizacja
 
-|Opcja|Cel|
+|Opcja|Przeznaczenie|
 |------------|-------------|
 |[/O1](o1-o2-minimize-size-maximize-speed.md)|Tworzy mały kod.|
 |[/O2](o1-o2-minimize-size-maximize-speed.md)|Tworzy szybki kod.|
@@ -33,7 +34,7 @@ Ten artykuł zawiera listę kategorii opcji kompilatora. Aby zapoznać się z li
 
 ## <a name="code-generation"></a>Generowanie kodu
 
-|Opcja|Cel|
+|Opcja|Przeznaczenie|
 |------------|-------------|
 |[/Arch](arch-x86.md)|Użyj instrukcji SSE lub SSE2 w przypadku generowania kodu. (tylko x86)|
 |[/CLR](clr-common-language-runtime-compilation.md)|Tworzy plik wyjściowy do uruchomienia w środowisku uruchomieniowym języka wspólnego.|
@@ -70,14 +71,14 @@ Ten artykuł zawiera listę kategorii opcji kompilatora. Aby zapoznać się z li
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|Używa instrukcji przenoszenia liczb całkowitych dla wartości zmiennoprzecinkowych i wyłącza pewne optymalizacje ładowania zmiennoprzecinkowego.|
 |[/Qspectre](qspectre.md)|Włącz środki zaradcze dla CVE 2017-5753 dla klasy ataków Spectre.|
 |[/Qspectre-load](qspectre-load.md)|Generuj instrukcje serializacji dla każdej instrukcji ładowania.|
-|[/Qspectre-load-cf](qspectre-load-cf.md)|Generuj instrukcje serializacji dla każdej instrukcji przepływu sterowania, która ładuje pamięć.|
+|[/Qspectre-load-cf](qspectre-load-cf.md)|Generuj instrukcje serializacji dla każdej instrukcji przepływu sterowania ładującej pamięć.|
 |[/Qvec-Report](qvec-report-auto-vectorizer-reporting-level.md)|Włącza poziomy raportowania dla automatycznej wektoryzacji.|
 |[/RTC](rtc-run-time-error-checks.md)|Włącza sprawdzanie błędów czasu wykonywania.|
 |[/volatile](volatile-volatile-keyword-interpretation.md)|Wybiera sposób interpretowania nietrwałego słowa kluczowego.|
 
 ## <a name="output-files"></a>Pliki wyjściowe
 
-|Opcja|Cel|
+|Opcja|Przeznaczenie|
 |------------|-------------|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|Przetwarza komentarze dokumentacji do pliku XML.|
 |[/FA](fa-fa-listing-file.md)|Konfiguruje plik listy zestawu.|
@@ -88,11 +89,11 @@ Ten artykuł zawiera listę kategorii opcji kompilatora. Aby zapoznać się z li
 |[/FM](fm-name-mapfile.md)|Tworzy element mapfile.|
 |[/FO](fo-object-file-name.md)|Tworzy plik obiektu.|
 |[/FP](fp-name-dot-pch-file.md)|Określa nazwę prekompilowanego pliku nagłówkowego.|
-|[/FR,/fr](fr-fr-create-dot-sbr-file.md)|Nazwa wygenerowana przez pliki przeglądarki SBR.|
+|[/FR,/fr](fr-fr-create-dot-sbr-file.md)|Nazwa wygenerowana *`.sbr`* plików przeglądarki.|
 
 ## <a name="preprocessor"></a>Preprocesor
 
-|Opcja|Cel|
+|Opcja|Przeznaczenie|
 |------------|-------------|
 |[/AI](ai-specify-metadata-directories.md)|Określa katalog do przeszukania w celu rozpoznania odwołań do plików przesłanych do dyrektywy [#using](../../preprocessor/hash-using-directive-cpp.md) .|
 |[/C](c-preserve-comments-during-preprocessing.md)|Zachowuje komentarze podczas przetwarzania wstępnego.|
@@ -110,9 +111,9 @@ Ten artykuł zawiera listę kategorii opcji kompilatora. Aby zapoznać się z li
 
 ## <a name="language"></a>Język
 
-|Opcja|Cel|
+|Opcja|Przeznaczenie|
 |------------|-------------|
-|[/constexpr](constexpr-control-constexpr-evaluation.md)|Kontrolowanie wartości wyrażenia constexpr w czasie kompilacji.|
+|[/constexpr](constexpr-control-constexpr-evaluation.md)|Kontrolowanie wartości wyrażenia **constexpr** w czasie kompilacji.|
 |[/OpenMP](openmp-enable-openmp-2-0-support.md)|Włącza [#pragma OMP](../../preprocessor/omp.md) w kodzie źródłowym.|
 |[/VD](vd-disable-construction-displacements.md)|Pomija lub włącza ukryte elementy członkowskie klasy `vtordisp`.|
 |[/VMB](vmb-vmg-representation-method.md)|Używa najlepszych podstaw dla wskaźników do elementów członkowskich.|
@@ -128,38 +129,38 @@ Ten artykuł zawiera listę kategorii opcji kompilatora. Aby zapoznać się z li
 |[/ZH](zh.md)|Określa MD5, SHA-1 lub SHA-256 dla sum kontrolnych w informacjach debugowania.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Zawiera informacje o debugowaniu w programie bazy danych programu zgodne z funkcją Edytuj i Kontynuuj. (tylko x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Generuje pełne informacje o debugowaniu.|
-|[/Zl](zl-omit-default-library-name.md)|Usuwa domyślną nazwę biblioteki z pliku. obj.|
+|[/Zl](zl-omit-default-library-name.md)|Usuwa domyślną nazwę biblioteki z pliku *`.obj`* .|
 |[/ZP](zp-struct-member-alignment.md) *n*|Elementy członkowskie struktury pakietów.|
 |[/ZS](zs-syntax-check-only.md)|Sprawdza tylko składnię.|
 |[/ZW](zw-windows-runtime-compilation.md)|Tworzy plik wyjściowy do uruchomienia na środowisko wykonawcze systemu Windows.|
 
 ## <a name="linking"></a>Konsolidacja
 
-|Opcja|Cel|
+|Opcja|Przeznaczenie|
 |------------|-------------|
 |[Opcją](f-set-stack-size.md)|Ustawia rozmiar stosu.|
 |[/LD](md-mt-ld-use-run-time-library.md)|Tworzy bibliotekę dołączaną dynamicznie.|
 |[/LDd](md-mt-ld-use-run-time-library.md)|Tworzy bibliotekę dołączaną dynamicznie do debugowania.|
 |[/link](link-pass-options-to-linker.md)|Przekazuje określoną opcję do LINKu.|
 |[/LN](ln-create-msil-module.md)|Tworzy moduł MSIL.|
-|[/MD](md-mt-ld-use-run-time-library.md)|Kompiluje, aby utworzyć wielowątkową bibliotekę DLL, za pomocą MSVCRT. lib.|
-|[/MDd](md-mt-ld-use-run-time-library.md)|Kompiluje, aby utworzyć wielowątkową bibliotekę DLL debugowania za pomocą MSVCRTD. lib.|
-|[/MT](md-mt-ld-use-run-time-library.md)|Kompiluje, aby utworzyć wielowątkowy plik wykonywalny przy użyciu LIBCMT. lib.|
-|[/MTd](md-mt-ld-use-run-time-library.md)|Kompiluje, aby utworzyć plik wykonywalny wielowątkowego debugowania za pomocą LIBCMTD. lib.|
+|[/MD](md-mt-ld-use-run-time-library.md)|Kompiluje, aby utworzyć wielowątkową bibliotekę DLL, za pomocą *msvcrt. lib*.|
+|[/MDd](md-mt-ld-use-run-time-library.md)|Kompiluje, aby utworzyć wielowątkową bibliotekę DLL debugowania za pomocą *msvcrtd. lib*.|
+|[/MT](md-mt-ld-use-run-time-library.md)|Kompiluje, aby utworzyć wielowątkowy plik wykonywalny przy użyciu *libcmt. lib*.|
+|[/MTd](md-mt-ld-use-run-time-library.md)|Kompiluje, aby utworzyć plik wykonywalny wielowątkowego debugowania za pomocą *libcmtd. lib*.|
 
 ## <a name="miscellaneous"></a>Różne
 
-|Opcja|Cel|
+|Opcja|Przeznaczenie|
 |------------|-------------|
 |[/?](help-compiler-command-line-help.md)|Wyświetla listę opcji kompilatora.|
 |[@](at-specify-a-compiler-response-file.md)|Określa plik odpowiedzi.|
 |[/analyze](analyze-code-analysis.md)|Włącza analizę kodu.|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|Zwiększa liczbę sekcji adresowanych w pliku. obj.|
 |[/c](c-compile-without-linking.md)|Kompiluje bez konsolidacji.|
-|[/CGTHREADS](cgthreads-code-generation-threads.md)|Określa liczbę wątków CL. exe do użycia na potrzeby optymalizacji i generowania kodu.|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|Umożliwia dostarczenie informacji o wewnętrznym błędzie kompilatora (lodem) bezpośrednio do zespołu firmy C++ Microsoft.|
-|[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|Wyświetla pełną ścieżkę do plików kodu źródłowego przekazaną do CL. exe w tekście diagnostycznym.|
-|[/FS](fs-force-synchronous-pdb-writes.md)|Wymusza zapis do pliku bazy danych programu (PDB) do serializacji za pomocą MSPDBSRV. EXE.|
+|[/CGTHREADS](cgthreads-code-generation-threads.md)|Określa liczbę wątków *CL. exe* do użycia na potrzeby optymalizacji i generowania kodu.|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)| Przestarzałe. Raportowanie błędów jest kontrolowane przez ustawienia [raportowanie błędów systemu Windows (wer)](/windows/win32/wer/windows-error-reporting) . |
+|[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|Wyświetla pełną ścieżkę do plików kodu źródłowego przekazaną do *CL. exe* w tekście diagnostycznym.|
+|[/FS](fs-force-synchronous-pdb-writes.md)|Wymusza, aby operacje zapisu w pliku PDB były serializowane za pomocą *mspdbsrv. Plik EXE*.|
 |[/H](h-restrict-length-of-external-names.md)|Przestarzałe. Ogranicza długość nazw zewnętrznych (publicznych).|
 |[/HELP](help-compiler-command-line-help.md)|Wyświetla listę opcji kompilatora.|
 |[/J](j-default-char-type-is-unsigned.md)|Zmienia domyślny typ `char`.|
@@ -184,7 +185,7 @@ Ten artykuł zawiera listę kategorii opcji kompilatora. Aby zapoznać się z li
 |[/wo](compiler-option-warning-level.md)|Wyświetla określone ostrzeżenie tylko raz.|
 |[/WV](compiler-option-warning-level.md)|Wyłącza ostrzeżenia wprowadzone przez nowsze wersje kompilatora.|
 |[/WX](compiler-option-warning-level.md)|Traktuje ostrzeżenia jako błędy.|
-|[/YC](yc-create-precompiled-header-file.md)|Create. Plik PCH.|
+|[/YC](yc-create-precompiled-header-file.md)|Utwórz plik *`.PCH`* .|
 |[/YD](yd-place-debug-information-in-object-file.md)|Przestarzałe. Umieszcza pełne informacje o debugowaniu we wszystkich plikach obiektów. Zamiast tego użyj [/Zi](z7-zi-zi-debug-information-format.md) .|
 |[/Yl](yl-inject-pch-reference-for-debug-library.md)|Wstawia odwołanie do PCH podczas tworzenia biblioteki debugowania.|
 |[/Yu](yu-use-precompiled-header-file.md)|Używa prekompilowanego pliku nagłówkowego podczas kompilowania.|
@@ -201,18 +202,19 @@ Ten artykuł zawiera listę kategorii opcji kompilatora. Aby zapoznać się z li
 
 ## <a name="experimental-options"></a>Opcje eksperymentalne
 
-Opcje eksperymentalne mogą być obsługiwane tylko przez niektóre wersje kompilatora i mogą zachowywać się inaczej w różnych wersjach kompilatora. Często Najlepsza lub tylko dokumentacja opcji eksperymentalnych znajduje się w [blogu zespołu firmy Microsoft C++ ](https://devblogs.microsoft.com/cppblog/).
+Opcje eksperymentalne mogą być obsługiwane tylko przez niektóre wersje kompilatora. Mogą również zachowywać się inaczej w różnych wersjach kompilatora. Często Najlepsza lub tylko dokumentacja opcji eksperymentalnych znajduje się w [blogu zespołu firmy Microsoft C++ ](https://devblogs.microsoft.com/cppblog/).
 
-|Opcja|Cel|
+|Opcja|Przeznaczenie|
 |------------|-------------|
 |[/Experimental: moduł](experimental-module.md)|Umożliwia obsługę modułów eksperymentalnych.|
 |[/Experimental: preprocesor](experimental-preprocessor.md)|Włącza eksperymentalną obsługę preprocesora.|
 
 ## <a name="deprecated-and-removed-compiler-options"></a>Przestarzałe i usunięte opcje kompilatora
 
-|Opcja|Cel|
+|Opcja|Przeznaczenie|
 |------------|-------------|
 |[/CLR: noAssembly](clr-common-language-runtime-compilation.md)|Przestarzałe. Zamiast tego użyj [/ln (Utwórz moduł MSIL)](ln-create-msil-module.md) .|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)| Przestarzałe. Raportowanie błędów jest kontrolowane przez ustawienia [raportowanie błędów systemu Windows (wer)](/windows/win32/wer/windows-error-reporting) . |
 |[/Fr](fr-fr-create-dot-sbr-file.md)|Przestarzałe. Tworzy plik informacji o przeglądaniu bez zmiennych lokalnych.|
 |[/GE](ge-enable-stack-probes.md)|Przestarzałe. Aktywuje sondy stosu. Domyślnie włączone.|
 |[/GM](gm-enable-minimal-rebuild.md)|Przestarzałe. Włącza minimalną ponowną kompilację.|
@@ -221,15 +223,15 @@ Opcje eksperymentalne mogą być obsługiwane tylko przez niektóre wersje kompi
 |[/H](h-restrict-length-of-external-names.md)|Przestarzałe. Ogranicza długość nazw zewnętrznych (publicznych).|
 |[/Og](og-global-optimizations.md)|Przestarzałe. Używa globalnych optymalizacji.|
 |[/QIfist](qifist-suppress-ftol.md)|Przestarzałe. Po użyciu, aby określić sposób konwersji z typu zmiennoprzecinkowego na typ całkowity.|
-|[Przełącznika](v-version-number.md)|Przestarzałe. Ustawia ciąg wersji pliku. obj.|
+|[Przełącznika](v-version-number.md)|Przestarzałe. Ustawia ciąg wersji pliku *`.obj`* .|
 |[/Wp64](wp64-detect-64-bit-portability-issues.md)|Nieaktualne. Wykrywa 64-bitowe problemy z przenośnością.|
 |[/YD](yd-place-debug-information-in-object-file.md)|Przestarzałe. Umieszcza pełne informacje o debugowaniu we wszystkich plikach obiektów. Zamiast tego użyj [/Zi](z7-zi-zi-debug-information-format.md) .|
 |[/Zc: forScope-](zc-forscope-force-conformance-in-for-loop-scope.md)|Przestarzałe. Wyłącza zgodność w zakresie pętli for.|
 |[/Ze](za-ze-disable-language-extensions.md)|Przestarzałe. Włącza rozszerzenia językowe.|
 |[/Zg](zg-generate-function-prototypes.md)|Usunięto w programie Visual Studio 2015. Generuje prototypy funkcji.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Dokumentacja kompilacji w języku C/C++](c-cpp-building-reference.md)<br/>
-[Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
+\ [odwołaniaC++ w języku C/Building](c-cpp-building-reference.md)
+[Opcje kompilatora MSVC](compiler-options.md)\
+[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

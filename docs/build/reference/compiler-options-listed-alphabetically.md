@@ -1,20 +1,23 @@
 ---
 title: Opcje kompilatora w porządku alfabetycznym
-ms.date: 01/08/2020
+description: Lista odwołań w kolejności alfabetycznej opcji wiersza polecenia języka MicrosoftC++ C/kompilatora.
+ms.date: 02/09/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: d64a41802c18627cf8e07f0d83b53fa5a4555f5b
-ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
+ms.openlocfilehash: 6b3412378aa4bb36ea861a81758d2227df3432c6
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77034600"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257744"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opcje kompilatora w porządku alfabetycznym
 
-Poniżej znajduje się kompleksowa Alfabetyczna lista opcji kompilatora. Aby uzyskać listę kategorii, zapoznaj się z [opcjami kompilatora wymienionymi na liście według kategorii](compiler-options-listed-by-category.md).
+Ta tabela zawiera alfabetyczną listę opcji kompilatora. Aby zapoznać się z listą opcji kompilatora według kategorii, zobacz [Opcje kompilatora wymienione według kategorii](compiler-options-listed-by-category.md) .
 
-|Opcja|Cel|
+## <a name="compiler-options"></a>Opcje kompilatora
+
+|Opcja|Przeznaczenie|
 |------------|-------------|
 |[@](at-specify-a-compiler-response-file.md)|Określa plik odpowiedzi.|
 |[/?](help-compiler-command-line-help.md)|Wyświetla listę opcji kompilatora.|
@@ -27,19 +30,19 @@ Poniżej znajduje się kompleksowa Alfabetyczna lista opcji kompilatora. Aby uzy
 |[/c](c-compile-without-linking.md)|Kompiluje bez konsolidacji.|
 |[/CGTHREADS](cgthreads-code-generation-threads.md)|Określa liczbę wątków CL. exe do użycia na potrzeby optymalizacji i generowania kodu.|
 |[/CLR](clr-common-language-runtime-compilation.md)|Tworzy plik wyjściowy do uruchomienia w środowisku uruchomieniowym języka wspólnego.|
-|[/constexpr](constexpr-control-constexpr-evaluation.md)|Kontrolowanie wartości wyrażenia constexpr w czasie kompilacji.|
+|[/constexpr](constexpr-control-constexpr-evaluation.md)|Kontrolowanie wartości wyrażenia **constexpr** w czasie kompilacji.|
 |[Parametr](d-preprocessor-definitions.md)|Definiuje stałe i makra.|
 |[/Diagnostics](diagnostics-compiler-diagnostic-options.md)|Kontroluje Format komunikatów diagnostycznych.|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|Przetwarzaj komentarze dokumentacji do pliku XML.|
 |[/E](e-preprocess-to-stdout.md)|Kopiuje dane wyjściowe preprocesora do wyjścia standardowego.|
 |[/EH](eh-exception-handling-model.md)|Określa model obsługi wyjątków.|
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Kopiuje dane wyjściowe preprocesora do wyjścia standardowego.|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|Umożliwia dostarczenie informacji o wewnętrznym błędzie kompilatora (lodem) bezpośrednio do zespołu firmy C++ Microsoft.|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)| Przestarzałe. Raportowanie błędów jest kontrolowane przez ustawienia [raportowanie błędów systemu Windows (wer)](/windows/win32/wer/windows-error-reporting) . |
 |[/Execution-charset](execution-charset-set-execution-character-set.md)|Ustaw zestaw znaków wykonania.|
 |[/Experimental: moduł](experimental-module.md)|Umożliwia obsługę modułów eksperymentalnych.|
 |[/Experimental: preprocesor](experimental-preprocessor.md)|Włącza eksperymentalną obsługę preprocesora.|
 |[Opcją](f-set-stack-size.md)|Ustawia rozmiar stosu.|
-|[/Favor](favor-optimize-for-architecture-specifics.md)|Produkuje kod, który jest zoptymalizowany pod kątem określonej architektury x64 lub dla określonych mikroarchitektur w architekturze AMD64 i Extended Memory 64 Technology (EM64T).|
+|[/Favor](favor-optimize-for-architecture-specifics.md)|Tworzy kod zoptymalizowany pod kątem określonej architektury x64. Lub dla określonych mikroarchitektur w architekturze AMD64 i EM64T.|
 |[/FA](fa-fa-listing-file.md)|Tworzy plik listy.|
 |[/FA](fa-fa-listing-file.md)|Ustawia nazwę pliku listy.|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|Wyświetl pełną ścieżkę plików kodu źródłowego przekazaną do CL. exe w tekście diagnostycznym.|
@@ -52,7 +55,7 @@ Poniżej znajduje się kompleksowa Alfabetyczna lista opcji kompilatora. Aby uzy
 |[/FP](fp-specify-floating-point-behavior.md)|Określ zachowanie zmiennoprzecinkowe.|
 |[/FP](fp-name-dot-pch-file.md)|Określa nazwę prekompilowanego pliku nagłówkowego.|
 |[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/Fr](fr-fr-create-dot-sbr-file.md)|Generuje pliki przeglądarki. **/Fr** jest przestarzała.|
-|[/FS](fs-force-synchronous-pdb-writes.md)|Wymusza zapis do pliku bazy danych programu (PDB) do serializacji za pomocą MSPDBSRV. EXE.|
+|[/FS](fs-force-synchronous-pdb-writes.md)|Wymusza serializację wszystkich zapisów do pliku bazy danych programu (PDB) za pomocą MSPDBSRV. EXE.|
 |[/FU](fu-name-forced-hash-using-file.md)|Wymusza użycie nazwy pliku, tak jakby została przeniesiona do dyrektywy [#using](../../preprocessor/hash-using-directive-cpp.md) .|
 |[/FX](fx-merge-injected-code.md)|Scala wprowadzony kod z plikiem źródłowym.|
 |[/GA](ga-optimize-for-windows-application.md)|Optymalizuje kod dla aplikacji systemu Windows.|
@@ -170,7 +173,7 @@ Poniżej znajduje się kompleksowa Alfabetyczna lista opcji kompilatora. Aby uzy
 |[/ZS](zs-syntax-check-only.md)|Sprawdza tylko składnię.|
 |[/ZW](zw-windows-runtime-compilation.md)|Tworzy plik wyjściowy do uruchomienia na środowisko wykonawcze systemu Windows.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Opcje kompilatora MSVC](compiler-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)\
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

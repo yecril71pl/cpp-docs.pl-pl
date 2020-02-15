@@ -4,14 +4,14 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - size_type typedef
 ms.assetid: e02de8af-e175-45a2-b006-835814a40e68
-ms.openlocfilehash: 8c9319e94d1f01eb066280a69971eef5d900384f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8ef4f426289ba709f2e6fd3788880f878b9de260
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454502"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258162"
 ---
-# <a name="container-classsizetype"></a>Kontener Class::size_type
+# <a name="container-classsize_type"></a>Kontener Class::size_type
 
 > [!NOTE]
 > Ten temat znajduje się w dokumentacji C++ firmy Microsoft jako przykład niefunkcjonalny kontenerów używanych w C++ standardowej bibliotece. Aby uzyskać więcej informacji, zobacz [ C++ Kontenery biblioteki standardowej](../standard-library/stl-containers.md).
@@ -20,8 +20,7 @@ Opisuje obiekt, który może reprezentować długość dowolnej kontrolowanej se
 
 ## <a name="syntax"></a>Składnia
 
-```
-
+```cpp
 typedef T0 size_type;
 ```
 
@@ -29,6 +28,6 @@ typedef T0 size_type;
 
 Jest on opisany tutaj jako synonim dla nieokreślonego typu `T0` (zazwyczaj `Alloc::size_type`).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Sample Container, klasa](../standard-library/sample-container-class.md)

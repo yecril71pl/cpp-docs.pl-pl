@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: 1727d3a12b7186d3cc868ef6bb78711774057407
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 9890a6a9dea1671f14b66897a80f4b49861dff2b
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688864"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257107"
 ---
 # <a name="tuple-class"></a>tuple — Klasa
 
@@ -20,7 +20,7 @@ Otacza sekwencję o stałej długości elementów.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class tuple {
    tuple();
    explicit tuple(P1, P2, ..., PN); // 0 < N
@@ -41,7 +41,7 @@ class tuple {
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *TN*
+\ *TN*
 Typ n-tego elementu krotki.
 
 ## <a name="remarks"></a>Uwagi
@@ -137,10 +137,10 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parametry
 
-*@No__t_1*
+*\*
 Typ n-ty skopiowanego elementu krotki.
 
-*prawa* \
+*prawa*\
 Krotka, z której ma zostać skopiowane.
 
 ### <a name="remarks"></a>Uwagi
@@ -212,7 +212,7 @@ template <class... Types>
 \ *lewo*
 Krotka, której elementy są wymieniane z tymi, które są z *prawej strony*.
 
-*prawa* \
+*prawa*\
 Krotka, której elementy są wymieniane z *pozostałymi*kolekcjami z lewej strony.
 
 ### <a name="remarks"></a>Uwagi
@@ -246,10 +246,10 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parametry
 
-*@No__t_1*
+*\*
 Typ n-ty skopiowanego elementu krotki.
 
-*prawa* \
+*prawa*\
 Krotka, z której ma zostać skopiowane.
 
 ### <a name="remarks"></a>Uwagi

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - iterator method
 ms.assetid: f9c49d1c-17cb-4b17-8e54-09e3ea41ca26
-ms.openlocfilehash: 8460168da23ec0b258f57e62d72bba68e4590727
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c761473a5fa3438dc8e6bd824a0b32fa32936376
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447102"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258227"
 ---
 # <a name="container-classiterator"></a>Kontener Class::iterator
 
@@ -20,15 +20,14 @@ Opisuje obiekt, który może być używany jako iterator dla kontrolowanej sekwe
 
 ## <a name="syntax"></a>Składnia
 
-```
-
+```cpp
 typedef T5 iterator;
 ```
 
 ## <a name="remarks"></a>Uwagi
 
-Jest on opisany tutaj jako synonim dla nieokreślonego typu `T5`. Obiekt typu `iterator` może być rzutowany na obiekt typu [const_iterator](../standard-library/container-class-const-iterator.md).
+Jest on opisany tutaj jako synonim dla nieokreślonego typu `T5`. Obiekt typu `iterator` może być rzutowany do obiektu typu [const_iterator](../standard-library/container-class-const-iterator.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Sample Container, klasa](../standard-library/sample-container-class.md)

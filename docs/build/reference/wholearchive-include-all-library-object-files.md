@@ -1,39 +1,45 @@
 ---
-title: / WHOLEARCHIVE (Dołącz wszystkie pliki obiektów biblioteki)
-ms.date: 11/04/2016
+title: /WHOLEARCHIVE (Dołącz wszystkie pliki obiektów biblioteki)
+ms.date: 02/12/2020
 ms.assetid: ee92d12f-18af-4602-9683-d6223be62ac9
-ms.openlocfilehash: db99816b18110b424647603196040997044e7fbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95685c9c0dfde45c42449bbcad67228a0e21b36a
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316434"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257536"
 ---
-# <a name="wholearchive-include-all-library-object-files"></a>/ WHOLEARCHIVE (Dołącz wszystkie pliki obiektów biblioteki)
+# <a name="wholearchive-include-all-library-object-files"></a>/WHOLEARCHIVE (Dołącz wszystkie pliki obiektów biblioteki)
 
-Wymuś na konsolidatorze załączenie wszystkie pliki obiektów biblioteki statycznej w połączony plik wykonywalny.
+Wymuś dołączenie wszystkich plików obiektów do biblioteki statycznej w połączonym pliku wykonywalnym.
 
 ## <a name="syntax"></a>Składnia
 
-> / WHOLEARCHIVE [:*biblioteki*]
+> **/WHOLEARCHIVE**\
+> **/WHOLEARCHIVE:** _Biblioteka_
+
+### <a name="arguments"></a>Argumenty
+
+\ *biblioteki*
+Opcjonalna nazwa ścieżki do biblioteki statycznej. Konsolidator obejmuje każdy plik obiektu z tej biblioteki.
 
 ## <a name="remarks"></a>Uwagi
 
-Opcja /WHOLEARCHIVE wymusza konsolidator, aby uwzględnić każdy plik obiektu, z poziomu określonej biblioteki statycznej, lub jeśli biblioteka nie jest określony, wszystkie biblioteki statyczne, określony do łącza polecenia z. Aby określić opcję /WHOLEARCHIVE wiele bibliotek, służy więcej niż jednego przełącznika /WHOLEARCHIVE w wierszu polecenia konsolidatora. Domyślnie konsolidator zawiera pliki obiektów w danych wyjściowych w połączonych, tylko wtedy, gdy ich Eksportuj symbole przywoływany przez inne pliki obiektów w pliku wykonywalnym. Opcja /WHOLEARCHIVE sprawia, że konsolidator traktowanie wszystkich plików obiektu archiwizowane w bibliotece statycznej, tak, jakby zostały określone osobno w wierszu polecenia konsolidatora.
+Opcja/WHOLEARCHIVE wymusza, aby konsolidator zawierał każdy plik obiektu z określonej biblioteki statycznej lub jeśli żadna biblioteka nie została określona, ze wszystkich bibliotek statycznych określonych dla polecenia LINK. Aby określić opcję/WHOLEARCHIVE dla wielu bibliotek, można użyć więcej niż jednego przełącznika/WHOLEARCHIVE w wierszu polecenia konsolidatora. Domyślnie konsolidator zawiera pliki obiektów w połączonych danych wyjściowych tylko wtedy, gdy eksportują symbole przywoływane przez inne pliki obiektów w pliku wykonywalnym. Opcja/WHOLEARCHIVE sprawia, że konsolidator traktuje wszystkie pliki obiektów zarchiwizowane w bibliotece statycznej, tak jakby były one określone pojedynczo w wierszu polecenia konsolidatora.
 
-Opcja /WHOLEARCHIVE można ponownie wyeksportować wszystkie symbole z biblioteki statycznej. Dzięki temu można upewnić się, że wszystkie biblioteki kodu, zasoby i metadane są uwzględniane podczas tworzenia składnika z więcej niż jedna biblioteka statyczne. Jeśli zostanie wyświetlone ostrzeżenie LNK4264 podczas tworzenia biblioteki statycznej, który zawiera składniki środowiska wykonawczego Windows eksportu, należy użyć opcji /WHOLEARCHIVE podczas konsolidacji tej biblioteki do innej aplikacji lub składnika.
+Opcji/WHOLEARCHIVE można użyć, aby ponownie wyeksportować wszystkie symbole z biblioteki statycznej. Dzięki temu można upewnić się, że podczas tworzenia składnika z więcej niż jednej biblioteki statycznej jest uwzględniany cały kod biblioteki, zasoby i metadane. Jeśli widzisz LNK4264 ostrzegawczy podczas tworzenia biblioteki statycznej zawierającej składniki środowisko wykonawcze systemu Windows do eksportu, użyj opcji/WHOLEARCHIVE podczas łączenia tej biblioteki z innym składnikiem lub aplikacją.
 
-Opcja /WHOLEARCHIVE została wprowadzona w Visual Studio 2015 Update 2.
+Opcja/WHOLEARCHIVE została wprowadzona w programie Visual Studio 2015 Update 2.
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Aby ustawić tę opcję konsolidatora w programie Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać więcej informacji, [Zobacz C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **wiersza polecenia** strony właściwości w obszarze **właściwości konfiguracji**, **konsolidatora**.
+1. Wybierz stronę właściwości **wiersza polecenia** w obszarze **Właściwości konfiguracji**, **konsolidator**.
 
-1. Dodaj opcję /WHOLEARCHIVE **dodatkowe opcje** pola tekstowego.
+1. Dodaj opcję/WHOLEARCHIVE do pola tekstowego **Opcje dodatkowe** .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)

@@ -1,25 +1,24 @@
 ---
-title: '&lt;unordered_set —&gt; funkcji'
+title: '&lt;unordered_set funkcji&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - unordered_set/std::swap (set)
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
-ms.openlocfilehash: f34d818c1829baba1740bf2776b2d47a8808bf68
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6b6e764acc9fa3410a44a4a11760933328365852
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243435"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257770"
 ---
-# <a name="ltunorderedsetgt-functions"></a>&lt;unordered_set —&gt; funkcji
+# <a name="ltunordered_setgt-functions"></a>&lt;unordered_set funkcji&gt;
 
-## <a name="swap"></a> swap (unordered_set)
+## <a name="swap"></a>Zamień (unordered_set)
 
 Zamienia zawartości dwóch kontenerów.
 
-```
-
+```cpp
 template <class Key, class Hash, class Pred, class Alloc>
 void swap(
    unordered_set <Key, Hash, Pred, Alloc>& left,
@@ -31,24 +30,24 @@ void swap(
 *Klucz*\
 Typ klucza.
 
-*Skrót*\
+\ *skrótu*
 Typ obiektu funkcji mieszania.
 
-*P.* \
+*Pred*\
 Typ obiektu funkcji porównywania równości.
 
-*Alokacji*\
+\ *alokacji*
 Klasa alokatora.
 
-*po lewej stronie*\
-Pierwszy kontener do wymiany.
+\ *lewo*
+Pierwszy kontener do zamiany.
 
-*po prawej stronie*\
-Drugi kontener do wymiany.
+*prawa*\
+Drugi kontener do zamiany.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu wykonuje `left.` [unordered_set::swap](../standard-library/unordered-set-class.md#swap)`(right)`.
+Funkcja Template wykonuje `left.`[unordered_set:: swap](../standard-library/unordered-set-class.md#swap)`(right)`.
 
 ### <a name="example"></a>Przykład
 
@@ -103,11 +102,11 @@ return (0);
 [c] [b] [a]
 ```
 
-## <a name="swap_unordered_multiset"></a> swap (unordered_multiset)
+## <a name="swap_unordered_multiset"></a>Zamień (unordered_multiset)
 
 Zamienia zawartości dwóch kontenerów.
 
-```
+```cpp
 template <class Key, class Hash, class Pred, class Alloc>
 void swap(
    unordered_multiset <Key, Hash, Pred, Alloc>& left,
@@ -119,24 +118,24 @@ void swap(
 *Klucz*\
 Typ klucza.
 
-*Skrót*\
+\ *skrótu*
 Typ obiektu funkcji mieszania.
 
-*P.* \
+*Pred*\
 Typ obiektu funkcji porównywania równości.
 
-*Alokacji*\
+\ *alokacji*
 Klasa alokatora.
 
-*po lewej stronie*\
-Pierwszy kontener do wymiany.
+\ *lewo*
+Pierwszy kontener do zamiany.
 
-*po prawej stronie*\
-Drugi kontener do wymiany.
+*prawa*\
+Drugi kontener do zamiany.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu wykonuje `left.` [unordered_multiset::swap](../standard-library/unordered-multiset-class.md#swap)`(right)`.
+Funkcja Template wykonuje `left.`[unordered_multiset:: swap](../standard-library/unordered-multiset-class.md#swap)`(right)`.
 
 ### <a name="example"></a>Przykład
 

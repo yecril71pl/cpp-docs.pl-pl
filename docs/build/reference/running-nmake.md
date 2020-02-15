@@ -1,6 +1,7 @@
 ---
 title: Uruchomienie NMAKE
-ms.date: 10/29/2019
+description: Przewodnik referencyjny dotyczący opcji wiersza polecenia w programie Microsoft NMAKE.
+ms.date: 02/09/2020
 helpviewer_keywords:
 - targets, building
 - response files, NMAKE
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - NMAKE program, running
 - command files, NMAKE
 ms.assetid: 0421104d-8b7b-4bf3-86c1-928d9b7c1a8c
-ms.openlocfilehash: ed56b7cd69b683caa84f184d9d72e70aac12add3
-ms.sourcegitcommit: 6ed1bc5b26dc60a780c1fc5f2f19d57ba1dc47d8
+ms.openlocfilehash: bfada33a89c04d25bf7444cbf3b1e7ef3ed44385
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73144543"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257597"
 ---
 # <a name="running-nmake"></a>Uruchomienie NMAKE
 
@@ -33,14 +34,14 @@ Plik tekstowy *pliku polecenia* (lub plik odpowiedzi) zawiera dane wejściowe wi
 
 Opcje NMAKE są opisane w poniższej tabeli. Opcje są poprzedzone ukośnikiem (`/`) lub kreską (`-`) i nie jest rozróżniana wielkość liter. Użyj [`!CMDSWITCHES`](makefile-preprocessing-directives.md) , aby zmienić ustawienia opcji w pliku reguł programu make lub pliku Tools. ini.
 
-| Opcja | Cel |
+| Opcja | Przeznaczenie |
 | ------------ | ------------- |
 | **/A** | Wymusza kompilację wszystkich ocenionych elementów docelowych nawet wtedy, gdy nie są one nieaktualne w porównaniu do elementów zależnych. Nie wymusza kompilacji niepowiązanych elementów docelowych. |
 | **/B** | Wymusza kompilację, nawet jeśli sygnatury czasowe są równe. Zalecane tylko w przypadku systemów szybkich (rozdzielczości co najmniej dwa sekundy). |
 | **/C** | Pomija domyślne dane wyjściowe, w tym niekrytyczne Błędy NMAKE lub ostrzeżenia, sygnatury czasowe i wiadomości o prawach autorskich NMAKE. Pomija ostrzeżenia wystawione przez **/k**. |
 | **Parametr** | Wyświetla sygnatury czasowe każdego ocenianego elementu docelowego, zależnie i komunikat, gdy element docelowy nie istnieje. Przydatne w przypadku opcji **/p** dla debugowania pliku reguł programu make. Użyj `!CMDSWITCHES`, aby ustawić lub wyczyścić element **/d** dla części pliku reguł programu make. |
 | **/E** | Powoduje, że zmienne środowiskowe przesłaniają definicje makr pliku reguł programu make. |
-| **/errorreport** [ **Brak** &#124; **monitu o potwierdzenie** &#124; **kolejki** &#124; **]** | Jeśli NMAKE. exe kończy się niepowodzeniem w czasie wykonywania, można użyć **/errorreport** do wysłania informacji o tych błędach wewnętrznych do firmy Microsoft.<br /><br /> Aby uzyskać więcej informacji, zobacz [/errorreport (zgłaszaj wewnętrzne błędy kompilatora)](errorreport-report-internal-compiler-errors.md). |
+| **/errorreport** [ **Brak** &#124; **monitu o potwierdzenie** &#124; **kolejki** &#124; **]** | Przestarzałe. Ustawienia funkcji [raportowanie błędów systemu Windows (raportowanie błędów)](/windows/win32/wer/windows-error-reporting) kontrolują raportowanie. |
 | **/F** *filename* | Określa *nazwę pliku* jako plik reguł programu make. Spacje lub tabulatory mogą poprzedzać *nazwę pliku*. Określ **/f** jednokrotnie dla każdego pliku reguł programu make. Aby udostępnić plik reguł programu make ze standardowego wejścia, określ kreskę (`-`) dla *nazwy pliku*, a następnie Zakończ wprowadzanie klawiatury przy użyciu **klawisza F6** lub **Ctrl + z**. |
 | **/G** | Wyświetla listę plików reguł programu make uwzględnioną w dyrektywie `!INCLUDE`. Aby uzyskać więcej informacji, zobacz [dyrektywy wstępnego przetwarzania plików reguł programu make](makefile-preprocessing-directives.md). |
 | **/Help**, **/?** | Wyświetla krótkie podsumowanie składni wiersza polecenia NMAKE. |
@@ -71,8 +72,8 @@ NMAKE zwraca następujące kody zakończenia:
 | 1 | Niekompletna kompilacja (wystawiona tylko wtedy, gdy jest używana **/k** ) |
 | 2 | Błąd programu, prawdopodobnie spowodowany przez jeden z następujących problemów:<br /> -Błąd składniowy w pliku reguł programu make<br /> -Błąd lub kod zakończenia z polecenia<br /> -Przerwanie przez użytkownika |
 | 4 | Błąd systemu — za mało pamięci |
-| 255 | Element docelowy jest nieaktualny (wystawiony tylko wtedy, gdy jest używany **/q** ) |
+| 255 | Element docelowy jest nieaktualny (wydano tylko wtedy, gdy jest używany **/q** ) |
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [NMAKE — dokumentacja](nmake-reference.md)

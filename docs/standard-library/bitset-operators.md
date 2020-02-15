@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: cd1dfc035fde06c4be0f90e1bd11b231d64ab811
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 23c6abffe7e433a0550c45502a12e9adaf652a33
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890130"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257991"
 ---
 # <a name="ltbitsetgt-operators"></a>Operatory &lt;bitset&gt;
 
@@ -38,10 +38,10 @@ operator&(
 \ *lewo*
 Pierwszy z dwóch bitsets, których odpowiednie elementy mają być połączone z `AND`bitowe.
 
-*prawa* \
+*prawa*\
 Drugi z dwóch valarrays, których odpowiednie elementy mają być połączone z `AND`bitowe.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bitset, których elementy są wynikiem wykonywania operacji `AND` na odpowiednich elementach *lewej* i *prawej*.
 
@@ -73,11 +73,11 @@ bitset 2: 0011
 bitset 3: 0001
 ```
 
-## <a name="op_lt_lt"></a>&lt;operatora&lt;
+## <a name="op_lt_lt"></a>&lt;operatora &lt;
 
 Wstawia tekstową reprezentację sekwencji bitowej do strumienia wyjściowego.
 
-```
+```cpp
 template <class CharType, class Traits, size_t N>
 basic_ostream<CharType, Traits>& operator<<(
     basic_ostream<CharType, Traits>& ostr,
@@ -86,10 +86,10 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
+*prawa*\
 Obiekt typu **bitset\<N >** , który ma zostać wstawiony do strumienia wyjściowego jako ciąg.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Tekstowa reprezentacja sekwencji bitowej w `ostr`.
 
@@ -130,11 +130,11 @@ int main( )
 }
 ```
 
-## <a name="op_gt_gt"></a>&gt;operatora&gt;
+## <a name="op_gt_gt"></a>&gt;operatora &gt;
 
 Odczytuje ciąg znaków bitowych w bitset.
 
-```
+```cpp
 template <class CharType, class Traits, size_t Bits>
 basic_istream<CharType, Traits>& operator>> (
     basic_istream<CharType, Traits>& i_str,
@@ -146,18 +146,18 @@ basic_istream<CharType, Traits>& operator>> (
 *i_str*\
 Ciąg wprowadzony w strumieniu wejściowym, który ma zostać wstawiony do bitset.
 
-*prawa* \
+*prawa*\
 Bitset, który otrzymuje bity ze strumienia wejściowego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
-Funkcja Template zwraca ciąg *i_str*.
+Funkcja szablonu zwraca ciąg *i_str*.
 
 ### <a name="remarks"></a>Uwagi
 
 Funkcja szablonu przeciąża `operator>>`, aby przechowywać ją w bitset *prawej* `bitset(str)`wartości, gdzie `str` jest obiektem typu [basic_string](basic-string-class.md)`< CharType, Traits, allocator< CharType > >&` wyodrębnionym z *i_str*.
 
-Funkcja Template wyodrębnia elementy z *i_str* i wstawia je do bitset do momentu:
+Funkcja szablonu wyodrębnia elementy z *i_str* i wstawia je do bitset do momentu:
 
 - Wszystkie elementy bitowe zostały wyodrębnione ze strumienia wejściowego i przechowywane w bitset.
 
@@ -231,10 +231,10 @@ operator^(
 \ *lewo*
 Pierwszy z dwóch bitsets, których odpowiednie elementy mają być połączone z `EXCLUSIVE-OR`bitowe.
 
-*prawa* \
+*prawa*\
 Drugi z dwóch valarrays, których odpowiednie elementy mają być połączone z `EXCLUSIVE-OR`bitowe.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bitset, których elementy są wynikiem wykonywania operacji `EXCLUSIVE-OR` na odpowiednich elementach *lewej* i *prawej*.
 
@@ -283,10 +283,10 @@ operator|(
 \ *lewo*
 Pierwszy z dwóch bitsets, których odpowiednie elementy mają być połączone z `OR`bitowe.
 
-*prawa* \
+*prawa*\
 Drugi z dwóch valarrays, których odpowiednie elementy mają być połączone z `OR`bitowe.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Bitset, których elementy są wynikiem wykonywania operacji `OR` na odpowiednich elementach *lewej* i *prawej*.
 

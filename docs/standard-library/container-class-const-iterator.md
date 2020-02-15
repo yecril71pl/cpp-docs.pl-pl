@@ -4,14 +4,14 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - const_iterator method
 ms.assetid: e68c9e30-fc4c-4c2e-8724-06d1fe8b8ccb
-ms.openlocfilehash: dab716fd77f53cadfa754fc7da111b38bc4a8a05
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6cbce3d1e8691d57c7e05c14686edfbb0915562d
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457174"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257939"
 ---
-# <a name="container-classconstiterator"></a>Kontener Class::const_iterator
+# <a name="container-classconst_iterator"></a>Kontener Class::const_iterator
 
 > [!NOTE]
 > Ten temat znajduje się w dokumentacji C++ firmy Microsoft jako przykład niefunkcjonalny kontenerów używanych w C++ standardowej bibliotece. Aby uzyskać więcej informacji, zobacz [ C++ Kontenery biblioteki standardowej](../standard-library/stl-containers.md).
@@ -20,8 +20,7 @@ Opisuje obiekt, który może być używany jako iterator stały dla kontrolowane
 
 ## <a name="syntax"></a>Składnia
 
-```
-
+```cpp
 typedef T6 const_iterator;
 ```
 
@@ -29,6 +28,6 @@ typedef T6 const_iterator;
 
 Jest on opisany tutaj jako synonim dla nieokreślonego typu `T6`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Sample Container, klasa](../standard-library/sample-container-class.md)

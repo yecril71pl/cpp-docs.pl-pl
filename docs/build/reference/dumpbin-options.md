@@ -1,17 +1,18 @@
 ---
 title: Opcje DUMPBIN
-ms.date: 10/24/2019
+description: Przewodnik referencyjny dotyczący opcji wiersza polecenia narzędzia Microsoft polecenia DUMPBIN.
+ms.date: 02/09/2020
 f1_keywords:
 - dumpbin
 helpviewer_keywords:
 - DUMPBIN program, options
 ms.assetid: 563b696e-7599-4480-94b9-014776289ec8
-ms.openlocfilehash: 81c66f1971294531a2904a0b681819476bcc1eb2
-ms.sourcegitcommit: 6ed1bc5b26dc60a780c1fc5f2f19d57ba1dc47d8
+ms.openlocfilehash: 98a4fd221d66b93f945667deadaba3180f8d3e66
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73144557"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257731"
 ---
 # <a name="dumpbin-options"></a>Opcje DUMPBIN
 
@@ -33,7 +34,7 @@ POLECENIA DUMPBIN z następującymi opcjami:
 
 - [Opcja/DISASM\[: {BAJTy\|nobytes}\]](disasm.md)
 
-- [/ERRORREPORT: {NONE | MONITUJ | KOLEJka | WYŚL](errorreport-dumpbin-exe.md)
+- [/errorReport: {none | MONITUJ | KOLEJka | Wyślij}](errorreport-dumpbin-exe.md) (przestarzałe)
 
 - [/EXPORTS](dash-exports.md)
 
@@ -73,7 +74,7 @@ POLECENIA DUMPBIN z następującymi opcjami:
 
 Aby wyświetlić listę opcji obsługiwanych przez polecenia DUMPBIN w wierszu polecenia, użyj **/?** zaznaczyć.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dodatkowe\ narzędzia kompilacji MSVC](c-cpp-build-tools.md)
 \ [wiersza polecenia polecenia DUMPBIN](dumpbin-command-line.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: 687665d2ad8bf80f4f2db07ce11c4866ff1ee903
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 0c72726bfb92965a2152830d7ce77ae13f763d35
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688259"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257978"
 ---
 # <a name="complex-class"></a>complex — Klasa
 
@@ -42,9 +42,9 @@ W szczególności nie mogą istnieć żadne delikatne różnice między konstruk
 
 Jawne specjalizacje złożone szablonu klas istnieją dla trzech typów zmiennoprzecinkowych. W tej implementacji wartość dowolnego innego typu `Type` jest **rzutowanie dla** rzeczywistej obliczeń, z **podwójnym** wynikiem przypisanym do przechowywanego obiektu typu `Type`.
 
-## <a name="members"></a>Elementy członkowskie
+## <a name="members"></a>Members
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktorzy
 
 |||
 |-|-|
@@ -73,8 +73,6 @@ Jawne specjalizacje złożone szablonu klas istnieją dla trzech typów zmiennop
 |[operator/=](#op_div_eq)|Dzieli docelowy liczbę zespoloną przez dzielnik, który może być złożony lub być tego samego typu co wartości rzeczywiste i urojone części liczby zespolonej.|
 |[operator =](#op_eq)|Przypisuje liczbę do docelowego numeru zespolonego, gdzie przypisana liczba może być złożona lub tego samego typu, co jest częścią rzeczywistą i urojoną liczby zespolonej, do której jest przypisany.|
 
-
-
 ## <a name="complex"></a>złożonych
 
 Konstruuje liczbę zespoloną z określonymi częściami rzeczywistymi i urojonymi albo jako kopię innej liczby zespolonej.
@@ -91,18 +89,18 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parametry
 
-*_RealVal* \
+*_RealVal*\
 Wartość części rzeczywistej użytej do zainicjowania konstruowanej liczby zespolonej.
 
-*_ImagVal* \
+*_ImagVal*\
 Wartość części urojonej użytej do zainicjowania konstruowanej liczby zespolonej.
 
-*complexNum* \
+*complexNum*\
 Liczba zespolona, której części rzeczywiste i urojone są używane do inicjowania konstruowanej liczby zespolonej.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor inicjuje przechowywaną część rzeczywistą do *\_RealVal* i magazynowaną część urojoną do *\_Imagval*. Drugi Konstruktor inicjuje przechowywaną część rzeczywistą do `complexNum.real()` i magazynowaną część urojoną do `complexNum.imag()`.
+Pierwszy Konstruktor inicjuje przechowywaną część rzeczywistą do *\_RealVal* i składowanej części urojonej do *\_Imagval*. Drugi Konstruktor inicjuje przechowywaną część rzeczywistą do `complexNum.real()` i magazynowaną część urojoną do `complexNum.imag()`.
 
 W tej implementacji, jeśli Translator nie obsługuje funkcji szablonu elementu członkowskiego, szablon:
 
@@ -113,7 +111,7 @@ complex(const complex<Other>& right);
 
 zamieniono na:
 
-```
+```cpp
 complex(const complex& right);
 ```
 
@@ -171,10 +169,10 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
+*prawa*\
 Liczba złożona, której wartość urojona ma zostać wyodrębniona.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Część urojona liczby zespolonej.
 
@@ -228,10 +226,10 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
+*prawa*\
 Liczba złożona lub liczba, która jest tego samego typu co parametr docelowego numeru zespolonego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba złożona, która została pomnożona przez liczbę określoną jako parametr.
 
@@ -313,10 +311,10 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
+*prawa*\
 Liczba złożona lub liczba, która jest tego samego typu co parametr docelowego numeru zespolonego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba złożona, która ma numer określony jako parametr dodany.
 
@@ -416,13 +414,13 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum* \
+*complexNum*\
 Liczba zespolona, która ma zostać odjęta od docelowego numeru zespolonego.
 
-*_RealPart* \
+*_RealPart*\
 Liczba rzeczywista, która ma zostać odjęta od docelowego numeru zespolonego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba złożona, która ma numer określony jako parametr odejmowany od niego.
 
@@ -524,13 +522,13 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum* \
+*complexNum*\
 Liczba zespolona, która ma zostać odjęta od docelowego numeru zespolonego.
 
-*_RealPart* \
+*_RealPart*\
 Liczba rzeczywista, która ma zostać odjęta od docelowego numeru zespolonego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba złożona, która została podzielona przez liczbę określoną jako parametr.
 
@@ -626,10 +624,10 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
+*prawa*\
 Liczba złożona lub liczba, która jest tego samego typu co parametr docelowego numeru zespolonego.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Liczba złożona, która ma przypisany numer określony jako parametr.
 
@@ -703,10 +701,10 @@ T real(const T& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
+*prawa*\
 Liczba złożona, której rzeczywista wartość ma zostać wyodrębniona.
 
-### <a name="return-value"></a>Wartość zwracana
+### <a name="return-value"></a>Wartość zwrócona
 
 Rzeczywista część liczby zespolonej.
 
@@ -749,7 +747,7 @@ The imaginary part of c1 is c1.imag() = 3.
 
 Typ, który reprezentuje typ danych używany do reprezentowania rzeczywistych i urojonych części liczby zespolonej.
 
-```
+```cpp
 typedef Type value_type;
 ```
 
@@ -782,6 +780,6 @@ Specifying initial real & imaginary parts
 of type value_type: c1 = (3,4).
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

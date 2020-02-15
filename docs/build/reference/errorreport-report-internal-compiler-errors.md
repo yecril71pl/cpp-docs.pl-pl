@@ -1,6 +1,7 @@
 ---
 title: /errorReport (Zgłaszaj wewnętrzne błędy kompilatora)
-ms.date: 11/04/2016
+description: Dokumentacja opcji wiersza polecenia/errorReport językaC++ Microsoft C/kompilatora.
+ms.date: 02/09/2020
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ErrorReporting
 - /errorreport
@@ -8,60 +9,42 @@ helpviewer_keywords:
 - /errorReport compiler option [C++]
 - -errorReport compiler option [C++]
 ms.assetid: 819828f8-b0a5-412c-9c57-bf822f17e667
-ms.openlocfilehash: 52909cb42180bf8b778d73fd709be05faf3f5714
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d4a3c4d5fd918973bbf8057e0c073c680e6995e
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271791"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257653"
 ---
 # <a name="errorreport-report-internal-compiler-errors"></a>/errorReport (Zgłaszaj wewnętrzne błędy kompilatora)
 
-Pozwala zapewnić wewnętrznych kompilatora-informacje o błędzie (ICE) bezpośrednio do firmy Microsoft.
+> [!NOTE]
+> Opcja **/errorreport** jest przestarzała. Począwszy od systemu Windows Vista, raportowanie błędów jest kontrolowane przez ustawienia [raportowanie błędów systemu Windows (wer)](/windows/win32/wer/windows-error-reporting) .
 
 ## <a name="syntax"></a>Składnia
 
-```
-/errorReport:[ none | prompt | queue | send ]
-```
-
-## <a name="arguments"></a>Argumenty
-
-**Brak**<br/>
-Raporty o błędach wewnętrznych kompilatora nie będą zbierane ani wysyłane do firmy Microsoft.
-
-**wiersz**<br/>
-Monituje o wysłanie raportu po pojawieniu się błędu wewnętrznego kompilatora. **wiersz** jest domyślną kolekcją podczas kompilowania aplikacji w środowisku programistycznym.
-
-**kolejki**<br/>
-Kolejkuje raport o błędach. Po zalogowaniu się przy użyciu uprawnień administratora, wyświetlane jest okno, dzięki czemu możesz zgłaszać błędów od czasu ostatniego zostały zarejestrowane w (użytkownik nie jest monitowany o wysłanie raportu błędów więcej niż raz na trzy dni). **kolejka** jest domyślną kolekcją podczas kompilowania aplikacji w wierszu polecenia.
-
-**Wyślij**<br/>
-Automatycznie wysyła raporty błędów wewnętrznych kompilatora do firmy Microsoft, jeśli raportowanie został włączony przez ustawienia systemu Windows Error Reporting.
+> **/errorReport:** \[**none** \| **monit** \| **kolejki** \| **send** ]
 
 ## <a name="remarks"></a>Uwagi
 
-Wewnętrzny błąd kompilatora (ICE) wyniki, gdy kompilator nie może przetworzyć pliku kodu źródłowego. W przypadku ICE kompilator nie generuje plik wyjściowy lub przydatne diagnostyki, która służy do poprawienia kodu.
+Wewnętrzny błąd kompilatora (lodem) powstaje, gdy kompilator nie może przetworzyć pliku kodu źródłowego. W przypadku wystąpienia lodu kompilator nie produkuje pliku wyjściowego ani żadnych przydatnych diagnostyki, których można użyć do naprawienia kodu.
 
-We wcześniejszych wersjach gdy masz ICE było zachęca do wywołania techniczną firmy Microsoft, aby zgłosić problem. Za pomocą **/errorreport**, możesz podać informacje ICE bezpośrednio do firmy Microsoft. Twoje raporty o błędach może zwiększyć kompilatora w przyszłych wersjach.
+Argumenty **/errorreport** są zastępowane przez ustawienia usługi Raportowanie błędów systemu Windows. Kompilator automatycznie wysyła raporty o błędach wewnętrznych do firmy Microsoft, jeśli raportowanie jest włączone przez Raportowanie błędów systemu Windows. Nie jest wysyłany raport, jeśli jest wyłączony przez Raportowanie błędów systemu Windows.
 
-Zdolność użytkownika do wysyłania raportów zależy od uprawnienia zasad komputera i użytkownika.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać więcej informacji, [Zobacz C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
-1. Kliknij przycisk **C/C++** folderu.
+1. Otwórz okno **Właściwości konfiguracji** > **C/C++**  > **zaawansowanej** strony właściwości.
 
-1. Kliknij przycisk **zaawansowane** stronę właściwości.
-
-1. Modyfikowanie **raportowanie błędów** właściwości.
+1. Zmodyfikuj właściwość **raportowanie błędów** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ErrorReporting%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ErrorReporting%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Opcje kompilatora MSVC](compiler-options.md)<br/>
+[Opcje kompilatora MSVC](compiler-options.md)\
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

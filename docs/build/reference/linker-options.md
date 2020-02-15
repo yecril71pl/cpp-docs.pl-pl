@@ -1,7 +1,7 @@
 ---
 title: MSVC Opcje konsolidatora
 description: Lista opcji obsługiwanych przez konsolidator linków firmy Microsoft.
-ms.date: 09/24/2019
+ms.date: 02/09/2020
 f1_keywords:
 - link
 helpviewer_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: c7a44be5bb21bf83d621bd57c45713bd01e22cb6
-ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
+ms.openlocfilehash: 12710aff1cf833e277e48ab2f13abc702c7d6c14
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712701"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257549"
 ---
 # <a name="linker-options"></a>Opcje konsolidatora
 
@@ -31,20 +31,20 @@ W poniższej tabeli wymieniono opcje LINK. exe. Aby uzyskać więcej informacji 
 
 - [Słowa zastrzeżone](reserved-words.md)
 
-W wierszu polecenia Opcje konsolidatora nie uwzględniają wielkości liter. na przykład/Base i/BASE oznaczają to samo. Aby uzyskać szczegółowe informacje na temat sposobu określania każdej opcji w wierszu polecenia lub w programie Visual Studio, zapoznaj się z dokumentacją dla tej opcji.
+W wierszu polecenia Opcje konsolidatora nie uwzględniają wielkości liter. na przykład `/base` i `/BASE` oznaczają to samo. Aby uzyskać szczegółowe informacje na temat sposobu określania każdej opcji w wierszu polecenia lub w programie Visual Studio, zapoznaj się z dokumentacją dla tej opcji.
 
 Aby określić Opcje konsolidatora, można użyć dyrektywy pragma [komentarza](../../preprocessor/comment-c-cpp.md) .
 
 ## <a name="linker-options-listed-alphabetically"></a>Opcje konsolidatora w porządku alfabetycznym
 
-|Opcja|Cel|
+|Opcja|Przeznaczenie|
 |------------|-------------|
 |[@](at-specify-a-linker-response-file.md)|Określa plik odpowiedzi.|
 |[/ALIGN](align-section-alignment.md)|Określa wyrównanie każdej sekcji.|
 |[/ALLOWBIND](allowbind-prevent-dll-binding.md)|Określa, że nie można powiązać biblioteki DLL.|
 |[/ALLOWISOLATION](allowisolation-manifest-lookup.md)|Określa zachowanie wyszukiwania manifestu.|
 |[/APPCONTAINER](appcontainer-windows-store-app.md)|Określa, czy aplikacja musi działać w środowisku procesu kontenera aplikacji.|
-|[/ASSEMBLYDEBUG](assemblydebug-add-debuggableattribute.md)|Dodaje <xref:System.Diagnostics.DebuggableAttribute> do obrazu zarządzanego.|
+|[/ASSEMBLYDEBUG](assemblydebug-add-debuggableattribute.md)|Dodaje <xref:System.Diagnostics.DebuggableAttribute> do zarządzanego obrazu.|
 |[/ASSEMBLYLINKRESOURCE](assemblylinkresource-link-to-dotnet-framework-resource.md)|Tworzy łącze do zarządzanego zasobu.|
 |[/ASSEMBLYMODULE](assemblymodule-add-a-msil-module-to-the-assembly.md)|Określa, że moduł języka pośredniego (MSIL) firmy Microsoft powinien zostać zaimportowany do zestawu.|
 |[/ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md)|Osadza plik zasobów zarządzanych w zestawie.|
@@ -64,21 +64,21 @@ Aby określić Opcje konsolidatora, można użyć dyrektywy pragma [komentarza](
 |[/DEPENDENTLOADFLAG](dependentloadflag.md)|Ustawia domyślne flagi dla zależnych obciążeń biblioteki DLL.|
 |[/DLL](dll-build-a-dll.md)|Kompiluje bibliotekę DLL.|
 |[/DRIVER](driver-windows-nt-kernel-mode-driver.md)|Tworzy sterownik trybu jądra.|
-|[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)|Określa, czy generować obraz wykonywalny, który może być losowo zmieniany w czasie ładowania przy użyciu funkcji losowego układu przestrzeni adresowej (ASLR).|
+|[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)|Określa, czy generować obraz wykonywalny, który jest zmieniany w czasie ładowania przy użyciu funkcji generowania losowego układu przestrzeni adresowej (ASLR).|
 |[/ENTRY](entry-entry-point-symbol.md)|Ustawia adres początkowy.|
-|[/errorReport](errorreport-report-internal-linker-errors.md)|Raportuje wewnętrzne błędy konsolidatora do firmy Microsoft.|
+|[/ERRORREPORT](errorreport-report-internal-linker-errors.md)| Przestarzałe. Raportowanie błędów jest kontrolowane przez ustawienia [raportowanie błędów systemu Windows (wer)](/windows/win32/wer/windows-error-reporting) . |
 |[/EXPORT](export-exports-a-function.md)|Eksportuje funkcję.|
 |[/FILEALIGN](filealign.md)|Wyrównuje sekcje w pliku wyjściowym do wielokrotności określonej wartości.|
 |[/FIXED](fixed-fixed-base-address.md)|Tworzy program, który można załadować tylko przy użyciu preferowanego adresu podstawowego.|
 |[/FORCE](force-force-file-output.md)|Wymusza zakończenie łącza nawet z nierozpoznanymi symbolami lub symbolami zdefiniowanymi więcej niż raz.|
 |[/FUNCTIONPADMIN](functionpadmin-create-hotpatchable-image.md)|Tworzy obraz, który można zainstalować na gorąco.|
-|[/GENPROFILE,/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)|Obie te opcje określają generowanie pliku. PGD przez konsolidator do obsługi optymalizacji opartej na profilach (PGO). /GENPROFILE i/FASTGENPROFILE używają różnych parametrów domyślnych.|
+|[/GENPROFILE,/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)|Obie te opcje określają generowanie pliku *`.pgd`* przez konsolidator do obsługi optymalizacji opartej na profilach (PGO). /GENPROFILE i/FASTGENPROFILE używają różnych parametrów domyślnych.|
 |[/GUARD](guard-enable-guard-checks.md)|Włącza ochronę za pomocą ochrony przepływu sterowania.|
 |[/HEAP](heap-set-heap-size.md)|Ustawia rozmiar sterty w bajtach.|
 |[/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)|Określa obsługę losowego generowania układu przestrzeni adresowej o wysokiej entropii 64 (ASLR).|
-|[/IDLOUT](idlout-name-midl-output-files.md)|Określa nazwę pliku. idl i inne pliki wyjściowe MIDL.|
+|[/IDLOUT](idlout-name-midl-output-files.md)|Określa nazwę pliku *`.idl`* i innych plików wyjściowych MIDL.|
 |[/IGNORE](ignore-ignore-specific-warnings.md)|Pomija dane wyjściowe określonych ostrzeżeń konsolidatora.|
-|[/IGNOREIDL](ignoreidl-don-t-process-attributes-into-midl.md)|Zapobiega przetwarzaniu informacji o atrybutach do pliku. idl.|
+|[/IGNOREIDL](ignoreidl-don-t-process-attributes-into-midl.md)|Zapobiega przetwarzaniu informacji o atrybutach do pliku *`.idl`* .|
 |[/IMPLIB](implib-name-import-library.md)|Zastępuje domyślną nazwę biblioteki importu.|
 |[/INCLUDE](include-force-symbol-references.md)|Wymusza odwołania do symboli.|
 |[/INCREMENTAL](incremental-link-incrementally.md)|Kontroluje łączenie przyrostowe.|
@@ -100,7 +100,7 @@ Aby określić Opcje konsolidatora, można użyć dyrektywy pragma [komentarza](
 |[/MAPINFO](mapinfo-include-information-in-mapfile.md)|Zawiera określone informacje w mapfile.|
 |[/MERGE](merge-combine-sections.md)|Łączy sekcje.|
 |[/MIDL](midl-specify-midl-command-line-options.md)|Określa opcje wiersza polecenia MIDL.|
-|[/NATVIS](natvis-add-natvis-to-pdb.md)|Dodaje Wizualizatory debugera z pliku Natvis do PDB.|
+|[/NATVIS](natvis-add-natvis-to-pdb.md)|Dodaje Wizualizatory debugera z pliku Natvis do bazy danych programu (PDB).|
 |[/NOASSEMBLY](noassembly-create-a-msil-module.md)|Pomija Tworzenie zestawu .NET Framework.|
 |[/NODEFAULTLIB](nodefaultlib-ignore-libraries.md)|Ignoruje wszystkie (lub określone) domyślne biblioteki, gdy odwołania zewnętrzne są rozwiązane.|
 |[/NOENTRY](noentry-no-entry-point.md)|Tworzy bibliotekę DLL tylko do zasobów.|
@@ -109,22 +109,22 @@ Aby określić Opcje konsolidatora, można użyć dyrektywy pragma [komentarza](
 |[/OPT](opt-optimizations.md)|Formanty łączy optymalizacje.|
 |[/ORDER](order-put-functions-in-order.md)|Umieszcza COMDAT w obrazie we wstępnie określonej kolejności.|
 |[/OUT](out-output-file-name.md)|Określa nazwę pliku wyjściowego.|
-|[/PDB](pdb-use-program-database.md)|Tworzy plik bazy danych programu (PDB).|
+|[/PDB](pdb-use-program-database.md)|Tworzy plik PDB.|
 |[/PDBALTPATH](pdbaltpath-use-alternate-pdb-path.md)|Używa alternatywnej lokalizacji do zapisania pliku PDB.|
-|[/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)|Tworzy plik bazy danych programu (PDB), który nie ma prywatnych symboli.|
-|[/PGD](pgd-specify-database-for-profile-guided-optimizations.md)|Określa plik PGD dla optymalizacji z przewodnikiem.|
+|[/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)|Tworzy plik PDB, który nie ma prywatnych symboli.|
+|[/PGD](pgd-specify-database-for-profile-guided-optimizations.md)|Określa plik *`.pgd`* dla optymalizacji z przewodnikiem.|
 |[/POGOSAFEMODE](pogosafemode-linker-option.md)|**Przestarzałe** Tworzy bezpieczną wielowątkową kompilację PGO.|
 |[/PROFILE](profile-performance-tools-profiler.md)|Tworzy plik wyjściowy, który może być używany z profilerem narzędzi wydajności.|
-|[/RELEASE](release-set-the-checksum.md)|Ustawia sumę kontrolną w nagłówku exe.|
+|[/RELEASE](release-set-the-checksum.md)|Ustawia sumę kontrolną w nagłówku *`.exe`* .|
 |[/SAFESEH](safeseh-image-has-safe-exception-handlers.md)|Określa, czy obraz będzie zawierać tabelę bezpiecznych procedur obsługi wyjątków.|
 |[/SECTION](section-specify-section-attributes.md)|Zastępuje atrybuty sekcji.|
 |[/SOURCELINK](sourcelink.md)|Określa plik SourceLink do dodania do pliku PDB.|
 |[/STACK](stack-stack-allocations.md)|Ustawia rozmiar stosu w bajtach.|
 |[/STUB](stub-ms-dos-stub-file-name.md)|Dołącza program zastępczy systemu MS-DOS do programu systemu Win32.|
-|[/SUBSYSTEM](subsystem-specify-subsystem.md)|Informuje system operacyjny, jak uruchomić plik. exe.|
+|[/SUBSYSTEM](subsystem-specify-subsystem.md)|Informuje system operacyjny, jak uruchomić plik *`.exe`* .|
 |[/SWAPRUN](swaprun-load-linker-output-to-swap-file.md)|Informuje system operacyjny, aby skopiował dane wyjściowe konsolidatora do pliku wymiany przed jego uruchomieniem.|
 |[/TLBID](tlbid-specify-resource-id-for-typelib.md)|Określa identyfikator zasobu biblioteki typów generowanych przez konsolidator.|
-|[/TLBOUT](tlbout-name-dot-tlb-file.md)|Określa nazwę pliku. tlb i inne pliki wyjściowe MIDL.|
+|[/TLBOUT](tlbout-name-dot-tlb-file.md)|Określa nazwę pliku *`.tlb`* i innych plików wyjściowych MIDL.|
 |[/TSAWARE](tsaware-create-terminal-server-aware-application.md)|Tworzy aplikację, która jest przeznaczona specjalnie do uruchamiania na serwerze terminali.|
 |[/USEPROFILE](useprofile.md)|W celu utworzenia zoptymalizowanego obrazu są stosowane dane szkoleniowe dotyczące optymalizacji opartej na profilach.|
 |[/VERBOSE](verbose-print-progress-messages.md)|Drukuje wiadomości dotyczące postępu konsolidatora.|
@@ -139,7 +139,7 @@ Aby określić Opcje konsolidatora, można użyć dyrektywy pragma [komentarza](
 
 <sup>16,1</sup> ta opcja jest dostępna począwszy od programu Visual Studio 2019 w wersji 16,1.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Odwołanie doC++ budynku C/](c-cpp-building-reference.md)\
+\ [odwołaniaC++ w języku C/Building](c-cpp-building-reference.md)
 [Dokumentacja konsolidatora MSVC](linking.md)

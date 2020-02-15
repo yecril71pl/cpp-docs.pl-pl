@@ -1,6 +1,7 @@
 ---
 title: /ERRORREPORT (dumpbin.exe)
-ms.date: 11/04/2016
+description: Dokumentacja opcji wiersza polecenia narzędzia Microsoft polecenia DUMPBIN/ERRORREPORT.
+ms.date: 02/09/2020
 f1_keywords:
 - /ERRORREPORT
 helpviewer_keywords:
@@ -8,25 +9,26 @@ helpviewer_keywords:
 - ERRORREPORT dumpbin option
 - /ERRORREPORT dumpbin option
 ms.assetid: 51178c43-4f95-4fda-8f97-50a257d1c948
-ms.openlocfilehash: 02c8ee07264c21669c3adad2cf9bd8f57a13fc99
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 665b4b1e7c01de4a1fcd848a9e6b36ddbf2944c9
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293007"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257679"
 ---
 # <a name="errorreport-dumpbinexe"></a>/ERRORREPORT (dumpbin.exe)
 
-```
-/ERRORREPORT[NONE | PROMPT | QUEUE | SEND ]
-```
+> [!NOTE]
+> Opcja/ERRORREPORT jest przestarzała. Począwszy od systemu Windows Vista, raportowanie błędów jest kontrolowane przez ustawienia [raportowanie błędów systemu Windows (wer)](/windows/win32/wer/windows-error-reporting) .
+
+## <a name="syntax"></a>Składnia
+
+> **/ERRORREPORT**\[**NONE** \| **monit** \| **kolejki** \| **send** ]
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli dumpbin.exe zakończy się niepowodzeniem w czasie wykonywania, możesz użyć **/errorreport** do wysyłania informacji do firmy Microsoft dotyczących tych błędów wewnętrznych.
+Argumenty **/errorreport** są zastępowane przez ustawienia usługi Raportowanie błędów systemu Windows. POLECENIA DUMPBIN automatycznie wysyła raporty o błędach wewnętrznych do firmy Microsoft, jeśli raportowanie jest włączone przez Raportowanie błędów systemu Windows. Nie jest wysyłany raport, jeśli jest wyłączony przez Raportowanie błędów systemu Windows.
 
-Aby uzyskać więcej informacji na temat **/errorreport**, zobacz [/errorreport (zgłaszaj wewnętrzne błędy kompilatora)](errorreport-report-internal-compiler-errors.md).
-
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje DUMPBIN](dumpbin-options.md)
