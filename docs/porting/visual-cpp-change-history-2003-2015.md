@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: b7a18354257333bb71fff6aedb3cf623c47c2d5c
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 335db55f3b181021f4deb391358df5bbfb607815
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821808"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415697"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ — historia zmian w latach 2003–2015
 
@@ -46,7 +46,7 @@ Ponadto ciągłe ulepszenia zgodności kompilatora mogą czasami zmienić sposó
 
    Biblioteka CRT została przemieszczona w dwóch różnych plikach binarnych: uniwersalnej CRT (ucrtbase), która zawiera większość standardowych funkcji i bibliotekę środowiska uruchomieniowego VC (vcruntime). Biblioteka vcruntime zawiera funkcje związane z kompilatorem, takie jak obsługa wyjątków i wewnętrzne. Jeśli używasz domyślnych ustawień projektu, ta zmiana nie wpłynie na Ciebie, ponieważ konsolidator automatycznie użyje nowych bibliotek domyślnych. Jeśli ustawisz właściwość **konsolidatora** projektu **ignorują wszystkie biblioteki domyślne** na **wartość tak** lub używasz `/NODEFAULTLIB` konsolidatora w wierszu polecenia, należy zaktualizować listę bibliotek (we właściwościach **dodatkowych zależności** ), aby uwzględnić nowe, odczynnikowe biblioteki. Zastąp starą bibliotekę CRT (libcmt. lib, libcmtd. lib, msvcrt. lib, msvcrtd. lib) przy użyciu równoważnych bibliotek refaktoryzacji. Dla każdej z dwóch bibliotek z replikami są dostępne statyczne (. lib) i dynamiczne (. dll) wersje oraz wydanie (bez sufiksu) i wersje debug (z sufiksem "d"). Wersje dynamiczne mają przyłączone biblioteki importu. Dwie biblioteki refaktoryzacjowe to uniwersalne CRT, w tym ucrtbase. dll lub ucrtbase. lib, biblioteka ucrtbased. dll lub biblioteka ucrtbased. lib, a także biblioteka środowiska uruchomieniowego VC, libvcruntime. lib, vcruntime*Version*. dll, libvcruntimed. lib i vcruntimed*Version*. dll. *Wersja* zarówno programu visual Studio 2015, jak i visual Studio 2017 to 140. Zobacz [funkcje biblioteki CRT](../c-runtime-library/crt-library-features.md).
 
-#### <a name="localeh"></a>\<locale.h>
+#### <a name="localeh"></a>\<locale. h >
 
 - **localeconv**
 
@@ -54,7 +54,7 @@ Ponadto ciągłe ulepszenia zgodności kompilatora mogą czasami zmienić sposó
 
    Jeśli używasz ustawień regionalnych dla wątków, należy sprawdzić użycie `localeconv`. Jeśli w kodzie założono, że zwrócone dane `lconv` są dla globalnych ustawień regionalnych, należy je poprawić.
 
-#### <a name="mathh"></a>\<math.h>
+#### <a name="mathh"></a>\<> Math. h
 
 - **C++przeciążenia funkcji biblioteki matematycznej**
 
@@ -94,13 +94,13 @@ Ponadto ciągłe ulepszenia zgodności kompilatora mogą czasami zmienić sposó
 
    Nie jest to istotna zmiana dla kodu natywnego lub mieszanego (`/clr`), jednak kod skompilowany jako [/CLR: Pure](../build/reference/clr-common-language-runtime-compilation.md), ta zmiana może spowodować niepowodzenie kompilowania kodu. Jeśli kompilujesz kod jako `/clr:pure`, może być konieczne dodanie `#include <new>` lub `#include <new.h>`, aby obejść błędy kompilacji ze względu na tę zmianę. Opcja`/clr:pure` jest przestarzała w programie Visual Studio 2015 i nie jest obsługiwana w programie Visual Studio 2017. Kod, który musi być "czysty", powinien być przewoźny C#do.
 
-#### <a name="processh"></a>\<process.h>
+#### <a name="processh"></a>\<Process. h >
 
 - **_beginthread i _beginthreadex**
 
    Funkcje [_beginthread](../c-runtime-library/reference/beginthread-beginthreadex.md) i [_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md) zawierają teraz odwołanie do modułu, w którym procedura wątku jest zdefiniowana na czas trwania wątku. Pozwala to zagwarantować, że moduły nie zostaną zwolnione, dopóki wątek nie zostanie uruchomiony do ukończenia.
 
-#### <a name="stdargh"></a>\<stdarg.h>
+#### <a name="stdargh"></a>\<STDARG. h >
 
 - **va_start i typy odwołań**
 
@@ -259,7 +259,7 @@ Ponadto ciągłe ulepszenia zgodności kompilatora mogą czasami zmienić sposó
 
    Opcja Link `smallheap` została usunięta. Zobacz [Opcje łącza](../c-runtime-library/link-options.md).
 
-#### <a name="stringh"></a>\<string.h>
+#### <a name="stringh"></a>\<String. h >
 
 - **wcstok**
 
@@ -273,7 +273,7 @@ Ponadto ciągłe ulepszenia zgodności kompilatora mogą czasami zmienić sposó
 
    Dodano nową funkcję `_wcstok` ze starym podpisem, aby ułatwić przenoszenie. Podczas kompilowania C++ kodu istnieje również wbudowana Przeciążenie `wcstok`, które ma stary podpis. To przeciążenie jest zadeklarowane jako przestarzałe. W kodzie języka C można define_CRT_NON_CONFORMING_WCSTOK, aby `_wcstok` być używany zamiast `wcstok`.
 
-#### <a name="timeh"></a>\<time.h>
+#### <a name="timeh"></a>\<Time. h >
 
 - **clock**
 
@@ -309,7 +309,7 @@ Aby włączyć nowe optymalizacje i kontrole debugowania, implementacja standard
 
 - **C++Pliki dołączane biblioteki standardowej**
 
-   Wprowadzono pewne zmiany w strukturze include w nagłówkach biblioteki C++ standardowej. C++Nagłówki biblioteki standardowej mogą zawierać siebie nawzajem w nieokreślony sposób. Ogólnie rzecz biorąc, należy napisać swój kod, tak aby uważnie uwzględniał wszystkie nagłówki, których potrzebuje, zgodnie ze C++ standardem, i nie polega na tym, C++ które nagłówki biblioteki standardowej zawierają inne C++ nagłówki biblioteki standardowej. Sprawia to, że kod jest przenośny między wersjami i platformami. Co najmniej dwie zmiany nagłówka w programie Visual Studio 2015 wpływają na kod użytkownika. Najpierw ciąg \<nie > już zawiera \<iterator >. Po drugie, \<krotka > teraz deklaruje `std::array` bez uwzględnienia wszystkich \<tablicy >, które mogą przerwać kod za pośrednictwem następującej kombinacji konstrukcji kodu: kod ma zmienną o nazwie "Array" i masz dyrektywę Using "Using namespace;", a następnie dołączysz C++ standardowy nagłówek biblioteki (na przykład \<funkcjonalne >), który zawiera \<spójnej kolekcji, która teraz deklaruje >.
+   Wprowadzono pewne zmiany w strukturze include w nagłówkach biblioteki C++ standardowej. C++Nagłówki biblioteki standardowej mogą zawierać siebie nawzajem w nieokreślony sposób. Ogólnie rzecz biorąc, należy napisać swój kod, tak aby uważnie uwzględniał wszystkie nagłówki, których potrzebuje, zgodnie ze C++ standardem, i nie polega na tym, C++ które nagłówki biblioteki standardowej zawierają inne C++ nagłówki biblioteki standardowej. Sprawia to, że kod jest przenośny między wersjami i platformami. Co najmniej dwie zmiany nagłówka w programie Visual Studio 2015 wpływają na kod użytkownika. Najpierw ciąg \<nie > już zawiera \<iterator >. Po drugie, \<krotka > teraz deklaruje `std::array` bez uwzględnienia wszystkich \<tablicy >, które mogą przerwać kod za pośrednictwem następującej kombinacji konstrukcji kodu: kod ma zmienną o nazwie "Array" i masz dyrektywę Using "Using namespace;", a następnie dołączysz C++ standardowy nagłówek biblioteki (na przykład \<funkcjonalne >), który zawiera \<spójnej kolekcji, która teraz deklaruje >.`std::array`
 
 - **steady_clock**
 
@@ -522,7 +522,7 @@ Chociaż różnice te mogą mieć wpływ na kod źródłowy lub inne artefakty k
 
    Aby rozwiązać ten błąd w kodzie, upewnij się, że typ argumentu szablonu jest zgodny z zadeklarowanym typem parametru szablonu.
 
-- **__declspec(align)**
+- **__declspec (Wyrównaj)**
 
    Kompilator nie akceptuje już `__declspec(align)` w funkcjach. Ta konstrukcja była zawsze ignorowana, ale teraz generuje błąd kompilatora.
 
@@ -1335,7 +1335,7 @@ Chociaż różnice te mogą mieć wpływ na kod źródłowy lub inne artefakty k
 
 - **Napraw nieprawidłowe inicjalizacje kopiowania w inicjalizacji niestatycznej składowej danych (NSDMI)**
 
-   Poniższy kod generuje teraz błąd C2664: {0}:: S1 (S1 & &) ': nie można skonwertować argumentu 1 z "bool" na "const S1 &":
+   Poniższy kod generuje teraz błąd C2664: :: S1 (S1 & &) ': nie można skonwertować argumentu 1 z "bool" na "const S1 &":
 
     ```cpp
     struct S1 {
@@ -1739,7 +1739,7 @@ Chociaż różnice te mogą mieć wpływ na kod źródłowy lub inne artefakty k
     }
     ```
 
-   \- lub —
+   \- lub-
 
     ```cpp
     class base;  // as above
@@ -2883,7 +2883,7 @@ Chociaż różnice te mogą mieć wpływ na kod źródłowy lub inne artefakty k
     };
     ```
 
-   Aby znaleźć miejsca w kodzie, które zostały wypróbowane we wcześniejszej wersji, użyj kompilatora z tej wersji razem z opcją kompilatora `/W3` i Włącz Ostrzeżenie 4370. Na przykład:
+   Aby znaleźć miejsca w kodzie, które zostały wypróbowane we wcześniejszej wersji, użyj kompilatora z tej wersji razem z opcją kompilatora `/W3` i Włącz C4370 ostrzegawczy. Na przykład:
 
     ```cpp
     #pragma warning(default:4370)
@@ -3080,7 +3080,7 @@ C++ Kompilator w Visual Studio 2013 wykrywa niezgodności w _ITERATOR_DEBUG_LEVE
 
 - Zmieniono sygnaturę `CMFCEditBrowseCtrl::EnableBrowseButton`.
 
-- Usunięto `m_fntTabs` i `m_fntTabsBold` z `CMFCBaseTabCtrl`.
+- Usunięto właściwości `m_fntTabs` i `m_fntTabsBold` z klasy `CMFCBaseTabCtrl`.
 
 - Dodano parametr do konstruktorów `CMFCRibbonStatusBarPane`. (Jest to domyślny parametr, dlatego nie jest on odporny na źródła).
 
@@ -3522,6 +3522,6 @@ C++ Kompilator w Visual Studio 2013 wykrywa niezgodności w _ITERATOR_DEBUG_LEVE
 
 - Kompilator teraz raportuje kod nieosiągalny (C4702).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Co nowego w wizualizacji C++ w programie Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)

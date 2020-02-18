@@ -6,18 +6,18 @@ helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: a18d2dbabdeec0f283fb4eca7ed52e616f9d224a
-ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
+ms.openlocfilehash: bc9fb5628c1a628b91f306c346f2bbb1dea13de8
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725724"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416107"
 ---
 # <a name="upgrade-c-projects-from-earlier-versions-of-visual-studio"></a>Uaktualnianie C++ projektów ze starszych wersji programu Visual Studio
 
 Aby uaktualnić projekt utworzony we wcześniejszej wersji programu Visual Studio, po prostu otwórz projekt w najnowszej wersji programu Visual Studio. Program Visual Studio oferuje uaktualnienie projektu do bieżącego schematu.
 
-Jeśli wybierzesz opcję **nie**, projekt nie zostanie uaktualniony. W przypadku projektów utworzonych w programie Visual Studio 2010 i nowszych można nadal używać projektu w nowszej wersji programu Visual Studio. Po prostu ustaw właściwości projektu, aby dalej korzystać ze starszego zestawu narzędzi. Jeśli opuścisz starszą wersję programu Visual Studio na komputerze, jego zestaw narzędzi będzie dostępny w nowszych wersjach. Na przykład jeśli projekt musi nadal działać w systemie Windows XP, można przeprowadzić uaktualnienie do programu Visual Studio 2019. Następnie należy określić zestaw narzędzi jako v141_xp lub wcześniej we właściwościach projektu. Aby uzyskać więcej informacji, zobacz [Użyj natywnej wielowersyjności kodu w programie Visual Studio do kompilacji starych projektów](use-native-multi-targeting.md).
+Jeśli wybierzesz opcję **nie**, projekt nie zostanie uaktualniony. W przypadku projektów utworzonych w programie Visual Studio 2010 i nowszych można nadal używać projektu w nowszej wersji programu Visual Studio. Po prostu ustaw właściwości projektu, aby dalej korzystać ze starszego zestawu narzędzi. Jeśli opuścisz starszą wersję programu Visual Studio na komputerze, jego zestaw narzędzi będzie dostępny w nowszych wersjach. Na przykład jeśli projekt musi nadal działać w systemie Windows XP, można przeprowadzić uaktualnienie do programu Visual Studio 2019. Następnie należy określić zestaw narzędzi jako v141_xp lub wcześniej we właściwościach projektu. Aby uzyskać więcej informacji, zobacz [Używanie natywnego wielu elementów docelowych w programie Visual Studio do kompilowania starych projektów](use-native-multi-targeting.md).
 
 Jeśli wybierzesz opcję **tak**, projekt zostanie uaktualniony w miejscu. Nie można go przekonwertować z powrotem do wcześniejszej wersji. Ze względu na scenariusze uaktualniania dobrym rozwiązaniem jest wykonanie kopii zapasowej istniejących plików projektu i rozwiązania.
 
@@ -47,7 +47,7 @@ Niektóre uaktualnione projekty i rozwiązania można skompilować pomyślnie be
 
 1. Ustaw zestaw narzędzi platformy, C++ Standard języka i wersję Windows SDK (jeśli dotyczy) w preferowanych wersjach. ( **Właściwości** > **projektu** > **Właściwości konfiguracji** > **Ogólne**)
 
-1. Jeśli masz wiele błędów, możesz tymczasowo wyłączyć niektóre opcje podczas ich rozwiązywania. Aby wyłączyć opcję [/permissive-](../build/reference/permissive-standards-conformance.md) , użyj **Właściwości** > **projektu** > **Właściwości konfiguracji** > **języku** **C++ C/**  > . Aby wyłączyć opcję [analizy kodu](/visualstudio/code-quality/code-analysis-for-c-cpp-overview) , użyj **właściwości** > **projektu** > **Właściwości konfiguracji** > **Analiza kodu**.
+1. Jeśli masz wiele błędów, możesz tymczasowo wyłączyć niektóre opcje podczas ich rozwiązywania. Aby wyłączyć opcję [/permissive-](../build/reference/permissive-standards-conformance.md) , użyj **Właściwości** > **projektu** > **Właściwości konfiguracji** > **języku** **C++ C/**  > . Aby wyłączyć opcję [analizy kodu](/cpp/code-quality/code-analysis-for-c-cpp-overview) , użyj **właściwości** > **projektu** > **Właściwości konfiguracji** > **Analiza kodu**.
 
 1. Upewnij się, że wszystkie zależności są obecne i że ścieżki dołączania lub lokalizacje biblioteki są poprawne. ( **Właściwości** > **projektu** > **Właściwości konfiguracji** > **katalogów VC + +** )
 
@@ -74,7 +74,7 @@ Aby usunąć błędy, spróbuj wyszukać lub opublikować pytanie w witrynie Sta
 [Vcbuild a MSBuild](build-system-changes.md)\
 [Porty innych firm](porting-third-party-libraries.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Co nowego w wizualizacji C++ w programie Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)\
 [Historia C++ zmian wizualnych 2003-2015](../porting/visual-cpp-change-history-2003-2015.md)\

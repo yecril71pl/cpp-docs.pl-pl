@@ -11,12 +11,12 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: 3ccb618c9a3c6b21d6ffe3fbbce7b6c1140e0564
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f43367fd58d8ab2a62fb2312efcd9fc9ec0cfc42
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450589"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416201"
 ---
 # <a name="debug-iterator-support"></a>Obsługa iteratora debugowania
 
@@ -26,7 +26,7 @@ Standard C++ opisuje sposób, w jaki funkcje elementów członkowskich mogą pow
 
 - Wymazanie elementu z kontenera powoduje, że Iteratory elementu stają się nieprawidłowe.
 
-- Zwiększenie rozmiaru wektora przy [](../standard-library/vector.md) użyciu instrukcji push lub INSERT powoduje, że `vector` Iteratory do stają się nieprawidłowe.
+- Zwiększenie rozmiaru [wektora](../standard-library/vector.md) przy użyciu instrukcji push lub INSERT powoduje, że iteratory do `vector` stają się nieprawidłowe.
 
 ## <a name="invalid-iterators"></a>Nieprawidłowe Iteratory
 
@@ -54,7 +54,7 @@ int main() {
 }
 ```
 
-## <a name="using-iteratordebuglevel"></a>Korzystanie z _ITERATOR_DEBUG_LEVEL
+## <a name="using-_iterator_debug_level"></a>Używanie _ITERATOR_DEBUG_LEVEL
 
 Aby wyłączyć funkcję debugowania iteratora w kompilacji debugowania, można użyć [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) makro preprocesora. Ten program nie potwierdza, ale nadal wyzwala niezdefiniowane zachowanie.
 
@@ -106,7 +106,7 @@ int main() {
 
 ## <a name="incompatible-iterators"></a>Niezgodne Iteratory
 
-Poniższy przykład kodu powoduje potwierdzenie, ponieważ dwa Iteratory algorytmu [for_each](../standard-library/algorithm-functions.md#for_each) są niezgodne. Algorytmy sprawdzają, czy Iteratory, które są dostarczane do nich odwołują się do tego samego kontenera.
+Poniższy przykład kodu powoduje potwierdzenie, ponieważ dwa Iteratory do algorytmu [for_each](../standard-library/algorithm-functions.md#for_each) są niezgodne. Algorytmy sprawdzają, czy Iteratory, które są dostarczane do nich odwołują się do tego samego kontenera.
 
 ```cpp
 // iterator_debugging_3.cpp
@@ -126,7 +126,7 @@ int main()
 }
 ```
 
-Zwróć uwagę, że w tym przykładzie używane `[] (int& elem) { elem *= 2; }` jest wyrażenie lambda zamiast Funktor. Mimo że wybór ten nie ma wpływu na błąd potwierdzenia — podobny Funktor może spowodować wystąpienie tego samego błędu — wyrażenia lambda są bardzo przydatne w przypadku wykonywania zadań obiektów funkcji Compact. Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [lambda Expressions](../cpp/lambda-expressions-in-cpp.md).
+Zwróć uwagę, że w tym przykładzie używane jest wyrażenie lambda `[] (int& elem) { elem *= 2; }` zamiast Funktor. Mimo że wybór ten nie ma wpływu na błąd potwierdzenia — podobny Funktor może spowodować wystąpienie tego samego błędu — wyrażenia lambda są bardzo przydatne w przypadku wykonywania zadań obiektów funkcji Compact. Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [lambda Expressions](../cpp/lambda-expressions-in-cpp.md).
 
 ## <a name="iterators-going-out-of-scope"></a>Iteratory wykraczające poza zakres
 
@@ -165,7 +165,7 @@ struct derived : base {
    ~derived() {}
 };
 
- int main() {
+int main() {
    std::vector<int> vect( 10 );
    base * pb = new derived( vect.begin() );
    delete pb;  // doesn't call ~derived()
@@ -173,6 +173,6 @@ struct derived : base {
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Standardowa biblioteka C++ — przegląd](../standard-library/cpp-standard-library-overview.md)

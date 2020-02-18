@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: 914498a79d3d3ddae08ae672aac35c6e913ef238
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: eaaa581ff622438c2e395c34b4b026aca693a845
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988075"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416168"
 ---
 # <a name="security-best-practices-for-c"></a>Najlepsze praktyki w zakresie zabezpieczeń dla C++
 
@@ -35,7 +35,7 @@ Nakazuje konsolidatorowi dołączenie do obrazu wyjściowego tabeli zawierające
 [/NXCOMPAT](../build/reference/nxcompat.md), [/NXCOMPAT (zgodny z zapobieganiem wykonywaniu danych)](../build/reference/nxcompat-compatible-with-data-execution-prevention.md) te opcje kompilatora i konsolidatora umożliwiają zachowanie zgodności z funkcją zapobiegania wykonywaniu danych. Funkcja DEP chroni procesor przed wykonaniem stron niekodowych.
 
 [/analyze (Analiza kodu)](../build/reference/analyze-code-analysis.md)<br/>
-Ta opcja kompilatora aktywuje analizę kodu, która zgłasza potencjalne problemy z zabezpieczeniami, takie jak przepełnienie buforu, pamięć niezainicjowana, cofanie odwołania wskaźnika i przecieki pamięci. Domyślnie ta opcja jest wyłączona. Aby uzyskać więcej informacji, zobacz [Analiza kodu dla CC++ /przegląd](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+Ta opcja kompilatora aktywuje analizę kodu, która zgłasza potencjalne problemy z zabezpieczeniami, takie jak przepełnienie buforu, pamięć niezainicjowana, cofanie odwołania wskaźnika i przecieki pamięci. Domyślnie ta opcja jest wyłączona. Aby uzyskać więcej informacji, zobacz [Analiza kodu dla CC++ /przegląd](/cpp/code-quality/code-analysis-for-c-cpp-overview).
 
 [/DYNAMICBASE (Korzystaj z randomizacji układu przestrzeni adresowej)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)<br/>
 Ta opcja konsolidatora umożliwia tworzenie obrazu wykonywalnego, który może zostać załadowany w różnych lokalizacjach w pamięci na początku wykonywania. Ta opcja powoduje również, że lokalizacja stosu w pamięci znacznie mniej przewidywalna.
@@ -68,7 +68,7 @@ Analiza kodu dla kodu zarządzanego, znana również jako FxCop, sprawdza zestaw
 
 - Wydajność
 
-- Zabezpieczenia
+- Bezpieczeństwo
 
 ## <a name="windows-application-verifier"></a>Weryfikator aplikacji systemu Windows
 
@@ -92,8 +92,8 @@ Korzystanie z kont użytkowników systemu Windows należących do grupy Administ
 
 Aby uzyskać informacje na temat sposobu ułatwiającą i łagodzenia luk w zabezpieczeniach sprzętu kanału po stronie C++ wykonywania w oprogramowaniu, zobacz [ C++ wskazówki dla deweloperów dotyczące kanałów po stronie wykonywania](developer-guidance-speculative-execution.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 <xref:System.Security> <br/>
-[Security](/dotnet/standard/security/index)<br/>
+[Bezpieczeństwo](/dotnet/standard/security/index)<br/>
 [Jak kontrola konta użytkownika (UAC) wpływa na aplikację?](how-user-account-control-uac-affects-your-application.md)

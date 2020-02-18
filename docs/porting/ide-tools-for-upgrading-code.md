@@ -3,12 +3,12 @@ title: Narzędzia środowiska IDE programu Visual Studio C++ do uaktualniania ko
 description: Edytor C++ kodu i narzędzia do analizy kodu w programie Visual Studio ułatwiają modernizację bazy C++ kodu.
 ms.date: 11/13/2019
 ms.topic: conceptual
-ms.openlocfilehash: 3f85b955b688489bfc04c4bfc0605201e883e3d4
-ms.sourcegitcommit: 4dde7914608508e47c21cae03ac58fe953a0c29b
+ms.openlocfilehash: 409fc0a2fa6cd39c7751dc34b20b231ffbea3956
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119534"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416153"
 ---
 # <a name="visual-studio-ide-tools-for-upgrading-c-code"></a>Narzędzia środowiska IDE programu Visual Studio C++ do uaktualniania kodu
 
@@ -24,7 +24,7 @@ Program Visual Studio pomaga uaktualnić starszy C++ kod przy użyciu opcji komp
 
 - Kod, który jest zgodny ze wszystkimi wersjami standardu, ale nie jest już uznawany za najlepsze C++rozwiązanie w nowoczesnej.
 
-   Aby zidentyfikować kod, w którym są zalecane zmiany, uruchom [analizę kodu](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+   Aby zidentyfikować kod, w którym są zalecane zmiany, uruchom [analizę kodu](/cpp/code-quality/code-analysis-for-c-cpp-overview).
 
 ## <a name="open-and-convert-a-legacy-project"></a>Otwieranie i konwertowanie starszego projektu
 
@@ -74,7 +74,7 @@ Błędy i ostrzeżenia analizy kodu są również wyświetlane w **Lista błęd�
 
 ![Ostrzeżenia analizy kodu w Lista błędów](media/code-analysis-error-list.png "Ostrzeżenia analizy kodu w Lista błędów")
 
-Można zmienić reguły, które są aktywne, i utworzyć niestandardowe zestaw reguł. Aby uzyskać więcej informacji o korzystaniu z analizy kodu, zobacz [Analiza koduC++ dla C/przegląd](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+Można zmienić reguły, które są aktywne, i utworzyć niestandardowe zestaw reguł. Aby uzyskać więcej informacji o korzystaniu z analizy kodu, zobacz [Analiza koduC++ dla C/przegląd](/cpp/code-quality/code-analysis-for-c-cpp-overview).
 
 ## <a name="use-quick-actions-to-modernize-code"></a>Używanie szybkich akcji do modernizacji kodu
 
@@ -101,7 +101,7 @@ A wywołanie `AVERAGE` jest teraz kolorowe jako wywołanie funkcji, a etykietka 
 
 ![Wywołanie funkcji constexpr](media/constexpr-function-call.png "Wywołanie funkcji constexpr")
 
-### <a name="initialize-variables"></a>Inicjuj zmienne
+### <a name="initialize-variables"></a>Inicjowanie zmiennych
 
 Niezainicjowane zmienne mogą przechowywać losowe wartości, które prowadzą do poważnych usterek. Analiza kodu flaguje te wystąpienia, a Edytor zapewnia szybką akcję:
 

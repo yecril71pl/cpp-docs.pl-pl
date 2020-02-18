@@ -2,12 +2,12 @@
 title: Odczytuj i rozumiej C++ kod w programie Visual Studio
 description: Użyj edytora C++ kodu w programie Visual Studio, aby sformatować i zrozumieć swój kod.
 ms.date: 05/28/2019
-ms.openlocfilehash: d4af4c9bc747540bada49de305c45cffc5c44374
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 2ddeabd9d70ebb344fe6d14abe520ee51a42eebb
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303106"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416129"
 ---
 # <a name="read-and-understand-c-code-in-visual-studio"></a>Odczytuj i rozumiej C++ kod w programie Visual Studio
 
@@ -19,9 +19,9 @@ Program Visual Studio koloruje elementy składni w celu rozróżnienia typów sy
 
 ![Kolorowanie kodu](../ide/media/code-outline-colorization.png "C++Kolorowanie")
 
- Nieużywany kod (taki jak kod w #if 0) jest bardziej wyblakły kolorem.
+Nieużywany kod (taki jak kod w #if 0) jest bardziej wyblakły kolorem.
 
- ![Nieaktywny kod](../ide/media/inactive-code-cpp.png "C++nieaktywny kod")
+![Nieaktywny kod](../ide/media/inactive-code-cpp.png "C++nieaktywny kod")
 
 Kolory można dostosować, wpisując "Fonts" ( **Szybkie uruchamianie**), a następnie wybierając **czcionkę i kolory**. W oknie dialogowym **czcionki i kolory** przewiń w dół do opcji CC++ /Options, a następnie wybierz niestandardową czcionkę i/lub kolor.
 

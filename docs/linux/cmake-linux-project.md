@@ -3,12 +3,12 @@ title: Tworzenie i Konfigurowanie projektu systemu Linux CMake w programie Visua
 description: Jak utworzyć, skonfigurować, edytować i kompilować projekt systemu Linux CMake w programie Visual Studio
 ms.date: 10/04/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 128b8dac297398ffbfadfaade5b36c843d55e163
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 9c6a60162c2dbbab8e348b27d1987d7f1001bee0
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625954"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416088"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>Tworzenie i konfigurowanie projektu CMake systemu Linux
 
@@ -42,7 +42,7 @@ Najpierw upewnij się, że masz zainstalowaną **platformę Linux z C++**  zains
 W systemie Linux upewnij się, że zainstalowano następujące elementy: 
 
 - zatoce
-- GDB
+- gdb
 - rsync
 - kodu 
 
@@ -62,7 +62,7 @@ Pliki binarne zostaną zainstalowane w `~/.vs/cmake`. Po wdrożeniu plików bina
 
 :::moniker-end
 
-## <a name="open-a-folder"></a>Otwórz folder
+## <a name="open-a-folder"></a>Otwieranie folderu
 
 Aby rozpocząć, wybierz pozycję **plik** > **Otwórz** **folder** > z menu głównego lub wpisz `devenv.exe <foldername>` w wierszu polecenia. Otwarty folder powinien zawierać plik CMakeLists. txt wraz z kodem źródłowym.
 W poniższym przykładzie przedstawiono prosty plik CMakeLists. txt i plik. cpp:
@@ -175,7 +175,7 @@ W poniższym przykładzie przedstawiono konfigurację domyślną dla systemu Lin
 
 ::: moniker range="vs-2019"
 
- Domyślna konfiguracja systemu Linux — debugowanie w programie Visual Studio 2019 w wersji 16,1 i nowszej jest następująca:
+Domyślna konfiguracja systemu Linux — debugowanie w programie Visual Studio 2019 w wersji 16,1 i nowszej jest następująca:
 
 ```json
 {
@@ -223,7 +223,7 @@ Te opcje umożliwiają uruchamianie poleceń w systemie Linux przed i po skompil
 
 
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Praca z właściwościami projektu](../build/working-with-project-properties.md)<br/>
 [CMake projekty w programie Visual Studio](../build/cmake-projects-in-visual-studio.md)<br/>

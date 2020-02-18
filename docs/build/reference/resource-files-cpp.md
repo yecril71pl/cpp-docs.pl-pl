@@ -5,30 +5,30 @@ helpviewer_keywords:
 - resource files
 - resources [C++]
 ms.assetid: 338a4a0f-0c62-4ef1-a34f-5d86262d93a4
-ms.openlocfilehash: 20e57aa51cff8c4e3392c313645468387c2a4244
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 16759a242325b6a8e5f829f719ce3e505b03c2e3
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707401"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415855"
 ---
 # <a name="resource-files-c"></a>Pliki zasobów (C++)
 
-Zasoby są elementy interfejsu, które zawierają informacje do użytkownika. Mapy bitowe, ikony, paski narzędzi i kursory są wszystkie zasoby. Niektóre zasoby można wykonać akcji, takie jak wybór z menu lub wprowadzanie danych w oknie dialogowym.
+Zasoby są elementami interfejsu, które zawierają informacje dla użytkownika. Mapy bitowe, ikony, paski narzędzi i kursory są wszystkie zasobami. Niektóre zasoby mogą wykonywać akcje, takie jak wybór z menu lub wprowadzanie danych w oknie dialogowym.
 
- Aby uzyskać więcej informacji, zobacz [pracy z zasobami](../../windows/working-with-resource-files.md).
+Aby uzyskać więcej informacji, zobacz [Praca z zasobami](../../windows/working-with-resource-files.md).
 
-|Nazwa pliku|Lokalizacja katalogu|Lokalizacja Eksploratora rozwiązań|Opis|
+|Nazwa pliku|Lokalizacja katalogu|Lokalizacja Eksplorator rozwiązań|Opis|
 |---------------|------------------------|--------------------------------|-----------------|
-|*Projname*.rc|*Projname*|Pliki źródłowe|Plik skryptu zasobu dla projektu. Plik skryptu zasobu zawiera następujące polecenie, w zależności od typu projektu i pomocy technicznej, wybrany dla projektu (na przykład, paski narzędzi, okna dialogowe lub HTML):<br /><br />-Definicja menu default.<br />— Tabele akceleratora i ciąg.<br />-Domyślnie **o** okno dialogowe.<br />-Innych oknach dialogowych.<br />-Plik ikony (res\\*Projname*.ico).<br />— Informacje o wersji.<br />-Map bitowych.<br />— Pasek narzędzi.<br />— Pliki HTML.<br /><br /> Plik zasobów zawiera standardowe zasoby MFC w pliku Afxres.rc pliku.|
-|Resource.h|*Projname*|Pliki nagłówkowe|Plik nagłówka zasobów zawiera definicje dla zasobów używanych przez projekt.|
-|*Projname*.rc2|*Projname*\res|Pliki źródłowe|Plik skryptu zawierający dodatkowe zasoby używane przez projekt. Można dołączyć plik .rc2 w pliku .rc projektu.<br /><br /> Plik .rc2 przydaje się, w tym zasoby używane przez kilka różnych projektach. Nie trzeba tworzyć te same zasoby dla różnych projektów, można umieścić je w pliku .rc2 i dołączyć plik .rc2 w pliku .rc głównego.|
-|*Projname*.def|*Projname*|Pliki źródłowe|Plik definicji modułu projektu DLL. W przypadku formantu zawiera nazwę i opis kontrolki, a także rozmiar sterty środowiska wykonawczego.|
-|*Projname*.ico|*Projname*\res|Pliki zasobów|Plik ikony dla projektu lub sterowania. Ikona ta pojawia się, gdy aplikacja jest zminimalizowana. Jest również używany w aplikacji **o** pole. Domyślnie biblioteka MFC zawiera ikonę MFC i ATL zawiera ikonę ATL.|
-|*Projname*Doc.ico|*Projname*\res|Pliki zasobów|Plik ikony dla projektu MFC, który zawiera obsługę architektury dokumentu/widoku.|
-|Toolbar.bmp|*Projname*\res|Pliki zasobów|Plik mapy bitowej reprezentujący aplikacja lub formant paska narzędzi lub palety. Ta mapa bitowa znajduje się w pliku zasobów projektu. Początkowy pasek narzędzi i pasek stanu, które są konstruowane w **cmainframe —** klasy.|
-|ribbon.mfcribbon-ms|*Projname*\res|Pliki zasobów|Plik zasobu, który zawiera kod XML, który definiuje przyciskami, formanty i atrybuty na Wstążce. Aby uzyskać więcej informacji, zobacz [Projektant wstążki (MFC)](../../mfc/ribbon-designer-mfc.md).|
+|*Projname*. RC|*Projname*|Pliki źródłowe|Plik skryptu zasobu dla projektu. Plik skryptu zasobu zawiera następujące, w zależności od typu projektu, i pomoc techniczną wybraną dla projektu (na przykład paski narzędzi, okna dialogowe lub HTML):<br /><br />— Domyślna definicja menu.<br />-Akcelerator i tabele ciągów.<br />-Domyślne **Informacje o** oknie dialogowym.<br />— Inne okna dialogowe.<br />— Plik ikony (res\\*Projname*. ico).<br />— Informacje o wersji.<br />Mapy bitowe.<br />Pasku narzędzi.<br />— Pliki HTML.<br /><br /> Plik zasobów zawiera plik plik AFXRES. RC dla standardowych zasobów klasy Microsoft Foundation.|
+|Resource.h|*Projname*|Pliki nagłówkowe|Plik nagłówka zasobu zawierający definicje zasobów używanych przez projekt.|
+|*Projname*. RC2|*Projname*\res|Pliki źródłowe|Plik skryptu zawierający dodatkowe zasoby używane przez ten projekt. W pliku. rc projektu można uwzględnić plik. RC2.<br /><br /> Plik. RC2 jest przydatny do uwzględnienia zasobów używanych przez kilka różnych projektów. Zamiast konieczności tworzenia tych samych zasobów kilka razy dla różnych projektów, można umieścić je w pliku. RC2 i dołączyć plik. RC2 do głównego pliku. rc.|
+|*Projname*. def|*Projname*|Pliki źródłowe|Plik definicji modułu dla projektu DLL. Dla kontrolki zawiera nazwę i opis kontrolki, a także rozmiar sterty czasu wykonywania.|
+|*Projname*. ico|*Projname*\res|Pliki zasobów|Plik ikony dla projektu lub formantu. Ta ikona jest wyświetlana, gdy aplikacja jest zminimalizowana. Jest również używany w oknie **Informacje o** aplikacji. Domyślnie MFC zawiera ikonę MFC, a ATL zawiera ikonę ATL.|
+|*Projname* Doc. ico|*Projname*\res|Pliki zasobów|Plik ikony dla projektu MFC, który obejmuje obsługę architektury dokument/widok.|
+|Pasek narzędzi. bmp|*Projname*\res|Pliki zasobów|Plik mapy bitowej reprezentujący aplikację lub kontrolkę na pasku narzędzi lub w palecie. Ta mapa bitowa jest zawarta w pliku zasobów projektu. Początkowy pasek narzędzi i pasek stanu są skonstruowane w klasie **CMainFrame** .|
+|ribbon.mfcribbon-ms|*Projname*\res|Pliki zasobów|Plik zasobu, który zawiera kod XML, który definiuje przyciski, kontrolki i atrybuty na Wstążce. Aby uzyskać więcej informacji, zobacz [Projektant wstążki (MFC)](../../mfc/ribbon-designer-mfc.md).|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Plik typy utworzone dla programu Visual Studio C++ projektów](file-types-created-for-visual-cpp-projects.md)
+[Typy plików utworzone dla projektów programu C++ Visual Studio](file-types-created-for-visual-cpp-projects.md)

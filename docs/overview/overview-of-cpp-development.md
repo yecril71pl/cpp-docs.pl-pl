@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: d72ea2ab4fa83259152101b357c6b2b69e74c723
-ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
+ms.openlocfilehash: 4e04e189b44fe61759a9422139d856ab8a09f201
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74810623"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415709"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Omówienie programowania w języku C++ w programie Visual Studio
 
@@ -47,7 +47,7 @@ Program Visual Studio zapewnia obsługę dowolnego systemu projektu lub niestand
 
 ## <a name="add-to-source-control"></a>Dodaj do kontroli źródła
 
-Kontrola źródła umożliwia koordynowanie pracy wśród wielu deweloperów, izolowanie pracy w toku od kodu produkcyjnego i tworzenie kopii zapasowej kodu źródłowego. Program Visual Studio obsługuje narzędzia Git i [Kontrola wersji serwera Team Foundation \(TFVC\)](/azure/devops/repos/tfvc/) za poorednictwem okna **Team Explorer** . 
+Kontrola źródła umożliwia koordynowanie pracy wśród wielu deweloperów, izolowanie pracy w toku od kodu produkcyjnego i tworzenie kopii zapasowej kodu źródłowego. Program Visual Studio obsługuje narzędzia Git i [Kontrola wersji serwera Team Foundation \(TFVC\)](/azure/devops/repos/tfvc/) za poorednictwem okna **Team Explorer** .
 
 ::: moniker range="vs-2019"
 
@@ -105,9 +105,9 @@ Debugowanie można rozpocząć, naciskając klawisz **F5**. Wykonywanie jest wst
 
 ![Sesja debugowania](media/vs2017-debug-watch.png "Sesja debugowania programu Visual Studio 2017")
 
-Aby uzyskać więcej informacji, zobacz [debugowania w programie Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).
+Aby uzyskać więcej informacji, zobacz [debugowanie w programie Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).
 
-## <a name="test"></a>{1&gt;Test&lt;1}
+## <a name="test"></a>Testowanie
 
 Program Visual Studio zawiera platformę testów jednostkowych C++firmy Microsoft dla programu, a także obsługę podwyższania poziomu. Test, Google test i narzędzia ctest. Uruchom testy z okna **Eksploratora testów** :
 
@@ -117,7 +117,7 @@ Aby uzyskać więcej informacji, zobacz [Weryfikowanie kodu przy użyciu testów
 
 ## <a name="analyze"></a>Analiza
 
-Program Visual Studio zawiera narzędzia do analizy kodu statycznego, które mogą wykrywać potencjalne problemy w kodzie źródłowym. Narzędzia te obejmują implementację elementów sprawdzania [ C++ podstawowych wytycznych](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md) zasad. Aby uzyskać więcej informacji, zobacz [Analiza kodu dla CC++ /przegląd](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+Program Visual Studio zawiera narzędzia do analizy kodu statycznego, które mogą wykrywać potencjalne problemy w kodzie źródłowym. Narzędzia te obejmują implementację elementów sprawdzania [ C++ podstawowych wytycznych](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md) zasad. Aby uzyskać więcej informacji, zobacz [Analiza kodu dla CC++ /przegląd](/cpp/code-quality/code-analysis-for-c-cpp-overview).
 
 ## <a name="deploy-completed-applications"></a>Wdrażanie ukończonych aplikacji
 
@@ -135,4 +135,4 @@ Zapoznaj się dodatkowo program Visual Studio, wykonując wraz z jednym niniejsz
 > [Dowiedz się, jak używać edytora kodu](/visualstudio/get-started/tutorial-editor)
 
 > [!div class="nextstepaction"]
-> [Dowiedz się więcej o projekty i rozwiązania](/visualstudio/get-started/tutorial-projects-solutions)
+> [Informacje o projektach i rozwiązaniach](/visualstudio/get-started/tutorial-projects-solutions)

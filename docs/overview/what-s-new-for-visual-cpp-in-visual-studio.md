@@ -3,12 +3,12 @@ title: Co nowego w języku C++ w programie Visual Studio
 ms.date: 07/02/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 04cf4ecf447120302125c797bd70c00c62b5def9
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: df7cf44831781086f1b36d32ea9ed773a5dff9a4
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793974"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415729"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Co nowego w języku C++ w programie Visual Studio
 
@@ -182,7 +182,7 @@ Rozszerzenia intellicode teraz dostarcza jako składnik opcjonalny do **tworzeni
 
 IncrediBuild jest dołączany jako składnik opcjonalny do **tworzenia aplikacji klasycznych z C++**  obciążeniem. Monitor kompilacji IncrediBuild jest w pełni zintegrowany w środowisku IDE programu Visual Studio. Aby uzyskać więcej informacji, zobacz [Wizualizacja kompilacji za pomocą monitora kompilacji IncrediBuild i programu Visual Studio 2019](https://devblogs.microsoft.com/cppblog/visualize-your-build-with-incredibuilds-build-monitor-and-visual-studio-2019/).
 
-## <a name="debugging"></a>debugowanie
+## <a name="debugging"></a>Debugowanie
 
 - W C++ przypadku aplikacji uruchamianych w systemie Windows pliki PDB są teraz ładowane w osobnym procesie 64-bitowym. Ta zmiana dotyczy zakresu awarii spowodowanych przez debuger z uruchomioną pamięcią w przypadku debugowania aplikacji zawierających dużą liczbę modułów i plików PDB.
 
@@ -231,7 +231,7 @@ Składnik eksperymentalny Clang/C2 został usunięty. Użyj zestawu narzędzi MS
 
 - Nowe szybkie poprawki dla niezainicjowanych testów zmiennych. Aby uzyskać więcej informacji, zobacz [nowe szybkie poprawki analizy kodu dla niezainicjowanej pamięci (C6001) i używane przed ostrzeżeniami init (C26494)](https://devblogs.microsoft.com/cppblog/new-code-analysis-quick-fixes-for-uninitialized-memory-c6001-and-use-before-init-c26494-warnings/).
 
-## <a name="unit-testing"></a>Testowanie jednostek
+## <a name="unit-testing"></a>Testy jednostkowe
 
 Szablon zarządzanego projektu testowego w języku C++ nie jest już dostępny. Można nadal używać zarządzanego C++ środowiska testowego w istniejących projektach. W przypadku nowych testów jednostkowych należy rozważyć użycie jednego z natywnych platform testowych, dla których program Visual Studio udostępnia szablony (MSTest, Google Test) lub C# szablon zarządzanego projektu testowego.
 
@@ -515,8 +515,8 @@ Kilka C++ operacji, które używają aparatu IntelliSense do refaktoryzacji i na
 
 |||
 |-|-|
-|Funkcja|Poprawa wydajności|
-|Zmień nazwę|5.3 x|
+|Cecha|Poprawa wydajności|
+|Zmiana nazwy|5.3 x|
 |Zmień sygnaturę |4,5 x|
 |Znajdź wszystkie odwołania|4,7 x|
 
@@ -596,7 +596,7 @@ Aby pomyślnie tworzyć projekty Win32 w obciążeniu C++ dla komputerów stacjo
 
 Narzędzia do C++ kompilacji wizualizacji (wcześniej dostępne jako produkt autonomiczny) są teraz uwzględniane jako obciążenie w Instalator programu Visual Studio. To obciążenie powoduje zainstalowanie tylko tych narzędzi, które C++ są wymagane do kompilowania projektów bez instalowania środowiska IDE programu Visual Studio. Dostępne są zarówno zestawy narzędzi wersji 140, jak i najnowsze 141. Zestaw narzędzi najnowsze 141 zawiera najnowsze ulepszenia programu Visual Studio 2017 w wersji 15,5. Aby uzyskać więcej informacji, zobacz [Visual Studio Build Tools teraz obejmują zestawy narzędzi program VS2017 i programu VS2015 MSVC](https://devblogs.microsoft.com/cppblog/visual-studio-build-tools-now-include-the-vs2017-and-vs2015-msvc-toolsets/).
 
-## <a name="linux-development-with-c"></a>Programowanie dla systemu Linux przy użyciu języka C++
+## <a name="linux-development-with-c"></a>Programowanie dla systemu Linux w języku C++
 
 Popularne rozszerzenie [Visual C++ for Linux Development](https://visualstudiogallery.msdn.microsoft.com/725025cf-7067-45c2-8d01-1e0fd359ae6e) stanowi obecnie cześć programu Visual Studio. Ta instalacja zawiera wszystko, czego potrzebujesz do tworzenia i debugowania aplikacji w języku C++ działających w środowisku systemu Linux.
 
@@ -647,7 +647,7 @@ Zestaw narzędzi Clang/C2 dostarczany z programem Visual Studio 2017 obsługuje 
 
 ## <a name="c-code-analysis"></a>C++Analiza kodu
 
-Podstawowe narzędzia do sprawdzania kodu C++ wymuszające stosowanie [podstawowych wytycznych dotyczących języka C++](https://github.com/isocpp/CppCoreGuidelines) są obecnie dystrybuowane z programem Visual Studio. Po prostu Włącz kontrolki na stronie **rozszerzenia analizy kodu** na stronach właściwości projektu, a rozszerzenia zostaną uwzględnione podczas uruchamiania analizy kodu. Aby uzyskać więcej informacji, zobacz [Korzystanie C++ z funkcji sprawdzania podstawowych wytycznych](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers).
+Podstawowe narzędzia do sprawdzania kodu C++ wymuszające stosowanie [podstawowych wytycznych dotyczących języka C++](https://github.com/isocpp/CppCoreGuidelines) są obecnie dystrybuowane z programem Visual Studio. Po prostu Włącz kontrolki na stronie **rozszerzenia analizy kodu** na stronach właściwości projektu, a rozszerzenia zostaną uwzględnione podczas uruchamiania analizy kodu. Aby uzyskać więcej informacji, zobacz [Korzystanie C++ z funkcji sprawdzania podstawowych wytycznych](/cpp/code-quality/using-the-cpp-core-guidelines-checkers).
 
 ![CppCoreCheck](media/CppCoreCheck.png "Strona właściwości CppCoreCheck")
 
@@ -668,13 +668,13 @@ Podstawowe narzędzia do sprawdzania kodu C++ wymuszające stosowanie [podstawow
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 w wersji 15,7
 
 - Dodano obsługę dla [/analyze: zestaw](../build/reference/analyze-code-analysis.md)reguł, który pozwala określić reguły analizy kodu do uruchomienia.
-- Dodano obsługę dodatkowych C++ reguł podstawowych zasad.  Aby uzyskać więcej informacji, zobacz [Korzystanie C++ z funkcji sprawdzania podstawowych wytycznych](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers).
+- Dodano obsługę dodatkowych C++ reguł podstawowych zasad.  Aby uzyskać więcej informacji, zobacz [Korzystanie C++ z funkcji sprawdzania podstawowych wytycznych](/cpp/code-quality/using-the-cpp-core-guidelines-checkers).
 
-## <a name="unit-testing"></a>Testowanie jednostek
+## <a name="unit-testing"></a>Testy jednostkowe
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 w wersji 15.5
 
-Google test adapter i zwiększanie wydajności. Adapter testowy jest teraz dostępny jako składniki **rozwoju pulpitu z C++**  obciążeniem i są zintegrowane z **Eksploratorem testów**. Obsługa narzędzia ctest jest dodawana do projektów CMAKE (przy użyciu otwartego folderu), ale pełna integracja z **Eksploratorem testów** nie jest jeszcze dostępna. Aby uzyskać więcej informacji, zobacz [pisanie testów jednostkowych dla języka C/C++](/visualstudio/test/writing-unit-tests-for-c-cpp).
+Google test adapter i zwiększanie wydajności. Adapter testowy jest teraz dostępny jako składniki **rozwoju pulpitu z C++**  obciążeniem i są zintegrowane z **Eksploratorem testów**. Obsługa narzędzia ctest jest dodawana do projektów CMAKE (przy użyciu otwartego folderu), ale pełna integracja z **Eksploratorem testów** nie jest jeszcze dostępna. Aby uzyskać więcej informacji, zobacz [pisanie testów jednostkowych dlaC++języka C/](/visualstudio/test/writing-unit-tests-for-c-cpp).
 
 ##### <a name="visual-studio-2017-version-156"></a>Visual Studio 2017 wersja 15.6
 
@@ -697,7 +697,7 @@ Visual Studio Diagnostyka grafiki to zestaw narzędzi do rejestrowania i analizo
 
 - **Wyszukiwanie i filtrowanie w tabeli obiektów:** Zapewnia szybki i łatwy sposób znajdowania szukanych zasobów.
 
-  ![Wyszukaj](media/search.png)
+  ![Wyszukiwanie](media/search.png)
 
 - **Historia zasobów:** Ten nowy widok zapewnia ulepszony sposób wyświetlania całej historii modyfikacji zasobu, ponieważ był używany podczas renderowania przechwyconej ramki. Aby wywoływać historię dowolnego zasobu, wystarczy kliknąć ikonę zegara obok dowolnego hiperłącza zasobu.
 

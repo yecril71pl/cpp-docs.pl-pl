@@ -5,12 +5,12 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: 74e1b34549a8e8d0f1e22e6f40aacbd4429b272f
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: 0a4093860c7d06e8240e03b1487546f80da24b88
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793793"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416103"
 ---
 # <a name="c-in-visual-studio"></a>Język C++ w programie Visual Studio
 
@@ -82,10 +82,10 @@ Jak używać funkcji produktywności w C++ edytorze do refaktoryzacji, nawigowan
 [Debugowanie kodu natywnego](/visualstudio/debugger/debugging-native-code)<br/>
 Użyj debugera programu Visual Studio z C++ projektami.
 
-[Analiza kodu dla języka CC++ /przegląd](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
+[Analiza kodu dla języka CC++ /przegląd](/cpp/code-quality/code-analysis-for-c-cpp-overview)<br/>
 Użyj adnotacji SAL lub C++ głównych wytycznych do sprawdzania, aby przeprowadzić analizę statyczną.
 
-[Pisanie testów jednostkowych dla języka C/C++ w programie Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
+[Zapisz testy jednostkowe dla CC++ /w Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
 Tworzenie testów jednostkowych przy użyciu struktury testów jednostkowych C++firmy Microsoft dla, Google test, zwiększanie. Testowanie lub narzędzia ctest.
 
 ## <a name="write-applications-in-c"></a>Zapisz aplikacje wC++
@@ -173,7 +173,7 @@ Dowiedz się więcej na temat nowych funkcji i najnowszych informacji od dewelop
 [Społeczność deweloperów programu Visual Studio](https://developercommunity.visualstudio.com/)<br/>
 Dowiedz się, jak uzyskać pomoc, zgłaszać błędy i sugestie dotyczące Visual Studio.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Dokumentacja języka C](../c-language/c-language-reference.md)
 - [Dokumentacja biblioteki środowiska uruchomieniowego języka C](../c-runtime-library/c-run-time-library-reference.md)

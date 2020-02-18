@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-ms.openlocfilehash: c6c9668f614f932b0a96f30ad3e0395e39ddc400
-ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
+ms.openlocfilehash: d8b110d459bba1e0b7e2fd6e2c95e7eed638fc99
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74683345"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416192"
 ---
 # <a name="warning-pragma"></a>warning — Wartość dyrektywy pragma
 
@@ -54,10 +54,10 @@ Ta dyrektywa jest funkcjonalnie równoważna z poniższym kodem:
 // Disable warning messages 4507 and 4034.
 #pragma warning( disable : 4507 34 )
 
-// Issue warning 4385 only once.
+// Issue warning C4385 only once.
 #pragma warning( once : 4385 )
 
-// Report warning 4164 as an error.
+// Report warning C4164 as an error.
 #pragma warning( error : 164 )
 ```
 
@@ -116,6 +116,6 @@ Podczas pisania plików nagłówkowych można użyć *polecenia push* i *pop* , 
 
 Aby uzyskać więcej informacji na temat opcji kompilatora, które pomagają pominąć ostrzeżenia, zobacz [/Fi](../build/reference/fi-name-forced-include-file.md) i [/w](../build/reference/compiler-option-warning-level.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

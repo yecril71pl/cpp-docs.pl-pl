@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 6f219a0c199971b563b1c0ff291f2f5d12803023
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: cebc748f207cb1283add4b494b422a13bdc17f8c
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627478"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416142"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Przewodnik: Tworzenie tradycyjnej aplikacji klasycznej systemu WindowsC++()
 
@@ -71,9 +71,9 @@ Projekt jest teraz tworzony i plik źródłowy zostanie otwarty w edytorze. Aby 
 
 1. W menu **plik** wybierz polecenie **Nowy** , a następnie wybierz **projekt**.
 
-1. W oknie dialogowym **Nowy projekt** w lewym okienku rozwiń węzeł **zainstalowane**  > **C++Wizualizacja**, a następnie wybierz pozycję **Windows Desktop**. W środkowym okienku wybierz pozycję **Kreator pulpitu systemu Windows**.
+1. W oknie dialogowym **Nowy projekt** w lewym okienku rozwiń węzeł **zainstalowane** > **C++Wizualizacja**, a następnie wybierz pozycję **Windows Desktop**. W środkowym okienku wybierz pozycję **Kreator pulpitu systemu Windows**.
 
-   W polu **Nazwa** wpisz nazwę projektu, na przykład *DesktopApp*. Wybierz **przycisk OK**.
+   W polu **Nazwa** wpisz nazwę projektu, na przykład *DesktopApp*. Wybierz pozycję **OK**.
 
    ![Nazwij projekt DesktopApp](../build/media/desktop-app-new-project-name-153.png "Nazwij projekt DesktopApp")
 
@@ -97,9 +97,9 @@ Projekt jest teraz tworzony i plik źródłowy zostanie otwarty w edytorze. Aby 
 
 1. W menu **plik** wybierz polecenie **Nowy** , a następnie wybierz **projekt**.
 
-1. W oknie dialogowym **Nowy projekt** w lewym okienku rozwiń węzeł **zainstalowane**  > **Szablony**  > **wizualizacji C++** , a następnie wybierz opcję **Win32**. W środkowym okienku wybierz pozycję **projekt Win32**.
+1. W oknie dialogowym **Nowy projekt** w lewym okienku rozwiń węzeł **zainstalowane** > **Szablony** > **wizualizacji C++** , a następnie wybierz opcję **Win32**. W środkowym okienku wybierz pozycję **projekt Win32**.
 
-   W polu **Nazwa** wpisz nazwę projektu, na przykład *DesktopApp*. Wybierz **przycisk OK**.
+   W polu **Nazwa** wpisz nazwę projektu, na przykład *DesktopApp*. Wybierz pozycję **OK**.
 
    ![Nazwij projekt DesktopApp](../build/media/desktop-app-new-project-name-150.png "Nazwij projekt DesktopApp")
 
@@ -141,9 +141,9 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych systemu Win
    Aby uzyskać informacje na temat parametrów i wartości zwracanej przez tę funkcję, zobacz [WinMain Entry Point](/windows/win32/api/winbase/nf-winbase-winmain).
 
    > [!NOTE]
-   > Co to są wszystkie dodatkowe słowa, takie jak `CALLBACK`, `HINSTANCE`lub `_In_`? Tradycyjny interfejs API systemu Windows używa często zawartych w nich elementów typedef i preprocesora, aby uzyskać bardziej szczegółowe informacje o typach i kodzie specyficznym dla platformy, takich jak Konwencje wywoływania, deklaracje **__declspec** i dyrektywy pragma kompilatora. W programie Visual Studio można użyć funkcji IntelliSense [Quick info](/visualstudio/ide/using-intellisense#quick-info) , aby zobaczyć, co definiuje te definicje typów i makr. Umieść wskaźnik myszy na wyrazie zainteresowania lub zaznacz go i naciśnij **klawisze ctrl** +**K**, **Ctrl** +**i** dla małego okna podręcznego, który zawiera definicję. Aby uzyskać więcej informacji, zobacz [Korzystanie z funkcji IntelliSense](/visualstudio/ide/using-intellisense). Parametry i typy zwracane często używają *adnotacji sal* , aby ułatwić przechwytywanie błędów programistycznych. Aby uzyskać więcej informacji, zobacz [Używanie adnotacji sal w celuC++ zmniejszenia wad języka C/Code](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
+   > Co to są wszystkie dodatkowe słowa, takie jak `CALLBACK`, `HINSTANCE`lub `_In_`? Tradycyjny interfejs API systemu Windows używa wstępnie zdefiniowanych w tym samym makr elementów typedef i preprocesora w celu poszerzenia niektórych szczegółów typów i kodu specyficznego dla platformy, takich jak Konwencje wywoływania, deklaracje **__declspec** i dyrektywy pragma kompilatora. W programie Visual Studio można użyć funkcji IntelliSense [Quick info](/visualstudio/ide/using-intellisense#quick-info) , aby zobaczyć, co definiuje te definicje typów i makr. Umieść wskaźnik myszy na wyrazie zainteresowania lub zaznacz go i naciśnij **klawisze ctrl**+**K**, **Ctrl**+**i** dla małego okna podręcznego, który zawiera definicję. Aby uzyskać więcej informacji, zobacz [Korzystanie z funkcji IntelliSense](/visualstudio/ide/using-intellisense). Parametry i typy zwracane często używają *adnotacji sal* , aby ułatwić przechwytywanie błędów programistycznych. Aby uzyskać więcej informacji, zobacz [Używanie adnotacji sal w celuC++ zmniejszenia wad języka C/Code](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
 
-1. Programy klasyczne systemu Windows wymagają &lt;windows. h >. &lt;używanie TCHAR. h > definiuje makro `TCHAR`, które jest rozpoznawane ostatecznie do **wchar_t** , jeśli symbol Unicode jest zdefiniowany w projekcie, w przeciwnym razie jest rozpoznawany jako **char**.  Jeśli zawsze kompilujesz przy użyciu standardu UNICODE, nie potrzebujesz używanie TCHAR i możesz tylko bezpośrednio korzystać z **wchar_t** .
+1. Programy klasyczne systemu Windows wymagają &lt;Windows. h >. &lt;używanie TCHAR. h > definiuje `TCHAR` makro, które jest rozpoznawane ostatecznie do **wchar_t** , jeśli symbol Unicode jest zdefiniowany w projekcie, w przeciwnym razie jest rozpoznawany jako **char**.  Jeśli zawsze kompilujesz przy użyciu standardu UNICODE, nie potrzebujesz używanie TCHAR i możesz bezpośrednio używać **wchar_t** .
 
    ```cpp
    #include <windows.h>
@@ -361,7 +361,7 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych systemu Win
 
 1. Aby włączyć funkcję `WndProc` do obsługi komunikatów odbieranych przez aplikację, zaimplementuj instrukcję Switch.
 
-   Jednym z ważnych komunikatów do obsługi jest komunikat [WM_PAINT](/windows/win32/gdi/wm-paint) . Aplikacja otrzymuje komunikat `WM_PAINT`, gdy należy zaktualizować część wyświetlonego okna. Zdarzenie może wystąpić, gdy użytkownik przenosi okno przed oknem, a następnie przenosi je ponownie. Aplikacja nie wie, kiedy wystąpią te zdarzenia. Tylko Windows wie, że aplikacja powiadamia aplikację za pomocą komunikatu `WM_PAINT`. Po pierwszym wyświetleniu okna należy zaktualizować jego wszystkie.
+   Jedną z ważnych komunikatów do obsłużenia jest komunikat [WM_PAINT](/windows/win32/gdi/wm-paint) . Aplikacja otrzymuje komunikat `WM_PAINT`, gdy należy zaktualizować część wyświetlonego okna. Zdarzenie może wystąpić, gdy użytkownik przenosi okno przed oknem, a następnie przenosi je ponownie. Aplikacja nie wie, kiedy wystąpią te zdarzenia. Tylko Windows wie, że aplikacja powiadamia aplikację za pomocą komunikatu `WM_PAINT`. Po pierwszym wyświetleniu okna należy zaktualizować jego wszystkie.
 
    Aby obsłużyć `WM_PAINT` komunikat, najpierw Wywołaj [BeginPaint](/windows/win32/api/winuser/nf-winuser-beginpaint), a następnie obsłuż całą logikę w celu rozmieszczenia tekstu, przycisków i innych kontrolek w oknie, a następnie Wywołaj [EndPaint](/windows/win32/api/winuser/nf-winuser-endpaint). W przypadku aplikacji logika między początkową wywołaniem a końcowym wywołaniem to Wyświetl ciąg "Hello, Windows Desktop!" w oknie. W poniższym kodzie należy zauważyć, że funkcja [TextOut](/windows/win32/api/wingdi/nf-wingdi-textoutw) jest używana do wyświetlania ciągu.
 
@@ -426,7 +426,7 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych systemu Win
    }
    ```
 
-## <a name="build-the-code"></a>Kompilowanie kodu
+## <a name="build-the-code"></a>Kompilowanie kod
 
 Zgodnie z oczekiwaniami, Oto pełen kod dla aplikacji działającej.
 
@@ -588,8 +588,8 @@ Zgodnie z oczekiwaniami, Oto pełen kod dla aplikacji działającej.
 
    ![Uruchamianie projektu DesktopApp](../build/media/desktop-app-project-run-157.PNG "Uruchamianie projektu DesktopApp")
 
-Nabycia! Ten Instruktaż został ukończony i opracowano tradycyjną aplikację klasyczną systemu Windows.
+Gratulacje! Ten Instruktaż został ukończony i opracowano tradycyjną aplikację klasyczną systemu Windows.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Aplikacje klasyczne systemu Windows](../windows/windows-desktop-applications-cpp.md)

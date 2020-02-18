@@ -119,12 +119,12 @@ helpviewer_keywords:
 - std::basic_string_view, substr
 - std::basic_string_view, swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 7bd6d02304e86b50d33bdaa3e07c95b08da31f7a
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 7a53a27e11088ab02f873613794d6799851ca373
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821899"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416183"
 ---
 # <a name="basic_string_view-class"></a>Klasa basic_string_view
 
@@ -202,10 +202,10 @@ Wartość domyślna to [char_traits](char-traits-struct.md)<*CharType*>.
 |**const_reference**|`using const_reference = const value_type&;`|
 |**const_reverse_iterator**|`using const_reverse_iterator = std::reverse_iterator<const_iterator>;`|
 |**difference_type**|`using difference_type = ptrdiff_t;`|
-|**iterator**|`using iterator = const_iterator;`|
+|**Iterator**|`using iterator = const_iterator;`|
 |**npos**|`static constexpr size_type npos = size_type(-1);`|
-|**pointer**|`using pointer = value_type*;`|
-|**Odwołanie**|`using reference = value_type&;`|
+|**przytrzymaj**|`using pointer = value_type*;`|
+|**odwoła**|`using reference = value_type&;`|
 |**reverse_iterator**|`using reverse_iterator = const_reverse_iterator;`|
 |**size_type**|`using size_type = size_t;`|
 |**traits_type**|`using traits_type = Traits;`|
@@ -215,27 +215,27 @@ Wartość domyślna to [char_traits](char-traits-struct.md)<*CharType*>.
 
 |Operator|Opis|
 |-|-|
-|[operator=](#op_eq)|Przypisuje string_view lub przekonwertowany obiekt ciągu do innego string_view.|
+|[operator =](#op_eq)|Przypisuje string_view lub przekonwertowany obiekt ciągu do innego string_view.|
 |[\[operatora \]](#op_at)|Zwraca element o określonym indeksie.|
 
 ### <a name="member-functions"></a>Funkcje członkowskie
 
 |Funkcja członkowska|Opis|
 |-|-|
-|[at](#at)|Zwraca const_reference do elementu w określonej lokalizacji.|
-|[back](#back)|Zwraca const_reference do ostatniego elementu.|
-|[begin](#begin)|Zwraca iterator const odnoszący się do pierwszego elementu. (string_views są niemodyfikowalne).|
+|[w](#at)|Zwraca const_reference do elementu w określonej lokalizacji.|
+|[Wstecz](#back)|Zwraca const_reference do ostatniego elementu.|
+|[zaczną](#begin)|Zwraca iterator const odnoszący się do pierwszego elementu. (string_views są niemodyfikowalne).|
 |[cbegin](#cbegin)|Tak samo jak [początek](#begin).|
 |[cend](#cend)|Zwraca iterator const, który wskazuje jeden poza ostatnim elementem.|
 |[kopiowane](#copy)|Kopiuje co najwyżej określoną liczbę znaków z pozycji indeksowanej w string_view źródłowej do docelowej tablicy znaków. (Niezalecane. Użyj zamiast tego _Copy_s.)|
 |[_Copy_s](#_copy_s)|Bezpieczna funkcja kopiowania CRT.|
 |[porównaniu](#compare)|Porównuje string_view z określonym string_view, aby określić, czy są równe, czy też jest lexicographically mniejsze niż inne.|
-|[crbegin](#crbegin)|Analogicznie jak [rbegin](#rbegin).|
+|[crbegin —](#crbegin)|Analogicznie jak [rbegin](#rbegin).|
 |[crend](#crend)|Analogicznie jak [rend](#rend).|
 |[Data](#data)|Zwraca nieprzetworzony wskaźnik niebędący właścicielem do sekwencji znaków.|
-|[empty](#empty)|Sprawdza, czy string_view zawiera znaki.|
+|[ciągiem](#empty)|Sprawdza, czy string_view zawiera znaki.|
 |[punktów](#end)|Analogicznie jak [cend](#cend).|
-|[wyświetlić](#find)|Wyszukuje w kierunku do przodu pierwszego wystąpienia podciągu, który odpowiada określonej sekwencji znaków.|
+|[find](#find)|Wyszukuje w kierunku do przodu pierwszego wystąpienia podciągu, który odpowiada określonej sekwencji znaków.|
 |[find_first_not_of](#find_first_not_of)|Wyszukuje pierwszy znak, który nie jest elementem określonego string_view lub obiektu ciągu konwertowanego.|
 |[find_first_of](#find_first_of)|Wyszukuje pierwszy znak, który pasuje do dowolnego elementu określonego string_view lub konwertowanego obiektu ciągu.|
 |[find_last_not_of](#find_last_not_of)|Wyszukuje ostatni znak, który nie jest elementem określonego string_view lub obiektu ciągu konwertowanego.|
@@ -249,8 +249,8 @@ Wartość domyślna to [char_traits](char-traits-struct.md)<*CharType*>.
 |[rend](#rend)|Zwraca iterator const, który wskazuje na jeden ostatni element w odwróconym string_view.|
 |[rfind](#rfind)|Wyszukuje string_view w odwrocie od pierwszego wystąpienia podciągu, który odpowiada określonej sekwencji znaków.|
 |[zmienia](#size)|Zwraca bieżącą liczbę elementów.|
-|[substr](#substr)|Zwraca podciąg o określonej długości, zaczynając od określonego indeksu.|
-|[swap](#swap)|Wymiana zawartości dwóch string_views.|
+|[substr —](#substr)|Zwraca podciąg o określonej długości, zaczynając od określonego indeksu.|
+|[wymiany](#swap)|Wymiana zawartości dwóch string_views.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -615,7 +615,7 @@ Liczba znaków rzeczywiście skopiowanych.
 
 Znak null nie jest dołączany na końcu kopii.
 
- Aby uzyskać więcej informacji, zobacz [c-Runtime-Library/Security-features-in-the-CRT](../c-runtime-library/security-features-in-the-crt.md).
+Aby uzyskać więcej informacji, zobacz [c-Runtime-Library/Security-features-in-the-CRT](../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="crbegin"></a>basic_string_view:: crbegin —
 
@@ -1074,7 +1074,7 @@ constexpr void swap(basic_string_view& sv) noexcept;
 \ *OHR*
 Źródło string_view, którego wartości wskaźnika i rozmiaru mają być wymieniane z string_view docelowy.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<string_view >](../standard-library/string-view.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

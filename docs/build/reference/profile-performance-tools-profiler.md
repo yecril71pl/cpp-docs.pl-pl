@@ -7,16 +7,16 @@ helpviewer_keywords:
 - -PROFILE linker option
 - /PROFILE linker option
 ms.assetid: e676baa1-5063-47a3-a357-ba0d1f0d1699
-ms.openlocfilehash: 23cbccba9a8ec839252d553cc5cbafd37e66bbf9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 678816ce455d2a982ff8218becd805a0b2cdd896
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320204"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416033"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (Profiler narzędzi do oceny wydajności)
 
-Tworzy plik wyjściowy, który może służyć z profilerem narzędzi wydajności.
+Tworzy plik wyjściowy, który może być używany z profilerem narzędzi wydajności.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,43 +26,43 @@ Tworzy plik wyjściowy, który może służyć z profilerem narzędzi wydajnośc
 
 ## <a name="remarks"></a>Uwagi
 
-PROFIL wymaga następujących opcji konsolidatora:
+/PROFILE implikuje następujące opcje konsolidatora:
 
-- [/ OPT: REF](opt-optimizations.md)
+- [/OPT: REF](opt-optimizations.md)
 
-- /OPT:NOICF
+- /OPT: NOICF
 
-- [/ INCREMENTAL: NO](incremental-link-incrementally.md)
+- [/INCREMENTAL: NIE](incremental-link-incrementally.md)
 
-- [/ FIXED: NO](fixed-fixed-base-address.md)
+- [/FIXED: NIE](fixed-fixed-base-address.md)
 
-PROFIL, powoduje, że konsolidator generuje sekcji relokacji w obrazie programu.  Relokacji umożliwia profiler do przekształcania obrazu programu, który można pobrać danych profilu.
+/PROFILE powoduje, że konsolidator generuje sekcję relokacji w obrazie programu.  Sekcja relokacja umożliwia programowi Profiler przekształcenie obrazu programu w celu pobrania danych profilu.
 
-**/ PROFILE** tylko jest dostępna tylko w wersjach Enterprise (Projektowanie zespołowe).  Aby uzyskać więcej informacji na temat PREfast, zobacz [analiza kodu C/C++ — Przegląd](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+**/Profile** jest dostępny tylko w wersjach Enterprise (Development Team).  Aby uzyskać więcej informacji o szybkim przeniesieniu, zobacz [AnalizaC++ kodu dla języka C/przegląd](/cpp/code-quality/code-analysis-for-c-cpp-overview).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
-1. Rozwiń **właściwości konfiguracji** węzła.
+1. Rozwiń węzeł **Właściwości konfiguracji** .
 
-1. Rozwiń **konsolidatora** węzła.
+1. Rozwiń węzeł **konsolidatora** .
 
-1. Wybierz **zaawansowane** stronę właściwości.
+1. Wybierz stronę właściwości **Zaawansowane** .
 
-1. Modyfikowanie **profilu** właściwości.
+1. Zmodyfikuj właściwość **profilu** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-1. Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Profile%2A>.
+1. Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Profile%2A>.
 
-### <a name="to-set-this-linker-option-within-visual-studio-cmake-project"></a>Aby ustawić tę opcję konsolidatora w ramach projektu programu Visual Studio narzędzia CMake
+### <a name="to-set-this-linker-option-within-visual-studio-cmake-project"></a>Aby ustawić tę opcję konsolidatora w projekcie programu Visual Studio CMake
 
-**Narzędzie CMake** projekt nie ma **stron właściwości**, opcje konsolidatora można ustawić, modifing pliku CMakeLists.txt.
+Projekt **CMAKE** nie zawiera **stron właściwości**. Opcje konsolidatora można ustawić przez modifing CMakeLists. txt.
 
-1. Otwieranie pliku CMakeLists.txt w katalogu głównym projektu.
+1. Otwórz CMakeLists. txt w katalogu głównym projektu.
 
-1. Dodaj poniższy kod. Aby uzyskać więcej informacji, zobacz [odwołania do narzędzia CMake](https://cmake.org/cmake/help/v3.0/command/set_target_properties.html)
+1. Dodaj poniższy kod. Aby uzyskać szczegółowe informacje, zobacz [CMAKE References](https://cmake.org/cmake/help/v3.0/command/set_target_properties.html)
 
 1. Ponownie skompiluj rozwiązanie.
 
