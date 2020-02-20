@@ -37,12 +37,12 @@ ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
 no-loc:
 - setlocale
 - _wsetlocale
-ms.openlocfilehash: 08684e17a801e660ae2771c9e717dfa28621d600
-ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
+ms.openlocfilehash: b1c7b739e671caebc51022945a369a632ecebb9e
+ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76894349"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473861"
 ---
 # <a name="setlocale-_wsetlocale"></a>setlocale, _wsetlocale
 
@@ -118,7 +118,7 @@ W momencie uruchamiania programu wykonywany jest odpowiednik następującej inst
 
 `setlocale( LC_ALL, "C" );`
 
-Argument *locale* może przyjmować nazwę ustawień regionalnych, ciąg języka, ciąg języka i kod kraju/regionu, stronę kodową lub ciąg języka, kod kraju/regionu i stronę kodową. Zestaw dostępnych nazw ustawień regionalnych, języków, kodów krajów/regionów i stron kodowych zawiera wszystkie te opcje, które są obsługiwane przez API Windows NLS, z wyjątkiem stron kodowych, które wymagają więcej niż dwóch bajtów na znak, takich jak UTF-7 lub UTF-8. Jeśli podano wartość strony kodowej UTF-7 lub UTF-8, **setlocale** zakończy się niepowodzeniem, zwracając **wartość null**. Zestaw nazw ustawień regionalnych obsługiwanych przez **setlocale** jest opisany w temacie [nazwy regionalne, Języki i ciągi kraj/region](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Zestaw ciągów języka i kraju/regionu obsługiwanych przez **setlocale** znajduje się w [ciągach języka](../../c-runtime-library/language-strings.md) i w [ciągach kraju/regionu](../../c-runtime-library/country-region-strings.md). Firma Microsoft zaleca formę nazwy ustawień regionalnych ze względu na wydajność i łatwość konserwacji ciągów ustawień regionalnych, osadzonych w kodzie lub szeregowanych do pamięci. Zmiana ciągów nazw ustawień regionalnych przez aktualizację systemu operacyjnego jest mniej prawdopodobna niż zmiana formy nazwy języka i kraju/regionu.
+Argument *locale* może przyjmować nazwę ustawień regionalnych, ciąg języka, ciąg języka i kod kraju/regionu, stronę kodową lub ciąg języka, kod kraju/regionu i stronę kodową. Zestaw dostępnych nazw ustawień regionalnych, języków, kodów krajów/regionów i stron kodowych zawiera wszystkie obsługiwane przez NLS API systemu Windows. Zestaw nazw ustawień regionalnych obsługiwanych przez **setlocale** jest opisany w temacie [nazwy regionalne, Języki i ciągi kraj/region](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Zestaw ciągów języka i kraju/regionu obsługiwanych przez **setlocale** znajduje się w [ciągach języka](../../c-runtime-library/language-strings.md) i w [ciągach kraju/regionu](../../c-runtime-library/country-region-strings.md). Firma Microsoft zaleca formę nazwy ustawień regionalnych ze względu na wydajność i łatwość konserwacji ciągów ustawień regionalnych, osadzonych w kodzie lub szeregowanych do pamięci. Zmiana ciągów nazw ustawień regionalnych przez aktualizację systemu operacyjnego jest mniej prawdopodobna niż zmiana formy nazwy języka i kraju/regionu.
 
 Wskaźnik o wartości null, który jest przesyłany jako argument *ustawień regionalnych* , mówi **setlocaling** to Query zamiast ustawiać środowisko międzynarodowe. Jeśli argument *locale* jest wskaźnikiem o wartości null, bieżące ustawienie regionalne programu nie zostanie zmienione. Zamiast tego, funkcja **setlocale** zwraca wskaźnik do ciągu, który jest skojarzony z *kategorią* bieżących ustawień regionalnych wątku. Jeśli argument *kategorii* jest **LC_ALL**, funkcja zwraca ciąg, który wskazuje bieżące ustawienie każdej kategorii, oddzielone średnikami. Na przykład, sekwencja wywołań
 
@@ -204,7 +204,7 @@ Funkcja [_configthreadlocale](configthreadlocale.md) służy do kontrolowania, c
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**setlocale**|\<locale.h>|
+|**setlocale**|\<locale. h >|
 |**_wsetlocale**|\<locale. h > lub \<WCHAR. h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
@@ -313,7 +313,7 @@ The thread locale is now set to de-DE.
 The time in de-DE locale is: 'Mittwoch, 12. Mai 2004'
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Nazwy lokalne, Języki i ciągi kraju/regionu](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
 [_configthreadlocale](configthreadlocale.md)\

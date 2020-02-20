@@ -226,12 +226,12 @@ no-loc:
 - _WIN64
 - _WINRT_DLL
 - __func__
-ms.openlocfilehash: 7d019b527abea89ab8337270fbd22abc9dbecc4e
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: ff3945fa9476e090f26ce029c63b1813401082e0
+ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74305479"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473851"
 ---
 # <a name="predefined-macros"></a>Wstępnie zdefiniowane makra
 
@@ -477,6 +477,9 @@ Program MSVC obsługuje te dodatkowe wstępnie zdefiniowane makra.
    |Visual Studio 2019 w wersji 16,1|1921|
    |Visual Studio 2019 w wersji 16,2|1922|
    |Visual Studio 2019 w wersji 16,3|1923|
+   |Visual Studio 2019 w wersji 16,4|1924|
+   |Visual Studio 2019 w wersji 16,5|1925|
+   |Visual Studio 2019 w wersji 16,6|1926|
 
    Aby przetestować wersje kompilatora lub aktualizacje w danej wersji programu Visual Studio lub później, użyj operatora `>=`. Można jej użyć w dyrektywie warunkowej, aby porównać `_MSC_VER` z tą znaną wersją. Jeśli masz kilka wzajemnie wykluczających się wersji do porównania, Porządkuj porównania w kolejności malejącej według numeru wersji. Na przykład ten kod sprawdza kompilatory wydane w programie Visual Studio 2017 i nowszych. Następnie sprawdza kompilatory opublikowane w programie lub po nim w programie Visual Studio 2015. Następnie sprawdza wszystkie kompilatory wydane przed Visual Studio 2015:
 
@@ -541,7 +544,7 @@ Brak makr preprocesora, które identyfikują wersję biblioteki ATL lub MFC, są
 
 - `_MFC_VER` zdefiniowane w \<afxver_. h > jako literał liczby całkowitej, który koduje numer wersji MFC.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Makra (C/C++)](../preprocessor/macros-c-cpp.md)<br/>
 [Operatory preprocesora](../preprocessor/preprocessor-operators.md)<br/>

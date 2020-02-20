@@ -9,12 +9,12 @@ helpviewer_keywords:
 - std::invoke_result
 - std::invoke_result_t
 - std::invoke_result::type
-ms.openlocfilehash: 8cd72e62fcb65209482fd9677afcc2ec83356feb
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: a5f67935bde103cf10c1bd9948ac1388f5221322
+ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689517"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473881"
 ---
 # <a name="invoke_result-class"></a>Klasa invoke_result
 
@@ -27,21 +27,21 @@ template <class Callable, class... Args>
    struct invoke_result<Callable(Args...)>;
 
 // Helper type
-template<lass Callable, class... Args>
+template<class Callable, class... Args>
    using invoke_result_t = typename invoke_result<Callable, Args...>::type;
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Możliwy* do \
+*Możliwy* do\
 Typ możliwy do zapytania.
 
-*Argumenty* \
+*Argumenty*\
 Typy listy argumentów dla wywoływanego typu do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj tego szablonu, aby określić typ wyniku możliwego *do przeprowadzenia (* *args*...) w czasie kompilacji *, gdzie możliwe* są wszystkie typy w argumentach, w których są dowolnych typów, tablicę nieznanego powiązania lub prawdopodobnie `void` *kwalifikowana za pomocą* CV. @No__t_0 element członkowski szablonu klasy nazwa zwracanego typu wywoływanego w *przypadku wywołania przy użyciu* *argumentów argumenty..* .. Element członkowski `type` jest zdefiniowany *tylko wtedy, gdy można wywołać* wywoływanie przy *użyciu argumentów argumenty..* . w nieoszacowanym kontekście. W przeciwnym razie szablon klasy nie ma żadnych elementów członkowskich `type`, co umożliwia testy SFINAE na określonym zestawie typów argumentów w czasie kompilacji.
+Użyj tego szablonu, aby określić typ wyniku możliwego *do przeprowadzenia (* *args*...) w czasie kompilacji *, gdzie możliwe* są wszystkie typy w argumentach, w których są dowolnych typów, tablicę nieznanego powiązania lub prawdopodobnie `void`*kwalifikowana za pomocą* CV. `type` element członkowski szablonu klasy nazwa zwracanego typu wywoływanego w *przypadku wywołania przy użyciu* *argumentów argumenty..* .. Element członkowski `type` jest zdefiniowany *tylko wtedy, gdy można wywołać* wywoływanie przy *użyciu argumentów argumenty..* . w nieoszacowanym kontekście. W przeciwnym razie szablon klasy nie ma żadnych elementów członkowskich `type`, co umożliwia testy SFINAE na określonym zestawie typów argumentów w czasie kompilacji.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -49,7 +49,7 @@ Użyj tego szablonu, aby określić typ wyniku możliwego *do przeprowadzenia (*
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[< type_traits >](../standard-library/type-traits.md) \
+[< type_traits >](../standard-library/type-traits.md)\
 [wywołuje](functional-functions.md#invoke)

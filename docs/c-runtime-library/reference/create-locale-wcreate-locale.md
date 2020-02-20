@@ -31,12 +31,12 @@ helpviewer_keywords:
 - create_locale function
 - __create_locale function
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
-ms.openlocfilehash: a7098dc572ecdbefd891efc8443e977b01850fa4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 58274b63a09847fb8593247bd2777cfa19935510
+ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938855"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473832"
 ---
 # <a name="_create_locale-_wcreate_locale"></a>_create_locale, _wcreate_locale
 
@@ -57,19 +57,19 @@ _locale_t _wcreate_locale(
 
 ### <a name="parameters"></a>Parametry
 
-*category*<br/>
+*kategorii*<br/>
 Kategorii.
 
 *ustawienie*<br/>
 Specyfikator ustawień regionalnych.
 
-## <a name="return-value"></a>Wartość zwracana
+## <a name="return-value"></a>Wartość zwrócona
 
-Jeśli podano prawidłowe ustawienia *regionalne* i *Kategorie* , funkcja zwraca określone ustawienia regionalne jako obiekt **_locale_t** . Bieżące ustawienia regionalne programu nie są zmieniane.
+Jeśli podano prawidłowe ustawienia *regionalne* i *Kategorie* , program zwraca określone ustawienia regionalne jako obiekt **_locale_t** . Bieżące ustawienia regionalne programu nie są zmieniane.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_create_locale** umożliwia utworzenie obiektu, który reprezentuje określone ustawienia specyficzne dla regionu, do użycia w wersjach specyficznych dla ustawień regionalnych wielu funkcji CRT (funkcje z sufiksem **_l** ). Zachowanie jest podobne do **setlocaling**, z tą różnicą, że zamiast zastosowania określonych ustawień regionalnych do bieżącego środowiska, ustawienia są zapisywane w **_locale_tej** strukturze, która jest zwracana. Strukturę **_locale_t** należy zwolnić przy użyciu [_free_locale](free-locale.md) , gdy nie jest już potrzebne.
+Funkcja **_create_locale** umożliwia utworzenie obiektu, który reprezentuje określone ustawienia specyficzne dla regionu, do użycia w wersjach specyficznych dla ustawień regionalnych wielu funkcji CRT (funkcje z sufiksem **_l** ). Zachowanie jest podobne do **setlocaling**, z tą różnicą, że zamiast zastosowania określonych ustawień regionalnych do bieżącego środowiska, te ustawienia są zapisywane w strukturze **_locale_t** , która jest zwracana. Strukturę **_locale_t** należy zwolnić przy użyciu [_free_locale](free-locale.md) , gdy nie jest już potrzebne.
 
 **_wcreate_locale** to dwubajtowa wersja **_create_locale**; argument *locale* **_wcreate_locale** jest ciągiem znaków dwubajtowych. **_wcreate_locale** i **_create_locale** zachowują się identycznie w inny sposób.
 
@@ -88,18 +88,18 @@ Ta funkcja sprawdza poprawność *kategorii* i parametrów *ustawień regionalny
 
 Argument *locale* jest wskaźnikiem do ciągu, który określa ustawienia regionalne. Aby uzyskać informacje na temat formatu argumentu *ustawień regionalnych* , zobacz [nazwy ustawień regionalnych, Języki i ciągi kraj/region](../../c-runtime-library/locale-names-languages-and-country-region-strings.md).
 
-Argument *locale* może przyjmować nazwę ustawień regionalnych, ciąg języka, ciąg języka i kod kraju/regionu, stronę kodową lub ciąg języka, kod kraju/regionu i stronę kodową. Zestaw dostępnych nazw ustawień regionalnych, języków, kodów krajów/regionów i stron kodowych zawiera wszystkie, które są obsługiwane przez NLS API systemu Windows, z wyjątkiem stron kodowych, które wymagają więcej niż dwóch bajtów na znak — na przykład UTF-7 i UTF-8. Jeśli podajesz stronę kodową, taką jak UTF-7 lub UTF-8, **_create_locale** zakończy się niepowodzeniem i zwróci **wartość null**. Zestaw nazw ustawień regionalnych obsługiwanych przez **_create_locale** jest opisany w temacie [nazwy regionalne, Języki i ciągi kraj/region](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Zestaw ciągów języka i kraju/regionu obsługiwanych przez **_create_locale** są wymienione w [ciągach języka](../../c-runtime-library/language-strings.md) i w [ciągach kraju/regionu](../../c-runtime-library/country-region-strings.md).
+Argument *locale* może przyjmować nazwę ustawień regionalnych, ciąg języka, ciąg języka i kod kraju/regionu, stronę kodową lub ciąg języka, kod kraju/regionu i stronę kodową. Zestaw dostępnych nazw ustawień regionalnych, języków, kodów krajów/regionów i stron kodowych zawiera wszystkie, które są obsługiwane przez NLS API systemu Windows. Zestaw nazw ustawień regionalnych obsługiwanych przez **_create_locale** są opisane w temacie [nazwy regionalne, Języki i ciągi kraj/region](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Zestaw ciągów języka i kraju/regionu obsługiwanych przez **_create_locale** są wymienione w [ciągach języka](../../c-runtime-library/language-strings.md) i w [ciągach kraju/regionu](../../c-runtime-library/country-region-strings.md).
 
 Aby uzyskać więcej informacji na temat ustawień regionalnych, zobacz [setlocals, _wsetlocale](setlocale-wsetlocale.md).
 
-Poprzednia nazwa tej funkcji, **__create_locale** (z dwoma znakami wiodącymi), jest przestarzała.
+Poprzednia nazwa tej funkcji, **__create_locale** (z dwoma podkreśleniami wiodącymi), jest przestarzała.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_create_locale**|\<locale.h>|
-|**_wcreate_locale**|\<locale. h > \<lub WCHAR. h >|
+|**_create_locale**|\<locale. h >|
+|**_wcreate_locale**|\<locale. h > lub \<WCHAR. h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -165,7 +165,7 @@ In de-CH locale, _strftime_l returns 'Samstag, 9. Februar 2002'
 In 'C' locale, _strftime_l returns 'Saturday, February 09, 2002'
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Nazwy lokalne, Języki i ciągi kraj/region](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [Ciągi języka](../../c-runtime-library/language-strings.md)<br/>

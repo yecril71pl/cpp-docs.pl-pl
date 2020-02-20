@@ -2,12 +2,12 @@
 title: Obsługa wyjątków ARM64
 description: Opisuje konwencje obsługi wyjątków i dane używane przez system Windows w systemie ARM64.
 ms.date: 11/19/2018
-ms.openlocfilehash: 1ed147a27cfeb545e2a5fe265df8113a5befac73
-ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
+ms.openlocfilehash: 2304c04c5e9be31299e30bb48771f7c9777d1cd5
+ms.sourcegitcommit: b9aaaebe6e7dc5a18fe26f73cc7cf5fce09262c1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72276834"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504481"
 ---
 # <a name="arm64-exception-handling"></a>Obsługa wyjątków ARM64
 
@@ -23,7 +23,7 @@ Wyjątkiem są konwencje danych dotyczące odwinięcia wyjątku, a ten opis ma n
 
    - Analizowanie kodu jest złożone; kompilator należy zachować ostrożność, aby generować tylko instrukcje, które może zdekodować niewietrzer.
 
-   - Jeśli nie można w pełni opisać odwinięcia przy użyciu kodów operacji unwind, wówczas w niektórych przypadkach musi on wrócić do dekodowania instrukcji. Zwiększa to ogólną złożoność i najlepiej jest unikać.
+   - Jeśli nie można w pełni opisać odwinięcia przy użyciu kodów operacji unwind, wówczas w niektórych przypadkach musi on wrócić do dekodowania instrukcji. Powoduje to zwiększenie ogólnej złożoności i zaleca się uniknięcie tego.
 
 1. Obsługa rozwinięcia w funkcjach MID i epilogu.
 
@@ -39,7 +39,7 @@ Wyjątkiem są konwencje danych dotyczące odwinięcia wyjątku, a ten opis ma n
 
 Te założenia są wprowadzane w opisie obsługi wyjątków:
 
-1. Zarejestrowanie i epilogs w celu przesłania duplikatów. Korzystając z zalet tej typowej cechy, rozmiar metadanych koniecznych do opisania odwinięcia może być znacznie zmniejszony. W treści funkcji nie ma znaczenia, czy operacje prologu są cofnięte lub operacje epilogu są wykonywane w sposób do przodu. Oba powinny generować identyczne wyniki.
+1. Zarejestrowanie i epilogs w celu zaplanowania dublowania. Korzystając z zalet tej typowej cechy, rozmiar metadanych koniecznych do opisania odwinięcia może być znacznie zmniejszony. W treści funkcji nie ma znaczenia, czy operacje prologu są cofnięte lub operacje epilogu są wykonywane w sposób do przodu. Oba powinny generować identyczne wyniki.
 
 1. Funkcje w całości są stosunkowo małe. Kilka optymalizacji dla miejsca polega na tym fakcie, aby osiągnąć najbardziej wydajne pakowanie danych.
 
@@ -53,7 +53,7 @@ Te założenia są wprowadzane w opisie obsługi wyjątków:
 
 ## <a name="arm64-stack-frame-layout"></a>Układ ramki stosu ARM64
 
-(media/arm64-exception-handling-stack-frame.png "Układ ramki stosu") ![układu ramki stosu]
+![Układ ramki stosu](media/arm64-exception-handling-stack-frame.png "ramka stosu — Układ")
 
 W przypadku funkcji łańcucha ramek FP i LR można zapisać w dowolnym miejscu w obszarze zmiennej lokalnej, w zależności od kwestii optymalizacji. Celem jest maksymalizacja liczby miejsc, do których można uzyskać dostęp za pomocą jednej instrukcji na podstawie wskaźnika ramki (x29) lub wskaźnika stosu (SP). Jednak w przypadku funkcji `alloca` musi być łańcuchem, a x29 musi wskazywać na dół stosu. Aby umożliwić lepsze pokrycie w trybie par rejestracji, nielotne obszary zapisywania są umieszczane w górnej części stosu lokalnego. Poniżej przedstawiono przykłady ilustrujące kilka najbardziej wydajnych sekwencji prologu. W celu zapewnienia przejrzystości i lepszej lokalizacji pamięci podręcznej kolejność przechowywania zapisywanych rejestrów we wszystkich kanonicznych dziennikach jest w kolejności "rosnąco". `#framesz` poniżej reprezentuje rozmiar całego stosu (z wyłączeniem obszaru alloca). `#localsz` i `#outsz` roznotować rozmiar lokalnego obszaru (łącznie z obszarem zapisu dla pary \<x29, LR >) i wychodzącego rozmiaru parametru.
 
@@ -188,7 +188,7 @@ Rekordy. pdata to uporządkowana Tablica elementów o stałej długości, która
 
 Każdy rekord. pData dla ARM64 ma długość 8 bajtów. Ogólny format każdego rekordu umieszcza 32-bitowy adres RVA funkcji uruchamianej w pierwszym wyrazie, po którym następuje drugi wyraz, który zawiera wskaźnik do xdata bloku o zmiennej długości lub spakowanym słowie opisującym nieprzewijanie sekwencji funkcji kanonicznej.
 
-![pData rekordu układu](media/arm64-exception-handling-pdata-record.png ". pdata — układ") rekordu
+![Układ rekordu. pdata](media/arm64-exception-handling-pdata-record.png "Układ rekordu. pdata")
 
 Pola są następujące:
 
@@ -204,7 +204,7 @@ Pola są następujące:
 
 Gdy spakowany format unwindy jest niewystarczający do opisania odwinięcia funkcji, należy utworzyć rekord o zmiennej długości. xdata. Adres tego rekordu jest przechowywany w drugim słowie rekordu. pdata. Format XData jest spakowanym zestawem wyrazów o zmiennej długości:
 
-![xdata rekordu układu](media/arm64-exception-handling-xdata-record.png ". xdata — układ") rekordu
+![Układ rekordu. xdata](media/arm64-exception-handling-xdata-record.png "Układ rekordu. xdata")
 
 Te dane są podzielone na cztery sekcje:
 
@@ -336,7 +336,7 @@ W przypadku funkcji, których dzienniki i epilogs są zgodne z formularzem kanon
 
 Format rekordu. pdata z zapakowanymi danymi unwind wygląda następująco:
 
-![rekord. pdata z zapakowanymi danymi unwind](media/arm64-exception-handling-packed-unwind-data.png ". pdata rekord z zapakowanymi danymi unwind")
+![rekord. pdata z zapakowanymi danymi unwind](media/arm64-exception-handling-packed-unwind-data.png "rekord. pdata z zapakowanymi danymi unwind")
 
 Pola są następujące:
 
@@ -375,7 +375,7 @@ Czynności #|Oflaguj wartości|Liczba instrukcji|Kod operacji|Kod unwind
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
 1|0 < **RegI** < = 10|RegI/2 + **RegI** %2|`stp x19,x20,[sp,#savsz]!`<br/>`stp x21,x22,[sp,#16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
-2|**CR**==01*|1|`str lr,[sp,#(intsz-8)]`\*|`save_reg`
+2|**CR**= = 01 *|1|`str lr,[sp,#(intsz-8)]`\*|`save_reg`
 3|0 < **RegF** < = 7|(RegF + 1)/2 +<br/>(RegF + 1) %2)|`stp d8,d9,[sp,#intsz]`\*\*<br/>`stp d10,d11,[sp,#(intsz+16)]`<br/>`...`<br/>`str d(8+RegF),[sp,#(intsz+fpsz-8)]`|`save_fregp`<br/>`...`<br/>`save_freg`
 4|**H** = = 1|4|`stp x0,x1,[sp,#(intsz+fpsz)]`<br/>`stp x2,x3,[sp,#(intsz+fpsz+16)]`<br/>`stp x4,x5,[sp,#(intsz+fpsz+32)]`<br/>`stp x6,x7,[sp,#(intsz+fpsz+48)]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
 5a|**CR** = = 11 & & #locsz<br/> < = 512|2|`stp x29,lr,[sp,#-locsz]!`<br/>`mov x29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
@@ -628,7 +628,7 @@ Indeks początkowy epilogu [0] wskazuje tę samą sekwencję kodu unwindy prolog
 
 Indeks początkowy epilogu (4) wskazuje na środek kodu unwindy prologu (częściowo ponownie używany tablicę operacji unwind).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Omówienie Konwencji ABI ARM64](arm64-windows-abi-conventions.md)<br/>
 [Obsługa wyjątków ARM](arm-exception-handling.md)

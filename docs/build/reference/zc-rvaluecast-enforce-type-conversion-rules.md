@@ -1,6 +1,6 @@
 ---
 title: /Zc:rvalueCast (Wymuszanie zasad konwersji typów)
-ms.date: 03/06/2018
+ms.date: 02/18/2020
 f1_keywords:
 - rvaluecast
 - /Zc:rvalueCast
@@ -12,28 +12,29 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 7825277d-e565-4c48-b0fb-76ac0b0c6e38
-ms.openlocfilehash: e5a6abd3b85136b05ae58ebc8750aa9120cabc33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac74192cad8a62e4c82b480038e727b114362cdd
+ms.sourcegitcommit: b9aaaebe6e7dc5a18fe26f73cc7cf5fce09262c1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315784"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504574"
 ---
 # <a name="zcrvaluecast-enforce-type-conversion-rules"></a>/Zc:rvalueCast (Wymuszanie zasad konwersji typów)
 
-Gdy **/Zc: rvaluecast** opcja zostanie określona, kompilator poprawnie identyfikuje typ odwołania rvalue jako wynik operacji rzutowania zgodnie ze standardem C ++ 11. Jeśli nie określono opcji, zachowanie kompilatora jest taka sama, jak w programie Visual Studio 2012.
+Gdy opcja **`/Zc:rvalueCast`** jest określona, kompilator prawidłowo identyfikuje typ referencyjny rvalue jako wynik operacji Cast. Jego zachowanie jest zgodne ze standardem C++ 11. Jeśli opcja nie jest określona, zachowanie kompilatora jest takie samo jak w programie Visual Studio 2012.
 
 ## <a name="syntax"></a>Składnia
 
-> **/Zc:rvalueCast**[**-**]
+> **`/Zc:rvalueCast`**\
+> **`/Zc:rvalueCast-`**
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli **/Zc: rvaluecast** jest określony, kompilator postępuje ppkt 5.4 standardem C ++ 11 i traktuje tylko rzutowane wyrażenia, które powodują typy niebędące odwołaniami i rzutowane wyrażenia, które skutkują odwołaniami rvalue do typów niebędących funkcjami jako typy rvalue. Domyślnie lub jeśli **/Zc:rvalueCast-** jest określony, kompilator nie jest zgodny i traktuje wszystkie wyrażenia cast, które skutkują odwołaniami rvalue jako rvalue. Dla zgodności i wyeliminowania błędów w stosowaniu rzutowań zaleca się używanie **/Zc: rvaluecast**.
+Jeśli **`/Zc:rvalueCast`** jest określony, kompilator postępuje zgodnie z sekcją 5,4 standardu c++ 11 i traktuje tylko wyrażenia rzutowania, które powodują niereferencyjne typy i wyrażenia rzutowania, które powodują odwołania rvalue do typów nienależących do funkcji jako typy rvalue. Domyślnie, lub jeśli **`/Zc:rvalueCast-`** jest określony, kompilator jest niezgodny i traktuje wszystkie wyrażenia rzutowania, które powodują odwołania rvalue jako rvalues. W celu uzyskania zgodności i wyeliminowania błędów podczas korzystania z rzutowania zalecamy używanie **`/Zc:rvalueCast`** .
 
-Domyślnie **/Zc: rvaluecast** jest wyłączona (**/Zc:rvalueCast-**). [/ Permissive-](permissive-standards-conformance.md) — opcja kompilatora niejawnie ustawia tę opcję, ale może być zastąpiona przy użyciu **/Zc:rvalueCast-**.
+Domyślnie **`/Zc:rvalueCast`** jest wyłączone ( **`/Zc:rvalueCast-`** ). Opcja kompilatora [/permissive-](permissive-standards-conformance.md) niejawnie ustawia tę opcję, ale można ją zastąpić przy użyciu **`/Zc:rvalueCast-`** .
 
-Użyj **/Zc: rvaluecast** w przypadku przekazywania wyrażenia rzutowania jako argumentu do funkcji, która przyjmuje typ odwołania rvalue. Domyślne zachowanie powoduje błąd kompilatora [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) Kiedy kompilator niepoprawnie określa typ wyrażenia rzutującego. Ten przykład pokazuje błąd kompilatora poprawne kodu, gdy **/Zc: rvaluecast** nie zostanie określony:
+Użyj **`/Zc:rvalueCast`** , jeśli Przekaż wyrażenie rzutowania jako argument do funkcji, która przyjmuje typ odwołania rvalue. Zachowanie domyślne powoduje błąd kompilatora [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) , gdy kompilator niepoprawnie Określa typ wyrażenia Cast. Ten przykład pokazuje błąd kompilatora w prawidłowym kodzie, gdy nie określono **`/Zc:rvalueCast`** :
 
 ```cpp
 // Test of /Zc:rvalueCast
@@ -71,7 +72,7 @@ struct Test1 {
 };
 ```
 
-Domyślne zachowanie kompilatora może nie zgłaszać błędu C2102, gdy jest to konieczne. W tym przykładzie, kompilator nie zgłasza błędu, jeśli adres rvalue utworzony przez rzutowanie tożsamości zostanie podjęta, gdy **/Zc: rvaluecast** nie zostanie określony:
+Domyślne zachowanie kompilatora może nie zgłaszać błędów C2102 w razie potrzeby. W tym przykładzie kompilator nie zgłasza błędu, jeśli adres rvalue utworzonego przez rzutowanie tożsamości jest tworzony, gdy **`/Zc:rvalueCast`** nie zostanie określony:
 
 ```cpp
 int main() {
@@ -82,16 +83,16 @@ int main() {
 }
 ```
 
-Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
+Aby uzyskać więcej informacji na temat problemów ze zgodnością C++w wizualizacji, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** stronę właściwości.
+1. Wybierz **Właściwości konfiguracji** > stronie właściwości **języka** **CC++ /**  > .
 
-1. Modyfikowanie **dodatkowe opcje** właściwości do uwzględnienia **/Zc: rvaluecast** , a następnie wybierz **OK**.
+1. Ustaw właściwość **Wymuszaj reguły konwersji typów** na **`/Zc:rvalueCast`** lub **`/Zc:rvalueCast-`** . Wybierz **przycisk OK** lub **Zastosuj** , aby zapisać zmiany.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[/Zc (Zgodność)](zc-conformance.md)<br/>
+[/Zc (Zgodność)](zc-conformance.md)
