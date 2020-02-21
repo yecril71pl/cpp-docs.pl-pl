@@ -32,7 +32,7 @@ Implementacja biblioteki wykonawczej Microsoft C obsługuje również następuj�
 |chh|zh-HK|
 |rozkład Chi|zh-SG|
 |Chiński|zh|
-|Chiński — Hongkong|zh-HK|
+|Chiński — SRA Hongkong|zh-HK|
 |Chiński (uproszczony)|zh-CN|
 |Chiński (Singapur)|zh-SG|
 |Chiński (tradycyjny)|zh-TW|
