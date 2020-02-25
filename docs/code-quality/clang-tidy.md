@@ -1,27 +1,36 @@
 ---
 title: Korzystanie z Clang-uporządkowanego w programie Visual Studio
-ms.date: 10/04/2019
+description: Jak używać Clang-uporządkowanego w programie Visual Studio do analizy C++ kodu firmy Microsoft.
+ms.date: 02/19/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.clangtidy
 author: frozenpandaman
 ms.author: efessler
-ms.openlocfilehash: 19ec35ee931822d6952512f417bbbdba14ee04b9
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 3dbe66e9d7117c027c0ec867011189824c59ce31
+ms.sourcegitcommit: 21e168731b8fe0eaff18f070cee5d54aa5782c2d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77418887"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77567878"
 ---
 # <a name="using-clang-tidy-in-visual-studio"></a>Korzystanie z Clang-uporządkowanego w programie Visual Studio
 
-Analiza kodu natywnie obsługuje [Clang-uporządkowanego](https://clang.llvm.org/extra/clang-tidy/) dla projektów MSBuild i cmake, niezależnie od tego, czy są używane zestawy narzędzi CLANG czy MSVC. Testy Clang-uporządkowanego mogą być uruchamiane w ramach analizy kodu w tle, wyświetlane jako ostrzeżenia w edytorze (zygzaki) i wyświetlane w Lista błędów.
+::: moniker range="<=vs-2017"
 
-Aby można było używać Clang-uporządkowanego, składnik "C++ Clang Tools for Windows" musi zostać zainstalowany za pośrednictwem Instalator programu Visual Studio.
+Obsługa Clang-uporządkowanego wymaga programu Visual Studio 2019 w wersji 16,4 lub nowszej. Aby wyświetlić dokumentację, wybierz pozycję Visual Studio 2019 w selektorze wersji dokumentacji.
 
-Clang-uporządkowanego jest domyślnym narzędziem do analizy przy użyciu zestawu narzędzi LLVM/Clang-CL, dostępnego zarówno w programie MSBuild, jak i w CMake. Można ją skonfigurować do uruchamiania razem lub zastępować standardowe środowisko analizy kodu przy użyciu zestawu narzędzi MSVC; w przypadku korzystania z narzędzia Clang-CL zestaw narzędzi Microsoft Code Analysis nie będzie dostępny.
+::: moniker-end
 
-Clang-uporządkowanego jest uruchamiany po pomyślnej kompilacji; może być konieczne rozwiązanie błędów kodu źródłowego w celu uzyskania wyników Clang-uporządkowanego.
+::: moniker range=">=vs-2019"
+
+Analiza kodu natywnie obsługuje [Clang-uporządkowanego](https://clang.llvm.org/extra/clang-tidy/) dla projektów MSBuild i cmake, niezależnie od tego, czy są używane zestawy narzędzi CLANG czy MSVC. Testy Clang — uporządkowanego mogą być uruchamiane w ramach analizy kodu w tle. Pojawiają się one jako ostrzeżenia w edytorze (zygzaki) i są wyświetlane w Lista błędów.
+
+Pomoc techniczna Clang-uporządkowanego jest dostępna w programie Visual Studio 2019 w wersji 16,4. Jest ona uwzględniana automatycznie po wybraniu C++ obciążenia w Instalator programu Visual Studio.
+
+Clang-uporządkowanego jest domyślnym narzędziem do analizy przy użyciu zestawu narzędzi LLVM/Clang-CL, dostępnego zarówno w programie MSBuild, jak i w CMake. Można ją skonfigurować przy użyciu zestawu narzędzi MSVC do uruchamiania w programie lub do zastępowania standardowego środowiska analizy kodu. Jeśli używasz zestawu narzędzi Clang-CL, analiza kodu firmy Microsoft jest niedostępna.
+
+Clang-uporządkowanego jest uruchamiany po pomyślnej kompilacji. Może być konieczne rozwiązanie błędów kodu źródłowego w celu uzyskania wyników Clang-uporządkowanego.
 
 ## <a name="msbuild"></a>MSBuild
 
@@ -35,19 +44,21 @@ W projektach CMake można skonfigurować kontrole Clang-uporządkowanego w `CMak
 
 - `enableMicrosoftCodeAnalysis`: włącza analizę kodu firmy Microsoft
 - `enableClangTidyCodeAnalysis`: włącza analizę Clang-uporządkowanego
-- `clangTidyChecks`: Konfiguracja Clang-uporządkowanego, określona jako lista rozdzielona przecinkami, tj. czeków, które mają być włączone lub wyłączone.
+- `clangTidyChecks`: Konfiguracja Clang-uporządkowanego określona jako lista rozdzielona przecinkami, czyli sprawdzenia, czy są one włączone lub wyłączone.
 
 Jeśli żadna z opcji "Włącz" nie zostanie określona, program Visual Studio wybierze narzędzie do analizy pasujące do używanego zestawu narzędzi platformy.
 
 ## <a name="warning-display"></a>Wyświetlanie ostrzeżeń
 
-Uruchomienia Clang-uporządkowanego powodują ostrzeżenia wyświetlane w Lista błędów, a jak w edytorze. Użyj kolumny "Kategoria" w Lista błędów, aby sortować i organizować ostrzeżenia Clang-uporządkowanego. Ostrzeżenia w edytorze można skonfigurować przez przełączenie ustawienia "Wyłącz Zawijanie analizy kodu" w obszarze **narzędzia** > **Opcje**.
+Uruchomienia Clang-uporządkowanego powodują wyświetlenie ostrzeżeń w Lista błędów, a jak w edytorze. Użyj kolumny "Kategoria" w Lista błędów, aby sortować i organizować ostrzeżenia Clang-uporządkowanego. Ostrzeżenia w edytorze można skonfigurować przez przełączenie ustawienia "Wyłącz Zawijanie analizy kodu" w obszarze **narzędzia** > **Opcje**.
 
 ## <a name="clang-tidy-configuration"></a>Clang — konfiguracja uporządkowanego
 
-Można skonfigurować sprawdzanie, czy Clang-uporządkowanego działa w programie Visual Studio za pomocą opcji **checks Clang-uporządkowanego** . Dane wejściowe są przekazywane do argumentu **--checks** narzędzia. Każdą następną konfigurację można uwzględnić w plikach Custom **. Clang-uporządkowanego** . Aby uzyskać więcej informacji, zobacz [dokumentację Clang-uporządkowanego w witrynie LLVM.org](https://clang.llvm.org/extra/clang-tidy/) .
+Można skonfigurować sprawdzanie, czy Clang-uporządkowanego działa w programie Visual Studio za pomocą opcji **checks Clang-uporządkowanego** . Dane wejściowe są przekazywane do argumentu **--checks** narzędzia. Dowolna dodatkowa konfiguracja może być uwzględniona w niestandardowych plikach *`.clang-tidy`* . Aby uzyskać więcej informacji, zobacz [dokumentację Clang-uporządkowanego w witrynie LLVM.org](https://clang.llvm.org/extra/clang-tidy/).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Obsługa Clang/LLVM dla projektów MSBuild](https://devblogs.microsoft.com/cppblog/clang-llvm-support-for-msbuild-projects/)
 - [Obsługa Clang/LLVM dla projektów CMake](https://devblogs.microsoft.com/cppblog/visual-studio-cmake-support-clang-llvm-cmake-3-14-vcpkg-and-performance-improvements/)
+
+::: moniker-end
