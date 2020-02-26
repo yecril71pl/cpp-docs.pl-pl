@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: fb7dc81648ae301962b952b0440d8a24b397c0d8
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 542a469393d3655418f69e5d51d59adfa824ad15
+ms.sourcegitcommit: 9a63e9b36d5e7fb13eab15c2c35bedad4fb03ade
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518208"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77600034"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Pliku cmakesettings. JSON — odwołanie do schematu
 
@@ -31,7 +31,7 @@ Tablica `configurations` zawiera wszystkie konfiguracje dla projektu CMake. Aby 
 
 `configuration` ma następujące właściwości:
 
-- `addressSDanitizerEnabled`: Jeśli `true` kompiluje program z adresem Sanitizer (eksperymentalny w systemie Windows). W systemie Linux Skompiluj przy użyciu elementu-FNO-pominięcia-ramki i optymalizacji kompilatora — OS lub-oo, aby uzyskać najlepsze wyniki.
+- `addressSanitizerEnabled`: Jeśli `true` kompiluje program z adresem Sanitizer (eksperymentalny w systemie Windows). W systemie Linux Skompiluj przy użyciu elementu-FNO-pominięcia-ramki i optymalizacji kompilatora — OS lub-oo, aby uzyskać najlepsze wyniki.
 - `addressSanitizerRuntimeFlags`: flagi środowiska uruchomieniowego przekazane do AddressSanitizer za pośrednictwem zmiennej środowiskowej ASAN_OPTIONS. Format: przedsięwzięcia1 = Value: przedsięwzięcia2 = wartość2.
 - `buildCommandArgs`: określa natywne przełączniki kompilacji przesłane do CMake po--kompilacja--. Na przykład przekazywanie-v przy użyciu generatora Ninja wymusza Ninja do danych wyjściowych wiersza polecenia. Zobacz [argumenty wiersza polecenia Ninja](#ninja) , aby uzyskać więcej informacji na temat poleceń ninja.
 - `buildRoot`: określa katalog, w którym CMake generuje skrypty kompilacji dla wybranego generatora.  Mapuje do przełącznika **-DCMAKE_BINARY_DIR** i określa, gdzie zostanie utworzony *CMakeCache. txt* . Jeśli folder nie istnieje, zostanie utworzony. Obsługiwane makra obejmują `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
@@ -44,7 +44,7 @@ Tablica `configurations` zawiera wszystkie konfiguracje dla projektu CMake. Aby 
 - `configurationType`: określa konfigurację typu kompilacji dla wybranego generatora. Może być jednym z:
 
   - Debugowanie
-  - Wydanie
+  - Release
   - MinSizeRel
   - RelWithDebInfo
   

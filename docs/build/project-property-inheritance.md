@@ -1,76 +1,74 @@
 ---
-title: Dziedziczenie właściwości w projektach programu Visual Studio — C++
-ms.date: 05/16/2019
+title: Dziedziczenie właściwości w projektach programu Visual Studio —C++
+description: Jak dziedziczenie właściwości działa w projektach natywnych (MSBuild C++ ) Visual Studio.
+ms.date: 02/21/2020
 helpviewer_keywords:
 - C++ projects, property inheritance
-ms.openlocfilehash: 472700226ffc1f265f6fab84dbd44fca651b3c87
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 2032ab63c7d278a080742dba8d8d0c6c3ed7a094
+ms.sourcegitcommit: 9a63e9b36d5e7fb13eab15c2c35bedad4fb03ade
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837404"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77600020"
 ---
 # <a name="property-inheritance-in-visual-studio-projects"></a>Dziedziczenie właściwości w projektach programu Visual Studio
 
-System projektu programu Visual Studio zależy od platformy MSBuild definiuje formaty plików i reguł do tworzenia projektów wszelkiego rodzaju. Program MSBuild zarządza wiele trudności, ponieważ tworzenie dla wielu platform i konfiguracje, ale trzeba nieco wiedzieć o tym, jak działa. Jest to szczególnie ważne, jeśli chcesz zdefiniować konfiguracje niestandardowe lub Utwórz wielokrotnego użytku zestawy właściwości, które można udostępniać i zaimportować do wielu projektów.
+Natywny system projektu programu Visual Studio jest oparty na programie MSBuild. Program MSBuild definiuje formaty plików i reguły do tworzenia projektów dowolnego rodzaju. Zarządza większością złożoności kompilowania dla wielu konfiguracji i platform. Warto zrozumieć, jak to działa. Jest to szczególnie ważne, jeśli chcesz zdefiniować konfiguracje niestandardowe. Lub, aby utworzyć zestawy właściwości do wielokrotnego użytku, które można udostępniać i importować do wielu projektów.
 
-## <a name="the-vcxproj-file-props-files-and-targets-files"></a>Plik .vcxproj, .props pliki i pliki .targets
+## <a name="the-vcxproj-file-props-files-and-targets-files"></a>Plik. vcxproj,. props — pliki i. targets
 
-Właściwości projektu są przechowywane bezpośrednio w pliku projektu (*.vcxproj) lub w innych plikach .targets lub .props, że import pliku projektu, które dostarczają wartości domyślne. Dla programu Visual Studio 2015, te pliki znajdują się w **\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140**. Dla programu Visual Studio 2017 lub Visual Studio 2019 r, te pliki znajdują się w  **\\Program Files (x86)\\programu Microsoft Visual Studio\\&lt;2017 lub 2019 >\\_edition_  \\Common7\\IDE\\VC\\VCTargets**, gdzie _wersji_ jest zainstalowanej wersji programu Visual Studio. Właściwości są także przechowywane w plikach .props niestandardowych, które można dodać do własnego projektu. Zdecydowanie zalecamy czy nie ręcznie edytować tych plików, a zamiast tego użyć strony właściwości w środowisku IDE, aby zmodyfikować wszystkie właściwości, zwłaszcza tych, które uczestniczą w dziedziczeniu, chyba że masz bardzo dobre Omówienie programu MSBuild.
+Właściwości projektu są przechowywane bezpośrednio w pliku projektu ( *`.vcxproj`* ) lub w innych *`.targets`* lub *`.props`* plikach importowanych przez plik projektu i dostarczających wartości domyślne. W przypadku programu Visual Studio 2015 te pliki znajdują się w *`\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140`* . W przypadku programu Visual Studio 2017 te pliki znajdują się w *`\Program Files (x86)\Microsoft Visual Studio\2017\<edition>\Common7\IDE\VC\VCTargets`* , gdzie *`<edition>`* jest zainstalowana wersja programu Visual Studio. W programie Visual Studio 2019 te pliki znajdują się w *`\Program Files (x86)\Microsoft Visual Studio\2019\<edition>\MSBuild\Microsoft\VC\v160`* . Właściwości są również przechowywane w dowolnych niestandardowych plikach *`.props`* , które można dodać do własnego projektu. Zdecydowanie zalecamy, aby nie edytować tych plików ręcznie. Zamiast tego należy użyć stron właściwości w IDE, aby zmodyfikować wszystkie właściwości, szczególnie te, które uczestniczą w dziedziczeniu, chyba że masz głębokie zrozumienie programu MSBuild.
 
-Jak pokazano wcześniej, tę samą właściwość dla taką samą konfigurację można przypisać inną wartość w tych różnych plikach. Podczas tworzenia projektu, aparat MSBuild oblicza plik projektu i wszystkie zaimportowane pliki w dobrze zdefiniowanej kolejności (opisanych poniżej). Zgodnie z każdego pliku jest oceniany, wszystkie wartości właściwości zdefiniowane w tym pliku spowoduje zastąpienie istniejących wartości. Wszelkie wartości, które nie zostały określone są dziedziczone z plików, które zostały ocenione wcześniej. W związku z tym podczas ustawiania właściwości na stronach właściwości warto również zwrócić uwagę na gdzie ustawić. Jeśli właściwość jest ustawiona na "X" w pliku .props, ale właściwości jest równa "Y" w pliku projektu, projekt zostanie skompilowany z właściwością "Y". Jeśli w tej samej właściwości jest równa "Z" dla elementu projektu, np. plik .cpp, aparat MSBuild będzie używać wartości "Z". 
+Jak pokazano wcześniej, taka sama właściwość dla tej samej konfiguracji może mieć przypisaną inną wartość w tych różnych plikach. Podczas kompilowania projektu aparat MSBuild ocenia plik projektu i wszystkie zaimportowane pliki w dobrze zdefiniowanej kolejności (opisane poniżej). W miarę oceniania każdego pliku wszystkie wartości właściwości zdefiniowane w tym pliku zastąpią istniejące wartości. Wszystkie wartości, które nie są określone, są dziedziczone z plików, które zostały ocenione wcześniej. Podczas ustawiania właściwości przy użyciu stron właściwości należy również zwrócić uwagę na to, gdzie ją ustawisz. Jeśli ustawisz właściwość na "X" w pliku *`.props`* , ale właściwość ma wartość "y" w pliku projektu, projekt zostanie skompilowany z właściwością ustawioną na wartość "y". Jeśli ta sama właściwość jest ustawiona na wartość "Z" w elemencie projektu, takim jak plik *`.cpp`* , aparat MSBuild będzie używał wartości "Z".
 
 Oto podstawowe drzewo dziedziczenia:
 
-1. Domyślne ustawienia z zestawu narzędzi CPP MSBuild (..\Program Files\MSBuild\Microsoft.Cpp\v4.0\Microsoft.cpp.default.props, który jest importowany przez plik .vcxproj.)
+1. Ustawienia domyślne z zestawu narzędzi programu MSBuild CPP (.. \Program Files\MSBuild\Microsoft.Cpp\v4.0\Microsoft.Cpp.Default.props, który jest importowany przez plik *`.vcxproj`* .)
 
-2. Arkusze właściwości
+1. Arkusze właściwości
 
-3. Plik .vcxproj. (Można zastąpić ustawienia domyślne i ustawienia arkusza właściwości.)
+1. plik *`.vcxproj`* . (Można zastąpić ustawienia domyślne i ustawienia arkusza właściwości.)
 
-4. Metadane elementów
+1. Metadane elementów
 
 > [!TIP]
-> Na stronie właściwości, właściwość w `bold` jest zdefiniowany w bieżącym kontekście. Właściwość czcionką normalną jest dziedziczona.
+> Na stronie właściwości Właściwość **pogrubiona** jest definiowana w bieżącym kontekście. Właściwość czcionką normalną jest dziedziczona.
 
-## <a name="view-an-expanded-project-file-with-all-imported-values"></a>Wyświetl plik projektu z wszystkich importowanych wartości
+## <a name="view-an-expanded-project-file-with-all-imported-values"></a>Wyświetlanie rozwiniętego pliku projektu ze wszystkimi zaimportowanymi wartościami
 
 Czasami warto wyświetlić plik rozszerzony w celu stwierdzenia, jak jest dziedziczona dana wartość właściwości. Aby wyświetlić rozszerzoną wersję, wprowadź następujące polecenie w wierszu polecenia Visual Studio. (Zastąp nazwy plików zastępczych nazwami, których chcesz używać.)
 
-**Program MSBuild /pp:** *temp* **.txt** *myapp* **.vcxproj**
+> **MSBuild/PP:** _temp_ **. txt** _MojaApl_ **. vcxproj**
 
-Rozwinięte pliki projektu mogą być duże i trudne do zrozumienia, chyba że znasz MSBuild. Oto podstawowa struktura pliku projektu:
+Rozwinięte pliki projektu mogą być duże i trudne do zrozumienia, chyba że znasz program MSBuild. Oto podstawowa struktura pliku projektu:
 
-1. Podstawowe właściwości projektu, które nie są udostępniane w środowisku IDE.
+1. Podstawowe właściwości projektu, które nie są ujawniane w środowisku IDE.
 
-2. Import pliku Microsoft.cpp.default.props, który określa pewne właściwości podstawowe, niezależne od zestawu narzędzi.
+1. Importowanie *`Microsoft.cpp.default.props`* , które definiuje podstawowe właściwości niezależne od zestawu narzędzi.
 
-3. Globalne właściwości konfiguracji (udostępniane jako **PlatformToolset** i **projektu** właściwości domyślnych na **ogólne ustawienia konfiguracji** strony. Te właściwości określają, który zestaw narzędzi i które wewnętrzne arkusze właściwości są importowane w pliku Microsoft.cpp.props w następnym kroku.
+1. Globalne właściwości konfiguracji (uwidocznione jako **PlatformToolset** i domyślne właściwości **projektu** na stronie **Ogólne konfiguracji** ). Te właściwości określają, który zestaw narzędzi i wewnętrzne arkusze właściwości są importowane w *`Microsoft.cpp.props`* w następnym kroku.
 
-4. Import pliku Microsoft.cpp.props, który określa większość ustawień domyślnych projektu.
+1. Importowanie *`Microsoft.cpp.props`* , które ustawia większość wartości domyślnych projektu.
 
-5. Import wszystkich arkuszy właściwości, w tym plików .user. Arkusze właściwości można zastąpić wszystkim, z wyjątkiem **PlatformToolset** i **projektu** właściwości domyślnych.
+1. Importowanie wszystkich arkuszy właściwości, w tym plików *`.user`* . Te arkusze właściwości mogą zastąpić wszystko, z wyjątkiem właściwości domyślnych **PlatformToolset** i **Project** .
 
-6. Pozostałe właściwości konfiguracji projektu. Te wartości mogą zastąpić to, co ustawiono w arkuszach właściwości.
+1. Pozostałe właściwości konfiguracji projektu. Te wartości mogą zastąpić to, co ustawiono w arkuszach właściwości.
 
-7. Elementy (pliki) wraz z ich metadanymi. To jest zawsze ostateczny wynik, jeśli chodzi o reguły oceny MSBuild, nawet jeśli występują one przed innymi właściwościami i importami.
+1. Elementy (pliki) wraz z ich metadanymi. Te elementy są zawsze ostatnim słowem w regułach oceny MSBuild, nawet jeśli występują przed innymi właściwościami i importami.
 
-Aby uzyskać więcej informacji, zobacz [właściwości programu MSBuild](/visualstudio/msbuild/msbuild-properties).
+Aby uzyskać więcej informacji, zobacz [Właściwości programu MSBuild](/visualstudio/msbuild/msbuild-properties).
 
 ## <a name="build-configurations"></a>Konfiguracje kompilacji
 
-Konfiguracja jest po prostu dowolne grupy właściwości, które są określone nazwy. Program Visual Studio oferuje konfiguracje Debug i Release, i każdy ustawia różne właściwości odpowiednio do kompilacji debugowania lub kompilacji wydania. Możesz użyć **programu Configuration Manager** konfiguracje niestandardowe jest definiowana jako wygodny sposób właściwości grupy dla określonej wersji kompilacji. 
+Konfiguracja jest tylko dowolną grupą właściwości, które mają nazwę. Program Visual Studio oferuje konfiguracje debugowania i wydawania. Każda z nich ustawia różne właściwości odpowiednio dla kompilacji debugowania lub kompilacji wydania. Za pomocą **Configuration Manager** można definiować konfiguracje niestandardowe. Są one wygodnym sposobem grupowania właściwości dla określonej wersji kompilacji.
 
-Aby lepiej zrozumieć, konfiguracje kompilacji, otwórz **Menedżer właściwości** , wybierając **widoku &#124; Menedżer właściwości** lub **widoku &#124; Windows inne &#124; Menedżer właściwości**  w zależności od ustawień. **Menedżer właściwości** ma węzły dla każdej pary konfiguracji i platformy w projekcie. W każdym z tych węzłów są węzły arkusze właściwości (pliki .props), które ustawić niektóre określonych właściwości dla tej konfiguracji.
+Aby lepiej poznać konfiguracje kompilacji, Otwórz **Menedżer właściwości**. Można go otworzyć, wybierając pozycję **wyświetl > Menedżer właściwości** lub **widok > innych Menedżer właściwości > systemu Windows**, w zależności od ustawień. **Menedżer właściwości** ma węzły dla każdej pary konfiguracji i platformy w projekcie. W każdym z tych węzłów są węzły dla arkuszy właściwości (pliki *`.props`* ), które ustawiają określone właściwości dla danej konfiguracji.
 
 ![Menedżer właściwości](media/property-manager.png "Menedżer właściwości")
 
-Jeśli przejdź do okienka ogólne na stronach właściwości i ustaw właściwość zestawu znaków na "Nieustawione" zamiast "Użyj Unicode" i kliknij **OK**, wyświetli się Menedżer właściwości nie **obsługi standardu Unicode** arkusz właściwości bieżącej konfiguracji, ale nadal będą dostępne dla innych konfiguracji.
+Na przykład możesz przejść do okienka ogólne na stronach właściwości. Zmień wartość właściwości zestaw znaków na "nie ustawiono" zamiast "Użyj Unicode", a następnie kliknij przycisk **OK**. Menedżer właściwości teraz nie zawiera arkusza właściwości **obsługi Unicode** . Jest ona usuwana dla bieżącej konfiguracji, ale nadal istnieje inna konfiguracja.
 
-Aby uzyskać więcej informacji o Menedżerze właściwości i arkuszach właściwości, zobacz [udziału lub ponownego użycia w programie Visual Studio C++ ustawienia projektu](create-reusable-property-configurations.md).
+Aby uzyskać więcej informacji na temat Menedżer właściwości i arkuszy właściwości, zobacz [udostępnianie lub ponowne C++ Używanie ustawień projektu programu Visual Studio](create-reusable-property-configurations.md).
 
 > [!TIP]
-> Plik .user, odnoszący jest funkcją starszej wersji, a firma Microsoft zaleca, Usuń Aby zachować właściwości poprawnie pogrupowane według konfiguracji i platformy.
-
-
-
+> Plik *`.user`* jest starszą funkcją. Firma Microsoft zaleca, aby je usunąć, aby zachować właściwości prawidłowo pogrupowane zgodnie z konfiguracją i platformą.
