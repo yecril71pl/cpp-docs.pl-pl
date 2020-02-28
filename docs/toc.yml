@@ -2455,7 +2455,7 @@
 - name: Tworzenie aplikacji dla systemu Linux
   href: linux/
 - name: Programowanie aplikacji mobilnych dla wielu platform
-  href: /visualstudio/cross-platform/visual-cpp-for-cross-platform-mobile-development
+  href: cross-platform/
 - name: Programowanie na platformie .NET w języku C++/w interfejsie wiersza polecenia
   expanded: false
   items:
