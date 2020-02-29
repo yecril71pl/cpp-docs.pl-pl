@@ -25,18 +25,18 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: 0fb6e1289b44940cabaee02e62690c94ec5bf131
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: eb172e7bd76816458a0efff7b053d136f52076ab
+ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299768"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78166761"
 ---
 # <a name="general-property-page-project"></a>Ogólna strona właściwości (projekt)
 
 ::: moniker range=">=vs-2019"
 
-Ten temat dotyczy projektów programu Visual Studio dla systemu Windows. W przypadku projektów systemu Linux zapoznaj się z informacjami na [stronie właściwości systemu Linux C++ ](../../linux/prop-pages-linux.md). W przypadku projektów CMake zobacz [CMAKE projects w programie Visual Studio](../cmake-projects-in-visual-studio.md).
+Ten temat dotyczy projektów programu Visual Studio dla systemu Windows. W przypadku projektów systemu Linux zapoznaj się z informacjami na [stronie właściwości systemu Linux C++ ](../../linux/prop-pages-linux.md). W przypadku projektów CMake zobacz [CMAKE projects w programie Visual Studio](../cmake-projects-in-visual-studio.md). W przypadku projektów systemu Android zobacz [Ogólne właściwości projektu ( C++Android)](/cpp/cross-platform/general-android-prop-page). W przypadku projektów programu make dla systemu Android zobacz [Ogólne właściwości C++ projektu (plik reguł programu make systemu Android)](/cpp/cross-platform/general-makefile-android-prop-page)
 
 Po kliknięciu prawym przyciskiem myszy węzła projektu w Eksplorator rozwiązań i wybraniu **Właściwości**, na stronie właściwości **Ogólne** w węźle **Właściwości konfiguracji** w lewym okienku zostaną wyświetlone następujące właściwości:
 
@@ -44,13 +44,13 @@ Po kliknięciu prawym przyciskiem myszy węzła projektu w Eksplorator rozwiąza
 
    Określa katalog, w którym narzędzia takie jak konsolidator umieści wszystkie Finalne pliki wyjściowe, które są tworzone podczas procesu kompilacji. Zazwyczaj obejmuje to wyjście narzędzi, takie jak konsolidator, bibliotekarza lub BSCMake. Domyślnie ta właściwość jest katalogiem określonym przez makra $ (SolutionDir) $ (Configuration) \.
 
-   Aby programowo uzyskać dostęp do tej właściwości <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.OutputDirectory%2A>, zobacz.
+   Aby programowo uzyskać dostęp do tej właściwości, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.OutputDirectory%2A>.
 
 - **Katalog pośredni**
 
    Określa katalog, w którym narzędzia takie jak kompilator umieści wszystkie pliki pośrednie utworzone podczas procesu kompilacji. Zazwyczaj obejmuje to wyjście narzędzi, takie jak C/C++ KOMPILATOR, MIDL i kompilator zasobów. Domyślnie ta właściwość jest katalogiem określonym przez makro $ (Configuration) \.
 
-   Aby programowo uzyskać dostęp do tej właściwości <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.IntermediateDirectory%2A>, zobacz.
+   Aby programowo uzyskać dostęp do tej właściwości, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.IntermediateDirectory%2A>.
 
 - **Nazwa elementu docelowego**
 
@@ -64,7 +64,7 @@ Po kliknięciu prawym przyciskiem myszy węzła projektu w Eksplorator rozwiąza
 
      Wyświetla zestaw narzędzi konsolidatora (C++ C/KOMPILATOR, MIDL, kompilator zasobów, konsolidator, BSCMAKE, generator proxy usługi sieci Web XML, kompilacja niestandardowa, prebuild, prelink, zdarzenia postbuild).
 
-  - **Biblioteka dynamiczna (dll)**
+  - **Biblioteka dynamiczna (. dll)**
 
      Wyświetla zestaw narzędzi konsolidatora, określa opcję konsolidatora/DLL i dodaje _WINDLL definiuje do CL.
 
@@ -80,7 +80,7 @@ Po kliknięciu prawym przyciskiem myszy węzła projektu w Eksplorator rozwiąza
 
      Wyświetla zestaw narzędzi Narzędzia (MIDL, kompilacja niestandardowa, prekompilacja, zdarzenia postbuild).
 
-  Aby programowo uzyskać dostęp do tej właściwości <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>, zobacz.
+  Aby programowo uzyskać dostęp do tej właściwości, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>.
 
 - **Wersja Windows SDK**
 
@@ -88,11 +88,11 @@ Po kliknięciu prawym przyciskiem myszy węzła projektu w Eksplorator rozwiąza
 
    Aby przejść do systemu Windows 7 lub Windows Vista, użyj wartości **8,1**, ponieważ Windows SDK 8,1 jest zgodny z tymi platformami. Ponadto należy zdefiniować odpowiednią wartość dla **_WIN32_WINNT** w targetver. h. W przypadku systemu Windows 7 to 0x0601. Zobacz [Modyfikowanie winver i _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
 
-   Możesz zainstalować zestaw narzędzi platformy systemu Windows XP dołączony do programu Visual Studio, aby użyć bieżącej wersji bibliotek do kompilowania projektów systemu Windows XP i Windows 2003 Server. Aby uzyskać informacje na temat uzyskiwania i używania tego zestawu narzędzi platformy, zobacz [Konfigurowanie programów dla systemu Windows XP](../configuring-programs-for-windows-xp.md). Aby uzyskać dodatkowe informacje na temat zmiany zestawu narzędzi platformy [, zobacz How to: Zmodyfikuj platformę docelową i](../how-to-modify-the-target-framework-and-platform-toolset.md)zestaw narzędzi platformy.
+   Możesz zainstalować zestaw narzędzi platformy systemu Windows XP dołączony do programu Visual Studio, aby użyć bieżącej wersji bibliotek do kompilowania projektów systemu Windows XP i Windows 2003 Server. Aby uzyskać informacje na temat uzyskiwania i używania tego zestawu narzędzi platformy, zobacz [Konfigurowanie programów dla systemu Windows XP](../configuring-programs-for-windows-xp.md). Aby uzyskać dodatkowe informacje na temat zmiany zestawu narzędzi platformy, zobacz [How to: Modify The Target Framework and platform zestaw narzędzi](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **Zestaw narzędzi platformy**
 
-   Umożliwia projektowi przekierowanie do innej wersji bibliotek i C++ kompilatorów wizualizacji. Projekty programu C++ Visual Studio mogą wskazywać domyślny zestaw narzędzi instalowany przez program Visual Studio lub jeden z zestawów narzędzi zainstalowanych przez kilka wcześniejszych wersji programu Visual Studio, w tym zestawów narzędzi, które tworzą pliki wykonywalne, które można uruchomić w systemie windowx XP. Aby uzyskać informacje na temat zmiany zestawu narzędzi platformy [, zobacz How to: Zmodyfikuj platformę docelową i](../how-to-modify-the-target-framework-and-platform-toolset.md)zestaw narzędzi platformy.
+   Umożliwia projektowi przekierowanie do innej wersji bibliotek i C++ kompilatorów wizualizacji. Projekty programu C++ Visual Studio mogą wskazywać domyślny zestaw narzędzi instalowany przez program Visual Studio lub jeden z zestawów narzędzi zainstalowanych przez kilka wcześniejszych wersji programu Visual Studio, w tym zestawów narzędzi, które tworzą pliki wykonywalne, które można uruchomić w systemie Windows XP. Aby uzyskać informacje na temat zmiany zestawu narzędzi platformy, zobacz [How to: Modify The Target Framework and platform zestaw narzędzi](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **C++Standard języka**
 
@@ -102,7 +102,7 @@ Po kliknięciu prawym przyciskiem myszy węzła projektu w Eksplorator rozwiąza
 
 ::: moniker range="<=vs-2017"
 
-W programie Visual Studio 2015 i Visual Studio 2017 po kliknięciu prawym przyciskiem myszy węzła projektu w **Eksplorator rozwiązań**, a następnie wybierz pozycję **Właściwości**, na stronie właściwości **Ogólne** w węźle **Właściwości konfiguracji** w lewym okienku zostanie wyświetlona wartość dwie sekcje właściwości:
+W programie Visual Studio 2015 i Visual Studio 2017 po kliknięciu prawym przyciskiem myszy węzła projektu w **Eksplorator rozwiązań**, a następnie wybraniu **Właściwości**, na stronie właściwości **Ogólne** w węźle **Właściwości konfiguracji** w lewym okienku są wyświetlane dwie sekcje właściwości:
 
 - Ogólne
 
@@ -126,19 +126,19 @@ W programie Visual Studio 2015 i Visual Studio 2017 po kliknięciu prawym przyci
 
    Aby przejść do systemu Windows 7 lub Windows Vista, użyj wartości **8,1**, ponieważ Windows SDK 8,1 jest zgodny z tymi platformami. Ponadto należy zdefiniować odpowiednią wartość dla **_WIN32_WINNT** w targetver. h. W przypadku systemu Windows 7 to 0x0601. Zobacz [Modyfikowanie winver i _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
 
-   Możesz zainstalować zestaw narzędzi platformy systemu Windows XP dołączony do programu Visual Studio, aby użyć bieżącej wersji bibliotek do kompilowania projektów systemu Windows XP i Windows 2003 Server. Aby uzyskać informacje na temat uzyskiwania i używania tego zestawu narzędzi platformy, zobacz [Konfigurowanie programów dla systemu Windows XP](../configuring-programs-for-windows-xp.md). Aby uzyskać dodatkowe informacje na temat zmiany zestawu narzędzi platformy [, zobacz How to: Zmodyfikuj platformę docelową i](../how-to-modify-the-target-framework-and-platform-toolset.md)zestaw narzędzi platformy.
+   Możesz zainstalować zestaw narzędzi platformy systemu Windows XP dołączony do programu Visual Studio, aby użyć bieżącej wersji bibliotek do kompilowania projektów systemu Windows XP i Windows 2003 Server. Aby uzyskać informacje na temat uzyskiwania i używania tego zestawu narzędzi platformy, zobacz [Konfigurowanie programów dla systemu Windows XP](../configuring-programs-for-windows-xp.md). Aby uzyskać dodatkowe informacje na temat zmiany zestawu narzędzi platformy, zobacz [How to: Modify The Target Framework and platform zestaw narzędzi](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **Katalog wyjściowy**
 
    Określa katalog, w którym narzędzia takie jak konsolidator umieści wszystkie Finalne pliki wyjściowe, które są tworzone podczas procesu kompilacji. Zazwyczaj obejmuje to wyjście narzędzi, takie jak konsolidator, bibliotekarza lub BSCMake. Domyślnie ta właściwość jest katalogiem określonym przez makra $ (SolutionDir) $ (Configuration) \.
 
-   Aby programowo uzyskać dostęp do tej właściwości <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.OutputDirectory%2A>, zobacz.
+   Aby programowo uzyskać dostęp do tej właściwości, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.OutputDirectory%2A>.
 
 - **Katalog pośredni**
 
    Określa katalog, w którym narzędzia takie jak kompilator umieści wszystkie pliki pośrednie utworzone podczas procesu kompilacji. Zazwyczaj obejmuje to wyjście narzędzi, takie jak C/C++ KOMPILATOR, MIDL i kompilator zasobów. Domyślnie ta właściwość jest katalogiem określonym przez makro $ (Configuration) \.
 
-   Aby programowo uzyskać dostęp do tej właściwości <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.IntermediateDirectory%2A>, zobacz.
+   Aby programowo uzyskać dostęp do tej właściwości, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.IntermediateDirectory%2A>.
 
 - **Nazwa elementu docelowego**
 
@@ -152,7 +152,7 @@ W programie Visual Studio 2015 i Visual Studio 2017 po kliknięciu prawym przyci
 
    Opcja **Oczyść** (menu**kompilacja** ) usuwa pliki z katalogu pośredniego, w którym jest skompilowana Konfiguracja projektu. Pliki z rozszerzeniami określonymi za pomocą tej właściwości zostaną usunięte po uruchomieniu **czyszczenia** lub po wykonaniu odbudowy. Oprócz plików tych rozszerzeń w katalogu pośrednim, system kompilacji również usunie wszystkie znane dane wyjściowe kompilacji, bez względu na to, gdzie się znajdują (włącznie z wynikami pośrednimi, takimi jak pliki. obj). Należy pamiętać, że można określić symbole wieloznaczne.
 
-   Aby programowo uzyskać dostęp do tej właściwości <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.DeleteExtensionsOnClean%2A>, zobacz.
+   Aby programowo uzyskać dostęp do tej właściwości, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.DeleteExtensionsOnClean%2A>.
 
 - **Plik dziennika kompilacji**
 
@@ -162,14 +162,14 @@ W programie Visual Studio 2015 i Visual Studio 2017 po kliknięciu prawym przyci
 
 - **Zestaw narzędzi platformy**
 
-   Umożliwia projektowi przekierowanie do innej wersji bibliotek i C++ kompilatorów wizualizacji. Projekty programu C++ Visual Studio mogą wskazywać domyślny zestaw narzędzi instalowany przez program Visual Studio lub jeden z zestawów narzędzi zainstalowanych przez kilka wcześniejszych wersji programu Visual Studio, w tym zestawów narzędzi, które tworzą pliki wykonywalne, które można uruchomić w systemie windowx XP. Aby uzyskać informacje na temat zmiany zestawu narzędzi platformy [, zobacz How to: Zmodyfikuj platformę docelową i](../how-to-modify-the-target-framework-and-platform-toolset.md)zestaw narzędzi platformy.
+   Umożliwia projektowi przekierowanie do innej wersji bibliotek i C++ kompilatorów wizualizacji. Projekty programu C++ Visual Studio mogą wskazywać domyślny zestaw narzędzi instalowany przez program Visual Studio lub jeden z zestawów narzędzi zainstalowanych przez kilka wcześniejszych wersji programu Visual Studio, w tym zestawów narzędzi, które tworzą pliki wykonywalne, które można uruchomić w systemie Windows XP. Aby uzyskać informacje na temat zmiany zestawu narzędzi platformy, zobacz [How to: Modify The Target Framework and platform zestaw narzędzi](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **Włącz zarządzaną kompilację przyrostową**
 
    W przypadku projektów zarządzanych pozwala to wykrywać widoczność zewnętrzną podczas generowania zestawów. Jeśli zmiana w projekcie zarządzanym nie jest widoczna dla innych projektów, projekty zależne nie są odbudowane. Może to znacznie poprawić czasy kompilacji w rozwiązaniach, które obejmują projekty zarządzane.
 
 ## <a name="project-defaults"></a>Wartości domyślne projektu
- 
+
 Właściwości w sekcji domyślnej projektu reprezentują domyślne właściwości, które można modyfikować. Definicję tych właściwości można znaleźć w plikach. props w *katalogu instalacyjnym*\VC\VCProjectDefaults.
 
 - **Typ konfiguracji**
@@ -180,7 +180,7 @@ Właściwości w sekcji domyślnej projektu reprezentują domyślne właściwoś
 
      Wyświetla zestaw narzędzi konsolidatora (C++ C/KOMPILATOR, MIDL, kompilator zasobów, konsolidator, BSCMAKE, generator proxy usługi sieci Web XML, kompilacja niestandardowa, prebuild, prelink, zdarzenia postbuild).
 
-  - **Biblioteka dynamiczna (dll)**
+  - **Biblioteka dynamiczna (. dll)**
 
      Wyświetla zestaw narzędzi konsolidatora, określa opcję konsolidatora/DLL i dodaje _WINDLL definiuje do CL.
 
@@ -196,25 +196,25 @@ Właściwości w sekcji domyślnej projektu reprezentują domyślne właściwoś
 
      Wyświetla zestaw narzędzi Narzędzia (MIDL, kompilacja niestandardowa, prekompilacja, zdarzenia postbuild).
 
-  Aby programowo uzyskać dostęp do tej właściwości <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>, zobacz.
+  Aby programowo uzyskać dostęp do tej właściwości, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>.
 
 - **Użycie MFC**
 
    Określa, czy projekt MFC będzie statycznie czy dynamicznie połączony z biblioteką MFC DLL. Projekty inne niż MFC mogą wybrać **Używanie standardowych bibliotek systemu Windows** do łączenia z różnymi bibliotekami Win32, które są uwzględnione w przypadku używania MFC.
 
-   Aby programowo uzyskać dostęp do tej właściwości <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.useOfMfc%2A>, zobacz.
+   Aby programowo uzyskać dostęp do tej właściwości, zobacz <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.useOfMfc%2A>.
 
 - **Zestaw znaków**
 
    Określa, czy należy ustawić _UNICODE lub _MBCS. Ma także wpływ na punkt wejścia konsolidatora, gdy jest to konieczne.
 
-   Aby programowo uzyskać dostęp do tej właściwości <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.CharacterSet%2A>, zobacz.
+   Aby programowo uzyskać dostęp do tej właściwości, zobacz <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.CharacterSet%2A>.
 
 - **Obsługa środowiska uruchomieniowego CLR**
 
    Powoduje, że opcja kompilatora [/CLR](clr-common-language-runtime-compilation.md) ma być używana.
 
-   Aby programowo uzyskać dostęp do tej właściwości <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.ManagedExtensions%2A>, zobacz.
+   Aby programowo uzyskać dostęp do tej właściwości, zobacz <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.ManagedExtensions%2A>.
 
 - **Wersja platformy docelowej platformy .NET**
 
@@ -230,6 +230,6 @@ Właściwości w sekcji domyślnej projektu reprezentują domyślne właściwoś
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [C++odwołanie do strony właściwości projektu](property-pages-visual-cpp.md)

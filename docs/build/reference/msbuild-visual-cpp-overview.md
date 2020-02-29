@@ -1,104 +1,143 @@
 ---
-title: Elementy programu MSBuild wewnętrzne dla języka C++ projektów w programie Visual Studio
-ms.date: 05/16/2019
+title: Elementy wewnętrzne programu MSBuild C++ dla projektów w programie Visual Studio
+ms.date: 02/26/2020
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-ms.openlocfilehash: b3348320a1468fea03f39e43cc847f1085f3d319
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 010fa244ed77ea782fa76be959c58ff1e1b254a9
+ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837234"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78166722"
 ---
-# <a name="msbuild-internals-for-c-projects"></a>Wewnętrzne MSBuild dla projektów języka C++
+# <a name="msbuild-internals-for-c-projects"></a>Funkcje wewnętrzne aparatu MSBuild dla projektów w języku C++
 
-Podczas ustawiania właściwości projektu w środowisku IDE, a następnie zapisujesz projekt, Visual Studio zapisuje ustawienia projektu do pliku projektu. Plik projektu zawiera ustawienia, które są unikatowe dla projektu, ale nie zawiera wszystkich ustawień, które są wymagane do kompilowania projektu. Plik projektu zawiera `Import` elementy, które zawierają sieć dodatkowych *plików obsługi.* Pliki obsługi zawierają pozostałe właściwości, cele i ustawienia, które są wymagane do skompilowania projektu.
+Po ustawieniu właściwości projektu w IDE, a następnie zapisaniu projektu, program Visual Studio zapisuje ustawienia projektu w pliku projektu. Plik projektu zawiera ustawienia, które są unikatowe dla Twojego projektu. Nie zawiera on jednak wszystkich ustawień wymaganych do skompilowania projektu. Plik projektu zawiera `Import` elementy, które zawierają sieć dodatkowych *plików pomocniczych.* Pliki obsługi zawierają pozostałe właściwości, obiekty docelowe i ustawienia wymagane do skompilowania projektu.
 
-Większość obiektów docelowych i właściwości w plikach pomocy technicznej istnieje wyłącznie w celu implementowania systemu kompilacji. W poniższej sekcji omówiono niektóre użyteczne cele i właściwości, które można określić w wierszu polecenia programu MSBuild. Aby dowiedzieć się więcej obiektów docelowych i właściwości, Eksploruj pliki w katalogach plików pomocy technicznej.
+Większość elementów docelowych i właściwości w plikach obsługi istnieje wyłącznie do wdrożenia systemu kompilacji. W tym artykule omówiono przydatne elementy docelowe i właściwości, które można określić w wierszu polecenia programu MSBuild. Aby odnaleźć więcej obiektów docelowych i właściwości, Przejrzyj pliki w katalogach plików pomocy technicznej.
 
 ## <a name="support-file-directories"></a>Obsługa katalogów plików
 
-Domyślnie podstawowe pliki obsługi programu Visual Studio znajdują się w następujących katalogach. Katalogi w ramach programu Microsoft Visual Studio są używane przez program Visual Studio 2017 i nowsze wersje, katalogi w ramach programu MSBuild są używane przez program Visual Studio 2015 i wcześniejszych wersji.
+Domyślnie podstawowe pliki obsługi programu Visual Studio znajdują się w następujących katalogach. Te informacje są specyficzne dla wersji.
 
-|Katalog|Opis|
-|---------------|-----------------|
-|*dysk*: \Program Files *(x86)* \Microsoft Visual Studio\\*roku*\\*wersji*\Common7\IDE\VC\VCTargets\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp (x86)\v4.0\\*version*\ |Zawiera podstawowe pliki docelowe (.targets) i pliki właściwości (.props), które są używane przez elementy docelowe. Domyślnie makro $(VCTargetsPath) odwołuje się do tego katalogu.|
-|*dysk*: \Program Files *(x86)* \Microsoft Visual Studio\\*roku*\\*wersji*\Common7\IDE\VC\VCTargets\ Platform\\*platformy*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*version*\Platforms\\*platform*\ |Zawiera pliki docelowych i właściwości specyficzne dla platformy, które zastępują cele i właściwości w katalogu nadrzędnym. Ten katalog zawiera również biblioteki DLL, który określa zadania, które są używane przez cele w tym katalogu.<br /><br /> *Platformy* symbol zastępczy reprezentuje ARM, Win32 lub x64 podkatalogu.|
-|*dysk*: \Program Files *(x86)* \Microsoft Visual Studio\\*roku*\\*wersji*\Common7\IDE\VC\VCTargets\ Platform\\*platformy*\PlatformToolsets\\*zestawu narzędzi*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*version*\Platforms\\*platform*\PlatformToolsets\\*toolset*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\Platforms\\*platform*\PlatformToolsets\\*toolset*\ |Zawiera katalogi, które umożliwiają kompilacji wygenerowanie aplikacji w języku C++ przy użyciu określonego *narzędzi*.<br /><br /> *Roku* i *wersji* symbole zastępcze są używane przez program Visual Studio 2017 i nowsze wersje. *Wersji* symbol zastępczy jest V110 dla programu Visual Studio 2012, V120 dla programu Visual Studio 2013 w wersji 140 dla programu Visual Studio 2015 wersji 141 dla programu Visual Studio 2017 i v142 dla programu Visual Studio 2019 r. *Platformy* symbol zastępczy reprezentuje ARM, Win32 lub x64 podkatalogu. *Narzędzi* symbol zastępczy reprezentuje podkatalog zestawu narzędzi, na przykład w wersji 140 do tworzenia aplikacji Windows przy użyciu zestawu narzędzi programu Visual Studio 2015 v120_xp tworzenie dla Windows XP przy użyciu zestawu narzędzi Visual Studio 2013.<br /><br />Nie zawiera ścieżkę, która zawiera katalogi, które umożliwiają kompilacji wygenerowanie aplikacji Visual Studio 2008 lub Visual Studio 2010 *wersji*i *platformy* symbolu zastępczego reprezentuje Itanium, Win32 lub x64 podkatalogu. *Narzędzi* symbol zastępczy reprezentuje podkatalog zestawu narzędzi v90 lub v100.|
+### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-## <a name="support-files"></a>Pliki pomocy technicznej
+- % VSINSTALLDIR% MSBuild\\Microsoft\\VC\\*wersja*\\VCTargets\\
 
-Katalogi plików obsługi zawierają pliki z tymi rozszerzeniami:
+  Zawiera pliki głównych plików docelowych (. targets) i pliki właściwości (. props), które są używane przez obiekty docelowe. Domyślnie makro $ (VCTargetsPath) odwołuje się do tego katalogu. Symbol zastępczy *wersji* odwołuje się do wersji programu Visual Studio: V160 for visual Studio 2019, V150 for visual Studio 2017.
 
-|Wewnętrzny|Opis|
-|---------------|-----------------|
-|.TARGETS|Zawiera `Target` elementów XML, które określają zadania, które są wykonywane przez element docelowy. Może również zawierać `PropertyGroup`, `ItemGroup`, `ItemDefinitionGroup`i zdefiniowane przez użytkownika `Item` elementy, które są używane do przypisywania plików i opcji wiersza polecenia do parametrów zadania.<br /><br /> Aby uzyskać więcej informacji, zobacz [Target — Element (MSBuild)](/visualstudio/msbuild/target-element-msbuild).|
-|.props|Zawiera `Property Group` i zdefiniowane przez użytkownika `Property` elementów XML, które określają ustawienia plików i parametrów, które są używane podczas kompilacji.<br /><br /> Może również zawierać `ItemDefinitionGroup` i zdefiniowane przez użytkownika `Item` elementów XML, które określają dodatkowe ustawienia. Elementy zdefiniowane w grupie definicji elementów przypominają właściwości, ale nie są dostępne z poziomu wiersza polecenia. Pliki projektu w usłudze Visual Studio najczęściej używać elementów zamiast właściwości do reprezentowania ustawień.<br /><br /> Aby uzyskać więcej informacji, zobacz [itemgroup — Element (MSBuild)](/visualstudio/msbuild/itemgroup-element-msbuild), 
-[ItemDefinitionGroup — Element (MSBuild)](/visualstudio/msbuild/itemdefinitiongroup-element-msbuild), i [elementu — Element (MSBuild)](/visualstudio/msbuild/item-element-msbuild).|
-|.xml|Zawiera elementy XML, które deklaruje i inicjuje elementy interfejsu użytkownika IDE, takie jak arkusze właściwości i strony właściwości i tekstu pola i formanty pola listy.<br /><br /> Pliki .xml bezpośrednio obsługują IDE, nie MSBuild. Jednak wartości właściwości środowiska IDE są przypisywane do właściwości i elementów kompilacji.<br /><br /> Większość plików .XML znajduje się w podkatalogu specyficzne dla ustawień regionalnych. Na przykład pliki dla regionu Angielski-Stany Zjednoczone znajdują się w $(VCTargetsPath) \1033\\.|
+- % VSINSTALLDIR% MSBuild\\Microsoft\\VC\\*wersja*\\VCTargets\\platform\\*platform*\\
 
-## <a name="user-targets-and-properties"></a>Cele i właściwości użytkownika
+  Zawiera pliki docelowe i właściwości specyficzne dla platformy, które zastępują elementy docelowe i właściwości w katalogu nadrzędnym. Ten katalog zawiera również bibliotekę DLL, która definiuje zadania, które są używane przez obiekty docelowe w tym katalogu. Symbol zastępczy *platformy* reprezentuje podkatalog ARM, Win32 lub x64.
 
-Za pomocą najbardziej efektywne programu MSBuild w wierszu polecenia, warto wiedzieć, które właściwości i elementy docelowe są przydatne i istotne. Większość właściwości i obiektów docelowych ułatwia implementację systemu kompilacji programu Visual Studio, a w związku z tym nie mają znaczenia dla użytkownika. W tej sekcji opisano niektóre zorientowane ukierunkowanych na użytkownika właściwości i obiektów docelowych.
+- % VSINSTALLDIR% MSBuild\\Microsoft\\VC\\*wersja*\\VCTargets\\platform\\*platform*\\PlatformToolsets\\zestaw *narzędzi*\\
+
+  Zawiera katalogi, które umożliwiają kompilacji generowanie C++ aplikacji przy użyciu określonego zestawu *narzędzi*. Symbol zastępczy *platformy* reprezentuje podkatalog ARM, Win32 lub x64. Symbol *zastępczy zestawu narzędzi reprezentuje* podkatalog zestawu narzędzi.
+
+### <a name="visual-studio-2017"></a>Visual Studio 2017
+
+- % VSINSTALLDIR% Common7\\IDE\\VC\\VCTargets\\
+
+  Zawiera pliki głównych plików docelowych (. targets) i pliki właściwości (. props), które są używane przez obiekty docelowe. Domyślnie makro $ (VCTargetsPath) odwołuje się do tego katalogu.
+
+- % VSINSTALLDIR% Common7\\IDE\\VC\\VCTargets\\platform\\*platform*\\
+
+  Zawiera pliki docelowe i właściwości specyficzne dla platformy, które zastępują elementy docelowe i właściwości w katalogu nadrzędnym. Ten katalog zawiera również bibliotekę DLL, która definiuje zadania, które są używane przez obiekty docelowe w tym katalogu. Symbol zastępczy *platformy* reprezentuje podkatalog ARM, Win32 lub x64.
+
+- % VSINSTALLDIR% Common7\\IDE\\VC\\VCTargets\\platform\\*platform*\\PlatformToolsets\\zestaw *narzędzi*\\
+
+  Zawiera katalogi, które umożliwiają kompilacji generowanie C++ aplikacji przy użyciu określonego zestawu *narzędzi*. Symbol zastępczy *platformy* reprezentuje podkatalog ARM, Win32 lub x64. Symbol *zastępczy zestawu narzędzi reprezentuje* podkatalog zestawu narzędzi.
+
+### <a name="visual-studio-2015-and-earlier"></a>Visual Studio 2015 i starsze
+
+- *dysk*: pliki programu\\ *(x86)* \\MSBuild\\Microsoft. Cpp (x86)\\v 4.0\\*wersja*\\
+
+  Zawiera pliki głównych plików docelowych (. targets) i pliki właściwości (. props), które są używane przez obiekty docelowe. Domyślnie makro $ (VCTargetsPath) odwołuje się do tego katalogu.
+
+- *dysk*:\\Program Files *(x86)* \\MSBuild\\Microsoft. Cpp\\v 4.0\\*version*\\platform\\*platform*\\
+
+  Zawiera pliki docelowe i właściwości specyficzne dla platformy, które zastępują elementy docelowe i właściwości w katalogu nadrzędnym. Ten katalog zawiera również bibliotekę DLL, która definiuje zadania, które są używane przez obiekty docelowe w tym katalogu. Symbol zastępczy *platformy* reprezentuje podkatalog ARM, Win32 lub x64.
+
+- *dysk*:\\Program Files *(x86)* \\MSBuild\\Microsoft. Cpp\\v 4.0\\*version*\\platform\\*platform*\\PlatformToolsets\\zestaw *narzędzi*\\
+
+  Zawiera katalogi, które umożliwiają kompilacji generowanie C++ aplikacji przy użyciu określonego zestawu *narzędzi*. Symbol zastępczy *wersji* to v110 dla programu visual Studio 2012, V120 dla Visual Studio 2013 i wersji 140 dla programu visual Studio 2015. Symbol zastępczy *platformy* reprezentuje podkatalog ARM, Win32 lub x64. Symbol *zastępczy zestawu narzędzi reprezentuje* podkatalog zestawu narzędzi. Na przykład jest wersji 140 do kompilowania aplikacji systemu Windows przy użyciu zestawu narzędzi programu Visual Studio 2015. Lub v120_xp do kompilowania dla systemu Windows XP przy użyciu zestawu narzędzi Visual Studio 2013.
+
+- *dysk*:\\Program Files *(x86)* \\MSBuild\\Microsoft. Cpp\\v 4.0\\platform\\*platform*\\PlatformToolsets\\zestaw *narzędzi*\\
+
+  Ścieżki umożliwiające kompilację do generowania aplikacji programu Visual Studio 2008 lub Visual Studio 2010 nie obejmują *wersji*. W tych wersjach symbol zastępczy *platformy* reprezentuje podkatalog Itanium, Win32 lub x64. Symbol zastępczy zestawu *narzędzi* reprezentuje podkatalog zestawu narzędzi v90 lub V100.
+
+## <a name="support-files"></a>Pliki obsługi
+
+Katalogi plików pomocy technicznej zawierają pliki z następującymi rozszerzeniami:
+
+| Wewnętrzny | Opis |
+| --------- | ----------- |
+| . targets | Zawiera `Target` elementy XML, które określają zadania, które są wykonywane przez element docelowy. Może również zawierać `PropertyGroup`, `ItemGroup`, `ItemDefinitionGroup`i zdefiniowane przez użytkownika elementy `Item`, które są używane do przypisywania plików i opcji wiersza polecenia do parametrów zadań.<br /><br /> Aby uzyskać więcej informacji, zobacz [Target element (MSBuild)](/visualstudio/msbuild/target-element-msbuild). |
+| . props | Zawiera `Property Group` i zdefiniowane `Property` przez użytkownika elementy XML, które określają ustawienia plików i parametrów, które są używane podczas kompilacji.<br /><br /> Może również zawierać `ItemDefinitionGroup` i `Item` zdefiniowane przez użytkownika elementy XML, które określają dodatkowe ustawienia. Elementy zdefiniowane w grupie definicji elementu przypominają właściwości, ale nie są dostępne z wiersza polecenia. Pliki projektu programu Visual Studio często używają elementów zamiast właściwości do reprezentowania ustawień.<br /><br /> Aby uzyskać więcej informacji, zobacz [itemmanager element (MSBuild)](/visualstudio/msbuild/itemgroup-element-msbuild), [ItemDefinitionGroup element (MSBuild)](/visualstudio/msbuild/itemdefinitiongroup-element-msbuild)i [element Item (MSBuild)](/visualstudio/msbuild/item-element-msbuild). |
+| .xml | Zawiera elementy XML, które deklarują i inicjują elementy interfejsu użytkownika IDE. Na przykład arkusze właściwości, strony właściwości, formanty TextBox i kontrolki ListBox.<br /><br /> Pliki. XML obsługują bezpośrednio środowisko IDE, a nie MSBuild. Jednak wartości właściwości IDE są przypisywane do właściwości i elementów kompilacji.<br /><br /> Większość plików XML znajduje się w podkatalogu specyficznym dla ustawień regionalnych. Na przykład pliki dla regionu angielski-US znajdują się w $ (VCTargetsPath)\\1033\\. |
+
+## <a name="user-targets-and-properties"></a>Obiekty docelowe i właściwości użytkownika
+
+Aby efektywnie korzystać z programu MSBuild, warto wiedzieć, które właściwości i cele są przydatne i istotne. Większość właściwości i obiektów docelowych pomaga zaimplementować system kompilacji programu Visual Studio i w związku z tym nie dotyczy użytkownika. W tej sekcji opisano właściwości zorientowane na użytkownika i cele, które warto znać.
 
 ### <a name="platformtoolset-property"></a>Właściwość PlatformToolset
 
-`PlatformToolset` Właściwość określa, który zestaw narzędzi MSVC jest używany w kompilacji. Domyślnie używany jest bieżący zestaw narzędzi. Gdy ta właściwość jest ustawiona, wartość właściwości jest połączona z ciągami tekstowymi ścieżkę katalogu, zawierającego pliki właściwości i docelowych, które są wymagane do utworzenia projektu dla konkretnej platformy. Tworzenie za pomocą tej wersji zestawu narzędzi platformy można zainstalować zestawu narzędzi platformy.
+Właściwość `PlatformToolset` określa, który zestaw narzędzi MSVC jest używany w kompilacji. Domyślnie używany jest bieżący zestaw narzędzi. Gdy ta właściwość jest ustawiona, jej wartość jest pobierana z ciągami literału w celu utworzenia ścieżki. Jest to katalog, który zawiera pliki właściwości i obiekty docelowe wymagane do skompilowania projektu dla konkretnej platformy. Zestaw narzędzi platformy musi być zainstalowany do kompilowania przy użyciu tej wersji zestawu narzędzi platformy.
 
-Na przykład ustawić `PlatformToolset` właściwość `v140` używać bibliotek i narzędzi Visual Studio 2015 do budowania aplikacji:
+Na przykład ustaw właściwość `PlatformToolset` na `v140`, aby użyć narzędzi i bibliotek programu Visual Studio 2015 do kompilowania aplikacji:
 
 `msbuild myProject.vcxproj /p:PlatformToolset=v140`
 
 ### <a name="preferredtoolarchitecture-property"></a>Właściwość PreferredToolArchitecture
 
-`PreferredToolArchitecture` Właściwość określa, czy 32-bitową lub 64-bitowy kompilator i narzędzia są używane w kompilacji. Właściwość ta nie wpływa na konfigurację ani architekturę platformy wyjściowej. Domyślnie MSBuild używa x86 wersję kompilatora i narzędzi, jeśli ta właściwość nie jest ustawiona.
+Właściwość `PreferredToolArchitecture` określa, czy kompilator i narzędzia z 32-bitowym, 64-bitowym są używane w kompilacji. Ta właściwość nie ma wpływu na architekturę ani konfigurację platformy wyjściowej. Domyślnie program MSBuild używa wersji x86 kompilatora i narzędzi, jeśli ta właściwość nie jest ustawiona.
 
-Na przykład ustawić `PreferredToolArchitecture` właściwość `x64` używać 64-bitowego kompilatora i narzędzi do budowania aplikacji:
+Na przykład ustaw właściwość `PreferredToolArchitecture` na `x64`, aby użyć kompilatora 64-bitowego oraz narzędzi do kompilowania aplikacji:
 
 `msbuild myProject.vcxproj /p:PreferredToolArchitecture=x64`
 
 ### <a name="useenv-property"></a>Właściwość UseEnv
 
-Domyślnie ustawienia specyficzne dla platformy dla bieżącego projektu zastępują zmienne środowiskowe PATH, INCLUDE, LIB, LIBPATH, Konfiguracja i PLATFORMA. Ustaw `UseEnv` właściwości **true** celu zagwarantowania, że zmienne środowiskowe nie są zastępowane.
+Domyślnie ustawienia specyficzne dla platformy dla bieżącego projektu zastępują zmienne środowiskowe PATH, INCLUDE, LIB, LIBPATH, CONFIGURATION i PLATFORM. Ustaw właściwość `UseEnv` na **wartość true** , aby zagwarantować, że zmienne środowiskowe nie zostaną zastąpione.
 
 `msbuild myProject.vcxproj /p:UseEnv=true`
 
 ### <a name="targets"></a>Obiekty docelowe
 
-Istnieją setki obiektów docelowych w plikach pomocy technicznej programu Visual Studio. Jednak większość to cele systemowe, które użytkownik może ignorować. Większość obiektów docelowych systemów jest poprzedzonych znakiem podkreślenia (_) lub mają nazwę, która zaczyna się od "PrepareFor", "Compute", "Before", "After", "Pre" lub "Post".
+Istnieją setki obiektów docelowych w plikach obsługi programu Visual Studio. Większość są jednak ukierunkowanymi na system, które użytkownik może zignorować. Większość obiektów docelowych systemu jest poprzedzona znakiem podkreślenia (`_`) lub ma nazwę rozpoczynającą się od "PrepareFor", "COMPUTE", "Before", "After", "pre" lub "post".
 
-W poniższej tabeli wymieniono kilka przydatne celów ukierunkowanych na użytkownika.
+W poniższej tabeli przedstawiono kilka przydatnych elementów docelowych ukierunkowanych na użytkownika.
 
-|Cel|Opis|
-|------------|-----------------|
-|BscMake|Uruchamia narzędzie przeglądać informacje o konserwacji narzędzie Microsoft bscmake.exe.|
-|Kompilacja|Kompiluje projekt.<br /><br /> Jest to domyślny cel dla projektu.|
-|ClCompile|Uruchamia narzędzie kompilatora MSVC cl.exe.|
-|czyszczenie|Usuwa tymczasowe i pośrednie pliki kompilacji.|
-|lib|Uruchamia narzędzie Microsoft 32-bitowy Library Manager, lib.exe.|
-|Łącze|Uruchamia narzędzie konsolidatora MSVC link.exe.|
-|ManifestResourceCompile|Wyodrębnia listę zasobów z manifestu, a następnie uruchamia narzędzie kompilatora zasobów systemu Microsoft Windows rc.exe.|
-|Midl|Uruchamia narzędzie kompilatora języka definicji interfejsu Microsoft (MIDL) midl.exe.|
-|Ponowna kompilacja|Czyści, a następnie kompiluje projekt.|
-|ResourceCompile|Uruchamia narzędzie kompilatora zasobów systemu Microsoft Windows rc.exe.|
-|XdcMake|Uruchamia narzędzie dokumentacji XML xdcmake.exe.|
-|Xsd|Uruchamia narzędzie definicji schematu XML xsd.exe. *Zobacz uwagi poniżej.*|
+| Środowisko docelowe | Opis |
+| ------ | ----------- |
+| BscMake | Wykonuje narzędzie do konserwacji informacji przeglądarki Microsoft, BSCMAKE. exe. |
+| Kompilacja | Kompiluje projekt.<br /><br /> Ten obiekt docelowy jest wartością domyślną dla projektu. |
+| ClCompile | Wykonuje narzędzie kompilatora MSVC (CL. exe). |
+| Czyst | Usuwa tymczasowe i pośrednie pliki kompilacji. |
+| Lib | Wykonuje narzędzie Microsoft 32-bit Library Manager, lib. exe. |
+| Link | Wykonuje narzędzie konsolidatora MSVC, link. exe. |
+| ManifestResourceCompile | Wyodrębnia listę zasobów z manifestu, a następnie wykonuje narzędzie kompilatora zasobów systemu Microsoft Windows, RC. exe. |
+| MIDL | Wykonuje narzędzie kompilatora Microsoft Interface Definition Language (MIDL), MIDL. exe. |
+| Odtworzyć | Czyści, a następnie kompiluje projekt. |
+| ResourceCompile | Wykonuje narzędzie kompilatora zasobów systemu Microsoft Windows, RC. exe. |
+| XdcMake | Wykonuje narzędzie dokumentacji XML xdcmake. exe. |
+| Xsd | Wykonuje narzędzie definicji schematu XML xsd. exe. *Zobacz uwagę poniżej.* |
 
 > [!NOTE]
-> W programie Visual Studio 2017 i nowszych C++ projektu obsługę **xsd** plików jest przestarzała. Można nadal używać **Microsoft.VisualC.CppCodeProvider** , dodając **CppCodeProvider.dll** ręcznie do pamięci podręcznej GAC.
+> W programie Visual Studio 2017 i nowszych C++ obsługa projektu dla plików **XSD** jest przestarzała. Nadal można użyć **programu Microsoft. VisualC. CppCodeProvider** , ręcznie dodając **CppCodeProvider. dll** do pamięci podręcznej GAC.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Odwołanie do zadania MSBuild](/visualstudio/msbuild/msbuild-task-reference)<br/>
-[BscMake, zadanie](/visualstudio/msbuild/bscmake-task)<br/>
-[CL, zadanie](/visualstudio/msbuild/cl-task)<br/>
-[CPPClean, zadanie](/visualstudio/msbuild/cppclean-task)<br/>
-[LIB, zadanie](/visualstudio/msbuild/lib-task)<br/>
-[Link, zadanie](/visualstudio/msbuild/link-task)<br/>
-[MIDL, zadanie](/visualstudio/msbuild/midl-task)<br/>
-[MT, zadanie](/visualstudio/msbuild/mt-task)<br/>
-[RC, zadanie](/visualstudio/msbuild/rc-task)<br/>
-[SetEnv, zadanie](/visualstudio/msbuild/setenv-task)<br/>
-[VCMessage, zadanie](/visualstudio/msbuild/vcmessage-task)<br/>
-[XDCMake, zadanie](/visualstudio/msbuild/xdcmake-task)<br/>
+[Odwołanie do zadania programu MSBuild](/visualstudio/msbuild/msbuild-task-reference)\
+[BscMake\ zadania](/visualstudio/msbuild/bscmake-task)
+\ [zadań CL](/visualstudio/msbuild/cl-task)
+[Cppclean —\ zadania](/visualstudio/msbuild/cppclean-task)
+\ [zadania lib](/visualstudio/msbuild/lib-task)
+[Połącz\ zadania](/visualstudio/msbuild/link-task)
+[MIDL\ zadania](/visualstudio/msbuild/midl-task)
+[MT Task](/visualstudio/msbuild/mt-task)\
+[RC\ zadań](/visualstudio/msbuild/rc-task)
+[SetEnv\ zadania](/visualstudio/msbuild/setenv-task)
+[Vcmessage —\ zadania](/visualstudio/msbuild/vcmessage-task)
+[XDCMake, zadanie](/visualstudio/msbuild/xdcmake-task)

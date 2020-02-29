@@ -9,12 +9,12 @@ helpviewer_keywords:
 - float_control pragma
 - pragmas, float_control
 ms.assetid: 4f4ba5cf-3707-413e-927d-5ecdbc0a9a43
-ms.openlocfilehash: 0c9caea5ba35a55a53f7b9340cf9bfd2cce80561
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 5f907bfeb3f92f788fe951854ddc32accc83ae03
+ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74305498"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78166787"
 ---
 # <a name="float_control-pragma"></a>float_control pragma
 
@@ -30,10 +30,10 @@ Określa zachowanie zmiennoprzecinkowe dla funkcji.
 ## <a name="options"></a>Opcje
 
 **precyzyjne** |  **wypchnięcie**\
-Określa, czy włączyć (**włączona**) Czy wyłączyć (**wyłączyć**) precyzyjne semantykę liczb zmiennoprzecinkowych. Aby uzyskać informacje na temat tego, jak ta opcja różni się od podobnej opcji kompilatora o nazwie **/FP: precyzyjne** , zobacz sekcję Uwagi. Opcjonalny token **wypychania** instruuje kompilator, aby wypchnąć bieżące ustawienie dla **float_control** na wewnętrznym stosie kompilatora.
+Określa, czy włączyć (**włączona**) Czy wyłączyć (**wyłączyć**) precyzyjne semantykę liczb zmiennoprzecinkowych. Aby uzyskać informacje o różnicach w opcji kompilatora **/FP: precyzyjne** , zobacz sekcję Uwagi. Opcjonalny token **wypychania** wypycha bieżące ustawienie dla **float_control** na wewnętrznym stosie kompilatora.
 
 **z wyjątkiem** ** | ** **wypchnięcia**\
-Określa, czy włączyć (**Włącz**) Czy wyłączyć (**off**) semantykę wyjątku zmiennoprzecinkowego. Aby uzyskać informacje na temat tego, jak ta opcja różni się od opcji kompilatora o podobnej nazwie **/FP: except** , zobacz sekcję Uwagi. Opcjonalny token **wypychania** instruuje kompilator, aby wypchnąć bieżące ustawienie dla **float_control** na wewnętrznym stosie kompilatora.
+Określa, czy włączyć (**Włącz**) Czy wyłączyć (**off**) semantykę wyjątku zmiennoprzecinkowego. Opcjonalny token **wypychania** wypycha bieżące ustawienie dla **float_control** na wewnętrznym stosie kompilatora.
 
 **chyba że** można ustawić tylko **na wartość włączone** , tylko wtedy, gdy jest również ustawiony **na wartość** **włączone**.
 
@@ -45,17 +45,15 @@ Usuwa ustawienie **float_control** z góry wewnętrznego stosu kompilatora i spr
 
 ## <a name="remarks"></a>Uwagi
 
-Opcje **precyzyjne** i **z wyjątkiem** nie mają dokładnie takiego samego zachowania jak opcje kompilatora [/FP](../build/reference/fp-specify-floating-point-behavior.md) o tych samych nazwach. **Float_control** pragma reguluje tylko część zachowania zmiennoprzecinkowego. Aby ponownie utworzyć opcje kompilatora **/FP** , należy je połączyć z [fp_contract](../preprocessor/fp-contract.md) i [fenv_access](../preprocessor/fenv-access.md) pragma. W poniższej tabeli przedstawiono równoważne ustawienia dyrektywy pragma dla każdej opcji kompilatora:
+**Float_control** pragma nie ma takiego samego zachowania jak opcja kompilatora [/FP](../build/reference/fp-specify-floating-point-behavior.md) . **Float_control** pragma reguluje tylko część zachowania zmiennoprzecinkowego. Aby ponownie utworzyć opcje kompilatora **/FP** , należy je połączyć z [fp_contract](../preprocessor/fp-contract.md) i [fenv_access](../preprocessor/fenv-access.md) pragma. W poniższej tabeli przedstawiono równoważne ustawienia dyrektywy pragma dla każdej opcji kompilatora:
 
 | | float_control (precyzyjne, \*) | float_control (z wyjątkiem \*) | fp_contract (\*) | fenv_access (\*) |
 |-|-|-|-|-|
-| /FP: Strict             | włączone  | włączone  | wyłączone | włączone  |
-| /fp:strict /fp:except- | włączone  | wyłączone | wyłączone | włączone  |
-| /FP: Precyzyjna            | włączone  | wyłączone | włączone  | wyłączone |
-| /FP: precyzyjne/FP: z wyjątkiem | włączone  | włączone  | włączone  | wyłączone |
-| /fp:fast               | wyłączone | wyłączone | włączone  | wyłączone |
+| /FP: Strict             | on  | on  | wyłączone | on  |
+| /FP: Precyzyjna            | on  | wyłączone | on  | wyłączone |
+| /fp:fast               | wyłączone | wyłączone | on  | wyłączone |
 
-Innymi słowy, aby emulować **/FP: Fast**, **/FP: precyzyjne**, **/FP: Strict**i **/FP: z wyjątkiem** opcji wiersza polecenia, należy użyć kilku pragm w połączeniu.
+Innymi słowy, może być konieczne użycie kilku pragm w połączeniu do emulowania opcji wiersza polecenia **/FP: Fast**, **/FP: precyzyjne**i **/FP: Strict** .
 
 Istnieją ograniczenia dotyczące sposobów używania **float_control** i **fenv_accessj** pragma zmiennoprzecinkowa w połączeniu:
 
@@ -67,7 +65,7 @@ Istnieją ograniczenia dotyczące sposobów używania **float_control** i **fenv
 
 - Nie można użyć **float_control** , aby wyłączyć **precyzyjne** , gdy **fenv_access** jest włączona.
 
-Ograniczenia te oznaczają kolejność niektórych pragm zmiennoprzecinkowych. Aby przejść od szybkiego modelu do ścisłego modelu przy użyciu **float_control** i powiązanych pragm, użyj następującego kodu:
+Ograniczenia te oznaczają kolejność niektórych pragm zmiennoprzecinkowych. Aby przejść od szybkiego modelu do modelu Strict przy użyciu pragmów, użyj następującego kodu:
 
 ```cpp
 #pragma float_control(precise, on)  // enable precise semantics
@@ -82,7 +80,7 @@ Aby przejść z ścisłego modelu do szybkiego modelu przy użyciu dyrektywy pra
 #pragma float_control(except, off)  // disable exception semantics
 #pragma fenv_access(off)            // disable environment sensitivity
 #pragma float_control(precise, off) // disable precise semantics
-#pragma fp_contract(on)             // ensable contractions
+#pragma fp_contract(on)             // enable contractions
 ```
 
 Jeśli nie określono żadnych opcji, **float_control** nie ma żadnego wpływu.
@@ -129,7 +127,7 @@ int main( ) {
 Pass
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)\
 [fenv_access](../preprocessor/fenv-access.md)\
