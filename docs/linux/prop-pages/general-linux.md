@@ -3,12 +3,12 @@ title: Właściwości ogólne (projekt C++ systemu Linux)
 description: Opisuje właściwości projektu systemu Linux, które można ustawić w programie Visual Studio na stronie właściwości ogólne.
 ms.date: 01/14/2020
 ms.assetid: 56c800a9-3df9-4196-87b2-81adb00e4767
-ms.openlocfilehash: 6d598e9d52037d709cba87d98ad375455d8c00b0
-ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
+ms.openlocfilehash: d6a69d9fd3091c885ebd708cbc4598533d2922b4
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76031350"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883983"
 ---
 # <a name="general-properties-linux-c"></a>Właściwości ogólne (Linux C++)
 
@@ -20,7 +20,7 @@ Obsługa systemu Linux jest dostępna w programie Visual Studio 2017 i nowszych.
 
 ::: moniker range=">=vs-2017"
 
-Właściwość | Opis | Choices
+Właściwość | Opis | Decyzji
 --- | ---| ---
 Katalog wyjściowy | Określa ścieżkę względną do katalogu pliku wyjściowego. Może zawierać zmienne środowiskowe.
 Katalog pośredni | Określa ścieżkę względną do katalogu pliku pośredniego. Może zawierać zmienne środowiskowe.
@@ -29,7 +29,7 @@ Rozszerzenie docelowe | Określa rozszerzenie pliku (na przykład `.a`), które 
 Rozszerzenia do usunięcia podczas czyszczenia | Rozdzielana średnikami Specyfikacja symboli wieloznacznych, dla których pliki w katalogu pośrednim mają zostać usunięte podczas czyszczenia lub odbudowy.
 Plik dziennika kompilacji | Określa plik dziennika kompilacji, w którym ma zostać zapisany wpis, gdy rejestrowanie kompilacji jest włączone.
 Zestaw narzędzi platformy | Określa zestaw narzędzi używany do kompilowania bieżącej konfiguracji. Jeśli nie zostanie ustawiona, używany jest domyślny zestaw narzędzi.
-Zdalna maszyna kompilacji | Maszyna docelowa lub urządzenie, które ma być używane do zdalnego kompilowania, wdrażania i debugowania. **Visual Studio 2019 w wersji 16,1** Na stronie [debugowanie](debugging-linux.md) można określić inną maszynę na potrzeby debugowania.
+Zdalna maszyna kompilacji | Wyświetla maszynę docelową lub urządzenie, które ma być używane do zdalnego kompilowania, wdrażania i debugowania. Możesz dodać lub edytować połączenie z maszyną docelową, korzystając z **narzędzi** > **Opcje** > **Międzyplatformowy** > **Menedżer połączeń**. **Visual Studio 2019 w wersji 16,1** Na stronie [debugowanie](debugging-linux.md) można określić inną maszynę na potrzeby debugowania.
 Zdalny katalog główny kompilacji | Określa ścieżkę do katalogu na komputerze zdalnym lub urządzeniu.
 Katalog projektu kompilacji zdalnej | Określa ścieżkę do katalogu na komputerze zdalnym lub urządzeniu dla projektu.
 Katalog zdalnego wdrażania | **Visual Studio 2019 w wersji 16,1** Określa ścieżkę katalogu na komputerze zdalnym lub urządzeniu do wdrożenia projektu.
